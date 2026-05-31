@@ -35,7 +35,7 @@ chat, or in the running system — before the next action.
 
 **Gate 1 — Read before writing.**
 Re-read from disk: governing docs (CLAUDE.md / AGENTS.md /
-CONTRIBUTING.md, ARCHITECTURE, ROADMAP, project memory), task sources
+CONTRIBUTING.md, ARCHITECTURE, project memory), task sources
 (active plan, linked specs/mockups, design principles, API docs,
 schemas), and external facts (library capabilities, versions, API
 behavior). Applies to planned work, ad-hoc changes, bug fixes, docs
