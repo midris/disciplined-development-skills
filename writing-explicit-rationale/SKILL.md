@@ -53,7 +53,7 @@ Concrete forms:
 - **Hardening descope**: *"Residual risk: replay attacks and source-IP spoofing not mitigated. Accepted given the trust model — internal deployment, authenticated callers only."*
 - **Project-rule exception**: *"CLI parity skipped: multi-select UI operation; CLI would be ergonomically awkward. Revisit if a scripted workflow emerges."*
 - **Cap-sizing**: *"Capped at 500 items per call. Larger caps would need chunked transactions; deferred until telemetry justifies the work."*
-- **Code design-choice**: *"Guard at the ingest callsite, not in the shared persistence helper. Another caller uses the helper with different semantics, so centralizing the guard there would be wrong. Accepts small duplication; revisit if a 3rd caller surface needs the same protection."*
+- **Code design-choice**: *"Guard at the ingest callsite, not in the shared persistence helper. Another caller uses the helper with different semantics. Accepts small duplication; revisit if a 3rd caller surface needs the same protection."*
 
 The form is flexible; the content is fixed — what / why / what's accepted.
 
