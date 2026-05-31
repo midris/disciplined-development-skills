@@ -1,0 +1,608 @@
+#!/usr/bin/env python3
+"""dd_review.py — model-callable adversarial review against the branch diff.
+
+Usage:
+    python3 dd_review.py {regular | cold-read | pre-pr} [--base <ref>] [--cwd <path>]
+
+Rebuilt on the ``hooks/lib`` modules (config, severity, state, plan,
+claude_runner, review_invocation, review_prompt). Four behavior deltas
+versus the original marker-based engine (see plan Part B):
+
+  * Delta 1 — every tier resolves its diff base to the *fork base*
+    (merge-base of HEAD against the first existing trunk ref) via
+    ``state.resolve_fork_base``. The ``-internal`` / ``-external``
+    marker reads and the chunk→phase auto-detection are dropped.
+    ``pre-pr`` still honours an explicit ``--base <ref>`` override;
+    ``--base`` is rejected on the other tiers. Empty diff
+    (HEAD == fork base) → clean exit, no reviewer dispatched.
+  * Delta 2 — a clean pass (zero P0/P1/P2) on ANY tier writes the
+    per-branch review checkpoint via ``state.set_checkpoint``.
+  * Delta 3 — no marker writes anywhere.
+  * Delta 4 — no ``.review-history.log`` writer; JSONL debug logging
+    via ``logging_setup`` is preserved.
+
+Tier config keys (``review_tiers.<key>``): regular → ``regular``,
+cold-read → ``cold_read_escalation``, pre-pr → ``pre_pr``.
+
+Advisory vs hard-block: manual invocation always exits 0 (the model is
+the consumer). The pre-PR hook wrapper sets ``DD_HARD_BLOCK=1`` so
+``pre-pr`` returns non-zero on any P0/P1/P2 finding — the gate before
+``gh pr create``.
+"""
+
+from __future__ import annotations
+
+import os
+import pathlib
+import shutil
+import subprocess
+import sys
+import time
+
+_HERE = pathlib.Path(__file__).resolve().parent
+_BASE_DIR = _HERE.parent  # the dir containing the `hooks` package
+if str(_BASE_DIR) not in sys.path:
+    sys.path.insert(0, str(_BASE_DIR))
+
+from hooks.lib import (  # noqa: E402
+    claude_runner,
+    config,
+    logging_setup,
+    plan as plan_mod,
+    review_invocation,
+    review_prompt,
+    severity,
+    state,
+)
+
+HOOK_NAME = "dd_review"
+DEFAULT_TIMEOUT_S = 300
+VALID_TIERS = ("regular", "cold-read", "pre-pr")
+
+# CLI tier → config-key tier name (hyphen in the CLI, underscore in config).
+_TIER_CONFIG_KEY = {
+    "regular": "regular",
+    "cold-read": "cold_read_escalation",
+    "pre-pr": "pre_pr",
+}
+
+
+# --- argv parsing ----------------------------------------------------------
+
+
+def _parse_argv(argv: list[str]) -> tuple[str, str | None, str | None] | str:
+    """Return (tier, base_override, cwd_override) or an error message string.
+
+    ``--base`` is meaningful only for pre-pr; reject it loudly on the other
+    tiers so a stale invocation doesn't silently audit the wrong diff.
+    """
+    tier: str | None = None
+    base: str | None = None
+    cwd: str | None = None
+    i = 0
+    while i < len(argv):
+        arg = argv[i]
+        if arg == "--base":
+            if i + 1 >= len(argv):
+                return "--base requires a ref argument"
+            if base is not None:
+                return "--base specified twice"
+            base = argv[i + 1]
+            i += 2
+        elif arg == "--cwd":
+            if i + 1 >= len(argv):
+                return "--cwd requires a path argument"
+            if cwd is not None:
+                return "--cwd specified twice"
+            cwd = argv[i + 1]
+            i += 2
+        elif arg in VALID_TIERS:
+            if tier is not None:
+                return f"tier specified twice ({tier!r} and {arg!r})"
+            tier = arg
+            i += 1
+        else:
+            return f"unrecognized argument {arg!r}"
+    if tier is None:
+        return "missing required tier (one of regular | cold-read | pre-pr)"
+    if base is not None and tier != "pre-pr":
+        return f"--base is only valid on pre-pr (not {tier!r})"
+    return tier, base, cwd
+
+
+def _print_usage_error(msg: str) -> None:
+    print(f"[dd_review] ERROR — {msg}", file=sys.stderr)
+    print(
+        f"Usage: python3 dd_review.py {{{'|'.join(VALID_TIERS)}}} "
+        f"[--base <ref>] [--cwd <path>]",
+        file=sys.stderr,
+    )
+
+
+# --- git helpers -----------------------------------------------------------
+
+
+def _git(repo: str, *args: str) -> tuple[int, str]:
+    # timeout + degrade-safe, matching the sibling _git helpers: a stuck git
+    # should fail fast (reads as "git said no") rather than hang the review.
+    try:
+        r = subprocess.run(
+            ["git", "-C", repo, *args], capture_output=True, text=True, timeout=5
+        )
+    except Exception:
+        return 1, ""
+    return r.returncode, r.stdout.strip()
+
+
+def _current_branch(repo: str) -> str:
+    rc, out = _git(repo, "symbolic-ref", "--short", "HEAD")
+    return out if rc == 0 else ""
+
+
+def _head_sha(repo: str) -> str:
+    rc, out = _git(repo, "rev-parse", "HEAD")
+    return out if rc == 0 else ""
+
+
+def _verify_ref(repo: str, ref: str) -> bool:
+    # timeout-bounded: on the pre-PR hard-block path (_resolve_base for an
+    # explicit --base), a stuck git must not hang `gh pr create`.
+    try:
+        r = subprocess.run(
+            ["git", "-C", repo, "rev-parse", "--verify", "--quiet", ref],
+            capture_output=True,
+            text=True,
+            timeout=5,
+        )
+    except (OSError, subprocess.TimeoutExpired):
+        return False
+    return r.returncode == 0
+
+
+# --- base resolution (Delta 1 — fork-base for every tier) -------------------
+
+
+def _resolve_base(
+    repo: str, tier: str, explicit: str | None
+) -> tuple[str | None, str | None]:
+    """Return (base, error). Every tier resolves to the fork base; pre-pr
+    honours an explicit ``--base`` override (already gated upstream)."""
+    if explicit and tier == "pre-pr":
+        if _verify_ref(repo, explicit):
+            return explicit, None
+        return None, (
+            f"explicit base ref '{explicit}' not present locally "
+            f"(try `git fetch` then retry)"
+        )
+    trunks = config.get("branch_convention.trunk_branches", ["master", "main"])
+    # `or not trunks` falls back on an empty list too — a blanked config array
+    # otherwise propagates and yields a misleading "none of [] resolve" error.
+    if not isinstance(trunks, list) or not trunks:
+        trunks = ["master", "main"]
+    base = state.resolve_fork_base(repo, trunks)
+    if base:
+        return base, None
+    return None, (
+        f"could not determine a fork base — none of {trunks} resolve in "
+        f"this repo. Fetch a trunk ref or set "
+        f"`branch_convention.trunk_branches` in dd-config.json. pre-pr "
+        f"additionally accepts `--base <ref>`."
+    )
+
+
+# --- tier + selector config ------------------------------------------------
+
+
+def _load_tier_and_selector(
+    tier: str,
+) -> tuple[dict | None, dict | None, str | None]:
+    config_key = _TIER_CONFIG_KEY[tier]
+    tier_cfg = config.get(f"review_tiers.{config_key}")
+    if not isinstance(tier_cfg, dict):
+        return None, None, f"review_tiers.{config_key} missing or malformed"
+    for required in ("reviewer", "model", "default_effort"):
+        if required not in tier_cfg:
+            return None, None, (
+                f"review_tiers.{config_key}.{required} missing in config"
+            )
+    selector = config.get("strategy_selector")
+    if not isinstance(selector, dict):
+        return None, None, "strategy_selector missing or malformed in config"
+    for required in ("pre_stuff_max_bytes", "high_effort_min_bytes"):
+        if required not in selector:
+            return None, None, f"strategy_selector.{required} missing in config"
+    return tier_cfg, selector, None
+
+
+def _read_diff_bytes(repo: str, base: str) -> bytes | None:
+    try:
+        r = subprocess.run(
+            ["git", "-C", repo, "diff", f"{base}...HEAD"],
+            capture_output=True,
+            check=False,
+            # Generous (large diffs are legitimate) but bounded: the engine is
+            # also the pre-PR gate (E2), so a hung git/fsmonitor must not block
+            # `gh pr create` with no escape. TimeoutExpired → None below.
+            timeout=60,
+        )
+    except (OSError, subprocess.TimeoutExpired):
+        return None
+    if r.returncode != 0:
+        return None
+    return r.stdout
+
+
+def _diff_is_empty(repo: str, base: str) -> bool | None:
+    """True if ``{base}...HEAD`` is empty, False if it has changes, None on
+    error/timeout. Cheap exit-code-only probe; timeout-bounded for the same
+    reason as ``_read_diff_bytes`` — this engine is the pre-PR hard block, so a
+    stuck git must not hang ``gh pr create`` (exit 0 = empty, 1 = changes,
+    anything else = git error → None)."""
+    try:
+        r = subprocess.run(
+            ["git", "-C", repo, "diff", "--quiet", f"{base}...HEAD"],
+            capture_output=True,
+            timeout=5,
+        )
+    except (OSError, subprocess.TimeoutExpired):
+        return None
+    if r.returncode == 0:
+        return True
+    if r.returncode == 1:
+        return False
+    return None
+
+
+def _resolve_prompt_path(repo: str) -> tuple[pathlib.Path, str]:
+    configured = os.environ.get("DD_REVIEW_PROMPT_PATH", "")
+    if not configured:
+        configured = config.get(
+            "review.prompt_path", ".claude/skills/adversarial-review/SKILL.md"
+        )
+    p = pathlib.Path(configured)
+    if not p.is_absolute():
+        p = pathlib.Path(repo) / configured
+    return (p.resolve() if p.exists() else p, configured)
+
+
+def _resolve_timeout() -> int:
+    env = os.environ.get("DD_REVIEW_TIMEOUT")
+    if env:
+        try:
+            v = int(env)
+            if v > 0:  # reject 0/negative — Popen.wait(timeout=0) fires instantly
+                return v
+        except ValueError:
+            pass
+    val = config.get("codex.pr_review_timeout_s")
+    if isinstance(val, int) and not isinstance(val, bool) and val > 0:
+        return val
+    return DEFAULT_TIMEOUT_S
+
+
+# --- entry point -----------------------------------------------------------
+
+
+def main(argv: list[str] | None = None) -> int:
+    if argv is None:
+        argv = sys.argv[1:]
+
+    if "--help" in argv or "-h" in argv:
+        print(
+            f"Usage: python3 dd_review.py {{{'|'.join(VALID_TIERS)}}} "
+            f"[--base <ref>] [--cwd <path>]\n"
+            "Run an adversarial review of the branch diff against its fork "
+            "base.\n"
+            "  --base <ref>  pre-pr only: override the diff base.\n"
+            "  --cwd <path>  review the repo rooted at <path>."
+        )
+        return 0
+
+    parsed = _parse_argv(argv)
+    if isinstance(parsed, str):
+        _print_usage_error(parsed)
+        return 2
+    tier, explicit_base, cwd_override = parsed
+
+    logger = logging_setup.setup(HOOK_NAME)
+    logger.emit(
+        "invoked",
+        tier=tier,
+        explicit_base=explicit_base or "",
+        cwd=cwd_override or "",
+    )
+
+    repo = cwd_override or os.getcwd()
+    if cwd_override and not pathlib.Path(cwd_override).is_dir():
+        _print_usage_error(f"--cwd {cwd_override!r} is not a directory")
+        return 2
+
+    rc_root, repo_root = _git(repo, "rev-parse", "--show-toplevel")
+    if rc_root != 0 or not repo_root:
+        print("[dd_review] ERROR: not inside a git repo.", file=sys.stderr)
+        return 1
+    repo = repo_root
+
+    # Config must follow --cwd: config._user_config_path() reads
+    # Path.cwd()/.claude/dd-config.json, which is the WRONG repo when --cwd
+    # retargets another tree. Steer DD_CONFIG at the target repo before the
+    # first config.get(...) below. Don't clobber a DD_CONFIG the caller/test
+    # already set to a real path. An empty-string DD_CONFIG is treated as
+    # unset — config.py itself reads it via a falsy `if override:` check, and
+    # the test harness sets ``DD_CONFIG=""`` to disable process-cwd config.
+    #
+    # Accepted (review, re-raised 3x): this mutates the process env for the
+    # rest of this process's life. Blast radius is (a) the spawned reviewer
+    # subprocess, which inherits it, and (b) any later in-process config read.
+    # Both are safe: neither `claude` nor `codex` reads DD_CONFIG, and
+    # dd_review is a single-shot CLI — after this point main() only dispatches
+    # the reviewer, scans output, checkpoints, and exits; nothing re-resolves
+    # config for the original repo. A try/finally restore wouldn't help (the
+    # subprocess is spawned inside the window), and an explicit env= dict is
+    # dead complexity for an inert path. Revisit only if a real in-process
+    # caller reads config after this line, or a reviewer starts consuming
+    # DD_CONFIG.
+    if cwd_override and not os.environ.get("DD_CONFIG"):
+        os.environ["DD_CONFIG"] = str(
+            pathlib.Path(repo) / ".claude" / "dd-config.json"
+        )
+        config.reset_config_cache()
+
+    branch = _current_branch(repo)
+    head_sha = _head_sha(repo)
+
+    tier_config, selector_config, cfg_err = _load_tier_and_selector(tier)
+    if cfg_err or tier_config is None or selector_config is None:
+        print(f"[dd_review {tier}] ERROR — {cfg_err}", file=sys.stderr)
+        return 1
+    reviewer = tier_config["reviewer"]
+
+    def _error(reason: str, msg: str) -> int:
+        # Exit 1 = operational failure (cli-missing, timeout, empty stdout,
+        # diff failure). Usage errors stay 2 (see _parse_argv / --cwd checks).
+        logger.emit("error", reason=reason, msg=msg)
+        # Curated review trace: record the tooling failure too (analysis wants
+        # "is it working", not just successful reviews). Fields known this
+        # early only; degrade-safe.
+        logging_setup.append_review({
+            "tier": tier, "reviewer": reviewer, "branch": branch,
+            "head_sha": head_sha, "decision": "ERROR",
+            "reason": reason, "msg": msg,
+        })
+        print(f"[dd_review {tier}] ERROR — {msg}", file=sys.stderr)
+        return 1
+
+    if shutil.which(reviewer) is None:
+        return _error("cli_missing", f"{reviewer} CLI not found on PATH")
+
+    base, base_err = _resolve_base(repo, tier, explicit_base)
+    if base_err or not base:
+        return _error("base_unresolvable", base_err or "could not resolve base")
+
+    # Empty-diff check — cheap exit-code-only probe (timeout-bounded; this
+    # engine is the pre-PR hard block, so a stuck git must not hang it).
+    empty = _diff_is_empty(repo, base)
+    if empty is None:
+        return _error("git_diff_failed", f"git diff {base}...HEAD failed or timed out")
+    if empty:
+        print(
+            f"[dd_review {tier}] No changes between {base} and HEAD; "
+            "nothing to review."
+        )
+        logger.emit("noop", reason="empty_diff", base=base)
+        return 0
+
+    paths_csv = review_prompt.gather_touched_paths(repo, base)
+
+    diff_body = _read_diff_bytes(repo, base)
+    if diff_body is None:
+        return _error("git_diff_failed", f"git diff {base}...HEAD failed")
+    diff_bytes = len(diff_body)
+
+    try:
+        invocation = review_invocation.pick_invocation(
+            tier_config, selector_config, diff_bytes
+        )
+    except (KeyError, ValueError) as exc:
+        return _error("selector_failed", f"pick_invocation: {exc}")
+
+    logger.emit(
+        "invocation",
+        reviewer=invocation.reviewer,
+        model=invocation.model,
+        effort=invocation.effort,
+        strategy=invocation.strategy,
+        diff_bytes=diff_bytes,
+    )
+
+    # Build reviewer-specific prompt + argv.
+    prompt = ""
+    runner_argv: list[str]
+
+    if invocation.reviewer == "claude":
+        prompt_path, configured_path = _resolve_prompt_path(repo)
+        if not prompt_path.is_file():
+            return _error(
+                "prompt_missing",
+                f"review.prompt_path ({configured_path}) not found",
+            )
+        try:
+            prompt_header = prompt_path.read_text()
+        except OSError as exc:
+            return _error(
+                "prompt_unreadable",
+                f"review.prompt_path ({configured_path}) unreadable: {exc}",
+            )
+        plan_path, spec_path = review_prompt.resolve_plan_and_spec_paths(
+            repo, lambda: plan_mod.resolve_active_plan(repo)
+        )
+        prompt = review_prompt.build_claude_prompt(
+            prompt_header=prompt_header,
+            base=base,
+            head_sha=head_sha,
+            paths_csv=paths_csv,
+            plan_path=plan_path,
+            spec_path=spec_path,
+            strategy=invocation.strategy,
+        )
+        if invocation.strategy == "stuffed":
+            prompt = (
+                prompt
+                + "\n\n## Diff (pre-stuffed; no need to git diff)\n\n"
+                + "```diff\n"
+                + diff_body.decode("utf-8", errors="replace")
+                + "\n```\n"
+            )
+        runner_argv = review_prompt.claude_runner_argv(
+            model=invocation.model,
+            effort=invocation.effort,
+            strategy=invocation.strategy,
+        )
+    else:  # codex
+        runner_argv = review_prompt.codex_runner_argv(
+            repo if cwd_override else None,
+            base,
+            model=invocation.model,
+            effort=invocation.effort,
+            strategy=invocation.strategy,
+        )
+        if invocation.strategy == "stuffed":
+            prompt_path, configured_path = _resolve_prompt_path(repo)
+            if not prompt_path.is_file():
+                return _error(
+                    "prompt_missing",
+                    f"review.prompt_path ({configured_path}) not found",
+                )
+            try:
+                skill_text = prompt_path.read_text()
+            except OSError as exc:
+                return _error(
+                    "prompt_unreadable",
+                    f"review.prompt_path ({configured_path}) unreadable: {exc}",
+                )
+            prompt = (
+                skill_text
+                + "\n\n## Diff (pre-stuffed; no need to git diff)\n\n"
+                + "```diff\n"
+                + diff_body.decode("utf-8", errors="replace")
+                + "\n```\n"
+            )
+
+    review_start = time.monotonic()
+    timeout_s = _resolve_timeout()
+    result = claude_runner.Runner(
+        argv=runner_argv,
+        timeout_s=timeout_s,
+        stdin_text=prompt,
+        log=logger,
+        # Run the reviewer IN the repo under review so claude's fetched-strategy
+        # `git diff` reads the right tree (codex self-wraps with `cd`, but a
+        # redundant cwd here is harmless). Fixes the --cwd-on-claude bug.
+        cwd=repo,
+    ).run()
+    duration_s = int(time.monotonic() - review_start)
+
+    def _review_record(decision: str, **extra) -> None:
+        # Curated review trace — every POST-runner outcome (PASS/BLOCK/ERROR),
+        # so analysis sees latency + outcomes incl. tooling failures. The
+        # pre-runner _error path writes its own leaner record (invocation/diff
+        # not yet known there). Degrade-safe (append_review never raises).
+        logging_setup.append_review({
+            "tier": tier,
+            "reviewer": invocation.reviewer,
+            "model": invocation.model,
+            "effort": invocation.effort,
+            "strategy": invocation.strategy,
+            "diff_bytes": diff_bytes,
+            "base": base,
+            "branch": branch,
+            "head_sha": head_sha,
+            "duration_s": duration_s,
+            "decision": decision,
+            **extra,
+        })
+
+    if result.exit_reason == "timeout" or result.exit_code == 124:
+        logger.emit("error", reason="cli_timeout", duration_s=duration_s)
+        _review_record("ERROR", reason="cli_timeout")
+        print(
+            f"[dd_review {tier}] ERROR — {reviewer} review timed out "
+            f"(>{timeout_s}s)",
+            file=sys.stderr,
+        )
+        return 1
+    if result.exit_code != 0:
+        logger.emit(
+            "error",
+            reason="cli_error",
+            exit_code=result.exit_code,
+            duration_s=duration_s,
+        )
+        _review_record("ERROR", reason="cli_error", exit_code=result.exit_code)
+        print(
+            f"[dd_review {tier}] ERROR — {reviewer} review exited "
+            f"{result.exit_code}",
+            file=sys.stderr,
+        )
+        return 1
+
+    review_output = result.stdout
+    if not review_output.strip():
+        logger.emit("error", reason="empty_output", duration_s=duration_s)
+        _review_record("ERROR", reason="empty_output")
+        print(
+            f"[dd_review {tier}] ERROR — {reviewer} produced no output",
+            file=sys.stderr,
+        )
+        return 1
+
+    # Severity scan — stdout only, line-start anchored.
+    p0, p1, p2, p3 = severity.count_severities(review_output, line_start=True)
+    excerpt = severity.findings_excerpt(review_output, line_start=True)
+    decision = "BLOCK" if (p0 + p1 + p2) > 0 else "PASS"
+
+    print("=" * 64)
+    print(
+        f"[dd_review {tier}] {decision} in {duration_s}s — "
+        f"{p0}xP0 {p1}xP1 {p2}xP2 {p3}xP3"
+    )
+    print("=" * 64)
+    print()
+    print(review_output)
+    if excerpt:
+        print(excerpt, file=sys.stderr)
+
+    # Delta 2 — clean pass checkpoints HEAD for every tier; a BLOCK does not.
+    if decision == "PASS" and branch and head_sha:
+        state.set_checkpoint(repo, branch, head_sha)
+
+    logger.emit(
+        "decision",
+        decision=decision,
+        p0=p0,
+        p1=p1,
+        p2=p2,
+        p3=p3,
+        duration_s=duration_s,
+        tier=tier,
+        reviewer=reviewer,
+        base=base,
+    )
+
+    # Curated review trace (the analysis substrate: outcome, latency, the
+    # full result).
+    _review_record(decision, p0=p0, p1=p1, p2=p2, p3=p3, output=review_output)
+
+    # pre-pr hard-block: DD_HARD_BLOCK=1 (set by the PreToolUse wrapper)
+    # makes BLOCK return non-zero. Manual invocation stays advisory.
+    if (
+        tier == "pre-pr"
+        and decision == "BLOCK"
+        and os.environ.get("DD_HARD_BLOCK") == "1"
+    ):
+        return 1
+    return 0
+
+
+if __name__ == "__main__":
+    sys.exit(main())

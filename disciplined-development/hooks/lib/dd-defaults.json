@@ -1,0 +1,57 @@
+{
+  "review_tiers": {
+    "regular": {
+      "reviewer": "claude",
+      "model": "opus",
+      "default_effort": "medium"
+    },
+    "cold_read_escalation": {
+      "reviewer": "claude",
+      "model": "opus",
+      "default_effort": "high"
+    },
+    "pre_pr": {
+      "reviewer": "codex",
+      "model": "gpt-5.5",
+      "default_effort": "medium"
+    }
+  },
+  "strategy_selector": {
+    "pre_stuff_max_bytes": 524288,
+    "high_effort_min_bytes": 51200
+  },
+  "counters": {
+    "discipline_threshold": 25,
+    "review_threshold": 5
+  },
+  "review": {
+    "prompt_path": ".claude/skills/adversarial-review/SKILL.md"
+  },
+  "branch_convention": {
+    "trunk_branches": ["master", "main"]
+  },
+  "plans": {
+    "active_plan_pointer": ".claude/active-plan",
+    "fallback_glob": ["plans/*.md"],
+    "skip_section_headers": [
+      "test plan",
+      "definition of done",
+      "done criteria",
+      "verification",
+      "verification commands",
+      "smoke pass",
+      "sign-off",
+      "self-review",
+      "self review"
+    ]
+  },
+  "codex": {
+    "pr_review_timeout_s": 600
+  },
+  "logging": {
+    "dir": null,
+    "retention_days": 14,
+    "enabled": true,
+    "sweep_throttle_hours": 24
+  }
+}
