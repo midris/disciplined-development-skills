@@ -1,0 +1,10 @@
+# Python build/runtime cruft from the hook stack
+__pycache__/
+*.pyc
+.pytest_cache/
+
+# Per-project hook runtime state (only created when a consumer runs the hooks)
+.dd-state/
+
+# Skill-build subagent transcripts — never re-enter the bundle
+baseline-*.md
