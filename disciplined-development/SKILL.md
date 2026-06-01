@@ -159,7 +159,7 @@ REQUIRED SUB-SKILL: `adversarial-review-loop`.
 | Debugging | Principles 1, 2, 5, 6 + Gates 1, 3, 4 | `superpowers:systematic-debugging` |
 | Code review (giving) | Principles 3, 7, 8 + Gates 1, 4 + read the diff | `superpowers:requesting-code-review` + `adversarial-review` + `adversarial-review-loop` |
 | Code review (receiving) | Principle 3 + Gate 1 (surface, don't interpret) | `superpowers:receiving-code-review` |
-| Editing docs / specs / plans | Principles 1, 3, 6, 7 + Gates 1, 4 | `superpowers:writing-plans` + `lean-plan-writing` (for plans/specs) |
+| Editing docs / specs / plans | Principles 1, 3, 6, 7 + Gates 1, 4 | `superpowers:writing-plans` + `lean-plan-writing` (for plans/specs) + `concise-writing` |
 
 ## Common rationalizations
 
