@@ -102,6 +102,40 @@ def test_claude_logs_dir_walk_up():
     assert logging_setup._claude_logs_dir(Path("/tmp/x/y.py")) is None
 
 
+def test_log_dir_derives_from_claude_project_dir_under_symlink(tmp_path, monkeypatch):
+    # Symlink consumption: __file__ resolves into the bundle clone (which has no
+    # .claude ancestor), so the __file__ walk yields None. The log dir must still
+    # land in the consumer project via CLAUDE_PROJECT_DIR — not /tmp.
+    monkeypatch.delenv("DD_LOG_DIR", raising=False)  # conftest sets it; clear to reach derivation
+    monkeypatch.delenv("DD_CONFIG", raising=False)
+    monkeypatch.delenv("DD_DEFAULTS", raising=False)
+    config.reset_config_cache()
+    proj = tmp_path / "proj"
+    (proj / ".claude").mkdir(parents=True)
+    monkeypatch.setenv("CLAUDE_PROJECT_DIR", str(proj))
+    try:
+        assert logging_setup._resolve_log_dir() == proj / ".claude" / ".dd-state" / ".logs"
+    finally:
+        config.reset_config_cache()
+
+
+def test_log_dir_falls_back_to_cwd_when_no_project_dir_env(tmp_path, monkeypatch):
+    # No CLAUDE_PROJECT_DIR → derive the consumer .claude from cwd (mirrors how
+    # config.py locates the consumer). Still symlink-safe: independent of __file__.
+    monkeypatch.delenv("DD_LOG_DIR", raising=False)
+    monkeypatch.delenv("CLAUDE_PROJECT_DIR", raising=False)
+    monkeypatch.delenv("DD_CONFIG", raising=False)
+    monkeypatch.delenv("DD_DEFAULTS", raising=False)
+    config.reset_config_cache()
+    proj = tmp_path / "proj"
+    (proj / ".claude").mkdir(parents=True)
+    monkeypatch.chdir(proj)
+    try:
+        assert logging_setup._resolve_log_dir() == proj / ".claude" / ".dd-state" / ".logs"
+    finally:
+        config.reset_config_cache()
+
+
 def test_reserved_field_clobber_dropped(tmp_path, capsys):
     logger = logging_setup.setup("hookA", log_dir=str(tmp_path))
     logger.emit("x", hook="EVIL", pid=-1, ok=1)

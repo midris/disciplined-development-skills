@@ -79,7 +79,9 @@ default, tuned by retention/cleanup rather than by logging less. This is
 
 - **Rolling log:** `.claude/.dd-state/.logs/dd-hooks-YYYYMMDD.jsonl` (append;
   all hooks interleave, keyed by `hook`/`pid`). Dir resolution: `DD_LOG_DIR`
-  env → `logging.dir` config → derived `.claude/.dd-state/.logs`.
+  env → `logging.dir` config → consumer `<project-root>/.claude/.dd-state/.logs`
+  (project root from `CLAUDE_PROJECT_DIR` or cwd; symlink-safe) → `__file__`
+  walk-up to `.claude` (in-tree fallback) → `/tmp/dd-hooks`.
 - **Curated review trace:** `.claude/.dd-state/.logs/reviews.jsonl` — one rich
   record per review (tier, reviewer, model, effort, strategy, diff_bytes,
   base, branch, duration, P0–P3 counts, decision, full reviewer output) for

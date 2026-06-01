@@ -14,9 +14,16 @@ off switch.
 Log directory resolution (highest precedence first):
   1. ``DD_LOG_DIR`` env — ops/test override (also how tests isolate logs).
   2. ``logging.dir`` (config / ``dd-config.json``).
-  3. derived ``<.claude>/.dd-state/.logs`` — walk up from this module to the
-     nearest ``.claude`` ancestor (cwd- and git-independent).
-  4. ``/tmp/dd-hooks`` fallback (no ``.claude`` ancestor found).
+  3. consumer ``<project-root>/.claude/.dd-state/.logs`` — project root from
+     ``CLAUDE_PROJECT_DIR`` (set by the agent harness) or cwd. Symlink-safe:
+     resolves correctly when the hooks package is reached through a symlink,
+     where the module's own resolved path lands in the bundle clone (no
+     ``.claude`` ancestor) and step 4 would otherwise fall through to ``/tmp``.
+  4. derived ``<.claude>/.dd-state/.logs`` — walk up from this module to the
+     nearest ``.claude`` ancestor. In-tree fallback for non-symlink layouts
+     where the hooks live under the consumer's own ``.claude`` and neither the
+     env var nor cwd points at the project root.
+  5. ``/tmp/dd-hooks`` fallback (none of the above resolved).
 
 The record's ``ts`` field is full ISO-8601 with millisecond precision so
 consumers can order events emitted within the same second.
@@ -74,6 +81,18 @@ def _claude_logs_dir(start: Path) -> Path | None:
     return None
 
 
+def _consumer_logs_dir() -> Path | None:
+    """``<project-root>/.claude/.dd-state/.logs`` from ``CLAUDE_PROJECT_DIR``
+    (set by the agent harness) or cwd — whichever points at a dir that holds a
+    ``.claude``. Symlink-safe, unlike :func:`_claude_logs_dir`: when the hooks
+    package is reached through a symlink, ``__file__`` resolves into the bundle
+    clone (no ``.claude`` ancestor) but the project root still has one. None
+    when neither candidate has a ``.claude`` dir."""
+    root = os.environ.get("CLAUDE_PROJECT_DIR") or os.getcwd()
+    claude = Path(root) / ".claude"
+    return claude / ".dd-state" / ".logs" if claude.is_dir() else None
+
+
 def _resolve_log_dir() -> Path:
     """Resolve the log directory per the precedence in the module docstring."""
     env_dir = os.environ.get("DD_LOG_DIR")
@@ -82,6 +101,9 @@ def _resolve_log_dir() -> Path:
     cfg_dir = config.get("logging.dir")
     if isinstance(cfg_dir, str) and cfg_dir:
         return Path(cfg_dir)
+    consumer = _consumer_logs_dir()
+    if consumer is not None:
+        return consumer
     derived = _claude_logs_dir(Path(__file__).resolve())
     return derived if derived is not None else _FALLBACK_DIR
 
