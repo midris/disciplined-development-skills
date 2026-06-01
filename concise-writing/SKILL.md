@@ -1,6 +1,6 @@
 ---
 name: concise-writing
-description: 'Use when writing or finalizing durable prose — docs, READMEs, plans, specs, design notes, commit bodies, code comments — or chat replies, and the output risks being verbose, padded, wordy, or bulky to read; also when asked to be more concise, tighten, trim, or "get to the point." Not for skill/reference authoring (every-word-counts case, handled in the moment).'
+description: 'Use when writing or finalizing prose a reader must get through — docs, READMEs, plans, specs, design notes, commit bodies, code comments, and chat replies — and the output risks being verbose, padded, wordy, or bulky; also when asked to be more concise, tighten, trim, or "get to the point." Skill/reference authoring is owned by superpowers:writing-skills (a stricter, every-word-counts bar) — use that there, not this.'
 ---
 
 # Concise writing
