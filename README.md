@@ -10,7 +10,7 @@ resume); the skills carry the actual content.
 
 ## What's included
 
-Seven skills (each a `<name>/SKILL.md`):
+Eight skills (each a `<name>/SKILL.md`):
 
 - **`disciplined-development`** — the doctrine: the Iron Law, the five gates, the
   principles, the rationalization tables. The parent skill; the rest are its
@@ -27,6 +27,8 @@ Seven skills (each a `<name>/SKILL.md`):
   place that encodes it, in one commit.
 - **`writing-explicit-rationale`** — put the *why* on the artifact for choices a
   future reader might re-litigate.
+- **`concise-writing`** — tighten prose a reader must get through (docs, plans,
+  commit bodies, replies); cut padding without cutting substance.
 
 The hook stack (under `disciplined-development/hooks/`) is documented in its own
 [`hooks/README.md`](disciplined-development/hooks/README.md); config schema in
@@ -51,8 +53,27 @@ git clone github-personal:midris/disciplined-development-skills.git
 
 `install-skills.sh` symlinks each skill dir into `<project>/.claude/skills/`
 (idempotent; it skips and warns rather than clobbering a real dir or a
-differently-targeted symlink). Gitignore the resulting symlinks in the consuming
-project — they're machine-specific.
+differently-targeted symlink). Re-run it after a fresh clone, a new worktree, or
+any branch switch that drops the symlinks — they are not tracked (see Recovery).
+
+**Gitignore the symlinks** — they're machine-specific, not tracked content. Add
+one line per skill to the consuming project's `.gitignore`:
+
+```
+.claude/skills/adversarial-review
+.claude/skills/adversarial-review-loop
+.claude/skills/concise-writing
+.claude/skills/disciplined-development
+.claude/skills/disciplined-research
+.claude/skills/lean-plan-writing
+.claude/skills/sweeping-stale-references
+.claude/skills/writing-explicit-rationale
+```
+
+Each needs its **own** line when `.claude/skills/` is otherwise trackable (e.g.
+your `.gitignore` has a `!.claude/skills` negation) — a single glob won't catch
+them. Add a new line here whenever the bundle gains a skill, or the new symlink
+shows up untracked.
 
 > **Symlink caveat.** Claude Code skill discovery follows symlinks on current
 > builds (verified on the Claude CLI and desktop app), but an older build may hit
@@ -62,11 +83,16 @@ project — they're machine-specific.
 
 ## Wire the hooks
 
-Hooks are not auto-registered — add a hook block to the consuming project's
-`.claude/settings.json` pointing at the symlinked hook scripts
-(`$CLAUDE_PROJECT_DIR/.claude/skills/disciplined-development/hooks/<hook>.py`).
-See [`examples/`](examples/) for a starter and
-[`hooks/README.md`](disciplined-development/hooks/README.md) for the full set.
+Hooks are not auto-registered. Merge the `hooks` block from
+[`examples/settings.hooks.json`](examples/settings.hooks.json) into the consuming
+project's `.claude/settings.json` (if the file already has a `hooks` key, merge
+the event arrays rather than replacing them). The commands resolve the scripts
+through the symlinks via `$CLAUDE_PROJECT_DIR`, so no paths need editing.
+
+That block wires the full set — plan-state injection, the re-ground counter, the
+pre-PR hard gate, the post-commit verify/cadence nudge, and post-compaction
+re-grounding. Per-hook behavior + the `DD_SKIP_<HOOK>` bypass env vars are in
+[`hooks/hook-recipes-claude-code.md`](disciplined-development/hooks/hook-recipes-claude-code.md).
 
 ## Configure + adopt
 
@@ -78,6 +104,29 @@ See [`examples/`](examples/) for a starter and
 - **Thread into `CLAUDE.md`:** add the invoke-at-session-start block from
   [`examples/CLAUDE.md-snippet.md`](examples/CLAUDE.md-snippet.md) so the agent
   loads the doctrine and its companions.
+
+## Recovery / troubleshooting
+
+The skill symlinks are **machine-local and untracked**, so anything that resets
+the working tree drops them: a fresh clone, a new worktree, a branch switch, or a
+merge that moves you off the branch. When they're gone the hook commands point at
+missing files.
+
+**Symptom — every tool call is blocked.** The `*`-matcher `discipline_nudge.py`
+runs before every tool; with its path missing it exits non-zero, which Claude
+Code treats as a *block* — the agent is locked out of all tools, not just a
+silently-skipped nudge.
+
+**Fix** — re-run the installer from your clone:
+
+```
+/path/to/disciplined-development-skills/install-skills.sh /path/to/your/project
+```
+
+If you're mid-lockout and even that is blocked, first remove the `hooks` block
+from `.claude/settings.json` (or set the `DD_SKIP_<HOOK>` env vars) to break the
+cycle, re-run the installer, then restore the hooks. They resolve again the
+moment the symlinks are back.
 
 ## Tests
 

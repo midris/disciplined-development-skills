@@ -10,12 +10,12 @@ overlays *on top of* it.
 - Invoke the `disciplined-development` skill at the start of every session
   (path `.claude/skills/disciplined-development/SKILL.md`). It governs the gates,
   principles, and sub-skill dispatch: `adversarial-review`,
-  `adversarial-review-loop`, `disciplined-research`, `lean-plan-writing`,
-  `sweeping-stale-references`, `writing-explicit-rationale`. The rules below are
-  project-specific overlays on top of it.
-- The hooks are **not** auto-registered. Add the hook block to
-  `.claude/settings.json` (see `disciplined-development/hooks/README.md`) and drop
-  a `.claude/dd-config.json` to tune behavior (start from `examples/dd-config.json`;
+  `adversarial-review-loop`, `concise-writing`, `disciplined-research`,
+  `lean-plan-writing`, `sweeping-stale-references`, `writing-explicit-rationale`.
+  The rules below are project-specific overlays on top of it.
+- The hooks are **not** auto-registered. Merge the hook block from
+  `examples/settings.hooks.json` into `.claude/settings.json`, and drop a
+  `.claude/dd-config.json` to tune behavior (start from `examples/dd-config.json`;
   full schema in `disciplined-development/hooks/dd-config.md`).
 
 ---
