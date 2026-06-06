@@ -104,6 +104,13 @@ re-grounding. Per-hook behavior + the `DD_SKIP_<HOOK>` bypass env vars are in
 - **Thread into `CLAUDE.md`:** add the invoke-at-session-start block from
   [`examples/CLAUDE.md-snippet.md`](examples/CLAUDE.md-snippet.md) so the agent
   loads the doctrine and its companions.
+- **Wire `/dd-review`:** copy
+  [`examples/commands/dd-review.md`](examples/commands/dd-review.md) to
+  `<project>/.claude/commands/dd-review.md` so the slash command the hooks
+  nudge for (`/dd-review regular`, `/dd-review cold-read`) actually resolves.
+  Commit or gitignore it as you would any other project-local config; the
+  template assumes the consumer-side skill-symlink path, edit the path
+  inside if your layout differs.
 
 ## Recovery / troubleshooting
 
