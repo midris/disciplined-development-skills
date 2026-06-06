@@ -123,6 +123,7 @@ REQUIRED SUB-SKILL: `superpowers:subagent-driven-development`.
 **5. Test-first for behavior changes — non-negotiable.**
 - Test and impl land in the same commit (`feat:` or `fix:`).
 - Editing order: write failing, watch fail, implement, refactor.
+- Compiled languages: empty stubs first, then test, then fill.
 - Never `test:` then `feat:` for the same unit (the `test:` commit would land red).
 - Test names state what they prove (`rejects_empty_input`), not what they do (`handles_edge_cases`).
 - Fixtures match real producer output, not idealized values.
@@ -174,6 +175,7 @@ REQUIRED SUB-SKILL: `adversarial-review-loop`.
 | "User wants speed." | Discipline now. Throwaway is slower. |
 | "Tests pass." | Mocks lie. Run Gate 3. |
 | "Tests after = same outcome." | Not equivalent. Test first. |
+| "All stubs first, then tests." | One cycle per type. Don't batch. |
 | "Logically independent units → separate RED commits." | Splitting commits is fine; test-without-impl never is. |
 | "`test:` commit followed by `feat:` commit = test-first." | Editing order, not commit shape. Same commit, both go in. |
 | "Constraint is structural; value doesn't matter." | Constraints fire on what producers write. Use producer-shaped fixtures. |
