@@ -205,7 +205,7 @@ PreToolUse blocks read the previous value — spec boundary note).
     denied while over threshold; fork-base fallback when no checkpoint; bypass
     allows; degrades silent.
 
-- [ ] **H4 — `review_nudge.py` (modify).** Repoint the cadence segment:
+- [x] **H4 — `review_nudge.py` (modify).** Repoint the cadence segment:
   - **T1 nudge** — landed commit (`is_git_commit` + `commit_landed`) **and**
     `edits.count` ≥ `review_tiers.regular.commit_edit_floor` (30).
   - **T2 nudge** — commits-since-checkpoint (fork-base fallback) ≥
