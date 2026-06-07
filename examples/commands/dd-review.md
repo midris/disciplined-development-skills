@@ -67,7 +67,7 @@ Angle focus lines (append exactly one to the corresponding reviewer):
 - **rationale** — verify every docstring / comment / "safe" / "trusted" claim against the actual code.
 - **cross-file** — divergence from canonical modules, broken imports, caller / contract drift.
 - **security** — path traversal, injection, unvalidated input, unsafe path building.
-- **necessity** — dead code, over-engineering, premature abstraction / config (Principle 7).
+- **necessity** — cut what doesn't earn its place. Code: dead code, over-engineering, premature abstraction / config (Principle 7). Prose: padded / verbose docs + comments — this reviewer also loads the `concise-writing` skill.
 
 **3. Aggregate** the subagents' findings: dedupe by `file:line`, keep the
 highest severity, union the detail. This is model judgment (like
