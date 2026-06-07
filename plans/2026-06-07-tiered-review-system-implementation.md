@@ -189,7 +189,7 @@ PreToolUse blocks read the previous value — spec boundary note).
   - **Tests required:** increments on each Edit and Write; nudge fires at the
     threshold, not before; bypass silences; degrades silent on bad payload.
 
-- [ ] **H2 — `edit_block.py` (new).** PreToolUse(Edit|Write): deny when stored
+- [x] **H2 — `edit_block.py` (new).** PreToolUse(Edit|Write): deny when stored
   `edits.count` ≥ `review_tiers.fast.hard_block_threshold` (60) — i.e. the
   61st edit. Reads, never increments. Bypass `DD_SKIP_EDIT_BLOCK` (Decision A).
   - **Tests required:** allows below threshold; denies at/above threshold;
