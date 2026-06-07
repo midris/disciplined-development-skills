@@ -331,7 +331,7 @@ on the staged docs branch before commit.
   blocks at 60; commit block fires on the 6th; `/dd-review cold-read` runs the
   subagent set, aggregates, iterates to clean, writes the checkpoint, resets
   the counter; `gh pr create` hits the T3 codex gate.
-- [ ] **S1 — Reconcile the spec.** Update
+- [x] **S1 — Reconcile the spec.** Update
   `2026-06-07-tiered-review-system-design.md` for the confirmed decisions
   (A bypass names; D verify segment; B rename if taken; C phrasing). **References
   swept** across spec, `dd-config.md`, `examples/*`, hook docstrings, tests.
