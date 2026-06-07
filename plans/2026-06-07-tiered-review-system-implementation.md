@@ -227,7 +227,7 @@ PreToolUse blocks read the previous value — spec boundary note).
 
 ## Phase 4 — Wiring
 
-- [ ] **W1 — `examples/settings.hooks.json` + repo settings + wiring test.**
+- [x] **W1 — `examples/settings.hooks.json` + repo settings + wiring test.**
   Add: PostToolUse(Edit|Write) → `edit_counter`; PreToolUse(Edit|Write) →
   `edit_block`; PreToolUse(Bash) → `commit_block`. Keep `discipline_nudge`,
   `inject_plan_state`, `review_nudge`, `pre_pr_review`, `compaction_reground`.
