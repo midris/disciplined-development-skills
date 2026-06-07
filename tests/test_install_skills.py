@@ -105,3 +105,77 @@ def test_skips_symlink_to_different_target(tmp_path):
     assert r.returncode == 0, r.stderr
     assert (skills / "alpha-skill").resolve() == other.resolve()
     assert "alpha-skill" in (r.stdout + r.stderr)
+
+
+# ---------------------------------------------------------------------------
+# Command-file symlink tests (I1a)
+# _make_clone does not create examples/commands/dd-review.md by default; these
+# helpers extend the clone fixture with that file so the new installer path
+# has a real source to resolve.
+# ---------------------------------------------------------------------------
+
+def _add_command_src(clone: Path) -> Path:
+    """Seed examples/commands/dd-review.md into a test clone."""
+    cmd_src = clone / "examples" / "commands"
+    cmd_src.mkdir(parents=True)
+    src_file = cmd_src / "dd-review.md"
+    src_file.write_text("---\ndescription: dd-review command template\n---\n")
+    return src_file
+
+
+def test_command_symlink_created_and_resolves(tmp_path):
+    clone = _make_clone(tmp_path)
+    _add_command_src(clone)
+    target = tmp_path / "project"
+    target.mkdir()
+    r = _run(clone, target)
+    assert r.returncode == 0, r.stderr
+    dest = target / ".claude" / "commands" / "dd-review.md"
+    assert dest.is_symlink(), "dd-review.md not a symlink"
+    expected_src = clone / "examples" / "commands" / "dd-review.md"
+    assert dest.resolve() == expected_src.resolve()
+
+
+def test_command_symlink_idempotent(tmp_path):
+    clone = _make_clone(tmp_path)
+    _add_command_src(clone)
+    target = tmp_path / "project"
+    target.mkdir()
+    _run(clone, target)
+    r = _run(clone, target)
+    assert r.returncode == 0, r.stderr
+    dest = target / ".claude" / "commands" / "dd-review.md"
+    assert dest.is_symlink()
+    # idempotent: still resolves to the same source
+    expected_src = clone / "examples" / "commands" / "dd-review.md"
+    assert dest.resolve() == expected_src.resolve()
+
+
+def test_command_real_file_not_clobbered(tmp_path):
+    clone = _make_clone(tmp_path)
+    _add_command_src(clone)
+    target = tmp_path / "project"
+    commands_dir = target / ".claude" / "commands"
+    commands_dir.mkdir(parents=True)
+    dest = commands_dir / "dd-review.md"
+    dest.write_text("custom consumer content")
+    r = _run(clone, target)
+    assert r.returncode == 0, r.stderr
+    assert not dest.is_symlink(), "real file was replaced by a symlink"
+    assert dest.read_text() == "custom consumer content"
+
+
+def test_command_foreign_symlink_not_clobbered(tmp_path):
+    clone = _make_clone(tmp_path)
+    _add_command_src(clone)
+    target = tmp_path / "project"
+    commands_dir = target / ".claude" / "commands"
+    commands_dir.mkdir(parents=True)
+    other = tmp_path / "other-command.md"
+    other.write_text("other")
+    dest = commands_dir / "dd-review.md"
+    dest.symlink_to(other)
+    r = _run(clone, target)
+    assert r.returncode == 0, r.stderr
+    assert dest.resolve() == other.resolve(), "foreign symlink was overwritten"
+    assert "dd-review.md" in (r.stdout + r.stderr)

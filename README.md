@@ -104,13 +104,41 @@ re-grounding. Per-hook behavior + the `DD_SKIP_<HOOK>` bypass env vars are in
 - **Thread into `CLAUDE.md`:** add the invoke-at-session-start block from
   [`examples/CLAUDE.md-snippet.md`](examples/CLAUDE.md-snippet.md) so the agent
   loads the doctrine and its companions.
-- **Wire `/dd-review`:** copy
-  [`examples/commands/dd-review.md`](examples/commands/dd-review.md) to
-  `<project>/.claude/commands/dd-review.md` so the slash command the hooks
-  nudge for (`/dd-review regular`, `/dd-review cold-read`) actually resolves.
-  Commit or gitignore it as you would any other project-local config; the
-  template assumes the consumer-side skill-symlink path, edit the path
-  inside if your layout differs.
+- **Wire `/dd-review`:** the installer places this automatically as a symlink
+  at `<project>/.claude/commands/dd-review.md` (resolves to
+  [`examples/commands/dd-review.md`](examples/commands/dd-review.md)).
+  Gitignore the symlink alongside the skill symlinks. If you need a
+  customized copy instead, place a real file there before running the
+  installer — the installer skips and warns rather than clobbering it.
+
+## Upgrading an existing deployment
+
+If your consumer project deployed a pre-rebuild version, three files need
+updating. Symlinked skill dirs auto-update — the engine rename
+(`dd_review.py` → `dd_review_runner.py`), removed files
+(`harness/replay_review.py`), renamed lib (`lib/claude_runner.py` →
+`lib/reviewer_runner.py`), and the three new hook scripts (`edit_counter.py`,
+`edit_block.py`, `commit_block.py`) all resolve through the symlink with no
+consumer action needed.
+
+**1. `.claude/commands/dd-review.md`** — re-run the installer and it lands
+automatically (new in this release). If you have a customized copy, replace it
+manually with [`examples/commands/dd-review.md`](examples/commands/dd-review.md).
+
+**2. `.claude/settings.json` hooks block** — add the three new hook entries
+(the existing hooks are unchanged):
+- PostToolUse `Edit|Write` → `edit_counter.py`
+- PreToolUse `Edit|Write` → `edit_block.py`
+- PreToolUse `Bash` → `commit_block.py`
+
+Copy the current block from
+[`examples/settings.hooks.json`](examples/settings.hooks.json).
+
+**3. `.claude/dd-config.json`** (only if you override defaults) — remove stale
+keys: `counters.review_threshold`; and `reviewer`, `model`, `default_effort`
+under `review_tiers.regular` and `review_tiers.cold_read_escalation` (those
+fields moved to `review_tiers.pre_pr` only). Override only what you need — a
+missing key falls back to the shipped default.
 
 ## Recovery / troubleshooting
 

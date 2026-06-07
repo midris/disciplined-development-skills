@@ -1,5 +1,5 @@
 #!/usr/bin/env bash
-# install-skills.sh — symlink this clone's skills into a project's .claude/skills/
+# install-skills.sh — symlink this clone's skills + command file into a project
 #
 # Usage: install-skills.sh <target-project-dir>
 #
@@ -8,8 +8,14 @@
 # safe: skips (with a warning) any name that already exists as a real path or a
 # symlink pointing elsewhere — it never clobbers a project-local skill.
 #
-# It does NOT edit the consumer's tracked files. Gitignore the resulting symlinks
-# and add the hook block to .claude/settings.json yourself (see the README).
+# Also symlinks the /dd-review command template:
+#   <this-clone>/examples/commands/dd-review.md
+#   -> <target>/.claude/commands/dd-review.md
+# Same guards apply: idempotent; skips with a warning if the dest is a real file
+# or a symlink pointing elsewhere (never clobbers).
+#
+# It does NOT edit the consumer's tracked files (settings.json, dd-config.json).
+# Gitignore the resulting symlinks and wire the hooks manually (see the README).
 set -euo pipefail
 
 if [ $# -ne 1 ]; then
@@ -60,5 +66,29 @@ for skill_md in "$CLONE"/*/SKILL.md; do
   echo "linked: $name -> $src"
   created=$((created + 1))
 done
+
+# --- Command file symlink ---------------------------------------------------
+CMD_SRC="$CLONE/examples/commands/dd-review.md"
+CMD_DIR="$TARGET/.claude/commands"
+CMD_DEST="$CMD_DIR/dd-review.md"
+mkdir -p "$CMD_DIR"
+
+if [ -L "$CMD_DEST" ]; then
+  resolved=$(readlink -f "$CMD_DEST" 2>/dev/null || true)
+  if [ "$resolved" = "$CMD_SRC" ]; then
+    echo "already linked: dd-review.md"
+    already=$((already + 1))
+  else
+    echo "WARN: dd-review.md is a symlink to a different target ($(readlink "$CMD_DEST")) — skipping" >&2
+    skipped=$((skipped + 1))
+  fi
+elif [ -e "$CMD_DEST" ]; then
+  echo "WARN: dd-review.md already exists as a real file — skipping (won't clobber)" >&2
+  skipped=$((skipped + 1))
+else
+  ln -s "$CMD_SRC" "$CMD_DEST"
+  echo "linked: dd-review.md -> $CMD_SRC"
+  created=$((created + 1))
+fi
 
 echo "done: $created created, $already already-linked, $skipped skipped"
