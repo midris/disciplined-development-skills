@@ -56,6 +56,7 @@ def test_settings_references_no_hooks_py():
 
 
 def test_expected_hook_set_wired():
+    # Skip guard fires outside a consumer (see module-level pytestmark).
     joined = " ".join(_hook_commands())
     for expected in (
         "inject_plan_state.py",
@@ -63,6 +64,10 @@ def test_expected_hook_set_wired():
         "pre_pr_review.py",
         "review_nudge.py",
         "compaction_reground.py",
+        # Three new hooks added in W1 (tiered-review-system):
+        "edit_counter.py",   # PostToolUse Edit|Write — T0 nudge counter
+        "edit_block.py",     # PreToolUse  Edit|Write — T0 hard block
+        "commit_block.py",   # PreToolUse  Bash       — T2 commit gate
     ):
         assert expected in joined, f"{expected} not wired"
     # The Stop evidence-scanner is intentionally gone (folded into review_nudge).
