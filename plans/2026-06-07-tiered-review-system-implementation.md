@@ -263,18 +263,37 @@ PreToolUse blocks read the previous value — spec boundary note).
 
 ---
 
-## Phase 6 — Installer
+## Phase 6 — Installer (revised per owner walk-through, 2026-06-07)
 
-- [ ] **I1 — `install-skills.sh` cleanup step + test.** Add a **surgical**
-  install-time cleanup that removes only known bundle-owned stale keys/hooks
-  from a maintained stale-list (e.g. `counters.review_threshold`, any
-  removed/renamed hook entries) so upgrading consumers don't carry old wiring.
-  Never touch user-owned settings or unrelated local config. Preserve
-  installer invariants (idempotent, never clobber a real path or
-  differently-targeted symlink).
-  - **Tests required** (`tests/test_install_skills.py`): cleanup removes a
-    seeded stale key/hook; leaves user-owned config untouched; idempotent on
-    re-run; existing symlink invariants still hold.
+**Decision:** the literal "installer auto-edits consumer config" idea is
+dropped — it contradicts `install-skills.sh`'s documented invariant ("does NOT
+edit the consumer's tracked files"). Split into two deliverables: the installer
+also *places the command file* (symlink, never edits settings/config); a
+separate *cleanup checklist* documents what to remove from already-deployed
+projects. Settings.json + dd-config stay manual (preserved invariant).
+
+- [x] **I1a — `install-skills.sh` also places the command + test.** In
+  addition to symlinking the skill dirs, symlink
+  `examples/commands/dd-review.md` → `<target>/.claude/commands/dd-review.md`
+  (the consumer variant, `.claude/skills/...` paths). Same guards as skills:
+  `mkdir -p` the commands dir; idempotent; skip-with-warning if the dest is a
+  real file or a differently-targeted symlink (never clobber). Do NOT touch
+  `settings.json` or `dd-config.json`.
+  - **Tests required** (`tests/test_install_skills.py`): command symlink
+    created and resolves to `examples/commands/dd-review.md`; idempotent on
+    re-run; existing real file / foreign symlink at the dest is skipped, not
+    clobbered; skill-symlink invariants still hold.
+
+- [x] **I1b — Migration/cleanup checklist (doc).** A durable "Upgrading an
+  existing deployment" section (in `README.md`) listing the bounded
+  three-file consumer migration surface: (1) replace
+  `.claude/commands/dd-review.md` (now auto via I1a re-run); (2) add the three
+  new hook entries to `.claude/settings.json`; (3) remove stale
+  `dd-config.json` keys (`counters.review_threshold`;
+  `reviewer`/`model`/`default_effort` under `review_tiers.regular` +
+  `cold_read_escalation`). Note symlinked skills auto-update (engine rename,
+  removed files, new hooks need no consumer action). Phase 7 D4 polishes the
+  surrounding README; this section lands here so it's usable now.
 
 ---
 
