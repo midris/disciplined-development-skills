@@ -35,8 +35,16 @@ def _state_root(repo: str | Path) -> Path:
 
 
 def _branch_slug(branch: str) -> str:
-    """Filesystem-safe slug for a branch name (slashes and friends -> '_')."""
-    return re.sub(r"[^A-Za-z0-9._-]", "_", branch)
+    """Filesystem-safe slug for a branch name (slashes and friends -> '_').
+
+    Leading dots are replaced with '_' so a branch named '.' or '..' (or any
+    name starting with '.') can never produce a traversal-ish slug. Dots in
+    the middle of a name (e.g. 'release-1.2') are preserved.
+    """
+    slug = re.sub(r"[^A-Za-z0-9._-]", "_", branch)
+    # Strip leading dots to prevent '.' / '..' / '.hidden' → traversal slug.
+    slug = re.sub(r"^\.+", "_", slug)
+    return slug
 
 
 def branch_slug(branch: str) -> str:

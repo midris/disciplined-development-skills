@@ -4,7 +4,7 @@
 Usage:
     python3 dd_review_runner.py pre-pr [--base <ref>] [--cwd <path>]
 
-Rebuilt on the ``hooks/lib`` modules (config, severity, state, plan,
+Rebuilt on the ``hooks/lib`` modules (config, severity, state,
 reviewer_runner, review_invocation, review_prompt). Four behavior deltas
 versus the original marker-based engine (see plan Part B):
 
@@ -23,8 +23,9 @@ versus the original marker-based engine (see plan Part B):
   * Delta 4 — no ``.review-history.log`` writer; JSONL debug logging
     via ``logging_setup`` is preserved.
 
-Tier config keys (``review_tiers.<key>``): regular → ``regular``,
-cold-read → ``cold_read_escalation``, pre-pr → ``pre_pr``.
+The engine review path (codex dispatch + severity scan) is ``pre-pr`` only.
+``--write-checkpoint`` and ``--resolve-scope`` accept additional tiers
+(fast / regular / cold-read) for model-layer state writes and scope queries.
 
 Advisory vs hard-block: manual invocation always exits 0 (the model is
 the consumer). The pre-PR hook wrapper sets ``DD_HARD_BLOCK=1`` so
@@ -70,9 +71,10 @@ _CHECKPOINT_TIERS = ("fast", "regular", "cold-read")
 _SCOPE_TIERS = ("fast", "regular", "cold-read", "pre-pr")
 
 # CLI tier → config-key tier name (hyphen in the CLI, underscore in config).
+# Only pre-pr has a config entry used by the engine's review path; regular and
+# cold-read are handled via --write-checkpoint (no reviewer dispatch, no config
+# lookup for these tiers).
 _TIER_CONFIG_KEY = {
-    "regular": "regular",
-    "cold-read": "cold_read_escalation",
     "pre-pr": "pre_pr",
 }
 
@@ -212,18 +214,21 @@ def _handle_write_checkpoint(argv: list[str]) -> int | None:
         return 1
     repo = r.stdout.strip()
 
-    branch = _current_branch(repo)
+    branch = _current_branch(repo) or "detached"
     head_sha = _head_sha(repo)
 
     # Reset rule — spec §Cadence & state.
     if tier in ("fast", "regular"):
         state.reset(repo, branch, "edits")
+        print(f"[dd_review --write-checkpoint] {tier}: edits counter reset.")
     elif tier == "cold-read":
-        if branch and head_sha:
+        if head_sha:
             state.set_checkpoint(repo, branch, head_sha)
         state.reset(repo, branch, "edits")
-
-    print(f"[dd_review --write-checkpoint] {tier}: checkpoint written.")
+        print(
+            f"[dd_review --write-checkpoint] {tier}: "
+            "checkpoint written and edits counter reset."
+        )
     return 0
 
 
