@@ -19,73 +19,113 @@ fixed, actionable nudge. It does **not** inspect the model's work to decide
 has unbounded edge cases and trains tune-out (see the spec's "nudge, never
 police"). The intelligence stays in the model; the hook just marks the moment.
 
-## The hook set
+## Hook table
 
-Five event hooks + one model-callable engine. **One hard block, zero kicks** —
-everything except the pre-PR gate is an advisory nudge.
+Eight hooks total (eight event entries across five Python scripts) plus one
+model-callable engine. **Three hard blocks, zero kicks** — everything except
+the edit-count ceiling, the commit ceiling, and the pre-PR gate is an advisory
+nudge.
 
-| Component | Event | Role |
-|---|---|---|
-| `inject_plan_state.py` | UserPromptSubmit | Surface the active plan + checkbox progress + next pending task; reset the per-turn discipline counter; run throttled housekeeping (cleanup). |
-| `discipline_nudge.py` | PreToolUse (all tools) | Count tool-calls since the last re-ground; at the threshold emit a fixed "re-read CLAUDE.md + the plan, re-check the skills" nudge and reset. |
-| `review_nudge.py` | PostToolUse (Bash) | On a landed commit: always a Gate-3 **verify** reminder; at the review-cadence threshold also a "run `/dd-review regular`" nudge. |
-| `compaction_reground.py` | SessionStart + PreCompact | After a resume/compaction (context is a summary), re-ground: re-read the source of truth before acting. |
-| `pre_pr_review.py` | PreToolUse (Bash, `gh pr create`) | **The only hard block.** Detect → extract base/cwd → delegate to `dd_review_runner.py pre-pr` with `DD_HARD_BLOCK=1`. Blocks the PR on findings. |
-| `dd_review_runner.py` | model-callable CLI | The review engine: `pre-pr` codex gate against the fork-base diff. Also handles `--write-checkpoint <tier>` (fast/regular/cold-read) and `--resolve-scope <tier>` (all four tiers). |
+| Hook | Event | Matcher | Behavior | Bypass |
+|---|---|---|---|---|
+| `inject_plan_state.py` | UserPromptSubmit | — | Surface the active plan + checkbox progress + next pending task; reset the per-turn discipline counter; run throttled housekeeping. | `DD_SKIP_INJECT_PLAN_STATE` |
+| `discipline_nudge.py` | PreToolUse | `*` (all) | Count tool-calls since the last re-ground; at the threshold emit a "re-read CLAUDE.md + the plan, re-check the skills" nudge and reset. | `DD_SKIP_DISCIPLINE_NUDGE` |
+| `edit_block.py` | PreToolUse | `Edit\|Write` | **Hard block.** Deny when stored `edits.count` ≥ 60 (i.e. the 61st edit). Reads only; never increments. | `DD_SKIP_EDIT_BLOCK` |
+| `commit_block.py` | PreToolUse | `Bash` (`is_git_commit`) | **Hard block.** Deny a `git commit` (incl. `--amend`) when commits-since-last-cold-read ≥ 5 — allows 5, denies the 6th. | `DD_SKIP_COMMIT_BLOCK` |
+| `pre_pr_review.py` | PreToolUse | `Bash` (`gh pr create`) | **Hard block.** Detect → extract base/cwd → delegate to `dd_review_runner.py pre-pr` with `DD_HARD_BLOCK=1`. Blocks the PR on findings. | `DD_SKIP_PR_REVIEW` |
+| `edit_counter.py` | PostToolUse | `Edit\|Write` | Increment `edits.count`; emit a T0 nudge when the stored count reaches 30. Advisory only — PostToolUse runs after the edit. | `DD_SKIP_EDIT_COUNTER` |
+| `review_nudge.py` | PostToolUse | `Bash` | On a landed commit: always emit a Gate-3 **verify** reminder; also T1 nudge when `edits.count` ≥ 30; also T2 nudge when commits-since-cold-read ≥ 3. | `DD_SKIP_REVIEW_NUDGE` |
+| `compaction_reground.py` | SessionStart + PreCompact | — | After resume/compaction, re-ground: re-read the source of truth before acting. | `DD_SKIP_COMPACTION_REGROUND` |
 
-Gate 3 (verify before "done") rides the **post-commit** verify nudge, not a
+Gate 3 (verify before "done") rides the **post-commit verify nudge**, not a
 Stop kick: the commit is where an edit becomes an assertion that owes
 verification, and PostToolUse reaches the model without a Stop hook's
-block-or-be-silent constraint. The model decides what verification fits; the
-hook never scans for or grades evidence.
+block-or-be-silent constraint.
 
-## Three-tier review (`dd_review_runner.py`)
+**Boundary note (PreToolUse reads / PostToolUse writes).** `edit_counter.py`
+increments `edits.count` after each edit (PostToolUse). `edit_block.py` reads
+the stored value before the next edit (PreToolUse). A stored count of 60 means
+60 edits have already landed — the block fires on the next (61st) edit attempt.
+Thresholds are stated against the **stored** count to avoid this off-by-one.
 
-Reviews run at three tiers, configured per project under `review_tiers`. Each
-carries its own reviewer / model / effort:
+## Four-tier review
 
-| Tier | Default | When |
-|---|---|---|
-| `regular` | claude / opus / medium | cadence loop (the `review_nudge` threshold) |
-| `cold-read` | claude / opus / high | mid-branch escalation, higher effort |
-| `pre-pr` | codex / gpt-5.5 / medium | the `gh pr create` hard gate (+ manual dry-run) |
+Reviews run at four tiers — T0 through T3. The model invokes all tiers through
+the single **`/dd-review <tier>`** command.
 
-Rationale: claude credits are abundant, codex scarce — the cadence tiers
-default to claude; codex is reserved for the once-per-PR independent
-cross-model audit. Projects without codex override
-`review_tiers.pre_pr.reviewer` in `dd-config.json` (no runtime `$PATH`
-probe). Every tier resolves its diff to the **fork-base** (merge-base vs the
-first trunk ref); `pre-pr` honours an explicit `--base`. A clean pass writes
-the review checkpoint. `strategy_selector` decides stuffed-vs-fetched dispatch
-and high-effort escalation by diff size.
+| Tier | Fires on | Reviewer | Diff scope | Hard block |
+|---|---|---|---|---|
+| **T0 fast** | edit counter ≥ 30 (nudge) or ≥ 60 (block) | 1 holistic subagent | working-tree vs HEAD | at 60 edits (`edit_block.py`) |
+| **T1 regular** | landed commit when `edits.count` ≥ 30 (nudge) | holistic + correctness + rationale subagents | fork-base..HEAD | — nudge only |
+| **T2 cold-read** | 3 commits since checkpoint (nudge) or 5 (block) | holistic + correctness + rationale + cross-file + security + necessity | fork-base..HEAD | at 5 commits (`commit_block.py`) |
+| **T3 pre-pr** | `gh pr create` | `codex review` (subprocess) | fork-base..HEAD | always (`pre_pr_review.py`) |
+
+**T0–T2 reviewer:** the `/dd-review` command dispatches fresh adversarial-review
+subagents in parallel (Task tool — runs in-session on the subscription). A
+**holistic** subagent covers the whole scope; higher tiers add focused **angle**
+subagents (correctness, rationale, cross-file, security, necessity — the same
+`adversarial-review` posture + one appended focus line). The angle set is fixed
+(no config-driven extensibility). Angles are monotonic — each tier is a superset
+of the one below.
+
+**T3 reviewer:** `dd_review_runner.py` runs `codex review` as a subprocess
+(codex is OpenAI tooling — unaffected by Anthropic billing). Severity-scanned
+and hard-blocks `gh pr create` on any P0/P1/P2.
+
+**`dd_review_runner.py` CLI modes:**
+
+| Mode | When to use |
+|---|---|
+| `dd_review_runner.py pre-pr [--base <ref>] [--cwd <path>]` | T3 codex review (invoked by `pre_pr_review.py`) |
+| `dd_review_runner.py --write-checkpoint <tier>` | Write post-clean-review state after a T0/T1/T2 clean pass (`fast`/`regular`/`cold-read`) |
+| `dd_review_runner.py --resolve-scope <tier>` | Resolve the git diff argument for a tier (`HEAD` for fast; `<fork-base>..HEAD` for the others) |
 
 ## State model
 
-Two dumb things under `.claude/.dd-state/` (gitignored), keyed by branch — no
-marker subsystem:
+Two per-branch state files under `<repo>/.claude/.dd-state/<branch-slug>/`
+(gitignored). Writes are atomic (temp file + `os.replace`); last-write-wins.
+The layer is advisory — a read or write failure degrades to a safe default.
 
-- **Discipline counter** (`<branch>/discipline.count`) — tool-calls since the
-  last re-ground. Bumped by `discipline_nudge`, reset by `inject_plan_state`
-  (turn boundary) and on fire.
-- **Review checkpoint** (`<branch>/review.checkpoint`) — the HEAD sha at the
-  last clean review. `review_nudge` counts commits since it (`git rev-list`);
-  no checkpoint → counts from fork-base, gated behind the same threshold.
+- **`edits.count`** — unreviewed edits on this branch since the last clean
+  review of any tier. Incremented by `edit_counter.py` on every Edit/Write
+  (PostToolUse). Read by `edit_block.py` (PreToolUse) and `review_nudge.py`.
+  Reset on any clean review (T0/T1/T2/T3).
 
-## Observability (non-negotiable)
+- **`review.checkpoint`** — SHA of HEAD at the last clean cold-read (T2) or
+  pre-PR (T3). `commit_block.py` and the T2 segment of `review_nudge.py`
+  count commits since this SHA. When absent (fresh branch or no cold-read yet),
+  both fall back to counting from the **fork base** at the same thresholds —
+  so the T2 block fires even on a branch that has never been cold-read.
 
-Every major hook function emits a structured trace — comprehensive, on by
-default, tuned by retention/cleanup rather than by logging less. This is
-*recording*, distinct from the rejected output-*policing*.
+**Reset rule:**
+- A clean **T0** or **T1** review resets `edits.count` only
+  (`--write-checkpoint fast` or `--write-checkpoint regular`).
+- A clean **T2** review sets `review.checkpoint` = HEAD **and** resets
+  `edits.count` (`--write-checkpoint cold-read`).
+- A clean **T3** review sets `review.checkpoint` = HEAD **and** resets
+  `edits.count` (done inside `dd_review_runner.py` on a clean codex pass).
+
+**PostToolUse-increment / PreToolUse-read boundary.** Thresholds are stated
+against the stored count. The nudge at 30 fires when `edits.count` reaches 30
+(PostToolUse); the block at 60 denies the next edit attempt when the stored
+count is already 60 (PreToolUse reads the value left by the previous
+PostToolUse increment). "Block at 60" and "denies the 61st edit" are the same
+thing stated from different vantage points.
+
+## Observability
+
+Every hook emits structured traces — comprehensive, on by default, tuned by
+retention/cleanup.
 
 - **Rolling log:** `.claude/.dd-state/.logs/dd-hooks-YYYYMMDD.jsonl` (append;
   all hooks interleave, keyed by `hook`/`pid`). Dir resolution: `DD_LOG_DIR`
   env → `logging.dir` config → consumer `<project-root>/.claude/.dd-state/.logs`
-  (project root from `CLAUDE_PROJECT_DIR` or cwd; symlink-safe) → `__file__`
-  walk-up to `.claude` (in-tree fallback) → `/tmp/dd-hooks`.
+  (project root from `CLAUDE_PROJECT_DIR` or cwd) → `__file__` walk-up to
+  `.claude` → `/tmp/dd-hooks`.
 - **Curated review trace:** `.claude/.dd-state/.logs/reviews.jsonl` — one rich
-  record per review (tier, reviewer, model, effort, strategy, diff_bytes,
-  base, branch, duration, P0–P3 counts, decision, full reviewer output) for
-  offline analysis of what/how-long/is-it-working. Never aged out.
+  record per T3 review (tier, reviewer, model, effort, strategy, diff_bytes,
+  base, branch, duration, P0–P3 counts, decision, full reviewer output). Never
+  aged out.
 - **Cleanup:** a throttled sweep (from `inject_plan_state`) prunes day-logs
   past `logging.retention_days` and removes orphaned per-branch state dirs.
 
@@ -93,9 +133,9 @@ default, tuned by retention/cleanup rather than by logging less. This is
 
 - **Shipped defaults:** `lib/dd-defaults.json` (read-only; the schema).
 - **Single override surface:** `.claude/dd-config.json` — all behavior
-  tunables (counters/thresholds, review_tiers, strategy_selector, logging,
-  trunk_branches, fallback_glob, codex timeout). Edit a value to override;
-  delete a key to fall back to the default.
+  tunables (thresholds, review_tiers, strategy_selector, logging,
+  trunk_branches, codex timeout). Edit a value to override; delete a key to
+  fall back to the default.
 - **Escape hatches:** `DD_SKIP_<HOOK>=1` env vars (in
   `.claude/settings.local.json`) silence a hook. Env, not config — a human
   escape the model can't set by editing a tracked file. Override knobs
@@ -107,9 +147,10 @@ default, tuned by retention/cleanup rather than by logging less. This is
 - **`disciplined-development`** — the doctrine: the Iron Law, five gates,
   principles, rationalization tables. Principle 8 is the source of the review
   cadence.
-- **`adversarial-review`** / **`adversarial-review-loop`** — the review prompt
-  + the severity contract (P0/P1/P2 block, P3 advisory) and the
-  review-fix-review iteration cap + cold-read escape.
+- **`adversarial-review`** / **`adversarial-review-loop`** — reviewer posture +
+  the severity contract (P0/P1/P2 block, P3 advisory) and the
+  review-fix-review iteration cap + cold-read escape. Loaded by every T0–T2
+  subagent.
 - **`lean-plan-writing`**, **`writing-explicit-rationale`**,
   **`sweeping-stale-references`**, **`disciplined-research`** — the
   plan-density, rationale-on-page, stale-reference, and verify-before-claiming
@@ -130,7 +171,7 @@ Every rule enforces one of two things, and the split bounds what a hook can do:
 ## Extending the system
 
 Before adding a hook: (1) name the signal the model loses without it; (2) pick
-the tier — nudge (default) vs the one hard gate (only for an irreversible
-boundary); (3) keep the trigger dumb (no output-classification); (4) every
-gate gets a `DD_SKIP_<NAME>` bypass; (5) test-first; (6) update this README +
-the spec. If the surface is for the human, not the model — don't build it.
+the tier — nudge (default) vs a hard block (only for an irreversible boundary);
+(3) keep the trigger dumb (no output-classification); (4) every hook gets a
+`DD_SKIP_<NAME>` bypass; (5) test-first; (6) update this README + the spec.
+If the surface is for the human, not the model — don't build it.

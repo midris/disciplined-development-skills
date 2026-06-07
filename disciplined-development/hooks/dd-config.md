@@ -19,8 +19,8 @@ Two layers of JSON config + env overrides:
 ### Merge semantics
 
 - **Arrays REPLACE** — to extend a default list, copy it in full and append.
-- **Objects DEEP-MERGE** — `"counters": {"review_threshold": 8}` keeps
-  `discipline_threshold` from defaults.
+- **Objects DEEP-MERGE** — `"counters": {"discipline_threshold": 30}` keeps
+  other counters keys from defaults.
 
 Regex patterns (where present) use Python `re` syntax. A malformed
 `.claude/dd-config.json` (invalid JSON / non-object) is discarded silently and
@@ -30,7 +30,8 @@ defaults stand.
 
 `dd-config.json` has no hook enable/disable map. The only way to silence a hook
 is its `DD_SKIP_*` env var — a human escape the model can't set by editing a
-tracked file. The one hard gate (`pre_pr_review`) must not be model-disableable.
+tracked file. The hard gates (`edit_block`, `commit_block`, `pre_pr_review`)
+must not be model-disableable.
 
 ---
 
@@ -39,37 +40,72 @@ tracked file. The one hard gate (`pre_pr_review`) must not be model-disableable.
 | Key | Type | Default | Description |
 |---|---|---|---|
 | `discipline_threshold` | int | `25` | Tool-calls since the last re-ground before `discipline_nudge` fires. |
-| `review_threshold` | int | `5` | Landed commits since the last review (or fork-base) before `review_nudge`'s cadence segment fires. |
 
-Both are starting guesses — tune on observed behavior. Bool values are rejected
-(a config typo like `true` won't become a threshold of 1).
+`counters.review_threshold` was present in earlier versions and is now removed.
+The review cadence is driven by `review_tiers.fast.nudge_threshold`,
+`review_tiers.regular.commit_edit_floor`, and
+`review_tiers.cold_read_escalation.nudge_threshold`.
+
+Bool values are rejected (a config typo like `true` won't silently become 1).
 
 ---
 
 ## `review_tiers`
 
-Per-tier reviewer config for `dd_review_runner.py`. Each tier:
+Four tiers, each covering one review level. **Only `pre_pr` carries reviewer
+config** — `fast`, `regular`, and `cold_read_escalation` carry cadence
+thresholds only; their subagent sets are fixed in the `/dd-review` command, not
+config-driven.
 
-| Sub-key | Type | Description |
-|---|---|---|
-| `reviewer` | string | `claude` or `codex`. |
-| `model` | string | Model id (e.g. `opus`, `gpt-5.5`). |
-| `default_effort` | string | `low` / `medium` / `high` (escalated by diff size). |
+### `review_tiers.fast` — T0 edit-counter cadence
 
-| Tier | Default reviewer / model / effort |
-|---|---|
-| `regular` | claude / opus / medium |
-| `cold_read_escalation` | claude / opus / high |
-| `pre_pr` | codex / gpt-5.5 / medium |
+| Key | Type | Default | Description |
+|---|---|---|---|
+| `nudge_threshold` | int | `30` | Stored `edits.count` at which `edit_counter.py` emits the T0 nudge (and keeps nudging). |
+| `hard_block_threshold` | int | `60` | Stored `edits.count` at which `edit_block.py` denies the next edit. |
 
-Projects without codex set `review_tiers.pre_pr.reviewer = "claude"` (no
-runtime `$PATH` probe).
+**Threshold invariant:** `hard_block_threshold` must exceed `nudge_threshold`
+(60 > 30 by default). A mis-ordered override (block ≤ nudge) yields incoherent
+cadence — documented expectation, not runtime-validated.
+
+### `review_tiers.regular` — T1 commit-floor cadence
+
+| Key | Type | Default | Description |
+|---|---|---|---|
+| `commit_edit_floor` | int | `30` | Stored `edits.count` floor for the T1 nudge in `review_nudge.py`. The T1 nudge fires only when a commit lands AND `edits.count` ≥ this value. |
+
+### `review_tiers.cold_read_escalation` — T2 cold-read cadence
+
+| Key | Type | Default | Description |
+|---|---|---|---|
+| `nudge_threshold` | int | `3` | Commits-since-cold-read at which `review_nudge.py` emits the T2 nudge. |
+| `hard_block_threshold` | int | `5` | Commits-since-cold-read at which `commit_block.py` denies the next `git commit`. |
+
+**Threshold invariant:** `hard_block_threshold` must exceed `nudge_threshold`
+(5 > 3 by default). Same expectation as T0 — not runtime-validated.
+
+Commits-since-cold-read uses `review.checkpoint` when present; falls back to
+fork-base when absent (fresh branch) — so the T2 block fires even on a branch
+that has never been cold-read.
+
+### `review_tiers.pre_pr` — T3 pre-PR codex gate
+
+| Key | Type | Default | Description |
+|---|---|---|---|
+| `reviewer` | string | `"codex"` | CLI reviewer for the T3 gate (only valid value in the current engine). |
+| `model` | string | `"gpt-5.5"` | Model id passed to the reviewer. |
+| `default_effort` | string | `"medium"` | Effort level; escalated to `"high"` by diff size via `strategy_selector`. |
+
+Projects without codex on `$PATH` must override `reviewer` — there is no
+runtime `$PATH` probe; the engine fails cleanly with "CLI not found" if `codex`
+is absent.
 
 ---
 
 ## `strategy_selector`
 
-Decides stuffed-vs-fetched dispatch + high-effort escalation by diff size.
+Decides stuffed-vs-fetched dispatch + high-effort escalation by diff size
+(used by `dd_review_runner.py` for T3).
 
 | Key | Type | Default | Description |
 |---|---|---|---|
@@ -95,10 +131,7 @@ Observability — comprehensive + on by default; tuned by retention/cleanup.
 
 | Key | Type | Default | Description |
 |---|---|---|---|
-| `trunk_branches` | list[string] | `["master", "main"]` | Fork-base resolution: the first that resolves is the merge-base ref for the review diff + commit counts. |
-
-(The old chunk/phase templates + filename regex are gone — auto-detection was
-removed; the pre-PR `--base` carries the chunk→phase case.)
+| `trunk_branches` | list[string] | `["master", "main"]` | Fork-base resolution: the first that resolves is the merge-base ref for review diffs + commit counts. |
 
 ---
 
@@ -116,7 +149,7 @@ removed; the pre-PR `--base` carries the chunk→phase case.)
 
 | Key | Type | Default | Description |
 |---|---|---|---|
-| `prompt_path` | string | `.claude/skills/adversarial-review/SKILL.md` | Prompt header for `dd_review_runner.py` **claude** mode (relative → repo root). Codex runs bare (built-in review). Env: `DD_REVIEW_PROMPT_PATH`. |
+| `prompt_path` | string | `.claude/skills/adversarial-review/SKILL.md` | Prompt header for the stuffed-strategy codex review (relative → repo root). Env: `DD_REVIEW_PROMPT_PATH`. |
 
 ---
 
@@ -124,7 +157,7 @@ removed; the pre-PR `--base` carries the chunk→phase case.)
 
 | Key | Type | Default | Description |
 |---|---|---|---|
-| `pr_review_timeout_s` | int | `600` | Reviewer wall-clock timeout for `dd_review_runner.py`. Env: `DD_REVIEW_TIMEOUT`. |
+| `pr_review_timeout_s` | int | `600` | Wall-clock timeout for the codex reviewer in `dd_review_runner.py`. Env: `DD_REVIEW_TIMEOUT`. |
 
 ---
 
@@ -132,13 +165,20 @@ removed; the pre-PR `--base` carries the chunk→phase case.)
 
 ### Bypasses (`DD_SKIP_<HOOK>=1`)
 
+Each bypass silences the named hook entirely for the session. Set in
+`.claude/settings.local.json`'s `env` block (the model cannot set these at
+tool-call time — hooks read their inherited environment).
+
 | Env var | Hook silenced |
 |---|---|
 | `DD_SKIP_INJECT_PLAN_STATE` | `inject_plan_state.py` |
 | `DD_SKIP_DISCIPLINE_NUDGE` | `discipline_nudge.py` |
-| `DD_SKIP_REVIEW_NUDGE` | `review_nudge.py` |
+| `DD_SKIP_EDIT_COUNTER` | `edit_counter.py` (T0 counter + nudge) |
+| `DD_SKIP_EDIT_BLOCK` | `edit_block.py` (T0 hard block) |
+| `DD_SKIP_COMMIT_BLOCK` | `commit_block.py` (T2 hard block) |
+| `DD_SKIP_REVIEW_NUDGE` | `review_nudge.py` (Gate-3 verify + T1/T2 nudges) |
 | `DD_SKIP_COMPACTION_REGROUND` | `compaction_reground.py` |
-| `DD_SKIP_PR_REVIEW` | `pre_pr_review.py` (the hard gate) |
+| `DD_SKIP_PR_REVIEW` | `pre_pr_review.py` (T3 hard gate) |
 
 ### Override knobs
 
@@ -150,16 +190,15 @@ removed; the pre-PR `--base` carries the chunk→phase case.)
 | `DD_REVIEW_PROMPT_PATH` | Override `review.prompt_path`. |
 
 **Set in:** the launching shell, `~/.claude/settings.json` `env`, or
-`<project>/.claude/settings.local.json` `env`. The model CANNOT set these at
-tool-call time — hooks read their own inherited environment. (`DD_CONFIG` /
-`DD_DEFAULTS` redirect the config files, for tests; `DD_HARD_BLOCK` is set
-internally by `pre_pr_review` and is not user-facing.)
+`<project>/.claude/settings.local.json` `env`. (`DD_CONFIG` / `DD_DEFAULTS`
+redirect the config files — for tests only; `DD_HARD_BLOCK` is set internally
+by `pre_pr_review` and is not user-facing.)
 
 ---
 
 ## Active-plan resolution
 
-Priority (used by `inject_plan_state` and `dd_review`'s claude prompt):
+Priority (used by `inject_plan_state`):
 
 1. `DD_ACTIVE_PLAN` env var (explicit override — returned as-is, even if the
    path doesn't exist).
