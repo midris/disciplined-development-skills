@@ -31,7 +31,7 @@ everything except the pre-PR gate is an advisory nudge.
 | `review_nudge.py` | PostToolUse (Bash) | On a landed commit: always a Gate-3 **verify** reminder; at the review-cadence threshold also a "run `/dd-review regular`" nudge. |
 | `compaction_reground.py` | SessionStart + PreCompact | After a resume/compaction (context is a summary), re-ground: re-read the source of truth before acting. |
 | `pre_pr_review.py` | PreToolUse (Bash, `gh pr create`) | **The only hard block.** Detect → extract base/cwd → delegate to `dd_review_runner.py pre-pr` with `DD_HARD_BLOCK=1`. Blocks the PR on findings. |
-| `dd_review_runner.py` | model-callable CLI | The review engine: `regular` / `cold-read` / `pre-pr` tiers against the fork-base diff. |
+| `dd_review_runner.py` | model-callable CLI | The review engine: `pre-pr` codex gate against the fork-base diff. Also handles `--write-checkpoint <tier>` (fast/regular/cold-read) and `--resolve-scope <tier>` (all four tiers). |
 
 Gate 3 (verify before "done") rides the **post-commit** verify nudge, not a
 Stop kick: the commit is where an edit becomes an assertion that owes

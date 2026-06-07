@@ -128,6 +128,30 @@ diff-base contracts.
   - **Tests required:** `fast` resolves to working-tree base; `regular` /
     `cold-read` resolve to fork base; fork-base fallback when no checkpoint.
 
+- [x] **E5 — Scope engine codex review to pre-pr + align reset (from phase
+  review).** Added after the E1–E4 adversarial review found the engine's
+  legacy multi-tier codex path inconsistent with §Layer split. Changes:
+  - `VALID_TIERS` (codex review path) → `("pre-pr",)` only. The command
+    handles T0–T2 via subagents + `--write-checkpoint`; nothing invokes the
+    engine review path for `regular`/`cold-read`, so that surface is dead
+    (Principle 7 — remove it). `--write-checkpoint` / `--resolve-scope` tier
+    sets unchanged.
+  - Clean codex pass implements the **T3 reset rule**: `set_checkpoint(HEAD)`
+    **and** reset `edits.count` (was: checkpoint only).
+  - Fix now-false docstrings ("ANY tier writes checkpoint") and the stale
+    "claude" rationale in `lib/reviewer_runner.py`'s `cwd` doc (P2 from review).
+  - **Tests required:** rewrite `test_clean_pass_writes_checkpoint` for
+    `pre-pr` asserting checkpoint=HEAD **and** `edits.count` reset; engine
+    rejects `regular`/`cold-read` on the review path with a clear error;
+    drop the E2-era regular/cold-read codex dispatch/argv tests (removed path),
+    keep a pre-pr argv test.
+
+> **Phase-1 review log (E1–E4, sonnet adversarial pass).** P0×2 (defaults
+> still `reviewer:"claude"` + `counters.review_threshold` present) → fixed in
+> C1/H4. P1×2 + missing T3 edits-reset + a stale docstring → E5 above. P2 stale
+> `claude_runner.py`/"claude shim" in `hook-recipes-claude-code.md` → deferred
+> to Phase 7 (file regenerated wholesale; fixing now is wasted work).
+
 ---
 
 ## Phase 2 — Config migration

@@ -1,9 +1,9 @@
 """Tests for hooks/dd_review_runner.py — tiered review engine (fork-base + checkpoint).
 
-Rewritten for the codex-only contract (E2). The engine dispatches only the
-``codex`` reviewer; a tier configured with any other reviewer yields a clear
-error. T0–T2 subagent dispatch lives in the model-layer command — outside this
-engine.
+Rewritten for the codex-only contract (E2) and the pre-pr-only engine review
+path (E5). The engine dispatches only the ``codex`` reviewer, and only for the
+``pre-pr`` tier. T0–T2 subagent dispatch lives in the model-layer command —
+outside this engine.
 
 Harness mechanics:
 
@@ -37,7 +37,7 @@ from hooks.lib import state
 HOOK = Path(__file__).resolve().parent.parent / "dd_review_runner.py"
 _BASE_DIR = Path(__file__).resolve().parents[2]
 
-# All tiers use codex — the only engine reviewer after E2.
+# Engine review path uses only the pre_pr config after E5.
 DEFAULTS = {
     "branch_convention": {"trunk_branches": ["master", "main"]},
     "plans": {
@@ -236,16 +236,18 @@ def _force_fetched(defaults):
 # ---------------------------------------------------------------------------
 
 
-@pytest.mark.parametrize("tier", ["regular", "cold-read", "pre-pr"])
-def test_each_tier_dispatches_codex_against_fork_base(review_env, tier):
-    """Every tier resolves its diff base to the fork base (merge-base vs trunk)
+def test_prepr_dispatches_codex_against_fork_base(review_env):
+    """pre-pr tier resolves its diff base to the fork base (merge-base vs trunk)
     and dispatches codex — base is observable in codex argv as ``--base <ref>``
     (forced into fetched strategy).
+
+    E5: the engine review path is pre-pr only; regular and cold-read are
+    rejected before codex is dispatched.
     """
     env, repo, defaults = review_env
     _force_fetched(defaults)
     fork = _fork_base(repo)
-    proc, argv, _ = _argv_log(env, repo, [tier])
+    proc, argv, _ = _argv_log(env, repo, ["pre-pr"])
     assert proc.returncode == 0, proc.stderr
     assert _diff_base_in_argv(argv) == fork
 
@@ -257,12 +259,46 @@ def test_unknown_tier_exits_2_with_usage(review_env):
     assert "usage" in proc.stderr.lower()
 
 
-@pytest.mark.parametrize("tier", ["regular", "cold-read"])
-def test_base_rejected_on_non_prepr_tiers(review_env, tier):
+def test_engine_review_path_rejects_regular(review_env):
+    """regular is not a valid tier for the engine review path (E5).
+
+    T0–T2 subagent dispatch lives in the model-layer /dd-review command.
+    The engine must reject 'regular' with a clear, non-zero exit and point
+    the user toward /dd-review; the codex shim must never be dispatched.
+    """
     env, repo, _ = review_env
-    proc = _run(env, repo, [tier, "--base", "master"])
+    log = repo / "argv.log"
+    proc = _run(env, repo, ["regular"], extra={"DD_REVIEW_ARGV_LOG": str(log)})
     assert proc.returncode == 2
-    assert "--base" in proc.stderr
+    # Error message must be clear (usage error, not a silent fail)
+    assert proc.stderr.strip() != ""
+    # codex shim was never invoked
+    assert not log.exists()
+
+
+def test_engine_review_path_rejects_cold_read(review_env):
+    """cold-read is not a valid tier for the engine review path (E5).
+
+    Same contract as regular: non-zero exit, clear error, no codex dispatch.
+    """
+    env, repo, _ = review_env
+    log = repo / "argv.log"
+    proc = _run(env, repo, ["cold-read"], extra={"DD_REVIEW_ARGV_LOG": str(log)})
+    assert proc.returncode == 2
+    assert proc.stderr.strip() != ""
+    assert not log.exists()
+
+
+def test_base_rejected_on_prepr_non_base_syntax(review_env):
+    """--base is only meaningful on pre-pr, but since only pre-pr is a valid
+    engine tier, the rejection path for non-pre-pr tiers is now unreachable.
+    Verify pre-pr *accepts* --base and resolves it correctly instead."""
+    env, repo, defaults = review_env
+    _force_fetched(defaults)
+    proc, argv, _ = _argv_log(env, repo, ["pre-pr", "--base", "master"])
+    # master is a real ref in the fixture repo → should succeed
+    assert proc.returncode == 0, proc.stderr
+    assert _diff_base_in_argv(argv) == "master"
 
 
 def test_base_honored_on_prepr(review_env):
@@ -313,7 +349,7 @@ def test_trunk_iteration_resolves_main_only_repo(tmp_path, review_env):
     _force_fetched(defaults)
     fork = state.resolve_fork_base(str(repo), ["master", "main"])
     assert fork is not None
-    proc, argv, _ = _argv_log(env, repo, ["regular"])
+    proc, argv, _ = _argv_log(env, repo, ["pre-pr"])
     assert proc.returncode == 0, proc.stderr
     # Codex fetched: base is in argv.
     assert _diff_base_in_argv(argv) == fork
@@ -323,7 +359,7 @@ def test_empty_diff_clean_exit_no_runner(review_env):
     """HEAD == fork base → clean exit 0, no reviewer dispatched (Delta 1)."""
     env, repo, _ = review_env
     _git(repo, "reset", "--hard", "master")
-    proc, argv, _ = _argv_log(env, repo, ["regular"])
+    proc, argv, _ = _argv_log(env, repo, ["pre-pr"])
     assert proc.returncode == 0
     assert argv == []  # shim never ran
     assert "nothing to review" in proc.stdout
@@ -368,11 +404,11 @@ def test_unknown_reviewer_config_yields_error(review_env):
 
 
 # ---------------------------------------------------------------------------
-# B2 — codex reviewer dispatch + per-knob argv
+# B2 — codex reviewer dispatch + per-knob argv (pre-pr is the only engine tier)
 # ---------------------------------------------------------------------------
 
 
-def test_codex_model_and_effort_overrides(review_env):
+def test_prepr_codex_model_and_effort_in_argv(review_env):
     """pre-pr tier (codex) lands ``-c model=...`` / ``-c model_reasoning_effort=...``
     AND every ``-c`` follows the ``review`` subcommand.
 
@@ -396,22 +432,6 @@ def test_codex_model_and_effort_overrides(review_env):
             )
 
 
-def test_regular_tier_codex_model_in_argv(review_env):
-    """regular tier (codex/gpt-4o) lands ``-c model="gpt-4o"`` in codex argv."""
-    env, repo, _ = review_env
-    proc, argv, _ = _argv_log(env, repo, ["regular"])
-    assert proc.returncode == 0, proc.stderr
-    assert 'model="gpt-4o"' in "\n".join(argv)
-
-
-def test_cold_read_tier_high_effort_in_argv(review_env):
-    """cold-read tier (default_effort=high) lands ``-c model_reasoning_effort="high"``."""
-    env, repo, _ = review_env
-    proc, argv, _ = _argv_log(env, repo, ["cold-read"])
-    assert proc.returncode == 0, proc.stderr
-    assert 'model_reasoning_effort="high"' in "\n".join(argv)
-
-
 def test_codex_stuffed_reads_diff_from_stdin(review_env):
     """codex stuffed (small diff): argv ends in ``-`` and the diff is on stdin."""
     env, repo, _ = review_env
@@ -425,7 +445,7 @@ def test_stuffed_strategy_embeds_diff_in_stdin(review_env):
     """Small diff → codex stuffed: diff body is piped on stdin (stdin ends with
     '-' in argv), containing the actual changed file content."""
     env, repo, _ = review_env
-    proc, argv, stdin = _argv_log(env, repo, ["regular"])
+    proc, argv, stdin = _argv_log(env, repo, ["pre-pr"])
     assert proc.returncode == 0, proc.stderr
     # Stuffed strategy: argv ends in "-" (codex reads from stdin).
     assert argv[-1] == "-"
@@ -439,7 +459,7 @@ def test_fetched_strategy_base_in_argv(review_env):
     env, repo, defaults = review_env
     _force_fetched(defaults)
     fork = _fork_base(repo)
-    proc, argv, stdin = _argv_log(env, repo, ["regular"])
+    proc, argv, stdin = _argv_log(env, repo, ["pre-pr"])
     assert proc.returncode == 0, proc.stderr
     # Fetched: argv has --base, NOT stdin ("-" at end).
     assert "--base" in argv
@@ -460,7 +480,7 @@ def test_cli_missing_errors(review_env, tmp_path):
     isolated.mkdir()
     (isolated / "git").symlink_to(shutil.which("git"))
     env = {**env, "PATH": str(isolated)}
-    proc = _run(env, repo, ["regular"])
+    proc = _run(env, repo, ["pre-pr"])
     assert proc.returncode == 1  # operational failure (not a usage error)
     assert "not found on PATH" in proc.stderr
 
@@ -468,7 +488,7 @@ def test_cli_missing_errors(review_env, tmp_path):
 def test_empty_reviewer_stdout_errors(review_env):
     """Whitespace-only reviewer stdout → operational error exit 1."""
     env, repo, _ = review_env
-    proc = _run(env, repo, ["regular"], stub_stdout="   \n\t\n")
+    proc = _run(env, repo, ["pre-pr"], stub_stdout="   \n\t\n")
     assert proc.returncode == 1  # operational failure (not a usage error)
     assert "no output" in proc.stderr
 
@@ -478,22 +498,35 @@ def test_empty_reviewer_stdout_errors(review_env):
 # ---------------------------------------------------------------------------
 
 
-def test_clean_pass_writes_checkpoint(review_env):
-    """A clean regular pass checkpoints HEAD; commits_since_checkpoint reads 0."""
+def test_prepr_clean_pass_writes_checkpoint_and_resets_edits(review_env):
+    """A clean pre-pr pass checkpoints HEAD AND resets edits.count to 0 (T3 rule).
+
+    E5: the clean codex pass now resets edits.count in addition to writing
+    the checkpoint. Seeds a non-zero edits counter so the reset is observable.
+    """
     env, repo, _ = review_env
-    proc = _run(env, repo, ["regular"], stub_stdout="[P3] nit only.\n")
+    # Seed a non-zero edits counter so the reset is observable.
+    state_dir = repo / ".claude" / ".dd-state" / "feature_x"
+    state_dir.mkdir(parents=True, exist_ok=True)
+    (state_dir / "edits.count").write_text("17")
+
+    proc = _run(env, repo, ["pre-pr"], stub_stdout="[P3] nit only.\n")
     assert proc.returncode == 0, proc.stderr
+
     head = _git(repo, "rev-parse", "HEAD")
+    # Checkpoint is written.
     assert state.commits_since_checkpoint(str(repo), "feature/x") == 0
-    cp = repo / ".claude" / ".dd-state" / "feature_x" / "review.checkpoint"
+    cp = state_dir / "review.checkpoint"
     assert cp.read_text().strip() == head
+    # edits.count is reset (E5 T3 rule).
+    assert state.read(str(repo), "feature/x", "edits") == 0
 
 
 def test_block_pass_does_not_write_checkpoint(review_env):
     """A blocking pass (P1 finding) must NOT write the checkpoint."""
     env, repo, _ = review_env
-    proc = _run(env, repo, ["regular"], stub_stdout="[P1] broken auth at f.go:12\n")
-    assert proc.returncode == 0  # regular advisory regardless of findings
+    proc = _run(env, repo, ["pre-pr"], stub_stdout="[P1] broken auth at f.go:12\n")
+    assert proc.returncode == 0  # pre-pr without DD_HARD_BLOCK is advisory
     assert state.commits_since_checkpoint(str(repo), "feature/x") is None
     cp = repo / ".claude" / ".dd-state" / "feature_x" / "review.checkpoint"
     assert not cp.exists()
@@ -521,11 +554,10 @@ def test_prepr_findings_without_hard_block_is_advisory(review_env):
     assert proc.returncode == 0
 
 
-@pytest.mark.parametrize("tier", ["regular", "cold-read", "pre-pr"])
-def test_no_review_history_log_written(review_env, tier):
-    """Delta 4: no tier may create a .review-history.log (clean or blocking)."""
+def test_no_review_history_log_written(review_env):
+    """Delta 4: the pre-pr engine tier must not create a .review-history.log."""
     env, repo, _ = review_env
-    _run(env, repo, [tier], stub_stdout="[P0] blocking\n[P3] nit\n")
+    _run(env, repo, ["pre-pr"], stub_stdout="[P0] blocking\n[P3] nit\n")
     assert not (repo / ".review-history.log").exists()
     assert not (repo / ".claude" / ".review-history.log").exists()
 
@@ -583,7 +615,7 @@ def test_cwd_flag_rejects_non_directory(review_env):
     traceback."""
     env, repo, _ = review_env
     bad = "/nonexistent/path/does/not/exist"
-    proc = _run(env, repo, ["regular", "--cwd", bad])
+    proc = _run(env, repo, ["pre-pr", "--cwd", bad])
     assert proc.returncode == 2
     assert bad in proc.stderr
     assert "Traceback" not in proc.stderr
@@ -597,12 +629,12 @@ def test_cwd_flag_config_follows_target_repo(review_env, tmp_path):
     cfg_dir = other / ".claude"
     cfg_dir.mkdir(exist_ok=True)
     (cfg_dir / "dd-config.json").write_text(
-        json.dumps({"review_tiers": {"regular": {"model": "gpt-4o-mini"}}})
+        json.dumps({"review_tiers": {"pre_pr": {"model": "gpt-4o-mini"}}})
     )
     # DD_CONFIG is "" in the fixture env (process-cwd config disabled); the
     # engine must steer config at the --cwd repo on its own.
     proc, argv, _ = _argv_log(
-        env, fixture_repo, ["regular", "--cwd", str(other)]
+        env, fixture_repo, ["pre-pr", "--cwd", str(other)]
     )
     assert proc.returncode == 0, proc.stderr
     assert 'model="gpt-4o-mini"' in "\n".join(argv)
@@ -623,7 +655,7 @@ def test_p3_only_findings_are_clean(review_env):
     """A reviewer emitting ONLY a [P3] finding (zero P0/P1/P2) is clean: exit 0
     AND the checkpoint is written (commits_since_checkpoint reads 0)."""
     env, repo, _ = review_env
-    proc = _run(env, repo, ["regular"], stub_stdout="[P3] cosmetic nit only\n")
+    proc = _run(env, repo, ["pre-pr"], stub_stdout="[P3] cosmetic nit only\n")
     assert proc.returncode == 0, proc.stderr
     assert state.commits_since_checkpoint(str(repo), "feature/x") == 0
 
@@ -631,7 +663,7 @@ def test_p3_only_findings_are_clean(review_env):
 def test_cli_error_exit_returns_one(review_env):
     """A reviewer exiting non-zero is an operational failure → exit 1."""
     env, repo, _ = review_env
-    proc = _run(env, repo, ["regular"], stub_stdout="boom", stub_exit=3)
+    proc = _run(env, repo, ["pre-pr"], stub_stdout="boom", stub_exit=3)
     assert proc.returncode == 1  # operational failure (not a usage error)
 
 
@@ -724,22 +756,22 @@ def _reviews(env):
 
 def test_clean_pass_writes_review_record(review_env):
     env, repo, _ = review_env
-    proc = _run(env, repo, ["regular"])  # stub stdout "No findings." → PASS
+    proc = _run(env, repo, ["pre-pr"])  # stub stdout "No findings." → PASS
     assert proc.returncode == 0, proc.stderr
     recs = _reviews(env)
     assert len(recs) == 1
     r = recs[0]
-    assert r["decision"] == "PASS" and r["tier"] == "regular"
+    assert r["decision"] == "PASS" and r["tier"] == "pre-pr"
     # Codex is the only reviewer after E2.
     assert r["reviewer"] == "codex" and "duration_s" in r and "ts" in r
     assert r["p0"] == 0 and r["p1"] == 0 and "output" in r
-    assert r["model"] == "gpt-4o" and "strategy" in r and "diff_bytes" in r
+    assert r["model"] == "gpt-5.5" and "strategy" in r and "diff_bytes" in r
 
 
 def test_block_writes_review_record(review_env):
     env, repo, _ = review_env
-    proc = _run(env, repo, ["regular"], stub_stdout="[P1] real bug here\n")
-    assert proc.returncode == 0, proc.stderr  # regular is advisory (exit 0)
+    proc = _run(env, repo, ["pre-pr"], stub_stdout="[P1] real bug here\n")
+    assert proc.returncode == 0, proc.stderr  # pre-pr without DD_HARD_BLOCK is advisory
     rec = _reviews(env)[-1]
     assert rec["decision"] == "BLOCK" and rec["p1"] == 1
     assert "[P1] real bug here" in rec["output"]
@@ -750,11 +782,11 @@ def test_error_writes_review_record(review_env):
     env, repo, _ = review_env
     # Reviewer runs but emits empty stdout → empty_output ERROR (a post-runner
     # failure; exercises the _review_record ERROR path with duration_s).
-    proc = _run(env, repo, ["regular"], stub_stdout="   \n\t\n")
+    proc = _run(env, repo, ["pre-pr"], stub_stdout="   \n\t\n")
     assert proc.returncode == 1
     rec = _reviews(env)[-1]
     assert rec["decision"] == "ERROR" and rec["reason"] == "empty_output"
-    assert rec["tier"] == "regular" and "duration_s" in rec
+    assert rec["tier"] == "pre-pr" and "duration_s" in rec
 
 
 # ---------------------------------------------------------------------------
