@@ -1,14 +1,15 @@
 {
   "review_tiers": {
+    "fast": {
+      "nudge_threshold": 30,
+      "hard_block_threshold": 60
+    },
     "regular": {
-      "reviewer": "claude",
-      "model": "opus",
-      "default_effort": "medium"
+      "commit_edit_floor": 30
     },
     "cold_read_escalation": {
-      "reviewer": "claude",
-      "model": "opus",
-      "default_effort": "high"
+      "nudge_threshold": 3,
+      "hard_block_threshold": 5
     },
     "pre_pr": {
       "reviewer": "codex",
@@ -21,8 +22,7 @@
     "high_effort_min_bytes": 51200
   },
   "counters": {
-    "discipline_threshold": 25,
-    "review_threshold": 5
+    "discipline_threshold": 25
   },
   "review": {
     "prompt_path": ".claude/skills/adversarial-review/SKILL.md"

@@ -156,7 +156,7 @@ diff-base contracts.
 
 ## Phase 2 — Config migration
 
-- [ ] **C1 — `dd-defaults.json` + `test_config`.** Test-first: update
+- [x] **C1 — `dd-defaults.json` + `test_config`.** Test-first: update
   `test_config` expectations, then the defaults. Changes:
   - Add `review_tiers.fast.nudge_threshold` (30),
     `review_tiers.fast.hard_block_threshold` (60).
