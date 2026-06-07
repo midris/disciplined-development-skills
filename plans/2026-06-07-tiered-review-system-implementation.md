@@ -182,7 +182,7 @@ on error, `DD_SKIP_<HOOK>` bypass, structured JSONL logging). Threshold
 semantics are stated against the **stored** count (PostToolUse increments;
 PreToolUse blocks read the previous value — spec boundary note).
 
-- [ ] **H1 — `edit_counter.py` (new).** PostToolUse(Edit|Write): increment
+- [x] **H1 — `edit_counter.py` (new).** PostToolUse(Edit|Write): increment
   `edits.count` (no-op counting, no diff inspection); emit the T0 nudge when
   the stored count reaches `review_tiers.fast.nudge_threshold` (30). **No
   block.** Bypass `DD_SKIP_EDIT_COUNTER`.
