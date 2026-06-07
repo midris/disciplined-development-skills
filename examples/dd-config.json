@@ -6,10 +6,10 @@
   },
 
   "counters": {
-    "review_threshold": 5
+    "discipline_threshold": 25
   },
 
   "review_tiers": {
-    "pre_pr": { "reviewer": "claude" }
+    "pre_pr": { "reviewer": "codex" }
   }
 }
