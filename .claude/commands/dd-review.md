@@ -82,4 +82,4 @@ P3 is advisory — act, or leave with on-page rationale.
     ENGINE --write-checkpoint $ARGUMENTS
 
 `fast`/`regular` reset the edit counter; `cold-read` also writes the review
-checkpoint. (`pre-pr` already did this itself in its own path above.)
+checkpoint. (`pre-pr` handles its own checkpoint in the pre-pr section above.)
