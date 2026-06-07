@@ -236,3 +236,38 @@ def test_atomic_write_closes_fd_on_fdopen_failure(monkeypatch, tmp_path):
     monkeypatch.setattr(state.os, "close", lambda fd: closed.append(fd))
     state._atomic_write(tmp_path / "x.count", "1")  # no exception
     assert closed  # the fd was closed despite the fdopen failure
+
+
+# --- _branch_slug traversal hardening (Fix 6) --------------------------------
+
+
+def test_branch_slug_dot_only_is_safe(tmp_path):
+    """A branch name of '.' must not produce the traversal slug '.'."""
+    slug = state._branch_slug(".")
+    assert slug not in (".", "..")
+    # Must be non-empty so the dir is still nameable.
+    assert slug
+
+
+def test_branch_slug_double_dot_is_safe(tmp_path):
+    """A branch name of '..' must not produce the traversal slug '..'."""
+    slug = state._branch_slug("..")
+    assert slug not in (".", "..")
+    assert slug
+
+
+def test_branch_slug_dotty_branch_is_safe():
+    """A branch name starting with '.' produces a non-traversal slug."""
+    slug = state._branch_slug(".hidden-branch")
+    # Must not start with '.' (traversal risk on leading dot)
+    assert not slug.startswith(".")
+    assert slug
+
+
+def test_branch_slug_normal_names_preserved():
+    """Normal branch names (no leading dot, no bare dot/dotdot) pass through."""
+    assert state._branch_slug("feature/x") == "feature_x"
+    assert state._branch_slug("release-1.2") == "release-1.2"
+    assert state._branch_slug("main") == "main"
+    # Dots in the middle are kept (release-1.2 style).
+    assert "." in state._branch_slug("release-1.2")

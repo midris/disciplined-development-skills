@@ -1,29 +1,32 @@
 #!/usr/bin/env python3
-"""review_nudge.py — PostToolUse post-commit nudge (Gate 3 verify + cadence).
+"""review_nudge.py — PostToolUse post-commit nudge (Gate 3 verify + T1/T2 cadence).
 
 Fires when a *landed* git commit is detected (``is_git_commit`` +
 ``commit_landed``) — the moment an edit becomes a real assertion. Emits up to
-two accumulated segments on one envelope:
+three accumulated segments on one envelope:
 
 1. **Verification (every landed commit, Gate 3).** A fixed reminder to verify
    the change against the running system, or state why it's not exercisable.
    The hook never scans for or grades evidence — the smart model judges what
-   verification fits; the hook only marks the commit. (Replaces the dropped
-   Stop evidence-scanner; see the spec §Kick.)
-2. **Review cadence (on threshold, P8).** Commits since the last review:
-   - **Checkpoint exists** (a prior clean review wrote one): nudge when commits
-     since the checkpoint reach ``counters.review_threshold``.
-   - **No checkpoint yet**: count commits since fork-base, nudge at the same
-     threshold — NOT every commit, so a fresh branch isn't nagged early. No
-     fork-base (no trunk ref) → cadence segment omitted.
+   verification fits; the hook only marks the commit. (Decision D1: kept
+   unchanged; independent of cadence thresholds.)
+2. **T1 nudge (commit edit floor).** Fires when the ``edits`` counter is
+   >= ``review_tiers.regular.commit_edit_floor`` (default 30). Suggests
+   ``/dd-review regular``.
+3. **T2 nudge (cold-read escalation).** Fires when commits-since-last-cold-read
+   reaches ``review_tiers.cold_read_escalation.nudge_threshold`` (default 3).
+   Checkpoint-or-fork-base selection mirrors ``commit_block.py``:
+   - Checkpoint exists → ``state.commits_since_checkpoint``.
+   - No checkpoint (absent / stale) → ``state.commits_since_fork_base``.
+   - No fork base / no trunk → cadence segment omitted (degrade silent).
+   Suggests ``/dd-review cold-read``.
 
 Channel: PostToolUse exit-0 ``hookSpecificOutput.additionalContext`` (plain
 stdout is debug-only for this event). Advisory only — every probe degrades to
 silent on error and the hook never blocks the tool call. The verification
-segment fires independent of repo/branch resolution (only the cadence count
-needs them).
+segment fires independent of repo/branch resolution (only T1/T2 need them).
 
-Env bypass: ``DD_SKIP_REVIEW_NUDGE=1`` (silences both segments).
+Env bypass: ``DD_SKIP_REVIEW_NUDGE=1`` (silences all three segments).
 """
 
 from __future__ import annotations
@@ -43,12 +46,13 @@ from hooks.lib import command_match, config, logging_setup, state  # noqa: E402
 from hooks.lib.envelope import Envelope  # noqa: E402
 
 HOOK_NAME = "review_nudge"
-DEFAULT_THRESHOLD = 5
+DEFAULT_COMMIT_EDIT_FLOOR = 30
+DEFAULT_COLD_READ_NUDGE_THRESHOLD = 3
 DEFAULT_TRUNKS = ["master", "main"]
 
 # Gate-3 verification reminder, emitted on every landed commit. Fixed and
 # actionable; deliberately contains no "/dd-review" so it reads as "verify",
-# not "review", and so tests can assert the cadence segment separately.
+# not "review", and so tests can assert the cadence segments separately.
 VERIFY_TEXT = (
     "Commit landed — Gate 3: verify this change against the running system "
     "before moving on. Run the relevant test / preview / live call, or state "
@@ -81,10 +85,20 @@ def _git(cwd: str, *args: str) -> tuple[int, str]:
     return r.returncode, r.stdout.strip()
 
 
-def _threshold() -> int:
-    v = config.get("counters.review_threshold", DEFAULT_THRESHOLD)
+def _commit_edit_floor() -> int:
+    v = config.get("review_tiers.regular.commit_edit_floor", DEFAULT_COMMIT_EDIT_FLOOR)
     if isinstance(v, bool) or not isinstance(v, int) or v <= 0:
-        return DEFAULT_THRESHOLD
+        return DEFAULT_COMMIT_EDIT_FLOOR
+    return v
+
+
+def _cold_read_nudge_threshold() -> int:
+    v = config.get(
+        "review_tiers.cold_read_escalation.nudge_threshold",
+        DEFAULT_COLD_READ_NUDGE_THRESHOLD,
+    )
+    if isinstance(v, bool) or not isinstance(v, int) or v <= 0:
+        return DEFAULT_COLD_READ_NUDGE_THRESHOLD
     return v
 
 
@@ -111,47 +125,69 @@ def main() -> int:
 
     env = Envelope("PostToolUse")
     # Segment 1 — Gate 3 verification, on every landed commit. Independent of
-    # repo/branch resolution (only the cadence count below needs those), so a
+    # repo/branch resolution (only the cadence counts below need those), so a
     # detached HEAD or git hiccup still surfaces the reminder.
     env.accumulate(VERIFY_TEXT)
 
-    # Segment 2 — review cadence, only at threshold.
-    cadence_path = "none"
-    cadence_n: int | None = None
+    # Segments 2 & 3 — T1 and T2 cadence, require repo + branch resolution.
+    t1_fired = False
+    t2_path = "none"
+    t2_n: int | None = None
+
     cwd = cwd or os.getcwd()
     rc, repo = _git(cwd, "rev-parse", "--show-toplevel")
     if rc == 0 and repo:
         rc, branch = _git(repo, "symbolic-ref", "--short", "HEAD")
         if rc == 0 and branch:
-            threshold = _threshold()
+            # Segment 2 — T1 nudge: fire when edit counter >= commit_edit_floor.
+            edit_floor = _commit_edit_floor()
+            edits = state.read(repo, branch, "edits")
+            if edits >= edit_floor:
+                env.accumulate(
+                    f"Edit counter: {edits} unreviewed edits on this branch "
+                    f"(>= T1 floor {edit_floor}). "
+                    f"Run `/dd-review regular` to review and reset the counter."
+                )
+                t1_fired = True
+
+            # Segment 3 — T2 nudge: fire when commits-since-cold-read >= threshold.
+            # Mirror commit_block.py: checkpoint exists → use it; absent/stale → fork base.
+            t2_threshold = _cold_read_nudge_threshold()
             since_cp = state.commits_since_checkpoint(repo, branch)
             if since_cp is not None:
-                if since_cp >= threshold:
+                if since_cp >= t2_threshold:
                     env.accumulate(
                         f"Review cadence: {since_cp} commits since the last "
-                        f"clean review on this branch. Run `/dd-review "
-                        f"regular` before continuing."
+                        f"cold-read on this branch (>= T2 nudge threshold "
+                        f"{t2_threshold}). Run `/dd-review cold-read` before "
+                        f"continuing."
                     )
-                    cadence_path, cadence_n = "checkpoint", since_cp
+                    t2_path, t2_n = "checkpoint", since_cp
             else:
                 # No usable checkpoint (absent OR stale/amended-away —
                 # commits_since_checkpoint returns None for both): count from
                 # fork-base, same threshold gate (don't nag a fresh branch on
-                # every commit). Accepted (review P3): the two None-causes are
-                # intentionally conflated — the message says "missing or
-                # invalidated" and the action is identical either way; a
-                # checkpoint-state enum would be cosmetic API surface.
+                # every commit). Accepted: the two None-causes are intentionally
+                # conflated — the message says "missing or invalidated" and the
+                # action is identical either way.
                 since_fb = state.commits_since_fork_base(repo, _trunks())
-                if since_fb is not None and since_fb >= threshold:
+                if since_fb is not None and since_fb >= t2_threshold:
                     env.accumulate(
                         f"Review checkpoint missing or invalidated — "
-                        f"{since_fb} commits since fork on this branch. Run "
-                        f"`/dd-review regular` before continuing."
+                        f"{since_fb} commits since fork on this branch "
+                        f"(>= T2 nudge threshold {t2_threshold}). Run "
+                        f"`/dd-review cold-read` before continuing."
                     )
-                    cadence_path, cadence_n = "fork_base", since_fb
+                    t2_path, t2_n = "fork_base", since_fb
 
     env.emit()
-    logger.emit("fire", verification=True, cadence=cadence_path, n=cadence_n)
+    logger.emit(
+        "fire",
+        verification=True,
+        t1=t1_fired,
+        t2_cadence=t2_path,
+        t2_n=t2_n,
+    )
     return 0
 
 

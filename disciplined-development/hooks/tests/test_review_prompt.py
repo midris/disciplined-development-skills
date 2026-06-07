@@ -1,32 +1,15 @@
-"""Tests for review_prompt.build_claude_prompt.
+"""Tests for review_prompt — codex argv builder + shared helpers.
 
-The strategy value must match the tool allowlist chosen by
-claude_runner_argv; an unknown value previously fell through to the
-`fetched` branch silently, mismatching the allowlist and surfacing only
-as a denied-tool error at review time. These pin the boundary check.
+Rewritten for E2: ``build_claude_prompt`` and ``claude_runner_argv`` are
+removed; only the codex path and shared helpers remain.
 """
 
 from __future__ import annotations
 
 import pytest
+import subprocess
 
 from hooks.lib import review_prompt
-
-
-def _kw() -> dict:
-    return dict(prompt_header="HEADER", base="base0", head_sha="head0", paths_csv="a.py")
-
-
-def test_build_claude_prompt_rejects_unknown_strategy():
-    with pytest.raises(ValueError):
-        review_prompt.build_claude_prompt(**_kw(), strategy="bogus")
-
-
-def test_claude_runner_argv_rejects_unknown_strategy():
-    # The runner picks the tool allowlist from the strategy; an unknown
-    # value must fail loudly, not silently route to the stuffed allowlist.
-    with pytest.raises(ValueError):
-        review_prompt.claude_runner_argv(strategy="bogus")
 
 
 def test_codex_runner_argv_rejects_unknown_strategy():
@@ -34,17 +17,19 @@ def test_codex_runner_argv_rejects_unknown_strategy():
         review_prompt.codex_runner_argv(None, "base0", strategy="bogus")
 
 
-def test_build_claude_prompt_stuffed_says_diff_embedded():
-    prompt = review_prompt.build_claude_prompt(**_kw(), strategy="stuffed")
-    assert "embedded below" in prompt
+def test_codex_runner_argv_fetched_has_base_flag():
+    argv = review_prompt.codex_runner_argv(None, "abc123", strategy="fetched")
+    assert "--base" in argv
+    assert argv[argv.index("--base") + 1] == "abc123"
+    # fetched does NOT end with "-"
+    assert argv[-1] != "-"
 
 
-def test_build_claude_prompt_fetched_tells_reviewer_to_fetch():
-    prompt = review_prompt.build_claude_prompt(**_kw(), strategy="fetched")
-    assert "NOT pre-stuffed" in prompt
-
-
-import subprocess  # noqa: E402
+def test_codex_runner_argv_stuffed_ends_with_dash():
+    argv = review_prompt.codex_runner_argv(None, "abc123", strategy="stuffed")
+    assert argv[-1] == "-"
+    # stuffed does NOT have --base
+    assert "--base" not in argv
 
 
 def test_git_in_passes_timeout(monkeypatch):

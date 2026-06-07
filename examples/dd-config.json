@@ -1,15 +1,13 @@
 {
-  "_comment": "Starter project overrides for the disciplined-development hooks. Copy to <your-project>/.claude/dd-config.json and override ONLY what differs from the shipped defaults (disciplined-development/hooks/lib/dd-defaults.json) — delete a key to fall back to its default. Arrays REPLACE; objects DEEP-MERGE. Full schema: disciplined-development/hooks/dd-config.md.",
+  "_comment": "Minimal project overrides for the disciplined-development hooks. Copy to <your-project>/.claude/dd-config.json and override ONLY what differs from the shipped defaults. Arrays REPLACE; objects DEEP-MERGE. Full list of tunables: disciplined-development/hooks/dd-config.md.",
 
   "branch_convention": {
     "trunk_branches": ["main", "master"]
   },
 
-  "counters": {
-    "review_threshold": 5
-  },
-
   "review_tiers": {
-    "pre_pr": { "reviewer": "claude" }
+    "pre_pr": {
+      "reviewer": "codex"
+    }
   }
 }

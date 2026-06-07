@@ -1,10 +1,10 @@
 #!/usr/bin/env python3
-"""replay_codex.py — codex parallel of ``replay_review.py``.
+"""replay_codex.py — replay a historical sha through ``codex review``.
 
 Replays a historical sha through ``codex review`` with chosen
 (model, effort, strategy) and records duration + findings to
-``experiments/results.csv`` (shared with the claude harness — model
-names don't collide).
+``experiments/results.csv``. ``replay_review.py`` (the claude harness)
+was deleted in E2 — ``replay_codex.py`` is the only replay script.
 
 Strategies
 ----------

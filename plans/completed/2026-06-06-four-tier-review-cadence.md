@@ -46,11 +46,16 @@ Four tiers. T0/T1 are **edit-count** based and share one counter; T2 is
 **commit-count** based off a single checkpoint; T3 is the existing PR
 gate.
 
+> **Reviewer cells superseded** by
+> [2026-06-07-tiered-review-system-design.md](2026-06-07-tiered-review-system-design.md)
+> (subagent dispatch, not `claude -p`). The Nudge/Block/Driven-by columns
+> below are the cadence — still current.
+
 | Tier | Reviewer | Nudge at | Hard block at | Driven by |
 |------|----------|----------|---------------|-----------|
-| **T0 fast** | in-session adversarial review (mechanism decided by V5) | edit counter = 30 | edit counter = 60 | edit counter |
-| **T1 regular** | `claude -p` subprocess | a landed commit when edit counter ≥ 30 | — (nudge only) | edit counter |
-| **T2 cold-read** | `claude -p` cold-read, high effort (`cold_read_escalation`: claude/opus/high — unchanged default) | 3 commits since checkpoint | 5 commits since checkpoint | `review.checkpoint` (fork-base fallback) |
+| **T0 fast** | in-session inline `adversarial-review` over the working-tree diff (Path B — see Spike outcome) | edit counter = 30 | edit counter = 60 | edit counter |
+| **T1 regular** | `claude -p` subprocess (under reconsideration → in-session `/code-review`; see "Billing-driven T1/T2 reconsideration") | a landed commit when edit counter ≥ 30 | — (nudge only) | edit counter |
+| **T2 cold-read** | `claude -p` cold-read, high effort (`cold_read_escalation`: claude/opus/high) (under reconsideration → in-session `/code-review high`; see "Billing-driven T1/T2 reconsideration") | 3 commits since checkpoint | 5 commits since checkpoint | `review.checkpoint` (fork-base fallback) |
 | **T3 pre-PR** | `codex review` subprocess (existing) | — | `gh pr create` | (unchanged) |
 
 **One edit counter.** A single per-branch counter = "edits since the
@@ -92,12 +97,12 @@ the cheap, highest-frequency tier: it catches in-flight edits before
 they pile up, and committed-but-unreviewed work is covered when T1 fires
 at the next commit. (Reviewing the full unreviewed range since the last
 checkpoint was considered and rejected — more scope on the cheapest tier
-for no coverage gain over T1+.) This scope is **not free for Path A**:
-Path B's in-session prompt builds its diff explicitly from the working
-tree vs HEAD (staged + unstaged), so we control the scope, but Path A
-delegates to `/code-review`, whose diff scope is not ours to assume —
-the V-spike must confirm it reviews the working tree (V2–V5), else we
-fall back to Path B. The three subprocess tiers — T1, T2, T3 — review
+for no coverage gain over T1+.) With **Path B chosen** (see Spike
+outcome), T0's in-session prompt builds its diff explicitly from the
+working tree vs HEAD (staged + unstaged), so we fully control the scope.
+(The spike confirmed `/code-review` does review the working tree, but
+Path B doesn't depend on that.) The three subprocess tiers — T1, T2, T3
+— review
 **fork-base..HEAD** (the committed diff since the branch point);
 `dd_review.py` resolves every dispatched tier's base to the fork base
 ([dd_review.py:11-16]). A clean review resets the *edit-event* counter,
@@ -299,10 +304,13 @@ emergent behavior and would be premature before commit 4.
 
 ## Pre-implementation validation (gates commit 4)
 
-T0's design assumes we can inject adversarial framing into
-`/code-review`. That's empirical — `/code-review` is owned by the
-`superpowers` plugin and may or may not respect externally-loaded skill
-context. Validate before committing to commit 4's routing.
+**Status: COMPLETE — Path B chosen (see "Spike outcome" below).** This
+validation tested whether T0 could inject adversarial framing into
+`/code-review` (the Path A premise). The spike disproved it —
+`/code-review`'s finder/verifier subagents are sealed from injected skill
+context — so T0 does **not** wrap `/code-review`; it reviews inline
+(Path B). The protocol (V1–V6) and evidence are retained below as the
+decision record.
 
 The spike file is **scratch state**, never committed. Because it must
 live at `.claude/commands/dd-review-fast-test.md` to be invokable (it
@@ -314,56 +322,61 @@ and removing it in V6 would orphan a committed line. `.git/info/exclude`
 is local-only and never staged — the scratch file stays invisible to
 `git add -A` and nothing about the ignore lands in any commit.
 
-- [ ] **V1. Write the temporary test slash command** at
-  `.claude/commands/dd-review-fast-test.md` (untracked) **and add
-  `.claude/commands/dd-review-fast-test.md` to `.git/info/exclude`**
-  (local-only ignore — see above) in the same step. Body instructs the
-  model to: (a) load `adversarial-review`,
-  (b) run `/code-review high` on the current diff, (c) report findings
-  using the P0/P1/P2/P3 contract from `adversarial-review`.
-- [ ] **V2. Establish a control that also reveals diff scope.** Plant
-  TWO deliberately-planted plausible-but-wrong findings: one in a
-  **committed** change (since fork-base) and one in an **uncommitted
-  working-tree** change. Each should be a flaw an adversarial reviewer
-  should flag and a generic reviewer would likely miss (e.g., a comment
-  claiming a function is pure when it has a hidden side effect; an
-  innocuous-looking constant load-bearing for an external caller). Which
-  of the two the reviewer flags reveals whether it examined the working
-  tree, the committed diff, or both — the signal T0's working-tree scope
-  depends on.
-- [ ] **V3. In a fresh Claude Code session, run the test command
-  against the control diff.** Capture: (a) does the output use
-  P0/P1/P2/P3 tags, (b) does it flag the planted finding(s), (c) does
-  the framing read as "actively refute claims" or as "find
-  bugs/cleanups," (d) **which** planted finding(s) it flagged — i.e.
-  what diff scope it actually reviewed (working tree, committed, or
-  both).
-- [ ] **V4. Control run:** in another fresh session, invoke
-  `/code-review high` directly (no skill load, no wrapper). Same diff.
-  Capture the same four signals (including the diff-scope signal (d)).
-- [ ] **V5. Decision.** The diff between the two outputs decides:
-  - **Path A (injection works AND `/code-review` reviews the working
-    tree):** the wrapped version produces meaningfully more adversarial
-    findings, uses the P-severity tags, or both — AND signal (d) shows
-    `/code-review` flagged the working-tree finding (so its scope matches
-    T0's). Commit 4 routes `/dd-review fast` through `/code-review high`
-    with the skill-load prelude. (If injection works but `/code-review`
-    reviews only the committed diff, Path A is unsuitable for T0's
-    working-tree scope — take Path B.)
-  - **Path B (injection fails, OR `/code-review`'s scope is wrong):**
-    `/dd-review fast` carries its own adversarial-review prompt inline
-    over the **working-tree diff vs HEAD** — reusing `dd_review.py`'s
-    prompt *template* but with T0's working-tree scope, NOT the engine's
-    fork-base diff base — executed in-session. Does not invoke
-    `/code-review`. T0 still delivers the fast in-session review value,
-    and we control the diff scope.
-- [ ] **V6. Record the decision in this plan** (edit commit 4 to point
-  at the chosen path; remove the alternative). **Delete
-  `.claude/commands/dd-review-fast-test.md` and remove its
-  `.git/info/exclude` line — before any commit 4 work begins.**
+- [x] **V1. Test slash command** written at
+  `.claude/commands/dd-review-fast-test.md` (untracked, ignored via
+  `.git/info/exclude`). Loads `adversarial-review`, runs `/code-review`,
+  reports in the P0/P1/P2/P3 contract with change-state attribution.
+- [x] **V2. Control diff** planted in
+  `disciplined-development/hooks/branch_paths.py`: a **committed**
+  false-purity/thread-safety claim (`branch_slug` mutates a module global)
+  and an **uncommitted** unenforced-precondition comment (`state_dir`
+  trusts a caller-sanitized branch and interpolates it raw into a path).
+- [x] **V3 / V4** ran in fresh sessions at **both** `high` and `medium`
+  effort (wrapped vs bare control).
+- [x] **V5. Decision — Path B.** See outcome below.
+- [~] **V6.** Decision recorded here; commit-4 routing updated to Path B
+  below. **Teardown deferred** — the control diff and test command stay
+  in place, reused as the shared control for the billing-driven T1/T2
+  comparison (see "Billing-driven T1/T2 reconsideration"). Teardown after
+  that.
+
+**Spike outcome — Path B chosen (recorded 2026-06-07).** `/dd-review
+fast` carries its own `adversarial-review` prompt inline over the
+working-tree diff vs HEAD, executed in-session; it does **not** invoke
+`/code-review`.
+
+The first control was contaminated (its docstring announced the planted
+bait); it was re-run clean. Clean evidence:
+
+- **Detection: zero uplift from wrapping.** Bare `/code-review` caught
+  *both* rationale-shaped findings at `high` AND `medium` with no prelude
+  — at `medium` it was the *stronger* reviewer (it also surfaced the
+  `state.py` slug divergence → `cleanup.py` state-loss chain). The
+  adversarial prelude added no findings.
+- **Mechanism: injection can't reach the findings.** `/code-review`'s
+  finder/verifier subagents are sealed from injected skill context; the
+  prelude only reshapes the outer report. Both wrapped runs
+  short-circuited `/code-review` and reviewed inline themselves — i.e.
+  they organically *became* Path B.
+- **Scope: confirmed (4×).** Every run reviewed committed ∪
+  working-tree, so `/code-review`'s scope already matches T0's
+  working-tree scope — the scope objection that would *force* Path B does
+  not apply; Path B is chosen on cost/fit, not scope.
+- **Cost/fit: decisive.** A minimal inline pass ran **~16.5s** (two runs:
+  17.3s, 15.7s) and caught everything T0 needs; `/code-review` cost **95s
+  (`medium`) – 268s (`high`)** for the same essential findings. A
+  multi-agent fan-out is the wrong weight for an every-30-edits tier; its
+  cross-file depth belongs to T1/T2.
+
+Rationale for Path B over Path A (the literal Path A condition
+*technically* passed — wrapped emits P-tags): the wrapper's only real
+delta was P-tag formatting, and that came from the *outer* agent, which
+Path B produces natively. Path B keeps scope + output contract under our
+control, carries no `superpowers` dependency, and is ~6–16× cheaper at no
+detection cost.
 
 Commits 1–3 don't depend on the validation outcome and can proceed in
-parallel with V1–V6.
+parallel.
 
 ## Steps
 
@@ -458,15 +471,17 @@ change is *what a clean pass writes*.
   `hooks/README.md` cadence section's threshold references. Tests confirm `review_nudge` no longer
   reads the removed key.
 
-### Commit 4 (`feat:`) — slash command (V5-dependent) + live verify
+### Commit 4 (`feat:`) — slash command + live verify
 
 - [ ] **4a. Update `.claude/commands/dd-review.md` +
   `examples/commands/dd-review.md`.** Route `fast` per the V5 decision
-  (recorded in V6 before this commit): Path A loads `adversarial-review`,
-  invokes `/code-review high`, iterates; Path B inlines the adversarial
-  prompt over the working-tree diff vs HEAD (T0's scope). Both end with
-  `python3 …/dd_review.py --write-checkpoint fast` on clean. Other tiers'
-  routing unchanged.
+  (**Path B**): the command loads `adversarial-review` and carries its
+  prompt inline over the **working-tree diff vs HEAD** (T0's scope),
+  executed in-session — it does **not** invoke `/code-review`. Reuse
+  `dd_review.py`'s prompt *template* but with the working-tree base, not
+  the engine's fork-base. Iterate per `adversarial-review-loop` on
+  P0/P1/P2; on clean, end with `python3 …/dd_review.py
+  --write-checkpoint fast`. Other tiers' routing unchanged.
 - [ ] **4b. Live-verify wiring end-to-end in a fresh Claude Code
   session** (per the `/dd-review` plan's verification pattern).
   User-side; recorded in the commit.
@@ -531,6 +546,64 @@ load-bearing identifiers / config keys / file paths move (commit 3's
 `review_threshold` removal has a real sweep); `Verification:` listing
 the agent-side tests run. PR body summarizes the four-tier model and
 points at this plan.
+
+## Billing-driven T1/T2 reconsideration (RESOLVED)
+
+**Resolved 2026-06-07 → see
+[2026-06-07-tiered-review-system-design.md](2026-06-07-tiered-review-system-design.md).**
+The reviewer mechanism for T0–T3 is redefined there: all non-PR tiers
+dispatch in-session adversarial subagents (holistic + monotonic angles,
+native P0–P3, on subscription); T3 stays codex; the engine is renamed
+`dd_review_runner.py`. The `claude -p` model below is superseded — the
+reviewer cells in the Design-model table and every `claude -p` reference
+in this plan are historical pending the reference sweep that ships with
+the rename. The verified billing fact that drove it is retained below.
+
+**Verified fact (2026-06-07).** On **2026-06-15** Anthropic moves
+*non-interactive* Claude usage out of the subscription pools into a
+separate **Agent SDK credit** (full API rates; no rollover). `claude -p`
+(non-interactive) is explicitly covered; **interactive Claude Code
+(terminal/IDE) stays on the subscription**, unchanged. The line is
+**interactive vs non-interactive, not first-party vs third-party** —
+being Anthropic's own `claude -p` does not exempt it. Source:
+[support.claude.com/articles/15036540](https://support.claude.com/en/articles/15036540-use-the-claude-agent-sdk-with-your-claude-plan).
+
+**Implication.** T1/T2 dispatch `claude -p` via `dd_review.py` → would
+bill to the credit pool after 06-15. `/code-review` runs *in* the
+interactive session (its finders are Agent-tool subagents, not `-p`
+invocations) → stays on subscription. T3's `codex review` is OpenAI
+tooling → unaffected either way.
+
+**Direction (not locked).** Move T1 (and likely T2) from `claude -p` to
+in-session `/code-review` (T1 `medium`, T2 `high`); keep T3 codex as the
+PR gate. Rationale: `/code-review`'s multi-agent fan-out already spawns
+fresh-context reviewer subagents, so it plausibly preserves most of the
+review value while staying on the subscription.
+
+**Open question / next test.** Does `claude -p` produce *noticeably* more
+effective reviews than in-session `/code-review` on the same diff? Run
+`claude -p` (regular = opus/medium, cold-read = opus/high) against the
+**shared spike control diff** (`branch_paths.py`) and compare to the
+clean V4 `/code-review` data (`high` = 6 findings incl. the `state.py`
+divergence; `medium` = all planted + extras). Multiple runs each (reviews
+are stochastic). Pre-06-15, `claude -p` still bills to the subscription,
+so running the test now is free.
+
+**Caveats to weigh before locking** (rationale must land on-page when
+decided, per `writing-explicit-rationale`):
+- **T2 loses true process-isolated cold-read.** `claude -p` is a fresh
+  *process*; in-session `/code-review` orchestrates from the (possibly
+  contaminated, possibly large) implementation session, though its
+  finder subagents are fresh.
+- **Context-window cost.** A heavy in-session review consumes the
+  implementation session's window (compaction risk) — `claude -p`
+  offloaded that to a separate process.
+- **Output contract.** `/code-review` emits JSON, not the P0–P3 tags
+  `dd_review.py`'s severity scan + checkpoint flow rely on. Moving T1/T2
+  to `/code-review` changes how decision/checkpoint are derived.
+- **One undocumented billing edge.** Whether a `-p` subprocess spawned by
+  an interactive parent could bill to the subscription is not documented;
+  assumed credit-pool (mode-based rule). Not load-bearing for the move.
 
 ## Out of scope
 
