@@ -116,10 +116,15 @@ diff-base contracts.
     checkpoint untouched; `cold-read` sets checkpoint = HEAD and resets the
     counter; unknown tier errors.
 
-- [ ] **E4 — Diff-base resolution incl. T0 working-tree scope.** Engine
+- [x] **E4 — Diff-base resolution incl. T0 working-tree scope.** Engine
   resolves/exposes each tier's base: **working-tree vs HEAD** for `fast`,
   **fork base** otherwise. The command queries this to pass scope to
   subagents. Reuse `lib/state.resolve_fork_base`.
+  - **Implementation:** `--resolve-scope <tier>` flag; fast → prints `HEAD`;
+    regular/cold-read/pre-pr → prints `<fork-base-sha>..HEAD`; unknown tier →
+    non-zero exit, no scope on stdout. No state writes, no codex dispatch.
+    Wired in `main()` as an early branch after `--write-checkpoint`, before
+    `_parse_argv`. All four tiers in `_SCOPE_TIERS`.
   - **Tests required:** `fast` resolves to working-tree base; `regular` /
     `cold-read` resolve to fork base; fork-base fallback when no checkpoint.
 

@@ -63,6 +63,10 @@ VALID_TIERS = ("regular", "cold-read", "pre-pr")
 # through this flag).
 _CHECKPOINT_TIERS = ("fast", "regular", "cold-read")
 
+# Tiers valid for --resolve-scope.  All four tiers are addressable: fast →
+# working-tree scope ("HEAD"); the review tiers → fork-base range.
+_SCOPE_TIERS = ("fast", "regular", "cold-read", "pre-pr")
+
 # CLI tier → config-key tier name (hyphen in the CLI, underscore in config).
 _TIER_CONFIG_KEY = {
     "regular": "regular",
@@ -120,7 +124,9 @@ def _print_usage_error(msg: str) -> None:
         f"Usage: python3 dd_review_runner.py {{{'|'.join(VALID_TIERS)}}} "
         f"[--base <ref>] [--cwd <path>]\n"
         f"       python3 dd_review_runner.py --write-checkpoint "
-        f"{{{'|'.join(_CHECKPOINT_TIERS)}}} [--cwd <path>]",
+        f"{{{'|'.join(_CHECKPOINT_TIERS)}}} [--cwd <path>]\n"
+        f"       python3 dd_review_runner.py --resolve-scope "
+        f"{{{'|'.join(_SCOPE_TIERS)}}} [--cwd <path>]",
         file=sys.stderr,
     )
 
@@ -212,6 +218,101 @@ def _handle_write_checkpoint(argv: list[str]) -> int | None:
         state.reset(repo, branch, "edits")
 
     print(f"[dd_review --write-checkpoint] {tier}: checkpoint written.")
+    return 0
+
+
+# --- --resolve-scope mode --------------------------------------------------
+
+
+def _handle_resolve_scope(argv: list[str]) -> int | None:
+    """Handle ``--resolve-scope <tier> [--cwd <path>]`` if present.
+
+    Returns the exit code when the flag is found, or None when absent
+    (caller continues with the normal review path).
+
+    Prints a single scope string on stdout and exits 0 on success:
+      fast                → ``HEAD``   (working-tree vs HEAD; captures in-flight edits)
+      regular/cold-read/pre-pr → ``<fork-base-sha>..HEAD``
+
+    No state writes, no codex dispatch.  If the fork base cannot be
+    resolved the call exits 1 with an error on stderr and no scope on stdout.
+    """
+    if "--resolve-scope" not in argv:
+        return None
+
+    tier: str | None = None
+    cwd: str | None = None
+    i = 0
+    while i < len(argv):
+        arg = argv[i]
+        if arg == "--resolve-scope":
+            if i + 1 >= len(argv):
+                _print_usage_error("--resolve-scope requires a tier argument")
+                return 2
+            if tier is not None:
+                _print_usage_error("--resolve-scope specified twice")
+                return 2
+            tier = argv[i + 1]
+            i += 2
+        elif arg == "--cwd":
+            if i + 1 >= len(argv):
+                _print_usage_error("--cwd requires a path argument")
+                return 2
+            if cwd is not None:
+                _print_usage_error("--cwd specified twice")
+                return 2
+            cwd = argv[i + 1]
+            i += 2
+        else:
+            _print_usage_error(f"--resolve-scope mode does not accept {arg!r}")
+            return 2
+
+    if tier not in _SCOPE_TIERS:
+        print(
+            f"[dd_review --resolve-scope] ERROR — unknown tier {tier!r} "
+            f"(valid: {' | '.join(_SCOPE_TIERS)})",
+            file=sys.stderr,
+        )
+        return 2
+
+    repo_path = cwd or os.getcwd()
+    if cwd and not pathlib.Path(cwd).is_dir():
+        _print_usage_error(f"--cwd {cwd!r} is not a directory")
+        return 2
+
+    # fast → working-tree scope: no git calls needed.
+    if tier == "fast":
+        print("HEAD")
+        return 0
+
+    # review tiers → fork-base range.
+    try:
+        r = subprocess.run(
+            ["git", "-C", repo_path, "rev-parse", "--show-toplevel"],
+            capture_output=True, text=True, timeout=5,
+        )
+    except Exception:
+        print("[dd_review --resolve-scope] ERROR: git unavailable", file=sys.stderr)
+        return 1
+    if r.returncode != 0 or not r.stdout.strip():
+        print("[dd_review --resolve-scope] ERROR: not inside a git repo",
+              file=sys.stderr)
+        return 1
+    repo = r.stdout.strip()
+
+    trunks = config.get("branch_convention.trunk_branches", ["master", "main"])
+    if not isinstance(trunks, list) or not trunks:
+        trunks = ["master", "main"]
+    base = state.resolve_fork_base(repo, trunks)
+    if not base:
+        print(
+            f"[dd_review --resolve-scope] ERROR — could not determine a fork "
+            f"base — none of {trunks} resolve in this repo.",
+            file=sys.stderr,
+        )
+        return 1
+
+    print(f"{base}..HEAD")
     return 0
 
 
@@ -389,12 +490,16 @@ def main(argv: list[str] | None = None) -> int:
             f"[--base <ref>] [--cwd <path>]\n"
             f"       python3 dd_review_runner.py --write-checkpoint "
             f"{{{'|'.join(_CHECKPOINT_TIERS)}}} [--cwd <path>]\n"
+            f"       python3 dd_review_runner.py --resolve-scope "
+            f"{{{'|'.join(_SCOPE_TIERS)}}} [--cwd <path>]\n"
             "Run an adversarial review of the branch diff against its fork "
             "base.\n"
             "  --base <ref>  pre-pr only: override the diff base.\n"
             "  --cwd <path>  review the repo rooted at <path>.\n"
             "  --write-checkpoint <tier>  write post-clean-review state only "
-            "(no review dispatched)."
+            "(no review dispatched).\n"
+            "  --resolve-scope <tier>  print the git diff argument for <tier> "
+            "(no review dispatched, no state written)."
         )
         return 0
 
@@ -402,6 +507,11 @@ def main(argv: list[str] | None = None) -> int:
     wc_rc = _handle_write_checkpoint(argv)
     if wc_rc is not None:
         return wc_rc
+
+    # --resolve-scope mode: pure scope resolver, no state writes or dispatch.
+    rs_rc = _handle_resolve_scope(argv)
+    if rs_rc is not None:
+        return rs_rc
 
     parsed = _parse_argv(argv)
     if isinstance(parsed, str):
