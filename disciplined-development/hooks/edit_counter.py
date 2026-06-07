@@ -22,7 +22,9 @@ Repo/branch resolution:
   still accumulate counts under a stable key.
 
 Degrade-silent policy:
-- Malformed or empty stdin → exit 0, no output, no crash.
+- Malformed or empty stdin → ``_payload_cwd()`` falls back to ``os.getcwd()``;
+  the hook then resolves the repo and continues normally (bump + possible nudge).
+  Truly silent only when the repo or branch can't be resolved (no git, bad cwd).
 - Any git / state error → exit 0, no output, no crash.
 - The hook must never raise an unhandled exception that blocks a tool call.
 

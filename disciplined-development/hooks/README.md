@@ -88,7 +88,10 @@ The layer is advisory — a read or write failure degrades to a safe default.
 - **`edits.count`** — unreviewed edits on this branch since the last clean
   review of any tier. Incremented by `edit_counter.py` on every Edit/Write
   (PostToolUse). Read by `edit_block.py` (PreToolUse) and `review_nudge.py`.
-  Reset on any clean review (T0/T1/T2/T3).
+  Reset on any clean review — T0/T1/T2 resets are command-driven (the `/dd-review`
+  command runs `--write-checkpoint <tier>`; advisory, not mechanically enforced);
+  T3 (pre-pr) resets deterministically inside `dd_review_runner.py` on a clean
+  codex pass.
 
 - **`review.checkpoint`** — SHA of HEAD at the last clean cold-read (T2) or
   pre-PR (T3). `commit_block.py` and the T2 segment of `review_nudge.py`

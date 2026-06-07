@@ -41,11 +41,6 @@ must not be model-disableable.
 |---|---|---|---|
 | `discipline_threshold` | int | `25` | Tool-calls since the last re-ground before `discipline_nudge` fires. |
 
-`counters.review_threshold` was present in earlier versions and is now removed.
-The review cadence is driven by `review_tiers.fast.nudge_threshold`,
-`review_tiers.regular.commit_edit_floor`, and
-`review_tiers.cold_read_escalation.nudge_threshold`.
-
 Bool values are rejected (a config typo like `true` won't silently become 1).
 
 ---
