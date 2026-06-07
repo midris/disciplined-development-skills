@@ -87,12 +87,21 @@ just the nudge.
   checkpoint rather than holding its own.
 
 **What each tier reviews, and the accepted coarse reset.** T0 reviews
-the **uncommitted working-tree diff vs HEAD** (Path A's `/code-review`
-and Path B's inline prompt both operate on the working-tree diff). The
-three subprocess tiers — T1, T2, T3 — review **fork-base..HEAD** (the
-committed diff since the branch point); `dd_review.py` resolves every
-dispatched tier's base to the fork base ([dd_review.py:11-16]). A clean
-review resets the *edit-event* counter, not a content checkpoint, so if
+the **uncommitted working-tree diff vs HEAD** — a deliberate choice for
+the cheap, highest-frequency tier: it catches in-flight edits before
+they pile up, and committed-but-unreviewed work is covered when T1 fires
+at the next commit. (Reviewing the full unreviewed range since the last
+checkpoint was considered and rejected — more scope on the cheapest tier
+for no coverage gain over T1+.) This scope is **not free for Path A**:
+Path B's in-session prompt builds its diff explicitly from the working
+tree vs HEAD (staged + unstaged), so we control the scope, but Path A
+delegates to `/code-review`, whose diff scope is not ours to assume —
+the V-spike must confirm it reviews the working tree (V2–V5), else we
+fall back to Path B. The three subprocess tiers — T1, T2, T3 — review
+**fork-base..HEAD** (the committed diff since the branch point);
+`dd_review.py` resolves every dispatched tier's base to the fork base
+([dd_review.py:11-16]). A clean review resets the *edit-event* counter,
+not a content checkpoint, so if
 reviewed work is later amended or partly reverted, the counter doesn't
 separately re-pressure it until new edits accumulate. Accepted: the edit
 counter is an advisory "unreviewed-edits accrued" gauge, not a
@@ -312,31 +321,42 @@ is local-only and never staged — the scratch file stays invisible to
   model to: (a) load `adversarial-review`,
   (b) run `/code-review high` on the current diff, (c) report findings
   using the P0/P1/P2/P3 contract from `adversarial-review`.
-- [ ] **V2. Establish a control: a non-empty diff to review.** A
-  synthetic diff or a real WIP branch with at least one
-  deliberately-planted plausible-but-wrong claim an adversarial
-  reviewer should flag and a generic reviewer would likely miss (e.g., a
-  comment claiming a function is pure when it has a hidden side effect;
-  an innocuous-looking constant that is load-bearing for an external
-  caller).
+- [ ] **V2. Establish a control that also reveals diff scope.** Plant
+  TWO deliberately-planted plausible-but-wrong findings: one in a
+  **committed** change (since fork-base) and one in an **uncommitted
+  working-tree** change. Each should be a flaw an adversarial reviewer
+  should flag and a generic reviewer would likely miss (e.g., a comment
+  claiming a function is pure when it has a hidden side effect; an
+  innocuous-looking constant load-bearing for an external caller). Which
+  of the two the reviewer flags reveals whether it examined the working
+  tree, the committed diff, or both — the signal T0's working-tree scope
+  depends on.
 - [ ] **V3. In a fresh Claude Code session, run the test command
   against the control diff.** Capture: (a) does the output use
-  P0/P1/P2/P3 tags, (b) does it flag the planted finding, (c) does the
-  framing read as "actively refute claims" or as "find bugs/cleanups."
+  P0/P1/P2/P3 tags, (b) does it flag the planted finding(s), (c) does
+  the framing read as "actively refute claims" or as "find
+  bugs/cleanups," (d) **which** planted finding(s) it flagged — i.e.
+  what diff scope it actually reviewed (working tree, committed, or
+  both).
 - [ ] **V4. Control run:** in another fresh session, invoke
   `/code-review high` directly (no skill load, no wrapper). Same diff.
-  Capture the same three signals.
+  Capture the same four signals (including the diff-scope signal (d)).
 - [ ] **V5. Decision.** The diff between the two outputs decides:
-  - **Path A (injection works):** the wrapped version produces
-    meaningfully more adversarial findings, uses the P-severity tags,
-    or both. Commit 4 routes `/dd-review fast` through `/code-review
-    high` with the skill-load prelude.
-  - **Path B (injection does NOT shift behavior):** `/dd-review fast`
-    carries its own adversarial-review prompt inline (essentially the
-    prompt `dd_review.py` builds for the subprocess case, executed
-    in-session). Does not invoke `/code-review`. T0 still delivers the
-    fast in-session review value — we just don't reuse the
-    `/code-review` machinery.
+  - **Path A (injection works AND `/code-review` reviews the working
+    tree):** the wrapped version produces meaningfully more adversarial
+    findings, uses the P-severity tags, or both — AND signal (d) shows
+    `/code-review` flagged the working-tree finding (so its scope matches
+    T0's). Commit 4 routes `/dd-review fast` through `/code-review high`
+    with the skill-load prelude. (If injection works but `/code-review`
+    reviews only the committed diff, Path A is unsuitable for T0's
+    working-tree scope — take Path B.)
+  - **Path B (injection fails, OR `/code-review`'s scope is wrong):**
+    `/dd-review fast` carries its own adversarial-review prompt inline
+    over the **working-tree diff vs HEAD** — reusing `dd_review.py`'s
+    prompt *template* but with T0's working-tree scope, NOT the engine's
+    fork-base diff base — executed in-session. Does not invoke
+    `/code-review`. T0 still delivers the fast in-session review value,
+    and we control the diff scope.
 - [ ] **V6. Record the decision in this plan** (edit commit 4 to point
   at the chosen path; remove the alternative). **Delete
   `.claude/commands/dd-review-fast-test.md` and remove its
@@ -444,8 +464,9 @@ change is *what a clean pass writes*.
   `examples/commands/dd-review.md`.** Route `fast` per the V5 decision
   (recorded in V6 before this commit): Path A loads `adversarial-review`,
   invokes `/code-review high`, iterates; Path B inlines the adversarial
-  prompt. Both end with `python3 …/dd_review.py --write-checkpoint fast`
-  on clean. Other tiers' routing unchanged.
+  prompt over the working-tree diff vs HEAD (T0's scope). Both end with
+  `python3 …/dd_review.py --write-checkpoint fast` on clean. Other tiers'
+  routing unchanged.
 - [ ] **4b. Live-verify wiring end-to-end in a fresh Claude Code
   session** (per the `/dd-review` plan's verification pattern).
   User-side; recorded in the commit.
