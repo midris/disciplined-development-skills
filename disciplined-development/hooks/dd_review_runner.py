@@ -2,7 +2,7 @@
 """dd_review_runner.py — model-callable adversarial review against the branch diff.
 
 Usage:
-    python3 dd_review_runner.py {regular | cold-read | pre-pr} [--base <ref>] [--cwd <path>]
+    python3 dd_review_runner.py pre-pr [--base <ref>] [--cwd <path>]
 
 Rebuilt on the ``hooks/lib`` modules (config, severity, state, plan,
 reviewer_runner, review_invocation, review_prompt). Four behavior deltas
@@ -12,11 +12,13 @@ versus the original marker-based engine (see plan Part B):
     (merge-base of HEAD against the first existing trunk ref) via
     ``state.resolve_fork_base``. The ``-internal`` / ``-external``
     marker reads and the chunk→phase auto-detection are dropped.
-    ``pre-pr`` still honours an explicit ``--base <ref>`` override;
-    ``--base`` is rejected on the other tiers. Empty diff
-    (HEAD == fork base) → clean exit, no reviewer dispatched.
-  * Delta 2 — a clean pass (zero P0/P1/P2) on ANY tier writes the
-    per-branch review checkpoint via ``state.set_checkpoint``.
+    ``pre-pr`` still honours an explicit ``--base <ref>`` override.
+    Empty diff (HEAD == fork base) → clean exit, no reviewer dispatched.
+  * Delta 2 — the engine codex review path is the T3 (pre-pr) gate only.
+    A clean pre-pr pass writes the per-branch review checkpoint via
+    ``state.set_checkpoint`` AND resets ``edits.count`` (T3 reset rule).
+    T0–T2 subagent dispatch and their ``--write-checkpoint`` round-trips
+    live in the model-layer ``/dd-review`` command.
   * Delta 3 — no marker writes anywhere.
   * Delta 4 — no ``.review-history.log`` writer; JSONL debug logging
     via ``logging_setup`` is preserved.
@@ -56,7 +58,7 @@ from hooks.lib import (  # noqa: E402
 
 HOOK_NAME = "dd_review"
 DEFAULT_TIMEOUT_S = 300
-VALID_TIERS = ("regular", "cold-read", "pre-pr")
+VALID_TIERS = ("pre-pr",)
 
 # Tiers valid for --write-checkpoint (fast + the three review tiers; pre-pr is
 # excluded: the codex clean pass writes its own checkpoint and never round-trips
@@ -112,7 +114,11 @@ def _parse_argv(argv: list[str]) -> tuple[str, str | None, str | None] | str:
         else:
             return f"unrecognized argument {arg!r}"
     if tier is None:
-        return "missing required tier (one of regular | cold-read | pre-pr)"
+        return (
+            "missing required tier (pre-pr). "
+            "T0–T2 tiers (fast/regular/cold-read) are handled by the "
+            "/dd-review command, not this engine."
+        )
     if base is not None and tier != "pre-pr":
         return f"--base is only valid on pre-pr (not {tier!r})"
     return tier, base, cwd
@@ -746,9 +752,11 @@ def main(argv: list[str] | None = None) -> int:
     if excerpt:
         print(excerpt, file=sys.stderr)
 
-    # Delta 2 — clean pass checkpoints HEAD for every tier; a BLOCK does not.
+    # Clean pre-pr pass: checkpoint HEAD and reset edits.count (T3 reset rule,
+    # spec §Cadence & state). A BLOCK does neither.
     if decision == "PASS" and branch and head_sha:
         state.set_checkpoint(repo, branch, head_sha)
+        state.reset(repo, branch, "edits")
 
     logger.emit(
         "decision",

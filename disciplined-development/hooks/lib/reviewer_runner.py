@@ -64,10 +64,10 @@ class Runner:
         Seconds the child has between SIGTERM and SIGKILL on timeout.
     cwd:
         Optional working directory for the child. ``None`` inherits the
-        parent's cwd. Load-bearing for the claude reviewer: in ``fetched``
-        strategy claude runs ``git diff`` itself, so it must start in the repo
-        being reviewed (codex self-wraps with ``cd``; claude has no such
-        mechanism — without this it would review the parent process's cwd).
+        parent's cwd. Load-bearing for codex in ``fetched`` strategy: codex
+        self-wraps with ``cd``, but a matching cwd here ensures consistent
+        behaviour across strategies and makes the reviewed repo unambiguous
+        regardless of the parent process's cwd.
     """
 
     _FORWARDED_SIGNALS = (signal.SIGTERM, signal.SIGHUP, signal.SIGINT)
