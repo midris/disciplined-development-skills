@@ -1,8 +1,8 @@
-"""claude_runner.py — Subprocess wrapper for the review CLIs.
+"""reviewer_runner.py — Subprocess wrapper for the codex review CLI.
 
-Used by both ``pre_pr_codex_review`` (runs ``codex review``) and
-``dd_review_runner.py`` (runs ``claude -p`` OR ``codex review``). Name kept
-historical; both reviewers route through the same Runner.
+Used by ``dd_review_runner.py`` (runs ``codex review``). Renamed from
+``claude_runner.py`` once ``claude -p`` was removed (E2); the Runner is now
+a codex-only generic subprocess wrapper.
 
 Design:
 

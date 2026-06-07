@@ -1,22 +1,25 @@
 """Tests for hooks/dd_review_runner.py — tiered review engine (fork-base + checkpoint).
 
-Harness mechanics (reused from the legacy test, assertions rewritten for the
-fork-base + checkpoint contract):
+Rewritten for the codex-only contract (E2). The engine dispatches only the
+``codex`` reviewer; a tier configured with any other reviewer yields a clear
+error. T0–T2 subagent dispatch lives in the model-layer command — outside this
+engine.
 
-  * ``review_env`` — a sandbox holding a synthetic ``dd-defaults.json`` (wired
-    via ``DD_DEFAULTS``) plus real ``claude`` / ``codex`` shim binaries on a
-    per-test ``PATH`` dir. The engine dispatches the reviewer through
-    ``claude_runner.Runner`` (a real ``Popen``), so the shims must be genuine
-    executables — not monkeypatched. Each shim records its argv (one token per
-    line) to ``$DD_REVIEW_ARGV_LOG`` and its stdin to ``$DD_REVIEW_STDIN_LOG``,
-    then prints scripted stdout / exits with a scripted code, so tests can
-    assert the exact flags + payload the engine passed.
+Harness mechanics:
+
+  * ``review_env`` — a sandbox with a synthetic ``dd-defaults.json`` (via
+    ``DD_DEFAULTS``) and a real ``codex`` shim binary on a per-test ``PATH``
+    dir. The shim records its argv (one token per line) to
+    ``$DD_REVIEW_ARGV_LOG`` and its stdin to ``$DD_REVIEW_STDIN_LOG``, then
+    prints scripted stdout / exits with a scripted code, so tests can assert
+    the exact flags + payload the engine passed.
   * ``feature_repo`` — a git repo with a ``master`` trunk plus a checked-out
-    ``feature/x`` carrying one extra commit, exercising fork-base resolution and
-    checkpoints against a real merge-base.
+    ``feature/x`` carrying one extra commit, exercising fork-base resolution
+    and checkpoints against a real merge-base.
 
-The engine is run as a subprocess (``python3 dd_review_runner.py ...``) so ``--cwd``,
-``DD_HARD_BLOCK`` and the real ``Runner`` dispatch are exercised end-to-end.
+The engine is run as a subprocess (``python3 dd_review_runner.py ...``) so
+``--cwd``, ``DD_HARD_BLOCK`` and the real ``reviewer_runner`` dispatch are
+exercised end-to-end.
 """
 from __future__ import annotations
 
@@ -34,6 +37,7 @@ from hooks.lib import state
 HOOK = Path(__file__).resolve().parent.parent / "dd_review_runner.py"
 _BASE_DIR = Path(__file__).resolve().parents[2]
 
+# All tiers use codex — the only engine reviewer after E2.
 DEFAULTS = {
     "branch_convention": {"trunk_branches": ["master", "main"]},
     "plans": {
@@ -44,13 +48,13 @@ DEFAULTS = {
     "codex": {"pr_review_timeout_s": 30},
     "review_tiers": {
         "regular": {
-            "reviewer": "claude",
-            "model": "opus",
+            "reviewer": "codex",
+            "model": "gpt-4o",
             "default_effort": "medium",
         },
         "cold_read_escalation": {
-            "reviewer": "claude",
-            "model": "opus",
+            "reviewer": "codex",
+            "model": "gpt-4o",
             "default_effort": "high",
         },
         "pre_pr": {
@@ -75,49 +79,46 @@ def _git(repo: Path, *args: str) -> str:
     ).stdout.strip()
 
 
-def _make_shims(binroot: Path) -> None:
-    """Write claude + codex shim executables that record argv + stdin and emit
+def _make_shim(binroot: Path) -> None:
+    """Write a codex shim executable that records argv + stdin and emits
     scripted stdout / exit code from env vars."""
     binroot.mkdir(parents=True, exist_ok=True)
-    for name in ("claude", "codex"):
-        target = binroot / name
-        target.write_text(
-            "#!/bin/sh\n"
-            'if [ -n "${DD_REVIEW_ARGV_LOG:-}" ]; then\n'
-            '  printf \'%s\\n\' "$@" > "$DD_REVIEW_ARGV_LOG"\n'
-            "fi\n"
-            # Record the reviewer's physical cwd (`pwd -P` ignores a stale
-            # inherited $PWD) so tests can assert --cwd actually retargeted the
-            # reviewer process, not just the diff base.
-            'if [ -n "${DD_REVIEW_CWD_LOG:-}" ]; then\n'
-            '  pwd -P > "$DD_REVIEW_CWD_LOG"\n'
-            "fi\n"
-            'if [ -n "${DD_REVIEW_STDIN_LOG:-}" ]; then\n'
-            '  cat > "$DD_REVIEW_STDIN_LOG"\n'
-            "else\n"
-            "  cat > /dev/null\n"
-            "fi\n"
-            'printf \'%s\' "${DD_REVIEW_STUB_STDOUT:-No findings.}"\n'
-            'exit "${DD_REVIEW_STUB_EXIT:-0}"\n'
-        )
-        target.chmod(0o755)
+    target = binroot / "codex"
+    target.write_text(
+        "#!/bin/sh\n"
+        'if [ -n "${DD_REVIEW_ARGV_LOG:-}" ]; then\n'
+        '  printf \'%s\\n\' "$@" > "$DD_REVIEW_ARGV_LOG"\n'
+        "fi\n"
+        # Record the reviewer's physical cwd so tests can assert --cwd
+        # actually retargeted the reviewer process.
+        'if [ -n "${DD_REVIEW_CWD_LOG:-}" ]; then\n'
+        '  pwd -P > "$DD_REVIEW_CWD_LOG"\n'
+        "fi\n"
+        'if [ -n "${DD_REVIEW_STDIN_LOG:-}" ]; then\n'
+        '  cat > "$DD_REVIEW_STDIN_LOG"\n'
+        "else\n"
+        "  cat > /dev/null\n"
+        "fi\n"
+        'printf \'%s\' "${DD_REVIEW_STUB_STDOUT:-No findings.}"\n'
+        'exit "${DD_REVIEW_STUB_EXIT:-0}"\n'
+    )
+    target.chmod(0o755)
 
 
 @pytest.fixture
 def review_env(tmp_path):
-    """Return ``(env, repo, defaults_path)`` with a feature branch + shims."""
+    """Return ``(env, repo, defaults_path)`` with a feature branch + codex shim."""
     defaults = tmp_path / "defaults.json"
     defaults.write_text(json.dumps(DEFAULTS))
 
     binroot = tmp_path / "bin"
-    _make_shims(binroot)
+    _make_shim(binroot)
 
     env = {
         **os.environ,
         "DD_DEFAULTS": str(defaults),
         "DD_CONFIG": "",
-        # Per-test log dir (overrides the conftest /tmp default) so each test's
-        # reviews.jsonl is isolated and assertable.
+        # Per-test log dir so each test's reviews.jsonl is isolated.
         "DD_LOG_DIR": str(tmp_path / "ddlogs"),
         "PATH": f"{binroot}:{os.environ.get('PATH', '')}",
         "PYTHONPATH": str(_BASE_DIR),
@@ -146,7 +147,7 @@ def review_env(tmp_path):
     )
     _git(repo, "config", "user.email", "t@t")
     _git(repo, "config", "user.name", "Test")
-    # Adversarial-review SKILL the claude/codex-stuffed prompt path needs.
+    # Adversarial-review SKILL the codex-stuffed prompt path needs.
     skill = repo / ".claude" / "skills" / "adversarial-review"
     skill.mkdir(parents=True)
     (skill / "SKILL.md").write_text("# Adversarial review\nReview the diff.\n")
@@ -224,8 +225,7 @@ def _diff_base_in_argv(argv):
 
 def _force_fetched(defaults):
     """Lower the stuff cutoff so any non-empty diff dispatches fetched
-    (the strategy that surfaces the base in argv for codex / the
-    fetch-instructions block for claude)."""
+    (the strategy that surfaces the base in codex argv)."""
     cfg = json.loads(defaults.read_text())
     cfg["strategy_selector"]["pre_stuff_max_bytes"] = 1
     defaults.write_text(json.dumps(cfg))
@@ -237,23 +237,17 @@ def _force_fetched(defaults):
 
 
 @pytest.mark.parametrize("tier", ["regular", "cold-read", "pre-pr"])
-def test_each_tier_dispatches_against_fork_base(review_env, tier):
-    """Every tier resolves its diff base to the fork base (merge-base vs trunk).
-
-    Forced into fetched strategy so the base is observable in argv (codex
-    ``--base <ref>``) / the fetch-instructions block (claude ``Review base``).
+def test_each_tier_dispatches_codex_against_fork_base(review_env, tier):
+    """Every tier resolves its diff base to the fork base (merge-base vs trunk)
+    and dispatches codex — base is observable in codex argv as ``--base <ref>``
+    (forced into fetched strategy).
     """
     env, repo, defaults = review_env
     _force_fetched(defaults)
     fork = _fork_base(repo)
-    proc, argv, stdin = _argv_log(env, repo, [tier])
+    proc, argv, _ = _argv_log(env, repo, [tier])
     assert proc.returncode == 0, proc.stderr
-    # regular/cold-read are claude (base in the stdin prompt); pre-pr is codex
-    # (base in argv). Both must reference the fork base.
-    if tier == "pre-pr":
-        assert _diff_base_in_argv(argv) == fork
-    else:
-        assert f"Review base: `{fork}`" in stdin
+    assert _diff_base_in_argv(argv) == fork
 
 
 def test_unknown_tier_exits_2_with_usage(review_env):
@@ -288,8 +282,7 @@ def test_base_honored_on_prepr(review_env):
     proc, argv, _ = _argv_log(env, repo, ["pre-pr", "--base", "HEAD~1"])
     assert proc.returncode == 0, proc.stderr
     assert _diff_base_in_argv(argv) == "HEAD~1"
-    # Sanity: HEAD~1 differs from the fork base, so honoring --base is a real
-    # override (not an accidental match with the default fork-base resolution).
+    # Sanity: HEAD~1 differs from the fork base, proving --base is a real override.
     assert head_tilde != _fork_base(repo)
 
 
@@ -316,15 +309,18 @@ def test_trunk_iteration_resolves_main_only_repo(tmp_path, review_env):
     _git(repo, "add", "g.txt")
     _git(repo, "commit", "-q", "-m", "c2")
 
+    env, _, defaults = review_env
+    _force_fetched(defaults)
     fork = state.resolve_fork_base(str(repo), ["master", "main"])
     assert fork is not None
-    proc, _, stdin = _argv_log(env, repo, ["regular"])
+    proc, argv, _ = _argv_log(env, repo, ["regular"])
     assert proc.returncode == 0, proc.stderr
-    assert f"Review base: `{fork}`" in stdin
+    # Codex fetched: base is in argv.
+    assert _diff_base_in_argv(argv) == fork
 
 
 def test_empty_diff_clean_exit_no_runner(review_env):
-    """HEAD == fork base → clean exit 0, no reviewer dispatched."""
+    """HEAD == fork base → clean exit 0, no reviewer dispatched (Delta 1)."""
     env, repo, _ = review_env
     _git(repo, "reset", "--hard", "master")
     proc, argv, _ = _argv_log(env, repo, ["regular"])
@@ -334,26 +330,46 @@ def test_empty_diff_clean_exit_no_runner(review_env):
 
 
 # ---------------------------------------------------------------------------
-# B2 — reviewer dispatch + per-knob argv
+# E2 contract — codex-only; non-codex reviewer config yields a clear error
 # ---------------------------------------------------------------------------
 
 
-def test_tier_model_lands_model_flag(review_env):
-    """regular tier (claude/opus) lands ``--model opus``."""
-    env, repo, _ = review_env
-    proc, argv, _ = _argv_log(env, repo, ["regular"])
-    assert proc.returncode == 0, proc.stderr
-    assert "--model" in argv
-    assert argv[argv.index("--model") + 1] == "opus"
+def test_non_codex_reviewer_config_yields_error(review_env):
+    """A tier configured with reviewer='claude' yields exit 1 with a clear error;
+    the codex shim is never dispatched.
+
+    After E2, 'claude' is not a valid engine reviewer — the engine errors
+    loudly rather than attempting to dispatch a removed path.
+    """
+    env, repo, defaults = review_env
+    cfg = json.loads(defaults.read_text())
+    cfg["review_tiers"]["pre_pr"]["reviewer"] = "claude"
+    defaults.write_text(json.dumps(cfg))
+
+    log = repo / "argv.log"
+    proc = _run(env, repo, ["pre-pr"], extra={"DD_REVIEW_ARGV_LOG": str(log)})
+    assert proc.returncode == 1
+    assert "ERROR" in proc.stderr
+    assert not log.exists()  # codex shim never ran
 
 
-def test_tier_default_effort_lands_effort_flag(review_env):
-    """cold-read tier (default_effort=high) lands ``--effort high``."""
-    env, repo, _ = review_env
-    proc, argv, _ = _argv_log(env, repo, ["cold-read"])
-    assert proc.returncode == 0, proc.stderr
-    assert "--effort" in argv
-    assert argv[argv.index("--effort") + 1] == "high"
+def test_unknown_reviewer_config_yields_error(review_env):
+    """A tier configured with an unrecognized reviewer (not 'codex') yields
+    exit 1 with a clear error — the selector raises ValueError on unknown reviewers.
+    """
+    env, repo, defaults = review_env
+    cfg = json.loads(defaults.read_text())
+    cfg["review_tiers"]["pre_pr"]["reviewer"] = "gemini"
+    defaults.write_text(json.dumps(cfg))
+
+    proc = _run(env, repo, ["pre-pr"])
+    assert proc.returncode == 1
+    assert "ERROR" in proc.stderr
+
+
+# ---------------------------------------------------------------------------
+# B2 — codex reviewer dispatch + per-knob argv
+# ---------------------------------------------------------------------------
 
 
 def test_codex_model_and_effort_overrides(review_env):
@@ -380,6 +396,22 @@ def test_codex_model_and_effort_overrides(review_env):
             )
 
 
+def test_regular_tier_codex_model_in_argv(review_env):
+    """regular tier (codex/gpt-4o) lands ``-c model="gpt-4o"`` in codex argv."""
+    env, repo, _ = review_env
+    proc, argv, _ = _argv_log(env, repo, ["regular"])
+    assert proc.returncode == 0, proc.stderr
+    assert 'model="gpt-4o"' in "\n".join(argv)
+
+
+def test_cold_read_tier_high_effort_in_argv(review_env):
+    """cold-read tier (default_effort=high) lands ``-c model_reasoning_effort="high"``."""
+    env, repo, _ = review_env
+    proc, argv, _ = _argv_log(env, repo, ["cold-read"])
+    assert proc.returncode == 0, proc.stderr
+    assert 'model_reasoning_effort="high"' in "\n".join(argv)
+
+
 def test_codex_stuffed_reads_diff_from_stdin(review_env):
     """codex stuffed (small diff): argv ends in ``-`` and the diff is on stdin."""
     env, repo, _ = review_env
@@ -389,43 +421,39 @@ def test_codex_stuffed_reads_diff_from_stdin(review_env):
     assert "g.txt" in stdin  # the diff body the engine piped in
 
 
-def test_selector_picks_stuffed_at_small_diff(review_env):
-    """Small diff → claude stuffed: diff embedded in prompt, no git-diff tool."""
+def test_stuffed_strategy_embeds_diff_in_stdin(review_env):
+    """Small diff → codex stuffed: diff body is piped on stdin (stdin ends with
+    '-' in argv), containing the actual changed file content."""
     env, repo, _ = review_env
     proc, argv, stdin = _argv_log(env, repo, ["regular"])
     assert proc.returncode == 0, proc.stderr
-    # Stuffed embeds the diff body inside a ```diff fence.
-    assert "```diff" in stdin
+    # Stuffed strategy: argv ends in "-" (codex reads from stdin).
+    assert argv[-1] == "-"
+    # The diff body is in stdin (the actual change).
+    assert "g.txt" in stdin
     assert "+two" in stdin  # the actual diff hunk
-    # CLAUDE_STUFFED_TOOLS drops Bash(git diff:*).
-    tools = argv[argv.index("--tools") + 1]
-    assert "Bash(git diff:*)" not in tools
-    # Prompt instructions and tool allowlist must agree: in stuffed mode the
-    # reviewer should NOT be told to "fetch them yourself" (git diff is denied)
-    # — that contradicts the embedded diff and would trigger a denied tool call.
-    assert "Fetch them yourself" not in stdin
-    # Positive: stuffed mode should orient the reviewer to the embedded diff.
-    assert "embedded" in stdin.lower() or "pre-stuffed" in stdin.lower()
 
 
-def test_selector_picks_fetched_at_large_diff(review_env):
-    """Large diff → claude fetched: git-diff tool allowlisted, no embedded diff."""
+def test_fetched_strategy_base_in_argv(review_env):
+    """Large diff → codex fetched: ``--base <ref>`` is in argv, no stdin diff."""
     env, repo, defaults = review_env
     _force_fetched(defaults)
+    fork = _fork_base(repo)
     proc, argv, stdin = _argv_log(env, repo, ["regular"])
     assert proc.returncode == 0, proc.stderr
-    # Fetched does NOT embed the diff body; it instructs the reviewer to fetch.
-    assert "```diff" not in stdin
-    assert "Fetch them yourself" in stdin
-    tools = argv[argv.index("--tools") + 1]
-    assert "Bash(git diff:*)" in tools
+    # Fetched: argv has --base, NOT stdin ("-" at end).
+    assert "--base" in argv
+    assert _diff_base_in_argv(argv) == fork
+    assert argv[-1] != "-"
+    # No diff body in stdin (codex fetches the diff itself).
+    assert "+two" not in stdin
 
 
 def test_cli_missing_errors(review_env, tmp_path):
     """Reviewer CLI absent from PATH → operational error exit 1, no dispatch.
 
     Build an isolated bin dir holding only a ``git`` symlink so neither the
-    shim nor any real ``claude`` on the host PATH is reachable.
+    shim nor any real ``codex`` on the host PATH is reachable.
     """
     env, repo, _ = review_env
     isolated = tmp_path / "onlygit"
@@ -540,8 +568,6 @@ def test_cwd_flag_targets_other_repo(review_env, tmp_path):
     _force_fetched(defaults)  # surface the base in codex argv (pre-pr)
     other = _make_second_repo(tmp_path)
     other_fork = state.resolve_fork_base(str(other), ["master", "main"])
-    # _argv_log writes its argv.log under the fixture repo; the subprocess
-    # cwd stays the fixture repo, so only --cwd retargets the review.
     proc, argv, _ = _argv_log(
         env, fixture_repo, ["pre-pr", "--cwd", str(other)]
     )
@@ -550,29 +576,6 @@ def test_cwd_flag_targets_other_repo(review_env, tmp_path):
     # Sanity: the fixture repo's fork base differs, proving --cwd retargeted.
     fixture_fork = state.resolve_fork_base(str(fixture_repo), ["master", "main"])
     assert other_fork != fixture_fork
-
-
-def test_cwd_flag_runs_claude_reviewer_in_target_repo(review_env, tmp_path):
-    """``--cwd <other>`` on a claude tier runs the reviewer PROCESS in the
-    target repo, so a ``fetched``-strategy ``git diff`` reads the right tree.
-
-    Regression for the bug where claude inherited dd_review's cwd (the fixture
-    repo) because ``Runner`` never passed ``cwd`` to ``Popen`` — only codex
-    self-wrapped with ``cd``. Forced fetched so the reviewer would actually run
-    ``git diff`` in-cwd."""
-    env, fixture_repo, defaults = review_env
-    _force_fetched(defaults)
-    other = _make_second_repo(tmp_path, name="claude_cwd_repo")
-    cwd_log = fixture_repo / "claude_cwd.log"
-    proc = _run(
-        env, fixture_repo, ["regular", "--cwd", str(other)],
-        extra={"DD_REVIEW_CWD_LOG": str(cwd_log)},
-    )
-    assert proc.returncode == 0, proc.stderr
-    assert cwd_log.exists(), "claude shim did not run"
-    assert os.path.realpath(cwd_log.read_text().strip()) == os.path.realpath(
-        str(other)
-    )
 
 
 def test_cwd_flag_rejects_non_directory(review_env):
@@ -594,17 +597,15 @@ def test_cwd_flag_config_follows_target_repo(review_env, tmp_path):
     cfg_dir = other / ".claude"
     cfg_dir.mkdir(exist_ok=True)
     (cfg_dir / "dd-config.json").write_text(
-        json.dumps({"review_tiers": {"regular": {"model": "haiku-cfg"}}})
+        json.dumps({"review_tiers": {"regular": {"model": "gpt-4o-mini"}}})
     )
     # DD_CONFIG is "" in the fixture env (process-cwd config disabled); the
-    # engine must steer config at the --cwd repo on its own. The subprocess
-    # cwd stays the fixture repo, which has no dd-config.json.
+    # engine must steer config at the --cwd repo on its own.
     proc, argv, _ = _argv_log(
         env, fixture_repo, ["regular", "--cwd", str(other)]
     )
     assert proc.returncode == 0, proc.stderr
-    assert "--model" in argv
-    assert argv[argv.index("--model") + 1] == "haiku-cfg"
+    assert 'model="gpt-4o-mini"' in "\n".join(argv)
 
 
 def test_help_flag_exits_zero(review_env):
@@ -702,10 +703,7 @@ def test_diff_is_empty_timeout_or_error_returns_none(monkeypatch):
 
 
 def test_prepr_unresolvable_base_errors(review_env):
-    """`pre-pr --base <bogus>` → exit 1 (the diff probe can't resolve the ref).
-
-    Pins the error path the rewrite otherwise only covered for the success
-    case (legacy test_explicit_base_must_resolve)."""
+    """`pre-pr --base <bogus>` → exit 1 (the diff probe can't resolve the ref)."""
     env, repo, _ = review_env
     proc = _run(env, repo, ["pre-pr", "--base", "no-such-ref-xyz"])
     assert proc.returncode == 1
@@ -732,9 +730,10 @@ def test_clean_pass_writes_review_record(review_env):
     assert len(recs) == 1
     r = recs[0]
     assert r["decision"] == "PASS" and r["tier"] == "regular"
-    assert r["reviewer"] == "claude" and "duration_s" in r and "ts" in r
+    # Codex is the only reviewer after E2.
+    assert r["reviewer"] == "codex" and "duration_s" in r and "ts" in r
     assert r["p0"] == 0 and r["p1"] == 0 and "output" in r
-    assert r["model"] == "opus" and "strategy" in r and "diff_bytes" in r
+    assert r["model"] == "gpt-4o" and "strategy" in r and "diff_bytes" in r
 
 
 def test_block_writes_review_record(review_env):
@@ -744,6 +743,7 @@ def test_block_writes_review_record(review_env):
     rec = _reviews(env)[-1]
     assert rec["decision"] == "BLOCK" and rec["p1"] == 1
     assert "[P1] real bug here" in rec["output"]
+    assert rec["reviewer"] == "codex"
 
 
 def test_error_writes_review_record(review_env):
@@ -786,7 +786,4 @@ def test_resolve_timeout_rejects_zero_env(monkeypatch):
     # DD_REVIEW_TIMEOUT=0 must not make Popen.wait(timeout=0) fire immediately;
     # fall back like the config path (which already rejects <= 0).
     monkeypatch.setenv("DD_REVIEW_TIMEOUT", "0")
-    # Rejected → falls through to a positive fallback (config value or
-    # DEFAULT_TIMEOUT_S); the invariant is "never 0" (else Popen.wait fires
-    # instantly).
     assert _ddr._resolve_timeout() > 0

@@ -5,7 +5,7 @@ Usage:
     python3 dd_review_runner.py {regular | cold-read | pre-pr} [--base <ref>] [--cwd <path>]
 
 Rebuilt on the ``hooks/lib`` modules (config, severity, state, plan,
-claude_runner, review_invocation, review_prompt). Four behavior deltas
+reviewer_runner, review_invocation, review_prompt). Four behavior deltas
 versus the original marker-based engine (see plan Part B):
 
   * Delta 1 — every tier resolves its diff base to the *fork base*
@@ -45,10 +45,9 @@ if str(_BASE_DIR) not in sys.path:
     sys.path.insert(0, str(_BASE_DIR))
 
 from hooks.lib import (  # noqa: E402
-    claude_runner,
+    reviewer_runner,
     config,
     logging_setup,
-    plan as plan_mod,
     review_invocation,
     review_prompt,
     severity,
@@ -415,11 +414,17 @@ def main(argv: list[str] | None = None) -> int:
         diff_bytes=diff_bytes,
     )
 
-    # Build reviewer-specific prompt + argv.
+    # Build codex argv + optional stuffed prompt.
+    # codex is the only engine reviewer after E2 (claude -p removed).
     prompt = ""
-    runner_argv: list[str]
-
-    if invocation.reviewer == "claude":
+    runner_argv = review_prompt.codex_runner_argv(
+        repo if cwd_override else None,
+        base,
+        model=invocation.model,
+        effort=invocation.effort,
+        strategy=invocation.strategy,
+    )
+    if invocation.strategy == "stuffed":
         prompt_path, configured_path = _resolve_prompt_path(repo)
         if not prompt_path.is_file():
             return _error(
@@ -427,77 +432,30 @@ def main(argv: list[str] | None = None) -> int:
                 f"review.prompt_path ({configured_path}) not found",
             )
         try:
-            prompt_header = prompt_path.read_text()
+            skill_text = prompt_path.read_text()
         except OSError as exc:
             return _error(
                 "prompt_unreadable",
                 f"review.prompt_path ({configured_path}) unreadable: {exc}",
             )
-        plan_path, spec_path = review_prompt.resolve_plan_and_spec_paths(
-            repo, lambda: plan_mod.resolve_active_plan(repo)
+        prompt = (
+            skill_text
+            + "\n\n## Diff (pre-stuffed; no need to git diff)\n\n"
+            + "```diff\n"
+            + diff_body.decode("utf-8", errors="replace")
+            + "\n```\n"
         )
-        prompt = review_prompt.build_claude_prompt(
-            prompt_header=prompt_header,
-            base=base,
-            head_sha=head_sha,
-            paths_csv=paths_csv,
-            plan_path=plan_path,
-            spec_path=spec_path,
-            strategy=invocation.strategy,
-        )
-        if invocation.strategy == "stuffed":
-            prompt = (
-                prompt
-                + "\n\n## Diff (pre-stuffed; no need to git diff)\n\n"
-                + "```diff\n"
-                + diff_body.decode("utf-8", errors="replace")
-                + "\n```\n"
-            )
-        runner_argv = review_prompt.claude_runner_argv(
-            model=invocation.model,
-            effort=invocation.effort,
-            strategy=invocation.strategy,
-        )
-    else:  # codex
-        runner_argv = review_prompt.codex_runner_argv(
-            repo if cwd_override else None,
-            base,
-            model=invocation.model,
-            effort=invocation.effort,
-            strategy=invocation.strategy,
-        )
-        if invocation.strategy == "stuffed":
-            prompt_path, configured_path = _resolve_prompt_path(repo)
-            if not prompt_path.is_file():
-                return _error(
-                    "prompt_missing",
-                    f"review.prompt_path ({configured_path}) not found",
-                )
-            try:
-                skill_text = prompt_path.read_text()
-            except OSError as exc:
-                return _error(
-                    "prompt_unreadable",
-                    f"review.prompt_path ({configured_path}) unreadable: {exc}",
-                )
-            prompt = (
-                skill_text
-                + "\n\n## Diff (pre-stuffed; no need to git diff)\n\n"
-                + "```diff\n"
-                + diff_body.decode("utf-8", errors="replace")
-                + "\n```\n"
-            )
 
     review_start = time.monotonic()
     timeout_s = _resolve_timeout()
-    result = claude_runner.Runner(
+    result = reviewer_runner.Runner(
         argv=runner_argv,
         timeout_s=timeout_s,
         stdin_text=prompt,
         log=logger,
-        # Run the reviewer IN the repo under review so claude's fetched-strategy
-        # `git diff` reads the right tree (codex self-wraps with `cd`, but a
-        # redundant cwd here is harmless). Fixes the --cwd-on-claude bug.
+        # Run codex IN the repo under review. Codex self-wraps with `cd` for
+        # the fetched strategy, but a redundant cwd here is harmless and
+        # ensures consistent behaviour across strategies.
         cwd=repo,
     ).run()
     duration_s = int(time.monotonic() - review_start)

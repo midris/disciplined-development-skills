@@ -1,9 +1,10 @@
 """Tests for pick_invocation selector — Phase 2 of the tiered reviewer
 config plan (plans/completed/2026-05-28-dd-hooks-tiered-reviewer-config.md).
 
-Test table is verbatim from the plan's Phase 2 contract. If a future
-edit to that table needs to land, update both the plan AND this file in
-the same commit so the two surfaces don't drift.
+Test table is verbatim from the plan's Phase 2 contract; updated for E2
+(``claude`` removed from VALID_REVIEWERS — only ``codex`` is valid). The
+strategy / effort selector behavior is reviewer-neutral, so test cases are
+unchanged except the reviewer value.
 """
 
 from __future__ import annotations
@@ -26,7 +27,7 @@ SELECTOR = {
 
 def _tier(
     *,
-    reviewer: str = "claude",
+    reviewer: str = "codex",
     model: str = "opus",
     default_effort: str = "medium",
 ) -> dict:
@@ -43,22 +44,21 @@ def _tier(
     ("diff_bytes", "default_effort", "reviewer", "expected_strategy", "expected_effort"),
     [
         # below both cutoffs — vanilla stuffed + tier default effort
-        (5_000,   "medium", "claude", "stuffed", "medium"),
+        # After E2, only 'codex' is a valid reviewer.
         (5_000,   "medium", "codex",  "stuffed", "medium"),
         # high-effort boundary at 51 200
-        (51_199,  "medium", "claude", "stuffed", "medium"),  # one byte under
-        (51_200,  "medium", "claude", "stuffed", "high"),    # exactly at boundary
+        (51_199,  "medium", "codex",  "stuffed", "medium"),  # one byte under
+        (51_200,  "medium", "codex",  "stuffed", "high"),    # exactly at boundary
         (60_000,  "medium", "codex",  "stuffed", "high"),    # above boundary
         # tier default_effort=high stays high at any diff size
         (60_000,  "high",   "codex",  "stuffed", "high"),
         (5_000,   "high",   "codex",  "stuffed", "high"),    # below high-effort cutoff
         # pre-stuff cap boundary at 524 288
-        (524_287, "medium", "claude", "stuffed", "high"),    # one byte under
-        (524_288, "medium", "claude", "fetched", "high"),    # exactly at cap
+        (524_287, "medium", "codex",  "stuffed", "high"),    # one byte under
+        (524_288, "medium", "codex",  "fetched", "high"),    # exactly at cap
         # above pre-stuff cap — fetched strategy
-        (600_000, "medium", "claude", "fetched", "high"),
         (600_000, "medium", "codex",  "fetched", "high"),
-        (600_000, "high",   "claude", "fetched", "high"),
+        (600_000, "high",   "codex",  "fetched", "high"),
     ],
 )
 def test_pick_invocation_table(
@@ -78,14 +78,16 @@ def test_pick_invocation_table(
 def test_unknown_reviewer_raises_with_value_and_valid_set():
     """The selector is the second line of defense after Phase 1's validator.
     A misconfigured tier escaping config validation must fail loud here
-    rather than silently dispatching with a garbage reviewer."""
+    rather than silently dispatching with a garbage reviewer.
+
+    After E2, only 'codex' is valid — 'claude' is NOT in the valid set.
+    """
     tier = _tier(reviewer="gemini")
     with pytest.raises(ValueError) as exc:
         pick_invocation(tier, SELECTOR, 5_000)
     msg = str(exc.value)
     assert "gemini" in msg            # offending value named
-    assert "claude" in msg            # valid set surfaced
-    assert "codex" in msg
+    assert "codex" in msg             # only valid reviewer surfaced
 
 
 # ---- Invocation invariants -------------------------------------------------
