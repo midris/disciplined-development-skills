@@ -64,8 +64,9 @@ The angle set is **fixed** (no extensibility framework — Principle 7):
 - **cross-file** — divergence from canonical modules, broken imports,
   caller / contract drift.
 - **security** — traversal, injection, unvalidated input, path building.
-- **necessity** — dead code, over-engineering, premature
-  abstraction / config (Principle 7).
+- **necessity** — cut what doesn't earn its place. Code: dead code,
+  over-engineering, premature abstraction / config (Principle 7). Prose:
+  padded / verbose docs + comments (the reviewer also loads `concise-writing`).
 
 Agent sets are **monotonic** — each tier is a superset of the one below
 (T0 ⊂ T1 ⊂ T2); tiers escalate by *adding* angles, never swapping.
