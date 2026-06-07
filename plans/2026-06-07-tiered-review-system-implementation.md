@@ -195,7 +195,7 @@ PreToolUse blocks read the previous value — spec boundary note).
   - **Tests required:** allows below threshold; denies at/above threshold;
     never mutates the counter; bypass allows; degrades silent.
 
-- [ ] **H3 — `commit_block.py` (new).** PreToolUse(Bash) gated by
+- [x] **H3 — `commit_block.py` (new).** PreToolUse(Bash) gated by
   `command_match.is_git_commit`: deny when commits-since-checkpoint
   (fork-base fallback when no checkpoint) ≥
   `review_tiers.cold_read_escalation.hard_block_threshold` (5) — allows 5
