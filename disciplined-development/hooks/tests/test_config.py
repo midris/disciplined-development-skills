@@ -40,15 +40,28 @@ def _write_user_config(tmp_path: Path, monkeypatch, data) -> None:
 
 def test_defaults_roundtrip_nested_dot_path():
     """A nested dot-path returns the shipped default value."""
-    assert config.get("review_tiers.regular.reviewer") == "claude"
-    assert config.get("review_tiers.regular.model") == "opus"
-    assert config.get("review_tiers.regular.default_effort") == "medium"
-    assert config.get("review_tiers.cold_read_escalation.default_effort") == "high"
+    # --- review_tiers.fast (new tier) ---
+    assert config.get("review_tiers.fast.nudge_threshold") == 30
+    assert config.get("review_tiers.fast.hard_block_threshold") == 60
+    # --- review_tiers.regular: commit_edit_floor only; reviewer/model/effort gone ---
+    assert config.get("review_tiers.regular.commit_edit_floor") == 30
+    assert config.get("review_tiers.regular.reviewer") is None
+    assert config.get("review_tiers.regular.model") is None
+    assert config.get("review_tiers.regular.default_effort") is None
+    # --- review_tiers.cold_read_escalation: thresholds only; reviewer/model/effort gone ---
+    assert config.get("review_tiers.cold_read_escalation.nudge_threshold") == 3
+    assert config.get("review_tiers.cold_read_escalation.hard_block_threshold") == 5
+    assert config.get("review_tiers.cold_read_escalation.reviewer") is None
+    assert config.get("review_tiers.cold_read_escalation.model") is None
+    assert config.get("review_tiers.cold_read_escalation.default_effort") is None
+    # --- review_tiers.pre_pr: reviewer config unchanged (only tier with it) ---
     assert config.get("review_tiers.pre_pr.reviewer") == "codex"
+    # --- strategy_selector ---
     assert config.get("strategy_selector.pre_stuff_max_bytes") == 524288
     assert config.get("strategy_selector.high_effort_min_bytes") == 51200
+    # --- counters: review_threshold removed; discipline_threshold present ---
     assert config.get("counters.discipline_threshold") == 25
-    assert config.get("counters.review_threshold") == 5
+    assert config.get("counters.review_threshold") is None
     assert config.get("review.prompt_path") == ".claude/skills/adversarial-review/SKILL.md"
     assert config.get("branch_convention.trunk_branches") == ["master", "main"]
     assert config.get("plans.active_plan_pointer") == ".claude/active-plan"
@@ -88,17 +101,28 @@ def test_user_override_of_logging_keys_takes_effect(tmp_path, monkeypatch):
     assert config.get("logging.sweep_throttle_hours") == 24
 
 
-def test_user_override_of_tier_reviewer_takes_effect(tmp_path, monkeypatch):
-    """A user override of a tier reviewer wins; sibling keys survive (deep merge)."""
+def test_user_override_of_fast_tier_threshold_takes_effect(tmp_path, monkeypatch):
+    """A user override of a fast-tier threshold wins; sibling key survives (deep merge)."""
     _write_user_config(
         tmp_path,
         monkeypatch,
-        {"review_tiers": {"regular": {"reviewer": "codex"}}},
+        {"review_tiers": {"fast": {"nudge_threshold": 15}}},
     )
-    assert config.get("review_tiers.regular.reviewer") == "codex"
+    assert config.get("review_tiers.fast.nudge_threshold") == 15
+    # Deep merge keeps the untouched sibling leaf from defaults.
+    assert config.get("review_tiers.fast.hard_block_threshold") == 60
+
+
+def test_user_override_of_pre_pr_reviewer_takes_effect(tmp_path, monkeypatch):
+    """A user override of the pre_pr reviewer wins; sibling keys survive (deep merge)."""
+    _write_user_config(
+        tmp_path,
+        monkeypatch,
+        {"review_tiers": {"pre_pr": {"reviewer": "custom"}}},
+    )
+    assert config.get("review_tiers.pre_pr.reviewer") == "custom"
     # Deep merge keeps untouched sibling leaves from defaults.
-    assert config.get("review_tiers.regular.model") == "opus"
-    assert config.get("review_tiers.regular.default_effort") == "medium"
+    assert config.get("review_tiers.pre_pr.model") is not None
 
 
 def test_user_override_of_strategy_cutoff_takes_effect(tmp_path, monkeypatch):
@@ -115,16 +139,16 @@ def test_user_override_of_strategy_cutoff_takes_effect(tmp_path, monkeypatch):
 
 def test_missing_user_key_falls_back_to_default(tmp_path, monkeypatch):
     """A user config that omits a key falls back to the default silently."""
-    _write_user_config(tmp_path, monkeypatch, {"counters": {"review_threshold": 9}})
-    assert config.get("counters.review_threshold") == 9
-    # Untouched default key still resolves.
-    assert config.get("counters.discipline_threshold") == 25
+    _write_user_config(tmp_path, monkeypatch, {"counters": {"discipline_threshold": 99}})
+    assert config.get("counters.discipline_threshold") == 99
+    # A key absent from both user config and defaults returns None.
+    assert config.get("counters.review_threshold") is None
 
 
 def test_malformed_user_config_non_dict_is_discarded(tmp_path, monkeypatch):
     """A non-dict (JSON array) user config is discarded; defaults stand."""
     _write_user_config(tmp_path, monkeypatch, "[1, 2, 3]")
-    assert config.get("review_tiers.regular.reviewer") == "claude"
+    assert config.get("review_tiers.pre_pr.reviewer") == "codex"
 
 
 def test_malformed_user_config_invalid_json_is_discarded(tmp_path, monkeypatch):
@@ -137,3 +161,66 @@ def test_unknown_dot_path_returns_none():
     """An unknown dot-path returns None by default."""
     assert config.get("does.not.exist") is None
     assert config.get("review_tiers.regular.nonexistent") is None
+
+
+# --- C1: new-tier threshold keys ---
+
+def test_fast_tier_thresholds_defaults():
+    """review_tiers.fast exposes nudge and hard-block thresholds at their defaults."""
+    assert config.get("review_tiers.fast.nudge_threshold") == 30
+    assert config.get("review_tiers.fast.hard_block_threshold") == 60
+
+
+def test_regular_tier_commit_edit_floor_default():
+    """review_tiers.regular has commit_edit_floor; reviewer/model/effort are absent."""
+    assert config.get("review_tiers.regular.commit_edit_floor") == 30
+    assert config.get("review_tiers.regular.reviewer") is None
+
+
+def test_cold_read_escalation_thresholds_defaults():
+    """review_tiers.cold_read_escalation exposes nudge and hard-block thresholds."""
+    assert config.get("review_tiers.cold_read_escalation.nudge_threshold") == 3
+    assert config.get("review_tiers.cold_read_escalation.hard_block_threshold") == 5
+    assert config.get("review_tiers.cold_read_escalation.reviewer") is None
+
+
+def test_pre_pr_reviewer_unchanged():
+    """review_tiers.pre_pr.reviewer is still 'codex' (only tier with reviewer config)."""
+    assert config.get("review_tiers.pre_pr.reviewer") == "codex"
+
+
+def test_counters_review_threshold_absent():
+    """counters.review_threshold is absent from defaults; discipline_threshold present."""
+    assert config.get("counters.review_threshold") is None
+    assert config.get("counters.discipline_threshold") == 25
+
+
+def test_fast_tier_non_positive_user_override_is_ignored(tmp_path, monkeypatch):
+    """A non-positive user override of fast.nudge_threshold falls back to default.
+
+    Mirrors the strategy_selector pattern: consumers reading this key must guard
+    against non-int/non-positive values the same way review_nudge guards
+    counters.review_threshold.  The config layer hands back whatever the user
+    wrote; callers do the guard.  This test documents the raw behaviour so
+    consumers know they own the guard.
+    """
+    _write_user_config(
+        tmp_path,
+        monkeypatch,
+        {"review_tiers": {"fast": {"nudge_threshold": -1}}},
+    )
+    # config.get returns the raw user value; the *caller* (hook) is responsible
+    # for rejecting non-positive values and falling back to the default.
+    raw = config.get("review_tiers.fast.nudge_threshold")
+    assert raw == -1  # config layer does not guard; caller must
+
+    # Verify the default is what the caller would fall back to.
+    monkeypatch.setenv("DD_CONFIG", "/nonexistent/dd-config.json")
+    config.reset_config_cache()
+    assert config.get("review_tiers.fast.nudge_threshold") == 30
+
+
+def test_strategy_selector_defaults_still_intact():
+    """strategy_selector defaults are unchanged by the C1 config migration."""
+    assert config.get("strategy_selector.pre_stuff_max_bytes") == 524288
+    assert config.get("strategy_selector.high_effort_min_bytes") == 51200

@@ -1,10 +1,10 @@
-"""Smoke test for the moved reviewer-tuning harness (Task F1).
+"""Smoke test for the codex replay harness.
 
-Confirms the relocation into ``hooks/harness/`` is wired correctly:
-- both replay scripts import cleanly (their module-level ``from hooks.lib
-  import ...`` resolves — no live reviewer dispatch, main() is __name__-guarded);
-- the moved sources use the production strategy enum (`stuffed` / `fetched`),
-  not the legacy `pre-stuffed` / `tool-fetched` / `bare` tokens.
+Confirms the ``hooks/harness/replay_codex.py`` module imports cleanly
+(its module-level ``from hooks.lib import ...`` resolves — no live reviewer
+dispatch, main() is __name__-guarded) and uses the production strategy enum.
+
+``replay_review.py`` was deleted in E2 (``claude -p`` path removed).
 """
 
 from __future__ import annotations
@@ -23,18 +23,20 @@ def _load(name: str):
     return mod
 
 
-def test_harness_modules_import_resolving_hooks_lib():
-    rv = _load("replay_review")
+def test_replay_codex_imports_resolving_hooks_lib():
     rc = _load("replay_codex")
-    # A couple of symbols to prove the modules executed past their imports.
-    assert hasattr(rv, "build_prompt") and hasattr(rv, "CLAUDE_TOOLS")
+    # Symbols prove the module executed past its imports.
     assert hasattr(rc, "codex_argv") and rc.CODEX_STRATEGIES == ("fetched", "stuffed")
 
 
-def test_harness_sources_use_production_strategy_enum():
-    for name in ("replay_review.py", "replay_codex.py"):
-        src = (_HARNESS / name).read_text()
-        for tok in ("pre-stuffed", "tool-fetched"):
-            assert tok.lower() not in src.lower(), f"{name} retains legacy token {tok!r}"
-        assert not re.search(r"\bbare\b", src, re.IGNORECASE), \
-            f"{name} retains legacy 'bare' strategy token"
+def test_replay_codex_uses_production_strategy_enum():
+    src = (_HARNESS / "replay_codex.py").read_text()
+    for tok in ("pre-stuffed", "tool-fetched"):
+        assert tok.lower() not in src.lower(), f"replay_codex.py retains legacy token {tok!r}"
+    assert not re.search(r"\bbare\b", src, re.IGNORECASE), \
+        "replay_codex.py retains legacy 'bare' strategy token"
+
+
+def test_replay_review_deleted():
+    """replay_review.py was removed in E2 — confirm it is gone."""
+    assert not (_HARNESS / "replay_review.py").exists()

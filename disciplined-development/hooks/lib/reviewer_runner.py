@@ -1,8 +1,8 @@
-"""claude_runner.py — Subprocess wrapper for the review CLIs.
+"""reviewer_runner.py — Subprocess wrapper for the codex review CLI.
 
-Used by both ``pre_pr_codex_review`` (runs ``codex review``) and
-``dd_review.py`` (runs ``claude -p`` OR ``codex review``). Name kept
-historical; both reviewers route through the same Runner.
+Used by ``dd_review_runner.py`` (runs ``codex review``). Renamed from
+``claude_runner.py`` once ``claude -p`` was removed (E2); the Runner is now
+a codex-only generic subprocess wrapper.
 
 Design:
 
@@ -64,10 +64,10 @@ class Runner:
         Seconds the child has between SIGTERM and SIGKILL on timeout.
     cwd:
         Optional working directory for the child. ``None`` inherits the
-        parent's cwd. Load-bearing for the claude reviewer: in ``fetched``
-        strategy claude runs ``git diff`` itself, so it must start in the repo
-        being reviewed (codex self-wraps with ``cd``; claude has no such
-        mechanism — without this it would review the parent process's cwd).
+        parent's cwd. Load-bearing for codex in ``fetched`` strategy: codex
+        self-wraps with ``cd``, but a matching cwd here ensures consistent
+        behaviour across strategies and makes the reviewed repo unambiguous
+        regardless of the parent process's cwd.
     """
 
     _FORWARDED_SIGNALS = (signal.SIGTERM, signal.SIGHUP, signal.SIGINT)

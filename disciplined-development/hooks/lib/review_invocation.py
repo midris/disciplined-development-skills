@@ -3,15 +3,16 @@
 Phase 2 of the tiered reviewer config plan
 (plans/completed/2026-05-28-dd-hooks-tiered-reviewer-config.md). The selector applies
 strategy_selector cutoffs to a tier_config + diff_bytes triple, producing an
-immutable Invocation that Phase 4's `dd_review.py` will translate into the
+immutable Invocation that Phase 4's `dd_review_runner.py` will translate into the
 reviewer-specific argv at dispatch time.
 
 Strategy enum values are reviewer-neutral (`stuffed` / `fetched`). The
 runner module owns the per-reviewer argv translation:
 - codex `stuffed` → `codex review -` (skill + diff on stdin)
 - codex `fetched` → `codex review --base <ref>`
-- claude `stuffed` → in-prompt diff, no Bash(git diff:*) allowlist
-- claude `fetched` → production prompt with Bash(git diff:*) allowlisted
+
+``claude`` was removed from the valid reviewer set in E2 (``claude -p``
+path removed). ``codex`` is the only engine-dispatched reviewer.
 
 Per the plan's Decisions section: selector_config is an explicit argument
 (not a global read) so per-project overrides land cleanly and tests can
@@ -23,7 +24,7 @@ from __future__ import annotations
 from dataclasses import dataclass
 
 
-VALID_REVIEWERS = ("claude", "codex")
+VALID_REVIEWERS = ("codex",)  # claude -p removed in E2; codex is the only engine reviewer
 
 
 @dataclass(frozen=True)
@@ -54,7 +55,8 @@ def pick_invocation(
       `tier_config["default_effort"]`. A tier with `default_effort=high`
       stays high at any diff size (the conditional folds in either way).
 
-    Raises ValueError on unknown `reviewer`. In the minimal design
+    Raises ValueError on unknown `reviewer`. ``codex`` is the only valid
+    value after E2 (``claude -p`` path removed). In the minimal design
     `config.py` is a pure loader (no config validator), so this is the
     *sole* gate for reviewer validity — failing loud at dispatch time
     beats silently dispatching with a garbage reviewer. Other required

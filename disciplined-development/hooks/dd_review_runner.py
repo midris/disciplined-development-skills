@@ -1,28 +1,31 @@
 #!/usr/bin/env python3
-"""dd_review.py — model-callable adversarial review against the branch diff.
+"""dd_review_runner.py — model-callable adversarial review against the branch diff.
 
 Usage:
-    python3 dd_review.py {regular | cold-read | pre-pr} [--base <ref>] [--cwd <path>]
+    python3 dd_review_runner.py pre-pr [--base <ref>] [--cwd <path>]
 
-Rebuilt on the ``hooks/lib`` modules (config, severity, state, plan,
-claude_runner, review_invocation, review_prompt). Four behavior deltas
+Rebuilt on the ``hooks/lib`` modules (config, severity, state,
+reviewer_runner, review_invocation, review_prompt). Four behavior deltas
 versus the original marker-based engine (see plan Part B):
 
   * Delta 1 — every tier resolves its diff base to the *fork base*
     (merge-base of HEAD against the first existing trunk ref) via
     ``state.resolve_fork_base``. The ``-internal`` / ``-external``
     marker reads and the chunk→phase auto-detection are dropped.
-    ``pre-pr`` still honours an explicit ``--base <ref>`` override;
-    ``--base`` is rejected on the other tiers. Empty diff
-    (HEAD == fork base) → clean exit, no reviewer dispatched.
-  * Delta 2 — a clean pass (zero P0/P1/P2) on ANY tier writes the
-    per-branch review checkpoint via ``state.set_checkpoint``.
+    ``pre-pr`` still honours an explicit ``--base <ref>`` override.
+    Empty diff (HEAD == fork base) → clean exit, no reviewer dispatched.
+  * Delta 2 — the engine codex review path is the T3 (pre-pr) gate only.
+    A clean pre-pr pass writes the per-branch review checkpoint via
+    ``state.set_checkpoint`` AND resets ``edits.count`` (T3 reset rule).
+    T0–T2 subagent dispatch and their ``--write-checkpoint`` round-trips
+    live in the model-layer ``/dd-review`` command.
   * Delta 3 — no marker writes anywhere.
   * Delta 4 — no ``.review-history.log`` writer; JSONL debug logging
     via ``logging_setup`` is preserved.
 
-Tier config keys (``review_tiers.<key>``): regular → ``regular``,
-cold-read → ``cold_read_escalation``, pre-pr → ``pre_pr``.
+The engine review path (codex dispatch + severity scan) is ``pre-pr`` only.
+``--write-checkpoint`` and ``--resolve-scope`` accept additional tiers
+(fast / regular / cold-read) for model-layer state writes and scope queries.
 
 Advisory vs hard-block: manual invocation always exits 0 (the model is
 the consumer). The pre-PR hook wrapper sets ``DD_HARD_BLOCK=1`` so
@@ -45,10 +48,9 @@ if str(_BASE_DIR) not in sys.path:
     sys.path.insert(0, str(_BASE_DIR))
 
 from hooks.lib import (  # noqa: E402
-    claude_runner,
+    reviewer_runner,
     config,
     logging_setup,
-    plan as plan_mod,
     review_invocation,
     review_prompt,
     severity,
@@ -57,12 +59,22 @@ from hooks.lib import (  # noqa: E402
 
 HOOK_NAME = "dd_review"
 DEFAULT_TIMEOUT_S = 300
-VALID_TIERS = ("regular", "cold-read", "pre-pr")
+VALID_TIERS = ("pre-pr",)
+
+# Tiers valid for --write-checkpoint (fast + the three review tiers; pre-pr is
+# excluded: the codex clean pass writes its own checkpoint and never round-trips
+# through this flag).
+_CHECKPOINT_TIERS = ("fast", "regular", "cold-read")
+
+# Tiers valid for --resolve-scope.  All four tiers are addressable: fast →
+# working-tree scope ("HEAD"); the review tiers → fork-base range.
+_SCOPE_TIERS = ("fast", "regular", "cold-read", "pre-pr")
 
 # CLI tier → config-key tier name (hyphen in the CLI, underscore in config).
+# Only pre-pr has a config entry used by the engine's review path; regular and
+# cold-read are handled via --write-checkpoint (no reviewer dispatch, no config
+# lookup for these tiers).
 _TIER_CONFIG_KEY = {
-    "regular": "regular",
-    "cold-read": "cold_read_escalation",
     "pre-pr": "pre_pr",
 }
 
@@ -104,7 +116,11 @@ def _parse_argv(argv: list[str]) -> tuple[str, str | None, str | None] | str:
         else:
             return f"unrecognized argument {arg!r}"
     if tier is None:
-        return "missing required tier (one of regular | cold-read | pre-pr)"
+        return (
+            "missing required tier (pre-pr). "
+            "T0–T2 tiers (fast/regular/cold-read) are handled by the "
+            "/dd-review command, not this engine."
+        )
     if base is not None and tier != "pre-pr":
         return f"--base is only valid on pre-pr (not {tier!r})"
     return tier, base, cwd
@@ -113,10 +129,202 @@ def _parse_argv(argv: list[str]) -> tuple[str, str | None, str | None] | str:
 def _print_usage_error(msg: str) -> None:
     print(f"[dd_review] ERROR — {msg}", file=sys.stderr)
     print(
-        f"Usage: python3 dd_review.py {{{'|'.join(VALID_TIERS)}}} "
-        f"[--base <ref>] [--cwd <path>]",
+        f"Usage: python3 dd_review_runner.py {{{'|'.join(VALID_TIERS)}}} "
+        f"[--base <ref>] [--cwd <path>]\n"
+        f"       python3 dd_review_runner.py --write-checkpoint "
+        f"{{{'|'.join(_CHECKPOINT_TIERS)}}} [--cwd <path>]\n"
+        f"       python3 dd_review_runner.py --resolve-scope "
+        f"{{{'|'.join(_SCOPE_TIERS)}}} [--cwd <path>]",
         file=sys.stderr,
     )
+
+
+# --- --write-checkpoint mode -----------------------------------------------
+
+
+def _handle_write_checkpoint(argv: list[str]) -> int | None:
+    """Handle ``--write-checkpoint <tier> [--cwd <path>]`` if present.
+
+    Returns the exit code (0 or non-zero) when the flag is found, or None
+    when it is absent (caller continues with the normal review path).
+
+    Reset rule (spec §Cadence & state):
+      fast | regular → reset ``edits.count`` only.
+      cold-read      → ``set_checkpoint(HEAD)`` AND reset ``edits.count``.
+      pre-pr         → NOT handled here; codex clean pass writes its own.
+    """
+    if "--write-checkpoint" not in argv:
+        return None
+
+    # Parse: --write-checkpoint <tier> [--cwd <path>]
+    # No other flags are valid in this mode.
+    tier: str | None = None
+    cwd: str | None = None
+    i = 0
+    while i < len(argv):
+        arg = argv[i]
+        if arg == "--write-checkpoint":
+            if i + 1 >= len(argv):
+                _print_usage_error("--write-checkpoint requires a tier argument")
+                return 2
+            if tier is not None:
+                _print_usage_error("--write-checkpoint specified twice")
+                return 2
+            tier = argv[i + 1]
+            i += 2
+        elif arg == "--cwd":
+            if i + 1 >= len(argv):
+                _print_usage_error("--cwd requires a path argument")
+                return 2
+            if cwd is not None:
+                _print_usage_error("--cwd specified twice")
+                return 2
+            cwd = argv[i + 1]
+            i += 2
+        else:
+            _print_usage_error(
+                f"--write-checkpoint mode does not accept {arg!r}"
+            )
+            return 2
+
+    if tier not in _CHECKPOINT_TIERS:
+        _print_usage_error(
+            f"unknown checkpoint tier {tier!r} "
+            f"(valid: {' | '.join(_CHECKPOINT_TIERS)})"
+        )
+        return 2
+
+    repo_path = cwd or os.getcwd()
+    if cwd and not pathlib.Path(cwd).is_dir():
+        _print_usage_error(f"--cwd {cwd!r} is not a directory")
+        return 2
+
+    # Resolve the git repo root (mirrors main()'s pattern).
+    try:
+        r = subprocess.run(
+            ["git", "-C", repo_path, "rev-parse", "--show-toplevel"],
+            capture_output=True, text=True, timeout=5,
+        )
+    except Exception:
+        print("[dd_review --write-checkpoint] ERROR: git unavailable", file=sys.stderr)
+        return 1
+    if r.returncode != 0 or not r.stdout.strip():
+        print("[dd_review --write-checkpoint] ERROR: not inside a git repo",
+              file=sys.stderr)
+        return 1
+    repo = r.stdout.strip()
+
+    branch = _current_branch(repo) or "detached"
+    head_sha = _head_sha(repo)
+
+    # Reset rule — spec §Cadence & state.
+    if tier in ("fast", "regular"):
+        state.reset(repo, branch, "edits")
+        print(f"[dd_review --write-checkpoint] {tier}: edits counter reset.")
+    elif tier == "cold-read":
+        if head_sha:
+            state.set_checkpoint(repo, branch, head_sha)
+        state.reset(repo, branch, "edits")
+        print(
+            f"[dd_review --write-checkpoint] {tier}: "
+            "checkpoint written and edits counter reset."
+        )
+    return 0
+
+
+# --- --resolve-scope mode --------------------------------------------------
+
+
+def _handle_resolve_scope(argv: list[str]) -> int | None:
+    """Handle ``--resolve-scope <tier> [--cwd <path>]`` if present.
+
+    Returns the exit code when the flag is found, or None when absent
+    (caller continues with the normal review path).
+
+    Prints a single scope string on stdout and exits 0 on success:
+      fast                → ``HEAD``   (working-tree vs HEAD; captures in-flight edits)
+      regular/cold-read/pre-pr → ``<fork-base-sha>..HEAD``
+
+    No state writes, no codex dispatch.  If the fork base cannot be
+    resolved the call exits 1 with an error on stderr and no scope on stdout.
+    """
+    if "--resolve-scope" not in argv:
+        return None
+
+    tier: str | None = None
+    cwd: str | None = None
+    i = 0
+    while i < len(argv):
+        arg = argv[i]
+        if arg == "--resolve-scope":
+            if i + 1 >= len(argv):
+                _print_usage_error("--resolve-scope requires a tier argument")
+                return 2
+            if tier is not None:
+                _print_usage_error("--resolve-scope specified twice")
+                return 2
+            tier = argv[i + 1]
+            i += 2
+        elif arg == "--cwd":
+            if i + 1 >= len(argv):
+                _print_usage_error("--cwd requires a path argument")
+                return 2
+            if cwd is not None:
+                _print_usage_error("--cwd specified twice")
+                return 2
+            cwd = argv[i + 1]
+            i += 2
+        else:
+            _print_usage_error(f"--resolve-scope mode does not accept {arg!r}")
+            return 2
+
+    if tier not in _SCOPE_TIERS:
+        print(
+            f"[dd_review --resolve-scope] ERROR — unknown tier {tier!r} "
+            f"(valid: {' | '.join(_SCOPE_TIERS)})",
+            file=sys.stderr,
+        )
+        return 2
+
+    repo_path = cwd or os.getcwd()
+    if cwd and not pathlib.Path(cwd).is_dir():
+        _print_usage_error(f"--cwd {cwd!r} is not a directory")
+        return 2
+
+    # fast → working-tree scope: no git calls needed.
+    if tier == "fast":
+        print("HEAD")
+        return 0
+
+    # review tiers → fork-base range.
+    try:
+        r = subprocess.run(
+            ["git", "-C", repo_path, "rev-parse", "--show-toplevel"],
+            capture_output=True, text=True, timeout=5,
+        )
+    except Exception:
+        print("[dd_review --resolve-scope] ERROR: git unavailable", file=sys.stderr)
+        return 1
+    if r.returncode != 0 or not r.stdout.strip():
+        print("[dd_review --resolve-scope] ERROR: not inside a git repo",
+              file=sys.stderr)
+        return 1
+    repo = r.stdout.strip()
+
+    trunks = config.get("branch_convention.trunk_branches", ["master", "main"])
+    if not isinstance(trunks, list) or not trunks:
+        trunks = ["master", "main"]
+    base = state.resolve_fork_base(repo, trunks)
+    if not base:
+        print(
+            f"[dd_review --resolve-scope] ERROR — could not determine a fork "
+            f"base — none of {trunks} resolve in this repo.",
+            file=sys.stderr,
+        )
+        return 1
+
+    print(f"{base}..HEAD")
+    return 0
 
 
 # --- git helpers -----------------------------------------------------------
@@ -289,14 +497,32 @@ def main(argv: list[str] | None = None) -> int:
 
     if "--help" in argv or "-h" in argv:
         print(
-            f"Usage: python3 dd_review.py {{{'|'.join(VALID_TIERS)}}} "
+            f"Usage: python3 dd_review_runner.py {{{'|'.join(VALID_TIERS)}}} "
             f"[--base <ref>] [--cwd <path>]\n"
+            f"       python3 dd_review_runner.py --write-checkpoint "
+            f"{{{'|'.join(_CHECKPOINT_TIERS)}}} [--cwd <path>]\n"
+            f"       python3 dd_review_runner.py --resolve-scope "
+            f"{{{'|'.join(_SCOPE_TIERS)}}} [--cwd <path>]\n"
             "Run an adversarial review of the branch diff against its fork "
             "base.\n"
             "  --base <ref>  pre-pr only: override the diff base.\n"
-            "  --cwd <path>  review the repo rooted at <path>."
+            "  --cwd <path>  review the repo rooted at <path>.\n"
+            "  --write-checkpoint <tier>  write post-clean-review state only "
+            "(no review dispatched).\n"
+            "  --resolve-scope <tier>  print the git diff argument for <tier> "
+            "(no review dispatched, no state written)."
         )
         return 0
+
+    # --write-checkpoint mode: pure state write, no reviewer dispatched.
+    wc_rc = _handle_write_checkpoint(argv)
+    if wc_rc is not None:
+        return wc_rc
+
+    # --resolve-scope mode: pure scope resolver, no state writes or dispatch.
+    rs_rc = _handle_resolve_scope(argv)
+    if rs_rc is not None:
+        return rs_rc
 
     parsed = _parse_argv(argv)
     if isinstance(parsed, str):
@@ -415,11 +641,17 @@ def main(argv: list[str] | None = None) -> int:
         diff_bytes=diff_bytes,
     )
 
-    # Build reviewer-specific prompt + argv.
+    # Build codex argv + optional stuffed prompt.
+    # codex is the only engine reviewer after E2 (claude -p removed).
     prompt = ""
-    runner_argv: list[str]
-
-    if invocation.reviewer == "claude":
+    runner_argv = review_prompt.codex_runner_argv(
+        repo if cwd_override else None,
+        base,
+        model=invocation.model,
+        effort=invocation.effort,
+        strategy=invocation.strategy,
+    )
+    if invocation.strategy == "stuffed":
         prompt_path, configured_path = _resolve_prompt_path(repo)
         if not prompt_path.is_file():
             return _error(
@@ -427,77 +659,30 @@ def main(argv: list[str] | None = None) -> int:
                 f"review.prompt_path ({configured_path}) not found",
             )
         try:
-            prompt_header = prompt_path.read_text()
+            skill_text = prompt_path.read_text()
         except OSError as exc:
             return _error(
                 "prompt_unreadable",
                 f"review.prompt_path ({configured_path}) unreadable: {exc}",
             )
-        plan_path, spec_path = review_prompt.resolve_plan_and_spec_paths(
-            repo, lambda: plan_mod.resolve_active_plan(repo)
+        prompt = (
+            skill_text
+            + "\n\n## Diff (pre-stuffed; no need to git diff)\n\n"
+            + "```diff\n"
+            + diff_body.decode("utf-8", errors="replace")
+            + "\n```\n"
         )
-        prompt = review_prompt.build_claude_prompt(
-            prompt_header=prompt_header,
-            base=base,
-            head_sha=head_sha,
-            paths_csv=paths_csv,
-            plan_path=plan_path,
-            spec_path=spec_path,
-            strategy=invocation.strategy,
-        )
-        if invocation.strategy == "stuffed":
-            prompt = (
-                prompt
-                + "\n\n## Diff (pre-stuffed; no need to git diff)\n\n"
-                + "```diff\n"
-                + diff_body.decode("utf-8", errors="replace")
-                + "\n```\n"
-            )
-        runner_argv = review_prompt.claude_runner_argv(
-            model=invocation.model,
-            effort=invocation.effort,
-            strategy=invocation.strategy,
-        )
-    else:  # codex
-        runner_argv = review_prompt.codex_runner_argv(
-            repo if cwd_override else None,
-            base,
-            model=invocation.model,
-            effort=invocation.effort,
-            strategy=invocation.strategy,
-        )
-        if invocation.strategy == "stuffed":
-            prompt_path, configured_path = _resolve_prompt_path(repo)
-            if not prompt_path.is_file():
-                return _error(
-                    "prompt_missing",
-                    f"review.prompt_path ({configured_path}) not found",
-                )
-            try:
-                skill_text = prompt_path.read_text()
-            except OSError as exc:
-                return _error(
-                    "prompt_unreadable",
-                    f"review.prompt_path ({configured_path}) unreadable: {exc}",
-                )
-            prompt = (
-                skill_text
-                + "\n\n## Diff (pre-stuffed; no need to git diff)\n\n"
-                + "```diff\n"
-                + diff_body.decode("utf-8", errors="replace")
-                + "\n```\n"
-            )
 
     review_start = time.monotonic()
     timeout_s = _resolve_timeout()
-    result = claude_runner.Runner(
+    result = reviewer_runner.Runner(
         argv=runner_argv,
         timeout_s=timeout_s,
         stdin_text=prompt,
         log=logger,
-        # Run the reviewer IN the repo under review so claude's fetched-strategy
-        # `git diff` reads the right tree (codex self-wraps with `cd`, but a
-        # redundant cwd here is harmless). Fixes the --cwd-on-claude bug.
+        # Run codex IN the repo under review. Codex self-wraps with `cd` for
+        # the fetched strategy, but a redundant cwd here is harmless and
+        # ensures consistent behaviour across strategies.
         cwd=repo,
     ).run()
     duration_s = int(time.monotonic() - review_start)
@@ -572,9 +757,11 @@ def main(argv: list[str] | None = None) -> int:
     if excerpt:
         print(excerpt, file=sys.stderr)
 
-    # Delta 2 — clean pass checkpoints HEAD for every tier; a BLOCK does not.
+    # Clean pre-pr pass: checkpoint HEAD and reset edits.count (T3 reset rule,
+    # spec §Cadence & state). A BLOCK does neither.
     if decision == "PASS" and branch and head_sha:
         state.set_checkpoint(repo, branch, head_sha)
+        state.reset(repo, branch, "edits")
 
     logger.emit(
         "decision",
