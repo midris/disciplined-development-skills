@@ -320,17 +320,22 @@ on the staged docs branch before commit.
 
 ## Phase 8 — Validation & reconciliation (before PR)
 
-- [ ] **V2 — Angle-set efficacy** (spec §Pre-implementation validation).
-  Re-run the spike's planted wrong-variable and traversal controls through the
-  T2 dispatch; confirm the **correctness** and **security** angles catch them.
-  Record the verdict in this plan and the spec. If an angle misses its target
-  class, revisit before relying on the tier set.
-- [ ] **V3 — Live exercise + full suite.** `cd disciplined-development/hooks &&
-  python3 -m pytest -q` and `python3 -m pytest tests/ -q` green. Install into
-  a scratch consumer and exercise end-to-end: edit counter nudges at 30 /
-  blocks at 60; commit block fires on the 6th; `/dd-review cold-read` runs the
-  subagent set, aggregates, iterates to clean, writes the checkpoint, resets
-  the counter; `gh pr create` hits the T3 codex gate.
+- [x] **V2 — Angle-set efficacy — PASSED (2026-06-07).** Planted a
+  wrong-variable bug (`clamp` returns `lo` when `value > hi`) and a path
+  traversal (`os.path.join(base_dir, untrusted)`) in a scratch diff; dispatched
+  the **correctness** and **security** angle reviewers (sonnet, loading
+  `adversarial-review`). Correctness flagged the wrong-variable (P1); security
+  flagged the traversal (P0); each cross-caught the other's plant. The angles
+  catch exactly the classes the spike showed single generalists miss.
+- [x] **V3 — Live exercise + full suite — PASSED (2026-06-07), with one gap
+  noted.** Both suites green (hook 254 passed/3 skipped; installer 9 passed).
+  Scratch `/tmp` consumer: 8 skill + 1 command symlinks landed; through the
+  symlinked layout the T0 nudge fired at 30, `edit_block` denied at 60 (exit 2),
+  `commit_block` denied at 5 commits (exit 2), engine resolved
+  `--resolve-scope fast`→`HEAD` / `cold-read`→`<sha>..HEAD`. **Not exercised
+  live:** hooks firing inside a real Claude Code session and the full
+  `/dd-review` dispatch→aggregate→checkpoint loop + the `gh pr create` T3 codex
+  gate — these need a real consumer session (owner-confirmed at use time).
 - [x] **S1 — Reconcile the spec.** Update
   `2026-06-07-tiered-review-system-design.md` for the confirmed decisions
   (A bypass names; D verify segment; B rename if taken; C phrasing). **References
