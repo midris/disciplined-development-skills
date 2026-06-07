@@ -41,6 +41,11 @@ All four are invoked through the single **`/dd-review <tier>`** command;
 T0/T2 also have a PreToolUse hard-block hook. The reviewer differs by
 tier; the **output contract is identical** (native P0–P3).
 
+Thresholds in the table above are stated as the **stored** count that
+triggers the block — "at 60 edits" means the PreToolUse block fires when
+the stored count is ≥ 60, i.e. on the 61st edit attempt. The hooks section
+below uses the same convention.
+
 T0's working-tree-vs-HEAD scope is deliberate for the cheapest,
 highest-frequency tier — it catches in-flight edits before they pile up;
 committed-but-unreviewed work is covered when T1 fires at the next commit.
@@ -77,9 +82,9 @@ pass misses stochastically (see Evidence).
 **Billing & independence:** Task-dispatched subagents run as interactive
 in-session work — the same path as any in-session subagent (e.g.
 `/code-review`'s finders) — so they draw on the subscription, not the
-`claude -p` credit pool. This is *inferred* from Anthropic's
-interactive-vs-non-interactive billing line, not separately documented for
-the Task tool; confirm on a real consumer before relying on it at scale.
+`claude -p` credit pool. **Confirmed** by the project owner (2026-06-07):
+the metered Agent-SDK credit change applies to `claude -p` only; in-session
+Task subagents stay on the subscription.
 Each subagent runs in a fresh context, independent of the implementation
 session.
 
@@ -108,8 +113,11 @@ subagents. So responsibilities split:
   `--write-checkpoint` round-trip.
 - **`dd_review_runner.py` (engine, was `dd_review.py`):** codex dispatch +
   severity scan + `DD_HARD_BLOCK` (T3); `--write-checkpoint <tier>` state
-  writes; diff-base resolution (fork base; working-tree for T0). It does
-  **not** dispatch the T0–T2 subagents and has **no `claude -p` path**
+  writes; diff-base resolution (fork base; working-tree for T0). **The
+  engine's codex review path accepts `pre-pr` only** (`VALID_TIERS =
+  ("pre-pr",)`) — it rejects `regular` / `cold-read` with a clear error
+  because those tiers are handled entirely by the command via subagents. It
+  does **not** dispatch the T0–T2 subagents and has **no `claude -p` path**
   (removed — see below). `review_invocation` / `strategy_selector` survive:
   codex still uses `invocation.strategy` (stuffed / fetched).
 
@@ -185,18 +193,20 @@ The T0 block at 60 is a **backstop**, not the normal path — a model that
 heeds the 30 nudge reviews long before 60. If 60 is hit, clearing it means
 running `/dd-review fast` to a clean pass (which resets `edits.count`).
 Because edits made to *fix* that review are themselves blocked at the
-ceiling, the model uses `DD_SKIP_T0_BLOCK` for the fix cycle, then lands a
-clean review to reset. `edits.count` keeps incrementing during that
+ceiling, the model uses `DD_SKIP_EDIT_BLOCK` for the fix cycle, then lands
+a clean review to reset. `edits.count` keeps incrementing during that
 bypassed fix cycle (the counter hook is independent of the block) — it is
 **not** unbounded; the clean review at the end resets it. Set
 `DD_SKIP_EDIT_COUNTER` too if a frozen count is wanted mid-remediation.
 The T2 block clears the same way (run `/dd-review cold-read`, or
-`DD_SKIP_T2_BLOCK`).
+`DD_SKIP_COMMIT_BLOCK`).
 
-Each hook honors its own `DD_SKIP_<HOOK>=1` bypass — these cover **nudges
-as well as hard blocks**: `DD_SKIP_EDIT_COUNTER`, `DD_SKIP_T0_BLOCK`,
-`DD_SKIP_T2_BLOCK` (new), plus the existing `DD_SKIP_REVIEW_NUDGE`
-(T1/T2 nudges) and `DD_SKIP_PR_REVIEW` (T3 gate).
+Each hook honors its own `DD_SKIP_<HOOK>=1` bypass — one var per hook,
+covering **nudges as well as hard blocks**: `DD_SKIP_EDIT_COUNTER`,
+`DD_SKIP_EDIT_BLOCK`, `DD_SKIP_COMMIT_BLOCK`, plus the existing
+`DD_SKIP_REVIEW_NUDGE` (T1/T2 nudges) and `DD_SKIP_PR_REVIEW` (T3 gate).
+Hook-named vars match the `DD_SKIP_<HOOK>` convention and keep the two
+`Edit|Write` hooks independently switchable — no group bypass.
 
 ## Config schema
 
@@ -230,8 +240,11 @@ fallback. Cut: the `reviewer == "claude"` engine branch,
 `review_prompt.build_claude_prompt` / `claude_runner_argv`, the
 `reviewer`/`model`/`default_effort` fields on `regular` /
 `cold_read_escalation`, `harness/replay_review.py`, and the claude-path
-tests. Headless *Claude* review goes with it (codex still covers the
-headless PR gate); re-add only on a real headless-Claude use case.
+tests. The generic subprocess `Runner` (used by codex) was renamed
+`lib/claude_runner.py` → `lib/reviewer_runner.py` — it is not a consumer
+contract, just an internal cleanup taken at the same time. Headless *Claude*
+review goes with it (codex still covers the headless PR gate); re-add only
+on a real headless-Claude use case.
 
 ## Evidence
 
@@ -331,4 +344,4 @@ this redesign.
   on-disk shape.
 - Amend/rebase special-casing — `commit_block` denies `git commit --amend`
   too while over threshold (coarse "you owe a cold-read" gate); clear it
-  by running `/dd-review cold-read` or setting `DD_SKIP_T2_BLOCK`.
+  by running `/dd-review cold-read` or setting `DD_SKIP_COMMIT_BLOCK`.
