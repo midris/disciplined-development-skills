@@ -1,23 +1,18 @@
 #!/usr/bin/env python3
 """compaction_reground.py — re-ground after context loss/summarization.
 
-Wired to two events (see settings.json). The output channel differs per event,
-based on the verified Claude Code hook contracts (NOT assumed from memory):
+Wired to **SessionStart** only. Stdin carries ``source`` ∈ {startup, resume,
+clear, compact}; exit-0 ``additionalContext`` reaches the model. Fire on
+``resume``/``compact`` (the context is a resumed/summarized frame — re-read the
+source of truth). Stay **silent** on ``startup`` and ``clear``: both leave
+project context (CLAUDE.md, the active plan) freshly present, so the "context
+is now a summary" reminder would be inaccurate and noisy.
 
-* **SessionStart** — stdin carries ``source`` ∈ {startup, resume, clear,
-  compact}; exit-0 ``additionalContext`` reaches the model. Fire on
-  ``resume``/``compact`` (the context is a resumed/summarized frame — re-read
-  the source of truth). Stay **silent** on ``startup`` and ``clear``: both
-  leave project context (CLAUDE.md, the active plan) freshly present, so the
-  "context is now a summary" reminder would be inaccurate and noisy.
-
-* **PreCompact** — a system event whose non-blocking output does **not** reach
-  the model (it supports only ``decision: "block"`` + ``reason``, or side
-  effects). It therefore CANNOT deliver a post-compaction reground to the
-  model. The actual post-compaction model reground is delivered by the
-  SessionStart(``source=compact``) path above, which fires *after* compaction.
-  PreCompact here emits the reminder on plain stdout only — a transcript/debug
-  record, explicitly not a model-visible channel.
+``source=compact`` fires *after* compaction, so this is the post-compaction
+model reground. PreCompact is deliberately NOT wired: its non-blocking output
+cannot reach the post-compaction model (it supports only ``decision: "block"``
++ ``reason``), so it could never deliver a reground — SessionStart(compact)
+does. A stale PreCompact wiring degrades to a safe no-op (unknown event).
 
 Env bypass: ``DD_SKIP_COMPACTION_REGROUND=1`` → silent no-op.
 """
@@ -78,12 +73,6 @@ def main() -> int:
 
     data = _read_payload()
     event = data.get("hook_event_name")
-
-    if event == "PreCompact":
-        # Non-model channel (see module docstring): plain stdout record only.
-        print(REGROUND_TEXT)
-        logger.emit("precompact_emit", trigger=data.get("trigger"))
-        return 0
 
     if event == "SessionStart":
         source = data.get("source")

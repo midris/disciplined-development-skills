@@ -36,7 +36,6 @@ The wired set (`settings.json`) — **three hard blocks, zero kicks:**
 | PostToolUse | `Edit\|Write` | `edit_counter.py` |
 | PostToolUse | `Bash` | `review_nudge.py` |
 | SessionStart | — | `compaction_reground.py` |
-| PreCompact | — | `compaction_reground.py` |
 
 ---
 
@@ -151,16 +150,16 @@ while keeping the verify reminder.
 
 ---
 
-## `SessionStart` + `PreCompact` — `compaction_reground.py`
+## `SessionStart` — `compaction_reground.py`
 
 **Class:** nudge. **Bypass:** `DD_SKIP_COMPACTION_REGROUND=1`.
 
 After context loss, re-ground (re-read CLAUDE.md + the plan; re-invoke the
 governing skills). SessionStart fires the model-visible `additionalContext`
-envelope on `source` ∈ {resume, compact} (silent on startup/clear). PreCompact
-emits the reminder on plain stdout (its non-blocking output isn't
-model-visible — the post-compaction reground is delivered by the
-SessionStart(compact) path).
+envelope on `source` ∈ {resume, compact} (silent on startup/clear). The
+`compact` source fires *after* compaction, so this is the post-compaction
+reground. PreCompact is deliberately not wired — its non-blocking output can't
+reach the post-compaction model, so it could never deliver the reground.
 
 ---
 
@@ -240,7 +239,7 @@ the suite so logs never touch the real `.claude/.dd-state/`.
 - `edit_block.py` — PreToolUse `Edit|Write` (T0 hard block at 60)
 - `commit_block.py` — PreToolUse `Bash` (T2 hard block at 5 commits)
 - `review_nudge.py` — PostToolUse `Bash` (Gate-3 verify + T1/T2 cadence nudge)
-- `compaction_reground.py` — SessionStart + PreCompact (re-ground)
+- `compaction_reground.py` — SessionStart (re-ground; `source` ∈ resume/compact)
 - `pre_pr_review.py` — PreToolUse `Bash` (T3 pre-PR hard gate)
 - `dd_review_runner.py` — model-callable engine (pre-pr codex / --write-checkpoint / --resolve-scope)
 - `lib/config.py` — defaults + override loader (`get(dot_path)`)

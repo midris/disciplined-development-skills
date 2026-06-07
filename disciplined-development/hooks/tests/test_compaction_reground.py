@@ -1,19 +1,15 @@
-"""Tests for hooks/compaction_reground.py — SessionStart + PreCompact reground.
+"""Tests for hooks/compaction_reground.py — SessionStart reground.
 
 Run as a subprocess so the stdin payload, env bypass, exit code, and the
-per-event output channel are exercised end-to-end.
+output channel are exercised end-to-end.
 
-Resolved hook-event contracts (verified against the Claude Code hooks docs,
-not assumed — plan D2 required this):
-
-* SessionStart stdin carries ``source`` ∈ {startup, resume, clear, compact};
-  exit-0 ``additionalContext`` reaches the model. We fire on resume/compact
-  (context was lost or summarized) and stay silent on startup/clear (project
-  context is freshly present — the "now a summary" reminder would be wrong).
-* PreCompact is a system event whose non-blocking output does NOT reach the
-  model; the post-compaction model reground is delivered by the
-  SessionStart(source=compact) path. PreCompact therefore emits its reminder
-  on plain stdout only (transcript/debug record), never a model envelope.
+The hook fires only on SessionStart. Its stdin carries ``source`` ∈
+{startup, resume, clear, compact}; exit-0 ``additionalContext`` reaches the
+model. We fire on resume/compact (context was lost or summarized) and stay
+silent on startup/clear (project context is freshly present — the "now a
+summary" reminder would be wrong). PreCompact is no longer wired: its output
+cannot reach the post-compaction model, so SessionStart(source=compact)
+delivers the reground; a stale PreCompact wiring must degrade to a safe no-op.
 """
 
 from __future__ import annotations
@@ -73,13 +69,13 @@ def test_session_start_clear_silent():
     assert r.stdout.strip() == ""
 
 
-def test_precompact_emits_plain_stdout_not_envelope():
+def test_precompact_event_is_silent_noop():
+    # PreCompact is no longer wired (its output can't reach the post-compaction
+    # model). A stale PreCompact wiring in an un-migrated consumer must degrade
+    # to a safe no-op — exit 0, no output — not error and not emit.
     r = _run({"hook_event_name": "PreCompact", "trigger": "auto"})
     assert r.returncode == 0
-    # Plain text (PreCompact has no model-visible additionalContext channel),
-    # not a JSON envelope.
-    assert compaction_reground.REGROUND_TEXT in r.stdout
-    assert not r.stdout.lstrip().startswith("{")
+    assert r.stdout.strip() == ""
 
 
 def test_bypass_env_silent():
