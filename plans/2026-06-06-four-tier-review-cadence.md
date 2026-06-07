@@ -163,6 +163,12 @@ slash-command body holds T0 routing per V5); `regular` and
 the default (mirroring today's `_threshold()` guard at
 [review_nudge.py:84-88]).
 
+**Sequencing (config keys ship when honored, never ahead).** `fast.*`
+land in commit 1 (read by `edit_counter`/`edit_block`).
+`regular.commit_edit_floor` and `cold_read_escalation.*` land in commit
+3 with the `review_nudge`/`commit_block` code that reads them — no
+commit publishes a documented key nothing consumes.
+
 **Config — removal (`counters.review_threshold`).** The old top-level
 `counters.review_threshold` (default 5) is orphaned by the per-tier
 thresholds. Hard-cut, per CLAUDE.md "prefer one clean breaking change
@@ -240,11 +246,13 @@ Modified:
 - `examples/settings.hooks.json` — wire the three new hooks (each in
   the commit that adds it — see commit breakdown).
 - `disciplined-development/hooks/lib/dd-defaults.json` — add
-  `review_tiers.fast` + per-tier thresholds (commit 1); remove
+  `review_tiers.fast.*` (commit 1); add `regular.commit_edit_floor` +
+  `cold_read_escalation.*` thresholds and remove
   `counters.review_threshold` (commit 3). (Defaults live in `lib/`, read
   by `config.py`.)
 - `examples/dd-config.json` + `disciplined-development/hooks/dd-config.md`
-  — same key add (commit 1) / removal (commit 3), mirrored.
+  — same key adds (commit 1: `fast.*`; commit 3: `regular`/`cold_read`
+  thresholds) / removal (commit 3), mirrored.
 - `disciplined-development/hooks/hook-recipes-claude-code.md` — the
   consumer-facing per-hook recipe doc (event + matcher + behavior + the
   `DD_SKIP_*` table). Add `edit_counter` / `edit_block` recipes + their
@@ -354,10 +362,14 @@ boundaries chosen so each lands green and captures a coherent unit.
   below 60; respects `DD_SKIP_T0_BLOCK`; reads but never increments the
   counter.
 - [ ] **1c. Add config + contract docs in the same commit.** Add
-  `review_tiers.fast` + the per-tier nudge/block threshold keys to
-  `lib/dd-defaults.json`; document them and the new bypass env vars
-  (`DD_SKIP_EDIT_COUNTER`, `DD_SKIP_T0_BLOCK`) in `dd-config.md`; mirror
-  into `examples/dd-config.json`; wire `edit_counter` + `edit_block`
+  **only** `review_tiers.fast.nudge_threshold` +
+  `review_tiers.fast.hard_block_threshold` to `lib/dd-defaults.json`
+  (the keys commit 1's code reads — `regular.commit_edit_floor` and
+  `cold_read_escalation.*` land in commit 3 with their consumers, so no
+  commit documents config nothing reads). Document them and the new
+  bypass env vars (`DD_SKIP_EDIT_COUNTER`, `DD_SKIP_T0_BLOCK`) in
+  `dd-config.md`; mirror into `examples/dd-config.json`; wire
+  `edit_counter` + `edit_block`
   into `examples/settings.hooks.json`; add their rows to the
   `hooks/README.md` hook table AND their recipes + bypass rows to
   `hook-recipes-claude-code.md`. (Config read goes through `config.get`;
@@ -407,10 +419,17 @@ change is *what a clean pass writes*.
   `DD_SKIP_T2_BLOCK`; ignores non-commit git invocations (`git diff`,
   `git status`) and `gh pr create` (the latter confirms no overlap with
   `pre_pr_review`).
-- [ ] **3c. Remove `counters.review_threshold` — code + docs + tests
-  together.** Remove the `review_nudge._threshold()` read; remove the
-  key from `lib/dd-defaults.json`, `dd-config.md`, and
-  `examples/dd-config.json`; delete or repoint the assertions at
+- [ ] **3c. Add the commit-cadence config keys + remove
+  `counters.review_threshold` — code + docs + tests together.** Add
+  `review_tiers.regular.commit_edit_floor` +
+  `review_tiers.cold_read_escalation.{nudge_threshold,hard_block_threshold}`
+  to `lib/dd-defaults.json`, `dd-config.md`, and
+  `examples/dd-config.json` (consumed by `review_nudge.py` in 3a and
+  `commit_block.py` in 3b — they ship here, in the commit that reads
+  them). Remove the `review_nudge._threshold()` read; remove
+  `counters.review_threshold` from `lib/dd-defaults.json`,
+  `dd-config.md`, and `examples/dd-config.json`; delete or repoint the
+  assertions at
   `test_config.py:51,118-119` (they assert the removed key's default +
   override and would otherwise land RED). Wire `commit_block` into
   `examples/settings.hooks.json`; add its `hooks/README.md` hook-table
