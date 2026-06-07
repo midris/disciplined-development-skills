@@ -893,3 +893,77 @@ def test_write_checkpoint_no_codex_dispatch(review_env):
         )
         assert proc.returncode == 0, f"{tier}: {proc.stderr}"
         assert not log.exists(), f"{tier}: codex shim was invoked unexpectedly"
+
+
+# ---------------------------------------------------------------------------
+# E4 — --resolve-scope <tier>: per-tier diff scope resolver
+# ---------------------------------------------------------------------------
+# Fixture note: review_env seeds a feature/x branch with one commit (c2)
+# on top of master.  The fork base is the master-tip SHA (c1).
+# --resolve-scope is a thin, side-effect-free mode: no state writes, no
+# codex dispatch.  The scope string is printed on stdout; errors go to
+# stderr and exit non-zero.
+
+
+def _resolve_scope(env, repo, tier, extra=None):
+    """Run --resolve-scope <tier> and return the completed process."""
+    full = {**env}
+    if extra:
+        full.update(extra)
+    return subprocess.run(
+        [sys.executable, str(HOOK), "--resolve-scope", tier],
+        capture_output=True,
+        text=True,
+        env=full,
+        cwd=str(repo),
+    )
+
+
+def test_resolve_scope_fast_prints_HEAD(review_env):
+    """fast tier: working-tree vs HEAD — scope string is exactly 'HEAD'."""
+    env, repo, _ = review_env
+    proc = _resolve_scope(env, repo, "fast")
+    assert proc.returncode == 0, proc.stderr
+    assert proc.stdout.strip() == "HEAD"
+
+
+@pytest.mark.parametrize("tier", ["regular", "cold-read"])
+def test_resolve_scope_review_tiers_print_fork_base_range(review_env, tier):
+    """regular / cold-read: scope is '<fork-base-sha>..HEAD' resolved via
+    state.resolve_fork_base against the trunk branches in config."""
+    env, repo, _ = review_env
+    fork = _fork_base(repo)
+    assert fork is not None, "fixture must have a resolvable fork base"
+    proc = _resolve_scope(env, repo, tier)
+    assert proc.returncode == 0, proc.stderr
+    assert proc.stdout.strip() == f"{fork}..HEAD"
+
+
+def test_resolve_scope_unknown_tier_exits_nonzero_no_stdout_scope(review_env):
+    """Unknown tier → non-zero exit; no scope line on stdout."""
+    env, repo, _ = review_env
+    proc = _resolve_scope(env, repo, "bogus-tier")
+    assert proc.returncode != 0
+    # stdout must not contain a scope-looking string (no '..HEAD' or bare 'HEAD')
+    assert "..HEAD" not in proc.stdout
+    assert proc.stdout.strip() != "HEAD"
+
+
+def test_resolve_scope_no_codex_dispatch_no_state_mutation(review_env):
+    """--resolve-scope neither dispatches the codex shim nor mutates state."""
+    env, repo, _ = review_env
+    log = repo / "scope_argv.log"
+    _seed_edits_count(repo, 13)
+    _seed_checkpoint(repo, "deadbeef" * 5)
+
+    proc = _resolve_scope(env, repo, "regular",
+                          extra={"DD_REVIEW_ARGV_LOG": str(log)})
+    assert proc.returncode == 0, proc.stderr
+
+    # codex shim never ran
+    assert not log.exists(), "--resolve-scope dispatched codex unexpectedly"
+    # edits.count unchanged
+    assert state.read(str(repo), "feature/x", "edits") == 13
+    # checkpoint unchanged
+    cp = _branch_state_dir(repo) / "review.checkpoint"
+    assert cp.read_text().strip() == "deadbeef" * 5
