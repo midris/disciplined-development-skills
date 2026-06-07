@@ -304,16 +304,16 @@ large": read each artifact cold in one pass, then scrap-rewrite or batch-fix.
 Run an adversarial cold-read (`dd_review_runner.py cold-read`, once it exists)
 on the staged docs branch before commit.
 
-- [ ] **D1 — `hooks/README.md`** — hook table, state model (`edits.count` +
+- [x] **D1 — `hooks/README.md`** — hook table, state model (`edits.count` +
   `review.checkpoint`, reset rule), the four tiers, observability.
-- [ ] **D2 — `hook-recipes-claude-code.md`** — recipes for `edit_counter`,
+- [x] **D2 — `hook-recipes-claude-code.md`** — recipes for `edit_counter`,
   `edit_block`, `commit_block`; drop stale recipes.
-- [ ] **D3 — `dd-config.md`** — `review_tiers.*` schema, removed
+- [x] **D3 — `dd-config.md`** — `review_tiers.*` schema, removed
   `counters.review_threshold`, the bypass-var list (Decision A names),
   threshold invariant (block > nudge), stored-count semantics (Decision C).
-- [ ] **D4 — top-level `README.md`** — review-system overview, skill/hook list,
+- [x] **D4 — top-level `README.md`** — review-system overview, skill/hook list,
   install/recovery if changed.
-- [ ] **D5 — `examples/dd-config.json` + `examples/CLAUDE.md-snippet.md`** —
+- [x] **D5 — `examples/dd-config.json` + `examples/CLAUDE.md-snippet.md`** —
   regenerate to match the new config + hook surface.
 
 ---
