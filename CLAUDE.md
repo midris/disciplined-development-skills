@@ -22,7 +22,7 @@ A portable bundle of Claude Code **skills** + a **hook stack** that keep an agen
 
 ```text
 <skill>/                              # eight top-level skill dirs, each with a SKILL.md
-disciplined-development/hooks/        # hook stack + dd_review.py engine + hook tests
+disciplined-development/hooks/        # hook stack + dd_review_runner.py engine + hook tests
 examples/                             # reference configs consumers copy (hooks block, dd-config, CLAUDE.md snippet)
 tests/                                # installer-level tests (the settings-wiring test skips outside a consumer)
 plans/                                # active plans (created on demand)
@@ -75,8 +75,8 @@ No `ROADMAP.md`. Active work is tracked in `plans/` (when a plan is open) or dir
 - **Mandatory in high-risk areas:**
   - **Hook stack (`disciplined-development/hooks/`).** A misbehaving hook — especially `discipline_nudge.py`, which matches `*` on PreToolUse — can block every tool call in every consumer project. Biggest blast radius in the repo. Every hook change needs a test.
   - **`install-skills.sh`.** Touches consumer filesystems and must not clobber project-local skills. Regressions are silent (the user finds out later). Cover via `tests/test_install_skills.py`.
-  - **`dd_review.py` review engine.** Model-callable CLI that gates PR creation. Wrong verdict = a blocked PR or a false pass. Cover the verdict + dispatch logic.
-  - **Skill `SKILL.md` content changes.** No test catches a worse instruction. Substitute: run an adversarial cold-read of the staged branch — `python3 disciplined-development/hooks/dd_review.py cold-read` — and address findings before commit.
+  - **`dd_review_runner.py` review engine.** Model-callable CLI that gates PR creation. Wrong verdict = a blocked PR or a false pass. Cover the verdict + dispatch logic.
+  - **Skill `SKILL.md` content changes.** No test catches a worse instruction. Substitute: run an adversarial cold-read of the staged branch — `python3 disciplined-development/hooks/dd_review_runner.py cold-read` — and address findings before commit.
 - **Keep tests targeted and contract-oriented.** Focused unit tests over end-to-end. Run the hook test suite (`cd disciplined-development/hooks && python3 -m pytest -q`) before sign-off; report gaps if a full run isn't possible.
 - **Inline fixture-state dependencies.** When a test depends on shared fixture state seeded elsewhere, add a one-line note at the call site pointing at the fixture — cross-file fixture dependencies that aren't called out get misread as bugs.
 - **Rewrite tests when fallout is large; don't chase surgical edits.** When a behavior or schema change breaks a test heavily — ≥3 assertions reference removed fields, or the test's name describes behavior that is intentionally gone — rewrite from scratch against the new contract or delete it. Don't preserve coverage of removed semantics out of inertia and don't produce Frankenstein-edit tests that read like a diff log. Surgical edits are fine when only the assertion shape changed.
@@ -120,4 +120,4 @@ When a feature, fix, or batch of work is complete:
 2. Update `examples/` (`settings.hooks.json`, `dd-config.json`, `CLAUDE.md-snippet.md`) when the consumer-facing contract changes.
 3. Update `README.md` when install/recovery flow, requirements, or the skill list changes.
 4. Update `disciplined-development/hooks/README.md` when hook behavior, the hook table, the state model, or the review tiers change. Update `disciplined-development/hooks/dd-config.md` when the config schema changes.
-5. Update the relevant `<skill>/SKILL.md` when its doctrine, dispatch table, or examples drift from current practice. For non-trivial skill content changes, run an adversarial cold-read (`python3 disciplined-development/hooks/dd_review.py cold-read`) on the staged branch before commit — no test catches a worse instruction.
+5. Update the relevant `<skill>/SKILL.md` when its doctrine, dispatch table, or examples drift from current practice. For non-trivial skill content changes, run an adversarial cold-read (`python3 disciplined-development/hooks/dd_review_runner.py cold-read`) on the staged branch before commit — no test catches a worse instruction.

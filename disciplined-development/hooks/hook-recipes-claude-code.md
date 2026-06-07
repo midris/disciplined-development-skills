@@ -71,9 +71,9 @@ output-scanner.
 
 Detect `gh pr create` (via `command_match.find_gh_pr_create`), extract the
 review base (`--base`/`-B` → `branch.<cur>.gh-merge-base` git config) and a
-chained-`cd` target cwd, then delegate to `dd_review.py pre-pr` with
+chained-`cd` target cwd, then delegate to `dd_review_runner.py pre-pr` with
 `DD_HARD_BLOCK=1`, forwarding `--base`/`--cwd` only when parsed. Detect +
-extract + delegate — no review/severity logic here; `dd_review` blocks the PR
+extract + delegate — no review/severity logic here; `dd_review_runner` blocks the PR
 (exit non-zero) on `[P0]`/`[P1]`/`[P2]` findings. An unexpandable chained `cd`
 (`cd $X && gh pr create`) fails **loud** (block) rather than letting an
 unreviewed PR through.
@@ -108,10 +108,10 @@ SessionStart(compact) path).
 
 ---
 
-## `dd_review.py` (model-callable engine)
+## `dd_review_runner.py` (model-callable engine)
 
 Not a hook — the review engine the cadence nudge + pre-PR gate point at.
-`dd_review.py {regular|cold-read|pre-pr} [--base <ref>] [--cwd <path>]`. Each
+`dd_review_runner.py {regular|cold-read|pre-pr} [--base <ref>] [--cwd <path>]`. Each
 tier resolves the diff to the fork-base (pre-pr honours `--base`), dispatches
 the configured reviewer (`review_tiers.<tier>`), scans severities, writes a
 review checkpoint on a clean pass, and appends a rich record to
@@ -148,7 +148,7 @@ python3 -m pytest -q
 ```
 
 Tests are per hook + per support module; each sets up its own sandbox tempdir
-or git repo. `dd_review`/`pre_pr_review` are exercised against stubbed
+or git repo. `dd_review_runner`/`pre_pr_review` are exercised against stubbed
 `claude`/`codex` shims so the suite runs offline. `DD_LOG_DIR` is pointed at
 `/tmp` for the suite so logs never touch the real `.claude/.dd-state/`.
 
@@ -161,7 +161,7 @@ or git repo. `dd_review`/`pre_pr_review` are exercised against stubbed
 - `review_nudge.py` — PostToolUse `Bash` (verify + review cadence)
 - `compaction_reground.py` — SessionStart + PreCompact (re-ground)
 - `pre_pr_review.py` — PreToolUse `Bash` (the pre-PR hard gate)
-- `dd_review.py` — model-callable review engine (regular / cold-read / pre-pr)
+- `dd_review_runner.py` — model-callable review engine (regular / cold-read / pre-pr)
 - `lib/config.py` — defaults + override loader (`get(dot_path)`)
 - `lib/state.py` — per-branch discipline counter + review checkpoint + fork-base
 - `lib/cleanup.py` — age + orphaned-branch housekeeping sweep

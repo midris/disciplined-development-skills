@@ -140,7 +140,7 @@ one-line edit; it follows RED → GREEN → REFACTOR:
   checkboxes," "this plan is too small to need them"). Add a
   rationalization-table row per loophole found.
 - Then the repo's own substitute applies (CLAUDE.md): adversarial
-  cold-read of the staged branch (`dd_review.py cold-read`) before commit
+  cold-read of the staged branch (`dd_review_runner.py cold-read`) before commit
   — no automated test catches a worse instruction.
 
 Change #2 (hook + config + docs) becomes a standard test-first

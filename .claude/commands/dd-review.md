@@ -10,6 +10,6 @@ argument-hint: regular | cold-read | pre-pr
 
 Run the disciplined-development review engine at tier `$ARGUMENTS`:
 
-    python3 $CLAUDE_PROJECT_DIR/disciplined-development/hooks/dd_review.py $ARGUMENTS
+    python3 $CLAUDE_PROJECT_DIR/disciplined-development/hooks/dd_review_runner.py $ARGUMENTS
 
 Then iterate per the `adversarial-review-loop` skill on any P0/P1/P2 findings until clean.

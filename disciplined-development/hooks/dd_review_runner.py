@@ -1,8 +1,8 @@
 #!/usr/bin/env python3
-"""dd_review.py — model-callable adversarial review against the branch diff.
+"""dd_review_runner.py — model-callable adversarial review against the branch diff.
 
 Usage:
-    python3 dd_review.py {regular | cold-read | pre-pr} [--base <ref>] [--cwd <path>]
+    python3 dd_review_runner.py {regular | cold-read | pre-pr} [--base <ref>] [--cwd <path>]
 
 Rebuilt on the ``hooks/lib`` modules (config, severity, state, plan,
 claude_runner, review_invocation, review_prompt). Four behavior deltas
@@ -113,7 +113,7 @@ def _parse_argv(argv: list[str]) -> tuple[str, str | None, str | None] | str:
 def _print_usage_error(msg: str) -> None:
     print(f"[dd_review] ERROR — {msg}", file=sys.stderr)
     print(
-        f"Usage: python3 dd_review.py {{{'|'.join(VALID_TIERS)}}} "
+        f"Usage: python3 dd_review_runner.py {{{'|'.join(VALID_TIERS)}}} "
         f"[--base <ref>] [--cwd <path>]",
         file=sys.stderr,
     )
@@ -289,7 +289,7 @@ def main(argv: list[str] | None = None) -> int:
 
     if "--help" in argv or "-h" in argv:
         print(
-            f"Usage: python3 dd_review.py {{{'|'.join(VALID_TIERS)}}} "
+            f"Usage: python3 dd_review_runner.py {{{'|'.join(VALID_TIERS)}}} "
             f"[--base <ref>] [--cwd <path>]\n"
             "Run an adversarial review of the branch diff against its fork "
             "base.\n"
