@@ -240,7 +240,7 @@ PreToolUse blocks read the previous value — spec boundary note).
 
 ## Phase 5 — Command (model layer)
 
-- [ ] **CM1 — Rewrite `/dd-review`** (`.claude/commands/dd-review.md` +
+- [x] **CM1 — Rewrite `/dd-review`** (`.claude/commands/dd-review.md` +
   `examples/commands/dd-review.md`). The command, given a tier:
   1. Maps tier → subagent set: `fast` = holistic; `regular` = holistic +
      correctness + rationale; `cold-read` = holistic + correctness + rationale
