@@ -364,6 +364,33 @@ def test_review_threshold_not_referenced(tmp_path):
     )
 
 
+def test_valid_checkpoint_below_threshold_suppresses_fork_base(tmp_path):
+    """Checkpoint-path beats fork-base: checkpoint count < T2 threshold → T2 ABSENT,
+    even when commits-since-fork-base would be >= threshold.
+
+    Setup: 6 commits on the feature branch (fork-base count == 6 >= threshold 3).
+    Checkpoint placed 2 commits back (commits-since-checkpoint == 2 < threshold 3).
+    The hook should read the checkpoint count (2), not the fork-base count (6),
+    and omit the T2 nudge.
+
+    _seed_checkpoint uses state.set_checkpoint (same writer as dd_review_runner.py
+    --write-checkpoint) so the hook sees a realistic on-disk checkpoint file.
+    Verify segment is still present (it fires on every landed commit).
+    """
+    repo = _init(tmp_path)
+    _commit(repo, 6)  # 6 commits on branch → fork-base count = 6 >= 3
+    _seed_checkpoint(repo, 2)  # checkpoint 2 back → commits-since-checkpoint = 2 < 3
+
+    r = _run(repo, commit_edit_floor=100, cold_read_nudge_threshold=3)
+
+    ctx = _ctx(r)
+    # Verify segment always fires on a landed commit
+    assert ctx is not None
+    assert review_nudge.VERIFY_TEXT in ctx
+    # Checkpoint (2 < 3) wins; fork-base count (6 >= 3) is ignored → T2 ABSENT
+    assert "/dd-review cold-read" not in ctx
+
+
 def test_no_trunk_fork_base_none_emits_verify_only(tmp_path):
     """No trunk ref → fork-base is None; T2 omitted; verify still fires.
 

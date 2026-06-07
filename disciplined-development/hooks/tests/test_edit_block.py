@@ -195,20 +195,53 @@ def test_bypass_allows_when_above_threshold(tmp_path):
     assert r.stderr.strip() == ""
 
 
-def test_malformed_stdin_exits_zero_allow(tmp_path):
-    """Malformed stdin → exit 0, allow, no crash."""
+def test_malformed_stdin_with_low_counter_allows(tmp_path):
+    """Malformed stdin with counter at 0 (below threshold) → exit 0, allow, no crash.
+
+    _payload_cwd() falls back to os.getcwd() (which is the repo dir via
+    cwd= on subprocess.run), so git resolves and the counter is read.
+    Counter is 0 < 60, so the hook allows.
+    """
     repo = _init(tmp_path)
+    # No _seed_counter call → counter is 0 (below threshold)
     r = _run(repo, payload_override="this is not json{{{")
     assert r.returncode == 0
     assert r.stderr.strip() == ""
 
 
-def test_empty_stdin_exits_zero_allow(tmp_path):
-    """Empty stdin → exit 0, allow, no crash."""
+def test_empty_stdin_with_low_counter_allows(tmp_path):
+    """Empty stdin with counter at 0 (below threshold) → exit 0, allow, no crash.
+
+    _payload_cwd() falls back to os.getcwd() (which is the repo dir via
+    cwd= on subprocess.run), so git resolves and the counter is read.
+    Counter is 0 < 60, so the hook allows.
+    """
     repo = _init(tmp_path)
+    # No _seed_counter call → counter is 0 (below threshold)
     r = _run(repo, payload_override="")
     assert r.returncode == 0
     assert r.stderr.strip() == ""
+
+
+def test_malformed_stdin_with_over_threshold_counter_still_denies(tmp_path):
+    """Malformed stdin with counter at threshold (60) → exit 2, DENY.
+
+    Documents the real degrade-silent behavior: malformed stdin does NOT
+    unconditionally allow. _payload_cwd() falls back to os.getcwd() (set by
+    cwd= on subprocess.run), so git resolves and the counter is read normally.
+    Counter == 60 >= threshold → hook still denies.
+
+    _seed_counter seeds via state.bump (same writer as edit_counter.py);
+    _run sets cwd=str(repo) so os.getcwd() resolves to the same repo.
+    """
+    repo = _init(tmp_path)
+    _seed_counter(repo, 60)  # counter at hard-block threshold
+
+    r = _run(repo, hard_block_threshold=60, payload_override="this is not json{{{")
+
+    assert r.returncode == 2
+    assert "[edit-block]" in r.stderr
+    assert "/dd-review fast" in r.stderr
 
 
 def test_no_git_repo_exits_zero_allow(tmp_path):

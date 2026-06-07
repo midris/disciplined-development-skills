@@ -218,10 +218,10 @@ PreToolUse blocks read the previous value — spec boundary note).
     still emitted on a landed commit with no cadence trigger; bypass silences
     all; `review_threshold` no longer referenced.
 
-- [ ] **H5 — `pre_pr_review.py` (modify).** Unchanged behavior; wraps the
-  **renamed** engine's T3 codex review with `DD_HARD_BLOCK=1`.
-  - **Tests required:** existing tests pass against `dd_review_runner.py`;
-    hard-block still fires on P0/P1/P2.
+- [x] **H5 — `pre_pr_review.py` — NO CHANGE NEEDED (satisfied by E1+E5).**
+  Already invokes `dd_review_runner.py pre-pr` with `DD_HARD_BLOCK=1`
+  (`pre_pr_review.py:123,134`); rename swept in E1, engine pre-pr restriction
+  (E5) is compatible, all 11 `test_pre_pr_review.py` tests green. No new commit.
 
 ---
 

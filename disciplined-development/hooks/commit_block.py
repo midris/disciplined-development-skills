@@ -82,21 +82,6 @@ def _read_command() -> str:
     return ""
 
 
-def _payload_cwd() -> str:
-    """Return the cwd from the PreToolUse stdin payload, or the process cwd.
-
-    Called after _read_command consumed stdin — only used when we've already
-    confirmed the command is a git commit and need the repo root. Because stdin
-    was already consumed in _read_command, this re-reads from the cached raw
-    string. For simplicity this hook reads stdin once via _read_command (which
-    returns the command) and extracts cwd from a second parse; the payload is
-    small so re-parsing is harmless.
-
-    Separated as a function to make the degrade path explicit and testable.
-    """
-    return os.getcwd()
-
-
 def _git(cwd: str, *args: str) -> tuple[int, str]:
     try:
         r = subprocess.run(

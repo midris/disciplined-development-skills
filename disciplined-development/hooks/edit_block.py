@@ -23,7 +23,11 @@ Repo/branch resolution (same convention as ``edit_counter.py``):
 - Resolves the branch via ``symbolic-ref``; falls back to ``"detached"``.
 
 Degrade-silent policy:
-- Malformed or empty stdin → exit 0, allow, no crash.
+- Malformed or empty stdin → ``_payload_cwd()`` falls back to ``os.getcwd()``;
+  the hook then resolves the repo and reads the ``edits`` counter normally.
+  If the counter is >= threshold the hook still denies (exit 2). The hook
+  fails open (allows, exit 0) only when the counter cannot be read (no repo,
+  git error, or unreadable state) or is below threshold.
 - Any git / state error → exit 0, allow, no crash.
 - The hook must never wrongly block a tool call when state can't be read.
 

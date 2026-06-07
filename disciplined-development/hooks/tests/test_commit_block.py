@@ -276,6 +276,29 @@ def test_empty_stdin_exits_zero_allow(tmp_path):
     assert r.stderr.strip() == ""
 
 
+def test_valid_checkpoint_below_threshold_suppresses_fork_base(tmp_path):
+    """Checkpoint-path beats fork-base: checkpoint count < threshold → ALLOW,
+    even when commits-since-fork-base would be >= threshold.
+
+    Setup: 6 commits on the feature branch (fork-base count == 6 >= threshold 5).
+    Checkpoint placed 2 commits back (commits-since-checkpoint == 2 < threshold 5).
+    The hook should read the checkpoint count (2), not the fork-base count (6),
+    and allow the commit.
+
+    _seed_checkpoint uses state.set_checkpoint (same writer as dd_review_runner.py
+    --write-checkpoint) so the hook sees a realistic on-disk checkpoint file.
+    """
+    repo, _ = _init(tmp_path)
+    _commit(repo, 6)  # 6 commits on branch → fork-base count = 6 >= 5
+    _seed_checkpoint(repo, 2)  # checkpoint 2 back → commits-since-checkpoint = 2 < 5
+
+    r = _run(repo, hard_block_threshold=5)
+
+    # Checkpoint (2 < 5) wins; fork-base count (6 >= 5) is ignored → ALLOW
+    assert r.returncode == 0
+    assert r.stderr.strip() == ""
+
+
 def test_no_git_repo_exits_zero_allow(tmp_path):
     """Non-git cwd in payload → exit 0, ALLOW, no crash (degrade-silent)."""
     not_a_repo = tmp_path / "not_a_repo"
