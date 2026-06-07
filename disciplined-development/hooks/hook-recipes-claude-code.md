@@ -74,10 +74,7 @@ Reads the stored `edits.count` before each Edit or Write. If the count is ≥
 (exit 2) with a message pointing at `/dd-review fast`. Never increments —
 that is `edit_counter.py`'s job (PostToolUse).
 
-**Stored-count semantics.** A stored count of 60 means 60 edits have landed
-since the last clean review; the block fires on the 61st attempt. Clear it by
-running `/dd-review fast` to a clean pass, which resets `edits.count`. For the
-remediation cycle itself, set `DD_SKIP_EDIT_BLOCK=1` in the launching shell.
+**Stored-count semantics.** See the Boundary note in [`README.md`](README.md) for the PreToolUse/PostToolUse off-by-one. Clear a blocked counter by running `/dd-review fast` to a clean pass; for the remediation cycle itself, set `DD_SKIP_EDIT_BLOCK=1` in the launching shell.
 
 ---
 

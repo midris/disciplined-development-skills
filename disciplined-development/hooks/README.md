@@ -1,8 +1,7 @@
 # disciplined-development hook stack — design
 
 The durable "why" for the hook layer that scaffolds the
-`disciplined-development` skill. This README is the current-state
-overview; the hook source lives alongside it in this directory.
+`disciplined-development` skill.
 
 ## What this is
 
@@ -33,7 +32,7 @@ nudge.
 | `edit_block.py` | PreToolUse | `Edit\|Write` | **Hard block.** Deny when stored `edits.count` ≥ 60 (i.e. the 61st edit). Reads only; never increments. | `DD_SKIP_EDIT_BLOCK` |
 | `commit_block.py` | PreToolUse | `Bash` (`is_git_commit`) | **Hard block.** Deny a `git commit` (incl. `--amend`) when commits-since-last-cold-read ≥ 5 — allows 5, denies the 6th. | `DD_SKIP_COMMIT_BLOCK` |
 | `pre_pr_review.py` | PreToolUse | `Bash` (`gh pr create`) | **Hard block.** Detect → extract base/cwd → delegate to `dd_review_runner.py pre-pr` with `DD_HARD_BLOCK=1`. Blocks the PR on findings. | `DD_SKIP_PR_REVIEW` |
-| `edit_counter.py` | PostToolUse | `Edit\|Write` | Increment `edits.count`; emit a T0 nudge when the stored count reaches 30. Advisory only — PostToolUse runs after the edit. | `DD_SKIP_EDIT_COUNTER` |
+| `edit_counter.py` | PostToolUse | `Edit\|Write` | Increment `edits.count`; emit a T0 nudge on each edit once the stored count reaches 30, continuing until a clean review resets the counter. Advisory only — PostToolUse runs after the edit. | `DD_SKIP_EDIT_COUNTER` |
 | `review_nudge.py` | PostToolUse | `Bash` | On a landed commit: always emit a Gate-3 **verify** reminder; also T1 nudge when `edits.count` ≥ 30; also T2 nudge when commits-since-cold-read ≥ 3. | `DD_SKIP_REVIEW_NUDGE` |
 | `compaction_reground.py` | SessionStart + PreCompact | — | After resume/compaction, re-ground: re-read the source of truth before acting. | `DD_SKIP_COMPACTION_REGROUND` |
 
@@ -105,12 +104,7 @@ The layer is advisory — a read or write failure degrades to a safe default.
 - A clean **T3** review sets `review.checkpoint` = HEAD **and** resets
   `edits.count` (done inside `dd_review_runner.py` on a clean codex pass).
 
-**PostToolUse-increment / PreToolUse-read boundary.** Thresholds are stated
-against the stored count. The nudge at 30 fires when `edits.count` reaches 30
-(PostToolUse); the block at 60 denies the next edit attempt when the stored
-count is already 60 (PreToolUse reads the value left by the previous
-PostToolUse increment). "Block at 60" and "denies the 61st edit" are the same
-thing stated from different vantage points.
+See the Boundary note under the hook table for the PreToolUse/PostToolUse off-by-one.
 
 ## Observability
 
