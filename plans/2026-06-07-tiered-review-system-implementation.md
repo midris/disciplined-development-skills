@@ -107,7 +107,7 @@ diff-base contracts.
     existing codex behavior deltas (e.g. HEAD == fork-base → clean exit)
     still hold.
 
-- [ ] **E3 — `--write-checkpoint <tier>` implements the reset rule.** Engine
+- [x] **E3 — `--write-checkpoint <tier>` implements the reset rule.** Engine
   subcommand: `fast` / `regular` → reset `edits.count` only; `cold-read` →
   `set_checkpoint(HEAD)` **and** reset `edits.count`. (`pre-pr` writes the
   checkpoint on the codex clean pass — no `--write-checkpoint` round-trip,

@@ -787,3 +787,109 @@ def test_resolve_timeout_rejects_zero_env(monkeypatch):
     # fall back like the config path (which already rejects <= 0).
     monkeypatch.setenv("DD_REVIEW_TIMEOUT", "0")
     assert _ddr._resolve_timeout() > 0
+
+
+# ---------------------------------------------------------------------------
+# E3 — --write-checkpoint <tier>: reset rule for fast/regular/cold-read
+# ---------------------------------------------------------------------------
+# Fixture note: review_env seeds a feature/x branch with one commit (c2)
+# on top of master. The branch slug is "feature_x".
+
+
+def _branch_state_dir(repo: Path) -> Path:
+    """Shorthand: the .dd-state dir for the feature/x branch slug."""
+    return repo / ".claude" / ".dd-state" / "feature_x"
+
+
+def _seed_edits_count(repo: Path, count: int) -> None:
+    """Write an edits.count file directly so --write-checkpoint has something to reset."""
+    d = _branch_state_dir(repo)
+    d.mkdir(parents=True, exist_ok=True)
+    (d / "edits.count").write_text(str(count))
+
+
+def _seed_checkpoint(repo: Path, sha: str) -> None:
+    """Write a review.checkpoint file directly."""
+    d = _branch_state_dir(repo)
+    d.mkdir(parents=True, exist_ok=True)
+    (d / "review.checkpoint").write_text(sha)
+
+
+def test_write_checkpoint_fast_resets_edits_leaves_checkpoint_untouched(review_env):
+    """fast tier: resets edits.count to 0; review.checkpoint is not created/changed."""
+    env, repo, _ = review_env
+    _seed_edits_count(repo, 42)
+    _seed_checkpoint(repo, "aabbccdd" * 5)  # pre-existing checkpoint
+
+    proc = _run(env, repo, ["--write-checkpoint", "fast"])
+    assert proc.returncode == 0, proc.stderr
+
+    # edits.count is gone (reset = file removed)
+    assert state.read(str(repo), "feature/x", "edits") == 0
+    # checkpoint is unchanged
+    cp = _branch_state_dir(repo) / "review.checkpoint"
+    assert cp.read_text().strip() == "aabbccdd" * 5
+
+
+def test_write_checkpoint_regular_resets_edits_leaves_checkpoint_untouched(review_env):
+    """regular tier: resets edits.count to 0; review.checkpoint is not created/changed."""
+    env, repo, _ = review_env
+    _seed_edits_count(repo, 17)
+    _seed_checkpoint(repo, "deadbeef" * 5)
+
+    proc = _run(env, repo, ["--write-checkpoint", "regular"])
+    assert proc.returncode == 0, proc.stderr
+
+    assert state.read(str(repo), "feature/x", "edits") == 0
+    cp = _branch_state_dir(repo) / "review.checkpoint"
+    assert cp.read_text().strip() == "deadbeef" * 5
+
+
+def test_write_checkpoint_cold_read_sets_checkpoint_and_resets_edits(review_env):
+    """cold-read tier: sets review.checkpoint=HEAD AND resets edits.count."""
+    env, repo, _ = review_env
+    _seed_edits_count(repo, 55)
+    head = _git(repo, "rev-parse", "HEAD")
+
+    proc = _run(env, repo, ["--write-checkpoint", "cold-read"])
+    assert proc.returncode == 0, proc.stderr
+
+    # edits counter is gone (reset)
+    assert state.read(str(repo), "feature/x", "edits") == 0
+    # checkpoint = HEAD at the time of the call
+    cp = _branch_state_dir(repo) / "review.checkpoint"
+    assert cp.read_text().strip() == head
+
+
+def test_write_checkpoint_unknown_tier_exits_nonzero_no_mutation(review_env):
+    """Unknown tier → non-zero exit and clear error; no state is written."""
+    env, repo, _ = review_env
+    _seed_edits_count(repo, 7)
+    _seed_checkpoint(repo, "cafebabe" * 5)
+
+    proc = _run(env, repo, ["--write-checkpoint", "bogus-tier"])
+    assert proc.returncode != 0
+
+    # Neither state file is mutated
+    assert state.read(str(repo), "feature/x", "edits") == 7
+    cp = _branch_state_dir(repo) / "review.checkpoint"
+    assert cp.read_text().strip() == "cafebabe" * 5
+
+
+def test_write_checkpoint_no_codex_dispatch(review_env):
+    """--write-checkpoint never dispatches the codex shim (no argv log created)."""
+    env, repo, _ = review_env
+    log = repo / "argv_wc.log"
+    e = {**env, "DD_REVIEW_ARGV_LOG": str(log)}
+    for tier in ("fast", "regular", "cold-read"):
+        if log.exists():
+            log.unlink()
+        proc = subprocess.run(
+            [sys.executable, str(HOOK), "--write-checkpoint", tier],
+            capture_output=True,
+            text=True,
+            env=e,
+            cwd=str(repo),
+        )
+        assert proc.returncode == 0, f"{tier}: {proc.stderr}"
+        assert not log.exists(), f"{tier}: codex shim was invoked unexpectedly"

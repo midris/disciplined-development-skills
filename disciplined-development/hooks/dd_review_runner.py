@@ -58,6 +58,11 @@ HOOK_NAME = "dd_review"
 DEFAULT_TIMEOUT_S = 300
 VALID_TIERS = ("regular", "cold-read", "pre-pr")
 
+# Tiers valid for --write-checkpoint (fast + the three review tiers; pre-pr is
+# excluded: the codex clean pass writes its own checkpoint and never round-trips
+# through this flag).
+_CHECKPOINT_TIERS = ("fast", "regular", "cold-read")
+
 # CLI tier → config-key tier name (hyphen in the CLI, underscore in config).
 _TIER_CONFIG_KEY = {
     "regular": "regular",
@@ -113,9 +118,101 @@ def _print_usage_error(msg: str) -> None:
     print(f"[dd_review] ERROR — {msg}", file=sys.stderr)
     print(
         f"Usage: python3 dd_review_runner.py {{{'|'.join(VALID_TIERS)}}} "
-        f"[--base <ref>] [--cwd <path>]",
+        f"[--base <ref>] [--cwd <path>]\n"
+        f"       python3 dd_review_runner.py --write-checkpoint "
+        f"{{{'|'.join(_CHECKPOINT_TIERS)}}} [--cwd <path>]",
         file=sys.stderr,
     )
+
+
+# --- --write-checkpoint mode -----------------------------------------------
+
+
+def _handle_write_checkpoint(argv: list[str]) -> int | None:
+    """Handle ``--write-checkpoint <tier> [--cwd <path>]`` if present.
+
+    Returns the exit code (0 or non-zero) when the flag is found, or None
+    when it is absent (caller continues with the normal review path).
+
+    Reset rule (spec §Cadence & state):
+      fast | regular → reset ``edits.count`` only.
+      cold-read      → ``set_checkpoint(HEAD)`` AND reset ``edits.count``.
+      pre-pr         → NOT handled here; codex clean pass writes its own.
+    """
+    if "--write-checkpoint" not in argv:
+        return None
+
+    # Parse: --write-checkpoint <tier> [--cwd <path>]
+    # No other flags are valid in this mode.
+    tier: str | None = None
+    cwd: str | None = None
+    i = 0
+    while i < len(argv):
+        arg = argv[i]
+        if arg == "--write-checkpoint":
+            if i + 1 >= len(argv):
+                _print_usage_error("--write-checkpoint requires a tier argument")
+                return 2
+            if tier is not None:
+                _print_usage_error("--write-checkpoint specified twice")
+                return 2
+            tier = argv[i + 1]
+            i += 2
+        elif arg == "--cwd":
+            if i + 1 >= len(argv):
+                _print_usage_error("--cwd requires a path argument")
+                return 2
+            if cwd is not None:
+                _print_usage_error("--cwd specified twice")
+                return 2
+            cwd = argv[i + 1]
+            i += 2
+        else:
+            _print_usage_error(
+                f"--write-checkpoint mode does not accept {arg!r}"
+            )
+            return 2
+
+    if tier not in _CHECKPOINT_TIERS:
+        _print_usage_error(
+            f"unknown checkpoint tier {tier!r} "
+            f"(valid: {' | '.join(_CHECKPOINT_TIERS)})"
+        )
+        return 2
+
+    repo_path = cwd or os.getcwd()
+    if cwd and not pathlib.Path(cwd).is_dir():
+        _print_usage_error(f"--cwd {cwd!r} is not a directory")
+        return 2
+
+    # Resolve the git repo root (mirrors main()'s pattern).
+    try:
+        r = subprocess.run(
+            ["git", "-C", repo_path, "rev-parse", "--show-toplevel"],
+            capture_output=True, text=True, timeout=5,
+        )
+    except Exception:
+        print("[dd_review --write-checkpoint] ERROR: git unavailable", file=sys.stderr)
+        return 1
+    if r.returncode != 0 or not r.stdout.strip():
+        print("[dd_review --write-checkpoint] ERROR: not inside a git repo",
+              file=sys.stderr)
+        return 1
+    repo = r.stdout.strip()
+
+    branch = _current_branch(repo)
+    head_sha = _head_sha(repo)
+
+    # Reset rule — spec §Cadence & state.
+    if tier in ("fast", "regular"):
+        state.reset(repo, branch, "edits")
+    elif tier == "cold-read":
+        if branch and head_sha:
+            state.set_checkpoint(repo, branch, head_sha)
+        state.reset(repo, branch, "edits")
+
+    print(f"[dd_review --write-checkpoint] {tier}: checkpoint written.")
+    return 0
 
 
 # --- git helpers -----------------------------------------------------------
@@ -290,12 +387,21 @@ def main(argv: list[str] | None = None) -> int:
         print(
             f"Usage: python3 dd_review_runner.py {{{'|'.join(VALID_TIERS)}}} "
             f"[--base <ref>] [--cwd <path>]\n"
+            f"       python3 dd_review_runner.py --write-checkpoint "
+            f"{{{'|'.join(_CHECKPOINT_TIERS)}}} [--cwd <path>]\n"
             "Run an adversarial review of the branch diff against its fork "
             "base.\n"
             "  --base <ref>  pre-pr only: override the diff base.\n"
-            "  --cwd <path>  review the repo rooted at <path>."
+            "  --cwd <path>  review the repo rooted at <path>.\n"
+            "  --write-checkpoint <tier>  write post-clean-review state only "
+            "(no review dispatched)."
         )
         return 0
+
+    # --write-checkpoint mode: pure state write, no reviewer dispatched.
+    wc_rc = _handle_write_checkpoint(argv)
+    if wc_rc is not None:
+        return wc_rc
 
     parsed = _parse_argv(argv)
     if isinstance(parsed, str):
