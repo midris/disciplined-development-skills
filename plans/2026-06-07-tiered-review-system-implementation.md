@@ -92,7 +92,7 @@ diff-base contracts.
   `hooks/README.md`, `dd-config.md`, top-level `README.md`, `pre_pr_review.py`,
   any imports.
 
-- [ ] **E2 — Remove the `claude -p` path.** Cut the `invocation.reviewer ==
+- [x] **E2 — Remove the `claude -p` path.** Cut the `invocation.reviewer ==
   "claude"` branch, `review_prompt.build_claude_prompt`,
   `review_prompt.claude_runner_argv`, `harness/replay_review.py`, and the
   claude-path tests. Codex is the only engine reviewer; `review_invocation` +
@@ -100,8 +100,8 @@ diff-base contracts.
   stuffed/fetched). Per CLAUDE.md "rewrite tests when fallout is large":
   rewrite `test_dd_review_runner.py` against the codex-only contract rather
   than surgically editing around removed assertions.
-  - **Optional (Decision B):** rename `lib/claude_runner.py` →
-    `reviewer_runner.py`; sweep importers + tests.
+  - **Decision B taken:** renamed `lib/claude_runner.py` →
+    `lib/reviewer_runner.py`; swept all importers + tests.
   - **Tests required:** engine runs codex and severity-scans output; engine
     returns a clear error if configured with a non-codex reviewer; the four
     existing codex behavior deltas (e.g. HEAD == fork-base → clean exit)

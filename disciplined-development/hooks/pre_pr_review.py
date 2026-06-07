@@ -134,7 +134,7 @@ def main() -> int:
     env["DD_HARD_BLOCK"] = "1"
     logger.emit("delegate", base=base or "", cwd=cwd or "")
     # No outer timeout (review P3, dismissed): dd_review_runner self-bounds — its git
-    # probes (5s/60s) and claude_runner's watchdog (Popen.wait timeout +
+    # probes (5s/60s) and reviewer_runner's watchdog (Popen.wait timeout +
     # SIGTERM/SIGKILL + bounded reader-thread joins) guarantee it returns, so
     # the delegated process can't wedge indefinitely. An outer timeout here
     # would be redundant defense-in-depth.
