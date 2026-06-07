@@ -1,4 +1,4 @@
-"""Tests for hooks/dd_review.py — tiered review engine (fork-base + checkpoint).
+"""Tests for hooks/dd_review_runner.py — tiered review engine (fork-base + checkpoint).
 
 Harness mechanics (reused from the legacy test, assertions rewritten for the
 fork-base + checkpoint contract):
@@ -15,7 +15,7 @@ fork-base + checkpoint contract):
     ``feature/x`` carrying one extra commit, exercising fork-base resolution and
     checkpoints against a real merge-base.
 
-The engine is run as a subprocess (``python3 dd_review.py ...``) so ``--cwd``,
+The engine is run as a subprocess (``python3 dd_review_runner.py ...``) so ``--cwd``,
 ``DD_HARD_BLOCK`` and the real ``Runner`` dispatch are exercised end-to-end.
 """
 from __future__ import annotations
@@ -31,7 +31,7 @@ import pytest
 
 from hooks.lib import state
 
-HOOK = Path(__file__).resolve().parent.parent / "dd_review.py"
+HOOK = Path(__file__).resolve().parent.parent / "dd_review_runner.py"
 _BASE_DIR = Path(__file__).resolve().parents[2]
 
 DEFAULTS = {
@@ -639,7 +639,7 @@ def test_cli_error_exit_returns_one(review_env):
 # degrade rather than hang; match the sibling _git helpers' timeout=5.
 # ---------------------------------------------------------------------------
 
-from hooks import dd_review as _ddr  # noqa: E402
+from hooks import dd_review_runner as _ddr  # noqa: E402
 
 
 def test_dd_review_git_passes_timeout(monkeypatch):

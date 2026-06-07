@@ -48,7 +48,7 @@ Both are starting guesses — tune on observed behavior. Bool values are rejecte
 
 ## `review_tiers`
 
-Per-tier reviewer config for `dd_review.py`. Each tier:
+Per-tier reviewer config for `dd_review_runner.py`. Each tier:
 
 | Sub-key | Type | Description |
 |---|---|---|
@@ -116,7 +116,7 @@ removed; the pre-PR `--base` carries the chunk→phase case.)
 
 | Key | Type | Default | Description |
 |---|---|---|---|
-| `prompt_path` | string | `.claude/skills/adversarial-review/SKILL.md` | Prompt header for `dd_review.py` **claude** mode (relative → repo root). Codex runs bare (built-in review). Env: `DD_REVIEW_PROMPT_PATH`. |
+| `prompt_path` | string | `.claude/skills/adversarial-review/SKILL.md` | Prompt header for `dd_review_runner.py` **claude** mode (relative → repo root). Codex runs bare (built-in review). Env: `DD_REVIEW_PROMPT_PATH`. |
 
 ---
 
@@ -124,7 +124,7 @@ removed; the pre-PR `--base` carries the chunk→phase case.)
 
 | Key | Type | Default | Description |
 |---|---|---|---|
-| `pr_review_timeout_s` | int | `600` | Reviewer wall-clock timeout for `dd_review.py`. Env: `DD_REVIEW_TIMEOUT`. |
+| `pr_review_timeout_s` | int | `600` | Reviewer wall-clock timeout for `dd_review_runner.py`. Env: `DD_REVIEW_TIMEOUT`. |
 
 ---
 

@@ -1,7 +1,7 @@
 """Tests for hooks/pre_pr_review.py — the pre-PR hard-block wrapper.
 
 Subprocess-driven. The wrapper's whole job is detect-`gh pr create` +
-extract-base/cwd + delegate to `dd_review.py pre-pr` with DD_HARD_BLOCK=1,
+extract-base/cwd + delegate to `dd_review_runner.py pre-pr` with DD_HARD_BLOCK=1,
 so the tests intercept the delegation: a `DD_REVIEW_SCRIPT` env seam points
 the wrapper at a recording shim (run via the same interpreter) that writes
 its argv + the inherited DD_HARD_BLOCK to log files and exits with a

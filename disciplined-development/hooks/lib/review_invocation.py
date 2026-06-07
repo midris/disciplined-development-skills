@@ -3,7 +3,7 @@
 Phase 2 of the tiered reviewer config plan
 (plans/completed/2026-05-28-dd-hooks-tiered-reviewer-config.md). The selector applies
 strategy_selector cutoffs to a tier_config + diff_bytes triple, producing an
-immutable Invocation that Phase 4's `dd_review.py` will translate into the
+immutable Invocation that Phase 4's `dd_review_runner.py` will translate into the
 reviewer-specific argv at dispatch time.
 
 Strategy enum values are reviewer-neutral (`stuffed` / `fetched`). The

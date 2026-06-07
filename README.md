@@ -14,7 +14,7 @@ Eight skills (each a `<name>/SKILL.md`):
 
 - **`disciplined-development`** — the doctrine: the Iron Law, the five gates, the
   principles, the rationalization tables. The parent skill; the rest are its
-  companions. Its `hooks/` subdir holds the hook stack + the `dd_review.py`
+  companions. Its `hooks/` subdir holds the hook stack + the `dd_review_runner.py`
   review engine.
 - **`adversarial-review`** / **`adversarial-review-loop`** — reviewer posture +
   the severity contract (P0/P1/P2 block, P3 advisory) and the review→fix→re-review

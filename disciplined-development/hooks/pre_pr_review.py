@@ -2,18 +2,18 @@
 """pre_pr_review.py — PreToolUse Bash gate: the only hard block.
 
 Detects `gh pr create`, extracts the review base + target cwd, and delegates
-to `dd_review.py pre-pr` with `DD_HARD_BLOCK=1` so a blocking review exits
+to `dd_review_runner.py pre-pr` with `DD_HARD_BLOCK=1` so a blocking review exits
 non-zero and stops the PR open. **Detect + extract + delegate** — no review,
-base-resolution, or severity logic lives here; that is `dd_review`'s job.
+base-resolution, or severity logic lives here; that is `dd_review_runner`'s job.
 
 Base priority: `--base`/`-B` from the gh command → git config
-`branch.<cur>.gh-merge-base` (read in the target cwd) → none (dd_review then
+`branch.<cur>.gh-merge-base` (read in the target cwd) → none (dd_review_runner then
 falls back to fork-base = merge-base vs trunk). Target cwd: a chained `cd` in
 the command.
 
 Deliberately 2-step, NOT gh's old 3-step: the legacy chain had a third
 `gh repo view → defaultBranchRef` step; dropped. When neither `--base` nor the
-`gh-merge-base` config key is set, dd_review's fork-base covers the common case
+`gh-merge-base` config key is set, dd_review_runner's fork-base covers the common case
 (the PR targets trunk → fork-base equals the PR diff). Accepted edge: if a
 repo's gh default branch differs from `trunk_branches` AND no `--base` is
 given, the gate reviews a slightly different range than the PR opens against —
@@ -43,9 +43,9 @@ HOOK_NAME = "pre_pr_review"
 
 
 def _dd_review_script() -> str:
-    """Path to the dd_review engine. `DD_REVIEW_SCRIPT` overrides it (test
+    """Path to the dd_review_runner engine. `DD_REVIEW_SCRIPT` overrides it (test
     seam: tests point this at a recording shim run by the same interpreter)."""
-    return os.environ.get("DD_REVIEW_SCRIPT") or str(_HERE / "dd_review.py")
+    return os.environ.get("DD_REVIEW_SCRIPT") or str(_HERE / "dd_review_runner.py")
 
 
 def _read_command() -> str:
@@ -126,14 +126,14 @@ def main() -> int:
     # Forward --cwd only when a chained `cd` actually retargeted the dir.
     # find_gh_pr_create returns the process cwd when there is no `cd`, so
     # compare against it (realpath, to ignore /private symlink representation)
-    # — forwarding the process cwd would be a redundant no-op for dd_review.
+    # — forwarding the process cwd would be a redundant no-op for dd_review_runner.
     if cwd and os.path.realpath(cwd) != os.path.realpath(os.getcwd()):
         argv += ["--cwd", cwd]
 
     env = dict(os.environ)
     env["DD_HARD_BLOCK"] = "1"
     logger.emit("delegate", base=base or "", cwd=cwd or "")
-    # No outer timeout (review P3, dismissed): dd_review self-bounds — its git
+    # No outer timeout (review P3, dismissed): dd_review_runner self-bounds — its git
     # probes (5s/60s) and claude_runner's watchdog (Popen.wait timeout +
     # SIGTERM/SIGKILL + bounded reader-thread joins) guarantee it returns, so
     # the delegated process can't wedge indefinitely. An outer timeout here
@@ -142,7 +142,7 @@ def main() -> int:
 
     # Exit-code translation is load-bearing: Claude Code blocks a PreToolUse
     # tool ONLY on exit 2; any OTHER non-zero is a non-blocking error and the
-    # tool (gh pr create) still runs. dd_review pre-pr returns 1 on a BLOCK
+    # tool (gh pr create) still runs. dd_review_runner pre-pr returns 1 on a BLOCK
     # (findings) or tooling ERROR under DD_HARD_BLOCK, so we must map any
     # non-zero delegate result to 2 — and re-emit the review on stderr (exit-2
     # stderr is what CC feeds back to the model), so the findings aren't lost.

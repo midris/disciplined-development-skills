@@ -30,8 +30,8 @@ everything except the pre-PR gate is an advisory nudge.
 | `discipline_nudge.py` | PreToolUse (all tools) | Count tool-calls since the last re-ground; at the threshold emit a fixed "re-read CLAUDE.md + the plan, re-check the skills" nudge and reset. |
 | `review_nudge.py` | PostToolUse (Bash) | On a landed commit: always a Gate-3 **verify** reminder; at the review-cadence threshold also a "run `/dd-review regular`" nudge. |
 | `compaction_reground.py` | SessionStart + PreCompact | After a resume/compaction (context is a summary), re-ground: re-read the source of truth before acting. |
-| `pre_pr_review.py` | PreToolUse (Bash, `gh pr create`) | **The only hard block.** Detect → extract base/cwd → delegate to `dd_review.py pre-pr` with `DD_HARD_BLOCK=1`. Blocks the PR on findings. |
-| `dd_review.py` | model-callable CLI | The review engine: `regular` / `cold-read` / `pre-pr` tiers against the fork-base diff. |
+| `pre_pr_review.py` | PreToolUse (Bash, `gh pr create`) | **The only hard block.** Detect → extract base/cwd → delegate to `dd_review_runner.py pre-pr` with `DD_HARD_BLOCK=1`. Blocks the PR on findings. |
+| `dd_review_runner.py` | model-callable CLI | The review engine: `regular` / `cold-read` / `pre-pr` tiers against the fork-base diff. |
 
 Gate 3 (verify before "done") rides the **post-commit** verify nudge, not a
 Stop kick: the commit is where an edit becomes an assertion that owes
@@ -39,7 +39,7 @@ verification, and PostToolUse reaches the model without a Stop hook's
 block-or-be-silent constraint. The model decides what verification fits; the
 hook never scans for or grades evidence.
 
-## Three-tier review (`dd_review.py`)
+## Three-tier review (`dd_review_runner.py`)
 
 Reviews run at three tiers, configured per project under `review_tiers`. Each
 carries its own reviewer / model / effort:
