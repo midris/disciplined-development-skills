@@ -10,6 +10,19 @@
   },
 
   "review_tiers": {
-    "pre_pr": { "reviewer": "codex" }
+    "fast": {
+      "nudge_threshold": 30,
+      "hard_block_threshold": 60
+    },
+    "regular": {
+      "commit_edit_floor": 30
+    },
+    "cold_read_escalation": {
+      "nudge_threshold": 3,
+      "hard_block_threshold": 5
+    },
+    "pre_pr": {
+      "reviewer": "codex"
+    }
   }
 }

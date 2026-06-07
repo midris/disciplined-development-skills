@@ -38,8 +38,9 @@ The hook stack (under `disciplined-development/hooks/`) is documented in its own
 
 - **Python 3** — for the hook stack.
 - **git** — the hooks key behavior off branch / commit / fork-base state.
-- **Optional `codex`** — only for the pre-PR review tier; projects without it set
-  `review_tiers.pre_pr.reviewer = "claude"` in `dd-config.json`.
+- **Optional `codex`** — only for the pre-PR review tier (T3). Required for the
+  default config; projects without it must override `review_tiers.pre_pr.reviewer`
+  in `dd-config.json`.
 
 ## Install (clone-and-symlink)
 
@@ -89,9 +90,10 @@ project's `.claude/settings.json` (if the file already has a `hooks` key, merge
 the event arrays rather than replacing them). The commands resolve the scripts
 through the symlinks via `$CLAUDE_PROJECT_DIR`, so no paths need editing.
 
-That block wires the full set — plan-state injection, the re-ground counter, the
-pre-PR hard gate, the post-commit verify/cadence nudge, and post-compaction
-re-grounding. Per-hook behavior + the `DD_SKIP_<HOOK>` bypass env vars are in
+That block wires the full set — plan-state injection, the re-ground counter,
+the four-tier review cadence (T0 edit nudge/block, T1 commit nudge, T2
+cold-read nudge/block, T3 pre-PR gate), and post-compaction re-grounding.
+Per-hook behavior + the `DD_SKIP_<HOOK>` bypass env vars are in
 [`hooks/hook-recipes-claude-code.md`](disciplined-development/hooks/hook-recipes-claude-code.md).
 
 ## Configure + adopt
