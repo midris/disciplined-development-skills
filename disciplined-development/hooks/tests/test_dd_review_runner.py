@@ -47,16 +47,17 @@ DEFAULTS = {
     "review": {"prompt_path": ".claude/skills/adversarial-review/SKILL.md"},
     "codex": {"pr_review_timeout_s": 30},
     "review_tiers": {
+        # regular has commit_edit_floor only — no reviewer/model/effort (engine
+        # uses regular only via --write-checkpoint, not as a review path tier).
         "regular": {
-            "reviewer": "codex",
-            "model": "gpt-4o",
-            "default_effort": "medium",
+            "commit_edit_floor": 30,
         },
+        # cold_read_escalation has threshold keys only — same rationale.
         "cold_read_escalation": {
-            "reviewer": "codex",
-            "model": "gpt-4o",
-            "default_effort": "high",
+            "nudge_threshold": 3,
+            "hard_block_threshold": 5,
         },
+        # pre_pr is the only tier with reviewer config (the engine's review path).
         "pre_pr": {
             "reviewer": "codex",
             "model": "gpt-5.5",
@@ -999,3 +1000,165 @@ def test_resolve_scope_no_codex_dispatch_no_state_mutation(review_env):
     # checkpoint unchanged
     cp = _branch_state_dir(repo) / "review.checkpoint"
     assert cp.read_text().strip() == "deadbeef" * 5
+
+
+# ---------------------------------------------------------------------------
+# Fix 1 — detached-HEAD reset bug: --write-checkpoint uses "detached" slug
+# ---------------------------------------------------------------------------
+
+
+def _make_detached_repo(tmp_path, env):
+    """Git repo with master trunk; HEAD detached at the initial commit."""
+    repo = tmp_path / "detached_repo"
+    repo.mkdir()
+    subprocess.run(
+        ["git", "init", "-q", "-b", "master", str(repo)],
+        check=True, capture_output=True,
+    )
+    _git(repo, "config", "user.email", "t@t")
+    _git(repo, "config", "user.name", "Test")
+    (repo / "f.txt").write_text("seed\n")
+    _git(repo, "add", ".")
+    _git(repo, "commit", "-q", "-m", "init")
+    # Detach HEAD.
+    sha = _git(repo, "rev-parse", "HEAD")
+    _git(repo, "checkout", "-q", "--detach", sha)
+    return repo
+
+
+def _detached_state_dir(repo):
+    """The .dd-state dir for the 'detached' slug."""
+    return repo / ".claude" / ".dd-state" / "detached"
+
+
+def test_write_checkpoint_fast_detached_head_resets_detached_slug(review_env, tmp_path):
+    """--write-checkpoint fast on a detached-HEAD repo resets 'detached' slug counter.
+
+    Fix 1: _current_branch() returns "" on detached HEAD; without the fix,
+    state.reset(repo, "", "edits") writes to the state ROOT instead of the
+    'detached' slug dir. After the fix, the 'detached' slug is used and a
+    pre-seeded edits.count is cleared.
+    """
+    env, _, _ = review_env
+    repo = _make_detached_repo(tmp_path, env)
+
+    # Seed a non-zero edits.count under the 'detached' slug.
+    det_dir = _detached_state_dir(repo)
+    det_dir.mkdir(parents=True, exist_ok=True)
+    (det_dir / "edits.count").write_text("9")
+
+    proc = subprocess.run(
+        [sys.executable, str(HOOK), "--write-checkpoint", "fast"],
+        capture_output=True, text=True, env=env, cwd=str(repo),
+    )
+    assert proc.returncode == 0, proc.stderr
+
+    # Counter under 'detached' slug must be 0 (reset).
+    assert state.read(str(repo), "detached", "edits") == 0
+
+
+def test_write_checkpoint_cold_read_detached_head_uses_detached_slug(review_env, tmp_path):
+    """--write-checkpoint cold-read on detached HEAD writes checkpoint to 'detached' slug.
+
+    Fix 1: without the fix, set_checkpoint(repo, "", sha) writes to the root-level
+    dir instead of <branch-slug>/. After the fix, 'detached' slug is used.
+    """
+    env, _, _ = review_env
+    repo = _make_detached_repo(tmp_path, env)
+
+    # Seed edits.count so the reset is observable.
+    det_dir = _detached_state_dir(repo)
+    det_dir.mkdir(parents=True, exist_ok=True)
+    (det_dir / "edits.count").write_text("7")
+
+    proc = subprocess.run(
+        [sys.executable, str(HOOK), "--write-checkpoint", "cold-read"],
+        capture_output=True, text=True, env=env, cwd=str(repo),
+    )
+    assert proc.returncode == 0, proc.stderr
+
+    # edits.count reset under 'detached' slug.
+    assert state.read(str(repo), "detached", "edits") == 0
+    # review.checkpoint written under 'detached' slug.
+    cp = det_dir / "review.checkpoint"
+    assert cp.exists(), "checkpoint file was not created under 'detached' slug"
+    head = _git(repo, "rev-parse", "HEAD")
+    assert cp.read_text().strip() == head
+
+
+# ---------------------------------------------------------------------------
+# Fix 2 — misleading success message: tier-specific wording
+# ---------------------------------------------------------------------------
+
+
+def test_write_checkpoint_fast_message_says_edits_reset(review_env):
+    """fast tier --write-checkpoint message says 'edits counter reset', not 'checkpoint written'."""
+    env, repo, _ = review_env
+    proc = subprocess.run(
+        [sys.executable, str(HOOK), "--write-checkpoint", "fast"],
+        capture_output=True, text=True, env=env, cwd=str(repo),
+    )
+    assert proc.returncode == 0, proc.stderr
+    out = proc.stdout
+    assert "edits counter reset" in out
+    # Must NOT claim a checkpoint was written (no checkpoint is written for fast).
+    assert "checkpoint written" not in out
+
+
+def test_write_checkpoint_regular_message_says_edits_reset(review_env):
+    """regular tier --write-checkpoint message says 'edits counter reset'."""
+    env, repo, _ = review_env
+    proc = subprocess.run(
+        [sys.executable, str(HOOK), "--write-checkpoint", "regular"],
+        capture_output=True, text=True, env=env, cwd=str(repo),
+    )
+    assert proc.returncode == 0, proc.stderr
+    assert "edits counter reset" in proc.stdout
+    assert "checkpoint written" not in proc.stdout
+
+
+def test_write_checkpoint_cold_read_message_says_checkpoint_and_reset(review_env):
+    """cold-read tier --write-checkpoint message says 'checkpoint written and edits counter reset'."""
+    env, repo, _ = review_env
+    proc = subprocess.run(
+        [sys.executable, str(HOOK), "--write-checkpoint", "cold-read"],
+        capture_output=True, text=True, env=env, cwd=str(repo),
+    )
+    assert proc.returncode == 0, proc.stderr
+    out = proc.stdout
+    assert "checkpoint written" in out
+    assert "edits counter reset" in out
+
+
+# ---------------------------------------------------------------------------
+# Fix 5 — missing coverage: --write-checkpoint pre-pr exits 2, no mutation;
+#          --resolve-scope pre-pr prints fork-base range
+# ---------------------------------------------------------------------------
+
+
+def test_write_checkpoint_prepr_exits_2_no_mutation(review_env):
+    """--write-checkpoint pre-pr → exit 2, no state written (pre-pr is excluded from _CHECKPOINT_TIERS)."""
+    env, repo, _ = review_env
+    _seed_edits_count(repo, 11)
+    _seed_checkpoint(repo, "abcd1234" * 5)
+
+    proc = subprocess.run(
+        [sys.executable, str(HOOK), "--write-checkpoint", "pre-pr"],
+        capture_output=True, text=True, env=env, cwd=str(repo),
+    )
+    assert proc.returncode == 2
+
+    # No state mutation.
+    assert state.read(str(repo), "feature/x", "edits") == 11
+    cp = _branch_state_dir(repo) / "review.checkpoint"
+    assert cp.read_text().strip() == "abcd1234" * 5
+
+
+def test_resolve_scope_prepr_prints_fork_base_range(review_env):
+    """pre-pr tier --resolve-scope prints '<fork-base>..HEAD' (same as regular/cold-read)."""
+    env, repo, _ = review_env
+    fork = _fork_base(repo)
+    assert fork is not None, "fixture must have a resolvable fork base"
+    proc = _resolve_scope(env, repo, "pre-pr")
+    assert proc.returncode == 0, proc.stderr
+    assert proc.stdout.strip() == f"{fork}..HEAD"
