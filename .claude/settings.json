@@ -50,17 +50,7 @@
         "hooks": [
           {
             "type": "command",
-            "command": "python3 \"$CLAUDE_PROJECT_DIR/disciplined-development/hooks/compaction_reground.py\""
-          }
-        ]
-      }
-    ],
-    "PreCompact": [
-      {
-        "hooks": [
-          {
-            "type": "command",
-            "command": "python3 \"$CLAUDE_PROJECT_DIR/disciplined-development/hooks/compaction_reground.py\""
+            "command": "python3 \"$CLAUDE_PROJECT_DIR/disciplined-development/hooks/session_reground.py\""
           }
         ]
       }

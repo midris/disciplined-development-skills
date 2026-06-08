@@ -9,7 +9,7 @@ signal on exit 0, the hook must emit a JSON envelope of shape::
 
 The ``hookEventName`` must match the hook's own event. Consumers under the
 plan emit on different events: ``review_nudge`` (PostToolUse),
-``discipline_nudge`` (PreToolUse), ``compaction_reground`` (SessionStart).
+``discipline_nudge`` (PreToolUse), ``session_reground`` (SessionStart).
 Each constructs its ``Envelope`` with the matching ``event_name``; the
 default stays ``"PostToolUse"`` so existing callers are unaffected.
 
