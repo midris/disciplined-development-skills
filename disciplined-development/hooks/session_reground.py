@@ -49,7 +49,9 @@ COMMON_BODY = (
     " Before substantive work:\n"
     "  - Re-read CLAUDE.md and the governing docs from disk (and the active plan, incl. progress/checkbox state)"
     " — rely on the files, not recall, and don't claim progress without re-confirming it.\n"
-    "  - Load the disciplined-development skill, plus any other skills this task needs.\n"
+    "  - Re-load your governing skills — disciplined-development and superpowers"
+    " (via `using-superpowers`) — plus any others this task needs; don't assume"
+    " they survived a long or compacted session.\n"
     "  - For ANY prose you write or edit (chat replies, docs, plans, commit bodies, comments), invoke concise-writing."
 )
 
