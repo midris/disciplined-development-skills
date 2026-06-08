@@ -60,7 +60,7 @@ def test_defaults_roundtrip_nested_dot_path():
     assert config.get("strategy_selector.pre_stuff_max_bytes") == 524288
     assert config.get("strategy_selector.high_effort_min_bytes") == 51200
     # --- counters: review_threshold removed; discipline_threshold present ---
-    assert config.get("counters.discipline_threshold") == 25
+    assert config.get("counters.discipline_threshold") == 50
     assert config.get("counters.review_threshold") is None
     assert config.get("review.prompt_path") == ".claude/skills/adversarial-review/SKILL.md"
     assert config.get("branch_convention.trunk_branches") == ["master", "main"]
@@ -154,7 +154,7 @@ def test_malformed_user_config_non_dict_is_discarded(tmp_path, monkeypatch):
 def test_malformed_user_config_invalid_json_is_discarded(tmp_path, monkeypatch):
     """An invalid-JSON user config is discarded; defaults stand."""
     _write_user_config(tmp_path, monkeypatch, "{not valid json")
-    assert config.get("counters.discipline_threshold") == 25
+    assert config.get("counters.discipline_threshold") == 50
 
 
 def test_unknown_dot_path_returns_none():
@@ -192,7 +192,7 @@ def test_pre_pr_reviewer_unchanged():
 def test_counters_review_threshold_absent():
     """counters.review_threshold is absent from defaults; discipline_threshold present."""
     assert config.get("counters.review_threshold") is None
-    assert config.get("counters.discipline_threshold") == 25
+    assert config.get("counters.discipline_threshold") == 50
 
 
 def test_fast_tier_non_positive_user_override_is_ignored(tmp_path, monkeypatch):

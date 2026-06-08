@@ -39,7 +39,7 @@ must not be model-disableable.
 
 | Key | Type | Default | Description |
 |---|---|---|---|
-| `discipline_threshold` | int | `25` | Tool-calls since the last re-ground before `discipline_nudge` fires. |
+| `discipline_threshold` | int | `50` | Tool-calls since the last re-ground before `discipline_nudge` fires. |
 
 Bool values are rejected (a config typo like `true` won't silently become 1).
 
