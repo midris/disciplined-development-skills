@@ -129,6 +129,15 @@ def test_common_body_mentions_governing_docs():
     assert "concise-writing" in body
 
 
+def test_common_body_reloads_dd_and_superpowers():
+    # Long-session failure mode: the model lost BOTH dd and superpowers. The
+    # reground must name both explicitly so they're re-loaded after a
+    # compact/resume.
+    body = session_reground.COMMON_BODY
+    assert "disciplined-development" in body
+    assert "superpowers" in body
+
+
 # --- bypass ---
 
 def test_bypass_env_silent():
