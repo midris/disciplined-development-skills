@@ -33,7 +33,7 @@ the commit ceiling, and the pre-PR gate is an advisory nudge.
 | `pre_pr_review.py` | PreToolUse | `Bash` (`gh pr create`) | **Hard block.** Detect → extract base/cwd → delegate to `dd_review_runner.py pre-pr` with `DD_HARD_BLOCK=1`. Blocks the PR on findings. | `DD_SKIP_PR_REVIEW` |
 | `edit_counter.py` | PostToolUse | `Edit\|Write` | Increment `edits.count`; emit a T0 nudge on each edit once the stored count reaches 30, continuing until a clean review resets the counter. Advisory only — PostToolUse runs after the edit. | `DD_SKIP_EDIT_COUNTER` |
 | `review_nudge.py` | PostToolUse | `Bash` | On a landed commit: always emit a Gate-3 **verify** reminder; also T1 nudge when `edits.count` ≥ 30; also T2 nudge when commits-since-cold-read ≥ 3. | `DD_SKIP_REVIEW_NUDGE` |
-| `compaction_reground.py` | SessionStart | — | After resume/compaction (`source` ∈ resume/compact), re-ground: re-read the source of truth before acting. | `DD_SKIP_COMPACTION_REGROUND` |
+| `session_reground.py` | SessionStart | — | On every session (re)start, emit a source-specific preamble + shared re-ground instructions. Fires on all sources (startup/resume/clear/compact); unknown source fires with a generic preamble. | `DD_SKIP_SESSION_REGROUND` |
 
 Gate 3 (verify before "done") rides the **post-commit verify nudge**, not a
 Stop kick: the commit is where an edit becomes an assertion that owes

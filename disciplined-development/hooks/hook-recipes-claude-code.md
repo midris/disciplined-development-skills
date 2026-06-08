@@ -35,7 +35,7 @@ The wired set (`settings.json`) — **three hard blocks, zero kicks:**
 | PreToolUse | `Bash` | `pre_pr_review.py`, `commit_block.py` |
 | PostToolUse | `Edit\|Write` | `edit_counter.py` |
 | PostToolUse | `Bash` | `review_nudge.py` |
-| SessionStart | — | `compaction_reground.py` |
+| SessionStart | — | `session_reground.py` |
 
 ---
 
@@ -150,14 +150,17 @@ while keeping the verify reminder.
 
 ---
 
-## `SessionStart` — `compaction_reground.py`
+## `SessionStart` — `session_reground.py`
 
-**Class:** nudge. **Bypass:** `DD_SKIP_COMPACTION_REGROUND=1`.
+**Class:** nudge. **Bypass:** `DD_SKIP_SESSION_REGROUND=1`.
 
-After context loss, re-ground (re-read CLAUDE.md + the plan; re-invoke the
-governing skills). SessionStart fires the model-visible `additionalContext`
-envelope on `source` ∈ {resume, compact} (silent on startup/clear). The
-`compact` source fires *after* compaction, so this is the post-compaction
+On every session (re)start, re-ground (re-read CLAUDE.md + the plan; re-invoke
+the governing skills). SessionStart fires the model-visible `additionalContext`
+envelope on ALL sources: `startup`, `resume`, `clear`, and `compact`. Each
+emits a source-specific preamble followed by a shared common body. An unknown
+or missing source falls back to a generic preamble and still fires.
+
+The `compact` source fires *after* compaction, so this is the post-compaction
 reground. PreCompact is deliberately not wired — its non-blocking output can't
 reach the post-compaction model, so it could never deliver the reground.
 
@@ -207,7 +210,7 @@ Schema: [`dd-config.md`](dd-config.md). Single override surface
 | `DD_SKIP_EDIT_BLOCK` | `edit_block.py` (T0 hard block) |
 | `DD_SKIP_COMMIT_BLOCK` | `commit_block.py` (T2 hard block) |
 | `DD_SKIP_REVIEW_NUDGE` | `review_nudge.py` |
-| `DD_SKIP_COMPACTION_REGROUND` | `compaction_reground.py` |
+| `DD_SKIP_SESSION_REGROUND` | `session_reground.py` |
 | `DD_SKIP_PR_REVIEW` | `pre_pr_review.py` (T3 hard gate) |
 
 Override knobs (also env, in `settings.local.json`): `DD_ACTIVE_PLAN`,
@@ -239,7 +242,7 @@ the suite so logs never touch the real `.claude/.dd-state/`.
 - `edit_block.py` — PreToolUse `Edit|Write` (T0 hard block at 60)
 - `commit_block.py` — PreToolUse `Bash` (T2 hard block at 5 commits)
 - `review_nudge.py` — PostToolUse `Bash` (Gate-3 verify + T1/T2 cadence nudge)
-- `compaction_reground.py` — SessionStart (re-ground; `source` ∈ resume/compact)
+- `session_reground.py` — SessionStart (re-ground; all sources, source-specific preamble + common body)
 - `pre_pr_review.py` — PreToolUse `Bash` (T3 pre-PR hard gate)
 - `dd_review_runner.py` — model-callable engine (pre-pr codex / --write-checkpoint / --resolve-scope)
 - `lib/config.py` — defaults + override loader (`get(dot_path)`)
