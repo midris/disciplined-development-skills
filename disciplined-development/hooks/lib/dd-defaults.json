@@ -22,7 +22,7 @@
     "high_effort_min_bytes": 51200
   },
   "counters": {
-    "discipline_threshold": 25
+    "discipline_threshold": 50
   },
   "review": {
     "prompt_path": ".claude/skills/adversarial-review/SKILL.md"
