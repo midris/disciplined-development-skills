@@ -40,12 +40,13 @@ _FIRE_SOURCES = {"resume", "compact"}
 REGROUND_TEXT = (
     "Re-ground after compaction/resume — the context here is a summary or a "
     "resumed frame, not the original conversation. Before acting:\n"
-    "  - Re-read CLAUDE.md and the active plan from disk; don't trust the "
-    "pre-compaction frame.\n"
-    "  - Re-invoke the governing skills for the work in flight "
-    "(disciplined-development + the companion skills its gates name).\n"
-    "  - Confirm the current step against the plan's checkboxes before "
-    "claiming progress."
+    "  - Re-read CLAUDE.md and the active plan from disk (including "
+    "checkbox/progress state); don't trust the pre-compaction frame, and "
+    "don't claim progress without re-confirming it.\n"
+    "  - Re-load every skill this work needs — disciplined-development "
+    "always, plus any others the task calls for.\n"
+    "  - Writing or editing ANY prose — chat replies, docs, plans, commit "
+    "bodies, comments — invoke concise-writing and run its compression pass."
 )
 
 
