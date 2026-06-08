@@ -172,7 +172,7 @@ tool-call time — hooks read their inherited environment).
 | `DD_SKIP_EDIT_BLOCK` | `edit_block.py` (T0 hard block) |
 | `DD_SKIP_COMMIT_BLOCK` | `commit_block.py` (T2 hard block) |
 | `DD_SKIP_REVIEW_NUDGE` | `review_nudge.py` (Gate-3 verify + T1/T2 nudges) |
-| `DD_SKIP_COMPACTION_REGROUND` | `compaction_reground.py` |
+| `DD_SKIP_SESSION_REGROUND` | `session_reground.py` |
 | `DD_SKIP_PR_REVIEW` | `pre_pr_review.py` (T3 hard gate) |
 
 ### Override knobs

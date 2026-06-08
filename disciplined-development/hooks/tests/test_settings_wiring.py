@@ -63,7 +63,7 @@ def test_expected_hook_set_wired():
         "discipline_nudge.py",
         "pre_pr_review.py",
         "review_nudge.py",
-        "compaction_reground.py",
+        "session_reground.py",
         # Three new hooks added in W1 (tiered-review-system):
         "edit_counter.py",   # PostToolUse Edit|Write — T0 nudge counter
         "edit_block.py",     # PreToolUse  Edit|Write — T0 hard block

@@ -68,7 +68,7 @@
         "hooks": [
           {
             "type": "command",
-            "command": "python3 \"$CLAUDE_PROJECT_DIR/.claude/skills/disciplined-development/hooks/compaction_reground.py\""
+            "command": "python3 \"$CLAUDE_PROJECT_DIR/.claude/skills/disciplined-development/hooks/session_reground.py\""
           }
         ]
       }
