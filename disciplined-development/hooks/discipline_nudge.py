@@ -48,7 +48,7 @@ from hooks.lib.envelope import Envelope  # noqa: E402
 
 HOOK_NAME = "discipline_nudge"
 COUNTER_NAME = "discipline"
-DEFAULT_THRESHOLD = 25
+DEFAULT_THRESHOLD = 50
 
 REGROUND_TEXT = (
     "Discipline check-in — you've accumulated several tool calls without "
@@ -58,7 +58,8 @@ REGROUND_TEXT = (
     "  - Re-check the governing skills for the work in flight "
     "(disciplined-development + the companion skills its gates name).\n"
     "  - Confirm the current step still matches the plan; if scope moved, "
-    "write it down before continuing."
+    "write it down before continuing.\n"
+    "  - Flip any completed checkboxes in the active plan before continuing."
 )
 
 
