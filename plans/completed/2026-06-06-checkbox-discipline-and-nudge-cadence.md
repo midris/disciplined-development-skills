@@ -1,5 +1,12 @@
 # Plan-checkbox discipline + discipline-nudge cadence
 
+> **ARCHIVED — superseded by the `session_reground` hook change.** The
+> checkbox-discipline approach here was scrapped in favour of making the
+> reground hook re-load **dd + superpowers** on every session (re)start (the
+> real long-session failure was losing those skills, not a missing plan
+> checklist). Change #2's cadence bump shipped; change #1 was dropped. See the
+> impl plan (`2026-06-07-checkbox-discipline-impl.md`) for details.
+
 ## Why
 
 A real session using the current bundle (captured in the meeting-pipeline

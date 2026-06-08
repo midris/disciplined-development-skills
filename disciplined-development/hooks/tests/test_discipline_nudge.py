@@ -79,6 +79,8 @@ def test_at_threshold_emits_envelope_and_resets(git_repo):
     # not just the nouns — a degraded "list of words" version must fail.
     assert ctx == discipline_nudge.REGROUND_TEXT
     assert "Re-read" in ctx and "Re-check" in ctx
+    # Checkbox-tick reminder must be present (Change #2 of the checkbox-discipline plan).
+    assert "checkbox" in ctx
     # Reset on fire: counter file removed, next read is 0.
     assert state.read(root, "master", "discipline") == 0
     # And the counter actually restarts from 1 on the next call (not merely
@@ -103,7 +105,7 @@ def test_bool_threshold_rejected_falls_back_to_default(git_repo):
     root = _repo_root(git_repo)
     # JSON `true` for the threshold must NOT be coerced to 1 (which would
     # fire the nudge on the very first call); bool is rejected and the
-    # default (25) applies, so a single call stays silent.
+    # default (50) applies, so a single call stays silent.
     r = _run(git_repo, threshold=True)
     assert r.returncode == 0
     assert r.stdout.strip() == ""
