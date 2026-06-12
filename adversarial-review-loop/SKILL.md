@@ -1,6 +1,6 @@
 ---
 name: adversarial-review-loop
-description: Use when an adversarial code review surfaces findings during self-review, mid-flight work, or code review.
+description: Use when an adversarial review surfaces findings. This applies to both internal (self-review, mid-flight work, code review) and external (a different model, a CI reviewer bot, a required reviewer) reviews.
 ---
 
 # Adversarial review loop

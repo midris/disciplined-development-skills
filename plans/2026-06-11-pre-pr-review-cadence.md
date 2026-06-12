@@ -28,10 +28,10 @@ green and coherent alone, each validated and cold-read **at its own boundary**
 The two SKILL.md edits (PR-2 `adversarial-review-loop`, PR-3 `lean-plan-writing`)
 each need their own `superpowers:writing-skills` TDD-for-docs cycle — separate
 baseline pressure scenarios, so they can't share a PR; PR-4 (command text) and
-PR-5 (code) split by file and concern (owner, 2026-06-11). **Gate-5 coordination:** PR-2 and PR-3 both touch
-`disciplined-development/SKILL.md` Gate 5 — land PR-2 first (operational detail at
-Phase 3 Task 3b). This in-plan sequencing replaces what would have been a
-cross-plan seam.
+PR-5 (code) split by file and concern (owner, 2026-06-11). *(Update 2026-06-12:
+PR-2 was descoped to a description-only edit and no longer touches Gate 5 — the
+prior PR-2↔PR-3 Gate-5 ordering no longer applies; PR-3's Gate-5 edit stands
+alone.)*
 
 **Problem.** The T3 codex gate (`pre_pr_review.py` → `dd_review_runner.py
 pre-pr` → `codex review`) hard-blocks `gh pr create` on any P0/P1/P2 but has
@@ -375,84 +375,36 @@ it to exit 2 → PR blocked); advisory `0` otherwise.
 
 ---
 
-## Phase 2 — Review-loop doctrine (PR-2) via `superpowers:writing-skills`
+## Phase 2 — External-review discoverability for the adversarial loop (PR-2)
 
-The owner's explicit ask: develop, test, and review the skill changes with the
-skill-writing discipline. RED-GREEN-REFACTOR with a subagent — the Iron Law
-applies to edits. Baseline + transcripts go to a scratch dir outside the repo
-(CLAUDE.md: don't commit subagent transcripts; `baseline-*.md` is gitignored).
+**Shipped change.** A one-sentence edit to `adversarial-review-loop/SKILL.md`'s
+**`description`** so the loop is discoverable when an *external* review (a
+different model, a CI/SaaS reviewer bot, a required reviewer) returns findings —
+not only internal self-review. The loop *body* is unchanged: its existing
+address → re-run → 3-cycle cap → cold-read escape ("another human") already
+applies to any review source once the skill loads.
 
-The change being taught: **when an external / pre-PR review returns findings,
-don't patch-and-retry the PR — step back into a wide-lens internal review cycle,
-fold the external findings in, iterate to clean, then retry.** When the loop
-stops converging — the internal review keeps clearing a finding codex re-raises,
-or each round surfaces new issues — **asking the human for help (who fixes or
-sets `DD_SKIP_PR_REVIEW`) is the right call, not a failure.** Models already tend
-to escalate here on their own; the doctrine only licenses it *sooner* so it
-doesn't take many rounds, reusing the adversarial loop's existing "another human"
-escape — no cap, no new state.
+**Descoped from the planned doctrine (owner, 2026-06-12; `writing-explicit-rationale`).**
+The plan originally added a routing section + human-escalation license (Decision
+J) + rationalization rows + a dd Gate-5 note via RED-GREEN-REFACTOR. A 5-run RED
+investigation (real-gate ×2 + portable ×3; false-positive and real-bug framings,
+incl. max pressure with a lead explicitly ordering patch-and-retry) produced
+**no violation** — a disciplined model already routes external findings through
+the internal loop, refutes false positives, and escalates to a human early,
+citing existing doctrine (Principle 3, Gate 5, the loop's cap + escape) **even
+without the hook** (portable). No failing baseline → the Iron Law forbids new
+doctrine (Principle 7: no unused surface). The real gap was **discoverability**:
+the old description steered models *away* from the loop on external reviews.
 
-**Shared fixture (F).** Build one scratch git repo (outside this repo's tree)
-with the precondition-enabled `pre_pr_review.py` actually wired into its
-`.claude/settings.json` and a ~5-line obviously-defective change **committed at
-HEAD**. **Seed `review.checkpoint = HEAD`** (`state.set_checkpoint`) so the
-precondition *passes* — without this seed the subagent hits the precondition
-block, not the codex block, and the RED/GREEN tests the wrong thing (the P1 #2
-finding). The seed *is* the scenario: it simulates "internal cold-read came back
-clean, codex caught what it missed." The subagent runs *against the wired hook*,
-so it hits a real block envelope — this is what extends the skill test into a
-live hook test (owner's ask). The codex *verdict* is stubbed with a **fake `codex` binary early on `PATH`**
-(the `_make_shim` pattern in `tests/test_dd_review_runner.py` — a shim that
-emits canned P1 findings), **not** `DD_REVIEW_SCRIPT`. This is load-bearing:
-`DD_REVIEW_SCRIPT` replaces the whole `dd_review_runner.py` (it is
-`pre_pr_review.py`'s delegation seam), which would bypass the precondition —
-the very code under test. The PATH shim leaves the real runner (precondition and
-all) intact and makes only the codex subprocess deterministic. The same fixture
-(snippet + checkpoint seed) feeds the real-codex run in Phase 1 T4 — which **drops the
-shim** so the real codex on `PATH` runs.
-
-The decision point is the subagent's **first** `gh pr create` — at the
-seeded-clean HEAD, before it has changed anything — so it reliably reaches the
-stubbed codex block. Watch what it does *next* (patch-and-retry = violation vs
-step back = pass). Caveat: if the subagent commits/amends its fix on a retry,
-HEAD moves off the seeded checkpoint and the precondition (correctly) blocks the
-retry — that's the gate working, not the codex block; re-seed the checkpoint
-only if you need to re-observe the codex-findings decision specifically.
-
-- [ ] **RED (baseline).** With fixture F but the doctrine edit **absent**,
-  dispatch a subagent under pressure (branch ~6 codex reviews deep, user wants
-  the PR up now). It attempts the PR, hits the stubbed codex block. Document
-  verbatim whether it patches-and-retries (expected baseline violation) and the
-  exact rationalizations. Carry `disciplined-development` Principle 4 into the
-  dispatch (subagent re-reads before claiming done).
-
-- [ ] **GREEN (minimal edit).** Write the minimal edits addressing those
-  rationalizations:
-  - `adversarial-review-loop/SKILL.md` — a section: external/pre-PR findings
-    route back to a wide-lens internal loop (not patch-and-retry); plus one light
-    line that when the loop stops converging (a finding the internal review clears
-    but codex re-raises, or rounds that keep surfacing issues), asking the human
-    is the right call — reusing the loop's existing "another human" escape, no cap
-    or state (Decision J). Plus a rationalization-table row (e.g. "codex found
-    issues, just fix and re-open" → "each retry pays a slow external round-trip;
-    settle it in the cheap wide internal loop first, then retry").
-  - `disciplined-development/SKILL.md` Gate 5 — a note on step 2 (external
-    review) that findings send you back to step 1 (internal wide-lens loop)
-    before retrying the PR.
-  Re-run the scenario **with** the edits → subagent steps back instead of
-  retrying.
-
-- [ ] **REFACTOR (close loopholes).** Capture any new rationalizations the
-  subagent surfaces into the table; re-test until it holds under combined
-  pressure (time + sunk cost). Keep edits minimal — no content for hypothetical
-  cases.
-  - **References swept:** these two skills cross-reference each other and the
-    hook README's "four-tier review" framing — confirm the new rule's wording
-    matches the precondition's actual trigger (cold-read clean at HEAD).
-
-- [ ] **PR-2 boundary:** hook suite green (doctrine-only, run anyway);
-  `/dd-review cold-read` to clean (the `adversarial-review-loop` + Gate-5 edits;
-  references swept per REFACTOR); PR.
+- [x] **Description edit + A/B discoverability GREEN.** No RED/GREEN/REFACTOR on
+  the body (no failing baseline). A/B test: with the old description a subagent
+  declined to load the loop for an external-bot block ("not a review I
+  initiated"); with the new one it loaded it ("explicitly names a CI reviewer
+  bot"). `writing-skills` CSO review passed (Use-when, triggers-only, 205 chars).
+  Sweep: no internal-only steering in the body; references cite the skill by name
+  (no staleness). Decisions A/J updated (the hook message held under max pressure;
+  escalation emerged unprompted). RED transcripts → scratch dir outside the repo.
+- [ ] **PR-2 boundary:** hook suite green (markdown-only, run anyway); PR + merge.
 
 ---
 
@@ -495,8 +447,8 @@ the repo (CLAUDE.md never-commit).
 
 - [ ] **Edits (three, light).** Gate 2 gains "plans declare merge boundaries" in
   its written-translation sentence; Gate 5's "end-of-chunk" language clarifies
-  chunk = merge-boundary unit (not build-order step) — **add this alongside PR-2's
-  step-back note in the same Gate-5 region (land PR-2 first)**; the
+  chunk = merge-boundary unit (not build-order step) — *(PR-2 no longer touches
+  Gate 5; this is now an independent Gate-5 edit, no cross-PR ordering)*; the
   rationalizations table gains the row ("The spec step is one unit, so one
   branch." → "Steps are scope units, not PR units. Split at merge boundaries.").
   The row's authoritative home is THIS table (Decision H's doctrine lives in
