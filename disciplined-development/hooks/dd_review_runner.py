@@ -27,10 +27,18 @@ The engine review path (codex dispatch + severity scan) is ``pre-pr`` only.
 ``--write-checkpoint`` and ``--resolve-scope`` accept additional tiers
 (fast / regular / cold-read) for model-layer state writes and scope queries.
 
+**Precondition gate (pre-pr):** before dispatching codex, the engine checks
+``state.commits_since_checkpoint`` on the current branch.  When the result is
+not ``0`` (no checkpoint recorded, or commits have landed since the last clean
+cold-read/pre-pr), the engine emits a step-back message and returns without
+calling codex.  Only ``== 0`` (HEAD is exactly the clean-review checkpoint)
+allows the codex call to proceed.  This enforces Gate 5's self-review-before-
+external ordering mechanically and prevents the patch-and-retry codex loop.
+
 Advisory vs hard-block: manual invocation always exits 0 (the model is
 the consumer). The pre-PR hook wrapper sets ``DD_HARD_BLOCK=1`` so
-``pre-pr`` returns non-zero on any P0/P1/P2 finding — the gate before
-``gh pr create``.
+``pre-pr`` returns non-zero on any P0/P1/P2 finding OR a precondition block —
+the gate before ``gh pr create``.
 """
 
 from __future__ import annotations
@@ -574,7 +582,10 @@ def main(argv: list[str] | None = None) -> int:
         )
         config.reset_config_cache()
 
-    branch = _current_branch(repo)
+    # "detached" fallback matches _handle_write_checkpoint (line ~217) and the
+    # precondition read below — all three must agree on the slug so a cold-read
+    # checkpoint written on a detached HEAD is visible to the precondition.
+    branch = _current_branch(repo) or "detached"
     head_sha = _head_sha(repo)
 
     tier_config, selector_config, cfg_err = _load_tier_and_selector(tier)
@@ -617,6 +628,48 @@ def main(argv: list[str] | None = None) -> int:
         )
         logger.emit("noop", reason="empty_diff", base=base)
         return 0
+
+    # Precondition gate (pre-pr only): HEAD must already carry a clean wide-lens
+    # internal review (review.checkpoint == HEAD).  This enforces Gate 5's
+    # self-review-before-external ordering mechanically and prevents the
+    # patch-and-retry codex loop (plan Decision A + C).
+    #
+    # Placement: AFTER the cheap precedence checks above (cli-missing,
+    # base-unresolvable, empty-diff) so those still win, but BEFORE the
+    # path-gather + diff-read + codex spawn so a blocked call is free.
+    #
+    # Exit-code: mirrors the existing BLOCK contract — non-zero under
+    # DD_HARD_BLOCK=1 (the wrapper maps to exit 2 → PR hard-blocked),
+    # advisory 0 otherwise.  The existing DD_HARD_BLOCK return at the bottom
+    # of main() is unreachable from this early return path.
+    if tier == "pre-pr":
+        commits_since = state.commits_since_checkpoint(repo, branch)
+        if commits_since != 0:  # None (no checkpoint) or >0 both block
+            _step_back_msg = (
+                "[dd_review pre-pr] BLOCK — HEAD has not been internally reviewed.\n"
+                "\n"
+                "Run `/dd-review cold-read` (the model-layer command, NOT a runner\n"
+                "tier) to run the wide-lens internal review. Fold in any prior\n"
+                "external findings, iterate to clean per the `adversarial-review-loop`\n"
+                "skill, then retry.\n"
+                "\n"
+                "A clean `/dd-review cold-read` writes its checkpoint\n"
+                "(`review.checkpoint = HEAD`, via `--write-checkpoint cold-read`)\n"
+                "as its final step — that write is what unblocks this gate. If you\n"
+                "skip it, the gate stays shut.\n"
+                "\n"
+                "Escape: `DD_SKIP_PR_REVIEW=1` if the branch is wedged."
+            )
+            print(_step_back_msg, file=sys.stderr)
+            logger.emit(
+                "precondition_block",
+                reason="no_clean_internal_review",
+                commits_since=commits_since,
+                branch=branch,
+            )
+            if os.environ.get("DD_HARD_BLOCK") == "1":
+                return 1
+            return 0
 
     paths_csv = review_prompt.gather_touched_paths(repo, base)
 
@@ -756,6 +809,17 @@ def main(argv: list[str] | None = None) -> int:
     print(review_output)
     if excerpt:
         print(excerpt, file=sys.stderr)
+    # Codex-findings directive (T2 message): on a BLOCK, send the model back
+    # into the wide-lens internal loop rather than patch-and-retry the PR
+    # (plan Decision A; the precondition gate is what enforces it on retry).
+    if decision == "BLOCK":
+        print(
+            "\nDo NOT patch and retry the PR. Run `/dd-review cold-read`, fold\n"
+            "these findings in, iterate to clean per `adversarial-review-loop`,\n"
+            "then retry. (`--write-checkpoint cold-read` on a clean pass unblocks\n"
+            "the gate.)",
+            file=sys.stderr,
+        )
 
     # Clean pre-pr pass: checkpoint HEAD and reset edits.count (T3 reset rule,
     # spec §Cadence & state). A BLOCK does neither.
