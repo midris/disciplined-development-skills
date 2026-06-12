@@ -559,8 +559,9 @@ doctrine, currently duplicated across the two command copies) → see
   overrides via CLAUDE_PROJECT_DIR`). `References swept:` `dd-config.md`
   precedence/resolution-order section.
 
-- [ ] **PR-5 boundary:** hook suite + installer suite green (`python3 -m pytest
-  tests/ -q`); cold-read to clean; PR.
+- [x] **PR-5 boundary:** hook suite + installer suite green (`python3 -m pytest
+  tests/ -q`); cold-read to clean; PR. *(Merged #16; cold-read found a stale
+  `dd_review_runner.py` comment — fixed; security clean.)*
 
 ---
 
@@ -571,7 +572,7 @@ Per-PR boundaries own their own validation and PR — there is no aggregate
 (T4); every PR runs the hook suite green and a `/dd-review cold-read` to clean at
 its boundary. This step is only the wrap-up:
 
-- [ ] Tick checkboxes as work lands; record moved scope and any deferrals. On the
+- [x] Tick checkboxes as work lands; record moved scope and any deferrals. On the
   final PR's merge, move this file to `plans/completed/`. Every PR follows the
   branch strategy (feature branch → main, merge-commit, never squash).
 
@@ -627,5 +628,6 @@ its boundary. This step is only the wrap-up:
   Merged #12.
 - [x] **PR-4:** artifact-aware facet set (executability + doctrine-consistency)
   live for doc-dominant cold-reads in both dd-review command copies. Merged #13.
-- [ ] **PR-5:** CWD fix landed with tests; `dd-config.md` precedence updated.
-- [ ] Plan archived to `plans/completed/` on the last merge.
+- [x] **PR-5:** CWD fix landed with tests; `dd-config.md` precedence updated. Merged #16.
+- [x] Plan archived to `plans/completed/` on the last merge. (Phase 1 stays
+  parked; the angle-catalog extraction remains in `plans/deferred/`.)
