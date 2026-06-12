@@ -663,6 +663,17 @@ def main(argv: list[str] | None = None) -> int:
                 commits_since=commits_since,
                 branch=branch,
             )
+            # Curated review trace: a precondition block is a first-class BLOCK
+            # outcome, so record it alongside codex PASS/BLOCK/ERROR — otherwise
+            # hard-blocked PR attempts vanish from reviews.jsonl. Lean fields
+            # only (no reviewer ran: no diff/duration), mirroring the _error
+            # pre-runner record. Degrade-safe (append_review never raises).
+            logging_setup.append_review({
+                "tier": tier, "reviewer": reviewer, "branch": branch,
+                "head_sha": head_sha, "decision": "BLOCK",
+                "reason": "precondition_no_clean_internal_review",
+                "commits_since": commits_since,
+            })
             if os.environ.get("DD_HARD_BLOCK") == "1":
                 return 1
             return 0

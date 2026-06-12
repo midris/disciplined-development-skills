@@ -1425,3 +1425,21 @@ def test_prepr_codex_findings_block_message_directs_to_internal_loop(review_env)
     # to route through the internal cold-read loop.
     assert "patch and retry" in combined
     assert "/dd-review cold-read" in combined
+
+
+def test_precondition_block_writes_review_record(review_env):
+    """A precondition block appends a curated reviews.jsonl record — it is a
+    first-class BLOCK outcome and must be visible in the review history, not
+    only the rolling hook log (codex finding, PR-1 cold-read).
+
+    seed_checkpoint=False: exercise the precondition block path (no checkpoint).
+    """
+    env, repo, _ = review_env
+    proc = _run(env, repo, ["pre-pr"], seed_checkpoint=False)
+    assert proc.returncode == 0  # advisory (no DD_HARD_BLOCK)
+    recs = _reviews(env)
+    assert len(recs) == 1, "precondition block must append exactly one curated record"
+    rec = recs[0]
+    assert rec["decision"] == "BLOCK"
+    assert "precondition" in rec["reason"]
+    assert rec["tier"] == "pre-pr"
