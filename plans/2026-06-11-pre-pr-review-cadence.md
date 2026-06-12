@@ -450,12 +450,13 @@ Re-open either decision if practice surfaces a gap.
 
 **Files:** Modify `lean-plan-writing/SKILL.md`.
 
-- [ ] **RED (baseline).** Subagent with the CURRENT skill + a synthetic oversized
+- [x] **RED (baseline).** Subagent with the CURRENT skill + a synthetic oversized
   spec (a build-order step implying ~25 commits / >150 KB across 4 subsystems) is
   asked to write the plan. Expected fail: one monolithic single-branch plan (the
   current skill has no merge-boundary concept — verify by reading it). Record
   verbatim.
-- [ ] **GREEN (minimal edit).** Add a "Merge boundaries" section. Content
+- [x] **GREEN (minimal edit).** *(Shipped leaner — a one-line rule, no separate
+  section / sizing heuristic / row reference; see Status.)* Add a "Merge boundaries" section. Content
   contract: every plan DECLARES merge boundaries (named points where the branch
   is coherent, green, independently mergeable — each its own branch + PR); the
   sizing heuristic + anchor per Decision H; a build-order step larger than that
@@ -465,10 +466,10 @@ Re-open either decision if practice surfaces a gap.
   one-line reference to the rationalization row (authoritative home: the dd
   SKILL.md table — Task 3b). Re-run the scenario: the plan must now declare
   boundaries.
-- [ ] **REFACTOR (close loopholes).** Feed a boundary-skip-tempting scenario
+- [x] **REFACTOR (close loopholes).** Feed a boundary-skip-tempting scenario
   ("tightly coupled tasks, splitting feels artificial"); capture rationalizations
   verbatim for the dd-table row (Task 3b). Iterate until it holds.
-- [ ] **Commit** (`feat(lean-plan-writing): plans declare merge boundaries`).
+- [x] **Commit** (`feat(lean-plan-writing): plans declare merge boundaries`).
   `References swept:` n/a — new section (state the n/a line). `Verification:`
   scenario transcripts summarized in the body (scratch files not committed).
 
@@ -476,7 +477,7 @@ Re-open either decision if practice surfaces a gap.
 
 **Files:** Modify `disciplined-development/SKILL.md`.
 
-- [ ] **Edits (three, light).** Gate 2 gains "plans declare merge boundaries" in
+- [ ] ~~**Edits (three, light).**~~ **(Dropped — see Status, decision 1.)** Gate 2 gains "plans declare merge boundaries" in
   its written-translation sentence; Gate 5's "end-of-chunk" language clarifies
   chunk = merge-boundary unit (not build-order step) — *(PR-2 no longer touches
   Gate 5; this is now an independent Gate-5 edit, no cross-PR ordering)*; the
@@ -485,15 +486,16 @@ Re-open either decision if practice surfaces a gap.
   The row's authoritative home is THIS table (Decision H's doctrine lives in
   lean-plan-writing, the row lives here); confirm lean-plan-writing carries only
   the one-line reference, not a duplicate row.
-- [ ] **Sweep + commit.** `sweeping-stale-references`: grep the bundle for "chunk"
+- [ ] ~~**Sweep + commit.**~~ **(Dropped — see Status, decision 1.)** `sweeping-stale-references`: grep the bundle for "chunk"
   as a build-order-step synonym (`starter.CLAUDE.md`,
   `examples/CLAUDE.md-snippet.md`, READMEs); reconcile in the same commit. Commit
   `docs(dd): merge-boundary framing for Gates 2/5`. `References swept:` every
   "chunk" call-site touched (or `n/a — none`).
 
-- [ ] **PR-3 boundary:** `/dd-review cold-read`, iterate per
+- [x] **PR-3 boundary:** `/dd-review cold-read`, iterate per
   `adversarial-review-loop` to clean; hook suite green; pressure transcripts in
-  the PR body; PR.
+  the PR body; PR. *(Merged #12; suite green + RED/GREEN/REFACTOR validation;
+  Gate-5 cold-read skipped per owner. Heading polish followed in #14.)*
 
 ---
 
@@ -532,9 +534,9 @@ doctrine, currently duplicated across the two command copies) → see
   and the dd SKILL.md Gate-5/review prose for angle-set descriptions that would go
   stale (`n/a — none` if clean).
 
-- [ ] **PR-4 boundary:** hook suite green (doctrine-only, run anyway); cold-read
+- [x] **PR-4 boundary:** hook suite green (doctrine-only, run anyway); cold-read
   to clean — dispatched with the NEW doc-dominant set (this PR's own diff
-  qualifies); PR.
+  qualifies); PR. *(Merged #13; cold-read clean after 2 fix cycles.)*
 
 ---
 
@@ -619,10 +621,11 @@ its boundary. This step is only the wrap-up:
   description advertises external reviews; body's existing loop (cap + escape +
   human) inherited. Descoped from the planned doctrine (no failing baseline);
   A/B discoverability GREEN. Shipped as #10.
-- [ ] **PR-3:** merge-boundary doctrine in `lean-plan-writing` + dd Gates 2/5;
-  pressure scenario holds; references swept; Gate-5 touch coordinated with PR-2
-  (Task 3b).
-- [ ] **PR-4:** artifact-aware facet set (executability + doctrine-consistency)
-  live for doc-dominant cold-reads in both dd-review command copies.
+- [x] **PR-3:** merge-boundary rule shipped in `lean-plan-writing` (one line,
+  promoted to its own `## Declare merge boundaries` section in #14); pressure
+  scenario held. Task 3b (dd Gate 2/5 touches) dropped — see Phase 3 Status.
+  Merged #12.
+- [x] **PR-4:** artifact-aware facet set (executability + doctrine-consistency)
+  live for doc-dominant cold-reads in both dd-review command copies. Merged #13.
 - [ ] **PR-5:** CWD fix landed with tests; `dd-config.md` precedence updated.
 - [ ] Plan archived to `plans/completed/` on the last merge.
