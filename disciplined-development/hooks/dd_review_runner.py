@@ -640,7 +640,11 @@ def main(argv: list[str] | None = None) -> int:
     # handles the codex-BLOCK case; it is not on this early-return path.
     if tier == "pre-pr":
         commits_since = state.commits_since_checkpoint(repo, branch)
-        if commits_since != 0:  # None (no checkpoint) or >0 both block
+        # Block unless HEAD is exactly a clean checkpoint. Two blocking cases,
+        # stated explicitly: None (no checkpoint, amended-away, OR git
+        # unavailable — fail closed per Decision F) and >0 (commits since the
+        # last clean cold-read). Only == 0 proceeds to codex.
+        if commits_since is None or commits_since > 0:
             _step_back_msg = (
                 "[dd_review pre-pr] BLOCK — HEAD has not been internally reviewed.\n"
                 "\n"
