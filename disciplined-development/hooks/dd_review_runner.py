@@ -629,19 +629,15 @@ def main(argv: list[str] | None = None) -> int:
         logger.emit("noop", reason="empty_diff", base=base)
         return 0
 
-    # Precondition gate (pre-pr only): HEAD must already carry a clean wide-lens
-    # internal review (review.checkpoint == HEAD).  This enforces Gate 5's
-    # self-review-before-external ordering mechanically and prevents the
-    # patch-and-retry codex loop (plan Decision A + C).
-    #
+    # Precondition gate (pre-pr only). See the module docstring for the "what".
     # Placement: AFTER the cheap precedence checks above (cli-missing,
     # base-unresolvable, empty-diff) so those still win, but BEFORE the
     # path-gather + diff-read + codex spawn so a blocked call is free.
     #
     # Exit-code: mirrors the existing BLOCK contract — non-zero under
     # DD_HARD_BLOCK=1 (the wrapper maps to exit 2 → PR hard-blocked),
-    # advisory 0 otherwise.  The existing DD_HARD_BLOCK return at the bottom
-    # of main() is unreachable from this early return path.
+    # advisory 0 otherwise.  The DD_HARD_BLOCK return at the bottom of main()
+    # handles the codex-BLOCK case; it is not on this early-return path.
     if tier == "pre-pr":
         commits_since = state.commits_since_checkpoint(repo, branch)
         if commits_since != 0:  # None (no checkpoint) or >0 both block
@@ -809,9 +805,8 @@ def main(argv: list[str] | None = None) -> int:
     print(review_output)
     if excerpt:
         print(excerpt, file=sys.stderr)
-    # Codex-findings directive (T2 message): on a BLOCK, send the model back
-    # into the wide-lens internal loop rather than patch-and-retry the PR
-    # (plan Decision A; the precondition gate is what enforces it on retry).
+    # Decision A: on a codex BLOCK, route back to the internal loop before
+    # retrying (the precondition gate is what enforces it on retry).
     if decision == "BLOCK":
         print(
             "\nDo NOT patch and retry the PR. Run `/dd-review cold-read`, fold\n"

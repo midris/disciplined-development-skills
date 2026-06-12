@@ -289,13 +289,19 @@ it to exit 2 → PR blocked); advisory `0` otherwise.
     reviewer-path tests go red against the block, *then* add the helper seeding to
     green them — proving the precondition is what gates them, not blanket-passing.
   - **Audit the checkpoint-state tests specifically.** `test_prepr_clean_pass_
-    writes_checkpoint_and_resets_edits` and `test_block_pass_does_not_write_
-    checkpoint` assume *no* checkpoint exists initially; under the new default
-    they start from `checkpoint == HEAD`. Update their assertions to the new
-    pre-state (clean pass keeps `checkpoint == HEAD`; a BLOCK leaves the
-    pre-seeded checkpoint untouched — rather than asserting "no checkpoint").
+    writes_checkpoint_and_resets_edits` and the block-pass test assume *no*
+    checkpoint exists initially; under the new default they start from
+    `checkpoint == HEAD`. Update their assertions to the new pre-state (clean
+    pass keeps `checkpoint == HEAD`; a BLOCK leaves the pre-seeded checkpoint
+    untouched — rather than asserting "no checkpoint"). *Done — the block test
+    was renamed `test_block_leaves_checkpoint_and_edits_unchanged` (the old name
+    asserted "no checkpoint", which the seeded contract refutes) and now also
+    pins `edits.count` untouched, the only BLOCK-observable half.*
   - **References swept:** `dd_review_runner.py` module docstring (the pre-pr
-    behavior summary).
+    behavior summary); `hooks/hook-recipes-claude-code.md` (the `pre_pr_review.py`
+    + `dd_review_runner.py` recipes — precondition short-circuit; this file was
+    missed in PR-1's first pass and caught by the cold-read — the T3 enumeration
+    below should have listed it).
 
 - [x] **T2 — Two distinct directive messages.** The **precondition block** (HEAD
   not internally clean) says: don't retry the PR — run the `/dd-review cold-read`
