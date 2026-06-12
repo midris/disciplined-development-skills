@@ -618,10 +618,11 @@ its boundary. This step is only the wrap-up:
 
 ## Definition of done
 
-- [ ] **PR-1:** precondition gate live in the runner (tests green; mandatory-test
+- [x] **PR-1:** precondition gate live in the runner (tests green; mandatory-test
   area); the two directive messages; existing reviewer-path tests green via the
   pre-pr-scoped checkpoint seeding; hooks README + state model updated (T3); live
-  gate exercise recorded (T4).
+  gate exercise recorded (T4). *Merged in #8 (plans split to #7); internal
+  cold-read + external codex both clean; high-effort code-review fixes folded in.*
 - [ ] **PR-2:** review-loop doctrine — codex findings route to the internal loop +
   the light human-escalation license — in `adversarial-review-loop` + dd Gate 5;
   pressure scenario holds.
