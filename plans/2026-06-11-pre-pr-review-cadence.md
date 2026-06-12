@@ -423,6 +423,29 @@ is model-layer only (a plan the subagent writes), so a synthetic oversized spec
 is the highest-fidelity vehicle. Baseline scenarios go to a scratch dir OUTSIDE
 the repo (CLAUDE.md never-commit).
 
+**Status (2026-06-12) — shipped lean; tasks below kept as the original spec.**
+The `writing-skills` cycle ran clean: **RED** (portable consumer context, no
+PR-sizing CLAUDE.md → 1-PR monolith, 2/2 runs) → **GREEN** (one line → 3–4 sized
+sequential PRs, 2/2) → **REFACTOR** (coupled-migration spec + authority pressure
+to ship atomically → correctly kept one PR with sound size/atomicity reasoning,
+no loophole). **Shipped (Task 3a):** a single line in `lean-plan-writing` —
+*"**Merge boundaries.** Split work into a sequence of branches — each a single
+PR, small enough that one review pass covers it — rather than one monolithic
+PR."* **Decisions (owner, 2026-06-12; `writing-explicit-rationale`):**
+1. **Task 3b dropped.** RED showed the real gap was *portability* — the rule
+   lived only in this repo's CLAUDE.md, not the portable skill set (confirmed:
+   neither `writing-plans` nor dd SKILL.md carries it). The one line closes it;
+   GREEN/REFACTOR surfaced no rationalization it fails to counter, so the
+   dd-table row + Gate 2/5 touches would be unused surface (Principle 7). The dd
+   "chunk" language was not redefined → no sweep needed.
+2. **Decision H's 50–80 KB / 6–8-commit number not shipped.** REFACTOR did not
+   justify a quantified anchor (the coupled case was correctly judged
+   one-PR-appropriate on qualitative grounds); the proven CLAUDE.md phrasing
+   "small enough that one review pass covers it" shipped instead. The number is
+   parked, not deleted.
+
+Re-open either decision if practice surfaces a gap.
+
 ### Task 3a — `lean-plan-writing` gains the merge-boundaries section
 
 **Files:** Modify `lean-plan-writing/SKILL.md`.
