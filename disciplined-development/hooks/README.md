@@ -30,7 +30,7 @@ the commit ceiling, and the pre-PR gate is an advisory nudge.
 | `discipline_nudge.py` | PreToolUse | `*` (all) | Count tool-calls since the last re-ground; at the threshold emit a "re-read CLAUDE.md + the plan, re-check the skills" nudge and reset. | `DD_SKIP_DISCIPLINE_NUDGE` |
 | `edit_block.py` | PreToolUse | `Edit\|Write` | **Hard block.** Deny when stored `edits.count` ≥ 60 (i.e. the 61st edit). Reads only; never increments. | `DD_SKIP_EDIT_BLOCK` |
 | `commit_block.py` | PreToolUse | `Bash` (`is_git_commit`) | **Hard block.** Deny a `git commit` (incl. `--amend`) when commits-since-last-cold-read ≥ 5 — allows 5, denies the 6th. | `DD_SKIP_COMMIT_BLOCK` |
-| `pre_pr_review.py` | PreToolUse | `Bash` (`gh pr create`) | **Hard block.** Detect → extract base/cwd → delegate to `dd_review_runner.py pre-pr` with `DD_HARD_BLOCK=1`. The runner short-circuits with a step-back message if `review.checkpoint` is not at HEAD (precondition gate); otherwise dispatches codex. Blocks the PR on findings or a failed precondition. | `DD_SKIP_PR_REVIEW` |
+| `pre_pr_review.py` | PreToolUse | `Bash` (`gh pr create`) | **Hard block.** Detect → extract base/cwd → delegate to `dd_review_runner.py pre-pr` with `DD_HARD_BLOCK=1`. Blocks the PR on findings. | `DD_SKIP_PR_REVIEW` |
 | `edit_counter.py` | PostToolUse | `Edit\|Write` | Increment `edits.count`; emit a T0 nudge on each edit once the stored count reaches 30, continuing until a clean review resets the counter. Advisory only — PostToolUse runs after the edit. | `DD_SKIP_EDIT_COUNTER` |
 | `review_nudge.py` | PostToolUse | `Bash` | On a landed commit: always emit a Gate-3 **verify** reminder; also T1 nudge when `edits.count` ≥ 30; also T2 nudge when commits-since-cold-read ≥ 3. | `DD_SKIP_REVIEW_NUDGE` |
 | `session_reground.py` | SessionStart | — | On every session (re)start, emit a source-specific preamble + shared re-ground instructions. Fires on all sources (startup/resume/clear/compact); unknown source fires with a generic preamble. | `DD_SKIP_SESSION_REGROUND` |
@@ -56,7 +56,7 @@ the single **`/dd-review <tier>`** command.
 | **T0 fast** | edit counter ≥ 30 (nudge) or ≥ 60 (block) | 1 holistic subagent | working-tree vs HEAD | at 60 edits (`edit_block.py`) |
 | **T1 regular** | landed commit when `edits.count` ≥ 30 (nudge) | holistic + correctness + rationale subagents | fork-base..HEAD | — nudge only |
 | **T2 cold-read** | 3 commits since checkpoint (nudge) or 5 (block) | holistic + correctness + rationale + cross-file + security + necessity | fork-base..HEAD | at 5 commits (`commit_block.py`) |
-| **T3 pre-pr** | `gh pr create` | `codex review` (subprocess) — gated by precondition | fork-base..HEAD | always (`pre_pr_review.py`) |
+| **T3 pre-pr** | `gh pr create` | `codex review` (subprocess) | fork-base..HEAD | always (`pre_pr_review.py`) |
 
 **T0–T2 reviewer:** the `/dd-review` command dispatches fresh adversarial-review
 subagents in parallel (Task tool — runs in-session on the subscription). A
@@ -93,14 +93,10 @@ The layer is advisory — a read or write failure degrades to a safe default.
   codex pass.
 
 - **`review.checkpoint`** — SHA of HEAD at the last clean cold-read (T2) or
-  pre-PR (T3). Has two roles: (1) **gates pre-PR entry** — `dd_review_runner.py`
-  checks `commits_since_checkpoint` before dispatching codex; if the result is
-  not `0` (no checkpoint, or commits since the last clean cold-read), the runner
-  blocks with a step-back message and skips the codex call; (2) **cadence
-  counter** — `commit_block.py` and the T2 segment of `review_nudge.py` count
-  commits since this SHA. When absent (fresh branch or no clean wide-lens review
-  yet), both fall back to counting from the **fork base** at the same thresholds
-  — so the T2 block fires even on a branch that has never been cold-read.
+  pre-PR (T3). `commit_block.py` and the T2 segment of `review_nudge.py`
+  count commits since this SHA. When absent (fresh branch or no cold-read yet),
+  both fall back to counting from the **fork base** at the same thresholds —
+  so the T2 block fires even on a branch that has never been cold-read.
 
 **Reset rule:**
 - A clean **T0** or **T1** review resets `edits.count` only

@@ -106,10 +106,8 @@ Detect `gh pr create` (via `command_match.find_gh_pr_create`), extract the
 review base (`--base`/`-B` → `branch.<cur>.gh-merge-base` git config) and a
 chained-`cd` target cwd, then delegate to `dd_review_runner.py pre-pr` with
 `DD_HARD_BLOCK=1`, forwarding `--base`/`--cwd` only when parsed. Detect +
-extract + delegate — no review/severity/precondition logic here (all in the
-runner); `dd_review_runner` blocks the PR (exit 2, propagated) either at the
-**precondition gate** (HEAD not at a clean cold-read/pre-PR checkpoint — codex
-never runs) or on `[P0]`/`[P1]`/`[P2]` codex findings. An unexpandable
+extract + delegate — no review/severity logic here; `dd_review_runner` blocks the
+PR (exit 2, propagated) on `[P0]`/`[P1]`/`[P2]` findings. An unexpandable
 chained `cd` (`cd $X && gh pr create`) fails **loud** (block) rather than
 letting an unreviewed PR through.
 
@@ -177,15 +175,10 @@ point at.
 ```
 python3 dd_review_runner.py pre-pr [--base <ref>] [--cwd <path>]
 ```
-**Precondition gate:** before dispatching codex, blocks (skipping codex) when
-`state.commits_since_checkpoint != 0` — i.e. HEAD is not exactly the last clean
-cold-read/pre-PR checkpoint — with a step-back message routing the model into
-an internal cold-read first. Only `== 0` lets codex run. Then runs `codex
-review` against the fork-base diff (pre-pr honours `--base`), severity-scans,
-writes the checkpoint + resets `edits.count` on a clean pass, and appends a rich
-record to `reviews.jsonl`. Returns non-zero under `DD_HARD_BLOCK=1` (set by
-`pre_pr_review.py`) on either a precondition block or codex findings; manual
-runs are advisory.
+Runs `codex review` against the fork-base diff (pre-pr honours `--base`),
+severity-scans, writes the checkpoint + resets `edits.count` on a clean pass,
+and appends a rich record to `reviews.jsonl`. Returns non-zero under
+`DD_HARD_BLOCK=1` (set by `pre_pr_review.py`); manual runs are advisory.
 
 **Post-clean-review state write (T0/T1/T2):**
 ```

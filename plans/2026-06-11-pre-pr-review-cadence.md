@@ -6,10 +6,11 @@ tagalong bug-fix:
 
 1. **Precondition gate (runtime)** — slow external codex review fires far less
    often: it won't run unless HEAD already carries a clean wide-lens internal
-   review. *(PR-1, Phase 1.)*
-2. **Review-loop doctrine** — codex findings route back through the internal
-   `adversarial-review-loop` (not patch-and-retry), with a light human-escalation
-   license. *(PR-2, Phase 2.)*
+   review. *(PR-1, Phase 1 — **REVERTED 2026-06-12; see Status**.)*
+2. **Review-loop doctrine → discoverability** — the `adversarial-review-loop`
+   description now advertises external reviews, so the existing loop (cap +
+   cold-read escape + human) is found and applied to them. *(PR-2, Phase 2 —
+   shipped; descoped from the planned doctrine — see Phase 2.)*
 3. **Merge-boundary doctrine** — plans declare merge boundaries so each codex
    review stays small, comprehensive, and convergent (the lever that keeps codex
    diffs from snowballing — scope control, not delta-scoping the review).
@@ -21,6 +22,25 @@ tagalong bug-fix:
 
 Prose is the contract; the implementer writes against existing patterns with
 running tests as feedback (`lean-plan-writing`).
+
+## Status (2026-06-12)
+
+**Phase 1 (precondition gate) reverted.** Shipped as PR #8, then reverted (revert
+of merge `d35ca4b`) after the Phase 2 RED investigation: 5 subagent runs showed a
+disciplined model already routes external findings through the internal loop and
+escalates early — with or without the gate — so the mechanical precondition gate
+is **overkill** for now (Principle 7). Decision (owner): ship the doctrine-only
+approach (Phase 2 discoverability edit) and **try it in practice before re-adding
+the gate**. The revert removed the gate's runner code, tests, hook
+README/recipes, and command-copy edits. **Decisions A, B, C, F, G** below are
+precondition-gate decisions — now moot/historical (kept as the record of why the
+gate was built and how it would work if re-added). **Decisions D, E, H, I, J, K**
+still stand for the surviving phases.
+
+**Remaining scope:** Phase 2 (shipped) · Phase 3 (`lean-plan-writing` merge
+boundaries / smaller chunks) · Phase 4 (artifact-aware angles) · Phase 5 (config
+CWD fix). Phase 1 is parked, not deleted — re-open if doctrine-first proves
+insufficient in practice.
 
 **Merge boundaries (dogfooding front 3).** Five independently mergeable PRs, each
 green and coherent alone, each validated and cold-read **at its own boundary**
@@ -223,7 +243,12 @@ into this repo's settings.
 
 ---
 
-## Phase 1 — Precondition gate (PR-1)
+## Phase 1 — Precondition gate (PR-1) — REVERTED 2026-06-12
+
+> **Reverted** (revert of #8's merge `d35ca4b`) — see Status at top for why. The
+> task detail below is retained as the spec for re-adding the gate if
+> doctrine-first proves insufficient; its checkboxes are intentionally left
+> as-is (the work shipped, then was reverted).
 
 The one runtime behavior change. Placement matters: insert in `dd_review_runner.py
 main()` **after the empty-diff exit** (`dd_review_runner.py:~619`) and **before
@@ -237,7 +262,7 @@ at the insertion site: the existing one (`:~785`) is past this early return and
 unreachable from here. Return non-zero under `DD_HARD_BLOCK=1` (the wrapper maps
 it to exit 2 → PR blocked); advisory `0` otherwise.
 
-- [x] **T1 — Precondition gate.** When `tier == "pre-pr"` and
+- [ ] **T1 — Precondition gate.** When `tier == "pre-pr"` and
   `state.commits_since_checkpoint(repo, branch) != 0`, emit a BLOCK outcome with
   the step-back message and skip the reviewer dispatch entirely. When `== 0`,
   proceed to codex unchanged.
@@ -289,21 +314,15 @@ it to exit 2 → PR blocked); advisory `0` otherwise.
     reviewer-path tests go red against the block, *then* add the helper seeding to
     green them — proving the precondition is what gates them, not blanket-passing.
   - **Audit the checkpoint-state tests specifically.** `test_prepr_clean_pass_
-    writes_checkpoint_and_resets_edits` and the block-pass test assume *no*
-    checkpoint exists initially; under the new default they start from
-    `checkpoint == HEAD`. Update their assertions to the new pre-state (clean
-    pass keeps `checkpoint == HEAD`; a BLOCK leaves the pre-seeded checkpoint
-    untouched — rather than asserting "no checkpoint"). *Done — the block test
-    was renamed `test_block_leaves_checkpoint_and_edits_unchanged` (the old name
-    asserted "no checkpoint", which the seeded contract refutes) and now also
-    pins `edits.count` untouched, the only BLOCK-observable half.*
+    writes_checkpoint_and_resets_edits` and `test_block_pass_does_not_write_
+    checkpoint` assume *no* checkpoint exists initially; under the new default
+    they start from `checkpoint == HEAD`. Update their assertions to the new
+    pre-state (clean pass keeps `checkpoint == HEAD`; a BLOCK leaves the
+    pre-seeded checkpoint untouched — rather than asserting "no checkpoint").
   - **References swept:** `dd_review_runner.py` module docstring (the pre-pr
-    behavior summary); `hooks/hook-recipes-claude-code.md` (the `pre_pr_review.py`
-    + `dd_review_runner.py` recipes — precondition short-circuit; this file was
-    missed in PR-1's first pass and caught by the cold-read — the T3 enumeration
-    below should have listed it).
+    behavior summary).
 
-- [x] **T2 — Two distinct directive messages.** The **precondition block** (HEAD
+- [ ] **T2 — Two distinct directive messages.** The **precondition block** (HEAD
   not internally clean) says: don't retry the PR — run the `/dd-review cold-read`
   **command** (model-layer; the runner's review path takes only `pre-pr`), fold
   in any prior external findings, iterate to clean per `adversarial-review-loop`,
@@ -326,7 +345,7 @@ it to exit 2 → PR blocked); advisory `0` otherwise.
     through — add/extend a test only if that path changes; otherwise record it as
     verified, no code edit.
 
-- [x] **T3 — Reference docs (PR-1's doc surface — lands in this PR, not deferred).**
+- [ ] **T3 — Reference docs (PR-1's doc surface — lands in this PR, not deferred).**
   Update `disciplined-development/hooks/README.md`: the T3-tier row, the
   `pre_pr_review.py` / `dd_review_runner.py` rows (precondition short-circuit
   before codex), and the **state model** — `review.checkpoint` now *gates pre-PR
@@ -346,7 +365,7 @@ it to exit 2 → PR blocked); advisory `0` otherwise.
   - **References swept:** `hooks/README.md` (hook + four-tier tables, state
     model); both command copies (`.claude/commands/dd-review.md` +
     `examples/commands/dd-review.md`) if the clean-pass step needs tightening.
-- [x] **T4 — Live gate exercise (gated/manual, Decision E).** Drive the gate
+- [ ] **T4 — Live gate exercise (gated/manual, Decision E).** Drive the gate
   explicitly under `DD_HARD_BLOCK=1` against fixture F. Two checks:
   - **Precondition short-circuit (deterministic, required).** `review.checkpoint`
     behind HEAD → PR blocked (exit 2), reviewer never invoked, step-back message
@@ -359,19 +378,8 @@ it to exit 2 → PR blocked); advisory `0` otherwise.
     non-deterministic, so the authoritative pass/fail stays the deterministic stub
     (T1 + the PR-2 RED/GREEN); a no-flag result is logged, not a failure. Not
     added to the always-green suite (stdlib-only contract).
-  - **Result (2026-06-12, via a scratch fixture F driven through a real
-    `pre_pr_review.py` `gh pr create` envelope):** (1) no checkpoint at HEAD →
-    exit 2, codex shim never invoked, step-back message on stderr; (2)
-    checkpoint==HEAD + shim → codex dispatched, `[P0]` → exit 2 with the
-    back-to-internal-loop directive; (3) real codex (cli 0.139.0, shim removed)
-    on the `os.system(...+user_input)` snippet → `1×P1` in 10s, exit 2, directive
-    fired. All three confirmed end-to-end through the wrapper.
-- [x] **PR-1 boundary:** hook suite green (284 passed, 3 skipped); internal
-  `/dd-review cold-read` clean (2 cycles); a manual external **codex** review of
-  the gate diff (`pre-pr --base c67ccdf`) returned 1×P2 (precondition blocks
-  weren't appended to `reviews.jsonl`) — fixed test-first in `6cde827`, codex
-  re-review PASS. Gate landed on its own branch; plans split to a prior
-  `docs(plans)` PR (boundary-coherence — see merge-boundaries note).
+- [ ] **PR-1 boundary:** hook suite green (`cd disciplined-development/hooks &&
+  python3 -m pytest -q`); `/dd-review cold-read` to clean; PR.
 
 ---
 
@@ -404,7 +412,7 @@ the old description steered models *away* from the loop on external reviews.
   Sweep: no internal-only steering in the body; references cite the skill by name
   (no staleness). Decisions A/J updated (the hook message held under max pressure;
   escalation emerged unprompted). RED transcripts → scratch dir outside the repo.
-- [ ] **PR-2 boundary:** hook suite green (markdown-only, run anyway); PR + merge.
+- [x] **PR-2 boundary:** hook suite green (markdown-only); shipped as PR #10.
 
 ---
 
@@ -570,14 +578,13 @@ its boundary. This step is only the wrap-up:
 
 ## Definition of done
 
-- [x] **PR-1:** precondition gate live in the runner (tests green; mandatory-test
-  area); the two directive messages; existing reviewer-path tests green via the
-  pre-pr-scoped checkpoint seeding; hooks README + state model updated (T3); live
-  gate exercise recorded (T4). *Merged in #8 (plans split to #7); internal
-  cold-read + external codex both clean; high-effort code-review fixes folded in.*
-- [ ] **PR-2:** review-loop doctrine — codex findings route to the internal loop +
-  the light human-escalation license — in `adversarial-review-loop` + dd Gate 5;
-  pressure scenario holds.
+- [ ] **PR-1: REVERTED 2026-06-12.** Shipped in #8 (precondition gate, tests,
+  T3 docs, T4 exercise — all clean), then reverted (revert of `d35ca4b`) per the
+  Status note: doctrine-first first. Re-open if practice shows the gate is needed.
+- [x] **PR-2:** external-review **discoverability** — `adversarial-review-loop`
+  description advertises external reviews; body's existing loop (cap + escape +
+  human) inherited. Descoped from the planned doctrine (no failing baseline);
+  A/B discoverability GREEN. Shipped as #10.
 - [ ] **PR-3:** merge-boundary doctrine in `lean-plan-writing` + dd Gates 2/5;
   pressure scenario holds; references swept; Gate-5 touch coordinated with PR-2
   (Task 3b).
