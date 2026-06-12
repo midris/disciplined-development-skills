@@ -549,9 +549,10 @@ def main(argv: list[str] | None = None) -> int:
         return 1
     repo = repo_root
 
-    # Config must follow --cwd: config._user_config_path() reads
-    # Path.cwd()/.claude/dd-config.json, which is the WRONG repo when --cwd
-    # retargets another tree. Steer DD_CONFIG at the target repo before the
+    # Config must follow --cwd: config._user_config_path() resolves
+    # .claude/dd-config.json under $CLAUDE_PROJECT_DIR (or cwd when unset) — the
+    # ORIGINAL project in a live session, not the --cwd target tree. Steer
+    # DD_CONFIG at the target repo before the
     # first config.get(...) below. Don't clobber a DD_CONFIG the caller/test
     # already set to a real path. An empty-string DD_CONFIG is treated as
     # unset — config.py itself reads it via a falsy `if override:` check, and
