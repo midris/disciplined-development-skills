@@ -325,10 +325,12 @@ it to exit 2 → PR blocked); advisory `0` otherwise.
   `pre_pr_review.py` / `dd_review_runner.py` rows (precondition short-circuit
   before codex), and the **state model** — `review.checkpoint` now *gates pre-PR
   entry*, not only resets `edits.count` on a clean exit.
-  - **Loop-closure check (Decision G):** confirm `/dd-review cold-read`
-    (`examples/commands/dd-review.md`) runs `dd_review_runner.py
-    --write-checkpoint cold-read` on a clean pass — that write unblocks the gate;
-    make it explicit there if implicit.
+  - **Loop-closure check (Decision G):** confirm `/dd-review cold-read` runs
+    `dd_review_runner.py --write-checkpoint cold-read` on a clean pass — that
+    write unblocks the gate. Make it explicit if implicit in **both command
+    copies** (`.claude/commands/dd-review.md` source +
+    `examples/commands/dd-review.md`, same commit — public-API-surface rule, as
+    PR-4 requires).
   - **Surface check:** top-level `README.md` four-tier text + `examples/`
     (`settings.hooks.json`, `dd-config.json`, `CLAUDE.md-snippet.md`) —
     expectation **no change** (no new hook/config key); but if README /
@@ -336,8 +338,8 @@ it to exit 2 → PR blocked); advisory `0` otherwise.
     *aspirationally*, it is now mechanically enforced — update that phrasing.
     `dd-config.md` unchanged on this account (Decision D).
   - **References swept:** `hooks/README.md` (hook + four-tier tables, state
-    model); `examples/commands/dd-review.md` if its clean-pass step needs
-    tightening.
+    model); both command copies (`.claude/commands/dd-review.md` +
+    `examples/commands/dd-review.md`) if the clean-pass step needs tightening.
 - [ ] **T4 — Live gate exercise (gated/manual, Decision E).** Drive the gate
   explicitly under `DD_HARD_BLOCK=1` against fixture F. Two checks:
   - **Precondition short-circuit (deterministic, required).** `review.checkpoint`
