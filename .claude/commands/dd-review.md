@@ -50,6 +50,8 @@ reviewers. Sets are monotonic — each tier is a superset of the one below:
 | `regular` | holistic, correctness, rationale |
 | `cold-read` | holistic, correctness, rationale, cross-file, security, necessity |
 
+At cold-read, a **doc-dominant** diff substitutes two of these angles — see "Doc-dominant cold-reads" below.
+
 Each subagent prompt must:
 - Load the `adversarial-review` skill — invoke it via the Skill tool, or if
   unavailable read `adversarial-review/SKILL.md` from disk and follow it.
@@ -67,6 +69,10 @@ Angle focus lines (append exactly one to the corresponding reviewer):
 - **cross-file** — divergence from canonical modules, broken imports, caller / contract drift.
 - **security** — path traversal, injection, unvalidated input, unsafe path building.
 - **necessity** — cut what doesn't earn its place. Code: dead code, over-engineering, premature abstraction / config (Principle 7). Prose: padded / verbose docs + comments — this reviewer also loads the `concise-writing` skill.
+- **executability** *(doc-dominant cold-reads — replaces security)* — could a zero-context implementer execute this? Verify every factual repo claim; flag missing definitions, ambiguous contracts, misdirecting file lists.
+- **doctrine-consistency** *(doc-dominant cold-reads — replaces cross-file)* — drift against governing docs: CLAUDE.md, locked decisions in plans/specs, companion plans, the skills' own rules, single-source duplication.
+
+**Doc-dominant cold-reads.** When the cold-read diff is predominantly doc artifacts (plans, specs, SKILL.md, command files), substitute two angles — **security → executability**, **cross-file → doctrine-consistency**. Doc-dominance is your one-line judgment when dispatching; a mixed diff keeps the code set, but add a doc-consistency note to the cross-file reviewer's prompt.
 
 **3. Aggregate** the subagents' findings: dedupe by `file:line`, keep the
 highest severity, union the detail. This is model judgment (like
