@@ -548,14 +548,14 @@ doctrine, currently duplicated across the two command copies) → see
 `disciplined-development/hooks/tests/test_config.py`; modify
 `disciplined-development/hooks/dd-config.md` (Precedence / resolution-order doc).
 
-- [ ] **Tests RED:** `CLAUDE_PROJECT_DIR` set + cwd elsewhere → override found at
+- [x] **Tests RED:** `CLAUDE_PROJECT_DIR` set + cwd elsewhere → override found at
   the project dir; unset → cwd fallback (existing behavior pinned); `DD_CONFIG`
   still wins over both. Not cache-defeated in normal single-shot hook execution;
   the test obligation is calling the existing `reset_config_cache()` between
   sub-cases (the suite already uses it).
-- [ ] **Implement:** prefer `$CLAUDE_PROJECT_DIR`, then cwd, in
+- [x] **Implement:** prefer `$CLAUDE_PROJECT_DIR`, then cwd, in
   `_user_config_path`.
-- [ ] **Suite green; sweep `dd-config.md`; commit** (`fix(config): resolve project
+- [x] **Suite green; sweep `dd-config.md`; commit** (`fix(config): resolve project
   overrides via CLAUDE_PROJECT_DIR`). `References swept:` `dd-config.md`
   precedence/resolution-order section.
 
