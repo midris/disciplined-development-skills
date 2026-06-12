@@ -168,27 +168,36 @@ def feature_repo(review_env):
 
 
 def _prepr_seed_target(repo, args):
-    """Return (target_repo_path, branch_str) or None for a pre-pr invocation.
+    """Return (git_root, branch_str) or None for a pre-pr invocation.
 
-    When --cwd <path> is in args the target repo is that path (the runner
-    resolves git root itself; we just need the dir for git calls here).
-    Otherwise the target is `repo`.  Branch falls back to "detached" to match
-    the runner's `_current_branch(repo) or "detached"` resolution.
+    Resolves the target's git root via `rev-parse --show-toplevel` — the same
+    root the runner stores state under — so the seed lands where the
+    precondition reads it even if --cwd points at a subdirectory. The --cwd
+    value (when present) selects the target tree; otherwise `repo` is used.
+    Branch falls back to "detached" to match the runner's
+    `_current_branch(repo) or "detached"` resolution.
 
-    Returns None when the target path is not a valid git repo (e.g. --cwd
-    pointing at a non-existent path in error-path tests) — caller skips seed.
+    Returns None when the target is not a valid git repo (e.g. --cwd pointing at
+    a non-existent path in error-path tests) — caller skips the seed.
     """
-    target = repo
+    cwd = repo
     if "--cwd" in args:
-        target = Path(args[args.index("--cwd") + 1])
+        cwd = Path(args[args.index("--cwd") + 1])
     try:
-        rc = subprocess.run(
-            ["git", "-C", str(target), "symbolic-ref", "--short", "HEAD"],
+        root_rc = subprocess.run(
+            ["git", "-C", str(cwd), "rev-parse", "--show-toplevel"],
+            capture_output=True, text=True, timeout=5,
+        )
+        if root_rc.returncode != 0 or not root_rc.stdout.strip():
+            return None
+        target = root_rc.stdout.strip()
+        br_rc = subprocess.run(
+            ["git", "-C", target, "symbolic-ref", "--short", "HEAD"],
             capture_output=True, text=True, timeout=5,
         )
     except Exception:
         return None
-    branch = rc.stdout.strip() if rc.returncode == 0 else "detached"
+    branch = br_rc.stdout.strip() if br_rc.returncode == 0 else "detached"
     return target, branch or "detached"
 
 
@@ -206,9 +215,6 @@ def _run(env, repo, args, stub_stdout="No findings.", stub_exit=0,
     if extra:
         full.update(extra)
 
-    # Fixture-contract: seed checkpoint=HEAD for pre-pr so existing reviewer-
-    # path tests keep exercising codex rather than hitting the precondition
-    # block.  Tests that need the block set seed_checkpoint=False.
     if seed_checkpoint and "pre-pr" in args:
         seed_result = _prepr_seed_target(repo, args)
         if seed_result is not None:
@@ -530,6 +536,10 @@ def test_cli_missing_errors(review_env, tmp_path):
     isolated.mkdir()
     (isolated / "git").symlink_to(shutil.which("git"))
     env = {**env, "PATH": str(isolated)}
+    # _run's default seed_checkpoint=True seeds checkpoint=HEAD here, so the
+    # precondition would pass — but cli_missing fires first (upstream of the
+    # gate), which is exactly the precedence this test pins. The dedicated
+    # no-checkpoint case is test_prepr_missing_reviewer_errors_before_precondition.
     proc = _run(env, repo, ["pre-pr"])
     assert proc.returncode == 1  # operational failure (not a usage error)
     assert "not found on PATH" in proc.stderr
@@ -572,8 +582,8 @@ def test_prepr_clean_pass_writes_checkpoint_and_resets_edits(review_env):
     assert state.read(str(repo), "feature/x", "edits") == 0
 
 
-def test_block_pass_does_not_write_checkpoint(review_env):
-    """A BLOCK (P1 finding) must NOT advance the checkpoint past its pre-state.
+def test_block_leaves_checkpoint_and_edits_unchanged(review_env):
+    """A BLOCK (P1 finding) must NOT advance the checkpoint or reset edits.count.
 
     Under the new fixture contract, _run seeds checkpoint=HEAD before the call
     (so the precondition passes and codex runs).  A BLOCK leaves the checkpoint
@@ -1272,7 +1282,9 @@ def test_prepr_blocks_when_commits_since_checkpoint(review_env):
     commits_since_checkpoint returns 1.
     """
     env, repo, _ = review_env
-    # Seed checkpoint at master tip (the fork base = one commit behind HEAD).
+    # Seed checkpoint at master tip — one commit behind feature/x HEAD, and an
+    # ancestor of it, so commits_since_checkpoint counts 1 (here master tip
+    # coincides with the fork base, the branch having no divergence).
     master_sha = _git(repo, "rev-parse", "master")
     # seed_checkpoint=False: we seed our own stale checkpoint, not HEAD.
     _seed_checkpoint(repo, master_sha)
