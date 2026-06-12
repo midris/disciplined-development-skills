@@ -237,7 +237,7 @@ at the insertion site: the existing one (`:~785`) is past this early return and
 unreachable from here. Return non-zero under `DD_HARD_BLOCK=1` (the wrapper maps
 it to exit 2 → PR blocked); advisory `0` otherwise.
 
-- [ ] **T1 — Precondition gate.** When `tier == "pre-pr"` and
+- [x] **T1 — Precondition gate.** When `tier == "pre-pr"` and
   `state.commits_since_checkpoint(repo, branch) != 0`, emit a BLOCK outcome with
   the step-back message and skip the reviewer dispatch entirely. When `== 0`,
   proceed to codex unchanged.
@@ -297,7 +297,7 @@ it to exit 2 → PR blocked); advisory `0` otherwise.
   - **References swept:** `dd_review_runner.py` module docstring (the pre-pr
     behavior summary).
 
-- [ ] **T2 — Two distinct directive messages.** The **precondition block** (HEAD
+- [x] **T2 — Two distinct directive messages.** The **precondition block** (HEAD
   not internally clean) says: don't retry the PR — run the `/dd-review cold-read`
   **command** (model-layer; the runner's review path takes only `pre-pr`), fold
   in any prior external findings, iterate to clean per `adversarial-review-loop`,
@@ -320,7 +320,7 @@ it to exit 2 → PR blocked); advisory `0` otherwise.
     through — add/extend a test only if that path changes; otherwise record it as
     verified, no code edit.
 
-- [ ] **T3 — Reference docs (PR-1's doc surface — lands in this PR, not deferred).**
+- [x] **T3 — Reference docs (PR-1's doc surface — lands in this PR, not deferred).**
   Update `disciplined-development/hooks/README.md`: the T3-tier row, the
   `pre_pr_review.py` / `dd_review_runner.py` rows (precondition short-circuit
   before codex), and the **state model** — `review.checkpoint` now *gates pre-PR
@@ -340,7 +340,7 @@ it to exit 2 → PR blocked); advisory `0` otherwise.
   - **References swept:** `hooks/README.md` (hook + four-tier tables, state
     model); both command copies (`.claude/commands/dd-review.md` +
     `examples/commands/dd-review.md`) if the clean-pass step needs tightening.
-- [ ] **T4 — Live gate exercise (gated/manual, Decision E).** Drive the gate
+- [x] **T4 — Live gate exercise (gated/manual, Decision E).** Drive the gate
   explicitly under `DD_HARD_BLOCK=1` against fixture F. Two checks:
   - **Precondition short-circuit (deterministic, required).** `review.checkpoint`
     behind HEAD → PR blocked (exit 2), reviewer never invoked, step-back message
@@ -353,6 +353,13 @@ it to exit 2 → PR blocked); advisory `0` otherwise.
     non-deterministic, so the authoritative pass/fail stays the deterministic stub
     (T1 + the PR-2 RED/GREEN); a no-flag result is logged, not a failure. Not
     added to the always-green suite (stdlib-only contract).
+  - **Result (2026-06-12, via a scratch fixture F driven through a real
+    `pre_pr_review.py` `gh pr create` envelope):** (1) no checkpoint at HEAD →
+    exit 2, codex shim never invoked, step-back message on stderr; (2)
+    checkpoint==HEAD + shim → codex dispatched, `[P0]` → exit 2 with the
+    back-to-internal-loop directive; (3) real codex (cli 0.139.0, shim removed)
+    on the `os.system(...+user_input)` snippet → `1×P1` in 10s, exit 2, directive
+    fired. All three confirmed end-to-end through the wrapper.
 - [ ] **PR-1 boundary:** hook suite green (`cd disciplined-development/hooks &&
   python3 -m pytest -q`); `/dd-review cold-read` to clean; PR.
 
