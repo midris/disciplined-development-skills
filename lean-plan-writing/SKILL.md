@@ -41,7 +41,9 @@ The substitute for embedded code is a **denser test contract**, not vaguer prose
 
 Both bound by prose-is-the-contract.
 
-**Merge boundaries.** Split work into a sequence of branches — each a single PR, small enough that one review pass covers it — rather than one monolithic PR.
+## Declare merge boundaries
+
+Split a plan's work into a sequence of branches — each a single PR, small enough that one review pass covers it — rather than one monolithic PR.
 
 ## Rationalizations
 
