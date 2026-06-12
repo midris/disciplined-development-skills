@@ -167,65 +167,11 @@ def feature_repo(review_env):
     return review_env[1]
 
 
-def _prepr_seed_target(repo, args):
-    """Return (git_root, branch_str) or None for a pre-pr invocation.
-
-    Resolves the target's git root via `rev-parse --show-toplevel` — the same
-    root the runner stores state under — so the seed lands where the
-    precondition reads it even if --cwd points at a subdirectory. The --cwd
-    value (when present) selects the target tree; otherwise `repo` is used.
-    Branch falls back to "detached" to match the runner's
-    `_current_branch(repo) or "detached"` resolution.
-
-    Returns None when the target is not a valid git repo (e.g. --cwd pointing at
-    a non-existent path in error-path tests) — caller skips the seed.
-    """
-    cwd = repo
-    if "--cwd" in args:
-        cwd = Path(args[args.index("--cwd") + 1])
-    try:
-        root_rc = subprocess.run(
-            ["git", "-C", str(cwd), "rev-parse", "--show-toplevel"],
-            capture_output=True, text=True, timeout=5,
-        )
-        if root_rc.returncode != 0 or not root_rc.stdout.strip():
-            return None
-        target = root_rc.stdout.strip()
-        br_rc = subprocess.run(
-            ["git", "-C", target, "symbolic-ref", "--short", "HEAD"],
-            capture_output=True, text=True, timeout=5,
-        )
-    except Exception:
-        return None
-    branch = br_rc.stdout.strip() if br_rc.returncode == 0 else "detached"
-    return target, branch or "detached"
-
-
-def _run(env, repo, args, stub_stdout="No findings.", stub_exit=0,
-         extra=None, seed_checkpoint=True):
-    """Run the review engine as a subprocess.
-
-    seed_checkpoint (default True): when the invocation is a pre-pr review,
-    seed review.checkpoint = HEAD in the target repo under the correct branch
-    slug before spawning.  Pass seed_checkpoint=False for precondition tests
-    and no-mutation tests that set their own checkpoint state.
-    """
+def _run(env, repo, args, stub_stdout="No findings.", stub_exit=0, extra=None):
     full = {**env, "DD_REVIEW_STUB_STDOUT": stub_stdout,
             "DD_REVIEW_STUB_EXIT": str(stub_exit)}
     if extra:
         full.update(extra)
-
-    if seed_checkpoint and "pre-pr" in args:
-        seed_result = _prepr_seed_target(repo, args)
-        if seed_result is not None:
-            target, branch = seed_result
-            head_rc = subprocess.run(
-                ["git", "-C", str(target), "rev-parse", "HEAD"],
-                capture_output=True, text=True, timeout=5,
-            )
-            head_sha = head_rc.stdout.strip() if head_rc.returncode == 0 else ""
-            if head_sha:
-                state.set_checkpoint(str(target), branch, head_sha)
 
     def _spawn():
         return subprocess.run(
@@ -255,14 +201,13 @@ def _run(env, repo, args, stub_stdout="No findings.", stub_exit=0,
 
 
 def _argv_log(env, repo, args, stub_stdout="No findings.", stub_exit=0,
-              extra=None, seed_checkpoint=True):
+              extra=None):
     log = repo / "argv.log"
     stdin_log = repo / "stdin.log"
     e = {"DD_REVIEW_ARGV_LOG": str(log), "DD_REVIEW_STDIN_LOG": str(stdin_log)}
     if extra:
         e.update(extra)
-    proc = _run(env, repo, args, stub_stdout, stub_exit, extra=e,
-                seed_checkpoint=seed_checkpoint)
+    proc = _run(env, repo, args, stub_stdout, stub_exit, extra=e)
     argv = log.read_text().splitlines() if log.exists() else []
     stdin = stdin_log.read_text() if stdin_log.exists() else ""
     return proc, argv, stdin
@@ -536,10 +481,6 @@ def test_cli_missing_errors(review_env, tmp_path):
     isolated.mkdir()
     (isolated / "git").symlink_to(shutil.which("git"))
     env = {**env, "PATH": str(isolated)}
-    # _run's default seed_checkpoint=True seeds checkpoint=HEAD here, so the
-    # precondition would pass — but cli_missing fires first (upstream of the
-    # gate), which is exactly the precedence this test pins. The dedicated
-    # no-checkpoint case is test_prepr_missing_reviewer_errors_before_precondition.
     proc = _run(env, repo, ["pre-pr"])
     assert proc.returncode == 1  # operational failure (not a usage error)
     assert "not found on PATH" in proc.stderr
@@ -582,32 +523,14 @@ def test_prepr_clean_pass_writes_checkpoint_and_resets_edits(review_env):
     assert state.read(str(repo), "feature/x", "edits") == 0
 
 
-def test_block_leaves_checkpoint_and_edits_unchanged(review_env):
-    """A BLOCK (P1 finding) must NOT advance the checkpoint or reset edits.count.
-
-    Under the new fixture contract, _run seeds checkpoint=HEAD before the call
-    (so the precondition passes and codex runs).  A BLOCK leaves the checkpoint
-    untouched at that pre-seeded HEAD value — commits_since_checkpoint remains
-    0, not None, and the checkpoint file is still the seed value.
-    """
+def test_block_pass_does_not_write_checkpoint(review_env):
+    """A blocking pass (P1 finding) must NOT write the checkpoint."""
     env, repo, _ = review_env
-    # _run default seed_checkpoint=True seeds checkpoint=HEAD before spawning.
-    head = _git(repo, "rev-parse", "HEAD")
-    # Seed a non-zero edits counter. The precondition forces checkpoint==HEAD
-    # before codex runs, so the checkpoint value alone can't distinguish "BLOCK
-    # left it" from "BLOCK rewrote it to HEAD". edits.count is the observable
-    # half: a clean PASS resets it, so a BLOCK leaving it intact is the proof
-    # the BLOCK skips the whole checkpoint+reset block.
-    _seed_edits_count(repo, 17)
     proc = _run(env, repo, ["pre-pr"], stub_stdout="[P1] broken auth at f.go:12\n")
     assert proc.returncode == 0  # pre-pr without DD_HARD_BLOCK is advisory
-    # Checkpoint is the pre-seeded value (unchanged by the BLOCK).
-    assert state.commits_since_checkpoint(str(repo), "feature/x") == 0
+    assert state.commits_since_checkpoint(str(repo), "feature/x") is None
     cp = repo / ".claude" / ".dd-state" / "feature_x" / "review.checkpoint"
-    assert cp.exists()
-    assert cp.read_text().strip() == head
-    # edits.count is NOT reset by a BLOCK (only a clean PASS resets it).
-    assert state.read(str(repo), "feature/x", "edits") == 17
+    assert not cp.exists()
 
 
 def test_prepr_clean_exits_0(review_env):
@@ -1239,225 +1162,3 @@ def test_resolve_scope_prepr_prints_fork_base_range(review_env):
     proc = _resolve_scope(env, repo, "pre-pr")
     assert proc.returncode == 0, proc.stderr
     assert proc.stdout.strip() == f"{fork}..HEAD"
-
-
-# ---------------------------------------------------------------------------
-# Phase 1 — Precondition gate (T1 + T2)
-#
-# Fixture note: _run / _argv_log seed review.checkpoint=HEAD for pre-pr
-# invocations (see the fixture-contract change comment in _run). Tests that
-# exercise the precondition block set seed_checkpoint=False so they start
-# without a checkpoint (or seed their own via _seed_checkpoint).
-# ---------------------------------------------------------------------------
-
-
-def test_prepr_blocks_when_no_checkpoint(review_env):
-    """pre-pr with no checkpoint (None) → blocked before dispatch; step-back
-    message names '/dd-review cold-read' (the model-layer command, not a
-    runner tier the engine rejects).
-
-    seed_checkpoint=False: this test exercises the precondition block path;
-    no checkpoint must exist before the runner starts.
-    """
-    env, repo, _ = review_env
-    log = repo / "precon_argv.log"
-    # seed_checkpoint=False: precondition test — must start with absent checkpoint.
-    proc = _run(env, repo, ["pre-pr"],
-                extra={"DD_REVIEW_ARGV_LOG": str(log)},
-                seed_checkpoint=False)
-    # Blocked before dispatch.
-    assert log.exists() is False, "codex shim must NOT be invoked on precondition block"
-    # Message must name the command, not a runner tier.
-    combined = proc.stdout + proc.stderr
-    assert "/dd-review cold-read" in combined
-    # Advisory return (no DD_HARD_BLOCK): precondition block still exits 0.
-    assert proc.returncode == 0
-
-
-def test_prepr_blocks_when_commits_since_checkpoint(review_env):
-    """pre-pr with commits since checkpoint (>0) → blocked before dispatch;
-    no codex invocation; step-back message present.
-
-    Seeds checkpoint at master (one commit behind HEAD on feature/x) so
-    commits_since_checkpoint returns 1.
-    """
-    env, repo, _ = review_env
-    # Seed checkpoint at master tip — one commit behind feature/x HEAD, and an
-    # ancestor of it, so commits_since_checkpoint counts 1 (here master tip
-    # coincides with the fork base, the branch having no divergence).
-    master_sha = _git(repo, "rev-parse", "master")
-    # seed_checkpoint=False: we seed our own stale checkpoint, not HEAD.
-    _seed_checkpoint(repo, master_sha)
-
-    log = repo / "stale_argv.log"
-    proc = _run(env, repo, ["pre-pr"],
-                extra={"DD_REVIEW_ARGV_LOG": str(log)},
-                seed_checkpoint=False)
-    assert log.exists() is False, "codex shim must NOT be invoked on precondition block"
-    combined = proc.stdout + proc.stderr
-    assert "/dd-review cold-read" in combined
-    assert proc.returncode == 0
-
-
-def test_prepr_passes_precondition_when_checkpoint_at_head(review_env):
-    """pre-pr with checkpoint == HEAD → precondition passes; codex IS dispatched.
-
-    Fixture-contract: _run seeds checkpoint=HEAD for pre-pr (seed_checkpoint=True
-    default); this test verifies that seed causes dispatch — the invariant that
-    all existing reviewer-path tests rely on.
-    """
-    env, repo, _ = review_env
-    log = repo / "pass_argv.log"
-    # Default seed_checkpoint=True: _run seeds HEAD; precondition passes.
-    proc = _run(env, repo, ["pre-pr"], extra={"DD_REVIEW_ARGV_LOG": str(log)})
-    # Codex shim must have been invoked.
-    assert log.exists(), "codex shim should be invoked when precondition passes"
-    assert proc.returncode == 0, proc.stderr
-
-
-def test_prepr_precondition_block_hard_block_returns_nonzero(review_env):
-    """Under DD_HARD_BLOCK=1 the precondition block returns non-zero (maps to
-    exit 2 in the wrapper), so the PR is hard-blocked.
-
-    seed_checkpoint=False: precondition test; no checkpoint present.
-    """
-    env, repo, _ = review_env
-    log = repo / "hb_argv.log"
-    # seed_checkpoint=False: precondition test.
-    proc = _run(env, repo, ["pre-pr"],
-                extra={"DD_HARD_BLOCK": "1", "DD_REVIEW_ARGV_LOG": str(log)},
-                seed_checkpoint=False)
-    assert log.exists() is False
-    assert proc.returncode != 0
-
-
-def test_prepr_stale_checkpoint_hard_block_returns_nonzero(review_env):
-    """Under DD_HARD_BLOCK=1 a *stale* checkpoint (commits_since > 0, distinct
-    from the no-checkpoint None case) also returns non-zero, no dispatch.
-
-    Production always sets DD_HARD_BLOCK=1; without this the >0 branch's
-    hard-block behavior is untested (only the None case was). seed_checkpoint=
-    False: we seed our own stale checkpoint at master (one commit behind HEAD).
-    """
-    env, repo, _ = review_env
-    _seed_checkpoint(repo, _git(repo, "rev-parse", "master"))  # commits_since == 1
-    log = repo / "stale_hb_argv.log"
-    proc = _run(env, repo, ["pre-pr"],
-                extra={"DD_HARD_BLOCK": "1", "DD_REVIEW_ARGV_LOG": str(log)},
-                seed_checkpoint=False)
-    assert log.exists() is False, "codex must NOT be dispatched on a stale-checkpoint block"
-    assert proc.returncode != 0
-
-
-def test_prepr_empty_diff_wins_over_stale_checkpoint(review_env):
-    """empty diff (HEAD == fork base) with no checkpoint → clean exit 0 via
-    the empty-diff path, NOT a precondition block. Reviewer not invoked.
-
-    Precedence: empty-diff check is upstream of the precondition gate, so an
-    absent checkpoint must not produce a precondition block when there is
-    nothing to review.
-    """
-    env, repo, _ = review_env
-    # Reset HEAD to master so diff is empty.
-    _git(repo, "reset", "--hard", "master")
-    log = repo / "emp_argv.log"
-    # seed_checkpoint=False: no checkpoint; tests that empty-diff wins.
-    proc = _run(env, repo, ["pre-pr"],
-                extra={"DD_REVIEW_ARGV_LOG": str(log)},
-                seed_checkpoint=False)
-    assert proc.returncode == 0
-    assert log.exists() is False   # reviewer not invoked
-    assert "nothing to review" in proc.stdout
-
-
-def test_prepr_missing_reviewer_errors_before_precondition(review_env, tmp_path):
-    """Missing reviewer CLI → exit 1 (ERROR) even without a checkpoint.
-
-    The cli_missing check is upstream of the precondition gate; an ERROR
-    must win over a precondition block.
-    """
-    env, repo, _ = review_env
-    isolated = tmp_path / "onlygit_precon"
-    isolated.mkdir()
-    (isolated / "git").symlink_to(shutil.which("git"))
-    env = {**env, "PATH": str(isolated)}
-    # seed_checkpoint=False: no checkpoint; tests that cli_missing wins.
-    proc = _run(env, repo, ["pre-pr"], seed_checkpoint=False)
-    assert proc.returncode == 1
-    assert "not found on PATH" in proc.stderr
-
-
-def test_prepr_detached_head_checkpoint_satisfies_precondition(review_env, tmp_path):
-    """A checkpoint written under the 'detached' slug at HEAD satisfies the
-    precondition: codex is dispatched, proving the 'or detached' branch
-    resolution reads the same location as --write-checkpoint.
-
-    Manually seeds detached/review.checkpoint at HEAD (the same write that
-    --write-checkpoint cold-read produces on a detached repo), then runs
-    pre-pr on that detached repo and asserts codex fires.
-    """
-    env, _, _ = review_env
-    repo = _make_detached_repo(tmp_path, env)
-    # Add the adversarial-review skill so the stuffed-diff prompt path works.
-    skill = repo / ".claude" / "skills" / "adversarial-review"
-    skill.mkdir(parents=True, exist_ok=True)
-    (skill / "SKILL.md").write_text("# Adversarial review\nReview the diff.\n")
-    # Add a commit so there's a diff (detached HEAD off the master fork base).
-    (repo / "x.txt").write_text("change\n")
-    _git(repo, "add", "x.txt")
-    _git(repo, "commit", "-q", "-m", "detached-commit")
-
-    head_sha = _git(repo, "rev-parse", "HEAD")
-    # Manually seed checkpoint under 'detached' slug — what --write-checkpoint writes.
-    det_dir = _detached_state_dir(repo)
-    det_dir.mkdir(parents=True, exist_ok=True)
-    (det_dir / "review.checkpoint").write_text(head_sha)
-
-    log = repo / "det_argv.log"
-    # seed_checkpoint=False: the manually seeded checkpoint is the test state;
-    # _run must not overwrite it with its own HEAD seed.
-    proc = _run(env, repo, ["pre-pr"],
-                extra={"DD_REVIEW_ARGV_LOG": str(log)},
-                seed_checkpoint=False)
-    assert log.exists(), (
-        f"codex shim must be dispatched when detached checkpoint == HEAD; "
-        f"stdout={proc.stdout!r} stderr={proc.stderr!r}"
-    )
-    assert proc.returncode == 0, proc.stderr
-
-
-def test_prepr_codex_findings_block_message_directs_to_internal_loop(review_env):
-    """A codex BLOCK (P1 finding) emits a directive line sending the model back
-    into the internal wide-lens cycle rather than patch-and-retry the PR.
-
-    Fixture-contract: default seed_checkpoint=True so the precondition passes
-    and codex runs; the stub returns P1 to produce a BLOCK.
-    """
-    env, repo, _ = review_env
-    # Default seed_checkpoint=True: precondition passes, codex stub runs, P1 → BLOCK.
-    proc = _run(env, repo, ["pre-pr"],
-                stub_stdout="[P1] broken auth at f.go:12\n")
-    combined = proc.stdout + proc.stderr
-    # Assert the distinctive directive phrasing, not just "cold-read" (which
-    # could leak from elsewhere): the model is told NOT to patch-and-retry and
-    # to route through the internal cold-read loop.
-    assert "patch and retry" in combined
-    assert "/dd-review cold-read" in combined
-
-
-def test_precondition_block_writes_review_record(review_env):
-    """A precondition block appends a curated reviews.jsonl record — it is a
-    first-class BLOCK outcome and must be visible in the review history, not
-    only the rolling hook log (codex finding, PR-1 cold-read).
-
-    seed_checkpoint=False: exercise the precondition block path (no checkpoint).
-    """
-    env, repo, _ = review_env
-    proc = _run(env, repo, ["pre-pr"], seed_checkpoint=False)
-    assert proc.returncode == 0  # advisory (no DD_HARD_BLOCK)
-    recs = _reviews(env)
-    assert len(recs) == 1, "precondition block must append exactly one curated record"
-    rec = recs[0]
-    assert rec["decision"] == "BLOCK"
-    assert "precondition" in rec["reason"]
-    assert rec["tier"] == "pre-pr"
