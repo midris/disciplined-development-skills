@@ -55,15 +55,16 @@ the single **`/dd-review <tier>`** command.
 |---|---|---|---|---|
 | **T0 fast** | edit counter ≥ 30 (nudge) or ≥ 60 (block) | 1 holistic subagent | working-tree vs HEAD | at 60 edits (`edit_block.py`) |
 | **T1 regular** | landed commit when `edits.count` ≥ 30 (nudge) | holistic + correctness + rationale subagents | fork-base..HEAD | — nudge only |
-| **T2 cold-read** | 3 commits since checkpoint (nudge) or 5 (block) | holistic + correctness + rationale + cross-file + security + necessity | fork-base..HEAD | at 5 commits (`commit_block.py`) |
+| **T2 cold-read** | 3 commits since checkpoint (nudge) or 5 (block) | holistic + correctness + rationale + cross-file + security + necessity *(doc-dominant cold-read swaps two — see the `/dd-review` command)* | fork-base..HEAD | at 5 commits (`commit_block.py`) |
 | **T3 pre-pr** | `gh pr create` | `codex review` (subprocess) | fork-base..HEAD | always (`pre_pr_review.py`) |
 
 **T0–T2 reviewer:** the `/dd-review` command dispatches fresh adversarial-review
 subagents in parallel (Task tool — runs in-session on the subscription). A
 **holistic** subagent covers the whole scope; higher tiers add focused **angle**
 subagents (correctness, rationale, cross-file, security, necessity — the same
-`adversarial-review` posture + one appended focus line). The angle set is fixed
-(no config-driven extensibility). Angles are monotonic — each tier is a superset
+`adversarial-review` posture + one appended focus line). The angle set is not
+config-driven; a doc-dominant cold-read substitutes two angles by model judgment
+(see the `/dd-review` command). Angles are monotonic — each tier is a superset
 of the one below.
 
 **T3 reviewer:** `dd_review_runner.py` runs `codex review` as a subprocess

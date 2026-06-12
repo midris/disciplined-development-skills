@@ -499,12 +499,23 @@ Re-open either decision if practice surfaces a gap.
 
 ## Phase 4 — Artifact-aware review angles (PR-4)
 
+**Status (2026-06-12) — committed; cold-read + PR pending.** Decision I applied to both `/dd-review`
+command copies: two angle focus lines (`executability`, `doctrine-consistency`)
++ a doc-dominant dispatch note. **Sweep:** `hooks/README.md`'s "angle set is
+fixed" claim was stale (the substitution makes it model-judgment, not fixed) —
+reconciled to a pointer at the command; the README's existing angle list stays
+(the new pair was not duplicated into it), and its T2 table row gained a
+substitution marker. dd SKILL.md enumerates no angles → untouched. **Deferred (owner, 2026-06-12):** extract the
+angle catalog from the command into the `adversarial-review` skill (it is
+doctrine, currently duplicated across the two command copies) → see
+`plans/deferred/2026-06-12-extract-angle-catalog-to-skill.md`.
+
 ### Task 4a — dd-review command artifact-aware facet set
 
 **Files:** Modify `.claude/commands/dd-review.md` (bundle source) +
 `examples/commands/dd-review.md` (same commit — public API surface).
 
-- [ ] **Edit the reviewer-set section.** Content contract: the angle table gains
+- [x] **Edit the reviewer-set section.** Content contract: the angle table gains
   a doc-dominant note — at cold-read, when the diff is predominantly doc
   artifacts, security → **executability** and cross-file → **doctrine-consistency**
   (set size unchanged; the other four angles apply to both domains). Two new focus
@@ -516,7 +527,7 @@ Re-open either decision if practice surfaces a gap.
   duplication). Doc-dominance is the dispatching model's one-line judgment; mixed
   diffs keep the code set (Decision I). T0/T1 and the external pre-pr tier
   untouched.
-- [ ] **Commit** (`docs(dd-review): artifact-aware angles for doc-dominant
+- [x] **Commit** (`docs(dd-review): artifact-aware angles for doc-dominant
   cold-reads`). `References swept:` both command copies; check `hooks/README.md`
   and the dd SKILL.md Gate-5/review prose for angle-set descriptions that would go
   stale (`n/a — none` if clean).
