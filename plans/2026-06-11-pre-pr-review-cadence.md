@@ -366,8 +366,12 @@ it to exit 2 → PR blocked); advisory `0` otherwise.
     back-to-internal-loop directive; (3) real codex (cli 0.139.0, shim removed)
     on the `os.system(...+user_input)` snippet → `1×P1` in 10s, exit 2, directive
     fired. All three confirmed end-to-end through the wrapper.
-- [ ] **PR-1 boundary:** hook suite green (`cd disciplined-development/hooks &&
-  python3 -m pytest -q`); `/dd-review cold-read` to clean; PR.
+- [x] **PR-1 boundary:** hook suite green (284 passed, 3 skipped); internal
+  `/dd-review cold-read` clean (2 cycles); a manual external **codex** review of
+  the gate diff (`pre-pr --base c67ccdf`) returned 1×P2 (precondition blocks
+  weren't appended to `reviews.jsonl`) — fixed test-first in `6cde827`, codex
+  re-review PASS. Gate landed on its own branch; plans split to a prior
+  `docs(plans)` PR (boundary-coherence — see merge-boundaries note).
 
 ---
 
