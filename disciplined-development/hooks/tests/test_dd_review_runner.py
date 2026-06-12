@@ -1331,6 +1331,24 @@ def test_prepr_precondition_block_hard_block_returns_nonzero(review_env):
     assert proc.returncode != 0
 
 
+def test_prepr_stale_checkpoint_hard_block_returns_nonzero(review_env):
+    """Under DD_HARD_BLOCK=1 a *stale* checkpoint (commits_since > 0, distinct
+    from the no-checkpoint None case) also returns non-zero, no dispatch.
+
+    Production always sets DD_HARD_BLOCK=1; without this the >0 branch's
+    hard-block behavior is untested (only the None case was). seed_checkpoint=
+    False: we seed our own stale checkpoint at master (one commit behind HEAD).
+    """
+    env, repo, _ = review_env
+    _seed_checkpoint(repo, _git(repo, "rev-parse", "master"))  # commits_since == 1
+    log = repo / "stale_hb_argv.log"
+    proc = _run(env, repo, ["pre-pr"],
+                extra={"DD_HARD_BLOCK": "1", "DD_REVIEW_ARGV_LOG": str(log)},
+                seed_checkpoint=False)
+    assert log.exists() is False, "codex must NOT be dispatched on a stale-checkpoint block"
+    assert proc.returncode != 0
+
+
 def test_prepr_empty_diff_wins_over_stale_checkpoint(review_env):
     """empty diff (HEAD == fork base) with no checkpoint → clean exit 0 via
     the empty-diff path, NOT a precondition block. Reviewer not invoked.
