@@ -224,3 +224,54 @@ def test_strategy_selector_defaults_still_intact():
     """strategy_selector defaults are unchanged by the C1 config migration."""
     assert config.get("strategy_selector.pre_stuff_max_bytes") == 524288
     assert config.get("strategy_selector.high_effort_min_bytes") == 51200
+
+
+# --- PR-5: resolve the project override via CLAUDE_PROJECT_DIR (Decision K) ---
+# Tests below delenv DD_CONFIG (the autouse _isolate_config fixture sets it) to
+# reach the CLAUDE_PROJECT_DIR / cwd resolution branches.
+
+def _write_project_config(project_dir: Path, data: dict) -> None:
+    """Write .claude/dd-config.json under *project_dir* (no DD_CONFIG set)."""
+    cfg = project_dir / ".claude" / "dd-config.json"
+    cfg.parent.mkdir(parents=True, exist_ok=True)
+    cfg.write_text(json.dumps(data), encoding="utf-8")
+
+
+def test_claude_project_dir_resolves_user_config_off_cwd(tmp_path, monkeypatch):
+    """With CLAUDE_PROJECT_DIR set, the override is found at the project dir even
+    when cwd is elsewhere — the real failure (commit-block reported the default
+    ceiling despite a project override, because the shell was off-root)."""
+    project = tmp_path / "proj"
+    elsewhere = tmp_path / "elsewhere"
+    elsewhere.mkdir()
+    _write_project_config(project, {"counters": {"discipline_threshold": 7}})
+    monkeypatch.delenv("DD_CONFIG", raising=False)
+    monkeypatch.setenv("CLAUDE_PROJECT_DIR", str(project))
+    monkeypatch.chdir(elsewhere)
+    config.reset_config_cache()
+    assert config.get("counters.discipline_threshold") == 7
+
+
+def test_falls_back_to_cwd_when_project_dir_unset(tmp_path, monkeypatch):
+    """With CLAUDE_PROJECT_DIR unset, the override resolves relative to cwd
+    (existing behavior pinned)."""
+    _write_project_config(tmp_path, {"counters": {"discipline_threshold": 8}})
+    monkeypatch.delenv("DD_CONFIG", raising=False)
+    monkeypatch.delenv("CLAUDE_PROJECT_DIR", raising=False)
+    monkeypatch.chdir(tmp_path)
+    config.reset_config_cache()
+    assert config.get("counters.discipline_threshold") == 8
+
+
+def test_dd_config_env_wins_over_project_dir(tmp_path, monkeypatch):
+    """DD_CONFIG (explicit path) still wins over CLAUDE_PROJECT_DIR resolution."""
+    project = tmp_path / "proj"
+    _write_project_config(project, {"counters": {"discipline_threshold": 7}})
+    explicit = tmp_path / "explicit.json"
+    explicit.write_text(
+        json.dumps({"counters": {"discipline_threshold": 9}}), encoding="utf-8"
+    )
+    monkeypatch.setenv("CLAUDE_PROJECT_DIR", str(project))
+    monkeypatch.setenv("DD_CONFIG", str(explicit))
+    config.reset_config_cache()
+    assert config.get("counters.discipline_threshold") == 9

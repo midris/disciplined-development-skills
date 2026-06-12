@@ -7,7 +7,10 @@ Two layers of JSON config + env overrides:
 - **Skill defaults:** `lib/dd-defaults.json` — ships with the skill, the
   schema; treat as read-only.
 - **Project override (single surface):** `.claude/dd-config.json` — override
-  only what you need; delete a key to fall back to the default.
+  only what you need; delete a key to fall back to the default. Resolved under
+  `$CLAUDE_PROJECT_DIR` (the harness-set project root), falling back to the
+  current directory when that var is unset; `DD_CONFIG` overrides the path
+  outright.
 
 ### Precedence (lowest → highest)
 
@@ -186,8 +189,9 @@ tool-call time — hooks read their inherited environment).
 
 **Set in:** the launching shell, `~/.claude/settings.json` `env`, or
 `<project>/.claude/settings.local.json` `env`. (`DD_CONFIG` / `DD_DEFAULTS`
-redirect the config files — for tests only; `DD_HARD_BLOCK` is set internally
-by `pre_pr_review` and is not user-facing.)
+redirect the config files — for tests only; `CLAUDE_PROJECT_DIR` is harness-set
+and locates `.claude/dd-config.json` (see Overview → Precedence); `DD_HARD_BLOCK`
+is set internally by `pre_pr_review` and is not user-facing.)
 
 ---
 

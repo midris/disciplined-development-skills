@@ -2,7 +2,9 @@
 
 Exposes ``get(dot_path)`` over ``dd-defaults.json`` (shipped beside this
 module) deep-merged with an optional user override at
-``.claude/dd-config.json``. User config wins on overlapping keys; a malformed
+``.claude/dd-config.json`` — resolved under ``$CLAUDE_PROJECT_DIR`` (the
+harness-set project root), else the current directory. User config wins on
+overlapping keys; a malformed
 or non-dict user config is discarded silently so defaults stand.
 
 ``DD_DEFAULTS`` / ``DD_CONFIG`` env vars override the respective file
@@ -32,7 +34,12 @@ def _user_config_path() -> Path:
     override = os.environ.get("DD_CONFIG")
     if override:
         return Path(override)
-    return Path.cwd() / _USER_CONFIG_RELPATH
+    # Hooks fire with the session shell's cwd, which need not be the project
+    # root — resolve against CLAUDE_PROJECT_DIR (set by the harness) so consumer
+    # overrides don't silently vanish off-root; fall back to cwd when unset.
+    project_dir = os.environ.get("CLAUDE_PROJECT_DIR")
+    base = Path(project_dir) if project_dir else Path.cwd()
+    return base / _USER_CONFIG_RELPATH
 
 
 def _load_json_dict(path: Path) -> dict[str, Any]:
