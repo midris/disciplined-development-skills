@@ -235,21 +235,29 @@ dogfood hooks (swept below).
 
 ## Phase 7 — Docs reconciliation + consumer recovery note
 
-- [ ] **D1 — Repo-structure + snapshot docs.** Update `CLAUDE.md`'s
+- [x] **D1 — Repo-structure + snapshot docs.** Update `CLAUDE.md`'s
   "Repository Structure" tree and "Architecture Snapshot" to the new layout
   (`skills/`, `research/`, `skill-validation/`, `examples/starter.CLAUDE.md`).
   Update `README.md`'s "What's included" if its phrasing implies root-level skill
-  dirs.
+  dirs. *Done: added `research/` + `skill-validation/` to the CLAUDE.md tree and
+  noted the starter template under `examples/`. README "What's included" + the
+  Architecture Snapshot were already current (M3 swept them).*
 
-- [ ] **D2 — Hook-doc paths.** Confirm `skills/disciplined-development/hooks/README.md`
+- [x] **D2 — Hook-doc paths.** Confirm `skills/disciplined-development/hooks/README.md`
   and `dd-config.md` describe paths/commands consistent with the move (most are
   consumer-side `.claude/...` and need no change; catch any bundle-relative
-  ones).
+  ones). *Confirmed clean — M3 already swept both; grep for bundle-relative
+  `disciplined-development/` paths returns none.*
 
-- [ ] **D3 — Consumer recovery note (Decision E).** Add a one-line note to the
+- [x] **D3 — Consumer recovery note (Decision E).** Add a one-line note to the
   `README.md` recovery section: this reorg moved the skill source dirs, so an
   existing consumer's symlinks dangle until they re-run `install-skills.sh`.
-  Restate in the PR body.
+  Restate in the PR body. *Grew past one line: live V2 recovery on
+  `meeting-pipeline` showed re-running the installer alone does NOT fix dangling
+  symlinks — it skips any symlink whose target differs (dangling included) with a
+  warning. The note now documents the correct procedure: delete the broken
+  symlinks first (`find … -type l ! -exec test -e {} \; -delete`), then re-run.
+  Decision E's "re-run is the recovery path" was incomplete; this corrects it.*
 
 ---
 
