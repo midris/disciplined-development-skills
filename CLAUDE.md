@@ -4,7 +4,7 @@ Single source of truth for agent guidance in this repository. If `AGENTS.md` / `
 
 ## Highest Priority Rules
 
-- At session start, load the doctrine: `Read disciplined-development/SKILL.md`. **The Skill tool doesn't see it** — the skill dirs sit at the top level (the installer symlinks them out to consumers), and no harness enumerates skills from there. Load companion `SKILL.md` files the same way when the parent dispatches: `adversarial-review`, `adversarial-review-loop`, `concise-writing`, `disciplined-research`, `lean-plan-writing`, `sweeping-stale-references`, `writing-explicit-rationale`.
+- At session start, load the doctrine: `Read disciplined-development/SKILL.md`. **The Skill tool doesn't see it** — the skill dirs sit at the top level (the installer symlinks them out to consumers), and no harness enumerates skills from there. Load companion `SKILL.md` files the same way when the parent dispatches: `adversarial-review`, `adversarial-review-loop`, `concise-writing`, `disciplined-research`, `dispatching-development-subagents`, `lean-plan-writing`, `sweeping-stale-references`, `writing-explicit-rationale`.
 - Cross-reference `README.md` (bundle overview, install/recovery flow) and `disciplined-development/hooks/README.md` (hook design + state model) before non-trivial changes. Hook config schema: `disciplined-development/hooks/dd-config.md`.
 - Treat `plans/` as a live source of truth when a plan exists — update it in the same change set as the work it tracks.
 - Test-first for behavior changes — see "Test-Driven Changes" below.

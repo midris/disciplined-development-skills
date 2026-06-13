@@ -10,7 +10,7 @@ resume); the skills carry the actual content.
 
 ## What's included
 
-Eight skills (each a `<name>/SKILL.md`):
+Nine skills (each a `<name>/SKILL.md`):
 
 - **`disciplined-development`** — the doctrine: the Iron Law, the five gates, the
   principles, the rationalization tables. The parent skill; the rest are its
@@ -21,6 +21,9 @@ Eight skills (each a `<name>/SKILL.md`):
   iteration cap with a cold-read escape.
 - **`disciplined-research`** — ground load-bearing claims in current source, not
   memory.
+- **`dispatching-development-subagents`** — scope-contract + verify-every-commit
+  overlay for development subagents whose diffs you integrate: the report is a
+  claim, the diff is the ground truth.
 - **`lean-plan-writing`** — plans/specs carry requirements + order, not
   implementation.
 - **`sweeping-stale-references`** — when a fact changes, find and reconcile every
@@ -66,6 +69,7 @@ one line per skill to the consuming project's `.gitignore`:
 .claude/skills/concise-writing
 .claude/skills/disciplined-development
 .claude/skills/disciplined-research
+.claude/skills/dispatching-development-subagents
 .claude/skills/lean-plan-writing
 .claude/skills/sweeping-stale-references
 .claude/skills/writing-explicit-rationale
