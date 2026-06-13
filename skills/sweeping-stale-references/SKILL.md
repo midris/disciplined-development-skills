@@ -147,3 +147,7 @@ Earlier warning signs — stop if any cross your mind:
 - "The reviewer would have caught more if there were more."
 - "I already updated everything I could think of."
 - "Single-file change, no sweep needed." (without writing the `n/a` line)
+
+## References
+
+- [`references/sweep-check-hook-design.md`](references/sweep-check-hook-design.md) — deferred design for a pre-commit hook that enforces the `References swept:` audit trail automatically.
