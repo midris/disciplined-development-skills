@@ -2,14 +2,14 @@
   "enabledPlugins": {
     "superpowers@claude-plugins-official": true
   },
-  "_hooks_note": "Source-repo self-wiring: ADVISORY hooks only, via top-level disciplined-development/hooks/ paths (this repo does NOT symlink its skills into .claude/skills/). The three hard blocks (edit_block, commit_block, pre_pr_review) are deliberately omitted so they don't gate heavy bundle development. See no-self-symlink-skills convention.",
+  "_hooks_note": "Source-repo self-wiring: ADVISORY hooks only, via skills/disciplined-development/hooks/ paths (this repo does NOT symlink its skills into .claude/skills/). The three hard blocks (edit_block, commit_block, pre_pr_review) are deliberately omitted so they don't gate heavy bundle development. See no-self-symlink-skills convention.",
   "hooks": {
     "UserPromptSubmit": [
       {
         "hooks": [
           {
             "type": "command",
-            "command": "python3 \"$CLAUDE_PROJECT_DIR/disciplined-development/hooks/inject_plan_state.py\""
+            "command": "python3 \"$CLAUDE_PROJECT_DIR/skills/disciplined-development/hooks/inject_plan_state.py\""
           }
         ]
       }
@@ -20,7 +20,7 @@
         "hooks": [
           {
             "type": "command",
-            "command": "python3 \"$CLAUDE_PROJECT_DIR/disciplined-development/hooks/discipline_nudge.py\""
+            "command": "python3 \"$CLAUDE_PROJECT_DIR/skills/disciplined-development/hooks/discipline_nudge.py\""
           }
         ]
       }
@@ -31,7 +31,7 @@
         "hooks": [
           {
             "type": "command",
-            "command": "python3 \"$CLAUDE_PROJECT_DIR/disciplined-development/hooks/edit_counter.py\""
+            "command": "python3 \"$CLAUDE_PROJECT_DIR/skills/disciplined-development/hooks/edit_counter.py\""
           }
         ]
       },
@@ -40,7 +40,7 @@
         "hooks": [
           {
             "type": "command",
-            "command": "python3 \"$CLAUDE_PROJECT_DIR/disciplined-development/hooks/review_nudge.py\""
+            "command": "python3 \"$CLAUDE_PROJECT_DIR/skills/disciplined-development/hooks/review_nudge.py\""
           }
         ]
       }
@@ -50,7 +50,7 @@
         "hooks": [
           {
             "type": "command",
-            "command": "python3 \"$CLAUDE_PROJECT_DIR/disciplined-development/hooks/session_reground.py\""
+            "command": "python3 \"$CLAUDE_PROJECT_DIR/skills/disciplined-development/hooks/session_reground.py\""
           }
         ]
       }
