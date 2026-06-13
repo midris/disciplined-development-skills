@@ -37,6 +37,9 @@ README.md                             # bundle overview + install + recovery
 # Hook stack tests (the primary test suite for this repo)
 cd skills/disciplined-development/hooks && python3 -m pytest -q
 
+# Research harness smoke test (run separately — not part of the hook suite)
+python3 -m pytest research/ -q
+
 # Top-level installer-suite tests
 python3 -m pytest tests/ -q
 # The settings-wiring test skips outside an in-tree consumer — see tests/test_install_skills.py.

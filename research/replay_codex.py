@@ -23,10 +23,10 @@ Strategies
 Outputs
 -------
 
-* ``results.csv`` — one row per run (appended). Model col
+* ``research/results.csv`` — one row per run (appended). Model col
   carries the codex model slug (e.g. ``gpt-5.5``); effort/strategy
   cols are reused.
-* ``runs/<run_id>.txt`` — full stdout/stderr per run.
+* ``research/runs/<run_id>.txt`` — full stdout/stderr per run.
 """
 
 from __future__ import annotations
@@ -40,10 +40,9 @@ import subprocess
 import sys
 import time
 
-# parents[2] = the disciplined-development dir (contains the `hooks` package);
-# parents[5] = the repo root (default worktree).
-_SKILL_DIR = pathlib.Path(__file__).resolve().parents[2]
-REPO_ROOT = pathlib.Path(__file__).resolve().parents[5]
+# parents[0] = research/; parents[1] = repo root.
+_SKILL_DIR = pathlib.Path(__file__).resolve().parents[1] / "skills" / "disciplined-development"
+REPO_ROOT = pathlib.Path(__file__).resolve().parents[1]
 sys.path.insert(0, str(_SKILL_DIR))
 
 from hooks.lib import severity  # noqa: E402

@@ -179,7 +179,7 @@ dogfood hooks (swept below).
 
 ## Phase 3 — Move experiment harness out of the exported surface
 
-- [ ] **M4 — `research/` for the replay harness.** `git mv` the experiment
+- [x] **M4 — `research/` for the replay harness.** `git mv` the experiment
   tooling out of the shipped hook stack into a new top-level `research/`:
   `skills/disciplined-development/hooks/harness/replay_codex.py` and its
   `hooks/tests/test_harness_smoke.py`. *Why out:* it replays SHAs through
