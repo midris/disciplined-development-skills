@@ -10,7 +10,8 @@ description: Use when starting a session, while doing development work (writing 
 mode-emphasis routing table.
 **Does not own:** verification mechanics, stale-reference sweeps,
 research grounding, rationale writing, plan-density rules, adversarial
-review posture, or review iteration. Those live in companion skills.
+review posture, review iteration, or subagent-dispatch scoping and
+verification. Those live in companion skills.
 Methodology skills are invoked from the gates and mode table.
 
 ## Overview
@@ -109,16 +110,17 @@ or check both, don't pick silently.
 
 **4. Carry the discipline into subagent dispatches.**
 Subagents don't auto-load skills. Every dispatch prompt must tell the
-implementer to load the `disciplined-development` skill before work.
+subagent to load the `disciplined-development` skill before work.
 If direct skill loading is unavailable, require reading
 `.claude/skills/disciplined-development/SKILL.md` first and following it as
 binding guidance.
 
 Name governing files to re-read before acting. Require a re-read before
 claiming done. Gate summaries do not substitute for loading the skill. Pick
-the model for task complexity.
+the model for task complexity. Dispatch a crisp scope contract and verify
+every returned commit — the report is not the diff.
 
-REQUIRED SUB-SKILL: `superpowers:subagent-driven-development`.
+REQUIRED SUB-SKILL: `dispatching-development-subagents`.
 
 **5. Test-first for behavior changes — non-negotiable.**
 - Test and impl land in the same commit (`feat:` or `fix:`).
@@ -155,8 +157,8 @@ REQUIRED SUB-SKILL: `adversarial-review-loop`.
 |------|--------------|-------------------|
 | Brainstorming | Principles 1, 7 | `superpowers:brainstorming` |
 | Plan writing | Principles 1, 7 + Gates 1, 2 + diff signoff | `superpowers:writing-plans` + `lean-plan-writing` |
-| Implementation (sequential) | Principles 1, 2, 5, 6, 7, 8 + Gates 1, 2, 3, 4, 5 | `superpowers:executing-plans` or `superpowers:subagent-driven-development` |
-| Implementation (parallel, independent only) | as above | `superpowers:dispatching-parallel-agents` |
+| Implementation (sequential) | Principles 1, 2, 5, 6, 7, 8 + Gates 1, 2, 3, 4, 5 | `superpowers:executing-plans` or `superpowers:subagent-driven-development` (+ `dispatching-development-subagents` when delegating) |
+| Implementation (parallel, independent only) | as above | `superpowers:dispatching-parallel-agents` + `dispatching-development-subagents` |
 | Debugging | Principles 1, 2, 5, 6 + Gates 1, 3, 4 | `superpowers:systematic-debugging` |
 | Code review (giving) | Principles 3, 7, 8 + Gates 1, 4 + read the diff | `superpowers:requesting-code-review` + `adversarial-review` + `adversarial-review-loop` |
 | Code review (receiving) | Principle 3 + Gate 1 (surface, don't interpret) | `superpowers:receiving-code-review` |
