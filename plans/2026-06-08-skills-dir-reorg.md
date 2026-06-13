@@ -210,7 +210,7 @@ dogfood hooks (swept below).
 
 ## Phase 5 — Relocate the sweep-check design stub into `references/` (Decision C)
 
-- [ ] **M6 — `sweep-check-hook-design.md` → `references/` companion.** `git mv`
+- [x] **M6 — `sweep-check-hook-design.md` → `references/` companion.** `git mv`
   `skills/sweeping-stale-references/sweep-check-hook-design.md` to
   `skills/sweeping-stale-references/references/sweep-check-hook-design.md`, and
   add a link to it from `skills/sweeping-stale-references/SKILL.md` so it stops
