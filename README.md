@@ -134,6 +134,13 @@ updating. Symlinked skill dirs auto-update — the engine rename
 `edit_block.py`, `commit_block.py`) all resolve through the symlink with no
 consumer action needed.
 
+**Exception — upgrading across the skills-dir reorg.** Auto-update holds only
+for changes *within* a skill dir. The reorg that moved the skill dirs under
+`skills/` moved the symlink *targets*, so the symlinks dangle and do **not**
+auto-update — and re-running the installer alone skips them. Delete the stale
+symlinks first, then re-run: see
+[Recovery / troubleshooting](#recovery--troubleshooting).
+
 **1. `.claude/commands/dd-review.md`** — re-run the installer and it lands
 automatically (new in this release). If you have a customized copy, replace it
 manually with [`examples/commands/dd-review.md`](examples/commands/dd-review.md).
