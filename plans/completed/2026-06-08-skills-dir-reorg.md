@@ -263,25 +263,42 @@ dogfood hooks (swept below).
 
 ## Phase 8 — Validation & reconciliation (before PR)
 
-- [ ] **V1 — Full suites green.** `cd skills/disciplined-development/hooks &&
+- [x] **V1 — Full suites green.** `cd skills/disciplined-development/hooks &&
   python3 -m pytest -q` and `python3 -m pytest tests/ -q` (the settings-wiring
   test skips outside a consumer) and the relocated `research/` smoke test all
-  pass.
+  pass. *Green: installer 9 passed; research 3 passed; hook suite 275 passed,
+  3 skipped.*
 
-- [ ] **V2 — Live consumer install (Decision A + E, end-to-end).** Re-run
+- [x] **V2 — Live consumer install (Decision A + E, end-to-end).** Re-run
   `install-skills.sh` against `meeting-pipeline` (whose symlinks now dangle);
   confirm all nine symlinks repoint to the new `skills/...` sources, the
   `dd-review.md` command resolves, and a hook runs through the symlink (exit 0).
   Unit tests don't cover the glob→symlink wiring — this is the real check that
-  the new glob delivers.
+  the new glob delivers. *Done live: removed 8 dangling symlinks, re-ran
+  installer → 9 created (incl. the newer `dispatching-development-subagents`),
+  `dd-review.md` already-linked; all 9 resolve with SKILL.md reachable, and all
+  8 consumer-wired hooks run through the symlink (exit 0). settings.json needed
+  no edit (symlink-relative paths). Surfaced the recovery-procedure gap fixed in
+  D3. Owner confirmed Claude sees the skills.*
 
-- [ ] **V3 — Cold-read.** Run `/dd-review cold-read` on the staged branch.
+- [x] **V3 — Cold-read.** Run `/dd-review cold-read` on the staged branch.
   CLAUDE.md substitutes a cold-read for doc/skill-surface changes — this reorg
   is path-and-doc-heavy, so no unit test catches a stale reference or a broken
   cross-link. Address findings per `adversarial-review-loop` until clean.
+  *Done: 6-reviewer doc-dominant set (holistic, correctness, rationale,
+  necessity, doctrine-consistency, executability). Iter 1 surfaced 6 P2/P3
+  findings (no P0/P1 after triage) — fixed in `850b99a` (replay_codex stuffed
+  path + docstring, sweep-check stub dangling link + link display, CLAUDE.md
+  skill-validation note + doc-update checklist). One reviewer claim — a "stale
+  path" in `codex-harness-port.md:35` — was a false positive (nested tree
+  entry), dropped after verification. Iter 2 (holistic + correctness) returned
+  clean. Checkpoint written via `--write-checkpoint cold-read`.*
 
-- [ ] **S1 — Reconcile this plan + archive.** Tick checkboxes as work lands;
+- [x] **S1 — Reconcile this plan + archive.** Tick checkboxes as work lands;
   record any moved scope. On completion, move this file to `plans/completed/`.
+  *Done: all checkboxes reconciled with execution notes; scope changes recorded
+  (M2 lockout + restore, D3 recovery-procedure correction, V2 done live on
+  meeting-pipeline). Archived to `plans/completed/`.*
 
 ---
 
