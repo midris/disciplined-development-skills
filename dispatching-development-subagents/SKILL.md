@@ -18,7 +18,7 @@ description: 'Use when dispatching a development subagent whose code changes you
 ## When you dispatch
 
 - **Write a scope contract:** name the files (and the shape of the change) in scope, plus the governing files and locked constraints touching that area.
-- **Keep it small and single-purpose** — one finding per dispatch; long batches drift.
+- **One finding per dispatch by default.** Batch only same-kind, non-overlapping, behavior-free changes; split out anything coupled or behavior-changing. Mixed batches are where drift hides.
 - Require the report below, and state the out-of-scope rule in the prompt.
 
 ## When you ARE the dispatched subagent
