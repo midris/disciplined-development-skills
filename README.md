@@ -113,7 +113,10 @@ Per-hook behavior + the `DD_SKIP_<HOOK>` bypass env vars are in
   what you need — a deleted key falls back to the shipped default.
 - **Thread into `CLAUDE.md`:** add the invoke-at-session-start block from
   [`examples/CLAUDE.md-snippet.md`](examples/CLAUDE.md-snippet.md) so the agent
-  loads the doctrine and its companions.
+  loads the doctrine and its companions. For a fresh project with no existing
+  `CLAUDE.md`, use [`examples/starter.CLAUDE.md`](examples/starter.CLAUDE.md)
+  as a full drop-in template (fill in the `{{PLACEHOLDERS}}`); the snippet is
+  for threading into an existing file.
 - **Wire `/dd-review`:** the installer places this automatically as a symlink
   at `<project>/.claude/commands/dd-review.md` (resolves to
   [`examples/commands/dd-review.md`](examples/commands/dd-review.md)).

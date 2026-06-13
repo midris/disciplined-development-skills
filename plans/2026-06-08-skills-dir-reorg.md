@@ -198,7 +198,7 @@ dogfood hooks (swept below).
 
 ## Phase 4 — Relocate the orphaned consumer template
 
-- [ ] **M5 — `starter.CLAUDE.md` → `examples/`.** `git mv` it into `examples/`.
+- [x] **M5 — `starter.CLAUDE.md` → `examples/`.** `git mv` it into `examples/`.
   It is a full consumer CLAUDE.md template (with `{{PLACEHOLDERS}}`),
   complementary to the paste-in `examples/CLAUDE.md-snippet.md`; today it sits
   orphaned at root with no README/installer reference. Add a `README.md` pointer
