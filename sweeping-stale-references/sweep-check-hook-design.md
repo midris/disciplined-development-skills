@@ -1,13 +1,17 @@
-# Hook recipes for `sweeping-stale-references` (Claude Code specific)
+# Sweep-check hook — design stub (deferred)
+
+Design notes for the deferred `pre-commit-sweep-check.sh` hook that would
+enforce `sweeping-stale-references`. This is not part of the live Claude Code
+hook stack — that is documented in
+[`disciplined-development/hooks/hook-recipes-claude-code.md`](../disciplined-development/hooks/hook-recipes-claude-code.md).
 
 Skills are content; hooks are enforcement. The `sweeping-stale-references`
 skill works alone — agents that follow it produce the required
 `References swept:` section through Principle 3 ("obey what's written")
 discipline. Deterministic enforcement via a pre-commit hook is **optional**
-and **deferred**; this file is a design stub for the future
-`pre-commit-sweep-check.sh` hook.
+and **deferred**.
 
-Adopters who don't use Claude Code hooks can ignore this file.
+Adopters who don't use this hook can ignore this file.
 
 ## Why a hook?
 
