@@ -157,7 +157,7 @@ dogfood hooks (swept below).
   + the reground JSON).
   - **References swept:** `.claude/settings.json` (5 hook commands + the note).
 
-- [ ] **M3 — Sweep bundle-internal doc + command paths.** Update every
+- [x] **M3 — Sweep bundle-internal doc + command paths.** Update every
   bundle-internal reference to the old root skill paths:
   `CLAUDE.md` (the highest-priority `Read disciplined-development/SKILL.md`
   line, the `disciplined-development/hooks/...` references throughout incl. the
