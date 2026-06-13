@@ -25,7 +25,7 @@ skills/<skill>/                       # nine skill dirs under skills/, each with
 skills/disciplined-development/hooks/ # hook stack + dd_review_runner.py engine + hook tests
 examples/                             # reference configs consumers copy (hooks block, dd-config, CLAUDE.md snippet + starter template)
 research/                             # non-shipped experiment tooling (replay harness + its smoke test)
-skill-validation/                     # non-shipped skill validation trails (per-skill test records)
+skill-validation/                     # non-shipped skill validation records (currently concise-writing only)
 tests/                                # installer-level tests (the settings-wiring test skips outside a consumer)
 plans/                                # active plans (created on demand)
 plans/completed/, plans/deferred/     # archived / deferred work
@@ -122,7 +122,7 @@ When a feature, fix, or batch of work is complete:
    - `cd skills/disciplined-development/hooks && python3 -m pytest -q` must pass.
    - For installer changes, `python3 -m pytest tests/ -q` (settings-wiring test skips outside a consumer).
    - For hook changes that affect consumer behavior, install into a scratch consumer project and exercise the changed path end-to-end — unit tests don't catch settings-wiring or symlink-resolution regressions. If you can't exercise it live, say so explicitly rather than substituting test-passing for live verification.
-2. Update `examples/` (`settings.hooks.json`, `dd-config.json`, `CLAUDE.md-snippet.md`) when the consumer-facing contract changes.
+2. Update `examples/` (`settings.hooks.json`, `dd-config.json`, `CLAUDE.md-snippet.md`, `starter.CLAUDE.md`) when the consumer-facing contract changes.
 3. Update `README.md` when install/recovery flow, requirements, or the skill list changes.
 4. Update `skills/disciplined-development/hooks/README.md` when hook behavior, the hook table, the state model, or the review tiers change. Update `skills/disciplined-development/hooks/dd-config.md` when the config schema changes.
 5. Update the relevant `skills/<skill>/SKILL.md` when its doctrine, dispatch table, or examples drift from current practice. For non-trivial skill content changes, run an adversarial cold-read (`/dd-review cold-read`) on the staged branch before commit — no test catches a worse instruction.

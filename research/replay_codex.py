@@ -3,7 +3,7 @@
 
 Replays a historical sha through ``codex review`` with chosen
 (model, effort, strategy) and records duration + findings to
-``experiments/results.csv``. ``replay_review.py`` (the claude harness)
+``research/results.csv``. ``replay_review.py`` (the claude harness)
 was deleted in E2 — ``replay_codex.py`` is the only replay script.
 
 Strategies
@@ -123,7 +123,7 @@ def main() -> int:
     if args.strategy == "fetched":
         argv += ["--base", args.base]
     else:  # stuffed: pipe skill + diff on stdin, no --base
-        skill_md_path = REPO_ROOT / ".claude/skills/adversarial-review/SKILL.md"
+        skill_md_path = REPO_ROOT / "skills/adversarial-review/SKILL.md"
         skill_md = skill_md_path.read_text()
         diff_proc = subprocess.run(
             ["git", "diff", f"{args.base}...{args.sha}"],
