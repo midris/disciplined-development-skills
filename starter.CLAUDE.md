@@ -4,7 +4,7 @@ Single source of truth for agent guidance in this repository. If `AGENTS.md` / `
 
 ## Highest Priority Rules
 
-- Invoke the local `disciplined-development` skill at the start of every session — path `.claude/skills/disciplined-development/SKILL.md`. In Claude Code, invoke by the bare name `disciplined-development`; in environments whose harness doesn't enumerate repo-local skills, load the file from the path above. It governs gates, principles, and sub-skill dispatch (`sweeping-stale-references`, `disciplined-research`, `writing-explicit-rationale`, `lean-plan-writing` — all under `.claude/skills/`). The rules below are project-specific overlays on top of it.
+- Invoke the local `disciplined-development` skill at the start of every session — path `.claude/skills/disciplined-development/SKILL.md`. In Claude Code, invoke by the bare name `disciplined-development`; in environments whose harness doesn't enumerate repo-local skills, load the file from the path above. It governs gates, principles, and sub-skill dispatch (`adversarial-review`, `adversarial-review-loop`, `concise-writing`, `disciplined-research`, `dispatching-development-subagents`, `lean-plan-writing`, `sweeping-stale-references`, `writing-explicit-rationale` — all under `.claude/skills/`). The rules below are project-specific overlays on top of it.
 - Cross-reference {{LIST_GOVERNING_DOCS_HERE — e.g. `ARCHITECTURE.md`, `ROADMAP.md`, `README.md`}} and the active plan in `plans/` before making non-trivial changes.
 - When a task has a design spec, cross-reference the relevant active spec in `plans/specs/` before implementing.
 - Treat `plans/` as a live source of truth. Update the relevant plan in the same change set when work lands or scope changes.
