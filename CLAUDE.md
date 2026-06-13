@@ -21,7 +21,7 @@ A portable bundle of Claude Code **skills** + a **hook stack** that keep an agen
 ## Repository Structure
 
 ```text
-<skill>/                              # eight top-level skill dirs, each with a SKILL.md
+<skill>/                              # nine top-level skill dirs, each with a SKILL.md
 disciplined-development/hooks/        # hook stack + dd_review_runner.py engine + hook tests
 examples/                             # reference configs consumers copy (hooks block, dd-config, CLAUDE.md snippet)
 tests/                                # installer-level tests (the settings-wiring test skips outside a consumer)
