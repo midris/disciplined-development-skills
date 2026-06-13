@@ -227,7 +227,7 @@ dogfood hooks (swept below).
 
 ## Phase 6 — Move the validation trail off the exported surface (Decision D)
 
-- [ ] **M7 — `concise-writing/TESTING.md` → `skill-validation/`.** `git mv` it
+- [x] **M7 — `concise-writing/TESTING.md` → `skill-validation/`.** `git mv` it
   to `skill-validation/concise-writing.md`. Zero inbound refs; not linked from
   its `SKILL.md`. No sweep beyond confirming that.
 
