@@ -21,14 +21,16 @@ def _make_clone(tmp_path: Path, skill_names=("alpha-skill", "beta-skill")) -> Pa
     clone.mkdir()
     shutil.copy(SCRIPT_SRC, clone / "install-skills.sh")
     os.chmod(clone / "install-skills.sh", 0o755)
+    skills_dir = clone / "skills"
+    skills_dir.mkdir()
     for name in skill_names:
-        (clone / name).mkdir()
-        (clone / name / "SKILL.md").write_text(f"---\nname: {name}\n---\n# {name}\n")
-    # a dir WITHOUT a SKILL.md — must be ignored
-    (clone / "not-a-skill").mkdir()
-    (clone / "not-a-skill" / "readme.txt").write_text("nope")
-    # a stray file at clone root — must be ignored
-    (clone / "README.md").write_text("# clone")
+        (skills_dir / name).mkdir()
+        (skills_dir / name / "SKILL.md").write_text(f"---\nname: {name}\n---\n# {name}\n")
+    # a dir WITHOUT a SKILL.md under skills/ — must be ignored
+    (skills_dir / "not-a-skill").mkdir()
+    (skills_dir / "not-a-skill" / "readme.txt").write_text("nope")
+    # a stray file under skills/ — must be ignored
+    (skills_dir / "README.md").write_text("# clone")
     return clone
 
 
@@ -49,7 +51,7 @@ def test_creates_symlink_per_skill_dir(tmp_path):
     for name in ("alpha-skill", "beta-skill"):
         link = skills / name
         assert link.is_symlink(), f"{name} not a symlink"
-        assert link.resolve() == (clone / name).resolve()
+        assert link.resolve() == (clone / "skills" / name).resolve()
     assert not (skills / "not-a-skill").exists()
     assert not (skills / "README.md").exists()
 
