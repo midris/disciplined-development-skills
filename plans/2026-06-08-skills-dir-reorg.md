@@ -8,7 +8,7 @@ with running tests as feedback (`lean-plan-writing`).
 **Goal:** Make the repo root cohesive by separating the **exported surface**
 (everything `install-skills.sh` symlinks into consumers) from **bundle-dev
 artifacts** (experiments, validation trails) and **consumer-facing examples**.
-Promote the eight skill dirs into a top-level `skills/`; move three misfiled
+Promote the nine skill dirs into a top-level `skills/`; move three misfiled
 things out of the exported surface; relocate one orphaned template.
 
 **Target layout (final state):**
@@ -17,7 +17,8 @@ things out of the exported surface; relocate one orphaned template.
 skills/                              # exported surface — the ONLY thing the installer symlinks out
   disciplined-development/SKILL.md   #   hooks/ stays nested here (delivered via the skill's symlink)
   adversarial-review/  adversarial-review-loop/  concise-writing/
-  disciplined-research/  lean-plan-writing/  writing-explicit-rationale/
+  disciplined-research/  dispatching-development-subagents/
+  lean-plan-writing/  writing-explicit-rationale/
   sweeping-stale-references/SKILL.md
     references/sweep-check-hook-design.md  # deferred sweep-check hook design stub (Decision C)
 examples/                            # consumer reference configs (+ starter.CLAUDE.md, moved in)
@@ -132,8 +133,8 @@ discoverable). Each commit lands green; the bundle does not symlink its own
 skills, so the only runtime dependency on these paths is the bundle's own
 dogfood hooks (swept below).
 
-- [ ] **M1 — `git mv` the eight skill dirs into `skills/`.** `mkdir skills`,
-  then `git mv <skill> skills/<skill>` for all eight (the `hooks/` subtree moves
+- [ ] **M1 — `git mv` the nine skill dirs into `skills/`.** `mkdir skills`,
+  then `git mv <skill> skills/<skill>` for all nine (the `hooks/` subtree moves
   with `disciplined-development`). Content-preserving; no edits inside the dirs
   in this task.
 
@@ -210,7 +211,11 @@ dogfood hooks (swept below).
   resolved by the rename; this is now a relocation only.)
   - **References swept:** confirm no inbound links existed (verified: zero), so
     only the new `SKILL.md` link is added. The canonical hooks doc and its 7
-    inbound refs are a different file — leave untouched.
+    inbound refs are a different file — leave untouched. **Outbound link:** the
+    file's own intro links the canonical hooks doc at
+    `../disciplined-development/hooks/hook-recipes-claude-code.md`; descending
+    into `references/` adds a level, so update it to
+    `../../disciplined-development/hooks/hook-recipes-claude-code.md`.
 
 ---
 

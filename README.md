@@ -40,11 +40,11 @@ The hook stack (under `disciplined-development/hooks/`) is documented in its own
 ## Requirements
 
 - **The `superpowers` skill bundle** — the doctrine's gates dispatch to
-  `superpowers:*` sub-skills as REQUIRED SUB-SKILLs (`test-driven-development`,
-  `verification-before-completion`, `writing-plans`,
-  `subagent-driven-development`, and more — grep the `SKILL.md` files for
-  `superpowers:` for the full set). Install it in the consuming project so those
-  dispatches resolve; without it the gates point at skills that don't exist.
+  `superpowers:*` sub-skills (several as REQUIRED SUB-SKILLs, e.g.
+  `test-driven-development` and `verification-before-completion`; grep the
+  `SKILL.md` files for `superpowers:` for the full set). Install it in the
+  consuming project so those dispatches resolve; without it the gates point at
+  skills that don't exist.
 - **Python 3** — for the hook stack.
 - **git** — the hooks key behavior off branch / commit / fork-base state.
 - **Optional `codex`** — only for the pre-PR review tier (T3). Required for the
