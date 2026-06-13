@@ -1,6 +1,6 @@
 ---
 # Bundle-source variant of the /dd-review slash command. Paths point at
-# the top-level disciplined-development/ tree because this repo (the source
+# the skills/disciplined-development/ tree because this repo (the source
 # of the bundle) does not symlink its own skills into .claude/skills/.
 # See examples/commands/dd-review.md for the consumer-side variant whose
 # paths go through .claude/skills/.
@@ -14,7 +14,7 @@ contract is identical everywhere — native P0–P3.
 
 `ENGINE` below is:
 
-    python3 $CLAUDE_PROJECT_DIR/disciplined-development/hooks/dd_review_runner.py
+    python3 $CLAUDE_PROJECT_DIR/skills/disciplined-development/hooks/dd_review_runner.py
 
 ## `pre-pr` (T3) — codex gate
 

@@ -10,7 +10,7 @@ resume); the skills carry the actual content.
 
 ## What's included
 
-Nine skills (each a `<name>/SKILL.md`):
+Nine skills (each a `skills/<name>/SKILL.md`):
 
 - **`disciplined-development`** — the doctrine: the Iron Law, the five gates, the
   principles, the rationalization tables. The parent skill; the rest are its
@@ -33,9 +33,9 @@ Nine skills (each a `<name>/SKILL.md`):
 - **`concise-writing`** — tighten prose a reader must get through (docs, plans,
   commit bodies, replies); cut padding without cutting substance.
 
-The hook stack (under `disciplined-development/hooks/`) is documented in its own
-[`hooks/README.md`](disciplined-development/hooks/README.md); config schema in
-[`hooks/dd-config.md`](disciplined-development/hooks/dd-config.md).
+The hook stack (under `skills/disciplined-development/hooks/`) is documented in its own
+[`hooks/README.md`](skills/disciplined-development/hooks/README.md); config schema in
+[`hooks/dd-config.md`](skills/disciplined-development/hooks/dd-config.md).
 
 ## Requirements
 
@@ -102,14 +102,14 @@ That block wires the full set — plan-state injection, the re-ground counter,
 the four-tier review cadence (T0 edit nudge/block, T1 commit nudge, T2
 cold-read nudge/block, T3 pre-PR gate), and post-compaction re-grounding.
 Per-hook behavior + the `DD_SKIP_<HOOK>` bypass env vars are in
-[`hooks/hook-recipes-claude-code.md`](disciplined-development/hooks/hook-recipes-claude-code.md).
+[`hooks/hook-recipes-claude-code.md`](skills/disciplined-development/hooks/hook-recipes-claude-code.md).
 
 ## Configure + adopt
 
 - **Config:** drop a `.claude/dd-config.json` in the consuming project to override
   defaults (trunk branches, review tiers, thresholds). Start from
   [`examples/dd-config.json`](examples/dd-config.json); full schema in
-  [`hooks/dd-config.md`](disciplined-development/hooks/dd-config.md). Override only
+  [`hooks/dd-config.md`](skills/disciplined-development/hooks/dd-config.md). Override only
   what you need — a deleted key falls back to the shipped default.
 - **Thread into `CLAUDE.md`:** add the invoke-at-session-start block from
   [`examples/CLAUDE.md-snippet.md`](examples/CLAUDE.md-snippet.md) so the agent
@@ -178,7 +178,7 @@ moment the symlinks are back.
 Hook stack:
 
 ```
-cd disciplined-development/hooks && python3 -m pytest -q
+cd skills/disciplined-development/hooks && python3 -m pytest -q
 ```
 
 The settings-wiring test skips outside an in-tree consumer (it validates a

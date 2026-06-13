@@ -1,5 +1,5 @@
 {
-  "_comment": "Minimal project overrides for the disciplined-development hooks. Copy to <your-project>/.claude/dd-config.json and override ONLY what differs from the shipped defaults. Arrays REPLACE; objects DEEP-MERGE. Full list of tunables: disciplined-development/hooks/dd-config.md.",
+  "_comment": "Minimal project overrides for the disciplined-development hooks. Copy to <your-project>/.claude/dd-config.json and override ONLY what differs from the shipped defaults. Arrays REPLACE; objects DEEP-MERGE. Full list of tunables: .claude/skills/disciplined-development/hooks/dd-config.md.",
 
   "branch_convention": {
     "trunk_branches": ["main", "master"]
