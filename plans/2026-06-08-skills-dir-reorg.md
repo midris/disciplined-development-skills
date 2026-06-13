@@ -106,7 +106,7 @@ project owner ("this looks right", 2026-06-08).
 The only behavior change. Independent of the real dir move — the test drives its
 own tmp-clone fixture.
 
-- [ ] **I1 — Point the installer at `skills/`.** Update `install-skills.sh` so it
+- [x] **I1 — Point the installer at `skills/`.** Update `install-skills.sh` so it
   discovers skill dirs under `skills/` instead of the clone root (the
   `examples/commands/dd-review.md` command-file path is unchanged). Test-first:
   first update `tests/test_install_skills.py` so its fixture seeds skill dirs
