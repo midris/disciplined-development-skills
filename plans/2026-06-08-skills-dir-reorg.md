@@ -211,11 +211,9 @@ dogfood hooks (swept below).
   resolved by the rename; this is now a relocation only.)
   - **References swept:** confirm no inbound links existed (verified: zero), so
     only the new `SKILL.md` link is added. The canonical hooks doc and its 7
-    inbound refs are a different file — leave untouched. **Outbound link:** the
-    file's own intro links the canonical hooks doc at
-    `../disciplined-development/hooks/hook-recipes-claude-code.md`; descending
-    into `references/` adds a level, so update it to
-    `../../disciplined-development/hooks/hook-recipes-claude-code.md`.
+    inbound refs are a different file — leave untouched. Also re-point the
+    file's own intro link to the canonical hooks doc — the deeper `references/`
+    path needs one more `../`.
 
 ---
 
