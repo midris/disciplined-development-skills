@@ -133,12 +133,22 @@ discoverable). Each commit lands green; the bundle does not symlink its own
 skills, so the only runtime dependency on these paths is the bundle's own
 dogfood hooks (swept below).
 
-- [ ] **M1 — `git mv` the nine skill dirs into `skills/`.** `mkdir skills`,
+- [x] **M1 — `git mv` the nine skill dirs into `skills/`.** `mkdir skills`,
   then `git mv <skill> skills/<skill>` for all nine (the `hooks/` subtree moves
   with `disciplined-development`). Content-preserving; no edits inside the dirs
   in this task.
 
-- [ ] **M2 — Sweep the bundle's own dogfood `settings.json`.** Re-point the five
+- [ ] **M2 — Sweep the bundle's own dogfood `settings.json`.**
+  **Resequenced to the END of the reorg (after M7 / before Phase 7), not done in
+  Phase-2 order.** *Why:* the live `git mv` in M1 immediately dangles the
+  `PreToolUse:*` `discipline_nudge.py` path wired in `settings.json`, which
+  exits non-zero and blocks every subsequent tool call — a hard lockout mid-move
+  (hit during execution, 2026-06-13). The owner cleared it by emptying `hooks`
+  to `{}`. The hooks therefore stay disabled through the remaining file-moving
+  tasks and are restored — re-pointed at `skills/...` — as the final step, so no
+  later move can re-trigger the lockout. *Plan refinement for any future
+  hook-relocating move: disable self-wired hooks before the move, restore after.*
+  Re-point the five
   advisory self-wired hook commands from
   `$CLAUDE_PROJECT_DIR/disciplined-development/hooks/...` to
   `$CLAUDE_PROJECT_DIR/skills/disciplined-development/hooks/...`, and update the
