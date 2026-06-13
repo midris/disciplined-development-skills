@@ -11,7 +11,8 @@ overlays *on top of* it.
   (path `.claude/skills/disciplined-development/SKILL.md`). It governs the gates,
   principles, and sub-skill dispatch: `adversarial-review`,
   `adversarial-review-loop`, `concise-writing`, `disciplined-research`,
-  `lean-plan-writing`, `sweeping-stale-references`, `writing-explicit-rationale`.
+  `dispatching-development-subagents`, `lean-plan-writing`,
+  `sweeping-stale-references`, `writing-explicit-rationale`.
   The rules below are project-specific overlays on top of it.
 - The hooks are **not** auto-registered. Merge the hook block from
   `examples/settings.hooks.json` into `.claude/settings.json`, and drop a

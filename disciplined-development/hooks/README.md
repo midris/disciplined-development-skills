@@ -148,10 +148,12 @@ retention/cleanup.
   the severity contract (P0/P1/P2 block, P3 advisory) and the
   review-fix-review iteration cap + cold-read escape. Loaded by every T0–T2
   subagent.
+- **`dispatching-development-subagents`** — scope-contract + verify-every-commit
+  overlay for development subagents whose diffs the orchestrator integrates.
 - **`lean-plan-writing`**, **`writing-explicit-rationale`**,
-  **`sweeping-stale-references`**, **`disciplined-research`** — the
-  plan-density, rationale-on-page, stale-reference, and verify-before-claiming
-  companions.
+  **`sweeping-stale-references`**, **`disciplined-research`**,
+  **`concise-writing`** — the plan-density, rationale-on-page, stale-reference,
+  verify-before-claiming, and prose-tightening companions.
 
 ## Two classes of discipline (why the hooks are dumb)
 
