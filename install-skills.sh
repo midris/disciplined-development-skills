@@ -3,7 +3,7 @@
 #
 # Usage: install-skills.sh <target-project-dir>
 #
-# For every skill dir under skills/ in this clone (a subdir of skills/ containing
+# For every skill dir under skills/ in this clone (a subdir containing
 # a SKILL.md), creates a symlink <target>/.claude/skills/<name> ->
 # <this-clone>/skills/<name>. Idempotent and safe: skips (with a warning) any
 # name that already exists as a real path or a symlink pointing elsewhere —

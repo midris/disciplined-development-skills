@@ -54,7 +54,7 @@ At cold-read, a **doc-dominant** diff substitutes two of these angles — see "D
 
 Each subagent prompt must:
 - Load the `adversarial-review` skill — invoke it via the Skill tool, or if
-  unavailable read `adversarial-review/SKILL.md` from disk and follow it.
+  unavailable read `skills/adversarial-review/SKILL.md` from disk and follow it.
 - Review the **full** diff: `git diff SCOPE`. An angle *adds a focus*; it does
   NOT partition the diff. The holistic reviewer owns the whole picture so
   findings between two angles' mandates don't fall through the seams.
