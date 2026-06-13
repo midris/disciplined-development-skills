@@ -176,6 +176,22 @@ from `.claude/settings.json` (or set the `DD_SKIP_<HOOK>` env vars) to break the
 cycle, re-run the installer, then restore the hooks. They resolve again the
 moment the symlinks are back.
 
+**After a bundle reorg that moves the skill source dirs.** Distinct from dropped
+symlinks: here the symlinks still exist but point at the *old* source paths and
+dangle. Re-running the installer alone does **not** fix this — it skips any
+symlink whose target differs (a dangling one included) with a warning, leaving
+the stale link in place. Remove the broken skill symlinks first, then re-run.
+This deletes only dangling symlinks — real dirs and live/foreign symlinks are
+untouched:
+
+```
+find /path/to/your/project/.claude/skills -maxdepth 1 -type l ! -exec test -e {} \; -delete
+/path/to/disciplined-development-skills/install-skills.sh /path/to/your/project
+```
+
+Hooks wired through `.claude/skills/.../hooks/...` need no edit — repointing the
+symlink fixes them.
+
 ## Tests
 
 Hook stack:
