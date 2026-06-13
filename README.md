@@ -178,10 +178,18 @@ silently-skipped nudge.
 /path/to/disciplined-development-skills/install-skills.sh /path/to/your/project
 ```
 
-If you're mid-lockout and even that is blocked, first remove the `hooks` block
-from `.claude/settings.json` (or set the `DD_SKIP_<HOOK>` env vars) to break the
-cycle, re-run the installer, then restore the hooks. They resolve again the
-moment the symlinks are back.
+**Mid-lockout — you have to fix it by hand; the agent can't.** Once tool calls
+are blocked, Claude cannot run the installer or edit files for you — every tool
+it would use is gated by the same failing hook. Break the cycle yourself, in a
+terminal or editor outside the agent:
+
+1. Open `.claude/settings.json` and **delete the `hooks` block** (or set the
+   relevant `DD_SKIP_<HOOK>` env vars). Either stops the blocking immediately.
+2. Repoint the skills — re-run the installer (or the reorg steps below if the
+   symlinks dangle rather than being absent).
+3. **Restore the `hooks` block** you removed in step 1.
+
+The hooks resolve again the moment their target paths are back.
 
 **After a bundle reorg that moves the skill source dirs.** Distinct from dropped
 symlinks: here the symlinks still exist but point at the *old* source paths and
