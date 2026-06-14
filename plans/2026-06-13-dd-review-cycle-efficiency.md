@@ -6,7 +6,7 @@
 
 **Goal-verifiability (accepted limitation):** every change here is doctrine/prose that takes effect on *future* review cycles — there is no before/after timing harness, and this PR's own Gate 5 exercises the new loop only once (N=1). The ~45→~15 min target is the design intent, not something this plan's own execution measures or proves. Validate it by watching the next doc-heavy branch's cycle, not this one.
 
-**Architecture:** Doctrine-only change — no hook code, with one exception (a severity-regex regression guard, below). Three edits to existing skills/commands plus a localized rubric reword. The unifying fix is attacking *round count* (the cost is rounds × full re-review), not gate strictness.
+**Architecture:** Doctrine-only change — no hook code, with one exception (a severity-regex regression guard, below). Three changes: the loop skill (#4), the P2 rubric + its timing harmonization and severity guard (#1), and the command tier-routing note (#3). The unifying fix is attacking *round count* (the cost is rounds × full re-review), not gate strictness.
 
 **Tech Stack:** Markdown skills + slash-command files; Python/pytest only for the one regression guard.
 
@@ -28,7 +28,7 @@ Descoped / deferred (rationale on-page per `writing-explicit-rationale`):
 ## File structure
 
 - `skills/adversarial-review-loop/SKILL.md` — add the class-sweep step + round-count backstop (#4, #5-prose).
-- `skills/adversarial-review/SKILL.md` — reword the P2 rubric line (#1). **Invariant:** keep the `minor /` substring (see Task 2).
+- `skills/adversarial-review/SKILL.md` — reword the P2 rubric line + align the P1 timing phrasing (#1; Task 2 Steps 3–4). **Invariant:** keep the `minor /` substring (see Task 2).
 - `skills/disciplined-development/SKILL.md` — Gate 5 timing harmonization (the "resolve before merge" parenthetical; see Task 2 Step 4).
 - `skills/disciplined-development/hooks/tests/test_severity.py` — regression guard pinning the `minor /` invariant, coupled to the live SKILL.md line (lands with Task 2).
 - `.claude/commands/dd-review.md` **and** `examples/commands/dd-review.md` — diff-type→tier routing note (#3) only. Both variants edited in lockstep (consumer-contract sync per CLAUDE.md). (The #3 note attaches to tier selection; it does NOT touch the pre-pr section's pre-existing "hard-blocks" sentence — see the #6-dropped descope.)
@@ -53,25 +53,32 @@ Descoped / deferred (rationale on-page per `writing-explicit-rationale`):
 **Files:**
 - Modify: `skills/adversarial-review-loop/SKILL.md` (the **Address** step ~line 10; the **Iteration cap** section ~lines 14–18)
 
+**REQUIRED SUB-SKILL:** `superpowers:writing-skills`. `adversarial-review-loop` is a discipline-enforcing skill and the #4 class-sweep is a NEW behavioral rule, so its Iron Law applies — a failing test (a subagent **pressure scenario**) comes BEFORE the edit, then RED→GREEN→REFACTOR. The repo's usual cold-read substitute (CLAUDE.md) is kept as an additional net (Task 4), not the primary check here.
+
 **What (prose is the contract):**
 
-- [ ] **Step 1:** Rewrite the **Address** step so it is class-level, not instance-level. Required content: for every [P0]/[P1]/[P2] finding, (a) identify the *class* the finding instances (e.g. "stale command in a doc", "`cd` that strands the shell", "unqualified threshold claim"); (b) enumerate the class's members across the branch — grep/scan for the same shape, and for executable doc claims, run each; (c) fix all members; (d) only then re-dispatch. Frame the one-instance fix as the failure mode this prevents. Cross-reference `sweeping-stale-references` (Gate 4) and `adversarial-review`'s "Enumerate every class" rule — this is those postures applied to review findings, not new doctrine.
-- [ ] **Step 2:** Add a SHORT round-count backstop to the **Iteration cap** section — one trigger sentence, framed explicitly as the catch for when Step 1's class-sweep was *skipped*, NOT a second independent mechanism (a future reader must not read it as redundant with Step 1): if external (gate) rounds keep returning one-or-few new findings each, the sweep wasn't done — do it now (and at the cap, the cold-read escape), not another single-instance round. No mechanical counter (descope #5). Keep it to a sentence — the loop SKILL is dense.
-- [ ] **Step 3:** Keep the existing rationalizations table; add a row only if Steps 1–2 leave an obvious new excuse open (e.g. "each round found a genuinely new nit, so iteration is productive" → "one-nit-per-round on the same class is drift wearing a productivity mask — sweep the class").
-- [ ] **Step 4:** Concision pass per `concise-writing` (the loop SKILL is dense; do not bloat it).
-- [ ] **Step 5: Commit** (`docs:`), body cites this task.
+- [ ] **Step 1 (RED — baseline pressure-test):** Before editing, dispatch a fresh subagent the CURRENT loop skill (no class-sweep) + a single review finding (e.g. one stale doc command) under combined time + sunk-cost pressure. Record verbatim whether it fixes only that one instance and re-dispatches, plus any rationalization it uses. That is the baseline failure the edit must close — a discipline skill is tested by pressure scenario, not application. The documented baseline failure already exists (the observed 45-min / 7-round real run, see Goal); this scenario's job is to capture rationalizations for the table (Step 4) and confirm the *current* skill permits one-instance fixing — NOT to re-decide whether #4 ships. If the synthetic agent happens to sweep unprompted, that doesn't negate the real incident: note it and strengthen the scenario's pressure rather than dropping the edit.
+- [ ] **Step 2 (GREEN — Address step):** Rewrite the **Address** step so it is class-level, not instance-level. Required content: for every [P0]/[P1]/[P2] finding, (a) identify the *class* the finding instances (e.g. "stale command in a doc", "`cd` that strands the shell", "unqualified threshold claim"); (b) enumerate the class's members across the branch — grep/scan for the same shape, and for executable doc claims, run each; (c) fix all members; (d) only then re-dispatch. Frame the one-instance fix as the failure mode this prevents. Cross-reference `sweeping-stale-references` (Gate 4) and `adversarial-review`'s "Enumerate every class" rule — this is those postures applied to review findings, not new doctrine.
+- [ ] **Step 3 (GREEN — backstop):** Add a SHORT round-count backstop to the **Iteration cap** section — one trigger sentence, framed explicitly as the catch for when the class-sweep was *skipped*, NOT a second independent mechanism (a future reader must not read it as redundant with the Address step): if external (gate) rounds keep returning one-or-few new findings each, the sweep wasn't done — do it now (and at the cap, the cold-read escape), not another single-instance round. No mechanical counter (descope #5). Keep it to a sentence — the loop SKILL is dense.
+- [ ] **Step 4 (GREEN — rationalizations):** Add a rationalizations-table row for EACH excuse the Step 1 baseline produced (writing-skills: every baseline rationalization goes in the table), plus the obvious one if not already surfaced ("each round found a genuinely new nit, so iteration is productive" → "one-nit-per-round on the same class is drift wearing a productivity mask — sweep the class").
+- [ ] **Step 5 (verify GREEN + REFACTOR):** Re-run the Step 1 scenario against the EDITED skill. Confirm the agent now identifies the class, enumerates members, and fixes all before re-dispatch. If it finds a new loophole, add an explicit counter and re-test until it complies (writing-skills REFACTOR). Record the before/after outcome.
+- [ ] **Step 6 (concision):** Concision pass per `concise-writing` — without breaking the compliance verified in Step 5; do not bloat the dense loop SKILL.
+- [ ] **Step 7: Commit** (`docs:`), body cites this task and notes the baseline→verify pressure-test per `superpowers:writing-skills`.
 
-No automated test (skill prose). Validation: the Task 4 cold-read.
+Validation: the Step 1/5 pressure-test is the primary check (writing-skills); the Task 4 cold-read is an additional net.
 
 ---
 
 ### Task 2: Reconcile the P2 rubric wording + pin the severity invariant
 
 **Files:**
-- Modify: `skills/adversarial-review/SKILL.md:37`
-- Modify/Test: `skills/disciplined-development/hooks/tests/test_severity.py`
+- Modify: `skills/adversarial-review/SKILL.md` — P2 rubric line `:37` (reword, Step 3) and P1 line `:36` (timing alignment, Step 4)
+- Modify: `skills/disciplined-development/SKILL.md` — Gate 5 parenthetical `:76` (timing alignment, Step 4)
+- Modify/Test: `skills/disciplined-development/hooks/tests/test_severity.py` (Step 1 guard)
 
 **Background (load-bearing):** [severity.py:55-62](../skills/disciplined-development/hooks/lib/severity.py#L55-L62) suppresses echoed rubric-legend lines via a negative lookahead matching `[Pn] (—|-|:) <severity-term> /`. For P2 the term is `minor`, so the suppression fires on the `minor /` shape. If the reworded line drops `minor /`, a reviewer echoing the rubric would have its P2 legend line counted as a real finding — silently inflating the gate. **The reword must preserve `minor /`.**
+
+**REQUIRED SUB-SKILL (Steps 3–4):** `superpowers:writing-skills` governs the `adversarial-review` rubric and doctrine Gate 5 edits. These are *wording fixes to a rubric/gate, not new discipline rules*, so per writing-skills ("mechanical constraints → automate; save pressure-testing for judgment calls") no subagent pressure scenario is warranted. The one behavioral effect (severity counting) is protected by the `minor /` regression guard (Step 1) — a regression *pin*, not a red-first test (see Step 2's honest framing); the prose itself is judgment, covered by an academic read + the Task 4 cold-read. (Rationale on-page so the lighter process doesn't read as a skipped one — contrast Task 1, where the class-sweep *is* a new rule and gets the full pressure-test.)
 
 - [ ] **Step 1: Write the regression guard first — couple it to the live file, not a frozen copy.** Add a `test_severity.py` case that READS the P2 **rubric-legend** line from `skills/adversarial-review/SKILL.md` at runtime and asserts `count_severities(that_line, line_start=True)` yields **zero** P2, with empty `findings_excerpt`. A literal hard-coded copy would stay green even after a future edit drops `minor /` from the real file — so the test must parse the live line for the guard to mean anything.
   - **Locator (must be unambiguous):** the file contains TWO `[P2]` lines — the rubric legend (~line 37, starts `- **[P2]** —`, contains `minor /`) AND a few-shot finding example (~line 100, `- [P2] spec.md:127: …`, which correctly counts as 1). Match the **legend** line only: select lines starting with `- **[P2]** —` (or: in the Severity-rubric section, containing `minor /`). Assert **exactly one** match; FAIL loudly on zero or >1 — a bare "first line containing `[P2]`" locator would grab the example and assert the wrong thing.
@@ -107,7 +114,7 @@ No automated test (skill prose). Validation: the Task 4 cold-read.
 - [ ] **Step 2:** Make the same edit in `examples/commands/dd-review.md`, adjusting only the path roots (`.claude/skills/...` vs `skills/...`). The two variants ALREADY differ beyond path roots — an intentional pre-existing header comment block (bundle-source note vs consumer-template note, ~lines 2-7) and a "from disk" phrase present at the AR-skill load line in the bundle variant only. Verify only that THE NEW EDIT differs between the variants solely in path roots; do not expect a whole-file diff to be path-roots-only (it never was).
 - [ ] **Step 3: Commit** (`docs:`), body notes both command variants edited in lockstep.
 
-No automated test (command prose). Validation: Task 4 cold-read.
+No automated test (command prose). `superpowers:writing-skills` does NOT apply here — slash-command files are not skills, so there is no SKILL.md edit to pressure-test. Validation: Task 4 cold-read.
 
 ---
 
@@ -127,5 +134,5 @@ No automated test (command prose). Validation: Task 4 cold-read.
 
 - **Spec coverage:** #4 → Task 1; #1 → Task 2 (incl. timing-phrasing sweep, Step 4); #3 → Task 3; descopes #1-loosen/#2/#5/#6-dropped → Locked-decisions section. All adopt-now items have a task.
 - **Merge boundary:** single feature branch → one PR; small enough for one cold-read pass (`lean-plan-writing`: declare merge boundaries).
-- **Test-first note:** only Task 2 has a mechanical test; it pins the `minor /` *regex invariant* — now coupled to the live SKILL.md line (Step 1) — not the prose semantics of the reword. It is a regression guard (green once `minor /` is present), not behavior-driving TDD. The reword's prose quality and the timing-sweep's consistency are validated by the Task 4 cold-read, not the test. Other tasks are skill/command prose whose substitute gate is that same cold-read (CLAUDE.md: "no test catches a worse instruction").
+- **Test-first note:** two testing disciplines, by edit type. (1) **Task 1** edits a discipline *skill* (a new behavioral rule), so it follows `superpowers:writing-skills` — a subagent **pressure-test** baseline (RED, Step 1) before the edit and a re-run (GREEN/REFACTOR, Step 5) after. (2) **Task 2** has the only *mechanical* test: it pins the `minor /` regex invariant (coupled to the live SKILL.md line), a regression guard not behavior-driving TDD; its rubric/Gate-5 prose are wording fixes, not new rules, so they take the lighter writing-skills path (mechanical→automate) + cold-read. **Task 3** edits command files (not skills) — no pressure-test applies. The Task 4 cold-read is the additional net across all of them (CLAUDE.md: "no test catches a worse instruction").
 - **Goal honesty:** the headline timing target is not measured by this plan's own execution (N=1, no before/after harness) — see Goal-verifiability above. Stated as design intent, validated on future cycles.
