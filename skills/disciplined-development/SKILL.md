@@ -73,7 +73,7 @@ Three steps, in order. Plan checklist does not override the gate.
    `adversarial-review-loop`.
    REQUIRED SUB-SKILLS: `superpowers:requesting-code-review` + `adversarial-review` + `adversarial-review-loop`.
 2. **External review** of the chunk diff. `[P0]`/`[P1]`/`[P2]` block the
-   PR (resolve before merge); `[P3]` is advisory.
+   PR (resolve before opening it); `[P3]` is advisory.
 3. **Smoke pass** affected flows; capture evidence in the PR body.
 
 The PR is opened by you, not by an agent.
