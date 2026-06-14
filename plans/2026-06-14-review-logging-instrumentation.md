@@ -180,11 +180,13 @@ The duty therefore attaches at the points a review is **initiated**, which run
 unconditionally regardless of outcome:
 
 - **`/dd-review` command tiers** — the command procedure
-  (`.claude/commands/dd-review.md` and `examples/commands/dd-review.md`) runs
-  steps 1–5 on every invocation, clean or not. It logs `--source command` once
-  per loop round **and** once on the clean terminal pass (so a first-pass-clean
-  `/dd-review fast`, which never enters the findings loop, still emits its
-  `PASS` row). Exactly one call per round — no second call layered on.
+  (`.claude/commands/dd-review.md` and `examples/commands/dd-review.md`) logs
+  `--source command` once per round, anchored at the **aggregation** point
+  (after step 3, and after each step-4 re-run's aggregation) — which runs on
+  every round including a clean first pass, so a first-pass-clean `/dd-review
+  fast` still emits its `PASS` row. `--write-checkpoint` (step 5) does not log.
+  Exactly one call per round — no second anchor that would double-count the
+  terminal clean round.
 - **Self-review** (`disciplined-development` Gate 5 step 1) and **external
   review** (Gate 5 step 2) — the gate runs whenever a chunk boundary is reached.
   Each step logs `--source ad-hoc --tier self-review|external` after the review,
@@ -263,9 +265,9 @@ and the hooks README document it.
   existing `pre-pr` `append_review` calls.
 - `tests/test_dd_review_runner.py` — new `--log-review` tests (named in plan).
 - `.claude/commands/dd-review.md` + `examples/commands/dd-review.md` —
-  `--log-review --source command` once per loop round **and** on the clean
-  terminal pass (step 5 area), so a first-pass-clean run still logs; document
-  the subcommand.
+  `--log-review --source command` once per round at the aggregation point (step
+  3 + each step-4 re-run; not step 5), so a first-pass-clean run still logs;
+  document the subcommand.
 - `skills/disciplined-development/SKILL.md` — Gate 5 step 1 (self-review) and
   step 2 (external review): degrade-safe optional `--log-review --source ad-hoc`
   after the review, fires regardless of outcome (the gate runs unconditionally
@@ -301,3 +303,229 @@ instruction — is resolved by the Coverage design note: logging anchors at the
 review-*initiation* sites that run unconditionally, the `/dd-review` command and
 `disciplined-development` Gate 5, not at any findings-triggered or
 subagent-loaded skill.)
+
+---
+
+# Implementation plan
+
+> **For agentic workers:** REQUIRED SUB-SKILL — use
+> `superpowers:subagent-driven-development` (recommended) or
+> `superpowers:executing-plans` to implement task-by-task. Each subagent
+> dispatch loads `disciplined-development` first (Principle 4). Prose is the
+> contract (`lean-plan-writing`): implement against the named behaviors with
+> running tests as feedback; do not expect copy-paste code here.
+
+**Goal:** capture every model-layer review outcome in `reviews.jsonl` via a
+deterministic `--log-review` subcommand, computed by the same machinery as the
+engine path (see the design above).
+
+**Architecture:** one new mode in `dd_review_runner.py` parallel to
+`--write-checkpoint` / `--resolve-scope`; callers (the `/dd-review` command and
+`disciplined-development` Gate 5) pipe findings to it. Follow the existing
+mode-handler pattern (`_handle_write_checkpoint`, `_handle_resolve_scope`) and
+test helpers (`review_env` fixture, `_run`, `_reviews` in
+`test_dd_review_runner.py`) — don't invent new ones.
+
+**Merge boundary:** one PR, `feature/review-logging-instrumentation`. Tasks 1–4
+(Python, test-covered) land first and are independently green; Tasks 5–7
+(prose/docs) follow and are gated by a cold-read, not a unit test.
+
+## Task 1 — `--log-review` happy path (derive + append)
+
+**Files:** modify `skills/disciplined-development/hooks/dd_review_runner.py`
+(new `_handle_log_review`, dispatched from `main()` before `_parse_argv`, same
+shape as the other two mode handlers); test
+`skills/disciplined-development/hooks/tests/test_dd_review_runner.py`.
+
+**What:** parse `--tier`, `--source`, `--round`, `--reviewer` (optional,
+default `subagents`); read findings from **stdin**; derive `p0`–`p3` via
+`severity.count_severities(stdin, line_start=True)`, `decision` via the engine's
+`BLOCK if p0+p1+p2>0 else PASS` rule, and store the full stdin as `output`;
+append one row via `logging_setup.append_review` carrying
+`tier/source/round/reviewer/output/p0–p3/decision` plus a `source`-tagged record.
+No reviewer dispatch, no checkpoint, no scope resolution.
+
+Define the validation sets as module constants alongside the existing
+`VALID_TIERS` / `_CHECKPOINT_TIERS` / `_SCOPE_TIERS`:
+`_LOG_REVIEW_TIERS = ("fast", "regular", "cold-read", "self-review", "external")`
+and `_LOG_REVIEW_SOURCES = ("command", "ad-hoc")`. Also extend the `--help`
+block in `main()` and the `_print_usage_error` usage strings to list
+`--log-review` — otherwise the in-code mode index goes stale (the same
+`References swept` discipline, applied to the runner's own usage text).
+
+**Tests required (write first, watch fail, then implement):**
+- A `command`/`fast` invocation piping a contract blob with one `[P1]` line
+  writes exactly one row with `decision == "BLOCK"`, `p1 == 1`, `source ==
+  "command"`, `tier == "fast"`, `round == 1`, and `output` containing the blob.
+- A `No findings.` blob → one row, `decision == "PASS"`, `p0..p3 == 0`.
+- `--reviewer` omitted defaults to `subagents`; supplied value is recorded.
+
+**Steps:**
+- [ ] Write the three tests above; run the hook suite → confirm fail.
+- [ ] Add `_handle_log_review` + the `_LOG_REVIEW_*` constants + `--help`/usage updates per **What**.
+- [ ] Run `cd skills/disciplined-development/hooks && python3 -m pytest -q` → green.
+- [ ] Commit: `feat(dd-review): add --log-review mode deriving severity + decision`.
+
+## Task 2 — git-derived fields + `--cwd`
+
+**Files:** same module + test file.
+
+**What:** in `_handle_log_review`, resolve `branch`/`head_sha` via the existing
+`_current_branch`/`_head_sha` helpers and `base` per tier (fork-base via
+`state.resolve_fork_base` for `regular`/`cold-read`/`self-review`/`external`;
+literal `HEAD` for `fast`), all against `--cwd` when given. The base/trunk-config
+resolution is exactly `_handle_resolve_scope`'s logic (read
+`branch_convention.trunk_branches`, fall back to `["master","main"]`, call
+`resolve_fork_base`) — reuse that, not `_handle_write_checkpoint` (which never
+resolves a base). Mirror the repo-root resolution (`rev-parse --show-toplevel`)
+from either handler.
+
+**Tests required:**
+- A row records the repo's current `branch`, `head_sha`, and a `base` matching
+  the tier rule (assert `HEAD` for `fast`; a fork-base SHA for `regular`).
+- `--cwd <other-repo>` resolves `branch`/`base` against that repo, not the
+  session cwd (parallels `test_cwd_flag_targets_other_repo`).
+
+**Steps:**
+- [ ] Write the two tests above; run → confirm fail.
+- [ ] Resolve git fields per **What** (reuse `_handle_resolve_scope`'s base logic).
+- [ ] Run the hook suite → green.
+- [ ] Commit: `feat(dd-review): resolve git fields for --log-review, honor --cwd`.
+
+## Task 3 — exit-code contract
+
+**Files:** same module + test file.
+
+**What:** split exit semantics — degrade-safe on I/O, loud on caller error.
+Pin every case in this table:
+
+| Condition | Exit | Row written? |
+|---|---|---|
+| valid call, append succeeds | 0 | yes |
+| `logging.enabled=false` | 0 | no |
+| unwritable log dir (append fails) | 0 | no |
+| unknown `--tier` or `--source` value | 2 | no |
+| empty / whitespace-only stdin | 2 | no |
+| `--cwd` not a directory | 2 | no |
+
+Usage errors reuse `_print_usage_error` and return 2 (as the sibling modes do);
+append failures rely on `append_review`'s never-raises guarantee and return 0.
+
+**Empty stdin must NOT log a row.** `count_severities("")` returns all-zero,
+which would otherwise fabricate a `PASS` row from a blank pipe — a false clean
+review poisoning the telemetry. A clean review must come from an actual
+`No findings.` emission (non-empty), so treat empty-or-whitespace-only stdin as a
+usage error (exit 2), distinct from a real `PASS`.
+
+**Tests required:** one assertion per table row (exit code + row presence),
+including an explicit "whitespace-only stdin → exit 2, zero rows" case.
+
+**Steps:**
+- [ ] Write one test per table row (incl. whitespace-only stdin); run → confirm fail.
+- [ ] Implement the exit-code split per **What** (usage→2 via `_print_usage_error`, I/O→0).
+- [ ] Run the hook suite → green.
+- [ ] Commit: `feat(dd-review): exit-code contract for --log-review (loud usage, soft I/O)`.
+
+## Task 4 — pre-pr rows gain `source: "engine"`
+
+**Files:** modify the `_error` and `_review_record` `append_review` calls in
+`dd_review_runner.py`; modify tests `test_clean_pass_writes_review_record`,
+`test_block_writes_review_record`, `test_error_writes_review_record`, and
+`test_cli_missing_errors`.
+
+**What:** add `source: "engine"` to BOTH append paths. They are distinct:
+`_review_record` handles outcomes *after* the reviewer runs (PASS/BLOCK and the
+post-runner ERROR branch — cli_timeout/cli_error/empty_output); `_error()`
+handles *pre-runner* failures (cli_missing, base_unresolvable, …) via a separate,
+leaner `append_review` call. Both must carry the tag.
+
+**Tests required (update assertions first, watch them fail, then add the field):**
+- `_review_record` path: `test_clean_pass_writes_review_record`,
+  `test_block_writes_review_record`, and `test_error_writes_review_record`
+  (empty_output → post-runner ERROR) each assert `r["source"] == "engine"`.
+- early `_error()` path: extend `test_cli_missing_errors` to assert the appended
+  record's `source == "engine"` (it currently checks only exit code + stderr).
+  This is the path `test_error_writes_review_record` does **not** exercise — the
+  reason Task 4's coverage was incomplete.
+
+**Steps:**
+- [ ] Add `source` assertions to the four tests above; run the hook suite → confirm fail.
+- [ ] Add `source: "engine"` to the `_error()` and `_review_record` append calls.
+- [ ] Run `cd skills/disciplined-development/hooks && python3 -m pytest -q` → green.
+- [ ] Commit: `feat(dd-review): tag pre-pr review rows with source=engine`.
+
+## Task 5 — `/dd-review` command wiring (prose; cold-read gated)
+
+**Files:** modify `.claude/commands/dd-review.md` and
+`examples/commands/dd-review.md`.
+
+**What:** anchor logging at the **aggregation** point, which runs once per round
+including a clean first pass — *not* split across step 4 and step 5 (that would
+double-count the terminal clean round). Concretely: after the step-3 aggregation,
+and after each step-4 re-run's aggregation, pipe that round's deduped findings to
+`ENGINE --log-review --source command --tier $ARGUMENTS --round <n>`, where `<n>`
+increments per round (initial aggregation is round 1). `--write-checkpoint`
+(step 5) does **not** log. Net: exactly one row per round; a first-pass-clean run
+logs one `PASS` row at the initial aggregation. Keep both command variants in
+lockstep (bundle vs consumer path).
+
+**Validation:** no unit test (prose) → run `/dd-review cold-read` on the staged
+branch; address findings per `adversarial-review-loop` before commit.
+
+**Steps:**
+- [ ] Edit both command files per **What** (aggregation-anchored per-round log, lockstep).
+- [ ] `/dd-review cold-read` the staged branch; address findings per `adversarial-review-loop`.
+- [ ] Commit: `docs(dd-review): log each command-tier review round via --log-review`.
+
+## Task 6 — Gate 5 skill wiring (prose; cold-read gated)
+
+**Files:** modify `skills/disciplined-development/SKILL.md` (Gate 5 steps 1–2).
+
+**What:** add a **degrade-safe, optional** instruction to each step: *"if the
+dd-review engine is available, pipe the findings to `ENGINE --log-review
+--source ad-hoc --tier self-review|external --round <n>`"*, firing regardless of
+outcome and once per review pass (initial review and each re-review increment
+`<n>`), matching the command tiers' per-round fidelity (best-effort for inline
+self-review). Phrase per the existing conditional pattern so a pure-skills /
+other-harness consumer no-ops. Do **not** touch `adversarial-review`,
+`adversarial-review-loop`, or `dispatching-development-subagents` (see the
+Coverage design note for why).
+
+**Validation:** `/dd-review cold-read`; address findings before commit.
+
+**Steps:**
+- [ ] Edit Gate 5 steps 1–2 per **What** (degrade-safe, per-pass `--source ad-hoc`).
+- [ ] `/dd-review cold-read`; address findings.
+- [ ] Commit: `docs(dd): log self/external reviews at Gate 5 initiation site`.
+
+## Task 7 — docs sweep
+
+**Files:** modify `skills/disciplined-development/hooks/README.md` (Observability
+section — `reviews.jsonl` is multi-source; document `source`/`tier` and the
+`--log-review` contract), `skills/disciplined-development/hooks/hook-recipes-claude-code.md`
+(add `--log-review` to the `dd_review_runner.py` mode index), and the
+`logging_setup.py` module docstring (note multi-source). Verify
+`hooks/dd-config.md`'s `reviews.jsonl` description still reads accurately; no
+schema change. (`README.md`, `examples/starter.CLAUDE.md` — false positives, no
+edit.)
+
+**What:** documentation only. Include `References swept:` in the commit body
+listing each doc per `sweeping-stale-references`.
+
+**Validation:** `/dd-review cold-read` on the full staged branch before the PR.
+
+**Steps:**
+- [ ] Update README / hook-recipes / `logging_setup.py` docstring; verify `dd-config.md` reads accurately.
+- [ ] `/dd-review cold-read` the full staged branch.
+- [ ] Commit (body includes `References swept:` listing each doc): `docs: document --log-review across hooks README, recipes, docstring`.
+
+## Plan self-review
+
+- **Spec coverage:** primitive (T1–3), `source=engine` (T4), command + Gate 5
+  wiring (T5–6), docs sweep incl. hook-recipes + test assertions (T7) — every
+  Files-touched entry and the two latest review findings map to a task.
+- **Type consistency:** `--log-review`, `--source {command,ad-hoc}`, `--tier`,
+  `--round`, `--reviewer`, fields `source/tier/round/reviewer/output` used
+  consistently across tasks and the schema table above.
+- **Test-first:** every Python task lists failing tests before impl; prose tasks
+  substitute a cold-read (no unit test catches a worse instruction).
