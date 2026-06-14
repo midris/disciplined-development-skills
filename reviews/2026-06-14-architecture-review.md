@@ -54,7 +54,7 @@ on-page "why this number." Same gap applied to the superpowers
 risk-acceptance — sound call, but it lived only in conversation until this
 review (now on-page in the README).
 
-**Fix:** see [`plans/2026-06-14-threshold-rationale-and-calibration.md`](../plans/2026-06-14-threshold-rationale-and-calibration.md).
+**Fix:** see [`plans/deferred/2026-06-14-threshold-rationale-and-calibration.md`](../plans/deferred/2026-06-14-threshold-rationale-and-calibration.md).
 Document each as a deliberately-provisional starter value now; calibrate against
 the firing telemetry from
 [`plans/2026-06-14-review-logging-instrumentation.md`](../plans/2026-06-14-review-logging-instrumentation.md)
@@ -72,7 +72,7 @@ self-attested nature is the hard part: the same model that did the work would
 write its own trust summary, so the artifact has to lean on the one independent
 signal in the system (the cross-vendor T3 review) to mean anything.
 
-**Fix:** see [`plans/2026-06-14-human-facing-trust-artifact.md`](../plans/2026-06-14-human-facing-trust-artifact.md).
+**Fix:** see [`plans/deferred/2026-06-14-human-facing-trust-artifact.md`](../plans/deferred/2026-06-14-human-facing-trust-artifact.md).
 
 ## Conceded during review (honest record)
 
