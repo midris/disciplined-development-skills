@@ -48,9 +48,8 @@ The hook stack (under `skills/disciplined-development/hooks/`) is documented in 
 - **Python 3** — for the hook stack.
 - **git** — the hooks key behavior off branch / commit / fork-base state.
 - **`codex` — only for the T3 pre-PR review tier.** The default T3 config shells
-  out to `codex review`. You don't need it unless you use T3; if you do, either
-  install `codex` or point `review_tiers.pre_pr.reviewer` at another reviewer in
-  `dd-config.json`.
+  out to `codex review`; if you use T3, either install `codex` or point
+  `review_tiers.pre_pr.reviewer` at another reviewer in `dd-config.json`.
 
 ## Install (clone-and-symlink)
 
@@ -64,8 +63,8 @@ git clone github-personal:midris/disciplined-development-skills.git
 
 `install-skills.sh` symlinks each skill dir into `<project>/.claude/skills/`
 (idempotent; it skips and warns rather than clobbering a real dir or a
-differently-targeted symlink). Re-run it after a fresh clone, a new worktree, or
-any branch switch that drops the symlinks — they are not tracked (see Recovery).
+differently-targeted symlink). Re-run it whenever the symlinks drop — they're not tracked (see Recovery for
+what drops them).
 
 **Gitignore the symlinks** — they're machine-specific, not tracked content. If
 your project doesn't otherwise track `.claude/skills/`, one pattern covers them:
