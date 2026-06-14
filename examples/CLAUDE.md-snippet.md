@@ -14,10 +14,11 @@ overlays *on top of* it.
   `dispatching-development-subagents`, `lean-plan-writing`,
   `sweeping-stale-references`, `writing-explicit-rationale`.
   The rules below are project-specific overlays on top of it.
-- The hooks are **not** auto-registered. Merge the hook block from
+- The hooks are **not** auto-registered. Merge the hook block from the bundle's
   `examples/settings.hooks.json` into `.claude/settings.json`, and drop a
-  `.claude/dd-config.json` to tune behavior (start from `examples/dd-config.json`;
-  full schema in `.claude/skills/disciplined-development/hooks/dd-config.md`).
+  `.claude/dd-config.json` to tune behavior (start from the bundle's
+  `examples/dd-config.json`; full schema in
+  `.claude/skills/disciplined-development/hooks/dd-config.md`).
 - The hooks enforce a four-tier review cadence: T0 fast (edit-counter nudge/block),
   T1 regular (commit nudge), T2 cold-read (commit-count nudge/block), T3 pre-PR
   (codex gate on `gh pr create`). All tiers are invoked through `/dd-review <tier>`;

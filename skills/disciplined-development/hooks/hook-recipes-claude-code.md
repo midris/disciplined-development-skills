@@ -223,7 +223,7 @@ Override knobs (also env, in `settings.local.json`): `DD_ACTIVE_PLAN`,
 pytest, run from `hooks/`:
 
 ```bash
-cd .claude/skills/disciplined-development/hooks
+cd skills/disciplined-development/hooks
 python3 -m pytest -q
 ```
 
