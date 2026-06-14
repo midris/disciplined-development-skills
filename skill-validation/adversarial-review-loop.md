@@ -4,10 +4,8 @@ Built test-first per `superpowers:writing-skills` (no skill edit without a faili
 pressure test first). This records the scenario set so the rationale is recoverable
 and the set is re-runnable.
 
-**Dispatch protocol.** Run every scenario as a **read-only** subagent (Claude Code:
-`Explore` — no Edit/Write tools), text-only, one scenario per agent, as a **bounded**
-pass — not open-ended rounds. A write-capable reviewer/test subagent is a hazard: a
-literal agent told to "fix the finding" will edit the live tree.
+**Dispatch protocol.** Read-only and bounded per CLAUDE.md's evaluation-subagent
+rule (Claude Code: `Explore`). Test-specific: one scenario per agent, text-only.
 
 ## Method
 
@@ -23,11 +21,11 @@ pre-edit skill (RED) against the post-edit skill (GREEN).
   every member, then re-runs.
 - **T2 — singular finding.** A genuinely unique bug (off-by-one in one function).
   GREEN must NOT over-sweep: name the class, find no siblings, fix the one, re-run.
-- **T3 — at the cap.** Three cycles done, round 4 returns genuinely varied findings.
-  Must take the cold-read escape, never sweep-and-continue past the cap.
-- **T4 — productive iteration.** Each round found a different real class on new
-  surface, under the cap. Must continue; the "same *kind* recurring" backstop must
-  NOT false-accuse.
+- **T3 — at the cap.** Cycle 3 returns findings (any kind — even genuinely varied,
+  new-surface ones). Must take the cold-read escape, not another fix pass.
+- **T4 — productive iteration (below the cap).** By cycle 2, each round found a
+  different real class on new surface. Must continue (fix + re-run); the "same
+  *kind* recurring" backstop must NOT false-accuse.
 - **T5 — P3-only.** Latest run returns only [P3]. Clean; stop; class-sweep does not
   apply to [P3].
 - **T6 — sweep ≠ skip re-run.** After a thorough self-sweep, must still re-run the
