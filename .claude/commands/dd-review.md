@@ -18,6 +18,11 @@ contract is identical everywhere — native P0–P3.
 
 ## `pre-pr` (T3) — codex gate
 
+**Doc-dominant branch?** Run an in-session `/dd-review cold-read` first. Its
+executability + doctrine-consistency angles (see "Doc-dominant cold-reads" below)
+are the lens codex repeatedly wins with on doc diffs — a cheap in-session pass
+pre-empts codex rounds at this gate.
+
 Run the engine directly. It dispatches `codex review`, severity-scans the
 output, hard-blocks on any P0/P1/P2, and on a clean pass writes the checkpoint
 and resets the edit counter itself:
