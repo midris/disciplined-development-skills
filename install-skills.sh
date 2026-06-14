@@ -3,10 +3,11 @@
 #
 # Usage: install-skills.sh <target-project-dir>
 #
-# For every skill dir in this clone (a subdir containing a SKILL.md), creates a
-# symlink <target>/.claude/skills/<name> -> <this-clone>/<name>. Idempotent and
-# safe: skips (with a warning) any name that already exists as a real path or a
-# symlink pointing elsewhere — it never clobbers a project-local skill.
+# For every skill dir under skills/ in this clone (a subdir containing
+# a SKILL.md), creates a symlink <target>/.claude/skills/<name> ->
+# <this-clone>/skills/<name>. Idempotent and safe: skips (with a warning) any
+# name that already exists as a real path or a symlink pointing elsewhere —
+# it never clobbers a project-local skill.
 #
 # Also symlinks the /dd-review command template:
 #   <this-clone>/examples/commands/dd-review.md
@@ -38,7 +39,7 @@ created=0
 already=0
 skipped=0
 
-for skill_md in "$CLONE"/*/SKILL.md; do
+for skill_md in "$CLONE"/skills/*/SKILL.md; do
   [ -e "$skill_md" ] || continue          # no matches -> literal glob, skip
   src=$(cd "$(dirname "$skill_md")" && pwd -P)
   name=$(basename "$src")

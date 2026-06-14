@@ -1,6 +1,6 @@
 ---
 # Bundle-source variant of the /dd-review slash command. Paths point at
-# the top-level disciplined-development/ tree because this repo (the source
+# the skills/disciplined-development/ tree because this repo (the source
 # of the bundle) does not symlink its own skills into .claude/skills/.
 # See examples/commands/dd-review.md for the consumer-side variant whose
 # paths go through .claude/skills/.
@@ -14,7 +14,7 @@ contract is identical everywhere — native P0–P3.
 
 `ENGINE` below is:
 
-    python3 $CLAUDE_PROJECT_DIR/disciplined-development/hooks/dd_review_runner.py
+    python3 $CLAUDE_PROJECT_DIR/skills/disciplined-development/hooks/dd_review_runner.py
 
 ## `pre-pr` (T3) — codex gate
 
@@ -54,7 +54,7 @@ At cold-read, a **doc-dominant** diff substitutes two of these angles — see "D
 
 Each subagent prompt must:
 - Load the `adversarial-review` skill — invoke it via the Skill tool, or if
-  unavailable read `adversarial-review/SKILL.md` from disk and follow it.
+  unavailable read `skills/adversarial-review/SKILL.md` from disk and follow it.
 - Review the **full** diff: `git diff SCOPE`. An angle *adds a focus*; it does
   NOT partition the diff. The holistic reviewer owns the whole picture so
   findings between two angles' mandates don't fall through the seams.

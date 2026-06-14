@@ -3,7 +3,7 @@
 Design notes for the deferred `pre-commit-sweep-check.sh` hook that would
 enforce `sweeping-stale-references`. This is not part of the live Claude Code
 hook stack — that is documented in
-[`disciplined-development/hooks/hook-recipes-claude-code.md`](../disciplined-development/hooks/hook-recipes-claude-code.md).
+[`hook-recipes-claude-code.md`](../../disciplined-development/hooks/hook-recipes-claude-code.md).
 
 Skills are content; hooks are enforcement. The `sweeping-stale-references`
 skill works alone — agents that follow it produce the required
@@ -70,9 +70,7 @@ the model can't set it per-tool-call.
 
 ## Why deferred
 
-See the design notes at
-[plans/deferred/2026-05-16-sweep-check-hook-deferred.md](../../../plans/deferred/2026-05-16-sweep-check-hook-deferred.md).
-Summary: heuristic tuning needs real-world sweep-miss data to calibrate
+Heuristic tuning needs real-world sweep-miss data to calibrate
 against, and the skill should be self-enforcing through Principle 3 before
 deterministic enforcement is layered on. Resume the hook work after 5+
 real sweep-miss incidents are observed, or when the skill is adopted by a

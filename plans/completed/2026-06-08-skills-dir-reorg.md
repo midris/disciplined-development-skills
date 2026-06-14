@@ -106,7 +106,7 @@ project owner ("this looks right", 2026-06-08).
 The only behavior change. Independent of the real dir move — the test drives its
 own tmp-clone fixture.
 
-- [ ] **I1 — Point the installer at `skills/`.** Update `install-skills.sh` so it
+- [x] **I1 — Point the installer at `skills/`.** Update `install-skills.sh` so it
   discovers skill dirs under `skills/` instead of the clone root (the
   `examples/commands/dd-review.md` command-file path is unchanged). Test-first:
   first update `tests/test_install_skills.py` so its fixture seeds skill dirs
@@ -133,12 +133,20 @@ discoverable). Each commit lands green; the bundle does not symlink its own
 skills, so the only runtime dependency on these paths is the bundle's own
 dogfood hooks (swept below).
 
-- [ ] **M1 — `git mv` the nine skill dirs into `skills/`.** `mkdir skills`,
+- [x] **M1 — `git mv` the nine skill dirs into `skills/`.** `mkdir skills`,
   then `git mv <skill> skills/<skill>` for all nine (the `hooks/` subtree moves
   with `disciplined-development`). Content-preserving; no edits inside the dirs
   in this task.
 
-- [ ] **M2 — Sweep the bundle's own dogfood `settings.json`.** Re-point the five
+- [x] **M2 — Sweep the bundle's own dogfood `settings.json`.**
+  *Execution note (2026-06-13):* the live `git mv` in M1 dangled the
+  `PreToolUse:*` `discipline_nudge.py` path still wired in `settings.json`, which
+  exited non-zero and blocked every tool call — a hard lockout mid-move. The
+  owner cleared it by emptying `hooks` to `{}`; this task restores them
+  re-pointed at `skills/...` (the files now exist there post-M1, so re-enabling
+  is safe). *Plan refinement for any future hook-relocating move: disable the
+  self-wired hooks before the move, restore after.*
+  Re-point the five
   advisory self-wired hook commands from
   `$CLAUDE_PROJECT_DIR/disciplined-development/hooks/...` to
   `$CLAUDE_PROJECT_DIR/skills/disciplined-development/hooks/...`, and update the
@@ -149,7 +157,7 @@ dogfood hooks (swept below).
   + the reground JSON).
   - **References swept:** `.claude/settings.json` (5 hook commands + the note).
 
-- [ ] **M3 — Sweep bundle-internal doc + command paths.** Update every
+- [x] **M3 — Sweep bundle-internal doc + command paths.** Update every
   bundle-internal reference to the old root skill paths:
   `CLAUDE.md` (the highest-priority `Read disciplined-development/SKILL.md`
   line, the `disciplined-development/hooks/...` references throughout incl. the
@@ -171,7 +179,7 @@ dogfood hooks (swept below).
 
 ## Phase 3 — Move experiment harness out of the exported surface
 
-- [ ] **M4 — `research/` for the replay harness.** `git mv` the experiment
+- [x] **M4 — `research/` for the replay harness.** `git mv` the experiment
   tooling out of the shipped hook stack into a new top-level `research/`:
   `skills/disciplined-development/hooks/harness/replay_codex.py` and its
   `hooks/tests/test_harness_smoke.py`. *Why out:* it replays SHAs through
@@ -190,7 +198,7 @@ dogfood hooks (swept below).
 
 ## Phase 4 — Relocate the orphaned consumer template
 
-- [ ] **M5 — `starter.CLAUDE.md` → `examples/`.** `git mv` it into `examples/`.
+- [x] **M5 — `starter.CLAUDE.md` → `examples/`.** `git mv` it into `examples/`.
   It is a full consumer CLAUDE.md template (with `{{PLACEHOLDERS}}`),
   complementary to the paste-in `examples/CLAUDE.md-snippet.md`; today it sits
   orphaned at root with no README/installer reference. Add a `README.md` pointer
@@ -202,7 +210,7 @@ dogfood hooks (swept below).
 
 ## Phase 5 — Relocate the sweep-check design stub into `references/` (Decision C)
 
-- [ ] **M6 — `sweep-check-hook-design.md` → `references/` companion.** `git mv`
+- [x] **M6 — `sweep-check-hook-design.md` → `references/` companion.** `git mv`
   `skills/sweeping-stale-references/sweep-check-hook-design.md` to
   `skills/sweeping-stale-references/references/sweep-check-hook-design.md`, and
   add a link to it from `skills/sweeping-stale-references/SKILL.md` so it stops
@@ -219,7 +227,7 @@ dogfood hooks (swept below).
 
 ## Phase 6 — Move the validation trail off the exported surface (Decision D)
 
-- [ ] **M7 — `concise-writing/TESTING.md` → `skill-validation/`.** `git mv` it
+- [x] **M7 — `concise-writing/TESTING.md` → `skill-validation/`.** `git mv` it
   to `skill-validation/concise-writing.md`. Zero inbound refs; not linked from
   its `SKILL.md`. No sweep beyond confirming that.
 
@@ -227,45 +235,70 @@ dogfood hooks (swept below).
 
 ## Phase 7 — Docs reconciliation + consumer recovery note
 
-- [ ] **D1 — Repo-structure + snapshot docs.** Update `CLAUDE.md`'s
+- [x] **D1 — Repo-structure + snapshot docs.** Update `CLAUDE.md`'s
   "Repository Structure" tree and "Architecture Snapshot" to the new layout
   (`skills/`, `research/`, `skill-validation/`, `examples/starter.CLAUDE.md`).
   Update `README.md`'s "What's included" if its phrasing implies root-level skill
-  dirs.
+  dirs. *Done: added `research/` + `skill-validation/` to the CLAUDE.md tree and
+  noted the starter template under `examples/`. README "What's included" + the
+  Architecture Snapshot were already current (M3 swept them).*
 
-- [ ] **D2 — Hook-doc paths.** Confirm `skills/disciplined-development/hooks/README.md`
+- [x] **D2 — Hook-doc paths.** Confirm `skills/disciplined-development/hooks/README.md`
   and `dd-config.md` describe paths/commands consistent with the move (most are
   consumer-side `.claude/...` and need no change; catch any bundle-relative
-  ones).
+  ones). *Confirmed clean — M3 already swept both; grep for bundle-relative
+  `disciplined-development/` paths returns none.*
 
-- [ ] **D3 — Consumer recovery note (Decision E).** Add a one-line note to the
+- [x] **D3 — Consumer recovery note (Decision E).** Add a one-line note to the
   `README.md` recovery section: this reorg moved the skill source dirs, so an
   existing consumer's symlinks dangle until they re-run `install-skills.sh`.
-  Restate in the PR body.
+  Restate in the PR body. *Grew past one line: live V2 recovery on
+  `meeting-pipeline` showed re-running the installer alone does NOT fix dangling
+  symlinks — it skips any symlink whose target differs (dangling included) with a
+  warning. The note now documents the correct procedure: delete the broken
+  symlinks first (`find … -type l ! -exec test -e {} \; -delete`), then re-run.
+  Decision E's "re-run is the recovery path" was incomplete; this corrects it.*
 
 ---
 
 ## Phase 8 — Validation & reconciliation (before PR)
 
-- [ ] **V1 — Full suites green.** `cd skills/disciplined-development/hooks &&
+- [x] **V1 — Full suites green.** `cd skills/disciplined-development/hooks &&
   python3 -m pytest -q` and `python3 -m pytest tests/ -q` (the settings-wiring
   test skips outside a consumer) and the relocated `research/` smoke test all
-  pass.
+  pass. *Green: installer 9 passed; research 3 passed; hook suite 275 passed,
+  3 skipped.*
 
-- [ ] **V2 — Live consumer install (Decision A + E, end-to-end).** Re-run
+- [x] **V2 — Live consumer install (Decision A + E, end-to-end).** Re-run
   `install-skills.sh` against `meeting-pipeline` (whose symlinks now dangle);
   confirm all nine symlinks repoint to the new `skills/...` sources, the
   `dd-review.md` command resolves, and a hook runs through the symlink (exit 0).
   Unit tests don't cover the glob→symlink wiring — this is the real check that
-  the new glob delivers.
+  the new glob delivers. *Done live: removed 8 dangling symlinks, re-ran
+  installer → 9 created (incl. the newer `dispatching-development-subagents`),
+  `dd-review.md` already-linked; all 9 resolve with SKILL.md reachable, and all
+  8 consumer-wired hooks run through the symlink (exit 0). settings.json needed
+  no edit (symlink-relative paths). Surfaced the recovery-procedure gap fixed in
+  D3. Owner confirmed Claude sees the skills.*
 
-- [ ] **V3 — Cold-read.** Run `/dd-review cold-read` on the staged branch.
+- [x] **V3 — Cold-read.** Run `/dd-review cold-read` on the staged branch.
   CLAUDE.md substitutes a cold-read for doc/skill-surface changes — this reorg
   is path-and-doc-heavy, so no unit test catches a stale reference or a broken
   cross-link. Address findings per `adversarial-review-loop` until clean.
+  *Done: 6-reviewer doc-dominant set (holistic, correctness, rationale,
+  necessity, doctrine-consistency, executability). Iter 1 surfaced 6 P2/P3
+  findings (no P0/P1 after triage) — fixed in `850b99a` (replay_codex stuffed
+  path + docstring, sweep-check stub dangling link + link display, CLAUDE.md
+  skill-validation note + doc-update checklist). One reviewer claim — a "stale
+  path" in `codex-harness-port.md:35` — was a false positive (nested tree
+  entry), dropped after verification. Iter 2 (holistic + correctness) returned
+  clean. Checkpoint written via `--write-checkpoint cold-read`.*
 
-- [ ] **S1 — Reconcile this plan + archive.** Tick checkboxes as work lands;
+- [x] **S1 — Reconcile this plan + archive.** Tick checkboxes as work lands;
   record any moved scope. On completion, move this file to `plans/completed/`.
+  *Done: all checkboxes reconciled with execution notes; scope changes recorded
+  (M2 lockout + restore, D3 recovery-procedure correction, V2 done live on
+  meeting-pipeline). Archived to `plans/completed/`.*
 
 ---
 

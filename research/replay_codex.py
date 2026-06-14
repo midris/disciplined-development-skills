@@ -3,7 +3,7 @@
 
 Replays a historical sha through ``codex review`` with chosen
 (model, effort, strategy) and records duration + findings to
-``experiments/results.csv``. ``replay_review.py`` (the claude harness)
+``research/results.csv``. ``replay_review.py`` (the claude harness)
 was deleted in E2 — ``replay_codex.py`` is the only replay script.
 
 Strategies
@@ -23,10 +23,10 @@ Strategies
 Outputs
 -------
 
-* ``results.csv`` — one row per run (appended). Model col
+* ``research/results.csv`` — one row per run (appended). Model col
   carries the codex model slug (e.g. ``gpt-5.5``); effort/strategy
   cols are reused.
-* ``runs/<run_id>.txt`` — full stdout/stderr per run.
+* ``research/runs/<run_id>.txt`` — full stdout/stderr per run.
 """
 
 from __future__ import annotations
@@ -40,10 +40,9 @@ import subprocess
 import sys
 import time
 
-# parents[2] = the disciplined-development dir (contains the `hooks` package);
-# parents[5] = the repo root (default worktree).
-_SKILL_DIR = pathlib.Path(__file__).resolve().parents[2]
-REPO_ROOT = pathlib.Path(__file__).resolve().parents[5]
+# parents[0] = research/; parents[1] = repo root.
+_SKILL_DIR = pathlib.Path(__file__).resolve().parents[1] / "skills" / "disciplined-development"
+REPO_ROOT = pathlib.Path(__file__).resolve().parents[1]
 sys.path.insert(0, str(_SKILL_DIR))
 
 from hooks.lib import severity  # noqa: E402
@@ -124,7 +123,7 @@ def main() -> int:
     if args.strategy == "fetched":
         argv += ["--base", args.base]
     else:  # stuffed: pipe skill + diff on stdin, no --base
-        skill_md_path = REPO_ROOT / ".claude/skills/adversarial-review/SKILL.md"
+        skill_md_path = REPO_ROOT / "skills/adversarial-review/SKILL.md"
         skill_md = skill_md_path.read_text()
         diff_proc = subprocess.run(
             ["git", "diff", f"{args.base}...{args.sha}"],

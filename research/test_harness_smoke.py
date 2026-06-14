@@ -1,6 +1,6 @@
 """Smoke test for the codex replay harness.
 
-Confirms the ``hooks/harness/replay_codex.py`` module imports cleanly
+Confirms the ``research/replay_codex.py`` module imports cleanly
 (its module-level ``from hooks.lib import ...`` resolves — no live reviewer
 dispatch, main() is __name__-guarded) and uses the production strategy enum.
 
@@ -13,7 +13,7 @@ import importlib.util
 import re
 from pathlib import Path
 
-_HARNESS = Path(__file__).resolve().parent.parent / "harness"
+_HARNESS = Path(__file__).resolve().parent
 
 
 def _load(name: str):
