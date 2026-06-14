@@ -132,7 +132,7 @@ No automated test (command prose). `superpowers:writing-skills` does NOT apply h
 - [x] **Step 1:** Run the hook suite (the rubric reword touches severity territory): `cd skills/disciplined-development/hooks && python3 -m pytest -q`. Expected: PASS. → 277 passed, 3 skipped.
 - [x] **Step 2: Adversarial cold-read of the staged branch** — `/dd-review cold-read` (doc-dominant; the substituted executability + doctrine-consistency angles apply). Iterate per the *newly edited* `adversarial-review-loop` (dogfood the class-sweep). Address to clean. → Ran multiple cold-reads across execution (read-only `Explore`); findings addressed or dismissed with on-page rationale.
 - [x] **Step 3:** Reconcile this plan — flip every checkbox to reflect reality; record any descope that moved.
-- [x] **Step 4:** Open the PR via `superpowers:finishing-a-development-branch`. The PreToolUse hook runs the pre-pr codex gate on `gh pr create`; iterate any findings per `adversarial-review-loop` until it passes. (No standalone pre-run — #6 was dropped.) → PR #20; codex gate passed clean on create.
+- [x] **Step 4:** Open the PR via `superpowers:finishing-a-development-branch`. → PR #20 opened. **Correction:** this source repo wires only advisory hooks — the `pre_pr_review` hard block is deliberately omitted (`.claude/settings.json`; no self-symlink), so `gh pr create` ran with **no codex gate**. The plan's assumption that the PreToolUse hook gates creation does not hold here; a codex review is run **manually** instead.
 
 ---
 
