@@ -200,21 +200,10 @@ for the others. No state writes, no dispatch.
 ## Configuration
 
 Schema: [`dd-config.md`](dd-config.md). Single override surface
-`.claude/dd-config.json` over `lib/dd-defaults.json`. Bypass env vars:
-
-| Env var | Hook silenced |
-|---|---|
-| `DD_SKIP_INJECT_PLAN_STATE` | `inject_plan_state.py` |
-| `DD_SKIP_DISCIPLINE_NUDGE` | `discipline_nudge.py` |
-| `DD_SKIP_EDIT_COUNTER` | `edit_counter.py` |
-| `DD_SKIP_EDIT_BLOCK` | `edit_block.py` (T0 hard block) |
-| `DD_SKIP_COMMIT_BLOCK` | `commit_block.py` (T2 hard block) |
-| `DD_SKIP_REVIEW_NUDGE` | `review_nudge.py` |
-| `DD_SKIP_SESSION_REGROUND` | `session_reground.py` |
-| `DD_SKIP_PR_REVIEW` | `pre_pr_review.py` (T3 hard gate) |
-
-Override knobs (also env, in `settings.local.json`): `DD_ACTIVE_PLAN`,
-`DD_LOG_DIR`, `DD_REVIEW_TIMEOUT`, `DD_REVIEW_PROMPT_PATH`.
+`.claude/dd-config.json` over `lib/dd-defaults.json`. Per-hook bypass env vars
+(`DD_SKIP_<HOOK>=1`, in `settings.local.json`) and the override knobs
+(`DD_ACTIVE_PLAN`, `DD_LOG_DIR`, `DD_REVIEW_TIMEOUT`, `DD_REVIEW_PROMPT_PATH`) —
+full tables in [`dd-config.md`](dd-config.md#env-vars).
 
 ---
 
