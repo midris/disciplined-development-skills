@@ -70,6 +70,10 @@ _CHECKPOINT_TIERS = ("fast", "regular", "cold-read")
 # working-tree scope ("HEAD"); the review tiers → fork-base range.
 _SCOPE_TIERS = ("fast", "regular", "cold-read", "pre-pr")
 
+# Tiers and sources valid for --log-review.
+_LOG_REVIEW_TIERS = ("fast", "regular", "cold-read", "self-review", "external")
+_LOG_REVIEW_SOURCES = ("command", "ad-hoc")
+
 # CLI tier → config-key tier name (hyphen in the CLI, underscore in config).
 # Only pre-pr has a config entry used by the engine's review path; regular and
 # cold-read are handled via --write-checkpoint (no reviewer dispatch, no config
@@ -134,7 +138,11 @@ def _print_usage_error(msg: str) -> None:
         f"       python3 dd_review_runner.py --write-checkpoint "
         f"{{{'|'.join(_CHECKPOINT_TIERS)}}} [--cwd <path>]\n"
         f"       python3 dd_review_runner.py --resolve-scope "
-        f"{{{'|'.join(_SCOPE_TIERS)}}} [--cwd <path>]",
+        f"{{{'|'.join(_SCOPE_TIERS)}}} [--cwd <path>]\n"
+        f"       python3 dd_review_runner.py --log-review "
+        f"--tier {{{'|'.join(_LOG_REVIEW_TIERS)}}} "
+        f"--source {{{'|'.join(_LOG_REVIEW_SOURCES)}}} "
+        f"[--round <n>] [--reviewer <id>] [--cwd <path>]",
         file=sys.stderr,
     )
 
@@ -327,6 +335,106 @@ def _handle_resolve_scope(argv: list[str]) -> int | None:
     return 0
 
 
+# --- --log-review mode ----------------------------------------------------
+
+
+def _handle_log_review(argv: list[str]) -> int | None:
+    """Handle ``--log-review --tier <t> --source <s> [--round <n>] [--reviewer <id>]``
+    if present.
+
+    Returns the exit code when the flag is found, or None when absent (caller
+    continues with the normal review path).
+
+    Reads findings from stdin; derives p0–p3, decision, and output; appends one
+    row to reviews.jsonl via logging_setup.append_review. No reviewer dispatched,
+    no checkpoint written, no scope resolved.
+    """
+    if "--log-review" not in argv:
+        return None
+
+    tier: str | None = None
+    source: str | None = None
+    round_: int = 1
+    reviewer: str = "subagents"
+    i = 0
+    while i < len(argv):
+        arg = argv[i]
+        if arg == "--log-review":
+            i += 1
+        elif arg == "--tier":
+            if i + 1 >= len(argv):
+                _print_usage_error("--tier requires an argument")
+                return 2
+            tier = argv[i + 1]
+            i += 2
+        elif arg == "--source":
+            if i + 1 >= len(argv):
+                _print_usage_error("--source requires an argument")
+                return 2
+            source = argv[i + 1]
+            i += 2
+        elif arg == "--round":
+            if i + 1 >= len(argv):
+                _print_usage_error("--round requires an integer argument")
+                return 2
+            try:
+                round_ = int(argv[i + 1])
+            except ValueError:
+                _print_usage_error(
+                    f"--round requires an integer, got {argv[i + 1]!r}"
+                )
+                return 2
+            i += 2
+        elif arg == "--reviewer":
+            if i + 1 >= len(argv):
+                _print_usage_error("--reviewer requires an argument")
+                return 2
+            reviewer = argv[i + 1]
+            i += 2
+        elif arg == "--cwd":
+            # accepted but not used in Task 1 (git fields deferred to Task 2)
+            if i + 1 >= len(argv):
+                _print_usage_error("--cwd requires a path argument")
+                return 2
+            i += 2
+        else:
+            _print_usage_error(f"--log-review mode does not accept {arg!r}")
+            return 2
+
+    if tier not in _LOG_REVIEW_TIERS:
+        _print_usage_error(
+            f"unknown --tier {tier!r} "
+            f"(valid: {' | '.join(_LOG_REVIEW_TIERS)})"
+        )
+        return 2
+
+    if source not in _LOG_REVIEW_SOURCES:
+        _print_usage_error(
+            f"unknown --source {source!r} "
+            f"(valid: {' | '.join(_LOG_REVIEW_SOURCES)})"
+        )
+        return 2
+
+    findings = sys.stdin.read()
+
+    p0, p1, p2, p3 = severity.count_severities(findings, line_start=True)
+    decision = "BLOCK" if (p0 + p1 + p2) > 0 else "PASS"
+
+    logging_setup.append_review({
+        "tier": tier,
+        "source": source,
+        "round": round_,
+        "reviewer": reviewer,
+        "output": findings,
+        "p0": p0,
+        "p1": p1,
+        "p2": p2,
+        "p3": p3,
+        "decision": decision,
+    })
+    return 0
+
+
 # --- git helpers -----------------------------------------------------------
 
 
@@ -503,6 +611,10 @@ def main(argv: list[str] | None = None) -> int:
             f"{{{'|'.join(_CHECKPOINT_TIERS)}}} [--cwd <path>]\n"
             f"       python3 dd_review_runner.py --resolve-scope "
             f"{{{'|'.join(_SCOPE_TIERS)}}} [--cwd <path>]\n"
+            f"       python3 dd_review_runner.py --log-review "
+            f"--tier {{{'|'.join(_LOG_REVIEW_TIERS)}}} "
+            f"--source {{{'|'.join(_LOG_REVIEW_SOURCES)}}} "
+            f"[--round <n>] [--reviewer <id>] [--cwd <path>]\n"
             "Run an adversarial review of the branch diff against its fork "
             "base.\n"
             "  --base <ref>  pre-pr only: override the diff base.\n"
@@ -510,7 +622,9 @@ def main(argv: list[str] | None = None) -> int:
             "  --write-checkpoint <tier>  write post-clean-review state only "
             "(no review dispatched).\n"
             "  --resolve-scope <tier>  print the git diff argument for <tier> "
-            "(no review dispatched, no state written)."
+            "(no review dispatched, no state written).\n"
+            "  --log-review  append one curated row to reviews.jsonl from "
+            "findings on stdin (no review dispatched, no checkpoint written)."
         )
         return 0
 
@@ -523,6 +637,11 @@ def main(argv: list[str] | None = None) -> int:
     rs_rc = _handle_resolve_scope(argv)
     if rs_rc is not None:
         return rs_rc
+
+    # --log-review mode: derive severity + decision from stdin, append to log.
+    lr_rc = _handle_log_review(argv)
+    if lr_rc is not None:
+        return lr_rc
 
     parsed = _parse_argv(argv)
     if isinstance(parsed, str):

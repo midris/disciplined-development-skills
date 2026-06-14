@@ -642,13 +642,17 @@ def test_cwd_flag_config_follows_target_repo(review_env, tmp_path):
 
 
 def test_help_flag_exits_zero(review_env):
-    """``--help`` prints a brief usage line and exits 0 (no marker vocab)."""
+    """``--help`` prints a brief usage line and exits 0 (no legacy marker vocab).
+
+    'external' is now a legitimate --log-review tier, not old marker vocabulary;
+    only 'marker' and 'internal' (the actual legacy terms) remain banned.
+    """
     env, repo, _ = review_env
     proc = _run(env, repo, ["--help"])
     assert proc.returncode == 0
     out = proc.stdout + proc.stderr
     assert "usage" in out.lower()
-    for banned in ("marker", "internal", "external"):
+    for banned in ("marker", "internal"):
         assert banned not in out.lower()
 
 
@@ -1162,3 +1166,95 @@ def test_resolve_scope_prepr_prints_fork_base_range(review_env):
     proc = _resolve_scope(env, repo, "pre-pr")
     assert proc.returncode == 0, proc.stderr
     assert proc.stdout.strip() == f"{fork}..HEAD"
+
+
+# ---------------------------------------------------------------------------
+# Task 1 — --log-review happy path (derive + append)
+# ---------------------------------------------------------------------------
+
+
+def _run_log_review(env, repo, args, stdin_text):
+    """Spawn dd_review_runner.py with --log-review flags and pipe stdin_text.
+
+    No codex shim needed (--log-review never dispatches a reviewer). Reuses
+    the env from review_env which sets DD_LOG_DIR so _reviews(env) finds rows.
+    """
+    full = {**env}
+    return subprocess.run(
+        [sys.executable, str(HOOK), "--log-review", *args],
+        input=stdin_text,
+        text=True,
+        capture_output=True,
+        env=full,
+        cwd=str(repo),
+    )
+
+
+def test_log_review_records_block_row_from_contract_blob(review_env):
+    """command/fast invocation piping a [P1] contract line → BLOCK row.
+
+    Asserts: decision==BLOCK, p1==1, source==command, tier==fast, round==1,
+    output contains the blob.
+    """
+    env, repo, _ = review_env
+    blob = "- [P1] foo.py:1: auth bypass\n"
+    proc = _run_log_review(
+        env, repo,
+        ["--tier", "fast", "--source", "command"],
+        blob,
+    )
+    assert proc.returncode == 0, proc.stderr
+    recs = _reviews(env)
+    assert len(recs) == 1
+    r = recs[0]
+    assert r["decision"] == "BLOCK"
+    assert r["p1"] == 1
+    assert r["source"] == "command"
+    assert r["tier"] == "fast"
+    assert r["round"] == 1
+    assert blob in r["output"]
+    assert "ts" in r
+
+
+def test_log_review_records_pass_row_for_no_findings(review_env):
+    """Piping 'No findings.' → one PASS row with all severities zero."""
+    env, repo, _ = review_env
+    proc = _run_log_review(
+        env, repo,
+        ["--tier", "regular", "--source", "command"],
+        "No findings.\n",
+    )
+    assert proc.returncode == 0, proc.stderr
+    recs = _reviews(env)
+    assert len(recs) == 1
+    r = recs[0]
+    assert r["decision"] == "PASS"
+    assert r["p0"] == 0
+    assert r["p1"] == 0
+    assert r["p2"] == 0
+    assert r["p3"] == 0
+
+
+def test_log_review_reviewer_defaults_and_override(review_env):
+    """--reviewer omitted → reviewer=='subagents'; supplied value is recorded."""
+    env, repo, _ = review_env
+
+    # Test 1: default (--reviewer omitted)
+    proc = _run_log_review(
+        env, repo,
+        ["--tier", "fast", "--source", "command"],
+        "No findings.\n",
+    )
+    assert proc.returncode == 0, proc.stderr
+    recs = _reviews(env)
+    assert recs[-1]["reviewer"] == "subagents"
+
+    # Test 2: explicit override
+    proc = _run_log_review(
+        env, repo,
+        ["--tier", "fast", "--source", "command", "--reviewer", "subagents:3"],
+        "No findings.\n",
+    )
+    assert proc.returncode == 0, proc.stderr
+    recs = _reviews(env)
+    assert recs[-1]["reviewer"] == "subagents:3"
