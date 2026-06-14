@@ -11,7 +11,8 @@ rule (Claude Code: `Explore`). Test-specific: one scenario per agent, text-only.
 
 A discipline skill is tested by pressure scenario, not application. Each scenario
 hands a subagent the skill text + a situation and records its decision, comparing the
-pre-edit skill (RED) against the post-edit skill (GREEN).
+pre-edit skill (RED) against the post-edit skill (GREEN). Rationalizations surfaced
+in RED runs are recorded as rows in the skill's own Rationalizations table.
 
 ## Scenarios
 
@@ -47,7 +48,8 @@ pre-edit skill (RED) against the post-edit skill (GREEN).
 - **Cap-counting disambiguation:** "cycle" was read inconsistently — a cap-emphasis
   framing escaped at the third review, a productive-emphasis framing continued.
   Defining a cycle (review → class-sweep → re-run) and "escape if the third cycle
-  still returns findings, not a fourth" made both framings escape consistently (4/4).
+  still returns findings, not a fourth" made both framings escape consistently
+  (cap-emphasis and productive-emphasis, two runs each).
 
 ## On edits
 
