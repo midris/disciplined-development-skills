@@ -458,6 +458,18 @@ def _handle_log_review(argv: list[str]) -> int | None:
 
     findings = sys.stdin.read()
 
+    # Reject empty / whitespace-only stdin as a usage error BEFORE deriving
+    # severity. count_severities("") returns all-zero, which would otherwise
+    # produce a false PASS row from a blank pipe and poison the telemetry. A
+    # real clean review comes from a non-empty "No findings." emission — blank
+    # stdin means the caller piped nothing, not that the review found nothing.
+    if not findings.strip():
+        _print_usage_error(
+            "--log-review requires non-empty findings on stdin; "
+            "got empty or whitespace-only input"
+        )
+        return 2
+
     p0, p1, p2, p3 = severity.count_severities(findings, line_start=True)
     decision = "BLOCK" if (p0 + p1 + p2) > 0 else "PASS"
 

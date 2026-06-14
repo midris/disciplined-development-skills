@@ -1332,3 +1332,90 @@ def test_log_review_cwd_targets_other_repo(review_env, tmp_path):
     assert r["branch"] == other_branch
     assert r["head_sha"] == other_sha
     assert r["base"] == other_base
+
+
+# ---------------------------------------------------------------------------
+# Task 3 — exit-code contract for --log-review
+# ---------------------------------------------------------------------------
+
+
+def test_log_review_empty_stdin_exits_2_no_row(review_env):
+    """Empty stdin → exit 2, no row written.
+
+    count_severities("") yields all-zero severities, which would produce a
+    false PASS row from a blank pipe and poison the telemetry. Reject as a
+    usage error before deriving severity / appending.
+    """
+    env, repo, _ = review_env
+    proc = _run_log_review(
+        env, repo,
+        ["--tier", "fast", "--source", "command"],
+        "",
+    )
+    assert proc.returncode == 2
+    assert _reviews(env) == []
+
+
+def test_log_review_whitespace_stdin_exits_2_no_row(review_env):
+    """Whitespace-only stdin → exit 2, no row written.
+
+    Whitespace-only is the same false-PASS risk as empty stdin: strip() yields
+    empty, so the same usage-error guard fires. A real clean review emits a
+    non-empty 'No findings.' string, not bare whitespace.
+    """
+    env, repo, _ = review_env
+    proc = _run_log_review(
+        env, repo,
+        ["--tier", "fast", "--source", "command"],
+        "   \n\t\n",
+    )
+    assert proc.returncode == 2
+    assert _reviews(env) == []
+
+
+def test_log_review_logging_disabled_exits_0_no_row(review_env, tmp_path):
+    """logging.enabled=false → exit 0, no row written (append_review no-ops).
+
+    Forces logging off by writing a dd-config.json with {"logging": {"enabled":
+    false}} into a scratch dir and pointing DD_CONFIG at it. The env's DD_CONFIG
+    is normally "" (process-cwd config disabled); this test overrides it just
+    for this run.
+    """
+    env, repo, _ = review_env
+    cfg_path = tmp_path / "dd-config-nolog.json"
+    cfg_path.write_text(json.dumps({"logging": {"enabled": False}}))
+    override_env = {**env, "DD_CONFIG": str(cfg_path)}
+    proc = _run_log_review(
+        override_env, repo,
+        ["--tier", "fast", "--source", "command"],
+        "No findings.\n",
+    )
+    assert proc.returncode == 0
+    # DD_LOG_DIR still points at the test sandbox; reviews.jsonl must not exist.
+    assert _reviews(env) == []
+
+
+def test_log_review_unwritable_log_dir_exits_0_no_row(review_env, tmp_path):
+    """Unwritable log dir → exit 0, no row written (append_review degrade-safe).
+
+    Unwritability is forced by placing a regular FILE at the path where the log
+    DIR should be created. mkdir(..., exist_ok=True) in append_review will
+    silently succeed (path exists), but the subsequent open(..., "a") will fail
+    with IsADirectoryError or NotADirectoryError, hitting the OSError catch.
+    append_review warns to stderr and returns without raising; _handle_log_review
+    therefore exits 0.
+    """
+    env, repo, _ = review_env
+    # Put a regular file where the log directory should be.
+    bad_log_dir = tmp_path / "not-a-dir"
+    bad_log_dir.write_text("I am a file, not a directory")
+    override_env = {**env, "DD_LOG_DIR": str(bad_log_dir)}
+    proc = _run_log_review(
+        override_env, repo,
+        ["--tier", "fast", "--source", "command"],
+        "No findings.\n",
+    )
+    assert proc.returncode == 0
+    # The "log dir" is a file, so reviews.jsonl cannot be written there.
+    reviews_path = bad_log_dir / "reviews.jsonl"
+    assert not reviews_path.exists()
