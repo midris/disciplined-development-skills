@@ -16,7 +16,7 @@ Single source of truth for agent guidance in this repository. If `AGENTS.md` / `
 
 ## Project Snapshot
 
-A portable bundle of Claude Code **skills** + a **hook stack** that keep an agent on-track during long, semi-autonomous development. Skills are the doctrine (model-facing); hooks are dumb triggers that surface the discipline at concrete boundaries (tool calls, commits, PRs, session resumes). Consumers symlink the skill dirs into `.claude/skills/` via `install-skills.sh` and merge `examples/settings.hooks.json` into their `.claude/settings.json`. Stack: Python 3 (hooks), bash (installer), pytest (tests); skills are pure markdown. No DB, no env file, no server.
+A bundle of harness-portable **skills** (the doctrine) + a Claude Code **hook stack** that keep an agent on-track during long, semi-autonomous development. Skills are the doctrine (model-facing), portable wherever the `superpowers` substrate runs; hooks are Claude Code-specific dumb triggers that surface the discipline at concrete boundaries (tool calls, commits, PRs, session resumes). Consumers symlink the skill dirs into `.claude/skills/` via `install-skills.sh` and merge `examples/settings.hooks.json` into their `.claude/settings.json`. Stack: Python 3 (hooks), bash (installer), pytest (tests); skills are pure markdown. No DB, no env file, no server.
 
 ## Repository Structure
 
@@ -29,6 +29,7 @@ skill-validation/                     # non-shipped validation records (skills, 
 tests/                                # installer-level tests (the settings-wiring test skips outside a consumer)
 plans/                                # active plans (created on demand)
 plans/completed/, plans/deferred/     # archived / deferred work
+reviews/                              # architecture / code-review findings (non-shipped records)
 install-skills.sh                     # symlink installer
 README.md                             # bundle overview + install + recovery
 ```

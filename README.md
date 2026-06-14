@@ -1,12 +1,24 @@
 # disciplined-development-skills
 
-A portable bundle of Claude Code **skills** + a **hook stack** that keep an agent
-on-track during long, semi-autonomous development: re-read before writing, test
-first, verify against reality, sweep stale references, review at cadence.
+A bundle of harness-portable **skills** (the doctrine) + a Claude Code **hook
+stack** that keep an agent on-track during long, semi-autonomous development:
+re-read before writing, test first, verify against reality, sweep stale
+references, review at cadence.
 
 The doctrine is model-facing — the hooks are dumb triggers that surface the
 discipline at concrete boundaries (a tool call, a commit, a PR, a session
 resume); the skills carry the actual content.
+
+**A layer over `superpowers`, not a freestanding bundle.** The doctrine is a
+discipline-flavored *extension* of the [`superpowers`](https://claude.com/plugins/superpowers)
+skill platform: its gates dispatch to `superpowers:*` sub-skills throughout, and
+several skills are explicit deltas over a superpowers base — `adversarial-review`
+adapts `superpowers:requesting-code-review`, `dispatching-development-subagents`
+overlays `superpowers:subagent-driven-development`, `lean-plan-writing` refines
+`superpowers:writing-plans`, `concise-writing` defers skill-authoring to
+`superpowers:writing-skills`. Superpowers is the substrate, not one dependency
+among several. The doctrine travels wherever that platform runs; the hook stack is
+Claude Code-specific. See [Requirements](#requirements).
 
 ## What's included
 
@@ -40,11 +52,22 @@ The hook stack (under `skills/disciplined-development/hooks/`) is documented in 
 
 ## Requirements
 
-- **The `superpowers` skill bundle** — the doctrine's gates dispatch to
-  `superpowers:*` sub-skills (grep the `SKILL.md` files for `superpowers:` for
-  the full set); without it the gates point at skills that don't exist. Install
-  it from [claude.com/plugins/superpowers](https://claude.com/plugins/superpowers)
+- **The `superpowers` skill bundle — the substrate this bundle extends, not an
+  optional add-on.** The doctrine's gates dispatch to `superpowers:*` sub-skills
+  (grep the `SKILL.md` files for `superpowers:` for the full set); without it the
+  gates point at skills that don't exist. Install it from
+  [claude.com/plugins/superpowers](https://claude.com/plugins/superpowers)
   (Claude Code UI), or run `/plugin` in the CLI and search for *superpowers*.
+  - **Accepted dependency (rationale on-page per `writing-explicit-rationale`):**
+    superpowers ships for every coding agent currently in scope — Claude Code,
+    Codex, Gemini. A future harness without it would strand the gates; that risk
+    is understood and accepted, because the doctrine's value is precisely the
+    delta it adds *over* the superpowers base, and re-implementing that base to
+    stay freestanding would cost more than it's worth.
+  - **Unpinned contract (known fragility):** the bundle relies on superpowers'
+    Report Format and its review / plan-scaffolding behavior. There is no version
+    floor; a breaking change upstream surfaces here as silent gate drift, not a
+    load error. Watch the seam on superpowers upgrades.
 - **Python 3** — for the hook stack.
 - **git** — the hooks key behavior off branch / commit / fork-base state.
 - **`codex` — only for the T3 pre-PR review tier.** The default T3 config shells
