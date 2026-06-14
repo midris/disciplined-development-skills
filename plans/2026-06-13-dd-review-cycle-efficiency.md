@@ -35,6 +35,10 @@ Descoped / deferred (rationale on-page per `writing-explicit-rationale`):
 
 `README.md` / `hooks/README.md` "P2 blocks / P0/P1/P2" claims stay true under "keep P2 blocking" and contain none of the timing phrasings — Task 2 Step 4 does NOT touch them.
 
+**Beyond the original plan scope (surfaced during execution — see the Task 1 execution note):**
+- `CLAUDE.md` + `examples/starter.CLAUDE.md` — the read-only-and-bounded evaluation-subagent rule (Branching and PR Strategy), mirrored into the consumer template; plus the `skill-validation/` index line.
+- `skill-validation/{adversarial-review-loop,dd-review-command,evaluation-subagents-read-only}.md` — non-shipped validation records for the loop skill, the `/dd-review` routing note, and the read-only rule.
+
 ---
 
 ### Task 0: Point the active-plan pointer at this plan (local only — NOT committed)
@@ -125,9 +129,9 @@ No automated test (command prose). `superpowers:writing-skills` does NOT apply h
 **Files:**
 - Modify: `plans/2026-06-13-dd-review-cycle-efficiency.md` (checkboxes)
 
-- [ ] **Step 1:** Run the hook suite (the rubric reword touches severity territory): `cd skills/disciplined-development/hooks && python3 -m pytest -q`. Expected: PASS.
-- [ ] **Step 2: Adversarial cold-read of the staged branch** — `/dd-review cold-read` (doc-dominant; the substituted executability + doctrine-consistency angles apply). Iterate per the *newly edited* `adversarial-review-loop` (dogfood the class-sweep). Address to clean.
-- [ ] **Step 3:** Reconcile this plan — flip every checkbox to reflect reality; record any descope that moved.
+- [x] **Step 1:** Run the hook suite (the rubric reword touches severity territory): `cd skills/disciplined-development/hooks && python3 -m pytest -q`. Expected: PASS. → 277 passed, 3 skipped.
+- [x] **Step 2: Adversarial cold-read of the staged branch** — `/dd-review cold-read` (doc-dominant; the substituted executability + doctrine-consistency angles apply). Iterate per the *newly edited* `adversarial-review-loop` (dogfood the class-sweep). Address to clean. → Ran multiple cold-reads across execution (read-only `Explore`); findings addressed or dismissed with on-page rationale.
+- [x] **Step 3:** Reconcile this plan — flip every checkbox to reflect reality; record any descope that moved.
 - [ ] **Step 4:** Open the PR via `superpowers:finishing-a-development-branch`. The PreToolUse hook runs the pre-pr codex gate on `gh pr create`; iterate any findings per `adversarial-review-loop` until it passes. (No standalone pre-run — #6 was dropped.)
 
 ---
