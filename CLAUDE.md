@@ -25,7 +25,7 @@ skills/<skill>/                       # nine skill dirs under skills/, each with
 skills/disciplined-development/hooks/ # hook stack + dd_review_runner.py engine + hook tests
 examples/                             # reference configs consumers copy (hooks block, dd-config, CLAUDE.md snippet + starter template)
 research/                             # non-shipped experiment tooling (replay harness + its smoke test)
-skill-validation/                     # non-shipped skill validation records (currently concise-writing only)
+skill-validation/                     # non-shipped skill validation records (concise-writing, adversarial-review-loop)
 tests/                                # installer-level tests (the settings-wiring test skips outside a consumer)
 plans/                                # active plans (created on demand)
 plans/completed/, plans/deferred/     # archived / deferred work
