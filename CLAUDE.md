@@ -105,6 +105,7 @@ Small, single-developer meta-project — no phase/chunk model.
 - Each PR must pass `cd skills/disciplined-development/hooks && python3 -m pytest -q` before merge.
 - **Never squash-merge.** Use `gh pr merge --merge` (merge-commit). Feature branches are deleted after merge; the merge commit is the only way per-branch commit history survives on `main`.
 - When dispatching a code-review agent on a branch, list new test functions by name in the prompt — agents grep by contract and miss new tests that overlap with older ones in the same file.
+- **Evaluation subagents run read-only and bounded.** Dispatch test / review / research subagents (findings, not commits) via a no-write-tool agent type (Claude Code: `Explore`) and cap the rounds — a "don't edit" instruction is not enough, and open-ended pressure-test/review loops are the failure to avoid.
 
 ### Commit Messages
 
