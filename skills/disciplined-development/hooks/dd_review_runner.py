@@ -356,6 +356,7 @@ def _handle_log_review(argv: list[str]) -> int | None:
     source: str | None = None
     round_: int = 1
     reviewer: str = "subagents"
+    cwd: str | None = None
     i = 0
     while i < len(argv):
         arg = argv[i]
@@ -392,10 +393,13 @@ def _handle_log_review(argv: list[str]) -> int | None:
             reviewer = argv[i + 1]
             i += 2
         elif arg == "--cwd":
-            # accepted but not used in Task 1 (git fields deferred to Task 2)
             if i + 1 >= len(argv):
                 _print_usage_error("--cwd requires a path argument")
                 return 2
+            if cwd is not None:
+                _print_usage_error("--cwd specified twice")
+                return 2
+            cwd = argv[i + 1]
             i += 2
         else:
             _print_usage_error(f"--log-review mode does not accept {arg!r}")
@@ -415,6 +419,43 @@ def _handle_log_review(argv: list[str]) -> int | None:
         )
         return 2
 
+    # --cwd validation (mirrors sibling handlers).
+    repo_path = cwd or os.getcwd()
+    if cwd and not pathlib.Path(cwd).is_dir():
+        _print_usage_error(f"--cwd {cwd!r} is not a directory")
+        return 2
+
+    # Resolve git repo root (same idiom as _handle_write_checkpoint /
+    # _handle_resolve_scope).
+    try:
+        r = subprocess.run(
+            ["git", "-C", repo_path, "rev-parse", "--show-toplevel"],
+            capture_output=True, text=True, timeout=5,
+        )
+    except Exception:
+        print("[dd_review --log-review] ERROR: git unavailable", file=sys.stderr)
+        return 1
+    if r.returncode != 0 or not r.stdout.strip():
+        print("[dd_review --log-review] ERROR: not inside a git repo",
+              file=sys.stderr)
+        return 1
+    repo = r.stdout.strip()
+
+    # Git-derived fields.
+    branch = _current_branch(repo)
+    head_sha = _head_sha(repo)
+
+    # Base resolution per tier (mirrors _handle_resolve_scope logic exactly):
+    #   fast → literal "HEAD" (working-tree scope; no git call needed)
+    #   all other _LOG_REVIEW_TIERS → fork base SHA via state.resolve_fork_base
+    if tier == "fast":
+        base: str = "HEAD"
+    else:
+        trunks = config.get("branch_convention.trunk_branches", ["master", "main"])
+        if not isinstance(trunks, list) or not trunks:
+            trunks = ["master", "main"]
+        base = state.resolve_fork_base(repo, trunks) or ""
+
     findings = sys.stdin.read()
 
     p0, p1, p2, p3 = severity.count_severities(findings, line_start=True)
@@ -425,6 +466,9 @@ def _handle_log_review(argv: list[str]) -> int | None:
         "source": source,
         "round": round_,
         "reviewer": reviewer,
+        "branch": branch,
+        "head_sha": head_sha,
+        "base": base,
         "output": findings,
         "p0": p0,
         "p1": p1,

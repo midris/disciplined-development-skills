@@ -1258,3 +1258,77 @@ def test_log_review_reviewer_defaults_and_override(review_env):
     assert proc.returncode == 0, proc.stderr
     recs = _reviews(env)
     assert recs[-1]["reviewer"] == "subagents:3"
+
+
+# ---------------------------------------------------------------------------
+# Task 2 — --log-review git-derived fields (branch, head_sha, base) + --cwd
+# ---------------------------------------------------------------------------
+
+
+def test_log_review_records_git_fields(review_env):
+    """--log-review appends branch, head_sha, and a tier-correct base field.
+
+    fast → base == "HEAD" (working-tree scope, no git call).
+    regular → base == fork base SHA (resolved via state.resolve_fork_base).
+    The fixture repo is on feature/x with master trunk, so both resolve cleanly.
+    """
+    env, repo, _ = review_env
+
+    # fast tier: base must be the literal string "HEAD"
+    proc = _run_log_review(
+        env, repo,
+        ["--tier", "fast", "--source", "command"],
+        "No findings.\n",
+    )
+    assert proc.returncode == 0, proc.stderr
+    recs = _reviews(env)
+    r = recs[-1]
+    assert r["branch"] == "feature/x"
+    assert r["head_sha"] == _git(repo, "rev-parse", "HEAD")
+    assert r["base"] == "HEAD"
+
+    # regular tier: base must equal the actual fork base SHA
+    expected_base = state.resolve_fork_base(str(repo), ["master", "main"])
+    assert expected_base is not None, "fixture must resolve a fork base"
+    proc = _run_log_review(
+        env, repo,
+        ["--tier", "regular", "--source", "command"],
+        "No findings.\n",
+    )
+    assert proc.returncode == 0, proc.stderr
+    recs = _reviews(env)
+    r = recs[-1]
+    assert r["branch"] == "feature/x"
+    assert r["head_sha"] == _git(repo, "rev-parse", "HEAD")
+    assert r["base"] == expected_base
+
+
+def test_log_review_cwd_targets_other_repo(review_env, tmp_path):
+    """--cwd <other> resolves branch/head_sha/base against the OTHER repo.
+
+    The fixture repo cwd is used for process spawning, but the logged row
+    must reflect the OTHER repo's git state, not the fixture repo's.
+    """
+    env, fixture_repo, _ = review_env
+    other = _make_second_repo(tmp_path)
+
+    other_branch = _git(other, "symbolic-ref", "--short", "HEAD")
+    other_sha = _git(other, "rev-parse", "HEAD")
+    other_base = state.resolve_fork_base(str(other), ["master", "main"])
+    assert other_base is not None, "second repo must resolve a fork base"
+
+    fixture_base = state.resolve_fork_base(str(fixture_repo), ["master", "main"])
+    # Sanity: the two repos must have different fork bases so we can distinguish them.
+    assert other_base != fixture_base
+
+    proc = _run_log_review(
+        env, fixture_repo,
+        ["--tier", "regular", "--source", "command", "--cwd", str(other)],
+        "No findings.\n",
+    )
+    assert proc.returncode == 0, proc.stderr
+    recs = _reviews(env)
+    r = recs[-1]
+    assert r["branch"] == other_branch
+    assert r["head_sha"] == other_sha
+    assert r["base"] == other_base
