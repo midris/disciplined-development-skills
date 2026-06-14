@@ -18,9 +18,9 @@ description: Use when an adversarial review surfaces findings. This applies to b
 
 ## Iteration cap: 3
 
-Three review-fix cycles is the cap. After cycle 3 returns findings, the next move is the cold-read escape below, not another fix pass.
+A **cycle** is **review → class-sweep → re-run**. Take at most **three**. If the third cycle still returns [P0]/[P1]/[P2], take the cold-read escape below — do not proceed to a fourth cycle.
 
-**Productive iteration** finds NEW issues on NEW surface each cycle. **Drift** re-litigates the same concerns or surfaces trivial/style findings. The cap interrupts drift before it consumes more cycles. Below the cap, the same *kind* of finding recurring across rounds means step 1's class-sweep was incomplete — do it now, not another single-instance round. At the cap, any findings trigger the cold-read escape, never a sweep-and-continue.
+**Productive iteration** finds NEW issues on NEW surface each cycle. **Drift** re-litigates the same concerns or surfaces trivial/style findings. The cap interrupts drift before it consumes more cycles. Below the cap, the same *kind* of finding recurring across cycles means step 1's class-sweep was incomplete — do it now, not another single-instance round. At the cap, any findings trigger the cold-read escape, never a sweep-and-continue.
 
 ## At the cap: cold-read escape
 
@@ -29,7 +29,7 @@ model, another human, or a clean new session.
 
 - **Confirms findings** → consider redo, not another iteration.
 - **Diverges materially** → trust the cold read; stop.
-- **Confirms fix-forward** → continue only if productive; cap restarts: another escape after 3 more cycles if findings persist.
+- **Confirms fix-forward** → continue only if productive; the cap resets for three more cycles, gated by another escape if findings persist.
 
 Record the escape and verdict in a work artifact so the next reader sees
 why iteration stopped or continued: plan, spec, PR, review thread, or code

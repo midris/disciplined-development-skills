@@ -21,8 +21,9 @@ pre-edit skill (RED) against the post-edit skill (GREEN).
   every member, then re-runs.
 - **T2 — singular finding.** A genuinely unique bug (off-by-one in one function).
   GREEN must NOT over-sweep: name the class, find no siblings, fix the one, re-run.
-- **T3 — at the cap.** Cycle 3 returns findings (any kind — even genuinely varied,
-  new-surface ones). Must take the cold-read escape, not another fix pass.
+- **T3 — at the cap.** The third cycle still returns findings (any kind — even
+  genuinely varied, new-surface ones). Must take the cold-read escape, not a fourth
+  cycle.
 - **T4 — productive iteration (below the cap).** By cycle 2, each round found a
   different real class on new surface. Must continue (fix + re-run); the "same
   *kind* recurring" backstop must NOT false-accuse.
@@ -43,6 +44,10 @@ pre-edit skill (RED) against the post-edit skill (GREEN).
 - **T3 caught a real regression** in the first backstop wording: it read as
   cap-softening ("new surface → one more sweep past the cap"). Reworded so the at-cap
   escape is mandatory and the sweep is a below-cap-only move; re-tested clean.
+- **Cap-counting disambiguation:** "cycle" was read inconsistently — a cap-emphasis
+  framing escaped at the third review, a productive-emphasis framing continued.
+  Defining a cycle (review → class-sweep → re-run) and "escape if the third cycle
+  still returns findings, not a fourth" made both framings escape consistently (4/4).
 
 ## On edits
 
