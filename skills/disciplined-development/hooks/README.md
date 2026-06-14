@@ -172,5 +172,5 @@ Every rule enforces one of two things, and the split bounds what a hook can do:
 Before adding a hook: (1) name the signal the model loses without it; (2) pick
 the tier — nudge (default) vs a hard block (only for an irreversible boundary);
 (3) keep the trigger dumb (no output-classification); (4) every hook gets a
-`DD_SKIP_<NAME>` bypass; (5) test-first; (6) update this README + the spec.
+`DD_SKIP_<HOOK>` bypass; (5) test-first; (6) update this README + the spec.
 If the surface is for the human, not the model — don't build it.
