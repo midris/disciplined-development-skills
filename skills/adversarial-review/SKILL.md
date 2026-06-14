@@ -33,8 +33,8 @@ Don't carry the reviewer's verification duty past the review.
 ## Severity rubric
 
 - **[P0]** — critical / blocks merge. Data loss, security hole, broken core path.
-- **[P1]** — important / address before PR. Incorrect behavior on documented input, regression on tested path.
-- **[P2]** — minor / address when convenient. Cleanup, naming, comment drift.
+- **[P1]** — important / resolve before opening the PR. Incorrect behavior on documented input, regression on tested path.
+- **[P2]** — minor / resolve before opening the PR. Cleanup, naming, comment drift.
 - **[P3]** — nit / optional. Style preference, missing punctuation.
 
 ## Output format

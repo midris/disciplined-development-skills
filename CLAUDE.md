@@ -25,7 +25,7 @@ skills/<skill>/                       # nine skill dirs under skills/, each with
 skills/disciplined-development/hooks/ # hook stack + dd_review_runner.py engine + hook tests
 examples/                             # reference configs consumers copy (hooks block, dd-config, CLAUDE.md snippet + starter template)
 research/                             # non-shipped experiment tooling (replay harness + its smoke test)
-skill-validation/                     # non-shipped skill validation records (currently concise-writing only)
+skill-validation/                     # non-shipped validation records (skills, commands, project rules)
 tests/                                # installer-level tests (the settings-wiring test skips outside a consumer)
 plans/                                # active plans (created on demand)
 plans/completed/, plans/deferred/     # archived / deferred work
@@ -105,6 +105,7 @@ Small, single-developer meta-project — no phase/chunk model.
 - Each PR must pass `cd skills/disciplined-development/hooks && python3 -m pytest -q` before merge.
 - **Never squash-merge.** Use `gh pr merge --merge` (merge-commit). Feature branches are deleted after merge; the merge commit is the only way per-branch commit history survives on `main`.
 - When dispatching a code-review agent on a branch, list new test functions by name in the prompt — agents grep by contract and miss new tests that overlap with older ones in the same file.
+- **Evaluation subagents run read-only and bounded.** Dispatch test / review / research subagents (findings, not commits) via a no-write-tool agent type (Claude Code: `Explore`) and keep it to a small fixed set of rounds — a "don't edit" instruction is not enough, and open-ended pressure-test/review loops are the failure to avoid.
 
 ### Commit Messages
 

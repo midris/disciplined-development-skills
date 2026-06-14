@@ -80,6 +80,7 @@ Phase tracker: {{LINK_TO_ROADMAP.MD_IF_USED}}. Don't duplicate phase status, shi
 - Each chunk PR must pass focused tests before merge.
 - **Never squash-merge.** Use `gh pr merge --merge` (merge-commit). Feature branches are deleted after merge; the merge commit is the only way per-branch commit history survives on `{{MAIN_BRANCH}}`.
 - When dispatching a code-review agent on a chunk, list the new test functions by name in the prompt — agents grep by contract and miss new tests that overlap with older ones in the same file.
+- **Evaluation subagents run read-only and bounded.** Dispatch test / review / research subagents (findings, not commits) via a no-write-tool agent type (Claude Code: `Explore`) and keep it to a small fixed set of rounds — a "don't edit" instruction is not enough, and open-ended pressure-test/review loops are the failure to avoid.
 
 ### Commit Messages
 

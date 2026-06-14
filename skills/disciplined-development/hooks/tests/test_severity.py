@@ -7,6 +7,8 @@ The load-bearing behavior is line-start anchoring
 so only line-anchored findings count; mid-prose tokens must not.
 """
 
+import pathlib
+
 from hooks.lib.severity import count_severities, findings_excerpt
 
 
@@ -53,6 +55,9 @@ def test_emphasis_wrapped_finding_counts_when_anchored():
 
 def test_rubric_echo_is_rejected_when_anchored():
     # The adversarial-review rubric shape must NOT inflate the count.
+    # Synthetic rubric-shaped lines (NOT a mirror of the live SKILL.md — that is
+    # test_p2_rubric_legend_is_echo_suppressed); asserts suppression fires on the
+    # shape regardless of the trailing text.
     text = (
         "- **[P0]** — critical / blocks merge.\n"
         "- **[P1]** — important / address before PR.\n"
@@ -110,3 +115,31 @@ def test_findings_excerpt_truncates_long_headline():
 def test_findings_excerpt_empty_when_no_anchored_findings():
     text = "No findings.\nclean; no [P1] worth tagging"
     assert findings_excerpt(text, line_start=True) == ""
+
+
+# ---- regression pin: P2 rubric-legend line stays echo-suppressed -----------
+# Couples to the LIVE adversarial-review SKILL.md so a future edit that drops the
+# `minor /` shape from the P2 legend (severity.py:55-62 uses it to suppress echoed
+# rubric lines) trips this test.
+
+def _p2_rubric_legend_line() -> str:
+    # parents: tests -> hooks -> disciplined-development -> skills -> repo root
+    repo_root = pathlib.Path(__file__).resolve().parents[4]
+    skill = repo_root / "skills" / "adversarial-review" / "SKILL.md"
+    legend = [ln for ln in skill.read_text().splitlines()
+              if ln.startswith("- **[P2]** —")]
+    assert len(legend) == 1, (
+        f"expected exactly one P2 rubric-legend line in {skill}, found {len(legend)}")
+    return legend[0]
+
+
+def test_p2_rubric_legend_is_echo_suppressed():
+    line = _p2_rubric_legend_line()
+    assert count_severities(line, line_start=True) == (0, 0, 0, 0)
+    assert findings_excerpt(line, line_start=True) == ""
+
+
+def test_real_p2_finding_still_counts():
+    text = "- [P2] src/x.py:10: real finding"
+    assert count_severities(text, line_start=True) == (0, 0, 1, 0)
+    assert findings_excerpt(text, line_start=True) == text
