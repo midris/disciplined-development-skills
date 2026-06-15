@@ -581,8 +581,8 @@ listing each doc per `sweeping-stale-references`.
 
 **Steps:**
 - [x] Update README / hook-recipes / `logging_setup.py` docstring; verify `dd-config.md` reads accurately (no change — retention/enabled lines are source-agnostic). Plus plan-internal reconciliation: top banner + Files-touched `SKILL.md` entry marked not-modified (Task 6 cut).
-- [ ] `/dd-review cold-read` the full staged branch. (The final pre-PR full-branch pass — covers fix round + Tasks 5/7 + the carve-out hardening.)
-- [ ] Commit (body includes `References swept:` listing each doc): `docs: document --log-review across hooks README, recipes, docstring`.
+- [x] `/dd-review cold-read` the full staged branch — clean (6 angles; raised P2s all declined-with-rationale: user-directed bullet split, banner approach, committed history). Checkpoint written.
+- [x] Commit (body includes `References swept:` listing each doc): `docs: document --log-review across hooks README, recipes, docstring`. (0c2c416)
 
 ## Plan self-review
 
