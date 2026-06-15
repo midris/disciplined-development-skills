@@ -8,7 +8,7 @@ description: 'Use when dispatching a development subagent whose code changes you
 **Role:** Companion — discipline overlay on `superpowers:subagent-driven-development` and `superpowers:dispatching-parallel-agents`. Invoke when you dispatch a development subagent — one that changes code and commits — including ad-hoc fixers those skills don't model. Research/review subagents (findings, not commits) are out of scope — verify their claims per `disciplined-research`.
 **Owns:** the scope contract, the out-of-scope gradient, the report extension, and the verify-every-commit duty.
 **Does not own:** plan-task execution + two-stage review (`superpowers:subagent-driven-development`); parallel fan-out mechanics (`superpowers:dispatching-parallel-agents`); the orchestrator's own gates (`disciplined-development`).
-**Audience:** the orchestrator. If you are the dispatched subagent, this is not your manual — your doctrine is `disciplined-development` plus your dispatch prompt (see the subagent red flag below).
+**Audience:** the orchestrator. If you are a dispatched subagent, you are not allowed to dispatch your own subagents. Follow `disciplined-development` + your dispatch prompt (see the subagent red flag below).
 
 ## Overview
 
@@ -18,7 +18,7 @@ description: 'Use when dispatching a development subagent whose code changes you
 
 ## When you dispatch
 
-- **Write a scope contract:** name the in-scope files (and shape of change), the governing files, and locked constraints in that area. Explicitly tell the subagent to not dispatch its own subagents and to ignore hook nudges (review / checkpoint / PR). Both of those are orchestrator responsibilities.
+- **Write a scope contract:** name the in-scope files (and shape of change), governing files, and locked constraints. Tell the subagent not to dispatch its own subagents or act on hook nudges (review / checkpoint / PR) — both are the orchestrator's responsibility.
 - **One finding per dispatch by default.** Batch only same-kind, non-overlapping, behavior-free changes; split out anything coupled or behavior-changing. Mixed batches are where drift hides.
 - **Require the report** (`superpowers:subagent-driven-development` Report Format + a "changes beyond the dispatched scope" line, each with a one-line rationale).
 - **State the out-of-scope rule in the prompt:** the subagent acts only on small, safe, obviously-correct fixes, each in its own commit; anything risky, large, design-level, or uncertain — including deleting or overwriting a tracked file — it surfaces, doesn't act.
@@ -40,12 +40,11 @@ The report is a claim, not the diff. For every commit a subagent lands: `git sho
 ## Red Flags — STOP
 
 **As the orchestrator:**
-
 - "The report says DONE — I'll trust it." (diff it; the report isn't the diff)
 - "I'll batch these unrelated findings into one dispatch." (mixed batches hide drift)
 - "Tests pass, so the diff is fine." (tests pass over out-of-scope edits)
 
-**As the dispatched subagent** — first: are you reading this orchestrator playbook at all? It isn't your manual. Your doctrine is `disciplined-development` plus your dispatch prompt, which carry the review / checkpoint / PR / nested-dispatch limits. Beyond that, you over-reach if you think:
+**As the dispatched subagent** — You are not allowed to dispatch your own subagents. Follow `disciplined-development` + your dispatch prompt. Beyond that, you over-reach if you think:
 
 - "While I'm here, I'll also fix / tidy this."
 - "This tracked file looks like junk — I'll delete it."

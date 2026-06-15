@@ -5,7 +5,7 @@ Records two re-runnable subagent pressure-tests behind the
 dispatched subagent from acting on review/checkpoint/PR signals.
 
 **Dispatch protocol.** Read-only (`Explore`), text-only — the agents state
-intent, they don't execute. See [[evaluation-subagents-read-only]].
+intent, they don't execute. See [evaluation-subagents-read-only](evaluation-subagents-read-only.md).
 
 ## Background
 
@@ -48,7 +48,7 @@ losing dispatch-prompt quality.
 **Method.** Orchestrator loads ONLY the dispatch skill, writes a complete
 dispatch prompt for a fixed task. Score the prompt for: scope contract, governing
 files + locked constraint, out-of-scope gradient, required report. RED = main's
-skill (`git show main:...`), GREEN = restructured.
+skill (`git show main:skills/dispatching-development-subagents/SKILL.md`), GREEN = restructured.
 
 **Scenario.** RED 3/3 produced all four elements. GREEN 3/3 reproduced all four
 **and** added the two new limits (no nested dispatch, ignore hook nudges). No
