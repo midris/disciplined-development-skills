@@ -1,6 +1,6 @@
 # Review-logging instrumentation — design spec
 
-**Status:** design (awaiting review → plan)
+**Status:** implemented — PR #22 (`feature/review-logging-instrumentation` → `main`)
 **Date:** 2026-06-14
 
 > **Update — Task 6 cut.** The Gate 5 self-review / external `--source ad-hoc`
