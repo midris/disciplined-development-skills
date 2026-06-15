@@ -238,6 +238,8 @@ def test_verify_only_when_no_cadence_triggers(tmp_path):
     # Neither T1 (/dd-review regular with edit-count message) nor T2 text
     assert "/dd-review cold-read" not in ctx
     assert "unreviewed edits" not in ctx
+    # The audience caveat rides only on T1/T2 review nudges, never the verify reminder.
+    assert review_nudge.GATE_AUDIENCE not in ctx
 
 
 def test_t1_fires_when_edits_at_floor(tmp_path):
@@ -255,6 +257,7 @@ def test_t1_fires_when_edits_at_floor(tmp_path):
     assert review_nudge.VERIFY_TEXT in ctx
     assert "/dd-review regular" in ctx
     assert "30" in ctx  # edit count appears in message
+    assert review_nudge.GATE_AUDIENCE in ctx  # orchestrator/subagent audience framing
 
 
 def test_t1_absent_when_edits_below_floor(tmp_path):
@@ -284,6 +287,7 @@ def test_t2_fires_when_commits_at_threshold_with_checkpoint(tmp_path):
     assert review_nudge.VERIFY_TEXT in ctx
     assert "/dd-review cold-read" in ctx
     assert "3" in ctx
+    assert review_nudge.GATE_AUDIENCE in ctx  # orchestrator/subagent audience framing
 
 
 def test_t2_absent_when_commits_below_threshold(tmp_path):
@@ -311,6 +315,7 @@ def test_t2_fork_base_fallback_fires(tmp_path):
     assert ctx is not None
     assert review_nudge.VERIFY_TEXT in ctx
     assert "/dd-review cold-read" in ctx
+    assert review_nudge.GATE_AUDIENCE in ctx  # orchestrator/subagent audience framing
 
 
 def test_t2_fork_base_fallback_absent_below_threshold(tmp_path):
@@ -340,6 +345,7 @@ def test_both_t1_and_t2_fire_together(tmp_path):
     assert review_nudge.VERIFY_TEXT in ctx
     assert "/dd-review regular" in ctx   # T1
     assert "/dd-review cold-read" in ctx  # T2
+    assert review_nudge.GATE_AUDIENCE in ctx  # audience framing present once
 
 
 def test_bypass_silences_all(tmp_path):

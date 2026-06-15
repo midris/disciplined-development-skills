@@ -148,6 +148,12 @@ The verification segment fires independent of repo/branch resolution; T1 and T2
 require it. A detached HEAD or git error degrades the cadence segments silently
 while keeping the verify reminder.
 
+Both review nudges (T1/T2) carry an audience caveat (`GATE_AUDIENCE`): the review
+gate is the orchestrator's, so a dispatched subagent reports it and stops rather
+than acting on the nudge. The hook stays dumb — one static string for whoever is
+listening; it does not detect subagent context. The verify segment carries no
+such caveat (verifying its own work is the subagent's job).
+
 ---
 
 ## `SessionStart` — `session_reground.py`

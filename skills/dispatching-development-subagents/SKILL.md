@@ -18,7 +18,8 @@ description: 'Use when dispatching a development subagent whose code changes you
 
 ## When you dispatch
 
-- **Write a scope contract:** name the in-scope files (and shape of change), governing files, and locked constraints. Tell the subagent not to dispatch its own subagents or act on hook nudges (review / checkpoint / PR) — both are the orchestrator's responsibility.
+- **Write a scope contract:** name the in-scope files (and shape of change), governing files, and locked constraints.
+- **Stamp the subagent's identity in the prompt:** the subagent is not the orchestrator. Review / checkpoint / PR gates and hook nudges belong to the orchestrator — a due gate does not promote the subagent. The subagent reports a due gate and stops, and dispatches no further subagents.
 - **One finding per dispatch by default.** Batch only same-kind, non-overlapping, behavior-free changes; split out anything coupled or behavior-changing. Mixed batches are where drift hides.
 - **Require the report** (`superpowers:subagent-driven-development` Report Format + a "changes beyond the dispatched scope" line, each with a one-line rationale).
 - **State the out-of-scope rule in the prompt:** the subagent acts only on small, safe, obviously-correct fixes, each in its own commit; anything risky, large, design-level, or uncertain — including deleting or overwriting a tracked file — it surfaces, doesn't act.

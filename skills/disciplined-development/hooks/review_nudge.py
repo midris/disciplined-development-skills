@@ -21,6 +21,10 @@ three accumulated segments on one envelope:
    - No fork base / no trunk → cadence segment omitted (degrade silent).
    Suggests ``/dd-review cold-read``.
 
+Both review nudges (T1/T2) carry ``GATE_AUDIENCE``: the gate is the
+orchestrator's, so a dispatched subagent reports it and stops rather than acting.
+The verify segment (1) does not — verifying its own work is the subagent's job.
+
 Channel: PostToolUse exit-0 ``hookSpecificOutput.additionalContext`` (plain
 stdout is debug-only for this event). Advisory only — every probe degrades to
 silent on error and the hook never blocks the tool call. The verification
@@ -58,6 +62,17 @@ VERIFY_TEXT = (
     "before moving on. Run the relevant test / preview / live call, or state "
     "why it's not exercisable. Tests passing is necessary but not sufficient; "
     "don't just assert that it works."
+)
+
+# Audience framing appended to every T1/T2 review nudge (NOT the Gate-3 verify
+# reminder — verifying its own work is the subagent's job). The hook stays dumb:
+# it emits one static string for whoever is listening; the model decides which
+# clause applies. A review/checkpoint gate is the orchestrator's, so a dispatched
+# subagent reports the gate and stops rather than acting on the nudge.
+GATE_AUDIENCE = (
+    "This gate is the orchestrator's responsibility. If you are a subagent, "
+    "report it's due and stop; don't act on this nudge. If you are the "
+    "orchestrator, you should run"
 )
 
 
@@ -145,8 +160,8 @@ def main() -> int:
             if edits >= edit_floor:
                 env.accumulate(
                     f"Edit counter: {edits} unreviewed edits on this branch "
-                    f"(>= T1 floor {edit_floor}). "
-                    f"Run `/dd-review regular` to review and reset the counter."
+                    f"(>= T1 floor {edit_floor}). {GATE_AUDIENCE} "
+                    f"`/dd-review regular` to review and reset the counter."
                 )
                 t1_fired = True
 
@@ -159,8 +174,8 @@ def main() -> int:
                     env.accumulate(
                         f"Review cadence: {since_cp} commits since the last "
                         f"cold-read on this branch (>= T2 nudge threshold "
-                        f"{t2_threshold}). Run `/dd-review cold-read` before "
-                        f"continuing."
+                        f"{t2_threshold}). {GATE_AUDIENCE} `/dd-review cold-read` "
+                        f"before continuing."
                     )
                     t2_path, t2_n = "checkpoint", since_cp
             else:
@@ -175,7 +190,7 @@ def main() -> int:
                     env.accumulate(
                         f"Review checkpoint missing or invalidated — "
                         f"{since_fb} commits since fork on this branch "
-                        f"(>= T2 nudge threshold {t2_threshold}). Run "
+                        f"(>= T2 nudge threshold {t2_threshold}). {GATE_AUDIENCE} "
                         f"`/dd-review cold-read` before continuing."
                     )
                     t2_path, t2_n = "fork_base", since_fb
