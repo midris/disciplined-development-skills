@@ -361,10 +361,10 @@ block in `main()` and the `_print_usage_error` usage strings to list
 - `--reviewer` omitted defaults to `subagents`; supplied value is recorded.
 
 **Steps:**
-- [ ] Write the three tests above; run the hook suite → confirm fail.
-- [ ] Add `_handle_log_review` + the `_LOG_REVIEW_*` constants + `--help`/usage updates per **What**.
-- [ ] Run `cd skills/disciplined-development/hooks && python3 -m pytest -q` → green.
-- [ ] Commit: `feat(dd-review): add --log-review mode deriving severity + decision`.
+- [x] Write the three tests above; run the hook suite → confirm fail.
+- [x] Add `_handle_log_review` + the `_LOG_REVIEW_*` constants + `--help`/usage updates per **What**.
+- [x] Run `cd skills/disciplined-development/hooks && python3 -m pytest -q` → green.
+- [x] Commit: `feat(dd-review): add --log-review mode deriving severity + decision`.
 
 ## Task 2 — git-derived fields + `--cwd`
 
@@ -387,10 +387,10 @@ from either handler.
   session cwd (parallels `test_cwd_flag_targets_other_repo`).
 
 **Steps:**
-- [ ] Write the two tests above; run → confirm fail.
-- [ ] Resolve git fields per **What** (reuse `_handle_resolve_scope`'s base logic).
-- [ ] Run the hook suite → green.
-- [ ] Commit: `feat(dd-review): resolve git fields for --log-review, honor --cwd`.
+- [x] Write the two tests above; run → confirm fail.
+- [x] Resolve git fields per **What** (reuse `_handle_resolve_scope`'s base logic).
+- [x] Run the hook suite → green.
+- [x] Commit: `feat(dd-review): resolve git fields for --log-review, honor --cwd`.
 
 ## Task 3 — exit-code contract
 
@@ -421,10 +421,10 @@ usage error (exit 2), distinct from a real `PASS`.
 including an explicit "whitespace-only stdin → exit 2, zero rows" case.
 
 **Steps:**
-- [ ] Write one test per table row (incl. whitespace-only stdin); run → confirm fail.
-- [ ] Implement the exit-code split per **What** (usage→2 via `_print_usage_error`, I/O→0).
-- [ ] Run the hook suite → green.
-- [ ] Commit: `feat(dd-review): exit-code contract for --log-review (loud usage, soft I/O)`.
+- [x] Write one test per table row (incl. whitespace-only stdin); run → confirm fail.
+- [x] Implement the exit-code split per **What** (usage→2 via `_print_usage_error`, I/O→0).
+- [x] Run the hook suite → green.
+- [x] Commit: `feat(dd-review): exit-code contract for --log-review (loud usage, soft I/O)`.
 
 ## Task 4 — pre-pr rows gain `source: "engine"`
 
@@ -449,10 +449,10 @@ leaner `append_review` call. Both must carry the tag.
   reason Task 4's coverage was incomplete.
 
 **Steps:**
-- [ ] Add `source` assertions to the four tests above; run the hook suite → confirm fail.
-- [ ] Add `source: "engine"` to the `_error()` and `_review_record` append calls.
-- [ ] Run `cd skills/disciplined-development/hooks && python3 -m pytest -q` → green.
-- [ ] Commit: `feat(dd-review): tag pre-pr review rows with source=engine`.
+- [x] Add `source` assertions to the four tests above; run the hook suite → confirm fail.
+- [x] Add `source: "engine"` to the `_error()` and `_review_record` append calls.
+- [x] Run `cd skills/disciplined-development/hooks && python3 -m pytest -q` → green.
+- [x] Commit: `feat(dd-review): tag pre-pr review rows with source=engine`.
 
 ## Task 5 — `/dd-review` command wiring (prose; cold-read gated)
 
