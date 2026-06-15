@@ -767,8 +767,8 @@ def main(argv: list[str] | None = None) -> int:
         # "is it working", not just successful reviews). Fields known this
         # early only; degrade-safe.
         logging_setup.append_review({
-            "tier": tier, "reviewer": reviewer, "branch": branch,
-            "head_sha": head_sha, "decision": "ERROR",
+            "tier": tier, "source": "engine", "reviewer": reviewer,
+            "branch": branch, "head_sha": head_sha, "decision": "ERROR",
             "reason": reason, "msg": msg,
         })
         print(f"[dd_review {tier}] ERROR — {msg}", file=sys.stderr)
@@ -870,6 +870,7 @@ def main(argv: list[str] | None = None) -> int:
         # not yet known there). Degrade-safe (append_review never raises).
         logging_setup.append_review({
             "tier": tier,
+            "source": "engine",
             "reviewer": invocation.reviewer,
             "model": invocation.model,
             "effort": invocation.effort,

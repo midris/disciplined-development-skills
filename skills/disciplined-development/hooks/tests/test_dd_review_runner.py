@@ -475,6 +475,10 @@ def test_cli_missing_errors(review_env, tmp_path):
 
     Build an isolated bin dir holding only a ``git`` symlink so neither the
     shim nor any real ``codex`` on the host PATH is reachable.
+
+    Also verifies the _error() pre-runner path appends a row tagged source=engine.
+    The isolated-PATH env preserves DD_LOG_DIR from the base env so _reviews(env)
+    finds the row.
     """
     env, repo, _ = review_env
     isolated = tmp_path / "onlygit"
@@ -484,6 +488,10 @@ def test_cli_missing_errors(review_env, tmp_path):
     proc = _run(env, repo, ["pre-pr"])
     assert proc.returncode == 1  # operational failure (not a usage error)
     assert "not found on PATH" in proc.stderr
+    # _error() must write a review record tagged source=engine.
+    recs = _reviews(env)
+    assert len(recs) == 1
+    assert recs[0]["source"] == "engine"
 
 
 def test_empty_reviewer_stdout_errors(review_env):
@@ -771,6 +779,7 @@ def test_clean_pass_writes_review_record(review_env):
     assert r["reviewer"] == "codex" and "duration_s" in r and "ts" in r
     assert r["p0"] == 0 and r["p1"] == 0 and "output" in r
     assert r["model"] == "gpt-5.5" and "strategy" in r and "diff_bytes" in r
+    assert r["source"] == "engine"
 
 
 def test_block_writes_review_record(review_env):
@@ -781,6 +790,7 @@ def test_block_writes_review_record(review_env):
     assert rec["decision"] == "BLOCK" and rec["p1"] == 1
     assert "[P1] real bug here" in rec["output"]
     assert rec["reviewer"] == "codex"
+    assert rec["source"] == "engine"
 
 
 def test_error_writes_review_record(review_env):
@@ -792,6 +802,7 @@ def test_error_writes_review_record(review_env):
     rec = _reviews(env)[-1]
     assert rec["decision"] == "ERROR" and rec["reason"] == "empty_output"
     assert rec["tier"] == "pre-pr" and "duration_s" in rec
+    assert rec["source"] == "engine"
 
 
 # ---------------------------------------------------------------------------
