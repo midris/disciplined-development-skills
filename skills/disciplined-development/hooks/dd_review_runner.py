@@ -354,8 +354,8 @@ def _handle_log_review(argv: list[str]) -> int | None:
 
     tier: str | None = None
     source: str | None = None
-    round_: int = 1
-    reviewer: str = "subagents"
+    round_: int | None = None
+    reviewer: str | None = None
     cwd: str | None = None
     i = 0
     while i < len(argv):
@@ -366,17 +366,26 @@ def _handle_log_review(argv: list[str]) -> int | None:
             if i + 1 >= len(argv):
                 _print_usage_error("--tier requires an argument")
                 return 2
+            if tier is not None:
+                _print_usage_error("--tier specified twice")
+                return 2
             tier = argv[i + 1]
             i += 2
         elif arg == "--source":
             if i + 1 >= len(argv):
                 _print_usage_error("--source requires an argument")
                 return 2
+            if source is not None:
+                _print_usage_error("--source specified twice")
+                return 2
             source = argv[i + 1]
             i += 2
         elif arg == "--round":
             if i + 1 >= len(argv):
                 _print_usage_error("--round requires an integer argument")
+                return 2
+            if round_ is not None:
+                _print_usage_error("--round specified twice")
                 return 2
             try:
                 round_ = int(argv[i + 1])
@@ -389,6 +398,9 @@ def _handle_log_review(argv: list[str]) -> int | None:
         elif arg == "--reviewer":
             if i + 1 >= len(argv):
                 _print_usage_error("--reviewer requires an argument")
+                return 2
+            if reviewer is not None:
+                _print_usage_error("--reviewer specified twice")
                 return 2
             reviewer = argv[i + 1]
             i += 2
@@ -405,6 +417,21 @@ def _handle_log_review(argv: list[str]) -> int | None:
             _print_usage_error(f"--log-review mode does not accept {arg!r}")
             return 2
 
+    # Apply defaults for optional flags.
+    if round_ is None:
+        round_ = 1
+    if reviewer is None:
+        reviewer = "subagents"
+
+    # Explicit missing-flag checks (before the "not in valid set" checks, so
+    # the error message says "required" rather than "unknown ... None").
+    if tier is None:
+        _print_usage_error("--tier is required")
+        return 2
+    if source is None:
+        _print_usage_error("--source is required")
+        return 2
+
     if tier not in _LOG_REVIEW_TIERS:
         _print_usage_error(
             f"unknown --tier {tier!r} "
@@ -417,6 +444,10 @@ def _handle_log_review(argv: list[str]) -> int | None:
             f"unknown --source {source!r} "
             f"(valid: {' | '.join(_LOG_REVIEW_SOURCES)})"
         )
+        return 2
+
+    if round_ < 1:
+        _print_usage_error("--round must be >= 1")
         return 2
 
     # --cwd validation (mirrors sibling handlers).
@@ -441,6 +472,15 @@ def _handle_log_review(argv: list[str]) -> int | None:
         return 1
     repo = r.stdout.strip()
 
+    # Config must follow --cwd: mirror main()'s block so config reads resolve
+    # against the target repo, not the session repo. Don't clobber a DD_CONFIG
+    # the caller/test already set to a real path.
+    if cwd and not os.environ.get("DD_CONFIG"):
+        os.environ["DD_CONFIG"] = str(
+            pathlib.Path(repo) / ".claude" / "dd-config.json"
+        )
+        config.reset_config_cache()
+
     # Git-derived fields.
     branch = _current_branch(repo)
     head_sha = _head_sha(repo)
@@ -448,13 +488,22 @@ def _handle_log_review(argv: list[str]) -> int | None:
     # Base resolution per tier (mirrors _handle_resolve_scope logic exactly):
     #   fast → literal "HEAD" (working-tree scope; no git call needed)
     #   all other _LOG_REVIEW_TIERS → fork base SHA via state.resolve_fork_base
+    #   unresolvable non-fast base → exit 1 (operational error), no row written
     if tier == "fast":
         base: str = "HEAD"
     else:
         trunks = config.get("branch_convention.trunk_branches", ["master", "main"])
         if not isinstance(trunks, list) or not trunks:
             trunks = ["master", "main"]
-        base = state.resolve_fork_base(repo, trunks) or ""
+        resolved = state.resolve_fork_base(repo, trunks)
+        if not resolved:
+            print(
+                f"[dd_review --log-review] ERROR — could not determine a fork "
+                f"base — none of {trunks} resolve in this repo.",
+                file=sys.stderr,
+            )
+            return 1
+        base = resolved
 
     findings = sys.stdin.read()
 
