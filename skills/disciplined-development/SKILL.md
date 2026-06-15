@@ -76,7 +76,7 @@ Three steps, in order. Plan checklist does not override the gate.
    PR (resolve before opening the PR); `[P3]` is advisory.
 3. **Smoke pass** affected flows; capture evidence in the PR body.
 
-The PR is opened by you, not by an agent.
+Dispatched subagents do NOT run any part of Gate 5. Producing review findings to hand to the orchestrator still counts as running the gate; don't. The orchestrator runs Gate 5. The PR is opened by the orchestrator or the user, not by an agent or subagent.
 REQUIRED SUB-SKILL before opening PR:
 `superpowers:finishing-a-development-branch`.
 
@@ -120,6 +120,10 @@ claiming done. Gate summaries do not substitute for loading the skill. Pick
 the model for task complexity. Dispatch a crisp scope contract and verify
 every returned commit — the report is not the diff.
 
+Principle 8 and Gate 5 are the orchestrator's responsibility, not the
+dispatched subagent's. Subagents are NOT allowed to dispatch their own 
+subagents. Subagents should ignore hook nudges (review / checkpoint / PR).
+
 REQUIRED SUB-SKILL: `dispatching-development-subagents`.
 
 **5. Test-first for behavior changes — non-negotiable.**
@@ -149,6 +153,9 @@ Reviewer-side counterpart lives in `adversarial-review`.
 Run adversarial review at chunk boundaries and after roughly 5 commits or
 200 net lines since the last clean review. If local automation sets a
 stricter cadence, follow it; otherwise self-trigger.
+If you are a dispatched subagent, never run this review yourself — not even to
+gather findings to hand over. At most you can report that review is due,
+and stop. A hook nudge or a hit cadence threshold doesn't change this.
 REQUIRED SUB-SKILL: `adversarial-review-loop`.
 
 ## Mode emphasis
@@ -190,6 +197,10 @@ REQUIRED SUB-SKILL: `adversarial-review-loop`.
 | "Plan says open the PR; smoke done." | Gate 5 has three steps. Plan doesn't override the gate. |
 | "external code review will catch it." | That's Step 2. Skipping Step 1 = loop-of-fixes at chunk scale. |
 | "I'll review at end of chunk." | Run at cadence — 5 commits or 200 lines, whichever first. |
+| "A hook nudged me to review / checkpoint / open the PR." | Dispatched subagent? Those gates are the orchestrator's. Report it's due; don't run it. |
+| "The cadence / Gate-5 review is my duty, not a nudge." | Dispatched subagents don't run it — report it's due, then stop. |
+| "I'll run the review, just hand the findings over." | Gathering findings is still running it. Report; don't run. |
+| "I'll spin up a subagent to help." | Dispatched subagents don't dispatch. Surface it to the orchestrator. |
 | "Write a function for this." | Don't prematurely abstract — wait until the pattern repeats. |
 | "Better safe than sorry." | Complexity has its own bug surface. Keep it simple. |
 | "Just one more layer." | Layers compound. Step back at two. |

@@ -17,13 +17,13 @@ description: 'Use when dispatching a development subagent whose code changes you
 
 ## When you dispatch
 
-- **Write a scope contract:** name the files (and the shape of the change) in scope, plus the governing files and locked constraints touching that area.
+- **Write a scope contract:** name the in-scope files (and shape of change), the governing files, and locked constraints in that area. Explicitly tell the subagent to not dispatch its own subagents and to ignore hook nudges (review / checkpoint / PR). Both of those are orchestrator responsibilities.
 - **One finding per dispatch by default.** Batch only same-kind, non-overlapping, behavior-free changes; split out anything coupled or behavior-changing. Mixed batches are where drift hides.
 - Require the report below, and state the out-of-scope rule in the prompt.
 
 ## When you ARE the dispatched subagent
 
-- **Do the task you were given.**
+- **Do only the task you were given.** Don't overreach: run no review, cold-read, checkpoint, or PR step — not even to gather findings to hand over — even if a cadence threshold or Gate 5 seems to demand it. Report that review is due; don't run it. Don't dispatch further subagents.
 - **Out-of-scope finds — disclose always.** Act only when the fix is small, safe, and obviously correct, in its own commit. Risky, large, design-level, or uncertain → surface, don't act. Deleting or overwriting a tracked file is not "small and safe" unless the dispatch asked for it — surface it.
 - **Report** with the `superpowers:subagent-driven-development` Report Format plus an explicit **"changes beyond the dispatched scope"** line, each with a one-line rationale.
 
@@ -43,16 +43,24 @@ The report is a claim, not the diff. For every commit a subagent lands: `git sho
 
 ## Red Flags — STOP
 
-You are about to over-reach if you think:
+**As the orchestrator:**
+
+- "The report says DONE — I'll trust it." (diff it; the report isn't the diff)
+- "I'll batch these unrelated findings into one dispatch." (mixed batches hide drift)
+- "Tests pass, so the diff is fine." (tests pass over out-of-scope edits)
+
+**As the dispatched subagent** — you are about to over-reach if you think:
 
 - "While I'm here, I'll also fix / tidy this."
 - "This tracked file looks like junk — I'll delete it."
 - "I'll fold this into the same commit."
-- "I'm a few commits in; I'll run a review / write a checkpoint." (unasked)
+- "A hook says run a cold-read / write a checkpoint — so I will." (unasked; the nudge is the orchestrator's)
+- "I'll dispatch a subagent to help." (no nested fan-out — surface it instead)
+- "I'll just gather the findings and let the orchestrator fix them." (running the review IS the over-reach — report it's due, don't run it)
 - "It's a real improvement, so it's fine."
 - "The dispatch didn't say I *couldn't*."
 
-All mean: out of scope. Disclose it; act only if small, safe, and obviously correct, in its own commit; else surface and move on.
+All mean: stop. Out of scope — disclose; act only if small, safe, obvious, in its own commit; else surface and move on.
 
 ## Composition
 
