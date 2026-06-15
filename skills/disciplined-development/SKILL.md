@@ -76,7 +76,7 @@ Three steps, in order. Plan checklist does not override the gate.
    PR (resolve before opening the PR); `[P3]` is advisory.
 3. **Smoke pass** affected flows; capture evidence in the PR body.
 
-A dispatched subagent runs no part of Gate 5 — gathering findings to hand over still counts. It reports the chunk is review-ready and stops. The orchestrator or the user opens the PR, never an agent or subagent.
+A dispatched subagent runs no part of Gate 5 — gathering findings to hand over still counts. It reports that review is due and stops. The orchestrator or the user opens the PR, never an agent or subagent.
 REQUIRED SUB-SKILL before opening PR:
 `superpowers:finishing-a-development-branch`.
 
@@ -122,7 +122,7 @@ every returned commit — the report is not the diff.
 
 Principle 8 and Gate 5 are for the orchestrator, not the subagent. Tell the
 subagent not to dispatch its own subagents or act on hook nudges
-(review / checkpoint / PR).
+(review / checkpoint / PR); it reports a due gate and stops.
 
 REQUIRED SUB-SKILL: `dispatching-development-subagents`.
 

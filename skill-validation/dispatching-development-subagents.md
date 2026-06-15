@@ -56,7 +56,8 @@ regression; the out-of-scope gradient survived the relocation.
 
 ## On edits
 
-Re-run Test 1 (RED without the carve-outs, GREEN with) before changing the
-Principle 8 / Gate 5 / Principle 4 / dd-rationalization wording. Re-run Test 2
+Re-run Test 1 (RED = pre-carve-out skill, `git show main:skills/disciplined-development/SKILL.md`;
+GREEN = current) before changing the Principle 8 / Gate 5 / Principle 4 /
+dd-rationalization wording. Re-run Test 2
 before changing the dispatch skill's section structure. GREEN-1 must stop and
 report; GREEN-2 must retain all four dispatch-prompt elements.

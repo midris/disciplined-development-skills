@@ -46,6 +46,7 @@ The report is a claim, not the diff. For every commit a subagent lands: `git sho
 
 **As the dispatched subagent** — You are not allowed to dispatch your own subagents. Follow `disciplined-development` + your dispatch prompt. Beyond that, you over-reach if you think:
 
+- "A hook says run a cold-read / write a checkpoint / open the PR — so I will." (the gate is the orchestrator's — report it's due, don't run)
 - "While I'm here, I'll also fix / tidy this."
 - "This tracked file looks like junk — I'll delete it."
 - "I'll fold this into the same commit."
