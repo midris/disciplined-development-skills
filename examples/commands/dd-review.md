@@ -84,10 +84,22 @@ Angle focus lines (append exactly one to the corresponding reviewer):
 highest severity, union the detail. This is model judgment (like
 `/code-review`'s aggregation), not a deterministic parse.
 
+Then **log the round**: pipe the aggregated findings (stdin) to
+
+    ENGINE --log-review --source command --tier $ARGUMENTS --round <n>
+
+`<n>` is the round number — the initial aggregation is round 1; each step-4
+re-run increments it. The tool derives severity, decision, and git fields from
+the piped findings, so a clean round must pipe the literal `No findings.` (an
+empty pipe is a usage error and logs nothing). This fires every round —
+including a clean first pass, which logs one `PASS` row — and is degrade-safe:
+a genuine log-write failure never blocks the loop.
+
 **4. Iterate per the `adversarial-review-loop` skill:** address every
 P0/P1/P2, then re-dispatch the same set against the new state; repeat until
 clean (zero P0/P1/P2) or the iteration cap (3), then the cold-read escape.
 P3 is advisory — act, or leave with on-page rationale.
+Log each re-run's aggregation per step 3, incrementing `--round`.
 
 **5. On a clean pass, record the result:**
 
@@ -95,3 +107,5 @@ P3 is advisory — act, or leave with on-page rationale.
 
 `fast`/`regular` reset the edit counter; `cold-read` also writes the review
 checkpoint. (`pre-pr` handles its own checkpoint in the pre-pr section above.)
+Do not `--log-review` here — the round's aggregation (step 3) already logged
+the terminal clean round; a second call would double-count it.

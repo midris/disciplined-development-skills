@@ -454,6 +454,47 @@ leaner `append_review` call. Both must carry the tag.
 - [x] Run `cd skills/disciplined-development/hooks && python3 -m pytest -q` → green.
 - [x] Commit: `feat(dd-review): tag pre-pr review rows with source=engine`.
 
+## Fix round — cold-read remediation on `--log-review` (Tasks 1–4)
+
+A cold-read of the Tasks 1–4 code surfaced findings not in the original design.
+Land these on the Python before the prose tasks; test-first.
+
+**What:**
+- **P1 — `--cwd` reads the wrong repo's config.** `_handle_log_review` resolves
+  `branch_convention.trunk_branches` but never steers `DD_CONFIG` /
+  `config.reset_config_cache()` at the `--cwd` target the way `main()` does, so
+  base resolution uses the *session* repo's trunk list. Mirror `main()`'s
+  config-steering (set `DD_CONFIG` at the target + reset cache) when `--cwd` is
+  given and `DD_CONFIG` isn't already set.
+- **P1 — unresolvable fork base must error, not log `base=""`.** Replace
+  `state.resolve_fork_base(repo, trunks) or ""` with an error path: print to
+  stderr, **exit 1, no row.** Rationale: matches the siblings
+  (`_handle_resolve_scope` and `main()`'s `_resolve_base` both exit 1 here) and
+  it's an environmental failure ("no trunk in this repo"), not a flag-usage
+  error — so exit 1, not the usage-error exit 2. (Supersedes an earlier
+  mislabeled "exit 2" option.) `fast` tier keeps literal `HEAD`, unaffected.
+- **P2 — reject duplicate flags.** `--tier`/`--source`/`--round`/`--reviewer`
+  silently last-win; `--cwd` already rejects a repeat. Add the same
+  "specified twice" guard to the other four for a uniform usage contract (exit 2).
+- **Minor:** a missing `--tier`/`--source` should say "required" (not
+  "unknown … None"); reject `--round < 1` (exit 2); fix the
+  `test_log_review_unwritable_log_dir` docstring (the failure fires at
+  `mkdir`, not `open`); re-add the two Task-3 exit-2 tests (unknown-`--tier`,
+  bad-`--cwd`) that the over-reach revert removed.
+
+**Tests required (test-first):** `--cwd` config-follow (target repo with a
+differing `trunk_branches` resolves against the target, not the session);
+unresolvable base → exit 1 + zero rows; each duplicated flag → exit 2 + zero
+rows; `--round 0` → exit 2; missing-`--tier` message says "required"; plus the
+two re-added exit-2 coverage tests.
+
+**Steps:**
+- [x] Write the tests above; run the hook suite → confirm fail.
+- [x] Implement the four fixes per **What** (reuse `main()`'s config-steering and the sibling base-error idiom).
+- [x] Run `cd skills/disciplined-development/hooks && python3 -m pytest -q` → green. (297 passed)
+- [ ] `/dd-review cold-read` the fix-round diff; address findings. (Deferred to the final full-branch cold-read before the PR — one pass covers fix round + Tasks 5–7.)
+- [x] Commit: `fix(dd-review): --log-review honors --cwd config, errors on unresolvable base, rejects dup flags`. (a63b2e4)
+
 ## Task 5 — `/dd-review` command wiring (prose; cold-read gated)
 
 **Files:** modify `.claude/commands/dd-review.md` and
@@ -473,9 +514,9 @@ lockstep (bundle vs consumer path).
 branch; address findings per `adversarial-review-loop` before commit.
 
 **Steps:**
-- [ ] Edit both command files per **What** (aggregation-anchored per-round log, lockstep).
-- [ ] `/dd-review cold-read` the staged branch; address findings per `adversarial-review-loop`.
-- [ ] Commit: `docs(dd-review): log each command-tier review round via --log-review`.
+- [x] Edit both command files per **What** (aggregation-anchored per-round log, lockstep). Plus a consistency pass: clean rounds pipe the literal `No findings.` (empty pipe = usage error, logs nothing); step-5 note reworded for round-agnostic precision.
+- [ ] `/dd-review cold-read` the staged branch; address findings per `adversarial-review-loop`. (Deferred to the final full-branch cold-read — one pass covers fix round + Tasks 5–7.)
+- [ ] Commit: `docs(dd-review): log each command-tier review round via --log-review`. (Deferred with the final cold-read/checkpoint — `commit_block` ceiling is tripped.)
 
 ## Task 6 — Gate 5 skill wiring (prose; cold-read gated)
 
