@@ -492,7 +492,7 @@ two re-added exit-2 coverage tests.
 - [x] Write the tests above; run the hook suite → confirm fail.
 - [x] Implement the four fixes per **What** (reuse `main()`'s config-steering and the sibling base-error idiom).
 - [x] Run `cd skills/disciplined-development/hooks && python3 -m pytest -q` → green. (297 passed)
-- [ ] `/dd-review cold-read` the fix-round diff; address findings. (Deferred to the final full-branch cold-read before the PR — one pass covers fix round + Tasks 5–7.)
+- [x] `/dd-review cold-read` the fix-round diff; address findings. (Done in a full-branch cold-read covering fix round + Task 5; 6 angles clean — 4 security/advisory findings evaluated and declined with traced-impact rationale. Tasks 6–7 still need the final pre-PR pass.)
 - [x] Commit: `fix(dd-review): --log-review honors --cwd config, errors on unresolvable base, rejects dup flags`. (a63b2e4)
 
 ## Task 5 — `/dd-review` command wiring (prose; cold-read gated)
@@ -515,29 +515,51 @@ branch; address findings per `adversarial-review-loop` before commit.
 
 **Steps:**
 - [x] Edit both command files per **What** (aggregation-anchored per-round log, lockstep). Plus a consistency pass: clean rounds pipe the literal `No findings.` (empty pipe = usage error, logs nothing); step-5 note reworded for round-agnostic precision.
-- [ ] `/dd-review cold-read` the staged branch; address findings per `adversarial-review-loop`. (Deferred to the final full-branch cold-read — one pass covers fix round + Tasks 5–7.)
-- [ ] Commit: `docs(dd-review): log each command-tier review round via --log-review`. (Deferred with the final cold-read/checkpoint — `commit_block` ceiling is tripped.)
+- [x] `/dd-review cold-read` the staged branch; address findings per `adversarial-review-loop`. (Done — same full-branch pass as the fix-round step above; clean.)
+- [x] Commit: `docs(dd-review): log each command-tier review round via --log-review`. (ee516ab, pushed; Gate 3 verified live via isolated `--log-review` invocation.)
 
-## Task 6 — Gate 5 skill wiring (prose; cold-read gated)
+## Task 6 — CUT (no skill change)
 
-**Files:** modify `skills/disciplined-development/SKILL.md` (Gate 5 steps 1–2).
+`skills/disciplined-development/SKILL.md` is unchanged by the logging work.
 
-**What:** add a **degrade-safe, optional** instruction to each step: *"if the
-dd-review engine is available, pipe the findings to `ENGINE --log-review
---source ad-hoc --tier self-review|external --round <n>`"*, firing regardless of
-outcome and once per review pass (initial review and each re-review increment
-`<n>`), matching the command tiers' per-round fidelity (best-effort for inline
-self-review). Phrase per the existing conditional pattern so a pure-skills /
-other-harness consumer no-ops. Do **not** touch `adversarial-review`,
-`adversarial-review-loop`, or `dispatching-development-subagents` (see the
-Coverage design note for why).
+**Rationale (two stages).**
 
-**Validation:** `/dd-review cold-read`; address findings before commit.
+1. *The original `--source ad-hoc` bolt-on was redundant.* Every sanctioned
+   review already reaches a logged path — self-review via `/dd-review
+   fast|regular|cold-read` (`--source command`, Task 5); external review via
+   `/dd-review pre-pr` → engine (`--source engine`, Task 4). The only uncaptured
+   case is an *inline* self-review that never invokes the command — already the
+   accepted "freelance inline review" non-goal.
+
+2. *The fallback routing one-liner regressed the subagent carve-out and was
+   reverted.* Adding *"Run these reviews through `/dd-review` when the command is
+   available."* to Gate 5 failed its mandatory Test-1 re-run
+   (`skill-validation/dispatching-development-subagents.md`): a dispatched
+   subagent read the imperative as a directive and ran the review, rationalizing
+   *"invoking the command isn't running the review myself"* — GREEN 0/3 vs the
+   no-line control 1/2. The cold-read's doctrine-consistency angle predicted the
+   same [P1]. A scoped rewrite was drafted but not trusted (looks-right ≠ tested;
+   a control subagent still self-cast as orchestrator).
+
+**Net:** logging coverage is identical with or without a skill line — this project
+already routes reviews through `/dd-review` via CLAUDE.md + Principle 8 (logged
+`--source command`), and inline self-review stays the accepted non-goal. Not worth
+re-opening a validated carve-out for a portability-only benefit. The `ad-hoc`
+source and `self-review`/`external` tiers remain valid runner surface for manual
+logging; no automated path calls them.
+
+**Byproduct finding — addressed on this branch.** Re-running Test 1 showed the
+merged carve-out is fragile: a dispatched subagent re-classifies as the
+orchestrator and acts on the nudge (control 1/2 under the Test-1 scenario). Fixed
+with two reinforcing changes — an identity stamp in
+`dispatching-development-subagents` and an audience caveat (`GATE_AUDIENCE`) in
+`review_nudge.py` (test-first; nudge-text assertions added) — validated RED 1/5 →
+stamp-only 4/5 → 5/5 combined. See `skill-validation/dispatching-development-subagents.md`
+Test 3.
 
 **Steps:**
-- [ ] Edit Gate 5 steps 1–2 per **What** (degrade-safe, per-pass `--source ad-hoc`).
-- [ ] `/dd-review cold-read`; address findings.
-- [ ] Commit: `docs(dd): log self/external reviews at Gate 5 initiation site`.
+- [x] Drafted + RED/GREEN-tested the routing line; reverted after it failed Test 1.
+- [x] Task 6 cut — SKILL.md unchanged, nothing to commit.
 
 ## Task 7 — docs sweep
 
