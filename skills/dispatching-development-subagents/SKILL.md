@@ -8,6 +8,7 @@ description: 'Use when dispatching a development subagent whose code changes you
 **Role:** Companion — discipline overlay on `superpowers:subagent-driven-development` and `superpowers:dispatching-parallel-agents`. Invoke when you dispatch a development subagent — one that changes code and commits — including ad-hoc fixers those skills don't model. Research/review subagents (findings, not commits) are out of scope — verify their claims per `disciplined-research`.
 **Owns:** the scope contract, the out-of-scope gradient, the report extension, and the verify-every-commit duty.
 **Does not own:** plan-task execution + two-stage review (`superpowers:subagent-driven-development`); parallel fan-out mechanics (`superpowers:dispatching-parallel-agents`); the orchestrator's own gates (`disciplined-development`).
+**Audience:** the orchestrator. If you are a dispatched subagent, you are not allowed to dispatch your own subagents. Follow `disciplined-development` + your dispatch prompt (see the subagent red flag below).
 
 ## Overview
 
@@ -17,15 +18,10 @@ description: 'Use when dispatching a development subagent whose code changes you
 
 ## When you dispatch
 
-- **Write a scope contract:** name the files (and the shape of the change) in scope, plus the governing files and locked constraints touching that area.
+- **Write a scope contract:** name the in-scope files (and shape of change), governing files, and locked constraints. Tell the subagent not to dispatch its own subagents or act on hook nudges (review / checkpoint / PR) — both are the orchestrator's responsibility.
 - **One finding per dispatch by default.** Batch only same-kind, non-overlapping, behavior-free changes; split out anything coupled or behavior-changing. Mixed batches are where drift hides.
-- Require the report below, and state the out-of-scope rule in the prompt.
-
-## When you ARE the dispatched subagent
-
-- **Do the task you were given.**
-- **Out-of-scope finds — disclose always.** Act only when the fix is small, safe, and obviously correct, in its own commit. Risky, large, design-level, or uncertain → surface, don't act. Deleting or overwriting a tracked file is not "small and safe" unless the dispatch asked for it — surface it.
-- **Report** with the `superpowers:subagent-driven-development` Report Format plus an explicit **"changes beyond the dispatched scope"** line, each with a one-line rationale.
+- **Require the report** (`superpowers:subagent-driven-development` Report Format + a "changes beyond the dispatched scope" line, each with a one-line rationale).
+- **State the out-of-scope rule in the prompt:** the subagent acts only on small, safe, obviously-correct fixes, each in its own commit; anything risky, large, design-level, or uncertain — including deleting or overwriting a tracked file — it surfaces, doesn't act.
 
 ## Verify — orchestrator, non-negotiable
 
@@ -43,16 +39,21 @@ The report is a claim, not the diff. For every commit a subagent lands: `git sho
 
 ## Red Flags — STOP
 
-You are about to over-reach if you think:
+**As the orchestrator:**
+- "The report says DONE — I'll trust it." (diff it; the report isn't the diff)
+- "I'll batch these unrelated findings into one dispatch." (mixed batches hide drift)
+- "Tests pass, so the diff is fine." (tests pass over out-of-scope edits)
 
+**As the dispatched subagent** — You are not allowed to dispatch your own subagents. Follow `disciplined-development` + your dispatch prompt. Beyond that, you over-reach if you think:
+
+- "A hook says run a cold-read / write a checkpoint / open the PR — so I will." (the gate is the orchestrator's — report it's due, don't run)
 - "While I'm here, I'll also fix / tidy this."
 - "This tracked file looks like junk — I'll delete it."
 - "I'll fold this into the same commit."
-- "I'm a few commits in; I'll run a review / write a checkpoint." (unasked)
 - "It's a real improvement, so it's fine."
 - "The dispatch didn't say I *couldn't*."
 
-All mean: out of scope. Disclose it; act only if small, safe, and obviously correct, in its own commit; else surface and move on.
+All mean: stop. Out of scope — disclose; act only if small, safe, obvious, in its own commit; else surface and move on.
 
 ## Composition
 
