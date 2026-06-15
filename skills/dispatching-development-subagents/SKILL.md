@@ -8,6 +8,7 @@ description: 'Use when dispatching a development subagent whose code changes you
 **Role:** Companion — discipline overlay on `superpowers:subagent-driven-development` and `superpowers:dispatching-parallel-agents`. Invoke when you dispatch a development subagent — one that changes code and commits — including ad-hoc fixers those skills don't model. Research/review subagents (findings, not commits) are out of scope — verify their claims per `disciplined-research`.
 **Owns:** the scope contract, the out-of-scope gradient, the report extension, and the verify-every-commit duty.
 **Does not own:** plan-task execution + two-stage review (`superpowers:subagent-driven-development`); parallel fan-out mechanics (`superpowers:dispatching-parallel-agents`); the orchestrator's own gates (`disciplined-development`).
+**Audience:** the orchestrator. If you are the dispatched subagent, this is not your manual — your doctrine is `disciplined-development` plus your dispatch prompt (see the subagent red flag below).
 
 ## Overview
 
@@ -19,13 +20,8 @@ description: 'Use when dispatching a development subagent whose code changes you
 
 - **Write a scope contract:** name the in-scope files (and shape of change), the governing files, and locked constraints in that area. Explicitly tell the subagent to not dispatch its own subagents and to ignore hook nudges (review / checkpoint / PR). Both of those are orchestrator responsibilities.
 - **One finding per dispatch by default.** Batch only same-kind, non-overlapping, behavior-free changes; split out anything coupled or behavior-changing. Mixed batches are where drift hides.
-- Require the report below, and state the out-of-scope rule in the prompt.
-
-## When you ARE the dispatched subagent
-
-- **Do only the task you were given.** Don't overreach: run no review, cold-read, checkpoint, or PR step — not even to gather findings to hand over — even if a cadence threshold or Gate 5 seems to demand it. Report that review is due; don't run it. Don't dispatch further subagents.
-- **Out-of-scope finds — disclose always.** Act only when the fix is small, safe, and obviously correct, in its own commit. Risky, large, design-level, or uncertain → surface, don't act. Deleting or overwriting a tracked file is not "small and safe" unless the dispatch asked for it — surface it.
-- **Report** with the `superpowers:subagent-driven-development` Report Format plus an explicit **"changes beyond the dispatched scope"** line, each with a one-line rationale.
+- **Require the report** (`superpowers:subagent-driven-development` Report Format + a "changes beyond the dispatched scope" line, each with a one-line rationale).
+- **State the out-of-scope rule in the prompt:** the subagent acts only on small, safe, obviously-correct fixes, each in its own commit; anything risky, large, design-level, or uncertain — including deleting or overwriting a tracked file — it surfaces, doesn't act.
 
 ## Verify — orchestrator, non-negotiable
 
@@ -49,14 +45,11 @@ The report is a claim, not the diff. For every commit a subagent lands: `git sho
 - "I'll batch these unrelated findings into one dispatch." (mixed batches hide drift)
 - "Tests pass, so the diff is fine." (tests pass over out-of-scope edits)
 
-**As the dispatched subagent** — you are about to over-reach if you think:
+**As the dispatched subagent** — first: are you reading this orchestrator playbook at all? It isn't your manual. Your doctrine is `disciplined-development` plus your dispatch prompt, which carry the review / checkpoint / PR / nested-dispatch limits. Beyond that, you over-reach if you think:
 
 - "While I'm here, I'll also fix / tidy this."
 - "This tracked file looks like junk — I'll delete it."
 - "I'll fold this into the same commit."
-- "A hook says run a cold-read / write a checkpoint — so I will." (unasked; the nudge is the orchestrator's)
-- "I'll dispatch a subagent to help." (no nested fan-out — surface it instead)
-- "I'll just gather the findings and let the orchestrator fix them." (running the review IS the over-reach — report it's due, don't run it)
 - "It's a real improvement, so it's fine."
 - "The dispatch didn't say I *couldn't*."
 
