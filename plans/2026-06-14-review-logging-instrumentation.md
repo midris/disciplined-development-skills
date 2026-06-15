@@ -3,6 +3,13 @@
 **Status:** design (awaiting review → plan)
 **Date:** 2026-06-14
 
+> **Update — Task 6 cut.** The Gate 5 self-review / external `--source ad-hoc`
+> logging described in parts of this spec (Coverage note, Portability rule 2,
+> Files-touched `SKILL.md` entry, schema) was **not** built — see Task 6 for the
+> rationale. Model-layer `reviews.jsonl` rows come only from `--source command`
+> (the `/dd-review` command). The `ad-hoc` source and `self-review`/`external`
+> tiers stay accepted runner inputs, but no automated path emits them.
+
 ## Problem
 
 `reviews.jsonl` is documented as the analysis substrate for review outcomes,
@@ -268,13 +275,8 @@ and the hooks README document it.
   `--log-review --source command` once per round at the aggregation point (step
   3 + each step-4 re-run; not step 5), so a first-pass-clean run still logs;
   document the subcommand.
-- `skills/disciplined-development/SKILL.md` — Gate 5 step 1 (self-review) and
-  step 2 (external review): degrade-safe optional `--log-review --source ad-hoc`
-  after the review, fires regardless of outcome (the gate runs unconditionally
-  at a chunk boundary). **Not** `adversarial-review-loop` (findings-triggered →
-  drops clean rows), **not** `adversarial-review` (read-only subagent loads it),
-  **not** `dispatching-development-subagents` (excludes review subagents). See
-  the Coverage design note.
+- `skills/disciplined-development/SKILL.md` — **not modified** (Task 6 cut; see
+  the banner at the top and Task 6).
 - `skills/disciplined-development/hooks/README.md` — Observability section:
   `reviews.jsonl` is now multi-source; document `source`/`tier` and the
   `--log-review` contract.
@@ -578,8 +580,8 @@ listing each doc per `sweeping-stale-references`.
 **Validation:** `/dd-review cold-read` on the full staged branch before the PR.
 
 **Steps:**
-- [ ] Update README / hook-recipes / `logging_setup.py` docstring; verify `dd-config.md` reads accurately.
-- [ ] `/dd-review cold-read` the full staged branch.
+- [x] Update README / hook-recipes / `logging_setup.py` docstring; verify `dd-config.md` reads accurately (no change — retention/enabled lines are source-agnostic). Plus plan-internal reconciliation: top banner + Files-touched `SKILL.md` entry marked not-modified (Task 6 cut).
+- [ ] `/dd-review cold-read` the full staged branch. (The final pre-PR full-branch pass — covers fix round + Tasks 5/7 + the carve-out hardening.)
 - [ ] Commit (body includes `References swept:` listing each doc): `docs: document --log-review across hooks README, recipes, docstring`.
 
 ## Plan self-review

@@ -201,6 +201,18 @@ python3 dd_review_runner.py --resolve-scope fast|regular|cold-read|pre-pr [--cwd
 Prints the git diff argument for the tier: `HEAD` for `fast`; `<fork-base>..HEAD`
 for the others. No state writes, no dispatch.
 
+**Model-layer review logging (T0–T2):**
+```
+python3 dd_review_runner.py --log-review --tier fast|regular|cold-read|self-review|external --source command|ad-hoc [--round <n>] [--reviewer <id>] [--cwd <path>]
+```
+Appends one `reviews.jsonl` row from findings piped on **stdin** — derives p0–p3
+(`severity.count_severities`), decision (BLOCK if any P0/P1/P2 else PASS), and git
+fields (honoring `--cwd`). No codex dispatch, no checkpoint. The `/dd-review`
+command calls it once per round (`--source command`). Degrade-safe on I/O (exit
+0, no row); loud on usage error (exit 2); unresolvable fork base on non-`fast`
+tiers → exit 1. (`--source ad-hoc` and the `self-review`/`external` tiers are
+accepted for manual logging; no automated path emits them.)
+
 ---
 
 ## Configuration
@@ -239,7 +251,7 @@ the suite so logs never touch the real `.claude/.dd-state/`.
 - `review_nudge.py` — PostToolUse `Bash` (Gate-3 verify + T1/T2 cadence nudge)
 - `session_reground.py` — SessionStart (re-ground; all sources, source-specific preamble + common body)
 - `pre_pr_review.py` — PreToolUse `Bash` (T3 pre-PR hard gate)
-- `dd_review_runner.py` — model-callable engine (pre-pr codex / --write-checkpoint / --resolve-scope)
+- `dd_review_runner.py` — model-callable engine (pre-pr codex / --write-checkpoint / --resolve-scope / --log-review)
 - `lib/config.py` — defaults + override loader (`get(dot_path)`)
 - `lib/state.py` — per-branch edit counter + review checkpoint + fork-base
 - `lib/cleanup.py` — age + orphaned-branch housekeeping sweep
