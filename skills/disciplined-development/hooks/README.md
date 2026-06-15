@@ -78,6 +78,7 @@ and hard-blocks `gh pr create` on any P0/P1/P2.
 | `dd_review_runner.py pre-pr [--base <ref>] [--cwd <path>]` | T3 codex review (invoked by `pre_pr_review.py`) |
 | `dd_review_runner.py --write-checkpoint <tier>` | Write post-clean-review state after a T0/T1/T2 clean pass (`fast`/`regular`/`cold-read`) |
 | `dd_review_runner.py --resolve-scope <tier>` | Resolve the git diff argument for a tier (`HEAD` for fast; `<fork-base>..HEAD` for the others) |
+| `dd_review_runner.py --log-review --tier <t> --source <s> [--round <n>] [--reviewer <id>] [--cwd <path>]` | Append one model-layer review row to `reviews.jsonl` from findings on stdin (derives severity/decision/git fields). Logged per round by the `/dd-review` command (`--source command`). |
 
 ## State model
 
@@ -119,10 +120,12 @@ retention/cleanup.
   env → `logging.dir` config → consumer `<project-root>/.claude/.dd-state/.logs`
   (project root from `CLAUDE_PROJECT_DIR` or cwd) → `__file__` walk-up to
   `.claude` → `/tmp/dd-hooks`.
-- **Curated review trace:** `.claude/.dd-state/.logs/reviews.jsonl` — one rich
-  record per T3 review (tier, reviewer, model, effort, strategy, diff_bytes,
-  base, branch, duration, P0–P3 counts, decision, full reviewer output). Never
-  aged out.
+- **Curated review trace:** `.claude/.dd-state/.logs/reviews.jsonl` — one record
+  per review round, **multi-source**: `source: engine` rows from the T3 codex
+  path (add model, effort, strategy, diff_bytes, duration_s) and `source: command`
+  rows the `/dd-review` tiers log via `--log-review` (add round). Both share tier,
+  reviewer, decision, P0–P3 counts, branch/head_sha/base, ts, and full reviewer
+  output. Never aged out.
 - **Cleanup:** a throttled sweep (from `inject_plan_state`) prunes day-logs
   past `logging.retention_days` and removes orphaned per-branch state dirs.
 

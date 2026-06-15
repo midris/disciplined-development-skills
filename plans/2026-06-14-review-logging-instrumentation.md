@@ -1,7 +1,14 @@
 # Review-logging instrumentation — design spec
 
-**Status:** design (awaiting review → plan)
+**Status:** implemented — PR #22 (`feature/review-logging-instrumentation` → `main`)
 **Date:** 2026-06-14
+
+> **Update — Task 6 cut.** The Gate 5 self-review / external `--source ad-hoc`
+> logging described in parts of this spec (Coverage note, Portability rule 2,
+> Files-touched `SKILL.md` entry, schema) was **not** built — see Task 6 for the
+> rationale. Model-layer `reviews.jsonl` rows come only from `--source command`
+> (the `/dd-review` command). The `ad-hoc` source and `self-review`/`external`
+> tiers stay accepted runner inputs, but no automated path emits them.
 
 ## Problem
 
@@ -268,13 +275,8 @@ and the hooks README document it.
   `--log-review --source command` once per round at the aggregation point (step
   3 + each step-4 re-run; not step 5), so a first-pass-clean run still logs;
   document the subcommand.
-- `skills/disciplined-development/SKILL.md` — Gate 5 step 1 (self-review) and
-  step 2 (external review): degrade-safe optional `--log-review --source ad-hoc`
-  after the review, fires regardless of outcome (the gate runs unconditionally
-  at a chunk boundary). **Not** `adversarial-review-loop` (findings-triggered →
-  drops clean rows), **not** `adversarial-review` (read-only subagent loads it),
-  **not** `dispatching-development-subagents` (excludes review subagents). See
-  the Coverage design note.
+- `skills/disciplined-development/SKILL.md` — **not modified** (Task 6 cut; see
+  the banner at the top and Task 6).
 - `skills/disciplined-development/hooks/README.md` — Observability section:
   `reviews.jsonl` is now multi-source; document `source`/`tier` and the
   `--log-review` contract.
@@ -361,10 +363,10 @@ block in `main()` and the `_print_usage_error` usage strings to list
 - `--reviewer` omitted defaults to `subagents`; supplied value is recorded.
 
 **Steps:**
-- [ ] Write the three tests above; run the hook suite → confirm fail.
-- [ ] Add `_handle_log_review` + the `_LOG_REVIEW_*` constants + `--help`/usage updates per **What**.
-- [ ] Run `cd skills/disciplined-development/hooks && python3 -m pytest -q` → green.
-- [ ] Commit: `feat(dd-review): add --log-review mode deriving severity + decision`.
+- [x] Write the three tests above; run the hook suite → confirm fail.
+- [x] Add `_handle_log_review` + the `_LOG_REVIEW_*` constants + `--help`/usage updates per **What**.
+- [x] Run `cd skills/disciplined-development/hooks && python3 -m pytest -q` → green.
+- [x] Commit: `feat(dd-review): add --log-review mode deriving severity + decision`.
 
 ## Task 2 — git-derived fields + `--cwd`
 
@@ -387,10 +389,10 @@ from either handler.
   session cwd (parallels `test_cwd_flag_targets_other_repo`).
 
 **Steps:**
-- [ ] Write the two tests above; run → confirm fail.
-- [ ] Resolve git fields per **What** (reuse `_handle_resolve_scope`'s base logic).
-- [ ] Run the hook suite → green.
-- [ ] Commit: `feat(dd-review): resolve git fields for --log-review, honor --cwd`.
+- [x] Write the two tests above; run → confirm fail.
+- [x] Resolve git fields per **What** (reuse `_handle_resolve_scope`'s base logic).
+- [x] Run the hook suite → green.
+- [x] Commit: `feat(dd-review): resolve git fields for --log-review, honor --cwd`.
 
 ## Task 3 — exit-code contract
 
@@ -421,10 +423,10 @@ usage error (exit 2), distinct from a real `PASS`.
 including an explicit "whitespace-only stdin → exit 2, zero rows" case.
 
 **Steps:**
-- [ ] Write one test per table row (incl. whitespace-only stdin); run → confirm fail.
-- [ ] Implement the exit-code split per **What** (usage→2 via `_print_usage_error`, I/O→0).
-- [ ] Run the hook suite → green.
-- [ ] Commit: `feat(dd-review): exit-code contract for --log-review (loud usage, soft I/O)`.
+- [x] Write one test per table row (incl. whitespace-only stdin); run → confirm fail.
+- [x] Implement the exit-code split per **What** (usage→2 via `_print_usage_error`, I/O→0).
+- [x] Run the hook suite → green.
+- [x] Commit: `feat(dd-review): exit-code contract for --log-review (loud usage, soft I/O)`.
 
 ## Task 4 — pre-pr rows gain `source: "engine"`
 
@@ -449,10 +451,51 @@ leaner `append_review` call. Both must carry the tag.
   reason Task 4's coverage was incomplete.
 
 **Steps:**
-- [ ] Add `source` assertions to the four tests above; run the hook suite → confirm fail.
-- [ ] Add `source: "engine"` to the `_error()` and `_review_record` append calls.
-- [ ] Run `cd skills/disciplined-development/hooks && python3 -m pytest -q` → green.
-- [ ] Commit: `feat(dd-review): tag pre-pr review rows with source=engine`.
+- [x] Add `source` assertions to the four tests above; run the hook suite → confirm fail.
+- [x] Add `source: "engine"` to the `_error()` and `_review_record` append calls.
+- [x] Run `cd skills/disciplined-development/hooks && python3 -m pytest -q` → green.
+- [x] Commit: `feat(dd-review): tag pre-pr review rows with source=engine`.
+
+## Fix round — cold-read remediation on `--log-review` (Tasks 1–4)
+
+A cold-read of the Tasks 1–4 code surfaced findings not in the original design.
+Land these on the Python before the prose tasks; test-first.
+
+**What:**
+- **P1 — `--cwd` reads the wrong repo's config.** `_handle_log_review` resolves
+  `branch_convention.trunk_branches` but never steers `DD_CONFIG` /
+  `config.reset_config_cache()` at the `--cwd` target the way `main()` does, so
+  base resolution uses the *session* repo's trunk list. Mirror `main()`'s
+  config-steering (set `DD_CONFIG` at the target + reset cache) when `--cwd` is
+  given and `DD_CONFIG` isn't already set.
+- **P1 — unresolvable fork base must error, not log `base=""`.** Replace
+  `state.resolve_fork_base(repo, trunks) or ""` with an error path: print to
+  stderr, **exit 1, no row.** Rationale: matches the siblings
+  (`_handle_resolve_scope` and `main()`'s `_resolve_base` both exit 1 here) and
+  it's an environmental failure ("no trunk in this repo"), not a flag-usage
+  error — so exit 1, not the usage-error exit 2. (Supersedes an earlier
+  mislabeled "exit 2" option.) `fast` tier keeps literal `HEAD`, unaffected.
+- **P2 — reject duplicate flags.** `--tier`/`--source`/`--round`/`--reviewer`
+  silently last-win; `--cwd` already rejects a repeat. Add the same
+  "specified twice" guard to the other four for a uniform usage contract (exit 2).
+- **Minor:** a missing `--tier`/`--source` should say "required" (not
+  "unknown … None"); reject `--round < 1` (exit 2); fix the
+  `test_log_review_unwritable_log_dir` docstring (the failure fires at
+  `mkdir`, not `open`); re-add the two Task-3 exit-2 tests (unknown-`--tier`,
+  bad-`--cwd`) that the over-reach revert removed.
+
+**Tests required (test-first):** `--cwd` config-follow (target repo with a
+differing `trunk_branches` resolves against the target, not the session);
+unresolvable base → exit 1 + zero rows; each duplicated flag → exit 2 + zero
+rows; `--round 0` → exit 2; missing-`--tier` message says "required"; plus the
+two re-added exit-2 coverage tests.
+
+**Steps:**
+- [x] Write the tests above; run the hook suite → confirm fail.
+- [x] Implement the four fixes per **What** (reuse `main()`'s config-steering and the sibling base-error idiom).
+- [x] Run `cd skills/disciplined-development/hooks && python3 -m pytest -q` → green. (297 passed)
+- [x] `/dd-review cold-read` the fix-round diff; address findings. (Done in a full-branch cold-read covering fix round + Task 5; 6 angles clean — 4 security/advisory findings evaluated and declined with traced-impact rationale. Tasks 6–7 still need the final pre-PR pass.)
+- [x] Commit: `fix(dd-review): --log-review honors --cwd config, errors on unresolvable base, rejects dup flags`. (a63b2e4)
 
 ## Task 5 — `/dd-review` command wiring (prose; cold-read gated)
 
@@ -473,30 +516,52 @@ lockstep (bundle vs consumer path).
 branch; address findings per `adversarial-review-loop` before commit.
 
 **Steps:**
-- [ ] Edit both command files per **What** (aggregation-anchored per-round log, lockstep).
-- [ ] `/dd-review cold-read` the staged branch; address findings per `adversarial-review-loop`.
-- [ ] Commit: `docs(dd-review): log each command-tier review round via --log-review`.
+- [x] Edit both command files per **What** (aggregation-anchored per-round log, lockstep). Plus a consistency pass: clean rounds pipe the literal `No findings.` (empty pipe = usage error, logs nothing); step-5 note reworded for round-agnostic precision.
+- [x] `/dd-review cold-read` the staged branch; address findings per `adversarial-review-loop`. (Done — same full-branch pass as the fix-round step above; clean.)
+- [x] Commit: `docs(dd-review): log each command-tier review round via --log-review`. (ee516ab, pushed; Gate 3 verified live via isolated `--log-review` invocation.)
 
-## Task 6 — Gate 5 skill wiring (prose; cold-read gated)
+## Task 6 — CUT (no skill change)
 
-**Files:** modify `skills/disciplined-development/SKILL.md` (Gate 5 steps 1–2).
+`skills/disciplined-development/SKILL.md` is unchanged by the logging work.
 
-**What:** add a **degrade-safe, optional** instruction to each step: *"if the
-dd-review engine is available, pipe the findings to `ENGINE --log-review
---source ad-hoc --tier self-review|external --round <n>`"*, firing regardless of
-outcome and once per review pass (initial review and each re-review increment
-`<n>`), matching the command tiers' per-round fidelity (best-effort for inline
-self-review). Phrase per the existing conditional pattern so a pure-skills /
-other-harness consumer no-ops. Do **not** touch `adversarial-review`,
-`adversarial-review-loop`, or `dispatching-development-subagents` (see the
-Coverage design note for why).
+**Rationale (two stages).**
 
-**Validation:** `/dd-review cold-read`; address findings before commit.
+1. *The original `--source ad-hoc` bolt-on was redundant.* Every sanctioned
+   review already reaches a logged path — self-review via `/dd-review
+   fast|regular|cold-read` (`--source command`, Task 5); external review via
+   `/dd-review pre-pr` → engine (`--source engine`, Task 4). The only uncaptured
+   case is an *inline* self-review that never invokes the command — already the
+   accepted "freelance inline review" non-goal.
+
+2. *The fallback routing one-liner regressed the subagent carve-out and was
+   reverted.* Adding *"Run these reviews through `/dd-review` when the command is
+   available."* to Gate 5 failed its mandatory Test-1 re-run
+   (`skill-validation/dispatching-development-subagents.md`): a dispatched
+   subagent read the imperative as a directive and ran the review, rationalizing
+   *"invoking the command isn't running the review myself"* — GREEN 0/3 vs the
+   no-line control 1/2. The cold-read's doctrine-consistency angle predicted the
+   same [P1]. A scoped rewrite was drafted but not trusted (looks-right ≠ tested;
+   a control subagent still self-cast as orchestrator).
+
+**Net:** logging coverage is identical with or without a skill line — this project
+already routes reviews through `/dd-review` via CLAUDE.md + Principle 8 (logged
+`--source command`), and inline self-review stays the accepted non-goal. Not worth
+re-opening a validated carve-out for a portability-only benefit. The `ad-hoc`
+source and `self-review`/`external` tiers remain valid runner surface for manual
+logging; no automated path calls them.
+
+**Byproduct finding — addressed on this branch.** Re-running Test 1 showed the
+merged carve-out is fragile: a dispatched subagent re-classifies as the
+orchestrator and acts on the nudge (control 1/2 under the Test-1 scenario). Fixed
+with two reinforcing changes — an identity stamp in
+`dispatching-development-subagents` and an audience caveat (`GATE_AUDIENCE`) in
+`review_nudge.py` (test-first; nudge-text assertions added) — validated RED 1/5 →
+stamp-only 4/5 → 5/5 combined. See `skill-validation/dispatching-development-subagents.md`
+Test 3.
 
 **Steps:**
-- [ ] Edit Gate 5 steps 1–2 per **What** (degrade-safe, per-pass `--source ad-hoc`).
-- [ ] `/dd-review cold-read`; address findings.
-- [ ] Commit: `docs(dd): log self/external reviews at Gate 5 initiation site`.
+- [x] Drafted + RED/GREEN-tested the routing line; reverted after it failed Test 1.
+- [x] Task 6 cut — SKILL.md unchanged, nothing to commit.
 
 ## Task 7 — docs sweep
 
@@ -515,9 +580,9 @@ listing each doc per `sweeping-stale-references`.
 **Validation:** `/dd-review cold-read` on the full staged branch before the PR.
 
 **Steps:**
-- [ ] Update README / hook-recipes / `logging_setup.py` docstring; verify `dd-config.md` reads accurately.
-- [ ] `/dd-review cold-read` the full staged branch.
-- [ ] Commit (body includes `References swept:` listing each doc): `docs: document --log-review across hooks README, recipes, docstring`.
+- [x] Update README / hook-recipes / `logging_setup.py` docstring; verify `dd-config.md` reads accurately (no change — retention/enabled lines are source-agnostic). Plus plan-internal reconciliation: top banner + Files-touched `SKILL.md` entry marked not-modified (Task 6 cut).
+- [x] `/dd-review cold-read` the full staged branch — clean (6 angles; raised P2s all declined-with-rationale: user-directed bullet split, banner approach, committed history). Checkpoint written.
+- [x] Commit (body includes `References swept:` listing each doc): `docs: document --log-review across hooks README, recipes, docstring`. (0c2c416)
 
 ## Plan self-review
 

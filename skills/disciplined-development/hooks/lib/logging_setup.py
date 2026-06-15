@@ -181,7 +181,10 @@ def append_review(record: dict) -> None:
     """Append one curated review record to ``<log-dir>/reviews.jsonl``.
 
     The dedicated review trace for offline analysis (outcomes, latency,
-    drift) — see the spec's "Observability" section. Resolves the same dir as
+    drift) — see the spec's "Observability" section. Multi-source: ``source:
+    engine`` rows from the ``pre-pr`` codex path and ``source: command``/
+    ``ad-hoc`` rows from ``dd_review_runner.py --log-review``; rows are sparse
+    (each source carries only the fields it has). Resolves the same dir as
     :func:`setup`, honors ``logging.enabled`` (no-op when false), stamps a
     ``ts``, and never raises (a write failure warns to stderr only)."""
     if not _logging_enabled():

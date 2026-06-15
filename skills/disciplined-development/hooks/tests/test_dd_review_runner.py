@@ -475,6 +475,10 @@ def test_cli_missing_errors(review_env, tmp_path):
 
     Build an isolated bin dir holding only a ``git`` symlink so neither the
     shim nor any real ``codex`` on the host PATH is reachable.
+
+    Also verifies the _error() pre-runner path appends a row tagged source=engine.
+    The isolated-PATH env preserves DD_LOG_DIR from the base env so _reviews(env)
+    finds the row.
     """
     env, repo, _ = review_env
     isolated = tmp_path / "onlygit"
@@ -484,6 +488,10 @@ def test_cli_missing_errors(review_env, tmp_path):
     proc = _run(env, repo, ["pre-pr"])
     assert proc.returncode == 1  # operational failure (not a usage error)
     assert "not found on PATH" in proc.stderr
+    # _error() must write a review record tagged source=engine.
+    recs = _reviews(env)
+    assert len(recs) == 1
+    assert recs[0]["source"] == "engine"
 
 
 def test_empty_reviewer_stdout_errors(review_env):
@@ -642,13 +650,17 @@ def test_cwd_flag_config_follows_target_repo(review_env, tmp_path):
 
 
 def test_help_flag_exits_zero(review_env):
-    """``--help`` prints a brief usage line and exits 0 (no marker vocab)."""
+    """``--help`` prints a brief usage line and exits 0 (no legacy marker vocab).
+
+    'external' is now a legitimate --log-review tier, not old marker vocabulary;
+    only 'marker' and 'internal' (the actual legacy terms) remain banned.
+    """
     env, repo, _ = review_env
     proc = _run(env, repo, ["--help"])
     assert proc.returncode == 0
     out = proc.stdout + proc.stderr
     assert "usage" in out.lower()
-    for banned in ("marker", "internal", "external"):
+    for banned in ("marker", "internal"):
         assert banned not in out.lower()
 
 
@@ -767,6 +779,7 @@ def test_clean_pass_writes_review_record(review_env):
     assert r["reviewer"] == "codex" and "duration_s" in r and "ts" in r
     assert r["p0"] == 0 and r["p1"] == 0 and "output" in r
     assert r["model"] == "gpt-5.5" and "strategy" in r and "diff_bytes" in r
+    assert r["source"] == "engine"
 
 
 def test_block_writes_review_record(review_env):
@@ -777,6 +790,7 @@ def test_block_writes_review_record(review_env):
     assert rec["decision"] == "BLOCK" and rec["p1"] == 1
     assert "[P1] real bug here" in rec["output"]
     assert rec["reviewer"] == "codex"
+    assert rec["source"] == "engine"
 
 
 def test_error_writes_review_record(review_env):
@@ -788,6 +802,7 @@ def test_error_writes_review_record(review_env):
     rec = _reviews(env)[-1]
     assert rec["decision"] == "ERROR" and rec["reason"] == "empty_output"
     assert rec["tier"] == "pre-pr" and "duration_s" in rec
+    assert rec["source"] == "engine"
 
 
 # ---------------------------------------------------------------------------
@@ -1162,3 +1177,464 @@ def test_resolve_scope_prepr_prints_fork_base_range(review_env):
     proc = _resolve_scope(env, repo, "pre-pr")
     assert proc.returncode == 0, proc.stderr
     assert proc.stdout.strip() == f"{fork}..HEAD"
+
+
+# ---------------------------------------------------------------------------
+# Task 1 — --log-review happy path (derive + append)
+# ---------------------------------------------------------------------------
+
+
+def _run_log_review(env, repo, args, stdin_text):
+    """Spawn dd_review_runner.py with --log-review flags and pipe stdin_text.
+
+    No codex shim needed (--log-review never dispatches a reviewer). Reuses
+    the env from review_env which sets DD_LOG_DIR so _reviews(env) finds rows.
+    """
+    full = {**env}
+    return subprocess.run(
+        [sys.executable, str(HOOK), "--log-review", *args],
+        input=stdin_text,
+        text=True,
+        capture_output=True,
+        env=full,
+        cwd=str(repo),
+    )
+
+
+def test_log_review_records_block_row_from_contract_blob(review_env):
+    """command/fast invocation piping a [P1] contract line → BLOCK row.
+
+    Asserts: decision==BLOCK, p1==1, source==command, tier==fast, round==1,
+    output contains the blob.
+    """
+    env, repo, _ = review_env
+    blob = "- [P1] foo.py:1: auth bypass\n"
+    proc = _run_log_review(
+        env, repo,
+        ["--tier", "fast", "--source", "command"],
+        blob,
+    )
+    assert proc.returncode == 0, proc.stderr
+    recs = _reviews(env)
+    assert len(recs) == 1
+    r = recs[0]
+    assert r["decision"] == "BLOCK"
+    assert r["p1"] == 1
+    assert r["source"] == "command"
+    assert r["tier"] == "fast"
+    assert r["round"] == 1
+    assert blob in r["output"]
+    assert "ts" in r
+
+
+def test_log_review_records_pass_row_for_no_findings(review_env):
+    """Piping 'No findings.' → one PASS row with all severities zero."""
+    env, repo, _ = review_env
+    proc = _run_log_review(
+        env, repo,
+        ["--tier", "regular", "--source", "command"],
+        "No findings.\n",
+    )
+    assert proc.returncode == 0, proc.stderr
+    recs = _reviews(env)
+    assert len(recs) == 1
+    r = recs[0]
+    assert r["decision"] == "PASS"
+    assert r["p0"] == 0
+    assert r["p1"] == 0
+    assert r["p2"] == 0
+    assert r["p3"] == 0
+
+
+def test_log_review_reviewer_defaults_and_override(review_env):
+    """--reviewer omitted → reviewer=='subagents'; supplied value is recorded."""
+    env, repo, _ = review_env
+
+    # Test 1: default (--reviewer omitted)
+    proc = _run_log_review(
+        env, repo,
+        ["--tier", "fast", "--source", "command"],
+        "No findings.\n",
+    )
+    assert proc.returncode == 0, proc.stderr
+    recs = _reviews(env)
+    assert recs[-1]["reviewer"] == "subagents"
+
+    # Test 2: explicit override
+    proc = _run_log_review(
+        env, repo,
+        ["--tier", "fast", "--source", "command", "--reviewer", "subagents:3"],
+        "No findings.\n",
+    )
+    assert proc.returncode == 0, proc.stderr
+    recs = _reviews(env)
+    assert recs[-1]["reviewer"] == "subagents:3"
+
+
+# ---------------------------------------------------------------------------
+# Task 2 — --log-review git-derived fields (branch, head_sha, base) + --cwd
+# ---------------------------------------------------------------------------
+
+
+def test_log_review_records_git_fields(review_env):
+    """--log-review appends branch, head_sha, and a tier-correct base field.
+
+    fast → base == "HEAD" (working-tree scope, no git call).
+    regular → base == fork base SHA (resolved via state.resolve_fork_base).
+    The fixture repo is on feature/x with master trunk, so both resolve cleanly.
+    """
+    env, repo, _ = review_env
+
+    # fast tier: base must be the literal string "HEAD"
+    proc = _run_log_review(
+        env, repo,
+        ["--tier", "fast", "--source", "command"],
+        "No findings.\n",
+    )
+    assert proc.returncode == 0, proc.stderr
+    recs = _reviews(env)
+    r = recs[-1]
+    assert r["branch"] == "feature/x"
+    assert r["head_sha"] == _git(repo, "rev-parse", "HEAD")
+    assert r["base"] == "HEAD"
+
+    # regular tier: base must equal the actual fork base SHA
+    expected_base = state.resolve_fork_base(str(repo), ["master", "main"])
+    assert expected_base is not None, "fixture must resolve a fork base"
+    proc = _run_log_review(
+        env, repo,
+        ["--tier", "regular", "--source", "command"],
+        "No findings.\n",
+    )
+    assert proc.returncode == 0, proc.stderr
+    recs = _reviews(env)
+    r = recs[-1]
+    assert r["branch"] == "feature/x"
+    assert r["head_sha"] == _git(repo, "rev-parse", "HEAD")
+    assert r["base"] == expected_base
+
+
+def test_log_review_cwd_targets_other_repo(review_env, tmp_path):
+    """--cwd <other> resolves branch/head_sha/base against the OTHER repo.
+
+    The fixture repo cwd is used for process spawning, but the logged row
+    must reflect the OTHER repo's git state, not the fixture repo's.
+    """
+    env, fixture_repo, _ = review_env
+    other = _make_second_repo(tmp_path)
+
+    other_branch = _git(other, "symbolic-ref", "--short", "HEAD")
+    other_sha = _git(other, "rev-parse", "HEAD")
+    other_base = state.resolve_fork_base(str(other), ["master", "main"])
+    assert other_base is not None, "second repo must resolve a fork base"
+
+    fixture_base = state.resolve_fork_base(str(fixture_repo), ["master", "main"])
+    # Sanity: the two repos must have different fork bases so we can distinguish them.
+    assert other_base != fixture_base
+
+    proc = _run_log_review(
+        env, fixture_repo,
+        ["--tier", "regular", "--source", "command", "--cwd", str(other)],
+        "No findings.\n",
+    )
+    assert proc.returncode == 0, proc.stderr
+    recs = _reviews(env)
+    r = recs[-1]
+    assert r["branch"] == other_branch
+    assert r["head_sha"] == other_sha
+    assert r["base"] == other_base
+
+
+# ---------------------------------------------------------------------------
+# Task 3 — exit-code contract for --log-review
+# ---------------------------------------------------------------------------
+
+
+def test_log_review_empty_stdin_exits_2_no_row(review_env):
+    """Empty stdin → exit 2, no row written.
+
+    count_severities("") yields all-zero severities, which would produce a
+    false PASS row from a blank pipe and poison the telemetry. Reject as a
+    usage error before deriving severity / appending.
+    """
+    env, repo, _ = review_env
+    proc = _run_log_review(
+        env, repo,
+        ["--tier", "fast", "--source", "command"],
+        "",
+    )
+    assert proc.returncode == 2
+    assert _reviews(env) == []
+
+
+def test_log_review_whitespace_stdin_exits_2_no_row(review_env):
+    """Whitespace-only stdin → exit 2, no row written.
+
+    Whitespace-only is the same false-PASS risk as empty stdin: strip() yields
+    empty, so the same usage-error guard fires. A real clean review emits a
+    non-empty 'No findings.' string, not bare whitespace.
+    """
+    env, repo, _ = review_env
+    proc = _run_log_review(
+        env, repo,
+        ["--tier", "fast", "--source", "command"],
+        "   \n\t\n",
+    )
+    assert proc.returncode == 2
+    assert _reviews(env) == []
+
+
+def test_log_review_logging_disabled_exits_0_no_row(review_env, tmp_path):
+    """logging.enabled=false → exit 0, no row written (append_review no-ops).
+
+    Forces logging off by writing a dd-config.json with {"logging": {"enabled":
+    false}} into a scratch dir and pointing DD_CONFIG at it. The env's DD_CONFIG
+    is normally "" (process-cwd config disabled); this test overrides it just
+    for this run.
+    """
+    env, repo, _ = review_env
+    cfg_path = tmp_path / "dd-config-nolog.json"
+    cfg_path.write_text(json.dumps({"logging": {"enabled": False}}))
+    override_env = {**env, "DD_CONFIG": str(cfg_path)}
+    proc = _run_log_review(
+        override_env, repo,
+        ["--tier", "fast", "--source", "command"],
+        "No findings.\n",
+    )
+    assert proc.returncode == 0
+    # DD_LOG_DIR still points at the test sandbox; reviews.jsonl must not exist.
+    assert _reviews(env) == []
+
+
+def test_log_review_unwritable_log_dir_exits_0_no_row(review_env, tmp_path):
+    """Unwritable log dir → exit 0, no row written (append_review degrade-safe).
+
+    Unwritability is forced by placing a regular FILE at the path where the log
+    DIR should be created. mkdir(parents=True, exist_ok=True) raises
+    FileExistsError (an OSError subclass) because a non-directory occupies the
+    target path, hitting the OSError catch in append_review before any open()
+    is attempted. append_review warns to stderr and returns without raising;
+    _handle_log_review therefore exits 0.
+    """
+    env, repo, _ = review_env
+    # Put a regular file where the log directory should be.
+    bad_log_dir = tmp_path / "not-a-dir"
+    bad_log_dir.write_text("I am a file, not a directory")
+    override_env = {**env, "DD_LOG_DIR": str(bad_log_dir)}
+    proc = _run_log_review(
+        override_env, repo,
+        ["--tier", "fast", "--source", "command"],
+        "No findings.\n",
+    )
+    assert proc.returncode == 0
+    # The "log dir" is a file, so reviews.jsonl cannot be written there.
+    reviews_path = bad_log_dir / "reviews.jsonl"
+    assert not reviews_path.exists()
+
+
+# ---------------------------------------------------------------------------
+# Fix round — P1/P2/P3/P4/minor fixes for --log-review
+# ---------------------------------------------------------------------------
+
+
+def _make_no_trunk_repo(tmp_path, env):
+    """A repo with NO trunk branches matching the default trunks list.
+
+    Uses 'orphan' as the only branch name, so resolve_fork_base against
+    ["master", "main"] returns None.
+    """
+    repo = tmp_path / "notrunk"
+    repo.mkdir()
+    subprocess.run(
+        ["git", "init", "-q", "-b", "orphan", str(repo)],
+        check=True,
+        capture_output=True,
+    )
+    _git(repo, "config", "user.email", "t@t")
+    _git(repo, "config", "user.name", "Test")
+    (repo / "f.txt").write_text("seed\n")
+    _git(repo, "add", ".")
+    _git(repo, "commit", "-q", "-m", "init")
+    return repo
+
+
+def test_log_review_cwd_config_follows_target_repo(review_env, tmp_path):
+    """--cwd target repo's dd-config.json steers trunk_branches for base resolution.
+
+    The target repo has ONLY a 'custom-trunk' branch (no master/main). Its
+    dd-config.json sets trunk_branches=["custom-trunk"]. A second feature
+    commit exists on top so the fork base resolves to the initial commit.
+
+    Without the fix, config is NOT pointed at the target repo, so
+    trunk_branches defaults to ["master", "main"], resolve_fork_base returns
+    None, and the call either logs base="" (old bug) or exits 1 (new behavior).
+    With the fix, the target's config is loaded and the base resolves correctly.
+    """
+    env, fixture_repo, _ = review_env
+
+    # Build a repo with a custom trunk only (no master/main).
+    target = tmp_path / "customtrunk"
+    target.mkdir()
+    subprocess.run(
+        ["git", "init", "-q", "-b", "custom-trunk", str(target)],
+        check=True,
+        capture_output=True,
+    )
+    _git(target, "config", "user.email", "t@t")
+    _git(target, "config", "user.name", "Test")
+    (target / "f.txt").write_text("one\n")
+    _git(target, "add", ".")
+    _git(target, "commit", "-q", "-m", "base")
+    # Feature branch on top.
+    _git(target, "checkout", "-q", "-b", "feature/custom")
+    (target / "g.txt").write_text("two\n")
+    _git(target, "add", "g.txt")
+    _git(target, "commit", "-q", "-m", "feat")
+
+    # Write a dd-config.json that lists the custom trunk.
+    cfg_dir = target / ".claude"
+    cfg_dir.mkdir(exist_ok=True)
+    (cfg_dir / "dd-config.json").write_text(
+        json.dumps({"branch_convention": {"trunk_branches": ["custom-trunk"]}})
+    )
+
+    expected_base = state.resolve_fork_base(str(target), ["custom-trunk"])
+    assert expected_base is not None, "target repo must resolve fork base against custom-trunk"
+
+    proc = _run_log_review(
+        env, fixture_repo,
+        ["--tier", "regular", "--source", "command", "--cwd", str(target)],
+        "No findings.\n",
+    )
+    assert proc.returncode == 0, proc.stderr
+    recs = _reviews(env)
+    r = recs[-1]
+    # base must be the target's fork base (only resolvable with the target's config).
+    assert r["base"] == expected_base
+
+
+def test_log_review_unresolvable_base_exits_1_no_row(review_env, tmp_path):
+    """Non-fast tier with no resolvable trunk → exit 1, no row written.
+
+    Uses a repo with no master/main/trunk branch at all. resolve_fork_base
+    returns None; the fix errors with exit 1 instead of logging base="".
+    """
+    env, fixture_repo, _ = review_env
+    no_trunk = _make_no_trunk_repo(tmp_path, env)
+
+    proc = _run_log_review(
+        env, fixture_repo,
+        ["--tier", "regular", "--source", "command", "--cwd", str(no_trunk)],
+        "No findings.\n",
+    )
+    assert proc.returncode == 1
+    assert _reviews(env) == []
+
+
+def test_log_review_duplicate_tier_exits_2_no_row(review_env):
+    """--tier specified twice → exit 2, no row written."""
+    env, repo, _ = review_env
+    proc = _run_log_review(
+        env, repo,
+        ["--tier", "fast", "--source", "command", "--tier", "regular"],
+        "No findings.\n",
+    )
+    assert proc.returncode == 2
+    assert _reviews(env) == []
+
+
+def test_log_review_duplicate_source_exits_2_no_row(review_env):
+    """--source specified twice → exit 2, no row written."""
+    env, repo, _ = review_env
+    proc = _run_log_review(
+        env, repo,
+        ["--tier", "fast", "--source", "command", "--source", "ad-hoc"],
+        "No findings.\n",
+    )
+    assert proc.returncode == 2
+    assert _reviews(env) == []
+
+
+def test_log_review_duplicate_round_exits_2_no_row(review_env):
+    """--round specified twice → exit 2, no row written."""
+    env, repo, _ = review_env
+    proc = _run_log_review(
+        env, repo,
+        ["--tier", "fast", "--source", "command", "--round", "1", "--round", "2"],
+        "No findings.\n",
+    )
+    assert proc.returncode == 2
+    assert _reviews(env) == []
+
+
+def test_log_review_duplicate_reviewer_exits_2_no_row(review_env):
+    """--reviewer specified twice → exit 2, no row written."""
+    env, repo, _ = review_env
+    proc = _run_log_review(
+        env, repo,
+        ["--tier", "fast", "--source", "command",
+         "--reviewer", "a", "--reviewer", "b"],
+        "No findings.\n",
+    )
+    assert proc.returncode == 2
+    assert _reviews(env) == []
+
+
+def test_log_review_round_zero_exits_2_no_row(review_env):
+    """--round 0 → exit 2 (must be >= 1), no row written."""
+    env, repo, _ = review_env
+    proc = _run_log_review(
+        env, repo,
+        ["--tier", "fast", "--source", "command", "--round", "0"],
+        "No findings.\n",
+    )
+    assert proc.returncode == 2
+    assert _reviews(env) == []
+
+
+def test_log_review_missing_tier_says_required(review_env):
+    """Omitting --tier → exit 2, stderr contains 'required'."""
+    env, repo, _ = review_env
+    proc = _run_log_review(
+        env, repo,
+        ["--source", "command"],
+        "No findings.\n",
+    )
+    assert proc.returncode == 2
+    assert "required" in proc.stderr.lower()
+
+
+def test_log_review_missing_source_says_required(review_env):
+    """Omitting --source → exit 2, stderr contains 'required'."""
+    env, repo, _ = review_env
+    proc = _run_log_review(
+        env, repo,
+        ["--tier", "fast"],
+        "No findings.\n",
+    )
+    assert proc.returncode == 2
+    assert "required" in proc.stderr.lower()
+
+
+def test_log_review_unknown_tier_exits_2_no_row(review_env):
+    """Unknown --tier value → exit 2, no row written."""
+    env, repo, _ = review_env
+    proc = _run_log_review(
+        env, repo,
+        ["--tier", "bogus-tier", "--source", "command"],
+        "No findings.\n",
+    )
+    assert proc.returncode == 2
+    assert _reviews(env) == []
+
+
+def test_log_review_bad_cwd_exits_2_no_row(review_env):
+    """--cwd pointing at a non-existent path → exit 2, no row written."""
+    env, repo, _ = review_env
+    proc = _run_log_review(
+        env, repo,
+        ["--tier", "fast", "--source", "command", "--cwd", "/no/such/path/xyz"],
+        "No findings.\n",
+    )
+    assert proc.returncode == 2
+    assert _reviews(env) == []
