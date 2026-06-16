@@ -10,3 +10,5 @@ move the dd review tiers into the skill layer and out of the tool layer
 consider adding a hook that will force the checking off of checkboxes
 
 add consistency pass to the review skill/loop
+
+add checkbox update to the nudges if they aren't there already
