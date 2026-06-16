@@ -52,7 +52,7 @@ COMMON_BODY = (
     "  - Re-load your governing skills — disciplined-development and superpowers"
     " (via `using-superpowers`) — plus any others this task needs; don't assume"
     " they survived a long or compacted session.\n"
-    "  - For ANY prose you write or edit (chat replies, docs, plans, commit bodies, comments), invoke concise-writing."
+    "  - For ANY prose you write or edit (plans, specs, READMEs, commit bodies, code comments, etc.), invoke concise-writing."
 )
 
 

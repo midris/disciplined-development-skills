@@ -1,6 +1,6 @@
 ---
 name: concise-writing
-description: 'Use when writing or finalizing prose a reader must get through — docs, READMEs, plans, specs, design notes, commit bodies, code comments, and chat replies — and the output risks being verbose, padded, wordy, or bulky; also when asked to be more concise, tighten, trim, or "get to the point." Skill/reference authoring is owned by superpowers:writing-skills (a stricter, every-word-counts bar) — use that there, not this.'
+description: 'Use when writing or finalizing prose a reader must get through — docs, READMEs, plans, specs, design notes, commit bodies, code comments — and the output risks being verbose, padded, wordy, or bulky; also when asked to be more concise, tighten, trim, or "get to the point". Skill/reference authoring is owned by superpowers:writing-skills (a stricter, every-word-counts bar) — use that there, not this.'
 ---
 
 # Concise writing
@@ -26,7 +26,7 @@ The "or framing" half is the guard: recaps, misread-preventing transitions, and 
 
 ## The compression pass — two altitudes
 
-Run before finalizing any durable artifact (and self-apply to chat). Trim at both altitudes:
+Run before finalizing any durable artifact. Trim at both altitudes:
 
 - **Local** — sentence and clause level, via the core test. Doable as you write.
 - **Global** — read the edit *against the whole artifact*: does this content already appear elsewhere? Cross-section duplication surfaces only at this altitude, so any edit that adds prose requires this read.
