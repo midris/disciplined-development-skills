@@ -74,13 +74,25 @@ CMD_DIR="$TARGET/.claude/commands"
 CMD_DEST="$CMD_DIR/dd-review.md"
 mkdir -p "$CMD_DIR"
 
+# Pre-relocation official target — migrate a stale symlink pointing at it.
+OLD_CMD_SRC="$CLONE/examples/commands/dd-review.md"
 if [ -L "$CMD_DEST" ]; then
   resolved=$(readlink -f "$CMD_DEST" 2>/dev/null || true)
-  if [ "$resolved" = "$CMD_SRC" ]; then
+  link_text=$(readlink "$CMD_DEST")
+  if [ "$resolved" = "$CMD_SRC" ] || [ "$link_text" = "$CMD_SRC" ]; then
     echo "already linked: dd-review.md"
     already=$((already + 1))
+  elif [ "$link_text" = "$OLD_CMD_SRC" ]; then
+    # The old official target was relocated (examples/commands -> commands/) and
+    # no longer exists, so this link is now dangling. Re-point it rather than
+    # skip it as "foreign" — otherwise re-running the installer leaves /dd-review
+    # broken, contradicting the upgrade promise in MIGRATIONS.md.
+    rm "$CMD_DEST"
+    ln -s "$CMD_SRC" "$CMD_DEST"
+    echo "migrated: dd-review.md -> $CMD_SRC (was examples/commands/)"
+    created=$((created + 1))
   else
-    echo "WARN: dd-review.md is a symlink to a different target ($(readlink "$CMD_DEST")) — skipping" >&2
+    echo "WARN: dd-review.md is a symlink to a different target ($link_text) — skipping" >&2
     skipped=$((skipped + 1))
   fi
 elif [ -e "$CMD_DEST" ]; then
