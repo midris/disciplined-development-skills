@@ -62,10 +62,10 @@ the single **`/dd-review <tier>`** command.
 subagents in parallel (Task tool — runs in-session on the subscription). A
 **holistic** subagent covers the whole scope; higher tiers add focused **angle**
 subagents (correctness, rationale, cross-file, security, necessity — the same
-`adversarial-review` posture + one appended focus line). The angle set is not
-config-driven; a doc-dominant cold-read substitutes two angles by model judgment
-(see the `/dd-review` command). Angles are monotonic — each tier is a superset
-of the one below.
+`adversarial-review` posture, each applying one angle from that skill's **Review
+angles** catalog). The angle set is not config-driven; a doc-dominant cold-read
+substitutes two angles by model judgment (see the `/dd-review` command). Angles
+are monotonic — each tier is a superset of the one below.
 
 **T3 reviewer:** `dd_review_runner.py` runs `codex review` as a subprocess
 (codex is OpenAI tooling — unaffected by Anthropic billing). Severity-scanned

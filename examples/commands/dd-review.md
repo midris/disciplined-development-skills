@@ -69,14 +69,12 @@ Each subagent prompt must:
   when clean. Nothing else starts a line with `[P0]`–`[P3]`.
 - Reviewers may run on a standard model (e.g. sonnet) to conserve cost.
 
-Angle focus lines (append exactly one to the corresponding reviewer):
-- **correctness** — logic, boundary / off-by-one, wrong-variable, control-flow bugs.
-- **rationale** — verify every docstring / comment / "safe" / "trusted" claim against the actual code.
-- **cross-file** — divergence from canonical modules, broken imports, caller / contract drift.
-- **security** — path traversal, injection, unvalidated input, unsafe path building.
-- **necessity** — cut what doesn't earn its place. Code: dead code, over-engineering, premature abstraction / config (Principle 7). Prose: padded / verbose docs + comments — this reviewer also loads the `concise-writing` skill.
-- **executability** *(doc-dominant cold-reads — replaces security)* — could a zero-context implementer execute this? Verify every factual repo claim; flag missing definitions, ambiguous contracts, misdirecting file lists.
-- **doctrine-consistency** *(doc-dominant cold-reads — replaces cross-file)* — drift against governing docs: CLAUDE.md, locked decisions in plans/specs, companion plans, the skills' own rules, single-source duplication.
+**Angle focus.** The tier table names each reviewer's angle. The angle
+*definitions* live once in the `adversarial-review` **Review angles** catalog —
+not here. Each angled subagent already loads that skill (see the prompt
+requirements above); name its angle in the assignment and direct it to apply that
+angle's definition from the catalog. (The catalog also defines **executability**
+and **doctrine-consistency**, used by the substitution below.)
 
 **Doc-dominant cold-reads.** When the cold-read diff is predominantly doc artifacts (plans, specs, SKILL.md, command files), substitute two angles — **security → executability**, **cross-file → doctrine-consistency**. Doc-dominance is your one-line judgment when dispatching; a mixed diff keeps the code set, but add a doc-consistency note to the cross-file reviewer's prompt.
 

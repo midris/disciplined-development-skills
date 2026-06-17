@@ -1,7 +1,12 @@
-# Deferred — Extract the review-angle catalog from `/dd-review` into doctrine
+# Extract the review-angle catalog from `/dd-review` into doctrine
 
-**Status:** deferred (surfaced 2026-06-12 during PR-4 of the pre-PR-review-cadence
-plan). Not scheduled — re-open when the duplication or discoverability cost bites.
+**Status:** active (reactivated 2026-06-16; surfaced 2026-06-12 during PR-4 of the
+pre-PR-review-cadence plan).
+
+**Open question — resolved 2026-06-16:** the *catalog* (what each angle is) moves
+to `adversarial-review`; the *substitution rule* (swap two angles on a doc-dominant
+cold-read) stays in the `/dd-review` command as dispatch orchestration. This
+confirms the plan's original lean (see "Open question" below).
 
 ## Problem
 
@@ -46,14 +51,24 @@ the command as dispatch judgment? Lean: the *catalog* (what each angle is) goes 
 the skill; the *substitution rule* (when to swap, at cold-read, on doc-dominant
 diffs) is dispatch orchestration and stays in the command. Confirm during design.
 
+## RED finding (2026-06-16)
+
+The baseline did NOT pass — it produced a real design constraint. Two reviewer
+subagents reviewed the same planted diff (off-by-one + dead code + undefined
+ref): one told only "apply the correctness angle" (no definition), one given the
+catalog definition + lane. The bare-name reviewer drifted into the **necessity**
+angle's lane (flagged the dead-code function); the defined reviewer stayed
+scoped. **Conclusion:** the angle *definition* is load-bearing — a bare name is
+interpreted variably. So the command's collapsed reference must direct the
+subagent to *the named angle's definition in the `adversarial-review` catalog*,
+not merely name the angle. This is the GREEN bar for the command edit.
+
 ## Approach (prose; implementer writes against patterns)
 
-1. `writing-skills` RED: confirm a command-dispatched reviewer, given only the
-   catalog-by-name reference, still applies the correct focus (baseline may
-   already pass — if so, this is discoverability/dedup, not a behavior fix; treat
-   like PR-2/PR-3's no-baseline judgment).
-2. Move the angle definitions into `adversarial-review`; collapse both command
-   copies' "Angle focus lines" block to name-references (same commit — public-API
-   surface).
+1. ~~`writing-skills` RED~~ — done; see "RED finding" above.
+2. Move the angle definitions into `adversarial-review` (new catalog section);
+   collapse both command copies' "Angle focus lines" block to a
+   catalog-reference that names each angle AND points the subagent at the
+   skill's catalog for the definition (same commit — public-API surface).
 3. Sweep `hooks/README.md` angle prose to point at the skill.
 4. Boundary: hook suite green; `/dd-review cold-read` to clean; PR.

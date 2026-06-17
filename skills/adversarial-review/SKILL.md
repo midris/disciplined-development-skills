@@ -87,6 +87,27 @@ For each piece of the artifact, ask:
 
 Hypothetical / just-in-case / convention / non-feature → flag for removal.
 
+## Review angles
+
+The posture and rules above apply to every review. An **angle** layers one
+focused lens on top — it *adds* a focus, it does **not** narrow the diff you
+review (the whole-picture *holistic* review owns the seams between angles).
+
+This catalog is the single source for what each angle is. *Which* angle runs at
+*which* tier — and when to substitute one (e.g. on a doc-dominant cold-read) — is
+dispatch orchestration owned by the dispatcher (the `/dd-review` command), not
+here. A reviewer assigned an angle by name applies the matching definition below.
+
+| Angle | Focus |
+|-------|-------|
+| **correctness** | logic, boundary / off-by-one, wrong-variable, control-flow bugs. |
+| **rationale** | verify every docstring / comment / "safe" / "trusted" claim against the actual code. |
+| **cross-file** | divergence from canonical modules, broken imports, caller / contract drift. |
+| **security** | path traversal, injection, unvalidated input, unsafe path building. |
+| **necessity** | cut what doesn't earn its place. Code: dead code, over-engineering, premature abstraction / config (`disciplined-development` Principle 7). Prose: padded / verbose docs + comments — also load the `concise-writing` skill. |
+| **executability** | could a zero-context implementer execute this? Verify every factual repo claim; flag missing definitions, ambiguous contracts, misdirecting file lists. |
+| **doctrine-consistency** | drift against governing docs: CLAUDE.md, locked decisions in plans/specs, companion plans, the skills' own rules, single-source duplication. |
+
 ## Few-shot examples
 
 ### Findings present
