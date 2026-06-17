@@ -29,9 +29,10 @@ Nine skills (each a `skills/<name>/SKILL.md`):
   the Iron Law, the five gates, the principles, the rationalization tables. The
   parent skill; the rest are its companions. Its `hooks/` subdir holds the hook
   stack + the `dd_review_runner.py` review engine.
-- **`adversarial-review`** / **`adversarial-review-loop`** — reviewer posture +
-  the severity contract (P0/P1/P2 block, P3 advisory) and the review→fix→re-review
-  iteration cap with a cold-read escape.
+- **`adversarial-review`** / **`adversarial-review-loop`** — reviewer posture, the
+  angle catalog + per-artifact selection, and the severity contract (P0/P1/P2
+  block, P3 advisory); plus the review→fix→re-review iteration cap with a
+  cold-read escape.
 - **`disciplined-research`** — ground load-bearing claims in current source, not
   memory.
 - **`dispatching-development-subagents`** — scope-contract + verify-every-commit
@@ -49,6 +50,12 @@ Nine skills (each a `skills/<name>/SKILL.md`):
 The hook stack (under `skills/disciplined-development/hooks/`) is documented in its own
 [`hooks/README.md`](skills/disciplined-development/hooks/README.md); config schema in
 [`hooks/dd-config.md`](skills/disciplined-development/hooks/dd-config.md).
+
+Skill behavior is validated by recorded subagent scenarios in
+[`skill-validation/`](skill-validation/): per skill (or command), the RED/GREEN
+pressure scenarios that justify its content, kept re-runnable so a change can be
+re-tested before it ships. Non-shipped — a development record, not part of the
+installed bundle.
 
 ## Requirements
 
@@ -147,7 +154,7 @@ Per-hook behavior + the `DD_SKIP_<HOOK>` bypass env vars are in
   for threading into an existing file.
 - **Wire `/dd-review`:** the installer places this automatically as a symlink
   at `<project>/.claude/commands/dd-review.md` (resolves to
-  [`examples/commands/dd-review.md`](examples/commands/dd-review.md)).
+  [`commands/dd-review.md`](commands/dd-review.md)).
   Gitignore the symlink alongside the skill symlinks. If you need a
   customized copy instead, place a real file there before running the
   installer — the installer skips and warns rather than clobbering it.

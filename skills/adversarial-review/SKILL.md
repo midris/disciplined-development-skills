@@ -85,28 +85,24 @@ For each piece of the artifact, ask:
 - Defense-in-depth justified by evidence, or by convention?
 - Feature, or non-feature framed as a feature?
 
-Hypothetical / just-in-case / convention / non-feature → flag for removal.
+Hypothetical / just-in-case / convention / non-feature → flag for removal. This is `disciplined-development` Principle 7 applied to review. In prose the same test catches padding — load `concise-writing` when reviewing docs.
 
 ## Review angles
 
-The posture and rules above apply to every review. An **angle** layers one
-focused lens on top — it *adds* a focus, it does **not** narrow the diff you
-review (the whole-picture *holistic* review owns the seams between angles).
+The posture and rules above are the always-on baseline of every review — the **holistic** read that finds bugs, verifies rationale, and challenges necessity. An **angle** adds one specialized lens; it never narrows what you review. (Bug-finding, rationale, and necessity are the baseline, not angles — reserve an angle for a lens the baseline lacks.)
 
-This catalog is the single source for what each angle is. *Which* angle runs at
-*which* tier — and when to substitute one (e.g. on a doc-dominant cold-read) — is
-dispatch orchestration owned by the dispatcher (the `/dd-review` command), not
-here. A reviewer assigned an angle by name applies the matching definition below.
+| Angle | Looks for |
+|-------|-----------|
+| **consistency** | divergence across the corpus — contract / signature / import drift, terminology drift (one concept, different names), wording drift, single-source duplication |
+| **executability** | could a zero-context implementer execute this? missing definitions, ambiguous contracts, misdirecting file lists |
+| **skill-authoring** | apply `superpowers:writing-skills` — a `description` that summarizes the workflow (agents skip the body), discipline rules with open rationalization loopholes, claims not backed by a watched failure |
 
-| Angle | Focus |
-|-------|-------|
-| **correctness** | logic, boundary / off-by-one, wrong-variable, control-flow bugs. |
-| **rationale** | verify every docstring / comment / "safe" / "trusted" claim against the actual code. |
-| **cross-file** | divergence from canonical modules, broken imports, caller / contract drift. |
-| **security** | path traversal, injection, unvalidated input, unsafe path building. |
-| **necessity** | cut what doesn't earn its place. Code: dead code, over-engineering, premature abstraction / config (`disciplined-development` Principle 7). Prose: padded / verbose docs + comments — also load the `concise-writing` skill. |
-| **executability** | could a zero-context implementer execute this? Verify every factual repo claim; flag missing definitions, ambiguous contracts, misdirecting file lists. |
-| **doctrine-consistency** | drift against governing docs: CLAUDE.md, locked decisions in plans/specs, companion plans, the skills' own rules, single-source duplication. |
+**When to apply:**
+- **consistency** — every artifact.
+- **executability** — artifacts with instructions a reader must execute (plans, specs, runbooks, command / setup docs).
+- **skill-authoring** — when the artifact is a skill (a `SKILL.md`).
+
+Depth sets breadth — a quick pass may be the baseline alone; a full review adds every applicable angle.
 
 ## Few-shot examples
 

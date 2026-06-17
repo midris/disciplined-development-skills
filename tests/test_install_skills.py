@@ -111,14 +111,14 @@ def test_skips_symlink_to_different_target(tmp_path):
 
 # ---------------------------------------------------------------------------
 # Command-file symlink tests (I1a)
-# _make_clone does not create examples/commands/dd-review.md by default; these
+# _make_clone does not create commands/dd-review.md by default; these
 # helpers extend the clone fixture with that file so the new installer path
 # has a real source to resolve.
 # ---------------------------------------------------------------------------
 
 def _add_command_src(clone: Path) -> Path:
-    """Seed examples/commands/dd-review.md into a test clone."""
-    cmd_src = clone / "examples" / "commands"
+    """Seed commands/dd-review.md into a test clone."""
+    cmd_src = clone / "commands"
     cmd_src.mkdir(parents=True)
     src_file = cmd_src / "dd-review.md"
     src_file.write_text("---\ndescription: dd-review command template\n---\n")
@@ -134,7 +134,7 @@ def test_command_symlink_created_and_resolves(tmp_path):
     assert r.returncode == 0, r.stderr
     dest = target / ".claude" / "commands" / "dd-review.md"
     assert dest.is_symlink(), "dd-review.md not a symlink"
-    expected_src = clone / "examples" / "commands" / "dd-review.md"
+    expected_src = clone / "commands" / "dd-review.md"
     assert dest.resolve() == expected_src.resolve()
 
 
@@ -149,7 +149,7 @@ def test_command_symlink_idempotent(tmp_path):
     dest = target / ".claude" / "commands" / "dd-review.md"
     assert dest.is_symlink()
     # idempotent: still resolves to the same source
-    expected_src = clone / "examples" / "commands" / "dd-review.md"
+    expected_src = clone / "commands" / "dd-review.md"
     assert dest.resolve() == expected_src.resolve()
 
 

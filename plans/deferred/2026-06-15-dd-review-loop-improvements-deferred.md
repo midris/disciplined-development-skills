@@ -119,11 +119,13 @@ escalating tier when the diff is a spec/plan artifact. Keep it a recommendation.
 
 ### 4. [P3] Doc-dominant angle substitution only engages at cold-read
 
-**Problem / watch-item.** The doc-dominant angle swap (security→executability,
-cross-file→doctrine-consistency) only applies at cold-read. At `fast`/`regular`, a
+**Problem / watch-item.** The doc-dominant angle set (executability,
+doctrine-consistency) only applies at cold-read. At `fast`/`regular`, a
 doc diff gets the generic angle set. This session it didn't bite — the holistic reviewer
 did executability + doctrine work organically — so this is a low-priority watch-item, not
-a confirmed defect.
+a confirmed defect. (Update 2026-06-16: angle selection now lives in `adversarial-review`
+→ "Select by artifact", not a command-side swap; `fast`/`regular` still use the trimmed
+depth sets, so the watch-item stands.)
 
 **Direction.** Optionally extend doc-dominant detection to `regular`. Leave parked until
 a session shows the generic angles actually missing something a doc-dominant angle would

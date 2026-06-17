@@ -10,7 +10,7 @@
 # it never clobbers a project-local skill.
 #
 # Also symlinks the /dd-review command template:
-#   <this-clone>/examples/commands/dd-review.md
+#   <this-clone>/commands/dd-review.md
 #   -> <target>/.claude/commands/dd-review.md
 # Same guards apply: idempotent; skips with a warning if the dest is a real file
 # or a symlink pointing elsewhere (never clobbers).
@@ -69,7 +69,7 @@ for skill_md in "$CLONE"/skills/*/SKILL.md; do
 done
 
 # --- Command file symlink ---------------------------------------------------
-CMD_SRC="$CLONE/examples/commands/dd-review.md"
+CMD_SRC="$CLONE/commands/dd-review.md"
 CMD_DIR="$TARGET/.claude/commands"
 CMD_DEST="$CMD_DIR/dd-review.md"
 mkdir -p "$CMD_DIR"

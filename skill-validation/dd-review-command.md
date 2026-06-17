@@ -36,9 +36,12 @@ command (GREEN), and check regressions on adjacent paths.
 
 ## Scenarios — angle dispatch (reviewer set per tier)
 
-Validates the dispatch step (command "Dispatch the tier's reviewer set"): the
-monotonic per-tier set, parallel dispatch, full-diff-per-reviewer (an angle adds
-a focus, it does NOT partition the diff), and the doc-dominant substitution.
+Validates the dispatch step (command "Dispatch the tier's reviewer set"):
+parallel dispatch, full-diff-per-reviewer (an angle adds a focus, it does NOT
+partition the diff), and the tier→selection mapping. Angle **definitions** and
+**selection** (incl. the doc-dominant set) live in the skill — validated in
+[adversarial-review.md](adversarial-review.md); here we check only that the
+command resolves the right set from the skill's *When to apply*.
 
 - **RED — no command spec.** A subagent told to "cold-read this code diff" with
   only the `adversarial-review` skill (no reviewer-set table).
@@ -48,14 +51,14 @@ a focus, it does NOT partition the diff), and the doc-dominant substitution.
 ### Results — angle dispatch
 
 - **RED (2 runs):** improvised an ad-hoc **3-agent set that partitioned the diff**
-  (source-only / tests-only / cross-cutting) — no holistic catch-all, not the six
-  angles, findings free to fall through the seams. Confirms the reviewer-set table
-  is load-bearing.
-- **GREEN code (2 runs):** the full six-angle set (holistic, correctness,
-  rationale, cross-file, security, necessity), in parallel, each on the **full**
-  diff, no substitution.
-- **GREEN doc (2 runs):** the substitution applied (security → executability,
-  cross-file → doctrine-consistency), six angles, parallel, full diff.
+  (source-only / tests-only / cross-cutting) — no holistic catch-all, not the
+  baseline + angle set, findings free to fall through the seams. Confirms the
+  dispatch spec is load-bearing.
+- **GREEN code:** holistic (the full baseline — bugs, rationale, necessity) +
+  **consistency**, in parallel, each on the **full** diff.
+- **GREEN doc:** holistic + **consistency** + **executability** (the instructions
+  lens), parallel, full diff. Skill artifacts add **skill-authoring**. The command
+  defers selection to the skill's *When to apply*.
 - The spec's payoff is the exact thing RED got wrong: every reviewer sees the
   whole diff with a holistic owner, vs RED's partition-and-drop-the-seams.
 
@@ -68,7 +71,8 @@ Re-run A (RED on the pre-edit command, GREEN on the post-edit) plus B and C
 (read-only) before changing the pre-pr routing note. Any wording that could read
 as "cold-read replaces the gate" must re-pass C.
 
-Re-run the angle-dispatch RED/GREEN (read-only) before changing the reviewer-set
-table, the angle focus lines, or the doc-dominant substitution rule. GREEN must
-produce the monotonic set, in parallel, full-diff-per-reviewer, with the
-substitution on a doc-dominant cold-read.
+Re-run the angle-dispatch RED/GREEN (read-only) before changing the command's
+tier→selection mapping. GREEN must dispatch in parallel, full-diff-per-reviewer,
+resolving the right set from the skill's *When to apply*. Angle definition
+or selection changes are tested in [adversarial-review.md](adversarial-review.md),
+not here.
