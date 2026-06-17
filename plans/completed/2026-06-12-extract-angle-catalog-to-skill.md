@@ -1,12 +1,11 @@
 # Extract the review-angle catalog from `/dd-review` into doctrine
 
-**Status:** active (reactivated 2026-06-16; surfaced 2026-06-12 during PR-4 of the
-pre-PR-review-cadence plan).
+**Status:** implemented (2026-06-16; reactivated from deferred, surfaced
+2026-06-12 during PR-4 of the pre-PR-review-cadence plan).
 
-**Open question — resolved 2026-06-16:** the *catalog* (what each angle is) moves
-to `adversarial-review`; the *substitution rule* (swap two angles on a doc-dominant
-cold-read) stays in the `/dd-review` command as dispatch orchestration. This
-confirms the plan's original lean (see "Open question" below).
+**Open question — resolved 2026-06-16 (the plan's original lean, confirmed):**
+catalog (what each angle is) → `adversarial-review`; substitution rule (swap two
+angles on a doc-dominant cold-read) → stays in the `/dd-review` command.
 
 ## Problem
 
@@ -53,22 +52,34 @@ diffs) is dispatch orchestration and stays in the command. Confirm during design
 
 ## RED finding (2026-06-16)
 
-The baseline did NOT pass — it produced a real design constraint. Two reviewer
-subagents reviewed the same planted diff (off-by-one + dead code + undefined
-ref): one told only "apply the correctness angle" (no definition), one given the
-catalog definition + lane. The bare-name reviewer drifted into the **necessity**
-angle's lane (flagged the dead-code function); the defined reviewer stayed
-scoped. **Conclusion:** the angle *definition* is load-bearing — a bare name is
-interpreted variably. So the command's collapsed reference must direct the
-subagent to *the named angle's definition in the `adversarial-review` catalog*,
-not merely name the angle. This is the GREEN bar for the command edit.
+The baseline did NOT pass — it produced a real design constraint. A reviewer told
+only "apply the correctness angle" (no definition) drifted into the **necessity**
+angle's lane; one given the catalog definition stayed scoped. **The angle
+definition is load-bearing — a bare name is interpreted variably.** So the
+command's collapsed reference must point the subagent at the named angle's
+definition in the catalog, not merely name the angle.
+
+## Cold-read adjudication (2026-06-16) — settled, do not re-litigate
+
+A doc-dominant cold-read recurred on two findings across rounds; both refuted:
+
+- **"Subagent isn't told how to access the catalog."** The command's first
+  mandatory subagent-prompt item already prescribes it: load `adversarial-review`
+  via the Skill tool, or read `skills/adversarial-review/SKILL.md` from disk. The
+  in-lane executability reviewer traced this chain and returned clean; the GREEN
+  test confirmed a subagent loads the skill and applies the looked-up definition.
+- **"Flag executability/doctrine-consistency as substitutable in the skill."**
+  Rejected — that re-injects the substitution *rule* (orchestration) into the
+  skill, the anti-goal of this change. A subagent never self-selects an angle;
+  the orchestrator assigns one, so an unflagged catalog entry causes no ambiguity.
 
 ## Approach (prose; implementer writes against patterns)
 
 1. ~~`writing-skills` RED~~ — done; see "RED finding" above.
-2. Move the angle definitions into `adversarial-review` (new catalog section);
+2. ~~Move the angle definitions into `adversarial-review` (new catalog section);
    collapse both command copies' "Angle focus lines" block to a
    catalog-reference that names each angle AND points the subagent at the
-   skill's catalog for the definition (same commit — public-API surface).
-3. Sweep `hooks/README.md` angle prose to point at the skill.
-4. Boundary: hook suite green; `/dd-review cold-read` to clean; PR.
+   skill's catalog for the definition (same commit — public-API surface).~~ done.
+3. ~~Sweep `hooks/README.md` angle prose to point at the skill.~~ done.
+4. ~~Boundary: hook suite green (297 passed); `/dd-review cold-read` to clean
+   (3 rounds — see "Cold-read adjudication"); PR.~~ done.

@@ -69,12 +69,12 @@ Each subagent prompt must:
   when clean. Nothing else starts a line with `[P0]`–`[P3]`.
 - Reviewers may run on a standard model (e.g. sonnet) to conserve cost.
 
-**Angle focus.** The tier table names each reviewer's angle. The angle
-*definitions* live once in the `adversarial-review` **Review angles** catalog —
-not here. Each angled subagent already loads that skill (see the prompt
-requirements above); name its angle in the assignment and direct it to apply that
-angle's definition from the catalog. (The catalog also defines **executability**
-and **doctrine-consistency**, used by the substitution below.)
+**Angle focus.** The tier table names each reviewer's angle; the
+`adversarial-review` **Review angles** catalog defines them (single source). For
+each angled reviewer, name its angle in the subagent assignment and tell it to
+apply that angle's definition from the **Review angles** catalog — the subagent
+already loads the skill (see the prompt requirements above). The catalog also
+defines **executability** and **doctrine-consistency** for the substitution below.
 
 **Doc-dominant cold-reads.** When the cold-read diff is predominantly doc artifacts (plans, specs, SKILL.md, command files), substitute two angles — **security → executability**, **cross-file → doctrine-consistency**. Doc-dominance is your one-line judgment when dispatching; a mixed diff keeps the code set, but add a doc-consistency note to the cross-file reviewer's prompt.
 
