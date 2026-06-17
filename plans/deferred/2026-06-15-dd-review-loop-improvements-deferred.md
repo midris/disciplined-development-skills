@@ -1,7 +1,8 @@
 # dd-review loop improvements — deferred
 
-**Status:** deferred (parked follow-up). Updated 2026-06-17 with item 8 (migration
-angle, from the PR #23 codex finding). Updated 2026-06-16 with code-change-session
+**Status:** deferred (parked follow-up). Updated 2026-06-17 with items 8 (migration
+angle) and 9 (portability/environment angle), from PR #23 codex findings. Updated
+2026-06-16 with code-change-session
 validation + two new items (6, 7) and a config mitigation already applied
 (`.claude/dd-config.json`: cold-read block 8→11, `fast` 30/60→50/100, `regular` floor 30→50).
 **Target repo:** the private `disciplined-development-skills` repo
@@ -230,6 +231,26 @@ caught it; the current angles + baseline did not) — validate per the angle-nec
 **Acceptance.** A discrimination test where holistic misses an upgrade/old-state regression
 that the migration angle catches; added to `adversarial-review` "Review angles" + "When to
 apply" only if it passes.
+
+### 9. [P2] Add a "portability / environment-assumptions" review angle
+
+**Problem (codex-vs-claude gap, 2026-06-17).** Round-2 codex review of PR #23 caught a test
+that seeded a symlink from a raw temp path (`/var/...`) while `install-skills.sh` computes
+`CLONE` via `pwd -P` (`/private/var/...` on macOS), so the comparison missed and the test
+would fail on setups where the temp dir renders un-canonicalized. The in-session angles
+didn't model environment-dependent path/OS behaviour. Distinct from item 8 (version/old-state
+migration): this is about the *same* code behaving differently across *environments*.
+
+**Direction.** Add an angle whose lens is "what environment assumptions does this make?" —
+path canonicalisation (`/var` vs `/private/var`, symlinked temp dirs), OS/shell differences
+(BSD vs GNU `readlink`/`sed`), filesystem case-sensitivity, locale, line endings, hardcoded
+absolute paths, tool/PATH availability. Applies to installer/shell code, path handling, and
+tests that assert on paths. Validate per the angle-necessity bar (discrimination vs holistic)
+before adding; the round-2 `/var` finding is a ready discrimination example (codex caught it;
+the baseline + current angles did not).
+
+**Acceptance.** A discrimination test where holistic misses an environment-portability defect
+that the portability angle catches; added to `adversarial-review` only if it passes.
 
 ## Must not regress (the parts that worked)
 
