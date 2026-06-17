@@ -194,7 +194,10 @@ def test_command_migrates_stale_pre_relocation_symlink(tmp_path):
     commands_dir = target / ".claude" / "commands"
     commands_dir.mkdir(parents=True)
     # Old official target is absent in the upgraded clone -> the link is dangling.
-    old_official = clone / "examples" / "commands" / "dd-review.md"
+    # Seed it from the *resolved* clone path so it matches what the real installer
+    # would have written (install-skills.sh computes CLONE via `pwd -P`); otherwise
+    # a /var vs /private/var spelling mismatch makes the comparison miss on macOS.
+    old_official = clone.resolve() / "examples" / "commands" / "dd-review.md"
     dest = commands_dir / "dd-review.md"
     dest.symlink_to(old_official)
     r = _run(clone, target)

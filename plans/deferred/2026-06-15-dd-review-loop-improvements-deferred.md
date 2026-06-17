@@ -118,19 +118,18 @@ escalating tier when the diff is a spec/plan artifact. Keep it a recommendation.
 
 **Acceptance.** The skill text states the depth ceiling and the escalation trigger.
 
-### 4. [P3] Doc-dominant angle substitution only engages at cold-read
+### 4. [P3] Artifact-specific angles only engage at cold-read
 
-**Problem / watch-item.** The doc-dominant angle set (executability,
-doctrine-consistency) only applies at cold-read. At `fast`/`regular`, a
-doc diff gets the generic angle set. This session it didn't bite — the holistic reviewer
-did executability + doctrine work organically — so this is a low-priority watch-item, not
-a confirmed defect. (Update 2026-06-16: angle selection now lives in `adversarial-review`
-→ "Select by artifact", not a command-side swap; `fast`/`regular` still use the trimmed
-depth sets, so the watch-item stands.)
+**Problem / watch-item.** The artifact-specific angles (executability for instructions;
+skill-authoring for a `SKILL.md`) only engage at cold-read. At `fast`/`regular` a doc/skill
+diff gets the trimmed depth set (holistic, plus consistency at `regular`). This session it
+didn't bite — the holistic reviewer did executability-style work organically — so it's a
+low-priority watch-item, not a confirmed defect. (Angle selection lives in `adversarial-review`
+→ "When to apply"; the command's tier rows set depth, so `fast`/`regular` stay trimmed.)
 
-**Direction.** Optionally extend doc-dominant detection to `regular`. Leave parked until
-a session shows the generic angles actually missing something a doc-dominant angle would
-have caught.
+**Direction.** Optionally engage the artifact's applicable angles at `regular` too. Leave
+parked until a session shows the trimmed set actually missing something an artifact-specific
+angle would have caught.
 
 ### 5. [P2] Add a "contract-coverage" review angle
 
