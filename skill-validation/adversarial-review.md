@@ -42,7 +42,7 @@ attention. It discriminates only for (a) **scope** changes to a definition, and
 | conformance | **dropped** | "verify against governing rules" is posture; holistic caught 4/4 |
 | security | **deferred** | claude finds low-hanging secrets via posture; real leverage is a dedicated security skillset applied explicitly, not a one-line angle |
 | **consistency** | **kept** | cross-corpus drift (contract/terminology/wording/single-source) is *not* in the posture; manually prompting it reliably yields findings |
-| **executability** | **kept** | the zero-context-implementer lens; derived from real codex-review gap evaluation |
+| **executability** | **kept** | the zero-context-implementer lens; surfaced by the maintainer's codex-review gap observations (not reproduced inline here) |
 | **skill-authoring** | **kept** | the **only** angle that beat holistic in discrimination — see below |
 
 `security` was broadened (+ leaked secrets/keys) and tested cleanly (old def
@@ -50,6 +50,10 @@ returned "No findings" on a hardcoded key; broadened def flagged it P0) — so t
 broadening *is* load-bearing — but the angle was still dropped per the bar above:
 holistic already catches secrets, and a future dedicated security skill is the
 higher-leverage home.
+
+The pre-branch command also had `cross-file` and `doctrine-consistency`; both
+folded into `consistency` (their drift / single-source concerns), and the
+governing-rule half of `doctrine-consistency` became `conformance`, then dropped.
 
 ## skill-authoring discrimination (the one that passed)
 

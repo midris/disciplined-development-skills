@@ -1,6 +1,6 @@
 # Make `adversarial-review` the standalone home of the review-angle doctrine
 
-**Status:** active — in progress (2026-06-17; reactivated from deferred, surfaced
+**Status:** implemented (2026-06-17; reactivated from deferred, surfaced
 2026-06-12 during PR-4). Grew from "extract the catalog" into an angle-taxonomy
 redesign (audit → 3 angles) plus relocating the command template to top-level.
 
@@ -60,7 +60,7 @@ Holistic caught the planted target for 6/7 candidates on small artifacts →
   description trap + rationalization loopholes holistic missed).
 
 Full record + the "discrimination is the angle-necessity bar" principle and its
-limits: [skill-validation/adversarial-review.md](../skill-validation/adversarial-review.md).
+limits: [skill-validation/adversarial-review.md](../../skill-validation/adversarial-review.md).
 
 ## Why deferred (not folded into PR-4)
 
@@ -119,7 +119,8 @@ Standalone-selection redesign — done unless noted:
    angle-dispatch + pre-pr + loop.~~ done — 7/7 angles caught their target;
    dispatch + pre-pr regress clean; `dd-review-command.md` updated (selection now
    skill-owned). Discrimination arm limitation logged in the new record.
-6. Boundary: hook suite green (297); `/dd-review cold-read`; PR.
+6. ~~Boundary (first pass).~~ Superseded by the final round below — the angle
+   audit reopened the skill, so the boundary moved with it.
 
 **Final round (2026-06-17) — angle audit + relocation:**
 

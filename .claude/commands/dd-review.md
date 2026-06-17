@@ -53,7 +53,9 @@ HEAD, catching in-flight edits) or `<fork-base>..HEAD` otherwise. Call it
 | `cold-read` | holistic + every angle the artifact calls for (`adversarial-review` → "When to apply") |
 
 The **holistic** reviewer applies the full `adversarial-review` baseline (bugs,
-rationale, necessity); each angled reviewer applies one angle from the skill.
+rationale, necessity); each angled reviewer applies one angle from the skill. For
+`cold-read`, you pick the applicable angles from the skill's "When to apply" and
+dispatch one subagent per angle.
 
 Each subagent prompt must:
 - Load `adversarial-review` (Skill tool, or read `skills/adversarial-review/SKILL.md`).
