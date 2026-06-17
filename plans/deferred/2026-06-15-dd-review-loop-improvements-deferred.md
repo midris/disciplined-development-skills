@@ -1,6 +1,7 @@
 # dd-review loop improvements — deferred
 
-**Status:** deferred (parked follow-up). Updated 2026-06-16 with code-change-session
+**Status:** deferred (parked follow-up). Updated 2026-06-17 with item 8 (migration
+angle, from the PR #23 codex finding). Updated 2026-06-16 with code-change-session
 validation + two new items (6, 7) and a config mitigation already applied
 (`.claude/dd-config.json`: cold-read block 8→11, `fast` 30/60→50/100, `regular` floor 30→50).
 **Target repo:** the private `disciplined-development-skills` repo
@@ -206,6 +207,30 @@ a blanket bypass — only commits whose content the just-passed review actually 
 
 **Acceptance.** After a clean cold-read that included the working-tree fixes, the agent commits
 those fixes without hitting the hard block and without a human-set env var.
+
+### 8. [P2] Add a "migration / backward-compatibility" review angle
+
+**Problem (concrete codex-vs-claude gap, 2026-06-17).** On the angle-extraction PR (#23),
+the `/dd-review` command template was relocated `examples/commands/` → top-level `commands/`.
+The in-session cold-read (holistic + consistency + executability + skill-authoring) passed
+clean, but the pre-PR **codex** review caught a [P1]: an existing consumer's
+`.claude/commands/dd-review.md` symlink pointed at the now-moved `examples/commands/` target,
+so re-running the installer skipped it as "foreign" and left `/dd-review` broken —
+contradicting MIGRATIONS.md's "re-run and it lands automatically." Every claude angle
+reviewed the **diff as a static artifact**; none modeled the change meeting **pre-existing
+installed / old state** (the upgrade path), and the installer tests only covered fresh installs.
+
+**Direction.** Add an angle whose lens is "how does this change affect already-installed
+consumers, persisted state, or data written by a prior version?" — relocations/renames,
+config-key changes, default flips, removed flags, schema/format changes, symlink/path moves.
+Applies when the diff touches the installer, the public surface (skill / command / config
+names, file layout), or any persisted-state format. Strong discrimination candidate (codex
+caught it; the current angles + baseline did not) — validate per the angle-necessity bar in
+[skill-validation/adversarial-review.md](../../skill-validation/adversarial-review.md) before adding.
+
+**Acceptance.** A discrimination test where holistic misses an upgrade/old-state regression
+that the migration angle catches; added to `adversarial-review` "Review angles" + "When to
+apply" only if it passes.
 
 ## Must not regress (the parts that worked)
 
