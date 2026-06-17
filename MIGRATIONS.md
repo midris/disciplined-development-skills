@@ -26,7 +26,7 @@ touch:
 
 **1. `.claude/commands/dd-review.md`** — re-run the installer and it lands
 automatically. If you have a customized copy, replace it manually with
-[`examples/commands/dd-review.md`](examples/commands/dd-review.md).
+[`commands/dd-review.md`](commands/dd-review.md).
 
 **2. `.claude/settings.json` hooks block** — add the three new hook entries
 (the existing hooks are unchanged):

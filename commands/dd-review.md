@@ -1,9 +1,10 @@
 ---
-# Bundle-source variant of the /dd-review slash command. Paths point at
-# the skills/disciplined-development/ tree because this repo (the source
-# of the bundle) does not symlink its own skills into .claude/skills/.
-# See the top-level commands/dd-review.md for the consumer-side variant whose
-# paths go through .claude/skills/.
+# Consumer template for the /dd-review slash command. Paths below assume the
+# consumer-side install layout: the disciplined-development skill (and its
+# hooks/ subdir) plus the companion skills are symlinked under .claude/skills/
+# by install-skills.sh from a clone of disciplined-development-skills.
+# Copy this file to your project's .claude/commands/dd-review.md;
+# commit-or-gitignore is your choice.
 description: Run tiered adversarial review at the given tier and act on findings.
 argument-hint: fast | regular | cold-read | pre-pr
 ---
@@ -14,7 +15,7 @@ contract is identical everywhere — native P0–P3.
 
 `ENGINE` below is:
 
-    python3 $CLAUDE_PROJECT_DIR/skills/disciplined-development/hooks/dd_review_runner.py
+    python3 $CLAUDE_PROJECT_DIR/.claude/skills/disciplined-development/hooks/dd_review_runner.py
 
 ## `pre-pr` (T3) — codex gate
 
@@ -58,7 +59,7 @@ rationale, necessity); each angled reviewer applies one angle from the skill. Fo
 dispatch one subagent per angle.
 
 Each subagent prompt must:
-- Load `adversarial-review` (Skill tool, or read `skills/adversarial-review/SKILL.md`).
+- Load `adversarial-review` (Skill tool, or read `.claude/skills/adversarial-review/SKILL.md`).
 - Review the **full** diff `git diff SCOPE` — an angle adds a focus, it never narrows scope.
 - Emit the contract: one finding per line, `- [PN] <path>:<line>: <summary>`, detail
   indented; `No findings.` when clean. Nothing else starts a line with `[P0]`–`[P3]`.

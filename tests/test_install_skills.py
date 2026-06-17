@@ -111,14 +111,14 @@ def test_skips_symlink_to_different_target(tmp_path):
 
 # ---------------------------------------------------------------------------
 # Command-file symlink tests (I1a)
-# _make_clone does not create examples/commands/dd-review.md by default; these
+# _make_clone does not create commands/dd-review.md by default; these
 # helpers extend the clone fixture with that file so the new installer path
 # has a real source to resolve.
 # ---------------------------------------------------------------------------
 
 def _add_command_src(clone: Path) -> Path:
-    """Seed examples/commands/dd-review.md into a test clone."""
-    cmd_src = clone / "examples" / "commands"
+    """Seed commands/dd-review.md into a test clone."""
+    cmd_src = clone / "commands"
     cmd_src.mkdir(parents=True)
     src_file = cmd_src / "dd-review.md"
     src_file.write_text("---\ndescription: dd-review command template\n---\n")
@@ -134,7 +134,7 @@ def test_command_symlink_created_and_resolves(tmp_path):
     assert r.returncode == 0, r.stderr
     dest = target / ".claude" / "commands" / "dd-review.md"
     assert dest.is_symlink(), "dd-review.md not a symlink"
-    expected_src = clone / "examples" / "commands" / "dd-review.md"
+    expected_src = clone / "commands" / "dd-review.md"
     assert dest.resolve() == expected_src.resolve()
 
 
@@ -149,7 +149,7 @@ def test_command_symlink_idempotent(tmp_path):
     dest = target / ".claude" / "commands" / "dd-review.md"
     assert dest.is_symlink()
     # idempotent: still resolves to the same source
-    expected_src = clone / "examples" / "commands" / "dd-review.md"
+    expected_src = clone / "commands" / "dd-review.md"
     assert dest.resolve() == expected_src.resolve()
 
 
@@ -181,3 +181,28 @@ def test_command_foreign_symlink_not_clobbered(tmp_path):
     assert r.returncode == 0, r.stderr
     assert dest.resolve() == other.resolve(), "foreign symlink was overwritten"
     assert "dd-review.md" in (r.stdout + r.stderr)
+
+
+def test_command_migrates_stale_pre_relocation_symlink(tmp_path):
+    """Upgrade path: a dest symlink pointing at the pre-relocation official target
+    (examples/commands/dd-review.md, now relocated to commands/ and thus dangling)
+    must be re-pointed to the new location, not skipped as foreign — otherwise
+    re-running the installer leaves /dd-review broken after an upgrade."""
+    clone = _make_clone(tmp_path)
+    _add_command_src(clone)  # seeds the NEW official src: clone/commands/dd-review.md
+    target = tmp_path / "project"
+    commands_dir = target / ".claude" / "commands"
+    commands_dir.mkdir(parents=True)
+    # Old official target is absent in the upgraded clone -> the link is dangling.
+    # Seed it from the *resolved* clone path so it matches what the real installer
+    # would have written (install-skills.sh computes CLONE via `pwd -P`); otherwise
+    # a /var vs /private/var spelling mismatch makes the comparison miss on macOS.
+    old_official = clone.resolve() / "examples" / "commands" / "dd-review.md"
+    dest = commands_dir / "dd-review.md"
+    dest.symlink_to(old_official)
+    r = _run(clone, target)
+    assert r.returncode == 0, r.stderr
+    assert dest.is_symlink()
+    assert dest.resolve() == (clone / "commands" / "dd-review.md").resolve(), \
+        "stale pre-relocation symlink was not migrated to the new target"
+    assert "migrated" in (r.stdout + r.stderr)

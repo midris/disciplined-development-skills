@@ -1,6 +1,8 @@
 # dd-review loop improvements — deferred
 
-**Status:** deferred (parked follow-up). Updated 2026-06-16 with code-change-session
+**Status:** deferred (parked follow-up). Updated 2026-06-17 with items 8 (migration
+angle) and 9 (portability/environment angle), from PR #23 codex findings. Updated
+2026-06-16 with code-change-session
 validation + two new items (6, 7) and a config mitigation already applied
 (`.claude/dd-config.json`: cold-read block 8→11, `fast` 30/60→50/100, `regular` floor 30→50).
 **Target repo:** the private `disciplined-development-skills` repo
@@ -117,17 +119,18 @@ escalating tier when the diff is a spec/plan artifact. Keep it a recommendation.
 
 **Acceptance.** The skill text states the depth ceiling and the escalation trigger.
 
-### 4. [P3] Doc-dominant angle substitution only engages at cold-read
+### 4. [P3] Artifact-specific angles only engage at cold-read
 
-**Problem / watch-item.** The doc-dominant angle swap (security→executability,
-cross-file→doctrine-consistency) only applies at cold-read. At `fast`/`regular`, a
-doc diff gets the generic angle set. This session it didn't bite — the holistic reviewer
-did executability + doctrine work organically — so this is a low-priority watch-item, not
-a confirmed defect.
+**Problem / watch-item.** The artifact-specific angles (executability for instructions;
+skill-authoring for a `SKILL.md`) only engage at cold-read. At `fast`/`regular` a doc/skill
+diff gets the trimmed depth set (holistic, plus consistency at `regular`). This session it
+didn't bite — the holistic reviewer did executability-style work organically — so it's a
+low-priority watch-item, not a confirmed defect. (Angle selection lives in `adversarial-review`
+→ "When to apply"; the command's tier rows set depth, so `fast`/`regular` stay trimmed.)
 
-**Direction.** Optionally extend doc-dominant detection to `regular`. Leave parked until
-a session shows the generic angles actually missing something a doc-dominant angle would
-have caught.
+**Direction.** Optionally engage the artifact's applicable angles at `regular` too. Leave
+parked until a session shows the trimmed set actually missing something an artifact-specific
+angle would have caught.
 
 ### 5. [P2] Add a "contract-coverage" review angle
 
@@ -204,6 +207,50 @@ a blanket bypass — only commits whose content the just-passed review actually 
 
 **Acceptance.** After a clean cold-read that included the working-tree fixes, the agent commits
 those fixes without hitting the hard block and without a human-set env var.
+
+### 8. [P2] Add a "migration / backward-compatibility" review angle
+
+**Problem (concrete codex-vs-claude gap, 2026-06-17).** On the angle-extraction PR (#23),
+the `/dd-review` command template was relocated `examples/commands/` → top-level `commands/`.
+The in-session cold-read (holistic + consistency + executability + skill-authoring) passed
+clean, but the pre-PR **codex** review caught a [P1]: an existing consumer's
+`.claude/commands/dd-review.md` symlink pointed at the now-moved `examples/commands/` target,
+so re-running the installer skipped it as "foreign" and left `/dd-review` broken —
+contradicting MIGRATIONS.md's "re-run and it lands automatically." Every claude angle
+reviewed the **diff as a static artifact**; none modeled the change meeting **pre-existing
+installed / old state** (the upgrade path), and the installer tests only covered fresh installs.
+
+**Direction.** Add an angle whose lens is "how does this change affect already-installed
+consumers, persisted state, or data written by a prior version?" — relocations/renames,
+config-key changes, default flips, removed flags, schema/format changes, symlink/path moves.
+Applies when the diff touches the installer, the public surface (skill / command / config
+names, file layout), or any persisted-state format. Strong discrimination candidate (codex
+caught it; the current angles + baseline did not) — validate per the angle-necessity bar in
+[skill-validation/adversarial-review.md](../../skill-validation/adversarial-review.md) before adding.
+
+**Acceptance.** A discrimination test where holistic misses an upgrade/old-state regression
+that the migration angle catches; added to `adversarial-review` "Review angles" + "When to
+apply" only if it passes.
+
+### 9. [P2] Add a "portability / environment-assumptions" review angle
+
+**Problem (codex-vs-claude gap, 2026-06-17).** Round-2 codex review of PR #23 caught a test
+that seeded a symlink from a raw temp path (`/var/...`) while `install-skills.sh` computes
+`CLONE` via `pwd -P` (`/private/var/...` on macOS), so the comparison missed and the test
+would fail on setups where the temp dir renders un-canonicalized. The in-session angles
+didn't model environment-dependent path/OS behaviour. Distinct from item 8 (version/old-state
+migration): this is about the *same* code behaving differently across *environments*.
+
+**Direction.** Add an angle whose lens is "what environment assumptions does this make?" —
+path canonicalisation (`/var` vs `/private/var`, symlinked temp dirs), OS/shell differences
+(BSD vs GNU `readlink`/`sed`), filesystem case-sensitivity, locale, line endings, hardcoded
+absolute paths, tool/PATH availability. Applies to installer/shell code, path handling, and
+tests that assert on paths. Validate per the angle-necessity bar (discrimination vs holistic)
+before adding; the round-2 `/var` finding is a ready discrimination example (codex caught it;
+the baseline + current angles did not).
+
+**Acceptance.** A discrimination test where holistic misses an environment-portability defect
+that the portability angle catches; added to `adversarial-review` only if it passes.
 
 ## Must not regress (the parts that worked)
 
