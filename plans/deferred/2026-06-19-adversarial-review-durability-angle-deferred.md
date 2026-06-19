@@ -22,7 +22,8 @@ that dir into their `.claude/skills/` via `install-skills.sh`.
 
 Across PR 2, holistic adversarial reviews — three per-task reviews **and** an Opus whole-branch
 review that returned "ready to merge" — all passed `EventLog` while an external gate (codex) found
-**seven** defects across four rounds. Categorizing them:
+**eight** failure-path defects across rounds 1–5 (six rounds total; round 6 came back clean), all on
+one axis. Categorizing them:
 
 | Finding | Class |
 |---|---|
@@ -33,14 +34,15 @@ review that returned "ready to merge" — all passed `EventLog` while an externa
 | parent-fsync **throws after commit** → un-advanced seq → retry duplicates | mutation not atomic |
 | `replay` accepts an unterminated/torn final record | read accepts non-committed |
 | content-fsync failure leaves partial bytes → retry duplicates | mutation not atomic |
+| parent-fsync abandoned after one transient failure → fresh log's dir entry never durable | durability |
 
-Seven of seven collapse to two invariants of durable / source-of-truth state that the holistic
+All eight collapse to two invariants of durable / source-of-truth state that the holistic
 reviews never enumerated or tested. The reviews optimized the **happy path + spec-field fidelity**
 (envelope fields, snake_case, seq contiguity when all goes well); the gate attacked the **failure /
 crash / partial-state** axis — which, for a source-of-truth store (spec D2: "the log is the source
 of truth; crash consistency = replay + idempotent reconciliation"), **is the primary contract, not
-an edge case.** The miss was systemic (a whole unexamined axis), which is why it took four reactive
-rounds instead of one audit. An angle that names this axis turns it into a checklist the reviewer
+an edge case.** The miss was systemic (a whole unexamined axis), which is why it surfaced over repeated reactive
+rounds instead of one upfront audit. An angle that names this axis turns it into a checklist the reviewer
 runs up front.
 
 ## The principle (generalized beyond event logs)
@@ -156,8 +158,9 @@ rollback, replay rejecting torn tails / blank lines, `resolveSeq` deriving from 
    its place only if the with-angle arm catches violations the control arm consistently misses —
    weight the cross-model gap above, since small-artifact discrimination under-credits coverage value.
 
-**Per-defect GREEN rubric** (each row: a fixture defect → the finding the angled reviewer must
-produce; reusable as discrete micro-tests and as regression checks for the angle's wording):
+**Per-defect GREEN rubric** — each row pairs an INV-1/INV-2 violation the fixture must contain (plant
+any the `b0f4511` file lacks) with the finding the angled reviewer must produce; reusable as discrete
+micro-tests and as regression checks for the angle's wording:
 
 | Defect in fixture | INV | GREEN finding the angle must elicit |
 |---|---|---|

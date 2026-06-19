@@ -28,11 +28,11 @@ via `install-skills.sh`.
 PR 2's pre-PR gate ran **six** rounds. Each round found **new, real** findings (not drift, not
 re-litigation): round 1 an open-failure error leak; round 2 an encode crash + a blank-line read +
 a fresh-file fsync gap; round 3 a parent-fsync throw; round 4 a torn-tail read + an fsync rollback;
-round 5 a parent-fsync retry gap. By the current skill's rule this is **textbook "productive
+round 5 a parent-fsync retry gap (round 6 came back clean). By the current skill's rule this is **textbook "productive
 iteration"** — new issues on new surface each cycle — so the rule says *keep going*. And it would
 have kept going: each fix was correct, each next finding was genuinely new.
 
-But viewed **as a set**, 7 of those findings were one thing — the crash/failure/partial-state paths
+But viewed **as a set**, all eight were one thing — the crash/failure/partial-state paths
 of a source-of-truth store. They only *looked* unrelated (encode vs torn-tail vs fsync are
 different functions and symptoms); they shared a root the artifact had never adversarially examined.
 The reactive loop chased symptoms; it converged only after a human (Simon) prompted a step-back that
@@ -101,7 +101,8 @@ This is a discipline/judgment edit, so it needs a pressure scenario, not just a 
 
 1. **RED (baseline, current skill).** Give a fresh agent the current `adversarial-review-loop` skill
    and a simulated external-reviewer loop over a defect-bearing artifact: **reuse the durability
-   plan's standalone fixture** (the b0f4511 `EventLog` — see that plan's "The fixture" section). Stub
+   plan's standalone fixture** (the b0f4511 `EventLog` — see that plan's "The fixture (standalone)"
+section). Stub
    a "reviewer" that each round returns ONE new, surface-different finding from that file's single
    hidden axis (round 1 the leaked error type → round 2 the silent-drop blank-line read → round 3 the
    no-rollback write → round 4 the torn-tail read). Drive 3–4 rounds. Expect the baseline agent to fix
