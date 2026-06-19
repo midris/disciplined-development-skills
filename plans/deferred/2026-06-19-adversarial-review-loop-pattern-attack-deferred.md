@@ -4,20 +4,24 @@
 loop meta-strategy to add to the `adversarial-review-loop` skill: when an **external** reviewer
 (codex / a CI bot / a pre-PR gate) keeps surfacing **new-but-related** findings round after round,
 step back, name the shared root, and audit that whole axis in one pass — instead of grinding
-reactive single-finding fix→re-review cycles. Skill lives in the **private
-`disciplined-development-skills` repo** (symlinked into `.claude/skills/`), so the edit lands there
-— see Execution caveats.
+reactive single-finding fix→re-review cycles. The edit lands in **this repo**
+(`skills/adversarial-review-loop/SKILL.md`); consumers symlink that dir into their `.claude/skills/`
+via `install-skills.sh`.
 
 **Governing:**
-- Skill to edit: `.claude/skills/adversarial-review-loop/SKILL.md` — refines its "Productive
-  iteration vs Drift" model and the iteration cap / cold-read escape.
-- Related artifact: `plans/deferred/2026-06-19-adversarial-review-durability-angle-deferred.md` —
-  that adds ONE axis (a durability lens); THIS adds the general move of *finding* the axis. They
-  compose: this move says "name the axis and attack it"; the durability angle is a pre-made axis.
+- Skill to edit (in THIS dd repo): `skills/adversarial-review-loop/SKILL.md` — refines its
+  "Productive iteration vs Drift" model and the iteration cap / cold-read escape.
+- Validation record (in THIS dd repo): `skill-validation/adversarial-review-loop.md` — update its
+  RED/GREEN scenario set with the pattern-attack scenario (CLAUDE.md's non-trivial-change rule).
+- Related artifact (same dir): `2026-06-19-adversarial-review-durability-angle-deferred.md` — it adds
+  ONE axis (a durability lens) AND embeds a standalone defect-bearing fixture this plan reuses; THIS
+  adds the general move of *finding* the axis. Compose: "name the axis and attack it" + the
+  durability angle is a pre-made axis.
 - Skill-authoring rules: `superpowers:writing-skills` — Iron Law (no skill edit without a failing
   test first), Match the Form to the Failure, token efficiency (this is a frequently-loaded skill).
-- Real-world evidence (the watched failure): PR 2's 6 pre-PR gate rounds, in the SDD ledger
-  (`.git/sdd/progress.md`) and the `feat/rec-2-event-log` history.
+- Real-world evidence (the watched failure): the **meeting-pipeline** PR-2 "event-log substrate"
+  session — its 6 pre-PR gate rounds, recorded on-page in "Why this exists" below (you don't need
+  that repo to act on this plan).
 
 ## Why this exists (the watched failure)
 
@@ -96,12 +100,14 @@ In `adversarial-review-loop/SKILL.md`:
 This is a discipline/judgment edit, so it needs a pressure scenario, not just a wording check.
 
 1. **RED (baseline, current skill).** Give a fresh agent the current `adversarial-review-loop` skill
-   and a simulated external-reviewer loop: a stub "reviewer" that, each round, returns ONE new, real,
-   surface-different finding all drawn from a single hidden axis (e.g. a file-store with: unwrapped
-   error type → then a silent-drop read → then a no-rollback write → then a torn-tail read). Drive
-   3–4 rounds. Expect the baseline agent to fix each finding and re-submit (grind), never stepping
-   back to name the axis. Record that it keeps looping. (This session is the real-world instance of
-   that baseline — cite it.)
+   and a simulated external-reviewer loop over a defect-bearing artifact: **reuse the durability
+   plan's standalone fixture** (the b0f4511 `EventLog` — see that plan's "The fixture" section). Stub
+   a "reviewer" that each round returns ONE new, surface-different finding from that file's single
+   hidden axis (round 1 the leaked error type → round 2 the silent-drop blank-line read → round 3 the
+   no-rollback write → round 4 the torn-tail read). Drive 3–4 rounds. Expect the baseline agent to fix
+   each finding and re-submit (grind), never stepping back to name the failure-path axis. (The real
+   meeting-pipeline PR-2 session is the live instance — 6 rounds before a human prompted the
+   step-back; cite it.)
 2. **GREEN (with the edit).** Same loop, skill now carrying the pattern-attack move. Expect the agent
    to, by round 2–3, name the shared axis, audit the whole axis, and fix the remaining instances in
    one pass — so the next reviewer round is clean. Success = converges in materially fewer rounds and
@@ -115,9 +121,9 @@ This is a discipline/judgment edit, so it needs a pressure scenario, not just a 
 
 ## Execution caveats
 
-- **Skill repo:** the edit lands in the private `disciplined-development-skills` repo (the
-  `.claude/skills/...` here is a gitignored symlink). Concurrent editors — check branch/clean state
-  before any git op, re-run `install-skills.sh` against this project after.
+- **This IS the dd repo.** Edit `skills/adversarial-review-loop/SKILL.md` here; per the repo's
+  convention use a `feature/`/`docs/` branch + PR. Concurrent editors — check branch/clean state
+  before any git op (`skills-repo-parallel-edits`); re-run `install-skills.sh` into a consumer after.
 - **Compose, don't duplicate:** land this alongside (or after) the `durability` angle plan; this
   skill cross-references that angle as a worked example, and both are TDD'd per writing-skills.
 - **Scope check before building:** if a baseline control already steps back and names the axis

@@ -1,18 +1,22 @@
 # Deferred — `adversarial-review` "durability" angle (failure-path lens for source-of-truth state)
 
-**Parked 2026-06-19**, surfaced during PR 2 of the recording slice (the event-log substrate). A
-generalized review angle to add to the `adversarial-review` skill, with the RED/GREEN protocol to
-build it. The skill lives in the **private `disciplined-development-skills` repo** (symlinked into
-`.claude/skills/`), so this edit lands there, not in this repo — see Execution caveats.
+**Parked 2026-06-19**, surfaced during the **meeting-pipeline** PR-2 "event-log substrate" session.
+A generalized review angle to add to the `adversarial-review` skill, with the validation protocol to
+build it. The edit lands in **this repo** (`skills/adversarial-review/SKILL.md`); consumers symlink
+that dir into their `.claude/skills/` via `install-skills.sh`.
 
 **Governing:**
-- Skill to edit: `.claude/skills/adversarial-review/SKILL.md` — specifically its **Review angles**
-  table (`consistency` / `executability` / `skill-authoring`). The new angle slots in there.
+- Skill to edit (in THIS dd repo): `skills/adversarial-review/SKILL.md` — its **Review angles**
+  table (`consistency` / `executability` / `skill-authoring`) + **When to apply** list.
+- Validation method (in THIS dd repo): `skill-validation/adversarial-review.md` — the
+  **angle-necessity bar** (discrimination vs holistic) every angle must pass. Read it first; its
+  "small-artifact is the wrong instrument" lesson is decisive (see Validation below).
 - Skill-authoring rules: `superpowers:writing-skills` — the **Iron Law** (no skill edit without a
   failing test first), **Match the Form to the Failure**, description-is-triggers-not-workflow,
   token efficiency (adversarial-review is frequently loaded — keep the addition compact).
-- Real-world evidence (the watched failure): PR 2's pre-PR review rounds, recorded in the SDD
-  ledger (`.git/sdd/progress.md`) and the `feat/rec-2-event-log` history.
+- Real-world evidence (the watched failure): the **meeting-pipeline** PR-2 "event-log substrate"
+  session — its 6-round codex pre-PR gate vs Claude's clean holistic reviews. The table below IS the
+  record; you do not need that repo's session history to act on this plan.
 
 ## Why this exists (the watched failure — already real, not hypothetical)
 
@@ -92,29 +96,68 @@ when-to-apply bullet + the compact checklist. Do not narrate. Do **not** push th
 `description` field (writing-skills: the description triggers loading and must stay
 triggers-only — a workflow summary there gets followed instead of the body).
 
-## RED / GREEN test protocol (required before the edit ships — Iron Law)
+## Validation — the discrimination test (read the necessity bar FIRST)
 
-The PR-2 history is a ready-made fixture: real `EventLog` code that a holistic adversarial reviewer
-passed but that carries these defects. Use it as the baseline.
+`skill-validation/adversarial-review.md` is decisive and shapes the whole test: **per-angle
+discrimination on a SMALL artifact is the wrong instrument** — a strong model following the baseline
+posture catches everything when there's nothing to dilute its attention. Of seven prior candidate
+angles only `skill-authoring` won a clean small-artifact discrimination; `consistency` and
+`executability` were kept on **lens-not-in-posture + codex-gap** grounds, not toy discrimination. So
+**do NOT** validate this with a 10-line snippet and conclude "holistic caught it, drop it." Two
+things make the test representative:
 
-1. **RED (baseline, no angle).** Dispatch a fresh reviewer subagent with the *current*
-   `adversarial-review` skill (posture + baseline rules + existing angles, NO durability angle) over
-   a defect-bearing `EventLog` revision. Good fixtures from `feat/rec-2-event-log`:
-   - `try!` encode-crash + interior-blank-drop: the `EventLog.swift` at commit **`b0f4511`**.
-   - torn-tail + content-fsync-no-rollback: **`87ccc9f`** (these were still unfixed at that commit).
-   Expect the baseline to return "no findings" / happy-path-only / spec-fidelity findings and **miss**
-   the INV-1/INV-2 violations. Record verbatim what it does and doesn't flag — that is the failure
-   being fixed.
-2. **GREEN (with angle).** Same reviewer, same fixture, skill now carrying the durability angle.
-   Expect it to enumerate the mutation + read checklist and flag the matching violations the baseline
-   missed.
-3. **Method (per writing-skills "Micro-Test Wording"):** ≥5 reps per variant; always include the
-   no-angle control; read every flagged match by hand (template echoes masquerade as hits); treat
-   variance across reps as a signal the wording isn't binding yet. The angle "works" only if the
-   with-angle arm catches violations the control arm consistently misses.
+1. **Use a realistically-DILUTED fixture** — a full, plausible ~190-line source-of-truth file where
+   the failure-path defects are latent among correct happy-path code, so the reviewer's attention is
+   diluted (the condition under which holistic actually misses them). A tight snippet is the wrong
+   instrument.
+2. **The load-bearing evidence is the cross-model gap**, not a single-reviewer toy result: in the
+   real session, codex's blocking gate caught all seven failure-path defects across six rounds while
+   Claude's holistic per-task reviews AND an Opus whole-branch "ready to merge" missed them (the
+   "Why this exists" table). That gap is the justification — exactly how consistency/executability
+   earned their place.
 
-**Per-finding RED→GREEN matrix** (each row: an `EventLog` defect → the finding the angled reviewer
-must produce; reusable as discrete micro-tests and as regression checks for the angle's wording):
+### The fixture (standalone)
+
+The real diluted artifact: in the **meeting-pipeline** repo
+(`/Users/sidris/work/coronis/code/meeting-pipeline`), the initial Task-2.2 `EventLog` (richest
+co-present defect set):
+
+```
+git show b0f4511:swift/Steno/Sources/Steno/Events/EventLog.swift
+```
+
+(commit reachable from `main` via merge `c2a5403`; the `feat/rec-2-event-log` branch was deleted on
+merge.) If you don't have that repo, plant the defects below into any realistic, full-length
+append-only-log / file-store artifact — the point is a diluted real-looking file, not these lines in
+isolation:
+
+- **append** — `let data = try! StenoJSON.encoder().encode(envelope)` (crashes the process on a
+  non-finite `Double`); `append` is non-`throws`; `writeAndSync` does **no rollback** on a failed
+  write/fsync.
+- **replay** — `raw.split(separator: 0x0A, omittingEmptySubsequences: true)` then decode-each:
+  silently **drops interior blank lines** AND **accepts a final record with no trailing `\n`** (no
+  `raw.last == 0x0A` check) — a torn/uncommitted tail is read as committed.
+- **resolveSeq** — `nextSeq = raw.split(…).count + 1` (a raw **line count**; the doc-comment even
+  claims "(max seq found) + 1" but counts lines) → `append` extends a gapped/torn log instead of
+  refusing.
+
+The GREEN-target (fixed) behaviour is on meeting-pipeline `main`: atomic append with truncate-
+rollback, replay rejecting torn tails / blank lines, `resolveSeq` deriving from a validated replay.
+
+### RED / GREEN
+
+1. **RED (baseline, current skill).** Fresh reviewer with the *current* `adversarial-review`
+   (posture + baseline Rules + existing angles, NO durability angle) over the diluted fixture. Expect
+   happy-path / spec-fidelity findings and a **miss** on the INV-1/INV-2 violations. Record verbatim.
+2. **GREEN (with the angle).** Same reviewer + fixture, skill now carrying the durability angle.
+   Expect it to enumerate the mutation + read checklist and flag the violations the baseline missed.
+3. **Method (writing-skills "Micro-Test Wording"):** ≥5 reps per variant; always include the no-angle
+   control; read every flagged match by hand (template echoes masquerade as hits). The angle earns
+   its place only if the with-angle arm catches violations the control arm consistently misses —
+   weight the cross-model gap above, since small-artifact discrimination under-credits coverage value.
+
+**Per-defect GREEN rubric** (each row: a fixture defect → the finding the angled reviewer must
+produce; reusable as discrete micro-tests and as regression checks for the angle's wording):
 
 | Defect in fixture | INV | GREEN finding the angle must elicit |
 |---|---|---|
@@ -128,13 +171,11 @@ must produce; reusable as discrete micro-tests and as regression checks for the 
 
 ## Execution caveats
 
-- **Skill repo:** the edit lands in the private `disciplined-development-skills` repo (the
-  `.claude/skills/adversarial-review/SKILL.md` here is a gitignored symlink). That repo has concurrent
-  editors — check its branch and clean state before any git op (per the `skills-repo-parallel-edits`
-  memory), and re-run `install-skills.sh` against this project after.
-- **Optional parallel update:** the `dd_review.py` pre-PR engine (the harness counterpart that caught
-  these) already has the instinct; if its review prompt is templated, fold the same angle in for
-  consistency — secondary to the skill edit.
+- **This IS the dd repo.** Edit `skills/adversarial-review/SKILL.md` here. Per the repo's convention
+  use a `feature/`/`docs/` branch + PR; concurrent editors — check branch/clean state before any git
+  op (`skills-repo-parallel-edits`); re-run `install-skills.sh` into a consumer to exercise it after.
+- **Optional parallel update:** the `dd_review_runner.py` pre-PR engine already has the instinct; if
+  its review prompt is templated, fold the same angle in for consistency — secondary to the skill edit.
 - **Scope check before building:** if a fresh baseline reviewer *already* reliably catches these
   without the angle (control doesn't exhibit the failure), there's nothing to add — stop (writing-
   skills: no skill without a failing control). The PR-2 evidence says it won't, but re-confirm on a
