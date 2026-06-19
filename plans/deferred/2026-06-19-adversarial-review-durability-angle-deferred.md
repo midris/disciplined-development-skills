@@ -70,8 +70,9 @@ durability contract.
 
 Add one row to the **Review angles** table and a matching **When to apply** bullet. Draft:
 
-- **Angle name:** `durability` (working name; the RED/GREEN may favor `crash-consistency` or
-  `failure-path` — pick whichever wording actually shifts reviewer behavior in test).
+- **Angle name:** `durability` — **locked** (the loop plan cross-references the angle by this name;
+  `sweeping-stale-references`). The angle's *prose* (Looks-for + checklist wording) is still refined
+  by the RED/GREEN; the name is not.
 - **Looks for:** "failure/crash/partial-state paths of durable or source-of-truth state — durable
   mutations that aren't atomic (partial write, committed-but-unrecorded, crash on bad input, leaked
   error type, non-retry-safe) and reads that accept non-committed data (torn/partial final record,
@@ -79,8 +80,10 @@ Add one row to the **Review angles** table and a matching **When to apply** bull
 - **When to apply:** the artifact creates, persists, or reads durable / source-of-truth state — a
   file write, append-only log, transaction, journal, spool, or any store another component treats as
   the source of truth. (Skip for pure in-memory / stateless code.)
-- **Enumerate checklist** (the lens's concrete probes — this is what makes it operational, mirroring
-  how `executability` lists "missing definitions, ambiguous contracts"):
+- **Enumerate checklist** (the lens's concrete probes — what makes it operational, mirroring how
+  `executability` lists "missing definitions, ambiguous contracts"). **Layout:** a compact sub-list
+  under this angle's **When to apply** entry, NOT in the one-line table row — the existing angles are
+  single rows; this checklist is the new angle's distinguishing operational content:
   - *Mutation:* partial write then error → rolled back? flush/commit fails after write → acknowledged
     anyway? process killed mid-op → torn record? pathological input (non-encodable, NaN, oversized) →
     crash or typed error? failure surfaced as the documented error type or a leaked lower-layer one?
@@ -311,13 +314,18 @@ finding the angled reviewer must produce (the baseline holistic review misses th
 | `append` is non-`throws`; `writeAndSync` / `openOrCreate` `fatalError` on fsync / open failure | INV-1 | a transient I/O failure (ENOSPC / EIO / bad path) crashes the whole app instead of a recoverable typed error — no error contract |
 | `resolveSeq` counts lines (its doc-comment claims "max seq found") and `try?` swallows a read error | INV-1 | `append` extends a gapped / corrupt log by miscounting; an unreadable file is treated as fresh and overwritten |
 | `replay` splits with `omittingEmptySubsequences: true` | INV-2 | an interior blank line is silently dropped, masking corruption |
-| `replay` has no trailing-`\n` (`raw.last == 0x0A`) check | INV-2 | a torn / unterminated final record (crash mid-append) is accepted as committed |
+| `replay` has no trailing-`\n` (`raw.last == 0x0A`) check | INV-2 | a **complete-but-unterminated** final record (JSON bytes flushed, the trailing `\n` lost) is accepted as committed. Plant exactly that — a *truncated*-JSON tail is correctly rejected by the decoder, so the test must use a valid JSON line with no trailing newline |
 
 The GREEN-target (fixed) behaviour is on meeting-pipeline `main`: `append throws` with a
 truncate-to-pre-write-offset rollback, `replay` rejecting torn tails and interior blank lines, and
 `resolveSeq` deriving `nextSeq` from a validated `replay`.
 
 ### RED / GREEN
+
+**Modality:** a *paper / transcript review*, not a build — a reviewer READS the inlined fixture +
+applies the skill and reports findings; nothing is compiled or run. So the fixture's undefined
+external types (`EventEnvelope`, `StenoJSON` — obvious deps a reviewer reads past) don't matter, and
+the loop plan's stub-reviewer is likewise canned text, not a live model.
 
 1. **RED (baseline, current skill).** Fresh reviewer with the *current* `adversarial-review`
    (posture + baseline Rules + existing angles, NO durability angle) over the file above. Expect
@@ -342,7 +350,8 @@ truncate-to-pre-write-offset rollback, `replay` rejecting torn tails and interio
   git op; re-run `install-skills.sh` into a consumer to exercise it after.
 - **Optional parallel update:** the `dd_review_runner.py` pre-PR engine already has the instinct; if
   its review prompt is templated, fold the same angle in for consistency — secondary to the skill edit.
-- **Scope check before building:** if a fresh baseline reviewer *already* reliably catches these
-  without the angle (control doesn't exhibit the failure), there's nothing to add — stop (writing-
-  skills: no skill without a failing control). The PR-2 evidence says it won't, but re-confirm on a
-  current fixture.
+- **Scope check (takes precedence over the per-fixture RED/GREEN):** the angle is unjustified only if
+  the **cross-model gap fails to reproduce** — i.e. an independent model (codex) ALSO misses these on
+  a real diluted artifact. A strong holistic *Claude* reviewer also catching them on this single
+  inlined file does **NOT** veto (necessity bar: small-artifact discrimination under-credits this
+  class — see the Decision rule). Confirm the codex-gap, not just a failing Claude control.
