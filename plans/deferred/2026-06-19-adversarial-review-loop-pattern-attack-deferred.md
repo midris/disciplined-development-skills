@@ -103,9 +103,10 @@ This is a discipline/judgment edit, so it needs a pressure scenario, not just a 
    and a simulated external-reviewer loop over a defect-bearing artifact: **reuse the durability
    plan's standalone fixture** (the b0f4511 `EventLog` — see that plan's "The fixture (standalone)"
 section). Stub
-   a "reviewer" that each round returns ONE new, surface-different finding from that file's single
-   hidden axis (round 1 the leaked error type → round 2 the silent-drop blank-line read → round 3 the
-   no-rollback write → round 4 the torn-tail read). Drive 3–4 rounds. Expect the baseline agent to fix
+   a "reviewer" that each round returns ONE new, surface-different finding actually present in that file,
+   all on its single hidden axis (round 1 the `fatalError`-on-I/O-failure crash → round 2 the
+   silent-drop blank-line read → round 3 the line-count `resolveSeq` that extends a corrupt log →
+   round 4 the torn-tail-accepted read). Drive 3–4 rounds. Expect the baseline agent to fix
    each finding and re-submit (grind), never stepping back to name the failure-path axis. (The real
    meeting-pipeline PR-2 session is the live instance — 6 rounds before a human prompted the
    step-back; cite it.)
@@ -123,8 +124,8 @@ section). Stub
 ## Execution caveats
 
 - **This IS the dd repo.** Edit `skills/adversarial-review-loop/SKILL.md` here; per the repo's
-  convention use a `feature/`/`docs/` branch + PR. Concurrent editors — check branch/clean state
-  before any git op (`skills-repo-parallel-edits`); re-run `install-skills.sh` into a consumer after.
+  convention use a `feature/`/`docs/` branch + PR. With concurrent editors, check branch/clean state
+  before any git op; re-run `install-skills.sh` into a consumer after.
 - **Compose, don't duplicate:** land this alongside (or after) the `durability` angle plan; this
   skill cross-references that angle as a worked example, and both are TDD'd per writing-skills.
 - **Scope check before building:** if a baseline control already steps back and names the axis

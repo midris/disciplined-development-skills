@@ -108,75 +108,238 @@ angles only `skill-authoring` won a clean small-artifact discrimination; `consis
 **do NOT** validate this with a 10-line snippet and conclude "holistic caught it, drop it." Two
 things make the test representative:
 
-1. **Use a realistically-DILUTED fixture** — a full, plausible ~190-line source-of-truth file where
+1. **Use a realistically-DILUTED fixture** — a full, plausible ~160-line source-of-truth file where
    the failure-path defects are latent among correct happy-path code, so the reviewer's attention is
    diluted (the condition under which holistic actually misses them). A tight snippet is the wrong
    instrument.
 2. **The load-bearing evidence is the cross-model gap**, not a single-reviewer toy result: in the
-   real session, codex's blocking gate caught all seven failure-path defects across six rounds while
-   Claude's holistic per-task reviews AND an Opus whole-branch "ready to merge" missed them (the
-   "Why this exists" table). That gap is the justification — exactly how consistency/executability
-   earned their place.
+   real session, codex's blocking gate caught all eight failure-path defects across rounds 1–5 (round
+   6 clean) while Claude's holistic per-task reviews AND an Opus whole-branch "ready to merge" missed
+   them (the "Why this exists" table). That gap is the justification — exactly how consistency/
+   executability earned their place.
 
 ### The fixture (standalone)
 
-The real diluted artifact: in the **meeting-pipeline** repo
-(`/Users/sidris/work/coronis/code/meeting-pipeline`), the initial Task-2.2 `EventLog` (richest
-co-present defect set):
+The fixture is the **initial Task-2.2 `EventLog`** — a real, ~160-line source-of-truth file the
+holistic reviews passed, with the failure-path defects latent among correct happy-path code (the
+dilution the necessity bar requires). It is inlined below so the test needs no other repo.
+Provenance: `git show b0f4511:swift/Steno/Sources/Steno/Events/EventLog.swift` in the meeting-pipeline
+repo (reachable from `main` via merge `c2a5403`; the `feat/rec-2-event-log` branch was deleted on merge).
 
+This single commit carries a **representative subset** of the eight historical findings, not all of
+them: the parent-dir-fsync and post-throw rollback findings appeared in *later* commits (after
+`append` became throwing), so they are absent here and absent from the rubric below.
+
+```swift
+// Append-only typed event log — Decision 2, recording-slice PR 2 Task 2.2.
+//
+// `EventLog<Payload>` owns a single `events.jsonl` file:
+//   - `append` stamps seq + ts, encodes via StenoJSON, fsyncs, returns the envelope.
+//   - `replay` decodes all lines via StenoJSON and validates seq contiguity from 1.
+//
+// Wire conventions: StenoJSON.encoder() / .decoder() (ISO-8601 ms dates, sorted keys).
+// No internal locking: single-writer-per-log is the owner's guarantee (Decision 2).
+// The PR-4 engine actor serialises all appends; no lock is YAGNI here.
+
+import Darwin
+import Foundation
+
+// MARK: - EventLogError
+
+/// Errors thrown by `EventLog.replay()`.
+public enum EventLogError: Error, Equatable {
+    /// `seq` jumped — expected `expected`, found `found`. Indicates truncation or corruption.
+    case seqGap(expected: Int, found: Int)
+}
+
+// MARK: - EventLog
+
+/// Append-only typed event log backed by a newline-delimited JSON file.
+///
+/// One `EventEnvelope<Payload>` per line; no compaction (Decision 2: meetings are finite).
+/// Create one `EventLog` per log file; do not share instances across writers.
+public final class EventLog<Payload: Codable & Sendable> {
+    private let url: URL
+    private var nextSeq: Int = 0          // 0 = unresolved; resolved on first append/init
+    private var fileHandle: FileHandle?
+    private var seqResolved = false
+
+    public init(url: URL) {
+        self.url = url
+    }
+
+    deinit {
+        fileHandle?.closeFile()
+    }
+
+    // MARK: - append
+
+    /// Assigns the next `seq`, stamps `ts` at the wall clock, writes one line, fsyncs,
+    /// and returns the durable envelope.
+    ///
+    /// Creates the file if it does not exist. Parent directory must already exist.
+    @discardableResult
+    public func append(
+        type: String,
+        meetingId: String?,
+        requestId: String?,
+        payload: Payload
+    ) -> EventEnvelope<Payload> {
+        // Resolve nextSeq on the first append (derive from file if it exists).
+        if !seqResolved {
+            resolveSeq()
+        }
+
+        let seq = nextSeq
+        let envelope = EventEnvelope<Payload>(
+            seq: seq,
+            type: type,
+            ts: StenoJSON.wireQuantized(Date()),
+            meetingId: meetingId,
+            requestId: requestId,
+            schemaVersion: 1,
+            payload: payload
+        )
+
+        // Encode; crash is intentional — encoding our own well-typed struct failing would
+        // indicate a programmer error (non-Codable payload type slipping through).
+        // swiftlint:disable:next force_try
+        let lineData: Data = {
+            let data = try! StenoJSON.encoder().encode(envelope)
+            var d = data
+            d.append(contentsOf: [0x0A]) // "\n"
+            return d
+        }()
+
+        writeAndSync(lineData)
+        nextSeq = seq + 1
+        return envelope
+    }
+
+    // MARK: - replay
+
+    /// Reads all lines in order, decodes via `StenoJSON.decoder()`, validates contiguous
+    /// seq starting at 1, and returns the full envelope array.
+    ///
+    /// - Throws: `EventLogError.seqGap` on a missing or out-of-order seq.
+    /// - Throws: `DecodingError` on malformed JSON or unknown `schema_version`.
+    public func replay() throws -> [EventEnvelope<Payload>] {
+        guard FileManager.default.fileExists(atPath: url.path) else {
+            return []
+        }
+
+        let raw = try Data(contentsOf: url)
+        guard !raw.isEmpty else { return [] }
+
+        let decoder = StenoJSON.decoder()
+        var results: [EventEnvelope<Payload>] = []
+        var expectedSeq = 1
+
+        // Split on newlines; skip trailing empty line.
+        let lines = raw.split(separator: 0x0A, omittingEmptySubsequences: true)
+        for lineData in lines {
+            let envelope = try decoder.decode(EventEnvelope<Payload>.self, from: Data(lineData))
+            guard envelope.seq == expectedSeq else {
+                throw EventLogError.seqGap(expected: expectedSeq, found: envelope.seq)
+            }
+            results.append(envelope)
+            expectedSeq += 1
+        }
+        return results
+    }
+
+    // MARK: - Private helpers
+
+    /// Scans the existing file (if any) to determine `nextSeq`.
+    /// Empty / missing → nextSeq = 1. Non-empty → nextSeq = (max seq found) + 1.
+    /// Uses a lightweight line-count scan rather than a full decode to keep init cheap.
+    private func resolveSeq() {
+        seqResolved = true
+        guard FileManager.default.fileExists(atPath: url.path),
+              let raw = try? Data(contentsOf: url),
+              !raw.isEmpty
+        else {
+            nextSeq = 1
+            return
+        }
+        // Count non-empty lines; each corresponds to one event. seq starts at 1.
+        let count = raw.split(separator: 0x0A, omittingEmptySubsequences: true).count
+        nextSeq = count + 1
+    }
+
+    /// Appends `data` to the file (creating it if absent) and calls fsync(2).
+    private func writeAndSync(_ data: Data) {
+        if fileHandle == nil {
+            openOrCreate()
+        }
+        guard let fh = fileHandle else {
+            // Should not happen; openOrCreate() traps on failure.
+            return
+        }
+        fh.seekToEndOfFile()
+        fh.write(data)
+        // fsync(2) via POSIX — the durable commit point (D2).
+        // Failure (EIO, ENOSPC, …) is a fatal I/O error: the append is the source of truth
+        // and acknowledging an un-fsync'd write would violate D2.
+        if fsync(fh.fileDescriptor) == -1 {
+            let savedErrno = errno
+            fatalError("EventLog: fsync(2) failed with errno \(savedErrno): \(String(cString: strerror(savedErrno)))")
+        }
+    }
+
+    /// Opens the file for appending, creating it atomically if it does not exist.
+    private func openOrCreate() {
+        if !FileManager.default.fileExists(atPath: url.path) {
+            FileManager.default.createFile(atPath: url.path, contents: nil)
+        }
+        fileHandle = FileHandle(forUpdatingAtPath: url.path)
+        // If we can't open the file, crash with a clear message — a write failure
+        // here is a programmer error (wrong path, missing parent dir).
+        guard fileHandle != nil else {
+            fatalError("EventLog: cannot open file for writing at \(url.path)")
+        }
+    }
+}
 ```
-git show b0f4511:swift/Steno/Sources/Steno/Events/EventLog.swift
-```
 
-(commit reachable from `main` via merge `c2a5403`; the `feat/rec-2-event-log` branch was deleted on
-merge.) If you don't have that repo, plant the defects below into any realistic, full-length
-append-only-log / file-store artifact — the point is a diluted real-looking file, not these lines in
-isolation:
+**Per-defect GREEN rubric** — each row is a defect ACTUALLY present in the file above, paired with the
+finding the angled reviewer must produce (the baseline holistic review misses these on the diluted file):
 
-- **append** — `let data = try! StenoJSON.encoder().encode(envelope)` (crashes the process on a
-  non-finite `Double`); `append` is non-`throws`; `writeAndSync` does **no rollback** on a failed
-  write/fsync.
-- **replay** — `raw.split(separator: 0x0A, omittingEmptySubsequences: true)` then decode-each:
-  silently **drops interior blank lines** AND **accepts a final record with no trailing `\n`** (no
-  `raw.last == 0x0A` check) — a torn/uncommitted tail is read as committed.
-- **resolveSeq** — `nextSeq = raw.split(…).count + 1` (a raw **line count**; the doc-comment even
-  claims "(max seq found) + 1" but counts lines) → `append` extends a gapped/torn log instead of
-  refusing.
+| Defect (in the fixture above) | INV | GREEN finding the angle must elicit |
+|---|---|---|
+| `append`'s `try!` encode (the `lineData` closure) | INV-1 | a non-finite `Double` payload crashes the process instead of returning a typed error |
+| `append` is non-`throws`; `writeAndSync` / `openOrCreate` `fatalError` on fsync / open failure | INV-1 | a transient I/O failure (ENOSPC / EIO / bad path) crashes the whole app instead of a recoverable typed error — no error contract |
+| `resolveSeq` counts lines (its doc-comment claims "max seq found") and `try?` swallows a read error | INV-1 | `append` extends a gapped / corrupt log by miscounting; an unreadable file is treated as fresh and overwritten |
+| `replay` splits with `omittingEmptySubsequences: true` | INV-2 | an interior blank line is silently dropped, masking corruption |
+| `replay` has no trailing-`\n` (`raw.last == 0x0A`) check | INV-2 | a torn / unterminated final record (crash mid-append) is accepted as committed |
 
-The GREEN-target (fixed) behaviour is on meeting-pipeline `main`: atomic append with truncate-
-rollback, replay rejecting torn tails / blank lines, `resolveSeq` deriving from a validated replay.
+The GREEN-target (fixed) behaviour is on meeting-pipeline `main`: `append throws` with a
+truncate-to-pre-write-offset rollback, `replay` rejecting torn tails and interior blank lines, and
+`resolveSeq` deriving `nextSeq` from a validated `replay`.
 
 ### RED / GREEN
 
 1. **RED (baseline, current skill).** Fresh reviewer with the *current* `adversarial-review`
-   (posture + baseline Rules + existing angles, NO durability angle) over the diluted fixture. Expect
-   happy-path / spec-fidelity findings and a **miss** on the INV-1/INV-2 violations. Record verbatim.
-2. **GREEN (with the angle).** Same reviewer + fixture, skill now carrying the durability angle.
-   Expect it to enumerate the mutation + read checklist and flag the violations the baseline missed.
-3. **Method (writing-skills "Micro-Test Wording"):** ≥5 reps per variant; always include the no-angle
-   control; read every flagged match by hand (template echoes masquerade as hits). The angle earns
-   its place only if the with-angle arm catches violations the control arm consistently misses —
-   weight the cross-model gap above, since small-artifact discrimination under-credits coverage value.
-
-**Per-defect GREEN rubric** — each row pairs an INV-1/INV-2 violation the fixture must contain (plant
-any the `b0f4511` file lacks) with the finding the angled reviewer must produce; reusable as discrete
-micro-tests and as regression checks for the angle's wording:
-
-| Defect in fixture | INV | GREEN finding the angle must elicit |
-|---|---|---|
-| `append` `try!`-encodes the payload | INV-1 | a pathological payload crashes the process instead of a typed error |
-| open-failure path returns a raw `CocoaError` | INV-1 | failure leaks a lower-layer error past the documented contract |
-| flush/parent-fsync throws after the write commits | INV-1 | committed-but-unrecorded → retry duplicates; mutation not atomic |
-| write succeeds, fsync fails, no rollback | INV-1 | partial bytes left on disk → retry duplicates/corrupts |
-| `replay` uses `omittingEmptySubsequences` | INV-2 | interior blank line silently dropped, masking corruption |
-| `replay` accepts a final record with no terminator | INV-2 | torn/uncommitted tail accepted as committed |
-| envelope decode tolerates an unknown `schema_version` | INV-2 | forward/unknown version silently mis-parsed instead of rejected |
+   (posture + baseline Rules + existing angles, NO durability angle) over the file above. Expect
+   happy-path / spec-fidelity findings and a **miss** on the rubric's INV-1/INV-2 violations. Record
+   verbatim.
+2. **GREEN (with the angle).** Same reviewer + same file, skill now carrying the durability angle.
+   Expect it to enumerate the mutation + read checklist and flag the rubric violations the baseline
+   missed.
+3. **Decision rule — this is NOT a holistic-vetoable gate.** Per the necessity bar, single-reviewer
+   small-artifact discrimination under-credits this class (consistency/executability were kept on
+   lens-not-in-posture + codex-gap grounds, not toy discrimination). So the angle **ships** on the
+   cross-model gap (codex caught all eight; Claude's holistic + whole-branch missed them) plus the
+   lens-not-in-posture argument; the RED/GREEN above is **corroborating**, not a pass/fail a strong
+   holistic reviewer can veto by happening to catch a defect on this one file.
+4. **Method (writing-skills "Micro-Test Wording"):** ≥5 reps per variant; always include the no-angle
+   control; read every flagged match by hand (template echoes masquerade as hits).
 
 ## Execution caveats
 
 - **This IS the dd repo.** Edit `skills/adversarial-review/SKILL.md` here. Per the repo's convention
-  use a `feature/`/`docs/` branch + PR; concurrent editors — check branch/clean state before any git
-  op (`skills-repo-parallel-edits`); re-run `install-skills.sh` into a consumer to exercise it after.
+  use a `feature/`/`docs/` branch + PR; with concurrent editors, check branch/clean state before any
+  git op; re-run `install-skills.sh` into a consumer to exercise it after.
 - **Optional parallel update:** the `dd_review_runner.py` pre-PR engine already has the instinct; if
   its review prompt is templated, fold the same angle in for consistency — secondary to the skill edit.
 - **Scope check before building:** if a fresh baseline reviewer *already* reliably catches these
