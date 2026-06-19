@@ -113,8 +113,8 @@ section). Stub
    - *Stub mechanics:* the "reviewer" is **canned text** (a hardcoded one-finding-per-round script),
      not a live reviewer model — that determinism is the point. The four scripted defects are a
      subset of the durability rubric's five (the `try!`-encode is omitted for brevity; any ≥2
-     same-axis defects fire the move). The durability plan's round-by-round timeline is the
-     *historical* 8-finding record across the full PR-2 commit sequence (some on code the `b0f4511`
+     same-axis defects fire the move). This plan's round-by-round timeline (in "Why this exists" above)
+     is the *historical* 8-finding record across the full PR-2 commit sequence (some on code the `b0f4511`
      fixture predates); this stub uses only the four defects actually in that fixture.
 2. **GREEN (with the edit).** Same loop, skill now carrying the pattern-attack move. Expect the agent
    to, by round 2–3, name the shared axis, audit the whole axis, and fix the remaining instances in
