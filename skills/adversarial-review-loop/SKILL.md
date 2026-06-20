@@ -20,26 +20,26 @@ description: Use when an adversarial review surfaces findings — including when
 
 A **cycle** is **review → class-sweep → re-run**. Take at most **three**. If the third cycle still returns [P0]/[P1]/[P2], take the cold-read escape below — do not proceed to a fourth cycle.
 
-Three outcomes per cycle:
-- **Scattered** — new surface, no nameable shared root → continue (fix + re-run).
+Three outcomes per cycle — new surface each round is necessary but not sufficient; the **root** decides:
+- **Scattered** — new surface, no shared root → continue (fix + re-run).
 - **Drift** — re-litigation or trivial/style nits → the cap interrupts it.
-- **Shared-root** — new, surface-different findings that name **one axis** → attack the root (next section). New surface alone isn't "productive"; it must also be root-scattered.
+- **Shared-root** — surface-different findings that name **one axis** → attack the root (next section).
 
 Below the cap, the same *kind* of finding recurring across cycles means step 1's class-sweep was incomplete — do it now, not another single-instance round. At the cap, any findings trigger the cold-read escape, never a sweep-and-continue.
 
 ## Find the pattern, attack the root
 
-**Trigger:** across ≥2 cycles, new findings — each new, real, surface-different — name **one axis** (all failure-path, all concurrency, all input-validation, all error-contract, all auth-boundary, …). Then:
+**Trigger:** across ≥2 cycles, new surface-different findings name **one axis** (all failure-path, all concurrency, all auth-boundary, …). Then:
 
 1. **Name the axis.**
 2. **Enumerate every site that could violate the invariant — project-wide, across all code paths, not just the reviewed file(s) or cited locations.** A root closed only locally resurfaces elsewhere and restarts the loop there later. Use a ready checklist if one fits (e.g. the `durability` angle in `adversarial-review`).
 3. **Fix the whole axis in one pass, then re-run.**
 
-This is a **higher-order class-sweep**: step 1 sweeps one *named class within a round*; this sweeps a class spanning *rounds and surface-different symptoms*. Proactive, below the cap — not the cold-read escape (at-cap, fresh eyes).
+A **higher-order class-sweep**: step 1 sweeps one class within a round; this sweeps a class spanning rounds and surface-different symptoms.
 
 **At the cap, escape — even for a shared root.** A finding on the 3rd cycle's re-run *is* the cap (3 cycles done, findings remain) — not a new below-cap round to attack the root in. Root-attack is below-cap only; at the cap a shared root still goes to the cold-read escape (which may confirm the axis and call for a redo).
 
-**Don't over-fire.** A shared root = the findings violate **one invariant** — closing it removes the whole class. A shared *topic* is not a root: a SQL-injection and an N+1 query both "touch the database" but violate different invariants (parameterize untrusted input vs. batch related queries) → scattered, continue. Don't invent an umbrella axis.
+**Don't over-fire.** A shared root = findings that violate **one invariant** (closing it removes the class) — not a shared *topic*. A SQL-injection and an N+1 query both "touch the database" but violate different invariants (parameterize input vs. batch queries) → scattered, continue.
 
 ## At the cap: cold-read escape
 
@@ -50,13 +50,7 @@ model, another human, or a clean new session.
 - **Diverges materially** → trust the cold read; stop.
 - **Confirms fix-forward** → continue only if productive; the cap resets for three more cycles, gated by another escape if findings persist.
 
-Record the escape and verdict in a work artifact so the next reader sees
-why iteration stopped or continued: plan, spec, PR, review thread, or code
-comment when the escape is design rationale.
-
-A comment capturing code/design rationale at the decision site is often
-the most effective way to communicate with a future reviewer or reader
-when they are about to re-litigate.
+Record the escape and verdict in a work artifact (plan, spec, PR, review thread, or — for design rationale — a code comment at the decision site) so the next reader sees why iteration stopped.
 
 ## What counts as "clean"
 

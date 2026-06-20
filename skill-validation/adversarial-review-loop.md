@@ -104,6 +104,13 @@ cap (+ a rationalization row): T3 → **5/5 escape**; NF still **5/5 attack-root
 **Baseline (2026-06-20, post-fix) — full suite green:** NF 5/5, T3 5/5, T4 5/5;
 CS, T2, T5, T6, T7, PW, XL 3/3 each.
 
+**Trim (2026-06-20) — REFACTOR at parity.** Cut ~45 words of redundancy/framing
+(trichotomy intro, trigger example list, higher-order line, over-fire tail,
+escape-recording prose); load-bearing wording (one invariant, SQLi/N+1, the at-cap
+fix, project-wide, the validated rationalization rows) untouched. Full suite re-run
+on the trimmed skill — **all 10 cells green at parity** (NF 5/5, T3 5/5, T4 5/5;
+CS/T2/T5/T6/T7/PW/XL 3/3).
+
 **On edits to this move:** re-run the shared-root RED/GREEN, **T4 over-fire**,
 **T3 at-cap**, and the **project-wide / cross-language** scenarios; keep the
 **"one invariant"** wording.
