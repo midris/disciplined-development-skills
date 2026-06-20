@@ -104,12 +104,38 @@ cap (+ a rationalization row): T3 → **5/5 escape**; NF still **5/5 attack-root
 **Baseline (2026-06-20, post-fix) — full suite green:** NF 5/5, T3 5/5, T4 5/5;
 CS, T2, T5, T6, T7, PW, XL 3/3 each.
 
-**Trim (2026-06-20) — REFACTOR at parity.** Cut ~45 words of redundancy/framing
-(trichotomy intro, trigger example list, higher-order line, over-fire tail,
-escape-recording prose); load-bearing wording (one invariant, SQLi/N+1, the at-cap
-fix, project-wide, the validated rationalization rows) untouched. Full suite re-run
-on the trimmed skill — **all 10 cells green at parity** (NF 5/5, T3 5/5, T4 5/5;
+**Trim (2026-06-20) — REFACTOR at parity.** Trimmed ~45 words of redundancy/framing
+(trichotomy intro reworded + caveat moved up front, trigger example list shortened,
+higher-order line's escape clause cut, over-fire tail cut, escape-recording prose
+merged); load-bearing wording (one invariant, SQLi/N+1, the at-cap fix, project-wide,
+the validated rationalization rows) untouched. Full suite re-run on the trimmed
+skill — **all 10 cells green at parity** (NF 5/5, T3 5/5, T4 5/5;
 CS/T2/T5/T6/T7/PW/XL 3/3).
+
+**Pre-PR cold-read (2026-06-20; opus — skill-authoring + consistency + concise).**
+2 P2 + 3 P3; both P2s RED-tested before acting (Iron Law):
+- *Same-kind-recurring 4th case.* The 3-outcome trichotomy doesn't explicitly slot
+  the "same *kind* recurring → class-sweep was incomplete" backstop (the line under
+  "Iteration cap"). RED **3/3 correct** anyway — agents sweep the class branch-wide
+  whatever label they use; the actions converge. No edit.
+- *Same-area umbrella* → accepted limitation, below.
+- P3s: corrected the trim "cut" wording (this file); kept the higher-order line
+  (1-line anchor); dismissed "cap stated 3 ways" — the cap-rule / at-cap-line
+  redundancy **is** the at-cap fix, so consolidating would regress it.
+
+**Known limitation — same-area umbrella (accepted, not fixed).** The over-fire guard
+rejects *cross-domain* umbrellas (T4: SQLi vs N+1, "touch the database" — **5/5
+scattered**) but not *same-area* ones: a data race (missing lock) + a deadlock
+(lock-order) are two different invariants → the strict "one invariant" test says
+*continue*, yet agents **3/3 umbrella them as "the concurrency axis" and audit**.
+Pre-existing, not a trim regression — the pre-trim skill (with the since-cut "don't
+invent an umbrella axis" line) also went **3/3**, one rep working around the line
+explicitly. *Accepted because* a concurrency audit after a race + a deadlock is
+defensible and low-harm (it tends to find real siblings), unlike the useless
+database audit. *Not fixed because* a tighter guard would over-fit this contrived
+case and risk under-firing the genuine shared-root case (NF), which must keep
+firing. Revisit only if a same-area over-fire causes real waste in practice — that
+is the watched failure to wait for.
 
 **On edits to this move:** re-run the shared-root RED/GREEN, **T4 over-fire**,
 **T3 at-cap**, and the **project-wide / cross-language** scenarios; keep the
