@@ -96,11 +96,15 @@ The posture and rules above are the always-on baseline of every review — the *
 | **consistency** | divergence across the corpus — contract / signature / import drift, terminology drift (one concept, different names), wording drift, single-source duplication |
 | **executability** | could a zero-context implementer execute this? missing definitions, ambiguous contracts, misdirecting file lists |
 | **skill-authoring** | apply `superpowers:writing-skills` — a `description` that summarizes the workflow (agents skip the body), discipline rules with open rationalization loopholes, claims not backed by a watched failure |
+| **durability** | failure and partial-state paths of durable / source-of-truth state: non-atomic mutations, and reads that accept non-committed data |
 
 **When to apply:**
 - **consistency** — every artifact.
 - **executability** — artifacts with instructions a reader must execute (plans, specs, runbooks, command / setup docs).
 - **skill-authoring** — when the artifact is a skill (a `SKILL.md`).
+- **durability** — the artifact creates, persists, or reads durable / source-of-truth state (file write, append-only log, transaction, journal, spool, or any store another component treats as the source of truth). Skip for pure in-memory / stateless code. Run two checklists:
+  - *Mutation:* partial write then error → rolled back? flush/commit fails after the write → acknowledged anyway? process killed mid-op → torn record? a write-path crash on bad input (panic/abort, unchecked unwrap, `try!`/assert; NaN/±Inf, oversized) → typed error, or process crash? ('it's a programmer error / our own typed data' is no pass — a statically-valid value can be unserializable at runtime; the crash tears the record, and even a pre-write crash denies the caller a recoverable error) failure surfaced as the documented error type, or a leaked lower-layer one? retry after a failure → duplicate / gap / reorder?
+  - *Read/replay:* torn/partial final record (missing terminator) rejected? interior corruption (blank line, gap, out-of-order) rejected, not skipped? unknown/forward version loud, not mis-parsed? empty distinguished from corrupt?
 
 Depth sets breadth — a quick pass may be the baseline alone; a full review adds every applicable angle.
 

@@ -1,5 +1,11 @@
 # Deferred — `adversarial-review` "durability" angle (failure-path lens for source-of-truth state)
 
+**Status: implemented 2026-06-19.** The angle landed in `skills/adversarial-review/SKILL.md`;
+validation (RED/GREEN + cross-language generalization + over-fire/skip controls) is recorded in
+`skill-validation/adversarial-review.md`. Kept in `deferred/` rather than moved to `completed/`
+because the paired `2026-06-19-adversarial-review-loop-pattern-attack-deferred.md` cross-references
+this file by its `deferred/` path and is still open; both move to `completed/` when the loop move lands.
+
 **Parked 2026-06-19**, surfaced during the **meeting-pipeline** PR-2 "event-log substrate" session.
 A generalized review angle to add to the `adversarial-review` skill, with the validation protocol to
 build it. The edit lands in **this repo** (`skills/adversarial-review/SKILL.md`); consumers symlink
