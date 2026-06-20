@@ -1,5 +1,8 @@
 # Deferred — `adversarial-review-loop` "find the pattern, attack the root" move
 
+**Status: implemented 2026-06-20.** The move landed in `skills/adversarial-review-loop/SKILL.md`;
+validation in `skill-validation/adversarial-review-loop.md`.
+
 **Parked 2026-06-19**, surfaced during PR 2 of the recording slice (the event-log substrate). A
 loop meta-strategy to add to the `adversarial-review-loop` skill: when an **external** reviewer
 (codex / a CI bot / a pre-PR gate) keeps surfacing **new-but-related** findings round after round,

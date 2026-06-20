@@ -51,6 +51,46 @@ in RED runs are recorded as rows in the skill's own Rationalizations table.
   still returns findings, not a fourth" made both framings escape consistently
   (cap-emphasis and productive-emphasis, two runs each).
 
+## Find-the-pattern / attack-the-root move (added 2026-06-20)
+
+Adds the third loop outcome the binary "productive vs drift" test lacked:
+**productive-but-shared-root**. Trigger: across ≥2 cycles, new surface-different
+findings violate **one invariant**. Action: name the axis → enumerate every site
+against it **project-wide, across all languages**, including paths not yet cited →
+fix in one pass → re-run. Below-cap only; at the cap the cold-read escape dominates.
+
+**Watched failure:** meeting-pipeline PR-2 ran 6 reactive rounds before a human
+prompted the step-back that named the failure-path axis; the root-attack converged
+in ~1–2.
+
+**Method:** pressure-scenario decisions (read-only `Explore`, sonnet subjects;
+cold-read on opus), ≥5 reps on discriminating cells, every transcript hand-read.
+Shared-root fixture: the `b0f4511` EventLog (durability plan), reused as canned
+per-round findings.
+
+**RED → GREEN.** Shared-root scenario (2 cycles, both failure-path, below cap):
+RED (pre-edit) **5/5 grind** — continue the reactive loop, never name the axis;
+GREEN (post-edit) **5/5 attack-the-root** — name the error-contract axis, enumerate
+uncited sites, fix in one pass, stay below-cap.
+
+**Regression (full T2–T7 + class-sweep re-run).** All hold. The max set caught two
+defects the move introduced, fixed by REFACTOR + re-test:
+- **Over-fire (T4):** 2/3 invented an umbrella axis from scattered findings (SQLi +
+  N+1 "both touch the DB"). Fixed by keying the guard on **one invariant**, not a
+  shared topic → **3/3 continue**. The fix did not under-fire NF: **3/3 still fires**.
+- **At-cap (T3):** 1/3 self-audited instead of escaping. Fixed by an explicit "at the
+  cap, escape — don't attack the root in place of escaping" line → **3/3 escape**.
+
+**Project-wide + cross-language scope.** Multi-file: **3/3** project-wide.
+Multi-language (Swift+Python+Go): primed **3/3**, unprimed **5/5** — agents translate
+the invariant into each language's idioms (Python bare `except`, Go ignored
+`err`/`panic`) unaided. **Load-bearing:** the **"one invariant"** framing is what
+makes the audit conceptual / cross-language — do not weaken it to "pattern"/"topic".
+
+**On edits to this move:** re-run the shared-root RED/GREEN, **T4 over-fire**,
+**T3 at-cap**, and the **project-wide / cross-language** scenarios; keep the
+**"one invariant"** wording.
+
 ## On edits
 
 Re-run the RED/GREEN class-sweep scenario plus the T2–T7 set (read-only) before
