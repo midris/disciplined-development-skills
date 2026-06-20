@@ -7,6 +7,10 @@ and the set is re-runnable.
 **Dispatch protocol.** Read-only and bounded per CLAUDE.md's evaluation-subagent
 rule (Claude Code: `Explore`). Test-specific: one scenario per agent, text-only.
 
+**Re-runnable suite.** The full scenario set — exact prompts, pass criteria, reps —
+is codified in [adversarial-review-loop-scenarios.md](adversarial-review-loop-scenarios.md).
+Run it before and after any change.
+
 ## Method
 
 A discipline skill is tested by pressure scenario, not application. Each scenario
@@ -50,6 +54,92 @@ in RED runs are recorded as rows in the skill's own Rationalizations table.
   Defining a cycle (review → class-sweep → re-run) and "escape if the third cycle
   still returns findings, not a fourth" made both framings escape consistently
   (cap-emphasis and productive-emphasis, two runs each).
+
+## Find-the-pattern / attack-the-root move (added 2026-06-20)
+
+Adds the third loop outcome the binary "productive vs drift" test lacked:
+**productive-but-shared-root**. Trigger: across ≥2 cycles, new surface-different
+findings violate **one invariant**. Action: name the axis → enumerate every site
+against it **project-wide, across all languages**, including paths not yet cited →
+fix in one pass → re-run. Below-cap only; at the cap the cold-read escape dominates.
+
+**Watched failure:** meeting-pipeline PR-2 ran 6 reactive rounds before a human
+prompted the step-back that named the failure-path axis; the root-attack converged
+in ~1–2.
+
+**Method:** pressure-scenario decisions (read-only `Explore`, sonnet subjects;
+cold-read on opus), ≥5 reps on discriminating cells, every transcript hand-read.
+Shared-root fixture: the `b0f4511` EventLog (durability plan), reused as canned
+per-round findings.
+
+**RED → GREEN.** Shared-root scenario (2 cycles, both failure-path, below cap):
+RED (pre-edit) **5/5 grind** — continue the reactive loop, never name the axis;
+GREEN (post-edit) **5/5 attack-the-root** — name the error-contract axis, enumerate
+uncited sites, fix in one pass, stay below-cap.
+
+**Regression (full T2–T7 + class-sweep re-run).** All hold. The max set caught two
+defects the move introduced, fixed by REFACTOR + re-test:
+- **Over-fire (T4):** 2/3 invented an umbrella axis from scattered findings (SQLi +
+  N+1 "both touch the DB"). Fixed by keying the guard on **one invariant**, not a
+  shared topic → **3/3 continue**. The fix did not under-fire NF: **3/3 still fires**.
+- **At-cap (T3):** 1/3 self-audited instead of escaping. Fixed by an explicit "at the
+  cap, escape — don't attack the root in place of escaping" line → **3/3 escape**.
+
+**Project-wide + cross-language scope.** Multi-file: **3/3** project-wide.
+Multi-language (Swift+Python+Go): primed **3/3**, unprimed **5/5** — agents translate
+the invariant into each language's idioms (Python bare `except`, Go ignored
+`err`/`panic`) unaided. **Load-bearing:** the **"one invariant"** framing is what
+makes the audit conceptual / cross-language — do not weaken it to "pattern"/"topic".
+
+**At-cap regression — caught by the 5-rep suite, fixed (2026-06-20).** The move
+re-opened an at-cap leak the over-fire refactor only masked: at the cap *with a
+shared root*, agents reframe "the 3rd cycle's re-run finding" as a new below-cap
+round and attack the root instead of escaping. 3-rep validation hid it (the
+refactor's T3 was 3/3 by luck); the codified 5-rep suite exposed it — T3 **2/5**
+escape on the feature commit vs **5/5 on `main`** (unedited), confirming a
+feature-introduced regression. Fixed by stating a 3rd-cycle re-run finding *is* the
+cap (+ a rationalization row): T3 → **5/5 escape**; NF still **5/5 attack-root**
+(below-cap unaffected); T4 **3/3**.
+
+**Baseline (2026-06-20, post-fix) — full suite green:** NF 5/5, T3 5/5, T4 5/5;
+CS, T2, T5, T6, T7, PW, XL 3/3 each.
+
+**Trim (2026-06-20) — REFACTOR at parity.** Trimmed ~45 words of redundancy/framing
+(trichotomy intro reworded + caveat moved up front, trigger example list shortened,
+higher-order line's escape clause cut, over-fire tail cut, escape-recording prose
+merged); load-bearing wording (one invariant, SQLi/N+1, the at-cap fix, project-wide,
+the validated rationalization rows) untouched. Full suite re-run on the trimmed
+skill — **all 10 cells green at parity** (NF 5/5, T3 5/5, T4 5/5;
+CS/T2/T5/T6/T7/PW/XL 3/3).
+
+**Pre-PR cold-read (2026-06-20; opus — skill-authoring + consistency + concise).**
+2 P2 + 3 P3; both P2s RED-tested before acting (Iron Law):
+- *Same-kind-recurring 4th case.* The 3-outcome trichotomy doesn't explicitly slot
+  the "same *kind* recurring → class-sweep was incomplete" backstop (the line under
+  "Iteration cap"). RED **3/3 correct** anyway — agents sweep the class branch-wide
+  whatever label they use; the actions converge. No edit.
+- *Same-area umbrella* → accepted limitation, below.
+- P3s: corrected the trim "cut" wording (this file); kept the higher-order line
+  (1-line anchor); dismissed "cap stated 3 ways" — the cap-rule / at-cap-line
+  redundancy **is** the at-cap fix, so consolidating would regress it.
+
+**Known limitation — same-area umbrella (accepted, not fixed).** The over-fire guard
+rejects *cross-domain* umbrellas (T4: SQLi vs N+1, "touch the database" — **5/5
+scattered**) but not *same-area* ones: a data race (missing lock) + a deadlock
+(lock-order) are two different invariants → the strict "one invariant" test says
+*continue*, yet agents **3/3 umbrella them as "the concurrency axis" and audit**.
+Pre-existing, not a trim regression — the pre-trim skill (with the since-cut "don't
+invent an umbrella axis" line) also went **3/3**, one rep working around the line
+explicitly. *Accepted because* a concurrency audit after a race + a deadlock is
+defensible and low-harm (it tends to find real siblings), unlike the useless
+database audit. *Not fixed because* a tighter guard would over-fit this contrived
+case and risk under-firing the genuine shared-root case (NF), which must keep
+firing. Revisit only if a same-area over-fire causes real waste in practice — that
+is the watched failure to wait for.
+
+**On edits to this move:** re-run the shared-root RED/GREEN, **T4 over-fire**,
+**T3 at-cap**, and the **project-wide / cross-language** scenarios; keep the
+**"one invariant"** wording.
 
 ## On edits
 
