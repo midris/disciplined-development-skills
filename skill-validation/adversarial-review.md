@@ -133,7 +133,10 @@ static type") to generalize off Swift, re-confirmed across all fixtures; two-har
 wording added (torn record AND caller-can't-recover) to close a "crash-is-pre-write"
 dodge — closes it when the probe is applied. Residual 4/5 on the Swift primary is
 a globally-lenient reviewer that skips the probe, not a wording gap; not chased,
-to avoid tuning to one rep.
+to avoid tuning to one rep. Finally the crash parenthetical was trimmed ~22%
+(rebuttal + static-type counter + both harms kept) and re-measured at parity
+(Swift 4/5, Python 3/3, Go 3/3) — confirming the remaining words are the
+load-bearing core.
 
 **Cold-read on the final skill (opus; consistency + skill-authoring).** 4 findings,
 all P2/P3 (checklist-under-bullet asymmetry, parenthetical length, run-on,
