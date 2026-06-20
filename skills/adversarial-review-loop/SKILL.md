@@ -37,7 +37,7 @@ Below the cap, the same *kind* of finding recurring across cycles means step 1's
 
 This is a **higher-order class-sweep**: step 1 sweeps one *named class within a round*; this sweeps a class spanning *rounds and surface-different symptoms*. Proactive, below the cap — not the cold-read escape (at-cap, fresh eyes).
 
-**At the cap, escape — don't attack the root in place of escaping.** Root-attack is below-cap only; a shared root at the cap still goes to the cold-read escape (fresh eyes may confirm the axis and call for a redo).
+**At the cap, escape — even for a shared root.** A finding on the 3rd cycle's re-run *is* the cap (3 cycles done, findings remain) — not a new below-cap round to attack the root in. Root-attack is below-cap only; at the cap a shared root still goes to the cold-read escape (which may confirm the axis and call for a redo).
 
 **Don't over-fire.** A shared root = the findings violate **one invariant** — closing it removes the whole class. A shared *topic* is not a root: a SQL-injection and an N+1 query both "touch the database" but violate different invariants (parameterize untrusted input vs. batch related queries) → scattered, continue. Don't invent an umbrella axis.
 
@@ -77,3 +77,4 @@ Zero [P0]/[P1]/[P2] findings on the latest run. [P3]-only is acceptable advisory
 | "Stepping back to audit is slower than fixing this finding." | Many reactive rounds vs one audit. Once ≥2 rounds share a root, the audit is faster. |
 | "Both findings touch X (the DB / the parser / input) — that's the axis." | A shared topic isn't a root. An axis is one invariant whose closure removes the class; findings that violate different invariants are scattered → continue. |
 | "I closed the axis in the file under review — done." | An axis left open in other files resurfaces and restarts the loop there. Audit the pattern across the whole project, not just the reviewed location. |
+| "The 3rd cycle's re-run found a new shared-root issue — that's a new round, I'll attack the root." | A finding on the 3rd re-run **is** the cap: 3 cycles done, findings remain → escape. Root-attack is below-cap only; you don't get a 4th round to attack it in. |

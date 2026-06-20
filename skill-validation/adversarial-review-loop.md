@@ -7,6 +7,10 @@ and the set is re-runnable.
 **Dispatch protocol.** Read-only and bounded per CLAUDE.md's evaluation-subagent
 rule (Claude Code: `Explore`). Test-specific: one scenario per agent, text-only.
 
+**Re-runnable suite.** The full scenario set — exact prompts, pass criteria, reps —
+is codified in [adversarial-review-loop-scenarios.md](adversarial-review-loop-scenarios.md).
+Run it before and after any change.
+
 ## Method
 
 A discipline skill is tested by pressure scenario, not application. Each scenario
@@ -86,6 +90,19 @@ Multi-language (Swift+Python+Go): primed **3/3**, unprimed **5/5** — agents tr
 the invariant into each language's idioms (Python bare `except`, Go ignored
 `err`/`panic`) unaided. **Load-bearing:** the **"one invariant"** framing is what
 makes the audit conceptual / cross-language — do not weaken it to "pattern"/"topic".
+
+**At-cap regression — caught by the 5-rep suite, fixed (2026-06-20).** The move
+re-opened an at-cap leak the over-fire refactor only masked: at the cap *with a
+shared root*, agents reframe "the 3rd cycle's re-run finding" as a new below-cap
+round and attack the root instead of escaping. 3-rep validation hid it (the
+refactor's T3 was 3/3 by luck); the codified 5-rep suite exposed it — T3 **2/5**
+escape on the feature commit vs **5/5 on `main`** (unedited), confirming a
+feature-introduced regression. Fixed by stating a 3rd-cycle re-run finding *is* the
+cap (+ a rationalization row): T3 → **5/5 escape**; NF still **5/5 attack-root**
+(below-cap unaffected); T4 **3/3**.
+
+**Baseline (2026-06-20, post-fix) — full suite green:** NF 5/5, T3 5/5, T4 5/5;
+CS, T2, T5, T6, T7, PW, XL 3/3 each.
 
 **On edits to this move:** re-run the shared-root RED/GREEN, **T4 over-fire**,
 **T3 at-cap**, and the **project-wide / cross-language** scenarios; keep the
