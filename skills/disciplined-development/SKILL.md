@@ -40,9 +40,9 @@ CONTRIBUTING.md, ARCHITECTURE, project memory), task sources
 (active plan, linked specs/mockups, design principles, API docs,
 schemas), and external facts (library capabilities, versions, API
 behavior). Applies to planned work, ad-hoc changes, bug fixes, docs
-edits, AND code reviews (giving or receiving) — never review the diff
-without re-reading the active plan, governing spec, and linked
-guidance the change is supposed to satisfy. "Last session" doesn't
+edits, AND code reviews (giving or receiving) — never review without
+re-reading the active plan, governing spec, and linked guidance the
+work is supposed to satisfy. "Last session" doesn't
 count; memory isn't a source. Cite fetched facts that drive a
 decision. If nothing applies, say so before proceeding.
 
@@ -69,11 +69,12 @@ REQUIRED SUB-SKILL: `sweeping-stale-references`.
 **Gate 5 — End-of-chunk review + smoke pass before PR.**
 Three steps, in order. Plan checklist does not override the gate.
 
-1. **Self-review** `git diff <chunk-base>..HEAD`; address findings per
-   `adversarial-review-loop`.
+1. **Self-review** — a deep, whole-repo adversarial review against the
+   active plan; address findings per `adversarial-review-loop`.
    REQUIRED SUB-SKILLS: `superpowers:requesting-code-review` + `adversarial-review` + `adversarial-review-loop`.
-2. **External review** of the chunk diff. `[P0]`/`[P1]`/`[P2]` block the
-   PR (resolve before opening the PR); `[P3]` is advisory.
+2. **External review** — same whole-repo, plan-anchored scope.
+   `[P0]`/`[P1]`/`[P2]` block the PR (resolve before opening the PR);
+   `[P3]` is advisory.
 3. **Smoke pass** affected flows; capture evidence in the PR body.
 
 A dispatched subagent runs no part of Gate 5 — gathering findings to hand over still counts. It reports that review is due and stops. The orchestrator or the user opens the PR, never an agent or subagent.
@@ -167,7 +168,7 @@ REQUIRED SUB-SKILL: `adversarial-review-loop`.
 | Implementation (sequential) | Principles 1, 2, 5, 6, 7, 8 + Gates 1, 2, 3, 4, 5 | `superpowers:executing-plans` or `superpowers:subagent-driven-development` (+ `dispatching-development-subagents` when delegating) |
 | Implementation (parallel, independent only) | as above | `superpowers:dispatching-parallel-agents` + `dispatching-development-subagents` |
 | Debugging | Principles 1, 2, 5, 6 + Gates 1, 3, 4 | `superpowers:systematic-debugging` |
-| Code review (giving) | Principles 3, 7, 8 + Gates 1, 4 + read the diff | `superpowers:requesting-code-review` + `adversarial-review` + `adversarial-review-loop` |
+| Code review (giving) | Principles 3, 7, 8 + Gates 1, 4 + whole-repo review vs. plan | `superpowers:requesting-code-review` + `adversarial-review` + `adversarial-review-loop` |
 | Code review (receiving) | Principle 3 + Gate 1 (surface, don't interpret) | `superpowers:receiving-code-review` |
 | Editing docs / specs / plans | Principles 1, 3, 6, 7 + Gates 1, 4 | `superpowers:writing-plans` + `lean-plan-writing` (for plans/specs) + `concise-writing` |
 

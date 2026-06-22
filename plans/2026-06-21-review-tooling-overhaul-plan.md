@@ -389,27 +389,48 @@ every stale claim, rewrite (not surgical); apply `concise-writing`. (There is no
 pass, **draft → user review → apply** (Decision 6), after Chunks 1–3 land so the
 skills describe machinery that exists.
 
-### Task 4.1 — Draft all skill edits (via `superpowers:writing-skills`)
-Draft, in `skills/adversarial-review/SKILL.md` + `skills/adversarial-review-loop/SKILL.md`:
-- a conditional logging line in the loop skill — "if your project provides a
-  review-logging command, log each round's findings through it" (generic; no command
-  name);
-- the `DD-VERDICT: PASS|BLOCK` **last-line** output contract (so internal reviews
-  declare a verdict too);
-- removal of the tier vocabulary (`fast`/`regular`/`cold-read` as tiers);
-- the one mode: deep, whole-repo, plan-anchored; the model picks angles per "when to
-  apply".
-- [ ] Draft; adversarial cold-read of the drafts (no test catches a worse instruction).
+### Task 4.1 — Draft + apply skill edits (via `superpowers:writing-skills`)
+Edits drafted, user-reviewed (Decision 6), and applied in
+`skills/disciplined-development/SKILL.md` + `skills/adversarial-review/SKILL.md`:
+- `adversarial-review` Output format — the `DD-VERDICT: PASS|BLOCK` **last-line**
+  contract (internal reviews declare a verdict too) + few-shot examples to match;
+- `adversarial-review` Review-angles — the one mode (deep, whole-repo, plan-anchored;
+  model picks angles per "when to apply");
+- **parent de-diff-scoping** (scope expansion, user-approved 2026-06-22):
+  `disciplined-development` Gate 5 steps 1–2, Gate 1, and the mode-emphasis "Code
+  review (giving)" row drop diff-scoped review for whole-repo, plan-anchored.
+  *Grounding:* the literal tier vocabulary `fast`/`regular`/`cold-read` was NOT in
+  these skills (it lived in the Chunk-3-removed engine/command/config), so the change
+  reduced to reframing the one depth-tier line + the parent's diff-scoped wording.
+- **Conditional logging line — DEFERRED, not applied** (see Out of scope). RED showed
+  the control passes (a `dd-log` command merely named in config → Claude subjects log
+  every round incl. clean without a skill line), so it fails the writing-skills
+  failing-test bar; per-round logging stays driven by `CLAUDE.md` + `dd-log`.
+- [x] Draft + user review (Decision 6); apply verdict + one-mode + parent de-diff-scope.
+- [x] RED/GREEN per `skill-validation/` (sonnet subjects; snapshot RED / live GREEN):
+  scope RED 4/4 diff-scoped → GREEN 3/3 whole-repo; verdict GREEN findings 3/3 BLOCK /
+  clean 2/2 PASS / loophole 1/1; angle-selection regression 2/2. Recorded in
+  `skill-validation/disciplined-development.md` (new) + `adversarial-review.md`.
+- [x] Adversarial cold-read (opus) — trimmed the verdict prose, removed an unbacked
+  earlier-line guard the cold-read flagged as self-contradicting the few-shot examples
+  (3 cycles → clean PASS); behavioral re-tests at parity.
 
-### Task 4.2 — User review + apply
-- [ ] Present drafts to the user; apply only on approval.
-- [ ] Update `skill-validation/<skill>.md` records where rules changed materially.
+### Task 4.2 — Records, verify, PR
+- [x] Present drafts to the user; apply on approval (verdict + one-mode + parent
+  de-diff-scope; conditional logging deferred).
+- [x] Update `skill-validation/` records — new `disciplined-development.md`,
+  `adversarial-review.md` extended (verdict contract + scope/angle regression).
 - [ ] Run hook suite; commit; open PR.
-  `docs(skills): one deep whole-repo review mode; declared verdict; optional logging`
+  `docs(skills): one deep whole-repo review mode; declared DD-VERDICT line; de-diff-scope parent doctrine`
 
 ---
 
 ## Out of scope (tracked elsewhere)
+- **Conditional review-logging line in the skill (Decision 5, skill-side).** Deferred
+  2026-06-22: RED control passes in Claude (a config-named `dd-log` → subjects log
+  rounds without a skill line), failing the writing-skills failing-test bar. The
+  harness-side half (the `dd-log` command + `CLAUDE.md` instruction) remains and works.
+  Revisit when porting to Codex, where the config→behavior link may not pre-fire.
 - **Orphaned-safeguard review angle** (deferred #3-item-1) — separate skill effort.
 - **Hook-internal `T0`–`T3` gate vocabulary.** The `/dd-review` review-mode tiers
   (fast/regular/cold-read/pre-pr) are gone, and the overview docs (READMEs, CLAUDE.md,
@@ -426,7 +447,8 @@ Draft, in `skills/adversarial-review/SKILL.md` + `skills/adversarial-review-loop
 ## Coverage check (design → chunk)
 - D1 deep/whole-repo → 2.2 + 4.1. D2 reset-both → 1.3 + 2.2. D3 fail-closed → 2.1 +
   2.2 + 2.3. D4 rich durable log → 1.1/1.2 + 1.3/2.2 + 3.3 (protect reviews.jsonl).
-  D5 logging placement → 4.1 (skill) + 3.4 (concrete `dd-log`). D6 skill drafts
+  D5 logging placement → 3.4 (concrete `dd-log`); skill-side line deferred
+  (Out of scope). D6 skill drafts
   user-gated → Chunk 4. D7 declared verdict → shared contract + 1.1 + 2.2 + 4.1.
 - Engine/command removal + reconcile → Chunk 3. Fail-open bug → 2.1/2.3. Uniform
   logging → Chunk 1. Whole-repo cold-read → folded into the one mode (2.2 + 4.1).
