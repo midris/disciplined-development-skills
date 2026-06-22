@@ -175,11 +175,11 @@ symlink + its tests, and any migration special-case; replace the hardcoded/singl
 command logic with the glob, updating/removing whatever tests and migration code that
 makes obsolete. Grep the installer + `tests/` for the current command handling first.
 
-- [ ] Update installer tests first (seed an arbitrary `commands/<name>.md`; assert
+- [x] Update installer tests first (seed an arbitrary `commands/<name>.md`; assert
   symlink + resolves + idempotent + real-file-not-clobbered); remove tests asserting
   the obsolete single-command/migration behavior. Run → fail.
-- [ ] Generalize `install-skills.sh`; write the command files. Run → pass.
-- [ ] Commit. `feat(commands,installer): add dd-log; symlink all commands/*.md`
+- [x] Generalize `install-skills.sh`; write the command files. Run → pass.
+- [x] Commit. `feat(commands,installer): add dd-log; symlink all commands/*.md`
 
 ### Chunk 1 close-out
 - [ ] Hook + installer suites green; self-review (`adversarial-review` + `-loop`),
