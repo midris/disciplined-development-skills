@@ -345,7 +345,7 @@ other tiers); apply the trim across **every** config file that carries the key
 (defaults + all example configs — find them by grep, don't assume one); confirm
 `cleanup.py` never prunes `reviews.jsonl`; update the config-schema doc; reconcile the
 config test.
-- [ ] Grep readers → trim defaults + all example configs → update schema doc +
+- [x] Grep readers → trim defaults + all example configs → update schema doc +
   config test → run config + hook suites → commit.
   `refactor(config): drop pre-pr tier + strategy_selector; keep cadence tiers`
 

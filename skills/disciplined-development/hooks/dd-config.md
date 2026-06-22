@@ -50,10 +50,8 @@ Bool values are rejected (a config typo like `true` won't silently become 1).
 
 ## `review_tiers`
 
-Four tiers, each covering one review level. **Only `pre_pr` carries reviewer
-config** — `fast`, `regular`, and `cold_read_escalation` carry cadence
-thresholds only; their subagent sets are fixed in the `/dd-review` command, not
-config-driven.
+Three cadence tiers; each exposes only its threshold tunables. Reviewer config
+lives in `review.*` (see below), not in the tiers.
 
 ### `review_tiers.fast` — T0 edit-counter cadence
 
@@ -85,30 +83,6 @@ cadence — documented expectation, not runtime-validated.
 Commits-since-cold-read uses `review.checkpoint` when present; falls back to
 fork-base when absent (fresh branch) — so the T2 block fires even on a branch
 that has never been cold-read.
-
-### `review_tiers.pre_pr` — T3 pre-PR codex gate
-
-| Key | Type | Default | Description |
-|---|---|---|---|
-| `reviewer` | string | `"codex"` | CLI reviewer for the T3 gate (only valid value in the current engine). |
-| `model` | string | `"gpt-5.5"` | Model id passed to the reviewer. |
-| `default_effort` | string | `"medium"` | Effort level; escalated to `"high"` by diff size via `strategy_selector`. |
-
-Projects without codex on `$PATH` must override `reviewer` — there is no
-runtime `$PATH` probe; the engine fails cleanly with "CLI not found" if `codex`
-is absent.
-
----
-
-## `strategy_selector`
-
-Decides stuffed-vs-fetched dispatch + high-effort escalation by diff size
-(used by `dd_review_runner.py` for T3).
-
-| Key | Type | Default | Description |
-|---|---|---|---|
-| `pre_stuff_max_bytes` | int | `524288` | Diffs at/under this are stuffed in-prompt; larger are fetched by the reviewer. |
-| `high_effort_min_bytes` | int | `51200` | Diffs at/over this escalate effort to `high`. |
 
 ---
 
@@ -147,7 +121,14 @@ Observability — comprehensive + on by default; tuned by retention/cleanup.
 
 | Key | Type | Default | Description |
 |---|---|---|---|
-| `prompt_path` | string | `.claude/skills/adversarial-review/SKILL.md` | Prompt header for the stuffed-strategy codex review (relative → repo root). Env: `DD_REVIEW_PROMPT_PATH`. |
+| `prompt_path` | string | `.claude/skills/adversarial-review/SKILL.md` | Path to the review skill (relative → repo root); passed to the reviewer as the prompt header. Env: `DD_REVIEW_PROMPT_PATH`. |
+| `reviewer` | string | `"codex"` | CLI reviewer binary for the pre-PR gate (`external_review.py`). |
+| `model` | string | `"gpt-5.5"` | Model id passed to the reviewer. |
+| `effort` | string | `"medium"` | Effort level passed to the reviewer. |
+
+Projects without codex on `$PATH` must override `reviewer` — there is no
+runtime `$PATH` probe; the gate fails closed with "CLI not found" if `codex`
+is absent.
 
 ---
 
