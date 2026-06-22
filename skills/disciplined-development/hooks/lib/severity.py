@@ -110,6 +110,9 @@ def findings_excerpt(text: str, line_start: bool = False) -> str:
 # counts as a finding), but additionally captures everything after the
 # `[Pn]` token (any closing emphasis is consumed by the trailing `[*_]*`)
 # as `rest`, which `parse_findings` splits into file/line/summary.
+# NOTE: this duplication of the scanner's line-shape regex is temporary —
+# `count_severities`/`findings_excerpt` are removed in Chunk 3, at which
+# point `parse_findings` is the sole owner and the duplication resolves.
 _FINDING_RE_LINE_START = re.compile(
     r"^\s*(?:[-*]|\d+[.)>])?\s*(?:>\s*[-*]?\s*)?(?:[*_]+)?\[(P[0-3])\]"
     r"(?![*_]*\s*(?:=|[—\-:]\s*(?:critical|important|minor|nit)\s*/))"

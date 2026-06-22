@@ -267,3 +267,27 @@ def test_parse_findings(text, line_start, expected):
 )
 def test_parse_verdict(text, expected):
     assert parse_verdict(text) == expected
+
+
+# ---- parse_findings: line_start=False (_FINDING_RE_ANY path) ----------------
+
+def test_parse_findings_any_path_matches_mid_prose_token():
+    # _FINDING_RE_ANY has no line-start anchor, so a token mid-prose is matched.
+    # "see [P1] note: x" → severity P1, file "note" (parsed as <file>:<summary>
+    # without a numeric line), summary "x". line_start=True excludes the same
+    # input (the line-start anchor doesn't fire for a mid-sentence token).
+    text = "see [P1] note: x"
+    result = parse_findings(text, line_start=False)
+    assert result == [{"severity": "P1", "file": "note", "line": None, "summary": "x"}]
+    # Default (line_start=True) excludes the same mid-prose token.
+    assert parse_findings(text) == []
+
+
+# ---- parse_verdict: empty / all-blank inputs --------------------------------
+
+def test_parse_verdict_empty_string_returns_none():
+    assert parse_verdict("") is None
+
+
+def test_parse_verdict_all_blank_returns_none():
+    assert parse_verdict("\n  \n") is None
