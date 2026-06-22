@@ -57,6 +57,29 @@ pressure scenarios that justify its content, kept re-runnable so a change can be
 re-tested before it ships. Non-shipped — a development record, not part of the
 installed bundle.
 
+## How it fits together
+
+`install-skills.sh` symlinks the skill dirs and command templates into your
+project; you merge the hooks block into `.claude/settings.json` (and optionally
+drop a `dd-config.json`). At runtime the hooks resolve their scripts through the
+symlinks and fire at tool calls, commits, PR creation, and session start.
+
+```mermaid
+flowchart TB
+    CLONE["clone of disciplined-development-skills"]
+    CLONE -->|"install-skills.sh &lt;project&gt;<br/>(symlinks, idempotent)"| PROJ
+    subgraph PROJ["your project · .claude/"]
+        direction LR
+        SK["skills/* + commands/dd-log.md<br/>(symlinks into the clone)"]
+        ST["settings.json<br/>hooks block (manual merge)"]
+        CF["dd-config.json<br/>overrides (optional)"]
+    end
+    PROJ --> HK["hook stack fires at<br/>tool calls · commits · PR · session start<br/>(scripts resolve via the skill symlinks)"]
+```
+
+For the component-level architecture — the three layers, the review model, and
+the logging path — see [`ARCHITECTURE.md`](ARCHITECTURE.md).
+
 ## Requirements
 
 - **The `superpowers` skill bundle — the substrate this bundle extends, not an

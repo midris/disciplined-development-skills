@@ -5,7 +5,7 @@ Single source of truth for agent guidance in this repository. If `AGENTS.md` / `
 ## Highest Priority Rules
 
 - At session start, load the doctrine: `Read skills/disciplined-development/SKILL.md`. **The Skill tool doesn't see it** — the skill dirs live under `skills/` (the installer symlinks them out to consumers), and no harness enumerates skills from there. Load companion `SKILL.md` files the same way when the parent dispatches: `skills/adversarial-review`, `skills/adversarial-review-loop`, `skills/concise-writing`, `skills/disciplined-research`, `skills/dispatching-development-subagents`, `skills/lean-plan-writing`, `skills/sweeping-stale-references`, `skills/writing-explicit-rationale`.
-- Cross-reference `README.md` (bundle overview, install/recovery flow) and `skills/disciplined-development/hooks/README.md` (hook design + state model) before non-trivial changes. Hook config schema: `skills/disciplined-development/hooks/dd-config.md`.
+- Cross-reference `ARCHITECTURE.md` (current component interplay + diagrams), `README.md` (bundle overview, install/recovery flow), and `skills/disciplined-development/hooks/README.md` (hook design + state model) before non-trivial changes. Hook config schema: `skills/disciplined-development/hooks/dd-config.md`.
 - Treat `plans/` as a live source of truth when a plan exists — update it in the same change set as the work it tracks.
 - Test-first for behavior changes — see "Test-Driven Changes" below.
 - Periodic adversarial review per `disciplined-development` Principle 8 — at review-nudge signals or natural pauses, run a deep review per the adversarial-review skill, then log it via `dd-log` to reset the counter; iterate per `adversarial-review-loop` until clean.
@@ -32,6 +32,7 @@ plans/                                # active plans (created on demand)
 plans/completed/, plans/deferred/     # archived / deferred work
 reviews/                              # architecture / code-review findings (non-shipped records)
 install-skills.sh                     # symlink installer
+ARCHITECTURE.md                       # component interplay + diagrams
 README.md                             # bundle overview + install + recovery
 ```
 
@@ -56,12 +57,12 @@ No env file in this repo. Consumer projects carry `.claude/dd-config.json` (over
 
 ## Architecture Snapshot
 
-Two layers and a thin orientation:
+Brief orientation — the full component interplay (three layers + diagrams) is in [`ARCHITECTURE.md`](ARCHITECTURE.md):
 
 - **Skills layer** — each skill dir under `skills/` contains a `SKILL.md` (some have `references/` subdirs). The `disciplined-development` skill is the parent doctrine; the rest are companions it dispatches to. See `README.md` for the per-skill purpose.
 - **Hook layer** — eight event hooks + two model-callable tools (`log_review.py` + `external_review.py`), all under `skills/disciplined-development/hooks/`. Design rationale, hook table, state model, observability, and extension rules live in `skills/disciplined-development/hooks/README.md` — refresh that doc when you change hook behavior, not this snapshot.
 
-There is no `ARCHITECTURE.md`; the two READMEs above are the architecture.
+Refresh the architecture detail in `ARCHITECTURE.md` and `skills/disciplined-development/hooks/README.md`, not this snapshot.
 
 ## Roadmap
 
@@ -128,4 +129,5 @@ When a feature, fix, or batch of work is complete:
 2. Update `examples/` (`settings.hooks.json`, `dd-config.json`, `CLAUDE.md-snippet.md`, `starter.CLAUDE.md`) when the consumer-facing contract changes.
 3. Update `README.md` when install/recovery flow, requirements, or the skill list changes.
 4. Update `skills/disciplined-development/hooks/README.md` when hook behavior, the hook table, the state model, or the review tiers change. Update `skills/disciplined-development/hooks/dd-config.md` when the config schema changes.
-5. Update the relevant `skills/<skill>/SKILL.md` when its doctrine, dispatch table, or examples drift from current practice. For non-trivial skill content changes, run a deep review per the adversarial-review skill on the staged branch before commit — no test catches a worse instruction. Update the skill's `skill-validation/<skill>.md` record (its RED/GREEN scenario set) on a **non-trivial** change to its rules, angles, or behavior — anything that would alter a scenario's outcome, not wording/typo fixes. See `skill-validation/` for the format.
+5. Update `ARCHITECTURE.md` when the layers, the component set, the review model, the state model, or the logging path change.
+6. Update the relevant `skills/<skill>/SKILL.md` when its doctrine, dispatch table, or examples drift from current practice. For non-trivial skill content changes, run a deep review per the adversarial-review skill on the staged branch before commit — no test catches a worse instruction. Update the skill's `skill-validation/<skill>.md` record (its RED/GREEN scenario set) on a **non-trivial** change to its rules, angles, or behavior — anything that would alter a scenario's outcome, not wording/typo fixes. See `skill-validation/` for the format.
