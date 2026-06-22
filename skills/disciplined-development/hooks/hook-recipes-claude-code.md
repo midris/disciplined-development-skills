@@ -222,8 +222,8 @@ result to exit 2. Do not wire this script directly as a PreToolUse delegate.
 Schema: [`dd-config.md`](dd-config.md). Single override surface
 `.claude/dd-config.json` over `lib/dd-defaults.json`. Per-hook bypass env vars
 (`DD_SKIP_<HOOK>=1`, in `settings.local.json`) and the override knobs
-(`DD_ACTIVE_PLAN`, `DD_LOG_DIR`, `DD_REVIEW_TIMEOUT`, `DD_REVIEW_PROMPT_PATH`) —
-full tables in [`dd-config.md`](dd-config.md#env-vars).
+(`DD_ACTIVE_PLAN`, `DD_LOG_DIR`, `DD_REVIEW_TIMEOUT`) — full tables in
+[`dd-config.md`](dd-config.md#env-vars).
 
 ---
 

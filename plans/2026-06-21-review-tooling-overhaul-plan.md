@@ -370,7 +370,7 @@ describe the new world: one deep whole-repo mode; two tools; reset-folds-into-lo
 verdict-driven fail-closed gate; the new log schema. Cold-read it in one pass, gather
 every stale claim, rewrite (not surgical); apply `concise-writing`. (There is no
 `dd-review` *skill* doc — don't go looking for one; the command is gone in 3.1.)
-- [ ] Rewrite → commit. `docs(hooks): rewrite review/state-model docs for the two-tool model`
+- [x] Rewrite → commit. `docs(hooks): rewrite review/state-model docs for the two-tool model`
 
 ### Chunk 3 close-out
 - [ ] Hook + installer + research suites green; self-review; open PR.

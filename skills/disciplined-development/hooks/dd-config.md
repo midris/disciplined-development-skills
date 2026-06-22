@@ -121,7 +121,7 @@ Observability — comprehensive + on by default; tuned by retention/cleanup.
 
 | Key | Type | Default | Description |
 |---|---|---|---|
-| `prompt_path` | string | `.claude/skills/adversarial-review/SKILL.md` | Path to the review skill (relative → repo root); passed to the reviewer as the prompt header. Env: `DD_REVIEW_PROMPT_PATH`. |
+| `prompt_path` | string | `.claude/skills/adversarial-review/SKILL.md` | Path to the review skill (relative → repo root); passed to the reviewer as the prompt header. |
 | `reviewer` | string | `"codex"` | CLI reviewer binary for the pre-PR gate (`external_review.py`). |
 | `model` | string | `"gpt-5.5"` | Model id passed to the reviewer. |
 | `effort` | string | `"medium"` | Effort level passed to the reviewer. |
@@ -166,7 +166,6 @@ tool-call time — hooks read their inherited environment).
 | `DD_ACTIVE_PLAN` | Force the active plan path (highest-priority resolution). |
 | `DD_LOG_DIR` | Override the log directory (highest-priority). |
 | `DD_REVIEW_TIMEOUT` | Override `codex.pr_review_timeout_s`. |
-| `DD_REVIEW_PROMPT_PATH` | Override `review.prompt_path`. |
 
 **Set in:** the launching shell, `~/.claude/settings.json` `env`, or
 `<project>/.claude/settings.local.json` `env`. (`DD_CONFIG` / `DD_DEFAULTS`
