@@ -8,10 +8,15 @@ Runs a whole-repo codex review anchored to the active plan and the adversarial-
 review skill pointer.  Reads the declared ``DD-VERDICT: PASS|BLOCK`` from the
 codex last-message file (``-o``), logs every attempt to ``reviews.jsonl``, and
 exits 0 only on PASS.  Fail-closed: every other outcome (BLOCK, no verdict,
-missing binary, timeout, empty output) exits non-zero.
+missing binary, timeout, empty output, non-zero/abnormal codex exit) exits
+non-zero.
 
 The hook (``pre_pr_review.py``) is wired to this tool in Task 2.3.  This file
-is invokable standalone for development / smoke testing.
+is invokable standalone for development / smoke testing.  **The exit contract is
+0=allow / non-zero=block; it relies on the wrapping hook translating any
+non-zero result to exit 2 (Claude Code blocks a PreToolUse tool ONLY on exit 2).
+Do NOT wire this script directly as a PreToolUse delegate — a BLOCK would exit 1,
+which Claude Code treats as non-blocking and would let the PR through.**
 
 Config keys consumed (from ``review.*``, resolved via ``lib/config.py``):
   ``review.prompt_path``  — path to the adversarial-review skill (the pointer,
