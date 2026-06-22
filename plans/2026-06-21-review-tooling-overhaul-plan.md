@@ -395,7 +395,8 @@ Draft, in `skills/adversarial-review/SKILL.md` + `skills/adversarial-review-loop
 - **Orphaned-safeguard review angle** (deferred #3-item-1) — separate skill effort.
 - **Cadence-counter structure** — `plans/deferred/2026-06-21-cadence-counters-structure-deferred.md`.
 - **Threshold calibration** — `plans/deferred/2026-06-14-threshold-rationale-and-calibration.md`.
-- **Codex/other-harness port** — re-scope `2026-06-10-codex-harness-port.md` after this.
+- **Codex/other-harness port** — the old `2026-06-10-codex-harness-port.md` was
+  deleted as out-of-date; author a fresh plan if/when pursued.
 
 ## Coverage check (design → chunk)
 - D1 deep/whole-repo → 2.2 + 4.1. D2 reset-both → 1.3 + 2.2. D3 fail-closed → 2.1 +

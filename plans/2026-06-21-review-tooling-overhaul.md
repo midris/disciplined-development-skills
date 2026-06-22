@@ -5,8 +5,8 @@ plan + merge-boundary task breakdown follow on approval.
 **Date:** 2026-06-21.
 **Supersedes scope of:** deferred plans #2 (uniform logging) and #3-item-2
 (whole-repo cold-read); folds in #1 (pre-PR fail-closed) and the reviewer-declared
-verdict long flagged in `severity.py` (Decision 7). Obsoletes most of
-`2026-06-10-codex-harness-port.md` (re-scope after this lands).
+verdict long flagged in `severity.py` (Decision 7). The
+`2026-06-10-codex-harness-port.md` it obsoleted has been deleted as out-of-date.
 
 > **Diagram rendering:** the diagrams use `init` directives + `classDef` colors and
 > need a reasonably current Mermaid (GitHub, recent VS Code / JetBrains preview).
@@ -490,5 +490,6 @@ effort (see below).
   `plans/deferred/2026-06-21-cadence-counters-structure-deferred.md`, and the
   threshold *values* (incl. whether "review earlier / more often" warrants lower
   ones) in `plans/deferred/2026-06-14-threshold-rationale-and-calibration.md`.
-- **Codex/other-harness port.** This shrinks the surface a port must cover;
-  `2026-06-10-codex-harness-port.md` should be re-scoped or archived afterward.
+- **Codex/other-harness port.** This shrinks the surface a port must cover; the old
+  `2026-06-10-codex-harness-port.md` was deleted as out-of-date — author a fresh plan
+  if/when pursued.
