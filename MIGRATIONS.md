@@ -24,12 +24,11 @@ scripts (`edit_counter.py`, `edit_block.py`, `commit_block.py`) all resolve
 through the symlink with no consumer action. Three files still need a manual
 touch:
 
-**1. `.claude/commands/dd-review.md`** — if it's a stale symlink from the
-pre-relocation layout (`examples/commands/`), the installer now skips it as a
-foreign symlink rather than re-pointing it. Delete the stale symlink first, then
-re-run the installer to land the current one. A customized real copy is left
-untouched — replace it manually with
-[`commands/dd-review.md`](commands/dd-review.md) if you want the shipped version.
+**1. `.claude/commands/dd-review.md`** — this command was **removed** in the
+review-tooling overhaul. If a stale `dd-review.md` symlink exists in your
+consumer project's `.claude/commands/`, delete it — there is no shipped
+replacement to re-point to. The `/dd-review` workflow is replaced by a manual
+adversarial-review run followed by `dd-log` to record it.
 
 **2. `.claude/settings.json` hooks block** — add the three new hook entries
 (the existing hooks are unchanged):

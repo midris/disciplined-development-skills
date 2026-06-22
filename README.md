@@ -152,12 +152,11 @@ Per-hook behavior + the `DD_SKIP_<HOOK>` bypass env vars are in
   `CLAUDE.md`, use [`examples/starter.CLAUDE.md`](examples/starter.CLAUDE.md)
   as a full drop-in template (fill in the `{{PLACEHOLDERS}}`); the snippet is
   for threading into an existing file.
-- **Wire `/dd-review`:** the installer places this automatically as a symlink
-  at `<project>/.claude/commands/dd-review.md` (resolves to
-  [`commands/dd-review.md`](commands/dd-review.md)).
-  Gitignore the symlink alongside the skill symlinks. If you need a
-  customized copy instead, place a real file there before running the
-  installer — the installer skips and warns rather than clobbering it.
+- **Wire `dd-log`:** the installer places `dd-log.md` automatically as a symlink
+  at `<project>/.claude/commands/dd-log.md`. Gitignore the symlink alongside
+  the skill symlinks. If you need a customized copy instead, place a real file
+  there before running the installer — the installer skips and warns rather
+  than clobbering it.
 
 ## Verify it worked
 

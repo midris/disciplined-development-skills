@@ -12,14 +12,16 @@ three accumulated segments on one envelope:
    unchanged; independent of cadence thresholds.)
 2. **T1 nudge (commit edit floor).** Fires when the ``edits`` counter is
    >= ``review_tiers.regular.commit_edit_floor`` (default 30). Suggests
-   ``/dd-review regular``.
+   running a deep review per the adversarial-review skill, then logging it
+   via ``dd-log`` to reset the counter.
 3. **T2 nudge (cold-read escalation).** Fires when commits-since-last-cold-read
    reaches ``review_tiers.cold_read_escalation.nudge_threshold`` (default 3).
    Checkpoint-or-fork-base selection mirrors ``commit_block.py``:
    - Checkpoint exists → ``state.commits_since_checkpoint``.
    - No checkpoint (absent / stale) → ``state.commits_since_fork_base``.
    - No fork base / no trunk → cadence segment omitted (degrade silent).
-   Suggests ``/dd-review cold-read``.
+   Suggests running a deep review per the adversarial-review skill, then
+   logging it via ``dd-log`` to reset the checkpoint.
 
 Both review nudges (T1/T2) carry ``GATE_AUDIENCE``: the gate is the
 orchestrator's, so a dispatched subagent reports it and stops rather than acting.
@@ -55,8 +57,8 @@ DEFAULT_COLD_READ_NUDGE_THRESHOLD = 3
 DEFAULT_TRUNKS = ["master", "main"]
 
 # Gate-3 verification reminder, emitted on every landed commit. Fixed and
-# actionable; deliberately contains no "/dd-review" so it reads as "verify",
-# not "review", and so tests can assert the cadence segments separately.
+# actionable; deliberately contains no review-action clause so it reads as
+# "verify", not "review", and so tests can assert the cadence segments separately.
 VERIFY_TEXT = (
     "Commit landed — Gate 3: verify this change against the running system "
     "before moving on. Run the relevant test / preview / live call, or state "
@@ -161,7 +163,7 @@ def main() -> int:
                 env.accumulate(
                     f"Edit counter: {edits} unreviewed edits on this branch "
                     f"(>= T1 floor {edit_floor}). {GATE_AUDIENCE} "
-                    f"`/dd-review regular` to review and reset the counter."
+                    f"run a deep review per the adversarial-review skill, then log it via `dd-log` to reset the counter."
                 )
                 t1_fired = True
 
@@ -173,9 +175,9 @@ def main() -> int:
                 if since_cp >= t2_threshold:
                     env.accumulate(
                         f"Review cadence: {since_cp} commits since the last "
-                        f"cold-read on this branch (>= T2 nudge threshold "
-                        f"{t2_threshold}). {GATE_AUDIENCE} `/dd-review cold-read` "
-                        f"before continuing."
+                        f"deep review on this branch (>= T2 nudge threshold "
+                        f"{t2_threshold}). {GATE_AUDIENCE} "
+                        f"run a deep review per the adversarial-review skill, then log it via `dd-log` to reset the checkpoint."
                     )
                     t2_path, t2_n = "checkpoint", since_cp
             else:
@@ -191,7 +193,7 @@ def main() -> int:
                         f"Review checkpoint missing or invalidated — "
                         f"{since_fb} commits since fork on this branch "
                         f"(>= T2 nudge threshold {t2_threshold}). {GATE_AUDIENCE} "
-                        f"`/dd-review cold-read` before continuing."
+                        f"run a deep review per the adversarial-review skill, then log it via `dd-log` to reset the checkpoint."
                     )
                     t2_path, t2_n = "fork_base", since_fb
 

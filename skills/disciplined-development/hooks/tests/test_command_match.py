@@ -111,7 +111,7 @@ def test_find_gh_pr_create_chained_cd_last_wins():
     command_match.py): the resolver does not compose relative `cd`s. A
     future fix that correctly resolves `cd subdir` against the prior
     absolute `cd` must update this test in lockstep. E2's gh-wrapper
-    forwards this cwd to `dd_review --cwd`."""
+    forwards this cwd to `external_review.py` via `pre_pr_review.py`."""
     # Last `cd` is absolute → it wins outright.
     cwd = find_gh_pr_create("cd /a && cd /b && gh pr create")
     assert cwd == "/b"

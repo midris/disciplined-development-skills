@@ -8,10 +8,10 @@ Single source of truth for agent guidance in this repository. If `AGENTS.md` / `
 - Cross-reference `README.md` (bundle overview, install/recovery flow) and `skills/disciplined-development/hooks/README.md` (hook design + state model) before non-trivial changes. Hook config schema: `skills/disciplined-development/hooks/dd-config.md`.
 - Treat `plans/` as a live source of truth when a plan exists — update it in the same change set as the work it tracks.
 - Test-first for behavior changes — see "Test-Driven Changes" below.
-- Periodic adversarial review per `disciplined-development` Principle 8 — at review-nudge signals or natural pauses, run `/dd-review <tier>` (tiers: `fast`, `regular`, `cold-read`, `pre-pr`) and iterate per `adversarial-review-loop` until clean. The command file lives at `.claude/commands/dd-review.md` (bundle-source path; the consumer template is the top-level `commands/dd-review.md`).
+- Periodic adversarial review per `disciplined-development` Principle 8 — at review-nudge signals or natural pauses, run a deep review per the adversarial-review skill, then log it via `dd-log` to reset the counter; iterate per `adversarial-review-loop` until clean.
 - After meaningful work, update docs that drifted — see "Documentation Update Checklist" below.
 - **Single source of truth, derive the rest.** Describe current state and durable rules — not history. If a fact can be derived from `git log`, schema/code, or a SKILL.md on disk, do not duplicate it.
-- **Skill/hook surface is the public API.** Consumers symlink these dirs into their projects; the hook command names, `dd-config.json` keys, skill dir names, `commands/dd-review.md`, and `examples/*` files are the contract. When that contract changes, update `commands/` / `examples/` and the relevant README in the same commit. Prefer one clean breaking change over a compatibility shim — flag breakage in the commit body.
+- **Skill/hook surface is the public API.** Consumers symlink these dirs into their projects; the hook command names, `dd-config.json` keys, skill dir names, and `examples/*` files are the contract. When that contract changes, update `examples/` and the relevant README in the same commit. Prefer one clean breaking change over a compatibility shim — flag breakage in the commit body.
 - **Never commit:** the default ignored cruft (`__pycache__/`, `.pytest_cache/`, `.dd-state/`, `baseline-*.md` — `.gitignore` covers them, don't bypass); subagent transcripts or skill-build scratch notes (move to a scratch dir outside the repo); anything that leaked back through an installer symlink from a test-consumer project.
 
 ## Project Snapshot
@@ -23,7 +23,7 @@ A bundle of harness-portable **skills** (the doctrine) + a Claude Code **hook st
 ```text
 skills/<skill>/                       # nine skill dirs under skills/, each with a SKILL.md
 skills/disciplined-development/hooks/ # hook stack + hook tests
-commands/                             # /dd-review slash-command template (installer symlinks it into consumers' .claude/commands/)
+commands/                             # slash-command templates (installer symlinks into consumers' .claude/commands/; currently: dd-log.md)
 examples/                             # reference configs consumers copy (hooks block, dd-config, CLAUDE.md snippet + starter template)
 research/                             # non-shipped experiment tooling (replay harness + its smoke test)
 skill-validation/                     # non-shipped validation records (skills, commands, project rules)
@@ -83,7 +83,7 @@ No `ROADMAP.md`. Active work is tracked in `plans/` (when a plan is open) or dir
   - **Hook stack (`skills/disciplined-development/hooks/`).** A misbehaving hook — especially `discipline_nudge.py`, which matches `*` on PreToolUse — can block every tool call in every consumer project. Biggest blast radius in the repo. Every hook change needs a test.
   - **`install-skills.sh`.** Touches consumer filesystems and must not clobber project-local skills. Regressions are silent (the user finds out later). Cover via `tests/test_install_skills.py`.
   - **`external_review.py` review gate.** Model-callable CLI that gates PR creation. Wrong verdict = a blocked PR or a false pass. Cover the verdict + dispatch logic.
-  - **Skill `SKILL.md` content changes.** No test catches a worse instruction. Substitute: run an adversarial cold-read of the staged branch — `/dd-review cold-read` — and address findings before commit.
+  - **Skill `SKILL.md` content changes.** No test catches a worse instruction. Substitute: run a deep review per the adversarial-review skill on the staged branch and address findings before commit.
 - **Keep tests targeted and contract-oriented.** Focused unit tests over end-to-end. Run the hook test suite (`cd skills/disciplined-development/hooks && python3 -m pytest -q`) before sign-off; report gaps if a full run isn't possible.
 - **Inline fixture-state dependencies.** When a test depends on shared fixture state seeded elsewhere, add a one-line note at the call site pointing at the fixture — cross-file fixture dependencies that aren't called out get misread as bugs.
 - **Rewrite tests when fallout is large; don't chase surgical edits.** When a behavior or schema change breaks a test heavily — ≥3 assertions reference removed fields, or the test's name describes behavior that is intentionally gone — rewrite from scratch against the new contract or delete it. Don't preserve coverage of removed semantics out of inertia and don't produce Frankenstein-edit tests that read like a diff log. Surgical edits are fine when only the assertion shape changed.
@@ -128,4 +128,4 @@ When a feature, fix, or batch of work is complete:
 2. Update `examples/` (`settings.hooks.json`, `dd-config.json`, `CLAUDE.md-snippet.md`, `starter.CLAUDE.md`) when the consumer-facing contract changes.
 3. Update `README.md` when install/recovery flow, requirements, or the skill list changes.
 4. Update `skills/disciplined-development/hooks/README.md` when hook behavior, the hook table, the state model, or the review tiers change. Update `skills/disciplined-development/hooks/dd-config.md` when the config schema changes.
-5. Update the relevant `skills/<skill>/SKILL.md` when its doctrine, dispatch table, or examples drift from current practice. For non-trivial skill content changes, run an adversarial cold-read (`/dd-review cold-read`) on the staged branch before commit — no test catches a worse instruction. Update the skill's `skill-validation/<skill>.md` record (its RED/GREEN scenario set) on a **non-trivial** change to its rules, angles, or behavior — anything that would alter a scenario's outcome, not wording/typo fixes. See `skill-validation/` for the format.
+5. Update the relevant `skills/<skill>/SKILL.md` when its doctrine, dispatch table, or examples drift from current practice. For non-trivial skill content changes, run a deep review per the adversarial-review skill on the staged branch before commit — no test catches a worse instruction. Update the skill's `skill-validation/<skill>.md` record (its RED/GREEN scenario set) on a **non-trivial** change to its rules, angles, or behavior — anything that would alter a scenario's outcome, not wording/typo fixes. See `skill-validation/` for the format.

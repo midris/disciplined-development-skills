@@ -35,8 +35,8 @@ Degrade-silent policy:
 
 Env bypass: ``DD_SKIP_COMMIT_BLOCK=1`` → silent allow (exit 0, no deny).
 Use this during the fix cycle after a block: run remediation commits with the
-bypass set, then run ``/dd-review cold-read`` to a clean pass to reset the
-checkpoint and lift the block.
+bypass set, then run a deep review per the adversarial-review skill and log
+it via ``dd-log`` to reset the checkpoint and lift the block.
 """
 
 from __future__ import annotations
@@ -162,10 +162,10 @@ def main() -> int:
     # (threshold + 1)th — block it.
     logger.emit("block", count=count, threshold=threshold, path=path, branch=branch)
     print(
-        f"[commit-block] BLOCKED: {count} commits since the last cold-read on "
+        f"[commit-block] BLOCKED: {count} commits since the last deep review on "
         f"this branch (>= hard block ceiling {threshold}). "
-        f"Run `/dd-review cold-read` to a clean pass to reset the checkpoint "
-        f"before continuing. "
+        f"Run a deep review per the adversarial-review skill, then log it via "
+        f"`dd-log` to reset the checkpoint before continuing. "
         f"Set DD_SKIP_COMMIT_BLOCK=1 in the launching shell for the remediation "
         f"commit cycle, then run the review to reset.",
         file=sys.stderr,

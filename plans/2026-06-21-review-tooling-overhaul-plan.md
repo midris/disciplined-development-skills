@@ -361,7 +361,7 @@ intentionally-stale, decide live) and the doc refs in `hook-recipes-claude-code.
 text to neutral wording ("run a deep review per the skill; log via `dd-log` to reset
 the counter"); reconcile the tests asserting the old nudge strings; update
 `CLAUDE.md`/examples/README to name `dd-log` and drop tier vocabulary.
-- [ ] Grep → repoint → reconcile tests → re-grep clean → run hook suite → commit
+- [x] Grep → repoint → reconcile tests → re-grep clean → run hook suite → commit
   with full `References swept:`. `refactor(hooks): repoint review nudges onto the skill + dd-log`
 
 ### Task 3.5 — Rewrite the hook README (heavy drift)

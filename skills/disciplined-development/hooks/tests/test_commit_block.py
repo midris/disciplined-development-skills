@@ -199,7 +199,7 @@ def test_at_threshold_denies(tmp_path):
 
     assert r.returncode == 2
     assert "[commit-block]" in r.stderr
-    assert "/dd-review cold-read" in r.stderr
+    assert "adversarial-review skill" in r.stderr
 
 
 def test_amend_at_threshold_denies(tmp_path):
@@ -245,7 +245,7 @@ def test_no_checkpoint_at_threshold_denies(tmp_path):
 
     assert r.returncode == 2
     assert "[commit-block]" in r.stderr
-    assert "/dd-review cold-read" in r.stderr
+    assert "adversarial-review skill" in r.stderr
 
 
 def test_bypass_allows_when_over_threshold(tmp_path):

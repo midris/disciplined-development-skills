@@ -33,8 +33,8 @@ Degrade-silent policy:
 
 Env bypass: ``DD_SKIP_EDIT_BLOCK=1`` → silent allow (exit 0, no deny).
 Use this during the fix cycle after a block: run the remediation edits with
-the bypass set, then run ``/dd-review fast`` to a clean pass to reset the
-counter and lift the block.
+the bypass set, then run a deep review per the adversarial-review skill and
+log it via ``dd-log`` to reset the counter and lift the block.
 """
 
 from __future__ import annotations
@@ -133,8 +133,8 @@ def main() -> int:
     print(
         f"[edit-block] BLOCKED: {count} unreviewed edits on this branch "
         f"(>= hard block ceiling {threshold}). "
-        f"Run `/dd-review fast` to a clean pass to reset the counter before "
-        f"continuing. "
+        f"Run a deep review per the adversarial-review skill, then log it via "
+        f"`dd-log` to reset the counter before continuing. "
         f"Set DD_SKIP_EDIT_BLOCK=1 in the launching shell for the remediation "
         f"edit cycle, then run the review to reset.",
         file=sys.stderr,

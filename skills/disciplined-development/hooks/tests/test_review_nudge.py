@@ -31,11 +31,11 @@ Test plan (all required by H4 spec):
       — landed commit, edits < 30, commits-since-checkpoint < 3
         → verify segment present, no T1/T2 text.
   test_t1_fires_when_edits_at_floor
-      — edits >= 30 at a landed commit → T1 nudge (/dd-review regular + T1 text).
+      — edits >= 30 at a landed commit → T1 nudge (deep review action + T1 text).
   test_t1_absent_when_edits_below_floor
       — edits < 30 → no T1 nudge.
   test_t2_fires_when_commits_at_threshold_with_checkpoint
-      — commits-since-checkpoint == 3 → T2 nudge (/dd-review cold-read).
+      — commits-since-checkpoint == 3 → T2 nudge (deep review action).
   test_t2_absent_when_commits_below_threshold
       — 2 commits since checkpoint < 3 → no T2 nudge.
   test_t2_fork_base_fallback_fires
@@ -235,8 +235,8 @@ def test_verify_only_when_no_cadence_triggers(tmp_path):
     ctx = _ctx(r)
     assert ctx is not None
     assert review_nudge.VERIFY_TEXT in ctx
-    # Neither T1 (/dd-review regular with edit-count message) nor T2 text
-    assert "/dd-review cold-read" not in ctx
+    # Neither T1 (deep review action with edit-count message) nor T2 text
+    assert "adversarial-review skill" not in ctx
     assert "unreviewed edits" not in ctx
     # The audience caveat rides only on T1/T2 review nudges, never the verify reminder.
     assert review_nudge.GATE_AUDIENCE not in ctx
@@ -245,7 +245,7 @@ def test_verify_only_when_no_cadence_triggers(tmp_path):
 def test_t1_fires_when_edits_at_floor(tmp_path):
     """edits == commit_edit_floor (30) at a landed commit → T1 nudge present.
 
-    T1 nudge suggests /dd-review regular and mentions the edit count.
+    T1 nudge includes the deep-review action clause and mentions the edit count.
     Verify segment is also present.
     """
     repo = _init(tmp_path)
@@ -255,7 +255,7 @@ def test_t1_fires_when_edits_at_floor(tmp_path):
     ctx = _ctx(r)
     assert ctx is not None
     assert review_nudge.VERIFY_TEXT in ctx
-    assert "/dd-review regular" in ctx
+    assert "adversarial-review skill" in ctx
     assert "30" in ctx  # edit count appears in message
     assert review_nudge.GATE_AUDIENCE in ctx  # orchestrator/subagent audience framing
 
@@ -269,13 +269,13 @@ def test_t1_absent_when_edits_below_floor(tmp_path):
     ctx = _ctx(r)
     assert ctx is not None
     assert review_nudge.VERIFY_TEXT in ctx
-    assert "/dd-review regular" not in ctx
+    assert "adversarial-review skill" not in ctx
 
 
 def test_t2_fires_when_commits_at_threshold_with_checkpoint(tmp_path):
     """3 commits since checkpoint == nudge_threshold(3) → T2 nudge present.
 
-    T2 nudge suggests /dd-review cold-read.
+    T2 nudge includes the deep-review action clause.
     Verify segment is also present.
     """
     repo = _init(tmp_path)
@@ -285,7 +285,7 @@ def test_t2_fires_when_commits_at_threshold_with_checkpoint(tmp_path):
     ctx = _ctx(r)
     assert ctx is not None
     assert review_nudge.VERIFY_TEXT in ctx
-    assert "/dd-review cold-read" in ctx
+    assert "adversarial-review skill" in ctx
     assert "3" in ctx
     assert review_nudge.GATE_AUDIENCE in ctx  # orchestrator/subagent audience framing
 
@@ -299,7 +299,7 @@ def test_t2_absent_when_commits_below_threshold(tmp_path):
     ctx = _ctx(r)
     assert ctx is not None
     assert review_nudge.VERIFY_TEXT in ctx
-    assert "/dd-review cold-read" not in ctx
+    assert "adversarial-review skill" not in ctx
 
 
 def test_t2_fork_base_fallback_fires(tmp_path):
@@ -314,7 +314,7 @@ def test_t2_fork_base_fallback_fires(tmp_path):
     ctx = _ctx(r)
     assert ctx is not None
     assert review_nudge.VERIFY_TEXT in ctx
-    assert "/dd-review cold-read" in ctx
+    assert "adversarial-review skill" in ctx
     assert review_nudge.GATE_AUDIENCE in ctx  # orchestrator/subagent audience framing
 
 
@@ -327,7 +327,7 @@ def test_t2_fork_base_fallback_absent_below_threshold(tmp_path):
     ctx = _ctx(r)
     assert ctx is not None
     assert review_nudge.VERIFY_TEXT in ctx
-    assert "/dd-review cold-read" not in ctx
+    assert "adversarial-review skill" not in ctx
 
 
 def test_both_t1_and_t2_fire_together(tmp_path):
@@ -343,8 +343,8 @@ def test_both_t1_and_t2_fire_together(tmp_path):
     ctx = _ctx(r)
     assert ctx is not None
     assert review_nudge.VERIFY_TEXT in ctx
-    assert "/dd-review regular" in ctx   # T1
-    assert "/dd-review cold-read" in ctx  # T2
+    assert "adversarial-review skill" in ctx   # T1
+    assert "adversarial-review skill" in ctx  # T2
     assert review_nudge.GATE_AUDIENCE in ctx  # audience framing present once
 
 
@@ -394,7 +394,7 @@ def test_valid_checkpoint_below_threshold_suppresses_fork_base(tmp_path):
     assert ctx is not None
     assert review_nudge.VERIFY_TEXT in ctx
     # Checkpoint (2 < 3) wins; fork-base count (6 >= 3) is ignored → T2 ABSENT
-    assert "/dd-review cold-read" not in ctx
+    assert "adversarial-review skill" not in ctx
 
 
 def test_no_trunk_fork_base_none_emits_verify_only(tmp_path):
@@ -438,4 +438,4 @@ def test_no_trunk_fork_base_none_emits_verify_only(tmp_path):
     ctx = _ctx(r)
     assert ctx is not None
     assert review_nudge.VERIFY_TEXT in ctx
-    assert "/dd-review cold-read" not in ctx
+    assert "adversarial-review skill" not in ctx

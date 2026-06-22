@@ -145,7 +145,7 @@ def test_deny_at_threshold(tmp_path):
 
     assert r.returncode == 2
     assert "[edit-block]" in r.stderr
-    assert "/dd-review fast" in r.stderr
+    assert "adversarial-review skill" in r.stderr
 
 
 def test_deny_above_threshold(tmp_path):
@@ -157,7 +157,7 @@ def test_deny_above_threshold(tmp_path):
 
     assert r.returncode == 2
     assert "[edit-block]" in r.stderr
-    assert "/dd-review fast" in r.stderr
+    assert "adversarial-review skill" in r.stderr
 
 
 def test_counter_not_mutated_on_allow(tmp_path):
@@ -241,7 +241,7 @@ def test_malformed_stdin_with_over_threshold_counter_still_denies(tmp_path):
 
     assert r.returncode == 2
     assert "[edit-block]" in r.stderr
-    assert "/dd-review fast" in r.stderr
+    assert "adversarial-review skill" in r.stderr
 
 
 def test_no_git_repo_exits_zero_allow(tmp_path):
