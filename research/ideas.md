@@ -1,14 +1,19 @@
 # A place to capture project thoughts and ideas
 
-Unscheduled backlog. Promote an item to its own `plans/` file when it's ready
-to brainstorm; until then these are captured, not committed to.
-
 create a new review persona and have it tear apart the dd hook layer
-
-move the dd review tiers into the skill layer and out of the tool layer
 
 consider adding a hook that will force the checking off of checkboxes
 
-add consistency pass to the review skill/loop
-
 add checkbox update to the nudges if they aren't there already
+
+add security as a separate review angle that invokes a better security plugin/skill
+
+Candidate angle for your backlog: a migration / backward-compatibility lens — "how does this change affect already-installed or old-state consumers?" — is a concrete codex-vs-claude gap, 
+
+consider reducing how often the inject plan state fires
+
+put in an architecture file that describes the skills and how they work
+update the docs, add a proper architecture document, add example config files with all available configuration settings, add example config with all skip env vars
+update the installer based on this. update the installer to also add the all the skip env vars to the user's config, all disabled?
+
+once everything is done figure out what needs to be done for a codex harness port
