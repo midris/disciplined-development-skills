@@ -115,20 +115,6 @@ def test_blocking_review_maps_to_exit_2_and_reemits(tmp_path):
     assert "REVIEW_OUTPUT_MARKER" in proc.stderr  # findings surfaced to the model
 
 
-def test_base_flag_forwarded(tmp_path):
-    repo = _init_repo(tmp_path)
-    shim = _make_shim(tmp_path)
-    _, argv, _ = _run(repo, shim, "gh pr create --base release")
-    assert argv == ["pre-pr", "--base", "release"]
-
-
-def test_short_base_flag_forwarded(tmp_path):
-    repo = _init_repo(tmp_path)
-    shim = _make_shim(tmp_path)
-    _, argv, _ = _run(repo, shim, "gh pr create -B phase-22")
-    assert argv == ["pre-pr", "--base", "phase-22"]
-
-
 def test_gh_merge_base_config_forwarded(tmp_path):
     repo = _init_repo(tmp_path)
     shim = _make_shim(tmp_path)

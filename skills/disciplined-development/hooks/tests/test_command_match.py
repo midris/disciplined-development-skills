@@ -6,6 +6,7 @@ from hooks.lib.command_match import (
     commit_landed,
     find_gh_pr_create,
     is_git_commit,
+    looks_like_gh_pr_create,
 )
 
 # ---- is_git_commit ----------------------------------------------------------
@@ -56,40 +57,49 @@ def test_commit_landed_none_response_false():
     assert commit_landed("git commit -m x", None) is False
 
 
+# ---- looks_like_gh_pr_create ------------------------------------------------
+
+
+def test_looks_like_gh_pr_create_trivial():
+    assert looks_like_gh_pr_create("gh pr create") is True
+
+
+def test_looks_like_gh_pr_create_non_pr_false():
+    assert looks_like_gh_pr_create("git status") is False
+
+
+def test_looks_like_gh_pr_create_over_broad_mention_accepted():
+    # `echo gh pr create` returns True — accepted, documented over-broad behavior.
+    # The function is a loose net for the pre-PR gate's fail-closed path; a
+    # false positive is a human-overridable block, a false negative is a
+    # fail-open hole.
+    assert looks_like_gh_pr_create("echo gh pr create") is True
+
+
+def test_looks_like_gh_pr_create_hard_to_parse_compound():
+    # An unmatched quote makes tokenize() return None (strict parse fails).
+    # looks_like must still return True on the same command where
+    # find_gh_pr_create returns None, proving it is the net for parse failures.
+    # This pairing is the load-bearing proof that looks_like is the fail-closed
+    # net: find_gh_pr_create only works when the command is tokenizable; for
+    # commands the strict parser chokes on, looks_like catches the PR attempt.
+    cmd = "git commit -m 'it's done' && gh pr create"
+    assert find_gh_pr_create(cmd) is None  # strict parse fails → None
+    assert looks_like_gh_pr_create(cmd) is True  # loose net catches it
+
+
 # ---- find_gh_pr_create ------------------------------------------------------
 
 
 def test_find_gh_pr_create_plain():
     result = find_gh_pr_create("gh pr create")
     assert result is not None
-    cwd, base = result
     # No chained `cd` → cwd is the process working directory.
-    assert cwd == os.getcwd()
-    assert base == ""
-
-
-def test_find_gh_pr_create_base_long():
-    _, base = find_gh_pr_create("gh pr create --base release")
-    assert base == "release"
-
-
-def test_find_gh_pr_create_base_short():
-    _, base = find_gh_pr_create("gh pr create -B phase-22")
-    assert base == "phase-22"
-
-
-def test_find_gh_pr_create_base_short_eq():
-    _, base = find_gh_pr_create("gh pr create -B=master")
-    assert base == "master"
-
-
-def test_find_gh_pr_create_base_long_eq():
-    _, base = find_gh_pr_create("gh pr create --base=main")
-    assert base == "main"
+    assert result == os.getcwd()
 
 
 def test_find_gh_pr_create_chained_cd():
-    cwd, _ = find_gh_pr_create("cd /other && gh pr create")
+    cwd = find_gh_pr_create("cd /other && gh pr create")
     assert cwd == "/other"
 
 
@@ -103,10 +113,10 @@ def test_find_gh_pr_create_chained_cd_last_wins():
     absolute `cd` must update this test in lockstep. E2's gh-wrapper
     forwards this cwd to `dd_review --cwd`."""
     # Last `cd` is absolute → it wins outright.
-    cwd, _ = find_gh_pr_create("cd /a && cd /b && gh pr create")
+    cwd = find_gh_pr_create("cd /a && cd /b && gh pr create")
     assert cwd == "/b"
     # Last `cd` is relative → anchored to process cwd, NOT to `/a`.
-    cwd, _ = find_gh_pr_create("cd /a && cd subdir && gh pr create")
+    cwd = find_gh_pr_create("cd /a && cd subdir && gh pr create")
     assert cwd == os.path.join(os.getcwd(), "subdir")
 
 
@@ -121,11 +131,10 @@ def test_find_gh_pr_create_non_gh_none():
 
 def test_find_gh_pr_create_unexpandable_cd_signals_unresolved_cwd():
     # A `gh pr create` after a `cd` to an unexpandable path (shell var /
-    # substitution) is STILL matched — cwd is None to signal "matched but
-    # cwd unresolvable", so the pre-PR gate can fail loud instead of failing
-    # open (the bug: returning None made the wrapper treat it as not-a-PR and
-    # let the unreviewed PR through).
-    result = find_gh_pr_create("cd $X && gh pr create")
-    assert result is not None
-    cwd, base = result
-    assert cwd is None and base == ""
+    # substitution): find_gh_pr_create returns None (cwd unresolvable →
+    # treated same as not-a-PR in the new bare-cwd contract), and
+    # looks_like_gh_pr_create returns True — the fail-closed pairing that
+    # lets the pre-PR gate block rather than fail open.
+    cmd = "cd $X && gh pr create"
+    assert find_gh_pr_create(cmd) is None
+    assert looks_like_gh_pr_create(cmd) is True
