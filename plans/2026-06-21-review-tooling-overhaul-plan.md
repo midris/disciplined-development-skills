@@ -420,7 +420,7 @@ Edits drafted, user-reviewed (Decision 6), and applied in
   de-diff-scope; conditional logging deferred).
 - [x] Update `skill-validation/` records — new `disciplined-development.md`,
   `adversarial-review.md` extended (verdict contract + scope/angle regression).
-- [ ] Run hook suite; commit; open PR.
+- [x] Hook suite green (243 passed, 3 skipped); committed; opened PR #30.
   `docs(skills): one deep whole-repo review mode; declared DD-VERDICT line; de-diff-scope parent doctrine`
 
 ---
@@ -439,6 +439,12 @@ Edits drafted, user-reviewed (Decision 6), and applied in
   labels still use `T0`–`T3` as internal shorthand for the four cadence gates. Left
   intact deliberately — relabeling them is part of the deferred hook-script
   simplification, not this overhaul. (See the cadence-counter-structure deferral.)
+  **Exception (2026-06-22, external review):** the *consumer-facing* `cold-read`
+  reset-condition wording in `dd-config.md` + `hook-recipes` was corrected to
+  "clean review" — it taught the wrong reset model (any clean deep review stamps
+  `review.checkpoint`, not a distinct cold-read). The `T0`–`T3` labels, the
+  `cold_read_escalation` key, and the same shorthand in hook *code*
+  docstrings/tests stay deferred.
 - **Cadence-counter structure** — `plans/deferred/2026-06-21-cadence-counters-structure-deferred.md`.
 - **Threshold calibration** — `plans/deferred/2026-06-14-threshold-rationale-and-calibration.md`.
 - **Codex/other-harness port** — the old `2026-06-10-codex-harness-port.md` was
