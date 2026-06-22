@@ -9,7 +9,9 @@ so only line-anchored findings count; mid-prose tokens must not.
 
 import pathlib
 
-from hooks.lib.severity import count_severities, findings_excerpt
+import pytest
+
+from hooks.lib.severity import count_severities, findings_excerpt, parse_findings, parse_verdict
 
 
 # ---- count_severities: the A3 table (line_start anchoring) -----------------
@@ -143,3 +145,125 @@ def test_real_p2_finding_still_counts():
     text = "- [P2] src/x.py:10: real finding"
     assert count_severities(text, line_start=True) == (0, 0, 1, 0)
     assert findings_excerpt(text, line_start=True) == text
+
+
+# ---- parse_findings: structured extraction (Task 1.1) ----------------------
+# Finding line shape `- [PN] <file>:<line>: <summary>` per adversarial-review
+# SKILL.md. Degraded shapes drop file/line; the rubric legend + mid-prose
+# tokens are excluded via the same guard/anchoring as count_severities.
+
+
+@pytest.mark.parametrize(
+    "text, line_start, expected",
+    [
+        pytest.param(
+            "- [P1] lib/state.py:42: counter not reset",
+            True,
+            [{"severity": "P1", "file": "lib/state.py", "line": 42, "summary": "counter not reset"}],
+            id="well_formed_yields_full_dict",
+        ),
+        pytest.param(
+            "- [P2] README.md: stale install step",
+            True,
+            [{"severity": "P2", "file": "README.md", "line": None, "summary": "stale install step"}],
+            id="file_without_line_yields_line_none",
+        ),
+        pytest.param(
+            "- [P1] counter never decremented",
+            True,
+            [{"severity": "P1", "file": None, "line": None, "summary": "counter never decremented"}],
+            id="no_path_prefix_yields_file_and_line_none",
+        ),
+        pytest.param(
+            "- **[P0]** data loss in flush path",
+            True,
+            [{"severity": "P0", "file": None, "line": None, "summary": "data loss in flush path"}],
+            id="emphasis_wrapped_tag_parsed_as_p0",
+        ),
+        pytest.param(
+            "- **[P0]** — critical / blocks merge.",
+            True,
+            [],
+            id="rubric_legend_line_excluded",
+        ),
+        pytest.param(
+            "No findings.",
+            True,
+            [],
+            id="no_findings_text_yields_empty_list",
+        ),
+        pytest.param(
+            "clean; no [P1] worth tagging",
+            True,
+            [],
+            id="mid_prose_token_excluded_when_line_start",
+        ),
+        pytest.param(
+            "- [P0] hooks/foo.py:5: data loss\n- [P2] lib/bar.py:10: minor drift",
+            True,
+            [
+                {"severity": "P0", "file": "hooks/foo.py", "line": 5, "summary": "data loss"},
+                {"severity": "P2", "file": "lib/bar.py", "line": 10, "summary": "minor drift"},
+            ],
+            id="multiple_findings_parsed_in_order",
+        ),
+    ],
+)
+def test_parse_findings(text, line_start, expected):
+    assert parse_findings(text, line_start=line_start) == expected
+
+
+# ---- parse_verdict: last-non-blank-line anchoring (Task 1.1) ---------------
+# Verdict is read from the last non-blank line only and normalized to
+# uppercase; a mid-output echo is ignored unless it is that last line.
+
+
+@pytest.mark.parametrize(
+    "text, expected",
+    [
+        pytest.param(
+            "Some findings here.\n\nDD-VERDICT: BLOCK\n",
+            "BLOCK",
+            id="trailing_block_verdict_returns_block",
+        ),
+        pytest.param(
+            "All good.\ndd-verdict: pass",
+            "PASS",
+            id="lowercase_verdict_normalized_to_uppercase",
+        ),
+        pytest.param(
+            "No verdict line in this text.",
+            None,
+            id="absent_verdict_returns_none",
+        ),
+        pytest.param(
+            # Verdict token appears mid-text but the last non-blank line is not a verdict.
+            "Use DD-VERDICT: PASS at the end.\nSome trailing prose.",
+            None,
+            id="mid_output_echo_ignored_when_last_line_non_verdict",
+        ),
+        pytest.param(
+            # Verdict echoed mid-output; the real verdict is the last non-blank line.
+            "The verdict format is DD-VERDICT: PASS or BLOCK.\n\nDD-VERDICT: BLOCK",
+            "BLOCK",
+            id="real_verdict_on_last_line_wins_over_mid_output_echo",
+        ),
+        pytest.param(
+            "DD-VERDICT: PASS\n\n\n",
+            "PASS",
+            id="trailing_blank_lines_skipped_to_last_non_blank",
+        ),
+        pytest.param(
+            "DD-VERDICT: Block",
+            "BLOCK",
+            id="mixed_case_verdict_normalized",
+        ),
+        pytest.param(
+            "  DD-VERDICT: PASS  ",
+            "PASS",
+            id="surrounding_whitespace_tolerated",
+        ),
+    ],
+)
+def test_parse_verdict(text, expected):
+    assert parse_verdict(text) == expected
