@@ -154,6 +154,61 @@ def test_missing_required_arg_exits_2(tmp_path):
     assert proc.returncode == 2
 
 
+def test_detached_head_resolves_to_detached_key(tmp_path):
+    """Detached HEAD must use branch key 'detached', matching cadence hooks.
+
+    Bug: _current_branch used `git rev-parse --abbrev-ref HEAD` which returns
+    the literal string "HEAD" on a detached HEAD. The cadence hooks
+    (edit_counter.py:110-115) use `git symbolic-ref --short HEAD` and fall
+    back to "detached" — so the state-dir key mismatched, and a clean review
+    never cleared the counter the hooks were tracking.
+
+    Fix: _current_branch must use symbolic-ref + "detached" fallback.
+    """
+    import sys as _sys
+
+    repo = _init_repo(tmp_path)
+    log_dir = tmp_path / "logs"
+
+    # Seed an edits count under the "detached" key (what the cadence hooks write).
+    env_for_seed = dict(os.environ)
+    env_for_seed["PYTHONPATH"] = str(_BASE_DIR) + os.pathsep + env_for_seed.get("PYTHONPATH", "")
+    subprocess.run(
+        [_sys.executable, "-c",
+         "from hooks.lib import state\n"
+         "import sys\n"
+         "repo = sys.argv[1]\n"
+         "[state.bump(repo, 'detached', 'edits') for _ in range(3)]\n",
+         str(repo)],
+        env=env_for_seed, check=True,
+    )
+
+    # Detach HEAD by checking out the commit SHA directly.
+    head_sha = _head_sha(repo)
+    subprocess.run(
+        ["git", "-C", str(repo), "checkout", "--detach", head_sha],
+        check=True, capture_output=True,
+    )
+
+    proc = _run(repo, log_dir, "No findings.",
+                "--source", "model-review", "--trigger", "manual")
+
+    assert proc.returncode == 0, proc.stderr
+    rows = _rows(log_dir)
+    assert len(rows) == 1
+    assert rows[0]["branch"] == "detached"   # logged under "detached", not "HEAD"
+
+    # Reset-fold must operate on the "detached" key — edits counter cleared.
+    detached_edits = repo / ".claude" / ".dd-state" / "detached" / "edits.count"
+    edits = int(detached_edits.read_text().strip()) if detached_edits.exists() else 0
+    assert edits == 0, "edits counter under 'detached' key must be reset to 0"
+
+    # Checkpoint stamped under the "detached" key.
+    checkpoint_file = repo / ".claude" / ".dd-state" / "detached" / "review.checkpoint"
+    assert checkpoint_file.exists(), "review.checkpoint must be written under 'detached' key"
+    assert checkpoint_file.read_text().strip() == head_sha
+
+
 def test_row_carries_source_trigger_round_context_and_findings(tmp_path):
     repo = _init_repo(tmp_path)
     log_dir = tmp_path / "logs"

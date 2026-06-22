@@ -31,15 +31,27 @@ from hooks.lib import logging_setup, review_record, state  # noqa: E402
 
 
 def _current_branch(repo: str) -> str:
-    """Current branch of ``repo`` via a git read; '' when git is unavailable."""
+    """Current branch of ``repo`` via git symbolic-ref; 'detached' on detached
+    HEAD or git failure.
+
+    Matches the cadence hooks (edit_counter.py) exactly: both use
+    ``symbolic-ref --short HEAD`` and fall back to the literal ``"detached"``
+    so the per-branch state-dir key is always consistent between the hooks and
+    this tool.  ``rev-parse --abbrev-ref HEAD`` was the previous approach but
+    returns ``"HEAD"`` on a detached HEAD, causing a state-dir key mismatch:
+    log_review would read/reset ``.dd-state/HEAD/`` while the hooks used
+    ``.dd-state/detached/``, so a clean review never cleared the counter the
+    hooks tracked.
+    """
     try:
         r = subprocess.run(
-            ["git", "-C", repo, "rev-parse", "--abbrev-ref", "HEAD"],
+            ["git", "-C", repo, "symbolic-ref", "--short", "HEAD"],
             capture_output=True, text=True, check=False, timeout=5,
         )
     except Exception:
-        return ""
-    return r.stdout.strip() if r.returncode == 0 else ""
+        return "detached"
+    branch = r.stdout.strip()
+    return branch if r.returncode == 0 and branch else "detached"
 
 
 def _parse_args(argv: list[str] | None = None) -> argparse.Namespace:
