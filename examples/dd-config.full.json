@@ -25,7 +25,10 @@
     "discipline_threshold": 70
   },
   "review": {
-    "prompt_path": ".claude/skills/adversarial-review/SKILL.md"
+    "prompt_path": ".claude/skills/adversarial-review/SKILL.md",
+    "reviewer": "codex",
+    "model": "gpt-5.5",
+    "effort": "medium"
   },
   "branch_convention": {
     "trunk_branches": ["master", "main"]

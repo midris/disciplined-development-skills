@@ -5,6 +5,10 @@
     "trunk_branches": ["main", "master"]
   },
 
+  "review": {
+    "reviewer": "codex"
+  },
+
   "review_tiers": {
     "pre_pr": {
       "reviewer": "codex"
