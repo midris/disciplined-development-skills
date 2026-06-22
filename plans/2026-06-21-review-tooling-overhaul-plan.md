@@ -152,13 +152,13 @@ clean result resets `edits.count` **and** stamps `review.checkpoint = HEAD`
 or empty/whitespace stdin — a blank pipe must not log a false PASS). Never blocks on
 a log-write failure.
 
-- [ ] Write failing tests (temp git repo + `DD_LOG_DIR` log isolation — mirror an
+- [x] Write failing tests (temp git repo + `DD_LOG_DIR` log isolation — mirror an
   existing hook test that uses an on-disk state dir): clean stdin → exit 0, one
   `PASS` row, `edits.count` reset, `review.checkpoint` == HEAD; `[P1]` stdin →
   `BLOCK` row, counters untouched; empty stdin → exit 2, no row; row carries
   `source`/`trigger`/`round`/cadence context/structured findings.
-- [ ] Run → fail; implement; run → pass.
-- [ ] Commit. `feat(log-review): consolidated review log + cadence reset tool`
+- [x] Run → fail; implement; run → pass.
+- [x] Commit. `feat(log-review): consolidated review log + cadence reset tool`
 
 ### Task 1.4 — `dd-log` command + generalize the installer
 
