@@ -209,6 +209,51 @@ def test_detached_head_resolves_to_detached_key(tmp_path):
     assert checkpoint_file.read_text().strip() == head_sha
 
 
+def test_omitted_round_and_reviewer_default_to_1_and_subagents(tmp_path):
+    """Omitting --round and --reviewer must write round=1 and reviewer='subagents'.
+
+    Old behaviour: both defaulted to None, writing null into durable rows.
+    The old dd_review_runner.py path defaulted round=1 / reviewer='subagents'
+    (runner.py:422-424); log_review.py must match that parity.
+    """
+    repo = _init_repo(tmp_path)
+    log_dir = tmp_path / "logs"
+
+    # Pass NEITHER --round NOR --reviewer (clean-result stdin)
+    proc = _run(repo, log_dir, "No findings.",
+                "--source", "model-review", "--trigger", "manual")
+
+    assert proc.returncode == 0, proc.stderr
+    rows = _rows(log_dir)
+    assert len(rows) == 1
+    assert rows[0]["round"] == 1
+    assert rows[0]["reviewer"] == "subagents"
+
+
+def test_round_less_than_1_exits_2_and_writes_no_row(tmp_path):
+    """--round 0 (or negative) must exit 2 with no row written.
+
+    A nonsense round must not reach the durable log — matches the old
+    runner's round >= 1 validation (dd_review_runner.py:422-424).
+    """
+    repo = _init_repo(tmp_path)
+    log_dir = tmp_path / "logs"
+
+    proc = _run(repo, log_dir, "No findings.",
+                "--source", "model-review", "--trigger", "manual",
+                "--round", "0")
+
+    assert proc.returncode == 2
+    assert _rows(log_dir) == []
+
+    # Also check a negative value
+    proc_neg = _run(repo, log_dir, "No findings.",
+                    "--source", "model-review", "--trigger", "manual",
+                    "--round", "-1")
+    assert proc_neg.returncode == 2
+    assert _rows(log_dir) == []
+
+
 def test_row_carries_source_trigger_round_context_and_findings(tmp_path):
     repo = _init_repo(tmp_path)
     log_dir = tmp_path / "logs"

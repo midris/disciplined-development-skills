@@ -62,8 +62,8 @@ def _parse_args(argv: list[str] | None = None) -> argparse.Namespace:
     p.add_argument("--source", required=True,
                    choices=["model-review", "external-gate"])
     p.add_argument("--trigger", required=True)
-    p.add_argument("--round", type=int, default=None)
-    p.add_argument("--reviewer", default=None)
+    p.add_argument("--round", type=int, default=1)
+    p.add_argument("--reviewer", default="subagents")
     p.add_argument("--cwd", default=None,
                    help="repo to operate on (default: current directory)")
     return p.parse_args(argv)
@@ -71,6 +71,11 @@ def _parse_args(argv: list[str] | None = None) -> argparse.Namespace:
 
 def main() -> int:
     args = _parse_args()
+
+    if args.round < 1:
+        print(f"[log-review] --round must be >= 1, got {args.round}.",
+              file=sys.stderr)
+        return 2
 
     findings = sys.stdin.read()
     if not findings.strip():
