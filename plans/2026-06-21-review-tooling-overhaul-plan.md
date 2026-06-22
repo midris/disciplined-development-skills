@@ -279,9 +279,12 @@ the stderr re-emit; reconcile the tests that assert the old delegate target / ba
   (body cites the fail-open deferred bug as resolved).
 
 ### Chunk 2 close-out
-- [ ] Hook suite green. **Live smoke (Gate 3):** scratch consumer, real `gh pr
-  create` against a seeded-BLOCK shim → blocks + row; clean → passes + checkpoint.
-  Self-review; open PR.
+- [x] Hook suite green (353 passed/3 skipped). **Live smoke (Gate 3):** scratch
+  consumer, real `gh pr create` via the real hook → real `external_review.py` → codex
+  shim — seeded-BLOCK → exit 2 + BLOCK row, no reset; seeded-PASS → exit 0 + PASS row +
+  `review.checkpoint`==HEAD + edits cleared; `head_sha` matches the `--cwd` repo.
+  Whole-branch cold-read (Opus): one [P2] fail-open (unguarded `main()` → exit-1) fixed
+  + re-review clean; 4 [P3] (3 fixed, PASS-stamp-wrap dismissed). PR open, held for user.
 
 ---
 
