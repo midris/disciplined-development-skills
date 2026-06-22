@@ -89,7 +89,7 @@ the commit (exit 2) with a message to run a deep review.
 Commit count selection: checkpoint exists → `state.commits_since_checkpoint`;
 no checkpoint (fresh branch or none recorded) → `state.commits_since_fork_base`.
 No fork base → degrade silent (allow). A stored count of 5 means 5 commits have
-landed since the last cold-read; this hook denies the 6th.
+landed since the last clean review; this hook denies the 6th.
 
 **Note on `--amend`.** Amend is gated the same as a new commit — the gate is a
 coarse "you owe a deep review" signal, not amend-specific logic. Clear it by

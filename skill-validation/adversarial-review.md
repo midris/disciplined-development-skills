@@ -143,6 +143,44 @@ table-row breadth); all dismissed with rationale — the asymmetry and the
 parenthetical are load-bearing (the rationale-counter is a rebuttal + two distinct
 harms, each measured to drive a catch, not redundancy), the rest advisory/locked.
 
+## Declared verdict line (2026-06-22)
+
+**Change (Output format).** Every review ends with a final line — the last non-blank
+line — containing only `DD-VERDICT: PASS` or `DD-VERDICT: BLOCK` (PASS = zero P0/P1/P2;
+P3-only still PASS); few-shot examples updated to match. Rationale: the pre-PR gate
+reads the reviewer's declared verdict instead of prose-scanning `[P0]`–`[P3]` counts
+(design Decision 7); internal reviews declare the same verdict so a logging tool can
+parse it.
+
+**Scenario (reproducible).** Subject reads the live skill, reviews an artifact, emits
+its review output. Check the last non-blank line.
+- **PASS:** findings → ends `DD-VERDICT: BLOCK`; clean → `No findings.` then
+  `DD-VERDICT: PASS`. **Loophole:** when the artifact itself quotes verdict tokens, the
+  operative verdict must still be the last non-blank line (quotes stay inline).
+
+**Results.**
+- **RED (pre-edit, excerpt ×3):** 0/3 emitted any verdict line — contract absent.
+- **GREEN (live skill, sonnet):** findings → BLOCK and clean → PASS, parity across the
+  initial draft and the trimmed/root-fixed versions (findings 7/7, clean 3/3); loophole
+  (artifact quoting `DD-VERDICT:`) 4/4 — incl. 2/2 with no earlier-line guard.
+- **REFACTOR (trim).** Verbose first draft trimmed to the parser-complete contract. An
+  opus writing-skills cold-read (3 cycles) flagged an added earlier-line guard that
+  *self-contradicted the few-shot examples* and was *unbacked* — the loophole probe
+  passes without it (the last-non-blank-line anchor is the protection). Guard removed
+  (root fix, not a third wording tweak); cold-read then clean (PASS).
+
+## Whole-repo scope + angle selection (2026-06-22)
+
+The Review-angles closing line changed from "Depth sets breadth — a quick pass… full
+review…" to "Every review is deep and whole-repo, anchored to the active plan and
+governing docs — no light or diff-scoped tier. Only the angles vary…" Companion to the parent skill's Gate 5 change —
+[disciplined-development.md](disciplined-development.md) carries the scope RED/GREEN.
+
+**Regression — standalone angle selection.** Per "On edits," re-ran selection on a
+doc-dominant artifact (three runbook docs, no code): GREEN 2/2 selected baseline +
+consistency + executability and skipped skill-authoring + durability with correct
+"when to apply" reasoning. The reworded line did not regress selection.
+
 ## On edits
 
 - Adding/refining an angle: run the **discrimination test** (subtle target,
@@ -150,6 +188,8 @@ harms, each measured to drive a catch, not redundancy), the rest advisory/locked
   with cross-model (codex) gap data where available.
 - Changing the **When to apply** list or a definition: re-run the standalone
   selection RED/GREEN and the affected per-angle scenario.
+- Changing the Output-format **verdict contract**: re-run the declared-verdict
+  scenario (findings → BLOCK, clean → PASS, stray-line loophole).
 - Limitation: small-artifact discrimination can't validate *coverage* value (it
   appears only at scale / across models). consistency and executability are kept on
   the lens-not-in-posture + codex-gap grounds, not on demonstrated single-reviewer

@@ -48,13 +48,12 @@ detail on indented lines beneath:
 ```
 
 A line that starts with `[P0]`–`[P3]` is read as a finding — so start no
-other line with one. Clean reviews emit exactly:
+other line with one. Emit findings (or `No findings.`) only after
+enumerating, verifying, and challenging, then close with the verdict line.
 
-```
-No findings.
-```
-
-Emit it only after enumerating, verifying, and challenging.
+**Verdict line.** The last non-blank line, nothing after it, containing
+only `DD-VERDICT: PASS` or `DD-VERDICT: BLOCK`: PASS = zero `[P0]`/`[P1]`/`[P2]`
+(`[P3]`-only passes), BLOCK = one or more.
 
 ## Rules
 
@@ -106,7 +105,9 @@ The posture and rules above are the always-on baseline of every review — the *
   - *Mutation:* partial write then error → rolled back? flush/commit fails after the write → acknowledged anyway? process killed mid-op → torn record? a write-path crash on bad input (panic/abort, unchecked unwrap, `try!`/assert; NaN/±Inf, oversized) → typed error, or process crash? ('it's a programmer error / our own typed data' is no pass — a statically-valid value can be unserializable at runtime; the crash tears the record, and even a pre-write crash denies the caller a recoverable error) failure surfaced as the documented error type, or a leaked lower-layer one? retry after a failure → duplicate / gap / reorder?
   - *Read/replay:* torn/partial final record (missing terminator) rejected? interior corruption (blank line, gap, out-of-order) rejected, not skipped? unknown/forward version loud, not mis-parsed? empty distinguished from corrupt?
 
-Depth sets breadth — a quick pass may be the baseline alone; a full review adds every applicable angle.
+Every review is deep and whole-repo, anchored to the active plan and
+governing docs — no light or diff-scoped tier. Only the angles vary: the
+holistic baseline always runs; add each per its "when to apply" row.
 
 ## Few-shot examples
 
@@ -121,12 +122,16 @@ Depth sets breadth — a quick pass may be the baseline alone; a full review add
 - [P2] spec.md:127: `mkdir -p` doesn't establish the documented mode-0600
   `mkdir -p` honors umask; `mv` preserves temp file mode. Either
   `umask 077` for the section or `chmod 600` before rename.
+
+DD-VERDICT: BLOCK
 ```
 
 ### Clean pass
 
 ```
 No findings.
+
+DD-VERDICT: PASS
 ```
 
 ## Common reviewer rationalizations

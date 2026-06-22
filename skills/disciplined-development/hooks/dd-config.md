@@ -70,19 +70,20 @@ cadence — documented expectation, not runtime-validated.
 |---|---|---|---|
 | `commit_edit_floor` | int | `30` | Stored `edits.count` floor for the T1 nudge in `review_nudge.py`. The T1 nudge fires only when a commit lands AND `edits.count` ≥ this value. |
 
-### `review_tiers.cold_read_escalation` — T2 cold-read cadence
+### `review_tiers.cold_read_escalation` — T2 commit cadence
 
 | Key | Type | Default | Description |
 |---|---|---|---|
-| `nudge_threshold` | int | `3` | Commits-since-cold-read at which `review_nudge.py` emits the T2 nudge. |
-| `hard_block_threshold` | int | `5` | Commits-since-cold-read at which `commit_block.py` denies the next `git commit`. |
+| `nudge_threshold` | int | `3` | Commits since the last clean review at which `review_nudge.py` emits the T2 nudge. |
+| `hard_block_threshold` | int | `5` | Commits since the last clean review at which `commit_block.py` denies the next `git commit`. |
 
 **Threshold invariant:** `hard_block_threshold` must exceed `nudge_threshold`
 (5 > 3 by default). Same expectation as T0 — not runtime-validated.
 
-Commits-since-cold-read uses `review.checkpoint` when present; falls back to
-fork-base when absent (fresh branch) — so the T2 block fires even on a branch
-that has never been cold-read.
+Commits since the last clean review use `review.checkpoint` (stamped by any
+clean deep review — `log_review.py` or `external_review.py`) when present; fall
+back to fork-base when absent (fresh branch) — so the T2 block fires even on a
+branch that has never been reviewed.
 
 ---
 

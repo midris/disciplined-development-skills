@@ -125,6 +125,39 @@ The layer is advisory — a read or write failure degrades to a safe default.
 `edits.count` cleared and `review.checkpoint` stamped to HEAD; BLOCK or ERROR
 leaves both unchanged (Decision 2).
 
+### Edit cadence (`edits.count`)
+
+```mermaid
+stateDiagram-v2
+    direction LR
+    [*] --> Clean
+    Clean --> Accumulating: edit
+    Accumulating --> Accumulating: edit
+    Accumulating --> Nudging: reaches 30
+    Nudging --> Nudging: edit · re-nudge
+    Nudging --> Blocked: reaches 60 · deny 61st
+    Blocked --> Blocked: edit denied
+    Accumulating --> Clean: clean review
+    Nudging --> Clean: clean review
+    Blocked --> Clean: clean review · unblock
+```
+
+### Commit cadence (`review.checkpoint`)
+
+```mermaid
+stateDiagram-v2
+    direction LR
+    [*] --> Fresh
+    Fresh --> Behind: commit
+    Behind --> Nudging: 3 since checkpoint
+    Nudging --> Nudging: commit · re-nudge
+    Nudging --> Blocked: 6th commit · deny
+    Blocked --> Blocked: commit denied
+    Behind --> Fresh: clean review
+    Nudging --> Fresh: clean review
+    Blocked --> Fresh: clean review · unblock
+```
+
 See the Boundary note under the hook table for the PreToolUse/PostToolUse off-by-one.
 
 ## Observability
