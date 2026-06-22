@@ -15,7 +15,7 @@ Scenarios:
   T2  [P1] finding + BLOCK → non-zero, BLOCK row, no reset / no checkpoint
   T3  no verdict line → non-zero, ERROR row reason=no_verdict
   T4  DD_CODEX_BIN points at nonexistent → non-zero, ERROR reason=cli_missing
-  T5  shim times out (inject tiny timeout via DD_CODEX_TIMEOUT override) →
+  T5  shim times out (inject tiny timeout via DD_REVIEW_TIMEOUT override) →
         non-zero, ERROR reason=timeout
   T6  empty last-message file → non-zero, ERROR reason=empty_output
   T7  built prompt contains active-plan path AND skill pointer
@@ -139,7 +139,7 @@ def _base_env(tmp_path: Path, defaults_path: Path, binroot: Path, log_dir: Path)
     }
     # Strip any inherited stub knobs.
     for k in ("DD_REVIEW_STUB_STDOUT", "DD_REVIEW_STUB_EXIT", "DD_REVIEW_ARGV_LOG",
-              "DD_CODEX_TIMEOUT"):
+              "DD_REVIEW_TIMEOUT"):
         env.pop(k, None)
     return env
 
@@ -348,8 +348,8 @@ def test_missing_codex_binary_exits_nonzero_logs_error_cli_missing(gate_env, tmp
 def test_timeout_exits_nonzero_logs_error_timeout(gate_env, tmp_path):
     """Codex shim that sleeps past a tiny injected timeout → ERROR reason=timeout.
 
-    We override DD_CODEX_TIMEOUT (seconds as float/int) so the gate uses a
-    sub-second budget; the shim sleeps longer than that.
+    We override DD_REVIEW_TIMEOUT (the documented consumer override; seconds as
+    float/int) so the gate uses a sub-second budget; the shim sleeps longer.
     """
     env, repo, log_dir = gate_env
 
@@ -363,7 +363,7 @@ def test_timeout_exits_nonzero_logs_error_timeout(gate_env, tmp_path):
         'exit 0\n'
     )
     sleeping_shim.chmod(0o755)
-    env = {**env, "DD_CODEX_BIN": str(sleeping_shim), "DD_CODEX_TIMEOUT": "0.2"}
+    env = {**env, "DD_CODEX_BIN": str(sleeping_shim), "DD_REVIEW_TIMEOUT": "0.2"}
 
     proc = subprocess.run(
         [sys.executable, str(GATE), "--cwd", str(repo)],
@@ -486,3 +486,27 @@ def test_nonzero_codex_exit_fails_closed_even_with_pass_verdict(gate_env, tmp_pa
     # The PASS verdict in the -o file must NOT have stamped state.
     assert _edits_count(repo) == 2
     assert _checkpoint(repo) is None
+
+
+# ---------------------------------------------------------------------------
+# T9 — DD_REVIEW_TIMEOUT (the documented consumer override) is honored
+# ---------------------------------------------------------------------------
+
+
+def test_resolve_timeout_honors_dd_review_timeout(monkeypatch):
+    """The gate reads the documented `DD_REVIEW_TIMEOUT` consumer override
+    (dd-config.md), not a test-only var — a positive value wins over config."""
+    import external_review
+    monkeypatch.setenv("DD_REVIEW_TIMEOUT", "42")
+    assert external_review._resolve_timeout() == 42.0
+
+
+def test_resolve_timeout_rejects_nonpositive_dd_review_timeout(monkeypatch):
+    """`DD_REVIEW_TIMEOUT=0` must not make Popen.wait(timeout=0) fire instantly;
+    a value <= 0 (or unparseable) is rejected and falls through to config/default
+    (matches the old engine contract)."""
+    import external_review
+    monkeypatch.setenv("DD_REVIEW_TIMEOUT", "0")
+    assert external_review._resolve_timeout() > 0
+    monkeypatch.setenv("DD_REVIEW_TIMEOUT", "not-a-number")
+    assert external_review._resolve_timeout() > 0

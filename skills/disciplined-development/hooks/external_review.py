@@ -24,7 +24,10 @@ Config keys consumed (from ``review.*``, resolved via ``lib/config.py``):
 Env vars:
   ``DD_CODEX_BIN``      — path to the codex binary (default ``codex``); override
                            for tests so a shim is used instead of the real binary.
-  ``DD_CODEX_TIMEOUT``  — timeout override in seconds (float); intended for tests.
+  ``DD_REVIEW_TIMEOUT`` — wall-clock timeout override in seconds (the documented
+                           consumer override; see dd-config.md). A value <= 0 or
+                           unparseable is rejected; falls back to
+                           ``codex.pr_review_timeout_s`` then the default.
 """
 
 from __future__ import annotations
@@ -85,15 +88,24 @@ def _current_branch(repo: str) -> str:
 
 
 def _resolve_timeout() -> float:
-    """Timeout in seconds: DD_CODEX_TIMEOUT env (test override) → config → default."""
-    env_t = os.environ.get("DD_CODEX_TIMEOUT")
+    """Timeout in seconds: DD_REVIEW_TIMEOUT env → config → default.
+
+    ``DD_REVIEW_TIMEOUT`` is the documented consumer override (dd-config.md), the
+    same env the old engine honored. A value <= 0 or unparseable is rejected —
+    ``Popen.wait(timeout=0)`` would fire instantly — and falls through to
+    ``codex.pr_review_timeout_s`` then the default. Floats are accepted (the int
+    contract of the old engine is a subset), so tests can use a sub-second budget.
+    """
+    env_t = os.environ.get("DD_REVIEW_TIMEOUT")
     if env_t:
         try:
-            return float(env_t)
+            v = float(env_t)
+            if v > 0:
+                return v
         except (ValueError, TypeError):
             pass
     val = config.get("codex.pr_review_timeout_s")
-    if isinstance(val, (int, float)) and val > 0:
+    if isinstance(val, (int, float)) and not isinstance(val, bool) and val > 0:
         return float(val)
     return _DEFAULT_TIMEOUT_S
 
