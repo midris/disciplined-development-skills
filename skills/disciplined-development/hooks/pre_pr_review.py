@@ -127,6 +127,10 @@ def main() -> int:
                 # resolved (e.g. a ``cd`` to a shell variable / command substitution).
                 # Fail closed: log ERROR row + block — do NOT let an unreviewed PR
                 # through (the fail-open bug this gate exists to prevent).
+                # The command was unparseable so the cd target is unknown;
+                # os.getcwd() is the process cwd, which may differ from the
+                # intended repo — the logged row's repo/branch/cadence fields
+                # are best-effort and may not match the intended tree.
                 repo = os.getcwd()
                 _log_unparseable(repo)
                 logger.emit("block", reason="unresolvable_cwd")
