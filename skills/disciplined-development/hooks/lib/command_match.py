@@ -11,7 +11,8 @@ from dd_lib / review_debt / dd_command_match (all deleted at cutover).
 
 Public API:
   is_git_commit(command) -> bool
-  find_gh_pr_create(command) -> (cwd, base) | None
+  looks_like_gh_pr_create(command) -> bool
+  find_gh_pr_create(command) -> cwd | None
   commit_landed(command, tool_response) -> bool
 """
 
@@ -185,22 +186,47 @@ def is_git_commit(command: str) -> bool:
 # ---- find-gh-pr-create ------------------------------------------------------
 
 
-def find_gh_pr_create(command: str) -> tuple[str | None, str] | None:
-    """Locate a `gh pr create` invocation and its (cwd, base).
+def looks_like_gh_pr_create(command: str) -> bool:
+    """Loose detector: True when `gh`, `pr`, `create` appear in that order
+    anywhere in *command*, even when strict tokenizing fails (e.g. a heredoc
+    body that makes `tokenize()` return `None`).
+
+    Deliberately over-broad: a command that merely *mentions* these tokens
+    (e.g. `echo gh pr create`) returns True. This is **accepted, documented
+    behavior** — a false positive is a human-overridable block (the model can
+    rewrite or the operator can set DD_SKIP_PR_REVIEW=1); a false negative is a
+    fail-open hole at the only hard gate in the hook stack. Bias toward True.
+
+    Use this as the fail-closed net when `find_gh_pr_create` returns `None`:
+    `None` is ambiguous (not a PR *or* matched but cwd unresolvable); this
+    function distinguishes "clearly not a PR" from "looks like one, block it".
+    """
+    pos = 0
+    for token in ("gh", "pr", "create"):
+        idx = command.find(token, pos)
+        if idx == -1:
+            return False
+        pos = idx + len(token)
+    return True
+
+
+def find_gh_pr_create(command: str) -> str | None:
+    """Locate a `gh pr create` invocation and return its resolved cwd.
 
     `cwd` is extracted from chained `cd <path>` segments (relative paths
     resolved against the process cwd); with no `cd`, `cwd` is the process
-    working directory (`os.getcwd()`). `base` is extracted from
-    `--base`/`-B`/`--base=...`/`-B<value>`/`-B=<value>` flags (empty
-    string when absent).
+    working directory (`os.getcwd()`).
 
-    Return shape distinguishes three cases:
-      * `None`          — not a `gh pr create` command.
-      * `(cwd, base)`   — matched; `cwd` is the resolved directory (str).
-      * `(None, base)`  — matched, but the effective `cd` target is
-                          unexpandable (`$`/backtick), so cwd can't be
-                          resolved. The caller (the pre-PR gate) must fail
-                          loud, NOT fail open or review the wrong tree.
+    Return shape:
+      * `None`  — not a `gh pr create` command, **or** matched but the
+                  effective `cd` target is unexpandable (`$`/backtick) so
+                  cwd can't be resolved (caller uses `looks_like_gh_pr_create`
+                  to distinguish the two `None` cases and fail closed).
+      * `str`   — the resolved cwd (the process cwd when there is no `cd`,
+                  or the resolved `cd` target).
+
+    The unresolvable-cwd guard returns `None` (not the process cwd) so the
+    pre-PR gate fails loud rather than reviewing the wrong tree.
     """
     if not command:
         return None
@@ -249,36 +275,6 @@ def find_gh_pr_create(command: str) -> tuple[str | None, str] | None:
         if j >= len(seg) or seg[j] != "create":
             continue
 
-        j += 1
-        base: str | None = None
-        k = j
-        while k < len(seg):
-            t = seg[k]
-            if t in ("--base", "-B"):
-                if k + 1 < len(seg):
-                    base = seg[k + 1]
-                    k += 2
-                else:
-                    k += 1
-            elif t.startswith("--base="):
-                base = t[len("--base="):]
-                k += 1
-            elif t.startswith("-B"):
-                # Short form covers three shapes:
-                #   `-B master`  → handled above as the two-token case
-                #   `-Bmaster`   → t[2:] = "master"
-                #   `-B=master`  → t[2:] = "=master"; strip the leading `=`
-                # The `=` strip is load-bearing: without it the pre-PR gate
-                # resolves base to literal `=master`, which fails
-                # `git rev-parse --verify`.
-                rest = t[2:] if len(t) > 2 else ""
-                if rest.startswith("="):
-                    rest = rest[1:]
-                base = rest if rest else None
-                k += 1
-            else:
-                k += 1
-
         # Chained `cd` resolution: walks every preceding segment, so the
         # LAST `cd` in the chain wins (each iteration overwrites `cwd`).
         # A relative `cd` is anchored to the process cwd, not to a prior
@@ -307,14 +303,15 @@ def find_gh_pr_create(command: str) -> tuple[str | None, str] | None:
 
         if cwd_unresolvable:
             # Matched `gh pr create`, but the effective cwd can't be resolved.
-            # Return cwd=None (distinct from a whole-result None = "not a PR")
-            # so the pre-PR gate fails LOUD rather than failing open or
-            # reviewing the wrong tree.
-            return (None, base or "")
+            # Return None so the pre-PR gate fails LOUD rather than failing
+            # open or reviewing the wrong tree. The caller uses
+            # `looks_like_gh_pr_create` to distinguish this None from the
+            # "not a PR" None.
+            return None
         if cwd is None:
             cwd = str(Path.cwd())
 
-        return (cwd, base or "")
+        return cwd
 
     return None
 

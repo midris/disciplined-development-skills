@@ -205,12 +205,13 @@ over-broad: a false block is human-overridable; a false allow is a fail-open hol
 its module docstring before changing the contract; update the docstring and the one
 gate caller to the new shape; reconcile its tests.
 
-- [ ] Write failing tests: `looks_like` True on a real-but-hard-to-parse compound
-  `gh pr create` (a synthetic heredoc + `gh pr create` reproduction), True on a
+- [x] Write failing tests: `looks_like` True on a real-but-hard-to-parse compound
+  `gh pr create` (a command the strict tokenizer chokes on — e.g. an unmatched quote —
+  paired with a `find_gh_pr_create` → None assert on the same command), True on a
   trivial one, False on a non-PR command, and a documented over-broad case (a command
   merely mentioning the tokens → True, accepted). The matcher returns bare `cwd|None`.
-- [ ] Run → fail; implement (incl. docstring); run → pass.
-- [ ] Commit. `feat(command-match): loose gh-pr-create detector; drop base extraction`
+- [x] Run → fail; implement (incl. docstring); run → pass.
+- [x] Commit. `feat(command-match): loose gh-pr-create detector; drop base extraction`
 
 ### Task 2.2 — `external_review.py` (whole-repo, verdict-driven)
 
@@ -233,27 +234,25 @@ log-review path / `state` directly). **Computes no diff, no base.** Exit 0 = cle
 timeout/error, or empty output all return non-zero and log a `PASS`/`BLOCK`/`ERROR`+
 `reason` row. Always fail-closed; no `DD_HARD_BLOCK`.
 
-- [ ] **Resolve the codex invocation first** (`disciplined-research` — load-bearing
-  for the whole gate). Confirm against the installed codex CLI how it reviews the
-  whole repo from a prompt and emits the trailing `DD-VERDICT` line. If a whole-repo
-  prompt mode can't, fall back to the repo-navigating `codex review` form with the
-  plan-anchored prompt + verdict instruction. If **neither** yields a parseable
-  verdict, stop and raise it — do not silently degrade to a diff-scoped review. Pin
-  the chosen argv in the test via a recording-shim seam (mirror an existing reviewer-
-  shim test).
-- [ ] **Seed the gate's reviewer config (additive — removes the forward dependency).**
-  Add a `review.*` block holding `reviewer`/`model`/`effort` to `lib/dd-defaults.json`
-  + every example config, using the values currently under `review_tiers.pre_pr` and
-  **renaming `default_effort` → `effort`**. `external_review` reads `review.reviewer`/
-  `review.model`/`review.effort`. Leave `review_tiers.pre_pr` in place (Chunk 3 trims
-  it once nothing reads it). Add a config test for the new keys' defaults.
-- [ ] Write failing tests (codex shim + temp repo + `DD_LOG_DIR`): clean+`PASS` →
+- [x] **Resolve the codex invocation first** (`disciplined-research` — load-bearing
+  for the whole gate). **Resolved:** `codex exec --cd <repo> -m <model> -c
+  model_reasoning_effort=<effort> -s read-only -o <last-message-file> "<prompt>"` —
+  whole-repo prompt mode works; the verdict is read from the `-o` last-message file
+  (robust against any stdout footer). No `codex review` fallback needed. Argv pinned via
+  a `DD_CODEX_BIN` recording-shim seam (mirrors `test_dd_review_runner.py`).
+- [x] **Seed the gate's reviewer config (additive — removes the forward dependency).**
+  Added `reviewer`/`model`/`effort` to the `review` block in `lib/dd-defaults.json` +
+  `examples/dd-config.full.json` (values from `review_tiers.pre_pr`, `default_effort` →
+  `effort`); `examples/dd-config.json` (minimal) carries `review.reviewer` only — kept
+  minimal, model/effort resolve from defaults via deep-merge. `review_tiers.pre_pr` left
+  in place (Chunk 3 trims it). Config test asserts the new defaults + the override merge.
+- [x] Write failing tests (codex shim + temp repo + `DD_LOG_DIR`): clean+`PASS` →
   exit 0, `PASS` row, checkpoint==HEAD, edits reset; `[P1]`+`BLOCK` → non-zero,
   `BLOCK` row, no reset; no verdict line → non-zero, `ERROR reason=no_verdict`;
   shim missing → `ERROR cli_missing`; timeout → `ERROR timeout`; empty stdout →
   `ERROR empty_output`; the prompt contains the active-plan path + skill pointer.
-- [ ] Run → fail; implement; run → pass.
-- [ ] Commit. `feat(external-review): whole-repo verdict-driven fail-closed gate tool`
+- [x] Run → fail; implement; run → pass.
+- [x] Commit. `feat(external-review): whole-repo verdict-driven fail-closed gate tool`
 
 ### Task 2.3 — Rewire the pre-PR gate hook
 
@@ -271,18 +270,21 @@ is "PreToolUse blocks only on exit 2", so keep the any-nonzero→exit-2 translat
 the stderr re-emit; reconcile the tests that assert the old delegate target / base /
 `DD_HARD_BLOCK` forwarding.
 
-- [ ] Write failing tests: genuine non-PR command → allow (exit 0), no row;
+- [x] Write failing tests: genuine non-PR command → allow (exit 0), no row;
   unparseable-but-PR-shaped → exit 2 + `ERROR unparseable`, stderr names
   `DD_SKIP_PR_REVIEW`; parseable + tool exit 0 → exit 0; parseable + tool non-zero →
   exit 2, reviewer output on stderr; `DD_SKIP_PR_REVIEW=1` → exit 0.
-- [ ] Run → fail; implement; run → pass.
-- [ ] Commit. `fix(pre-pr-gate): whole-repo verdict gate, fail-closed; drop base chain`
+- [x] Run → fail; implement; run → pass.
+- [x] Commit. `fix(pre-pr-gate): whole-repo verdict gate, fail-closed; drop base chain`
   (body cites the fail-open deferred bug as resolved).
 
 ### Chunk 2 close-out
-- [ ] Hook suite green. **Live smoke (Gate 3):** scratch consumer, real `gh pr
-  create` against a seeded-BLOCK shim → blocks + row; clean → passes + checkpoint.
-  Self-review; open PR.
+- [x] Hook suite green (353 passed/3 skipped). **Live smoke (Gate 3):** scratch
+  consumer, real `gh pr create` via the real hook → real `external_review.py` → codex
+  shim — seeded-BLOCK → exit 2 + BLOCK row, no reset; seeded-PASS → exit 0 + PASS row +
+  `review.checkpoint`==HEAD + edits cleared; `head_sha` matches the `--cwd` repo.
+  Whole-branch cold-read (Opus): one [P2] fail-open (unguarded `main()` → exit-1) fixed
+  + re-review clean; 4 [P3] (3 fixed, PASS-stamp-wrap dismissed). PR open, held for user.
 
 ---
 

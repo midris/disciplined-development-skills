@@ -80,6 +80,10 @@ def test_defaults_roundtrip_nested_dot_path():
         "self review",
     ]
     assert config.get("codex.pr_review_timeout_s") == 600
+    # --- review gate config (new in Sub-task A / Task 2.2) ---
+    assert config.get("review.reviewer") == "codex"
+    assert config.get("review.model") == "gpt-5.5"
+    assert config.get("review.effort") == "medium"
     # Observability (Part G): single config surface for logging tunables.
     assert config.get("logging.dir") is None  # null → logging_setup derives
     assert config.get("logging.retention_days") == 14
@@ -275,3 +279,23 @@ def test_dd_config_env_wins_over_project_dir(tmp_path, monkeypatch):
     monkeypatch.setenv("DD_CONFIG", str(explicit))
     config.reset_config_cache()
     assert config.get("counters.discipline_threshold") == 9
+
+
+# --- Task 2.2 Sub-task A: review gate config defaults ---
+
+def test_review_gate_reviewer_model_effort_defaults():
+    """review.reviewer / review.model / review.effort ship with correct defaults."""
+    assert config.get("review.reviewer") == "codex"
+    assert config.get("review.model") == "gpt-5.5"
+    assert config.get("review.effort") == "medium"
+
+
+def test_review_gate_user_override_of_reviewer(tmp_path, monkeypatch):
+    """A user override of review.reviewer wins; sibling keys survive (deep merge)."""
+    _write_user_config(tmp_path, monkeypatch, {"review": {"reviewer": "my-codex"}})
+    assert config.get("review.reviewer") == "my-codex"
+    # Deep merge keeps untouched sibling leaves from defaults.
+    assert config.get("review.model") == "gpt-5.5"
+    assert config.get("review.effort") == "medium"
+    # prompt_path sibling also survives.
+    assert config.get("review.prompt_path") == ".claude/skills/adversarial-review/SKILL.md"

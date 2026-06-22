@@ -1,12 +1,22 @@
-"""Tests for hooks/pre_pr_review.py — the pre-PR hard-block wrapper.
+"""Tests for hooks/pre_pr_review.py — the pre-PR hard-block wrapper (new contract).
 
-Subprocess-driven. The wrapper's whole job is detect-`gh pr create` +
-extract-base/cwd + delegate to `dd_review_runner.py pre-pr` with DD_HARD_BLOCK=1,
-so the tests intercept the delegation: a `DD_REVIEW_SCRIPT` env seam points
-the wrapper at a recording shim (run via the same interpreter) that writes
-its argv + the inherited DD_HARD_BLOCK to log files and exits with a
-scripted code. Assertions then pin the forwarded flags, the hard-block env,
-and exit-code propagation — without invoking a real reviewer.
+Subprocess-driven. The wrapper now delegates to ``external_review.py`` (not
+``dd_review_runner.py``).  The test seam is ``DD_EXTERNAL_REVIEW_SCRIPT``,
+pointing the wrapper at a recording Python shim that captures ``sys.argv[1:]``
+and exits with a scripted code.
+
+``DD_LOG_DIR`` isolates ``reviews.jsonl`` into a per-test temp dir for row-
+asserting tests — mirror ``test_external_review.py`` / ``test_log_review.py``.
+
+Scenarios:
+  1. non-PR command (``git status``, ``ls -la``) → exit 0, shim NOT invoked,
+     no review row
+  2. unparseable-but-PR-shaped (``cd $REPO && gh pr create``) → exit 2, shim
+     NOT invoked, stderr names ``DD_SKIP_PR_REVIEW``, one ERROR row logged
+  3. parseable + delegate exit 0 → wrapper exit 0, shim got ``--cwd <cwd>``
+  4. parseable + delegate non-zero → wrapper exit 2, shim marker on stderr
+  5. ``DD_SKIP_PR_REVIEW=1`` → exit 0, shim NOT invoked
+  6. chained cd: ``cd <other> && gh pr create`` → shim gets ``--cwd <other>``
 """
 
 from __future__ import annotations
@@ -18,6 +28,12 @@ import sys
 from pathlib import Path
 
 HOOK = Path(__file__).resolve().parent.parent / "pre_pr_review.py"
+_BASE_DIR = Path(__file__).resolve().parents[2]  # dir containing the `hooks` package
+
+
+# ---------------------------------------------------------------------------
+# Helpers
+# ---------------------------------------------------------------------------
 
 
 def _init_repo(tmp_path: Path) -> Path:
@@ -33,140 +49,265 @@ def _init_repo(tmp_path: Path) -> Path:
 
 
 def _make_shim(tmp_path: Path) -> Path:
-    shim = tmp_path / "dd_review_shim.py"
+    """Recording shim for external_review.py.
+
+    Records sys.argv[1:] (one token per line) to $DD_SHIM_ARGV_LOG, emits a
+    marker line to stdout, and exits with $DD_SHIM_EXIT (default 0).
+    ``DD_HARD_BLOCK`` is intentionally NOT recorded — it must NOT be set by
+    the new hook.
+    """
+    shim = tmp_path / "ext_review_shim.py"
     shim.write_text(
         "import os, sys\n"
         "open(os.environ['DD_SHIM_ARGV_LOG'], 'w').write('\\n'.join(sys.argv[1:]))\n"
-        "open(os.environ['DD_SHIM_ENV_LOG'], 'w')"
-        ".write(os.environ.get('DD_HARD_BLOCK', 'UNSET'))\n"
-        # Emit a marker so the wrapper's re-emit-on-block behavior is assertable.
-        "sys.stdout.write('REVIEW_OUTPUT_MARKER\\n')\n"
+        # Emit a marker so re-emit-on-block behavior is assertable.
+        "sys.stdout.write('EXT_REVIEW_MARKER\\n')\n"
         "sys.exit(int(os.environ.get('DD_SHIM_EXIT', '0')))\n"
     )
     return shim
 
 
-def _run(repo: Path, shim: Path, command: str, *, exit_code: int = 0,
-         bypass: bool = False) -> tuple[subprocess.CompletedProcess, list | None, str | None]:
+def _rows(log_dir: Path) -> list[dict]:
+    """Read all rows from reviews.jsonl in log_dir."""
+    path = log_dir / "reviews.jsonl"
+    if not path.exists():
+        return []
+    return [json.loads(line) for line in path.read_text().splitlines() if line.strip()]
+
+
+def _run(
+    repo: Path,
+    shim: Path,
+    command: str,
+    *,
+    exit_code: int = 0,
+    bypass: bool = False,
+    log_dir: Path | None = None,
+) -> tuple[subprocess.CompletedProcess, list[str] | None]:
+    """Run the hook with the given Bash command payload.
+
+    Returns (proc, argv) where argv is the list of args the shim received
+    (None if the shim was not invoked).
+    """
     argv_log = repo / "argv.log"
-    env_log = repo / "env.log"
     env = dict(os.environ)
-    env["DD_REVIEW_SCRIPT"] = str(shim)
+    env["DD_EXTERNAL_REVIEW_SCRIPT"] = str(shim)
     env["DD_SHIM_ARGV_LOG"] = str(argv_log)
-    env["DD_SHIM_ENV_LOG"] = str(env_log)
     env["DD_SHIM_EXIT"] = str(exit_code)
+    env["PYTHONPATH"] = str(_BASE_DIR) + os.pathsep + env.get("PYTHONPATH", "")
+    # Must NOT be set — the new hook does NOT pass DD_HARD_BLOCK.
     env.pop("DD_HARD_BLOCK", None)
+    # Suppress rolling hook log noise; tests only care about reviews.jsonl.
+    if log_dir is not None:
+        env["DD_LOG_DIR"] = str(log_dir)
     if bypass:
         env["DD_SKIP_PR_REVIEW"] = "1"
     else:
         env.pop("DD_SKIP_PR_REVIEW", None)
-    payload = {"tool_name": "Bash", "cwd": str(repo),
-               "tool_input": {"command": command}}
+    payload = {
+        "tool_name": "Bash",
+        "cwd": str(repo),
+        "tool_input": {"command": command},
+    }
     proc = subprocess.run(
-        [sys.executable, str(HOOK)], input=json.dumps(payload),
-        cwd=str(repo), capture_output=True, text=True, env=env,
+        [sys.executable, str(HOOK)],
+        input=json.dumps(payload),
+        cwd=str(repo),
+        capture_output=True,
+        text=True,
+        env=env,
     )
     argv = argv_log.read_text().splitlines() if argv_log.exists() else None
-    hard_block = env_log.read_text() if env_log.exists() else None
-    return proc, argv, hard_block
+    return proc, argv
 
 
-def test_non_gh_command_is_noop(tmp_path):
+# ---------------------------------------------------------------------------
+# Tests
+# ---------------------------------------------------------------------------
+
+
+def test_non_pr_command_allows_no_row(tmp_path):
+    """Non-PR commands (git status, ls) are noop: exit 0, shim not invoked,
+    no reviews.jsonl row."""
     repo = _init_repo(tmp_path)
     shim = _make_shim(tmp_path)
-    proc, argv, _ = _run(repo, shim, "git status")
-    assert proc.returncode == 0
-    assert argv is None  # dd_review never invoked
+    log_dir = tmp_path / "logs"
+    log_dir.mkdir()
+
+    for cmd in ("git status", "ls -la"):
+        proc, argv = _run(repo, shim, cmd, log_dir=log_dir)
+        assert proc.returncode == 0, f"{cmd!r}: expected exit 0"
+        assert argv is None, f"{cmd!r}: shim must NOT be invoked"
+
+    # No review row for any non-PR command.
+    assert _rows(log_dir) == []
 
 
-def test_ls_is_noop(tmp_path):
+def test_unparseable_pr_shaped_blocks_and_logs_error_row(tmp_path):
+    """``cd $REPO && gh pr create`` looks like PR but can't be parsed.
+
+    Must: exit 2, shim NOT invoked, stderr names DD_SKIP_PR_REVIEW, and exactly
+    one reviews.jsonl row with decision=ERROR / reason=unparseable /
+    source=external-gate.
+    """
     repo = _init_repo(tmp_path)
     shim = _make_shim(tmp_path)
-    proc, argv, _ = _run(repo, shim, "ls -la")
-    assert proc.returncode == 0 and argv is None
+    log_dir = tmp_path / "logs"
+    log_dir.mkdir()
 
+    proc, argv = _run(repo, shim, "cd $REPO && gh pr create", log_dir=log_dir)
 
-def test_bypass_env_skips_even_on_match(tmp_path):
-    repo = _init_repo(tmp_path)
-    shim = _make_shim(tmp_path)
-    proc, argv, _ = _run(repo, shim, "gh pr create", bypass=True)
-    assert proc.returncode == 0 and argv is None
-
-
-def test_clean_review_delegates_with_hard_block_and_passes(tmp_path):
-    repo = _init_repo(tmp_path)
-    shim = _make_shim(tmp_path)
-    # Clean review (dd_review exit 0) → wrapper exit 0; DD_HARD_BLOCK forwarded.
-    proc, argv, hard_block = _run(repo, shim, "gh pr create", exit_code=0)
-    assert proc.returncode == 0
-    assert argv is not None and argv[0] == "pre-pr"
-    assert hard_block == "1"
-
-
-def test_blocking_review_maps_to_exit_2_and_reemits(tmp_path):
-    # dd_review pre-pr returns 1 on a BLOCK / tooling error. Claude Code blocks
-    # a PreToolUse tool ONLY on exit 2 — the wrapper must TRANSLATE the non-zero
-    # delegate result to 2 (not propagate 1, which CC treats as a non-blocking
-    # error and lets `gh pr create` through), and re-emit the review on stderr.
-    repo = _init_repo(tmp_path)
-    shim = _make_shim(tmp_path)
-    proc, _, _ = _run(repo, shim, "gh pr create", exit_code=1)
     assert proc.returncode == 2
-    assert "REVIEW_OUTPUT_MARKER" in proc.stderr  # findings surfaced to the model
+    assert argv is None  # shim must NOT be invoked
+    assert "DD_SKIP_PR_REVIEW" in proc.stderr  # names the bypass
+
+    rows = _rows(log_dir)
+    assert len(rows) == 1, f"expected 1 review row, got {len(rows)}: {rows}"
+    row = rows[0]
+    assert row["decision"] == "ERROR"
+    assert row["reason"] == "unparseable"
+    assert row["source"] == "external-gate"
 
 
-def test_base_flag_forwarded(tmp_path):
+def test_parseable_clean_delegate_exit0_allows(tmp_path):
+    """parseable ``gh pr create`` + delegate exit 0 → wrapper exit 0.
+
+    Shim is invoked with ``--cwd <repo>``.
+    """
     repo = _init_repo(tmp_path)
     shim = _make_shim(tmp_path)
-    _, argv, _ = _run(repo, shim, "gh pr create --base release")
-    assert argv == ["pre-pr", "--base", "release"]
+
+    proc, argv = _run(repo, shim, "gh pr create", exit_code=0)
+
+    assert proc.returncode == 0
+    assert argv is not None, "shim must be invoked"
+    assert "--cwd" in argv
+    assert argv[argv.index("--cwd") + 1] == str(repo)
 
 
-def test_short_base_flag_forwarded(tmp_path):
+def test_parseable_block_delegate_nonzero_maps_to_exit2_reemits(tmp_path):
+    """parseable ``gh pr create`` + delegate non-zero → wrapper exit 2.
+
+    The shim's marker must appear on the wrapper's stderr (findings re-emitted
+    to the model).  DD_HARD_BLOCK must NOT be set on the delegate env.
+    """
     repo = _init_repo(tmp_path)
     shim = _make_shim(tmp_path)
-    _, argv, _ = _run(repo, shim, "gh pr create -B phase-22")
-    assert argv == ["pre-pr", "--base", "phase-22"]
+
+    proc, argv = _run(repo, shim, "gh pr create", exit_code=1)
+
+    assert proc.returncode == 2
+    assert argv is not None, "shim must be invoked"
+    assert "EXT_REVIEW_MARKER" in proc.stderr  # findings surfaced to the model
 
 
-def test_gh_merge_base_config_forwarded(tmp_path):
+def test_bypass_env_allows(tmp_path):
+    """DD_SKIP_PR_REVIEW=1 on any gh pr create command → exit 0, shim not invoked."""
     repo = _init_repo(tmp_path)
     shim = _make_shim(tmp_path)
-    # No --base on the command; the wrapper reads branch.<cur>.gh-merge-base.
-    subprocess.run(
-        ["git", "-C", str(repo), "config", "branch.feature/x.gh-merge-base",
-         "phase-22"], check=True,
-    )
-    _, argv, _ = _run(repo, shim, "gh pr create")
-    assert argv == ["pre-pr", "--base", "phase-22"]
+
+    proc, argv = _run(repo, shim, "gh pr create", bypass=True)
+
+    assert proc.returncode == 0
+    assert argv is None
 
 
-def test_cd_forwarded_as_cwd(tmp_path):
+def test_cd_forwarded_as_cwd_to_external_review(tmp_path):
+    """Chained-cd ``cd <other> && gh pr create`` → shim gets ``--cwd <other>``."""
     repo = _init_repo(tmp_path)
     shim = _make_shim(tmp_path)
     other = tmp_path / "other"
     other.mkdir()
-    _, argv, _ = _run(repo, shim, f"cd {other} && gh pr create")
+
+    proc, argv = _run(repo, shim, f"cd {other} && gh pr create")
+
+    assert argv is not None, "shim must be invoked"
     assert "--cwd" in argv
     assert argv[argv.index("--cwd") + 1] == str(other)
 
 
-def test_unexpandable_cd_fails_loud_not_open(tmp_path):
-    # `cd $X && gh pr create`: the cd target is unexpandable, so the gate
-    # can't tell which tree the PR is for. It must BLOCK (exit 2), not let the
-    # unreviewed PR through (the fail-open bug) and not review the wrong tree.
-    repo = _init_repo(tmp_path)
-    shim = _make_shim(tmp_path)
-    proc, argv, _ = _run(repo, shim, "cd $REPO && gh pr create")
-    assert proc.returncode == 2
-    assert argv is None  # dd_review NOT invoked; the wrapper blocked directly
-    assert "DD_SKIP_PR_REVIEW" in proc.stderr  # names the bypass
+# ---------------------------------------------------------------------------
+# In-process exception-guard tests (Commit 1 — fail-open fix)
+# ---------------------------------------------------------------------------
 
 
-def test_no_base_no_cd_forwards_no_flags(tmp_path):
+def test_delegate_spawn_exception_fails_closed_for_pr(tmp_path, monkeypatch):
+    """subprocess.run raising inside main() on a gh pr create → return 2 (fail-closed).
+
+    Verifies the exception guard added in fix(pre-pr-gate): an unexpected raise
+    during delegate spawn must NOT exit 1 (which would let the PR through);
+    it must return 2 so Claude Code blocks the tool call.
+    """
+    import pre_pr_review
+
+    def _raise(*args, **kwargs):
+        raise OSError("EMFILE: too many open files")
+
+    monkeypatch.setattr(pre_pr_review.subprocess, "run", _raise)
+    monkeypatch.setattr(pre_pr_review, "_read_command", lambda: "gh pr create")
+    # Suppress logging noise; _log_unparseable / setup may also call subprocess.run
+    # (via git), which is now patched to raise — _log_unparseable already swallows
+    # those; guard against logger.emit touching subprocess by patching logging_setup.
+    import io
+    monkeypatch.setattr(sys, "stderr", io.StringIO())
+
+    result = pre_pr_review.main()
+    assert result == 2, f"expected 2 (fail-closed), got {result}"
+
+
+def test_unexpected_exception_allows_non_pr_command(tmp_path, monkeypatch):
+    """An unexpected raise on the non-PR path → return 0 (gate hiccup must not block).
+
+    Patches _read_command to raise so the exception fires before command is known;
+    the handler must treat it as not-PR-shaped and return 0.
+    """
+    import pre_pr_review
+
+    def _raise():
+        raise RuntimeError("stdin exploded")
+
+    monkeypatch.setattr(pre_pr_review, "_read_command", _raise)
+    import io
+    monkeypatch.setattr(sys, "stderr", io.StringIO())
+
+    result = pre_pr_review.main()
+    assert result == 0, f"expected 0 (non-PR exception allows), got {result}"
+
+
+def test_hard_block_env_not_forwarded(tmp_path):
+    """DD_HARD_BLOCK must NOT be set in the delegate environment (old contract gone)."""
     repo = _init_repo(tmp_path)
-    shim = _make_shim(tmp_path)
-    # No --base, no gh-merge-base config, no chained cd → bare delegation;
-    # dd_review then defaults to fork-base + its own cwd.
-    _, argv, _ = _run(repo, shim, "gh pr create")
-    assert argv == ["pre-pr"]
+    # Use a shim that writes DD_HARD_BLOCK value to a separate log.
+    argv_log = repo / "argv.log"
+    hard_block_log = repo / "hard_block.log"
+    shim = tmp_path / "ext_review_shim2.py"
+    shim.write_text(
+        "import os, sys\n"
+        "open(os.environ['DD_SHIM_ARGV_LOG'], 'w').write('\\n'.join(sys.argv[1:]))\n"
+        "open(os.environ['DD_HB_LOG'], 'w')"
+        ".write(os.environ.get('DD_HARD_BLOCK', 'UNSET'))\n"
+        "sys.exit(0)\n"
+    )
+    env = dict(os.environ)
+    env["DD_EXTERNAL_REVIEW_SCRIPT"] = str(shim)
+    env["DD_SHIM_ARGV_LOG"] = str(argv_log)
+    env["DD_HB_LOG"] = str(hard_block_log)
+    env["DD_SHIM_EXIT"] = "0"
+    env["PYTHONPATH"] = str(_BASE_DIR) + os.pathsep + env.get("PYTHONPATH", "")
+    env.pop("DD_HARD_BLOCK", None)
+    env.pop("DD_SKIP_PR_REVIEW", None)
+    payload = {
+        "tool_name": "Bash",
+        "cwd": str(repo),
+        "tool_input": {"command": "gh pr create"},
+    }
+    subprocess.run(
+        [sys.executable, str(HOOK)],
+        input=json.dumps(payload),
+        cwd=str(repo),
+        capture_output=True,
+        text=True,
+        env=env,
+    )
+    # DD_HARD_BLOCK must not be set in the delegate environment
+    assert hard_block_log.read_text() == "UNSET"
