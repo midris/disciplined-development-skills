@@ -99,15 +99,15 @@ functions in place — the engine still uses them until Chunk 3).
 - `parse_verdict(text) -> "PASS"|"BLOCK"|None`, read from the **last non-blank line
   only** (`^\s*DD-VERDICT:\s*(PASS|BLOCK)\s*$`, case-insensitive); `None` otherwise.
 
-- [ ] Write failing tests (table-driven). `parse_findings`: well-formed → full dict;
+- [x] Write failing tests (table-driven). `parse_findings`: well-formed → full dict;
   emphasised `**[P0]**` → P0; missing line → `line:None`; missing path → `file:None`;
   rubric legend line → excluded; `No findings.` → `[]`; mid-prose `[P1]` (line_start)
   → excluded. `parse_verdict`: trailing `DD-VERDICT: BLOCK` → BLOCK; lowercase →
   parsed; absent → None; an example verdict earlier + real one on the last non-blank
   line → real one; a non-verdict line after a verdict → None.
-- [ ] Run → fail. `python3 -m pytest tests/test_severity.py -v`
-- [ ] Implement; run → pass.
-- [ ] Commit. `feat(severity): structured parse_findings + parse_verdict`
+- [x] Run → fail. `python3 -m pytest tests/test_severity.py -v`
+- [x] Implement; run → pass.
+- [x] Commit. `feat(severity): structured parse_findings + parse_verdict`
 
 ### Task 1.2 — Record builder + cadence context (`lib/review_record.py`, new)
 
@@ -131,15 +131,15 @@ functions in place — the engine still uses them until Chunk 3).
   text (the `findings` arg) is stored verbatim as the schema's **`output`** field;
   `parse_findings(findings)` derives `findings[]` and the `p0`–`p3` counts.
 
-- [ ] Write failing tests (temp git repo for `gather_cadence_context`): clean +
+- [x] Write failing tests (temp git repo for `gather_cadence_context`): clean +
   `DD-VERDICT: PASS` → `decision=PASS`, counts 0, `findings:[]`; `[P1]` +
   `DD-VERDICT: BLOCK` → `decision=BLOCK`; explicit `ERROR`/`reason` passed through;
   verdict absent but `[P1]` → derived BLOCK; builder output has **no `ts`** and **no
   `scope`**, carries `output` (raw reviewer text verbatim); `extra` fields surface;
   `gather_cadence_context` runs no `git diff` and
   falls back to fork-base count when no checkpoint.
-- [ ] Run → fail; implement; run → pass.
-- [ ] Commit. `feat(review-record): rich row builder + cadence context (no diff)`
+- [x] Run → fail; implement; run → pass.
+- [x] Commit. `feat(review-record): rich row builder + cadence context (no diff)`
 
 ### Task 1.3 — `log_review.py` CLI (record + reset-fold)
 
@@ -152,13 +152,13 @@ clean result resets `edits.count` **and** stamps `review.checkpoint = HEAD`
 or empty/whitespace stdin — a blank pipe must not log a false PASS). Never blocks on
 a log-write failure.
 
-- [ ] Write failing tests (temp git repo + `DD_LOG_DIR` log isolation — mirror an
+- [x] Write failing tests (temp git repo + `DD_LOG_DIR` log isolation — mirror an
   existing hook test that uses an on-disk state dir): clean stdin → exit 0, one
   `PASS` row, `edits.count` reset, `review.checkpoint` == HEAD; `[P1]` stdin →
   `BLOCK` row, counters untouched; empty stdin → exit 2, no row; row carries
   `source`/`trigger`/`round`/cadence context/structured findings.
-- [ ] Run → fail; implement; run → pass.
-- [ ] Commit. `feat(log-review): consolidated review log + cadence reset tool`
+- [x] Run → fail; implement; run → pass.
+- [x] Commit. `feat(log-review): consolidated review log + cadence reset tool`
 
 ### Task 1.4 — `dd-log` command + generalize the installer
 
@@ -175,14 +175,14 @@ symlink + its tests, and any migration special-case; replace the hardcoded/singl
 command logic with the glob, updating/removing whatever tests and migration code that
 makes obsolete. Grep the installer + `tests/` for the current command handling first.
 
-- [ ] Update installer tests first (seed an arbitrary `commands/<name>.md`; assert
+- [x] Update installer tests first (seed an arbitrary `commands/<name>.md`; assert
   symlink + resolves + idempotent + real-file-not-clobbered); remove tests asserting
   the obsolete single-command/migration behavior. Run → fail.
-- [ ] Generalize `install-skills.sh`; write the command files. Run → pass.
-- [ ] Commit. `feat(commands,installer): add dd-log; symlink all commands/*.md`
+- [x] Generalize `install-skills.sh`; write the command files. Run → pass.
+- [x] Commit. `feat(commands,installer): add dd-log; symlink all commands/*.md`
 
 ### Chunk 1 close-out
-- [ ] Hook + installer suites green; self-review (`adversarial-review` + `-loop`),
+- [x] Hook + installer suites green; self-review (`adversarial-review` + `-loop`),
   address P0/P1/P2; open PR.
 
 ---

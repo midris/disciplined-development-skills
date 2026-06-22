@@ -110,18 +110,19 @@ def test_skips_symlink_to_different_target(tmp_path):
 
 
 # ---------------------------------------------------------------------------
-# Command-file symlink tests (I1a)
-# _make_clone does not create commands/dd-review.md by default; these
-# helpers extend the clone fixture with that file so the new installer path
-# has a real source to resolve.
+# Command-file symlink tests
+# The installer globs every commands/*.md (no single hardcoded command). These
+# tests seed an ARBITRARY command name into the clone so the assertions exercise
+# the generic glob, not a dd-review-specific path. _make_clone seeds no
+# commands/ by default; the seeder below adds one.
 # ---------------------------------------------------------------------------
 
-def _add_command_src(clone: Path) -> Path:
-    """Seed commands/dd-review.md into a test clone."""
+def _add_command_src(clone: Path, name: str = "generic-cmd.md") -> Path:
+    """Seed commands/<name> into a test clone (arbitrary, non-dd-review name)."""
     cmd_src = clone / "commands"
-    cmd_src.mkdir(parents=True)
-    src_file = cmd_src / "dd-review.md"
-    src_file.write_text("---\ndescription: dd-review command template\n---\n")
+    cmd_src.mkdir(parents=True, exist_ok=True)
+    src_file = cmd_src / name
+    src_file.write_text(f"---\ndescription: {name} command template\n---\n")
     return src_file
 
 
@@ -132,10 +133,38 @@ def test_command_symlink_created_and_resolves(tmp_path):
     target.mkdir()
     r = _run(clone, target)
     assert r.returncode == 0, r.stderr
-    dest = target / ".claude" / "commands" / "dd-review.md"
-    assert dest.is_symlink(), "dd-review.md not a symlink"
-    expected_src = clone / "commands" / "dd-review.md"
+    dest = target / ".claude" / "commands" / "generic-cmd.md"
+    assert dest.is_symlink(), "generic-cmd.md not a symlink"
+    expected_src = clone / "commands" / "generic-cmd.md"
     assert dest.resolve() == expected_src.resolve()
+
+
+def test_command_symlinks_every_command_in_glob(tmp_path):
+    """The installer mirrors the skill loop: a glob over commands/*.md, so
+    multiple command files each get their own symlink."""
+    clone = _make_clone(tmp_path)
+    _add_command_src(clone, "alpha-cmd.md")
+    _add_command_src(clone, "beta-cmd.md")
+    target = tmp_path / "project"
+    target.mkdir()
+    r = _run(clone, target)
+    assert r.returncode == 0, r.stderr
+    commands = target / ".claude" / "commands"
+    for name in ("alpha-cmd.md", "beta-cmd.md"):
+        dest = commands / name
+        assert dest.is_symlink(), f"{name} not a symlink"
+        assert dest.resolve() == (clone / "commands" / name).resolve()
+
+
+def test_no_commands_dir_is_noop(tmp_path):
+    """Zero commands/*.md (no commands/ dir at all) must not error — a literal
+    unmatched glob is skipped, mirroring the skill loop's guard."""
+    clone = _make_clone(tmp_path)  # no _add_command_src -> no commands/ dir
+    target = tmp_path / "project"
+    target.mkdir()
+    r = _run(clone, target)
+    assert r.returncode == 0, r.stderr
+    assert not (target / ".claude" / "commands" / "generic-cmd.md").exists()
 
 
 def test_command_symlink_idempotent(tmp_path):
@@ -146,10 +175,10 @@ def test_command_symlink_idempotent(tmp_path):
     _run(clone, target)
     r = _run(clone, target)
     assert r.returncode == 0, r.stderr
-    dest = target / ".claude" / "commands" / "dd-review.md"
+    dest = target / ".claude" / "commands" / "generic-cmd.md"
     assert dest.is_symlink()
     # idempotent: still resolves to the same source
-    expected_src = clone / "commands" / "dd-review.md"
+    expected_src = clone / "commands" / "generic-cmd.md"
     assert dest.resolve() == expected_src.resolve()
 
 
@@ -159,7 +188,7 @@ def test_command_real_file_not_clobbered(tmp_path):
     target = tmp_path / "project"
     commands_dir = target / ".claude" / "commands"
     commands_dir.mkdir(parents=True)
-    dest = commands_dir / "dd-review.md"
+    dest = commands_dir / "generic-cmd.md"
     dest.write_text("custom consumer content")
     r = _run(clone, target)
     assert r.returncode == 0, r.stderr
@@ -175,34 +204,9 @@ def test_command_foreign_symlink_not_clobbered(tmp_path):
     commands_dir.mkdir(parents=True)
     other = tmp_path / "other-command.md"
     other.write_text("other")
-    dest = commands_dir / "dd-review.md"
+    dest = commands_dir / "generic-cmd.md"
     dest.symlink_to(other)
     r = _run(clone, target)
     assert r.returncode == 0, r.stderr
     assert dest.resolve() == other.resolve(), "foreign symlink was overwritten"
-    assert "dd-review.md" in (r.stdout + r.stderr)
-
-
-def test_command_migrates_stale_pre_relocation_symlink(tmp_path):
-    """Upgrade path: a dest symlink pointing at the pre-relocation official target
-    (examples/commands/dd-review.md, now relocated to commands/ and thus dangling)
-    must be re-pointed to the new location, not skipped as foreign — otherwise
-    re-running the installer leaves /dd-review broken after an upgrade."""
-    clone = _make_clone(tmp_path)
-    _add_command_src(clone)  # seeds the NEW official src: clone/commands/dd-review.md
-    target = tmp_path / "project"
-    commands_dir = target / ".claude" / "commands"
-    commands_dir.mkdir(parents=True)
-    # Old official target is absent in the upgraded clone -> the link is dangling.
-    # Seed it from the *resolved* clone path so it matches what the real installer
-    # would have written (install-skills.sh computes CLONE via `pwd -P`); otherwise
-    # a /var vs /private/var spelling mismatch makes the comparison miss on macOS.
-    old_official = clone.resolve() / "examples" / "commands" / "dd-review.md"
-    dest = commands_dir / "dd-review.md"
-    dest.symlink_to(old_official)
-    r = _run(clone, target)
-    assert r.returncode == 0, r.stderr
-    assert dest.is_symlink()
-    assert dest.resolve() == (clone / "commands" / "dd-review.md").resolve(), \
-        "stale pre-relocation symlink was not migrated to the new target"
-    assert "migrated" in (r.stdout + r.stderr)
+    assert "generic-cmd.md" in (r.stdout + r.stderr)
