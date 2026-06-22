@@ -9,9 +9,9 @@
 # name that already exists as a real path or a symlink pointing elsewhere —
 # it never clobbers a project-local skill.
 #
-# Also symlinks the /dd-review command template:
-#   <this-clone>/commands/dd-review.md
-#   -> <target>/.claude/commands/dd-review.md
+# Also symlinks every command template under commands/ in this clone:
+#   <this-clone>/commands/<name>.md
+#   -> <target>/.claude/commands/<name>.md
 # Same guards apply: idempotent; skips with a warning if the dest is a real file
 # or a symlink pointing elsewhere (never clobbers).
 #
@@ -68,40 +68,40 @@ for skill_md in "$CLONE"/skills/*/SKILL.md; do
   created=$((created + 1))
 done
 
-# --- Command file symlink ---------------------------------------------------
-CMD_SRC="$CLONE/commands/dd-review.md"
+# --- Command file symlinks --------------------------------------------------
+# Glob every commands/*.md and mirror the skill loop above: one symlink per
+# command, idempotent, never clobbering a real file or a foreign symlink. A
+# stale link from an earlier layout is just another foreign symlink (skip+warn).
 CMD_DIR="$TARGET/.claude/commands"
-CMD_DEST="$CMD_DIR/dd-review.md"
-mkdir -p "$CMD_DIR"
 
-# Pre-relocation official target — migrate a stale symlink pointing at it.
-OLD_CMD_SRC="$CLONE/examples/commands/dd-review.md"
-if [ -L "$CMD_DEST" ]; then
-  resolved=$(readlink -f "$CMD_DEST" 2>/dev/null || true)
-  link_text=$(readlink "$CMD_DEST")
-  if [ "$resolved" = "$CMD_SRC" ] || [ "$link_text" = "$CMD_SRC" ]; then
-    echo "already linked: dd-review.md"
-    already=$((already + 1))
-  elif [ "$link_text" = "$OLD_CMD_SRC" ]; then
-    # The old official target was relocated (examples/commands -> commands/) and
-    # no longer exists, so this link is now dangling. Re-point it rather than
-    # skip it as "foreign" — otherwise re-running the installer leaves /dd-review
-    # broken, contradicting the upgrade promise in MIGRATIONS.md.
-    rm "$CMD_DEST"
-    ln -s "$CMD_SRC" "$CMD_DEST"
-    echo "migrated: dd-review.md -> $CMD_SRC (was examples/commands/)"
-    created=$((created + 1))
-  else
-    echo "WARN: dd-review.md is a symlink to a different target ($link_text) — skipping" >&2
-    skipped=$((skipped + 1))
+for cmd_src in "$CLONE"/commands/*.md; do
+  [ -e "$cmd_src" ] || continue          # no matches -> literal glob, skip
+  src=$(cd "$(dirname "$cmd_src")" && pwd -P)/$(basename "$cmd_src")
+  name=$(basename "$cmd_src")
+  mkdir -p "$CMD_DIR"
+  dest="$CMD_DIR/$name"
+
+  if [ -L "$dest" ]; then
+    resolved=$(readlink -f "$dest" 2>/dev/null || true)
+    if [ "$resolved" = "$src" ]; then
+      echo "already linked: $name"
+      already=$((already + 1))
+    else
+      echo "WARN: $name is a symlink to a different target ($(readlink "$dest")) — skipping" >&2
+      skipped=$((skipped + 1))
+    fi
+    continue
   fi
-elif [ -e "$CMD_DEST" ]; then
-  echo "WARN: dd-review.md already exists as a real file — skipping (won't clobber)" >&2
-  skipped=$((skipped + 1))
-else
-  ln -s "$CMD_SRC" "$CMD_DEST"
-  echo "linked: dd-review.md -> $CMD_SRC"
+
+  if [ -e "$dest" ]; then
+    echo "WARN: $name already exists as a real file — skipping (won't clobber)" >&2
+    skipped=$((skipped + 1))
+    continue
+  fi
+
+  ln -s "$src" "$dest"
+  echo "linked: $name -> $src"
   created=$((created + 1))
-fi
+done
 
 echo "done: $created created, $already already-linked, $skipped skipped"
