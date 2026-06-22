@@ -151,13 +151,19 @@ def _log_attempt(
     decision: str,
     reason: str | None,
     duration_s: float | None,
+    context: dict | None = None,
 ) -> None:
-    """Append one row to reviews.jsonl; swallow all errors (best-effort)."""
+    """Append one row to reviews.jsonl; swallow all errors (best-effort).
+
+    ``context`` is optional: callers that already called gather_cadence_context
+    (e.g. the PASS path, which reuses it for the state reset-fold) pass it in
+    to avoid a second round of git subprocesses.
+    """
     reviewer = config.get("review.reviewer", "codex")
     model = config.get("review.model")
     effort = config.get("review.effort")
     try:
-        ctx = review_record.gather_cadence_context(repo, branch)
+        ctx = context if context is not None else review_record.gather_cadence_context(repo, branch)
         extra: dict = {}
         if model:
             extra["model"] = model
@@ -307,9 +313,11 @@ def main(argv: list[str] | None = None) -> int:
 
         # --- PASS or BLOCK ---
         if verdict == "PASS":
-            _log_attempt(repo, branch, output, "PASS", None, duration_s)
-            # State reset-fold (Decision 2, both on clean result — mirror log_review.py).
+            # Gather ctx once; reuse for both the log row and the state reset-fold
+            # (~8 git subprocesses on the happy path if gathered twice).
             ctx = review_record.gather_cadence_context(repo, branch)
+            _log_attempt(repo, branch, output, "PASS", None, duration_s, context=ctx)
+            # State reset-fold (Decision 2, both on clean result — mirror log_review.py).
             state.reset(repo, branch, "edits")
             head = ctx["head_sha"]
             if head:
