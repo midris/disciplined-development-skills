@@ -107,6 +107,10 @@ the logging path — see [`ARCHITECTURE.md`](ARCHITECTURE.md).
 
 ## Install (clone-and-symlink)
 
+**Prerequisite:** install the `superpowers` substrate first (see
+[Requirements](#requirements)) — the skills dispatch to it and won't work without
+it.
+
 The skills must live under a project's `.claude/skills/`. Rather than copy them,
 clone this repo once and symlink the skill dirs into each consuming project:
 
@@ -190,6 +194,15 @@ skills** — the nine `disciplined-development` skills should appear (alongside 
 preamble. If the skills are missing, re-check the symlinks and the `superpowers`
 install; if every tool call is blocked, see
 [Recovery / troubleshooting](#recovery--troubleshooting).
+
+## What to expect
+
+As you work, the hooks surface the discipline at boundaries: advisory nudges as
+edits and commits accumulate, and three hard blocks — an edit ceiling, a commit
+ceiling, and a pre-PR review gate — that deny a tool call with a message until a
+review clears it. You clear a review by running one per the `adversarial-review`
+skill and logging it with `/dd-log`. The full model is in
+[`ARCHITECTURE.md`](ARCHITECTURE.md).
 
 ## Recovery / troubleshooting
 
