@@ -99,15 +99,15 @@ functions in place — the engine still uses them until Chunk 3).
 - `parse_verdict(text) -> "PASS"|"BLOCK"|None`, read from the **last non-blank line
   only** (`^\s*DD-VERDICT:\s*(PASS|BLOCK)\s*$`, case-insensitive); `None` otherwise.
 
-- [ ] Write failing tests (table-driven). `parse_findings`: well-formed → full dict;
+- [x] Write failing tests (table-driven). `parse_findings`: well-formed → full dict;
   emphasised `**[P0]**` → P0; missing line → `line:None`; missing path → `file:None`;
   rubric legend line → excluded; `No findings.` → `[]`; mid-prose `[P1]` (line_start)
   → excluded. `parse_verdict`: trailing `DD-VERDICT: BLOCK` → BLOCK; lowercase →
   parsed; absent → None; an example verdict earlier + real one on the last non-blank
   line → real one; a non-verdict line after a verdict → None.
-- [ ] Run → fail. `python3 -m pytest tests/test_severity.py -v`
-- [ ] Implement; run → pass.
-- [ ] Commit. `feat(severity): structured parse_findings + parse_verdict`
+- [x] Run → fail. `python3 -m pytest tests/test_severity.py -v`
+- [x] Implement; run → pass.
+- [x] Commit. `feat(severity): structured parse_findings + parse_verdict`
 
 ### Task 1.2 — Record builder + cadence context (`lib/review_record.py`, new)
 
