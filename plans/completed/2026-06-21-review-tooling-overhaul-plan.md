@@ -5,7 +5,7 @@
 > Steps use checkbox (`- [ ]`) syntax. Follows `lean-plan-writing`: **prose is the
 > contract; code is the implementer's job.**
 
-**Design reference:** `plans/2026-06-21-review-tooling-overhaul.md` (architecture +
+**Design reference:** `plans/completed/2026-06-21-review-tooling-overhaul.md` (architecture +
 locked decisions D1–D7 + diagrams + log schema). Read it first.
 
 ## How to read this plan (target-first, ground at build time)

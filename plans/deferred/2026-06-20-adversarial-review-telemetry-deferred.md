@@ -1,6 +1,6 @@
 # Deferred (research): uniform logging across all dd-review paths
 
-> **SUBSUMED (2026-06-21) by `plans/2026-06-21-review-tooling-overhaul-plan.md`.**
+> **SUBSUMED (2026-06-21) by `plans/completed/2026-06-21-review-tooling-overhaul-plan.md`.**
 > That overhaul deletes the engine and consolidates *all* review logging into one
 > tool + one schema, logging every attempt incl. failures — exactly this note's
 > goal, by construction rather than by instrumenting five paths. No separate work

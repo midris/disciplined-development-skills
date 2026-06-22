@@ -6,7 +6,7 @@
 
 **Status:** DEFERRED. Surfaced 2026-06-21 from the recording-slice PR (`feat/rec-6-exposure`, PR #15).
 
-> **PARTIALLY SUBSUMED (2026-06-21) by `plans/2026-06-21-review-tooling-overhaul-plan.md`.**
+> **PARTIALLY SUBSUMED (2026-06-21) by `plans/completed/2026-06-21-review-tooling-overhaul-plan.md`.**
 > **Item 2 (whole-codebase cold-read) is subsumed** — the overhaul makes the one deep
 > review mode (and the pre-PR gate) whole-repo by default, so cold-read is no longer
 > diff-scoped. **Item 1 (orphaned-safeguard angle) is NOT** — it remains an open,

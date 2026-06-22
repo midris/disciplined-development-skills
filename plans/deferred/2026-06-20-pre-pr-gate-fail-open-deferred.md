@@ -1,6 +1,6 @@
 # Deferred (bug): the pre-PR review gate fails open silently
 
-> **SUBSUMED (2026-06-21) by `plans/2026-06-21-review-tooling-overhaul-plan.md`.**
+> **SUBSUMED (2026-06-21) by `plans/completed/2026-06-21-review-tooling-overhaul-plan.md`.**
 > Chunk 2 rewrites the gate fail-closed on *every* failure: a loose
 > `looks_like_gh_pr_create` detector blocks an unparseable `gh pr create` outright,
 > so the exact-command bisection below is no longer needed. Kept for the
