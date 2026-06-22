@@ -34,6 +34,7 @@ import pathlib
 import subprocess
 import sys
 import tempfile
+import time
 
 _HERE = pathlib.Path(__file__).resolve().parent
 _BASE_DIR = _HERE.parent  # the dir containing the `hooks` package
@@ -248,7 +249,6 @@ def main(argv: list[str] | None = None) -> int:
     cmd.extend(["-s", "read-only"])
     # -o <file> is appended just before the prompt (below, after we have the tmpfile).
 
-    import time
     start = time.monotonic()
 
     # Create a temp file for the last-message output.
