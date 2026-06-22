@@ -17,3 +17,5 @@ update the docs, add a proper architecture document, add example config files wi
 update the installer based on this. update the installer to also add the all the skip env vars to the user's config, all disabled?
 
 once everything is done figure out what needs to be done for a codex harness port
+
+do a pass on the documents. Update them to show how things are right now. rewrite them if necessary. Make sure there isn't any random historical stuff lying around.

@@ -10,16 +10,7 @@
     "cold_read_escalation": {
       "nudge_threshold": 3,
       "hard_block_threshold": 5
-    },
-    "pre_pr": {
-      "reviewer": "codex",
-      "model": "gpt-5.5",
-      "default_effort": "medium"
     }
-  },
-  "strategy_selector": {
-    "pre_stuff_max_bytes": 524288,
-    "high_effort_min_bytes": 51200
   },
   "counters": {
     "discipline_threshold": 50

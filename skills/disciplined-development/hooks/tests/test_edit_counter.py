@@ -155,7 +155,7 @@ def test_nudge_emitted_at_threshold(tmp_path):
     ctx = _ctx(r)
     assert ctx is not None, "Expected nudge at threshold"
     assert "30" in ctx
-    assert "/dd-review fast" in ctx
+    assert "adversarial-review skill" in ctx
 
 
 def test_nudge_emitted_above_threshold(tmp_path):
@@ -171,7 +171,7 @@ def test_nudge_emitted_above_threshold(tmp_path):
     ctx = _ctx(r)
     assert ctx is not None, "Expected nudge above threshold"
     assert "31" in ctx
-    assert "/dd-review fast" in ctx
+    assert "adversarial-review skill" in ctx
 
 
 def test_nudge_envelope_event_name_is_post_tool_use(tmp_path):

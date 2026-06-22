@@ -15,6 +15,9 @@ baseline-*.md
 # Session-local pointer to the current active plan (per-session working state)
 .claude/active-plan
 
+# Local superpowers tmp directory
+.superpowers/
+
 # Research harness output — never commit experiment results
 research/results.csv
 research/runs/

@@ -1,7 +1,7 @@
 """Tests for hooks/external_review.py — whole-repo verdict-driven fail-closed gate.
 
-Harness mirrors test_dd_review_runner.py (codex shim + argv recording) and
-test_log_review.py (DD_LOG_DIR + temp git repo).  The shim is a fake ``codex``
+Harness uses the same pattern as test_log_review.py (codex shim + argv recording,
+DD_LOG_DIR, and a temp git repo).  The shim is a fake ``codex``
 binary that:
   - records its argv (one token per line) to ``$DD_REVIEW_ARGV_LOG``,
   - writes a canned last-message to the file passed after ``-o``,

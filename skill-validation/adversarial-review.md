@@ -2,8 +2,7 @@
 
 Records how the `adversarial-review` angle set was derived and how to re-validate
 it. The skill is standalone/portable: a consumer with only the skill can run a
-review, name an angle, or list the angles, with no `/dd-review` dependency.
-Dispatch/orchestration is validated in [dd-review-command.md](dd-review-command.md).
+review, name an angle, or list the angles — it requires no external command.
 
 **Dispatch protocol.** Read-only and bounded per CLAUDE.md's evaluation-subagent
 rule (Claude Code: `Explore`). One scenario per agent, text-only.

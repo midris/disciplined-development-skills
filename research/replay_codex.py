@@ -205,7 +205,11 @@ def main() -> int:
         f"=== STDERR ===\n{stderr}\n"
     )
 
-    p0, p1, p2, p3 = severity.count_severities(stdout, line_start=True)
+    findings = severity.parse_findings(stdout, line_start=True)
+    p0 = sum(1 for f in findings if f["severity"] == "P0")
+    p1 = sum(1 for f in findings if f["severity"] == "P1")
+    p2 = sum(1 for f in findings if f["severity"] == "P2")
+    p3 = sum(1 for f in findings if f["severity"] == "P3")
 
     csv_path = pathlib.Path(__file__).resolve().parent / "results.csv"
     write_header = not csv_path.exists()

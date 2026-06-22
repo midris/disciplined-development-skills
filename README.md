@@ -28,7 +28,7 @@ Nine skills (each a `skills/<name>/SKILL.md`):
   ([`skills/disciplined-development/SKILL.md`](skills/disciplined-development/SKILL.md)):
   the Iron Law, the five gates, the principles, the rationalization tables. The
   parent skill; the rest are its companions. Its `hooks/` subdir holds the hook
-  stack + the `dd_review_runner.py` review engine.
+  stack.
 - **`adversarial-review`** / **`adversarial-review-loop`** — reviewer posture, the
   angle catalog + per-artifact selection, and the severity contract (P0/P1/P2
   block, P3 advisory); plus the review→fix→re-review iteration cap with a
@@ -77,9 +77,10 @@ installed bundle.
     load error. Watch the seam on superpowers upgrades.
 - **Python 3** — for the hook stack.
 - **git** — the hooks key behavior off branch / commit / fork-base state.
-- **`codex` — only for the T3 pre-PR review tier.** The default T3 config shells
-  out to `codex review`; if you use T3, either install `codex` or point
-  `review_tiers.pre_pr.reviewer` at another reviewer in `dd-config.json`.
+- **`codex` — only for the pre-PR review gate.** The gate (`external_review.py`)
+  runs `codex` against the repo (point `DD_CODEX_BIN` at it if it isn't on
+  `PATH`). Without `codex` the gate fails closed — skip it with
+  `DD_SKIP_PR_REVIEW`.
 
 ## Install (clone-and-symlink)
 
@@ -134,8 +135,8 @@ the event arrays rather than replacing them). The commands resolve the scripts
 through the symlinks via `$CLAUDE_PROJECT_DIR`, so no paths need editing.
 
 That block wires the full set — plan-state injection, the re-ground counter,
-the four-tier review cadence (T0 edit nudge/block, T1 commit nudge, T2
-cold-read nudge/block, T3 pre-PR gate), and post-compaction re-grounding.
+the review cadence (edit-counter nudge/block, commit nudge, commit-count
+nudge/block, pre-PR gate), and post-compaction re-grounding.
 Per-hook behavior + the `DD_SKIP_<HOOK>` bypass env vars are in
 [`hooks/hook-recipes-claude-code.md`](skills/disciplined-development/hooks/hook-recipes-claude-code.md).
 
@@ -152,12 +153,11 @@ Per-hook behavior + the `DD_SKIP_<HOOK>` bypass env vars are in
   `CLAUDE.md`, use [`examples/starter.CLAUDE.md`](examples/starter.CLAUDE.md)
   as a full drop-in template (fill in the `{{PLACEHOLDERS}}`); the snippet is
   for threading into an existing file.
-- **Wire `/dd-review`:** the installer places this automatically as a symlink
-  at `<project>/.claude/commands/dd-review.md` (resolves to
-  [`commands/dd-review.md`](commands/dd-review.md)).
-  Gitignore the symlink alongside the skill symlinks. If you need a
-  customized copy instead, place a real file there before running the
-  installer — the installer skips and warns rather than clobbering it.
+- **Wire `dd-log`:** the installer places `dd-log.md` automatically as a symlink
+  at `<project>/.claude/commands/dd-log.md`. Gitignore the symlink alongside
+  the skill symlinks. If you need a customized copy instead, place a real file
+  there before running the installer — the installer skips and warns rather
+  than clobbering it.
 
 ## Verify it worked
 

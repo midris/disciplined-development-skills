@@ -54,11 +54,11 @@ def test_defaults_roundtrip_nested_dot_path():
     assert config.get("review_tiers.cold_read_escalation.reviewer") is None
     assert config.get("review_tiers.cold_read_escalation.model") is None
     assert config.get("review_tiers.cold_read_escalation.default_effort") is None
-    # --- review_tiers.pre_pr: reviewer config unchanged (only tier with it) ---
-    assert config.get("review_tiers.pre_pr.reviewer") == "codex"
-    # --- strategy_selector ---
-    assert config.get("strategy_selector.pre_stuff_max_bytes") == 524288
-    assert config.get("strategy_selector.high_effort_min_bytes") == 51200
+    # --- review_tiers.pre_pr removed; review.* now carries reviewer config ---
+    assert config.get("review_tiers.pre_pr.reviewer") is None
+    # --- strategy_selector removed (its consumers deleted in Task 3.2) ---
+    assert config.get("strategy_selector.pre_stuff_max_bytes") is None
+    assert config.get("strategy_selector.high_effort_min_bytes") is None
     # --- counters: review_threshold removed; discipline_threshold present ---
     assert config.get("counters.discipline_threshold") == 50
     assert config.get("counters.review_threshold") is None
@@ -117,28 +117,17 @@ def test_user_override_of_fast_tier_threshold_takes_effect(tmp_path, monkeypatch
     assert config.get("review_tiers.fast.hard_block_threshold") == 60
 
 
-def test_user_override_of_pre_pr_reviewer_takes_effect(tmp_path, monkeypatch):
-    """A user override of the pre_pr reviewer wins; sibling keys survive (deep merge)."""
+def test_user_override_of_review_reviewer_takes_effect(tmp_path, monkeypatch):
+    """A user override of review.reviewer wins; sibling keys survive (deep merge)."""
     _write_user_config(
         tmp_path,
         monkeypatch,
-        {"review_tiers": {"pre_pr": {"reviewer": "custom"}}},
+        {"review": {"reviewer": "custom"}},
     )
-    assert config.get("review_tiers.pre_pr.reviewer") == "custom"
+    assert config.get("review.reviewer") == "custom"
     # Deep merge keeps untouched sibling leaves from defaults.
-    assert config.get("review_tiers.pre_pr.model") is not None
-
-
-def test_user_override_of_strategy_cutoff_takes_effect(tmp_path, monkeypatch):
-    """A user override of a strategy_selector cutoff takes effect."""
-    _write_user_config(
-        tmp_path,
-        monkeypatch,
-        {"strategy_selector": {"high_effort_min_bytes": 999}},
-    )
-    assert config.get("strategy_selector.high_effort_min_bytes") == 999
-    # Sibling cutoff still comes from defaults.
-    assert config.get("strategy_selector.pre_stuff_max_bytes") == 524288
+    assert config.get("review.model") == "gpt-5.5"
+    assert config.get("review.effort") == "medium"
 
 
 def test_missing_user_key_falls_back_to_default(tmp_path, monkeypatch):
@@ -152,7 +141,7 @@ def test_missing_user_key_falls_back_to_default(tmp_path, monkeypatch):
 def test_malformed_user_config_non_dict_is_discarded(tmp_path, monkeypatch):
     """A non-dict (JSON array) user config is discarded; defaults stand."""
     _write_user_config(tmp_path, monkeypatch, "[1, 2, 3]")
-    assert config.get("review_tiers.pre_pr.reviewer") == "codex"
+    assert config.get("counters.discipline_threshold") == 50
 
 
 def test_malformed_user_config_invalid_json_is_discarded(tmp_path, monkeypatch):
@@ -188,11 +177,6 @@ def test_cold_read_escalation_thresholds_defaults():
     assert config.get("review_tiers.cold_read_escalation.reviewer") is None
 
 
-def test_pre_pr_reviewer_unchanged():
-    """review_tiers.pre_pr.reviewer is still 'codex' (only tier with reviewer config)."""
-    assert config.get("review_tiers.pre_pr.reviewer") == "codex"
-
-
 def test_counters_review_threshold_absent():
     """counters.review_threshold is absent from defaults; discipline_threshold present."""
     assert config.get("counters.review_threshold") is None
@@ -202,11 +186,10 @@ def test_counters_review_threshold_absent():
 def test_fast_tier_non_positive_user_override_is_ignored(tmp_path, monkeypatch):
     """A non-positive user override of fast.nudge_threshold falls back to default.
 
-    Mirrors the strategy_selector pattern: consumers reading this key must guard
-    against non-int/non-positive values the same way review_nudge guards
-    counters.review_threshold.  The config layer hands back whatever the user
-    wrote; callers do the guard.  This test documents the raw behaviour so
-    consumers know they own the guard.
+    Consumers reading this key must guard against non-int/non-positive values
+    the same way review_nudge guards counters.review_threshold.  The config
+    layer hands back whatever the user wrote; callers do the guard.  This test
+    documents the raw behaviour so consumers know they own the guard.
     """
     _write_user_config(
         tmp_path,
@@ -222,12 +205,6 @@ def test_fast_tier_non_positive_user_override_is_ignored(tmp_path, monkeypatch):
     monkeypatch.setenv("DD_CONFIG", "/nonexistent/dd-config.json")
     config.reset_config_cache()
     assert config.get("review_tiers.fast.nudge_threshold") == 30
-
-
-def test_strategy_selector_defaults_still_intact():
-    """strategy_selector defaults are unchanged by the C1 config migration."""
-    assert config.get("strategy_selector.pre_stuff_max_bytes") == 524288
-    assert config.get("strategy_selector.high_effort_min_bytes") == 51200
 
 
 # --- PR-5: resolve the project override via CLAUDE_PROJECT_DIR (Decision K) ---

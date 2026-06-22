@@ -9,9 +9,9 @@ Fires on every Edit or Write tool call (the settings matcher pins this to
 2. **Nudge** when the resulting stored count reaches
    ``review_tiers.fast.nudge_threshold`` (default 30). Emits a
    PostToolUse ``hookSpecificOutput.additionalContext`` envelope telling the
-   model it has N unreviewed edits and to run ``/dd-review fast`` to review
-   and reset. Advisory only — PostToolUse runs after the edit; this hook
-   never blocks a tool call.
+   model it has N unreviewed edits and to run a deep review per the
+   adversarial-review skill then log it via ``dd-log`` to reset. Advisory
+   only — PostToolUse runs after the edit; this hook never blocks a tool call.
 
 Repo/branch resolution:
 - Reads ``cwd`` from the stdin payload; falls back to ``os.getcwd()``.
@@ -122,14 +122,14 @@ def main() -> int:
         return 0
 
     # count >= threshold: emit nudge. Repeated nudging from threshold upward
-    # is intentional — discipline pressure until the model runs /dd-review fast
-    # and the command resets the counter. The hard block at hard_block_threshold
+    # is intentional — discipline pressure until the model runs a deep review
+    # and resets the counter via dd-log. The hard block at hard_block_threshold
     # (60) is H2's job (edit_block.py, PreToolUse).
     env = Envelope("PostToolUse")
     env.accumulate(
         f"Edit counter: you have {count} unreviewed edits on this branch. "
-        f"Run `/dd-review fast` to review and reset the counter before "
-        f"continuing."
+        f"Run a deep review per the adversarial-review skill, then log it via "
+        f"`dd-log` to reset the counter before continuing."
     )
     env.emit()
     logger.emit("fire", count=count, threshold=threshold, branch=branch)

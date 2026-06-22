@@ -70,10 +70,10 @@ never varies by tool — varying it would rebuild the rejected output-scanner.
 
 Reads the stored `edits.count` before each Edit or Write. If the count is ≥
 `review_tiers.fast.hard_block_threshold` (default **60**), deny the tool call
-(exit 2) with a message pointing at `/dd-review fast`. Never increments —
+(exit 2) with a message to run a deep review. Never increments —
 that is `edit_counter.py`'s job (PostToolUse).
 
-**Stored-count semantics.** See the Boundary note in [`README.md`](README.md) for the PreToolUse/PostToolUse off-by-one. Clear a blocked counter by running `/dd-review fast` to a clean pass; for the remediation cycle itself, set `DD_SKIP_EDIT_BLOCK=1` in the launching shell.
+**Stored-count semantics.** See the Boundary note in [`README.md`](README.md) for the PreToolUse/PostToolUse off-by-one. Clear a blocked counter by running a deep review per the adversarial-review skill and logging it via `dd-log`; for the remediation cycle itself, set `DD_SKIP_EDIT_BLOCK=1` in the launching shell.
 
 ---
 
@@ -82,9 +82,9 @@ that is `edit_counter.py`'s job (PostToolUse).
 **Class:** hard block (T2 ceiling). **Bypass:** `DD_SKIP_COMMIT_BLOCK=1`.
 
 Fires only when the Bash command is `git commit` (including `--amend`, via
-`command_match.is_git_commit`). If commits-since-last-cold-read ≥
+`command_match.is_git_commit`). If commits-since-last-deep-review ≥
 `review_tiers.cold_read_escalation.hard_block_threshold` (default **5**), deny
-the commit (exit 2) and point at `/dd-review cold-read`.
+the commit (exit 2) with a message to run a deep review.
 
 Commit count selection: checkpoint exists → `state.commits_since_checkpoint`;
 no checkpoint (fresh branch or none recorded) → `state.commits_since_fork_base`.
@@ -92,9 +92,9 @@ No fork base → degrade silent (allow). A stored count of 5 means 5 commits hav
 landed since the last cold-read; this hook denies the 6th.
 
 **Note on `--amend`.** Amend is gated the same as a new commit — the gate is a
-coarse "you owe a cold-read" signal, not amend-specific logic. Clear it by
-running `/dd-review cold-read`, or set `DD_SKIP_COMMIT_BLOCK=1` for the
-remediation cycle.
+coarse "you owe a deep review" signal, not amend-specific logic. Clear it by
+running a deep review per the adversarial-review skill and logging it via `dd-log`,
+or set `DD_SKIP_COMMIT_BLOCK=1` for the remediation cycle.
 
 ---
 
@@ -102,14 +102,14 @@ remediation cycle.
 
 **Class:** hard gate (T3, the only PR gate). **Bypass:** `DD_SKIP_PR_REVIEW=1`.
 
-Detect `gh pr create` (via `command_match.find_gh_pr_create`), extract the
-review base (`--base`/`-B` → `branch.<cur>.gh-merge-base` git config) and a
-chained-`cd` target cwd, then delegate to `dd_review_runner.py pre-pr` with
-`DD_HARD_BLOCK=1`, forwarding `--base`/`--cwd` only when parsed. Detect +
-extract + delegate — no review/severity logic here; `dd_review_runner` blocks the
-PR (exit 2, propagated) on `[P0]`/`[P1]`/`[P2]` findings. An unexpandable
-chained `cd` (`cd $X && gh pr create`) fails **loud** (block) rather than
-letting an unreviewed PR through.
+Detect `gh pr create` (via `command_match.find_gh_pr_create`) and extract the
+chained-`cd` target cwd, then delegate to `external_review.py --cwd <cwd>`.
+No base resolution, no `DD_HARD_BLOCK`, no severity scanning — verdict is
+entirely the external gate's responsibility. Any non-zero exit from the
+delegate maps to exit 2 (Claude Code blocks PreToolUse only on exit 2);
+delegate stdout+stderr are re-emitted so findings reach the model. An
+unexpandable chained `cd` (`cd $X && gh pr create`) fails **loud** (block)
+rather than letting an unreviewed PR through.
 
 ---
 
@@ -120,10 +120,9 @@ letting an unreviewed PR through.
 Increments `edits.count` on every Edit or Write (PostToolUse — no-op counting,
 no diff inspection). When the resulting stored count reaches
 `review_tiers.fast.nudge_threshold` (default **30**), emits a T0 nudge via
-the PostToolUse `additionalContext` envelope ("run `/dd-review fast`") and
-continues nudging on each subsequent edit until the model runs the review and
-resets the counter. Advisory only — PostToolUse runs after the edit; this
-hook never blocks.
+the PostToolUse `additionalContext` envelope and continues nudging on each
+subsequent edit until the model runs a deep review and resets the counter via
+`dd-log`. Advisory only — PostToolUse runs after the edit; this hook never blocks.
 
 ---
 
@@ -138,11 +137,13 @@ segments via the PostToolUse `additionalContext` envelope:
    running system, or state why it's not exercisable. No evidence scanning —
    the model judges.
 2. **T1 nudge:** fires when `edits.count` ≥ `review_tiers.regular.commit_edit_floor`
-   (default **30**). Suggests `/dd-review regular`.
-3. **T2 nudge:** fires when commits-since-last-cold-read ≥
+   (default **30**). Suggests running a deep review per the adversarial-review
+   skill and logging it via `dd-log` to reset the counter.
+3. **T2 nudge:** fires when commits-since-last-deep-review ≥
    `review_tiers.cold_read_escalation.nudge_threshold` (default **3**).
    Checkpoint-or-fork-base selection mirrors `commit_block.py`. Suggests
-   `/dd-review cold-read`.
+   running a deep review per the adversarial-review skill and logging it via
+   `dd-log` to reset the checkpoint.
 
 The verification segment fires independent of repo/branch resolution; T1 and T2
 require it. A detached HEAD or git error degrades the cadence segments silently
@@ -172,46 +173,47 @@ reach the post-compaction model, so it could never deliver the reground.
 
 ---
 
-## `dd_review_runner.py` (model-callable engine)
+## Model-callable tools (non-hook)
 
-Not a hook — the review engine the `/dd-review` command and the pre-PR gate
-point at.
+### `log_review.py` (review log writer)
 
-**Pre-PR gate (T3):**
-```
-python3 dd_review_runner.py pre-pr [--base <ref>] [--cwd <path>]
-```
-Runs `codex review` against the fork-base diff (pre-pr honours `--base`),
-severity-scans, writes the checkpoint + resets `edits.count` on a clean pass,
-and appends a rich record to `reviews.jsonl`. Returns non-zero under
-`DD_HARD_BLOCK=1` (set by `pre_pr_review.py`); manual runs are advisory.
+Records a completed adversarial-review round: appends a `reviews.jsonl` row,
+and — on a PASS result — resets `edits.count` **and** stamps
+`review.checkpoint` = HEAD (both on clean, neither on BLOCK/ERROR). Reads
+aggregated findings on **stdin**. Called by the `dd-log` slash command after
+each clean review round.
 
-**Post-clean-review state write (T0/T1/T2):**
 ```
-python3 dd_review_runner.py --write-checkpoint fast|regular|cold-read [--cwd <path>]
+python3 log_review.py \
+  --source model-review|external-gate \
+  --trigger <str> \
+  [--round <n>] \
+  [--reviewer <id>] \
+  [--cwd <path>]
 ```
-Writes state after a `/dd-review` clean pass — no codex dispatch.
-- `fast` / `regular` → reset `edits.count` only.
-- `cold-read` → set `review.checkpoint` = HEAD **and** reset `edits.count`.
 
-**Scope resolution (all tiers):**
-```
-python3 dd_review_runner.py --resolve-scope fast|regular|cold-read|pre-pr [--cwd <path>]
-```
-Prints the git diff argument for the tier: `HEAD` for `fast`; `<fork-base>..HEAD`
-for the others. No state writes, no dispatch.
+The reset-fold is decision-driven (derived from the findings on stdin), not
+tier-driven. There is no `--tier` flag and no fast/regular/deep distinction
+here.
 
-**Model-layer review logging (T0–T2):**
+### `external_review.py` (pre-PR codex gate)
+
+Runs a whole-repo codex review anchored to the active plan. Invoked by
+`pre_pr_review.py`; also runnable standalone for development/smoke testing.
+
 ```
-python3 dd_review_runner.py --log-review --tier fast|regular|cold-read|self-review|external --source command|ad-hoc [--round <n>] [--reviewer <id>] [--cwd <path>]
+python3 external_review.py [--cwd <path>]
 ```
-Appends one `reviews.jsonl` row from findings piped on **stdin** — derives p0–p3
-(`severity.count_severities`), decision (BLOCK if any P0/P1/P2 else PASS), and git
-fields (honoring `--cwd`). No codex dispatch, no checkpoint. The `/dd-review`
-command calls it once per round (`--source command`). Degrade-safe on I/O (exit
-0, no row); loud on usage error (exit 2); unresolvable fork base on non-`fast`
-tiers → exit 1. (`--source ad-hoc` and the `self-review`/`external` tiers are
-accepted for manual logging; no automated path emits them.)
+
+Verdict-driven and fail-closed: reads the declared `DD-VERDICT: PASS|BLOCK`
+line from codex output; exits 0 only on PASS. Every other outcome — BLOCK,
+missing verdict, empty output, timeout, codex binary missing, non-zero/abnormal
+codex exit — exits non-zero. No severity scanning; no `DD_HARD_BLOCK`. Reviews
+the **whole repo** against the active plan (not a fork-base diff).
+
+**Standalone note:** this tool exits 0/1 (not 2). Claude Code blocks a
+PreToolUse hook only on exit 2; `pre_pr_review.py` translates any non-zero
+result to exit 2. Do not wire this script directly as a PreToolUse delegate.
 
 ---
 
@@ -220,8 +222,8 @@ accepted for manual logging; no automated path emits them.)
 Schema: [`dd-config.md`](dd-config.md). Single override surface
 `.claude/dd-config.json` over `lib/dd-defaults.json`. Per-hook bypass env vars
 (`DD_SKIP_<HOOK>=1`, in `settings.local.json`) and the override knobs
-(`DD_ACTIVE_PLAN`, `DD_LOG_DIR`, `DD_REVIEW_TIMEOUT`, `DD_REVIEW_PROMPT_PATH`) —
-full tables in [`dd-config.md`](dd-config.md#env-vars).
+(`DD_ACTIVE_PLAN`, `DD_LOG_DIR`, `DD_REVIEW_TIMEOUT`) — full tables in
+[`dd-config.md`](dd-config.md#env-vars).
 
 ---
 
@@ -235,7 +237,7 @@ python3 -m pytest -q
 ```
 
 Tests are per hook + per support module; each sets up its own sandbox tempdir
-or git repo. `dd_review_runner`/`pre_pr_review` are exercised against a stubbed
+or git repo. `external_review`/`pre_pr_review` are exercised against a stubbed
 `codex` shim so the suite runs offline. `DD_LOG_DIR` is pointed at `/tmp` for
 the suite so logs never touch the real `.claude/.dd-state/`.
 
@@ -251,14 +253,15 @@ the suite so logs never touch the real `.claude/.dd-state/`.
 - `review_nudge.py` — PostToolUse `Bash` (Gate-3 verify + T1/T2 cadence nudge)
 - `session_reground.py` — SessionStart (re-ground; all sources, source-specific preamble + common body)
 - `pre_pr_review.py` — PreToolUse `Bash` (T3 pre-PR hard gate)
-- `dd_review_runner.py` — model-callable engine (pre-pr codex / --write-checkpoint / --resolve-scope / --log-review)
+- `log_review.py` — model-callable review log writer (resets counter/checkpoint, appends reviews.jsonl)
+- `external_review.py` — model-callable pre-PR codex reviewer (invoked by pre_pr_review.py)
 - `lib/config.py` — defaults + override loader (`get(dot_path)`)
 - `lib/state.py` — per-branch edit counter + review checkpoint + fork-base
 - `lib/cleanup.py` — age + orphaned-branch housekeeping sweep
 - `lib/logging_setup.py` — rolling JSONL logging + `append_review` (reviews.jsonl)
-- `lib/severity.py` — `[P0]`–`[P3]` line-anchored severity scan
+- `lib/severity.py` — `parse_findings` (finding lines) + `parse_verdict` (declared verdict)
 - `lib/command_match.py` — git-commit / gh-pr-create command matchers
 - `lib/plan.py` — active-plan resolution
-- `lib/review_prompt.py`, `lib/review_invocation.py`, `lib/reviewer_runner.py`,
-  `lib/envelope.py` — reviewer prompt/strategy/dispatch + the exit-0 envelope
+- `lib/reviewer_runner.py` — external-reviewer subprocess runner; `lib/envelope.py`
+  — the exit-0 hook envelope
 - `tests/` — pytest suite for all of the above

@@ -24,12 +24,11 @@ scripts (`edit_counter.py`, `edit_block.py`, `commit_block.py`) all resolve
 through the symlink with no consumer action. Three files still need a manual
 touch:
 
-**1. `.claude/commands/dd-review.md`** — if it's a stale symlink from the
-pre-relocation layout (`examples/commands/`), the installer now skips it as a
-foreign symlink rather than re-pointing it. Delete the stale symlink first, then
-re-run the installer to land the current one. A customized real copy is left
-untouched — replace it manually with
-[`commands/dd-review.md`](commands/dd-review.md) if you want the shipped version.
+**1. `.claude/commands/dd-review.md`** — this command was **removed** in the
+review-tooling overhaul. If a stale `dd-review.md` symlink exists in your
+consumer project's `.claude/commands/`, delete it — there is no shipped
+replacement to re-point to. The `/dd-review` workflow is replaced by a manual
+adversarial-review run followed by `dd-log` to record it.
 
 **2. `.claude/settings.json` hooks block** — add the three new hook entries
 (the existing hooks are unchanged):
@@ -40,8 +39,10 @@ untouched — replace it manually with
 Copy the current block from
 [`examples/settings.hooks.json`](examples/settings.hooks.json).
 
-**3. `.claude/dd-config.json`** (only if you override defaults) — remove stale
-keys: `counters.review_threshold`; and `reviewer`, `model`, `default_effort`
-under `review_tiers.regular` and `review_tiers.cold_read_escalation` (those
-fields moved to `review_tiers.pre_pr` only). Override only what you need — a
-missing key falls back to the shipped default.
+**3. `.claude/dd-config.json`** (only if you override defaults) — the pre-PR
+reviewer config now lives in a top-level `review.*` block: `review.reviewer`,
+`review.model`, `review.effort` (`default_effort` was renamed to `effort`). Move
+any reviewer / model / effort overrides out of `review_tiers.*` — including
+`review_tiers.pre_pr`, which no longer exists — into `review.*`, or drop them for
+the shipped defaults. Also remove the stale `counters.review_threshold`. A
+missing key falls back to the default.

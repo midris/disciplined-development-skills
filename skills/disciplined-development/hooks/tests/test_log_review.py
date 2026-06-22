@@ -213,8 +213,8 @@ def test_omitted_round_and_reviewer_default_to_1_and_subagents(tmp_path):
     """Omitting --round and --reviewer must write round=1 and reviewer='subagents'.
 
     Old behaviour: both defaulted to None, writing null into durable rows.
-    The old dd_review_runner.py path defaulted round=1 / reviewer='subagents'
-    (runner.py:422-424); log_review.py must match that parity.
+    log_review.py defaults round=1 / reviewer='subagents' — consistent with
+    what the old engine wrote so existing log rows stay parseable.
     """
     repo = _init_repo(tmp_path)
     log_dir = tmp_path / "logs"
@@ -233,8 +233,8 @@ def test_omitted_round_and_reviewer_default_to_1_and_subagents(tmp_path):
 def test_round_less_than_1_exits_2_and_writes_no_row(tmp_path):
     """--round 0 (or negative) must exit 2 with no row written.
 
-    A nonsense round must not reach the durable log — matches the old
-    runner's round >= 1 validation (dd_review_runner.py:422-424).
+    A nonsense round must not reach the durable log — log_review.py enforces
+    round >= 1 before writing.
     """
     repo = _init_repo(tmp_path)
     log_dir = tmp_path / "logs"

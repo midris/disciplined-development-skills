@@ -1,7 +1,6 @@
 """Tests for hooks/pre_pr_review.py — the pre-PR hard-block wrapper (new contract).
 
-Subprocess-driven. The wrapper now delegates to ``external_review.py`` (not
-``dd_review_runner.py``).  The test seam is ``DD_EXTERNAL_REVIEW_SCRIPT``,
+Subprocess-driven. The wrapper delegates to ``external_review.py``.  The test seam is ``DD_EXTERNAL_REVIEW_SCRIPT``,
 pointing the wrapper at a recording Python shim that captures ``sys.argv[1:]``
 and exits with a scripted code.
 

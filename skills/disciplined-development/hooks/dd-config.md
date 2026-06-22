@@ -50,10 +50,8 @@ Bool values are rejected (a config typo like `true` won't silently become 1).
 
 ## `review_tiers`
 
-Four tiers, each covering one review level. **Only `pre_pr` carries reviewer
-config** — `fast`, `regular`, and `cold_read_escalation` carry cadence
-thresholds only; their subagent sets are fixed in the `/dd-review` command, not
-config-driven.
+Three cadence tiers; each exposes only its threshold tunables. Reviewer config
+lives in `review.*` (see below), not in the tiers.
 
 ### `review_tiers.fast` — T0 edit-counter cadence
 
@@ -85,30 +83,6 @@ cadence — documented expectation, not runtime-validated.
 Commits-since-cold-read uses `review.checkpoint` when present; falls back to
 fork-base when absent (fresh branch) — so the T2 block fires even on a branch
 that has never been cold-read.
-
-### `review_tiers.pre_pr` — T3 pre-PR codex gate
-
-| Key | Type | Default | Description |
-|---|---|---|---|
-| `reviewer` | string | `"codex"` | CLI reviewer for the T3 gate (only valid value in the current engine). |
-| `model` | string | `"gpt-5.5"` | Model id passed to the reviewer. |
-| `default_effort` | string | `"medium"` | Effort level; escalated to `"high"` by diff size via `strategy_selector`. |
-
-Projects without codex on `$PATH` must override `reviewer` — there is no
-runtime `$PATH` probe; the engine fails cleanly with "CLI not found" if `codex`
-is absent.
-
----
-
-## `strategy_selector`
-
-Decides stuffed-vs-fetched dispatch + high-effort escalation by diff size
-(used by `dd_review_runner.py` for T3).
-
-| Key | Type | Default | Description |
-|---|---|---|---|
-| `pre_stuff_max_bytes` | int | `524288` | Diffs at/under this are stuffed in-prompt; larger are fetched by the reviewer. |
-| `high_effort_min_bytes` | int | `51200` | Diffs at/over this escalate effort to `high`. |
 
 ---
 
@@ -147,7 +121,14 @@ Observability — comprehensive + on by default; tuned by retention/cleanup.
 
 | Key | Type | Default | Description |
 |---|---|---|---|
-| `prompt_path` | string | `.claude/skills/adversarial-review/SKILL.md` | Prompt header for the stuffed-strategy codex review (relative → repo root). Env: `DD_REVIEW_PROMPT_PATH`. |
+| `prompt_path` | string | `.claude/skills/adversarial-review/SKILL.md` | Path to the review skill (relative → repo root); passed to the reviewer as the prompt header. |
+| `reviewer` | string | `"codex"` | Reviewer id recorded in each `reviews.jsonl` row. The gate runs `codex` (binary path set by `DD_CODEX_BIN`), not whatever this field says — it labels the log, it does not select the binary. |
+| `model` | string | `"gpt-5.5"` | Model id passed to the reviewer. |
+| `effort` | string | `"medium"` | Effort level passed to the reviewer. |
+
+Projects without `codex` on `$PATH` should point `DD_CODEX_BIN` at the binary —
+there is no runtime `$PATH` probe, so the gate fails closed with "CLI not found"
+if `codex` is absent. To skip the gate instead, set `DD_SKIP_PR_REVIEW`.
 
 ---
 
@@ -155,7 +136,7 @@ Observability — comprehensive + on by default; tuned by retention/cleanup.
 
 | Key | Type | Default | Description |
 |---|---|---|---|
-| `pr_review_timeout_s` | int | `600` | Wall-clock timeout for the codex reviewer in `dd_review_runner.py`. Env: `DD_REVIEW_TIMEOUT`. |
+| `pr_review_timeout_s` | int | `600` | Wall-clock timeout for the codex reviewer in `external_review.py`. Env: `DD_REVIEW_TIMEOUT`. |
 
 ---
 
@@ -185,7 +166,7 @@ tool-call time — hooks read their inherited environment).
 | `DD_ACTIVE_PLAN` | Force the active plan path (highest-priority resolution). |
 | `DD_LOG_DIR` | Override the log directory (highest-priority). |
 | `DD_REVIEW_TIMEOUT` | Override `codex.pr_review_timeout_s`. |
-| `DD_REVIEW_PROMPT_PATH` | Override `review.prompt_path`. |
+| `DD_CODEX_BIN` | Path to the `codex` binary the pre-PR gate runs (default `codex` on `PATH`). |
 
 **Set in:** the launching shell, `~/.claude/settings.json` `env`, or
 `<project>/.claude/settings.local.json` `env`. (`DD_CONFIG` / `DD_DEFAULTS`

@@ -96,7 +96,7 @@ def _seed_checkpoint(repo: Path, n_back: int, branch: str = BRANCH) -> None:
     """Set checkpoint to HEAD~n_back so commits_since_checkpoint returns n_back.
 
     Fixture seeds the checkpoint directly via state.set_checkpoint (same writer
-    as dd_review_runner.py --write-checkpoint) so the hook sees a realistic
+    as external_review.py and log_review.py) so the hook sees a realistic
     on-disk file.
     """
     root = _root(repo)
@@ -199,7 +199,7 @@ def test_at_threshold_denies(tmp_path):
 
     assert r.returncode == 2
     assert "[commit-block]" in r.stderr
-    assert "/dd-review cold-read" in r.stderr
+    assert "adversarial-review skill" in r.stderr
 
 
 def test_amend_at_threshold_denies(tmp_path):
@@ -245,7 +245,7 @@ def test_no_checkpoint_at_threshold_denies(tmp_path):
 
     assert r.returncode == 2
     assert "[commit-block]" in r.stderr
-    assert "/dd-review cold-read" in r.stderr
+    assert "adversarial-review skill" in r.stderr
 
 
 def test_bypass_allows_when_over_threshold(tmp_path):
@@ -285,8 +285,8 @@ def test_valid_checkpoint_below_threshold_suppresses_fork_base(tmp_path):
     The hook should read the checkpoint count (2), not the fork-base count (6),
     and allow the commit.
 
-    _seed_checkpoint uses state.set_checkpoint (same writer as dd_review_runner.py
-    --write-checkpoint) so the hook sees a realistic on-disk checkpoint file.
+    _seed_checkpoint uses state.set_checkpoint (same writer as external_review.py
+    and log_review.py) so the hook sees a realistic on-disk checkpoint file.
     """
     repo, _ = _init(tmp_path)
     _commit(repo, 6)  # 6 commits on branch → fork-base count = 6 >= 5

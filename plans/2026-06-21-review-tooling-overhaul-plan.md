@@ -307,8 +307,13 @@ sets** — a hit you didn't expect is the normal case, not an error.
 `.claude/commands/dd-review.md`), and their tests. Start by grepping for
 `dd_review_runner` and `/dd-review` repo-wide; confirm Chunks 1–2 gave every live
 caller a new home before deleting.
-- [ ] Grep → reconcile → re-grep (zero hits) → run hook suite → commit.
+- [x] Grep → reconcile → re-grep → run hook suite → commit.
   `refactor(review): delete dd_review_runner engine and /dd-review command`
+  Symbol sweep split by design: `tests/`/`lib/`/core-docs reconciled here; the
+  remaining `dd_review_runner` refs are owned by 3.2 (`review_invocation.py`), 3.3/3.4
+  (`dd-config.md`, `hook-recipes-claude-code.md`), 3.5 (hook README), or are
+  intentionally-stale archived/active plans — so a whole-tree re-grep is not zero
+  until those tasks land.
 
 ### Task 3.2 — Remove now-dead lib code
 **Remove (each only after its consumers are reconciled):** the strategy-selector
@@ -319,9 +324,11 @@ the deleted engine; the `research/` replay harness (port any severity-count use 
 `parse_findings`, **preserving its existing CSV `(p0,p1,p2,p3)` columns**); and the
 `tests/` that target these modules (delete or rewrite per `lean-plan-writing` — rewrite
 when ≥3 assertions reference removed symbols).
-- [ ] Grep each symbol repo-wide → reconcile every consumer → re-grep clean.
-- [ ] Run hook suite **and** `python3 -m pytest research/ -q`.
-- [ ] Commit. `refactor(lib): drop strategy-selector, diff-stuffing, count-as-decision`
+- [x] Grep each symbol repo-wide → reconcile every consumer → re-grep clean.
+- [x] Run hook suite **and** `python3 -m pytest research/ -q`.
+- [x] Commit. `refactor(lib): drop strategy-selector, diff-stuffing, count-as-decision`
+  (whole `review_prompt.py` removed, not parts — `external_review` reused none of it.
+  Remaining symbol hits live in `hook-recipes-claude-code.md` → 3.4 and archived plans.)
 
 ### Task 3.3 — Trim config
 **Goal:** config no longer carries engine-only keys, but the **cadence-hook tunables
@@ -338,7 +345,7 @@ other tiers); apply the trim across **every** config file that carries the key
 (defaults + all example configs — find them by grep, don't assume one); confirm
 `cleanup.py` never prunes `reviews.jsonl`; update the config-schema doc; reconcile the
 config test.
-- [ ] Grep readers → trim defaults + all example configs → update schema doc +
+- [x] Grep readers → trim defaults + all example configs → update schema doc +
   config test → run config + hook suites → commit.
   `refactor(config): drop pre-pr tier + strategy_selector; keep cadence tiers`
 
@@ -347,11 +354,14 @@ config test.
 `/dd-review`; the cadence hooks point at a deep review + `dd-log` instead.
 **Reconcile (ground live):** grep every `/dd-review` and engine-mode reference plus
 any dangling pointer to a non-existent plan; triage each (update / false-positive /
-intentionally-stale). Repoint the cadence hooks' nudge **and** remediation/bypass
+intentionally-stale). Known extra `dd_review_runner` symbol hits deferred from 3.1
+to triage here: `MIGRATIONS.md` (historical engine-rename narrative — likely
+intentionally-stale, decide live) and the doc refs in `hook-recipes-claude-code.md`
+(`dd-config.md`'s strategy block is 3.3's). Repoint the cadence hooks' nudge **and** remediation/bypass
 text to neutral wording ("run a deep review per the skill; log via `dd-log` to reset
 the counter"); reconcile the tests asserting the old nudge strings; update
 `CLAUDE.md`/examples/README to name `dd-log` and drop tier vocabulary.
-- [ ] Grep → repoint → reconcile tests → re-grep clean → run hook suite → commit
+- [x] Grep → repoint → reconcile tests → re-grep clean → run hook suite → commit
   with full `References swept:`. `refactor(hooks): repoint review nudges onto the skill + dd-log`
 
 ### Task 3.5 — Rewrite the hook README (heavy drift)
@@ -360,10 +370,16 @@ describe the new world: one deep whole-repo mode; two tools; reset-folds-into-lo
 verdict-driven fail-closed gate; the new log schema. Cold-read it in one pass, gather
 every stale claim, rewrite (not surgical); apply `concise-writing`. (There is no
 `dd-review` *skill* doc — don't go looking for one; the command is gone in 3.1.)
-- [ ] Rewrite → commit. `docs(hooks): rewrite review/state-model docs for the two-tool model`
+- [x] Rewrite → commit. `docs(hooks): rewrite review/state-model docs for the two-tool model`
 
 ### Chunk 3 close-out
-- [ ] Hook + installer + research suites green; self-review; open PR.
+- [x] Hook + installer + research suites green; self-review; open PR.
+  Suites green (hook 243/3, installer 11, research 3). Self-review: per-task
+  adversarial reviews + a whole-branch cold-read (3 P2s found + fixed → re-review
+  clean). Clean review logged via `log_review.py` (PASS row; counters reset). PR
+  #29 open. External review (Gate 5 step 2) is a manual codex run — this source
+  repo omits the `pre_pr_review` gate (advisory hooks only), same as Chunk 2's
+  PR #28 where the manual codex pass found 2 real findings.
 
 ---
 
@@ -395,6 +411,13 @@ Draft, in `skills/adversarial-review/SKILL.md` + `skills/adversarial-review-loop
 
 ## Out of scope (tracked elsewhere)
 - **Orphaned-safeguard review angle** (deferred #3-item-1) — separate skill effort.
+- **Hook-internal `T0`–`T3` gate vocabulary.** The `/dd-review` review-mode tiers
+  (fast/regular/cold-read/pre-pr) are gone, and the overview docs (READMEs, CLAUDE.md,
+  examples) describe the cadence tier-free. But the hooks' code docstrings, the
+  `dd-config.md` schema descriptions, the hook tests, and the `hook-recipes` gate
+  labels still use `T0`–`T3` as internal shorthand for the four cadence gates. Left
+  intact deliberately — relabeling them is part of the deferred hook-script
+  simplification, not this overhaul. (See the cadence-counter-structure deferral.)
 - **Cadence-counter structure** — `plans/deferred/2026-06-21-cadence-counters-structure-deferred.md`.
 - **Threshold calibration** — `plans/deferred/2026-06-14-threshold-rationale-and-calibration.md`.
 - **Codex/other-harness port** — the old `2026-06-10-codex-harness-port.md` was
