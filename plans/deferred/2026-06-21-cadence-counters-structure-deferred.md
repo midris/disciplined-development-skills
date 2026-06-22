@@ -1,7 +1,7 @@
 # Deferred: revisit the edits/commits cadence-counter structure
 
 **Status:** Deferred. Raised 2026-06-21 during the review-tooling overhaul
-(`plans/2026-06-21-review-tooling-overhaul-plan.md`), which deliberately keeps the
+(`plans/completed/2026-06-21-review-tooling-overhaul-plan.md`), which deliberately keeps the
 hook shape stable to bound blast radius.
 
 ## The question
@@ -46,4 +46,4 @@ together; don't duplicate the value question here.
 
 - Hooks: `edit_counter.py`, `edit_block.py`, `commit_block.py`, `review_nudge.py`.
 - State: `lib/state.py` (`edits.count`, `review.checkpoint`, fork-base fallback).
-- Design: `plans/2026-06-21-review-tooling-overhaul.md` (State model section).
+- Design: `plans/completed/2026-06-21-review-tooling-overhaul.md` (State model section).

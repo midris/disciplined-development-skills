@@ -183,7 +183,7 @@ retention/cleanup.
   `commits_since_checkpoint`, `trigger`); reviewer (`source`, `reviewer`,
   `model`, `effort`); outcome (`decision`, `reason`, `p0`–`p3`, `findings[]`,
   `output`); timing (`duration_s`, `round`). Full schema in the design doc
-  (`plans/2026-06-21-review-tooling-overhaul.md` § Logging consolidation).
+  (`plans/completed/2026-06-21-review-tooling-overhaul.md` § Logging consolidation).
 - **Cleanup:** a throttled sweep (from `inject_plan_state`) prunes day-logs
   past `logging.retention_days` and removes orphaned per-branch state dirs.
   `reviews.jsonl` is never pruned.
