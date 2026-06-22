@@ -205,12 +205,13 @@ over-broad: a false block is human-overridable; a false allow is a fail-open hol
 its module docstring before changing the contract; update the docstring and the one
 gate caller to the new shape; reconcile its tests.
 
-- [ ] Write failing tests: `looks_like` True on a real-but-hard-to-parse compound
-  `gh pr create` (a synthetic heredoc + `gh pr create` reproduction), True on a
+- [x] Write failing tests: `looks_like` True on a real-but-hard-to-parse compound
+  `gh pr create` (a command the strict tokenizer chokes on — e.g. an unmatched quote —
+  paired with a `find_gh_pr_create` → None assert on the same command), True on a
   trivial one, False on a non-PR command, and a documented over-broad case (a command
   merely mentioning the tokens → True, accepted). The matcher returns bare `cwd|None`.
-- [ ] Run → fail; implement (incl. docstring); run → pass.
-- [ ] Commit. `feat(command-match): loose gh-pr-create detector; drop base extraction`
+- [x] Run → fail; implement (incl. docstring); run → pass.
+- [x] Commit. `feat(command-match): loose gh-pr-create detector; drop base extraction`
 
 ### Task 2.2 — `external_review.py` (whole-repo, verdict-driven)
 
