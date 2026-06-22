@@ -137,8 +137,8 @@ def _seed_edits(repo: Path, n: int, branch: str = BRANCH) -> None:
 def _seed_checkpoint(repo: Path, n_back: int, branch: str = BRANCH) -> None:
     """Set checkpoint to HEAD~n_back so commits_since_checkpoint returns n_back.
 
-    Uses state.set_checkpoint (same writer as dd_review_runner.py
-    --write-checkpoint) so the hook sees a realistic on-disk file.
+    Uses state.set_checkpoint (same writer as external_review.py and
+    log_review.py) so the hook sees a realistic on-disk file.
     """
     root = _root(repo)
     sha = _rev(repo, f"HEAD~{n_back}")
@@ -379,8 +379,8 @@ def test_valid_checkpoint_below_threshold_suppresses_fork_base(tmp_path):
     The hook should read the checkpoint count (2), not the fork-base count (6),
     and omit the T2 nudge.
 
-    _seed_checkpoint uses state.set_checkpoint (same writer as dd_review_runner.py
-    --write-checkpoint) so the hook sees a realistic on-disk checkpoint file.
+    _seed_checkpoint uses state.set_checkpoint (same writer as external_review.py
+    and log_review.py) so the hook sees a realistic on-disk checkpoint file.
     Verify segment is still present (it fires on every landed commit).
     """
     repo = _init(tmp_path)

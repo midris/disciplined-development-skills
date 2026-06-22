@@ -307,8 +307,13 @@ sets** — a hit you didn't expect is the normal case, not an error.
 `.claude/commands/dd-review.md`), and their tests. Start by grepping for
 `dd_review_runner` and `/dd-review` repo-wide; confirm Chunks 1–2 gave every live
 caller a new home before deleting.
-- [ ] Grep → reconcile → re-grep (zero hits) → run hook suite → commit.
+- [x] Grep → reconcile → re-grep → run hook suite → commit.
   `refactor(review): delete dd_review_runner engine and /dd-review command`
+  Symbol sweep split by design: `tests/`/`lib/`/core-docs reconciled here; the
+  remaining `dd_review_runner` refs are owned by 3.2 (`review_invocation.py`), 3.3/3.4
+  (`dd-config.md`, `hook-recipes-claude-code.md`), 3.5 (hook README), or are
+  intentionally-stale archived/active plans — so a whole-tree re-grep is not zero
+  until those tasks land.
 
 ### Task 3.2 — Remove now-dead lib code
 **Remove (each only after its consumers are reconciled):** the strategy-selector
@@ -347,7 +352,10 @@ config test.
 `/dd-review`; the cadence hooks point at a deep review + `dd-log` instead.
 **Reconcile (ground live):** grep every `/dd-review` and engine-mode reference plus
 any dangling pointer to a non-existent plan; triage each (update / false-positive /
-intentionally-stale). Repoint the cadence hooks' nudge **and** remediation/bypass
+intentionally-stale). Known extra `dd_review_runner` symbol hits deferred from 3.1
+to triage here: `MIGRATIONS.md` (historical engine-rename narrative — likely
+intentionally-stale, decide live) and the doc refs in `hook-recipes-claude-code.md`
+(`dd-config.md`'s strategy block is 3.3's). Repoint the cadence hooks' nudge **and** remediation/bypass
 text to neutral wording ("run a deep review per the skill; log via `dd-log` to reset
 the counter"); reconcile the tests asserting the old nudge strings; update
 `CLAUDE.md`/examples/README to name `dd-log` and drop tier vocabulary.

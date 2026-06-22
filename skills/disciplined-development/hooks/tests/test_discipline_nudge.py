@@ -1,6 +1,6 @@
 """Tests for hooks/discipline_nudge.py — PreToolUse re-ground counter.
 
-Run as a subprocess (like test_dd_review_runner) so the stdin payload, env
+Run as a subprocess (like test_external_review) so the stdin payload, env
 bypass, exit code, and the PreToolUse JSON envelope are exercised
 end-to-end. The discipline threshold is lowered via a DD_CONFIG override
 so a test fires the nudge in a few calls instead of 25.

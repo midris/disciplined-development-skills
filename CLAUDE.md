@@ -22,7 +22,7 @@ A bundle of harness-portable **skills** (the doctrine) + a Claude Code **hook st
 
 ```text
 skills/<skill>/                       # nine skill dirs under skills/, each with a SKILL.md
-skills/disciplined-development/hooks/ # hook stack + dd_review_runner.py engine + hook tests
+skills/disciplined-development/hooks/ # hook stack + hook tests
 commands/                             # /dd-review slash-command template (installer symlinks it into consumers' .claude/commands/)
 examples/                             # reference configs consumers copy (hooks block, dd-config, CLAUDE.md snippet + starter template)
 research/                             # non-shipped experiment tooling (replay harness + its smoke test)
@@ -82,7 +82,7 @@ No `ROADMAP.md`. Active work is tracked in `plans/` (when a plan is open) or dir
 - **Mandatory in high-risk areas:**
   - **Hook stack (`skills/disciplined-development/hooks/`).** A misbehaving hook — especially `discipline_nudge.py`, which matches `*` on PreToolUse — can block every tool call in every consumer project. Biggest blast radius in the repo. Every hook change needs a test.
   - **`install-skills.sh`.** Touches consumer filesystems and must not clobber project-local skills. Regressions are silent (the user finds out later). Cover via `tests/test_install_skills.py`.
-  - **`dd_review_runner.py` review engine.** Model-callable CLI that gates PR creation. Wrong verdict = a blocked PR or a false pass. Cover the verdict + dispatch logic.
+  - **`external_review.py` review gate.** Model-callable CLI that gates PR creation. Wrong verdict = a blocked PR or a false pass. Cover the verdict + dispatch logic.
   - **Skill `SKILL.md` content changes.** No test catches a worse instruction. Substitute: run an adversarial cold-read of the staged branch — `/dd-review cold-read` — and address findings before commit.
 - **Keep tests targeted and contract-oriented.** Focused unit tests over end-to-end. Run the hook test suite (`cd skills/disciplined-development/hooks && python3 -m pytest -q`) before sign-off; report gaps if a full run isn't possible.
 - **Inline fixture-state dependencies.** When a test depends on shared fixture state seeded elsewhere, add a one-line note at the call site pointing at the fixture — cross-file fixture dependencies that aren't called out get misread as bugs.

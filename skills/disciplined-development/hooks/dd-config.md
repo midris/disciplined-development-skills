@@ -155,7 +155,7 @@ Observability — comprehensive + on by default; tuned by retention/cleanup.
 
 | Key | Type | Default | Description |
 |---|---|---|---|
-| `pr_review_timeout_s` | int | `600` | Wall-clock timeout for the codex reviewer in `dd_review_runner.py`. Env: `DD_REVIEW_TIMEOUT`. |
+| `pr_review_timeout_s` | int | `600` | Wall-clock timeout for the codex reviewer in `external_review.py`. Env: `DD_REVIEW_TIMEOUT`. |
 
 ---
 

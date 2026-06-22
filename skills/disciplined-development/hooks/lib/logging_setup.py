@@ -182,8 +182,9 @@ def append_review(record: dict) -> None:
 
     The dedicated review trace for offline analysis (outcomes, latency,
     drift) — see the spec's "Observability" section. Multi-source: ``source:
-    engine`` rows from the ``pre-pr`` codex path and ``source: command``/
-    ``ad-hoc`` rows from ``dd_review_runner.py --log-review``; rows are sparse
+    external-gate`` rows from the pre-PR codex gate (``external_review.py``)
+    and ``source: model-review`` rows from model-driven reviews
+    (``log_review.py``); rows are sparse
     (each source carries only the fields it has). Resolves the same dir as
     :func:`setup`, honors ``logging.enabled`` (no-op when false), stamps a
     ``ts``, and never raises (a write failure warns to stderr only)."""
