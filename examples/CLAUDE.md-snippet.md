@@ -19,8 +19,8 @@ overlays *on top of* it.
   `.claude/dd-config.json` to tune behavior (start from the bundle's
   `examples/dd-config.json`; full schema in
   `.claude/skills/disciplined-development/hooks/dd-config.md`).
-- The hooks enforce a multi-tier review cadence: T0 edit-counter nudge/block,
-  T1 commit nudge, T2 commit-count nudge/block, T3 pre-PR gate on `gh pr create`.
+- The hooks enforce a review cadence: an edit-counter nudge/block, a commit nudge,
+  a commit-count nudge/block, and a pre-PR gate on `gh pr create`.
   Thresholds are in `.claude/skills/disciplined-development/hooks/dd-config.md`.
 - Periodic review per Principle 8 — at review-nudge signals or natural pauses,
   run a deep review per the adversarial-review skill, then log it via `dd-log`

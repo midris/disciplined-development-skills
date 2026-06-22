@@ -259,9 +259,9 @@ the suite so logs never touch the real `.claude/.dd-state/`.
 - `lib/state.py` — per-branch edit counter + review checkpoint + fork-base
 - `lib/cleanup.py` — age + orphaned-branch housekeeping sweep
 - `lib/logging_setup.py` — rolling JSONL logging + `append_review` (reviews.jsonl)
-- `lib/severity.py` — `[P0]`–`[P3]` line-anchored severity scan
+- `lib/severity.py` — `parse_findings` (finding lines) + `parse_verdict` (declared verdict)
 - `lib/command_match.py` — git-commit / gh-pr-create command matchers
 - `lib/plan.py` — active-plan resolution
-- `lib/review_prompt.py`, `lib/review_invocation.py`, `lib/reviewer_runner.py`,
-  `lib/envelope.py` — reviewer prompt/strategy/dispatch + the exit-0 envelope
+- `lib/reviewer_runner.py` — external-reviewer subprocess runner; `lib/envelope.py`
+  — the exit-0 hook envelope
 - `tests/` — pytest suite for all of the above

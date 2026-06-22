@@ -405,6 +405,13 @@ Draft, in `skills/adversarial-review/SKILL.md` + `skills/adversarial-review-loop
 
 ## Out of scope (tracked elsewhere)
 - **Orphaned-safeguard review angle** (deferred #3-item-1) — separate skill effort.
+- **Hook-internal `T0`–`T3` gate vocabulary.** The `/dd-review` review-mode tiers
+  (fast/regular/cold-read/pre-pr) are gone, and the overview docs (READMEs, CLAUDE.md,
+  examples) describe the cadence tier-free. But the hooks' code docstrings, the
+  `dd-config.md` schema descriptions, the hook tests, and the `hook-recipes` gate
+  labels still use `T0`–`T3` as internal shorthand for the four cadence gates. Left
+  intact deliberately — relabeling them is part of the deferred hook-script
+  simplification, not this overhaul. (See the cadence-counter-structure deferral.)
 - **Cadence-counter structure** — `plans/deferred/2026-06-21-cadence-counters-structure-deferred.md`.
 - **Threshold calibration** — `plans/deferred/2026-06-14-threshold-rationale-and-calibration.md`.
 - **Codex/other-harness port** — the old `2026-06-10-codex-harness-port.md` was

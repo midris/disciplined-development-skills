@@ -17,7 +17,7 @@ Surfaces (and nothing more — this is the minimal rebuild):
 - An mtime-fallback annotation when the plan was chosen by recency.
 
 Active-plan resolution is delegated to :mod:`hooks.lib.plan` (shared with
-``inject_plan_state`` so the two never drift). Checkbox parsing stays local here.
+``external_review`` so the two never drift). Checkbox parsing stays local here.
 
 Dropped vs the legacy hook: review-debt counters, transition guidance
 (post_merge / pre_chunk), and branch-state mismatch warnings — all tied to the

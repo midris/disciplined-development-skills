@@ -1,8 +1,8 @@
-"""reviewer_runner.py — Subprocess wrapper for the codex review CLI.
+"""reviewer_runner.py — timeout-bounded subprocess wrapper for the external reviewer CLI.
 
-Used by ``external_review.py`` (runs ``codex review``). Renamed from
-``claude_runner.py`` once ``claude -p`` was removed (E2); the Runner is now
-a codex-only generic subprocess wrapper.
+Used by ``external_review.py`` to run ``codex``. A generic, codex-only
+subprocess wrapper: the caller builds the argv; the Runner enforces the timeout
+and captures output.
 
 Design:
 

@@ -48,13 +48,12 @@ Thresholds are stated against the **stored** count to avoid this off-by-one.
 
 ## One deep review mode
 
-There is **one review mode: deep, whole-repo, plan-anchored.** The tier
-vocabulary (T0–T3, fast/regular/cold-read/pre-pr) is gone. The hooks keep
-numeric thresholds — configurable via `review_tiers.*` keys — but they all
-call for the same review: a full adversarial review of the whole repository
-against the active plan, selecting angles per `adversarial-review` "When to
-apply." The model logs each round's findings via the `dd-log` command (which
-calls `log_review.py`).
+There is **one review mode: deep, whole-repo, plan-anchored** — a full
+adversarial review of the whole repository against the active plan, selecting
+angles per `adversarial-review` "When to apply." The hooks keep numeric cadence
+thresholds (configurable via `review_tiers.*` keys), but all of them call for
+that same review. The model logs each round's findings via the `dd-log` command
+(which calls `log_review.py`).
 
 The two places a review happens:
 
