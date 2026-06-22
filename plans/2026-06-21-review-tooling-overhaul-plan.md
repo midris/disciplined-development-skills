@@ -373,7 +373,13 @@ every stale claim, rewrite (not surgical); apply `concise-writing`. (There is no
 - [x] Rewrite → commit. `docs(hooks): rewrite review/state-model docs for the two-tool model`
 
 ### Chunk 3 close-out
-- [ ] Hook + installer + research suites green; self-review; open PR.
+- [x] Hook + installer + research suites green; self-review; open PR.
+  Suites green (hook 243/3, installer 11, research 3). Self-review: per-task
+  adversarial reviews + a whole-branch cold-read (3 P2s found + fixed → re-review
+  clean). Clean review logged via `log_review.py` (PASS row; counters reset). PR
+  #29 open. External review (Gate 5 step 2) is a manual codex run — this source
+  repo omits the `pre_pr_review` gate (advisory hooks only), same as Chunk 2's
+  PR #28 where the manual codex pass found 2 real findings.
 
 ---
 
