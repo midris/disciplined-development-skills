@@ -126,9 +126,9 @@ Observability — comprehensive + on by default; tuned by retention/cleanup.
 | `model` | string | `"gpt-5.5"` | Model id passed to the reviewer. |
 | `effort` | string | `"medium"` | Effort level passed to the reviewer. |
 
-Projects without codex on `$PATH` must override `reviewer` — there is no
-runtime `$PATH` probe; the gate fails closed with "CLI not found" if `codex`
-is absent.
+Projects without `codex` on `$PATH` should point `DD_CODEX_BIN` at the binary —
+there is no runtime `$PATH` probe, so the gate fails closed with "CLI not found"
+if `codex` is absent. To skip the gate instead, set `DD_SKIP_PR_REVIEW`.
 
 ---
 
