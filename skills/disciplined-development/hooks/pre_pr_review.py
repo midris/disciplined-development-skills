@@ -114,46 +114,69 @@ def main() -> int:
         logger.emit("skip", reason="env_bypass")
         return 0
 
-    command = _read_command()
-    cwd = find_gh_pr_create(command)
-    if cwd is None:
-        if looks_like_gh_pr_create(command):
-            # Looks like ``gh pr create`` but the target directory couldn't be
-            # resolved (e.g. a ``cd`` to a shell variable / command substitution).
-            # Fail closed: log ERROR row + block — do NOT let an unreviewed PR
-            # through (the fail-open bug this gate exists to prevent).
-            repo = os.getcwd()
-            _log_unparseable(repo)
-            logger.emit("block", reason="unresolvable_cwd")
-            print(
-                "[pre-pr] BLOCKED: couldn't resolve the target directory for a "
-                "`gh pr create` (e.g. a `cd` to an unexpandable path or a "
-                "hard-to-parse command). Re-run with an explicit or absolute "
-                "path, or set DD_SKIP_PR_REVIEW=1 in the launching shell "
-                "to bypass.",
-                file=sys.stderr,
-            )
+    # Read command before the guarded region so the exception handler can
+    # call looks_like_gh_pr_create(command).  If reading itself raises,
+    # command stays "" (not PR-shaped → allow).
+    command = ""
+    try:
+        command = _read_command()
+        cwd = find_gh_pr_create(command)
+        if cwd is None:
+            if looks_like_gh_pr_create(command):
+                # Looks like ``gh pr create`` but the target directory couldn't be
+                # resolved (e.g. a ``cd`` to a shell variable / command substitution).
+                # Fail closed: log ERROR row + block — do NOT let an unreviewed PR
+                # through (the fail-open bug this gate exists to prevent).
+                repo = os.getcwd()
+                _log_unparseable(repo)
+                logger.emit("block", reason="unresolvable_cwd")
+                print(
+                    "[pre-pr] BLOCKED: couldn't resolve the target directory for a "
+                    "`gh pr create` (e.g. a `cd` to an unexpandable path or a "
+                    "hard-to-parse command). Re-run with an explicit or absolute "
+                    "path, or set DD_SKIP_PR_REVIEW=1 in the launching shell "
+                    "to bypass.",
+                    file=sys.stderr,
+                )
+                return 2
+            # Not ``gh pr create`` — let every other Bash command through.
+            return 0
+
+        argv = [sys.executable, _external_review_script(), "--cwd", cwd]
+        logger.emit("delegate", cwd=cwd)
+        result = subprocess.run(argv, capture_output=True, text=True)
+
+        # Exit-code translation is load-bearing: Claude Code blocks a PreToolUse
+        # tool ONLY on exit 2; any other non-zero is a non-blocking error and the
+        # tool (gh pr create) still runs.  external_review returns 0 on PASS and
+        # non-zero on BLOCK / any failure — map any non-zero to 2 and re-emit the
+        # delegate's output on stderr so findings reach the model.
+        out = (result.stdout or "") + (result.stderr or "")
+        if result.returncode != 0:
+            logger.emit("block", ext_exit=result.returncode)
+            sys.stderr.write(out)
             return 2
-        # Not ``gh pr create`` — let every other Bash command through.
+        # Clean pass — surface the output and let the PR through.
+        sys.stdout.write(out)
         return 0
 
-    argv = [sys.executable, _external_review_script(), "--cwd", cwd]
-    logger.emit("delegate", cwd=cwd)
-    result = subprocess.run(argv, capture_output=True, text=True)
-
-    # Exit-code translation is load-bearing: Claude Code blocks a PreToolUse
-    # tool ONLY on exit 2; any other non-zero is a non-blocking error and the
-    # tool (gh pr create) still runs.  external_review returns 0 on PASS and
-    # non-zero on BLOCK / any failure — map any non-zero to 2 and re-emit the
-    # delegate's output on stderr so findings reach the model.
-    out = (result.stdout or "") + (result.stderr or "")
-    if result.returncode != 0:
-        logger.emit("block", ext_exit=result.returncode)
-        sys.stderr.write(out)
-        return 2
-    # Clean pass — surface the output and let the PR through.
-    sys.stdout.write(out)
-    return 0
+    except Exception:
+        # Unexpected exception in the gate itself (e.g. resource exhaustion,
+        # sandbox kill, BrokenPipeError on stderr.write).  Fail closed for a
+        # PR-creation attempt; allow all other commands — a gate hiccup must
+        # not block unrelated Bash commands (the hook runs on every Bash call).
+        # Mirrors the existing unparseable-branch semantics (block iff PR-shaped).
+        # Best-effort: wrap the block message so a write failure can't re-raise.
+        if looks_like_gh_pr_create(command):
+            try:
+                sys.stderr.write(
+                    "[pre-pr] BLOCKED: unexpected gate exception — set "
+                    "DD_SKIP_PR_REVIEW=1 to bypass.\n"
+                )
+            except Exception:
+                pass
+            return 2
+        return 0
 
 
 if __name__ == "__main__":

@@ -226,6 +226,54 @@ def test_cd_forwarded_as_cwd_to_external_review(tmp_path):
     assert argv[argv.index("--cwd") + 1] == str(other)
 
 
+# ---------------------------------------------------------------------------
+# In-process exception-guard tests (Commit 1 — fail-open fix)
+# ---------------------------------------------------------------------------
+
+
+def test_delegate_spawn_exception_fails_closed_for_pr(tmp_path, monkeypatch):
+    """subprocess.run raising inside main() on a gh pr create → return 2 (fail-closed).
+
+    Verifies the exception guard added in fix(pre-pr-gate): an unexpected raise
+    during delegate spawn must NOT exit 1 (which would let the PR through);
+    it must return 2 so Claude Code blocks the tool call.
+    """
+    import pre_pr_review
+
+    def _raise(*args, **kwargs):
+        raise OSError("EMFILE: too many open files")
+
+    monkeypatch.setattr(pre_pr_review.subprocess, "run", _raise)
+    monkeypatch.setattr(pre_pr_review, "_read_command", lambda: "gh pr create")
+    # Suppress logging noise; _log_unparseable / setup may also call subprocess.run
+    # (via git), which is now patched to raise — _log_unparseable already swallows
+    # those; guard against logger.emit touching subprocess by patching logging_setup.
+    import io
+    monkeypatch.setattr(sys, "stderr", io.StringIO())
+
+    result = pre_pr_review.main()
+    assert result == 2, f"expected 2 (fail-closed), got {result}"
+
+
+def test_unexpected_exception_allows_non_pr_command(tmp_path, monkeypatch):
+    """An unexpected raise on the non-PR path → return 0 (gate hiccup must not block).
+
+    Patches _read_command to raise so the exception fires before command is known;
+    the handler must treat it as not-PR-shaped and return 0.
+    """
+    import pre_pr_review
+
+    def _raise():
+        raise RuntimeError("stdin exploded")
+
+    monkeypatch.setattr(pre_pr_review, "_read_command", _raise)
+    import io
+    monkeypatch.setattr(sys, "stderr", io.StringIO())
+
+    result = pre_pr_review.main()
+    assert result == 0, f"expected 0 (non-PR exception allows), got {result}"
+
+
 def test_hard_block_env_not_forwarded(tmp_path):
     """DD_HARD_BLOCK must NOT be set in the delegate environment (old contract gone)."""
     repo = _init_repo(tmp_path)
