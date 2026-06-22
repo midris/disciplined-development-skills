@@ -270,12 +270,12 @@ is "PreToolUse blocks only on exit 2", so keep the any-nonzero→exit-2 translat
 the stderr re-emit; reconcile the tests that assert the old delegate target / base /
 `DD_HARD_BLOCK` forwarding.
 
-- [ ] Write failing tests: genuine non-PR command → allow (exit 0), no row;
+- [x] Write failing tests: genuine non-PR command → allow (exit 0), no row;
   unparseable-but-PR-shaped → exit 2 + `ERROR unparseable`, stderr names
   `DD_SKIP_PR_REVIEW`; parseable + tool exit 0 → exit 0; parseable + tool non-zero →
   exit 2, reviewer output on stderr; `DD_SKIP_PR_REVIEW=1` → exit 0.
-- [ ] Run → fail; implement; run → pass.
-- [ ] Commit. `fix(pre-pr-gate): whole-repo verdict gate, fail-closed; drop base chain`
+- [x] Run → fail; implement; run → pass.
+- [x] Commit. `fix(pre-pr-gate): whole-repo verdict gate, fail-closed; drop base chain`
   (body cites the fail-open deferred bug as resolved).
 
 ### Chunk 2 close-out
