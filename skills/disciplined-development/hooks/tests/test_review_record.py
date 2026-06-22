@@ -311,6 +311,46 @@ def test_extra_fields_surface_in_row():
         assert row[key] == value
 
 
+def test_extra_cannot_clobber_reserved_fields_but_new_keys_pass_through():
+    """Reserved/builder-owned fields must not be overridable via extra.
+
+    extra may ADD new best-effort keys (forward-compat: new sources log new
+    fields without a code change), but MUST NOT override builder- or
+    writer-owned fields — ts, scope, decision, output, counts, context keys.
+    """
+    extra = {
+        # Reserved keys that must NOT clobber builder values:
+        "ts": "2099-01-01T00:00:00Z",        # writer-owned; must stay absent
+        "scope": "whole-repo",               # schema-forbidden; must stay absent
+        "decision": "BLOCK",                 # builder-derived (CLEAN_PASS → PASS); must keep PASS
+        "output": "INJECTED",                # builder-set verbatim; must keep original
+        "p1": 99,                            # builder count; must keep 0
+        "head_sha": "deadbeef",              # context key; must keep CTX value
+        # Non-reserved keys that MUST pass through:
+        "model": "codex",
+        "run_id": "abc",
+    }
+    row = build_review_record(
+        findings=CLEAN_PASS,
+        source="model-review",
+        reviewer="claude",
+        trigger="manual",
+        round=1,
+        context=CTX,
+        extra=extra,
+    )
+    # Reserved keys: builder values preserved; ts/scope absent
+    assert "ts" not in row
+    assert "scope" not in row
+    assert row["decision"] == "PASS"           # not overridden to BLOCK
+    assert row["output"] == CLEAN_PASS         # not overridden to INJECTED
+    assert row["p1"] == 0                      # not overridden to 99
+    assert row["head_sha"] == CTX["head_sha"]  # not overridden to deadbeef
+    # Non-reserved keys: present and correct
+    assert row["model"] == "codex"
+    assert row["run_id"] == "abc"
+
+
 def test_absent_extra_fields_omitted_not_null():
     # No ``extra`` → none of the best-effort keys appear (omitted, not None).
     row = build_review_record(

@@ -22,6 +22,11 @@ act on — see the plan's Reuse surface):
 
 ``append_review`` stamps ``ts`` itself (``{"ts": _iso_ts(), **record}``), so this
 module never emits one. There is no ``scope`` field in the schema.
+
+Reserved fields (owned by the builder or by ``append_review``):
+``_EXTRA_RESERVED`` — ``extra`` may add keys NOT in this set (forward-compat:
+new sources may log new best-effort fields without a code change) but cannot
+override any builder- or writer-owned field.
 """
 
 from __future__ import annotations
@@ -39,6 +44,20 @@ DEFAULT_TRUNKS = ["master", "main"]
 # Severities that force a derived BLOCK when no verdict is declared. P3 is
 # advisory (matches the gate posture: P0/P1/P2 block, P3 is informational).
 _BLOCKING_SEVERITIES = frozenset({"P0", "P1", "P2"})
+
+# Fields owned by the builder or by append_review (the writer).  extra may
+# ADD keys not in this set — a closed allowlist would fight the forward-compat
+# design ("sparse by source; readers tolerate missing/new fields") — but must
+# never override these.  ts and scope are included even though the builder
+# never emits them: extra must not inject them either.
+_EXTRA_RESERVED: frozenset[str] = frozenset({
+    "ts", "scope",
+    "repo", "branch", "head_sha", "base", "edits_count", "commits_since_checkpoint",
+    "source", "reviewer", "trigger", "round",
+    "decision", "reason",
+    "p0", "p1", "p2", "p3", "findings", "output",
+    "duration_s",
+})
 
 
 def _trunks() -> list[str]:
@@ -125,10 +144,14 @@ def build_review_record(
     ``extra`` is the declared home for best-effort, source-specific fields
     (``run_id`` / ``session_id`` / ``harness`` / ``model`` / ``model_version`` /
     ``effort`` / ``angles`` / ``skill_version`` / ``dd_version`` / ``cap_hit`` /
-    ``cold_read_escape`` / ``bypass``); it is spread in as-is. Absent optional
-    fields (``reason`` / ``duration_s`` / unset ``extra`` keys) are **omitted**,
-    not set to null — the schema is sparse-by-source and readers tolerate missing
-    keys. ``ts`` is stamped by ``append_review``, so it is never emitted here.
+    ``cold_read_escape`` / ``bypass``).  ``extra`` may **add** keys that are not
+    in ``_EXTRA_RESERVED`` — a closed allowlist would fight the forward-compat
+    design (new sources may log new best-effort fields without a code change) —
+    but it may **never override** builder- or writer-owned fields (see
+    ``_EXTRA_RESERVED``).  Absent optional fields (``reason`` / ``duration_s`` /
+    unset ``extra`` keys) are **omitted**, not set to null — the schema is
+    sparse-by-source and readers tolerate missing keys.  ``ts`` is stamped by
+    ``append_review``, so it is never emitted here.
     """
     parsed = parse_findings(findings)
     counts = {f"p{i}": 0 for i in range(4)}
@@ -158,5 +181,7 @@ def build_review_record(
     if duration_s is not None:
         row["duration_s"] = float(duration_s)
     if extra:
-        row.update(extra)
+        for k, v in extra.items():
+            if k not in _EXTRA_RESERVED:
+                row[k] = v
     return row
