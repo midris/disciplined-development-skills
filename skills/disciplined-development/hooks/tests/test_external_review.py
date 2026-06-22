@@ -457,3 +457,32 @@ def test_built_prompt_contains_plan_path_and_skill_pointer(gate_env, tmp_path):
     assert plan_path_fragment in full_argv_text, (
         f"plan path not in argv: {argv}"
     )
+
+
+# ---------------------------------------------------------------------------
+# T8 — abnormal codex exit (non-zero exit code) must fail closed
+# ---------------------------------------------------------------------------
+
+
+def test_nonzero_codex_exit_fails_closed_even_with_pass_verdict(gate_env, tmp_path):
+    """codex exits non-zero but wrote ``DD-VERDICT: PASS`` → fail closed (D3).
+
+    ``Runner.run()`` returns ``exit_reason='ok'`` for any process that spawned and
+    completed, REGARDLESS of its exit code.  A non-zero codex exit means the
+    reviewer errored (auth failure, partial run, outage), so its last-message
+    verdict cannot be trusted: the gate must log ERROR/outage and block — never
+    stamp state — even though a PASS line sits in the ``-o`` file.
+    """
+    env, repo, log_dir = gate_env
+    _seed_edits(repo, 2, _BASE_DIR)
+
+    proc = _run(env, repo, stub_stdout="No findings.\nDD-VERDICT: PASS", stub_exit=1)
+
+    assert proc.returncode != 0, proc.stdout + proc.stderr
+    rows = _rows(log_dir)
+    assert len(rows) == 1
+    assert rows[0]["decision"] == "ERROR"
+    assert rows[0].get("reason") == "outage"
+    # The PASS verdict in the -o file must NOT have stamped state.
+    assert _edits_count(repo) == 2
+    assert _checkpoint(repo) is None

@@ -290,6 +290,28 @@ def main(argv: list[str] | None = None) -> int:
                   file=sys.stderr)
             return 1
 
+        # --- abnormal termination (non-zero exit code or non-"ok" reason) ---
+        # reviewer_runner returns exit_reason="ok" for ANY process that spawned
+        # and completed, REGARDLESS of its exit code. A non-zero codex exit (or a
+        # signal kill) means the reviewer errored — auth failure, partial run,
+        # outage — so its last-message verdict cannot be trusted. Fail closed
+        # (Decision 3) regardless of what landed in the -o file; capture the
+        # partial output for the retro log but never derive a decision from it.
+        if result.exit_reason != "ok" or result.exit_code != 0:
+            try:
+                partial = pathlib.Path(output_file).read_text(
+                    encoding="utf-8", errors="replace")
+            except OSError:
+                partial = ""
+            _log_attempt(repo, branch, partial, "ERROR", "outage", duration_s)
+            print(
+                f"[external-review] ERROR — codex exited abnormally "
+                f"(reason={result.exit_reason}, exit_code={result.exit_code}); "
+                f"verdict not trusted.",
+                file=sys.stderr,
+            )
+            return 1
+
         # --- read the last-message file ---
         try:
             output = pathlib.Path(output_file).read_text(encoding="utf-8", errors="replace")
