@@ -324,9 +324,11 @@ the deleted engine; the `research/` replay harness (port any severity-count use 
 `parse_findings`, **preserving its existing CSV `(p0,p1,p2,p3)` columns**); and the
 `tests/` that target these modules (delete or rewrite per `lean-plan-writing` — rewrite
 when ≥3 assertions reference removed symbols).
-- [ ] Grep each symbol repo-wide → reconcile every consumer → re-grep clean.
-- [ ] Run hook suite **and** `python3 -m pytest research/ -q`.
-- [ ] Commit. `refactor(lib): drop strategy-selector, diff-stuffing, count-as-decision`
+- [x] Grep each symbol repo-wide → reconcile every consumer → re-grep clean.
+- [x] Run hook suite **and** `python3 -m pytest research/ -q`.
+- [x] Commit. `refactor(lib): drop strategy-selector, diff-stuffing, count-as-decision`
+  (whole `review_prompt.py` removed, not parts — `external_review` reused none of it.
+  Remaining symbol hits live in `hook-recipes-claude-code.md` → 3.4 and archived plans.)
 
 ### Task 3.3 — Trim config
 **Goal:** config no longer carries engine-only keys, but the **cadence-hook tunables
