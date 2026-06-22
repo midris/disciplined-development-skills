@@ -78,8 +78,9 @@ installed bundle.
 - **Python 3** — for the hook stack.
 - **git** — the hooks key behavior off branch / commit / fork-base state.
 - **`codex` — only for the pre-PR review gate.** The gate (`external_review.py`)
-  runs `codex` against the repo; if you use it, either install `codex` or point
-  `review.reviewer` at another reviewer in `dd-config.json`.
+  runs `codex` against the repo (point `DD_CODEX_BIN` at it if it isn't on
+  `PATH`). Without `codex` the gate fails closed — skip it with
+  `DD_SKIP_PR_REVIEW`.
 
 ## Install (clone-and-symlink)
 

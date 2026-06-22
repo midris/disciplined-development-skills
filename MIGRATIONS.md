@@ -39,8 +39,10 @@ adversarial-review run followed by `dd-log` to record it.
 Copy the current block from
 [`examples/settings.hooks.json`](examples/settings.hooks.json).
 
-**3. `.claude/dd-config.json`** (only if you override defaults) — remove stale
-keys: `counters.review_threshold`; and `reviewer`, `model`, `default_effort`
-under `review_tiers.regular` and `review_tiers.cold_read_escalation` (those
-fields moved to `review_tiers.pre_pr` only). Override only what you need — a
-missing key falls back to the shipped default.
+**3. `.claude/dd-config.json`** (only if you override defaults) — the pre-PR
+reviewer config now lives in a top-level `review.*` block: `review.reviewer`,
+`review.model`, `review.effort` (`default_effort` was renamed to `effort`). Move
+any reviewer / model / effort overrides out of `review_tiers.*` — including
+`review_tiers.pre_pr`, which no longer exists — into `review.*`, or drop them for
+the shipped defaults. Also remove the stale `counters.review_threshold`. A
+missing key falls back to the default.
