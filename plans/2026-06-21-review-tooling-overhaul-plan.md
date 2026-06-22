@@ -182,7 +182,7 @@ makes obsolete. Grep the installer + `tests/` for the current command handling f
 - [x] Commit. `feat(commands,installer): add dd-log; symlink all commands/*.md`
 
 ### Chunk 1 close-out
-- [ ] Hook + installer suites green; self-review (`adversarial-review` + `-loop`),
+- [x] Hook + installer suites green; self-review (`adversarial-review` + `-loop`),
   address P0/P1/P2; open PR.
 
 ---
