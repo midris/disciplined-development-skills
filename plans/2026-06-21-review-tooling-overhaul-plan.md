@@ -131,15 +131,15 @@ functions in place — the engine still uses them until Chunk 3).
   text (the `findings` arg) is stored verbatim as the schema's **`output`** field;
   `parse_findings(findings)` derives `findings[]` and the `p0`–`p3` counts.
 
-- [ ] Write failing tests (temp git repo for `gather_cadence_context`): clean +
+- [x] Write failing tests (temp git repo for `gather_cadence_context`): clean +
   `DD-VERDICT: PASS` → `decision=PASS`, counts 0, `findings:[]`; `[P1]` +
   `DD-VERDICT: BLOCK` → `decision=BLOCK`; explicit `ERROR`/`reason` passed through;
   verdict absent but `[P1]` → derived BLOCK; builder output has **no `ts`** and **no
   `scope`**, carries `output` (raw reviewer text verbatim); `extra` fields surface;
   `gather_cadence_context` runs no `git diff` and
   falls back to fork-base count when no checkpoint.
-- [ ] Run → fail; implement; run → pass.
-- [ ] Commit. `feat(review-record): rich row builder + cadence context (no diff)`
+- [x] Run → fail; implement; run → pass.
+- [x] Commit. `feat(review-record): rich row builder + cadence context (no diff)`
 
 ### Task 1.3 — `log_review.py` CLI (record + reset-fold)
 
