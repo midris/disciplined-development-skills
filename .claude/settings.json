@@ -4,16 +4,6 @@
   },
   "_hooks_note": "Source-repo self-wiring: ADVISORY hooks only, via skills/disciplined-development/hooks/ paths (this repo does NOT symlink its skills into .claude/skills/). The three hard blocks (edit_block, commit_block, pre_pr_review) are deliberately omitted so they don't gate heavy bundle development. See no-self-symlink-skills convention.",
   "hooks": {
-    "UserPromptSubmit": [
-      {
-        "hooks": [
-          {
-            "type": "command",
-            "command": "python3 \"$CLAUDE_PROJECT_DIR/skills/disciplined-development/hooks/inject_plan_state.py\""
-          }
-        ]
-      }
-    ],
     "PreToolUse": [
       {
         "matcher": "*",

@@ -59,7 +59,6 @@ def test_expected_hook_set_wired():
     # Skip guard fires outside a consumer (see module-level pytestmark).
     joined = " ".join(_hook_commands())
     for expected in (
-        "inject_plan_state.py",
         "discipline_nudge.py",
         "pre_pr_review.py",
         "review_nudge.py",

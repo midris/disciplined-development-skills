@@ -89,12 +89,12 @@
 
 **Tests required:** new `test_examples_wiring.py` asserting no `UserPromptSubmit` / `inject_plan_state` in `examples/settings.hooks.json` + `.claude/settings.json` (red now, green after Step 3). `test_settings_wiring.py` expected-set updated. Whole suite green with `test_inject_plan_state.py` gone.
 
-- [ ] **Step 1:** Write `test_examples_wiring.py` (parse both JSON files; assert no `UserPromptSubmit` key, no `inject_plan_state` substring in any command). Run it; verify it **fails** (both files still wire the hook). Also update `test_settings_wiring.py:62` (drop `inject_plan_state.py`) — note this one stays skipped here.
-- [ ] **Step 2:** Remove the `UserPromptSubmit` block from `examples/settings.hooks.json` and `.claude/settings.json`. Re-run `test_examples_wiring.py`; green.
-- [ ] **Step 3:** Delete `inject_plan_state.py` and `test_inject_plan_state.py`.
-- [ ] **Step 4:** Update the `lib/plan.py` and `lib/cleanup.py` docstrings to name the new caller(s).
-- [ ] **Step 5:** Run the full hook suite + `python3 -m pytest tests/ -q` (installer suite); green.
-- [ ] **Step 6:** Commit. `refactor(hooks): delete inject_plan_state; fold its jobs into discipline_nudge`.
+- [x] **Step 1:** Write `test_examples_wiring.py` (parse both JSON files; assert no `UserPromptSubmit` key, no `inject_plan_state` substring in any command). Run it; verify it **fails** (both files still wire the hook). Also update `test_settings_wiring.py:62` (drop `inject_plan_state.py`) — note this one stays skipped here.
+- [x] **Step 2:** Remove the `UserPromptSubmit` block from `examples/settings.hooks.json` and `.claude/settings.json`. Re-run `test_examples_wiring.py`; green.
+- [x] **Step 3:** Delete `inject_plan_state.py` and `test_inject_plan_state.py`.
+- [x] **Step 4:** Update the `lib/plan.py` and `lib/cleanup.py` docstrings to name the new caller(s).
+- [x] **Step 5:** Run the full hook suite + `python3 -m pytest tests/ -q` (installer suite); green.
+- [x] **Step 6:** Commit. `refactor(hooks): delete inject_plan_state; fold its jobs into discipline_nudge`.
 
 ---
 

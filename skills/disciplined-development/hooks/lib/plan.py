@@ -19,9 +19,9 @@ finds the configured pointer. Falls back to cwd-relative when not in a git
 repo. The fallback glob is read from config via :mod:`hooks.lib.config`
 (the one intended cross-module dependency).
 
-Shared by ``external_review`` (feeds the reviewer its plan/spec paths) and
-``inject_plan_state`` (path resolution only; checkbox parsing stays in the
-injector). Side-effect-free except for the read-only git/glob/file probes.
+Shared by ``discipline_nudge`` (names the active plan in the fire-branch
+nudge) and ``external_review`` (feeds the reviewer its plan/spec paths).
+Side-effect-free except for the read-only git/glob/file probes.
 """
 from __future__ import annotations
 

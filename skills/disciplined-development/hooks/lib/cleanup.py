@@ -13,9 +13,10 @@ Two sweeps, both degrade-safe (every step → no-op on error; never raises):
   nothing is deleted. Dot-prefixed entries (``.logs``, ``.last-sweep``) are
   skipped so they're never mistaken for a branch dir.
 
-Called from a low-frequency hook (``inject_plan_state``, UserPromptSubmit),
-throttled by a ``.dd-state/.last-sweep`` stamp so it never runs per-tool-call.
-``now_ts`` is injected (the testable core takes no argless clock).
+Called from ``discipline_nudge`` on its PreToolUse fire branch (count ≥
+threshold), throttled by a ``.dd-state/.last-sweep`` stamp so it never runs
+on every tool call. ``now_ts`` is injected (the testable core takes no
+argless clock).
 """
 
 from __future__ import annotations
