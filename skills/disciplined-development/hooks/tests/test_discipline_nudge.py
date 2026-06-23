@@ -84,8 +84,10 @@ def test_at_threshold_emits_envelope_and_resets(git_repo):
     # The re-ground text is now followed by a plan line — assert prefix, not
     # exact equality (plan line was appended in the fire branch).
     assert ctx.startswith(discipline_nudge.REGROUND_TEXT)
-    # The plan line must follow the re-ground text.
-    assert "\n" in ctx[len(discipline_nudge.REGROUND_TEXT):]
+    # The plan line must follow the re-ground text. git_repo seeds seed.txt
+    # only — no plans/ dir and no pointer file — so resolve_active_plan
+    # returns None and the no-plan message is appended.
+    assert "No active plan pinned" in ctx
     # Pin the actionable verbs in the re-ground block (imperative verbs
     # included) — a degraded "list of words" version must fail.
     assert "Re-read" in ctx and "Re-check" in ctx
@@ -131,7 +133,6 @@ def test_non_git_cwd_degrades_silent(tmp_path):
 
 
 def test_fire_message_names_active_plan_path(git_repo):
-    root = _repo_root(git_repo)
     # Pin the plan via pointer file — env tier is neutralised in _run.
     (git_repo / ".claude").mkdir(exist_ok=True)
     (git_repo / ".claude" / "active-plan").write_text("plans/foo.md\n")
