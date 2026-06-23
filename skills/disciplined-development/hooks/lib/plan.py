@@ -106,9 +106,14 @@ def resolve_active_plan(cwd: str | None = None) -> tuple[str, str] | None:
         except OSError:
             return -1.0
 
-    statable = [c for c in candidates if _safe_mtime(c) >= 0]
-    if not statable:
+    # Compute each candidate's mtime exactly once via the guarded helper so a
+    # file vanishing between glob and stat cannot raise OSError out of this
+    # *-matcher PreToolUse hook.  Candidates with a negative mtime (vanished)
+    # are filtered before the max() — no unguarded os.path.getmtime call
+    # remains in the selection path.
+    timed = [(mtime, c) for c in candidates if (mtime := _safe_mtime(c)) >= 0]
+    if not timed:
         return None
 
-    best = max(statable, key=os.path.getmtime)
+    _, best = max(timed)
     return best, "mtime fallback"
