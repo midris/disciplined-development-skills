@@ -60,7 +60,7 @@ No env file in this repo. Consumer projects carry `.claude/dd-config.json` (over
 Brief orientation — the full component interplay (three layers + diagrams) is in [`ARCHITECTURE.md`](ARCHITECTURE.md):
 
 - **Skills layer** — each skill dir under `skills/` contains a `SKILL.md` (some have `references/` subdirs). The `disciplined-development` skill is the parent doctrine; the rest are companions it dispatches to. See `README.md` for the per-skill purpose.
-- **Hook layer** — eight event hooks + two model-callable tools (`log_review.py` + `external_review.py`), all under `skills/disciplined-development/hooks/`. Design rationale, hook table, state model, observability, and extension rules live in `skills/disciplined-development/hooks/README.md` — refresh that doc when you change hook behavior, not this snapshot.
+- **Hook layer** — seven event hooks + two model-callable tools (`log_review.py` + `external_review.py`), all under `skills/disciplined-development/hooks/`. Design rationale, hook table, state model, observability, and extension rules live in `skills/disciplined-development/hooks/README.md` — refresh that doc when you change hook behavior, not this snapshot.
 
 Refresh the architecture detail in `ARCHITECTURE.md` and `skills/disciplined-development/hooks/README.md`, not this snapshot.
 

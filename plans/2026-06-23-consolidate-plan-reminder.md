@@ -128,10 +128,10 @@
 
 **What:** No tests (docs). Apply `concise-writing`. Because doc drift here is multi-claim, read each artifact cold once and batch-fix (per CLAUDE.md's "rewrite docs when fallout is large" posture) rather than one finding at a time.
 
-- [ ] **Step 1:** Grep the repo for `inject_plan_state`, `UserPromptSubmit`, `DD_SKIP_INJECT_PLAN_STATE`, the per-turn cadence phrasing (`per-turn`, `turn boundary`), and hook-count phrases (`eight`, `8 event hooks`, `Eight hook scripts`). Confirm the full set of doc sites.
-- [ ] **Step 2:** Update `README.md`, `hook-recipes-claude-code.md`, `dd-config.md`, `CLAUDE.md`, `ARCHITECTURE.md`, `hooks/README.md` in one pass.
-- [ ] **Step 3:** Run the Verification grep below → expect zero hits outside `plans/`.
-- [ ] **Step 4:** Commit. `docs: drop inject_plan_state; reflect plan reminder in discipline_nudge`.
+- [x] **Step 1:** Grep the repo for `inject_plan_state`, `UserPromptSubmit`, `DD_SKIP_INJECT_PLAN_STATE`, the per-turn cadence phrasing (`per-turn`, `turn boundary`), and hook-count phrases (`eight`, `8 event hooks`, `Eight hook scripts`). Confirm the full set of doc sites.
+- [x] **Step 2:** Update `README.md`, `hook-recipes-claude-code.md`, `dd-config.md`, `CLAUDE.md`, `ARCHITECTURE.md`, `hooks/README.md` in one pass.
+- [x] **Step 3:** Run the Verification grep below → expect zero hits outside `plans/`.
+- [x] **Step 4:** Commit. `docs: drop inject_plan_state; reflect plan reminder in discipline_nudge`.
 
 ---
 

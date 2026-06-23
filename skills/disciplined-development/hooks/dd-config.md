@@ -150,7 +150,6 @@ tool-call time — hooks read their inherited environment).
 
 | Env var | Hook silenced |
 |---|---|
-| `DD_SKIP_INJECT_PLAN_STATE` | `inject_plan_state.py` |
 | `DD_SKIP_DISCIPLINE_NUDGE` | `discipline_nudge.py` |
 | `DD_SKIP_EDIT_COUNTER` | `edit_counter.py` (T0 counter + nudge) |
 | `DD_SKIP_EDIT_BLOCK` | `edit_block.py` (T0 hard block) |
@@ -178,7 +177,7 @@ is set internally by `pre_pr_review` and is not user-facing.)
 
 ## Active-plan resolution
 
-Priority (used by `inject_plan_state`):
+Priority (used by `discipline_nudge` and `external_review`):
 
 1. `DD_ACTIVE_PLAN` env var (explicit override — returned as-is, even if the
    path doesn't exist).
