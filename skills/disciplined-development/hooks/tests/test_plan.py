@@ -124,3 +124,61 @@ def test_nonexistent_env_path_returned_as_is(fake_repo, monkeypatch):
         "plans/does-not-exist.md",
         "DD_ACTIVE_PLAN env var",
     )
+
+
+def test_unreadable_pointer_falls_through_to_mtime(fake_repo, monkeypatch):
+    """PermissionError on the pointer file must not propagate.
+
+    The hook is a *-matcher PreToolUse — any uncaught OSError would crash
+    the hook and block every subsequent tool call until the file is fixed.
+    Guard: fall through to the glob/mtime path exactly as if the pointer
+    were absent.
+    """
+    # A plans/*.md exists so we can assert the mtime fallback is returned.
+    md = fake_repo / "plans" / "fallback.md"
+    md.write_text("# fallback\n")
+
+    # Monkeypatch builtins.open so the pointer-path open raises PermissionError.
+    # (chmod is unreliable — root bypasses it; monkeypatching is hermetic.)
+    import builtins
+    real_open = builtins.open
+    pointer_path = str(fake_repo / ".claude" / "active-plan")
+    # Write the pointer file so os.path.isfile returns True (triggers the open).
+    (fake_repo / ".claude" / "active-plan").write_text("plans/target.md\n")
+
+    def _selective_open(file, *args, **kwargs):
+        if str(file) == pointer_path:
+            raise PermissionError(13, "Permission denied", pointer_path)
+        return real_open(file, *args, **kwargs)
+
+    monkeypatch.setattr(builtins, "open", _selective_open)
+
+    result = plan.resolve_active_plan(cwd=str(fake_repo))
+    assert result is not None, "must fall through to mtime fallback, not raise"
+    path, source = result
+    assert path == str(md)
+    assert source == "mtime fallback"
+
+
+def test_vanishing_candidate_during_mtime_selection_does_not_raise(fake_repo, monkeypatch):
+    """OSError during getmtime (file vanishes between glob and stat) must not propagate.
+
+    Degrade-safe invariant: the * PreToolUse caller must never crash.
+    Skip unstatable candidates; return None if none remain.
+    """
+    md = fake_repo / "plans" / "ghost.md"
+    md.write_text("# ghost\n")
+
+    real_getmtime = os.path.getmtime
+
+    def _raising_getmtime(p):
+        if str(p) == str(md):
+            raise OSError(2, "No such file or directory", str(p))
+        return real_getmtime(p)
+
+    monkeypatch.setattr(os.path, "getmtime", _raising_getmtime)
+
+    # No pointer file, no env — only the glob candidate (which vanishes).
+    result = plan.resolve_active_plan(cwd=str(fake_repo))
+    # The only candidate is unstatable, so result is None — not a raised exception.
+    assert result is None

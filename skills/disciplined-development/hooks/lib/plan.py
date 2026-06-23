@@ -74,10 +74,16 @@ def resolve_active_plan(cwd: str | None = None) -> tuple[str, str] | None:
         config.get("plans.active_plan_pointer", ".claude/active-plan")
     )
     if os.path.isfile(pointer_file):
-        with open(pointer_file) as fh:
-            plan_path = fh.readline().strip()
-        if plan_path:
-            return plan_path, pointer_file
+        try:
+            with open(pointer_file) as fh:
+                plan_path = fh.readline().strip()
+            if plan_path:
+                return plan_path, pointer_file
+        except OSError:
+            # Degrade-safe: the *-matcher PreToolUse caller must never crash.
+            # Treat an unreadable pointer (e.g. permission denied) as absent
+            # and fall through to the glob/mtime path below.
+            pass
 
     fallback_globs = config.get("plans.fallback_glob", ["plans/*.md"])
     if isinstance(fallback_globs, str):
@@ -92,5 +98,17 @@ def resolve_active_plan(cwd: str | None = None) -> tuple[str, str] | None:
     if not candidates:
         return None
 
-    best = max(candidates, key=os.path.getmtime)
+    # Degrade-safe: skip candidates that vanish between glob and stat
+    # (same invariant — the *-matcher PreToolUse caller must never crash).
+    def _safe_mtime(p: str) -> float:
+        try:
+            return os.path.getmtime(p)
+        except OSError:
+            return -1.0
+
+    statable = [c for c in candidates if _safe_mtime(c) >= 0]
+    if not statable:
+        return None
+
+    best = max(statable, key=os.path.getmtime)
     return best, "mtime fallback"

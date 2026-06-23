@@ -183,3 +183,47 @@ def test_cleanup_not_run_below_threshold(git_repo):
     assert r1.stdout.strip() == ""
     assert r2.stdout.strip() == ""
     assert not stamp.exists(), "stamp must not exist before fire"
+
+
+def test_unreadable_pointer_does_not_crash_hook_at_threshold(git_repo):
+    """Regression: unreadable .claude/active-plan must not crash the hook.
+
+    Before the fix, resolve_active_plan raised PermissionError, which propagated
+    out of discipline_nudge before state.reset() ran — crash-looping on every
+    subsequent tool call until the operator fixed the file.
+    After the fix: hook exits 0, emits the re-ground envelope, and resets the
+    counter (degrade-safe: treat the pointer as absent, fall through to mtime).
+    """
+    if os.geteuid() == 0:
+        pytest.skip("chmod is a no-op for root; test not meaningful")
+
+    root = _repo_root(git_repo)
+
+    # Seed a pointer file and make it unreadable.
+    claude_dir = git_repo / ".claude"
+    claude_dir.mkdir(exist_ok=True)
+    pointer = claude_dir / "active-plan"
+    pointer.write_text("plans/some-plan.md\n")
+    pointer.chmod(0o000)
+
+    try:
+        # Trip the counter to threshold.
+        _run(git_repo, threshold=3)
+        _run(git_repo, threshold=3)
+        r3 = _run(git_repo, threshold=3)
+
+        # Hook must exit 0 — not crash.
+        assert r3.returncode == 0, (
+            f"hook crashed (exit {r3.returncode}); stderr:\n{r3.stderr}"
+        )
+        # Must emit the re-ground envelope (not empty stdout).
+        assert r3.stdout.strip(), "expected re-ground envelope on stdout"
+        payload = json.loads(r3.stdout)
+        assert payload["hookSpecificOutput"]["hookEventName"] == "PreToolUse"
+        # Counter must be reset (no crash-loop).
+        assert state.read(root, "master", "discipline") == 0, (
+            "counter not reset — crash-loop risk if fix incomplete"
+        )
+    finally:
+        # Restore perms so tmp_path cleanup can delete the file.
+        pointer.chmod(0o644)
