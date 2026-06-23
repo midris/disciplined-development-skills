@@ -6,9 +6,7 @@ When it reaches ``counters.discipline_threshold``, emit a fixed,
 actionable re-ground nudge (re-read CLAUDE.md + the active plan; re-check
 the governing skills) and reset the counter. Otherwise silent (exit 0).
 
-The counter resets on fire AND at the start of each user turn — the
-UserPromptSubmit injector (``inject_plan_state``) resets ``discipline`` so the
-cadence is "tool calls since the last re-ground (turn boundary or prior fire)."
+The counter resets only on fire; the cadence is "tool calls since the last fire."
 
 **Channel.** PreToolUse exit-0 ``hookSpecificOutput.additionalContext`` is
 model-visible — it appears next to the tool result and the model sees it
@@ -37,13 +35,14 @@ import os
 import pathlib
 import subprocess
 import sys
+import time
 
 _HERE = pathlib.Path(__file__).resolve().parent
 _BASE_DIR = _HERE.parent  # the dir containing the `hooks` package
 if str(_BASE_DIR) not in sys.path:
     sys.path.insert(0, str(_BASE_DIR))
 
-from hooks.lib import config, logging_setup, state  # noqa: E402
+from hooks.lib import cleanup, config, logging_setup, plan, state  # noqa: E402
 from hooks.lib.envelope import Envelope  # noqa: E402
 
 HOOK_NAME = "discipline_nudge"
@@ -137,10 +136,36 @@ def main() -> int:
         logger.emit("pass", count=count, threshold=threshold)
         return 0
 
+    # Resolve the active plan — path only, no checkbox parsing (dumb hook).
+    # Defense-in-depth: wrap in try/except so any unexpected exception from
+    # plan resolution (e.g. config type bugs not yet guarded in plan.py) can
+    # never prevent env.emit() + state.reset() from running — an un-reset
+    # counter crash-loops every subsequent tool call.
+    try:
+        plan_result = plan.resolve_active_plan(cwd=repo)
+    except Exception:
+        plan_result = None
+    if plan_result is not None:
+        plan_path, plan_label = plan_result
+        plan_line = (
+            f"Active plan: {plan_path} (via {plan_label})"
+            " — re-read it from disk before continuing."
+        )
+    else:
+        plan_line = "No active plan pinned — set .claude/active-plan or DD_ACTIVE_PLAN."
+
     env = Envelope("PreToolUse")
-    env.accumulate(REGROUND_TEXT)
+    env.accumulate(REGROUND_TEXT + "\n" + plan_line)
     env.emit()
     state.reset(repo, branch, COUNTER_NAME)
+
+    # Best-effort cleanup — swallow all errors so a sweep failure can never
+    # block the tool call or break the nudge.
+    try:
+        cleanup.sweep(repo, time.time())
+    except Exception:
+        pass
+
     logger.emit("fire", count=count, threshold=threshold, branch=branch)
     return 0
 

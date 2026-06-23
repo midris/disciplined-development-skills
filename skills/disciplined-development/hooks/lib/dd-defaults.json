@@ -26,18 +26,7 @@
   },
   "plans": {
     "active_plan_pointer": ".claude/active-plan",
-    "fallback_glob": ["plans/*.md"],
-    "skip_section_headers": [
-      "test plan",
-      "definition of done",
-      "done criteria",
-      "verification",
-      "verification commands",
-      "smoke pass",
-      "sign-off",
-      "self-review",
-      "self review"
-    ]
+    "fallback_glob": ["plans/*.md"]
   },
   "codex": {
     "pr_review_timeout_s": 600

@@ -29,26 +29,12 @@ The wired set (`settings.json`) — **three hard blocks, zero kicks:**
 
 | Event | Matcher | Hook |
 |---|---|---|
-| UserPromptSubmit | — | `inject_plan_state.py` |
 | PreToolUse | `*` (all) | `discipline_nudge.py` |
 | PreToolUse | `Edit\|Write` | `edit_block.py` |
 | PreToolUse | `Bash` | `pre_pr_review.py`, `commit_block.py` |
 | PostToolUse | `Edit\|Write` | `edit_counter.py` |
 | PostToolUse | `Bash` | `review_nudge.py` |
 | SessionStart | — | `session_reground.py` |
-
----
-
-## `UserPromptSubmit` — `inject_plan_state.py`
-
-**Class:** nudge. **Bypass:** `DD_SKIP_INJECT_PLAN_STATE=1`.
-
-At the start of each turn: resolve the active plan (`$DD_ACTIVE_PLAN` →
-`.claude/active-plan` → newest `plans.fallback_glob` by mtime) and emit on
-plain stdout the plan path + source, top-level checkbox progress (skipping
-`plans.skip_section_headers` sections and fenced code blocks), and the next
-pending task. Then reset the per-turn discipline counter and run the throttled
-cleanup sweep. Resolves only inside a git repo (no cross-tree surfacing).
 
 ---
 
@@ -59,7 +45,8 @@ cleanup sweep. Resolves only inside a git repo (no cross-tree surfacing).
 Bump a per-branch tool-call counter (`discipline.count`) on every PreToolUse.
 At `counters.discipline_threshold` emit a fixed re-ground nudge (re-read
 CLAUDE.md + the active plan, re-check the governing skills) via the
-PreToolUse `additionalContext` envelope, and reset. Otherwise silent. The text
+PreToolUse `additionalContext` envelope, naming the resolved active-plan path;
+then run the throttled cleanup sweep and reset. Otherwise silent. The text
 never varies by tool — varying it would rebuild the rejected output-scanner.
 
 ---
@@ -245,8 +232,7 @@ the suite so logs never touch the real `.claude/.dd-state/`.
 
 ## Reference implementation files (`hooks/`)
 
-- `inject_plan_state.py` — UserPromptSubmit (plan-state + counter reset + cleanup)
-- `discipline_nudge.py` — PreToolUse `*` (re-ground counter)
+- `discipline_nudge.py` — PreToolUse `*` (re-ground counter + plan name + cleanup on fire)
 - `edit_counter.py` — PostToolUse `Edit|Write` (T0 edit counter + nudge)
 - `edit_block.py` — PreToolUse `Edit|Write` (T0 hard block at 60)
 - `commit_block.py` — PreToolUse `Bash` (T2 hard block at 5 commits)

@@ -1,15 +1,5 @@
 {
   "hooks": {
-    "UserPromptSubmit": [
-      {
-        "hooks": [
-          {
-            "type": "command",
-            "command": "python3 \"$CLAUDE_PROJECT_DIR/.claude/skills/disciplined-development/hooks/inject_plan_state.py\""
-          }
-        ]
-      }
-    ],
     "PreToolUse": [
       {
         "matcher": "*",

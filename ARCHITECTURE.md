@@ -222,7 +222,7 @@ human overrides with `DD_SKIP_PR_REVIEW`.
 
 ## Hooks & machinery
 
-The hooks are dumb triggers — eight event hooks, three of them hard blocks (the
+The hooks are dumb triggers — seven event hooks, three of them hard blocks (the
 edit ceiling, the commit ceiling, the pre-PR gate); the rest are advisory nudges.
 A hook fires a fixed message at a boundary and nothing more. Two per-branch state
 files — `edits.count` and `review.checkpoint` — drive the cadence; the edit- and

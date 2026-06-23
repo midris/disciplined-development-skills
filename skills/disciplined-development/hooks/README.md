@@ -20,14 +20,13 @@ police"). The intelligence stays in the model; the hook just marks the moment.
 
 ## Hook table
 
-Eight hook scripts (one event entry each) plus two model-callable tools.
+Seven hook scripts (one event entry each) plus two model-callable tools.
 **Three hard blocks, zero kicks** — everything except the edit-count ceiling,
 the commit ceiling, and the pre-PR gate is an advisory nudge.
 
 | Hook | Event | Matcher | Behavior | Bypass |
 |---|---|---|---|---|
-| `inject_plan_state.py` | UserPromptSubmit | — | Surface the active plan + checkbox progress + next pending task; reset the per-turn discipline counter; run throttled housekeeping. | `DD_SKIP_INJECT_PLAN_STATE` |
-| `discipline_nudge.py` | PreToolUse | `*` (all) | Count tool-calls since the last re-ground; at the threshold emit a "re-read CLAUDE.md + the plan, re-check the skills" nudge and reset. | `DD_SKIP_DISCIPLINE_NUDGE` |
+| `discipline_nudge.py` | PreToolUse | `*` (all) | Count tool-calls since the last re-ground; at the threshold emit a "re-read CLAUDE.md + the plan, re-check the skills" nudge (naming the resolved active-plan path) and reset; run throttled cleanup. | `DD_SKIP_DISCIPLINE_NUDGE` |
 | `edit_block.py` | PreToolUse | `Edit\|Write` | **Hard block.** Deny when stored `edits.count` ≥ 60 (i.e. the 61st edit). Reads only; never increments. | `DD_SKIP_EDIT_BLOCK` |
 | `commit_block.py` | PreToolUse | `Bash` (`is_git_commit`) | **Hard block.** Deny a `git commit` (incl. `--amend`) when commits-since-last-deep-review ≥ 5 — allows 5, denies the 6th. | `DD_SKIP_COMMIT_BLOCK` |
 | `pre_pr_review.py` | PreToolUse | `Bash` (`gh pr create`) | **Hard gate.** Detect → resolve cwd → delegate to `external_review.py --cwd`. Any non-zero result maps to exit 2. No base resolution; no `DD_HARD_BLOCK`. An unparseable chained `cd` logs an ERROR row and blocks rather than letting an unreviewed PR through. | `DD_SKIP_PR_REVIEW` |
@@ -184,9 +183,9 @@ retention/cleanup.
   `model`, `effort`); outcome (`decision`, `reason`, `p0`–`p3`, `findings[]`,
   `output`); timing (`duration_s`, `round`). Full schema in the design doc
   (`plans/completed/2026-06-21-review-tooling-overhaul.md` § Logging consolidation).
-- **Cleanup:** a throttled sweep (from `inject_plan_state`) prunes day-logs
-  past `logging.retention_days` and removes orphaned per-branch state dirs.
-  `reviews.jsonl` is never pruned.
+- **Cleanup:** a throttled sweep (from `discipline_nudge` on fire) prunes
+  day-logs past `logging.retention_days` and removes orphaned per-branch state
+  dirs. `reviews.jsonl` is never pruned.
 
 ## Configuration
 
