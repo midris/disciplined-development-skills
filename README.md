@@ -47,12 +47,12 @@ Nine skills (each a `skills/<name>/SKILL.md`):
 - **`concise-writing`** — tighten prose a reader must get through (docs, plans,
   commit bodies, replies); cut padding without cutting substance.
 
+For the component-level architecture — the three layers, the review model, and
+the logging path — see [`ARCHITECTURE.md`](ARCHITECTURE.md).
+
 The hook stack (under `skills/disciplined-development/hooks/`) is documented in its own
 [`hooks/README.md`](skills/disciplined-development/hooks/README.md); config schema in
 [`hooks/dd-config.md`](skills/disciplined-development/hooks/dd-config.md).
-
-For the component-level architecture — the three layers, the review model, and
-the logging path — see [`ARCHITECTURE.md`](ARCHITECTURE.md).
 
 Skill behavior is validated by recorded subagent scenarios in
 [`skill-validation/`](skill-validation/): per skill (or command), the RED/GREEN
