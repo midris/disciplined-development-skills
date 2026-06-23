@@ -70,24 +70,36 @@ def resolve_active_plan(cwd: str | None = None) -> tuple[str, str] | None:
             return p
         return os.path.join(root, p)
 
-    pointer_file = _anchor(
-        config.get("plans.active_plan_pointer", ".claude/active-plan")
-    )
+    # Guard 1: a non-string config value (e.g. `true`) makes os.path.isabs()
+    # raise TypeError — the *-matcher PreToolUse caller must never crash.
+    _pointer_cfg = config.get("plans.active_plan_pointer", ".claude/active-plan")
+    if not isinstance(_pointer_cfg, str):
+        _pointer_cfg = ".claude/active-plan"
+    pointer_file = _anchor(_pointer_cfg)
     if os.path.isfile(pointer_file):
         try:
             with open(pointer_file) as fh:
                 plan_path = fh.readline().strip()
             if plan_path:
                 return plan_path, pointer_file
-        except OSError:
-            # Degrade-safe: the *-matcher PreToolUse caller must never crash.
-            # Treat an unreadable pointer (e.g. permission denied) as absent
-            # and fall through to the glob/mtime path below.
+        except (OSError, UnicodeDecodeError):
+            # Guard 2: broaden from OSError to also catch UnicodeDecodeError
+            # (a ValueError subclass) on pointer files with invalid bytes —
+            # the *-matcher PreToolUse caller must never crash.
+            # Treat an unreadable/undecodable pointer as absent and fall
+            # through to the glob/mtime path below.
             pass
 
     fallback_globs = config.get("plans.fallback_glob", ["plans/*.md"])
     if isinstance(fallback_globs, str):
         fallback_globs = [fallback_globs]
+    # Guard 3: after str→list coercion, a non-list value (e.g. an int or bool)
+    # would make `for pattern in fallback_globs` raise TypeError — the
+    # *-matcher PreToolUse caller must never crash.
+    if not isinstance(fallback_globs, list) or not all(
+        isinstance(p, str) for p in fallback_globs
+    ):
+        fallback_globs = ["plans/*.md"]
 
     candidates: list[str] = []
     for pattern in fallback_globs:

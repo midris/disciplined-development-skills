@@ -187,6 +187,46 @@ def test_cleanup_not_run_below_threshold(git_repo):
     assert not stamp.exists(), "stamp must not exist before fire"
 
 
+def test_invalid_utf8_pointer_does_not_crash_hook_at_threshold(git_repo):
+    """Regression: pointer file with invalid UTF-8 bytes must not crash the hook.
+
+    Before the fix, resolve_active_plan raised UnicodeDecodeError (a ValueError,
+    not caught by the existing `except OSError`), which propagated out of
+    discipline_nudge before state.reset() ran — crash-looping on every
+    subsequent tool call.
+    After the fix: hook exits 0, emits the re-ground envelope (no-plan line,
+    since the pointer is unreadable), and resets the counter.
+    """
+    root = _repo_root(git_repo)
+
+    # Write invalid UTF-8 bytes into the pointer file (binary mode, any user can do this).
+    claude_dir = git_repo / ".claude"
+    claude_dir.mkdir(exist_ok=True)
+    pointer = claude_dir / "active-plan"
+    pointer.write_bytes(b"\xff\xfe bad utf-8 \x80\x81\n")
+
+    # Trip the counter to threshold.
+    _run(git_repo, threshold=3)
+    _run(git_repo, threshold=3)
+    r3 = _run(git_repo, threshold=3)
+
+    # Hook must exit 0 — not crash.
+    assert r3.returncode == 0, (
+        f"hook crashed (exit {r3.returncode}); stderr:\n{r3.stderr}"
+    )
+    # Must emit the re-ground envelope (not empty stdout).
+    assert r3.stdout.strip(), "expected re-ground envelope on stdout"
+    payload = json.loads(r3.stdout)
+    assert payload["hookSpecificOutput"]["hookEventName"] == "PreToolUse"
+    # The pointer was unreadable — falls through to no-plan line.
+    ctx = payload["hookSpecificOutput"]["additionalContext"]
+    assert "No active plan pinned" in ctx
+    # Counter must be reset (no crash-loop).
+    assert state.read(root, "master", "discipline") == 0, (
+        "counter not reset — crash-loop risk if fix incomplete"
+    )
+
+
 def test_unreadable_pointer_does_not_crash_hook_at_threshold(git_repo):
     """Regression: unreadable .claude/active-plan must not crash the hook.
 

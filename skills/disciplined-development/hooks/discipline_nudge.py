@@ -137,7 +137,14 @@ def main() -> int:
         return 0
 
     # Resolve the active plan — path only, no checkbox parsing (dumb hook).
-    plan_result = plan.resolve_active_plan(cwd=repo)
+    # Defense-in-depth: wrap in try/except so any unexpected exception from
+    # plan resolution (e.g. config type bugs not yet guarded in plan.py) can
+    # never prevent env.emit() + state.reset() from running — an un-reset
+    # counter crash-loops every subsequent tool call.
+    try:
+        plan_result = plan.resolve_active_plan(cwd=repo)
+    except Exception:
+        plan_result = None
     if plan_result is not None:
         plan_path, plan_label = plan_result
         plan_line = (

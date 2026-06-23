@@ -160,6 +160,85 @@ def test_unreadable_pointer_falls_through_to_mtime(fake_repo, monkeypatch):
     assert source == "mtime fallback"
 
 
+def test_non_string_active_plan_pointer_config_does_not_raise(fake_repo, monkeypatch):
+    """Non-string active_plan_pointer config value (e.g. `true`) must not raise.
+
+    os.path.isabs(True) raises TypeError — the *-matcher PreToolUse caller
+    must never crash, so an invalid config value falls back to the default
+    pointer path (".claude/active-plan") and continues resolution normally.
+    """
+    # Seed a plans/*.md so we can assert the mtime fallback is returned.
+    md = fake_repo / "plans" / "fallback.md"
+    md.write_text("# fallback\n")
+
+    # Inject a non-string value for active_plan_pointer via monkeypatching config.get.
+    real_get = config.get
+
+    def _patched_get(key, default=None):
+        if key == "plans.active_plan_pointer":
+            return True  # bool — would make os.path.isabs(True) raise TypeError
+        return real_get(key, default)
+
+    monkeypatch.setattr(config, "get", _patched_get)
+
+    result = plan.resolve_active_plan(cwd=str(fake_repo))
+    # Must not raise; falls through to mtime fallback.
+    assert result is not None
+    path, source = result
+    assert path == str(md)
+    assert source == "mtime fallback"
+
+
+def test_pointer_file_with_invalid_utf8_bytes_does_not_raise(fake_repo):
+    """Pointer file containing invalid UTF-8 bytes must not raise UnicodeDecodeError.
+
+    fh.readline() on an invalid-bytes file raises UnicodeDecodeError (a
+    ValueError, NOT caught by the existing `except OSError`).  The *-matcher
+    PreToolUse caller must never crash — treat as absent and fall through to
+    the glob/mtime path.
+    """
+    # Write invalid UTF-8 bytes directly (binary mode).
+    pointer = fake_repo / ".claude" / "active-plan"
+    pointer.write_bytes(b"\xff\xfe invalid utf-8 \x80\x81\n")
+
+    md = fake_repo / "plans" / "fallback.md"
+    md.write_text("# fallback\n")
+
+    result = plan.resolve_active_plan(cwd=str(fake_repo))
+    assert result is not None, "must fall through to mtime fallback, not raise"
+    path, source = result
+    assert path == str(md)
+    assert source == "mtime fallback"
+
+
+def test_non_list_fallback_glob_config_does_not_raise(fake_repo, monkeypatch):
+    """Non-list/non-str fallback_glob config (e.g. `42`) must not raise.
+
+    After the str→list coercion, a non-list value like an int or bool would
+    make `for pattern in fallback_globs` iterate over its digits or raise
+    TypeError on glob.glob(_anchor(pattern)).  The *-matcher PreToolUse caller
+    must never crash — an invalid config value falls back to ["plans/*.md"].
+    """
+    md = fake_repo / "plans" / "fallback.md"
+    md.write_text("# fallback\n")
+
+    real_get = config.get
+
+    def _patched_get(key, default=None):
+        if key == "plans.fallback_glob":
+            return 42  # int — not a str, not a list
+        return real_get(key, default)
+
+    monkeypatch.setattr(config, "get", _patched_get)
+
+    result = plan.resolve_active_plan(cwd=str(fake_repo))
+    # Must not raise; falls back to default glob and finds the .md file.
+    assert result is not None
+    path, source = result
+    assert path == str(md)
+    assert source == "mtime fallback"
+
+
 def test_vanishing_candidate_during_mtime_selection_does_not_raise(fake_repo, monkeypatch):
     """OSError during getmtime (file vanishes between glob and stat) must not propagate.
 
