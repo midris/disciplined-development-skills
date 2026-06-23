@@ -51,6 +51,9 @@ The hook stack (under `skills/disciplined-development/hooks/`) is documented in 
 [`hooks/README.md`](skills/disciplined-development/hooks/README.md); config schema in
 [`hooks/dd-config.md`](skills/disciplined-development/hooks/dd-config.md).
 
+For the component-level architecture — the three layers, the review model, and
+the logging path — see [`ARCHITECTURE.md`](ARCHITECTURE.md).
+
 Skill behavior is validated by recorded subagent scenarios in
 [`skill-validation/`](skill-validation/): per skill (or command), the RED/GREEN
 pressure scenarios that justify its content, kept re-runnable so a change can be
@@ -76,9 +79,6 @@ flowchart TB
     end
     PROJ --> HK["hook stack fires at<br/>tool calls · commits · PR · session start<br/>(scripts resolve via the skill symlinks)"]
 ```
-
-For the component-level architecture — the three layers, the review model, and
-the logging path — see [`ARCHITECTURE.md`](ARCHITECTURE.md).
 
 ## Requirements
 
