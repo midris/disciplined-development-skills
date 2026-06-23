@@ -151,7 +151,7 @@ Record in Task 2's (and Task 4's) commit body per `sweeping-stale-references`:
 - `cd skills/disciplined-development/hooks && python3 -m pytest -q` — full hook suite green (primary gate).
 - `python3 -m pytest tests/ -q` — installer suite (settings-wiring test skips outside a consumer).
 - **Live (Gate 3):** install into a scratch consumer, drive enough tool calls to trip the threshold, confirm the fire message names the active plan and no UserPromptSubmit output appears. If not exercisable live, say so explicitly rather than substituting the test pass.
-- `grep -rn 'inject_plan_state' --include='*.py' --include='*.md' --include='*.json' . | grep -v '/plans/' | grep -v __pycache__` → zero hits. (Every remaining reference is under `plans/` — this active plan + 3 completed plans — which legitimately record the removal as planning history; excluding `plans/` wholesale, not just `plans/completed`, is required or the grep self-hits this file.)
+- `grep -rn 'inject_plan_state' --include='*.py' --include='*.md' --include='*.json' . | grep -vE 'plans/|/tests/|\.superpowers/|__pycache__'` → zero hits (shipped non-test surfaces). Remaining references are intentional and excluded: `plans/` (this active plan + 3 completed plans) records the removal as planning history; `test_examples_wiring.py` / `test_config.py` reference the name in assertions/comments by design; `.superpowers/` is local SDD scratch. (The earlier `grep -v '/plans/'` form was wrong — the relative paths begin `plans/`, not `/plans/`, and it didn't exclude the intentional test/scratch hits.)
 
 ## Merge boundary
 
