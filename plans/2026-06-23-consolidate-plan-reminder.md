@@ -66,11 +66,11 @@
 - **Update existing** `test_at_threshold_emits_envelope_and_resets`: its `assert ctx == discipline_nudge.REGROUND_TEXT` (line ~80) must become `assert ctx.startswith(discipline_nudge.REGROUND_TEXT)` plus an assertion that the plan line follows. The "Re-read"/"Re-check"/"checkbox" substring + reset + restart assertions stay.
 - Confirm the other existing pass/bypass/bool-threshold/non-git tests still hold unchanged.
 
-- [ ] **Step 1:** Add the new test functions above and edit `test_at_threshold_emits_envelope_and_resets` to the `startswith` form. Apply the determinism note (add the `DD_ACTIVE_PLAN` pop to `_run`; pin via a `.claude/active-plan` pointer file); assert on `r.stdout` JSON and the `.last-sweep` path under the git-resolved repo root.
-- [ ] **Step 2:** Run them; verify the new ones fail (plan line absent / no stamp) and the edited one fails against current HEAD only if you flip it early — otherwise it passes now and goes red the moment Step 3 appends the line. Either order is fine; the point is test+impl land together, green.
-- [ ] **Step 3:** Implement: import `time`, `cleanup`, `plan`; in the fire branch resolve the plan, append the plan line to the nudge text, and call `cleanup.sweep(repo, time.time())` best-effort (swallow errors — must not break the nudge). Update the module docstring (lines ~9–11) to drop the "inject_plan_state resets the counter at turn start" coupling and state the cadence is now "tool calls since the last fire."
-- [ ] **Step 4:** Run the full hook suite (`cd skills/disciplined-development/hooks && python3 -m pytest -q`); all green.
-- [ ] **Step 5:** Commit. `feat(discipline_nudge): name the active plan and run cleanup on fire`.
+- [x] **Step 1:** Add the new test functions above and edit `test_at_threshold_emits_envelope_and_resets` to the `startswith` form. Apply the determinism note (add the `DD_ACTIVE_PLAN` pop to `_run`; pin via a `.claude/active-plan` pointer file); assert on `r.stdout` JSON and the `.last-sweep` path under the git-resolved repo root.
+- [x] **Step 2:** Run them; verify the new ones fail (plan line absent / no stamp) and the edited one fails against current HEAD only if you flip it early — otherwise it passes now and goes red the moment Step 3 appends the line. Either order is fine; the point is test+impl land together, green.
+- [x] **Step 3:** Implement: import `time`, `cleanup`, `plan`; in the fire branch resolve the plan, append the plan line to the nudge text, and call `cleanup.sweep(repo, time.time())` best-effort (swallow errors — must not break the nudge). Update the module docstring (lines ~9–11) to drop the "inject_plan_state resets the counter at turn start" coupling and state the cadence is now "tool calls since the last fire."
+- [x] **Step 4:** Run the full hook suite (`cd skills/disciplined-development/hooks && python3 -m pytest -q`); all green.
+- [x] **Step 5:** Commit. `feat(discipline_nudge): name the active plan and run cleanup on fire`.
 
 ---
 

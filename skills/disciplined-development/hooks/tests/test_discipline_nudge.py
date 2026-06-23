@@ -33,7 +33,8 @@ def _repo_root(repo: Path) -> Path:
 
 
 def _run(repo: Path, *, threshold: int = 3, bypass: bool = False,
-         payload: dict | None = None) -> subprocess.CompletedProcess:
+         payload: dict | None = None,
+         env_extra: dict | None = None) -> subprocess.CompletedProcess:
     cfg = repo / "ddcfg.json"
     cfg.write_text(json.dumps({"counters": {"discipline_threshold": threshold}}))
     env = dict(os.environ)
@@ -42,6 +43,11 @@ def _run(repo: Path, *, threshold: int = 3, bypass: bool = False,
         env["DD_SKIP_DISCIPLINE_NUDGE"] = "1"
     else:
         env.pop("DD_SKIP_DISCIPLINE_NUDGE", None)
+    # Neutralize the env tier for plan resolution so subprocess tests
+    # control inputs deterministically (pointer file + mtime fallback).
+    env.pop("DD_ACTIVE_PLAN", None)
+    if env_extra:
+        env.update(env_extra)
     body = json.dumps(payload or {"tool_name": "Read", "cwd": str(repo)})
     return subprocess.run(
         [sys.executable, str(HOOK)], input=body, cwd=str(repo),
@@ -75,9 +81,13 @@ def test_at_threshold_emits_envelope_and_resets(git_repo):
     hso = payload["hookSpecificOutput"]
     assert hso["hookEventName"] == "PreToolUse"
     ctx = hso["additionalContext"]
-    # Pin the exact fixed, actionable message (imperative verbs included),
-    # not just the nouns — a degraded "list of words" version must fail.
-    assert ctx == discipline_nudge.REGROUND_TEXT
+    # The re-ground text is now followed by a plan line — assert prefix, not
+    # exact equality (plan line was appended in the fire branch).
+    assert ctx.startswith(discipline_nudge.REGROUND_TEXT)
+    # The plan line must follow the re-ground text.
+    assert "\n" in ctx[len(discipline_nudge.REGROUND_TEXT):]
+    # Pin the actionable verbs in the re-ground block (imperative verbs
+    # included) — a degraded "list of words" version must fail.
     assert "Re-read" in ctx and "Re-check" in ctx
     # Checkbox-tick reminder must be present (Change #2 of the checkbox-discipline plan).
     assert "checkbox" in ctx
@@ -118,3 +128,57 @@ def test_non_git_cwd_degrades_silent(tmp_path):
     r = _run(plain, threshold=1)
     assert r.returncode == 0
     assert r.stdout.strip() == ""
+
+
+def test_fire_message_names_active_plan_path(git_repo):
+    root = _repo_root(git_repo)
+    # Pin the plan via pointer file — env tier is neutralised in _run.
+    (git_repo / ".claude").mkdir(exist_ok=True)
+    (git_repo / ".claude" / "active-plan").write_text("plans/foo.md\n")
+    (git_repo / "plans").mkdir(exist_ok=True)
+    (git_repo / "plans" / "foo.md").write_text("# plan\n")
+
+    _run(git_repo, threshold=3)
+    _run(git_repo, threshold=3)
+    r3 = _run(git_repo, threshold=3)
+
+    assert r3.returncode == 0
+    ctx = json.loads(r3.stdout)["hookSpecificOutput"]["additionalContext"]
+    assert "plans/foo.md" in ctx
+    assert "re-read it from disk" in ctx
+
+
+def test_fire_message_reports_no_plan_when_unresolved(git_repo):
+    # No pointer file, no plans/*.md in repo → no plan resolved.
+    # git_repo fixture seeds seed.txt only; no plans/ dir.
+    _run(git_repo, threshold=3)
+    _run(git_repo, threshold=3)
+    r3 = _run(git_repo, threshold=3)
+
+    assert r3.returncode == 0
+    ctx = json.loads(r3.stdout)["hookSpecificOutput"]["additionalContext"]
+    assert "No active plan pinned" in ctx
+
+
+def test_cleanup_stamp_written_on_fire(git_repo):
+    root = _repo_root(git_repo)
+    stamp = root / ".claude" / ".dd-state" / ".last-sweep"
+
+    _run(git_repo, threshold=3)
+    _run(git_repo, threshold=3)
+    _run(git_repo, threshold=3)  # fire
+
+    assert stamp.exists(), f"expected .last-sweep stamp at {stamp}"
+
+
+def test_cleanup_not_run_below_threshold(git_repo):
+    root = _repo_root(git_repo)
+    stamp = root / ".claude" / ".dd-state" / ".last-sweep"
+
+    # Two calls — below threshold=3, no fire.
+    r1 = _run(git_repo, threshold=3)
+    r2 = _run(git_repo, threshold=3)
+
+    assert r1.stdout.strip() == ""
+    assert r2.stdout.strip() == ""
+    assert not stamp.exists(), "stamp must not exist before fire"
