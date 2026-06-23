@@ -110,11 +110,11 @@
 
 **Tests required:** `test_config.py` asserts the key is **gone** — `config.get("plans.skip_section_headers") is None` — which is red while the default exists and green after removal. (Merely *deleting* the existing equality assertion would pass immediately against the live default and give no red/green — the assertion must flip to `is None`, not vanish.)
 
-- [ ] **Step 1:** Change `test_config.py:69–71` from the `== [...]` equality to `assert config.get("plans.skip_section_headers") is None`. Run; verify it **fails** (the default still returns the list).
-- [ ] **Step 2:** Remove the key from `lib/dd-defaults.json` and `examples/dd-config.full.json`. Re-run; green.
-- [ ] **Step 3:** Remove the `skip_section_headers` row from `dd-config.md`.
-- [ ] **Step 4:** Run the full hook suite; green.
-- [ ] **Step 5:** Commit. `refactor(config): drop orphaned plans.skip_section_headers`. (Foldable into Task 2's commit if executed together.)
+- [x] **Step 1:** Change `test_config.py:69–71` from the `== [...]` equality to `assert config.get("plans.skip_section_headers") is None`. Run; verify it **fails** (the default still returns the list).
+- [x] **Step 2:** Remove the key from `lib/dd-defaults.json` and `examples/dd-config.full.json`. Re-run; green.
+- [x] **Step 3:** Remove the `skip_section_headers` row from `dd-config.md`.
+- [x] **Step 4:** Run the full hook suite; green.
+- [x] **Step 5:** Commit. `refactor(config): drop orphaned plans.skip_section_headers`. (Foldable into Task 2's commit if executed together.)
 
 ---
 

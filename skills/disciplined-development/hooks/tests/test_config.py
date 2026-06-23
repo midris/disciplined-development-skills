@@ -66,19 +66,9 @@ def test_defaults_roundtrip_nested_dot_path():
     assert config.get("branch_convention.trunk_branches") == ["master", "main"]
     assert config.get("plans.active_plan_pointer") == ".claude/active-plan"
     assert config.get("plans.fallback_glob") == ["plans/*.md"]
-    # skip_section_headers carried verbatim from inject_plan_state.py's
-    # _DEFAULT_SKIP_HEADERS in inject_plan_state.py.
-    assert config.get("plans.skip_section_headers") == [
-        "test plan",
-        "definition of done",
-        "done criteria",
-        "verification",
-        "verification commands",
-        "smoke pass",
-        "sign-off",
-        "self-review",
-        "self review",
-    ]
+    # skip_section_headers was consumed only by the deleted inject_plan_state
+    # parser; it must be absent from defaults (not merely undefined).
+    assert config.get("plans.skip_section_headers") is None
     assert config.get("codex.pr_review_timeout_s") == 600
     # --- review gate config (new in Sub-task A / Task 2.2) ---
     assert config.get("review.reviewer") == "codex"

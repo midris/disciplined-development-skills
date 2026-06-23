@@ -114,7 +114,6 @@ Observability — comprehensive + on by default; tuned by retention/cleanup.
 |---|---|---|---|
 | `active_plan_pointer` | string | `".claude/active-plan"` | File holding the active plan path (one line). |
 | `fallback_glob` | list[string] | `["plans/*.md"]` | mtime-fallback plan discovery (newest match wins). |
-| `skip_section_headers` | list[string] | see defaults | Headers (case-insensitive) that suppress checkbox counting in `inject_plan_state` (test plan, definition of done, verification, …). |
 
 ---
 
