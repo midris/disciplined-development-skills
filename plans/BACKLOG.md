@@ -29,6 +29,18 @@ Run all three through the angle-necessity bar (discrimination vs holistic) in on
 - **B5 · migration / backward-compat angle** — review-angles · loop #8 · M/med. Change vs already-installed/old state (PR #23 installer P1).
 - **B6 · portability / environment angle** — review-angles · loop #9 · M/med. Env/path/OS assumptions (the `/var` vs `/private/var` P2).
 
+Separately, an already-scoped angle plan (not a candidate to vet):
+- **B16 · angle-hardening from the ML-engine plan-hardening** — review-angles · 2026-06-23 · M-L/med.
+  Three changes, each with a designed RED/GREEN: strengthen `consistency` for sibling contracts at
+  other altitudes / other docs / **diagram labels**; add a **currency** angle (built-vs-planned tense
+  — `✅`-on-unbuilt, planned name written present-tense); strengthen `executability` with a
+  **codebase-grounding** pass (plan claims checked against real symbols/contracts, not just internal
+  clarity). Distilled from 53 findings over 15 gate rounds. Its `currency` angle can ride the same
+  discrimination batch as B4–B6. Plan: `plans/deferred/2026-06-23-adversarial-review-angles-deferred.md`
+  (written from a meeting-pipeline session; framing pending a dd-repo re-anchor). Acceptance: per the
+  plan — each change RED/GREEN per `writing-skills`, wording micro-tested, SKILL word-count bounded,
+  angles ADD a lens to the holistic baseline.
+
 ## Tier 3 — data-driven calibration (unblocked by review-logging PR #22)
 
 - **B7 · threshold rationale on-page** — skill-content / config · 2026-06-14 · S/low.
