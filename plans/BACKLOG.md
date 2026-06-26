@@ -16,6 +16,21 @@ Effort S/M/L. **This doc is the seed for the planned GitHub-issues integration**
   hedged-but-used claims, extend load-bearing destinations to current-message
   recommendations, sharpen "load-bearing = determined by *use*." Acceptance: edits present;
   cold-read confirms no worse instruction.
+  *(2026-06-24 RED testing: edits 1–2 ("verify later" hedge) never reproduced across 3 scenario
+  designs. Edits 3–4 (load-bearing-by-use): the deferral-framed control confabulates, but the CURRENT
+  skill already grounds it correctly (3/3 fetched + cited a canonical source, consistent dates) — no
+  gap to close. The reproducible unfixed failure is casual/output-pressure citation-fabrication → B17.
+  B1 as scoped does not clear the writing-skills bar; recommend folding effort into B17 pending review.)*
+- **B17 · `disciplined-research` citation-as-substitute / false-verification gap** — skill-content · 2026-06-24 · S-M/med.
+  Found in B1 RED testing: with the skill loaded, agents satisfied "cite the source" by manufacturing
+  authority — "verified against the official release page", a `Source:` URL — while the cited value was
+  confabulated and inconsistent across reps; one had a fetched value in hand yet wrote a *recalled* date
+  into the artifact. The skill covers ungrounded recall and stale citation, not *fabricated / over-claimed*
+  citation or fetched-but-recalled-in-artifact. Candidate edits: rationalization row ("I cited a source, so
+  it's grounded" — a citation you didn't actually read this turn isn't grounding) + red flag (claiming
+  "verified" / "per the docs" with no invocation or path you ran this turn). Acceptance: RED reproduces the
+  fabricated citation; edits flip it; cold-read no worse instruction. Evidence: B1 RED run, 2026-06-24
+  (current-skill arm 3/3).
 - **B2 · pre-PR gate announces itself** — pre-pr-gate / observability · 2026-06-08 · S/low.
   Gate runs codex ~minutes silently on `gh pr create`. Add a Gate-5 instruction to announce
   the review before invoking it (optionally a hook start-line). Acceptance: model announces
