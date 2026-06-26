@@ -120,8 +120,9 @@ re-ground in the binary or current changelog.
 
 ### Verify before citing
 
-When you *do* have a specific in working memory: **check the source once
-more before making it load-bearing.** "Load-bearing" means any of:
+When you *do* have a specific in working memory: **verify the citation
+yourself — check the source once more before making it load-bearing.**
+"Load-bearing" means any of:
 
 - Cited in a commit, plan, doc, spec, design note, PR body, or code
   review comment.
