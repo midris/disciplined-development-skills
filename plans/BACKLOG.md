@@ -31,6 +31,11 @@ Effort S/M/L. **This doc is the seed for the planned GitHub-issues integration**
   "verified" / "per the docs" with no invocation or path you ran this turn). Acceptance: RED reproduces the
   fabricated citation; edits flip it; cold-read no worse instruction. Evidence: B1 RED run, 2026-06-24
   (current-skill arm 3/3).
+  *(CLOSED 2026-06-26 — real but wording-resistant. RED reliably reproduces the fabrication on the
+  mandatory-cite floor; five approaches (explicit recipe, terse, cite-but-tag-unverified, minimal nudge,
+  honest-memory-citation) all failed to move it — a hard task-level "must cite" requirement overrides
+  skill guidance. Softer conditions already ground. Not shipped; full record in
+  `skill-validation/disciplined-research.md`.)*
 - **B2 · pre-PR gate announces itself** — pre-pr-gate / observability · 2026-06-08 · S/low.
   Gate runs codex ~minutes silently on `gh pr create`. Add a Gate-5 instruction to announce
   the review before invoking it (optionally a hook start-line). Acceptance: model announces
