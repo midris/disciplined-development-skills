@@ -12,7 +12,7 @@ rule (Claude Code: `Explore`). One scenario per agent, text-only.
 An **angle earns its place only if it catches a class of issue the baseline
 holistic review reliably misses.** The baseline is the always-on posture +
 Rules (find what's wrong · enumerate every class · verify rationale · challenge
-necessity). The test for an angle is **discrimination vs holistic**: plant a
+necessity · generate the unexercised cases). The test for an angle is **discrimination vs holistic**: plant a
 *subtle* instance of the angle's class, then keep the angle only if a focused
 reviewer catches it AND a holistic reviewer misses it. Goal: close the lenses
 that make different models (codex vs claude) catch different things, so the
@@ -181,6 +181,61 @@ doc-dominant artifact (three runbook docs, no code): GREEN 2/2 selected baseline
 consistency + executability and skipped skill-authoring + durability with correct
 "when to apply" reasoning. The reworded line did not regress selection.
 
+## Generate the unexercised cases — baseline rule (added 2026-06-27)
+
+Fourth always-on Rule under `## Rules` (after *Challenge every piece for necessity*):
+enumerate every input / resource / boundary / bound the code touches and generate the
+case the happy path skips (*absent* / *malformed* / *out-of-scale*); grade the relied-on
+invariant (*stated / local / robust / symmetric*); run the false-positive autopsy (the skill's
+*Before dismissing a false positive* trigger). Folds in the superseded `safe-by-accident` content (invariant grade + autopsy + 4 rationalization
+rows + 4 red flags). Owner-confirmed as a **baseline rule, not an angle** (applies to nearly
+any code). Plan: `plans/deferred/2026-06-26-generative-unexercised-cases-baseline-rule-deferred.md`.
+
+**Why (escaped-P1 grounding).** meeting-pipeline step-13 PR #25 passed every internal
+review layer (per-task + 2 cadence + a Gate-5 whole-branch self-review) and was BLOCKED
+by the external Codex gate on three P1s all internal layers missed: **A** model cache-miss
+silently HF-downloads instead of erroring (D4); **B** a worker `result` missing
+`transcript_ref`/`transcript_sha256` committed as a successful `transcription_completed`;
+**C** a 5 s CLI timeout on a synchronous ~8-min transcribe route.
+
+**Methodology — faithful, not synthetic.** Synthetic snippets were *contaminated*: stated
+contracts in comments turned the gaps into trivial `consistency` catches (baseline 6/6).
+The valid test is the real condition — a whole-repo, plan-anchored review of PR #25's
+**pre-fix tree** (`66e7179`), where the bugs are genuinely silent (omission / library-default
+/ unvalidated-trust), against the active plan + spec. Read-only `Explore`, opus; baseline
+(no-rule copy) vs +rule, per-item catch rate.
+
+**Results.**
+- **C (out-of-scale):** the out-of-scale *face* fires reliably — 6/6 on the shipped (trim)
+  wording, every rep surfacing an out-of-scale issue. The specific CLI-timeout bug landed 4/6
+  (67%) on the shipped wording (pooled ~10/14 ≈ 70% across all forms) vs baseline 1/5 (20%);
+  catches cite the lens. A measured lift on a real escaped P1.
+- **A (absent/HF):** 0 across baseline AND +rule (~0/19) — a **knowledge gap** (needs knowing
+  `huggingface_hub` auto-downloads); no review-method rule manufactures the fact.
+- **B (malformed/payload):** 0 on the specific bug across all forms — an **outlier-hard**
+  buried `?? ""` default behind an IPC-contract rationalization (Codex caught it; 19 Opus
+  whole-repo reviews did not). The enumeration form began reaching B's exact trust boundary
+  (1 rep flagged `completeStage` "commits without verifying… trusts the worker's result" as a P3).
+- Both arms find a similar set of *other* real bugs (reprocess stale-errors, idle_shutdown
+  dead-knob, decode/stall) — the rule doesn't change those.
+
+**Form iterations (each re-tested).**
+- *Question-checklist* (absent?/malformed?/out-of-scale?): C 3/5, B 0/5 — drift from the
+  plan's specified form.
+- *Enumeration directive* (the plan's form — "list every input/boundary; for each, generate
+  the case the happy path skips," mirroring *Enumerate every class*): C 3/3, surfaced a new
+  malformed-boundary finding; B still 0/3.
+- *Anti-bloat trim* (rule section 262 words; load-bearing out-of-scale phrasing + enumeration
+  directive preserved): C 4/6, face 6/6 — trim confirmed non-degrading.
+
+**Verdict / limitation.** Ships on the **measured out-of-scale lift** — the face fires every
+rep (6/6) and the specific bug is caught ~67% on the shipped wording vs 20% baseline — the
+plan-specified, owner-confirmed form. **Not** a substitute for reviewer knowledge
+(A), and does not reliably crack the deepest buried-validation case (B), though it reaches
+B's site. Same limitation as `durability`: small-artifact discrimination under-credits
+coverage value; the lift shows at scale / across the Codex-vs-Claude gap, not as a clean
+single-reviewer discrimination.
+
 ## On edits
 
 - Adding/refining an angle: run the **discrimination test** (subtle target,
@@ -190,6 +245,9 @@ consistency + executability and skipped skill-authoring + durability with correc
   selection RED/GREEN and the affected per-angle scenario.
 - Changing the Output-format **verdict contract**: re-run the declared-verdict
   scenario (findings → BLOCK, clean → PASS, stray-line loophole).
+- Changing a baseline **Rule** (e.g. *Generate the unexercised cases*): re-run the
+  faithful escaped-P1 test — a real pre-fix PR tree, not synthetic snippets — baseline
+  vs +rule per-item catch rate; measure each wording iteration against it.
 - Limitation: small-artifact discrimination can't validate *coverage* value (it
   appears only at scale / across models). consistency and executability are kept on
   the lens-not-in-posture + codex-gap grounds, not on demonstrated single-reviewer

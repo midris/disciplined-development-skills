@@ -28,6 +28,11 @@ as Tier 2's B4–B6 + B16's `currency`.
   no-guidance control, `wc -w` bounded, non-duplicative of `durability`/`consistency`.
   Plan: `plans/deferred/2026-06-26-generative-unexercised-cases-baseline-rule-deferred.md`
   (supersedes `plans/deferred/2026-06-24-safe-by-accident-review-angle-deferred.md`).
+  *(IMPLEMENTED 2026-06-27 on `feature/generative-unexercised-cases`, pending merge. Faithful
+  whole-repo test on PR #25's pre-fix tree: reliable out-of-scale lift (baseline 1/5 → +rule ~70%,
+  face 6/6) — ships on that. A (absent/HF) is a knowledge gap (0/19); B (malformed/payload) is
+  outlier-hard (0/N specific, though the enumeration form reaches its trust boundary). Adopted the
+  plan's enumeration form; anti-bloat trim confirmed non-degrading. Record: `skill-validation/adversarial-review.md`.)*
 - **B19 · `traversal` (path/structure-completeness) angle** — review-angles · 2026-06-25 · M/med.
   Add an angle that follows a new datum / message / field through **every** layer it must cross
   (producer → transport → decoder → stub → consumer → status → wire → UI) and flags any layer that

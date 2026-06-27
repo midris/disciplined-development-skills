@@ -1,6 +1,6 @@
 # Add a generative "Generate the unexercised cases" BASELINE RULE to `adversarial-review` (subsumes `safe-by-accident`)
 
-**Status:** Deferred (captured 2026-06-26). **Supersedes / merges** `plans/deferred/2026-06-24-safe-by-accident-review-angle-deferred.md` — that proposal's content becomes the *invariant face* of this rule (see "Subsumption" below); do not implement it separately.
+**Status:** Reviewer rule **IMPLEMENTED** 2026-06-27 on `feature/generative-unexercised-cases` (pending merge) — RED/GREEN result in `skill-validation/adversarial-review.md` (ships on the out-of-scale lift; A knowledge-gap, B outlier-hard). The **author-side mirror** follow-up (B20) stays deferred. **Supersedes / merges** `plans/deferred/2026-06-24-safe-by-accident-review-angle-deferred.md` — that proposal's content becomes the *invariant face* of this rule (see "Subsumption" below); do not implement it separately.
 
 **⚠ Cross-repo:** the skill is `skills/adversarial-review/SKILL.md` in the private **`disciplined-development-skills`** repo (`github-personal:midris/disciplined-development-skills`). In a meeting-pipeline checkout that file is a **gitignored symlink** — edit the canonical file in the dd-skills clone, then re-run that repo's `install-skills.sh <consumer-root>`. **That repo has concurrent editors** (memory `skills-repo-parallel-edits`): check branch + clean tree before any git op; branch.
 
@@ -74,6 +74,8 @@ Add a fourth `### Generate the unexercised cases` rule under "## Rules" (after "
 **Carving vs the existing angles (anti-bloat cross-check — required at GREEN):** the *Malformed?* face overlaps `durability`'s "reads that accept non-committed data," but `durability` is scoped to durable-state machinery and explicitly skips stateless code, whereas *Absent?* / *Out-of-scale?* apply to stateless code too (the model load, the CLI timeout) — outside durability entirely. The one seam — a peer's input that *becomes* durable state (validate before the commit) — stays here, so the three faces live together. The *Symmetric?* grade overlaps `consistency` (asymmetry is a consistency signal): reference it, don't restate. Confirm at GREEN that the rule reads as new guidance, not a paraphrase of `durability` / `consistency`.
 
 ## Test plan (Iron Law — required)
+
+**Superseded 2026-06-27:** the seeded-synthetic RED/GREEN below was *contaminated* — stated contracts in the snippets made the gaps trivial `consistency` catches (baseline caught them 6/6). The actual validation used a faithful whole-repo review of PR #25's pre-fix tree (`66e7179`), where the gaps are genuinely silent; see `skill-validation/adversarial-review.md`. The synthetic design below is retained as the original plan.
 
 Two RED/GREEN pairs, one per face; micro-test wording vs a no-guidance control first (5+ reps, read every flagged match by hand).
 

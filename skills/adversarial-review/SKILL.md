@@ -86,9 +86,32 @@ For each piece of the artifact, ask:
 
 Hypothetical / just-in-case / convention / non-feature → flag for removal. This is `disciplined-development` Principle 7 applied to review. In prose the same test catches padding — load `concise-writing` when reviewing docs.
 
+### Generate the unexercised cases
+
+Code rests on assumptions it never states; a passing test or clean read confirms they held this run, not that they hold. Generate what it doesn't handle; surface what it leans on.
+
+**Inputs and conditions.** List every input read, resource depended on, boundary crossed, bound set; for each, generate the case the happy path skips:
+
+- *Absent* — resource/precondition missing (model, file, permission, config): typed error, or silent download / fallback / hang?
+- *Malformed* — value across a trust boundary (peer reply, API response, parsed field) used or committed unvalidated: a bad value stored as valid?
+- *Out-of-scale* — timeout/limit/buffer sized to the common case: holds for the largest real input?
+
+Skipping the enumeration — checking only what caught your eye — is itself the gap.
+
+**The invariant it relied on.** When correctness rests on an unstated or fragile assumption (ordering, init order, timing window, a sibling guarding the same hazard this path leaves implicit), grade it:
+
+- *Stated?* written (comment/assert/type), not re-derived.
+- *Local?* checkable here, not three functions away.
+- *Robust?* an inserted `await`/log/reorder can't silently break it.
+- *Symmetric?* the same hazard handled the same way in siblings.
+
+Any "no" is a finding, though the code works today; fix by construction (state / enforce / unify), not by adding a test.
+
+**Before dismissing a false positive:** if your reason is "it can't happen" (tests pass, the scheduler prevents it, the caller never does), name the assumption that makes it safe and grade it (above) first — explaining the safety usually surfaces the finding.
+
 ## Review angles
 
-The posture and rules above are the always-on baseline of every review — the **holistic** read that finds bugs, verifies rationale, and challenges necessity. An **angle** adds one specialized lens; it never narrows what you review. (Bug-finding, rationale, and necessity are the baseline, not angles — reserve an angle for a lens the baseline lacks.)
+The posture and rules above are the always-on baseline of every review — the **holistic** read that finds bugs, verifies rationale, challenges necessity, and generates the unexercised cases. An **angle** adds one specialized lens; it never narrows what you review. (Bug-finding, rationale, necessity, and the unexercised-case sweep are the baseline, not angles — reserve an angle for a lens the baseline lacks.)
 
 | Angle | Looks for |
 |-------|-----------|
@@ -140,10 +163,14 @@ DD-VERDICT: PASS
 |--------|---------|
 | "Looks reasonable to me." | "Reasonable" is not a finding. State what's broken or `No findings.` |
 | "The author cited a reason." | Citations ≠ verification. Check the claim. |
-| "I don't see anything obvious." | Adversarial = look harder. Enumerate, verify, challenge necessity. |
+| "I don't see anything obvious." | Adversarial = look harder. Enumerate, verify, challenge, generate the unexercised cases. |
 | "Trivial piece; nothing to scrutinize." | Necessity check applies most where complexity hides — "obviously harmless" pieces. |
 | "Author deferred the choice; that's a valid design move." | A design that punts decisions punts the spec. Flag the unmade choice. |
 | "Don't be harsh." | Adversarial is the requested service. Softening = failing to deliver. |
+| "It's a false positive." | Name the assumption that makes it safe — that's usually the finding. |
+| "The tests prove it can't happen." | They prove it doesn't *now* — not that the assumption is stated, local, or robust. |
+| "Safe by how the runtime schedules it." | Safe by accident — one edit from broken. |
+| "The model's always there / the result's well-formed / inputs are small." | That's the assumption. Remove it and re-read. |
 
 ## Red flags
 
@@ -153,6 +180,10 @@ Stop and re-read if you catch yourself:
 - Accepting rationale without checking the claim.
 - Accepting a punted decision as the design.
 - Skipping a section as trivial.
+- Writing "false positive" without naming the assumption that makes it safe.
+- Closing a finding with "tests pass" when it turns on an unstated assumption or an unfed input.
+- The safety argument requires tracing another function or the scheduler.
+- The same hazard guarded one way here, another way (or not at all) in a sibling.
 
 ## Composition
 
