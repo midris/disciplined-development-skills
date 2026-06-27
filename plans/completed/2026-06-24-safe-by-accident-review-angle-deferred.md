@@ -1,6 +1,6 @@
 # Deferred: add a `safe-by-accident` review angle to `adversarial-review`
 
-**Status:** **SUPERSEDED (2026-06-26)** — merged into `plans/deferred/2026-06-26-generative-unexercised-cases-baseline-rule-deferred.md`. Do NOT implement this as a standalone angle: its content (the stated/local/robust/symmetric grading, the false-positive autopsy trigger, the rationalization rows + red-flags, and the readiness-continuation RED case) becomes the **invariant face** of the generative "Generate the unexercised cases" BASELINE rule — an earlier, narrower reach at the same "a green test proves the case it ran, not robustness" insight. The notes below are retained as the source material the implementer folds in.
+**Status:** **SUPERSEDED (2026-06-26)** — merged into `plans/completed/2026-06-26-generative-unexercised-cases-baseline-rule-deferred.md`. Do NOT implement this as a standalone angle: its content (the stated/local/robust/symmetric grading, the false-positive autopsy trigger, the rationalization rows + red-flags, and the readiness-continuation RED case) becomes the **invariant face** of the generative "Generate the unexercised cases" BASELINE rule — an earlier, narrower reach at the same "a green test proves the case it ran, not robustness" insight. The notes below are retained as the source material the implementer folds in.
 
 _(Original status: Deferred, captured 2026-06-24. Implementation happens in the **`disciplined-development-skills` repo**, not meeting-pipeline — this file is the capture point.)_
 

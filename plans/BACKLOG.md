@@ -14,9 +14,9 @@ Effort S/M/L. **This doc is the seed for the planned GitHub-issues integration**
 
 Promoted ahead of the tiers below (2026-06-26): the most-developed, RED-grounded work.
 Each is a skill edit, so `superpowers:writing-skills`' Iron Law binds (RED → GREEN →
-REFACTOR; micro-test wording vs a no-guidance control). B18 leads — an owner-confirmed
-baseline rule grounded in real escaped P1s. B19 rides the same angle-discrimination cycle
-as Tier 2's B4–B6 + B16's `currency`.
+REFACTOR; micro-test wording vs a no-guidance control). B18 **shipped** 2026-06-27
+(PR #35). B19 + B20 remain — B19 rides the same angle-discrimination cycle as Tier 2's
+B4–B6 + B16's `currency`; B20 is the author-side follow-up to the now-merged B18.
 
 - **B18 · generative "Generate the unexercised cases" baseline rule** — skill-content · 2026-06-26 · M-L/med.
   Add a fourth always-on Rule to `adversarial-review` (beside Enumerate / Verify / Challenge):
@@ -26,9 +26,9 @@ as Tier 2's B4–B6 + B16's `currency`.
   three Codex P1s every internal review layer missed; the angle→baseline-rule reframe is owner-confirmed.
   Acceptance: per the plan — two RED/GREEN pairs (input + invariant face), wording micro-tested vs a
   no-guidance control, `wc -w` bounded, non-duplicative of `durability`/`consistency`.
-  Plan: `plans/deferred/2026-06-26-generative-unexercised-cases-baseline-rule-deferred.md`
-  (supersedes `plans/deferred/2026-06-24-safe-by-accident-review-angle-deferred.md`).
-  *(IMPLEMENTED 2026-06-27 on `feature/generative-unexercised-cases`, pending merge. Faithful
+  Plan: `plans/completed/2026-06-26-generative-unexercised-cases-baseline-rule-deferred.md`
+  (supersedes `plans/completed/2026-06-24-safe-by-accident-review-angle-deferred.md`).
+  *(DONE — merged to `main` 2026-06-27 (PR #35). Faithful
   whole-repo test on PR #25's pre-fix tree: reliable out-of-scale lift (baseline 1/5 → +rule ~70%,
   face 6/6) — ships on that. A (absent/HF) is a knowledge gap (0/19); B (malformed/payload) is
   outlier-hard (0/N specific, though the enumeration form reaches its trust boundary). Adopted the

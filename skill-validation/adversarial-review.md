@@ -189,7 +189,7 @@ case the happy path skips (*absent* / *malformed* / *out-of-scale*); grade the r
 invariant (*stated / local / robust / symmetric*); run the false-positive autopsy (the skill's
 *Before dismissing a false positive* trigger). Folds in the superseded `safe-by-accident` content (invariant grade + autopsy + 4 rationalization
 rows + 4 red flags). Owner-confirmed as a **baseline rule, not an angle** (applies to nearly
-any code). Plan: `plans/deferred/2026-06-26-generative-unexercised-cases-baseline-rule-deferred.md`.
+any code). Plan: `plans/completed/2026-06-26-generative-unexercised-cases-baseline-rule-deferred.md`.
 
 **Why (escaped-P1 grounding).** meeting-pipeline step-13 PR #25 passed every internal
 review layer (per-task + 2 cadence + a Gate-5 whole-branch self-review) and was BLOCKED
