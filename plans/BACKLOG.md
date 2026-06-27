@@ -1,13 +1,47 @@
 # dd-skills backlog
 
 Prioritized backlog distilled from the `plans/deferred/` audit (2026-06-17),
-refreshed 2026-06-22 after the review-tooling overhaul landed. **All items OPEN**
-unless noted; items resolved or obsoleted by the overhaul are listed near the
+refreshed 2026-06-22 after the review-tooling overhaul landed; 2026-06-26 promoted the
+`adversarial-review` generative rule + angle plans (B18–B20) to **Next up**. **All items
+OPEN** unless noted; items resolved or obsoleted by the overhaul are listed near the
 bottom, and the "Done" section is context.
 
 Item shape: **ID · title** — category · source · effort/risk · one-line (+ acceptance).
 Effort S/M/L. **This doc is the seed for the planned GitHub-issues integration** — IDs map
 1:1 to issues once that lands; until then this is the single source for "what's next."
+
+## Next up (current focus) — `adversarial-review` generative rule + angle batch
+
+Promoted ahead of the tiers below (2026-06-26): the most-developed, RED-grounded work.
+Each is a skill edit, so `superpowers:writing-skills`' Iron Law binds (RED → GREEN →
+REFACTOR; micro-test wording vs a no-guidance control). B18 leads — an owner-confirmed
+baseline rule grounded in real escaped P1s. B19 rides the same angle-discrimination cycle
+as Tier 2's B4–B6 + B16's `currency`.
+
+- **B18 · generative "Generate the unexercised cases" baseline rule** — skill-content · 2026-06-26 · M-L/med.
+  Add a fourth always-on Rule to `adversarial-review` (beside Enumerate / Verify / Challenge):
+  manufacture the input or condition the artifact is silent on, and break it. Two faces — input space
+  (absent / malformed / out-of-scale) + tacit invariant (stated/local/robust/symmetric grade +
+  false-positive autopsy, folded from the now-superseded `safe-by-accident` 06-24 plan). RED-grounded in
+  three Codex P1s every internal review layer missed; the angle→baseline-rule reframe is owner-confirmed.
+  Acceptance: per the plan — two RED/GREEN pairs (input + invariant face), wording micro-tested vs a
+  no-guidance control, `wc -w` bounded, non-duplicative of `durability`/`consistency`.
+  Plan: `plans/deferred/2026-06-26-generative-unexercised-cases-baseline-rule-deferred.md`
+  (supersedes `plans/deferred/2026-06-24-safe-by-accident-review-angle-deferred.md`).
+- **B19 · `traversal` (path/structure-completeness) angle** — review-angles · 2026-06-25 · M/med.
+  Add an angle that follows a new datum / message / field through **every** layer it must cross
+  (producer → transport → decoder → stub → consumer → status → wire → UI) and flags any layer that
+  silently drops it. RED: a step-13 wire-path gap Codex caught as a P1 that in-session review missed
+  one-per-round. Distinct axis from B18 (structure, not condition space). Acceptance: RED→GREEN (planted
+  traversal gap missed without the angle, caught with it); terse, non-duplicative of
+  `consistency`/`executability` — fold into them if testing shows overlap.
+  Plan: `plans/deferred/2026-06-25-adversarial-review-traversal-angle-deferred.md`.
+- **B20 · author-side mirror: generate-unexercised-cases self-check** — skill-content · 2026-06-26 · S-M/low.
+  Plan-author counterpart to B18: a one-line self-check cross-ref into `lean-plan-writing` — before
+  declaring a plan ready, name the absent / malformed / out-of-scale inputs each task assumes and any
+  correctness resting on a tacit invariant; pin the expected behavior or mark it an accepted edge.
+  Separate skill, separate baseline failure, its own RED/GREEN — do **not** bundle with B18. Source: the
+  B18 plan's "author-side mirror" follow-up.
 
 ## Tier 1 — quick wins (small, self-contained, low risk)
 
@@ -50,7 +84,8 @@ Effort S/M/L. **This doc is the seed for the planned GitHub-issues integration**
 ## Tier 2 — candidate review angles (one discrimination batch)
 
 Run all three through the angle-necessity bar (discrimination vs holistic) in one
-`adversarial-review` cycle; add only those that beat holistic.
+`adversarial-review` cycle; add only those that beat holistic. **B19** (Next up) and
+B16's `currency` join the same cycle.
 - **B4 · contract-coverage angle** — review-angles · loop #5 · M/med. Spec guarantee vs a weaker plan/code mechanism.
 - **B5 · migration / backward-compat angle** — review-angles · loop #8 · M/med. Change vs already-installed/old state (PR #23 installer P1).
 - **B6 · portability / environment angle** — review-angles · loop #9 · M/med. Env/path/OS assumptions (the `/var` vs `/private/var` P2).
