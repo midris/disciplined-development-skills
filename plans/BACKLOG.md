@@ -40,6 +40,12 @@ Effort S/M/L. **This doc is the seed for the planned GitHub-issues integration**
   Gate runs codex ~minutes silently on `gh pr create`. Add a Gate-5 instruction to announce
   the review before invoking it (optionally a hook start-line). Acceptance: model announces
   before the gate runs.
+  *(CLOSED 2026-06-26 — premise disconfirmed; not shipped. RED (10/10 across two arms on the
+  current Gate-5 doctrine) already announces the external review before `gh pr create` — the
+  announce is now default, emergent from recent dd-skill changes. The lone residual — warning
+  about the multi-minute codex pause — is a knowledge gap, not a discipline gap: the model
+  relays the duration only when told it (arm A 5/5), never infers it (arm B 0/5). That fact is
+  Claude-Code-specific, not portable-skill material. Current behavior accepted as-is.)*
 
 ## Tier 2 — candidate review angles (one discrimination batch)
 
