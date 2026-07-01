@@ -37,7 +37,7 @@ The substitute for embedded code is a **denser test contract**, not vaguer prose
 ## Per-artifact
 
 - **Specs** (design docs — typically in a `specs/` directory): detailed requirements + design rationale + open questions. Heavier on the why.
-- **Plans** (implementation plans — typically in a `plans/` directory): order-of-operations + per-step scope + dependency chain + status checkboxes. Heavier on the order.
+- **Plans** (implementation plans — typically in a `plans/` directory): order-of-operations + per-step scope + dependency chain + status checkboxes. Heavier on the order. Before calling a plan ready, name each task's unhandled inputs (absent, malformed, out-of-scale) and the invariants it silently relies on — then pin the behavior or mark it an accepted edge.
 
 Both bound by prose-is-the-contract.
 

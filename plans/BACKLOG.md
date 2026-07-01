@@ -15,8 +15,8 @@ Effort S/M/L. **This doc is the seed for the planned GitHub-issues integration**
 Promoted ahead of the tiers below (2026-06-26): the most-developed, RED-grounded work.
 Each is a skill edit, so `superpowers:writing-skills`' Iron Law binds (RED → GREEN →
 REFACTOR; micro-test wording vs a no-guidance control). B18 **shipped** 2026-06-27
-(PR #35). B19 + B20 remain — B19 rides the same angle-discrimination cycle as Tier 2's
-B4–B6 + B16's `currency`; B20 is the author-side follow-up to the now-merged B18.
+(PR #35); B20 **shipped** 2026-06-30 (owner's call — RED did not reproduce; see B20 below).
+B19 remains — it rides the same angle-discrimination cycle as Tier 2's B4–B6 + B16's `currency`.
 
 - **B18 · generative "Generate the unexercised cases" baseline rule** — skill-content · 2026-06-26 · M-L/med.
   Add a fourth always-on Rule to `adversarial-review` (beside Enumerate / Verify / Challenge):
@@ -47,6 +47,16 @@ B4–B6 + B16's `currency`; B20 is the author-side follow-up to the now-merged B
   correctness resting on a tacit invariant; pin the expected behavior or mark it an accepted edge.
   Separate skill, separate baseline failure, its own RED/GREEN — do **not** bundle with B18. Source: the
   B18 plan's "author-side mirror" follow-up.
+  *(SHIPPED 2026-06-30, owner's call — branch `feature/lean-plan-unexercised-cases`. Folded into
+  `lean-plan-writing`'s Per-artifact `Plans` bullet: "Before calling a plan ready, name each task's unhandled
+  inputs (absent/malformed/out-of-scale) and the invariants it silently relies on — then pin the behavior or
+  mark it an accepted edge." **RED did not reproduce**: 10/10 authors on the current skill (edge-loud CSV
+  upload + edge-quiet digest job, 5 each, sonnet) already handled the discipline's substance and dispositioned
+  each face — Iron Law says no edit warranted; shipped as a reinforcement on owner judgment. **GREEN —
+  measured, placement-insensitive** (digest, 5 reps/arm): dedicated collected+labeled edge-case section 5/5
+  (both a titled and the shipped folded placement) vs 0/5 control; malformed-boundary reach 5/5 folded / 4/5
+  titled vs 0/5 control, landing as cheap defensive hygiene; no degradation. Effect is line-wording-driven,
+  not heading-driven. Record: `skill-validation/lean-plan-writing.md`.)*
 
 ## Tier 1 — quick wins (small, self-contained, low risk)
 
