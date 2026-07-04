@@ -184,15 +184,23 @@ test (v1: 0/3); C 3/3 incl. one rep correcting the cadence-reset nuance unprompt
   re-run = cap" rather than cycle-3 entry. Every divergence conservative (ruling or
   escape instead of a final re-run); the step-back ran in all 18. Owner: wording fine
   as-is; tighten only if a real incident shows a non-conservative miss.
-- *Fixture B* leaks a defensible axis — replace with a no-plausible-thread set
-  before using it as a benchmark cell.
+- *Fixture B* leaks a defensible axis — replaced 2026-07-04 by the G3B fixture
+  (unused import / doc-contract constant / unmocked network test), which ran 3/3
+  clean; the original leaky fixture is retired.
 - *dd-log reset claims* on non-clean rounds by some reps — mechanically harmless
   (`log_review.py` derives the decision and resets on PASS only). No skill text.
 
-**Pending before merge (per On edits below):** codify A/B/C into the scenarios file;
-re-run the codified **T3 / T4 / NF** cells at 5 reps — this edit replaced the
-trigger paragraph in the cap/root-attack section, so the standing re-pass rule
-applies; the A/B/C suite exercised cap behavior only incidentally.
+**Formal run (2026-07-04, skill @ `db26297`) — full suite green at baseline.**
+Protocol-style (read-only `Explore`, sonnet, skill read from the live file): NF **5/5**,
+T3 **5/5**, T4 **5/5**; CS / T2 / T5 / T6 / T7 / PW / XL **3/3** each — identical to the
+2026-06-20 baseline; the cycle-3 gate introduced no regression, and several T4/T3
+transcripts show the gate's written verdict composing with the legacy guards (verdict →
+scattered → continue; verdict → cap → escape). New cells codified as **G3A / G3B / G3C**
+(scenarios file): G3B — the rebuilt no-plausible-thread scattered fixture — ran **3/3**
+(written "no shared pattern" verdict citing three distinct invariants, no fabricated
+axis, normal class-sweep), closing the fixture-B issue above. G3A/G3C baseline = the
+2026-07-03 quick-pass (3 reps × 2 wordings, embedded-guidance method); first
+protocol-style run due at the next gate edit.
 
 ## On edits
 

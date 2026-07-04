@@ -28,9 +28,19 @@ note, commit body citing or additive; **zero over-fire** (every rep still satisf
 the user's instruction additively — the edit must never read as "commit bodies may
 carry nothing"); low variance (one converged shape).
 
-**Pending for formal GREEN:** a discriminating pressure run in a consumer WITHOUT a
-CLAUDE.md restating the commit-body rule (isolates the skill's contribution), plus
-long-context/sunk-cost pressure — the watched failure is a pressure phenomenon.
+**Formal run (2026-07-04, skill @ `db26297`).** Commit-pressure scenario,
+protocol-style (agent reads the skill file as sole doctrine; explicit "no CLAUDE.md,
+no repo conventions" framing; sunk-cost + reviewer-waiting pressure; the ask pushes
+rationale into the commit message). New text **5/5** artifact-first — comment at the
+decision site (+ plan note in 4/5), commit body additive/citing, one rep quoting
+"reviewers read the tree, not the log" back verbatim; **zero over-fire** (every rep
+still explained in the body as asked). Pre-edit control **3/3 also artifact-first** —
+the original body already binds when read in full, so this protocol structurally
+cannot reproduce the description-layer loophole (an agent acting on the description
+without reading the body). Standing evidence base for the edit therefore remains the
+loophole analysis + the owner-watched incidents; these runs establish no-regression
+and correct new-text behavior. True long-context in-situ pressure stays untestable in
+this harness.
 
 ## On edits
 
