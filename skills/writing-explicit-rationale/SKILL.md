@@ -1,12 +1,12 @@
 ---
 name: writing-explicit-rationale
-description: 'Use when making a choice a future reader or review pass might re-litigate — descopes, deferrals, shortcuts, exceptions, AND design choices over a defensible alternative. Applies to plans, specs, design docs, code comments at decision sites, and commit bodies. Triggered by "make this simpler", "drop the hardening", "skip X for now", "we can cover it in the PR", "this is overkill". Also fires when a review re-litigates the same decision twice.'
+description: 'Use when making a choice a future reader or review pass might re-litigate — descopes, deferrals, shortcuts, exceptions, AND design choices over a defensible alternative. Applies to plans, specs, design docs, and code comments at decision sites. Triggered by "make this simpler", "drop the hardening", "skip X for now", "we can cover it in the PR", "this is overkill". Also fires when a review re-litigates the same decision twice, or when rationale is about to land only in a commit message or PR description.'
 ---
 
 # Writing explicit rationale
 
 **Role:** Companion — invoke when making a choice a future reader or review pass might re-litigate.
-**Owns:** the trigger test (would a future reader wonder *"did the author consider X?"*), the what / why / what's-accepted artifact pattern, the artifact-scope guidance (plans / specs / commit bodies / code comments), the active-design-choice extension.
+**Owns:** the trigger test (would a future reader wonder *"did the author consider X?"*), the what / why / what's-accepted artifact pattern, the artifact-scope guidance (plans / specs / code comments), the active-design-choice extension.
 **Does not own:** project commit-body rules; plan-density rules (lives in
 `lean-plan-writing`); stale rationale sweeps (lives in
 `sweeping-stale-references`).
@@ -67,8 +67,10 @@ Apply rationale where the choice is visible:
 - **PR descriptions / commit bodies** — additive, never a substitute for
   the on-artifact copy.
 
-Rationale that lives only in git history or a PR gets missed. Put it at
-the artifact site.
+Reviewers read the tree, not the log — rationale only in a commit message
+or PR is invisible to the very review that will re-litigate the choice.
+Put it where the reviewer reads: a project document, or a comment at the
+decision site.
 
 ## Rationalizations
 
@@ -84,7 +86,7 @@ the artifact site.
 | "Following the user's explicit instruction is the higher discipline." | User instructions are HOW to act; rationale-on-page is WHAT survives the conversation. They don't conflict — do both. |
 | "Adding rationale would bloat the artifact." | One sentence per descope is not bloat. Removed content without rationale IS the bloat pattern — it produces silent gaps reviewers re-litigate. |
 | "A section header or referenced external doc already covers it." | External pointers are supplementary, not substitutive. Phase plans get archived; trust chains break. Name *what* on-page even when the *why* lives downstream. A header saying "deferred to Phase 23" without listing the items is the silent-gap pattern. |
-| "The rationale is in the commit body." | Commit bodies don't travel with the artifact's reading flow. Cite durable rationale from the body; don't make the body the only rationale surface. |
+| "The rationale is in the commit body." | The reviewer reads the tree, not the log. The body cites the artifact; the artifact carries the rationale. |
 | "It's process metadata not design rationale" | Design choices matter. Put all rationale for the artifact on the artifact. |
 
 ## Red flags
