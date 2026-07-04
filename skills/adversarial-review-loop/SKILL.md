@@ -1,6 +1,6 @@
 ---
 name: adversarial-review-loop
-description: Use when an adversarial review surfaces findings — including when successive rounds keep surfacing new, surface-different findings (possible shared root); always when a review loop enters its third cycle. Applies to both internal (self-review, mid-flight work, code review) and external (a different model, a CI reviewer bot, a required reviewer) reviews.
+description: Use when an adversarial review surfaces findings — including when successive rounds keep surfacing new, surface-different findings (possible shared root), and always when a review loop enters its third cycle. Applies to both internal (self-review, mid-flight work, code review) and external (a different model, a CI reviewer bot, a required reviewer) reviews.
 ---
 
 # Adversarial review loop
@@ -20,7 +20,7 @@ description: Use when an adversarial review surfaces findings — including when
 
 A **cycle** is **review → class-sweep → re-run**. Take at most **three**. If the third cycle still returns [P0]/[P1]/[P2], take the cold-read escape below — do not proceed to a fourth cycle.
 
-Three outcomes per cycle — new surface each round is necessary but not sufficient; the **root** decides. Test the accumulated set from **all** rounds, not the newest round — the history is a dataset, not a news feed:
+Three outcomes per cycle — new surface each round is necessary but not sufficient; the **root** decides. Judge the accumulated set from all rounds, not the newest — the history is a dataset, not a news feed:
 - **Scattered** — new surface, no shared root → continue (fix + re-run).
 - **Drift** — re-litigation or trivial/style nits → the cap interrupts it.
 - **Shared-root** — surface-different findings that name **one axis** → attack the root (next section).
@@ -31,11 +31,11 @@ Below the cap, the same *kind* of finding recurring across cycles means step 1's
 
 **Mandatory at cycle 3.** Two cycles done, findings still coming — STOP. Before any fix, dismissal, or re-run:
 
-1. Re-read every prior round's findings as one set.
-2. Write the pattern verdict in the loop's work artifact. The pattern may live in the reviewed artifact, in your own governing text (your wording keeps generating findings), or in the reviewer (what it keeps finding, re-raises, never reports). "No shared pattern" counts only written down, each round cited.
-3. Attack the pattern where it lives — the class in the artifact, the wording in your text, a recorded adjudication of the reviewer. Not the latest findings.
+1. Re-read every round's findings as one set.
+2. Write the pattern verdict in the loop's work artifact. The pattern may sit in the reviewed artifact, in your own governing text (your wording keeps generating findings), or in the reviewer (repeat themes, re-raised dismissals, blind spots). "No shared pattern" is a valid verdict — only in writing, citing each round.
+3. Attack the pattern where it lives: fix the class in the artifact, fix the wording in your text, or close a reviewer re-raise with a written ruling — don't just fix the latest findings.
 
-**Fire earlier when the axis is already visible** (≥2 cycles, one axis: all failure-path, all concurrency, all auth-boundary, …) — don't wait. For an axis in the artifact:
+**Don't wait for cycle 3 when the axis is already visible** (two cycles in, one theme: all failure-path, all concurrency, all auth-boundary, …). To attack an axis in the artifact:
 
 1. **Name the axis.**
 2. **Enumerate every site that could violate the invariant — project-wide, across all code paths, not just the reviewed file(s) or cited locations.** A root closed only locally resurfaces elsewhere and restarts the loop there later. Use a ready checklist if one fits (e.g. the `durability` angle in `adversarial-review`).
@@ -79,4 +79,4 @@ Zero [P0]/[P1]/[P2] findings on the latest run. [P3]-only is acceptable advisory
 | "I closed the axis in the file under review — done." | An axis left open in other files resurfaces and restarts the loop there. Audit the pattern across the whole project, not just the reviewed location. |
 | "The 3rd cycle's re-run found a new shared-root issue — that's a new round, I'll attack the root." | A finding on the 3rd re-run **is** the cap: 3 cycles done, findings remain → escape. Root-attack is below-cap only; you don't get a 4th round to attack it in. |
 | "The prior rounds are in my context — I know what they said." | Knowing ≠ analysing. Write the verdict over the full set. |
-| "This round's findings are real — fix first, step back after." | The step-back gates cycle 3. Real findings every round is how an unattacked pattern looks. Verdict first. |
+| "This round's findings are real — fix first, step back after." | The step-back gates cycle 3. Real findings every round is what an unattacked pattern looks like. Verdict first. |

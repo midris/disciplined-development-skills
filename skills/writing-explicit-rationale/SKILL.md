@@ -68,9 +68,8 @@ Apply rationale where the choice is visible:
   the on-artifact copy.
 
 Reviewers read the tree, not the log — rationale only in a commit message
-or PR is invisible to the very review that will re-litigate the choice.
-Put it where the reviewer reads: a project document, or a comment at the
-decision site.
+or PR is invisible to the review that will re-litigate it. Put it where
+the reviewer reads: a project document, or a comment at the decision site.
 
 ## Rationalizations
 

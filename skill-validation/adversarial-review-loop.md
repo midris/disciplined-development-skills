@@ -141,9 +141,64 @@ is the watched failure to wait for.
 **T3 at-cap**, and the **project-wide / cross-language** scenarios; keep the
 **"one invariant"** wording.
 
+## Cycle-3 mandatory step-back gate (added 2026-07-03)
+
+Makes the step-back unconditional at cycle-3 entry — STOP; re-read all rounds as one
+set; **written** pattern verdict in the work artifact; attack the pattern where it
+lives (artifact / your own governing text / the reviewer) — and pins the per-cycle
+test's object to the **accumulated set** ("dataset, not a news feed"). The prior
+trigger was conditional on already-seeing the axis — circular, and thrice failed.
+
+**Watched failures (RED):** PR-2, 6 reactive rounds (2026-06-19); calendar PR-3, 4+
+rounds with the 2026-06-20 move in force (2026-07-01); steno PR #1, 5 external-gate
+rounds ending in a cold-read escape (2026-07-03) — orchestrator rationalizations
+recorded verbatim ("different classes each round — scattered → continue"; ledger read
+as a news feed). Key finding: the steno orchestrator held **every finding in context**
+and still fixed reactively — refuting the information-delivery premise of
+`plans/2026-07-01-external-gate-root-attack-forcing-function.md` ("the gate hides the
+set"). Attention failure, not access failure; the fix is doctrine, not hook payloads.
+
+**Method (quick pass — deviations from house method flagged):** single-shot sonnet
+subjects, skill text embedded as binding guidance, "these look quick — PR today"
+pressure; 3 scenarios × 3 reps × 2 wording versions; every transcript hand-read.
+Deviations: plain subagents (text-only task, no tools), 3 reps/cell not 5, and
+subjects ran inside a consumer session — ambient dd doctrine present (controls
+impossible in-harness; the 2026-07-03 RED-baseline arm passed 5/5 on ambient context
+alone, so single-shot scenarios cannot reproduce the watched failure — RED rests on
+the incidents above).
+
+**Fixtures:** A — shared-root failure-path set (calendar-shaped, 3 rounds);
+B — intended-scattered (doc drift / off-by-one / missing flag test);
+C — reviewer re-raise of an adjudicated dismissal + unrelated P3 (steno-shaped).
+
+**Results:** v1 wording — 9/9 verdict-before-fix under pressure; A 3/3 named the
+axis (2/3 also split a different-invariant finding out, citing the over-fire guard);
+C 3/3 closed by written ruling, no appeasement edits. B exposed a **fixture leak**:
+3/3 found the same plausible partial axis (untested boundaries), consistently —
+fixture flaw, not fabrication. Concise-writing rewording pass (same day), full
+re-run: 9/9 gate again; **B improved to 2/3 scattered** via the invariant-vs-topic
+test (v1: 0/3); C 3/3 incl. one rep correcting the cadence-reset nuance unprompted.
+
+**Known issues (recorded, owner-adjudicated 2026-07-03):**
+- *Cycle accounting:* ~4/18 reps read the third review's arrival as "cycle 3's
+  re-run = cap" rather than cycle-3 entry. Every divergence conservative (ruling or
+  escape instead of a final re-run); the step-back ran in all 18. Owner: wording fine
+  as-is; tighten only if a real incident shows a non-conservative miss.
+- *Fixture B* leaks a defensible axis — replace with a no-plausible-thread set
+  before using it as a benchmark cell.
+- *dd-log reset claims* on non-clean rounds by some reps — mechanically harmless
+  (`log_review.py` derives the decision and resets on PASS only). No skill text.
+
+**Pending before merge (per On edits below):** codify A/B/C into the scenarios file;
+re-run the codified **T3 / T4 / NF** cells at 5 reps — this edit replaced the
+trigger paragraph in the cap/root-attack section, so the standing re-pass rule
+applies; the A/B/C suite exercised cap behavior only incidentally.
+
 ## On edits
 
 Re-run the RED/GREEN class-sweep scenario plus the T2–T7 set (read-only) before
 shipping any change to the loop skill. Any change to the cap/backstop wording must
 re-pass **T3** (escape at the cap) and **T4** (no false-positive on productive
-iteration).
+iteration). Changes to the cycle-3 gate also re-run the A/B/C set above — B is the
+over-fire guard for the mandatory verdict; keep "No shared pattern is a valid
+verdict" intact.
