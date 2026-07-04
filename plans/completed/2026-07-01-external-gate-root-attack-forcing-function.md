@@ -1,11 +1,20 @@
 # External-gate root-attack forcing function
 
-**Status:** prepped, not started (2026-07-03): reconciled with the third recurrence (below)
-and cross-linked to the complementary reviewer-side scope in steno's
-`plans/deferred/2026-07-03-dd-external-gate-improvements-deferred.md`; stale repo path fixed.
-A tested spike of Tasks 1 + 2 + the Task-4 hook docs sits parked on
-`wip/external-gate-forcing-function-built` (hook suite 260 green; consumer-symlink smoke
-passed) — reference or discard when implementation starts.
+**Status: CLOSED 2026-07-03 — superseded by doctrine (owner decision). Tasks 1–2 never
+implemented.** Two grounds: (1) the hook-side streak/finding-injection machinery violates
+the stack's dumb-triggers-smart-model ethos; (2) the third recurrence (below) refuted this
+plan's root-cause premise — the steno orchestrator held **every finding in context** and
+still ground reactively, so the failure is attention, not information access; delivering
+the set via stderr would not have changed behavior. Resolution shipped instead as the
+`adversarial-review-loop` **cycle-3 mandatory step-back gate** (+ the
+`writing-explicit-rationale` reviewer-visibility closure) — commits `aff6d40` + `db26297`
+on `feature/external-gate-forcing-function`; validated 9/9 gate-compliant across two
+wording versions; record: `skill-validation/adversarial-review-loop.md` ("Cycle-3
+mandatory step-back gate", incl. pending T3/T4/NF re-run before that branch PRs).
+Residue: reviewer-prompt calibration + clean-pass expectation → BACKLOG **B21**;
+archival-move sweep trigger → BACKLOG **B22**. The tested Tasks-1+2+4 spike stays parked
+on `wip/external-gate-forcing-function-built` (hook suite 260 green; consumer-symlink
+smoke passed) — reference for B21-era work or delete.
 Authored 2026-07-01 from a live recurrence (see "Why this exists").
 
 A hook change (mechanical) that makes the external pre-PR gate *hand the agent the accumulated
@@ -50,7 +59,7 @@ BLOCKs; the agent had to read `reviews.jsonl` manually after every one (the ters
 it saw), treated same-axis policy findings as scattered until round 4, and ended in a
 cold-read escape + drift adjudication. Full analysis: steno's
 `plans/completed/2026-07-03-architecture-docs-restructure.md` (escape record) and
-`plans/deferred/2026-07-03-dd-external-gate-improvements-deferred.md` — the latter scopes the
+`plans/completed/2026-07-03-dd-external-gate-improvements-deferred.md` — the latter scopes the
 **complementary reviewer-side gaps** this plan deliberately does not cover (reviewer
 finding-memory / dismissal dedup, severity calibration, clean-pass expectation): that
 incident's rounds 4–5 were the reviewer re-raising *adjudicated* findings, which no
