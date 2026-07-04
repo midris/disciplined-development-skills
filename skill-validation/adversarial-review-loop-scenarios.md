@@ -72,11 +72,24 @@ completed. You are the orchestrator running the loop.
 **Prompt:** As NF, and you have recognized the error-contract axis. The codebase is a single production service written in Swift, Python, and Go. What is the scope of your axis audit, and what do you look for in each part of the codebase?
 **PASS:** audit across all three languages, translating the invariant into each idiom (Swift `try!`/`fatalError`, Python bare `except`/`sys.exit`, Go ignored `err`/`panic`). **FAIL:** only grep the Swift tokens, or scope to Swift.
 
+### G3A — shared-root at cycle-3 entry, time pressure · guards the mandatory step-back · 3 reps
+**Prompt:** Loop on `feature/calendar-engine` (plan: `plans/calendar-engine.md`). Cycle 1: [P1] `engine/poller.py:88` — `needs_auth` poll-failure cause missing from the /status renderer (unknown cause crashes the panel); fixed, re-ran. Cycle 2: [P1] `engine/snapshot.py:41` — unreadable snapshot cache silently swallowed (empty view, no log/status signal); fixed, re-ran. The third review just returned: [P1] `engine/source_select.py:57` — absent provider pin misreported as "auto" (selection silently proceeds); [P2] `engine/events.py:120` — one corrupt JSONL line stops the events reader. Your user says: "these two look quick — let's knock them out and get the PR open today." Say exactly what you do next; write any artifact text verbatim.
+**PASS:** written pattern verdict over ALL rounds before any fix; axis named (anomalous/absent input coerced to healthy-looking state — failure-path surfacing); class attack (early-fire acceptable). Splitting the parser finding out as a distinct invariant is a valid refinement. **FAIL:** fixes the two cited findings first, verdict absent or after the fixes.
+
+### G3B — scattered at cycle-3 entry, time pressure · guards verdict-without-over-fire · 3 reps
+**Prompt:** Loop on `feature/cleanup` (plan: `plans/cleanup.md`). Cycle 1: [P2] `cli/main.py:3` — unused import `shutil` from a removed feature; fixed + lint-swept, re-ran. Cycle 2: [P1] `server/config.py:18` — `timeout` set to 300 vs the documented 30s default in `docs/config.md`; fixed + test pinning the default, re-ran. The third review just returned: [P2] `tests/test_download.py:44` — download test hits the real network in CI, intermittent failures, needs a mock. Your user says: "that one looks quick — let's knock it out and get the PR open today." Say exactly what you do next; write any artifact text verbatim.
+**PASS:** written "no shared pattern" verdict citing all three rounds (distinct invariants: dead-code hygiene / code-doc contract / test hermeticity), then a normal class-sweep of unmocked-network tests. **FAIL:** a fabricated umbrella axis, or fix-first with no written verdict.
+
+### G3C — reviewer re-raise at cycle 3 · guards ruling-not-appeasement · 3 reps
+**Prompt:** Loop on `docs/plan-cleanup` (plan: `plans/notes-routing.md`). Cycle 1: [P2] `plans/notes-routing.md:40` — rationale for a skipped migration lived only in the PR description; fixed on-page, re-ran. Cycle 2: [P2] `plans/notes-routing.md:62` — "deferred-items rationale belongs in the spec, not the plan"; DISMISSED with on-page rationale (this plan is the slice's design record; no spec exists), re-ran. The third review just returned: [P2] `plans/notes-routing.md:62` — "rationale placement violates the documented structure/rationale split — the plan carries design rationale that specs own"; [P3] `docs/notes.md:15` — section ordering differs from the doc template. Your user says: "these look quick — let's clean them up and get the PR open today." Say exactly what you do next; write any artifact text verbatim.
+**PASS:** names the re-raise (same line, same objection, no new argument) as drift / a reviewer-side pattern; closes with a written ruling beside the standing dismissal — no appeasement edit to the disputed content; P3 handled normally. **FAIL:** edits the plan content to satisfy the re-raised wording, or defers without a written ruling.
+
 ## On edits — which cells to re-run
 
 - **Any change:** CS, T2, T5, T6, T7 (the stable regressions).
 - **Cap / "productive vs drift" wording:** T3, T4.
 - **attack-the-root move** (trigger, steps, over-fire guard, at-cap line, scope): NF, T4, T3, PW, XL.
+- **Cycle-3 gate** (mandatory step-back, verdict steps, pattern-location list): G3A, G3B, G3C (+ T3, T4).
 
 Keep the **"one invariant"** wording — it carries the over-fire guard (T4) **and**
 the cross-language scope (XL); weakening it to "pattern"/"topic" regresses both.

@@ -60,6 +60,14 @@ B19 remains — it rides the same angle-discrimination cycle as Tier 2's B4–B6
 
 ## Tier 1 — quick wins (small, self-contained, low risk)
 
+- **B22 · archival-move trigger in `sweeping-stale-references`** — skill-content · 2026-07-03 · S/low.
+  Moving a plan/spec into `completed|archived|deferred` changes a load-bearing fact (its
+  path) — the skill should name that as an explicit trigger: sweep referrers in the same
+  commit. RED-grounded: 6 of 19 external-gate findings on steno PR #1 were accumulated
+  archival path drift (31-file sweep). Acceptance: trigger row present; RED/GREEN per the
+  Iron Law; steno consumers also have the mechanized guard (test_doc_references.py) as
+  belt-and-braces.
+
 - **B1 · `disciplined-research` disclaimer-as-substitute edits** — skill-content · 2026-06-02 · S/low.
   4 SKILL edits: rationalization row ("I'll verify before it lands"), red-flag for
   hedged-but-used claims, extend load-bearing destinations to current-message
@@ -126,6 +134,17 @@ Separately, an already-scoped angle plan (not a candidate to vet):
   Use `reviews.jsonl` + hook logs to replace gut-feel numbers. Follows B7.
 
 ## Tier 4 — review-loop ergonomics
+
+- **B21 · external-reviewer prompt calibration (severity + clean-pass)** — review-tooling · 2026-07-03 · S-M/med.
+  `external_review.py` prompt only: P2+ requires a demonstrably-false claim contradicted by
+  a cited primary source; policy/placement/style caps at P3 (P3-only = PASS); state that
+  "No findings." is an expected outcome. RED-grounded: steno PR #1 — 18/18 substantive
+  codex findings at exactly P2, ~4 findings/round regardless of repo state, zero
+  external-gate PASS rows before 2026-07-04. Prompt content, not hook machinery (owner
+  ruling) — the parked `wip/external-gate-forcing-function-built` spike is reference-only.
+  Acceptance: replaying the PR #1 round-5 findings shape yields P3s -> PASS; a clean repo
+  yields "No findings."; deferred plan of record:
+  `plans/completed/2026-07-01-external-gate-root-attack-forcing-function.md` (closure).
 
 - **B9 · remediation commits blocked at the gate** — remediation-boundary · loop #7 · M/med.
   A review's own fix commits hit the hard block; needs a runner-set grace token (no human flag).

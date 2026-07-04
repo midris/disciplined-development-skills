@@ -1,6 +1,21 @@
 # External-gate root-attack forcing function
 
-**Status:** not started. Authored 2026-07-01 from a live recurrence (see "Why this exists").
+**Status: CLOSED 2026-07-03 — superseded by doctrine (owner decision). Tasks 1–2 never
+implemented.** Two grounds: (1) the hook-side streak/finding-injection machinery violates
+the stack's dumb-triggers-smart-model ethos; (2) the third recurrence (below) refuted this
+plan's root-cause premise — the steno orchestrator held **every finding in context** and
+still ground reactively, so the failure is attention, not information access; delivering
+the set via stderr would not have changed behavior. Resolution shipped instead as the
+`adversarial-review-loop` **cycle-3 mandatory step-back gate** (+ the
+`writing-explicit-rationale` reviewer-visibility closure) — commits `aff6d40` + `db26297`
+on `feature/external-gate-forcing-function`; validated 9/9 gate-compliant across two
+wording versions; record: `skill-validation/adversarial-review-loop.md` ("Cycle-3
+mandatory step-back gate", incl. pending T3/T4/NF re-run before that branch PRs).
+Residue: reviewer-prompt calibration + clean-pass expectation → BACKLOG **B21**;
+archival-move sweep trigger → BACKLOG **B22**. The tested Tasks-1+2+4 spike stays parked
+on `wip/external-gate-forcing-function-built` (hook suite 260 green; consumer-symlink
+smoke passed) — reference for B21-era work or delete.
+Authored 2026-07-01 from a live recurrence (see "Why this exists").
 
 A hook change (mechanical) that makes the external pre-PR gate *hand the agent the accumulated
 finding-set and fire the "attack the root" directive* at block #2+, because the model-facing skill
@@ -38,6 +53,17 @@ misreporting an absent pin → `loadSnapshot` silently swallowing an unreadable 
 *incomplete enumeration of siblings, masked by the shipped config's inert defaults*. The agent fixed
 each reactively and never named the axis until the human intervened — **the exact behavior the
 2026-06-20 skill edit was written to prevent.**
+
+**Third recurrence (2026-07-03, steno PR #1 — architecture-docs restructure):** five gate
+BLOCKs; the agent had to read `reviews.jsonl` manually after every one (the terse line is all
+it saw), treated same-axis policy findings as scattered until round 4, and ended in a
+cold-read escape + drift adjudication. Full analysis: steno's
+`plans/completed/2026-07-03-architecture-docs-restructure.md` (escape record) and
+`plans/completed/2026-07-03-dd-external-gate-improvements-deferred.md` — the latter scopes the
+**complementary reviewer-side gaps** this plan deliberately does not cover (reviewer
+finding-memory / dismissal dedup, severity calibration, clean-pass expectation): that
+incident's rounds 4–5 were the reviewer re-raising *adjudicated* findings, which no
+agent-side directive fixes.
 
 **Conclusion:** documentation of the move is necessary but not sufficient. The skill is passive and
 relies on the agent seeing the findings *as a set*; the external gate defeats that by design (see
@@ -175,7 +201,7 @@ Fold into the PR that changes each surface (no standalone commit):
 
 ## Execution caveats (dd-repo conventions)
 
-- **This IS the dd repo** (`/Users/sidris/work/personal/code/disciplined-development-skills`).
+- **This IS the dd repo** (`/Users/simon/work/personal/disciplined-development-skills`).
   Concurrent editors exist — check branch + clean state before any git op. Use a `feature/` (hook) /
   `docs/` branch + PR per the repo convention; never commit `.dd-state/`.
 - The skill + hook dirs are the public API consumers symlink; after a hook change, re-run
