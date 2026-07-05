@@ -146,6 +146,7 @@ REQUIRED SUB-SKILL: `disciplined-research`.
 - Build to satisfy the requirement. Don't over-engineer.
 - Don't build for hypothetical futures. Don't prematurely optimize. Don't prematurely abstract (rule of three).
 - Wait for the edge case to actually occur before handling it.
+- A fragile or unstated invariant is not a deferrable edge case. Fix it by construction — that's the simpler design.
 - When iteration keeps surfacing new findings, remove layers — don't add more.
 
 Reviewer-side counterpart lives in `adversarial-review`.
@@ -207,5 +208,6 @@ REQUIRED SUB-SKILL: `adversarial-review-loop`.
 | "Just one more layer." | Layers compound. Step back at two. |
 | "Defense in depth." | Only where evidence justifies it. |
 | "Every case must be handled." | Handle observed cases. Document the rest as accepted edge cases. |
+| "That input can't happen — no caller passes it." | A crash or wrong output on a representable input is a defect, not an edge case. Fix by construction. |
 | "Make it configurable, just in case." | Configuration is API surface. Add for real use cases, not hypotheticals. |
 | "Reviewer keeps finding issues — keep iterating." | Findings accrete because the artifact has too many surfaces. Remove layers; don't add more. |

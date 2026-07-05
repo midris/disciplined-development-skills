@@ -34,7 +34,7 @@ Don't carry the reviewer's verification duty past the review.
 
 - **[P0]** — critical / blocks merge. Data loss, security hole, broken core path.
 - **[P1]** — important / resolve before opening the PR. Incorrect behavior on documented input, regression on tested path.
-- **[P2]** — minor / resolve before opening the PR. Cleanup, naming, comment drift.
+- **[P2]** — minor / resolve before opening the PR. Cleanup, naming, comment drift; code that's correct only by a fragile, unstated invariant ("fix by construction").
 - **[P3]** — nit / optional. Style preference, missing punctuation.
 
 ## Output format
@@ -105,7 +105,7 @@ Skipping the enumeration — checking only what caught your eye — is itself th
 - *Robust?* an inserted `await`/log/reorder can't silently break it.
 - *Symmetric?* the same hazard handled the same way in siblings.
 
-Any "no" is a finding, though the code works today; fix by construction (state / enforce / unify), not by adding a test.
+Any "no" is a finding, even if the code works today. Fix it by construction: enforce or unify until every axis is "yes". A doc comment only flips *Stated?*; a test flips none. Neither lowers the severity.
 
 **Before dismissing a false positive:** if your reason is "it can't happen" (tests pass, the scheduler prevents it, the caller never does), name the assumption that makes it safe and grade it (above) first — explaining the safety usually surfaces the finding.
 

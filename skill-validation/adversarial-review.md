@@ -252,3 +252,54 @@ single-reviewer discrimination.
   appears only at scale / across models). consistency and executability are kept on
   the lens-not-in-posture + codex-gap grounds, not on demonstrated single-reviewer
   discrimination; skill-authoring is the one with a clean discrimination result.
+
+## Severity floor for fix-by-construction invariants + doc-comment loophole (RED 2026-07-04)
+
+**Origin (escaped-P2 grounding).** meeting-pipeline menubar PR-2: a positional "soonest =
+`upcoming[0]`" invariant in `MenuViewModel.make` (correct only under a caller sort three files away)
+was graded **P3/advisory** by an Opus whole-branch Gate-5 review and closed with a **doc comment**;
+the external Codex gate then BLOCKED the PR grading it **P2** and demanding the by-construction fix
+(internal sort). Separately a negative-`limit` `Array.prefix` crash was graded a task-review "Minor"
+and orchestrator-accepted on KISS grounds before the adversarial pass escalated it.
+
+**Methodology — faithful (real pre-fix diffs, not synthetic).** Subjects: the session's real
+review-package diffs — S1 `0fae3e3..b6fd695` (unclamped `prefix(limit)`), S2 `0fae3e3..59d0868`
+(naked `index==0` countdown, no doc/sort); over-fire control S3 = final `MenuViewModel.swift` (footgun
+fixed; target = the cosmetic "1 people" pluralization). Read-only `Explore`, **current (unedited)
+skill**, plan-anchored. Measured: the severity assigned to the target + the fix recommended. (Synthetic
+snippets rejected per this doc's 2026-06-27 contamination lesson.)
+
+**RED results.**
+- **Crash (S1):** blocking on BOTH models — sonnet 5/5 **P1**, opus 3/3 **P2/P1**; both DETECTED it
+  8/8. **Not an adversarial-review gap** — the real "Minor + accepted" lived in the SDD task-review
+  scale + orchestrator KISS-acceptance (a different path), which the adversarial pass then escalated.
+- **Fragile invariant (S2):** **model-inconsistent.** Sonnet 5/5 **P1** + fix-by-construction (one rep
+  explicitly rejecting "documenting the caller precondition alone"). Opus **3/5 P3-advisory + 2/5 P2,
+  5/5 offering "document the precondition" as an acceptable fix** — reproducing the real Gate-5
+  under-grade. Opus treats "correct in the wired path / single producer / display-only" as grounds for
+  advisory + doc.
+- **Over-fire control (S3):** pluralization P3/P3/P2 (sonnet) — baseline doesn't inflate the cosmetic.
+
+**Decision.** The gap is Opus leniency on the fix-by-construction-invariant class — the cross-model
+inconsistency these rules exist to close. Ships as two edits (model-consistency, bring Opus to
+sonnet): (1) add the fix-by-construction-invariant class to the **[P2]** bucket in the severity rubric
+(single-sourced there, not a separate override), so it can't be graded P3/advisory; (2) close the
+**doc-comment loophole** on the invariant-grade
+line (a doc satisfies only *Stated?*; enforce/unify, not document). Plus a `disciplined-development`
+Principle 7 bullet + rationalization row for the orchestrator-acceptance path. **Dropped by RED:** a
+separate crash-severity rule (both models already block) and an out-of-domain detection bullet (crash
+detected 8/8) — evidence demanded neither.
+
+**GREEN — both edit sets validated (opus).**
+- *adversarial-review.* S2 re-reviewed with the edited skill: **5/5 [P2] BLOCK** by-construction (RED was
+  3/5 P3-advisory PASS + 5/5 offered doc); reps quote "a doc comment only flips *Stated?*". S3 over-fire
+  control: **3/3 PASS**, the pluralization nit stays P3 — the [P2] addition doesn't inflate unrelated
+  findings.
+- *disciplined-development.* Controlled orchestrator-adjudication test (identical scenario — a task-reviewer
+  "[Minor] prefix(limit) traps on negative, only caller passes 3" — with unedited vs edited Principle 7):
+  RED **3/3 ACCEPT** (deferring the crash via "wait for the edge case" / "accepted edge case"), GREEN
+  **3/3 FIX** by construction. Clean discrimination; RED reproduces the real-session acceptance.
+
+Fixtures preserved in the session scratchpad (`red-reviewer-instructions.md`, `red-results.md`,
+`dd-adjudication-{red,green}.md`); review subjects are the two review-package diffs, reproducible from the
+commits named above.
