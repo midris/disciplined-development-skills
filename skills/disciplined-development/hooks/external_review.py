@@ -242,11 +242,17 @@ def main(argv: list[str] | None = None) -> int:
         print("Usage: python3 external_review.py [--cwd <path>]", file=sys.stderr)
         return 2
 
-    repo = cwd_override or str(pathlib.Path.cwd())
     if cwd_override and not pathlib.Path(cwd_override).is_dir():
         print(f"[external-review] ERROR — --cwd {cwd_override!r} is not a directory",
               file=sys.stderr)
         return 2
+
+    # Key state (and run the review) off the git top-level, not the raw cwd: a
+    # subdir cwd would otherwise write a stray `<subdir>/.claude/.dd-state` and
+    # the reset-fold would silently miss the counter the cadence hooks track at
+    # the root. Fall back to the raw cwd outside a git repo.
+    start = cwd_override or str(pathlib.Path.cwd())
+    repo = state.repo_root(start) or start
 
     branch = _current_branch(repo)
     timeout_s = _resolve_timeout()

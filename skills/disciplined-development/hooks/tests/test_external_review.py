@@ -510,3 +510,31 @@ def test_resolve_timeout_rejects_nonpositive_dd_review_timeout(monkeypatch):
     assert external_review._resolve_timeout() > 0
     monkeypatch.setenv("DD_REVIEW_TIMEOUT", "not-a-number")
     assert external_review._resolve_timeout() > 0
+
+
+def test_pass_reset_lands_on_repo_root_from_subdir_cwd(gate_env, tmp_path):
+    """A --cwd inside a subdir keys the PASS reset-fold on the git top-level.
+
+    Same bug as log_review: external_review used ``repo = cwd_override or
+    cwd()`` with no top-level resolution, so a subdir --cwd wrote a stray
+    ``<subdir>/.claude/.dd-state`` and its reset-fold missed the counter the
+    cadence hooks track at the repo root. Fix: resolve state.repo_root first.
+    """
+    env, repo, log_dir = gate_env
+    sub = repo / "swift" / "Steno"
+    sub.mkdir(parents=True)
+    _seed_edits(repo, 3, _BASE_DIR)
+
+    full = {**env,
+            "DD_REVIEW_STUB_STDOUT": "No findings.\nDD-VERDICT: PASS",
+            "DD_REVIEW_STUB_EXIT": "0"}
+    proc = subprocess.run(
+        [sys.executable, str(GATE), "--cwd", str(sub)],
+        capture_output=True, text=True, env=full,
+    )
+
+    assert proc.returncode == 0, proc.stderr
+    assert _rows(log_dir)[0]["decision"] == "PASS"
+    assert _edits_count(repo) == 0                       # repo-root counter reset
+    assert _checkpoint(repo) == _head_sha(repo)
+    assert not (sub / ".claude" / ".dd-state").exists()  # no stray state dir

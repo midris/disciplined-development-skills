@@ -271,3 +271,27 @@ def test_branch_slug_normal_names_preserved():
     assert state._branch_slug("main") == "main"
     # Dots in the middle are kept (release-1.2 style).
     assert "." in state._branch_slug("release-1.2")
+
+
+# --- repo-root resolution --------------------------------------------------
+def test_repo_root_resolves_toplevel_from_subdir(git_repo):
+    """repo_root() resolves the git top-level from a subdir cwd.
+
+    State keys off the repo root (``_state_root`` joins ``<repo>/.claude/
+    .dd-state`` literally). log_review / external_review take a ``--cwd`` that
+    can be a subdir; without top-level resolution they wrote a stray
+    ``<subdir>/.claude/.dd-state`` and their reset-fold silently missed the
+    counter the cadence hooks track at the root. repo_root() is the shared
+    resolver both now route through.
+    """
+    sub = git_repo / "a" / "b"
+    sub.mkdir(parents=True)
+    root = state.repo_root(str(sub))
+    assert root is not None
+    assert Path(root).resolve() == git_repo.resolve()
+
+
+def test_repo_root_none_outside_repo(tmp_path):
+    """Outside any git repo, repo_root() returns None so callers fall back to
+    the raw cwd (prior non-git behavior preserved)."""
+    assert state.repo_root(str(tmp_path)) is None

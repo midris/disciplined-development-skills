@@ -84,7 +84,12 @@ def main() -> int:
               "(would log a false PASS).", file=sys.stderr)
         return 2
 
-    repo = args.cwd or str(pathlib.Path.cwd())
+    # Key state off the git top-level, not the raw cwd: state paths are a
+    # literal `<repo>/.claude/.dd-state` join, so a subdir cwd would write a
+    # stray tree and the reset-fold would silently miss the counter the cadence
+    # hooks track at the root. Fall back to the raw cwd outside a git repo.
+    start = args.cwd or str(pathlib.Path.cwd())
+    repo = state.repo_root(start) or start
     branch = _current_branch(repo)
 
     context = review_record.gather_cadence_context(repo, branch)
