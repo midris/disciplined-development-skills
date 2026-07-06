@@ -164,6 +164,24 @@ def _git(repo: str | Path, *args: str) -> subprocess.CompletedProcess | None:
         return None
 
 
+def repo_root(start: str | Path) -> str | None:
+    """Resolve the git working-tree top for ``start`` (a cwd, possibly a
+    subdir), or None if ``start`` is not in a git repo / git is unavailable.
+
+    State keys off the repo root: ``_state_root`` joins ``<repo>/.claude/
+    .dd-state`` literally, so a writer handed a *subdir* (log_review /
+    external_review take ``--cwd``) would otherwise create a stray state tree
+    there and its reset-fold would silently miss the counter the cadence hooks
+    track at the root. Both tools resolve through here first. Mirrors
+    edit_counter's inline ``rev-parse --show-toplevel`` probe.
+    """
+    proc = _git(start, "rev-parse", "--show-toplevel")
+    if proc is None or proc.returncode != 0:
+        return None
+    root = proc.stdout.strip()
+    return root or None
+
+
 def commits_since_checkpoint(repo: str | Path, branch: str) -> int | None:
     """Commits on HEAD since the recorded checkpoint, or None.
 

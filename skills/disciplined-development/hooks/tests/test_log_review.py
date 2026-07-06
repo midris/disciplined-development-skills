@@ -40,13 +40,18 @@ def _head_sha(repo: Path) -> str:
     ).stdout.strip()
 
 
-def _run(repo: Path, log_dir: Path, findings: str, *args: str) -> subprocess.CompletedProcess:
+def _run_from(cwd: Path, log_dir: Path, findings: str, *args: str) -> subprocess.CompletedProcess:
+    """Run the tool with an arbitrary ``--cwd`` (may be a subdir of the repo)."""
     env = dict(os.environ)
     env["DD_LOG_DIR"] = str(log_dir)
     return subprocess.run(
-        [sys.executable, str(LOG_REVIEW), "--cwd", str(repo), *args],
+        [sys.executable, str(LOG_REVIEW), "--cwd", str(cwd), *args],
         input=findings, env=env, text=True, capture_output=True,
     )
+
+
+def _run(repo: Path, log_dir: Path, findings: str, *args: str) -> subprocess.CompletedProcess:
+    return _run_from(repo, log_dir, findings, *args)
 
 
 def _rows(log_dir: Path) -> list[dict]:
@@ -252,6 +257,33 @@ def test_round_less_than_1_exits_2_and_writes_no_row(tmp_path):
                     "--round", "-1")
     assert proc_neg.returncode == 2
     assert _rows(log_dir) == []
+
+
+def test_subdir_cwd_resolves_to_repo_root_state(tmp_path):
+    """A --cwd inside a subdir keys state off the git top-level, not the subdir.
+
+    Bug: main() used ``repo = args.cwd or cwd()`` with no top-level resolution,
+    so its literal ``<repo>/.claude/.dd-state`` join pointed at a stray
+    ``<subdir>/.claude/.dd-state``. The reset-fold then cleared that stray tree
+    while the real counter the cadence hooks track at the repo root
+    (edit_counter resolves --show-toplevel) went untouched — a clean review
+    silently failed to reset. Fix: resolve state.repo_root before keying state.
+    """
+    repo = _init_repo(tmp_path)
+    log_dir = tmp_path / "logs"
+    sub = repo / "swift" / "Steno"
+    sub.mkdir(parents=True)
+    _seed_edits(repo, 3)  # unreviewed edits at the repo-root state key
+
+    proc = _run_from(sub, log_dir, "No findings.",
+                     "--source", "model-review", "--trigger", "manual")
+
+    assert proc.returncode == 0, proc.stderr
+    assert _rows(log_dir)[0]["decision"] == "PASS"
+    # Reset-fold lands on the repo-root state, not a stray subdir tree:
+    assert _edits_count(repo) == 0
+    assert _checkpoint(repo) == _head_sha(repo)
+    assert not (sub / ".claude" / ".dd-state").exists()  # no stray state dir
 
 
 def test_row_carries_source_trigger_round_context_and_findings(tmp_path):
