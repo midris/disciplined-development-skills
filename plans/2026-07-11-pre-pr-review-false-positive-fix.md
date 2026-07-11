@@ -1,6 +1,6 @@
 # Fix pre_pr_review false positives (loose gh-pr-create matcher) — implementation plan
 
-**Status:** implemented (2026-07-11) on `fix/pre-pr-review-false-positives`. Single PR, one branch off `main`.
+**Status:** parked (owner ruling 2026-07-11) on `fix/pre-pr-review-false-positives` — implementation stopped at the review-loop cap; branch kept as-is (7 commits, suites green), NOT merged; the four round-3 P1s are open and the A/B/C decision below is unmade. The consumer-visible false positives remain live on `main` until this resumes — workaround: `git commit -F <file>` for blocked heredoc commits.
 **Files:** `skills/disciplined-development/hooks/lib/command_match.py`, `hooks/pre_pr_review.py`, `hooks/tests/test_command_match.py`, `hooks/tests/test_pre_pr_review.py`; sweep `hooks/README.md` if it describes the matcher.
 **Commands:** `cd skills/disciplined-development/hooks && python3 -m pytest -q` (test-first; commits land green, test + impl same commit).
 
