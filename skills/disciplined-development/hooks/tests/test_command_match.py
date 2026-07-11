@@ -200,6 +200,15 @@ def test_classify_eval_string_arg_recurses():
     assert classify_gh_pr_create('eval "gh pr create"')[0] == VERDICT_PR
 
 
+def test_classify_unquoted_eval_behind_cd_keeps_outer_cwd():
+    # The segment's own triple must decide BEFORE wrapper recursion: recursing
+    # into `gh pr create` would lose the outer `cd` and report the process cwd.
+    assert classify_gh_pr_create("cd /repo && eval gh pr create") == (
+        VERDICT_PR,
+        "/repo",
+    )
+
+
 def test_classify_echo_mention_stays_pr_shaped():
     # Documented over-broad bias, unchanged: three bare tokens are treated as
     # a PR attempt even under echo.

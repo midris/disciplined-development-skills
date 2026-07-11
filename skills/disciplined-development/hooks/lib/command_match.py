@@ -253,24 +253,28 @@ def _classify_segments(segs: list[list[str]]) -> tuple[str, str | None]:
     for seg_idx, seg in enumerate(segs):
         # Wrapped shells at ANY position (`nohup bash -c '…'`): recurse into
         # the string argument. `eval` concatenates its args into a command, so
-        # a single string arg gets the same recursion.
-        for j, tok in enumerate(seg):
-            inner: str | None = None
-            if tok in SHELLS and j + 1 < len(seg) and seg[j + 1] in ("-c", "-lc", "-cl"):
-                if j + 2 < len(seg):
-                    inner = seg[j + 2]
-            elif tok == "eval" and j + 1 < len(seg):
-                inner = " ".join(seg[j + 1 :])
-            if inner:
-                verdict, cwd = classify_gh_pr_create(inner)
-                if verdict == VERDICT_PR:
-                    return verdict, cwd
-                if verdict in (VERDICT_PR_UNRESOLVABLE, VERDICT_SUSPICIOUS):
-                    # An unparseable/unresolvable wrapped command is still a
-                    # PR attempt whose cwd is unknown — fail loud, not open.
-                    return VERDICT_PR_UNRESOLVABLE, None
-
+        # a single string arg gets the same recursion. Runs only when the
+        # segment carries no triple of its own — an unquoted `eval gh pr
+        # create` is decided by the triple below, whose preceding-`cd`
+        # resolution the recursion (which sees only the inner string) would
+        # lose. The recursed cwd is the inner command's own (or the process
+        # cwd) — the pre-existing wrapped-shell contract.
         if not _seg_has_pr_triple(seg):
+            for j, tok in enumerate(seg):
+                inner: str | None = None
+                if tok in SHELLS and j + 1 < len(seg) and seg[j + 1] in ("-c", "-lc", "-cl"):
+                    if j + 2 < len(seg):
+                        inner = seg[j + 2]
+                elif tok == "eval" and j + 1 < len(seg):
+                    inner = " ".join(seg[j + 1 :])
+                if inner:
+                    verdict, cwd = classify_gh_pr_create(inner)
+                    if verdict == VERDICT_PR:
+                        return verdict, cwd
+                    if verdict in (VERDICT_PR_UNRESOLVABLE, VERDICT_SUSPICIOUS):
+                        # An unparseable/unresolvable wrapped command is still a
+                        # PR attempt whose cwd is unknown — fail loud, not open.
+                        return VERDICT_PR_UNRESOLVABLE, None
             continue
 
         # Chained `cd` resolution: walks every preceding segment, so the
