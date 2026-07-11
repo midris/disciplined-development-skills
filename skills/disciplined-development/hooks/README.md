@@ -29,7 +29,7 @@ the commit ceiling, and the pre-PR gate is an advisory nudge.
 | `discipline_nudge.py` | PreToolUse | `*` (all) | Count tool-calls since the last re-ground; at the threshold emit a "re-read CLAUDE.md + the plan, re-check the skills" nudge (naming the resolved active-plan path) and reset; run throttled cleanup. | `DD_SKIP_DISCIPLINE_NUDGE` |
 | `edit_block.py` | PreToolUse | `Edit\|Write` | **Hard block.** Deny when stored `edits.count` ≥ 60 (i.e. the 61st edit). Reads only; never increments. | `DD_SKIP_EDIT_BLOCK` |
 | `commit_block.py` | PreToolUse | `Bash` (`is_git_commit`) | **Hard block.** Deny a `git commit` (incl. `--amend`) when commits-since-last-deep-review ≥ 5 — allows 5, denies the 6th. | `DD_SKIP_COMMIT_BLOCK` |
-| `pre_pr_review.py` | PreToolUse | `Bash` (`gh pr create`) | **Hard gate.** Detect → resolve cwd → delegate to `external_review.py --cwd`. Any non-zero result maps to exit 2. No base resolution; no `DD_HARD_BLOCK`. An unparseable chained `cd` logs an ERROR row and blocks rather than letting an unreviewed PR through. | `DD_SKIP_PR_REVIEW` |
+| `pre_pr_review.py` | PreToolUse | `Bash` (`gh pr create`) | **Hard gate.** Classify → resolve cwd → delegate to `external_review.py --cwd`. Any non-zero result maps to exit 2. No base resolution; no `DD_HARD_BLOCK`. An unresolvable chained `cd` (reason `unparseable`) and an untokenizable command mentioning the words `gh pr create` (reason `untokenizable_suspicious`) each log an ERROR row and block rather than letting an unreviewed PR through; tokenizable non-PR commands always pass. | `DD_SKIP_PR_REVIEW` |
 | `edit_counter.py` | PostToolUse | `Edit\|Write` | Increment `edits.count`; emit a nudge on each edit once the stored count reaches 30, continuing until a clean review resets the counter via `dd-log`. Advisory only — PostToolUse runs after the edit. | `DD_SKIP_EDIT_COUNTER` |
 | `review_nudge.py` | PostToolUse | `Bash` | On a landed commit: always emit a Gate-3 **verify** reminder; also a nudge when `edits.count` ≥ 30; also a nudge when commits-since-last-deep-review ≥ 3. | `DD_SKIP_REVIEW_NUDGE` |
 | `session_reground.py` | SessionStart | — | On every session (re)start, emit a source-specific preamble + shared re-ground instructions. Fires on all sources (startup/resume/clear/compact); unknown source fires with a generic preamble. | `DD_SKIP_SESSION_REGROUND` |
@@ -98,11 +98,18 @@ non-zero and log an ERROR row. On PASS, logs a PASS row and stamps state
 python3 external_review.py [--cwd <path>]
 ```
 
-`pre_pr_review.py` is the hook wrapper: it detects `gh pr create`, resolves
-the cwd, and delegates `external_review.py --cwd <cwd>`. Any non-zero result
-from the delegate maps to exit 2 (Claude Code blocks PreToolUse only on exit 2).
-Delegate stdout+stderr are re-emitted so findings reach the model.
-`DD_SKIP_PR_REVIEW=1` is the human bypass when the cause is an outage they accept.
+`pre_pr_review.py` is the hook wrapper: it classifies the command
+(`classify_gh_pr_create`) and switches on the verdict. A tokenizable command
+is decided by the strict token scan alone (a consecutive `gh … pr create`
+token triple at any segment position; a quoted phrase is one token and never
+matches); the word-bounded loose net runs only when tokenizing fails
+(heredocs, unbalanced quotes) and blocks with its own self-diagnosing message
+(`reviews.jsonl` reason `untokenizable_suspicious`). A matched PR delegates
+`external_review.py --cwd <cwd>`; any non-zero result maps to exit 2 (Claude
+Code blocks PreToolUse only on exit 2), and delegate stdout+stderr are
+re-emitted so findings reach the model. A matched PR whose `cd` target can't
+be resolved blocks (reason `unparseable`). `DD_SKIP_PR_REVIEW=1` is the human
+bypass when the cause is an outage they accept.
 
 ## State model
 
@@ -176,7 +183,7 @@ retention/cleanup.
   from `log_review.py` (model-driven rounds). Every attempt is logged including
   failures — `decision` is `PASS`, `BLOCK`, or `ERROR`; an ERROR row carries a
   `reason` field (`cli_missing` / `timeout` / `outage` / `empty_output` /
-  `no_verdict` / `unparseable`). Never aged out. Schema groups: when/correlation
+  `no_verdict` / `unparseable` / `untokenizable_suspicious`). Never aged out. Schema groups: when/correlation
   (`ts`, best-effort `run_id`/`session_id`/`harness`); lookup keys (`repo`,
   `branch`, `head_sha`, `base`); cadence (`edits_count`,
   `commits_since_checkpoint`, `trigger`); reviewer (`source`, `reviewer`,

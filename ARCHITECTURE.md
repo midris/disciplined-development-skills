@@ -197,11 +197,14 @@ sequenceDiagram
     participant C as codex
     participant L as log + state
     M->>H: Bash "gh pr create …"
-    H->>H: detect gh pr create (cwd only)
-    alt PR-shaped but unparseable
+    H->>H: classify (strict token scan; loose word net only on tokenize failure)
+    alt PR matched, cd target unresolvable
         H->>L: log ERROR (unparseable)
         H-->>M: BLOCK — override via DD_SKIP_PR_REVIEW
-    else parseable
+    else untokenizable + mentions the words gh pr create
+        H->>L: log ERROR (untokenizable_suspicious)
+        H-->>M: BLOCK — override via DD_SKIP_PR_REVIEW
+    else PR matched, cwd resolved
         H->>E: external_review.py --cwd
         E->>C: codex (review skill + plan + repo)
         C-->>E: findings + DD-VERDICT line
