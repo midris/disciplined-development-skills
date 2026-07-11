@@ -63,7 +63,14 @@ Additionally, mirror the existing `SHELLS -c` re-tokenization for `eval` with a 
 
 - **Round 1 — BLOCK, 1×P1:** wrapper recursion dropped the outer `cd` (wrong-tree review). Fixed: the preceding-`cd` walk extracted to one helper used by the triple path AND the wrapper recursion; outer chain wins, unresolvable outer fails loud.
 - **Round 2 — BLOCK, 1×P1 + 2×P2:** the P1/P2 `cd` findings (bare `cd`, `~` targets) plus round 1 named one axis — incomplete `cd`-form resolution — swept whole: bare→`$HOME`, `~`→expanduser, `-`→unresolvable, `-L/-P/-e/-@` flags skipped. The remaining P2 (quote-balanced heredoc bodies tokenized into command segments, taking the delegate path) amended D4 above.
-- **Round 3:** see the PR.
+- **Round 3 — BLOCK, 4×P1 (the loop cap; iteration stopped, escaped to the owner):** `env X=1 bash <<EOF…` evades the shell-receiver check (skip_env expects VAR= tokens, not the `env` command word) — fail-open; the heredoc tag regex under-lexes `<<END-MSG` as `END`, so the body never terminates and a later real PR command strips away — fail-open; chained relative `cd`s don't compose (pre-existing documented edge, re-litigated); an outer `cd` overrides an explicit inner `cd` in wrappers (round-1's documented edge, re-litigated).
+
+**Pattern verdict (cap-mandated, over all three rounds as one set):** every finding — R1's dropped outer `cd`, R2's cd-form gaps and heredoc-bodies-as-segments, R3's receiver/lexer/composition gaps — is one root: **the matcher re-implements shell semantics piecemeal (cd resolution, heredoc lexing, wrapper transparency), and each approximation ships a new wrong-tree or fail-open edge.** The round-2 heredoc parser itself introduced two of round 3's fail-opens. Per the loop skill and Principle 7, more layers is the wrong direction; the escape decision (below) is the owner's.
+
+**Owner decision needed — options:**
+- **A (recommended): shrink the trusted surface.** Delegate ONLY the canonical shape (a strict segment-head triple, cwd from nothing or an absolute-`cd` chain); any other construct that word-mentions the phrase in executable position blocks with precise rewrite guidance ("re-run as `cd /abs/path && gh pr create …`"). Delete the heredoc body parser and wrapper cwd inheritance (wrapped/heredoc-fed forms block-with-guidance instead of being emulated). Keeps both original false-positive fixes (word-bounded loose net; strict-authoritative quoted-argument handling); converts all four R3 P1s from fail-open/wrong-tree into loud, trivially-rewritable blocks.
+- **B: keep the emulation design and fix the four P1s** (a fourth review cycle against the cap — needs an explicit owner go).
+- **C: park the branch** — cycles 1–2's uncontested core (the two observed false-positive classes) already works; the contested surface is the wrapper/heredoc/cd emulation added while chasing reviewer findings.
 
 ## Acceptance
 
