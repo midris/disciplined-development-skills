@@ -29,7 +29,7 @@ Additionally, mirror the existing `SHELLS -c` re-tokenization for `eval` with a 
 
 **D3 — The loose net gets word boundaries.** For untokenizable commands (and the gate's crash-path fallback), match `gh`, `pr`, `create` in order as whole words (regex word-boundary semantics; note `\b` treats `_` as a word char, so `pre_pr_review` does not contain a word `pr`). Prose subsequences stop matching; a heredoc that literally writes `gh pr create` as words still blocks — accepted residual, rare, and self-diagnosing under D5. Bias-toward-True is preserved exactly where the genuine ambiguity lives.
 
-**D4 — Rejected: stripping heredoc bodies before matching.** A heredoc piped into a shell executes its body (`bash <<EOF`), so body-stripping is a fail-open hole; D1+D3 already remove the observed pain. Revisit only if word-level literal mentions in prose recur as blocks.
+**D4 (amended in review round 2) — Heredoc bodies are data, with a shell-receiver carve-out.** Originally rejected ("`bash <<EOF` executes its body, so stripping is a fail-open hole"); the round-2 external review showed the rejection was incomplete the other way: a QUOTE-BALANCED body tokenizes, its lines become command segments, and a body line quoting the phrase took the *delegate* path. Amended rule: strip heredoc bodies before matching (a commit message quoting the phrase neither delegates nor blocks); a body whose receiving segment head is a shell keeps the word-bounded loose check (executes → fail-closed); if the stripped command still can't tokenize, the loose net runs over the full original text.
 
 **D5 — Distinct, self-diagnosing block messages.** Split the single message into: (a) *matched `gh pr create` but cwd unresolvable* (keep the current rewrite/bypass remedy), and (b) *command couldn't be parsed and mentions `gh pr create` as words* — naming the matched heuristic so the next false positive is diagnosable from the message alone. Keep the `reviews.jsonl` ERROR row on both block paths (reason `unparseable` vs a new distinct reason for (b)).
 
@@ -52,12 +52,18 @@ Additionally, mirror the existing `SHELLS -c` re-tokenization for `eval` with a 
   | `grep -n "gh pr create" file.py` | not-PR (quoted phrase = one token) |
   | `git commit -m "the gh matcher, per project rules, was created"` | not-PR (tokenizes; no triple; loose net not consulted) |
   | heredoc `git commit` whose body has prose subsequences (e.g. "right… project… created") | not-PR (untokenizable; word-bounded loose finds no `gh`/`pr`/`create` words) |
-  | heredoc `git commit` whose body literally contains the words `gh pr create` | untokenizable-and-suspicious (accepted residual) |
-  | `bash <<EOF` heredoc whose body contains `gh pr create` | untokenizable-and-suspicious (fail-closed preserved) |
+  | heredoc `git commit` whose body literally contains the words `gh pr create` | not-PR (body is data — D4 as amended; a residual block remains only for untokenizable non-heredoc text, e.g. unbalanced quotes) |
+  | `bash <<EOF` heredoc whose body contains `gh pr create` | untokenizable-and-suspicious (shell receiver executes the body — fail-closed carve-out) |
   | empty string / whitespace | not-PR |
 
 - [x] **Gate behavior** (`test_pre_pr_review.py`): allow-path for the two observed FP classes (heredoc-prose commit; grep-with-literal) asserting exit 0 and no ERROR row; the two block paths assert exit 2, their distinct messages, and their distinct `reviews.jsonl` reasons; delegate path unchanged (existing tests keep binding the exit-code translation and `DD_SKIP_PR_REVIEW`); crash-path fallback still blocks iff the word-bounded predicate matches. (3 new tests; the heredoc-prose gate path was already healed by the cycle-1 matcher change — its test observed green there, red on the other two.)
 - [x] **Docs sweep:** matcher docstrings rewritten to the new contract (the "deliberately over-broad" text moves to the untokenizable-only scope); `hooks/README.md` (gate table row, wrapper paragraph, ERROR-reason enumeration) + `ARCHITECTURE.md` (pre-PR sequence diagram gains the second block branch); message-text change noted in the commit bodies (agent-facing, not config schema — no MIGRATIONS.md entry).
+
+## Review loop (external gate, 2026-07-11)
+
+- **Round 1 — BLOCK, 1×P1:** wrapper recursion dropped the outer `cd` (wrong-tree review). Fixed: the preceding-`cd` walk extracted to one helper used by the triple path AND the wrapper recursion; outer chain wins, unresolvable outer fails loud.
+- **Round 2 — BLOCK, 1×P1 + 2×P2:** the P1/P2 `cd` findings (bare `cd`, `~` targets) plus round 1 named one axis — incomplete `cd`-form resolution — swept whole: bare→`$HOME`, `~`→expanduser, `-`→unresolvable, `-L/-P/-e/-@` flags skipped. The remaining P2 (quote-balanced heredoc bodies tokenized into command segments, taking the delegate path) amended D4 above.
+- **Round 3:** see the PR.
 
 ## Acceptance
 

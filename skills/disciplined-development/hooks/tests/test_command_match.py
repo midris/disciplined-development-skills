@@ -228,6 +228,56 @@ def test_classify_wrapped_shell_behind_unexpandable_cd_is_unresolvable():
     assert cwd is None
 
 
+# ---- cd-form resolution (the round-2 axis: every cd form pinned) -------------
+
+
+def test_classify_bare_cd_resolves_home():
+    # `cd` with no target goes to $HOME — not the caller's cwd.
+    assert classify_gh_pr_create("cd && gh pr create") == (
+        VERDICT_PR,
+        os.path.expanduser("~"),
+    )
+
+
+def test_classify_tilde_cd_expands():
+    assert classify_gh_pr_create("cd ~/repo && gh pr create") == (
+        VERDICT_PR,
+        os.path.expanduser("~/repo"),
+    )
+
+
+def test_classify_cd_dash_is_unresolvable():
+    # `cd -` targets $OLDPWD, unknowable from the command text — fail loud.
+    verdict, cwd = classify_gh_pr_create("cd - && gh pr create")
+    assert verdict == VERDICT_PR_UNRESOLVABLE
+    assert cwd is None
+
+
+def test_classify_cd_symlink_flags_skipped():
+    assert classify_gh_pr_create("cd -P /repo && gh pr create") == (
+        VERDICT_PR,
+        "/repo",
+    )
+
+
+# ---- heredoc bodies are data (round-2 P2) ------------------------------------
+
+
+def test_classify_non_shell_heredoc_body_is_data():
+    # A quote-balanced heredoc body tokenizes; its lines must NOT become
+    # command segments — a git-commit message quoting the phrase is data,
+    # neither delegated nor blocked.
+    cmd = "git commit -F - <<'MSG'\nsee gh pr create docs\nMSG"
+    assert classify_gh_pr_create(cmd) == (VERDICT_NOT_PR, None)
+
+
+def test_classify_shell_fed_heredoc_body_still_suspicious():
+    # A heredoc piped INTO a shell executes its body — the body keeps the
+    # word-bounded loose check (fail-closed carve-out to body-stripping).
+    verdict, _ = classify_gh_pr_create("bash <<'EOF'\ngh pr create\nEOF")
+    assert verdict == VERDICT_SUSPICIOUS
+
+
 def test_classify_echo_mention_stays_pr_shaped():
     # Documented over-broad bias, unchanged: three bare tokens are treated as
     # a PR attempt even under echo.
@@ -268,13 +318,6 @@ def test_classify_untokenizable_literal_words_are_suspicious():
     # still blocks (fail-closed net, now self-diagnosing at the gate).
     cmd = "git commit -m 'it's done, see gh pr create docs'"
     assert classify_gh_pr_create(cmd) == (VERDICT_SUSPICIOUS, None)
-
-
-def test_classify_shell_fed_heredoc_is_never_not_pr():
-    # A heredoc piped INTO a shell executes its body — must never pass as
-    # NOT_PR (either the strict triple or the suspicious net catches it).
-    verdict, _ = classify_gh_pr_create("bash <<'EOF'\ngh pr create\nEOF")
-    assert verdict != VERDICT_NOT_PR
 
 
 def test_classify_empty_is_not_pr():

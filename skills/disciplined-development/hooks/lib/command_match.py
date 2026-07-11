@@ -260,20 +260,35 @@ def _resolve_preceding_cd(
     cwd: str | None = None
     unresolvable = False
     for prev_seg in segs[:seg_idx]:
-        if len(prev_seg) >= 2 and prev_seg[0] == "cd":
-            path = prev_seg[1]
-            if "$" in path or "`" in path:
-                # Unexpandable target (shell var / substitution). Mark the
-                # cwd unresolvable; a LATER resolvable `cd` clears it
-                # (last-cd-wins), matching the resolvable branches below.
-                unresolvable = True
-                cwd = None
-            elif os.path.isabs(path):
-                cwd = path
-                unresolvable = False
-            else:
-                cwd = str(Path.cwd() / path)
-                unresolvable = False
+        if not prev_seg or prev_seg[0] != "cd":
+            continue
+        # Skip cd's symlink-semantics flags (-L/-P/-e/-@) — they don't change
+        # the target path for our purpose. A lone `-` is NOT a flag (it means
+        # $OLDPWD) and is handled as a target below.
+        k = 1
+        while k < len(prev_seg) and prev_seg[k] in ("-L", "-P", "-e", "-@"):
+            k += 1
+        if k >= len(prev_seg):
+            # Bare `cd` → $HOME.
+            cwd = os.path.expanduser("~")
+            unresolvable = False
+            continue
+        path = prev_seg[k]
+        if path == "-" or "$" in path or "`" in path:
+            # $OLDPWD / unexpandable target (shell var / substitution). Mark
+            # the cwd unresolvable; a LATER resolvable `cd` clears it
+            # (last-cd-wins), matching the resolvable branches below.
+            unresolvable = True
+            cwd = None
+        elif path.startswith("~"):
+            cwd = os.path.expanduser(path)
+            unresolvable = False
+        elif os.path.isabs(path):
+            cwd = path
+            unresolvable = False
+        else:
+            cwd = str(Path.cwd() / path)
+            unresolvable = False
     return cwd, unresolvable
 
 
@@ -327,6 +342,66 @@ def _classify_segments(segs: list[list[str]]) -> tuple[str, str | None]:
     return VERDICT_NOT_PR, None
 
 
+# A heredoc opener: `<<` or `<<-`, optionally quoted tag. Matched on the raw
+# command text; quote-context false positives (a literal `<<TAG` inside a
+# string) at worst route a data line into a body — fail-toward-data is safe
+# because shell-fed bodies get the loose check below.
+_HEREDOC_OPEN_RE = re.compile(r"<<(-?)\s*(['\"]?)([A-Za-z_][A-Za-z0-9_]*)\2")
+
+
+def _strip_heredoc_bodies(command: str) -> tuple[str, list[str]]:
+    """Split heredoc BODIES out of *command*.
+
+    Returns (stripped_command, bodies): the command text with each heredoc's
+    body + terminator lines removed (the `<<TAG` opener stays on its line, so
+    the receiving segment keeps its shape), and the removed bodies. Multiple
+    openers on one line queue in order; a `<<-` terminator may be
+    tab-indented.
+    """
+    lines = command.split("\n")
+    out_lines: list[str] = []
+    bodies: list[str] = []
+    pending: list[tuple[str, bool]] = []  # (tag, allow_tab_indent)
+    current: list[str] | None = None
+    current_tag: str | None = None
+    current_tab_ok = False
+    for line in lines:
+        if current_tag is not None:
+            terminator = line.lstrip("\t") if current_tab_ok else line
+            if terminator == current_tag:
+                bodies.append("\n".join(current or []))
+                current, current_tag = None, None
+                if pending:
+                    tag, tab_ok = pending.pop(0)
+                    current, current_tag, current_tab_ok = [], tag, tab_ok
+                continue
+            assert current is not None
+            current.append(line)
+            continue
+        openers = _HEREDOC_OPEN_RE.findall(line)
+        out_lines.append(line)
+        if openers:
+            queue = [(tag, dash == "-") for dash, _q, tag in openers]
+            tag, tab_ok = queue.pop(0)
+            current, current_tag, current_tab_ok = [], tag, tab_ok
+            pending.extend(queue)
+    if current is not None:
+        # Unterminated body (tool-truncated input) — still data, not command.
+        bodies.append("\n".join(current))
+    return "\n".join(out_lines), bodies
+
+
+def _has_shell_heredoc_receiver(segs: list[list[str]]) -> bool:
+    """True when any segment that carries a heredoc opener token has a shell
+    head — that heredoc's body EXECUTES, so it can't be treated as data."""
+    for seg in segs:
+        if any(t in ("<<", "<<-") for t in seg):
+            i = skip_env(seg)
+            if i < len(seg) and seg[i] in SHELLS:
+                return True
+    return False
+
+
 def classify_gh_pr_create(command: str) -> tuple[str, str | None]:
     """One total verdict for the pre-PR gate: (verdict, cwd).
 
@@ -338,18 +413,38 @@ def classify_gh_pr_create(command: str) -> tuple[str, str | None]:
                                   mentions the words `gh pr create` in order;
                                   block loud (cwd None)
 
-    Tokenizable commands are decided by the strict token scan ALONE — the
-    word-bounded loose net runs only when `tokenize()` fails, where the
-    genuine ambiguity lives (heredocs, unbalanced quotes).
+    Heredoc bodies are DATA and are stripped before matching — a commit
+    message quoting the phrase neither delegates nor blocks. The one
+    carve-out: a body fed INTO a shell executes, so shell-received bodies get
+    the word-bounded loose check (fail-closed). Tokenizable commands are then
+    decided by the strict token scan ALONE — the loose net runs only when
+    tokenizing fails, where the genuine ambiguity lives (unbalanced quotes).
     """
     if not command or not command.strip():
         return VERDICT_NOT_PR, None
-    tokens = tokenize(command)
+
+    to_match = command
+    bodies: list[str] = []
+    if _HEREDOC_OPEN_RE.search(command):
+        to_match, bodies = _strip_heredoc_bodies(command)
+
+    tokens = tokenize(to_match)
     if tokens is None:
+        # Still untokenizable with bodies gone: classify on the FULL original
+        # text (bodies included) — the shell-receiver question is unanswerable
+        # here, so fail toward the loose net rather than toward data.
         if looks_like_gh_pr_create(command):
             return VERDICT_SUSPICIOUS, None
         return VERDICT_NOT_PR, None
-    return _classify_segments(split_segments(tokens))
+
+    segs = split_segments(tokens)
+    if bodies and _has_shell_heredoc_receiver(segs):
+        for body in bodies:
+            # Conservative: with any shell receiver present, every body gets
+            # the loose check (per-body receiver pairing isn't tracked).
+            if looks_like_gh_pr_create(body):
+                return VERDICT_SUSPICIOUS, None
+    return _classify_segments(segs)
 
 
 def find_gh_pr_create(command: str) -> str | None:
