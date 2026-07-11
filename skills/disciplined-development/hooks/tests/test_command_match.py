@@ -209,6 +209,25 @@ def test_classify_unquoted_eval_behind_cd_keeps_outer_cwd():
     )
 
 
+def test_classify_wrapped_shell_behind_cd_keeps_outer_cwd():
+    # The subshell inherits the outer cwd — the gate must review /repo, not
+    # the process cwd (a wrong-tree review defeats the gate).
+    assert classify_gh_pr_create("cd /repo && bash -c 'gh pr create'") == (
+        VERDICT_PR,
+        "/repo",
+    )
+    assert classify_gh_pr_create('cd /repo && eval "gh pr create"') == (
+        VERDICT_PR,
+        "/repo",
+    )
+
+
+def test_classify_wrapped_shell_behind_unexpandable_cd_is_unresolvable():
+    verdict, cwd = classify_gh_pr_create("cd $DIR && bash -c 'gh pr create'")
+    assert verdict == VERDICT_PR_UNRESOLVABLE
+    assert cwd is None
+
+
 def test_classify_echo_mention_stays_pr_shaped():
     # Documented over-broad bias, unchanged: three bare tokens are treated as
     # a PR attempt even under echo.

@@ -243,6 +243,40 @@ def _seg_has_pr_triple(seg: list[str]) -> bool:
     return False
 
 
+def _resolve_preceding_cd(
+    segs: list[list[str]], seg_idx: int
+) -> tuple[str | None, bool]:
+    """Resolve the effective `cd` chain before segment *seg_idx*.
+
+    Returns (cwd, unresolvable). Walks every preceding segment, so the LAST
+    `cd` in the chain wins (each iteration overwrites `cwd`). A relative `cd`
+    is anchored to the process cwd, not to a prior `cd` — so `cd /a && cd b
+    && gh pr create` resolves to `<process_cwd>/b`, not `/a/b`. The
+    single-`cd` form (`cd /repo && gh pr create`) is the only one we see in
+    practice from the `gh pr create` helper; chained or relative-after-
+    absolute forms are an accepted edge with this last-cd-wins contract.
+    `cwd` is None with `unresolvable` False when there is no `cd` at all.
+    """
+    cwd: str | None = None
+    unresolvable = False
+    for prev_seg in segs[:seg_idx]:
+        if len(prev_seg) >= 2 and prev_seg[0] == "cd":
+            path = prev_seg[1]
+            if "$" in path or "`" in path:
+                # Unexpandable target (shell var / substitution). Mark the
+                # cwd unresolvable; a LATER resolvable `cd` clears it
+                # (last-cd-wins), matching the resolvable branches below.
+                unresolvable = True
+                cwd = None
+            elif os.path.isabs(path):
+                cwd = path
+                unresolvable = False
+            else:
+                cwd = str(Path.cwd() / path)
+                unresolvable = False
+    return cwd, unresolvable
+
+
 def _classify_segments(segs: list[list[str]]) -> tuple[str, str | None]:
     """Strict token-level classification over split segments.
 
@@ -255,10 +289,11 @@ def _classify_segments(segs: list[list[str]]) -> tuple[str, str | None]:
         # the string argument. `eval` concatenates its args into a command, so
         # a single string arg gets the same recursion. Runs only when the
         # segment carries no triple of its own — an unquoted `eval gh pr
-        # create` is decided by the triple below, whose preceding-`cd`
-        # resolution the recursion (which sees only the inner string) would
-        # lose. The recursed cwd is the inner command's own (or the process
-        # cwd) — the pre-existing wrapped-shell contract.
+        # create` is decided by the triple below. A wrapped PR inherits the
+        # OUTER `cd` chain (the subshell starts there), so the outer
+        # resolution wins over the recursed cwd; an explicit inner `cd`
+        # behind an outer `cd` is an accepted edge (outer wins). An
+        # unresolvable outer `cd` fails loud — never a wrong-tree review.
         if not _seg_has_pr_triple(seg):
             for j, tok in enumerate(seg):
                 inner: str | None = None
@@ -268,41 +303,19 @@ def _classify_segments(segs: list[list[str]]) -> tuple[str, str | None]:
                 elif tok == "eval" and j + 1 < len(seg):
                     inner = " ".join(seg[j + 1 :])
                 if inner:
-                    verdict, cwd = classify_gh_pr_create(inner)
+                    verdict, inner_cwd = classify_gh_pr_create(inner)
                     if verdict == VERDICT_PR:
-                        return verdict, cwd
+                        outer_cwd, outer_unresolvable = _resolve_preceding_cd(segs, seg_idx)
+                        if outer_unresolvable:
+                            return VERDICT_PR_UNRESOLVABLE, None
+                        return VERDICT_PR, outer_cwd or inner_cwd
                     if verdict in (VERDICT_PR_UNRESOLVABLE, VERDICT_SUSPICIOUS):
                         # An unparseable/unresolvable wrapped command is still a
                         # PR attempt whose cwd is unknown — fail loud, not open.
                         return VERDICT_PR_UNRESOLVABLE, None
             continue
 
-        # Chained `cd` resolution: walks every preceding segment, so the
-        # LAST `cd` in the chain wins (each iteration overwrites `cwd`).
-        # A relative `cd` is anchored to the process cwd, not to a prior
-        # `cd` — so `cd /a && cd b && gh pr create` resolves to
-        # `<process_cwd>/b`, not `/a/b`. The single-`cd` form (`cd /repo
-        # && gh pr create`) is the only one we see in practice from the
-        # `gh pr create` helper; chained or relative-after-absolute
-        # forms are an accepted edge with this last-cd-wins contract.
-        cwd: str | None = None
-        cwd_unresolvable = False
-        for prev_seg in segs[:seg_idx]:
-            if len(prev_seg) >= 2 and prev_seg[0] == "cd":
-                path = prev_seg[1]
-                if "$" in path or "`" in path:
-                    # Unexpandable target (shell var / substitution). Mark the
-                    # cwd unresolvable; a LATER resolvable `cd` clears it
-                    # (last-cd-wins), matching the resolvable branches below.
-                    cwd_unresolvable = True
-                    cwd = None
-                elif os.path.isabs(path):
-                    cwd = path
-                    cwd_unresolvable = False
-                else:
-                    cwd = str(Path.cwd() / path)
-                    cwd_unresolvable = False
-
+        cwd, cwd_unresolvable = _resolve_preceding_cd(segs, seg_idx)
         if cwd_unresolvable:
             # Matched, but the effective cwd can't be resolved — fail LOUD
             # rather than reviewing the wrong tree.
