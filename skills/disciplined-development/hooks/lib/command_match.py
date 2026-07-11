@@ -186,79 +186,49 @@ def is_git_commit(command: str) -> bool:
 # ---- find-gh-pr-create ------------------------------------------------------
 
 
+# Word-bounded ordered match: the words `gh`, `pr`, `create` in order, any
+# distance apart. `\b` treats `_` as a word char, so `pre_pr_review` contains
+# no word `pr` and prose letter-runs (ri**gh**t / **pr**oject / **create**d)
+# never match — only genuine word-level mentions do.
+_LOOSE_PR_RE = re.compile(r"\bgh\b[\s\S]*?\bpr\b[\s\S]*?\bcreate\b")
+
+# classify_gh_pr_create verdicts — a total union the pre-PR gate switches on.
+VERDICT_NOT_PR = "not_pr"
+VERDICT_PR = "pr"
+VERDICT_PR_UNRESOLVABLE = "pr_unresolvable_cwd"
+VERDICT_SUSPICIOUS = "untokenizable_suspicious"
+
+
 def looks_like_gh_pr_create(command: str) -> bool:
-    """Loose detector: True when `gh`, `pr`, `create` appear in that order
-    anywhere in *command*, even when strict tokenizing fails (e.g. a heredoc
-    body that makes `tokenize()` return `None`).
+    """Loose fail-closed net for commands `tokenize()` cannot parse (heredocs,
+    unbalanced quotes) and for the gate's crash path: True when the WORDS
+    `gh`, `pr`, `create` appear in that order anywhere in *command*.
 
-    Deliberately over-broad: a command that merely *mentions* these tokens
-    (e.g. `echo gh pr create`) returns True. This is **accepted, documented
-    behavior** — a false positive is a human-overridable block (the model can
-    rewrite or the operator can set DD_SKIP_PR_REVIEW=1); a false negative is a
-    fail-open hole at the only hard gate in the hook stack. Bias toward True.
+    Word-bounded — ordinary prose whose words merely contain those letter
+    sequences does not match. A word-level mention in unparseable input still
+    does (e.g. a heredoc body quoting the command): **accepted, documented
+    behavior** — there a false positive is a human-overridable block, while a
+    false negative is a fail-open hole at the only hard gate in the stack.
 
-    Use this as the fail-closed net when `find_gh_pr_create` returns `None`:
-    `None` is ambiguous (not a PR *or* matched but cwd unresolvable); this
-    function distinguishes "clearly not a PR" from "looks like one, block it".
+    For TOKENIZABLE commands this net is deliberately never consulted —
+    `classify_gh_pr_create`'s strict token scan is authoritative there.
     """
-    pos = 0
-    for token in ("gh", "pr", "create"):
-        idx = command.find(token, pos)
-        if idx == -1:
-            return False
-        pos = idx + len(token)
-    return True
+    return bool(_LOOSE_PR_RE.search(command))
 
 
-def find_gh_pr_create(command: str) -> str | None:
-    """Locate a `gh pr create` invocation and return its resolved cwd.
+def _seg_has_pr_triple(seg: list[str]) -> bool:
+    """True when the segment contains the consecutive token sequence
+    `gh` [gh-global-flags] `pr` `create` at ANY position.
 
-    `cwd` is extracted from chained `cd <path>` segments (relative paths
-    resolved against the process cwd); with no `cd`, `cwd` is the process
-    working directory (`os.getcwd()`).
-
-    Return shape:
-      * `None`  — not a `gh pr create` command, **or** matched but the
-                  effective `cd` target is unexpandable (`$`/backtick) so
-                  cwd can't be resolved (caller uses `looks_like_gh_pr_create`
-                  to distinguish the two `None` cases and fail closed).
-      * `str`   — the resolved cwd (the process cwd when there is no `cd`,
-                  or the resolved `cd` target).
-
-    The unresolvable-cwd guard returns `None` (not the process cwd) so the
-    pre-PR gate fails loud rather than reviewing the wrong tree.
+    Position-independence replaces wrapper enumeration: `eval`/`env`/`nohup`/
+    `xargs`-prefixed invocations match without naming each wrapper, and a
+    quoted phrase (`grep "gh pr create"`) is a single token — never a triple.
+    `echo gh pr create` matching is the documented over-broad bias, unchanged.
     """
-    if not command:
-        return None
-    tokens = tokenize(command)
-    if tokens is None:
-        return None
-
-    segs = split_segments(tokens)
-    for seg_idx, seg in enumerate(segs):
-        i = skip_env(seg)
-
-        if i < len(seg) and seg[i] in SHELLS:
-            for j in range(i + 1, len(seg)):
-                t = seg[j]
-                if t in ("-c", "-lc", "-cl"):
-                    if j + 1 < len(seg):
-                        inner = tokenize(seg[j + 1])
-                        if inner:
-                            result = find_gh_pr_create(seg[j + 1])
-                            if result is not None:
-                                return result
-                    break
-                if not t.startswith("-"):
-                    break
+    for k, tok in enumerate(seg):
+        if tok != "gh":
             continue
-
-        if i >= len(seg) or seg[i] != "gh":
-            continue
-
-        # Skip gh global flags between `gh` and the subcommand. Mirrors
-        # the GIT_GLOBAL_FLAGS_WITH_VALUE handling in is_git_commit.
-        j = i + 1
+        j = k + 1
         while j < len(seg):
             t = seg[j]
             if t in GH_GLOBAL_FLAGS_WITH_VALUE:
@@ -268,11 +238,39 @@ def find_gh_pr_create(command: str) -> str | None:
                 j += 1
             else:
                 break
+        if j + 1 < len(seg) and seg[j] == "pr" and seg[j + 1] == "create":
+            return True
+    return False
 
-        if j >= len(seg) or seg[j] != "pr":
-            continue
-        j += 1
-        if j >= len(seg) or seg[j] != "create":
+
+def _classify_segments(segs: list[list[str]]) -> tuple[str, str | None]:
+    """Strict token-level classification over split segments.
+
+    Returns (verdict, cwd): VERDICT_PR with the resolved cwd,
+    VERDICT_PR_UNRESOLVABLE when matched behind an unexpandable `cd`, or
+    VERDICT_NOT_PR.
+    """
+    for seg_idx, seg in enumerate(segs):
+        # Wrapped shells at ANY position (`nohup bash -c '…'`): recurse into
+        # the string argument. `eval` concatenates its args into a command, so
+        # a single string arg gets the same recursion.
+        for j, tok in enumerate(seg):
+            inner: str | None = None
+            if tok in SHELLS and j + 1 < len(seg) and seg[j + 1] in ("-c", "-lc", "-cl"):
+                if j + 2 < len(seg):
+                    inner = seg[j + 2]
+            elif tok == "eval" and j + 1 < len(seg):
+                inner = " ".join(seg[j + 1 :])
+            if inner:
+                verdict, cwd = classify_gh_pr_create(inner)
+                if verdict == VERDICT_PR:
+                    return verdict, cwd
+                if verdict in (VERDICT_PR_UNRESOLVABLE, VERDICT_SUSPICIOUS):
+                    # An unparseable/unresolvable wrapped command is still a
+                    # PR attempt whose cwd is unknown — fail loud, not open.
+                    return VERDICT_PR_UNRESOLVABLE, None
+
+        if not _seg_has_pr_triple(seg):
             continue
 
         # Chained `cd` resolution: walks every preceding segment, so the
@@ -302,18 +300,51 @@ def find_gh_pr_create(command: str) -> str | None:
                     cwd_unresolvable = False
 
         if cwd_unresolvable:
-            # Matched `gh pr create`, but the effective cwd can't be resolved.
-            # Return None so the pre-PR gate fails LOUD rather than failing
-            # open or reviewing the wrong tree. The caller uses
-            # `looks_like_gh_pr_create` to distinguish this None from the
-            # "not a PR" None.
-            return None
+            # Matched, but the effective cwd can't be resolved — fail LOUD
+            # rather than reviewing the wrong tree.
+            return VERDICT_PR_UNRESOLVABLE, None
         if cwd is None:
             cwd = str(Path.cwd())
+        return VERDICT_PR, cwd
 
-        return cwd
+    return VERDICT_NOT_PR, None
 
-    return None
+
+def classify_gh_pr_create(command: str) -> tuple[str, str | None]:
+    """One total verdict for the pre-PR gate: (verdict, cwd).
+
+      * VERDICT_NOT_PR          — allow (cwd None)
+      * VERDICT_PR              — delegate to the review gate (cwd resolved)
+      * VERDICT_PR_UNRESOLVABLE — matched but the `cd` target is unexpandable;
+                                  block loud (cwd None)
+      * VERDICT_SUSPICIOUS      — the command couldn't be tokenized AND
+                                  mentions the words `gh pr create` in order;
+                                  block loud (cwd None)
+
+    Tokenizable commands are decided by the strict token scan ALONE — the
+    word-bounded loose net runs only when `tokenize()` fails, where the
+    genuine ambiguity lives (heredocs, unbalanced quotes).
+    """
+    if not command or not command.strip():
+        return VERDICT_NOT_PR, None
+    tokens = tokenize(command)
+    if tokens is None:
+        if looks_like_gh_pr_create(command):
+            return VERDICT_SUSPICIOUS, None
+        return VERDICT_NOT_PR, None
+    return _classify_segments(split_segments(tokens))
+
+
+def find_gh_pr_create(command: str) -> str | None:
+    """Locate a `gh pr create` invocation and return its resolved cwd.
+
+    Thin wrapper over `classify_gh_pr_create`: the resolved cwd for a
+    VERDICT_PR, else `None` (not a PR, untokenizable, or matched with an
+    unresolvable `cd` target — callers wanting the distinction use the
+    classifier directly).
+    """
+    verdict, cwd = classify_gh_pr_create(command)
+    return cwd if verdict == VERDICT_PR else None
 
 
 # ---- commit-landed (from the deleted review_debt.py) ------------------------

@@ -138,3 +138,122 @@ def test_find_gh_pr_create_unexpandable_cd_signals_unresolved_cwd():
     cmd = "cd $X && gh pr create"
     assert find_gh_pr_create(cmd) is None
     assert looks_like_gh_pr_create(cmd) is True
+
+
+# ---- classify_gh_pr_create (the gate's single verdict) -----------------------
+# Verdict table from plans/2026-07-11-pre-pr-review-false-positive-fix.md.
+
+from hooks.lib.command_match import (  # noqa: E402
+    VERDICT_NOT_PR,
+    VERDICT_PR,
+    VERDICT_PR_UNRESOLVABLE,
+    VERDICT_SUSPICIOUS,
+    classify_gh_pr_create,
+)
+
+
+def test_classify_plain_pr_resolves_process_cwd():
+    verdict, cwd = classify_gh_pr_create("gh pr create --title x")
+    assert verdict == VERDICT_PR
+    assert cwd == os.getcwd()
+
+
+def test_classify_chained_cd_resolves():
+    assert classify_gh_pr_create("cd /repo && gh pr create") == (VERDICT_PR, "/repo")
+
+
+def test_classify_unexpandable_cd_is_unresolvable():
+    verdict, cwd = classify_gh_pr_create("cd $DIR && gh pr create")
+    assert verdict == VERDICT_PR_UNRESOLVABLE
+    assert cwd is None
+
+
+def test_classify_repo_flag_forms_are_pr():
+    assert classify_gh_pr_create("gh --repo o/r pr create")[0] == VERDICT_PR
+    assert classify_gh_pr_create("gh -R o/r pr create")[0] == VERDICT_PR
+
+
+def test_classify_shell_wrapper_recurses():
+    assert classify_gh_pr_create("bash -c 'gh pr create'")[0] == VERDICT_PR
+
+
+def test_classify_wrapped_shell_behind_prefix_is_pr():
+    # The shell token need not be segment-head: nohup/env/time prefixes must
+    # not hide a wrapped PR creation (fail-closed duty before the loose net
+    # narrowed).
+    assert classify_gh_pr_create("nohup bash -c 'gh pr create'")[0] == VERDICT_PR
+
+
+def test_classify_triple_at_non_head_position_is_pr():
+    # eval/env/nohup/xargs heads: the consecutive token triple decides,
+    # position-independent — no wrapper enumeration.
+    for cmd in (
+        "eval gh pr create",
+        "env GH_TOKEN=x gh pr create",
+        "nohup gh pr create",
+        "xargs gh pr create",
+    ):
+        assert classify_gh_pr_create(cmd)[0] == VERDICT_PR, cmd
+
+
+def test_classify_eval_string_arg_recurses():
+    assert classify_gh_pr_create('eval "gh pr create"')[0] == VERDICT_PR
+
+
+def test_classify_echo_mention_stays_pr_shaped():
+    # Documented over-broad bias, unchanged: three bare tokens are treated as
+    # a PR attempt even under echo.
+    assert classify_gh_pr_create("echo gh pr create")[0] == VERDICT_PR
+
+
+def test_classify_quoted_phrase_argument_is_not_pr():
+    # Observed false positive: the quoted phrase is ONE token after shlex —
+    # never a triple; strict is authoritative for tokenizable commands.
+    verdict, _ = classify_gh_pr_create('grep -n "gh pr create" hooks/pre_pr_review.py')
+    assert verdict == VERDICT_NOT_PR
+
+
+def test_classify_tokenizable_prose_is_not_pr():
+    # Tokenizes fine, no triple → the loose net is never consulted.
+    verdict, _ = classify_gh_pr_create(
+        'git commit -m "the gh matcher, per project rules, was created"'
+    )
+    assert verdict == VERDICT_NOT_PR
+
+
+def test_classify_untokenizable_prose_subsequences_are_not_pr():
+    # Observed false positive: an unbalanced quote defeats tokenize(); the
+    # old loose net matched gh/pr/create as LETTER-RUNS inside ordinary words
+    # (right/project/created). Word-bounded, this is clean.
+    cmd = "git commit -m 'it's right: the project provenance was created'"
+    assert classify_gh_pr_create(cmd) == (VERDICT_NOT_PR, None)
+
+
+def test_classify_untokenizable_underscore_words_are_not_pr():
+    # \b treats _ as a word char: pre_pr_review contains no word `pr`.
+    cmd = "git commit -m 'it's the pre_pr_review gh matcher fix'"
+    assert classify_gh_pr_create(cmd) == (VERDICT_NOT_PR, None)
+
+
+def test_classify_untokenizable_literal_words_are_suspicious():
+    # Accepted residual: word-level literal mention in an unparseable command
+    # still blocks (fail-closed net, now self-diagnosing at the gate).
+    cmd = "git commit -m 'it's done, see gh pr create docs'"
+    assert classify_gh_pr_create(cmd) == (VERDICT_SUSPICIOUS, None)
+
+
+def test_classify_shell_fed_heredoc_is_never_not_pr():
+    # A heredoc piped INTO a shell executes its body — must never pass as
+    # NOT_PR (either the strict triple or the suspicious net catches it).
+    verdict, _ = classify_gh_pr_create("bash <<'EOF'\ngh pr create\nEOF")
+    assert verdict != VERDICT_NOT_PR
+
+
+def test_classify_empty_is_not_pr():
+    assert classify_gh_pr_create("") == (VERDICT_NOT_PR, None)
+    assert classify_gh_pr_create("   ") == (VERDICT_NOT_PR, None)
+
+
+def test_looks_like_word_bounded_rejects_letter_runs():
+    # The loose net no longer matches subsequences inside ordinary words.
+    assert looks_like_gh_pr_create("right: the project was created") is False
