@@ -6,14 +6,18 @@ Detects ``gh pr create``, resolves the target cwd, and delegates to
 resolution and no ``DD_HARD_BLOCK``; the verdict is entirely the external gate's
 responsibility.
 
-Paths:
-- PR-shaped + parseable cwd → delegate to ``external_review.py --cwd <cwd>``;
+Paths (one classifier verdict — ``classify_gh_pr_create`` — decides):
+- PR + resolved cwd → delegate to ``external_review.py --cwd <cwd>``;
   any non-zero result maps to exit 2 (Claude Code blocks PreToolUse ONLY on 2),
   and the delegate's stdout+stderr are re-emitted on stderr so findings reach
   the model.
-- PR-shaped + unparseable cwd (e.g. ``cd $VAR && gh pr create``) → log one
+- PR + unresolvable cwd (e.g. ``cd $VAR && gh pr create``) → log one
   ``reviews.jsonl`` ERROR row (decision=ERROR, reason=unparseable) then block
   (exit 2); the model is told to rewrite the command or set the bypass.
+- Untokenizable command mentioning the WORDS ``gh pr create`` in order → log
+  one ERROR row (reason=untokenizable_suspicious) then block (exit 2) with a
+  message naming the parse ambiguity. Tokenizable commands never reach this
+  net — the strict token scan is authoritative for them.
 - Not a ``gh pr create`` command → exit 0 (all other Bash through).
 - ``DD_SKIP_PR_REVIEW=1`` in the launching shell → exit 0 (bypass for automated
   workflows that review separately).
@@ -34,7 +38,11 @@ if str(_BASE_DIR) not in sys.path:
 
 from hooks.lib import config, logging_setup, review_record  # noqa: E402
 from hooks.lib.command_match import (  # noqa: E402
-    find_gh_pr_create,
+    VERDICT_NOT_PR,
+    VERDICT_PR,
+    VERDICT_PR_UNRESOLVABLE,
+    VERDICT_SUSPICIOUS,
+    classify_gh_pr_create,
     looks_like_gh_pr_create,
 )
 
@@ -85,8 +93,8 @@ def _current_branch(repo: str) -> str:
     return branch if r.returncode == 0 and branch else "detached"
 
 
-def _log_unparseable(repo: str) -> None:
-    """Append one ERROR/unparseable review row — best-effort, never raises."""
+def _log_error_row(repo: str, reason: str) -> None:
+    """Append one ERROR review row with the given reason — best-effort, never raises."""
     try:
         branch = _current_branch(repo)
         reviewer = config.get("review.reviewer", "codex")
@@ -99,7 +107,7 @@ def _log_unparseable(repo: str) -> None:
             round=1,
             context=ctx,
             decision="ERROR",
-            reason="unparseable",
+            reason=reason,
         )
         logging_setup.append_review(row)
     except Exception:
@@ -120,32 +128,49 @@ def main() -> int:
     command = ""
     try:
         command = _read_command()
-        cwd = find_gh_pr_create(command)
-        if cwd is None:
-            if looks_like_gh_pr_create(command):
-                # Looks like ``gh pr create`` but the target directory couldn't be
-                # resolved (e.g. a ``cd`` to a shell variable / command substitution).
-                # Fail closed: log ERROR row + block — do NOT let an unreviewed PR
-                # through (the fail-open bug this gate exists to prevent).
-                # The command was unparseable so the cd target is unknown;
-                # os.getcwd() is the process cwd, which may differ from the
-                # intended repo — the logged row's repo/branch/cadence fields
-                # are best-effort and may not match the intended tree.
-                repo = os.getcwd()
-                _log_unparseable(repo)
-                logger.emit("block", reason="unresolvable_cwd")
-                print(
-                    "[pre-pr] BLOCKED: couldn't resolve the target directory for a "
-                    "`gh pr create` (e.g. a `cd` to an unexpandable path or a "
-                    "hard-to-parse command). Re-run with an explicit or absolute "
-                    "path, or set DD_SKIP_PR_REVIEW=1 in the launching shell "
-                    "to bypass.",
-                    file=sys.stderr,
-                )
-                return 2
+        verdict, cwd = classify_gh_pr_create(command)
+
+        if verdict == VERDICT_NOT_PR:
             # Not ``gh pr create`` — let every other Bash command through.
             return 0
 
+        if verdict == VERDICT_PR_UNRESOLVABLE:
+            # Matched ``gh pr create`` but the target directory couldn't be
+            # resolved (a ``cd`` to a shell variable / command substitution).
+            # Fail closed: log ERROR row + block — do NOT let an unreviewed PR
+            # through. The cd target is unknown; os.getcwd() is the process
+            # cwd, which may differ from the intended repo — the logged row's
+            # repo/branch/cadence fields are best-effort.
+            _log_error_row(os.getcwd(), "unparseable")
+            logger.emit("block", reason="unresolvable_cwd")
+            print(
+                "[pre-pr] BLOCKED: `gh pr create` matched but its target "
+                "directory couldn't be resolved (a `cd` to an unexpandable "
+                "path). Re-run with an explicit or absolute path, or set "
+                "DD_SKIP_PR_REVIEW=1 in the launching shell to bypass.",
+                file=sys.stderr,
+            )
+            return 2
+
+        if verdict == VERDICT_SUSPICIOUS:
+            # The command could not be parsed AND mentions the words
+            # ``gh pr create`` in order (word-bounded). Fail closed — but name
+            # the heuristic so a false positive is diagnosable from the
+            # message alone.
+            _log_error_row(os.getcwd(), "untokenizable_suspicious")
+            logger.emit("block", reason="untokenizable_suspicious")
+            print(
+                "[pre-pr] BLOCKED: the command could not be parsed (heredoc "
+                "or unbalanced quote) and mentions `gh pr create` as words, "
+                "so it is treated as a PR attempt. If it is not one, rephrase "
+                "to avoid the literal phrase (e.g. `git commit -F <file>`); "
+                "a real `gh pr create` needs a parseable command. "
+                "DD_SKIP_PR_REVIEW=1 in the launching shell bypasses.",
+                file=sys.stderr,
+            )
+            return 2
+
+        assert verdict == VERDICT_PR and cwd is not None
         argv = [sys.executable, _external_review_script(), "--cwd", cwd]
         logger.emit("delegate", cwd=cwd)
         result = subprocess.run(argv, capture_output=True, text=True)

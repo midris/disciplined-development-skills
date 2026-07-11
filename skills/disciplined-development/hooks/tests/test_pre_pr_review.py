@@ -230,6 +230,68 @@ def test_cd_forwarded_as_cwd_to_external_review(tmp_path):
 # ---------------------------------------------------------------------------
 
 
+def test_heredoc_prose_commit_allows_no_row(tmp_path):
+    """Observed false positive: an untokenizable command (apostrophe in heredoc
+    prose) whose words merely CONTAIN gh/pr/create letter-runs must pass —
+    exit 0, shim not invoked, no review row."""
+    repo = _init_repo(tmp_path)
+    shim = _make_shim(tmp_path)
+    log_dir = tmp_path / "logs"
+    log_dir.mkdir()
+
+    cmd = (
+        "git commit -F - <<'MSG'\n"
+        "it's right: the project provenance was created\n"
+        "MSG"
+    )
+    proc, argv = _run(repo, shim, cmd, log_dir=log_dir)
+
+    assert proc.returncode == 0, proc.stderr
+    assert argv is None, "shim must NOT be invoked"
+    assert _rows(log_dir) == []
+
+
+def test_quoted_literal_argument_allows_no_row(tmp_path):
+    """Observed false positive: a tokenizable command carrying the literal
+    phrase as ONE quoted argument token is not a PR — strict is authoritative;
+    the loose net must not be consulted."""
+    repo = _init_repo(tmp_path)
+    shim = _make_shim(tmp_path)
+    log_dir = tmp_path / "logs"
+    log_dir.mkdir()
+
+    proc, argv = _run(
+        repo, shim, 'grep -n "gh pr create" hooks/pre_pr_review.py', log_dir=log_dir
+    )
+
+    assert proc.returncode == 0, proc.stderr
+    assert argv is None, "shim must NOT be invoked"
+    assert _rows(log_dir) == []
+
+
+def test_suspicious_untokenizable_blocks_with_distinct_reason(tmp_path):
+    """An untokenizable command mentioning the WORDS gh/pr/create blocks with
+    its own message (naming the parse ambiguity) and its own reviews.jsonl
+    reason — distinct from the unresolvable-cwd path's `unparseable`."""
+    repo = _init_repo(tmp_path)
+    shim = _make_shim(tmp_path)
+    log_dir = tmp_path / "logs"
+    log_dir.mkdir()
+
+    cmd = "git commit -m 'it's done, see gh pr create docs'"
+    proc, argv = _run(repo, shim, cmd, log_dir=log_dir)
+
+    assert proc.returncode == 2
+    assert argv is None, "shim must NOT be invoked"
+    assert "could not be parsed" in proc.stderr  # self-diagnosing message (b)
+    assert "DD_SKIP_PR_REVIEW" in proc.stderr
+
+    rows = _rows(log_dir)
+    assert len(rows) == 1, f"expected 1 review row, got {len(rows)}: {rows}"
+    assert rows[0]["decision"] == "ERROR"
+    assert rows[0]["reason"] == "untokenizable_suspicious"
+
+
 def test_delegate_spawn_exception_fails_closed_for_pr(tmp_path, monkeypatch):
     """subprocess.run raising inside main() on a gh pr create → return 2 (fail-closed).
 
@@ -244,8 +306,8 @@ def test_delegate_spawn_exception_fails_closed_for_pr(tmp_path, monkeypatch):
 
     monkeypatch.setattr(pre_pr_review.subprocess, "run", _raise)
     monkeypatch.setattr(pre_pr_review, "_read_command", lambda: "gh pr create")
-    # Suppress logging noise; _log_unparseable / setup may also call subprocess.run
-    # (via git), which is now patched to raise — _log_unparseable already swallows
+    # Suppress logging noise; _log_error_row / setup may also call subprocess.run
+    # (via git), which is now patched to raise — _log_error_row already swallows
     # those; guard against logger.emit touching subprocess by patching logging_setup.
     import io
     monkeypatch.setattr(sys, "stderr", io.StringIO())
