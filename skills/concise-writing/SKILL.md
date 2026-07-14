@@ -11,7 +11,7 @@ description: 'Use when writing or finalizing prose a reader must get through —
 
 ## Overview
 
-Cut **verbosity** — words beyond what the information needs — while keeping every bit of information and any framing that aids comprehension. Density is good; padding is not. This is not brevity-for-its-own-sake: a rich, complete document is the goal.
+Cut **verbosity** — words beyond what the information needs — while keeping every bit of information and any framing that aids comprehension. Density is good; padding is not. This is not brevity-for-its-own-sake: a rich, easy to read, complete document is the goal.
 
 ## The core test
 
