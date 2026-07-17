@@ -43,7 +43,7 @@ DEFAULTS = {
     "review": {
         "prompt_path": ".claude/skills/adversarial-review/SKILL.md",
         "reviewer": "codex",
-        "model": "gpt-5.5",
+        "model": "gpt-5.6-terra",
         "effort": "medium",
     },
     "codex": {"pr_review_timeout_s": 30},
