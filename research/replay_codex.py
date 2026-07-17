@@ -3,8 +3,7 @@
 
 Replays a historical sha through ``codex review`` with chosen
 (model, effort, strategy) and records duration + findings to
-``research/results.csv``. ``replay_review.py`` (the claude harness)
-was deleted in E2 — ``replay_codex.py`` is the only replay script.
+``research/results.csv``.
 
 Strategies
 ----------
@@ -24,7 +23,7 @@ Outputs
 -------
 
 * ``research/results.csv`` — one row per run (appended). Model col
-  carries the codex model slug (e.g. ``gpt-5.5``); effort/strategy
+  carries the codex model slug (e.g. ``gpt-5.6-terra``); effort/strategy
   cols are reused.
 * ``research/runs/<run_id>.txt`` — full stdout/stderr per run.
 """
@@ -48,15 +47,25 @@ sys.path.insert(0, str(_SKILL_DIR))
 from hooks.lib import severity  # noqa: E402
 
 
-CODEX_MODELS = (
-    "gpt-5.5",
-    "gpt-5.4",
-    "gpt-5.4-mini",
-    "gpt-5.3-codex",
-    "gpt-5.3-codex-spark",
-    "gpt-5.2",
+# Model -> reasoning levels the CLI accepts for it. Mirrors the model table
+# embedded in codex-cli (read from the binary; 0.144.5 at time of writing).
+# The grid is ragged: the max/ultra tiers arrived with 5.6, and luna stops at
+# max, so a flat model x effort product would offer pairs codex cannot serve.
+CODEX_MODEL_EFFORTS = {
+    "gpt-5.6-sol": ("low", "medium", "high", "xhigh", "max", "ultra"),
+    "gpt-5.6-terra": ("low", "medium", "high", "xhigh", "max", "ultra"),
+    "gpt-5.6-luna": ("low", "medium", "high", "xhigh", "max"),
+    "gpt-5.5": ("low", "medium", "high", "xhigh"),
+    "gpt-5.4": ("low", "medium", "high", "xhigh"),
+    "gpt-5.4-mini": ("low", "medium", "high", "xhigh"),
+    "gpt-5.2": ("low", "medium", "high", "xhigh"),
+}
+CODEX_MODELS = tuple(CODEX_MODEL_EFFORTS)
+# Flattened union — argparse's effort choices. Necessarily permissive: it
+# admits pairs only the per-model check in main() can reject.
+CODEX_EFFORTS = tuple(
+    dict.fromkeys(e for levels in CODEX_MODEL_EFFORTS.values() for e in levels)
 )
-CODEX_EFFORTS = ("low", "medium", "high", "xhigh")
 CODEX_STRATEGIES = ("fetched", "stuffed")
 
 
@@ -82,6 +91,16 @@ def main() -> int:
                          "Use the clean worktree at the sha (e.g. /tmp/dd-replay-clean) "
                          "to avoid current-master contamination.")
     args = ap.parse_args()
+
+    # argparse only checks the effort against the flattened union, so an effort
+    # its model never supported (e.g. gpt-5.5 + ultra) gets this far. codex
+    # rejects the pair itself, but not before the run is dispatched and billed.
+    supported = CODEX_MODEL_EFFORTS[args.model]
+    if args.effort not in supported:
+        raise SystemExit(
+            f"{args.model} does not support effort {args.effort!r} — "
+            f"supported: {', '.join(supported)}"
+        )
 
     cwd = pathlib.Path(args.worktree).resolve() if args.worktree else REPO_ROOT
 

@@ -10,7 +10,8 @@ Two layers of JSON config + env overrides:
   only what you need; delete a key to fall back to the default. Resolved under
   `$CLAUDE_PROJECT_DIR` (the harness-set project root), falling back to the
   current directory when that var is unset; `DD_CONFIG` overrides the path
-  outright.
+  outright. `external_review.py --cwd <repo>` resolves config under `<repo>` —
+  the repo it reviews owns the settings, not the project that invoked it.
 
 ### Precedence (lowest → highest)
 
@@ -123,7 +124,7 @@ Observability — comprehensive + on by default; tuned by retention/cleanup.
 |---|---|---|---|
 | `prompt_path` | string | `.claude/skills/adversarial-review/SKILL.md` | Path to the review skill (relative → repo root); passed to the reviewer as the prompt header. |
 | `reviewer` | string | `"codex"` | Reviewer id recorded in each `reviews.jsonl` row. The gate runs `codex` (binary path set by `DD_CODEX_BIN`), not whatever this field says — it labels the log, it does not select the binary. |
-| `model` | string | `"gpt-5.5"` | Model id passed to the reviewer. |
+| `model` | string | `"gpt-5.6-terra"` | Model id passed to the reviewer. |
 | `effort` | string | `"medium"` | Effort level passed to the reviewer. |
 
 Projects without `codex` on `$PATH` should point `DD_CODEX_BIN` at the binary —

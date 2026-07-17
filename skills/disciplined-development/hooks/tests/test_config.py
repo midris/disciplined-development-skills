@@ -72,7 +72,7 @@ def test_defaults_roundtrip_nested_dot_path():
     assert config.get("codex.pr_review_timeout_s") == 600
     # --- review gate config (new in Sub-task A / Task 2.2) ---
     assert config.get("review.reviewer") == "codex"
-    assert config.get("review.model") == "gpt-5.5"
+    assert config.get("review.model") == "gpt-5.6-terra"
     assert config.get("review.effort") == "medium"
     # Observability (Part G): single config surface for logging tunables.
     assert config.get("logging.dir") is None  # null → logging_setup derives
@@ -116,7 +116,7 @@ def test_user_override_of_review_reviewer_takes_effect(tmp_path, monkeypatch):
     )
     assert config.get("review.reviewer") == "custom"
     # Deep merge keeps untouched sibling leaves from defaults.
-    assert config.get("review.model") == "gpt-5.5"
+    assert config.get("review.model") == "gpt-5.6-terra"
     assert config.get("review.effort") == "medium"
 
 
@@ -253,7 +253,7 @@ def test_dd_config_env_wins_over_project_dir(tmp_path, monkeypatch):
 def test_review_gate_reviewer_model_effort_defaults():
     """review.reviewer / review.model / review.effort ship with correct defaults."""
     assert config.get("review.reviewer") == "codex"
-    assert config.get("review.model") == "gpt-5.5"
+    assert config.get("review.model") == "gpt-5.6-terra"
     assert config.get("review.effort") == "medium"
 
 
@@ -262,7 +262,7 @@ def test_review_gate_user_override_of_reviewer(tmp_path, monkeypatch):
     _write_user_config(tmp_path, monkeypatch, {"review": {"reviewer": "my-codex"}})
     assert config.get("review.reviewer") == "my-codex"
     # Deep merge keeps untouched sibling leaves from defaults.
-    assert config.get("review.model") == "gpt-5.5"
+    assert config.get("review.model") == "gpt-5.6-terra"
     assert config.get("review.effort") == "medium"
     # prompt_path sibling also survives.
     assert config.get("review.prompt_path") == ".claude/skills/adversarial-review/SKILL.md"
