@@ -3,15 +3,16 @@
 Confirms the ``research/replay_codex.py`` module imports cleanly
 (its module-level ``from hooks.lib import ...`` resolves — no live reviewer
 dispatch, main() is __name__-guarded) and uses the production strategy enum.
-
-``replay_review.py`` was deleted in E2 (``claude -p`` path removed).
 """
 
 from __future__ import annotations
 
 import importlib.util
 import re
+import sys
 from pathlib import Path
+
+import pytest
 
 _HARNESS = Path(__file__).resolve().parent
 
@@ -37,6 +38,25 @@ def test_replay_codex_uses_production_strategy_enum():
         "replay_codex.py retains legacy 'bare' strategy token"
 
 
-def test_replay_review_deleted():
-    """replay_review.py was removed in E2 — confirm it is gone."""
-    assert not (_HARNESS / "replay_review.py").exists()
+def test_model_choices_derive_from_the_effort_map():
+    """CODEX_MODEL_EFFORTS is the single source for which models are offered."""
+    rc = _load("replay_codex")
+    assert rc.CODEX_MODELS == tuple(rc.CODEX_MODEL_EFFORTS)
+
+
+def test_rejects_effort_the_model_does_not_support(monkeypatch):
+    """gpt-5.5 predates the max/ultra tiers, so the pair must die before dispatch.
+
+    argparse alone accepts it: `ultra` is a valid member of the flattened
+    CODEX_EFFORTS union. Only the per-model check rejects it, and it has to
+    fire before the run starts — codex would otherwise reject the pair itself,
+    but not until it has burned a paid multi-minute review.
+    """
+    rc = _load("replay_codex")
+    monkeypatch.setattr(
+        sys, "argv",
+        ["replay_codex.py", "deadbeef", "cafebabe", "gpt-5.5", "ultra", "fetched"],
+    )
+    with pytest.raises(SystemExit) as exc:
+        rc.main()
+    assert "ultra" in str(exc.value)

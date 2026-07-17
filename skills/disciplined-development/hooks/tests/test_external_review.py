@@ -47,13 +47,6 @@ DEFAULTS = {
         "effort": "medium",
     },
     "codex": {"pr_review_timeout_s": 30},
-    "review_tiers": {
-        "pre_pr": {
-            "reviewer": "codex",
-            "model": "gpt-5.5",
-            "default_effort": "medium",
-        },
-    },
     "logging": {"enabled": True, "dir": None},
 }
 
