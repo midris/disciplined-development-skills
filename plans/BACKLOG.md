@@ -2,7 +2,9 @@
 
 Prioritized backlog distilled from the `plans/deferred/` audit (2026-06-17),
 refreshed 2026-06-22 after the review-tooling overhaul landed; 2026-06-26 promoted the
-`adversarial-review` generative rule + angle plans (B18–B20) to **Next up**. **All items
+`adversarial-review` generative rule + angle plans (B18–B20) to **Next up**; 2026-07-17
+promoted the skills-portability cycle (B25) and logged the defects a codex cold read of
+the doctrine already found (B23, B24, B26). **All items
 OPEN** unless noted; items resolved or obsoleted by the overhaul are listed near the
 bottom, and the "Done" section is context.
 
@@ -10,14 +12,63 @@ Item shape: **ID · title** — category · source · effort/risk · one-line (+
 Effort S/M/L. **This doc is the seed for the planned GitHub-issues integration** — IDs map
 1:1 to issues once that lands; until then this is the single source for "what's next."
 
-## Next up (current focus) — `adversarial-review` generative rule + angle batch
+## Next up (current focus) — skills-portability cycle + `adversarial-review` angle batch
 
 Promoted ahead of the tiers below (2026-06-26): the most-developed, RED-grounded work.
 Each is a skill edit, so `superpowers:writing-skills`' Iron Law binds (RED → GREEN →
 REFACTOR; micro-test wording vs a no-guidance control). B18 **shipped** 2026-06-27
 (PR #35); B20 **shipped** 2026-06-30 (owner's call — RED did not reproduce; see B20 below).
 B19 remains — it rides the same angle-discrimination cycle as Tier 2's B4–B6 + B16's `currency`.
+2026-07-17 (owner): **B25** is current focus; **B23**/**B24** are defects it already turned up.
 
+- **B25 · skills portability review + rework cycle (codex-driven)** — skill-content / portability · 2026-07-17 · L/med.
+  Verify the **skills** (not the hooks) are genuinely portable across models — the bundle's
+  central claim. Method: hand each `SKILL.md` to a non-Claude reader cold and rework whatever
+  doesn't survive the read. A 9-run probe of `disciplined-development/SKILL.md` alone yielded
+  B23 + B24: a Claude session had been resolving those ambiguities from conversation context
+  rather than from the page, which is precisely the portability defect. The other eight skills
+  are unprobed. Distinct from **B6** (a review *angle* for env/path/OS assumptions in code).
+  Method notes from the probe — all three cost the cycle real money if ignored:
+  (1) **n=1 is noise.** Within-cell variance swamped every between-cell difference: terra/high
+  burned 20,183 vs 34,634 tokens on byte-identical input, and read the repo in 1 of 2 runs.
+  Every pattern visible at n=2 collapsed at n=3. Use n≥3 per cell; treat a single run as anecdote.
+  (2) **Convergence measures salience, not validity.** The unanimous 9/9 finding is a judgment
+  call; the two contradictions verifiable against the file scored 2/9 and 1/9. Verify each finding
+  against the artifact — never rank by hit count.
+  (3) **Cost does not predict quality.** The cheapest run of the nine (3,821 tokens) found the
+  sharpest contradiction.
+  Acceptance: a per-skill cold-read record in `skill-validation/`; defects fixed per the
+  `writing-skills` Iron Law; the doctrine reads correctly to a cold non-Claude reader without
+  conversation context.
+- **B23 · doctrine self-contradictions (codex cold read)** — skill-content · 2026-07-17 · M/med.
+  Three contradictions in `disciplined-development/SKILL.md`, each **verified against the file**,
+  each surfaced by codex reading the doctrine cold (9 runs; terra/med, terra/high, sol/low, n=3):
+  **(a) Principle 7** — "wait for the edge case to actually occur" + "handle observed cases;
+  document the rest as accepted edge cases" vs "a crash or wrong output on a representable input
+  is a defect, not an edge case. Fix by construction." Nothing says which wins. Proposed
+  (terra/high#2): fix-by-construction dominates wherever the invariant is fragile. Live instance: **B26**.
+  **(b) Iron Law + Gate 3 vs Principle 1** — the Iron Law admits an artifact "in writing, in chat,
+  or in the running system" and Gate 3 says "Paste evidence in chat", while Principle 1 says
+  "Conversation is not a contract; the file is." Same fix from 3 independent runs across both
+  models: chat may discharge transient gate evidence; durable scope, decisions, deferrals and
+  rationale must reconcile into the governing file before the change lands.
+  **(c) "No discipline is skippable on grounds of size, effort, or impact"** vs the Mode-emphasis
+  table's per-mode **Active gates** subsets — Brainstorming lists no gates, docs-editing lists
+  Gates 1+4 only. "Active" implies the rest are inactive: skipping by mode rather than by size.
+  Resolution shape in **B24**.
+  Acceptance: each resolved on-page; RED/GREEN per `superpowers:writing-skills`; cold-read confirms
+  no worse instruction; `wc -w` bounded. (a) found by sol/low#1 + terra/high#2; (b) by sol/low#2 +
+  terra/med#3 + sol/low#3; (c) by terra/med#3.
+- **B24 · proportionality: explicit discharge, not silent skip** — skill-content · 2026-07-17 · M/med.
+  The only **9/9** finding in the probe — every run, both models, all three effort tiers: fail-closed
+  everywhere reads as ceremony on tiny or no-risk work and invites the bypass it aims to prevent.
+  Proposed (sol/low#3): keep the posture, drop the empty ritual — *every gate must be considered and
+  explicitly discharged; a documented "not applicable" may be the artifact where the gate has no
+  meaningful subject.* Subsumes B23(c): the mode table is already the proportionality dial, and the
+  preamble denies it exists. Caution: 9/9 measures how the doctrine **reads**, not that it is wrong —
+  this is a judgment call, unlike B23. Related: B7, B2's closure.
+  Acceptance: rule on-page; RED/GREEN; the mode table and the "no discipline is skippable" line stop
+  contradicting; no new hatch that permits a silent skip.
 - **B18 · generative "Generate the unexercised cases" baseline rule** — skill-content · 2026-06-26 · M-L/med.
   Add a fourth always-on Rule to `adversarial-review` (beside Enumerate / Verify / Challenge):
   manufacture the input or condition the artifact is silent on, and break it. Two faces — input space
@@ -146,6 +197,17 @@ Separately, an already-scoped angle plan (not a candidate to vet):
   yields "No findings."; deferred plan of record:
   `plans/completed/2026-07-01-external-gate-root-attack-forcing-function.md` (closure).
 
+- **B26 · chained relative `cd` lets the gate review a different repo** — pre-pr-gate · 2026-07-17 · S-M/med.
+  `command_match.py:280`: a relative `cd` anchors to the process cwd, not to a preceding `cd`, so
+  `cd /a && cd b && gh pr create` resolves to `<process_cwd>/b`. The gate can then review a
+  different repo than the PR targets — a bypass vector, not merely a scoping quirk. Today an
+  accepted edge with on-page rationale at the call site. Whether that acceptance survives **is**
+  B23(a): the input is representable and the output is wrong, which the fix-by-construction clause
+  calls a defect and the wait-for-the-edge-case clause calls an accepted edge. Raised as P1 by the
+  external gate on PR #38 (terra/medium, 2026-07-17); its sibling P1 — config ignoring `--cwd` —
+  was fixed there (`6f8be3e`).
+  Acceptance: settle B23(a) first, then either fix by construction (resolve each `cd` against the
+  running cwd) or restate the acceptance so it survives the settled rule.
 - **B9 · remediation commits blocked at the gate** — remediation-boundary · loop #7 · M/med.
   A review's own fix commits hit the hard block; needs a runner-set grace token (no human flag).
 - **B10 · doc-vs-code nudge weighting** — hook-cadence · loop #2 · M/med. *(PARTIAL: consumer config-mitigated, source defaults unchanged.)*
