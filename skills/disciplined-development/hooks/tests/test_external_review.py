@@ -242,6 +242,36 @@ def gate_env(tmp_path):
 
 
 # ---------------------------------------------------------------------------
+# Config follows --cwd
+# ---------------------------------------------------------------------------
+
+
+def test_target_repo_config_wins_over_invoking_project_config(gate_env, tmp_path):
+    """`--cwd` picks the repo under review, so that repo's dd-config.json must win.
+
+    Otherwise the target is reviewed using the invoking project's model, effort,
+    timeout, and prompt_path — and that prompt_path may not resolve in the
+    target at all. The fixture repo already carries `.claude/` (skill + plan);
+    only the config file is added here.
+    """
+    env, repo, _log_dir = gate_env
+    (repo / ".claude" / "dd-config.json").write_text(
+        json.dumps({"review": {"model": "target-model"}}), encoding="utf-8"
+    )
+    # A different project does the invoking, with a conflicting override.
+    invoking = tmp_path / "invoking"
+    (invoking / ".claude").mkdir(parents=True)
+    (invoking / ".claude" / "dd-config.json").write_text(
+        json.dumps({"review": {"model": "invoking-model"}}), encoding="utf-8"
+    )
+
+    _proc, argv = _argv_log({**env, "CLAUDE_PROJECT_DIR": str(invoking)}, repo, tmp_path)
+
+    assert "target-model" in argv, f"target repo's model override ignored; argv={argv}"
+    assert "invoking-model" not in argv
+
+
+# ---------------------------------------------------------------------------
 # T1 — clean PASS
 # ---------------------------------------------------------------------------
 

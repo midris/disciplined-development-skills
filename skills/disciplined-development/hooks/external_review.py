@@ -254,6 +254,18 @@ def main(argv: list[str] | None = None) -> int:
     start = cwd_override or str(pathlib.Path.cwd())
     repo = state.repo_root(start) or start
 
+    # `--cwd` names the repo under review, so that repo's own dd-config.json has
+    # to drive the run. config resolves user overrides under CLAUDE_PROJECT_DIR,
+    # which still points at the invoking project — leaving its model, effort,
+    # timeout and prompt_path to leak into a review of a different repo, with a
+    # prompt_path that need not resolve there at all. Redirect before the first
+    # read (every config.get below runs through _resolve_timeout / _build_prompt
+    # / the log row). Only on --cwd: without it, CLAUDE_PROJECT_DIR is already
+    # the right answer and the harness's value must stand.
+    if cwd_override:
+        os.environ["CLAUDE_PROJECT_DIR"] = repo
+        config.reset_config_cache()
+
     branch = _current_branch(repo)
     timeout_s = _resolve_timeout()
 

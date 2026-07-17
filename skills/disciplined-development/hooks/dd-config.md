@@ -10,7 +10,8 @@ Two layers of JSON config + env overrides:
   only what you need; delete a key to fall back to the default. Resolved under
   `$CLAUDE_PROJECT_DIR` (the harness-set project root), falling back to the
   current directory when that var is unset; `DD_CONFIG` overrides the path
-  outright.
+  outright. `external_review.py --cwd <repo>` resolves config under `<repo>` —
+  the repo it reviews owns the settings, not the project that invoked it.
 
 ### Precedence (lowest → highest)
 
