@@ -10,7 +10,7 @@ description: Use with `superpowers:writing-plans` whenever the deliverable is a 
 **Owns:** the per-step content-density rule ("prose is the contract; code is the implementer's job"), the illustrative-snippet operational test, the test-table substitute for tricky logic.
 **Does not own:** upstream plan scaffolding (header, files-touched, step decomposition, no-placeholders, TDD ordering, commit cadence) — that stays with `superpowers:writing-plans`.
 
-`superpowers:writing-plans` says "if a step changes code, show the code." This skill flips that one rule: **prose is the contract; the code is the implementer's job**. Plans and specs carry requirements + order-of-operations + status — not the implementation written out.
+`superpowers:writing-plans` says "if a step changes code, show the code." This skill flips that one rule: **prose is the contract; the code is the implementer's job**. Plans and specs carry concise requirements + order-of-operations + status — not the implementation written out.
 
 ## The rule
 

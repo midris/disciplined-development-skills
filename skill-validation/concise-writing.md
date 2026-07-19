@@ -53,6 +53,10 @@ already-lean ones — not a fixed percentage.
 Re-run the relevant probe before shipping any change: verbosity delta + over-trim
 for rule/content edits, routing for description/trigger edits.
 
+- **2026-07-19, "When editing existing text, draft first" rule** — shipped as an
+  owner's-call without a fresh probe. Low-risk addition (a process reminder, not a
+  new pattern to detect); flagged here rather than silently skipping the process.
+
 ## Appendix — captured run (cache-eviction build domain)
 
 The skill was written against this baseline. Task: a "Cache Eviction" README
