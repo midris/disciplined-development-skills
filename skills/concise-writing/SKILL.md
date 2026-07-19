@@ -60,6 +60,8 @@ Over-trimming is its own failure. Keep:
 - **Rationale** — owned by `writing-explicit-rationale`; concision never licenses dropping the why.
 - **Spec/plan completeness** — owned by `lean-plan-writing`; a requirement list is not padding.
 
+When editing existing text, draft first. Diff edits against the prose being edited to make sure no meaning is lost.  
+
 Concision is judgment, not mechanical minimization. When unsure whether something is framing or padding, keep it and flag it.
 
 ## Rationalizations
