@@ -127,13 +127,13 @@ subagent not to dispatch its own subagents or act on hook nudges
 
 REQUIRED SUB-SKILL: `dispatching-development-subagents`.
 
-**5. Test-first for behavior changes — non-negotiable.**
-- Test and impl land in the same commit (`feat:` or `fix:`).
+**5. Test-first for behavior changes — TDD non-negotiable.**
 - Editing order: write failing, watch fail, implement, refactor.
 - Compiled languages: empty stubs first, then test, then fill.
 - Never `test:` then `feat:` for the same unit (the `test:` commit would land red).
 - Test names state what they prove (`rejects_empty_input`), not what they do (`handles_edge_cases`).
 - Fixtures match real producer output, not idealized values.
+- Test and impl land in the same commit (`feat:` or `fix:`).
 - Exceptions (need user approval): throwaway prototypes, generated code, static configuration values (not schema or behavior changes).
 
 REQUIRED SUB-SKILL: `superpowers:test-driven-development`.
