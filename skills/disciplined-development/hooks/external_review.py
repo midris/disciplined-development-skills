@@ -150,6 +150,8 @@ def _build_prompt(repo: str) -> str:
         f"Review this repository following the review guidelines at: {skill_pointer}\n"
         f"{plan_section}\n"
         f"Review the entire repository against the plan above.\n"
+        f"The plan may be phased (chunks/PRs): treat unchecked or explicitly-future "
+        f"sections as out of scope — planned work, not missing work.\n"
         f"Emit findings as: - [PN] file:line: summary\n"
         f"End with a final line containing only DD-VERDICT: PASS or DD-VERDICT: BLOCK "
         f"(nothing trailing)."
