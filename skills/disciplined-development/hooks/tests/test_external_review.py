@@ -561,3 +561,88 @@ def test_pass_reset_lands_on_repo_root_from_subdir_cwd(gate_env, tmp_path):
     assert _edits_count(repo) == 0                       # repo-root counter reset
     assert _checkpoint(repo) == _head_sha(repo)
     assert not (sub / ".claude" / ".dd-state").exists()  # no stray state dir
+
+
+# ---------------------------------------------------------------------------
+# Advisory paths (pr_review.advisory_paths) — mirror findings downgrade to P3
+# ---------------------------------------------------------------------------
+
+
+def _set_advisory_config(repo: Path) -> None:
+    (repo / ".claude" / "dd-config.json").write_text(
+        json.dumps({"pr_review": {"advisory_paths": ["design/**"]}}),
+        encoding="utf-8",
+    )
+
+
+def test_advisory_only_block_downgrades_to_pass(gate_env, tmp_path):
+    """BLOCK whose P0-P2 findings all sit in advisory paths → P3 downgrade, gate opens.
+
+    The row logs PASS with reason=advisory_only and the downgraded tier counts;
+    state resets like any clean pass; the downgraded findings surface on stdout
+    so they stay visible and fixable.
+    """
+    env, repo, log_dir = gate_env
+    _set_advisory_config(repo)
+    _seed_edits(repo, 2, _BASE_DIR)
+
+    proc = _run(env, repo,
+                stub_stdout="- [P2] design/components/x.jsx:5: mirror defect\nDD-VERDICT: BLOCK")
+
+    assert proc.returncode == 0, proc.stderr
+    rows = _rows(log_dir)
+    assert len(rows) == 1
+    row = rows[0]
+    assert row["decision"] == "PASS"
+    assert row["reason"] == "advisory_only"
+    assert row["p3"] == 1
+    assert row["p2"] == 0
+    assert "advisory path; was P2" in proc.stdout
+    assert _edits_count(repo) == 0
+    assert _checkpoint(repo) == _head_sha(repo)
+
+
+def test_mixed_block_stays_blocked_with_downgraded_log(gate_env, tmp_path):
+    """A repo-owned P1 beside an advisory P2 still blocks; the log shows the split."""
+    env, repo, log_dir = gate_env
+    _set_advisory_config(repo)
+    _seed_edits(repo, 2, _BASE_DIR)
+
+    proc = _run(env, repo,
+                stub_stdout=("- [P2] design/a.jsx:1: mirror defect\n"
+                             "- [P1] hooks/foo.py:3: repo defect\n"
+                             "DD-VERDICT: BLOCK"))
+
+    assert proc.returncode != 0
+    rows = _rows(log_dir)
+    assert len(rows) == 1
+    row = rows[0]
+    assert row["decision"] == "BLOCK"
+    assert row["p1"] == 1
+    assert row["p3"] == 1
+    assert row["p2"] == 0
+    # No state change on BLOCK.
+    assert _edits_count(repo) == 2
+    assert _checkpoint(repo) is None
+
+
+def test_block_without_parseable_findings_stays_blocked(gate_env, tmp_path):
+    """BLOCK with no parseable findings cannot be downgraded (fail closed)."""
+    env, repo, log_dir = gate_env
+    _set_advisory_config(repo)
+
+    proc = _run(env, repo, stub_stdout="Something is wrong.\nDD-VERDICT: BLOCK")
+
+    assert proc.returncode != 0
+    assert _rows(log_dir)[0]["decision"] == "BLOCK"
+
+
+def test_advisory_finding_without_config_still_blocks(gate_env, tmp_path):
+    """No pr_review.advisory_paths configured → behavior unchanged, gate blocks."""
+    env, repo, log_dir = gate_env
+
+    proc = _run(env, repo,
+                stub_stdout="- [P2] design/components/x.jsx:5: mirror defect\nDD-VERDICT: BLOCK")
+
+    assert proc.returncode != 0
+    assert _rows(log_dir)[0]["decision"] == "BLOCK"

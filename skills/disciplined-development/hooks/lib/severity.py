@@ -11,6 +11,7 @@ when ``line_start=True``; mid-prose mentions must not inflate the count.
 
 from __future__ import annotations
 
+import fnmatch
 import re
 
 # ---- structured parsers (consumed by the review-record builder + gate) ------
@@ -91,6 +92,47 @@ def parse_findings(text: str, line_start: bool = True) -> list[dict]:
                 "summary": rest,
             })
     return out
+
+
+def downgrade_advisory_findings(
+    text: str, advisory_globs: list[str]
+) -> tuple[str, int, int]:
+    """Rewrite advisory-path findings to ``[P3]``; return ``(text, blocking, downgraded)``.
+
+    A P0-P2 finding line whose parsed file matches any glob (``fnmatch``
+    semantics — ``*`` crosses ``/``, so ``design/**`` covers the whole tree) is
+    rewritten in place: its severity tag becomes ``[P3]`` and the line gains an
+    ``(advisory path; was Pn)`` suffix, so the finding stays visible and
+    fixable while the gate's tier semantics no longer block on it.
+
+    ``blocking`` counts the P0-P2 findings that did NOT match — including any
+    finding without a parseable file, which cannot be proven advisory and so
+    stays blocking (fail closed). P3 findings are never counted or rewritten.
+    Empty ``advisory_globs`` is the identity transform.
+    """
+    globs = [g for g in advisory_globs if isinstance(g, str) and g.strip()]
+    blocking = 0
+    downgraded = 0
+    out_lines: list[str] = []
+    for line in text.splitlines():
+        m = _FINDING_RE_LINE_START.search(line)
+        if not m or m.group(1) == "P3":
+            out_lines.append(line)
+            continue
+        body = _FINDING_BODY_RE.match(m.group("rest").strip())
+        file = body.group("file") if body else None
+        if globs and file is not None and any(fnmatch.fnmatch(file, g) for g in globs):
+            severity_tag = m.group(1)
+            rewritten = line.replace(f"[{severity_tag}]", "[P3]", 1)
+            out_lines.append(f"{rewritten} (advisory path; was {severity_tag})")
+            downgraded += 1
+        else:
+            out_lines.append(line)
+            blocking += 1
+    rewritten_text = "\n".join(out_lines)
+    if text.endswith("\n"):
+        rewritten_text += "\n"
+    return rewritten_text, blocking, downgraded
 
 
 _VERDICT_RE = re.compile(r"^\s*DD-VERDICT:\s*(PASS|BLOCK)\s*$", re.IGNORECASE)

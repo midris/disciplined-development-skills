@@ -382,7 +382,33 @@ def main(argv: list[str] | None = None) -> int:
             print("[external-review] PASS — review clean, gate open.")
             return 0
         else:
-            # BLOCK
+            # BLOCK — findings confined to pr_review.advisory_paths downgrade
+            # to P3 and don't block (e.g. a pull-only mirror whose fixes can
+            # only land upstream; the block lever can't accelerate those). A
+            # BLOCK with no parseable findings can't prove itself advisory and
+            # stays a BLOCK (fail closed).
+            advisory_globs = config.get("pr_review.advisory_paths", [])
+            if not isinstance(advisory_globs, list):
+                advisory_globs = []
+            if advisory_globs:
+                rewritten, blocking, downgraded = severity.downgrade_advisory_findings(
+                    output, advisory_globs)
+                if downgraded:
+                    output = rewritten
+                    if blocking == 0:
+                        ctx = review_record.gather_cadence_context(repo, branch)
+                        _log_attempt(repo, branch, output, "PASS", "advisory_only",
+                                     duration_s, context=ctx)
+                        state.reset(repo, branch, "edits")
+                        head = ctx["head_sha"]
+                        if head:
+                            state.set_checkpoint(repo, branch, head)
+                        print("[external-review] PASS — all findings in advisory "
+                              "paths, downgraded to P3; gate open. Fix or queue them:")
+                        for line in output.splitlines():
+                            if "advisory path; was" in line:
+                                print(f"  {line}")
+                        return 0
             _log_attempt(repo, branch, output, "BLOCK", None, duration_s)
             print("[external-review] BLOCK — review found issues, gate closed.",
                   file=sys.stderr)

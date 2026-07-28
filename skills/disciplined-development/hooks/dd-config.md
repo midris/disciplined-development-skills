@@ -133,6 +133,14 @@ if `codex` is absent. To skip the gate instead, set `DD_SKIP_PR_REVIEW`.
 
 ---
 
+## `pr_review`
+
+| Key | Type | Default | Description |
+|---|---|---|---|
+| `advisory_paths` | list[string] | `[]` | Repo-relative globs (`fnmatch` semantics — `*` crosses `/`, so `design/**` covers a tree). On a BLOCK verdict, P0-P2 findings whose file matches a glob are downgraded to `[P3]` (annotated `advisory path; was Pn`) before the decision: the gate blocks only if a P0-P2 finding remains outside these paths. Downgraded findings stay in the logged row and print on a pass, so they stay visible and fixable. For paths the repo cannot fix in place — e.g. a pull-only mirror whose corrections land upstream — where blocking the PR cannot accelerate the fix. A BLOCK with no parseable findings is never downgraded (fail closed). |
+
+---
+
 ## `codex`
 
 | Key | Type | Default | Description |

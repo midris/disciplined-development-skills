@@ -21,6 +21,9 @@
     "model": "gpt-5.6-terra",
     "effort": "medium"
   },
+  "pr_review": {
+    "advisory_paths": []
+  },
   "branch_convention": {
     "trunk_branches": ["master", "main"]
   },
