@@ -7,7 +7,7 @@ Design decisions approved, consistency-reviewed, and final-reviewed on 2026-08-0
 ## Objective
 
 Review all nine skills from top to bottom and make them compact, coherent, and easy for a human to read without weakening their established agent behavior.
-Audit and normalize the validation framework before changing skill prose so the current suite becomes a trustworthy behavioral control.
+Audit and normalize the validation framework before changing skill prose so the current suite becomes a trustworthy regression baseline.
 
 ## Non-goals
 
@@ -47,15 +47,18 @@ The other three integrated-development skills are its tightly coupled children; 
 The cleanup is behavior-preserving refactoring.
 Readability, organization, consistency, and concision may change; established doctrine may not change accidentally.
 
-Pin the current skill tree at commit `4296647` as the behavioral control.
+Pin the current skill tree at commit `4296647` as the regression control for original behavior.
 Do not edit a skill until its current promises, coverage, and observed variance are understood.
-Compare cleaned drafts against the pinned control with identical prompts and rubrics.
+Compare cleaned drafts against the applicable immediate readability control with identical prompts and rubrics while continuing to protect original behavior against `4296647`.
 
-Handle desired behavioral improvements as separate RED/GREEN changes after the preservation cleanup unless a baseline failure makes safe cleanup impossible.
+Handle desired behavioral improvements as separate RED/GREEN slices, never inside a behavior-preserving readability commit.
+Complete prerequisite improvements such as portability before readability cleanup and defer unrelated improvements until afterward.
 
 Portable extraction is an approved target, not assumed control behavior.
 If a portable skill fails extraction, record the watched RED, make the minimal portability change in a separate behavioral slice, establish its 5/5 GREEN, and only then perform readability cleanup.
 The portability slice must preserve the skill's software-development behavior.
+After a portability slice reaches GREEN, that committed version becomes the immediate control for the skill's readability cleanup; `4296647` remains the regression control for original behavior.
+For skills that need no portability slice, `4296647` is also the immediate readability control.
 
 ## Validation environment
 
@@ -63,7 +66,7 @@ The primary authoring and validation configuration is `gpt-5.6-sol` at high reas
 All active scenarios must reach 5/5 on that configuration.
 One repetition standard is easier to audit than a complexity-dependent rule, and five fresh contexts expose variance that three can miss.
 
-After the complete Sol-high control results are recorded, run the same control scenario set on `gpt-5.6-sol` at low reasoning effort and record comparative scores.
+After the complete Sol-high baseline results are recorded, run every frozen preservation and target scenario against the control tree on `gpt-5.6-sol` at low reasoning effort and record comparative scores.
 Low-effort results characterize robustness; they do not replace or dilute the high-effort 5/5 gate.
 Run the complete suite on Sol low again after cleanup to compare the control and cleaned skill trees.
 A lower cleaned score pauses sign-off for inspection and user review but is not an automatic failure of the Sol-high preservation gate.
@@ -108,6 +111,7 @@ This avoids artificial conflicts between unrelated output contracts.
 
 Blind the arm labels when scoring subjective prose quality.
 Score behavioral preservation before comparing readability.
+Because raw baseline transcripts are not committed, rerun fresh immediate-readability-control and draft arms for each subjective comparison, anonymize their labels, and keep the temporary outputs outside the repository until their scored summary is recorded.
 
 ## Minimum coverage
 
@@ -128,6 +132,7 @@ The integrated development group needs cross-skill ownership and composition tes
 
 Existing behavior is covered by **preservation scenarios**, which require a 5/5 control baseline.
 Newly approved behavior such as a missing portability contract is covered by a **target scenario**, which requires a watched control RED and a 5/5 GREEN before joining the active regression suite.
+If an approved portability scenario is already 5/5 against `4296647`, classify it as preservation coverage rather than a target.
 
 Add scenarios for each meaningful branch, boundary, output contract, and demonstrated failure mode.
 Complex skills may therefore have substantially larger suites than narrow skills.
@@ -205,12 +210,12 @@ Do not hide a 4/5 result, average it into a pass, or preserve a current failure 
 ## Cleanup workflow
 
 1. Audit the validation framework and add the shared protocol plus active scenario catalogs.
-2. Establish complete Sol-high control results for all nine skills: 5/5 for preservation scenarios and watched REDs for approved target scenarios.
-3. Run the same control scenario set on Sol low and record comparative scores.
+2. Establish complete Sol-high baseline results for all nine skills: 5/5 for preservation scenarios and watched REDs for approved target scenarios.
+3. Run every frozen preservation and target scenario against the control tree on Sol low and record comparative scores.
 4. Process one portable skill at a time: close any approved portability RED in its own behavioral slice, then perform readability cleanup against the expanded active suite.
 5. Clean `adversarial-review`, `adversarial-review-loop`, and `dispatching-development-subagents` one at a time, rerunning affected composition scenarios and preserving safe direct invocation.
 6. Clean `disciplined-development` last against the settled child contracts.
-7. Run final Sol-high direct-invocation, portable-extraction, and whole-suite composition matrices.
+7. Run final Sol-high direct-invocation, portable-extraction, and whole-suite composition scenarios.
 8. Run the complete cleaned suite on Sol low and compare it with the control scores.
 9. Run the repository's automated hook, installer, and research suites.
 
