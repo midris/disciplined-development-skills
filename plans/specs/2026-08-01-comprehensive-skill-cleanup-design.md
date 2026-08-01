@@ -2,7 +2,7 @@
 
 ## Status
 
-Design decisions approved, consistency-reviewed, and final-reviewed on 2026-08-01.
+Design decisions approved; execution controls amended after final review on 2026-08-01.
 
 ## Objective
 
@@ -66,6 +66,10 @@ The primary authoring and validation configuration is `gpt-5.6-sol` at high reas
 All active scenarios must reach 5/5 on that configuration.
 One repetition standard is easier to audit than a complexity-dependent rule, and five fresh contexts expose variance that three can miss.
 
+The orchestrator owns every validation-bearing task, evaluator dispatch, result inspection, human approval gate, and commit.
+It may dispatch read-only evaluator or reviewer subagents directly, but it must not delegate a validation-bearing task to a development subagent that would need to dispatch its own evaluators.
+Each evaluator starts without inherited conversation history and receives an explicit model, reasoning effort, skill bundle, and task context.
+
 After the complete Sol-high baseline results are recorded, run every frozen preservation and target scenario against the control tree on `gpt-5.6-sol` at low reasoning effort and record comparative scores.
 Low-effort results characterize robustness; they do not replace or dilute the high-effort 5/5 gate.
 Run the complete suite on Sol low again after cleanup to compare the control and cleaned skill trees.
@@ -83,6 +87,15 @@ Record for every run:
 - manually scored outcome.
 
 Later Claude model and effort testing is outside this cleanup's completion gate.
+
+## Control materialization
+
+Materialize each regression or immediate readability control as an immutable scratch bundle outside the repository before comparing it with a draft.
+Identify the bundle by commit plus content hash, include every sibling or declared dependency the scenario supplies, and never read control material from the mutable working tree.
+Verify before Task 1's baseline runs that the nine live skill files still match `4296647`.
+
+The scenario prompt, fixture, rubric, supplied context, model, and reasoning effort must be identical between comparison arms except for the skill bundle intentionally under test.
+For subjective comparisons, anonymize immutable control and draft outputs before scoring.
 
 ## Validation protocol
 
@@ -104,10 +117,14 @@ If wording changes after a failed run, restart the affected scenario at zero.
 Record the missed criterion and relevant rationalization for failures.
 A completed response that misses the rubric is a failure and cannot be discarded.
 An infrastructure error that produces no evaluable response is recorded separately and retried; it is not counted as a behavioral pass or failure.
+After three consecutive infrastructure errors for one scenario and configuration, pause the run and surface the blocker rather than retrying indefinitely.
 
 Use atomic scenarios for individual skill promises.
 Use composite prompts only when composition is the behavior under test; never combine unrelated tasks to reduce dispatch count.
 This avoids artificial conflicts between unrelated output contracts.
+
+A skill's **complete active suite** contains its owned scenarios plus every shared discovery, direct-invocation, portability, and composition scenario mapped to one of its promises.
+Every shared or supporting scenario record has one owner and lists every affected skill.
 
 Blind the arm labels when scoring subjective prose quality.
 Score behavioral preservation before comparing readability.
@@ -149,6 +166,11 @@ Map every existing scenario to the promise it protects and classify it:
 
 Preserve retired or superseded evidence as history while removing it from the active suite.
 Each active scenario must identify the promises and skill sections it protects so later edits can select reruns by impact.
+Audit the project-level evaluator-isolation scenario with the framework and either repair it to the common protocol or retire it from the active suite explicitly.
+
+After the Sol-low control freeze, any change to a scenario's prompt, fixture, rubric, supplied context, or protected promise invalidates its comparative baseline.
+Before using the changed scenario, rerun its Sol-high and Sol-low control arms and update every owning and shared record.
+New target scenarios additionally require their watched control RED before the GREEN arm.
 
 ## Baseline failure handling
 
@@ -215,7 +237,7 @@ Do not hide a 4/5 result, average it into a pass, or preserve a current failure 
 4. Process one portable skill at a time: close any approved portability RED in its own behavioral slice, then perform readability cleanup against the expanded active suite.
 5. Clean `adversarial-review`, `adversarial-review-loop`, and `dispatching-development-subagents` one at a time, rerunning affected composition scenarios and preserving safe direct invocation.
 6. Clean `disciplined-development` last against the settled child contracts.
-7. Run final Sol-high direct-invocation, portable-extraction, and whole-suite composition scenarios.
+7. Run final Sol-high direct invocation of all nine skills with the complete bundle, portable extraction of the five, and whole-suite composition scenarios.
 8. Run the complete cleaned suite on Sol low and compare it with the control scores.
 9. Run the repository's automated hook, installer, and research suites.
 
@@ -223,12 +245,14 @@ The parent comes last because its routing can only be reconciled cleanly after e
 
 For each skill cleanup:
 
-1. Show the draft to the user.
+1. Show the draft to the user and wait for approval before applying it.
 2. Run the skill's complete active suite at 5/5 on Sol high.
 3. Run a cold editorial and skill-writing review.
-4. Show the edited skill in place for human readability review.
+4. Show the edited skill in place and wait for final user approval.
 5. Run the repository's automated hook, installer, and research suites.
 6. Commit only after behavioral preservation, repository verification, and user approval.
+
+Any skill edit after final approval returns to the draft, validation, in-place review, and approval sequence before commit.
 
 Whole-skill cleanup reruns the skill's complete active suite.
 Narrow later edits may use the scenario-to-promise map to select impacted tests.
@@ -249,3 +273,5 @@ Parent orchestration changes rerun the parent suite and affected child-compositi
 - `disciplined-development` consistently routes the settled child contracts without duplicating them.
 - Validation records are replayable without becoming narrative or transcript archives.
 - Repository automated tests remain green.
+- Every PR boundary passes the orchestrator-owned Gate 5 review and smoke pass.
+- The completed plan and design are archived under `plans/completed/` and `plans/completed/specs/`.

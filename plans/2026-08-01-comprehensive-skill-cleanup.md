@@ -1,6 +1,6 @@
 # Comprehensive Skill Cleanup Implementation Plan
 
-> **For agentic workers:** REQUIRED SUB-SKILL: Use `superpowers:subagent-driven-development` (recommended) or `superpowers:executing-plans` to implement this plan task-by-task. Steps use checkbox (`- [ ]`) syntax for tracking.
+> **For agentic workers:** REQUIRED SUB-SKILL: Use `superpowers:executing-plans` with the orchestrator executing validation-bearing tasks inline. Do not delegate a whole validation-bearing task through `superpowers:subagent-driven-development`; its implementer would be prohibited from dispatching the required evaluator subagents. Steps use checkbox (`- [ ]`) syntax for tracking.
 
 **Goal:** Establish a trustworthy validation baseline, then make all nine skills compact and coherent without losing effectiveness.
 
@@ -12,29 +12,40 @@
 
 ## Global constraints
 
-- Primary authoring and validation use `gpt-5.6-sol` at high reasoning effort.
+- All skill authoring, validation design, manual scoring, and cold reviews use `gpt-5.6-sol` at high reasoning effort.
+- Sol low is used only for the comparative score arms in Tasks 11 and 27 and any control backfill required by the post-freeze rule.
+- The orchestrator owns validation-bearing tasks, evaluator and reviewer dispatch, manual scoring, user approval gates, and commits; evaluators and reviewers remain read-only and never dispatch nested agents.
 - Every behavioral scenario uses five fresh, read-only evaluators with no nested dispatch; run at most three evaluators concurrently.
+- Start each evaluator without inherited conversation history and specify its model, effort, immutable skill bundle, and task context explicitly.
 - Evaluator prompts never contain or point to the scoring rubric.
 - Manually score every completed response; a missed criterion is a failure, not a discarded run.
 - Record infrastructure failures separately and retry them without counting them as behavioral results.
+- After three consecutive infrastructure errors for one scenario and configuration, pause and surface the blocker.
 - Preservation scenarios require a 5/5 control at `4296647`; approved target scenarios require a watched control RED and 5/5 GREEN.
 - A preservation result below 5/5 stops the task for the design's failure-classification gate; do not continue by weakening the rubric or editing the skill.
 - After changing scenario wording, restart that scenario at zero.
 - Do not commit raw evaluator transcripts.
+- Materialize every regression and immediate-readability control as an immutable scratch bundle outside the repository, identified by commit and content hash; never use the mutable working tree as a control arm.
 - For subjective cleanup comparisons, rerun five fresh immediate-readability-control arms and five fresh draft arms, anonymize the labels, and keep temporary outputs in scratch space outside the repository until the scored summary is recorded.
 - Do not edit skill prose until Tasks 1–11 establish and score the control suite.
 - Portable-behavior edits and readability edits land in separate commits.
+- A skill's complete active suite includes its owned scenarios and every shared discovery, direct-invocation, portability, and composition scenario mapped to its promises.
+- Every shared or supporting scenario record has one owner and lists every affected skill.
 - A whole-skill cleanup reruns that skill's complete active Sol-high suite.
-- Show every skill draft before applying it, and show the edited file in place before committing it.
+- After Task 11, any change to a scenario prompt, fixture, rubric, supplied context, or protected promise requires fresh Sol-high and Sol-low control results before the scenario is used again.
+- Show every skill draft and wait for user approval before applying it; show the final edited file in place and wait for user approval before committing it.
+- Any skill edit after final approval returns to the draft/test/in-place approval sequence before commit.
 - Skill prose uses one sentence per line with the repository's structural exceptions.
 - Each skill commit records applicable control/current word counts, model results, cold review, repository tests, and any reference sweep.
 - For portable skills with a behavior slice, record word counts for `4296647`, the post-portability readability control, and the cleaned version.
 - Update this plan's checkboxes and notes in every task commit; the task file lists omit this repeated path.
-- Tasks 2–10 classify every existing scenario with the common taxonomy and update the audit status, classification counts, and scores in `skill-validation/README.md`; validation-bearing Tasks 12–25 keep that index current.
+- Task 1 classifies project-level and supporting scenarios; Tasks 2–10 classify every skill-owned scenario with the common taxonomy and update the audit status, classification counts, and scores in `skill-validation/README.md`; validation-bearing Tasks 12–25 keep that index current.
 - The task file lists omit this repeated index path.
-- Before every commit, run the local Markdown-link check for changed documents and `git diff --check`.
+- Before Task 1's commit, resolve every changed local Markdown link relative to its source file and verify each target with `test -e`.
+- Task 1 records one exact reusable local Markdown-link command in `skill-validation/README.md`; after Task 1, run it for every changed document before each commit.
+- Before every commit run `git diff --check`.
 - Before each skill commit run:
-  - `cd skills/disciplined-development/hooks && python3 -m pytest -q`
+  - `(cd skills/disciplined-development/hooks && python3 -m pytest -q)`
   - `python3 -m pytest tests/ -q`
   - `python3 -m pytest research/ -q`
   - `git diff --check`
@@ -51,6 +62,8 @@
 
 Use one branch/PR per boundary when executing through PRs.
 Within a boundary, retain the per-task commits named below so validation history remains reviewable.
+Before opening a PR at any boundary, the orchestrator runs the complete Gate 5 whole-branch review and smoke pass.
+When work proceeds without PRs, the same orchestrator-owned review runs at the repository's Principle 8 cadence.
 
 ---
 
@@ -60,41 +73,55 @@ Within a boundary, retain the per-task commits named below so validation history
 
 - Create: `skill-validation/README.md`
 - Create: `skill-validation/skill-discovery.md`
+- Modify or retire from the active suite: `skill-validation/evaluation-subagents-read-only.md`
 - Modify: `CLAUDE.md`
 - Modify: `README.md`
 
-**Produces:** One source of truth for scenario types, evaluator isolation, 5/5 scoring, run metadata, preservation versus target scenarios, infrastructure errors, Sol-high/Sol-low arms, and the compact per-skill catalog format; plus one shared suite of atomic all-nine discovery scenarios.
+**Produces:** One source of truth for scenario types, immutable control bundles, evaluator isolation, 5/5 scoring, run metadata, preservation versus target scenarios, infrastructure errors, suite ownership, post-freeze baseline changes, Sol-high/Sol-low arms, the exact local-link command, and the compact per-skill catalog format; plus one shared suite of atomic all-nine discovery scenarios.
 
 - [ ] **Step 1: Inventory the current framework**
 
-  List every file under `skill-validation/`, its purpose, its active scenario IDs, repetition counts, and whether exact prompts and evaluator-withheld rubrics are recoverable.
+  List every file under `skill-validation/`, its purpose, owner, affected skills, active scenario IDs, repetition counts, and whether exact prompts and evaluator-withheld rubrics are recoverable.
+  Inspect the available evaluator transport and record that `research/replay_codex.py` reviews historical diffs rather than executing skill scenarios; do not treat it as the skill-validation runner.
 
 - [ ] **Step 2: Write the shared protocol**
 
   Define the universal rules from the design once in `skill-validation/README.md`.
-  Include the active-catalog fields: scenario ID, type, protected promise, protected skill section, supplied skill context, exact prompt or fixture link, evaluator-withheld rubric, control result, target GREEN when applicable, cleaned result, Sol-low scores, and rerun triggers.
+  Include immutable bundle materialization, fresh-context dispatch, explicit model/effort selection, three-error infrastructure escalation, complete-active-suite closure, post-freeze baseline invalidation, and one exact read-only command for checking local Markdown links.
+  Include the active-catalog fields: scenario ID, owner, affected skills, type, protected promise, protected skill section, supplied skill context, exact prompt or fixture link, evaluator-withheld rubric, control bundle commit and hash, control result, target GREEN when applicable, cleaned result, Sol-low scores, and rerun triggers.
 
 - [ ] **Step 3: Add the audit index**
 
   Add one row per skill and supporting scenario file, with its owner, audit task, `Unaudited` status, classification-count columns, and a link to the owning record.
+  Task 1 marks the project-level and supporting rows it owns as `Audited` and fills their classification counts.
   Tasks 2–10 change the status to `Audited` and fill the `Keep`, `Repair`, `Merge`, `Retire`, and `Add` counts.
   Preserve historical records below each active catalog rather than rewriting them.
 
-- [ ] **Step 4: Establish the shared discovery suite**
+- [ ] **Step 4: Materialize and verify the regression control**
+
+  Create an immutable scratch bundle outside the repository containing all nine skill files and scenario-declared dependencies from `4296647`.
+  Record its commit and content hashes, verify the nine live skill files still match it before baseline testing, and define the same procedure for post-portability readability controls.
+
+- [ ] **Step 5: Audit evaluator isolation**
+
+  Classify `skill-validation/evaluation-subagents-read-only.md` under the common taxonomy.
+  Repair it to the exact prompt, evaluator-withheld rubric, environment metadata, and 5/5 protocol if retained; otherwise retire it explicitly as historical project-rule evidence.
+
+- [ ] **Step 6: Establish the shared discovery suite**
 
   Put a fixed set of atomic scenarios in `skill-validation/skill-discovery.md`.
   Each evaluator prompt contains all nine control descriptions and one simple user request, with one expected skill or an explicit allowed set in the withheld rubric.
   Evaluators never see skill bodies or the rubric.
   Run each scenario five times on Sol high at `4296647`, manually score every route, and map each scenario to every description whose positive or negative routing it protects.
 
-- [ ] **Step 5: Update repository guidance**
+- [ ] **Step 7: Update repository guidance**
 
   Point `CLAUDE.md` and the project `README.md` at `skill-validation/README.md` for the validation protocol.
   Keep universal rules out of individual validation records.
 
-- [ ] **Step 6: Verify and commit**
+- [ ] **Step 8: Verify and commit**
 
-  Run the local Markdown-link check and `git diff --check`.
+  Verify each new local link target directly, run the exact local-link command recorded in the new protocol, and run `git diff --check`.
   Commit as `docs(validation): define the skill validation protocol`.
 
 ### Task 2: Audit and baseline `concise-writing`
@@ -239,7 +266,7 @@ Within a boundary, retain the per-task commits named below so validation history
 - Modify: `skill-validation/README.md`
 - Modify: `skill-validation/skill-discovery.md`
 - Modify: all nine `skill-validation/<skill>.md` records
-- Modify when results live there: `skill-validation/adversarial-review-loop-scenarios.md`
+- Modify: every active shared or supporting scenario record established in Tasks 1–10, including `skill-validation/adversarial-review-loop-scenarios.md`
 
 **Produces:** Five Sol-low control-tree outcomes for every frozen preservation and target scenario, directly comparable with the Sol-high baseline results.
 
@@ -247,6 +274,7 @@ Within a boundary, retain the per-task commits named below so validation history
 - [ ] Run every frozen preservation and target scenario five times against `4296647` with `gpt-5.6-sol` at low reasoning effort and otherwise identical context.
 - [ ] Record 0–5 scores and exact missed criteria; do not change skill wording in response.
 - [ ] Add a compact cross-skill score table to `skill-validation/README.md`.
+- [ ] Record the freeze commit and hashes; any later scenario-contract change follows the global control-backfill rule before execution continues.
 - [ ] Review counts against the catalog, run `git diff --check`, and commit as `docs(validation): record Sol-low control scores`.
 
 ### Task 12: Resolve `concise-writing` portability, if the control is RED
@@ -257,10 +285,12 @@ Within a boundary, retain the per-task commits named below so validation history
 - Modify: `skill-validation/concise-writing.md`
 
 - [ ] Inspect the recorded extraction result; if it is 5/5, classify it as preservation coverage, record that no skill edit is required, and close the task through the plan/index update.
-- [ ] If RED, show the observed failure and proposed minimal dependency/domain-neutrality change to the user.
-- [ ] Apply only the change needed for portable extraction while preserving software examples and current software scenarios.
-- [ ] Run the target scenario to 5/5 GREEN and rerun every affected preservation scenario 5/5 on Sol high.
-- [ ] Run cold skill-writing review, repository tests, and commit the behavioral slice separately.
+- [ ] If RED, show the observed failure and proposed minimal dependency/domain-neutrality change, then wait for user approval.
+- [ ] If RED, apply only the approved change needed for portable extraction while preserving software examples and current software scenarios.
+- [ ] If RED, run the target scenario to 5/5 GREEN and rerun the complete affected active suite 5/5 on Sol high.
+- [ ] If RED, run cold skill-writing review; show proposed fixes, wait for user approval, apply them, and restart affected scenarios.
+- [ ] If RED, show the edited skill in place and wait for final user approval.
+- [ ] If RED, after final approval, run repository tests and commit the behavioral slice separately.
 
 ### Task 13: Resolve `disciplined-research` portability, if the control is RED
 
@@ -270,10 +300,12 @@ Within a boundary, retain the per-task commits named below so validation history
 - Modify: `skill-validation/disciplined-research.md`
 
 - [ ] Inspect the recorded extraction result; if it is 5/5, classify it as preservation coverage, record that no skill edit is required, and close the task through the plan/index update.
-- [ ] If RED, show the failure and a minimal change that keeps sibling sweep/rationale references optional while preserving development examples.
-- [ ] Apply only the approved source-acquisition, verification, or citation boundary change needed for extraction.
-- [ ] Establish target 5/5 GREEN and rerun every affected preservation scenario 5/5 on Sol high.
-- [ ] Run cold skill-writing review and repository tests, then commit the behavioral slice separately.
+- [ ] If RED, show the failure and a minimal change that keeps sibling sweep/rationale references optional while preserving development examples, then wait for user approval.
+- [ ] If RED, apply only the approved source-acquisition, verification, or citation boundary change needed for extraction.
+- [ ] If RED, establish target 5/5 GREEN and rerun the complete affected active suite 5/5 on Sol high.
+- [ ] If RED, run cold skill-writing review; show proposed fixes, wait for user approval, apply them, and restart affected scenarios.
+- [ ] If RED, show the edited skill in place and wait for final user approval.
+- [ ] If RED, after final approval, run repository tests and commit the behavioral slice separately.
 
 ### Task 14: Resolve `lean-plan-writing` portability, if the control is RED
 
@@ -283,10 +315,12 @@ Within a boundary, retain the per-task commits named below so validation history
 - Modify: `skill-validation/lean-plan-writing.md`
 
 - [ ] Inspect the recorded extraction result; if it is 5/5, classify it as preservation coverage, record that no skill edit is required, and close the task through the plan/index update.
-- [ ] If RED, show the failure and a minimal change that retains `superpowers:writing-plans` while making prose-as-contract usable for non-software plans.
-- [ ] Apply only the approved portability change and preserve every software plan requirement.
-- [ ] Establish target 5/5 GREEN and rerun every affected preservation scenario 5/5 on Sol high.
-- [ ] Run cold skill-writing review and repository tests, then commit the behavioral slice separately.
+- [ ] If RED, show the failure and a minimal change that retains `superpowers:writing-plans` while making prose-as-contract usable for non-software plans, then wait for user approval.
+- [ ] If RED, apply only the approved portability change and preserve every software plan requirement.
+- [ ] If RED, establish target 5/5 GREEN and rerun the complete affected active suite 5/5 on Sol high.
+- [ ] If RED, run cold skill-writing review; show proposed fixes, wait for user approval, apply them, and restart affected scenarios.
+- [ ] If RED, show the edited skill in place and wait for final user approval.
+- [ ] If RED, after final approval, run repository tests and commit the behavioral slice separately.
 
 ### Task 15: Resolve `sweeping-stale-references` portability, if the control is RED
 
@@ -296,10 +330,12 @@ Within a boundary, retain the per-task commits named below so validation history
 - Modify: `skill-validation/sweeping-stale-references.md`
 
 - [ ] Inspect the recorded extraction result; if it is 5/5, classify it as preservation coverage, record that no skill edit is required, and close the task through the plan/index update.
-- [ ] If RED, show the failure and a minimal change that keeps search/triage/reconcile portable.
+- [ ] If RED, show the failure and a minimal change that keeps search/triage/reconcile portable, then wait for user approval.
 - [ ] If RED, apply the approved wording that keys Git commit evidence to version-controlled software changes and preserves the existing software commit-body contract.
-- [ ] Establish target 5/5 GREEN and rerun every affected preservation scenario 5/5 on Sol high.
-- [ ] Run cold skill-writing review and repository tests, then commit the behavioral slice separately.
+- [ ] If RED, establish target 5/5 GREEN and rerun the complete affected active suite 5/5 on Sol high.
+- [ ] If RED, run cold skill-writing review; show proposed fixes, wait for user approval, apply them, and restart affected scenarios.
+- [ ] If RED, show the edited skill in place and wait for final user approval.
+- [ ] If RED, after final approval, run repository tests and commit the behavioral slice separately.
 
 ### Task 16: Resolve `writing-explicit-rationale` portability, if the control is RED
 
@@ -309,10 +345,12 @@ Within a boundary, retain the per-task commits named below so validation history
 - Modify: `skill-validation/writing-explicit-rationale.md`
 
 - [ ] Inspect the recorded extraction result; if it is 5/5, classify it as preservation coverage, record that no skill edit is required, and close the task through the plan/index update.
-- [ ] If RED, show the failure and a minimal change to the trigger test or artifact scope that makes code/plan/PR cases examples rather than prerequisites.
-- [ ] Apply only the approved portability change while preserving the what/why/accepted contract.
-- [ ] Establish target 5/5 GREEN and rerun every affected preservation scenario 5/5 on Sol high.
-- [ ] Run cold skill-writing review and repository tests, then commit the behavioral slice separately.
+- [ ] If RED, show the failure and a minimal change to the trigger test or artifact scope that makes code/plan/PR cases examples rather than prerequisites, then wait for user approval.
+- [ ] If RED, apply only the approved portability change while preserving the what/why/accepted contract.
+- [ ] If RED, establish target 5/5 GREEN and rerun the complete affected active suite 5/5 on Sol high.
+- [ ] If RED, run cold skill-writing review; show proposed fixes, wait for user approval, apply them, and restart affected scenarios.
+- [ ] If RED, show the edited skill in place and wait for final user approval.
+- [ ] If RED, after final approval, run repository tests and commit the behavioral slice separately.
 
 ### Task 17: Clean `concise-writing`
 
@@ -321,11 +359,12 @@ Within a boundary, retain the per-task commits named below so validation history
 **Review focus:** integrate Role/Owns/Overview without repetition; order the core test, two-altitude pass, patterns, guard, and optional composition naturally; retain the rationalization table and one distinct example.
 
 - [ ] Record the immediate readability-control word count and a section-level meaning inventory.
-- [ ] Draft the smallest coherent reorganization and show the diff to the user before applying it.
+- [ ] Draft the smallest coherent reorganization, show the diff, and wait for user approval.
 - [ ] Apply the approved draft, preserving every active promise.
 - [ ] Run the complete active suite 5/5 on Sol high and blindly compare subjective prose outputs with the immediate readability control.
-- [ ] Run cold editorial and skill-writing review; address findings and restart affected scenarios.
-- [ ] Show the skill in place, run repository tests, and commit as `docs(skills): clean up concise writing`.
+- [ ] Run cold editorial and skill-writing review; show proposed fixes, wait for user approval, apply them, and restart affected scenarios.
+- [ ] Show the final skill in place and wait for user approval.
+- [ ] After approval, run repository tests and commit as `docs(skills): clean up concise writing`.
 
 ### Task 18: Clean `disciplined-research`
 
@@ -334,11 +373,12 @@ Within a boundary, retain the per-task commits named below so validation history
 **Review focus:** clarify when the skill applies; make acquire/verify facets flow as one method; remove overlap among overview, rationalizations, and red flags; keep optional suite composition out of the portable core.
 
 - [ ] Record the immediate readability-control word count and a section-level meaning inventory.
-- [ ] Draft the smallest coherent reorganization and show the diff before applying it.
+- [ ] Draft the smallest coherent reorganization, show the diff, and wait for user approval.
 - [ ] Apply the approved draft and run the complete active suite 5/5 on Sol high.
 - [ ] Blindly compare subjective prose outputs with the immediate readability control where the rubric requires judgment.
-- [ ] Run cold editorial and skill-writing review; address findings and restart affected scenarios.
-- [ ] Show the skill in place, run repository tests, and commit as `docs(skills): clean up disciplined research`.
+- [ ] Run cold editorial and skill-writing review; show proposed fixes, wait for user approval, apply them, and restart affected scenarios.
+- [ ] Show the final skill in place and wait for user approval.
+- [ ] After approval, run repository tests and commit as `docs(skills): clean up disciplined research`.
 
 ### Task 19: Clean `lean-plan-writing`
 
@@ -347,11 +387,12 @@ Within a boundary, retain the per-task commits named below so validation history
 **Review focus:** explain the Superpowers override once; order prose contract, tricky-case table, artifact distinction, merge boundary, and rationalizations; keep software examples without making the core software-only.
 
 - [ ] Record the immediate readability-control word count and a section-level meaning inventory.
-- [ ] Draft the smallest coherent reorganization and show the diff before applying it.
+- [ ] Draft the smallest coherent reorganization, show the diff, and wait for user approval.
 - [ ] Apply the approved draft and run the complete active suite 5/5 on Sol high.
 - [ ] Blindly compare subjective prose outputs with the immediate readability control where the rubric requires judgment.
-- [ ] Run cold editorial and skill-writing review; address findings and restart affected scenarios.
-- [ ] Show the skill in place, run repository tests, and commit as `docs(skills): clean up lean plan writing`.
+- [ ] Run cold editorial and skill-writing review; show proposed fixes, wait for user approval, apply them, and restart affected scenarios.
+- [ ] Show the final skill in place and wait for user approval.
+- [ ] After approval, run repository tests and commit as `docs(skills): clean up lean plan writing`.
 
 ### Task 20: Clean `sweeping-stale-references`
 
@@ -360,11 +401,12 @@ Within a boundary, retain the per-task commits named below so validation history
 **Review focus:** make search/triage/reconcile the obvious portable core; condition the software audit artifact correctly; integrate quick reference, scope, example, and rationalizations without restatement.
 
 - [ ] Record the immediate readability-control word count and a section-level meaning inventory.
-- [ ] Draft the smallest coherent reorganization and show the diff before applying it.
+- [ ] Draft the smallest coherent reorganization, show the diff, and wait for user approval.
 - [ ] Apply the approved draft and run the complete active suite 5/5 on Sol high.
 - [ ] Blindly compare subjective prose outputs with the immediate readability control where the rubric requires judgment.
-- [ ] Run cold editorial and skill-writing review; address findings and restart affected scenarios.
-- [ ] Show the skill in place, run repository tests, and commit as `docs(skills): clean up stale reference sweeping`.
+- [ ] Run cold editorial and skill-writing review; show proposed fixes, wait for user approval, apply them, and restart affected scenarios.
+- [ ] Show the final skill in place and wait for user approval.
+- [ ] After approval, run repository tests and commit as `docs(skills): clean up stale reference sweeping`.
 
 ### Task 21: Clean `writing-explicit-rationale`
 
@@ -373,11 +415,12 @@ Within a boundary, retain the per-task commits named below so validation history
 **Review focus:** state the trigger once; order trigger, non-trigger cases, rationale shape, artifact placement, and failure resistance; consolidate overlapping rationalizations/red flags while preserving compliance.
 
 - [ ] Record the immediate readability-control word count and a section-level meaning inventory.
-- [ ] Draft the smallest coherent reorganization and show the diff before applying it.
+- [ ] Draft the smallest coherent reorganization, show the diff, and wait for user approval.
 - [ ] Apply the approved draft and run the complete active suite 5/5 on Sol high.
 - [ ] Blindly compare subjective prose outputs with the immediate readability control where the rubric requires judgment.
-- [ ] Run cold editorial and skill-writing review; address findings and restart affected scenarios.
-- [ ] Show the skill in place, run repository tests, and commit as `docs(skills): clean up explicit rationale`.
+- [ ] Run cold editorial and skill-writing review; show proposed fixes, wait for user approval, apply them, and restart affected scenarios.
+- [ ] Show the final skill in place and wait for user approval.
+- [ ] After approval, run repository tests and commit as `docs(skills): clean up explicit rationale`.
 
 ### Task 22: Clean `adversarial-review`
 
@@ -386,11 +429,12 @@ Within a boundary, retain the per-task commits named below so validation history
 **Review focus:** preserve direct invocation within the full bundle; order posture, severity/output contract, holistic rules, angle selection, examples, and composition; keep the baseline/angle distinction unmistakable; remove historical bolt-on seams without shrinking coverage.
 
 - [ ] Record the immediate readability-control word count and a section-level meaning inventory.
-- [ ] Draft the smallest coherent reorganization and show the diff before applying it.
+- [ ] Draft the smallest coherent reorganization, show the diff, and wait for user approval.
 - [ ] Apply the approved draft and run the complete active suite plus affected composition scenarios 5/5 on Sol high.
 - [ ] Blindly compare subjective review outputs with the immediate readability control where the rubric requires judgment.
-- [ ] Run cold editorial and skill-writing review; address findings and restart affected scenarios.
-- [ ] Show the skill in place, run repository tests, and commit as `docs(skills): clean up adversarial review`.
+- [ ] Run cold editorial and skill-writing review; show proposed fixes, wait for user approval, apply them, and restart affected scenarios.
+- [ ] Show the final skill in place and wait for user approval.
+- [ ] After approval, run repository tests and commit as `docs(skills): clean up adversarial review`.
 
 ### Task 23: Clean `adversarial-review-loop`
 
@@ -399,11 +443,12 @@ Within a boundary, retain the per-task commits named below so validation history
 **Review focus:** make scope/precedence, normal loop, class/root attack, three-cycle cap, cold escape, and clean stop read as one state machine; preserve per-task versus whole-branch ownership.
 
 - [ ] Record the immediate readability-control word count and a state/transition meaning inventory.
-- [ ] Draft the smallest coherent reorganization and show the diff before applying it.
+- [ ] Draft the smallest coherent reorganization, show the diff, and wait for user approval.
 - [ ] Apply the approved draft and run every active loop branch plus affected composition scenarios 5/5 on Sol high.
 - [ ] Blindly compare subjective remediation outputs with the immediate readability control where the rubric requires judgment.
-- [ ] Run cold editorial and skill-writing review; address findings and restart affected scenarios.
-- [ ] Show the skill in place, run repository tests, and commit as `docs(skills): clean up adversarial review loop`.
+- [ ] Run cold editorial and skill-writing review; show proposed fixes, wait for user approval, apply them, and restart affected scenarios.
+- [ ] Show the final skill in place and wait for user approval.
+- [ ] After approval, run repository tests and commit as `docs(skills): clean up adversarial review loop`.
 
 ### Task 24: Clean `dispatching-development-subagents`
 
@@ -412,11 +457,12 @@ Within a boundary, retain the per-task commits named below so validation history
 **Review focus:** align Role/Overview/When-you-dispatch; state the scope contract once; keep orchestrator verification and subagent gate boundaries explicit; depend on the full development bundle without relying on an upstream report heading.
 
 - [ ] Record the immediate readability-control word count and a section-level meaning inventory.
-- [ ] Draft the smallest coherent reorganization and show the diff before applying it.
+- [ ] Draft the smallest coherent reorganization, show the diff, and wait for user approval.
 - [ ] Apply the approved draft and run the complete active suite plus affected composition scenarios 5/5 on Sol high.
 - [ ] Blindly compare subjective dispatch outputs with the immediate readability control where the rubric requires judgment.
-- [ ] Run cold editorial and skill-writing review; address findings and restart affected scenarios.
-- [ ] Show the skill in place, run repository tests, and commit as `docs(skills): clean up development subagent dispatch`.
+- [ ] Run cold editorial and skill-writing review; show proposed fixes, wait for user approval, apply them, and restart affected scenarios.
+- [ ] Show the final skill in place and wait for user approval.
+- [ ] After approval, run repository tests and commit as `docs(skills): clean up development subagent dispatch`.
 
 ### Task 25: Clean `disciplined-development`
 
@@ -433,29 +479,31 @@ Within a boundary, retain the per-task commits named below so validation history
 - [ ] Re-read all eight cleaned companion skills and build a parent-to-child ownership matrix.
 - [ ] Record the parent's immediate readability-control word count and a gate/principle/mode meaning inventory.
 - [ ] Sweep `README.md`, `ARCHITECTURE.md`, examples, and companion cross-references to identify every routing-reference update the parent cleanup requires.
-- [ ] Draft and show the parent diff plus every proposed companion and routing-reference diff before applying them.
+- [ ] Draft and show the parent diff plus every proposed companion and routing-reference diff, then wait for user approval.
 - [ ] Apply the approved parent draft and any required routing-reference updates.
 - [ ] Run the complete parent suite and every affected composition scenario 5/5 on Sol high.
 - [ ] For every companion `SKILL.md` changed in this task, rerun that companion's complete active suite 5/5 and its cold skill-writing review.
-- [ ] Rerun the routing-reference sweep; show and apply any newly required edit, then restart every affected scenario.
+- [ ] Rerun the routing-reference sweep; show any newly required edit, wait for approval, apply it, and restart every affected scenario.
 - [ ] Blindly compare subjective orchestration outputs with the immediate readability control where the rubric requires judgment.
-- [ ] Run cold editorial, skill-writing, consistency, and executability review; address findings and restart affected scenarios.
-- [ ] Show the parent and any changed companion skills in place, run repository tests, and commit as `docs(skills): clean up disciplined development`.
+- [ ] Run cold editorial, skill-writing, consistency, and executability review; show proposed fixes, wait for approval, apply them, and restart affected scenarios.
+- [ ] Show the final parent and any changed companion skills in place and wait for user approval.
+- [ ] After approval, run repository tests and commit as `docs(skills): clean up disciplined development`.
 
-### Task 26: Run the final Sol-high composition gate
+### Task 26: Run the final Sol-high suite gate
 
 **Files:**
 
 - Modify: `skill-validation/README.md`
 - Modify: `skill-validation/skill-discovery.md`
 - Modify: all nine per-skill validation records
+- Modify: every active shared or supporting scenario record
 - Create: `skill-validation/skill-composition.md`
 
-**Required final scenarios:** the shared all-nine description-discovery suite; each portable skill extracted with declared Superpowers dependencies and a non-software task; direct invocation of each integrated skill with the full bundle; parent routing across plan, implementation, debugging, review, documentation, and delegation modes; per-task versus whole-branch review ownership.
+**Required final scenarios:** the shared all-nine description-discovery suite; direct invocation of each of the nine skills with the complete bundle; each portable skill extracted with declared Superpowers dependencies and a non-software task; parent routing across plan, implementation, debugging, review, documentation, and delegation modes; per-task versus whole-branch review ownership.
 
 **Produces:** A cross-suite composition record that links the owning scenario IDs and records joint results without duplicating their prompts or rubrics.
 
-- [ ] Rerun the shared discovery suite and run every other scenario atomically unless composition is the behavior under test; run each scenario five times on Sol high.
+- [ ] Rerun the shared discovery suite, all-nine direct-invocation set, portable-extraction set, and composition set; keep scenarios atomic unless composition is the behavior under test, and run each scenario five times on Sol high.
 - [ ] Manually score each protected promise and record any infrastructure failures separately.
 - [ ] If any result is below 5/5, stop and classify it through the design's failure gate; correct a cleanup regression in its owning task, and isolate any approved behavioral change in a separate RED/GREEN slice.
 - [ ] Record the final 5/5 results and commit as `docs(validation): record final skill composition greens`.
@@ -468,7 +516,9 @@ Within a boundary, retain the per-task commits named below so validation history
 - Modify: `skill-validation/skill-discovery.md`
 - Modify: `skill-validation/skill-composition.md`
 - Modify: all per-skill validation records with final Sol-low scores
-- Modify: `plans/2026-08-01-comprehensive-skill-cleanup.md`
+- Modify: every active shared or supporting scenario record with final Sol-low scores
+- Move after completion: `plans/2026-08-01-comprehensive-skill-cleanup.md` to `plans/completed/2026-08-01-comprehensive-skill-cleanup.md`
+- Move after completion: `plans/specs/2026-08-01-comprehensive-skill-cleanup-design.md` to `plans/completed/specs/2026-08-01-comprehensive-skill-cleanup-design.md`
 
 - [ ] Freeze the final active scenario suite and run every scenario five times on `gpt-5.6-sol` at low reasoning effort.
 - [ ] Compare control and cleaned scores by scenario; pause for user review on any decrease.
@@ -476,4 +526,5 @@ Within a boundary, retain the per-task commits named below so validation history
 - [ ] Run the hook, installer, and research pytest suites plus `git diff --check`.
 - [ ] Run a final cold consistency review against the design and this plan.
 - [ ] Mark the plan complete only when every success criterion in the design has evidence.
+- [ ] Move the completed plan and design to their completed directories, update the plan's design-reference label and target plus every live repository reference, and run the exact local-link command plus `git diff --check`.
 - [ ] Commit as `docs(skills): complete comprehensive cleanup validation`.
