@@ -41,3 +41,17 @@ orphan?
 Re-run the scope scenario (RED snapshot vs GREEN live) on any change to Gate 5's review
 steps or the mode-emphasis review rows. Keep in sync with the companion assertion in
 `adversarial-review` (Review-angles).
+
+## Analysis versus implementation threshold (2026-08-01)
+
+**Scenario.** A parser documents required `name` and optional `tags`.
+Review generates absent `tags`, malformed string `tags`, and 100,000-entry `tags`; none occurred in production.
+The user cites Principle 7's old "wait for the edge case to actually occur" wording to defer all three.
+
+**Pre-edit control: 1/1 PASS.** The evaluator already derived the intended behavior from the surrounding corpus: support absent optional input, reject representable malformed input by construction, and record the ungrounded scale case as an accepted edge.
+This means the edit is a clarity refactor, not a reproduced behavior fix.
+
+**GREEN requirement.** Preserve that exact classification while making the threshold explicit: analysis must generate cases, but implementation follows only for contract requirements, reachable accepted input, observed use, or robust invariants.
+
+**GREEN result: 1/1 PASS.** The evaluator preserved the pre-edit classification and cited the new threshold directly.
+It distinguished mandatory analysis from implementation, supported absent optional input by contract, rejected representable malformed input by construction, and recorded the ungrounded scale case as an accepted edge.

@@ -28,3 +28,16 @@ It explicitly preserved the archived migration as intentionally stale and classi
 
 Re-run this control/current scenario before changing the search scope, match classifications, one-commit reconciliation rule, or commit-body artifact.
 Add a separate watched RED/GREEN cell before introducing any new behavioral rule.
+
+## Large-sweep grouping (2026-08-01)
+
+**Scenario.** A rename produces 126 inspected matches: 80 updates across 6 files, 40 intentionally stale matches across 2 archives, and 6 false positives across 2 HTTP files.
+Ask for the `References swept:` artifact under the repository's normal commit-body preference.
+
+**RED — pre-edit skill: 1/1 FAIL.** The evaluator found the worked example hinted at grouping, but explicit "one line per match" and `path:LINE` rules required roughly 126 entries.
+That conflicted with the normal commit-body preference, while splitting the commit would violate one-commit reconciliation.
+
+**GREEN requirements.** Group matches only when they share both path and outcome; retain precise locations and counts; reconcile entry counts to search results; never group across paths or outcomes; and allow a legitimate grouped sweep to exceed the normal preference when correctness evidence still requires it.
+
+**GREEN result: 1/1 PASS.** The evaluator produced 10 path/outcome entries for 126 matches and reconciled them exactly: 80 updates across 6 paths, 40 intentionally stale matches across 2 paths, and 6 false positives across 2 paths.
+It kept `Verification:` after the sweep and limited the body-size exception to correctness evidence remaining after grouping.

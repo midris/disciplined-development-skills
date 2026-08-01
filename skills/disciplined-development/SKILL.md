@@ -133,7 +133,7 @@ REQUIRED SUB-SKILL: `disciplined-research`.
 **7. Keep it simple — add complexity only when evidence demands it.**
 - Build to satisfy the requirement. Don't over-engineer.
 - Don't build for hypothetical futures. Don't prematurely optimize. Don't prematurely abstract (rule of three).
-- Wait for the edge case to actually occur before handling it.
+- Generate absent, malformed, and out-of-scale cases during analysis, but implement only those required by contract, reachable from accepted input, observed in use, or necessary to make an invariant robust; record the rest as accepted edges.
 - A fragile or unstated invariant is not a deferrable edge case. Fix it by construction — that's the simpler design.
 - When iteration keeps surfacing new findings, remove layers — don't add more.
 
@@ -195,7 +195,7 @@ REQUIRED SUB-SKILL: `adversarial-review-loop`.
 | "Better safe than sorry." | Complexity has its own bug surface. Keep it simple. |
 | "Just one more layer." | Layers compound. Step back at two. |
 | "Defense in depth." | Only where evidence justifies it. |
-| "Every case must be handled." | Handle observed cases. Document the rest as accepted edge cases. |
+| "Every case must be handled." | Implement cases that meet Principle 7's contract / reachability / observation / invariant threshold. Record the rest as accepted edges. |
 | "That input can't happen — no caller passes it." | A crash or wrong output on a representable input is a defect, not an edge case. Fix by construction. |
 | "Make it configurable, just in case." | Configuration is API surface. Add for real use cases, not hypotheticals. |
 | "Reviewer keeps finding issues — keep iterating." | Findings accrete because the artifact has too many surfaces. Remove layers; don't add more. |
