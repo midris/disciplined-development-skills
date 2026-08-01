@@ -53,6 +53,17 @@ already-lean ones — not a fixed percentage.
 Re-run the relevant probe before shipping any change: verbosity delta + over-trim
 for rule/content edits, routing for description/trigger edits.
 
+### Trigger-only description routing (2026-08-01)
+
+**Matrix.** Route five prompts from metadata only: active-plan implementation with delegation; padded README tightening; SKILL.md shortening; plan deferral with PR-only rationale; and a routine convention-preserving rename.
+
+**Pre-edit control: 3/3 PASS.** All evaluators selected `concise-writing` for the padded README and routed SKILL.md shortening to `superpowers:writing-skills` without separately selecting `concise-writing`.
+The edit removes embedded ownership/process prose while retaining the skill-authoring exclusion as a trigger boundary.
+
+**GREEN requirements.** Preserve ordinary prose routing and the skill/reference-authoring exclusion using trigger conditions only.
+
+**GREEN result: 3/3 PASS.** All three independent metadata-only evaluators selected `concise-writing` for ordinary prose tightening and selected `superpowers:writing-skills`, not `concise-writing`, for SKILL.md shortening.
+
 - **2026-07-19, "When editing existing text, draft first" rule** — shipped as an
   owner's-call without a fresh probe. Low-risk addition (a process reminder, not a
   new pattern to detect); flagged here rather than silently skipping the process.

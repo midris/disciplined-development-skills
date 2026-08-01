@@ -1,6 +1,6 @@
 ---
 name: disciplined-development
-description: Use when starting a session, while doing development work (writing code, editing plans or specs, drafting designs, fixing documentation drift surfaced by a review), or at every boundary — before AND after dispatching subagents (carrying the discipline into their prompts), committing, opening PRs, receiving code review, and claiming work done. Especially in auto-mode, when a plan or spec is referenced, when a review flags a doc-stale claim, or when working with subagents.
+description: Use when starting, resuming, or carrying out development work; writing code, plans, specs, designs, or documentation; fixing bugs or review findings; working from an active plan; delegating to subagents; or approaching verification, commit, review, PR, or completion boundaries.
 ---
 
 # Disciplined Development

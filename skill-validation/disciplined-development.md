@@ -55,3 +55,14 @@ This means the edit is a clarity refactor, not a reproduced behavior fix.
 
 **GREEN result: 3/3 PASS.** The initial evaluator and two additional independent cold repetitions preserved the pre-edit classification and cited the new threshold directly.
 All three distinguished mandatory analysis from implementation, supported absent optional input by contract, rejected representable malformed input by construction, and recorded the ungrounded scale case as an accepted edge.
+
+## Trigger-only description routing (2026-08-01)
+
+**Matrix.** Route five prompts from metadata only: active-plan implementation with delegation; padded README tightening; SKILL.md shortening; plan deferral with PR-only rationale; and a routine convention-preserving rename.
+
+**Pre-edit control: 3/3 PASS.** All evaluators triggered `disciplined-development` for implementation and plan editing, and did not rely on it for ordinary prose tightening or skill authoring alone.
+The description edit is a trigger-only clarity refactor, not a routing fix.
+
+**GREEN requirements.** Preserve the matrix while removing workflow summaries from the description and retaining session, development-work, plan, delegation, verification, commit, review, PR, and completion-boundary triggers.
+
+**GREEN result: 3/3 PASS.** All three independent metadata-only evaluators preserved the expected routing across all five prompts.

@@ -1,6 +1,6 @@
 ---
 name: writing-explicit-rationale
-description: 'Use when making a choice a future reader or review pass might re-litigate — descopes, deferrals, shortcuts, exceptions, AND design choices over a defensible alternative. Applies to plans, specs, design docs, and code comments at decision sites. Triggered by "make this simpler", "drop the hardening", "skip X for now", "we can cover it in the PR", "this is overkill". Also fires when a review re-litigates the same decision twice, or when rationale is about to land only in a commit message or PR description.'
+description: 'Use when a plan, spec, design, or code choice could be mistaken for an oversight: descoping, deferring, taking a shortcut, making an exception, or choosing among defensible alternatives. Also use when review re-litigates a decision or its rationale would otherwise live only in chat, a commit message, or a PR description.'
 ---
 
 # Writing explicit rationale

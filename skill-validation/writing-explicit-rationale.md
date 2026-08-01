@@ -47,3 +47,14 @@ this harness.
 Re-run the commit-pressure scenario (correct placement + the over-fire check: body
 still cites the artifact) in both a with-CLAUDE.md and a bare consumer. Keep the
 "reviewers read the tree, not the log" mechanism line — it is the enforcement teeth.
+
+## Trigger-only description routing (2026-08-01)
+
+**Matrix.** Route five prompts from metadata only: active-plan implementation with delegation; padded README tightening; SKILL.md shortening; plan deferral with PR-only rationale; and a routine convention-preserving rename.
+
+**Pre-edit control: 3/3 PASS.** All evaluators selected `writing-explicit-rationale` for the plan deferral whose rationale lived only in the PR and did not select it solely for a routine convention-preserving rename.
+The description edit is a trigger-only clarity and length refactor, not a routing fix.
+
+**GREEN requirements.** Preserve the deferral, oversight-risk, defensible-alternative, re-litigation, and non-durable-rationale triggers while keeping routine self-evident choices out of scope.
+
+**GREEN result: 3/3 PASS.** All three independent metadata-only evaluators selected the skill for PR-only deferral rationale and did not select it solely for the routine convention-preserving rename.
