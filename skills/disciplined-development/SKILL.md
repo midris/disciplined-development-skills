@@ -70,7 +70,10 @@ REQUIRED SUB-SKILL: `sweeping-stale-references`.
 Three steps, in order. Plan checklist does not override the gate.
 
 1. **Self-review** — a deep, whole-repo adversarial review against the
-   active plan; address findings per `adversarial-review-loop`.
+   active plan; address findings per `adversarial-review-loop`. This is a
+   whole-branch review, so the local three-cycle cap governs even when an
+   upstream execution skill initiated the final review. Upstream per-task
+   fix loops remain governed by their execution skill.
    REQUIRED SUB-SKILLS: `superpowers:requesting-code-review` + `adversarial-review` + `adversarial-review-loop`.
 2. **External review** — same whole-repo, plan-anchored scope.
    `[P0]`/`[P1]`/`[P2]` block the PR (resolve before opening the PR);
@@ -158,6 +161,9 @@ stricter cadence, follow it; otherwise self-trigger.
 A dispatched subagent never runs this review itself — not even to gather
 findings. It reports that review is due and stops; a hook nudge or a hit
 cadence threshold doesn't change that.
+Cadence and whole-branch review remediation use
+`adversarial-review-loop`. Per-task review during a plan-execution workflow
+uses that execution skill's own remediation loop.
 REQUIRED SUB-SKILL: `adversarial-review-loop`.
 
 ## Mode emphasis

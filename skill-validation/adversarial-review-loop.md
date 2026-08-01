@@ -202,6 +202,55 @@ axis, normal class-sweep), closing the fixture-B issue above. G3A/G3C baseline =
 2026-07-03 quick-pass (3 reps × 2 wordings, embedded-guidance method); first
 protocol-style run due at the next gate edit.
 
+## Per-task versus whole-branch ownership (added 2026-08-01)
+
+**Failure guarded against.** An execution skill and
+`adversarial-review-loop` specify different fix limits. Without an explicit
+boundary, the orchestrator stops to ask which governs or silently chooses one.
+
+**Scenario.** Present two third-round blocking reviews:
+
+1. an individual task being executed through
+   `superpowers:subagent-driven-development`;
+2. the final Gate-5 whole-branch review after all tasks complete.
+
+Ask what happens next and which rule controls.
+
+**RED — pre-boundary skill.** The evaluator found both rule sets applicable
+and stopped for human resolution. It could not determine whether to use the
+upstream five-round task loop, upstream one-wave final-review rule, or the
+local three-cycle cold-read escape.
+
+**GREEN requirements.** Per-task review continues according to the execution
+skill's escalation and breaker rules. Whole-branch review uses
+`adversarial-review-loop`; at the third blocking cycle it takes the cold-read
+escape and does not begin a fourth cycle. The answer must name review context
+as the reason for each choice.
+
+**GREEN result.** 1/1 evaluator passed. It selected upstream round 4 with a
+fresh, more-capable implementer for the per-task case, and the local cold-read
+escape with no fourth cycle for the Gate-5 whole-branch case. It cited review
+context as the controlling distinction and reported no remaining conflict.
+
+**Non-trivial boundary transition.** A task-level loop reaches its third
+blocking round under `superpowers:subagent-driven-development`; the human asks
+to substitute the local cold-read escape. Upstream round 4 later passes, then a
+similar P1 appears in the same subsystem during Gate-5 whole-branch review; the
+human asks to count the prior task rounds toward the local cap and use the
+upstream final-review breaker.
+
+GREEN must reject both counter conflations: use upstream round 4 for the task,
+require the local upstream-format-independent scope disclosure from its fresh
+implementer, start Gate 5 at local cycle 1, class-sweep and re-run the same
+reviewer on its first P1, and take the cold-read escape only if Gate 5's own
+third cycle still blocks.
+
+**Result (2026-08-01): 5/5 GREEN.** Five independent cold evaluators selected
+the same routing and counter boundaries. All five required
+`Changes beyond dispatched scope: none` or itemized extras without relying on
+an upstream format; treated the first Gate-5 P1 as local cycle 1; and required
+the cold-read escape with no fourth cycle after Gate 5's third blocking cycle.
+
 ## On edits
 
 Re-run the RED/GREEN class-sweep scenario plus the T2–T7 set (read-only) before
@@ -209,4 +258,5 @@ shipping any change to the loop skill. Any change to the cap/backstop wording mu
 re-pass **T3** (escape at the cap) and **T4** (no false-positive on productive
 iteration). Changes to the cycle-3 gate also re-run the A/B/C set above — B is the
 over-fire guard for the mandatory verdict; keep "No shared pattern is a valid
-verdict" intact.
+verdict" intact. Changes to scope or precedence also re-run the per-task versus
+whole-branch ownership scenario and its non-trivial boundary-transition cell.

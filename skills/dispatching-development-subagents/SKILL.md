@@ -22,7 +22,11 @@ description: 'Use when dispatching a development subagent whose code changes you
 - **Stamp the subagent's identity in the prompt:** the subagent is not the orchestrator. Review / checkpoint / PR gates and hook nudges belong to the orchestrator — a due gate does not promote the subagent. The subagent reports a due gate and stops, and dispatches no further subagents.
 - **One finding per dispatch by default.** Batch only same-kind, non-overlapping, behavior-free changes; split out anything coupled or behavior-changing. Mixed batches are where drift hides.
 - **Dispatch a finding verbatim.** Quote it as the reviewer first wrote it — a later re-framing or your own summary narrows scope silently.
-- **Require the report** (`superpowers:subagent-driven-development` Report Format + a "changes beyond the dispatched scope" line, each with a one-line rationale).
+- **Require scope disclosure in the report.** Use the execution skill's
+  current report mechanism when it defines one. In addition, require
+  `Changes beyond dispatched scope: none` or list each extra change with a
+  one-line rationale. This disclosure requirement does not depend on an
+  upstream report heading or format.
 - **State the out-of-scope rule in the prompt:** the subagent acts only on small, safe, obviously-correct fixes, each in its own commit; anything risky, large, design-level, or uncertain — including deleting or overwriting a tracked file — it surfaces, doesn't act.
 - **Require verified-claims-only prose:** any comment or doc line the subagent writes states only facts it verified (compiler, test, primary source); unverified rationale is omitted, not hedged.
 
@@ -60,6 +64,8 @@ All mean: stop. Out of scope — disclose; act only if small, safe, obvious, in 
 
 ## Composition
 
-- `superpowers:subagent-driven-development` — plan-task execution + two-stage review; this skill extends its Report Format with the out-of-scope line.
+- `superpowers:subagent-driven-development` owns plan-task execution and
+  per-task review. This skill adds an upstream-format-independent scope
+  disclosure requirement.
 - `superpowers:dispatching-parallel-agents` — parallel fan-out; the same overlay applies per agent.
 - `disciplined-development` Principle 4 points here.

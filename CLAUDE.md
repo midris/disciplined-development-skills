@@ -72,7 +72,7 @@ No `ROADMAP.md`. Active work is tracked in `plans/` (when a plan is open) or dir
 
 - **Hook code:** Python 3, no third-party runtime deps (stdlib only — the hooks must run on a vanilla Python in any consumer environment). Tests use pytest.
 - **Logging from hooks:** structured JSONL into `.claude/.dd-state/.logs/` per the layout in `skills/disciplined-development/hooks/README.md` ("Observability"). Do not add a logging dependency.
-- **Skill content:** see the `concise-writing` and `writing-explicit-rationale` skills for the prose discipline. Don't expand a SKILL.md without a concrete failure mode it's catching.
+- **Skill content:** see the `concise-writing` and `writing-explicit-rationale` skills for the prose discipline. Don't expand a SKILL.md without a concrete failure mode it's catching. Write prose one sentence per line so edits produce sentence-scoped diffs; preserve natural structural lines for frontmatter, headings, lists, tables, block quotes, code/literal blocks, commands, and URLs.
 - **Installer (`install-skills.sh`):** bash, idempotent, never clobbers a real path or a differently-targeted symlink. Any change here must preserve those invariants — tested via `tests/test_install_skills.py`.
 
 ## Workflow and Checklists

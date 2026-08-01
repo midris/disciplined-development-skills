@@ -161,6 +161,10 @@ tier; the model selects *which* angles to apply per
 always reviews the whole repository against the active plan. Reviews happen in
 two places — a model-driven loop, and the pre-PR gate.
 
+Plan-execution skills own their per-task review loops. Once review scope becomes
+cadence-triggered, Gate-5, whole-branch, or external, the model-driven loop below
+owns remediation, including its three-cycle cap and cold-read escape.
+
 ### Model-driven review loop
 
 ```mermaid

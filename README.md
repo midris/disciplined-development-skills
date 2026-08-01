@@ -32,7 +32,9 @@ Nine skills (each a `skills/<name>/SKILL.md`):
 - **`adversarial-review`** / **`adversarial-review-loop`** — reviewer posture, the
   angle catalog + per-artifact selection, and the severity contract (P0/P1/P2
   block, P3 advisory); plus the review→fix→re-review iteration cap with a
-  cold-read escape.
+  cold-read escape. The cap applies to cadence, Gate-5, whole-branch, and
+  external reviews; plan-execution skills retain control of their per-task
+  review loops.
 - **`disciplined-research`** — ground load-bearing claims in current source, not
   memory.
 - **`dispatching-development-subagents`** — scope-contract + verify-every-commit
@@ -94,10 +96,13 @@ flowchart TB
     is understood and accepted, because the doctrine's value is precisely the
     delta it adds *over* the superpowers base, and re-implementing that base to
     stay freestanding would cost more than it's worth.
-  - **Unpinned contract (known fragility):** the bundle relies on superpowers'
-    Report Format and its review / plan-scaffolding behavior. There is no version
-    floor; a breaking change upstream surfaces here as silent gate drift, not a
-    load error. Watch the seam on superpowers upgrades.
+  - **Upstream compatibility boundary:** the dependency is unpinned.
+    Superpowers owns plan scaffolding, dispatch mechanics, report transport,
+    and per-task review loops. This bundle owns its added scope-disclosure
+    contract and all cadence, Gate-5, whole-branch, and external review
+    remediation. Upstream upgrades must be checked at this boundary; local
+    skills must not depend on an upstream section heading or undocumented
+    report shape.
 - **Python 3** — for the hook stack.
 - **git** — the hooks key behavior off branch / commit / fork-base state.
 - **`codex` — only for the pre-PR review gate.** The gate (`external_review.py`)

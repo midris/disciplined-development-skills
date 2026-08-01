@@ -47,12 +47,21 @@ losing dispatch-prompt quality.
 
 **Method.** Orchestrator loads ONLY the dispatch skill, writes a complete
 dispatch prompt for a fixed task. Score the prompt for: scope contract, governing
-files + locked constraint, out-of-scope gradient, required report. RED = main's
-skill (`git show main:skills/dispatching-development-subagents/SKILL.md`), GREEN = restructured.
+files + locked constraint, out-of-scope gradient, and an explicit
+`Changes beyond dispatched scope` disclosure that does not assume an upstream
+heading, status vocabulary, or report-file shape. RED = main's skill
+(`git show main:skills/dispatching-development-subagents/SKILL.md`), GREEN =
+restructured.
 
 **Scenario.** RED 3/3 produced all four elements. GREEN 3/3 reproduced all four
 **and** added the two new limits (no nested dispatch, ignore hook nudges). No
 regression; the out-of-scope gradient survived the relocation.
+
+**Upstream-format-independent disclosure (2026-08-01).** GREEN 1/1. Given a
+behavior-free rename finding, the evaluator produced a dispatch prompt with
+the scope contract, governing file, locked constraint, out-of-scope gradient,
+and an exact `Changes beyond dispatched scope: none` line. It used no named
+upstream heading, status vocabulary, or report-file shape.
 
 ## Test 3 — identity-stamp + audience-caveat nudge (reclassification hardening)
 

@@ -5,6 +5,25 @@ description: Use when an adversarial review surfaces findings — including when
 
 # Adversarial review loop
 
+## Scope and precedence
+
+This skill governs review remediation for:
+
+- periodic and cadence-triggered reviews;
+- Gate-5 self-review;
+- whole-branch final review;
+- external review.
+
+It does not govern a plan-execution skill's per-task review loop. While
+`superpowers:subagent-driven-development` is reviewing an individual task,
+follow that skill's fix-round limit, reviewer selection, escalation, and
+breaker rules.
+
+When an upstream execution skill reaches its final whole-branch review, use
+the upstream skill to initiate the review, then use this skill to remediate
+its findings. This skill's three-cycle cap and cold-read escape govern that
+whole-branch remediation loop.
+
 ## The pattern
 
 1. **Address** every [P0]/[P1]/[P2] finding by its *class*, not just the cited line — a reviewer samples one instance; fix only that line and the siblings return next round.
@@ -13,7 +32,9 @@ description: Use when an adversarial review surfaces findings — including when
    - **Fix every member before re-running.**
 
    This is `sweeping-stale-references` + `adversarial-review`'s "Enumerate every class" applied to findings. Decide each [P3]: act, or defer/dismiss with on-page rationale.
-2. **Re-run** the same reviewer against the new HEAD.
+2. **Re-run** the same reviewer against the new HEAD. This applies within
+   the review contexts owned above; an upstream per-task loop chooses its own
+   reviewer according to its rules.
 3. **Repeat** until clean (zero [P0]/[P1]/[P2]) OR you hit the iteration cap.
 
 ## Iteration cap: 3
