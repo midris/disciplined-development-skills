@@ -30,20 +30,17 @@ Single-citation point fixes leave the **loop-of-fixes anti-pattern**: each revie
 Three steps.
 Don't skip any.
 
-**1. Search.** Use any tool (grep, rg, ag, IDE find-references) —
-thoroughness matters, not which tool.
+**1. Search.** Use any tool (grep, rg, ag, IDE find-references) — thoroughness matters, not which tool.
 Cast wide across code, docs, tests/fixtures, AND config/scripts/CI/build files (this last category is easy to miss because it's not in the "obvious file types").
 Search the literal old string AND likely synonyms — a renamed `getUser` may also appear as `"user fetcher"` in prose or `get_user` in Python bindings.
 
 **2. Triage.** For each match, label the outcome:
 
 - `update` — real consumer; update it.
-- `false positive: <reason>` — match shares the search term but
-  refers to something else.
-- `intentionally stale: <reason>` — real reference to the old fact,
-  deliberately preserved. Rare. Examples: historical postmortems,
-  archived completed-plan files, migration notes describing past
-  state.
+- `false positive: <reason>` — match shares the search term but refers to something else.
+- `intentionally stale: <reason>` — real reference to the old fact, deliberately preserved.
+  Rare.
+  Examples: historical postmortems, archived completed-plan files, migration notes describing past state.
 
 **3. Reconcile in one commit.** All updates land together.
 Account for every match in the commit body's `References swept:` section, grouping matches only when they share both path and outcome.
@@ -131,7 +128,3 @@ Verification:
 | "I'll add a TODO and sweep later." | Later = never. The commit lands inconsistent; `git bisect` lands readers on a half-finished state. |
 | "Probably already has it." / "The plan implicitly covers it." | Implicit isn't covered. Grep. If the sweep finds zero matches, that's a `References swept: n/a` line, not silence. |
 | "Sweep is overkill for this small change." | The skill applies on the basis of *what the change touches*, not on size. A single-line schema rename can have 30 consumers. |
-
-## References
-
-- [`references/sweep-check-hook-design.md`](references/sweep-check-hook-design.md) — deferred design for a pre-commit hook that enforces the `References swept:` audit trail automatically.

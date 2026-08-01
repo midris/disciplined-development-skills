@@ -1,5 +1,18 @@
 # Sweeping stale references — validation
 
+## Deferred companion relocation (2026-08-01)
+
+**Edit.** Move the deferred sweep-check hook design from the shipped skill directory to `plans/deferred/` and remove the live skill link.
+No doctrine changed, so this packaging cleanup did not introduce a new behavioral pressure scenario.
+
+**Reference integrity: PASS.** A repository sweep found no current reference to the former path outside the completed historical reorganization plan.
+A local Markdown-link check covered `CLAUDE.md`, the live skill, and the moved deferred plan; every target resolved.
+
+**Cold review: PASS after one formatting fix.** The first review found list prose that still violated the repository's sentence-per-line rule.
+After reflowing those sentences without changing content, the second review returned no findings.
+
+**Repository verification:** hooks 263 passed/3 skipped; installer 11 passed; research 4 passed.
+
 ## Duplicate red-flag consolidation (2026-08-01)
 
 **Edit.** Remove the `Red flags` section whose cases repeat the retained procedure and rationalization table.
