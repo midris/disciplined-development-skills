@@ -5,14 +5,19 @@ description: 'Use when dispatching a development subagent whose code changes you
 
 # Dispatching Development Subagents
 
-**Role:** Companion — discipline overlay on `superpowers:subagent-driven-development` and `superpowers:dispatching-parallel-agents`. Invoke when you dispatch a development subagent — one that changes code and commits — including ad-hoc fixers those skills don't model. Research/review subagents (findings, not commits) are out of scope — verify their claims per `disciplined-research`.
+**Role:** Companion — discipline overlay on `superpowers:subagent-driven-development` and `superpowers:dispatching-parallel-agents`.
+Invoke when you dispatch a development subagent — one that changes code and commits — including ad-hoc fixers those skills don't model.
+Research/review subagents (findings, not commits) are out of scope — verify their claims per `disciplined-research`.
 **Owns:** the scope contract, the out-of-scope gradient, the report extension, and the verify-every-commit duty.
 **Does not own:** plan-task execution + two-stage review (`superpowers:subagent-driven-development`); parallel fan-out mechanics (`superpowers:dispatching-parallel-agents`); the orchestrator's own gates (`disciplined-development`).
-**Audience:** the orchestrator. If you are a dispatched subagent, you are not allowed to dispatch your own subagents. Follow `disciplined-development` + your dispatch prompt (see the subagent red flag below).
+**Audience:** the orchestrator.
+If you are a dispatched subagent, you are not allowed to dispatch your own subagents.
+Follow `disciplined-development` + your dispatch prompt (see the subagent red flag below).
 
 ## Overview
 
-**A subagent's output is a claim, not a result.** Scope the dispatch crisply; verify the diff against it. Reports omit and mislabel their own over-reach — long runs especially drift into "while I'm here" changes — so the diff is the only ground truth.
+**A subagent's output is a claim, not a result.** Scope the dispatch crisply; verify the diff against it.
+Reports omit and mislabel their own over-reach — long runs especially drift into "while I'm here" changes — so the diff is the only ground truth.
 
 **Exceeding your scope to be helpful is the over-reach, not the spirit.** The spirit is a minimal, verifiable change plus an honest list of what you left for the orchestrator.
 
@@ -32,7 +37,9 @@ description: 'Use when dispatching a development subagent whose code changes you
 
 ## Verify — orchestrator, non-negotiable
 
-The report is a claim, not the diff. For every commit a subagent lands: `git show --stat` then the diff → reconcile against the scope contract → keep out-of-scope changes on merit, or revert. A clean test run is not verification — tests pass over silent out-of-scope edits.
+The report is a claim, not the diff.
+For every commit a subagent lands: `git show --stat` then the diff → reconcile against the scope contract → keep out-of-scope changes on merit, or revert.
+A clean test run is not verification — tests pass over silent out-of-scope edits.
 
 ## Common rationalizations
 
@@ -51,7 +58,9 @@ The report is a claim, not the diff. For every commit a subagent lands: `git sho
 - "I'll batch these unrelated findings into one dispatch." (mixed batches hide drift)
 - "Tests pass, so the diff is fine." (tests pass over out-of-scope edits)
 
-**As the dispatched subagent** — You are not allowed to dispatch your own subagents. Follow `disciplined-development` + your dispatch prompt. Beyond that, you over-reach if you think:
+**As the dispatched subagent** — You are not allowed to dispatch your own subagents.
+Follow `disciplined-development` + your dispatch prompt.
+Beyond that, you over-reach if you think:
 
 - "A hook says run a cold-read / write a checkpoint / open the PR — so I will." (the gate is the orchestrator's — report it's due, don't run)
 - "While I'm here, I'll also fix / tidy this."
@@ -60,7 +69,8 @@ The report is a claim, not the diff. For every commit a subagent lands: `git sho
 - "It's a real improvement, so it's fine."
 - "The dispatch didn't say I *couldn't*."
 
-All mean: stop. Out of scope — disclose; act only if small, safe, obvious, in its own commit; else surface and move on.
+All mean: stop.
+Out of scope — disclose; act only if small, safe, obvious, in its own commit; else surface and move on.
 
 ## Composition
 

@@ -14,15 +14,11 @@ This skill governs review remediation for:
 - whole-branch final review;
 - external review.
 
-It does not govern a plan-execution skill's per-task review loop. While
-`superpowers:subagent-driven-development` is reviewing an individual task,
-follow that skill's fix-round limit, reviewer selection, escalation, and
-breaker rules.
+It does not govern a plan-execution skill's per-task review loop.
+While `superpowers:subagent-driven-development` is reviewing an individual task, follow that skill's fix-round limit, reviewer selection, escalation, and breaker rules.
 
-When an upstream execution skill reaches its final whole-branch review, use
-the upstream skill to initiate the review, then use this skill to remediate
-its findings. This skill's three-cycle cap and cold-read escape govern that
-whole-branch remediation loop.
+When an upstream execution skill reaches its final whole-branch review, use the upstream skill to initiate the review, then use this skill to remediate its findings.
+This skill's three-cycle cap and cold-read escape govern that whole-branch remediation loop.
 
 ## The pattern
 
@@ -39,24 +35,30 @@ whole-branch remediation loop.
 
 ## Iteration cap: 3
 
-A **cycle** is **review → class-sweep → re-run**. Take at most **three**. If the third cycle still returns [P0]/[P1]/[P2], take the cold-read escape below — do not proceed to a fourth cycle.
+A **cycle** is **review → class-sweep → re-run**.
+Take at most **three**.
+If the third cycle still returns [P0]/[P1]/[P2], take the cold-read escape below — do not proceed to a fourth cycle.
 
-Three outcomes per cycle — new surface each round is necessary but not sufficient; the **root** decides. Judge the accumulated set from all rounds, not the newest — the history is a dataset, not a news feed:
+Three outcomes per cycle — new surface each round is necessary but not sufficient; the **root** decides.
+Judge the accumulated set from all rounds, not the newest — the history is a dataset, not a news feed:
 - **Scattered** — new surface, no shared root → continue (fix + re-run).
 - **Drift** — re-litigation or trivial/style nits → the cap interrupts it.
 - **Shared-root** — surface-different findings that name **one axis** → attack the root (next section).
 
-Below the cap, the same *kind* of finding recurring across cycles means step 1's class-sweep was incomplete — do it now, not another single-instance round. At the cap, any findings trigger the cold-read escape, never a sweep-and-continue.
+Below the cap, the same *kind* of finding recurring across cycles means step 1's class-sweep was incomplete — do it now, not another single-instance round.
+At the cap, any findings trigger the cold-read escape, never a sweep-and-continue.
 
 ## Find the pattern, attack the root
 
-**Mandatory at cycle 3.** Two cycles done, findings still coming — STOP. Before any fix, dismissal, or re-run:
+**Mandatory at cycle 3.** Two cycles done, findings still coming — STOP.
+Before any fix, dismissal, or re-run:
 
 1. Re-read every round's findings as one set.
 2. Write the pattern verdict in the loop's work artifact. The pattern may sit in the reviewed artifact, in your own governing text (your wording keeps generating findings), or in the reviewer (repeat themes, re-raised dismissals, blind spots). "No shared pattern" is a valid verdict — only in writing, citing each round.
 3. Attack the pattern where it lives: fix the class in the artifact, fix the wording in your text, or close a reviewer re-raise with a written ruling — don't just fix the latest findings.
 
-**Don't wait for cycle 3 when the axis is already visible** (two cycles in, one theme: all failure-path, all concurrency, all auth-boundary, …). To attack an axis in the artifact:
+**Don't wait for cycle 3 when the axis is already visible** (two cycles in, one theme: all failure-path, all concurrency, all auth-boundary, …).
+To attack an axis in the artifact:
 
 1. **Name the axis.**
 2. **Enumerate every site that could violate the invariant — project-wide, across all code paths, not just the reviewed file(s) or cited locations.** A root closed only locally resurfaces elsewhere and restarts the loop there later. Use a ready checklist if one fits (e.g. the `durability` angle in `adversarial-review`).
@@ -64,14 +66,16 @@ Below the cap, the same *kind* of finding recurring across cycles means step 1's
 
 A **higher-order class-sweep**: step 1 sweeps one class within a round; this sweeps a class spanning rounds and surface-different symptoms.
 
-**At the cap, escape — even for a shared root.** A finding on the 3rd cycle's re-run *is* the cap (3 cycles done, findings remain) — not a new below-cap round to attack the root in. Root-attack is below-cap only; at the cap a shared root still goes to the cold-read escape (which may confirm the axis and call for a redo).
+**At the cap, escape — even for a shared root.** A finding on the 3rd cycle's re-run *is* the cap (3 cycles done, findings remain) — not a new below-cap round to attack the root in.
+Root-attack is below-cap only; at the cap a shared root still goes to the cold-read escape (which may confirm the axis and call for a redo).
 
-**Don't over-fire.** A shared root = findings that violate **one invariant** (closing it removes the class) — not a shared *topic*. A SQL-injection and an N+1 query both "touch the database" but violate different invariants (parameterize input vs. batch queries) → scattered, continue.
+**Don't over-fire.** A shared root = findings that violate **one invariant** (closing it removes the class) — not a shared *topic*.
+A SQL-injection and an N+1 query both "touch the database" but violate different invariants (parameterize input vs. batch queries) → scattered, continue.
 
 ## At the cap: cold-read escape
 
-Start/dispatch a fresh review with no conversation memory. Use a subagent, another
-model, another human, or a clean new session.
+Start/dispatch a fresh review with no conversation memory.
+Use a subagent, another model, another human, or a clean new session.
 
 - **Confirms findings** → consider redo, not another iteration.
 - **Diverges materially** → trust the cold read; stop.

@@ -6,22 +6,20 @@ description: Use when starting a session, while doing development work (writing 
 # Disciplined Development
 
 **Role:** Orchestrator — parent skill governing development sessions and dispatching companion skills at gate boundaries.
-**Owns:** the Iron Law, the five gates, the principles, and the
-mode-emphasis routing table.
-**Does not own:** verification mechanics, stale-reference sweeps,
-research grounding, rationale writing, plan-density rules, adversarial
-review posture, review iteration, or subagent-dispatch scoping and
-verification. Those live in companion skills.
+**Owns:** the Iron Law, the five gates, the principles, and the mode-emphasis routing table.
+**Does not own:** verification mechanics, stale-reference sweeps, research grounding, rationale writing, plan-density rules, adversarial review posture, review iteration, or subagent-dispatch scoping and verification.
+Those live in companion skills.
 Methodology skills are invoked from the gates and mode table.
 
 ## Overview
 
-Written records govern how a project works; momentum erodes them — you
-stop re-reading and start trusting memory.
+Written records govern how a project works; momentum erodes them — you stop re-reading and start trusting memory.
 
-**Core principle:** the file wins. Write it down before you forget;
-re-read it before you act; produce evidence before you claim done.
-**Gates** force specific actions at decision boundaries. **Principles** are the rules they enforce. No discipline is skippable on grounds of size, effort, or impact.
+**Core principle:** the file wins.
+Write it down before you forget; re-read it before you act; produce evidence before you claim done.
+**Gates** force specific actions at decision boundaries.
+**Principles** are the rules they enforce.
+No discipline is skippable on grounds of size, effort, or impact.
 
 ## The Iron Law
 
@@ -29,45 +27,36 @@ re-read it before you act; produce evidence before you claim done.
 NO PROGRESS PAST A GATE WITHOUT THE ARTIFACT IT REQUIRES
 ```
 
-Each gate is fail-closed. The artifact must exist — in writing, in
-chat, or in the running system — before the next action.
+Each gate is fail-closed.
+The artifact must exist — in writing, in chat, or in the running system — before the next action.
 
 ## Operational gates
 
-**Gate 1 — Read before writing.**
-Re-read from disk: governing docs (CLAUDE.md / AGENTS.md /
-CONTRIBUTING.md, ARCHITECTURE, project memory), task sources
-(active plan, linked specs/mockups, design principles, API docs,
-schemas), and external facts (library capabilities, versions, API
-behavior). Applies to planned work, ad-hoc changes, bug fixes, docs
-edits, AND code reviews (giving or receiving) — never review without
-re-reading the active plan, governing spec, and linked guidance the
-work is supposed to satisfy. "Last session" doesn't
-count; memory isn't a source. Cite fetched facts that drive a
-decision. If nothing applies, say so before proceeding.
+**Gate 1 — Read before writing.** Re-read from disk: governing docs (CLAUDE.md / AGENTS.md / CONTRIBUTING.md, ARCHITECTURE, project memory), task sources (active plan, linked specs/mockups, design principles, API docs, schemas), and external facts (library capabilities, versions, API behavior).
+Applies to planned work, ad-hoc changes, bug fixes, docs edits, AND code reviews (giving or receiving) — never review without re-reading the active plan, governing spec, and linked guidance the work is supposed to satisfy.
+"Last session" doesn't count; memory isn't a source.
+Cite fetched facts that drive a decision.
+If nothing applies, say so before proceeding.
 
-**Gate 2 — Translate to written before coding.**
-Capture scope as written bullets before coding. Extract visible mockup
-strings into the plan. Plan review ends with a written diff signed off on
-the document. Use `superpowers:brainstorming` when scope/design is
-unsettled. Use `superpowers:writing-plans` + `lean-plan-writing` for
-plans and specs.
+**Gate 2 — Translate to written before coding.** Capture scope as written bullets before coding.
+Extract visible mockup strings into the plan.
+Plan review ends with a written diff signed off on the document.
+Use `superpowers:brainstorming` when scope/design is unsettled.
+Use `superpowers:writing-plans` + `lean-plan-writing` for plans and specs.
 
-**Gate 3 — Verify against the running system before claiming done.**
-UI: screenshot or DOM snapshot. API: live HTTP response. CLI: actual
-invocation. Tests passing is necessary but not sufficient — mocks lie
-about live shapes. Paste evidence in chat.
+**Gate 3 — Verify against the running system before claiming done.** UI: screenshot or DOM snapshot.
+API: live HTTP response.
+CLI: actual invocation.
+Tests passing is necessary but not sufficient — mocks lie about live shapes.
+Paste evidence in chat.
 REQUIRED SUB-SKILL: `superpowers:verification-before-completion`.
 
-**Gate 4 — Sweep stale references before commit.**
-When a change touches a load-bearing fact (code symbol, doc claim,
-schema, spec constraint), every place encoding it goes stale. Find
-them all; reconcile in one commit; document the sweep in the commit
-body's `References swept:` section.
+**Gate 4 — Sweep stale references before commit.** When a change touches a load-bearing fact (code symbol, doc claim, schema, spec constraint), every place encoding it goes stale.
+Find them all; reconcile in one commit; document the sweep in the commit body's `References swept:` section.
 REQUIRED SUB-SKILL: `sweeping-stale-references`.
 
-**Gate 5 — End-of-chunk review + smoke pass before PR.**
-Three steps, in order. Plan checklist does not override the gate.
+**Gate 5 — End-of-chunk review + smoke pass before PR.** Three steps, in order.
+Plan checklist does not override the gate.
 
 1. **Self-review** — a deep, whole-repo adversarial review against the
    active plan; address findings per `adversarial-review-loop`. This is a
@@ -80,25 +69,22 @@ Three steps, in order. Plan checklist does not override the gate.
    `[P3]` is advisory.
 3. **Smoke pass** affected flows; capture evidence in the PR body.
 
-A dispatched subagent runs no part of Gate 5 — gathering findings to hand over still counts. It reports that review is due and stops. The orchestrator or the user opens the PR, never an agent or subagent.
-REQUIRED SUB-SKILL before opening PR:
-`superpowers:finishing-a-development-branch`.
+A dispatched subagent runs no part of Gate 5 — gathering findings to hand over still counts.
+It reports that review is due and stops.
+The orchestrator or the user opens the PR, never an agent or subagent.
+REQUIRED SUB-SKILL before opening PR: `superpowers:finishing-a-development-branch`.
 
 ## Principles
 
 Each gate enforces these.
 
 **1. Write it down, don't remember it.**
-Verbal scope, design decisions, requirements, and plan changes go
-into a file the moment they're agreed. Conversation is not a contract;
-the file is.
+Verbal scope, design decisions, requirements, and plan changes go into a file the moment they're agreed.
+Conversation is not a contract; the file is.
 
-Flip task checkboxes in active plans in the same commit where the
-task is completed.
+Flip task checkboxes in active plans in the same commit where the task is completed.
 
-When the write-down includes an intentional descope, deferral,
-shortcut, exception, or design choice over a defensible alternative,
-the rationale belongs on-page too — not only in chat.
+When the write-down includes an intentional descope, deferral, shortcut, exception, or design choice over a defensible alternative, the rationale belongs on-page too — not only in chat.
 REQUIRED SUB-SKILL: `writing-explicit-rationale`.
 
 **2. Re-read, don't recall.**
@@ -106,27 +92,25 @@ At session start and every major transition, open the actual files.
 Plans drift; context decays.
 
 **3. Obey what's written; surface what isn't.**
-If a guideline says "do X," do X. Don't decide this case is the
-exception. Violating the letter is violating the spirit. Surface
-unclear or conflicting guidance to the user — do not silently resolve.
-Includes scope-ambiguous prompts: "our X" vs "X in general" — flag it
-or check both, don't pick silently.
+If a guideline says "do X," do X.
+Don't decide this case is the exception.
+Violating the letter is violating the spirit.
+Surface unclear or conflicting guidance to the user — do not silently resolve.
+Includes scope-ambiguous prompts: "our X" vs "X in general" — flag it or check both, don't pick silently.
 
 **4. Carry the discipline into subagent dispatches.**
-Subagents don't auto-load skills. Every dispatch prompt must tell the
-subagent to load the `disciplined-development` skill before work.
-If direct skill loading is unavailable, require reading
-`.claude/skills/disciplined-development/SKILL.md` first and following it as
-binding guidance.
+Subagents don't auto-load skills.
+Every dispatch prompt must tell the subagent to load the `disciplined-development` skill before work.
+If direct skill loading is unavailable, require reading `.claude/skills/disciplined-development/SKILL.md` first and following it as binding guidance.
 
-Name governing files to re-read before acting. Require a re-read before
-claiming done. Gate summaries do not substitute for loading the skill. Pick
-the model for task complexity. Dispatch a crisp scope contract and verify
-every returned commit — the report is not the diff.
+Name governing files to re-read before acting.
+Require a re-read before claiming done.
+Gate summaries do not substitute for loading the skill.
+Pick the model for task complexity.
+Dispatch a crisp scope contract and verify every returned commit — the report is not the diff.
 
-Principle 8 and Gate 5 are for the orchestrator, not the subagent. Tell the
-subagent not to dispatch its own subagents or act on hook nudges
-(review / checkpoint / PR); it reports a due gate and stops.
+Principle 8 and Gate 5 are for the orchestrator, not the subagent.
+Tell the subagent not to dispatch its own subagents or act on hook nudges (review / checkpoint / PR); it reports a due gate and stops.
 
 REQUIRED SUB-SKILL: `dispatching-development-subagents`.
 
@@ -142,7 +126,8 @@ REQUIRED SUB-SKILL: `dispatching-development-subagents`.
 REQUIRED SUB-SKILL: `superpowers:test-driven-development`.
 
 **6. Verify load-bearing claims against reality, not memory.**
-Re-read schemas, handlers, fixtures, and external facts before describing them. Memory isn't a source.
+Re-read schemas, handlers, fixtures, and external facts before describing them.
+Memory isn't a source.
 REQUIRED SUB-SKILL: `disciplined-research`.
 
 **7. Keep it simple — add complexity only when evidence demands it.**
@@ -155,15 +140,12 @@ REQUIRED SUB-SKILL: `disciplined-research`.
 Reviewer-side counterpart lives in `adversarial-review`.
 
 **8. Review periodically and catch problems early.**
-Run adversarial review at chunk boundaries and after roughly 5 commits or
-200 net lines since the last clean review. If local automation sets a
-stricter cadence, follow it; otherwise self-trigger.
-A dispatched subagent never runs this review itself — not even to gather
-findings. It reports that review is due and stops; a hook nudge or a hit
-cadence threshold doesn't change that.
-Cadence and whole-branch review remediation use
-`adversarial-review-loop`. Per-task review during a plan-execution workflow
-uses that execution skill's own remediation loop.
+Run adversarial review at chunk boundaries and after roughly 5 commits or 200 net lines since the last clean review.
+If local automation sets a stricter cadence, follow it; otherwise self-trigger.
+A dispatched subagent never runs this review itself — not even to gather findings.
+It reports that review is due and stops; a hook nudge or a hit cadence threshold doesn't change that.
+Cadence and whole-branch review remediation use `adversarial-review-loop`.
+Per-task review during a plan-execution workflow uses that execution skill's own remediation loop.
 REQUIRED SUB-SKILL: `adversarial-review-loop`.
 
 ## Mode emphasis
