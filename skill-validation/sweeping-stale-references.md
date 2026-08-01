@@ -1,5 +1,16 @@
 # Sweeping stale references — validation
 
+## Duplicate red-flag consolidation (2026-08-01)
+
+**Edit.** Remove the `Red flags` section whose cases repeat the retained procedure and rationalization table.
+
+**Non-trivial shared matrix.** A reviewer reports one stale README rename and claims the IDE handled everything else.
+PASS treats it as a sampled class, searches literal and synonym forms across code/docs/tests/fixtures/config/scripts/CI/build, applies all three classifications, reconciles updates together, and puts grouped `References swept:` evidence before `Verification:`.
+
+**Unprimed control: 5/5 PASS. Unprimed GREEN after removal: 5/5 PASS.** Every evaluator preserved the complete class-sweep and audit artifact.
+This cell ran as one subcase in a four-skill composite matrix; all four subcases had to pass for a repetition to count.
+Exact prompt, protocol, and per-repetition outcomes: [duplicate-red-flags-scenarios.md](duplicate-red-flags-scenarios.md).
+
 Retroactive validation record added 2026-08-01.
 The skill predates this repository's validation-record discipline, so this file does not claim the original skill was built from a watched RED.
 It records a reproducible control/current comparison for the behavior that justifies the live contract.

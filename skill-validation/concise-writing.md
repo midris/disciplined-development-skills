@@ -1,5 +1,16 @@
 # concise-writing — validation
 
+## Duplicate red-flag consolidation (2026-08-01)
+
+**Edit.** Remove the `Red flags` section whose cases repeat the retained verbosity patterns, compression pass, and rationalization table.
+
+**Non-trivial shared matrix.** Tighten a padded document containing meta-framing, a duplicate definition, a misread-preventing transition, a load-bearing closing recap, and on-page design rationale.
+PASS cuts the first two, preserves the latter three, and runs the global duplicate check.
+
+**Unprimed control: 5/5 PASS. Unprimed GREEN after removal: 5/5 PASS.** Every evaluator preserved the anti-over-trim and global-altitude behavior.
+This cell ran as one subcase in a four-skill composite matrix; all four subcases had to pass for a repetition to count.
+Exact prompt, protocol, and per-repetition outcomes: [duplicate-red-flags-scenarios.md](duplicate-red-flags-scenarios.md).
+
 Built and maintained test-first per `superpowers:writing-skills` (skills are TDD
 for process docs: no skill — and no edit — without a failing test first). This
 records the trail so the rationale is recoverable from the bundle.

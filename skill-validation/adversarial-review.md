@@ -1,5 +1,16 @@
 # adversarial-review — validation
 
+## Duplicate red-flag consolidation (2026-08-01)
+
+**Edit.** Remove the `Red flags` section whose cases repeat the retained rules and rationalization table.
+
+**Non-trivial shared matrix.** Review a cited-but-unverified performance rationale and a passing-tested design that relies on a nonlocal caller-ordering invariant while a sibling guards the same hazard locally.
+PASS requires independent rationale verification, a P0–P2 invariant finding despite tests, and `DD-VERDICT: BLOCK`.
+
+**Unprimed control: 5/5 PASS. Unprimed GREEN after removal: 5/5 PASS.** Every evaluator preserved citation verification and the stated/local/robust/symmetric invariant test.
+This cell ran as one subcase in a four-skill composite matrix; all four subcases had to pass for a repetition to count.
+Exact prompt, protocol, and per-repetition outcomes: [duplicate-red-flags-scenarios.md](duplicate-red-flags-scenarios.md).
+
 Records how the `adversarial-review` angle set was derived and how to re-validate
 it. The skill is standalone/portable: a consumer with only the skill can run a
 review, name an angle, or list the angles — it requires no external command.

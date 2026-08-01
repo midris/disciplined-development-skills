@@ -7,12 +7,14 @@ description: Use when code-reviewing or self-reviewing code, specs, plans, or de
 
 ## Overview
 
-Reviewer skill that injects adversarial posture. Use directly, paste into
-a review prompt, or feed to local automation.
+Reviewer skill that injects adversarial posture.
+Use directly, paste into a review prompt, or feed to local automation.
 
 ## Role
 
-Adapter on top of `superpowers:requesting-code-review`. Augments; does NOT replace. Base skill = what code review *is*; this skill = what *mode* to be in.
+Adapter on top of `superpowers:requesting-code-review`.
+Augments; does NOT replace.
+Base skill = what code review *is*; this skill = what *mode* to be in.
 
 ## Posture
 
@@ -26,7 +28,8 @@ Adapter on top of `superpowers:requesting-code-review`. Augments; does NOT repla
 
 ## End of posture
 
-Adversarial posture is scoped to the review. When the review completes, return to your pre-review posture.
+Adversarial posture is scoped to the review.
+When the review completes, return to your pre-review posture.
 
 Don't carry the reviewer's verification duty past the review.
 
@@ -39,21 +42,17 @@ Don't carry the reviewer's verification duty past the review.
 
 ## Output format
 
-One finding per line, the line starting with its severity token; put any
-detail on indented lines beneath:
+One finding per line, the line starting with its severity token; put any detail on indented lines beneath:
 
 ```
 - [PN] <path>:<line>: <one-line summary>
   <optional indented reasoning>
 ```
 
-A line that starts with `[P0]`–`[P3]` is read as a finding — so start no
-other line with one. Emit findings (or `No findings.`) only after
-enumerating, verifying, and challenging, then close with the verdict line.
+A line that starts with `[P0]`–`[P3]` is read as a finding — so start no other line with one.
+Emit findings (or `No findings.`) only after enumerating, verifying, and challenging, then close with the verdict line.
 
-**Verdict line.** The last non-blank line, nothing after it, containing
-only `DD-VERDICT: PASS` or `DD-VERDICT: BLOCK`: PASS = zero `[P0]`/`[P1]`/`[P2]`
-(`[P3]`-only passes), BLOCK = one or more.
+**Verdict line.** The last non-blank line, nothing after it, containing only `DD-VERDICT: PASS` or `DD-VERDICT: BLOCK`: PASS = zero `[P0]`/`[P1]`/`[P2]` (`[P3]`-only passes), BLOCK = one or more.
 
 ## Rules
 
@@ -73,7 +72,8 @@ For every "we chose X because Y" / "Y doesn't support Z" / "Y is too slow":
 - Check from primary sources (docs, code, measured behavior).
 - If Y can't be verified from the artifact + linked context, flag the rationale.
 
-Author confidence is not evidence. Citations are not verification.
+Author confidence is not evidence.
+Citations are not verification.
 
 ### Challenge every piece for necessity
 
@@ -84,11 +84,14 @@ For each piece of the artifact, ask:
 - Defense-in-depth justified by evidence, or by convention?
 - Feature, or non-feature framed as a feature?
 
-Hypothetical / just-in-case / convention / non-feature → flag for removal. This is `disciplined-development` Principle 7 applied to review. In prose the same test catches padding — load `concise-writing` when reviewing docs.
+Hypothetical / just-in-case / convention / non-feature → flag for removal.
+This is `disciplined-development` Principle 7 applied to review.
+In prose the same test catches padding — load `concise-writing` when reviewing docs.
 
 ### Generate the unexercised cases
 
-Code rests on assumptions it never states; a passing test or clean read confirms they held this run, not that they hold. Generate what it doesn't handle; surface what it leans on.
+Code rests on assumptions it never states; a passing test or clean read confirms they held this run, not that they hold.
+Generate what it doesn't handle; surface what it leans on.
 
 **Inputs and conditions.** List every input read, resource depended on, boundary crossed, bound set; for each, generate the case the happy path skips:
 
@@ -105,13 +108,18 @@ Skipping the enumeration — checking only what caught your eye — is itself th
 - *Robust?* an inserted `await`/log/reorder can't silently break it.
 - *Symmetric?* the same hazard handled the same way in siblings.
 
-Any "no" is a finding, even if the code works today. Fix it by construction: enforce or unify until every axis is "yes". A doc comment only flips *Stated?*; a test flips none. Neither lowers the severity.
+Any "no" is a finding, even if the code works today.
+Fix it by construction: enforce or unify until every axis is "yes".
+A doc comment only flips *Stated?*; a test flips none.
+Neither lowers the severity.
 
 **Before dismissing a false positive:** if your reason is "it can't happen" (tests pass, the scheduler prevents it, the caller never does), name the assumption that makes it safe and grade it (above) first — explaining the safety usually surfaces the finding.
 
 ## Review angles
 
-The posture and rules above are the always-on baseline of every review — the **holistic** read that finds bugs, verifies rationale, challenges necessity, and generates the unexercised cases. An **angle** adds one specialized lens; it never narrows what you review. (Bug-finding, rationale, necessity, and the unexercised-case sweep are the baseline, not angles — reserve an angle for a lens the baseline lacks.)
+The posture and rules above are the always-on baseline of every review — the **holistic** read that finds bugs, verifies rationale, challenges necessity, and generates the unexercised cases.
+An **angle** adds one specialized lens; it never narrows what you review.
+Bug-finding, rationale, necessity, and the unexercised-case sweep are the baseline, not angles — reserve an angle for a lens the baseline lacks.
 
 | Angle | Looks for |
 |-------|-----------|
@@ -128,9 +136,8 @@ The posture and rules above are the always-on baseline of every review — the *
   - *Mutation:* partial write then error → rolled back? flush/commit fails after the write → acknowledged anyway? process killed mid-op → torn record? a write-path crash on bad input (panic/abort, unchecked unwrap, `try!`/assert; NaN/±Inf, oversized) → typed error, or process crash? ('it's a programmer error / our own typed data' is no pass — a statically-valid value can be unserializable at runtime; the crash tears the record, and even a pre-write crash denies the caller a recoverable error) failure surfaced as the documented error type, or a leaked lower-layer one? retry after a failure → duplicate / gap / reorder?
   - *Read/replay:* torn/partial final record (missing terminator) rejected? interior corruption (blank line, gap, out-of-order) rejected, not skipped? unknown/forward version loud, not mis-parsed? empty distinguished from corrupt?
 
-Every review is deep and whole-repo, anchored to the active plan and
-governing docs — no light or diff-scoped tier. Only the angles vary: the
-holistic baseline always runs; add each per its "when to apply" row.
+Every review is deep and whole-repo, anchored to the active plan and governing docs — no light or diff-scoped tier.
+Only the angles vary: the holistic baseline always runs; add each per its "when to apply" row.
 
 ## Few-shot examples
 
@@ -171,19 +178,6 @@ DD-VERDICT: PASS
 | "The tests prove it can't happen." | They prove it doesn't *now* — not that the assumption is stated, local, or robust. |
 | "Safe by how the runtime schedules it." | Safe by accident — one edit from broken. |
 | "The model's always there / the result's well-formed / inputs are small." | That's the assumption. Remove it and re-read. |
-
-## Red flags
-
-Stop and re-read if you catch yourself:
-- "Looks good" without verification.
-- "Found nothing" without enumeration.
-- Accepting rationale without checking the claim.
-- Accepting a punted decision as the design.
-- Skipping a section as trivial.
-- Writing "false positive" without naming the assumption that makes it safe.
-- Closing a finding with "tests pass" when it turns on an unstated assumption or an unfed input.
-- The safety argument requires tracing another function or the scheduler.
-- The same hazard guarded one way here, another way (or not at all) in a sibling.
 
 ## Composition
 

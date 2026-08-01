@@ -15,7 +15,7 @@ Resolve the six cleanup areas identified in the 2026-07-31 skill audit, preservi
 - [x] Repair stale and missing validation records.
 - [x] Reconcile Principle 7 and the commit-body example.
 - [x] Tighten skill descriptions to trigger-only metadata.
-- [ ] Consolidate redundant skill prose after a working GREEN baseline exists.
+- [x] Consolidate redundant skill prose after a working GREEN baseline exists.
 - [ ] Move deferred design material out of shipped skill directories and remove ignored workspace cruft.
 
 ## Verification for the first slice

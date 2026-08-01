@@ -11,7 +11,9 @@ description: 'Use when writing or revising reader-facing prose — docs, READMEs
 
 ## Overview
 
-Cut **verbosity** — words beyond what the information needs — while keeping every bit of information and any framing that aids comprehension. Density is good; padding is not. This is not brevity-for-its-own-sake: a rich, easy to read, complete document is the goal.
+Cut **verbosity** — words beyond what the information needs — while keeping every bit of information and any framing that aids comprehension.
+Density is good; padding is not.
+This is not brevity-for-its-own-sake: a rich, easy to read, complete document is the goal.
 
 ## The core test
 
@@ -22,11 +24,13 @@ For each sentence or clause:
 - **Neither** → cut it.
 - **Either** → keep it.
 
-The "or framing" half is the guard: recaps, misread-preventing transitions, and orienting context all carry framing, so they stay. Padding carries neither.
+The "or framing" half is the guard: recaps, misread-preventing transitions, and orienting context all carry framing, so they stay.
+Padding carries neither.
 
 ## The compression pass — two altitudes
 
-Run before finalizing any durable artifact. Trim at both altitudes:
+Run before finalizing any durable artifact.
+Trim at both altitudes:
 
 - **Local** — sentence and clause level, via the core test. Doable as you write.
 - **Global** — read the edit *against the whole artifact*: does this content already appear elsewhere? Cross-section duplication surfaces only at this altitude, so any edit that adds prose requires this read.
@@ -52,7 +56,8 @@ Meta-framing and say-it-twice removed; every fact kept (~45% shorter):
 
 ## When NOT to cut
 
-Over-trimming is its own failure. Keep:
+Over-trimming is its own failure.
+Keep:
 
 - **Closing recaps and navigation aids** in long documents — they carry framing.
 - **Deliberate repetition** for emphasis or retention — restating a key point in a summary, or echoing a critical warning where it's needed. The target is *accidental* restatement that adds nothing, not intentional reinforcement.
@@ -60,9 +65,11 @@ Over-trimming is its own failure. Keep:
 - **Rationale** — owned by `writing-explicit-rationale`; concision never licenses dropping the why.
 - **Spec/plan completeness** — owned by `lean-plan-writing`; a requirement list is not padding.
 
-When editing existing text, draft first. Diff edits against the prose being edited to make sure no meaning is lost.  
+When editing existing text, draft first.
+Diff edits against the prose being edited to make sure no meaning is lost.
 
-Concision is judgment, not mechanical minimization. When unsure whether something is framing or padding, keep it and flag it.
+Concision is judgment, not mechanical minimization.
+When unsure whether something is framing or padding, keep it and flag it.
 
 ## Rationalizations
 
@@ -74,14 +81,6 @@ Concision is judgment, not mechanical minimization. When unsure whether somethin
 | "A lead-in sentence per section reads more smoothly." | In a short doc the headers and lead-ins are the bulk. Collapse them. |
 | "It's just one extra sentence." | One per paragraph is how a 130-word doc becomes 300. The test is per-sentence. |
 | "Trimming risks dropping something important." | That's what the core test's 'or framing' half protects. Cut only what carries neither information nor framing. |
-
-## Red flags
-
-Stop and run the compression pass if you catch yourself:
-
-- Opening a section by describing what the section will do.
-- Rewording the previous sentence instead of advancing — and nothing new is added.
-- Finalizing added prose without reading it against the whole document (the global-altitude check).
 
 ## Pairing
 

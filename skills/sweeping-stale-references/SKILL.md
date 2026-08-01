@@ -11,10 +11,10 @@ description: Use when changing a load-bearing fact that appears in multiple plac
 
 ## Overview
 
-Reviewers see the diff; you see the world. When a fact changes, every
-place encoding it goes stale. Sweep every stale reference and reconcile
-in one commit. Single-citation point fixes leave the **loop-of-fixes
-anti-pattern**: each review round catches one more.
+Reviewers see the diff; you see the world.
+When a fact changes, every place encoding it goes stale.
+Sweep every stale reference and reconcile in one commit.
+Single-citation point fixes leave the **loop-of-fixes anti-pattern**: each review round catches one more.
 
 ## Quick reference
 
@@ -27,15 +27,13 @@ anti-pattern**: each review round catches one more.
 
 ## Procedure
 
-Three steps. Don't skip any.
+Three steps.
+Don't skip any.
 
 **1. Search.** Use any tool (grep, rg, ag, IDE find-references) —
-thoroughness matters, not which tool. Cast wide across code, docs,
-tests/fixtures, AND config/scripts/CI/build files (this last category
-is easy to miss because it's not in the "obvious file types"). Search
-the literal old string AND likely synonyms — a renamed `getUser` may
-also appear as `"user fetcher"` in prose or `get_user` in Python
-bindings.
+thoroughness matters, not which tool.
+Cast wide across code, docs, tests/fixtures, AND config/scripts/CI/build files (this last category is easy to miss because it's not in the "obvious file types").
+Search the literal old string AND likely synonyms — a renamed `getUser` may also appear as `"user fetcher"` in prose or `get_user` in Python bindings.
 
 **2. Triage.** For each match, label the outcome:
 
@@ -72,10 +70,7 @@ References swept:
 - ...
 ```
 
-`<outcome>` uses the three labels from Procedure step 2 (`update` /
-`false positive: <reason>` / `intentionally stale: <reason>`),
-optionally with a short note like `update (declaration)` or
-`update (3 assertions)`.
+`<outcome>` uses the three labels from Procedure step 2 (`update` / `false positive: <reason>` / `intentionally stale: <reason>`), optionally with a short note like `update (declaration)` or `update (3 assertions)`.
 
 One entry may group multiple matches only when they share a path and outcome.
 List their line numbers or another precise location and include the match count.
@@ -91,12 +86,10 @@ A legitimate broad sweep may still exceed that preference after grouping; the au
 References swept: n/a — change affects only this file.
 ```
 
-The `n/a` line is **required, not optional** — its absence reads
-identically to "I forgot to sweep."
+The `n/a` line is **required, not optional** — its absence reads identically to "I forgot to sweep."
 
-**Placement:** `References swept:` goes after the narrative body and
-before `Verification:`. Sweep is part of the correctness story;
-verification is proof the result works.
+**Placement:** `References swept:` goes after the narrative body and before `Verification:`.
+Sweep is part of the correctness story; verification is proof the result works.
 
 ### Worked example
 
@@ -138,17 +131,6 @@ Verification:
 | "I'll add a TODO and sweep later." | Later = never. The commit lands inconsistent; `git bisect` lands readers on a half-finished state. |
 | "Probably already has it." / "The plan implicitly covers it." | Implicit isn't covered. Grep. If the sweep finds zero matches, that's a `References swept: n/a` line, not silence. |
 | "Sweep is overkill for this small change." | The skill applies on the basis of *what the change touches*, not on size. A single-line schema rename can have 30 consumers. |
-
-## Red flags
-
-Earlier warning signs — stop if any cross your mind:
-
-- "Just this one citation."
-- "The other places aren't really the same thing."
-- "I'll get to the rest in a follow-up."
-- "The reviewer would have caught more if there were more."
-- "I already updated everything I could think of."
-- "Single-file change, no sweep needed." (without writing the `n/a` line)
 
 ## References
 

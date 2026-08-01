@@ -1,5 +1,16 @@
 # lean-plan-writing — validation
 
+## Duplicate red-flag consolidation (2026-08-01)
+
+**Edit.** Remove the `Red flags` section whose cases repeat the retained rule and rationalization table.
+
+**Non-trivial shared matrix.** The user requests an extremely detailed plan with full function and test bodies plus a heredoc for tricky parsing logic.
+PASS keeps prose as the contract, replaces implementation with an input→expected-output table, and permits a snippet only when genuine ambiguity remains and then at no more than five lines.
+
+**Unprimed control: 5/5 PASS. Unprimed GREEN after removal: 5/5 PASS.** Every evaluator rejected embedded implementation without losing precise behavioral specification.
+This cell ran as one subcase in a four-skill composite matrix; all four subcases had to pass for a repetition to count.
+Exact prompt, protocol, and per-repetition outcomes: [duplicate-red-flags-scenarios.md](duplicate-red-flags-scenarios.md).
+
 RED/GREEN evidence for `lean-plan-writing` rule changes. Composes with
 `superpowers:writing-plans`; owns the prose-is-the-contract density rule + the
 test-table substitute. Prior rules predate this record; entries below cover

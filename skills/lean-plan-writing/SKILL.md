@@ -10,7 +10,8 @@ description: Use with `superpowers:writing-plans` whenever the deliverable is a 
 **Owns:** the per-step content-density rule ("prose is the contract; code is the implementer's job"), the illustrative-snippet operational test, the test-table substitute for tricky logic.
 **Does not own:** upstream plan scaffolding (header, files-touched, step decomposition, no-placeholders, TDD ordering, commit cadence) — that stays with `superpowers:writing-plans`.
 
-`superpowers:writing-plans` says "if a step changes code, show the code." This skill flips that one rule: **prose is the contract; the code is the implementer's job**. Plans and specs carry concise requirements + order-of-operations + status — not the implementation written out.
+`superpowers:writing-plans` says "if a step changes code, show the code." This skill flips that one rule: **prose is the contract; the code is the implementer's job**.
+Plans and specs carry concise requirements + order-of-operations + status — not the implementation written out.
 
 ## The rule
 
@@ -19,7 +20,8 @@ For every step, ask: *can a reader infer the shape from prose alone, given the l
 - **Yes** → no code. Prose only.
 - **No** → a short illustrative snippet (≤5 lines) anchoring the ambiguity. Not the implementation.
 
-A snippet is *illustrative* when removing it makes the requirement genuinely ambiguous. It is *bloat* when removing it leaves prose that still specifies the requirement.
+A snippet is *illustrative* when removing it makes the requirement genuinely ambiguous.
+It is *bloat* when removing it leaves prose that still specifies the requirement.
 
 ## What goes in prose, not code
 
@@ -32,7 +34,10 @@ A snippet is *illustrative* when removing it makes the requirement genuinely amb
 
 ## When the implementation is genuinely tricky
 
-The substitute for embedded code is a **denser test contract**, not vaguer prose. When the logic is gnarly (a multi-arm regex, a recursive CTE, a complex transform), give a table of `(input → expected output)` rows pinning every edge case. The implementer writes the implementation against the table with running tests as feedback. The table is the precise spec; the regex/CTE is one valid implementation of it.
+The substitute for embedded code is a **denser test contract**, not vaguer prose.
+When the logic is gnarly (a multi-arm regex, a recursive CTE, a complex transform), give a table of `(input → expected output)` rows pinning every edge case.
+The implementer writes the implementation against the table with running tests as feedback.
+The table is the precise spec; the regex/CTE is one valid implementation of it.
 
 ## Per-artifact
 
@@ -59,16 +64,7 @@ Split a plan's work into a sequence of branches — each a single PR, small enou
 | "this is greenfield, no patterns to reference" | The spec carries the design; the plan carries the order. Code-embedding does not become correct because the context is greenfield. |
 | "the implementer is new — I'll add a teaching snippet showing the concept" | Teaching snippets that show implementation shape ARE implementation — the implementer copy-pastes them. Explain the concept in prose; cite an existing codebase analogue or external doc. Do not embed the template they will copy. |
 
-## Red flags
-
-Stop and re-read this skill if you catch yourself:
-
-- Pasting a function body, struct definition, or test body into a plan step.
-- Writing a heredoc inside a plan code block.
-- Drafting a JSON example longer than ~5 lines.
-- Writing "the implementer should write:" followed by a code block.
-- Defaulting to a code block as the first move when writing a step.
-
 ## Pairing
 
-Always invoked with `superpowers:writing-plans`. Companion: `writing-explicit-rationale` (when descoping or making a design choice that could be re-litigated, write the rationale into the artifact).
+Always invoked with `superpowers:writing-plans`.
+Companion: `writing-explicit-rationale` (when descoping or making a design choice that could be re-litigated, write the rationale into the artifact).
