@@ -2,7 +2,7 @@
 
 ## Status
 
-Design decisions approved on 2026-08-01; awaiting written-spec review before implementation planning.
+Design decisions approved and consistency-reviewed on 2026-08-01; awaiting final written-spec approval before implementation planning.
 
 ## Objective
 
@@ -39,7 +39,8 @@ Four skills form the **integrated development group**:
 
 The group coordinates tightly but is not a separately installable mini-bundle.
 Direct-invocation tests for these skills run with all nine project skills available.
-`disciplined-development` is the orchestrator and intentionally depends on its children.
+`disciplined-development` is the orchestrator and intentionally depends on all eight companions.
+The other three integrated-development skills are its tightly coupled children; the five portable skills also participate as routed companions.
 
 ## Preservation rule
 
@@ -52,14 +53,20 @@ Compare cleaned drafts against the pinned control with identical prompts and rub
 
 Handle desired behavioral improvements as separate RED/GREEN changes after the preservation cleanup unless a baseline failure makes safe cleanup impossible.
 
+Portable extraction is an approved target, not assumed control behavior.
+If a portable skill fails extraction, record the watched RED, make the minimal portability change in a separate behavioral slice, establish its 5/5 GREEN, and only then perform readability cleanup.
+The portability slice must preserve the skill's software-development behavior.
+
 ## Validation environment
 
 The primary authoring and validation configuration is `gpt-5.6-sol` at high reasoning effort.
-All primary scenarios must reach 5/5 on that configuration.
+All active scenarios must reach 5/5 on that configuration.
 One repetition standard is easier to audit than a complexity-dependent rule, and five fresh contexts expose variance that three can miss.
 
-After the complete Sol-high baseline is established, run the same suite on `gpt-5.6-sol` at low reasoning effort and record comparative scores.
+After the complete Sol-high control results are recorded, run the same control scenario set on `gpt-5.6-sol` at low reasoning effort and record comparative scores.
 Low-effort results characterize robustness; they do not replace or dilute the high-effort 5/5 gate.
+Run the complete suite on Sol low again after cleanup to compare the control and cleaned skill trees.
+A lower cleaned score pauses sign-off for inspection and user review but is not an automatic failure of the Sol-high preservation gate.
 
 Record for every run:
 
@@ -69,7 +76,7 @@ Record for every run:
 - Superpowers version;
 - sibling skills made available;
 - run date;
-- private scoring rubric;
+- scoring rubric withheld from evaluator prompts and contexts;
 - manually scored outcome.
 
 Later Claude model and effort testing is outside this cleanup's completion gate.
@@ -83,13 +90,17 @@ Do not rewrite genuine history or commit raw subagent transcripts.
 Every scenario uses:
 
 - five independent fresh contexts;
+- read-only, bounded evaluators with no nested dispatch;
 - an exact evaluator prompt with no answer key or scoring criteria;
+- only the skill material and task context named by the scenario;
 - manual inspection of every response;
-- a private rubric with observable pass criteria;
+- an evaluator-withheld rubric with observable pass criteria;
 - five passes, with no averaging or discarded runs.
 
 If wording changes after a failed run, restart the affected scenario at zero.
 Record the missed criterion and relevant rationalization for failures.
+A completed response that misses the rubric is a failure and cannot be discarded.
+An infrastructure error that produces no evaluable response is recorded separately and retried; it is not counted as a behavioral pass or failure.
 
 Use atomic scenarios for individual skill promises.
 Use composite prompts only when composition is the behavior under test; never combine unrelated tasks to reduce dispatch count.
@@ -102,15 +113,21 @@ Score behavioral preservation before comparing readability.
 
 Every skill needs:
 
-- a simple discovery test using descriptions rather than skill bodies;
+- a simple discovery test using all nine descriptions rather than skill bodies;
 - a simple application test;
 - a non-trivial application test with competing constraints, pressure, or edge conditions;
 - a safe direct-invocation test;
 - every still-relevant focused regression already protecting a specific rule.
 
-The portable five also need extraction tests with only the skill and its declared external dependencies available.
+A scenario may satisfy multiple related coverage categories when its rubric names each promise explicitly.
+Do not create near-duplicate prompts merely to give every category a separate row.
+
+The portable five also need extraction tests with only the skill and its declared external dependencies available, including at least one non-software application.
 The integrated development group needs cross-skill ownership and composition tests.
 `disciplined-development` needs full-suite orchestration tests.
+
+Existing behavior is covered by **preservation scenarios**, which require a 5/5 control baseline.
+Newly approved behavior such as a missing portability contract is covered by a **target scenario**, which requires a watched control RED and a 5/5 GREEN before joining the active regression suite.
 
 Add scenarios for each meaningful branch, boundary, output contract, and demonstrated failure mode.
 Complex skills may therefore have substantially larger suites than narrow skills.
@@ -133,7 +150,7 @@ Each active scenario must identify the promises and skill sections it protects s
 A current scenario that does not reach 5/5 is not silently accepted and is not automatically a skill defect.
 Classify the result before cleanup:
 
-1. The scenario or rubric is flawed: repair it and restart the baseline.
+1. The scenario or rubric is flawed: repair it and restart the control baseline.
 2. The skill is genuinely inconsistent: pause and obtain user approval for a separate behavioral RED/GREEN change.
 3. The behavior is inherently variable: make the variance and acceptable contract explicit, then redesign the scenario around observable requirements.
 
@@ -157,7 +174,7 @@ Do not hide a 4/5 result, average it into a pass, or preserve a current failure 
 - Give required outputs a clear shape.
 - Cover important boundaries and failure modes.
 - Do not rely on implication, accidental section order, or examples alone.
-- Preserve the complete 5/5 baseline.
+- Preserve every established control behavior at 5/5.
 
 ### Prose economy
 
@@ -187,24 +204,26 @@ Do not hide a 4/5 result, average it into a pass, or preserve a current failure 
 
 ## Cleanup workflow
 
-1. Audit the validation framework and publish the shared protocol plus active scenario catalogs.
-2. Establish the complete Sol-high control baseline for all nine skills.
-3. Run the same baseline suite on Sol low and record comparative scores.
-4. Clean one portable skill at a time, rerunning its complete active suite against the draft.
-5. Clean `adversarial-review`, `adversarial-review-loop`, and `dispatching-development-subagents`, preserving their coordinated contracts and safe direct invocation.
+1. Audit the validation framework and add the shared protocol plus active scenario catalogs.
+2. Establish complete Sol-high control results for all nine skills: 5/5 for preservation scenarios and watched REDs for approved target scenarios.
+3. Run the same control scenario set on Sol low and record comparative scores.
+4. Process one portable skill at a time: close any approved portability RED in its own behavioral slice, then perform readability cleanup against the expanded active suite.
+5. Clean `adversarial-review`, `adversarial-review-loop`, and `dispatching-development-subagents` one at a time, rerunning affected composition scenarios and preserving safe direct invocation.
 6. Clean `disciplined-development` last against the settled child contracts.
-7. Run final direct-invocation, portable-extraction, and whole-suite composition matrices.
-8. Run the repository's automated hook, installer, and research suites.
+7. Run final Sol-high direct-invocation, portable-extraction, and whole-suite composition matrices.
+8. Run the complete cleaned suite on Sol low and compare it with the control scores.
+9. Run the repository's automated hook, installer, and research suites.
 
 The parent comes last because its routing can only be reconciled cleanly after every child contract is settled.
 
 For each skill cleanup:
 
 1. Show the draft to the user.
-2. Run the complete impacted 5/5 regression set.
+2. Run the skill's complete active suite at 5/5 on Sol high.
 3. Run a cold editorial and skill-writing review.
 4. Show the edited skill in place for human readability review.
-5. Commit only after behavioral preservation and user approval.
+5. Run the repository's automated hook, installer, and research suites.
+6. Commit only after behavioral preservation, repository verification, and user approval.
 
 Whole-skill cleanup reruns the skill's complete active suite.
 Narrow later edits may use the scenario-to-promise map to select impacted tests.
@@ -213,11 +232,14 @@ Parent orchestration changes rerun the parent suite and affected child-compositi
 
 ## Success criteria
 
-- Every active scenario has an exact prompt, private rubric, environment record, and 5/5 Sol-high baseline.
-- The complete baseline has comparative Sol-low scores.
+- Every scenario has an exact prompt, evaluator-withheld rubric, and environment record.
+- Every preservation scenario has a 5/5 Sol-high control baseline.
+- Every approved target scenario has a watched control RED and a 5/5 Sol-high GREEN before joining the active regression suite.
+- The control and cleaned skill trees have comparative Sol-low scores.
 - The portable five pass extraction tests without project siblings.
+- Any portability gap observed in the control is closed through a separate watched RED/GREEN slice before readability cleanup.
 - All nine skills are safe to invoke directly with the complete bundle installed.
-- Cleaned skills preserve their control behavior at 5/5.
+- Cleaned skills preserve their control behavior at 5/5 on Sol high.
 - Human and cold editorial review find each skill coherent, compact, and easy to read.
 - `disciplined-development` consistently routes the settled child contracts without duplicating them.
 - Validation records are replayable without becoming narrative or transcript archives.
