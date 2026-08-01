@@ -39,5 +39,5 @@ That conflicted with the normal commit-body preference, while splitting the comm
 
 **GREEN requirements.** Group matches only when they share both path and outcome; retain precise locations and counts; reconcile entry counts to search results; never group across paths or outcomes; and allow a legitimate grouped sweep to exceed the normal preference when correctness evidence still requires it.
 
-**GREEN result: 1/1 PASS.** The evaluator produced 10 path/outcome entries for 126 matches and reconciled them exactly: 80 updates across 6 paths, 40 intentionally stale matches across 2 paths, and 6 false positives across 2 paths.
-It kept `Verification:` after the sweep and limited the body-size exception to correctness evidence remaining after grouping.
+**GREEN result: 3/3 PASS.** The initial evaluator and two additional independent cold repetitions each produced 10 path/outcome entries for 126 matches and reconciled them exactly: 80 updates across 6 paths, 40 intentionally stale matches across 2 paths, and 6 false positives across 2 paths.
+All three kept `Verification:` after the sweep and limited the body-size exception to correctness evidence remaining after grouping.

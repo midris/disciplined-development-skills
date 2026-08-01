@@ -53,5 +53,5 @@ This means the edit is a clarity refactor, not a reproduced behavior fix.
 
 **GREEN requirement.** Preserve that exact classification while making the threshold explicit: analysis must generate cases, but implementation follows only for contract requirements, reachable accepted input, observed use, or robust invariants.
 
-**GREEN result: 1/1 PASS.** The evaluator preserved the pre-edit classification and cited the new threshold directly.
-It distinguished mandatory analysis from implementation, supported absent optional input by contract, rejected representable malformed input by construction, and recorded the ungrounded scale case as an accepted edge.
+**GREEN result: 3/3 PASS.** The initial evaluator and two additional independent cold repetitions preserved the pre-edit classification and cited the new threshold directly.
+All three distinguished mandatory analysis from implementation, supported absent optional input by contract, rejected representable malformed input by construction, and recorded the ungrounded scale case as an accepted edge.
