@@ -2,7 +2,7 @@
 
 ## Status
 
-Design decisions approved and consistency-reviewed on 2026-08-01; awaiting final written-spec approval before implementation planning.
+Design decisions approved, consistency-reviewed, and final-reviewed on 2026-08-01.
 
 ## Objective
 

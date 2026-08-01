@@ -6,7 +6,7 @@ Single source of truth for agent guidance in this repository. If `AGENTS.md` / `
 
 - At session start, load the doctrine: `Read skills/disciplined-development/SKILL.md`. **The Skill tool doesn't see it** — the skill dirs live under `skills/` (the installer symlinks them out to consumers), and no harness enumerates skills from there. Load companion `SKILL.md` files the same way when the parent dispatches: `skills/adversarial-review`, `skills/adversarial-review-loop`, `skills/concise-writing`, `skills/disciplined-research`, `skills/dispatching-development-subagents`, `skills/lean-plan-writing`, `skills/sweeping-stale-references`, `skills/writing-explicit-rationale`.
 - Cross-reference `ARCHITECTURE.md` (current component interplay + diagrams), `README.md` (bundle overview, install/recovery flow), and `skills/disciplined-development/hooks/README.md` (hook design + state model) before non-trivial changes. Hook config schema: `skills/disciplined-development/hooks/dd-config.md`.
-- Treat `plans/` as a live source of truth when a plan exists — update it in the same change set as the work it tracks.
+- Treat active plans and design specs under `plans/` as live sources of truth — update them in the same change set as the work they track.
 - Test-first for behavior changes — see "Test-Driven Changes" below.
 - Periodic adversarial review per `disciplined-development` Principle 8 — at review-nudge signals or natural pauses, run a deep review per the adversarial-review skill, then log it via `dd-log` to reset the counter; iterate per `adversarial-review-loop` until clean.
 - After meaningful work, update docs that drifted — see "Documentation Update Checklist" below.
@@ -29,6 +29,7 @@ research/                             # non-shipped experiment tooling (replay h
 skill-validation/                     # non-shipped validation records (skills, commands, project rules)
 tests/                                # installer-level tests (the settings-wiring test skips outside a consumer)
 plans/                                # active plans (created on demand)
+plans/specs/                          # active design specs
 plans/completed/, plans/deferred/     # archived / deferred work
 reviews/                              # architecture / code-review findings (non-shipped records)
 install-skills.sh                     # symlink installer
@@ -92,8 +93,8 @@ No `ROADMAP.md`. Active work is tracked in `plans/` (when a plan is open) or dir
 
 ### Plan Hygiene
 
-- **File layout:** active plans in `plans/`, completed in `plans/completed/`, deferred in `plans/deferred/`. New files: `YYYY-MM-DD-<feature>.md`. (No `plans/specs/` here — inline design notes in the plan when needed.)
-- During design brainstorming for any non-trivial change, create the plan file at the **first** locked decision and append live as decisions lock — never batch capture to session end.
+- **File layout:** active plans in `plans/`, active design specs in `plans/specs/`, completed work in `plans/completed/` (and `plans/completed/specs/` for completed specs), and deferred work in `plans/deferred/`. New files use the `YYYY-MM-DD-` prefix.
+- During design brainstorming for any non-trivial change, create the spec file in `plans/specs/` at the **first** locked decision and append live as decisions lock — never batch capture to session end. The brainstorming skill's final design-doc step finalizes and commits that live spec.
 - **Plan content scope:** see the `lean-plan-writing` skill — prose is the contract; code is the implementer's job.
 - **Explicit rationale for shortcuts:** see the `writing-explicit-rationale` skill — when descoping, deferring, or accepting a known limitation, put the rationale on-page in the artifact.
 - Update checkboxes as work completes; record partial progress, moved scope, and deferrals explicitly. Never mark a step complete unless implementation and validation really satisfy it.

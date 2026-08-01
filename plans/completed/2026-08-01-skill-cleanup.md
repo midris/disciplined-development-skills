@@ -1,5 +1,7 @@
 # Skill cleanup plan
 
+**Status:** Complete and archived 2026-08-01.
+
 ## Goal
 
 Resolve the six cleanup areas identified in the 2026-07-31 skill audit, preserving pressure-tested behavior while reducing ambiguity and cruft.
