@@ -2,7 +2,7 @@
 
 ## Status
 
-Design decisions approved; execution controls amended after final review on 2026-08-01.
+Design decisions approved; execution controls amended through follow-up review on 2026-08-01.
 
 ## Objective
 
@@ -66,14 +66,20 @@ The primary authoring and validation configuration is `gpt-5.6-sol` at high reas
 All active scenarios must reach 5/5 on that configuration.
 One repetition standard is easier to audit than a complexity-dependent rule, and five fresh contexts expose variance that three can miss.
 
-The orchestrator owns every validation-bearing task, evaluator dispatch, result inspection, human approval gate, and commit.
+The orchestrator owns every validation-bearing task, evaluator dispatch, scoring workflow, result inspection, human approval gate, and commit.
 It may dispatch read-only evaluator or reviewer subagents directly, but it must not delegate a validation-bearing task to a development subagent that would need to dispatch its own evaluators.
 Each evaluator starts without inherited conversation history and receives an explicit model, reasoning effort, skill bundle, and task context.
+Task 1 must select and probe an enforceable no-write evaluator transport; an instruction to remain read-only is insufficient, and unavailable enforcement blocks validation.
+
+Response generation and scoring use separate fresh contexts for subjective comparisons.
+The read-only scorer receives the evaluator-withheld rubric and outputs under opaque arm IDs but never receives the control/draft mapping.
+Freeze the scoring record before mapping those IDs back to control and draft for result recording.
 
 After the complete Sol-high baseline results are recorded, run every frozen preservation and target scenario against the control tree on `gpt-5.6-sol` at low reasoning effort and record comparative scores.
 Low-effort results characterize robustness; they do not replace or dilute the high-effort 5/5 gate.
 Run the complete suite on Sol low again after cleanup to compare the control and cleaned skill trees.
 A lower cleaned score pauses sign-off for inspection and user review but is not an automatic failure of the Sol-high preservation gate.
+Record one of two dispositions for every decrease: user-approved acceptance with an on-page what/why/accepted rationale, or remediation followed by the affected Sol-high and Sol-low reruns.
 
 Record for every run:
 
@@ -96,6 +102,9 @@ Verify before Task 1's baseline runs that the nine live skill files still match 
 
 The scenario prompt, fixture, rubric, supplied context, model, and reasoning effort must be identical between comparison arms except for the skill bundle intentionally under test.
 For subjective comparisons, anonymize immutable control and draft outputs before scoring.
+
+Gate 5 external reviews for this cleanup use a scratch `DD_CONFIG` project override that pins `gpt-5.6-sol` at high reasoning effort and leaves the repository's shipped reviewer defaults unchanged.
+This keeps experiment-specific settings out of the public default while requiring the override and recorded model metadata at every cleanup boundary.
 
 ## Validation protocol
 
@@ -242,6 +251,7 @@ Do not hide a 4/5 result, average it into a pass, or preserve a current failure 
 9. Run the repository's automated hook, installer, and research suites.
 
 The parent comes last because its routing can only be reconciled cleanly after every child contract is settled.
+When a portable extraction control is already 5/5, close its task with a documentation commit but no separate skill-change PR boundary.
 
 For each skill cleanup:
 
@@ -262,6 +272,7 @@ Parent orchestration changes rerun the parent suite and affected child-compositi
 ## Success criteria
 
 - Every scenario has an exact prompt, evaluator-withheld rubric, and environment record.
+- Every evaluator uses a probed no-write transport, and every subjective score is frozen before its opaque arm mapping is revealed.
 - Every preservation scenario has a 5/5 Sol-high control baseline.
 - Every approved target scenario has a watched control RED and a 5/5 Sol-high GREEN before joining the active regression suite.
 - The control and cleaned skill trees have comparative Sol-low scores.
@@ -273,5 +284,6 @@ Parent orchestration changes rerun the parent suite and affected child-compositi
 - `disciplined-development` consistently routes the settled child contracts without duplicating them.
 - Validation records are replayable without becoming narrative or transcript archives.
 - Repository automated tests remain green.
-- Every PR boundary passes the orchestrator-owned Gate 5 review and smoke pass.
+- Every PR boundary passes the orchestrator-owned Gate 5 review and smoke pass, with its external review logged as `gpt-5.6-sol` at high reasoning effort.
+- Every lower cleaned Sol-low score has a recorded user-approved disposition and any required reruns.
 - The completed plan and design are archived under `plans/completed/` and `plans/completed/specs/`.

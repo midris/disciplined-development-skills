@@ -12,13 +12,16 @@
 
 ## Global constraints
 
-- All skill authoring, validation design, manual scoring, and cold reviews use `gpt-5.6-sol` at high reasoning effort.
+- All skill authoring, validation design, scoring, and cold reviews use `gpt-5.6-sol` at high reasoning effort.
 - Sol low is used only for the comparative score arms in Tasks 11 and 27 and any control backfill required by the post-freeze rule.
-- The orchestrator owns validation-bearing tasks, evaluator and reviewer dispatch, manual scoring, user approval gates, and commits; evaluators and reviewers remain read-only and never dispatch nested agents.
+- The orchestrator owns validation-bearing tasks, evaluator, scorer, and reviewer dispatch, the scoring workflow, user approval gates, and commits; evaluators, scorers, and reviewers remain read-only and never dispatch nested agents.
 - Every behavioral scenario uses five fresh, read-only evaluators with no nested dispatch; run at most three evaluators concurrently.
 - Start each evaluator without inherited conversation history and specify its model, effort, immutable skill bundle, and task context explicitly.
+- Use only a probed transport that enforces no-write evaluator access; instruction-only isolation is invalid, and unavailable enforcement blocks validation.
 - Evaluator prompts never contain or point to the scoring rubric.
-- Manually score every completed response; a missed criterion is a failure, not a discarded run.
+- For subjective comparisons, a separate fresh scorer manually applies the evaluator-withheld rubric to outputs under opaque arm IDs but never receives the control/draft mapping.
+- Freeze each subjective scoring record before mapping those IDs back to control and draft.
+- Manually score every other completed response; in every scoring context, a missed criterion is a failure, not a discarded run.
 - Record infrastructure failures separately and retry them without counting them as behavioral results.
 - After three consecutive infrastructure errors for one scenario and configuration, pause and surface the blocker.
 - Preservation scenarios require a 5/5 control at `4296647`; approved target scenarios require a watched control RED and 5/5 GREEN.
@@ -63,6 +66,8 @@
 Use one branch/PR per boundary when executing through PRs.
 Within a boundary, retain the per-task commits named below so validation history remains reviewable.
 Before opening a PR at any boundary, the orchestrator runs the complete Gate 5 whole-branch review and smoke pass.
+Invoke Gate 5's external review with the Task 1 scratch `DD_CONFIG` override that pins `gpt-5.6-sol` at high effort, and verify its logged model metadata before the boundary passes.
+Keep that cleanup-specific override outside the repository rather than changing the shipped reviewer defaults.
 When work proceeds without PRs, the same orchestrator-owned review runs at the repository's Principle 8 cadence.
 
 ---
@@ -77,17 +82,21 @@ When work proceeds without PRs, the same orchestrator-owned review runs at the r
 - Modify: `CLAUDE.md`
 - Modify: `README.md`
 
-**Produces:** One source of truth for scenario types, immutable control bundles, evaluator isolation, 5/5 scoring, run metadata, preservation versus target scenarios, infrastructure errors, suite ownership, post-freeze baseline changes, Sol-high/Sol-low arms, the exact local-link command, and the compact per-skill catalog format; plus one shared suite of atomic all-nine discovery scenarios.
+**Produces:** One source of truth for scenario types, immutable control bundles, enforced evaluator isolation, blinded subjective scoring, 5/5 scoring, run metadata, preservation versus target scenarios, infrastructure errors, suite ownership, post-freeze baseline changes, Sol-high/Sol-low arms, the cleanup-scoped Gate 5 override, the exact local-link command, and the compact per-skill catalog format; plus one shared suite of atomic all-nine discovery scenarios.
 
 - [ ] **Step 1: Inventory the current framework**
 
   List every file under `skill-validation/`, its purpose, owner, affected skills, active scenario IDs, repetition counts, and whether exact prompts and evaluator-withheld rubrics are recoverable.
   Inspect the available evaluator transport and record that `research/replay_codex.py` reviews historical diffs rather than executing skill scenarios; do not treat it as the skill-validation runner.
+  Select a fresh-context transport that enforces no-write access, record its exact invocation, and run a disposable denial probe that confirms a write attempt leaves the repository unchanged; stop if enforcement is unavailable.
 
 - [ ] **Step 2: Write the shared protocol**
 
   Define the universal rules from the design once in `skill-validation/README.md`.
   Include immutable bundle materialization, fresh-context dispatch, explicit model/effort selection, three-error infrastructure escalation, complete-active-suite closure, post-freeze baseline invalidation, and one exact read-only command for checking local Markdown links.
+  Define a blind-scoring handoff in which a separate fresh scorer receives the rubric and opaque output IDs, fixes the scoring record, and returns it before the control/draft mapping is revealed.
+  Define a scratch Gate 5 `DD_CONFIG` project override that pins external review to `gpt-5.6-sol` at high effort, the exact invocation that consumes it, and the logged-metadata check that fails the boundary on mismatch.
+  Keep the override outside the repository because it is specific to this cleanup rather than a new shipped reviewer default.
   Include the active-catalog fields: scenario ID, owner, affected skills, type, protected promise, protected skill section, supplied skill context, exact prompt or fixture link, evaluator-withheld rubric, control bundle commit and hash, control result, target GREEN when applicable, cleaned result, Sol-low scores, and rerun triggers.
 
 - [ ] **Step 3: Add the audit index**
@@ -106,6 +115,7 @@ When work proceeds without PRs, the same orchestrator-owned review runs at the r
 
   Classify `skill-validation/evaluation-subagents-read-only.md` under the common taxonomy.
   Repair it to the exact prompt, evaluator-withheld rubric, environment metadata, and 5/5 protocol if retained; otherwise retire it explicitly as historical project-rule evidence.
+  Record the successful no-write denial probe and the blinded-scoring isolation check in the shared protocol without committing raw outputs.
 
 - [ ] **Step 6: Establish the shared discovery suite**
 
@@ -284,7 +294,7 @@ When work proceeds without PRs, the same orchestrator-owned review runs at the r
 - Modify when RED: `skills/concise-writing/SKILL.md`
 - Modify: `skill-validation/concise-writing.md`
 
-- [ ] Inspect the recorded extraction result; if it is 5/5, classify it as preservation coverage, record that no skill edit is required, and close the task through the plan/index update.
+- [ ] Inspect the recorded extraction result; if it is 5/5, classify it as preservation coverage, update the plan/index, run the local Markdown-link command and `git diff --check`, and commit as `docs(validation): confirm concise writing portability` without a separate skill-change PR boundary.
 - [ ] If RED, show the observed failure and proposed minimal dependency/domain-neutrality change, then wait for user approval.
 - [ ] If RED, apply only the approved change needed for portable extraction while preserving software examples and current software scenarios.
 - [ ] If RED, run the target scenario to 5/5 GREEN and rerun the complete affected active suite 5/5 on Sol high.
@@ -299,7 +309,7 @@ When work proceeds without PRs, the same orchestrator-owned review runs at the r
 - Modify when RED: `skills/disciplined-research/SKILL.md`
 - Modify: `skill-validation/disciplined-research.md`
 
-- [ ] Inspect the recorded extraction result; if it is 5/5, classify it as preservation coverage, record that no skill edit is required, and close the task through the plan/index update.
+- [ ] Inspect the recorded extraction result; if it is 5/5, classify it as preservation coverage, update the plan/index, run the local Markdown-link command and `git diff --check`, and commit as `docs(validation): confirm disciplined research portability` without a separate skill-change PR boundary.
 - [ ] If RED, show the failure and a minimal change that keeps sibling sweep/rationale references optional while preserving development examples, then wait for user approval.
 - [ ] If RED, apply only the approved source-acquisition, verification, or citation boundary change needed for extraction.
 - [ ] If RED, establish target 5/5 GREEN and rerun the complete affected active suite 5/5 on Sol high.
@@ -314,7 +324,7 @@ When work proceeds without PRs, the same orchestrator-owned review runs at the r
 - Modify when RED: `skills/lean-plan-writing/SKILL.md`
 - Modify: `skill-validation/lean-plan-writing.md`
 
-- [ ] Inspect the recorded extraction result; if it is 5/5, classify it as preservation coverage, record that no skill edit is required, and close the task through the plan/index update.
+- [ ] Inspect the recorded extraction result; if it is 5/5, classify it as preservation coverage, update the plan/index, run the local Markdown-link command and `git diff --check`, and commit as `docs(validation): confirm lean plan writing portability` without a separate skill-change PR boundary.
 - [ ] If RED, show the failure and a minimal change that retains `superpowers:writing-plans` while making prose-as-contract usable for non-software plans, then wait for user approval.
 - [ ] If RED, apply only the approved portability change and preserve every software plan requirement.
 - [ ] If RED, establish target 5/5 GREEN and rerun the complete affected active suite 5/5 on Sol high.
@@ -329,7 +339,7 @@ When work proceeds without PRs, the same orchestrator-owned review runs at the r
 - Modify when RED: `skills/sweeping-stale-references/SKILL.md`
 - Modify: `skill-validation/sweeping-stale-references.md`
 
-- [ ] Inspect the recorded extraction result; if it is 5/5, classify it as preservation coverage, record that no skill edit is required, and close the task through the plan/index update.
+- [ ] Inspect the recorded extraction result; if it is 5/5, classify it as preservation coverage, update the plan/index, run the local Markdown-link command and `git diff --check`, and commit as `docs(validation): confirm stale reference sweeping portability` without a separate skill-change PR boundary.
 - [ ] If RED, show the failure and a minimal change that keeps search/triage/reconcile portable, then wait for user approval.
 - [ ] If RED, apply the approved wording that keys Git commit evidence to version-controlled software changes and preserves the existing software commit-body contract.
 - [ ] If RED, establish target 5/5 GREEN and rerun the complete affected active suite 5/5 on Sol high.
@@ -344,7 +354,7 @@ When work proceeds without PRs, the same orchestrator-owned review runs at the r
 - Modify when RED: `skills/writing-explicit-rationale/SKILL.md`
 - Modify: `skill-validation/writing-explicit-rationale.md`
 
-- [ ] Inspect the recorded extraction result; if it is 5/5, classify it as preservation coverage, record that no skill edit is required, and close the task through the plan/index update.
+- [ ] Inspect the recorded extraction result; if it is 5/5, classify it as preservation coverage, update the plan/index, run the local Markdown-link command and `git diff --check`, and commit as `docs(validation): confirm explicit rationale portability` without a separate skill-change PR boundary.
 - [ ] If RED, show the failure and a minimal change to the trigger test or artifact scope that makes code/plan/PR cases examples rather than prerequisites, then wait for user approval.
 - [ ] If RED, apply only the approved portability change while preserving the what/why/accepted contract.
 - [ ] If RED, establish target 5/5 GREEN and rerun the complete affected active suite 5/5 on Sol high.
@@ -521,7 +531,9 @@ When work proceeds without PRs, the same orchestrator-owned review runs at the r
 - Move after completion: `plans/specs/2026-08-01-comprehensive-skill-cleanup-design.md` to `plans/completed/specs/2026-08-01-comprehensive-skill-cleanup-design.md`
 
 - [ ] Freeze the final active scenario suite and run every scenario five times on `gpt-5.6-sol` at low reasoning effort.
-- [ ] Compare control and cleaned scores by scenario; pause for user review on any decrease.
+- [ ] Compare control and cleaned scores by scenario and pause for user review on any decrease.
+- [ ] For every decrease, record the user-approved disposition in `skill-validation/README.md` and each affected record.
+- [ ] If accepted, record the what/why/accepted rationale; if remediation changes a skill or scenario contract, reopen its owning task, complete the required Sol-high backfill or regression suite, rerun the affected Sol-low arm, and return to this comparison.
 - [ ] Record final word-count deltas for all nine skills.
 - [ ] Run the hook, installer, and research pytest suites plus `git diff --check`.
 - [ ] Run a final cold consistency review against the design and this plan.
