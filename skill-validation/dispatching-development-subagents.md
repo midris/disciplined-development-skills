@@ -39,19 +39,18 @@ this dispatch skill — so the carve-out must live at the trigger it reads
 
 ## Test 2 — dispatch-skill restructure regression
 
-After the fix, the dispatch skill's subagent-PoV section ("When you ARE the
-dispatched subagent") was removed (a subagent loads dd, not this skill); the
-out-of-scope gradient + report were folded into the orchestrator's "what to
-require," and a subagent self-check red flag added. This test guards against
-losing dispatch-prompt quality.
+The dedicated procedural section for dispatched subagents ("When you ARE the
+dispatched subagent") was removed because a subagent loads dd, not this skill.
+The out-of-scope gradient + report were folded into the orchestrator's "what to
+require," while a smaller subagent self-check remained under Red Flags. This
+test guards against losing dispatch-prompt quality.
 
 **Method.** Orchestrator loads ONLY the dispatch skill, writes a complete
 dispatch prompt for a fixed task. Score the prompt for: scope contract, governing
 files + locked constraint, out-of-scope gradient, and an explicit
 `Changes beyond dispatched scope` disclosure that does not assume an upstream
-heading, status vocabulary, or report-file shape. RED = main's skill
-(`git show main:skills/dispatching-development-subagents/SKILL.md`), GREEN =
-restructured.
+heading, status vocabulary, or report-file shape. The restructure baseline is
+`b3940eb^`; the first GREEN is `b3940eb`. Later GREEN runs use the live skill.
 
 **Scenario.** RED 3/3 produced all four elements. GREEN 3/3 reproduced all four
 **and** added the two new limits (no nested dispatch, ignore hook nudges). No
