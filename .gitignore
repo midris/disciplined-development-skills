@@ -18,6 +18,9 @@ baseline-*.md
 # Local superpowers tmp directory
 .superpowers/
 
+# Local linked worktrees
+.worktrees/
+
 # Research harness output — never commit experiment results
 research/results.csv
 research/runs/
