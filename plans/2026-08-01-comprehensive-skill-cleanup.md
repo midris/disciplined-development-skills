@@ -245,10 +245,23 @@ both `git diff --check` and `git diff --cached --check` passed.
 
 **Required coverage:** link the shared discovery suite; simple source acquisition and verification; a non-trivial authority/deadline scenario whose premise is disconfirmed; safe direct invocation; non-software extraction using museum, policy, or procurement research; the historical disclaimer-as-substitute and citation-as-substitute experiments, retained or retired honestly.
 
-- [ ] Map the skill's claims to existing B1/B17 evidence and distinguish shipped regressions from closed experiments.
-- [ ] Link the shared discovery result and add atomic application, direct-invocation, and extraction scenarios with exact evaluator-withheld rubrics.
-- [ ] Run preservation scenarios 5/5 on Sol high at `4296647`; classify a 5/5 portability result as preservation coverage or record a watched RED target.
-- [ ] Record failures and variance, review the active catalog, and commit as `docs(validation): baseline disciplined research`.
+- [x] Map the skill's claims to existing B1/B17 evidence and distinguish shipped regressions from closed experiments.
+- [x] Link the shared discovery result and add atomic application, direct-invocation, and extraction scenarios with exact evaluator-withheld rubrics.
+- [x] Run preservation scenarios 5/5 on Sol high at `4296647`; classify a 5/5 portability result as preservation coverage or record a watched RED target.
+- [x] Record failures and variance, review the active catalog, and commit as `docs(validation): baseline disciplined research`.
+
+**Task 3 execution note (2026-08-02):** The audit classified B1 as Repair via
+the replayable `DR-02` successor and B17 as Retire from the active suite, for totals
+Keep 0, Repair 1, Merge 0, Retire 1, and Add 2.
+Git history corrected B17's broad “not shipped” label: the behavior-neutral
+`verify the citation yourself` nudge landed in `2be8db4` after scoring 0/6, while
+the broader behavior change remained unshipped and the limitation remained in the
+control.
+A fresh Sol-high design review required executable and date-anchored fixtures,
+fixed output shapes, candidate labels until results existed, and explicit discovery
+mapping before the catalog froze.
+`DR-01`–`DR-03` then passed 15/15 on immutable `4296647` bundles with zero
+infrastructure errors; `DR-02` portability is therefore preservation coverage.
 
 ### Task 4: Audit and baseline `lean-plan-writing`
 

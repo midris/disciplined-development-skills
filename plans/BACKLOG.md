@@ -142,8 +142,9 @@ B19 remains — it rides the same angle-discrimination cycle as Tier 2's B4–B6
   *(CLOSED 2026-06-26 — real but wording-resistant. RED reliably reproduces the fabrication on the
   mandatory-cite floor; five approaches (explicit recipe, terse, cite-but-tag-unverified, minimal nudge,
   honest-memory-citation) all failed to move it — a hard task-level "must cite" requirement overrides
-  skill guidance. Softer conditions already ground. Not shipped; full record in
-  `skill-validation/disciplined-research.md`.)*
+  skill guidance. Softer conditions already ground. The broader behavior change was not shipped;
+  the minimal `verify the citation yourself` nudge landed in `2be8db4` after scoring 0/6 and was
+  explicitly behavior-neutral. Full record in `skill-validation/disciplined-research.md`.)*
 - **B2 · pre-PR gate announces itself** — pre-pr-gate / observability · 2026-06-08 · S/low.
   Gate runs codex ~minutes silently on `gh pr create`. Add a Gate-5 instruction to announce
   the review before invoking it (optionally a hook start-line). Acceptance: model announces
