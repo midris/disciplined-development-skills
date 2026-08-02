@@ -2,7 +2,7 @@
 
 ## Status
 
-Design decisions approved; execution controls amended through follow-up review on 2026-08-01.
+Design decisions approved; execution controls amended through follow-up review on 2026-08-02.
 
 ## Objective
 
@@ -62,6 +62,15 @@ approved the minimal frontmatter-only parent-routing target as the pre-freeze ex
 above; it requires a watched control RED, 5/5 Sol-high target, cold review, final
 in-place approval, repository tests, and its own behavioral commit after the Task 1
 protocol commit.
+
+During Task 2, the authoring-boundary audit exposed inconsistent exclusion of
+`concise-writing` during skill and reference authoring. On 2026-08-02 the user
+approved a separate pre-freeze RED/GREEN slice: remove the frontmatter exclusion and
+state in the body that `superpowers:writing-skills` owns authoring decisions and
+validation. After its watched controls, 5/5 GREEN, cold review, final in-place
+approval, repository tests, and separate behavioral commit, that committed GREEN
+becomes `concise-writing`'s immediate readability control. If Task 12 later changes
+the skill for portability, the committed portability GREEN supersedes it.
 
 Portable extraction is an approved target, not assumed control behavior.
 If a portable skill fails extraction, record the watched RED, make the minimal portability change in a separate behavioral slice, establish its 5/5 GREEN, and only then perform readability cleanup.
@@ -249,7 +258,7 @@ Do not hide a 4/5 result, average it into a pass, or preserve a current failure 
 
 ## Cleanup workflow
 
-1. Audit the validation framework and add the shared protocol plus active scenario catalogs; resolve only a genuine inconsistency through the isolated, user-approved pre-freeze RED/GREEN exception above.
+1. Audit the validation framework and add the shared protocol plus active scenario catalogs; resolve only genuine inconsistencies through the isolated, user-approved pre-freeze RED/GREEN exceptions above.
 2. Establish complete Sol-high baseline results for all nine skills: 5/5 for preservation scenarios and watched REDs for approved target scenarios.
 3. Run every frozen preservation and target scenario against the control tree on Sol low and record comparative scores.
 4. Process one portable skill at a time: close any approved portability RED in its own behavioral slice, then perform readability cleanup against the expanded active suite.

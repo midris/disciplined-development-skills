@@ -175,12 +175,41 @@ The protocol landed first as `ee776f9`, leaving the behavior record self-contain
 
 **Required coverage:** link the shared discovery suite; simple padding removal; non-trivial compression that preserves rationale, navigation, and a load-bearing recap; safe direct invocation; non-software extraction using a policy or grant document; still-relevant verbosity, over-trim, trigger-routing, and red-flag-consolidation regressions.
 
-- [ ] Audit existing scenarios and classify each `Keep`, `Repair`, `Merge`, or `Retire`.
-- [ ] Add only missing coverage; merge the shared composite fixture into atomic skill scenarios where its unrelated output contracts would interfere.
-- [ ] Record exact prompts, supplied context, rubrics, protected sections, and rerun triggers in the active catalog.
-- [ ] Run every preservation scenario 5/5 on Sol high against `4296647`; classify a 5/5 portability result as preservation coverage or record a watched RED target.
-- [ ] Manually score every response and record exact misses without transcripts.
-- [ ] Review the record against `skill-validation/README.md`, run `git diff --check`, and commit as `docs(validation): baseline concise writing`.
+- [x] Audit existing scenarios and classify each `Keep`, `Repair`, `Merge`, or `Retire`.
+- [x] Add only missing coverage; merge the shared composite fixture into atomic skill scenarios where its unrelated output contracts would interfere.
+- [x] Record exact prompts, supplied context, rubrics, protected sections, and rerun triggers in the active catalog.
+- [x] Run every preservation scenario 5/5 on Sol high against `4296647`; classify a 5/5 portability result as preservation coverage or record a watched RED target.
+- [x] Manually score every response and record exact misses without transcripts.
+- [x] Review the record against `skill-validation/README.md`, run `git diff --check`, and commit as `docs(validation): baseline concise writing`.
+
+**Task 2 execution note (2026-08-02):** The audit classified prior scenarios as
+Keep 0, Repair 2, Merge 4, and Retire 2, then added six missing atomic scenarios.
+`CW-01`–`CW-08` passed 5/5 on Sol high with zero infrastructure errors, classifying
+`CW-08` portability as preservation. The approved Task 2A targets `CW-09`–`CW-12`
+each produced a clean 0/5 watched RED: routing omitted `concise-writing`, while the
+ownership probes returned null owners and evidence. Three cold record reviews found
+and resolved premature and ambiguous live/history labeling; the final review returned
+no findings. The skill remains byte-identical to control SHA-256 `4d12a2eb…`.
+
+### Task 2A: Clarify `concise-writing` ownership during skill authoring
+
+**User-approved behavior slice (2026-08-02):** allow `concise-writing` and
+`superpowers:writing-skills` to be co-selected during skill or reference authoring,
+while making `superpowers:writing-skills` the explicit owner of authoring decisions
+and validation. This is a separate RED/GREEN change, not readability cleanup.
+
+**Files:**
+
+- Modify: `skills/concise-writing/SKILL.md`
+- Modify: `skill-validation/concise-writing.md`
+- Modify: `skill-validation/skill-discovery.md` if its results are rerun
+- Modify: this plan
+
+- [x] Freeze `CW-09`–`CW-12`, run each five times on Sol high against the immutable control, and record watched RED without weakening their rubrics.
+- [ ] Remove the frontmatter exclusion and add only: “During skill or reference authoring, `superpowers:writing-skills` owns authoring decisions and validation.”
+- [ ] Materialize the target bundles, verify their hashes, and run the complete affected Sol-high suite at 5/5: `CW-01`–`CW-07`, `CW-09`–`CW-12`, shared discovery, and `CW-08` only if Task 2 classified it as preservation; otherwise retain its watched RED for Task 12.
+- [ ] Run cold editorial and skill-writing review, show the edited skill in place, and wait for final user approval.
+- [ ] After approval, run repository tests, stale-reference and link sweeps, and both diff checks; commit as `docs(skills): clarify concise writing authoring ownership`.
 
 ### Task 3: Audit and baseline `disciplined-research`
 
