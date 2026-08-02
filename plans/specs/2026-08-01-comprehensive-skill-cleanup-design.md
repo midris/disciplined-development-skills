@@ -7,7 +7,11 @@ Design decisions approved; execution controls amended through follow-up review o
 ## Objective
 
 Review all nine skills from top to bottom and make them compact, coherent, and easy for a human to read without weakening their established agent behavior.
-Audit and normalize the validation framework before changing skill prose so the current suite becomes a trustworthy regression baseline.
+Audit and normalize the validation framework before readability edits so the current
+suite becomes a trustworthy regression baseline. If that audit exposes a genuine
+skill inconsistency, an isolated user-approved pre-freeze RED/GREEN slice may proceed
+after enforceable evaluator isolation exists; its repaired scenarios restart at zero,
+and the slice remains separate from later readability work.
 
 ## Non-goals
 
@@ -53,6 +57,11 @@ Compare cleaned drafts against the applicable immediate readability control with
 
 Handle desired behavioral improvements as separate RED/GREEN slices, never inside a behavior-preserving readability commit.
 Complete prerequisite improvements such as portability before readability cleanup and defer unrelated improvements until afterward.
+During Task 1, discovery audit exposed inconsistent parent co-selection. The user
+approved the minimal frontmatter-only parent-routing target as the pre-freeze exception
+above; it requires a watched control RED, 5/5 Sol-high target, cold review, final
+in-place approval, repository tests, and its own behavioral commit after the Task 1
+protocol commit.
 
 Portable extraction is an approved target, not assumed control behavior.
 If a portable skill fails extraction, record the watched RED, make the minimal portability change in a separate behavioral slice, establish its 5/5 GREEN, and only then perform readability cleanup.
@@ -240,7 +249,7 @@ Do not hide a 4/5 result, average it into a pass, or preserve a current failure 
 
 ## Cleanup workflow
 
-1. Audit the validation framework and add the shared protocol plus active scenario catalogs.
+1. Audit the validation framework and add the shared protocol plus active scenario catalogs; resolve only a genuine inconsistency through the isolated, user-approved pre-freeze RED/GREEN exception above.
 2. Establish complete Sol-high baseline results for all nine skills: 5/5 for preservation scenarios and watched REDs for approved target scenarios.
 3. Run every frozen preservation and target scenario against the control tree on Sol low and record comparative scores.
 4. Process one portable skill at a time: close any approved portability RED in its own behavioral slice, then perform readability cleanup against the expanded active suite.

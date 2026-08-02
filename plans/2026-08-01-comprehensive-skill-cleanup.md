@@ -30,7 +30,7 @@
 - Do not commit raw evaluator transcripts.
 - Materialize every regression and immediate-readability control as an immutable scratch bundle outside the repository, identified by commit and content hash; never use the mutable working tree as a control arm.
 - For subjective cleanup comparisons, rerun five fresh immediate-readability-control arms and five fresh draft arms, anonymize the labels, and keep temporary outputs in scratch space outside the repository until the scored summary is recorded.
-- Do not edit skill prose until Tasks 1–11 establish and score the control suite.
+- Do not edit skill prose until Tasks 1–11 establish and score the control suite, except a user-approved RED/GREEN slice required to resolve a genuine baseline inconsistency.
 - Portable-behavior edits and readability edits land in separate commits.
 - A skill's complete active suite includes its owned scenarios and every shared discovery, direct-invocation, portability, and composition scenario mapped to its promises.
 - Every shared or supporting scenario record has one owner and lists every affected skill.
@@ -42,7 +42,7 @@
 - Each skill commit records applicable control/current word counts, model results, cold review, repository tests, and any reference sweep.
 - For portable skills with a behavior slice, record word counts for `4296647`, the post-portability readability control, and the cleaned version.
 - Update this plan's checkboxes and notes in every task commit; the task file lists omit this repeated path.
-- Task 1 classifies project-level and supporting scenarios; Tasks 2–10 classify every skill-owned scenario with the common taxonomy and update the audit status, classification counts, and scores in `skill-validation/README.md`; validation-bearing Tasks 12–25 keep that index current.
+- Task 1 classifies the project-level and supporting scenario records it owns; Tasks 2–10 classify every skill-owned record, including its supporting records, with the common taxonomy and update the audit status, classification counts, and scores in `skill-validation/README.md`; validation-bearing Tasks 12–25 keep that index current.
 - The task file lists omit this repeated index path.
 - Before Task 1's commit, resolve every changed local Markdown link relative to its source file and verify each target with `test -e`.
 - Task 1 records one exact reusable local Markdown-link command in `skill-validation/README.md`; after Task 1, run it for every changed document before each commit.
@@ -79,18 +79,21 @@ When work proceeds without PRs, the same orchestrator-owned review runs at the r
 - Create: `skill-validation/README.md`
 - Create: `skill-validation/skill-discovery.md`
 - Modify or retire from the active suite: `skill-validation/evaluation-subagents-read-only.md`
+- Modify for the user-approved pre-freeze behavior slice: `skills/disciplined-development/SKILL.md`
+- Modify for that slice's evidence: `skill-validation/disciplined-development.md`
+- Modify for the approved exception: `plans/specs/2026-08-01-comprehensive-skill-cleanup-design.md`
 - Modify: `CLAUDE.md`
 - Modify: `README.md`
 
 **Produces:** One source of truth for scenario types, immutable control bundles, enforced evaluator isolation, blinded subjective scoring, 5/5 scoring, run metadata, preservation versus target scenarios, infrastructure errors, suite ownership, post-freeze baseline changes, Sol-high/Sol-low arms, the cleanup-scoped Gate 5 override, the exact local-link command, and the compact per-skill catalog format; plus one shared suite of atomic all-nine discovery scenarios.
 
-- [ ] **Step 1: Inventory the current framework**
+- [x] **Step 1: Inventory the current framework**
 
   List every file under `skill-validation/`, its purpose, owner, affected skills, active scenario IDs, repetition counts, and whether exact prompts and evaluator-withheld rubrics are recoverable.
   Inspect the available evaluator transport and record that `research/replay_codex.py` reviews historical diffs rather than executing skill scenarios; do not treat it as the skill-validation runner.
   Select a fresh-context transport that enforces no-write access, record its exact invocation, and run a disposable denial probe that confirms a write attempt leaves the repository unchanged; stop if enforcement is unavailable.
 
-- [ ] **Step 2: Write the shared protocol**
+- [x] **Step 2: Write the shared protocol**
 
   Define the universal rules from the design once in `skill-validation/README.md`.
   Include immutable bundle materialization, fresh-context dispatch, explicit model/effort selection, three-error infrastructure escalation, complete-active-suite closure, post-freeze baseline invalidation, and one exact read-only command for checking local Markdown links.
@@ -99,40 +102,62 @@ When work proceeds without PRs, the same orchestrator-owned review runs at the r
   Keep the override outside the repository because it is specific to this cleanup rather than a new shipped reviewer default.
   Include the active-catalog fields: scenario ID, owner, affected skills, type, protected promise, protected skill section, supplied skill context, exact prompt or fixture link, evaluator-withheld rubric, control bundle commit and hash, control result, target GREEN when applicable, cleaned result, Sol-low scores, and rerun triggers.
 
-- [ ] **Step 3: Add the audit index**
+- [x] **Step 3: Add the audit index**
 
   Add one row per skill and supporting scenario file, with its owner, audit task, `Unaudited` status, classification-count columns, and a link to the owning record.
   Task 1 marks the project-level and supporting rows it owns as `Audited` and fills their classification counts.
   Tasks 2–10 change the status to `Audited` and fill the `Keep`, `Repair`, `Merge`, `Retire`, and `Add` counts.
   Preserve historical records below each active catalog rather than rewriting them.
 
-- [ ] **Step 4: Materialize and verify the regression control**
+- [x] **Step 4: Materialize and verify the regression control**
 
   Create an immutable scratch bundle outside the repository containing all nine skill files and scenario-declared dependencies from `4296647`.
   Record its commit and content hashes, verify the nine live skill files still match it before baseline testing, and define the same procedure for post-portability readability controls.
 
-- [ ] **Step 5: Audit evaluator isolation**
+- [x] **Step 5: Audit evaluator isolation**
 
   Classify `skill-validation/evaluation-subagents-read-only.md` under the common taxonomy.
   Repair it to the exact prompt, evaluator-withheld rubric, environment metadata, and 5/5 protocol if retained; otherwise retire it explicitly as historical project-rule evidence.
   Record the successful no-write denial probe and the blinded-scoring isolation check in the shared protocol without committing raw outputs.
 
-- [ ] **Step 6: Establish the shared discovery suite**
+- [x] **Step 6: Establish the shared discovery suite**
 
   Put a fixed set of atomic scenarios in `skill-validation/skill-discovery.md`.
   Each evaluator prompt contains all nine control descriptions and one simple user request, with one expected skill or an explicit allowed set in the withheld rubric.
   Evaluators never see skill bodies or the rubric.
   Run each scenario five times on Sol high at `4296647`, manually score every route, and map each scenario to every description whose positive or negative routing it protects.
 
-- [ ] **Step 7: Update repository guidance**
+- [x] **Step 7: Update repository guidance**
 
   Point `CLAUDE.md` and the project `README.md` at `skill-validation/README.md` for the validation protocol.
   Keep universal rules out of individual validation records.
 
 - [ ] **Step 8: Verify and commit**
 
-  Verify each new local link target directly, run the exact local-link command recorded in the new protocol, and run `git diff --check`.
-  Commit as `docs(validation): define the skill validation protocol`.
+  First verify each new local link target directly, stage only the protocol, index,
+  guidance, design, and plan files, run the exact local-link command against that
+  staged snapshot, and run both diff checks. Commit those files as
+  `docs(validation): define the skill validation protocol`; explicitly exclude
+  `skills/disciplined-development/SKILL.md` and
+  `skill-validation/disciplined-development.md` from this commit.
+  For the user-approved parent-co-selection behavior slice, record control/current
+  word counts, complete Sol-high results, cold review, reference sweep, final
+  in-place user approval, and all three repository test suites. Then stage the skill,
+  its now-self-contained validation record whose linked protocol files are already in
+  HEAD, and this plan's completed checkbox/evidence note; rerun the exact link and
+  diff checks and commit as `docs(skills): require parent companion co-selection`.
+
+**Task 1 execution note (2026-08-01):** The immutable control archive is pinned to `4296647f0dff48a9e77b979ef07e813bf1f66db2` with SHA-256 `8f21c8267d005c349702ec94d6aff26c13a09bfbe29f2b43efcfbb37304f16e3`.
+Codex CLI 0.146.0 required `agents.enabled=false` in addition to read-only sandboxing to remove nested-agent tools; one provider 503 was recorded and the identical retry passed.
+The instruction-only evaluator record and unrelated composite red-flags fixture were retired from the active suite, while their history was preserved.
+After a cadence review exposed genuine parent-routing inconsistency, the user approved a minimal pre-freeze RED/GREEN exception: four watched control REDs now reach 5/5 on the immutable parent-co-selection target, and all five preservation cells remain 5/5.
+Two ambiguous discovery requests were narrowed to atomic supplied-text and purely stylistic cases; every affected scenario restarted at zero after prompt or rubric repair.
+The parent skill's control/current word counts are 1,981/1,985; only its frontmatter
+description changed. A cadence review later required the alphabetical output contract
+to become an explicit scoring criterion, invalidating and restarting both complete
+discovery arms at zero.
+After user-approved compression, one broad research noun phrase caused a 44/45 target
+regression; an action-specific repair and complete target restart passed 45/45.
 
 ### Task 2: Audit and baseline `concise-writing`
 

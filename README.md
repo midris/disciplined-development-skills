@@ -60,7 +60,9 @@ Skill behavior is validated by recorded subagent scenarios in
 [`skill-validation/`](skill-validation/): per skill (or command), the RED/GREEN
 pressure scenarios that justify its content, kept re-runnable so a change can be
 re-tested before it ships. Non-shipped — a development record, not part of the
-installed bundle.
+installed bundle. The shared protocol, enforced evaluator isolation, scoring rules,
+and audit index are in
+[`skill-validation/README.md`](skill-validation/README.md).
 
 ## How it fits together
 

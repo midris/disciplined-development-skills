@@ -1,8 +1,17 @@
 # Evaluation subagents read-only — validation
 
-Records the scenario behind CLAUDE.md's "evaluation subagents run read-only and
-bounded" rule (Branching and PR Strategy) so it is recoverable and re-runnable.
-A project rule, not a skill.
+## Active status
+
+**Retired from the active suite in Task 1.**
+This historical scenario tested whether an orchestrator chose Claude Code's `Explore` agent type, but it did not prove write denial and lacks an exact prompt, evaluator-withheld rubric, environment record, and five-repetition result.
+The enforced Codex denial probe and current transport contract now live in [the shared validation protocol](README.md#enforced-evaluator-transport).
+The incident and original RED/GREEN evidence remain below as project-rule history.
+
+Historically, this recorded the scenario behind CLAUDE.md's "evaluation subagents run
+read-only and bounded" rule (Branching and PR Strategy) with the intention that it be
+recoverable and re-runnable. The surviving evidence supports only conceptual
+reconstruction, not an exact replay under the current protocol. A project rule, not a
+skill.
 
 **Dispatch protocol.** Read-only (Claude Code: `Explore`), text-only — the rule
 under test is itself why the test agents are read-only.
