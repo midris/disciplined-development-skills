@@ -1,6 +1,6 @@
 ---
 name: disciplined-development
-description: Use when starting, resuming, or carrying out development work; writing code, plans, specs, designs, or documentation; fixing bugs or review findings; working from an active plan; delegating to subagents; or approaching verification, commit, review, PR, or completion boundaries.
+description: Use when doing development work. If available, load this parent with every applicable companion. Triggers: starting/resuming work; writing/reviewing code, plans, specs, designs, or docs; researching project or external facts; bug/finding fixes; active-plan work; delegation; and verification, commit, review, PR, or completion boundaries.
 ---
 
 # Disciplined Development

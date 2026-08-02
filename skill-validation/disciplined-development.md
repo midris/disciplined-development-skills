@@ -5,10 +5,29 @@ First validation record for the parent skill. It does **not** cover the whole sk
 change, starting with the whole-repo review-scope change (2026-06-22). Add a section
 per future change.
 
-**Dispatch protocol.** Read-only and bounded per CLAUDE.md's evaluation-subagent rule
-(Claude Code: `Explore`). One scenario per agent, text-only, model `sonnet`; cold-read
-on `opus`. RED points subjects at a git snapshot of the pre-edit skill; GREEN points at
-the live skill.
+**Historical dispatch protocol (2026-06-22).** The original records below used
+Claude Code `Explore`, one text-only scenario per agent, `sonnet` for scenario runs,
+and `opus` for cold reads. RED pointed at a git snapshot and GREEN at the then-live
+skill. This protocol is preserved as history; current and future runs follow the
+immutable-bundle, Sol-high protocol in [the shared validation protocol](README.md).
+
+## Parent-plus-companion discovery target (2026-08-01)
+
+**Approved behavior.** When available for development work, the parent loads together with every applicable companion.
+The control description named overlapping development triggers but did not state co-selection or explicitly name reviewing and development research.
+
+**Watched REDs.** In the final shared all-nine description-only control arm, control
+omitted the parent in `DISC-01` 4/5, `DISC-03` 4/5, `DISC-05` 5/5, and `DISC-06` 1/5.
+The specific companion still routed 5/5 in each cell.
+
+**GREEN.** The approved frontmatter-only change makes availability, co-selection, reviewing, and development research explicit.
+Its immutable target bundle has content-manifest SHA-256 `52fd9eb8c411fcc5d42bfa4590992914c2f7a20a494f6dc7868f82c85691103b` and the changed file has SHA-256 `21a46fb9b80cf29862a5e8ee5953fc6a3b3271da044eca60ac75b7060f43562e`.
+All nine shared discovery scenarios passed 5/5 on fresh Sol-high evaluators after the
+final rubric repair and compact-wording restart. The first compact arm's broad
+`project/external research` phrase caused one prohibited research co-selection in
+`DISC-01`; restoring the action-specific research trigger produced the active 45/45
+result. Exact prompts, rubrics, control results, and target summaries are in
+[skill-discovery.md](skill-discovery.md).
 
 ## Whole-repo review scope (2026-06-22)
 
@@ -58,6 +77,10 @@ All three distinguished mandatory analysis from implementation, supported absent
 
 ## Trigger-only description routing (2026-08-01)
 
+**Historical result, superseded for ordinary development documentation by the
+parent-plus-companion target above.** The former SKILL.md-authoring negative is
+retained only as historical evidence; current routing follows the target above.
+
 **Matrix.** Route five prompts from metadata only: active-plan implementation with delegation; padded README tightening; SKILL.md shortening; plan deferral with PR-only rationale; and a routine convention-preserving rename.
 
 **Pre-edit control: 3/3 PASS.** All evaluators triggered `disciplined-development` for implementation and plan editing, and did not rely on it for ordinary prose tightening or skill authoring alone.
@@ -65,4 +88,4 @@ The description edit is a trigger-only clarity refactor, not a routing fix.
 
 **GREEN requirements.** Preserve the matrix while removing workflow summaries from the description and retaining session, development-work, plan, delegation, verification, commit, review, PR, and completion-boundary triggers.
 
-**GREEN result: 3/3 PASS.** All three independent metadata-only evaluators preserved the expected routing across all five prompts.
+**GREEN result at the time: 3/3 PASS.** All three independent metadata-only evaluators preserved the then-expected routing across all five prompts.

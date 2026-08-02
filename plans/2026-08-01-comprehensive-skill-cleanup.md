@@ -132,7 +132,7 @@ When work proceeds without PRs, the same orchestrator-owned review runs at the r
   Point `CLAUDE.md` and the project `README.md` at `skill-validation/README.md` for the validation protocol.
   Keep universal rules out of individual validation records.
 
-- [ ] **Step 8: Verify and commit**
+- [x] **Step 8: Verify and commit**
 
   First verify each new local link target directly, stage only the protocol, index,
   guidance, design, and plan files, run the exact local-link command against that
@@ -158,6 +158,12 @@ to become an explicit scoring criterion, invalidating and restarting both comple
 discovery arms at zero.
 After user-approved compression, one broad research noun phrase caused a 44/45 target
 regression; an action-specific repair and complete target restart passed 45/45.
+The final 338-character description received explicit in-place user approval after a
+cold `writing-skills` and concision review returned no findings. The stale-reference
+sweep found no obsolete live wording or hashes; two broad-research matches remain as
+intentional failed-experiment history. Final repository verification passed: hook
+suite 263 passed/3 skipped, installer suite 11 passed, and research suite 4 passed.
+The protocol landed first as `ee776f9`, leaving the behavior record self-contained.
 
 ### Task 2: Audit and baseline `concise-writing`
 
