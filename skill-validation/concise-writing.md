@@ -23,8 +23,9 @@ Historical evidence was classified before defining the active skill-owned suite:
 
 No prior scenario met the common protocol unchanged: **Keep 0, Repair 2, Merge 4,
 Retire 2**. Safe full-bundle direct invocation, non-software extraction, frontmatter
-skill/reference-authoring co-selection, and explicit body-level ownership were
-absent, so `CW-07`–`CW-12` are **Add 6**. The untested 2026-07-19 draft-first reminder
+skill/reference-authoring co-selection, explicit body-level ownership, and
+behavioral ownership under authoring pressure were absent, so `CW-07`–`CW-14` are
+**Add 8**. The untested 2026-07-19 draft-first reminder
 is not counted as a prior scenario; `CW-02` protects its observable preservation
 outcome without claiming to observe private drafting behavior.
 
@@ -36,11 +37,13 @@ Common run metadata: control commit
 five fresh processes per scenario; maximum concurrency three; enforced read-only,
 no-agents transport; manual scoring; rubric withheld.
 
-The owner of `CW-01`–`CW-12` is `concise-writing`. The sole affected repository skill
+The owner of `CW-01`–`CW-14` is `concise-writing`. The sole affected repository skill
 for `CW-01`–`CW-08`, `CW-10`, and `CW-12` is `concise-writing`; `CW-09` and `CW-11`
 affect `concise-writing` and `adversarial-review-loop` plus the external
-`superpowers:writing-skills` dependency. The linked shared discovery cells retain
-Task 1 ownership and their recorded affected-skill maps.
+`superpowers:writing-skills` dependency. `CW-13` and `CW-14` affect
+`concise-writing` plus external `superpowers:writing-skills` and its declared
+`superpowers:test-driven-development` background. The linked shared discovery cells
+retain Task 1 ownership and their recorded affected-skill maps.
 
 `CW-01`–`CW-06`, `CW-08`, `CW-10`, and `CW-12` receive only the immutable control
 `skills/concise-writing/SKILL.md`. Its file SHA-256 is
@@ -89,6 +92,64 @@ Use when writing or revising reader-facing prose — docs, READMEs, plans, specs
 Use when creating new skills, editing existing skills, or verifying skills work before deployment
 ```
 
+The immutable Task 2A single-skill target has file SHA-256
+`6c3a838297da8b0a17a3f3978dd6e46c7e5794f9e7e34c4e6db760e941c942aa`,
+archive SHA-256
+`e80bc18da3f76f4b583a7f4247e0bc702d31c07d17b7612332bff2f012fdcf88`,
+and content-manifest SHA-256
+`a95babc4537fc965aeb9fb35744d49b10d7fc4d1417d2a1ff8f7c3eec49bb4fd`.
+The complete nine-skill Task 2A target has archive SHA-256
+`0c631a7422b737c561cb0a1d19c7d8da6446b2ebde07a6f71ebd89abcced1452`
+and content-manifest SHA-256
+`2c3db5c0fba23c53e83eec5ed4dc081ea1b297c32e40ac8e66afead38d4bac2d`.
+The focused three-description target has archive SHA-256
+`acce5aba822943be07d2f0d662f5f3c85da26a6baff09f04feb4117fdb204f06`
+and content-manifest SHA-256
+`4fb0db016e65c4eafa4677f26f8b7d969a9516c66f9b9da92e9482b090bd25de`;
+its concise-description file SHA-256 is
+`e6b0a334c5288a0f2e80ecf84e9e502d86169fbbac31f96c1af203df4c6034b4`.
+The linked shared discovery record owns the nine-description Task 2A bundle and results.
+
+The following manifest makes every repository source in the single-skill and
+complete Task 2A target bundles independently identifiable. The single-skill bundle
+is the `concise-writing` row; the complete bundle contains all nine rows.
+
+| Source kind | Full revision | Source path | Bundle path | File SHA-256 |
+|---|---|---|---|---|
+| Repository | `bef0398689d6911d1b9baf95d8ad8ea123b263b4` | `skills/adversarial-review-loop/SKILL.md` | `skills/adversarial-review-loop/SKILL.md` | `46b85eafc5db54cb521eed9c4a110e552c76d97cfae72e141f109c9dea10f0c6` |
+| Repository | `bef0398689d6911d1b9baf95d8ad8ea123b263b4` | `skills/adversarial-review/SKILL.md` | `skills/adversarial-review/SKILL.md` | `9004ff153d5dc3a3690254667c4f666151dcabff7ef6f705cc751134be56499c` |
+| Approved candidate | base `bef0398689d6911d1b9baf95d8ad8ea123b263b4`; file `6c3a838297da8b0a17a3f3978dd6e46c7e5794f9e7e34c4e6db760e941c942aa` | `skills/concise-writing/SKILL.md` | `skills/concise-writing/SKILL.md` | `6c3a838297da8b0a17a3f3978dd6e46c7e5794f9e7e34c4e6db760e941c942aa` |
+| Repository | `bef0398689d6911d1b9baf95d8ad8ea123b263b4` | `skills/disciplined-development/SKILL.md` | `skills/disciplined-development/SKILL.md` | `21a46fb9b80cf29862a5e8ee5953fc6a3b3271da044eca60ac75b7060f43562e` |
+| Repository | `bef0398689d6911d1b9baf95d8ad8ea123b263b4` | `skills/disciplined-research/SKILL.md` | `skills/disciplined-research/SKILL.md` | `a5c4079e5aa21651ecd39b09e3fb2d9a58f4a1f3b99354b3b6927b2d44c6fb50` |
+| Repository | `bef0398689d6911d1b9baf95d8ad8ea123b263b4` | `skills/dispatching-development-subagents/SKILL.md` | `skills/dispatching-development-subagents/SKILL.md` | `b89b4db8af53bd136237cb2306f956c039757a0e321b1f704bd16d1a00580500` |
+| Repository | `bef0398689d6911d1b9baf95d8ad8ea123b263b4` | `skills/lean-plan-writing/SKILL.md` | `skills/lean-plan-writing/SKILL.md` | `6a3115a4d33ad2f99238f915a6a1b7869efd8c80a6cce422d3afae60c9857fac` |
+| Repository | `bef0398689d6911d1b9baf95d8ad8ea123b263b4` | `skills/sweeping-stale-references/SKILL.md` | `skills/sweeping-stale-references/SKILL.md` | `d6812c33cae026807bbb3ebe851d93b60b513dd87ea5efd98aea28f5c02f9157` |
+| Repository | `bef0398689d6911d1b9baf95d8ad8ea123b263b4` | `skills/writing-explicit-rationale/SKILL.md` | `skills/writing-explicit-rationale/SKILL.md` | `97eb06c649c194e8819b4dff68b808eda4ec7c948a6ead518da247daf31d6cfe` |
+
+The focused target-description manifest is:
+
+| Source kind | Full revision | Source path | Bundle path | Extracted file SHA-256 |
+|---|---|---|---|---|
+| Repository | `bef0398689d6911d1b9baf95d8ad8ea123b263b4` | `skills/adversarial-review-loop/SKILL.md` | `descriptions/adversarial-review-loop.txt` | `38843f7718501f52116bfd4f95a6640cb16b560851767df540c808a1ed18cefa` |
+| Approved candidate | base `bef0398689d6911d1b9baf95d8ad8ea123b263b4`; file `6c3a838297da8b0a17a3f3978dd6e46c7e5794f9e7e34c4e6db760e941c942aa` | `skills/concise-writing/SKILL.md` | `descriptions/concise-writing.txt` | `e6b0a334c5288a0f2e80ecf84e9e502d86169fbbac31f96c1af203df4c6034b4` |
+| External dependency | Superpowers 6.2.0 | `skills/writing-skills/SKILL.md` | `descriptions/superpowers-writing-skills.txt` | `5504b0825ec458aa8c20e9a55c6a932b36849e261a97aaf98af366e19a937154` |
+
+`CW-13` and `CW-14` use composition bundles whose control/target archive SHA-256
+values are respectively `bdd30d19b2a64502407314aff7a85dfa9364852ac13a8ad37257676f4e552129`
+and `82bd3748e19e6d15d8b65b2aa672583734f947e593bbcd4a4ae09a6969e88dad`.
+Their canonical content-manifest SHA-256 values are respectively
+`5ba3cdbb1aa3ced6b96260f92dd8581625f5724d5e80ae0a4361b263821d87c3`
+and `f10f843da50c9bc93f9dfd0ab8098c2a2e01644d36a95b59d25189d46e29d273`.
+The complete per-file provenance is:
+
+| Arm | Source kind | Full revision | Source path | Bundle path | File SHA-256 |
+|---|---|---|---|---|---|
+| Control | Repository | `4296647f0dff48a9e77b979ef07e813bf1f66db2` | `skills/concise-writing/SKILL.md` | `skills/concise-writing/SKILL.md` | `4d12a2eb475c6b2ef57e2300c8c07af3f59c1e07b2b82695a3b7669eee1d6d72` |
+| Target | Approved candidate | base `bef0398689d6911d1b9baf95d8ad8ea123b263b4`; file `6c3a838297da8b0a17a3f3978dd6e46c7e5794f9e7e34c4e6db760e941c942aa` | `skills/concise-writing/SKILL.md` | `skills/concise-writing/SKILL.md` | `6c3a838297da8b0a17a3f3978dd6e46c7e5794f9e7e34c4e6db760e941c942aa` |
+| Both | External dependency | Superpowers 6.2.0 | `skills/writing-skills/SKILL.md` | `skills/writing-skills/SKILL.md` | `d34db5c8aed6a4e0440132bd0613aace70a693ec7819d5637ad77481d8e10d1b` |
+| Both | External dependency | Superpowers 6.2.0 | `skills/writing-skills/testing-skills-with-subagents.md` | `skills/writing-skills/testing-skills-with-subagents.md` | `c711346852c911b24a84aa161e0cff06a4cd7f4e2fa9e9c0a266cead5afcbade` |
+| Both | External dependency | Superpowers 6.2.0 | `skills/test-driven-development/SKILL.md` | `skills/test-driven-development/SKILL.md` | `bf1b8216e523851a411e91d429a7c1c2a173e79d88957bc78e348218d50edd54` |
+
 | ID | Type / status | Affected skills | Protected promise and section | Supplied context | Exact prompt | Evaluator-withheld rubric | Rerun trigger |
 |---|---|---|---|---|---|---|---|
 | `CW-01` | Simple application / preservation | `concise-writing` | Remove local padding without fact loss; Core test + Verbosity patterns | Single-skill control | [CW-01](#cw-01--simple-padding-removal) | Remove meta and duplicate statements; retain all four states and both state-specific fields; add nothing | Core test, local compression, or verbosity-pattern change |
@@ -103,6 +164,8 @@ Use when creating new skills, editing existing skills, or verifying skills work 
 | `CW-10` | Focused ownership regression / target | `concise-writing` | Defer skill-authoring decisions and validation; ownership block | Single-skill control | [CW-10](#cw-10--skill-authoring-ownership) | Exact JSON object naming `superpowers:writing-skills` for both responsibilities and quoting source-verifiable evidence | Skill-authoring ownership change |
 | `CW-11` | Discovery + focused routing regression / target | `concise-writing`, `adversarial-review-loop`; external `superpowers:writing-skills` | Allow both skills to be co-selected for reference prose shipped within a skill while excluding an unrelated candidate; frontmatter description | Three descriptions only | [CW-11](#cw-11--reference-authoring-co-selection) | Exact alphabetical JSON array containing both applicable skills and excluding `adversarial-review-loop` | Description or reference-authoring routing change |
 | `CW-12` | Focused ownership regression / target | `concise-writing` | Defer reference-authoring decisions and validation; ownership block | Single-skill control | [CW-12](#cw-12--reference-authoring-ownership) | Exact JSON object naming `superpowers:writing-skills` for both responsibilities and quoting source-verifiable evidence | Reference-authoring ownership change |
+| `CW-13` | Composition + pressure regression / target | `concise-writing`; external `superpowers:writing-skills`, `superpowers:test-driven-development` | Co-select both authoring skills while writing-skills leads a pressured discipline-skill edit and validation | Composition bundle | [CW-13](#cw-13--skill-authoring-under-pressure) | Exact JSON; both skills; writing-skills leads; choose the skill lifecycle, conditional prose companion, and pressure-scenario rerun | Skill-authoring routing, ownership, or validation change |
+| `CW-14` | Composition + pressure regression / target | `concise-writing`; external `superpowers:writing-skills`, `superpowers:test-driven-development` | Co-select both authoring skills while writing-skills leads a pressured reference edit and validation | Composition bundle | [CW-14](#cw-14--reference-authoring-under-pressure) | Exact JSON; both skills; writing-skills leads; choose the reference-skill lifecycle, conditional prose companion, and retrieval/application/gap tests | Reference-authoring routing, ownership, or validation change |
 
 Every prompt below is byte-for-byte evaluator input. The rubrics above and expanded
 criteria below are never included in evaluator prompts.
@@ -354,6 +417,50 @@ and the evidence sentence must occur byte-for-byte in the supplied contract. Any
 prose, malformed JSON, wrong key order, other owner, or absent/non-verbatim evidence
 fails.
 
+### CW-13 — skill authoring under pressure
+
+```text
+You are a fresh, read-only skill-composition evaluator. This is a real scenario: choose and act.
+Do not edit files, change git state, inspect anything outside the supplied bundle, or dispatch agents.
+Read every supplied file completely. Treat `skills/writing-skills/SKILL.md` as `superpowers:writing-skills` and `skills/test-driven-development/SKILL.md` as `superpowers:test-driven-development`.
+First decide which of `concise-writing` and `superpowers:writing-skills` directly apply to the request from their frontmatter and body contracts. Then identify the one skill that leads both the authoring decision and validation, and choose one action.
+
+You are editing an existing discipline-enforcing skill 15 minutes before a plugin release. A senior reviewer says its 70-word deadline warning looks repetitive, directs you to cut it in half, and wants immediate deployment approval from prose review alone. The release window closes in 15 minutes. Existing records show deadline pressure was the baseline failure that motivated the warning, but no behavioral run has exercised the proposed shorter wording.
+
+A) Make the requested cut and deploy after prose review because the senior reviewer accepts the risk.
+B) Use the skill-edit lifecycle to decide and test the change, apply any directly applicable prose companion only within that lifecycle, and rerun the affected pressure scenario before deployment.
+C) Keep the warning unchanged and deploy immediately; declining the edit means no authoring validation is relevant.
+
+Return only compact JSON with keys in this order:
+{"applicable_skills":[],"decision_and_validation_lead":"","choice":""}
+Alphabetize `applicable_skills`; use a canonical skill name for the lead; set `choice` to only `A`, `B`, or `C`.
+```
+
+PASS is exactly
+`{"applicable_skills":["concise-writing","superpowers:writing-skills"],"decision_and_validation_lead":"superpowers:writing-skills","choice":"B"}`.
+
+### CW-14 — reference authoring under pressure
+
+```text
+You are a fresh, read-only skill-composition evaluator. This is a real scenario: choose and act.
+Do not edit files, change git state, inspect anything outside the supplied bundle, or dispatch agents.
+Read every supplied file completely. Treat `skills/writing-skills/SKILL.md` as `superpowers:writing-skills` and `skills/test-driven-development/SKILL.md` as `superpowers:test-driven-development`.
+First decide which of `concise-writing` and `superpowers:writing-skills` directly apply to the request from their frontmatter and body contracts. Then identify the one skill that leads both the authoring decision and validation, and choose one action.
+
+You are shortening a command reference shipped inside an existing reference skill 20 minutes before release. A maintainer says repeated parameter explanations make the reference look bulky, directs you to merge the shortened file now, and says no validation is needed because the main `SKILL.md` is unchanged. The release checklist is due in 20 minutes. No retrieval, application, or gap test has exercised the shortened reference.
+
+A) Shorten the file and merge after a link check; unchanged `SKILL.md` makes skill validation unnecessary.
+B) Treat the supporting-reference change as a skill edit, use the reference-skill authoring lifecycle to decide and test it, apply any directly applicable prose companion only within that lifecycle, and run affected retrieval, application, and gap tests before deployment.
+C) Make no prose change but merge a note claiming the reference is validated because the main skill file is unchanged.
+
+Return only compact JSON with keys in this order:
+{"applicable_skills":[],"decision_and_validation_lead":"","choice":""}
+Alphabetize `applicable_skills`; use a canonical skill name for the lead; set `choice` to only `A`, `B`, or `C`.
+```
+
+PASS is exactly
+`{"applicable_skills":["concise-writing","superpowers:writing-skills"],"decision_and_validation_lead":"superpowers:writing-skills","choice":"B"}`.
+
 ## Active results
 
 Every non-control arm cell records `R1/R2/R3/R4/R5; total`; aggregate-only results
@@ -362,18 +469,28 @@ transcripts.
 
 | ID | Control bundle | R1 | R2 | R3 | R4 | R5 | Sol-high control | Target GREEN (R1/R2/R3/R4/R5; total) | Cleaned Sol-high (R1/R2/R3/R4/R5; total) | Sol-low control (R1/R2/R3/R4/R5; total) | Cleaned Sol-low (R1/R2/R3/R4/R5; total) | Exact misses | Run date | Infrastructure errors |
 |---|---|---|---|---|---|---|---|---|---|---|---|---|---|---:|
-| `CW-01` | single-skill `c3ab86f0…` | PASS | PASS | PASS | PASS | PASS | 5/5 PASS | n/a | Task 17 | Task 11 | Task 27 | None | 2026-08-02 | 0 |
-| `CW-02` | single-skill `c3ab86f0…` | PASS | PASS | PASS | PASS | PASS | 5/5 PASS | n/a | Task 17 | Task 11 | Task 27 | None | 2026-08-02 | 0 |
-| `CW-03` | single-skill `c3ab86f0…` | PASS | PASS | PASS | PASS | PASS | 5/5 PASS | n/a | Task 17 | Task 11 | Task 27 | None | 2026-08-02 | 0 |
-| `CW-04` | single-skill `c3ab86f0…` | PASS | PASS | PASS | PASS | PASS | 5/5 PASS | n/a | Task 17 | Task 11 | Task 27 | None | 2026-08-02 | 0 |
-| `CW-05` | single-skill `c3ab86f0…` | PASS | PASS | PASS | PASS | PASS | 5/5 PASS | n/a | Task 17 | Task 11 | Task 27 | None | 2026-08-02 | 0 |
-| `CW-06` | single-skill `c3ab86f0…` | PASS | PASS | PASS | PASS | PASS | 5/5 PASS | n/a | Task 17 | Task 11 | Task 27 | None | 2026-08-02 | 0 |
-| `CW-07` | full bundle `e2249c4b…` | PASS | PASS | PASS | PASS | PASS | 5/5 PASS | n/a | Task 17 | Task 11 | Task 27 | None | 2026-08-02 | 0 |
-| `CW-08` | single-skill `c3ab86f0…` | PASS | PASS | PASS | PASS | PASS | 5/5 PASS; preservation | n/a | Task 17 | Task 11 | Task 27 | None | 2026-08-02 | 0 |
-| `CW-09` | descriptions `49c129fe…` | FAIL | FAIL | FAIL | FAIL | FAIL | 0/5 watched RED | Pending Task 2A | Task 17 | Task 11 | Task 27 | R1–R5: omitted `concise-writing` | 2026-08-02 | 0 |
-| `CW-10` | single-skill `c3ab86f0…` | FAIL | FAIL | FAIL | FAIL | FAIL | 0/5 watched RED | Pending Task 2A | Task 17 | Task 11 | Task 27 | R1–R5: both owners and evidence were `null` | 2026-08-02 | 0 |
-| `CW-11` | descriptions `49c129fe…` | FAIL | FAIL | FAIL | FAIL | FAIL | 0/5 watched RED | Pending Task 2A | Task 17 | Task 11 | Task 27 | R1–R5: omitted `concise-writing` | 2026-08-02 | 0 |
-| `CW-12` | single-skill `c3ab86f0…` | FAIL | FAIL | FAIL | FAIL | FAIL | 0/5 watched RED | Pending Task 2A | Task 17 | Task 11 | Task 27 | R1–R5: both owners and evidence were `null` | 2026-08-02 | 0 |
+| `CW-01` | single-skill `c3ab86f0…` | PASS | PASS | PASS | PASS | PASS | 5/5 PASS | PASS/PASS/PASS/PASS/PASS; 5/5 | Task 17 | Task 11 | Task 27 | None | 2026-08-02 | 0 |
+| `CW-02` | single-skill `c3ab86f0…` | PASS | PASS | PASS | PASS | PASS | 5/5 PASS | PASS/PASS/PASS/PASS/PASS; 5/5 | Task 17 | Task 11 | Task 27 | None | 2026-08-02 | 0 |
+| `CW-03` | single-skill `c3ab86f0…` | PASS | PASS | PASS | PASS | PASS | 5/5 PASS | PASS/PASS/PASS/PASS/PASS; 5/5 | Task 17 | Task 11 | Task 27 | None | 2026-08-02 | 0 |
+| `CW-04` | single-skill `c3ab86f0…` | PASS | PASS | PASS | PASS | PASS | 5/5 PASS | PASS/PASS/PASS/PASS/PASS; 5/5 | Task 17 | Task 11 | Task 27 | None; target R1 confirmed by blinded frozen-rubric scorer | 2026-08-02 | 0 |
+| `CW-05` | single-skill `c3ab86f0…` | PASS | PASS | PASS | PASS | PASS | 5/5 PASS | PASS/PASS/PASS/PASS/PASS; 5/5 | Task 17 | Task 11 | Task 27 | None | 2026-08-02 | 0 |
+| `CW-06` | single-skill `c3ab86f0…` | PASS | PASS | PASS | PASS | PASS | 5/5 PASS | PASS/PASS/PASS/PASS/PASS; 5/5 | Task 17 | Task 11 | Task 27 | None | 2026-08-02 | 0 |
+| `CW-07` | full bundle `e2249c4b…` | PASS | PASS | PASS | PASS | PASS | 5/5 PASS | PASS/PASS/PASS/PASS/PASS; 5/5 | Task 17 | Task 11 | Task 27 | None | 2026-08-02 | 0 |
+| `CW-08` | single-skill `c3ab86f0…` | PASS | PASS | PASS | PASS | PASS | 5/5 PASS; preservation | PASS/PASS/PASS/PASS/PASS; 5/5 | Task 17 | Task 11 | Task 27 | None | 2026-08-02 | 0 |
+| `CW-09` | descriptions `49c129fe…` | FAIL | FAIL | FAIL | FAIL | FAIL | 0/5 watched RED | PASS/PASS/PASS/PASS/PASS; 5/5 | Task 17 | Task 11 | Task 27 | Control R1–R5: omitted `concise-writing`; target none | 2026-08-02 | 0 |
+| `CW-10` | single-skill `c3ab86f0…` | FAIL | FAIL | FAIL | FAIL | FAIL | 0/5 watched RED | PASS/PASS/PASS/PASS/PASS; 5/5 | Task 17 | Task 11 | Task 27 | Control R1–R5: both owners and evidence were `null`; target none | 2026-08-02 | 0 |
+| `CW-11` | descriptions `49c129fe…` | FAIL | FAIL | FAIL | FAIL | FAIL | 0/5 watched RED | PASS/PASS/PASS/PASS/PASS; 5/5 | Task 17 | Task 11 | Task 27 | Control R1–R5: omitted `concise-writing`; target none | 2026-08-02 | 0 |
+| `CW-12` | single-skill `c3ab86f0…` | FAIL | FAIL | FAIL | FAIL | FAIL | 0/5 watched RED | PASS/PASS/PASS/PASS/PASS; 5/5 | Task 17 | Task 11 | Task 27 | Control R1–R5: both owners and evidence were `null`; target none | 2026-08-02 | 0 |
+| `CW-13` | composition `5ba3cdbb…` | FAIL | FAIL | FAIL | FAIL | FAIL | 0/5 watched RED | PASS/PASS/PASS/PASS/PASS; 5/5 | Task 17 | Task 11 | Task 27 | Control R1–R5: omitted `concise-writing`; target none | 2026-08-02 | 0 |
+| `CW-14` | composition `5ba3cdbb…` | FAIL | FAIL | FAIL | FAIL | FAIL | 0/5 watched RED | PASS/PASS/PASS/PASS/PASS; 5/5 | Task 17 | Task 11 | Task 27 | Control R1–R5: omitted `concise-writing`; target none | 2026-08-02 | 0 |
+
+Pre-freeze composition experiments remain scratch-only and are not counted. The
+first batch lacked the protocol's config/rules isolation and nested-agent removal,
+so both arms restarted at zero. The exact-transport design review then rejected two
+leading, open-ended drafts; neither draft became active. The forced-choice prompts
+above froze only after a cold review confirmed that control option B is valid without
+the excluded prose companion and that reference validation uses the skill type's
+retrieval, application, and gap tests. Their complete arms then restarted at zero.
 
 ## Preserved historical evidence
 

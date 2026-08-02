@@ -15,8 +15,9 @@ skill platform: its gates dispatch to `superpowers:*` sub-skills throughout, and
 several skills are explicit deltas over a superpowers base — `adversarial-review`
 adapts `superpowers:requesting-code-review`, `dispatching-development-subagents`
 overlays `superpowers:subagent-driven-development`, `lean-plan-writing` refines
-`superpowers:writing-plans`, `concise-writing` defers skill-authoring to
-`superpowers:writing-skills`. Superpowers is the substrate, not one dependency
+`superpowers:writing-plans`, and `concise-writing` can co-select for skill or
+reference prose while `superpowers:writing-skills` owns authoring decisions and
+validation. Superpowers is the substrate, not one dependency
 among several. The doctrine travels wherever that platform runs; the hook stack is
 Claude Code-specific. See [Requirements](#requirements).
 

@@ -203,13 +203,38 @@ and validation. This is a separate RED/GREEN change, not readability cleanup.
 - Modify: `skills/concise-writing/SKILL.md`
 - Modify: `skill-validation/concise-writing.md`
 - Modify: `skill-validation/skill-discovery.md` if its results are rerun
+- Modify: `README.md` if the stale-reference sweep finds old routing guidance
 - Modify: this plan
 
-- [x] Freeze `CW-09`–`CW-12`, run each five times on Sol high against the immutable control, and record watched RED without weakening their rubrics.
-- [ ] Remove the frontmatter exclusion and add only: “During skill or reference authoring, `superpowers:writing-skills` owns authoring decisions and validation.”
-- [ ] Materialize the target bundles, verify their hashes, and run the complete affected Sol-high suite at 5/5: `CW-01`–`CW-07`, `CW-09`–`CW-12`, shared discovery, and `CW-08` only if Task 2 classified it as preservation; otherwise retain its watched RED for Task 12.
-- [ ] Run cold editorial and skill-writing review, show the edited skill in place, and wait for final user approval.
-- [ ] After approval, run repository tests, stale-reference and link sweeps, and both diff checks; commit as `docs(skills): clarify concise writing authoring ownership`.
+- [x] Freeze `CW-09`–`CW-14`, run each five times on Sol high against immutable controls, and record watched RED without weakening their rubrics.
+- [x] Remove the frontmatter exclusion and add only: “During skill or reference authoring, `superpowers:writing-skills` owns authoring decisions and validation.”
+- [x] Materialize the target bundles, verify their hashes, and run the complete affected Sol-high suite at 5/5: `CW-01`–`CW-14`, shared discovery, and `CW-08` only if Task 2 classified it as preservation; otherwise retain its watched RED for Task 12.
+- [x] Run cold editorial and skill-writing review, show the edited skill in place, and wait for final user approval.
+- [x] After approval, run repository tests, stale-reference and link sweeps, and both diff checks; commit as `docs(skills): clarify concise writing authoring ownership`.
+
+**Task 2A execution note (2026-08-02):** The final skill changes only the approved
+frontmatter exclusion removal and ownership sentence; control/current word counts are
+860/866 and current SHA-256 is `6c3a8382…`. `CW-01`–`CW-14` passed 70/70 on the
+immutable target bundles with zero infrastructure errors. The two behavioral
+composition controls each produced 0/5 watched RED by omitting `concise-writing`;
+their targets co-selected both skills and left authoring and validation ownership
+with `superpowers:writing-skills` in all ten runs. A cold design review froze those
+forced-choice scenarios after rejecting two leading drafts; an earlier batch using
+incomplete evaluator isolation was superseded before inclusion and both final arms
+restarted at zero. Shared discovery passed
+45/45 after a fresh validation-design review classified its original mechanical
+rename request as ambiguous; repaired `DISC-08` restarted and passed 5/5 in all three
+invalidated arms. The staged adversarial review then found that the Task 2A extractor
+had dropped the apostrophe from an unrelated dispatch description; all 45 Task 2A
+discovery results were superseded, and the byte-identical full arm restarted and
+passed 45/45. A blinded scorer confirmed the sole borderline preservation output
+under its frozen rubric. The second cold review using both `concise-writing` and
+`superpowers:writing-skills` returned no findings, and the user approved the in-place
+skill. Repository verification passed: hook suite 263 passed/3 skipped, installer
+suite 11 passed, and research suite 4 passed. The stale-reference sweep found old
+authoring exclusions only in immutable controls or explicitly labeled history. The
+exact local-link check passed with 6 working links across 6 staged documents, and
+both `git diff --check` and `git diff --cached --check` passed.
 
 ### Task 3: Audit and baseline `disciplined-research`
 

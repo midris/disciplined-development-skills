@@ -1,6 +1,6 @@
 ---
 name: concise-writing
-description: 'Use when writing or revising reader-facing prose — docs, READMEs, plans, specs, design notes, commit bodies, or code comments — that risks being verbose, padded, repetitive, wordy, or bulky; also when asked to tighten, trim, shorten, or "get to the point". Excludes skill and reference authoring.'
+description: 'Use when writing or revising reader-facing prose — docs, READMEs, plans, specs, design notes, commit bodies, or code comments — that risks being verbose, padded, repetitive, wordy, or bulky; also when asked to tighten, trim, shorten, or "get to the point".'
 ---
 
 # Concise writing
@@ -8,6 +8,7 @@ description: 'Use when writing or revising reader-facing prose — docs, READMEs
 **Role:** Companion — invoke when producing prose a reader has to get through.
 **Owns:** the verbosity test (does cutting this lose information or necessary framing?), the named padding patterns, the two-altitude compression pass, the anti-over-trim guard.
 **Does not own:** what goes into a plan vs. code (`lean-plan-writing`); whether rationale is present at all (`writing-explicit-rationale`); stale-reference sweeps (`sweeping-stale-references`).
+During skill or reference authoring, `superpowers:writing-skills` owns authoring decisions and validation.
 
 ## Overview
 
