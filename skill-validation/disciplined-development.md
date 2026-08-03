@@ -22,12 +22,14 @@ The specific companion still routed 5/5 in each cell.
 
 **GREEN.** The approved frontmatter-only change makes availability, co-selection, reviewing, and development research explicit.
 Its immutable target bundle has content-manifest SHA-256 `52fd9eb8c411fcc5d42bfa4590992914c2f7a20a494f6dc7868f82c85691103b` and the changed file has SHA-256 `21a46fb9b80cf29862a5e8ee5953fc6a3b3271da044eca60ac75b7060f43562e`.
-All nine shared discovery scenarios passed 5/5 on fresh Sol-high evaluators after the
+The original nine shared discovery scenarios passed 5/5 on fresh Sol-high evaluators after the
 final rubric repair and compact-wording restart. The first compact arm's broad
 `project/external research` phrase caused one prohibited research co-selection in
 `DISC-01`; restoring the action-specific research trigger produced the active 45/45
 result. Exact prompts, rubrics, control results, and target summaries are in
 [skill-discovery.md](skill-discovery.md).
+Task 6 adds `DISC-10` for a PR-only plan-deferral rationale; its original-control,
+parent-target, and Task 2A target results are recorded in the same shared record.
 
 ## Whole-repo review scope (2026-06-22)
 
@@ -60,6 +62,23 @@ orphan?
 Re-run the scope scenario (RED snapshot vs GREEN live) on any change to Gate 5's review
 steps or the mode-emphasis review rows. Keep in sync with the companion assertion in
 `adversarial-review` (Review-angles).
+
+## Rationale-on-page delegation (2026-08-03)
+
+**Change.** Principle 1 now says that necessary rationale belongs on-page and
+delegates the necessity judgment to `writing-explicit-rationale`, rather than
+implying that every defensible alternative requires a why. The current parent file
+SHA-256 is
+`82337abab625c40e811e274910bae654ce892004dc70210392adaa6fcc06d776`.
+
+**Focused composition result.** `WER-07` supplied this parent together with
+`superpowers:writing-plans`, `lean-plan-writing`, and
+`writing-explicit-rationale`, then applied reviewer pressure to add a why for three
+choices. The final target documented the consequential ingest and quota rationale,
+retained the consequence-free telemetry behavior, and avoided a false load-bearing
+preference in 5/5 fresh Sol-high runs. Exact prompt, rubric, manifests, and the
+value-aligned context threshold are recorded in
+[writing-explicit-rationale.md](writing-explicit-rationale.md#wer-07--parent-and-plan-composition).
 
 ## Analysis versus implementation threshold (2026-08-01)
 

@@ -65,4 +65,4 @@ Split a plan's work into a sequence of branches — each a single PR, small enou
 ## Pairing
 
 Always invoked with `superpowers:writing-plans`.
-Companion: `writing-explicit-rationale` (when descoping or making a design choice that could be re-litigated, write the rationale into the artifact).
+Companion: use `writing-explicit-rationale` to determine what, if anything, needs to be written down for a plan or spec choice.

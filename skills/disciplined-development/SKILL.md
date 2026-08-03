@@ -84,7 +84,8 @@ Conversation is not a contract; the file is.
 
 Flip task checkboxes in active plans in the same commit where the task is completed.
 
-When the write-down includes an intentional descope, deferral, shortcut, exception, or design choice over a defensible alternative, the rationale belongs on-page too — not only in chat.
+When the write-down includes an intentional descope, deferral, shortcut, exception, or design choice over a defensible alternative, any necessary rationale belongs on-page too — not only in chat.
+Use `writing-explicit-rationale` to determine what, if anything, needs to be written down.
 REQUIRED SUB-SKILL: `writing-explicit-rationale`.
 
 **2. Re-read, don't recall.**

@@ -43,15 +43,18 @@ The section-by-section simplification questions are:
 | Output artifact | Only partly; ordinary evidence can share one case, but scale grouping and `n/a` are mutually exclusive branches | `SSR-01`, `SSR-03`, `SSR-05` |
 | Worked example | Yes; it introduces no promise beyond the procedure and artifact, so it needs no dedicated scenario | `SSR-01`–`SSR-03` |
 | Rationalizations | Yes; one reviewer/IDE pressure case and one small-change case cover the distinct excuses without one scenario per sentence | `SSR-02`, `SSR-05` |
-| Whole skill | No simpler suite below shared discovery plus five owned scenarios preserves simple use, reviewer pressure, scale, portability, and the negative branch as independent outcomes | `DISC-08`, `SSR-01`–`SSR-05` |
+| Pairing with explicit rationale | No separate composition claim is needed; stale rationale text is an ordinary mutable reference owned by this skill | `SSR-01` |
+| Whole skill | No simpler suite below shared discovery plus five owned scenarios preserves simple use, reviewer pressure, scale, portability, the negative branch, and stale-rationale sweeping as independent outcomes | `DISC-08`, `SSR-01`–`SSR-05` |
 
 ## Active scenario catalog
 
 Common run metadata: control commit
 `4296647f0dff48a9e77b979ef07e813bf1f66db2`; Codex CLI 0.146.0;
-`gpt-5.6-sol`; high reasoning effort; Superpowers 6.2.0; run date 2026-08-02;
-five fresh processes per scenario; maximum concurrency three; enforced read-only,
-no-agents transport; manual scoring; rubric withheld.
+`gpt-5.6-sol`; high reasoning effort; Superpowers 6.2.0; five fresh processes per
+scenario; maximum concurrency three; enforced read-only, no-agents transport;
+manual scoring; rubric withheld.
+`SSR-02`–`SSR-05` ran on 2026-08-02; repaired `SSR-01` ran on 2026-08-03.
+All five scenarios had zero infrastructure errors.
 
 The owner and sole affected repository skill for `SSR-01`–`SSR-05` is
 `sweeping-stale-references`.
@@ -62,7 +65,7 @@ No external skill dependency or live web access is supplied.
 
 | ID | Type / status | Protected promise and section | Supplied context | Exact prompt | Evaluator-withheld rubric | Rerun trigger |
 |---|---|---|---|---|---|---|
-| `SSR-01` | Simple application + direct invocation / preservation | An uncomplicated load-bearing rename uses literal and obvious-synonym search, Search → Triage → Reconcile, one coherent update, and ordinary evidence before verification; Role, Overview, Quick reference, Procedure, Output artifact | Complete nine-skill control + simple project fixture | [SSR-01](#ssr-01--simple-direct-rename) | Inspect both project files; rename the exact form to `SESSION_TTL_MINUTES` and the prose form to `session TTL`; account for two updates in one `References swept:` section; place `Verification:` after it; add no unrelated skill procedure, unsupported match, blocker, or narration | Trigger, direct-invocation, ownership, literal/synonym search, three-step procedure, reconciliation, or ordinary artifact placement changes |
+| `SSR-01` | Simple application + direct invocation / preservation | An uncomplicated load-bearing rename uses literal and obvious-synonym search, sweeps an attached rationale comment, follows Search → Triage → Reconcile, produces one coherent update, and records ordinary evidence before verification; Role, Overview, Quick reference, Procedure, Output artifact | Complete nine-skill control + simple project fixture | [SSR-01](#ssr-01--simple-direct-rename) | Inspect both project files; rename the exact form to `SESSION_TTL_MINUTES` and both prose references to `session TTL`, including the rationale comment; account for three updates in one `References swept:` section; preserve the comment's causal and accepted-tradeoff content; place `Verification:` after the sweep; add no unrelated skill procedure, unsupported match, blocker, or narration | Trigger, direct invocation, ownership, literal/synonym search, rationale-comment sweep, three-step procedure, reconciliation, or ordinary artifact placement changes |
 | `SSR-02` | Non-trivial application + focused regression / preservation | One reviewer hit is a sample; IDE rename is insufficient; broad file-category search, three classifications, vendor/archive treatment, immutable-history exclusion, complete accounting, and one-commit reconciliation survive pressure; Overview, Procedure, What counts as a reference, Output artifact, Rationalizations | Single-skill control + deterministic match inventory | [SSR-02](#ssr-02--reviewer-one-hit-completeness) | Account for all 13 mutable-tree matches: 10 update, 1 intentionally stale with reason, and 2 false positives with reasons; cover code, docs/comments, tests/fixtures, config, scripts, CI, and build; exclude three immutable-history search hits rather than classifying them; treat the reviewer hit as a sample and reject IDE sufficiency; reconcile the 13 outcomes; put `References swept:` before `Verification:`; add no unsupported match, blocker, or narration | Reviewer-one-hit, literal/synonym scope, file-category scope, triage labels, vendor/archive/history scope, reconciliation, or artifact changes |
 | `SSR-03` | Non-trivial application + focused regression / preservation | Large sweeps group only by path and outcome, retain exact locations and counts, reconcile every subtotal, group before taking the body-size exception, and verify last; Output artifact | Single-skill control + exact 126-match inventory | [SSR-03](#ssr-03--126-match-grouped-sweep) | Produce exactly 10 path/outcome entries; preserve every supplied line range and path count; classify 80 updates, 40 intentionally stale, and 6 false positives; reconcile each class and 126 total; do not group across paths or outcomes; state that grouping was applied before the correctness-evidence size exception; place `Verification:` after the sweep | Grouping predicate, precise-location rule, count reconciliation, body-size exception, or placement changes |
 | `SSR-04` | Portability/extraction / preservation | The portable core searches literal and synonym forms across non-software handbooks and forms, triages every occurrence, and reconciles one coordinated publication batch without depending on repository or commit evidence; Role, Overview, Procedure, What counts as a reference | Single-skill control + policy-publication inventory | [SSR-04](#ssr-04--portable-policy-term-rename) | Return the requested publication ledger; account for 8 managed-document occurrences as 6 updates, 1 intentionally stale with reason, and 1 false positive with reason; include exact and synonym forms across both handbooks and forms; exclude the supplied email and meeting-chat hits as unmanaged history; reconcile 6 + 1 + 1 = 8 and one coordinated publication batch; incidental software vocabulary neither passes nor fails, but no repository or Git step may replace a required portable element | Portability, extraction, literal/synonym search, triage, reconciliation, or supplied-context boundary changes |
@@ -79,7 +82,7 @@ Their single-skill archive SHA-256 is
 
 | Scenario | Fixture-expanded canonical content-manifest SHA-256 |
 |---|---|
-| `SSR-01` | `03a7bb5062f09d812a3422c1630ecf8aff081b925ccaad2a60f9d8f54e81ba17` |
+| `SSR-01` | `4cfca7137eba5c13245644b4742244b47c610196bad1176ab9c9e19f25fed3aa` |
 | `SSR-02` | `6a52d00c04dbd880f32b5fea74bcfad4f7756f3d10ac4cd6aa2dbe54d05ac970` |
 | `SSR-03` | `8f010cca9b606f7f2e5367abbd87202bcf7cfa405924f855d859d6fc1a0f08d1` |
 | `SSR-04` | `80ad28aebf4d7b948c65cf1a2f015c4daedc1c96f92c8e7d4a6a6c1cda486e1d` |
@@ -88,7 +91,7 @@ Their single-skill archive SHA-256 is
 | Scenario | Source kind | Full revision | Bundle path | File SHA-256 |
 |---|---|---|---|---|
 | `SSR-01` | Repository | `4296647f0dff48a9e77b979ef07e813bf1f66db2` | Task 1 nine-skill manifest | Per-file hashes in [README.md](README.md#immutable-control-bundles) |
-| `SSR-01` | Inline fixture | This record | `project/src/session.py` | `6605eb2e4b520b273a4fc48c7cb4cb2fdf4d3d3e633b2408d02a25d110e63c07` |
+| `SSR-01` | Inline fixture | This record | `project/src/session.py` | `a975fc6bef67344143832d89a6b24b12a8b59da4682236c842f8639eb9378cd2` |
 | `SSR-01` | Inline fixture | This record | `project/docs/session-policy.md` | `a925897761b094ba37bf8f7825ceab7fac62a48beeea310dbb5f412ef74d1d0c` |
 | `SSR-02` | Repository | `4296647f0dff48a9e77b979ef07e813bf1f66db2` | `skills/sweeping-stale-references/SKILL.md` | `d6812c33cae026807bbb3ebe851d93b60b513dd87ea5efd98aea28f5c02f9157` |
 | `SSR-02` | Inline fixture | This record | `context/match-inventory.md` | `43b3f8819da7b85ccff406f64a4d0c438ebc4cea35e5628ac4e0919a64e7dcf6` |
@@ -106,6 +109,8 @@ Every fixture below is materialized byte-for-byte at its named bundle path.
 `project/src/session.py`
 
 ```python
+# The token TTL stays at 30 minutes because the partner rejects longer sessions.
+# This accepts more frequent refreshes to preserve partner compatibility.
 TOKEN_TTL_MINUTES = 30
 ```
 
@@ -281,7 +286,7 @@ Return only the commit-body evidence for this correction, ending with `Verificat
 
 | ID | Original control / content-manifest SHA-256 | Sol-high control | Exact control misses | Target/current GREEN | Cleaned Sol-high | Sol-low control | Cleaned Sol-low | Run date | Infrastructure errors |
 |---|---|---|---|---|---|---|---|---|---:|
-| `SSR-01` | `4296647f0dff48a9e77b979ef07e813bf1f66db2` / `03a7bb5062f09d812a3422c1630ecf8aff081b925ccaad2a60f9d8f54e81ba17` | **5/5 PASS** | None | Not applicable | Task 20 | Task 11 | Task 27 | 2026-08-02 | 6 shell-corrupted preliminary processes, retrospectively invalidated after initial scoring |
+| `SSR-01` | `4296647f0dff48a9e77b979ef07e813bf1f66db2` / `4cfca7137eba5c13245644b4742244b47c610196bad1176ab9c9e19f25fed3aa` | **5/5 PASS** | None; all five accounted for three updates and preserved the rationale comment | Not applicable | Task 20 | Task 11 | Task 27 | 2026-08-03 | 0 |
 | `SSR-02` | `4296647f0dff48a9e77b979ef07e813bf1f66db2` / `6a52d00c04dbd880f32b5fea74bcfad4f7756f3d10ac4cd6aa2dbe54d05ac970` | **5/5 PASS** | None | Not applicable | Task 20 | Task 11 | Task 27 | 2026-08-02 | 0 |
 | `SSR-03` | `4296647f0dff48a9e77b979ef07e813bf1f66db2` / `8f010cca9b606f7f2e5367abbd87202bcf7cfa405924f855d859d6fc1a0f08d1` | **5/5 PASS** | None | Not applicable | Task 20 | Task 11 | Task 27 | 2026-08-02 | 0 |
 | `SSR-04` | `4296647f0dff48a9e77b979ef07e813bf1f66db2` / `80ad28aebf4d7b948c65cf1a2f015c4daedc1c96f92c8e7d4a6a6c1cda486e1d` | **5/5 PASS** | None; portability is preservation coverage | Not applicable | Task 20 | Task 11 | Task 27 | 2026-08-02 | 0 |
@@ -294,6 +299,12 @@ Return only the commit-body evidence for this correction, ending with `Verificat
 | `SSR-03` | P | P | P | P | P |
 | `SSR-04` | P | P | P | P | P |
 | `SSR-05` | P | P | P | P | P |
+
+The prior `SSR-01` result and its earlier repair history below are preserved as
+superseded evidence after Task 6 expanded the fixture with one rationale comment.
+The prompt remained unchanged, but the fixture, rubric, affected-skill map, and
+content manifest changed, so the repaired scenario restarted at zero before the
+active 5/5 run above.
 
 The first two `SSR-01` batches used a shell-unsafe prompt serialization that allowed
 Markdown backticks to trigger command substitution before `codex exec` received the

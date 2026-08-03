@@ -96,7 +96,7 @@ No `ROADMAP.md`. Active work is tracked in `plans/` (when a plan is open) or dir
 - **File layout:** active plans in `plans/`, active design specs in `plans/specs/`, completed work in `plans/completed/` (and `plans/completed/specs/` for completed specs), and deferred work in `plans/deferred/`. New files use the `YYYY-MM-DD-` prefix.
 - During design brainstorming for any non-trivial change, create the spec file in `plans/specs/` at the **first** locked decision and append live as decisions lock — never batch capture to session end. The brainstorming skill's final design-doc step finalizes and commits that live spec.
 - **Plan content scope:** see the `lean-plan-writing` skill — prose is the contract; code is the implementer's job.
-- **Explicit rationale for shortcuts:** see the `writing-explicit-rationale` skill — when descoping, deferring, or accepting a known limitation, put the rationale on-page in the artifact.
+- **Explicit rationale for shortcuts:** use `writing-explicit-rationale` to determine what, if anything, needs to be written down; any necessary rationale belongs on-page in the artifact.
 - Update checkboxes as work completes; record partial progress, moved scope, and deferrals explicitly. Never mark a step complete unless implementation and validation really satisfy it.
 - Reconcile the relevant plan before opening a PR.
 

@@ -45,8 +45,8 @@ Nine skills (each a `skills/<name>/SKILL.md`):
   implementation.
 - **`sweeping-stale-references`** — when a fact changes, find and reconcile every
   place that encodes it, in one commit.
-- **`writing-explicit-rationale`** — put the *why* on the artifact for choices a
-  future reader might re-litigate.
+- **`writing-explicit-rationale`** — decide which choices need durable rationale
+  and keep it in one authoritative code or project-document home.
 - **`concise-writing`** — tighten prose a reader must get through (docs, plans,
   commit bodies, replies); cut padding without cutting substance.
 

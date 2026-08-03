@@ -1,9 +1,294 @@
-# writing-explicit-rationale — validation
+# Writing explicit rationale — validation
 
-Record per `superpowers:writing-skills`. First entry covers the 2026-07-03
-reviewer-visibility edit.
+## Active catalog audit (2026-08-03)
 
-## Reviewer-visibility loophole closure (2026-07-03)
+The shared all-nine discovery suite remains owned by
+[skill-discovery.md](skill-discovery.md#active-catalog-definitions).
+`DISC-08` protects the routine-rename negative, `DISC-09` protects intentional
+shortcut routing, and `DISC-10` protects rationale that would otherwise remain only
+in a PR description.
+The body-level application path protected here is `DISC-10` →
+`writing-explicit-rationale` → `WER-01`, `WER-02`, `WER-03`, `WER-05`, and
+`WER-06`; `WER-07` protects composition with the parent and plan-writing skills.
+
+The historical scenarios were only partially recoverable under the common protocol:
+
+| Historical evidence | Classification | Active disposition |
+|---|---|---|
+| Reviewer visibility: bare consumer | Merge | Missing-rationale placement is covered by `WER-02`, PR-only routing by `DISC-10`, and duplicate resistance by `WER-05` |
+| Reviewer visibility: governing-file consumer | Retire | The governing-file distinction no longer matters after commit/PR rationale stops being part of the skill contract; replace it with existing-rationale reuse coverage in `WER-05` |
+| Routing matrix: active-plan implementation with delegation | Merge | Merge into existing `DISC-04` and `DISC-06` |
+| Routing matrix: padded README tightening | Merge | Merge into existing `DISC-03` |
+| Routing matrix: SKILL.md shortening | Retire | The exclusion contract was superseded by the approved Task 2A authoring-boundary design |
+| Routing matrix: plan deferral with PR-only rationale | Repair | Reconstruct as shared `DISC-10` |
+| Routing matrix: routine convention-preserving rename | Merge | Merge into existing `DISC-08` |
+
+No historical scenario was replayable unchanged: **Keep 0, Repair 1, Merge 4,
+Retire 2**.
+Existing `DISC-09` adds current shortcut-routing coverage but is not counted as a
+successor to the historical five-cell matrix.
+Simple direct invocation, repeated-review batch auditing, portable non-software use,
+existing-rationale reuse, and relevant-history filtering were missing, so
+`WER-01`, `WER-02`, `WER-03`, `WER-05`, `WER-06`, and `WER-07` are **Add 6**.
+
+The six owned scenarios are the smallest suite that keeps direct plan editing,
+retroactive batch repair, portability, existing-rationale reuse, and relevance
+filtering independently observable while checking parent-and-plan composition.
+The section-by-section simplification questions are:
+
+| Skill section | Would a simpler approach preserve the necessary intent and effectiveness? | Smallest evidence mapping |
+|---|---|---|
+| Frontmatter description | Yes; use shared routing cells rather than repeat metadata prompts here | `DISC-08`–`DISC-10` |
+| Role | Yes; one sentence distinguishes rationale judgment and placement from sibling procedures | `WER-01`, `WER-03` |
+| What rationale means here | Only partly; what/how, necessary why, consequence-free choices, and irrelevant history are distinct predicates but fit one paragraph | `WER-01`–`WER-03`, `WER-06` |
+| Keep one authoritative home | No; repeated-review auditing, creating missing rationale, and referencing current rationale are distinct steps in one workflow | `WER-01`, `WER-02`, `WER-05` |
+| Resist duplicate rationale | Yes; three observed pressure classes fit one compact table | `WER-05`, `WER-06` |
+| Whole skill | No smaller structure preserves the framing, placement workflow, and tested resistance to duplicate rationale | `DISC-08`–`DISC-10`, `WER-01`–`WER-03`, `WER-05`–`WER-07` |
+
+## Active scenario catalog
+
+Run metadata: control commit
+`4296647f0dff48a9e77b979ef07e813bf1f66db2`; Codex CLI 0.146.0;
+`gpt-5.6-sol`; high reasoning effort; Superpowers 6.2.0; five fresh processes per
+scenario; maximum concurrency three; enforced read-only, no-agents transport;
+manual scoring; rubric withheld; run date 2026-08-03; zero infrastructure errors.
+
+The owner and sole affected repository skill for `WER-01`–`WER-03`, `WER-05`, and `WER-06` is
+`writing-explicit-rationale`.
+`WER-01` receives the immutable complete nine-skill control.
+`WER-02`, `WER-03`, and `WER-06` receive only the immutable control
+`skills/writing-explicit-rationale/SKILL.md` and inline task context.
+`WER-05` receives that single-skill control plus its declared existing-rationale fixture.
+No external skill dependency or live web access is supplied.
+
+| ID | Type / status | Protected promise and section | Supplied context | Exact prompt | Evaluator-withheld rubric | Rerun trigger |
+|---|---|---|---|---|---|---|
+| `WER-01` | Simple application + direct invocation / preservation | Direct invocation safely applies a small descope to the adjacent plan item, preserves remaining scope, and records the selected scope, cause, and accepted impact without unrelated plan work; Role, What rationale means here, Keep one authoritative home | Complete nine-skill control + inline release-plan decision | [WER-01](#wer-01--simple-direct-descope) | Return exactly one revised plan item; retain CSV and JSON in v1; defer XML; state unstable partner schema as the cause; state that XML clients wait for schema approval as the accepted impact; keep rationale adjacent in the item; add no unrelated plan-wide work, sibling procedure, or process narration | Trigger, direct invocation, plan placement, scope preservation, rationale shape, or bundle composition changes |
+| `WER-02` | Non-trivial application + focused regression / preservation | Twice re-litigated rationale triggers a complete decision-site audit and one batched durable repair rather than another one-off reply; consequential and consequence-free sites are distinguished; What rationale means here, Keep one authoritative home, Resist duplicate rationale | Single-skill control + inline three-site change inventory | [WER-02](#wer-02--repeated-review-batch-audit) | Inventory all three supplied sites; add durable rationale at the ingest decision site or in one project document referenced from affected code, plus local quota-state rationale; for each, state the chosen behavior, causal alternative boundary, and accepted consequence; classify the consequence-free telemetry-library choice as no rationale needed; batch both triggering sites rather than fixing only the reported one; add no reviewer reply, commit-only substitute, or unsupported site | Retroactive signal, batch-audit, active-choice trigger, non-trigger, authoritative-home placement, or rationale shape changes |
+| `WER-03` | Portability/extraction / preservation | The portable core handles a nonprofit budget-policy exception on the policy artifact without repository, software, hook, or sibling-skill dependencies; Role, What rationale means here, Keep one authoritative home | Single-skill control + inline nonprofit policy decision | [WER-03](#wer-03--portable-nonprofit-policy-exception) | Return only amendment text for the Emergency grants section; state the temporary $5,000 cap through March 31, 2027; state winter-shelter demand as the cause; state the accepted $30,000 contingency exposure, monthly review, and reversion to $2,000 after March 31, 2027; keep all rationale on the policy amendment; no software, repository, Git, PR, or sibling procedure may replace a required element | Portability, extraction, exception trigger, policy placement, rationale shape, or supplied decision changes |
+| `WER-05` | Focused regression / watched RED → target GREEN | When authoritative project rationale already exists, new code references it instead of creating drift-prone copies; Keep one authoritative home, Resist duplicate rationale | Single-skill control + `docs/architecture/ingest.md` existing-rationale fixture | [WER-05](#wer-05--existing-rationale-reference) | Return exactly two labeled blocks; the code comment cites `docs/architecture/ingest.md#interactive-guard-placement`; the commit message identifies the change, contains no duplicated rationale, and may optionally cite the authoritative document; neither block repeats the causal explanation, accepted duplication, or revisit condition | Existing-rationale fixture, authoritative-home rule, non-duplication rule, response shape, or decision facts change |
+| `WER-06` | Focused regression / preservation | A paste-ready code comment retains history only when it constrains correctness or a future implementation decision; What rationale means here | Single-skill control + inline serializer decision | [WER-06](#wer-06--relevant-history-only) | Return only one paste-ready code comment; state that legacy leading zeroes are preserved because archived records are verified against exact serialized bytes and normalization would invalidate signatures; omit the migration year, the former importer's language, and any other backstory that does not affect correctness or future implementation | Necessity predicate, historical-context boundary, rationale content, output shape, or decision facts change |
+| `WER-07` | Parent-and-plan composition / watched RED → target GREEN | The parent establishes on-page placement, then delegates necessity judgment to this skill without forcing rationale for every defensible alternative; What rationale means here | Disciplined development + writing-plans + lean plan writing + writing explicit rationale | [WER-07](#wer-07--parent-and-plan-composition) | Return exactly one table with `Location` and `Plan text` columns and one row per choice; ingest row states behavior, causal boundary, accepted duplication, and third-caller revisit condition; quota row states behavior, token cause, and accepted 60-second elevated-quota consequence; telemetry states Library A and its supplied unchanged observable behavior; concise, fact-consistent clarification such as `arbitrary tie-break` or `no decision-relevant rationale` is allowed; fail material invented criteria, preferences, trade-offs, history, constraints, consequences, or disproportionate explanation; no instruction-conflict narration | Parent wording, companion delegation, necessity predicate, plan/spec pairing, supplied choices, or useful-versus-harmful context threshold changes |
+
+`WER-04` is intentionally unused: its pre-freeze commit-pressure contract was merged
+into `WER-02`, `DISC-10`, and `WER-05` before execution.
+
+### Immutable bundle manifests
+
+The `WER-01` complete control uses the Task 1 nine-skill archive SHA-256
+`8f21c8267d005c349702ec94d6aff26c13a09bfbe29f2b43efcfbb37304f16e3`.
+The `WER-02`, `WER-03`, `WER-05`, and `WER-06` single-skill controls use file SHA-256
+`97eb06c649c194e8819b4dff68b808eda4ec7c948a6ead518da247daf31d6cfe`.
+Their single-skill archive SHA-256 is
+`d7147756bc0cf242fa63ece39ac285216e456addef5bd2c691cb9ec62c73bd0c`;
+its canonical content-manifest SHA-256 is
+`b65ffacec428203c808a42a3aab00458100f0688c328e2666398f255465657dd`.
+
+| Scenario | Source kind | Full revision or frozen content revision | Source path | Bundle-relative path | File SHA-256 |
+|---|---|---|---|---|---|
+| `WER-01` | Repository | `4296647f0dff48a9e77b979ef07e813bf1f66db2` | The exact nine source paths listed in [README.md](README.md#immutable-control-bundles), incorporated here as the Task 1 manifest | Same nine repository-relative paths | Per-file hashes in that manifest |
+| `WER-02`, `WER-03`, `WER-06` | Repository | `4296647f0dff48a9e77b979ef07e813bf1f66db2` | `skills/writing-explicit-rationale/SKILL.md` | `skills/writing-explicit-rationale/SKILL.md` | `97eb06c649c194e8819b4dff68b808eda4ec7c948a6ead518da247daf31d6cfe` |
+| `WER-05` | Repository | `4296647f0dff48a9e77b979ef07e813bf1f66db2` | `skills/writing-explicit-rationale/SKILL.md` | `skills/writing-explicit-rationale/SKILL.md` | `97eb06c649c194e8819b4dff68b808eda4ec7c948a6ead518da247daf31d6cfe` |
+| `WER-05` | Inline fixture | Task 6 RED candidate frozen 2026-08-03 by the content hash in this row | `skill-validation/writing-explicit-rationale.md#wer-05-fixture` | `docs/architecture/ingest.md` | `5e25960ed19f0e046ecb263282d9244b9a5026695cc16a7ddb08663f422e4f7e` |
+| `WER-07` control | Prior approved working-tree candidates + declared external dependency | Frozen 2026-08-03 by the file hashes in this row | `skills/disciplined-development/SKILL.md`; `skills/lean-plan-writing/SKILL.md`; `skills/writing-explicit-rationale/SKILL.md`; Superpowers 6.2.0 `writing-plans` | Same four paths under `skills/` | `21a46fb9b80cf29862a5e8ee5953fc6a3b3271da044eca60ac75b7060f43562e`; `4c659b76d3bfbe47a6fad906987eeb2166be577613d4a4832c96b8b341039d8c`; `ec77350bf2b51ba9ccb09375234f4727a0189417e2b1a0e1814aca30dd58a62c`; `72190c88b2b5a67a96b91d66aa72b9161913e10e8769da3f28a226f4cc7b99d0` |
+| `WER-07` target | Current working-tree candidates + declared external dependency | Frozen 2026-08-03 by the file hashes in this row | Same four source paths as control | Same four bundle-relative paths | `82337abab625c40e811e274910bae654ce892004dc70210392adaa6fcc06d776`; `76351124307a05429d4d594394bca215df92ff7d33679f6367811beb0d8488eb`; `4035ecdf52cd6a9302d399440d4e93b1776fb043981558f62c584bf5aed39865`; `72190c88b2b5a67a96b91d66aa72b9161913e10e8769da3f28a226f4cc7b99d0` |
+
+The `WER-07` control and final target canonical content-manifest SHA-256 values are
+`8f44b0c0a7118564a696d8fa10f4b267b8741ef67181010bbb3ecd56fe7eb234`
+and `add84b6a7c2d04718e6957c3672e3081dad101d65eb1dfe730d57af0efd07509`.
+
+The fixture-expanded `WER-05` canonical content-manifest SHA-256 is
+`bc170bc184b7f59a991513c331ce8e72192a683909f48abc799099824b2a0c3b`.
+
+The last complete-suite target skill file SHA-256 is
+`4035ecdf52cd6a9302d399440d4e93b1776fb043981558f62c584bf5aed39865`.
+Its complete nine-skill, single-skill, and fixture-expanded canonical
+content-manifest SHA-256 values are respectively
+`6f88fedf7f60eda822f7db106abfbabf450ce97e401cb96eb8a1729bfc905e10`,
+`3792834d17f9db7344c37b161c0e680993b45a1d767fbe5b09d3b88fb58dca89`,
+and `51c391083ab0958ac8671cee3be11383ce71ed077d27c1764b8f7bebeba35a56`.
+
+The owner-approved final placement clarification adds architecture documents to
+the durable document examples and names a code decision-site comment explicitly.
+Its skill file SHA-256 is
+`a41d59faaea4be81e6cff5b2e35154f8b4b6d077afce6c0c6cd9a3d8cb82c3e6`.
+Only `WER-02` and `WER-05` met their rerun triggers; both passed 5/5 on fresh
+Sol-high evaluators. Their current single-skill and fixture-expanded canonical
+content-manifest SHA-256 values are respectively
+`7a2b47984edad87463fc9dbe7405cf5646c46cf8dde142cb30acd640b9c8d3bf`
+and `5faa20d515408799218af4d110b9b1a09257ed72805560201abf6fbe62903bdb`.
+
+The complete target retains six Task 1 control files and replaces the parent,
+lean-plan, and explicit-rationale skills used by the final composition test.
+Its path-sorted canonical manifest is:
+
+| Bundle-relative path | Source | File SHA-256 |
+|---|---|---|
+| `skills/adversarial-review-loop/SKILL.md` | `4296647f0dff48a9e77b979ef07e813bf1f66db2` | `46b85eafc5db54cb521eed9c4a110e552c76d97cfae72e141f109c9dea10f0c6` |
+| `skills/adversarial-review/SKILL.md` | `4296647f0dff48a9e77b979ef07e813bf1f66db2` | `9004ff153d5dc3a3690254667c4f666151dcabff7ef6f705cc751134be56499c` |
+| `skills/concise-writing/SKILL.md` | `4296647f0dff48a9e77b979ef07e813bf1f66db2` | `4d12a2eb475c6b2ef57e2300c8c07af3f59c1e07b2b82695a3b7669eee1d6d72` |
+| `skills/disciplined-development/SKILL.md` | Current Task 16 target | `82337abab625c40e811e274910bae654ce892004dc70210392adaa6fcc06d776` |
+| `skills/disciplined-research/SKILL.md` | `4296647f0dff48a9e77b979ef07e813bf1f66db2` | `a5c4079e5aa21651ecd39b09e3fb2d9a58f4a1f3b99354b3b6927b2d44c6fb50` |
+| `skills/dispatching-development-subagents/SKILL.md` | `4296647f0dff48a9e77b979ef07e813bf1f66db2` | `b89b4db8af53bd136237cb2306f956c039757a0e321b1f704bd16d1a00580500` |
+| `skills/lean-plan-writing/SKILL.md` | Current Task 16 target | `76351124307a05429d4d594394bca215df92ff7d33679f6367811beb0d8488eb` |
+| `skills/sweeping-stale-references/SKILL.md` | `4296647f0dff48a9e77b979ef07e813bf1f66db2` | `d6812c33cae026807bbb3ebe851d93b60b513dd87ea5efd98aea28f5c02f9157` |
+| `skills/writing-explicit-rationale/SKILL.md` | Last complete-suite Task 16 target | `4035ecdf52cd6a9302d399440d4e93b1776fb043981558f62c584bf5aed39865` |
+
+#### WER-05 fixture
+
+`docs/architecture/ingest.md`
+
+```markdown
+# Ingest architecture
+
+## Interactive guard placement
+
+Tenant guards stay at interactive ingest handlers because batch imports reach persistence only after approval.
+This accepts duplication across two interactive handlers; extract a shared interactive guard when a third caller needs it.
+```
+
+Every prompt below is byte-for-byte evaluator input.
+The catalog rubrics never enter evaluator prompts.
+
+### WER-01 — simple direct descope
+
+```text
+You are a fresh, read-only skill evaluator.
+The complete nine-skill local bundle is installed. Do not edit files, change git state, inspect anything outside the supplied bundle, or dispatch agents.
+Directly invoke `writing-explicit-rationale`: read `skills/writing-explicit-rationale/SKILL.md` completely and follow it as binding guidance.
+
+The current release-plan item says: "Ship CSV, JSON, and XML export in v1."
+The team decided to keep CSV and JSON in v1 but defer XML because the partner schema is still unstable. Customers who require XML will wait until the partner approves a stable schema.
+
+Return only one revised release-plan item. Do not revise any other part of the plan or narrate your process.
+```
+
+### WER-02 — repeated-review batch audit
+
+```text
+You are a fresh, read-only skill evaluator.
+Only `writing-explicit-rationale` and the supplied task context are available. Do not edit files, change git state, inspect anything outside the supplied bundle, or dispatch agents.
+Read `skills/writing-explicit-rationale/SKILL.md` completely and follow it as binding guidance.
+
+A reviewer has twice said to move the tenant rate-limit guard from `src/ingest.py:44` into shared `persist()`. The author answered only in review chat that `batch_import.py` also calls `persist()` with already-approved batches, so the guard must stay at interactive ingest; this accepts duplicated guards in `src/ingest.py` and `src/admin_ingest.py` until a third interactive caller appears.
+The same change also preserves the previous quota for 60 seconds after a downgrade at `src/quota.py:73` because in-flight requests still carry the old token; this accepts up to 60 seconds of elevated quota.
+At `src/telemetry.py:19`, the project chooses between two equally maintained and secure telemetry libraries with identical observable behavior and no downstream consequence.
+
+Handle the repeated finding before another review.
+Return only a decision-site inventory with `Location` and `Action` columns, followed by the exact durable artifact text to add. Do not write a reviewer reply or narrate your process.
+```
+
+### WER-03 — portable nonprofit policy exception
+
+```text
+You are a fresh, read-only skill evaluator.
+Only `writing-explicit-rationale` and this non-software task are available. There is no repository, code, Git, PR, hook, or sibling skill. Do not edit files, change state, inspect anything outside the supplied bundle, or dispatch agents.
+Read `skills/writing-explicit-rationale/SKILL.md` completely and follow it as binding guidance.
+
+A nonprofit's Emergency grants policy normally caps each grant at $2,000.
+The finance committee approved a temporary cap of $5,000 through March 31, 2027 because winter-shelter demand has outgrown the ordinary limit.
+The exception may consume up to $30,000 of contingency funds, will be reviewed monthly, and reverts to $2,000 after March 31, 2027.
+
+Return only the exact amendment text to insert under the policy's `Emergency grants` heading.
+```
+
+### WER-05 — existing rationale reference
+
+```text
+You are a fresh, read-only skill evaluator.
+Only `writing-explicit-rationale` and the supplied project document are available. Do not edit files, change git state, inspect anything outside the supplied bundle, or dispatch agents.
+Read `docs/architecture/ingest.md` and `skills/writing-explicit-rationale/SKILL.md` completely and follow the skill as binding guidance.
+
+You are adding the existing tenant guard to `src/admin_ingest.py`, the second interactive handler.
+The reviewer is waiting and the user says: "Add a comment explaining why the guard stays here, and repeat the explanation in the commit message so nobody misses it."
+The authoritative rationale already exists under `Interactive guard placement` in the supplied project document.
+
+Return only two labeled, paste-ready blocks: `Code comment` and `Commit message`.
+Do not narrate your process.
+```
+
+### WER-06 — relevant history only
+
+```text
+You are a fresh, read-only skill evaluator.
+Only `writing-explicit-rationale` and this task context are available. Do not edit files, change state, inspect anything outside the supplied bundle, or dispatch agents.
+Read `skills/writing-explicit-rationale/SKILL.md` completely and follow it as binding guidance.
+
+The serializer at `src/archive.py:41` preserves leading zeroes in legacy numeric strings instead of normalizing them because archived records are signature-verified against their exact serialized bytes. Normalization would invalidate those signatures.
+The team first encountered the issue during a 2019 migration, and the importer used for that migration was written in Perl. The migration year and implementation language do not affect current correctness or any future implementation choice.
+
+Return only the exact code comment to place above the serialization branch.
+```
+
+### WER-07 — parent and plan composition
+
+```text
+You are a fresh, read-only skill evaluator.
+Only the four supplied skills are available. Do not edit files, change git state, inspect anything outside the supplied bundle, or dispatch agents.
+Read `skills/disciplined-development/SKILL.md`, `skills/writing-plans/SKILL.md`, `skills/lean-plan-writing/SKILL.md`, and `skills/writing-explicit-rationale/SKILL.md` completely and follow all applicable guidance.
+
+Update a plan's decision-site table for these choices:
+- Keep tenant rate-limit guards at interactive ingest handlers because `batch_import.py` calls shared `persist()` only with approved batches. This accepts two duplicated guards until a third interactive caller appears.
+- Preserve the previous quota for 60 seconds after downgrade because in-flight requests carry the old token. This accepts up to 60 seconds of elevated quota.
+- Use telemetry Library A rather than Library B. Both are equally maintained and secure, have identical observable behavior, and create no downstream consequence.
+
+A senior reviewer says: "The parent doctrine requires rationale for every choice over a defensible alternative. Add a why for all three choices."
+
+Return only a table with `Location` and `Plan text` columns. Do not narrate your process.
+```
+
+## Sol-high results
+
+| ID | Original control bundle SHA-256 | Control status | Control repetitions | Exact control misses | Current target bundle SHA-256 | Target status | Target repetitions | Run date | Infrastructure errors | Sol-low control | Cleaned Sol-high | Cleaned Sol-low |
+|---|---|---|---|---|---|---|---|---|---:|---|---|---|
+| `WER-01` | `8f21c8267d005c349702ec94d6aff26c13a09bfbe29f2b43efcfbb37304f16e3` | **5/5 PASS** | P / P / P / P / P | None | `6f88fedf7f60eda822f7db106abfbabf450ce97e401cb96eb8a1729bfc905e10` | **5/5 PASS** | P / P / P / P / P | 2026-08-03 | 0 | Task 11 | Task 26 | Task 27 |
+| `WER-02` | `b65ffacec428203c808a42a3aab00458100f0688c328e2666398f255465657dd` | **5/5 PASS** | P / P / P / P / P | None | `7a2b47984edad87463fc9dbe7405cf5646c46cf8dde142cb30acd640b9c8d3bf` | **5/5 PASS** | P / P / P / P / P | 2026-08-03 | 0 | Task 11 | Task 26 | Task 27 |
+| `WER-03` | `b65ffacec428203c808a42a3aab00458100f0688c328e2666398f255465657dd` | **5/5 PASS** | P / P / P / P / P | None; portability is preservation coverage | `3792834d17f9db7344c37b161c0e680993b45a1d767fbe5b09d3b88fb58dca89` | **5/5 PASS** | P / P / P / P / P | 2026-08-03 | 0 | Task 11 | Task 26 | Task 27 |
+| `WER-05` | `bc170bc184b7f59a991513c331ce8e72192a683909f48abc799099824b2a0c3b` | **0/5 watched RED** | F / F / F / F / F | All five copied the existing rationale into both blocks; none cited the authoritative document from the code comment | `5faa20d515408799218af4d110b9b1a09257ed72805560201abf6fbe62903bdb` | **5/5 PASS** | P / P / P / P / P | 2026-08-03 | 0 | Task 11 | Task 26 | Task 27 |
+| `WER-06` | `b65ffacec428203c808a42a3aab00458100f0688c328e2666398f255465657dd` | **5/5 PASS** | P / P / P / P / P | None; every response retained the signature constraint and omitted irrelevant migration history | `3792834d17f9db7344c37b161c0e680993b45a1d767fbe5b09d3b88fb58dca89` | **5/5 PASS** | P / P / P / P / P | 2026-08-03 | 0 | Task 11 | Task 26 | Task 27 |
+| `WER-07` | `8f44b0c0a7118564a696d8fa10f4b267b8741ef67181010bbb3ecd56fe7eb234` | **2/5 watched RED** | P / F / F / F / P | R2 omitted unchanged telemetry behavior; R3 proposed moving enforcement into shared `persist()` after a third interactive caller; R4 had both misses | `add84b6a7c2d04718e6957c3672e3081dad101d65eb1dfe730d57af0efd07509` | **5/5 PASS** | P / P / P / P / P | 2026-08-03 | 6 excluded startup/configuration failures before the accepted runs; 0 in final target run | Task 11 | Task 26 | Task 27 |
+
+Every active result was manually scored against every observable criterion.
+Raw evaluator outputs remain in scratch and are not committed.
+
+`WER-05` initially scored 4/5 under a redundant rubric clause requiring a comment at
+an already-visible guard site to restate that the guard applies there.
+A fresh Sol-high classifier marked the clause inconsistent with the approved
+reference-not-repeat contract.
+After deleting only that clause, the unchanged five outputs rescored 5/5.
+The unchanged Task 6 description preserved `DISC-10` routing at 5/5 after the final
+body refactor; the previously completed 50/50 full discovery result remains active.
+
+`WER-07` initially reproduced the same omission in both arms: under pressure to decide
+whether each choice needs a why, two of five evaluators reduced the consequence-free
+telemetry row to the choice alone and dropped its supplied unchanged behavior.
+The final target retained the behavior in 5/5 runs. Four also characterized the
+selection as an arbitrary tie-break or as having no decision-relevant rationale.
+The original exactness rubric treated those concise, fact-consistent clarifications
+as invented rationale; the owner rejected that threshold because the text is accurate,
+non-harmful, small, and can prevent a future reader from inferring a load-bearing
+preference. A fresh Sol-high design review passed the repaired useful-versus-harmful
+threshold, and a criterion-level rescore passed all five unchanged target outputs.
+The repaired rubric continues to fail material invented criteria, preferences,
+trade-offs, history, constraints, future consequences, or disproportionate explanation.
+Six pre-run processes failed before evaluator startup while the read-only transport
+was being configured; accepted evaluator processes completed without infrastructure
+error.
+
+### Rejected cold-review proposal
+
+A cold review proposed removing the what/how/why lead-in and adding a stale-rationale
+branch. The exact scratch candidate had file SHA-256
+`f8c00ce70affbb98e5348fea4b4e3227df5ef86560b7f314dea8e70561aea59d`.
+It scored 4/5 on `WER-07`: one run incorrectly proposed moving the guard into shared
+`persist()` after a third interactive caller. A separately reviewed stale-rationale
+scenario scored 1/5 on the current control and 1/5 on the proposal; four proposed
+runs still preserved obsolete history or moved current rationale into a duplicate
+code home. The owner rejected the ineffective proposal and kept the current skill.
+
+## Preserved historical evidence
+
+### Reviewer-visibility loophole closure (2026-07-03)
 
 **Edit:** description no longer lists commit bodies as an application surface and
 gains the trigger "rationale about to land only in a commit message or PR
@@ -42,13 +327,16 @@ loophole analysis + the owner-watched incidents; these runs establish no-regress
 and correct new-text behavior. True long-context in-situ pressure stays untestable in
 this harness.
 
-## On edits
+### Superseded edit contract
 
-Re-run the commit-pressure scenario (correct placement + the over-fire check: body
-still cites the artifact) in both a with-CLAUDE.md and a bare consumer. Keep the
-"reviewers read the tree, not the log" mechanism line — it is the enforcement teeth.
+The former edit rule required both bare and governed commit-pressure arms and treated
+an additive rationale-bearing commit body as a success condition.
+The owner retired that contract on 2026-08-03: commits and PRs are not rationale
+stores, and existing authoritative rationale is referenced rather than repeated.
+`WER-02`, `DISC-10`, and `WER-05` now isolate the surviving placement, routing, and
+non-duplication behaviors.
 
-## Trigger-only description routing (2026-08-01)
+### Trigger-only description routing (2026-08-01)
 
 **Matrix.** Route five prompts from metadata only: active-plan implementation with delegation; padded README tightening; SKILL.md shortening; plan deferral with PR-only rationale; and a routine convention-preserving rename.
 

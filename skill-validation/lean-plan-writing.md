@@ -4,10 +4,11 @@
 
 The shared all-nine discovery suite remains owned by
 [skill-discovery.md](skill-discovery.md#active-catalog-definitions).
-`DISC-07` protects routed selection of `lean-plan-writing` with its parent; it is
-linked here rather than duplicated.
-The application path protected here is `DISC-07` → `lean-plan-writing` →
-`LP-01`–`LP-08`.
+`DISC-07` protects ordinary routed selection of `lean-plan-writing` with its parent,
+and `DISC-10` protects composition with `writing-explicit-rationale` for a plan
+deferral whose reasoning is non-durable; both are linked here rather than duplicated.
+The application paths protected here are `DISC-07` / `DISC-10` →
+`lean-plan-writing` → `LP-01`–`LP-08`.
 
 The five historical skill-owned families were classified before the active suite
 was defined:
@@ -76,6 +77,7 @@ the eight sibling skills from the original-control commit by design.
 | `LP-04`, `LP-07`–`LP-08` | Retained current evidence | Prior working-tree candidate; no final-change rerun trigger | SHA-256 `b32e69fcb2a7c5c01b8213f9772a6f5238bd5e76c16f83f259fb804fe68bb374` | `skills/lean-plan-writing/SKILL.md` | `skills/lean-plan-writing/SKILL.md` | `b32e69fcb2a7c5c01b8213f9772a6f5238bd5e76c16f83f259fb804fe68bb374` |
 | `LP-02`–`LP-03` | Prior tested candidate | Working-tree candidate, superseded | SHA-256 `9a43521a9ab4ed154e7e20533ac318421a7c42113c74d8a2e1d95a814e29114c` | `skills/lean-plan-writing/SKILL.md` | `skills/lean-plan-writing/SKILL.md` | `9a43521a9ab4ed154e7e20533ac318421a7c42113c74d8a2e1d95a814e29114c` |
 | `LP-01`–`LP-03`, `LP-05`–`LP-06` | Current | Final working-tree candidate | SHA-256 `4c659b76d3bfbe47a6fad906987eeb2166be577613d4a4832c96b8b341039d8c` | `skills/lean-plan-writing/SKILL.md` | `skills/lean-plan-writing/SKILL.md` | `4c659b76d3bfbe47a6fad906987eeb2166be577613d4a4832c96b8b341039d8c` |
+| `LP-01` Task 6 pairing rerun | Current | Final working-tree candidate | SHA-256 `76351124307a05429d4d594394bca215df92ff7d33679f6367811beb0d8488eb` | `skills/lean-plan-writing/SKILL.md` | `skills/lean-plan-writing/SKILL.md` | `76351124307a05429d4d594394bca215df92ff7d33679f6367811beb0d8488eb` |
 | `LP-01`–`LP-08` | Original + current | Declared external dependency | Superpowers `6.2.0` | `/Users/simon/.codex/plugins/cache/claude-plugins-official/superpowers/6.2.0/skills/writing-plans/SKILL.md` | `skills/writing-plans/SKILL.md` | `72190c88b2b5a67a96b91d66aa72b9161913e10e8769da3f28a226f4cc7b99d0` |
 | `LP-01` | Original + current | Same repository | `4296647f0dff48a9e77b979ef07e813bf1f66db2` | `skills/adversarial-review-loop/SKILL.md` | `skills/adversarial-review-loop/SKILL.md` | `46b85eafc5db54cb521eed9c4a110e552c76d97cfae72e141f109c9dea10f0c6` |
 | `LP-01` | Original + current | Same repository | `4296647f0dff48a9e77b979ef07e813bf1f66db2` | `skills/adversarial-review/SKILL.md` | `skills/adversarial-review/SKILL.md` | `9004ff153d5dc3a3690254667c4f666151dcabff7ef6f705cc751134be56499c` |
@@ -352,7 +354,7 @@ Return only that section.
 
 | ID | Original control / content-manifest SHA-256 | Sol-high control | Exact control misses | Target/current GREEN | Exact current misses | Cleaned Sol-high | Sol-low control | Cleaned Sol-low | Run date | Infrastructure errors |
 |---|---|---|---|---|---|---|---|---|---|---:|
-| `LP-01` | `4296647f0dff48a9e77b979ef07e813bf1f66db2` / `6a2a167736cd009fa9cd94fe9e9e583824395f52654b16063a0d32223e6cca22` | **5/5 PASS** | None | **5/5 PASS** on `4c659b7…` | None | Task 19 | Task 11 | Task 27 | 2026-08-02 | 1 interrupted original-control attempt before the accepted R3 retry |
+| `LP-01` | `4296647f0dff48a9e77b979ef07e813bf1f66db2` / `6a2a167736cd009fa9cd94fe9e9e583824395f52654b16063a0d32223e6cca22` | **5/5 PASS** | None | **4/5 preservation** on Task 6 bundle `eb5fe2d…` (`lean` `7635112…`; `writing-explicit-rationale` `4035ecd…`) | R3 committed failing tests before implementation instead of test-fail → implement → pass → commit; unrelated to the pairing-only lean edit | Task 19 | Task 11 | Task 27 | 2026-08-03 | 1 interrupted original-control attempt before the accepted R3 retry; 0 in Task 6 rerun |
 | `LP-02` | `4296647f0dff48a9e77b979ef07e813bf1f66db2` / `1c9ee30df820fea591aba7d1a94e3cb57f27c2ff0a4e9b045661fe49911f19d6` | **3/5 watched RED** | R2 and R4 embedded heredocs | **5/5 PASS** on `4c659b7…` | None | Task 19 | Task 11 | Task 27 | 2026-08-02 | 0 |
 | `LP-03` | `4296647f0dff48a9e77b979ef07e813bf1f66db2` / `1c9ee30df820fea591aba7d1a94e3cb57f27c2ff0a4e9b045661fe49911f19d6` | **1/5 watched RED** | R2 repeated the fixture in a shell command; R3–R5 repeated it as verification literals | **5/5 PASS** on `4c659b7…` | None | Task 19 | Task 11 | Task 27 | 2026-08-02 | 0 |
 | `LP-04` | `4296647f0dff48a9e77b979ef07e813bf1f66db2` / `c4aae591a2a3b2b6c2d40ace3e97b19ff37f998c5970dead0366e4f025a72787` | **4/5 watched RED** | R2 imported branch/merge machinery | **4/5 watched RED** on `b32e69f…` | R1 imported repository, branch, merge, and commit machinery | Task 14 target | Task 11 | Task 27 | 2026-08-02 | 0 |
@@ -374,6 +376,16 @@ scenario rubric; `F` means at least one observable criterion was missed.
 | `LP-06` | P | P | P | P | P | P | P | P | P | P |
 | `LP-07` | P | P | P | P | P | P | P | P | P | P |
 | `LP-08` | P | P | P | P | P | P | P | P | P | P |
+
+The Task 6 pairing-only rerun of `LP-01` scored P / P / F / P / P on canonical
+content-manifest SHA-256
+`eb5fe2ddb6868361a688059eb686f2fa4bca0a4a6341822d0f3b01b6b39646db`.
+The one miss used a separate test-only task and commit before implementation, a
+pre-existing upstream composition variance unrelated to rationale selection.
+The changed companion semantics are exercised directly by `WER-07`, which passed
+5/5 with the current lean, parent, and rationale skills.
+On 2026-08-03, the owner explicitly accepted this transparently recorded variance
+for the pairing-only Task 6 slice and declined an unrelated lean-body change.
 
 The first LP-03 prompt was repaired twice before any active result was accepted:
 it initially omitted the final-byte contract, then left newline and encoding details

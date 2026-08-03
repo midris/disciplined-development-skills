@@ -325,14 +325,15 @@ passed, and `git diff --check` passed.
 **Files:**
 
 - Modify: `skill-validation/writing-explicit-rationale.md`
+- Modify: `skill-validation/skill-discovery.md`
 - Read control: `skills/writing-explicit-rationale/SKILL.md` at `4296647`
 
 **Required coverage:** link the shared discovery suite; a simple descope; a non-trivial active choice that review could re-litigate; safe direct invocation; non-software extraction using a nonprofit budget or policy exception; reviewer-visibility and trigger-routing regressions.
 
-- [ ] Audit current scenarios and map them to the trigger test, on-page location, what/why/accepted shape, and non-trigger counterexamples.
-- [ ] Add atomic direct and extraction scenarios without exposing the rubric.
-- [ ] Run preservation scenarios 5/5 on Sol high at `4296647`; classify a 5/5 portability result as preservation coverage or record a watched RED target.
-- [ ] Review and commit as `docs(validation): baseline explicit rationale`.
+- [x] Audit current scenarios and map them to the trigger test, on-page location, rationale-content necessity, authoritative reuse, and non-trigger counterexamples.
+- [x] Add atomic direct and extraction scenarios without exposing the rubric.
+- [x] Run preservation scenarios 5/5 on Sol high at `4296647`; classify a 5/5 portability result as preservation coverage or record a watched RED target.
+- [x] Review and commit as `docs(validation): baseline explicit rationale`.
 
 ### Task 7: Audit and baseline `adversarial-review`
 
@@ -472,20 +473,29 @@ passed, and `git diff --check` passed.
 - [ ] If RED, show the edited skill in place and wait for final user approval.
 - [ ] If RED, after final approval, run repository tests and commit the behavioral slice separately.
 
-### Task 16: Resolve `writing-explicit-rationale` portability, if the control is RED
+### Task 16: Implement the approved `writing-explicit-rationale` behavior slice
 
 **Files:**
 
-- Modify when RED: `skills/writing-explicit-rationale/SKILL.md`
+- Modify: `CLAUDE.md`
+- Modify: `README.md`
+- Modify: `skills/disciplined-development/SKILL.md`
+- Modify: `skills/lean-plan-writing/SKILL.md`
+- Modify: `skills/writing-explicit-rationale/SKILL.md`
+- Modify: `skill-validation/README.md`
+- Modify: `skill-validation/disciplined-development.md`
+- Modify: `skill-validation/lean-plan-writing.md`
+- Modify: `skill-validation/skill-discovery.md`
+- Modify: `skill-validation/sweeping-stale-references.md`
 - Modify: `skill-validation/writing-explicit-rationale.md`
 
-- [ ] Inspect the recorded extraction result; if it is 5/5, classify it as preservation coverage, update the plan/index, run the local Markdown-link command and `git diff --check`, and commit as `docs(validation): confirm explicit rationale portability` without a separate skill-change PR boundary.
-- [ ] If RED, show the failure and a minimal change to the trigger test or artifact scope that makes code/plan/PR cases examples rather than prerequisites, then wait for user approval.
-- [ ] If RED, apply only the approved portability change while preserving the what/why/accepted contract.
-- [ ] If RED, establish target 5/5 GREEN and rerun the complete affected active suite 5/5 on Sol high.
-- [ ] If RED, run cold skill-writing review; show proposed fixes, wait for user approval, apply them, and restart affected scenarios.
-- [ ] If RED, show the edited skill in place and wait for final user approval.
-- [ ] If RED, after final approval, run repository tests and commit the behavioral slice separately.
+- [x] Run the approved necessity, authoritative-home, and reference-not-repeat targets against the immutable control; classify each 5/5 result as preservation and each observed failure as a watched RED. Classify `WER-03` portability independently by the same rule.
+- [x] Apply only the approved behavior slice: necessary rationale lives in one durable code or project-document home; existing rationale is referenced rather than repeated; why and history are included only when they affect correctness or future decisions.
+- [x] For each section and the whole skill, remove any structure that does not preserve a distinct necessary behavior.
+- [x] Establish target 5/5 GREEN and rerun the complete affected active suite on Sol high. The rationale suite is 5/5; the pairing-only LP-01 preservation rerun was 4/5 because one evaluator used an unrelated upstream test-only commit. The owner explicitly accepted that recorded variance on 2026-08-03 because WER-07 directly covers the changed companion behavior at 5/5 and no rationale or lean-body change caused the miss.
+- [x] Run cold skill-writing review; stop for user approval before applying any additional skill-prose finding, and restart affected scenarios after an approved repair.
+- [x] Show the complete edited skill in place and wait for final user review before committing.
+- [x] After final approval, run repository tests and commit the behavioral slice separately.
 
 ### Task 17: Clean `concise-writing`
 

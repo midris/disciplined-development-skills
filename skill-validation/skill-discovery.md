@@ -66,7 +66,9 @@ User request: <REQUEST>
 Required names are positive routing, prohibited names are negative routing, and optional names record tolerated ambiguity without claiming positive protection.
 The allowed-set column therefore maps each scenario to all nine descriptions: required, prohibited, or explicitly ambiguous.
 All are discovery-type scenarios protecting each skill’s frontmatter `description`.
-`DISC-01`, `DISC-03`, `DISC-05`, and `DISC-06` are approved targets for mandatory parent co-selection; the other five are preservation scenarios and target-arm regressions.
+`DISC-01`, `DISC-03`, `DISC-05`, and `DISC-06` are approved targets for mandatory parent co-selection; the other five completed cells are preservation scenarios and target-arm regressions.
+`DISC-10` is preservation coverage and also exercises the already approved
+parent-co-selection behavior on the parent and Task 2A target arms.
 The supplied skill context is the description block above; no body, sibling procedure, or scoring rubric is supplied.
 
 | ID | Exact request | Allowed output sets in the evaluator-withheld rubric | Primary protected promise | Rerun trigger |
@@ -80,11 +82,17 @@ The supplied skill context is the description block above; no body, sibling proc
 | `DISC-07` | `Write a plan to add CSV export.` | Must include `disciplined-development` and `lean-plan-writing`; may also include `concise-writing` and `disciplined-research`; no other skill | A plan deliverable routes to lean planning | Same |
 | `DISC-08` | ``Perform only a mechanical identifier replacement: rename the exact identifier `user_id` to `account_id` everywhere it occurs in code and documentation. Do not rewrite, tighten, or otherwise revise surrounding prose.`` | Must include `disciplined-development` and `sweeping-stale-references`; may also include `disciplined-research`; no other skill | A cascading multi-surface rename routes to stale-reference sweeping | Same |
 | `DISC-09` | `We are deliberately skipping retries as a temporary shortcut. Record that choice beside the code so it is not mistaken for an oversight.` | Must include `disciplined-development` and `writing-explicit-rationale`; may also include `concise-writing` and `disciplined-research`; no other skill | An intentional shortcut at risk of looking accidental routes to explicit rationale | Same |
+| `DISC-10` | `Update the launch plan to defer multilingual invoices. The billing vendor's locale API remains unstable, so launch accepts English-only invoices until the API stabilizes. That rationale currently exists only in the PR description.` | Must include `disciplined-development`, `lean-plan-writing`, and `writing-explicit-rationale`; may also include `concise-writing`, `disciplined-research`, and `sweeping-stale-references`; no other skill | A plan deferral whose reasoning is non-durable routes to explicit rationale and lean planning within the parent development workflow | Same |
 
 The rubric first requires a JSON array whose names are in ascending alphabetical
 order, then compares its selected-name set with the allowed sets above.
 A missing primary skill, any non-allowed skill, non-alphabetical order, prose outside
 the JSON array, or malformed output fails that repetition.
+
+The first frozen `DISC-10` scoring pass prohibited `sweeping-stale-references`,
+although changing the launch deferral is a load-bearing plan change.
+A fresh Sol-high failure classification marked that omission a rubric defect.
+The allowed optional set was repaired, and the unchanged 15 outputs were rescored.
 
 An external cadence review later found that the recorded rubric ignored the prompt's
 alphabetical-order constraint. That scoring-contract repair invalidated every control
@@ -141,13 +149,17 @@ Target is the immutable bundle with content-manifest SHA-256 `52fd9eb8c411fcc5d4
 | `DISC-07` | **5/5 PASS** | None; 1 required-only, 4 with allowed optional variation | **5/5 PASS** | 4 required-only, 1 with optional research | 0 | Task 11 | Task 26 | Task 27 |
 | `DISC-08` | **5/5 PASS** | None; 3 required-only, 2 with optional research | **5/5 PASS** | 3 required-only, 2 with optional research | 0 | Task 11 | Task 26 | Task 27 |
 | `DISC-09` | **5/5 PASS** | None; 1 required-only, 4 with allowed optional variation | **5/5 PASS** | 1 required-only, 4 with allowed optional variation | 0 | Task 11 | Task 26 | Task 27 |
+| `DISC-10` | **5/5 PASS** | None; 1 with optional research, 4 with optional research and sweeping | **5/5 PASS** | 4 with optional research and sweeping, 1 also with optional concise writing | 0 | Task 11 | Task 26 | Task 27 |
 
-Run metadata for both active arms: Codex CLI 0.146.0; `gpt-5.6-sol`; high reasoning effort; Superpowers 6.2.0; five fresh processes per scenario; maximum concurrency three; immutable description context as identified above; no skill bodies or sibling skills available; rubric withheld; every result manually scored, including JSON shape and alphabetical order; zero counted infrastructure errors; run date 2026-08-01 except the repaired `DISC-08` control and parent-target arms, which ran 2026-08-02.
+Run metadata for both completed `DISC-01`–`DISC-09` arms: Codex CLI 0.146.0; `gpt-5.6-sol`; high reasoning effort; Superpowers 6.2.0; five fresh processes per scenario; maximum concurrency three; immutable description context as identified above; no skill bodies or sibling skills available; rubric withheld; every result manually scored, including JSON shape and alphabetical order; zero counted infrastructure errors; run date 2026-08-01 except the repaired `DISC-08` control and parent-target arms, which ran 2026-08-02.
+`DISC-10` used the same configuration for all three arms on 2026-08-03 with zero
+infrastructure errors.
 
 Normalized per-repetition codes below preserve the manually scored outcomes without
 committing evaluator transcripts. `E` is the exact required set; `R` is the
-required-only set where optional skills are allowed; `+Q`, `+C`, and `+CQ` add
-`disciplined-research`, `concise-writing`, or both. `F-parent` is FAIL because the
+required-only set where optional skills are allowed; `+Q`, `+C`, `+S`, and their
+combinations add `disciplined-research`, `concise-writing`, and
+`sweeping-stale-references`. `F-parent` is FAIL because the
 required parent was omitted. Every listed response was a JSON array in ascending
 alphabetical order, so no cell has an additional shape, prose, or order miss.
 
@@ -162,6 +174,7 @@ alphabetical order, so no cell has an additional shape, prose, or order miss.
 | `DISC-07` | +Q | +CQ | +CQ | +CQ | R | +Q | R | R | R | R |
 | `DISC-08` | R | +Q | +Q | R | R | +Q | R | +Q | R | R |
 | `DISC-09` | +C | +Q | +CQ | R | +C | +C | +Q | +Q | R | +C |
+| `DISC-10` | +Q | +QS | +QS | +QS | +QS | +QS | +CQS | +QS | +QS | +QS |
 
 ### Task 2A concise-authoring target
 
@@ -205,12 +218,14 @@ Every supplied Task 2A description is independently replayable from this manifes
 | `DISC-07` | **5/5 PASS** | 1 required-only, 4 with optional research | 0 |
 | `DISC-08` | **5/5 PASS** | 4 required-only, 1 with optional research | 0 |
 | `DISC-09` | **5/5 PASS** | 3 required-only, 2 with allowed optional variation | 0 |
+| `DISC-10` | **5/5 PASS** | 1 with optional research, 4 with optional research and sweeping | 0 |
 
-Run metadata: Codex CLI 0.146.0; `gpt-5.6-sol`; high reasoning effort;
-Superpowers 6.2.0; five fresh processes per scenario; maximum concurrency three;
+Run metadata for completed `DISC-01`–`DISC-09`: Codex CLI 0.146.0;
+`gpt-5.6-sol`; high reasoning effort; Superpowers 6.2.0; five fresh processes per scenario; maximum concurrency three;
 immutable descriptions-only context above; rubric withheld; every result manually
 scored for membership, JSON shape, and alphabetical order; zero infrastructure
 errors; run date 2026-08-02.
+The `DISC-10` Task 2A arm ran on 2026-08-03 with zero infrastructure errors.
 
 | ID | Task 2A R1 | R2 | R3 | R4 | R5 |
 |---|---|---|---|---|---|
@@ -223,6 +238,42 @@ errors; run date 2026-08-02.
 | `DISC-07` | +Q | R | +Q | +Q | +Q |
 | `DISC-08` | R | R | R | +Q | R |
 | `DISC-09` | +CQ | R | R | +Q | R |
+| `DISC-10` | +QS | +Q | +QS | +QS | +QS |
+
+### Task 6 explicit-rationale target
+
+The Task 6 target uses the Task 2A description bundle above and replaces only the
+`writing-explicit-rationale` description with:
+
+```text
+writing-explicit-rationale: Use when a plan, spec, policy, design, or code choice needs durable reasoning to understand correctness or guide a future decision; especially for descopes, deferrals, exceptions, defensible alternatives, repeated re-litigation, or rationale that exists only in chat, a commit, or a PR.
+```
+
+The target skill file SHA-256 is
+`a41d59faaea4be81e6cff5b2e35154f8b4b6d077afce6c0c6cd9a3d8cb82c3e6`;
+the extracted description file SHA-256 is
+`49f9ddd7c23538e308f713035a298a127bf4e346e41ab3269468680cbb572732`;
+and the resulting nine-description canonical content-manifest SHA-256 is
+`fde2cbadeffc7bf98b3428ac66de8aa2db90bb4e05cef89fda16788fb0a21c51`.
+All other description files are byte-identical to the Task 2A manifest.
+
+The complete ten-scenario target passed **50/50** on 2026-08-03 with zero
+infrastructure errors.
+Every response contained each required skill, no prohibited skill, a JSON array in
+ascending alphabetical order, and no prose outside the array.
+
+| ID | R1 | R2 | R3 | R4 | R5 |
+|---|---|---|---|---|---|
+| `DISC-01` | E | E | E | E | E |
+| `DISC-02` | E | E | E | E | E |
+| `DISC-03` | E | E | E | E | E |
+| `DISC-04` | +Q | +Q | +Q | +Q | +Q |
+| `DISC-05` | E | E | E | E | E |
+| `DISC-06` | E | E | E | E | E |
+| `DISC-07` | +CQ | R | R | +Q | +CQ |
+| `DISC-08` | R | R | R | R | R |
+| `DISC-09` | +C | +CQ | +C | +Q | +CQ |
+| `DISC-10` | +Q | +QS | +CQS | +QS | +QS |
 
 Superseded wording and rubric experiments and focused implementation-feedback runs
 remain scratch-only because their changed contracts restarted the affected scenarios
