@@ -304,10 +304,21 @@ working and four staged Markdown documents, and both diff checks passed.
 
 **Required coverage:** link the shared discovery suite; a simple load-bearing rename; the non-trivial 126-match grouped sweep; safe direct invocation; non-software extraction using a renamed policy term across handbooks and forms; reviewer-one-hit, three-way classification, grouping/reconciliation, negative-form, and red-flag-consolidation regressions.
 
-- [ ] Audit the current record and separate the portable search/triage/reconcile contract from software-specific commit evidence.
-- [ ] Add atomic prompts and rubrics for literal/synonym search, all required file categories, three classifications, count reconciliation, and grouped evidence.
-- [ ] Run preservation scenarios 5/5 on Sol high at `4296647`; classify a 5/5 non-software portability result as preservation coverage or record a watched RED target.
-- [ ] Review and commit as `docs(validation): baseline stale reference sweeping`.
+- [x] Audit the current record and separate the portable search/triage/reconcile contract from software-specific commit evidence.
+- [x] Add atomic prompts and rubrics for literal/synonym search, all required file categories, three classifications, count reconciliation, and grouped evidence.
+- [x] Run preservation scenarios 5/5 on Sol high at `4296647`; classify a 5/5 non-software portability result as preservation coverage or record a watched RED target.
+- [x] Review and commit as `docs(validation): baseline stale reference sweeping`.
+
+**Task 5 execution note (2026-08-02):** Audited the historical families as
+Keep 0, Repair 2, Merge 0, Retire 0, and Add 3, producing the smallest coherent
+five-scenario suite after a section-by-section and whole-skill simplification review.
+`SSR-01`–`SSR-05` passed 25/25 on Sol high against immutable `4296647` controls;
+`SSR-04` classified non-software portability as preservation coverage. Pre-approved
+fixture, rubric, and prompt repairs restarted their affected scenarios at zero and
+left the skill and hooks unchanged. The final independent cold review found no
+issues. Repository verification passed: hook suite 263 passed/3 skipped, installer
+suite 11 passed, research suite 4 passed, the exact local Markdown-link command
+passed, and `git diff --check` passed.
 
 ### Task 6: Audit and baseline `writing-explicit-rationale`
 
