@@ -15,13 +15,11 @@ Plans and specs carry concise requirements + order-of-operations + status — no
 
 ## The rule
 
-For every step, ask: *can a reader infer the shape from prose alone, given the linked spec and the codebase's existing patterns?*
+For every plan step:
 
-- **Yes** → no code. Prose only.
-- **No** → a short illustrative snippet (≤5 lines) anchoring the ambiguity. Not the implementation.
-
-A snippet is *illustrative* when removing it makes the requirement genuinely ambiguous.
-It is *bloat* when removing it leaves prose that still specifies the requirement.
+- Describe the change and required behavior in prose. List test behaviors; use tables of inputs and expected outputs for tricky cases.
+- Do not embed implementation code, test bodies, or copyable templates.
+- If prose leaves genuine ambiguity, include one illustrative snippet (≤5 lines); do not repeat its literal content elsewhere in the plan.
 
 ## What goes in prose, not code
 
@@ -30,7 +28,7 @@ It is *bloat* when removing it leaves prose that still specifies the requirement
 - Fixtures — describe shape ("user row with non-null email, null deleted_at"), not literal JSON.
 - BEFORE/AFTER migrations — structural description, not code diffs.
 - API request/response — field names + types + semantics, not full JSON examples.
-- Commit message templates — text, not code-fenced.
+- Commits — state only a concise message as text; do not include shell commands.
 
 ## When the implementation is genuinely tricky
 

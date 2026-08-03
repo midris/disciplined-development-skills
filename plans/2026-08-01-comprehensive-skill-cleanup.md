@@ -273,10 +273,26 @@ infrastructure errors; `DR-02` portability is therefore preservation coverage.
 
 **Required coverage:** link the shared discovery suite; simple prose-as-contract planning; the non-trivial `KEY=VALUE` parser plan without implementation bodies; safe direct invocation with `superpowers:writing-plans`; non-software extraction using an event or publishing plan; unexercised-case, trigger-routing, and red-flag-consolidation regressions.
 
-- [ ] Audit and atomize existing scenarios without losing historical results.
-- [ ] Make the upstream override, input/output-table substitute, and five-line ambiguity exception independently scorable.
-- [ ] Run preservation scenarios 5/5 on Sol high at `4296647`; classify a 5/5 portability result as preservation coverage or record a watched RED target.
-- [ ] Review the active catalog and commit as `docs(validation): baseline lean plan writing`.
+- [x] Audit and atomize existing scenarios without losing historical results.
+- [x] Make the upstream override, input/output-table substitute, and five-line ambiguity exception independently scorable.
+- [x] Run preservation scenarios 5/5 on Sol high at `4296647`; classify a 5/5 portability result as preservation coverage or record a watched RED target.
+- [x] Review the active catalog and commit as `docs(validation): baseline lean plan writing`.
+
+Execution note (2026-08-02, in progress): audited the historical families into
+`LP-01`–`LP-08`, retained their sourced limitations, and ran five fresh Sol-high
+processes per original-control arm. `LP-01` and `LP-05`–`LP-08` preserved their
+promises at 5/5; `LP-04` remains a 4/5 watched portability RED for Task 14.
+`LP-02` and `LP-03` exposed pre-freeze prose-contract gaps; after user-approved
+skill wording and independently approved test repairs, the final intent-focused
+candidate passed both targets 5/5. The final-change triggers also reran `LP-01`,
+`LP-05`, and `LP-06` at 5/5. Cold review then exposed an underdetermined scale
+fixture and duplicated upstream-TDD criterion in `LP-05`; the independently
+approved test-only repair restarted and passed 5/5. A fresh final cold review
+approved the skill, scenarios, hashes, and record. No hook changed. Final user
+approval followed. Repository verification passed: hook suite 263 passed/3
+skipped, installer suite 11 passed, and research suite 4 passed. The stale-reference
+sweep found no obsolete live wording. The exact local-link check passed across four
+working and four staged Markdown documents, and both diff checks passed.
 
 ### Task 5: Audit and baseline `sweeping-stale-references`
 
