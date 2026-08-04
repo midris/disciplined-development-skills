@@ -419,10 +419,21 @@ SPEC PASS and QUALITY PASS after the record repairs. No skill or hook changed.
 
 **Required coverage:** link the shared discovery suite; simple implementation dispatch; non-trivial nudge/identity/audience pressure; safe direct invocation with the full bundle; scope contract; governing-file reload; no nested dispatch or orchestrator gates; verify-every-commit behavior; upstream report-shape independence.
 
-- [ ] Reconcile the three existing tests with the current ownership boundary.
-- [ ] Link the shared discovery result and add missing direct-invocation and returned-commit verification coverage.
-- [ ] Run every active preservation scenario 5/5 on Sol high at `4296647`.
-- [ ] Review and commit as `docs(validation): baseline development subagent dispatch`.
+- [x] Reconcile the three existing tests with the current ownership boundary.
+- [x] Link the shared discovery result and add missing direct-invocation and returned-commit verification coverage.
+- [x] Run every active preservation scenario 5/5 on Sol high at `4296647`.
+- [x] Review and commit as `docs(validation): baseline development subagent dispatch`.
+
+**Task 9 execution note (2026-08-04, pre-commit):** The active catalog repairs
+historical Tests 2 and 3 as `DSD-01` and `DSD-02`, merges Test 1 into the current
+nudge composition, and adds `DSD-03` and `DSD-04` for returned-commit verification
+and finding partition. Four owned Sol-high controls passed 20/20; with the current
+shared discovery suite, complete active closure is 70/70. Fixture ambiguities were
+repaired and restarted at zero. On 2026-08-04, the owner prospectively approved
+prompt, fixture, rubric, and validation-record repairs; only skill or hook changes
+require a future approval stop.
+Final fresh Sol-high cold review returned SPEC PASS and QUALITY PASS.
+No skill or hook changed.
 
 ### Task 10: Audit and baseline `disciplined-development`
 
