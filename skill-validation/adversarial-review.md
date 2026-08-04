@@ -1,5 +1,167 @@
 # adversarial-review — validation
 
+## Active catalog audit (2026-08-04)
+
+The shared all-nine discovery suite remains owned by [skill-discovery.md](skill-discovery.md#active-catalog-definitions).
+`DISC-01` protects routing into `adversarial-review`; this record owns the application suite.
+
+### Historical disposition
+
+The historical record contained useful evidence but no uniformly replayable suite.
+The audit repaired seven families, merged two overlaps, retired one obsolete comparison, and added seven missing atomic scenarios.
+
+| Historical family | Classification | Active disposition |
+|---|---|---|
+| Declared verdict and quoted-token loophole | Repair | `AR-02` |
+| Unverified rationale plus caller-order invariant | Repair | `AR-03` |
+| Standalone angle selection | Repair | `AR-04` |
+| Durability failure paths | Repair | `AR-05` |
+| Whole-project generated cases | Repair | `AR-06` |
+| Fix-by-construction severity | Repair | `AR-07` |
+| Holistic baseline and retained-angle focus | Repair | `AR-04`–`AR-06` |
+| Duplicate red-flags composite | Merge | Atomic behavior in `AR-03`; history retained in [duplicate-red-flags-scenarios.md](duplicate-red-flags-scenarios.md) |
+| Whole-repo/angle-selection overlap | Merge | Selection in `AR-04`; application in `AR-06` |
+| Historical subjective discrimination arms | Retire | Preserved below; exact opaque-arm evidence is incomplete |
+| Simple complete-bundle review | Add | `AR-01` |
+| Shared finding-pattern synthesis | Add | `AR-08` |
+| No-shared-pattern branch | Add | `AR-09` |
+| Necessity challenge | Add | `AR-10` |
+| Effectiveness challenge | Add | `AR-12` |
+| Multi-finding no-shared-pattern branch | Add | `AR-13` |
+| Replayable angle discrimination | Add | `AR-14` |
+
+Counts: **Keep 0, Repair 7, Merge 2, Retire 1, Add 7**.
+
+`AR-11` was an exploratory two-turn scope-guard probe, not an active addition.
+Its current arm passed 5/5, but deleting the whole `End of posture` section also passed 5/5.
+A later original-control run was confounded by the globally mandatory brainstorming skill and produced one reasonable clarification instead of a label.
+The probe is therefore non-discriminating and retired rather than weakened after observation; its exact files remain in [exploratory-ar-11](fixtures/adversarial-review/exploratory-ar-11/README.md).
+
+### Necessity and simplification review
+
+Each section was challenged for necessity and for a simpler equivalent.
+The result keeps distinct behavioral contracts and consolidates duplicate guidance.
+
+| Skill section | Necessity and smallest effective form | Evidence |
+|---|---|---|
+| Frontmatter | Needed for routing; no duplicate owned routing test | `DISC-01` |
+| Overview | Needed to identify the skill as a reviewer adapter and its invocation modes; two sentences are already the smallest scannable introduction | `AR-01` |
+| Role | Needed to assign mechanics versus posture/output ownership; one precedence sentence resolves the only template conflict | `AR-01`, `AR-04` |
+| Posture | Needed to distinguish adversarial review from ordinary completeness review; the compact contrast and counters induce the default mental model | `AR-01`, `AR-03`, `AR-05`–`AR-07` |
+| End of posture | Retained as a compact scope guard on owner judgment; the exploratory ablation showed no causal lift, so no active scenario claims one | Retired `AR-11` |
+| Severity rubric | Needed; P3 pass and blocking durability/invariant cases cover the meaningful branches | `AR-02`, `AR-03`, `AR-05`, `AR-07`, `AR-09` |
+| Output format | Needed as a parser contract; finding shape, final verdict, enumeration, shared pattern, and `NONE` remain distinct | `AR-01`–`AR-03`, `AR-08`, `AR-09` |
+| Enumerate every class | Needed and deliberately comprehensive; “every relevant set” was rejected because it permits silent exclusion | `AR-03` |
+| Verify every rationale claim | Needed; one false 18% claim checked against 1.8% evidence is sufficient | `AR-03` |
+| Necessity and effectiveness | Needed as one unified baseline section: remove unsupported pieces and reject activity/proxy success that does not advance the intended outcome | `AR-10`, `AR-12` |
+| Generate unexercised cases | Needed; one whole-project scenario covers absent, malformed, out-of-scale, and beyond-patch reach | `AR-06` |
+| Invariant grading / fix by construction | Needed; one isolated ordering boundary protects P2+, construction, and the documentation/test loophole | `AR-07` |
+| Review angles | Needed only where the holistic baseline lacks a lens; selection, durability application, and one full-versus-holistic skill-authoring discrimination are sufficient | `AR-04`, `AR-05`, `AR-14` |
+| Few-shot examples | Needed only to demonstrate exact output shape; no separate example scenario | `AR-02`, `AR-09` |
+| Reviewer rationalizations | Needed as compact counters; application cases exercise the distinct failure modes without one scenario per row | `AR-03`, `AR-05`–`AR-07`, `AR-10`, `AR-12` |
+| Composition | Needed to declare the base-review dependency and sibling boundaries | `AR-01` |
+| Whole skill | Discovery plus thirteen atomic owned scenarios is the smallest suite that protects every retained observable contract and the demonstrated value of a specialized angle | `DISC-01`, `AR-01`–`AR-10`, `AR-12`–`AR-14` |
+
+The enumeration miss had a concrete cause: the old prose required enumeration during review, but the output contract required only findings and a final verdict.
+Evaluators could group callers behind phrases such as “other callers” and still believe they had completed the internal enumeration.
+The approved repair makes member-by-member named accounting observable and removes the later duplicate warning.
+
+The approved behavior slice also adds one evidence-backed `DD-PATTERN` line before the verdict and folds effectiveness into the necessity section.
+The effectiveness wording is retained for clarity and owner intent, not claimed as measured lift: both the current and ablated `AR-12` arms passed 5/5.
+The response-template precedence sentence is likewise an owner-approved clarification with preserved 5/5 behavior, not a claimed RED/GREEN lift.
+
+## Active scenario catalog
+
+Common metadata: Codex CLI 0.146.0; `gpt-5.6-sol`; high reasoning effort; Superpowers 6.2.0; five fresh processes per arm; maximum concurrency three; enforced read-only transport; no nested agents; evaluator-withheld rubric; orchestrator scoring; run dates 2026-08-03–04.
+Every `AR-*` scenario is owned by and affects `adversarial-review`; shared `DISC-01` lists its cross-skill ownership separately.
+The base-review dependency is Superpowers 6.2.0 `requesting-code-review`, skill SHA-256 `d71cc01ba56d2325cf8af5f7c11837819b63ecd57de0bfdb812f7f3ff7751df8`, template SHA-256 `b2f2ec7596925fe52dac158fdfbca19b3a7d779d619c481e6706a6c0001662d3`.
+`AR-01` receives the complete nine-skill bundle recorded in [the fixture manifest](fixtures/adversarial-review/README.md#complete-bundle-dependency-manifest); other scenarios receive only `adversarial-review`, the base-review dependency, and their declared fixture.
+
+| ID | Type / status | Protected promise and section | Supplied context | Exact prompt and withheld rubric | Rerun trigger |
+|---|---|---|---|---|---|
+| `AR-01` | Simple application + direct invocation / preservation | Complete-bundle review finds the documented defect and follows severity/output contracts; Overview, Role, Posture, Severity, Output, Composition | Nine skills + committed ratio fixture | [Prompt](fixtures/adversarial-review/prompts/ar-01.md), [rubric](fixtures/adversarial-review/rubrics/ar-01.md) | Direct invocation, dependency, severity, finding shape, or verdict |
+| `AR-02` | Focused regression / preservation | P3-only review passes and quoted verdict content cannot replace the final verdict; Severity, Output, Examples | Prompt-contained completed review | [Prompt](fixtures/adversarial-review/prompts/ar-02.md), [rubric](fixtures/adversarial-review/rubrics/ar-02.md) | P3 threshold, quoted tokens, verdict position, or output shape |
+| `AR-03` | Non-trivial application + focused regression / target | Every caller is named; false rationale is verified; asymmetric nonlocal invariant blocks; Output, Enumeration, Rationale, Invariants | Committed six-file normalization fixture | [Prompt](fixtures/adversarial-review/prompts/ar-03.md), [rubric](fixtures/adversarial-review/rubrics/ar-03.md) | Enumeration, caller accounting, rationale verification, invariant severity, or fixture |
+| `AR-04` | Simple application + focused regression / preservation | Holistic baseline always runs and specialized angles select by artifact kind; Review angles | Committed artifact matrix | [Prompt](fixtures/adversarial-review/prompts/ar-04.md), [rubric](fixtures/adversarial-review/rubrics/ar-04.md) | Baseline/angle taxonomy, artifact classification, or JSON contract |
+| `AR-05` | Non-trivial application + focused regression / preservation | Durability catches corruption and crash-on-input with construction remedy plus a holistic defect; Durability, Rationale | Real EventLog slice at `b0f4511b2d43a566acdcbc5f0d61db6342a4c882` | [Prompt](fixtures/adversarial-review/prompts/ar-05.md), [rubric](fixtures/adversarial-review/rubrics/ar-05.md) | Durability checklist, crash rationale, holistic baseline, or source slice |
+| `AR-06` | Non-trivial application / preservation | Review reaches beyond the patch and generates located absent, malformed, and out-of-scale findings; Whole-repo scope, Unexercised cases | Committed import-boundary fixture | [Prompt](fixtures/adversarial-review/prompts/ar-06.md), [rubric](fixtures/adversarial-review/rubrics/ar-06.md) | Whole-repo scope, generated-case classes, or fixture |
+| `AR-07` | Non-trivial application + focused regression / preservation | Plain-array producer ordering remains P2+ and unresolved by documentation/tests; Invariants, Severity | Committed excerpt derived from Steno range `0fae3e34d73505960313efa6ff7c6256c00f7029..59d08686570724d288c716a756984d364ef50e49` | [Prompt](fixtures/adversarial-review/prompts/ar-07.md), [rubric](fixtures/adversarial-review/rubrics/ar-07.md) | Invariant severity, construction rule, loophole, or excerpt |
+| `AR-08` | Focused regression / target | Findings across API, queue, and file adapters receive one evidence-backed shared pattern without a new finding/severity; Output | Committed boundary-ingestion fixture | [Prompt](fixtures/adversarial-review/prompts/ar-08.md), [rubric](fixtures/adversarial-review/rubrics/ar-08.md) | Pattern syntax, named adapter accounting, evidence threshold, or synthesis boundary |
+| `AR-09` | Focused regression / target | A single finding emits `DD-PATTERN: NONE`; Output | Committed health-status fixture | [Prompt](fixtures/adversarial-review/prompts/ar-09.md), [rubric](fixtures/adversarial-review/rubrics/ar-09.md) | `NONE`, evidence threshold, pattern placement, or fixture |
+| `AR-10` | Non-trivial application / preservation | Unsupported duplicate state is challenged and removed; Necessity | Committed receipt proposal | [Prompt](fixtures/adversarial-review/prompts/ar-10.md), [rubric](fixtures/adversarial-review/rubrics/ar-10.md) | Necessity wording, removal rule, or fixture |
+| `AR-12` | Non-trivial application / preservation | Activity/proxy success is rejected when it does not measure the governing outcome; Effectiveness | Committed onboarding proposal | [Prompt](fixtures/adversarial-review/prompts/ar-12.md), [rubric](fixtures/adversarial-review/rubrics/ar-12.md) | Effectiveness wording, outcome/proxy rule, or fixture |
+| `AR-13` | Focused regression / target | Two unrelated blocking findings emit `DD-PATTERN: NONE` without generic over-synthesis; Output | Committed independent-provenance fixture | [Prompt](fixtures/adversarial-review/prompts/ar-13.md), [rubric](fixtures/adversarial-review/rubrics/ar-13.md) | Multi-finding `NONE`, evidence threshold, provenance, or fixture |
+| `AR-14` | Non-trivial application + focused regression / preservation | The skill-authoring lens catches workflow-summary and untested-discipline traps that a holistic-only ablation misses; Review angles | Committed flawed skill, writing-skills 6.2.0 dependencies, and exact ablation patch | [Prompt](fixtures/adversarial-review/prompts/ar-14.md), [rubric](fixtures/adversarial-review/rubrics/ar-14.md) | Skill-authoring angle, supplied authoring guidance, ablation, or fixture |
+
+### Results
+
+Original control commit: `4296647f0dff48a9e77b979ef07e813bf1f66db2`; original skill SHA-256: `9004ff153d5dc3a3690254667c4f666151dcabff7ef6f705cc751134be56499c`.
+Current approved draft SHA-256: `b266f35b751a23967d99030678ffe893d72137bf1ffbc7c433db811ed1bbf085`.
+
+| ID | Original/RED result | Control date | Classification and exact misses | Current result | Current outcomes | Current date | Infrastructure errors |
+|---|---:|---|---|---:|---|---|---:|
+| `AR-01` | 5/5 (`P P P P P`) | 2026-08-03 | Preservation; none | **5/5** | P P P P P | 2026-08-04 | 0 |
+| `AR-02` | 5/5 (`P P P P P`) | 2026-08-03 | Preservation; none | **5/5** | P P P P P | 2026-08-04 | 0 |
+| `AR-03` | **2/5** (`F P P F F`) | 2026-08-03 | Watched RED. r1 omitted `bulk_normalize` and did not state that both sorting callers sort; r4/r5 omitted `validate_batch` and `bulk_normalize` and did not trace those sorting callers | **5/5 GREEN** | P P P P P | 2026-08-04 | 0 |
+| `AR-04` | 5/5 (`P P P P P`) | 2026-08-03 | Preservation; none | **5/5** | P P P P P | 2026-08-04 | 0 |
+| `AR-05` | 5/5 (`P P P P P`) | 2026-08-03 | Preservation; none | **5/5** | P P P P P | 2026-08-04 | 0 |
+| `AR-06` | 5/5 (`P P P P P`) | 2026-08-04 | Preservation; every output traced unchanged importer behavior and found the absent-file, malformed-record, and 5 GiB memory paths | **5/5** | P P P P P | 2026-08-04 | 1 |
+| `AR-07` | 5/5 (`P P P P P`) | 2026-08-03 | Preservation; none | **5/5** | P P P P P | 2026-08-04 | 0 |
+| `AR-08` | **0/5** (`F F F F F`) | 2026-08-04 | Watched RED under the repaired all-three-adapter rubric; every output named API, queue, and file defects but omitted the pattern line and synthesis | **5/5 GREEN** | P P P P P | 2026-08-04 | 0 |
+| `AR-09` | **0/5** (`F F F F F`) | 2026-08-04 | Watched RED; every output omitted `DD-PATTERN: NONE` immediately before the verdict | **5/5 GREEN** | P P P P P | 2026-08-04 | 0 |
+| `AR-10` | 5/5 (`P P P P P`) | 2026-08-04 | Preservation; every output challenged the unsupported duplicate store | **5/5** | P P P P P | 2026-08-04 | 0 |
+| `AR-12` | 5/5 (`P P P P P`) | 2026-08-04 | Preservation; every output rejected the wizard-completion proxy | **5/5** | P P P P P | 2026-08-04 | 0 |
+| `AR-13` | **0/5** (`F F F F F`) | 2026-08-04 | Watched RED; every output found both unrelated defects but lacked the required `DD-PATTERN: NONE` line | **5/5 GREEN** | P P P P P | 2026-08-04 | 0 |
+| `AR-14` | 5/5 (`P P P P P`) | 2026-08-04 | Preservation; with identical authoring dependencies available to every arm, the complete skill catches both authoring traps. Holistic-only ablation: **0/5** (`F F F F F`), every output missed both specialized traps | **5/5** | P P P P P | 2026-08-04 | 0 |
+
+Current aggregate: **65/65 PASS**.
+Preservation controls: **45/45 PASS**.
+All four watched RED targets reach 5/5 GREEN; the `AR-14` holistic-only discrimination arm remains 0/5.
+Raw evaluator transcripts remain uncommitted scratch artifacts.
+
+Before freeze, cold review invalidated an earlier `AR-06` prompt because it named the three generated-case classes that the withheld rubric scored. Removing that priming exposed a second design problem: the broad real-source fixture contained many stronger unrelated defects, so outputs did not consistently surface all three classes. The active scenario replaces it with one atomic import-boundary fixture and fixes its patch metadata. A scoped re-review then exposed an over-specific rubric demand for a literal unchanged-file path even when a finding demonstrably traced the unchanged helper; the final criterion protects out-of-patch behavior instead. Every repair restarted both arms from zero, and no superseded run is counted above.
+The final current arm had one infrastructure error: a complete response appeared in the execution log but the required last-message artifact was absent. An identical retry supplied the fifth evaluable response.
+
+### Replay hashes
+
+The exact bundle-digest algorithm, complete `AR-01` dependency manifest, and source/fixture manifests are in [fixtures/adversarial-review/README.md](fixtures/adversarial-review/README.md).
+
+| ID | Original/RED bundle | Current bundle | Fixture digest or source manifest |
+|---|---|---|---|
+| `AR-01` | `b9d0fdb62e4fbbf58df32afd8dadeb92aeb3f17495afd8d6ad9ad76644b64b2d` | `9d2da380bb7754c1a756ce3f97eb26429623aee1919bf36093c18f23c7ef6797` | `e649e8171b59461a6acc1153e402f0ba03864137894052aafe61e94b157034df` |
+| `AR-02` | `9f9ed9bf1f6207adc88881ad237fb4d0ff5058e9890f32f335491d15d8cb9f68` | `06c8fac830cd0f76336b3e4743b81145db87c8c51bd491094be0398a5b38821d` | Prompt-contained |
+| `AR-03` | `4d0a16a4aa09c20c02d9682d99a595b85e47b4700e848cc3b272263ce78d317f` | `d9e8caf31fd44525521bd8b14cdbd48c68cb9f4f6052ed6231c25213661ee263` | `9f0b321743659dc5d1757065040fdfe4361bbca164454e29153155a9b24f8304` |
+| `AR-04` | `413722aff2eadfdfaea2545923966846f64f44a3bf86eba514755f3e022c274c` | `cccc7975f243936c8a387d1ef65aee064350c9d3adb4aaa50a5fe223936be6db` | `4c4ce69c48cbf0c6e70fb326e66badeb7ee70b678f87dfe42e0969c9f643035b` |
+| `AR-05` | `668e4ca719e5b311920336c8f036202a0d96e7362805adc72be030500cf1a96e` | `a71de6373f61b74ca6fd8c8d02d30dd770654b1c38c27474af5f67d4e811dd13` | Real-source manifest |
+| `AR-06` | `c93ae68b82f07e34e7ceeb06ae0e2aefb3c149ec807a8e0dde8a7c9808af673c` | `5e75ae2860b99482ab700033dc5d8fe0241faeb53fa3449251d75762f2b2ce71` | `4d1b589859c509c8f7d5d0fad4ed35039d1490bd22e9b27f97048109fa932544` |
+| `AR-07` | `9858504b49ea5fe81941ed391452f80e7d7983cc1c1c8f9e1fe2b42381edcef5` | `65c7db22c5b467372fe25af46751d220f521953917b2b2217a9d663d7650c2ed` | `15d0a79a8055485afe38dd09f68f9bdeabb6919efe22af36dbe4b9a02c1aa6f8` |
+| `AR-08` | `f1ba98d7da412f1833e81a0074b2bcbeaa82534b4f95a94f295f10902f1a0d85` | `eab0ad23dda579d65a5f1c44805766846bf1243300868eb8b1d26b92ff21537c` | `648af0899b9dac0c0d57b1122027a2a46c3a33ab31f3214c6ab523596d8d12a3` |
+| `AR-09` | `bbdb3bc8df9f75db48edcd3b55314231df870db3c9bb962656c897795a228eac` | `b83c130c1c14dfddbcc1a659491fe7d3d7d01703fb393c162bc72e1ed0bd995f` | `0b591ed214d2428181f70c51b928aed83490f8ca66eb64002db8409c78fd266e` |
+| `AR-10` | `494e22a999f09cdfde87295f0eac2ba2f403ee549070377f40c3cdf9debb87fa` | `7dc90667fe5703937a3984925942fb77ecc2e96b57645628a6dae4d0abd03742` | `7403d026fa3b647dea3b6b18c2ae0d9e9edc0318cd10e222818803825e9bbc9a` |
+| `AR-12` | `724f9e4f1e34c939e8e2e45f35c33770f3bac02dd0498a9b7af68ecddb4f0cc2` | `2cc97263dce09b63455c4d7881742dfc7b80408c8cf448ef6ce176500bc36743` | `8ebc3934102abf000fc21686c1c0ec5441f340abfbfa6f735facfb89b4738227` |
+| `AR-13` | `60af81e4a7afae4b1809fb72a51b58c85735530d72fef9cb40b5906f9ffbba00` | `d95aa85a065c0b7fc70a5543fcb30fb135e9e65d24aac726995f9194a6f5ebc0` | `e1f1af3532c608d14c2e1656f0cc82dad2b24b97003bc273fc63b1ac6ae38e49` |
+| `AR-14` | `688cd9b4d504089e1cf5a0b3b5d13c9598e563a73430adb63e65fe1f099c45a5` | `81a3ea02cb9253a1c80bbce4a5fc844bed37be07a94152964065352a14114f44` | `aa8d2b77c69d81104c4a342ae1553c02dc1a6b65d82f3200843632b1a89cc2c5` |
+
+`AR-14`'s holistic-only ablation bundle digest is `4724c2b778e9b7ebbcad07080e743f77aa742412588e3794c8706ae9a0dad93f`.
+
+| ID | Prompt SHA-256 | Rubric SHA-256 |
+|---|---|---|
+| `AR-01` | `b900f8dcea4585af8641052e01b54dc34f1419430d1916c63525d64735ecc27d` | `33c459e9042000e46c5f82488511d140b750ff53076d8ab11331cf24c91447ab` |
+| `AR-02` | `471108bcba67e89a618f927a8fb2138624f0c1734ffef77db5792ab679c8d194` | `0f97269c27c2d801d14ed0687e73c9f519754d0a6404b388e3ef156f32e9ca09` |
+| `AR-03` | `fa8499a73e1a3b58ad31c2b897bddd467b8ec29f894e1737e3f9424a5a0ad5c0` | `31b5fab1a4a9c34a8517c51ee58aa974b309a5cecad4780caab930e7c0cf4244` |
+| `AR-04` | `d2dcfc886c023b2cbabd6364facb001e853b3ff655c29066b0a11bb797a1d4a0` | `a7e708bdaf6cc52e54d8368aacc1b7e1260f4f7ac8c45cc009334508d1a32b4b` |
+| `AR-05` | `94158d5dc3d103db900b2b681cf7fb992e1cc82231e332de6da38d03af192e2d` | `fc29aeb715a8f9ece4b2573d153eed05adacc93d7a8eae296f2b1d0f263e84c4` |
+| `AR-06` | `25d8a0ba5f7f752c50b018e93b3a2677df3588c7cc567b0d7d0c6a0bd2cec5bc` | `1fcc10f48c998b173626c37e61259ecf9bd41d2ea96b31c8b34086d14a94b924` |
+| `AR-07` | `583d41453d2b6a2e52faaa779bf48de02ef3d236dca0b4899f02952bb6f686bd` | `a9f2bb2083974a0e6e793e26e0a3ced34dd4f5260b6d1359bb5e33dbc418f003` |
+| `AR-08` | `9e5287bf4e2d5b899d9a30c3783242a6e332374256690d78a3bc036e19dce153` | `76a48aefaa2141c8ec81639201d386e9c22431a970896b97b861ce23aed54d2e` |
+| `AR-09` | `9e5287bf4e2d5b899d9a30c3783242a6e332374256690d78a3bc036e19dce153` | `a7793ba00cfa9a414b10cc29f323ab9e73b4a37c8eeeb4818a6190ccfaed4725` |
+| `AR-10` | `54d4cc9f5d8f62bb6486dd6266e0ef7fcf18d203ed2ae2b1752777bbf3378b41` | `6c161f73eab08e12f5b05bed900eb8efa08647365b064ac93417ee1a33f1b314` |
+| `AR-12` | `9957e3f09da7dfd5d807b85825645f3d6f593499809cc623737309c14a1a26b7` | `0b84e78ffb224c2cf3be29eb4bb0ec45cb6d02f16021ba392b93859c3a2c5f99` |
+| `AR-13` | `f1fd096b8ecda0523739b5c28b2eb9b009f6fdbaa898453518288a70b0017c16` | `3c69edfa734227c8710f1fdd0445808cbd288369fd29540a0404a92266cd809b` |
+| `AR-14` | `62955b478d83abfb1c46533ea3899d4ed51aab839697ae0043cbcb94ab738fca` | `533e151b2e0d9f09880e9acbdd62d2ec9bf750c85d8e6d9324e75621827f76c6` |
+
+## Historical evidence — not active scenarios
+
 ## Duplicate red-flag consolidation (2026-08-01)
 
 **Edit.** Remove the `Red flags` section whose cases repeat the retained rules and rationalization table.

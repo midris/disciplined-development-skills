@@ -31,6 +31,7 @@
 - Materialize every regression and immediate-readability control as an immutable scratch bundle outside the repository, identified by commit and content hash; never use the mutable working tree as a control arm.
 - For subjective cleanup comparisons, rerun five fresh immediate-readability-control arms and five fresh draft arms, anonymize the labels, and keep temporary outputs in scratch space outside the repository until the scored summary is recorded.
 - Do not edit skill prose until Tasks 1–11 establish and score the control suite, except a user-approved RED/GREEN slice required to resolve a genuine baseline inconsistency.
+- Task 7 has an owner-approved pre-freeze exception for visible member enumeration, `DD-PATTERN` synthesis, the `NONE` branch, response-template precedence, and folding effectiveness into the necessity section; keep this behavior slice separate from the later readability cleanup and commit it as its own behavioral boundary after final approval. The precedence and effectiveness wording are approved clarifications with preserved 5/5 controls, not claimed behavioral lifts.
 - Portable-behavior edits and readability edits land in separate commits.
 - A skill's complete active suite includes its owned scenarios and every shared discovery, direct-invocation, portability, and composition scenario mapped to its promises.
 - Every shared or supporting scenario record has one owner and lists every affected skill.
@@ -339,17 +340,47 @@ passed, and `git diff --check` passed.
 
 **Files:**
 
+- Modify: `skills/adversarial-review/SKILL.md`
 - Modify: `skill-validation/adversarial-review.md`
+- Modify: `skill-validation/README.md`
 - Modify if still shared: `skill-validation/duplicate-red-flags-scenarios.md`
+- Add: `skill-validation/fixtures/adversarial-review/**`
+- Modify: `plans/specs/2026-08-01-comprehensive-skill-cleanup-design.md`
 - Read control: `skills/adversarial-review/SKILL.md` at `4296647`
 
 **Required coverage:** link the shared discovery suite; simple review with a concrete defect; non-trivial unverified-rationale plus fragile-invariant review; safe direct invocation with all nine skills available; severity/verdict format; holistic baseline; angle discrimination and selection; durability; whole-repo scope; unexercised cases; fix-by-construction severity.
 
-- [ ] Inventory the large historical record and identify the minimal active scenario set that still protects every distinct promise.
-- [ ] Retain discrimination tests only when the compared arms and scoring remain reproducible.
-- [ ] Replace unrelated composite regression cells with atomic prompts while preserving their historical result.
-- [ ] Run every active preservation scenario 5/5 on Sol high at `4296647`.
-- [ ] Review coverage against the skill's baseline rules and angle table, then commit as `docs(validation): baseline adversarial review`.
+- [x] Inventory the large historical record and identify the minimal active scenario set that still protects every distinct promise.
+- [x] Retain discrimination tests only when the compared arms and scoring remain reproducible.
+- [x] Replace unrelated composite regression cells with atomic prompts while preserving their historical result.
+- [x] Run every active preservation scenario 5/5 on Sol high at `4296647`.
+- [x] Review coverage against the skill's baseline rules and angle table, then commit as `docs(validation): baseline adversarial review`.
+
+Because Task 7 now contains an owner-approved skill behavior slice, its final commit
+is the explicit behavioral boundary `docs(skills): strengthen adversarial review output`;
+it carries the audit and RED/GREEN evidence with the skill and supersedes the generic
+validation-only commit name above. Task 22's readability cleanup remains a separate commit.
+
+**Task 7 execution note (2026-08-04, pre-commit):** The historical families classify
+as Keep 0, Repair 7, Merge 2, Retire 1, and Add 7, producing thirteen atomic active
+scenarios. Nine preservation scenarios passed 45/45 on both the immutable
+`4296647` control and the current draft. `AR-03` reproduced incomplete visible
+caller enumeration at 2/5; owner-approved member-by-member accounting brought it
+to 5/5. Owner-approved `DD-PATTERN` synthesis and `NONE` branches reproduced at
+0/5 and reached 5/5, including a two-unrelated-findings `NONE` branch. Necessity and effectiveness application checks are
+preservation coverage at 5/5 each; an `End of posture` probe was retired as
+non-discriminating after its full-section ablation also passed 5/5. A replayable
+skill-authoring discrimination passes 5/5 on the complete original and current
+skills while its holistic-only ablation, with the same authoring dependencies
+available, misses both specialized traps at 0/5.
+The active current suite is 65/65 with one recovered infrastructure error. Exact prompts, withheld
+rubrics, synthetic fixtures, and source manifests are committed replay artifacts.
+The approved behavior slice changes the skill from 1,554 to 1,646 words and will
+land separately from Task 22's later readability cleanup. Historical source
+slices resolve through the former meeting-pipeline checkout and renamed Steno
+repository. No hook changed. Cold review and its scoped repair review are clean.
+Repository verification and final in-place owner approval are complete; this task's
+commit records the approved behavioral boundary and its validation evidence.
 
 ### Task 8: Audit and baseline `adversarial-review-loop`
 

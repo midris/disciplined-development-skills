@@ -12,16 +12,14 @@ Use directly, paste into a review prompt, or feed to local automation.
 
 ## Role
 
-Adapter on top of `superpowers:requesting-code-review`.
-Augments; does NOT replace.
-Base skill = what code review *is*; this skill = what *mode* to be in.
+Use `superpowers:requesting-code-review` for review mechanics and this skill for posture and output; when their response templates conflict, this skill's Output format takes precedence.
 
 ## Posture
 
 **Default mental model: something is wrong here; find it.**
 
 - Thorough reviewer asks "is this complete?" → expands scope, adds rigor.
-- Adversarial reviewer asks "is this wrong?" → scrutinizes claims, challenges necessity.
+- Adversarial reviewer asks "is this wrong?" → scrutinizes claims and challenges necessity.
 - Adversarial ≠ antagonistic. Adversarial = presumption of flaw + duty to find + verification over trust.
 - Adversarial is the requested service. Soft review and not surfacing issues quickly is failure to deliver.
 - Apply across code, architecture, design choices, and rationale.
@@ -50,7 +48,12 @@ One finding per line, the line starting with its severity token; put any detail 
 ```
 
 A line that starts with `[P0]`–`[P3]` is read as a finding — so start no other line with one.
-Emit findings (or `No findings.`) only after enumerating, verifying, and challenging, then close with the verdict line.
+When a finding concerns a referenced class, account for every member by name in the finding or its indented detail; collective shorthand such as "other callers" does not demonstrate enumeration.
+Emit findings (or `No findings.`) only after enumerating, verifying, and challenging, then emit the pattern and verdict lines.
+
+**Pattern line:** Immediately before the verdict, emit exactly one `DD-PATTERN: ...` line.
+Summarize a shared cause or recurring pattern supported by at least two findings; otherwise use `DD-PATTERN: NONE`.
+This line is synthesis, not a finding, and never changes severity or verdict.
 
 **Verdict line.** The last non-blank line, nothing after it, containing only `DD-VERDICT: PASS` or `DD-VERDICT: BLOCK`: PASS = zero `[P0]`/`[P1]`/`[P2]` (`[P3]`-only passes), BLOCK = one or more.
 
@@ -58,7 +61,7 @@ Emit findings (or `No findings.`) only after enumerating, verifying, and challen
 
 ### Enumerate every class
 
-When the artifact references a class — "every X," "all Y," "handles Z" — list members and trace each.
+When the artifact or a finding references a class — "every X," "all Y," "handles Z," or a shared primitive with multiple callers — list every member or caller and trace each.
 
 - "Handles all `git commit` forms" → bare, `-a`, `<pathspec>`. Does the design hold for each?
 - "Covers all error paths" → list them. Walk each.
@@ -75,7 +78,7 @@ For every "we chose X because Y" / "Y doesn't support Z" / "Y is too slow":
 Author confidence is not evidence.
 Citations are not verification.
 
-### Challenge every piece for necessity
+### Challenge every piece for necessity and effectiveness
 
 For each piece of the artifact, ask:
 
@@ -83,8 +86,9 @@ For each piece of the artifact, ask:
 - Real use case, or "just in case"?
 - Defense-in-depth justified by evidence, or by convention?
 - Feature, or non-feature framed as a feature?
+- Advances the intended outcome, or only adds activity or measures a proxy?
 
-Hypothetical / just-in-case / convention / non-feature → flag for removal.
+Hypothetical / just-in-case / convention / non-feature / ineffective → flag for removal.
 This is `disciplined-development` Principle 7 applied to review.
 In prose the same test catches padding — load `concise-writing` when reviewing docs.
 
@@ -98,8 +102,6 @@ Generate what it doesn't handle; surface what it leans on.
 - *Absent* — resource/precondition missing (model, file, permission, config): typed error, or silent download / fallback / hang?
 - *Malformed* — value across a trust boundary (peer reply, API response, parsed field) used or committed unvalidated: a bad value stored as valid?
 - *Out-of-scale* — timeout/limit/buffer sized to the common case: holds for the largest real input?
-
-Skipping the enumeration — checking only what caught your eye — is itself the gap.
 
 **The invariant it relied on.** When correctness rests on an unstated or fragile assumption (ordering, init order, timing window, a sibling guarding the same hazard this path leaves implicit), grade it:
 
@@ -153,6 +155,7 @@ Only the angles vary: the holistic baseline always runs; add each per its "when 
   `mkdir -p` honors umask; `mv` preserves temp file mode. Either
   `umask 077` for the section or `chmod 600` before rename.
 
+DD-PATTERN: NONE
 DD-VERDICT: BLOCK
 ```
 
@@ -161,6 +164,7 @@ DD-VERDICT: BLOCK
 ```
 No findings.
 
+DD-PATTERN: NONE
 DD-VERDICT: PASS
 ```
 

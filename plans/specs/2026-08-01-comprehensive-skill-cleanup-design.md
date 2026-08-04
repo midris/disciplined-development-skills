@@ -2,7 +2,7 @@
 
 ## Status
 
-Design decisions approved; execution controls amended through follow-up review on 2026-08-02.
+Design decisions approved; execution controls amended through follow-up review on 2026-08-04.
 
 ## Objective
 
@@ -71,6 +71,16 @@ validation. After its watched controls, 5/5 GREEN, cold review, final in-place
 approval, repository tests, and separate behavioral commit, that committed GREEN
 becomes `concise-writing`'s immediate readability control. If Task 12 later changes
 the skill for portability, the committed portability GREEN supersedes it.
+
+During Task 7, the audit exposed that internal enumeration was not observable in
+review output and the owner approved shared-pattern synthesis as an adjacent output
+feature. On 2026-08-04 the user approved a separate pre-freeze RED/GREEN slice for
+member-by-member named accounting, one evidence-backed `DD-PATTERN` line, and its
+`NONE` branch. The owner also approved folding effectiveness into the existing
+necessity section and resolving the base-review response-template precedence as
+clarifications with preserved 5/5 behavior. These changes require watched controls,
+5/5 GREEN, cold review, final in-place approval, repository tests, and a behavioral
+commit separate from Task 22's readability cleanup.
 
 Portable extraction is an approved target, not assumed control behavior.
 If a portable skill fails extraction, record the watched RED, make the minimal portability change in a separate behavioral slice, establish its 5/5 GREEN, and only then perform readability cleanup.

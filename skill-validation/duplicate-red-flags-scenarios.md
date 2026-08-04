@@ -2,6 +2,10 @@
 
 Canonical replay fixture for the 2026-08-01 consolidation of duplicate `Red flags` sections in four skills.
 
+This composite is supporting history, not an active scenario.
+Its adversarial-review contract is now owned by atomic scenario `AR-03` in the
+[active catalog](adversarial-review.md#active-scenario-catalog).
+
 ## Protocol
 
 - Run two arms: control at `d18cece` and GREEN with the four sections removed.
