@@ -1,3 +1,54 @@
+# adversarial-review-loop — active scenario definitions
+
+This supporting record is the canonical definition index for the loop-owned scenarios whose results and historical derivation live in [adversarial-review-loop.md](adversarial-review-loop.md).
+The shared [validation protocol](README.md) governs dispatch and scoring.
+Every active scenario runs five fresh Sol-high repetitions; evaluators receive only the exact prompt and mapped immutable bundle, never the rubric or this file.
+
+The owner of all IDs below is `adversarial-review-loop`.
+`OWN` also affects `disciplined-development`; every other owned ID affects only `adversarial-review-loop`.
+Shared `DISC-01`–`DISC-10` retain Task 1 ownership and affect all nine skills through routing.
+Shared `CW-09` and `CW-11` retain `concise-writing` ownership and affect `adversarial-review-loop` through their negative authoring-routing boundary.
+
+## Active catalog
+
+| ID | Type / status | Protected promise and section | Supplied skill context | Exact prompt | Withheld rubric | Rerun trigger |
+|---|---|---|---|---|---|---|
+| `CS` | Simple application + focused regression / preservation | A repeated class after a one-line fix reveals an incomplete sweep: name, enumerate, and fix every member before re-running; The pattern | Loop-only control | [prompt](fixtures/adversarial-review-loop/prompts/cs.md) | [rubric](fixtures/adversarial-review-loop/rubrics/cs.md) | Recurrence handling, class-sweep sequence, branch scope, or reviewer reuse changes |
+| `T2` | Simple application + direct invocation / preservation | A one-member class stays bounded and still re-runs safely with all nine skills available; Scope, The pattern | Complete nine-skill control | [prompt](fixtures/adversarial-review-loop/prompts/t2.md) | [rubric](fixtures/adversarial-review-loop/rubrics/t2.md) | Direct invocation, singular-class handling, or bundle composition changes |
+| `T3` | Non-trivial application + focused regression / preservation | The third completed cycle with blockers takes a memory-free escape, not a fourth cycle; Iteration cap, Cold-read escape | Loop-only control | [prompt](fixtures/adversarial-review-loop/prompts/t3.md) | [rubric](fixtures/adversarial-review-loop/rubrics/t3.md) | Cycle counting, cap, escape, or recording changes |
+| `T4` | Focused regression / preservation | Different invariants below the cap remain scattered and continue without an umbrella axis; Iteration cap, Root attack | Loop-only control | [prompt](fixtures/adversarial-review-loop/prompts/t4.md) | [rubric](fixtures/adversarial-review-loop/rubrics/t4.md) | Scattered/shared-root discrimination or below-cap sequencing changes |
+| `T5` | Simple application + focused regression / preservation | P3-only is clean, stops the blocking loop, and receives explicit dispositions; The pattern, What counts as clean | Loop-only control | [prompt](fixtures/adversarial-review-loop/prompts/t5.md) | [rubric](fixtures/adversarial-review-loop/rubrics/t5.md) | Severity threshold, clean definition, or P3 disposition changes |
+| `T6` | Focused regression / preservation | A complete self-sweep never substitutes for the same-reviewer re-run; The pattern | Loop-only control | [prompt](fixtures/adversarial-review-loop/prompts/t6.md) | [rubric](fixtures/adversarial-review-loop/rubrics/t6.md) | Re-run discipline or clean certification changes |
+| `T7` | Focused regression / preservation | A different blocking class is not an out-of-scope dismissal lever; The pattern | Loop-only control | [prompt](fixtures/adversarial-review-loop/prompts/t7.md) | [rubric](fixtures/adversarial-review-loop/rubrics/t7.md) | Address-all or class-sweep scope changes |
+| `NF` | Non-trivial application + focused regression / preservation | A visible below-cap error-contract axis triggers one whole-axis attack; Root attack | Loop-only control | [prompt](fixtures/adversarial-review-loop/prompts/nf.md) | [rubric](fixtures/adversarial-review-loop/rubrics/nf.md) | Shared-root trigger, one-invariant guard, or early-fire behavior changes |
+| `PW` | Non-trivial application + focused regression / preservation | Axis enumeration reaches uncited components project-wide; Root attack | Loop-only control | [prompt](fixtures/adversarial-review-loop/prompts/pw.md) | [rubric](fixtures/adversarial-review-loop/rubrics/pw.md) | Project scope, uncited-site, or whole-axis sequence changes |
+| `XL` | Non-trivial application + focused regression / preservation | One conceptual invariant translates across all languages and code paths; Root attack | Loop-only control | [prompt](fixtures/adversarial-review-loop/prompts/xl.md) | [rubric](fixtures/adversarial-review-loop/rubrics/xl.md) | Cross-language, all-code-path, or invariant framing changes |
+| `G3A` | Non-trivial application + focused regression / preservation | Cycle 3 locates a shared pattern in the orchestrator's own governing text before fixing; Root attack | Loop-only control | [prompt](fixtures/adversarial-review-loop/prompts/g3a.md) | [rubric](fixtures/adversarial-review-loop/rubrics/g3a.md) | Cycle-3 gate, governing-text branch, or verdict ordering changes |
+| `G3B` | Non-trivial application + focused regression / preservation | Cycle 3 permits a written no-shared-pattern verdict without over-firing; Root attack | Loop-only control | [prompt](fixtures/adversarial-review-loop/prompts/g3b.md) | [rubric](fixtures/adversarial-review-loop/rubrics/g3b.md) | No-pattern branch, written verdict, or over-fire guard changes |
+| `G3C` | Non-trivial application + focused regression / preservation | Cycle 3 locates reviewer-side re-litigation, records a ruling, and disposes the P3 without appeasement; Root attack, Clean | Loop-only control | [prompt](fixtures/adversarial-review-loop/prompts/g3c.md) | [rubric](fixtures/adversarial-review-loop/rubrics/g3c.md) | Reviewer-pattern branch, ruling, or P3 handling changes |
+| `OWN` | Composition + focused regression / preservation | Individual-task and whole-branch loops keep their owners, rules, and counters separate; Scope and precedence | Ownership composition control | [prompt](fixtures/adversarial-review-loop/prompts/own.md) | [rubric](fixtures/adversarial-review-loop/rubrics/own.md) | Scope, precedence, upstream fix-loop, Gate-5, or counter changes |
+| `CE` | Focused regression / preservation | Every cold-read result takes its distinct stop/redo/reset branch and is recorded; Cold-read escape | Loop-only control | [prompt](fixtures/adversarial-review-loop/prompts/ce.md) | [rubric](fixtures/adversarial-review-loop/rubrics/ce.md) | Cold-read outcome or recording changes |
+
+Exact bundle and file hashes are in [the fixture manifest](fixtures/adversarial-review-loop/README.md).
+
+## Historical suite disposition
+
+All thirteen existing IDs remain current and were repaired for exact prompt isolation, Sol-high metadata, five repetitions, unambiguous cycle state, and withheld behavioral rubrics.
+The unnamed non-trivial ownership transition is repaired as `OWN`; its earlier 1/1 ownership probe merges into that stronger cell.
+The old cap-emphasis/productive-emphasis framings and same-kind recurrence probe merge into `T3` and `CS` respectively.
+The primed three-repetition cross-language arm, same-area umbrella probe, and leaky original cycle-3 B fixture are retired from active results.
+`CE` is new preservation coverage for behavior already stated by the control skill.
+
+Classification: **Keep 0, Repair 14, Merge 3, Retire 3, Add 1**.
+Earlier Sonnet/Opus, one-repetition, three-repetition, quick-pass, and trim-parity results remain historical evidence in the owning narrative record; none counts toward the active baseline.
+
+## Historical pre-audit suite (verbatim)
+
+The prior supporting record is preserved exactly below as derivation evidence. Its execution instructions and result counts are historical, not the active protocol.
+
+<details>
+<summary>Show the exact pre-audit supporting record</summary>
+
 # adversarial-review-loop — regression suite (re-runnable)
 
 Codified scenario set for the loop skill. Run before **and** after any change to
@@ -99,3 +150,4 @@ the cross-language scope (XL); weakening it to "pattern"/"topic" regresses both.
 Record each run's date, the skill commit/snapshot under test, and per-cell pass
 counts in [adversarial-review-loop.md](adversarial-review-loop.md). Latest baseline
 is recorded there.
+</details>

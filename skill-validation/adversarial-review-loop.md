@@ -1,5 +1,83 @@
 # adversarial-review-loop — validation
 
+## Active catalog audit (2026-08-04)
+
+The shared all-nine [discovery suite](skill-discovery.md#active-catalog-definitions) owns initial routing, including `DISC-02` for already-surfaced findings; its latest applicable arm is 50/50 across `DISC-01`–`DISC-10`.
+Shared concise-writing targets [`CW-09`](concise-writing.md#cw-09--skill-authoring-co-selection) and [`CW-11`](concise-writing.md#cw-11--reference-authoring-co-selection) protect the negative routing boundary for skill and bundled-reference authoring at 10/10.
+This record owns remediation behavior after findings surface; Task 10 should link the shared routes and `OWN` rather than duplicate them.
+
+The historical evidence reduces to fifteen active owned scenarios under the common protocol:
+
+| Historical evidence | Classification | Active disposition |
+|---|---|---|
+| Canonical `CS`, `T2`–`T7`, `NF`, `PW`, `XL`, `G3A`–`G3C` | Repair | Preserve every current ID; isolate exact prompts/rubrics, remove answer leakage and cycle ambiguity, and restart at five Sol-high control repetitions |
+| Non-trivial task/whole-branch transition | Repair | Canonicalize as `OWN` with versioned parent and upstream task-loop dependencies |
+| Simple 1/1 ownership probe | Merge | `OWN`'s stronger transition also covers the simple context split |
+| Cap-emphasis/productive-emphasis framings | Merge | `T3` now fixes the exact completed-cycle state |
+| Same-kind recurring probe | Merge | `CS` now directly pressures recurrence after an incomplete one-line fix; the historical result remains below |
+| Primed 3/3 cross-language arm | Retire | Unprimed five-repetition `XL` is stronger |
+| Same-area concurrency umbrella probe | Retire | Preserve as an accepted limitation, not an active passing contract |
+| Original leaky cycle-3 B fixture | Retire | Repaired `G3B` has no plausible umbrella axis |
+| Cold-read result branches | Add | `CE` covers confirmed-redo, divergent-stop, and productive-fix-forward/reset |
+
+Classification: **Keep 0, Repair 14, Merge 3, Retire 3, Add 1**.
+
+The exact active definitions, ownership, affected skills, prompt/rubric links, supplied contexts, and rerun triggers are in [adversarial-review-loop-scenarios.md](adversarial-review-loop-scenarios.md).
+
+## Section necessity and simplification
+
+| Skill section | Is it needed, and would a simpler approach preserve intent? | Smallest evidence mapping |
+|---|---|---|
+| Frontmatter | Needed for positive routing to surfaced-finding remediation and negative exclusion from unrelated authoring; shared routing cells are simpler than duplicating routing here | `DISC-01`–`DISC-10`, `CW-09`, `CW-11` |
+| Scope and precedence | Needed because task and whole-branch loops have incompatible caps and reviewers; one transition matrix is sufficient | `OWN` |
+| The pattern | Needed as the core remediation sequence; its class, singular, P3, rerun, and different-class branches remain independently observable | `CS`, `T2`, `T5`–`T7` |
+| Iteration cap | Needed and load-bearing; exact cycle state plus one scattered below-cap counterexample is the compact guard | `T3`, `T4` |
+| Find the pattern, attack the root | Needed for the distinct shared-root outcome. Artifact, governing-text, reviewer, project-wide, and cross-language branches cannot all collapse into one prompt without hiding misses | `NF`, `PW`, `XL`, `G3A`–`G3C` |
+| At the cap: cold-read escape | Needed; `T3` protects entry and `CE` protects the three possible outcomes | `T3`, `CE` |
+| What counts as clean | The behavior is needed. The standalone heading could later fold into the core loop, but the P3 stop must remain explicit | `T5`, `G3C` |
+| Rationalizations | Needed as compact pressure defenses, not as one scenario per row | The active catalog collectively |
+| Whole skill | Fifteen owned behavior scenarios plus the existing shared discovery and authoring-boundary suites are the smallest comprehensive baseline while the plan requires preserving every current ID | Full active suite |
+
+`PW` overlaps `XL`, but remains useful as the language-independent project-wide control and retains a current ID the plan requires preserving.
+`G3A` now covers a pattern in the orchestrator's governing text; `NF` covers the reviewed artifact and `G3C` the reviewer, avoiding an extra scenario for the three promised locations.
+`T2` combines singular-class handling with safe complete-bundle direct invocation, so no separate direct-invocation cell is needed.
+
+## Sol-high control results
+
+Run metadata: control commit `4296647f0dff48a9e77b979ef07e813bf1f66db2`; Codex CLI 0.146.0; `gpt-5.6-sol`; high reasoning effort; Superpowers 6.2.0; five fresh processes per scenario; maximum concurrency three; enforced read-only sandbox with `agents.enabled=false`; orchestrator manual scoring; rubrics withheld; run date 2026-08-04.
+
+The loop-only, complete-nine, and ownership-composition content-manifest SHA-256 values are `ee55d09386f8f162e9606ac40cc7dcbfc0699ec4733fb318e5dffa91dd4f39f3`, `e2249c4b24132523f1374d506957197a303314e2bfbc6e32c9c1b233909cbbff`, and `8386fb9818d60c2ecdf9da95a586b5a601a678baa57c4e5268e3c987e4deb840`.
+The exact manifests and prompt/rubric hashes are in [the replay artifact manifest](fixtures/adversarial-review-loop/README.md).
+
+| ID | Control bundle | Sol-high result | Per-repetition outcomes | Exact misses | Infrastructure errors |
+|---|---|---:|---|---|---:|
+| `CS` | Loop-only | **5/5** | P P P P P | None | 0 |
+| `T2` | Complete nine-skill | **5/5** | P P P P P | None | 0 |
+| `T3` | Loop-only | **5/5** | P P P P P | None | 0 |
+| `T4` | Loop-only | **5/5** | P P P P P | None | 0 |
+| `T5` | Loop-only | **5/5** | P P P P P | None | 0 |
+| `T6` | Loop-only | **5/5** | P P P P P | None | 0 |
+| `T7` | Loop-only | **5/5** | P P P P P | None | 0 |
+| `NF` | Loop-only | **5/5** | P P P P P | None | 0 |
+| `PW` | Loop-only | **5/5** | P P P P P | None | 0 |
+| `XL` | Loop-only | **5/5** | P P P P P | None | 0 |
+| `G3A` | Loop-only | **5/5** | P P P P P | None | 0 |
+| `G3B` | Loop-only | **5/5** | P P P P P | None | 0 |
+| `G3C` | Loop-only | **5/5** | P P P P P | None | 0 |
+| `OWN` | Ownership composition | **5/5** | P P P P P | None | 0 |
+| `CE` | Loop-only | **5/5** | P P P P P | None | 0 |
+
+Owned aggregate: **75/75 PASS**.
+Shared discovery closure (`DISC-01`–`DISC-10`, latest applicable arms): **50/50 PASS**.
+Shared authoring-boundary closure (`CW-09` and `CW-11`, current GREEN arms): **10/10 PASS**.
+Complete active closure: **135/135 PASS**.
+Cold review invalidated and restarted `CS` for direct recurrence pressure and `G3C` for concrete, non-leaky review history.
+The first repaired `G3C` fixture scored 3/5 because its cycle-3 wording plausibly introduced a premise absent from cycle 2; the owner approved classifying that as fixture ambiguity, cycle 2 was repaired to state the same documented premise, and the final five-repetition restart passed 5/5.
+Two completed runs emitted a non-fatal available-model refresh warning before evaluation; both produced full responses and therefore are not infrastructure errors.
+Raw evaluator transcripts remain uncommitted scratch artifacts.
+
+## Historical evidence
+
 Built test-first per `superpowers:writing-skills` (no skill edit without a failing
 pressure test first). This records the scenario set so the rationale is recoverable
 and the set is re-runnable.

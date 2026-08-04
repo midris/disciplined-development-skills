@@ -392,11 +392,23 @@ commit records the approved behavioral boundary and its validation evidence.
 
 **Required coverage:** link the shared discovery suite; singular-finding application; non-trivial shared-root and cycle-cap pressure; safe direct invocation with the full bundle; class sweep; P3 stop; re-run discipline; project-wide/cross-language scope; cycle-3 step-back branches; per-task versus whole-branch ownership.
 
-- [ ] Reconcile the narrative record with the re-runnable suite and give each distinct active scenario one owner.
-- [ ] Merge genuine duplicates, retire obsolete 3-repetition variants, and upgrade every retained scenario to the common 5/5 protocol.
-- [ ] Preserve the existing CS, T2–T7, NF, PW, XL, G3A–G3C IDs when their contracts remain current.
-- [ ] Run every active preservation scenario 5/5 on Sol high at `4296647`.
-- [ ] Review branch coverage and commit as `docs(validation): baseline adversarial review loop`.
+- [x] Reconcile the narrative record with the re-runnable suite and give each distinct active scenario one owner.
+- [x] Merge genuine duplicates, retire obsolete 3-repetition variants, and upgrade every retained scenario to the common 5/5 protocol.
+- [x] Preserve the existing CS, T2–T7, NF, PW, XL, G3A–G3C IDs when their contracts remain current.
+- [x] Run every active preservation scenario 5/5 on Sol high at `4296647`.
+- [x] Review branch coverage and commit as `docs(validation): baseline adversarial review loop`.
+
+**Task 8 execution note (2026-08-04, pre-commit):** The active catalog preserves
+all thirteen current IDs, canonicalizes the existing ownership transition as
+`OWN`, and adds `CE` for the previously untested cold-read result matrix. `T2`
+also owns safe direct invocation with the complete nine-skill bundle. Shared
+`DISC-01`–`DISC-10` retain Task 1 ownership, while `CW-09` and `CW-11` retain
+`concise-writing` ownership. Exact prompt isolation repairs answer leakage,
+recurrence coverage, and cycle-state ambiguity without changing the control skill.
+All fifteen owned scenarios passed 75/75 on fresh Sol-high control evaluators;
+with the 50/50 shared discovery suite and the two 5/5 authoring-boundary targets,
+the complete active closure is 135/135. Two fresh Sol-high cold reviews returned
+SPEC PASS and QUALITY PASS after the record repairs. No skill or hook changed.
 
 ### Task 9: Audit and baseline `dispatching-development-subagents`
 
