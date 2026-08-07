@@ -33,8 +33,8 @@ Degrade-silent policy:
 
 Env bypass: ``DD_SKIP_EDIT_BLOCK=1`` → silent allow (exit 0, no deny).
 Use this during the fix cycle after a block: run the remediation edits with
-the bypass set, then run a deep review per the adversarial-review skill and
-log it via ``dd-log`` to reset the counter and lift the block.
+the bypass set. Run the deep-review loop and log every round with ``dd-log``.
+Only a PASS resets the counter.
 """
 
 from __future__ import annotations
@@ -42,7 +42,6 @@ from __future__ import annotations
 import json
 import os
 import pathlib
-import subprocess
 import sys
 
 _HERE = pathlib.Path(__file__).resolve().parent
@@ -78,16 +77,6 @@ def _payload_cwd() -> str:
     return os.getcwd()
 
 
-def _git(cwd: str, *args: str) -> tuple[int, str]:
-    try:
-        r = subprocess.run(
-            ["git", "-C", cwd, *args], capture_output=True, text=True, timeout=5
-        )
-    except Exception:
-        return 1, ""
-    return r.returncode, r.stdout.strip()
-
-
 def _hard_block_threshold() -> int:
     value = config.get(
         "review_tiers.fast.hard_block_threshold", DEFAULT_HARD_BLOCK_THRESHOLD
@@ -108,17 +97,13 @@ def main() -> int:
 
     cwd = _payload_cwd()
 
-    rc_root, repo = _git(cwd, "rev-parse", "--show-toplevel")
-    if rc_root != 0 or not repo:
+    repo = state.repo_root(cwd)
+    if repo is None:
         # Not a git repo or git unavailable — can't read state; allow.
         logger.emit("skip", reason="no_repo")
         return 0
 
-    rc_branch, branch = _git(repo, "symbolic-ref", "--short", "HEAD")
-    if rc_branch != 0 or not branch:
-        # Detached HEAD — count under a stable key (matches edit_counter.py
-        # and discipline_nudge conventions).
-        branch = "detached"
+    branch = state.current_branch(repo)
 
     count = state.read(repo, branch, COUNTER_NAME)
     threshold = _hard_block_threshold()
@@ -133,10 +118,9 @@ def main() -> int:
     print(
         f"[edit-block] BLOCKED: {count} unreviewed edits on this branch "
         f"(>= hard block ceiling {threshold}). "
-        f"Run a deep review per the adversarial-review skill, then log it via "
-        f"`dd-log` to reset the counter before continuing. "
-        f"Set DD_SKIP_EDIT_BLOCK=1 in the launching shell for the remediation "
-        f"edit cycle, then run the review to reset.",
+        f"Run the deep-review loop and log every round with `dd-log`. "
+        f"Only a PASS resets the counter. Set DD_SKIP_EDIT_BLOCK=1 in the "
+        f"launching shell for the remediation edit cycle.",
         file=sys.stderr,
     )
     return 2

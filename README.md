@@ -169,9 +169,8 @@ project's `.claude/settings.json` (if the file already has a `hooks` key, merge
 the event arrays rather than replacing them). The commands resolve the scripts
 through the symlinks via `$CLAUDE_PROJECT_DIR`, so no paths need editing.
 
-That block wires the full set — plan-state injection, the re-ground counter,
-the review cadence (edit-counter nudge/block, commit nudge, commit-count
-nudge/block, pre-PR gate), and post-compaction re-grounding.
+That block wires the re-ground counter, edit/commit cadence nudges and blocks,
+the independent pre-PR backstop, and session-start/compaction re-grounding.
 Per-hook behavior + the `DD_SKIP_<HOOK>` bypass env vars are in
 [`hooks/hook-recipes-claude-code.md`](skills/disciplined-development/hooks/hook-recipes-claude-code.md).
 
@@ -206,10 +205,14 @@ install; if every tool call is blocked, see
 ## What to expect
 
 As you work, the hooks surface the discipline at boundaries: advisory nudges as
-edits and commits accumulate, and three hard blocks — an edit ceiling, a commit
-ceiling, and a pre-PR review gate — that deny a tool call with a message until a
-review clears it. You clear a review by running one per the `adversarial-review`
-skill and logging it with `/dd-log`. The full model is in
+edits and commits accumulate, plus edit, commit, and pre-PR hard blocks. A deep
+review followed by `/dd-log` clears the edit and commit cadence blocks only when
+the input declares a final `DD-VERDICT: PASS`. The pre-PR block separately runs
+`external_review.py` and allows the PR attempt only on the reviewer's declared
+PASS. Run `git commit` and `gh pr create` as standalone Bash calls from the
+target repository, with other commands in separate calls. Compounds containing
+either action are blocked; unrelated `&&` commands are unaffected. The full
+model is in
 [`ARCHITECTURE.md`](ARCHITECTURE.md).
 
 ## Recovery / troubleshooting

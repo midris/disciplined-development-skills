@@ -129,7 +129,7 @@ def test_orphan_sweep_skipped_when_branches_unenumerable(tmp_path, monkeypatch):
 
 def test_detached_head_current_state_dir_kept(repo_env):
     # On detached HEAD the discipline counter keys under "detached"; the sweep
-    # must not delete the current key's dir (G4 "never the current branch").
+    # must not delete the current state key's directory.
     repo, _ = repo_env
     sha = subprocess.run(
         ["git", "-C", str(repo), "rev-parse", "HEAD"],
@@ -140,3 +140,16 @@ def test_detached_head_current_state_dir_kept(repo_env):
     (root / "detached").mkdir(parents=True)
     cleanup.sweep(str(repo), time.time())
     assert (root / "detached").exists()
+
+
+def test_inherited_git_selectors_do_not_prevent_orphan_cleanup(repo_env, monkeypatch):
+    repo, _ = repo_env
+    root = _state_root(repo)
+    orphan = root / "feature_gone"
+    orphan.mkdir(parents=True)
+    monkeypatch.setenv("GIT_DIR", "/missing/.git")
+    monkeypatch.setenv("GIT_WORK_TREE", "/missing")
+    monkeypatch.setenv("GIT_COMMON_DIR", "/missing/.git")
+
+    assert cleanup.sweep(str(repo), time.time()) is True
+    assert not orphan.exists()

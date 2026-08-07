@@ -30,9 +30,44 @@ The dispatch control skill SHA-256 is `b89b4db8af53bd136237cb2306f956c039757a0e3
 | ID | Prompt SHA-256 | Rubric SHA-256 |
 |---|---|---|
 | `DSD-01` | `d365c6a2f8979519f31d3d9ea9b969f23f96956bb722a02b0fb0baf178f8aecf` | `c00fc4d4ea8d875c25b9cd0c7c2a50f99d325f0f7799264c412572754f85a7f1` |
-| `DSD-02` | `aef962ad53389c9035f7d3adec5c48cedd5e820d6ae77be8b8fdf35e2eb8f948` | `5245688d8d665b6b9422acff73fcd7ad42cc3337c082dea84b772dad68dd2ba7` |
+| `DSD-02` | `5dd3edc6600ac1288cf26fb4c3f5fdd3c66dbb62da6decc5bc6470649e4ee416` | `5245688d8d665b6b9422acff73fcd7ad42cc3337c082dea84b772dad68dd2ba7` |
 | `DSD-03` | `6e99e94ce865c2102799474225fa8ee500440d013d30b9a853951663b3ee0d70` | `c7b3fbf6eb092f8919cd8ec1eaa278af7f736f4fa1522bbb8e56bc536aab6570` |
 | `DSD-04` | `31a5cbe423d9bd9531cc2706de2f9372d13af5bb142db5320e8887cb75ab2dfe` | `dc29adc91e29ca32bae2fe3a8df3ba1a7cac3293add9eec2e77b7aeecaebd25b` |
+
+## Historical 2026-08-06 DSD-02 rerun bundle
+
+The repository members below were the supplied bytes on 2026-08-06; the
+Superpowers member was the declared immutable 6.2.0 dependency. Their
+canonical content-manifest SHA-256 is
+`8217d48556c879f55c63d268c211282a8dc1f4095003e2558b494404e3b8523d`.
+The prompt hash listed above quoted that bundle's T2 message exactly. On 2026-08-06,
+five fresh Sol-high evaluator repetitions passed after orchestrator manual
+scoring, with zero infrastructure errors. This is preserved historical evidence,
+not the current arm.
+
+| Source | Bundle path | SHA-256 |
+|---|---|---|
+| Staged candidate | `skills/dispatching-development-subagents/SKILL.md` | `93a13cd44ddd350b00477db6cb9e285d16816c20edf7c9be52931f608df4cc6a` |
+| Staged candidate | `skills/disciplined-development/SKILL.md` | `dff55e1348ebde0ec45c8b1861e48c000a5befdbd2f23deb4e857fa1945c93a6` |
+| Staged candidate | `skills/disciplined-development/hooks/review_nudge.py` | `e43784e0e850facdaf0bb2fd9e67ba8ef642f07ce7416f43609cbef6d11a90bb` |
+| Superpowers 6.2.0 | `skills/superpowers/subagent-driven-development/SKILL.md` | `349a08ad8b59b19b86c13a7d2f34a1a38719bf88257004a863eefefa8d9f9e40` |
+
+## Current DSD-02 rerun bundle
+
+The refreshed repository members below are the exact staged-plus-unstaged
+candidate bytes on 2026-08-07; the Superpowers member remains the declared
+immutable 6.2.0 dependency. Their canonical content-manifest SHA-256 is
+`487178d1656de7513a8139b09ef6b69f42d717eaf2d72c011e1a70d5c74c10f5`.
+The prompt still quotes the current T2 message exactly. On 2026-08-07, five
+fresh Sol-high evaluator repetitions passed all four rubric criteria after
+orchestrator manual scoring, with zero infrastructure errors.
+
+| Source | Bundle path | SHA-256 |
+|---|---|---|
+| Staged candidate | `skills/dispatching-development-subagents/SKILL.md` | `93a13cd44ddd350b00477db6cb9e285d16816c20edf7c9be52931f608df4cc6a` |
+| Staged candidate | `skills/disciplined-development/SKILL.md` | `dff55e1348ebde0ec45c8b1861e48c000a5befdbd2f23deb4e857fa1945c93a6` |
+| Candidate hook | `skills/disciplined-development/hooks/review_nudge.py` | `61f0603da0b6ced00ca1bf0be7042f745daf199e68ba700e574018f4fad00da3` |
+| Superpowers 6.2.0 | `skills/superpowers/subagent-driven-development/SKILL.md` | `349a08ad8b59b19b86c13a7d2f34a1a38719bf88257004a863eefefa8d9f9e40` |
 
 ## Replay
 

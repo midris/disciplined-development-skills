@@ -63,6 +63,7 @@ def _run(
     threshold: int = 30,
     bypass: bool = False,
     payload_override: str | None = None,
+    extra_env: dict[str, str] | None = None,
 ) -> subprocess.CompletedProcess:
     """Run edit_counter.py as a subprocess against ``repo``.
 
@@ -76,6 +77,8 @@ def _run(
     env.pop("DD_SKIP_EDIT_COUNTER", None)
     if bypass:
         env["DD_SKIP_EDIT_COUNTER"] = "1"
+    if extra_env:
+        env.update(extra_env)
 
     if payload_override is not None:
         stdin_text = payload_override
@@ -155,7 +158,8 @@ def test_nudge_emitted_at_threshold(tmp_path):
     ctx = _ctx(r)
     assert ctx is not None, "Expected nudge at threshold"
     assert "30" in ctx
-    assert "adversarial-review skill" in ctx
+    assert "deep-review loop" in ctx
+    assert "log every round with `dd-log`. Only a PASS resets the counter." in ctx
 
 
 def test_nudge_emitted_above_threshold(tmp_path):
@@ -171,7 +175,7 @@ def test_nudge_emitted_above_threshold(tmp_path):
     ctx = _ctx(r)
     assert ctx is not None, "Expected nudge above threshold"
     assert "31" in ctx
-    assert "adversarial-review skill" in ctx
+    assert "deep-review loop" in ctx
 
 
 def test_nudge_envelope_event_name_is_post_tool_use(tmp_path):
@@ -216,3 +220,18 @@ def test_empty_stdin_exits_zero_silent(tmp_path):
     r = _run(repo, payload_override="")
     assert r.returncode == 0
     assert r.stdout.strip() == ""
+
+
+def test_inherited_git_selectors_do_not_redirect_counter(tmp_path):
+    repo = _init(tmp_path)
+    r = _run(
+        repo,
+        threshold=100,
+        extra_env={
+            "GIT_DIR": "/missing/.git",
+            "GIT_WORK_TREE": "/missing",
+            "GIT_COMMON_DIR": "/missing/.git",
+        },
+    )
+    assert r.returncode == 0
+    assert _read_edits(repo) == 1

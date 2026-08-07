@@ -4,7 +4,7 @@
 
 The shared all-nine [discovery suite](skill-discovery.md#active-catalog-definitions) owns initial routing, including `DISC-02` for already-surfaced findings; its latest applicable arm is 50/50 across `DISC-01`–`DISC-10`.
 Shared concise-writing targets [`CW-09`](concise-writing.md#cw-09--skill-authoring-co-selection) and [`CW-11`](concise-writing.md#cw-11--reference-authoring-co-selection) protect the negative routing boundary for skill and bundled-reference authoring at 10/10.
-This record owns remediation behavior after findings surface; Task 10 should link the shared routes and `OWN` rather than duplicate them.
+This record owns remediation behavior after findings surface. The parent validation links the shared routes and `OWN` rather than duplicating them.
 
 The historical evidence reduces to fifteen active owned scenarios under the common protocol:
 
@@ -75,6 +75,17 @@ Cold review invalidated and restarted `CS` for direct recurrence pressure and `G
 The first repaired `G3C` fixture scored 3/5 because its cycle-3 wording plausibly introduced a premise absent from cycle 2; the owner approved classifying that as fixture ambiguity, cycle 2 was repaired to state the same documented premise, and the final five-repetition restart passed 5/5.
 Two completed runs emitted a non-fatal available-model refresh warning before evaluation; both produced full responses and therefore are not infrastructure errors.
 Raw evaluator transcripts remain uncommitted scratch artifacts.
+
+### Task 10 fresh-current parent-ownership rerun
+
+On 2026-08-05, `OWN` passed 5/5 fresh `gpt-5.6-sol` high-effort
+repetitions through the enforced read-only, no-agents transport. The orchestrator
+manually scored the withheld rubric; all accepted runs completed without
+infrastructure errors.
+
+| ID | Current content-manifest SHA-256 | Prompt SHA-256 | Rubric SHA-256 | Result | Repetitions | Infrastructure errors |
+|---|---|---|---|---:|---|---:|
+| `OWN` | `168ed324bde55e123ebfe984e071fa825e6179057e255df2684a5daf41c48259` | `d4ae4791e081658d23d37c11c7778025db95c8b0a1b329a79bbbe6fe641a77c9` | `7195792a1728cbcd27f58736489dd9b475a30712ea7be431d5e7b90a657945bb` | **5/5 PASS** | P / P / P / P / P | 0 |
 
 ## Historical evidence
 
@@ -265,8 +276,9 @@ test (v1: 0/3); C 3/3 incl. one rep correcting the cadence-reset nuance unprompt
 - *Fixture B* leaks a defensible axis — replaced 2026-07-04 by the G3B fixture
   (unused import / doc-contract constant / unmocked network test), which ran 3/3
   clean; the original leaky fixture is retired.
-- *dd-log reset claims* on non-clean rounds by some reps — mechanically harmless
-  (`log_review.py` derives the decision and resets on PASS only). No skill text.
+- *dd-log reset claims* on non-clean rounds by some reps — mechanically contained:
+  `log_review.py` now requires the orchestrator's explicit final verdict and
+  resets on PASS only. No skill text.
 
 **Formal run (2026-07-04, skill @ `db26297`) — full suite green at baseline.**
 Protocol-style (read-only `Explore`, sonnet, skill read from the live file): NF **5/5**,

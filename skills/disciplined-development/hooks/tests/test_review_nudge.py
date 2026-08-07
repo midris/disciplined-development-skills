@@ -1,4 +1,4 @@
-"""Tests for hooks/review_nudge.py — PostToolUse 3-segment nudge (rewritten for H4).
+"""Tests for hooks/review_nudge.py — PostToolUse three-segment nudge.
 
 Subprocess-driven (matches test_commit_block, test_edit_block style).
 A synthetic PostToolUse Bash payload drives the hook. The commit count is
@@ -6,7 +6,7 @@ produced by real git commits in a hermetic repo; the edits counter is seeded
 directly via state.bump so the T1 condition can be exercised independently of
 the T2 commit-count condition.
 
-New contract (three segments on one envelope):
+Contract (three segments on one envelope):
 1. Verify segment — every landed commit, Gate-3 reminder. Independent of any
    threshold; always present on a landed commit unless bypass is active.
 2. T1 nudge — fires when landed commit AND state.read(repo, branch, "edits")
@@ -22,11 +22,11 @@ Fixture style (mirrors test_commit_block):
 - ``_run`` invokes the hook subprocess with configurable thresholds (DD_CONFIG),
   optional bypass, and a standard landed-commit payload.
 
-Test plan (all required by H4 spec):
+Covered behavior:
   test_non_commit_is_silent
       — non-git-commit Bash → no output (exit 0, empty stdout).
   test_failed_commit_is_silent
-      — commit without [branch sha] marker → no output.
+      — a direct ``git commit --dry-run`` is not treated as landed.
   test_verify_only_when_no_cadence_triggers
       — landed commit, edits < 30, commits-since-checkpoint < 3
         → verify segment present, no T1/T2 text.
@@ -58,6 +58,8 @@ import re
 import subprocess
 import sys
 from pathlib import Path
+
+import pytest
 
 from hooks import review_nudge
 from hooks.lib import state
@@ -161,8 +163,8 @@ def _run(
     - review_tiers.regular.commit_edit_floor (T1)
     - review_tiers.cold_read_escalation.nudge_threshold (T2)
 
-    ``stdout`` is the fake tool_response stdout; defaults to a realistic
-    landed-commit marker ("[feature/x abc1234] msg").
+    ``stdout`` is retained as realistic tool-response payload, but landing
+    detection uses the direct command shape and ``exit_code`` rather than text.
     """
     if stdout is None:
         stdout = f"[{BRANCH} abc1234] msg"
@@ -213,10 +215,9 @@ def test_non_commit_is_silent(tmp_path):
 
 
 def test_failed_commit_is_silent(tmp_path):
-    """Bash commit without landed marker ([branch sha]) → exit 0, no output."""
+    """A direct ``git commit --dry-run`` is not treated as landed."""
     repo = _init(tmp_path)
     _commit(repo, 1)
-    # stdout has no "[branch sha]" marker → commit_landed is False
     r = _run(repo, command="git commit --dry-run", stdout="nothing to commit")
     assert r.returncode == 0 and r.stdout.strip() == ""
 
@@ -236,7 +237,7 @@ def test_verify_only_when_no_cadence_triggers(tmp_path):
     assert ctx is not None
     assert review_nudge.VERIFY_TEXT in ctx
     # Neither T1 (deep review action with edit-count message) nor T2 text
-    assert "adversarial-review skill" not in ctx
+    assert "deep-review loop" not in ctx
     assert "unreviewed edits" not in ctx
     # The audience caveat rides only on T1/T2 review nudges, never the verify reminder.
     assert review_nudge.GATE_AUDIENCE not in ctx
@@ -255,9 +256,11 @@ def test_t1_fires_when_edits_at_floor(tmp_path):
     ctx = _ctx(r)
     assert ctx is not None
     assert review_nudge.VERIFY_TEXT in ctx
-    assert "adversarial-review skill" in ctx
+    assert "deep-review loop" in ctx
     assert "30" in ctx  # edit count appears in message
     assert review_nudge.GATE_AUDIENCE in ctx  # orchestrator/subagent audience framing
+    assert "log every round with `dd-log`. Only a PASS resets the counter." in ctx
+    assert "run run" not in ctx
 
 
 def test_t1_absent_when_edits_below_floor(tmp_path):
@@ -269,7 +272,7 @@ def test_t1_absent_when_edits_below_floor(tmp_path):
     ctx = _ctx(r)
     assert ctx is not None
     assert review_nudge.VERIFY_TEXT in ctx
-    assert "adversarial-review skill" not in ctx
+    assert "deep-review loop" not in ctx
 
 
 def test_t2_fires_when_commits_at_threshold_with_checkpoint(tmp_path):
@@ -285,9 +288,11 @@ def test_t2_fires_when_commits_at_threshold_with_checkpoint(tmp_path):
     ctx = _ctx(r)
     assert ctx is not None
     assert review_nudge.VERIFY_TEXT in ctx
-    assert "adversarial-review skill" in ctx
+    assert "deep-review loop" in ctx
+    assert "commits since the review checkpoint" in ctx
     assert "3" in ctx
     assert review_nudge.GATE_AUDIENCE in ctx  # orchestrator/subagent audience framing
+    assert "log every round with `dd-log`. Only a PASS resets the checkpoint." in ctx
 
 
 def test_t2_absent_when_commits_below_threshold(tmp_path):
@@ -299,7 +304,7 @@ def test_t2_absent_when_commits_below_threshold(tmp_path):
     ctx = _ctx(r)
     assert ctx is not None
     assert review_nudge.VERIFY_TEXT in ctx
-    assert "adversarial-review skill" not in ctx
+    assert "deep-review loop" not in ctx
 
 
 def test_t2_fork_base_fallback_fires(tmp_path):
@@ -314,8 +319,10 @@ def test_t2_fork_base_fallback_fires(tmp_path):
     ctx = _ctx(r)
     assert ctx is not None
     assert review_nudge.VERIFY_TEXT in ctx
-    assert "adversarial-review skill" in ctx
+    assert "deep-review loop" in ctx
+    assert "commits since fork base" in ctx
     assert review_nudge.GATE_AUDIENCE in ctx  # orchestrator/subagent audience framing
+    assert "log every round with `dd-log`. Only a PASS resets the checkpoint." in ctx
 
 
 def test_t2_fork_base_fallback_absent_below_threshold(tmp_path):
@@ -327,7 +334,7 @@ def test_t2_fork_base_fallback_absent_below_threshold(tmp_path):
     ctx = _ctx(r)
     assert ctx is not None
     assert review_nudge.VERIFY_TEXT in ctx
-    assert "adversarial-review skill" not in ctx
+    assert "deep-review loop" not in ctx
 
 
 def test_both_t1_and_t2_fire_together(tmp_path):
@@ -343,8 +350,7 @@ def test_both_t1_and_t2_fire_together(tmp_path):
     ctx = _ctx(r)
     assert ctx is not None
     assert review_nudge.VERIFY_TEXT in ctx
-    assert "adversarial-review skill" in ctx   # T1
-    assert "adversarial-review skill" in ctx  # T2
+    assert "deep-review loop" in ctx
     assert review_nudge.GATE_AUDIENCE in ctx  # audience framing present once
 
 
@@ -361,8 +367,7 @@ def test_bypass_silences_all(tmp_path):
 def test_review_threshold_not_referenced(tmp_path):
     """counters.review_threshold must not appear anywhere in review_nudge.py.
 
-    This is an executable assertion that the old cadence key has been removed
-    (per H4 spec: 'REMOVE all use of counters.review_threshold').
+    This executable assertion keeps the unsupported cadence key out of the hook.
     """
     source = HOOK.read_text()
     assert "review_threshold" not in source, (
@@ -394,7 +399,7 @@ def test_valid_checkpoint_below_threshold_suppresses_fork_base(tmp_path):
     assert ctx is not None
     assert review_nudge.VERIFY_TEXT in ctx
     # Checkpoint (2 < 3) wins; fork-base count (6 >= 3) is ignored → T2 ABSENT
-    assert "adversarial-review skill" not in ctx
+    assert "deep-review loop" not in ctx
 
 
 def test_no_trunk_fork_base_none_emits_verify_only(tmp_path):
@@ -438,4 +443,64 @@ def test_no_trunk_fork_base_none_emits_verify_only(tmp_path):
     ctx = _ctx(r)
     assert ctx is not None
     assert review_nudge.VERIFY_TEXT in ctx
-    assert "adversarial-review skill" not in ctx
+    assert "deep-review loop" not in ctx
+
+
+def test_unresolved_commit_target_emits_verification_only(tmp_path):
+    repo = _init(tmp_path)
+    _seed_edits(repo, 30)
+
+    r = _run(
+        repo,
+        command="git -C /other commit -m x",
+        stdout="",
+        exit_code=0,
+        commit_edit_floor=30,
+    )
+
+    ctx = _ctx(r)
+    assert ctx is not None
+    assert review_nudge.VERIFY_TEXT in ctx
+    assert "deep-review loop" not in ctx
+
+
+@pytest.mark.parametrize(
+    "command",
+    [
+        "echo ready && git commit -m x",
+        "git commit -m x && echo done",
+        "cd . && git commit -m x",
+    ],
+)
+def test_zero_exit_compound_commit_emits_verification_only(tmp_path, command):
+    repo = _init(tmp_path)
+    _seed_edits(repo, 30)
+
+    r = _run(
+        repo,
+        command=command,
+        stdout="",
+        exit_code=0,
+        commit_edit_floor=30,
+    )
+
+    ctx = _ctx(r)
+    assert ctx is not None
+    assert review_nudge.VERIFY_TEXT in ctx
+    assert "deep-review loop" not in ctx
+
+
+@pytest.mark.parametrize("operator", ["&", "|&"])
+@pytest.mark.parametrize("position", ["prefix", "suffix"])
+def test_operator_compound_exit_status_does_not_claim_commit_landed(
+    tmp_path, operator, position
+):
+    repo = _init(tmp_path)
+    command = {
+        "prefix": f"echo ready {operator} git commit -m x",
+        "suffix": f"git commit -m x {operator} echo done",
+    }[position]
+
+    r = _run(repo, command=command, stdout="", exit_code=0)
+
+    assert _ctx(r) is None

@@ -33,7 +33,7 @@ flowchart TB
     end
     subgraph L2["② Hooks — dumb triggers (Claude Code)"]
         direction LR
-        SOFT["Soft nudges<br/>plan-state · discipline · edit-counter<br/>review · reground"]
+        SOFT["Soft nudges<br/>discipline · edit-counter<br/>review · reground"]
         HARD["Hard gates<br/>edit_block · commit_block · pre_pr_review"]
     end
     subgraph L3["③ Machinery — minimal Python"]
@@ -43,8 +43,8 @@ flowchart TB
         TOOLS --> LIB
     end
     HARD ==>|"gh pr create → gate"| TOOLS
-    AR -.->|"log each round"| TOOLS
-    SOFT -.->|"read state"| LIB
+    AR -.->|"attempt record"| TOOLS
+    SOFT -.->|"update/read state"| LIB
     HARD -.->|"read state"| LIB
     classDef s fill:#d6f5d6,stroke:#2e7d32,color:#102a10;
     classDef h fill:#fdf0c8,stroke:#b8860b,color:#2a2410;
@@ -55,9 +55,13 @@ flowchart TB
 ```
 
 The portable layer never calls the machinery directly except through one
-optional, gracefully-degrading instruction (log a review round when the project
-provides a command). The hooks read per-branch state to decide whether to nudge
-or block; the two tools are the only **writers** of that state and the review log.
+optional, gracefully-degrading instruction (attempt to log a review round when
+the project provides a command). Cadence hooks update counters and read
+per-branch state to decide whether to nudge or block. Three production callers
+attempt review-log writes through `logging_setup.append_review`: the two review
+tools, plus the pre-PR wrapper's unresolved-command ERROR path. Only a review
+tool can reset cadence, on an explicit PASS supplied by its orchestrator or
+external reviewer.
 
 ## The skill layer
 
@@ -126,9 +130,10 @@ The gates are action-forcing boundaries; behind them sit eight standing
 
 A **mode-emphasis table** then routes which companions activate per mode —
 brainstorming, plan writing, implementation (sequential / parallel), debugging,
-code review (giving / receiving), doc editing. Each gate names a REQUIRED
-sub-skill; the mode table names the methodology skill. The full gate text,
-principle bodies, the gate↔principle mapping, and the routing table are in
+code review (giving / receiving), doc editing. Required sub-skills are marked
+explicitly in the active gates and principles; the mode table names methodology
+skills. The full gate text, principle bodies, the gate↔principle mapping, and the
+routing table are in
 [`disciplined-development/SKILL.md`](skills/disciplined-development/SKILL.md).
 
 ## Sub-flows — skills in composition
@@ -172,25 +177,61 @@ flowchart TD
     A["Review due<br/>(nudge · cadence · judgment)"] --> B["Dispatch adversarial-review subagents<br/>whole-repo · applicable angles"]
     B --> C["Aggregate findings<br/>dedupe by file:line"]
     C --> D{"P0/P1/P2?"}
-    D -- yes --> E["Address by class<br/>(adversarial-review-loop)"]
-    E --> F["Log round via dd-log"]
-    F --> G{"3-cycle cap?"}
-    G -- no --> B
+    D -- yes --> F["Attempt BLOCK record<br/>via dd-log"]
+    F --> G{"At 3-cycle cap?"}
+    G -- no --> E["Address by class<br/>(adversarial-review-loop)"]
+    E --> B
     G -- yes --> H["Cold-read escape<br/>fresh-context reviewer"]
-    D -- no --> I["Log clean round<br/>→ reset edits + checkpoint"]
-    H --> I
+    D -- no --> I["Attempt PASS record<br/>→ independently attempt edits reset + checkpoint"]
+    H --> N["Attempt review record<br/>write escape verdict"]
+    N --> J{"Cold-read outcome?"}
+    J -- confirms findings --> K["Redo work<br/>do not continue the loop"]
+    J -- diverges materially --> L["Trust cold read<br/>stop"]
+    J -- confirms fix-forward --> M["Continue if productive<br/>reset 3-cycle cap"]
+    M --> B
     classDef safe fill:#cdeccd,stroke:#2e7d32,color:#10250f;
     classDef warn fill:#fdf0c8,stroke:#b8860b,color:#2a2410;
     class I safe
-    class H warn
+    class H,N,J warn
 ```
 
-A clean round (zero P0/P1/P2) logs a `PASS` row and resets both cadence counters;
-a blocking round logs `BLOCK` and changes no state. The iteration cap and
+A clean round (zero P0/P1/P2) attempts a `PASS` row, then independently attempts
+the edit-counter reset and checkpoint stamp even if trace persistence fails.
+A partial state failure retains conservative review pressure; there is no
+transactional rollback. A blocking round attempts `BLOCK` and attempts neither
+state write; at the cap, the escape occurs before remediation. Every cold
+review attempts a trace row, and its escape verdict is recorded in the work
+artifact before the resulting stop, redo, or reset. The iteration cap and
 cold-read escape are owned by
 [`adversarial-review-loop`](skills/adversarial-review-loop/SKILL.md).
 
-### Pre-PR gate (deterministic, fail-closed)
+### Gate 5 orchestration
+
+Gate 5 is an orchestrator-owned sequence. A development subagent may implement
+bounded remediation, but it only reports due gate actions and stops.
+
+```mermaid
+flowchart LR
+    S["Whole-repository self-review"] -->|"PASS"| E["Fresh whole-repository external review"]
+    E -->|"PASS"| M["Smoke affected flows"]
+    M --> A["Record commands + results<br/>in Gate 2 artifact"]
+    A --> F["Invoke branch finishing"]
+    F --> P["Open PR"]
+    S -->|"BLOCK"| R1["Remediate + rerun self-review"] --> S
+    E -->|"BLOCK"| R2["Remediate + rerun external review"] --> E
+```
+
+Only the orchestrator or user accepts either review's passage, performs smoke,
+invokes branch finishing, or opens the PR. Reviewers emit verdicts; they do not
+accept the gate. This orchestration loop requires the external reviewer's
+declared `PASS`; the later mechanical backstop applies that declared verdict
+directly.
+
+### Pre-PR hook backstop (external-review mechanism only)
+
+The hook below is the final mechanical backstop, not the complete Gate 5 state
+machine. The orchestrator reaches `gh pr create` only after the self-review and
+smoke obligations above are satisfied and recorded.
 
 ```mermaid
 sequenceDiagram
@@ -200,42 +241,61 @@ sequenceDiagram
     participant E as external_review.py
     participant C as codex
     participant L as log + state
-    M->>H: Bash "gh pr create …"
-    H->>H: detect gh pr create (cwd only)
-    alt PR-shaped but unparseable
-        H->>L: log ERROR (unparseable)
-        H-->>M: BLOCK — override via DD_SKIP_PR_REVIEW
-    else parseable
-        H->>E: external_review.py --cwd
-        E->>C: codex (review skill + plan + repo)
-        C-->>E: findings + DD-VERDICT line
-        alt verdict PASS
-            E->>L: log PASS + reset edits + checkpoint
-            E-->>M: allow → PR opens
-        else BLOCK / missing verdict / timeout / outage / empty
-            E->>L: log BLOCK or ERROR(reason)
+    M->>H: standalone Bash "gh pr create …"
+    H->>H: require one direct action in payload cwd
+    alt PR-shaped but compound/target unresolved
+        H->>L: attempt ERROR record (unparseable)
+        H-->>M: BLOCK — run standalone from target repo or override
+    else standalone action in resolved payload repository
+        H->>E: external_review.py --cwd <git-root>
+        alt no readable DD_ACTIVE_PLAN/.claude/active-plan pin
+            E->>L: attempt ERROR(plan_unavailable)
+            E-->>M: BLOCK before reviewer launch
+        else readable explicit plan pin
+            E->>C: timeout-bounded codex exec --cd repo -s read-only -o file
+            C-->>E: findings + reviewer DD-VERDICT
+        alt reviewer PASS
+            E->>L: attempt PASS record, independently attempt edits reset + checkpoint
+            E-->>M: allow attempted PR, Gate 5 prerequisites already satisfied
+        else reviewer BLOCK
+            E->>L: attempt BLOCK record
             E-->>M: BLOCK (fail-closed)
+        else missing/unparseable verdict or tool failure
+            E->>L: attempt ERROR(reason) record
+            E-->>M: BLOCK (fail-closed)
+        end
         end
     end
 ```
 
-The gate reads codex's **declared** `DD-VERDICT: PASS|BLOCK` (the last non-blank
-line), never a severity count. Any failure to produce a clean verdict —
-missing/unparseable verdict, codex missing, timeout, empty output — blocks; the
-human overrides with `DD_SKIP_PR_REVIEW`.
+The gate parses codex's **declared** `DD-VERDICT: PASS|BLOCK` (the last non-blank
+line) and trusts it directly: `PASS` passes and `BLOCK` blocks. Finding parsing
+is telemetry-only. A missing/unparseable verdict, absent/missing/unreadable plan
+pin, or reviewer tool failure blocks. Commands may target only the payload cwd
+and must be standalone. A top-level `&&`, `;`, `||`, `|`, `&`, or `|&`
+containing a direct commit or PR create, plus Git/GitHub target selectors,
+blocks with guidance to run the action as a standalone Bash call from the
+target repository and run other commands separately. Unrelated compounds are
+unaffected. The
+human can override the backstop
+with `DD_SKIP_PR_REVIEW`.
 
 ## Hooks & machinery
 
 The hooks are dumb triggers — seven event hooks, three of them hard blocks (the
 edit ceiling, the commit ceiling, the pre-PR gate); the rest are advisory nudges.
-A hook fires a fixed message at a boundary and nothing more. Two per-branch state
-files — `edits.count` and `review.checkpoint` — drive the cadence; the edit- and
+A hook fires a fixed message at a boundary and nothing more. Three per-branch
+state files drive it: `edits.count` and `review.checkpoint` drive review cadence,
+while `discipline.count` independently drives re-grounding. The edit- and
 commit-cadence state machines are diagrammed in
 [`hooks/README.md` § State model](skills/disciplined-development/hooks/README.md#state-model).
 
-Two tools do the writing — `log_review.py` (records a round; resets cadence on a
-clean pass) and `external_review.py` (the codex gate) — on top of `lib/` (state,
-logging, severity-parsing, subprocess). The hook table, observability, and
+Two review tools attempt review-output records and independently attempt both
+cadence-state writes on effective PASS: `log_review.py` handles model-driven
+rounds, while `external_review.py`
+owns the codex backstop. `pre_pr_review.py` also attempts wrapper-level
+unresolved-target ERROR records. All three use the single
+`logging_setup.append_review` primitive. The hook table, observability, and
 extension rules are in
 [`hooks/README.md`](skills/disciplined-development/hooks/README.md); config keys
 in
@@ -246,15 +306,20 @@ in
 ```mermaid
 flowchart LR
     A["model reviews"] --> T["log_review.py"]
-    G["external_review.py<br/>(pre-PR gate)"] --> R[("reviews.jsonl")]
-    T --> R
+    G["external_review.py<br/>(pre-PR gate)"] --> P["append_review<br/>(best effort)"]
+    H["pre_pr_review.py<br/>(unresolved-target ERROR only)"] --> P
+    T --> P
+    P --> R[("reviews.jsonl")]
     classDef sink fill:#cdeccd,stroke:#2e7d32,color:#10250f;
     class R sink
 ```
 
-Every attempt — model-driven or gate; clean, blocked, or failed — appends one row
-to `reviews.jsonl` through a single writer (`logging_setup.append_review`).
-Durable (never aged out), append-only, sparse by source; the field groups are in
+Completed reviews and recognized gate failures attempt to append one row to
+`reviews.jsonl` through `logging_setup.append_review`. The trace is best-effort:
+disabled or failed logging, pre-review argument/cwd rejection, and unexpected
+wrapper or setup/execution failures before the append can leave no row.
+Successful rows are durable (never aged out), append-only, and sparse by source;
+field groups are in
 [`hooks/README.md` § Observability](skills/disciplined-development/hooks/README.md#observability).
 
 ## Where to look

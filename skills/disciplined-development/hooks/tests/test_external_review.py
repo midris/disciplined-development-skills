@@ -1,8 +1,9 @@
 """Tests for hooks/external_review.py — whole-repo verdict-driven fail-closed gate.
 
 Harness uses the same pattern as test_log_review.py (codex shim + argv recording,
-DD_LOG_DIR, and a temp git repo).  The shim is a fake ``codex``
-binary that:
+DD_LOG_DIR, and a temp git repo).  Cases cover reviewer PASS/BLOCK, failure
+paths, prompt and config resolution, reset targeting, and direct verdict
+mapping. The shim is a fake ``codex`` binary that:
   - records its argv (one token per line) to ``$DD_REVIEW_ARGV_LOG``,
   - writes a canned last-message to the file passed after ``-o``,
   - exits with ``$DD_REVIEW_STUB_EXIT`` (default 0).
@@ -10,15 +11,6 @@ binary that:
 ``DD_CODEX_BIN`` points the gate at the shim; ``DD_LOG_DIR`` isolates
 ``reviews.jsonl`` into a per-test temp dir.
 
-Scenarios:
-  T1  clean PASS → exit 0, one PASS row, checkpoint == HEAD, edits reset
-  T2  [P1] finding + BLOCK → non-zero, BLOCK row, no reset / no checkpoint
-  T3  no verdict line → non-zero, ERROR row reason=no_verdict
-  T4  DD_CODEX_BIN points at nonexistent → non-zero, ERROR reason=cli_missing
-  T5  shim times out (inject tiny timeout via DD_REVIEW_TIMEOUT override) →
-        non-zero, ERROR reason=timeout
-  T6  empty last-message file → non-zero, ERROR reason=empty_output
-  T7  built prompt contains active-plan path AND skill pointer
 """
 
 from __future__ import annotations
@@ -32,14 +24,10 @@ from pathlib import Path
 GATE = Path(__file__).resolve().parent.parent / "external_review.py"
 _BASE_DIR = Path(__file__).resolve().parents[2]  # dir containing the `hooks` package
 
-# Shipped defaults with the new review.{reviewer,model,effort} keys.
+# Shipped review.{reviewer,model,effort} defaults.
 # test_external_review needs a plan pointer so the gate can build its prompt.
 DEFAULTS = {
     "branch_convention": {"trunk_branches": ["master", "main"]},
-    "plans": {
-        "active_plan_pointer": ".claude/active-plan",
-        "fallback_glob": ["plans/*.md"],
-    },
     "review": {
         "prompt_path": ".claude/skills/adversarial-review/SKILL.md",
         "reviewer": "codex",
@@ -93,6 +81,10 @@ def _make_shim(binroot: Path) -> None:
         'if [ -n "${DD_REVIEW_ARGV_LOG:-}" ]; then\n'
         '  printf \'%s\\n\' "$@" > "$DD_REVIEW_ARGV_LOG"\n'
         "fi\n"
+        'if [ -n "${DD_REVIEW_ENV_LOG:-}" ]; then\n'
+        '  printf \'%s|%s|%s|%s\' "${GH_REPO-UNSET}" "${GIT_DIR-UNSET}" '
+        '"${GIT_WORK_TREE-UNSET}" "${GIT_COMMON_DIR-UNSET}" > "$DD_REVIEW_ENV_LOG"\n'
+        "fi\n"
         # Find -o <path> and write the stub last-message to it.
         # Walk argv tokens; when we see "-o", the next token is the output file.
         "found_o=0\n"
@@ -132,6 +124,7 @@ def _base_env(tmp_path: Path, defaults_path: Path, binroot: Path, log_dir: Path)
     }
     # Strip any inherited stub knobs.
     for k in ("DD_REVIEW_STUB_STDOUT", "DD_REVIEW_STUB_EXIT", "DD_REVIEW_ARGV_LOG",
+              "DD_REVIEW_ENV_LOG",
               "DD_REVIEW_TIMEOUT"):
         env.pop(k, None)
     return env
@@ -236,6 +229,9 @@ def gate_env(tmp_path):
     plans_dir.mkdir()
     plan_file = plans_dir / "2026-06-01-test-plan.md"
     plan_file.write_text("# Test plan\n- [ ] task A\n")
+    (repo / ".claude" / "active-plan").write_text(
+        "plans/2026-06-01-test-plan.md\n"
+    )
 
     env = _base_env(tmp_path, defaults_path, binroot, log_dir)
     return env, repo, log_dir
@@ -254,21 +250,63 @@ def test_target_repo_config_wins_over_invoking_project_config(gate_env, tmp_path
     target at all. The fixture repo already carries `.claude/` (skill + plan);
     only the config file is added here.
     """
-    env, repo, _log_dir = gate_env
+    env, repo, log_dir = gate_env
     (repo / ".claude" / "dd-config.json").write_text(
-        json.dumps({"review": {"model": "target-model"}}), encoding="utf-8"
+        json.dumps({"review": {
+            "reviewer": "target-reviewer",
+            "model": "target-model",
+            "effort": "high",
+        }}), encoding="utf-8"
     )
     # A different project does the invoking, with a conflicting override.
     invoking = tmp_path / "invoking"
     (invoking / ".claude").mkdir(parents=True)
     (invoking / ".claude" / "dd-config.json").write_text(
-        json.dumps({"review": {"model": "invoking-model"}}), encoding="utf-8"
+        json.dumps({"review": {
+            "reviewer": "invoking-reviewer",
+            "model": "invoking-model",
+            "effort": "low",
+        }}), encoding="utf-8"
     )
 
     _proc, argv = _argv_log({**env, "CLAUDE_PROJECT_DIR": str(invoking)}, repo, tmp_path)
 
     assert "target-model" in argv, f"target repo's model override ignored; argv={argv}"
     assert "invoking-model" not in argv
+    assert "model_reasoning_effort=high" in argv
+    assert "model_reasoning_effort=low" not in argv
+    assert _rows(log_dir)[0]["reviewer"] == "target-reviewer"
+
+
+def test_external_argv_preserves_model_effort_and_read_only(gate_env, tmp_path):
+    env, repo, _ = gate_env
+    proc, argv = _argv_log(env, repo, tmp_path)
+
+    assert proc.returncode == 0, proc.stderr
+    assert argv[:3] == ["exec", "--cd", str(repo)]
+    assert argv[3:7] == ["-m", "gpt-5.6-terra", "-c", "model_reasoning_effort=medium"]
+    assert argv[7:9] == ["-s", "read-only"]
+    assert argv[9] == "-o"
+    assert "Review this repository following" in "\n".join(argv[11:])
+
+
+def test_reviewer_subprocess_strips_repository_selectors(gate_env, tmp_path):
+    env, repo, _ = gate_env
+    env_log = tmp_path / "review-env.log"
+    proc = _run(
+        env,
+        repo,
+        extra={
+            "DD_REVIEW_ENV_LOG": str(env_log),
+            "GH_REPO": "owner/other",
+            "GIT_DIR": "/missing/.git",
+            "GIT_WORK_TREE": "/missing",
+            "GIT_COMMON_DIR": "/missing/.git",
+        },
+    )
+
+    assert proc.returncode == 0, proc.stderr
+    assert env_log.read_text() == "UNSET|UNSET|UNSET|UNSET"
 
 
 # ---------------------------------------------------------------------------
@@ -294,7 +332,7 @@ def test_pass_verdict_exits_zero_logs_pass_stamps_state(gate_env, tmp_path):
     assert row["source"] == "external-gate"
     assert row["trigger"] == "gate:pre-pr"
     assert row["reviewer"] == "codex"
-    # State reset: edits cleared AND checkpoint stamped.
+    # Both independent PASS writes succeed in this fixture.
     assert _edits_count(repo) == 0
     assert _checkpoint(repo) == _head_sha(repo)
 
@@ -307,8 +345,8 @@ def test_pass_verdict_exits_zero_logs_pass_stamps_state(gate_env, tmp_path):
 def test_block_verdict_exits_nonzero_logs_block_no_state_change(gate_env, tmp_path):
     """P1 finding + BLOCK verdict: non-zero exit, BLOCK row, no state changes.
 
-    Verifies the fail-closed contract: a BLOCK never resets counters or stamps
-    the checkpoint.
+    The declared BLOCK remains the gate decision and never resets counters or
+    stamps the checkpoint.
     """
     env, repo, log_dir = gate_env
     _seed_edits(repo, 2, _BASE_DIR)
@@ -380,10 +418,9 @@ def test_timeout_exits_nonzero_logs_error_timeout(gate_env, tmp_path):
     sleeping_shim = tmp_path / "bin2" / "codex"
     sleeping_shim.parent.mkdir()
     sleeping_shim.write_text(
-        "#!/bin/sh\n"
-        # Write nothing to -o (gate must handle missing file gracefully too).
-        "sleep 10\n"
-        'exit 0\n'
+        "#!/usr/bin/env python3\n"
+        "import time\n"
+        "time.sleep(10)\n"
     )
     sleeping_shim.chmod(0o755)
     env = {**env, "DD_CODEX_BIN": str(sleeping_shim), "DD_REVIEW_TIMEOUT": "0.2"}
@@ -444,6 +481,17 @@ def test_empty_last_message_exits_nonzero_logs_error_empty_output(gate_env, tmp_
     assert rows[0].get("reason") == "empty_output"
 
 
+def test_last_message_temp_file_is_removed_after_review(gate_env, tmp_path):
+    env, repo, _ = gate_env
+    temp_dir = tmp_path / "review-temp"
+    temp_dir.mkdir()
+
+    proc = _run(env, repo, extra={"TMPDIR": str(temp_dir)})
+
+    assert proc.returncode == 0, proc.stderr
+    assert list(temp_dir.glob("dd-external-review-*.txt")) == []
+
+
 # ---------------------------------------------------------------------------
 # T7 — prompt contains plan path AND skill pointer
 # ---------------------------------------------------------------------------
@@ -482,19 +530,65 @@ def test_built_prompt_contains_plan_path_and_skill_pointer(gate_env, tmp_path):
     )
 
 
+def test_unpinned_plan_fails_closed_before_reviewer_launch(gate_env, tmp_path):
+    env, repo, log_dir = gate_env
+    _seed_edits(repo, 2, _BASE_DIR)
+    (repo / ".claude" / "active-plan").unlink()
+    argv_log = tmp_path / "not-launched.log"
+
+    proc = _run(env, repo, extra={"DD_REVIEW_ARGV_LOG": str(argv_log)})
+
+    assert proc.returncode != 0
+    assert not argv_log.exists()
+    row = _rows(log_dir)[0]
+    assert row["decision"] == "ERROR"
+    assert row["reason"] == "plan_unavailable"
+    assert _edits_count(repo) == 2
+    assert _checkpoint(repo) is None
+
+
+def test_missing_pinned_plan_fails_closed_before_reviewer_launch(gate_env, tmp_path):
+    env, repo, log_dir = gate_env
+    _seed_edits(repo, 2, _BASE_DIR)
+    (repo / ".claude" / "active-plan").write_text("plans/missing.md\n")
+    argv_log = tmp_path / "not-launched.log"
+
+    proc = _run(env, repo, extra={"DD_REVIEW_ARGV_LOG": str(argv_log)})
+
+    assert proc.returncode != 0
+    assert not argv_log.exists()
+    assert _rows(log_dir)[0]["reason"] == "plan_unavailable"
+    assert _edits_count(repo) == 2
+    assert _checkpoint(repo) is None
+
+
+def test_unreadable_pinned_plan_fails_closed_before_reviewer_launch(gate_env, tmp_path):
+    env, repo, log_dir = gate_env
+    _seed_edits(repo, 2, _BASE_DIR)
+    (repo / ".claude" / "active-plan").write_text("plans\n")
+    argv_log = tmp_path / "not-launched.log"
+
+    proc = _run(env, repo, extra={"DD_REVIEW_ARGV_LOG": str(argv_log)})
+
+    assert proc.returncode != 0
+    assert not argv_log.exists()
+    assert _rows(log_dir)[0]["reason"] == "plan_unavailable"
+    assert _edits_count(repo) == 2
+    assert _checkpoint(repo) is None
+
+
 # ---------------------------------------------------------------------------
 # T8 — abnormal codex exit (non-zero exit code) must fail closed
 # ---------------------------------------------------------------------------
 
 
 def test_nonzero_codex_exit_fails_closed_even_with_pass_verdict(gate_env, tmp_path):
-    """codex exits non-zero but wrote ``DD-VERDICT: PASS`` → fail closed (D3).
+    """codex exits non-zero but wrote ``DD-VERDICT: PASS`` → fail closed.
 
-    ``Runner.run()`` returns ``exit_reason='ok'`` for any process that spawned and
-    completed, REGARDLESS of its exit code.  A non-zero codex exit means the
-    reviewer errored (auth failure, partial run, outage), so its last-message
-    verdict cannot be trusted: the gate must log ERROR/outage and block — never
-    stamp state — even though a PASS line sits in the ``-o`` file.
+    A non-zero codex exit means the reviewer errored (auth failure, partial run,
+    outage), so its last-message verdict cannot be trusted: the gate must log
+    ERROR/outage and block — never stamp state — even though a PASS line sits
+    in the ``-o`` file.
     """
     env, repo, log_dir = gate_env
     _seed_edits(repo, 2, _BASE_DIR)
@@ -527,7 +621,7 @@ def test_resolve_timeout_honors_dd_review_timeout(monkeypatch):
 def test_resolve_timeout_rejects_nonpositive_dd_review_timeout(monkeypatch):
     """`DD_REVIEW_TIMEOUT=0` must not make Popen.wait(timeout=0) fire instantly;
     a value <= 0 (or unparseable) is rejected and falls through to config/default
-    (matches the old engine contract)."""
+        so the gate cannot time out instantly."""
     import external_review
     monkeypatch.setenv("DD_REVIEW_TIMEOUT", "0")
     assert external_review._resolve_timeout() > 0
@@ -564,7 +658,7 @@ def test_pass_reset_lands_on_repo_root_from_subdir_cwd(gate_env, tmp_path):
 
 
 # ---------------------------------------------------------------------------
-# Advisory paths (pr_review.advisory_paths) — mirror findings downgrade to P3
+# Explicit BLOCK remains BLOCK; accepted exceptions live outside the parser
 # ---------------------------------------------------------------------------
 
 
@@ -575,74 +669,19 @@ def _set_advisory_config(repo: Path) -> None:
     )
 
 
-def test_advisory_only_block_downgrades_to_pass(gate_env, tmp_path):
-    """BLOCK whose P0-P2 findings all sit in advisory paths → P3 downgrade, gate opens.
-
-    The row logs PASS with reason=advisory_only and the downgraded tier counts;
-    state resets like any clean pass; the downgraded findings surface on stdout
-    so they stay visible and fixable.
-    """
+def test_legacy_advisory_config_cannot_reverse_reviewer_block(gate_env, tmp_path):
     env, repo, log_dir = gate_env
     _set_advisory_config(repo)
     _seed_edits(repo, 2, _BASE_DIR)
 
     proc = _run(env, repo,
                 stub_stdout="- [P2] design/components/x.jsx:5: mirror defect\nDD-VERDICT: BLOCK")
-
-    assert proc.returncode == 0, proc.stderr
-    rows = _rows(log_dir)
-    assert len(rows) == 1
-    row = rows[0]
-    assert row["decision"] == "PASS"
-    assert row["reason"] == "advisory_only"
-    assert row["p3"] == 1
-    assert row["p2"] == 0
-    assert "advisory path; was P2" in proc.stdout
-    assert _edits_count(repo) == 0
-    assert _checkpoint(repo) == _head_sha(repo)
-
-
-def test_mixed_block_stays_blocked_with_downgraded_log(gate_env, tmp_path):
-    """A repo-owned P1 beside an advisory P2 still blocks; the log shows the split."""
-    env, repo, log_dir = gate_env
-    _set_advisory_config(repo)
-    _seed_edits(repo, 2, _BASE_DIR)
-
-    proc = _run(env, repo,
-                stub_stdout=("- [P2] design/a.jsx:1: mirror defect\n"
-                             "- [P1] hooks/foo.py:3: repo defect\n"
-                             "DD-VERDICT: BLOCK"))
 
     assert proc.returncode != 0
     rows = _rows(log_dir)
     assert len(rows) == 1
     row = rows[0]
     assert row["decision"] == "BLOCK"
-    assert row["p1"] == 1
-    assert row["p3"] == 1
-    assert row["p2"] == 0
-    # No state change on BLOCK.
+    assert row["p2"] == 1
     assert _edits_count(repo) == 2
     assert _checkpoint(repo) is None
-
-
-def test_block_without_parseable_findings_stays_blocked(gate_env, tmp_path):
-    """BLOCK with no parseable findings cannot be downgraded (fail closed)."""
-    env, repo, log_dir = gate_env
-    _set_advisory_config(repo)
-
-    proc = _run(env, repo, stub_stdout="Something is wrong.\nDD-VERDICT: BLOCK")
-
-    assert proc.returncode != 0
-    assert _rows(log_dir)[0]["decision"] == "BLOCK"
-
-
-def test_advisory_finding_without_config_still_blocks(gate_env, tmp_path):
-    """No pr_review.advisory_paths configured → behavior unchanged, gate blocks."""
-    env, repo, log_dir = gate_env
-
-    proc = _run(env, repo,
-                stub_stdout="- [P2] design/components/x.jsx:5: mirror defect\nDD-VERDICT: BLOCK")
-
-    assert proc.returncode != 0
-    assert _rows(log_dir)[0]["decision"] == "BLOCK"

@@ -1,8 +1,8 @@
-"""Tests for .claude/settings.json hook wiring (Task F2).
+"""Tests for .claude/settings.json hook wiring.
 
-Pins the cutover: every hook command resolves to an existing file under the
-new ``hooks/`` tree, none reference the deleted ``hooks_py/``, and the
-expected hook set is wired. Reads the live ``settings.json`` (resolved by
+Pins the shipped wiring: every hook command resolves to an existing file under
+the ``hooks/`` tree, no command targets another hook tree, and the expected
+hook set is wired. Reads the live ``settings.json`` (resolved by
 walking up to ``.claude``), so a drift between settings and the shipped hook
 files fails here.
 """
@@ -63,7 +63,7 @@ def test_expected_hook_set_wired():
         "pre_pr_review.py",
         "review_nudge.py",
         "session_reground.py",
-        # Three new hooks added in W1 (tiered-review-system):
+        # Three cadence gates that must remain wired:
         "edit_counter.py",   # PostToolUse Edit|Write — T0 nudge counter
         "edit_block.py",     # PreToolUse  Edit|Write — T0 hard block
         "commit_block.py",   # PreToolUse  Bash       — T2 commit gate

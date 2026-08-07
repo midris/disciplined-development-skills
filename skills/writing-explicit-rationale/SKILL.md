@@ -9,7 +9,9 @@ description: 'Use when a plan, spec, policy, design, or code choice needs durabl
 
 ## What rationale means here
 
-There are three things that you should consider writing down. The **what**, the **how**, and the **why**. Always document **what** applies and **how** it works in practice. The **why** is not required. Add **why** only when it helps a future reader, implementer, or reviewer assess correctness or make a sound decision. Do not include any history that affects neither correctness nor future decisions.
+Always record what was decided and how it works, including facts that establish its material consequences, limits, or lack of either.
+Record why only when it helps a future reader, implementer, or reviewer assess correctness or make a sound decision; a defensible alternative alone does not require it.
+Keep history only when it meets that same test.
 
 ## Keep one authoritative home
 

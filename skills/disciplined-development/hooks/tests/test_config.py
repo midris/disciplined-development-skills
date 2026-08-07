@@ -40,7 +40,7 @@ def _write_user_config(tmp_path: Path, monkeypatch, data) -> None:
 
 def test_defaults_roundtrip_nested_dot_path():
     """A nested dot-path returns the shipped default value."""
-    # --- review_tiers.fast (new tier) ---
+    # --- review_tiers.fast ---
     assert config.get("review_tiers.fast.nudge_threshold") == 30
     assert config.get("review_tiers.fast.hard_block_threshold") == 60
     # --- review_tiers.regular: commit_edit_floor only; reviewer/model/effort gone ---
@@ -56,7 +56,7 @@ def test_defaults_roundtrip_nested_dot_path():
     assert config.get("review_tiers.cold_read_escalation.default_effort") is None
     # --- review_tiers.pre_pr removed; review.* now carries reviewer config ---
     assert config.get("review_tiers.pre_pr.reviewer") is None
-    # --- strategy_selector removed (its consumers deleted in Task 3.2) ---
+    # --- removed strategy-selector keys stay absent ---
     assert config.get("strategy_selector.pre_stuff_max_bytes") is None
     assert config.get("strategy_selector.high_effort_min_bytes") is None
     # --- counters: review_threshold removed; discipline_threshold present ---
@@ -64,17 +64,17 @@ def test_defaults_roundtrip_nested_dot_path():
     assert config.get("counters.review_threshold") is None
     assert config.get("review.prompt_path") == ".claude/skills/adversarial-review/SKILL.md"
     assert config.get("branch_convention.trunk_branches") == ["master", "main"]
-    assert config.get("plans.active_plan_pointer") == ".claude/active-plan"
-    assert config.get("plans.fallback_glob") == ["plans/*.md"]
-    # skip_section_headers was consumed only by the deleted inject_plan_state
-    # parser; it must be absent from defaults (not merely undefined).
+    assert config.get("plans.active_plan_pointer") is None
+    assert config.get("plans.fallback_glob") is None
+    # skip_section_headers is not a supported plan key; it must be absent from
+    # defaults (not merely undefined).
     assert config.get("plans.skip_section_headers") is None
     assert config.get("codex.pr_review_timeout_s") == 600
-    # --- review gate config (new in Sub-task A / Task 2.2) ---
+    # --- review gate config defaults ---
     assert config.get("review.reviewer") == "codex"
     assert config.get("review.model") == "gpt-5.6-terra"
     assert config.get("review.effort") == "medium"
-    # Observability (Part G): single config surface for logging tunables.
+    # Single config surface for logging tunables.
     assert config.get("logging.dir") is None  # null → logging_setup derives
     assert config.get("logging.retention_days") == 14
     assert config.get("logging.enabled") is True
@@ -140,13 +140,23 @@ def test_malformed_user_config_invalid_json_is_discarded(tmp_path, monkeypatch):
     assert config.get("counters.discipline_threshold") == 50
 
 
+def test_malformed_user_config_invalid_utf8_is_discarded(tmp_path, monkeypatch):
+    """An invalid-UTF-8 user config is discarded; defaults stand."""
+    path = tmp_path / "dd-config.json"
+    path.write_bytes(b"\xff")
+    monkeypatch.setenv("DD_CONFIG", str(path))
+    config.reset_config_cache()
+
+    assert config.get("counters.discipline_threshold") == 50
+
+
 def test_unknown_dot_path_returns_none():
     """An unknown dot-path returns None by default."""
     assert config.get("does.not.exist") is None
     assert config.get("review_tiers.regular.nonexistent") is None
 
 
-# --- C1: new-tier threshold keys ---
+# --- Review-tier threshold keys ---------------------------------------------
 
 def test_fast_tier_thresholds_defaults():
     """review_tiers.fast exposes nudge and hard-block thresholds at their defaults."""
@@ -177,9 +187,9 @@ def test_fast_tier_non_positive_user_override_is_ignored(tmp_path, monkeypatch):
     """A non-positive user override of fast.nudge_threshold falls back to default.
 
     Consumers reading this key must guard against non-int/non-positive values
-    the same way review_nudge guards counters.review_threshold.  The config
-    layer hands back whatever the user wrote; callers do the guard.  This test
-    documents the raw behaviour so consumers know they own the guard.
+    the same way edit_counter guards review_tiers.fast.nudge_threshold. The
+    config layer hands back whatever the user wrote; callers do the guard. This
+    test documents the raw behavior so consumers know they own the guard.
     """
     _write_user_config(
         tmp_path,
@@ -197,7 +207,7 @@ def test_fast_tier_non_positive_user_override_is_ignored(tmp_path, monkeypatch):
     assert config.get("review_tiers.fast.nudge_threshold") == 30
 
 
-# --- PR-5: resolve the project override via CLAUDE_PROJECT_DIR (Decision K) ---
+# --- Resolve the project override via CLAUDE_PROJECT_DIR ---------------------
 # Tests below delenv DD_CONFIG (the autouse _isolate_config fixture sets it) to
 # reach the CLAUDE_PROJECT_DIR / cwd resolution branches.
 
@@ -248,7 +258,7 @@ def test_dd_config_env_wins_over_project_dir(tmp_path, monkeypatch):
     assert config.get("counters.discipline_threshold") == 9
 
 
-# --- Task 2.2 Sub-task A: review gate config defaults ---
+# --- review gate config defaults ---
 
 def test_review_gate_reviewer_model_effort_defaults():
     """review.reviewer / review.model / review.effort ship with correct defaults."""
@@ -266,3 +276,10 @@ def test_review_gate_user_override_of_reviewer(tmp_path, monkeypatch):
     assert config.get("review.effort") == "medium"
     # prompt_path sibling also survives.
     assert config.get("review.prompt_path") == ".claude/skills/adversarial-review/SKILL.md"
+
+
+def test_obsolete_plan_and_advisory_config_keys_are_absent():
+    assert config.get("plans") is None
+    assert config.get("plans.active_plan_pointer") is None
+    assert config.get("plans.fallback_glob") is None
+    assert config.get("pr_review.advisory_paths") is None

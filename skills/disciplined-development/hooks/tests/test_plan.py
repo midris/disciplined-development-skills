@@ -1,22 +1,10 @@
-"""Tests for hooks.lib.plan.resolve_active_plan.
+"""Consumer contract for explicit active-plan resolution."""
 
-Builds a fake repo under ``tmp_path`` with a ``.claude/active-plan`` pointer
-and ``plans/*.md`` files, anchored via a real ``git init`` so the module's
-``git rev-parse --show-toplevel`` probe resolves to the temp repo. The
-``DD_ACTIVE_PLAN`` env var is set/cleared via monkeypatch.
-
-Source-label strings are derived from ``hooks.lib.plan`` (ported from the
-``dd_lib`` predecessor): the env tier → ``"DD_ACTIVE_PLAN env var"``, the
-pointer tier → the anchored pointer-file path itself, the mtime tier →
-``"mtime fallback"``. A non-existent ``DD_ACTIVE_PLAN`` path is returned
-as-is (the env tier wins on non-empty, existence-agnostic).
-"""
 import os
 import subprocess
 
 import pytest
 
-from hooks.lib import config
 from hooks.lib import plan
 
 
@@ -28,236 +16,74 @@ def _git(args, cwd):
 
 @pytest.fixture
 def fake_repo(tmp_path, monkeypatch):
-    """A temp git repo with ``plans/`` + ``.claude/`` dirs. Clears
-    ``DD_ACTIVE_PLAN`` by default; tests opt back in via monkeypatch."""
     repo = tmp_path / "repo"
     repo.mkdir()
     _git(["init"], repo)
     (repo / "plans").mkdir()
     (repo / ".claude").mkdir()
-    # Hermeticity against the REAL user config (this was the actual flake
-    # cause). config.get() falls back to `Path.cwd()/.claude/dd-config.json`
-    # when DD_CONFIG is unset — so running the suite from the repo ROOT (vs
-    # hooks/) made resolve_active_plan read the project's real dd-config.json,
-    # whose plans.fallback_glob (`plans/phase-*.md`, ...) matches none of this
-    # fixture's files → the mtime test got None. Point DD_CONFIG at an absent
-    # path so config loads {} → shipped defaults (fallback_glob ["plans/*.md"])
-    # regardless of cwd. (DD_DEFAULTS is cleared similarly; config is lru_cached
-    # and test_config.py mutates both — reset the cache so defaults stand.)
-    monkeypatch.setenv("DD_CONFIG", str(tmp_path / "absent-dd-config.json"))
-    monkeypatch.delenv("DD_DEFAULTS", raising=False)
-    # Pin git-toplevel to the fixture repo too: removes the real subprocess
-    # (and its 5s timeout) from these tests; the real _git_toplevel path is
-    # covered by test_git_toplevel_resolves_real_repo.
-    monkeypatch.setattr(plan, "_git_toplevel", lambda cwd=None: str(repo))
     monkeypatch.delenv("DD_ACTIVE_PLAN", raising=False)
-    config.reset_config_cache()
     yield repo
-    config.reset_config_cache()
 
 
-def test_env_pointer_wins_over_everything(fake_repo, monkeypatch):
-    # Both a pointer file and a plans/*.md exist, but the env var outranks them.
-    (fake_repo / ".claude" / "active-plan").write_text("plans/from-pointer.md\n")
-    (fake_repo / "plans" / "a.md").write_text("# a\n")
+def test_relative_env_pin_anchors_to_resolved_repo(fake_repo, monkeypatch):
     monkeypatch.setenv("DD_ACTIVE_PLAN", "plans/from-env.md")
-
     assert plan.resolve_active_plan(cwd=str(fake_repo)) == (
-        "plans/from-env.md",
+        str(fake_repo / "plans" / "from-env.md"),
         "DD_ACTIVE_PLAN env var",
     )
 
 
-def test_pointer_file_used_when_no_env(fake_repo):
-    (fake_repo / ".claude" / "active-plan").write_text("plans/from-pointer.md\n")
-    (fake_repo / "plans" / "a.md").write_text("# a\n")
-
-    result = plan.resolve_active_plan(cwd=str(fake_repo))
-    assert result is not None
-    plan_path, source = result
-    assert plan_path == "plans/from-pointer.md"
-    # Label is the anchored pointer-file path itself.
-    assert source == os.path.join(str(fake_repo), ".claude", "active-plan")
+def test_absolute_env_pin_is_preserved(fake_repo, monkeypatch):
+    target = str(fake_repo / "elsewhere.md")
+    monkeypatch.setenv("DD_ACTIVE_PLAN", target)
+    assert plan.resolve_active_plan(cwd=str(fake_repo)) == (
+        target,
+        "DD_ACTIVE_PLAN env var",
+    )
 
 
-def test_mtime_fallback_when_no_env_or_pointer(fake_repo):
+def test_relative_pointer_pin_anchors_to_resolved_repo(fake_repo):
+    pointer = fake_repo / ".claude" / "active-plan"
+    pointer.write_text("plans/from-pointer.md\n")
+    assert plan.resolve_active_plan(cwd=str(fake_repo)) == (
+        str(fake_repo / "plans" / "from-pointer.md"),
+        str(pointer),
+    )
+
+
+def test_missing_pinned_plan_remains_selected(fake_repo):
+    pointer = fake_repo / ".claude" / "active-plan"
+    pointer.write_text("plans/does-not-exist.md\n")
+    assert plan.resolve_active_plan(cwd=str(fake_repo)) == (
+        str(fake_repo / "plans" / "does-not-exist.md"),
+        str(pointer),
+    )
+
+
+def test_plan_files_without_a_pin_do_not_trigger_mtime_fallback(fake_repo):
     older = fake_repo / "plans" / "older.md"
     newer = fake_repo / "plans" / "newer.md"
     older.write_text("# older\n")
     newer.write_text("# newer\n")
-    # Force a deterministic mtime ordering (newer is strictly newest).
     os.utime(older, (1000, 1000))
     os.utime(newer, (2000, 2000))
 
-    result = plan.resolve_active_plan(cwd=str(fake_repo))
-    assert result is not None
-    plan_path, source = result
-    assert plan_path == str(newer)
-    assert source == "mtime fallback"
-
-
-def test_git_toplevel_resolves_real_repo(git_repo):
-    # fake_repo stubs _git_toplevel for hermeticity, so the real subprocess
-    # path (invocation, returncode handling, output strip) is covered here
-    # against the conftest real-git fixture — not left untested.
-    root = plan._git_toplevel(cwd=str(git_repo))
-    assert root is not None
-    assert os.path.realpath(root) == os.path.realpath(str(git_repo))
-
-
-def test_git_toplevel_returns_none_outside_repo(tmp_path):
-    assert plan._git_toplevel(cwd=str(tmp_path)) is None
-
-
-def test_no_plan_available_returns_none(fake_repo):
-    # No env, no pointer, no plans/*.md.
     assert plan.resolve_active_plan(cwd=str(fake_repo)) is None
 
 
-def test_nonexistent_env_path_returned_as_is(fake_repo, monkeypatch):
-    # Documents ported behavior: a non-empty DD_ACTIVE_PLAN wins even when the
-    # path does not exist — it is returned verbatim, NOT a fall-through.
-    (fake_repo / "plans" / "a.md").write_text("# a\n")
-    monkeypatch.setenv("DD_ACTIVE_PLAN", "plans/does-not-exist.md")
+def test_empty_pointer_is_unpinned(fake_repo):
+    (fake_repo / ".claude" / "active-plan").write_text("\n")
+    assert plan.resolve_active_plan(cwd=str(fake_repo)) is None
 
-    assert plan.resolve_active_plan(cwd=str(fake_repo)) == (
-        "plans/does-not-exist.md",
+
+def test_invalid_utf8_pointer_is_unpinned_not_a_crash(fake_repo):
+    (fake_repo / ".claude" / "active-plan").write_bytes(b"\xff\xfe\n")
+    assert plan.resolve_active_plan(cwd=str(fake_repo)) is None
+
+
+def test_non_repo_cwd_anchors_relative_pin_to_given_cwd(tmp_path, monkeypatch):
+    monkeypatch.setenv("DD_ACTIVE_PLAN", "plan.md")
+    assert plan.resolve_active_plan(cwd=str(tmp_path)) == (
+        str(tmp_path / "plan.md"),
         "DD_ACTIVE_PLAN env var",
     )
-
-
-def test_unreadable_pointer_falls_through_to_mtime(fake_repo, monkeypatch):
-    """PermissionError on the pointer file must not propagate.
-
-    The hook is a *-matcher PreToolUse — any uncaught OSError would crash
-    the hook and block every subsequent tool call until the file is fixed.
-    Guard: fall through to the glob/mtime path exactly as if the pointer
-    were absent.
-    """
-    # A plans/*.md exists so we can assert the mtime fallback is returned.
-    md = fake_repo / "plans" / "fallback.md"
-    md.write_text("# fallback\n")
-
-    # Monkeypatch builtins.open so the pointer-path open raises PermissionError.
-    # (chmod is unreliable — root bypasses it; monkeypatching is hermetic.)
-    import builtins
-    real_open = builtins.open
-    pointer_path = str(fake_repo / ".claude" / "active-plan")
-    # Write the pointer file so os.path.isfile returns True (triggers the open).
-    (fake_repo / ".claude" / "active-plan").write_text("plans/target.md\n")
-
-    def _selective_open(file, *args, **kwargs):
-        if str(file) == pointer_path:
-            raise PermissionError(13, "Permission denied", pointer_path)
-        return real_open(file, *args, **kwargs)
-
-    monkeypatch.setattr(builtins, "open", _selective_open)
-
-    result = plan.resolve_active_plan(cwd=str(fake_repo))
-    assert result is not None, "must fall through to mtime fallback, not raise"
-    path, source = result
-    assert path == str(md)
-    assert source == "mtime fallback"
-
-
-def test_non_string_active_plan_pointer_config_does_not_raise(fake_repo, monkeypatch):
-    """Non-string active_plan_pointer config value (e.g. `true`) must not raise.
-
-    os.path.isabs(True) raises TypeError — the *-matcher PreToolUse caller
-    must never crash, so an invalid config value falls back to the default
-    pointer path (".claude/active-plan") and continues resolution normally.
-    """
-    # Seed a plans/*.md so we can assert the mtime fallback is returned.
-    md = fake_repo / "plans" / "fallback.md"
-    md.write_text("# fallback\n")
-
-    # Inject a non-string value for active_plan_pointer via monkeypatching config.get.
-    real_get = config.get
-
-    def _patched_get(key, default=None):
-        if key == "plans.active_plan_pointer":
-            return True  # bool — would make os.path.isabs(True) raise TypeError
-        return real_get(key, default)
-
-    monkeypatch.setattr(config, "get", _patched_get)
-
-    result = plan.resolve_active_plan(cwd=str(fake_repo))
-    # Must not raise; falls through to mtime fallback.
-    assert result is not None
-    path, source = result
-    assert path == str(md)
-    assert source == "mtime fallback"
-
-
-def test_pointer_file_with_invalid_utf8_bytes_does_not_raise(fake_repo):
-    """Pointer file containing invalid UTF-8 bytes must not raise UnicodeDecodeError.
-
-    fh.readline() on an invalid-bytes file raises UnicodeDecodeError (a
-    ValueError, NOT caught by the existing `except OSError`).  The *-matcher
-    PreToolUse caller must never crash — treat as absent and fall through to
-    the glob/mtime path.
-    """
-    # Write invalid UTF-8 bytes directly (binary mode).
-    pointer = fake_repo / ".claude" / "active-plan"
-    pointer.write_bytes(b"\xff\xfe invalid utf-8 \x80\x81\n")
-
-    md = fake_repo / "plans" / "fallback.md"
-    md.write_text("# fallback\n")
-
-    result = plan.resolve_active_plan(cwd=str(fake_repo))
-    assert result is not None, "must fall through to mtime fallback, not raise"
-    path, source = result
-    assert path == str(md)
-    assert source == "mtime fallback"
-
-
-def test_non_list_fallback_glob_config_does_not_raise(fake_repo, monkeypatch):
-    """Non-list/non-str fallback_glob config (e.g. `42`) must not raise.
-
-    After the str→list coercion, a non-list value like an int or bool would
-    make `for pattern in fallback_globs` iterate over its digits or raise
-    TypeError on glob.glob(_anchor(pattern)).  The *-matcher PreToolUse caller
-    must never crash — an invalid config value falls back to ["plans/*.md"].
-    """
-    md = fake_repo / "plans" / "fallback.md"
-    md.write_text("# fallback\n")
-
-    real_get = config.get
-
-    def _patched_get(key, default=None):
-        if key == "plans.fallback_glob":
-            return 42  # int — not a str, not a list
-        return real_get(key, default)
-
-    monkeypatch.setattr(config, "get", _patched_get)
-
-    result = plan.resolve_active_plan(cwd=str(fake_repo))
-    # Must not raise; falls back to default glob and finds the .md file.
-    assert result is not None
-    path, source = result
-    assert path == str(md)
-    assert source == "mtime fallback"
-
-
-def test_vanishing_candidate_during_mtime_selection_does_not_raise(fake_repo, monkeypatch):
-    """OSError during getmtime (file vanishes between glob and stat) must not propagate.
-
-    Degrade-safe invariant: the * PreToolUse caller must never crash.
-    Skip unstatable candidates; return None if none remain.
-    """
-    md = fake_repo / "plans" / "ghost.md"
-    md.write_text("# ghost\n")
-
-    real_getmtime = os.path.getmtime
-
-    def _raising_getmtime(p):
-        if str(p) == str(md):
-            raise OSError(2, "No such file or directory", str(p))
-        return real_getmtime(p)
-
-    monkeypatch.setattr(os.path, "getmtime", _raising_getmtime)
-
-    # No pointer file, no env — only the glob candidate (which vanishes).
-    result = plan.resolve_active_plan(cwd=str(fake_repo))
-    # The only candidate is unstatable, so result is None — not a raised exception.
-    assert result is None

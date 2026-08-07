@@ -8,7 +8,8 @@ Single source of truth for agent guidance in this repository. If `AGENTS.md` / `
 - Cross-reference `ARCHITECTURE.md` (current component interplay + diagrams), `README.md` (bundle overview, install/recovery flow), and `skills/disciplined-development/hooks/README.md` (hook design + state model) before non-trivial changes. Hook config schema: `skills/disciplined-development/hooks/dd-config.md`.
 - Treat active plans and design specs under `plans/` as live sources of truth — update them in the same change set as the work they track.
 - Test-first for behavior changes — see "Test-Driven Changes" below.
-- Periodic adversarial review per `disciplined-development` Principle 8 — at review-nudge signals or natural pauses, run a deep review per the adversarial-review skill, then log it via `dd-log` to reset the counter; iterate per `adversarial-review-loop` until clean.
+- Periodic adversarial review per `disciplined-development` Principle 8 — at review-nudge signals or natural pauses, iterate per `adversarial-review-loop` until clean and record every round via `dd-log`; only an explicit final `DD-VERDICT: PASS` resets edit and commit cadence.
+- Run `git commit` and `gh pr create` as standalone Bash calls from the target repository, with other commands in separate calls. Compounds containing either action are blocked; unrelated `&&` commands are unaffected.
 - After meaningful work, update docs that drifted — see "Documentation Update Checklist" below.
 - **Single source of truth, derive the rest.** Describe current state and durable rules — not history. If a fact can be derived from `git log`, schema/code, or a SKILL.md on disk, do not duplicate it.
 - **Skill/hook surface is the public API.** Consumers symlink these dirs into their projects; the hook command names, `dd-config.json` keys, skill dir names, and `examples/*` files are the contract. When that contract changes, update `examples/` and the relevant README in the same commit. Prefer one clean breaking change over a compatibility shim — flag breakage in the commit body.
@@ -84,7 +85,7 @@ No `ROADMAP.md`. Active work is tracked in `plans/` (when a plan is open) or dir
 - **Mandatory in high-risk areas:**
   - **Hook stack (`skills/disciplined-development/hooks/`).** A misbehaving hook — especially `discipline_nudge.py`, which matches `*` on PreToolUse — can block every tool call in every consumer project. Biggest blast radius in the repo. Every hook change needs a test.
   - **`install-skills.sh`.** Touches consumer filesystems and must not clobber project-local skills. Regressions are silent (the user finds out later). Cover via `tests/test_install_skills.py`.
-  - **`external_review.py` review gate.** Model-callable CLI that gates PR creation. Wrong verdict = a blocked PR or a false pass. Cover the verdict + dispatch logic.
+  - **`external_review.py` review gate.** Model-callable CLI that gates PR creation. Wrong verdict parsing or effective-decision derivation = a blocked PR or a false pass. Cover the verdict + dispatch logic.
   - **Skill `SKILL.md` content changes.** No test catches a worse instruction. Substitute: run a deep review per the adversarial-review skill on the staged branch and address findings before commit.
 - **Keep tests targeted and contract-oriented.** Focused unit tests over end-to-end. Run the hook test suite (`cd skills/disciplined-development/hooks && python3 -m pytest -q`) before sign-off; report gaps if a full run isn't possible.
 - **Inline fixture-state dependencies.** When a test depends on shared fixture state seeded elsewhere, add a one-line note at the call site pointing at the fixture — cross-file fixture dependencies that aren't called out get misread as bugs.
@@ -105,7 +106,7 @@ No `ROADMAP.md`. Active work is tracked in `plans/` (when a plan is open) or dir
 Small, single-developer meta-project — no phase/chunk model.
 
 - Feature branch: `feature/<short-name>` (or `fix/<short-name>`, `docs/<short-name>`) from `main`.
-- PR flow: feature branch → `main`. One PR per logical change; keep it small enough that one cold-read review covers it.
+- PR flow: feature branch → `main`. One PR per logical change; keep it small enough for one focused independent review.
 - Each PR must pass `cd skills/disciplined-development/hooks && python3 -m pytest -q` before merge.
 - **Never squash-merge.** Use `gh pr merge --merge` (merge-commit). Feature branches are deleted after merge; the merge commit is the only way per-branch commit history survives on `main`.
 - When dispatching a code-review agent on a branch, list new test functions by name in the prompt — agents grep by contract and miss new tests that overlap with older ones in the same file.

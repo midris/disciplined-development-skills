@@ -1,38 +1,9 @@
 #!/usr/bin/env python3
-"""external_review.py — whole-repo, verdict-driven, fail-closed gate tool.
+"""Whole-repository, plan-anchored external review gate.
 
-Usage:
-    python3 external_review.py [--cwd <path>]
-
-Runs a whole-repo codex review anchored to the active plan and the adversarial-
-review skill pointer.  Reads the declared ``DD-VERDICT: PASS|BLOCK`` from the
-codex last-message file (``-o``), logs every attempt to ``reviews.jsonl``, and
-exits 0 only on PASS.  Fail-closed: every other outcome (BLOCK, no verdict,
-missing binary, timeout, empty output, non-zero/abnormal codex exit) exits
-non-zero.
-
-The hook (``pre_pr_review.py``) is wired to this tool in Task 2.3.  This file
-is invokable standalone for development / smoke testing.  **The exit contract is
-0=allow / non-zero=block; it relies on the wrapping hook translating any
-non-zero result to exit 2 (Claude Code blocks a PreToolUse tool ONLY on exit 2).
-Do NOT wire this script directly as a PreToolUse delegate — a BLOCK would exit 1,
-which Claude Code treats as non-blocking and would let the PR through.**
-
-Config keys consumed (from ``review.*``, resolved via ``lib/config.py``):
-  ``review.prompt_path``  — path to the adversarial-review skill (the pointer,
-                             not its body; codex reads it itself).
-  ``review.reviewer``     — reviewer id logged in the row (currently ``codex``).
-  ``review.model``        — codex model override (``-m`` flag).
-  ``review.effort``       — codex reasoning effort (``-c model_reasoning_effort``).
-  ``codex.pr_review_timeout_s`` — wall-clock timeout in seconds.
-
-Env vars:
-  ``DD_CODEX_BIN``      — path to the codex binary (default ``codex``); override
-                           for tests so a shim is used instead of the real binary.
-  ``DD_REVIEW_TIMEOUT`` — wall-clock timeout override in seconds (the documented
-                           consumer override; see dd-config.md). A value <= 0 or
-                           unparseable is rejected; falls back to
-                           ``codex.pr_review_timeout_s`` then the default.
+Exit 0 allows; every reviewer BLOCK or execution/setup failure returns non-zero.
+The PreToolUse wrapper translates that non-zero result to Claude Code's blocking
+exit 2.
 """
 
 from __future__ import annotations
@@ -45,122 +16,52 @@ import tempfile
 import time
 
 _HERE = pathlib.Path(__file__).resolve().parent
-_BASE_DIR = _HERE.parent  # the dir containing the `hooks` package
+_BASE_DIR = _HERE.parent
 if str(_BASE_DIR) not in sys.path:
     sys.path.insert(0, str(_BASE_DIR))
 
-from hooks.lib import (  # noqa: E402
-    config,
-    logging_setup,
-    plan,
-    review_record,
-    reviewer_runner,
-    severity,
-    state,
-)
+from hooks.lib import config, logging_setup, plan, review_record, severity, state  # noqa: E402
 
 _DEFAULT_TIMEOUT_S = 600.0
 _SOURCE = "external-gate"
 _TRIGGER = "gate:pre-pr"
-
-
-# ---------------------------------------------------------------------------
-# Branch helpers (mirror log_review.py exactly — symbolic-ref + "detached")
-# ---------------------------------------------------------------------------
-
-
-def _current_branch(repo: str) -> str:
-    """Current branch via git symbolic-ref; 'detached' on detached HEAD or failure.
-
-    Matches the cadence hooks (edit_counter.py) exactly: ``symbolic-ref --short
-    HEAD`` and fall back to the literal ``"detached"`` so the per-branch
-    state-dir key is always consistent.
-    """
-    try:
-        r = subprocess.run(
-            ["git", "-C", repo, "symbolic-ref", "--short", "HEAD"],
-            capture_output=True, text=True, check=False, timeout=5,
-        )
-    except Exception:
-        return "detached"
-    branch = r.stdout.strip()
-    return branch if r.returncode == 0 and branch else "detached"
-
-
-# ---------------------------------------------------------------------------
-# Timeout resolution
-# ---------------------------------------------------------------------------
+_REPOSITORY_SELECTOR_ENV = ("GH_REPO", "GIT_DIR", "GIT_WORK_TREE", "GIT_COMMON_DIR")
 
 
 def _resolve_timeout() -> float:
-    """Timeout in seconds: DD_REVIEW_TIMEOUT env → config → default.
-
-    ``DD_REVIEW_TIMEOUT`` is the documented consumer override (dd-config.md), the
-    same env the old engine honored. A value <= 0 or unparseable is rejected —
-    ``Popen.wait(timeout=0)`` would fire instantly — and falls through to
-    ``codex.pr_review_timeout_s`` then the default. Floats are accepted (the int
-    contract of the old engine is a subset), so tests can use a sub-second budget.
-    """
-    env_t = os.environ.get("DD_REVIEW_TIMEOUT")
-    if env_t:
+    env_timeout = os.environ.get("DD_REVIEW_TIMEOUT")
+    if env_timeout:
         try:
-            v = float(env_t)
-            if v > 0:
-                return v
-        except (ValueError, TypeError):
+            value = float(env_timeout)
+            if value > 0:
+                return value
+        except (TypeError, ValueError):
             pass
-    val = config.get("codex.pr_review_timeout_s")
-    if isinstance(val, (int, float)) and not isinstance(val, bool) and val > 0:
-        return float(val)
+    value = config.get("codex.pr_review_timeout_s")
+    if isinstance(value, (int, float)) and not isinstance(value, bool) and value > 0:
+        return float(value)
     return _DEFAULT_TIMEOUT_S
 
 
-# ---------------------------------------------------------------------------
-# Prompt builder
-# ---------------------------------------------------------------------------
-
-
-def _build_prompt(repo: str) -> str:
-    """Build a deterministic, plan-anchored prompt for ``codex exec``.
-
-    Includes a pointer to the review skill (resolved against ``repo``) and the
-    active-plan path.  Does NOT stuff the skill body — codex reads it itself.
-    """
+def _build_prompt(repo: str, active_plan: str) -> str:
     prompt_path = config.get(
-        "review.prompt_path",
-        ".claude/skills/adversarial-review/SKILL.md",
+        "review.prompt_path", ".claude/skills/adversarial-review/SKILL.md"
     )
-    # Resolve against the repo under review (absolute), or keep as-is if already abs.
-    if not os.path.isabs(prompt_path):
-        skill_pointer = os.path.join(repo, prompt_path)
-    else:
-        skill_pointer = prompt_path
-
-    # Active plan — resolve with cwd anchored to repo so the fallback glob hits
-    # the right plans/ dir.  Env DD_ACTIVE_PLAN wins; otherwise pointer file /
-    # newest mtime in plans/*.md relative to the repo.
-    active_plan_result = plan.resolve_active_plan(cwd=repo)
-    if active_plan_result is not None:
-        plan_path, _ = active_plan_result
-        plan_section = f"Active plan: {plan_path}"
-    else:
-        plan_section = "(no active plan found)"
-
+    if not isinstance(prompt_path, str) or not prompt_path:
+        prompt_path = ".claude/skills/adversarial-review/SKILL.md"
+    skill_pointer = (
+        prompt_path if os.path.isabs(prompt_path) else os.path.join(repo, prompt_path)
+    )
     return (
         f"Review this repository following the review guidelines at: {skill_pointer}\n"
-        f"{plan_section}\n"
-        f"Review the entire repository against the plan above.\n"
-        f"The plan may be phased (chunks/PRs): treat unchecked or explicitly-future "
-        f"sections as out of scope — planned work, not missing work.\n"
-        f"Emit findings as: - [PN] file:line: summary\n"
-        f"End with a final line containing only DD-VERDICT: PASS or DD-VERDICT: BLOCK "
-        f"(nothing trailing)."
+        f"Active plan: {active_plan}\n"
+        "Review the entire repository against the plan above.\n"
+        "The plan may be phased (chunks/PRs): treat unchecked or explicitly-future "
+        "sections as out of scope — planned work, not missing work.\n"
+        "Emit findings as: - [PN] file:line: summary\n"
+        "End with a final line containing only DD-VERDICT: PASS or DD-VERDICT: BLOCK "
+        "(nothing trailing)."
     )
-
-
-# ---------------------------------------------------------------------------
-# Log helper (best-effort — never raises)
-# ---------------------------------------------------------------------------
 
 
 def _log_attempt(
@@ -172,256 +73,202 @@ def _log_attempt(
     duration_s: float | None,
     context: dict | None = None,
 ) -> None:
-    """Append one row to reviews.jsonl; swallow all errors (best-effort).
-
-    ``context`` is optional: callers that already called gather_cadence_context
-    (e.g. the PASS path, which reuses it for the state reset-fold) pass it in
-    to avoid a second round of git subprocesses.
-    """
-    reviewer = config.get("review.reviewer", "codex")
-    model = config.get("review.model")
-    effort = config.get("review.effort")
     try:
-        ctx = context if context is not None else review_record.gather_cadence_context(repo, branch)
-        extra: dict = {}
-        if model:
+        ctx = context or review_record.gather_cadence_context(repo, branch)
+        extra = {}
+        model = config.get("review.model")
+        effort = config.get("review.effort")
+        if isinstance(model, str) and model:
             extra["model"] = model
-        if effort:
+        if isinstance(effort, str) and effort:
             extra["effort"] = effort
         row = review_record.build_review_record(
             findings=output,
             source=_SOURCE,
-            reviewer=reviewer,
+            reviewer=config.get("review.reviewer", "codex"),
             trigger=_TRIGGER,
             round=1,
             context=ctx,
             decision=decision,
             reason=reason,
             duration_s=duration_s,
-            extra=extra if extra else None,
+            extra=extra or None,
         )
         logging_setup.append_review(row)
     except Exception:
-        # Best-effort: a log failure must not crash the gate.
         pass
 
 
-# ---------------------------------------------------------------------------
-# CLI arg parsing
-# ---------------------------------------------------------------------------
-
-
 def _parse_args(argv: list[str]) -> tuple[str | None, str]:
-    """Return (cwd_override, error_message).  error_message is '' on success."""
     cwd: str | None = None
-    i = 0
-    while i < len(argv):
-        arg = argv[i]
-        if arg == "--cwd":
-            if i + 1 >= len(argv):
-                return None, "--cwd requires a path argument"
-            if cwd is not None:
-                return None, "--cwd specified twice"
-            cwd = argv[i + 1]
-            i += 2
-        else:
-            return None, f"unrecognized argument {arg!r}"
+    index = 0
+    while index < len(argv):
+        if argv[index] != "--cwd":
+            return None, f"unrecognized argument {argv[index]!r}"
+        if index + 1 >= len(argv):
+            return None, "--cwd requires a path argument"
+        if cwd is not None:
+            return None, "--cwd specified twice"
+        cwd = argv[index + 1]
+        index += 2
     return cwd, ""
 
 
-# ---------------------------------------------------------------------------
-# Main
-# ---------------------------------------------------------------------------
+def _plan_is_readable(path: str) -> bool:
+    try:
+        with open(path, "rb") as handle:
+            handle.read(1)
+        return True
+    except (OSError, TypeError):
+        return False
+
+
+def _review_env() -> dict[str, str]:
+    clean = dict(os.environ)
+    for name in _REPOSITORY_SELECTOR_ENV:
+        clean.pop(name, None)
+    return clean
 
 
 def main(argv: list[str] | None = None) -> int:
-    if argv is None:
-        argv = sys.argv[1:]
-
-    cwd_override, err = _parse_args(argv)
-    if err:
-        print(f"[external-review] ERROR — {err}", file=sys.stderr)
+    argv = sys.argv[1:] if argv is None else argv
+    cwd_override, error = _parse_args(argv)
+    if error:
+        print(f"[external-review] ERROR — {error}", file=sys.stderr)
         print("Usage: python3 external_review.py [--cwd <path>]", file=sys.stderr)
         return 2
-
     if cwd_override and not pathlib.Path(cwd_override).is_dir():
-        print(f"[external-review] ERROR — --cwd {cwd_override!r} is not a directory",
-              file=sys.stderr)
+        print(
+            f"[external-review] ERROR — --cwd {cwd_override!r} is not a directory",
+            file=sys.stderr,
+        )
         return 2
 
-    # Key state (and run the review) off the git top-level, not the raw cwd: a
-    # subdir cwd would otherwise write a stray `<subdir>/.claude/.dd-state` and
-    # the reset-fold would silently miss the counter the cadence hooks track at
-    # the root. Fall back to the raw cwd outside a git repo.
-    start = cwd_override or str(pathlib.Path.cwd())
-    repo = state.repo_root(start) or start
-
-    # `--cwd` names the repo under review, so that repo's own dd-config.json has
-    # to drive the run. config resolves user overrides under CLAUDE_PROJECT_DIR,
-    # which still points at the invoking project — leaving its model, effort,
-    # timeout and prompt_path to leak into a review of a different repo, with a
-    # prompt_path that need not resolve there at all. Redirect before the first
-    # read (every config.get below runs through _resolve_timeout / _build_prompt
-    # / the log row). Only on --cwd: without it, CLAUDE_PROJECT_DIR is already
-    # the right answer and the harness's value must stand.
+    start_dir = cwd_override or str(pathlib.Path.cwd())
+    repo = state.repo_root(start_dir) or os.path.abspath(start_dir)
     if cwd_override:
         os.environ["CLAUDE_PROJECT_DIR"] = repo
         config.reset_config_cache()
 
-    branch = _current_branch(repo)
-    timeout_s = _resolve_timeout()
+    branch = state.current_branch(repo)
+    plan_result = plan.resolve_active_plan(cwd=repo)
+    if plan_result is None or not _plan_is_readable(plan_result[0]):
+        _log_attempt(repo, branch, "", "ERROR", "plan_unavailable", None)
+        print(
+            "[external-review] ERROR — active plan unavailable; pin a readable "
+            "plan with DD_ACTIVE_PLAN or .claude/active-plan.",
+            file=sys.stderr,
+        )
+        return 1
+    active_plan, _ = plan_result
 
-    # Config values.
     model = config.get("review.model")
     effort = config.get("review.effort")
+    codex_bin = os.environ.get("DD_CODEX_BIN") or "codex"
+    command = [codex_bin, "exec", "--cd", repo]
+    if isinstance(model, str) and model:
+        command.extend(["-m", model])
+    if isinstance(effort, str) and effort:
+        command.extend(["-c", f"model_reasoning_effort={effort}"])
+    command.extend(["-s", "read-only"])
+    prompt = _build_prompt(repo, active_plan)
+    timeout_s = _resolve_timeout()
 
-    # Codex binary — overridable via env for tests.
-    codex_bin = os.environ.get("DD_CODEX_BIN", "codex")
-
-    # Build the deterministic prompt.
-    prompt = _build_prompt(repo)
-
-    # Build codex exec argv.
-    # codex exec --cd <REPO> -m <MODEL> -c model_reasoning_effort=<EFFORT>
-    #            -s read-only -o <LAST_MESSAGE_FILE> "<PROMPT>"
-    cmd: list[str] = [codex_bin, "exec", "--cd", repo]
-    if model:
-        cmd.extend(["-m", model])
-    if effort:
-        cmd.extend(["-c", f"model_reasoning_effort={effort}"])
-    cmd.extend(["-s", "read-only"])
-    # -o <file> is appended just before the prompt (below, after we have the tmpfile).
-
-    start = time.monotonic()
-
-    # Create a temp file for the last-message output.
-    with tempfile.NamedTemporaryFile(
-        mode="w", suffix=".txt", prefix="dd-external-review-", delete=False
-    ) as fh:
-        output_file = fh.name
-
+    output_file: str | None = None
+    started = time.monotonic()
     try:
-        full_cmd = cmd + ["-o", output_file, prompt]
-
-        runner = reviewer_runner.Runner(
-            argv=full_cmd,
-            timeout_s=timeout_s,
-            cwd=repo,
-        )
-        result = runner.run()
-        duration_s = time.monotonic() - start
-
-        # --- cli_missing ---
-        if result.exit_reason.startswith("error:"):
-            output = ""
-            _log_attempt(repo, branch, output, "ERROR", "cli_missing", duration_s)
-            print(f"[external-review] ERROR — codex binary not found: {codex_bin!r}",
-                  file=sys.stderr)
+        with tempfile.NamedTemporaryFile(
+            mode="w", suffix=".txt", prefix="dd-external-review-", delete=False
+        ) as handle:
+            output_file = handle.name
+        full_command = command + ["-o", output_file, prompt]
+        try:
+            result = subprocess.run(
+                full_command,
+                cwd=repo,
+                capture_output=True,
+                text=True,
+                check=False,
+                timeout=timeout_s,
+                env=_review_env(),
+            )
+        except FileNotFoundError:
+            duration = time.monotonic() - started
+            _log_attempt(repo, branch, "", "ERROR", "cli_missing", duration)
+            print(
+                f"[external-review] ERROR — codex binary not found: {codex_bin!r}",
+                file=sys.stderr,
+            )
+            return 1
+        except subprocess.TimeoutExpired:
+            duration = time.monotonic() - started
+            _log_attempt(repo, branch, "", "ERROR", "timeout", duration)
+            print(
+                f"[external-review] ERROR — codex timed out (>{timeout_s}s)",
+                file=sys.stderr,
+            )
+            return 1
+        except OSError:
+            duration = time.monotonic() - started
+            _log_attempt(repo, branch, "", "ERROR", "cli_missing", duration)
+            print("[external-review] ERROR — codex could not be launched", file=sys.stderr)
             return 1
 
-        # --- timeout ---
-        if result.exit_reason == "timeout":
+        duration = time.monotonic() - started
+        try:
+            output = pathlib.Path(output_file).read_text(
+                encoding="utf-8", errors="replace"
+            )
+        except OSError:
             output = ""
-            _log_attempt(repo, branch, output, "ERROR", "timeout", duration_s)
-            print(f"[external-review] ERROR — codex timed out (>{timeout_s}s)",
-                  file=sys.stderr)
-            return 1
 
-        # --- abnormal termination (non-zero exit code or non-"ok" reason) ---
-        # reviewer_runner returns exit_reason="ok" for ANY process that spawned
-        # and completed, REGARDLESS of its exit code. A non-zero codex exit (or a
-        # signal kill) means the reviewer errored — auth failure, partial run,
-        # outage — so its last-message verdict cannot be trusted. Fail closed
-        # (Decision 3) regardless of what landed in the -o file; capture the
-        # partial output for the retro log but never derive a decision from it.
-        if result.exit_reason != "ok" or result.exit_code != 0:
-            try:
-                partial = pathlib.Path(output_file).read_text(
-                    encoding="utf-8", errors="replace")
-            except OSError:
-                partial = ""
-            _log_attempt(repo, branch, partial, "ERROR", "outage", duration_s)
+        if result.returncode != 0:
+            _log_attempt(repo, branch, output, "ERROR", "outage", duration)
             print(
                 f"[external-review] ERROR — codex exited abnormally "
-                f"(reason={result.exit_reason}, exit_code={result.exit_code}); "
-                f"verdict not trusted.",
+                f"(exit_code={result.returncode}); verdict not trusted.",
+                file=sys.stderr,
+            )
+            return 1
+        if not output.strip():
+            _log_attempt(repo, branch, output, "ERROR", "empty_output", duration)
+            print(
+                "[external-review] ERROR — codex produced an empty last-message",
+                file=sys.stderr,
+            )
+            return 1
+        verdict = severity.parse_verdict(output)
+        if verdict is None:
+            _log_attempt(repo, branch, output, "ERROR", "no_verdict", duration)
+            print(
+                "[external-review] ERROR — no DD-VERDICT line in codex output",
+                file=sys.stderr,
+            )
+            return 1
+        if verdict == "BLOCK":
+            _log_attempt(repo, branch, output, "BLOCK", None, duration)
+            print(
+                "[external-review] BLOCK — review found issues, gate closed.",
                 file=sys.stderr,
             )
             return 1
 
-        # --- read the last-message file ---
-        try:
-            output = pathlib.Path(output_file).read_text(encoding="utf-8", errors="replace")
-        except OSError:
-            output = ""
-
-        # --- empty_output ---
-        if not output.strip():
-            _log_attempt(repo, branch, output, "ERROR", "empty_output", duration_s)
-            print("[external-review] ERROR — codex produced an empty last-message",
-                  file=sys.stderr)
-            return 1
-
-        # --- parse verdict ---
-        verdict = severity.parse_verdict(output)
-        if verdict is None:
-            _log_attempt(repo, branch, output, "ERROR", "no_verdict", duration_s)
-            print("[external-review] ERROR — no DD-VERDICT line in codex output",
-                  file=sys.stderr)
-            return 1
-
-        # --- PASS or BLOCK ---
-        if verdict == "PASS":
-            # Gather ctx once; reuse for both the log row and the state reset-fold
-            # (~8 git subprocesses on the happy path if gathered twice).
-            ctx = review_record.gather_cadence_context(repo, branch)
-            _log_attempt(repo, branch, output, "PASS", None, duration_s, context=ctx)
-            # State reset-fold (Decision 2, both on clean result — mirror log_review.py).
-            state.reset(repo, branch, "edits")
-            head = ctx["head_sha"]
-            if head:
-                state.set_checkpoint(repo, branch, head)
-            print("[external-review] PASS — review clean, gate open.")
-            return 0
-        else:
-            # BLOCK — findings confined to pr_review.advisory_paths downgrade
-            # to P3 and don't block (e.g. a pull-only mirror whose fixes can
-            # only land upstream; the block lever can't accelerate those). A
-            # BLOCK with no parseable findings can't prove itself advisory and
-            # stays a BLOCK (fail closed).
-            advisory_globs = config.get("pr_review.advisory_paths", [])
-            if not isinstance(advisory_globs, list):
-                advisory_globs = []
-            if advisory_globs:
-                rewritten, blocking, downgraded = severity.downgrade_advisory_findings(
-                    output, advisory_globs)
-                if downgraded:
-                    output = rewritten
-                    if blocking == 0:
-                        ctx = review_record.gather_cadence_context(repo, branch)
-                        _log_attempt(repo, branch, output, "PASS", "advisory_only",
-                                     duration_s, context=ctx)
-                        state.reset(repo, branch, "edits")
-                        head = ctx["head_sha"]
-                        if head:
-                            state.set_checkpoint(repo, branch, head)
-                        print("[external-review] PASS — all findings in advisory "
-                              "paths, downgraded to P3; gate open. Fix or queue them:")
-                        for line in output.splitlines():
-                            if "advisory path; was" in line:
-                                print(f"  {line}")
-                        return 0
-            _log_attempt(repo, branch, output, "BLOCK", None, duration_s)
-            print("[external-review] BLOCK — review found issues, gate closed.",
-                  file=sys.stderr)
-            return 1
-
+        context = review_record.gather_cadence_context(repo, branch)
+        _log_attempt(repo, branch, output, "PASS", None, duration, context=context)
+        # Independent best-effort writes: a partial failure keeps the remaining
+        # edit or commit review pressure. BLOCK/ERROR paths attempt neither.
+        state.reset(repo, branch, "edits")
+        head = context["head_sha"]
+        if head:
+            state.set_checkpoint(repo, branch, head)
+        print("[external-review] PASS — review clean, gate open.")
+        return 0
     finally:
-        # Clean up the temp file.
-        try:
-            pathlib.Path(output_file).unlink(missing_ok=True)
-        except OSError:
-            pass
+        if output_file is not None:
+            try:
+                pathlib.Path(output_file).unlink(missing_ok=True)
+            except OSError:
+                pass
 
 
 if __name__ == "__main__":

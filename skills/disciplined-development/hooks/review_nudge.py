@@ -8,20 +8,21 @@ three accumulated segments on one envelope:
 1. **Verification (every landed commit, Gate 3).** A fixed reminder to verify
    the change against the running system, or state why it's not exercisable.
    The hook never scans for or grades evidence — the smart model judges what
-   verification fits; the hook only marks the commit. (Decision D1: kept
-   unchanged; independent of cadence thresholds.)
+   verification fits; the hook only marks the commit. This reminder is
+   independent of cadence thresholds.
 2. **T1 nudge (commit edit floor).** Fires when the ``edits`` counter is
    >= ``review_tiers.regular.commit_edit_floor`` (default 30). Suggests
-   running a deep review per the adversarial-review skill, then logging it
-   via ``dd-log`` to reset the counter.
-3. **T2 nudge (cold-read escalation).** Fires when commits-since-last-cold-read
-   reaches ``review_tiers.cold_read_escalation.nudge_threshold`` (default 3).
+   running the deep-review loop and logging every round via ``dd-log``. Only a
+   PASS resets the counter.
+3. **T2 nudge (review-checkpoint escalation).** Fires when
+   commits-since-review-checkpoint reaches
+   ``review_tiers.cold_read_escalation.nudge_threshold`` (default 3).
    Checkpoint-or-fork-base selection mirrors ``commit_block.py``:
    - Checkpoint exists → ``state.commits_since_checkpoint``.
    - No checkpoint (absent / stale) → ``state.commits_since_fork_base``.
    - No fork base / no trunk → cadence segment omitted (degrade silent).
-   Suggests running a deep review per the adversarial-review skill, then
-   logging it via ``dd-log`` to reset the checkpoint.
+   Suggests running the deep-review loop and logging every round via
+   ``dd-log``. Only a PASS resets the checkpoint.
 
 Both review nudges (T1/T2) carry ``GATE_AUDIENCE``: the gate is the
 orchestrator's, so a dispatched subagent reports it and stops rather than acting.
@@ -31,6 +32,9 @@ Channel: PostToolUse exit-0 ``hookSpecificOutput.additionalContext`` (plain
 stdout is debug-only for this event). Advisory only — every probe degrades to
 silent on error and the hook never blocks the tool call. The verification
 segment fires independent of repo/branch resolution (only T1/T2 need them).
+An unresolved matching commit target therefore emits verification only and
+never reads cadence state from the launching repository. This includes a
+zero-exit unsupported ``&&`` compound containing a direct commit.
 
 Env bypass: ``DD_SKIP_REVIEW_NUDGE=1`` (silences all three segments).
 """
@@ -40,7 +44,6 @@ from __future__ import annotations
 import json
 import os
 import pathlib
-import subprocess
 import sys
 
 _HERE = pathlib.Path(__file__).resolve().parent
@@ -74,7 +77,7 @@ VERIFY_TEXT = (
 GATE_AUDIENCE = (
     "This gate is the orchestrator's responsibility. If you are a subagent, "
     "report it's due and stop; don't act on this nudge. If you are the "
-    "orchestrator, you should run"
+    "orchestrator, you should"
 )
 
 
@@ -90,16 +93,6 @@ def _read_payload() -> tuple[str, dict, str | None]:
     tr = d.get("tool_response") if isinstance(d.get("tool_response"), dict) else {}
     cwd = d.get("cwd") if isinstance(d.get("cwd"), str) and d.get("cwd") else None
     return (ti.get("command") or ""), tr, cwd
-
-
-def _git(cwd: str, *args: str) -> tuple[int, str]:
-    try:
-        r = subprocess.run(
-            ["git", "-C", cwd, *args], capture_output=True, text=True, timeout=5
-        )
-    except Exception:
-        return 1, ""
-    return r.returncode, r.stdout.strip()
 
 
 def _commit_edit_floor() -> int:
@@ -151,51 +144,43 @@ def main() -> int:
     t2_path = "none"
     t2_n: int | None = None
 
-    cwd = cwd or os.getcwd()
-    rc, repo = _git(cwd, "rev-parse", "--show-toplevel")
-    if rc == 0 and repo:
-        rc, branch = _git(repo, "symbolic-ref", "--short", "HEAD")
-        if rc == 0 and branch:
-            # Segment 2 — T1 nudge: fire when edit counter >= commit_edit_floor.
-            edit_floor = _commit_edit_floor()
-            edits = state.read(repo, branch, "edits")
-            if edits >= edit_floor:
-                env.accumulate(
-                    f"Edit counter: {edits} unreviewed edits on this branch "
-                    f"(>= T1 floor {edit_floor}). {GATE_AUDIENCE} "
-                    f"run a deep review per the adversarial-review skill, then log it via `dd-log` to reset the counter."
-                )
-                t1_fired = True
+    command_cwd = command_match.find_git_commit(command, cwd)
+    repo = state.repo_root(command_cwd) if command_cwd is not None else None
+    if repo is not None:
+        branch = state.current_branch(repo)
+        # Segment 2 — T1 nudge: fire when edit counter >= commit_edit_floor.
+        edit_floor = _commit_edit_floor()
+        edits = state.read(repo, branch, "edits")
+        if edits >= edit_floor:
+            env.accumulate(
+                f"Edit counter: {edits} unreviewed edits on this branch "
+                f"(>= T1 floor {edit_floor}). {GATE_AUDIENCE} "
+                f"run the deep-review loop and log every round with `dd-log`. Only a PASS resets the counter."
+            )
+            t1_fired = True
 
-            # Segment 3 — T2 nudge: fire when commits-since-cold-read >= threshold.
-            # Mirror commit_block.py: checkpoint exists → use it; absent/stale → fork base.
-            t2_threshold = _cold_read_nudge_threshold()
-            since_cp = state.commits_since_checkpoint(repo, branch)
-            if since_cp is not None:
-                if since_cp >= t2_threshold:
-                    env.accumulate(
-                        f"Review cadence: {since_cp} commits since the last "
-                        f"deep review on this branch (>= T2 nudge threshold "
-                        f"{t2_threshold}). {GATE_AUDIENCE} "
-                        f"run a deep review per the adversarial-review skill, then log it via `dd-log` to reset the checkpoint."
-                    )
-                    t2_path, t2_n = "checkpoint", since_cp
-            else:
-                # No usable checkpoint (absent OR stale/amended-away —
-                # commits_since_checkpoint returns None for both): count from
-                # fork-base, same threshold gate (don't nag a fresh branch on
-                # every commit). Accepted: the two None-causes are intentionally
-                # conflated — the message says "missing or invalidated" and the
-                # action is identical either way.
-                since_fb = state.commits_since_fork_base(repo, _trunks())
-                if since_fb is not None and since_fb >= t2_threshold:
-                    env.accumulate(
-                        f"Review checkpoint missing or invalidated — "
-                        f"{since_fb} commits since fork on this branch "
-                        f"(>= T2 nudge threshold {t2_threshold}). {GATE_AUDIENCE} "
-                        f"run a deep review per the adversarial-review skill, then log it via `dd-log` to reset the checkpoint."
-                    )
-                    t2_path, t2_n = "fork_base", since_fb
+        # Segment 3 — T2 nudge: fire when commits-since-checkpoint >= threshold.
+        # Mirror commit_block.py: checkpoint exists → use it; absent/stale → fork base.
+        t2_threshold = _cold_read_nudge_threshold()
+        distance, basis = state.review_distance(repo, branch, _trunks())
+        if basis == "checkpoint":
+            if distance is not None and distance >= t2_threshold:
+                env.accumulate(
+                    f"Review cadence: {distance} commits since the review "
+                    f"checkpoint on this branch (>= T2 nudge threshold "
+                    f"{t2_threshold}). {GATE_AUDIENCE} "
+                    f"run the deep-review loop and log every round with `dd-log`. Only a PASS resets the checkpoint."
+                )
+                t2_path, t2_n = "checkpoint", distance
+        elif basis == "fork_base":
+            if distance is not None and distance >= t2_threshold:
+                env.accumulate(
+                    f"Review checkpoint missing or invalidated — "
+                    f"{distance} commits since fork base on this branch "
+                    f"(>= T2 nudge threshold {t2_threshold}). {GATE_AUDIENCE} "
+                    f"run the deep-review loop and log every round with `dd-log`. Only a PASS resets the checkpoint."
+                )
+                t2_path, t2_n = "fork_base", distance
 
     env.emit()
     logger.emit(

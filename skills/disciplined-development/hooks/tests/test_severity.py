@@ -9,7 +9,7 @@ import pathlib
 
 import pytest
 
-from hooks.lib.severity import downgrade_advisory_findings, parse_findings, parse_verdict
+from hooks.lib.severity import parse_findings, parse_verdict
 
 
 # ---- parse_findings: structured extraction ---------------------------------
@@ -78,7 +78,7 @@ def test_parse_findings(text, line_start, expected):
     assert parse_findings(text, line_start=line_start) == expected
 
 
-# ---- parse_verdict: last-non-blank-line anchoring (Task 1.1) ---------------
+# ---- parse_verdict: last-non-blank-line anchoring ---------------------------
 # Verdict is read from the last non-blank line only and normalized to
 # uppercase; a mid-output echo is ignored unless it is that last line.
 
@@ -156,65 +156,3 @@ def test_parse_verdict_empty_string_returns_none():
 
 def test_parse_verdict_all_blank_returns_none():
     assert parse_verdict("\n  \n") is None
-
-
-# ---- downgrade_advisory_findings: advisory-path P3 downgrade ----------------
-# Findings whose file sits inside an advisory-path glob are rewritten to [P3]
-# (visible + fixable, but non-blocking under the gate's tier semantics);
-# `blocking` counts the P0-P2 findings that remain outside those paths.
-
-_GLOBS = ["design/**"]
-
-
-def test_advisory_finding_downgrades_to_p3_with_marker():
-    text = "- [P2] design/components/x.jsx:10: bad thing\nDD-VERDICT: BLOCK"
-    rewritten, blocking, downgraded = downgrade_advisory_findings(text, _GLOBS)
-    assert blocking == 0
-    assert downgraded == 1
-    assert "[P3]" in rewritten and "[P2]" not in rewritten
-    assert "advisory path; was P2" in rewritten
-    assert rewritten.rstrip().endswith("DD-VERDICT: BLOCK")
-
-
-def test_repo_finding_outside_globs_counts_as_blocking_and_is_untouched():
-    text = "- [P1] hooks/foo.py:3: repo defect"
-    rewritten, blocking, downgraded = downgrade_advisory_findings(text, _GLOBS)
-    assert blocking == 1
-    assert downgraded == 0
-    assert rewritten == text
-
-
-def test_mixed_findings_partition():
-    text = (
-        "- [P2] design/a.jsx:1: mirror defect\n"
-        "- [P1] src/app.ts:2: repo defect\n"
-    )
-    rewritten, blocking, downgraded = downgrade_advisory_findings(text, _GLOBS)
-    assert blocking == 1
-    assert downgraded == 1
-    assert "- [P3] design/a.jsx:1: mirror defect (advisory path; was P2)" in rewritten
-    assert "- [P1] src/app.ts:2: repo defect" in rewritten
-
-
-def test_finding_without_parseable_file_blocks():
-    # No file prefix → cannot prove it's advisory → stays blocking (fail closed).
-    text = "- [P0] something is very wrong everywhere"
-    _, blocking, downgraded = downgrade_advisory_findings(text, _GLOBS)
-    assert blocking == 1
-    assert downgraded == 0
-
-
-def test_p3_findings_never_counted_or_rewritten():
-    text = "- [P3] design/a.jsx:1: nit\n- [P3] src/b.ts:1: nit"
-    rewritten, blocking, downgraded = downgrade_advisory_findings(text, _GLOBS)
-    assert blocking == 0
-    assert downgraded == 0
-    assert rewritten == text
-
-
-def test_empty_globs_is_identity():
-    text = "- [P1] design/a.jsx:1: mirror defect"
-    rewritten, blocking, downgraded = downgrade_advisory_findings(text, [])
-    assert blocking == 1
-    assert downgraded == 0
-    assert rewritten == text

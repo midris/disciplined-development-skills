@@ -46,7 +46,7 @@ def _run(repo: Path, *, threshold: int = 3, bypass: bool = False,
     else:
         env.pop("DD_SKIP_DISCIPLINE_NUDGE", None)
     # Neutralize the env tier for plan resolution so subprocess tests
-    # control inputs deterministically (pointer file + mtime fallback).
+    # control inputs deterministically (explicit pointer only).
     env.pop("DD_ACTIVE_PLAN", None)
     if env_extra:
         env.update(env_extra)
@@ -132,6 +132,22 @@ def test_non_git_cwd_degrades_silent(tmp_path):
     r = _run(plain, threshold=1)
     assert r.returncode == 0
     assert r.stdout.strip() == ""
+
+
+def test_inherited_git_selectors_do_not_redirect_discipline_counter(git_repo):
+    root = _repo_root(git_repo)
+    r = _run(
+        git_repo,
+        threshold=1,
+        env_extra={
+            "GIT_DIR": "/missing/.git",
+            "GIT_WORK_TREE": "/missing",
+            "GIT_COMMON_DIR": "/missing/.git",
+        },
+    )
+    assert r.returncode == 0
+    assert r.stdout.strip()
+    assert state.read(root, "master", "discipline") == 0
 
 
 def test_fire_message_names_active_plan_path(git_repo):
@@ -234,7 +250,7 @@ def test_unreadable_pointer_does_not_crash_hook_at_threshold(git_repo):
     out of discipline_nudge before state.reset() ran — crash-looping on every
     subsequent tool call until the operator fixed the file.
     After the fix: hook exits 0, emits the re-ground envelope, and resets the
-    counter (degrade-safe: treat the pointer as absent, fall through to mtime).
+    counter (degrade-safe: treat the unreadable pointer as no active pin).
     """
     if os.geteuid() == 0:
         pytest.skip("chmod is a no-op for root; test not meaningful")

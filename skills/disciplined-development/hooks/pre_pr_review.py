@@ -1,18 +1,20 @@
 #!/usr/bin/env python3
-"""pre_pr_review.py — PreToolUse Bash gate: the only hard block.
+"""pre_pr_review.py — the pre-PR PreToolUse Bash hard gate.
 
-Detects ``gh pr create``, resolves the target cwd, and delegates to
-``external_review.py`` (whole-repo, verdict-driven, fail-closed).  No base
-resolution and no ``DD_HARD_BLOCK``; the verdict is entirely the external gate's
-responsibility.
+Detects a standalone ``gh pr create`` in the payload cwd and delegates to
+``external_review.py`` (whole-repo, verdict-driven, fail-closed). No base
+resolution and no ``DD_HARD_BLOCK``; the reviewer declares a verdict and the
+external gate trusts that decision directly.
 
 Paths:
-- PR-shaped + parseable cwd → delegate to ``external_review.py --cwd <cwd>``;
+- PR-shaped + resolved Git target → delegate to
+  ``external_review.py --cwd <git-root>``;
   any non-zero result maps to exit 2 (Claude Code blocks PreToolUse ONLY on 2),
-  and the delegate's stdout+stderr are re-emitted on stderr so findings reach
-  the model.
-- PR-shaped + unparseable cwd (e.g. ``cd $VAR && gh pr create``) → log one
-  ``reviews.jsonl`` ERROR row (decision=ERROR, reason=unparseable) then block
+  and the delegate's stdout+stderr are re-emitted on stderr. This surfaces gate
+  status; full reviewer output is available
+  only if the best-effort trace write succeeds.
+- PR-shaped + unresolved command or target → attempt one
+  ``reviews.jsonl`` ERROR row (decision=ERROR, reason=unparseable), then block
   (exit 2); the model is told to rewrite the command or set the bypass.
 - Not a ``gh pr create`` command → exit 0 (all other Bash through).
 - ``DD_SKIP_PR_REVIEW=1`` in the launching shell → exit 0 (bypass for automated
@@ -32,7 +34,7 @@ _BASE_DIR = _HERE.parent  # the dir containing the `hooks` package
 if str(_BASE_DIR) not in sys.path:
     sys.path.insert(0, str(_BASE_DIR))
 
-from hooks.lib import config, logging_setup, review_record  # noqa: E402
+from hooks.lib import config, logging_setup, review_record, state  # noqa: E402
 from hooks.lib.command_match import (  # noqa: E402
     find_gh_pr_create,
     looks_like_gh_pr_create,
@@ -50,47 +52,34 @@ def _external_review_script() -> str:
     )
 
 
-def _read_command() -> str:
+def _read_payload() -> tuple[str, str | None]:
     try:
         data = json.loads(sys.stdin.read())
     except (json.JSONDecodeError, OSError):
-        return ""
+        return "", None
     if not isinstance(data, dict):
-        return ""
+        return "", None
     ti = data.get("tool_input")
-    if isinstance(ti, dict) and isinstance(ti.get("command"), str):
-        return ti["command"]
-    return ""
+    command = ti.get("command") if isinstance(ti, dict) else None
+    cwd = data.get("cwd")
+    return (
+        command if isinstance(command, str) else "",
+        cwd if isinstance(cwd, str) and cwd else None,
+    )
 
 
-def _current_branch(repo: str) -> str:
-    """Current branch via git symbolic-ref; 'detached' on detached HEAD or failure.
-
-    Mirrors external_review._current_branch / log_review._current_branch exactly:
-    ``symbolic-ref --short HEAD`` with a literal ``"detached"`` fallback so the
-    per-branch state-dir key is always consistent.  ``rev-parse --abbrev-ref``
-    returns ``"HEAD"`` on detached HEAD — not used here.
-    """
-    try:
-        r = subprocess.run(
-            ["git", "-C", repo, "symbolic-ref", "--short", "HEAD"],
-            capture_output=True,
-            text=True,
-            check=False,
-            timeout=5,
-        )
-    except Exception:
-        return "detached"
-    branch = r.stdout.strip()
-    return branch if r.returncode == 0 and branch else "detached"
-
-
-def _log_unparseable(repo: str) -> None:
+def _log_unparseable(base_cwd: str | None) -> None:
     """Append one ERROR/unparseable review row — best-effort, never raises."""
     try:
-        branch = _current_branch(repo)
         reviewer = config.get("review.reviewer", "codex")
-        ctx = review_record.gather_cadence_context(repo, branch)
+        ctx = {
+            "repo": base_cwd or "unresolved",
+            "head_sha": None,
+            "branch": "unresolved",
+            "base": None,
+            "edits_count": 0,
+            "commits_since_checkpoint": None,
+        }
         row = review_record.build_review_record(
             findings="",
             source="external-gate",
@@ -119,26 +108,25 @@ def main() -> int:
     # command stays "" (not PR-shaped → allow).
     command = ""
     try:
-        command = _read_command()
-        cwd = find_gh_pr_create(command)
+        command, base_cwd = _read_payload()
+        cwd = find_gh_pr_create(command, base_cwd)
+        if cwd is not None:
+            cwd = state.repo_root(cwd)
         if cwd is None:
             if looks_like_gh_pr_create(command):
-                # Looks like ``gh pr create`` but the target directory couldn't be
-                # resolved (e.g. a ``cd`` to a shell variable / command substitution).
-                # Fail closed: log ERROR row + block — do NOT let an unreviewed PR
+                # Looks like ``gh pr create`` but is not a supported standalone
+                # action in a resolved repository.
+                # Fail closed: attempt ERROR row + block — do NOT let an unreviewed PR
                 # through (the fail-open bug this gate exists to prevent).
-                # The command was unparseable so the cd target is unknown;
-                # os.getcwd() is the process cwd, which may differ from the
-                # intended repo — the logged row's repo/branch/cadence fields
-                # are best-effort and may not match the intended tree.
-                repo = os.getcwd()
-                _log_unparseable(repo)
+                # Never probe the launching process's repository for an
+                # unresolved target; the best-effort row uses inert context.
+                _log_unparseable(base_cwd)
                 logger.emit("block", reason="unresolvable_cwd")
                 print(
-                    "[pre-pr] BLOCKED: couldn't resolve the target directory for a "
-                    "`gh pr create` (e.g. a `cd` to an unexpandable path or a "
-                    "hard-to-parse command). Re-run with an explicit or absolute "
-                    "path, or set DD_SKIP_PR_REVIEW=1 in the launching shell "
+                    "[pre-pr] BLOCKED: unresolved `gh pr create`. Run "
+                    "`gh pr create` as a standalone Bash call from the target "
+                    "repository; run other commands separately. Set "
+                    "DD_SKIP_PR_REVIEW=1 in the launching shell "
                     "to bypass.",
                     file=sys.stderr,
                 )
@@ -152,15 +140,16 @@ def main() -> int:
 
         # Exit-code translation is load-bearing: Claude Code blocks a PreToolUse
         # tool ONLY on exit 2; any other non-zero is a non-blocking error and the
-        # tool (gh pr create) still runs.  external_review returns 0 on PASS and
-        # non-zero on BLOCK / any failure — map any non-zero to 2 and re-emit the
-        # delegate's output on stderr so findings reach the model.
+        # tool (gh pr create) still runs.  external_review returns 0 on an
+        # reviewer PASS and
+        # non-zero on a reviewer BLOCK or failure. Map any non-zero to 2 and
+        # re-emit the delegate's surfaced status output to the model.
         out = (result.stdout or "") + (result.stderr or "")
         if result.returncode != 0:
             logger.emit("block", ext_exit=result.returncode)
             sys.stderr.write(out)
             return 2
-        # Clean pass — surface the output and let the PR through.
+        # Reviewer PASS — surface the output and let the PR through.
         sys.stdout.write(out)
         return 0
 

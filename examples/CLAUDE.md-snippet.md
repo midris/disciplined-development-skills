@@ -19,12 +19,16 @@ overlays *on top of* it.
   `.claude/dd-config.json` to tune behavior (start from the bundle's
   `examples/dd-config.json`; full schema in
   `.claude/skills/disciplined-development/hooks/dd-config.md`).
-- The hooks enforce a review cadence: an edit-counter nudge/block, a commit nudge,
-  a commit-count nudge/block, and a pre-PR gate on `gh pr create`.
-  Thresholds are in `.claude/skills/disciplined-development/hooks/dd-config.md`.
+- The hooks enforce edit and commit review cadence. An independent pre-PR
+  backstop gates `gh pr create`. Configuration is in
+  `.claude/skills/disciplined-development/hooks/dd-config.md`.
+- Run `git commit` and `gh pr create` as standalone Bash calls from the target
+  repository, with other commands in separate calls. Compounds containing
+  either action are blocked; unrelated `&&` commands are unaffected.
 - Periodic review per Principle 8 — at review-nudge signals or natural pauses,
-  run a deep review per the adversarial-review skill, then log it via `dd-log`
-  to reset the counter; iterate per `adversarial-review-loop` until clean.
+  iterate per `adversarial-review-loop` until clean and record every round via
+  `dd-log`; only an explicit final `DD-VERDICT: PASS` resets edit and commit cadence. This does not
+  satisfy the independent pre-PR backstop.
 
 ---
 

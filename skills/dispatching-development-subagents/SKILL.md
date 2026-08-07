@@ -62,7 +62,7 @@ A clean test run is not verification — tests pass over silent out-of-scope edi
 Follow `disciplined-development` + your dispatch prompt.
 Beyond that, you over-reach if you think:
 
-- "A hook says run a cold-read / write a checkpoint / open the PR — so I will." (the gate is the orchestrator's — report it's due, don't run)
+- "A review or another gate action is due—so I will take it." (Gate actions belong to the orchestrator; report what is due and stop.)
 - "While I'm here, I'll also fix / tidy this."
 - "This tracked file looks like junk — I'll delete it."
 - "I'll fold this into the same commit."

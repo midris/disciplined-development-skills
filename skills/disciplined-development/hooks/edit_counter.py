@@ -9,9 +9,9 @@ Fires on every Edit or Write tool call (the settings matcher pins this to
 2. **Nudge** when the resulting stored count reaches
    ``review_tiers.fast.nudge_threshold`` (default 30). Emits a
    PostToolUse ``hookSpecificOutput.additionalContext`` envelope telling the
-   model it has N unreviewed edits and to run a deep review per the
-   adversarial-review skill then log it via ``dd-log`` to reset. Advisory
-   only — PostToolUse runs after the edit; this hook never blocks a tool call.
+   model it has N unreviewed edits, to run the deep-review loop, and to log
+   every round via ``dd-log``. Only a PASS resets the counter. Advisory only —
+   PostToolUse runs after the edit; this hook never blocks a tool call.
 
 Repo/branch resolution:
 - Reads ``cwd`` from the stdin payload; falls back to ``os.getcwd()``.
@@ -36,7 +36,6 @@ from __future__ import annotations
 import json
 import os
 import pathlib
-import subprocess
 import sys
 
 _HERE = pathlib.Path(__file__).resolve().parent
@@ -73,16 +72,6 @@ def _payload_cwd() -> str:
     return os.getcwd()
 
 
-def _git(cwd: str, *args: str) -> tuple[int, str]:
-    try:
-        r = subprocess.run(
-            ["git", "-C", cwd, *args], capture_output=True, text=True, timeout=5
-        )
-    except Exception:
-        return 1, ""
-    return r.returncode, r.stdout.strip()
-
-
 def _nudge_threshold() -> int:
     value = config.get("review_tiers.fast.nudge_threshold", DEFAULT_NUDGE_THRESHOLD)
     # Reject booleans (isinstance(True, int) is True) and non-positive values
@@ -101,18 +90,13 @@ def main() -> int:
 
     cwd = _payload_cwd()
 
-    rc_root, repo = _git(cwd, "rev-parse", "--show-toplevel")
-    if rc_root != 0 or not repo:
+    repo = state.repo_root(cwd)
+    if repo is None:
         # Not a git repo or git unavailable — nothing to key state on.
         logger.emit("skip", reason="no_repo")
         return 0
 
-    rc_branch, branch = _git(repo, "symbolic-ref", "--short", "HEAD")
-    if rc_branch != 0 or not branch:
-        # Detached HEAD — count under a stable key (matches discipline_nudge
-        # convention; concurrent detached checkouts share this counter but the
-        # single-dev, single-checkout posture makes that a non-issue).
-        branch = "detached"
+    branch = state.current_branch(repo)
 
     count = state.bump(repo, branch, COUNTER_NAME)
     threshold = _nudge_threshold()
@@ -121,15 +105,15 @@ def main() -> int:
         logger.emit("pass", count=count, threshold=threshold)
         return 0
 
-    # count >= threshold: emit nudge. Repeated nudging from threshold upward
-    # is intentional — discipline pressure until the model runs a deep review
-    # and resets the counter via dd-log. The hard block at hard_block_threshold
-    # (60) is H2's job (edit_block.py, PreToolUse).
+    # count >= threshold: emit nudge. Repeated nudging is intentional—
+    # discipline pressure until a PASS resets the counter. edit_block.py owns
+    # the PreToolUse hard block at
+    # hard_block_threshold (60).
     env = Envelope("PostToolUse")
     env.accumulate(
         f"Edit counter: you have {count} unreviewed edits on this branch. "
-        f"Run a deep review per the adversarial-review skill, then log it via "
-        f"`dd-log` to reset the counter before continuing."
+        f"Run the deep-review loop and log every round with `dd-log`. "
+        f"Only a PASS resets the counter."
     )
     env.emit()
     logger.emit("fire", count=count, threshold=threshold, branch=branch)

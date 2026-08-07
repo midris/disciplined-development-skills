@@ -1,6 +1,6 @@
 """Tests for the Envelope additionalContext emitter.
 
-Pins the one non-verbatim A1 change: ``event_name`` stamps the emitted
+Pins the event-name contract: ``event_name`` stamps the emitted
 ``hookSpecificOutput.hookEventName`` so each hook event surfaces under its
 own name, while the default stays ``"PostToolUse"`` for existing callers.
 """

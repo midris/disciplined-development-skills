@@ -3,10 +3,12 @@
 Subprocess-driven, mirroring test_pre_pr_review.py: a hermetic temp git repo
 (feature branch + identity + one commit) is the tree the tool operates on, and
 ``DD_LOG_DIR`` isolates ``reviews.jsonl`` into a temp dir. The tool reads
-findings on stdin, appends exactly one review row, and — only on a clean (PASS)
-result — folds in the cadence reset (clears the ``edits`` counter and stamps
-``review.checkpoint = HEAD``). Tests assert on the exit code, the logged row,
-and the on-disk state files under ``<repo>/.claude/.dd-state/``.
+findings on stdin, attempts one review row, and — only on a clean (PASS) result —
+folds in the cadence reset independently of trace persistence (clears the
+``edits`` counter and stamps ``review.checkpoint = HEAD`` through two
+best-effort writes). Tests assert on the
+exit code, the logged row, and on-disk state under
+``<repo>/.claude/.dd-state/``.
 """
 
 from __future__ import annotations
@@ -40,10 +42,18 @@ def _head_sha(repo: Path) -> str:
     ).stdout.strip()
 
 
-def _run_from(cwd: Path, log_dir: Path, findings: str, *args: str) -> subprocess.CompletedProcess:
+def _run_from(
+    cwd: Path,
+    log_dir: Path,
+    findings: str,
+    *args: str,
+    extra_env: dict[str, str] | None = None,
+) -> subprocess.CompletedProcess:
     """Run the tool with an arbitrary ``--cwd`` (may be a subdir of the repo)."""
     env = dict(os.environ)
     env["DD_LOG_DIR"] = str(log_dir)
+    if extra_env:
+        env.update(extra_env)
     return subprocess.run(
         [sys.executable, str(LOG_REVIEW), "--cwd", str(cwd), *args],
         input=findings, env=env, text=True, capture_output=True,
@@ -52,6 +62,29 @@ def _run_from(cwd: Path, log_dir: Path, findings: str, *args: str) -> subprocess
 
 def _run(repo: Path, log_dir: Path, findings: str, *args: str) -> subprocess.CompletedProcess:
     return _run_from(repo, log_dir, findings, *args)
+
+
+def test_inherited_git_selectors_do_not_redirect_pass_reset(tmp_path):
+    repo = _init_repo(tmp_path)
+    log_dir = tmp_path / "logs"
+    log_dir.mkdir()
+    _seed_edits(repo, 3)
+
+    proc = _run_from(
+        repo,
+        log_dir,
+        "DD-VERDICT: PASS\n",
+        "--source", "model-review", "--trigger", "manual",
+        extra_env={
+            "GIT_DIR": "/missing/.git",
+            "GIT_WORK_TREE": "/missing",
+            "GIT_COMMON_DIR": "/missing/.git",
+        },
+    )
+
+    assert proc.returncode == 0
+    assert _edits_count(repo) == 0
+    assert _checkpoint(repo) == _head_sha(repo)
 
 
 def _rows(log_dir: Path) -> list[dict]:
@@ -98,14 +131,14 @@ def test_clean_stdin_passes_and_folds_reset(tmp_path):
     log_dir = tmp_path / "logs"
     _seed_edits(repo, 3)  # there were unreviewed edits before this clean review
 
-    proc = _run(repo, log_dir, "No findings.",
+    proc = _run(repo, log_dir, "No findings.\nDD-VERDICT: PASS",
                 "--source", "model-review", "--trigger", "manual")
 
     assert proc.returncode == 0, proc.stderr
     rows = _rows(log_dir)
     assert len(rows) == 1  # exactly one row
     assert rows[0]["decision"] == "PASS"
-    # Reset-fold (Decision 2 — BOTH on a clean result):
+    # Both independent PASS writes succeed in this fixture:
     assert _edits_count(repo) == 0  # edits counter cleared
     assert _checkpoint(repo) == _head_sha(repo)  # checkpoint == repo HEAD
 
@@ -115,14 +148,14 @@ def test_blocking_stdin_logs_block_and_leaves_counters_untouched(tmp_path):
     log_dir = tmp_path / "logs"
     _seed_edits(repo, 4)  # pre-existing unreviewed-edit count, must survive a BLOCK
 
-    proc = _run(repo, log_dir, "- [P1] x.py:1: bug",
+    proc = _run(repo, log_dir, "- [P1] x.py:1: bug\nDD-VERDICT: BLOCK",
                 "--source", "model-review", "--trigger", "cadence")
 
     assert proc.returncode == 0, proc.stderr
     rows = _rows(log_dir)
     assert len(rows) == 1
     assert rows[0]["decision"] == "BLOCK"
-    # NEITHER counter touched on a BLOCK:
+    # BLOCK attempts neither state write:
     assert _edits_count(repo) == 4  # seeded count unchanged
     assert _checkpoint(repo) is None  # no checkpoint stamped
 
@@ -134,7 +167,7 @@ def test_empty_stdin_exits_2_and_writes_no_row(tmp_path):
     proc = _run(repo, log_dir, "   \n  \t\n",
                 "--source", "model-review", "--trigger", "manual")
 
-    assert proc.returncode == 2  # usage error — a blank pipe must not log a false PASS
+    assert proc.returncode == 2  # usage error — a blank pipe has no explicit verdict
     assert _rows(log_dir) == []  # NO row written
 
 
@@ -148,6 +181,38 @@ def test_blank_stdin_does_not_reset_counters(tmp_path):
 
     assert proc.returncode == 2
     assert _edits_count(repo) == 2  # no reset on the empty-stdin guard
+    assert _checkpoint(repo) is None
+
+
+def test_missing_verdict_exits_2_without_log_or_reset(tmp_path):
+    repo = _init_repo(tmp_path)
+    log_dir = tmp_path / "logs"
+    _seed_edits(repo, 2)
+
+    proc = _run(
+        repo, log_dir, "No findings.",
+        "--source", "model-review", "--trigger", "manual",
+    )
+
+    assert proc.returncode == 2
+    assert _rows(log_dir) == []
+    assert _edits_count(repo) == 2
+    assert _checkpoint(repo) is None
+
+
+def test_malformed_verdict_exits_2_without_log_or_reset(tmp_path):
+    repo = _init_repo(tmp_path)
+    log_dir = tmp_path / "logs"
+    _seed_edits(repo, 2)
+
+    proc = _run(
+        repo, log_dir, "No findings.\nDD-VERDICT: MAYBE",
+        "--source", "model-review", "--trigger", "manual",
+    )
+
+    assert proc.returncode == 2
+    assert _rows(log_dir) == []
+    assert _edits_count(repo) == 2
     assert _checkpoint(repo) is None
 
 
@@ -195,7 +260,7 @@ def test_detached_head_resolves_to_detached_key(tmp_path):
         check=True, capture_output=True,
     )
 
-    proc = _run(repo, log_dir, "No findings.",
+    proc = _run(repo, log_dir, "No findings.\nDD-VERDICT: PASS",
                 "--source", "model-review", "--trigger", "manual")
 
     assert proc.returncode == 0, proc.stderr
@@ -217,15 +282,14 @@ def test_detached_head_resolves_to_detached_key(tmp_path):
 def test_omitted_round_and_reviewer_default_to_1_and_subagents(tmp_path):
     """Omitting --round and --reviewer must write round=1 and reviewer='subagents'.
 
-    Old behaviour: both defaulted to None, writing null into durable rows.
-    log_review.py defaults round=1 / reviewer='subagents' — consistent with
-    what the old engine wrote so existing log rows stay parseable.
+    The non-null defaults preserve the durable row schema and remain compatible
+    with existing rows.
     """
     repo = _init_repo(tmp_path)
     log_dir = tmp_path / "logs"
 
     # Pass NEITHER --round NOR --reviewer (clean-result stdin)
-    proc = _run(repo, log_dir, "No findings.",
+    proc = _run(repo, log_dir, "No findings.\nDD-VERDICT: PASS",
                 "--source", "model-review", "--trigger", "manual")
 
     assert proc.returncode == 0, proc.stderr
@@ -275,7 +339,7 @@ def test_subdir_cwd_resolves_to_repo_root_state(tmp_path):
     sub.mkdir(parents=True)
     _seed_edits(repo, 3)  # unreviewed edits at the repo-root state key
 
-    proc = _run_from(sub, log_dir, "No findings.",
+    proc = _run_from(sub, log_dir, "No findings.\nDD-VERDICT: PASS",
                      "--source", "model-review", "--trigger", "manual")
 
     assert proc.returncode == 0, proc.stderr
@@ -290,7 +354,7 @@ def test_row_carries_source_trigger_round_context_and_findings(tmp_path):
     repo = _init_repo(tmp_path)
     log_dir = tmp_path / "logs"
 
-    proc = _run(repo, log_dir, "- [P1] a.py:7: leak\n- [P2] b.py:3: typo",
+    proc = _run(repo, log_dir, "- [P1] a.py:7: leak\n- [P2] b.py:3: typo\nDD-VERDICT: BLOCK",
                 "--source", "external-gate", "--trigger", "pre-pr",
                 "--round", "2", "--reviewer", "codex")
 

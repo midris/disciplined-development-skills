@@ -6,10 +6,9 @@ start, decision/outcome, exit reason). Records append to a **rolling per-day**
 file ``<log-dir>/dd-hooks-YYYYMMDD.jsonl`` — every hook's records interleave
 there, one JSONL line per record, distinguished by the ``hook``/``pid`` fields.
 
-Observability is on by default and comprehensive (see the spec's
-"Observability (non-negotiable)" section); volume is managed by retention +
-cleanup, not by logging less. ``logging.enabled=false`` (config) is the master
-off switch.
+Observability is on by default and comprehensive; volume is managed by retention
+and cleanup, not by logging less. ``logging.enabled=false`` (config) is the master
+off switch. See the hook README's "Observability" section.
 
 Log directory resolution (highest precedence first):
   1. ``DD_LOG_DIR`` env — ops/test override (also how tests isolate logs).
@@ -181,10 +180,11 @@ def append_review(record: dict) -> None:
     """Append one curated review record to ``<log-dir>/reviews.jsonl``.
 
     The dedicated review trace for offline analysis (outcomes, latency,
-    drift) — see the spec's "Observability" section. Multi-source: ``source:
-    external-gate`` rows from the pre-PR codex gate (``external_review.py``)
-    and ``source: model-review`` rows from model-driven reviews
-    (``log_review.py``); rows are sparse
+    drift) — see the hook README's "Observability" section. Three production
+    callers share this primitive: ``external_review.py``, ``log_review.py``, and
+    ``pre_pr_review.py`` for unresolved-target errors. ``source:
+    external-gate`` identifies either pre-PR path; ``source: model-review``
+    identifies model-driven rounds. Rows are sparse
     (each source carries only the fields it has). Resolves the same dir as
     :func:`setup`, honors ``logging.enabled`` (no-op when false), stamps a
     ``ts``, and never raises (a write failure warns to stderr only)."""

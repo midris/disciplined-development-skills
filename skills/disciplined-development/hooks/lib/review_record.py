@@ -1,4 +1,4 @@
-"""review_record.py — the single producer of a ``reviews.jsonl`` row.
+"""review_record.py — shared builder for ``reviews.jsonl`` record attempts.
 
 Two functions, no log I/O:
 
@@ -6,12 +6,12 @@ Two functions, no log I/O:
   diff``): the cadence + lookup keys the row needs (``repo``, ``head_sha``,
   ``branch``, ``base``, ``edits_count``, ``commits_since_checkpoint``).
 - :func:`build_review_record` — pure assembly of one row dict from those keys
-  plus the reviewer's output. The caller (the log-review / external-review tool)
-  passes the dict to ``logging_setup.append_review``, which stamps ``ts`` and
-  writes the line.
+  plus the reviewer's output and explicit decision. The caller (the log-review or external-review
+  tool, or the pre-PR wrapper's unresolved-target path) passes the dict to
+  ``logging_setup.append_review``, which stamps ``ts`` and attempts the write.
 
-Grounded against the live cadence hooks (the row must agree with what the hooks
-act on — see the plan's Reuse surface):
+Grounded against the live cadence hooks so the row agrees with the values they
+act on:
 
 - the trunk list comes from config key ``branch_convention.trunk_branches``
   (``review_nudge.py`` / ``commit_block.py`` read it the same way),
@@ -31,19 +31,14 @@ override any builder- or writer-owned field.
 
 from __future__ import annotations
 
-import subprocess
 from pathlib import Path
 
 from hooks.lib import config, state
-from hooks.lib.severity import parse_findings, parse_verdict
+from hooks.lib.severity import parse_findings
 
 # Same default + validation as the cadence hooks (edit_block / commit_block /
 # review_nudge): a config typo or non-list value falls back to these trunks.
 DEFAULT_TRUNKS = ["master", "main"]
-
-# Severities that force a derived BLOCK when no verdict is declared. P3 is
-# advisory (matches the gate posture: P0/P1/P2 block, P3 is informational).
-_BLOCKING_SEVERITIES = frozenset({"P0", "P1", "P2"})
 
 # Fields owned by the builder or by append_review (the writer).  extra may
 # ADD keys not in this set — a closed allowlist would fight the forward-compat
@@ -74,17 +69,8 @@ def _head_sha(repo: str | Path) -> str | None:
     Degrade-safe (the same posture as ``state._git``): any failure yields None
     rather than raising — a missing SHA is logged as absent, never a crash.
     """
-    try:
-        r = subprocess.run(
-            ["git", "-C", str(repo), "rev-parse", "HEAD"],
-            capture_output=True,
-            text=True,
-            check=False,
-            timeout=5,
-        )
-    except Exception:
-        return None
-    if r.returncode != 0:
+    r = state._git(repo, "rev-parse", "HEAD")
+    if r is None or r.returncode != 0:
         return None
     sha = r.stdout.strip()
     return sha or None
@@ -104,9 +90,7 @@ def gather_cadence_context(repo: str | Path, branch: str) -> dict:
     gate on. ``None`` from both (no checkpoint + no fork base) is recorded as-is.
     """
     trunks = _trunks()
-    since_cp = state.commits_since_checkpoint(repo, branch)
-    if since_cp is None:
-        since_cp = state.commits_since_fork_base(repo, trunks)
+    since_cp, _ = state.review_distance(repo, branch, trunks)
     return {
         "repo": str(repo),
         "head_sha": _head_sha(repo),
@@ -125,21 +109,22 @@ def build_review_record(
     trigger: str,
     round: int,
     context: dict,
-    decision: str | None = None,
+    decision: str,
     reason: str | None = None,
     duration_s: float | None = None,
     extra: dict | None = None,
 ) -> dict:
     """Assemble one ``reviews.jsonl`` row dict (pure — no I/O).
 
-    ``findings`` is the **raw reviewer text**: stored verbatim as ``output`` and
-    parsed (best-effort, log-only) for the structured ``findings[]`` list and the
-    ``p0``–``p3`` counts. ``context`` is a :func:`gather_cadence_context` dict
-    whose keys are spread into the row.
+    ``findings`` is caller-supplied review text: stored verbatim as ``output``
+    and parsed (best-effort, log-only) for the structured ``findings[]`` list and
+    the ``p0``–``p3`` counts. ``context`` is a
+    :func:`gather_cadence_context` dict whose
+    keys are spread into the row.
 
-    Decision precedence (the explicit arg always wins, including ``"ERROR"``):
-    explicit ``decision`` → ``parse_verdict(findings)`` → derive ``"BLOCK"`` iff
-    any P0/P1/P2 is present, else ``"PASS"``. ``reason`` accompanies an ERROR.
+    ``decision`` is required and must be ``PASS``, ``BLOCK``, or ``ERROR``.
+    Findings are telemetry-only and never determine or override it.
+    ``reason`` accompanies an ERROR.
 
     ``extra`` is the declared home for best-effort, source-specific fields
     (``run_id`` / ``session_id`` / ``harness`` / ``model`` / ``model_version`` /
@@ -159,11 +144,8 @@ def build_review_record(
         sev = finding["severity"]  # "P0".."P3"
         counts[sev.lower()] += 1
 
-    resolved = decision or parse_verdict(findings)
-    if resolved is None:
-        resolved = "BLOCK" if any(
-            f["severity"] in _BLOCKING_SEVERITIES for f in parsed
-        ) else "PASS"
+    if decision not in {"PASS", "BLOCK", "ERROR"}:
+        raise ValueError("decision must be PASS, BLOCK, or ERROR")
 
     row: dict = {
         **context,
@@ -171,7 +153,7 @@ def build_review_record(
         "reviewer": reviewer,
         "trigger": trigger,
         "round": round,
-        "decision": resolved,
+        "decision": decision,
         **counts,
         "findings": parsed,
         "output": findings,

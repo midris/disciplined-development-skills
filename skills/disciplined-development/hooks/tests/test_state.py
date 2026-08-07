@@ -3,8 +3,7 @@
 The git-touching tests use the ``git_repo`` fixture (see conftest.py), which
 inits a throwaway repo with an initial commit and yields its path.
 
-Empirically verified before writing (see plan Task A4): after ``git commit
---amend`` the old commit object is still reachable via reflog, so
+After ``git commit --amend`` the old commit object is still reachable via reflog, so
 ``git rev-list --count <old>..HEAD`` exits 0 with a WRONG positive count.
 Detection therefore guards on ``git merge-base --is-ancestor`` (exit 0 =
 ancestor/usable, exit 1 = amended-away or sibling, exit 128 = bogus) — all of
@@ -190,8 +189,8 @@ def test_commits_since_fork_base_none_when_no_base(git_repo):
 def test_commits_since_fork_base_zero_at_fork_point(git_repo):
     """Branch that hasn't diverged from trunk yet → 0 commits since fork base.
 
-    Load-bearing for review_nudge (C2): the no-review threshold gates on
-    branch-age, and 0 must read as 'no work yet,' not 'unknown' or 1."""
+    Load-bearing for review_nudge: the no-review threshold gates on branch age,
+    and 0 must read as 'no work yet,' not 'unknown' or 1."""
     default = _git(git_repo, "rev-parse", "--abbrev-ref", "HEAD")
     _git(git_repo, "checkout", "-q", "-b", "feature")
     # Branch HEAD == trunk HEAD; no new commits.
@@ -295,3 +294,46 @@ def test_repo_root_none_outside_repo(tmp_path):
     """Outside any git repo, repo_root() returns None so callers fall back to
     the raw cwd (prior non-git behavior preserved)."""
     assert state.repo_root(str(tmp_path)) is None
+
+
+def test_current_branch_returns_name_and_detached_fallback(git_repo):
+    assert state.current_branch(git_repo) == "master"
+    _git(git_repo, "checkout", "--detach", "HEAD")
+    assert state.current_branch(git_repo) == "detached"
+
+
+def test_current_branch_returns_detached_when_git_fails(tmp_path):
+    assert state.current_branch(tmp_path) == "detached"
+
+
+def test_review_distance_prefers_ancestor_checkpoint(git_repo):
+    _git(git_repo, "checkout", "-b", "feature")
+    checkpoint = _git(git_repo, "rev-parse", "HEAD")
+    state.set_checkpoint(git_repo, "feature", checkpoint)
+    _commit(git_repo, "a")
+    _commit(git_repo, "b")
+
+    assert state.review_distance(git_repo, "feature", ["master"]) == (2, "checkpoint")
+
+
+def test_review_distance_falls_back_to_fork_base_for_stale_checkpoint(git_repo):
+    _git(git_repo, "checkout", "-b", "feature")
+    _commit(git_repo, "a")
+    stale = _git(git_repo, "rev-parse", "HEAD")
+    state.set_checkpoint(git_repo, "feature", stale)
+    _git(git_repo, "commit", "--amend", "-m", "a-amended")
+
+    assert state.review_distance(git_repo, "feature", ["master"]) == (1, "fork_base")
+
+
+def test_review_distance_returns_unresolved_when_git_cannot_count(tmp_path):
+    assert state.review_distance(tmp_path, "detached", ["master"]) == (None, None)
+
+
+def test_git_probes_ignore_inherited_repository_selectors(git_repo, monkeypatch):
+    monkeypatch.setenv("GH_REPO", "owner/other")
+    monkeypatch.setenv("GIT_DIR", "/missing/.git")
+    monkeypatch.setenv("GIT_WORK_TREE", "/missing")
+    monkeypatch.setenv("GIT_COMMON_DIR", "/missing/.git")
+
+    assert state.repo_root(git_repo) == str(git_repo)

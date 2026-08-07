@@ -14,7 +14,7 @@ Fixture style:
   pre_pr_review.py and edit_block.py — CC blocks PreToolUse ONLY on exit 2;
   exit-2 stderr is what CC feeds back to the model).
 
-Test plan (all required by H3 spec):
+Covered behavior:
   test_non_git_commit_command_allows    — non-git-commit Bash → ALLOW
   test_below_threshold_allows           — commits since checkpoint < threshold → ALLOW
   test_at_threshold_denies              — commits since checkpoint == threshold → DENY
@@ -35,9 +35,12 @@ import subprocess
 import sys
 from pathlib import Path
 
+import pytest
+
 from hooks.lib import state
 
 HOOK = Path(__file__).resolve().parent.parent / "commit_block.py"
+_DEFAULT_CWD = object()
 
 TRUNK = "master"
 BRANCH = "feature/x"
@@ -111,6 +114,8 @@ def _run(
     hard_block_threshold: int = 5,
     bypass: bool = False,
     payload_override: str | None = None,
+    payload_cwd: object = _DEFAULT_CWD,
+    extra_env: dict[str, str] | None = None,
 ) -> subprocess.CompletedProcess:
     """Run commit_block.py as a subprocess against ``repo``.
 
@@ -134,15 +139,20 @@ def _run(
     env.pop("DD_SKIP_COMMIT_BLOCK", None)
     if bypass:
         env["DD_SKIP_COMMIT_BLOCK"] = "1"
+    if extra_env:
+        env.update(extra_env)
 
     if payload_override is not None:
         stdin_text = payload_override
     else:
         payload = {
             "tool_name": "Bash",
-            "cwd": str(repo),
             "tool_input": {"command": command},
         }
+        if payload_cwd is _DEFAULT_CWD:
+            payload["cwd"] = str(repo)
+        elif payload_cwd is not None:
+            payload["cwd"] = payload_cwd
         stdin_text = json.dumps(payload)
 
     return subprocess.run(
@@ -183,13 +193,21 @@ def test_below_threshold_allows(tmp_path):
     assert r.stderr.strip() == ""
 
 
+def test_commit_reuse_message_option_uses_payload_repo(tmp_path):
+    repo, _ = _init(tmp_path)
+
+    r = _run(repo, command="git commit -C HEAD", hard_block_threshold=5)
+
+    assert r.returncode == 0
+    assert r.stderr == ""
+
+
 def test_at_threshold_denies(tmp_path):
     """5 commits since checkpoint (== threshold 5) → exit 2, DENY.
 
-    The spec says 'allows 5 between cold-reads, denies the 6th'. The stored
-    count == 5 means 5 landed commits since the last cold-read; the 6th is
-    being attempted now → block. Stored count is the landed value;
-    PreToolUse reads it before this commit lands.
+    The stored count == 5 means 5 commits landed after the last state-resetting
+    PASS; the 6th is being attempted now. PreToolUse reads the landed value
+    before this commit lands.
     """
     repo, _ = _init(tmp_path)
     _commit(repo, 5)
@@ -199,15 +217,16 @@ def test_at_threshold_denies(tmp_path):
 
     assert r.returncode == 2
     assert "[commit-block]" in r.stderr
-    assert "adversarial-review skill" in r.stderr
+    assert "commits since the review checkpoint" in r.stderr
+    assert "deep-review loop" in r.stderr
+    assert "log every round with `dd-log`. Only a PASS resets the checkpoint." in r.stderr
 
 
 def test_amend_at_threshold_denies(tmp_path):
     """git commit --amend while at threshold → exit 2, DENY.
 
-    is_git_commit() returns True for --amend; amend is intentionally gated
-    the same way as a new commit (coarse 'you owe a cold-read' gate, per spec
-    Out of scope note).
+    is_git_commit() returns True for --amend; amend is intentionally gated the
+    same way as a new commit because it does not waive the review checkpoint.
     """
     repo, _ = _init(tmp_path)
     _commit(repo, 5)
@@ -245,7 +264,8 @@ def test_no_checkpoint_at_threshold_denies(tmp_path):
 
     assert r.returncode == 2
     assert "[commit-block]" in r.stderr
-    assert "adversarial-review skill" in r.stderr
+    assert "commits since fork base" in r.stderr
+    assert "deep-review loop" in r.stderr
 
 
 def test_bypass_allows_when_over_threshold(tmp_path):
@@ -299,8 +319,8 @@ def test_valid_checkpoint_below_threshold_suppresses_fork_base(tmp_path):
     assert r.stderr.strip() == ""
 
 
-def test_no_git_repo_exits_zero_allow(tmp_path):
-    """Non-git cwd in payload → exit 0, ALLOW, no crash (degrade-silent)."""
+def test_matching_commit_outside_git_repo_blocks_as_unresolved(tmp_path):
+    """A matching commit with no Git top-level is unresolved and blocks."""
     not_a_repo = tmp_path / "not_a_repo"
     not_a_repo.mkdir()
     cfg = tmp_path / "ddcfg.json"
@@ -326,5 +346,96 @@ def test_no_git_repo_exits_zero_allow(tmp_path):
         text=True,
         env=env,
     )
+    assert r.returncode == 2
+    assert "standalone Bash call from the target repository" in r.stderr
+
+
+def test_git_target_selector_blocks_without_reading_caller_repo(tmp_path):
+    repo, _ = _init(tmp_path)
+
+    r = _run(repo, command="git -C /other commit -m x", hard_block_threshold=5)
+
+    assert r.returncode == 2
+    assert "standalone Bash call from the target repository" in r.stderr
+    assert "DD_SKIP_COMMIT_BLOCK" in r.stderr
+
+
+def test_present_empty_inherited_git_selector_blocks_as_unresolved(tmp_path):
+    repo, _ = _init(tmp_path)
+
+    r = _run(
+        repo,
+        command="git commit -m x",
+        hard_block_threshold=5,
+        extra_env={"GIT_DIR": ""},
+    )
+
+    assert r.returncode == 2
+    assert "standalone Bash call from the target repository" in r.stderr
+
+
+@pytest.mark.parametrize("shape", ["prefix", "suffix", "cd"])
+def test_compound_commit_blocks_with_standalone_recovery(tmp_path, shape):
+    caller_parent = tmp_path / "caller"
+    target_parent = tmp_path / "target"
+    caller_parent.mkdir()
+    target_parent.mkdir()
+    caller, _ = _init(caller_parent)
+    target, _ = _init(target_parent)
+    command = {
+        "prefix": "echo ready && git commit -m x",
+        "suffix": "git commit -m x && echo done",
+        "cd": f"cd {target} && git commit -m x",
+    }[shape]
+
+    r = _run(caller, command=command, hard_block_threshold=5)
+
+    assert r.returncode == 2
+    assert "standalone Bash call from the target repository" in r.stderr
+    assert "run other commands separately" in r.stderr
+    assert "DD_SKIP_COMMIT_BLOCK" in r.stderr
+
+
+@pytest.mark.parametrize("operator", ["&", "|&"])
+@pytest.mark.parametrize("position", ["prefix", "suffix"])
+def test_background_and_stderr_pipeline_commit_block_as_unresolved(
+    tmp_path, operator, position
+):
+    repo, _ = _init(tmp_path)
+    command = {
+        "prefix": f"echo ready {operator} git commit -m x",
+        "suffix": f"git commit -m x {operator} echo done",
+    }[position]
+
+    r = _run(repo, command=command, hard_block_threshold=5)
+
+    assert r.returncode == 2
+    assert "standalone Bash call from the target repository" in r.stderr
+
+
+def test_unrelated_and_chain_remains_outside_commit_gate(tmp_path):
+    repo, _ = _init(tmp_path)
+
+    r = _run(repo, command="echo ready && git status", hard_block_threshold=5)
+
     assert r.returncode == 0
-    assert r.stderr.strip() == ""
+    assert r.stderr == ""
+
+
+@pytest.mark.parametrize("operator", ["&", "|&"])
+def test_unrelated_operator_compound_remains_outside_commit_gate(tmp_path, operator):
+    repo, _ = _init(tmp_path)
+
+    r = _run(repo, command=f"echo ready {operator} git status")
+
+    assert r.returncode == 0
+    assert r.stderr == ""
+
+
+def test_missing_payload_cwd_matching_commit_blocks(tmp_path):
+    repo, _ = _init(tmp_path)
+
+    r = _run(repo, payload_cwd=None)
+
+    assert r.returncode == 2
+    assert "standalone Bash call from the target repository" in r.stderr

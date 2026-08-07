@@ -81,6 +81,7 @@ def _run(
     bypass: bool = False,
     payload_override: str | None = None,
     tool_name: str = "Edit",
+    extra_env: dict[str, str] | None = None,
 ) -> subprocess.CompletedProcess:
     """Run edit_block.py as a subprocess against ``repo``.
 
@@ -98,6 +99,8 @@ def _run(
     env.pop("DD_SKIP_EDIT_BLOCK", None)
     if bypass:
         env["DD_SKIP_EDIT_BLOCK"] = "1"
+    if extra_env:
+        env.update(extra_env)
 
     if payload_override is not None:
         stdin_text = payload_override
@@ -145,7 +148,8 @@ def test_deny_at_threshold(tmp_path):
 
     assert r.returncode == 2
     assert "[edit-block]" in r.stderr
-    assert "adversarial-review skill" in r.stderr
+    assert "deep-review loop" in r.stderr
+    assert "log every round with `dd-log`. Only a PASS resets the counter." in r.stderr
 
 
 def test_deny_above_threshold(tmp_path):
@@ -157,7 +161,7 @@ def test_deny_above_threshold(tmp_path):
 
     assert r.returncode == 2
     assert "[edit-block]" in r.stderr
-    assert "adversarial-review skill" in r.stderr
+    assert "deep-review loop" in r.stderr
 
 
 def test_counter_not_mutated_on_allow(tmp_path):
@@ -241,7 +245,7 @@ def test_malformed_stdin_with_over_threshold_counter_still_denies(tmp_path):
 
     assert r.returncode == 2
     assert "[edit-block]" in r.stderr
-    assert "adversarial-review skill" in r.stderr
+    assert "deep-review loop" in r.stderr
 
 
 def test_no_git_repo_exits_zero_allow(tmp_path):
@@ -272,3 +276,19 @@ def test_no_git_repo_exits_zero_allow(tmp_path):
     )
     assert r.returncode == 0
     assert r.stderr.strip() == ""
+
+
+def test_inherited_git_selectors_do_not_bypass_edit_ceiling(tmp_path):
+    repo = _init(tmp_path)
+    _seed_counter(repo, 60)
+    r = _run(
+        repo,
+        hard_block_threshold=60,
+        extra_env={
+            "GIT_DIR": "/missing/.git",
+            "GIT_WORK_TREE": "/missing",
+            "GIT_COMMON_DIR": "/missing/.git",
+        },
+    )
+    assert r.returncode == 2
+    assert "[edit-block]" in r.stderr

@@ -22,7 +22,6 @@ argless clock).
 from __future__ import annotations
 
 import shutil
-import subprocess
 from pathlib import Path
 
 from hooks.lib import config, logging_setup, state
@@ -83,15 +82,8 @@ def _live_branch_slugs(repo: str) -> set[str] | None:
     """Slugs of every local branch, or None when git can't enumerate (in which
     case the orphan sweep declines to delete — don't remove what you can't
     verify)."""
-    try:
-        r = subprocess.run(
-            ["git", "-C", repo, "for-each-ref",
-             "--format=%(refname:short)", "refs/heads/"],
-            capture_output=True, text=True, timeout=5,
-        )
-    except Exception:
-        return None
-    if r.returncode != 0:
+    r = state._git(repo, "for-each-ref", "--format=%(refname:short)", "refs/heads/")
+    if r is None or r.returncode != 0:
         return None
     return {state.branch_slug(b) for b in r.stdout.split() if b}
 
@@ -99,14 +91,7 @@ def _live_branch_slugs(repo: str) -> set[str] | None:
 def _current_branch_slug(repo: str) -> str | None:
     """Slug of the current branch, or ``"detached"`` on detached HEAD (matching
     how the hooks key state), or None if git is unavailable."""
-    try:
-        r = subprocess.run(
-            ["git", "-C", repo, "symbolic-ref", "--short", "HEAD"],
-            capture_output=True, text=True, timeout=5,
-        )
-    except Exception:
-        return None
-    return state.branch_slug(r.stdout.strip()) if r.returncode == 0 and r.stdout.strip() else "detached"
+    return state.branch_slug(state.current_branch(repo))
 
 
 def _sweep_orphan_state(repo: str, state_root: Path) -> None:
@@ -114,8 +99,8 @@ def _sweep_orphan_state(repo: str, state_root: Path) -> None:
     if live is None:
         return
     # Never delete the current key's dir, incl. the literal "detached" key the
-    # hooks use on detached HEAD (which for-each-ref doesn't list) — G4
-    # "never the current branch".
+    # hooks use on detached HEAD (which for-each-ref doesn't list). The current
+    # state key must never be swept.
     current = _current_branch_slug(repo)
     if current:
         live = live | {current}

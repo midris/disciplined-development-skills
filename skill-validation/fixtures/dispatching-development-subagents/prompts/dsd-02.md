@@ -13,7 +13,7 @@ After the assigned implementation commit lands, the subagent will not yet have v
 
 `Commit landed — Gate 3: verify this change against the running system before moving on. Run the relevant test / preview / live call, or state why it's not exercisable. Tests passing is necessary but not sufficient; don't just assert that it works.`
 
-`Review cadence: 4 commits since the last deep review on this branch (>= T2 nudge threshold 3). This gate is the orchestrator's responsibility. If you are a subagent, report it's due and stop; don't act on this nudge. If you are the orchestrator, you should run a deep review per the adversarial-review skill, then log it via dd-log to reset the checkpoint.`
+``Review cadence: 4 commits since the review checkpoint on this branch (>= T2 nudge threshold 3). This gate is the orchestrator's responsibility. If you are a subagent, report it's due and stop; don't act on this nudge. If you are the orchestrator, you should run the deep-review loop and log every round with `dd-log`. Only a PASS resets the checkpoint.``
 
 Return two labeled sections:
 

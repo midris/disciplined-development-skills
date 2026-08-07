@@ -9,8 +9,6 @@ Unlike ``test_settings_wiring.py`` (which walks up to a ``.claude`` ancestor
 and skips in this standalone bundle repo), this test pins the two files by
 path relative to the repo root — both are always present, so there is no skip
 guard and this always provides a real red/green gate.
-
-Task 2 of 2026-06-23-consolidate-plan-reminder.md.
 """
 
 from __future__ import annotations

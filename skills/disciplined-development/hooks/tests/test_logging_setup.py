@@ -1,6 +1,6 @@
 """Tests for hooks.lib.logging_setup — consolidated rolling-day JSONL logging.
 
-Covers the Part-G relocation: one rolling ``dd-hooks-YYYYMMDD.jsonl`` per dir
+Covers the current contract: one rolling ``dd-hooks-YYYYMMDD.jsonl`` per dir
 (not one file per process), dir resolution (DD_LOG_DIR env > logging.dir
 config > derived ``.claude/.dd-state/.logs`` > /tmp fallback), the
 ``logging.enabled`` master switch, and the preserved never-crash +
@@ -42,8 +42,8 @@ def test_records_land_in_day_stamped_file(tmp_path):
 
 
 def test_two_loggers_share_one_day_file(tmp_path):
-    # The relocation's point: NOT one file per process. Two loggers in the
-    # same dir append to the same day file (cross-process rows are
+    # One day file is shared rather than created per process. Two loggers in
+    # the same dir append to it (cross-process rows are
     # distinguished by the pid field, asserted present here).
     a = logging_setup.setup("hookA", log_dir=str(tmp_path))
     b = logging_setup.setup("hookB", log_dir=str(tmp_path))

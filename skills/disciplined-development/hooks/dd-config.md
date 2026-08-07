@@ -4,8 +4,9 @@
 
 Two layers of JSON config + env overrides:
 
-- **Skill defaults:** `lib/dd-defaults.json` — ships with the skill, the
-  schema; treat as read-only.
+- **Skill defaults:** `lib/dd-defaults.json` — shipped values; treat as
+  read-only. This document defines the full schema, including optional keys
+  whose default is absence.
 - **Project override (single surface):** `.claude/dd-config.json` — override
   only what you need; delete a key to fall back to the default. Resolved under
   `$CLAUDE_PROJECT_DIR` (the harness-set project root), falling back to the
@@ -75,16 +76,15 @@ cadence — documented expectation, not runtime-validated.
 
 | Key | Type | Default | Description |
 |---|---|---|---|
-| `nudge_threshold` | int | `3` | Commits since the last clean review at which `review_nudge.py` emits the T2 nudge. |
-| `hard_block_threshold` | int | `5` | Commits since the last clean review at which `commit_block.py` denies the next `git commit`. |
+| `nudge_threshold` | int | `3` | Commits since `review.checkpoint` at which `review_nudge.py` emits the T2 nudge. |
+| `hard_block_threshold` | int | `5` | Commits since `review.checkpoint` at which `commit_block.py` denies the next `git commit`. |
 
 **Threshold invariant:** `hard_block_threshold` must exceed `nudge_threshold`
 (5 > 3 by default). Same expectation as T0 — not runtime-validated.
 
-Commits since the last clean review use `review.checkpoint` (stamped by any
-clean deep review — `log_review.py` or `external_review.py`) when present; fall
-back to fork-base when absent (fresh branch) — so the T2 block fires even on a
-branch that has never been reviewed.
+Commit cadence uses `review.checkpoint`, stamped by an explicit PASS consumed by
+`log_review.py` or declared to `external_review.py`; when absent, it falls back to the fork
+base, so the T2 block fires even on a branch with no checkpoint.
 
 ---
 
@@ -105,16 +105,7 @@ Observability — comprehensive + on by default; tuned by retention/cleanup.
 
 | Key | Type | Default | Description |
 |---|---|---|---|
-| `trunk_branches` | list[string] | `["master", "main"]` | Fork-base resolution: the first that resolves is the merge-base ref for review diffs + commit counts. |
-
----
-
-## `plans`
-
-| Key | Type | Default | Description |
-|---|---|---|---|
-| `active_plan_pointer` | string | `".claude/active-plan"` | File holding the active plan path (one line). |
-| `fallback_glob` | list[string] | `["plans/*.md"]` | mtime-fallback plan discovery (newest match wins). |
+| `trunk_branches` | list[string] | `["master", "main"]` | Fork-base resolution: the first that resolves supplies fork-base metadata and commit counts. |
 
 ---
 
@@ -130,14 +121,6 @@ Observability — comprehensive + on by default; tuned by retention/cleanup.
 Projects without `codex` on `$PATH` should point `DD_CODEX_BIN` at the binary —
 there is no runtime `$PATH` probe, so the gate fails closed with "CLI not found"
 if `codex` is absent. To skip the gate instead, set `DD_SKIP_PR_REVIEW`.
-
----
-
-## `pr_review`
-
-| Key | Type | Default | Description |
-|---|---|---|---|
-| `advisory_paths` | list[string] | `[]` | Repo-relative globs (`fnmatch` semantics — `*` crosses `/`, so `design/**` covers a tree). On a BLOCK verdict, P0-P2 findings whose file matches a glob are downgraded to `[P3]` (annotated `advisory path; was Pn`) before the decision: the gate blocks only if a P0-P2 finding remains outside these paths. Downgraded findings stay in the logged row and print on a pass, so they stay visible and fixable. For paths the repo cannot fix in place — e.g. a pull-only mirror whose corrections land upstream — where blocking the PR cannot accelerate the fix. A BLOCK with no parseable findings is never downgraded (fail closed). |
 
 ---
 
@@ -171,16 +154,16 @@ tool-call time — hooks read their inherited environment).
 
 | Env var | Effect |
 |---|---|
-| `DD_ACTIVE_PLAN` | Force the active plan path (highest-priority resolution). |
+| `DD_ACTIVE_PLAN` | Pin the active plan path (highest priority; relative paths anchor to the resolved repo root). |
 | `DD_LOG_DIR` | Override the log directory (highest-priority). |
 | `DD_REVIEW_TIMEOUT` | Override `codex.pr_review_timeout_s`. |
 | `DD_CODEX_BIN` | Path to the `codex` binary the pre-PR gate runs (default `codex` on `PATH`). |
 
 **Set in:** the launching shell, `~/.claude/settings.json` `env`, or
-`<project>/.claude/settings.local.json` `env`. (`DD_CONFIG` / `DD_DEFAULTS`
-redirect the config files — for tests only; `CLAUDE_PROJECT_DIR` is harness-set
-and locates `.claude/dd-config.json` (see Overview → Precedence); `DD_HARD_BLOCK`
-is set internally by `pre_pr_review` and is not user-facing.)
+`<project>/.claude/settings.local.json` `env`. `DD_CONFIG` is an advanced or
+scratch override for the project config path; `DD_DEFAULTS` redirects shipped
+defaults for tests. `CLAUDE_PROJECT_DIR` is harness-set and locates
+`.claude/dd-config.json` (see Overview → Precedence).
 
 ---
 
@@ -188,8 +171,18 @@ is set internally by `pre_pr_review` and is not user-facing.)
 
 Priority (used by `discipline_nudge` and `external_review`):
 
-1. `DD_ACTIVE_PLAN` env var (explicit override — returned as-is, even if the
-   path doesn't exist).
-2. `.claude/active-plan` file (first non-empty line; repo-relative).
-3. mtime fallback over `plans.fallback_glob` (newest match; annotated in
-   output as heuristic).
+1. `DD_ACTIVE_PLAN` env var.
+2. Fixed `.claude/active-plan` file (first non-empty line).
+
+Relative pins anchor to the resolved repository root. A pin remains selected
+even when its target is missing or unreadable: `discipline_nudge.py` names it,
+while `external_review.py` records `plan_unavailable` and fails closed before
+launching the reviewer. With no pin, the nudge reports that the plan is
+unpinned and the external gate fails closed. There is no mtime fallback and no
+`plans` config block.
+
+The reviewer command is `<DD_CODEX_BIN> exec --cd <repo> [-m <review.model>]
+[-c model_reasoning_effort=<review.effort>] -s read-only -o
+<last-message-file> <prompt>`. It inherits the launching environment except
+`GH_REPO`, `GIT_DIR`, `GIT_WORK_TREE`, and `GIT_COMMON_DIR`, which are removed
+so they cannot redirect the reviewed repository.

@@ -1,4 +1,4 @@
-"""Tests for hooks.lib.review_record — the single producer of a reviews.jsonl row.
+"""Tests for hooks.lib.review_record — row building and cadence context.
 
 Two units:
 
@@ -6,7 +6,7 @@ Two units:
 - ``gather_cadence_context`` reads state + git (no ``git diff``) → uses the
   ``git_repo`` temp-repo fixture from conftest.py.
 
-Grounded against the live cadence hooks (per the plan's Reuse surface):
+Grounded against the live cadence hooks:
 - the trunk list comes from config key ``branch_convention.trunk_branches``
   (as ``review_nudge.py`` / ``commit_block.py`` read it),
 - the unreviewed-edit counter is named ``"edits"`` (``edit_block.COUNTER_NAME``),
@@ -20,7 +20,15 @@ import subprocess
 from pathlib import Path
 
 import hooks.lib.state as state
-from hooks.lib.review_record import build_review_record, gather_cadence_context
+import pytest
+
+from hooks.lib.review_record import build_review_record as _build_review_record
+from hooks.lib.review_record import gather_cadence_context
+
+
+def build_review_record(*, decision="PASS", **kwargs):
+    """Keep schema tests explicit at the production boundary."""
+    return _build_review_record(decision=decision, **kwargs)
 
 # --- shared finding-text fixtures (producer-shaped per parse_findings) --------
 
@@ -90,6 +98,7 @@ def test_p1_block_verdict_yields_block_and_p1_count():
         trigger="gate:pre-pr",
         round=1,
         context=CTX,
+        decision="BLOCK",
     )
     assert row["decision"] == "BLOCK"
     assert row["p1"] == 1
@@ -100,20 +109,19 @@ def test_p1_block_verdict_yields_block_and_p1_count():
     assert row["findings"][0]["line"] == 42
 
 
-def test_verdict_absent_but_p1_present_derives_block():
-    row = build_review_record(
-        findings=P1_NO_VERDICT,
-        source="model-review",
-        reviewer="claude",
-        trigger="nudge:edits",
-        round=2,
-        context=CTX,
-    )
-    assert row["decision"] == "BLOCK"
-    assert row["p1"] == 1
+def test_builder_requires_callers_to_supply_decision():
+    with pytest.raises(TypeError):
+        _build_review_record(
+            findings=P1_NO_VERDICT,
+            source="model-review",
+            reviewer="claude",
+            trigger="nudge:edits",
+            round=2,
+            context=CTX,
+        )
 
 
-def test_no_findings_no_verdict_derives_pass():
+def test_explicit_pass_is_not_derived_from_missing_findings():
     row = build_review_record(
         findings="Looks good to me.",
         source="model-review",
@@ -126,8 +134,7 @@ def test_no_findings_no_verdict_derives_pass():
     assert row["findings"] == []
 
 
-def test_only_p3_present_derives_pass():
-    # P3 is advisory — derived decision is PASS iff NO P0/P1/P2 present.
+def test_explicit_block_is_not_overridden_by_p3_only_findings():
     row = build_review_record(
         findings="- [P3] lib/foo.py:10: nit, rename var",
         source="model-review",
@@ -135,8 +142,9 @@ def test_only_p3_present_derives_pass():
         trigger="manual",
         round=1,
         context=CTX,
+        decision="BLOCK",
     )
-    assert row["decision"] == "PASS"
+    assert row["decision"] == "BLOCK"
     assert row["p3"] == 1
 
 
@@ -322,7 +330,7 @@ def test_extra_cannot_clobber_reserved_fields_but_new_keys_pass_through():
         # Reserved keys that must NOT clobber builder values:
         "ts": "2099-01-01T00:00:00Z",        # writer-owned; must stay absent
         "scope": "whole-repo",               # schema-forbidden; must stay absent
-        "decision": "BLOCK",                 # builder-derived (CLEAN_PASS → PASS); must keep PASS
+        "decision": "BLOCK",                 # explicit PASS must not be clobbered
         "output": "INJECTED",                # builder-set verbatim; must keep original
         "p1": 99,                            # builder count; must keep 0
         "head_sha": "deadbeef",              # context key; must keep CTX value
@@ -414,8 +422,8 @@ def test_cadence_context_uses_checkpoint_when_present(git_repo, monkeypatch):
 
 
 def test_cadence_context_runs_no_git_diff(git_repo, monkeypatch):
-    # Spy on every git invocation routed through state._git AND review_record's
-    # own HEAD read; assert none of them is a ``git diff`` (the function is
+    # Spy on every git invocation routed through the shared state helper;
+    # assert none of them is a ``git diff`` (the function is
     # state+git reads only — a diff would re-introduce the diff-scoped machinery
     # this overhaul removes).
     default = _git(git_repo, "rev-parse", "--abbrev-ref", "HEAD")
@@ -433,10 +441,20 @@ def test_cadence_context_runs_no_git_diff(git_repo, monkeypatch):
         return real_run(argv, *a, **k)
 
     monkeypatch.setattr(state.subprocess, "run", spy_run)
-    monkeypatch.setattr(review_record.subprocess, "run", spy_run)
 
     gather_cadence_context(git_repo, "feature")
 
     assert calls, "expected gather_cadence_context to make at least one git call"
     for argv in calls:
         assert "diff" not in argv, f"unexpected git diff in {argv}"
+
+
+def test_cadence_context_ignores_inherited_git_selectors(git_repo, monkeypatch):
+    head = _git(git_repo, "rev-parse", "HEAD")
+    monkeypatch.setenv("GIT_DIR", "/missing/.git")
+    monkeypatch.setenv("GIT_WORK_TREE", "/missing")
+    monkeypatch.setenv("GIT_COMMON_DIR", "/missing/.git")
+
+    ctx = gather_cadence_context(git_repo, "master")
+
+    assert ctx["head_sha"] == head

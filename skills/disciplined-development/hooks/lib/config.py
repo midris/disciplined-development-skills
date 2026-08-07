@@ -7,9 +7,9 @@ harness-set project root), else the current directory. User config wins on
 overlapping keys; a malformed
 or non-dict user config is discarded silently so defaults stand.
 
-``DD_DEFAULTS`` / ``DD_CONFIG`` env vars override the respective file
-locations (used by tests). Results are cached; call ``reset_config_cache()``
-when the underlying files or env vars change.
+``DD_DEFAULTS`` overrides shipped defaults for tests. ``DD_CONFIG`` is an
+advanced, scratch, or test override for the project config path. Results are
+cached; call ``reset_config_cache()`` when the files or env vars change.
 """
 from __future__ import annotations
 
@@ -47,7 +47,10 @@ def _load_json_dict(path: Path) -> dict[str, Any]:
     try:
         with path.open(encoding="utf-8") as fh:
             data = json.load(fh)
-    except (OSError, json.JSONDecodeError):
+    # This file is user-controlled and every hard gate loads it during setup.
+    # Any ordinary read/decode/parse failure must fall back to defaults rather
+    # than escape as a non-blocking hook exit.
+    except Exception:
         return {}
     return data if isinstance(data, dict) else {}
 

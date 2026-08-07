@@ -67,7 +67,9 @@
 Use one branch/PR per boundary when executing through PRs.
 Within a boundary, retain the per-task commits named below so validation history remains reviewable.
 Before opening a PR at any boundary, the orchestrator runs the complete Gate 5 whole-branch review and smoke pass.
-Invoke Gate 5's external review with the Task 1 scratch `DD_CONFIG` override that pins `gpt-5.6-sol` at high effort, and verify its logged model metadata before the boundary passes.
+Gate 5's external reviewer must use a different provider and model family from the orchestrator.
+For a Claude orchestrator, use the Task 1 scratch `DD_CONFIG` override that pins `gpt-5.6-sol` at high effort and verify its logged model metadata before the boundary passes.
+For this Codex-orchestrated Task 10 session, use a fresh Claude Opus 4.8 review at high effort and record its invocation and verdict in the Gate 2 artifact.
 Keep that cleanup-specific override outside the repository rather than changing the shipped reviewer defaults.
 When work proceeds without PRs, the same orchestrator-owned review runs at the repository's Principle 8 cadence.
 
@@ -99,7 +101,8 @@ When work proceeds without PRs, the same orchestrator-owned review runs at the r
   Define the universal rules from the design once in `skill-validation/README.md`.
   Include immutable bundle materialization, fresh-context dispatch, explicit model/effort selection, three-error infrastructure escalation, complete-active-suite closure, post-freeze baseline invalidation, and one exact read-only command for checking local Markdown links.
   Define a blind-scoring handoff in which a separate fresh scorer receives the rubric and opaque output IDs, fixes the scoring record, and returns it before the control/draft mapping is revealed.
-  Define a scratch Gate 5 `DD_CONFIG` project override that pins external review to `gpt-5.6-sol` at high effort, the exact invocation that consumes it, and the logged-metadata check that fails the boundary on mismatch.
+  Define a scratch Gate 5 `DD_CONFIG` project override that pins a Codex external review to `gpt-5.6-sol` at high effort, the exact invocation that consumes it, and the logged-metadata check that fails the boundary on mismatch.
+  Require the external reviewer to use a different provider and model family from the orchestrator; when Codex orchestrates, use a fresh Claude review and record its model, effort, invocation, and verdict in the Gate 2 artifact.
   Keep the override outside the repository because it is specific to this cleanup rather than a new shipped reviewer default.
   Include the active-catalog fields: scenario ID, owner, affected skills, type, protected promise, protected skill section, supplied skill context, exact prompt or fixture link, evaluator-withheld rubric, control bundle commit and hash, control result, target GREEN when applicable, cleaned result, Sol-low scores, and rerun triggers.
 
@@ -439,15 +442,390 @@ No skill or hook changed.
 
 **Files:**
 
+- Modify: `ARCHITECTURE.md`
+- Modify: `CLAUDE.md`
+- Modify: `MIGRATIONS.md`
+- Modify: `README.md`
+- Modify: `.claude/commands/dd-log.md`
+- Modify: `commands/dd-log.md`
+- Modify: `examples/CLAUDE.md-snippet.md`
+- Modify: `examples/starter.CLAUDE.md`
+- Modify: `skills/disciplined-development/SKILL.md`
+- Modify: `skills/dispatching-development-subagents/SKILL.md`
+- Modify: `skills/writing-explicit-rationale/SKILL.md`
+- Modify: `skills/disciplined-development/hooks/README.md`
+- Modify: `skills/disciplined-development/hooks/dd-config.md`
+- Modify: `skills/disciplined-development/hooks/hook-recipes-claude-code.md`
+- Modify behavior test-first:
+  `skills/disciplined-development/hooks/lib/command_match.py`,
+  `skills/disciplined-development/hooks/lib/config.py`,
+  `skills/disciplined-development/hooks/lib/plan.py`,
+  `skills/disciplined-development/hooks/lib/review_record.py`,
+  `skills/disciplined-development/hooks/lib/severity.py`,
+  `skills/disciplined-development/hooks/lib/state.py`,
+  `skills/disciplined-development/hooks/commit_block.py`,
+  `skills/disciplined-development/hooks/external_review.py`,
+  `skills/disciplined-development/hooks/log_review.py`,
+  `skills/disciplined-development/hooks/pre_pr_review.py`, and
+  `skills/disciplined-development/hooks/review_nudge.py`
+- Modify shared-mechanics call sites without changing cadence policy:
+  `skills/disciplined-development/hooks/lib/cleanup.py`,
+  `skills/disciplined-development/hooks/discipline_nudge.py`,
+  `skills/disciplined-development/hooks/edit_block.py`, and
+  `skills/disciplined-development/hooks/edit_counter.py`
+- Delete: `skills/disciplined-development/hooks/lib/reviewer_runner.py`
+- Modify: `skills/disciplined-development/hooks/lib/dd-defaults.json`
+- Modify: `examples/dd-config.full.json`
+- Modify tests: `skills/disciplined-development/hooks/tests/test_cleanup.py`,
+  `test_command_match.py`, `test_commit_block.py`, `test_config.py`,
+  `test_discipline_nudge.py`, `test_edit_block.py`, `test_edit_counter.py`,
+  `test_external_review.py`,
+  `test_log_review.py`, `test_plan.py`, `test_pre_pr_review.py`,
+  `test_review_nudge.py`, `test_review_record.py`, `test_scaffold_smoke.py`,
+  `test_severity.py`, and `test_state.py` in the same tests directory
+- Modify comments/docstrings only in any other touched hook Python file
+- Modify: `skill-validation/adversarial-review-loop.md`
+- Modify: `skill-validation/README.md`
 - Modify: `skill-validation/disciplined-development.md`
+- Modify: `skill-validation/dispatching-development-subagents.md`
+- Modify: `skill-validation/fixtures/dispatching-development-subagents/README.md`
+- Modify: `skill-validation/fixtures/dispatching-development-subagents/prompts/dsd-02.md`
+- Modify: `skill-validation/writing-explicit-rationale.md`
+- Add: `skill-validation/fixtures/disciplined-development/`
 - Read control: `skills/disciplined-development/SKILL.md` at `4296647`
 
 **Required coverage:** link the shared discovery suite; simple mode-to-child routing; a non-trivial development sequence crossing Gates 1–5; safe direct invocation with all companions; full-suite orchestration; per-task versus whole-branch review ownership; Principle 7 analysis/implementation threshold; description routing.
 
-- [ ] Map all five gates, eight principles, and every mode-table row to active scenarios without restating each child procedure.
-- [ ] Add explicit scenarios for child availability, required versus optional routing, and direct invocation.
-- [ ] Run every active preservation scenario 5/5 on Sol high at `4296647`.
-- [ ] Review orchestration coverage and commit as `docs(validation): baseline disciplined development`.
+- [x] Map all five gates, eight principles, and every mode-table row to active scenarios without restating each child procedure.
+- [x] Add explicit scenarios for child availability, required versus optional routing, and direct invocation.
+- [x] Run every active preservation scenario 5/5 on Sol high at `4296647`.
+- [x] Review orchestration coverage and commit the behavior-bearing baseline as `docs(skills): clarify orchestration and rationale`.
+
+**Task 10 behavior boundary:** While the baseline was under review, the owner
+approved holistic repairs to Gate 5 and the rationale threshold through
+both skill-writing approval gates. The original Task 16 behavior slice already
+landed separately in `1678f49`. During Task 10 review, `WER-07` exposed a later
+rationale-threshold ambiguity, and the owner approved its repair. That follow-on
+repair lands with Task 10 because the final current bundles and cold review cover
+the integrated staged candidate, not an intermediate commit. This explicit
+behavior-bearing boundary replaces only Task 10's earlier validation-only commit
+name; it does not complete the later readability work in Tasks 21 or 25. Parent word
+count is 1,998 pre-boundary HEAD / 2,076 current; explicit-rationale is 378 / 372.
+Evaluated skill hashes are
+`dff55e1348ebde0ec45c8b1861e48c000a5befdbd2f23deb4e857fa1945c93a6`
+and `ce0ba16731a31b5e7a08dbd7c12256d6c50b094808f3eb3c349ba4f78acdc482`.
+Cycle 3 required only a source-line split in the rationale paragraph; its final hash
+is `568b2a61bef3f7694014fb89228f933261837acd4f2b5978b2b8ef55aa108c9f`.
+No `DD` behavioral rerun trigger was met. The stricter post-approval rule restarted
+the six rationale scenarios, which passed 30/30 with one excluded pre-start
+approval-service timeout. The owner later approved one narrow hook-safety repair:
+malformed user configuration now falls back to defaults instead of escaping the
+hard gates as a non-blocking exit 1.
+
+**Task 10 validation note (2026-08-06):** `DD-01` maps all eight modes,
+active companion loading, explicit negatives, and ownership seams; `DD-02` crosses
+Gates 1–5; `DD-03` protects Principle 7. The target controls reproduced their
+watched failures, and the then-current suite closed at 85/85. The final rationale suite
+also passed 30/30 after its approved wording and layout repairs.
+
+Whole-repository review cycles 1–3 found replayability, infrastructure-record,
+model-tier, governing-plan, architecture, and layout defects. The required cold-read
+escape then exposed incomplete owner records and Task 16 history; successor reviews
+found the same manifest/ownership pattern plus rubric, inventory, and architecture
+drift. The owner rejected restarting self-review after external remediation because
+each external rerun already reviews the whole current repository while the PR stays
+blocked. A later successor caught the pre-PR hook's advisory-path behavior missing
+from its documentation, and the owner approved a holistic documentation and diagram
+repair. The next review found five more documentation classes; after their repair,
+a successor found six remaining accuracy and stale-coordinate classes. The owner
+approved the one skill-prose repair, and its affected `DSD-02`, `DD-01`, and
+`DD-02` scenarios passed fresh 5/5 reruns. Later successors found and prompted
+repairs to the review-log producer inventory, two opaque hook-test coordinates,
+the review-loop diagram's cap/logging transitions, the commit matcher's existing
+direct-command boundary, hook-extension guidance, and Task 10's file inventory.
+All seven diagrams render. An intermediate docstring-stripped AST comparison
+against the Task 10 base covered all 30 changed Python files: 27 were identical;
+`log_review.py` differs only in two user-facing strings that now describe an
+attempted write accurately, `lib/config.py` contains the approved malformed-config
+containment, and `tests/test_config.py` contains its regression. No other hook
+control flow or state behavior changed. The
+latest successor found that the curated-log
+docs still guaranteed a row for every attempt and that this history retained
+superseded pending-review statements. The log contract is now explicitly
+best-effort with its pre-log omissions enumerated. Its successor found remaining
+producer-facing guarantees of trace persistence. All cited producers and diagrams
+now say that recording is attempted and that PASS-driven cadence reset is
+independent of a successful trace write. Its successor found five remaining
+summary and record classes: state-reset terminology, best-effort producer
+summaries, consumer onboarding, Task 10 inventory, and a historical bundle
+label. Its successor found `DD_CODEX_BIN` missing from both hook configuration
+summaries. The next successor found two residual PASS/trace statements, now
+repaired, and a malformed-config path that could make all three hard gates exit 1.
+The owner approved a test-first repair to the shared loader's existing
+discard-on-failure contract. Its focused regression passed, the focused config and
+hard-gate set passed 22/22, malformed-config process probes now exit 0, 0, and 2
+rather than 1, and the complete hook suite passed 264 with 3 skipped. Its
+successor found two documentation
+misses: the bundle-local `/dd-log` variant still guaranteed trace persistence,
+and a test header mislabeled the shared row builder as the sole producer. Both
+secondary surfaces now use the current contract. Its successor found two more
+stale-model classes: hook onboarding
+still grouped the independent pre-PR backstop into edit/commit cadence, and two
+emitted messages plus their references counted from the "last deep review"
+rather than the review checkpoint or fork-base fallback. The owner approved the
+hook-prose repair. Four focused assertions failed on the old wording and passed
+after the repair, and the complete hook suite again passed 264 with 3 skipped.
+The then-current AST boundary was 27 unchanged files plus the approved user-facing
+prose in `commit_block.py`, `review_nudge.py`, and `log_review.py`; the approved
+loader containment in `lib/config.py`; and their regressions in
+`tests/test_commit_block.py`, `tests/test_review_nudge.py`, and
+`tests/test_config.py`. No gate condition, threshold, state mutation, or exit
+behavior beyond the recorded malformed-config repair changed. The next
+successor found the stale DSD-02 hook quotation and hashes, an overstated
+wrapper-output guarantee, an incomplete state inventory and commit-state edge,
+P3-dropping `/dd-log` instructions, and the overbroad exit-behavior claim above.
+The fixture, records, hook documentation and comments, slash-command variants,
+architecture summary, and commit-state diagram now match the executable
+behavior. DSD-02 restarted at zero against the refreshed read-only bundle and
+passed 5/5 fresh Sol-high repetitions with no infrastructure errors. Its
+successor found three high-level documentation classes: reviewer verdict and
+effective-decision conflation, incomplete advisory-pass output descriptions,
+and obsolete review-diff and plan/spec-path data flow. The hook summaries,
+configuration table, plan-resolver docstring, and repository guidance now use
+the branch-specific executable contracts. Its successor found stale predecessor
+and cutover history in five live hook docstrings and comments, including a claim
+that wrapper recursion mattered only to a retired gate. Those surfaces now state
+the current direct-command, active-plan, wiring, and wrapper invariants while
+the negative regression assertions remain intact. Its successor found two final
+bookkeeping omissions: the Task 10 inventory now names the staged validation
+index, and the then-current 32-file AST boundary was recorded as 25 unchanged
+plus seven approved differences. Its successor found eight residual
+migration-relative test comments. The complete live class now states current
+invariants; related headings, the unsupported plan-key comment, and stray-event
+guidance were repaired in the same sweep while necessary negative assertions
+and technical Git rationale remain. The resulting 34-file AST boundary was 27
+unchanged plus the same seven approved differences. Its successor found that an
+advisory-normalized PASS message overclaimed every finding matched an advisory
+path even though unrelated P3 findings do not participate in that decision. The
+owner approved a test-first hook-prose repair. A mixed P2/P3 regression failed
+on the old message and passed after it was narrowed to all P0-P2 findings. The
+same consistency pass made onboarding and recipe guidance explicit that
+`dd-log` records every round and resets cadence only on a derived PASS. The
+final 34-file AST boundary is 25 unchanged plus nine approved differences,
+adding only `external_review.py` and its regression to the prior seven. The next
+successor found two residual transition-era statements. The matcher now names
+the current commit ceiling and post-commit nudge directly, and the loop owner
+record states that parent linkage is complete rather than future Task 10 work.
+Its successor found the remaining producer-facing recovery messages still
+implied that logging one review resets cadence, two completed audit-index rows
+still said their mapping was pending, and a config-test comment named a removed
+consumer. The index and comment now state current ownership. The owner approved
+a test-first holistic hook-prose repair: six focused assertions failed on the
+old recovery text and passed after all four hook messages adopted “log every
+round” and “Only a PASS resets.” The final 37-file AST boundary is 24 unchanged
+plus 13 approved differences. The next successor found that `DSD-02`'s quoted
+T2 message and evaluated hashes predated that recovery-text repair. The active
+prompt and four-file manifest now match the staged bytes, the prior 5/5 remains
+historical evidence, and `DSD-02` restarted at zero. The orchestrator then
+manually scored five fresh external repetitions P / P / P / P / P with zero
+infrastructure errors. The current arm is 5/5, restoring dispatch closure to
+70/70 and parent closure to 85/85.
+The next external review found two residual best-effort persistence overclaims; a documentation/comment-only repair now describes downgraded findings as included in the attempted trace write and states that PASS resets the edit counter independently of logging success.
+
+**Approved dumb-hooks simplification (2026-08-07).** The next Gate 5 review
+proved that target-changing Git and GitHub commands can make the hooks inspect a
+different repository from the command. The owner approved a broader repair under
+the repository's “dumb hooks, smart models” posture:
+
+- For matching commit/PR actions, accept only the payload cwd as repository.
+  Repository selectors—including `gh --repo` / `-R`, `GH_REPO`, `git -C`,
+  `GIT_DIR`, `--git-dir`, and `--work-tree`—are unresolved.
+  `pre_pr_review.py` and `commit_block.py` block unresolved matching commands
+  with a rewrite/bypass instruction. A post-commit `review_nudge.py` emits only
+  its Gate 3 verification reminder when the target is unresolved; it never reads
+  cadence state from the caller's repository. Inline or inherited `GH_REPO`
+  makes a PR target unresolved. Inline or inherited `GIT_DIR`, `GIT_WORK_TREE`,
+  or `GIT_COMMON_DIR` makes a commit target unresolved. Remove all four from
+  hook-owned Git probes and the external-review subprocess so
+  `git -C <resolved-repo>` / `codex exec --cd <resolved-repo>` governs the
+  operation. A matching command with absent or non-string payload `cwd` is
+  unresolved; never substitute the process cwd.
+- Keep command detection narrow. A supported commit or PR create is one
+  standalone direct Bash command in the payload cwd. A top-level `&&` command
+  containing a recognizable direct `git commit` or `gh pr create` is an
+  unresolved match, whether the action has a prefix, a suffix, or follows
+  `cd <path>`. The commit and pre-PR gates block it without reading or
+  delegating against repository state and instruct the model to run the action
+  as a standalone Bash call from the target repository, with other commands in
+  separate calls. Unrelated `&&` commands remain outside both gates. Keep `;`,
+  `||`, and `|` around either action unresolved, and keep shell-wrapped commits
+  outside the direct-commit boundary without adding a loose commit substring
+  detector. The existing loose PR-shaped net continues to block unresolved
+  wrapped PR commands. Determine whether a recognizable direct commit landed
+  from a zero tool-response exit code while excluding `--dry-run`; an
+  unsupported zero-exit compound commit may therefore receive Gate 3
+  verification only, without cadence lookup. Do not infer success from Git
+  stdout or model arbitrary shell behavior.
+- Trust explicit review verdicts. `external_review.py` maps reviewer `PASS` to
+  allow and reviewer `BLOCK` to block. Remove `pr_review.advisory_paths` and the
+  hook-side finding downgrade; accepted exceptions belong in reviewer guidance
+  or the human bypass, not a parser that reverses the reviewer.
+- Require every `dd-log` input to end with an explicit `DD-VERDICT: PASS|BLOCK`.
+  Missing or malformed verdicts are usage errors and never reset cadence.
+  Structured finding parsing may remain for telemetry, but it cannot derive or
+  override the decision.
+- Resolve the active plan only from `DD_ACTIVE_PLAN` or
+  `.claude/active-plan`. Remove newest-mtime fallback and
+  the entire `plans` config block (`active_plan_pointer` and `fallback_glob`);
+  the pointer location is fixed. The discipline nudge reports an unpinned plan;
+  external review fails closed before launch when no plan is pinned. Anchor a
+  relative pin to the resolved repository root. An explicit missing or
+  unreadable plan remains the selected pin so the nudge can name it, but the
+  external gate rejects it before launching the reviewer. For an absent,
+  missing, or unreadable plan pin, do not launch the reviewer or reset state;
+  return 1 and attempt an ERROR telemetry row with reason `plan_unavailable`.
+- Replace the bespoke reviewer runner with a standard timeout-bounded subprocess
+  call. Preserve missing-binary, timeout, abnormal-exit, empty-output, final
+  verdict, temporary-output cleanup, and fail-closed behavior.
+- Centralize the repeated mechanical repository/branch and
+  checkpoint-or-fork-base calculations in `lib/state.py`; every consumer uses
+  the same result.
+
+The external-review machinery remains independently configurable and
+orchestrator-owned: preserve target-repository config resolution,
+`review.reviewer`, `review.model`, `review.effort`, `DD_CODEX_BIN`, the
+whole-repository plan-anchored prompt, `codex exec --cd`, read-only sandboxing,
+the cleanup-only no-agent wrapper, timeout, last-message capture, best-effort
+telemetry, and fail-closed PR translation. Preserve all cadence thresholds,
+three hard gates, repeated edit nudging, both Gate 5 external-review moments,
+and the smoke result in this Gate 2 artifact. This slice does not authorize a
+telemetry-schema reduction or cadence-policy change.
+
+The external command contract remains
+`<DD_CODEX_BIN> exec --cd <repo> [-m <review.model>] [-c
+model_reasoning_effort=<review.effort>] -s read-only -o <last-message-file>
+<prompt>`. `review.model` selects a model independently of the orchestrator;
+`review.effort` selects its reasoning effort; `review.reviewer` labels the
+telemetry row and does not select the binary. `DD_CODEX_BIN` selects the
+executable or enforcement wrapper. Launch the reviewer with the inherited
+environment minus `GH_REPO`, `GIT_DIR`, `GIT_WORK_TREE`, and `GIT_COMMON_DIR`
+so those selectors cannot redirect its repository.
+
+Implement test-first. Matcher and hard-consumer tests cover the standalone
+payload-cwd form; `prefix && action`, `action && suffix`, and
+`cd <path> && action` as unresolved matches; and unrelated `&&` commands as
+outside both gates. Preserve selector coverage. Consumer regressions prove that
+the pre-PR and commit gates never inspect caller state for another target and
+that the post-commit hook emits verification-only on unresolved targets.
+External-review tests pin configured model/effort argv, target-repository config,
+read-only execution, timeout, every fail-closed branch, direct verdict mapping,
+and no-plan failure. `dd-log` tests pin explicit PASS/BLOCK and missing-verdict
+no-reset behavior. Shared-state tests pin current/detached branch resolution,
+checkpoint preference, stale-checkpoint fork-base fallback, and unresolved Git.
+Update all hook docs, examples, migration guidance, architecture diagrams, and
+validation instructions to the executable contract; remove obsolete runner,
+advisory-path, and fallback-plan references.
+
+**Implementation interfaces and inventory:**
+
+This approved slice supersedes Task 10's earlier Python-change restrictions,
+AST boundary, and regression-file list; those earlier statements remain only as
+chronology for the candidate that preceded this approval.
+
+- `lib/command_match.py` exposes
+  `find_git_commit(command, base_cwd, env=None) -> str | None` and
+  `find_gh_pr_create(command, base_cwd, env=None) -> str | None`; `env=None`
+  reads `os.environ`. `is_git_commit` remains the direct-command discriminator
+  that lets callers distinguish no match from an unresolved match.
+  `looks_like_gh_pr_create` remains only the pre-PR fail-closed net.
+  `commit_landed` uses a recognizable direct commit plus tool exit status so an
+  unsupported compound can still trigger verification-only. Both matchers
+  return the absolute payload cwd only for a standalone supported action; they
+  return `None` for a matching compound. Consumers resolve a returned cwd
+  through `state.repo_root`; failure to obtain a Git top-level follows the
+  unresolved matching-command behavior.
+- `lib/state.py` exposes `current_branch(repo) -> str` (`"detached"` on
+  detached HEAD or failure) and
+  `review_distance(repo, branch, trunks) -> tuple[int | None, str | None]`,
+  where the basis is `"checkpoint"`, `"fork_base"`, or `None`. Preserve the
+  ancestor check before checkpoint counting. Migrate all production copies to
+  these helpers; do not build a general hook framework.
+- `lib/review_record.py` requires callers to pass `decision` explicitly as
+  `PASS`, `BLOCK`, or `ERROR`; it may parse findings only for telemetry counts.
+  `lib/severity.py` keeps `parse_verdict` and telemetry-only `parse_findings`
+  but deletes advisory-path rewriting. `log_review.py` parses the final verdict
+  before building a row and returns exit 2 without logging or resetting when it
+  is absent or malformed.
+- Modify behavior in `pre_pr_review.py`, `commit_block.py`, `review_nudge.py`,
+  `external_review.py`, `log_review.py`, `lib/command_match.py`, `lib/plan.py`,
+  `lib/review_record.py`, `lib/severity.py`, and `lib/state.py`. Migrate exact
+  repository/branch or distance copies in `edit_counter.py`, `edit_block.py`,
+  `cleanup.py`, and `log_review.py` without changing their user-visible
+  cadence. Modify `discipline_nudge.py` only to use the shared context helper
+  and replace fallback plan discovery with the explicit unpinned-plan message.
+  Delete `lib/reviewer_runner.py`.
+- Update `lib/dd-defaults.json`, `examples/dd-config.full.json`, both `dd-log`
+  command variants, the three hook docs, `README.md`, `ARCHITECTURE.md`,
+  `MIGRATIONS.md`, relevant examples, and Gate 5 validation instructions.
+  Apply the standalone-call recovery above to agent-facing hook output, docs,
+  and examples. Remove the obsolete reviewer-runner import smoke assertion.
+- Test in `test_command_match.py`, `test_pre_pr_review.py`,
+  `test_commit_block.py`, `test_review_nudge.py`, `test_external_review.py`,
+  `test_log_review.py`, `test_review_record.py`, `test_plan.py`,
+  `test_state.py`, `test_config.py`, `test_cleanup.py`,
+  `test_discipline_nudge.py`, `test_severity.py`, `test_edit_counter.py`,
+  `test_edit_block.py`, and `test_scaffold_smoke.py`. Remove advisory-rewrite
+  expectations while preserving verdict and finding parsing; prove that the
+  shared-helper migrations leave edit cadence unchanged. Add a consumer-level
+  regression before each corresponding production change and record the
+  expected RED cause. Run the focused files after each GREEN, then the complete
+  hook suite with
+  `cd skills/disciplined-development/hooks && python3 -m pytest -q`.
+
+**Task 10 Gate 5 cycle-1 validation note (2026-08-07):** The current
+`DSD-02` bundle at content-manifest SHA-256
+`487178d1656de7513a8139b09ef6b69f42d717eaf2d72c011e1a70d5c74c10f5`
+passed five fresh Sol-high, high-effort, read-only/no-agents repetitions after
+orchestrator manual scoring. Runs 1–5 were P / P / P / P / P across all four
+rubric criteria, with zero infrastructure errors. The prior 5/5 arm remains
+historical; current dispatch closure is 70/70 and parent closure is 85/85.
+
+**Task 10 Gate 5 completion (2026-08-07).** The orchestrator's final
+whole-repository self-review passed after correcting three non-behavioral
+comment/documentation inaccuracies; no P0–P2 findings remained. Because Codex
+orchestrated this session, the owner authorized the relevant repository,
+worktree, diff, plan, and derived validation artifacts for read-only review by
+Anthropic through the local Claude CLI. The final independent review ran after
+self-review with this command:
+
+```bash
+claude -p --model claude-opus-4-8 --effort high --safe-mode \
+  --no-session-persistence --permission-mode plan \
+  --tools Read,Glob,Grep,Bash \
+  --disallowedTools Edit,Write,NotebookEdit,WebFetch,WebSearch,Task \
+  --output-format text < /private/tmp/task10-claude-external-review-prompt.md
+```
+
+That fresh Opus 4.8 high-effort review recomputed the load-bearing hashes and
+word counts, traced the matcher, gate, plan, state, verdict, logging, and
+consumer paths, checked the skill/documentation/validation contracts, found no
+issues, and ended `DD-VERDICT: PASS`. No secrets, credentials, unrelated files,
+write tools, web tools, or nested agents were supplied.
+
+After the external PASS, the orchestrator ran:
+
+```bash
+python3 /private/tmp/task10-gate5-smoke.py \
+  /Users/simon/work/personal/disciplined-development-skills/.worktrees/comprehensive-skill-cleanup
+```
+
+The hermetic real-entry-point smoke exited 0. It proved: standalone commit
+allow, commit-compound block, unrelated-compound allow; unresolved landed
+compound verification-only; standalone PR delegation to the canonical payload
+repository, PR-compound block before delegation; no-plan external-review
+fail-closed before launch; and explicit-PASS logging with edit reset and HEAD
+checkpoint stamp. The final regression results were hook suite 373 passed / 3
+skipped, installer suite 11 passed, and research suite 4 passed.
 
 ### Task 11: Record the Sol-low control scores
 
@@ -549,7 +927,10 @@ No skill or hook changed.
 - [x] Establish target 5/5 GREEN and rerun the complete affected active suite on Sol high. The rationale suite is 5/5; the pairing-only LP-01 preservation rerun was 4/5 because one evaluator used an unrelated upstream test-only commit. The owner explicitly accepted that recorded variance on 2026-08-03 because WER-07 directly covers the changed companion behavior at 5/5 and no rationale or lean-body change caused the miss.
 - [x] Run cold skill-writing review; stop for user approval before applying any additional skill-prose finding, and restart affected scenarios after an approved repair.
 - [x] Show the complete edited skill in place and wait for final user review before committing.
-- [x] After final approval, run repository tests and commit the behavioral slice separately.
+- [x] After final approval, run repository tests and commit the behavioral slice
+  separately as `1678f49` (`docs(skills): make rationale durable and
+  nonduplicative`). The later rationale-threshold repair approved during Task 10
+  review is tracked in Task 10's explicit behavior boundary.
 
 ### Task 17: Clean `concise-writing`
 

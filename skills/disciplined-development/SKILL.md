@@ -10,6 +10,7 @@ description: Use when doing development work. If available, load this parent wit
 **Does not own:** verification mechanics, stale-reference sweeps, research grounding, rationale writing, plan-density rules, adversarial review posture, review iteration, or subagent-dispatch scoping and verification.
 Those live in companion skills.
 Methodology skills are invoked from the gates and mode table.
+Load every `REQUIRED SUB-SKILL` named by an active gate or principle, even when it has no action to take.
 
 ## Overview
 
@@ -55,23 +56,24 @@ REQUIRED SUB-SKILL: `superpowers:verification-before-completion`.
 Find them all; reconcile in one commit; document the sweep in the commit body's `References swept:` section.
 REQUIRED SUB-SKILL: `sweeping-stale-references`.
 
-**Gate 5 — End-of-chunk review + smoke pass before PR.** Three steps, in order.
-Plan checklist does not override the gate.
+**Gate 5 — Whole-repository review and smoke before PR.**
+The orchestrator owns this fail-closed sequence.
+For either review, `DD-VERDICT: PASS` means zero `[P0]`/`[P1]`/`[P2]`; `[P3]` is advisory.
 
-1. **Self-review** — a deep, whole-repo adversarial review against the
-   active plan; address findings per `adversarial-review-loop`. This is a
-   whole-branch review, so the local three-cycle cap governs even when an
-   upstream execution skill initiated the final review. Upstream per-task
-   fix loops remain governed by their execution skill.
-   REQUIRED SUB-SKILLS: `superpowers:requesting-code-review` + `adversarial-review` + `adversarial-review-loop`.
-2. **External review** — same whole-repo, plan-anchored scope.
-   `[P0]`/`[P1]`/`[P2]` block the PR (resolve before opening the PR);
-   `[P3]` is advisory.
-3. **Smoke pass** affected flows; capture evidence in the PR body.
+1. **Self-review** — Re-read the Gate 2 artifact, active plan, governing files, and linked specs. Review the whole repository against them; remediate through `adversarial-review-loop` and re-review until PASS.
+2. **External review** — After self-review passes, obtain a fresh review over the same whole-repository scope; remediate through `adversarial-review-loop` and rerun the external review until PASS.
+3. **Smoke pass** — After external review passes, smoke affected flows and record the exact commands and results in the Gate 2 artifact.
 
-A dispatched subagent runs no part of Gate 5 — gathering findings to hand over still counts.
-It reports that review is due and stops.
-The orchestrator or the user opens the PR, never an agent or subagent.
+`superpowers:finishing-a-development-branch` and PR creation remain blocked until all three pass.
+Reviewers emit review verdicts; only the orchestrator or user accepts gate passage, performs the smoke pass, invokes branch finishing, or opens the PR.
+
+A development subagent may implement only bounded remediation under Principle 4.
+It may not run or gather either review, accept gate passage, perform the smoke pass, invoke branch finishing, or open the PR.
+It reports any due gate action and stops.
+
+`adversarial-review-loop` owns Gate 5 remediation; the applicable execution skill owns per-task review loops.
+
+REQUIRED SUB-SKILLS: `superpowers:requesting-code-review` + `adversarial-review` + `adversarial-review-loop`.
 REQUIRED SUB-SKILL before opening PR: `superpowers:finishing-a-development-branch`.
 
 ## Principles
@@ -101,11 +103,10 @@ Includes scope-ambiguous prompts: "our X" vs "X in general" — flag it or check
 
 **4. Carry the discipline into subagent dispatches.**
 Subagents don't auto-load skills.
-Every dispatch prompt must tell the subagent to load the `disciplined-development` skill before work.
-If direct skill loading is unavailable, require reading `.claude/skills/disciplined-development/SKILL.md` first and following it as binding guidance.
+Every dispatch prompt contains this reload contract:
+- **Parent:** Load `disciplined-development` before work; if direct skill loading is unavailable, read `.claude/skills/disciplined-development/SKILL.md` first and follow it as binding guidance.
+- **Governing sources:** Name the files and require rereading them before acting and again before reporting completion.
 
-Name governing files to re-read before acting.
-Require a re-read before claiming done.
 Gate summaries do not substitute for loading the skill.
 Pick the model for task complexity.
 Dispatch a crisp scope contract and verify every returned commit — the report is not the diff.
@@ -147,7 +148,7 @@ A dispatched subagent never runs this review itself — not even to gather findi
 It reports that review is due and stops; a hook nudge or a hit cadence threshold doesn't change that.
 Cadence and whole-branch review remediation use `adversarial-review-loop`.
 Per-task review during a plan-execution workflow uses that execution skill's own remediation loop.
-REQUIRED SUB-SKILL: `adversarial-review-loop`.
+REQUIRED SUB-SKILLS: `superpowers:requesting-code-review` + `adversarial-review` + `adversarial-review-loop`.
 
 ## Mode emphasis
 

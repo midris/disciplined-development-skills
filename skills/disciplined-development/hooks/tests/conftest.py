@@ -1,7 +1,6 @@
 """Shared pytest fixtures for hooks/ tests.
 
-Mirrors the legacy tests' conftest wiring pattern, adapted to
-the ``hooks.lib.*`` import path. The directory that *contains* ``hooks/``
+The directory that *contains* ``hooks/``
 (the disciplined-development skill root) is inserted onto ``sys.path`` so
 ``from hooks.lib.X import ...`` resolves; ``hooks/`` and ``hooks/lib/``
 carry ``__init__.py`` to form the package.

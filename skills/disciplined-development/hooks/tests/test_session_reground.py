@@ -40,7 +40,7 @@ def _context(r: subprocess.CompletedProcess) -> str:
     return payload["hookSpecificOutput"]["additionalContext"]
 
 
-# --- startup fires (was previously silent) ---
+# --- startup fires ---
 
 def test_session_start_startup_emits_envelope():
     r = _run({"hook_event_name": "SessionStart", "source": "startup"})
@@ -56,7 +56,7 @@ def test_session_start_startup_contains_common_body_markers():
     assert "concise-writing" in ctx
 
 
-# --- clear fires (was previously silent) ---
+# --- clear fires ---
 
 def test_session_start_clear_emits_envelope():
     r = _run({"hook_event_name": "SessionStart", "source": "clear"})
@@ -175,8 +175,8 @@ def test_malformed_json_degrades_silent():
 # --- non-SessionStart event is a silent no-op ---
 
 def test_precompact_event_is_silent_noop():
-    # PreCompact is not wired. A stale PreCompact wiring in an un-migrated
-    # consumer must degrade to a safe no-op — exit 0, no output.
+    # PreCompact is not wired. Any stray PreCompact invocation must degrade to
+    # a safe no-op — exit 0, no output.
     r = _run({"hook_event_name": "PreCompact", "trigger": "auto"})
     assert r.returncode == 0
     assert r.stdout.strip() == ""

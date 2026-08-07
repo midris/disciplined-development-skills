@@ -22,8 +22,8 @@ subagent's PreToolUse calls and long autonomous stretches keep
 incrementing it and the nudge can fire inside subagent context.
 Reset-on-fire bounds frequency to once per threshold; no session/subagent
 detection is added — not worth the complexity for the single-dev posture.
-Resolved-accepted in the spec (§O6 / plan O6) with the same revisit
-criterion: revisit only if subagent firing proves noisy in practice.
+Shared subagent counting is accepted because it bounds long autonomous runs;
+revisit only if firing inside subagents proves noisy in practice.
 
 Env bypass: ``DD_SKIP_DISCIPLINE_NUDGE=1`` → silent no-op (no bump).
 """
@@ -33,7 +33,6 @@ from __future__ import annotations
 import json
 import os
 import pathlib
-import subprocess
 import sys
 import time
 
@@ -81,21 +80,6 @@ def _payload_cwd() -> str:
     return os.getcwd()
 
 
-def _git(cwd: str, *args: str) -> tuple[int, str]:
-    try:
-        # timeout matches the sibling plan._git_toplevel: this hook runs on
-        # every PreToolUse, so a stuck git (index.lock from a crashed git,
-        # misbehaving fsmonitor, slow NFS) must not block the tool call.
-        r = subprocess.run(
-            ["git", "-C", cwd, *args], capture_output=True, text=True, timeout=5
-        )
-    except Exception:
-        # Degrade-safe helper: any subprocess failure (incl. timeout) reads
-        # as "git said no."
-        return 1, ""
-    return r.returncode, r.stdout.strip()
-
-
 def _threshold() -> int:
     value = config.get("counters.discipline_threshold", DEFAULT_THRESHOLD)
     # `isinstance(True, int)` is True — exclude bool so a config typo like
@@ -114,20 +98,13 @@ def main() -> int:
 
     cwd = _payload_cwd()
 
-    rc_root, repo = _git(cwd, "rev-parse", "--show-toplevel")
-    if rc_root != 0 or not repo:
+    repo = state.repo_root(cwd)
+    if repo is None:
         # Not a git repo (or git unavailable) — nothing to key state on.
         logger.emit("skip", reason="no_repo")
         return 0
 
-    rc_branch, branch = _git(repo, "symbolic-ref", "--short", "HEAD")
-    if rc_branch != 0 or not branch:
-        # Detached HEAD / resolution failure: count under one stable key.
-        # Accepted: concurrent detached checkouts would share this counter —
-        # a non-issue for the single-dev, single-checkout posture (CLAUDE.md),
-        # and the counter is advisory. Per-sha keying isn't worth it (it would
-        # also reset the count on every commit).
-        branch = "detached"
+    branch = state.current_branch(repo)
 
     count = state.bump(repo, branch, COUNTER_NAME)
     threshold = _threshold()

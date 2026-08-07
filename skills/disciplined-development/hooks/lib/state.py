@@ -3,18 +3,19 @@
 State lives under ``<repo>/.claude/.dd-state/<branch-slug>/``:
 
 - ``<name>.count`` — a plain integer counter file (e.g. ``edits.count``).
-- ``review.checkpoint`` — a single line holding the commit SHA at last review.
+- ``review.checkpoint`` — the commit SHA at the last state-resetting PASS.
 
 There are no schemas, no JSON, and no locking — last-write-wins. Writes are
-atomic (temp file + ``os.replace``). This module is *advisory bookkeeping*: every
-read, write, and git call degrades to a safe default (no-op / 0 / None) on any
-error. An exception must never escape and crash a hook.
+atomic (temp file + ``os.replace``). This module provides best-effort mechanical
+bookkeeping to advisory and hard-gate consumers: every read, write, and git call
+degrades to a safe default (no-op / 0 / None) on any error. An exception must
+never escape and crash a hook.
 
 Stale-checkpoint detection uses ``git merge-base --is-ancestor`` rather than the
 exit code of ``git rev-list --count``. After ``git commit --amend`` the old
 commit object is still reachable via reflog, so ``rev-list --count <old>..HEAD``
 exits 0 with a *wrong positive* count; only ``--is-ancestor`` correctly reports
-the old SHA as no longer an ancestor. (Verified empirically — see plan Task A4.)
+the old SHA as no longer an ancestor. This behavior is covered by the state tests.
 """
 
 from __future__ import annotations
@@ -28,6 +29,7 @@ from pathlib import Path
 STATE_DIRNAME = ".dd-state"
 CHECKPOINT_FILENAME = "review.checkpoint"
 COUNT_SUFFIX = ".count"
+_REPOSITORY_SELECTOR_ENV = ("GH_REPO", "GIT_DIR", "GIT_WORK_TREE", "GIT_COMMON_DIR")
 
 
 def _state_root(repo: str | Path) -> Path:
@@ -150,6 +152,9 @@ def _git(repo: str | Path, *args: str) -> subprocess.CompletedProcess | None:
     callers can branch on ``returncode``.
     """
     try:
+        clean_env = dict(os.environ)
+        for name in _REPOSITORY_SELECTOR_ENV:
+            clean_env.pop(name, None)
         return subprocess.run(
             ["git", "-C", str(repo), *args],
             capture_output=True,
@@ -159,6 +164,7 @@ def _git(repo: str | Path, *args: str) -> subprocess.CompletedProcess | None:
             # (index.lock, fsmonitor, slow NFS) must time out, not hang the
             # hook. TimeoutExpired is swallowed below → None (degrade-safe).
             timeout=5,
+            env=clean_env,
         )
     except Exception:
         return None
@@ -172,14 +178,22 @@ def repo_root(start: str | Path) -> str | None:
     .dd-state`` literally, so a writer handed a *subdir* (log_review /
     external_review take ``--cwd``) would otherwise create a stray state tree
     there and its reset-fold would silently miss the counter the cadence hooks
-    track at the root. Both tools resolve through here first. Mirrors
-    edit_counter's inline ``rev-parse --show-toplevel`` probe.
+    track at the root. All consumers resolve through this shared helper.
     """
     proc = _git(start, "rev-parse", "--show-toplevel")
     if proc is None or proc.returncode != 0:
         return None
     root = proc.stdout.strip()
     return root or None
+
+
+def current_branch(repo: str | Path) -> str:
+    """Return the symbolic branch name, or ``"detached"`` on any failure."""
+    proc = _git(repo, "symbolic-ref", "--short", "HEAD")
+    if proc is None or proc.returncode != 0:
+        return "detached"
+    branch = proc.stdout.strip()
+    return branch or "detached"
 
 
 def commits_since_checkpoint(repo: str | Path, branch: str) -> int | None:
@@ -247,3 +261,16 @@ def commits_since_fork_base(
         return int(counted.stdout.strip())
     except (ValueError, AttributeError):
         return None
+
+
+def review_distance(
+    repo: str | Path, branch: str, trunks: list[str]
+) -> tuple[int | None, str | None]:
+    """Return review distance and its checkpoint-or-fork-base basis."""
+    checkpoint_count = commits_since_checkpoint(repo, branch)
+    if checkpoint_count is not None:
+        return checkpoint_count, "checkpoint"
+    fork_count = commits_since_fork_base(repo, trunks)
+    if fork_count is not None:
+        return fork_count, "fork_base"
+    return None, None

@@ -1,18 +1,16 @@
-"""command_match — shlex tokenizer + the gh/git Bash matchers the
-surviving hooks need.
+"""Quote-aware matchers for direct git commits and ``gh pr create``.
 
-Slim port of the old `dd_command_match.py` (kept: the quote-aware
-newline-as-separator tokenizer, `is_git_commit`, `find_gh_pr_create`)
-plus `commit_landed` (lifted from the deleted `review_debt.py`). Dropped:
-`classify_shell_write` / `analyze_chain` (only the retired branch gate
-and body cap used them) and `is_git_commit`'s wrapper-recursion variant
-(only the retired branch gate needed it). Self-contained — no imports
-from dd_lib / review_debt / dd_command_match (all deleted at cutover).
+The tokenizer treats unquoted newlines as command separators. ``is_git_commit``
+intentionally examines direct command segments only; it does not recurse into
+shell wrappers. The commit ceiling and post-commit nudge share that boundary.
+The target matchers accept only a standalone action in the payload cwd;
+compounds fail closed.
 
 Public API:
   is_git_commit(command) -> bool
   looks_like_gh_pr_create(command) -> bool
-  find_gh_pr_create(command) -> cwd | None
+  find_git_commit(command, base_cwd, env=None) -> cwd | None
+  find_gh_pr_create(command, base_cwd, env=None) -> cwd | None
   commit_landed(command, tool_response) -> bool
 """
 
@@ -21,28 +19,28 @@ from __future__ import annotations
 import os
 import re
 import shlex
-from pathlib import Path
 
 # ---- shared tokenizer -------------------------------------------------------
 
-SHELLS = {"bash", "sh", "zsh", "/bin/bash", "/bin/sh", "/bin/zsh"}
-SEPARATORS = {"&&", "||", ";", "|"}
+SEPARATORS = {"&&", "||", ";", "|", "&", "|&"}
 ENV_RE = re.compile(r"^[A-Za-z_][A-Za-z0-9_]*=")
 GIT_GLOBAL_FLAGS_WITH_VALUE = {
     "-C", "-c", "--git-dir", "--work-tree", "--namespace",
     "--exec-path", "--super-prefix",
 }
 
-# gh accepts global flags between `gh` and the subcommand; without
-# skipping them the matcher returns None on real-world forms like
-# `gh --repo org/repo pr create` and the pre-PR review is silently
-# bypassed. Kept to the actual top-level globals — `--hostname` is a
-# subcommand option on `gh auth`, not a gh-root flag, so including it
-# here would silently skip user-typed positional tokens that gh itself
-# would reject.
-GH_GLOBAL_FLAGS_WITH_VALUE = {
-    "-R", "--repo",
-}
+# Recognize repository-selecting gh globals as PR-shaped so the loose gate can
+# block them. The strict target resolver below rejects the selectors instead of
+# attributing their action to the payload cwd.
+_GIT_TARGET_ENV = frozenset({"GIT_DIR", "GIT_WORK_TREE", "GIT_COMMON_DIR"})
+_GIT_TARGET_FLAGS = frozenset({"-C", "--git-dir", "--work-tree"})
+_GH_TARGET_FLAGS = frozenset({"-R", "--repo"})
+_GH_PR_CREATE_FLAGS_WITH_VALUE = frozenset({
+    "-a", "--assignee", "-B", "--base", "-b", "--body",
+    "-F", "--body-file", "-H", "--head", "-l", "--label",
+    "-m", "--milestone", "-p", "--project", "--recover",
+    "-r", "--reviewer", "-T", "--template", "-t", "--title",
+})
 
 
 def _normalize_newlines(s: str) -> str:
@@ -130,6 +128,26 @@ def split_segments(toks: list[str]) -> list[list[str]]:
     return segments
 
 
+def _split_command(toks: list[str]) -> tuple[list[list[str]], list[str]]:
+    """Return command segments and the separators between them."""
+    segments: list[list[str]] = []
+    separators: list[str] = []
+    current: list[str] = []
+    for tok in toks:
+        if tok in SEPARATORS:
+            if not current:
+                return [], []
+            segments.append(current)
+            separators.append(tok)
+            current = []
+        else:
+            current.append(tok)
+    if not current:
+        return [], []
+    segments.append(current)
+    return segments, separators
+
+
 def skip_env(toks: list[str]) -> int:
     k = 0
     while k < len(toks) and ENV_RE.match(toks[k]):
@@ -147,9 +165,9 @@ def _is_git_commit_seg(seg: list[str]) -> bool:
     flags (`-C`, `-c`, etc.). Rejects echo/grep wrappers,
     `git commit-tree`, and heredoc bodies (which fail to tokenize).
 
-    Shell-wrapper segments (`bash -c 'git commit ...'`) return False —
-    the surviving (advisory) consumers accept missing a wrapped commit;
-    only the retired branch gate needed wrapper recursion.
+    Shell-wrapper segments (`bash -c 'git commit ...'`) return False. The
+    commit ceiling and post-commit nudge therefore observe only direct git
+    segments; wrapped commits are a known detection boundary.
     """
     i = skip_env(seg)
     if i >= len(seg) or seg[i] != "git":
@@ -195,7 +213,7 @@ def looks_like_gh_pr_create(command: str) -> bool:
     (e.g. `echo gh pr create`) returns True. This is **accepted, documented
     behavior** — a false positive is a human-overridable block (the model can
     rewrite or the operator can set DD_SKIP_PR_REVIEW=1); a false negative is a
-    fail-open hole at the only hard gate in the hook stack. Bias toward True.
+    fail-open hole at the hard gate guarding PR creation. Bias toward True.
 
     Use this as the fail-closed net when `find_gh_pr_create` returns `None`:
     `None` is ambiguous (not a PR *or* matched but cwd unresolvable); this
@@ -210,162 +228,128 @@ def looks_like_gh_pr_create(command: str) -> bool:
     return True
 
 
-def find_gh_pr_create(command: str) -> str | None:
-    """Locate a `gh pr create` invocation and return its resolved cwd.
+def _is_gh_pr_create_seg(seg: list[str]) -> bool:
+    i = skip_env(seg)
+    if i >= len(seg) or seg[i] != "gh":
+        return False
+    j = i + 1
+    while j < len(seg) and seg[j].startswith("-"):
+        flag = seg[j]
+        if flag in _GH_TARGET_FLAGS:
+            j += 2
+        else:
+            j += 1
+    return j + 1 < len(seg) and seg[j:j + 2] == ["pr", "create"]
 
-    `cwd` is extracted from chained `cd <path>` segments (relative paths
-    resolved against the process cwd); with no `cd`, `cwd` is the process
-    working directory (`os.getcwd()`).
 
-    Return shape:
-      * `None`  — not a `gh pr create` command, **or** matched but the
-                  effective `cd` target is unexpandable (`$`/backtick) so
-                  cwd can't be resolved (caller uses `looks_like_gh_pr_create`
-                  to distinguish the two `None` cases and fail closed).
-      * `str`   — the resolved cwd (the process cwd when there is no `cd`,
-                  or the resolved `cd` target).
-
-    The unresolvable-cwd guard returns `None` (not the process cwd) so the
-    pre-PR gate fails loud rather than reviewing the wrong tree.
-    """
+def _targeted_action(
+    command: str,
+    base_cwd: object,
+    env: dict[str, str] | None,
+    matcher,
+    target_env: frozenset[str],
+    has_target_flag,
+) -> str | None:
     if not command:
         return None
     tokens = tokenize(command)
     if tokens is None:
         return None
-
-    segs = split_segments(tokens)
-    for seg_idx, seg in enumerate(segs):
-        i = skip_env(seg)
-
-        if i < len(seg) and seg[i] in SHELLS:
-            for j in range(i + 1, len(seg)):
-                t = seg[j]
-                if t in ("-c", "-lc", "-cl"):
-                    if j + 1 < len(seg):
-                        inner = tokenize(seg[j + 1])
-                        if inner:
-                            result = find_gh_pr_create(seg[j + 1])
-                            if result is not None:
-                                return result
-                    break
-                if not t.startswith("-"):
-                    break
-            continue
-
-        if i >= len(seg) or seg[i] != "gh":
-            continue
-
-        # Skip gh global flags between `gh` and the subcommand. Mirrors
-        # the GIT_GLOBAL_FLAGS_WITH_VALUE handling in is_git_commit.
-        j = i + 1
-        while j < len(seg):
-            t = seg[j]
-            if t in GH_GLOBAL_FLAGS_WITH_VALUE:
-                j += 2  # `--repo org/repo` / `-R org/repo`
-            elif t.startswith("-") and len(t) > 1:
-                # `--repo=org/repo`, `-Rorg/repo`, `--paginate`, etc.
-                j += 1
-            else:
-                break
-
-        if j >= len(seg) or seg[j] != "pr":
-            continue
-        j += 1
-        if j >= len(seg) or seg[j] != "create":
-            continue
-
-        # Chained `cd` resolution: walks every preceding segment, so the
-        # LAST `cd` in the chain wins (each iteration overwrites `cwd`).
-        # A relative `cd` is anchored to the process cwd, not to a prior
-        # `cd` — so `cd /a && cd b && gh pr create` resolves to
-        # `<process_cwd>/b`, not `/a/b`. The single-`cd` form (`cd /repo
-        # && gh pr create`) is the only one we see in practice from the
-        # `gh pr create` helper; chained or relative-after-absolute
-        # forms are an accepted edge with this last-cd-wins contract.
-        cwd: str | None = None
-        cwd_unresolvable = False
-        for prev_seg in segs[:seg_idx]:
-            if len(prev_seg) >= 2 and prev_seg[0] == "cd":
-                path = prev_seg[1]
-                if "$" in path or "`" in path:
-                    # Unexpandable target (shell var / substitution). Mark the
-                    # cwd unresolvable; a LATER resolvable `cd` clears it
-                    # (last-cd-wins), matching the resolvable branches below.
-                    cwd_unresolvable = True
-                    cwd = None
-                elif os.path.isabs(path):
-                    cwd = path
-                    cwd_unresolvable = False
-                else:
-                    cwd = str(Path.cwd() / path)
-                    cwd_unresolvable = False
-
-        if cwd_unresolvable:
-            # Matched `gh pr create`, but the effective cwd can't be resolved.
-            # Return None so the pre-PR gate fails LOUD rather than failing
-            # open or reviewing the wrong tree. The caller uses
-            # `looks_like_gh_pr_create` to distinguish this None from the
-            # "not a PR" None.
+    segments, separators = _split_command(tokens)
+    if len(segments) != 1 or separators or not matcher(segments[0]):
+        return None
+    if not isinstance(base_cwd, str) or not base_cwd:
+        return None
+    selected_env = os.environ if env is None else env
+    if any(name in selected_env for name in target_env):
+        return None
+    action = segments[0]
+    for token in action[:skip_env(action)]:
+        name = token.split("=", 1)[0]
+        if name in target_env:
             return None
-        if cwd is None:
-            cwd = str(Path.cwd())
-
-        return cwd
-
-    return None
+    if has_target_flag(action):
+        return None
+    return os.path.abspath(base_cwd)
 
 
-# ---- commit-landed (from the deleted review_debt.py) ------------------------
+def _git_has_target_flag(action: list[str]) -> bool:
+    """Recognize repository selectors only before the ``commit`` subcommand."""
+    i = skip_env(action) + 1
+    while i < len(action) and action[i] != "commit":
+        token = action[i]
+        if token in _GIT_TARGET_FLAGS:
+            return True
+        if token.startswith("--git-dir=") or token.startswith("--work-tree="):
+            return True
+        if token.startswith("-C") and token != "-C":
+            return True
+        if token in GIT_GLOBAL_FLAGS_WITH_VALUE:
+            i += 2
+        else:
+            i += 1
+    return False
 
-# Git emits `[<branch> <short-sha>] <subject>` on every successful commit
-# UNLESS `--quiet` / `-q` suppresses it. The PostToolUse cadence nudge
-# needs a "did the commit actually land" gate.
-_LANDED_MARKER_RE = re.compile(
-    r"^\[[^\]\n]+\s[0-9a-fA-F]{4,}\]", re.MULTILINE,
-)
 
-# Word-boundary match for `--quiet` and `-q`. Symmetric form for both so
-# the false-positive surface is identical.
-_QUIET_RE = re.compile(r"(?<![\w-])(?:--quiet|-q)(?![\w-])")
+def _gh_has_target_flag(action: list[str]) -> bool:
+    """Recognize ``-R``/``--repo`` only where gh parses option tokens."""
+    expect_value = False
+    for token in action[skip_env(action) + 1:]:
+        if expect_value:
+            expect_value = False
+            continue
+        if token == "--":
+            break
+        if token in _GH_TARGET_FLAGS or token.startswith("--repo="):
+            return True
+        if token.startswith("-R") and token != "-R":
+            return True
+        if token in _GH_PR_CREATE_FLAGS_WITH_VALUE:
+            expect_value = True
+    return False
 
+
+def find_git_commit(
+    command: str, base_cwd: object, env: dict[str, str] | None = None
+) -> str | None:
+    """Return the payload cwd for a standalone direct commit, else ``None``."""
+    return _targeted_action(
+        command, base_cwd, env, _is_git_commit_seg, _GIT_TARGET_ENV,
+        _git_has_target_flag,
+    )
+
+
+def find_gh_pr_create(
+    command: str, base_cwd: object, env: dict[str, str] | None = None
+) -> str | None:
+    """Return the payload cwd for a standalone direct PR create, else ``None``."""
+    return _targeted_action(
+        command,
+        base_cwd,
+        env,
+        _is_gh_pr_create_seg,
+        frozenset({"GH_REPO"}),
+        _gh_has_target_flag,
+    )
+
+
+# ---- commit-landed detection ------------------------------------------------
 
 def commit_landed(command: str, tool_response: dict | None) -> bool:
-    """Return True iff the just-run Bash command landed a git commit.
-
-    Two positive signals, in order:
-
-    1. **Marker present.** Stdout contains the `[<branch> <short-sha>]`
-       line git emits on every successful commit. Authoritative.
-    2. **--quiet + exit 0.** `git commit --quiet` / `-q` is the only
-       documented way to succeed without emitting the marker; for that
-       case alone, exit_code=0 is the fallback positive signal.
-
-    Everything else is False — failed commits and the whole dry-run flag
-    family (`--dry-run` plus `--short`/`--porcelain`/`--long`, all of
-    which imply `--dry-run`). No marker = nothing landed, so the
-    marker-required gate rejects them naturally without flag enumeration.
-
-    Advisory, not load-bearing: a missed nudge is recoverable on the next
-    real commit. We trade narrow false negatives (stacked `-qm` — `_QUIET_RE`
-    only matches `-q` as a standalone short flag, so the combined form reads
-    as not-quiet and a marker-less quiet commit is missed; a quiet commit that
-    FAILED but a trailing `; true` masked the exit code) and narrow false
-    positives (a literal `--quiet` in a dry-run command's message text) for a
-    small legible gate.
-
-    Accepted even though both the post-commit verify reminder and the review
-    cadence now ride this gate (2026-05-30): detecting `-q` inside a combined
-    short-flag cluster correctly needs git short-flag arg-awareness (`-qm` is
-    quiet+message but `-mq` is `-m "q"`), and a naive regex would trade the
-    false-negative for a false-positive — the unbounded command-parsing
-    precision the spec rejects (§"never police"). `-q` is rarely used by
-    agents; the miss is recoverable and the pre-PR gate still catches.
-    """
+    """Use a recognizable direct commit plus the compound's zero exit status."""
     if not isinstance(tool_response, dict):
         return False
-    if _LANDED_MARKER_RE.search(tool_response.get("stdout") or ""):
-        return True
-    if not _QUIET_RE.search(command):
+    tokens = tokenize(command)
+    if tokens is None:
+        return False
+    segments, separators = _split_command(tokens)
+    if any(op != "&&" for op in separators):
+        return False
+    commits = [
+        segment
+        for segment in segments
+        if _is_git_commit_seg(segment) and "--dry-run" not in segment
+    ]
+    if not commits:
         return False
     return tool_response.get("exit_code") == 0

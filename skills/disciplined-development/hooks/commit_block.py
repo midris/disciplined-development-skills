@@ -2,22 +2,20 @@
 """commit_block.py — PreToolUse T2 hard-block on git commit.
 
 Fires before every Bash tool call (the settings matcher pins this to ``Bash``).
-Single responsibility:
-
-**Deny** when the command is a ``git commit`` (including ``--amend``) AND
-the commits-since-last-cold-read count is >=
+Single responsibility: block an unresolved recognizable direct commit, and for
+a resolved standalone ``git commit`` (including ``--amend``), **deny** when the
+commits-since-review-checkpoint count is >=
 ``review_tiers.cold_read_escalation.hard_block_threshold`` (default 5).
 
-That means 5 commits are allowed between cold-reads; the 6th is denied (the
-count is the landed/stored value read before this commit lands, so stored == 5
-denies the 6th commit).
+That means 5 commits are allowed after the last state-resetting PASS; the 6th is
+denied (the count is the landed/stored value read before this commit lands, so
+stored == 5 denies the 6th commit).
 
 ``git commit --amend`` passes ``command_match.is_git_commit``, so amend is
-gated the same way as a new commit. This is intentional: amend is a coarse
-"you owe a cold-read" gate (see spec §Out of scope — "amend is denied too
-while over threshold").
+gated the same way as a new commit. This is intentional: the checkpoint is a
+coarse review-cadence gate, and amend does not waive it.
 
-Commits-since-last-cold-read selection (mirrors ``review_nudge.py`` exactly):
+Commits-since-checkpoint selection (mirrors ``review_nudge.py`` exactly):
 1. ``review.checkpoint`` exists → ``state.commits_since_checkpoint``.
 2. No checkpoint (absent, stale, or amended-away) → fall back to
    ``state.commits_since_fork_base``.
@@ -30,13 +28,14 @@ error and the tool still runs. Same mechanism as ``pre_pr_review.py`` and
 
 Degrade-silent policy:
 - Malformed or empty stdin → exit 0, allow, no crash.
-- Any git / state error → exit 0, allow, no crash.
+- An unresolved matching commit target → exit 2 with rewrite/bypass guidance.
+- A resolved repo whose cadence count cannot be computed → exit 0, allow.
 - The hook must never wrongly block a commit when state can't be computed.
 
 Env bypass: ``DD_SKIP_COMMIT_BLOCK=1`` → silent allow (exit 0, no deny).
 Use this during the fix cycle after a block: run remediation commits with the
-bypass set, then run a deep review per the adversarial-review skill and log
-it via ``dd-log`` to reset the checkpoint and lift the block.
+bypass set. Run the deep-review loop and log every round with ``dd-log``. Only
+a PASS resets the checkpoint.
 """
 
 from __future__ import annotations
@@ -44,7 +43,6 @@ from __future__ import annotations
 import json
 import os
 import pathlib
-import subprocess
 import sys
 
 _HERE = pathlib.Path(__file__).resolve().parent
@@ -59,7 +57,7 @@ DEFAULT_HARD_BLOCK_THRESHOLD = 5
 DEFAULT_TRUNKS = ["master", "main"]
 
 
-def _read_command() -> str:
+def _read_payload() -> tuple[str, str | None]:
     """Return the Bash command string from the PreToolUse stdin payload.
 
     Degrade-safe: any stdin or parse failure returns '' rather than raising.
@@ -67,29 +65,22 @@ def _read_command() -> str:
     try:
         raw = sys.stdin.read()
     except Exception:
-        return ""
+        return "", None
     if not raw:
-        return ""
+        return "", None
     try:
         data = json.loads(raw)
     except json.JSONDecodeError:
-        return ""
+        return "", None
     if not isinstance(data, dict):
-        return ""
+        return "", None
     ti = data.get("tool_input")
-    if isinstance(ti, dict) and isinstance(ti.get("command"), str):
-        return ti["command"]
-    return ""
-
-
-def _git(cwd: str, *args: str) -> tuple[int, str]:
-    try:
-        r = subprocess.run(
-            ["git", "-C", cwd, *args], capture_output=True, text=True, timeout=5
-        )
-    except Exception:
-        return 1, ""
-    return r.returncode, r.stdout.strip()
+    command = ti.get("command") if isinstance(ti, dict) else None
+    cwd = data.get("cwd")
+    return (
+        command if isinstance(command, str) else "",
+        cwd if isinstance(cwd, str) and cwd else None,
+    )
 
 
 def _hard_block_threshold() -> int:
@@ -118,56 +109,49 @@ def main() -> int:
         logger.emit("skip", reason="env_bypass")
         return 0
 
-    command = _read_command()
+    command, base_cwd = _read_payload()
     if not command_match.is_git_commit(command):
         # Not a git commit — let every other Bash command through.
         return 0
 
-    # Resolve the repo root from the process cwd (the hook receives cwd in the
-    # payload, but we consumed stdin already; use os.getcwd() which the test
-    # harness sets via cwd= on subprocess.run, matching the real hook invocation).
-    cwd = os.getcwd()
-    rc_root, repo = _git(cwd, "rev-parse", "--show-toplevel")
-    if rc_root != 0 or not repo:
-        # Not a git repo or git unavailable — can't compute count; allow.
-        logger.emit("skip", reason="no_repo")
-        return 0
+    command_cwd = command_match.find_git_commit(command, base_cwd)
+    repo = state.repo_root(command_cwd) if command_cwd is not None else None
+    if repo is None:
+        logger.emit("block", reason="unresolved_target")
+        print(
+            "[commit-block] BLOCKED: unresolved `git commit`. Run the commit "
+            "as a standalone Bash call from the target repository; run other "
+            "commands separately. Set DD_SKIP_COMMIT_BLOCK=1 in "
+            "the launching shell to bypass.",
+            file=sys.stderr,
+        )
+        return 2
 
-    rc_branch, branch = _git(repo, "symbolic-ref", "--short", "HEAD")
-    if rc_branch != 0 or not branch:
-        branch = "detached"
+    branch = state.current_branch(repo)
 
     threshold = _hard_block_threshold()
 
     # Mirror review_nudge.py: checkpoint exists → use it; absent/stale → fork base.
-    since_cp = state.commits_since_checkpoint(repo, branch)
-    if since_cp is not None:
-        count = since_cp
-        path = "checkpoint"
-    else:
-        since_fb = state.commits_since_fork_base(repo, _trunks())
-        if since_fb is None:
-            # No trunk / can't resolve — degrade silent, allow.
-            logger.emit("skip", reason="no_fork_base")
-            return 0
-        count = since_fb
-        path = "fork_base"
+    count, path = state.review_distance(repo, branch, _trunks())
+    if count is None or path is None:
+        logger.emit("skip", reason="no_fork_base")
+        return 0
 
     if count < threshold:
         logger.emit("pass", count=count, threshold=threshold, path=path)
         return 0
 
     # count >= threshold: deny. The stored count of `threshold` means `threshold`
-    # commits have landed since the last cold-read; this (the next) commit is the
+    # commits have landed since the review checkpoint; this (the next) commit is the
     # (threshold + 1)th — block it.
     logger.emit("block", count=count, threshold=threshold, path=path, branch=branch)
+    basis = "the review checkpoint" if path == "checkpoint" else "fork base"
     print(
-        f"[commit-block] BLOCKED: {count} commits since the last deep review on "
+        f"[commit-block] BLOCKED: {count} commits since {basis} on "
         f"this branch (>= hard block ceiling {threshold}). "
-        f"Run a deep review per the adversarial-review skill, then log it via "
-        f"`dd-log` to reset the checkpoint before continuing. "
-        f"Set DD_SKIP_COMMIT_BLOCK=1 in the launching shell for the remediation "
-        f"commit cycle, then run the review to reset.",
+        f"Run the deep-review loop and log every round with `dd-log`. "
+        f"Only a PASS resets the checkpoint. Set DD_SKIP_COMMIT_BLOCK=1 in "
+        f"the launching shell for the remediation commit cycle.",
         file=sys.stderr,
     )
     return 2

@@ -19,12 +19,3 @@ def test_envelope_imports():
     from hooks.lib import envelope
 
     assert hasattr(envelope, "Envelope")
-
-
-def test_reviewer_runner_imports():
-    from hooks.lib import reviewer_runner
-
-    assert hasattr(reviewer_runner, "Runner")
-    assert hasattr(reviewer_runner, "RunResult")
-
-
