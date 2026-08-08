@@ -888,13 +888,19 @@ research suite 4 passed.
 - Modify when RED: `skills/concise-writing/SKILL.md`
 - Modify: `skill-validation/concise-writing.md`
 
-- [ ] Inspect the recorded extraction result; if it is 5/5, classify it as preservation coverage, update the plan/index, run the local Markdown-link command and `git diff --check`, and commit as `docs(validation): confirm concise writing portability` without a separate skill-change PR boundary.
+- [x] Inspect the recorded extraction result; if it is 5/5, classify it as preservation coverage, update the plan/index, run the local Markdown-link command and `git diff --check`, and commit as `docs(validation): confirm concise writing portability` without a separate skill-change PR boundary.
 - [ ] If RED, show the observed failure and proposed minimal dependency/domain-neutrality change, then wait for user approval.
 - [ ] If RED, apply only the approved change needed for portable extraction while preserving software examples and current software scenarios.
 - [ ] If RED, run the target scenario to 5/5 GREEN and rerun the complete affected active suite 5/5 on Sol high.
 - [ ] If RED, run cold skill-writing review; show proposed fixes, wait for user approval, apply them, and restart affected scenarios.
 - [ ] If RED, show the edited skill in place and wait for final user approval.
 - [ ] If RED, after final approval, run repository tests and commit the behavioral slice separately.
+
+**Task 12 implementation note (2026-08-07):** The canonical
+[`CW-08` result](../skill-validation/concise-writing.md#active-results) closes the
+portability disposition as preservation, so no skill edit or evaluation rerun is
+needed. The orchestrator's exact local-link and diff checks passed before the task
+commit.
 
 ### Task 13: Resolve `disciplined-research` portability, if the control is RED
 

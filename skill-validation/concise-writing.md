@@ -484,6 +484,10 @@ transcripts.
 | `CW-13` | composition `5ba3cdbb…` | FAIL | FAIL | FAIL | FAIL | FAIL | 0/5 watched RED | PASS/PASS/PASS/PASS/PASS; 5/5 | Task 17 | [Task 11 detail](#task-11-sol-low-control-results-2026-08-07) | Task 27 | Control R1–R5: omitted `concise-writing`; target none | 2026-08-02 | 0 |
 | `CW-14` | composition `5ba3cdbb…` | FAIL | FAIL | FAIL | FAIL | FAIL | 0/5 watched RED | PASS/PASS/PASS/PASS/PASS; 5/5 | Task 17 | [Task 11 detail](#task-11-sol-low-control-results-2026-08-07) | Task 27 | Control R1–R5: omitted `concise-writing`; target none | 2026-08-02 | 0 |
 
+**Task 12 disposition (2026-08-07):** The `CW-08` row is the canonical portability
+evidence. Its preservation classification requires no portability target, skill edit,
+new control bundle, or rerun.
+
 ## Task 11 Sol-low control results (2026-08-07)
 
 These are the frozen low-effort control outcomes. The shared freeze, transport,
