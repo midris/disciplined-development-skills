@@ -909,13 +909,19 @@ commit.
 - Modify when RED: `skills/disciplined-research/SKILL.md`
 - Modify: `skill-validation/disciplined-research.md`
 
-- [ ] Inspect the recorded extraction result; if it is 5/5, classify it as preservation coverage, update the plan/index, run the local Markdown-link command and `git diff --check`, and commit as `docs(validation): confirm disciplined research portability` without a separate skill-change PR boundary.
+- [x] Inspect the recorded extraction result; if it is 5/5, classify it as preservation coverage, update the plan/index, run the local Markdown-link command and `git diff --check`, and commit as `docs(validation): confirm disciplined research portability` without a separate skill-change PR boundary.
 - [ ] If RED, show the failure and a minimal change that keeps sibling sweep/rationale references optional while preserving development examples, then wait for user approval.
 - [ ] If RED, apply only the approved source-acquisition, verification, or citation boundary change needed for extraction.
 - [ ] If RED, establish target 5/5 GREEN and rerun the complete affected active suite 5/5 on Sol high.
 - [ ] If RED, run cold skill-writing review; show proposed fixes, wait for user approval, apply them, and restart affected scenarios.
 - [ ] If RED, show the edited skill in place and wait for final user approval.
 - [ ] If RED, after final approval, run repository tests and commit the behavioral slice separately.
+
+**Task 13 implementation note (2026-08-07):** The canonical
+[`DR-02` result](../skill-validation/disciplined-research.md#control-results) closes
+the portability disposition as preservation, so no skill edit or evaluation rerun is
+needed. The orchestrator's exact local-link and diff checks passed before the task
+commit.
 
 ### Task 14: Resolve `lean-plan-writing` portability, if the control is RED
 

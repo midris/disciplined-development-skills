@@ -251,6 +251,10 @@ scenario rubric, including artifact shape and source order.
 | `DR-02` | P | P | P | P | P |
 | `DR-03` | P | P | P | P | P |
 
+**Task 13 disposition (2026-08-07):** The `DR-02` row is the canonical portability
+evidence. Its preservation classification requires no portability target, skill edit,
+new control bundle, or rerun.
+
 ## Task 11 Sol-low control results (2026-08-07)
 
 These are the frozen low-effort control outcomes. The shared freeze, transport,
