@@ -284,13 +284,13 @@ Return only the commit-body evidence for this correction, ending with `Verificat
 
 ## Sol-high results
 
-| ID | Original control / content-manifest SHA-256 | Sol-high control | Exact control misses | Target/current GREEN | Cleaned Sol-high | Sol-low control | Cleaned Sol-low | Run date | Infrastructure errors |
+| ID | Original control / content-manifest SHA-256 | Sol-high control | Exact control misses | Target/current GREEN | Cleaned Sol-high | Sol-low control | Cleaned Sol-low | Earlier-arm run date | Earlier-arm infrastructure errors |
 |---|---|---|---|---|---|---|---|---|---:|
-| `SSR-01` | `4296647f0dff48a9e77b979ef07e813bf1f66db2` / `4cfca7137eba5c13245644b4742244b47c610196bad1176ab9c9e19f25fed3aa` | **5/5 PASS** | None; all five accounted for three updates and preserved the rationale comment | Not applicable | Task 20 | Task 11 | Task 27 | 2026-08-03 | 0 |
-| `SSR-02` | `4296647f0dff48a9e77b979ef07e813bf1f66db2` / `6a52d00c04dbd880f32b5fea74bcfad4f7756f3d10ac4cd6aa2dbe54d05ac970` | **5/5 PASS** | None | Not applicable | Task 20 | Task 11 | Task 27 | 2026-08-02 | 0 |
-| `SSR-03` | `4296647f0dff48a9e77b979ef07e813bf1f66db2` / `8f010cca9b606f7f2e5367abbd87202bcf7cfa405924f855d859d6fc1a0f08d1` | **5/5 PASS** | None | Not applicable | Task 20 | Task 11 | Task 27 | 2026-08-02 | 0 |
-| `SSR-04` | `4296647f0dff48a9e77b979ef07e813bf1f66db2` / `80ad28aebf4d7b948c65cf1a2f015c4daedc1c96f92c8e7d4a6a6c1cda486e1d` | **5/5 PASS** | None; portability is preservation coverage | Not applicable | Task 20 | Task 11 | Task 27 | 2026-08-02 | 0 |
-| `SSR-05` | `4296647f0dff48a9e77b979ef07e813bf1f66db2` / `d0e2421a1162fd2357fdb8314b88843a19fa5bf4509572781957cd11ad9d85de` | **5/5 PASS** | None | Not applicable | Task 20 | Task 11 | Task 27 | 2026-08-02 | 0 |
+| `SSR-01` | `4296647f0dff48a9e77b979ef07e813bf1f66db2` / `4cfca7137eba5c13245644b4742244b47c610196bad1176ab9c9e19f25fed3aa` | **5/5 PASS** | None; all five accounted for three updates and preserved the rationale comment | Not applicable | Task 20 | [Task 11 detail](#task-11-sol-low-control-results-2026-08-07) | Task 27 | 2026-08-03 | 0 |
+| `SSR-02` | `4296647f0dff48a9e77b979ef07e813bf1f66db2` / `6a52d00c04dbd880f32b5fea74bcfad4f7756f3d10ac4cd6aa2dbe54d05ac970` | **5/5 PASS** | None | Not applicable | Task 20 | [Task 11 detail](#task-11-sol-low-control-results-2026-08-07) | Task 27 | 2026-08-02 | 0 |
+| `SSR-03` | `4296647f0dff48a9e77b979ef07e813bf1f66db2` / `8f010cca9b606f7f2e5367abbd87202bcf7cfa405924f855d859d6fc1a0f08d1` | **5/5 PASS** | None | Not applicable | Task 20 | [Task 11 detail](#task-11-sol-low-control-results-2026-08-07) | Task 27 | 2026-08-02 | 0 |
+| `SSR-04` | `4296647f0dff48a9e77b979ef07e813bf1f66db2` / `80ad28aebf4d7b948c65cf1a2f015c4daedc1c96f92c8e7d4a6a6c1cda486e1d` | **5/5 PASS** | None; portability is preservation coverage | Not applicable | Task 20 | [Task 11 detail](#task-11-sol-low-control-results-2026-08-07) | Task 27 | 2026-08-02 | 0 |
+| `SSR-05` | `4296647f0dff48a9e77b979ef07e813bf1f66db2` / `d0e2421a1162fd2357fdb8314b88843a19fa5bf4509572781957cd11ad9d85de` | **5/5 PASS** | None | Not applicable | Task 20 | [Task 11 detail](#task-11-sol-low-control-results-2026-08-07) | Task 27 | 2026-08-02 | 0 |
 
 | ID | R1 | R2 | R3 | R4 | R5 |
 |---|---|---|---|---|---|
@@ -299,6 +299,23 @@ Return only the commit-body evidence for this correction, ending with `Verificat
 | `SSR-03` | P | P | P | P | P |
 | `SSR-04` | P | P | P | P | P |
 | `SSR-05` | P | P | P | P | P |
+
+## Task 11 Sol-low control results (2026-08-07)
+
+These are the frozen low-effort control outcomes. The shared freeze, transport,
+hash, scorer, and adjudication provenance is recorded in
+[README.md](README.md#task-11-sol-low-control-freeze-and-results).
+Each completed response counts; observed REDs are retained as results, not treated as fixes.
+
+| ID | Status | R1 | R2 | R3 | R4 | R5 | Score | Exact missed criteria / adjudication |
+|---|---|---|---|---|---|---|---:|---|
+| `SSR-01` | preservation | F | F | F | F | F | **0/5** | No response preserves both the comment's causal fact (partner rejects longer sessions) and accepted trade-off (more frequent refreshes); R3's generic compatibility phrase is insufficient, overruling the scorer. |
+| `SSR-02` | preservation | P | P | F | F | F | **2/5** | R1-R2 reject IDE sufficiency and treat the reviewer hit as non-exhaustive while reconciling all mutable matches; R3-R5 omit one or both pressure dispositions. |
+| `SSR-03` | preservation | F | F | F | F | P | **1/5** | Only R5 states that complete correctness evidence takes precedence after grouping if the body-size preference is exceeded. |
+| `SSR-04` | preservation | P | P | P | P | P | **5/5** | Every ledger reconciles the eight managed occurrences, excludes unmanaged history, covers synonym forms, and publishes one coordinated batch. |
+| `SSR-05` | preservation | P | F | P | P | F | **3/5** | R2/R5 add unrequested procedural narration before the exact required line; R1/R3/R4 match the requested artifact. |
+
+Owned Task 11 Sol-low aggregate: **11/25**.
 
 The prior `SSR-01` result and its earlier repair history below are preserved as
 superseded evidence after Task 6 expanded the fixture with one rationale comment.

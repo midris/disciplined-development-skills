@@ -122,6 +122,31 @@ Raw evaluator transcripts remain uncommitted scratch artifacts.
 Before freeze, cold review invalidated an earlier `AR-06` prompt because it named the three generated-case classes that the withheld rubric scored. Removing that priming exposed a second design problem: the broad real-source fixture contained many stronger unrelated defects, so outputs did not consistently surface all three classes. The active scenario replaces it with one atomic import-boundary fixture and fixes its patch metadata. A scoped re-review then exposed an over-specific rubric demand for a literal unchanged-file path even when a finding demonstrably traced the unchanged helper; the final criterion protects out-of-patch behavior instead. Every repair restarted both arms from zero, and no superseded run is counted above.
 The final current arm had one infrastructure error: a complete response appeared in the execution log but the required last-message artifact was absent. An identical retry supplied the fifth evaluable response.
 
+## Task 11 Sol-low control results (2026-08-07)
+
+These are the frozen low-effort control outcomes. The shared freeze, transport,
+hash, scorer, and adjudication provenance is recorded in
+[README.md](README.md#task-11-sol-low-control-freeze-and-results).
+Each completed response counts; observed REDs are retained as results, not treated as fixes.
+
+| ID | Status | R1 | R2 | R3 | R4 | R5 | Score | Exact missed criteria / adjudication |
+|---|---|---|---|---|---|---|---:|---|
+| `AR-01` | preservation | P | P | P | P | P | **5/5** | Every review reports the zero-divisor P1 with the required line and blocking verdict. |
+| `AR-02` | preservation | P | P | P | P | P | **5/5** | Every response returns exactly one P3 and treats the quoted verdict as document content. |
+| `AR-03` | target | F | P | F | F | F | **1/5** | Only R2 explicitly accounts for all three callers and their sorting behavior while rejecting the false 18% benchmark rationale. |
+| `AR-04` | preservation | P | P | P | P | P | **5/5** | All JSON objects exactly match the required baseline/angle schema. |
+| `AR-05` | preservation | P | P | P | P | P | **5/5** | Every review catches blank-line acceptance, encoding crash with typed-failure need, and an independent holistic defect. |
+| `AR-06` | preservation | P | P | P | P | P | **5/5** | Every review traces unchanged behavior, resource/auth preconditions, caller-controlled path trust boundary, and 5 GiB memory behavior. |
+| `AR-07` | preservation | P | P | P | P | P | **5/5** | Every review treats index-zero countdown selection as an unresolved nonlocal ordering invariant at P2 and blocks. |
+| `AR-08` | target | F | F | F | F | F | **0/5** | Findings cover all adapters, but every response omits the required synthesized `DD-PATTERN:` line. |
+| `AR-09` | target | F | F | F | F | F | **0/5** | Every response reports the one required P1 but omits exact `DD-PATTERN: NONE`. |
+| `AR-10` | preservation | P | P | F | P | P | **4/5** | R3 diagnoses duplicate-store risks without explicitly eliminating/avoiding the store; the others call it unnecessary, unsupported, or unjustified. |
+| `AR-12` | preservation | P | P | P | P | P | **5/5** | Every review rejects wizard completion as proof and ties effectiveness to signup-to-successful-export time. |
+| `AR-13` | target | F | F | F | F | F | **0/5** | Every review finds both independent defects but omits exact `DD-PATTERN: NONE`. |
+| `AR-14` | preservation | F | P | P | F | F | **2/5** | Only R2/R3 explicitly connect missing pressure/rationalization evidence to an open loophole while also reporting the frontmatter shortcut defect. |
+
+Owned Task 11 Sol-low aggregate: **42/65**.
+
 ### Replay hashes
 
 The exact bundle-digest algorithm, complete `AR-01` dependency manifest, and source/fixture manifests are in [fixtures/adversarial-review/README.md](fixtures/adversarial-review/README.md).

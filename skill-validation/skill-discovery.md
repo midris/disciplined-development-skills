@@ -138,22 +138,44 @@ active.
 Control is full commit `4296647f0dff48a9e77b979ef07e813bf1f66db2` and archive SHA-256 `8f21c8267d005c349702ec94d6aff26c13a09bfbe29f2b43efcfbb37304f16e3`.
 Target is the immutable bundle with content-manifest SHA-256 `52fd9eb8c411fcc5d42bfa4590992914c2f7a20a494f6dc7868f82c85691103b`.
 
-| ID | Sol-high control | Exact control misses | Target GREEN | Target route summary | Infrastructure errors | Sol-low control | Cleaned Sol-high | Cleaned Sol-low |
+| ID | Sol-high control | Exact control misses | Target GREEN | Target route summary | Earlier-arm infrastructure errors | Sol-low control | Cleaned Sol-high | Cleaned Sol-low |
 |---|---|---|---|---|---:|---|---|---|
-| `DISC-01` | **1/5 watched RED** | Parent omitted 4/5 | **5/5 PASS** | 5 exact | 0 | Task 11 | Task 26 | Task 27 |
-| `DISC-02` | **5/5 PASS** | None; 5 exact | **5/5 PASS** | 5 exact | 0 | Task 11 | Task 26 | Task 27 |
-| `DISC-03` | **1/5 watched RED** | Parent omitted 4/5 | **5/5 PASS** | 5 exact | 0 | Task 11 | Task 26 | Task 27 |
-| `DISC-04` | **5/5 PASS** | None; 5 parent-only | **5/5 PASS** | 2 required-only, 3 with optional research | 0 | Task 11 | Task 26 | Task 27 |
-| `DISC-05` | **0/5 watched RED** | Parent omitted 5/5 | **5/5 PASS** | 5 exact | 0 | Task 11 | Task 26 | Task 27 |
-| `DISC-06` | **4/5 watched RED** | Parent omitted 1/5 | **5/5 PASS** | 5 exact | 0 | Task 11 | Task 26 | Task 27 |
-| `DISC-07` | **5/5 PASS** | None; 1 required-only, 4 with allowed optional variation | **5/5 PASS** | 4 required-only, 1 with optional research | 0 | Task 11 | Task 26 | Task 27 |
-| `DISC-08` | **5/5 PASS** | None; 3 required-only, 2 with optional research | **5/5 PASS** | 3 required-only, 2 with optional research | 0 | Task 11 | Task 26 | Task 27 |
-| `DISC-09` | **5/5 PASS** | None; 1 required-only, 4 with allowed optional variation | **5/5 PASS** | 1 required-only, 4 with allowed optional variation | 0 | Task 11 | Task 26 | Task 27 |
-| `DISC-10` | **5/5 PASS** | None; 1 with optional research, 4 with optional research and sweeping | **5/5 PASS** | 4 with optional research and sweeping, 1 also with optional concise writing | 0 | Task 11 | Task 26 | Task 27 |
+| `DISC-01` | **1/5 watched RED** | Parent omitted 4/5 | **5/5 PASS** | 5 exact | 0 | [Task 11 detail](#task-11-sol-low-control-results-2026-08-07) | Task 26 | Task 27 |
+| `DISC-02` | **5/5 PASS** | None; 5 exact | **5/5 PASS** | 5 exact | 0 | [Task 11 detail](#task-11-sol-low-control-results-2026-08-07) | Task 26 | Task 27 |
+| `DISC-03` | **1/5 watched RED** | Parent omitted 4/5 | **5/5 PASS** | 5 exact | 0 | [Task 11 detail](#task-11-sol-low-control-results-2026-08-07) | Task 26 | Task 27 |
+| `DISC-04` | **5/5 PASS** | None; 5 parent-only | **5/5 PASS** | 2 required-only, 3 with optional research | 0 | [Task 11 detail](#task-11-sol-low-control-results-2026-08-07) | Task 26 | Task 27 |
+| `DISC-05` | **0/5 watched RED** | Parent omitted 5/5 | **5/5 PASS** | 5 exact | 0 | [Task 11 detail](#task-11-sol-low-control-results-2026-08-07) | Task 26 | Task 27 |
+| `DISC-06` | **4/5 watched RED** | Parent omitted 1/5 | **5/5 PASS** | 5 exact | 0 | [Task 11 detail](#task-11-sol-low-control-results-2026-08-07) | Task 26 | Task 27 |
+| `DISC-07` | **5/5 PASS** | None; 1 required-only, 4 with allowed optional variation | **5/5 PASS** | 4 required-only, 1 with optional research | 0 | [Task 11 detail](#task-11-sol-low-control-results-2026-08-07) | Task 26 | Task 27 |
+| `DISC-08` | **5/5 PASS** | None; 3 required-only, 2 with optional research | **5/5 PASS** | 3 required-only, 2 with optional research | 0 | [Task 11 detail](#task-11-sol-low-control-results-2026-08-07) | Task 26 | Task 27 |
+| `DISC-09` | **5/5 PASS** | None; 1 required-only, 4 with allowed optional variation | **5/5 PASS** | 1 required-only, 4 with allowed optional variation | 0 | [Task 11 detail](#task-11-sol-low-control-results-2026-08-07) | Task 26 | Task 27 |
+| `DISC-10` | **5/5 PASS** | None; 1 with optional research, 4 with optional research and sweeping | **5/5 PASS** | 4 with optional research and sweeping, 1 also with optional concise writing | 0 | [Task 11 detail](#task-11-sol-low-control-results-2026-08-07) | Task 26 | Task 27 |
 
 Run metadata for both completed `DISC-01`–`DISC-09` arms: Codex CLI 0.146.0; `gpt-5.6-sol`; high reasoning effort; Superpowers 6.2.0; five fresh processes per scenario; maximum concurrency three; immutable description context as identified above; no skill bodies or sibling skills available; rubric withheld; every result manually scored, including JSON shape and alphabetical order; zero counted infrastructure errors; run date 2026-08-01 except the repaired `DISC-08` control and parent-target arms, which ran 2026-08-02.
 `DISC-10` used the same configuration for all three arms on 2026-08-03 with zero
 infrastructure errors.
+
+## Task 11 Sol-low control results (2026-08-07)
+
+These are the frozen low-effort control outcomes. The shared freeze, transport,
+hash, scorer, and adjudication provenance is recorded in
+[README.md](README.md#task-11-sol-low-control-freeze-and-results).
+Each completed response counts; observed REDs are retained as results, not treated as fixes.
+
+| ID | Status | R1 | R2 | R3 | R4 | R5 | Score | Exact missed criteria / adjudication |
+|---|---|---|---|---|---|---|---:|---|
+| `DISC-01` | target | F | F | F | F | F | **0/5** | All omitted required `disciplined-development`. |
+| `DISC-02` | preservation | P | P | P | P | P | **5/5** | Exact allowed set. |
+| `DISC-03` | target | F | F | F | F | F | **0/5** | All omitted required `disciplined-development`. |
+| `DISC-04` | preservation | P | P | P | P | P | **5/5** | Exact allowed set; optional `research` absent. |
+| `DISC-05` | target | F | F | F | F | F | **0/5** | All omitted required `disciplined-development`. |
+| `DISC-06` | target | F | F | P | P | P | **3/5** | R1-R2 omitted required `disciplined-development`; R3-R5 exact. |
+| `DISC-07` | preservation | P | P | P | P | P | **5/5** | Exact allowed set. |
+| `DISC-08` | preservation | P | P | P | P | P | **5/5** | Exact allowed set. |
+| `DISC-09` | preservation | P | P | P | P | P | **5/5** | Exact allowed set. |
+| `DISC-10` | preservation | P | P | P | P | P | **5/5** | Exact allowed set. |
+
+Owned Task 11 Sol-low aggregate: **33/50**.
 
 Normalized per-repetition codes below preserve the manually scored outcomes without
 committing evaluator transcripts. `E` is the exact required set; `R` is the

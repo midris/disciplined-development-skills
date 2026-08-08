@@ -76,6 +76,14 @@ The first repaired `G3C` fixture scored 3/5 because its cycle-3 wording plausibl
 Two completed runs emitted a non-fatal available-model refresh warning before evaluation; both produced full responses and therefore are not infrastructure errors.
 Raw evaluator transcripts remain uncommitted scratch artifacts.
 
+## Task 11 Sol-low control results (2026-08-07)
+
+The active shared/result-log owner retains the fifteen detailed R1–R5 outcomes and
+exact misses in [adversarial-review-loop-scenarios.md](adversarial-review-loop-scenarios.md#task-11-sol-low-control-results-2026-08-07).
+Shared freeze, transport, scorer, and adjudication provenance is recorded in
+[README.md](README.md#task-11-sol-low-control-freeze-and-results).
+Owned Task 11 Sol-low aggregate: **56/75**.
+
 ### Task 10 fresh-current parent-ownership rerun
 
 On 2026-08-05, `OWN` passed 5/5 fresh `gpt-5.6-sol` high-effort

@@ -151,3 +151,30 @@ Record each run's date, the skill commit/snapshot under test, and per-cell pass
 counts in [adversarial-review-loop.md](adversarial-review-loop.md). Latest baseline
 is recorded there.
 </details>
+
+## Task 11 Sol-low control results (2026-08-07)
+
+These are the frozen low-effort control outcomes. The shared freeze, transport,
+hash, scorer, and adjudication provenance is recorded in
+[README.md](README.md#task-11-sol-low-control-freeze-and-results).
+Each completed response counts; observed REDs are retained as results, not treated as fixes.
+
+| ID | Status | R1 | R2 | R3 | R4 | R5 | Score | Exact missed criteria / adjudication |
+|---|---|---|---|---|---|---|---:|---|
+| `CS` | preservation | P | P | P | P | P | **5/5** | Every response recognizes the recurrence as an incomplete branch-wide unscoped-directory-change sweep and re-runs the same reviewer. |
+| `T2` | preservation | P | P | P | P | P | **5/5** | All accept the complete one-member class and require same-reviewer confirmation without restarting the workflow. |
+| `T3` | preservation | P | F | F | F | P | **2/5** | Only R1/R5 explicitly record both the cap escape and resulting cold-read verdict in the durable work artifact. |
+| `T4` | preservation | P | P | P | P | P | **5/5** | Every response explicitly classifies SQL injection and N+1 as scattered, sweeps the N+1 class, and re-runs below cap; orchestrator overruled scorer false negatives on R1/R2/R4. |
+| `T5` | preservation | F | F | F | P | F | **1/5** | Only R4 gives a definite, reasoned on-page disposition for each P3 while stopping the blocking loop. |
+| `T6` | preservation | P | P | P | P | P | **5/5** | Every response states that self-sweep confidence cannot certify clean and requires same-reviewer re-run. |
+| `T7` | preservation | P | P | P | P | P | **5/5** | All keep the P2 in scope, name/sweep the unqualified-threshold class, and require re-review. |
+| `NF` | preservation | P | P | P | P | P | **5/5** | All identify and close the project-wide typed-recoverable-error axis before re-review. |
+| `PW` | preservation | P | P | P | P | P | **5/5** | Every response extends the invariant across all authoritative persistence components and uncited call paths before re-review. |
+| `XL` | preservation | P | P | P | P | P | **5/5** | Every response translates the invariant across Swift/Python/Go, inventories uncited paths, fixes the whole axis, and re-runs. |
+| `G3A` | preservation | F | P | F | P | F | **2/5** | Only R2/R4 explicitly put the all-round verdict in a durable artifact and change the governing plan rule before the project-wide sweep. |
+| `G3B` | preservation | F | P | P | P | P | **4/5** | R1 invents a generic `incomplete cleanup` topic; R2-R5 keep the three invariants distinct and sweep only network-test hermeticity. |
+| `G3C` | preservation | P | F | F | F | P | **2/5** | R1/R5 record reviewer drift, close the P2 without an appeasement edit, and dispose the P3. R3 adds more rationale at the disputed decision site, so the orchestrator overruled that scorer pass. |
+| `OWN` | preservation | P | P | P | P | F | **4/5** | R5 jumps collectively to task rounds 4–5 without the next round's scoped re-review/reviewer-selection boundary; R1-R4 preserve both ownership contexts and independent counters. |
+| `CE` | preservation | P | F | F | F | F | **1/5** | Only R1 makes C conditional on productive fix-forward, renews the three-cycle cap/escape, and records all outcomes in the durable work artifact. |
+
+Owned Task 11 Sol-low aggregate: **56/75**.

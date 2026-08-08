@@ -430,5 +430,33 @@ Before every skill commit run the hook, installer, and research pytest suites li
 
 ## Cross-skill score summaries
 
-Task 11 will add the frozen Sol-low control table here.
+### Task 11 Sol-low control freeze and results
+
+The frozen catalog is commit `db985d203fdbe812dc5161f63565e6e2021f0872`.
+Its tracked `skill-validation/` archive SHA-256 is `7e626ccc1dd2c596e54688dfaa32a6c090e4f4c50c1ea293352669051f0b4f8b`, and its canonical 125-file manifest SHA-256 is `bbb4fdaa873aa009715bf815d18ab148eac831c92aa00fa647dfa2ca5390751d`.
+The original-control archive SHA-256 is `8f21c8267d005c349702ec94d6aff26c13a09bfbe29f2b43efcfbb37304f16e3`; its canonical content-manifest SHA-256 is `e2249c4b24132523f1374d506957197a303314e2bfbc6e32c9c1b233909cbbff`.
+`4296647f0dff48a9e77b979ef07e813bf1f66db2` remains the regression source anchor.
+`WER-07` is the catalog-declared frozen mixed-control exception required for direct comparability: parent `21a46fb9…`, lean plan writing `4c659b76…`, writing explicit rationale `ec77350b…`, and Superpowers 6.2.0 writing-plans `72190c88…`; it is not a pure-`4296647` bundle.
+
+On 2026-08-07, all 81 frozen scenarios produced five fresh `gpt-5.6-sol` low-effort responses: 405 completed responses, maximum concurrency three, zero infrastructure errors, and zero retries.
+Codex CLI 0.147.0's strict/ignored-config-and-rules, ephemeral, `agents.enabled=false`, read-only transport probe passed before execution.
+A separate `gpt-5.6-sol` high-effort scorer processed 81 isolated packets containing 405 response slots and no evaluator prompts, bundles, or arm mappings; it had zero infrastructure errors.
+The orchestrator then manually read every raw output and exact withheld rubric and adjudicated all 81 rows; those manual verdicts are authoritative, including documented scorer false-positive and false-negative overrides.
+
+| Owning family | Preservation scenarios | Preservation Sol-low | Target scenarios | Target Sol-low | Combined |
+|---|---:|---:|---:|---:|---:|
+| Shared discovery | 6 | 30/30 | 4 | 3/20 | 33/50 |
+| `concise-writing` | 8 | 37/40 | 6 | 0/30 | 37/70 |
+| `disciplined-research` | 3 | 14/15 | 0 | — | 14/15 |
+| `lean-plan-writing` | 5 | 11/25 | 3 | 9/15 | 20/40 |
+| `sweeping-stale-references` | 5 | 11/25 | 0 | — | 11/25 |
+| `writing-explicit-rationale` | 4 | 19/20 | 2 | 2/10 | 21/30 |
+| `adversarial-review` | 9 | 41/45 | 4 | 1/20 | 42/65 |
+| `adversarial-review-loop` | 15 | 56/75 | 0 | — | 56/75 |
+| `dispatching-development-subagents` | 4 | 18/20 | 0 | — | 18/20 |
+| `disciplined-development` | 1 | 0/5 | 2 | 0/10 | 0/15 |
+| **Total** | **60** | **237/300** | **21** | **15/105** | **252/405** |
+
+These observed REDs are control evidence, not fixes or authorization to alter scenario contracts or skill prose.
+Any post-freeze prompt, fixture, rubric, supplied-context, or protected-promise change requires the global Sol-high and Sol-low control backfill before the scenario is used again.
 Tasks 26–27 will add final Sol-high composition results, cleaned Sol-low comparisons, approved dispositions for decreases, and final word-count deltas.

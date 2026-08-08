@@ -838,12 +838,48 @@ skipped, installer suite 11 passed, and research suite 4 passed.
 
 **Produces:** Five Sol-low control-tree outcomes for every frozen preservation and target scenario, directly comparable with the Sol-high baseline results.
 
-- [ ] Freeze the scenario files and rubrics established in Tasks 1–10.
-- [ ] Run every frozen preservation and target scenario five times against `4296647` with `gpt-5.6-sol` at low reasoning effort and otherwise identical context.
-- [ ] Record 0–5 scores and exact missed criteria; do not change skill wording in response.
-- [ ] Add a compact cross-skill score table to `skill-validation/README.md`.
-- [ ] Record the freeze commit and hashes; any later scenario-contract change follows the global control-backfill rule before execution continues.
-- [ ] Review counts against the catalog, run `git diff --check`, and commit as `docs(validation): record Sol-low control scores`.
+- [x] Freeze the scenario files and rubrics established in Tasks 1–10.
+- [x] Run every frozen preservation and target scenario five times against `4296647` with `gpt-5.6-sol` at low reasoning effort and otherwise identical context.
+- [x] Record 0–5 scores and exact missed criteria; do not change skill wording in response.
+- [x] Add a compact cross-skill score table to `skill-validation/README.md`.
+- [x] Record the freeze commit and hashes; any later scenario-contract change follows the global control-backfill rule before execution continues.
+- [x] Review counts against the catalog, run `git diff --check`, and commit as `docs(validation): record Sol-low control scores`.
+
+**Task 11 execution note (2026-08-07):** The orchestrator froze the 81-scenario catalog at `db985d203fdbe812dc5161f63565e6e2021f0872` (tracked validation archive `7e626ccc1dd2c596e54688dfaa32a6c090e4f4c50c1ea293352669051f0b4f8b`; canonical 125-file manifest `bbb4fdaa873aa009715bf815d18ab148eac831c92aa00fa647dfa2ca5390751d`) and ran 405 fresh `gpt-5.6-sol` low-effort, read-only/no-agents responses with maximum concurrency three, zero infrastructure errors, and zero retries. The original-control archive/content-manifest pair was `8f21c8267d005c349702ec94d6aff26c13a09bfbe29f2b43efcfbb37304f16e3` / `e2249c4b24132523f1374d506957197a303314e2bfbc6e32c9c1b233909cbbff`; `WER-07` used its catalog-declared frozen mixed-control exception rather than pure `4296647` bytes. Codex CLI 0.147.0 passed the enforced transport probe. A separate high-effort scorer completed 81 isolated packets/405 slots with zero infrastructure errors, after which the orchestrator manually adjudicated every output against its withheld rubric. Preservation scored 237/300, targets 15/105, and the full suite 252/405. These REDs remain recorded control behavior, not fixes.
+
+**Task 11 Gate 5 completion (2026-08-07).** The orchestrator's
+whole-repository self-review found no P0–P2 issues after the task-level review
+removed ambiguous historical metadata, duplicate detailed outcomes, and the
+current loop results' accidental placement inside a historical collapsed block.
+Because Codex orchestrated this session, the owner authorized the relevant
+repository, worktree, diff, plan, and derived Task 11 validation artifacts for
+read-only review by Anthropic through the local Claude CLI. The independent
+review used a fresh Opus 4.8 high-effort context with this command:
+
+```bash
+claude -p --model claude-opus-4-8 --effort high --safe-mode \
+  --no-session-persistence --permission-mode plan \
+  --add-dir /private/tmp/dd-task11.LoaSbS \
+  --tools Read,Glob,Grep,Bash \
+  --disallowedTools Edit,Write,NotebookEdit,WebFetch,WebSearch,Task \
+  --output-format text < /private/tmp/dd-task11.LoaSbS/gate5-claude-review-prompt.md
+```
+
+That review independently recomputed the four freeze/control hashes, counted
+the 405 low-effort runs and 81 scorer packets, reconciled every family score and
+row owner, found no P0–P2 issues, and ended `DD-VERDICT: PASS`. Its sole P3
+observed that the commit checkbox necessarily becomes historically true only
+when this task commit lands. No secrets, credentials, unrelated files, write
+tools, web tools, or nested agents were supplied.
+
+After the external PASS, the orchestrator ran the Task 11 runner and scorer
+dry-runs (81 scenarios, 405 commands/slots, maximum concurrency three, zero
+source/hash errors), reconciled all 81 canonical rows/405 verdict slots against
+the manual ledger, recomputed the 60/21 scenario split and 252/405 aggregate,
+reverified the four recorded hashes and 125-file manifest, and passed the exact
+local Markdown-link command plus `git diff --check`. The final regression
+results were hook suite 373 passed / 3 skipped, installer suite 11 passed, and
+research suite 4 passed.
 
 ### Task 12: Resolve `concise-writing` portability, if the control is RED
 

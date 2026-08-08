@@ -235,14 +235,14 @@ preface, postscript, or procedural narration.
 
 ## Control results
 
-| ID | Control commit / content-manifest SHA-256 | Sol-high control | Exact misses | Target GREEN | Cleaned Sol-high | Sol-low control | Cleaned Sol-low | Run date | Infrastructure errors |
+| ID | Control commit / content-manifest SHA-256 | Sol-high control | Exact misses | Target GREEN | Cleaned Sol-high | Sol-low control | Cleaned Sol-low | Earlier-arm run date | Earlier-arm infrastructure errors |
 |---|---|---|---|---|---|---|---|---|---:|
-| `DR-01` | `4296647f0dff48a9e77b979ef07e813bf1f66db2` / `23376b6351b365f761bfceb2f9ebb7f29f1ed5e3673715f0687e79f603d38dd0` | **5/5 PASS** | None | Not applicable | Task 26 | Task 11 | Task 27 | 2026-08-02 | 0 |
-| `DR-02` | `4296647f0dff48a9e77b979ef07e813bf1f66db2` / `1f39f8208cb5f8564521b145065b2c885c6bdbec4162e012c519952ea454f2d0` | **5/5 PASS** | None | Not applicable; portability classified as preservation | Task 26 | Task 11 | Task 27 | 2026-08-02 | 0 |
-| `DR-03` | `4296647f0dff48a9e77b979ef07e813bf1f66db2` / `40c835e6440619819a34dc584a3f23b615ff6e69a8996172e32162193ada682c` | **5/5 PASS** | None | Not applicable | Task 26 | Task 11 | Task 27 | 2026-08-02 | 0 |
+| `DR-01` | `4296647f0dff48a9e77b979ef07e813bf1f66db2` / `23376b6351b365f761bfceb2f9ebb7f29f1ed5e3673715f0687e79f603d38dd0` | **5/5 PASS** | None | Not applicable | Task 26 | [Task 11 detail](#task-11-sol-low-control-results-2026-08-07) | Task 27 | 2026-08-02 | 0 |
+| `DR-02` | `4296647f0dff48a9e77b979ef07e813bf1f66db2` / `1f39f8208cb5f8564521b145065b2c885c6bdbec4162e012c519952ea454f2d0` | **5/5 PASS** | None | Not applicable; portability classified as preservation | Task 26 | [Task 11 detail](#task-11-sol-low-control-results-2026-08-07) | Task 27 | 2026-08-02 | 0 |
+| `DR-03` | `4296647f0dff48a9e77b979ef07e813bf1f66db2` / `40c835e6440619819a34dc584a3f23b615ff6e69a8996172e32162193ada682c` | **5/5 PASS** | None | Not applicable | Task 26 | [Task 11 detail](#task-11-sol-low-control-results-2026-08-07) | Task 27 | 2026-08-02 | 0 |
 
-Every completed response passed every observable criterion.
-The normalized per-repetition code `P` means the response passed its complete
+Every completed Sol-high control response passed every observable criterion.
+The normalized Sol-high per-repetition code `P` means the response passed its complete
 scenario rubric, including artifact shape and source order.
 
 | ID | R1 | R2 | R3 | R4 | R5 |
@@ -250,6 +250,21 @@ scenario rubric, including artifact shape and source order.
 | `DR-01` | P | P | P | P | P |
 | `DR-02` | P | P | P | P | P |
 | `DR-03` | P | P | P | P | P |
+
+## Task 11 Sol-low control results (2026-08-07)
+
+These are the frozen low-effort control outcomes. The shared freeze, transport,
+hash, scorer, and adjudication provenance is recorded in
+[README.md](README.md#task-11-sol-low-control-freeze-and-results).
+Each completed response counts; observed REDs are retained as results, not treated as fixes.
+
+| ID | Status | R1 | R2 | R3 | R4 | R5 | Score | Exact missed criteria / adjudication |
+|---|---|---|---|---|---|---|---:|---|
+| `DR-01` | preservation | P | P | P | P | P | **5/5** | Exact two-line correction and required repository citation. |
+| `DR-02` | preservation | P | P | P | P | P | **5/5** | Every response explicitly says the premise is wrong, gives the exact deadline, identifies Official Addendum 2 as controlling, and cites it. Orchestrator overruled five scorer false negatives. |
+| `DR-03` | preservation | F | P | P | P | P | **4/5** | R1 adds unsupported migration advice; R2-R5 state both verified versions and cite sources in order. |
+
+Owned Task 11 Sol-low aggregate: **14/15**.
 
 Raw evaluator outputs and transport logs remain in authorized scratch space outside
 the repository and are not committed.

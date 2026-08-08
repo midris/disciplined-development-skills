@@ -98,6 +98,21 @@ closure by reference, not duplication:
 | `DD-03` control | Parent-only control | **5/5 preservation PASS** | P / P / P / P / P | None | 0 |
 | `DD-03` current | Parent-only current target | **5/5 PASS** | P / P / P / P / P | None | 0 |
 
+## Task 11 Sol-low control results (2026-08-07)
+
+These are the frozen low-effort control outcomes. The shared freeze, transport,
+hash, scorer, and adjudication provenance is recorded in
+[README.md](README.md#task-11-sol-low-control-freeze-and-results).
+Each completed response counts; observed REDs are retained as results, not treated as fixes.
+
+| ID | Status | R1 | R2 | R3 | R4 | R5 | Score | Exact missed criteria / adjudication |
+|---|---|---|---|---|---|---|---:|---|
+| `DD-01` | target | F | F | F | F | F | **0/5** | Every routing matrix omits required exact methodology/companion sets or violates an ownership seam. |
+| `DD-02` | target | F | F | F | F | F | **0/5** | Every ledger misses the exact Gate 5 pass/ownership/artifact sequence and/or delegates child mechanics at the wrong boundary. |
+| `DD-03` | preservation | F | F | F | F | F | **0/5** | All choose the three smallest case actions correctly but omit the explicit distinction between mandatory analysis-time case generation and the narrower implementation threshold. |
+
+Owned Task 11 Sol-low aggregate: **0/15**.
+
 ### Final gate-ownership rerun (2026-08-06)
 
 The owner approved a dispatch-skill clarification that reserves every review

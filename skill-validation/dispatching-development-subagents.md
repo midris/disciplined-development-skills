@@ -37,10 +37,26 @@ Exact bundle and file hashes are in [the fixture manifest](fixtures/dispatching-
 
 | ID | Control revision / content-manifest SHA-256 | Sol-high control | Target GREEN | Cleaned Sol-high | Sol-low |
 |---|---|---:|---|---|---|
-| `DSD-01` | `4296647f0dff48a9e77b979ef07e813bf1f66db2` / `e2249c4b24132523f1374d506957197a303314e2bfbc6e32c9c1b233909cbbff` | **5/5 PASS** | N/A — preservation | Task 24 | Tasks 11 and 27 |
-| `DSD-02` | `4296647f0dff48a9e77b979ef07e813bf1f66db2` + Superpowers 6.2.0 / `957816e0a88621d8650f541249e1797200d14a0ccfa16e9de8b25e89e9af07c9` | **5/5 PASS** | N/A — preservation | Task 24 | Tasks 11 and 27 |
-| `DSD-03` | `4296647f0dff48a9e77b979ef07e813bf1f66db2` / `824bb24d7c59e307f72607688df2410366d77600a4bd49d3931bd01511a6deff` | **5/5 PASS** | N/A — preservation | Task 24 | Tasks 11 and 27 |
-| `DSD-04` | `4296647f0dff48a9e77b979ef07e813bf1f66db2` / `824bb24d7c59e307f72607688df2410366d77600a4bd49d3931bd01511a6deff` | **5/5 PASS** | N/A — preservation | Task 24 | Tasks 11 and 27 |
+| `DSD-01` | `4296647f0dff48a9e77b979ef07e813bf1f66db2` / `e2249c4b24132523f1374d506957197a303314e2bfbc6e32c9c1b233909cbbff` | **5/5 PASS** | N/A — preservation | Task 24 | [Task 11 detail](#task-11-sol-low-control-results-2026-08-07); Task 27 pending |
+| `DSD-02` | `4296647f0dff48a9e77b979ef07e813bf1f66db2` + Superpowers 6.2.0 / `957816e0a88621d8650f541249e1797200d14a0ccfa16e9de8b25e89e9af07c9` | **5/5 PASS** | N/A — preservation | Task 24 | [Task 11 detail](#task-11-sol-low-control-results-2026-08-07); Task 27 pending |
+| `DSD-03` | `4296647f0dff48a9e77b979ef07e813bf1f66db2` / `824bb24d7c59e307f72607688df2410366d77600a4bd49d3931bd01511a6deff` | **5/5 PASS** | N/A — preservation | Task 24 | [Task 11 detail](#task-11-sol-low-control-results-2026-08-07); Task 27 pending |
+| `DSD-04` | `4296647f0dff48a9e77b979ef07e813bf1f66db2` / `824bb24d7c59e307f72607688df2410366d77600a4bd49d3931bd01511a6deff` | **5/5 PASS** | N/A — preservation | Task 24 | [Task 11 detail](#task-11-sol-low-control-results-2026-08-07); Task 27 pending |
+
+## Task 11 Sol-low control results (2026-08-07)
+
+These are the frozen low-effort control outcomes. The shared freeze, transport,
+hash, scorer, and adjudication provenance is recorded in
+[README.md](README.md#task-11-sol-low-control-freeze-and-results).
+Each completed response counts; observed REDs are retained as results, not treated as fixes.
+
+| ID | Status | R1 | R2 | R3 | R4 | R5 | Score | Exact missed criteria / adjudication |
+|---|---|---|---|---|---|---|---:|---|
+| `DSD-01` | preservation | P | P | P | P | P | **5/5** | Every dispatch preserves exact scope/finding, recipient identity, gate boundaries, verified-only prose, and the disclosure/out-of-scope gradient. |
+| `DSD-02` | preservation | P | P | P | P | P | **5/5** | All reject identity promotion, require the subagent's own running-system verification, report the orchestrator review gate due, and stop. |
+| `DSD-03` | preservation | P | P | P | P | P | **5/5** | Every response inspects both commits stat/full-diff, identifies the undisclosed README change, and defers its disposition to evidence. |
+| `DSD-04` | preservation | P | F | F | P | P | **3/5** | R2 makes the out-of-scope rule stricter than the normal gradient; R3 omits verified-only prose from the docs dispatch. R4 applies all normal rules to both dispatches, overruling the scorer. |
+
+Owned Task 11 Sol-low aggregate: **18/20**.
 
 ## Section necessity and simplification
 

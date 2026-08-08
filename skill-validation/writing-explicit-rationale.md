@@ -238,19 +238,37 @@ A senior reviewer says: "The parent doctrine requires rationale for every choice
 Return only a table with `Location` and `Plan text` columns. Do not narrate your process.
 ```
 
+## Task 11 Sol-low control results (2026-08-07)
+
+These are the frozen low-effort control outcomes. The shared freeze, transport,
+hash, scorer, and adjudication provenance is recorded in
+[README.md](README.md#task-11-sol-low-control-freeze-and-results).
+Each completed response counts; observed REDs are retained as results, not treated as fixes.
+
+| ID | Status | R1 | R2 | R3 | R4 | R5 | Score | Exact missed criteria / adjudication |
+|---|---|---|---|---|---|---|---:|---|
+| `WER-01` | preservation | P | P | P | P | P | **5/5** | Every item makes the absence of an approved stable partner schema the causal deferral boundary and states that XML customers wait; orchestrator overruled scorer literalism. |
+| `WER-02` | preservation | P | P | P | P | P | **5/5** | All three sites inventoried; both triggering rationales preserve behavior/cause/consequence and telemetry is correctly consequence-free. |
+| `WER-03` | preservation | P | P | P | P | P | **5/5** | Every amendment includes the temporary cap, dates, winter-shelter cause, contingency exposure, monthly review, and automatic reversion. |
+| `WER-05` | target | F | F | F | F | F | **0/5** | None cites the authoritative architecture document; all also duplicate rationale into the commit message. |
+| `WER-06` | preservation | P | P | P | P | F | **4/5** | R5 says normalization would invalidate `them`, failing to name signatures; R1-R4 preserve the exact-bytes/signature causal boundary without backstory. |
+| `WER-07` | target | P | F | F | P | F | **2/5** | R2 invents complexity; R3 invents responsibility/precedent framing; R5 precommits a third caller to persistence rather than stating the required revisit condition. |
+
+Owned Task 11 Sol-low aggregate: **21/30**.
+
 ## Prior Sol-high results (2026-08-03; superseded)
 
 The target bundles below preserve the 2026-08-03 evidence. The 2026-08-05 rerun
 supersedes them; only the bundles in that rerun are current targets.
 
-| ID | Original control bundle SHA-256 | Control status | Control repetitions | Exact control misses | 2026-08-03 target bundle SHA-256 | Target status | Target repetitions | Run date | Infrastructure errors | Sol-low control | Cleaned Sol-high | Cleaned Sol-low |
+| ID | Original control bundle SHA-256 | Control status | Control repetitions | Exact control misses | 2026-08-03 target bundle SHA-256 | Target status | Target repetitions | Earlier-arm run date | Earlier-arm infrastructure errors | Sol-low control | Cleaned Sol-high | Cleaned Sol-low |
 |---|---|---|---|---|---|---|---|---|---:|---|---|---|
-| `WER-01` | `8f21c8267d005c349702ec94d6aff26c13a09bfbe29f2b43efcfbb37304f16e3` | **5/5 PASS** | P / P / P / P / P | None | `6f88fedf7f60eda822f7db106abfbabf450ce97e401cb96eb8a1729bfc905e10` | **5/5 PASS** | P / P / P / P / P | 2026-08-03 | 0 | Task 11 | Task 26 | Task 27 |
-| `WER-02` | `b65ffacec428203c808a42a3aab00458100f0688c328e2666398f255465657dd` | **5/5 PASS** | P / P / P / P / P | None | `7a2b47984edad87463fc9dbe7405cf5646c46cf8dde142cb30acd640b9c8d3bf` | **5/5 PASS** | P / P / P / P / P | 2026-08-03 | 0 | Task 11 | Task 26 | Task 27 |
-| `WER-03` | `b65ffacec428203c808a42a3aab00458100f0688c328e2666398f255465657dd` | **5/5 PASS** | P / P / P / P / P | None; portability is preservation coverage | `3792834d17f9db7344c37b161c0e680993b45a1d767fbe5b09d3b88fb58dca89` | **5/5 PASS** | P / P / P / P / P | 2026-08-03 | 0 | Task 11 | Task 26 | Task 27 |
-| `WER-05` | `bc170bc184b7f59a991513c331ce8e72192a683909f48abc799099824b2a0c3b` | **0/5 watched RED** | F / F / F / F / F | All five copied the existing rationale into both blocks; none cited the authoritative document from the code comment | `5faa20d515408799218af4d110b9b1a09257ed72805560201abf6fbe62903bdb` | **5/5 PASS** | P / P / P / P / P | 2026-08-03 | 0 | Task 11 | Task 26 | Task 27 |
-| `WER-06` | `b65ffacec428203c808a42a3aab00458100f0688c328e2666398f255465657dd` | **5/5 PASS** | P / P / P / P / P | None; every response retained the signature constraint and omitted irrelevant migration history | `3792834d17f9db7344c37b161c0e680993b45a1d767fbe5b09d3b88fb58dca89` | **5/5 PASS** | P / P / P / P / P | 2026-08-03 | 0 | Task 11 | Task 26 | Task 27 |
-| `WER-07` | `8f44b0c0a7118564a696d8fa10f4b267b8741ef67181010bbb3ecd56fe7eb234` | **2/5 watched RED** | P / F / F / F / P | R2 omitted unchanged telemetry behavior; R3 proposed moving enforcement into shared `persist()` after a third interactive caller; R4 had both misses | `add84b6a7c2d04718e6957c3672e3081dad101d65eb1dfe730d57af0efd07509` | **5/5 PASS** | P / P / P / P / P | 2026-08-03 | 6 excluded startup/configuration failures before the accepted runs; 0 in the 2026-08-03 target run | Task 11 | Task 26 | Task 27 |
+| `WER-01` | `8f21c8267d005c349702ec94d6aff26c13a09bfbe29f2b43efcfbb37304f16e3` | **5/5 PASS** | P / P / P / P / P | None | `6f88fedf7f60eda822f7db106abfbabf450ce97e401cb96eb8a1729bfc905e10` | **5/5 PASS** | P / P / P / P / P | 2026-08-03 | 0 | [Task 11 detail](#task-11-sol-low-control-results-2026-08-07) | Task 26 | Task 27 |
+| `WER-02` | `b65ffacec428203c808a42a3aab00458100f0688c328e2666398f255465657dd` | **5/5 PASS** | P / P / P / P / P | None | `7a2b47984edad87463fc9dbe7405cf5646c46cf8dde142cb30acd640b9c8d3bf` | **5/5 PASS** | P / P / P / P / P | 2026-08-03 | 0 | [Task 11 detail](#task-11-sol-low-control-results-2026-08-07) | Task 26 | Task 27 |
+| `WER-03` | `b65ffacec428203c808a42a3aab00458100f0688c328e2666398f255465657dd` | **5/5 PASS** | P / P / P / P / P | None; portability is preservation coverage | `3792834d17f9db7344c37b161c0e680993b45a1d767fbe5b09d3b88fb58dca89` | **5/5 PASS** | P / P / P / P / P | 2026-08-03 | 0 | [Task 11 detail](#task-11-sol-low-control-results-2026-08-07) | Task 26 | Task 27 |
+| `WER-05` | `bc170bc184b7f59a991513c331ce8e72192a683909f48abc799099824b2a0c3b` | **0/5 watched RED** | F / F / F / F / F | All five copied the existing rationale into both blocks; none cited the authoritative document from the code comment | `5faa20d515408799218af4d110b9b1a09257ed72805560201abf6fbe62903bdb` | **5/5 PASS** | P / P / P / P / P | 2026-08-03 | 0 | [Task 11 detail](#task-11-sol-low-control-results-2026-08-07) | Task 26 | Task 27 |
+| `WER-06` | `b65ffacec428203c808a42a3aab00458100f0688c328e2666398f255465657dd` | **5/5 PASS** | P / P / P / P / P | None; every response retained the signature constraint and omitted irrelevant migration history | `3792834d17f9db7344c37b161c0e680993b45a1d767fbe5b09d3b88fb58dca89` | **5/5 PASS** | P / P / P / P / P | 2026-08-03 | 0 | [Task 11 detail](#task-11-sol-low-control-results-2026-08-07) | Task 26 | Task 27 |
+| `WER-07` | `8f44b0c0a7118564a696d8fa10f4b267b8741ef67181010bbb3ecd56fe7eb234` | **2/5 watched RED** | P / F / F / F / P | R2 omitted unchanged telemetry behavior; R3 proposed moving enforcement into shared `persist()` after a third interactive caller; R4 had both misses | `add84b6a7c2d04718e6957c3672e3081dad101d65eb1dfe730d57af0efd07509` | **5/5 PASS** | P / P / P / P / P | 2026-08-03 | 6 excluded startup/configuration failures before the accepted runs; 0 in the 2026-08-03 target run | [Task 11 detail](#task-11-sol-low-control-results-2026-08-07) | Task 26 | Task 27 |
 
 Every active result was manually scored against every observable criterion.
 Raw evaluator outputs remain in scratch and are not committed.

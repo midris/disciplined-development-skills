@@ -352,16 +352,36 @@ Return only that section.
 
 ## Sol-high results
 
-| ID | Original control / content-manifest SHA-256 | Sol-high control | Exact control misses | Target/current GREEN | Exact current misses | Cleaned Sol-high | Sol-low control | Cleaned Sol-low | Run date | Infrastructure errors |
+| ID | Original control / content-manifest SHA-256 | Sol-high control | Exact control misses | Target/current GREEN | Exact current misses | Cleaned Sol-high | Sol-low control | Cleaned Sol-low | Earlier-arm run date | Earlier-arm infrastructure errors |
 |---|---|---|---|---|---|---|---|---|---|---:|
-| `LP-01` | `4296647f0dff48a9e77b979ef07e813bf1f66db2` / `6a2a167736cd009fa9cd94fe9e9e583824395f52654b16063a0d32223e6cca22` | **5/5 PASS** | None | **4/5 preservation** on Task 6 bundle `eb5fe2d…` (`lean` `7635112…`; `writing-explicit-rationale` `4035ecd…`) | R3 committed failing tests before implementation instead of test-fail → implement → pass → commit; unrelated to the pairing-only lean edit | Task 19 | Task 11 | Task 27 | 2026-08-03 | 1 interrupted original-control attempt before the accepted R3 retry; 0 in Task 6 rerun |
-| `LP-02` | `4296647f0dff48a9e77b979ef07e813bf1f66db2` / `1c9ee30df820fea591aba7d1a94e3cb57f27c2ff0a4e9b045661fe49911f19d6` | **3/5 watched RED** | R2 and R4 embedded heredocs | **5/5 PASS** on `4c659b7…` | None | Task 19 | Task 11 | Task 27 | 2026-08-02 | 0 |
-| `LP-03` | `4296647f0dff48a9e77b979ef07e813bf1f66db2` / `1c9ee30df820fea591aba7d1a94e3cb57f27c2ff0a4e9b045661fe49911f19d6` | **1/5 watched RED** | R2 repeated the fixture in a shell command; R3–R5 repeated it as verification literals | **5/5 PASS** on `4c659b7…` | None | Task 19 | Task 11 | Task 27 | 2026-08-02 | 0 |
-| `LP-04` | `4296647f0dff48a9e77b979ef07e813bf1f66db2` / `c4aae591a2a3b2b6c2d40ace3e97b19ff37f998c5970dead0366e4f025a72787` | **4/5 watched RED** | R2 imported branch/merge machinery | **4/5 watched RED** on `b32e69f…` | R1 imported repository, branch, merge, and commit machinery | Task 14 target | Task 11 | Task 27 | 2026-08-02 | 0 |
-| `LP-05` | `4296647f0dff48a9e77b979ef07e813bf1f66db2` / `244abb67faace119794d787ea614370d27e3c9d88baeab7df66d37d6c2f65342` | **5/5 PASS** | None | **5/5 PASS** on `4c659b7…` | None | Task 19 | Task 11 | Task 27 | 2026-08-02 | 0 |
-| `LP-06` | `4296647f0dff48a9e77b979ef07e813bf1f66db2` / `0539594794409943fa476b6f54707c51fab74f27df4fec465418401497e3b864` | **5/5 PASS** | None | **5/5 PASS** on `4c659b7…` | None | Task 19 | Task 11 | Task 27 | 2026-08-02 | 0 |
-| `LP-07` | `4296647f0dff48a9e77b979ef07e813bf1f66db2` / `a628b3ca64de7d458f160cf3583209cfe53507e83ee18c617da9795af585c87c` | **5/5 PASS** | None | **5/5 PASS** on `b32e69f…` | None | Task 19 | Task 11 | Task 27 | 2026-08-02 | 0 |
-| `LP-08` | `4296647f0dff48a9e77b979ef07e813bf1f66db2` / `b38a536f41aa34a4b15f87a00dbb1ad69dc6aac370d6e8c43232cf528a718288` | **5/5 PASS** | None | **5/5 PASS** on `b32e69f…` | None | Task 19 | Task 11 | Task 27 | 2026-08-02 | 0 |
+| `LP-01` | `4296647f0dff48a9e77b979ef07e813bf1f66db2` / `6a2a167736cd009fa9cd94fe9e9e583824395f52654b16063a0d32223e6cca22` | **5/5 PASS** | None | **4/5 preservation** on Task 6 bundle `eb5fe2d…` (`lean` `7635112…`; `writing-explicit-rationale` `4035ecd…`) | R3 committed failing tests before implementation instead of test-fail → implement → pass → commit; unrelated to the pairing-only lean edit | Task 19 | [Task 11 detail](#task-11-sol-low-control-results-2026-08-07) | Task 27 | 2026-08-03 | 1 interrupted original-control attempt before the accepted R3 retry; 0 in Task 6 rerun |
+| `LP-02` | `4296647f0dff48a9e77b979ef07e813bf1f66db2` / `1c9ee30df820fea591aba7d1a94e3cb57f27c2ff0a4e9b045661fe49911f19d6` | **3/5 watched RED** | R2 and R4 embedded heredocs | **5/5 PASS** on `4c659b7…` | None | Task 19 | [Task 11 detail](#task-11-sol-low-control-results-2026-08-07) | Task 27 | 2026-08-02 | 0 |
+| `LP-03` | `4296647f0dff48a9e77b979ef07e813bf1f66db2` / `1c9ee30df820fea591aba7d1a94e3cb57f27c2ff0a4e9b045661fe49911f19d6` | **1/5 watched RED** | R2 repeated the fixture in a shell command; R3–R5 repeated it as verification literals | **5/5 PASS** on `4c659b7…` | None | Task 19 | [Task 11 detail](#task-11-sol-low-control-results-2026-08-07) | Task 27 | 2026-08-02 | 0 |
+| `LP-04` | `4296647f0dff48a9e77b979ef07e813bf1f66db2` / `c4aae591a2a3b2b6c2d40ace3e97b19ff37f998c5970dead0366e4f025a72787` | **4/5 watched RED** | R2 imported branch/merge machinery | **4/5 watched RED** on `b32e69f…` | R1 imported repository, branch, merge, and commit machinery | Task 14 target | [Task 11 detail](#task-11-sol-low-control-results-2026-08-07) | Task 27 | 2026-08-02 | 0 |
+| `LP-05` | `4296647f0dff48a9e77b979ef07e813bf1f66db2` / `244abb67faace119794d787ea614370d27e3c9d88baeab7df66d37d6c2f65342` | **5/5 PASS** | None | **5/5 PASS** on `4c659b7…` | None | Task 19 | [Task 11 detail](#task-11-sol-low-control-results-2026-08-07) | Task 27 | 2026-08-02 | 0 |
+| `LP-06` | `4296647f0dff48a9e77b979ef07e813bf1f66db2` / `0539594794409943fa476b6f54707c51fab74f27df4fec465418401497e3b864` | **5/5 PASS** | None | **5/5 PASS** on `4c659b7…` | None | Task 19 | [Task 11 detail](#task-11-sol-low-control-results-2026-08-07) | Task 27 | 2026-08-02 | 0 |
+| `LP-07` | `4296647f0dff48a9e77b979ef07e813bf1f66db2` / `a628b3ca64de7d458f160cf3583209cfe53507e83ee18c617da9795af585c87c` | **5/5 PASS** | None | **5/5 PASS** on `b32e69f…` | None | Task 19 | [Task 11 detail](#task-11-sol-low-control-results-2026-08-07) | Task 27 | 2026-08-02 | 0 |
+| `LP-08` | `4296647f0dff48a9e77b979ef07e813bf1f66db2` / `b38a536f41aa34a4b15f87a00dbb1ad69dc6aac370d6e8c43232cf528a718288` | **5/5 PASS** | None | **5/5 PASS** on `b32e69f…` | None | Task 19 | [Task 11 detail](#task-11-sol-low-control-results-2026-08-07) | Task 27 | 2026-08-02 | 0 |
+
+## Task 11 Sol-low control results (2026-08-07)
+
+These are the frozen low-effort control outcomes. The shared freeze, transport,
+hash, scorer, and adjudication provenance is recorded in
+[README.md](README.md#task-11-sol-low-control-freeze-and-results).
+Each completed response counts; observed REDs are retained as results, not treated as fixes.
+
+| ID | Status | R1 | R2 | R3 | R4 | R5 | Score | Exact missed criteria / adjudication |
+|---|---|---|---|---|---|---|---:|---|
+| `LP-01` | preservation | P | P | F | F | P | **3/5** | R3-R4 alter the required upstream title. R5 covers the complete text/JSON/error contract; orchestrator overruled that scorer false negative. |
+| `LP-02` | target | F | P | F | F | F | **1/5** | R1/R3/R4/R5 include prohibited copyable heredoc or fixture content; R2 keeps implementation details in prose and covers the full behavior table. |
+| `LP-03` | target | P | F | P | P | F | **3/5** | R2/R5 repeat the exact fixture in a copyable `printf` verification command; the others use one artifact block with prose/binary comparison. |
+| `LP-04` | target | P | P | P | P | P | **5/5** | All fixed roles, dates, gates, exclusions, accessibility sequence, and dependencies are executable and free of software-delivery assumptions. |
+| `LP-05` | preservation | P | F | F | F | F | **1/5** | Only R1 covers every explicit failure/scale/atomicity/reporting disposition with runnable verification and prose implementation. |
+| `LP-06` | preservation | P | F | P | P | P | **4/5** | R2 adds rate-limit/isolation tests and then implements without an intervening explicit failing-test run; the others preserve TDD ordering. |
+| `LP-07` | preservation | F | F | F | F | F | **0/5** | Every response carries the supplied commit-count/diff-size heuristic into the boundary despite the rubric's no-numeric-heuristic requirement. |
+| `LP-08` | preservation | F | P | F | P | P | **3/5** | R1/R3 omit the small-change fact; R2/R4/R5 cite small scope, coupling, and inconsistent/red intermediate states while choosing one PR. |
+
+Owned Task 11 Sol-low aggregate: **20/40**.
 
 The normalized per-repetition code `P` means the response passed its complete
 scenario rubric; `F` means at least one observable criterion was missed.

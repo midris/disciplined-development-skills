@@ -467,22 +467,48 @@ Every non-control arm cell records `R1/R2/R3/R4/R5; total`; aggregate-only resul
 are invalid. Exact misses identify the arm and repetition without reproducing raw
 transcripts.
 
-| ID | Control bundle | R1 | R2 | R3 | R4 | R5 | Sol-high control | Target GREEN (R1/R2/R3/R4/R5; total) | Cleaned Sol-high (R1/R2/R3/R4/R5; total) | Sol-low control (R1/R2/R3/R4/R5; total) | Cleaned Sol-low (R1/R2/R3/R4/R5; total) | Exact misses | Run date | Infrastructure errors |
+| ID | Control bundle | R1 | R2 | R3 | R4 | R5 | Sol-high control | Target GREEN (R1/R2/R3/R4/R5; total) | Cleaned Sol-high (R1/R2/R3/R4/R5; total) | Sol-low control (R1/R2/R3/R4/R5; total) | Cleaned Sol-low (R1/R2/R3/R4/R5; total) | Exact misses | Earlier-arm run date | Earlier-arm infrastructure errors |
 |---|---|---|---|---|---|---|---|---|---|---|---|---|---|---:|
-| `CW-01` | single-skill `c3ab86f0…` | PASS | PASS | PASS | PASS | PASS | 5/5 PASS | PASS/PASS/PASS/PASS/PASS; 5/5 | Task 17 | Task 11 | Task 27 | None | 2026-08-02 | 0 |
-| `CW-02` | single-skill `c3ab86f0…` | PASS | PASS | PASS | PASS | PASS | 5/5 PASS | PASS/PASS/PASS/PASS/PASS; 5/5 | Task 17 | Task 11 | Task 27 | None | 2026-08-02 | 0 |
-| `CW-03` | single-skill `c3ab86f0…` | PASS | PASS | PASS | PASS | PASS | 5/5 PASS | PASS/PASS/PASS/PASS/PASS; 5/5 | Task 17 | Task 11 | Task 27 | None | 2026-08-02 | 0 |
-| `CW-04` | single-skill `c3ab86f0…` | PASS | PASS | PASS | PASS | PASS | 5/5 PASS | PASS/PASS/PASS/PASS/PASS; 5/5 | Task 17 | Task 11 | Task 27 | None; target R1 confirmed by blinded frozen-rubric scorer | 2026-08-02 | 0 |
-| `CW-05` | single-skill `c3ab86f0…` | PASS | PASS | PASS | PASS | PASS | 5/5 PASS | PASS/PASS/PASS/PASS/PASS; 5/5 | Task 17 | Task 11 | Task 27 | None | 2026-08-02 | 0 |
-| `CW-06` | single-skill `c3ab86f0…` | PASS | PASS | PASS | PASS | PASS | 5/5 PASS | PASS/PASS/PASS/PASS/PASS; 5/5 | Task 17 | Task 11 | Task 27 | None | 2026-08-02 | 0 |
-| `CW-07` | full bundle `e2249c4b…` | PASS | PASS | PASS | PASS | PASS | 5/5 PASS | PASS/PASS/PASS/PASS/PASS; 5/5 | Task 17 | Task 11 | Task 27 | None | 2026-08-02 | 0 |
-| `CW-08` | single-skill `c3ab86f0…` | PASS | PASS | PASS | PASS | PASS | 5/5 PASS; preservation | PASS/PASS/PASS/PASS/PASS; 5/5 | Task 17 | Task 11 | Task 27 | None | 2026-08-02 | 0 |
-| `CW-09` | descriptions `49c129fe…` | FAIL | FAIL | FAIL | FAIL | FAIL | 0/5 watched RED | PASS/PASS/PASS/PASS/PASS; 5/5 | Task 17 | Task 11 | Task 27 | Control R1–R5: omitted `concise-writing`; target none | 2026-08-02 | 0 |
-| `CW-10` | single-skill `c3ab86f0…` | FAIL | FAIL | FAIL | FAIL | FAIL | 0/5 watched RED | PASS/PASS/PASS/PASS/PASS; 5/5 | Task 17 | Task 11 | Task 27 | Control R1–R5: both owners and evidence were `null`; target none | 2026-08-02 | 0 |
-| `CW-11` | descriptions `49c129fe…` | FAIL | FAIL | FAIL | FAIL | FAIL | 0/5 watched RED | PASS/PASS/PASS/PASS/PASS; 5/5 | Task 17 | Task 11 | Task 27 | Control R1–R5: omitted `concise-writing`; target none | 2026-08-02 | 0 |
-| `CW-12` | single-skill `c3ab86f0…` | FAIL | FAIL | FAIL | FAIL | FAIL | 0/5 watched RED | PASS/PASS/PASS/PASS/PASS; 5/5 | Task 17 | Task 11 | Task 27 | Control R1–R5: both owners and evidence were `null`; target none | 2026-08-02 | 0 |
-| `CW-13` | composition `5ba3cdbb…` | FAIL | FAIL | FAIL | FAIL | FAIL | 0/5 watched RED | PASS/PASS/PASS/PASS/PASS; 5/5 | Task 17 | Task 11 | Task 27 | Control R1–R5: omitted `concise-writing`; target none | 2026-08-02 | 0 |
-| `CW-14` | composition `5ba3cdbb…` | FAIL | FAIL | FAIL | FAIL | FAIL | 0/5 watched RED | PASS/PASS/PASS/PASS/PASS; 5/5 | Task 17 | Task 11 | Task 27 | Control R1–R5: omitted `concise-writing`; target none | 2026-08-02 | 0 |
+| `CW-01` | single-skill `c3ab86f0…` | PASS | PASS | PASS | PASS | PASS | 5/5 PASS | PASS/PASS/PASS/PASS/PASS; 5/5 | Task 17 | [Task 11 detail](#task-11-sol-low-control-results-2026-08-07) | Task 27 | None | 2026-08-02 | 0 |
+| `CW-02` | single-skill `c3ab86f0…` | PASS | PASS | PASS | PASS | PASS | 5/5 PASS | PASS/PASS/PASS/PASS/PASS; 5/5 | Task 17 | [Task 11 detail](#task-11-sol-low-control-results-2026-08-07) | Task 27 | None | 2026-08-02 | 0 |
+| `CW-03` | single-skill `c3ab86f0…` | PASS | PASS | PASS | PASS | PASS | 5/5 PASS | PASS/PASS/PASS/PASS/PASS; 5/5 | Task 17 | [Task 11 detail](#task-11-sol-low-control-results-2026-08-07) | Task 27 | None | 2026-08-02 | 0 |
+| `CW-04` | single-skill `c3ab86f0…` | PASS | PASS | PASS | PASS | PASS | 5/5 PASS | PASS/PASS/PASS/PASS/PASS; 5/5 | Task 17 | [Task 11 detail](#task-11-sol-low-control-results-2026-08-07) | Task 27 | None; target R1 confirmed by blinded frozen-rubric scorer | 2026-08-02 | 0 |
+| `CW-05` | single-skill `c3ab86f0…` | PASS | PASS | PASS | PASS | PASS | 5/5 PASS | PASS/PASS/PASS/PASS/PASS; 5/5 | Task 17 | [Task 11 detail](#task-11-sol-low-control-results-2026-08-07) | Task 27 | None | 2026-08-02 | 0 |
+| `CW-06` | single-skill `c3ab86f0…` | PASS | PASS | PASS | PASS | PASS | 5/5 PASS | PASS/PASS/PASS/PASS/PASS; 5/5 | Task 17 | [Task 11 detail](#task-11-sol-low-control-results-2026-08-07) | Task 27 | None | 2026-08-02 | 0 |
+| `CW-07` | full bundle `e2249c4b…` | PASS | PASS | PASS | PASS | PASS | 5/5 PASS | PASS/PASS/PASS/PASS/PASS; 5/5 | Task 17 | [Task 11 detail](#task-11-sol-low-control-results-2026-08-07) | Task 27 | None | 2026-08-02 | 0 |
+| `CW-08` | single-skill `c3ab86f0…` | PASS | PASS | PASS | PASS | PASS | 5/5 PASS; preservation | PASS/PASS/PASS/PASS/PASS; 5/5 | Task 17 | [Task 11 detail](#task-11-sol-low-control-results-2026-08-07) | Task 27 | None | 2026-08-02 | 0 |
+| `CW-09` | descriptions `49c129fe…` | FAIL | FAIL | FAIL | FAIL | FAIL | 0/5 watched RED | PASS/PASS/PASS/PASS/PASS; 5/5 | Task 17 | [Task 11 detail](#task-11-sol-low-control-results-2026-08-07) | Task 27 | Control R1–R5: omitted `concise-writing`; target none | 2026-08-02 | 0 |
+| `CW-10` | single-skill `c3ab86f0…` | FAIL | FAIL | FAIL | FAIL | FAIL | 0/5 watched RED | PASS/PASS/PASS/PASS/PASS; 5/5 | Task 17 | [Task 11 detail](#task-11-sol-low-control-results-2026-08-07) | Task 27 | Control R1–R5: both owners and evidence were `null`; target none | 2026-08-02 | 0 |
+| `CW-11` | descriptions `49c129fe…` | FAIL | FAIL | FAIL | FAIL | FAIL | 0/5 watched RED | PASS/PASS/PASS/PASS/PASS; 5/5 | Task 17 | [Task 11 detail](#task-11-sol-low-control-results-2026-08-07) | Task 27 | Control R1–R5: omitted `concise-writing`; target none | 2026-08-02 | 0 |
+| `CW-12` | single-skill `c3ab86f0…` | FAIL | FAIL | FAIL | FAIL | FAIL | 0/5 watched RED | PASS/PASS/PASS/PASS/PASS; 5/5 | Task 17 | [Task 11 detail](#task-11-sol-low-control-results-2026-08-07) | Task 27 | Control R1–R5: both owners and evidence were `null`; target none | 2026-08-02 | 0 |
+| `CW-13` | composition `5ba3cdbb…` | FAIL | FAIL | FAIL | FAIL | FAIL | 0/5 watched RED | PASS/PASS/PASS/PASS/PASS; 5/5 | Task 17 | [Task 11 detail](#task-11-sol-low-control-results-2026-08-07) | Task 27 | Control R1–R5: omitted `concise-writing`; target none | 2026-08-02 | 0 |
+| `CW-14` | composition `5ba3cdbb…` | FAIL | FAIL | FAIL | FAIL | FAIL | 0/5 watched RED | PASS/PASS/PASS/PASS/PASS; 5/5 | Task 17 | [Task 11 detail](#task-11-sol-low-control-results-2026-08-07) | Task 27 | Control R1–R5: omitted `concise-writing`; target none | 2026-08-02 | 0 |
+
+## Task 11 Sol-low control results (2026-08-07)
+
+These are the frozen low-effort control outcomes. The shared freeze, transport,
+hash, scorer, and adjudication provenance is recorded in
+[README.md](README.md#task-11-sol-low-control-freeze-and-results).
+Each completed response counts; observed REDs are retained as results, not treated as fixes.
+
+| ID | Status | R1 | R2 | R3 | R4 | R5 | Score | Exact missed criteria / adjudication |
+|---|---|---|---|---|---|---|---:|---|
+| `CW-01` | preservation | P | P | P | P | P | **5/5** | All facts preserved; no extras. |
+| `CW-02` | preservation | P | P | P | P | P | **5/5** | All five preserve the per-delivery rule, both rationales, navigation, and failure rule; `worker` and `marked failed` are source-supported. Orchestrator overruled scorer false negatives on R2/R4. |
+| `CW-03` | preservation | P | F | P | P | P | **4/5** | R2 says valid for 30 minutes but does not define the URL as expiring after 30 minutes. |
+| `CW-04` | preservation | P | F | P | P | P | **4/5** | R2 broadens the enumerated reset inputs to unsupported `Any input`; R4 is source-faithful, overruling the scorer's misplaced false negative. |
+| `CW-05` | preservation | P | P | P | P | P | **5/5** | Required archive facts retained; unsupported recommendations removed. |
+| `CW-06` | preservation | P | P | P | P | P | **5/5** | Each semantic rule stated once; forbidden emphasis absent. |
+| `CW-07` | preservation | P | P | P | P | P | **5/5** | Complete notice, no blocker ceremony or added facts. |
+| `CW-08` | preservation | P | P | P | F | P | **4/5** | R4 omits the required instruction to contact the program for accommodations. |
+| `CW-09` | target | F | F | F | F | F | **0/5** | All omit required `concise-writing`. |
+| `CW-10` | target | F | F | F | F | F | **0/5** | All return null owners/evidence rather than the exact required object. |
+| `CW-11` | target | F | F | F | F | F | **0/5** | All omit required `concise-writing`. |
+| `CW-12` | target | F | F | F | F | F | **0/5** | All return null owners/evidence rather than the exact required object. |
+| `CW-13` | target | F | F | F | F | F | **0/5** | All omit required `concise-writing` from the exact object. |
+| `CW-14` | target | F | F | F | F | F | **0/5** | All omit required `concise-writing` from the exact object. |
+
+Owned Task 11 Sol-low aggregate: **37/70**.
 
 Pre-freeze composition experiments remain scratch-only and are not counted. The
 first batch lacked the protocol's config/rules isolation and nested-agent removal,
