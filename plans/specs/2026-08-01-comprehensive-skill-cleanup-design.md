@@ -18,21 +18,36 @@ and the slice remains separate from later readability work.
 - Do not redesign effective doctrine during the readability cleanup.
 - Do not treat fewer words as success when tested behavior regresses.
 - Do not force every skill into an identical heading template.
-- Do not require the integrated development skills to work when extracted individually.
-- Do not run the full suite across Claude models during this project; that cross-provider calibration is a later user-led pass.
+- Do not require development skills to work outside their authored domain or without declared dependencies.
+- Do not add a second behavioral provider gate; Gate 5 remains the separate external-review boundary.
 
 ## Skill categories
 
-All nine skills travel together in this repository and must be safe to invoke directly when the complete bundle is installed.
+All nine skills travel together in this repository and must be safe to invoke
+directly when the complete bundle is installed.
 
-Five skills are also **portable**: they must retain their core value when extracted without the rest of this repository and used outside a software-development project.
-Software examples may remain because development is their primary current use, but the core contract must not depend on a development environment.
+Portability means that a skill authored and previously exercised with Claude reads and
+behaves correctly to a cold non-Claude model within its intended task domain and with
+its declared dependencies available.
+All nine skills use five fresh `gpt-5.6-sol` high-effort contexts and the existing
+failure-classification gate for that evidence.
+Sol-low measures effort robustness, not an additional portability domain or model
+family.
+Domain breadth and standalone/extraction packaging are separate coverage dimensions;
+neither defines cross-model portability.
+
+Three **broad-domain companions** have contracts that genuinely include non-software
+work and therefore retain isolated broad-domain application coverage:
 
 - `concise-writing`
 - `disciplined-research`
+- `writing-explicit-rationale`
+
+Two **development companions** retain their authored software-development domain and
+declared dependencies:
+
 - `lean-plan-writing`
 - `sweeping-stale-references`
-- `writing-explicit-rationale`
 
 Four skills form the **integrated development group**:
 
@@ -44,7 +59,8 @@ Four skills form the **integrated development group**:
 The group coordinates tightly but is not a separately installable mini-bundle.
 Direct-invocation tests for these skills run with all nine project skills available.
 `disciplined-development` is the orchestrator and intentionally depends on all eight companions.
-The other three integrated-development skills are its tightly coupled children; the five portable skills also participate as routed companions.
+The other three integrated-development skills are its tightly coupled children; the
+five companions also participate at their routed boundaries.
 
 ## Preservation rule
 
@@ -56,7 +72,7 @@ Do not edit a skill until its current promises, coverage, and observed variance 
 Compare cleaned drafts against the applicable immediate readability control with identical prompts and rubrics while continuing to protect original behavior against `4296647`.
 
 Handle desired behavioral improvements as separate RED/GREEN slices, never inside a behavior-preserving readability commit.
-Complete prerequisite improvements such as portability before readability cleanup and defer unrelated improvements until afterward.
+Complete prerequisite behavior repairs before readability cleanup and defer unrelated improvements until afterward.
 During Task 1, discovery audit exposed inconsistent parent co-selection. The user
 approved the minimal frontmatter-only parent-routing target as the pre-freeze exception
 above; it requires a watched control RED, 5/5 Sol-high target, cold review, final
@@ -69,8 +85,7 @@ approved a separate pre-freeze RED/GREEN slice: remove the frontmatter exclusion
 state in the body that `superpowers:writing-skills` owns authoring decisions and
 validation. After its watched controls, 5/5 GREEN, cold review, final in-place
 approval, repository tests, and separate behavioral commit, that committed GREEN
-becomes `concise-writing`'s immediate readability control. If Task 12 later changes
-the skill for portability, the committed portability GREEN supersedes it.
+becomes `concise-writing`'s immediate readability control.
 
 During Task 7, the audit exposed that internal enumeration was not observable in
 review output and the owner approved shared-pattern synthesis as an adjacent output
@@ -82,11 +97,15 @@ clarifications with preserved 5/5 behavior. These changes require watched contro
 5/5 GREEN, cold review, final in-place approval, repository tests, and a behavioral
 commit separate from Task 22's readability cleanup.
 
-Portable extraction is an approved target, not assumed control behavior.
-If a portable skill fails extraction, record the watched RED, make the minimal portability change in a separate behavioral slice, establish its 5/5 GREEN, and only then perform readability cleanup.
-The portability slice must preserve the skill's software-development behavior.
-After a portability slice reaches GREEN, that committed version becomes the immediate control for the skill's readability cleanup; `4296647` remains the regression control for original behavior.
-For skills that need no portability slice, `4296647` is also the immediate readability control.
+Broad-domain isolation is coverage only for the three companions whose contracts
+include that work; it does not expand the two development companions beyond their
+authored domain or remove any dependency.
+`CW-08`, `DR-02`, and `WER-03` supply that isolated-application evidence.
+`LP-04` and `SSR-04` remain preserved as historical exploratory cross-domain evidence,
+but they are retired from active coverage and cannot drive a skill change.
+The current `writing-explicit-rationale` policy scope is approved current behavior.
+`4296647` remains the original-behavior control unless an independently approved
+behavior slice establishes a later immediate readability control.
 
 ## Validation environment
 
@@ -108,6 +127,9 @@ Low-effort results characterize robustness; they do not replace or dilute the hi
 Run the complete suite on Sol low again after cleanup to compare the control and cleaned skill trees.
 A lower cleaned score pauses sign-off for inspection and user review but is not an automatic failure of the Sol-high preservation gate.
 Record one of two dispositions for every decrease: user-approved acceptance with an on-page what/why/accepted rationale, or remediation followed by the affected Sol-high and Sol-low reruns.
+Task 11's frozen 81-scenario/405-slot aggregate remains historical fact.
+After retiring `LP-04` and `SSR-04`, future active closure contains 79 scenarios;
+do not recompute the frozen aggregate.
 
 Record for every run:
 
@@ -131,8 +153,13 @@ Verify before Task 1's baseline runs that the nine live skill files still match 
 The scenario prompt, fixture, rubric, supplied context, model, and reasoning effort must be identical between comparison arms except for the skill bundle intentionally under test.
 For subjective comparisons, anonymize immutable control and draft outputs before scoring.
 
-Gate 5 external reviews for this cleanup use a scratch `DD_CONFIG` project override that pins `gpt-5.6-sol` at high reasoning effort and leaves the repository's shipped reviewer defaults unchanged.
-This keeps experiment-specific settings out of the public default while requiring the override and recorded model metadata at every cleanup boundary.
+Gate 5 external reviews use the shared protocol's different-provider and
+different-model-family rule.
+When Claude orchestrates, a scratch `DD_CONFIG` project override pins
+`gpt-5.6-sol` at high effort; when Codex orchestrates, a fresh Claude reviewer uses
+the plan-recorded model and effort.
+This keeps experiment-specific settings out of the public default while requiring
+recorded provider, model, effort, and verdict metadata at every cleanup boundary.
 
 ## Validation protocol
 
@@ -160,7 +187,9 @@ Use atomic scenarios for individual skill promises.
 Use composite prompts only when composition is the behavior under test; never combine unrelated tasks to reduce dispatch count.
 This avoids artificial conflicts between unrelated output contracts.
 
-A skill's **complete active suite** contains its owned scenarios plus every shared discovery, direct-invocation, portability, and composition scenario mapped to one of its promises.
+A skill's **complete active suite** contains its owned scenarios plus every shared
+discovery, direct-invocation, domain-appropriate application, dependency, and
+composition scenario mapped to one of its promises.
 Every shared or supporting scenario record has one owner and lists every affected skill.
 
 Blind the arm labels when scoring subjective prose quality.
@@ -180,13 +209,16 @@ Every skill needs:
 A scenario may satisfy multiple related coverage categories when its rubric names each promise explicitly.
 Do not create near-duplicate prompts merely to give every category a separate row.
 
-The portable five also need extraction tests with only the skill and its declared external dependencies available, including at least one non-software application.
+The three broad-domain companions also need isolated non-software application tests
+with their declared dependencies available.
+The two development companions need in-domain application tests with their declared
+dependencies available.
 The integrated development group needs cross-skill ownership and composition tests.
 `disciplined-development` needs full-suite orchestration tests.
 
 Existing behavior is covered by **preservation scenarios**, which require a 5/5 control baseline.
-Newly approved behavior such as a missing portability contract is covered by a **target scenario**, which requires a watched control RED and a 5/5 GREEN before joining the active regression suite.
-If an approved portability scenario is already 5/5 against `4296647`, classify it as preservation coverage rather than a target.
+Newly approved behavior is covered by a **target scenario**, which requires a watched
+control RED and a 5/5 GREEN before joining the active regression suite.
 
 Add scenarios for each meaningful branch, boundary, output contract, and demonstrated failure mode.
 Complex skills may therefore have substantially larger suites than narrow skills.
@@ -255,8 +287,9 @@ Do not hide a 4/5 result, average it into a pass, or preserve a current failure 
 - Route correctly from the description.
 - State ownership and dependencies explicitly.
 - Remain safe to invoke directly with the complete bundle installed.
-- For the portable five, keep the core workflow free of repository, hook, sibling-skill, and software-development requirements.
-- Present suite integration as optional composition in portable skills.
+- Preserve each skill's intended domain and declared dependencies.
+- Keep the broad-domain companions usable in their genuine non-software domains.
+- Keep development companions and the integrated group grounded in software work.
 
 ### Suite integration
 
@@ -271,16 +304,14 @@ Do not hide a 4/5 result, average it into a pass, or preserve a current failure 
 1. Audit the validation framework and add the shared protocol plus active scenario catalogs; resolve only genuine inconsistencies through the isolated, user-approved pre-freeze RED/GREEN exceptions above.
 2. Establish complete Sol-high baseline results for all nine skills: 5/5 for preservation scenarios and watched REDs for approved target scenarios.
 3. Run every frozen preservation and target scenario against the control tree on Sol low and record comparative scores.
-4. Process one portable skill at a time: close any approved portability RED in its own behavioral slice, then perform readability cleanup against the expanded active suite.
+4. Clean the three broad-domain companions and two development companions one at a time against their domain-appropriate active suites.
 5. Clean `adversarial-review`, `adversarial-review-loop`, and `dispatching-development-subagents` one at a time, rerunning affected composition scenarios and preserving safe direct invocation.
 6. Clean `disciplined-development` last against the settled child contracts.
-7. Run final Sol-high direct invocation of all nine skills with the complete bundle, portable extraction of the five, and whole-suite composition scenarios.
+7. Run final cold Sol-high direct invocation of all nine skills in their intended domains with declared dependencies, plus whole-suite composition scenarios.
 8. Run the complete cleaned suite on Sol low and compare it with the control scores.
 9. Run the repository's automated hook, installer, and research suites.
 
 The parent comes last because its routing can only be reconciled cleanly after every child contract is settled.
-When a portable extraction control is already 5/5, close its task with a documentation commit but no separate skill-change PR boundary.
-
 For each skill cleanup:
 
 1. Show the draft to the user and wait for approval before applying it.
@@ -304,14 +335,15 @@ Parent orchestration changes rerun the parent suite and affected child-compositi
 - Every preservation scenario has a 5/5 Sol-high control baseline.
 - Every approved target scenario has a watched control RED and a 5/5 Sol-high GREEN before joining the active regression suite.
 - The control and cleaned skill trees have comparative Sol-low scores.
-- The portable five pass extraction tests without project siblings.
-- Any portability gap observed in the control is closed through a separate watched RED/GREEN slice before readability cleanup.
+- Every skill passes cold Sol-high coverage in its intended domain with declared dependencies.
+- The three broad-domain companions retain isolated non-software application coverage.
+- `LP-04` and `SSR-04` remain preserved historical evidence outside the active suite.
 - All nine skills are safe to invoke directly with the complete bundle installed.
 - Cleaned skills preserve their control behavior at 5/5 on Sol high.
 - Human and cold editorial review find each skill coherent, compact, and easy to read.
 - `disciplined-development` consistently routes the settled child contracts without duplicating them.
 - Validation records are replayable without becoming narrative or transcript archives.
 - Repository automated tests remain green.
-- Every PR boundary passes the orchestrator-owned Gate 5 review and smoke pass, with its external review logged as `gpt-5.6-sol` at high reasoning effort.
+- Every PR boundary passes the orchestrator-owned Gate 5 review and smoke pass, with its different-provider/model-family metadata and verdict logged under the shared protocol.
 - Every lower cleaned Sol-low score has a recorded user-approved disposition and any required reruns.
 - The completed plan and design are archived under `plans/completed/` and `plans/completed/specs/`.

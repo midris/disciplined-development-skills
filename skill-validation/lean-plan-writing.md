@@ -7,8 +7,8 @@ The shared all-nine discovery suite remains owned by
 `DISC-07` protects ordinary routed selection of `lean-plan-writing` with its parent,
 and `DISC-10` protects composition with `writing-explicit-rationale` for a plan
 deferral whose reasoning is non-durable; both are linked here rather than duplicated.
-The application paths protected here are `DISC-07` / `DISC-10` →
-`lean-plan-writing` → `LP-01`–`LP-08`.
+The active application paths protected here are `DISC-07` / `DISC-10` →
+`lean-plan-writing` → `LP-01`–`LP-03`, `LP-05`–`LP-08`.
 
 The five historical skill-owned families were classified before the active suite
 was defined:
@@ -21,13 +21,24 @@ was defined:
 | Oversized-spec merge boundary | Repair | Reconstruct the historical monolith RED as replayable `LP-07` |
 | Coupled-change merge boundary | Repair | Reconstruct the historical over-splitting check as replayable `LP-08` |
 
-No historical family met the common protocol unchanged: **Keep 0, Repair 4,
-Merge 1, Retire 0**.
-Replayable full-bundle direct invocation, the atomic parser/table scenario, the
-necessary-snippet branch, and portable non-software extraction were missing, so
-`LP-01`, `LP-02`, `LP-03`, and `LP-04` are **Add 4**.
+No historical family met the common protocol unchanged. After the scope repair the
+audit totals are **Keep 0, Repair 4, Merge 1, Retire 1, Add 3**.
+Replayable full-bundle direct invocation, the atomic parser/table scenario, and the
+necessary-snippet branch were missing, so `LP-01`, `LP-02`, and `LP-03` are Add.
+`LP-04` is Retire: its non-software publishing prompt tested domain breadth outside
+this development companion's authored contract.
 The Task 1 composite parser cell remains retired by its owning record; `LP-02`
 rehomes its lean-owned behavior without counting that retirement again.
+
+The seven active owned scenarios are `LP-01`–`LP-03` and `LP-05`–`LP-08`.
+They cover the intended software-development domain with declared
+`superpowers:writing-plans` composition. This is the smallest suite that preserves
+the distinct direct, prose-contract, edge-inventory, and merge-boundary promises.
+`LP-04` remains below as historical exploratory cross-domain evidence; it cannot
+drive a skill change or rerun.
+Scope-repair simplification removes only that row from active closure; the existing
+manifest, prompt, result, and history sections remain necessary to preserve the
+experiment transparently, so no replacement scenario or duplicate archive is added.
 
 ## Active scenario catalog
 
@@ -37,24 +48,29 @@ Common run metadata: original control commit
 five fresh processes per arm; maximum concurrency three; enforced read-only,
 no-agents transport; manual scoring; evaluator rubrics withheld.
 
-The owner and sole affected repository skill for `LP-01`–`LP-08` is
+The owner and sole affected repository skill for the seven active IDs is
 `lean-plan-writing`.
-Every scenario receives external `superpowers:writing-plans` 6.2.0 at SHA-256
+Every active scenario receives external `superpowers:writing-plans` 6.2.0 at SHA-256
 `72190c88b2b5a67a96b91d66aa72b9161913e10e8769da3f28a226f4cc7b99d0`.
 `LP-01` additionally receives the complete immutable nine-skill bundle;
-`LP-04` receives only the lean skill, its declared external dependency, and a
-non-software fixture.
+the retained `LP-04` evidence used only the lean skill, that external dependency,
+and a non-software fixture.
 
 | ID | Type / status | Protected promise and section | Supplied context | Exact prompt / fixture | Evaluator-withheld rubric | Rerun trigger |
 |---|---|---|---|---|---|---|
 | `LP-01` | Simple application + direct invocation + composition / preservation | Preserve the upstream plan scaffold, TDD sequence, concrete files, rigor, and commit cadence while lean owns only prose density; frontmatter and The rule | Complete nine-skill bundle + writing-plans + JSON CLI fixture | [LP-01](#lp-01--full-bundle-json-report-plan) | Upstream title, agentic-worker line, Goal, Architecture, Tech Stack, Global Constraints, concrete files, checkbox task, test-fail/prose-implementation/test-pass/commit order, complete text/JSON/error behavior, no bodies or placeholders, and one branch/PR | Frontmatter, upstream-override, prose-density, direct-invocation, upstream scaffold, TDD, or commit guidance changes |
 | `LP-02` | Non-trivial application + focused regression / target | Keep implementation code, test bodies, and copyable templates out of the plan while preserving implementability through prose and a complete tricky-case table; The rule and Test tables | Lean + writing-plans; fixed parser semantics embedded in prompt | [LP-02](#lp-02--parser-table-without-implementation) | No implementation code, test bodies, heredoc content, or other copyable templates in the plan; complete input/output table for blank, first separator, later equals, whitespace, empty sides, duplicates, and invalid/status-2 behavior; no illustrative snippet; concrete files, checkbox/TDD order, prose implementation, runnable verification, concise text commit message, and no placeholders. References to production code and tests being written during execution are allowed | Prose-only rule, test-table substitute, fixture guidance, illustrative-snippet exception, or commit guidance changes |
 | `LP-03` | Necessary-snippet branch + focused regression / target | Permit exactly one bounded illustrative snippet only when prose cannot specify an exact artifact shape; The rule and genuinely tricky implementation | Lean + writing-plans; exact four-line artifact contract embedded in prompt | [LP-03](#lp-03--necessary-four-line-artifact-shape) | Exactly one four-line artifact block in order; UTF-8/no-BOM/LF/final-LF byte contract; byte-for-byte verification; no implementation/test bodies or fixture-repeating verification command; no placeholders; one plan step | Five-line exception, illustrative-versus-implementable distinction, exact-artifact guidance, or copyable-template rule changes |
-| `LP-04` | Portability/extraction / watched target | Produce a domain-native publishing plan without importing software planning machinery; frontmatter portability claim and upstream composition | Lean + writing-plans + museum publishing fixture only | [LP-04](#lp-04--portable-museum-publishing-plan) | Status checkboxes; dependency/date order; all fixed roles, dates, approvals, exclusions, accessibility, and late-copy disposition; alt text before PDF; proof/director approval before print; no software files/tests/code/git/branch/PR assumptions; no blocker; plan rather than spec; prose only | Portability, external-dependency, plan/spec, upstream composition, or software-specific scaffold changes |
 | `LP-05` | Non-trivial application + focused regression / preservation | Name and disposition loud absent, malformed, out-of-scale, and invariant cases without embedding bodies; Per-artifact Plans and Test tables | Lean + writing-plans + CSV import fixture | [LP-05](#lp-05--loud-csv-edge-inventory) | Explicit absent/empty, malformed, two-million/outscale, uniqueness, atomic visibility, and actionable-error dispositions; behavioral tests and runnable verification, concrete files, prose implementation, no bodies or placeholders. Upstream TDD ordering is scored once in `LP-01`, not duplicated here | Unexercised-case, test-table, prose-density, scale, or invariant guidance changes |
 | `LP-06` | Non-trivial application + focused regression / preservation | Name and disposition quiet failure, scale, overlap, idempotency, quota, and timezone cases; Per-artifact Plans and Test tables | Lean + writing-plans + nightly digest fixture | [LP-06](#lp-06--quiet-digest-edge-inventory) | Explicit no-event, malformed-event, millions/100-per-minute, idempotency/overlap, per-account isolation, and account-local-day dispositions; behavioral tests, concrete files, TDD order, prose implementation, no bodies or placeholders | Unexercised-case, test-table, prose-density, quiet-invariant, concurrency, or rate-limit guidance changes |
 | `LP-07` | Merge-boundary focused regression / preservation | Split oversized independently deployable work at qualitative review boundaries; Merge boundaries | Lean + writing-plans + oversized program fixture | [LP-07](#lp-07--oversized-program-boundary) | Reject monolith; four sequential PRs or at least one per subsystem; every boundary green/reviewable with named verification; preserve dependency order; add no numeric heuristic; return only boundary section | Merge-boundary, one-review-pass, dependency-order, or numeric-threshold guidance changes |
 | `LP-08` | Merge-boundary focused regression / preservation | Keep a small genuinely coupled change in one atomic PR; Merge boundaries | Lean + writing-plans + coupled rename fixture | [LP-08](#lp-08--coupled-change-boundary) | Exactly one branch/PR for all three files; reject per-file splitting; cite small, coupled, intermediate-red/inconsistent facts; no compatibility or staged rollout; return only boundary section and answer | Merge-boundary, coupled-change, independent-green, or atomicity guidance changes |
+
+### Retired exploratory cross-domain scenario
+
+| ID | Historical classification | Preserved purpose | Supplied context | Exact prompt / fixture | Evaluator-withheld rubric | Disposition |
+|---|---|---|---|---|---|---|
+| `LP-04` | Exploratory cross-domain / retired | Test whether a development-plan companion and its declared dependency produced a museum publishing plan without software machinery | Lean + writing-plans + museum publishing fixture only | [LP-04](#lp-04--exploratory-museum-publishing-plan) | Status checkboxes; dependency/date order; all fixed roles, dates, approvals, exclusions, accessibility, and late-copy disposition; alt text before PDF; proof/director approval before print; no software files/tests/code/git/branch/PR assumptions; no blocker; plan rather than spec; prose only | Preserve prompt, fixture, rubric, manifests, hashes, and outcomes; exclude from active closure and never use it to drive a skill edit or rerun |
 
 ### Immutable bundle manifests
 
@@ -290,7 +306,7 @@ The plan step must state how the artifact will be verified byte-for-byte.
 Return only the plan step.
 ```
 
-### LP-04 — portable museum publishing plan
+### LP-04 — exploratory museum publishing plan
 
 ```text
 You are a fresh, read-only skill evaluator.
@@ -350,14 +366,14 @@ Write the merge-boundary section for the implementation plan and answer the team
 Return only that section.
 ```
 
-## Sol-high results
+## Sol-high results and retired evidence
 
 | ID | Original control / content-manifest SHA-256 | Sol-high control | Exact control misses | Target/current GREEN | Exact current misses | Cleaned Sol-high | Sol-low control | Cleaned Sol-low | Earlier-arm run date | Earlier-arm infrastructure errors |
 |---|---|---|---|---|---|---|---|---|---|---:|
 | `LP-01` | `4296647f0dff48a9e77b979ef07e813bf1f66db2` / `6a2a167736cd009fa9cd94fe9e9e583824395f52654b16063a0d32223e6cca22` | **5/5 PASS** | None | **4/5 preservation** on Task 6 bundle `eb5fe2d…` (`lean` `7635112…`; `writing-explicit-rationale` `4035ecd…`) | R3 committed failing tests before implementation instead of test-fail → implement → pass → commit; unrelated to the pairing-only lean edit | Task 19 | [Task 11 detail](#task-11-sol-low-control-results-2026-08-07) | Task 27 | 2026-08-03 | 1 interrupted original-control attempt before the accepted R3 retry; 0 in Task 6 rerun |
 | `LP-02` | `4296647f0dff48a9e77b979ef07e813bf1f66db2` / `1c9ee30df820fea591aba7d1a94e3cb57f27c2ff0a4e9b045661fe49911f19d6` | **3/5 watched RED** | R2 and R4 embedded heredocs | **5/5 PASS** on `4c659b7…` | None | Task 19 | [Task 11 detail](#task-11-sol-low-control-results-2026-08-07) | Task 27 | 2026-08-02 | 0 |
 | `LP-03` | `4296647f0dff48a9e77b979ef07e813bf1f66db2` / `1c9ee30df820fea591aba7d1a94e3cb57f27c2ff0a4e9b045661fe49911f19d6` | **1/5 watched RED** | R2 repeated the fixture in a shell command; R3–R5 repeated it as verification literals | **5/5 PASS** on `4c659b7…` | None | Task 19 | [Task 11 detail](#task-11-sol-low-control-results-2026-08-07) | Task 27 | 2026-08-02 | 0 |
-| `LP-04` | `4296647f0dff48a9e77b979ef07e813bf1f66db2` / `c4aae591a2a3b2b6c2d40ace3e97b19ff37f998c5970dead0366e4f025a72787` | **4/5 watched RED** | R2 imported branch/merge machinery | **4/5 watched RED** on `b32e69f…` | R1 imported repository, branch, merge, and commit machinery | Task 14 target | [Task 11 detail](#task-11-sol-low-control-results-2026-08-07) | Task 27 | 2026-08-02 | 0 |
+| `LP-04` (retired) | `4296647f0dff48a9e77b979ef07e813bf1f66db2` / `c4aae591a2a3b2b6c2d40ace3e97b19ff37f998c5970dead0366e4f025a72787` | **4/5 watched RED at freeze** | R2 imported branch/merge machinery | **4/5 watched RED** on `b32e69f…` | R1 imported repository, branch, merge, and commit machinery | Retired; no Task 14 target | [Task 11 detail](#task-11-sol-low-control-results-2026-08-07) | Not in Task 27 | 2026-08-02 | 0 |
 | `LP-05` | `4296647f0dff48a9e77b979ef07e813bf1f66db2` / `244abb67faace119794d787ea614370d27e3c9d88baeab7df66d37d6c2f65342` | **5/5 PASS** | None | **5/5 PASS** on `4c659b7…` | None | Task 19 | [Task 11 detail](#task-11-sol-low-control-results-2026-08-07) | Task 27 | 2026-08-02 | 0 |
 | `LP-06` | `4296647f0dff48a9e77b979ef07e813bf1f66db2` / `0539594794409943fa476b6f54707c51fab74f27df4fec465418401497e3b864` | **5/5 PASS** | None | **5/5 PASS** on `4c659b7…` | None | Task 19 | [Task 11 detail](#task-11-sol-low-control-results-2026-08-07) | Task 27 | 2026-08-02 | 0 |
 | `LP-07` | `4296647f0dff48a9e77b979ef07e813bf1f66db2` / `a628b3ca64de7d458f160cf3583209cfe53507e83ee18c617da9795af585c87c` | **5/5 PASS** | None | **5/5 PASS** on `b32e69f…` | None | Task 19 | [Task 11 detail](#task-11-sol-low-control-results-2026-08-07) | Task 27 | 2026-08-02 | 0 |
@@ -375,13 +391,18 @@ Each completed response counts; observed REDs are retained as results, not treat
 | `LP-01` | preservation | P | P | F | F | P | **3/5** | R3-R4 alter the required upstream title. R5 covers the complete text/JSON/error contract; orchestrator overruled that scorer false negative. |
 | `LP-02` | target | F | P | F | F | F | **1/5** | R1/R3/R4/R5 include prohibited copyable heredoc or fixture content; R2 keeps implementation details in prose and covers the full behavior table. |
 | `LP-03` | target | P | F | P | P | F | **3/5** | R2/R5 repeat the exact fixture in a copyable `printf` verification command; the others use one artifact block with prose/binary comparison. |
-| `LP-04` | target | P | P | P | P | P | **5/5** | All fixed roles, dates, gates, exclusions, accessibility sequence, and dependencies are executable and free of software-delivery assumptions. |
+| `LP-04` | target at freeze; now retired | P | P | P | P | P | **5/5** | Historical exploratory cross-domain result: all fixed roles, dates, gates, exclusions, accessibility sequence, and dependencies are executable and free of software-delivery assumptions. |
 | `LP-05` | preservation | P | F | F | F | F | **1/5** | Only R1 covers every explicit failure/scale/atomicity/reporting disposition with runnable verification and prose implementation. |
 | `LP-06` | preservation | P | F | P | P | P | **4/5** | R2 adds rate-limit/isolation tests and then implements without an intervening explicit failing-test run; the others preserve TDD ordering. |
 | `LP-07` | preservation | F | F | F | F | F | **0/5** | Every response carries the supplied commit-count/diff-size heuristic into the boundary despite the rubric's no-numeric-heuristic requirement. |
 | `LP-08` | preservation | F | P | F | P | P | **3/5** | R1/R3 omit the small-change fact; R2/R4/R5 cite small scope, coupling, and inconsistent/red intermediate states while choosing one PR. |
 
 Owned Task 11 Sol-low aggregate: **20/40**.
+
+The aggregate above is the frozen Task 11 eight-row result and is not recomputed.
+Future active closure uses the seven active owned scenarios and excludes `LP-04`.
+Its exact prompt, fixture, rubric, manifests, hashes, and raw Sol-high/Sol-low outcomes
+remain preserved in this record.
 
 The normalized per-repetition code `P` means the response passed its complete
 scenario rubric; `F` means at least one observable criterion was missed.
@@ -447,8 +468,9 @@ and only genuinely necessary bounded snippets, without copying the same literal
 snippet elsewhere in the plan. It also requires a concise commit message as text
 without a shell command.
 The user manually approved every skill-prose revision; no hook changed.
-`LP-04` is deliberately not claimed as fixed and remains the portability target for
-Task 14.
+`LP-04` was deliberately not claimed as fixed. Task 14 retires it because the
+non-software prompt exceeds this development companion's authored domain; it cannot
+drive a skill edit or rerun.
 A fresh final Sol-high cold review independently confirmed all five affected
 scenarios at 5/5, recomputed the recorded hashes, and approved the skill and record.
 

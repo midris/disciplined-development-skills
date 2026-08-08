@@ -23,6 +23,10 @@ Retire 1**.
 Safe full-bundle direct invocation and replayable cross-domain verification were
 missing, so `DR-01` and `DR-03` are **Add 2**.
 
+Scope-repair simplification: only `DR-02`'s category and conclusion change.
+Its existing definition, evidence, and record structure already provide the necessary
+broad-domain coverage, so no new scenario or duplicate section is warranted.
+
 The historical B17 label “CLOSED, not shipped” applies to the broader behavior
 change, not every tested word.
 Commit `2be8db478b5f0134fa77da37e9281bc9cca58eb5` later shipped the minimal
@@ -48,7 +52,7 @@ No external skill dependency or live web access is supplied.
 | ID | Type / status | Protected promise and section | Supplied context | Exact prompt | Evaluator-withheld rubric | Rerun trigger |
 |---|---|---|---|---|---|---|
 | `DR-01` | Simple application + direct invocation / preservation | Prefer implementation over stale project docs; acquire and verify a peer-fed specific before a load-bearing README statement; full skill, Project, Acquire from source, Verify before citing | Complete nine-skill control + project fixture | [DR-01](#dr-01--bundled-project-verification) | State 45 days, reject or omit 30, cite `project/app/retention.py`, obey the two-line shape, and add no unsupported claim, blocker, or narration | Project hierarchy, peer-claim, load-bearing-destination, direct-invocation, or citation contract changes |
-| `DR-02` | Non-trivial application + portability/extraction / preservation | Use later controlling first-party authority, disconfirm a supplied premise, and retain the portable core in museum procurement research; External/web, Acquire from source, recency + applicability, Verify before citing | Single-skill control + procurement fixture | [DR-02](#dr-02--portable-museum-procurement-deadline) | Explicitly disconfirm September 15; state September 22, 2026 at 5:00 p.m. ET; identify and cite Official Addendum 2 as controlling; obey the two-line shape; do not ground in the newsletter or superseded RFP; add no unsupported software/repository assumption, blocker, or narration | Authority ranking, recency/applicability, peer-claim, portability, extraction, or citation contract changes |
+| `DR-02` | Non-trivial + broad-domain isolated application / preservation | Use later controlling first-party authority and disconfirm a supplied premise in museum procurement research; External/web, Acquire from source, recency + applicability, Verify before citing | Single-skill control + procurement fixture | [DR-02](#dr-02--isolated-museum-procurement-deadline) | Explicitly disconfirm September 15; state September 22, 2026 at 5:00 p.m. ET; identify and cite Official Addendum 2 as controlling; obey the two-line shape; do not ground in the newsletter or superseded RFP; add no unsupported software/repository assumption, blocker, or narration | Authority ranking, recency/applicability, peer-claim, broad-domain scope, isolated application, or citation contract changes |
 | `DR-03` | Non-trivial application + focused regression / preservation | Verify both sides of a cross-domain claim and separate project state from authoritative upstream state as of a fixed date; Cross-domain claims, External/web, recency + applicability, Verify before citing | Single-skill control + project/upstream fixture | [DR-03](#dr-03--cross-domain-version-verification) | State project version 3.4.2 and supplied upstream stable 4.1.0, explicitly correct the claim that the project already uses 4.1.0, cite `project/package.json` and current official release notes in the required order, ignore the stale blog, and add no unsupported claim, blocker, or narration | Cross-domain, local-versus-upstream, recency/version, load-bearing-destination, or citation contract changes |
 
 ### Immutable bundle manifests
@@ -195,7 +199,7 @@ PASS requires exactly two lines that state archives are retained for 45 days, ci
 `project/app/retention.py`, and contain no unsupported claim, blocker, preface,
 postscript, or procedural narration.
 
-### DR-02 — portable museum procurement deadline
+### DR-02 — isolated museum procurement deadline
 
 ```text
 You are a fresh, read-only skill evaluator.
@@ -238,7 +242,7 @@ preface, postscript, or procedural narration.
 | ID | Control commit / content-manifest SHA-256 | Sol-high control | Exact misses | Target GREEN | Cleaned Sol-high | Sol-low control | Cleaned Sol-low | Earlier-arm run date | Earlier-arm infrastructure errors |
 |---|---|---|---|---|---|---|---|---|---:|
 | `DR-01` | `4296647f0dff48a9e77b979ef07e813bf1f66db2` / `23376b6351b365f761bfceb2f9ebb7f29f1ed5e3673715f0687e79f603d38dd0` | **5/5 PASS** | None | Not applicable | Task 26 | [Task 11 detail](#task-11-sol-low-control-results-2026-08-07) | Task 27 | 2026-08-02 | 0 |
-| `DR-02` | `4296647f0dff48a9e77b979ef07e813bf1f66db2` / `1f39f8208cb5f8564521b145065b2c885c6bdbec4162e012c519952ea454f2d0` | **5/5 PASS** | None | Not applicable; portability classified as preservation | Task 26 | [Task 11 detail](#task-11-sol-low-control-results-2026-08-07) | Task 27 | 2026-08-02 | 0 |
+| `DR-02` | `4296647f0dff48a9e77b979ef07e813bf1f66db2` / `1f39f8208cb5f8564521b145065b2c885c6bdbec4162e012c519952ea454f2d0` | **5/5 PASS** | None | Not applicable; isolated broad-domain preservation | Task 26 | [Task 11 detail](#task-11-sol-low-control-results-2026-08-07) | Task 27 | 2026-08-02 | 0 |
 | `DR-03` | `4296647f0dff48a9e77b979ef07e813bf1f66db2` / `40c835e6440619819a34dc584a3f23b615ff6e69a8996172e32162193ada682c` | **5/5 PASS** | None | Not applicable | Task 26 | [Task 11 detail](#task-11-sol-low-control-results-2026-08-07) | Task 27 | 2026-08-02 | 0 |
 
 Every completed Sol-high control response passed every observable criterion.
@@ -251,9 +255,10 @@ scenario rubric, including artifact shape and source order.
 | `DR-02` | P | P | P | P | P |
 | `DR-03` | P | P | P | P | P |
 
-**Task 13 disposition (2026-08-07):** The `DR-02` row is the canonical portability
-evidence. Its preservation classification requires no portability target, skill edit,
-new control bundle, or rerun.
+**Task 13 scope disposition (2026-08-07):** `DR-02` remains valid isolated
+broad-domain application evidence. Cross-model portability is established by the
+complete cold Sol-high in-domain suite, not by treating this one procurement row as
+a second domain gate. No skill edit, new control bundle, or rerun is required.
 
 ## Task 11 Sol-low control results (2026-08-07)
 

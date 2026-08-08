@@ -6,8 +6,8 @@ The shared all-nine discovery suite remains owned by
 [skill-discovery.md](skill-discovery.md#active-catalog-definitions).
 `DISC-08` is the positive route for `sweeping-stale-references` and passed 5/5 on
 the immutable original control and 5/5 on the current parent-routing target.
-The application path protected here is `DISC-08` →
-`sweeping-stale-references` → `SSR-01`–`SSR-05`.
+The active application path protected here is `DISC-08` →
+`sweeping-stale-references` → `SSR-01`–`SSR-03`, `SSR-05`.
 
 The four historical scenario families were classified before defining the active
 skill-owned suite:
@@ -19,17 +19,23 @@ skill-owned suite:
 | Reviewer reports one stale rename | Repair | Reconstruct its broad search, triage, reconciliation, and artifact promises as deterministic five-repetition `SSR-02`; the original live-skill result was only 1/1 |
 | Large-sweep grouping | Repair | Reconstruct its scale and grouping promises as deterministic five-repetition `SSR-03`; the historical GREEN result was only 3/3 and lacked a replayable exact fixture |
 
-No prior skill-owned scenario met the common protocol unchanged: **Keep 0,
-Repair 2, Merge 0, Retire 0**.
-Safe simple direct invocation, portable non-software extraction, and the required
-negative form were missing, so `SSR-01`, `SSR-04`, and `SSR-05` are **Add 3**.
+No prior skill-owned scenario met the common protocol unchanged. After the scope
+repair the audit totals are **Keep 0, Repair 2, Merge 0, Retire 1, Add 2**.
+Safe simple direct invocation and the required negative form were missing, so
+`SSR-01` and `SSR-05` are Add. `SSR-04` is Retire: its non-software policy prompt
+tested domain breadth outside this development companion's authored contract.
 
-The five owned scenarios are the smallest suite that keeps simple use,
-reviewer-pressure completeness, scale grouping, portability, and the negative branch
-independently scorable.
-One unified Search → Triage → Reconcile contract serves `SSR-01`, `SSR-02`, and
-`SSR-04`; `SSR-03` and `SSR-05` remain separate because grouped positive evidence and
-the `n/a` branch are mutually exclusive output contracts.
+The four active owned scenarios are the smallest suite that keeps simple use,
+reviewer-pressure completeness, scale grouping, and the negative branch independently
+scorable in the intended development domain.
+One unified Search → Triage → Reconcile contract serves `SSR-01` and `SSR-02`;
+`SSR-03` and `SSR-05` remain separate because grouped positive evidence and the
+`n/a` branch are mutually exclusive output contracts.
+`SSR-04` remains below as historical exploratory cross-domain evidence; it cannot
+drive a skill change or rerun.
+Scope-repair simplification removes only that row from active closure; the existing
+manifest, prompt, result, and history sections remain necessary to preserve the
+experiment transparently, so no replacement scenario or duplicate archive is added.
 The section-by-section simplification questions are:
 
 | Skill section | Would a simpler approach preserve the necessary intent and effectiveness? | Smallest evidence mapping |
@@ -38,13 +44,13 @@ The section-by-section simplification questions are:
 | Role / Owns / Does not own | Yes; shared routing plus one direct invocation protects the boundary without restating sibling procedures | `DISC-08`, `SSR-01` |
 | Overview | Yes; the reviewer-one-hit case protects the loop-of-fixes warning and one coherent reconciliation | `SSR-02` |
 | Quick reference | Yes; one ordinary positive case and one negative case cover its distinct branches | `SSR-01`, `SSR-05` |
-| Procedure | Yes; one unified Search → Triage → Reconcile contract serves simple, pressured, and portable contexts | `SSR-01`, `SSR-02`, `SSR-04` |
+| Procedure | Yes; one unified Search → Triage → Reconcile contract serves simple and pressured development contexts | `SSR-01`, `SSR-02` |
 | What counts as a reference | Yes; one deterministic broad inventory covers scope, vendor/archive triage, and immutable-history exclusion | `SSR-02` |
 | Output artifact | Only partly; ordinary evidence can share one case, but scale grouping and `n/a` are mutually exclusive branches | `SSR-01`, `SSR-03`, `SSR-05` |
 | Worked example | Yes; it introduces no promise beyond the procedure and artifact, so it needs no dedicated scenario | `SSR-01`–`SSR-03` |
 | Rationalizations | Yes; one reviewer/IDE pressure case and one small-change case cover the distinct excuses without one scenario per sentence | `SSR-02`, `SSR-05` |
 | Pairing with explicit rationale | No separate composition claim is needed; stale rationale text is an ordinary mutable reference owned by this skill | `SSR-01` |
-| Whole skill | No simpler suite below shared discovery plus five owned scenarios preserves simple use, reviewer pressure, scale, portability, the negative branch, and stale-rationale sweeping as independent outcomes | `DISC-08`, `SSR-01`–`SSR-05` |
+| Whole skill | No simpler active suite below shared discovery plus four owned scenarios preserves simple use, reviewer pressure, scale, the negative branch, and stale-rationale sweeping as independent outcomes | `DISC-08`, `SSR-01`–`SSR-03`, `SSR-05` |
 
 ## Active scenario catalog
 
@@ -54,9 +60,9 @@ Common run metadata: control commit
 scenario; maximum concurrency three; enforced read-only, no-agents transport;
 manual scoring; rubric withheld.
 `SSR-02`–`SSR-05` ran on 2026-08-02; repaired `SSR-01` ran on 2026-08-03.
-All five scenarios had zero infrastructure errors.
+All five recorded scenarios, including retired `SSR-04`, had zero infrastructure errors.
 
-The owner and sole affected repository skill for `SSR-01`–`SSR-05` is
+The owner and sole affected repository skill for the four active IDs is
 `sweeping-stale-references`.
 `SSR-01` receives the immutable complete nine-skill control plus its project fixture.
 `SSR-02`–`SSR-05` receive only the immutable control
@@ -68,8 +74,13 @@ No external skill dependency or live web access is supplied.
 | `SSR-01` | Simple application + direct invocation / preservation | An uncomplicated load-bearing rename uses literal and obvious-synonym search, sweeps an attached rationale comment, follows Search → Triage → Reconcile, produces one coherent update, and records ordinary evidence before verification; Role, Overview, Quick reference, Procedure, Output artifact | Complete nine-skill control + simple project fixture | [SSR-01](#ssr-01--simple-direct-rename) | Inspect both project files; rename the exact form to `SESSION_TTL_MINUTES` and both prose references to `session TTL`, including the rationale comment; account for three updates in one `References swept:` section; preserve the comment's causal and accepted-tradeoff content; place `Verification:` after the sweep; add no unrelated skill procedure, unsupported match, blocker, or narration | Trigger, direct invocation, ownership, literal/synonym search, rationale-comment sweep, three-step procedure, reconciliation, or ordinary artifact placement changes |
 | `SSR-02` | Non-trivial application + focused regression / preservation | One reviewer hit is a sample; IDE rename is insufficient; broad file-category search, three classifications, vendor/archive treatment, immutable-history exclusion, complete accounting, and one-commit reconciliation survive pressure; Overview, Procedure, What counts as a reference, Output artifact, Rationalizations | Single-skill control + deterministic match inventory | [SSR-02](#ssr-02--reviewer-one-hit-completeness) | Account for all 13 mutable-tree matches: 10 update, 1 intentionally stale with reason, and 2 false positives with reasons; cover code, docs/comments, tests/fixtures, config, scripts, CI, and build; exclude three immutable-history search hits rather than classifying them; treat the reviewer hit as a sample and reject IDE sufficiency; reconcile the 13 outcomes; put `References swept:` before `Verification:`; add no unsupported match, blocker, or narration | Reviewer-one-hit, literal/synonym scope, file-category scope, triage labels, vendor/archive/history scope, reconciliation, or artifact changes |
 | `SSR-03` | Non-trivial application + focused regression / preservation | Large sweeps group only by path and outcome, retain exact locations and counts, reconcile every subtotal, group before taking the body-size exception, and verify last; Output artifact | Single-skill control + exact 126-match inventory | [SSR-03](#ssr-03--126-match-grouped-sweep) | Produce exactly 10 path/outcome entries; preserve every supplied line range and path count; classify 80 updates, 40 intentionally stale, and 6 false positives; reconcile each class and 126 total; do not group across paths or outcomes; state that grouping was applied before the correctness-evidence size exception; place `Verification:` after the sweep | Grouping predicate, precise-location rule, count reconciliation, body-size exception, or placement changes |
-| `SSR-04` | Portability/extraction / preservation | The portable core searches literal and synonym forms across non-software handbooks and forms, triages every occurrence, and reconciles one coordinated publication batch without depending on repository or commit evidence; Role, Overview, Procedure, What counts as a reference | Single-skill control + policy-publication inventory | [SSR-04](#ssr-04--portable-policy-term-rename) | Return the requested publication ledger; account for 8 managed-document occurrences as 6 updates, 1 intentionally stale with reason, and 1 false positive with reason; include exact and synonym forms across both handbooks and forms; exclude the supplied email and meeting-chat hits as unmanaged history; reconcile 6 + 1 + 1 = 8 and one coordinated publication batch; incidental software vocabulary neither passes nor fails, but no repository or Git step may replace a required portable element | Portability, extraction, literal/synonym search, triage, reconciliation, or supplied-context boundary changes |
 | `SSR-05` | Focused regression / preservation | A deterministic single-file change with no sibling matches uses the required `References swept: n/a — <reason>` negative form before verification; Quick reference, Output artifact, Rationalizations | Single-skill control + zero-sibling search report | [SSR-05](#ssr-05--required-negative-form) | Given the fixture-proven complete search with no sibling match, emit the exact line `References swept: n/a — change affects only this file.` and put `Verification:` after it; do not invent positive entries, extra matches, a blocker, or procedural narration | Single-file/no-sweep branch, required negative form, small-change rationalization, or placement changes |
+
+### Retired exploratory cross-domain scenario
+
+| ID | Historical classification | Preserved purpose | Supplied context | Exact prompt | Evaluator-withheld rubric | Disposition |
+|---|---|---|---|---|---|---|
+| `SSR-04` | Exploratory cross-domain / retired | Test Search → Triage → Reconcile on non-software handbooks and forms without repository or commit evidence | Single-skill control + policy-publication inventory | [SSR-04](#ssr-04--exploratory-policy-term-rename) | Return the requested publication ledger; account for 8 managed-document occurrences as 6 updates, 1 intentionally stale with reason, and 1 false positive with reason; include exact and synonym forms across both handbooks and forms; exclude the supplied email and meeting-chat hits as unmanaged history; reconcile 6 + 1 + 1 = 8 and one coordinated publication batch; incidental software vocabulary neither passes nor fails, but no repository or Git step may replace a required portable element | Preserve prompt, fixture, rubric, manifests, hashes, and outcomes; exclude from active closure and never use it to drive a skill edit or rerun |
 
 ### Immutable bundle manifests
 
@@ -259,7 +270,7 @@ Return only the grouped `References swept:` artifact for all 126 matches, follow
 State how the normal body-size preference applies after grouping.
 ```
 
-### SSR-04 — portable policy term rename
+### SSR-04 — exploratory policy term rename
 
 ```text
 You are a fresh, read-only skill evaluator.
@@ -282,14 +293,14 @@ Read `context/single-file-search.md`.
 Return only the commit-body evidence for this correction, ending with `Verification:`.
 ```
 
-## Sol-high results
+## Sol-high results and retired evidence
 
 | ID | Original control / content-manifest SHA-256 | Sol-high control | Exact control misses | Target/current GREEN | Cleaned Sol-high | Sol-low control | Cleaned Sol-low | Earlier-arm run date | Earlier-arm infrastructure errors |
 |---|---|---|---|---|---|---|---|---|---:|
 | `SSR-01` | `4296647f0dff48a9e77b979ef07e813bf1f66db2` / `4cfca7137eba5c13245644b4742244b47c610196bad1176ab9c9e19f25fed3aa` | **5/5 PASS** | None; all five accounted for three updates and preserved the rationale comment | Not applicable | Task 20 | [Task 11 detail](#task-11-sol-low-control-results-2026-08-07) | Task 27 | 2026-08-03 | 0 |
 | `SSR-02` | `4296647f0dff48a9e77b979ef07e813bf1f66db2` / `6a52d00c04dbd880f32b5fea74bcfad4f7756f3d10ac4cd6aa2dbe54d05ac970` | **5/5 PASS** | None | Not applicable | Task 20 | [Task 11 detail](#task-11-sol-low-control-results-2026-08-07) | Task 27 | 2026-08-02 | 0 |
 | `SSR-03` | `4296647f0dff48a9e77b979ef07e813bf1f66db2` / `8f010cca9b606f7f2e5367abbd87202bcf7cfa405924f855d859d6fc1a0f08d1` | **5/5 PASS** | None | Not applicable | Task 20 | [Task 11 detail](#task-11-sol-low-control-results-2026-08-07) | Task 27 | 2026-08-02 | 0 |
-| `SSR-04` | `4296647f0dff48a9e77b979ef07e813bf1f66db2` / `80ad28aebf4d7b948c65cf1a2f015c4daedc1c96f92c8e7d4a6a6c1cda486e1d` | **5/5 PASS** | None; portability is preservation coverage | Not applicable | Task 20 | [Task 11 detail](#task-11-sol-low-control-results-2026-08-07) | Task 27 | 2026-08-02 | 0 |
+| `SSR-04` (retired) | `4296647f0dff48a9e77b979ef07e813bf1f66db2` / `80ad28aebf4d7b948c65cf1a2f015c4daedc1c96f92c8e7d4a6a6c1cda486e1d` | **5/5 PASS** | None; historical exploratory result | Not applicable | Retired; not in Task 20 | [Task 11 detail](#task-11-sol-low-control-results-2026-08-07) | Not in Task 27 | 2026-08-02 | 0 |
 | `SSR-05` | `4296647f0dff48a9e77b979ef07e813bf1f66db2` / `d0e2421a1162fd2357fdb8314b88843a19fa5bf4509572781957cd11ad9d85de` | **5/5 PASS** | None | Not applicable | Task 20 | [Task 11 detail](#task-11-sol-low-control-results-2026-08-07) | Task 27 | 2026-08-02 | 0 |
 
 | ID | R1 | R2 | R3 | R4 | R5 |
@@ -312,10 +323,15 @@ Each completed response counts; observed REDs are retained as results, not treat
 | `SSR-01` | preservation | F | F | F | F | F | **0/5** | No response preserves both the comment's causal fact (partner rejects longer sessions) and accepted trade-off (more frequent refreshes); R3's generic compatibility phrase is insufficient, overruling the scorer. |
 | `SSR-02` | preservation | P | P | F | F | F | **2/5** | R1-R2 reject IDE sufficiency and treat the reviewer hit as non-exhaustive while reconciling all mutable matches; R3-R5 omit one or both pressure dispositions. |
 | `SSR-03` | preservation | F | F | F | F | P | **1/5** | Only R5 states that complete correctness evidence takes precedence after grouping if the body-size preference is exceeded. |
-| `SSR-04` | preservation | P | P | P | P | P | **5/5** | Every ledger reconciles the eight managed occurrences, excludes unmanaged history, covers synonym forms, and publishes one coordinated batch. |
+| `SSR-04` | preservation at freeze; now retired | P | P | P | P | P | **5/5** | Historical exploratory cross-domain result: every ledger reconciles the eight managed occurrences, excludes unmanaged history, covers synonym forms, and publishes one coordinated batch. |
 | `SSR-05` | preservation | P | F | P | P | F | **3/5** | R2/R5 add unrequested procedural narration before the exact required line; R1/R3/R4 match the requested artifact. |
 
 Owned Task 11 Sol-low aggregate: **11/25**.
+
+Task 15 retires `SSR-04` from active closure because its non-software prompt exceeds
+this development companion's authored domain. Its prompt, fixture, rubric, manifests,
+hashes, and raw Sol-high/Sol-low outcomes remain preserved above; the result cannot
+drive a skill edit or rerun.
 
 The prior `SSR-01` result and its earlier repair history below are preserved as
 superseded evidence after Task 6 expanded the fixture with one rationale comment.
@@ -371,7 +387,7 @@ exceptions or evaluator-specific skill doctrine.
 The repaired arm then passed 5/5; a separate cold scorer applied every withheld
 criterion to all five artifacts and returned `SSR01-FINAL-SCORE: PASS`.
 
-The accepted suite contains 25 scored Sol-high processes with no behavioral miss
+The original five-scenario suite contained 25 scored Sol-high processes with no behavioral miss
 and no accepted-run infrastructure error.
 Every accepted response was manually scored against every evaluator-withheld
 criterion.

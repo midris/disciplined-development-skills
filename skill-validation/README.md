@@ -8,9 +8,21 @@ Individual records own their active scenario catalogs, result summaries, and pre
 - The orchestrator owns validation-bearing tasks, dispatch, result inspection, manual scoring, scorer and reviewer dispatch, user approval gates, commits, and Gate 5.
 - Evaluators, scorers, and reviewers are fresh, bounded, read-only processes with nested-agent tools disabled.
 - Skill authoring, validation design, behavioral evaluation, scoring, and cold review use `gpt-5.6-sol` at high reasoning effort.
+- This cold Sol-high configuration is the non-Claude portability gate for every skill within its intended domain and with declared dependencies available.
 - Sol low is limited to Tasks 11 and 27 and post-freeze control backfills.
+- Sol low measures effort robustness; it is not another portability domain or model-family requirement.
 - Every behavioral scenario uses five fresh evaluator processes, with at most three running concurrently.
 - `research/replay_codex.py` reviews historical diffs and writes research results; it is not a skill-scenario runner.
+
+The scope categories are:
+
+- broad-domain companions: `concise-writing`, `disciplined-research`, and `writing-explicit-rationale`;
+- development companions: `lean-plan-writing` and `sweeping-stale-references`;
+- integrated development group: `disciplined-development`, `adversarial-review`, `adversarial-review-loop`, and `dispatching-development-subagents`.
+
+Domain breadth, standalone packaging, and cross-model portability are separate axes.
+Portability does not broaden a skill's authored task domain or remove a declared
+dependency.
 
 ## Audit index
 
@@ -21,13 +33,13 @@ An em dash means the owning audit task has not classified the scenarios yet.
 |---|---|---|---|---:|---|---:|---:|---:|---:|---:|
 | [adversarial-review](adversarial-review.md) | Skill | `adversarial-review` | `adversarial-review`, `concise-writing`, `lean-plan-writing`, `sweeping-stale-references`, `disciplined-development` | 7 | Audit complete; 13 current Sol-high scenarios at 5/5; 4 watched target REDs GREEN; angle ablation 0/5 | 0 | 7 | 2 | 1 | 7 |
 | [adversarial-review-loop](adversarial-review-loop.md) | Skill | `adversarial-review-loop` | `adversarial-review-loop`, `disciplined-development`; shared routing boundaries | 8 | Audit complete; 15 owned Sol-high controls at 5/5; complete active closure 135/135 | 0 | 14 | 3 | 3 | 1 |
-| [concise-writing](concise-writing.md) | Skill | `concise-writing` | `concise-writing`, `adversarial-review-loop`; external authoring dependencies | 2 | Audited; Task 2A verified; Task 12 portability preservation confirmed | 0 | 2 | 4 | 2 | 8 |
+| [concise-writing](concise-writing.md) | Skill | `concise-writing` | `concise-writing`, `adversarial-review-loop`; external authoring dependencies | 2 | Audited; Task 2A verified; `CW-08` broad-domain coverage confirmed | 0 | 2 | 4 | 2 | 8 |
 | [disciplined-development](disciplined-development.md) | Skill | `disciplined-development` | all nine skills through orchestration | 10 | Audit complete; owned current 15/15; inherited `DSD-02` current rerun 5/5; current closure 85/85 | 0 | 2 | 0 | 1 | 1 |
-| [disciplined-research](disciplined-research.md) | Skill | `disciplined-research` | `disciplined-research` | 3 | Audited; Sol-high baseline 3/3 scenarios at 5/5; Task 13 portability preservation confirmed | 0 | 1 | 0 | 1 | 2 |
+| [disciplined-research](disciplined-research.md) | Skill | `disciplined-research` | `disciplined-research` | 3 | Audited; Sol-high baseline 3/3 scenarios at 5/5; `DR-02` broad-domain coverage confirmed | 0 | 1 | 0 | 1 | 2 |
 | [dispatching-development-subagents](dispatching-development-subagents.md) | Skill | `dispatching-development-subagents` | `dispatching-development-subagents`, `disciplined-development`; shared routing boundaries | 9 | Audit complete; `DSD-02` current rerun 5/5; current closure 70/70 | 0 | 2 | 1 | 0 | 2 |
-| [lean-plan-writing](lean-plan-writing.md) | Skill | `lean-plan-writing` | `lean-plan-writing`; external `superpowers:writing-plans` composition | 4 | Audited; 8 Sol-high scenarios, 2 current GREEN targets, 1 watched portability RED | 0 | 4 | 1 | 0 | 4 |
-| [sweeping-stale-references](sweeping-stale-references.md) | Skill | `sweeping-stale-references` | `sweeping-stale-references` | 5 | Audited; all five scenarios at 5/5; portability preservation | 0 | 2 | 0 | 0 | 3 |
-| [writing-explicit-rationale](writing-explicit-rationale.md) | Skill | `writing-explicit-rationale` | `writing-explicit-rationale`, `lean-plan-writing`, `disciplined-development`; shared parent/plan composition | 6 | Audit complete; original suite classified; final Task 10 target 5/5; final user review complete | 0 | 1 | 4 | 2 | 6 |
+| [lean-plan-writing](lean-plan-writing.md) | Skill | `lean-plan-writing` | `lean-plan-writing`; external `superpowers:writing-plans` composition | 4 | Audited; 7 active owned scenarios; `LP-04` retained as historical exploratory evidence | 0 | 4 | 1 | 1 | 3 |
+| [sweeping-stale-references](sweeping-stale-references.md) | Skill | `sweeping-stale-references` | `sweeping-stale-references` | 5 | Audited; 4 active owned scenarios; `SSR-04` retained as historical exploratory evidence | 0 | 2 | 0 | 1 | 2 |
+| [writing-explicit-rationale](writing-explicit-rationale.md) | Skill | `writing-explicit-rationale` | `writing-explicit-rationale`, `lean-plan-writing`, `disciplined-development`; shared parent/plan composition | 6 | Audit complete; `WER-03` broad-domain coverage confirmed; current policy scope approved; final Task 10 target 5/5 | 0 | 1 | 4 | 2 | 6 |
 | [adversarial-review-loop scenarios](adversarial-review-loop-scenarios.md) | Supporting | `adversarial-review-loop` | `adversarial-review-loop`, `disciplined-development`; shared routing boundaries | 8 | Audited; exact definitions for 15 loop-owned controls and links to 12 shared controls | 0 | 14 | 3 | 3 | 1 |
 | [duplicate red-flags scenarios](duplicate-red-flags-scenarios.md) | Supporting history | Task 1 protocol | `adversarial-review`, `concise-writing`, `lean-plan-writing`, `sweeping-stale-references` | 1 | Audited | 0 | 0 | 0 | 4 | 0 |
 | [evaluation subagents read-only](evaluation-subagents-read-only.md) | Project-rule history | Task 1 protocol | Repository evaluation rule | 1 | Audited | 0 | 0 | 0 | 1 | 0 |
@@ -44,16 +56,16 @@ An em dash means the owning audit task has not classified the scenarios yet.
 | `adversarial-review-loop-scenarios.md` | Canonical loop decision definitions; `adversarial-review-loop` | `adversarial-review-loop`, `disciplined-development` | `CS`, `T2`–`T7`, `NF`, `PW`, `XL`, `G3A`–`G3C`, `OWN`, `CE`; five reps each | Full; exact prompts, withheld rubrics, contexts, ownership, and rerun triggers | Active definition source; complete owned control suite 75/75 |
 | `adversarial-review-loop.md` | Active loop results and preserved derivation history; `adversarial-review-loop` | `adversarial-review-loop`, `disciplined-development`; shared routing boundaries | Fifteen owned IDs plus linked `DISC-01`–`DISC-10`, `CW-09`, and `CW-11`; five Sol-high repetitions each | Full for active catalog; mixed-protocol derivation retained as history | Audit complete; complete active closure 135/135 |
 | `adversarial-review.md` | Active review, output, enumeration, angle, durability, whole-project, generated-case, invariant-severity, pattern, necessity, and effectiveness suite plus preserved derivation history; `adversarial-review` | `adversarial-review`, `concise-writing`, `lean-plan-writing`, `sweeping-stale-references`, `disciplined-development` | `AR-01`–`AR-10` and `AR-12`–`AR-14`, five control/current reps each; historical evidence below | Full for active catalog; historical evidence remains partial | Active suite 65/65; nine preservation controls 45/45; four watched REDs GREEN; `AR-14` holistic-only ablation 0/5 |
-| `concise-writing.md` | Active verbosity, over-trim, routing, ownership, composition-pressure, direct-invocation, and extraction suite; `concise-writing` | `concise-writing`, `adversarial-review-loop`; external authoring dependencies | `CW-01`–`CW-14`; five control and Task 2A target repetitions complete | Full | Baseline and Task 2A GREEN, cold review, approval, and repository verification complete |
+| `concise-writing.md` | Active verbosity, over-trim, routing, ownership, composition-pressure, direct-invocation, and broad-domain suite; `concise-writing` | `concise-writing`, `adversarial-review-loop`; external authoring dependencies | `CW-01`–`CW-14`; five control and Task 2A target repetitions complete | Full | Baseline and Task 2A GREEN, cold review, approval, and repository verification complete |
 | `disciplined-development.md` | Active mode routing, Gates 1–5 orchestration, Principle 7 threshold, and compact derivation history; `disciplined-development` | All through orchestration | `DD-01`–`DD-03` plus linked `DISC-01`–`DISC-10`, `DSD-01`, `DSD-02`, `OWN`, and `WER-07`; five reps each | Full for the active catalog; historical evidence remains partial | Audit complete; owned 15/15; inherited `DSD-02` current 5/5; current closure 85/85 |
-| `disciplined-research.md` | Active project, procurement, and cross-domain grounding suite plus B1/B17 history; `disciplined-research` | `disciplined-research` | `DR-01`–`DR-03`, 5 reps each; historical `B1`, `B17` retained below | Full for active catalog; historical evidence remains partial | Active Sol-high baseline 15/15; portability classified as preservation |
+| `disciplined-research.md` | Active project, procurement, and broad-domain grounding suite plus B1/B17 history; `disciplined-research` | `disciplined-research` | `DR-01`–`DR-03`, 5 reps each; historical `B1`, `B17` retained below | Full for active catalog; historical evidence remains partial | Active Sol-high baseline 15/15; `DR-02` is isolated broad-domain coverage |
 | `dispatching-development-subagents.md` | Active dispatch-prompt, identity/nudge, returned-commit verification, and finding-partition suite plus preserved history; `dispatching-development-subagents` | `dispatching-development-subagents`, `disciplined-development`; shared routing boundaries | `DSD-01`–`DSD-04` and linked `DISC-01`–`DISC-10`; five Sol-high repetitions each | Full for active catalog; mixed-protocol derivation retained as history | Audit complete; `DSD-02` current rerun 5/5; current closure 70/70 |
 | `duplicate-red-flags-scenarios.md` | Four-skill composite consolidation fixture; Task 1 protocol | `adversarial-review`, `concise-writing`, `lean-plan-writing`, `sweeping-stale-references` | Cells `A`–`D`; 5 per arm | Full | Retired from the active suite because it combines unrelated contracts; all retained coverage is now atomized in the owning skill catalogs |
 | `evaluation-subagents-read-only.md` | Historical evidence for choosing a no-write evaluator type; Task 1 protocol | Repository evaluation rule | No stable ID; RED/GREEN counts unstated | Partial | Retired from the active suite; the enforced transport probe below replaces instruction-only evidence |
-| `lean-plan-writing.md` | Active direct, prose-density, necessary-snippet, portability, edge-inventory, and merge-boundary suite plus consolidation history; `lean-plan-writing` | `lean-plan-writing`; external `superpowers:writing-plans` composition | `LP-01`–`LP-08`, five original and current repetitions each; historical shared and edge evidence retained below | Full for active catalog; historical evidence remains partial | Active Sol-high baseline; `LP-02` and `LP-03` current GREEN; `LP-04` watched portability RED |
+| `lean-plan-writing.md` | Active direct, prose-density, necessary-snippet, edge-inventory, and merge-boundary suite plus consolidation and exploratory cross-domain history; `lean-plan-writing` | `lean-plan-writing`; external `superpowers:writing-plans` composition | Active `LP-01`–`LP-03`, `LP-05`–`LP-08`; historical `LP-04`; five original/current repetitions preserved | Full for active catalog and retained `LP-04` definition | Seven active owned scenarios; `LP-02` and `LP-03` current GREEN; `LP-04` retired |
 | `skill-discovery.md` | Atomic all-nine description routing; Task 1 protocol | All nine | `DISC-01`–`DISC-10`; five control, parent-target, Task 2A, and Task 6 target reps complete for all ten | Full | Active; Task 6 description target 50/50 |
-| `sweeping-stale-references.md` | Active simple, reviewer-pressure, grouped-scale, portable policy, and negative-form suite plus rename, grouping, and packaging history; `sweeping-stale-references` | `sweeping-stale-references` | `SSR-01`–`SSR-05`, all 5/5; linked `DISC-08`; historical shared cell, 1/1 rename, and 1 RED/3 GREEN grouping evidence retained below | Full for active catalog; historical evidence remains partial | Active suite 25/25; portability remains preservation |
-| `writing-explicit-rationale.md` | Active direct, repeated-review, portability, authoritative-reference, relevance-filtering, and parent/plan composition suite plus preserved history; `writing-explicit-rationale` | `writing-explicit-rationale`, `lean-plan-writing`, `disciplined-development`; shared parent/plan composition | `WER-01`–`WER-03`, `WER-05`–`WER-07`, and linked `DISC-08`–`DISC-10`; original controls classified and final Task 10 target 5/5 | Full for active catalog; historical evidence remains partial | Audit, target GREEN, and final user review complete |
+| `sweeping-stale-references.md` | Active simple, reviewer-pressure, grouped-scale, and negative-form suite plus exploratory policy, rename, grouping, and packaging history; `sweeping-stale-references` | `sweeping-stale-references` | Active `SSR-01`–`SSR-03`, `SSR-05`; historical `SSR-04`; all recorded repetitions preserved | Full for active catalog and retained `SSR-04` definition | Four active owned scenarios; `SSR-04` retired |
+| `writing-explicit-rationale.md` | Active direct, repeated-review, broad-domain, authoritative-reference, relevance-filtering, and parent/plan composition suite plus preserved history; `writing-explicit-rationale` | `writing-explicit-rationale`, `lean-plan-writing`, `disciplined-development`; shared parent/plan composition | `WER-01`–`WER-03`, `WER-05`–`WER-07`, and linked `DISC-08`–`DISC-10`; original controls classified and final Task 10 target 5/5 | Full for active catalog; historical evidence remains partial | Audit, target GREEN, and final user review complete; current policy scope approved |
 
 ## Enforced evaluator transport
 
@@ -161,7 +173,9 @@ Before baseline testing, every live skill file matched its control hash:
 
 Each scenario catalog declares any additional dependency or fixture before dispatch.
 Materialize that dependency from its recorded version into the same read-only bundle and update the aggregate hash.
-After a portability GREEN, materialize the committed post-portability skill and its declared dependencies the same way; that bundle becomes the immediate readability control while `4296647` remains the original-behavior control.
+After any approved behavior GREEN, materialize the committed skill and its declared
+dependencies the same way; that bundle becomes the immediate readability control
+while `4296647` remains the original-behavior control.
 
 ## Scenario taxonomy and active catalogs
 
@@ -171,14 +185,17 @@ Scenario type and behavior status are separate axes.
 - **Simple application:** exercise the core workflow with one uncomplicated request.
 - **Non-trivial application:** exercise competing constraints, pressure, or edge conditions.
 - **Direct invocation:** invoke the skill safely with the environment declared for its category.
-- **Portability/extraction:** run a portable skill with only declared external dependencies and a non-software task.
+- **Broad-domain isolated application:** run a broad-domain companion on a non-software task with only its declared dependencies.
+- **Dependency-scoped development application:** run a development companion in its authored software domain with declared dependencies.
 - **Focused regression:** protect a demonstrated branch, boundary, output contract, or failure mode.
 - **Composition:** test cross-skill ownership or orchestration; use a composite prompt only when composition is the behavior under test.
 - **Preservation:** established behavior whose `4296647` control must pass 5/5.
 - **Target:** approved new behavior with a watched control RED and a 5/5 GREEN before it joins active regression coverage.
 
 Use atomic prompts for individual promises.
-A skill’s complete active suite is its owned scenarios plus every shared discovery, direct-invocation, portability, and composition scenario that lists it as affected.
+A skill’s complete active suite is its owned scenarios plus every shared discovery,
+direct-invocation, domain-appropriate application, dependency, and composition
+scenario that lists it as affected.
 Every shared or supporting record has exactly one owner and lists every affected skill.
 
 Each active catalog has a definition table and a results table.
@@ -262,7 +279,7 @@ Before using the changed scenario, rerun five Sol-high and five Sol-low control 
 A new target also requires its watched control RED before the GREEN arm.
 
 No skill prose may change before Tasks 1–11 establish and score the control suite, except a user-approved RED/GREEN slice required to resolve a genuine baseline inconsistency.
-Portable behavior and readability edits land separately.
+Behavioral and readability edits land separately.
 Every skill draft and final in-place edit passes the plan’s user approval gates, and any post-approval edit restarts the draft, validation, in-place review, and approval sequence.
 
 ## Cleanup Gate 5 override
@@ -272,6 +289,8 @@ orchestrator. Use the Codex transport below when Claude orchestrates this
 cleanup. When Codex orchestrates, run the same whole-repository, plan-anchored
 review through a fresh Claude session instead and record its exact model,
 effort, read-only invocation, and verdict in the Gate 2 artifact.
+Gate 5 is a separate repository review boundary; it is not a second behavioral
+portability provider requirement.
 
 Materialize this cleanup-only config in scratch outside the repository as `$CLEANUP_GATE5_ROOT/dd-config.json`:
 
@@ -442,6 +461,8 @@ On 2026-08-07, all 81 frozen scenarios produced five fresh `gpt-5.6-sol` low-eff
 Codex CLI 0.147.0's strict/ignored-config-and-rules, ephemeral, `agents.enabled=false`, read-only transport probe passed before execution.
 A separate `gpt-5.6-sol` high-effort scorer processed 81 isolated packets containing 405 response slots and no evaluator prompts, bundles, or arm mappings; it had zero infrastructure errors.
 The orchestrator then manually read every raw output and exact withheld rubric and adjudicated all 81 rows; those manual verdicts are authoritative, including documented scorer false-positive and false-negative overrides.
+This 81-row/405-slot aggregate is frozen historical fact and is not recomputed after
+the scope repair.
 
 | Owning family | Preservation scenarios | Preservation Sol-low | Target scenarios | Target Sol-low | Combined |
 |---|---:|---:|---:|---:|---:|
@@ -459,4 +480,9 @@ The orchestrator then manually read every raw output and exact withheld rubric a
 
 These observed REDs are control evidence, not fixes or authorization to alter scenario contracts or skill prose.
 Any post-freeze prompt, fixture, rubric, supplied-context, or protected-promise change requires the global Sol-high and Sol-low control backfill before the scenario is used again.
-Tasks 26–27 will add final Sol-high composition results, cleaned Sol-low comparisons, approved dispositions for decreases, and final word-count deltas.
+Future active closure contains 79 scenarios (59 preservation and 20 target rows at
+the Task 11 classification point, or 395 five-repetition slots) because `LP-04` and
+`SSR-04` are retained only as historical exploratory cross-domain evidence.
+Tasks 26–27 will add final cold Sol-high domain-appropriate and composition results,
+cleaned Sol-low comparisons, approved dispositions for decreases, and final
+word-count deltas.

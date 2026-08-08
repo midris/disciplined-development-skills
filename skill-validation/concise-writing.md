@@ -22,12 +22,16 @@ Historical evidence was classified before defining the active skill-owned suite:
 | Routing: routine convention-preserving rename | Merge | Shared `DISC-08` owns this negative route with all nine descriptions |
 
 No prior scenario met the common protocol unchanged: **Keep 0, Repair 2, Merge 4,
-Retire 2**. Safe full-bundle direct invocation, non-software extraction, frontmatter
+Retire 2**. Safe full-bundle direct invocation, isolated broad-domain application, frontmatter
 skill/reference-authoring co-selection, explicit body-level ownership, and
 behavioral ownership under authoring pressure were absent, so `CW-07`–`CW-14` are
 **Add 8**. The untested 2026-07-19 draft-first reminder
 is not counted as a prior scenario; `CW-02` protects its observable preservation
 outcome without claiming to observe private drafting behavior.
+
+Scope-repair simplification: only `CW-08`'s category and conclusion change.
+Its existing definition, evidence, and record structure already provide the necessary
+broad-domain coverage, so no new scenario or duplicate section is warranted.
 
 ## Active scenario catalog
 
@@ -159,7 +163,7 @@ The complete per-file provenance is:
 | `CW-05` | Focused regression / preservation | `concise-writing` | Remove elaboration not supported by the source facts; Unrequested elaboration | Single-skill control | [CW-05](#cw-05--unrequested-elaboration) | Preserve every supplied fact and remove both unsupported recommendations | Unrequested-elaboration rule change |
 | `CW-06` | Focused regression / preservation | `concise-writing` | Remove emphasis and hedge inflation without weakening the rule; Emphasis/hedge inflation | Single-skill control | [CW-06](#cw-06--emphasis-inflation) | State each semantic rule once; allow `Every request must` once, but no bold, `single`, `each and every`, `always`, or repeated rejection | Emphasis/hedge-inflation rule change |
 | `CW-07` | Direct invocation / preservation | `concise-writing` | Complete safely without project state when invoked with the complete bundle installed; full skill | Complete nine-skill control | [CW-07](#cw-07--full-bundle-direct-invocation) | Complete the notice without a blocker or unavailable-requirement ceremony and preserve every supplied fact | Direct-invocation contract or integrated-suite ownership change |
-| `CW-08` | Portability/extraction / preservation | `concise-writing` | Apply the technique outside software with no sibling dependency; full skill | Single-skill control | [CW-08](#cw-08--non-software-policy-extraction) | Preserve all eligibility, exception, deadline, accommodation, appeal, finality, and navigation facts; cut padding; no software assumptions | Portability, extraction, or any protected policy-compression rule change |
+| `CW-08` | Broad-domain isolated application / preservation | `concise-writing` | Apply the broad-domain writing technique to non-software policy prose in isolation; full skill | Single-skill control | [CW-08](#cw-08--isolated-policy-application) | Preserve all eligibility, exception, deadline, accommodation, appeal, finality, and navigation facts; cut padding; no software assumptions | Broad-domain scope, isolated application, or any protected policy-compression rule change |
 | `CW-09` | Discovery + focused routing regression / target | `concise-writing`, `adversarial-review-loop`; external `superpowers:writing-skills` | Allow `concise-writing` and `superpowers:writing-skills` to be co-selected for skill prose while excluding an unrelated candidate; frontmatter description | Three descriptions only | [CW-09](#cw-09--skill-authoring-co-selection) | Exact alphabetical JSON array containing both applicable skills and excluding `adversarial-review-loop` | Description or skill-authoring routing change |
 | `CW-10` | Focused ownership regression / target | `concise-writing` | Defer skill-authoring decisions and validation; ownership block | Single-skill control | [CW-10](#cw-10--skill-authoring-ownership) | Exact JSON object naming `superpowers:writing-skills` for both responsibilities and quoting source-verifiable evidence | Skill-authoring ownership change |
 | `CW-11` | Discovery + focused routing regression / target | `concise-writing`, `adversarial-review-loop`; external `superpowers:writing-skills` | Allow both skills to be co-selected for reference prose shipped within a skill while excluding an unrelated candidate; frontmatter description | Three descriptions only | [CW-11](#cw-11--reference-authoring-co-selection) | Exact alphabetical JSON array containing both applicable skills and excluding `adversarial-review-loop` | Description or reference-authoring routing change |
@@ -321,7 +325,7 @@ PASS returns only a concise notice—not `BLOCKED` or procedural narration—tha
 CSV format, filter preservation, UTF-8, and unchanged PDF behavior exactly once each
 and adds no fact.
 
-### CW-08 — non-software policy extraction
+### CW-08 — isolated policy application
 
 ```text
 You are a fresh, read-only skill evaluator.
@@ -484,9 +488,10 @@ transcripts.
 | `CW-13` | composition `5ba3cdbb…` | FAIL | FAIL | FAIL | FAIL | FAIL | 0/5 watched RED | PASS/PASS/PASS/PASS/PASS; 5/5 | Task 17 | [Task 11 detail](#task-11-sol-low-control-results-2026-08-07) | Task 27 | Control R1–R5: omitted `concise-writing`; target none | 2026-08-02 | 0 |
 | `CW-14` | composition `5ba3cdbb…` | FAIL | FAIL | FAIL | FAIL | FAIL | 0/5 watched RED | PASS/PASS/PASS/PASS/PASS; 5/5 | Task 17 | [Task 11 detail](#task-11-sol-low-control-results-2026-08-07) | Task 27 | Control R1–R5: omitted `concise-writing`; target none | 2026-08-02 | 0 |
 
-**Task 12 disposition (2026-08-07):** The `CW-08` row is the canonical portability
-evidence. Its preservation classification requires no portability target, skill edit,
-new control bundle, or rerun.
+**Task 12 scope disposition (2026-08-07):** `CW-08` remains valid isolated
+broad-domain application evidence. Cross-model portability is established by the
+complete cold Sol-high in-domain suite, not by treating this one non-software row as
+a second domain gate. No skill edit, new control bundle, or rerun is required.
 
 ## Task 11 Sol-low control results (2026-08-07)
 
