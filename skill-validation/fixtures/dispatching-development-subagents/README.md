@@ -36,7 +36,7 @@ The dispatch control skill SHA-256 is `b89b4db8af53bd136237cb2306f956c039757a0e3
 
 ## Task 18A pre-draft freeze
 
-`DSD-01` and `DSD-02` are repaired positive targets; the prior hashes and results
+`DSD-01` and `DSD-02` are repaired preservation contracts; the prior hashes and results
 remain historical.
 `DSD-01` uses the complete nine-skill bundle at base
 `bd30bf7c9070f2f56b6d2ae32a746518e2259b6f`, canonical content-manifest SHA-256
@@ -47,8 +47,8 @@ remain historical.
 
 | ID | Prompt SHA-256 | Rubric SHA-256 | Sol-high control | Sol-low control |
 |---|---|---|---|---|
-| `DSD-01` | `9ca0ee8b3f1cb2983722167435827557f784678de49595b4e68d6eae25d3beea` | `0cf272a54a21bb50d77bedef6907e245b8d74a67a11719bac6d358b0889ddf07` | Pending orchestrator backfill | Pending orchestrator backfill |
-| `DSD-02` | `12596c9c251c61f0075859289ec0fb6e82805afd6b36692d1c414597e6dff68c` | `7c0fd67c6b5af68960c0276202e5dc350b0b4912aeaacd70ea61ea8871264f69` | Pending orchestrator backfill | Pending orchestrator backfill |
+| `DSD-01` | `be49d7269965b2b1b2fe3446b6137b82f20ec7f308e3927b79e8e37a177a8f5f` | `0cf272a54a21bb50d77bedef6907e245b8d74a67a11719bac6d358b0889ddf07` | Pending orchestrator backfill | Pending orchestrator backfill |
+| `DSD-02` | `750b43ea0d12d109c70e996578618da5d79717c2716b6878db0e4812a5226c4c` | `7c0fd67c6b5af68960c0276202e5dc350b0b4912aeaacd70ea61ea8871264f69` | Pending orchestrator backfill | Pending orchestrator backfill |
 
 ## Historical 2026-08-06 DSD-02 rerun bundle
 

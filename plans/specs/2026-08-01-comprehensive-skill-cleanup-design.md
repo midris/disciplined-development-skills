@@ -125,14 +125,17 @@ allowed set against the exact new description; do not presume the old routing
 contracts remain valid. Freeze and backfill any repaired discovery contract plus the
 three new targets before skill edits.
 
-The live README, architecture summary, and parent Principle 6 must stop presenting
-research as load-bearing-only. Any parent-skill prose change follows the same
+The live README, architecture summary, parent Principle 6, and
+`sweeping-stale-references` ownership boundary must stop presenting research as
+load-bearing-only. Any dependent skill-prose change follows the same
 complete-draft and final in-place approval gates and reruns the parent's complete
-active suite. Before drafting that change, reclassify `DD-01`, `DD-02`, `DD-03`,
+active suite. The sweeping repair therefore adds its complete active suite:
+`DISC-08`, `SSR-01`–`SSR-03`, and `SSR-05`. Before drafting that change,
+reclassify `DD-01`, `DD-02`, `DD-03`,
 `DSD-01`, `DSD-02`, `OWN`, and `WER-07` against universal grounding, repair and
 backfill each changed contract at Sol high and low, and classify new positive
 routing as target behavior. Require the combined candidate to reach 5/5 on the complete affected
-discovery, disciplined-research, and disciplined-development suites. After watched
+discovery, disciplined-research, disciplined-development, and sweeping-stale-references suites. Show complete proposed versions of all three changed skills and obtain approval before applying them; after review, show all three complete final skills in place and obtain final approval. After watched
 REDs, candidate GREEN, cold review, staged adversarial review, final in-place
 approval, and repository verification, commit the behavior slice separately. That
 commit becomes Task 18's immediate readability control, and the active closure
@@ -147,8 +150,10 @@ and `WER-07`. Each complete output states factual claims, including preserved cl
 in stylistic transformations, plan premises and decisions, review/routing findings,
 dispatch scope, workflow ownership, and private scratch notes. Classification does
 not depend on destination or on whether the user first supplied the claim.
-No additional skill-prose dependency was found beyond the approved research skill
-and parent Principle 6 repairs. Owning validation records freeze exact repaired
+The sweep also found the live `sweeping-stale-references` ownership boundary's
+“load-bearing fact” narrowing. Its tracked bytes remain unchanged during this
+freeze, and its complete active suite plus proposed/final approval gates are now in
+scope. Owning validation records freeze exact repaired
 contracts and base-control hashes; fresh high/low controls and prose work remain
 pending.
 

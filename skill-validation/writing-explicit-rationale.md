@@ -73,7 +73,7 @@ No external skill dependency or live web access is supplied.
 | `WER-03` | `writing-explicit-rationale` | Broad-domain isolated application / preservation | Apply the approved rationale policy to a nonprofit budget exception without repository, software, hook, or sibling-skill dependencies; Role, What rationale means here, Keep one authoritative home | Single-skill control + inline nonprofit policy decision | [WER-03](#wer-03--isolated-nonprofit-policy-exception) | Return only amendment text for the Emergency grants section; state the temporary $5,000 cap through March 31, 2027; state winter-shelter demand as the cause; state the accepted $30,000 contingency exposure, monthly review, and reversion to $2,000 after March 31, 2027; keep all rationale on the policy amendment; no software, repository, Git, PR, or sibling procedure may replace a required element | Broad-domain scope, isolated application, exception trigger, policy placement, rationale shape, or supplied decision changes |
 | `WER-05` | `writing-explicit-rationale` | Focused regression / watched RED → target GREEN | When authoritative project rationale already exists, new code references it instead of creating drift-prone copies; Keep one authoritative home, Resist duplicate rationale | Single-skill control + `docs/architecture/ingest.md` existing-rationale fixture | [WER-05](#wer-05--existing-rationale-reference) | Return exactly two labeled blocks; the code comment cites `docs/architecture/ingest.md#interactive-guard-placement`; the commit message identifies the change, contains no duplicated rationale, and may optionally cite the authoritative document; neither block repeats the causal explanation, accepted duplication, or revisit condition | Existing-rationale fixture, authoritative-home rule, non-duplication rule, response shape, or decision facts change |
 | `WER-06` | `writing-explicit-rationale` | Focused regression / preservation | A paste-ready code comment retains history only when it constrains correctness or a future implementation decision; What rationale means here | Single-skill control + inline serializer decision | [WER-06](#wer-06--relevant-history-only) | Return only one paste-ready code comment; state that legacy leading zeroes are preserved because archived records are verified against exact serialized bytes and normalization would invalidate signatures; omit the migration year, the former importer's language, and any other backstory that does not affect correctness or future implementation | Necessity predicate, historical-context boundary, rationale content, output shape, or decision facts change |
-| `WER-07` | `writing-explicit-rationale`, `lean-plan-writing`, `disciplined-development`, `disciplined-research` | Parent-and-plan composition / watched RED → target GREEN | The parent establishes on-page placement, delegates necessity judgment without forcing rationale for every defensible alternative, and routes every factual plan claim through universal grounding; What rationale means here | Disciplined development + disciplined research + writing-plans + lean plan writing + writing explicit rationale | [prompt](fixtures/writing-explicit-rationale/prompts/wer-07.md) | [rubric](fixtures/writing-explicit-rationale/rubrics/wer-07.md) | Parent/research wording, companion delegation, necessity predicate, plan/spec pairing, supplied choices, source-disclosure mapping, or useful-versus-harmful context threshold changes |
+| `WER-07` | `writing-explicit-rationale`, `lean-plan-writing`, `disciplined-development`, `disciplined-research` | Parent-and-plan composition / repaired preservation | The parent establishes on-page placement, delegates necessity judgment without forcing rationale for every defensible alternative, and routes every factual plan claim through universal grounding; What rationale means here | Disciplined development + disciplined research + writing-plans + lean plan writing + writing explicit rationale | [prompt](fixtures/writing-explicit-rationale/prompts/wer-07.md) | [rubric](fixtures/writing-explicit-rationale/rubrics/wer-07.md) | Parent/research wording, companion delegation, necessity predicate, plan/spec pairing, supplied choices, source-disclosure mapping, or useful-versus-harmful context threshold changes |
 
 `WER-04` is intentionally unused: its pre-freeze commit-pressure contract was merged
 into `WER-02`, `DISC-10`, and `WER-05` before execution.
@@ -225,7 +225,7 @@ The team first encountered the issue during a 2019 migration, and the importer u
 Return only the exact code comment to place above the serialization branch.
 ```
 
-### WER-07 — parent and plan composition
+### Historical WER-07 — parent and plan composition
 
 ```text
 You are a fresh, read-only skill evaluator.
@@ -256,11 +256,12 @@ The repaired five-skill control uses base
 explicit-rationale files plus Superpowers 6.2.0 `writing-plans`.
 Its canonical content-manifest SHA-256 is
 `3d843a13ac8d132e0ec4443955d6e683fb4ec8625ec494db3d9d6598db4fe9e9`.
-Prompt SHA-256 is `e51c34043838acf4d144ece6d2c6dbe4f7de15155f4c010cc8c6cac588380482`;
+Prompt SHA-256 is `fe1603200c8faa899e2fe2c34ee4ea045efb35365105bba5a41f51be2ffa8c66`;
 rubric SHA-256 is `b53059862775b998fafea59f2617c8f8bc10227e488694c7064a0287559ba48b`.
 Fresh five-repetition Sol-high and Sol-low controls are pending orchestrator
-execution; the new positive promise requires a watched Sol-high RED and later 5/5
-candidate GREEN.
+execution and must each pass 5/5. This is repaired preservation because the old
+parent already governs factual plan claims; the prompt no longer names the research
+companion or advertises disclosure.
 
 ## Task 11 Sol-low control results (2026-08-07)
 

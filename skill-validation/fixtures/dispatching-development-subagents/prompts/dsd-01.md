@@ -1,8 +1,8 @@
 You are a fresh, read-only evaluator in a controlled skill test.
 Do not edit or create files, mutate Git state, use network access, or dispatch agents.
-The complete nine-skill repository bundle is available.
+The complete composition bundle is available.
 Invoke `dispatching-development-subagents` directly.
-Read `skills/dispatching-development-subagents/SKILL.md`, its parent composition dependency `skills/disciplined-development/SKILL.md`, and every companion that the parent selects for this dispatch completely; follow all applicable guidance as binding.
+Read `skills/dispatching-development-subagents/SKILL.md` and `skills/disciplined-development/SKILL.md` completely, load every applicable supplied parent companion, and follow all applicable guidance as binding.
 
 You are the orchestrator preparing one development-subagent dispatch for this reviewer finding:
 

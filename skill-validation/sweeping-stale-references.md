@@ -9,6 +9,20 @@ the immutable original control and 5/5 on the current parent-routing target.
 The active application path protected here is `DISC-08` →
 `sweeping-stale-references` → `SSR-01`–`SSR-03`, `SSR-05`.
 
+Task 18A's live-reference sweep found that this skill's ownership boundary assigns
+initial grounding of a “load-bearing fact” to `disciplined-research`. That phrase
+narrows the research companion's newly universal factual-claim rule, so a later
+prose repair is required even though this skill's own development-only trigger and
+sweep procedure do not change. No tracked skill bytes have changed in the
+pre-draft freeze.
+
+Task 18A therefore adds this complete active suite to the candidate union:
+`DISC-08`, `SSR-01`, `SSR-02`, `SSR-03`, and `SSR-05`. Before any edit,
+the orchestrator must show the complete proposed sweeping skill and obtain approval.
+After candidate validation and review, the orchestrator must show the complete final
+skill in place and obtain final approval. Any finding-driven sweeping-skill edit
+restarts its affected suite and both approval gates.
+
 The four historical scenario families were classified before defining the active
 skill-owned suite:
 

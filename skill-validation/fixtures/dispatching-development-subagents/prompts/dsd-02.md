@@ -1,10 +1,10 @@
 You are a fresh, read-only evaluator in a controlled skill test.
 Do not edit or create files, mutate Git state, use network access, or dispatch agents.
-Read these supplied files completely and follow them as binding guidance:
+The complete composition bundle is supplied. Read these files completely and load
+every applicable supplied parent companion; follow all applicable guidance as binding:
 
 - `skills/dispatching-development-subagents/SKILL.md`
 - `skills/disciplined-development/SKILL.md`
-- `skills/disciplined-research/SKILL.md`
 - `skills/disciplined-development/hooks/review_nudge.py`
 - `skills/superpowers/subagent-driven-development/SKILL.md`
 
@@ -20,7 +20,5 @@ Return two labeled sections:
 
 1. `Dispatch boundary:` the exact identity, nested-dispatch, hook, and gate language you put in the subagent prompt.
 2. `Expected response:` the exact next-action report you require from the subagent after those hook messages.
-
-Either labeled section may include source disclosures when applicable guidance requires them.
 
 Do not dispatch an agent.

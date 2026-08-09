@@ -37,15 +37,16 @@ Sol-high and Sol-low controls.
 | ID | Classification | Changed contract | Frozen material |
 |---|---|---|---|
 | `DD-01` | Research required | Vignette A now loads research; every row discloses support for its factual routing/ownership claims | [fixture manifest](fixtures/disciplined-development/README.md#task-18a-pre-draft-freeze) |
-| `DD-02` | Research required | Every checkpoint routes its factual claims through research and discloses mapped support | Same |
-| `DD-03` | Research required | Parent-only bundle becomes parent-plus-research; every disposition row discloses support | Same |
-| `DSD-01` | Research required | Dispatch claims require acquired, verified, disclosed support | [dispatch record](dispatching-development-subagents.md#task-18a-pre-draft-freeze) |
-| `DSD-02` | Research required | Identity, hook, gate, verification, and ownership claims require disclosed support | Same |
-| `OWN` | Research required | Workflow, rule, counter, and owner claims require disclosed support | [loop definition](adversarial-review-loop-scenarios.md#task-18a-own-freeze) |
-| `WER-07` | Research required | Every factual plan claim requires mapped support while rationale necessity stays independently judged | [rationale record](writing-explicit-rationale.md#task-18a-wer-07-freeze) |
+| `DD-02` | Research required / repaired preservation | The old parent already applies Principle 6 to factual checkpoint and plan claims; the repaired contract removes prompt priming and requires high/low 5/5 | Same |
+| `DD-03` | Research required / repaired preservation | The old parent already applies Principle 6 to factual contract and threshold claims; the repaired bundle makes the companion available without naming it in the task | Same |
+| `DSD-01` | Research required / repaired preservation | The old dispatch and parent bodies already require verified factual comments/docs and load-bearing dispatch claims | [dispatch record](dispatching-development-subagents.md#task-18a-pre-draft-freeze) |
+| `DSD-02` | Research required / repaired preservation | The old parent already governs factual identity, hook, gate, verification, and ownership claims | Same |
+| `OWN` | Research required / repaired preservation | The old parent already governs factual workflow, rule, counter, and owner claims | [loop definition](adversarial-review-loop-scenarios.md#task-18a-own-freeze) |
+| `WER-07` | Research required / repaired preservation | The old parent already governs factual plan claims while rationale necessity stays independently judged | [rationale record](writing-explicit-rationale.md#task-18a-wer-07-freeze) |
 
-All seven changed positive promises require watched Sol-high control REDs, recorded
-Sol-low controls, and later 5/5 candidate GREENs.
+`DD-01` is the only watched target in this repaired parent subset because vignette
+A adds a route not promised by the old bodies. The other six are repaired
+preservation contracts and require fresh Sol-high and Sol-low controls at 5/5.
 
 ## Active scenario catalog
 
@@ -91,9 +92,9 @@ candidate bundle.
 
 | ID | Active prompt SHA-256 | Active rubric SHA-256 | Prior evaluated prompt / rubric SHA-256 |
 |---|---|---|---|
-| `DD-01` | `63987253b2be51f84562f4b6626378c0cbea5879652a881e6ee36b51902f57b2` | `cdd12bb4d8cd9d072e0d8fbfbf1461dfd4621503305357cac809d58bab2def8c` | `1b826fae8bf99ddc25ee831ee1b03ecce54c4552f8a302cb2558bee0e7e5c472` / `74e10f7c401903ba325a2b17adcc18805fa590d8d8e3bd07eb6d1a8216fdd94c` |
-| `DD-02` | `3e060070387bd37266eeebc5c406a6282e8bf33aa4ba255e42fc248ce0dca8b3` | `2db5d91720ce463855864d28b03585f60a03340f6921bc5cb3d6ea4eb342397d` | `5da5fe92259e8a7343ebc394eba326e06fa31c65eea3ee829de0157eeac8d528` / `627444473edc00e09f3974c5435911397627697821f24b0fe80d9851ed2f83cc` |
-| `DD-03` | `edd0d8076c9818d7f995377e0bbba50836ac8347c50c491fa08c1f34a10e4081` | `26e51c0920c0c68417d51e8e1a1a5f24f36abc041960f761819958379f4b9659` | `852eb66f0c3084e4f9aff349ae3775b5c70ca5c3221d1b6538d62ca603830b80` / `ead264e837afb0fe2aa974d0a9280e3c36e23d5079968f67da21bac6902c1c06` |
+| `DD-01` | `ba217bdd4254dcccdce7d5efc1914ea90863ef2c8b26995325b98c8ad9fac057` | `cdd12bb4d8cd9d072e0d8fbfbf1461dfd4621503305357cac809d58bab2def8c` | `1b826fae8bf99ddc25ee831ee1b03ecce54c4552f8a302cb2558bee0e7e5c472` / `74e10f7c401903ba325a2b17adcc18805fa590d8d8e3bd07eb6d1a8216fdd94c` |
+| `DD-02` | `ec19ded3c3ad53c1dc304fe4437071654dfcb86e5ba76ab0c6da2bd981e6a669` | `2db5d91720ce463855864d28b03585f60a03340f6921bc5cb3d6ea4eb342397d` | `5da5fe92259e8a7343ebc394eba326e06fa31c65eea3ee829de0157eeac8d528` / `627444473edc00e09f3974c5435911397627697821f24b0fe80d9851ed2f83cc` |
+| `DD-03` | `ba5903ee6a599c035386117556fa9c8b318106789949744ed740520e288775ba` | `26e51c0920c0c68417d51e8e1a1a5f24f36abc041960f761819958379f4b9659` | `852eb66f0c3084e4f9aff349ae3775b5c70ca5c3221d1b6538d62ca603830b80` / `ead264e837afb0fe2aa974d0a9280e3c36e23d5079968f67da21bac6902c1c06` |
 
 ### Inherited coverage
 

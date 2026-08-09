@@ -64,12 +64,15 @@ content-manifest SHA-256
 
 | ID | Prompt SHA-256 | Rubric SHA-256 | Sol-high control | Sol-low control |
 |---|---|---|---|---|
-| `DD-01` | `63987253b2be51f84562f4b6626378c0cbea5879652a881e6ee36b51902f57b2` | `cdd12bb4d8cd9d072e0d8fbfbf1461dfd4621503305357cac809d58bab2def8c` | Pending orchestrator backfill | Pending orchestrator backfill |
-| `DD-02` | `3e060070387bd37266eeebc5c406a6282e8bf33aa4ba255e42fc248ce0dca8b3` | `2db5d91720ce463855864d28b03585f60a03340f6921bc5cb3d6ea4eb342397d` | Pending orchestrator backfill | Pending orchestrator backfill |
-| `DD-03` | `edd0d8076c9818d7f995377e0bbba50836ac8347c50c491fa08c1f34a10e4081` | `26e51c0920c0c68417d51e8e1a1a5f24f36abc041960f761819958379f4b9659` | Pending orchestrator backfill | Pending orchestrator backfill |
+| `DD-01` | `ba217bdd4254dcccdce7d5efc1914ea90863ef2c8b26995325b98c8ad9fac057` | `cdd12bb4d8cd9d072e0d8fbfbf1461dfd4621503305357cac809d58bab2def8c` | Pending orchestrator backfill | Pending orchestrator backfill |
+| `DD-02` | `ec19ded3c3ad53c1dc304fe4437071654dfcb86e5ba76ab0c6da2bd981e6a669` | `2db5d91720ce463855864d28b03585f60a03340f6921bc5cb3d6ea4eb342397d` | Pending orchestrator backfill | Pending orchestrator backfill |
+| `DD-03` | `ba5903ee6a599c035386117556fa9c8b318106789949744ed740520e288775ba` | `26e51c0920c0c68417d51e8e1a1a5f24f36abc041960f761819958379f4b9659` | Pending orchestrator backfill | Pending orchestrator backfill |
 
-Each new positive promise requires a watched Sol-high RED and later 5/5 candidate
-GREEN. The orchestrator records all run and scoring metadata.
+`DD-01` is a watched target because vignette A adds a newly universal route.
+`DD-02` and `DD-03` are repaired preservation contracts because the old parent
+already governs their factual checkpoint, plan, contract, and threshold claims;
+their fresh Sol-high and Sol-low controls must each pass 5/5. The orchestrator
+records all run and scoring metadata.
 
 ## Replay
 

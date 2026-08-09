@@ -72,6 +72,30 @@ User request: <REQUEST>
 
 ## Active catalog definitions
 
+### Historical pre-Task-18A allowed sets
+
+The exact evaluator-withheld allowed sets that govern all prior `DISC-01`–`DISC-10`
+results are preserved separately in
+[the immutable historical rubric](fixtures/skill-discovery/rubrics/pre-task-18a-disc-01-10.md)
+at SHA-256
+`d0f9ff72188cc5af86ec238255da6e2615e8f8470e1f9a90aa980d5deda86da1`.
+Those results are never rescored against the repaired contracts below.
+
+| ID | Historical research classification |
+|---|---|
+| `DISC-01` | Optional |
+| `DISC-02` | Prohibited |
+| `DISC-03` | Prohibited |
+| `DISC-04` | Optional |
+| `DISC-05` | Required |
+| `DISC-06` | Prohibited |
+| `DISC-07` | Optional |
+| `DISC-08` | Optional |
+| `DISC-09` | Optional |
+| `DISC-10` | Optional |
+
+### Task 18A repaired allowed sets
+
 Required names are positive routing, prohibited names are negative routing, and optional names record tolerated ambiguity without claiming positive protection.
 The allowed-set column therefore maps each scenario to all nine descriptions: required, prohibited, or explicitly ambiguous.
 All are discovery-type scenarios protecting each skill’s frontmatter `description`.
@@ -98,26 +122,37 @@ The supplied skill context is the description block above; no body, sibling proc
 
 `disciplined-research` is **required** for `DISC-01` through `DISC-11`; none is optional or prohibited.
 The reasoning is recorded per row above against the complete requested output, not a sentence-local keyword test.
-For `DISC-01`–`DISC-10`, the exact requests and evaluator wrapper remain unchanged; the target supplied context changes only the research description to `Use before stating any factual claim.`, and the allowed sets are the table above.
+For `DISC-01`–`DISC-10`, the exact requests and evaluator wrapper remain unchanged; the target supplied context changes only the research description to `Use before stating any factual claim.`, and the allowed sets are the repaired table above.
 The combined exact withheld rubric is
 [frozen here](fixtures/skill-discovery/rubrics/task-18a-disc-01-10.md) at SHA-256
 `9137c54f0c92e2e6aa0ed9c566786b09aa50f2df391fdb06f48ac64c4b8356b0`.
 Those ten repaired rubrics require fresh five-repetition Sol-high and Sol-low controls before candidate use.
 Existing outcomes in this record are historical under the earlier allowed sets and are not rescored.
 
-`DISC-11` has separately materialized complete control and target prompts.
-The prompts differ only in the research-description line and have no separate skill-body bundle.
+All eleven scenarios have separately materialized complete control and target prompts.
+Within each scenario, the prompts differ only in the research-description line and
+have no separate skill-body bundle.
 
-| Material | SHA-256 |
-|---|---|
-| `DISC-11` control prompt | `d81f9df5eb63441ed4fb97a3a53fbd20903345703501020f6fe67bb52b9fa402` |
-| `DISC-11` target prompt | `8f83f439a2fe57c5e8ebfb2a63cde9fd5fe1c30c0032c2371b76a35fba4506d8` |
-| `DISC-11` withheld rubric | `200b06fcd313fc0f911a24f11c0a78be7696e8e5ad9c03c7c05070e81001c866` |
-| Empty supplied-file manifest | `e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855` |
+| ID | Control prompt SHA-256 | Target prompt SHA-256 | Withheld rubric SHA-256 | Supplied-file manifest SHA-256 |
+|---|---|---|---|---|
+| `DISC-01` | `ef0250336996e79b4d0e49eb3fa0a34aacc85d245e78bb97279fa70da6dc5e5a` | `8d5ad76ba449793a297f8bb1169832eb23a9b99c40f6669b966a52339ebf54e9` | `9137c54f0c92e2e6aa0ed9c566786b09aa50f2df391fdb06f48ac64c4b8356b0` | `e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855` |
+| `DISC-02` | `1e65dec2c779064162e495d8fc4ff76f1a92bb0bfeff427615a82a5d34aa8b88` | `aa9a7bee6103ef553c67849616ca0af0de56cfc9e5687b111fc66a1c875b855b` | `9137c54f0c92e2e6aa0ed9c566786b09aa50f2df391fdb06f48ac64c4b8356b0` | `e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855` |
+| `DISC-03` | `d31bd9df45b6751f0bf4c9e6892f79d04a4ff5652e6382418ac5676f62455d46` | `8cd67f9bd0dd4513683850369975b14bae4728fed99625d50a38b939d5617e68` | `9137c54f0c92e2e6aa0ed9c566786b09aa50f2df391fdb06f48ac64c4b8356b0` | `e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855` |
+| `DISC-04` | `3dd86c235bf61cd775d87bbb774194f72a2228b41f047966ea348a912e3e1a9a` | `80a8fd2e547070ba183feec9e440aaa841968786640daab05cf32221ba962f07` | `9137c54f0c92e2e6aa0ed9c566786b09aa50f2df391fdb06f48ac64c4b8356b0` | `e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855` |
+| `DISC-05` | `0aee44238d72bf7eba0187228afc1ed9580b2eadb25a5867c1d82ed65c4f6b43` | `ad6e92083a81b496ce9e39688dfb072ed866d89e2c4ea61e84cdf6b94f2eb697` | `9137c54f0c92e2e6aa0ed9c566786b09aa50f2df391fdb06f48ac64c4b8356b0` | `e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855` |
+| `DISC-06` | `93586a275c7db13a2d616e426970b3325d15fd1222a233a6e66dca09e817f8e0` | `eae197da96a60859e459589d40b19a0950b59588c77ce37709c1b70f5e258874` | `9137c54f0c92e2e6aa0ed9c566786b09aa50f2df391fdb06f48ac64c4b8356b0` | `e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855` |
+| `DISC-07` | `02c511a46a6da89090079d03fc97f0365f6ab1c02289f405f5ce276e1b3d453a` | `a09d8fd396c11ffb7d04acc71d658abe165d9235986c09747ccd8c610477b871` | `9137c54f0c92e2e6aa0ed9c566786b09aa50f2df391fdb06f48ac64c4b8356b0` | `e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855` |
+| `DISC-08` | `c59a4eda7251caf1dd476f529f96963e2688f6359cdcff3d565846273d44321c` | `f8ca438937ec220669cf6c9cf038d3f87a7b883005527c72c0ea7a90571bf1fc` | `9137c54f0c92e2e6aa0ed9c566786b09aa50f2df391fdb06f48ac64c4b8356b0` | `e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855` |
+| `DISC-09` | `251ee53d13297d00cc5b4dc9b9fb1e9e55afcfa27ce6dcc00788f0a286d4840a` | `7aa4fb2a88cc4d4caf1921f2191fff1e74b88b8cd1500c569c245b5fd2654e93` | `9137c54f0c92e2e6aa0ed9c566786b09aa50f2df391fdb06f48ac64c4b8356b0` | `e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855` |
+| `DISC-10` | `fc31b37281d557f662d811962bb2757bafb2b20850110668b1deff98ea6bbaed` | `3d0ab797a949cbb0a874ba2be4b1b5e2686a2d55dfc36c91452c2b999c46af6c` | `9137c54f0c92e2e6aa0ed9c566786b09aa50f2df391fdb06f48ac64c4b8356b0` | `e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855` |
+| `DISC-11` | `d81f9df5eb63441ed4fb97a3a53fbd20903345703501020f6fe67bb52b9fa402` | `8f83f439a2fe57c5e8ebfb2a63cde9fd5fe1c30c0032c2371b76a35fba4506d8` | `200b06fcd313fc0f911a24f11c0a78be7696e8e5ad9c03c7c05070e81001c866` | `e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855` |
 
 All eleven controls require five fresh `gpt-5.6-sol` processes at high effort and five at low effort, maximum concurrency three, under the shared read-only/no-agents transport.
 The orchestrator must add run date, CLI version, attempt and infrastructure-error counts, repetition outputs and hashes, manual scores, and scorer adjudications.
-Every new required route is watched target behavior: its Sol-high control must be RED and its later candidate must reach 5/5.
+`DISC-01`–`DISC-04` and `DISC-06`–`DISC-11` are watched targets:
+their Sol-high controls must be RED and their later candidates must reach 5/5.
+`DISC-05` is repaired preservation because research was already required under its
+historical rubric; both fresh high and low controls must pass 5/5.
 
 The rubric first requires a JSON array whose names are in ascending alphabetical
 order, then compares its selected-name set with the allowed sets above.

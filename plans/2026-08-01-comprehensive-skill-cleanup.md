@@ -1119,10 +1119,12 @@ complete. Final repository verification and no-PR completion are recorded above.
 
 - Modify: `skills/disciplined-research/SKILL.md`
 - Modify: `skills/disciplined-development/SKILL.md`
+- Modify: `skills/sweeping-stale-references/SKILL.md`
 - Modify: `README.md`
 - Modify: `ARCHITECTURE.md`
 - Modify: `skill-validation/disciplined-research.md`
 - Modify: `skill-validation/disciplined-development.md`
+- Modify: `skill-validation/sweeping-stale-references.md`
 - Modify: `skill-validation/skill-discovery.md`
 - Modify: `skill-validation/README.md`
 - Modify: `plans/specs/2026-08-01-comprehensive-skill-cleanup-design.md`
@@ -1162,11 +1164,13 @@ Absent, unreadable, malformed, and datum-missing sources share the same no-suppo
 Large claim sets receive no sampling exemption, and the one-source/many-claims rule changes disclosure grouping rather than verification coverage.
 The frozen tasks remain in their declared domains; portability means reliable execution across agent and model families on those same tasks, not behavior on unrelated tasks.
 
-**Pre-draft contract-freeze record (2026-08-09):** the live sweep found four later
+**Pre-draft contract-freeze record (2026-08-09):** the live sweep found five later
 prose repairs: `skills/disciplined-research/SKILL.md`, parent Principle 6 in
-`skills/disciplined-development/SKILL.md`, `README.md`, and `ARCHITECTURE.md`.
-No other skill prose narrows research applicability: `sweeping-stale-references`
-uses “load-bearing” only for its own sweep trigger, and
+`skills/disciplined-development/SKILL.md`, the ownership boundary in
+`skills/sweeping-stale-references/SKILL.md`, `README.md`, and
+`ARCHITECTURE.md`. The sweeping skill's boundary assigns initial grounding only
+for a “load-bearing fact,” which narrows the research companion even though the
+sweeping trigger itself remains development-specific.
 `dispatching-development-subagents` delegates claim verification without narrowing
 it. `CLAUDE.md`, consumer snippets, hook docs/code, config, and archived plans contain
 names, independent rules, or historical evidence rather than another live bound.
@@ -1176,7 +1180,12 @@ and `WER-07` are classified research **required** because every complete request
 output states factual claims. User-supplied origin, mechanical transformation, and
 private/scratch destination do not change that classification. Exact repaired
 prompts, rubrics, contexts, and base-control hashes are frozen in owning records.
-Prior evidence remains historical. Fresh validation-design review, five-high/five-low
+The changed routing promises plus `DISC-11`, `DR-04`, and `DR-05` are watched
+targets. `DD-02`, `DD-03`, `DSD-01`, `DSD-02`, `OWN`, and `WER-07`
+are repaired preservation contracts because the old skill bodies already govern
+their factual plan, dispatch, workflow, and ownership claims; both high and low
+controls must pass 5/5. `DD-01` remains a watched target because vignette A adds
+the newly universal route. Prior evidence remains historical. Fresh validation-design review, five-high/five-low
 controls, watched-RED decisions, candidate GREENs, and prose approvals remain
 orchestrator-owned and pending; this preparation ran no evaluator.
 
@@ -1194,26 +1203,27 @@ orchestrator-owned and pending; this preparation ran no evaluator.
 - [ ] Freeze exact prompts, fixtures, rubrics, supplied contexts, control bundles, and high/low metadata for `DISC-11`, `DR-04`, and `DR-05`.
   Run five Sol-high and five Sol-low control repetitions for each new target under fresh read-only/no-agents transport with maximum concurrency three.
   Require a watched Sol-high RED before using a target; record the Sol-low outcome without requiring it to fail.
-- [ ] With `superpowers:writing-skills`, draft complete proposed versions of `disciplined-research` and `disciplined-development` plus the complete documentation-only repairs.
+- [ ] With `superpowers:writing-skills`, draft complete proposed versions of `disciplined-research`, `disciplined-development`, and `sweeping-stale-references` plus the complete documentation-only repairs.
   For every section and each whole skill, record whether it is necessary and whether a simpler formulation preserves intent and effectiveness.
-  Show every complete proposed skill and wait for approval before applying any skill prose.
+  Show every complete proposed skill, including the complete sweeping skill, and wait for approval before applying any skill prose.
 - [ ] Apply only the approved complete drafts.
   In `disciplined-research`, retain acquire/verify, source ranking, recency/applicability, conflict handling, and pressure resistance where they serve the universal rule; remove the load-bearing, destination, and scratch exceptions rather than renaming them.
   In `disciplined-development`, align Principle 6 and its routing language without copying the child procedure.
+  In `sweeping-stale-references`, remove the load-bearing narrowing from the research ownership boundary without changing the sweeping trigger or procedure.
   Make `README.md` and `ARCHITECTURE.md` describe the executable behavior accurately.
-- [ ] Run the union of both changed skills' complete active suites five times on cold Sol high: `DISC-01`–`DISC-11`, `DR-01`–`DR-05`, `DD-01`–`DD-03`, `DSD-01`, `DSD-02`, `OWN`, and `WER-07`.
-  This is 115 responses across 23 unique scenarios.
+- [ ] Run the union of all three changed skills' complete active suites five times on cold Sol high: `DISC-01`–`DISC-11`, `DR-01`–`DR-05`, `DD-01`–`DD-03`, `DSD-01`, `DSD-02`, `OWN`, `WER-07`, and `SSR-01`–`SSR-03`, `SSR-05`.
+  This is 135 responses across 27 unique scenarios.
   Score complete artifacts in supplied context; any scenario below 5/5 pauses the slice for failure classification.
-- [ ] Run cold editorial and skill-writing review of both skills.
+- [ ] Run cold editorial and skill-writing review of all three skills.
   Show any proposed prose fix and wait for approval; after an approved fix, restart every affected scenario and both in-place approval gates.
 - [ ] Stage only the approved behavior slice, then run a deep staged `adversarial-review` against the complete plan and governing documents.
   Any finding-driven skill edit returns to proposed-draft approval, affected validation, cold review, and final in-place approval before restaging.
-- [ ] Show both reviewed final skills in place and wait for approval.
+- [ ] Show all three reviewed final skills in place, including the complete sweeping skill, and wait for approval.
 - [ ] Run the hook, installer, and research pytest suites; rerun the routing/reference sweep and exact local-link command; and run `git diff --check` plus `git diff --cached --check`.
   After approval, commit the behavior slice separately as `docs(skills): ground every factual claim`.
   Do not open a PR.
 - [ ] Materialize the behavior commit as Task 18's immutable immediate readability control.
-  Record both changed skills' control/current word counts and hashes, then resume the behavior-preserving cleanup below from a new research-skill section inventory and complete draft.
+  Record all three changed skills' control/current word counts and hashes, then resume the behavior-preserving cleanup below from new research- and sweeping-skill section inventories and complete drafts.
 
 ### Task 18: Clean `disciplined-research`
 
