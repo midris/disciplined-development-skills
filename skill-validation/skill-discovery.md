@@ -8,14 +8,15 @@ These preservation and approved target scenarios route from the nine frontmatter
 Evaluators receive the descriptions and one request, never skill bodies or scoring criteria.
 All scenarios use five fresh `gpt-5.6-sol` high-effort evaluators through the probed read-only, no-subagents transport.
 
-Task 18A has frozen the pre-draft contracts but has not changed tracked descriptions
-or run the required control backfills.
+Task 18A froze the pre-draft contracts without changing tracked descriptions and
+completed the required repaired control backfills.
 The exact universal trigger makes `disciplined-research` required in every
 `DISC-01`–`DISC-10` request because each requested answer or artifact states at least
 one factual claim; origin in supplied user text, mechanical transformation, and
 private or scratch destination create no exemption.
-The prior allowed sets and results below remain historical evidence under their own
-rubrics until the orchestrator completes the fresh Sol-high and Sol-low controls.
+The prior allowed sets and results below remain explicitly historical evidence under
+their own rubrics; the Task 18A repaired allowed sets and final controls are the
+active record.
 
 ## Supplied description context
 
@@ -99,12 +100,13 @@ Those results are never rescored against the repaired contracts below.
 Required names are positive routing, prohibited names are negative routing, and optional names record tolerated ambiguity without claiming positive protection.
 The allowed-set column therefore maps each scenario to all nine descriptions: required, prohibited, or explicitly ambiguous.
 All are discovery-type scenarios protecting each skill’s frontmatter `description`.
-The Task 18A role split is: target RED for `DISC-01`, `DISC-02`, `DISC-03`,
-`DISC-06`, `DISC-07`, `DISC-08`, `DISC-09`, and `DISC-11`; preservation for
-`DISC-04`, `DISC-05`, and `DISC-10`. Research remains required in every case.
-`DISC-04` and `DISC-05` preserve already-selected research after correcting the
-optional response-only `concise-writing` allowance. `DISC-10` preserves its exact
-5/5 Sol-high control; Sol-low is robustness evidence only.
+The final Task 18A role split is target RED for `DISC-01`, `DISC-02`, `DISC-03`,
+`DISC-04`, `DISC-06`, `DISC-07`, `DISC-08`, `DISC-09`, and `DISC-11`;
+preservation for `DISC-05` and `DISC-10`. Research remains required in every case.
+`DISC-04` is target behavior because research changed from optional to required;
+its post-freeze 4/5 high result is a watched RED. `DISC-05` preserves the exact
+research route after allowing response-only `concise-writing`; `DISC-10` preserves
+its exact 5/5 Sol-high control. Sol-low is robustness evidence only.
 The supplied skill context is the description block above; no body, sibling procedure, or scoring rubric is supplied.
 
 | ID | Exact request | Allowed output sets in the evaluator-withheld rubric | Primary protected promise | Rerun trigger |
@@ -130,13 +132,13 @@ The combined exact withheld rubric is
 [frozen here](fixtures/skill-discovery/rubrics/task-18a-disc-01-10.md) at SHA-256
 `358df656cd7e48cb96c2ac24a41f331d50b1a315433a6cc1dc905c51069ad7cc`.
 The immutable historical rubric remains unchanged because its own contract was not
-defective; Task 18A repairs only the active rubric. Deterministic rescoring of the
-accepted frozen output bytes under that repaired rubric gives `DISC-02` 0/5 at
-both efforts, `DISC-04` 5/5 high and 4/5 low, and `DISC-05` 5/5 at both efforts.
-High is the preservation gate; low is recorded robustness only. Only the three
-semantically repaired rows (`DISC-02`, `DISC-04`, and `DISC-05`) require a
-post-freeze rerun; the shared table-file hash does not invalidate the other eight
-row contracts.
+defective; Task 18A repairs only the active rubric. Pre-run deterministic rescoring
+of historical bytes gave `DISC-02` 0/5 at both efforts, `DISC-04` 5/5 high and
+4/5 low, and `DISC-05` 5/5 at both efforts. The required fresh post-freeze arm is
+now complete: `DISC-02` is 0/5 high and low, `DISC-04` is 4/5 high and 3/5 low,
+and `DISC-05` is 5/5 high and low. High is the preservation gate; low is recorded
+robustness only. The shared table-file hash does not invalidate the other eight
+accepted row contracts.
 
 All eleven scenarios have separately materialized complete control and target prompts.
 Within each scenario, the prompts differ only in the research-description line and
@@ -156,15 +158,23 @@ have no separate skill-body bundle.
 | `DISC-10` | `fc31b37281d557f662d811962bb2757bafb2b20850110668b1deff98ea6bbaed` | `3d0ab797a949cbb0a874ba2be4b1b5e2686a2d55dfc36c91452c2b999c46af6c` | `358df656cd7e48cb96c2ac24a41f331d50b1a315433a6cc1dc905c51069ad7cc` | `e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855` |
 | `DISC-11` | `d81f9df5eb63441ed4fb97a3a53fbd20903345703501020f6fe67bb52b9fa402` | `8f83f439a2fe57c5e8ebfb2a63cde9fd5fe1c30c0032c2371b76a35fba4506d8` | `200b06fcd313fc0f911a24f11c0a78be7696e8e5ad9c03c7c05070e81001c866` | `e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855` |
 
-`DISC-02`, `DISC-04`, and `DISC-05` require five fresh `gpt-5.6-sol` processes
+`DISC-02`, `DISC-04`, and `DISC-05` completed five fresh `gpt-5.6-sol` processes
 at high effort and five at low effort, maximum concurrency three, under the shared
-read-only/no-agents transport (30 slots). The other eight accepted controls remain
-exact evidence.
+read-only/no-agents transport (30 slots). The accepted root is
+`/private/tmp/dd-task18a-control-postfreeze-f59608a`; freeze SHA-256 is
+`0119bdb403fdb89978ed6c2f34bae8de5db13c392071b97b06687d81f9be0210`
+and plan SHA-256 is
+`4de14a3e7531c8cf0e6258f82c9c8050b849ca9d0f0f8c1c633248dafcd81b4b`.
+All selected a1 with zero retries/errors. The other eight accepted controls remain
+exact evidence from prior full-matrix root
+`/private/tmp/dd-task18a-control-backfill-bd60966-escalated`, surviving freeze
+SHA-256 `4671cfef15368088eaa554fdb67e5bea115d7a4a9a9610f7e07d16b160539b2d`,
+accepted plan SHA-256
+`60b753fe17539876893f367763d59bbd53b7f584a9001217ffe07bbd607c2ce3`.
 Target REDs are `DISC-01`, `DISC-02`, `DISC-03`, `DISC-06`, `DISC-07`,
-`DISC-08`, `DISC-09`, and `DISC-11`; their Sol-high controls must be RED and
-their later candidates must reach 5/5. `DISC-04`, `DISC-05`, and `DISC-10` are
-preservation: repaired high scores are 5/5 for all three. Low scores (4/5, 5/5,
-and 5/5 respectively) are robustness evidence, not separate gates.
+`DISC-04`, `DISC-08`, `DISC-09`, and `DISC-11`; their Sol-high controls are RED
+and their later candidates must reach 5/5. `DISC-05` and `DISC-10` are
+preservation at 5/5 high. Low scores are robustness evidence, not separate gates.
 
 The rubric first requires a JSON array whose names are in ascending alphabetical
 order, then compares its selected-name set with the allowed sets above.

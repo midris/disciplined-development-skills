@@ -58,6 +58,14 @@ This is a target RED because universal acquisition, verification, and mapped
 disclosure are new positive promises. Accepted controls are 0/5 at both efforts.
 The unchanged prompt and bundle remain scorable and the accepted 0/5 high and low
 controls remain exact evidence; classification alone triggers no rerun.
+The accepted unchanged/no-rerun control comes from full-matrix root
+`/private/tmp/dd-task18a-control-backfill-bd60966-escalated`, with surviving
+freeze SHA-256
+`4671cfef15368088eaa554fdb67e5bea115d7a4a9a9610f7e07d16b160539b2d`
+and accepted plan SHA-256
+`60b753fe17539876893f367763d59bbd53b7f584a9001217ffe07bbd607c2ce3`.
+All selected attempts were a1 with zero retries/errors under Codex CLI 0.147.0,
+read-only/no-agents transport.
 
 ## Replay
 

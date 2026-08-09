@@ -43,11 +43,28 @@ The repaired prompts, rubrics, supplied bundles, and hashes are frozen in the
 [fixture manifest](fixtures/dispatching-development-subagents/README.md#task-18a-pre-draft-freeze).
 Old results remain historical under the old verified-only/no-disclosure contract.
 Both are target REDs because universal acquisition, verification, and mapped
-disclosure are new conjunctive promises. Accepted controls are 0/5 high and 0/5
-low for each. `DSD-01`'s new primary fixture and prompt require fresh post-freeze
-high/low controls. `DSD-02` retains its accepted exact 0/5 high and low evidence;
-classification alone does not trigger a rerun. High is the candidate gate; low
-records robustness only.
+disclosure are new conjunctive promises. `DSD-01` completed its post-freeze arm at
+0/5 high (F/F/F/F/F) and 1/5 low (F/F/F/F/P) under final contextful scoring.
+`DSD-02` retains its accepted exact 0/5 high and low evidence; classification alone
+did not trigger a rerun. High is the candidate gate; low records robustness only.
+The shared final aggregate is
+`c801090c6252298da41954663dd3f671164cd77fceaa77abf71583fa43fa2f60`;
+the abbreviated `289ef0fd…` identifies historical transport-defective evidence
+only. `DSD-01`'s affected-rerun root
+`/private/tmp/dd-task18a-control-postfreeze-f59608a` has freeze
+`0119bdb403fdb89978ed6c2f34bae8de5db13c392071b97b06687d81f9be0210`
+and plan `4de14a3e7531c8cf0e6258f82c9c8050b849ca9d0f0f8c1c633248dafcd81b4b`.
+`DSD-02`'s unchanged/no-rerun evidence instead comes from
+`/private/tmp/dd-task18a-control-backfill-bd60966-escalated`, surviving freeze
+`4671cfef15368088eaa554fdb67e5bea115d7a4a9a9610f7e07d16b160539b2d`,
+accepted plan
+`60b753fe17539876893f367763d59bbd53b7f584a9001217ffe07bbd607c2ce3`.
+The contextful scorer root
+`/private/tmp/dd-task18a-control-scoring-contextful-f59608a` has freeze
+`a72902e254706d2a13c9ff573bcffff6469271fdaf914f1b9e55db6a36fa0675`
+and plan `cfb8e3f7949afc2b35407abd203fdd02767fdc1f698081f2fa952156f2f801bb`.
+All selected attempts were a1 with zero retries/errors under Codex CLI 0.147.0,
+read-only/no-agents transport.
 
 ### Historical pre-Task-18A result lifecycle
 

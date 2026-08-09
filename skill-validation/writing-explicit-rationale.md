@@ -259,11 +259,23 @@ Its canonical content-manifest SHA-256 is
 after adding four immutable `project/wer-07/` primary sources.
 Prompt SHA-256 is `b4fbdd831bc8d569a4fe61fcb9898d112b44089779c9b4329c30e1df51ece92f`;
 rubric SHA-256 is `877f8a42da7696dcb97d76438c66eb2699e22c71ba5d41b51ee2a445c1ee769f`.
-Accepted artifacts have corrected overall scores of 0/5 high and 0/5 low because
-none discloses sources. Their independent rationale-fidelity shadow is 3/5 high
-and 4/5 low. Universal disclosure is a new positive promise, so this is a target
-RED. The new fixture/prompt contract requires a fresh post-freeze high/low rerun;
-high is the candidate gate and low is robustness evidence only.
+The pre-repair artifacts and their manual shadows remain historical. The completed
+post-freeze contextful arm is 2/5 high (F/P/F/F/P) and 3/5 low (P/F/P/F/P).
+Universal disclosure is a new positive promise, so this remains a target RED.
+High is the candidate gate and low is robustness evidence only. The final scorer
+root is `/private/tmp/dd-task18a-control-scoring-contextful-f59608a`, with freeze
+SHA-256 `a72902e254706d2a13c9ff573bcffff6469271fdaf914f1b9e55db6a36fa0675`
+and plan SHA-256
+`cfb8e3f7949afc2b35407abd203fdd02767fdc1f698081f2fa952156f2f801bb`;
+aggregate SHA-256 is
+`c801090c6252298da41954663dd3f671164cd77fceaa77abf71583fa43fa2f60`.
+The control root `/private/tmp/dd-task18a-control-postfreeze-f59608a` has freeze
+`0119bdb403fdb89978ed6c2f34bae8de5db13c392071b97b06687d81f9be0210`
+and plan `4de14a3e7531c8cf0e6258f82c9c8050b849ca9d0f0f8c1c633248dafcd81b4b`.
+All selected attempts were a1 with zero retries/errors under Codex CLI 0.147.0,
+read-only/no-agents transport.
+The context-stripped `289ef0fd…` aggregate is transport-defective historical
+evidence only.
 
 | WER-07 primary fixture member | SHA-256 |
 |---|---|

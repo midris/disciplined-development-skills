@@ -66,15 +66,24 @@ after adding the two immutable `project/dd-03/sources/` files.
 
 | ID | Prompt SHA-256 | Rubric SHA-256 | Sol-high control | Sol-low control |
 |---|---|---|---|---|
-| `DD-01` | `0e2e3babbffd53b7ba5c4d55447322c9697fb99ada29d1c26c28d8cb424cb685` | `cdd12bb4d8cd9d072e0d8fbfbf1461dfd4621503305357cac809d58bab2def8c` | Prior 0/5; post-freeze rerun pending | Prior 0/5; post-freeze rerun pending |
-| `DD-02` | `5136c1a72743b366c0d9f8da6b41defb3db1034c9e1263c77cd590c84a0794cc` | `1d24397de093e69c5e50eb81879d3dc0261c709c5db6607ddfe158f0ecb324ca` | Corrected overall 0/5; non-research orchestration shadow 5/5; rerun pending | Corrected overall 0/5; rerun pending |
-| `DD-03` | `835545bde4c74bbfc30b83dfebe5e5ffc6a848fae62e4bfecc1d55770fa963b3` | `225bd920689a72bbd52a4e800e2029097d270d244b591e70404e4db7305699bb` | Prior 0/5; post-freeze rerun pending | Prior 0/5; post-freeze rerun pending |
+| `DD-01` | `0e2e3babbffd53b7ba5c4d55447322c9697fb99ada29d1c26c28d8cb424cb685` | `cdd12bb4d8cd9d072e0d8fbfbf1461dfd4621503305357cac809d58bab2def8c` | **0/5 target RED: F/F/F/F/F** | **0/5 robustness: F/F/F/F/F** |
+| `DD-02` | `5136c1a72743b366c0d9f8da6b41defb3db1034c9e1263c77cd590c84a0794cc` | `1d24397de093e69c5e50eb81879d3dc0261c709c5db6607ddfe158f0ecb324ca` | **1/5 target RED: F/F/P/F/F** | **1/5 robustness: F/P/F/F/F** |
+| `DD-03` | `835545bde4c74bbfc30b83dfebe5e5ffc6a848fae62e4bfecc1d55770fa963b3` | `225bd920689a72bbd52a4e800e2029097d270d244b591e70404e4db7305699bb` | **0/5 target RED: F/F/F/F/F** | **0/5 robustness: F/F/F/F/F** |
 
 All three are target REDs because universal acquisition, verification, and mapped
 disclosure add positive promises. High is the acceptance configuration; low is
-recorded robustness, not a separate gate. Prompt changes make all old controls
-historical and require fresh high/low post-freeze runs. The repository commit that
-freezes these new tracked bytes is intentionally pending orchestrator review.
+recorded robustness, not a separate gate. The completed post-freeze root is
+`/private/tmp/dd-task18a-control-postfreeze-f59608a` (freeze
+`0119bdb403fdb89978ed6c2f34bae8de5db13c392071b97b06687d81f9be0210`, plan
+`4de14a3e7531c8cf0e6258f82c9c8050b849ca9d0f0f8c1c633248dafcd81b4b`).
+Final application verdicts use the contextful scorer root
+`/private/tmp/dd-task18a-control-scoring-contextful-f59608a` (freeze
+`a72902e254706d2a13c9ff573bcffff6469271fdaf914f1b9e55db6a36fa0675`, plan
+`cfb8e3f7949afc2b35407abd203fdd02767fdc1f698081f2fa952156f2f801bb`)
+and aggregate
+`c801090c6252298da41954663dd3f671164cd77fceaa77abf71583fa43fa2f60`.
+The context-stripped aggregate `289ef0fd…` is historical transport-defective
+evidence only.
 
 | Primary fixture member | SHA-256 |
 |---|---|

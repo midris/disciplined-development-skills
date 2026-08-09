@@ -78,6 +78,19 @@ These accepted arms used five fresh `gpt-5.6-sol` processes at each effort,
 maximum concurrency three, with zero retries under the shared read-only/no-agents
 transport. Neither contract changed in round 5, so no rerun is pending.
 
+The final Task 18A closure classifies research as required in all 20 scenarios.
+`DR-04` is one of 17 target REDs; `DR-05` is one of three preservation cells.
+Their exact accepted results above remain authoritative because neither contract
+was in the eight-scenario repaired rerun. Their accepted evidence comes from the
+prior full-matrix root
+`/private/tmp/dd-task18a-control-backfill-bd60966-escalated`, with surviving
+freeze SHA-256
+`4671cfef15368088eaa554fdb67e5bea115d7a4a9a9610f7e07d16b160539b2d`
+and accepted plan SHA-256
+`60b753fe17539876893f367763d59bbd53b7f584a9001217ffe07bbd607c2ce3`.
+Low-effort evidence is robustness-only; the preservation gate is the exact 5/5
+high result.
+
 ### Immutable bundle manifests
 
 The `DR-01` complete control starts from the Task 1 nine-skill archive SHA-256
@@ -349,10 +362,10 @@ acquired, verified, and source-disclosed without a load-bearing, destination,
 scratch, project/external, scale, or other exclusion.
 An unsupported claim must not be stated as fact or paired with a source that lacks
 the claimed datum.
-Task 18A will reclassify `DISC-01`–`DISC-10`, add watched targets `DISC-11` and
-`DR-04`, add `DR-05` preservation, align parent Principle 6 and public summaries through their approval
-gates, and establish its separately committed GREEN as Task 18's new immediate
-readability control.
+Task 18A reclassified `DISC-01`–`DISC-10`, froze watched targets `DISC-11` and
+`DR-04`, and froze `DR-05` preservation. The later behavior slice will align
+parent Principle 6 and public summaries through their approval gates and establish
+its separately committed GREEN as Task 18's new immediate readability control.
 
 ## Preserved historical evidence
 

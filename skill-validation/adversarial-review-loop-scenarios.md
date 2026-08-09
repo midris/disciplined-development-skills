@@ -44,6 +44,14 @@ trigger a rerun.
 Exact prompt, rubric, bundle, and control metadata are frozen in the
 [fixture manifest](fixtures/adversarial-review-loop/README.md#task-18a-own-pre-draft-freeze).
 The prior results remain historical under the old contract.
+The accepted unchanged/no-rerun control comes from full-matrix root
+`/private/tmp/dd-task18a-control-backfill-bd60966-escalated`, with surviving
+freeze SHA-256
+`4671cfef15368088eaa554fdb67e5bea115d7a4a9a9610f7e07d16b160539b2d`
+and accepted plan SHA-256
+`60b753fe17539876893f367763d59bbd53b7f584a9001217ffe07bbd607c2ce3`.
+All selected attempts were a1 with zero retries/errors under Codex CLI 0.147.0,
+read-only/no-agents transport.
 
 ## Historical suite disposition
 

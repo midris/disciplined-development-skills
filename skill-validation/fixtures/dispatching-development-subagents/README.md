@@ -47,8 +47,26 @@ after adding the three immutable `project/dsd-01/` primary sources.
 
 | ID | Prompt SHA-256 | Rubric SHA-256 | Sol-high control | Sol-low control |
 |---|---|---|---|---|
-| `DSD-01` | `b0d2273f25c29266f2e8aa1b75f6cc760aa6dc79d78f84f6fa8c3a7f82824ccb` | `39f2a45f311bd772ca087db6b1143b3572c23262d656b27675299e6b1d14d1b5` | Prior 0/5; rerun pending | Prior 0/5; rerun pending |
+| `DSD-01` | `b0d2273f25c29266f2e8aa1b75f6cc760aa6dc79d78f84f6fa8c3a7f82824ccb` | `39f2a45f311bd772ca087db6b1143b3572c23262d656b27675299e6b1d14d1b5` | **0/5 target RED: F/F/F/F/F** | **1/5 robustness: F/F/F/F/P** |
 | `DSD-02` | `750b43ea0d12d109c70e996578618da5d79717c2716b6878db0e4812a5226c4c` | `7c0fd67c6b5af68960c0276202e5dc350b0b4912aeaacd70ea61ea8871264f69` | **0/5 target RED accepted; no rerun** | **0/5 robustness accepted; no rerun** |
+
+The changed `DSD-01` control is rooted at
+`/private/tmp/dd-task18a-control-postfreeze-f59608a`, with freeze SHA-256
+`0119bdb403fdb89978ed6c2f34bae8de5db13c392071b97b06687d81f9be0210`
+and plan SHA-256
+`4de14a3e7531c8cf0e6258f82c9c8050b849ca9d0f0f8c1c633248dafcd81b4b`.
+The unchanged/no-rerun `DSD-02` evidence comes from
+`/private/tmp/dd-task18a-control-backfill-bd60966-escalated`, surviving freeze
+`4671cfef15368088eaa554fdb67e5bea115d7a4a9a9610f7e07d16b160539b2d`,
+accepted plan
+`60b753fe17539876893f367763d59bbd53b7f584a9001217ffe07bbd607c2ce3`.
+Final `DSD-01` adjudication uses scorer root
+`/private/tmp/dd-task18a-control-scoring-contextful-f59608a`, freeze
+`a72902e254706d2a13c9ff573bcffff6469271fdaf914f1b9e55db6a36fa0675`,
+plan `cfb8e3f7949afc2b35407abd203fdd02767fdc1f698081f2fa952156f2f801bb`,
+and aggregate `c801090c6252298da41954663dd3f671164cd77fceaa77abf71583fa43fa2f60`.
+All selected attempts were a1 with zero retries/errors under Codex CLI 0.147.0,
+read-only/no-agents transport.
 
 | DSD-01 primary fixture member | SHA-256 |
 |---|---|

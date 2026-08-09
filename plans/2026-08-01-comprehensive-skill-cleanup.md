@@ -858,11 +858,11 @@ The frozen 81-row/405-slot result remains historical fact and is not recomputed.
 Future active closure contains 82 scenarios: 60 preservation and 22 target rows, or
 410 five-repetition slots. Task 14 retires `LP-04` and Task 15 retires `SSR-04`
 without altering their frozen outcomes; Task 17 adds `CW-17`–`CW-19`.
-Task 18A will add target scenarios `DISC-11` and `DR-04` plus preservation
-scenario `DR-05` after all routing and application targets are GREEN, bringing the future final closure to 85 scenarios or
-425 five-repetition slots without changing this historical Task 11 result.
-The pre-draft `DISC-01`–`DISC-10` reclassification will determine the final
-preservation/target split.
+Task 18A has frozen target scenarios `DISC-11` and `DR-04` plus preservation
+scenario `DR-05`. Its pre-draft reclassification produced the final 17-target,
+three-preservation split. After all routing and application targets are GREEN,
+these additions bring the future final closure to 85 scenarios or 425
+five-repetition slots without changing this historical Task 11 result.
 
 **Task 11 Gate 5 completion (2026-08-07).** The orchestrator's
 whole-repository self-review found no P0–P2 issues after the task-level review
@@ -1183,36 +1183,55 @@ and `WER-07` are classified research **required** because every complete request
 output states factual claims. User-supplied origin, mechanical transformation, and
 private/scratch destination do not change that classification. Exact repaired
 prompts, rubrics, contexts, and base-control hashes are frozen in owning records.
-The approved split is 16 targets and four preservation cells. Targets are
-`DISC-01`, `DISC-02`, `DISC-03`, `DISC-06`, `DISC-07`, `DISC-08`, `DISC-09`,
-`DISC-11`, `DR-04`, `DD-01`, `DD-02`, `DD-03`, `DSD-01`, `DSD-02`, `OWN`, and
-`WER-07`. Preservation is `DISC-04`, `DISC-05`, `DISC-10`, and `DR-05`.
-Research is required in all 20. `DISC-04` and `DISC-05` preserve already-selected
-research after making response-only `concise-writing` optional; their repaired
-high scores are 5/5. `DISC-10` and `DR-05` are exact 5/5 high preservation.
-Sol-low is recorded robustness only. New positive promises are targets, never
-retroactive preservation. Exactly `DISC-02`, `DISC-04`, `DISC-05`, `DD-01`,
-`DD-02`, `DD-03`, `DSD-01`, and `WER-07` require fresh post-freeze high/low
-controls (80 evaluator slots); only the five changed application contracts require
-fresh high/low qualitative scoring (10 scorer jobs). The other 12 accepted
-controls, including classification-only targets `DSD-02` and `OWN`, remain exact
-evidence. Skill drafting stays blocked until the 80/10 backfill finishes. This
-round launches no model.
+The final split is 17 targets and three preservation cells. Targets are
+`DISC-01`, `DISC-02`, `DISC-03`, `DISC-04`, `DISC-06`, `DISC-07`, `DISC-08`,
+`DISC-09`, `DISC-11`, `DR-04`, `DD-01`, `DD-02`, `DD-03`, `DSD-01`, `DSD-02`,
+`OWN`, and `WER-07`. Preservation is `DISC-05`, `DISC-10`, and `DR-05`.
+Research is required in all 20. Post-freeze controls are complete: `DISC-02`
+scored 0/5 high and low; `DISC-04` scored 4/5 high and 3/5 low and is a target RED
+because research changed from optional to required; `DISC-05` scored 5/5 at both
+efforts and is preservation. `DISC-10` and `DR-05` retain exact 5/5 high
+preservation evidence. Sol-low is recorded robustness only.
+
+The accepted affected control root is
+`/private/tmp/dd-task18a-control-postfreeze-f59608a`, with freeze SHA-256
+`0119bdb403fdb89978ed6c2f34bae8de5db13c392071b97b06687d81f9be0210`
+and 80-slot plan SHA-256
+`4de14a3e7531c8cf0e6258f82c9c8050b849ca9d0f0f8c1c633248dafcd81b4b`.
+The other 12 unchanged/no-rerun scenarios retain accepted evidence from the prior
+full-matrix root `/private/tmp/dd-task18a-control-backfill-bd60966-escalated`,
+whose surviving freeze SHA-256 is
+`4671cfef15368088eaa554fdb67e5bea115d7a4a9a9610f7e07d16b160539b2d`
+and accepted plan SHA-256 is
+`60b753fe17539876893f367763d59bbd53b7f584a9001217ffe07bbd607c2ce3`.
+Contextful application scoring is final at
+`/private/tmp/dd-task18a-control-scoring-contextful-f59608a`: freeze
+`a72902e254706d2a13c9ff573bcffff6469271fdaf914f1b9e55db6a36fa0675`,
+plan `cfb8e3f7949afc2b35407abd203fdd02767fdc1f698081f2fa952156f2f801bb`,
+aggregate `c801090c6252298da41954663dd3f671164cd77fceaa77abf71583fa43fa2f60`.
+All controls and scorers selected a1 with zero retries/errors under Codex CLI
+0.147.0, read-only/no-agents transport. The context-stripped `289ef0fd…`
+aggregate is transport-defective historical evidence only. Skill drafting is now
+unblocked by control evidence but remains pending the explicit draft/approval gate.
 
 - [x] Run a pre-draft routing/reference sweep across live skill, architecture, README, plan, and validation surfaces.
   Record every affected file before proposing prose.
   Treat `README.md`, `ARCHITECTURE.md`, and parent Principle 6 as required repairs; if the sweep finds another skill-prose dependency, add its complete active suite and both approval gates before proceeding.
-- [ ] Reclassify `DISC-01` through `DISC-10` individually against the exact new description with a fresh Sol-high validation-design reviewer.
+- [x] Reclassify `DISC-01` through `DISC-10` individually against the exact new description with a fresh Sol-high validation-design reviewer.
   Record for every ID whether `disciplined-research` is required, optional, or prohibited.
   Apply pre-approved prompt, fixture, or rubric repairs before skill prose changes, freeze each changed contract, and run its five Sol-high plus five Sol-low control backfills under the global post-freeze rule.
   Treat a changed positive-routing promise as approved target behavior with a watched Sol-high control RED and later 5/5 candidate GREEN, not as preservation imposed retroactively on the old description.
-- [ ] Reclassify the remaining parent-suite members `DD-01`, `DD-02`, `DD-03`, `DSD-01`, `DSD-02`, `OWN`, and `WER-07` individually before drafting the parent change.
+- [x] Reclassify the remaining parent-suite members `DD-01`, `DD-02`, `DD-03`, `DSD-01`, `DSD-02`, `OWN`, and `WER-07` individually before drafting the parent change.
   Check every prompt, fixture, rubric, affected-skill mapping, and supplied bundle for a load-bearing-only research assumption, including `DD-01` vignette A's explicit research exclusion.
   Apply and freeze pre-approved contract repairs, update every owning/shared record, and run five Sol-high plus five Sol-low control backfills for each changed contract.
   Treat every new positive-routing promise as watched target behavior with later 5/5 candidate GREEN.
-- [ ] Freeze exact prompts, fixtures, rubrics, supplied contexts, control bundles, and high/low metadata for `DISC-11`, `DR-04`, and `DR-05`.
-  Run five Sol-high and five Sol-low control repetitions for each new target under fresh read-only/no-agents transport with maximum concurrency three.
-  Require a watched Sol-high RED before using a target; record the Sol-low outcome without requiring it to fail.
+- [x] Freeze exact prompts, fixtures, rubrics, supplied contexts, control bundles, and high/low metadata for `DISC-11`, `DR-04`, and `DR-05`.
+  Run five Sol-high and five Sol-low control repetitions for each new scenario under fresh read-only/no-agents transport with maximum concurrency three.
+  Require watched Sol-high REDs for `DISC-11` and `DR-04`, require 5/5
+  Sol-high preservation for `DR-05`, and record Sol-low as robustness only.
+  Frozen accepted results are `DISC-11` 3/5 high and 4/5 low target RED,
+  `DR-04` 0/5 high and 1/5 low target RED, and `DR-05` 5/5 high and low
+  preservation; low is robustness-only.
 - [ ] With `superpowers:writing-skills`, draft complete proposed versions of `disciplined-research`, `disciplined-development`, and `sweeping-stale-references` plus the complete documentation-only repairs.
   For every section and each whole skill, record whether it is necessary and whether a simpler formulation preserves intent and effectiveness.
   Show every complete proposed skill, including the complete sweeping skill, and wait for approval before applying any skill prose.

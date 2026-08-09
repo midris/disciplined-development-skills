@@ -20,9 +20,8 @@ Classification: **Keep 0, Repair 2, Merge 0, Retire 1, Add 1**.
 Superseded and mixed-protocol results remain compact historical evidence below; they
 do not count toward the active baseline.
 
-Task 18A has frozen the pre-draft contracts without changing the tracked parent
-skill. The original controls and independent scorer pass are complete; round 4
-repairs their classification and evidence contracts without launching models.
+Task 18A froze the pre-draft contracts without changing the tracked parent skill,
+then completed the repaired high/low controls and contextful application scoring.
 `DD-01`–`DD-03`, `DSD-01`, `DSD-02`, `OWN`, and `WER-07` all require
 `disciplined-research`: each complete returned artifact states factual routing,
 workflow, source, code, plan, ownership, or decision claims.
@@ -31,26 +30,57 @@ The repaired contracts remove every load-bearing-only assumption, including
 support disclosure without making user-supplied context or output destination an
 exemption.
 Accepted results remain exact evidence except where the semantic prompt, fixture,
-or rubric changed. Only `DD-01`, `DD-02`, `DD-03`, linked `DSD-01`, and linked
-`WER-07` require fresh Sol-high and Sol-low controls in this parent subset.
+or rubric changed. The five changed contracts (`DD-01`, `DD-02`, `DD-03`, linked
+`DSD-01`, and linked `WER-07`) received fresh Sol-high and Sol-low controls.
 
 ### Task 18A freeze summary
 
 | ID | Classification | Changed contract | Frozen material |
 |---|---|---|---|
 | `DD-01` | Research required | Vignette A now loads research; every row discloses support for its factual routing/ownership claims | [fixture manifest](fixtures/disciplined-development/README.md#task-18a-pre-draft-freeze) |
-| `DD-02` | Research required / target RED | Universal acquisition, verification, and mapped disclosure are new conjunctive promises; corrected overall control is 0/5 high and low | Same |
+| `DD-02` | Research required / target RED | Universal acquisition, verification, and mapped disclosure are new conjunctive promises; contextful application is 1/5 high and 1/5 low | Same |
 | `DD-03` | Research required / target RED | Universal acquisition, verification, and mapped disclosure are new conjunctive promises; observed control is 0/5 high and low | Same |
-| `DSD-01` | Research required / target RED | Universal acquisition, verification, and mapped disclosure are new conjunctive promises; observed control is 0/5 high and low | [dispatch record](dispatching-development-subagents.md#task-18a-pre-draft-freeze) |
+| `DSD-01` | Research required / target RED | Universal acquisition, verification, and mapped disclosure are new conjunctive promises; contextful application is 0/5 high and 1/5 low | [dispatch record](dispatching-development-subagents.md#task-18a-pre-draft-freeze) |
 | `DSD-02` | Research required / target RED | Universal acquisition, verification, and mapped disclosure are new conjunctive promises; observed control is 0/5 high and low | Same |
 | `OWN` | Research required / target RED | Universal acquisition, verification, and mapped disclosure are new conjunctive promises; observed control is 0/5 high and low | [loop definition](adversarial-review-loop-scenarios.md#task-18a-own-freeze) |
-| `WER-07` | Research required / target RED | Universal disclosure is new; corrected overall control is 0/5 high and low while rationale fidelity remains a separate shadow | [rationale record](writing-explicit-rationale.md#task-18a-wer-07-freeze) |
+| `WER-07` | Research required / target RED | Universal disclosure is new; contextful application is 2/5 high and 3/5 low while rationale fidelity remains a separate shadow | [rationale record](writing-explicit-rationale.md#task-18a-wer-07-freeze) |
 
 All seven parent/composition scenarios are watched targets. Changed prompt,
 fixture, or rubric contracts (`DD-01`, `DD-02`, `DD-03`, `DSD-01`, `WER-07`)
-require fresh high/low controls. Classification-only targets `DSD-02` and `OWN`
-retain their accepted exact 0/5 high and low evidence; no rerun is invented for a
+were rerun at high and low effort. Classification-only targets `DSD-02` and `OWN`
+retain their accepted exact 0/5 high and low evidence; no rerun was invented for a
 role label change.
+
+The final contextful application adjudication is `DD-01` 0/5 high and low
+(`FFFFF` / `FFFFF`), `DD-02` 1/5 high and low (`FFPFF` / `FPFFF`), `DD-03`
+0/5 high and low (`FFFFF` / `FFFFF`), `DSD-01` 0/5 high and 1/5 low
+(`FFFFF` / `FFFFP`), and `WER-07` 2/5 high and 3/5 low (`FPFFP` / `PFPFP`).
+The aggregate is 3/25 high and 5/25 low, or 8 PASS / 42 FAIL; low-effort results
+are robustness evidence only.
+
+The accepted 80-slot controls are rooted at
+`/private/tmp/dd-task18a-control-postfreeze-f59608a`, with freeze SHA-256
+`0119bdb403fdb89978ed6c2f34bae8de5db13c392071b97b06687d81f9be0210`
+and run-plan SHA-256
+`4de14a3e7531c8cf0e6258f82c9c8050b849ca9d0f0f8c1c633248dafcd81b4b`.
+This root contains only the eight affected rerun scenarios. The other 12
+unchanged/no-rerun scenarios, including `DSD-02` and `OWN`, retain evidence from
+`/private/tmp/dd-task18a-control-backfill-bd60966-escalated`, surviving freeze
+SHA-256 `4671cfef15368088eaa554fdb67e5bea115d7a4a9a9610f7e07d16b160539b2d`,
+accepted plan SHA-256
+`60b753fe17539876893f367763d59bbd53b7f584a9001217ffe07bbd607c2ce3`.
+The final scorer is rooted at
+`/private/tmp/dd-task18a-control-scoring-contextful-f59608a`, with freeze
+SHA-256 `a72902e254706d2a13c9ff573bcffff6469271fdaf914f1b9e55db6a36fa0675`,
+run-plan SHA-256
+`cfb8e3f7949afc2b35407abd203fdd02767fdc1f698081f2fa952156f2f801bb`,
+and aggregate SHA-256
+`c801090c6252298da41954663dd3f671164cd77fceaa77abf71583fa43fa2f60`.
+Every selected completion was attempt 1, with zero infrastructure retries or
+errors, Codex CLI 0.147.0, and read-only/no-agents transport. The earlier
+context-stripped aggregate `289ef0fdae9f344a477994fce75c57aef361b745ee71e2acea4e9d2726d248db`
+is retained as transport-defective historical evidence and is not the final
+application result.
 
 The round-5 integrated control for `DD-01` and `DD-02` has canonical
 content-manifest SHA-256

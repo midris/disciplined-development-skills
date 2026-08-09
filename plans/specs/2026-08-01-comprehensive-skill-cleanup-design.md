@@ -153,18 +153,41 @@ not depend on destination or on whether the user first supplied the claim.
 The sweep also found the live `sweeping-stale-references` ownership boundary's
 “load-bearing fact” narrowing. Its tracked bytes remain unchanged during this
 freeze, and its complete active suite plus proposed/final approval gates are now in
-scope. Owning validation records freeze exact repaired
-contracts and base-control hashes; fresh high/low controls and prose work remain
-pending.
+scope. Owning validation records freeze exact repaired contracts and base-control
+hashes; the required high/low controls and contextful scoring are complete, while
+skill prose remains pending the explicit draft/approval gate.
 
-The frozen role split is 16 target REDs (`DISC-01`, `DISC-02`, `DISC-03`,
-`DISC-06`, `DISC-07`, `DISC-08`, `DISC-09`, `DISC-11`, `DR-04`, `DD-01`,
-`DD-02`, `DD-03`, `DSD-01`, `DSD-02`, `OWN`, `WER-07`) and four preservation
-cells (`DISC-04`, `DISC-05`, `DISC-10`, `DR-05`). Preservation requires 5/5
-Sol-high; Sol-low is robustness evidence only. Exactly eight semantically changed
-contracts must complete a fresh post-freeze rerun before any skill draft:
-`DISC-02`, `DISC-04`, `DISC-05`, `DD-01`, `DD-02`, `DD-03`, `DSD-01`, and
-`WER-07`. The other 12 accepted controls remain exact evidence.
+The final role split is 17 target REDs (`DISC-01`, `DISC-02`, `DISC-03`,
+`DISC-04`, `DISC-06`, `DISC-07`, `DISC-08`, `DISC-09`, `DISC-11`, `DR-04`,
+`DD-01`, `DD-02`, `DD-03`, `DSD-01`, `DSD-02`, `OWN`, `WER-07`) and three
+preservation cells (`DISC-05`, `DISC-10`, `DR-05`). Preservation requires 5/5
+Sol-high; Sol-low is robustness evidence only. The eight semantically changed
+contracts completed their post-freeze 80-slot rerun. `DISC-04` is target RED at
+4/5 high and 3/5 low because its research route changed from optional to required;
+`DISC-05` is preservation at 5/5 high and low. Contextful application scoring over
+the five changed application contracts is complete at 10 processes/50 verdicts;
+the other 12 accepted controls remain exact evidence.
+
+The accepted affected-rerun control root is
+`/private/tmp/dd-task18a-control-postfreeze-f59608a`, with freeze SHA-256
+`0119bdb403fdb89978ed6c2f34bae8de5db13c392071b97b06687d81f9be0210`
+and plan SHA-256
+`4de14a3e7531c8cf0e6258f82c9c8050b849ca9d0f0f8c1c633248dafcd81b4b`.
+The other 12 unchanged/no-rerun scenarios retain accepted evidence from
+`/private/tmp/dd-task18a-control-backfill-bd60966-escalated`, freeze SHA-256
+`4671cfef15368088eaa554fdb67e5bea115d7a4a9a9610f7e07d16b160539b2d`,
+plan SHA-256
+`60b753fe17539876893f367763d59bbd53b7f584a9001217ffe07bbd607c2ce3`.
+Final application adjudication is rooted at
+`/private/tmp/dd-task18a-control-scoring-contextful-f59608a`, with freeze
+`a72902e254706d2a13c9ff573bcffff6469271fdaf914f1b9e55db6a36fa0675`,
+plan `cfb8e3f7949afc2b35407abd203fdd02767fdc1f698081f2fa952156f2f801bb`,
+and aggregate `c801090c6252298da41954663dd3f671164cd77fceaa77abf71583fa43fa2f60`.
+The five application scenarios scored 3/25 high and 5/25 low (8 PASS / 42 FAIL);
+all selected attempts were a1 with zero retries/errors under Codex CLI 0.147.0,
+read-only/no-agents transport. The earlier context-stripped aggregate
+`289ef0fdae9f344a477994fce75c57aef361b745ee71e2acea4e9d2726d248db`
+is transport-defective historical evidence only.
 
 Broad-domain isolation is coverage only for the three companions whose contracts
 include that work; it does not expand the two development companions beyond their
