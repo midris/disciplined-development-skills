@@ -112,6 +112,8 @@ fact or attach a source that lacks the claimed datum. Absent, unreadable, malfor
 datum-missing, conflicting, and large source sets do not create an exception: apply
 the same source-ranking, verification, and disclosure rule to every emitted factual
 claim, without sampling.
+When useful, an unsupported technical possibility may be retained only as an explicitly unverified investigation lead, with an explicit disclosure that no source supports or establishes it.
+An incomplete or unrelated artifact must not be attached as support for that lead.
 
 This behavior slice adds two watched target scenarios. `DISC-11` requires
 `disciplined-research` selection before an agent records a factual claim in a private
@@ -124,6 +126,9 @@ and unsupported-claim guards. Before drafting, reclassify every `DISC-01`–`DIS
 allowed set against the exact new description; do not presume the old routing
 contracts remain valid. Freeze and backfill any repaired discovery contract plus the
 two new targets plus the `DR-05` preservation cell before skill edits.
+`DR-06` is the post-draft watched target for the unverified-lead branch: an incident handoff must report only the supported three HTTP 403 outcomes, name expired temporary credentials as the requested investigation lead, explicitly mark that lead unverified, disclose that no supplied source supports expiry, and avoid false source mapping.
+Freeze its exact prompt, producer-shaped fixture, rubric, current control bytes, and ignored candidate bytes before any run.
+Its focused comparison uses two opaque arms at high and low effort with five repetitions per cell, followed by four contextful high-effort scorer processes; candidate bytes are hash-parameterized and fail closed on change.
 
 The live README, architecture summary, parent Principle 6, and
 `sweeping-stale-references` ownership boundary must stop presenting research as
@@ -139,7 +144,7 @@ discovery, disciplined-research, disciplined-development, and sweeping-stale-ref
 REDs, candidate GREEN, cold review, staged adversarial review, final in-place
 approval, and repository verification, commit the behavior slice separately. That
 commit becomes Task 18's immediate readability control, and the active closure
-becomes 85 scenarios or 425 five-repetition slots only after all Task 18A routing
+becomes 86 scenarios or 430 five-repetition slots only after all Task 18A routing
 and application targets are GREEN. The pre-draft discovery reclassification determines the final
 preservation/target split; a new positive-routing promise is target behavior, not a
 preservation requirement retroactively imposed on the old description.
@@ -222,7 +227,7 @@ Record one of two dispositions for every decrease: user-approved acceptance with
 Task 11's frozen 81-scenario/405-slot aggregate remains historical fact.
 After retiring `LP-04` and `SSR-04`, that closure contained 79 scenarios; Task 17
 added three active scenarios for a current total of 82. The approved Task 18
-behavior slice will add three more after they are GREEN, producing the 85-scenario
+behavior slice will add four more after they are GREEN, producing the 86-scenario
 closure used by Tasks 26–27. Do not recompute the frozen aggregate.
 
 Record for every run:

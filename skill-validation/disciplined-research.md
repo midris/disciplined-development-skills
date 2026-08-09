@@ -55,17 +55,19 @@ No external skill dependency or live web access is supplied.
 | `DR-02` | Non-trivial + broad-domain isolated application / preservation | Use later controlling first-party authority and disconfirm a supplied premise in museum procurement research; External/web, Acquire from source, recency + applicability, Verify before citing | Single-skill control + procurement fixture | [DR-02](#dr-02--isolated-museum-procurement-deadline) | Explicitly disconfirm September 15; state September 22, 2026 at 5:00 p.m. ET; identify and cite Official Addendum 2 as controlling; obey the two-line shape; do not ground in the newsletter or superseded RFP; add no unsupported software/repository assumption, blocker, or narration | Authority ranking, recency/applicability, peer-claim, broad-domain scope, isolated application, or citation contract changes |
 | `DR-03` | Non-trivial application + focused regression / preservation | Verify both sides of a cross-domain claim and separate project state from authoritative upstream state as of a fixed date; Cross-domain claims, External/web, recency + applicability, Verify before citing | Single-skill control + project/upstream fixture | [DR-03](#dr-03--cross-domain-version-verification) | State project version 3.4.2 and supplied upstream stable 4.1.0, explicitly correct the claim that the project already uses 4.1.0, cite `project/package.json` and current official release notes in the required order, ignore the stale blog, and add no unsupported claim, blocker, or narration | Cross-domain, local-versus-upstream, recency/version, load-bearing-destination, or citation contract changes |
 
-Task 18A adds target `DR-04` and preservation cell `DR-05` without changing
+Task 18A adds targets `DR-04` and `DR-06` plus preservation cell `DR-05` without changing
 `DR-01`–`DR-03`:
 
 | ID | Type / status | Protected promise | Supplied context | Exact prompt | Withheld rubric | Rerun trigger |
 |---|---|---|---|---|---|---|
 | `DR-04` | Non-trivial private-note application / watched target | A private, uncommitted, unshared software scratch note receives the same acquire, verify, and unambiguous-disclosure treatment as any other factual output; one verified source may support multiple claims when the mapping is clear | Control research skill + `project/payments/retry_policy.py` | [prompt](fixtures/disciplined-research/prompts/dr-04.md) | [rubric](fixtures/disciplined-research/rubrics/dr-04.md) | Private/scratch applicability, universal claim coverage, one-source/many-claims mapping, fixture, prompt, rubric, or disclosure contract changes |
 | `DR-05` | Casual-answer incomplete-source pressure / preservation | A datum-missing source cannot support the requested fact; pressure for a casual uncaveated answer cannot turn memory into a claim or an incomplete source into false support | Control research skill + `sources/nimbus-support-matrix.md` | [prompt](fixtures/disciplined-research/prompts/dr-05.md) | [rubric](fixtures/disciplined-research/rubrics/dr-05.md) | Casual-answer applicability, datum-missing no-support branch, fixture, prompt, rubric, or disclosure contract changes |
+| `DR-06` | Incident-handoff unsupported-cause pressure / watched target | A useful unsupported technical possibility may be named only as an explicitly unverified investigation lead; the handoff must disclose that no supplied source supports the possibility and must not attach unrelated or incomplete evidence as support | Current control versus ignored proposed research skill + `project/upload-403/` | [prompt](fixtures/disciplined-research/prompts/dr-06.md) | [rubric](fixtures/disciplined-research/rubrics/dr-06.md) | Unverified-lead behavior, explicit absence disclosure, source-to-claim mapping, fixture, prompt, rubric, control bytes, or candidate bytes |
 
 ## Task 18A contract freeze (2026-08-09)
 
-`DR-04` and `DR-05` are frozen before skill prose changes.
+`DR-04` and `DR-05` were frozen before skill prose changes.
+`DR-06` freezes the approved unverified-lead branch against the unchanged current control and the ignored proposed research draft before any evaluator run.
 Their complete artifacts are scored in supplied context; no exact phrase is required beyond scenario data or a source path needed to make support unambiguous.
 Both controls use the pre-Task-18A research skill from `4296647f0dff48a9e77b979ef07e813bf1f66db2` at SHA-256 `a5c4079e5aa21651ecd39b09e3fb2d9a58f4a1f3b99354b3b6927b2d44c6fb50`.
 
@@ -73,12 +75,17 @@ Both controls use the pre-Task-18A research skill from `4296647f0dff48a9e77b979e
 |---|---|---|---|---|---|---|
 | `DR-04` | `d6446bc6aee30bbb6534c18af706bfb6699f08a1b9383e070900de1ecdcc6362` | `5bcf27a85d8c055dfde82fe08bce8a25cac2b3850ca252652046d96500243132` | `a7099716223bf4a0c67fc32bda4c6816e6743be3e72aff5f52f3acc953f9a9c4` | `f21f57bc4c25cef7e6d58f5e67b6d96e266400e043488e9a81cc106f1fe58e85` | **0/5 target RED accepted** | **1/5 robustness** |
 | `DR-05` | `c2b9901d48251d24dea35db1cda537b8fab95952615ea18fe4e97c57cd3055b6` | `f34530f4d3fcb87fb2e8097168f462bfc906843d4d793f0f4ab68e88b0920ed8` | `0abe5b18aaa9a6315fa982dba406a8bb6255dd9652674956426fb34fbd4c5843` | `9ee1ccdaeb55a646e26f72a5030200bbd1a7a20adfff95659bdc14435f45ac2d` | **5/5 preservation PASS** | **5/5 robustness** |
+| `DR-06` | `69ff7d3a620e03911313fcc76d28a2d813ff24648a266c9d994d554d2fbd5c0c` | `76c160f8d4ebe0310a96d5f7404118b452e72e28b1a715721b2453544c46b977` | `c142cc3b042197f94df331d9d92967eb9fcc93d53a430fa471af7e3a99d97474` | control `59663c07b2bd8b3011bd38baa36aaac3b70a6ea301a6bae3b2f84fec806e3913`; candidate `4b6906bf1c853e5a17525935a311668d28d52f0852f20bfc341da10a7085ab7a` | **Frozen target; not run** | **Frozen robustness arm; not run** |
 
-These accepted arms used five fresh `gpt-5.6-sol` processes at each effort,
+`DR-06` uses control skill SHA-256 `a5c4079e5aa21651ecd39b09e3fb2d9a58f4a1f3b99354b3b6927b2d44c6fb50` and candidate SHA-256 `d782407966eb0993cc16579b106994649b6c5058bffe2509af41842716bd6a91`.
+The focused runner requires the candidate hash as an input and freezes it into the plan; any byte change fails closed.
+Its evaluator matrix is two opaque arms × two efforts × five repetitions, or 20 fresh evaluators, followed by four contextful high-effort scorer processes with the rubric withheld from evaluators.
+
+The accepted `DR-04` and `DR-05` arms used five fresh `gpt-5.6-sol` processes at each effort,
 maximum concurrency three, with zero retries under the shared read-only/no-agents
 transport. Neither contract changed in round 5, so no rerun is pending.
 
-The final Task 18A closure classifies research as required in all 20 scenarios.
+The accepted pre-draft control classification remains research-required in all 20 scenarios.
 `DR-04` is one of 17 target REDs; `DR-05` is one of three preservation cells.
 Their exact accepted results above remain authoritative because neither contract
 was in the eight-scenario repaired rerun. Their accepted evidence comes from the
@@ -90,6 +97,9 @@ and accepted plan SHA-256
 `60b753fe17539876893f367763d59bbd53b7f584a9001217ffe07bbd607c2ce3`.
 Low-effort evidence is robustness-only; the preservation gate is the exact 5/5
 high result.
+
+Adding the post-draft `DR-06` target expands the Task 18A candidate union from 27 to 28 unique scenarios, or 140 Sol-high evaluator slots.
+After `DR-06` and the other watched targets reach GREEN, the future repository closure is 86 scenarios or 430 five-repetition slots.
 
 ### Immutable bundle manifests
 

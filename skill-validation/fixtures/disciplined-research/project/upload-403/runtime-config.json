@@ -1,0 +1,10 @@
+{
+  "uploader": {
+    "endpoint": "https://objects.internal.example/releases",
+    "region": "us-east-1",
+    "part_size_bytes": 8388608,
+    "parallelism": 4
+  },
+  "retry": {
+    "max_attempts": 3,
+    "base_delay_ms": 1000

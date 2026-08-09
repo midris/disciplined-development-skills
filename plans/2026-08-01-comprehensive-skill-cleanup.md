@@ -858,10 +858,12 @@ The frozen 81-row/405-slot result remains historical fact and is not recomputed.
 Future active closure contains 82 scenarios: 60 preservation and 22 target rows, or
 410 five-repetition slots. Task 14 retires `LP-04` and Task 15 retires `SSR-04`
 without altering their frozen outcomes; Task 17 adds `CW-17`–`CW-19`.
-Task 18A has frozen target scenarios `DISC-11` and `DR-04` plus preservation
-scenario `DR-05`. Its pre-draft reclassification produced the final 17-target,
-three-preservation split. After all routing and application targets are GREEN,
-these additions bring the future final closure to 85 scenarios or 425
+Task 18A has frozen pre-draft targets `DISC-11` and `DR-04`, preservation
+scenario `DR-05`, and post-draft unverified-lead target `DR-06`.
+Its accepted pre-draft reclassification remains the 17-target,
+three-preservation split; `DR-06` is the additional watched target.
+After all routing and application targets are GREEN,
+these additions bring the future final closure to 86 scenarios or 430
 five-repetition slots without changing this historical Task 11 result.
 
 **Task 11 Gate 5 completion (2026-08-07).** The orchestrator's
@@ -1127,6 +1129,12 @@ complete. Final repository verification and no-PR completion are recorded above.
 - Modify: `skill-validation/sweeping-stale-references.md`
 - Modify: `skill-validation/skill-discovery.md`
 - Modify: `skill-validation/README.md`
+- Modify: `skill-validation/fixtures/disciplined-research/README.md`
+- Create: `skill-validation/fixtures/disciplined-research/prompts/dr-06.md`
+- Create: `skill-validation/fixtures/disciplined-research/rubrics/dr-06.md`
+- Create: `skill-validation/fixtures/disciplined-research/project/upload-403/evidence-index.md`
+- Create: `skill-validation/fixtures/disciplined-research/project/upload-403/runtime-config.json`
+- Create: `skill-validation/fixtures/disciplined-research/project/upload-403/worker.log`
 - Modify: `plans/specs/2026-08-01-comprehensive-skill-cleanup-design.md`
 - Modify: `plans/2026-08-01-comprehensive-skill-cleanup.md`
 - Modify if reclassified: `skill-validation/dispatching-development-subagents.md`
@@ -1155,13 +1163,14 @@ Do not preserve or introduce a load-bearing threshold, destination test, scratch
 Project, external, and cross-domain categories may guide source selection only.
 One source may support multiple claims when the mapping is unambiguous.
 If no acceptable source supports a claim, do not state it as fact or attach a source that lacks the claimed datum.
+When useful, an unsupported technical possibility may be shared only as an explicitly unverified investigation lead, with an explicit disclosure that no source supports or establishes it; do not attach an incomplete or unrelated source as support.
 Absent, unreadable, malformed, datum-missing, conflicting, and large source sets follow the same invariant: every emitted factual claim has source support acquired and verified before output, and its disclosure identifies that support without ambiguity.
 
-**Validation scope:** add watched targets `DISC-11` and `DR-04`.
+**Validation scope:** add watched targets `DISC-11`, `DR-04`, and `DR-06`.
 Add `DR-05` as preservation, reclassify the ten existing discovery contracts before
 implementation, and preserve the established `DR-01`–`DR-03` source-ranking and
 verification behavior.
-`DISC-11` covers private-note routing, `DR-04` covers private-note application, and `DR-05` covers a casual answer under incomplete-source pressure.
+`DISC-11` covers private-note routing, `DR-04` covers private-note application, `DR-05` covers a casual answer under incomplete-source pressure, and `DR-06` covers an incident handoff that must retain an unsupported technical possibility only as an explicitly unverified lead without false evidence mapping.
 `DR-01`–`DR-03` retain project-source precedence, conflicting-authority handling, multiple claims and sources, and unsupported-claim rejection.
 Absent, unreadable, malformed, and datum-missing sources share the same no-support branch, so `DR-05` exercises the demonstrated datum-missing failure rather than duplicating near-identical fixtures.
 Large claim sets receive no sampling exemption, and the one-source/many-claims rule changes disclosure grouping rather than verification coverage.
@@ -1232,6 +1241,9 @@ unblocked by control evidence but remains pending the explicit draft/approval ga
   Frozen accepted results are `DISC-11` 3/5 high and 4/5 low target RED,
   `DR-04` 0/5 high and 1/5 low target RED, and `DR-05` 5/5 high and low
   preservation; low is robustness-only.
+- [x] Freeze the exact `DR-06` prompt, producer-shaped upload-403 fixture, eight-criterion withheld rubric, current control, and ignored candidate bytes before any run.
+  The fixture contains a malformed runtime export and a deterministic 230,400-byte worker log with exactly three dispersed HTTP 403 upload-attempt records and a final collector-truncation record, without a credential-expiry datum.
+  Freeze two opaque arms × two efforts × five repetitions as 20 evaluator slots, followed by four contextful high-effort scorer processes; withhold the rubric from evaluators, require the candidate SHA-256 as a frozen parameter, and launch no process during contract preparation.
 - [ ] With `superpowers:writing-skills`, draft complete proposed versions of `disciplined-research`, `disciplined-development`, and `sweeping-stale-references` plus the complete documentation-only repairs.
   For every section and each whole skill, record whether it is necessary and whether a simpler formulation preserves intent and effectiveness.
   Show every complete proposed skill, including the complete sweeping skill, and wait for approval before applying any skill prose.
@@ -1240,8 +1252,8 @@ unblocked by control evidence but remains pending the explicit draft/approval ga
   In `disciplined-development`, align Principle 6 and its routing language without copying the child procedure.
   In `sweeping-stale-references`, remove the load-bearing narrowing from the research ownership boundary without changing the sweeping trigger or procedure.
   Make `README.md` and `ARCHITECTURE.md` describe the executable behavior accurately.
-- [ ] Run the union of all three changed skills' complete active suites five times on cold Sol high: `DISC-01`–`DISC-11`, `DR-01`–`DR-05`, `DD-01`–`DD-03`, `DSD-01`, `DSD-02`, `OWN`, `WER-07`, and `SSR-01`–`SSR-03`, `SSR-05`.
-  This is 135 responses across 27 unique scenarios.
+- [ ] Run the union of all three changed skills' complete active suites five times on cold Sol high: `DISC-01`–`DISC-11`, `DR-01`–`DR-06`, `DD-01`–`DD-03`, `DSD-01`, `DSD-02`, `OWN`, `WER-07`, and `SSR-01`–`SSR-03`, `SSR-05`.
+  This is 140 responses across 28 unique scenarios.
   Score complete artifacts in supplied context; any scenario below 5/5 pauses the slice for failure classification.
 - [ ] Run cold editorial and skill-writing review of all three skills.
   Show any proposed prose fix and wait for approval; after an approved fix, restart every affected scenario and both in-place approval gates.
@@ -1265,7 +1277,7 @@ including isolated non-software research, with only scenario-declared dependenci
 
 - [ ] Record the post-Task 18A immediate readability-control word count and hashes, then rebuild the section-level and whole-skill necessity/simplification inventory from those exact bytes.
 - [ ] Draft the smallest coherent reorganization, show the diff, and wait for user approval.
-- [ ] Apply the approved draft and run `DISC-01`–`DISC-11` plus `DR-01`–`DR-05` five times each on Sol high: 80 responses across 16 scenarios.
+- [ ] Apply the approved draft and run `DISC-01`–`DISC-11` plus `DR-01`–`DR-06` five times each on Sol high: 85 responses across 17 scenarios.
 - [ ] Blindly compare subjective prose outputs with the immediate readability control where the rubric requires judgment.
 - [ ] Run cold editorial and skill-writing review plus deep staged `adversarial-review`; show proposed fixes, wait for user approval, apply them, and restart affected scenarios.
 - [ ] Show the final skill in place and wait for user approval.
