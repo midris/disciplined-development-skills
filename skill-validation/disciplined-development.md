@@ -20,6 +20,13 @@ Classification: **Keep 0, Repair 2, Merge 0, Retire 1, Add 1**.
 Superseded and mixed-protocol results remain compact historical evidence below; they
 do not count toward the active baseline.
 
+Task 18A is approved but has not changed the tracked parent skill or active results.
+Before skill prose changes, it will reclassify `DD-01`–`DD-03`, `DSD-01`, `DSD-02`,
+`OWN`, and `WER-07`, backfill every changed contract at Sol high and low, align
+Principle 6 with universal factual-claim grounding, add inherited `DISC-11`, and
+rerun the parent's complete active suite after the required complete-draft and final
+in-place approvals.
+
 ## Active scenario catalog
 
 The owner and sole affected skill for `DD-01`–`DD-03` is

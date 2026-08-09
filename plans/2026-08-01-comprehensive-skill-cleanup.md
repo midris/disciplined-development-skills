@@ -858,9 +858,11 @@ The frozen 81-row/405-slot result remains historical fact and is not recomputed.
 Future active closure contains 82 scenarios: 60 preservation and 22 target rows, or
 410 five-repetition slots. Task 14 retires `LP-04` and Task 15 retires `SSR-04`
 without altering their frozen outcomes; Task 17 adds `CW-17`–`CW-19`.
-Task 18A will add `DISC-11` and `DR-04` after both watched targets are GREEN,
-bringing the future final closure to 84 scenarios without changing this historical
-Task 11 result.
+Task 18A will add `DISC-11`, `DR-04`, and `DR-05` after all of its routing and
+application targets are GREEN, bringing the future final closure to 85 scenarios or
+425 five-repetition slots without changing this historical Task 11 result.
+The pre-draft `DISC-01`–`DISC-10` reclassification will determine the final
+preservation/target split.
 
 **Task 11 Gate 5 completion (2026-08-07).** The orchestrator's
 whole-repository self-review found no P0–P2 issues after the task-level review
@@ -1116,66 +1118,101 @@ complete. Final repository verification and no-PR completion are recorded above.
 **Files:**
 
 - Modify: `skills/disciplined-research/SKILL.md`
+- Modify: `skills/disciplined-development/SKILL.md`
+- Modify: `README.md`
+- Modify: `ARCHITECTURE.md`
 - Modify: `skill-validation/disciplined-research.md`
+- Modify: `skill-validation/disciplined-development.md`
 - Modify: `skill-validation/skill-discovery.md`
 - Modify: `skill-validation/README.md`
 - Modify: `plans/specs/2026-08-01-comprehensive-skill-cleanup-design.md`
 - Modify: `plans/2026-08-01-comprehensive-skill-cleanup.md`
+- Modify if reclassified: `skill-validation/dispatching-development-subagents.md`
+- Modify if reclassified: `skill-validation/adversarial-review-loop.md`
+- Modify if reclassified: `skill-validation/adversarial-review-loop-scenarios.md`
+- Modify if reclassified: `skill-validation/writing-explicit-rationale.md`
+- Modify if reclassified: `skill-validation/fixtures/disciplined-development/README.md`
+- Modify if reclassified: `skill-validation/fixtures/disciplined-development/prompts/dd-01.md`
+- Modify if reclassified: `skill-validation/fixtures/disciplined-development/prompts/dd-02.md`
+- Modify if reclassified: `skill-validation/fixtures/disciplined-development/prompts/dd-03.md`
+- Modify if reclassified: `skill-validation/fixtures/disciplined-development/rubrics/dd-01.md`
+- Modify if reclassified: `skill-validation/fixtures/disciplined-development/rubrics/dd-02.md`
+- Modify if reclassified: `skill-validation/fixtures/disciplined-development/rubrics/dd-03.md`
+- Modify if reclassified: `skill-validation/fixtures/dispatching-development-subagents/README.md`
+- Modify if reclassified: `skill-validation/fixtures/dispatching-development-subagents/prompts/dsd-01.md`
+- Modify if reclassified: `skill-validation/fixtures/dispatching-development-subagents/prompts/dsd-02.md`
+- Modify if reclassified: `skill-validation/fixtures/dispatching-development-subagents/rubrics/dsd-01.md`
+- Modify if reclassified: `skill-validation/fixtures/dispatching-development-subagents/rubrics/dsd-02.md`
+- Modify if reclassified: `skill-validation/fixtures/adversarial-review-loop/README.md`
+- Modify if reclassified: `skill-validation/fixtures/adversarial-review-loop/prompts/own.md`
+- Modify if reclassified: `skill-validation/fixtures/adversarial-review-loop/rubrics/own.md`
 
-**Approved behavior:** use the exact discovery description `Use before stating any
-factual claim.` Every factual claim, including one in a casual answer or private
-note, must be acquired from the best available source, verified before it is stated,
-and accompanied by an unambiguous source disclosure. Do not preserve or introduce a
-load-bearing threshold, destination test, scratch-work exemption, project/external
-applicability bound, or other exclusion. Project, external, and cross-domain
-categories may guide source selection only. One source may support multiple claims
-when the mapping is unambiguous.
+**Approved behavior:** use the exact discovery description `Use before stating any factual claim.`
+Every factual claim, including one in a casual answer or private note, must be acquired from the best available source, verified before it is stated, and accompanied by an unambiguous source disclosure.
+Do not preserve or introduce a load-bearing threshold, destination test, scratch-work exemption, project/external applicability bound, scale threshold, or other exclusion.
+Project, external, and cross-domain categories may guide source selection only.
+One source may support multiple claims when the mapping is unambiguous.
+If no acceptable source supports a claim, do not state it as fact or attach a source that lacks the claimed datum.
+Absent, unreadable, malformed, datum-missing, conflicting, and large source sets follow the same invariant: every emitted factual claim has source support acquired and verified before output, and its disclosure identifies that support without ambiguity.
 
-**Validation scope:** add watched targets `DISC-11` and `DR-04` while preserving the
-existing discovery and disciplined-research contracts. The frozen task remains an
-in-domain software-development task; portability means reliable execution across
-agent and model families on that same task, not behavior on unrelated tasks.
+**Validation scope:** add watched targets `DISC-11`, `DR-04`, and `DR-05`; reclassify the ten existing discovery contracts before implementation; and preserve the established `DR-01`–`DR-03` source-ranking and verification behavior.
+`DISC-11` covers private-note routing, `DR-04` covers private-note application, and `DR-05` covers a casual answer under incomplete-source pressure.
+`DR-01`–`DR-03` retain project-source precedence, conflicting-authority handling, multiple claims and sources, and unsupported-claim rejection.
+Absent, unreadable, malformed, and datum-missing sources share the same no-support branch, so `DR-05` exercises the demonstrated datum-missing failure rather than duplicating near-identical fixtures.
+Large claim sets receive no sampling exemption, and the one-source/many-claims rule changes disclosure grouping rather than verification coverage.
+The frozen tasks remain in their declared domains; portability means reliable execution across agent and model families on those same tasks, not behavior on unrelated tasks.
 
-- [ ] Freeze exact prompts, fixtures, rubrics, supplied contexts, control bundles,
-  and high/low run metadata for `DISC-11` and `DR-04`; keep evaluators fresh,
-  read-only, no-agents, and at maximum concurrency three.
-- [ ] Run five Sol-high and five Sol-low control repetitions for each new target and
-  record the expected watched REDs without weakening either rubric.
-- [ ] Draft the complete behavior-slice skill with `superpowers:writing-skills`,
-  show it to the user, and wait for approval before applying it.
-- [ ] Apply only the approved complete draft. Retain acquire/verify, source ranking,
-  recency/applicability, conflict handling, and pressure resistance where they still
-  serve the universal rule; remove the load-bearing, destination, and scratch
-  exceptions rather than renaming them.
-- [ ] Run `DISC-01`–`DISC-11` and `DR-01`–`DR-04` five times each on cold Sol high:
-  75 responses across 15 scenarios. Score complete artifacts in supplied context;
-  any result below 5/5 pauses the slice for failure classification.
-- [ ] Run cold editorial and skill-writing review. Show any proposed prose fix and
-  wait for approval; after an approved fix, restart every affected scenario.
-- [ ] Show the final edited skill in place and wait for approval.
-- [ ] Run repository tests, the routing/reference sweep, exact local-link check, and
-  `git diff --check`; after approval, commit the behavior slice separately as
-  `docs(skills): ground every factual claim`. Do not open a PR.
-- [ ] Materialize the behavior commit as Task 18's immutable immediate readability
-  control, then resume the behavior-preserving cleanup below from a new complete
-  draft.
+- [ ] Run a pre-draft routing/reference sweep across live skill, architecture, README, plan, and validation surfaces.
+  Record every affected file before proposing prose.
+  Treat `README.md`, `ARCHITECTURE.md`, and parent Principle 6 as required repairs; if the sweep finds another skill-prose dependency, add its complete active suite and both approval gates before proceeding.
+- [ ] Reclassify `DISC-01` through `DISC-10` individually against the exact new description with a fresh Sol-high validation-design reviewer.
+  Record for every ID whether `disciplined-research` is required, optional, or prohibited.
+  Apply pre-approved prompt, fixture, or rubric repairs before skill prose changes, freeze each changed contract, and run its five Sol-high plus five Sol-low control backfills under the global post-freeze rule.
+  Treat a changed positive-routing promise as approved target behavior with a watched Sol-high control RED and later 5/5 candidate GREEN, not as preservation imposed retroactively on the old description.
+- [ ] Reclassify the remaining parent-suite members `DD-01`, `DD-02`, `DD-03`, `DSD-01`, `DSD-02`, `OWN`, and `WER-07` individually before drafting the parent change.
+  Check every prompt, fixture, rubric, affected-skill mapping, and supplied bundle for a load-bearing-only research assumption, including `DD-01` vignette A's explicit research exclusion.
+  Apply and freeze pre-approved contract repairs, update every owning/shared record, and run five Sol-high plus five Sol-low control backfills for each changed contract.
+  Treat every new positive-routing promise as watched target behavior with later 5/5 candidate GREEN.
+- [ ] Freeze exact prompts, fixtures, rubrics, supplied contexts, control bundles, and high/low metadata for `DISC-11`, `DR-04`, and `DR-05`.
+  Run five Sol-high and five Sol-low control repetitions for each new target under fresh read-only/no-agents transport with maximum concurrency three.
+  Require a watched Sol-high RED before using a target; record the Sol-low outcome without requiring it to fail.
+- [ ] With `superpowers:writing-skills`, draft complete proposed versions of `disciplined-research` and `disciplined-development` plus the complete documentation-only repairs.
+  For every section and each whole skill, record whether it is necessary and whether a simpler formulation preserves intent and effectiveness.
+  Show every complete proposed skill and wait for approval before applying any skill prose.
+- [ ] Apply only the approved complete drafts.
+  In `disciplined-research`, retain acquire/verify, source ranking, recency/applicability, conflict handling, and pressure resistance where they serve the universal rule; remove the load-bearing, destination, and scratch exceptions rather than renaming them.
+  In `disciplined-development`, align Principle 6 and its routing language without copying the child procedure.
+  Make `README.md` and `ARCHITECTURE.md` describe the executable behavior accurately.
+- [ ] Run the union of both changed skills' complete active suites five times on cold Sol high: `DISC-01`–`DISC-11`, `DR-01`–`DR-05`, `DD-01`–`DD-03`, `DSD-01`, `DSD-02`, `OWN`, and `WER-07`.
+  This is 115 responses across 23 unique scenarios.
+  Score complete artifacts in supplied context; any scenario below 5/5 pauses the slice for failure classification.
+- [ ] Run cold editorial and skill-writing review of both skills.
+  Show any proposed prose fix and wait for approval; after an approved fix, restart every affected scenario and both in-place approval gates.
+- [ ] Stage only the approved behavior slice, then run a deep staged `adversarial-review` against the complete plan and governing documents.
+  Any finding-driven skill edit returns to proposed-draft approval, affected validation, cold review, and final in-place approval before restaging.
+- [ ] Show both reviewed final skills in place and wait for approval.
+- [ ] Run the hook, installer, and research pytest suites; rerun the routing/reference sweep and exact local-link command; and run `git diff --check` plus `git diff --cached --check`.
+  After approval, commit the behavior slice separately as `docs(skills): ground every factual claim`.
+  Do not open a PR.
+- [ ] Materialize the behavior commit as Task 18's immutable immediate readability control.
+  Record both changed skills' control/current word counts and hashes, then resume the behavior-preserving cleanup below from a new research-skill section inventory and complete draft.
 
 ### Task 18: Clean `disciplined-research`
 
-**Files:** `skills/disciplined-research/SKILL.md`, `skill-validation/disciplined-research.md`
+**Files:** `skills/disciplined-research/SKILL.md`, `skill-validation/disciplined-research.md`, `skill-validation/skill-discovery.md`, `skill-validation/README.md`
 
-**Review focus:** clarify when the skill applies; make acquire/verify facets flow as one method; remove overlap among overview, rationalizations, and red flags; keep optional suite composition out of the broad-domain core.
+**Review focus:** keep universal factual-claim applicability explicit; make acquire/verify facets flow as one method; remove overlap among overview, rationalizations, and red flags; keep optional suite composition out of the broad-domain core.
 
 **Validation scope:** broad-domain companion; use its complete cold Sol-high suite,
 including isolated non-software research, with only scenario-declared dependencies.
 
-- [x] Record the immediate readability-control word count and a section-level meaning inventory.
+- [ ] Record the post-Task 18A immediate readability-control word count and hashes, then rebuild the section-level and whole-skill necessity/simplification inventory from those exact bytes.
 - [ ] Draft the smallest coherent reorganization, show the diff, and wait for user approval.
-- [ ] Apply the approved draft and run the complete active suite 5/5 on Sol high.
+- [ ] Apply the approved draft and run `DISC-01`–`DISC-11` plus `DR-01`–`DR-05` five times each on Sol high: 80 responses across 16 scenarios.
 - [ ] Blindly compare subjective prose outputs with the immediate readability control where the rubric requires judgment.
-- [ ] Run cold editorial and skill-writing review; show proposed fixes, wait for user approval, apply them, and restart affected scenarios.
+- [ ] Run cold editorial and skill-writing review plus deep staged `adversarial-review`; show proposed fixes, wait for user approval, apply them, and restart affected scenarios.
 - [ ] Show the final skill in place and wait for user approval.
-- [ ] After approval, run repository tests and commit as `docs(skills): clean up disciplined research`.
+- [ ] After approval, run repository tests, the exact local-link command, `git diff --check`, and `git diff --cached --check`; commit as `docs(skills): clean up disciplined research`.
 
 **Task 18 execution note (2026-08-08, in progress):** Preflight confirmed clean
 HEAD `ecfd2ef4d88694ee36ffe30ebe852173c5629d50` and passed the hook suite
@@ -1192,7 +1229,9 @@ SPEC/QUALITY re-review passed with no open finding.
 On 2026-08-09 the owner instead approved Task 18A's universal factual-claim behavior
 slice. That approval supersedes the pending scratch draft before any tracked skill
 prose was applied. After Task 18A is committed, its skill becomes the new immediate
-readability control and Task 18 restarts drafting against that behavior.
+readability control and Task 18 restarts its word count, necessity inventory, and
+draft against that behavior. The completed pre-slice inventory is historical and
+does not satisfy the reset checkbox above.
 
 ### Task 19: Clean `lean-plan-writing`
 
@@ -1341,8 +1380,8 @@ Sol-high model gate across the authored development modes.
 
 **Produces:** A cross-suite composition record that links the owning scenario IDs and records joint results without duplicating their prompts or rubrics.
 
-- [ ] Freeze the 84-scenario active closure, excluding historical `LP-04` and `SSR-04`.
-- [ ] Rerun every scenario in the frozen 84-scenario closure five times on cold Sol high, including all focused regressions as well as the shared discovery, domain-appropriate direct-invocation, broad-domain isolated-application, development-companion dependency, and integrated composition sets; keep scenarios atomic unless composition is the behavior under test.
+- [ ] Freeze the 85-scenario active closure, excluding historical `LP-04` and `SSR-04`.
+- [ ] Rerun every scenario in the frozen 85-scenario closure five times on cold Sol high, including all focused regressions as well as the shared discovery, domain-appropriate direct-invocation, broad-domain isolated-application, development-companion dependency, and integrated composition sets; keep scenarios atomic unless composition is the behavior under test.
 - [ ] Manually score each protected promise and record any infrastructure failures separately.
 - [ ] If any result is below 5/5, stop and classify it through the design's failure gate; correct a cleanup regression in its owning task, and isolate any approved behavioral change in a separate RED/GREEN slice.
 - [ ] Record the final 5/5 results and commit as `docs(validation): record final skill composition greens`.
@@ -1359,11 +1398,11 @@ Sol-high model gate across the authored development modes.
 - Move after completion: `plans/2026-08-01-comprehensive-skill-cleanup.md` to `plans/completed/2026-08-01-comprehensive-skill-cleanup.md`
 - Move after completion: `plans/specs/2026-08-01-comprehensive-skill-cleanup-design.md` to `plans/completed/specs/2026-08-01-comprehensive-skill-cleanup-design.md`
 
-**Validation scope:** reuse the same 84 domain-appropriate scenarios and declared
+**Validation scope:** reuse the same 85 domain-appropriate scenarios and declared
 dependencies from the cold Sol-high gate. Sol-low measures effort robustness and does
 not create another portability domain or provider gate.
 
-- [ ] Freeze the 84-scenario final active suite, which excludes historical `LP-04` and `SSR-04`, and run every scenario five times on `gpt-5.6-sol` at low reasoning effort.
+- [ ] Freeze the 85-scenario final active suite, which excludes historical `LP-04` and `SSR-04`, and run every scenario five times on `gpt-5.6-sol` at low reasoning effort.
 - [ ] Compare control and cleaned scores by scenario and pause for user review on any decrease.
 - [ ] For every decrease, record the user-approved disposition in `skill-validation/README.md` and each affected record.
 - [ ] If accepted, record the what/why/accepted rationale; if remediation changes a skill or scenario contract, reopen its owning task, complete the required Sol-high backfill or regression suite, rerun the affected Sol-low arm, and return to this comparison.

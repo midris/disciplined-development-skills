@@ -107,22 +107,39 @@ the source. It must not retain a load-bearing threshold, a destination test, a
 scratch-work exemption, or another exclusion. Project, external, and cross-domain
 distinctions remain useful only for choosing and ranking sources; they do not bound
 when the skill applies. A single source may support multiple claims when the mapping
-is unambiguous.
+is unambiguous. If no acceptable source supports a claim, do not state the claim as
+fact or attach a source that lacks the claimed datum. Absent, unreadable, malformed,
+datum-missing, conflicting, and large source sets do not create an exception: apply
+the same source-ranking, verification, and disclosure rule to every emitted factual
+claim, without sampling.
 
-This behavior slice adds two watched target scenarios. `DISC-11` requires
+This behavior slice adds three watched target scenarios. `DISC-11` requires
 `disciplined-research` selection before an agent records a factual claim in a private
-software-development scratch note. `DR-04` requires that the claim be acquired,
-verified, and accompanied by an unambiguous source disclosure. Their prompt,
-fixture, rubric, and supplied context must be frozen before execution. Existing
-`DISC-01`–`DISC-10` and `DR-01`–`DR-03` contracts remain unchanged initially; if an
-existing contract needs repair, apply the global control-backfill rule. Run fresh
-Sol-high and Sol-low controls for the new targets under the enforced read-only,
-no-agents transport, then require the candidate to reach 5/5 on the complete active
-discovery and disciplined-research suites. After watched REDs, candidate GREEN,
-cold review, final in-place approval, and repository verification, commit the
-behavior slice separately. That commit becomes Task 18's immediate readability
-control, and the active closure becomes 84 scenarios only after both new targets
-are GREEN.
+software-development scratch note. `DR-04` requires the private note to acquire,
+verify, and disclose support for every factual claim. `DR-05` exercises a casual
+answer when an available source lacks the requested datum: the answer must not
+assert the unsupported claim or falsely cite the incomplete source. Existing
+`DR-01`–`DR-03` retain source ranking, conflicting-authority, multi-source mapping,
+and unsupported-claim guards. Before drafting, reclassify every `DISC-01`–`DISC-10`
+allowed set against the exact new description; do not presume the old routing
+contracts remain valid. Freeze and backfill any repaired discovery contract plus the
+three new targets before skill edits.
+
+The live README, architecture summary, and parent Principle 6 must stop presenting
+research as load-bearing-only. Any parent-skill prose change follows the same
+complete-draft and final in-place approval gates and reruns the parent's complete
+active suite. Before drafting that change, reclassify `DD-01`, `DD-02`, `DD-03`,
+`DSD-01`, `DSD-02`, `OWN`, and `WER-07` against universal grounding, repair and
+backfill each changed contract at Sol high and low, and classify new positive
+routing as target behavior. Require the combined candidate to reach 5/5 on the complete affected
+discovery, disciplined-research, and disciplined-development suites. After watched
+REDs, candidate GREEN, cold review, staged adversarial review, final in-place
+approval, and repository verification, commit the behavior slice separately. That
+commit becomes Task 18's immediate readability control, and the active closure
+becomes 85 scenarios or 425 five-repetition slots only after all Task 18A routing
+and application targets are GREEN. The pre-draft discovery reclassification determines the final
+preservation/target split; a new positive-routing promise is target behavior, not a
+preservation requirement retroactively imposed on the old description.
 
 Broad-domain isolation is coverage only for the three companions whose contracts
 include that work; it does not expand the two development companions beyond their
@@ -157,7 +174,7 @@ Record one of two dispositions for every decrease: user-approved acceptance with
 Task 11's frozen 81-scenario/405-slot aggregate remains historical fact.
 After retiring `LP-04` and `SSR-04`, that closure contained 79 scenarios; Task 17
 added three active scenarios for a current total of 82. The approved Task 18
-behavior slice will add two more after they are GREEN, producing the 84-scenario
+behavior slice will add three more after they are GREEN, producing the 85-scenario
 closure used by Tasks 26–27. Do not recompute the frozen aggregate.
 
 Record for every run:

@@ -8,6 +8,12 @@ These preservation and approved target scenarios route from the nine frontmatter
 Evaluators receive the descriptions and one request, never skill bodies or scoring criteria.
 All scenarios use five fresh `gpt-5.6-sol` high-effort evaluators through the probed read-only, no-subagents transport.
 
+Task 18A is approved but has not changed the active catalog or tracked descriptions.
+Before skill prose changes, it will reclassify the `disciplined-research` allowed set
+for each `DISC-01`–`DISC-10`, backfill every repaired contract at Sol high and low,
+and freeze watched target `DISC-11` for private software-development scratch-note
+routing.
+
 ## Supplied description context
 
 The following text is extracted from the immutable nine-skill control bundle whose archive SHA-256 is `8f21c8267d005c349702ec94d6aff26c13a09bfbe29f2b43efcfbb37304f16e3`:
