@@ -255,7 +255,7 @@ The repaired five-skill control uses base
 `bd30bf7c9070f2f56b6d2ae32a746518e2259b6f` parent, research, lean-plan, and
 explicit-rationale files plus Superpowers 6.2.0 `writing-plans`.
 Its canonical content-manifest SHA-256 is
-`3d843a13ac8d132e0ec4443955d6e683fb4ec8625ec494db3d9d6598db4fe9e9`.
+`c137569879ba53d461531c2b7cb1e58736aa514a4da33a4bb2cbc0fb1f44b089`.
 Prompt SHA-256 is `fe1603200c8faa899e2fe2c34ee4ea045efb35365105bba5a41f51be2ffa8c66`;
 rubric SHA-256 is `b53059862775b998fafea59f2617c8f8bc10227e488694c7064a0287559ba48b`.
 Fresh five-repetition Sol-high and Sol-low controls are pending orchestrator

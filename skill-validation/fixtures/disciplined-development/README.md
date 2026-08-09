@@ -57,10 +57,10 @@ The repaired prompts and rubrics below require universal research selection and
 unambiguous source disclosure for the complete factual output.
 `DD-01` and `DD-02` use the pre-Task-18A complete integrated bundle at base
 `bd30bf7c9070f2f56b6d2ae32a746518e2259b6f`, canonical content-manifest SHA-256
-`3be6219aa8601bde4917f69f5a8355eb913462199b0c5ee57ae869a3febecd5d`.
+`3fc788a23bd66ce2977a43b4a2f8d71fa6a13515a3286df1baf3089c6a4c2a53`.
 `DD-03` now supplies the parent and research skills from that base, canonical
 content-manifest SHA-256
-`6ff4f13cbd336ec1c50d9ba182092df1d813565e55a3a7a176da0a112ff3c0af`.
+`d22456d9691855f6fe271f3e52a89b1b239c6eb7f3688f88e6a1dd26224b534d`.
 
 | ID | Prompt SHA-256 | Rubric SHA-256 | Sol-high control | Sol-low control |
 |---|---|---|---|---|

@@ -51,7 +51,7 @@ The repaired `OWN` control uses the loop, parent, and research skills at base
 `bd30bf7c9070f2f56b6d2ae32a746518e2259b6f` plus Superpowers 6.2.0
 `subagent-driven-development`.
 Its canonical content-manifest SHA-256 is
-`36b57a544c0198fd59af0ec90c683633cbf9ca02c8b7252e9f85853153f7a7ad`.
+`c5bb38b5aa306fb059e12365075f8b68d238e1412450dab4cf1558efe51e259b`.
 Prompt SHA-256 is `deab7d6fec9cb4654a10992d958d3d9305693b84ab8c07294d8adc34ee930f3c`;
 rubric SHA-256 is `a0cb5a88011a3ea8a5be2dd5ee5bf0f627e9e540cb414d105d78d9ef4592521c`.
 This is a repaired preservation contract: the old parent already makes factual

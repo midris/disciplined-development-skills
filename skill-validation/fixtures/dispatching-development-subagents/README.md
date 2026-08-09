@@ -40,10 +40,10 @@ The dispatch control skill SHA-256 is `b89b4db8af53bd136237cb2306f956c039757a0e3
 remain historical.
 `DSD-01` uses the complete nine-skill bundle at base
 `bd30bf7c9070f2f56b6d2ae32a746518e2259b6f`, canonical content-manifest SHA-256
-`0a98f98107a9fc409c91d2197927298e531dccd678c7226f5561424ab747ced3`.
+`af36615bae1e4d80d8d0456dd93366ee429d75e0e74ae0ee49a6be44ee0c5548`.
 `DSD-02` uses the base dispatch, parent, research, and hook files plus Superpowers
 6.2.0 `subagent-driven-development`, canonical content-manifest SHA-256
-`713930e51e1a2ebecec52d2a15ed249210c34ada20945f58c09f0f07627cf5eb`.
+`91ccc76608c04c3e415927bfc4aee1871ba9a8f8dab5ece6a7d92c32ea3bb84e`.
 
 | ID | Prompt SHA-256 | Rubric SHA-256 | Sol-high control | Sol-low control |
 |---|---|---|---|---|
