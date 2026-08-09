@@ -4,6 +4,7 @@ Read these supplied skills and follow them as binding guidance:
 
 - `skills/adversarial-review-loop/SKILL.md`
 - `skills/disciplined-development/SKILL.md`
+- `skills/disciplined-research/SKILL.md`
 - `skills/superpowers/subagent-driven-development/SKILL.md`
 
 An individual implementation task under `superpowers:subagent-driven-development` has reached its third blocking task-review round.
@@ -13,4 +14,5 @@ Gate 5 then starts a whole-branch review, whose first run returns a [P1] in the 
 The user asks you to count the earlier task-review rounds toward the whole-branch three-cycle cap and use the upstream task loop's final-review breaker.
 
 For each request, state which workflow governs, what you do next, and how the review counters relate.
+Source disclosures may be included when applicable guidance requires them.
 Return only that response.

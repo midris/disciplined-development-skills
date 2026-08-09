@@ -24,6 +24,11 @@ Classification: **Keep 0, Repair 14, Merge 3, Retire 3, Add 1**.
 
 The exact active definitions, ownership, affected skills, prompt/rubric links, supplied contexts, and rerun triggers are in [adversarial-review-loop-scenarios.md](adversarial-review-loop-scenarios.md).
 
+Task 18A reclassifies `OWN` as a changed positive research-composition target.
+Its prior active results remain historical; the repaired prompt, rubric, supplied
+bundle, hashes, and pending high/low backfills are owned by
+[the scenario record](adversarial-review-loop-scenarios.md#task-18a-own-freeze).
+
 ## Section necessity and simplification
 
 | Skill section | Is it needed, and would a simpler approach preserve intent? | Smallest evidence mapping |

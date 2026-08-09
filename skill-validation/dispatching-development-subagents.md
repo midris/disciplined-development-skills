@@ -26,12 +26,24 @@ The owner of all four IDs is `dispatching-development-subagents`.
 
 | ID | Affected skills | Type / status | Protected promise and sections | Supplied skill context | Exact prompt | Withheld rubric | Rerun trigger |
 |---|---|---|---|---|---|---|---|
-| `DSD-01` | `dispatching-development-subagents`, `disciplined-development` | Simple application + direct invocation + composition / preservation | One safe full-bundle dispatch prompt carries scope, governing rereads, identity, boundaries, verified prose, and format-independent disclosure; dispatch Role, When you dispatch, Composition; parent Principle 4 | Complete nine-skill control | [prompt](fixtures/dispatching-development-subagents/prompts/dsd-01.md) | [rubric](fixtures/dispatching-development-subagents/rubrics/dsd-01.md) | Description, direct invocation, prompt contract, parent Principle 4/load/reread, disclosure, or composition changes |
-| `DSD-02` | `dispatching-development-subagents`, `disciplined-development` | Non-trivial composition + focused regression / preservation | Identity and audience framing survive reclassification pressure; commit verification remains distinct from orchestrator-only review/checkpoint/PR gates and nested dispatch; dispatch Role, When you dispatch, Red Flags, Composition; parent Gate 3, Gate 5, Principles 4 and 8, relevant rationalizations; hook `VERIFY_TEXT` and `GATE_AUDIENCE` | Identity/nudge composition control | [prompt](fixtures/dispatching-development-subagents/prompts/dsd-02.md) | [rubric](fixtures/dispatching-development-subagents/rubrics/dsd-02.md) | Identity stamp, parent Gate 3/Gate 5/Principles 4 or 8/rationalizations, hook `VERIFY_TEXT`/`GATE_AUDIENCE`, verification split, or nested-dispatch rule changes |
+| `DSD-01` | `dispatching-development-subagents`, `disciplined-development`, `disciplined-research` | Simple application + direct invocation + composition / watched target | One safe full-bundle dispatch prompt carries scope, governing rereads, identity, boundaries, verified and source-disclosed prose, and format-independent disclosure; dispatch Role, When you dispatch, Composition; parent Principles 4 and 6 | Complete nine-skill pre-Task-18A control | [prompt](fixtures/dispatching-development-subagents/prompts/dsd-01.md) | [rubric](fixtures/dispatching-development-subagents/rubrics/dsd-01.md) | Description, direct invocation, prompt contract, parent Principle 4/load/reread, research applicability/disclosure, or composition changes |
+| `DSD-02` | `dispatching-development-subagents`, `disciplined-development`, `disciplined-research` | Non-trivial composition + focused regression / watched target | Identity and audience framing survive reclassification pressure; commit verification remains distinct from orchestrator-only review/checkpoint/PR gates and nested dispatch; all factual hook/gate/ownership claims are grounded and disclosed | Identity/nudge/research composition control | [prompt](fixtures/dispatching-development-subagents/prompts/dsd-02.md) | [rubric](fixtures/dispatching-development-subagents/rubrics/dsd-02.md) | Identity stamp, parent Gate 3/Gate 5/Principles 4, 6, or 8, hook messages, source disclosure, verification split, or nested-dispatch rule changes |
 | `DSD-03` | `dispatching-development-subagents` | Focused regression / preservation | The orchestrator verifies every returned commit from stat through full diff and adjudicates extras on merit; Overview, Verify | Dispatch-only control | [prompt](fixtures/dispatching-development-subagents/prompts/dsd-03.md) | [rubric](fixtures/dispatching-development-subagents/rubrics/dsd-03.md) | Returned-commit verification, scope reconciliation, report trust, or extra-change disposition changes |
 | `DSD-04` | `dispatching-development-subagents` | Non-trivial application + focused regression / preservation | Mixed findings are partitioned without paraphrase, safe same-kind batching remains allowed, unverified rationale stays out, and every agent receives the overlay; When you dispatch, Rationalizations, Red Flags | Dispatch-only control | [prompt](fixtures/dispatching-development-subagents/prompts/dsd-04.md) | [rubric](fixtures/dispatching-development-subagents/rubrics/dsd-04.md) | Batch boundary, verbatim finding, verified-claims, per-agent overlay, or out-of-scope rule changes |
 
 Exact bundle and file hashes are in [the fixture manifest](fixtures/dispatching-development-subagents/README.md).
+
+### Task 18A pre-draft freeze
+
+`DSD-01` and `DSD-02` are individually reclassified as
+`disciplined-research` **required** because their complete returned artifacts state
+factual finding, scope, governing-source, identity, hook, gate, counter,
+verification, and ownership claims.
+The repaired prompts, rubrics, supplied bundles, and hashes are frozen in the
+[fixture manifest](fixtures/dispatching-development-subagents/README.md#task-18a-pre-draft-freeze).
+Old results remain historical under the old verified-only/no-disclosure contract.
+Each repaired positive target requires five fresh Sol-high and five fresh Sol-low
+controls before candidate use, a watched Sol-high RED, and later 5/5 candidate GREEN.
 
 ### Result lifecycle
 

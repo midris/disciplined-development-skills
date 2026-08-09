@@ -34,6 +34,22 @@ The dispatch control skill SHA-256 is `b89b4db8af53bd136237cb2306f956c039757a0e3
 | `DSD-03` | `6e99e94ce865c2102799474225fa8ee500440d013d30b9a853951663b3ee0d70` | `c7b3fbf6eb092f8919cd8ec1eaa278af7f736f4fa1522bbb8e56bc536aab6570` |
 | `DSD-04` | `31a5cbe423d9bd9531cc2706de2f9372d13af5bb142db5320e8887cb75ab2dfe` | `dc29adc91e29ca32bae2fe3a8df3ba1a7cac3293add9eec2e77b7aeecaebd25b` |
 
+## Task 18A pre-draft freeze
+
+`DSD-01` and `DSD-02` are repaired positive targets; the prior hashes and results
+remain historical.
+`DSD-01` uses the complete nine-skill bundle at base
+`bd30bf7c9070f2f56b6d2ae32a746518e2259b6f`, canonical content-manifest SHA-256
+`0a98f98107a9fc409c91d2197927298e531dccd678c7226f5561424ab747ced3`.
+`DSD-02` uses the base dispatch, parent, research, and hook files plus Superpowers
+6.2.0 `subagent-driven-development`, canonical content-manifest SHA-256
+`713930e51e1a2ebecec52d2a15ed249210c34ada20945f58c09f0f07627cf5eb`.
+
+| ID | Prompt SHA-256 | Rubric SHA-256 | Sol-high control | Sol-low control |
+|---|---|---|---|---|
+| `DSD-01` | `9ca0ee8b3f1cb2983722167435827557f784678de49595b4e68d6eae25d3beea` | `0cf272a54a21bb50d77bedef6907e245b8d74a67a11719bac6d358b0889ddf07` | Pending orchestrator backfill | Pending orchestrator backfill |
+| `DSD-02` | `12596c9c251c61f0075859289ec0fb6e82805afd6b36692d1c414597e6dff68c` | `7c0fd67c6b5af68960c0276202e5dc350b0b4912aeaacd70ea61ea8871264f69` | Pending orchestrator backfill | Pending orchestrator backfill |
+
 ## Historical 2026-08-06 DSD-02 rerun bundle
 
 The repository members below were the supplied bytes on 2026-08-06; the

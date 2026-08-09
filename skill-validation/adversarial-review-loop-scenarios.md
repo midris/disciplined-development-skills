@@ -5,7 +5,7 @@ The shared [validation protocol](README.md) governs dispatch and scoring.
 Every active scenario runs five fresh Sol-high repetitions; evaluators receive only the exact prompt and mapped immutable bundle, never the rubric or this file.
 
 The owner of all IDs below is `adversarial-review-loop`.
-`OWN` also affects `disciplined-development`; every other owned ID affects only `adversarial-review-loop`.
+`OWN` also affects `disciplined-development` and `disciplined-research`; every other owned ID affects only `adversarial-review-loop`.
 Shared `DISC-01`–`DISC-10` retain Task 1 ownership and affect all nine skills through routing.
 Shared `CW-09` and `CW-11` retain `concise-writing` ownership and affect `adversarial-review-loop` through their negative authoring-routing boundary.
 
@@ -26,10 +26,20 @@ Shared `CW-09` and `CW-11` retain `concise-writing` ownership and affect `advers
 | `G3A` | Non-trivial application + focused regression / preservation | Cycle 3 locates a shared pattern in the orchestrator's own governing text before fixing; Root attack | Loop-only control | [prompt](fixtures/adversarial-review-loop/prompts/g3a.md) | [rubric](fixtures/adversarial-review-loop/rubrics/g3a.md) | Cycle-3 gate, governing-text branch, or verdict ordering changes |
 | `G3B` | Non-trivial application + focused regression / preservation | Cycle 3 permits a written no-shared-pattern verdict without over-firing; Root attack | Loop-only control | [prompt](fixtures/adversarial-review-loop/prompts/g3b.md) | [rubric](fixtures/adversarial-review-loop/rubrics/g3b.md) | No-pattern branch, written verdict, or over-fire guard changes |
 | `G3C` | Non-trivial application + focused regression / preservation | Cycle 3 locates reviewer-side re-litigation, records a ruling, and disposes the P3 without appeasement; Root attack, Clean | Loop-only control | [prompt](fixtures/adversarial-review-loop/prompts/g3c.md) | [rubric](fixtures/adversarial-review-loop/rubrics/g3c.md) | Reviewer-pattern branch, ruling, or P3 handling changes |
-| `OWN` | Composition + focused regression / preservation | Individual-task and whole-branch loops keep their owners, rules, and counters separate; Scope and precedence | Ownership composition control | [prompt](fixtures/adversarial-review-loop/prompts/own.md) | [rubric](fixtures/adversarial-review-loop/rubrics/own.md) | Scope, precedence, upstream fix-loop, Gate-5, or counter changes |
+| `OWN` | Composition + focused regression / watched target | Individual-task and whole-branch loops keep their owners, rules, and counters separate, and factual workflow claims are grounded and source-disclosed; Scope and precedence plus parent Principle 6 | Ownership/research composition control | [prompt](fixtures/adversarial-review-loop/prompts/own.md) | [rubric](fixtures/adversarial-review-loop/rubrics/own.md) | Scope, precedence, upstream fix-loop, Gate-5, counter, research applicability, or disclosure changes |
 | `CE` | Focused regression / preservation | Every cold-read result takes its distinct stop/redo/reset branch and is recorded; Cold-read escape | Loop-only control | [prompt](fixtures/adversarial-review-loop/prompts/ce.md) | [rubric](fixtures/adversarial-review-loop/rubrics/ce.md) | Cold-read outcome or recording changes |
 
 Exact bundle and file hashes are in [the fixture manifest](fixtures/adversarial-review-loop/README.md).
+
+## Task 18A OWN freeze
+
+`OWN` is reclassified as `disciplined-research` **required** because its complete
+answer states factual workflow, rule, round, counter, owner, and next-action claims.
+The repaired prompt adds the research skill to supplied context, and the rubric
+requires unambiguous support disclosure without a fixture-tailored phrase.
+Exact prompt, rubric, bundle, and pending-control metadata are frozen in the
+[fixture manifest](fixtures/adversarial-review-loop/README.md#task-18a-own-pre-draft-freeze).
+The prior results remain historical under the old contract.
 
 ## Historical suite disposition
 

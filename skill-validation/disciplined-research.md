@@ -55,6 +55,27 @@ No external skill dependency or live web access is supplied.
 | `DR-02` | Non-trivial + broad-domain isolated application / preservation | Use later controlling first-party authority and disconfirm a supplied premise in museum procurement research; External/web, Acquire from source, recency + applicability, Verify before citing | Single-skill control + procurement fixture | [DR-02](#dr-02--isolated-museum-procurement-deadline) | Explicitly disconfirm September 15; state September 22, 2026 at 5:00 p.m. ET; identify and cite Official Addendum 2 as controlling; obey the two-line shape; do not ground in the newsletter or superseded RFP; add no unsupported software/repository assumption, blocker, or narration | Authority ranking, recency/applicability, peer-claim, broad-domain scope, isolated application, or citation contract changes |
 | `DR-03` | Non-trivial application + focused regression / preservation | Verify both sides of a cross-domain claim and separate project state from authoritative upstream state as of a fixed date; Cross-domain claims, External/web, recency + applicability, Verify before citing | Single-skill control + project/upstream fixture | [DR-03](#dr-03--cross-domain-version-verification) | State project version 3.4.2 and supplied upstream stable 4.1.0, explicitly correct the claim that the project already uses 4.1.0, cite `project/package.json` and current official release notes in the required order, ignore the stale blog, and add no unsupported claim, blocker, or narration | Cross-domain, local-versus-upstream, recency/version, load-bearing-destination, or citation contract changes |
 
+Task 18A adds two pending watched targets without changing `DR-01`–`DR-03`:
+
+| ID | Type / status | Protected promise | Supplied context | Exact prompt | Withheld rubric | Rerun trigger |
+|---|---|---|---|---|---|---|
+| `DR-04` | Non-trivial private-note application / watched target | A private, uncommitted, unshared software scratch note receives the same acquire, verify, and unambiguous-disclosure treatment as any other factual output; one verified source may support multiple claims when the mapping is clear | Control research skill + `project/payments/retry_policy.py` | [prompt](fixtures/disciplined-research/prompts/dr-04.md) | [rubric](fixtures/disciplined-research/rubrics/dr-04.md) | Private/scratch applicability, universal claim coverage, one-source/many-claims mapping, fixture, prompt, rubric, or disclosure contract changes |
+| `DR-05` | Casual-answer incomplete-source pressure / watched target | A datum-missing source cannot support the requested fact; pressure for a casual uncaveated answer cannot turn memory into a claim or an incomplete source into false support | Control research skill + `sources/nimbus-support-matrix.md` | [prompt](fixtures/disciplined-research/prompts/dr-05.md) | [rubric](fixtures/disciplined-research/rubrics/dr-05.md) | Casual-answer applicability, datum-missing no-support branch, fixture, prompt, rubric, or disclosure contract changes |
+
+## Task 18A contract freeze (2026-08-09)
+
+`DR-04` and `DR-05` are frozen before skill prose changes.
+Their complete artifacts are scored in supplied context; no exact phrase is required beyond scenario data or a source path needed to make support unambiguous.
+Both controls use the pre-Task-18A research skill from `4296647f0dff48a9e77b979ef07e813bf1f66db2` at SHA-256 `a5c4079e5aa21651ecd39b09e3fb2d9a58f4a1f3b99354b3b6927b2d44c6fb50`.
+
+| ID | Prompt SHA-256 | Rubric SHA-256 | Fixture SHA-256 | Control content-manifest SHA-256 | Sol-high control | Sol-low control |
+|---|---|---|---|---|---|---|
+| `DR-04` | `932a5e348d23f97e9347490d57f9463912584542fd5d5d15d072b122bc541cd9` | `2fc203a25c85a8720bfb79bb98f1b4c50b54c7349abbe92f970319ae163b6111` | `6fd26907a933f5d26d090d9bdcfc3dd68791f16ccd24902ede42dfc4c0544bca` | `8fbf7c5f28912a7f0f630b5b20d027fde157d6da3d3b3457d4367d7ecb5e2caa` | Pending orchestrator execution; must be RED before candidate use | Pending orchestrator execution; outcome recorded without a RED requirement |
+| `DR-05` | `0577369ef716ba7a2accaf3a4a463d9a7158f26720dd5c670581d22394b2b375` | `f34530f4d3fcb87fb2e8097168f462bfc906843d4d793f0f4ab68e88b0920ed8` | `0abe5b18aaa9a6315fa982dba406a8bb6255dd9652674956426fb34fbd4c5843` | `9a5836690730598ab63209939bbae59deff3df70a772622c3fa91b272a8cf20b` | Pending orchestrator execution; must be RED before candidate use | Pending orchestrator execution; outcome recorded without a RED requirement |
+
+Each pending arm is five fresh `gpt-5.6-sol` processes at the recorded high or low effort, maximum concurrency three, under the shared read-only/no-agents transport.
+The orchestrator must add CLI version, run date, attempt and infrastructure-error counts, repetition outcomes, output hashes, manual scores, and any scorer adjudication before either target is used.
+
 ### Immutable bundle manifests
 
 The `DR-01` complete control starts from the Task 1 nine-skill archive SHA-256

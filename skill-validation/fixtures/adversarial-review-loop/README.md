@@ -13,7 +13,7 @@ Bundle digests use the canonical path-and-content algorithm in [the shared proto
 |---|---|---|---|---|
 | Loop-only control | `CS`, `T3`–`T7`, `NF`, `PW`, `XL`, `G3A`–`G3C`, `CE` | `skills/adversarial-review-loop/SKILL.md` | `17fe5aae470370b04bd607f94ed1dd9a83178be848fd710e09aecce9d3eb7c8e` | `ee55d09386f8f162e9606ac40cc7dcbfc0699ec4733fb318e5dffa91dd4f39f3` |
 | Complete nine-skill control | `T2` | All nine repository `SKILL.md` files listed in the shared control manifest | `8f21c8267d005c349702ec94d6aff26c13a09bfbe29f2b43efcfbb37304f16e3` | `e2249c4b24132523f1374d506957197a303314e2bfbc6e32c9c1b233909cbbff` |
-| Ownership composition control | `OWN` | Loop and parent controls plus Superpowers 6.2.0 task-loop dependency | Custom bundle; use the manifest below | `8386fb9818d60c2ecdf9da95a586b5a601a678baa57c4e5268e3c987e4deb840` |
+| Ownership composition control | `OWN` | Loop, parent, and research controls plus Superpowers 6.2.0 task-loop dependency | Custom bundle; use the manifest below | Superseded by the Task 18A freeze below |
 
 The loop control file SHA-256 is `46b85eafc5db54cb521eed9c4a110e552c76d97cfae72e141f109c9dea10f0c6`.
 
@@ -23,6 +23,7 @@ The ownership bundle is exactly:
 |---|---|---|
 | Repository control commit | `skills/adversarial-review-loop/SKILL.md` | `46b85eafc5db54cb521eed9c4a110e552c76d97cfae72e141f109c9dea10f0c6` |
 | Repository control commit | `skills/disciplined-development/SKILL.md` | `1151a7575a5b6f72e007229c97efdb7a829695d08e8f44450d0d71b232e75dec` |
+| Repository control commit | `skills/disciplined-research/SKILL.md` | `a5c4079e5aa21651ecd39b09e3fb2d9a58f4a1f3b99354b3b6927b2d44c6fb50` |
 | Superpowers 6.2.0 | `skills/superpowers/subagent-driven-development/SKILL.md` | `349a08ad8b59b19b86c13a7d2f34a1a38719bf88257004a863eefefa8d9f9e40` |
 
 ## Prompt and rubric hashes
@@ -44,6 +45,18 @@ The ownership bundle is exactly:
 | `G3C` | `03207727853600c8b122843e3014ba6af563e11f65d51098b70c8cb8a0fa87ad` | `6982f364c0314610496cfbbcfaeb370166707e0da014101ff1c7f24f6efa99cc` |
 | `OWN` | `d4ae4791e081658d23d37c11c7778025db95c8b0a1b329a79bbbe6fe641a77c9` | `7195792a1728cbcd27f58736489dd9b475a30712ea7be431d5e7b90a657945bb` |
 | `CE` | `886d7cf352938df43e7d24d0015759835d35b1b05361790270468f9dcb0a0ffb` | `02dc65ef6bba25d9f31a51e0f02aa4dda5bb6329b40871816ac580c556aab007` |
+
+## Task 18A OWN pre-draft freeze
+
+The repaired `OWN` control uses the loop, parent, and research skills at base
+`bd30bf7c9070f2f56b6d2ae32a746518e2259b6f` plus Superpowers 6.2.0
+`subagent-driven-development`.
+Its canonical content-manifest SHA-256 is
+`36b57a544c0198fd59af0ec90c683633cbf9ca02c8b7252e9f85853153f7a7ad`.
+Prompt SHA-256 is `36d0a971df31e365096e8de2be9927003df656941ac4b9a5468fa2411f9f2818`;
+rubric SHA-256 is `a0cb5a88011a3ea8a5be2dd5ee5bf0f627e9e540cb414d105d78d9ef4592521c`.
+Fresh Sol-high and Sol-low controls are pending orchestrator execution; the new
+positive promise requires a watched Sol-high RED and later 5/5 candidate GREEN.
 
 ## Replay
 

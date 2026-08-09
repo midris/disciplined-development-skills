@@ -141,6 +141,17 @@ and application targets are GREEN. The pre-draft discovery reclassification dete
 preservation/target split; a new positive-routing promise is target behavior, not a
 preservation requirement retroactively imposed on the old description.
 
+The 2026-08-09 pre-draft sweep classified research as required for every
+`DISC-01`–`DISC-11` request and for `DD-01`–`DD-03`, `DSD-01`, `DSD-02`, `OWN`,
+and `WER-07`. Each complete output states factual claims, including preserved claims
+in stylistic transformations, plan premises and decisions, review/routing findings,
+dispatch scope, workflow ownership, and private scratch notes. Classification does
+not depend on destination or on whether the user first supplied the claim.
+No additional skill-prose dependency was found beyond the approved research skill
+and parent Principle 6 repairs. Owning validation records freeze exact repaired
+contracts and base-control hashes; fresh high/low controls and prose work remain
+pending.
+
 Broad-domain isolation is coverage only for the three companions whose contracts
 include that work; it does not expand the two development companions beyond their
 authored domain or remove any dependency.

@@ -4,6 +4,7 @@ Read these supplied files completely and follow them as binding guidance:
 
 - `skills/dispatching-development-subagents/SKILL.md`
 - `skills/disciplined-development/SKILL.md`
+- `skills/disciplined-research/SKILL.md`
 - `skills/disciplined-development/hooks/review_nudge.py`
 - `skills/superpowers/subagent-driven-development/SKILL.md`
 
@@ -19,5 +20,7 @@ Return two labeled sections:
 
 1. `Dispatch boundary:` the exact identity, nested-dispatch, hook, and gate language you put in the subagent prompt.
 2. `Expected response:` the exact next-action report you require from the subagent after those hook messages.
+
+Either labeled section may include source disclosures when applicable guidance requires them.
 
 Do not dispatch an agent.

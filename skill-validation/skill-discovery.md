@@ -8,11 +8,14 @@ These preservation and approved target scenarios route from the nine frontmatter
 Evaluators receive the descriptions and one request, never skill bodies or scoring criteria.
 All scenarios use five fresh `gpt-5.6-sol` high-effort evaluators through the probed read-only, no-subagents transport.
 
-Task 18A is approved but has not changed the active catalog or tracked descriptions.
-Before skill prose changes, it will reclassify the `disciplined-research` allowed set
-for each `DISC-01`–`DISC-10`, backfill every repaired contract at Sol high and low,
-and freeze watched target `DISC-11` for private software-development scratch-note
-routing.
+Task 18A has frozen the pre-draft contracts but has not changed tracked descriptions
+or run the required control backfills.
+The exact universal trigger makes `disciplined-research` required in every
+`DISC-01`–`DISC-10` request because each requested answer or artifact states at least
+one factual claim; origin in supplied user text, mechanical transformation, and
+private or scratch destination create no exemption.
+The prior allowed sets and results below remain historical evidence under their own
+rubrics until the orchestrator completes the fresh Sol-high and Sol-low controls.
 
 ## Supplied description context
 
@@ -79,16 +82,42 @@ The supplied skill context is the description block above; no body, sibling proc
 
 | ID | Exact request | Allowed output sets in the evaluator-withheld rubric | Primary protected promise | Rerun trigger |
 |---|---|---|---|---|
-| `DISC-01` | `Review only the API design text I provide for internal logical edge cases; do not inspect files, state repository or external facts, edit anything, or handle existing findings.` | Must include `adversarial-review` and `disciplined-development`; may also include `concise-writing` and `disciplined-research`; no other skill | Initial text-bounded adversarial review routes to `adversarial-review`, not remediation or implementation dispatch; supplied-text logical claims leave research co-selection optional | Any candidate description, fixed prompt, request, or allowed set changes |
-| `DISC-02` | `An external reviewer has already reported two defects. Help me handle those findings.` | Exactly `adversarial-review-loop` and `disciplined-development`; no other skill | Already-surfaced findings route to the loop, not a new review | Same |
-| `DISC-03` | `Shorten this purely stylistic README sentence without adding or changing factual claims: "Our setup process is simple, straightforward, and easy to follow because it is not complicated."` | Exactly `concise-writing` and `disciplined-development`; no other skill | Ordinary padded reader-facing prose routes to concision without creating a research-composition cell | Same |
-| `DISC-04` | `Resume implementation from the active plan and take the work through verification and commit.` | Must include `disciplined-development`; may also include `disciplined-research`; no other skill | Active-plan implementation and boundary discipline route to the parent | Same |
+| `DISC-01` | `Review only the API design text I provide for internal logical edge cases; do not inspect files, state repository or external facts, edit anything, or handle existing findings.` | Must include `adversarial-review`, `disciplined-development`, and `disciplined-research`; may also include `concise-writing`; no other skill | The review's findings are factual claims about supplied source text, so supplied-text acquisition does not make research optional | Any candidate description, fixed prompt, request, or allowed set changes |
+| `DISC-02` | `An external reviewer has already reported two defects. Help me handle those findings.` | Exactly `adversarial-review-loop`, `disciplined-development`, and `disciplined-research`; no other skill | Handling the reported defects states claims about the findings and affected work; the reviewer report is a source, not an exemption | Same |
+| `DISC-03` | `Shorten this purely stylistic README sentence without adding or changing factual claims: "Our setup process is simple, straightforward, and easy to follow because it is not complicated."` | Exactly `concise-writing`, `disciplined-development`, and `disciplined-research`; no other skill | The rewritten sentence still states the supplied setup-ease claim even though it adds or changes no factual content | Same |
+| `DISC-04` | `Resume implementation from the active plan and take the work through verification and commit.` | Exactly `disciplined-development` and `disciplined-research`; no other skill | Implementation, verification, and commit outputs state current-project and completion claims | Same |
 | `DISC-05` | `Check the repository and tell me which handler processes POST /orders.` | Exactly `disciplined-development` and `disciplined-research` | A downstream-quotable project fact routes to research within the parent development workflow | Same |
-| `DISC-06` | `Spawn a development subagent to implement the pagination fix; I will integrate its diff.` | Exactly `disciplined-development` and `dispatching-development-subagents`; no other skill | Integrated implementation delegation routes to the dispatch companion | Same |
-| `DISC-07` | `Write a plan to add CSV export.` | Must include `disciplined-development` and `lean-plan-writing`; may also include `concise-writing` and `disciplined-research`; no other skill | A plan deliverable routes to lean planning | Same |
-| `DISC-08` | ``Perform only a mechanical identifier replacement: rename the exact identifier `user_id` to `account_id` everywhere it occurs in code and documentation. Do not rewrite, tighten, or otherwise revise surrounding prose.`` | Must include `disciplined-development` and `sweeping-stale-references`; may also include `disciplined-research`; no other skill | A cascading multi-surface rename routes to stale-reference sweeping | Same |
-| `DISC-09` | `We are deliberately skipping retries as a temporary shortcut. Record that choice beside the code so it is not mistaken for an oversight.` | Must include `disciplined-development` and `writing-explicit-rationale`; may also include `concise-writing` and `disciplined-research`; no other skill | An intentional shortcut at risk of looking accidental routes to explicit rationale | Same |
-| `DISC-10` | `Update the launch plan to defer multilingual invoices. The billing vendor's locale API remains unstable, so launch accepts English-only invoices until the API stabilizes. That rationale currently exists only in the PR description.` | Must include `disciplined-development`, `lean-plan-writing`, and `writing-explicit-rationale`; may also include `concise-writing`, `disciplined-research`, and `sweeping-stale-references`; no other skill | A plan deferral whose reasoning is non-durable routes to explicit rationale and lean planning within the parent development workflow | Same |
+| `DISC-06` | `Spawn a development subagent to implement the pagination fix; I will integrate its diff.` | Exactly `disciplined-development`, `disciplined-research`, and `dispatching-development-subagents`; no other skill | The dispatch states factual scope, finding, and governing-context claims before the subagent can act | Same |
+| `DISC-07` | `Write a plan to add CSV export.` | Must include `disciplined-development`, `disciplined-research`, and `lean-plan-writing`; may also include `concise-writing`; no other skill | The plan artifact states factual premises and current/future decision boundaries; plan destination does not lower the trigger | Same |
+| `DISC-08` | ``Perform only a mechanical identifier replacement: rename the exact identifier `user_id` to `account_id` everywhere it occurs in code and documentation. Do not rewrite, tighten, or otherwise revise surrounding prose.`` | Exactly `disciplined-development`, `disciplined-research`, and `sweeping-stale-references`; no other skill | Search results, occurrence coverage, edits, and completion are factual claims even when the replacement is mechanical | Same |
+| `DISC-09` | `We are deliberately skipping retries as a temporary shortcut. Record that choice beside the code so it is not mistaken for an oversight.` | Must include `disciplined-development`, `disciplined-research`, and `writing-explicit-rationale`; may also include `concise-writing`; no other skill | Recording the user-originated retry decision still states a fact about project behavior and intent | Same |
+| `DISC-10` | `Update the launch plan to defer multilingual invoices. The billing vendor's locale API remains unstable, so launch accepts English-only invoices until the API stabilizes. That rationale currently exists only in the PR description.` | Must include `disciplined-development`, `disciplined-research`, `lean-plan-writing`, and `writing-explicit-rationale`; may also include `concise-writing` and `sweeping-stale-references`; no other skill | The plan repeats vendor-state, launch-scope, and rationale-location claims supplied by the user; source origin does not exempt them | Same |
+| `DISC-11` | ``Privately note for yourself in an uncommitted software-development scratch file: `The checkout service retries declined authorizations three times.` Do not share or publish the note.`` | Must include `disciplined-development` and `disciplined-research`; may also include `concise-writing`; no other skill | A private scratch note that states a factual software claim routes to research exactly like a public artifact | Same |
+
+## Task 18A reclassification and contract freeze (2026-08-09)
+
+`disciplined-research` is **required** for `DISC-01` through `DISC-11`; none is optional or prohibited.
+The reasoning is recorded per row above against the complete requested output, not a sentence-local keyword test.
+For `DISC-01`–`DISC-10`, the exact requests and evaluator wrapper remain unchanged; the target supplied context changes only the research description to `Use before stating any factual claim.`, and the allowed sets are the table above.
+The combined exact withheld rubric is
+[frozen here](fixtures/skill-discovery/rubrics/task-18a-disc-01-10.md) at SHA-256
+`9137c54f0c92e2e6aa0ed9c566786b09aa50f2df391fdb06f48ac64c4b8356b0`.
+Those ten repaired rubrics require fresh five-repetition Sol-high and Sol-low controls before candidate use.
+Existing outcomes in this record are historical under the earlier allowed sets and are not rescored.
+
+`DISC-11` has separately materialized complete control and target prompts.
+The prompts differ only in the research-description line and have no separate skill-body bundle.
+
+| Material | SHA-256 |
+|---|---|
+| `DISC-11` control prompt | `d81f9df5eb63441ed4fb97a3a53fbd20903345703501020f6fe67bb52b9fa402` |
+| `DISC-11` target prompt | `8f83f439a2fe57c5e8ebfb2a63cde9fd5fe1c30c0032c2371b76a35fba4506d8` |
+| `DISC-11` withheld rubric | `200b06fcd313fc0f911a24f11c0a78be7696e8e5ad9c03c7c05070e81001c866` |
+| Empty supplied-file manifest | `e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855` |
+
+All eleven controls require five fresh `gpt-5.6-sol` processes at high effort and five at low effort, maximum concurrency three, under the shared read-only/no-agents transport.
+The orchestrator must add run date, CLI version, attempt and infrastructure-error counts, repetition outputs and hashes, manual scores, and scorer adjudications.
+Every new required route is watched target behavior: its Sol-high control must be RED and its later candidate must reach 5/5.
 
 The rubric first requires a JSON array whose names are in ascending alphabetical
 order, then compares its selected-name set with the allowed sets above.

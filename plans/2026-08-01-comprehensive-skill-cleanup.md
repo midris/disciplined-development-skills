@@ -1162,7 +1162,25 @@ Absent, unreadable, malformed, and datum-missing sources share the same no-suppo
 Large claim sets receive no sampling exemption, and the one-source/many-claims rule changes disclosure grouping rather than verification coverage.
 The frozen tasks remain in their declared domains; portability means reliable execution across agent and model families on those same tasks, not behavior on unrelated tasks.
 
-- [ ] Run a pre-draft routing/reference sweep across live skill, architecture, README, plan, and validation surfaces.
+**Pre-draft contract-freeze record (2026-08-09):** the live sweep found four later
+prose repairs: `skills/disciplined-research/SKILL.md`, parent Principle 6 in
+`skills/disciplined-development/SKILL.md`, `README.md`, and `ARCHITECTURE.md`.
+No other skill prose narrows research applicability: `sweeping-stale-references`
+uses “load-bearing” only for its own sweep trigger, and
+`dispatching-development-subagents` delegates claim verification without narrowing
+it. `CLAUDE.md`, consumer snippets, hook docs/code, config, and archived plans contain
+names, independent rules, or historical evidence rather than another live bound.
+
+All `DISC-01`–`DISC-11` rows and `DD-01`–`DD-03`, `DSD-01`, `DSD-02`, `OWN`,
+and `WER-07` are classified research **required** because every complete requested
+output states factual claims. User-supplied origin, mechanical transformation, and
+private/scratch destination do not change that classification. Exact repaired
+prompts, rubrics, contexts, and base-control hashes are frozen in owning records.
+Prior evidence remains historical. Fresh validation-design review, five-high/five-low
+controls, watched-RED decisions, candidate GREENs, and prose approvals remain
+orchestrator-owned and pending; this preparation ran no evaluator.
+
+- [x] Run a pre-draft routing/reference sweep across live skill, architecture, README, plan, and validation surfaces.
   Record every affected file before proposing prose.
   Treat `README.md`, `ARCHITECTURE.md`, and parent Principle 6 as required repairs; if the sweep finds another skill-prose dependency, add its complete active suite and both approval gates before proceeding.
 - [ ] Reclassify `DISC-01` through `DISC-10` individually against the exact new description with a fresh Sol-high validation-design reviewer.

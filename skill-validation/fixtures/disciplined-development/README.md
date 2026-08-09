@@ -50,6 +50,27 @@ These scenarios retain their existing owners and are linked into the parent skil
 | `DD-02` | `5da5fe92259e8a7343ebc394eba326e06fa31c65eea3ee829de0157eeac8d528` | `ab8ab55f1e58fb9c2eaa68b695e426ca6c8f85c3ec8154a64b30804aaee958f3` |
 | `DD-03` | `852eb66f0c3084e4f9aff349ae3775b5c70ca5c3221d1b6538d62ca603830b80` | `ead264e837afb0fe2aa974d0a9280e3c36e23d5079968f67da21bac6902c1c06` |
 
+## Task 18A pre-draft freeze
+
+The table above is historical under its prior contracts.
+The repaired prompts and rubrics below require universal research selection and
+unambiguous source disclosure for the complete factual output.
+`DD-01` and `DD-02` use the pre-Task-18A complete integrated bundle at base
+`bd30bf7c9070f2f56b6d2ae32a746518e2259b6f`, canonical content-manifest SHA-256
+`3be6219aa8601bde4917f69f5a8355eb913462199b0c5ee57ae869a3febecd5d`.
+`DD-03` now supplies the parent and research skills from that base, canonical
+content-manifest SHA-256
+`6ff4f13cbd336ec1c50d9ba182092df1d813565e55a3a7a176da0a112ff3c0af`.
+
+| ID | Prompt SHA-256 | Rubric SHA-256 | Sol-high control | Sol-low control |
+|---|---|---|---|---|
+| `DD-01` | `63987253b2be51f84562f4b6626378c0cbea5879652a881e6ee36b51902f57b2` | `cdd12bb4d8cd9d072e0d8fbfbf1461dfd4621503305357cac809d58bab2def8c` | Pending orchestrator backfill | Pending orchestrator backfill |
+| `DD-02` | `3e060070387bd37266eeebc5c406a6282e8bf33aa4ba255e42fc248ce0dca8b3` | `2db5d91720ce463855864d28b03585f60a03340f6921bc5cb3d6ea4eb342397d` | Pending orchestrator backfill | Pending orchestrator backfill |
+| `DD-03` | `edd0d8076c9818d7f995377e0bbba50836ac8347c50c491fa08c1f34a10e4081` | `26e51c0920c0c68417d51e8e1a1a5f24f36abc041960f761819958379f4b9659` | Pending orchestrator backfill | Pending orchestrator backfill |
+
+Each new positive promise requires a watched Sol-high RED and later 5/5 candidate
+GREEN. The orchestrator records all run and scoring metadata.
+
 ## Replay
 
 Use the exact enforced `codex` transport in the shared protocol with one fresh process and output path per repetition, `gpt-5.6-sol`, high reasoning effort, and at most three concurrent evaluators.
