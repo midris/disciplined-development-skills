@@ -35,7 +35,7 @@
 - For subjective cleanup comparisons, rerun five fresh immediate-readability-control arms and five fresh draft arms, anonymize the labels, and keep temporary outputs in scratch space outside the repository until the scored summary is recorded.
 - Do not edit skill prose until Tasks 1–11 establish and score the control suite, except a user-approved RED/GREEN slice required to resolve a genuine baseline inconsistency.
 - Task 7 has an owner-approved pre-freeze exception for visible member enumeration, `DD-PATTERN` synthesis, the `NONE` branch, response-template precedence, and folding effectiveness into the necessity section; keep this behavior slice separate from the later readability cleanup and commit it as its own behavioral boundary after final approval. The precedence and effectiveness wording are approved clarifications with preserved 5/5 controls, not claimed behavioral lifts.
-- Behavioral edits and readability edits land in separate commits.
+- Behavioral edits and readability edits land in separate commits except the owner-approved Task 17 whole-skill rewrite, which combines its response-routing boundary and readability cleanup in one preservation-first commit.
 - A skill's complete active suite includes its owned scenarios and every shared discovery, direct-invocation, domain-appropriate application, dependency, and composition scenario mapped to its promises.
 - Every shared or supporting scenario record has one owner and lists every affected skill.
 - A whole-skill cleanup reruns that skill's complete active Sol-high suite.
@@ -64,6 +64,7 @@
 - Tasks 7–10 form the integrated-development control-baseline boundary.
 - Task 11 is the Sol-low control-score boundary.
 - Tasks 12–15 are scope and catalog dispositions; Task 16's approved behavior slice retains its own boundary.
+- Task 17 combines the approved routing change and whole-skill readability rewrite in one preservation-first boundary.
 - Each Task 17–25 skill cleanup is its own boundary.
 - Tasks 26–27 form the final validation boundary.
 
@@ -854,9 +855,9 @@ skipped, installer suite 11 passed, and research suite 4 passed.
 
 **Task 11 execution note (2026-08-07):** The orchestrator froze the 81-scenario catalog at `db985d203fdbe812dc5161f63565e6e2021f0872` (tracked validation archive `7e626ccc1dd2c596e54688dfaa32a6c090e4f4c50c1ea293352669051f0b4f8b`; canonical 125-file manifest `bbb4fdaa873aa009715bf815d18ab148eac831c92aa00fa647dfa2ca5390751d`) and ran 405 fresh `gpt-5.6-sol` low-effort, read-only/no-agents responses with maximum concurrency three, zero infrastructure errors, and zero retries. The original-control archive/content-manifest pair was `8f21c8267d005c349702ec94d6aff26c13a09bfbe29f2b43efcfbb37304f16e3` / `e2249c4b24132523f1374d506957197a303314e2bfbc6e32c9c1b233909cbbff`; `WER-07` used its catalog-declared frozen mixed-control exception rather than pure `4296647` bytes. Codex CLI 0.147.0 passed the enforced transport probe. A separate high-effort scorer completed 81 isolated packets/405 slots with zero infrastructure errors, after which the orchestrator manually adjudicated every output against its withheld rubric. Preservation scored 237/300, targets 15/105, and the full suite 252/405. These REDs remain recorded control behavior, not fixes.
 The frozen 81-row/405-slot result remains historical fact and is not recomputed.
-Future active closure contains 79 scenarios (59 preservation and 20 target rows at
-the Task 11 classification point, or 395 five-repetition slots) because Task 14
-retires `LP-04` and Task 15 retires `SSR-04` without altering their frozen outcomes.
+Future active closure contains 82 scenarios: 60 preservation and 22 target rows, or
+410 five-repetition slots. Task 14 retires `LP-04` and Task 15 retires `SSR-04`
+without altering their frozen outcomes; Task 17 adds `CW-17`–`CW-19`.
 
 **Task 11 Gate 5 completion (2026-08-07).** The orchestrator's
 whole-repository self-review found no P0–P2 issues after the task-level review
@@ -902,11 +903,16 @@ research suite 4 passed.
 - [x] Confirm cross-model portability from the complete cold Sol-high in-domain suite, retaining declared dependencies and the authored contract.
 - [x] Update the plan/index and run the local Markdown-link command plus `git diff --check`; no skill edit or behavioral rerun is required.
 
-**Task 12 implementation note (2026-08-07):** The canonical
-[`CW-08` result](../skill-validation/concise-writing.md#active-results) remains valid
-isolated broad-domain evidence. Cross-model confidence comes from the complete cold
-Sol-high in-domain suite, so no skill edit or evaluation rerun is needed. The
-orchestrator's exact local-link and diff checks passed before the task commit.
+**Task 12 historical implementation note (2026-08-07):** The then-canonical
+`CW-08` arm was accepted as isolated broad-domain evidence. Cross-model confidence
+came from the complete cold Sol-high in-domain suite, and the orchestrator's exact
+local-link and diff checks passed before the task commit.
+
+**Task 17 supersession (2026-08-08):** The owner later classified that arm's
+`contact the program` source as incomplete and approved the exact-email fixture
+repair recorded under Task 17. The old arm is now historical only; the repaired
+active arm later passed fresh Sol-high and Sol-low controls 5/5 and the Task 17
+candidate arm 5/5.
 
 ### Task 13: Confirm `disciplined-research` broad-domain evidence and portability
 
@@ -982,20 +988,125 @@ behavioral evaluation, Gate 5 run, or portability target follows from its histor
 
 ### Task 17: Clean `concise-writing`
 
-**Files:** `skills/concise-writing/SKILL.md`, `skill-validation/concise-writing.md`
+**Approved whole-skill rewrite (2026-08-08):** combine the former Task 17A routing change with the readability cleanup as one preservation-first boundary.
+Apply `concise-writing` to prose in project files and durable project records and to response-only prose by default.
+When the user explicitly requests a detailed explanation intended only as the agent response, do not select or apply `concise-writing` to that explanation.
+Detailed prose written to a project file or durable project record remains in scope even when the accompanying agent response is brief.
+Code, structured data, and required syntax remain outside the prose method unless prose itself is the deliverable.
+Any loss of readability, meaning, impact, effectiveness, completeness, or correctness is a hard failure.
 
-**Review focus:** integrate Role/Owns/Overview without repetition; order the core test, two-altitude pass, patterns, guard, and optional composition naturally; retain the rationalization table and one distinct example.
+**CW-08 fixture repair (2026-08-08):** replace the ambiguous accommodation source
+with an exact email instruction while preserving every other fact and criterion.
+The active prompt/rubric hashes are recorded in the owning validation record; the
+old prompt, rubric, and results remain a separate superseded arm. Counts do not
+change. Fresh Sol-high and Sol-low active controls passed 5/5, and the final
+Sol-high arm also passed 5/5.
 
-**Validation scope:** broad-domain companion; use its complete cold Sol-high suite,
-including isolated non-software application, with only scenario-declared dependencies.
+**CW-19 fixture repair (2026-08-08):** replace the generic pre-promotion failure
+trigger with the readiness thresholds' exact complements: replica lag above 2
+seconds and mismatch rate at 0.1% or higher. Preserve the actor-repaired 5/5 as a
+separate superseded threshold-ambiguous arm and keep the earlier actor-repetition
+rubric-defect arm separate. The first threshold-exact rubric produced historical
+sentence-local adjudications of 2/5 on Sol high and 1/5 on Sol low. The owner then
+repaired the rubric to evaluate the complete artifact: readiness below 0.1% makes
+`reaches 0.1%` an unambiguous at-or-above failure boundary, while generic wording
+still fails when it leaves the required `BLOCKED` action at equality ambiguous.
+Total scenario and slot counts do not change; classification remains 60
+preservation / 22 target.
 
-- [ ] Record the immediate readability-control word count and a section-level meaning inventory.
-- [ ] Draft the smallest coherent reorganization, show the diff, and wait for user approval.
-- [ ] Apply the approved draft, preserving every active promise.
-- [ ] Run the complete active suite 5/5 on Sol high and blindly compare subjective prose outputs with the immediate readability control.
-- [ ] Run cold editorial and skill-writing review; show proposed fixes, wait for user approval, apply them, and restart affected scenarios.
-- [ ] Show the final skill in place and wait for user approval.
-- [ ] After approval, run repository tests and commit as `docs(skills): clean up concise writing`.
+**Files:** `skills/concise-writing/SKILL.md`, `skill-validation/concise-writing.md`, `skill-validation/README.md`, `skill-validation/skill-discovery.md`, `skill-validation/disciplined-development.md`, `skill-validation/fixtures/disciplined-development/prompts/dd-01.md`, `skill-validation/fixtures/disciplined-development/rubrics/dd-01.md`, `skill-validation/fixtures/disciplined-development/rubrics/dd-02.md`
+
+**Review focus:** make the response-only detailed-explanation exemption and the project-file/record preservation guard explicit; order the complete meaning inventory, draft, local/global compression, equivalence gate, patterns, examples, rationalizations, and composition naturally; retain every active promise without weakening readability, impact, or effectiveness.
+
+**Validation scope:** broad-domain companion with a mandatory full affected rerun on fresh Sol-high contexts.
+The 29-scenario affected set is `CW-01`–`CW-14`, `CW-17`–`CW-19`,
+`DISC-01`–`DISC-10`, `DD-01`, and `DD-02`, with only scenario-declared dependencies.
+
+- [x] Freeze repaired `CW-08` and `CW-17`–`CW-19` prompts, rubrics, protected promises, complete scenario-specific bundle bytes, per-file and aggregate hashes, `gpt-5.6-sol` high/low effort, Codex CLI version, and enforced read-only/no-agents transport before dispatch; preserve all active and superseded arms separately.
+- [x] Run five fresh Sol-high and five fresh Sol-low current controls for each new or repaired scenario, including every later prompt/rubric repair before closure, at most three concurrent, retaining every completed response and recording infrastructure errors separately; Sol low remains effort evidence rather than another portability gate.
+- [x] Record repaired `CW-08` at high/low 5/5, `CW-18` at high/low 5/5, `CW-17` at high/low 0/5 watched RED, the threshold-exact `CW-19` high 2/5 and low 1/5 sentence-local adjudications as superseded history, and the active whole-artifact `CW-19` controls at high 4/5 and low 2/5; keep all fixture and rubric arms isolated.
+- [x] Record the immediate readability-control word count and a section-level inventory protecting meaning, readability, purpose, impact, effectiveness, completeness, correctness, and every existing contract boundary.
+- [x] Apply only the approved whole-skill rewrite after the current-control prerequisites pass.
+- [x] Run fresh Sol-high candidate arms for `CW-17`, `CW-18`, and `CW-19` at 5/5 and rerun the complete affected set above at 5/5; after the rubric-only `CW-19` repair, restart only `CW-19` because every other scenario contract and candidate byte remained unchanged.
+- [x] Blindly compare subjective prose outputs with the immediate readability control and treat any completeness, readability, impact, or effectiveness loss as a hard failure.
+- [x] Run fresh Sol-high editorial and skill-writing review; show proposed fixes, wait for approval, apply only approved fixes, and restart at zero every scenario whose prompt, rubric, supplied context, protected promise, or affected skill contract changes.
+- [x] Show the complete final skill in place and wait for final owner approval.
+- [x] After approval, run repository verification and commit as `docs(skills): clean up concise writing`.
+- [x] Do not open a PR.
+
+**Task 17 execution completion note (2026-08-08):** The immutable immediate readability
+control is 866 words at skill SHA-256 `6c3a8382…`; the pre-rewrite routing control
+is 849 words at `d3a1b7ba…`; and the current evaluated candidate is 665 words at
+`f763b43e…`. All current and candidate arms used fresh `gpt-5.6-sol`, maximum
+concurrency three, enforced read-only/no-agents transport, first attempts, and zero
+infrastructure errors. The 29-scenario candidate arm is 145/145 GREEN: owned
+`CW-01`–`CW-14` and `CW-17`–`CW-19` 85/85, shared `DISC-01`–`DISC-10` 50/50,
+and `DD-01`/`DD-02` 10/10. The first integrated `DISC-01` arm scored 4/5 under a
+stale rubric; the prompt stayed fixed, the pre-approved repaired rubric made
+supplied-source `disciplined-research` optional, and the fresh arm passed 5/5.
+The `CW-19` design ladder's sentence-local scores remain historical. The owner
+repaired the rubric at `8c7ae23f…` to evaluate the complete artifact, then restarted
+only `CW-19` at `/private/tmp/dd-task17-cw19-whole-artifact-current`; five fresh
+Sol-high outputs and five fresh rubric scorers passed on attempt 1 with zero
+infrastructure errors. Cold semantic classification makes the `f763b43e…`
+truth-ablation arm 5/5, the rationalizations-deletion arm 4/5 because R5 leaves
+`BLOCKED` at mismatch equality ambiguous, and the qualifier-rule arm 5/5 but
+behaviorally ineffective. Their former 2/5, 1/5, and 0/5 adjudications remain
+superseded history. The rationalizations section remains restored, the unnecessary
+qualifier rule remains reverted, and the tracked skill remains the exact 665-word
+`f763b43e…` candidate. Full hashes,
+bundles, roots, per-repetition outcomes, section necessity, and superseded-arm
+isolation are recorded in the owning validation record and index. The blinded
+subjective comparison, editorial and skill-writing review, and final owner approval
+are complete. Final repository verification passed: hook tests 373 passed/3 skipped,
+installer tests 11 passed, research tests 4 passed, and the required link and diff
+checks passed. This commit closes Task 17; no PR was opened.
+
+**Task 17 repaired-definition control closure (2026-08-08):** The active
+whole-artifact `CW-19` rubric now has five fresh controls per effort against
+control skill `21e558b3…`: Sol high scored 4/5 and Sol low 2/5 at
+`/private/tmp/dd-task17-cw19-whole-artifact-control-high` and
+`/private/tmp/dd-task17-cw19-whole-artifact-control-low`. The shared root
+`/private/tmp/dd-task17-repaired-definition-controls` supplied the remaining
+fresh high/low controls against original definitions and bundle bytes:
+`DISC-01` scored 0/5 at both efforts because every output omitted required
+`disciplined-development`; `DD-01` and `DD-02` each scored 0/5 at both efforts
+under independent repetition-level scoring. All runs used five fresh
+`gpt-5.6-sol` processes per effort, read-only/no-agents transport, maximum
+concurrency three, attempt 1, and zero infrastructure errors. This closes the
+prior protocol gap: every changed Task 17 prompt or rubric has five current high
+and five current low controls. Historical pre-repair scores remain isolated.
+The candidate arms remain `CW-19` 5/5, `DISC-01` 5/5, and `DD-01`/`DD-02`
+10/10, so the candidate-only arithmetic remains 85 + 50 + 10 = **145/145 GREEN**.
+
+**Task 17 post-GREEN exploration note (2026-08-08):** The active baseline remains
+the exact 665-word `f763b43e…` skill at 145/145 GREEN. A fresh repaired-rubric
+no-rationalizations arm at
+`/private/tmp/dd-task17-cw19-no-rationalizations-whole-artifact` scored 4/5;
+R1's generic `either metric breaches its limit` left the required `BLOCKED`
+action at mismatch equality ambiguous, so the section remains restored. An
+approved one-line Method tightening at 664-word skill SHA `d7c4e549…` passed
+`CW-02`, `CW-05`, and `CW-08` 5/5 but scored 1/5 on `CW-19` through criterion 4
+escalation losses and criterion 7 first-accepted-write and rationale losses; it
+was reverted before a full affected-suite rerun. A 637-word self-rewrite draft at
+`/private/tmp/dd-task17-self-rewrite/candidate.md`, SHA `5377515e…`, never entered
+the working tree. Its focused guards passed `CW-02`, `CW-05`, `CW-08`, `CW-17`,
+and `CW-18` 5/5 but `CW-19` scored 4/5 because R5 used the same ambiguous generic
+breach wording. The draft was rejected. These arms do not reopen the completed
+145/145 candidate gate. Editorial and skill-writing review and final owner approval
+are complete. Final repository verification and no-PR completion are recorded above.
+
+**Task 17 blind-comparison completion (2026-08-08):** Nine fresh Sol-high judges
+at `/private/tmp/dd-task17-blind-readability-whole-artifact` evaluated five
+randomized, blinded candidate/control pairs for each of `CW-01`–`CW-08` and
+`CW-19` under read-only/no-agents transport with maximum concurrency three. The
+current `f763b43e…` candidate had zero material losses across all 45 pairs.
+Thirty-seven pairs were equivalent; the immediate readability control had the
+only eight losses: one in `CW-05`, three in `CW-08`, and four in `CW-19`.
+`CW-01`, `CW-02`, `CW-03`, `CW-04`, `CW-06`, and `CW-07` were equivalent in all
+five pairs. The candidate was never worse, so the blinded comparison gate is
+complete. Editorial and skill-writing review and final owner approval are also
+complete. Final repository verification and no-PR completion are recorded above.
 
 ### Task 18: Clean `disciplined-research`
 
@@ -1161,8 +1272,8 @@ Sol-high model gate across the authored development modes.
 
 **Produces:** A cross-suite composition record that links the owning scenario IDs and records joint results without duplicating their prompts or rubrics.
 
-- [ ] Freeze the 79-scenario active closure, excluding historical `LP-04` and `SSR-04`.
-- [ ] Rerun every scenario in the frozen 79-scenario closure five times on cold Sol high, including all focused regressions as well as the shared discovery, domain-appropriate direct-invocation, broad-domain isolated-application, development-companion dependency, and integrated composition sets; keep scenarios atomic unless composition is the behavior under test.
+- [ ] Freeze the 82-scenario active closure, excluding historical `LP-04` and `SSR-04`.
+- [ ] Rerun every scenario in the frozen 82-scenario closure five times on cold Sol high, including all focused regressions as well as the shared discovery, domain-appropriate direct-invocation, broad-domain isolated-application, development-companion dependency, and integrated composition sets; keep scenarios atomic unless composition is the behavior under test.
 - [ ] Manually score each protected promise and record any infrastructure failures separately.
 - [ ] If any result is below 5/5, stop and classify it through the design's failure gate; correct a cleanup regression in its owning task, and isolate any approved behavioral change in a separate RED/GREEN slice.
 - [ ] Record the final 5/5 results and commit as `docs(validation): record final skill composition greens`.
@@ -1179,11 +1290,11 @@ Sol-high model gate across the authored development modes.
 - Move after completion: `plans/2026-08-01-comprehensive-skill-cleanup.md` to `plans/completed/2026-08-01-comprehensive-skill-cleanup.md`
 - Move after completion: `plans/specs/2026-08-01-comprehensive-skill-cleanup-design.md` to `plans/completed/specs/2026-08-01-comprehensive-skill-cleanup-design.md`
 
-**Validation scope:** reuse the same 79 domain-appropriate scenarios and declared
+**Validation scope:** reuse the same 82 domain-appropriate scenarios and declared
 dependencies from the cold Sol-high gate. Sol-low measures effort robustness and does
 not create another portability domain or provider gate.
 
-- [ ] Freeze the 79-scenario final active suite, which excludes historical `LP-04` and `SSR-04`, and run every scenario five times on `gpt-5.6-sol` at low reasoning effort.
+- [ ] Freeze the 82-scenario final active suite, which excludes historical `LP-04` and `SSR-04`, and run every scenario five times on `gpt-5.6-sol` at low reasoning effort.
 - [ ] Compare control and cleaned scores by scenario and pause for user review on any decrease.
 - [ ] For every decrease, record the user-approved disposition in `skill-validation/README.md` and each affected record.
 - [ ] If accepted, record the what/why/accepted rationale; if remediation changes a skill or scenario contract, reopen its owning task, complete the required Sol-high backfill or regression suite, rerun the affected Sol-low arm, and return to this comparison.

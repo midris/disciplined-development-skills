@@ -33,8 +33,8 @@ An em dash means the owning audit task has not classified the scenarios yet.
 |---|---|---|---|---:|---|---:|---:|---:|---:|---:|
 | [adversarial-review](adversarial-review.md) | Skill | `adversarial-review` | `adversarial-review`, `concise-writing`, `lean-plan-writing`, `sweeping-stale-references`, `disciplined-development` | 7 | Audit complete; 13 current Sol-high scenarios at 5/5; 4 watched target REDs GREEN; angle ablation 0/5 | 0 | 7 | 2 | 1 | 7 |
 | [adversarial-review-loop](adversarial-review-loop.md) | Skill | `adversarial-review-loop` | `adversarial-review-loop`, `disciplined-development`; shared routing boundaries | 8 | Audit complete; 15 owned Sol-high controls at 5/5; complete active closure 135/135 | 0 | 14 | 3 | 3 | 1 |
-| [concise-writing](concise-writing.md) | Skill | `concise-writing` | `concise-writing`, `adversarial-review-loop`; external authoring dependencies | 2 | Audited; Task 2A verified; `CW-08` broad-domain coverage confirmed | 0 | 2 | 4 | 2 | 8 |
-| [disciplined-development](disciplined-development.md) | Skill | `disciplined-development` | all nine skills through orchestration | 10 | Audit complete; owned current 15/15; inherited `DSD-02` current rerun 5/5; current closure 85/85 | 0 | 2 | 0 | 1 | 1 |
+| [concise-writing](concise-writing.md) | Skill | `concise-writing` | `concise-writing`, `adversarial-review-loop`; external `superpowers:writing-skills` dependency and distractor | 2, 17 | Audited; 665-word candidate `f763b43e…`; repaired-definition `CW-19` controls high 4/5 and low 2/5, candidate 5/5; complete affected candidate arm 145/145 GREEN; blind comparison found zero candidate material losses in 45 pairs; editorial review and final owner approval complete | 0 | 2 | 4 | 2 | 11 |
+| [disciplined-development](disciplined-development.md) | Skill | `disciplined-development` | all nine skills through orchestration | 10, 17 | Audit complete; repaired-definition `DD-01`/`DD-02` controls are 0/5 at high and low effort; both unchanged Task 17 candidate arms passed 5/5; inherited `DSD-02` current rerun 5/5 | 0 | 2 | 0 | 1 | 1 |
 | [disciplined-research](disciplined-research.md) | Skill | `disciplined-research` | `disciplined-research` | 3 | Audited; Sol-high baseline 3/3 scenarios at 5/5; `DR-02` broad-domain coverage confirmed | 0 | 1 | 0 | 1 | 2 |
 | [dispatching-development-subagents](dispatching-development-subagents.md) | Skill | `dispatching-development-subagents` | `dispatching-development-subagents`, `disciplined-development`; shared routing boundaries | 9 | Audit complete; `DSD-02` current rerun 5/5; current closure 70/70 | 0 | 2 | 1 | 0 | 2 |
 | [lean-plan-writing](lean-plan-writing.md) | Skill | `lean-plan-writing` | `lean-plan-writing`; external `superpowers:writing-plans` composition | 4 | Audited; 7 active owned scenarios; `LP-04` retained as historical exploratory evidence | 0 | 4 | 1 | 1 | 3 |
@@ -43,7 +43,7 @@ An em dash means the owning audit task has not classified the scenarios yet.
 | [adversarial-review-loop scenarios](adversarial-review-loop-scenarios.md) | Supporting | `adversarial-review-loop` | `adversarial-review-loop`, `disciplined-development`; shared routing boundaries | 8 | Audited; exact definitions for 15 loop-owned controls and links to 12 shared controls | 0 | 14 | 3 | 3 | 1 |
 | [duplicate red-flags scenarios](duplicate-red-flags-scenarios.md) | Supporting history | Task 1 protocol | `adversarial-review`, `concise-writing`, `lean-plan-writing`, `sweeping-stale-references` | 1 | Audited | 0 | 0 | 0 | 4 | 0 |
 | [evaluation subagents read-only](evaluation-subagents-read-only.md) | Project-rule history | Task 1 protocol | Repository evaluation rule | 1 | Audited | 0 | 0 | 0 | 1 | 0 |
-| [skill discovery](skill-discovery.md) | Shared active suite | Task 1 protocol | all nine skills | 1 | Audited; all ten controls and current targets complete | 0 | 0 | 0 | 0 | 10 |
+| [skill discovery](skill-discovery.md) | Shared active suite | Task 1 protocol | all nine skills | 1, 17 | Audited; repaired-definition `DISC-01` original-description controls are high/low 0/5 and the candidate is 5/5; Task 17 candidate descriptions total 50/50 | 0 | 0 | 0 | 0 | 10 |
 
 ## Framework inventory
 
@@ -56,14 +56,14 @@ An em dash means the owning audit task has not classified the scenarios yet.
 | `adversarial-review-loop-scenarios.md` | Canonical loop decision definitions; `adversarial-review-loop` | `adversarial-review-loop`, `disciplined-development` | `CS`, `T2`–`T7`, `NF`, `PW`, `XL`, `G3A`–`G3C`, `OWN`, `CE`; five reps each | Full; exact prompts, withheld rubrics, contexts, ownership, and rerun triggers | Active definition source; complete owned control suite 75/75 |
 | `adversarial-review-loop.md` | Active loop results and preserved derivation history; `adversarial-review-loop` | `adversarial-review-loop`, `disciplined-development`; shared routing boundaries | Fifteen owned IDs plus linked `DISC-01`–`DISC-10`, `CW-09`, and `CW-11`; five Sol-high repetitions each | Full for active catalog; mixed-protocol derivation retained as history | Audit complete; complete active closure 135/135 |
 | `adversarial-review.md` | Active review, output, enumeration, angle, durability, whole-project, generated-case, invariant-severity, pattern, necessity, and effectiveness suite plus preserved derivation history; `adversarial-review` | `adversarial-review`, `concise-writing`, `lean-plan-writing`, `sweeping-stale-references`, `disciplined-development` | `AR-01`–`AR-10` and `AR-12`–`AR-14`, five control/current reps each; historical evidence below | Full for active catalog; historical evidence remains partial | Active suite 65/65; nine preservation controls 45/45; four watched REDs GREEN; `AR-14` holistic-only ablation 0/5 |
-| `concise-writing.md` | Active verbosity, over-trim, routing, ownership, composition-pressure, direct-invocation, and broad-domain suite; `concise-writing` | `concise-writing`, `adversarial-review-loop`; external authoring dependencies | `CW-01`–`CW-14`; five control and Task 2A target repetitions complete | Full | Baseline and Task 2A GREEN, cold review, approval, and repository verification complete |
-| `disciplined-development.md` | Active mode routing, Gates 1–5 orchestration, Principle 7 threshold, and compact derivation history; `disciplined-development` | All through orchestration | `DD-01`–`DD-03` plus linked `DISC-01`–`DISC-10`, `DSD-01`, `DSD-02`, `OWN`, and `WER-07`; five reps each | Full for the active catalog; historical evidence remains partial | Audit complete; owned 15/15; inherited `DSD-02` current 5/5; current closure 85/85 |
+| `concise-writing.md` | Active verbosity, over-trim, routing, ownership, composition-pressure, response/file boundary, direct-invocation, broad-domain, and complex technical application suite; `concise-writing` | `concise-writing`, `adversarial-review-loop`; external `superpowers:writing-skills` dependency and distractor | `CW-01`–`CW-14` and `CW-17`–`CW-19`; repaired/new high/low controls complete; current candidate owned arm 85/85 | Full definitions, freeze hashes, per-repetition outcomes, repaired-definition control/candidate provenance, section necessity, blind comparison, rejected simplification arms, and superseded-arm isolation | Task 17 complete; affected candidate arm 145/145 GREEN; blind comparison 0 candidate losses/45 pairs |
+| `disciplined-development.md` | Active mode routing, Gates 1–5 orchestration, Principle 7 threshold, and compact derivation history; `disciplined-development` | All through orchestration | `DD-01`–`DD-03` plus linked `DISC-01`–`DISC-10`, `DSD-01`, `DSD-02`, `OWN`, and `WER-07`; five reps each | Full for the active catalog; historical evidence remains partial | Audit complete; Task 17 repaired-definition controls high/low 0/5 and candidate `DD-01`/`DD-02` 10/10 |
 | `disciplined-research.md` | Active project, procurement, and broad-domain grounding suite plus B1/B17 history; `disciplined-research` | `disciplined-research` | `DR-01`–`DR-03`, 5 reps each; historical `B1`, `B17` retained below | Full for active catalog; historical evidence remains partial | Active Sol-high baseline 15/15; `DR-02` is isolated broad-domain coverage |
 | `dispatching-development-subagents.md` | Active dispatch-prompt, identity/nudge, returned-commit verification, and finding-partition suite plus preserved history; `dispatching-development-subagents` | `dispatching-development-subagents`, `disciplined-development`; shared routing boundaries | `DSD-01`–`DSD-04` and linked `DISC-01`–`DISC-10`; five Sol-high repetitions each | Full for active catalog; mixed-protocol derivation retained as history | Audit complete; `DSD-02` current rerun 5/5; current closure 70/70 |
 | `duplicate-red-flags-scenarios.md` | Four-skill composite consolidation fixture; Task 1 protocol | `adversarial-review`, `concise-writing`, `lean-plan-writing`, `sweeping-stale-references` | Cells `A`–`D`; 5 per arm | Full | Retired from the active suite because it combines unrelated contracts; all retained coverage is now atomized in the owning skill catalogs |
 | `evaluation-subagents-read-only.md` | Historical evidence for choosing a no-write evaluator type; Task 1 protocol | Repository evaluation rule | No stable ID; RED/GREEN counts unstated | Partial | Retired from the active suite; the enforced transport probe below replaces instruction-only evidence |
 | `lean-plan-writing.md` | Active direct, prose-density, necessary-snippet, edge-inventory, and merge-boundary suite plus consolidation and exploratory cross-domain history; `lean-plan-writing` | `lean-plan-writing`; external `superpowers:writing-plans` composition | Active `LP-01`–`LP-03`, `LP-05`–`LP-08`; historical `LP-04`; five original/current repetitions preserved | Full for active catalog and retained `LP-04` definition | Seven active owned scenarios; `LP-02` and `LP-03` current GREEN; `LP-04` retired |
-| `skill-discovery.md` | Atomic all-nine description routing; Task 1 protocol | All nine | `DISC-01`–`DISC-10`; five control, parent-target, Task 2A, and Task 6 target reps complete for all ten | Full | Active; Task 6 description target 50/50 |
+| `skill-discovery.md` | Atomic all-nine description routing; Task 1 protocol | All nine | `DISC-01`–`DISC-10`; five control, parent-target, Task 2A, Task 6, and Task 17 candidate-description reps complete | Full | Active; repaired-definition `DISC-01` controls high/low 0/5, candidate-description arm 50/50 |
 | `sweeping-stale-references.md` | Active simple, reviewer-pressure, grouped-scale, and negative-form suite plus exploratory policy, rename, grouping, and packaging history; `sweeping-stale-references` | `sweeping-stale-references` | Active `SSR-01`–`SSR-03`, `SSR-05`; historical `SSR-04`; all recorded repetitions preserved | Full for active catalog and retained `SSR-04` definition | Four active owned scenarios; `SSR-04` retired |
 | `writing-explicit-rationale.md` | Active direct, repeated-review, broad-domain, authoritative-reference, relevance-filtering, and parent/plan composition suite plus preserved history; `writing-explicit-rationale` | `writing-explicit-rationale`, `lean-plan-writing`, `disciplined-development`; shared parent/plan composition | `WER-01`–`WER-03`, `WER-05`–`WER-07`, and linked `DISC-08`–`DISC-10`; original controls classified and final Task 10 target 5/5 | Full for active catalog; historical evidence remains partial | Audit, target GREEN, and final user review complete; current policy scope approved |
 
@@ -193,6 +193,11 @@ Scenario type and behavior status are separate axes.
 - **Target:** approved new behavior with a watched control RED and a 5/5 GREEN before it joins active regression coverage.
 
 Use atomic prompts for individual promises.
+A rubric evaluates the requested artifact as a whole, not isolated sentences.
+Context elsewhere in the artifact satisfies a criterion when a careful reader can
+take the same action in every relevant case without guessing. Require wording or
+placement to survive locally only when the artifact's function depends on that
+literal, placement, or explicit relationship.
 A skill’s complete active suite is its owned scenarios plus every shared discovery,
 direct-invocation, domain-appropriate application, dependency, and composition
 scenario that lists it as affected.
@@ -463,6 +468,8 @@ A separate `gpt-5.6-sol` high-effort scorer processed 81 isolated packets contai
 The orchestrator then manually read every raw output and exact withheld rubric and adjudicated all 81 rows; those manual verdicts are authoritative, including documented scorer false-positive and false-negative overrides.
 This 81-row/405-slot aggregate is frozen historical fact and is not recomputed after
 the scope repair.
+Its `concise-writing` subtotal includes the now-superseded ambiguous `CW-08` arm;
+that result remains historical and is not evidence for the active repaired fixture.
 
 | Owning family | Preservation scenarios | Preservation Sol-low | Target scenarios | Target Sol-low | Combined |
 |---|---:|---:|---:|---:|---:|
@@ -480,9 +487,110 @@ the scope repair.
 
 These observed REDs are control evidence, not fixes or authorization to alter scenario contracts or skill prose.
 Any post-freeze prompt, fixture, rubric, supplied-context, or protected-promise change requires the global Sol-high and Sol-low control backfill before the scenario is used again.
-Future active closure contains 79 scenarios (59 preservation and 20 target rows at
-the Task 11 classification point, or 395 five-repetition slots) because `LP-04` and
-`SSR-04` are retained only as historical exploratory cross-domain evidence.
+Future active closure contains 82 scenarios: 60 preservation and 22 target rows, or
+410 five-repetition slots. This current closure excludes historical `LP-04` and
+`SSR-04` and adds Task 17's `CW-17` and `CW-19` targets plus the `CW-18`
+preservation guard. `CW-19` remains a target scenario; its sentence-local 2/5 and
+1/5 adjudications, actor-repetition arm, and threshold-ambiguous arm are historical
+after the owner-approved whole-artifact rubric repair.
 Tasks 26–27 will add final cold Sol-high domain-appropriate and composition results,
 cleaned Sol-low comparisons, approved dispositions for decreases, and final
 word-count deltas.
+
+### Task 17 concise-writing current controls and candidate affected rerun
+
+The immutable immediate readability control is the 866-word Task 2A skill at
+SHA-256 `6c3a838297da8b0a17a3f3978dd6e46c7e5794f9e7e34c4e6db760e941c942aa`
+under `/private/tmp/dd-task17-readability-control`. The separate pre-rewrite routing
+control for `CW-17`/`CW-18` was 849 words at SHA-256
+`d3a1b7ba3b384b803c22bb96c2ac03790a573c339071a031c924163459dc6504`.
+The current evaluated candidate is 665 words at SHA-256
+`f763b43e88c56d6fdc2a96457bc2415cba60b75a1e7cb59cd1b0ebaa3fb199ba`.
+
+Repaired `CW-08` passed current high/low controls 5/5. `CW-17` established the
+required watched current RED at high 0/5 and low 0/5; `CW-18` passed both current
+arms 5/5. `CW-19`'s original high 2/5 and low 1/5 sentence-local adjudications are
+historical under the repaired rubric. The fresh whole-artifact arm at
+`/private/tmp/dd-task17-cw19-whole-artifact-current` used the unchanged `f763b43e…`
+skill, prompt `e05ab6e…`, rubric `8c7ae23f…`, and bundle `ff01764c…`; five fresh
+Sol-high outputs and five fresh rubric scorers completed on attempt 1 with zero
+infrastructure errors, and every score passed.
+
+The repaired definitions now also have their protocol-required fresh high- and
+low-effort controls. These target REDs are separate from, and pair with, the
+candidate GREENs:
+
+| Active repaired definition | Frozen control bytes | Sol-high control | Sol-low control | Sol-high candidate |
+|---|---|---:|---:|---:|
+| `CW-19` whole-artifact rubric | Skill `21e558b3…`; prompt `e05ab6e…`; rubric `8c7ae23f…`; bundle `30b02b66…` | **4/5 RED** | **2/5 RED** | **5/5 GREEN** |
+| `DISC-01` supplied-source routing | Original descriptions embedded in prompt `803da9b9…`; active rubric `1fc2931e…` | **0/5 RED** | **0/5 RED** | **5/5 GREEN** |
+| `DD-01` active routing matrix | Original complete control bundle `ffeeb68d…`; active prompt/rubric | **0/5 RED** | **0/5 RED** | **5/5 GREEN** |
+| `DD-02` active gate ledger | Original complete control bundle `ffeeb68d…`; active prompt/rubric | **0/5 RED** | **0/5 RED** | **5/5 GREEN** |
+
+All four backfills used five fresh `gpt-5.6-sol` processes per effort, maximum
+concurrency three, read-only sandboxing, disabled agents, attempt 1, and zero
+infrastructure errors. This closes the prior protocol evidence gap: every Task 17
+prompt or rubric repair now has five fresh high and five fresh low controls. The
+older control results remain historical under their own definitions. Full hashes,
+repetition outcomes, and exact misses are in
+[concise-writing](concise-writing.md#cw-19-active-whole-artifact-control-provenance-2026-08-08),
+[skill discovery](skill-discovery.md#task-17-repaired-definition-control-backfill-2026-08-08),
+and [disciplined development](disciplined-development.md#task-17-repaired-definition-control-backfill-2026-08-08).
+
+Only the `CW-19` candidate arm restarted because only its rubric changed. The
+fresh repaired-definition controls above backfill the separate control baseline;
+they do not invalidate candidate bytes. The unchanged fresh candidate arms
+for the other 28 scenarios remain valid, making the 665-word candidate affected
+set GREEN:
+
+| Owner / surface | IDs | Result |
+|---|---|---:|
+| `concise-writing` | `CW-01`–`CW-14`, `CW-17`–`CW-19` | **85/85 GREEN** |
+| Shared discovery | `DISC-01`–`DISC-10` | **50/50 PASS** |
+| `disciplined-development` | `DD-01`, `DD-02` | **10/10 PASS** |
+| **Task 17 affected candidate total** | **29 scenarios** | **145/145 GREEN** |
+
+All candidate arms used the same fresh high-effort model policy, concurrency cap,
+read-only/no-agents transport, first attempts, zero infrastructure errors, and
+manual orchestrator scoring. The full root, prompt/rubric, bundle, per-repetition,
+design-ladder, and superseded-arm provenance is owned by
+[concise-writing](concise-writing.md#task-17-current-candidate-sol-high-provenance-2026-08-08),
+[skill discovery](skill-discovery.md#task-17-concise-writing-candidate-description-rerun-2026-08-08),
+and [disciplined development](disciplined-development.md#task-17-concise-writing-candidate-integration-rerun-2026-08-08).
+
+The first integrated `DISC-01` arm scored 4/5 under a stale rubric that prohibited
+otherwise defensible supplied-source research; it is superseded. The prompt stayed
+unchanged, the pre-approved repaired rubric made `disciplined-research` optional,
+and a fresh arm passed 5/5. The owner then repaired `CW-19`'s rubric to evaluate
+the complete artifact instead of requiring `or higher` in the failure sentence
+when the runbook already makes readiness strictly below 0.1%. Cold semantic
+classification makes the `f763b43e…` truth-ablation arm 5/5, the
+rationalizations-deletion arm 4/5 because R5 leaves `BLOCKED` at equality
+ambiguous, and the qualifier-rule arm 5/5 but behaviorally ineffective. Their
+earlier 2/5, 1/5, and 0/5 scores remain historical superseded adjudications. The
+rationalizations section remains restored, the unnecessary qualifier rule remains
+reverted, and the active candidate is GREEN. Subjective comparison, editorial
+review, final owner approval, and repository verification are complete. Task 17
+closes in `docs(skills): clean up concise writing`; no PR was opened.
+
+Three later post-GREEN simplification explorations did not replace that candidate.
+The fresh 578-word no-rationalizations arm scored 4/5 under the repaired rubric;
+R1's generic `either metric breaches its limit` left the required `BLOCKED`
+action at mismatch equality ambiguous, so the section remains restored. An
+approved 664-word one-line Method tightening passed `CW-02`, `CW-05`, and `CW-08`
+5/5 but scored 1/5 on `CW-19`, with escalation, first-accepted-write, and
+old-schema-rationale losses; it was reverted before a full rerun. A never-applied
+637-word self-rewrite draft passed `CW-02`, `CW-05`, `CW-08`, `CW-17`, and
+`CW-18` 5/5 but scored 4/5 on `CW-19` for the same generic equality ambiguity;
+it was rejected. Full roots, hashes, bundles, results, and dispositions remain in
+the owning concise-writing record. The tracked skill remains the exact 665-word
+`f763b43e…` candidate and the active baseline remains 145/145 GREEN.
+
+The required blind readability comparison then evaluated five randomized pairs
+for each of `CW-01`–`CW-08` and `CW-19`: 45 pairs judged by nine fresh Sol-high
+calls under read-only/no-agents transport with maximum concurrency three. The
+candidate had zero material losses. `CW-01`, `CW-02`, `CW-03`, `CW-04`, `CW-06`,
+and `CW-07` were equivalent in all five pairs. The control had one material loss
+in `CW-05`, three in `CW-08`, and four in `CW-19`; the remaining pairs were
+equivalent. The candidate was never worse, so the blind comparison gate is
+complete. Full manifest and verdict hashes are in the owning record.

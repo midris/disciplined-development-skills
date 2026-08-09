@@ -73,7 +73,7 @@ The supplied skill context is the description block above; no body, sibling proc
 
 | ID | Exact request | Allowed output sets in the evaluator-withheld rubric | Primary protected promise | Rerun trigger |
 |---|---|---|---|---|
-| `DISC-01` | `Review only the API design text I provide for internal logical edge cases; do not inspect files, state repository or external facts, edit anything, or handle existing findings.` | Exactly `adversarial-review` and `disciplined-development`; no other skill | Initial text-bounded adversarial review routes to `adversarial-review`, not research, remediation, or implementation dispatch | Any candidate description, fixed prompt, request, or allowed set changes |
+| `DISC-01` | `Review only the API design text I provide for internal logical edge cases; do not inspect files, state repository or external facts, edit anything, or handle existing findings.` | Must include `adversarial-review` and `disciplined-development`; may also include `concise-writing` and `disciplined-research`; no other skill | Initial text-bounded adversarial review routes to `adversarial-review`, not remediation or implementation dispatch; supplied-text logical claims leave research co-selection optional | Any candidate description, fixed prompt, request, or allowed set changes |
 | `DISC-02` | `An external reviewer has already reported two defects. Help me handle those findings.` | Exactly `adversarial-review-loop` and `disciplined-development`; no other skill | Already-surfaced findings route to the loop, not a new review | Same |
 | `DISC-03` | `Shorten this purely stylistic README sentence without adding or changing factual claims: "Our setup process is simple, straightforward, and easy to follow because it is not complicated."` | Exactly `concise-writing` and `disciplined-development`; no other skill | Ordinary padded reader-facing prose routes to concision without creating a research-composition cell | Same |
 | `DISC-04` | `Resume implementation from the active plan and take the work through verification and commit.` | Must include `disciplined-development`; may also include `disciplined-research`; no other skill | Active-plan implementation and boundary discipline route to the parent | Same |
@@ -133,6 +133,15 @@ The complete Task 2A arm restarted at zero with the byte-identical description a
 passed 45/45. Neither the earlier 44/45 arm nor the malformed-context results are
 active.
 
+The Task 17 candidate-description rerun exposed a stale `DISC-01` prohibition. Its
+prompt forbids repository and external facts but still asks for load-bearing logical
+findings about supplied source text; the unchanged `disciplined-research`
+description covers such downstream-quotable review claims. A fresh Sol-high
+classification therefore made `disciplined-research` optional rather than
+prohibited. The same Task 17 description also makes ordinary response prose a
+valid optional `concise-writing` route. The prompt did not change. The first 4/5
+arm remains superseded under its old rubric, and only `DISC-01` restarted at zero.
+
 ## Control and target results
 
 Control is full commit `4296647f0dff48a9e77b979ef07e813bf1f66db2` and archive SHA-256 `8f21c8267d005c349702ec94d6aff26c13a09bfbe29f2b43efcfbb37304f16e3`.
@@ -140,16 +149,16 @@ Target is the immutable bundle with content-manifest SHA-256 `52fd9eb8c411fcc5d4
 
 | ID | Sol-high control | Exact control misses | Target GREEN | Target route summary | Earlier-arm infrastructure errors | Sol-low control | Cleaned Sol-high | Cleaned Sol-low |
 |---|---|---|---|---|---:|---|---|---|
-| `DISC-01` | **1/5 watched RED** | Parent omitted 4/5 | **5/5 PASS** | 5 exact | 0 | [Task 11 detail](#task-11-sol-low-control-results-2026-08-07) | Task 26 | Task 27 |
-| `DISC-02` | **5/5 PASS** | None; 5 exact | **5/5 PASS** | 5 exact | 0 | [Task 11 detail](#task-11-sol-low-control-results-2026-08-07) | Task 26 | Task 27 |
-| `DISC-03` | **1/5 watched RED** | Parent omitted 4/5 | **5/5 PASS** | 5 exact | 0 | [Task 11 detail](#task-11-sol-low-control-results-2026-08-07) | Task 26 | Task 27 |
-| `DISC-04` | **5/5 PASS** | None; 5 parent-only | **5/5 PASS** | 2 required-only, 3 with optional research | 0 | [Task 11 detail](#task-11-sol-low-control-results-2026-08-07) | Task 26 | Task 27 |
-| `DISC-05` | **0/5 watched RED** | Parent omitted 5/5 | **5/5 PASS** | 5 exact | 0 | [Task 11 detail](#task-11-sol-low-control-results-2026-08-07) | Task 26 | Task 27 |
-| `DISC-06` | **4/5 watched RED** | Parent omitted 1/5 | **5/5 PASS** | 5 exact | 0 | [Task 11 detail](#task-11-sol-low-control-results-2026-08-07) | Task 26 | Task 27 |
-| `DISC-07` | **5/5 PASS** | None; 1 required-only, 4 with allowed optional variation | **5/5 PASS** | 4 required-only, 1 with optional research | 0 | [Task 11 detail](#task-11-sol-low-control-results-2026-08-07) | Task 26 | Task 27 |
-| `DISC-08` | **5/5 PASS** | None; 3 required-only, 2 with optional research | **5/5 PASS** | 3 required-only, 2 with optional research | 0 | [Task 11 detail](#task-11-sol-low-control-results-2026-08-07) | Task 26 | Task 27 |
-| `DISC-09` | **5/5 PASS** | None; 1 required-only, 4 with allowed optional variation | **5/5 PASS** | 1 required-only, 4 with allowed optional variation | 0 | [Task 11 detail](#task-11-sol-low-control-results-2026-08-07) | Task 26 | Task 27 |
-| `DISC-10` | **5/5 PASS** | None; 1 with optional research, 4 with optional research and sweeping | **5/5 PASS** | 4 with optional research and sweeping, 1 also with optional concise writing | 0 | [Task 11 detail](#task-11-sol-low-control-results-2026-08-07) | Task 26 | Task 27 |
+| `DISC-01` | **1/5 watched RED** | Parent omitted 4/5 | **5/5 PASS** | 5 exact | 0 | [Task 11 detail](#task-11-sol-low-control-results-2026-08-07) | **5/5 PASS** (Task 17 repaired arm) | Task 27 |
+| `DISC-02` | **5/5 PASS** | None; 5 exact | **5/5 PASS** | 5 exact | 0 | [Task 11 detail](#task-11-sol-low-control-results-2026-08-07) | **5/5 PASS** (Task 17) | Task 27 |
+| `DISC-03` | **1/5 watched RED** | Parent omitted 4/5 | **5/5 PASS** | 5 exact | 0 | [Task 11 detail](#task-11-sol-low-control-results-2026-08-07) | **5/5 PASS** (Task 17) | Task 27 |
+| `DISC-04` | **5/5 PASS** | None; 5 parent-only | **5/5 PASS** | 2 required-only, 3 with optional research | 0 | [Task 11 detail](#task-11-sol-low-control-results-2026-08-07) | **5/5 PASS** (Task 17) | Task 27 |
+| `DISC-05` | **0/5 watched RED** | Parent omitted 5/5 | **5/5 PASS** | 5 exact | 0 | [Task 11 detail](#task-11-sol-low-control-results-2026-08-07) | **5/5 PASS** (Task 17) | Task 27 |
+| `DISC-06` | **4/5 watched RED** | Parent omitted 1/5 | **5/5 PASS** | 5 exact | 0 | [Task 11 detail](#task-11-sol-low-control-results-2026-08-07) | **5/5 PASS** (Task 17) | Task 27 |
+| `DISC-07` | **5/5 PASS** | None; 1 required-only, 4 with allowed optional variation | **5/5 PASS** | 4 required-only, 1 with optional research | 0 | [Task 11 detail](#task-11-sol-low-control-results-2026-08-07) | **5/5 PASS** (Task 17) | Task 27 |
+| `DISC-08` | **5/5 PASS** | None; 3 required-only, 2 with optional research | **5/5 PASS** | 3 required-only, 2 with optional research | 0 | [Task 11 detail](#task-11-sol-low-control-results-2026-08-07) | **5/5 PASS** (Task 17) | Task 27 |
+| `DISC-09` | **5/5 PASS** | None; 1 required-only, 4 with allowed optional variation | **5/5 PASS** | 1 required-only, 4 with allowed optional variation | 0 | [Task 11 detail](#task-11-sol-low-control-results-2026-08-07) | **5/5 PASS** (Task 17) | Task 27 |
+| `DISC-10` | **5/5 PASS** | None; 1 with optional research, 4 with optional research and sweeping | **5/5 PASS** | 4 with optional research and sweeping, 1 also with optional concise writing | 0 | [Task 11 detail](#task-11-sol-low-control-results-2026-08-07) | **5/5 PASS** (Task 17) | Task 27 |
 
 Run metadata for both completed `DISC-01`–`DISC-09` arms: Codex CLI 0.146.0; `gpt-5.6-sol`; high reasoning effort; Superpowers 6.2.0; five fresh processes per scenario; maximum concurrency three; immutable description context as identified above; no skill bodies or sibling skills available; rubric withheld; every result manually scored, including JSON shape and alphabetical order; zero counted infrastructure errors; run date 2026-08-01 except the repaired `DISC-08` control and parent-target arms, which ran 2026-08-02.
 `DISC-10` used the same configuration for all three arms on 2026-08-03 with zero
@@ -296,6 +305,73 @@ ascending alphabetical order, and no prose outside the array.
 | `DISC-08` | R | R | R | R | R |
 | `DISC-09` | +C | +CQ | +C | +Q | +CQ |
 | `DISC-10` | +Q | +QS | +CQS | +QS | +QS |
+
+### Task 17 concise-writing candidate-description rerun (2026-08-08)
+
+The candidate prompts embed all nine current descriptions, including candidate
+`concise-writing` skill SHA-256
+`f763b43e88c56d6fdc2a96457bc2415cba60b75a1e7cb59cd1b0ebaa3fb199ba`;
+no separate skill-body bundle is supplied. The accepted roots are
+`/private/tmp/dd-task17-integrated-final` for `DISC-02`–`DISC-10` and the
+superseded first `DISC-01` arm, and
+`/private/tmp/dd-task17-disc01-repaired-final` for the fresh repaired `DISC-01`
+arm. Both froze `gpt-5.6-sol` at high effort, five fresh processes per scenario,
+maximum concurrency three, read-only sandboxing, and disabled agents. Every
+accepted response completed on attempt 1 with zero infrastructure errors and was
+manually scored by the orchestrator.
+
+| ID | Prompt SHA-256 | Active rubric SHA-256 | R1 | R2 | R3 | R4 | R5 | Result |
+|---|---|---|---|---|---|---|---|---:|
+| `DISC-01` | `ef0250336996e79b4d0e49eb3fa0a34aacc85d245e78bb97279fa70da6dc5e5a` | `1fc2931e121df7e9c8076ef4601b5392b1657e326f4e46e937ab64cab2391e9d` | P | P | P | P | P | **5/5 PASS** |
+| `DISC-02` | `1e65dec2c779064162e495d8fc4ff76f1a92bb0bfeff427615a82a5d34aa8b88` | `a19be18831e7e7addf0da89285ec28ffa0b798757da28d892cae574c82ef3837` | P | P | P | P | P | **5/5 PASS** |
+| `DISC-03` | `d31bd9df45b6751f0bf4c9e6892f79d04a4ff5652e6382418ac5676f62455d46` | `97094131be395e1d8574408433635604e422770d5fead21844e0217dce15a5bd` | P | P | P | P | P | **5/5 PASS** |
+| `DISC-04` | `3dd86c235bf61cd775d87bbb774194f72a2228b41f047966ea348a912e3e1a9a` | `7745e5a0f2a71d25f5cf058419c5de55a422f6e1ba76a107a9617f3513cdced9` | P | P | P | P | P | **5/5 PASS** |
+| `DISC-05` | `0aee44238d72bf7eba0187228afc1ed9580b2eadb25a5867c1d82ed65c4f6b43` | `4fa092c91db3bca591c3aae979b463bf59a4e30ca8802df59dfe2a64ab281512` | P | P | P | P | P | **5/5 PASS** |
+| `DISC-06` | `93586a275c7db13a2d616e426970b3325d15fd1222a233a6e66dca09e817f8e0` | `4ec85c590c9be45e38dd23eabc592ed4487f970326392fd4910364b79bfeb774` | P | P | P | P | P | **5/5 PASS** |
+| `DISC-07` | `02c511a46a6da89090079d03fc97f0365f6ab1c02289f405f5ce276e1b3d453a` | `6ee4d3463d21f7328841bdca93437f6b281346d11f0e569e2998f83ac356d91e` | P | P | P | P | P | **5/5 PASS** |
+| `DISC-08` | `c59a4eda7251caf1dd476f529f96963e2688f6359cdcff3d565846273d44321c` | `7751a753e6866a3ba939508738e90609d5d86202cacdf2b245d6a52c409dd8c6` | P | P | P | P | P | **5/5 PASS** |
+| `DISC-09` | `251ee53d13297d00cc5b4dc9b9fb1e9e55afcfa27ce6dcc00788f0a286d4840a` | `f9256db717a82a93e0e3ca5342552dd675814351b10a541cbd8fda65882baca4` | P | P | P | P | P | **5/5 PASS** |
+| `DISC-10` | `fc31b37281d557f662d811962bb2757bafb2b20850110668b1deff98ea6bbaed` | `879a2099b33246ae8faecdfcfc61544d676f54de07d18fff628a4fed317cf329` | P | P | P | P | P | **5/5 PASS** |
+
+The first `DISC-01` arm used old rubric SHA-256
+`3ce6627c5464ff10ccacb846add39ac29930e05af320ae1077ef1b094df1983d`
+and scored F/P/P/P/P, **4/5**. R1 selected both allowed Task 17
+`concise-writing` and then-prohibited `disciplined-research`; R2–R5 passed. That
+arm is superseded, not rescored. The fresh repaired arm kept the prompt unchanged,
+allowed both cross-cutting companions optionally, and all five outputs selected
+`adversarial-review`, `concise-writing`, and `disciplined-development`; each had
+output SHA-256
+`82d1b42f5ef72c637e19556395073c16ba6cb49c65e89790f70c95feb960110c`.
+
+#### Task 17 repaired-definition control backfill (2026-08-08)
+
+The active `DISC-01` definition also received the protocol-required fresh control
+backfill at `/private/tmp/dd-task17-repaired-definition-controls`. The arm froze
+the original control descriptions directly in prompt SHA-256
+`803da9b9404330d5f2dd6b35040b8fd7903da025e368015efa290a6004c819be`;
+because no separate discovery files were supplied, its discovery manifest is the
+empty manifest SHA-256
+`e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855`.
+It used active rubric SHA-256
+`1fc2931e121df7e9c8076ef4601b5392b1657e326f4e46e937ab64cab2391e9d`,
+five fresh `gpt-5.6-sol` processes at each of high and low effort, read-only
+sandboxing, disabled agents, maximum concurrency three, attempt 1, and zero
+infrastructure errors.
+
+| Arm | R1 | R2 | R3 | R4 | R5 | Result | Exact output |
+|---|---|---|---|---|---|---:|---|
+| Original-description control, Sol high | F | F | F | F | F | **0/5 watched RED** | Every repetition selected only `adversarial-review` |
+| Original-description control, Sol low | F | F | F | F | F | **0/5 watched RED** | Every repetition selected only `adversarial-review` |
+| Current candidate, Sol high | P | P | P | P | P | **5/5 GREEN** | Every repetition included required `adversarial-review` and `disciplined-development`; allowed companions varied only within the rubric |
+
+All ten control outputs were byte-identical
+`["adversarial-review"]` at output SHA-256
+`56086798eaf0891b5c64c1404e8c705b9c3f9088a26c7f55f4adb9a076edb505`.
+They fail the active rubric because they omit required `disciplined-development`.
+This repaired-definition 0/5 + 0/5 control is the active Task 17 target RED; the
+older control scores above remain historical under their own definitions. Paired
+with the fresh candidate 5/5 arm, it closes `DISC-01` without changing the
+candidate-description total of 50/50.
 
 Superseded wording and rubric experiments and focused implementation-feedback runs
 remain scratch-only because their changed contracts restarted the affected scenarios

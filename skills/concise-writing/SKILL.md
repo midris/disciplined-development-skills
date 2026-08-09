@@ -1,92 +1,73 @@
 ---
 name: concise-writing
-description: 'Use when writing or revising reader-facing prose — docs, READMEs, plans, specs, design notes, commit bodies, or code comments — that risks being verbose, padded, repetitive, wordy, or bulky; also when asked to tighten, trim, shorten, or "get to the point".'
+description: 'Use whenever generating or revising reader-facing prose for project files or durable project records — docs, READMEs, plans, specs, design notes, status updates, summaries, commit bodies, or code comments — or response-only prose, including when asked to be concise, tighten, trim, shorten, or "get to the point". Do not use when the user explicitly requests that the agent response itself be a detailed explanation.'
 ---
 
 # Concise writing
 
-**Role:** Companion — invoke when producing prose a reader has to get through.
-**Owns:** the verbosity test (does cutting this lose information or necessary framing?), the named padding patterns, the two-altitude compression pass, the anti-over-trim guard.
-**Does not own:** what goes into a plan vs. code (`lean-plan-writing`); whether rationale is present at all (`writing-explicit-rationale`); stale-reference sweeps (`sweeping-stale-references`).
+## Contract
+
+Apply the complete method to prose in project files and durable project records, including code comments and prose deliverables within code, structured data, or required syntax; leave surrounding code, data, and syntax unchanged.
+For response-only prose, use a light pass and equivalence gate unless the user explicitly requests a detailed explanation; then do not apply `concise-writing`.
+
+A concise revision is lossless only when, in every relevant circumstance, a careful reader can understand and use it as they could the source, without guessing or filling gaps.
+Any loss of readability, meaning, impact, effectiveness, completeness, correctness, findability, or any other consequential quality is a hard failure.
 During skill or reference authoring, `superpowers:writing-skills` owns authoring decisions and validation.
 
-## Overview
+## Method
 
-Cut **verbosity** — words beyond what the information needs — while keeping every bit of information and any framing that aids comprehension.
-Density is good; padding is not.
-This is not brevity-for-its-own-sake: a rich, easy to read, complete document is the goal.
+1. **Establish the baseline.** Read each section and the whole artifact to understand how a careful reader can use the source.
+2. **Transform losslessly.** Revise from the source.
+   Keep every source-explicit distinction explicit in the result; a broader category or meaning recoverable only by inference is not equivalent.
+   Apply the padding patterns locally and across the whole artifact only where the lossless invariant still holds.
+   Give each distinct meaning one clear, findable home; repeat only for necessary framing.
+3. **Verify both directions.** Compare source and result section by section and as whole artifacts.
+   In any relevant circumstance, could a careful reader understand or use the result differently, or have more difficulty finding necessary meaning?
+   If yes or uncertain, restore the source until the invariant holds; then confirm every result claim is source-supported.
 
-## The core test
-
-For each sentence or clause:
-
-> Does cutting it lose **information** or **necessary framing**?
-
-- **Neither** → cut it.
-- **Either** → keep it.
-
-The "or framing" half is the guard: recaps, misread-preventing transitions, and orienting context all carry framing, so they stay.
-Padding carries neither.
-
-## The compression pass — two altitudes
-
-Run before finalizing any durable artifact.
-Trim at both altitudes:
-
-- **Local** — sentence and clause level, via the core test. Doable as you write.
-- **Global** — read the edit *against the whole artifact*: does this content already appear elsewhere? Cross-section duplication surfaces only at this altitude, so any edit that adds prose requires this read.
-
-## Verbosity patterns
+## Padding patterns
 
 | Pattern | Cut |
 |---|---|
-| **Meta-framing** — sentences about what the doc/section does ("This section explains…", "In this guide we'll…") | The content explains itself. Delete the narration. |
-| **Say-it-twice** — a fact, then the same fact reworded in the next sentence with nothing added | Keep one statement. (Deliberate reinforcement is exempt — see When NOT to cut.) |
-| **Cross-section duplication** — the same definition or fact stated in two places serving no distinct purpose | State it once, at its best home. (Global-altitude catch.) |
-| **Over-sectioning** — a short doc split into many headed subsections, each with a lead-in sentence | Collapse headers; the lead-ins vanish with them. |
-| **Unrequested elaboration** — advice or inference past the source material, added to seem thorough | Cut unless it is genuinely necessary framing. |
-| **Emphasis/hedge inflation** — scattered bold, doubled descriptors ("each and every"), "always / so it always" | One clear statement, minimal emphasis. |
+| **Meta-framing** — section-purpose narration | Present content. |
+| **Say-it-twice** — immediate restatement | Keep one statement. |
+| **Cross-section duplication** — repetition without distinct purpose | Keep one home; cross-reference. |
+| **Over-sectioning** — headings and lead-ins fragment short prose | Collapse them. |
+| **Unrequested elaboration** — advice or inference beyond source | Cut unless necessary framing. |
+| **Emphasis/hedge inflation** — doubled descriptors or qualifiers | State it once. |
 
-## Before / after
+## Examples
 
-Meta-framing and say-it-twice removed; every fact kept (~45% shorter):
+**Access deadline**
 
-> **Before:** This section explains how eviction works. The cache uses LRU eviction. Total size is capped at `MAX_CACHE_SIZE_MB`. The cache may grow up to this limit; once it would exceed the limit, the service reclaims space by evicting least-recently-used entries until it is back under the cap.
+> **Before:** This section explains staging access.
+> Engineers must submit the Access form to Platform Operations two days before deployment.
+> The deadline is two days before.
 >
-> **After:** The cache uses LRU eviction, capped at `MAX_CACHE_SIZE_MB`. On write, if it is over the cap, it evicts least-recently-used entries until back under.
+> **After:** For staging access, engineers must submit the Access form to Platform Operations two days before deployment.
 
-## When NOT to cut
+**LRU eviction**
 
-Over-trimming is its own failure.
-Keep:
+> **Before:** This section explains how eviction works.
+> The cache uses LRU eviction.
+> Total size is capped at `MAX_CACHE_SIZE_MB`.
+> The cache may grow up to this limit; once it would exceed the limit, the service reclaims space by evicting least-recently-used entries until it is back under the cap.
+>
+> **After:** The cache uses LRU eviction and is capped at `MAX_CACHE_SIZE_MB`.
+> When total size would exceed the cap, the service evicts least-recently-used entries until total size is back under.
 
-- **Closing recaps and navigation aids** in long documents — they carry framing.
-- **Deliberate repetition** for emphasis or retention — restating a key point in a summary, or echoing a critical warning where it's needed. The target is *accidental* restatement that adds nothing, not intentional reinforcement.
-- **Orienting context** that prevents a misread or makes a jump followable.
-- **Rationale** — owned by `writing-explicit-rationale`; concision never licenses dropping the why.
-- **Spec/plan completeness** — owned by `lean-plan-writing`; a requirement list is not padding.
-
-When editing existing text, draft first.
-Diff edits against the prose being edited to make sure no meaning is lost.
-
-Concision is judgment, not mechanical minimization.
-When unsure whether something is framing or padding, keep it and flag it.
+This rewrite is lossless because reaching the cap and exceeding it lead to different behavior, and the boundary remains explicit.
 
 ## Rationalizations
 
 | Excuse | Reality |
 |---|---|
-| "More words make it clearer for junior readers." | Padding lowers clarity — it buries the point. Density with good structure is what helps. |
-| "Being thorough means covering every angle." | Thorough = every required fact, once. Restating and elaborating past the source is padding, not thoroughness. |
-| "The intro and the section should each be self-contained." | Then cross-reference; don't re-state. One home per fact. |
-| "A lead-in sentence per section reads more smoothly." | In a short doc the headers and lead-ins are the bulk. Collapse them. |
-| "It's just one extra sentence." | One per paragraph is how a 130-word doc becomes 300. The test is per-sentence. |
-| "Trimming risks dropping something important." | That's what the core test's 'or framing' half protects. Cut only what carries neither information nor framing. |
+| “More words are clearer or more thorough.” | Complete, clearly structured prose is thorough; padding is not. |
+| “Each section needs its own explanation.” | Give each distinct meaning one clear, findable home; cross-reference it. |
+| “Trimming may drop something important.” | Apply the lossless reader-use test; if the result could be understood or used differently, restore the source until the invariant holds. |
 
-## Pairing
+## Composition
 
-- `lean-plan-writing` — when editing plans/specs, both apply (it governs what goes in; this governs how many words carry it).
-- `writing-explicit-rationale` — keep the rationale; tighten its wording.
-- `sweeping-stale-references` — a trim that removes a referenced anchor triggers a sweep.
-
-Invoked on-demand, not gate-shaped — apply whenever prose risks padding.
+- `lean-plan-writing` owns plan/spec content; `concise-writing` compresses its prose.
+- `writing-explicit-rationale` owns rationale necessity; `concise-writing` tightens the retained rationale.
+- `sweeping-stale-references` reconciles moved or removed anchors.
