@@ -34,6 +34,65 @@ Commit `2be8db478b5f0134fa77da37e9281bc9cca58eb5` later shipped the minimal
 mandatory-citation floor; the commit explicitly classified the line as
 behavior-neutral, and the limitation remained in the `4296647` control.
 
+## Task 18 cleanup preflight (2026-08-08)
+
+The immediate readability control is the 1,388-word skill at
+`ecfd2ef4d88694ee36ffe30ebe852173c5629d50`, byte-identical to the original
+control at SHA-256
+`a5c4079e5aa21651ecd39b09e3fb2d9a58f4a1f3b99354b3b6927b2d44c6fb50`.
+Its immutable nine-skill archive is
+`/private/tmp/dd-task18-readability-control.lFEePn/current-nine-skills.tar` at
+SHA-256 `8bf4540d9f456e446145d74277d93fbd65771b3b18517b4dab692b1fb08e08f9`;
+the canonical content manifest is SHA-256
+`af36615bae1e4d80d8d0456dd93366ee429d75e0e74ae0ee49a6be44ee0c5548`.
+
+Section-level meaning and necessity inventory:
+
+| Current section | Distinct behavior or meaning protected | Necessary? | Smallest behavior-preserving disposition |
+|---|---|---|---|
+| Frontmatter | Routes load-bearing project, external, cross-domain, and downstream-record claims before they are stated | Yes | Keep trigger-only discovery language; remove examples already recoverable from the body only if routing remains explicit |
+| Role / ownership | Defines the broad-domain companion boundary and assigns source ranking, acquire-versus-verify, recency/applicability, and destination-based load bearing | Yes | Keep one compact ownership block; do not add optional suite composition to the broad-domain core |
+| Overview | Explains downstream reliance, current-source grounding, and the two failure modes: confabulation and stale citation | Yes | State the consequence and core rule once; let the method embody the two failure modes instead of restating them |
+| When this applies | Covers project, external, and cross-domain claims; distinguishes local behavior from current public state; defines the careful-reviewer threshold | Yes | Lead with the destination/load-bearing trigger, then keep the three domains as compact method inputs rather than repeating destination examples |
+| Two facets | Joins source acquisition and final re-verification as complementary responses to the two failure modes | Yes | Replace the extra framing layer with one ordered acquire-then-verify method |
+| Acquire from source | Preserves internal and external source rank, conflict precedence, binary-versus-current-public-state distinction, and orthogonal date/version checks | Yes | Keep the two ranked hierarchies and applicability checks, preferably as compact scan-friendly tables or lists |
+| Verify before citing | Requires a fresh check before a specific enters a durable or user-relayed artifact; destination, not prompt length, defines the gate; readers receive a re-verifiable source | Yes | Make this the second method step and keep one destination rule plus one source-reporting rule |
+| Common rationalizations | Resists memory, peer-premise, quick-task, silent-skip, confident-specificity, and actively-touched-state pressures | Yes | Retain one response per distinct pressure and remove wording duplicated by the red-flags list |
+| Red flags | Repeats the same pressures as the rationalization table, while also surfacing absent source identity before output | No as a separate section | Fold the source-identity check into the method and preserve distinct pressure cues in the single rationalization table |
+
+Whole-skill verdict: the companion is necessary because it supplies broad-domain
+source acquisition and re-verification behavior not owned elsewhere.
+The simplest coherent form is trigger and ownership, one acquire-then-verify method,
+the two source hierarchies with recency/applicability, and one pressure-resistance
+table; removing any protected distinction, source boundary, or broad-domain path is
+a hard failure.
+
+The complete scratch proposal is 1,016 words at SHA-256
+`38cbe2ae1171f05e676c9e22db30a360467182638bd5c034b0d82ebba973e2de`.
+A fresh Sol-high pre-approval review found two Important preservation defects and
+one Minor ambiguity: repository-only path reporting, added non-version authority
+doctrine, and an undefined frontmatter category.
+Scratch fix round 1 addressed all three; the scoped re-review returned SPEC PASS,
+QUALITY PASS, `DD-PATTERN: NONE`, and `DD-VERDICT: PASS`.
+The tracked skill remained unchanged through that review; no behavioral or discovery
+result was claimed.
+
+On 2026-08-09 the owner approved a separate behavior slice before any scratch prose
+entered the tracked skill. The exact discovery description is `Use before stating
+any factual claim.` Every factual claim, including one in a casual answer or private
+note, must be acquired from the best available source, verified before it is stated,
+and accompanied by an unambiguous source disclosure. There is no load-bearing
+threshold, destination test, scratch-work exemption, project/external applicability
+bound, or other exclusion. Project, external, and cross-domain categories remain
+source-selection guidance only; one source may support multiple claims when the
+mapping is unambiguous.
+
+The reviewed 1,016-word scratch proposal is therefore superseded and will not be
+applied. The tracked skill remains byte-identical to the immediate readability
+control. Task 18A will freeze and run watched targets `DISC-11` and `DR-04`, preserve
+existing `DISC-01`–`DISC-10` and `DR-01`–`DR-03` contracts initially, and establish
+its separately committed GREEN as Task 18's new immediate readability control.
+
 ## Active scenario catalog
 
 Common run metadata: control commit

@@ -97,6 +97,33 @@ clarifications with preserved 5/5 behavior. These changes require watched contro
 5/5 GREEN, cold review, final in-place approval, repository tests, and a behavioral
 commit separate from Task 22's readability cleanup.
 
+During Task 18, review of `disciplined-research` exposed that its load-bearing and
+destination tests left factual claims outside the grounding contract. On 2026-08-09
+the owner approved a separate RED/GREEN behavior slice with the exact discovery
+description `Use before stating any factual claim.` The body must apply one rule to
+every factual claim, including claims in casual answers and private notes: acquire
+the fact from the best available source, verify it before stating it, and disclose
+the source. It must not retain a load-bearing threshold, a destination test, a
+scratch-work exemption, or another exclusion. Project, external, and cross-domain
+distinctions remain useful only for choosing and ranking sources; they do not bound
+when the skill applies. A single source may support multiple claims when the mapping
+is unambiguous.
+
+This behavior slice adds two watched target scenarios. `DISC-11` requires
+`disciplined-research` selection before an agent records a factual claim in a private
+software-development scratch note. `DR-04` requires that the claim be acquired,
+verified, and accompanied by an unambiguous source disclosure. Their prompt,
+fixture, rubric, and supplied context must be frozen before execution. Existing
+`DISC-01`–`DISC-10` and `DR-01`–`DR-03` contracts remain unchanged initially; if an
+existing contract needs repair, apply the global control-backfill rule. Run fresh
+Sol-high and Sol-low controls for the new targets under the enforced read-only,
+no-agents transport, then require the candidate to reach 5/5 on the complete active
+discovery and disciplined-research suites. After watched REDs, candidate GREEN,
+cold review, final in-place approval, and repository verification, commit the
+behavior slice separately. That commit becomes Task 18's immediate readability
+control, and the active closure becomes 84 scenarios only after both new targets
+are GREEN.
+
 Broad-domain isolation is coverage only for the three companions whose contracts
 include that work; it does not expand the two development companions beyond their
 authored domain or remove any dependency.
@@ -128,8 +155,10 @@ Run the complete suite on Sol low again after cleanup to compare the control and
 A lower cleaned score pauses sign-off for inspection and user review but is not an automatic failure of the Sol-high preservation gate.
 Record one of two dispositions for every decrease: user-approved acceptance with an on-page what/why/accepted rationale, or remediation followed by the affected Sol-high and Sol-low reruns.
 Task 11's frozen 81-scenario/405-slot aggregate remains historical fact.
-After retiring `LP-04` and `SSR-04`, future active closure contains 79 scenarios;
-do not recompute the frozen aggregate.
+After retiring `LP-04` and `SSR-04`, that closure contained 79 scenarios; Task 17
+added three active scenarios for a current total of 82. The approved Task 18
+behavior slice will add two more after they are GREEN, producing the 84-scenario
+closure used by Tasks 26–27. Do not recompute the frozen aggregate.
 
 Record for every run:
 
