@@ -24,10 +24,10 @@ Classification: **Keep 0, Repair 14, Merge 3, Retire 3, Add 1**.
 
 The exact active definitions, ownership, affected skills, prompt/rubric links, supplied contexts, and rerun triggers are in [adversarial-review-loop-scenarios.md](adversarial-review-loop-scenarios.md).
 
-Task 18A freezes `OWN` as a repaired research-composition preservation contract
-because the old parent already governs its factual workflow and ownership claims.
-Its prior active results remain historical; the repaired prompt, rubric, supplied
-bundle, hashes, and pending high/low 5/5 preservation backfills are owned by
+Task 18A freezes `OWN` as a research-composition target RED because universal
+acquisition, verification, and mapped disclosure are new positive promises.
+Its accepted control is 0/5 at both efforts and remains exact evidence; the
+repaired prompt, rubric, supplied bundle, and hashes are owned by
 [the scenario record](adversarial-review-loop-scenarios.md#task-18a-own-freeze).
 
 ## Section necessity and simplification

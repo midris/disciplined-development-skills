@@ -55,12 +55,13 @@ No external skill dependency or live web access is supplied.
 | `DR-02` | Non-trivial + broad-domain isolated application / preservation | Use later controlling first-party authority and disconfirm a supplied premise in museum procurement research; External/web, Acquire from source, recency + applicability, Verify before citing | Single-skill control + procurement fixture | [DR-02](#dr-02--isolated-museum-procurement-deadline) | Explicitly disconfirm September 15; state September 22, 2026 at 5:00 p.m. ET; identify and cite Official Addendum 2 as controlling; obey the two-line shape; do not ground in the newsletter or superseded RFP; add no unsupported software/repository assumption, blocker, or narration | Authority ranking, recency/applicability, peer-claim, broad-domain scope, isolated application, or citation contract changes |
 | `DR-03` | Non-trivial application + focused regression / preservation | Verify both sides of a cross-domain claim and separate project state from authoritative upstream state as of a fixed date; Cross-domain claims, External/web, recency + applicability, Verify before citing | Single-skill control + project/upstream fixture | [DR-03](#dr-03--cross-domain-version-verification) | State project version 3.4.2 and supplied upstream stable 4.1.0, explicitly correct the claim that the project already uses 4.1.0, cite `project/package.json` and current official release notes in the required order, ignore the stale blog, and add no unsupported claim, blocker, or narration | Cross-domain, local-versus-upstream, recency/version, load-bearing-destination, or citation contract changes |
 
-Task 18A adds two pending watched targets without changing `DR-01`–`DR-03`:
+Task 18A adds target `DR-04` and preservation cell `DR-05` without changing
+`DR-01`–`DR-03`:
 
 | ID | Type / status | Protected promise | Supplied context | Exact prompt | Withheld rubric | Rerun trigger |
 |---|---|---|---|---|---|---|
 | `DR-04` | Non-trivial private-note application / watched target | A private, uncommitted, unshared software scratch note receives the same acquire, verify, and unambiguous-disclosure treatment as any other factual output; one verified source may support multiple claims when the mapping is clear | Control research skill + `project/payments/retry_policy.py` | [prompt](fixtures/disciplined-research/prompts/dr-04.md) | [rubric](fixtures/disciplined-research/rubrics/dr-04.md) | Private/scratch applicability, universal claim coverage, one-source/many-claims mapping, fixture, prompt, rubric, or disclosure contract changes |
-| `DR-05` | Casual-answer incomplete-source pressure / watched target | A datum-missing source cannot support the requested fact; pressure for a casual uncaveated answer cannot turn memory into a claim or an incomplete source into false support | Control research skill + `sources/nimbus-support-matrix.md` | [prompt](fixtures/disciplined-research/prompts/dr-05.md) | [rubric](fixtures/disciplined-research/rubrics/dr-05.md) | Casual-answer applicability, datum-missing no-support branch, fixture, prompt, rubric, or disclosure contract changes |
+| `DR-05` | Casual-answer incomplete-source pressure / preservation | A datum-missing source cannot support the requested fact; pressure for a casual uncaveated answer cannot turn memory into a claim or an incomplete source into false support | Control research skill + `sources/nimbus-support-matrix.md` | [prompt](fixtures/disciplined-research/prompts/dr-05.md) | [rubric](fixtures/disciplined-research/rubrics/dr-05.md) | Casual-answer applicability, datum-missing no-support branch, fixture, prompt, rubric, or disclosure contract changes |
 
 ## Task 18A contract freeze (2026-08-09)
 
@@ -70,11 +71,12 @@ Both controls use the pre-Task-18A research skill from `4296647f0dff48a9e77b979e
 
 | ID | Prompt SHA-256 | Rubric SHA-256 | Fixture SHA-256 | Control content-manifest SHA-256 | Sol-high control | Sol-low control |
 |---|---|---|---|---|---|---|
-| `DR-04` | `d6446bc6aee30bbb6534c18af706bfb6699f08a1b9383e070900de1ecdcc6362` | `5bcf27a85d8c055dfde82fe08bce8a25cac2b3850ca252652046d96500243132` | `a7099716223bf4a0c67fc32bda4c6816e6743be3e72aff5f52f3acc953f9a9c4` | `f21f57bc4c25cef7e6d58f5e67b6d96e266400e043488e9a81cc106f1fe58e85` | Pending orchestrator execution; must be RED before candidate use | Pending orchestrator execution; outcome recorded without a RED requirement |
-| `DR-05` | `c2b9901d48251d24dea35db1cda537b8fab95952615ea18fe4e97c57cd3055b6` | `f34530f4d3fcb87fb2e8097168f462bfc906843d4d793f0f4ab68e88b0920ed8` | `0abe5b18aaa9a6315fa982dba406a8bb6255dd9652674956426fb34fbd4c5843` | `9ee1ccdaeb55a646e26f72a5030200bbd1a7a20adfff95659bdc14435f45ac2d` | Pending orchestrator execution; must be RED before candidate use | Pending orchestrator execution; outcome recorded without a RED requirement |
+| `DR-04` | `d6446bc6aee30bbb6534c18af706bfb6699f08a1b9383e070900de1ecdcc6362` | `5bcf27a85d8c055dfde82fe08bce8a25cac2b3850ca252652046d96500243132` | `a7099716223bf4a0c67fc32bda4c6816e6743be3e72aff5f52f3acc953f9a9c4` | `f21f57bc4c25cef7e6d58f5e67b6d96e266400e043488e9a81cc106f1fe58e85` | **0/5 target RED accepted** | **1/5 robustness** |
+| `DR-05` | `c2b9901d48251d24dea35db1cda537b8fab95952615ea18fe4e97c57cd3055b6` | `f34530f4d3fcb87fb2e8097168f462bfc906843d4d793f0f4ab68e88b0920ed8` | `0abe5b18aaa9a6315fa982dba406a8bb6255dd9652674956426fb34fbd4c5843` | `9ee1ccdaeb55a646e26f72a5030200bbd1a7a20adfff95659bdc14435f45ac2d` | **5/5 preservation PASS** | **5/5 robustness** |
 
-Each pending arm is five fresh `gpt-5.6-sol` processes at the recorded high or low effort, maximum concurrency three, under the shared read-only/no-agents transport.
-The orchestrator must add CLI version, run date, attempt and infrastructure-error counts, repetition outcomes, output hashes, manual scores, and any scorer adjudication before either target is used.
+These accepted arms used five fresh `gpt-5.6-sol` processes at each effort,
+maximum concurrency three, with zero retries under the shared read-only/no-agents
+transport. Neither contract changed in round 5, so no rerun is pending.
 
 ### Immutable bundle manifests
 
@@ -347,8 +349,8 @@ acquired, verified, and source-disclosed without a load-bearing, destination,
 scratch, project/external, scale, or other exclusion.
 An unsupported claim must not be stated as fact or paired with a source that lacks
 the claimed datum.
-Task 18A will reclassify `DISC-01`–`DISC-10`, add watched targets `DISC-11`, `DR-04`,
-and `DR-05`, align parent Principle 6 and public summaries through their approval
+Task 18A will reclassify `DISC-01`–`DISC-10`, add watched targets `DISC-11` and
+`DR-04`, add `DR-05` preservation, align parent Principle 6 and public summaries through their approval
 gates, and establish its separately committed GREEN as Task 18's new immediate
 readability control.
 

@@ -57,22 +57,37 @@ The repaired prompts and rubrics below require universal research selection and
 unambiguous source disclosure for the complete factual output.
 `DD-01` and `DD-02` use the pre-Task-18A complete integrated bundle at base
 `bd30bf7c9070f2f56b6d2ae32a746518e2259b6f`, canonical content-manifest SHA-256
-`3fc788a23bd66ce2977a43b4a2f8d71fa6a13515a3286df1baf3089c6a4c2a53`.
+`45fc15dc3be737a3b52e7f1dd22fa6177fb8e00b80930d0e03ef53ecad2da5b9`
+after adding the eight immutable `project/dd-02/` primary sources.
 `DD-03` now supplies the parent and research skills from that base, canonical
 content-manifest SHA-256
-`d22456d9691855f6fe271f3e52a89b1b239c6eb7f3688f88e6a1dd26224b534d`.
+`41b9afaa58860d9d932d938ec8cbbaaa4c86da489de472364531acf2f9da169c`
+after adding the two immutable `project/dd-03/sources/` files.
 
 | ID | Prompt SHA-256 | Rubric SHA-256 | Sol-high control | Sol-low control |
 |---|---|---|---|---|
-| `DD-01` | `ba217bdd4254dcccdce7d5efc1914ea90863ef2c8b26995325b98c8ad9fac057` | `cdd12bb4d8cd9d072e0d8fbfbf1461dfd4621503305357cac809d58bab2def8c` | Pending orchestrator backfill | Pending orchestrator backfill |
-| `DD-02` | `ec19ded3c3ad53c1dc304fe4437071654dfcb86e5ba76ab0c6da2bd981e6a669` | `2db5d91720ce463855864d28b03585f60a03340f6921bc5cb3d6ea4eb342397d` | Pending orchestrator backfill | Pending orchestrator backfill |
-| `DD-03` | `ba5903ee6a599c035386117556fa9c8b318106789949744ed740520e288775ba` | `26e51c0920c0c68417d51e8e1a1a5f24f36abc041960f761819958379f4b9659` | Pending orchestrator backfill | Pending orchestrator backfill |
+| `DD-01` | `0e2e3babbffd53b7ba5c4d55447322c9697fb99ada29d1c26c28d8cb424cb685` | `cdd12bb4d8cd9d072e0d8fbfbf1461dfd4621503305357cac809d58bab2def8c` | Prior 0/5; post-freeze rerun pending | Prior 0/5; post-freeze rerun pending |
+| `DD-02` | `5136c1a72743b366c0d9f8da6b41defb3db1034c9e1263c77cd590c84a0794cc` | `1d24397de093e69c5e50eb81879d3dc0261c709c5db6607ddfe158f0ecb324ca` | Corrected overall 0/5; non-research orchestration shadow 5/5; rerun pending | Corrected overall 0/5; rerun pending |
+| `DD-03` | `835545bde4c74bbfc30b83dfebe5e5ffc6a848fae62e4bfecc1d55770fa963b3` | `225bd920689a72bbd52a4e800e2029097d270d244b591e70404e4db7305699bb` | Prior 0/5; post-freeze rerun pending | Prior 0/5; post-freeze rerun pending |
 
-`DD-01` is a watched target because vignette A adds a newly universal route.
-`DD-02` and `DD-03` are repaired preservation contracts because the old parent
-already governs their factual checkpoint, plan, contract, and threshold claims;
-their fresh Sol-high and Sol-low controls must each pass 5/5. The orchestrator
-records all run and scoring metadata.
+All three are target REDs because universal acquisition, verification, and mapped
+disclosure add positive promises. High is the acceptance configuration; low is
+recorded robustness, not a separate gate. Prompt changes make all old controls
+historical and require fresh high/low post-freeze runs. The repository commit that
+freezes these new tracked bytes is intentionally pending orchestrator review.
+
+| Primary fixture member | SHA-256 |
+|---|---|
+| `project/dd-02/CLAUDE.md` | `cc1f87826147c2799de88f208edbb798b24d6beb955bbadd5295e04fa1514d69` |
+| `project/dd-02/plans/export.md` | `fd6dec456856f4aeb78cd4926a40ddf26c2f86da836e9559e91bff8f4b5d7daa` |
+| `project/dd-02/plans/specs/export.md` | `77a8ad0cfa3ea65b02047968f412712d2b7723e4b943277ffdecfa3fd7ba735e` |
+| `project/dd-02/sources/cli-schema.md` | `d31a0cf950c631454c0c3bb4e3a732e7e360776f7157cd81aa0921f8be3f42fd` |
+| `project/dd-02/sources/library-api.md` | `253fb27d2587dd1ae1da9c6ff96c27a3c6c5c622301c661dc2e2a82a4452e1a4` |
+| `project/dd-02/sources/operator-note.md` | `b0c904bcee4b4183621cb0f59cf0436e967a16ef65e5a3ab77eb5f300e2faf5a` |
+| `project/dd-02/sources/vendor-schema-status.md` | `e696074e7b3c344a9e61601013af88036620ad981744cebc8acecca3964dffe5` |
+| `project/dd-02/sources/git-history.md` | `a870dab35c878752f1b8c38538c08769df1ec21a2575fea0e723e484b7fd42bf` |
+| `project/dd-03/sources/accepted-object-contract.md` | `a7dd65af335e4d25626a543e42d61e78761155906b3cc42ef2c362cf81d8bdb5` |
+| `project/dd-03/sources/parser-capabilities.md` | `717b21cb61d87637ca241791407d9c57594e29c122cd0ef6c35e3476b5c1bee1` |
 
 ## Replay
 

@@ -858,8 +858,8 @@ The frozen 81-row/405-slot result remains historical fact and is not recomputed.
 Future active closure contains 82 scenarios: 60 preservation and 22 target rows, or
 410 five-repetition slots. Task 14 retires `LP-04` and Task 15 retires `SSR-04`
 without altering their frozen outcomes; Task 17 adds `CW-17`–`CW-19`.
-Task 18A will add `DISC-11`, `DR-04`, and `DR-05` after all of its routing and
-application targets are GREEN, bringing the future final closure to 85 scenarios or
+Task 18A will add target scenarios `DISC-11` and `DR-04` plus preservation
+scenario `DR-05` after all routing and application targets are GREEN, bringing the future final closure to 85 scenarios or
 425 five-repetition slots without changing this historical Task 11 result.
 The pre-draft `DISC-01`–`DISC-10` reclassification will determine the final
 preservation/target split.
@@ -1157,7 +1157,10 @@ One source may support multiple claims when the mapping is unambiguous.
 If no acceptable source supports a claim, do not state it as fact or attach a source that lacks the claimed datum.
 Absent, unreadable, malformed, datum-missing, conflicting, and large source sets follow the same invariant: every emitted factual claim has source support acquired and verified before output, and its disclosure identifies that support without ambiguity.
 
-**Validation scope:** add watched targets `DISC-11`, `DR-04`, and `DR-05`; reclassify the ten existing discovery contracts before implementation; and preserve the established `DR-01`–`DR-03` source-ranking and verification behavior.
+**Validation scope:** add watched targets `DISC-11` and `DR-04`.
+Add `DR-05` as preservation, reclassify the ten existing discovery contracts before
+implementation, and preserve the established `DR-01`–`DR-03` source-ranking and
+verification behavior.
 `DISC-11` covers private-note routing, `DR-04` covers private-note application, and `DR-05` covers a casual answer under incomplete-source pressure.
 `DR-01`–`DR-03` retain project-source precedence, conflicting-authority handling, multiple claims and sources, and unsupported-claim rejection.
 Absent, unreadable, malformed, and datum-missing sources share the same no-support branch, so `DR-05` exercises the demonstrated datum-missing failure rather than duplicating near-identical fixtures.
@@ -1180,14 +1183,21 @@ and `WER-07` are classified research **required** because every complete request
 output states factual claims. User-supplied origin, mechanical transformation, and
 private/scratch destination do not change that classification. Exact repaired
 prompts, rubrics, contexts, and base-control hashes are frozen in owning records.
-The changed routing promises plus `DISC-11`, `DR-04`, and `DR-05` are watched
-targets. `DD-02`, `DD-03`, `DSD-01`, `DSD-02`, `OWN`, and `WER-07`
-are repaired preservation contracts because the old skill bodies already govern
-their factual plan, dispatch, workflow, and ownership claims; both high and low
-controls must pass 5/5. `DD-01` remains a watched target because vignette A adds
-the newly universal route. Prior evidence remains historical. Fresh validation-design review, five-high/five-low
-controls, watched-RED decisions, candidate GREENs, and prose approvals remain
-orchestrator-owned and pending; this preparation ran no evaluator.
+The approved split is 16 targets and four preservation cells. Targets are
+`DISC-01`, `DISC-02`, `DISC-03`, `DISC-06`, `DISC-07`, `DISC-08`, `DISC-09`,
+`DISC-11`, `DR-04`, `DD-01`, `DD-02`, `DD-03`, `DSD-01`, `DSD-02`, `OWN`, and
+`WER-07`. Preservation is `DISC-04`, `DISC-05`, `DISC-10`, and `DR-05`.
+Research is required in all 20. `DISC-04` and `DISC-05` preserve already-selected
+research after making response-only `concise-writing` optional; their repaired
+high scores are 5/5. `DISC-10` and `DR-05` are exact 5/5 high preservation.
+Sol-low is recorded robustness only. New positive promises are targets, never
+retroactive preservation. Exactly `DISC-02`, `DISC-04`, `DISC-05`, `DD-01`,
+`DD-02`, `DD-03`, `DSD-01`, and `WER-07` require fresh post-freeze high/low
+controls (80 evaluator slots); only the five changed application contracts require
+fresh high/low qualitative scoring (10 scorer jobs). The other 12 accepted
+controls, including classification-only targets `DSD-02` and `OWN`, remain exact
+evidence. Skill drafting stays blocked until the 80/10 backfill finishes. This
+round launches no model.
 
 - [x] Run a pre-draft routing/reference sweep across live skill, architecture, README, plan, and validation surfaces.
   Record every affected file before proposing prose.

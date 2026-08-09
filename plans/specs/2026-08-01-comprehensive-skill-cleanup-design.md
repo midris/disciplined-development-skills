@@ -113,17 +113,17 @@ datum-missing, conflicting, and large source sets do not create an exception: ap
 the same source-ranking, verification, and disclosure rule to every emitted factual
 claim, without sampling.
 
-This behavior slice adds three watched target scenarios. `DISC-11` requires
+This behavior slice adds two watched target scenarios. `DISC-11` requires
 `disciplined-research` selection before an agent records a factual claim in a private
 software-development scratch note. `DR-04` requires the private note to acquire,
-verify, and disclose support for every factual claim. `DR-05` exercises a casual
+verify, and disclose support for every factual claim. `DR-05` is preservation and exercises a casual
 answer when an available source lacks the requested datum: the answer must not
 assert the unsupported claim or falsely cite the incomplete source. Existing
 `DR-01`–`DR-03` retain source ranking, conflicting-authority, multi-source mapping,
 and unsupported-claim guards. Before drafting, reclassify every `DISC-01`–`DISC-10`
 allowed set against the exact new description; do not presume the old routing
 contracts remain valid. Freeze and backfill any repaired discovery contract plus the
-three new targets before skill edits.
+two new targets plus the `DR-05` preservation cell before skill edits.
 
 The live README, architecture summary, parent Principle 6, and
 `sweeping-stale-references` ownership boundary must stop presenting research as
@@ -156,6 +156,15 @@ freeze, and its complete active suite plus proposed/final approval gates are now
 scope. Owning validation records freeze exact repaired
 contracts and base-control hashes; fresh high/low controls and prose work remain
 pending.
+
+The frozen role split is 16 target REDs (`DISC-01`, `DISC-02`, `DISC-03`,
+`DISC-06`, `DISC-07`, `DISC-08`, `DISC-09`, `DISC-11`, `DR-04`, `DD-01`,
+`DD-02`, `DD-03`, `DSD-01`, `DSD-02`, `OWN`, `WER-07`) and four preservation
+cells (`DISC-04`, `DISC-05`, `DISC-10`, `DR-05`). Preservation requires 5/5
+Sol-high; Sol-low is robustness evidence only. Exactly eight semantically changed
+contracts must complete a fresh post-freeze rerun before any skill draft:
+`DISC-02`, `DISC-04`, `DISC-05`, `DD-01`, `DD-02`, `DD-03`, `DSD-01`, and
+`WER-07`. The other 12 accepted controls remain exact evidence.
 
 Broad-domain isolation is coverage only for the three companions whose contracts
 include that work; it does not expand the two development companions beyond their

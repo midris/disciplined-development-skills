@@ -54,9 +54,10 @@ Its canonical content-manifest SHA-256 is
 `c5bb38b5aa306fb059e12365075f8b68d238e1412450dab4cf1558efe51e259b`.
 Prompt SHA-256 is `deab7d6fec9cb4654a10992d958d3d9305693b84ab8c07294d8adc34ee930f3c`;
 rubric SHA-256 is `a0cb5a88011a3ea8a5be2dd5ee5bf0f627e9e540cb414d105d78d9ef4592521c`.
-This is a repaired preservation contract: the old parent already makes factual
-workflow and ownership claims research-governed. Fresh Sol-high and Sol-low controls
-are pending orchestrator execution and must each pass 5/5 before candidate use.
+This is a target RED because universal acquisition, verification, and mapped
+disclosure are new positive promises. Accepted controls are 0/5 at both efforts.
+The unchanged prompt and bundle remain scorable and the accepted 0/5 high and low
+controls remain exact evidence; classification alone triggers no rerun.
 
 ## Replay
 

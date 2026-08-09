@@ -36,19 +36,25 @@ The dispatch control skill SHA-256 is `b89b4db8af53bd136237cb2306f956c039757a0e3
 
 ## Task 18A pre-draft freeze
 
-`DSD-01` and `DSD-02` are repaired preservation contracts; the prior hashes and results
-remain historical.
+`DSD-01` and `DSD-02` are target RED contracts; prior hashes remain historical.
 `DSD-01` uses the complete nine-skill bundle at base
 `bd30bf7c9070f2f56b6d2ae32a746518e2259b6f`, canonical content-manifest SHA-256
-`af36615bae1e4d80d8d0456dd93366ee429d75e0e74ae0ee49a6be44ee0c5548`.
+`d553aaad45329735e1d0f970f8c4a87f0ca4f5f2378941aea649c7f1b25740f2`
+after adding the three immutable `project/dsd-01/` primary sources.
 `DSD-02` uses the base dispatch, parent, research, and hook files plus Superpowers
 6.2.0 `subagent-driven-development`, canonical content-manifest SHA-256
 `91ccc76608c04c3e415927bfc4aee1871ba9a8f8dab5ece6a7d92c32ea3bb84e`.
 
 | ID | Prompt SHA-256 | Rubric SHA-256 | Sol-high control | Sol-low control |
 |---|---|---|---|---|
-| `DSD-01` | `be49d7269965b2b1b2fe3446b6137b82f20ec7f308e3927b79e8e37a177a8f5f` | `0cf272a54a21bb50d77bedef6907e245b8d74a67a11719bac6d358b0889ddf07` | Pending orchestrator backfill | Pending orchestrator backfill |
-| `DSD-02` | `750b43ea0d12d109c70e996578618da5d79717c2716b6878db0e4812a5226c4c` | `7c0fd67c6b5af68960c0276202e5dc350b0b4912aeaacd70ea61ea8871264f69` | Pending orchestrator backfill | Pending orchestrator backfill |
+| `DSD-01` | `b0d2273f25c29266f2e8aa1b75f6cc760aa6dc79d78f84f6fa8c3a7f82824ccb` | `39f2a45f311bd772ca087db6b1143b3572c23262d656b27675299e6b1d14d1b5` | Prior 0/5; rerun pending | Prior 0/5; rerun pending |
+| `DSD-02` | `750b43ea0d12d109c70e996578618da5d79717c2716b6878db0e4812a5226c4c` | `7c0fd67c6b5af68960c0276202e5dc350b0b4912aeaacd70ea61ea8871264f69` | **0/5 target RED accepted; no rerun** | **0/5 robustness accepted; no rerun** |
+
+| DSD-01 primary fixture member | SHA-256 |
+|---|---|
+| `project/dsd-01/AGENTS.md` | `567ded3276c9ecaabbfea7f34229a528652476cf2cfe1f7a81573b4577c866fe` |
+| `project/dsd-01/plans/pagination.md` | `e18ce80cae7233db26ed903116fee411162433d2ef82cfbcfa574835efcf35c4` |
+| `project/dsd-01/reviews/pagination.md` | `884e1ee1a6c7109134144ff3ab1cddf6bd9bd522a249373e4ce7e1571b77a80a` |
 
 ## Historical 2026-08-06 DSD-02 rerun bundle
 
@@ -68,15 +74,17 @@ not the current arm.
 | Staged candidate | `skills/disciplined-development/hooks/review_nudge.py` | `e43784e0e850facdaf0bb2fd9e67ba8ef642f07ce7416f43609cbef6d11a90bb` |
 | Superpowers 6.2.0 | `skills/superpowers/subagent-driven-development/SKILL.md` | `349a08ad8b59b19b86c13a7d2f34a1a38719bf88257004a863eefefa8d9f9e40` |
 
-## Current DSD-02 rerun bundle
+## Historical 2026-08-07 DSD-02 rerun bundle
 
-The refreshed repository members below are the exact staged-plus-unstaged
-candidate bytes on 2026-08-07; the Superpowers member remains the declared
+The refreshed repository members below were the exact staged-plus-unstaged
+candidate bytes on 2026-08-07; the Superpowers member was the declared
 immutable 6.2.0 dependency. Their canonical content-manifest SHA-256 is
 `487178d1656de7513a8139b09ef6b69f42d717eaf2d72c011e1a70d5c74c10f5`.
-The prompt still quotes the current T2 message exactly. On 2026-08-07, five
+The prompt quoted that arm's T2 message exactly. On 2026-08-07, five
 fresh Sol-high evaluator repetitions passed all four rubric criteria after
-orchestrator manual scoring, with zero infrastructure errors.
+orchestrator manual scoring, with zero infrastructure errors. This remains
+accepted historical evidence for the unchanged `DSD-02` Task 18A contract;
+no classification-only rerun is pending.
 
 | Source | Bundle path | SHA-256 |
 |---|---|---|

@@ -4,6 +4,10 @@ The complete composition bundle is available.
 Invoke `dispatching-development-subagents` directly.
 Read `skills/dispatching-development-subagents/SKILL.md` and `skills/disciplined-development/SKILL.md` completely, load every applicable supplied parent companion, and follow all applicable guidance as binding.
 
+The supplied project includes `project/dsd-01/AGENTS.md`,
+`project/dsd-01/plans/pagination.md`, and
+`project/dsd-01/reviews/pagination.md`.
+
 You are the orchestrator preparing one development-subagent dispatch for this reviewer finding:
 
 `[P2] src/pagination.py:74 — calculate_pages drops the final page when total_items is an exact multiple of page_size.`

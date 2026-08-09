@@ -21,7 +21,8 @@ Superseded and mixed-protocol results remain compact historical evidence below; 
 do not count toward the active baseline.
 
 Task 18A has frozen the pre-draft contracts without changing the tracked parent
-skill or running model evaluations.
+skill. The original controls and independent scorer pass are complete; round 4
+repairs their classification and evidence contracts without launching models.
 `DD-01`–`DD-03`, `DSD-01`, `DSD-02`, `OWN`, and `WER-07` all require
 `disciplined-research`: each complete returned artifact states factual routing,
 workflow, source, code, plan, ownership, or decision claims.
@@ -29,24 +30,34 @@ The repaired contracts remove every load-bearing-only assumption, including
 `DD-01` vignette A's former explicit research exclusion, and require unambiguous
 support disclosure without making user-supplied context or output destination an
 exemption.
-Prior results remain historical until the orchestrator completes the required fresh
-Sol-high and Sol-low controls.
+Accepted results remain exact evidence except where the semantic prompt, fixture,
+or rubric changed. Only `DD-01`, `DD-02`, `DD-03`, linked `DSD-01`, and linked
+`WER-07` require fresh Sol-high and Sol-low controls in this parent subset.
 
 ### Task 18A freeze summary
 
 | ID | Classification | Changed contract | Frozen material |
 |---|---|---|---|
 | `DD-01` | Research required | Vignette A now loads research; every row discloses support for its factual routing/ownership claims | [fixture manifest](fixtures/disciplined-development/README.md#task-18a-pre-draft-freeze) |
-| `DD-02` | Research required / repaired preservation | The old parent already applies Principle 6 to factual checkpoint and plan claims; the repaired contract removes prompt priming and requires high/low 5/5 | Same |
-| `DD-03` | Research required / repaired preservation | The old parent already applies Principle 6 to factual contract and threshold claims; the repaired bundle makes the companion available without naming it in the task | Same |
-| `DSD-01` | Research required / repaired preservation | The old dispatch and parent bodies already require verified factual comments/docs and load-bearing dispatch claims | [dispatch record](dispatching-development-subagents.md#task-18a-pre-draft-freeze) |
-| `DSD-02` | Research required / repaired preservation | The old parent already governs factual identity, hook, gate, verification, and ownership claims | Same |
-| `OWN` | Research required / repaired preservation | The old parent already governs factual workflow, rule, counter, and owner claims | [loop definition](adversarial-review-loop-scenarios.md#task-18a-own-freeze) |
-| `WER-07` | Research required / repaired preservation | The old parent already governs factual plan claims while rationale necessity stays independently judged | [rationale record](writing-explicit-rationale.md#task-18a-wer-07-freeze) |
+| `DD-02` | Research required / target RED | Universal acquisition, verification, and mapped disclosure are new conjunctive promises; corrected overall control is 0/5 high and low | Same |
+| `DD-03` | Research required / target RED | Universal acquisition, verification, and mapped disclosure are new conjunctive promises; observed control is 0/5 high and low | Same |
+| `DSD-01` | Research required / target RED | Universal acquisition, verification, and mapped disclosure are new conjunctive promises; observed control is 0/5 high and low | [dispatch record](dispatching-development-subagents.md#task-18a-pre-draft-freeze) |
+| `DSD-02` | Research required / target RED | Universal acquisition, verification, and mapped disclosure are new conjunctive promises; observed control is 0/5 high and low | Same |
+| `OWN` | Research required / target RED | Universal acquisition, verification, and mapped disclosure are new conjunctive promises; observed control is 0/5 high and low | [loop definition](adversarial-review-loop-scenarios.md#task-18a-own-freeze) |
+| `WER-07` | Research required / target RED | Universal disclosure is new; corrected overall control is 0/5 high and low while rationale fidelity remains a separate shadow | [rationale record](writing-explicit-rationale.md#task-18a-wer-07-freeze) |
 
-`DD-01` is the only watched target in this repaired parent subset because vignette
-A adds a route not promised by the old bodies. The other six are repaired
-preservation contracts and require fresh Sol-high and Sol-low controls at 5/5.
+All seven parent/composition scenarios are watched targets. Changed prompt,
+fixture, or rubric contracts (`DD-01`, `DD-02`, `DD-03`, `DSD-01`, `WER-07`)
+require fresh high/low controls. Classification-only targets `DSD-02` and `OWN`
+retain their accepted exact 0/5 high and low evidence; no rerun is invented for a
+role label change.
+
+The round-5 integrated control for `DD-01` and `DD-02` has canonical
+content-manifest SHA-256
+`45fc15dc3be737a3b52e7f1dd22fa6177fb8e00b80930d0e03ef53ecad2da5b9`;
+the parent/research plus DD-03 sources manifest is
+`41b9afaa58860d9d932d938ec8cbbaaa4c86da489de472364531acf2f9da169c`.
+Exact member hashes are in the fixture manifest.
 
 ## Active scenario catalog
 
@@ -66,7 +77,7 @@ incomplete `DD-02` attempts aborted by the orchestrator; all were retried unchan
 |---|---|---|---|---|---|---|
 | `DD-01` | Direct invocation + composition + focused regression / target | All eight modes select the exact current methodologies and companions, preserve one explicit negative boundary per row, distinguish loading from child action, choose model tiers by task complexity, and assign four ownership seams; frontmatter, Role/ownership, gates, Principles 1–8, mode table | Complete integrated bundle | [prompt](fixtures/disciplined-development/prompts/dd-01.md) | [rubric](fixtures/disciplined-development/rubrics/dd-01.md) | Description, parent/child ownership, required-sub-skill loading, gate/principle applicability, model-tier rule, mode row, methodology, companion-selection, or requested ownership-seam changes |
 | `DD-02` | Non-trivial application + direct invocation + composition / target | One fixed development sequence preserves the Iron Law, all Gates 1–5, full-suite routing, artifacts, rereads, ownership, pass conditions, and blocked transitions without restating child procedures; Overview, Iron Law, Gates 1–5, Principles 1–6 and 8, rationalizations | Complete integrated bundle | [prompt](fixtures/disciplined-development/prompts/dd-02.md) | [rubric](fixtures/disciplined-development/rubrics/dd-02.md) | Iron Law, gate order/artifact, active methodology, full-suite routing, reread, TDD, verification, commit, Gate 5 review/smoke, or owner-boundary changes |
-| `DD-03` | Focused regression / preservation | Analysis always generates cases, while implementation follows only for contract requirements, reachable accepted input, observed use, or robust invariants; Principle 7 and its rationalizations | Parent-only bundle | [prompt](fixtures/disciplined-development/prompts/dd-03.md) | [rubric](fixtures/disciplined-development/rubrics/dd-03.md) | Principle 7 threshold, accepted-input contract, malformed-input invariant, speculative-scale, or related rationalization changes |
+| `DD-03` | Focused regression / target RED | Analysis always generates cases, while implementation follows only for contract requirements, reachable accepted input, observed use, or robust invariants; Principle 7 and its rationalizations | Parent-only bundle | [prompt](fixtures/disciplined-development/prompts/dd-03.md) | [rubric](fixtures/disciplined-development/rubrics/dd-03.md) | Principle 7 threshold, accepted-input contract, malformed-input invariant, speculative-scale, or related rationalization changes |
 
 ### Immutable materials
 
@@ -92,9 +103,9 @@ candidate bundle.
 
 | ID | Active prompt SHA-256 | Active rubric SHA-256 | Prior evaluated prompt / rubric SHA-256 |
 |---|---|---|---|
-| `DD-01` | `ba217bdd4254dcccdce7d5efc1914ea90863ef2c8b26995325b98c8ad9fac057` | `cdd12bb4d8cd9d072e0d8fbfbf1461dfd4621503305357cac809d58bab2def8c` | `1b826fae8bf99ddc25ee831ee1b03ecce54c4552f8a302cb2558bee0e7e5c472` / `74e10f7c401903ba325a2b17adcc18805fa590d8d8e3bd07eb6d1a8216fdd94c` |
-| `DD-02` | `ec19ded3c3ad53c1dc304fe4437071654dfcb86e5ba76ab0c6da2bd981e6a669` | `2db5d91720ce463855864d28b03585f60a03340f6921bc5cb3d6ea4eb342397d` | `5da5fe92259e8a7343ebc394eba326e06fa31c65eea3ee829de0157eeac8d528` / `627444473edc00e09f3974c5435911397627697821f24b0fe80d9851ed2f83cc` |
-| `DD-03` | `ba5903ee6a599c035386117556fa9c8b318106789949744ed740520e288775ba` | `26e51c0920c0c68417d51e8e1a1a5f24f36abc041960f761819958379f4b9659` | `852eb66f0c3084e4f9aff349ae3775b5c70ca5c3221d1b6538d62ca603830b80` / `ead264e837afb0fe2aa974d0a9280e3c36e23d5079968f67da21bac6902c1c06` |
+| `DD-01` | `0e2e3babbffd53b7ba5c4d55447322c9697fb99ada29d1c26c28d8cb424cb685` | `cdd12bb4d8cd9d072e0d8fbfbf1461dfd4621503305357cac809d58bab2def8c` | `1b826fae8bf99ddc25ee831ee1b03ecce54c4552f8a302cb2558bee0e7e5c472` / `74e10f7c401903ba325a2b17adcc18805fa590d8d8e3bd07eb6d1a8216fdd94c` |
+| `DD-02` | `5136c1a72743b366c0d9f8da6b41defb3db1034c9e1263c77cd590c84a0794cc` | `1d24397de093e69c5e50eb81879d3dc0261c709c5db6607ddfe158f0ecb324ca` | `5da5fe92259e8a7343ebc394eba326e06fa31c65eea3ee829de0157eeac8d528` / `627444473edc00e09f3974c5435911397627697821f24b0fe80d9851ed2f83cc` |
+| `DD-03` | `835545bde4c74bbfc30b83dfebe5e5ffc6a848fae62e4bfecc1d55770fa963b3` | `225bd920689a72bbd52a4e800e2029097d270d244b591e70404e4db7305699bb` | `852eb66f0c3084e4f9aff349ae3775b5c70ca5c3221d1b6538d62ca603830b80` / `ead264e837afb0fe2aa974d0a9280e3c36e23d5079968f67da21bac6902c1c06` |
 
 ### Inherited coverage
 
@@ -121,7 +132,7 @@ closure by reference, not duplication:
 | Common rationalizations | Necessary only where pressure could bypass a rule. Distribute that pressure across the end-to-end sequence, the threshold case, and the subagent identity case rather than create row-by-row scenarios | `DD-02`, `DD-03`, `DSD-02` |
 | Whole skill | Necessary as the orchestration layer. Three owned IDs plus fourteen linked IDs are the smallest complete baseline; an additional whole-skill scenario would duplicate the same contracts | `DD-01`–`DD-03`, `DISC-01`–`DISC-10`, `DSD-01`, `DSD-02`, `OWN`, `WER-07` |
 
-## Sol-high results
+## Historical pre-Task-18A Sol-high results
 
 | ID / arm | Bundle | Result | Repetitions | Exact misses | Accepted / excluded infrastructure events |
 |---|---|---:|---|---|---:|
@@ -197,7 +208,7 @@ the required control/candidate comparison without changing the candidate 10/10.
 
 ## Task 11 Sol-low control results (2026-08-07)
 
-These are the frozen low-effort control outcomes. The shared freeze, transport,
+**Historical evidence.** These are the frozen low-effort control outcomes. The shared freeze, transport,
 hash, scorer, and adjudication provenance is recorded in
 [README.md](README.md#task-11-sol-low-control-freeze-and-results).
 Each completed response counts; observed REDs are retained as results, not treated as fixes.
