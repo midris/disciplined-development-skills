@@ -61,8 +61,11 @@ Tests passing is necessary but not sufficient — mocks lie about live shapes.
 Paste evidence in chat.
 REQUIRED SUB-SKILL: `superpowers:verification-before-completion`.
 
-**Gate 4 — Sweep stale references before commit.** When a change touches a load-bearing fact (code symbol, doc claim, schema, spec constraint), every place encoding it goes stale.
-Find them all; reconcile in one commit; document the sweep in the commit body's `References swept:` section.
+**Gate 4 — Accept scope, then sweep stale references before commit.**
+First confirm returned work conforms to signed scope.
+Reject and remove unauthorized work, or stop for decision-owner Gate 2 resolution and signed revised scope before remediation, verification, reconciliation, acceptance, or commit involving it.
+For each accepted load-bearing fact (code symbol, doc claim, schema, spec constraint), run an effective reference sweep across every relevant repository surface and reconcile all encodings in one commit.
+In the commit body, record a concise, truthful `References swept:` summary of the surfaces checked and their disposition.
 REQUIRED SUB-SKILL: `sweeping-stale-references`.
 
 **Gate 5 — Whole-repository review and smoke before PR.**

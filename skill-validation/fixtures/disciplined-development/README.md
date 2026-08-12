@@ -3,7 +3,7 @@
 These files are the exact evaluator prompts and evaluator-withheld rubrics for the active parent-owned catalog.
 Evaluators receive only the matching prompt and immutable read-only bundle, never the rubric or this manifest.
 
-## Behavior-first DD-01 contract epoch — approved proposal applied; validation pending
+## Behavior-first DD-01 contract epoch — approved proposal applied; focused 5/5
 
 The behavior-first comparison kept the prompt at SHA-256
 `b41c2835573b645e101280c2928c97f5363f519d73c769568924c3ded8f658ce`
@@ -42,9 +42,22 @@ skill suite and does not establish skill GREEN. The owner approved cycle 3 as th
 complete proposal, and it is now applied byte-for-byte as the tracked parent at
 SHA-256 `652abda14206472f28e5e0a8bb7c8cc2b197df32bad2d5ebaba9d00e014e608b`.
 Its authenticated focused DD-01 5/5 evidence carries forward because the applied
-bytes are identical. The owner authorized a checkpoint commit of this approved
-applied parent baseline while DD-02, DD-03, and union validation remain pending.
-This does not establish parent GREEN or authorize a PR.
+bytes are identical. Checkpoint commit
+`c9f0eba148ff73477c41e4403ea5dcd8baf4f7db` records this approved applied-parent
+baseline. The owning validation record preserves the subsequent DD-02 epochs;
+DD-03, child composition, and union validation have not rerun. This does not
+establish parent GREEN or authorize a PR.
+
+## Active DD-02 contract
+
+The active prompt is SHA-256
+`95deb13830eea682f06086c406dedb1a537b22f1bbf60598c4e1c231256ee706`
+and the behavior-only withheld rubric is SHA-256
+`288dd142bea0be8ddf8cc4322bb0e32b7538385d2b369ad32596becf0cf9b8ea`.
+The evaluator bundle is the tracked parent plus the seven exact `project/dd-02`
+members listed below; `operator-note.md` is excluded. The
+[owning validation record](../../disciplined-development.md#formal-dd-02-behavioral-rubric--minimal-gate-4-proposal-55)
+contains results and adjudication provenance.
 
 ## Historical strict-terminology DD-01 epoch — final fail-fast cap reached
 
@@ -84,7 +97,7 @@ discovery and are not part of the parent behavioral denominator.
 | ID | Prompt SHA-256 | Withheld rubric SHA-256 | Parent-focused evaluator bundle |
 |---|---|---|---|
 | `DD-01` | `b41c2835573b645e101280c2928c97f5363f519d73c769568924c3ded8f658ce` | `3599c856d7e0cf12006b1f548a854f9038badf71c56986046e9eda1baf62e21d` | Historical strict-epoch rubric; tracked parent only; frozen cycle-1-through-cycle-6 artifacts retain earlier rubric `e2076d7c…` |
-| `DD-02` | `95deb13830eea682f06086c406dedb1a537b22f1bbf60598c4e1c231256ee706` | `69f985c4e99967378962d07f0c31f16f96413af1f9a7aae42d68daeb8d718cef` | Tracked parent plus `project/dd-02/CLAUDE.md`, plan, linked spec, `cli-schema.md`, `library-api.md`, `vendor-schema-status.md`, and `git-history.md` |
+| `DD-02` | `95deb13830eea682f06086c406dedb1a537b22f1bbf60598c4e1c231256ee706` | `69f985c4e99967378962d07f0c31f16f96413af1f9a7aae42d68daeb8d718cef` | Historical pre-behavior-first-repair rubric; tracked parent plus `project/dd-02/CLAUDE.md`, plan, linked spec, `cli-schema.md`, `library-api.md`, `vendor-schema-status.md`, and `git-history.md` |
 | `DD-03` | `e329586445f56ca213fc20557109c874b650219daf3860f079ce909b534c7f07` | `8daf6068c6546a1de19a77172513c7c6c74456df09193ed1b0722c46720e7cd4` | Tracked parent plus `accepted-object-contract.md` and `parser-capabilities.md` |
 
 The DD-01 prompt did not change. The strict-epoch rubric repair adds parent-required P7
@@ -114,9 +127,10 @@ carried forward to either repaired strict-epoch rubric.
 
 `project/dd-02/sources/operator-note.md` is explicitly excluded from the active
 `DD-02` bundle. It remains only as a historical fixture file. Rubrics stay frozen
-separately and withheld from evaluators. Fresh v3 control RED is accepted; candidate
-GREEN remains pending. No earlier candidate result is carried forward across these
-semantic prompt, rubric, and bundle changes.
+separately and withheld from evaluators. Fresh v3 control RED is accepted; no
+strict-epoch candidate GREEN was established, and the final cap is exhausted.
+No earlier candidate result is carried forward across these semantic prompt,
+rubric, and bundle changes.
 
 The accepted repaired-rubric control uses original commit `4296647f…`, parent
 SHA-256 `1151a757…`, with active prompt/rubric bytes. `DD-01` is original-parent

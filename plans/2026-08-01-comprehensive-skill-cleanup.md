@@ -1346,7 +1346,8 @@ arm remains failure evidence rather than an accepted validation arm: the control
 now accepted, but they occurred later, so the arm cannot be reused.
 The reviewed v3 `DD-01`/`DD-02`/`DD-03` prompt hashes are `b41c2835…`,
 `95deb138…`, and `e3295864…`; active withheld rubric hashes are `3599c856…`,
-`69f985c4…`, and `8daf6068…`. The prior DD-01 rubric `e2076d7c…` remains exact
+`e644990b…`, and `8daf6068…`. The prior DD-01 rubric `e2076d7c…` and the
+pre-behavior-first-repair DD-02 rubric `69f985c4…` remain exact
 historical provenance for every frozen evaluation through fail-fast cycle 6.
 These three scenarios are the complete parent
 acceptance denominator: 15 Sol-high slots. `DSD-01`, `DSD-02`, `OWN`, and
@@ -1599,9 +1600,18 @@ focused DD-01 target satisfied. The owner approved the complete cycle-3 proposal
 and it is now applied byte-for-byte as the tracked parent at SHA-256
 `652abda14206472f28e5e0a8bb7c8cc2b197df32bad2d5ebaba9d00e014e608b`.
 Its authenticated DD-01 5/5 evidence carries forward because the applied bytes are
-identical. The owner authorized a checkpoint commit of this approved applied parent
-baseline while DD-02, DD-03, and union validation remain pending. This does not
-establish parent GREEN or authorize a PR.
+identical. Checkpoint commit
+`c9f0eba148ff73477c41e4403ea5dcd8baf4f7db` records this approved applied-parent
+baseline without establishing parent GREEN or authorizing a PR.
+
+Formal behavior-only DD-02 rubric `288dd142…` grades actions, timing, ownership,
+blocked transitions, and truthful bookkeeping rather than rendering. The minimal
+Gate 4 candidate `987bdf42…` scored 5/5 and is owner-approved and applied
+byte-for-byte, so the focused Task 18A parent-behavior goal is satisfied. DD-03,
+child composition, and union validation have not rerun; the parent is not GREEN,
+and the broader three-skill Task 18A checkboxes remain open. The
+[owning validation record](../skill-validation/disciplined-development.md#formal-dd-02-behavioral-rubric--minimal-gate-4-proposal-55)
+contains the full results and provenance.
 
 - [ ] With `superpowers:writing-skills`, draft complete proposed versions of `disciplined-research`, `disciplined-development`, and `sweeping-stale-references` plus the complete documentation-only repairs.
   For every section and each whole skill, record whether it is necessary and whether a simpler formulation preserves intent and effectiveness.
@@ -1609,8 +1619,14 @@ establish parent GREEN or authorize a PR.
 - [ ] Apply only the approved complete drafts.
   The approved behavior-first cycle-3 `disciplined-development` draft is now applied
   byte-for-byte at SHA-256 `652abda14206472f28e5e0a8bb7c8cc2b197df32bad2d5ebaba9d00e014e608b`;
-  the owner authorized its checkpoint commit while DD-02, DD-03, and union validation
-  remain pending. This is not parent GREEN and does not authorize a PR. Approved
+  checkpoint commit `c9f0eba148ff73477c41e4403ea5dcd8baf4f7db` records that stable
+  baseline. The subsequent three-cycle `DD-02` loop scored 4/5, 2/5, and 3/5;
+  its cap is exhausted without a winner, and every ignored proposal remains
+  unapplied. A later formal behavioral-rubric cycle produced and validated the
+  owner-approved Gate 4 repair, now applied byte-for-byte at SHA-256
+  `987bdf4222dc94077ef87c76d1282188a628f237ffefa6ff971f77767d1c6ac3`.
+  `DD-03`, child composition, and union validation have not rerun. This is not
+  parent GREEN and does not authorize a PR. Approved
   tracked `disciplined-research` is
   SHA-256 `381a10aaa01b17e02d863287718c2e6cfde5c5ac587f42921146726a49725fc5`;
   its validation gates remain pending. Sweeping and documentation drafts remain

@@ -20,7 +20,7 @@ Classification: **Keep 0, Repair 2, Merge 0, Retire 1, Add 1**.
 Superseded and mixed-protocol results remain compact historical evidence below; they
 do not count toward the active baseline.
 
-## Behavior-first DD-01 contract epoch — approved proposal applied; validation pending
+## Behavior-first DD-01 contract epoch — approved proposal applied; focused 5/5
 
 The repaired behavior-first rubric is a new contract epoch at SHA-256
 `bb994c3b2e4adfc4feead9220ab9df89d53f5a74d1efa0e6bffbf733c7c0c9bb`.
@@ -74,10 +74,112 @@ cycle 3 at SHA-256
 `652abda14206472f28e5e0a8bb7c8cc2b197df32bad2d5ebaba9d00e014e608b`.
 The owner approved the complete proposal, and it is now applied byte-for-byte as the
 tracked parent at that SHA-256. Its authenticated focused DD-01 5/5 evidence carries
-forward because the applied bytes are identical. The owner authorized a checkpoint
-commit of this approved applied parent baseline while DD-02, DD-03, the complete
-parent suite, and union validation remain pending. This does not establish parent
-GREEN or authorize a PR.
+forward because the applied bytes are identical. Checkpoint commit
+`c9f0eba148ff73477c41e4403ea5dcd8baf4f7db` records this approved applied-parent
+baseline. The subsequent behavior-first DD-02 baseline and capped proposal loop
+below produced no 5/5 winner, so DD-03, child composition, and union validation
+remain locked. This does not establish parent GREEN or authorize a PR.
+
+## Behavior-first DD-02 contract epoch — three-cycle cap exhausted, no winner
+
+The `DD-02` prompt remains at SHA-256
+`95deb13830eea682f06086c406dedb1a537b22f1bbf60598c4e1c231256ee706`.
+The repaired withheld rubric is SHA-256
+`e644990bd277931b62b9692d3794d41a11cf1f55513bfad5310e05d0d4a07786`.
+It grades complete, correctly timed, unambiguous behavior before terminology:
+gate, principle, number, and status names are advisory when the required behavior
+is clear, while unclear or incorrect behavior still fails. This repair does not
+reclassify any result produced under historical rubric
+`69f985c4e99967378962d07f0c31f16f96413af1f9a7aae42d68daeb8d718cef`.
+
+Fresh evaluation used applied parent SHA-256
+`652abda14206472f28e5e0a8bb7c8cc2b197df32bad2d5ebaba9d00e014e608b`
+at root `/private/tmp/task-18A-applied-parent-dd02-v2`.
+All five evaluators completed at `a1` with zero retries or infrastructure errors;
+repeated result authentication reproduced verifier SHA-256
+`3e34c4d13347cbe90080278ecee5ea5ecfba5f680317b02a31e43de74b0857c3`.
+The bundle manifest / freeze / execution-plan SHA-256 values are
+`fb434c8bb4ee9c2362776163689f50ad1c140e0a53e934f903f2cf69bb32a42e` /
+`c39a18fbb655bcf616ef99183ae66d9990adeb250ff625690ee6e76c29f2f3d5` /
+`d1ee9303cdf862e8b68835f51bd49207d4ce9a7717d8f4e63005fc45a52d2faf`.
+
+Orchestrator whole-artifact adjudication is P/P/F/P/F = **3/5**.
+R3 fails checkpoint 4 because it does not clearly reject the out-of-scope schema
+rename or reopen Gate 2 before reconciliation and commit preparation.
+R5 fails checkpoint 5 because it places safeguard resolution after the nominal
+review/smoke sequence and does not clearly rerun smoke after remediation.
+The other three ledgers are behaviorally correct and unambiguous.
+Terminology differences were recorded separately as advisory and did not change a
+verdict. The immutable adjudication is
+`.superpowers/sdd/2026-08-01-comprehensive-skill-cleanup/task-18A-applied-parent-dd02-adjudication.md`,
+SHA-256 `ceecd250f5fbd1b4cba9442b86926c5881d15c4e6b03686b680c16f3b68b2f99`.
+
+The verifier records checkpoint commit
+`c9f0eba148ff73477c41e4403ea5dcd8baf4f7db` as `source_commit`.
+That commit authenticates the parent and seven project fixture bytes but predates
+the pre-approved behavior-first rubric repair; the freeze independently
+authenticates the repaired rubric at the exact current hash above.
+Because DD-02 is below 5/5, DD-03, child composition, and union validation remain
+locked. The applied parent is not GREEN.
+
+The final owner-authorized three-cycle effectiveness loop changed one general
+failure family per ignored proposal. Cycle 1 scored P/P/P/F/P = **4/5**, cycle 2
+scored P/F/P/F/F = **2/5**, and cycle 3 scored P/F/P/F/P = **3/5**. Cycle 3's
+verifier is `5e5fa2fc22b37063c08dccdcac23fa7ef2d6eccbc763c7906f3e3631649a1775`;
+its per-repetition artifact hashes are `5914f5ec…`, `8bc3f5f9…`, `1ab0b275…`,
+`1cb2a527…`, and `8b760532…`. R2 omits the complete Gate 4 reconciliation and
+`References swept:` commit-body destination; R4 omits that commit-body record.
+Terminology remained advisory. The immutable cycle-3 adjudication is
+`.superpowers/sdd/2026-08-01-comprehensive-skill-cleanup/task-18A-parent-dd02-effectiveness-cycle-3-adjudication.md`.
+
+The three-cycle cap is exhausted with no winner. Proposals `bcf2eeac…`,
+`ab429fc1…`, and `84afe2eb…` remain ignored and unapplied. The tracked skill stays
+at SHA-256 `652abda14206472f28e5e0a8bb7c8cc2b197df32bad2d5ebaba9d00e014e608b`;
+no skill application or commit is authorized. Checkpoint `c9f0eba…` is already
+pushed. The final verifier's `source_commit` authenticates those tracked parent and
+fixture bytes but predates the pre-approved rubric repair; the cycle-3 freeze
+independently authenticates exact rubric `e644990b…`. DD-03, child composition,
+and union validation remain locked.
+
+## Formal DD-02 behavioral rubric — minimal Gate 4 proposal 5/5
+
+On 2026-08-12 the owner authorized a new contract epoch whose primary acceptance
+criterion is behavioral 5/5. Rubric SHA-256
+`288dd142bea0be8ddf8cc4322bb0e32b7538385d2b369ad32596becf0cf9b8ea`
+grades effective actions, timing, order, owners, blocked transitions, and truthful
+parent bookkeeping. Exact wording, table shape, labels, numbering, gate names,
+and status vocabulary are non-dispositive. Gate 4 requires scope acceptance first,
+then an effective sweep of every relevant repository surface before commit and a
+concise truthful `References swept:` record in the commit body.
+
+Re-adjudication under this formal rubric leaves the applied-parent baseline at
+P/P/F/P/F = **3/5** and the three prior proposals at **4/5**, **2/5**, and
+**3/5**. No prior failure was rendering-only. Fresh tracked-parent controls at
+`/private/tmp/task-18A-dd02-behavioral-rubric-controls-v1` supplied parent SHA-256
+`652abda14206472f28e5e0a8bb7c8cc2b197df32bad2d5ebaba9d00e014e608b`
+plus the seven exact `DD-02` fixture members recorded in the
+[fixture manifest](fixtures/disciplined-development/README.md#historical-strict-terminology-dd-01-epoch--final-fail-fast-cap-reached).
+Sol-high scored P/P/F/F/F = **2/5** and Sol-low scored P/F/P/F/F = **2/5**;
+all ten runs completed at `a1` with zero retries or infrastructure errors. Every
+failure sweeps or reconciles the unauthorized schema rename instead of first
+rejecting/removing it or obtaining a signed revised scope.
+
+The scratch-evaluated candidate changes Gate 4 and no other parent text. It is 2,466
+words, SHA-256
+`987bdf4222dc94077ef87c76d1282188a628f237ffefa6ff971f77767d1c6ac3`,
+and used the same seven exact `DD-02` fixture members.
+Five fresh Sol-high runs completed at `a1` with zero retries or infrastructure
+errors and scored P/P/P/P/P = **5/5**. Their output SHA-256 values begin
+`5c140471…`, `b08ed56f…`, `3566317e…`, `657ef915…`, and `7ba26795…`.
+Each run disposes of unauthorized work or stops for revised signed scope before
+downstream work, then requires the effective sweep and truthful durable record.
+
+The owner approved the complete candidate, and it is now applied byte-for-byte as
+the tracked parent at SHA-256
+`987bdf4222dc94077ef87c76d1282188a628f237ffefa6ff971f77767d1c6ac3`.
+Its authenticated focused DD-02 5/5 evidence carries forward because the applied
+bytes are identical. DD-03, child composition, and union validation have not run
+against this applied parent, so the parent is not GREEN.
 
 ## Historical strict-terminology DD-01 epoch — final fail-fast cap reached
 
@@ -106,7 +208,7 @@ The exact strict-epoch prompt/rubric pairs were:
 | ID | Prompt SHA-256 | Withheld rubric SHA-256 | Status |
 |---|---|---|---|
 | `DD-01` | `b41c2835573b645e101280c2928c97f5363f519d73c769568924c3ded8f658ce` | `3599c856d7e0cf12006b1f548a854f9038badf71c56986046e9eda1baf62e21d` | **Final cycle-9 1/5 FAIL**; nine-cycle progression 0/5 → 1/5 → 3/5 → 5/5 → 3/5 → 1/5 → 0/5 → 1/5 → 1/5; cycles 1–6 retain prior-rubric `e2076d7c…` provenance, cycles 7–9 use strict-epoch rubric `3599c856…`; cycle-4 5/5 unlocked DD-02 but did not establish GREEN |
-| `DD-02` | `95deb13830eea682f06086c406dedb1a537b22f1bbf60598c4e1c231256ee706` | `69f985c4e99967378962d07f0c31f16f96413af1f9a7aae42d68daeb8d718cef` | **0/5 cycle-4 FAIL** after cycle-4 DD-01 passed 5/5; lean-v2 focused 1/5; cycles 5–9 stayed locked, so DD-03 did not run |
+| `DD-02` | `95deb13830eea682f06086c406dedb1a537b22f1bbf60598c4e1c231256ee706` | `69f985c4e99967378962d07f0c31f16f96413af1f9a7aae42d68daeb8d718cef` | Historical pre-behavior-first-repair rubric; **0/5 cycle-4 FAIL** after cycle-4 DD-01 passed 5/5; lean-v2 focused 1/5; cycles 5–9 stayed locked, so DD-03 did not run |
 | `DD-03` | `e329586445f56ca213fc20557109c874b650219daf3860f079ce909b534c7f07` | `8daf6068c6546a1de19a77172513c7c6c74456df09193ed1b0722c46720e7cd4` | **Locked in cycles 4–9**; historical observed candidate and original comparison 5/5 preserve Principle 7 but cannot establish focused-proposal GREEN |
 
 The strict-epoch DD-01 rubric was repaired only after final cycle-6 adjudication. The
@@ -319,7 +421,8 @@ The comparison used the pre-repair `DD-01` and `DD-02` rubric SHA-256 values
 `40b28364f269df61f5738272e8dd71c7852ff48c8aebf9992cd1fadce9c3a18f`
 and `576015f866da6f681ae46424ce5e78e63186f0f6e76330c41d1c554ebbaa09f5`.
 Their provenance and results remain historical and are not carried forward to the
-then-active `e2076d7c…` and unchanged active `69f985c4…` rubrics.
+then-active `e2076d7c…` DD-01 rubric or historical pre-behavior-first-repair
+`69f985c4…` DD-02 rubric.
 
 | Scenario | Original | Current | Orchestrator classification |
 |---|---:|---:|---|
@@ -345,7 +448,8 @@ contract and skill-writing review found no P0–P3 issues. The owner approved th
 complete proposal, and the then-tracked skill matched it byte-for-byte at `34e105cc…`.
 Complete in-place owner approval was recorded. The candidate arm observed 5/15; the
 repaired-rubric controls are accepted, while a later fresh candidate rerun remains
-pending. The applied parent is not GREEN and nothing is staged or committed.
+pending. At that historical checkpoint, the applied parent was not GREEN and
+nothing was staged or committed.
 Two non-dispositive active-rubric repairs follow this frozen comparison: `DD-01`
 must treat Gate 2 as the next blocked boundary rather than due at row A's pre-choice
 exact checkpoint, and `DD-02` must not require parent-owned rationale for every
@@ -589,12 +693,17 @@ Sol-high and 0/5 Sol-low, then the exact cycle-7 proposal at 1/5 Sol-high.
 Three effectiveness cycles then scored 4/5, 4/5, and focused 5/5. Cycle 3 is the
 current DD-01 contract result, and its owner-approved complete proposal is applied
 byte-for-byte. It does not alter the strict-epoch classifications. Post-application
-DD-02, DD-03, and union validation remain pending, so this is not parent GREEN.
+DD-02 baseline is P/P/F/P/F = 3/5; its final three proposal cycles scored 4/5,
+2/5, and 3/5 with no winner. A later formal behavioral-rubric epoch produced
+tracked-parent high/low controls of 2/5 and a minimal Gate 4 candidate at focused
+5/5. The owner approved and applied that candidate byte-for-byte, so the focused
+evidence carries forward. DD-03, child composition, and union validation have not
+run against the applied parent, so this is not parent GREEN.
 
 | ID | Type / status | Protected promise and sections | Supplied skill context | Exact prompt | Withheld rubric | Rerun trigger |
 |---|---|---|---|---|---|---|
-| `DD-01` | Parent orchestration / behavior-first epoch: pre-application tracked parent high/low 0/5; exact cycle 7 1/5; effectiveness cycles 1–3 4/5, 4/5, focused 5/5. Owner-approved cycle-3 proposal is applied byte-for-byte and authorized for a checkpoint commit while DD-02, DD-03, and union validation remain pending; not parent GREEN or authorized for a PR. Historical strict epoch: final cycle-9 P/F/F/F/F = 1/5 and no cycle 10 | Eight modes select due parent gates/principles, parent artifacts/outcomes, blocked transitions, and requested owner seams | Parent only | [prompt](fixtures/disciplined-development/prompts/dd-01.md) | [rubric](fixtures/disciplined-development/rubrics/dd-01.md) | Parent mode, gate/principle timing, artifact/outcome, blocked-transition, requested-owner, or behavior-first-rubric change |
-| `DD-02` | Parent orchestration / cycle-4 0/5 FAIL after cycle-4 DD-01 passed 5/5; lean-v2 1/5; cycles 5–9 locked; no later classification | One fixed sequence preserves Gate 1–5 timing/order, parent artifacts/destinations, fail-closed transitions, and owner boundaries | Parent plus seven named project sources; no `operator-note.md` | [prompt](fixtures/disciplined-development/prompts/dd-02.md) | [rubric](fixtures/disciplined-development/rubrics/dd-02.md) | Parent gate/principle timing/order, artifact/destination, blocked transition, or owner-boundary change |
+| `DD-01` | Parent orchestration / behavior-first epoch: pre-application tracked parent high/low 0/5; exact cycle 7 1/5; effectiveness cycles 1–3 4/5, 4/5, focused 5/5. Owner-approved cycle-3 proposal is applied byte-for-byte and recorded by checkpoint commit `c9f0eba…`; capped DD-02 proposal cycles ended 4/5, 2/5, 3/5 with no winner, so later gates remain locked and the parent is not GREEN or authorized for a PR. Historical strict epoch: final cycle-9 P/F/F/F/F = 1/5 and no cycle 10 | Eight modes select due parent gates/principles, parent artifacts/outcomes, blocked transitions, and requested owner seams | Parent only | [prompt](fixtures/disciplined-development/prompts/dd-01.md) | [rubric](fixtures/disciplined-development/rubrics/dd-01.md) | Parent mode, gate/principle timing, artifact/outcome, blocked-transition, requested-owner, or behavior-first-rubric change |
+| `DD-02` | Parent orchestration / formal behavioral epoch: tracked-parent high and low controls each **2/5**; minimal Gate 4 candidate **5/5**, owner-approved and applied byte-for-byte at `987bdf42…`, so focused evidence carries forward. Prior applied-parent baseline 3/5 and proposals 4/5, 2/5, 3/5 are unchanged by re-adjudication; rendering vocabulary is advisory. DD-03, child composition, and union have not rerun. Historical strict epoch: cycle-4 0/5 after DD-01 passed 5/5; lean-v2 1/5; cycles 5–9 locked | One fixed sequence preserves Gate 1–5 timing/order, parent artifacts/destinations, fail-closed transitions, and owner boundaries | Parent plus seven named project sources; no `operator-note.md` | [prompt](fixtures/disciplined-development/prompts/dd-02.md) | [rubric](fixtures/disciplined-development/rubrics/dd-02.md) | Parent gate/principle timing/order, artifact/destination, blocked transition, owner-boundary, or behavioral-rubric change |
 | `DD-03` | Parent Principle 7 / locked in cycles 4–9; historical 5/5 preservation only | Analysis generates cases while implementation follows only for contract, reachable accepted input, observed use, or robust invariants | Parent plus two named project sources | [prompt](fixtures/disciplined-development/prompts/dd-03.md) | [rubric](fixtures/disciplined-development/rubrics/dd-03.md) | Principle 7 threshold, accepted-input contract, malformed-input invariant, speculative-scale, or smallest-action change |
 
 ### Historical immutable materials
@@ -622,7 +731,7 @@ candidate bundle.
 | ID | Current prompt SHA-256 | Current rubric SHA-256 | Prior evaluated prompt / rubric SHA-256 |
 |---|---|---|---|
 | `DD-01` | `b41c2835573b645e101280c2928c97f5363f519d73c769568924c3ded8f658ce` | `bb994c3b2e4adfc4feead9220ab9df89d53f5a74d1efa0e6bffbf733c7c0c9bb` | strict epoch `b41c2835…` / `3599c856…`; cycle-1-through-cycle-6 `b41c2835…` / `e2076d7c…`; earlier `0e2e3bab…` / `cdd12bb…` |
-| `DD-02` | `95deb13830eea682f06086c406dedb1a537b22f1bbf60598c4e1c231256ee706` | `69f985c4e99967378962d07f0c31f16f96413af1f9a7aae42d68daeb8d718cef` | `5136c1a72743b366c0d9f8da6b41defb3db1034c9e1263c77cd590c84a0794cc` / `1d24397de093e69c5e50eb81879d3dc0261c709c5db6607ddfe158f0ecb324ca` |
+| `DD-02` | `95deb13830eea682f06086c406dedb1a537b22f1bbf60598c4e1c231256ee706` | `288dd142bea0be8ddf8cc4322bb0e32b7538385d2b369ad32596becf0cf9b8ea` | prior behavior-first rubric `95deb138…` / `e644990b…`; pre-behavior-first repair `95deb138…` / `69f985c4…`; earlier `5136c1a7…` / `1d24397d…` |
 | `DD-03` | `e329586445f56ca213fc20557109c874b650219daf3860f079ce909b534c7f07` | `8daf6068c6546a1de19a77172513c7c6c74456df09193ed1b0722c46720e7cd4` | `835545bde4c74bbfc30b83dfebe5e5ffc6a848fae62e4bfecc1d55770fa963b3` / `225bd920689a72bbd52a4e800e2029097d270d244b591e70404e4db7305699bb` |
 
 ### Separately attributed coverage
