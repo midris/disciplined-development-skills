@@ -29,6 +29,18 @@ acquisition, verification, and mapped disclosure are new positive promises.
 Its accepted control is 0/5 at both efforts and remains exact evidence; the
 repaired prompt, rubric, supplied bundle, and hashes are owned by
 [the scenario record](adversarial-review-loop-scenarios.md#task-18a-own-freeze).
+The prior `3e80cd1…` focused parent candidate passed `OWN` 5/5 at `a1` with zero
+accepted retries. The revised approved `a6aa8b6…` candidate also passed `OWN`
+5/5 at `a1` with zero accepted retries, but its complete focused slice remains
+below threshold. Exact restart provenance is in the
+[parent record](disciplined-development.md#approved-focused-green-restart-result).
+
+The approved `320cdba…` candidate scored `OWN` 3/5 (`FPPPF`) at `a1` with
+zero accepted retries or infrastructure errors. R1 omits the mandatory Gate 5
+third-cycle cold-read escape, and R5 omits scoped re-review in the next SDD fix
+round. These are genuine candidate misses; no contract repair is indicated.
+Exact provenance is in the
+[next parent result](disciplined-development.md#next-approved-focused-green-restart-result).
 
 ## Section necessity and simplification
 

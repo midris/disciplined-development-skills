@@ -1246,16 +1246,383 @@ unblocked by control evidence but remains pending the explicit draft/approval ga
   The fixture contains a malformed runtime export and a deterministic 230,400-byte worker log with exactly three dispersed HTTP 403 upload-attempt records and a final collector-truncation record, without a credential-expiry datum.
   Freeze two opaque arms × two efforts × five repetitions as 20 evaluator slots, followed by four contextful high-effort scorer processes; withhold the rubric from evaluators, require the candidate SHA-256 as a frozen parameter, and launch no process during contract preparation.
   The repaired-rubric control is 0/5 high and low. Accepted terminal evidence is combined evaluator SHA-256 `c8d995ee00d4448259c5baf38afde721720b378a7d0f6fc6e35fd0cec0aba37c`, GREEN evaluator phase SHA-256 `4ecb85f53ebfcc63affd77e5d0d46d76dd2eca0ae15294b5a70fa8e2666d99d0`, combined score SHA-256 `8f86bd56c93736198120e9250c5412bc4d9d956944461acfdf4dddb0bdd4a51d`, and GREEN scorer phase SHA-256 `b2ce209a994c9bf2fea7caebaf17804d85923450588218fcbc277904b20648ae`.
+
+**Focused parent-candidate checkpoint (2026-08-09):** The approved ignored parent
+candidate SHA-256 `3e80cd1add0abd5022cb3d2df5e209f03f9a107f4f0d0c2ef1c7d28cf9b172da`
+was tested with approved research candidate `381a10aaa01b17e02d863287718c2e6cfde5c5ac587f42921146726a49725fc5`
+and the unchanged tracked sweeping skill. The accepted v5 evaluator root is
+`/private/tmp/dd-task18a-parent-green-3e80cd1-v5`: freeze `03387d5ca3e30179aa32df42bd72779458d308de590a32e564c40f3cd1dbd7b0`,
+plan `c7ab398ab4f99fdb2b16fa226686683b828d11b71eb35177dcf329f6d33bc36f`,
+and verification `059dd5d6c4e8f90f624841917601ee6b6d6a8e9906fa1706602137fa3dedbf0d`.
+All 35 evaluators completed at `a1` with zero accepted retries. The v5 scorer root
+is `/private/tmp/dd-task18a-parent-green-scoring-3e80cd1-v5`: score freeze
+`75c1bcd1e6cead0ba09589551a9d0dc9de1f707f1d8dbd91bccf85e3923b0961`,
+plan `83232d6d7f0559a94524b76cc7fa085d2ebe3b972d57408784562f5fe1fa35ab`,
+and aggregate `a39194d7a496246081e3b97aed70761468c749a57d8aadb67c0ebbcc370d94e8`.
+All seven scorers completed at `a1` with zero accepted retries.
+
+The orchestrator classified `DD-01` 0/5, `DD-02` 0/5, `DD-03` 3/5,
+`DSD-01` 0/5, `DSD-02` 1/5, `OWN` 5/5, and `WER-07` 5/5: 14 PASS and
+21 FAIL. This focused slice is **not GREEN**. Seventeen failures are genuine
+source-disclosure/application misses; the other four are genuine `DD-02`
+schema/orchestration misses. No prompt, fixture, or rubric repair is indicated.
+The earlier v4 launch remains excluded infrastructure history: the first three
+scenario configurations each recorded three non-evaluable attempts after the
+outer sandbox denied the in-process app-server client, then the run stopped with
+zero completion markers. The accepted v5 run is a full fresh restart, not a retry
+continuation from v4.
+
+This checkpoint does not satisfy the candidate-application or 28-scenario union
+steps below. No parent candidate is applied. The complete sweeping proposal still
+requires approval, and after approval the integrated 140-response union must be
+refrozen and restarted with all three exact approved candidate skills.
+
+**Approved focused GREEN restart result (2026-08-09):** The revised ignored
+parent candidate SHA-256
+`a6aa8b6bf572b859b489eba260ca4592c368ad8ea0d8d536fa0610f2d164a1bb`
+was tested with the approved research candidate
+`381a10aaa01b17e02d863287718c2e6cfde5c5ac587f42921146726a49725fc5`
+and unchanged tracked sweeping skill
+`d6812c33cae026807bbb3ebe851d93b60b513dd87ea5efd98aea28f5c02f9157`.
+The evaluator root `/private/tmp/dd-task18a-parent-green-a6aa8b6-v1` has freeze
+SHA-256
+`6311597844bfaae83c60ba2840e944bf81264693a692447d9718db30a29fb38e`
+and plan / verification SHA-256 values
+`4dad925d034b63fdf42421dc32c16a4c32019f24c9b80bf381c037a39c08003a` /
+`ece73478efe26387da62c62dd340b108ec4a95b189281b61f8c5df20fcd4dbe4`.
+All 35 evaluators selected `a1` with zero retries. The scorer root
+`/private/tmp/dd-task18a-parent-green-scoring-a6aa8b6-v1` has score-freeze /
+plan / aggregate SHA-256 values
+`136e5db31a960d574b96513824ccc1a274422751a761c0720b222dc0220cd447` /
+`e6b40b3c700a2af1a991b96b0609efcdf09953c0dc0698ba2965ac5d2936434f` /
+`377598853c63c15970639f5c2cdf4c17529fcb5103ce82e9283ce000895541f1`.
+All seven scorers selected `a1` with zero retries. The descriptive scorer emitted
+15 PASS / 20 FAIL. Whole-artifact adjudication corrected its five phrase-local
+`DD-03` false failures because every complete table generated all three required
+cases and applied distinct implementation thresholds. Final results are `DD-01`
+0/5, `DD-02` 2/5, `DD-03` 5/5, `DSD-01` 2/5, `DSD-02` 3/5, `OWN` 5/5,
+and `WER-07` 3/5: 20 PASS / 15 FAIL, so the candidate is **not GREEN**.
+All remaining misses are genuine and no contract repair is indicated. The failed
+`3e80cd1…` v5 result above remains immutable history. Candidate application,
+complete sweeping approval, and the freshly refrozen 28-scenario union remain
+open gates.
+
+**Next approved focused GREEN restart result (2026-08-10):** Parent candidate
+SHA-256
+`320cdba2b30779e7066be203a0add40defd1dc94f8068b227e861991e684b2f2`
+was tested with the same approved research candidate and unchanged tracked
+sweeping skill. The evaluator root is
+`/private/tmp/dd-task18a-parent-green-320cdba-v1`; freeze and execution-plan
+SHA-256 values are
+`dc0c390bf87c52dd88c4a725d3ac595f399a83e034492e60e3c57059432c5568` /
+`f59cf66995610d2fd4f38f068cfe5c05c9b4c9bfdda029e717e2db422e7c7da5`;
+evaluator verification is
+`2f13b6eadf1ec0842c78b2d3ae85e251e416e6e1fb37507163275b05cae87838`.
+All 35 evaluators selected `a1` with zero retries/errors. Scorer root
+`/private/tmp/dd-task18a-parent-green-scoring-320cdba-v1` has score-freeze /
+plan / aggregate SHA-256 values
+`115328d4bbb0f8fcc1c42be7f9784f6dfc7972d6380543d8b92062561dd0e0a3` /
+`c40cab48d5dba11b05295c6bcc50cf7095f712020800d7e3fd21e206b2d2191f` /
+`1e24058a3ff5d9de5e3d934d6b5649deb8d64a7ad0f2cb92e536fbd15853acaa`.
+All seven scorers selected `a1` with zero retries/errors. Descriptive scoring and
+orchestrator whole-artifact adjudication agree exactly: `DD-01` 0/5, `DD-02`
+0/5, `DD-03` 4/5, `DSD-01` 0/5, `DSD-02` 3/5, `OWN` 3/5, and `WER-07`
+5/5, totaling 15 PASS / 20 FAIL. The candidate is **not GREEN**; all misses are
+genuine and no contract repair is indicated. The completed `a6aa8b6…` result and
+all earlier evidence above remain immutable history; application and full-union
+gates remain open.
+
+**Approved parent contract architecture applied (2026-08-10):** the pre-comparison
+tracked parent was SHA-256
+`366b3dad7e49d48d2744e63f10286f05385ded1120e164bb2dd1e8dcf925b9a7`.
+After the original/current comparison and owner approval, its reviewed successor was
+applied byte-for-byte at tracked SHA-256
+`34e105ccfd08f4b08e4879e6280ee9c2c9092d7f714d8fd7d47048f4059b1723`.
+The owner approved the complete in-place skill. A fresh candidate arm observed
+`DD-01` 0/5, `DD-02` 0/5, and `DD-03` 5/5, so it is not GREEN and is not
+approved for staging or commit. Because the repaired `DD-01`/`DD-02` rubrics
+required a five-high/five-low control backfill before candidate work, this candidate
+arm remains failure evidence rather than an accepted validation arm: the controls are
+now accepted, but they occurred later, so the arm cannot be reused.
+The reviewed v3 `DD-01`/`DD-02`/`DD-03` prompt hashes are `b41c2835…`,
+`95deb138…`, and `e3295864…`; active withheld rubric hashes are `3599c856…`,
+`69f985c4…`, and `8daf6068…`. The prior DD-01 rubric `e2076d7c…` remains exact
+historical provenance for every frozen evaluation through fail-fast cycle 6.
+These three scenarios are the complete parent
+acceptance denominator: 15 Sol-high slots. `DSD-01`, `DSD-02`, `OWN`, and
+`WER-07` remain 20 separately attributed child-composition slots and are never
+pooled with the parent score. `DISC-01`–`DISC-11` own discovery.
+
+The completed original-versus-current comparison below used the pre-repair
+`DD-01` and `DD-02` rubrics at `40b28364…` and `576015f8…`. Those hashes and
+results remain historical provenance and do not validate the repaired active
+rubric bytes.
+
+Parent scoring covers mode, gate/principle timing and order, parent-owned
+artifacts/outcomes/destinations, fail-closed transitions, and parent/orchestrator
+owners. Child invocation, loading, procedure execution, output quality, and research
+correctness/disclosure are not parent PASS/FAIL criteria. Active evaluator bundles
+are parent-only for `DD-01`, parent plus seven named project sources for `DD-02`, and
+parent plus two named project sources for `DD-03`; `operator-note.md` is excluded.
+All prior seven-scenario/35-slot arms remain immutable history under their former
+contracts. None was inferred from or carried forward from that history.
+
+**Original-versus-current parent comparison (2026-08-10):** the pinned
+`4296647f…` original parent (`1151a757…`) and then-tracked comparison parent (`366b3dad…`)
+each completed 15 fresh Sol-high slots, all on `a1` with zero retries/errors. The
+evaluator verification is `08696989…`; the contextful descriptive-score aggregate
+is `2e278de0…`. Descriptive and whole-artifact results are original `DD-01` 0/5,
+`DD-02` 0/5, `DD-03` 5/5, and current `DD-01` 0/5, `DD-02` 0/5, `DD-03` 5/5.
+`DD-03` is a genuine original-contract preservation success. Original-arm
+`DD-01`/`DD-02` misses mix genuine original-contract effectiveness failures with
+broadened post-original observables; they cannot all be assigned to either class.
+Current-arm misses are genuine against the explicit current request and cluster
+around Principle 2/Principle 6 salience, but the equal arm scores and original-arm
+omissions do not demonstrate that original wording performed better. Two
+non-dispositive active-rubric defects
+were identified for repair: Gate 2 is not due at `DD-01` row A's pre-choice exact
+checkpoint, and declining a review-severity `[P3]` finding does not automatically
+require parent-owned rationale. The ignored post-v8 proposal remains unapplied and
+is superseded for owner review by the complete ignored post-comparison proposal
+`.superpowers/sdd/2026-08-01-comprehensive-skill-cleanup/task-18A-parent-post-comparison-proposed-SKILL.md`,
+SHA-256 `34e105ccfd08f4b08e4879e6280ee9c2c9092d7f714d8fd7d47048f4059b1723`.
+It retains the Gate 5 and signed-scope repairs, replaces the passive mode preamble
+with a positive exact-checkpoint selection recipe, and passed final cold
+contract/skill-writing review with P0/P1/P2/P3 = 0/0/0/0. The owner approved the
+complete proposal, and it matched the then-tracked skill byte-for-byte at `34e105cc…`.
+Complete in-place owner approval was recorded. The fresh active-rubric candidate arm completed
+all 15 evaluators and three contextful scorers at `a1` with zero retries/errors.
+Evaluator freeze / plan / verification are `31160131…` / `37e91598…` /
+`6942dc09…`; score freeze / plan / aggregate are `c7891da4…` / `aa1f7a16…` /
+`3028303a…`. Whole-artifact adjudication agrees with the descriptive totals:
+`DD-01` 0/5, `DD-02` 0/5, and `DD-03` 5/5, or 5/15. `DD-01` repeatedly omits
+explicitly requested due Principles 1/2/6; `DD-02` repeatedly loses parent gate,
+order, or review-pass-boundary observables; `DD-03` genuinely preserves Principle 7.
+The scorer omits wrong-timing Principle 8 defects in `DD-01/r1` and `DD-01/r2`;
+one `DD-02/r5` rationale incorrectly disputes Principle 8 at a defensible
+returned-work chunk boundary. None changes a verdict because those artifacts have
+independent genuine failures. No prompt, fixture, or active-rubric repair is indicated.
+The repaired-rubric five-high/five-low control backfill is complete and accepted;
+no candidate result from the prematurely ordered arm carries forward. The tracked
+skill remains not GREEN, unstaged, and unapproved for commit; any prose repair
+returns to complete proposal and owner-approval gates.
+The accepted control is original commit `4296647f…` / parent `1151a757…`:
+`DD-01` original-parent only at manifest `4ad78825…`, and `DD-02` original parent
+plus seven active project sources at manifest `922ebd5e…`. It completed two scenarios
+× high/low × five repetitions = 20 evaluators, followed by four contextful Sol-high
+scorers / 20 verdicts. All 20 evaluators and four scorers selected `a1` with zero
+retries/errors. Evaluator freeze / plan / verification are `4e8be5b3…` /
+`625ff413…` / `79c266ed…`; score freeze / plan / aggregate are `b8e7c0d3…` /
+`0d25e502…` / `83a34d7a…`. Whole-artifact adjudication confirms `DD-01` and
+`DD-02` at 0/5 high and 0/5 low. Both required high cells are accepted watched
+REDs; low remains robustness only. `DD-03` keeps its unchanged original 5/5
+preservation control.
+A repeated post-scoring verification exposed a wrapper-only static-inventory defect.
+The test-first repair admits and authenticates the immutable aggregate only during
+result verification; the repaired real-root verifier passed twice, 14/14 repaired
+harness tests and 12/12 inherited active tests pass, and the evaluator verification
+and aggregate hashes above did not change. Launch-time scorer wrapper `5e90a2fb…`
+is preserved as provenance; repaired verifier `aafb6220…` and tests `57507b4b…`
+own final lifecycle verification.
+The owner-approved focused ledger-versus-ASCII-flow experiment is also complete.
+It compared two complete ignored proposals on `DD-01` and `DD-02` only, five fresh
+Sol-high repetitions per opaque arm and scenario. All 20 evaluators and four
+contextful scorers selected `a1` with zero retries/errors. Evaluator freeze / plan /
+verification are `159943f3…` / `d13c8bb3…` / `a3c004c1…`; score freeze / plan /
+aggregate are `96a3e20a…` / `5e2fd020…` / `8a4e0922…`. After aggregate
+authentication and manual adjudication of every complete artifact, sealed arm A
+revealed as the ASCII flow proposal `eb4b13ba…` and arm B as the lean ledger
+proposal `5bec5d07…`. Both scored `DD-01` 0/5 and `DD-02` 0/5. The diagram added no
+measured benefit and is abandoned; neither proposal is approved for application.
+The lean proposal remains the smaller basis for a narrow revision that must separate
+due-now, future/conditional, satisfied/retained, and reopened-conflict obligations
+while preserving global Gate 1 / Principles 1, 2, and 6 salience. No prompt repair
+is indicated; some non-dispositive rubric/scorer observations about additive
+conflict-triggered selections are recorded. The tracked skill remains unchanged by
+this experiment, not GREEN, unstaged, and unapproved for commit.
+The pre-repair comparison did **not establish GREEN**. The comparison adjudication is recorded
+in `.superpowers/sdd/2026-08-01-comprehensive-skill-cleanup/task-18A-parent-original-comparison-adjudication.md`.
+The active-run adjudication is recorded in
+`.superpowers/sdd/2026-08-01-comprehensive-skill-cleanup/task-18A-parent-active-adjudication.md`.
+The repaired-rubric control adjudication is recorded in
+`.superpowers/sdd/2026-08-01-comprehensive-skill-cleanup/task-18A-parent-repaired-control-adjudication.md`.
+The focused proposal comparison adjudication is recorded in
+`.superpowers/sdd/2026-08-01-comprehensive-skill-cleanup/task-18A-parent-ledger-flow-comparison-adjudication.md`.
+The owner-approved lean-v2 focused candidate is also complete. Proposal
+`06280f03…` ran ten fresh Sol-high evaluator slots and two contextful scorers, all
+at `a1` with zero retries/errors. Evaluator freeze / plan / verification are
+`2ebbbf37…` / `5311b471…` / `4bac0f73…`; score freeze / plan / aggregate are
+`98b7ddff…` / `f91632a9…` / `267131a0…`. Descriptive scoring and orchestrator
+whole-artifact adjudication agree on `DD-01` F/F/F/F/F = 0/5 and `DD-02`
+F/P/F/F/F = 1/5. The proposal is rejected, unapplied, and not GREEN; `DD-03` was
+not run because the focused pair did not reach 10/10. `DD-01` still loses global
+Principles 1/2/6 and the unresolved-owner boundary. In `DD-02`, the new rule that
+an active ordered item remains selected caused early Gate 2 selection in four runs;
+remove that regression in the next complete proposal. No prompt/rubric repair is
+indicated. Before launch, repeat-verification and frozen-byte authentication harness
+defects were repaired test-first; final wrapper/tests `93811137…` / `b15d9040…`
+passed 46/46 no-model checks and independent tamper review without changing frozen
+inputs. Full classification is in
+`.superpowers/sdd/2026-08-01-comprehensive-skill-cleanup/task-18A-parent-lean-v2-focused-adjudication.md`.
+
+The owner then authorized an initial three-cycle fail-fast effectiveness experiment. Each
+complete ignored proposal ran `DD-01` first with five fresh Sol-high evaluators and
+no scorer; a result below exact 5/5 stopped before `DD-02`. Cycle 1 `f26251a9…`
+scored 0/5, cycle 2 `a03075fe…` scored 1/5, and cycle 3 `75e764bf…` scored 3/5.
+The final proposal preserves Gate 5 P1/P2/P6, per-item Gate 2, unresolved-owner
+blocking, A/H P1, artifacts, transitions, and owners in all five runs. R1 and R4
+still omit P6 in brainstorming row A despite making factual claims, so the proposal
+is rejected, unapplied, and not GREEN. `DD-02` and `DD-03` were not run; the
+initial three-cycle tranche was exhausted. The fail-fast order reduced each failed semantic cycle
+to five evaluator calls. A cycle-1 shared-directory race was repaired test-first and
+resumed without duplicating its two completed evaluator calls. Full provenance and
+classification are in
+`.superpowers/sdd/2026-08-01-comprehensive-skill-cleanup/task-18A-parent-effectiveness-three-cycle-adjudication.md`.
+
+The owner subsequently authorized three final fail-fast cycles. Cycle 4 proposal
+`bcab889d…` passed `DD-01` 5/5, then failed `DD-02` 0/5; `DD-03` stayed locked.
+Cycle 5 `081e1b3a…` failed `DD-01` 3/5. Final cycle 6 `0d710564…` failed
+`DD-01` F/F/F/P/F = 1/5 with verifier `814a95a1…`; `DD-02` and `DD-03` stayed
+locked. Its two targeted repairs nevertheless worked 5/5: row-F P1 was not due
+for the pure standalone review and row-C Gate-5 P6 remained selected despite
+retained support. The remaining misses were premature conditional P5 in row D,
+premature P3 for unresolved design choices in A/D, and row-H P7 marked not due.
+The final proposal in this six-cycle tranche is rejected, unapplied, and not
+GREEN. Its frozen results remain bound to the historical rubric.
+
+Post-adjudication inspection found a genuine active DD-01 rubric omission: row H
+did not require the parent P7 cue stated by the proposal routing/mode rules. Under
+the standing repair authorization, only the active rubric was repaired test-first
+to SHA-256 `3599c856d7e0cf12006b1f548a854f9038badf71c56986046e9eda1baf62e21d`;
+the prompt remains `b41c2835…`. The repair also makes row-D P7, conditional P5
+pre-edit timing, and unresolved-design-versus-P3 conflict timing explicit. It does
+not retroactively reclassify any frozen artifact. Final classification remains
+orchestrator-owned; the proposal remains not GREEN and unapplied. Full cycle-6
+classification is in
+`.superpowers/sdd/2026-08-01-comprehensive-skill-cleanup/task-18A-parent-effectiveness-cycle-6-dd01-adjudication.md`.
+
+After that repair, the owner authorized a final three-cycle matched-control
+experiment under the active prompt/rubric. Cycle 7 proposal `3ed5c984…` scored
+`DD-01` 0/5 with verifier `c1c2081b…`; cycle 8 `d305c73d…` scored 1/5 with
+verifier `f7fc1424…`; and cycle 9 `fec4668f…` scored P/F/F/F/F = 1/5 with
+verifier `ad5a7fad…`, a repaired-rubric progression of 0/5 → 1/5 → 1/5. Cycle 9
+fixed its target: H P7 was present 5/5, while P3
+remained stable and P6 was correct 5/5. Two genuine P1 classes remain: Gate 5 and
+its active P1/P2/P6/P8 are sometimes downgraded to satisfied/retained, and P5 is
+sometimes selected too late for the pre-edit established-behavior check. They are
+not caused by the cycle-9 P7 delta; no prompt/rubric defect was found.
+
+No repaired-rubric candidate reached 5/5, so `DD-02`, `DD-03`, and scorers
+remained locked. Cycle 9 is the strongest proposal, but it
+is rejected, unapplied, and not GREEN; classification remains orchestrator-owned.
+The final cap is exhausted, no cycle 10 is authorized, and no further model run or
+proposal edit is permitted. Full cycle-9 adjudication is in
+`.superpowers/sdd/2026-08-01-comprehensive-skill-cleanup/task-18A-parent-effectiveness-cycle-9-dd01-adjudication.md`.
+
+The owner subsequently authorized a separate DD-01 rubric repair and matched
+comparison, not a cycle 10 prose edit. The new rubric grades correct, unambiguous
+parent behavior and records terminology mismatches separately as advisory evidence;
+unclear behavior fails. Keep the prompt, tracked parent, and cycle-7 proposal exact.
+Run five Sol-high plus five Sol-low tracked-parent controls before five fresh
+Sol-high cycle-7 artifacts, manually adjudicate all 15, and preserve historical
+strict-rubric classifications unchanged. DD-02, DD-03, skill application, staging,
+commit, and PR creation remain outside this authorization. The approved design and
+execution plan are
+`.superpowers/sdd/2026-08-01-comprehensive-skill-cleanup/task-18A-dd01-behavior-first-rubric-design.md`
+and
+`.superpowers/sdd/2026-08-01-comprehensive-skill-cleanup/task-18A-dd01-behavior-first-rubric-plan.md`.
+The behavior-first DD-01 rubric is frozen at SHA-256
+`bb994c3b2e4adfc4feead9220ab9df89d53f5a74d1efa0e6bffbf733c7c0c9bb`; its independent
+contract review passed P0/P1/P2/P3 = 0/0/0/0. The tracked-parent baseline v2 root
+is `/private/tmp/task-18A-dd01-behavior-first-baseline-v2`, with freeze / plan
+SHA-256 values `a888fad7ec1117e8d01128d7731edc1a85806febcfddbb39299cf7889000f340`
+/ `89672ca6036dd0737e7e165cff0373e58398bc62452e49dcecac0ec3a09829dd`.
+Its cold launch review passed
+P0/P1/P2/P3 = 0/0/0/0 after test-first repairs froze the exact wrapper and
+hardened engine and separated pre-launch live checks from durable result
+authentication. Cycle-7 preparation remained blocked until the baseline verifier
+and manual adjudication were immutable.
+The ten-slot baseline then completed at `a1` with zero retries/errors and verifier
+SHA-256 `def4fb3731139df4a02fcc0ebb4c286ef59ca3c664fc1450074c1f1c2c77a9a5`.
+Orchestrator behavior-first adjudication is Sol-high 0/5 and
+Sol-low 0/5; terminology differences were recorded separately and did not cause
+failure. Every run has an independent A/B behavioral miss, chiefly an unresolved
+architecture-selection owner, missing evidence-threshold application, or an
+implementation-planning transition left open before written scope/signoff. The
+immutable adjudication SHA-256 is
+`fd67624ad3575e391f248393997295307cc9042f5adadf3f0f65513d118058d0`;
+exact cycle-7 preparation is now
+complete under the same prompt and rubric at root
+`/private/tmp/task-18A-dd01-behavior-first-cycle-7-v1`, with freeze / plan
+SHA-256 values `d10e460f35fccd032fd44b14ea1b65cf5749004d23b5bfa2a7c6203aee2ee6fc`
+/ `8e7c12bda7667ca3ee758ce59b5d2e152682938b0b5cd51db7bce831ed310f64`.
+Its exact proposal SHA-256 is
+`3ed5c984c583aa0498366c091c42f57af0dda3722cc87a02c6c34d831d87c296`.
+All five cycle-7 Sol-high slots completed at `a1` with zero retries/errors, and
+repeated durable authentication passed with verifier SHA-256
+`7403b8eb16c84852b18b5ee3ed85c75523e6694c612ae75948658542d882e26d`.
+Orchestrator behavior-first adjudication is F/F/P/F/F = 1/5. Repetitions 1, 2,
+4, and 5 fail because section E does not clearly block implementation planning
+through contract reread and written scope; repetition 3 passes despite terminology
+differences. The immutable cycle-7 adjudication SHA-256 is
+`fa62a9d119ea5d502fdfa3bfeea42a584b90320a26fe5b99ec0a88dc1fb3f044`.
+This comparison covers DD-01 only. It does not validate DD-02, DD-03, or the
+complete skill suite and does not establish skill GREEN. The exact cycle-7
+proposal is rejected and unapplied; the tracked parent remains unchanged. No
+skill application, staging, commit, or PR is authorized. Historical
+strict-terminology classifications remain unchanged and separately preserved.
+
+The owner then authorized a new behavior-first effectiveness loop of at most three
+cycles, starting from exact cycle 7 and stopping early at 5/5. This authorization
+does not reopen the exhausted historical strict-rubric loop or create a historical
+cycle 10. Each new cycle changes one genuine behavioral failure class, uses five
+fresh Sol-high DD-01 contexts under unchanged prompt `b41c2835…` and rubric
+`bb994c3b…`, and leaves terminology-only differences for later owner review. The
+design and execution plan are
+`.superpowers/sdd/2026-08-01-comprehensive-skill-cleanup/task-18A-dd01-behavior-first-effectiveness-cycles-1-3-design.md`
+and
+`.superpowers/sdd/2026-08-01-comprehensive-skill-cleanup/task-18A-dd01-behavior-first-effectiveness-cycles-1-3-plan.md`.
+Tracked skill prose, DD-02, DD-03, application, staging, commit, and PR remain
+outside this loop.
+
+The three-cycle behavior-first effectiveness loop is complete. Starting from the
+cycle-7 1/5 RED, cycle 1 repaired the debugging planning/editing boundary and
+scored P/P/P/P/F = 4/5; cycle 2 required evidence-grounded architecture options
+and scored P/P/F/P/P = 4/5; cycle 3 required the decision owner to select before
+Gate 2 scope and scored P/P/P/P/P = 5/5. Cycle-3 proposal SHA-256 is
+`652abda14206472f28e5e0a8bb7c8cc2b197df32bad2d5ebaba9d00e014e608b`;
+verifier / adjudication are
+`64f9acdd44f06f48b597ce6f10a52750eab5c1557fbb1d44c79603ef9cc3bed2`
+/ `11bcd0cfbbf63eda227ec098268b999dc33fcb5bc6e77170e7e5c3d649cd98ce`.
+Terminology remained advisory. The loop stopped at the authorized cap with its
+focused DD-01 target satisfied. The owner approved the complete cycle-3 proposal,
+and it is now applied byte-for-byte as the tracked parent at SHA-256
+`652abda14206472f28e5e0a8bb7c8cc2b197df32bad2d5ebaba9d00e014e608b`.
+Its authenticated DD-01 5/5 evidence carries forward because the applied bytes are
+identical. The owner authorized a checkpoint commit of this approved applied parent
+baseline while DD-02, DD-03, and union validation remain pending. This does not
+establish parent GREEN or authorize a PR.
+
 - [ ] With `superpowers:writing-skills`, draft complete proposed versions of `disciplined-research`, `disciplined-development`, and `sweeping-stale-references` plus the complete documentation-only repairs.
   For every section and each whole skill, record whether it is necessary and whether a simpler formulation preserves intent and effectiveness.
   Show every complete proposed skill, including the complete sweeping skill, and wait for approval before applying any skill prose.
 - [ ] Apply only the approved complete drafts.
+  The approved behavior-first cycle-3 `disciplined-development` draft is now applied
+  byte-for-byte at SHA-256 `652abda14206472f28e5e0a8bb7c8cc2b197df32bad2d5ebaba9d00e014e608b`;
+  the owner authorized its checkpoint commit while DD-02, DD-03, and union validation
+  remain pending. This is not parent GREEN and does not authorize a PR. Approved
+  tracked `disciplined-research` is
+  SHA-256 `381a10aaa01b17e02d863287718c2e6cfde5c5ac587f42921146726a49725fc5`;
+  its validation gates remain pending. Sweeping and documentation drafts remain
+  governed by their separate approval/application gates.
   In `disciplined-research`, retain acquire/verify, source ranking, recency/applicability, conflict handling, and pressure resistance where they serve the universal rule; remove the load-bearing, destination, and scratch exceptions rather than renaming them.
   In `disciplined-development`, align Principle 6 and its routing language without copying the child procedure.
   In `sweeping-stale-references`, remove the load-bearing narrowing from the research ownership boundary without changing the sweeping trigger or procedure.
   Make `README.md` and `ARCHITECTURE.md` describe the executable behavior accurately.
 - [ ] Run the union of all three changed skills' complete active suites five times on cold Sol high: `DISC-01`–`DISC-11`, `DR-01`–`DR-06`, `DD-01`–`DD-03`, `DSD-01`, `DSD-02`, `OWN`, `WER-07`, and `SSR-01`–`SSR-03`, `SSR-05`.
   This is 140 responses across 28 unique scenarios.
+  Combined execution does not combine acceptance: score the 15 parent slots and
+  20 child-composition slots in their separately attributed denominators.
   Score complete artifacts in supplied context; any scenario below 5/5 pauses the slice for failure classification.
 - [ ] Run cold editorial and skill-writing review of all three skills.
   Show any proposed prose fix and wait for approval; after an approved fix, restart every affected scenario and both in-place approval gates.

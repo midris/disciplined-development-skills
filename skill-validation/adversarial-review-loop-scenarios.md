@@ -31,6 +31,15 @@ Shared `CW-09` and `CW-11` retain `concise-writing` ownership and affect `advers
 
 Exact bundle and file hashes are in [the fixture manifest](fixtures/adversarial-review-loop/README.md).
 
+## Current parent-architecture attribution (2026-08-10)
+
+`OWN` remains owned here as five separately attributed child-composition slots.
+It tests review-loop procedure and ownership composition and is never pooled into
+the 15-slot `DD-01`–`DD-03` parent acceptance denominator. Child invocation,
+loading, output quality, and research correctness/disclosure are not parent
+PASS/FAIL criteria. Fresh post-parent-architecture validation is pending; the
+evidence below remains historical under its recorded contract.
+
 ## Task 18A OWN freeze
 
 `OWN` is reclassified as `disciplined-research` **required** because its complete
@@ -52,6 +61,20 @@ and accepted plan SHA-256
 `60b753fe17539876893f367763d59bbd53b7f584a9001217ffe07bbd607c2ce3`.
 All selected attempts were a1 with zero retries/errors under Codex CLI 0.147.0,
 read-only/no-agents transport.
+The prior `3e80cd1…` focused parent candidate passed `OWN` 5/5 (`PPPPP`) at `a1`
+with zero accepted retries; full provenance is in the
+[parent record](disciplined-development.md#task-18a-focused-parent-candidate-checkpoint).
+The revised approved `a6aa8b6…` candidate also passed `OWN` 5/5 (`PPPPP`) at
+`a1` with zero accepted retries; its complete focused slice remains below
+threshold. Exact restart provenance is in the
+[restart result](disciplined-development.md#approved-focused-green-restart-result).
+
+The approved `320cdba…` candidate scored `OWN` 3/5 (`FPPPF`) at `a1` with
+zero accepted retries or infrastructure errors. R1 omits the Gate 5 third-cycle
+cold-read escape; R5 omits scoped re-review in the next SDD fix round. These are
+genuine misses under the frozen contract, not a contract defect. Exact provenance
+is in the
+[next restart result](disciplined-development.md#next-approved-focused-green-restart-result).
 
 ## Historical suite disposition
 

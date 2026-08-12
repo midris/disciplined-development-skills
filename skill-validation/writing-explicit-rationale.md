@@ -242,6 +242,16 @@ A senior reviewer says: "The parent doctrine requires rationale for every choice
 Return only a table with `Location` and `Plan text` columns. You may add a `Source disclosure` column when applicable guidance requires it. Do not narrate your process.
 ```
 
+### Current parent-architecture attribution (2026-08-10)
+
+`WER-07` remains owned here as five separately attributed child-composition slots.
+It tests rationale-method composition and is never pooled into the 15-slot
+`DD-01`–`DD-03` parent acceptance denominator. Child invocation, loading, rationale
+output quality, and research correctness/disclosure remain attributable to their
+owning contracts and are not parent PASS/FAIL criteria. Fresh
+post-parent-architecture validation is pending; the evidence below remains
+historical under its recorded contract.
+
 ### Task 18A WER-07 freeze
 
 `WER-07` is reclassified as `disciplined-research` **required** because every plan
@@ -276,6 +286,22 @@ All selected attempts were a1 with zero retries/errors under Codex CLI 0.147.0,
 read-only/no-agents transport.
 The context-stripped `289ef0fd…` aggregate is transport-defective historical
 evidence only.
+
+The prior `3e80cd1…` focused parent candidate passed `WER-07` 5/5 (`PPPPP`) at `a1`
+with zero accepted retries. Full provenance is in the
+[parent record](disciplined-development.md#task-18a-focused-parent-candidate-checkpoint);
+the complete focused slice remains below threshold.
+
+The revised approved `a6aa8b6…` candidate scored `WER-07` 3/5 (`FFPPP`) at
+`a1` with zero accepted retries. R1 and R2 add quota-validity or enforcement
+claims unsupported by the supplied quota source. These are genuine candidate
+misses, not a contract defect. Exact restart provenance is in the
+[restart result](disciplined-development.md#approved-focused-green-restart-result).
+
+The approved `320cdba…` candidate passed `WER-07` 5/5 (`PPPPP`) at `a1`
+with zero accepted retries or infrastructure errors. Exact provenance is in the
+[next restart result](disciplined-development.md#next-approved-focused-green-restart-result);
+the complete focused slice remains below threshold.
 
 | WER-07 primary fixture member | SHA-256 |
 |---|---|

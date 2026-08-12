@@ -33,6 +33,17 @@ The owner of all four IDs is `dispatching-development-subagents`.
 
 Exact bundle and file hashes are in [the fixture manifest](fixtures/dispatching-development-subagents/README.md).
 
+### Current parent-architecture attribution (2026-08-10)
+
+`DSD-01` and `DSD-02` remain owned here as 10 separately attributed
+child-composition slots. They test the dispatch skill's triggers/procedure and its
+composition with the parent; they are never pooled into the 15-slot
+`DD-01`–`DD-03` parent acceptance denominator. Child invocation, loading, dispatch
+output quality, and research correctness/disclosure may be attributed to their
+owning composition contract, but none is a parent PASS/FAIL criterion. Fresh
+post-parent-architecture validation is pending. All results below remain historical
+evidence under their recorded contracts.
+
 ### Task 18A pre-draft freeze
 
 `DSD-01` and `DSD-02` are individually reclassified as
@@ -65,6 +76,28 @@ The contextful scorer root
 and plan `cfb8e3f7949afc2b35407abd203fdd02767fdc1f698081f2fa952156f2f801bb`.
 All selected attempts were a1 with zero retries/errors under Codex CLI 0.147.0,
 read-only/no-agents transport.
+
+The prior `3e80cd1…` focused parent candidate scored `DSD-01` 0/5 (`FFFFF`) and `DSD-02`
+1/5 (`FPFFF`) with zero accepted retries. The failures are genuine missing
+source-to-claim mappings under the frozen contracts, not contract defects; full
+provenance is in the
+[parent record](disciplined-development.md#task-18a-focused-parent-candidate-checkpoint).
+
+The revised approved `a6aa8b6…` candidate scored `DSD-01` 2/5 (`FFPFP`) and
+`DSD-02` 3/5 (`PPPFF`), again with zero accepted retries. `DSD-01` R1, R2, and
+R4 miss source mapping or required prose constraints; `DSD-02` R4 and R5 omit
+required source disclosure. These are genuine candidate misses under the frozen
+contracts; no contract repair is indicated. Exact provenance and whole-slice
+classification are in the
+[restart result](disciplined-development.md#approved-focused-green-restart-result).
+
+The approved `320cdba…` candidate scored `DSD-01` 0/5 (`FFFFF`) and
+`DSD-02` 3/5 (`PFPPF`) at `a1` with zero accepted retries or infrastructure
+errors. Every `DSD-01` artifact dispatches factual finding, scope, constraint,
+and ownership claims without source mapping. `DSD-02` R2 and R5 omit disclosed
+support in both the boundary and expected response. These are genuine candidate
+misses; no contract repair is indicated. Exact provenance is in the
+[next restart result](disciplined-development.md#next-approved-focused-green-restart-result).
 
 ### Historical pre-Task-18A result lifecycle
 

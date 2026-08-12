@@ -3,7 +3,171 @@
 These files are the exact evaluator prompts and evaluator-withheld rubrics for the active parent-owned catalog.
 Evaluators receive only the matching prompt and immutable read-only bundle, never the rubric or this manifest.
 
-## Control bundles
+## Behavior-first DD-01 contract epoch — approved proposal applied; validation pending
+
+The behavior-first comparison kept the prompt at SHA-256
+`b41c2835573b645e101280c2928c97f5363f519d73c769568924c3ded8f658ce`
+and used rubric SHA-256
+`bb994c3b2e4adfc4feead9220ab9df89d53f5a74d1efa0e6bffbf733c7c0c9bb`.
+The rubric grades clear behavior; terminology differences are advisory, while
+ambiguous behavior still fails. It does not reclassify the strict-terminology
+evidence preserved below.
+
+| Arm | Exact skill SHA-256 | Sol-high result | Sol-low result | Verifier SHA-256 | Adjudication SHA-256 |
+|---|---|---:|---:|---|---|
+| Pre-application tracked parent | `34e105ccfd08f4b08e4879e6280ee9c2c9092d7f714d8fd7d47048f4059b1723` | F/F/F/F/F = 0/5 | F/F/F/F/F = 0/5 | `def4fb3731139df4a02fcc0ebb4c286ef59ca3c664fc1450074c1f1c2c77a9a5` | `fd67624ad3575e391f248393997295307cc9042f5adadf3f0f65513d118058d0` |
+| Exact cycle-7 proposal | `3ed5c984c583aa0498366c091c42f57af0dda3722cc87a02c6c34d831d87c296` | F/F/P/F/F = 1/5 | Not run | `7403b8eb16c84852b18b5ee3ed85c75523e6694c612ae75948658542d882e26d` | `fa62a9d119ea5d502fdfa3bfeea42a584b90320a26fe5b99ec0a88dc1fb3f044` |
+| Effectiveness cycle 1 | `907d0fdac467a647d8d3510e1706157431a06ccd0a71758993bce7fe2f178e51` | P/P/P/P/F = 4/5 | Not run | `f3c2467dd68ce8c1e1595038f110f58d37a06f21a14ac2cf40ac15a966746eae` | `59042db9ab18489834f391df0416feb43ffb3e9726aedafc144e81bdab4c298b` |
+| Effectiveness cycle 2 | `ace5586bd09b7395135ffd10e9c23119ab9819911623a7babe6936044c64672c` | P/P/F/P/P = 4/5 | Not run | `acbff2d1cb32c26aa328b4549cf8134e6b7c366a650b22d94ba9fd5af0ebdc2f` | `9b8326da7a575421696eb6073a8ea24d8c30aa208e572ae734213705a32164d3` |
+| Effectiveness cycle 3 | `652abda14206472f28e5e0a8bb7c8cc2b197df32bad2d5ebaba9d00e014e608b` | P/P/P/P/P = 5/5 | Not run | `64f9acdd44f06f48b597ce6f10a52750eab5c1557fbb1d44c79603ef9cc3bed2` | `11bcd0cfbbf63eda227ec098268b999dc33fcb5bc6e77170e7e5c3d649cd98ce` |
+
+The baseline and cycle-7 15 evaluator slots selected `a1`, with zero retries or
+infrastructure errors. The effectiveness loop's 15 additional slots also selected
+`a1`, with zero retries or infrastructure errors. The baseline freeze / plan hashes are `a888fad7ec1117e8d01128d7731edc1a85806febcfddbb39299cf7889000f340`
+/ `89672ca6036dd0737e7e165cff0373e58398bc62452e49dcecac0ec3a09829dd`;
+the cycle-7 freeze / plan hashes are
+`d10e460f35fccd032fd44b14ea1b65cf5749004d23b5bfa2a7c6203aee2ee6fc`
+/ `8e7c12bda7667ca3ee758ce59b5d2e152682938b0b5cd51db7bce831ed310f64`.
+Cycle-7 repetitions 1, 2, 4, and 5 fail because section E does not clearly
+block implementation planning through contract reread and written scope;
+repetition 3 passes despite terminology differences.
+
+The effectiveness loop repaired one observed behavior class per proposal: cycle 1
+made the debugging planning/editing boundary explicit, cycle 2 required
+evidence-grounded options, and cycle 3 required decision-owner selection before
+scope. It stopped at the authorized three-cycle cap with focused DD-01 5/5.
+
+This epoch covers DD-01 only. It does not validate DD-02, DD-03, or the complete
+skill suite and does not establish skill GREEN. The owner approved cycle 3 as the
+complete proposal, and it is now applied byte-for-byte as the tracked parent at
+SHA-256 `652abda14206472f28e5e0a8bb7c8cc2b197df32bad2d5ebaba9d00e014e608b`.
+Its authenticated focused DD-01 5/5 evidence carries forward because the applied
+bytes are identical. The owner authorized a checkpoint commit of this approved
+applied parent baseline while DD-02, DD-03, and union validation remain pending.
+This does not establish parent GREEN or authorize a PR.
+
+## Historical strict-terminology DD-01 epoch — final fail-fast cap reached
+
+The prior tracked parent was SHA-256
+`34e105ccfd08f4b08e4879e6280ee9c2c9092d7f714d8fd7d47048f4059b1723`.
+It was applied and had complete in-place owner approval. A fresh candidate arm observed
+`DD-01` 0/5, `DD-02` 0/5, and `DD-03` 5/5. The repaired-rubric high/low
+controls are accepted, but a candidate must rerun fresh after any approved repair;
+the parent is not GREEN. A later focused comparison gave both the complete ignored
+lean-ledger and ASCII-flow proposals `DD-01` 0/5 and `DD-02` 0/5. Neither is
+accepted or applied; the flow variant is abandoned and the lean variant requires
+narrow revision before another candidate run.
+A narrower complete lean-v2 proposal `06280f03…` then scored `DD-01` 0/5 and
+`DD-02` 1/5 under the then-active strict-epoch rubrics. It is also rejected and unapplied;
+`DD-03` was not run because the focused pair did not reach 10/10.
+Nine fail-fast complete proposals ran across two rubric epochs. Cycles 1–6,
+frozen under historical rubric `e2076d7c…`, progressed 0/5 → 1/5 → 3/5 → 5/5
+→ 3/5 → 1/5. Cycle 4 `bcab889d…` alone unlocked `DD-02`, which scored 0/5,
+so `DD-03` stayed locked. After the strict-epoch rubric repair, cycles 7–9 scored
+`DD-01` 0/5 → 1/5 → 1/5. Final cycle 9 `fec4668f…` is P/F/F/F/F = 1/5
+under orchestrator-owned classification. Its P7 target passed 5/5, but Gate-5
+active-status and P5-timing misses remain. The proposal is rejected, unapplied,
+and not GREEN; the final cap is exhausted and there is no cycle 10 or further
+model run.
+The prior `366b3dad…` parent remains only historical comparison evidence.
+The parent acceptance denominator is `DD-01`–`DD-03`: three scenarios, five
+Sol-high repetitions each, or 15 slots. Parent scoring covers mode,
+gate/principle timing and order, parent-owned artifacts, outcomes, and destinations,
+fail-closed transitions, and parent/orchestrator owners.
+
+Child invocation, loading, procedure execution, and output quality are not parent
+score criteria. Research source selection, factual correctness, grounding,
+disclosure, and support mapping are also outside the parent score and belong to
+separately attributed child-composition coverage. `DISC-01`–`DISC-11` own skill
+discovery and are not part of the parent behavioral denominator.
+
+| ID | Prompt SHA-256 | Withheld rubric SHA-256 | Parent-focused evaluator bundle |
+|---|---|---|---|
+| `DD-01` | `b41c2835573b645e101280c2928c97f5363f519d73c769568924c3ded8f658ce` | `3599c856d7e0cf12006b1f548a854f9038badf71c56986046e9eda1baf62e21d` | Historical strict-epoch rubric; tracked parent only; frozen cycle-1-through-cycle-6 artifacts retain earlier rubric `e2076d7c…` |
+| `DD-02` | `95deb13830eea682f06086c406dedb1a537b22f1bbf60598c4e1c231256ee706` | `69f985c4e99967378962d07f0c31f16f96413af1f9a7aae42d68daeb8d718cef` | Tracked parent plus `project/dd-02/CLAUDE.md`, plan, linked spec, `cli-schema.md`, `library-api.md`, `vendor-schema-status.md`, and `git-history.md` |
+| `DD-03` | `e329586445f56ca213fc20557109c874b650219daf3860f079ce909b534c7f07` | `8daf6068c6546a1de19a77172513c7c6c74456df09193ed1b0722c46720e7cd4` | Tracked parent plus `accepted-object-contract.md` and `parser-capabilities.md` |
+
+The DD-01 prompt did not change. The strict-epoch rubric repair adds parent-required P7
+to rows D/H, states conditional P5's row-D pre-edit timing, and distinguishes an
+unresolved design choice from an unclear/conflicting-governance P3 trigger. It was
+made only after final cycle-6 classification and cannot carry or alter any prior
+result.
+
+The completed original-versus-current comparison used the pre-repair `DD-01` and
+`DD-02` rubric SHA-256 values
+`40b28364f269df61f5738272e8dd71c7852ff48c8aebf9992cd1fadce9c3a18f`
+and `576015f866da6f681ae46424ce5e78e63186f0f6e76330c41d1c554ebbaa09f5`.
+Those hashes and results remain historical provenance; no comparison result is
+carried forward to either repaired strict-epoch rubric.
+
+| Strict-epoch project member | SHA-256 |
+|---|---|
+| `project/dd-02/CLAUDE.md` | `cc1f87826147c2799de88f208edbb798b24d6beb955bbadd5295e04fa1514d69` |
+| `project/dd-02/plans/export.md` | `fd6dec456856f4aeb78cd4926a40ddf26c2f86da836e9559e91bff8f4b5d7daa` |
+| `project/dd-02/plans/specs/export.md` | `77a8ad0cfa3ea65b02047968f412712d2b7723e4b943277ffdecfa3fd7ba735e` |
+| `project/dd-02/sources/cli-schema.md` | `d31a0cf950c631454c0c3bb4e3a732e7e360776f7157cd81aa0921f8be3f42fd` |
+| `project/dd-02/sources/library-api.md` | `253fb27d2587dd1ae1da9c6ff96c27a3c6c5c622301c661dc2e2a82a4452e1a4` |
+| `project/dd-02/sources/vendor-schema-status.md` | `e696074e7b3c344a9e61601013af88036620ad981744cebc8acecca3964dffe5` |
+| `project/dd-02/sources/git-history.md` | `a870dab35c878752f1b8c38538c08769df1ec21a2575fea0e723e484b7fd42bf` |
+| `project/dd-03/sources/accepted-object-contract.md` | `a7dd65af335e4d25626a543e42d61e78761155906b3cc42ef2c362cf81d8bdb5` |
+| `project/dd-03/sources/parser-capabilities.md` | `717b21cb61d87637ca241791407d9c57594e29c122cd0ef6c35e3476b5c1bee1` |
+
+`project/dd-02/sources/operator-note.md` is explicitly excluded from the active
+`DD-02` bundle. It remains only as a historical fixture file. Rubrics stay frozen
+separately and withheld from evaluators. Fresh v3 control RED is accepted; candidate
+GREEN remains pending. No earlier candidate result is carried forward across these
+semantic prompt, rubric, and bundle changes.
+
+The accepted repaired-rubric control uses original commit `4296647f…`, parent
+SHA-256 `1151a757…`, with active prompt/rubric bytes. `DD-01` is original-parent
+only, canonical manifest `4ad78825129978fe479961d5d2499fa47f677d8af62b21f6b8b98b6983d9a63b`.
+`DD-02` is original parent plus the exact seven project members above, canonical
+manifest `922ebd5e37c06f1af92dc251e87ebc8d631d7b1afd311407345432e07dfd1700`.
+It completed five Sol-high and five Sol-low repetitions per scenario: 20 evaluators,
+then four contextful Sol-high scorer processes producing 20 verdicts. Every process
+selected `a1`, with zero retries/errors. Both `DD-01` and `DD-02` scored 0/5 high
+and 0/5 low under descriptive scoring and orchestrator whole-artifact adjudication.
+The high cells are accepted watched REDs; low is robustness only. Evaluator freeze /
+plan / verification are `4e8be5b3…` / `625ff413…` / `79c266ed…`; score freeze /
+plan / aggregate are `b8e7c0d3…` / `0d25e502…` / `83a34d7a…`. A test-first
+post-scoring verifier repair (`aafb6220…`; tests `57507b4b…`) made repeated aggregate
+authentication pass without changing any run artifact or aggregate. `DD-03` retains
+its unchanged original 5/5 preservation control. No candidate result predating this
+control acceptance carries forward.
+
+The focused comparison used evaluator root
+`/private/tmp/dd-task18a-parent-ledger-flow-opaque-v1` with freeze / plan /
+verification `159943f3…` / `d13c8bb3…` / `a3c004c1…`, and scorer root
+`/private/tmp/dd-task18a-parent-ledger-flow-opaque-scoring-v1` with freeze / plan /
+aggregate `96a3e20a…` / `5e2fd020…` / `8a4e0922…`. All 20 evaluators and four
+contextful scorers completed at `a1` with zero retries/errors. The mapping stayed
+sealed through aggregate authentication and manual review of every artifact; it
+then revealed ASCII flow `eb4b13ba…` as arm A and lean ledger `5bec5d07…` as arm B.
+Both arms were 0/5 on each scenario by descriptive scoring and orchestrator
+whole-artifact adjudication. No result carries forward as candidate GREEN.
+
+The lean-v2 focused evaluator root
+`/private/tmp/task-18A-parent-lean-v2-focused-evaluator-06280f03-v1` has freeze /
+plan / verification `2ebbbf37…` / `5311b471…` / `4bac0f73…`; its scorer root
+`/private/tmp/task-18A-parent-lean-v2-focused-scorer-06280f03-v1` has freeze /
+plan / aggregate `98b7ddff…` / `f91632a9…` / `267131a0…`. All ten evaluators
+and both scorers completed at `a1` with zero retries/errors. Whole-artifact results
+are `DD-01` F/F/F/F/F and `DD-02` F/P/F/F/F. Later fail-fast cycles repaired
+its Gate-2 timing and most global-principle misses. The historical six-cycle
+sequence ended at F/F/F/P/F = 1/5; both cycle-6 targeted fixes passed 5/5, with
+remaining D P5, A/D P3, and H P7 misses. The prompt and bundle remain unchanged.
+After adjudication, the then-active strict rubric alone was repaired test-first to `3599c856…`;
+historical frozen results remain bound to `e2076d7c…` and are not reclassified.
+Under that strict-epoch rubric, cycles 7–9 scored 0/5, 1/5, and 1/5. Cycle 9 made H P7
+5/5 but retained two P1 classes: Gate-5 active-status downgrades and late P5
+selection. No prompt/rubric defect was found. No cycle 10 or further proposal/model
+cycle is authorized.
+
+`DSD-01`, `DSD-02`, `OWN`, and `WER-07` remain 20 separately attributed
+child-composition slots under their existing owners. They are never pooled with the
+15 parent slots.
+
+## Historical control bundles
 
 Repository files come from control commit `4296647f0dff48a9e77b979ef07e813bf1f66db2`.
 Bundle digests use the canonical path-and-content algorithm in [the shared protocol](../../README.md#immutable-control-bundles).
@@ -31,18 +195,21 @@ The complete integrated control adds these immutable Superpowers 6.2.0 dependenc
 | `verification-before-completion` | `2befe7fc55bcadaa3d97dd9e8efeb633d2561c0ebe74c5a8b17c4d9e7e4520b3` |
 | `writing-plans` | `72190c88b2b5a67a96b91d66aa72b9161913e10e8769da3f28a226f4cc7b99d0` |
 
-## Inherited coverage
+## Historical Task 10 inherited coverage
 
-These scenarios retain their existing owners and are linked into the parent skill's complete active closure rather than duplicated here:
+These scenarios retained their then-current owners and were linked into the
+historical Task 10 parent closure rather than duplicated here. The active v3
+topology is the separate, non-pooled `DISC-01`–`DISC-11` and composition coverage
+declared above.
 
 | Scenario | Owner | Task 10 obligation |
 |---|---|---|
 | [`DISC-01`–`DISC-10`](../../skill-discovery.md#active-catalog-definitions) | Task 1 shared discovery suite | Description routing and parent-plus-applicable-companion availability |
 | [`DSD-01`, `DSD-02`](../../dispatching-development-subagents.md#active-catalog-definitions) | `dispatching-development-subagents` | Principle 4 plus subagent versus orchestrator gate ownership |
 | [`OWN`](../../adversarial-review-loop-scenarios.md#active-catalog) | `adversarial-review-loop` | Per-task versus whole-branch review-loop ownership and independent counters |
-| [`WER-07`](../../writing-explicit-rationale.md#wer-07--parent-and-plan-composition) | `writing-explicit-rationale` | Principle 1 delegation of rationale necessity without forcing a why for every choice |
+| [`WER-07`](../../writing-explicit-rationale.md#historical-wer-07--parent-and-plan-composition) | `writing-explicit-rationale` | Principle 1 delegation of rationale necessity without forcing a why for every choice |
 
-## Prompt and rubric hashes
+## Historical prompt and rubric hashes
 
 | ID | Prompt SHA-256 | Rubric SHA-256 |
 |---|---|---|
