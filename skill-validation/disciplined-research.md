@@ -111,6 +111,54 @@ owned discovery suite passed **60/60** with research required in every cell.
 Complete hashes and per-response verdicts are in
 [the Task 18A provenance manifest](task-18a-provenance.json).
 
+## Task 18 post-18A immediate readability control and audit (2026-08-14)
+
+Task 18 starts from immutable commit
+`a69e253221dd8bb054f68941ea0f7466d08448eb`, the committed and pushed Task 18A
+behavior boundary.
+The exact nine-skill control is materialized at
+`/private/tmp/dd-task18-readability-control-a69e253.EECD5B/`.
+Its deterministic archive SHA-256 is
+`b00a2e669b04d564102ae911044698fc4ed5573a56af49597d25cf89fc1e1961`,
+and its canonical content-manifest SHA-256 is
+`d51553182a68339e90d17cb07d6526542ff2f4aa52d293f82312e6f23573633c`.
+The five Task 18A skill files in the control are:
+
+| Skill | Words | SHA-256 |
+|---|---:|---|
+| `disciplined-research` | 1,459 | `f4001332065b9829b0e9893e7289842c17e1c6cde6f627aa6bba211ca873f8c9` |
+| `disciplined-development` | 3,308 | `872529574af4f4fabcd58ff3721ce6c241af99936c19403b40abca7e9c252e8b` |
+| `dispatching-development-subagents` | 1,551 | `bf616daa594a90282ccfa22af210214b30393158838b5feb9220859268f9fe54` |
+| `sweeping-stale-references` | 1,527 | `d92afd5dc74681d3037b1d5ab2543276698d9cd7b7c0fafc858cfe6b709b5609` |
+| `adversarial-review-loop` | 1,477 | `56e08642a8005ac526898ed7b9cd178bcfd08a655464f2249b9ccae22aeb5387` |
+
+Fresh section-level necessity and simplification inventory:
+
+| Current section | Necessary behavior | Smallest behavior-preserving disposition |
+|---|---|---|
+| Frontmatter | Routes every claim-bearing response, interaction, action, and task, including supplied premises and mechanical work | Keep the exact owner-approved discovery description unchanged |
+| Role / ownership | Declares invocation scope, the complete source-work bundle, and the two non-owned companion boundaries | Keep unchanged; each line has a distinct orchestration function |
+| Overview | Establishes universal applicability, representative destinations, non-limiting examples, and the ban on recall as evidence | Consolidate the repeated rule/core-principle statements into one contract block |
+| Method | Preserves claim separation, attribution limits, best-source acquisition, fresh exact verification, support mapping, one-source/many-claims, unsupported-claim refusal, the literal unverified-lead stamp, labeled placement, requested fields, and datum-missing disclosure | Keep the four-step positive recipe and all failure branches; remove immediate restatement |
+| Choose sources by claim type | Preserves project, external, and cross-domain source rankings plus local-versus-public authority | Replace three short subsections with one claim-to-source table |
+| Check that the source applies | Preserves authority, date, version/environment, supersession, conflict governance, and conflict disclosure | Keep beside source ranking rather than as a separate phase |
+| Difficult source conditions | Preserves visible data from partial sources, next-best fallback, no sampling, no unsupported expansion, and complete-search requirements for absence/exclusivity claims | Keep as four compact bullets linked to the unsupported-claim branch |
+| Pressure resistance | Preserves all nine demonstrated pressure defenses, including transformation, private destination, silent output, real-but-irrelevant citation, scale, current-byte reread, and unrequested disclosure | Keep every pressure row; shorten responses only where the method already supplies the full action |
+
+Whole-skill verdict: a meaningful cleanup is warranted.
+The skill's contract and behavioral branches are coherent, but source selection and
+applicability are fragmented across four sections and the universal rule is repeated
+more often than salience requires.
+The smallest complete scratch proposal keeps the exact frontmatter and ownership
+block, retains every current branch and pressure row, and reorganizes the body into
+contract, four-step method, one source-selection/applicability section, difficult
+conditions, and pressure resistance.
+It is 1,197 words at SHA-256
+`54a95c62e91ef9e2c0fc7b8dc08ae82c5b64ba7697e319df5b6a7ef7970b18ba`,
+262 words (18.0%) below the control.
+It remains scratch-only pending owner approval; no skill, prompt, fixture, rubric,
+supplied context, or protected promise changed during this audit.
+
 ### Immutable bundle manifests
 
 The `DR-01` complete control starts from the Task 1 nine-skill archive SHA-256

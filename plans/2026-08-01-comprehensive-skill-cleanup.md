@@ -1703,8 +1703,23 @@ contains the full results and provenance.
   Markdown links passed for 88 working and 88 staged documents, the provenance
   manifest reproduced byte-for-byte at SHA-256 `77104644…`, and the routing,
   current-denominator, JSON-integrity, skill-hash, and diff checks passed.
-- [ ] Materialize the behavior commit as Task 18's immutable immediate readability control.
+- [x] Materialize the behavior commit as Task 18's immutable immediate readability control.
   Record all five changed skills' current word counts and hashes, then resume the behavior-preserving cleanup below from new research- and sweeping-skill section inventories and complete drafts.
+
+**Task 18 immediate readability control (2026-08-14):** Commit
+`a69e253221dd8bb054f68941ea0f7466d08448eb` is the immutable Task 18 control.
+Its nine-skill archive SHA-256 is `b00a2e669b04d564102ae911044698fc4ed5573a56af49597d25cf89fc1e1961`,
+and its canonical content-manifest SHA-256 is
+`d51553182a68339e90d17cb07d6526542ff2f4aa52d293f82312e6f23573633c`.
+The five changed skill word-count / SHA-256 pairs are `disciplined-research`
+1,459 / `f4001332065b9829b0e9893e7289842c17e1c6cde6f627aa6bba211ca873f8c9`,
+`disciplined-development` 3,308 / `872529574af4f4fabcd58ff3721ce6c241af99936c19403b40abca7e9c252e8b`,
+`dispatching-development-subagents` 1,551 /
+`bf616daa594a90282ccfa22af210214b30393158838b5feb9220859268f9fe54`,
+`sweeping-stale-references` 1,527 /
+`d92afd5dc74681d3037b1d5ab2543276698d9cd7b7c0fafc858cfe6b709b5609`,
+and `adversarial-review-loop` 1,477 /
+`56e08642a8005ac526898ed7b9cd178bcfd08a655464f2249b9ccae22aeb5387`.
 
 ### Task 18: Clean `disciplined-research`
 
@@ -1715,7 +1730,7 @@ contains the full results and provenance.
 **Validation scope:** broad-domain companion; use its complete cold Sol-high suite,
 including isolated non-software research, with only scenario-declared dependencies.
 
-- [ ] Record the post-Task 18A immediate readability-control word count and hashes, then rebuild the section-level and whole-skill necessity/simplification inventory from those exact bytes.
+- [x] Record the post-Task 18A immediate readability-control word count and hashes, then rebuild the section-level and whole-skill necessity/simplification inventory from those exact bytes.
 - [ ] Draft the smallest coherent reorganization, show the diff, and wait for user approval.
 - [ ] Apply the approved draft and run `DISC-01`–`DISC-12` plus `DR-01`–`DR-07` five times each on Sol high: 95 responses across 19 scenarios.
 - [ ] Blindly compare subjective prose outputs with the immediate readability control where the rubric requires judgment.
@@ -1741,6 +1756,18 @@ prose was applied. After Task 18A is committed, its skill becomes the new immedi
 readability control and Task 18 restarts its word count, necessity inventory, and
 draft against that behavior. The completed pre-slice inventory is historical and
 does not satisfy the reset checkbox above.
+
+**Task 18 restarted audit (2026-08-14):** The fresh post-Task-18A inventory is
+recorded in `skill-validation/disciplined-research.md` against exact control
+`a69e253` / `f4001332…`.
+It finds a meaningful behavior-preserving cleanup: consolidate repeated universal
+contract wording and four fragmented source-selection/applicability sections while
+retaining the exact discovery description, ownership boundary, four-step method,
+all difficult-source branches, literal unverified-lead stamp, and all nine pressure
+defenses.
+The complete scratch-only proposal is 1,197 words at SHA-256 `54a95c62…`, down
+262 words (18.0%) from the 1,459-word control, and awaits owner approval before any
+tracked skill edit or model evaluation.
 
 ### Task 19: Clean `lean-plan-writing`
 
@@ -1889,8 +1916,8 @@ Sol-high model gate across the authored development modes.
 
 **Produces:** A cross-suite composition record that links the owning scenario IDs and records joint results without duplicating their prompts or rubrics.
 
-- [ ] Freeze the 85-scenario active closure, excluding historical `LP-04` and `SSR-04`.
-- [ ] Rerun every scenario in the frozen 85-scenario closure five times on cold Sol high, including all focused regressions as well as the shared discovery, domain-appropriate direct-invocation, broad-domain isolated-application, development-companion dependency, and integrated composition sets; keep scenarios atomic unless composition is the behavior under test.
+- [ ] Freeze the 103-scenario active closure, excluding historical `LP-04` and `SSR-04`.
+- [ ] Rerun every scenario in the frozen 103-scenario closure five times on cold Sol high, including all focused regressions as well as the shared discovery, domain-appropriate direct-invocation, broad-domain isolated-application, development-companion dependency, and integrated composition sets; keep scenarios atomic unless composition is the behavior under test.
 - [ ] Manually score each protected promise and record any infrastructure failures separately.
 - [ ] If any result is below 5/5, stop and classify it through the design's failure gate; correct a cleanup regression in its owning task, and isolate any approved behavioral change in a separate RED/GREEN slice.
 - [ ] Record the final 5/5 results and commit as `docs(validation): record final skill composition greens`.
@@ -1907,11 +1934,11 @@ Sol-high model gate across the authored development modes.
 - Move after completion: `plans/2026-08-01-comprehensive-skill-cleanup.md` to `plans/completed/2026-08-01-comprehensive-skill-cleanup.md`
 - Move after completion: `plans/specs/2026-08-01-comprehensive-skill-cleanup-design.md` to `plans/completed/specs/2026-08-01-comprehensive-skill-cleanup-design.md`
 
-**Validation scope:** reuse the same 85 domain-appropriate scenarios and declared
+**Validation scope:** reuse the same 103 domain-appropriate scenarios and declared
 dependencies from the cold Sol-high gate. Sol-low measures effort robustness and does
 not create another portability domain or provider gate.
 
-- [ ] Freeze the 85-scenario final active suite, which excludes historical `LP-04` and `SSR-04`, and run every scenario five times on `gpt-5.6-sol` at low reasoning effort.
+- [ ] Freeze the 103-scenario final active suite, which excludes historical `LP-04` and `SSR-04`, and run every scenario five times on `gpt-5.6-sol` at low reasoning effort.
 - [ ] Compare control and cleaned scores by scenario and pause for user review on any decrease.
 - [ ] For every decrease, record the user-approved disposition in `skill-validation/README.md` and each affected record.
 - [ ] If accepted, record the what/why/accepted rationale; if remediation changes a skill or scenario contract, reopen its owning task, complete the required Sol-high backfill or regression suite, rerun the affected Sol-low arm, and return to this comparison.
