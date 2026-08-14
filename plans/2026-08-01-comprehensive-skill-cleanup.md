@@ -1731,12 +1731,12 @@ and `adversarial-review-loop` 1,477 /
 including isolated non-software research, with only scenario-declared dependencies.
 
 - [x] Record the post-Task 18A immediate readability-control word count and hashes, then rebuild the section-level and whole-skill necessity/simplification inventory from those exact bytes.
-- [ ] Draft the smallest coherent reorganization, show the diff, and wait for user approval.
-- [ ] Apply the approved draft and run `DISC-01`–`DISC-12` plus `DR-01`–`DR-07` five times each on Sol high: 95 responses across 19 scenarios.
-- [ ] Blindly compare subjective prose outputs with the immediate readability control where the rubric requires judgment.
-- [ ] Run cold editorial and skill-writing review plus deep staged `adversarial-review`; show proposed fixes, wait for user approval, apply them, and restart affected scenarios.
-- [ ] Show the final skill in place and wait for user approval.
-- [ ] After approval, run repository tests, the exact local-link command, `git diff --check`, and `git diff --cached --check`; commit as `docs(skills): clean up disciplined research`.
+- [x] Draft the smallest coherent reorganization, show the diff, and wait for user approval.
+- [x] Apply the approved draft and run `DISC-01`–`DISC-12` plus `DR-01`–`DR-07` five times each on Sol high: 95 responses across 19 scenarios.
+- [x] Blindly compare subjective prose outputs with the immediate readability control where the rubric requires judgment.
+- [x] Run cold editorial and skill-writing review plus deep staged `adversarial-review`; show proposed fixes, wait for user approval, apply them, and restart affected scenarios.
+- [x] Show the final skill in place and wait for user approval.
+- [x] After approval, run repository tests, the exact local-link command, `git diff --check`, and `git diff --cached --check`; commit as `docs(skills): clean up disciplined research`.
 
 **Task 18 execution note (2026-08-08, in progress):** Preflight confirmed clean
 HEAD `ecfd2ef4d88694ee36ffe30ebe852173c5629d50` and passed the hook suite
@@ -1765,9 +1765,31 @@ contract wording and four fragmented source-selection/applicability sections whi
 retaining the exact discovery description, ownership boundary, four-step method,
 all difficult-source branches, literal unverified-lead stamp, and all nine pressure
 defenses.
-The complete scratch-only proposal is 1,197 words at SHA-256 `54a95c62…`, down
-262 words (18.0%) from the 1,459-word control, and awaits owner approval before any
-tracked skill edit or model evaluation.
+The initial scratch proposal was 1,197 words at SHA-256 `54a95c62…`, down
+262 words (18.0%) from the 1,459-word control. At that checkpoint it awaited owner
+approval and no tracked skill edit or model evaluation had occurred; later evidence
+and approved preservation repairs supersede it as the current candidate.
+
+**Task 18 candidate closure (2026-08-14):** The final owner-approved skill is
+1,210 words at SHA-256 `6fa7d81c67c3075429c1fd9f54d37d494d0e24f877de976a6c0da71da8a61984`,
+249 words (17.1%) below the immutable control. The approved initial arm completed
+all 95 affected responses on attempt 1: discovery 60/60 and research application
+35/35. Reviews found three unexercised baseline-preservation drifts; owner-approved
+repairs restored the official-repository implementation tier, mandatory current-
+first-party precedence for current public state, and the source-authority versus
+fact-control distinction. Narrow final-hash reruns passed `DR-02` and `DR-03`
+10/10 on attempt 1. Under the scenario-to-promise rule, the unchanged discovery
+and unaffected research cells remain active, so the final affected gate is 95/95.
+The active blinded comparison has zero candidate material losses across 35 pairs:
+31 are equivalent and the control has the only four losses. Final exact-hash skill-
+writing review passed SPEC/QUALITY, staged adversarial review returned
+`DD-VERDICT: PASS`, and the owner approved the complete in-place skill. Durable
+hashes and superseded-arm labels are in `skill-validation/disciplined-research.md`.
+Fresh repository verification passed: hook tests 373 passed / 3 skipped, installer
+tests 11 passed, research tests 4 passed, the skill-package validator passed, local
+Markdown links passed for four working and four staged documents, and routing/
+reference, non-fixture JSON, exact hash/word/frontmatter, 103-scenario denominator,
+and working/staged diff checks passed.
 
 ### Task 19: Clean `lean-plan-writing`
 

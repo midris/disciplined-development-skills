@@ -35,7 +35,7 @@ An em dash means the owning audit task has not classified the scenarios yet.
 | [adversarial-review-loop](adversarial-review-loop.md) | Skill | `adversarial-review-loop` | `adversarial-review-loop`, `disciplined-development`; shared routing boundaries | 8, 18A | `OWN` current composition 5/5 in the final Task 18A union; historical evidence retained | 0 | 14 | 3 | 3 | 1 |
 | [concise-writing](concise-writing.md) | Skill | `concise-writing` | `concise-writing`, `adversarial-review-loop`; external `superpowers:writing-skills` dependency and distractor | 2, 17 | Audited; 665-word candidate `f763b43e…`; repaired-definition `CW-19` controls high 4/5 and low 2/5, candidate 5/5; complete affected candidate arm 145/145 GREEN; blind comparison found zero candidate material losses in 45 pairs; editorial review and final owner approval complete | 0 | 2 | 4 | 2 | 11 |
 | [disciplined-development](disciplined-development.md) | Skill | `disciplined-development` | parent orchestration; discovery and child composition remain separate | 10, 17, 18A | Current `DD-01`–`DD-09` final union 45/45; child composition separately attributed | 0 | 2 | 0 | 1 | 7 |
-| [disciplined-research](disciplined-research.md) | Skill | `disciplined-research` | `disciplined-research`, `disciplined-development` through Principle 6 | 3, 18A, 18 | Current SHA-256 `f4001332…`; `DR-01`–`DR-07` final union 35/35 and shared discovery 60/60 | 0 | 1 | 0 | 1 | 6 |
+| [disciplined-research](disciplined-research.md) | Skill | `disciplined-research` | `disciplined-research`, `disciplined-development` through Principle 6 | 3, 18A, 18 | Task 18 complete at 1,210 words / `6fa7d81c…`; final affected gate 95/95; blind comparison zero candidate losses in 35 pairs; final reviews and owner approval complete | 0 | 1 | 0 | 1 | 6 |
 | [dispatching-development-subagents](dispatching-development-subagents.md) | Skill | `dispatching-development-subagents` | `dispatching-development-subagents`, `disciplined-development`; shared routing boundaries | 9, 18A | Current `DSD-01`, `DSD-02`, and `DSD-05`–`DSD-11` final union 45/45 | 0 | 2 | 1 | 0 | 9 |
 | [lean-plan-writing](lean-plan-writing.md) | Skill | `lean-plan-writing` | `lean-plan-writing`; external `superpowers:writing-plans` composition | 4 | Audited; 7 active owned scenarios; `LP-04` retained as historical exploratory evidence | 0 | 4 | 1 | 1 | 3 |
 | [sweeping-stale-references](sweeping-stale-references.md) | Skill | `sweeping-stale-references` | `sweeping-stale-references`, `disciplined-research` ownership boundary | 5, 18A | Current SHA-256 `d92afd5d…`; repaired six-scenario sweep and final union both 30/30 | 0 | 2 | 0 | 1 | 4 |
@@ -58,7 +58,7 @@ An em dash means the owning audit task has not classified the scenarios yet.
 | `adversarial-review.md` | Active review, output, enumeration, angle, durability, whole-project, generated-case, invariant-severity, pattern, necessity, and effectiveness suite plus preserved derivation history; `adversarial-review` | `adversarial-review`, `concise-writing`, `lean-plan-writing`, `sweeping-stale-references`, `disciplined-development` | `AR-01`–`AR-10` and `AR-12`–`AR-14`, five control/current reps each; historical evidence below | Full for active catalog; historical evidence remains partial | Active suite 65/65; nine preservation controls 45/45; four watched REDs GREEN; `AR-14` holistic-only ablation 0/5 |
 | `concise-writing.md` | Active verbosity, over-trim, routing, ownership, composition-pressure, response/file boundary, direct-invocation, broad-domain, and complex technical application suite; `concise-writing` | `concise-writing`, `adversarial-review-loop`; external `superpowers:writing-skills` dependency and distractor | `CW-01`–`CW-14` and `CW-17`–`CW-19`; repaired/new high/low controls complete; current candidate owned arm 85/85 | Full definitions, freeze hashes, per-repetition outcomes, repaired-definition control/candidate provenance, section necessity, blind comparison, rejected simplification arms, and superseded-arm isolation | Task 17 complete; affected candidate arm 145/145 GREEN; blind comparison 0 candidate losses/45 pairs |
 | `disciplined-development.md` | Active mode routing, Gates 1–5 orchestration, Principle 7 threshold, and compact derivation history; `disciplined-development` | Parent behavior; discovery and child composition separately attributed | `DD-01`–`DD-09`; separate discovery, dispatch, `OWN`, and `WER-07` ownership | Full prompts/rubrics and current focused seam fixtures; historical strict-rubric evidence preserved | Task 18A uses `DD-05`–`DD-09` for atomic iteration and retains `DD-01`–`DD-04` for broader controls/composition |
-| `disciplined-research.md` | Active project, procurement, conversational, and broad-domain grounding suite plus B1/B17 history; `disciplined-research` | `disciplined-research`; parent Principle 6 alignment | Current `DR-01`–`DR-07`; historical `B1`, `B17` retained | Full current catalog including `DR-07` response-only premise correction | Task 18A specifies universal factual-claim grounding, the explicitly unverified-lead branch, and non-development response/interaction coverage |
+| `disciplined-research.md` | Active project, procurement, conversational, and broad-domain grounding suite plus B1/B17 history; `disciplined-research` | `disciplined-research`; parent Principle 6 alignment | Current `DR-01`–`DR-07`; historical `B1`, `B17` retained | Full current catalog including `DR-07` response-only premise correction and Task 18 readability evidence | Task 18 complete at `6fa7d81c…`; affected Sol-high gate 95/95; active blind comparison zero candidate losses in 35 pairs |
 | `dispatching-development-subagents.md` | Active dispatch-prompt, identity/nudge, returned-commit verification, and finding-partition suite plus preserved history; `dispatching-development-subagents` | `dispatching-development-subagents`, `disciplined-development`, `disciplined-research`; shared routing boundaries | `DSD-01`–`DSD-05` plus atomic `DSD-06`–`DSD-11` and linked discovery | Full current prompt/rubric catalog; historical controls retained | Composition remains separately attributed; atomic seams support fast behavior-focused reruns |
 | `duplicate-red-flags-scenarios.md` | Four-skill composite consolidation fixture; Task 1 protocol | `adversarial-review`, `concise-writing`, `lean-plan-writing`, `sweeping-stale-references` | Cells `A`–`D`; 5 per arm | Full | Retired from the active suite because it combines unrelated contracts; all retained coverage is now atomized in the owning skill catalogs |
 | `evaluation-subagents-read-only.md` | Historical evidence for choosing a no-write evaluator type; Task 1 protocol | Repository evaluation rule | No stable ID; RED/GREEN counts unstated | Partial | Retired from the active suite; the enforced transport probe below replaces instruction-only evidence |
@@ -636,6 +636,24 @@ zero. Fresh high and low controls remained RED at 0/5, while the current overlay
 passed 5/5 at freeze `4a7c5097…`, producing the accepted 60/60 discovery total.
 The entire `/private/tmp/task18a-final-union-v39` root is excluded because two
 parent runners overlapped nominal slots; none of its bytes contributes to closure.
+
+### Task 18 disciplined-research readability cleanup (2026-08-14)
+
+The immutable immediate readability control remains 1,459 words at `f4001332…`.
+The final owner-approved skill is 1,210 words at `6fa7d81c…`, a 249-word (17.1%)
+reduction. The final scenario-mapped affected gate is **95/95**: unchanged discovery
+60/60, unaffected research cells 25/25, and final-hash `DR-02`/`DR-03` 10/10.
+All fresh final-hash responses and scorers completed on attempt 1 with zero
+infrastructure errors.
+
+The active 35-pair blind comparison has zero candidate material losses, 31
+equivalent pairs, and four control losses. Three review-discovered but scenario-
+undiscriminated baseline semantics were restored directly: the official-repository
+implementation tier, mandatory current-first-party precedence for current public
+state, and source authority distinct from control of the underlying fact. Final
+skill-writing review passed SPEC/QUALITY, staged adversarial review passed with no
+findings, and the owner approved the complete in-place skill. The owning record
+preserves exact hashes and labels both intermediate candidates as superseded.
 
 ### Task 17 concise-writing current controls and candidate affected rerun
 

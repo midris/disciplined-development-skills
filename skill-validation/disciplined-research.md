@@ -149,15 +149,54 @@ Whole-skill verdict: a meaningful cleanup is warranted.
 The skill's contract and behavioral branches are coherent, but source selection and
 applicability are fragmented across four sections and the universal rule is repeated
 more often than salience requires.
-The smallest complete scratch proposal keeps the exact frontmatter and ownership
-block, retains every current branch and pressure row, and reorganizes the body into
+The initial complete scratch proposal kept the exact frontmatter and ownership
+block, retained every current branch and pressure row, and reorganized the body into
 contract, four-step method, one source-selection/applicability section, difficult
-conditions, and pressure resistance.
-It is 1,197 words at SHA-256
+conditions, and pressure resistance. It was 1,197 words at SHA-256
 `54a95c62e91ef9e2c0fc7b8dc08ae82c5b64ba7697e319df5b6a7ef7970b18ba`,
-262 words (18.0%) below the control.
-It remains scratch-only pending owner approval; no skill, prompt, fixture, rubric,
-supplied context, or protected promise changed during this audit.
+262 words (18.0%) below the control. At this audit checkpoint it was scratch-only;
+the later approved candidate and repairs below supersede it.
+
+### Task 18 readability-cleanup result (2026-08-14)
+
+The final owner-approved skill is 1,210 words at SHA-256
+`6fa7d81c67c3075429c1fd9f54d37d494d0e24f877de976a6c0da71da8a61984`,
+249 words (17.1%) below the 1,459-word immediate readability control. No prompt,
+rubric, fixture, supplied context, frontmatter description, or protected behavior
+changed.
+
+The approved 1,197-word arm froze at SHA-256 `c0cdca32…` and completed all 95
+responses on attempt 1 with zero infrastructure errors: `DISC-01`–`DISC-12`
+60/60 and `DR-01`–`DR-07` 35/35. Its completion/output/scorer aggregates are
+`5c88808c…`, `21043932…`, and `594f619f…`. The first blind arm sealed before reveal
+at `381c4224…` and is historical for the later-repaired `DR-02`/`DR-03` cells.
+
+Independent reviews found three unexercised preservation drifts. The approved
+1,199-word `d7dfc634…` intermediate restored the official-repository implementation
+tier and mandatory current-first-party precedence; its focused `DR-03` rerun passed
+5/5, but later review found that `the source controls` had collapsed source authority
+into control of the underlying fact. That intermediate and its `DR-03` blind arm
+(`7103552a…` sealed score) are superseded evidence, not the final gate.
+
+The final baseline restoration froze at `acdf40ee…`; fresh `DR-02` and `DR-03`
+responses passed 10/10 and both fresh scorers passed 10/10, all on attempt 1 with
+zero infrastructure errors. Their completion/output/scorer aggregates are
+`9632ce4c…`, `3b2e0b7c…`, and `fc11f9f3…`. The final blind arm sealed before reveal
+at `f0a1f5c7…` with key `2a60873e…`. Behavior-first adjudication found zero
+candidate losses in its ten pairs: seven equivalent and three control losses.
+
+The active final gate reuses only scenario-mapped evidence: the unchanged discovery
+description supplies 60/60, unaffected `DR-01` and `DR-04`–`DR-07` supply 25/25,
+and final-hash `DR-02`/`DR-03` supply 10/10, totaling **95/95**. Combining the
+unaffected initial blind cells with the final `DR-02`/`DR-03` arm gives 31 equivalent
+pairs, zero candidate losses, and four control losses across 35 pairs. Preferences
+for optional dates, RFP identifiers, paths, or narration were not behavioral losses.
+
+Final exact-hash skill-writing review SHA-256 `430777ad…` returned `SPEC: PASS` and
+`QUALITY: PASS`; staged adversarial review SHA-256 `585149ab…` returned no findings
+and `DD-VERDICT: PASS`. Both explicitly distinguish the passing ordinary-output
+evidence from the untested baseline semantics restored by direct control comparison.
+The owner approved the complete final skill in place.
 
 ### Immutable bundle manifests
 
