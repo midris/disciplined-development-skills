@@ -3,6 +3,42 @@
 These files are the exact evaluator prompts and evaluator-withheld rubrics for the active parent-owned catalog.
 Evaluators receive only the matching prompt and immutable read-only bundle, never the rubric or this manifest.
 
+## Task 18A atomic/composite split (2026-08-13)
+
+Task 18A retains `DD-01`–`DD-04` as broad or previously isolated controls and
+adds `DD-05`–`DD-09` as one-seam behavioral scenarios. The split makes source
+reconciliation, written scope, delegation/RED, candidate acceptance, and pre-PR
+review independently rerunnable while `DD-02` remains the end-to-end composition
+check. All rubrics grade actions, effectiveness, timing, ordering, ownership,
+blocked transitions, evidence, and truthful bookkeeping; rendering differences are
+not failures.
+
+The current parent SHA-256 is
+`872529574af4f4fabcd58ff3721ce6c241af99936c19403b40abca7e9c252e8b`.
+Its final first-action repair was checked at
+`/private/tmp/task18a-parent-all-sources-v69`: `DD-01` and `DD-09` passed 10/10
+behaviorally. The five nominal `DD-01` scorer misses conflated an evidence-based
+review finding/disposition with implementation ownership even though every output
+left remediation method with the applicable review loop and gate acceptance with
+the orchestrator or user. The exact-hash cold review at
+`/private/tmp/task18a-v70-parent-cold-review.md` returned `VERDICT: PASS`.
+Final union v71 then exposed one genuine row-B timing miss. The narrow final repair
+makes the existing Gate 2 block explicit: rereading alone does not release
+implementation planning before complete written scope and required sign-off.
+Focused root `/private/tmp/task18a-dd01-planning-block-v72` passed `DD-01` 5/5,
+and `/private/tmp/task18a-v72-parent-cold-review.md` returned `VERDICT: PASS` at
+the current exact hash. Union v73 restarted from zero and passed the parent catalog
+45/45 behaviorally.
+
+| ID | Isolated behavior | Prompt SHA-256 | Rubric SHA-256 |
+|---|---|---|---|
+| `DD-04` | Principle 6 selection before an action that relies on a factual premise | `939a40cfe8fe27025ad8c83230830f000c8db0a67c440af0f42cf21925c9183f` | `275eb747335ff0f5d4b7933d43958332e33215db4a04dd8695c7e3e8327e8466` |
+| `DD-05` | Fresh source reading, conflict ownership, and pre-planning block | `250300e505f05a6e1b139a352f1887e5116ac90ef99c18ac4b1c6d0139458ee4` | `cc900e882777acac4bb63f516861fa230ebb2ca33581ed463985062c91c8bd8c` |
+| `DD-06` | Signed written scope with deferral cause and consequence | `0c296fd4f2a4245643e4ad17e746c06499e8ee920797721f654a6cf0aa74dda5` | `701ce6503df5e72fe2617b391caea8a66a19533f4c8054aa1f1d6bc7d064b1b2` |
+| `DD-07` | Scope-bounded delegation, directly observed RED, and retained acceptance authority | `c79eb2bc14d0d9860a808c8875defc1f21bfaa7ec6a2ab356a08fe2c2cf88fd1` | `f8d47d834f1e29b5f3f61e3f1bb0e52cef7fea11d4fb20eef3626ca4a6d1889d` |
+| `DD-08` | Unauthorized-candidate disposition before verification, effective sweep, and one green commit | `fc5e306045d9a6ff3e49913320ea48cff6fada7eb637d9aa0e0463c52dd6ced9` | `7dfb9766ffb31271028c1a4c97b1199b5251ab32e0bae79b73881ed828ee7283` |
+| `DD-09` | Whole-tree pre-PR discovery, restart semantics, reviewer boundaries, and durable smoke evidence | `d0d0234d9688666656862f6a874e7ca491bd9b0d32b16ea1cdaad083f229a67d` | `a2e99c0a3cab2e3968d3e300489e1f6de484239ff442db49b8aec8ad02b26d3c` |
+
 ## Behavior-first DD-01 contract epoch — approved proposal applied; focused 5/5
 
 The behavior-first comparison kept the prompt at SHA-256
@@ -53,7 +89,7 @@ establish parent GREEN or authorize a PR.
 The active prompt is SHA-256
 `95deb13830eea682f06086c406dedb1a537b22f1bbf60598c4e1c231256ee706`
 and the behavior-only withheld rubric is SHA-256
-`288dd142bea0be8ddf8cc4322bb0e32b7538385d2b369ad32596becf0cf9b8ea`.
+`801a1e8192a632c5aacee1ad63234af0987e73a498ad41dcba90610843181742`.
 The evaluator bundle is the tracked parent plus the seven exact `project/dd-02`
 members listed below; `operator-note.md` is excluded. The
 [owning validation record](../../disciplined-development.md#formal-dd-02-behavioral-rubric--minimal-gate-4-proposal-55)
@@ -83,15 +119,16 @@ active-status and P5-timing misses remain. The proposal is rejected, unapplied,
 and not GREEN; the final cap is exhausted and there is no cycle 10 or further
 model run.
 The prior `366b3dad…` parent remains only historical comparison evidence.
-The parent acceptance denominator is `DD-01`–`DD-03`: three scenarios, five
-Sol-high repetitions each, or 15 slots. Parent scoring covers mode,
+The historical v3 parent acceptance denominator was `DD-01`–`DD-03`: three
+scenarios, five Sol-high repetitions each, or 15 slots. Current Task 18A closure
+uses `DD-01`–`DD-09`, or 45 slots. Parent scoring covers mode,
 gate/principle timing and order, parent-owned artifacts, outcomes, and destinations,
 fail-closed transitions, and parent/orchestrator owners.
 
 Child invocation, loading, procedure execution, and output quality are not parent
 score criteria. Research source selection, factual correctness, grounding,
 disclosure, and support mapping are also outside the parent score and belong to
-separately attributed child-composition coverage. `DISC-01`–`DISC-11` own skill
+separately attributed child-composition coverage. `DISC-01`–`DISC-12` own skill
 discovery and are not part of the parent behavioral denominator.
 
 | ID | Prompt SHA-256 | Withheld rubric SHA-256 | Parent-focused evaluator bundle |
@@ -212,9 +249,9 @@ The complete integrated control adds these immutable Superpowers 6.2.0 dependenc
 ## Historical Task 10 inherited coverage
 
 These scenarios retained their then-current owners and were linked into the
-historical Task 10 parent closure rather than duplicated here. The active v3
-topology is the separate, non-pooled `DISC-01`–`DISC-11` and composition coverage
-declared above.
+historical Task 10 parent closure rather than duplicated here. The historical v3
+topology used separate, non-pooled discovery and composition coverage; current
+Task 18A topology is recorded in the owning validation documents.
 
 | Scenario | Owner | Task 10 obligation |
 |---|---|---|

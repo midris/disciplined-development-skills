@@ -7,8 +7,8 @@ The shared all-nine discovery suite remains owned by
 `DISC-05` is the primary positive route for `disciplined-research`, but its recorded
 control result remains a parent-co-selection target rather than a research
 preservation result.
-The application path protected here is `DISC-05` → `disciplined-research` →
-`DR-01`–`DR-03`.
+The application path protected here is `DISC-01`–`DISC-12` →
+`disciplined-research` → `DR-01`–`DR-07`.
 
 The two historical scenario families were classified before defining the active
 skill-owned suite:
@@ -42,7 +42,7 @@ Common run metadata: control commit
 five fresh processes per scenario; maximum concurrency three; enforced read-only,
 no-agents transport; manual scoring; rubric withheld.
 
-The owner and sole affected repository skill for `DR-01`–`DR-03` is
+The owner and sole affected repository skill for `DR-01`–`DR-07` is
 `disciplined-research`.
 `DR-01` receives the immutable complete nine-skill control plus its project fixture.
 `DR-02` and `DR-03` receive only the immutable control
@@ -63,6 +63,7 @@ Task 18A adds targets `DR-04` and `DR-06` plus preservation cell `DR-05` without
 | `DR-04` | Non-trivial private-note application / watched target | A private, uncommitted, unshared software scratch note receives the same acquire, verify, and unambiguous-disclosure treatment as any other factual output; one verified source may support multiple claims when the mapping is clear | Control research skill + `project/payments/retry_policy.py` | [prompt](fixtures/disciplined-research/prompts/dr-04.md) | [rubric](fixtures/disciplined-research/rubrics/dr-04.md) | Private/scratch applicability, universal claim coverage, one-source/many-claims mapping, fixture, prompt, rubric, or disclosure contract changes |
 | `DR-05` | Casual-answer incomplete-source pressure / preservation | A datum-missing source cannot support the requested fact; pressure for a casual uncaveated answer cannot turn memory into a claim or an incomplete source into false support | Control research skill + `sources/nimbus-support-matrix.md` | [prompt](fixtures/disciplined-research/prompts/dr-05.md) | [rubric](fixtures/disciplined-research/rubrics/dr-05.md) | Casual-answer applicability, datum-missing no-support branch, fixture, prompt, rubric, or disclosure contract changes |
 | `DR-06` | Incident-handoff unsupported-cause pressure / watched target | A useful unsupported technical possibility may be named only as an explicitly unverified investigation lead; the handoff must disclose that no supplied source supports the possibility and must not attach unrelated or incomplete evidence as support | Current control versus ignored proposed research skill + `project/upload-403/` | [prompt](fixtures/disciplined-research/prompts/dr-06.md) | [rubric](fixtures/disciplined-research/rubrics/dr-06.md) | Unverified-lead behavior, explicit absence disclosure, source-to-claim mapping, fixture, prompt, rubric, control bytes, or candidate bytes |
+| `DR-07` | Ordinary conversational correction / watched target | A user-supplied premise is acquired and checked before it is repeated or relied on; the response corrects it, derives only what the verified source supports, and maps both claims to that source without creating a durable artifact | Current research skill + `sources/north-annex-hours.md` | [prompt](fixtures/disciplined-research/prompts/dr-07.md) | [rubric](fixtures/disciplined-research/rubrics/dr-07.md) | Response/interaction applicability, user-premise handling, source mapping, ordinary-response outcome, fixture, prompt, or rubric change |
 
 ## Task 18A contract freeze (2026-08-09)
 
@@ -98,8 +99,17 @@ and accepted plan SHA-256
 Low-effort evidence is robustness-only; the preservation gate is the exact 5/5
 high result.
 
-Adding the post-draft `DR-06` target expands the Task 18A candidate union from 27 to 28 unique scenarios, or 140 Sol-high evaluator slots.
-After `DR-06` and the other watched targets reach GREEN, the future repository closure is 86 scenarios or 430 five-repetition slots.
+The final Task 18A redesign includes `DR-07` and expands the changed-skill union to
+45 unique scenarios or 225 Sol-high evaluator slots. `DR-07` composes with
+`DISC-12`: discovery owns routing, while this record owns source acquisition,
+premise correction, the derived fifteen-minute result, and support disclosure.
+
+### Task 18A final union result (2026-08-13)
+
+The current `DR-01`–`DR-07` application suite passed **35/35**, and the separately
+owned discovery suite passed **60/60** with research required in every cell.
+Complete hashes and per-response verdicts are in
+[the Task 18A provenance manifest](task-18a-provenance.json).
 
 ### Immutable bundle manifests
 

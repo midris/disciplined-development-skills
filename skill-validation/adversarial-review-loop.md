@@ -2,7 +2,7 @@
 
 ## Active catalog audit (2026-08-04)
 
-The shared all-nine [discovery suite](skill-discovery.md#active-catalog-definitions) owns initial routing, including `DISC-02` for already-surfaced findings; its latest applicable arm is 50/50 across `DISC-01`–`DISC-10`.
+The shared all-nine [discovery suite](skill-discovery.md#active-catalog-definitions) owns initial routing, including `DISC-02` for already-surfaced findings; its latest applicable arm is 60/60 across `DISC-01`–`DISC-12`.
 Shared concise-writing targets [`CW-09`](concise-writing.md#cw-09--skill-authoring-co-selection) and [`CW-11`](concise-writing.md#cw-11--reference-authoring-co-selection) protect the negative routing boundary for skill and bundled-reference authoring at 10/10.
 This record owns remediation behavior after findings surface. The parent validation links the shared routes and `OWN` rather than duplicating them.
 
@@ -21,6 +21,10 @@ The historical evidence reduces to fifteen active owned scenarios under the comm
 | Cold-read result branches | Add | `CE` covers confirmed-redo, divergent-stop, and productive-fix-forward/reset |
 
 Classification: **Keep 0, Repair 14, Merge 3, Retire 3, Add 1**.
+
+The final Task 18A union passed the separately owned `OWN` composition contract
+**5/5**. Complete provenance is in
+[the Task 18A manifest](task-18a-provenance.json).
 
 The exact active definitions, ownership, affected skills, prompt/rubric links, supplied contexts, and rerun triggers are in [adversarial-review-loop-scenarios.md](adversarial-review-loop-scenarios.md).
 
@@ -46,7 +50,7 @@ Exact provenance is in the
 
 | Skill section | Is it needed, and would a simpler approach preserve intent? | Smallest evidence mapping |
 |---|---|---|
-| Frontmatter | Needed for positive routing to surfaced-finding remediation and negative exclusion from unrelated authoring; shared routing cells are simpler than duplicating routing here | `DISC-01`–`DISC-10`, `CW-09`, `CW-11` |
+| Frontmatter | Needed for positive routing to surfaced-finding remediation and negative exclusion from unrelated authoring; shared routing cells are simpler than duplicating routing here | `DISC-01`–`DISC-12`, `CW-09`, `CW-11` |
 | Scope and precedence | Needed because task and whole-branch loops have incompatible caps and reviewers; one transition matrix is sufficient | `OWN` |
 | The pattern | Needed as the core remediation sequence; its class, singular, P3, rerun, and different-class branches remain independently observable | `CS`, `T2`, `T5`–`T7` |
 | Iteration cap | Needed and load-bearing; exact cycle state plus one scattered below-cap counterexample is the compact guard | `T3`, `T4` |
@@ -86,9 +90,10 @@ The exact manifests and prompt/rubric hashes are in [the replay artifact manifes
 | `CE` | Loop-only | **5/5** | P P P P P | None | 0 |
 
 Owned aggregate: **75/75 PASS**.
-Shared discovery closure (`DISC-01`–`DISC-10`, latest applicable arms): **50/50 PASS**.
+The then-current shared discovery closure (`DISC-01`–`DISC-10`) was **50/50 PASS**;
+the final Task 18A closure is **60/60 PASS** across `DISC-01`–`DISC-12`.
 Shared authoring-boundary closure (`CW-09` and `CW-11`, current GREEN arms): **10/10 PASS**.
-Complete active closure: **135/135 PASS**.
+Complete active closure: **145/145 PASS**.
 Cold review invalidated and restarted `CS` for direct recurrence pressure and `G3C` for concrete, non-leaky review history.
 The first repaired `G3C` fixture scored 3/5 because its cycle-3 wording plausibly introduced a premise absent from cycle 2; the owner approved classifying that as fixture ambiguity, cycle 2 was repaired to state the same documented premise, and the final five-repetition restart passed 5/5.
 Two completed runs emitted a non-fatal available-model refresh warning before evaluation; both produced full responses and therefore are not infrastructure errors.

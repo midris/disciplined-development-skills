@@ -245,12 +245,13 @@ Return only a table with `Location` and `Plan text` columns. You may add a `Sour
 ### Current parent-architecture attribution (2026-08-10)
 
 `WER-07` remains owned here as five separately attributed child-composition slots.
-It tests rationale-method composition and is never pooled into the 15-slot
-`DD-01`–`DD-03` parent acceptance denominator. Child invocation, loading, rationale
+It tests rationale-method composition and is never pooled into the 45-slot
+`DD-01`–`DD-09` parent acceptance denominator. Child invocation, loading, rationale
 output quality, and research correctness/disclosure remain attributable to their
-owning contracts and are not parent PASS/FAIL criteria. Fresh
-post-parent-architecture validation is pending; the evidence below remains
-historical under its recorded contract.
+owning contracts and are not parent PASS/FAIL criteria. The final Task 18A union
+passed `WER-07` **5/5**; the evidence below remains historical under its recorded
+contract. Complete current provenance is in
+[the Task 18A manifest](task-18a-provenance.json).
 
 ### Task 18A WER-07 freeze
 
@@ -284,6 +285,12 @@ The control root `/private/tmp/dd-task18a-control-postfreeze-f59608a` has freeze
 and plan `4de14a3e7531c8cf0e6258f82c9c8050b849ca9d0f0f8c1c633248dafcd81b4b`.
 All selected attempts were a1 with zero retries/errors under Codex CLI 0.147.0,
 read-only/no-agents transport.
+The final behavior-first rubric is SHA-256
+`9cf7a96a1ed25794a630a1642c7255eac9b417623cb4f6759bfb81bcdac19b4c`.
+Fresh re-adjudication of the same frozen response bytes scored high 3/5 and low
+5/5. The watched high control therefore remains RED; low remains robustness only.
+The shared record carries the fresh scorer provenance, while `877f8a42…` remains
+the historical prior-rubric epoch.
 The context-stripped `289ef0fd…` aggregate is transport-defective historical
 evidence only.
 

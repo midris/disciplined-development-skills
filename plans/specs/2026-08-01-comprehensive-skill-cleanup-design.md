@@ -100,7 +100,7 @@ commit separate from Task 22's readability cleanup.
 During Task 18, review of `disciplined-research` exposed that its load-bearing and
 destination tests left factual claims outside the grounding contract. On 2026-08-09
 the owner approved a separate RED/GREEN behavior slice with the exact discovery
-description `Use before stating any factual claim.` The body must apply one rule to
+description `Use before every response, interaction, action, or task that will state, repeat, transform, or rely on a factual claim or premise—including internal logical review of supplied text, claims and premises supplied by the user or embedded in requested work, plus mechanical edits, searches, and verification.` The body must apply one rule to
 every factual claim, including claims in casual answers and private notes: acquire
 the fact from the best available source, verify it before stating it, and disclose
 the source. It must not retain a load-bearing threshold, a destination test, a
@@ -141,12 +141,15 @@ reclassify `DD-01`, `DD-02`, `DD-03`,
 `DSD-01`, `DSD-02`, `OWN`, and `WER-07` against universal grounding, repair and
 backfill each changed contract at Sol high and low, and classify new positive
 routing as target behavior. Require the combined candidate to reach 5/5 on the complete affected
-discovery, disciplined-research, disciplined-development, and sweeping-stale-references suites. Show complete proposed versions of all three changed skills and obtain approval before applying them; after review, show all three complete final skills in place and obtain final approval. After watched
+discovery, disciplined-research, disciplined-development, dispatch, review-loop,
+and sweeping-stale-references suites. Show complete proposed versions of all five
+changed skills and obtain approval before applying them; after review, show all
+five complete final skills in place and obtain final approval. After watched
 REDs, candidate GREEN, cold review, staged adversarial review, final in-place
 approval, and repository verification, commit the behavior slice separately. That
-commit becomes Task 18's immediate readability control, and the active closure
-becomes 86 scenarios or 430 five-repetition slots only after all Task 18A routing
-and application targets are GREEN. The pre-draft discovery reclassification determines the final
+commit becomes Task 18's immediate readability control. The then-current closure
+forecast was 86 scenarios / 430 slots; the 2026-08-13 atomic/composite redesign
+below supersedes that forecast. The pre-draft discovery reclassification determines the final
 preservation/target split; a new positive-routing promise is target behavior, not a
 preservation requirement retroactively imposed on the old description.
 
@@ -173,6 +176,29 @@ contracts completed their post-freeze 80-slot rerun. `DISC-04` is target RED at
 `DISC-05` is preservation at 5/5 high and low. Contextful application scoring over
 the five changed application contracts is complete at 10 processes/50 verdicts;
 the other 12 accepted controls remain exact evidence.
+
+On 2026-08-13 the owner approved expanding the test architecture before final
+Task 18A closure. The changed-skill union is now 45 scenarios / 225 Sol-high slots:
+12 discovery, seven research, nine parent, nine dispatch, one review-ownership, one
+rationale-composition, and six stale-reference scenarios. Thirteen of those are new
+single-seam tests (`DD-05`–`DD-09`, `DSD-06`–`DSD-11`, `SSR-06`–`SSR-07`);
+the retained broad scenarios still exercise end-to-end composition. Acceptance is
+per scenario and owner, never pooled. The earlier forecast of 86 repository-closure
+scenarios is superseded and must be recomputed by Tasks 26–27 after this expanded
+catalog lands.
+
+Final-union scoring also enforces three fail-closed seams discovered in complete
+artifacts: a dispatched subagent reports direct running-system verification as
+passed, failed/blocking, or not exercisable before handing a parent gate back, and
+a stale-reference search pairs every applicable old symbol/prose form with its
+intended new symbol/prose form. The parent also makes every supplied applicable
+source—including external sources—the first read at a session/phase/governing-
+artifact boundary and at Gate 5 self-review. Focused fresh validation passed the
+repaired paths before the final union restarted from zero. A later union exposed
+one parent response that treated the requirements reread as sufficient to release
+implementation planning. The final parent clarification keeps that transition
+blocked until complete written scope and required sign-off; focused validation and
+exact-hash cold review passed before the union restarted again from zero.
 
 The accepted affected-rerun control root is
 `/private/tmp/dd-task18a-control-postfreeze-f59608a`, with freeze SHA-256

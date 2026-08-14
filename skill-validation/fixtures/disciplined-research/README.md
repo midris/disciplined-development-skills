@@ -1,6 +1,6 @@
 # disciplined-research Task 18A replay artifacts
 
-These files freeze the exact evaluator prompts, evaluator-withheld rubrics, and task fixtures for `DR-04` through `DR-06`.
+These files freeze the exact evaluator prompts, evaluator-withheld rubrics, and task fixtures for `DR-04` through `DR-07`.
 Evaluators receive the matching prompt and immutable read-only bundle, never the rubric or this manifest.
 
 ## Supplied contexts
@@ -8,6 +8,13 @@ Evaluators receive the matching prompt and immutable read-only bundle, never the
 Both controls use `skills/disciplined-research/SKILL.md` from control commit `4296647f0dff48a9e77b979ef07e813bf1f66db2` at SHA-256 `a5c4079e5aa21651ecd39b09e3fb2d9a58f4a1f3b99354b3b6927b2d44c6fb50`.
 `DR-04` adds `project/payments/retry_policy.py`; `DR-05` adds `sources/nimbus-support-matrix.md`.
 `DR-06` adds `project/upload-403/evidence-index.md`, a malformed `runtime-config.json`, and `worker.log`.
+`DR-07` uses the current research skill at SHA-256
+`f4001332065b9829b0e9893e7289842c17e1c6cde6f627aa6bba211ca873f8c9`
+plus `sources/north-annex-hours.md` at SHA-256
+`876d614b194ace2d807a947223565f3fdc9a597be45c6c1b753a9252a65e45da`.
+Its prompt/rubric SHA-256 values are
+`54850a6aff5bb87f231cdf5b765c0437901a8a3e4debe9e064b36c0670219c4c`
+/ `a29cde034d63ecfc229e3821435e92dfe6c33dc348f4b3cef03fb151db4a3bd3`.
 Its repaired-rubric arms use the same fixture. Accepted RED remains at rubric SHA-256 `c479c2083bf950217e631b75db7b84a6166e81be4c05f9aaebacaec6981df7b1`; failed candidate `a0497ff8c763f1dcb474fbdfbdbb46026851f06b4ecd4b3f3993eb869709db80` remains historical; accepted separate-root GREEN uses candidate SHA-256 `381a10aaa01b17e02d863287718c2e6cfde5c5ac587f42921146726a49725fc5`.
 The canonical bundle-manifest hashes are recorded in the owning [validation record](../../disciplined-research.md#task-18a-contract-freeze-2026-08-09).
 

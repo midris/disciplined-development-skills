@@ -7,21 +7,15 @@ The shared all-nine discovery suite remains owned by
 `DISC-08` is the positive route for `sweeping-stale-references` and passed 5/5 on
 the immutable original control and 5/5 on the current parent-routing target.
 The active application path protected here is `DISC-08` →
-`sweeping-stale-references` → `SSR-01`–`SSR-03`, `SSR-05`.
+`sweeping-stale-references` → `SSR-01`–`SSR-03`, `SSR-05`–`SSR-07`.
 
-Task 18A's live-reference sweep found that this skill's ownership boundary assigns
-initial grounding of a “load-bearing fact” to `disciplined-research`. That phrase
-narrows the research companion's newly universal factual-claim rule, so a later
-prose repair is required even though this skill's own development-only trigger and
-sweep procedure do not change. No tracked skill bytes have changed in the
-pre-draft freeze.
-
-Task 18A therefore adds this complete active suite to the candidate union:
-`DISC-08`, `SSR-01`, `SSR-02`, `SSR-03`, and `SSR-05`. Before any edit,
-the orchestrator must show the complete proposed sweeping skill and obtain approval.
-After candidate validation and review, the orchestrator must show the complete final
-skill in place and obtain final approval. Any finding-driven sweeping-skill edit
-restarts its affected suite and both approval gates.
+Task 18A's live-reference sweep found that the former “load-bearing fact” ownership
+boundary narrowed the research companion's universal factual-claim rule. The
+applied repair assigns initial factual grounding without that narrowing and makes
+old/new encoding plus causal/tradeoff preservation auditable. The expanded current
+union is `DISC-08`, `SSR-01`–`SSR-03`, and `SSR-05`–`SSR-07`; `SSR-06` and
+`SSR-07` isolate inventory and rationale behavior while `SSR-01` retains their
+composition.
 
 The four historical scenario families were classified before defining the active
 skill-owned suite:
@@ -34,14 +28,27 @@ skill-owned suite:
 | Large-sweep grouping | Repair | Reconstruct its scale and grouping promises as deterministic five-repetition `SSR-03`; the historical GREEN result was only 3/3 and lacked a replayable exact fixture |
 
 No prior skill-owned scenario met the common protocol unchanged. After the scope
-repair the audit totals are **Keep 0, Repair 2, Merge 0, Retire 1, Add 2**.
-Safe simple direct invocation and the required negative form were missing, so
-`SSR-01` and `SSR-05` are Add. `SSR-04` is Retire: its non-software policy prompt
+repair the audit totals are **Keep 0, Repair 2, Merge 0, Retire 1, Add 4**.
+Safe simple direct invocation, the required negative form, atomic inventory, and
+atomic rationale preservation were missing, so `SSR-01`, `SSR-05`, `SSR-06`, and
+`SSR-07` are Add. `SSR-04` is Retire: its non-software policy prompt
 tested domain breadth outside this development companion's authored contract.
 
-The four active owned scenarios are the smallest suite that keeps simple use,
+The owner-approved `SSR-07` prompt repair restarted high control, low control, and
+current validation at zero; all three passed **5/5**. The subsequent complete
+six-scenario sweep and final union slice both passed **30/30** behaviorally.
+Complete hashes and verdicts are in
+[the Task 18A provenance manifest](task-18a-provenance.json).
+
+The later superseded v62 union exposed one genuine `SSR-01` miss: the response
+searched the intended new symbol but omitted the corresponding intended new prose
+form. The repaired search rule and fresh v63 `SSR-01` arm passed **5/5** before the
+complete union restarted at zero.
+
+The six active owned scenarios are the smallest suite that keeps simple use,
 reviewer-pressure completeness, scale grouping, and the negative branch independently
-scorable in the intended development domain.
+scorable in the intended development domain while isolating exact replacement
+inventory and rationale/tradeoff preservation from the `SSR-01` composite.
 One unified Search → Triage → Reconcile contract serves `SSR-01` and `SSR-02`;
 `SSR-03` and `SSR-05` remain separate because grouped positive evidence and the
 `n/a` branch are mutually exclusive output contracts.
@@ -76,7 +83,7 @@ manual scoring; rubric withheld.
 `SSR-02`–`SSR-05` ran on 2026-08-02; repaired `SSR-01` ran on 2026-08-03.
 All five recorded scenarios, including retired `SSR-04`, had zero infrastructure errors.
 
-The owner and sole affected repository skill for the four active IDs is
+The owner and sole affected repository skill for the six active IDs is
 `sweeping-stale-references`.
 `SSR-01` receives the immutable complete nine-skill control plus its project fixture.
 `SSR-02`–`SSR-05` receive only the immutable control
@@ -85,10 +92,12 @@ No external skill dependency or live web access is supplied.
 
 | ID | Type / status | Protected promise and section | Supplied context | Exact prompt | Evaluator-withheld rubric | Rerun trigger |
 |---|---|---|---|---|---|---|
-| `SSR-01` | Simple application + direct invocation / preservation | An uncomplicated load-bearing rename uses literal and obvious-synonym search, sweeps an attached rationale comment, follows Search → Triage → Reconcile, produces one coherent update, and records ordinary evidence before verification; Role, Overview, Quick reference, Procedure, Output artifact | Complete nine-skill control + simple project fixture | [SSR-01](#ssr-01--simple-direct-rename) | Inspect both project files; rename the exact form to `SESSION_TTL_MINUTES` and both prose references to `session TTL`, including the rationale comment; account for three updates in one `References swept:` section; preserve the comment's causal and accepted-tradeoff content; place `Verification:` after the sweep; add no unrelated skill procedure, unsupported match, blocker, or narration | Trigger, direct invocation, ownership, literal/synonym search, rationale-comment sweep, three-step procedure, reconciliation, or ordinary artifact placement changes |
+| `SSR-01` | Simple application + direct invocation / preservation | End-to-end rename smoke: literal and obvious-synonym discovery, rationale-aware reconciliation, truthful durable sweep evidence, then verification compose into one coherent update; atomic inventory and rationale assertions are owned by `SSR-06` and `SSR-07` | Complete nine-skill control + simple project fixture | [SSR-01](#ssr-01--simple-direct-rename) | Inspect both project files and compose the load-bearing symbol/prose rename, preservation of its causal and accepted-tradeoff meaning, complete truthful `References swept:` evidence, and subsequent `Verification:` without a broken seam or unrelated procedure; complete inspection of both supplied files plus old/new symbol and prose-form search is an effective semantic sweep here—do not require the word `semantic`, another search-tool label, or unrelated synonyms; because the evaluator is read-only, truthful `Verification:` may report observed pre-edit discovery/inspection evidence and must not be failed for lacking a fabricated post-edit clean state; an additional observed project check such as parsing does not replace the sweep but does not fail a complete sweep; transparently classified candidates actually observed in a broad search do not fail merely because they need no update; do not fail exact wording or layout differences | Trigger, direct invocation, ownership, discovery-to-reconciliation composition, rationale-aware rename composition, or durable-evidence ordering changes |
 | `SSR-02` | Non-trivial application + focused regression / preservation | One reviewer hit is a sample; IDE rename is insufficient; broad file-category search, three classifications, vendor/archive treatment, immutable-history exclusion, complete accounting, and one-commit reconciliation survive pressure; Overview, Procedure, What counts as a reference, Output artifact, Rationalizations | Single-skill control + deterministic match inventory | [SSR-02](#ssr-02--reviewer-one-hit-completeness) | Account for all 13 mutable-tree matches: 10 update, 1 intentionally stale with reason, and 2 false positives with reasons; cover code, docs/comments, tests/fixtures, config, scripts, CI, and build; exclude three immutable-history search hits rather than classifying them; treat the reviewer hit as a sample and reject IDE sufficiency; reconcile the 13 outcomes; put `References swept:` before `Verification:`; add no unsupported match, blocker, or narration | Reviewer-one-hit, literal/synonym scope, file-category scope, triage labels, vendor/archive/history scope, reconciliation, or artifact changes |
-| `SSR-03` | Non-trivial application + focused regression / preservation | Large sweeps group only by path and outcome, retain exact locations and counts, reconcile every subtotal, group before taking the body-size exception, and verify last; Output artifact | Single-skill control + exact 126-match inventory | [SSR-03](#ssr-03--126-match-grouped-sweep) | Produce exactly 10 path/outcome entries; preserve every supplied line range and path count; classify 80 updates, 40 intentionally stale, and 6 false positives; reconcile each class and 126 total; do not group across paths or outcomes; state that grouping was applied before the correctness-evidence size exception; place `Verification:` after the sweep | Grouping predicate, precise-location rule, count reconciliation, body-size exception, or placement changes |
-| `SSR-05` | Focused regression / preservation | A deterministic single-file change with no sibling matches uses the required `References swept: n/a — <reason>` negative form before verification; Quick reference, Output artifact, Rationalizations | Single-skill control + zero-sibling search report | [SSR-05](#ssr-05--required-negative-form) | Given the fixture-proven complete search with no sibling match, emit the exact line `References swept: n/a — change affects only this file.` and put `Verification:` after it; do not invent positive entries, extra matches, a blocker, or procedural narration | Single-file/no-sweep branch, required negative form, small-change rationalization, or placement changes |
+| `SSR-03` | Non-trivial application + focused regression / preservation | Large sweeps group only by path and outcome, retain exact locations and counts, reconcile every subtotal, group before applying the body-size preference, and preserve correctness evidence if an exception is needed; Output artifact | Single-skill control + exact 126-match inventory | [SSR-03](#ssr-03--126-match-grouped-sweep) | Preserve all 10 path/outcome groups, every supplied line range and path count, 80 updates, 40 intentionally stale matches, 6 false positives, and the reconciled total of 126; do not group across paths or outcomes; group before applying the normal body-size preference, but retain complete correctness evidence if the grouped artifact still exceeds it; place verification after the sweep evidence | Grouping predicate, precise-location rule, count reconciliation, body-size exception, or placement changes |
+| `SSR-05` | Focused regression / preservation | A deterministic single-file change with no sibling matches uses a truthful `References swept: n/a — <reason>` negative record before verification; Quick reference, Output artifact, Rationalizations | Single-skill control + zero-sibling search report | [SSR-05](#ssr-05--required-negative-form) | Given the fixture-proven complete search with no sibling match, record `References swept: n/a` with the truthful single-file reason before verification; do not invent positive entries, extra matches, or a blocker. Truthful concise search evidence and equivalent wording or verification shape do not fail the behavior | Single-file/no-sweep branch, required negative form, small-change rationalization, or placement changes |
+| `SSR-06` | Atomic inventory regression | Exactly three updates are identified across symbol, attached rationale, and documentation prose, without inventing extra matches; `SSR-01` owns their final composition | Complete current bundle + simple project fixture | [prompt](fixtures/sweeping-stale-references/prompts/ssr-06.md) | [rubric](fixtures/sweeping-stale-references/rubrics/ssr-06.md) | Update-entry completeness, old/new encoding, attached-rationale accounting, match-count truthfulness, or verification-order change |
+| `SSR-07` | Atomic rationale regression | The prose rename preserves both the actual partner constraint and the accepted cost of more frequent refreshes | Complete current bundle + simple project fixture | [prompt](fixtures/sweeping-stale-references/prompts/ssr-07.md) | [rubric](fixtures/sweeping-stale-references/rubrics/ssr-07.md) | Causal fact, constraint, accepted tradeoff, intended replacement, or rationale-preservation change |
 
 ### Retired exploratory cross-domain scenario
 

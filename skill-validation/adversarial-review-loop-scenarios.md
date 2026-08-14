@@ -6,7 +6,7 @@ Every active scenario runs five fresh Sol-high repetitions; evaluators receive o
 
 The owner of all IDs below is `adversarial-review-loop`.
 `OWN` also affects `disciplined-development` and `disciplined-research`; every other owned ID affects only `adversarial-review-loop`.
-Shared `DISC-01`–`DISC-10` retain Task 1 ownership and affect all nine skills through routing.
+Shared `DISC-01`–`DISC-12` retain Task 1 ownership and affect all nine skills through routing.
 Shared `CW-09` and `CW-11` retain `concise-writing` ownership and affect `adversarial-review-loop` through their negative authoring-routing boundary.
 
 ## Active catalog
@@ -35,10 +35,10 @@ Exact bundle and file hashes are in [the fixture manifest](fixtures/adversarial-
 
 `OWN` remains owned here as five separately attributed child-composition slots.
 It tests review-loop procedure and ownership composition and is never pooled into
-the 15-slot `DD-01`–`DD-03` parent acceptance denominator. Child invocation,
+the 45-slot `DD-01`–`DD-09` parent acceptance denominator. Child invocation,
 loading, output quality, and research correctness/disclosure are not parent
-PASS/FAIL criteria. Fresh post-parent-architecture validation is pending; the
-evidence below remains historical under its recorded contract.
+PASS/FAIL criteria. The fresh Task 18A union passed `OWN` **5/5**; the evidence
+below remains historical under its recorded contract.
 
 ## Task 18A OWN freeze
 

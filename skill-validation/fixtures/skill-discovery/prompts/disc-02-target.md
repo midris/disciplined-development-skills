@@ -12,9 +12,9 @@ concise-writing: Use whenever generating or revising reader-facing prose for pro
 
 disciplined-development: Use when doing development work. If available, load this parent with every applicable companion. Triggers: starting/resuming work; writing/reviewing code, plans, specs, designs, or docs; researching project or external facts; bug/finding fixes; active-plan work; delegation; and verification, commit, review, PR, or completion boundaries.
 
-disciplined-research: Use before stating any factual claim.
+disciplined-research: Use before every response, interaction, action, or task that will state, repeat, transform, or rely on a factual claim or premise—including internal logical review of supplied text, claims and premises supplied by the user or embedded in requested work, plus mechanical edits, searches, and verification.
 
-dispatching-development-subagents: Use when dispatching a development subagent whose code changes you will integrate — an implementation task, a fix for a review finding, or a parallel batch of changes. Triggers: "dispatch a subagent", "spawn an agent", delegating a fix, fanning a change out across files, or before trusting a subagent's commits or diff.
+dispatching-development-subagents: Use when dispatching a development subagent whose code changes you will integrate — an implementation task, a fix for a review finding, or a parallel batch of changes. Triggers: "dispatch a subagent", "spawn an agent", delegating a fix, fanning a change out across files, or before trusting a subagent's commits or diff. When this skill applies, `disciplined-research` also applies to factual premises in the dispatch, returned handoff, and landed prose.
 
 lean-plan-writing: Use with `superpowers:writing-plans` whenever the deliverable is a plan or spec — new plans, plan edits, spec drafts, spec amendments. Triggered by "write a plan for X", "draft a spec", "update the plan", "edit the design doc", "add a task to the plan".
 
@@ -22,4 +22,4 @@ sweeping-stale-references: Use when changing a load-bearing fact that appears in
 
 writing-explicit-rationale: Use when a plan, spec, policy, design, or code choice needs durable reasoning to understand correctness or guide a future decision; especially for descopes, deferrals, exceptions, defensible alternatives, repeated re-litigation, or rationale that exists only in chat, a commit, or a PR.
 
-User request: An external reviewer has already reported two defects. Help me handle those findings.
+User request: An external reviewer has already reported two defects. Remediate those reported findings; do not perform a new review.

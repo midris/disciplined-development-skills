@@ -1,0 +1,3120 @@
+{
+  "cold_skill_review": {
+    "artifact": "/private/tmp/task18a-final-cold-review.md",
+    "dd01_followup_artifact": "/private/tmp/task18a-dd01-final-cold-review.md",
+    "dd01_followup_result": "No P0-P3 findings; VERDICT: PASS",
+    "dd01_followup_sha256": "0c9c26b98287a64648a9603383c349e1443be00f59bb733072875a3abf23e719",
+    "dd02_final_artifact": "/private/tmp/task18a-dd02-v61-cold-review.md",
+    "dd02_final_result": "No P0-P3 findings; VERDICT: PASS",
+    "dd02_final_sha256": "662c285d5134df8dc859d9138833c64ac8df1f637855a22f396170e4bcf66627",
+    "dispatch_followup_artifact": "/private/tmp/task18a-dispatch-final-cold-review.md",
+    "dispatch_followup_result": "No P0-P3 findings; VERDICT: PASS",
+    "dispatch_followup_sha256": "0c9c26b98287a64648a9603383c349e1443be00f59bb733072875a3abf23e719",
+    "final_two_skill_artifact": "/private/tmp/task18a-v64-two-skill-cold-review.md",
+    "final_two_skill_result": "No P0-P3 findings; VERDICT: PASS",
+    "final_two_skill_sha256": "9ef9e2386020785b81f400172ad261321aa9705263c26fc50e02477084dc87ae",
+    "parent_final_artifact": "/private/tmp/task18a-v72-parent-cold-review.md",
+    "parent_final_result": "No P0-P3 findings; VERDICT: PASS",
+    "parent_final_sha256": "9ef9e2386020785b81f400172ad261321aa9705263c26fc50e02477084dc87ae",
+    "parent_first_artifact": "/private/tmp/task18a-v67-parent-cold-review.md",
+    "parent_first_result": "P2 supplied-external-source wording and pending-hash bookkeeping; VERDICT: BLOCK",
+    "parent_first_sha256": "079255d204425ddf409c1405e54f2faad762ea7181d923d978c0939f6c54ec52",
+    "research_rereview_artifact": "/private/tmp/task18a-research-final-cold-rereview.md",
+    "research_rereview_result": "No P0-P3 findings; VERDICT: PASS",
+    "research_rereview_sha256": "0c9c26b98287a64648a9603383c349e1443be00f59bb733072875a3abf23e719",
+    "research_review_artifact": "/private/tmp/task18a-research-final-cold-review.md",
+    "research_review_result": "P2 plan-record mismatch; VERDICT: BLOCK",
+    "research_review_sha256": "f6665b6bceb9f36e678aabc3fa6a9b17eee33286f692572433b9f94f678203d7",
+    "result": "No P0-P3 findings; VERDICT: PASS",
+    "sha256": "a1d1c1ab00e26b00ac8807738dd6805e9839ada2d91dc783eff3ba4bd6cc5fe3"
+  },
+  "contract_repairs": {
+    "DD-01-branch-finishing-order": {
+      "failed_epoch_root": "/private/tmp/task18a-final-union-v51",
+      "focused_current": {
+        "adjudication": "All five repaired the real ordering failure. The scorer demanded a hypothetical ambiguity branch absent from row F and redundant scope-pressure narration in row H.",
+        "descriptive_result": "0/5",
+        "final_behavioral_result": "5/5",
+        "root": "/private/tmp/task18a-dd01-finishing-order-v52"
+      },
+      "reason": "The compact Gate 5 summary was made consistent with the detailed rule: PR creation waits for branch-finishing invocation, not workflow completion."
+    },
+    "DD-01-planning-block-salience": {
+      "failed_epoch_root": "/private/tmp/task18a-final-union-v71",
+      "final_skill_sha256": "872529574af4f4fabcd58ff3721ce6c241af99936c19403b40abca7e9c252e8b",
+      "focused_current": {
+        "result": "DD-01 5/5",
+        "root": "/private/tmp/task18a-dd01-planning-block-v72"
+      },
+      "reason": "Union v71 exposed one response that released implementation planning after the requirements reread rather than after complete written scope and required sign-off. The existing Gate 2 timing rule was made explicit."
+    },
+    "DD-02-final-ordering": {
+      "failed_epoch_root": "/private/tmp/task18a-final-union-v60",
+      "focused_current": {
+        "result": "5/5",
+        "root": "/private/tmp/task18a-final-repairs-v61"
+      },
+      "reason": "The final union exposed three executable composition misses: known unauthorized work was not always explicitly disposed, Gate 5 rereading could be named without preceding self-review, and code remediation could precede expected RED."
+    },
+    "DD-parent-source-and-scope-salience": {
+      "failed_epoch_root": "/private/tmp/task18a-final-union-v65",
+      "final_focused": {
+        "adjudication": "All five DD-01 outputs separated the unsupported-abstraction review finding from the remediation-method owner; nominal misses conflated disposition with implementation ownership.",
+        "descriptive_result": "DD-01 0/5; DD-09 5/5",
+        "final_behavioral_result": "DD-01 5/5; DD-09 5/5",
+        "root": "/private/tmp/task18a-parent-all-sources-v69"
+      },
+      "final_skill_sha256": "872529574af4f4fabcd58ff3721ce6c241af99936c19403b40abca7e9c252e8b",
+      "first_focused": {
+        "result": "DD-01 4/5; DD-02 5/5; DD-05 5/5",
+        "root": "/private/tmp/task18a-parent-salience-v66"
+      },
+      "reason": "Union v65 exposed genuine omissions of evidence-required scope limits, first-action reading of every supplied source, and requirements rereading before plan drafting. Focused repairs converged, then cold review exposed that governing/task source wording still excluded separately categorized supplied external sources.",
+      "scope_limit_focused": {
+        "result": "DD-01 5/5",
+        "root": "/private/tmp/task18a-dd01-scope-limit-v67"
+      }
+    },
+    "DISC-01": {
+      "failed_epoch_root": "/private/tmp/task18a-final-union-v49",
+      "focused_current": {
+        "result": "5/5",
+        "root": "/private/tmp/task18a-disc01-routing-v50"
+      },
+      "reason": "A v49 current repetition omitted disciplined-research for internal logical review of supplied text; the routing description was made explicit and restarted."
+    },
+    "DISC-02": {
+      "control_high": {
+        "freeze_sha256": "1e3c3afd6aa154b69ee85c7bd853f8df0cc4b5295890261d0e48b71e57eee401",
+        "result": "0/5",
+        "root": "/private/tmp/task18a-disc02-repaired-control-high-v41"
+      },
+      "control_low": {
+        "freeze_sha256": "b34db825bb142b9e4058686c2439ddeefa2c172cc7d30a85aa600495666f6745",
+        "result": "0/5",
+        "root": "/private/tmp/task18a-disc02-repaired-control-low-v41"
+      },
+      "current_control_prompt_sha256": "3dcebec6b967ccd13e025673a4ce65f34eedbacc7bc8d74e18d4b32a363731ab",
+      "current_prompt_sha256": "16506525e0f9ec43e2d5099aa411564492880a9ed8c5230c1407a20be7bc7682",
+      "prompt_ambiguity_current_high": {
+        "freeze_sha256": "4a7c5097457077e70c3a8399b8a94806a155bec94abb512852f7248482a6fd01",
+        "result": "5/5",
+        "root": "/private/tmp/task18a-disc02-repaired-current-v42"
+      },
+      "prompt_ambiguity_target_sha256": "42ab326f2358b25b803d4a6f6a93a6642cbf64fc41d3c8654e5f681c21d0219b"
+    },
+    "DR-04-DR-06-source-set": {
+      "focused_current": {
+        "result": "DR-04 5/5; DR-06 3/5",
+        "root": "/private/tmp/task18a-research-source-set-v54"
+      },
+      "reason": "One response skipped a supplied implementation and one inferred unavailable-file contents from its name; complete-source inspection and no-filename-inference rules were made explicit."
+    },
+    "DR-06-truncation-observation": {
+      "focused_current": {
+        "result": "5/5",
+        "root": "/private/tmp/task18a-dr06-truncation-v55"
+      },
+      "reason": "An incomplete source must still contribute every datum visible in its supplied portion; truncation cannot replace a present observation."
+    },
+    "DSD-02-direct-verification-bookkeeping": {
+      "failed_epoch_root": "/private/tmp/task18a-final-union-v62",
+      "first_focused": {
+        "result": "4/5",
+        "root": "/private/tmp/task18a-final-repairs-v63"
+      },
+      "focused_current": {
+        "result": "5/5",
+        "root": "/private/tmp/task18a-dispatch-bookkeeping-v64"
+      },
+      "reason": "The v62 union exposed one response that allowed an ordinary test to substitute for direct running-system evidence; the first repair then exposed a report template with no truthful failed/blocking outcome."
+    },
+    "DSD-06-executable-scope": {
+      "final_focused": {
+        "result": "5/5",
+        "root": "/private/tmp/task18a-dsd06-noextras-v58"
+      },
+      "locator_focused": {
+        "result": "4/5",
+        "root": "/private/tmp/task18a-dsd06-locator-v57"
+      },
+      "reason": "Dispatches may not invent a host-global skill locator, and an explicit one-finding/do-not-widen contract forbids acting on extras."
+    },
+    "DSD-07-one-finding-contract": {
+      "current_rubric_sha256": "50e6f2c823ff942820f99c659d2f660230359d380edc9ffa99048c6c05243d86",
+      "focused_current": {
+        "result": "5/5",
+        "root": "/private/tmp/task18a-final-repairs-v61"
+      },
+      "old_rubric_sha256": "0a86952e4fe73cac98de5dfb235eb8c5468e689dad5e0828120e5c1d43788291",
+      "reason": "The rubric retained the general safe-extra gradient after the approved explicit one-finding/do-not-widen contract made this prompt a no-extras dispatch."
+    },
+    "OWN-third-round-state": {
+      "current_prompt_sha256": "97908401be96002414033827828d8bb10def56050b10e839f600a45a5462132a",
+      "focused_current": {
+        "result": "5/5",
+        "root": "/private/tmp/task18a-final-repairs-v61"
+      },
+      "reason": "The prompt said the task reached round three while the rubric assumed three blocking rounds were complete; the prompt now fixes the completed-cycle state."
+    },
+    "SSR-01-new-prose-search": {
+      "failed_epoch_root": "/private/tmp/task18a-final-union-v62",
+      "focused_current": {
+        "result": "5/5",
+        "root": "/private/tmp/task18a-final-repairs-v63"
+      },
+      "reason": "One v62 response searched the intended new symbol but omitted the corresponding intended new prose form; the search rule now makes both encodings explicit."
+    },
+    "SSR-07": {
+      "control_high": {
+        "freeze_sha256": "6a48b49fe730d796c6db364128fad94fdcf18e19eec2cc06d79f676c130a6e61",
+        "result": "5/5",
+        "root": "/private/tmp/task18a-ssr07-repaired-control-high-v37"
+      },
+      "control_low": {
+        "freeze_sha256": "357164cabe7fa573aa98c7419ff618ab1ffb3ca1409ce44d07c31510a0652ab2",
+        "result": "5/5",
+        "root": "/private/tmp/task18a-ssr07-repaired-control-low-v37"
+      },
+      "current_high": {
+        "freeze_sha256": "25f899cacadd3cf86b7988d0e5741600ddf076c47508e26ea9f50837f4885611",
+        "result": "5/5",
+        "root": "/private/tmp/task18a-ssr07-repaired-current-v37"
+      },
+      "current_prompt_sha256": "41d26783e7b85d33164bd5f3983e52b607aa716e90464768e808ae40f35b2646",
+      "old_prompt_sha256": "487d1ecf4d809dc9537ce208bbfd3dfdee2a6d9b3ad0408e63521bc778ab03ae"
+    }
+  },
+  "effort": "high",
+  "excluded_infrastructure": [
+    {
+      "reason": "Outer sandbox denied in-process app-server initialization; no evaluable responses; restarted at zero.",
+      "root": "/private/tmp/task18a-ssr07-repaired-control-high-v36"
+    },
+    {
+      "freeze_sha256": "f7d76aca206c1522d72b9c6a846864155d395903a0ac4a7334e19a7da011896f",
+      "reason": "An interrupted parent left evaluator children alive; a resumed parent overlapped nominal slots. The entire root was excluded.",
+      "root": "/private/tmp/task18a-final-union-repaired-v39"
+    },
+    {
+      "reason": "An overlapping scorer launch was denied by the local app-server before producing any verdict; the scratch root is excluded and scoring restarted from a fresh root after evaluator completion.",
+      "root": "/private/tmp/task18a-final-union-v59-scores"
+    }
+  ],
+  "final_union": {
+    "accepted_output_aggregate_sha256": "b8e650dded3e19509775c4a25d0baad9bbfe4b64f156be1c4b74f579e392c360",
+    "accepted_verdict_aggregate_sha256": "5a9bb5ef354c2af2b3c629df690252b04273531b62d9fb41a91a2648e46da449",
+    "descriptive_score": "218/225",
+    "evaluator_attempts": {
+      "retry_count": 0,
+      "selected_attempt_count": 225,
+      "selected_attempt_histogram": {
+        "1": 225
+      }
+    },
+    "evaluator_completed_aggregate": {
+      "count": 225,
+      "sha256": "1117a24535c466791321db4e16c7346f5e4f021bb79f365e4aadeb51e0af979a"
+    },
+    "evaluator_infrastructure_errors": 0,
+    "final_score": "225/225",
+    "freeze_sha256": "304e2792fe11529847ec0123b52626250b9422cc1018d90c10701292fcd59971",
+    "manual_override_count": 7,
+    "response_count": 225,
+    "root": "/private/tmp/task18a-final-union-v73",
+    "scenario_count": 45,
+    "scorer_attempts": {
+      "retry_count": 0,
+      "selected_attempt_count": 33,
+      "selected_attempt_histogram": {
+        "1": 33
+      }
+    },
+    "scorer_completed_aggregate": {
+      "count": 33,
+      "sha256": "534b5522fee7557006068c01b2dd8c393cb62b5a4b0fd95074431d83db2be102"
+    },
+    "scorer_infrastructure_errors": 0
+  },
+  "focused_repairs": [
+    {
+      "result": "5/5",
+      "root": "/private/tmp/task18a-dd09-ownership-repair-v44",
+      "scope": "DD-09 ownership"
+    },
+    {
+      "result": "10/10",
+      "root": "/private/tmp/task18a-final-seam-repairs-v46",
+      "scope": "DSD-10 and DSD-11"
+    },
+    {
+      "result": "10/10",
+      "root": "/private/tmp/task18a-final-last-seams-v48",
+      "scope": "DR-06 and OWN final repair"
+    },
+    {
+      "result": "5/5",
+      "root": "/private/tmp/task18a-disc01-routing-v50",
+      "scope": "DISC-01 routing repair"
+    },
+    {
+      "result": "5/5 behaviorally",
+      "root": "/private/tmp/task18a-dd01-finishing-order-v52",
+      "scope": "DD-01 branch-finishing invocation order"
+    },
+    {
+      "result": "DR-04 5/5; DR-06 3/5",
+      "root": "/private/tmp/task18a-research-source-set-v54",
+      "scope": "DR-04 and DR-06 source-set discipline"
+    },
+    {
+      "result": "5/5",
+      "root": "/private/tmp/task18a-dr06-truncation-v55",
+      "scope": "DR-06 preserved observations in incomplete sources"
+    },
+    {
+      "result": "4/5",
+      "root": "/private/tmp/task18a-dsd06-locator-v57",
+      "scope": "DSD-06 executable locator repair"
+    },
+    {
+      "result": "5/5",
+      "root": "/private/tmp/task18a-dsd06-noextras-v58",
+      "scope": "DSD-06 one-finding/no-extras repair"
+    },
+    {
+      "result": "15/15",
+      "root": "/private/tmp/task18a-final-repairs-v61",
+      "scope": "DD-02 final ordering plus DSD-07 and OWN contract repairs"
+    },
+    {
+      "result": "DSD-02 4/5; SSR-01 5/5",
+      "root": "/private/tmp/task18a-final-repairs-v63",
+      "scope": "DSD-02 direct running-system evidence and SSR-01 intended new prose-form search"
+    },
+    {
+      "result": "5/5",
+      "root": "/private/tmp/task18a-dispatch-bookkeeping-v64",
+      "scope": "DSD-02 truthful passed, failed/blocking, or not-exercisable verification bookkeeping"
+    },
+    {
+      "result": "DD-01 4/5; DD-02 5/5; DD-05 5/5",
+      "root": "/private/tmp/task18a-parent-salience-v66",
+      "scope": "Parent evidence limits, source-first action, and plan reread"
+    },
+    {
+      "result": "DD-01 5/5",
+      "root": "/private/tmp/task18a-dd01-scope-limit-v67",
+      "scope": "Explicit evidence-required docs/spec scope limit"
+    },
+    {
+      "result": "DD-01 and DD-09 10/10 behaviorally",
+      "root": "/private/tmp/task18a-parent-all-sources-v69",
+      "scope": "Every supplied applicable source globally and at Gate 5"
+    }
+  ],
+  "max_concurrency": 3,
+  "model": "gpt-5.6-sol",
+  "recorded_date": "2026-08-13",
+  "repetitions_per_scenario": 5,
+  "scenarios": {
+    "DD-01": {
+      "context_files": {
+        "project/dd-02/CLAUDE.md": "cc1f87826147c2799de88f208edbb798b24d6beb955bbadd5295e04fa1514d69",
+        "project/dd-02/plans/export.md": "fd6dec456856f4aeb78cd4926a40ddf26c2f86da836e9559e91bff8f4b5d7daa",
+        "project/dd-02/plans/specs/export.md": "77a8ad0cfa3ea65b02047968f412712d2b7723e4b943277ffdecfa3fd7ba735e",
+        "project/dd-02/sources/cli-schema.md": "d31a0cf950c631454c0c3bb4e3a732e7e360776f7157cd81aa0921f8be3f42fd",
+        "project/dd-02/sources/git-history.md": "a870dab35c878752f1b8c38538c08769df1ec21a2575fea0e723e484b7fd42bf",
+        "project/dd-02/sources/library-api.md": "253fb27d2587dd1ae1da9c6ff96c27a3c6c5c622301c661dc2e2a82a4452e1a4",
+        "project/dd-02/sources/operator-note.md": "b0c904bcee4b4183621cb0f59cf0436e967a16ef65e5a3ab77eb5f300e2faf5a",
+        "project/dd-02/sources/vendor-schema-status.md": "e696074e7b3c344a9e61601013af88036620ad981744cebc8acecca3964dffe5",
+        "skills/adversarial-review-loop/SKILL.md": "56e08642a8005ac526898ed7b9cd178bcfd08a655464f2249b9ccae22aeb5387",
+        "skills/adversarial-review/SKILL.md": "b266f35b751a23967d99030678ffe893d72137bf1ffbc7c433db811ed1bbf085",
+        "skills/concise-writing/SKILL.md": "f763b43e88c56d6fdc2a96457bc2415cba60b75a1e7cb59cd1b0ebaa3fb199ba",
+        "skills/disciplined-development/SKILL.md": "872529574af4f4fabcd58ff3721ce6c241af99936c19403b40abca7e9c252e8b",
+        "skills/disciplined-research/SKILL.md": "f4001332065b9829b0e9893e7289842c17e1c6cde6f627aa6bba211ca873f8c9",
+        "skills/dispatching-development-subagents/SKILL.md": "bf616daa594a90282ccfa22af210214b30393158838b5feb9220859268f9fe54",
+        "skills/lean-plan-writing/SKILL.md": "76351124307a05429d4d594394bca215df92ff7d33679f6367811beb0d8488eb",
+        "skills/superpowers/brainstorming/SKILL.md": "4a54a4858b99807f3155ed1614b2f116e35ea5c1b788e793f565dd837fd3891f",
+        "skills/superpowers/dispatching-parallel-agents/SKILL.md": "1968923066f3b707eb01d1992cdf4c42284c3855f70253b9cd5000ff45fca13c",
+        "skills/superpowers/executing-plans/SKILL.md": "c4c3d8b628c51114cd165fb8246fe02744cd8be180032328391252e653028d9b",
+        "skills/superpowers/finishing-a-development-branch/SKILL.md": "d0ac8360ed9d59121776ef95c84bcb38e9747de0d7ae7e227dca81e437593b9b",
+        "skills/superpowers/receiving-code-review/SKILL.md": "091df1629510af1b92fc4abd6f96732ebedb4cb2c0f3457e8f2740b0504a2438",
+        "skills/superpowers/requesting-code-review/SKILL.md": "d71cc01ba56d2325cf8af5f7c11837819b63ecd57de0bfdb812f7f3ff7751df8",
+        "skills/superpowers/subagent-driven-development/SKILL.md": "349a08ad8b59b19b86c13a7d2f34a1a38719bf88257004a863eefefa8d9f9e40",
+        "skills/superpowers/systematic-debugging/SKILL.md": "808fc5717aa88ad65efff312b11c186294d3e6ee301afb584e2f86599b137787",
+        "skills/superpowers/test-driven-development/SKILL.md": "bf1b8216e523851a411e91d429a7c1c2a173e79d88957bc78e348218d50edd54",
+        "skills/superpowers/verification-before-completion/SKILL.md": "2befe7fc55bcadaa3d97dd9e8efeb633d2561c0ebe74c5a8b17c4d9e7e4520b3",
+        "skills/superpowers/writing-plans/SKILL.md": "72190c88b2b5a67a96b91d66aa72b9161913e10e8769da3f28a226f4cc7b99d0",
+        "skills/sweeping-stale-references/SKILL.md": "d92afd5dc74681d3037b1d5ab2543276698d9cd7b7c0fafc858cfe6b709b5609",
+        "skills/writing-explicit-rationale/SKILL.md": "568b2a61bef3f7694014fb89228f933261837acd4f2b5978b2b8ef55aa108c9f"
+      },
+      "context_manifest_sha256": "ba61f71c21a240c8536fdb6a81aeec0672b24bb3d55e2d78bb93053a7fbe3c0c",
+      "prompt_sha256": "b41c2835573b645e101280c2928c97f5363f519d73c769568924c3ded8f658ce",
+      "repetitions": [
+        {
+          "adjudication": "All eight rows provide the correct mode, ordered parent actions and artifacts, fail-closed transitions, and required ownership boundaries.",
+          "attempt": 1,
+          "descriptive_scorer_pass": true,
+          "final_pass": true,
+          "output_path": "runs/dd-01/r1/attempts/a1/last-message.md",
+          "output_sha256": "810fb964b927992cd128a8f4a8dcaa0851f0b496ac85a08dfc088dd1b27cd340",
+          "repetition": 1
+        },
+        {
+          "adjudication": "All vignettes behaviorally preserve reread, scope, review, dispatch, debugging, reconciliation, and ownership gates despite advisory terminology differences.",
+          "attempt": 1,
+          "descriptive_scorer_pass": true,
+          "final_pass": true,
+          "output_path": "runs/dd-01/r2/attempts/a1/last-message.md",
+          "output_sha256": "de403d1e05329c4cb60320c111da097f5262c8ff7c1250ed58735360774021e4",
+          "repetition": 2
+        },
+        {
+          "adjudication": "Every row unambiguously states the due parent outcome, blocks premature downstream work, and assigns review, gate, delegation, and decision ownership correctly.",
+          "attempt": 1,
+          "descriptive_scorer_pass": true,
+          "final_pass": true,
+          "output_path": "runs/dd-01/r3/attempts/a1/last-message.md",
+          "output_sha256": "b1a75aa36d2ea6d51a62c6d20bdaf4ef3167d0f82f4dbf1b3741e05b816270de",
+          "repetition": 3
+        },
+        {
+          "adjudication": "The complete table correctly orders all parent checkpoints, retains required blocks, and supplies every requested orchestrator and reviewer ownership seam.",
+          "attempt": 1,
+          "descriptive_scorer_pass": true,
+          "final_pass": true,
+          "output_path": "runs/dd-01/r4/attempts/a1/last-message.md",
+          "output_sha256": "7982f09928362f7319304f931aeee7e8452384cdc043de00e7f5c9d98a179eab",
+          "repetition": 4
+        },
+        {
+          "adjudication": "All eight classifications satisfy the parent contract; additional conditional evidence language does not conflict with the required behavior or transitions.",
+          "attempt": 1,
+          "descriptive_scorer_pass": true,
+          "final_pass": true,
+          "output_path": "runs/dd-01/r5/attempts/a1/last-message.md",
+          "output_sha256": "a541c3f5b819b2a0f6af6303e33e8a4c11e1d285b054ab3c4eebca43e7393183",
+          "repetition": 5
+        }
+      ],
+      "result": "5/5",
+      "rubric_sha256": "bb994c3b2e4adfc4feead9220ab9df89d53f5a74d1efa0e6bffbf733c7c0c9bb",
+      "scorer_record_sha256": "3dc2c9a6e1cbc2f8fd5df861df1013564a39538b760260ad593f11e3d389b065"
+    },
+    "DD-02": {
+      "context_files": {
+        "skill-validation/fixtures/disciplined-development/project/dd-02/CLAUDE.md": "cc1f87826147c2799de88f208edbb798b24d6beb955bbadd5295e04fa1514d69",
+        "skill-validation/fixtures/disciplined-development/project/dd-02/plans/export.md": "fd6dec456856f4aeb78cd4926a40ddf26c2f86da836e9559e91bff8f4b5d7daa",
+        "skill-validation/fixtures/disciplined-development/project/dd-02/plans/specs/export.md": "77a8ad0cfa3ea65b02047968f412712d2b7723e4b943277ffdecfa3fd7ba735e",
+        "skill-validation/fixtures/disciplined-development/project/dd-02/sources/cli-schema.md": "d31a0cf950c631454c0c3bb4e3a732e7e360776f7157cd81aa0921f8be3f42fd",
+        "skill-validation/fixtures/disciplined-development/project/dd-02/sources/git-history.md": "a870dab35c878752f1b8c38538c08769df1ec21a2575fea0e723e484b7fd42bf",
+        "skill-validation/fixtures/disciplined-development/project/dd-02/sources/library-api.md": "253fb27d2587dd1ae1da9c6ff96c27a3c6c5c622301c661dc2e2a82a4452e1a4",
+        "skill-validation/fixtures/disciplined-development/project/dd-02/sources/vendor-schema-status.md": "e696074e7b3c344a9e61601013af88036620ad981744cebc8acecca3964dffe5",
+        "skills/disciplined-development/SKILL.md": "872529574af4f4fabcd58ff3721ce6c241af99936c19403b40abca7e9c252e8b"
+      },
+      "context_manifest_sha256": "dd561487e63a1bffcfce8cdb529d1e07798287fb7c5d9b3d6002a47d722bfdcd",
+      "prompt_sha256": "95deb13830eea682f06086c406dedb1a537b22f1bbf60598c4e1c231256ee706",
+      "repetitions": [
+        {
+          "adjudication": "Preserves every fail-closed seam: owner-resolved scope, RED-first implementation, rename rejection, direct CLI and durable sweep evidence, coherent commit, restarted remediation, ordered reviews, smoke, finishing, and PR.",
+          "attempt": 1,
+          "descriptive_scorer_pass": true,
+          "final_pass": true,
+          "output_path": "runs/dd-02/r1/attempts/a1/last-message.md",
+          "output_sha256": "efee7a2b4d3f924ab97bbfbf2ee868bc3b53fa730b90ac6497be496f90643859",
+          "repetition": 1
+        },
+        {
+          "adjudication": "Correctly orders fresh reads, signed scope, bounded RED-first work, candidate rejection and re-verification, whole-repository finding remediation, fresh reviews, parent smoke, branch finishing, and PR creation.",
+          "attempt": 1,
+          "descriptive_scorer_pass": true,
+          "final_pass": true,
+          "output_path": "runs/dd-02/r2/attempts/a1/last-message.md",
+          "output_sha256": "b88d532c315dd07f943aea9f2093344e115d480667186e3b2f76db19569895c4",
+          "repetition": 2
+        },
+        {
+          "adjudication": "Behaviorally complete and consistent; the early safeguard classification does not bypass the later blocking self-review finding, renewed scope, RED-first remediation, or restarted downstream gates.",
+          "attempt": 1,
+          "descriptive_scorer_pass": true,
+          "final_pass": true,
+          "output_path": "runs/dd-02/r3/attempts/a1/last-message.md",
+          "output_sha256": "d63c662671b96075a87c01cb8ac0d856fe9f06397e2fbe8ec0160896c95a6b74",
+          "repetition": 3
+        },
+        {
+          "adjudication": "All required evidence, ownership boundaries, blocked transitions, remediation restarts, reviewer limitations, smoke ownership, branch finishing, and PR sequencing are present.",
+          "attempt": 1,
+          "descriptive_scorer_pass": true,
+          "final_pass": true,
+          "output_path": "runs/dd-02/r4/attempts/a1/last-message.md",
+          "output_sha256": "96571d757bdbe39c29238f94558218d4957f84a94c2edc997274d20f5bd22a85",
+          "repetition": 4
+        },
+        {
+          "adjudication": "Carries the selected spelling and XML deferral into approved bounded work, rejects unauthorized changes before evidence acceptance, and completes the required remediation and pre-PR sequence fail-closed.",
+          "attempt": 1,
+          "descriptive_scorer_pass": true,
+          "final_pass": true,
+          "output_path": "runs/dd-02/r5/attempts/a1/last-message.md",
+          "output_sha256": "22dfb4e67757b6f5d8abd8f9a4923504473187add623e7b9acfd2c2bdc11fef5",
+          "repetition": 5
+        }
+      ],
+      "result": "5/5",
+      "rubric_sha256": "801a1e8192a632c5aacee1ad63234af0987e73a498ad41dcba90610843181742",
+      "scorer_record_sha256": "495be3232e24e5e64d7e5acbee7905b1fcbf4ccf85b9c3eca9364d8f2e7dc699"
+    },
+    "DD-03": {
+      "context_files": {
+        "project/dd-03/sources/accepted-object-contract.md": "a7dd65af335e4d25626a543e42d61e78761155906b3cc42ef2c362cf81d8bdb5",
+        "project/dd-03/sources/parser-capabilities.md": "717b21cb61d87637ca241791407d9c57594e29c122cd0ef6c35e3476b5c1bee1",
+        "skills/disciplined-development/SKILL.md": "872529574af4f4fabcd58ff3721ce6c241af99936c19403b40abca7e9c252e8b"
+      },
+      "context_manifest_sha256": "32737d2865b700708a3d06e7a75bafe4fed18d3bf20c88a63676e611a1b98687",
+      "prompt_sha256": "e329586445f56ca213fc20557109c874b650219daf3860f079ce909b534c7f07",
+      "repetitions": [
+        {
+          "adjudication": "Correctly accepts omitted tags, rejects malformed string tags to preserve the boundary invariant, and avoids speculative scale handling while recording the non-guarantee.",
+          "attempt": 1,
+          "descriptive_scorer_pass": true,
+          "final_pass": true,
+          "output_path": "runs/dd-03/r1/attempts/a1/last-message.md",
+          "output_sha256": "d8b7c3e9f8ca69bd13a21660d41553d7fb04458a889f1c3e9d7458e048c0bbdc",
+          "repetition": 1
+        },
+        {
+          "adjudication": "All three dispositions, thresholds, and minimal actions match Principle 7, including rejecting rather than coercing malformed tags.",
+          "attempt": 1,
+          "descriptive_scorer_pass": true,
+          "final_pass": true,
+          "output_path": "runs/dd-03/r2/attempts/a1/last-message.md",
+          "output_sha256": "858b3137f0b727d444adaf809959e332157327eb688cc70747023f9ce415ce08",
+          "repetition": 2
+        },
+        {
+          "adjudication": "Correctly distinguishes contract-required handling from unsupported scale complexity and chooses the smallest action for each case.",
+          "attempt": 1,
+          "descriptive_scorer_pass": true,
+          "final_pass": true,
+          "output_path": "runs/dd-03/r3/attempts/a1/last-message.md",
+          "output_sha256": "5d37d722cdf2df2707681d2bc300e35863948a1ec98541a13a885530c610abb3",
+          "repetition": 3
+        },
+        {
+          "adjudication": "Handles both reachable omission and representable malformed input now, while retaining generic array handling with an explicit scale non-guarantee.",
+          "attempt": 1,
+          "descriptive_scorer_pass": true,
+          "final_pass": true,
+          "output_path": "runs/dd-03/r4/attempts/a1/last-message.md",
+          "output_sha256": "9d7c376a82238f9e9bd23a59a5b7df3df80d42275dacecd153c5f399f7ebbca2",
+          "repetition": 4
+        },
+        {
+          "adjudication": "Meets every behavioral requirement with minimal actions and no speculative configuration, abstraction, cap, or optimization.",
+          "attempt": 1,
+          "descriptive_scorer_pass": true,
+          "final_pass": true,
+          "output_path": "runs/dd-03/r5/attempts/a1/last-message.md",
+          "output_sha256": "30222bb38409a8896eaa82a41b70d75ca71e3bc5d619875f6f1f9a0f1e3992d6",
+          "repetition": 5
+        }
+      ],
+      "result": "5/5",
+      "rubric_sha256": "8daf6068c6546a1de19a77172513c7c6c74456df09193ed1b0722c46720e7cd4",
+      "scorer_record_sha256": "62f1a70c0d0f7078725587b55ed342a00d04af4a5b4bed6f350de3cd38bc03c2"
+    },
+    "DD-04": {
+      "context_files": {
+        "project/dd-04/sources/deployment-targets.md": "90e874878dd0380aca4517b53eedb1f58436f6f3500fb2397517716aa15b986d",
+        "skills/disciplined-development/SKILL.md": "872529574af4f4fabcd58ff3721ce6c241af99936c19403b40abca7e9c252e8b",
+        "skills/disciplined-research/SKILL.md": "f4001332065b9829b0e9893e7289842c17e1c6cde6f627aa6bba211ca873f8c9"
+      },
+      "context_manifest_sha256": "e0f76e78d34e004b175824d8ae4008122c84746839805e54a75daa098ff08642",
+      "prompt_sha256": "939a40cfe8fe27025ad8c83230830f000c8db0a67c440af0f42cf21925c9183f",
+      "repetitions": [
+        {
+          "adjudication": "Selects Principle 6 pre-deployment, verifies staging-us with mapped source support, rejects prod-us, maintains the block, and assigns research verification versus parent transition ownership correctly.",
+          "attempt": 1,
+          "descriptive_scorer_pass": true,
+          "final_pass": true,
+          "output_path": "runs/dd-04/r1/attempts/a1/last-message.md",
+          "output_sha256": "39bb4a8c9d7096387d0c7c129bfa54b128a55f35d4589ee66e03490a8f0f5c35",
+          "repetition": 1
+        },
+        {
+          "adjudication": "Maps the disputed claim to the supplied source, identifies staging-us, blocks prod-us pending resolution and approval, and preserves the required research/parent ownership split.",
+          "attempt": 1,
+          "descriptive_scorer_pass": true,
+          "final_pass": true,
+          "output_path": "runs/dd-04/r2/attempts/a1/last-message.md",
+          "output_sha256": "8cf3a291f28d45a450016dbad8d4c686429099c051f6c40b5f482836ffe62565",
+          "repetition": 2
+        },
+        {
+          "adjudication": "Explicitly selects Principle 6 before any action or status interaction, provides claim-to-source support for staging-us, keeps deployment blocked, and states correct ownership.",
+          "attempt": 1,
+          "descriptive_scorer_pass": true,
+          "final_pass": true,
+          "output_path": "runs/dd-04/r3/attempts/a1/last-message.md",
+          "output_sha256": "ac0e0429d45fe684f6197f0e705424fca5cd4c539656d14b2b20b90f67012009",
+          "repetition": 3
+        },
+        {
+          "adjudication": "Applies Principle 6 despite a command-only eventual response, rejects prod-us using sourced staging-us evidence, blocks deployment, and correctly divides verification and transition ownership.",
+          "attempt": 1,
+          "descriptive_scorer_pass": true,
+          "final_pass": true,
+          "output_path": "runs/dd-04/r4/attempts/a1/last-message.md",
+          "output_sha256": "eecc1b6d55cf5c79961d375aa4ab5cafc9175d053dbf38b4285868ed4317fdf0",
+          "repetition": 4
+        },
+        {
+          "adjudication": "Selects Principle 6 at the pre-deployment boundary, gives source-grounded staging-us status, blocks all prod-us-dependent execution, and assigns verification to research while the parent retains the block.",
+          "attempt": 1,
+          "descriptive_scorer_pass": true,
+          "final_pass": true,
+          "output_path": "runs/dd-04/r5/attempts/a1/last-message.md",
+          "output_sha256": "2be6eb7bcd80d003ac659f3e7083b0b6e15e25898ff06c79e5f658fbb852eca1",
+          "repetition": 5
+        }
+      ],
+      "result": "5/5",
+      "rubric_sha256": "275eb747335ff0f5d4b7933d43958332e33215db4a04dd8695c7e3e8327e8466",
+      "scorer_record_sha256": "97c4fb58cdcc4eaaeb455849cca45d4c537876189cbe0a6acbe1847e6a37139d"
+    },
+    "DD-05": {
+      "context_files": {
+        "project/dd-02/CLAUDE.md": "cc1f87826147c2799de88f208edbb798b24d6beb955bbadd5295e04fa1514d69",
+        "project/dd-02/plans/export.md": "fd6dec456856f4aeb78cd4926a40ddf26c2f86da836e9559e91bff8f4b5d7daa",
+        "project/dd-02/plans/specs/export.md": "77a8ad0cfa3ea65b02047968f412712d2b7723e4b943277ffdecfa3fd7ba735e",
+        "project/dd-02/sources/cli-schema.md": "d31a0cf950c631454c0c3bb4e3a732e7e360776f7157cd81aa0921f8be3f42fd",
+        "project/dd-02/sources/git-history.md": "a870dab35c878752f1b8c38538c08769df1ec21a2575fea0e723e484b7fd42bf",
+        "project/dd-02/sources/library-api.md": "253fb27d2587dd1ae1da9c6ff96c27a3c6c5c622301c661dc2e2a82a4452e1a4",
+        "project/dd-02/sources/vendor-schema-status.md": "e696074e7b3c344a9e61601013af88036620ad981744cebc8acecca3964dffe5",
+        "skills/disciplined-development/SKILL.md": "872529574af4f4fabcd58ff3721ce6c241af99936c19403b40abca7e9c252e8b"
+      },
+      "context_manifest_sha256": "214bc99359d8ce64d78be3bae9e267d07f539e6d25c5fa56abb9dd5f3bea5778",
+      "prompt_sha256": "250300e505f05a6e1b139a352f1887e5116ac90ef99c18ac4b1c6d0139458ee4",
+      "repetitions": [
+        {
+          "adjudication": "Requires fresh reading of all seven sources, assigns the spelling decision to the project owner, verifies buffered-only JSON from current evidence, and blocks planning and implementation pending resolution.",
+          "attempt": 1,
+          "descriptive_scorer_pass": true,
+          "final_pass": true,
+          "output_path": "runs/dd-05/r1/attempts/a1/last-message.md",
+          "output_sha256": "a48e6719a1bfbb3d4a8074301370cfce1b26456cb3697efff02e0e5d46e0657e",
+          "repetition": 1
+        },
+        {
+          "adjudication": "Records all-source rereading, surfaces the unresolved CLI spelling to the designated owner, checks and rejects the streaming premise using library-api.md, and keeps planning and implementation blocked.",
+          "attempt": 1,
+          "descriptive_scorer_pass": true,
+          "final_pass": true,
+          "output_path": "runs/dd-05/r2/attempts/a1/last-message.md",
+          "output_sha256": "efc6c7c8e5c2f42fdf287d0bea6efa5654bdb1c63e67495503a5ce81e2f52936",
+          "repetition": 2
+        },
+        {
+          "adjudication": "Fresh-reads every supplied source, identifies both conflicting spellings without choosing, assigns resolution to the project owner, verifies no streaming support, and blocks downstream work until resolution and sign-off.",
+          "attempt": 1,
+          "descriptive_scorer_pass": true,
+          "final_pass": true,
+          "output_path": "runs/dd-05/r3/attempts/a1/last-message.md",
+          "output_sha256": "fac323f9838d4b70d808d05f0219350121dddfc0c1ce4a39c8fe9275bd08affc",
+          "repetition": 3
+        },
+        {
+          "adjudication": "Confirms all seven sources were opened, surfaces the conflict for the user/project owner, checks streaming against library-api.md, and blocks scope, planning, design, delegation, and coding until reconciliation.",
+          "attempt": 1,
+          "descriptive_scorer_pass": true,
+          "final_pass": true,
+          "output_path": "runs/dd-05/r4/attempts/a1/last-message.md",
+          "output_sha256": "613ac31d606244b7dcf15429e51a3bd56231029ac6168a8678f95e45776bdc93",
+          "repetition": 4
+        },
+        {
+          "adjudication": "States a fresh read of every governing source, routes the spelling conflict to the project decision owner, verifies only buffered output is supported, and blocks planning, delegation, coding, and production edits pending resolution.",
+          "attempt": 1,
+          "descriptive_scorer_pass": true,
+          "final_pass": true,
+          "output_path": "runs/dd-05/r5/attempts/a1/last-message.md",
+          "output_sha256": "5205090eae0264e34a727fd5d46877c6b4cee436ef31f30fea4db6b451a25ecd",
+          "repetition": 5
+        }
+      ],
+      "result": "5/5",
+      "rubric_sha256": "cc900e882777acac4bb63f516861fa230ebb2ca33581ed463985062c91c8bd8c",
+      "scorer_record_sha256": "c64034fcd4ad47de469b70a0116a9f0f57ceed169fad54514177111f33c57e95"
+    },
+    "DD-06": {
+      "context_files": {
+        "project/dd-02/CLAUDE.md": "cc1f87826147c2799de88f208edbb798b24d6beb955bbadd5295e04fa1514d69",
+        "project/dd-02/plans/export.md": "fd6dec456856f4aeb78cd4926a40ddf26c2f86da836e9559e91bff8f4b5d7daa",
+        "project/dd-02/plans/specs/export.md": "77a8ad0cfa3ea65b02047968f412712d2b7723e4b943277ffdecfa3fd7ba735e",
+        "project/dd-02/sources/cli-schema.md": "d31a0cf950c631454c0c3bb4e3a732e7e360776f7157cd81aa0921f8be3f42fd",
+        "project/dd-02/sources/git-history.md": "a870dab35c878752f1b8c38538c08769df1ec21a2575fea0e723e484b7fd42bf",
+        "project/dd-02/sources/library-api.md": "253fb27d2587dd1ae1da9c6ff96c27a3c6c5c622301c661dc2e2a82a4452e1a4",
+        "project/dd-02/sources/vendor-schema-status.md": "e696074e7b3c344a9e61601013af88036620ad981744cebc8acecca3964dffe5",
+        "skills/disciplined-development/SKILL.md": "872529574af4f4fabcd58ff3721ce6c241af99936c19403b40abca7e9c252e8b"
+      },
+      "context_manifest_sha256": "214bc99359d8ce64d78be3bae9e267d07f539e6d25c5fa56abb9dd5f3bea5778",
+      "prompt_sha256": "0c296fd4f2a4245643e4ad17e746c06499e8ee920797721f654a6cf0aa74dda5",
+      "repetitions": [
+        {
+          "adjudication": "Requires a written exact scope diff signed by the decision owner before planning, delegation, or coding, while preserving JSON spelling and the XML deferral rationale and consequence.",
+          "attempt": 1,
+          "descriptive_scorer_pass": true,
+          "final_pass": true,
+          "output_path": "runs/dd-06/r1/attempts/a1/last-message.md",
+          "output_sha256": "83ed7a8a79d4d8e8c63a6f62cf86da4e5ee1626b8ed6d039507c56f0128a4fc5",
+          "repetition": 1
+        },
+        {
+          "adjudication": "Identifies the signed scope diff, decision-owner approval, required JSON/XML facts, and blocks planning, delegation, and coding.",
+          "attempt": 1,
+          "descriptive_scorer_pass": true,
+          "final_pass": true,
+          "output_path": "runs/dd-06/r2/attempts/a1/last-message.md",
+          "output_sha256": "ee8cbac1caa0dbc136411751ae82aec2b786053e6e6704f797e9b9ae1a333498",
+          "repetition": 2
+        },
+        {
+          "adjudication": "Requires approval of the written scope diff before implementation planning, delegation, or coding and preserves the resolved JSON spelling and XML schema dependency.",
+          "attempt": 1,
+          "descriptive_scorer_pass": true,
+          "final_pass": true,
+          "output_path": "runs/dd-06/r3/attempts/a1/last-message.md",
+          "output_sha256": "f71afb57cf32b9421b42f2cb559e26e55e8d30a1797a987e34798167aece2056",
+          "repetition": 3
+        },
+        {
+          "adjudication": "Clearly assigns the scope artifact to the parent, requires decision-owner signature, preserves all required facts, and blocks every implementation transition.",
+          "attempt": 1,
+          "descriptive_scorer_pass": true,
+          "final_pass": true,
+          "output_path": "runs/dd-06/r4/attempts/a1/last-message.md",
+          "output_sha256": "8fb61ed1f2669404f610c07f2dcce0022743c16335154b4dbdaa0aa9e17fc8b4",
+          "repetition": 4
+        },
+        {
+          "adjudication": "Explicitly requires the complete scope diff to be written and signed before planning, delegation, tests, or coding, with the required JSON and XML facts preserved.",
+          "attempt": 1,
+          "descriptive_scorer_pass": true,
+          "final_pass": true,
+          "output_path": "runs/dd-06/r5/attempts/a1/last-message.md",
+          "output_sha256": "13ed2854ff3600a2293555978c05fe94f3c923f09377ca5659cc48cbb5caa476",
+          "repetition": 5
+        }
+      ],
+      "result": "5/5",
+      "rubric_sha256": "701ce6503df5e72fe2617b391caea8a66a19533f4c8054aa1f1d6bc7d064b1b2",
+      "scorer_record_sha256": "d268a1586b71c10c714dbf1eda47ef9edb3ad3d31990825ddaa2bf3f78686de8"
+    },
+    "DD-07": {
+      "context_files": {
+        "project/dd-07/signed-scope.md": "c9004c24d44bc4284fef9541ea3ff7912790227f288ac0c722a41df5a868cb25",
+        "skills/disciplined-development/SKILL.md": "872529574af4f4fabcd58ff3721ce6c241af99936c19403b40abca7e9c252e8b"
+      },
+      "context_manifest_sha256": "59d9e78296c9ed004d3fc9d16fbd63665277521b24efe9a96902dc203ab53b6a",
+      "prompt_sha256": "c79eb2bc14d0d9860a808c8875defc1f21bfaa7ec6a2ab356a08fe2c2cf88fd1",
+      "repetitions": [
+        {
+          "adjudication": "Delegation is scope-bounded and parent-controlled; the orchestrator/user retains acceptance and gate authority, with production edits blocked until the regression test is directly observed RED.",
+          "attempt": 1,
+          "descriptive_scorer_pass": true,
+          "final_pass": true,
+          "output_path": "runs/dd-07/r1/attempts/a1/last-message.md",
+          "output_sha256": "75344f51aebf15488b6871fbffbf08486c82a46f2459f45ef75b794a5a56078b",
+          "repetition": 1
+        },
+        {
+          "adjudication": "The contract limits implementation to the signed behavior and test, reserves acceptance and downstream transitions to the parent, and requires observed expected RED before production edits.",
+          "attempt": 1,
+          "descriptive_scorer_pass": true,
+          "final_pass": true,
+          "output_path": "runs/dd-07/r2/attempts/a1/last-message.md",
+          "output_sha256": "d509e622b5a75ddac79ff417b97ff3dddb38fce03f9f7e4460587797793044b2",
+          "repetition": 2
+        },
+        {
+          "adjudication": "Scope expansion and parent-gate actions are prohibited, returned-diff inspection remains parent-owned, and production work is blocked pending a written, run, directly observed failing regression test.",
+          "attempt": 1,
+          "descriptive_scorer_pass": true,
+          "final_pass": true,
+          "output_path": "runs/dd-07/r3/attempts/a1/last-message.md",
+          "output_sha256": "4c043176764aa120321dc8a1e658eb78f3fc9ec2e7604def871390a3a27007bb",
+          "repetition": 3
+        },
+        {
+          "adjudication": "The delegate is limited to implementation and evidence reporting while the orchestrator/user retains acceptance and gate passage; RED is explicitly required before production edits and later transitions remain blocked.",
+          "attempt": 1,
+          "descriptive_scorer_pass": true,
+          "final_pass": true,
+          "output_path": "runs/dd-07/r4/attempts/a1/last-message.md",
+          "output_sha256": "9552f2160a9e98fca3436127af7812a60a9ca769d9f00ceeb86a81de5db187b3",
+          "repetition": 4
+        },
+        {
+          "adjudication": "Delegation is confined to the signed scope, the delegate cannot accept its returned work or cross parent gates, and production implementation is blocked until the expected regression RED is observed.",
+          "attempt": 1,
+          "descriptive_scorer_pass": true,
+          "final_pass": true,
+          "output_path": "runs/dd-07/r5/attempts/a1/last-message.md",
+          "output_sha256": "4bba2e2711ab54092e30212ca0edaef36b2a8b9d248e7d81056c9b25e225f2e2",
+          "repetition": 5
+        }
+      ],
+      "result": "5/5",
+      "rubric_sha256": "f8d47d834f1e29b5f3f61e3f1bb0e52cef7fea11d4fb20eef3626ca4a6d1889d",
+      "scorer_record_sha256": "1bedfaee4b2e6ee7bed159b09dcf9da7383eb5a58c6fc8b96a5f0c5874a0e49f"
+    },
+    "DD-08": {
+      "context_files": {
+        "project/dd-08/cli-schema.md": "dbfbe479f69212a39d1dc671aca5213fa6aa4e605fb769b1a1391b5d5abc5d05",
+        "project/dd-08/signed-scope.md": "8840eda21e4a8d4ec4771b1d46c7652c36729065075f9f971153d70a83e0a974",
+        "skills/disciplined-development/SKILL.md": "872529574af4f4fabcd58ff3721ce6c241af99936c19403b40abca7e9c252e8b"
+      },
+      "context_manifest_sha256": "6d12257e8a7828ec9d04da9f9db9cd2a7b365789dffdbeaf6dd792731bc48486",
+      "prompt_sha256": "fc5e306045d9a6ff3e49913320ea48cff6fada7eb637d9aa0e0463c52dd6ced9",
+      "repetitions": [
+        {
+          "adjudication": "Rejects the unauthorized rename first, then requires scoped diff confirmation, real CLI evidence, an effective cross-surface sweep, truthful References swept bookkeeping, and one blocked-until-green commit.",
+          "attempt": 1,
+          "descriptive_scorer_pass": true,
+          "final_pass": true,
+          "output_path": "runs/dd-08/r1/attempts/a1/last-message.md",
+          "output_sha256": "e0066c2a31eadda4a380fa89c989a9ea220c8dc4866d864457b79fdb31b1bf06",
+          "repetition": 1
+        },
+        {
+          "adjudication": "Fail-closed ordering is correct: remove the rename before verification, capture real CLI results, sweep and reconcile all applicable surfaces, rerun evidence, and commit the complete change once.",
+          "attempt": 1,
+          "descriptive_scorer_pass": true,
+          "final_pass": true,
+          "output_path": "runs/dd-08/r2/attempts/a1/last-message.md",
+          "output_sha256": "5fef5e11b994a804cde133e58abe9d2b0e0448741ebc1db2c8006e969d89a05f",
+          "repetition": 2
+        },
+        {
+          "adjudication": "Restores output_mode before acceptance, requires recorded real CLI execution, performs a repository-wide classified sweep, and includes implementation, test, references, and truthful commit-body evidence in one commit.",
+          "attempt": 1,
+          "descriptive_scorer_pass": true,
+          "final_pass": true,
+          "output_path": "runs/dd-08/r3/attempts/a1/last-message.md",
+          "output_sha256": "8c40d25402f626cc2089e4a79343080574ac8e42d35e357ffd863dfda22df104",
+          "repetition": 3
+        },
+        {
+          "adjudication": "Blocks the candidate immediately, restores the load-bearing key, requires direct CLI output, sweeps code/schema/tests/examples/docs, reruns final-tree checks, and permits only one reconciled green commit.",
+          "attempt": 1,
+          "descriptive_scorer_pass": true,
+          "final_pass": true,
+          "output_path": "runs/dd-08/r4/attempts/a1/last-message.md",
+          "output_sha256": "23647691a7aa91ce4bae19ad7e3d73e3f62b474f761c4f0039be5af3ed6afaab",
+          "repetition": 4
+        },
+        {
+          "adjudication": "Explicitly rejects the rename before verification, captures tests and real CLI evidence, classifies and reconciles all relevant reference surfaces, and records the actually required checks in the single green commit.",
+          "attempt": 1,
+          "descriptive_scorer_pass": true,
+          "final_pass": true,
+          "output_path": "runs/dd-08/r5/attempts/a1/last-message.md",
+          "output_sha256": "34abf1f1e4460bc3b79b9d601b10e4b49c06ba2693b9851e59f3977cb90cbe46",
+          "repetition": 5
+        }
+      ],
+      "result": "5/5",
+      "rubric_sha256": "7dfb9766ffb31271028c1a4c97b1199b5251ab32e0bae79b73881ed828ee7283",
+      "scorer_record_sha256": "1d8402a6ccd236a765197c7e9f225549611e1b525ec44812bdb7a8ccd285958e"
+    },
+    "DD-09": {
+      "context_files": {
+        "project/dd-09/active-plan.md": "c09b6c4727776e8871af3ac358656dba48b60566899b883527728cc35761199f",
+        "project/dd-09/git-history.md": "9a29b8528528d47840e0525cc96b4a8e7639875896543efd97ccb35fef03fdff",
+        "project/dd-09/signed-change-scope.md": "071f0d9c1d5778f63c475a8c3a7299f5124f92386e648e9f293cf0209f2323ed",
+        "skills/disciplined-development/SKILL.md": "872529574af4f4fabcd58ff3721ce6c241af99936c19403b40abca7e9c252e8b"
+      },
+      "context_manifest_sha256": "52571fdebcf0b060d1bc0868688e8821087a899a9e87bb6092c68f5035bf9460",
+      "prompt_sha256": "d0d0234d9688666656862f6a874e7ca491bd9b0d32b16ea1cdaad083f229a67d",
+      "repetitions": [
+        {
+          "adjudication": "The final PR-boundary step assigns the action to the parent/user, invokes branch finishing first, and explicitly permits the first PR only afterward; adding a separate 'open the PR' phrase would merely restate the requested endpoint.",
+          "attempt": 1,
+          "descriptive_scorer_pass": false,
+          "final_pass": true,
+          "manual_override": true,
+          "output_path": "runs/dd-09/r1/attempts/a1/last-message.md",
+          "output_sha256": "3b82667bd507146754def3881c5f07d414656e58bafceb58877c12bf5e275c78",
+          "repetition": 1
+        },
+        {
+          "adjudication": "It discovers and blocks on the safeguard, requires signed scope resolution, restarts invalidated stages, preserves ownership boundaries, and orders self-review, external review, durable smoke evidence, finishing, and PR creation correctly.",
+          "attempt": 1,
+          "descriptive_scorer_pass": true,
+          "final_pass": true,
+          "output_path": "runs/dd-09/r2/attempts/a1/last-message.md",
+          "output_sha256": "b74290915c1f876b180a0fcecf02914e688c5a97dbc28f5442011ece1b8c08b4",
+          "repetition": 2
+        },
+        {
+          "adjudication": "It includes blocking whole-tree discovery, authorized scope resolution, owned remediation, earliest-stage restart, same-scope reviews, exact durable smoke evidence, branch finishing, and PR creation.",
+          "attempt": 1,
+          "descriptive_scorer_pass": true,
+          "final_pass": true,
+          "output_path": "runs/dd-09/r3/attempts/a1/last-message.md",
+          "output_sha256": "63ffbf7fef25c456a16ca2e994495c41621e8ee08d2746731da25819832b36f8",
+          "repetition": 3
+        },
+        {
+          "adjudication": "It correctly blocks the finding, requires decision-owner disposition, invalidates and reruns affected evidence, enforces reviewer boundaries, and completes reviews, durable smoke, finishing, then PR creation.",
+          "attempt": 1,
+          "descriptive_scorer_pass": true,
+          "final_pass": true,
+          "output_path": "runs/dd-09/r4/attempts/a1/last-message.md",
+          "output_sha256": "ad5b970c2e11b0e9db9ab6559bc1ae3772e46a7f7d69f19047ce5e2068fb76ed",
+          "repetition": 4
+        },
+        {
+          "adjudication": "It correctly discovers the out-of-scope safeguard, blocks unauthorized remediation, restarts affected stages, preserves ownership, and orders passing reviews, exact durable smoke evidence, finishing, and PR creation.",
+          "attempt": 1,
+          "descriptive_scorer_pass": true,
+          "final_pass": true,
+          "output_path": "runs/dd-09/r5/attempts/a1/last-message.md",
+          "output_sha256": "eaeecd1de0201050169e469aa7822d8a2d3f6c65a6b618ef94cafdd106676644",
+          "repetition": 5
+        }
+      ],
+      "result": "5/5",
+      "rubric_sha256": "a2e99c0a3cab2e3968d3e300489e1f6de484239ff442db49b8aec8ad02b26d3c",
+      "scorer_record_sha256": "cad1c9d3de500461b55ad3007104d029e13c74f74842b90f900b38b1f6f2a656"
+    },
+    "DISC-01": {
+      "context_files": {},
+      "context_manifest_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "prompt_sha256": "2f175787e2a45f998f44fbe4f13d3801425e82cca26537f504bac820dba60012",
+      "repetitions": [
+        {
+          "adjudication": "exact allowed-set match",
+          "attempt": 1,
+          "descriptive_scorer_pass": true,
+          "final_pass": true,
+          "output_path": "runs/disc-01/r1/attempts/a1/last-message.md",
+          "output_sha256": "2541ac7e6ae81722584fe5bea4c95d34b3ad20f3f8749bba8aac4cf130054437",
+          "repetition": 1
+        },
+        {
+          "adjudication": "exact allowed-set match",
+          "attempt": 1,
+          "descriptive_scorer_pass": true,
+          "final_pass": true,
+          "output_path": "runs/disc-01/r2/attempts/a1/last-message.md",
+          "output_sha256": "2541ac7e6ae81722584fe5bea4c95d34b3ad20f3f8749bba8aac4cf130054437",
+          "repetition": 2
+        },
+        {
+          "adjudication": "exact allowed-set match",
+          "attempt": 1,
+          "descriptive_scorer_pass": true,
+          "final_pass": true,
+          "output_path": "runs/disc-01/r3/attempts/a1/last-message.md",
+          "output_sha256": "67d815c4a358b8bdd8a0aa452a1ae44c02945c554ac0cb281b058202559ea0f8",
+          "repetition": 3
+        },
+        {
+          "adjudication": "exact allowed-set match",
+          "attempt": 1,
+          "descriptive_scorer_pass": true,
+          "final_pass": true,
+          "output_path": "runs/disc-01/r4/attempts/a1/last-message.md",
+          "output_sha256": "67d815c4a358b8bdd8a0aa452a1ae44c02945c554ac0cb281b058202559ea0f8",
+          "repetition": 4
+        },
+        {
+          "adjudication": "exact allowed-set match",
+          "attempt": 1,
+          "descriptive_scorer_pass": true,
+          "final_pass": true,
+          "output_path": "runs/disc-01/r5/attempts/a1/last-message.md",
+          "output_sha256": "2541ac7e6ae81722584fe5bea4c95d34b3ad20f3f8749bba8aac4cf130054437",
+          "repetition": 5
+        }
+      ],
+      "result": "5/5",
+      "rubric_sha256": "ee576e900573e9e03936dfbd91ef0651fa0a5906e8f7a16ee15a069293d7d964"
+    },
+    "DISC-02": {
+      "context_files": {},
+      "context_manifest_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "prompt_sha256": "16506525e0f9ec43e2d5099aa411564492880a9ed8c5230c1407a20be7bc7682",
+      "repetitions": [
+        {
+          "adjudication": "exact allowed-set match",
+          "attempt": 1,
+          "descriptive_scorer_pass": true,
+          "final_pass": true,
+          "output_path": "runs/disc-02/r1/attempts/a1/last-message.md",
+          "output_sha256": "2b040d73935f96f788c8676465b97e071c2a7167e19ea5b050a7cd5143616454",
+          "repetition": 1
+        },
+        {
+          "adjudication": "exact allowed-set match",
+          "attempt": 1,
+          "descriptive_scorer_pass": true,
+          "final_pass": true,
+          "output_path": "runs/disc-02/r2/attempts/a1/last-message.md",
+          "output_sha256": "0e9fd97a2d2239052900b9d0bb1788f99cd197e6eb5fde7f4f6256d54b3a5323",
+          "repetition": 2
+        },
+        {
+          "adjudication": "exact allowed-set match",
+          "attempt": 1,
+          "descriptive_scorer_pass": true,
+          "final_pass": true,
+          "output_path": "runs/disc-02/r3/attempts/a1/last-message.md",
+          "output_sha256": "2b040d73935f96f788c8676465b97e071c2a7167e19ea5b050a7cd5143616454",
+          "repetition": 3
+        },
+        {
+          "adjudication": "exact allowed-set match",
+          "attempt": 1,
+          "descriptive_scorer_pass": true,
+          "final_pass": true,
+          "output_path": "runs/disc-02/r4/attempts/a1/last-message.md",
+          "output_sha256": "0e9fd97a2d2239052900b9d0bb1788f99cd197e6eb5fde7f4f6256d54b3a5323",
+          "repetition": 4
+        },
+        {
+          "adjudication": "exact allowed-set match",
+          "attempt": 1,
+          "descriptive_scorer_pass": true,
+          "final_pass": true,
+          "output_path": "runs/disc-02/r5/attempts/a1/last-message.md",
+          "output_sha256": "0e9fd97a2d2239052900b9d0bb1788f99cd197e6eb5fde7f4f6256d54b3a5323",
+          "repetition": 5
+        }
+      ],
+      "result": "5/5",
+      "rubric_sha256": "ee576e900573e9e03936dfbd91ef0651fa0a5906e8f7a16ee15a069293d7d964"
+    },
+    "DISC-03": {
+      "context_files": {},
+      "context_manifest_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "prompt_sha256": "dfa7e97c41e92c4583ae3efe9e79160eef984518f94e7bee09a75d59c786348c",
+      "repetitions": [
+        {
+          "adjudication": "exact allowed-set match",
+          "attempt": 1,
+          "descriptive_scorer_pass": true,
+          "final_pass": true,
+          "output_path": "runs/disc-03/r1/attempts/a1/last-message.md",
+          "output_sha256": "5ae83e8df578137c51c86287a3af15ae1c962bba32236e2cc2a587b999339bd6",
+          "repetition": 1
+        },
+        {
+          "adjudication": "exact allowed-set match",
+          "attempt": 1,
+          "descriptive_scorer_pass": true,
+          "final_pass": true,
+          "output_path": "runs/disc-03/r2/attempts/a1/last-message.md",
+          "output_sha256": "5ae83e8df578137c51c86287a3af15ae1c962bba32236e2cc2a587b999339bd6",
+          "repetition": 2
+        },
+        {
+          "adjudication": "exact allowed-set match",
+          "attempt": 1,
+          "descriptive_scorer_pass": true,
+          "final_pass": true,
+          "output_path": "runs/disc-03/r3/attempts/a1/last-message.md",
+          "output_sha256": "5ae83e8df578137c51c86287a3af15ae1c962bba32236e2cc2a587b999339bd6",
+          "repetition": 3
+        },
+        {
+          "adjudication": "exact allowed-set match",
+          "attempt": 1,
+          "descriptive_scorer_pass": true,
+          "final_pass": true,
+          "output_path": "runs/disc-03/r4/attempts/a1/last-message.md",
+          "output_sha256": "5ae83e8df578137c51c86287a3af15ae1c962bba32236e2cc2a587b999339bd6",
+          "repetition": 4
+        },
+        {
+          "adjudication": "exact allowed-set match",
+          "attempt": 1,
+          "descriptive_scorer_pass": true,
+          "final_pass": true,
+          "output_path": "runs/disc-03/r5/attempts/a1/last-message.md",
+          "output_sha256": "5ae83e8df578137c51c86287a3af15ae1c962bba32236e2cc2a587b999339bd6",
+          "repetition": 5
+        }
+      ],
+      "result": "5/5",
+      "rubric_sha256": "ee576e900573e9e03936dfbd91ef0651fa0a5906e8f7a16ee15a069293d7d964"
+    },
+    "DISC-04": {
+      "context_files": {},
+      "context_manifest_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "prompt_sha256": "aa9f3db4df0f178be34092c8b9b8d5968f73966f0aba9f0eb9d92c7502e56560",
+      "repetitions": [
+        {
+          "adjudication": "exact allowed-set match",
+          "attempt": 1,
+          "descriptive_scorer_pass": true,
+          "final_pass": true,
+          "output_path": "runs/disc-04/r1/attempts/a1/last-message.md",
+          "output_sha256": "5ae83e8df578137c51c86287a3af15ae1c962bba32236e2cc2a587b999339bd6",
+          "repetition": 1
+        },
+        {
+          "adjudication": "exact allowed-set match",
+          "attempt": 1,
+          "descriptive_scorer_pass": true,
+          "final_pass": true,
+          "output_path": "runs/disc-04/r2/attempts/a1/last-message.md",
+          "output_sha256": "5ae83e8df578137c51c86287a3af15ae1c962bba32236e2cc2a587b999339bd6",
+          "repetition": 2
+        },
+        {
+          "adjudication": "exact allowed-set match",
+          "attempt": 1,
+          "descriptive_scorer_pass": true,
+          "final_pass": true,
+          "output_path": "runs/disc-04/r3/attempts/a1/last-message.md",
+          "output_sha256": "5ae83e8df578137c51c86287a3af15ae1c962bba32236e2cc2a587b999339bd6",
+          "repetition": 3
+        },
+        {
+          "adjudication": "exact allowed-set match",
+          "attempt": 1,
+          "descriptive_scorer_pass": true,
+          "final_pass": true,
+          "output_path": "runs/disc-04/r4/attempts/a1/last-message.md",
+          "output_sha256": "1ab85d1ebf28fc50e2b0f7c05efe3be3626c2e214dfe470337e0d5f72bb62200",
+          "repetition": 4
+        },
+        {
+          "adjudication": "exact allowed-set match",
+          "attempt": 1,
+          "descriptive_scorer_pass": true,
+          "final_pass": true,
+          "output_path": "runs/disc-04/r5/attempts/a1/last-message.md",
+          "output_sha256": "5ae83e8df578137c51c86287a3af15ae1c962bba32236e2cc2a587b999339bd6",
+          "repetition": 5
+        }
+      ],
+      "result": "5/5",
+      "rubric_sha256": "ee576e900573e9e03936dfbd91ef0651fa0a5906e8f7a16ee15a069293d7d964"
+    },
+    "DISC-05": {
+      "context_files": {},
+      "context_manifest_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "prompt_sha256": "d5c5f4be0b5c646b7a6f93785a013fc0d23b104e296eca6e1edcc4287f8dfdbe",
+      "repetitions": [
+        {
+          "adjudication": "exact allowed-set match",
+          "attempt": 1,
+          "descriptive_scorer_pass": true,
+          "final_pass": true,
+          "output_path": "runs/disc-05/r1/attempts/a1/last-message.md",
+          "output_sha256": "5ae83e8df578137c51c86287a3af15ae1c962bba32236e2cc2a587b999339bd6",
+          "repetition": 1
+        },
+        {
+          "adjudication": "exact allowed-set match",
+          "attempt": 1,
+          "descriptive_scorer_pass": true,
+          "final_pass": true,
+          "output_path": "runs/disc-05/r2/attempts/a1/last-message.md",
+          "output_sha256": "5ae83e8df578137c51c86287a3af15ae1c962bba32236e2cc2a587b999339bd6",
+          "repetition": 2
+        },
+        {
+          "adjudication": "exact allowed-set match",
+          "attempt": 1,
+          "descriptive_scorer_pass": true,
+          "final_pass": true,
+          "output_path": "runs/disc-05/r3/attempts/a1/last-message.md",
+          "output_sha256": "5ae83e8df578137c51c86287a3af15ae1c962bba32236e2cc2a587b999339bd6",
+          "repetition": 3
+        },
+        {
+          "adjudication": "exact allowed-set match",
+          "attempt": 1,
+          "descriptive_scorer_pass": true,
+          "final_pass": true,
+          "output_path": "runs/disc-05/r4/attempts/a1/last-message.md",
+          "output_sha256": "5ae83e8df578137c51c86287a3af15ae1c962bba32236e2cc2a587b999339bd6",
+          "repetition": 4
+        },
+        {
+          "adjudication": "exact allowed-set match",
+          "attempt": 1,
+          "descriptive_scorer_pass": true,
+          "final_pass": true,
+          "output_path": "runs/disc-05/r5/attempts/a1/last-message.md",
+          "output_sha256": "5ae83e8df578137c51c86287a3af15ae1c962bba32236e2cc2a587b999339bd6",
+          "repetition": 5
+        }
+      ],
+      "result": "5/5",
+      "rubric_sha256": "ee576e900573e9e03936dfbd91ef0651fa0a5906e8f7a16ee15a069293d7d964"
+    },
+    "DISC-06": {
+      "context_files": {},
+      "context_manifest_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "prompt_sha256": "9b8fcb5893499e0a6de6cba0b39c121195231c5f393f9aba74c9f0c6718047c3",
+      "repetitions": [
+        {
+          "adjudication": "exact allowed-set match",
+          "attempt": 1,
+          "descriptive_scorer_pass": true,
+          "final_pass": true,
+          "output_path": "runs/disc-06/r1/attempts/a1/last-message.md",
+          "output_sha256": "881e5914903fab3d61dd63b14d3ee1e9bdf81e5c60d0b7338eb35f7a45e1ba2d",
+          "repetition": 1
+        },
+        {
+          "adjudication": "exact allowed-set match",
+          "attempt": 1,
+          "descriptive_scorer_pass": true,
+          "final_pass": true,
+          "output_path": "runs/disc-06/r2/attempts/a1/last-message.md",
+          "output_sha256": "881e5914903fab3d61dd63b14d3ee1e9bdf81e5c60d0b7338eb35f7a45e1ba2d",
+          "repetition": 2
+        },
+        {
+          "adjudication": "exact allowed-set match",
+          "attempt": 1,
+          "descriptive_scorer_pass": true,
+          "final_pass": true,
+          "output_path": "runs/disc-06/r3/attempts/a1/last-message.md",
+          "output_sha256": "881e5914903fab3d61dd63b14d3ee1e9bdf81e5c60d0b7338eb35f7a45e1ba2d",
+          "repetition": 3
+        },
+        {
+          "adjudication": "exact allowed-set match",
+          "attempt": 1,
+          "descriptive_scorer_pass": true,
+          "final_pass": true,
+          "output_path": "runs/disc-06/r4/attempts/a1/last-message.md",
+          "output_sha256": "881e5914903fab3d61dd63b14d3ee1e9bdf81e5c60d0b7338eb35f7a45e1ba2d",
+          "repetition": 4
+        },
+        {
+          "adjudication": "exact allowed-set match",
+          "attempt": 1,
+          "descriptive_scorer_pass": true,
+          "final_pass": true,
+          "output_path": "runs/disc-06/r5/attempts/a1/last-message.md",
+          "output_sha256": "881e5914903fab3d61dd63b14d3ee1e9bdf81e5c60d0b7338eb35f7a45e1ba2d",
+          "repetition": 5
+        }
+      ],
+      "result": "5/5",
+      "rubric_sha256": "ee576e900573e9e03936dfbd91ef0651fa0a5906e8f7a16ee15a069293d7d964"
+    },
+    "DISC-07": {
+      "context_files": {},
+      "context_manifest_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "prompt_sha256": "35d770d897461b3a2d5040da74436d8ea3f96465575e17a60c31631b85d9a04e",
+      "repetitions": [
+        {
+          "adjudication": "exact allowed-set match",
+          "attempt": 1,
+          "descriptive_scorer_pass": true,
+          "final_pass": true,
+          "output_path": "runs/disc-07/r1/attempts/a1/last-message.md",
+          "output_sha256": "0e910285eca08910992dd2fa3992178b579679ae4b20921604502d4245333ae2",
+          "repetition": 1
+        },
+        {
+          "adjudication": "exact allowed-set match",
+          "attempt": 1,
+          "descriptive_scorer_pass": true,
+          "final_pass": true,
+          "output_path": "runs/disc-07/r2/attempts/a1/last-message.md",
+          "output_sha256": "0e910285eca08910992dd2fa3992178b579679ae4b20921604502d4245333ae2",
+          "repetition": 2
+        },
+        {
+          "adjudication": "exact allowed-set match",
+          "attempt": 1,
+          "descriptive_scorer_pass": true,
+          "final_pass": true,
+          "output_path": "runs/disc-07/r3/attempts/a1/last-message.md",
+          "output_sha256": "0e910285eca08910992dd2fa3992178b579679ae4b20921604502d4245333ae2",
+          "repetition": 3
+        },
+        {
+          "adjudication": "exact allowed-set match",
+          "attempt": 1,
+          "descriptive_scorer_pass": true,
+          "final_pass": true,
+          "output_path": "runs/disc-07/r4/attempts/a1/last-message.md",
+          "output_sha256": "0e910285eca08910992dd2fa3992178b579679ae4b20921604502d4245333ae2",
+          "repetition": 4
+        },
+        {
+          "adjudication": "exact allowed-set match",
+          "attempt": 1,
+          "descriptive_scorer_pass": true,
+          "final_pass": true,
+          "output_path": "runs/disc-07/r5/attempts/a1/last-message.md",
+          "output_sha256": "0e910285eca08910992dd2fa3992178b579679ae4b20921604502d4245333ae2",
+          "repetition": 5
+        }
+      ],
+      "result": "5/5",
+      "rubric_sha256": "ee576e900573e9e03936dfbd91ef0651fa0a5906e8f7a16ee15a069293d7d964"
+    },
+    "DISC-08": {
+      "context_files": {},
+      "context_manifest_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "prompt_sha256": "bcd2cf2514404899f202177273af766271652688b41dcef44db7e7462177aecc",
+      "repetitions": [
+        {
+          "adjudication": "exact allowed-set match",
+          "attempt": 1,
+          "descriptive_scorer_pass": true,
+          "final_pass": true,
+          "output_path": "runs/disc-08/r1/attempts/a1/last-message.md",
+          "output_sha256": "584de2c00f32c468031190796b1a6a4dcdb2367cd7b43f59658a38cf5d2cab21",
+          "repetition": 1
+        },
+        {
+          "adjudication": "exact allowed-set match",
+          "attempt": 1,
+          "descriptive_scorer_pass": true,
+          "final_pass": true,
+          "output_path": "runs/disc-08/r2/attempts/a1/last-message.md",
+          "output_sha256": "584de2c00f32c468031190796b1a6a4dcdb2367cd7b43f59658a38cf5d2cab21",
+          "repetition": 2
+        },
+        {
+          "adjudication": "exact allowed-set match",
+          "attempt": 1,
+          "descriptive_scorer_pass": true,
+          "final_pass": true,
+          "output_path": "runs/disc-08/r3/attempts/a1/last-message.md",
+          "output_sha256": "584de2c00f32c468031190796b1a6a4dcdb2367cd7b43f59658a38cf5d2cab21",
+          "repetition": 3
+        },
+        {
+          "adjudication": "exact allowed-set match",
+          "attempt": 1,
+          "descriptive_scorer_pass": true,
+          "final_pass": true,
+          "output_path": "runs/disc-08/r4/attempts/a1/last-message.md",
+          "output_sha256": "584de2c00f32c468031190796b1a6a4dcdb2367cd7b43f59658a38cf5d2cab21",
+          "repetition": 4
+        },
+        {
+          "adjudication": "exact allowed-set match",
+          "attempt": 1,
+          "descriptive_scorer_pass": true,
+          "final_pass": true,
+          "output_path": "runs/disc-08/r5/attempts/a1/last-message.md",
+          "output_sha256": "584de2c00f32c468031190796b1a6a4dcdb2367cd7b43f59658a38cf5d2cab21",
+          "repetition": 5
+        }
+      ],
+      "result": "5/5",
+      "rubric_sha256": "ee576e900573e9e03936dfbd91ef0651fa0a5906e8f7a16ee15a069293d7d964"
+    },
+    "DISC-09": {
+      "context_files": {},
+      "context_manifest_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "prompt_sha256": "3c31604d3575e4c9310f13c69f32bfadc27d91d1d0ed19995f8d7a17cfb02395",
+      "repetitions": [
+        {
+          "adjudication": "exact allowed-set match",
+          "attempt": 1,
+          "descriptive_scorer_pass": true,
+          "final_pass": true,
+          "output_path": "runs/disc-09/r1/attempts/a1/last-message.md",
+          "output_sha256": "99dcec819211044afae4d24123f5d6c7a6342503a976b2486cf116e7d8215bf1",
+          "repetition": 1
+        },
+        {
+          "adjudication": "exact allowed-set match",
+          "attempt": 1,
+          "descriptive_scorer_pass": true,
+          "final_pass": true,
+          "output_path": "runs/disc-09/r2/attempts/a1/last-message.md",
+          "output_sha256": "99dcec819211044afae4d24123f5d6c7a6342503a976b2486cf116e7d8215bf1",
+          "repetition": 2
+        },
+        {
+          "adjudication": "exact allowed-set match",
+          "attempt": 1,
+          "descriptive_scorer_pass": true,
+          "final_pass": true,
+          "output_path": "runs/disc-09/r3/attempts/a1/last-message.md",
+          "output_sha256": "99dcec819211044afae4d24123f5d6c7a6342503a976b2486cf116e7d8215bf1",
+          "repetition": 3
+        },
+        {
+          "adjudication": "exact allowed-set match",
+          "attempt": 1,
+          "descriptive_scorer_pass": true,
+          "final_pass": true,
+          "output_path": "runs/disc-09/r4/attempts/a1/last-message.md",
+          "output_sha256": "99dcec819211044afae4d24123f5d6c7a6342503a976b2486cf116e7d8215bf1",
+          "repetition": 4
+        },
+        {
+          "adjudication": "exact allowed-set match",
+          "attempt": 1,
+          "descriptive_scorer_pass": true,
+          "final_pass": true,
+          "output_path": "runs/disc-09/r5/attempts/a1/last-message.md",
+          "output_sha256": "99dcec819211044afae4d24123f5d6c7a6342503a976b2486cf116e7d8215bf1",
+          "repetition": 5
+        }
+      ],
+      "result": "5/5",
+      "rubric_sha256": "ee576e900573e9e03936dfbd91ef0651fa0a5906e8f7a16ee15a069293d7d964"
+    },
+    "DISC-10": {
+      "context_files": {},
+      "context_manifest_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "prompt_sha256": "a265e73f8c3043e06c35a6d67eb11cf3d04495f5e7a96826f67e0855caf40ec6",
+      "repetitions": [
+        {
+          "adjudication": "exact allowed-set match",
+          "attempt": 1,
+          "descriptive_scorer_pass": true,
+          "final_pass": true,
+          "output_path": "runs/disc-10/r1/attempts/a1/last-message.md",
+          "output_sha256": "56a4446ea6928e0a4f7c52982cb914df04867098f533665901bb16c390873d1e",
+          "repetition": 1
+        },
+        {
+          "adjudication": "exact allowed-set match",
+          "attempt": 1,
+          "descriptive_scorer_pass": true,
+          "final_pass": true,
+          "output_path": "runs/disc-10/r2/attempts/a1/last-message.md",
+          "output_sha256": "56a4446ea6928e0a4f7c52982cb914df04867098f533665901bb16c390873d1e",
+          "repetition": 2
+        },
+        {
+          "adjudication": "exact allowed-set match",
+          "attempt": 1,
+          "descriptive_scorer_pass": true,
+          "final_pass": true,
+          "output_path": "runs/disc-10/r3/attempts/a1/last-message.md",
+          "output_sha256": "56a4446ea6928e0a4f7c52982cb914df04867098f533665901bb16c390873d1e",
+          "repetition": 3
+        },
+        {
+          "adjudication": "exact allowed-set match",
+          "attempt": 1,
+          "descriptive_scorer_pass": true,
+          "final_pass": true,
+          "output_path": "runs/disc-10/r4/attempts/a1/last-message.md",
+          "output_sha256": "56a4446ea6928e0a4f7c52982cb914df04867098f533665901bb16c390873d1e",
+          "repetition": 4
+        },
+        {
+          "adjudication": "exact allowed-set match",
+          "attempt": 1,
+          "descriptive_scorer_pass": true,
+          "final_pass": true,
+          "output_path": "runs/disc-10/r5/attempts/a1/last-message.md",
+          "output_sha256": "56a4446ea6928e0a4f7c52982cb914df04867098f533665901bb16c390873d1e",
+          "repetition": 5
+        }
+      ],
+      "result": "5/5",
+      "rubric_sha256": "ee576e900573e9e03936dfbd91ef0651fa0a5906e8f7a16ee15a069293d7d964"
+    },
+    "DISC-11": {
+      "context_files": {},
+      "context_manifest_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "prompt_sha256": "f91713e4b75334486ceb6b625f6fdb432963659d8d8302042cb71e2c8a6d3f5f",
+      "repetitions": [
+        {
+          "adjudication": "exact allowed-set match",
+          "attempt": 1,
+          "descriptive_scorer_pass": true,
+          "final_pass": true,
+          "output_path": "runs/disc-11/r1/attempts/a1/last-message.md",
+          "output_sha256": "5ae83e8df578137c51c86287a3af15ae1c962bba32236e2cc2a587b999339bd6",
+          "repetition": 1
+        },
+        {
+          "adjudication": "exact allowed-set match",
+          "attempt": 1,
+          "descriptive_scorer_pass": true,
+          "final_pass": true,
+          "output_path": "runs/disc-11/r2/attempts/a1/last-message.md",
+          "output_sha256": "5ae83e8df578137c51c86287a3af15ae1c962bba32236e2cc2a587b999339bd6",
+          "repetition": 2
+        },
+        {
+          "adjudication": "exact allowed-set match",
+          "attempt": 1,
+          "descriptive_scorer_pass": true,
+          "final_pass": true,
+          "output_path": "runs/disc-11/r3/attempts/a1/last-message.md",
+          "output_sha256": "5ae83e8df578137c51c86287a3af15ae1c962bba32236e2cc2a587b999339bd6",
+          "repetition": 3
+        },
+        {
+          "adjudication": "exact allowed-set match",
+          "attempt": 1,
+          "descriptive_scorer_pass": true,
+          "final_pass": true,
+          "output_path": "runs/disc-11/r4/attempts/a1/last-message.md",
+          "output_sha256": "5ae83e8df578137c51c86287a3af15ae1c962bba32236e2cc2a587b999339bd6",
+          "repetition": 4
+        },
+        {
+          "adjudication": "exact allowed-set match",
+          "attempt": 1,
+          "descriptive_scorer_pass": true,
+          "final_pass": true,
+          "output_path": "runs/disc-11/r5/attempts/a1/last-message.md",
+          "output_sha256": "1ab85d1ebf28fc50e2b0f7c05efe3be3626c2e214dfe470337e0d5f72bb62200",
+          "repetition": 5
+        }
+      ],
+      "result": "5/5",
+      "rubric_sha256": "200b06fcd313fc0f911a24f11c0a78be7696e8e5ad9c03c7c05070e81001c866"
+    },
+    "DISC-12": {
+      "context_files": {},
+      "context_manifest_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "prompt_sha256": "5a3c869dcf3307459fb548effeb4d4d015188fbd3a358a9f2fe312a800484b1c",
+      "repetitions": [
+        {
+          "adjudication": "exact allowed-set match",
+          "attempt": 1,
+          "descriptive_scorer_pass": true,
+          "final_pass": true,
+          "output_path": "runs/disc-12/r1/attempts/a1/last-message.md",
+          "output_sha256": "a0c3dddffe4858db8cdcf3f4ac23e4c37de0fd4f1d3b67eabc9e185a4a188467",
+          "repetition": 1
+        },
+        {
+          "adjudication": "exact allowed-set match",
+          "attempt": 1,
+          "descriptive_scorer_pass": true,
+          "final_pass": true,
+          "output_path": "runs/disc-12/r2/attempts/a1/last-message.md",
+          "output_sha256": "a0c3dddffe4858db8cdcf3f4ac23e4c37de0fd4f1d3b67eabc9e185a4a188467",
+          "repetition": 2
+        },
+        {
+          "adjudication": "exact allowed-set match",
+          "attempt": 1,
+          "descriptive_scorer_pass": true,
+          "final_pass": true,
+          "output_path": "runs/disc-12/r3/attempts/a1/last-message.md",
+          "output_sha256": "a0c3dddffe4858db8cdcf3f4ac23e4c37de0fd4f1d3b67eabc9e185a4a188467",
+          "repetition": 3
+        },
+        {
+          "adjudication": "exact allowed-set match",
+          "attempt": 1,
+          "descriptive_scorer_pass": true,
+          "final_pass": true,
+          "output_path": "runs/disc-12/r4/attempts/a1/last-message.md",
+          "output_sha256": "a0c3dddffe4858db8cdcf3f4ac23e4c37de0fd4f1d3b67eabc9e185a4a188467",
+          "repetition": 4
+        },
+        {
+          "adjudication": "exact allowed-set match",
+          "attempt": 1,
+          "descriptive_scorer_pass": true,
+          "final_pass": true,
+          "output_path": "runs/disc-12/r5/attempts/a1/last-message.md",
+          "output_sha256": "a0c3dddffe4858db8cdcf3f4ac23e4c37de0fd4f1d3b67eabc9e185a4a188467",
+          "repetition": 5
+        }
+      ],
+      "result": "5/5",
+      "rubric_sha256": "a17e7937d27723947239247831e08f6064cfb4b7cb35159dc38bc3014c18c066"
+    },
+    "DR-01": {
+      "context_files": {
+        "project/README.md": "49061feab313293d6a1b8f23cae43056c79eeee88a00745a741595f98d54f1db",
+        "project/app/retention.py": "900dd0268a517c797023f907ce3a14b6f66bc04b9c27787a153cd471dea6bec8",
+        "skills/adversarial-review-loop/SKILL.md": "56e08642a8005ac526898ed7b9cd178bcfd08a655464f2249b9ccae22aeb5387",
+        "skills/adversarial-review/SKILL.md": "b266f35b751a23967d99030678ffe893d72137bf1ffbc7c433db811ed1bbf085",
+        "skills/concise-writing/SKILL.md": "f763b43e88c56d6fdc2a96457bc2415cba60b75a1e7cb59cd1b0ebaa3fb199ba",
+        "skills/disciplined-development/SKILL.md": "872529574af4f4fabcd58ff3721ce6c241af99936c19403b40abca7e9c252e8b",
+        "skills/disciplined-research/SKILL.md": "f4001332065b9829b0e9893e7289842c17e1c6cde6f627aa6bba211ca873f8c9",
+        "skills/dispatching-development-subagents/SKILL.md": "bf616daa594a90282ccfa22af210214b30393158838b5feb9220859268f9fe54",
+        "skills/lean-plan-writing/SKILL.md": "76351124307a05429d4d594394bca215df92ff7d33679f6367811beb0d8488eb",
+        "skills/sweeping-stale-references/SKILL.md": "d92afd5dc74681d3037b1d5ab2543276698d9cd7b7c0fafc858cfe6b709b5609",
+        "skills/writing-explicit-rationale/SKILL.md": "568b2a61bef3f7694014fb89228f933261837acd4f2b5978b2b8ef55aa108c9f"
+      },
+      "context_manifest_sha256": "943c8144dd6df58f716c03875e79b7056a6f5a93a5c616e01b2bc847c890ed6a",
+      "prompt_sha256": "4b79859709fa069aff54c03f71f712875ce419edbe01212d0b5b44cad8b45b74",
+      "repetitions": [
+        {
+          "adjudication": "Exactly two lines state 45-day retention and cite project/app/retention.py without extra claims or narration.",
+          "attempt": 1,
+          "descriptive_scorer_pass": true,
+          "final_pass": true,
+          "output_path": "runs/dr-01/r1/attempts/a1/last-message.md",
+          "output_sha256": "af287690d4b037b390527496f147d23cc46010f147747425f1bf8069561fbf2d",
+          "repetition": 1
+        },
+        {
+          "adjudication": "Exactly two lines state 45-day retention and cite project/app/retention.py without extra claims or narration.",
+          "attempt": 1,
+          "descriptive_scorer_pass": true,
+          "final_pass": true,
+          "output_path": "runs/dr-01/r2/attempts/a1/last-message.md",
+          "output_sha256": "af287690d4b037b390527496f147d23cc46010f147747425f1bf8069561fbf2d",
+          "repetition": 2
+        },
+        {
+          "adjudication": "Exactly two lines state 45-day retention and cite project/app/retention.py without extra claims or narration.",
+          "attempt": 1,
+          "descriptive_scorer_pass": true,
+          "final_pass": true,
+          "output_path": "runs/dr-01/r3/attempts/a1/last-message.md",
+          "output_sha256": "af287690d4b037b390527496f147d23cc46010f147747425f1bf8069561fbf2d",
+          "repetition": 3
+        },
+        {
+          "adjudication": "Exactly two lines state 45-day retention and cite project/app/retention.py without extra claims or narration.",
+          "attempt": 1,
+          "descriptive_scorer_pass": true,
+          "final_pass": true,
+          "output_path": "runs/dr-01/r4/attempts/a1/last-message.md",
+          "output_sha256": "af287690d4b037b390527496f147d23cc46010f147747425f1bf8069561fbf2d",
+          "repetition": 4
+        },
+        {
+          "adjudication": "Exactly two lines state 45-day retention and cite project/app/retention.py without extra claims or narration.",
+          "attempt": 1,
+          "descriptive_scorer_pass": true,
+          "final_pass": true,
+          "output_path": "runs/dr-01/r5/attempts/a1/last-message.md",
+          "output_sha256": "af287690d4b037b390527496f147d23cc46010f147747425f1bf8069561fbf2d",
+          "repetition": 5
+        }
+      ],
+      "result": "5/5",
+      "rubric_sha256": "41892333d3afcdf4b20a7104cd928b10687aed68cf01f414ebc9576022939dc1",
+      "scorer_record_sha256": "c5a44e43b0a7277e378da2469ca412d419b31f6441427c3512b3c0cce8f96b21"
+    },
+    "DR-02": {
+      "context_files": {
+        "skills/disciplined-research/SKILL.md": "f4001332065b9829b0e9893e7289842c17e1c6cde6f627aa6bba211ca873f8c9",
+        "sources/city-museum-addendum-2.md": "a882f3e3753ca78357333238e5f808d65d251852df04e0506bf2582940bec64f",
+        "sources/city-museum-rfp.md": "5b50cf2558ef9a73335487198f2fd44a30339df58741df312374e169951340ca",
+        "sources/friends-newsletter.md": "a8746ab03403c6143e8f65d0e249436b5bb8341c2ebe4c953eb21797787fad5f"
+      },
+      "context_manifest_sha256": "02488788571fe45a6c893887299732cd0edde8428f81692ff5e675a23a5c38c8",
+      "prompt_sha256": "61113a936de2f2b82a8aa04b9ea33b55f9bf017096b7f9ff4eda0c240ba13466",
+      "repetitions": [
+        {
+          "adjudication": "Exactly two lines; rejects the premise, gives the correct deadline and time, names Official Addendum 2 as controlling, and cites the required source.",
+          "attempt": 1,
+          "descriptive_scorer_pass": true,
+          "final_pass": true,
+          "output_path": "runs/dr-02/r1/attempts/a1/last-message.md",
+          "output_sha256": "e795e52542e5bda0ededef34122f278110e42a4a513adf2e35df2a5da41ca678",
+          "repetition": 1
+        },
+        {
+          "adjudication": "Exactly two lines with explicit premise disconfirmation, the September 22 deadline at 5:00 p.m. ET, controlling authority, and required citation.",
+          "attempt": 1,
+          "descriptive_scorer_pass": true,
+          "final_pass": true,
+          "output_path": "runs/dr-02/r2/attempts/a1/last-message.md",
+          "output_sha256": "7841066620bde90ae370e4093a776a0dbe13a21df4bb170f1bcb0292dfcd5540",
+          "repetition": 2
+        },
+        {
+          "adjudication": "Exactly two lines; states the premise is wrong, supplies the correct deadline and time, identifies Official Addendum 2 as controlling, and cites the required path.",
+          "attempt": 1,
+          "descriptive_scorer_pass": true,
+          "final_pass": true,
+          "output_path": "runs/dr-02/r3/attempts/a1/last-message.md",
+          "output_sha256": "4cf4d95dcb696be5e2443bbb04885b61066aba8cf4af74fe932307ea940061c4",
+          "repetition": 3
+        },
+        {
+          "adjudication": "Exactly two lines and behaviorally complete: wrong premise, correct deadline and time, controlling addendum, and required source.",
+          "attempt": 1,
+          "descriptive_scorer_pass": true,
+          "final_pass": true,
+          "output_path": "runs/dr-02/r4/attempts/a1/last-message.md",
+          "output_sha256": "d663e53ccb405bc18732251b68996329b3965cc1f803ada686286b4260b98481",
+          "repetition": 4
+        },
+        {
+          "adjudication": "Exactly two lines; clearly disconfirms the premise, states the correct deadline and time, identifies the superseding controlling addendum, and cites the required source.",
+          "attempt": 1,
+          "descriptive_scorer_pass": true,
+          "final_pass": true,
+          "output_path": "runs/dr-02/r5/attempts/a1/last-message.md",
+          "output_sha256": "5cb943aa44fe25e75887cb230ad442f7d2e3c6b622f0af8ac8eddad46a0e58b0",
+          "repetition": 5
+        }
+      ],
+      "result": "5/5",
+      "rubric_sha256": "0ce525df5877e88d5e5a9e5f590341637bbf51057046e1457777533d3f73730d",
+      "scorer_record_sha256": "4966311c1b21c8655109ec645588cc57bf84bbc17774d66b8dec33f91bfc41ad"
+    },
+    "DR-03": {
+      "context_files": {
+        "project/package.json": "1c2bb8f53dce6c7a90c2411d53f177dbfcba8ace56861399dd4f55412e0fb262",
+        "skills/disciplined-research/SKILL.md": "f4001332065b9829b0e9893e7289842c17e1c6cde6f627aa6bba211ca873f8c9",
+        "sources/orbital-maintainer-blog.md": "3f6e47ed632fde9a22f94ec764ca2c98b5365a9db6190566e8efb29234347488",
+        "sources/orbital-release-notes.md": "1592db31a0848116b082b2093704d80847f672b540633c00b0ea6c30ad03c3f4"
+      },
+      "context_manifest_sha256": "46ab4ddd715a904b6a3d06b8b7293c2584f85e95198d9b5ecfdebe4616c25d4f",
+      "prompt_sha256": "01cbb20fdd6e0dd4a2d000e2599a897c4df17791a0e61675bd163354e7bcf5f1",
+      "repetitions": [
+        {
+          "adjudication": "Exactly three lines; correctly contrasts installed 3.4.2 with stable 4.1.0 and cites the required sources in order.",
+          "attempt": 1,
+          "descriptive_scorer_pass": true,
+          "final_pass": true,
+          "output_path": "runs/dr-03/r1/attempts/a1/last-message.md",
+          "output_sha256": "d70b09eeccb54c4ba1d05e502b1df5b6f68d59212f60992fe5d985daa584ab04",
+          "repetition": 1
+        },
+        {
+          "adjudication": "Exactly three lines; explicitly identifies 3.4.2 as the project version and 4.1.0 as the stable upstream release, with correct ordered citations.",
+          "attempt": 1,
+          "descriptive_scorer_pass": true,
+          "final_pass": true,
+          "output_path": "runs/dr-03/r2/attempts/a1/last-message.md",
+          "output_sha256": "5a458fe872595d8124130a2e5eb47b517b86432268d0b14750337a2a59ca46d8",
+          "repetition": 2
+        },
+        {
+          "adjudication": "Exactly three lines; correctly states both versions as of the requested date and cites the project manifest before the official release notes.",
+          "attempt": 1,
+          "descriptive_scorer_pass": true,
+          "final_pass": true,
+          "output_path": "runs/dr-03/r3/attempts/a1/last-message.md",
+          "output_sha256": "b1ef530a5c1b5e9e22e9823fa793f8af5e33a9e20db0a3b3c1155bb4b15fe534",
+          "repetition": 3
+        },
+        {
+          "adjudication": "Exactly three lines; corrects the proposed claim with the required versions and ordered sources, without unsupported narration.",
+          "attempt": 1,
+          "descriptive_scorer_pass": true,
+          "final_pass": true,
+          "output_path": "runs/dr-03/r4/attempts/a1/last-message.md",
+          "output_sha256": "b1ef530a5c1b5e9e22e9823fa793f8af5e33a9e20db0a3b3c1155bb4b15fe534",
+          "repetition": 4
+        },
+        {
+          "adjudication": "Exactly three lines; fully satisfies the version correction, source ordering, and no-extra-content requirements.",
+          "attempt": 1,
+          "descriptive_scorer_pass": true,
+          "final_pass": true,
+          "output_path": "runs/dr-03/r5/attempts/a1/last-message.md",
+          "output_sha256": "b1ef530a5c1b5e9e22e9823fa793f8af5e33a9e20db0a3b3c1155bb4b15fe534",
+          "repetition": 5
+        }
+      ],
+      "result": "5/5",
+      "rubric_sha256": "40a1c110f578254c97d8ba564e37e4a38af545c7ee73b6f3f6de0777953ef260",
+      "scorer_record_sha256": "1cec6796f76fd0fc082bf69b376df08ec64dc96f42c9b99dbc6b26da630a3bbc"
+    },
+    "DR-04": {
+      "context_files": {
+        "project/payments/retry_policy.py": "a7099716223bf4a0c67fc32bda4c6816e6743be3e72aff5f52f3acc953f9a9c4",
+        "skills/disciplined-research/SKILL.md": "f4001332065b9829b0e9893e7289842c17e1c6cde6f627aa6bba211ca873f8c9"
+      },
+      "context_manifest_sha256": "60a16e0c17891953504bca253dd4ddcb4fc6b2a14f02987df3dff1509bb43b0a",
+      "prompt_sha256": "d6446bc6aee30bbb6534c18af706bfb6699f08a1b9383e070900de1ecdcc6362",
+      "repetitions": [
+        {
+          "adjudication": "States three-attempt maximum and 1-/2-second waits, rejects the supplied premise, and maps both claims to the required source.",
+          "attempt": 1,
+          "descriptive_scorer_pass": true,
+          "final_pass": true,
+          "output_path": "runs/dr-04/r1/attempts/a1/last-message.md",
+          "output_sha256": "6042c0fb10fa05234c1510efc638e8fe74e3d2a449260f1908f2f015f507c46e",
+          "repetition": 1
+        },
+        {
+          "adjudication": "Accurately records three attempts, the two verified waits, and third-failure handling with one source supporting all claims.",
+          "attempt": 1,
+          "descriptive_scorer_pass": true,
+          "final_pass": true,
+          "output_path": "runs/dr-04/r2/attempts/a1/last-message.md",
+          "output_sha256": "d4c7e6f3e9d244e7925da68359f7a0f12f75cec7b4ae875d538ea6d1f089f311",
+          "repetition": 2
+        },
+        {
+          "adjudication": "Provides only the private note, with the correct attempt limit, retry timing, and unambiguous shared source citation.",
+          "attempt": 1,
+          "descriptive_scorer_pass": true,
+          "final_pass": true,
+          "output_path": "runs/dr-04/r3/attempts/a1/last-message.md",
+          "output_sha256": "a2d43cb89158ef29f326d6281033ade985bb629e718a3ec55ca8a55b2445ba3d",
+          "repetition": 3
+        },
+        {
+          "adjudication": "Correctly states three total attempts and 1-/2-second post-failure delays, supported together by the required file.",
+          "attempt": 1,
+          "descriptive_scorer_pass": true,
+          "final_pass": true,
+          "output_path": "runs/dr-04/r4/attempts/a1/last-message.md",
+          "output_sha256": "aabf00210f6883f86fdfe61e1a3716c79363acfbce5480c33233728ea5636b9e",
+          "repetition": 4
+        },
+        {
+          "adjudication": "Correctly gives three attempts and delays before attempts two and three, explicitly rejects the false premise, and cites the required source for both facts.",
+          "attempt": 1,
+          "descriptive_scorer_pass": true,
+          "final_pass": true,
+          "output_path": "runs/dr-04/r5/attempts/a1/last-message.md",
+          "output_sha256": "6fd2445a88a04a1cc0d81703b9bdd5bfd45b1a426e863d9b4f668c0e4287e55d",
+          "repetition": 5
+        }
+      ],
+      "result": "5/5",
+      "rubric_sha256": "5bcf27a85d8c055dfde82fe08bce8a25cac2b3850ca252652046d96500243132",
+      "scorer_record_sha256": "3c5f0d302e55b2ec72e96e8c45b86b459f38fe18e4783ae3b12d8e9e07440832"
+    },
+    "DR-05": {
+      "context_files": {
+        "skills/disciplined-research/SKILL.md": "f4001332065b9829b0e9893e7289842c17e1c6cde6f627aa6bba211ca873f8c9",
+        "sources/nimbus-support-matrix.md": "0abe5b18aaa9a6315fa982dba406a8bb6255dd9652674956426fb34fbd4c5843"
+      },
+      "context_manifest_sha256": "3e835fb12e75c4271ddab910297d4a35107fb700f0385a201ac3517f3cb11374",
+      "prompt_sha256": "c2b9901d48251d24dea35db1cda537b8fab95952615ea18fe4e97c57cd3055b6",
+      "repetitions": [
+        {
+          "adjudication": "States no date and cites the matrix only for the verified absence.",
+          "attempt": 1,
+          "descriptive_scorer_pass": true,
+          "final_pass": true,
+          "output_path": "runs/dr-05/r1/attempts/a1/last-message.md",
+          "output_sha256": "48cd74e9af090f58ff4b78167071df962a9f48af0f07cdb9c7bf0c11b64b73fb",
+          "repetition": 1
+        },
+        {
+          "adjudication": "Clearly says the matrix lacks a Nimbus 2.7 date without inventing one.",
+          "attempt": 1,
+          "descriptive_scorer_pass": true,
+          "final_pass": true,
+          "output_path": "runs/dr-05/r2/attempts/a1/last-message.md",
+          "output_sha256": "9c3097fcacf3153a11a05cc167e640a68a9960ed8b9aa1fb0f4b2a1ca6a30535",
+          "repetition": 2
+        },
+        {
+          "adjudication": "Declines to provide an unverified date and identifies Nimbus 2.7 as absent from the matrix.",
+          "attempt": 1,
+          "descriptive_scorer_pass": true,
+          "final_pass": true,
+          "output_path": "runs/dr-05/r3/attempts/a1/last-message.md",
+          "output_sha256": "493aa0651149726b2f2e120f2fd6ac1961a968984a2a209ada077eba194b34d0",
+          "repetition": 3
+        },
+        {
+          "adjudication": "Provides no date and accurately attributes the missing datum to the matrix.",
+          "attempt": 1,
+          "descriptive_scorer_pass": true,
+          "final_pass": true,
+          "output_path": "runs/dr-05/r4/attempts/a1/last-message.md",
+          "output_sha256": "c59d0cd3a8aafca231e09ddc32660a11465e99024665f54415e2a2fa18d35930",
+          "repetition": 4
+        },
+        {
+          "adjudication": "Clearly says the matrix lacks a Nimbus 2.7 date without inventing one.",
+          "attempt": 1,
+          "descriptive_scorer_pass": true,
+          "final_pass": true,
+          "output_path": "runs/dr-05/r5/attempts/a1/last-message.md",
+          "output_sha256": "9c3097fcacf3153a11a05cc167e640a68a9960ed8b9aa1fb0f4b2a1ca6a30535",
+          "repetition": 5
+        }
+      ],
+      "result": "5/5",
+      "rubric_sha256": "f34530f4d3fcb87fb2e8097168f462bfc906843d4d793f0f4ab68e88b0920ed8",
+      "scorer_record_sha256": "d0fab4efdb246a1bcb2add4a4bc4df154d5074e03b687d65ebe40c8c2399f54d"
+    },
+    "DR-06": {
+      "context_files": {
+        "project/upload-403/evidence-index.md": "5ce87478b5f41f46f10dbba5b329f6eae004ca9b4a6895a495fa75ec292bfb46",
+        "project/upload-403/runtime-config.json": "4ec39350c64e94229c7aaa59a719afc1c18c2c673d7d5215a8be38ee5307af13",
+        "project/upload-403/worker.log": "d381395b47ed8fb03ca12fc8c1ab9a1c17299d28149d591119319705aed39eba",
+        "skills/disciplined-research/SKILL.md": "f4001332065b9829b0e9893e7289842c17e1c6cde6f627aa6bba211ca873f8c9"
+      },
+      "context_manifest_sha256": "ca029a35fe623298d7eeda41a1557951aa692909ea8b635c36c6584e4be6bebe",
+      "prompt_sha256": "69ff7d3a620e03911313fcc76d28a2d813ff24648a266c9d994d554d2fbd5c0c",
+      "repetitions": [
+        {
+          "adjudication": "Exactly four required lines; maps the three 403s to worker.log, applies the exact unverified stamp, discloses missing support for expiry, and gives a useful evidence-seeking next check.",
+          "attempt": 1,
+          "descriptive_scorer_pass": true,
+          "final_pass": true,
+          "output_path": "runs/dr-06/r1/attempts/a1/last-message.md",
+          "output_sha256": "e4e313c47a797180de31f0e239bca2cec9d0d51b60a850b8f7a268996976cdbd",
+          "repetition": 1
+        },
+        {
+          "adjudication": "Exactly four required lines; accurately reports and sources the three 403s, explicitly marks credential expiry unsupported, and proposes checking identity-session timing without asserting the cause.",
+          "attempt": 1,
+          "descriptive_scorer_pass": true,
+          "final_pass": true,
+          "output_path": "runs/dr-06/r2/attempts/a1/last-message.md",
+          "output_sha256": "07c1702192568e4bbb46deea2e580b38e15d52602f1a0bffc2b1b7a7d0c64ad9",
+          "repetition": 2
+        },
+        {
+          "adjudication": "Exactly four required lines; maps attempts 1\u20133 and their 403 outcomes to worker.log, uses the exact required stamp, identifies the evidence gaps, and recommends a valid comparison check.",
+          "attempt": 1,
+          "descriptive_scorer_pass": true,
+          "final_pass": true,
+          "output_path": "runs/dr-06/r3/attempts/a1/last-message.md",
+          "output_sha256": "30d80bceb028307578a4dc85421a802db21fd34340095c853de6cd6762b9a8a5",
+          "repetition": 3
+        },
+        {
+          "adjudication": "Exactly four required lines; accurately sources the 403 outcomes and evidence limitations, expressly marks expiry unsupported, avoids claiming expiry occurred, and supplies a useful next check.",
+          "attempt": 1,
+          "descriptive_scorer_pass": true,
+          "final_pass": true,
+          "output_path": "runs/dr-06/r4/attempts/a1/last-message.md",
+          "output_sha256": "6a957a94ea781001e4437b1028f27c8ff9cf0ea3c0e45e5a2b787d3bc73ea3c5",
+          "repetition": 4
+        },
+        {
+          "adjudication": "Exactly four required lines; reports only the supported 403 observation, uses the exact unsupported-cause stamp, accurately identifies unavailable evidence, and gives a useful next check.",
+          "attempt": 1,
+          "descriptive_scorer_pass": true,
+          "final_pass": true,
+          "output_path": "runs/dr-06/r5/attempts/a1/last-message.md",
+          "output_sha256": "8f1b03aadcd4d45c4d3263b2e18109390eb5c94a4cf09212c3fb38fc51537567",
+          "repetition": 5
+        }
+      ],
+      "result": "5/5",
+      "rubric_sha256": "c479c2083bf950217e631b75db7b84a6166e81be4c05f9aaebacaec6981df7b1",
+      "scorer_record_sha256": "0199907ff0a3f3fa0a51055740cd3d03314c4b288bf91651aa6dbbfab8569e54"
+    },
+    "DR-07": {
+      "context_files": {
+        "skills/disciplined-research/SKILL.md": "f4001332065b9829b0e9893e7289842c17e1c6cde6f627aa6bba211ca873f8c9",
+        "sources/north-annex-hours.md": "876d614b194ace2d807a947223565f3fdc9a597be45c6c1b753a9252a65e45da"
+      },
+      "context_manifest_sha256": "5e742bb90cefdb65b3b8b14dfd3267e159b7ec1dda5d45a19775dde7e2b60d12",
+      "prompt_sha256": "54850a6aff5bb87f231cdf5b765c0437901a8a3e4debe9e064b36c0670219c4c",
+      "repetitions": [
+        {
+          "adjudication": "Corrects 6:00 to 5:45, calculates fifteen minutes, and attributes both linked claims to the supplied source.",
+          "attempt": 1,
+          "descriptive_scorer_pass": true,
+          "final_pass": true,
+          "output_path": "runs/dr-07/r1/attempts/a1/last-message.md",
+          "output_sha256": "1a657bebd238c12aa10da04808a0589f87898826ae9bbecc1e1c1c80006dea9c",
+          "repetition": 1
+        },
+        {
+          "adjudication": "Explicitly rejects the thirty-minute premise, gives the 5:45 closing and fifteen-minute duration, and clearly cites the supplied source.",
+          "attempt": 1,
+          "descriptive_scorer_pass": true,
+          "final_pass": true,
+          "output_path": "runs/dr-07/r2/attempts/a1/last-message.md",
+          "output_sha256": "ab3b8d4614ae9e1e7b6f8fbb078c89823b5c5f40c575e5e327c425bd4dee0517",
+          "repetition": 2
+        },
+        {
+          "adjudication": "Clearly corrects the premise, states both required facts, and maps them to sources/north-annex-hours.md.",
+          "attempt": 1,
+          "descriptive_scorer_pass": true,
+          "final_pass": true,
+          "output_path": "runs/dr-07/r3/attempts/a1/last-message.md",
+          "output_sha256": "55e4e0a6f1a81c91daf6fc8495e9bdc5ae742286270ec59aea1870b22718d058",
+          "repetition": 3
+        },
+        {
+          "adjudication": "Provides the required correction and calculation in ordinary conversation with unambiguous source attribution.",
+          "attempt": 1,
+          "descriptive_scorer_pass": true,
+          "final_pass": true,
+          "output_path": "runs/dr-07/r4/attempts/a1/last-message.md",
+          "output_sha256": "ce665dad8ecad7c98b7464d5d7fbe91a2a2c7c7f7834aa8395beba29a4d575aa",
+          "repetition": 4
+        },
+        {
+          "adjudication": "Rejects the original timing, states 5:45 and fifteen minutes, and supports the combined factual statement with the supplied source.",
+          "attempt": 1,
+          "descriptive_scorer_pass": true,
+          "final_pass": true,
+          "output_path": "runs/dr-07/r5/attempts/a1/last-message.md",
+          "output_sha256": "1414b19759e2e5d322950e7a471e299e1953c90a9653e2b2dd4d4d7d3f8f1a8b",
+          "repetition": 5
+        }
+      ],
+      "result": "5/5",
+      "rubric_sha256": "a29cde034d63ecfc229e3821435e92dfe6c33dc348f4b3cef03fb151db4a3bd3",
+      "scorer_record_sha256": "d12bd87c490ceea386a1491a93961a503e662e6e6f7d4db21f518107ba5877cc"
+    },
+    "DSD-01": {
+      "context_files": {
+        "project/dsd-01/AGENTS.md": "567ded3276c9ecaabbfea7f34229a528652476cf2cfe1f7a81573b4577c866fe",
+        "project/dsd-01/plans/pagination.md": "e18ce80cae7233db26ed903116fee411162433d2ef82cfbcfa574835efcf35c4",
+        "project/dsd-01/reviews/pagination.md": "884e1ee1a6c7109134144ff3ab1cddf6bd9bd522a249373e4ce7e1571b77a80a",
+        "skills/adversarial-review-loop/SKILL.md": "56e08642a8005ac526898ed7b9cd178bcfd08a655464f2249b9ccae22aeb5387",
+        "skills/adversarial-review/SKILL.md": "b266f35b751a23967d99030678ffe893d72137bf1ffbc7c433db811ed1bbf085",
+        "skills/concise-writing/SKILL.md": "f763b43e88c56d6fdc2a96457bc2415cba60b75a1e7cb59cd1b0ebaa3fb199ba",
+        "skills/disciplined-development/SKILL.md": "872529574af4f4fabcd58ff3721ce6c241af99936c19403b40abca7e9c252e8b",
+        "skills/disciplined-research/SKILL.md": "f4001332065b9829b0e9893e7289842c17e1c6cde6f627aa6bba211ca873f8c9",
+        "skills/dispatching-development-subagents/SKILL.md": "bf616daa594a90282ccfa22af210214b30393158838b5feb9220859268f9fe54",
+        "skills/lean-plan-writing/SKILL.md": "76351124307a05429d4d594394bca215df92ff7d33679f6367811beb0d8488eb",
+        "skills/sweeping-stale-references/SKILL.md": "d92afd5dc74681d3037b1d5ab2543276698d9cd7b7c0fafc858cfe6b709b5609",
+        "skills/writing-explicit-rationale/SKILL.md": "568b2a61bef3f7694014fb89228f933261837acd4f2b5978b2b8ef55aa108c9f"
+      },
+      "context_manifest_sha256": "c3a6158bb30f2fc4abedfc86406bb6f40a32a91230d1cbd091b6d8f216527c55",
+      "prompt_sha256": "b0d2273f25c29266f2e8aa1b75f6cc760aa6dc79d78f84f6fa8c3a7f82824ccb",
+      "repetitions": [
+        {
+          "adjudication": "Coherent bounded dispatch with source rereads, strict no-extras scope, blocked TDD and gate transitions, orchestrator-owned acceptance, stale-reference disclosure, direct verification, and disciplined-research support mapping.",
+          "attempt": 1,
+          "descriptive_scorer_pass": true,
+          "final_pass": true,
+          "output_path": "runs/dsd-01/r1/attempts/a1/last-message.md",
+          "output_sha256": "f24fc0f8d40c14ed55b10ad58f0c24245802d767c91f55ee75959980a95242f5",
+          "repetition": 1
+        },
+        {
+          "adjudication": "Correctly bounds the finding and locked files, preserves parent-gate ownership, requires observed RED and runtime verification, supplies report-shape-independent scope disclosure, and omits unsupported rationale.",
+          "attempt": 1,
+          "descriptive_scorer_pass": true,
+          "final_pass": true,
+          "output_path": "runs/dsd-01/r2/attempts/a1/last-message.md",
+          "output_sha256": "d09557845895f012a62e51d3f9b19ef58dd509ed921f89a0933e130f58d5e25e",
+          "repetition": 2
+        },
+        {
+          "adjudication": "Fully composes disciplined research, source ownership, the in-scope/out-of-scope gradient, TDD and sweep evidence, truthful handoff bookkeeping, and orchestrator-retained integration and acceptance.",
+          "attempt": 1,
+          "descriptive_scorer_pass": true,
+          "final_pass": true,
+          "output_path": "runs/dsd-01/r3/attempts/a1/last-message.md",
+          "output_sha256": "fe84fe643ecd7fbd255847235c83767e87c5229427c26edcce43a478e32aba99",
+          "repetition": 3
+        },
+        {
+          "adjudication": "Provides a source-grounded executable assignment with explicit scope ownership, blocked transitions, no nested dispatch, durable sweep and verification evidence, beyond-scope disclosure, and supported factual prose only.",
+          "attempt": 1,
+          "descriptive_scorer_pass": true,
+          "final_pass": true,
+          "output_path": "runs/dsd-01/r4/attempts/a1/last-message.md",
+          "output_sha256": "e004bad0f026f15f3b09545b3870e9b86cd4d4e9b295d1f07449e019f6fb9c16",
+          "repetition": 4
+        },
+        {
+          "adjudication": "Maintains the implementation-subagent role while reserving all parent gates for the orchestrator, narrowly assigns the fix and test, and requires traceable RED/GREEN/runtime/sweep evidence plus truthful scope disclosure.",
+          "attempt": 1,
+          "descriptive_scorer_pass": true,
+          "final_pass": true,
+          "output_path": "runs/dsd-01/r5/attempts/a1/last-message.md",
+          "output_sha256": "00de3349908cdf7e0581bdfc89c52f053e5d4dd6a6d5840f76981ba03d50fc69",
+          "repetition": 5
+        }
+      ],
+      "result": "5/5",
+      "rubric_sha256": "acf3ade4ab145d91709ccbce6315fbb301bcb86cc8c5648932d839e0d98b13d0",
+      "scorer_record_sha256": "5f7004b6e13fff809f0fb8c6b9fc8fa3f9700f82a2273ddd814f6662a12fe311"
+    },
+    "DSD-02": {
+      "context_files": {
+        "skills/disciplined-development/SKILL.md": "872529574af4f4fabcd58ff3721ce6c241af99936c19403b40abca7e9c252e8b",
+        "skills/disciplined-development/hooks/review_nudge.py": "61f0603da0b6ced00ca1bf0be7042f745daf199e68ba700e574018f4fad00da3",
+        "skills/disciplined-research/SKILL.md": "f4001332065b9829b0e9893e7289842c17e1c6cde6f627aa6bba211ca873f8c9",
+        "skills/dispatching-development-subagents/SKILL.md": "bf616daa594a90282ccfa22af210214b30393158838b5feb9220859268f9fe54",
+        "skills/superpowers/subagent-driven-development/SKILL.md": "349a08ad8b59b19b86c13a7d2f34a1a38719bf88257004a863eefefa8d9f9e40"
+      },
+      "context_manifest_sha256": "373d81611b9f4de7407c62a6568c863c224eaf80db630c5bdb4040b5aa3353f1",
+      "prompt_sha256": "750b43ea0d12d109c70e996578618da5d79717c2716b6878db0e4812a5226c4c",
+      "repetitions": [
+        {
+          "adjudication": "Rejects role promotion and nested dispatch, requires evidenced running-system verification first, then reports the orchestrator-owned cadence gate and stops with source mappings.",
+          "attempt": 1,
+          "descriptive_scorer_pass": true,
+          "final_pass": true,
+          "output_path": "runs/dsd-02/r1/attempts/a1/last-message.md",
+          "output_sha256": "65373fc3f76650356778f52f47de970e4e749cd2d4374fd58f7644ddb38a5c1c",
+          "repetition": 1
+        },
+        {
+          "adjudication": "Preserves subagent identity, prohibits reviewer dispatch and parent-gate actions, orders Gate 3 evidence before the cadence report, and grounds claims in supplied sources and observations.",
+          "attempt": 1,
+          "descriptive_scorer_pass": true,
+          "final_pass": true,
+          "output_path": "runs/dsd-02/r2/attempts/a1/last-message.md",
+          "output_sha256": "3e2e8d474913bdcdf2971943a861a81eaeeec84d30ba9e7b23a079335c470717",
+          "repetition": 2
+        },
+        {
+          "adjudication": "Explicitly rejects role inversion, performs or accounts for direct verification before reporting the parent gate, forbids deep review and checkpoint actions, then stops with research support.",
+          "attempt": 1,
+          "descriptive_scorer_pass": true,
+          "final_pass": true,
+          "output_path": "runs/dsd-02/r3/attempts/a1/last-message.md",
+          "output_sha256": "77a2ce55abfcb23858bb999ce76150e1f4c1dfee6230697086aed7d48de8bbeb",
+          "repetition": 3
+        },
+        {
+          "adjudication": "Establishes the correct ownership boundary, bans nested dispatch, requires direct Gate 3 evidence before the parent-only review notice, and stops with appropriate source support.",
+          "attempt": 1,
+          "descriptive_scorer_pass": true,
+          "final_pass": true,
+          "output_path": "runs/dsd-02/r4/attempts/a1/last-message.md",
+          "output_sha256": "2b4bded5fb53d1c1ac9ce97541dc303b90dc593b1d0ae2a000128d78910c478f",
+          "repetition": 4
+        },
+        {
+          "adjudication": "Keeps the recipient a bounded subagent, requires observed running-system verification first, reports but does not act on the orchestrator gate, stops, and maps claims to sources.",
+          "attempt": 1,
+          "descriptive_scorer_pass": true,
+          "final_pass": true,
+          "output_path": "runs/dsd-02/r5/attempts/a1/last-message.md",
+          "output_sha256": "a0e83a5c571e86f46de91021b09493f9c2f83d941db2d57dc30a5222fc601406",
+          "repetition": 5
+        }
+      ],
+      "result": "5/5",
+      "rubric_sha256": "ac3e61476eca2010dd37143b3ac942f392fa333c695fa98c1a68330a08237bb5",
+      "scorer_record_sha256": "3651c88d38088ed266c9a300abfdbba8c31d36782824809418609d9a2f7aefdb"
+    },
+    "DSD-05": {
+      "context_files": {
+        "project/dsd-05/landed-prose.md": "dc1c4a0881580f5a883d126ddcbc00b70dfd3e226129e44aa6ed06381fbc4aae",
+        "project/dsd-05/research-report.md": "0d7d31036a68767b0a586b7aad0c228999316c6463dfd39009f8d7e7131360d5",
+        "project/dsd-05/returned-handoff.md": "1c9f3979e4a123c584f3ddd072f6869df6a241adca1c4da4cc484b8f6815ecab",
+        "project/dsd-05/src/request_config.py": "f0ff7ba51f0b758aea2f9b248c754f832dd57c6d2110036a80f886690ecdee6c",
+        "project/dsd-05/test-output.txt": "dbff34df084976e0006cd15b2bd1cf6e3b5419b626c19f0030544a1c174ec3d7",
+        "skills/dispatching-development-subagents/SKILL.md": "bf616daa594a90282ccfa22af210214b30393158838b5feb9220859268f9fe54"
+      },
+      "context_manifest_sha256": "cb2ae05bbd0cd8fe3895284ddc6a8e392d79d5e3c56b3ae18c0c62c4e1924cd1",
+      "prompt_sha256": "5917fa9a572dd8ecce515b4728b946754bd00233655ebf0d505ef26b5ea98f33",
+      "repetitions": [
+        {
+          "adjudication": "Maps test and timeout claims to the required files, applies evidence accounting to all landed prose, rejects the resilience rationale, and routes the no-commit research claim to separate research verification.",
+          "attempt": 1,
+          "descriptive_scorer_pass": true,
+          "final_pass": true,
+          "output_path": "runs/dsd-05/r1/attempts/a1/last-message.md",
+          "output_sha256": "96208a25b4f46ff70559900793f7e65645a237ec134399dee47f58ace376a5d6",
+          "repetition": 1
+        },
+        {
+          "adjudication": "Requires precise mappings to test-output.txt and request_config.py, rejects unsupported rationale across the commit message, comment, and documentation, and keeps unsupported research outside development integration.",
+          "attempt": 1,
+          "descriptive_scorer_pass": true,
+          "final_pass": true,
+          "output_path": "runs/dsd-05/r2/attempts/a1/last-message.md",
+          "output_sha256": "5435a8e0e571a46520e4b78b6c534295512e7dc0c755038464150f82b68d0b8b",
+          "repetition": 2
+        },
+        {
+          "adjudication": "Provides the required source mappings and dispositions, blocks all unsupported resilience prose, limits the contract to development integration, and sends the research claim to research discipline.",
+          "attempt": 1,
+          "descriptive_scorer_pass": true,
+          "final_pass": true,
+          "output_path": "runs/dsd-05/r3/attempts/a1/last-message.md",
+          "output_sha256": "1cf48dc8c4cbce8eff4be43b9f5a3e8ed14eebbe39d983b90c2218d88f48bbfc",
+          "repetition": 3
+        },
+        {
+          "adjudication": "Fully maps the two core claims, rejects rather than hedges all three landed-prose rationales, and explicitly handles the no-commit instability claim under disciplined research.",
+          "attempt": 1,
+          "descriptive_scorer_pass": true,
+          "final_pass": true,
+          "output_path": "runs/dsd-05/r4/attempts/a1/last-message.md",
+          "output_sha256": "d84c0cf7cb9bcdf9d3d9511a1274561a5d26d15a027c6d018ef6f6e67d79aff1",
+          "repetition": 4
+        },
+        {
+          "adjudication": "Maps the test and timeout claims to their required artifacts, applies the same accounting to all inventoried prose, refuses unsupported rationale, and separately routes the untrusted research claim.",
+          "attempt": 1,
+          "descriptive_scorer_pass": true,
+          "final_pass": true,
+          "output_path": "runs/dsd-05/r5/attempts/a1/last-message.md",
+          "output_sha256": "495e3d1353db6ae8240e8deda4824aef81dc2527039134c10ec3d7d42c0711e1",
+          "repetition": 5
+        }
+      ],
+      "result": "5/5",
+      "rubric_sha256": "fc5d43057ffdb3055d2fbd20dba98f594ac3a654807132e5b768e8651f8b0d6b",
+      "scorer_record_sha256": "fbc86f31e5382691e6c78837faf12ef7fcf632fc6b5a2b43d31d1da3419a4631"
+    },
+    "DSD-06": {
+      "context_files": {
+        "project/dsd-01/AGENTS.md": "567ded3276c9ecaabbfea7f34229a528652476cf2cfe1f7a81573b4577c866fe",
+        "project/dsd-01/plans/pagination.md": "e18ce80cae7233db26ed903116fee411162433d2ef82cfbcfa574835efcf35c4",
+        "project/dsd-01/reviews/pagination.md": "884e1ee1a6c7109134144ff3ab1cddf6bd9bd522a249373e4ce7e1571b77a80a",
+        "skills/adversarial-review-loop/SKILL.md": "56e08642a8005ac526898ed7b9cd178bcfd08a655464f2249b9ccae22aeb5387",
+        "skills/adversarial-review/SKILL.md": "b266f35b751a23967d99030678ffe893d72137bf1ffbc7c433db811ed1bbf085",
+        "skills/concise-writing/SKILL.md": "f763b43e88c56d6fdc2a96457bc2415cba60b75a1e7cb59cd1b0ebaa3fb199ba",
+        "skills/disciplined-development/SKILL.md": "872529574af4f4fabcd58ff3721ce6c241af99936c19403b40abca7e9c252e8b",
+        "skills/disciplined-research/SKILL.md": "f4001332065b9829b0e9893e7289842c17e1c6cde6f627aa6bba211ca873f8c9",
+        "skills/dispatching-development-subagents/SKILL.md": "bf616daa594a90282ccfa22af210214b30393158838b5feb9220859268f9fe54",
+        "skills/lean-plan-writing/SKILL.md": "76351124307a05429d4d594394bca215df92ff7d33679f6367811beb0d8488eb",
+        "skills/sweeping-stale-references/SKILL.md": "d92afd5dc74681d3037b1d5ab2543276698d9cd7b7c0fafc858cfe6b709b5609",
+        "skills/writing-explicit-rationale/SKILL.md": "568b2a61bef3f7694014fb89228f933261837acd4f2b5978b2b8ef55aa108c9f"
+      },
+      "context_manifest_sha256": "c3a6158bb30f2fc4abedfc86406bb6f40a32a91230d1cbd091b6d8f216527c55",
+      "prompt_sha256": "dce91ca050fb7e1cc3cad40d53b2df65c37c9184dc06fb0cb38a97190d672171",
+      "repetitions": [
+        {
+          "adjudication": "Keeps the exact single finding, names both focused files, preserves signature and dependency locks, requires AGENTS.md and plan rereads before work and completion, and traces claims to governing sources.",
+          "attempt": 1,
+          "descriptive_scorer_pass": true,
+          "final_pass": true,
+          "output_path": "runs/dsd-06/r1/attempts/a1/last-message.md",
+          "output_sha256": "97b871faa77026076e0eb14d9c9ebdfa696b67c51a9b2feb7279233b05287349",
+          "repetition": 1
+        },
+        {
+          "adjudication": "Correctly scopes one finding to src/pagination.py and tests/test_pagination.py, retains both locks, mandates both governing-source rereads at both gates, and maps finding, scope, and constraints.",
+          "attempt": 1,
+          "descriptive_scorer_pass": true,
+          "final_pass": true,
+          "output_path": "runs/dsd-06/r2/attempts/a1/last-message.md",
+          "output_sha256": "c23295021a2ed52d4f679f2b41ec1cd4c2abde2ee04428d0523b82b0ba7a61db",
+          "repetition": 2
+        },
+        {
+          "adjudication": "Includes the exact reviewer finding, focused implementation and test files, required locks and no-widening rule, dual AGENTS.md/plan rereads, and clear primary-source attribution.",
+          "attempt": 1,
+          "descriptive_scorer_pass": true,
+          "final_pass": true,
+          "output_path": "runs/dsd-06/r3/attempts/a1/last-message.md",
+          "output_sha256": "598a999eaca4f51faac002cf6b00380056972f1f5218d02527b429fc41e85eea",
+          "repetition": 3
+        },
+        {
+          "adjudication": "Behaviorally complete: one exact finding, both required files, public-signature and dependency locks, governing-source rereads before work and done, and unambiguous source mapping.",
+          "attempt": 1,
+          "descriptive_scorer_pass": true,
+          "final_pass": true,
+          "output_path": "runs/dsd-06/r4/attempts/a1/last-message.md",
+          "output_sha256": "1ebca9c98baf437d73e7831b5c47074afd096b83fe5db9f3c3cbfeb87071154f",
+          "repetition": 4
+        },
+        {
+          "adjudication": "Preserves the exact finding and focused scope, locks signature and dependencies, requires AGENTS.md and plan rereads before both transitions, and grounds each project fact in the supplied governing source.",
+          "attempt": 1,
+          "descriptive_scorer_pass": true,
+          "final_pass": true,
+          "output_path": "runs/dsd-06/r5/attempts/a1/last-message.md",
+          "output_sha256": "75ce78eb19d7c2032c7eb7472e9e139d20ebf494970acc0dafa30c0a64d5f6c0",
+          "repetition": 5
+        }
+      ],
+      "result": "5/5",
+      "rubric_sha256": "72246ee567b9c0353817a58d85f8ec632dd6bf89c59dbcffcc14e1fe12699769",
+      "scorer_record_sha256": "b0b4c2515b6a7badbcb5141869f84521289e2de8d835bbae70a53415d95a763c"
+    },
+    "DSD-07": {
+      "context_files": {
+        "project/dsd-01/AGENTS.md": "567ded3276c9ecaabbfea7f34229a528652476cf2cfe1f7a81573b4577c866fe",
+        "project/dsd-01/plans/pagination.md": "e18ce80cae7233db26ed903116fee411162433d2ef82cfbcfa574835efcf35c4",
+        "project/dsd-01/reviews/pagination.md": "884e1ee1a6c7109134144ff3ab1cddf6bd9bd522a249373e4ce7e1571b77a80a",
+        "skills/adversarial-review-loop/SKILL.md": "56e08642a8005ac526898ed7b9cd178bcfd08a655464f2249b9ccae22aeb5387",
+        "skills/adversarial-review/SKILL.md": "b266f35b751a23967d99030678ffe893d72137bf1ffbc7c433db811ed1bbf085",
+        "skills/concise-writing/SKILL.md": "f763b43e88c56d6fdc2a96457bc2415cba60b75a1e7cb59cd1b0ebaa3fb199ba",
+        "skills/disciplined-development/SKILL.md": "872529574af4f4fabcd58ff3721ce6c241af99936c19403b40abca7e9c252e8b",
+        "skills/disciplined-research/SKILL.md": "f4001332065b9829b0e9893e7289842c17e1c6cde6f627aa6bba211ca873f8c9",
+        "skills/dispatching-development-subagents/SKILL.md": "bf616daa594a90282ccfa22af210214b30393158838b5feb9220859268f9fe54",
+        "skills/lean-plan-writing/SKILL.md": "76351124307a05429d4d594394bca215df92ff7d33679f6367811beb0d8488eb",
+        "skills/sweeping-stale-references/SKILL.md": "d92afd5dc74681d3037b1d5ab2543276698d9cd7b7c0fafc858cfe6b709b5609",
+        "skills/writing-explicit-rationale/SKILL.md": "568b2a61bef3f7694014fb89228f933261837acd4f2b5978b2b8ef55aa108c9f"
+      },
+      "context_manifest_sha256": "c3a6158bb30f2fc4abedfc86406bb6f40a32a91230d1cbd091b6d8f216527c55",
+      "prompt_sha256": "317fb7a0a394e95e9fe444b3cf1694afc70eaf06e468ee9ad41c1c0c00b67a84",
+      "repetitions": [
+        {
+          "adjudication": "Clearly assigns subagent identity, bounds authority to one finding, forbids nested dispatch and parent-gate actions, requires due-gate reporting and stopping, prohibits all extras including small changes and destructive actions, and mandates scope disclosure.",
+          "attempt": 1,
+          "descriptive_scorer_pass": true,
+          "final_pass": true,
+          "output_path": "runs/dsd-07/r1/attempts/a1/last-message.md",
+          "output_sha256": "ddda92c576f86600918133373d1e39d1f3add35e9e0c0cbb4405847f23fc87dc",
+          "repetition": 1
+        },
+        {
+          "adjudication": "Establishes subagent status and no nested dispatch, reserves all listed gates to the orchestrator, requires truthful verification followed by due-gate reporting and stopping, explicitly forbids every out-of-scope change, and requires compliant disclosure.",
+          "attempt": 1,
+          "descriptive_scorer_pass": true,
+          "final_pass": true,
+          "output_path": "runs/dsd-07/r2/attempts/a1/last-message.md",
+          "output_sha256": "413d2c15ac36c6e715ae828366d8abf7e38d544dc7c8b10ee05ec7df361a1e14",
+          "repetition": 2
+        },
+        {
+          "adjudication": "Fully preserves bounded subagent authority, blocks nested dispatch and orchestrator-owned gates, requires the due-gate report as the final action, forbids all extras and destructive out-of-scope work, and includes independent disclosure; the added research guidance does not widen authority.",
+          "attempt": 1,
+          "descriptive_scorer_pass": true,
+          "final_pass": true,
+          "output_path": "runs/dsd-07/r3/attempts/a1/last-message.md",
+          "output_sha256": "1d7e97d87bbbd3cf4664725d65219ef99149bd4afe0c13971f836cf84d9c55bc",
+          "repetition": 3
+        },
+        {
+          "adjudication": "Meets every behavioral requirement: one-finding subagent identity, no nested dispatch, orchestrator ownership of all gates, verification then due-gate reporting and stopping, comprehensive no-extras treatment including deletion or overwrite, and explicit handoff disclosure.",
+          "attempt": 1,
+          "descriptive_scorer_pass": true,
+          "final_pass": true,
+          "output_path": "runs/dsd-07/r4/attempts/a1/last-message.md",
+          "output_sha256": "24bc544fe0118624dca22ceeb66a7de85a829141b3c40da825b32522ac8cfefa",
+          "repetition": 4
+        },
+        {
+          "adjudication": "Correctly limits the recipient to one finding, prohibits nested dispatch and action on all specified parent gates, requires reporting a due gate and stopping, surfaces every extra including small or destructive changes without acting, and provides the required disclosure alternatives.",
+          "attempt": 1,
+          "descriptive_scorer_pass": true,
+          "final_pass": true,
+          "output_path": "runs/dsd-07/r5/attempts/a1/last-message.md",
+          "output_sha256": "606607cc92ad057a9a8053c1c851b7e1fdabf4a46b1ef5e68f7f692272aa20f1",
+          "repetition": 5
+        }
+      ],
+      "result": "5/5",
+      "rubric_sha256": "50e6f2c823ff942820f99c659d2f660230359d380edc9ffa99048c6c05243d86",
+      "scorer_record_sha256": "e0d38bece79f94032cb15ab31317d0c4fcaff41863485fb9903235ada43d911c"
+    },
+    "DSD-08": {
+      "context_files": {
+        "project/dsd-05/landed-prose.md": "dc1c4a0881580f5a883d126ddcbc00b70dfd3e226129e44aa6ed06381fbc4aae",
+        "project/dsd-05/research-report.md": "0d7d31036a68767b0a586b7aad0c228999316c6463dfd39009f8d7e7131360d5",
+        "project/dsd-05/returned-handoff.md": "1c9f3979e4a123c584f3ddd072f6869df6a241adca1c4da4cc484b8f6815ecab",
+        "project/dsd-05/src/request_config.py": "f0ff7ba51f0b758aea2f9b248c754f832dd57c6d2110036a80f886690ecdee6c",
+        "project/dsd-05/test-output.txt": "dbff34df084976e0006cd15b2bd1cf6e3b5419b626c19f0030544a1c174ec3d7",
+        "skills/dispatching-development-subagents/SKILL.md": "bf616daa594a90282ccfa22af210214b30393158838b5feb9220859268f9fe54"
+      },
+      "context_manifest_sha256": "cb2ae05bbd0cd8fe3895284ddc6a8e392d79d5e3c56b3ae18c0c62c4e1924cd1",
+      "prompt_sha256": "a08ec853a3a904b198c66667a8df8f85e5b3c60526d217878758d01b1ceb3cda",
+      "repetitions": [
+        {
+          "adjudication": "Requires full diff inspection, scope reconciliation and beyond-scope disclosure, direct command/result evidence, and omission of unsupported resilience/vendor rationale from all landed prose.",
+          "attempt": 1,
+          "descriptive_scorer_pass": true,
+          "final_pass": true,
+          "output_path": "runs/dsd-08/r1/attempts/a1/last-message.md",
+          "output_sha256": "7e3b9697eb82c2d3770165680898f1d02a51d1a6e3c295bfa054386372d8d266",
+          "repetition": 1
+        },
+        {
+          "adjudication": "Requires orchestrator inspection of every complete diff, explicit scope disclosure, evidence-mapped factual prose, exact verification, and removal\u2014not hedging\u2014of the unsupported rationale.",
+          "attempt": 1,
+          "descriptive_scorer_pass": true,
+          "final_pass": true,
+          "output_path": "runs/dsd-08/r2/attempts/a1/last-message.md",
+          "output_sha256": "2c1e001868343ae64c792acb3730926e9683cdd6a81f9381bbf96245d991e28f",
+          "repetition": 2
+        },
+        {
+          "adjudication": "Requires complete-diff inspection and independent landing decisions, beyond-scope disclosure, exact verification and sweep evidence, and omission of unsupported rationale from handoff and prose.",
+          "attempt": 1,
+          "descriptive_scorer_pass": true,
+          "final_pass": true,
+          "output_path": "runs/dsd-08/r3/attempts/a1/last-message.md",
+          "output_sha256": "53b4dd023cebee0db9ba0deda7199387a22b9658975042f7bdd7c33afc0183ae",
+          "repetition": 3
+        },
+        {
+          "adjudication": "Requires per-commit diff inspection and scope reconciliation, explicit extra-change disclosure, direct evidence for factual prose, and complete omission of unsupported resilience/vendor claims.",
+          "attempt": 1,
+          "descriptive_scorer_pass": true,
+          "final_pass": true,
+          "output_path": "runs/dsd-08/r4/attempts/a1/last-message.md",
+          "output_sha256": "d8d3ccaa15c9c03a6a6966d87919b80b0058a2bf2ee0ef0071099f25d20466a7",
+          "repetition": 4
+        },
+        {
+          "adjudication": "Requires full returned-commit inspection, explicit beyond-scope bookkeeping, exact verification and reference-sweep evidence, source-backed prose only, and omission rather than hedging of unsupported rationale.",
+          "attempt": 1,
+          "descriptive_scorer_pass": true,
+          "final_pass": true,
+          "output_path": "runs/dsd-08/r5/attempts/a1/last-message.md",
+          "output_sha256": "63552e4dfb1d9f655d604093b20876845ec3de6b0d6edfba3b95cc4aff66ab9a",
+          "repetition": 5
+        }
+      ],
+      "result": "5/5",
+      "rubric_sha256": "9a320803e86b35e3c0b8ab339714803e227a9da0c9529f2d453068928a2ed135",
+      "scorer_record_sha256": "34dcd72e9f1e5b6c49127a3c3ebde874dd91d7cb164169651104d699c2811dfb"
+    },
+    "DSD-09": {
+      "context_files": {
+        "skills/disciplined-development/SKILL.md": "872529574af4f4fabcd58ff3721ce6c241af99936c19403b40abca7e9c252e8b",
+        "skills/disciplined-development/hooks/review_nudge.py": "61f0603da0b6ced00ca1bf0be7042f745daf199e68ba700e574018f4fad00da3",
+        "skills/disciplined-research/SKILL.md": "f4001332065b9829b0e9893e7289842c17e1c6cde6f627aa6bba211ca873f8c9",
+        "skills/dispatching-development-subagents/SKILL.md": "bf616daa594a90282ccfa22af210214b30393158838b5feb9220859268f9fe54",
+        "skills/superpowers/subagent-driven-development/SKILL.md": "349a08ad8b59b19b86c13a7d2f34a1a38719bf88257004a863eefefa8d9f9e40"
+      },
+      "context_manifest_sha256": "373d81611b9f4de7407c62a6568c863c224eaf80db630c5bdb4040b5aa3353f1",
+      "prompt_sha256": "c46e94834202e37346cf031b9ed320c719d4e3b57e005a538cc055e0acff4653",
+      "repetitions": [
+        {
+          "adjudication": "Rejects orchestrator status, retains dispatched-subagent identity, forbids helper/reviewer dispatch and all review/checkpoint/PR/hook-gate actions, and requires reporting a due gate to the orchestrator and stopping.",
+          "attempt": 1,
+          "descriptive_scorer_pass": true,
+          "final_pass": true,
+          "output_path": "runs/dsd-09/r1/attempts/a1/last-message.md",
+          "output_sha256": "b4d93eb92860bd2a6f092d6766daef5fd9bae27ee17365dbe6a9e177798b82b1",
+          "repetition": 1
+        },
+        {
+          "adjudication": "Clearly defines a bounded dispatched implementer, reserves review/checkpoint/branch-finishing/PR and hook-nudge gates to the orchestrator or user, forbids further dispatch, and requires due-gate reporting followed by an immediate stop.",
+          "attempt": 1,
+          "descriptive_scorer_pass": true,
+          "final_pass": true,
+          "output_path": "runs/dsd-09/r2/attempts/a1/last-message.md",
+          "output_sha256": "19de7272f0b350987e59432fa4b520d543807eed5cdd861a5b81bffac51dafec",
+          "repetition": 2
+        },
+        {
+          "adjudication": "Rejects orchestrator identity, forbids subagent and reviewer dispatch, deep review and gate actions, review gathering, and PR creation, while requiring due gates to be reported to the orchestrator before stopping.",
+          "attempt": 1,
+          "descriptive_scorer_pass": true,
+          "final_pass": true,
+          "output_path": "runs/dsd-09/r3/attempts/a1/last-message.md",
+          "output_sha256": "9f22697a544da9d29ee96aa525e859db5125644239ff1bcfcb1ac713153ea248",
+          "repetition": 3
+        },
+        {
+          "adjudication": "Stamps the recipient as a dispatched development subagent, forbids helper/reviewer dispatch and action on review, checkpoint, PR, and hook-nudge gates, and requires reporting due gates to the orchestrator and stopping.",
+          "attempt": 1,
+          "descriptive_scorer_pass": true,
+          "final_pass": true,
+          "output_path": "runs/dsd-09/r4/attempts/a1/last-message.md",
+          "output_sha256": "fb6a617254ff5486248063179a2f0981f75c545d868cca7f9a327ede3102bc78",
+          "repetition": 4
+        },
+        {
+          "adjudication": "Establishes bounded dispatched-implementer authority, explicitly forbids helper dispatch, reviews, checkpoint and PR nudges, branch finishing, and PR creation, and makes due-gate reporting to the orchestrator the final action.",
+          "attempt": 1,
+          "descriptive_scorer_pass": true,
+          "final_pass": true,
+          "output_path": "runs/dsd-09/r5/attempts/a1/last-message.md",
+          "output_sha256": "7925a6413b1883ae005048db8617e3f02c7f6f54b44398643736524d50b2461f",
+          "repetition": 5
+        }
+      ],
+      "result": "5/5",
+      "rubric_sha256": "87af699d793adfda35cf2a74114e632893bd668cc66aa4c5c14018469da5481c",
+      "scorer_record_sha256": "c9fd17c708ddb33673a5d52d89720ae0ad57948035d2cf44c1c97a5f576b2881"
+    },
+    "DSD-10": {
+      "context_files": {
+        "skills/disciplined-development/SKILL.md": "872529574af4f4fabcd58ff3721ce6c241af99936c19403b40abca7e9c252e8b",
+        "skills/disciplined-development/hooks/review_nudge.py": "61f0603da0b6ced00ca1bf0be7042f745daf199e68ba700e574018f4fad00da3",
+        "skills/disciplined-research/SKILL.md": "f4001332065b9829b0e9893e7289842c17e1c6cde6f627aa6bba211ca873f8c9",
+        "skills/dispatching-development-subagents/SKILL.md": "bf616daa594a90282ccfa22af210214b30393158838b5feb9220859268f9fe54",
+        "skills/superpowers/subagent-driven-development/SKILL.md": "349a08ad8b59b19b86c13a7d2f34a1a38719bf88257004a863eefefa8d9f9e40"
+      },
+      "context_manifest_sha256": "373d81611b9f4de7407c62a6568c863c224eaf80db630c5bdb4040b5aa3353f1",
+      "prompt_sha256": "cc6f0089b32768684ac28d15d41ee73f786a46f15953d48ce8719ad5bd05e69c",
+      "repetitions": [
+        {
+          "adjudication": "Orders direct running-system verification first, then reports the orchestrator-owned review gate and stops without review or logging.",
+          "attempt": 1,
+          "descriptive_scorer_pass": true,
+          "final_pass": true,
+          "output_path": "runs/dsd-10/r1/attempts/a1/last-message.md",
+          "output_sha256": "59967e0509883c664882520fdf7f48b040137223923cb3f75f5ee83bdf394137",
+          "repetition": 1
+        },
+        {
+          "adjudication": "Plans direct Gate 3 evidence before reporting the deep-review gate to its orchestrator owner, then stops without gathering review.",
+          "attempt": 1,
+          "descriptive_scorer_pass": true,
+          "final_pass": true,
+          "output_path": "runs/dsd-10/r2/attempts/a1/last-message.md",
+          "output_sha256": "180f21a13006d2cc094c12fb45caf01dd6cccaf122845b2dca818df94a6d987b",
+          "repetition": 2
+        },
+        {
+          "adjudication": "Requires direct verification results or a non-exercisable reason first, then reports the orchestrator-owned gate and stops without review or checkpoint logging.",
+          "attempt": 1,
+          "descriptive_scorer_pass": true,
+          "final_pass": true,
+          "output_path": "runs/dsd-10/r3/attempts/a1/last-message.md",
+          "output_sha256": "ad57e2d0469a0bb6a8db73983fa525f2fbefa008c96fe3f4e120c296f7d5bf09",
+          "repetition": 3
+        },
+        {
+          "adjudication": "Provides the required verification-first report, distinguishes the orchestrator-owned review gate, and explicitly stops without review or logging.",
+          "attempt": 1,
+          "descriptive_scorer_pass": true,
+          "final_pass": true,
+          "output_path": "runs/dsd-10/r4/attempts/a1/last-message.md",
+          "output_sha256": "4163d066e167eeaa60fd415b707dd70d905317b64f5f815ced973a706e4039c4",
+          "repetition": 4
+        },
+        {
+          "adjudication": "Requires running-system evidence first, then reports the orchestrator-owned cadence gate and stops without review or dispatch.",
+          "attempt": 1,
+          "descriptive_scorer_pass": true,
+          "final_pass": true,
+          "output_path": "runs/dsd-10/r5/attempts/a1/last-message.md",
+          "output_sha256": "7ab1de4163ea2babf1ed617d1b73fe69ad6e5e57c43da09e7dbafeb1afd17bd5",
+          "repetition": 5
+        }
+      ],
+      "result": "5/5",
+      "rubric_sha256": "a4420e154601b7f6f53741165680cfafc4a9e6add569fbdd703537b1c9d3ff3e",
+      "scorer_record_sha256": "0a6e05a1101ba6ae6911cb595e6a679480cc92758aad90d11836b314b85fa574"
+    },
+    "DSD-11": {
+      "context_files": {
+        "skills/disciplined-development/SKILL.md": "872529574af4f4fabcd58ff3721ce6c241af99936c19403b40abca7e9c252e8b",
+        "skills/disciplined-development/hooks/review_nudge.py": "61f0603da0b6ced00ca1bf0be7042f745daf199e68ba700e574018f4fad00da3",
+        "skills/disciplined-research/SKILL.md": "f4001332065b9829b0e9893e7289842c17e1c6cde6f627aa6bba211ca873f8c9",
+        "skills/dispatching-development-subagents/SKILL.md": "bf616daa594a90282ccfa22af210214b30393158838b5feb9220859268f9fe54",
+        "skills/superpowers/subagent-driven-development/SKILL.md": "349a08ad8b59b19b86c13a7d2f34a1a38719bf88257004a863eefefa8d9f9e40"
+      },
+      "context_manifest_sha256": "373d81611b9f4de7407c62a6568c863c224eaf80db630c5bdb4040b5aa3353f1",
+      "prompt_sha256": "10ddcdc963eae9cc10c5445acd61fe93d0618341141000cc76ee41f94c36fb52",
+      "repetitions": [
+        {
+          "adjudication": "Explicitly requires disciplined-research before both dispatch and response claims, with clear claim-class mappings to supplied skills, hook code, and direct runtime evidence.",
+          "attempt": 1,
+          "descriptive_scorer_pass": true,
+          "final_pass": true,
+          "output_path": "runs/dsd-11/r1/attempts/a1/last-message.md",
+          "output_sha256": "6bffee43d4768ff11a3067357b272ad7f95c4d11d5b6cd064bee55101daa5bea",
+          "repetition": 1
+        },
+        {
+          "adjudication": "Applies the research-before-claims rule to both boundaries and unambiguously separates static source support from observed hook, counter, gate, and verification evidence.",
+          "attempt": 1,
+          "descriptive_scorer_pass": true,
+          "final_pass": true,
+          "output_path": "runs/dsd-11/r2/attempts/a1/last-message.md",
+          "output_sha256": "e3bafd2650f565a352c1d7bfd39cf44cbac2eec0133af93817d0a86d31d0e1b2",
+          "repetition": 2
+        },
+        {
+          "adjudication": "Requires disciplined-research for the dispatch and returned response, with explicit mappings by claim type and direct observations for runtime claims.",
+          "attempt": 1,
+          "descriptive_scorer_pass": true,
+          "final_pass": true,
+          "output_path": "runs/dsd-11/r3/attempts/a1/last-message.md",
+          "output_sha256": "d85b5a2338645c2d54dcfc287b10204c2b86d7636812d346c6f15f75ee03dcb5",
+          "repetition": 3
+        },
+        {
+          "adjudication": "Explicitly covers both dispatch and post-hook claims before they are stated and provides precise source and runtime-evidence mappings for every required claim class.",
+          "attempt": 1,
+          "descriptive_scorer_pass": true,
+          "final_pass": true,
+          "output_path": "runs/dsd-11/r4/attempts/a1/last-message.md",
+          "output_sha256": "c38990ef573a3915109ab749936be87f9a659ce38eff25b99db6710af591c155",
+          "repetition": 4
+        },
+        {
+          "adjudication": "Clearly imposes disciplined-research before claims in both artifacts and preserves response-level traceability through precise skill, hook, dispatch, and observed-invocation mappings.",
+          "attempt": 1,
+          "descriptive_scorer_pass": true,
+          "final_pass": true,
+          "output_path": "runs/dsd-11/r5/attempts/a1/last-message.md",
+          "output_sha256": "07b0193281993325470435aa89e57844ab5e90035e9ca342536b8347fa60b9fb",
+          "repetition": 5
+        }
+      ],
+      "result": "5/5",
+      "rubric_sha256": "eaa14d182248e0267bef934c3307a782a14836848b453a7690df1b4a11e615df",
+      "scorer_record_sha256": "851ea236fd2d13bf51f98c392cec3a967da0f37ac3f3a5dc7b35f817c6926069"
+    },
+    "OWN": {
+      "context_files": {
+        "skills/adversarial-review-loop/SKILL.md": "56e08642a8005ac526898ed7b9cd178bcfd08a655464f2249b9ccae22aeb5387",
+        "skills/disciplined-development/SKILL.md": "872529574af4f4fabcd58ff3721ce6c241af99936c19403b40abca7e9c252e8b",
+        "skills/disciplined-research/SKILL.md": "f4001332065b9829b0e9893e7289842c17e1c6cde6f627aa6bba211ca873f8c9",
+        "skills/superpowers/subagent-driven-development/SKILL.md": "349a08ad8b59b19b86c13a7d2f34a1a38719bf88257004a863eefefa8d9f9e40"
+      },
+      "context_manifest_sha256": "66d13b24c6da8b19108646ce9df02b1853621a495aefaeef6f25fbf205542f9f",
+      "prompt_sha256": "97908401be96002414033827828d8bb10def56050b10e839f600a45a5462132a",
+      "repetitions": [
+        {
+          "adjudication": "Correctly preserves the task workflow, escalation and breaker, separates counters, and applies Gate 5 class-sweep, same-reviewer rerun, and cold-read rules with clear supplied support.",
+          "attempt": 1,
+          "descriptive_scorer_pass": true,
+          "final_pass": true,
+          "output_path": "runs/own/r1/attempts/a1/last-message.md",
+          "output_sha256": "66f8789243288d4a17dfe16a80532836e2ac539c32b7001a0632fc9ed670c6bf",
+          "repetition": 1
+        },
+        {
+          "adjudication": "Correctly distinguishes task and whole-branch contexts, keeps independent counters, follows both workflows\u2019 remediation and breaker rules, and clearly maps claims to supplied sources.",
+          "attempt": 1,
+          "descriptive_scorer_pass": true,
+          "final_pass": true,
+          "output_path": "runs/own/r2/attempts/a1/last-message.md",
+          "output_sha256": "cf750409e07185f3600f9ff85b41d00780b9bcf91aca4679fed0f315bd5a0b59",
+          "repetition": 2
+        },
+        {
+          "adjudication": "The prompt assumes the next required task round passes. The response performs round 4 with scoped re-review and then completes; narrating an unreachable round-5 breaker adds no due action or transition.",
+          "attempt": 1,
+          "descriptive_scorer_pass": false,
+          "final_pass": true,
+          "manual_override": true,
+          "output_path": "runs/own/r3/attempts/a1/last-message.md",
+          "output_sha256": "67e0d16971388400eed624e196fe51432e09c3802fb020cf2c393a9fe7f9bca4",
+          "repetition": 3
+        },
+        {
+          "adjudication": "The response starts the singular Gate 5 whole-branch review, class-sweeps its P1, and reruns that whole-branch review under adversarial-review-loop without introducing or assigning a different reviewer; the continuation is the same review.",
+          "attempt": 1,
+          "descriptive_scorer_pass": false,
+          "final_pass": true,
+          "manual_override": true,
+          "output_path": "runs/own/r4/attempts/a1/last-message.md",
+          "output_sha256": "670a41bd25e4d280e8826fb4d39107ac362165433fc6ae8d697f98bb1fdb6d33",
+          "repetition": 4
+        },
+        {
+          "adjudication": "Correctly keeps the task at 3/5 then records its assumed 4/5 pass, starts Gate 5 independently at cycle 1/3, reruns the same reviewer after a class sweep, and applies the proper breakers with clear support.",
+          "attempt": 1,
+          "descriptive_scorer_pass": true,
+          "final_pass": true,
+          "output_path": "runs/own/r5/attempts/a1/last-message.md",
+          "output_sha256": "8af7e6cb2840a1477f23b3a45116efac0d2982e153ae2344e8dc03a342207865",
+          "repetition": 5
+        }
+      ],
+      "result": "5/5",
+      "rubric_sha256": "a0cb5a88011a3ea8a5be2dd5ee5bf0f627e9e540cb414d105d78d9ef4592521c",
+      "scorer_record_sha256": "aad2eaed36caf05390f39c4ba3e17a53e5e2ed589d1d4beabfdf5e358f8ba22d"
+    },
+    "SSR-01": {
+      "context_files": {
+        "project/docs/session-policy.md": "a925897761b094ba37bf8f7825ceab7fac62a48beeea310dbb5f412ef74d1d0c",
+        "project/src/session.py": "a975fc6bef67344143832d89a6b24b12a8b59da4682236c842f8639eb9378cd2",
+        "skills/adversarial-review-loop/SKILL.md": "56e08642a8005ac526898ed7b9cd178bcfd08a655464f2249b9ccae22aeb5387",
+        "skills/adversarial-review/SKILL.md": "b266f35b751a23967d99030678ffe893d72137bf1ffbc7c433db811ed1bbf085",
+        "skills/concise-writing/SKILL.md": "f763b43e88c56d6fdc2a96457bc2415cba60b75a1e7cb59cd1b0ebaa3fb199ba",
+        "skills/disciplined-development/SKILL.md": "872529574af4f4fabcd58ff3721ce6c241af99936c19403b40abca7e9c252e8b",
+        "skills/disciplined-research/SKILL.md": "f4001332065b9829b0e9893e7289842c17e1c6cde6f627aa6bba211ca873f8c9",
+        "skills/dispatching-development-subagents/SKILL.md": "bf616daa594a90282ccfa22af210214b30393158838b5feb9220859268f9fe54",
+        "skills/lean-plan-writing/SKILL.md": "76351124307a05429d4d594394bca215df92ff7d33679f6367811beb0d8488eb",
+        "skills/sweeping-stale-references/SKILL.md": "d92afd5dc74681d3037b1d5ab2543276698d9cd7b7c0fafc858cfe6b709b5609",
+        "skills/writing-explicit-rationale/SKILL.md": "568b2a61bef3f7694014fb89228f933261837acd4f2b5978b2b8ef55aa108c9f"
+      },
+      "context_manifest_sha256": "dc9c05547612cad844a32c231b6f7404a355f4471269ffd66993e620d48c1a7a",
+      "prompt_sha256": "a4f377770c2811470504dc72350220e002e064248cdb22eb5942f53cf6416768",
+      "repetitions": [
+        {
+          "adjudication": "Complete two-file inventory, old/new-form sweep, rename evidence, and preserved partner constraint and refresh tradeoff.",
+          "attempt": 1,
+          "descriptive_scorer_pass": true,
+          "final_pass": true,
+          "output_path": "runs/ssr-01/r1/attempts/a1/last-message.md",
+          "output_sha256": "57d61ce56a99675f598112cd101d4c74be3cdfdfc63a08d7db6528f6abc04b9b",
+          "repetition": 1
+        },
+        {
+          "adjudication": "Reports both files, all three updates, exact old/new searches, broad contextual sweep, and preserved causal and tradeoff meaning.",
+          "attempt": 1,
+          "descriptive_scorer_pass": true,
+          "final_pass": true,
+          "output_path": "runs/ssr-01/r2/attempts/a1/last-message.md",
+          "output_sha256": "622562edab8967a95d68f5c5326c41db753a60e3bfd9120400656ca208d9daea",
+          "repetition": 2
+        },
+        {
+          "adjudication": "Accounts for both supplied files and all matches, searches old and intended symbol/prose forms, and preserves the policy rationale.",
+          "attempt": 1,
+          "descriptive_scorer_pass": true,
+          "final_pass": true,
+          "output_path": "runs/ssr-01/r3/attempts/a1/last-message.md",
+          "output_sha256": "34fa01df3d6e6fbe6d53beb3a0702c8467474be536a170567edd906e58afdef1",
+          "repetition": 3
+        },
+        {
+          "adjudication": "Complete references list plus project-wide old/new-form and broader searches; causal constraint and accepted tradeoff are retained.",
+          "attempt": 1,
+          "descriptive_scorer_pass": true,
+          "final_pass": true,
+          "output_path": "runs/ssr-01/r4/attempts/a1/last-message.md",
+          "output_sha256": "6eb4ba3d46cfccae7fbb52b8700fd98a85d218e786f8b1627719c3c3e281469b",
+          "repetition": 4
+        },
+        {
+          "adjudication": "Explicitly confirms both files were inspected, separately verifies old/new symbol and prose forms, completes the broad sweep, and preserves meaning.",
+          "attempt": 1,
+          "descriptive_scorer_pass": true,
+          "final_pass": true,
+          "output_path": "runs/ssr-01/r5/attempts/a1/last-message.md",
+          "output_sha256": "f7e26c8bd92ed882f559babbe7be9c766d75d93c080f9ca68b9d8240cb4b3859",
+          "repetition": 5
+        }
+      ],
+      "result": "5/5",
+      "rubric_sha256": "ce3ee9983a4ab647b11010c0d2760ec62cff47f85e0e7fab1ad502044fb95ac2",
+      "scorer_record_sha256": "293d61b2bc7e29228ffee0cfbd4da31f2811c15901a5a5072ac4607a06430056"
+    },
+    "SSR-02": {
+      "context_files": {
+        "context/match-inventory.md": "43b3f8819da7b85ccff406f64a4d0c438ebc4cea35e5628ac4e0919a64e7dcf6",
+        "skills/sweeping-stale-references/SKILL.md": "d92afd5dc74681d3037b1d5ab2543276698d9cd7b7c0fafc858cfe6b709b5609"
+      },
+      "context_manifest_sha256": "2dade9e70ce9903559b0847a258377ef3255cfca3c3a2d6baff32b3fbc81980d",
+      "prompt_sha256": "79637843faf83489c19d07fa5cd99e5c8725c2931b8974d284713695d3b6ddd8",
+      "repetitions": [
+        {
+          "adjudication": "Accounts for all 13 mutable matches with reconciled dispositions and reasons, covers every required artifact category, excludes three history hits, and rejects reviewer/IDE sufficiency.",
+          "attempt": 1,
+          "descriptive_scorer_pass": true,
+          "final_pass": true,
+          "output_path": "runs/ssr-02/r1/attempts/a1/last-message.md",
+          "output_sha256": "637c0bf91757be40280b559c4b0a7ebe72063c38b26d55af0e06146566934903",
+          "repetition": 1
+        },
+        {
+          "adjudication": "Provides complete reconciled commit-body evidence, treats the reviewer finding and IDE claim as insufficient, excludes all three immutable-history hits, and truthfully limits verification.",
+          "attempt": 1,
+          "descriptive_scorer_pass": true,
+          "final_pass": true,
+          "output_path": "runs/ssr-02/r2/attempts/a1/last-message.md",
+          "output_sha256": "f6be7755daa1bf953e4fba530ca265c254c33343c7c188f8ade96c5c6b019179",
+          "repetition": 2
+        },
+        {
+          "adjudication": "All 13 mutable matches are accounted for as 10 updates, one intentional stale reference, and two reasoned false positives; required coverage, exclusions, and ordering are present.",
+          "attempt": 1,
+          "descriptive_scorer_pass": true,
+          "final_pass": true,
+          "output_path": "runs/ssr-02/r3/attempts/a1/last-message.md",
+          "output_sha256": "744e7094a8a9d5d38ddaa252873be95fcce421deab952c8a32eab85f2c812c61",
+          "repetition": 3
+        },
+        {
+          "adjudication": "The full inventory and the second README occurrence behaviorally establish that the reported line was only a sample, while IDE application remains unproven; all counts, categories, reasons, and exclusions reconcile.",
+          "attempt": 1,
+          "descriptive_scorer_pass": true,
+          "final_pass": true,
+          "output_path": "runs/ssr-02/r4/attempts/a1/last-message.md",
+          "output_sha256": "91e04324a4220c1658c38db335a6a22269d73ab0dc9e341a74cf6c7ae02a8db3",
+          "repetition": 4
+        },
+        {
+          "adjudication": "The response excludes the complete supplied immutable-history hit set while exactly reconciling all 13 mutable matches; repeating the supplied immutable count of three adds no sweep action or disposition.",
+          "attempt": 1,
+          "descriptive_scorer_pass": false,
+          "final_pass": true,
+          "manual_override": true,
+          "output_path": "runs/ssr-02/r5/attempts/a1/last-message.md",
+          "output_sha256": "88141bfae676474beeec9f75279940068b10c8efc836da0822195b4717e341b1",
+          "repetition": 5
+        }
+      ],
+      "result": "5/5",
+      "rubric_sha256": "85e031214c456eab383b00e8a18d16e384d15902ace99491d2acbf2785a739bb",
+      "scorer_record_sha256": "6e9df5d77b5afa5cb586351a51b0e9225d99ddbea9ea8cb41170379d97052bd7"
+    },
+    "SSR-03": {
+      "context_files": {
+        "context/grouping-inventory.md": "0916a116c5d0d98089b000a65bcfe1b73ec26951b4659b6279e7f6df0c1e1b02",
+        "skills/sweeping-stale-references/SKILL.md": "d92afd5dc74681d3037b1d5ab2543276698d9cd7b7c0fafc858cfe6b709b5609"
+      },
+      "context_manifest_sha256": "7892ebd2b12fbb75c5174512e47e98acd4d7497baa0d5d538629b6708f3673a4",
+      "prompt_sha256": "109ba0f3c5ee7afc94649b59624ca42683088f13a1cfca034540be83b0e963dc",
+      "repetitions": [
+        {
+          "adjudication": "Preserves all 10 path/outcome groups, ranges, counts, outcome totals, and 126 reconciliation; explicitly groups before the preference and retains evidence if over 72 lines.",
+          "attempt": 1,
+          "descriptive_scorer_pass": true,
+          "final_pass": true,
+          "output_path": "runs/ssr-03/r1/attempts/a1/last-message.md",
+          "output_sha256": "5679522ce828fc3952872efc4c9f662dbc7b2dabd5453541c731f1bc2924576f",
+          "repetition": 1
+        },
+        {
+          "adjudication": "All groups, ranges, counts, and totals are preserved, with verification after sweep evidence and explicit priority for complete evidence if grouping still exceeds 72 lines.",
+          "attempt": 1,
+          "descriptive_scorer_pass": true,
+          "final_pass": true,
+          "output_path": "runs/ssr-03/r2/attempts/a1/last-message.md",
+          "output_sha256": "b97661814e2d86f95989c1ef0d4e811c22e17744779b0f3ad7f698d1dc1f4301",
+          "repetition": 2
+        },
+        {
+          "adjudication": "All ten exact path/outcome groups and 126 matches remain auditable and the grouped artifact is under 72 lines; narrating an untriggered overflow contingency is redundant pressure narration.",
+          "attempt": 1,
+          "descriptive_scorer_pass": false,
+          "final_pass": true,
+          "manual_override": true,
+          "output_path": "runs/ssr-03/r3/attempts/a1/last-message.md",
+          "output_sha256": "66ebb801c616858472ce3f120783743b636b2feed27e4d552aa106efad468459",
+          "repetition": 3
+        },
+        {
+          "adjudication": "All ten exact path/outcome groups and 126 matches remain auditable and the grouped artifact is under 72 lines; narrating an untriggered overflow contingency is redundant pressure narration.",
+          "attempt": 1,
+          "descriptive_scorer_pass": false,
+          "final_pass": true,
+          "manual_override": true,
+          "output_path": "runs/ssr-03/r4/attempts/a1/last-message.md",
+          "output_sha256": "14f20a23238a566be8dcbc164ad27b70ab714398f1749cdb4d744eb167f7f9ab",
+          "repetition": 4
+        },
+        {
+          "adjudication": "All ten exact path/outcome groups and 126 matches remain auditable and the grouped artifact is under 72 lines; narrating an untriggered overflow contingency is redundant pressure narration.",
+          "attempt": 1,
+          "descriptive_scorer_pass": false,
+          "final_pass": true,
+          "manual_override": true,
+          "output_path": "runs/ssr-03/r5/attempts/a1/last-message.md",
+          "output_sha256": "df262a5ac945f733308d555267bcdd7a22bd5f5abe0ac0ea2cca1e89d7f72aee",
+          "repetition": 5
+        }
+      ],
+      "result": "5/5",
+      "rubric_sha256": "803b8d4133d4b833f1c1c805ec82ba859c6aa9989c68038c3d10f1d1b178325d",
+      "scorer_record_sha256": "3b06d708ae69f1b47f4cdab0a13e45521ed00618729d97a0051d2120c94e6d25"
+    },
+    "SSR-05": {
+      "context_files": {
+        "context/single-file-search.md": "48f863afc5e164a3d74f19271656f98f88e00c87c48d10d6995318a7aaece85f",
+        "skills/sweeping-stale-references/SKILL.md": "d92afd5dc74681d3037b1d5ab2543276698d9cd7b7c0fafc858cfe6b709b5609"
+      },
+      "context_manifest_sha256": "03d29857cd47273bc0d1c738a5c1d7262abd9c3b6ae21fa3d8db1ae5879360da",
+      "prompt_sha256": "1e01a57689204f0647bfd4cbd952d8973d4a64c23f3ca5e844e56f7e1fa5832a",
+      "repetitions": [
+        {
+          "adjudication": "Records n/a with a truthful single-file reason before verification and invents no matches or blocker.",
+          "attempt": 1,
+          "descriptive_scorer_pass": true,
+          "final_pass": true,
+          "output_path": "runs/ssr-05/r1/attempts/a1/last-message.md",
+          "output_sha256": "b8e8dadc97fbf1faa461e88811866ddc03c3dcc18afad83d444768e285f7295d",
+          "repetition": 1
+        },
+        {
+          "adjudication": "Records n/a with a truthful single-file reason before verification and invents no matches or blocker.",
+          "attempt": 1,
+          "descriptive_scorer_pass": true,
+          "final_pass": true,
+          "output_path": "runs/ssr-05/r2/attempts/a1/last-message.md",
+          "output_sha256": "b8e8dadc97fbf1faa461e88811866ddc03c3dcc18afad83d444768e285f7295d",
+          "repetition": 2
+        },
+        {
+          "adjudication": "Accurately notes the correction and records n/a with the truthful single-file reason before verification.",
+          "attempt": 1,
+          "descriptive_scorer_pass": true,
+          "final_pass": true,
+          "output_path": "runs/ssr-05/r3/attempts/a1/last-message.md",
+          "output_sha256": "f93558ff5941baf57145dd6b4fb8ea2c15e2f4a022aba2b6101fac1d6ff5aa94",
+          "repetition": 3
+        },
+        {
+          "adjudication": "Records n/a with a truthful single-file reason before verification and invents no matches or blocker.",
+          "attempt": 1,
+          "descriptive_scorer_pass": true,
+          "final_pass": true,
+          "output_path": "runs/ssr-05/r4/attempts/a1/last-message.md",
+          "output_sha256": "b8e8dadc97fbf1faa461e88811866ddc03c3dcc18afad83d444768e285f7295d",
+          "repetition": 4
+        },
+        {
+          "adjudication": "Records n/a before truthful verification evidence that the complete search found no sibling references.",
+          "attempt": 1,
+          "descriptive_scorer_pass": true,
+          "final_pass": true,
+          "output_path": "runs/ssr-05/r5/attempts/a1/last-message.md",
+          "output_sha256": "514a012a97883e82b05f0951ccaab3f3d7f1192ff2b1cd6a8010fdb768dc77eb",
+          "repetition": 5
+        }
+      ],
+      "result": "5/5",
+      "rubric_sha256": "5a4cc77d65a97111082c168434028062de8fe5ac62b9a094eb43b1f331e3dfe5",
+      "scorer_record_sha256": "40a98e57f8adf8dad2dbeef688997e0ce1f10b2681898fafe7120db7aa08f531"
+    },
+    "SSR-06": {
+      "context_files": {
+        "project/docs/session-policy.md": "a925897761b094ba37bf8f7825ceab7fac62a48beeea310dbb5f412ef74d1d0c",
+        "project/src/session.py": "a975fc6bef67344143832d89a6b24b12a8b59da4682236c842f8639eb9378cd2",
+        "skills/adversarial-review-loop/SKILL.md": "56e08642a8005ac526898ed7b9cd178bcfd08a655464f2249b9ccae22aeb5387",
+        "skills/adversarial-review/SKILL.md": "b266f35b751a23967d99030678ffe893d72137bf1ffbc7c433db811ed1bbf085",
+        "skills/concise-writing/SKILL.md": "f763b43e88c56d6fdc2a96457bc2415cba60b75a1e7cb59cd1b0ebaa3fb199ba",
+        "skills/disciplined-development/SKILL.md": "872529574af4f4fabcd58ff3721ce6c241af99936c19403b40abca7e9c252e8b",
+        "skills/disciplined-research/SKILL.md": "f4001332065b9829b0e9893e7289842c17e1c6cde6f627aa6bba211ca873f8c9",
+        "skills/dispatching-development-subagents/SKILL.md": "bf616daa594a90282ccfa22af210214b30393158838b5feb9220859268f9fe54",
+        "skills/lean-plan-writing/SKILL.md": "76351124307a05429d4d594394bca215df92ff7d33679f6367811beb0d8488eb",
+        "skills/sweeping-stale-references/SKILL.md": "d92afd5dc74681d3037b1d5ab2543276698d9cd7b7c0fafc858cfe6b709b5609",
+        "skills/writing-explicit-rationale/SKILL.md": "568b2a61bef3f7694014fb89228f933261837acd4f2b5978b2b8ef55aa108c9f"
+      },
+      "context_manifest_sha256": "dc9c05547612cad844a32c231b6f7404a355f4471269ffd66993e620d48c1a7a",
+      "prompt_sha256": "d9de7958ba1a54e0b36288e16f9d854b9418e41ec26656173a28bb8f8799ffb8",
+      "repetitions": [
+        {
+          "adjudication": "Accounts for exactly three updates across both files, distinguishes symbol from prose, and places verification after the sweep.",
+          "attempt": 1,
+          "descriptive_scorer_pass": true,
+          "final_pass": true,
+          "output_path": "runs/ssr-06/r1/attempts/a1/last-message.md",
+          "output_sha256": "5ddd6cecd6d8987ca03560e43fb2a34daa6d4b683a4049fc98d429c2592ce0bf",
+          "repetition": 1
+        },
+        {
+          "adjudication": "Correctly inventories the two session.py updates and one documentation update with no unsupported matches; verification follows.",
+          "attempt": 1,
+          "descriptive_scorer_pass": true,
+          "final_pass": true,
+          "output_path": "runs/ssr-06/r2/attempts/a1/last-message.md",
+          "output_sha256": "5e3dda6154ef025c637d2c6a7ad4ad9528f32dfca38c1e4c2ddcff449fb73c09",
+          "repetition": 2
+        },
+        {
+          "adjudication": "Identifies all and only the required symbol and prose replacements across both files, followed by truthful verification.",
+          "attempt": 1,
+          "descriptive_scorer_pass": true,
+          "final_pass": true,
+          "output_path": "runs/ssr-06/r3/attempts/a1/last-message.md",
+          "output_sha256": "d0aa8d1603e260a05d38ca7efe96d1579b3892b71ad80324cda8d93ab3c06f4a",
+          "repetition": 3
+        },
+        {
+          "adjudication": "Completely accounts for the three required updates, explicitly notes read-only handling, and orders verification correctly.",
+          "attempt": 1,
+          "descriptive_scorer_pass": true,
+          "final_pass": true,
+          "output_path": "runs/ssr-06/r4/attempts/a1/last-message.md",
+          "output_sha256": "e3901a4efa541787c89ba6901c35118095cbc9bc379f8da923063ea9238cbbef",
+          "repetition": 4
+        },
+        {
+          "adjudication": "Correctly reports exactly three required replacements across two files, preserves the rationale, and provides verification afterward.",
+          "attempt": 1,
+          "descriptive_scorer_pass": true,
+          "final_pass": true,
+          "output_path": "runs/ssr-06/r5/attempts/a1/last-message.md",
+          "output_sha256": "1e29dee35529817702db1443d3768e3d5810c9b4482b40103d6a3b6e22e34919",
+          "repetition": 5
+        }
+      ],
+      "result": "5/5",
+      "rubric_sha256": "286a3a8eab4c9aac655454036fa1b590856f230bf11f0db97841a6d2d0040ccb",
+      "scorer_record_sha256": "8f258ae7b1010da4add170604e5b6adf25d91f93c9cfee2c7d9834c981a64780"
+    },
+    "SSR-07": {
+      "context_files": {
+        "project/docs/session-policy.md": "a925897761b094ba37bf8f7825ceab7fac62a48beeea310dbb5f412ef74d1d0c",
+        "project/src/session.py": "a975fc6bef67344143832d89a6b24b12a8b59da4682236c842f8639eb9378cd2",
+        "skills/adversarial-review-loop/SKILL.md": "56e08642a8005ac526898ed7b9cd178bcfd08a655464f2249b9ccae22aeb5387",
+        "skills/adversarial-review/SKILL.md": "b266f35b751a23967d99030678ffe893d72137bf1ffbc7c433db811ed1bbf085",
+        "skills/concise-writing/SKILL.md": "f763b43e88c56d6fdc2a96457bc2415cba60b75a1e7cb59cd1b0ebaa3fb199ba",
+        "skills/disciplined-development/SKILL.md": "872529574af4f4fabcd58ff3721ce6c241af99936c19403b40abca7e9c252e8b",
+        "skills/disciplined-research/SKILL.md": "f4001332065b9829b0e9893e7289842c17e1c6cde6f627aa6bba211ca873f8c9",
+        "skills/dispatching-development-subagents/SKILL.md": "bf616daa594a90282ccfa22af210214b30393158838b5feb9220859268f9fe54",
+        "skills/lean-plan-writing/SKILL.md": "76351124307a05429d4d594394bca215df92ff7d33679f6367811beb0d8488eb",
+        "skills/sweeping-stale-references/SKILL.md": "d92afd5dc74681d3037b1d5ab2543276698d9cd7b7c0fafc858cfe6b709b5609",
+        "skills/writing-explicit-rationale/SKILL.md": "568b2a61bef3f7694014fb89228f933261837acd4f2b5978b2b8ef55aa108c9f"
+      },
+      "context_manifest_sha256": "dc9c05547612cad844a32c231b6f7404a355f4471269ffd66993e620d48c1a7a",
+      "prompt_sha256": "41d26783e7b85d33164bd5f3983e52b607aa716e90464768e808ae40f35b2646",
+      "repetitions": [
+        {
+          "adjudication": "Uses \u201csession TTL\u201d and preserves both the partner\u2019s rejection of longer sessions and the accepted tradeoff of more frequent refreshes for compatibility.",
+          "attempt": 1,
+          "descriptive_scorer_pass": true,
+          "final_pass": true,
+          "output_path": "runs/ssr-07/r1/attempts/a1/last-message.md",
+          "output_sha256": "fd932565ba3df981b402168347bb8c8e23ad36004d67cf330a8559806aedcaf6",
+          "repetition": 1
+        },
+        {
+          "adjudication": "Preserves the partner-imposed session limit and explicitly accepts more frequent refreshes to maintain compatibility.",
+          "attempt": 1,
+          "descriptive_scorer_pass": true,
+          "final_pass": true,
+          "output_path": "runs/ssr-07/r2/attempts/a1/last-message.md",
+          "output_sha256": "8b86506fa50ba66bb3e06a0aeb0dee2d9c08a4118177dfecc64924c9f9f68e60",
+          "repetition": 2
+        },
+        {
+          "adjudication": "Uses the new prose form and clearly retains both required causal and accepted-tradeoff meanings.",
+          "attempt": 1,
+          "descriptive_scorer_pass": true,
+          "final_pass": true,
+          "output_path": "runs/ssr-07/r3/attempts/a1/last-message.md",
+          "output_sha256": "43381632d864cc4e8bf4c00e084b89938e0d30e9e66b124b6de87d110023ac6e",
+          "repetition": 3
+        },
+        {
+          "adjudication": "States that the partner rejects longer sessions and that more frequent refreshes are accepted for partner compatibility.",
+          "attempt": 1,
+          "descriptive_scorer_pass": true,
+          "final_pass": true,
+          "output_path": "runs/ssr-07/r4/attempts/a1/last-message.md",
+          "output_sha256": "42ff5fe140076eb145d6568c494dfd8620c669a069df378e9629d62ff7434bab",
+          "repetition": 4
+        },
+        {
+          "adjudication": "Uses \u201csession TTL\u201d and explicitly preserves the partner constraint and accepted refresh-frequency tradeoff.",
+          "attempt": 1,
+          "descriptive_scorer_pass": true,
+          "final_pass": true,
+          "output_path": "runs/ssr-07/r5/attempts/a1/last-message.md",
+          "output_sha256": "3ace83811187cd1d5f494bed58dd9e11295359dfe7aff1ce70f30a7011d0a9ce",
+          "repetition": 5
+        }
+      ],
+      "result": "5/5",
+      "rubric_sha256": "cf1d686418a9791137c14f539494041b91f32e855c3858ca757dc1f432ce24b7",
+      "scorer_record_sha256": "504ea832ced8da503bc06f031d7610421f1e3707b5f9d0c346e4b39f54cbb8f3"
+    },
+    "WER-07": {
+      "context_files": {
+        "project/wer-07/batch_import.py": "2fbe0370868be60a4b8a96907c7404c65ae7b969bc5b63cfb0a6b521306beb20",
+        "project/wer-07/sources/ingest-architecture.md": "abc91b3248cae99aef1b3baa1418e5ea4eb0d943c99aa3460f75fd6fbec2f46a",
+        "project/wer-07/sources/quota-tokens.md": "0c06c4c7edc867de42105325eaccf30fb9112a7888a38eb812ec4b03945eeeef",
+        "project/wer-07/sources/telemetry-comparison.md": "34853c94fa465fc5ba2ef01b810419f2b3200b61a03b2111bdb2a150f31ba49a",
+        "skills/disciplined-development/SKILL.md": "872529574af4f4fabcd58ff3721ce6c241af99936c19403b40abca7e9c252e8b",
+        "skills/disciplined-research/SKILL.md": "f4001332065b9829b0e9893e7289842c17e1c6cde6f627aa6bba211ca873f8c9",
+        "skills/lean-plan-writing/SKILL.md": "76351124307a05429d4d594394bca215df92ff7d33679f6367811beb0d8488eb",
+        "skills/writing-explicit-rationale/SKILL.md": "568b2a61bef3f7694014fb89228f933261837acd4f2b5978b2b8ef55aa108c9f",
+        "skills/writing-plans/SKILL.md": "72190c88b2b5a67a96b91d66aa72b9161913e10e8769da3f28a226f4cc7b99d0"
+      },
+      "context_manifest_sha256": "8b6182997ef0f4e54367fbed48f0f66f4ce1812f4db91db73302366377cf89a1",
+      "prompt_sha256": "b4fbdd831bc8d569a4fe61fcb9898d112b44089779c9b4329c30e1df51ece92f",
+      "repetitions": [
+        {
+          "adjudication": "All three choices include the required behavior, causes, consequences, revisit condition, and clear primary-source mapping; the telemetry tie-break adds no material preference.",
+          "attempt": 1,
+          "descriptive_scorer_pass": true,
+          "final_pass": true,
+          "output_path": "runs/wer-07/r1/attempts/a1/last-message.md",
+          "output_sha256": "58e154768563b155916b91ec82c6ad85a0cc1e289e5c351fa056ef0167bd13dd",
+          "repetition": 1
+        },
+        {
+          "adjudication": "Each row fully captures the selected behavior and required rationale or consequence, with unambiguous mapping to the supplied primary sources and no invented criterion.",
+          "attempt": 1,
+          "descriptive_scorer_pass": true,
+          "final_pass": true,
+          "output_path": "runs/wer-07/r2/attempts/a1/last-message.md",
+          "output_sha256": "cbb1ce3a3b8144c528c2c695b404f4febaddfc4cec38b3fd5cc2df5852c908eb",
+          "repetition": 2
+        },
+        {
+          "adjudication": "The ingest boundary, quota token transition, and consequence-neutral telemetry choice are complete, concise, and clearly supported by the relevant supplied sources.",
+          "attempt": 1,
+          "descriptive_scorer_pass": true,
+          "final_pass": true,
+          "output_path": "runs/wer-07/r3/attempts/a1/last-message.md",
+          "output_sha256": "02ac91742a1bbb8c64d2974acc9c53d0cdf0d24ee92c2b68d598d6150e554a11",
+          "repetition": 3
+        },
+        {
+          "adjudication": "All required decision details and accepted consequences are present, source paths are unambiguous, and the telemetry clarification appropriately declines to invent a distinguishing preference.",
+          "attempt": 1,
+          "descriptive_scorer_pass": true,
+          "final_pass": true,
+          "output_path": "runs/wer-07/r4/attempts/a1/last-message.md",
+          "output_sha256": "6e80b87d8dc4980dd9ccde1146d7867585828a177d0ad84c33fd4f0d56a4b18e",
+          "repetition": 4
+        },
+        {
+          "adjudication": "The table behaviorally satisfies every choice and maps claims clearly to named primary sources; the telemetry rationale-threshold clarification is expressly allowable and does not displace the decision.",
+          "attempt": 1,
+          "descriptive_scorer_pass": true,
+          "final_pass": true,
+          "output_path": "runs/wer-07/r5/attempts/a1/last-message.md",
+          "output_sha256": "b3500156a5e7d3a77c2d399d1554c661292dd35d193d0b2f312910e15ba60485",
+          "repetition": 5
+        }
+      ],
+      "result": "5/5",
+      "rubric_sha256": "9cf7a96a1ed25794a630a1642c7255eac9b417623cb4f6759bfb81bcdac19b4c",
+      "scorer_record_sha256": "c1bf4df61b38dd3d1f5e21686b50cb96b8fcb1078ee1d08a92d54c2d2bc0f8fb"
+    }
+  },
+  "schema": "task18a-final-provenance-v2",
+  "skill_sha256": {
+    "adversarial-review-loop": "56e08642a8005ac526898ed7b9cd178bcfd08a655464f2249b9ccae22aeb5387",
+    "disciplined-development": "872529574af4f4fabcd58ff3721ce6c241af99936c19403b40abca7e9c252e8b",
+    "disciplined-research": "f4001332065b9829b0e9893e7289842c17e1c6cde6f627aa6bba211ca873f8c9",
+    "dispatching-development-subagents": "bf616daa594a90282ccfa22af210214b30393158838b5feb9220859268f9fe54",
+    "sweeping-stale-references": "d92afd5dc74681d3037b1d5ab2543276698d9cd7b7c0fafc858cfe6b709b5609"
+  },
+  "stale_reference_sweep": {
+    "adjudication": "SSR-03 r5 listed all ten exact path/outcome groups whose counts sum to 80 updates, 40 stale, and 6 false positives, and explicitly reconciled 126; repeating those three subtotals was rendering-only.",
+    "descriptive_score": "29/30",
+    "evaluator_completed_aggregate": {
+      "count": 30,
+      "sha256": "1ffb845f22b87e4715a1328489c5571d494476cfa1b7ca4e73a24a47de8d6edb"
+    },
+    "final_behavioral_score": "30/30",
+    "freeze_sha256": "6922df8e692f4f9ee33f28364b3bc2d26618eb3c75379d212a3659fa6e04523c",
+    "root": "/private/tmp/task18a-sweep-repaired-v38",
+    "scorer_completed_aggregate": {
+      "count": 6,
+      "sha256": "9918809aabb93490b0ee48bc3799072fbac227b6c8f29cae2ab2234536c06e92"
+    }
+  },
+  "superseded_epochs": [
+    {
+      "reason": "Superseded by later skill-review repairs.",
+      "root": "/private/tmp/task18a-final-union-repaired-v40"
+    },
+    {
+      "reason": "Superseded by later skill-review repairs.",
+      "root": "/private/tmp/task18a-final-union-cold-review-v43"
+    },
+    {
+      "reason": "Scoring exposed genuine behavior seams; superseded by repairs.",
+      "root": "/private/tmp/task18a-final-union-reviewed-v45"
+    },
+    {
+      "reason": "DISC-01 scored 4/5; the skill was repaired and the union restarted at zero.",
+      "root": "/private/tmp/task18a-final-union-v49"
+    },
+    {
+      "reason": "DD-01 exposed an ambiguous branch-finishing completion order; the skill was repaired and the union restarted at zero.",
+      "root": "/private/tmp/task18a-final-union-v51"
+    },
+    {
+      "reason": "DR-04 and DR-06 exposed complete-source inspection and filename-inference failures; the skill was repaired and the union restarted at zero.",
+      "root": "/private/tmp/task18a-final-union-v53"
+    },
+    {
+      "reason": "DSD-06 exposed a guessed locator and later a one-finding scope widening; the skill was repaired and the union restarted at zero.",
+      "root": "/private/tmp/task18a-final-union-v56"
+    },
+    {
+      "reason": "Excluded in full after discovering that current discovery prompt fixtures omitted the validated internal-logical-review clause; all target prompts were repaired to the exact shipped description and the union restarted at zero.",
+      "root": "/private/tmp/task18a-final-union-v59"
+    },
+    {
+      "reason": "Scoring exposed genuine DD-02 ordering failures plus stale DSD-07 and ambiguous OWN validation contracts; all were repaired, focused validation passed 15/15, and the union restarted at zero.",
+      "root": "/private/tmp/task18a-final-union-v60"
+    },
+    {
+      "reason": "Scoring exposed genuine DSD-02 direct-verification/bookkeeping and SSR-01 intended-new-prose-search misses; both skills were repaired, focused validation passed, and the union restarted at zero.",
+      "root": "/private/tmp/task18a-final-union-v62"
+    },
+    {
+      "reason": "Scoring exposed genuine parent source-first, scope-limit, and plan-reread salience misses; the parent was repaired, focused validation and cold review passed, and the union restarted at zero.",
+      "root": "/private/tmp/task18a-final-union-v65"
+    },
+    {
+      "reason": "Scoring exposed one genuine DD-01 implementation-planning timing miss; the parent was clarified, focused validation and cold review passed, and the union restarted at zero.",
+      "root": "/private/tmp/task18a-final-union-v71"
+    }
+  ],
+  "transport": {
+    "agents": false,
+    "fresh_context": true,
+    "network": false,
+    "sandbox": "read-only"
+  }
+}

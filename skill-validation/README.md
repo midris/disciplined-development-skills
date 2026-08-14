@@ -32,18 +32,18 @@ An em dash means the owning audit task has not classified the scenarios yet.
 | Record | Kind | Owner | Affected skills | Audit task | Status | Keep | Repair | Merge | Retire | Add |
 |---|---|---|---|---:|---|---:|---:|---:|---:|---:|
 | [adversarial-review](adversarial-review.md) | Skill | `adversarial-review` | `adversarial-review`, `concise-writing`, `lean-plan-writing`, `sweeping-stale-references`, `disciplined-development` | 7 | Audit complete; 13 current Sol-high scenarios at 5/5; 4 watched target REDs GREEN; angle ablation 0/5 | 0 | 7 | 2 | 1 | 7 |
-| [adversarial-review-loop](adversarial-review-loop.md) | Skill | `adversarial-review-loop` | `adversarial-review-loop`, `disciplined-development`; shared routing boundaries | 8, 18A | Historical `OWN` evidence retained; current `OWN` is five separately attributed composition slots and fresh post-parent-architecture validation is pending | 0 | 14 | 3 | 3 | 1 |
+| [adversarial-review-loop](adversarial-review-loop.md) | Skill | `adversarial-review-loop` | `adversarial-review-loop`, `disciplined-development`; shared routing boundaries | 8, 18A | `OWN` current composition 5/5 in the final Task 18A union; historical evidence retained | 0 | 14 | 3 | 3 | 1 |
 | [concise-writing](concise-writing.md) | Skill | `concise-writing` | `concise-writing`, `adversarial-review-loop`; external `superpowers:writing-skills` dependency and distractor | 2, 17 | Audited; 665-word candidate `f763b43e…`; repaired-definition `CW-19` controls high 4/5 and low 2/5, candidate 5/5; complete affected candidate arm 145/145 GREEN; blind comparison found zero candidate material losses in 45 pairs; editorial review and final owner approval complete | 0 | 2 | 4 | 2 | 11 |
-| [disciplined-development](disciplined-development.md) | Skill | `disciplined-development` | parent orchestration; discovery and child composition remain separate | 10, 17, 18A | Behavior-first DD-01 reached focused 5/5. Formal DD-02 controls scored 2/5 high and low; minimal Gate 4 candidate `987bdf42…` scored 5/5 and is owner-approved and applied byte-for-byte, so focused evidence carries forward. DD-03 and later validation have not rerun against this candidate | 0 | 2 | 0 | 1 | 1 |
-| [disciplined-research](disciplined-research.md) | Skill | `disciplined-research` | `disciplined-research`, `disciplined-development` through Principle 6 | 3, 18A, 18 | Approved tracked research SHA-256 `381a10aaa01b17e02d863287718c2e6cfde5c5ac587f42921146726a49725fc5`; validation gates remain pending; prior DR-04/05/06 evidence and DR-01–03 preservation remain recorded | 0 | 1 | 0 | 1 | 3 |
-| [dispatching-development-subagents](dispatching-development-subagents.md) | Skill | `dispatching-development-subagents` | `dispatching-development-subagents`, `disciplined-development`; shared routing boundaries | 9, 18A | Historical candidate evidence retained; `DSD-01`/`DSD-02` are 10 separately attributed child-composition slots, never pooled with parent acceptance; fresh validation pending | 0 | 2 | 1 | 0 | 2 |
+| [disciplined-development](disciplined-development.md) | Skill | `disciplined-development` | parent orchestration; discovery and child composition remain separate | 10, 17, 18A | Current `DD-01`–`DD-09` final union 45/45; child composition separately attributed | 0 | 2 | 0 | 1 | 7 |
+| [disciplined-research](disciplined-research.md) | Skill | `disciplined-research` | `disciplined-research`, `disciplined-development` through Principle 6 | 3, 18A, 18 | Current SHA-256 `f4001332…`; `DR-01`–`DR-07` final union 35/35 and shared discovery 60/60 | 0 | 1 | 0 | 1 | 6 |
+| [dispatching-development-subagents](dispatching-development-subagents.md) | Skill | `dispatching-development-subagents` | `dispatching-development-subagents`, `disciplined-development`; shared routing boundaries | 9, 18A | Current `DSD-01`, `DSD-02`, and `DSD-05`–`DSD-11` final union 45/45 | 0 | 2 | 1 | 0 | 9 |
 | [lean-plan-writing](lean-plan-writing.md) | Skill | `lean-plan-writing` | `lean-plan-writing`; external `superpowers:writing-plans` composition | 4 | Audited; 7 active owned scenarios; `LP-04` retained as historical exploratory evidence | 0 | 4 | 1 | 1 | 3 |
-| [sweeping-stale-references](sweeping-stale-references.md) | Skill | `sweeping-stale-references` | `sweeping-stale-references`, `disciplined-research` ownership boundary | 5, 18A | Task 18A later prose repair identified; complete active suite and proposed/final approval gates added; tracked skill unchanged | 0 | 2 | 0 | 1 | 2 |
-| [writing-explicit-rationale](writing-explicit-rationale.md) | Skill | `writing-explicit-rationale` | `writing-explicit-rationale`, `lean-plan-writing`, `disciplined-development`, `disciplined-research`; shared parent/plan composition | 6, 18A | Historical `WER-07` evidence retained; current `WER-07` is five separately attributed child-composition slots, never pooled with parent acceptance; fresh validation pending | 0 | 1 | 4 | 2 | 6 |
-| [adversarial-review-loop scenarios](adversarial-review-loop-scenarios.md) | Supporting | `adversarial-review-loop` | `adversarial-review-loop`, `disciplined-development`, `disciplined-research`; shared routing boundaries | 8, 18A | Historical `OWN` evidence retained; current `OWN` is five separately attributed composition slots; fresh validation pending | 0 | 14 | 3 | 3 | 1 |
+| [sweeping-stale-references](sweeping-stale-references.md) | Skill | `sweeping-stale-references` | `sweeping-stale-references`, `disciplined-research` ownership boundary | 5, 18A | Current SHA-256 `d92afd5d…`; repaired six-scenario sweep and final union both 30/30 | 0 | 2 | 0 | 1 | 4 |
+| [writing-explicit-rationale](writing-explicit-rationale.md) | Skill | `writing-explicit-rationale` | `writing-explicit-rationale`, `lean-plan-writing`, `disciplined-development`, `disciplined-research`; shared parent/plan composition | 6, 18A | Current `WER-07` composition 5/5 in the final Task 18A union | 0 | 1 | 4 | 2 | 6 |
+| [adversarial-review-loop scenarios](adversarial-review-loop-scenarios.md) | Supporting | `adversarial-review-loop` | `adversarial-review-loop`, `disciplined-development`, `disciplined-research`; shared routing boundaries | 8, 18A | Current `OWN` composition 5/5 in the final Task 18A union | 0 | 14 | 3 | 3 | 1 |
 | [duplicate red-flags scenarios](duplicate-red-flags-scenarios.md) | Supporting history | Task 1 protocol | `adversarial-review`, `concise-writing`, `lean-plan-writing`, `sweeping-stale-references` | 1 | Audited | 0 | 0 | 0 | 4 | 0 |
 | [evaluation subagents read-only](evaluation-subagents-read-only.md) | Project-rule history | Task 1 protocol | Repository evaluation rule | 1 | Audited | 0 | 0 | 0 | 1 | 0 |
-| [skill discovery](skill-discovery.md) | Shared active suite | Task 1 protocol | all nine skills | 1, 17, 18A | Research required in all 11; repaired backfills complete: DISC-02 0/5 both, DISC-04 4/5 high/3/5 low target RED, DISC-05 5/5 both preservation | 0 | 0 | 0 | 0 | 11 |
+| [skill discovery](skill-discovery.md) | Shared active suite | Task 1 protocol | all nine skills | 1, 17, 18A | Research required in all 12; `DISC-12` covers a non-development response/interaction that repeats and relies on a user-supplied premise | 0 | 0 | 0 | 0 | 12 |
 
 ## Framework inventory
 
@@ -53,19 +53,19 @@ An em dash means the owning audit task has not classified the scenarios yet.
 | File | Purpose and owner | Affected skills | Existing IDs and repetitions | Prompt/rubric recoverability | Active disposition |
 |---|---|---|---|---|---|
 | `README.md` | Universal protocol and audit index; Task 1 protocol | All | Not a scenario record | Not applicable | Active source of truth |
-| `adversarial-review-loop-scenarios.md` | Canonical loop decision definitions; `adversarial-review-loop` | `adversarial-review-loop`, `disciplined-development`, `disciplined-research` | `CS`, `T2`–`T7`, `NF`, `PW`, `XL`, `G3A`–`G3C`, `OWN`, `CE`; five reps each | Full; repaired `OWN` prompt/rubric/context frozen | `OWN` remains separately attributed composition coverage; fresh post-parent-architecture validation pending; prior results historical |
+| `adversarial-review-loop-scenarios.md` | Canonical loop decision definitions; `adversarial-review-loop` | `adversarial-review-loop`, `disciplined-development`, `disciplined-research` | `CS`, `T2`–`T7`, `NF`, `PW`, `XL`, `G3A`–`G3C`, `OWN`, `CE`; five reps each | Full; repaired `OWN` prompt/rubric/context frozen | `OWN` remains separately attributed composition coverage and passed 5/5 in the final Task 18A union; prior results historical |
 | `adversarial-review-loop.md` | Active loop results and preserved derivation history; `adversarial-review-loop` | `adversarial-review-loop`, `disciplined-development`, `disciplined-research`; shared routing boundaries | Fifteen owned IDs plus linked discovery and authoring routes | Full for active catalog; mixed-protocol derivation retained as history | `OWN` accepted target evidence retained; prior closure historical |
 | `adversarial-review.md` | Active review, output, enumeration, angle, durability, whole-project, generated-case, invariant-severity, pattern, necessity, and effectiveness suite plus preserved derivation history; `adversarial-review` | `adversarial-review`, `concise-writing`, `lean-plan-writing`, `sweeping-stale-references`, `disciplined-development` | `AR-01`–`AR-10` and `AR-12`–`AR-14`, five control/current reps each; historical evidence below | Full for active catalog; historical evidence remains partial | Active suite 65/65; nine preservation controls 45/45; four watched REDs GREEN; `AR-14` holistic-only ablation 0/5 |
 | `concise-writing.md` | Active verbosity, over-trim, routing, ownership, composition-pressure, response/file boundary, direct-invocation, broad-domain, and complex technical application suite; `concise-writing` | `concise-writing`, `adversarial-review-loop`; external `superpowers:writing-skills` dependency and distractor | `CW-01`–`CW-14` and `CW-17`–`CW-19`; repaired/new high/low controls complete; current candidate owned arm 85/85 | Full definitions, freeze hashes, per-repetition outcomes, repaired-definition control/candidate provenance, section necessity, blind comparison, rejected simplification arms, and superseded-arm isolation | Task 17 complete; affected candidate arm 145/145 GREEN; blind comparison 0 candidate losses/45 pairs |
-| `disciplined-development.md` | Active mode routing, Gates 1–5 orchestration, Principle 7 threshold, and compact derivation history; `disciplined-development` | Parent behavior; discovery and child composition separately attributed | `DD-01`–`DD-03` parent denominator; separate `DISC-01`–`DISC-11`, `DSD-01`, `DSD-02`, `OWN`, and `WER-07` | Full v3 contracts/hashes; frozen original/current and focused proposal comparisons; behavior-first verifier/adjudication provenance; historical strict-rubric evidence preserved; rubrics withheld | Behavior-first DD-01 reached focused 5/5. Formal DD-02 rubric `288dd142…` grades behavior rather than rendering; tracked-parent high/low controls scored 2/5, while minimal Gate 4 candidate `987bdf42…` scored 5/5 and is owner-approved and applied byte-for-byte. Focused evidence carries forward; DD-03, composition, and union have not rerun |
-| `disciplined-research.md` | Active project, procurement, and broad-domain grounding suite plus B1/B17 history; `disciplined-research` | `disciplined-research`; parent Principle 6 alignment | Current `DR-01`–`DR-03`; Task 18A adds targets `DR-04` and `DR-06` plus preservation `DR-05`; historical `B1`, `B17` retained | Full current catalog; accepted DR-04/05 evidence retained; repaired-rubric DR-06 high 5/5 GREEN accepted | Task 18A specifies universal factual-claim grounding and the explicitly unverified-lead branch; `DR-02` remains isolated broad-domain coverage |
-| `dispatching-development-subagents.md` | Active dispatch-prompt, identity/nudge, returned-commit verification, and finding-partition suite plus preserved history; `dispatching-development-subagents` | `dispatching-development-subagents`, `disciplined-development`, `disciplined-research`; shared routing boundaries | `DSD-01`–`DSD-04` and linked discovery | Full; repaired `DSD-01`/`DSD-02` contracts frozen | DSD-01/02 are 10 separately attributed composition slots; fresh validation pending; prior candidate results historical |
+| `disciplined-development.md` | Active mode routing, Gates 1–5 orchestration, Principle 7 threshold, and compact derivation history; `disciplined-development` | Parent behavior; discovery and child composition separately attributed | `DD-01`–`DD-09`; separate discovery, dispatch, `OWN`, and `WER-07` ownership | Full prompts/rubrics and current focused seam fixtures; historical strict-rubric evidence preserved | Task 18A uses `DD-05`–`DD-09` for atomic iteration and retains `DD-01`–`DD-04` for broader controls/composition |
+| `disciplined-research.md` | Active project, procurement, conversational, and broad-domain grounding suite plus B1/B17 history; `disciplined-research` | `disciplined-research`; parent Principle 6 alignment | Current `DR-01`–`DR-07`; historical `B1`, `B17` retained | Full current catalog including `DR-07` response-only premise correction | Task 18A specifies universal factual-claim grounding, the explicitly unverified-lead branch, and non-development response/interaction coverage |
+| `dispatching-development-subagents.md` | Active dispatch-prompt, identity/nudge, returned-commit verification, and finding-partition suite plus preserved history; `dispatching-development-subagents` | `dispatching-development-subagents`, `disciplined-development`, `disciplined-research`; shared routing boundaries | `DSD-01`–`DSD-05` plus atomic `DSD-06`–`DSD-11` and linked discovery | Full current prompt/rubric catalog; historical controls retained | Composition remains separately attributed; atomic seams support fast behavior-focused reruns |
 | `duplicate-red-flags-scenarios.md` | Four-skill composite consolidation fixture; Task 1 protocol | `adversarial-review`, `concise-writing`, `lean-plan-writing`, `sweeping-stale-references` | Cells `A`–`D`; 5 per arm | Full | Retired from the active suite because it combines unrelated contracts; all retained coverage is now atomized in the owning skill catalogs |
 | `evaluation-subagents-read-only.md` | Historical evidence for choosing a no-write evaluator type; Task 1 protocol | Repository evaluation rule | No stable ID; RED/GREEN counts unstated | Partial | Retired from the active suite; the enforced transport probe below replaces instruction-only evidence |
 | `lean-plan-writing.md` | Active direct, prose-density, necessary-snippet, edge-inventory, and merge-boundary suite plus consolidation and exploratory cross-domain history; `lean-plan-writing` | `lean-plan-writing`; external `superpowers:writing-plans` composition | Active `LP-01`–`LP-03`, `LP-05`–`LP-08`; historical `LP-04`; five original/current repetitions preserved | Full for active catalog and retained `LP-04` definition | Seven active owned scenarios; `LP-02` and `LP-03` current GREEN; `LP-04` retired |
-| `skill-discovery.md` | Atomic all-nine description routing; Task 1 protocol | All nine | Historical `DISC-01`–`DISC-10`; Task 18A has nine discovery target REDs and two preservation cells | Full; exact control/target prompts for all eleven, repaired rubric, historical rubric, and empty manifests frozen | DISC-02/04/05 backfills complete; other eight accepted controls retained |
-| `sweeping-stale-references.md` | Active simple, reviewer-pressure, grouped-scale, and negative-form suite plus exploratory policy, rename, grouping, and packaging history; `sweeping-stale-references` | `sweeping-stale-references`; Task 18A research ownership-boundary repair | Active `DISC-08`, `SSR-01`–`SSR-03`, `SSR-05`; historical `SSR-04`; all recorded repetitions preserved | Full for active catalog and retained `SSR-04` definition | Task 18A complete suite and both skill-prose approval gates pending; tracked skill unchanged |
-| `writing-explicit-rationale.md` | Active direct, repeated-review, broad-domain, authoritative-reference, relevance-filtering, and parent/plan composition suite plus preserved history; `writing-explicit-rationale` | `writing-explicit-rationale`, `lean-plan-writing`, `disciplined-development`, `disciplined-research`; shared parent/plan composition | `WER-01`–`WER-03`, `WER-05`–`WER-07`, and linked discovery | Full; repaired `WER-07` files and hashes | WER-07 is five separately attributed composition slots; fresh validation pending; prior candidate result historical |
+| `skill-discovery.md` | Atomic all-nine description routing; Task 1 protocol | All nine | `DISC-01`–`DISC-12` | Full; exact current prompts and withheld rubrics, with historical control arms preserved | `DISC-12` protects response/interaction breadth outside development |
+| `sweeping-stale-references.md` | Active simple, reviewer-pressure, grouped-scale, negative-form, inventory, and rationale-preservation suite plus history; `sweeping-stale-references` | `sweeping-stale-references`; Task 18A research ownership-boundary repair | Active `DISC-08`, `SSR-01`–`SSR-03`, `SSR-05`–`SSR-07`; historical `SSR-04` | Full for active catalog and retained `SSR-04` definition | `SSR-06`/`SSR-07` isolate atomic behaviors; `SSR-01` remains the composite |
+| `writing-explicit-rationale.md` | Active direct, repeated-review, broad-domain, authoritative-reference, relevance-filtering, and parent/plan composition suite plus preserved history; `writing-explicit-rationale` | `writing-explicit-rationale`, `lean-plan-writing`, `disciplined-development`, `disciplined-research`; shared parent/plan composition | `WER-01`–`WER-03`, `WER-05`–`WER-07`, and linked discovery | Full; repaired `WER-07` files and hashes | WER-07 is five separately attributed composition slots and passed 5/5 in the final Task 18A union |
 
 ## Enforced evaluator transport
 
@@ -487,21 +487,21 @@ Cycle 3 proposal / verifier / adjudication hashes are
 `652abda14206472f28e5e0a8bb7c8cc2b197df32bad2d5ebaba9d00e014e608b`
 / `64f9acdd44f06f48b597ce6f10a52750eab5c1557fbb1d44c79603ef9cc3bed2`
 / `11bcd0cfbbf63eda227ec098268b999dc33fcb5bc6e77170e7e5c3d649cd98ce`.
-This comparison covers DD-01 only: it does not validate DD-02, DD-03, or the
-complete skill suite and does not establish skill GREEN. The loop stopped at its
+This historical comparison covered DD-01 only: it did not validate DD-02, DD-03,
+or the complete skill suite and did not establish skill GREEN. The loop stopped at its
 three-cycle cap with focused DD-01 5/5. The owner approved the complete cycle-3
 proposal, and it is now applied byte-for-byte as the tracked parent at its recorded
 SHA-256. The authenticated focused DD-01 5/5 evidence carries forward because the
 applied bytes are identical. Checkpoint commit
 `c9f0eba148ff73477c41e4403ea5dcd8baf4f7db` records the approved applied-parent
-baseline. This does not establish parent GREEN or authorize a PR. Historical
+baseline. At that checkpoint this did not establish parent GREEN or authorize a PR. Historical
 strict-rubric results remain a separate preserved epoch.
 
 Formal behavior-only DD-02 rubric `288dd142…` leaves the earlier baseline and
 proposal results below 5/5, while the minimal Gate 4 candidate `987bdf42…` scored
-5/5 and is owner-approved and applied byte-for-byte. Focused evidence carries
-forward; DD-03, child composition, and union validation have not rerun, so the
-parent is not GREEN. The
+5/5 and was owner-approved and applied byte-for-byte. Focused evidence carried
+forward; at that checkpoint DD-03, child composition, and union validation had not
+rerun, so the parent was not GREEN. The
 [owning record](disciplined-development.md#formal-dd-02-behavioral-rubric--minimal-gate-4-proposal-55)
 contains the results and provenance.
 
@@ -537,28 +537,105 @@ that result remains historical and is not evidence for the active repaired fixtu
 | **Total** | **60** | **237/300** | **21** | **15/105** | **252/405** |
 
 These observed REDs are control evidence, not fixes or authorization to alter scenario contracts or skill prose.
-Any post-freeze prompt, fixture, rubric, supplied-context, or protected-promise change requires the global Sol-high and Sol-low control backfill before the scenario is used again.
-Current active closure contains 82 scenarios: 60 preservation and 22 target rows, or
-410 five-repetition slots. This closure excludes historical `LP-04` and `SSR-04`
-and adds Task 17's `CW-17` and `CW-19` targets plus the `CW-18` preservation guard.
+Any post-freeze prompt, fixture, supplied-context, or protected-promise change
+requires the global Sol-high and Sol-low control backfill before the scenario is
+used again. A rubric-only repair with byte-identical prompt and supplied context
+may instead re-adjudicate the already frozen high/low response bytes: record the
+new rubric hash, fresh scorer provenance, and every repetition outcome, and keep
+the earlier verdicts historical under their own rubric. Regenerate responses if
+the repaired criterion is not observable in those frozen artifacts.
+Current active closure contains 103 unique scenarios, or 515 five-repetition
+slots: 12 shared discovery scenarios plus 91 owned scenarios across the nine skill
+catalogs. This count excludes historical `LP-04` and `SSR-04` and does not
+double-count linked discovery or composition coverage in an owning skill catalog.
 Task 18A froze pre-draft targets `DISC-11` and `DR-04` plus preservation cell `DR-05`, then froze post-draft target `DR-06` for the explicitly unverified-lead branch.
 Its accepted pre-draft classification remains 17 targets and three preservation cells, with research required in all 20 reviewed scenarios; `DR-06` is the additional watched target.
-The candidate union is now 28 unique scenarios or 140 Sol-high evaluator slots.
-Within any combined execution, acceptance remains partitioned: `DD-01`–`DD-03`
-are the 15-slot parent denominator; `DSD-01`, `DSD-02`, `OWN`, and `WER-07`
-are 20 separately attributed child-composition slots and are never pooled with the
-parent score; `DISC-01`–`DISC-11` own discovery. Parent PASS/FAIL covers only mode,
+The expanded Task 18A changed-skill union is 45 unique scenarios or 225 Sol-high
+evaluator slots: `DISC-01`–`DISC-12`, `DR-01`–`DR-07`, `DD-01`–`DD-09`,
+`DSD-01`, `DSD-02`, `DSD-05`–`DSD-11`, `OWN`, `WER-07`, `SSR-01`–`SSR-03`,
+and `SSR-05`–`SSR-07`. Every scenario retains its own five-slot denominator and
+owner; child composition is never pooled with parent acceptance. Parent PASS/FAIL covers only mode,
 gate/principle timing and order, parent-owned artifacts/outcomes/destinations,
 fail-closed transitions, and parent/orchestrator owners. Child loading, invocation,
 procedure/output quality, and research correctness/disclosure are not parent score
 criteria.
-After all routing and application targets are GREEN, the four Task 18A additions produce the 86-scenario/430-slot closure used by
-Tasks 26–27. `CW-19` remains a target scenario; its sentence-local 2/5 and
+The complete repository-closure count for Tasks 26–27 must be recomputed from the
+expanded catalogs rather than carrying forward the superseded 86-scenario figure.
+`CW-19` remains a target scenario; its sentence-local 2/5 and
 1/5 adjudications, actor-repetition arm, and threshold-ambiguous arm are historical
 after the owner-approved whole-artifact rubric repair.
 Tasks 26–27 will add final cold Sol-high domain-appropriate and composition results,
 cleaned Sol-low comparisons, approved dispositions for decreases, and final
 word-count deltas.
+
+### Task 18A behavior-first control re-adjudication (2026-08-13)
+
+Rubric-only repairs kept the original prompts, supplied contexts, and frozen control
+responses byte-identical. Fresh read-only/no-agents Sol-high scorers re-adjudicated
+those response bytes under current rubrics at
+`/private/tmp/task18a-control-readjudication-v1`; all eight scorer transports
+completed without retry. The canonical path-plus-`completed.json` aggregate is
+SHA-256 `e3741e4d275a4bd07ec88ce563397259092f1242a410ebfc0a2b8868cf040809`.
+
+| Scenario | Current rubric SHA-256 | Frozen Sol-high control under current rubric | Frozen Sol-low control under current rubric |
+|---|---|---:|---:|
+| `DD-02` | `801a1e8192a632c5aacee1ad63234af0987e73a498ad41dcba90610843181742` | **0/5** | **1/5** |
+| `DSD-01` | `acf3ade4ab145d91709ccbce6315fbb301bcb86cc8c5648932d839e0d98b13d0` | **2/5** | **3/5** |
+| `DSD-02` | `ac3e61476eca2010dd37143b3ac942f392fa333c695fa98c1a68330a08237bb5` | **1/5** | **0/5** |
+| `WER-07` | `9cf7a96a1ed25794a630a1642c7255eac9b417623cb4f6759bfb81bcdac19b4c` | **3/5** | **5/5** |
+
+High effort remains the target gate; low is robustness evidence. The watched high
+controls therefore remain RED under every repaired behavior-first contract. Earlier
+verdicts remain historical under their recorded rubrics and are not carried forward.
+
+### Task 18A final behavior-first union (2026-08-13)
+
+The durable machine-readable record is
+[`task-18a-provenance.json`](task-18a-provenance.json), SHA-256
+`77104644c4233d172a0a8345aa6ddbc068ffdf2a9ddec931e35e03c82caa4f5e`.
+It records every accepted prompt, rubric, supplied-context, skill, output, scorer,
+and final-verdict hash. The accepted changed-skill hashes are
+`56e08642…` (`adversarial-review-loop`), `87252957…`
+(`disciplined-development`), `f4001332…` (`disciplined-research`),
+`bf616daa…` (`dispatching-development-subagents`), and `d92afd5d…`
+(`sweeping-stale-references`).
+
+The owner-approved `SSR-07` prompt repair restarted its contract at zero. Fresh
+high and low controls both passed 5/5, as did the current arm. The repaired
+six-scenario stale-reference sweep then passed **30/30** behaviorally. Its
+evaluator and scorer aggregates are `1ffb845f…` and `9918809a…`; the sole nominal
+29/30 scorer miss was rendering-only because `SSR-03` r5's ten exact groups
+already reconciled 80 + 40 + 6 = 126.
+
+The final changed-skill union contains 45 separately owned scenarios and 225
+responses:
+
+| Owner / surface | Accepted result |
+|---|---:|
+| Shared discovery, `DISC-01`–`DISC-12` | **60/60** |
+| `disciplined-research`, `DR-01`–`DR-07` | **35/35** |
+| `disciplined-development`, `DD-01`–`DD-09` | **45/45** |
+| `dispatching-development-subagents`, `DSD-01`, `DSD-02`, `DSD-05`–`DSD-11` | **45/45** |
+| `adversarial-review-loop`, `OWN` | **5/5** |
+| `writing-explicit-rationale`, `WER-07` | **5/5** |
+| `sweeping-stale-references`, `SSR-01`–`SSR-03`, `SSR-05`–`SSR-07` | **30/30** |
+| **Final union** | **225/225** |
+
+The clean base root is `/private/tmp/task18a-final-union-v73`, freeze
+`304e2792…`; all 225 evaluator calls selected attempt 1 with zero retries or
+infrastructure errors. The 33 scenario scorers likewise completed on attempt 1.
+Seven nominal misses were behaviorally false negatives: they demanded redundant
+pressure or unreachable-breaker narration, a repeated immutable-history count,
+literal “same reviewer” wording for the singular review rerun, or a repeated PR
+action after its owner and permitted boundary were already explicit. The accepted
+output and verdict aggregates are `b8e650dd…` and `5a9bb5ef…`; evaluator and
+scorer completion aggregates are `1117a245…` and `534b5522…`.
+
+The ambiguous original `DISC-02` remediation request was repaired and restarted at
+zero. Fresh high and low controls remained RED at 0/5, while the current overlay
+passed 5/5 at freeze `4a7c5097…`, producing the accepted 60/60 discovery total.
+The entire `/private/tmp/task18a-final-union-v39` root is excluded because two
+parent runners overlapped nominal slots; none of its bytes contributes to closure.
 
 ### Task 17 concise-writing current controls and candidate affected rerun
 

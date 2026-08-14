@@ -3,6 +3,32 @@
 These files are the exact evaluator prompts and evaluator-withheld rubrics for the active `dispatching-development-subagents` catalog.
 Evaluators receive only the matching prompt and immutable read-only bundle, never the rubric or this manifest.
 
+## Task 18A atomic/composite split (2026-08-13)
+
+Task 18A retains `DSD-01` and `DSD-02` as composition scenarios, adds `DSD-05`
+for the development-integration boundary, and isolates the dispatch contract into
+`DSD-06`–`DSD-11`. This keeps project grounding, identity/authority, returned-work
+verification, no-promotion pressure, mixed hook ordering, and research composition
+independently rerunnable. `DSD-03` and `DSD-04` remain historical active controls
+whose protected behavior is covered by the changed-skill union but whose own bytes
+were not changed for Task 18A.
+
+The current dispatch-skill SHA-256 is
+`bf616daa594a90282ccfa22af210214b30393158838b5feb9220859268f9fe54`.
+Its final focused `DSD-02` restart requires direct running-system evidence rather
+than an ordinary test alone and truthfully permits passed, failed/blocking, or
+not-exercisable outcomes before the orchestrator-owned gate report and stop.
+
+| ID | Isolated behavior | Prompt SHA-256 | Rubric SHA-256 |
+|---|---|---|---|
+| `DSD-05` | Verified integration handoff versus no-commit research-subagent boundary | `5917fa9a572dd8ecce515b4728b946754bd00233655ebf0d505ef26b5ea98f33` | `fc5d43057ffdb3055d2fbd20dba98f594ac3a654807132e5b768e8651f8b0d6b` |
+| `DSD-06` | Exact project finding, files, constraints, and primary-source mapping | `dce91ca050fb7e1cc3cad40d53b2df65c37c9184dc06fb0cb38a97190d672171` | `72246ee567b9c0353817a58d85f8ec632dd6bf89c59dbcffcc14e1fe12699769` |
+| `DSD-07` | Subagent identity, bounded authority, explicit one-finding/no-extras rule, and disclosure | `317fb7a0a394e95e9fe444b3cf1694afc70eaf06e468ee9ad41c1c0c00b67a84` | `50e6f2c823ff942820f99c659d2f660230359d380edc9ffa99048c6c05243d86` |
+| `DSD-08` | Diff/evidence inspection and omission of unsupported landed rationale | `a08ec853a3a904b198c66667a8df8f85e5b3c60526d217878758d01b1ceb3cda` | `9a320803e86b35e3c0b8ab339714803e227a9da0c9529f2d453068928a2ed135` |
+| `DSD-09` | No orchestrator promotion, nested dispatch, or parent-gate action | `c46e94834202e37346cf031b9ed320c719d4e3b57e005a538cc055e0acff4653` | `87af699d793adfda35cf2a74114e632893bd668cc66aa4c5c14018469da5481c` |
+| `DSD-10` | Own running-system verification before reporting the orchestrator-owned gate and stopping | `cc6f0089b32768684ac28d15d41ee73f786a46f15953d48ce8719ad5bd05e69c` | `a4420e154601b7f6f53741165680cfafc4a9e6add569fbdd703537b1c9d3ff3e` |
+| `DSD-11` | Research-before-claims and support mapping across dispatch and handoff | `10ddcdc963eae9cc10c5445acd61fe93d0618341141000cc76ee41f94c36fb52` | `eaa14d182248e0267bef934c3307a782a14836848b453a7690df1b4a11e615df` |
+
 ## Control bundles
 
 Repository files come from control commit `4296647f0dff48a9e77b979ef07e813bf1f66db2`.

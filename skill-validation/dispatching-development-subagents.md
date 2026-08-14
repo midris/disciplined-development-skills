@@ -4,9 +4,11 @@
 
 The complete shared [discovery suite](skill-discovery.md#active-catalog-definitions) owns description routing because every cell supplies all nine descriptions.
 `DISC-06` is the positive development-dispatch route; the other cells protect the negative boundary against unrelated review, research, prose, planning, remediation, and nondelegated work.
-The latest applicable discovery arm is 50/50 across `DISC-01`–`DISC-10`.
+The latest applicable discovery arm is 60/60 across `DISC-01`–`DISC-12`.
 
-The three named historical tests reduce to four owned active scenarios:
+The historical tests established four controls; Task 18A adds seven owned scenarios
+that split its changed development-integration behavior into independently scorable
+seams:
 
 | Historical evidence | Classification | Active disposition |
 |---|---|---|
@@ -16,13 +18,26 @@ The three named historical tests reduce to four owned active scenarios:
 | Returned-commit verification | Add | `DSD-03` covers the previously untested verify-every-commit promise |
 | Finding partition and verified prose | Add | `DSD-04` covers verbatim findings, the safe-batch boundary, dispatch overlays, and unverified-rationale pressure |
 
-Classification: **Keep 0, Repair 2, Merge 1, Retire 0, Add 2**.
+Classification: **Keep 0, Repair 2, Merge 1, Retire 0, Add 9**.
 The old RED, intermediate, and GREEN arms remain historical derivation evidence below; none counts toward the active baseline.
+
+The final Task 18A union passed **45/45** for `DSD-01`, `DSD-02`, and
+`DSD-05`–`DSD-11`. `DSD-03` and `DSD-04` remain unchanged preservation evidence
+outside the changed-skill union. Complete provenance is in
+[the Task 18A manifest](task-18a-provenance.json).
+
+The superseded v62 union exposed two `DSD-02` execution/reporting misses: direct
+running-system evidence could collapse to an ordinary test, and the first repair's
+template could not truthfully report a failed/blocking invocation. Fresh focused
+roots v63 and v64 restarted the scenario after each change; the final exact-hash
+arm passed **5/5** before the complete union restarted at zero.
 
 ## Active catalog definitions
 
-The owner of all four IDs is `dispatching-development-subagents`.
+The owner of all eleven IDs is `dispatching-development-subagents`.
 `DSD-01` and `DSD-02` also affect `disciplined-development` through their composition contracts; `DSD-03` and `DSD-04` affect only the dispatch companion.
+`DSD-05`–`DSD-11` isolate the Task 18A integration boundary and dispatch clauses;
+their complete-bundle parent/research context does not transfer scoring ownership.
 
 | ID | Affected skills | Type / status | Protected promise and sections | Supplied skill context | Exact prompt | Withheld rubric | Rerun trigger |
 |---|---|---|---|---|---|---|---|
@@ -30,6 +45,13 @@ The owner of all four IDs is `dispatching-development-subagents`.
 | `DSD-02` | `dispatching-development-subagents`, `disciplined-development`, `disciplined-research` | Non-trivial composition + focused regression / target RED | Identity and audience framing survive reclassification pressure; commit verification remains distinct from orchestrator-only review/checkpoint/PR gates and nested dispatch; all factual hook/gate/ownership claims are grounded and disclosed | Identity/nudge/research composition control | [prompt](fixtures/dispatching-development-subagents/prompts/dsd-02.md) | [rubric](fixtures/dispatching-development-subagents/rubrics/dsd-02.md) | Identity stamp, parent Gate 3/Gate 5/Principles 4, 6, or 8, hook messages, source disclosure, verification split, or nested-dispatch rule changes |
 | `DSD-03` | `dispatching-development-subagents` | Focused regression / preservation | The orchestrator verifies every returned commit from stat through full diff and adjudicates extras on merit; Overview, Verify | Dispatch-only control | [prompt](fixtures/dispatching-development-subagents/prompts/dsd-03.md) | [rubric](fixtures/dispatching-development-subagents/rubrics/dsd-03.md) | Returned-commit verification, scope reconciliation, report trust, or extra-change disposition changes |
 | `DSD-04` | `dispatching-development-subagents` | Non-trivial application + focused regression / preservation | Mixed findings are partitioned without paraphrase, safe same-kind batching remains allowed, unverified rationale stays out, and every agent receives the overlay; When you dispatch, Rationalizations, Red Flags | Dispatch-only control | [prompt](fixtures/dispatching-development-subagents/prompts/dsd-04.md) | [rubric](fixtures/dispatching-development-subagents/rubrics/dsd-04.md) | Batch boundary, verbatim finding, verified-claims, per-agent overlay, or out-of-scope rule changes |
+| `DSD-05` | `dispatching-development-subagents`, `disciplined-research` | Integration-boundary application | Development handoff and landed prose map factual claims to direct support; unsupported rationale is omitted; a no-commit research subagent stays outside this skill | Development return fixture plus research report | [prompt](fixtures/dispatching-development-subagents/prompts/dsd-05.md) | [rubric](fixtures/dispatching-development-subagents/rubrics/dsd-05.md) | Integration-handoff scope, landed-prose accounting, unsupported-rationale disposition, or research-subagent boundary change |
+| `DSD-06` | `dispatching-development-subagents`, `disciplined-research` | Project-fact atomic seam | Exact finding, files, locks, governing rereads, and primary-source mappings compose without widening one finding | Project instructions, plan, and review record | [prompt](fixtures/dispatching-development-subagents/prompts/dsd-06.md) | [rubric](fixtures/dispatching-development-subagents/rubrics/dsd-06.md) | Finding/scope contract, governing-source mapping, reread timing, or widening-boundary change |
+| `DSD-07` | `dispatching-development-subagents` | Identity/authority atomic seam | Dispatched identity, no nested dispatch, parent gate ownership, the explicit one-finding/no-extras rule, and format-independent disclosure remain explicit | Dispatch skill | [prompt](fixtures/dispatching-development-subagents/prompts/dsd-07.md) | [rubric](fixtures/dispatching-development-subagents/rubrics/dsd-07.md) | Identity, authority, due-gate stop, no-extras rule, or disclosure change |
+| `DSD-08` | `dispatching-development-subagents`, `disciplined-research` | Returned-work atomic seam | Orchestrator inspects diff and evidence, records beyond-scope work, and omits unsupported rationale from landed prose | Development return fixture plus research report | [prompt](fixtures/dispatching-development-subagents/prompts/dsd-08.md) | [rubric](fixtures/dispatching-development-subagents/rubrics/dsd-08.md) | Diff/evidence inspection, disclosure, verified prose, or unsupported-rationale change |
+| `DSD-09` | `dispatching-development-subagents`, `disciplined-development` | Promotion-pressure atomic seam | Seniority does not reclassify a dispatched implementer or authorize nested reviewers, checkpointing, PR work, or hook-gate action | Dispatch skill, parent, hook, and upstream execution skill | [prompt](fixtures/dispatching-development-subagents/prompts/dsd-09.md) | [rubric](fixtures/dispatching-development-subagents/rubrics/dsd-09.md) | Identity, nested dispatch, parent-gate ownership, hook audience, or stopping change |
+| `DSD-10` | `dispatching-development-subagents`, `disciplined-development` | Mixed-message ordering atomic seam | Subagent completes and reports own running-system verification, then reports the orchestrator-owned review gate and stops | Dispatch skill, parent, and hook | [prompt](fixtures/dispatching-development-subagents/prompts/dsd-10.md) | [rubric](fixtures/dispatching-development-subagents/rubrics/dsd-10.md) | Verification duty/evidence, parent-gate owner/recipient, final-action ordering, or stopping change |
+| `DSD-11` | `dispatching-development-subagents`, `disciplined-research` | Research-composition atomic seam | Research-before-claims and unambiguous support mapping apply to both the dispatch boundary and returned post-hook response | Dispatch skill, parent, hook, and upstream execution skill | [prompt](fixtures/dispatching-development-subagents/prompts/dsd-11.md) | [rubric](fixtures/dispatching-development-subagents/rubrics/dsd-11.md) | Research trigger/timing, covered claims, dispatch/handoff coverage, or source-mapping change |
 
 Exact bundle and file hashes are in [the fixture manifest](fixtures/dispatching-development-subagents/README.md).
 
@@ -37,12 +59,12 @@ Exact bundle and file hashes are in [the fixture manifest](fixtures/dispatching-
 
 `DSD-01` and `DSD-02` remain owned here as 10 separately attributed
 child-composition slots. They test the dispatch skill's triggers/procedure and its
-composition with the parent; they are never pooled into the 15-slot
-`DD-01`–`DD-03` parent acceptance denominator. Child invocation, loading, dispatch
+composition with the parent; they are never pooled into the 45-slot
+`DD-01`–`DD-09` parent acceptance denominator. Child invocation, loading, dispatch
 output quality, and research correctness/disclosure may be attributed to their
-owning composition contract, but none is a parent PASS/FAIL criterion. Fresh
-post-parent-architecture validation is pending. All results below remain historical
-evidence under their recorded contracts.
+owning composition contract, but none is a parent PASS/FAIL criterion. The fresh
+Task 18A result above closes the changed-skill slice; older results below remain
+historical evidence under their recorded contracts.
 
 ### Task 18A pre-draft freeze
 
@@ -58,6 +80,11 @@ disclosure are new conjunctive promises. `DSD-01` completed its post-freeze arm 
 0/5 high (F/F/F/F/F) and 1/5 low (F/F/F/F/P) under final contextful scoring.
 `DSD-02` retains its accepted exact 0/5 high and low evidence; classification alone
 did not trigger a rerun. High is the candidate gate; low records robustness only.
+The final behavior-first composition rubrics are SHA-256 `acf3ade4…` for `DSD-01`
+and `ac3e6147…` for `DSD-02`. Fresh re-adjudication of the same frozen response
+bytes scored `DSD-01` high 2/5 and low 3/5, and `DSD-02` high 1/5 and low 0/5.
+Thus both watched high controls remain RED without carrying verdicts across rubric
+epochs; shared scorer provenance is recorded in `skill-validation/README.md`.
 The shared final aggregate is
 `c801090c6252298da41954663dd3f671164cd77fceaa77abf71583fa43fa2f60`;
 the abbreviated `289ef0fd…` identifies historical transport-defective evidence
@@ -132,14 +159,14 @@ Owned Task 11 Sol-low aggregate: **18/20**.
 
 | Skill section | Is it needed, and would a simpler approach preserve intent? | Smallest evidence mapping |
 |---|---|---|
-| Frontmatter and Role | Needed to route implementation delegation and distinguish orchestrator, subagent, research, review, parent, and upstream ownership; shared routing plus one direct application is sufficient | `DISC-01`–`DISC-10`, `DSD-01` |
+| Frontmatter and Role | Needed to route implementation delegation and distinguish orchestrator, subagent, research, review, parent, and upstream ownership; shared routing plus one direct application is sufficient | `DISC-01`–`DISC-12`, `DSD-01` |
 | Overview | The rationale for distrusting reports is needed, but its standalone heading could merge into Verify in Task 24; no separate scenario is needed | `DSD-03` |
 | When you dispatch | Needed as the core prompt contract. One full prompt, one identity-pressure case, and one partition-pressure case are simpler than one scenario per bullet | `DSD-01`, `DSD-02`, `DSD-04` |
 | Verify — orchestrator | Needed because post-return verification is a distinct lifecycle stage and was previously untested; merging it into prompt authoring would obscure both | `DSD-03` |
 | Common rationalizations | The pressure defenses are needed, but this section could merge with Red Flags into one audience-aware defense section in Task 24; no row-specific scenarios are needed | `DSD-02`–`DSD-04` |
 | Red Flags | The audience-specific stop guidance is needed, but it can share one section with rationalizations; reuse the same scenarios rather than duplicate them | `DSD-02`–`DSD-04` |
 | Composition | Needed to assign plan execution, parallel mechanics, and parent gates correctly. The direct and nudge compositions are sufficient | `DSD-01`, `DSD-02`, `DISC-06` |
-| Whole skill | Four owned scenarios plus the existing shared discovery suite are the smallest comprehensive baseline; a separate disclosure or per-warning cell would duplicate these contracts | Full active suite |
+| Whole skill | Eleven owned scenarios plus the existing shared discovery suite are the smallest comprehensive baseline; the Task 18A seams keep changed integration behavior independently observable | Full active suite |
 
 ## Sol-high control results
 
@@ -153,9 +180,12 @@ Run metadata: control commit `4296647f0dff48a9e77b979ef07e813bf1f66db2`; Codex C
 | `DSD-04` | Dispatch-only | **5/5** | P P P P P | None | 0 |
 
 Owned control aggregate: **20/20 PASS**.
-Shared discovery closure (`DISC-01`–`DISC-10`, latest applicable arms): **50/50 PASS**.
-The current candidate is **20/20 PASS**, and its complete active closure is
-**70/70 PASS**.
+The then-current shared discovery closure (`DISC-01`–`DISC-10`) was **50/50 PASS**;
+the final Task 18A closure is **60/60 PASS** across `DISC-01`–`DISC-12`.
+That then-current four-scenario candidate was **20/20 PASS**, and its then-current
+active closure was **70/70 PASS**. The current eleven-scenario owned catalog is
+**55/55 PASS**; with the final shared discovery closure, its complete active
+closure is **115/115 PASS**.
 
 Fixture design was repaired before evaluation until a fresh Sol-high review returned no findings.
 The first run left `DSD-01` at 2/5 because its parent-only reread criterion lacked binding parent context and `DSD-03` at 0/5 because the prompt withheld evidence while demanding a disposition; both were classified as fixture/rubric ambiguity and restarted.

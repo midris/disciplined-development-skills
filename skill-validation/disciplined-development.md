@@ -2,23 +2,46 @@
 
 ## Active catalog audit (2026-08-10)
 
-The parent owns three active scenarios. They are the smallest catalog that tests the
-parent's orchestration without duplicating or scoring child procedures: `DD-01`
-covers eight modes and exact-checkpoint parent outcomes; `DD-02` crosses Gates 1–5
-in one fixed non-trivial sequence; and `DD-03` protects Principle 7's
-analysis-to-implementation threshold. Five Sol-high repetitions per scenario make
-the complete parent acceptance denominator 15 slots.
+The parent owns nine active scenarios. `DD-01`–`DD-04` retain the broad routing,
+gate, threshold, and earlier composition controls; `DD-05`–`DD-09` isolate the
+Task 18A iteration, ownership, timing, and blocked-transition seams. Five Sol-high
+repetitions per scenario make the complete parent acceptance denominator 45 slots.
 
 | Historical evidence | Classification | Active disposition |
 |---|---|---|
 | Whole-repository review scope | Repair | `DD-02` replaces the old one-off orphaned-safeguard probe with a replayable Gates 1–5 orchestration target |
 | Principle 7 parser threshold | Add | `DD-03` preserves the demonstrated contract/reachability/invariant boundary with exact prompt and rubric bytes |
-| Mixed five-cell trigger matrix | Retire | `DISC-01`–`DISC-11` own atomic discovery and availability |
+| Mixed five-cell trigger matrix | Retire | `DISC-01`–`DISC-12` own atomic discovery and availability |
 | Eight-mode direct invocation and required/conditional/inapplicable selection | Repair | `DD-01` now scores due parent gates/principles, artifacts/outcomes, blocked transitions, and requested owners rather than exact child selection or execution |
 
-Classification: **Keep 0, Repair 2, Merge 0, Retire 1, Add 1**.
+Classification: **Keep 0, Repair 2, Merge 0, Retire 1, Add 7**.
 Superseded and mixed-protocol results remain compact historical evidence below; they
 do not count toward the active baseline.
+
+## Task 18A final parent repair checkpoint (2026-08-13)
+
+Completed union v65 exposed three genuine parent salience misses: explicit
+evidence-required scope limits, reading every supplied applicable source as the
+first action, and rereading requirements before plan drafting. Focused v66 passed
+`DD-02` and `DD-05` 5/5 but left one `DD-01` omission; v67 then passed `DD-01`
+5/5. A cold exact-hash review found the first-action noun phrase still excluded
+the separately categorized supplied external-source class. The first union parent at
+SHA-256 `4ae65790a17695b60697724597ed30f58ec964920ced4cee1f606b1df946d148`
+requires every supplied applicable source globally and at Gate 5. Focused v69
+passed `DD-01` and `DD-09` 10/10 behaviorally; five nominal `DD-01` scorer misses
+were false negatives because each output preserved the distinction between a
+review finding/disposition and the remediation-method owner. Fresh cold review
+v70 returned `VERDICT: PASS`. Final union v71 restarted from zero and exposed one
+genuine `DD-01` timing miss: a response released implementation planning after the
+requirements reread instead of after complete signed scope. The parent now states
+that rereading alone cannot release implementation planning. At exact SHA-256
+`872529574af4f4fabcd58ff3721ce6c241af99936c19403b40abca7e9c252e8b`,
+focused v72 passed `DD-01` 5/5 and a fresh exact-hash cold review returned
+`VERDICT: PASS`. Final union v73 restarted from zero and passed all 45 parent slots
+behaviorally. One nominal `DD-09` miss demanded a repeated PR-creation phrase after
+the response already assigned the parent/user boundary, invoked branch finishing,
+and made the first PR permissible only afterward. No earlier union supplies the
+final parent result.
 
 ## Behavior-first DD-01 contract epoch — approved proposal applied; focused 5/5
 
@@ -151,6 +174,12 @@ parent bookkeeping. Exact wording, table shape, labels, numbering, gate names,
 and status vocabulary are non-dispositive. Gate 4 requires scope acceptance first,
 then an effective sweep of every relevant repository surface before commit and a
 concise truthful `References swept:` record in the commit body.
+
+The final composition rubric extends that behavior-only epoch at SHA-256
+`801a1e8192a632c5aacee1ad63234af0987e73a498ad41dcba90610843181742`.
+Fresh re-adjudication of the same frozen control response bytes scored high 0/5 and
+low 1/5; scorer provenance is in the shared Task 18A control-re-adjudication record.
+The prior `288dd142…` verdicts remain historical under that earlier rubric.
 
 Re-adjudication under this formal rubric leaves the applied-parent baseline at
 P/P/F/P/F = **3/5** and the three prior proposals at **4/5**, **2/5**, and
@@ -676,11 +705,11 @@ Exact member hashes are in the fixture manifest.
 
 ## Active scenario catalog
 
-The owner and sole affected skill for `DD-01`–`DD-03` is
+The owner and sole affected skill for `DD-01`–`DD-09` is
 `disciplined-development`. Exact evaluator prompts and evaluator-withheld rubrics
 are linked rather than duplicated here.
 
-The first v3 original-versus-current comparison is complete under the pre-repair
+The following pre-Task-18A history remains complete under the pre-repair
 rubrics. It used five fresh
 `gpt-5.6-sol` high-effort, read-only/no-agents processes per scenario, maximum
 concurrency three, separately withheld rubrics, and orchestrator-owned scoring.
@@ -690,21 +719,29 @@ controls are accepted at 0/5 high and 0/5 low for both target scenarios. No fres
 tracked-parent rerun established GREEN before the final cap.
 The later behavior-first DD-01 epoch reran the unchanged tracked parent at 0/5
 Sol-high and 0/5 Sol-low, then the exact cycle-7 proposal at 1/5 Sol-high.
-Three effectiveness cycles then scored 4/5, 4/5, and focused 5/5. Cycle 3 is the
-current DD-01 contract result, and its owner-approved complete proposal is applied
-byte-for-byte. It does not alter the strict-epoch classifications. Post-application
+Three effectiveness cycles then scored 4/5, 4/5, and focused 5/5. Cycle 3 became
+the accepted DD-01 contract result, and its owner-approved complete proposal was
+applied byte-for-byte. It did not alter the strict-epoch classifications. Post-application
 DD-02 baseline is P/P/F/P/F = 3/5; its final three proposal cycles scored 4/5,
 2/5, and 3/5 with no winner. A later formal behavioral-rubric epoch produced
 tracked-parent high/low controls of 2/5 and a minimal Gate 4 candidate at focused
 5/5. The owner approved and applied that candidate byte-for-byte, so the focused
-evidence carries forward. DD-03, child composition, and union validation have not
-run against the applied parent, so this is not parent GREEN.
+evidence carried forward. At that historical checkpoint DD-03, child composition,
+and union validation had not run against the applied parent, so it was not parent
+GREEN. The current Task 18A result is 45/45 across `DD-01`–`DD-09` at parent
+SHA-256 `872529574af4f4fabcd58ff3721ce6c241af99936c19403b40abca7e9c252e8b`.
 
 | ID | Type / status | Protected promise and sections | Supplied skill context | Exact prompt | Withheld rubric | Rerun trigger |
 |---|---|---|---|---|---|---|
-| `DD-01` | Parent orchestration / behavior-first epoch: pre-application tracked parent high/low 0/5; exact cycle 7 1/5; effectiveness cycles 1–3 4/5, 4/5, focused 5/5. Owner-approved cycle-3 proposal is applied byte-for-byte and recorded by checkpoint commit `c9f0eba…`; capped DD-02 proposal cycles ended 4/5, 2/5, 3/5 with no winner, so later gates remain locked and the parent is not GREEN or authorized for a PR. Historical strict epoch: final cycle-9 P/F/F/F/F = 1/5 and no cycle 10 | Eight modes select due parent gates/principles, parent artifacts/outcomes, blocked transitions, and requested owner seams | Parent only | [prompt](fixtures/disciplined-development/prompts/dd-01.md) | [rubric](fixtures/disciplined-development/rubrics/dd-01.md) | Parent mode, gate/principle timing, artifact/outcome, blocked-transition, requested-owner, or behavior-first-rubric change |
-| `DD-02` | Parent orchestration / formal behavioral epoch: tracked-parent high and low controls each **2/5**; minimal Gate 4 candidate **5/5**, owner-approved and applied byte-for-byte at `987bdf42…`, so focused evidence carries forward. Prior applied-parent baseline 3/5 and proposals 4/5, 2/5, 3/5 are unchanged by re-adjudication; rendering vocabulary is advisory. DD-03, child composition, and union have not rerun. Historical strict epoch: cycle-4 0/5 after DD-01 passed 5/5; lean-v2 1/5; cycles 5–9 locked | One fixed sequence preserves Gate 1–5 timing/order, parent artifacts/destinations, fail-closed transitions, and owner boundaries | Parent plus seven named project sources; no `operator-note.md` | [prompt](fixtures/disciplined-development/prompts/dd-02.md) | [rubric](fixtures/disciplined-development/rubrics/dd-02.md) | Parent gate/principle timing/order, artifact/destination, blocked transition, owner-boundary, or behavioral-rubric change |
-| `DD-03` | Parent Principle 7 / locked in cycles 4–9; historical 5/5 preservation only | Analysis generates cases while implementation follows only for contract, reachable accepted input, observed use, or robust invariants | Parent plus two named project sources | [prompt](fixtures/disciplined-development/prompts/dd-03.md) | [rubric](fixtures/disciplined-development/rubrics/dd-03.md) | Principle 7 threshold, accepted-input contract, malformed-input invariant, speculative-scale, or smallest-action change |
+| `DD-01` | Parent orchestration / current Task 18A final union **5/5** at parent `87252957…`. Historical behavior-first epoch: pre-application tracked parent high/low 0/5; exact cycle 7 1/5; effectiveness cycles 1–3 4/5, 4/5, focused 5/5. Owner-approved cycle 3 was applied and recorded by checkpoint commit `c9f0eba…`; at that checkpoint capped DD-02 proposal cycles had no winner and later gates remained locked. Historical strict epoch: final cycle-9 P/F/F/F/F = 1/5 and no cycle 10 | Eight modes select due parent gates/principles, parent artifacts/outcomes, blocked transitions, and requested owner seams | Parent only | [prompt](fixtures/disciplined-development/prompts/dd-01.md) | [rubric](fixtures/disciplined-development/rubrics/dd-01.md) | Parent mode, gate/principle timing, artifact/outcome, blocked-transition, requested-owner, or behavior-first-rubric change |
+| `DD-02` | Parent orchestration / current Task 18A final union **5/5** at parent `87252957…`. Historical formal behavioral epoch: tracked-parent high and low controls each 2/5; minimal Gate 4 candidate 5/5 and owner-approved at `987bdf42…`. Prior applied-parent baseline 3/5 and proposals 4/5, 2/5, 3/5 remain historical; rendering vocabulary is advisory. Historical strict epoch: cycle-4 0/5 after DD-01 passed 5/5; lean-v2 1/5; cycles 5–9 locked | One fixed sequence preserves Gate 1–5 timing/order, parent artifacts/destinations, fail-closed transitions, and owner boundaries | Parent plus seven named project sources; no `operator-note.md` | [prompt](fixtures/disciplined-development/prompts/dd-02.md) | [rubric](fixtures/disciplined-development/rubrics/dd-02.md) | Parent gate/principle timing/order, artifact/destination, blocked transition, owner-boundary, or behavioral-rubric change |
+| `DD-03` | Parent Principle 7 / current Task 18A final union **5/5**; historical cycles 4–9 remained locked after the earlier 5/5 preservation result | Analysis generates cases while implementation follows only for contract, reachable accepted input, observed use, or robust invariants | Parent plus two named project sources | [prompt](fixtures/disciplined-development/prompts/dd-03.md) | [rubric](fixtures/disciplined-development/rubrics/dd-03.md) | Principle 7 threshold, accepted-input contract, malformed-input invariant, speculative-scale, or smallest-action change |
+| `DD-04` | Parent Principle 6 atomic application | Select grounding before an action relies on a factual premise, keep the action blocked, and leave research procedure to the companion | Parent, research companion, and deployment-target source | [prompt](fixtures/disciplined-development/prompts/dd-04.md) | [rubric](fixtures/disciplined-development/rubrics/dd-04.md) | Principle 6 trigger, timing, outcome/destination, owner boundary, or blocked-action change |
+| `DD-05` | Gate 1 / Principle 3 / Principle 6 atomic seam | Read every governing source, surface the plan/spec conflict to its owner, verify the recalled capability, and block planning/implementation | Parent plus seven named project sources | [prompt](fixtures/disciplined-development/prompts/dd-05.md) | [rubric](fixtures/disciplined-development/rubrics/dd-05.md) | Source-reading, ambiguity ownership, factual-premise verification, or pre-planning block change |
+| `DD-06` | Gate 2 atomic seam | Signed written scope preserves the chosen spelling and an intentional deferral's reason and operational consequence before delegation/planning/coding | Parent plus seven named project sources | [prompt](fixtures/disciplined-development/prompts/dd-06.md) | [rubric](fixtures/disciplined-development/rubrics/dd-06.md) | Written-scope content, decision-owner signoff, deferral record, or Gate 2 blocked-transition change |
+| `DD-07` | Principle 4 / Principle 5 atomic seam | Delegation stays inside signed scope, directly observed expected RED precedes production edits, and parent acceptance authority remains retained | Parent plus signed scope | [prompt](fixtures/disciplined-development/prompts/dd-07.md) | [rubric](fixtures/disciplined-development/rubrics/dd-07.md) | Delegation boundary, RED evidence, acceptance ownership, or downstream-block change |
+| `DD-08` | Gates 3–4 atomic seam | Dispose of unauthorized work first, then obtain direct CLI evidence, reconcile references, record truthful bookkeeping, and create one coherent green commit | Parent plus signed scope and schema contract | [prompt](fixtures/disciplined-development/prompts/dd-08.md) | [rubric](fixtures/disciplined-development/rubrics/dd-08.md) | Candidate conformance, direct evidence, effective sweep, durable bookkeeping, commit composition, or ordering change |
+| `DD-09` | Gate 5 atomic seam | Whole-tree self-review discovers outside-diff work, scope resolution and remediation reset affected evidence, and clean reviews/smoke/finishing precede PR creation | Parent plus signed scope, plan, and history | [prompt](fixtures/disciplined-development/prompts/dd-09.md) | [rubric](fixtures/disciplined-development/rubrics/dd-09.md) | Discovery action, scope/restart semantics, reviewer ownership, durable smoke evidence, finishing, or PR ordering change |
 
 ### Historical immutable materials
 
@@ -731,19 +768,19 @@ candidate bundle.
 | ID | Current prompt SHA-256 | Current rubric SHA-256 | Prior evaluated prompt / rubric SHA-256 |
 |---|---|---|---|
 | `DD-01` | `b41c2835573b645e101280c2928c97f5363f519d73c769568924c3ded8f658ce` | `bb994c3b2e4adfc4feead9220ab9df89d53f5a74d1efa0e6bffbf733c7c0c9bb` | strict epoch `b41c2835…` / `3599c856…`; cycle-1-through-cycle-6 `b41c2835…` / `e2076d7c…`; earlier `0e2e3bab…` / `cdd12bb…` |
-| `DD-02` | `95deb13830eea682f06086c406dedb1a537b22f1bbf60598c4e1c231256ee706` | `288dd142bea0be8ddf8cc4322bb0e32b7538385d2b369ad32596becf0cf9b8ea` | prior behavior-first rubric `95deb138…` / `e644990b…`; pre-behavior-first repair `95deb138…` / `69f985c4…`; earlier `5136c1a7…` / `1d24397d…` |
+| `DD-02` | `95deb13830eea682f06086c406dedb1a537b22f1bbf60598c4e1c231256ee706` | `801a1e8192a632c5aacee1ad63234af0987e73a498ad41dcba90610843181742` | prior behavior-first rubric `95deb138…` / `288dd142…`; earlier `95deb138…` / `e644990b…`; pre-behavior-first repair `95deb138…` / `69f985c4…` |
 | `DD-03` | `e329586445f56ca213fc20557109c874b650219daf3860f079ce909b534c7f07` | `8daf6068c6546a1de19a77172513c7c6c74456df09193ed1b0722c46720e7cd4` | `835545bde4c74bbfc30b83dfebe5e5ffc6a848fae62e4bfecc1d55770fa963b3` / `225bd920689a72bbd52a4e800e2029097d270d244b591e70404e4db7305699bb` |
 
 ### Separately attributed coverage
 
 These scenarios retain their existing owners. They may run in the same validation
 campaign, but they do not enter the parent acceptance denominator and are never
-pooled with its 15 slots:
+pooled with its 45 slots:
 
 | IDs | Owner | Parent obligation |
 |---|---|---|
-| [`DISC-01`–`DISC-11`](skill-discovery.md#active-catalog-definitions) | Task 1 shared discovery suite | Skill discovery and availability; separate from parent behavior |
-| [`DSD-01`, `DSD-02`](dispatching-development-subagents.md#active-catalog-definitions) | `dispatching-development-subagents` | Principle 4 dispatch contract and development-subagent versus orchestrator ownership |
+| [`DISC-01`–`DISC-12`](skill-discovery.md#active-catalog-definitions) | Task 1 shared discovery suite | Skill discovery and availability; separate from parent behavior |
+| [`DSD-01`, `DSD-02`, `DSD-05`–`DSD-11`](dispatching-development-subagents.md#active-catalog-definitions) | `dispatching-development-subagents` | Principle 4 dispatch contract and development-subagent versus orchestrator ownership |
 | [`OWN`](adversarial-review-loop-scenarios.md#active-catalog) | `adversarial-review-loop` | Per-task and whole-branch review loops keep distinct owners, rules, and counters |
 | [`WER-07`](writing-explicit-rationale.md#historical-wer-07--parent-and-plan-composition) | `writing-explicit-rationale` | Principle 1 delegates rationale necessity without forcing a why for every defensible choice |
 
@@ -751,14 +788,14 @@ pooled with its 15 slots:
 
 | Parent section | Is it needed, and would simpler evidence preserve intent? | Smallest evidence mapping |
 |---|---|---|
-| Frontmatter, Role, and ownership | Necessary for parent discovery, companion co-selection, and the parent/child boundary. Shared discovery plus the two integrated scenarios is simpler than testing each description phrase or ownership sentence separately | `DISC-01`–`DISC-11`, `DD-01`, `DD-02` |
+| Frontmatter, Role, and ownership | Necessary for parent discovery, companion co-selection, and the parent/child boundary. Shared discovery plus integrated parent/dispatch scenarios is simpler than testing each description phrase or ownership sentence separately | `DISC-01`–`DISC-12`, `DD-01`, `DD-02`, `DD-07`, `DSD-01`, `DSD-02` |
 | Overview and Iron Law | Necessary to make every boundary fail-closed. The single checkpoint sequence tests the artifact rule more effectively than a separate slogan scenario | `DD-02` |
-| Gates 1–5 | Necessary because each gate owns a distinct transition and artifact. The mode matrix plus one end-to-end sequence preserves all five without one scenario per gate; dispatch and loop cells cover the ownership seam | `DD-01`, `DD-02`, `DSD-01`, `DSD-02`, `OWN` |
-| Principles 1–6 and 8 | Necessary as cross-gate rules. The two integrated scenarios exercise their selection and sequence, including Principle 4's complexity-based model choice; focused linked cells are sufficient where rationale, dispatch, or review-loop ownership needs pressure | `DD-01`, `DD-02`, `WER-07`, `DSD-01`, `DSD-02`, `OWN` |
+| Gates 1–5 | Necessary because each gate owns a distinct transition and artifact. `DD-05`–`DD-09` isolate the changed seams while `DD-01`/`DD-02` retain mode and end-to-end composition | `DD-01`, `DD-02`, `DD-05`–`DD-09` |
+| Principles 1–6 and 8 | Necessary as cross-gate rules. Parent atomics separate factual grounding and bounded delegation from child procedure; linked owner scenarios keep rationale, dispatch, and review-loop behavior separately attributed | `DD-01`, `DD-02`, `DD-04`, `DD-05`, `DD-07`, `WER-07`, `DSD-01`, `DSD-02`, `OWN` |
 | Principle 7 | Necessary to separate mandatory analysis from evidence-backed implementation. One three-case threshold scenario is simpler and more discriminating than repeating simplicity prose across modes | `DD-03` |
 | Mode table | Necessary as the compact router for eight work states. One eight-row direct invocation is the smallest complete matrix | `DD-01` |
 | Common rationalizations | Necessary only where pressure could bypass a rule. Distribute that pressure across the end-to-end sequence, the threshold case, and the subagent identity case rather than create row-by-row scenarios | `DD-02`, `DD-03`, `DSD-02` |
-| Whole skill | Necessary as the orchestration layer. The three owned IDs are the complete 15-slot parent acceptance denominator; discovery and child-composition scenarios remain separately attributed | `DD-01`–`DD-03`; separate `DISC-01`–`DISC-11`, `DSD-01`, `DSD-02`, `OWN`, `WER-07` |
+| Whole skill | Necessary as the orchestration layer. The nine owned IDs are the complete 45-slot Task 18A parent acceptance denominator; discovery and child-composition scenarios remain separately attributed | `DD-01`–`DD-09`; separate `DISC-01`–`DISC-12`, `DSD-01`, `DSD-02`, `DSD-05`–`DSD-11`, `OWN`, `WER-07` |
 
 ## Historical pre-Task-18A Sol-high results
 

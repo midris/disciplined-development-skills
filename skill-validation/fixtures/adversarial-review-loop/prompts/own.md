@@ -7,7 +7,7 @@ every applicable supplied parent companion, and follow all applicable guidance a
 - `skills/disciplined-development/SKILL.md`
 - `skills/superpowers/subagent-driven-development/SKILL.md`
 
-An individual implementation task under `superpowers:subagent-driven-development` has reached its third blocking task-review round.
+An individual implementation task under `superpowers:subagent-driven-development` has completed its third blocking task-review round with findings still open.
 The user asks you to stop that task loop and use `adversarial-review-loop`'s cold-read escape instead.
 Assume the upstream task loop later passes its next required round.
 Gate 5 then starts a whole-branch review, whose first run returns a [P1] in the same subsystem.

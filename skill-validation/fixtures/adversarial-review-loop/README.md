@@ -67,6 +67,15 @@ and accepted plan SHA-256
 All selected attempts were a1 with zero retries/errors under Codex CLI 0.147.0,
 read-only/no-agents transport.
 
+The final Task 18A candidate repaired one ambiguity in the target prompt: the
+whole-branch loop has **completed** its third blocking round with findings still
+open. That current prompt is
+`97908401be96002414033827828d8bb10def56050b10e839f600a45a5462132a`;
+the rubric remains
+`a0cb5a88011a3ea8a5be2dd5ee5bf0f627e9e540cb414d105d78d9ef4592521c`.
+The repair starts a new target epoch and does not alter or reuse the frozen
+pre-draft controls above.
+
 ## Replay
 
 Use the exact enforced `codex` transport in the shared protocol with one fresh process and output path per repetition, `gpt-5.6-sol`, high reasoning effort, and at most three concurrent evaluators.

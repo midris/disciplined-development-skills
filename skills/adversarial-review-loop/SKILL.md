@@ -5,6 +5,10 @@ description: Use when an adversarial review surfaces findings — including when
 
 # Adversarial review loop
 
+Apply `disciplined-research` before stating or relying on factual workflow, rule,
+round, counter, owner, or next-action claims, and disclose their support
+unambiguously.
+
 ## Scope and precedence
 
 This skill governs review remediation for:
@@ -16,6 +20,11 @@ This skill governs review remediation for:
 
 It does not govern a plan-execution skill's per-task review loop.
 While `superpowers:subagent-driven-development` is reviewing an individual task, follow that skill's fix-round limit, reviewer selection, escalation, and breaker rules.
+Keep that task workflow's completed-round record truthful: if its next round later
+passes, advance its recorded round while keeping the whole-branch counter separate.
+When comparing the two workflows, state the upstream task loop's next fix round,
+scoped re-review, and breaker timing; do not merely say its breaker is inapplicable
+to the whole-branch loop.
 
 When an upstream execution skill reaches its final whole-branch review, use the upstream skill to initiate the review, then use this skill to remediate its findings.
 This skill's three-cycle cap and cold-read escape govern that whole-branch remediation loop.
@@ -46,7 +55,7 @@ Judge the accumulated set from all rounds, not the newest — the history is a d
 - **Shared-root** — surface-different findings that name **one axis** → attack the root (next section).
 
 Below the cap, the same *kind* of finding recurring across cycles means step 1's class-sweep was incomplete — do it now, not another single-instance round.
-At the cap, any findings trigger the cold-read escape, never a sweep-and-continue.
+At the cap, any remaining [P0]/[P1]/[P2] findings trigger the cold-read escape, never a sweep-and-continue; P3-only is clean and does not trigger the escape.
 
 ## Find the pattern, attack the root
 
@@ -66,7 +75,7 @@ To attack an axis in the artifact:
 
 A **higher-order class-sweep**: step 1 sweeps one class within a round; this sweeps a class spanning rounds and surface-different symptoms.
 
-**At the cap, escape — even for a shared root.** A finding on the 3rd cycle's re-run *is* the cap (3 cycles done, findings remain) — not a new below-cap round to attack the root in.
+**At the cap, escape — even for a shared root.** A [P0]/[P1]/[P2] finding on the 3rd cycle's re-run *is* the cap (3 cycles done, blocking findings remain) — not a new below-cap round to attack the root in.
 Root-attack is below-cap only; at the cap a shared root still goes to the cold-read escape (which may confirm the axis and call for a redo).
 
 **Don't over-fire.** A shared root = findings that violate **one invariant** (closing it removes the class) — not a shared *topic*.
@@ -78,7 +87,8 @@ Start/dispatch a fresh review with no conversation memory.
 Use a subagent, another model, another human, or a clean new session.
 
 - **Confirms findings** → consider redo, not another iteration.
-- **Diverges materially** → trust the cold read; stop.
+- **Diverges materially** → trust the cold read and stop the loop. Remain blocked if
+  that read has any P0–P2; declare clean only if it has none.
 - **Confirms fix-forward** → continue only if productive; the cap resets for three more cycles, gated by another escape if findings persist.
 
 Record the escape and verdict in a work artifact (plan, spec, PR, review thread, or — for design rationale — a code comment at the decision site) so the next reader sees why iteration stopped.

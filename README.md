@@ -36,8 +36,8 @@ Nine skills (each a `skills/<name>/SKILL.md`):
   cold-read escape. The cap applies to cadence, Gate-5, whole-branch, and
   external reviews; plan-execution skills retain control of their per-task
   review loops.
-- **`disciplined-research`** — ground load-bearing claims in current source, not
-  memory.
+- **`disciplined-research`** — ground every factual claim in current source, not
+  memory, and disclose its support.
 - **`dispatching-development-subagents`** — scope-contract + verify-every-commit
   overlay for development subagents whose diffs you integrate: the report is a
   claim, the diff is the ground truth.
@@ -155,11 +155,10 @@ skill instead, and add a line whenever the bundle gains a skill:
 .claude/skills/writing-explicit-rationale
 ```
 
-> **Symlink caveat.** Claude Code skill discovery follows symlinks on current
-> builds (verified on the Claude CLI and desktop app), but an older build may hit
-> [claude-code#25367](https://github.com/anthropics/claude-code/issues/25367)
-> (symlinked skills error `Unknown skill`). If discovery misbehaves, copy the
-> skill dirs in instead of symlinking.
+> **Symlink caveat.** Symlink discovery behavior can vary by Claude Code build.
+> If a symlinked skill reports `Unknown skill`, as documented in
+> [claude-code#25367](https://github.com/anthropics/claude-code/issues/25367), copy
+> the skill directories instead of symlinking them.
 
 ## Wire the hooks
 

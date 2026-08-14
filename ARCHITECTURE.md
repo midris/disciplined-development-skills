@@ -124,7 +124,7 @@ The gates are action-forcing boundaries; behind them sit eight standing
 | 3 | Obey what's written; surface what isn't |
 | 4 | Carry discipline into subagent dispatches |
 | 5 | Test-first for behavior changes |
-| 6 | Verify load-bearing claims vs reality |
+| 6 | Ground every factual claim and disclose its support |
 | 7 | Keep it simple |
 | 8 | Review periodically |
 
@@ -147,8 +147,10 @@ leans on; the skills carry the detail.
   whose prose is the contract; a written diff is signed off on the document
   (Gate 2).
 - **Implement** — re-read sources (Gate 1) → test-first
-  (`superpowers:test-driven-development`) → verify against the running system
-  (Gate 3) → sweep stale references (Gate 4) → review (Gate 5). Delegated work
+  (`superpowers:test-driven-development`) → inspect the returned candidate and
+  dispose of unauthorized work → verify the conforming candidate against the
+  running system (Gate 3) → sweep stale references and prepare the coherent green
+  commit (Gate 4) → review (Gate 5). Delegated work
   goes through
   [`dispatching-development-subagents`](skills/dispatching-development-subagents/SKILL.md):
   scope contract out, every returned commit diffed back.
@@ -186,7 +188,7 @@ flowchart TD
     H --> N["Attempt review record<br/>write escape verdict"]
     N --> J{"Cold-read outcome?"}
     J -- confirms findings --> K["Redo work<br/>do not continue the loop"]
-    J -- diverges materially --> L["Trust cold read<br/>stop"]
+    J -- diverges materially --> L["Trust cold read<br/>stop loop; block on P0-P2"]
     J -- confirms fix-forward --> M["Continue if productive<br/>reset 3-cycle cap"]
     M --> B
     classDef safe fill:#cdeccd,stroke:#2e7d32,color:#10250f;
@@ -214,11 +216,12 @@ bounded remediation, but it only reports due gate actions and stops.
 flowchart LR
     S["Whole-repository self-review"] -->|"PASS"| E["Fresh whole-repository external review"]
     E -->|"PASS"| M["Smoke affected flows"]
-    M --> A["Record commands + results<br/>in Gate 2 artifact"]
+    M -->|"PASS"| A["Record successful commands + results<br/>in Gate 2 artifact"]
     A --> F["Invoke branch finishing"]
     F --> P["Open PR"]
-    S -->|"BLOCK"| R1["Remediate + rerun self-review"] --> S
-    E -->|"BLOCK"| R2["Remediate + rerun external review"] --> E
+    S -->|"BLOCK"| R["Resolve scope; remediate through<br/>earliest affected gates"] --> S
+    E -->|"BLOCK"| R
+    M -->|"FAIL"| R
 ```
 
 Only the orchestrator or user accepts either review's passage, performs smoke,

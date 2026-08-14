@@ -10,9 +10,9 @@ Every artifact must be a JSON array in ascending alphabetical order with no pros
 | `DISC-03` | `concise-writing`; `disciplined-development`; `disciplined-research` | None | Every other local skill |
 | `DISC-04` | `disciplined-development`; `disciplined-research` | `concise-writing` | Every other local skill |
 | `DISC-05` | `disciplined-development`; `disciplined-research` | `concise-writing` | Every other local skill |
-| `DISC-06` | `disciplined-development`; `disciplined-research`; `dispatching-development-subagents` | None | Every other local skill |
+| `DISC-06` | `disciplined-development`; `disciplined-research`; `dispatching-development-subagents` | `concise-writing` | Every other local skill |
 | `DISC-07` | `disciplined-development`; `disciplined-research`; `lean-plan-writing` | `concise-writing` | Every other local skill |
-| `DISC-08` | `disciplined-development`; `disciplined-research`; `sweeping-stale-references` | None | Every other local skill |
+| `DISC-08` | `disciplined-development`; `disciplined-research`; `sweeping-stale-references` | `concise-writing` | Every other local skill |
 | `DISC-09` | `disciplined-development`; `disciplined-research`; `writing-explicit-rationale` | `concise-writing` | Every other local skill |
 | `DISC-10` | `disciplined-development`; `disciplined-research`; `lean-plan-writing`; `writing-explicit-rationale` | `concise-writing`; `sweeping-stale-references` | Every other local skill |
 

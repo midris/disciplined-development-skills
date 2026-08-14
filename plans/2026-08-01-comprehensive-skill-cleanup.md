@@ -855,16 +855,17 @@ skipped, installer suite 11 passed, and research suite 4 passed.
 
 **Task 11 execution note (2026-08-07):** The orchestrator froze the 81-scenario catalog at `db985d203fdbe812dc5161f63565e6e2021f0872` (tracked validation archive `7e626ccc1dd2c596e54688dfaa32a6c090e4f4c50c1ea293352669051f0b4f8b`; canonical 125-file manifest `bbb4fdaa873aa009715bf815d18ab148eac831c92aa00fa647dfa2ca5390751d`) and ran 405 fresh `gpt-5.6-sol` low-effort, read-only/no-agents responses with maximum concurrency three, zero infrastructure errors, and zero retries. The original-control archive/content-manifest pair was `8f21c8267d005c349702ec94d6aff26c13a09bfbe29f2b43efcfbb37304f16e3` / `e2249c4b24132523f1374d506957197a303314e2bfbc6e32c9c1b233909cbbff`; `WER-07` used its catalog-declared frozen mixed-control exception rather than pure `4296647` bytes. Codex CLI 0.147.0 passed the enforced transport probe. A separate high-effort scorer completed 81 isolated packets/405 slots with zero infrastructure errors, after which the orchestrator manually adjudicated every output against its withheld rubric. Preservation scored 237/300, targets 15/105, and the full suite 252/405. These REDs remain recorded control behavior, not fixes.
 The frozen 81-row/405-slot result remains historical fact and is not recomputed.
-Future active closure contains 82 scenarios: 60 preservation and 22 target rows, or
-410 five-repetition slots. Task 14 retires `LP-04` and Task 15 retires `SSR-04`
+The then-forecast future active closure contained 82 scenarios: 60 preservation
+and 22 target rows, or 410 five-repetition slots. Task 14 retires `LP-04` and Task 15 retires `SSR-04`
 without altering their frozen outcomes; Task 17 adds `CW-17`–`CW-19`.
 Task 18A has frozen pre-draft targets `DISC-11` and `DR-04`, preservation
 scenario `DR-05`, and post-draft unverified-lead target `DR-06`.
 Its accepted pre-draft reclassification remains the 17-target,
 three-preservation split; `DR-06` is the additional watched target.
-After all routing and application targets are GREEN,
-these additions bring the future final closure to 86 scenarios or 430
-five-repetition slots without changing this historical Task 11 result.
+At that point, the forecast was 86 scenarios / 430 slots after Task 18A GREEN.
+The 2026-08-13 atomic/composite redesign in Task 18A supersedes that forecast;
+Tasks 26–27 must recompute final closure without changing this historical Task 11
+result.
 
 **Task 11 Gate 5 completion (2026-08-07).** The orchestrator's
 whole-repository self-review found no P0–P2 issues after the task-level review
@@ -1121,7 +1122,9 @@ complete. Final repository verification and no-PR completion are recorded above.
 
 - Modify: `skills/disciplined-research/SKILL.md`
 - Modify: `skills/disciplined-development/SKILL.md`
+- Modify: `skills/dispatching-development-subagents/SKILL.md`
 - Modify: `skills/sweeping-stale-references/SKILL.md`
+- Modify: `skills/adversarial-review-loop/SKILL.md`
 - Modify: `README.md`
 - Modify: `ARCHITECTURE.md`
 - Modify: `skill-validation/disciplined-research.md`
@@ -1157,7 +1160,16 @@ complete. Final repository verification and no-PR completion are recorded above.
 - Modify if reclassified: `skill-validation/fixtures/adversarial-review-loop/prompts/own.md`
 - Modify if reclassified: `skill-validation/fixtures/adversarial-review-loop/rubrics/own.md`
 
-**Approved behavior:** use the exact discovery description `Use before stating any factual claim.`
+The implemented validation redesign also creates focused `DD-04`–`DD-09`,
+`DSD-05`–`DSD-11`, `DISC-12`, `DR-07`, and `SSR-06`–`SSR-07` prompt/rubric
+fixtures plus their required project fixtures and manifests. These additions split
+single behavioral seams from retained composite scenarios; they are not new
+rendering contracts.
+
+**Approved behavior:** use the current discovery description `Use before every response, interaction, action, or task that will state, repeat, transform, or rely on a factual claim or premise—including internal logical review of supplied text, claims and premises supplied by the user or embedded in requested work, plus mechanical edits, searches, and verification.`
+The explicit internal-logical-review trigger is the evidence-driven repair for the
+observed `DISC-01` omission; it clarifies the universal rule rather than adding an
+applicability exception.
 Every factual claim, including one in a casual answer or private note, must be acquired from the best available source, verified before it is stated, and accompanied by an unambiguous source disclosure.
 Do not preserve or introduce a load-bearing threshold, destination test, scratch-work exemption, project/external applicability bound, scale threshold, or other exclusion.
 Project, external, and cross-domain categories may guide source selection only.
@@ -1604,52 +1616,95 @@ identical. Checkpoint commit
 `c9f0eba148ff73477c41e4403ea5dcd8baf4f7db` records this approved applied-parent
 baseline without establishing parent GREEN or authorizing a PR.
 
-Formal behavior-only DD-02 rubric `288dd142…` grades actions, timing, ownership,
+Formal behavior-only DD-02 rubric epoch `288dd142…` grades actions, timing, ownership,
 blocked transitions, and truthful bookkeeping rather than rendering. The minimal
 Gate 4 candidate `987bdf42…` scored 5/5 and is owner-approved and applied
 byte-for-byte, so the focused Task 18A parent-behavior goal is satisfied. DD-03,
-child composition, and union validation have not rerun; the parent is not GREEN,
-and the broader three-skill Task 18A checkboxes remain open. The
+child composition, and union validation had not yet rerun at that checkpoint; the
+parent was not GREEN, and the broader five-skill Task 18A gates remained open. The
 [owning validation record](../skill-validation/disciplined-development.md#formal-dd-02-behavioral-rubric--minimal-gate-4-proposal-55)
 contains the full results and provenance.
 
-- [ ] With `superpowers:writing-skills`, draft complete proposed versions of `disciplined-research`, `disciplined-development`, and `sweeping-stale-references` plus the complete documentation-only repairs.
+- [x] With `superpowers:writing-skills`, draft complete proposed versions of `disciplined-research`, `disciplined-development`, `dispatching-development-subagents`, `adversarial-review-loop`, and `sweeping-stale-references` plus the complete documentation-only repairs.
   For every section and each whole skill, record whether it is necessary and whether a simpler formulation preserves intent and effectiveness.
   Show every complete proposed skill, including the complete sweeping skill, and wait for approval before applying any skill prose.
-- [ ] Apply only the approved complete drafts.
-  The approved behavior-first cycle-3 `disciplined-development` draft is now applied
-  byte-for-byte at SHA-256 `652abda14206472f28e5e0a8bb7c8cc2b197df32bad2d5ebaba9d00e014e608b`;
-  checkpoint commit `c9f0eba148ff73477c41e4403ea5dcd8baf4f7db` records that stable
-  baseline. The subsequent three-cycle `DD-02` loop scored 4/5, 2/5, and 3/5;
-  its cap is exhausted without a winner, and every ignored proposal remains
-  unapplied. A later formal behavioral-rubric cycle produced and validated the
-  owner-approved Gate 4 repair, now applied byte-for-byte at SHA-256
-  `987bdf4222dc94077ef87c76d1282188a628f237ffefa6ff971f77767d1c6ac3`.
-  `DD-03`, child composition, and union validation have not rerun. This is not
-  parent GREEN and does not authorize a PR. Approved
-  tracked `disciplined-research` is
-  SHA-256 `381a10aaa01b17e02d863287718c2e6cfde5c5ac587f42921146726a49725fc5`;
-  its validation gates remain pending. Sweeping and documentation drafts remain
-  governed by their separate approval/application gates.
+- [x] Apply only the approved complete drafts.
+  The complete applied candidate, including the owner-authorized unattended
+  behavior-cycle repairs, is frozen at SHA-256
+  `f4001332065b9829b0e9893e7289842c17e1c6cde6f627aa6bba211ca873f8c9`
+  for `disciplined-research`,
+  `872529574af4f4fabcd58ff3721ce6c241af99936c19403b40abca7e9c252e8b`
+  for `disciplined-development`,
+  `bf616daa594a90282ccfa22af210214b30393158838b5feb9220859268f9fe54`
+  for `dispatching-development-subagents`,
+  `d92afd5dc74681d3037b1d5ab2543276698d9cd7b7c0fafc858cfe6b709b5609`
+  for `sweeping-stale-references`, and
+  `56e08642a8005ac526898ed7b9cd178bcfd08a655464f2249b9ccae22aeb5387`
+  for `adversarial-review-loop`. Their current word counts are respectively
+  1,459, 3,308, 1,551, 1,527, and 1,477. Checkpoint commit `c9f0eba…` remains the
+  historical applied-parent baseline; later Gate 4, Gate 5, dispatch, research,
+  and sweeping repairs are validated at their exact final hashes by the expanded
+  scenario design below rather than carried forward from that checkpoint.
   In `disciplined-research`, retain acquire/verify, source ranking, recency/applicability, conflict handling, and pressure resistance where they serve the universal rule; remove the load-bearing, destination, and scratch exceptions rather than renaming them.
   In `disciplined-development`, align Principle 6 and its routing language without copying the child procedure.
   In `sweeping-stale-references`, remove the load-bearing narrowing from the research ownership boundary without changing the sweeping trigger or procedure.
   Make `README.md` and `ARCHITECTURE.md` describe the executable behavior accurately.
-- [ ] Run the union of all three changed skills' complete active suites five times on cold Sol high: `DISC-01`–`DISC-11`, `DR-01`–`DR-06`, `DD-01`–`DD-03`, `DSD-01`, `DSD-02`, `OWN`, `WER-07`, and `SSR-01`–`SSR-03`, `SSR-05`.
-  This is 140 responses across 28 unique scenarios.
-  Combined execution does not combine acceptance: score the 15 parent slots and
-  20 child-composition slots in their separately attributed denominators.
+- [x] Run the expanded changed-skill union five times on cold Sol high: `DISC-01`–`DISC-12`, `DR-01`–`DR-07`, `DD-01`–`DD-09`, `DSD-01`, `DSD-02`, `DSD-05`–`DSD-11`, `OWN`, `WER-07`, `SSR-01`–`SSR-03`, and `SSR-05`–`SSR-07`.
+  This is 225 responses across 45 unique scenarios. The 13 new focused seam tests
+  are `DD-05`–`DD-09`, `DSD-06`–`DSD-11`, and `SSR-06`–`SSR-07`; retained
+  composites still exercise the whole parent, dispatch, and sweeping flows.
+  Combined execution does not combine acceptance: every scenario retains its own
+  five-slot denominator and owner, including parent versus child composition.
   Score complete artifacts in supplied context; any scenario below 5/5 pauses the slice for failure classification.
-- [ ] Run cold editorial and skill-writing review of all three skills.
+  Earlier full-union epochs are superseded after evidence-driven repairs. Union v62
+  exposed genuine direct-running-system/failed-verification bookkeeping and intended
+  new-prose-search misses. Focused repair roots v63/v64 passed `SSR-01` 5/5 and
+  final `DSD-02` 5/5. Completed union v65 exposed genuine parent first-read,
+  evidence-limit, and plan-reread salience misses; focused v66/v67 repairs reached
+  5/5 on each affected behavior. A final cold review then exposed that “governing
+  and task sources” excluded a separately categorized supplied external source.
+  The exact parent was repaired to require every supplied applicable source globally
+  and at Gate 5; focused v69 passed `DD-01` and `DD-09` 10/10 behaviorally, and
+  exact-hash cold review v70 returned `VERDICT: PASS`. Zeroed union v71 then
+  exposed one genuine `DD-01` response that released implementation planning after
+  rereading instead of after complete signed scope. The narrow parent clarification
+  passed focused `DD-01` v72 5/5 and exact-hash cold review v72 at SHA-256
+  `872529574af4f4fabcd58ff3721ce6c241af99936c19403b40abca7e9c252e8b`.
+  Zeroed union v73 then completed 225/225 evaluator responses and all 33 scenario
+  scorers on attempt 1 with zero retries or infrastructure errors. Descriptive
+  scoring passed 218/225; complete-artifact adjudication passed 225/225 after seven
+  false negatives demanded redundant pressure/breaker/count wording or literal
+  same-reviewer/PR-action phrasing despite the required behavior being explicit.
+  The durable provenance manifest records every accepted hash and adjudication.
+- [x] Run cold editorial and skill-writing review of all five changed skills.
   Show any proposed prose fix and wait for approval; after an approved fix, restart every affected scenario and both in-place approval gates.
-- [ ] Stage only the approved behavior slice, then run a deep staged `adversarial-review` against the complete plan and governing documents.
+  The final exact hashes received fresh read-only Sol-high reviews with no P0–P3
+  findings and `VERDICT: PASS`, including the final DD-02 ordering repair review at
+  `/private/tmp/task18a-dd02-v61-cold-review.md` and the final dispatch/sweeping
+  review at `/private/tmp/task18a-v64-two-skill-cold-review.md`. The final parent
+  review at `/private/tmp/task18a-v72-parent-cold-review.md` also returned
+  `VERDICT: PASS` at exact SHA-256 `87252957…`; the earlier v70 review passed the
+  supplied-source repair before union v71 exposed the final planning-block seam.
+- [x] Stage only the approved behavior slice, then run a deep staged `adversarial-review` against the complete plan and governing documents.
   Any finding-driven skill edit returns to proposed-draft approval, affected validation, cold review, and final in-place approval before restaging.
-- [ ] Show all three reviewed final skills in place, including the complete sweeping skill, and wait for approval.
-- [ ] Run the hook, installer, and research pytest suites; rerun the routing/reference sweep and exact local-link command; and run `git diff --check` plus `git diff --cached --check`.
+  The first staged review found only two P2 bookkeeping defects: stale current-state
+  language and superseded scenario denominators. After those documentation-only
+  repairs, a fresh authorized OpenAI read-only review of the exact 91-file stage
+  returned `VERDICT: PASS` with no P0–P3 findings at
+  `/private/tmp/task18a-final-staged-review-openai-v2.md`, SHA-256 `9ef9e238…`.
+- [x] Show all five reviewed final skills in place, including the complete sweeping skill, and wait for approval.
+  The owner's carried-forward unattended authorization approves the evidence-driven
+  in-scope repair sequence and removes an extra pause after exact-hash review.
+- [x] Run the hook, installer, and research pytest suites; rerun the routing/reference sweep and exact local-link command; and run `git diff --check` plus `git diff --cached --check`.
   After approval, commit the behavior slice separately as `docs(skills): ground every factual claim`.
   Do not open a PR.
+  Final verification passed: hook tests 373 passed / 3 skipped, installer tests 11
+  passed, research tests 4 passed, all five skill-package validators passed, local
+  Markdown links passed for 88 working and 88 staged documents, the provenance
+  manifest reproduced byte-for-byte at SHA-256 `77104644…`, and the routing,
+  current-denominator, JSON-integrity, skill-hash, and diff checks passed.
 - [ ] Materialize the behavior commit as Task 18's immutable immediate readability control.
-  Record all three changed skills' control/current word counts and hashes, then resume the behavior-preserving cleanup below from new research- and sweeping-skill section inventories and complete drafts.
+  Record all five changed skills' current word counts and hashes, then resume the behavior-preserving cleanup below from new research- and sweeping-skill section inventories and complete drafts.
 
 ### Task 18: Clean `disciplined-research`
 
@@ -1662,7 +1717,7 @@ including isolated non-software research, with only scenario-declared dependenci
 
 - [ ] Record the post-Task 18A immediate readability-control word count and hashes, then rebuild the section-level and whole-skill necessity/simplification inventory from those exact bytes.
 - [ ] Draft the smallest coherent reorganization, show the diff, and wait for user approval.
-- [ ] Apply the approved draft and run `DISC-01`–`DISC-11` plus `DR-01`–`DR-06` five times each on Sol high: 85 responses across 17 scenarios.
+- [ ] Apply the approved draft and run `DISC-01`–`DISC-12` plus `DR-01`–`DR-07` five times each on Sol high: 95 responses across 19 scenarios.
 - [ ] Blindly compare subjective prose outputs with the immediate readability control where the rubric requires judgment.
 - [ ] Run cold editorial and skill-writing review plus deep staged `adversarial-review`; show proposed fixes, wait for user approval, apply them, and restart affected scenarios.
 - [ ] Show the final skill in place and wait for user approval.

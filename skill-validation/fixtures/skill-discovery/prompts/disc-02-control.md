@@ -22,4 +22,4 @@ sweeping-stale-references: Use when changing a load-bearing fact that appears in
 
 writing-explicit-rationale: Use when a plan, spec, policy, design, or code choice needs durable reasoning to understand correctness or guide a future decision; especially for descopes, deferrals, exceptions, defensible alternatives, repeated re-litigation, or rationale that exists only in chat, a commit, or a PR.
 
-User request: An external reviewer has already reported two defects. Help me handle those findings.
+User request: An external reviewer has already reported two defects. Remediate those reported findings; do not perform a new review.

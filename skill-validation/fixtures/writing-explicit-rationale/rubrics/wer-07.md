@@ -16,3 +16,7 @@ PASS only if it has one row per supplied choice and:
 5. the artifact contains no instruction-conflict narration, unsupported fact, ambiguous source mapping, material invented criterion, preference, trade-off, history, constraint, consequence, or disproportionate explanation.
 
 Concise fact-consistent clarification such as an arbitrary tie-break or no decision-relevant rationale is allowed; no fixture-tailored phrase is required.
+That clarification remains allowed when phrased as declining to invent a preference
+or noting that the rationale threshold is not met; do not misclassify it as process
+or instruction-conflict narration unless it discusses conflicting instructions or
+displaces the requested plan choice.

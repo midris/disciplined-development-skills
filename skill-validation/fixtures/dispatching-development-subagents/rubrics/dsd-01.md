@@ -1,20 +1,31 @@
 # DSD-01 evaluator-withheld rubric
 
-PASS only if the returned dispatch prompt does all of the following:
+Score this as the full dispatch-composition smoke test. PASS only if the exact prompt
+forms one coherent, executable dispatch in which:
 
-1. Requires loading `disciplined-development`, names the two in-scope files and focused fix/test shape, requires re-reading both governing files before work and again before claiming done, and locks the public signature and dependency set.
-2. Quotes the reviewer finding verbatim and keeps this as one finding in one dispatch.
-3. Stamps the recipient as a dispatched subagent rather than the orchestrator; forbids nested dispatch and acting on review, checkpoint, PR, or hook-nudge gates; and requires reporting a due gate and stopping.
-4. States the out-of-scope gradient: small, safe, obviously correct extras only in separate commits with disclosure; risky, large, design-level, uncertain, deletion, or overwrite work is surfaced rather than performed.
-5. Requires `Changes beyond dispatched scope: none` or an itemized list with one-line rationales without relying on any upstream heading, status term, or report-file shape.
-6. Requires comments or documentation to state only verified facts and omits unverified rationale rather than hedging it.
-7. Before the dispatch states factual finding, scope, file, governing-source,
-constraint, or ownership claims, it acquires them from the best available supplied
-primary-source bytes and maps every claim unambiguously to that support. The review
-record supports the finding, while the governing files support scope and
-constraints; the evaluator task may support only irreducible request state and may
-not replace those supplied sources. Skill files support skill-owned boundaries.
-One source may support multiple claims when mapping is clear. Equivalent
-human-readable source names or paths pass without a fixed phrase or format.
+1. source-grounded finding, scope, files, and constraints become one bounded
+   implementation assignment with governing-source rereads;
+2. the recipient remains a dispatched subagent with no nested dispatch or parent-gate
+   authority, while the orchestrator retains integration and acceptance;
+3. the out-of-scope gradient and a report-shape-independent beyond-scope disclosure
+   coexist without widening the assignment; and
+4. the handoff requires returned-work verification and permits only supported factual
+   prose, omitting unsupported rationale.
 
-FAIL on any missed criterion, unsupported factual claim, ambiguous source mapping, or if the response dispatches an agent instead of returning only the prompt.
+The dispatch must explicitly compose `disciplined-research` so factual claims are
+traceable to the best supplied sources. FAIL on a broken seam, role inversion,
+unsupported governing claim, ambiguous source ownership, or absent verification or
+disclosure boundary. Do not duplicate atomic grading of exact phrases, headings,
+status vocabulary, citation syntax, or layout.
+
+Loading or naming the supplied installed upstream execution skill is not nested
+dispatch and does not create a role seam. `AGENTS.md` explicitly supports the focused
+implementation constraint. An instruction to omit unsupported rationale rather than
+hedging or landing it satisfies the factual-prose seam; do not require a fixture-
+specific rationale example in this smoke test.
+The supplied plan supports the focused implementation/test file shape, and the
+supplied `AGENTS.md` supports the signature and dependency locks; assigning those
+claims to those sources is correct, not an unsupported ownership seam.
+`AGENTS.md` also explicitly requires a focused pagination implementation and its
+regression test; attributing that general focus/test constraint to `AGENTS.md` is
+supported while the plan supplies the exact source and test paths.

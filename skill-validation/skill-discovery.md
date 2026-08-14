@@ -102,7 +102,9 @@ The allowed-set column therefore maps each scenario to all nine descriptions: re
 All are discovery-type scenarios protecting each skill’s frontmatter `description`.
 The final Task 18A role split is target RED for `DISC-01`, `DISC-02`, `DISC-03`,
 `DISC-04`, `DISC-06`, `DISC-07`, `DISC-08`, `DISC-09`, and `DISC-11`;
-preservation for `DISC-05` and `DISC-10`. Research remains required in every case.
+preservation for `DISC-05` and `DISC-10`; `DISC-12` is the later target for the
+non-development response/interaction boundary. Research remains required in every
+case.
 `DISC-04` is target behavior because research changed from optional to required;
 its post-freeze 4/5 high result is a watched RED. `DISC-05` preserves the exact
 research route after allowing response-only `concise-writing`; `DISC-10` preserves
@@ -112,25 +114,29 @@ The supplied skill context is the description block above; no body, sibling proc
 | ID | Exact request | Allowed output sets in the evaluator-withheld rubric | Primary protected promise | Rerun trigger |
 |---|---|---|---|---|
 | `DISC-01` | `Review only the API design text I provide for internal logical edge cases; do not inspect files, state repository or external facts, edit anything, or handle existing findings.` | Must include `adversarial-review`, `disciplined-development`, and `disciplined-research`; may also include `concise-writing`; no other skill | The review's findings are factual claims about supplied source text, so supplied-text acquisition does not make research optional | Any candidate description, fixed prompt, request, or allowed set changes |
-| `DISC-02` | `An external reviewer has already reported two defects. Help me handle those findings.` | Must include `adversarial-review-loop`, `disciplined-development`, and `disciplined-research`; may also include `concise-writing`; no other skill | Handling the reported defects states claims about the findings and affected work; the reviewer report is a source, not an exemption | Same |
+| `DISC-02` | `An external reviewer has already reported two defects. Remediate those reported findings; do not perform a new review.` | Must include `adversarial-review-loop`, `disciplined-development`, and `disciplined-research`; may also include `concise-writing`; no other skill | Remediating the reported defects states claims about the findings and affected work; the reviewer report is a source, not an exemption; a new review is not the requested action | Same |
 | `DISC-03` | `Shorten this purely stylistic README sentence without adding or changing factual claims: "Our setup process is simple, straightforward, and easy to follow because it is not complicated."` | Exactly `concise-writing`, `disciplined-development`, and `disciplined-research`; no other skill | The rewritten sentence still states the supplied setup-ease claim even though it adds or changes no factual content | Same |
 | `DISC-04` | `Resume implementation from the active plan and take the work through verification and commit.` | Must include `disciplined-development` and `disciplined-research`; may also include `concise-writing`; no other skill | Implementation, verification, and commit outputs state current-project and completion claims | Same |
 | `DISC-05` | `Check the repository and tell me which handler processes POST /orders.` | Must include `disciplined-development` and `disciplined-research`; may also include `concise-writing`; no other skill | A downstream-quotable project fact routes to research within the parent development workflow | Same |
 | `DISC-06` | `Spawn a development subagent to implement the pagination fix; I will integrate its diff.` | Exactly `disciplined-development`, `disciplined-research`, and `dispatching-development-subagents`; no other skill | The dispatch states factual scope, finding, and governing-context claims before the subagent can act | Same |
 | `DISC-07` | `Write a plan to add CSV export.` | Must include `disciplined-development`, `disciplined-research`, and `lean-plan-writing`; may also include `concise-writing`; no other skill | The plan artifact states factual premises and current/future decision boundaries; plan destination does not lower the trigger | Same |
-| `DISC-08` | ``Perform only a mechanical identifier replacement: rename the exact identifier `user_id` to `account_id` everywhere it occurs in code and documentation. Do not rewrite, tighten, or otherwise revise surrounding prose.`` | Exactly `disciplined-development`, `disciplined-research`, and `sweeping-stale-references`; no other skill | Search results, occurrence coverage, edits, and completion are factual claims even when the replacement is mechanical | Same |
+| `DISC-08` | ``Perform only a mechanical identifier replacement: rename the exact identifier `user_id` to `account_id` everywhere it occurs in code and documentation. Do not rewrite, tighten, or otherwise revise surrounding prose.`` | Must include `disciplined-development`, `disciplined-research`, and `sweeping-stale-references`; may also include `concise-writing`; no other skill | Search results, occurrence coverage, edits, and completion are factual claims even when the replacement is mechanical; the concise-writing description also literally permits revision of reader-facing docs | Same |
 | `DISC-09` | `We are deliberately skipping retries as a temporary shortcut. Record that choice beside the code so it is not mistaken for an oversight.` | Must include `disciplined-development`, `disciplined-research`, and `writing-explicit-rationale`; may also include `concise-writing`; no other skill | Recording the user-originated retry decision still states a fact about project behavior and intent | Same |
 | `DISC-10` | `Update the launch plan to defer multilingual invoices. The billing vendor's locale API remains unstable, so launch accepts English-only invoices until the API stabilizes. That rationale currently exists only in the PR description.` | Must include `disciplined-development`, `disciplined-research`, `lean-plan-writing`, and `writing-explicit-rationale`; may also include `concise-writing` and `sweeping-stale-references`; no other skill | The plan repeats vendor-state, launch-scope, and rationale-location claims supplied by the user; source origin does not exempt them | Same |
 | `DISC-11` | ``Privately note for yourself in an uncommitted software-development scratch file: `The checkout service retries declined authorizations three times.` Do not share or publish the note.`` | Must include `disciplined-development` and `disciplined-research`; may also include `concise-writing`; no other skill | A private scratch note that states a factual software claim routes to research exactly like a public artifact | Same |
+| `DISC-12` | ``This is a personal visitor-hours conversation unrelated to software, a repository, or project work. Repeat the claim `The North Annex closes at 6:00 p.m.` and rely on it to tell my friend whether arriving at 5:30 p.m. leaves thirty minutes.`` | Must include `disciplined-research`; may also include `concise-writing`; no other skill | A response-only factual interaction outside development still routes to the universal research companion; the user-supplied premise is not verified support | Any final research description, request, or allowed-set change |
 
 ## Task 18A reclassification and contract freeze (2026-08-09)
 
-`disciplined-research` is **required** for `DISC-01` through `DISC-11`; none is optional or prohibited.
+`disciplined-research` is **required** for `DISC-01` through `DISC-12`; none is optional or prohibited.
 The reasoning is recorded per row above against the complete requested output, not a sentence-local keyword test.
-For `DISC-01`–`DISC-10`, the exact requests and evaluator wrapper remain unchanged; the target supplied context changes only the research description to `Use before stating any factual claim.`, and the allowed sets are the repaired table above.
+Except for the final `DISC-02` ambiguity repair recorded below, the
+`DISC-01`–`DISC-10` requests and evaluator wrapper remain unchanged;
+the target supplied context carries the current complete research and dispatch
+descriptions, and the allowed sets are the repaired table above.
 The combined exact withheld rubric is
 [frozen here](fixtures/skill-discovery/rubrics/task-18a-disc-01-10.md) at SHA-256
-`358df656cd7e48cb96c2ac24a41f331d50b1a315433a6cc1dc905c51069ad7cc`.
+`ee576e900573e9e03936dfbd91ef0651fa0a5906e8f7a16ee15a069293d7d964`.
 The immutable historical rubric remains unchanged because its own contract was not
 defective; Task 18A repairs only the active rubric. Pre-run deterministic rescoring
 of historical bytes gave `DISC-02` 0/5 at both efforts, `DISC-04` 5/5 high and
@@ -140,23 +146,29 @@ and `DISC-05` is 5/5 high and low. High is the preservation gate; low is recorde
 robustness only. The shared table-file hash does not invalidate the other eight
 accepted row contracts.
 
-All eleven scenarios have separately materialized complete control and target prompts.
-Within each scenario, the prompts differ only in the research-description line and
-have no separate skill-body bundle.
+The later `DISC-01` behavioral failure made internal logical review explicit in
+the shipped research description. Every current target prompt below was therefore
+refrozen with that exact clause. Earlier current-target results remain history;
+only the final zeroed union accepts these exact target prompt bytes.
+
+All twelve scenarios have separately materialized complete control and target prompts.
+Within each scenario, the prompts differ only in the research and dispatch
+description lines and have no separate skill-body bundle.
 
 | ID | Control prompt SHA-256 | Target prompt SHA-256 | Withheld rubric SHA-256 | Supplied-file manifest SHA-256 |
 |---|---|---|---|---|
-| `DISC-01` | `ef0250336996e79b4d0e49eb3fa0a34aacc85d245e78bb97279fa70da6dc5e5a` | `8d5ad76ba449793a297f8bb1169832eb23a9b99c40f6669b966a52339ebf54e9` | `358df656cd7e48cb96c2ac24a41f331d50b1a315433a6cc1dc905c51069ad7cc` | `e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855` |
-| `DISC-02` | `1e65dec2c779064162e495d8fc4ff76f1a92bb0bfeff427615a82a5d34aa8b88` | `aa9a7bee6103ef553c67849616ca0af0de56cfc9e5687b111fc66a1c875b855b` | `358df656cd7e48cb96c2ac24a41f331d50b1a315433a6cc1dc905c51069ad7cc` | `e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855` |
-| `DISC-03` | `d31bd9df45b6751f0bf4c9e6892f79d04a4ff5652e6382418ac5676f62455d46` | `8cd67f9bd0dd4513683850369975b14bae4728fed99625d50a38b939d5617e68` | `358df656cd7e48cb96c2ac24a41f331d50b1a315433a6cc1dc905c51069ad7cc` | `e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855` |
-| `DISC-04` | `3dd86c235bf61cd775d87bbb774194f72a2228b41f047966ea348a912e3e1a9a` | `80a8fd2e547070ba183feec9e440aaa841968786640daab05cf32221ba962f07` | `358df656cd7e48cb96c2ac24a41f331d50b1a315433a6cc1dc905c51069ad7cc` | `e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855` |
-| `DISC-05` | `0aee44238d72bf7eba0187228afc1ed9580b2eadb25a5867c1d82ed65c4f6b43` | `ad6e92083a81b496ce9e39688dfb072ed866d89e2c4ea61e84cdf6b94f2eb697` | `358df656cd7e48cb96c2ac24a41f331d50b1a315433a6cc1dc905c51069ad7cc` | `e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855` |
-| `DISC-06` | `93586a275c7db13a2d616e426970b3325d15fd1222a233a6e66dca09e817f8e0` | `eae197da96a60859e459589d40b19a0950b59588c77ce37709c1b70f5e258874` | `358df656cd7e48cb96c2ac24a41f331d50b1a315433a6cc1dc905c51069ad7cc` | `e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855` |
-| `DISC-07` | `02c511a46a6da89090079d03fc97f0365f6ab1c02289f405f5ce276e1b3d453a` | `a09d8fd396c11ffb7d04acc71d658abe165d9235986c09747ccd8c610477b871` | `358df656cd7e48cb96c2ac24a41f331d50b1a315433a6cc1dc905c51069ad7cc` | `e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855` |
-| `DISC-08` | `c59a4eda7251caf1dd476f529f96963e2688f6359cdcff3d565846273d44321c` | `f8ca438937ec220669cf6c9cf038d3f87a7b883005527c72c0ea7a90571bf1fc` | `358df656cd7e48cb96c2ac24a41f331d50b1a315433a6cc1dc905c51069ad7cc` | `e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855` |
-| `DISC-09` | `251ee53d13297d00cc5b4dc9b9fb1e9e55afcfa27ce6dcc00788f0a286d4840a` | `7aa4fb2a88cc4d4caf1921f2191fff1e74b88b8cd1500c569c245b5fd2654e93` | `358df656cd7e48cb96c2ac24a41f331d50b1a315433a6cc1dc905c51069ad7cc` | `e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855` |
-| `DISC-10` | `fc31b37281d557f662d811962bb2757bafb2b20850110668b1deff98ea6bbaed` | `3d0ab797a949cbb0a874ba2be4b1b5e2686a2d55dfc36c91452c2b999c46af6c` | `358df656cd7e48cb96c2ac24a41f331d50b1a315433a6cc1dc905c51069ad7cc` | `e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855` |
-| `DISC-11` | `d81f9df5eb63441ed4fb97a3a53fbd20903345703501020f6fe67bb52b9fa402` | `8f83f439a2fe57c5e8ebfb2a63cde9fd5fe1c30c0032c2371b76a35fba4506d8` | `200b06fcd313fc0f911a24f11c0a78be7696e8e5ad9c03c7c05070e81001c866` | `e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855` |
+| `DISC-01` | `ef0250336996e79b4d0e49eb3fa0a34aacc85d245e78bb97279fa70da6dc5e5a` | `2f175787e2a45f998f44fbe4f13d3801425e82cca26537f504bac820dba60012` | `ee576e900573e9e03936dfbd91ef0651fa0a5906e8f7a16ee15a069293d7d964` | `e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855` |
+| `DISC-02` | `3dcebec6b967ccd13e025673a4ce65f34eedbacc7bc8d74e18d4b32a363731ab` | `16506525e0f9ec43e2d5099aa411564492880a9ed8c5230c1407a20be7bc7682` | `ee576e900573e9e03936dfbd91ef0651fa0a5906e8f7a16ee15a069293d7d964` | `e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855` |
+| `DISC-03` | `d31bd9df45b6751f0bf4c9e6892f79d04a4ff5652e6382418ac5676f62455d46` | `dfa7e97c41e92c4583ae3efe9e79160eef984518f94e7bee09a75d59c786348c` | `ee576e900573e9e03936dfbd91ef0651fa0a5906e8f7a16ee15a069293d7d964` | `e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855` |
+| `DISC-04` | `3dd86c235bf61cd775d87bbb774194f72a2228b41f047966ea348a912e3e1a9a` | `aa9f3db4df0f178be34092c8b9b8d5968f73966f0aba9f0eb9d92c7502e56560` | `ee576e900573e9e03936dfbd91ef0651fa0a5906e8f7a16ee15a069293d7d964` | `e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855` |
+| `DISC-05` | `0aee44238d72bf7eba0187228afc1ed9580b2eadb25a5867c1d82ed65c4f6b43` | `d5c5f4be0b5c646b7a6f93785a013fc0d23b104e296eca6e1edcc4287f8dfdbe` | `ee576e900573e9e03936dfbd91ef0651fa0a5906e8f7a16ee15a069293d7d964` | `e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855` |
+| `DISC-06` | `93586a275c7db13a2d616e426970b3325d15fd1222a233a6e66dca09e817f8e0` | `9b8fcb5893499e0a6de6cba0b39c121195231c5f393f9aba74c9f0c6718047c3` | `ee576e900573e9e03936dfbd91ef0651fa0a5906e8f7a16ee15a069293d7d964` | `e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855` |
+| `DISC-07` | `02c511a46a6da89090079d03fc97f0365f6ab1c02289f405f5ce276e1b3d453a` | `35d770d897461b3a2d5040da74436d8ea3f96465575e17a60c31631b85d9a04e` | `ee576e900573e9e03936dfbd91ef0651fa0a5906e8f7a16ee15a069293d7d964` | `e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855` |
+| `DISC-08` | `c59a4eda7251caf1dd476f529f96963e2688f6359cdcff3d565846273d44321c` | `bcd2cf2514404899f202177273af766271652688b41dcef44db7e7462177aecc` | `ee576e900573e9e03936dfbd91ef0651fa0a5906e8f7a16ee15a069293d7d964` | `e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855` |
+| `DISC-09` | `251ee53d13297d00cc5b4dc9b9fb1e9e55afcfa27ce6dcc00788f0a286d4840a` | `3c31604d3575e4c9310f13c69f32bfadc27d91d1d0ed19995f8d7a17cfb02395` | `ee576e900573e9e03936dfbd91ef0651fa0a5906e8f7a16ee15a069293d7d964` | `e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855` |
+| `DISC-10` | `fc31b37281d557f662d811962bb2757bafb2b20850110668b1deff98ea6bbaed` | `a265e73f8c3043e06c35a6d67eb11cf3d04495f5e7a96826f67e0855caf40ec6` | `ee576e900573e9e03936dfbd91ef0651fa0a5906e8f7a16ee15a069293d7d964` | `e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855` |
+| `DISC-11` | `d81f9df5eb63441ed4fb97a3a53fbd20903345703501020f6fe67bb52b9fa402` | `f91713e4b75334486ceb6b625f6fdb432963659d8d8302042cb71e2c8a6d3f5f` | `200b06fcd313fc0f911a24f11c0a78be7696e8e5ad9c03c7c05070e81001c866` | `e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855` |
+| `DISC-12` | `11e06edee0e08a07bf25e5dd71ae87cdc47f62e70f57d95acf407f1f0d8e4cd5` | `5a3c869dcf3307459fb548effeb4d4d015188fbd3a358a9f2fe312a800484b1c` | `a17e7937d27723947239247831e08f6064cfb4b7cb35159dc38bc3014c18c066` | `e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855` |
 
 `DISC-02`, `DISC-04`, and `DISC-05` completed five fresh `gpt-5.6-sol` processes
 at high effort and five at low effort, maximum concurrency three, under the shared
@@ -175,6 +187,15 @@ Target REDs are `DISC-01`, `DISC-02`, `DISC-03`, `DISC-06`, `DISC-07`,
 `DISC-04`, `DISC-08`, `DISC-09`, and `DISC-11`; their Sol-high controls are RED
 and their later candidates must reach 5/5. `DISC-05` and `DISC-10` are
 preservation at 5/5 high. Low scores are robustness evidence, not separate gates.
+
+The final 45-scenario union initially produced one `DISC-02` current response that
+also selected `adversarial-review`. That is a routing action, not a rendering
+difference, and exposed ambiguity between reviewing and remediating already-reported
+findings. The request-only repair above restarted both controls and current at zero:
+high control 0/5, low control 0/5, current 5/5, all attempt 1. The earlier current
+4/5 row is superseded rather than averaged or discarded. Complete hashes and every
+accepted verdict are in [the Task 18A provenance manifest](task-18a-provenance.json).
+The accepted final discovery denominator is therefore **60/60**.
 
 The rubric first requires a JSON array whose names are in ascending alphabetical
 order, then compares its selected-name set with the allowed sets above.
