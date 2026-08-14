@@ -303,9 +303,17 @@ Every scenario uses:
 - an evaluator-withheld rubric with observable pass criteria;
 - five passes, with no averaging or discarded runs.
 
+Scorer labels are inputs to orchestration, not authoritative verdicts.
+Before counting a miss, confirm that it changes an observable action, outcome,
+ordering, ownership, blocked transition, or truthful bookkeeping.
+Do not fail correct behavior for omitted optional rationale, failure to repeat a
+supplied fact, or different wording, placement, formatting, or rendering.
+Exact wording can fail only when literal output is itself the skill's necessary
+owned behavior; first challenge whether that exactness is a valid promise and test.
+
 If wording changes after a failed run, restart the affected scenario at zero.
 Record the missed criterion and relevant rationalization for failures.
-A completed response that misses the rubric is a failure and cannot be discarded.
+A completed response with a genuine behavioral miss is a failure and cannot be discarded.
 An infrastructure error that produces no evaluable response is recorded separately and retried; it is not counted as a behavioral pass or failure.
 After three consecutive infrastructure errors for one scenario and configuration, pause the run and surface the blocker rather than retrying indefinitely.
 

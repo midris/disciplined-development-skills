@@ -5,64 +5,63 @@ description: Use with `superpowers:writing-plans` whenever the deliverable is a 
 
 # Lean plan writing
 
-**Role:** Refinement layer.
-**Composes with:** `superpowers:writing-plans` — always invoke both.
-**Owns:** the per-step content-density rule ("prose is the contract; code is the implementer's job"), the illustrative-snippet operational test, the test-table substitute for tricky logic.
-**Does not own:** upstream plan scaffolding (header, files-touched, step decomposition, no-placeholders, TDD ordering, commit cadence) — that stays with `superpowers:writing-plans`.
+**Role:** Refinement layer for software-development plans and specs.
+**Required composition:** Always invoke `superpowers:writing-plans`.
+**Owns:** the prose-density contract, the bounded illustrative-snippet exception, the test-table substitute for tricky logic, and qualitative merge boundaries.
+**Does not own:** upstream headers, files-touched inventories, step decomposition, no-placeholder rules, TDD ordering, or commit cadence.
+`writing-explicit-rationale` owns whether a plan or spec choice needs durable rationale.
 
-`superpowers:writing-plans` says "if a step changes code, show the code." This skill flips that one rule: **prose is the contract; the code is the implementer's job**.
-Plans and specs carry concise requirements + order-of-operations + status — not the implementation written out.
+## Prose is the contract
 
-## The rule
+`superpowers:writing-plans` says to show code when a step changes code.
+For software-development plans and specs, this skill overrides only that rule: **prose is the contract; code is the implementer's job**.
+Keep the upstream scaffold and rigor, but write concise requirements, order of operations, and status rather than the implementation.
 
 For every plan step:
 
-- Describe the change and required behavior in prose. List test behaviors; use tables of inputs and expected outputs for tricky cases.
-- Do not embed implementation code, test bodies, or copyable templates.
-- If prose leaves genuine ambiguity, include one illustrative snippet (≤5 lines); do not repeat its literal content elsewhere in the plan.
+- Describe the change, required behavior, and test behaviors in concrete prose.
+- Do not embed implementation code, test bodies, or copyable templates; the single bounded illustration below is the only exception.
+- Use the formats below when ordinary prose is not precise enough.
 
-## What goes in prose, not code
+| Content | Put in the plan or spec |
+|---|---|
+| Change | What changes and the behavior it must produce |
+| Tests | Behaviors that must pass, not test bodies |
+| Fixtures | Shape and meaningful values, not literal JSON |
+| Migration | Structural before/after state, not a code diff |
+| API | Field names, types, and semantics, not full JSON examples |
+| Commit | A concise message as text, not a shell command |
 
-- Per-step "What" — describe the change in prose.
-- Tests required — list behaviors that must pass ("rejects empty input"), not test bodies.
-- Fixtures — describe shape ("user row with non-null email, null deleted_at"), not literal JSON.
-- BEFORE/AFTER migrations — structural description, not code diffs.
-- API request/response — field names + types + semantics, not full JSON examples.
-- Commits — state only a concise message as text; do not include shell commands.
+## Tricky logic and exact shapes
 
-## When the implementation is genuinely tricky
+For gnarly logic such as a multi-arm regex, recursive CTE, or complex transform, replace embedded code with a denser test contract: an `(input → expected output)` table that pins every edge case.
+The table specifies the behavior; the implementer writes the implementation against it with running tests as feedback.
 
-The substitute for embedded code is a **denser test contract**, not vaguer prose.
-When the logic is gnarly (a multi-arm regex, a recursive CTE, a complex transform), give a table of `(input → expected output)` rows pinning every edge case.
-The implementer writes the implementation against the table with running tests as feedback.
-The table is the precise spec; the regex/CTE is one valid implementation of it.
+If prose cannot specify an exact requirement without genuine ambiguity, include exactly one illustrative snippet of at most five lines.
+Do not repeat that snippet's literal content anywhere else in the plan.
 
-## Per-artifact
+## Plans and specs
 
-- **Specs** (design docs — typically in a `specs/` directory): detailed requirements + design rationale + open questions. Heavier on the why.
-- **Plans** (implementation plans — typically in a `plans/` directory): order-of-operations + per-step scope + dependency chain + status checkboxes. Heavier on the order. Before calling a plan ready, name each task's unhandled inputs (absent, malformed, out-of-scale) and the invariants it silently relies on — then pin the behavior or mark it an accepted edge.
+- **Specs** carry detailed requirements, design rationale, and open questions; emphasize why.
+- **Plans** carry order of operations, per-step scope, dependency order, and status checkboxes; emphasize execution order.
+  Before calling a plan ready, name each task's silent invariants and, when it consumes inputs, its unhandled absent, malformed, and out-of-scale cases; then pin the behavior or mark it as an accepted edge.
 
-Both bound by prose-is-the-contract.
+Both use prose as the contract.
 
-## Declare merge boundaries
+## Merge boundaries
 
-Split a plan's work into a sequence of branches — each a single PR, small enough that one review pass covers it — rather than one monolithic PR.
+Declare a qualitative branch and PR sequence.
+Give each independently green and reviewable unit its own branch and PR in dependency order, small enough for one review pass.
+Keep a tightly coupled change in one atomic PR when no smaller boundary can remain green and internally consistent.
+Do not use commit counts or diff size as the boundary rule.
 
 ## Rationalizations
 
 | Excuse | Reality |
 |---|---|
-| "writing-plans says show the code" | This skill is the override layer. Compose with the upstream's scaffolding but ignore its "show code in every step" rule for plans and specs. |
-| "the implementer needs the code to follow the pattern" | The implementer writes the code with running tests as feedback. Patterns live in the codebase, not the plan. |
-| "this is a tricky migration / regex / heredoc — I need the exact code" | A ≤5-line snippet anchoring the shape is fine. For gnarly logic, use a test table instead of embedded code. |
-| "TBD is forbidden so I have to write the code" | The prose alternative is concrete requirements ("Tests required: A, B, C"), not TBD. A list of behaviors is rigorous. |
-| "I'm not writing it twice — the implementer just copies it" | They cannot — plan code has no execution feedback. It's a source of bugs that surface only at runtime. |
-| "leaving it as prose is hand-waving" | "TODO add tests" is hand-waving. "Tests required: rejects empty input, returns exit 2 on missing prefix" is not. |
-| "the user said make it extremely detailed" | Detail = requirements coverage + dependency clarity + explicit shortcuts with rationale. Detail ≠ embedded code. |
-| "this is greenfield, no patterns to reference" | The spec carries the design; the plan carries the order. Code-embedding does not become correct because the context is greenfield. |
-| "the implementer is new — I'll add a teaching snippet showing the concept" | Teaching snippets that show implementation shape ARE implementation — the implementer copy-pastes them. Explain the concept in prose; cite an existing codebase analogue or external doc. Do not embed the template they will copy. |
-
-## Pairing
-
-Always invoked with `superpowers:writing-plans`.
-Companion: use `writing-explicit-rationale` to determine what, if anything, needs to be written down for a plan or spec choice.
+| "`writing-plans` says show the code." | This skill overrides that rule only; retain the upstream scaffold and express implementation requirements in prose. |
+| "The implementer is new, or this is greenfield, so they need a code pattern." | Explain the concept and cite an existing analogue or external documentation; do not embed a template they can copy. |
+| "This regex, migration, or heredoc needs exact code." | Specify logic with a complete test table. Use the bounded snippet only when an exact artifact shape remains ambiguous. |
+| "Without code the plan is vague or contains TBDs." | Concrete behavior, test cases, edge dispositions, and dependencies are rigorous prose; placeholders are not. |
+| "The user requested an extremely detailed plan." | Detail means complete requirements, dependencies, edge behavior, and necessary rationale—not embedded implementation. |
+| "The implementer can just copy the plan code, so writing it twice is wasteful." | Plan code lacks execution feedback and turns assumptions into copyable bugs; implementation belongs with running tests. |

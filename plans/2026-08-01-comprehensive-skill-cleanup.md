@@ -24,7 +24,9 @@
 - Evaluator prompts never contain or point to the scoring rubric.
 - For subjective comparisons, a separate fresh scorer manually applies the evaluator-withheld rubric to outputs under opaque arm IDs but never receives the control/draft mapping.
 - Freeze each subjective scoring record before mapping those IDs back to control and draft.
-- Manually score every other completed response; in every scoring context, a missed criterion is a failure, not a discarded run.
+- Manually score every other completed response; scorer labels are advisory, and the orchestrator counts only misses that change observable action, outcome, ordering, ownership, blocked transition, or truthful bookkeeping.
+- Do not fail correct behavior for omitted optional rationale, failure to repeat a supplied fact, or different wording, placement, formatting, or rendering; exact wording can fail only when literal output is itself a necessary owned behavior, and the validity of that promise must still be challenged.
+- In every scoring context, a genuine behavioral miss is a failure, not a discarded run.
 - Record infrastructure failures separately and retry them without counting them as behavioral results.
 - After three consecutive infrastructure errors for one scenario and configuration, pause and surface the blocker.
 - Preservation scenarios require a 5/5 control at `4296647`; approved target scenarios require a watched control RED and 5/5 GREEN.
@@ -1801,13 +1803,81 @@ and working/staged diff checks passed.
 its intended domain with declared `superpowers:writing-plans`. `LP-04` is historical
 and does not rerun or drive a skill change.
 
-- [ ] Record the immediate readability-control word count and a section-level meaning inventory.
-- [ ] Draft the smallest coherent reorganization, show the diff, and wait for user approval.
-- [ ] Apply the approved draft and run the complete active suite 5/5 on Sol high.
-- [ ] Blindly compare subjective prose outputs with the immediate readability control where the rubric requires judgment.
-- [ ] Run cold editorial and skill-writing review; show proposed fixes, wait for user approval, apply them, and restart affected scenarios.
-- [ ] Show the final skill in place and wait for user approval.
-- [ ] After approval, run repository tests and commit as `docs(skills): clean up lean plan writing`.
+- [x] Record the immediate readability-control word count and a section-level meaning inventory.
+- [x] Draft the smallest coherent reorganization, show the diff, and wait for user approval.
+- [x] Apply the approved draft and run the complete active suite 5/5 on Sol high.
+- [x] Blindly compare subjective prose outputs with the immediate readability control where the rubric requires judgment.
+- [x] Run cold editorial and skill-writing review; show proposed fixes, wait for user approval, apply them, and restart affected scenarios.
+- [x] Show the final skill in place and wait for user approval.
+- [x] After approval, run repository tests and commit as `docs(skills): clean up lean plan writing`.
+
+**Task 19 execution note (2026-08-14):** Preflight confirmed the
+clean linked worktree on `docs/comprehensive-skill-cleanup`, with local HEAD,
+tracking ref, and remote branch all at immutable control
+`4cfdee2e7ade66f2937b88031130bd062ec9954e`. The immediate skill control is 813
+words / `76351124307a05429d4d594394bca215df92ff7d33679f6367811beb0d8488eb`.
+The fresh section and whole-skill audit found a behavior-preserving reorganization
+warranted. The owner approved the complete 689-word proposal, and the exact
+approved bytes were applied at
+`9011ec53995759ff9b99ac2ae880c9e6fea350b1f764c5a138c70fb191e2d835`.
+Historical `LP-04` remained excluded from evaluation and change decisions.
+
+The first frozen run completed 70/70 control/candidate generation slots on attempt
+1 in its authorized transport. A scorer initially labeled candidate `LP-08` 0/5
+only because its five otherwise-correct boundaries did not repeat the supplied
+small-change fact. That classification is superseded: all five selected one atomic
+branch/PR, kept the three coupled files together, rejected red or inconsistent
+splits, and added no compatibility or rollout work. The first scorer ledger therefore
+provisionally read 35/35 under the owner-confirmed behavior standard.
+
+Before correction, the scorer result prompted an owner-approved 698-word clarity
+variant at `c5ea438f…` and a 10/10 focused rerun. Its nominal `LP-08` 4/5 was the
+same processing error: one correct boundary omitted optional reviewability
+narration. The behavior is 10/10, and the proposed follow-on bullet rewrite is
+withdrawn. The owner selected the smaller, already-evaluated 689-word candidate;
+the exact in-place skill is restored at
+`9011ec53995759ff9b99ac2ae880c9e6fea350b1f764c5a138c70fb191e2d835`
+with then-provisional evidence 35/35 before blind inspection.
+
+The subsequent sealed 35-pair blind comparison reported five raw candidate losses.
+Behavior-first inspection overruled the `LP-01` exact-assertion preference but
+confirmed four action-level misses: executable syntax in `LP-02` R1, invented input
+behavior in `LP-03` R1/R5, and missing RED-before-implementation ordering in
+`LP-06` R4. The exact-hash active result is therefore 31/35, not 35/35; the earlier
+aggregate above is superseded, and Task 19 is paused before a repair loop.
+
+Fresh cold skill-writing and staged adversarial reviews both block this evidence
+state. They reject redundant edits for isolated `LP-02`/`LP-06` noncompliance. The
+adversarial review alone proposes conditioning the edge inventory on a task actually
+consuming inputs, which directly addresses both `LP-03` misses without changing the
+intended contract. That exact fix and its `LP-03`/`LP-05`/`LP-06` restart map await
+owner approval; no further skill change has been applied.
+
+The owner approved the exact input-conditional clarification. It is applied at 693
+words / `db1ade9e0ba7395bf662d041c866ce80965f729725d3829983adcdfd21946129`.
+Fresh final-hash `LP-03`, `LP-05`, and `LP-06` generations completed 15/15 on
+attempt 1. Two raw `LP-06` scorer misses and the affected blind comparison's sole
+raw candidate loss demand an unrequired “previous completed day”; behavior-first
+inspection confirms account-local-day identity and boundaries are correct, so the
+affected blind comparison has zero authoritative candidate losses across 15 pairs.
+A fresh exact-final-hash `LP-02` arm passed 5/5 on attempt 1 and its focused blind
+comparison found zero candidate losses across five pairs. Unchanged `LP-01`,
+`LP-07`, and `LP-08` retain their mapped 5/5 evidence, producing an authoritative
+active union of 35/35; `LP-04` remains historical and excluded.
+
+Final exact-hash skill-writing review passed SPEC/QUALITY and proposed no change.
+The first final adversarial process timed out before a verdict and is
+infrastructure-only; its fresh bounded replacement returned no findings and
+`DD-VERDICT: PASS`. The owner approved the complete 693-word in-place skill, a
+120-word (14.8%) reduction from the immediate readability control.
+Durable freeze, score, seal, output, superseded-arm, and transport dispositions are
+recorded in `skill-validation/lean-plan-writing.md`.
+Fresh repository verification passed: hook tests 373 passed / 3 skipped, installer
+tests 11 passed, research tests 4 passed, the skill-package validator passed, and
+the exact local-link command passed for five working and five staged Markdown
+documents. Routing/reference, exact skill hash/word/frontmatter, frozen-output,
+blind-seal, non-fixture JSON, documented malformed-fixture hash, and working/staged
+diff checks passed.
 
 ### Task 20: Clean `sweeping-stale-references`
 

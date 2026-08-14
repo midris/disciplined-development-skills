@@ -40,6 +40,205 @@ Scope-repair simplification removes only that row from active closure; the exist
 manifest, prompt, result, and history sections remain necessary to preserve the
 experiment transparently, so no replacement scenario or duplicate archive is added.
 
+## Task 19 immediate readability audit (2026-08-14)
+
+Commit `4cfdee2e7ade66f2937b88031130bd062ec9954e` is Task 19's immutable
+immediate readability control. Its `skills/lean-plan-writing/SKILL.md` is 813
+words with SHA-256
+`76351124307a05429d4d594394bca215df92ff7d33679f6367811beb0d8488eb`.
+The first owner-approved candidate is 689 words with SHA-256
+`9011ec53995759ff9b99ac2ae880c9e6fea350b1f764c5a138c70fb191e2d835`,
+a 124-word (15.3%) reduction. It was applied byte-for-byte from the approved
+artifact before model evaluation. After the scorer-processing correction recorded
+below, the owner selected these exact bytes as the smaller base for blind health
+assessment; the later input-conditional clarification supersedes it at final hash.
+
+| Section-level meaning | Necessity and smallest behavior-preserving treatment |
+|---|---|
+| Frontmatter routing | Keep byte-identical so direct plan/spec invocation and declared parent composition do not drift |
+| Role, composition, ownership, and override | Keep all contracts; consolidate repeated explanations of the software-development domain, `superpowers:writing-plans` override, and rationale ownership |
+| Per-step prose-density rules | Keep the behavior; replace scattered artifact-specific prose with one compact mapping table |
+| Tricky logic and exact artifact shapes | Keep both branches; separate the complete input/output test-table substitute from the single bounded illustrative snippet |
+| Plan/spec distinction and edge inventory | Keep the artifact distinction, execution-order contract, and absent/malformed/out-of-scale/silent-invariant handling |
+| Merge boundaries | Keep a qualitative two-sided rule: split independently green units, but retain tightly coupled changes in one atomic PR; preserve dependency order and reject numeric heuristics |
+| Rationalization defenses | Keep every distinct defense while merging overlapping new-implementer/greenfield and regex/migration/heredoc excuses |
+
+The whole-skill audit found a meaningful behavior-preserving cleanup warranted:
+order the contract as prose density, tricky cases, artifact distinction, merge
+boundaries, then rationalizations; state each rule once; retain every active
+promise. The software-development domain and two-sided qualitative merge boundary
+were already protected by the active catalog and are now explicit rather than
+implicit. No behavioral change is intended. `LP-04` remains historical and is
+excluded from the Task 19 rerun and from change decisions.
+
+### Task 19 generation, scorer outputs, and behavior-first adjudication
+
+The first immutable control/candidate freeze supplied the seven active scenarios,
+the exact Superpowers 6.2.0 dependency at `72190c88…`, and the immediate-control
+nine-skill bundle where required. The managed-sandbox transport root failed before
+model invocation and is infrastructure-only. Its identical authorized retry
+completed all 70 generation slots on attempt 1: five control and five candidate
+responses for each active scenario, with no `LP-04` slot.
+
+The initial pre-blind adjudication gave the candidate `LP-01`, `LP-02`, `LP-05`,
+`LP-06`, and `LP-07` 5/5 each. It initially treated `LP-03` R1's absent-input
+failure disposition as optional detail and recorded `LP-03` 5/5. That provisional
+classification is superseded below: whole-output blind inspection showed the
+invented prerequisite could block the required fixed artifact and also exposed a
+second invented-input miss in R5.
+
+The first scorer recorded `LP-08` as 0/5 because none of its five reasons repeated
+the fixture's small-change fact. That literal classification is superseded. Every
+response chose one branch and one atomic PR, covered all three files, rejected
+per-file splits because intermediate states would be red or inconsistent, and
+added no compatibility or staged-rollout work. Those are the observable actions
+owned by the merge-boundary promise. Repeating that the supplied change is small
+would add rationale wording but would not change the package, sequence, or work.
+Under the owner-confirmed behavior-first standard, `LP-08` passes 5/5. Candidate
+`LP-07` also passes 5/5; unlike the `LP-08` narration omission, using commit counts
+or diff sizes as the rule that selects a boundary would be a genuine behavioral
+miss. The first scorer's nominal 35/35 aggregate was provisional; the later blind
+comparison exposed action-level misses that supersede that aggregate below.
+
+Before that processing error was identified, the 0/5 scorer label was misclassified
+as a genuine RED. The owner approved an operational clarification:
+`Keep a tightly coupled change in one atomic PR only when the whole change fits one
+review pass and every smaller boundary would be red or internally inconsistent.`
+It produced a 698-word intermediate candidate at SHA-256
+`c5ea438f35bfeaaa9b57ec50143860f4254c36bb1aa514d98541830094c74e92`.
+This history is preserved, but the change was not required to repair behavior.
+
+The intermediate candidate's focused rerun completed all ten slots on attempt 1.
+A reused candidate-only scorer wrapper rejected its own valid model outputs because
+its schema still required a control arm; those attempts are infrastructure-only.
+The corrected scorer recorded `LP-07` 5/5 and `LP-08` 4/5 because R4 did not repeat
+the whole-change reviewability condition. R4 nevertheless chose one atomic PR,
+covered all three files, rejected non-green/inconsistent splits, and added no
+compatibility or rollout work. The orchestrator therefore records it as a wording-
+only scorer false negative and behaviorally passes the intermediate candidate 10/10.
+The later proposed two-bullet rewrite is withdrawn because it would optimize for
+fact repetition rather than change behavior.
+
+The owner selected the smaller, already-evaluated 689-word candidate. The exact
+in-place bytes are restored at
+`9011ec53995759ff9b99ac2ae880c9e6fea350b1f764c5a138c70fb191e2d835`.
+At that checkpoint no unevaluated skill wording remained, and historical `LP-04`
+was never run.
+
+### Blind comparison and cold health assessment
+
+The sealed 35-pair comparison's raw scorer ledger reported 5 candidate material
+losses, 12 control material losses, 18 neither, and 0 both. Behavior-first manual
+inspection overruled one candidate label: `LP-01` R3 states the exact diagnostic in
+its implementation contract, so its test-table word `contains` is not a material
+loss when the artifact is read as a whole. The four remaining candidate losses are
+observable behavior:
+
+| Scenario / repetition | Behavioral miss |
+|---|---|
+| `LP-02` R1 | Embeds executable `raise SystemExit(main())` syntax despite the owned prose-only contract |
+| `LP-03` R1 | Invents an absent-input failure that can block a fixed, input-free artifact |
+| `LP-03` R5 | Invents replacement-value inputs and acceptance semantics outside the task |
+| `LP-06` R4 | Implements later behavior groups without first running their new tests to establish RED |
+
+The adjudicated exact-hash result is therefore `LP-01` 5/5, `LP-02` 4/5,
+`LP-03` 3/5, `LP-05` 5/5, `LP-06` 4/5, `LP-07` 5/5, and `LP-08` 5/5: **31/35**.
+These failures change executable content, invented interfaces or blockers, and TDD
+ordering; none is a wording-only miss. At this prior-hash checkpoint, the Task 19
+gate remained blocked.
+
+Fresh cold skill-writing/editorial and staged adversarial reviews both block the
+candidate at this evidence state. Both find `LP-02` and `LP-06` to be isolated
+model noncompliance against rules the candidate already states clearly, so neither
+supports redundant pressure wording for them. The skill-writing review likewise
+finds no candidate prose change supported by the four-run pattern. The adversarial
+review identifies one coherent ambiguity behind both `LP-03` misses: the edge
+inventory unconditionally asks every task for absent, malformed, and out-of-scale
+inputs, even when a fixed artifact consumes none.
+
+Its smallest proposed owner-gated repair is:
+
+```diff
+-  Before calling a plan ready, name each task's unhandled absent, malformed, and out-of-scale inputs plus its silent invariants, then pin the behavior or mark it as an accepted edge.
++  Before calling a plan ready, name each task's silent invariants and, when it consumes inputs, its unhandled absent, malformed, and out-of-scale cases; then pin the behavior or mark it as an accepted edge.
+```
+
+At that checkpoint no skill fix had been applied. If approved, the
+scenario-to-promise map would restart
+`LP-03`, `LP-05`, and `LP-06` five times, followed by their affected blind pairs
+and scoped cold rereview. `LP-02` remains a separately observed isolated failure;
+the current evidence does not support changing the already-explicit prose-only rule
+solely to force that stochastic output.
+
+The owner approved that exact clarification. It was applied without any other skill
+change, producing a 693-word candidate at SHA-256
+`db1ade9e0ba7395bf662d041c866ce80965f729725d3829983adcdfd21946129`.
+The prior `9011ec53…` candidate and all of its `LP-03`, `LP-05`, and `LP-06`
+outputs are superseded for final-hash closure.
+
+### Final-hash reruns and Task 19 closure
+
+The approved affected restart at `/private/tmp/task19-edge-rerun-v1` froze the
+exact 693-word candidate, the unchanged prompts and rubrics, and external
+`superpowers:writing-plans` 6.2.0. Its freeze SHA-256 is
+`1192e3afc5b6140ac5b97040690b2908c561e8d3fb2bdfd6e5168584940d29ba`.
+All 15 `LP-03`, `LP-05`, and `LP-06` generation slots completed on attempt 1.
+Behavior-first inspection passes all 15. The raw scorer aggregate at
+`e5ae99ecce5cfee0e6e578e1ebee9587c8e85888ab5b385fe1ca11dc746eee86`
+recorded `LP-03` and `LP-05` 5/5 but `LP-06` 3/5 only because R2 and R4 did not
+choose a “previous completed day.” Neither the task nor rubric requires that
+choice; both outputs pin account-local-day identity, timezone ownership, and DST
+boundaries, so those labels are invalid wording/detail additions rather than
+behavioral failures.
+
+The affected blinded comparison sealed at
+`7176fd67ed2d827e1975a53678d549e0393500abdee08ae6b9e96a0fa865c59c`.
+Its raw ledger reports one candidate loss, five control losses, nine neither, and
+zero both across 15 pairs. The sole candidate label repeats the unsupported
+previous-day preference. Manual inspection therefore records zero authoritative
+candidate material losses across all 15 pairs; no control-side count is needed for
+candidate preservation closure.
+
+Because the final skill hash changed after the prior `LP-02` miss, a fresh
+exact-final-hash `LP-02` arm ran at `/private/tmp/task19-lp02-final-v1`. Its freeze
+SHA-256 is `f8a26345837a6a8e7c5942df85bb93e510e6e83ffe7b70bfce011ff51732ad1c`.
+All five slots completed on attempt 1 and pass the owned behavior: complete parser
+and CLI semantics, no implementation code, test bodies, heredoc content, or other
+copyable templates, correct TDD order, runnable verification, and one coherent
+review boundary. The scorer aggregate
+`91339562c243cadd9447ea23c3e6eb65073a1c00a955852e10e9be64728efdd3`
+agrees at 5/5. Its blind comparison sealed at
+`f7c74236e8462fc2676263305b8b20a86c4255608cf7eba6824c07545381b355`
+and reports zero candidate losses, one control loss, and four neither across five
+pairs.
+
+Under the scenario-to-promise map, unchanged `LP-01`, `LP-07`, and `LP-08` retain
+their behaviorally adjudicated 5/5 prior-hash evidence; `LP-02`, `LP-03`, `LP-05`,
+and `LP-06` use the exact-final-hash reruns. The authoritative active union is
+therefore **35/35**. `LP-04` remains historical and excluded.
+
+The fresh final skill-writing review at output SHA-256
+`a332ffb37afc6c9c705a34b4c92ca2c0afc5b917fdfa1092bb983c0cf8bb12a5`
+passes SPEC and QUALITY and supports no skill change. The first final staged
+adversarial process exceeded its 900-second transport limit before emitting a
+verdict and is infrastructure-only. A fresh bounded read-only rerun inspected the
+same Task 19 skill, diff, records, and frozen evidence without transport logs; its
+output SHA-256 is
+`585149ab3d19fcc75d59cb1b9a45c7fab8301419285d2387d179c3cc50dcdc5e`
+and it returned no findings with `DD-VERDICT: PASS`. No review-proposed skill fix
+remains. The owner approved the complete in-place 693-word skill at
+`db1ade9e0ba7395bf662d041c866ce80965f729725d3829983adcdfd21946129`
+before these closure records were updated. The final skill is 120 words (14.8%)
+below the 813-word immediate readability control.
+
+Fresh repository verification passed after final approval: hook tests 373 passed /
+3 skipped, installer tests 11 passed, research tests 4 passed, and the skill-package
+validator passed. The exact local-link command passed for five working and five
+staged Markdown documents. The routing/reference sweep, exact skill
+hash/word/frontmatter checks, final-run output and freeze hashes, blind seals and
+reveal mappings, documented malformed-fixture hash, remaining tracked JSON, and
+working/staged diff checks all passed.
+
 ## Active scenario catalog
 
 Common run metadata: original control commit
