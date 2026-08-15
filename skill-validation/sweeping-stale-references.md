@@ -71,7 +71,152 @@ The section-by-section simplification questions are:
 | Worked example | Yes; it introduces no promise beyond the procedure and artifact, so it needs no dedicated scenario | `SSR-01`–`SSR-03` |
 | Rationalizations | Yes; one reviewer/IDE pressure case and one small-change case cover the distinct excuses without one scenario per sentence | `SSR-02`, `SSR-05` |
 | Pairing with explicit rationale | No separate composition claim is needed; stale rationale text is an ordinary mutable reference owned by this skill | `SSR-01` |
-| Whole skill | No simpler active suite below shared discovery plus four owned scenarios preserves simple use, reviewer pressure, scale, the negative branch, and stale-rationale sweeping as independent outcomes | `DISC-08`, `SSR-01`–`SSR-03`, `SSR-05` |
+| Whole skill | No simpler active suite below shared discovery plus six owned scenarios preserves simple use, reviewer pressure, scale, the negative branch, atomic inventory, and rationale preservation as independent outcomes | `DISC-08`, `SSR-01`–`SSR-03`, `SSR-05`–`SSR-07` |
+
+## Task 20 immediate readability audit (2026-08-14)
+
+Commit `4fd5ac55a56bc196d52d91d069240d71f7cc90f3` is Task 20's immutable
+immediate readability control. Its `skills/sweeping-stale-references/SKILL.md`
+is byte-identical to the Task 18A control: 1,527 words with SHA-256
+`d92afd5dc74681d3037b1d5ab2543276698d9cd7b7c0fafc858cfe6b709b5609`.
+
+Task 18A added `SSR-06` and `SSR-07`, so the current complete owned suite is six
+scenarios: `SSR-01`–`SSR-03` and `SSR-05`–`SSR-07`.
+The Task 20 plan's older four-scenario count is stale; `DISC-08` remains separately
+owned shared routing coverage, and historical `SSR-04` remains excluded.
+
+| Section-level meaning | Necessity and smallest behavior-preserving treatment |
+|---|---|
+| Frontmatter routing | Keep byte-identical so the development-domain rename, schema, spec, documentation, cascading-change, and reviewer-one-hit triggers do not drift |
+| Role and ownership | Keep search/triage/reconcile, commit evidence, required negative form, one-hit pressure, initial-grounding ownership, and rationale ownership; state each once |
+| Overview and quick reference | Keep the before-edit search, one-commit reconciliation, reviewer-sample warning, positive artifact, and negative branch; fold them into the contract, workflow, and artifact instead of restating the procedure |
+| Search | Keep old literals, synonyms, paired intended-new symbol and prose searches, before/after timing, all required repository surfaces, collision/partial-migration context, and semantic specificity |
+| Triage and scope | Keep the three exact outcomes, mutable-tree scope, vendor/archive treatment, and immutable-history exclusion; combine the separate scope table with triage |
+| Reconcile and rationale preservation | Keep one-commit updates, every-match accounting, path-and-outcome grouping, locations/counts/totals, explicit old → new encodings, and preservation of the source's actual cause or constraint plus accepted cost |
+| Commit-body artifact | Keep positive and mandatory `n/a` shapes, placement before truthful verification, grouping before the normal size preference, broad-sweep exception, and read-only bookkeeping boundary; replace the 13-match worked example with the minimal output shapes because it adds no distinct behavior |
+| Rationalization defenses | Keep every distinct pressure defense while merging the overlapping IDE/tests/file-scope and test/doc/typo rows |
+
+The whole-skill audit finds a meaningful behavior-preserving cleanup warranted.
+The current skill spreads the same procedure across the overview, quick reference,
+procedure, scope table, output rules, a long worked example, and rationalizations.
+A natural contract → Search → Triage → Reconcile → artifact → pressure-defense
+order can retain every active promise while removing that duplication.
+
+The initial scratch proposal is 918 words at SHA-256
+`447ee1b00bf0696613139637718cbc42f7522659749a1245814e4468c4b63d51`,
+a 609-word (39.9%) reduction from the control.
+It was not applied or sent to an evaluator before owner approval. The owner then
+approved it byte-for-byte, after which it became the first evaluated Task 20
+candidate and was later superseded by approved review clarifications.
+
+## Task 20 evaluation and review evidence (2026-08-14)
+
+The approved 918-word candidate ran all six active owned scenarios five times on
+fresh `gpt-5.6-sol` high-effort, read-only/no-agents processes with maximum
+concurrency three. All 30 candidate slots and 30 freshly materialized immediate-
+control slots completed on attempt 1. The candidate passed **30/30** under manual
+behavior-first adjudication. Its frozen bundle SHA-256 was
+`0e943b84965285a16f978839d5fd854ec3efddff04ce4a5fdd3d323464f4c20f`;
+candidate and control output aggregates were
+`b083979b567b079df400949457aad652063c36224cf9c3e219f07cf2015c8793`
+and `96390867ce76c741341dd08485ebc2407eea33695d7347eca6dcd9f9430c7973`.
+
+The first 30-pair blind comparison produced five raw candidate-loss labels and five
+raw control-loss labels. Manual unblinding found **zero candidate material losses**:
+three labels demanded a particular `Verification:` rendering, while two demanded
+redundant narration of the already-correct 126-match grouping pressure. Neither
+changed action, outcome, timing, ordering, ownership, blocked transitions, or
+truthful bookkeeping. The sealed-score, revealed-key, and decoded-summary SHA-256
+values were `d26017ec8403f7a03d2d26c903cf356fd1ac47f554f0071d2899ab0e28035840`,
+`e1a1bd93ae496ea4a2b56e66f940f6db5381341348d70e398c1190509c37808a`,
+and `fa72f80d16d4a486854e9eeb8f95b48e0fa19fa0b981ab0991633ef926550dc2`.
+
+A fresh cold skill-writing review found two real semantic ambiguities outside those
+scenario results. With separate owner approval, the candidate clarified the
+negative-form boundary and read-only status claims. The resulting 927-word candidate
+had SHA-256 `611145f9f79a98486e8fedb73eed9ba526629e2893e80c54a4461c44cd793090`.
+The five conservatively affected scenarios (`SSR-01`–`SSR-03`, `SSR-05`, and
+`SSR-06`) restarted and passed **25/25** on attempt 1; unaffected `SSR-07` retained
+its 5/5 evidence, closing the active suite at **30/30**. The affected-run freeze,
+candidate verification, and control verification SHA-256 values were
+`79334152330d87444a9418052f0314c7649fd91e8162025d2693c141f7db8242`,
+`06c9146885f0c6ba9043ab3360fbfae2711753dfdfe8119fbf0e3b9523a532e3`,
+and `4b52f0c902f25a5ea65ef6708e17a994ec5d31fb020a1923899a01a564708941`.
+
+The affected 25-pair blind comparison returned two raw candidate-loss labels and
+two raw control-loss labels. Manual behavior-first adjudication found **zero
+candidate material losses**: one candidate label enforced `Verification:` placement,
+and the other prescribed an unsupplied prose replacement even though the required
+comment update was correct. The sealed-score, revealed-key, and decoded-summary
+SHA-256 values were `cfee8921583120ca07f3bea6b19c24aeb1d2539e6619165c69cce4a346ac836b`,
+`acdba8e421bf1658f147ef36d09aba2ddee31815a708a6ad74964ebc8936f154`,
+and `76bd63de9541cdfd8de13e3e250dab7ee889887bab3690b8c57370157bdd5ebc`.
+
+Cold rereview found that “no sibling reference” could still be read as excluding a
+sibling false-positive search match. The owner approved the simpler sentence, “If
+a complete search finds no other mutable-tree matches, use the required negative
+form.” A focused false-positive-sibling probe passed **5/5** under both wordings.
+Its source freeze, run freeze, control verification, and candidate verification
+SHA-256 values were
+`d08f30057917c6bfd47779aea44f02726c411669bacb0095656a157fe9ee9340`,
+`8187dcac2b740aaf3afe1620e24e4cb44ca79655e23c97bb0a22a7a18e4f7d47`,
+`5af764d7931e9c84f1acaf37954e5db294b190e9cbcf53b301850592e508819b`,
+and `6ea75ce0bf3bc95ac67fd905b583f802f6e3e53e4c32bcabc57b88f43a7dd54c`.
+
+The first staged adversarial review then found that “no other mutable-tree matches”
+could exclude a legitimate negative-form case containing multiple matches within the
+changed file. Before accepting another rewrite, the owner requested a direct test of
+the initial cleaned sentence, “For a complete search whose only changed reference is
+in one file, use the required negative form.” That exact sentence produced a genuine
+**0/5 RED**: every response emitted `References swept: n/a` despite one sibling
+intentionally stale match and one sibling false positive. This was an observable
+artifact/accounting failure, not a wording preference. Its source freeze, run freeze,
+and candidate verification SHA-256 values were
+`b6768a0331ae224582be03c6a9eb5d44e40a276e8b48e54e490f503c4f724f88`,
+`738fe107cd8758e5f9558871a05fc361949e119cbb093b3dec22e7f5b8ee468f`,
+and `68dcb17189d1e99e58c6d953d687cc3d8ed0b0c88203d8be359ca1cc7dc531a7`.
+The failed staged-review output SHA-256 was
+`08135ad81d8dc1dc470765cbe57ec1cb2092a476fab74f31bbaab94dc54adb02`;
+its finding is superseded by the approved repair below, not erased.
+
+The owner approved the precise replacement, “If all mutable-tree matches are in the
+changed file, use the required negative form.” A two-sided focused GREEN passed
+**10/10** on attempt 1: five responses used positive accounting when sibling
+intentionally stale and false-positive matches existed, and five used `n/a` when
+three matches were all confined to the changed file. This focused repair evidence
+does not join the active catalog. Its source freeze, run freeze, and candidate
+verification SHA-256 values were
+`6cba566da3f8b9bbcf8468aa02d5a49a50e276de731f071917c072a37af78511`,
+`dfc1b3ee3dc250bcf98e50b8df9414cb017953bbb17b836129c24b5fa69a1fe7`,
+and `f9087b7da35a2055fa93023bbdc6a9b9bdde39fbe82ebc521c2a20ae78fbcd93`.
+
+Because the final wording governs `SSR-05`, the active scenario restarted at the
+exact repaired hash and passed **5/5** on attempt 1. The rerun freeze and candidate
+verification SHA-256 values were
+`e1809b7b010b85c4df3082c8382d1944c89099759ff5734c58976ddedbd15d7e`
+and `250b8073447d84c5963bd64bec187a50cba00b7c3208c6a2f1b2603c60ce2d5c`.
+Its fresh five-pair blind comparison found zero material losses for either arm;
+sealed-score, revealed-key, and decoded-summary SHA-256 values were
+`4f5ad34933ad19bd595a27189f7551850383aab58c77ceb378e0e80a2d0327d1`,
+`4def75a3ea0a4c52cf0aa551f1a34aa6aea7651300e2f34d6ca558757fedeac7`,
+and `e24875fae98560a1559c1f8ccc2fcceb4cc5190c97f6fef5f6b7e6c94994957a`.
+
+The current in-place skill is 923 words with SHA-256
+`15992341f7ab2fb1e4d8a775092199d7d4e6a9de1167895dbe5a805aeafbd38c`,
+a 604-word (39.6%) reduction from the immediate control. A fresh exact-hash cold
+skill-writing/editorial review returned `SPEC VERDICT: PASS`, `QUALITY VERDICT:
+PASS`, and no findings; its output SHA-256 is
+`69a74e425acb58a6e48c500a42429de035dcd76193b5a12093effc20dae98bc2`.
+The fresh exact-stage adversarial review returned no findings, `DD-PATTERN: NONE`,
+and `DD-VERDICT: PASS`; its output SHA-256 is
+`663db759af17a36a131ed2a48ae79b4405330e3d11b328e08f281b93b790faff`.
+The owner approved the complete 923-word in-place skill at the final approval gate.
+Fresh repository verification then passed: hook tests 373 passed / 3 skipped,
+installer tests 11 passed, research tests 4 passed, and the skill-package validator
+passed. The exact local-link command, routing/reference and changed-scope checks,
+exact skill/control hash-word-frontmatter checks, frozen-output and blind-seal checks,
+documented malformed-fixture hash and remaining JSON parsing, plus working/staged
+diff checks all passed.
 
 ## Active scenario catalog
 

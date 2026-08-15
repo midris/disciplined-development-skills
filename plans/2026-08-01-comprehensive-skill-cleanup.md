@@ -1885,17 +1885,37 @@ diff checks passed.
 
 **Review focus:** make search/triage/reconcile obvious within the authored development domain; keep the software audit artifact explicit; integrate quick reference, scope, example, and rationalizations without restatement.
 
-**Validation scope:** development companion; use the four active owned scenarios in
+**Validation scope:** development companion; use the six active owned scenarios in
 its intended domain. `SSR-04` is historical and does not rerun or drive a skill
 change.
 
-- [ ] Record the immediate readability-control word count and a section-level meaning inventory.
-- [ ] Draft the smallest coherent reorganization, show the diff, and wait for user approval.
-- [ ] Apply the approved draft and run the complete active suite 5/5 on Sol high.
-- [ ] Blindly compare subjective prose outputs with the immediate readability control where the rubric requires judgment.
-- [ ] Run cold editorial and skill-writing review; show proposed fixes, wait for user approval, apply them, and restart affected scenarios.
-- [ ] Show the final skill in place and wait for user approval.
-- [ ] After approval, run repository tests and commit as `docs(skills): clean up stale reference sweeping`.
+- [x] Record the immediate readability-control word count and a section-level meaning inventory.
+- [x] Draft the smallest coherent reorganization, show the diff, and wait for user approval.
+- [x] Apply the approved draft and run the complete active suite 5/5 on Sol high.
+- [x] Blindly compare subjective prose outputs with the immediate readability control where the rubric requires judgment.
+- [x] Run cold editorial and skill-writing review; show proposed fixes, wait for user approval, apply them, and restart affected scenarios.
+- [x] Show the final skill in place and wait for user approval.
+- [x] After approval, run repository tests and commit as `docs(skills): clean up stale reference sweeping`.
+
+**Task 20 pre-approval evidence (2026-08-14):** The immutable immediate control is
+1,527 words at SHA-256 `d92afd5d…`. The current 923-word candidate is
+`15992341…`, a 604-word (39.6%) reduction. The initial approved candidate passed
+the six-scenario active suite 30/30. Two owner-approved cold-review clarifications
+restarted five affected scenarios at 25/25 while unaffected `SSR-07` retained 5/5.
+The owner then requested a direct test of the initial cleaned negative-form sentence;
+it produced a genuine 0/5 artifact/accounting RED when sibling classified matches
+existed. The approved repair passed a two-sided 10/10 focused GREEN covering both
+sibling classified matches and multiple matches confined to the changed file, then
+restarted active `SSR-05` at 5/5. Across the
+30-pair initial comparison, 25-pair affected comparison, and five-pair final
+`SSR-05` comparison, manual behavior-first adjudication found zero candidate
+material losses. The final exact-hash cold skill-writing/editorial review returned
+both verdicts PASS with no findings. The fresh exact-stage adversarial review returned
+no findings and `DD-VERDICT: PASS`; the owner approved the complete 923-word
+in-place skill. Fresh repository verification passed: hook tests 373 passed / 3
+skipped, installer tests 11 passed, research tests 4 passed, the skill-package
+validator passed, and local-link, routing/reference, exact hash/word/frontmatter,
+frozen-output, blind-seal, JSON-integrity, changed-scope, and both diff checks passed.
 
 ### Task 21: Clean `writing-explicit-rationale`
 
