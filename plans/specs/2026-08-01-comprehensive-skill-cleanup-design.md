@@ -224,12 +224,38 @@ is transport-defective historical evidence only.
 Broad-domain isolation is coverage only for the three companions whose contracts
 include that work; it does not expand the two development companions beyond their
 authored domain or remove any dependency.
-`CW-08`, `DR-02`, and `WER-03` supply that isolated-application evidence.
+`CW-08`, `DR-02`, and `WER-08` supply that isolated-application evidence.
+Historical `WER-03` and `WER-DEV` remain generic artifact-rewriting diagnostics and
+do not determine `writing-explicit-rationale` acceptance.
 `LP-04` and `SSR-04` remain preserved as historical exploratory cross-domain evidence,
 but they are retired from active coverage and cannot drive a skill change.
 The current `writing-explicit-rationale` policy scope is approved current behavior.
 `4296647` remains the original-behavior control unless an independently approved
 behavior slice establishes a later immediate readability control.
+For Task 21, the approved readability candidate and two later repair wordings were
+rejected after behavior-first evaluation. The owner selected exact restoration of
+the 372-word immediate control at `c54c4016`; exact-byte fresh control evidence is
+the current comparison arm, while the failed candidate arms remain historical
+evidence rather than grounds for a third wording experiment. Final restoration
+review corrected that control arm from 30/30 to 29/30 because one `WER-07` response
+omits the supplied no-downstream-consequence fact. The current active gate is
+therefore blocked pending an approved disposition or separate repair slice.
+A later no-edit WER-07 diagnostic scored 8/10 on the owned ledger and 10/10 on its
+composition ledger. Five independent causal meta-reviews unanimously found the
+necessary current skill rule clear and attributed the misses to semantic task
+fidelity rather than a documentation or organization gap. This evidence does not
+alter the strict 5/5 rule or authorize a third skill wording trial; any distinction
+between run-level ownership and skill-document causality is a validation-protocol
+decision requiring explicit owner disposition.
+The owner approved a no-change disposition for Task 21: reject the readability
+attempt, retain the exact control, keep the WER-07 misses as genuine model-execution
+evidence, and do not treat them as passes or as grounds for another wording trial.
+Because no skill change is accepted, Task 21 may proceed to final in-place approval;
+the disposition does not waive strict 5/5 or remove WER-07 from the final
+repository-wide suite.
+The owner subsequently approved the complete exact in-place 372-word skill at
+`568b2a61…`. That approval closes the Task 21 skill-review gate without accepting a
+readability change or changing the retained WER-07 verdicts.
 
 ## Validation environment
 

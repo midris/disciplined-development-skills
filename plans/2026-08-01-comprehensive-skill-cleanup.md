@@ -1919,7 +1919,15 @@ frozen-output, blind-seal, JSON-integrity, changed-scope, and both diff checks p
 
 ### Task 21: Clean `writing-explicit-rationale`
 
-**Files:** `skills/writing-explicit-rationale/SKILL.md`, `skill-validation/writing-explicit-rationale.md`
+**Files:** `skills/writing-explicit-rationale/SKILL.md`;
+`skill-validation/writing-explicit-rationale.md`;
+`plans/specs/2026-08-01-comprehensive-skill-cleanup-design.md`;
+`skill-validation/fixtures/writing-explicit-rationale/prompts/wer-08.md`;
+`skill-validation/fixtures/writing-explicit-rationale/prompts/wer-dev.md`;
+`skill-validation/fixtures/writing-explicit-rationale/rubrics/wer-03.md`;
+`skill-validation/fixtures/writing-explicit-rationale/rubrics/wer-07.md`;
+`skill-validation/fixtures/writing-explicit-rationale/rubrics/wer-08.md`;
+`skill-validation/fixtures/writing-explicit-rationale/rubrics/wer-dev.md`.
 
 **Review focus:** state the trigger once; order trigger, non-trigger cases, rationale shape, artifact placement, and failure resistance; consolidate overlapping rationalizations/red flags while preserving compliance.
 
@@ -1927,13 +1935,111 @@ frozen-output, blind-seal, JSON-integrity, changed-scope, and both diff checks p
 behavior. Use its complete cold Sol-high suite, including isolated non-software
 application, and do not introduce a policy-scope edit.
 
-- [ ] Record the immediate readability-control word count and a section-level meaning inventory.
-- [ ] Draft the smallest coherent reorganization, show the diff, and wait for user approval.
-- [ ] Apply the approved draft and run the complete active suite 5/5 on Sol high.
-- [ ] Blindly compare subjective prose outputs with the immediate readability control where the rubric requires judgment.
-- [ ] Run cold editorial and skill-writing review; show proposed fixes, wait for user approval, apply them, and restart affected scenarios.
-- [ ] Show the final skill in place and wait for user approval.
-- [ ] After approval, run repository tests and commit as `docs(skills): clean up explicit rationale`.
+- [x] Record the immediate readability-control word count and a section-level meaning inventory.
+- [x] Draft the smallest coherent reorganization, show the diff, and wait for user approval.
+- [x] Evaluate the approved draft against the complete active Sol-high suite; reject it after its 29/30 result and restore the exact immediate control, whose corrected result is also 29/30.
+- [x] Blindly compare subjective prose outputs with the immediate readability control where the rubric requires judgment.
+- [x] Run cold editorial and skill-writing review; repair review-found validation bookkeeping without changing the skill, and obtain a clean final exact-stage review.
+- [x] Record the owner-approved no-change disposition: reject the cleanup attempt, retain the exact control, preserve the `WER-07` misses as model-execution evidence, and do not treat them as either a pass or grounds for another wording trial.
+- [x] Show the final skill in place and wait for user approval.
+- [x] After approval, run repository tests and commit as `docs(validation): repair explicit rationale tests`.
+
+**Task 21 repair evidence and closure (2026-08-15):** The immutable immediate
+control is 372 words at SHA-256 `568b2a61…`. The initially approved 357-word
+candidate is `1bc78cb7…`. Its first run completed without infrastructure errors,
+but the later exact-stage adversarial review correctly invalidated the reported
+30/30 result: `WER-03` was 2/5 because three outputs shifted monthly-review scope,
+invented review ownership, or narrowed the contingency boundary. The owner approved
+a separate behavioral RED/GREEN slice, but both approved wording trials failed.
+A fresh committed-control/restored-candidate comparison then showed the analogous
+software probe failing primarily on generic amendment-rewriting fidelity in both
+arms. The owner approved a validation-only behavior-first contract repair: retire
+`WER-03` and `WER-DEV` to historical diagnostics, replace active broad-domain
+coverage with isolated `WER-08`, and score each active test by observable owned
+behavior rather than exact wording or generic rendering. The revised contracts
+passed fresh Sol-high design review with no findings. Fresh execution completed all
+60 high control/candidate and 30 low-control slots on attempt 1 with zero
+infrastructure errors. Initial manual behavior-first adjudication scored high
+control 30/30, restored candidate 29/30, and low control 29/30; new `WER-08` passed
+15/15 across those arms. Candidate `WER-02` r4 genuinely replaces the supplied
+third-interactive-caller revisit boundary with a different future guard-placement
+action, so the active gate remains blocked. The low `WER-07` miss invents an
+unsupported quota alternative and is recorded as robustness evidence. No third
+skill wording edit is authorized. At that point, a disposition, any owner-approved
+next slice, cold skill review, final owner approval, repository verification,
+closure bookkeeping, commit, and push remained pending.
+
+The owner then approved an attribution-only WER-02 expansion with exact unchanged
+prompt, rubric, control, and candidate bytes. All 20 new Sol-high slots completed on
+attempt 1 with zero infrastructure errors. The sealed ten-pair result is control
+10/10 and candidate 9/10; combined with the prior frozen cells, WER-02 is control
+15/15 and candidate 13/15. Both candidate failures change or omit the supplied
+third-interactive-caller extraction boundary, while no control output does. This
+supports candidate-linked unreliability on an owned behavior but does not identify
+causal wording or authorize another skill trial. The original 29/30 candidate gate
+remains authoritative and blocked.
+
+The owner accepted the recommendation to reject that candidate and restore the
+exact 372-word immediate control. The tracked skill now has SHA-256 `568b2a61…`
+and zero diff from its `c54c4016…` control object. Because those are the exact bytes
+used by the fresh behavior-first control arm, its frozen results apply directly; a
+duplicate generative arm would not establish a different contract. Final
+restoration review then corrected one earlier manual override: high-control
+`WER-07` r2 omits the supplied no-downstream-consequence fact, so high control is
+29/30, not 30/30. The correction is `8f4f48c0…`, and the blocking review is
+`ca99e251…`. The cleanup candidate and both repair trials remain rejected historical
+evidence, while combined WER-02 remains control 15/15 versus candidate 13/15.
+The restored current skill therefore also misses the active gate; no further skill
+wording change is authorized. A user-approved disposition or separate repair slice
+must precede final in-place approval, repository verification, closure bookkeeping,
+commit, or push.
+
+The concurrent cold skill-writing/editorial review passed `SPEC` and `QUALITY` with
+no finding at `01c8d43e…`. Exact-stage review `ca99e251…` found the high-control
+adjudication error, stale restored-heading references, and an incomplete Task 21
+file inventory; all are now corrected in the records. Follow-up review `b2ae1066…`
+verified those repairs but found archival prose inside three supposedly exact
+historical evaluator fixtures. Those fixtures now match their evaluated bytes at
+WER-03 rubric `c2c586c8…`, WER-DEV prompt `93f5fb44…`, and WER-DEV rubric
+`5dc06e1a…`; their historical disposition remains outside evaluator inputs.
+The final exact-stage follow-up returned no findings and `DD-VERDICT: PASS` at
+`585149ab…`. Review is clean, but the corrected 29/30 current behavioral gate still
+blocks final in-place approval and closure.
+
+The owner then approved a no-edit WER-07 causal diagnostic. Ten fresh exact-current
+Sol-high repetitions completed on attempt 1 with zero infrastructure errors at
+freeze `456736a6…` and verification file `33ec55f7…`. The WER ledger is 8/10:
+r5 omits the approved-only `persist()` boundary and r9 attaches the no-consequence
+fact only to Library B; the composition ledger is 10/10. Five independent causal
+meta-reviewers unanimously returned `CLEAR_RULE_TASK_FIDELITY` with no skill gap or
+composition failure; meta verification is `4374f7c5…`. The current skill already
+states the necessary consequences/limits/lack-of-either rule, so this evidence does
+not justify a third wording trial. It raises a validation-architecture disposition:
+whether strict 5/5 blocks an unchanged skill even when failure causality is generic
+semantic transformation under an already-clear rule. No protocol change is yet
+authorized, so Task 21 remains blocked before final approval or closure.
+
+The owner approved the no-change disposition. Task 21's readability attempt is
+rejected rather than accepted at 29/30: the exact 372-word control remains in place,
+and no third skill wording trial is authorized. The `WER-07` misses remain genuine
+owned model-execution evidence, are not relabeled as passes, and do not justify an
+edit to an already-clear rule. This disposition permits Task 21 to proceed to the
+separate final in-place approval gate because it ships no cleanup candidate; it does
+not waive the active scenario's strict 5/5 requirement or remove `WER-07` from the
+final repository-wide suite. Final owner approval, repository verification, closure
+bookkeeping, commit, and push remain pending.
+
+The owner then approved the complete in-place 372-word skill at exact SHA-256
+`568b2a61…`. This final approval accepts the restored skill, not the rejected
+readability candidate and not a relabeling of the retained WER-07 failures.
+Fresh repository verification passed on the final tree: hook tests 373 passed / 3
+skipped, installer tests 11 passed, research tests 4 passed, and the exact local-link
+command passed for 10 working and 10 staged Markdown documents. Exact skill/control
+identity, historical fixture hashes, causal and correction JSON consistency, the
+routing/reference sweep, and both working and staged diff checks passed. Task 21
+closes as a rejected no-change readability attempt in
+`docs(validation): repair explicit rationale tests`; the final repository-wide suite
+retains strict WER-07 coverage. No PR is opened.
 
 ### Task 22: Clean `adversarial-review`
 
