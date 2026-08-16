@@ -1,5 +1,10 @@
 # Comprehensive skill cleanup — design
 
+## Task 22 approved validation method (2026-08-15; activated 2026-08-16)
+
+Task 22 separates semantic review attribution from deterministic enforcement of the authored output envelope over the same bytes.
+The detailed method, source-set counts, execution status, invalidation conditions, and historical boundary live in [the owning adversarial-review record](../../skill-validation/adversarial-review.md#approved-task-22-validation-method-2026-08-15-activated-2026-08-16); no independent result is asserted here.
+
 ## Status
 
 Design decisions approved; execution controls amended through follow-up review on 2026-08-04.

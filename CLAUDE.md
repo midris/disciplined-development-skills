@@ -17,12 +17,13 @@ Single source of truth for agent guidance in this repository. If `AGENTS.md` / `
 
 ## Project Snapshot
 
-A bundle of harness-portable **skills** (the doctrine) + a Claude Code **hook stack** that keep an agent on-track during long, semi-autonomous development. Skills are the doctrine (model-facing), portable wherever the `superpowers` substrate runs; hooks are Claude Code-specific dumb triggers that surface the discipline at concrete boundaries (tool calls, commits, PRs, session resumes). Consumers symlink the skill dirs into `.claude/skills/` via `install-skills.sh` and merge `examples/settings.hooks.json` into their `.claude/settings.json`. Stack: Python 3 (hooks), bash (installer), pytest (tests); skills are pure markdown. No DB, no env file, no server.
+A bundle of harness-portable **skills** (the doctrine) + a Claude Code **hook stack** that keep an agent on-track during long, semi-autonomous development. Skills are the doctrine (model-facing), portable wherever the `superpowers` substrate runs; hooks are Claude Code-specific dumb triggers that surface the discipline at concrete boundaries (tool calls, commits, PRs, session resumes). Consumers symlink the skill dirs into `.claude/skills/` via `install-skills.sh` and merge `examples/settings.hooks.json` into their `.claude/settings.json`. Stack: Python 3 (hooks and bundled skill tooling), bash (installer), pytest (tests); skill guidance is Markdown. No DB, no env file, no server.
 
 ## Repository Structure
 
 ```text
 skills/<skill>/                       # nine skill dirs under skills/, each with a SKILL.md
+skills/adversarial-review/scripts/    # bundled deterministic review-output renderer
 skills/disciplined-development/hooks/ # hook stack + hook tests
 commands/                             # slash-command templates (installer symlinks into consumers' .claude/commands/; currently: dd-log.md)
 examples/                             # reference configs consumers copy (hooks block, dd-config, CLAUDE.md snippet + starter template)

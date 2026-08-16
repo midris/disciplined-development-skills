@@ -2043,20 +2043,34 @@ retains strict WER-07 coverage. No PR is opened.
 
 ### Task 22: Clean `adversarial-review`
 
-**Files:** `skills/adversarial-review/SKILL.md`, `skill-validation/adversarial-review.md`
+**Approved validation-design ruling (2026-08-15; activated 2026-08-16):** Task 22’s semantic/protocol split, execution status, activation conditions, and pre-redesign evidence boundary are owned by [the adversarial-review validation record](../skill-validation/adversarial-review.md#approved-task-22-validation-method-2026-08-15-activated-2026-08-16). The plan records status only; the exact current skill at `309bd02c…` passed semantic 75/75, same-byte protocol and actual-renderer gates 70/70, affected composition 5/5, a balanced/net-positive blinded comparison with no causal regression, final cold review, final owner approval, and repository verification. The first staged review's two documentation findings are corrected and the scoped staged re-review returned no findings; commit and push remain pending.
+
+**Files:**
+
+- Modify: `plans/specs/2026-08-01-comprehensive-skill-cleanup-design.md`, `skill-validation/README.md`, `skill-validation/adversarial-review.md`, and `skill-validation/fixtures/adversarial-review/README.md`
+- Modify: `plans/2026-08-01-comprehensive-skill-cleanup.md` (this Task 22 inventory and ruling)
+- Modify: `skill-validation/fixtures/adversarial-review/prompts/ar-04.md`, `skill-validation/fixtures/adversarial-review/rubrics/ar-04.md`, `skill-validation/fixtures/adversarial-review/rubrics/ar-05.md`, `skill-validation/fixtures/adversarial-review/rubrics/ar-08.md`, `skill-validation/fixtures/adversarial-review/rubrics/ar-13.md`, and `skill-validation/fixtures/adversarial-review/rubrics/ar-14.md`
+- Modify: `skills/adversarial-review/SKILL.md`
+- Modify: `skills/disciplined-development/hooks/lib/severity.py`, `skills/disciplined-development/hooks/tests/test_severity.py`
+- Modify: `ARCHITECTURE.md`, `CLAUDE.md`, and `README.md` for the bundled renderer surface
+- Create: `skill-validation/validate_adversarial_review_output.py`, `skill-validation/tests/test_validate_adversarial_review_output.py`, and `skill-validation/tests/test_render_adversarial_review_output.py`
+- Create: `skills/adversarial-review/scripts/render_review.py`
+- Create: `skill-validation/fixtures/adversarial-review/prompts/ar-15.md`, `skill-validation/fixtures/adversarial-review/rubrics/ar-15.md`, `skill-validation/fixtures/adversarial-review/ar-15/project/approval-evidence.md`, `skill-validation/fixtures/adversarial-review/ar-15/project/change-request.md`, `skill-validation/fixtures/adversarial-review/ar-15/project/decision-record.md`, `skill-validation/fixtures/adversarial-review/ar-15/project/interface-contract.md`, `skill-validation/fixtures/adversarial-review/ar-15/project/proposal.md`, and `skill-validation/fixtures/adversarial-review/ar-15/project/support-evidence.md`
+- Create: `skill-validation/fixtures/adversarial-review/prompts/ar-16.md`, `skill-validation/fixtures/adversarial-review/rubrics/ar-16.md`, `skill-validation/fixtures/adversarial-review/ar-16/project/contract.md`, and `skill-validation/fixtures/adversarial-review/ar-16/project/EventLog.swift`
+- Create: `skill-validation/fixtures/adversarial-review/prompts/ar-17.md`, `skill-validation/fixtures/adversarial-review/rubrics/ar-17.md`, `skill-validation/fixtures/adversarial-review/ar-17/project/contract.md`, and `skill-validation/fixtures/adversarial-review/ar-17/project/EventLog.swift`
 
 **Review focus:** preserve direct invocation within the full bundle; order posture, severity/output contract, holistic rules, angle selection, examples, and composition; keep the baseline/angle distinction unmistakable; remove historical bolt-on seams without shrinking coverage.
 
 **Validation scope:** integrated development group; use the complete bundle and cold
 Sol-high model gate in the authored software-review domain.
 
-- [ ] Record the immediate readability-control word count and a section-level meaning inventory.
-- [ ] Draft the smallest coherent reorganization, show the diff, and wait for user approval.
-- [ ] Apply the approved draft and run the complete active suite plus affected composition scenarios 5/5 on Sol high.
-- [ ] Blindly compare subjective review outputs with the immediate readability control where the rubric requires judgment.
-- [ ] Run cold editorial and skill-writing review; show proposed fixes, wait for user approval, apply them, and restart affected scenarios.
-- [ ] Show the final skill in place and wait for user approval.
-- [ ] After approval, run repository tests and commit as `docs(skills): clean up adversarial review`.
+- [x] Record the immediate readability-control word count and a section-level meaning inventory.
+- [x] Draft the smallest coherent reorganization, show the diff, and wait for user approval.
+- [x] Apply the approved draft and run the complete active suite plus affected composition scenarios 5/5 on Sol high.
+- [x] Blindly compare subjective review outputs with the immediate readability control where the rubric requires judgment.
+- [x] Run cold editorial and skill-writing review; show proposed fixes, wait for user approval, apply them, and restart affected scenarios.
+- [x] Show the final skill in place and wait for user approval.
+- [x] After approval, run repository tests and `git diff --check` plus `git diff --cached --check`; commit as `docs(skills): clean up adversarial review`, push the branch, do not open a PR, and do not remove this worktree.
 
 ### Task 23: Clean `adversarial-review-loop`
 
@@ -2134,8 +2148,8 @@ Sol-high model gate across the authored development modes.
 
 **Produces:** A cross-suite composition record that links the owning scenario IDs and records joint results without duplicating their prompts or rubrics.
 
-- [ ] Freeze the 103-scenario active closure, excluding historical `LP-04` and `SSR-04`.
-- [ ] Rerun every scenario in the frozen 103-scenario closure five times on cold Sol high, including all focused regressions as well as the shared discovery, domain-appropriate direct-invocation, broad-domain isolated-application, development-companion dependency, and integrated composition sets; keep scenarios atomic unless composition is the behavior under test.
+- [ ] Freeze the 105-scenario active closure, excluding historical `LP-04` and `SSR-04`.
+- [ ] Rerun every scenario in the frozen 105-scenario closure five times on cold Sol high, including all focused regressions as well as the shared discovery, domain-appropriate direct-invocation, broad-domain isolated-application, development-companion dependency, and integrated composition sets; keep scenarios atomic unless composition is the behavior under test.
 - [ ] Manually score each protected promise and record any infrastructure failures separately.
 - [ ] If any result is below 5/5, stop and classify it through the design's failure gate; correct a cleanup regression in its owning task, and isolate any approved behavioral change in a separate RED/GREEN slice.
 - [ ] Record the final 5/5 results and commit as `docs(validation): record final skill composition greens`.
@@ -2152,11 +2166,11 @@ Sol-high model gate across the authored development modes.
 - Move after completion: `plans/2026-08-01-comprehensive-skill-cleanup.md` to `plans/completed/2026-08-01-comprehensive-skill-cleanup.md`
 - Move after completion: `plans/specs/2026-08-01-comprehensive-skill-cleanup-design.md` to `plans/completed/specs/2026-08-01-comprehensive-skill-cleanup-design.md`
 
-**Validation scope:** reuse the same 103 domain-appropriate scenarios and declared
+**Validation scope:** reuse the same 105 domain-appropriate scenarios and declared
 dependencies from the cold Sol-high gate. Sol-low measures effort robustness and does
 not create another portability domain or provider gate.
 
-- [ ] Freeze the 103-scenario final active suite, which excludes historical `LP-04` and `SSR-04`, and run every scenario five times on `gpt-5.6-sol` at low reasoning effort.
+- [ ] Freeze the 105-scenario final active suite, which excludes historical `LP-04` and `SSR-04`, and run every scenario five times on `gpt-5.6-sol` at low reasoning effort.
 - [ ] Compare control and cleaned scores by scenario and pause for user review on any decrease.
 - [ ] For every decrease, record the user-approved disposition in `skill-validation/README.md` and each affected record.
 - [ ] If accepted, record the what/why/accepted rationale; if remediation changes a skill or scenario contract, reopen its owning task, complete the required Sol-high backfill or regression suite, rerun the affected Sol-low arm, and return to this comparison.

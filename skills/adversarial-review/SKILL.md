@@ -5,13 +5,9 @@ description: Use when code-reviewing or self-reviewing code, specs, plans, or de
 
 # Adversarial Review
 
-## Overview
-
-Reviewer skill that injects adversarial posture.
-Use directly, paste into a review prompt, or feed to local automation.
-
 ## Role
 
+Reviewer adapter for direct invocation, insertion into a review prompt, or local automation.
 Use `superpowers:requesting-code-review` for review mechanics and this skill for posture and output; when their response templates conflict, this skill's Output format takes precedence.
 
 ## Posture
@@ -24,12 +20,7 @@ Use `superpowers:requesting-code-review` for review mechanics and this skill for
 - Adversarial is the requested service. Soft review and not surfacing issues quickly is failure to deliver.
 - Apply across code, architecture, design choices, and rationale.
 
-## End of posture
-
-Adversarial posture is scoped to the review.
-When the review completes, return to your pre-review posture.
-
-Don't carry the reviewer's verification duty past the review.
+The posture and its verification duty end with the review; then return to your pre-review posture.
 
 ## Severity rubric
 
@@ -40,24 +31,36 @@ Don't carry the reviewer's verification duty past the review.
 
 ## Output format
 
-One finding per line, the line starting with its severity token; put any detail on indented lines beneath:
+Emit one finding per line, starting the line with its severity token; put detail on indented lines beneath:
 
 ```
 - [PN] <path>:<line>: <one-line summary>
   <optional indented reasoning>
 ```
 
-A line that starts with `[P0]`–`[P3]` is read as a finding — so start no other line with one.
+A line starting with `[P0]`–`[P3]` is read as a finding, so start no other line with one.
 When a finding concerns a referenced class, account for every member by name in the finding or its indented detail; collective shorthand such as "other callers" does not demonstrate enumeration.
 Emit findings (or `No findings.`) only after enumerating, verifying, and challenging, then emit the pattern and verdict lines.
 
 **Pattern line:** Immediately before the verdict, emit exactly one `DD-PATTERN: ...` line.
 Summarize a shared cause or recurring pattern supported by at least two findings; otherwise use `DD-PATTERN: NONE`.
+Generic similarity — such as both findings violating contracts or mishandling exceptional inputs — is not a shared cause or recurring pattern.
 This line is synthesis, not a finding, and never changes severity or verdict.
 
-**Verdict line.** The last non-blank line, nothing after it, containing only `DD-VERDICT: PASS` or `DD-VERDICT: BLOCK`: PASS = zero `[P0]`/`[P1]`/`[P2]` (`[P3]`-only passes), BLOCK = one or more.
+**Verdict line:** The last non-blank line, with nothing after it, contains only `DD-VERDICT: PASS` or `DD-VERDICT: BLOCK`.
+PASS means zero `[P0]`/`[P1]`/`[P2]` findings (`[P3]`-only passes); BLOCK means one or more.
 
-## Rules
+## Deterministic rendering
+
+After completing the semantic review, when command execution is available, run the bundled `scripts/render_review.py` resolved relative to this `SKILL.md`, with the completed review JSON on stdin, and return its stdout verbatim.
+Use the resolved script's `--help` for the JSON input schema and command options.
+If command execution is unavailable, follow the existing manual output contract above.
+
+## Holistic baseline
+
+Every review uses this holistic baseline: deep and whole-repo, anchored to the active plan and governing docs; there is no light or diff-scoped tier.
+Whenever you state or distinguish this always-on baseline, call it the **holistic baseline**.
+Always apply the posture and all four rules below before adding specialized angles.
 
 ### Enumerate every class
 
@@ -95,9 +98,9 @@ In prose the same test catches padding — load `concise-writing` when reviewing
 ### Generate the unexercised cases
 
 Code rests on assumptions it never states; a passing test or clean read confirms they held this run, not that they hold.
-Generate what it doesn't handle; surface what it leans on.
+Generate what it doesn't handle and surface what it leans on.
 
-**Inputs and conditions.** List every input read, resource depended on, boundary crossed, bound set; for each, generate the case the happy path skips:
+**Inputs and conditions.** List every input read, resource depended on, boundary crossed, and bound set; for each, generate the case the happy path skips:
 
 - *Absent* — resource/precondition missing (model, file, permission, config): typed error, or silent download / fallback / hang?
 - *Malformed* — value across a trust boundary (peer reply, API response, parsed field) used or committed unvalidated: a bad value stored as valid?
@@ -115,31 +118,30 @@ Fix it by construction: enforce or unify until every axis is "yes".
 A doc comment only flips *Stated?*; a test flips none.
 Neither lowers the severity.
 
-**Before dismissing a false positive:** if your reason is "it can't happen" (tests pass, the scheduler prevents it, the caller never does), name the assumption that makes it safe and grade it (above) first — explaining the safety usually surfaces the finding.
+**Before dismissing a false positive:** if your reason is "it can't happen" (tests pass, the scheduler prevents it, the caller never does), name the assumption that makes it safe and grade it first — explaining the safety usually surfaces the finding.
 
-## Review angles
+**Before promoting a hypothetical:** do not demand additional samples inside a bounded range when a supplied invariant makes behavior uniform across it; first identify a mechanism that can change within the range.
+A producer guarantee does not make an unconstrained consumer input local or robust.
 
-The posture and rules above are the always-on baseline of every review — the **holistic** read that finds bugs, verifies rationale, challenges necessity, and generates the unexercised cases.
-An **angle** adds one specialized lens; it never narrows what you review.
-Bug-finding, rationale, necessity, and the unexercised-case sweep are the baseline, not angles — reserve an angle for a lens the baseline lacks.
+## Specialized angles
 
-| Angle | Looks for |
-|-------|-----------|
-| **consistency** | divergence across the corpus — contract / signature / import drift, terminology drift (one concept, different names), wording drift, single-source duplication |
-| **executability** | could a zero-context implementer execute this? missing definitions, ambiguous contracts, misdirecting file lists |
-| **skill-authoring** | apply `superpowers:writing-skills` — a `description` that summarizes the workflow (agents skip the body), discipline rules with open rationalization loopholes, claims not backed by a watched failure |
-| **durability** | failure and partial-state paths of durable / source-of-truth state: non-atomic mutations, and reads that accept non-committed data |
+The holistic baseline above finds bugs, verifies rationale, challenges necessity and effectiveness, and generates unexercised cases on every review.
+An angle adds one specialized lens and never narrows that baseline.
+Reserve angles for lenses the baseline lacks.
 
-**When to apply:**
-- **consistency** — every artifact.
-- **executability** — artifacts with instructions a reader must execute (plans, specs, runbooks, command / setup docs).
-- **skill-authoring** — when the artifact is a skill (a `SKILL.md`).
-- **durability** — the artifact creates, persists, or reads durable / source-of-truth state (file write, append-only log, transaction, journal, spool, or any store another component treats as the source of truth). Skip for pure in-memory / stateless code. Run two checklists:
-  - *Mutation:* partial write then error → rolled back? flush/commit fails after the write → acknowledged anyway? process killed mid-op → torn record? a write-path crash on bad input (panic/abort, unchecked unwrap, `try!`/assert; NaN/±Inf, oversized) → typed error, or process crash? ('it's a programmer error / our own typed data' is no pass — a statically-valid value can be unserializable at runtime; the crash tears the record, and even a pre-write crash denies the caller a recoverable error) failure surfaced as the documented error type, or a leaked lower-layer one? retry after a failure → duplicate / gap / reorder?
-  - *Read/replay:* torn/partial final record (missing terminator) rejected? interior corruption (blank line, gap, out-of-order) rejected, not skipped? unknown/forward version loud, not mis-parsed? empty distinguished from corrupt?
+| Angle | Apply when | Looks for |
+|---|---|---|
+| **consistency** | Every artifact | Divergence across the corpus: contract, signature, or import drift; terminology or wording drift; single-source duplication. |
+| **executability** | The artifact contains instructions a reader must execute, such as plans, specs, runbooks, command docs, or setup docs | Whether a zero-context implementer can execute it: missing definitions, ambiguous contracts, or misdirecting file lists. |
+| **skill-authoring** | The artifact is a `SKILL.md` | Apply `superpowers:writing-skills`: catch a `description` that summarizes the workflow, discipline rules with open rationalization loopholes, and claims not backed by a watched failure. |
+| **durability** | The artifact creates, persists, or reads durable or source-of-truth state, including file writes, append-only logs, transactions, journals, spools, or stores another component treats as authoritative; skip pure in-memory or stateless code | Failure and partial-state paths: non-atomic mutations and reads that accept non-committed data. |
 
-Every review is deep and whole-repo, anchored to the active plan and governing docs — no light or diff-scoped tier.
-Only the angles vary: the holistic baseline always runs; add each per its "when to apply" row.
+For **durability**, run both checklists:
+
+- *Mutation:* partial write then error → rolled back? flush/commit fails after the write → acknowledged anyway? process killed mid-op → torn record? a write-path crash on bad input (panic/abort, unchecked unwrap, `try!`/assert; NaN/±Inf, oversized) → typed error, or process crash? ('it's a programmer error / our own typed data' is no pass — a statically-valid value can be unserializable at runtime; the crash tears the record, and even a pre-write crash denies the caller a recoverable error) failure surfaced as the documented error type, or a leaked lower-layer one? retry after a failure → duplicate / gap / reorder?
+- *Read/replay:* torn/partial final record (missing terminator) rejected? interior corruption (blank line, gap, out-of-order) rejected, not skipped? unknown/forward version loud, not mis-parsed? empty distinguished from corrupt?
+
+Before emitting findings, complete the holistic baseline over the artifact as a whole and report any concrete defects alongside angle-specific findings; no angle satisfies or replaces that baseline.
 
 ## Few-shot examples
 

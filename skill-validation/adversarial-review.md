@@ -1,6 +1,196 @@
 # adversarial-review — validation
 
-## Active catalog audit (2026-08-04)
+## Approved Task 22 validation method (2026-08-15; activated 2026-08-16)
+
+This method separates semantic review behavior from deterministic output-protocol conformance over the same response bytes.
+The semantic catalog has 15 scenarios: `AR-01`–`AR-08`, `AR-10`, and `AR-12`–`AR-17`.
+`AR-09` is retired from both proposed source sets and remains only pre-redesign historical evidence.
+`AR-02` remains semantic P3/nonblocking coverage and also supplies quoted-token/final-envelope protocol evidence from the identical response bytes.
+
+Semantic scenarios remain independent 5/5 hard gates.
+Protocol is a separate hard gate over 14 actual-review semantic sources × five current Sol-high response trials: `AR-01`, `AR-02`, `AR-03`, `AR-05`–`AR-08`, `AR-10`, and `AR-12`–`AR-17` (excluding non-review `AR-04` and retired `AR-09`).
+There are no AR-P model scenarios, no JSON contract, and no added evaluator calls.
+The checker consumes finding shape/severity labels, exactly one nonempty `DD-PATTERN` immediately before the final exact `DD-VERDICT`, no trailing nonblank content, and verdict consistency with P0/P1/P2; it does not decide finding correctness, severity correctness, or pattern meaning.
+For every review response, the orchestrator semantically adjudicates whether its findings support the stated shared cause or require `NONE`; the checker enforces `NONE` automatically for zero/one finding and enforces the supplied `none` or `shared` branch for two or more.
+`DD-PATTERN` remains hard authored policy even though it is not machine-consumed elsewhere.
+AR-08 owns semantic evidence-backed shared-cause synthesis without a new finding/severity; AR-13 owns evidence-based rejection of generic-similarity/shared-cause claims for independent defects.
+AR-15 is preservation coverage for the clean bounded proposal and must not invent a P0–P2 defect or shared cause.
+AR-05 is a selection-tolerant broad durability review; focused preservation scenarios AR-16 and AR-17 independently protect the encoding-crash and interior-empty-record seams that a strong broad review may legitimately omit.
+
+Changed `AR-04`, `AR-05`, `AR-08`, `AR-13`, and `AR-14` definitions, plus new preservation scenarios `AR-15`–`AR-17`, restarted from fresh five-Sol-high and five-Sol-low immediate controls and five fresh Sol-high current runs for every scenario.
+The current exact-hash run passed the hard activation gate on 2026-08-16.
+`AR-02` is an accounting split over byte-identical evidence/future deterministic checks, not a new run.
+Its one-finding response and every other zero/one-finding response exercise the checker's `NONE` branch, so `AR-09` adds no distinct coverage.
+No historical result below is reclassified or used as evidence for the activated design.
+
+### Active Task 22 scenario definitions
+
+Every scenario below is owned by and affects `adversarial-review`; shared `DISC-01` and affected `DSD-01` retain their separate owners and ledgers.
+Common execution metadata is Codex CLI 0.147.0, `gpt-5.6-sol`, Superpowers 6.2.0, five fresh processes per arm, maximum concurrency three, enforced read-only transport, nested agents disabled, evaluator-withheld rubrics, and orchestrator scoring.
+The exact current skill is `309bd02c8bc6c06bb09d166c29a06152183bb4d4197755a35653e01131c703c6`.
+The immediate readability control is commit `f82d2efa6a54eae1e73b37f42cbebd3d024eade6`, skill `b266f35b751a23967d99030678ffe893d72137bf1ffbc7c433db811ed1bbf085`, and bundle manifest `f13d387abca30753bb7e7afafd8b9801132d15a56eee5f9a8a113968ccacb39e`.
+`AR-01` receives the complete nine-skill bundle in [the active fixture manifest](fixtures/adversarial-review/README.md#active-task-22-complete-bundle); other scenarios receive `adversarial-review`, the base-review dependency, and the context listed below.
+
+| ID | Type / status | Protected promise and skill section | Supplied context | Exact prompt and withheld rubric | Rerun trigger |
+|---|---|---|---|---|---|
+| `AR-01` | Simple application + direct invocation / preservation | Complete-bundle review finds the documented defect and follows severity/output contracts; Overview, Role, Posture, Severity, Output, Composition | Nine skills + committed ratio fixture | [Prompt](fixtures/adversarial-review/prompts/ar-01.md), [rubric](fixtures/adversarial-review/rubrics/ar-01.md) | Direct invocation, dependency, severity, finding shape, verdict, or renderer |
+| `AR-02` | Focused regression / preservation | P3-only review passes and quoted verdict content cannot replace the final verdict; Severity, Output, Examples | Prompt-contained completed review | [Prompt](fixtures/adversarial-review/prompts/ar-02.md), [rubric](fixtures/adversarial-review/rubrics/ar-02.md) | P3 threshold, quoted tokens, verdict position, output shape, or checker |
+| `AR-03` | Non-trivial application + focused regression / target | Every caller is named; false rationale is verified; asymmetric nonlocal invariant blocks; Output, Enumeration, Rationale, Invariants | Committed six-file normalization fixture | [Prompt](fixtures/adversarial-review/prompts/ar-03.md), [rubric](fixtures/adversarial-review/rubrics/ar-03.md) | Enumeration, caller accounting, rationale verification, invariant severity, or fixture |
+| `AR-04` | Simple application + focused regression / preservation | The holistic baseline always runs and specialized angles are additive and selected by artifact kind; Review angles | Committed artifact matrix | [Prompt](fixtures/adversarial-review/prompts/ar-04.md), [rubric](fixtures/adversarial-review/rubrics/ar-04.md) | Baseline/angle taxonomy, artifact classification, or mapping semantics |
+| `AR-05` | Non-trivial application + focused regression / preservation | A broad durability review finds supported mutation and replay/recovery defects plus an independent holistic defect without requiring one predetermined defect selection; Durability, Rationale, Holistic baseline | Real EventLog slice at `b0f4511b2d43a566acdcbc5f0d61db6342a4c882` | [Prompt](fixtures/adversarial-review/prompts/ar-05.md), [rubric](fixtures/adversarial-review/rubrics/ar-05.md) | Durability classes, selection tolerance, holistic baseline, remedy, or source slice |
+| `AR-06` | Non-trivial application / preservation | Review reaches beyond the patch and generates located absent, malformed, and out-of-scale findings; Whole-repo scope, Unexercised cases | Committed import-boundary fixture | [Prompt](fixtures/adversarial-review/prompts/ar-06.md), [rubric](fixtures/adversarial-review/rubrics/ar-06.md) | Whole-repo scope, generated-case classes, or fixture |
+| `AR-07` | Non-trivial application + focused regression / preservation | Plain-array producer ordering remains P2+ and unresolved by documentation/tests; Invariants, Severity | Committed excerpt derived from Steno range `0fae3e34d73505960313efa6ff7c6256c00f7029..59d08686570724d288c716a756984d364ef50e49` | [Prompt](fixtures/adversarial-review/prompts/ar-07.md), [rubric](fixtures/adversarial-review/rubrics/ar-07.md) | Invariant severity, construction rule, loophole, or excerpt |
+| `AR-08` | Focused regression / target | Findings across API, queue, and file adapters receive one evidence-backed shared pattern without a new finding/severity; Output | Committed boundary-ingestion fixture | [Prompt](fixtures/adversarial-review/prompts/ar-08.md), [rubric](fixtures/adversarial-review/rubrics/ar-08.md) | Pattern meaning, named-adapter accounting, evidence threshold, or fixture |
+| `AR-10` | Non-trivial application / preservation | Unsupported duplicate state is challenged and removed; Necessity | Committed receipt proposal | [Prompt](fixtures/adversarial-review/prompts/ar-10.md), [rubric](fixtures/adversarial-review/rubrics/ar-10.md) | Necessity wording, removal rule, or fixture |
+| `AR-12` | Non-trivial application / preservation | Activity/proxy success is rejected when it does not measure the governing outcome; Effectiveness | Committed onboarding proposal | [Prompt](fixtures/adversarial-review/prompts/ar-12.md), [rubric](fixtures/adversarial-review/rubrics/ar-12.md) | Effectiveness wording, outcome/proxy rule, or fixture |
+| `AR-13` | Focused regression / target | Two unrelated blocking findings reject a generic shared cause and render the no-pattern branch; Output | Committed independent-provenance fixture | [Prompt](fixtures/adversarial-review/prompts/ar-13.md), [rubric](fixtures/adversarial-review/rubrics/ar-13.md) | Pattern meaning, multi-finding `NONE`, provenance, or fixture |
+| `AR-14` | Non-trivial application + focused regression / preservation | The skill-authoring lens catches workflow-summary and untested-discipline traps while the holistic baseline still finds an independent defect; Review angles | Committed flawed skill + writing-skills 6.2.0 dependencies | [Prompt](fixtures/adversarial-review/prompts/ar-14.md), [rubric](fixtures/adversarial-review/rubrics/ar-14.md) | Skill-authoring angle, supplied guidance, holistic baseline, or fixture |
+| `AR-15` | Non-trivial application + focused regression / preservation | A clean bounded proposal does not acquire an invented blocking defect or shared cause; Holistic baseline, Invariants, Severity | Committed six-file clean-proposal fixture with approval and support evidence | [Prompt](fixtures/adversarial-review/prompts/ar-15.md), [rubric](fixtures/adversarial-review/rubrics/ar-15.md) | False-positive boundary, supplied support, invariant wording, severity, or fixture |
+| `AR-16` | Focused regression / preservation | Unchecked encoding failure is reported as caller-visible termination requiring a typed failure path; Durability mutation checklist, Rationale, Severity | Focused contract + real EventLog encoding excerpt at `b0f4511b2d43a566acdcbc5f0d61db6342a4c882` | [Prompt](fixtures/adversarial-review/prompts/ar-16.md), [rubric](fixtures/adversarial-review/rubrics/ar-16.md) | Encoding failure, crash rationale, typed-error requirement, or excerpt |
+| `AR-17` | Focused regression / preservation | Interior empty records are rejected as corruption instead of silently collapsing replay framing; Durability read/replay checklist, Severity | Focused contract + real EventLog replay excerpt at `b0f4511b2d43a566acdcbc5f0d61db6342a4c882` | [Prompt](fixtures/adversarial-review/prompts/ar-17.md), [rubric](fixtures/adversarial-review/rubrics/ar-17.md) | Empty/corrupt boundary, record framing, replay behavior, or excerpt |
+
+### Active Task 22 results
+
+The current Sol-high run date is 2026-08-16; every current result below completed on attempt 1 with zero infrastructure errors.
+High/low controls for unchanged definitions carry forward the exact control evidence below; changed or new definitions use their fresh Task 22 immediate controls.
+The final skill was not rerun at Sol-low because the plan defines the cleaned hard gate at Sol-high; `N/A` records that boundary rather than implying a pass.
+The full current freeze at `/private/tmp/task22-adversarial-review-final-v1/freeze.json` has SHA-256 `1e34964a969c3dacd27e7bbdc189676810c8f39ab85649d616bfeb3cfc19f0a5`.
+Changed-definition controls are retained at `/private/tmp/task22-adversarial-review-activation-v1` for `AR-04`, `AR-08`, `AR-13`, and `AR-14`; `/private/tmp/task22-ar15-repaired-activation-v5` for `AR-15`; and `/private/tmp/task22-ar05-split-control-high-v1` plus `/private/tmp/task22-ar05-split-control-low-v1` for `AR-05`, `AR-16`, and `AR-17`.
+
+| ID | Sol-high control | Target GREEN | Current Sol-high semantic | Current protocol | Sol-low control / cleaned | Current date | Current infra |
+|---|---|---|---|---|---|---|---:|
+| `AR-01` | 5/5 (`P P P P P`) | N/A | **5/5** (`P P P P P`) | **5/5** (`P P P P P`) | 5/5 (`P P P P P`) / N/A | 2026-08-16 | 0 |
+| `AR-02` | 5/5 (`P P P P P`) | N/A | **5/5** (`P P P P P`) | **5/5** (`P P P P P`) | 5/5 (`P P P P P`) / N/A | 2026-08-16 | 0 |
+| `AR-03` | 5/5 (`P P P P P`) | **5/5 GREEN** (`P P P P P`) | **5/5** (`P P P P P`) | **5/5** (`P P P P P`) | 1/5 (`F P F F F`) / N/A | 2026-08-16 | 0 |
+| `AR-04` | 5/5 (`P P P P P`) | N/A | **5/5** (`P P P P P`) | N/A: mapping | 5/5 (`P P P P P`) / N/A | 2026-08-16 | 0 |
+| `AR-05` | 5/5 (`P P P P P`) | N/A | **5/5** (`P P P P P`) | **5/5** (`P P P P P`) | 4/5 (`P P F P P`) / N/A | 2026-08-16 | 0 |
+| `AR-06` | 5/5 (`P P P P P`) | N/A | **5/5** (`P P P P P`) | **5/5** (`P P P P P`) | 5/5 (`P P P P P`) / N/A | 2026-08-16 | 0 |
+| `AR-07` | 5/5 (`P P P P P`) | N/A | **5/5** (`P P P P P`) | **5/5** (`P P P P P`) | 5/5 (`P P P P P`) / N/A | 2026-08-16 | 0 |
+| `AR-08` | 5/5 (`P P P P P`) | **5/5 GREEN** (`P P P P P`) | **5/5** (`P P P P P`) | **5/5** (`P P P P P`) | 5/5 (`P P P P P`) / N/A | 2026-08-16 | 0 |
+| `AR-10` | 5/5 (`P P P P P`) | N/A | **5/5** (`P P P P P`) | **5/5** (`P P P P P`) | 4/5 (`P P F P P`) / N/A | 2026-08-16 | 0 |
+| `AR-12` | 5/5 (`P P P P P`) | N/A | **5/5** (`P P P P P`) | **5/5** (`P P P P P`) | 5/5 (`P P P P P`) / N/A | 2026-08-16 | 0 |
+| `AR-13` | 5/5 (`P P P P P`) | **5/5 GREEN** (`P P P P P`) | **5/5** (`P P P P P`) | **5/5** (`P P P P P`) | 4/5 (`P P P F P`) / N/A | 2026-08-16 | 0 |
+| `AR-14` | 5/5 (`P P P P P`) | N/A | **5/5** (`P P P P P`) | **5/5** (`P P P P P`) | 5/5 (`P P P P P`) / N/A | 2026-08-16 | 0 |
+| `AR-15` | 5/5 (`P P P P P`) | N/A | **5/5** (`P P P P P`) | **5/5** (`P P P P P`) | 5/5 (`P P P P P`) / N/A | 2026-08-16 | 0 |
+| `AR-16` | 5/5 (`P P P P P`) | N/A | **5/5** (`P P P P P`) | **5/5** (`P P P P P`) | 5/5 (`P P P P P`) / N/A | 2026-08-16 | 0 |
+| `AR-17` | 5/5 (`P P P P P`) | N/A | **5/5** (`P P P P P`) | **5/5** (`P P P P P`) | 5/5 (`P P P P P`) / N/A | 2026-08-16 | 0 |
+
+### Criterion projection for Task 22 execution
+
+This table projects mixed legacy rubrics without editing unchanged definitions or conflating behavior with the envelope.
+Finding shape/marker/final-line clauses are deterministic protocol; finding, severity, pattern meaning, and blocking/nonblocking disposition are semantic.
+The deterministic checker is authoritative for its envelope projection; finding lines and severity labels are parsed as telemetry, the final `DD-VERDICT` is the repository decision input, and `DD-PATTERN`/`NONE` remain hard authored policy with no repository consumer.
+Every review row also includes manual semantic adjudication of its pattern meaning; for two-or-more-finding responses, that adjudication supplies the checker's required branch input.
+
+| Scenario | Semantic criteria/parts | Deterministic protocol projection | Containment |
+|---|---|---|---|
+| `AR-01` | 1–3 | 4 finding shape; 5 final verdict; checker with semantic branch input when needed | 6 |
+| `AR-02` | 1 P3/location, 2; 4 nonblocking disposition | 1 finding shape; 3 quoted-token isolation; 4 final/no trailing; checker | 5 |
+| `AR-03` | 1–4 | 5 final verdict; checker with semantic branch input when needed | 6 |
+| `AR-04` | 1–3 | None: mapping, not a review | 4 |
+| `AR-05` | 1–4, with valid defect-class selection left to the reviewer | 5 final verdict; checker with semantic branch input when needed | 6 |
+| `AR-06` | 1–4; 5 severity/disposition; 6 non-prescription | 5 exact verdict envelope; checker with semantic branch input when needed | 7 |
+| `AR-07` | 1–4 | 5 final verdict; checker with semantic branch input when needed | 6 |
+| `AR-08` | 1–3, including stated non-`NONE` shared cause | Checker with `shared` branch | 4 |
+| `AR-10` | 1–3; 4 severity/disposition | 4 exact verdict envelope; checker with semantic branch input when needed | 5 |
+| `AR-12` | 1–2 | 3 final verdict; checker with semantic branch input when needed | 4 |
+| `AR-13` | 1–4, including no unsupported shared cause | Checker with `none` branch | 5 |
+| `AR-14` | 1–6 | Checker with semantic branch input when needed | 7 |
+| `AR-15` | 1–4, including nonblocking disposition | Checker with semantic branch input when needed | 5 |
+| `AR-16` | 1–4, encoding-failure behavior and blocking disposition | Checker | 5 |
+| `AR-17` | 1–4, replay-framing behavior and blocking disposition | Checker | 5 |
+
+`AR-05`, `AR-08`, and `AR-13`–`AR-17` use their active semantic rubrics plus the checker; the table is a projection, not a rewrite of unchanged legacy rubrics.
+
+### Task 22 necessity-map delta
+
+The Task 22 method changes only these necessity mappings; all other rows in the frozen table below carry forward unchanged.
+
+| Skill section | Active necessity and smallest effective form | Evidence |
+|---|---|---|
+| Severity rubric | P3/nonblocking and P0–P2/blocking branches remain semantic | `AR-02`, `AR-03`, `AR-05`, `AR-07`, `AR-13`, `AR-16`, `AR-17` |
+| Output format | Finding lines/severity are telemetry, the final verdict is repository decision input, and `DD-PATTERN`/`NONE` are hard authored policy without a repository consumer; semantic meaning and exact rendering are scored separately over the same bytes | 14-source protocol gate; focused semantic branches in `AR-08` and `AR-13` |
+| Few-shot examples | Needed only to demonstrate exact output shape; no separate scenario beyond the projections | `AR-02` |
+| Durability angle | Broad selection-tolerant application and two atomic focused seams avoid requiring one review to select every valid defect while preserving crash and framing behavior | `AR-05`, `AR-16`, `AR-17` |
+| Whole skill | Discovery plus 15 semantic scenarios and the 14-source same-byte protocol gate is the smallest Task 22 closure | `DISC-01`, active `AR-01`–`AR-08`, `AR-10`, `AR-12`–`AR-17` |
+
+### Exact-hash execution evidence (2026-08-16; application gates green)
+
+The pre-final reflowed skill was SHA-256 `39d38cbe2dd7f7dafb69fb7d5739eb26f856420b9cf6e25c2527decf73782828`, 1,704 words and 189 lines.
+Its only change from the owner-approved 1,704-word draft is the sentence-per-line reflow in Deterministic rendering; both versions have non-whitespace SHA-256 `112d76f1f6f865b3dc9a3a1b96d5d3f3a7bccfdb2b55e137e939ff8c45254580`.
+The fresh exact-hash application run completed all 65 original candidate slots; its superseded broad `AR-05` definition scored 4/5 and `AR-15` scored 4/5.
+The owner-approved test repair then replaced only `AR-05`'s selection-sensitive rubric and added atomic preservation scenarios `AR-16` and `AR-17`; the skill bytes did not change.
+
+| Current semantic source | Sol-high result | Outcomes | Disposition |
+|---|---:|---|---|
+| `AR-01`–`AR-04`, `AR-06`–`AR-08`, `AR-10`, `AR-12`–`AR-14` | **55/55** | all pass | Exact-hash results from `/private/tmp/task22-adversarial-review-format-reflow-v1` |
+| Repaired broad `AR-05` | **5/5** | P P P P P | Selection-tolerant durability, replay/recovery, holistic-baseline, remedy, and blocking criteria all met |
+| `AR-15` | **4/5** | F P P P P | r1 invented an unsupported intermediate-width requirement despite the supplied single-layout-regime contract; independent audit confirmed a genuine false positive and a sound test |
+| Focused `AR-16` | **5/5** | P P P P P | Encoding crash, false programmer-error rationale, typed failure, and blocking behavior preserved |
+| Focused `AR-17` | **5/5** | P P P P P | Interior empty-record acceptance, reconstruction harm, framing rejection, and blocking behavior preserved |
+| **Superseded pre-final semantic aggregate** | **74/75** | one genuine `AR-15` miss | Triggered the smallest approved wording repair; not current evidence |
+
+The repaired-definition controls used committed skill `b266f35b751a23967d99030678ffe893d72137bf1ffbc7c433db811ed1bbf085` at commit `f82d2efa6a54eae1e73b37f42cbebd3d024eade6`.
+Fresh Sol-high controls were 15/15: `AR-05`, `AR-16`, and `AR-17` each passed 5/5.
+Fresh Sol-low controls were 14/15: `AR-05` was 4/5 because r3 omitted the holistic baseline outside event-log durability, while `AR-16` and `AR-17` each passed 5/5.
+That low-effort miss remains effort-robustness evidence and does not weaken the semantic definition.
+
+The owner then approved the smallest behavior repair: distinguish unsupported demands for extra samples inside a bounded range governed by a uniform invariant from genuinely unconstrained consumer inputs.
+The exact current skill is SHA-256 `309bd02c8bc6c06bb09d166c29a06152183bb4d4197755a35653e01131c703c6`, 1,749 words and 192 lines.
+The fresh exact-hash run at `/private/tmp/task22-adversarial-review-final-v1` passed all 15 semantic sources 5/5 for **75/75**.
+The formerly failing clean-proposal `AR-15` passed 5/5, and the adjacent invariant scenarios `AR-03` and `AR-07` also passed 5/5; the repair therefore removed the false-positive behavior without erasing legitimate local-invariant review behavior.
+All 75 responses completed on attempt 1 with exit code 0, `evaluable: true`, `timed_out: false`, and zero infrastructure retries under Codex CLI 0.147.0, `gpt-5.6-sol`, high reasoning effort, enforced read-only transport, and nested agents disabled.
+
+The deterministic checker passed the exact final response bytes 70/70.
+For every two-or-more-finding response, the orchestrator supplied the independently adjudicated `none` or `shared` branch; zero/one-finding responses exercised the checker's automatic `NONE` branch.
+The bundled renderer was actually invoked for the same 70/70 responses; each final response block occurs byte-for-byte in its transport log after renderer invocation.
+The repaired-definition control protocol also passed 15/15 high and 15/15 low.
+All 45 repaired-definition evaluations completed on attempt 1 with zero infrastructure errors under Codex CLI 0.147.0, `gpt-5.6-sol`, the recorded effort, enforced read-only transport, and nested agents disabled.
+The initial 65-slot exact-hash run required infrastructure-only retries because the outer managed sandbox prevented Codex app-server initialization; all evaluable responses completed after escalation and no result was replaced.
+
+The application and same-byte protocol gates are active and green.
+No further skill wording change is justified by the final run.
+
+### Affected composition and blinded comparison
+
+The affected complete-bundle `DSD-01` composition rerun at `/private/tmp/task22-adversarial-review-composition-final-v2` passed 5/5 on fresh Sol-high responses.
+Its freeze record has SHA-256 `a4f51212c359fd1c9b3dd7085db926c415f75dd2acb6ee4906d65e28634b61eb` and binds the exact current skill plus all eight declared sibling skills, prompt, rubric, and project context.
+All five responses completed on attempt 1 with zero infrastructure retries, and manual scoring confirmed bounded assignment and governing-context reads, subagent/orchestrator authority, scope disclosure, verification, and supported factual prose.
+
+The final blinded comparison was intentionally limited to unchanged-definition `AR-03` and `AR-07`, the two scenarios whose local-invariant behavior could plausibly be affected by the last two-sentence repair.
+It compared the exact current skill against committed readability control `b266f35b751a23967d99030678ffe893d72137bf1ffbc7c433db811ed1bbf085` over ten randomized pairs with identical prompt, rubric, and path-normalized context bytes.
+The sealed Sol-high score aggregate at `/private/tmp/task22-adversarial-review-final-blind-score-v1/sealed-score-aggregate.json` has SHA-256 `b28181ab8db0d6ed6a2548cfc7e59ac2a1df3aea8942cfcf1667c4dfa5ce82b0`.
+Decoded results were four candidate preferences, three control preferences, and three equivalent pairs: `AR-03` was candidate 2 / control 1 / equivalent 2; `AR-07` was candidate 2 / control 2 / equivalent 1.
+Manual causal adjudication found no systematic or wording-caused regression: the control preferences arose from sample-level salience differences, while the candidate both won material pairs and avoided unsupported requirements.
+The owner-approved close-enough rule therefore keeps the final edit and ends further wording iteration.
+
+### Cold review and deterministic hardening
+
+The fresh final Sol-high cold review found no skill-behavior regression, but it identified duplicate-key and out-of-scale input failures in the bundled renderer, its missing executable mode, and stale bundle/count records.
+Test-first hardening now rejects duplicate keys at every object level, converts oversized integers and excessive nesting to controlled exit 2 errors without tracebacks, and makes the exact documented direct invocation executable.
+The focused renderer/checker suite passes 69/69, current renderer SHA-256 is `1469c4499fbc20960427bd1d99b7c9f0315afe5f6701672c31025c23c0fa31c2`, and its test SHA-256 is `b07818da119f7895795a2c859f5bf66fde53a4ad6ab1332eea8f7992fdb5e541`.
+The hardening changes no valid rendered bytes and does not change `SKILL.md`; direct clean, P3, blocking-detail, and multi-finding shared-pattern outputs are byte-identical to the renderer used in the 70/70 model run.
+The fixture manifest now distinguishes the executed and post-hardening renderer bytes and records both complete `AR-01` manifests and digests.
+Current/future repository closure is corrected to 105 scenarios / 525 slots / 93 owned while historical 103-scenario evidence remains unchanged.
+The first scoped re-review found three remaining provenance/status/link reconciliation defects; after those documentation-only corrections, a second fresh read-only Sol-high re-review at `/private/tmp/task22-final-cold-rereview-v2.md` returned `APPROVE`.
+
+### Final approval and repository verification
+
+The owner explicitly approved the complete in-place 1,749-word / 192-line skill at SHA-256 `309bd02c8bc6c06bb09d166c29a06152183bb4d4197755a35653e01131c703c6` after all behavioral, composition, comparison, formatter, and cold-review gates.
+Fresh working-tree verification passed: hook tests 375 passed / 3 skipped, installer tests 11 passed, research tests 4 passed, and focused renderer/checker tests 69 passed.
+A scratch consumer installed all nine skills and `dd-log`; the installed renderer remained executable, and installed `log_review.py` recorded rendered PASS and BLOCK decisions while preserving the blocking finding's spaced path and numeric line.
+The exact local Markdown-link command passed for 29 working documents, the routing/reference and current-count sweeps were clean, and `git diff --check` passed.
+
+The first deep staged Sol-high review at `/private/tmp/task22-final-staged-review.md`, SHA-256 `a4f48c7176a9b4a227bc0b2d289a99a8d1fa151d052665e3e279f04f417f061a`, found two documentation-only P2 defects: the activated suite lacked complete per-scenario definition/results ledgers, and the final plan step omitted push/no-PR/worktree-preservation instructions.
+Both are corrected above and in the plan without changing the approved skill or implementation.
+A fresh scoped read-only Sol-high re-review at `/private/tmp/task22-staged-correction-review.md`, SHA-256 `2ca27ecf4661f3f4cf3315886ea52a45d1013fd693a98c1aa2088f8a9459618e`, returned no findings after independently reconciling the ledgers, hashes, run artifacts, links, and final output contracts.
+Final staged verification reran the hook, installer, research, and focused renderer/checker suites; the exact local-link command and both diff checks also passed.
+Commit and push remain pending.
+
+## Pre-Task22 frozen catalog audit (2026-08-04)
+
+The sections below preserve the prior catalog and results exactly as historical evidence.
+Their old prompt/rubric definitions are pinned by the recorded commit and hashes; changed links in the frozen catalog below now resolve to the active Task 22 definitions and do not rewrite those results.
 
 The shared all-nine discovery suite remains owned by [skill-discovery.md](skill-discovery.md#active-catalog-definitions).
 `DISC-01` protects routing into `adversarial-review`; this record owns the application suite.
@@ -70,12 +260,12 @@ The approved behavior slice also adds one evidence-backed `DD-PATTERN` line befo
 The effectiveness wording is retained for clarity and owner intent, not claimed as measured lift: both the current and ablated `AR-12` arms passed 5/5.
 The response-template precedence sentence is likewise an owner-approved clarification with preserved 5/5 behavior, not a claimed RED/GREEN lift.
 
-## Active scenario catalog
+## Pre-Task22 frozen scenario catalog
 
 Common metadata: Codex CLI 0.146.0; `gpt-5.6-sol`; high reasoning effort; Superpowers 6.2.0; five fresh processes per arm; maximum concurrency three; enforced read-only transport; no nested agents; evaluator-withheld rubric; orchestrator scoring; run dates 2026-08-03–04.
 Every `AR-*` scenario is owned by and affects `adversarial-review`; shared `DISC-01` lists its cross-skill ownership separately.
 The base-review dependency is Superpowers 6.2.0 `requesting-code-review`, skill SHA-256 `d71cc01ba56d2325cf8af5f7c11837819b63ecd57de0bfdb812f7f3ff7751df8`, template SHA-256 `b2f2ec7596925fe52dac158fdfbca19b3a7d779d619c481e6706a6c0001662d3`.
-`AR-01` receives the complete nine-skill bundle recorded in [the fixture manifest](fixtures/adversarial-review/README.md#complete-bundle-dependency-manifest); other scenarios receive only `adversarial-review`, the base-review dependency, and their declared fixture.
+`AR-01` receives the complete nine-skill bundle recorded in [the historical fixture manifest](fixtures/adversarial-review/README.md#pre-task22-historical-complete-bundle-dependency-manifest); other scenarios receive only `adversarial-review`, the base-review dependency, and their declared fixture.
 
 | ID | Type / status | Protected promise and section | Supplied context | Exact prompt and withheld rubric | Rerun trigger |
 |---|---|---|---|---|---|
@@ -93,7 +283,7 @@ The base-review dependency is Superpowers 6.2.0 `requesting-code-review`, skill 
 | `AR-13` | Focused regression / target | Two unrelated blocking findings emit `DD-PATTERN: NONE` without generic over-synthesis; Output | Committed independent-provenance fixture | [Prompt](fixtures/adversarial-review/prompts/ar-13.md), [rubric](fixtures/adversarial-review/rubrics/ar-13.md) | Multi-finding `NONE`, evidence threshold, provenance, or fixture |
 | `AR-14` | Non-trivial application + focused regression / preservation | The skill-authoring lens catches workflow-summary and untested-discipline traps that a holistic-only ablation misses; Review angles | Committed flawed skill, writing-skills 6.2.0 dependencies, and exact ablation patch | [Prompt](fixtures/adversarial-review/prompts/ar-14.md), [rubric](fixtures/adversarial-review/rubrics/ar-14.md) | Skill-authoring angle, supplied authoring guidance, ablation, or fixture |
 
-### Results
+### Pre-Task22 frozen results
 
 Original control commit: `4296647f0dff48a9e77b979ef07e813bf1f66db2`; original skill SHA-256: `9004ff153d5dc3a3690254667c4f666151dcabff7ef6f705cc751134be56499c`.
 Current approved draft SHA-256: `b266f35b751a23967d99030678ffe893d72137bf1ffbc7c433db811ed1bbf085`.
@@ -114,9 +304,9 @@ Current approved draft SHA-256: `b266f35b751a23967d99030678ffe893d72137bf1ffbc7c
 | `AR-13` | **0/5** (`F F F F F`) | 2026-08-04 | Watched RED; every output found both unrelated defects but lacked the required `DD-PATTERN: NONE` line | **5/5 GREEN** | P P P P P | 2026-08-04 | 0 |
 | `AR-14` | 5/5 (`P P P P P`) | 2026-08-04 | Preservation; with identical authoring dependencies available to every arm, the complete skill catches both authoring traps. Holistic-only ablation: **0/5** (`F F F F F`), every output missed both specialized traps | **5/5** | P P P P P | 2026-08-04 | 0 |
 
-Current aggregate: **65/65 PASS**.
-Preservation controls: **45/45 PASS**.
-All four watched RED targets reach 5/5 GREEN; the `AR-14` holistic-only discrimination arm remains 0/5.
+Pre-redesign aggregate: **65/65 PASS**.
+Pre-redesign preservation controls: **45/45 PASS**.
+The four pre-redesign watched RED targets reached 5/5 GREEN; the `AR-14` holistic-only discrimination arm remained 0/5.
 Raw evaluator transcripts remain uncommitted scratch artifacts.
 
 Before freeze, cold review invalidated an earlier `AR-06` prompt because it named the three generated-case classes that the withheld rubric scored. Removing that priming exposed a second design problem: the broad real-source fixture contained many stronger unrelated defects, so outputs did not consistently surface all three classes. The active scenario replaces it with one atomic import-boundary fixture and fixes its patch metadata. A scoped re-review then exposed an over-specific rubric demand for a literal unchanged-file path even when a finding demonstrably traced the unchanged helper; the final criterion protects out-of-patch behavior instead. Every repair restarted both arms from zero, and no superseded run is counted above.

@@ -31,7 +31,7 @@ An em dash means the owning audit task has not classified the scenarios yet.
 
 | Record | Kind | Owner | Affected skills | Audit task | Status | Keep | Repair | Merge | Retire | Add |
 |---|---|---|---|---:|---|---:|---:|---:|---:|---:|
-| [adversarial-review](adversarial-review.md) | Skill | `adversarial-review` | `adversarial-review`, `concise-writing`, `lean-plan-writing`, `sweeping-stale-references`, `disciplined-development` | 7 | Audit complete; 13 current Sol-high scenarios at 5/5; 4 watched target REDs GREEN; angle ablation 0/5 | 0 | 7 | 2 | 1 | 7 |
+| [adversarial-review](adversarial-review.md) | Skill | `adversarial-review` | `adversarial-review`, `concise-writing`, `lean-plan-writing`, `sweeping-stale-references`, `disciplined-development` | 7 | Exact-hash semantic 75/75; protocol and actual renderer 70/70; affected composition 5/5, blinded comparison, cold review, final approval, and repository verification complete; staged review findings corrected and scoped re-review clean; commit and push pending | 0 | 7 | 2 | 1 | 7 |
 | [adversarial-review-loop](adversarial-review-loop.md) | Skill | `adversarial-review-loop` | `adversarial-review-loop`, `disciplined-development`; shared routing boundaries | 8, 18A | `OWN` current composition 5/5 in the final Task 18A union; historical evidence retained | 0 | 14 | 3 | 3 | 1 |
 | [concise-writing](concise-writing.md) | Skill | `concise-writing` | `concise-writing`, `adversarial-review-loop`; external `superpowers:writing-skills` dependency and distractor | 2, 17 | Audited; 665-word candidate `f763b43e…`; repaired-definition `CW-19` controls high 4/5 and low 2/5, candidate 5/5; complete affected candidate arm 145/145 GREEN; blind comparison found zero candidate material losses in 45 pairs; editorial review and final owner approval complete | 0 | 2 | 4 | 2 | 11 |
 | [disciplined-development](disciplined-development.md) | Skill | `disciplined-development` | parent orchestration; discovery and child composition remain separate | 10, 17, 18A | Current `DD-01`–`DD-09` final union 45/45; child composition separately attributed | 0 | 2 | 0 | 1 | 7 |
@@ -55,7 +55,7 @@ An em dash means the owning audit task has not classified the scenarios yet.
 | `README.md` | Universal protocol and audit index; Task 1 protocol | All | Not a scenario record | Not applicable | Active source of truth |
 | `adversarial-review-loop-scenarios.md` | Canonical loop decision definitions; `adversarial-review-loop` | `adversarial-review-loop`, `disciplined-development`, `disciplined-research` | `CS`, `T2`–`T7`, `NF`, `PW`, `XL`, `G3A`–`G3C`, `OWN`, `CE`; five reps each | Full; repaired `OWN` prompt/rubric/context frozen | `OWN` remains separately attributed composition coverage and passed 5/5 in the final Task 18A union; prior results historical |
 | `adversarial-review-loop.md` | Active loop results and preserved derivation history; `adversarial-review-loop` | `adversarial-review-loop`, `disciplined-development`, `disciplined-research`; shared routing boundaries | Fifteen owned IDs plus linked discovery and authoring routes | Full for active catalog; mixed-protocol derivation retained as history | `OWN` accepted target evidence retained; prior closure historical |
-| `adversarial-review.md` | Active review, output, enumeration, angle, durability, whole-project, generated-case, invariant-severity, pattern, necessity, and effectiveness suite plus preserved derivation history; `adversarial-review` | `adversarial-review`, `concise-writing`, `lean-plan-writing`, `sweeping-stale-references`, `disciplined-development` | `AR-01`–`AR-10` and `AR-12`–`AR-14`, five control/current reps each; historical evidence below | Full for active catalog; historical evidence remains partial | Active suite 65/65; nine preservation controls 45/45; four watched REDs GREEN; `AR-14` holistic-only ablation 0/5 |
+| `adversarial-review.md` | Active Task 22 semantic/protocol method plus pre-redesign review, output, enumeration, angle, durability, whole-project, generated-case, invariant-severity, pattern, necessity, and effectiveness history; `adversarial-review` | `adversarial-review`, `concise-writing`, `lean-plan-writing`, `sweeping-stale-references`, `disciplined-development` | Active semantic `AR-01`–`AR-08`, `AR-10`, `AR-12`–`AR-17`; pre-redesign evidence retained below | Full active definitions and exact-hash Task 22 evidence; historical evidence remains partial | Exact-hash semantic 75/75; protocol and actual renderer 70/70; affected composition, comparison, cold review, final approval, and working-tree verification complete |
 | `concise-writing.md` | Active verbosity, over-trim, routing, ownership, composition-pressure, response/file boundary, direct-invocation, broad-domain, and complex technical application suite; `concise-writing` | `concise-writing`, `adversarial-review-loop`; external `superpowers:writing-skills` dependency and distractor | `CW-01`–`CW-14` and `CW-17`–`CW-19`; repaired/new high/low controls complete; current candidate owned arm 85/85 | Full definitions, freeze hashes, per-repetition outcomes, repaired-definition control/candidate provenance, section necessity, blind comparison, rejected simplification arms, and superseded-arm isolation | Task 17 complete; affected candidate arm 145/145 GREEN; blind comparison 0 candidate losses/45 pairs |
 | `disciplined-development.md` | Active mode routing, Gates 1–5 orchestration, Principle 7 threshold, and compact derivation history; `disciplined-development` | Parent behavior; discovery and child composition separately attributed | `DD-01`–`DD-09`; separate discovery, dispatch, `OWN`, and `WER-07` ownership | Full prompts/rubrics and current focused seam fixtures; historical strict-rubric evidence preserved | Task 18A uses `DD-05`–`DD-09` for atomic iteration and retains `DD-01`–`DD-04` for broader controls/composition |
 | `disciplined-research.md` | Active project, procurement, conversational, and broad-domain grounding suite plus B1/B17 history; `disciplined-research` | `disciplined-research`; parent Principle 6 alignment | Current `DR-01`–`DR-07`; historical `B1`, `B17` retained | Full current catalog including `DR-07` response-only premise correction and Task 18 readability evidence | Task 18 complete at `6fa7d81c…`; affected Sol-high gate 95/95; active blind comparison zero candidate losses in 35 pairs |
@@ -214,6 +214,11 @@ Preserve superseded, invalidated, retired, and historical evidence below the act
 
 ## Run and scoring protocol
 
+### Task 22 status
+
+The active `adversarial-review` Task 22 suite separates semantic and deterministic protocol gates over identical response bytes; both remain independent hard gates and five Sol-high/five Sol-low controls remain separate.
+Its scenario method, projections, activation evidence, and historical boundary are owned by [the adversarial-review record](adversarial-review.md#approved-task-22-validation-method-2026-08-15-activated-2026-08-16).
+
 Record the scenario ID, run date, exact prompt and fixture, bundle commit and hash, model and reasoning effort, Codex CLI version, Superpowers version, sibling skills supplied, five per-repetition outcomes, exact missed criteria, and infrastructure errors.
 Evaluator prompts never contain or point to the rubric.
 The orchestrator manually scores every completed behavioral response against every observable criterion.
@@ -244,6 +249,10 @@ Generate five fresh immutable-control outputs and five fresh draft outputs with 
 Replace arm labels with opaque IDs before scoring.
 A separate fresh scorer receives only the withheld rubric and opaque outputs, never the control/draft mapping.
 Hash the scorer’s record before revealing the mapping, then record the scored summary and mapping; keep outputs and mapping scratch outside the repository.
+
+For a subjective comparison, A/A reuse is permitted only for exact-matching, separately generated frozen same-skill outputs with identical prompt, context, skill/dependency hashes, model, effort, and rubric.
+Use an opaque-label fresh scorer when an existing score is not independent and rubric-matched; samples from one frozen setup remain correlated evidence, not independent repetitions.
+Attribute a preference only to an observable, causal criterion owned by the skill, disclose dependence honestly, and treat isolated taste, formatting, placement, or rendering preference as diagnostic rather than an automatic regression.
 
 Task 1’s replayable isolation check ran on 2026-08-01 with a fresh `gpt-5.6-sol` high-effort scorer through the enforced transport above and no sibling skills.
 The scorer received this exact evaluator-withheld rubric: PASS only if an output states the selected decision, a causal reason, and an explicit accepted tradeoff.
@@ -294,6 +303,8 @@ Classify it as a flawed scenario/rubric, genuine skill inconsistency requiring u
 After Task 11 freezes the suite, any change to a prompt, fixture, rubric, supplied context, or protected promise invalidates that scenario’s comparison baseline.
 Before using the changed scenario, rerun five Sol-high and five Sol-low control arms and update every owning and shared record.
 A new target also requires its watched control RED before the GREEN arm.
+
+Behavior and deterministic protocol checks may share exact response bytes, but a changed behavior definition or output contract still requires fresh invalidated controls under its own contract.
 
 No skill prose may change before Tasks 1–11 establish and score the control suite, except a user-approved RED/GREEN slice required to resolve a genuine baseline inconsistency.
 Behavioral and readability edits land separately.
@@ -556,8 +567,8 @@ may instead re-adjudicate the already frozen high/low response bytes: record the
 new rubric hash, fresh scorer provenance, and every repetition outcome, and keep
 the earlier verdicts historical under their own rubric. Regenerate responses if
 the repaired criterion is not observable in those frozen artifacts.
-Current active closure contains 103 unique scenarios, or 515 five-repetition
-slots: 12 shared discovery scenarios plus 91 owned scenarios across the nine skill
+Current active closure contains 105 unique scenarios, or 525 five-repetition
+slots: 12 shared discovery scenarios plus 93 owned scenarios across the nine skill
 catalogs. This count excludes historical `LP-04` and `SSR-04` and does not
 double-count linked discovery or composition coverage in an owning skill catalog.
 Task 18A froze pre-draft targets `DISC-11` and `DR-04` plus preservation cell `DR-05`, then froze post-draft target `DR-06` for the explicitly unverified-lead branch.

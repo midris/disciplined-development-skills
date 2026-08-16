@@ -34,6 +34,18 @@ from hooks.lib.severity import parse_findings, parse_verdict
             id="file_without_line_yields_line_none",
         ),
         pytest.param(
+            "- [P1] docs/user guide.md:42: broken installation step",
+            True,
+            [{"severity": "P1", "file": "docs/user guide.md", "line": 42, "summary": "broken installation step"}],
+            id="space_containing_path_yields_full_dict",
+        ),
+        pytest.param(
+            "- [P1] C:/docs/user guide.md:42: broken installation step",
+            True,
+            [{"severity": "P1", "file": "C:/docs/user guide.md", "line": 42, "summary": "broken installation step"}],
+            id="colon_and_space_containing_path_yields_full_dict",
+        ),
+        pytest.param(
             "- [P1] counter never decremented",
             True,
             [{"severity": "P1", "file": None, "line": None, "summary": "counter never decremented"}],

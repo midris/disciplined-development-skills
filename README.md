@@ -31,11 +31,11 @@ Nine skills (each a `skills/<name>/SKILL.md`):
   parent skill; the rest are its companions. Its `hooks/` subdir holds the hook
   stack.
 - **`adversarial-review`** / **`adversarial-review-loop`** — reviewer posture, the
-  angle catalog + per-artifact selection, and the severity contract (P0/P1/P2
-  block, P3 advisory); plus the review→fix→re-review iteration cap with a
-  cold-read escape. The cap applies to cadence, Gate-5, whole-branch, and
-  external reviews; plan-execution skills retain control of their per-task
-  review loops.
+  angle catalog + per-artifact selection, the severity contract (P0/P1/P2
+  block, P3 advisory), and a bundled deterministic review-output renderer;
+  plus the review→fix→re-review iteration cap with a cold-read escape. The cap
+  applies to cadence, Gate-5, whole-branch, and external reviews;
+  plan-execution skills retain control of their per-task review loops.
 - **`disciplined-research`** — ground every factual claim in current source, not
   memory, and disclose its support.
 - **`dispatching-development-subagents`** — scope-contract + verify-every-commit
@@ -106,7 +106,7 @@ flowchart TB
     remediation. Upstream upgrades must be checked at this boundary; local
     skills must not depend on an upstream section heading or undocumented
     report shape.
-- **Python 3** — for the hook stack.
+- **Python 3** — for the hook stack and bundled skill tooling.
 - **git** — the hooks key behavior off branch / commit / fork-base state.
 - **`codex` — only for the pre-PR review gate.** The gate (`external_review.py`)
   runs `codex` against the repo (point `DD_CODEX_BIN` at it if it isn't on

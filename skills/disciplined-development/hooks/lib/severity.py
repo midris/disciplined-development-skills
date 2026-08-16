@@ -40,10 +40,13 @@ _FINDING_RE_ANY = re.compile(
 )
 
 # `<file>:<line>:<summary>` and the degraded `<file>:<summary>` (no line).
-# The path is non-greedy and excludes whitespace/colon so it stops at the
-# first delimiter; an integer line is the disambiguator between the two
-# shapes. Anything without a leading `path:` falls through to file/line None.
-_FINDING_BODY_RE = re.compile(r"^(?P<file>[^\s:]+):(?:(?P<line>\d+):)?\s*(?P<summary>.*)$")
+# Canonical `<path>:<line>:<summary>` parsing uses the final structural
+# `:<digits>:` delimiter, so paths may contain spaces and colons. The
+# degraded `<file>:<summary>` parser below retains the historical shape.
+_FINDING_BODY_WITH_LINE_RE = re.compile(
+    r"^(?P<file>\S(?:[^\r\n]*\S)?):(?P<line>\d+):\s*(?P<summary>.*)$"
+)
+_FINDING_BODY_RE = re.compile(r"^(?P<file>[^\s:]+):(?P<summary>.*)$")
 
 
 def parse_findings(text: str, line_start: bool = True) -> list[dict]:
@@ -60,8 +63,10 @@ def parse_findings(text: str, line_start: bool = True) -> list[dict]:
     emphasis around the ``[Pn]`` tag. Applies the rubric-echo guard (rejects
     ``[Pn] = ...`` and ``[Pn] (—|-|:) <severity-label> /`` shapes) so echoed
     rubric lines are excluded. The guard can drop a real finding whose summary
-    starts with ``critical|important|minor|nit /``. Parsed findings are
-    telemetry-only and never override the declared verdict.
+    starts with ``critical|important|minor|nit /``. Canonical paths may contain
+    spaces and colons; when a summary also contains ``:<digits>:`` the final
+    structural delimiter wins, so this remains best-effort telemetry. Parsed
+    findings never override the declared verdict.
     """
     rx = _FINDING_RE_LINE_START if line_start else _FINDING_RE_ANY
     out: list[dict] = []
@@ -70,7 +75,7 @@ def parse_findings(text: str, line_start: bool = True) -> list[dict]:
         if not m:
             continue
         rest = m.group("rest").strip()
-        body = _FINDING_BODY_RE.match(rest)
+        body = _FINDING_BODY_WITH_LINE_RE.match(rest)
         if body:
             line_no = body.group("line")
             out.append({
@@ -79,13 +84,22 @@ def parse_findings(text: str, line_start: bool = True) -> list[dict]:
                 "line": int(line_no) if line_no is not None else None,
                 "summary": body.group("summary").strip(),
             })
-        else:
+            continue
+        body = _FINDING_BODY_RE.match(rest)
+        if body:
             out.append({
                 "severity": m.group(1),
-                "file": None,
+                "file": body.group("file"),
                 "line": None,
-                "summary": rest,
+                "summary": body.group("summary").strip(),
             })
+            continue
+        out.append({
+            "severity": m.group(1),
+            "file": None,
+            "line": None,
+            "summary": rest,
+        })
     return out
 
 

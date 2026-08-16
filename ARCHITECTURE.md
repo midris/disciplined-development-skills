@@ -16,7 +16,8 @@ honest.
 
 Two parts, deliberately split:
 
-- **Skills** — model-facing doctrine, harness-agnostic. The actual content.
+- **Skills** — model-facing doctrine, harness-agnostic. The actual guidance is
+  Markdown; `adversarial-review` also bundles a deterministic output renderer.
 - **Hooks** — Claude Code-specific triggers that mark a moment (a tool call, a
   commit, a PR open, a session start); they never decide *what* to say. A small
   **machinery** layer (two tools + `lib/`) is the only Python the hooks need.
@@ -54,9 +55,10 @@ flowchart TB
     class TOOLS,LIB m
 ```
 
-The portable layer never calls the machinery directly except through one
-optional, gracefully-degrading instruction (attempt to log a review round when
-the project provides a command). Cadence hooks update counters and read
+The portable layer does not depend on the machinery layer. A skill may invoke
+its own bundled support script, while review logging remains one optional,
+gracefully-degrading instruction when the project provides a command. Cadence
+hooks update counters and read
 per-branch state to decide whether to nudge or block. Three production callers
 attempt review-log writes through `logging_setup.append_review`: the two review
 tools, plus the pre-PR wrapper's unresolved-command ERROR path. Only a review
