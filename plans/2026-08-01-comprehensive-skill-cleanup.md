@@ -2081,13 +2081,38 @@ Sol-high model gate in the authored software-review domain.
 **Validation scope:** integrated development group; use the complete bundle and cold
 Sol-high model gate in the authored software-review domain.
 
-- [ ] Record the immediate readability-control word count and a state/transition meaning inventory.
-- [ ] Draft the smallest coherent reorganization, show the diff, and wait for user approval.
-- [ ] Apply the approved draft and run every active loop branch plus affected composition scenarios 5/5 on Sol high.
-- [ ] Blindly compare subjective remediation outputs with the immediate readability control where the rubric requires judgment.
-- [ ] Run cold editorial and skill-writing review; show proposed fixes, wait for user approval, apply them, and restart affected scenarios.
-- [ ] Show the final skill in place and wait for user approval.
-- [ ] After approval, run repository tests and commit as `docs(skills): clean up adversarial review loop`.
+**Current Task 23 result (2026-08-16):** the exact approved 1,486-word candidate
+`0113503c…` passed its 75/75 owned/composition slice. The all-scenario blinded
+comparison was materially net-positive at 13 candidate preferences, 8 control
+preferences, and 54 equivalent pairs; causal reconciliation found no missing or
+weakened candidate rule, and no zero-loss blind gate is specified here. A fresh Sol-high reviewer
+applying `superpowers:writing-skills` returned PASS with no proposed skill change
+or restart map. The owner's subsequent in-place approval covered exact SHA
+`0113503c…`, but the first staged review correctly found that the complete active
+suite also requires fresh `DISC-01`–`DISC-12`, `CW-09`, and `CW-11` evidence.
+Those 70 shared slots now pass 70/70 at attempt 1 with zero transport errors or
+retries, making the complete active gate 145/145 against the unchanged candidate.
+The catalog omission found by that review is also corrected. The earlier approval
+remains non-final because it preceded this evidence. Fresh staged Gate 5 then
+returned PASS with no P1/P2 findings and `DD-PATTERN: NONE`; final verification
+then passed, and the owner renewed final approval for exact SHA `0113503c…`.
+Closure commit and push are authorized.
+
+- [x] Record the immediate readability-control word count and a state/transition meaning inventory.
+- [x] Draft the smallest coherent reorganization, show the diff, and wait for user approval.
+- [x] Apply the approved draft and run every active loop branch plus affected composition scenarios 5/5 on Sol high.
+- [x] Run the complete shared discovery and authoring-boundary slice so the full
+  current candidate gate reaches 145/145.
+- [x] Blindly compare subjective remediation outputs with the immediate readability control where the rubric requires judgment.
+- [x] Run cold editorial and skill-writing review; show proposed fixes, wait for user approval, apply them, and restart affected scenarios.
+- [x] Pass fresh staged Gate 5 against the complete 145/145 evidence and corrected
+  affected-skill catalog.
+- [x] After the complete 145-slot active gate and staged review pass, show the
+  unchanged final skill in place and wait for renewed user approval.
+- [x] After approval, run repository tests, the exact local-link command, and
+  `git diff --check` plus `git diff --cached --check`; commit as
+  `docs(skills): clean up adversarial review loop`, push the current branch, do
+  not open a PR, and do not remove this worktree.
 
 ### Task 24: Clean `dispatching-development-subagents`
 

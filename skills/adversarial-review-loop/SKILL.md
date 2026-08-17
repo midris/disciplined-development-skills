@@ -9,109 +9,144 @@ Apply `disciplined-research` before stating or relying on factual workflow, rule
 round, counter, owner, or next-action claims, and disclose their support
 unambiguously.
 
-## Scope and precedence
+## Scope and counters
 
-This skill governs review remediation for:
+This skill owns remediation for periodic and cadence-triggered reviews, Gate-5
+self-review, whole-branch final review, and external review.
 
-- periodic and cadence-triggered reviews;
-- Gate-5 self-review;
-- whole-branch final review;
-- external review.
+| Review context | Governing workflow |
+|---|---|
+| Individual task while `superpowers:subagent-driven-development` is reviewing it | That skill owns remediation, including its fix-round limit, reviewer selection, escalation, and breaker. Keep its completed-round record truthful. |
+| Final whole-branch review from an execution workflow | The execution skill initiates the review; this skill remediates its findings with an independent three-cycle counter and cold-read escape. |
+| Other owned context above | This skill governs remediation, reviewer reuse, the three-cycle counter, and the cold-read escape. |
 
-It does not govern a plan-execution skill's per-task review loop.
-While `superpowers:subagent-driven-development` is reviewing an individual task, follow that skill's fix-round limit, reviewer selection, escalation, and breaker rules.
-Keep that task workflow's completed-round record truthful: if its next round later
-passes, advance its recorded round while keeping the whole-branch counter separate.
-When comparing the two workflows, state the upstream task loop's next fix round,
-scoped re-review, and breaker timing; do not merely say its breaker is inapplicable
-to the whole-branch loop.
+Never combine task and whole-branch counters.
+If an upstream task's next round passes, advance that task's completed-round record; a later whole-branch review still starts its own cycle 1.
+When comparing the workflows, state the task loop's next fix round, scoped re-review, and breaker timing rather than only saying that its breaker does not apply to the whole-branch loop.
 
-When an upstream execution skill reaches its final whole-branch review, use the upstream skill to initiate the review, then use this skill to remediate its findings.
-This skill's three-cycle cap and cold-read escape govern that whole-branch remediation loop.
-
-## The pattern
-
-1. **Address** every [P0]/[P1]/[P2] finding by its *class*, not just the cited line — a reviewer samples one instance; fix only that line and the siblings return next round.
-   - **Name the class** — e.g. "stale command", "`cd` that strands the shell", "unqualified threshold claim".
-   - **Enumerate it across the branch** — grep for that pattern; run each executable doc claim.
-   - **Fix every member before re-running.**
-
-   This is `sweeping-stale-references` + `adversarial-review`'s "Enumerate every class" applied to findings. Decide each [P3]: act, or defer/dismiss with on-page rationale.
-2. **Re-run** the same reviewer against the new HEAD. This applies within
-   the review contexts owned above; an upstream per-task loop chooses its own
-   reviewer according to its rules.
-3. **Repeat** until clean (zero [P0]/[P1]/[P2]) OR you hit the iteration cap.
-
-## Iteration cap: 3
+## State machine
 
 A **cycle** is **review → class-sweep → re-run**.
-Take at most **three**.
-If the third cycle still returns [P0]/[P1]/[P2], take the cold-read escape below — do not proceed to a fourth cycle.
+Complete at most three cycles before the cold-read escape.
+For each review result, follow these transitions in order.
+Every [P3] must be acted on or deferred/dismissed with on-page rationale. At
+cycle-3 entry, the written verdict precedes that disposition.
 
-Three outcomes per cycle — new surface each round is necessary but not sufficient; the **root** decides.
-Judge the accumulated set from all rounds, not the newest — the history is a dataset, not a news feed:
-- **Scattered** — new surface, no shared root → continue (fix + re-run).
-- **Drift** — re-litigation or trivial/style nits → the cap interrupts it.
-- **Shared-root** — surface-different findings that name **one axis** → attack the root (next section).
+### 1. Route by cycle and severity
 
-Below the cap, the same *kind* of finding recurring across cycles means step 1's class-sweep was incomplete — do it now, not another single-instance round.
-At the cap, any remaining [P0]/[P1]/[P2] findings trigger the cold-read escape, never a sweep-and-continue; P3-only is clean and does not trigger the escape.
+1. If the third cycle's re-run has any [P0]/[P1]/[P2], take the cold-read escape
+   in step 6. This is the cap, not a new below-cap round: do not sweep, root-attack,
+   or start a fourth ordinary cycle. Dispose any mixed [P3] before escaping.
+2. If the third cycle's re-run has no [P0]/[P1]/[P2], apply the P3 rule if needed
+   and stop clean.
+3. If two cycles are complete and findings continue, enter step 2 before any fix,
+   dismissal, or re-run.
+4. Otherwise, zero [P0]/[P1]/[P2] is clean. With no findings, stop. For [P3]-only,
+   apply the P3 rule above, then stop.
+5. If any [P0]/[P1]/[P2] remain, apply the P3 rule to mixed findings, then go to
+   step 3.
 
-## Find the pattern, attack the root
+### 2. At cycle-3 entry, write the verdict first
 
-**Mandatory at cycle 3.** Two cycles done, findings still coming — STOP.
-Before any fix, dismissal, or re-run:
+Re-read every round's findings as one set. Before any action, write a pattern
+verdict in the loop work artifact, citing every round:
 
-1. Re-read every round's findings as one set.
-2. Write the pattern verdict in the loop's work artifact. The pattern may sit in the reviewed artifact, in your own governing text (your wording keeps generating findings), or in the reviewer (repeat themes, re-raised dismissals, blind spots). "No shared pattern" is a valid verdict — only in writing, citing each round.
-3. Attack the pattern where it lives: fix the class in the artifact, fix the wording in your text, or close a reviewer re-raise with a written ruling — don't just fix the latest findings.
+| Verdict location | Action |
+|---|---|
+| Reviewed artifact | Fix its complete class, or use step 5 for one shared invariant. |
+| Your governing text | Fix the wording; when it generated one shared invariant, continue through step 5's project-wide audit. |
+| Reviewer | Record repeat themes, re-raised dismissals, or blind spots; close a re-raised dismissal with a written ruling, not an appeasement edit. |
+| No shared pattern | Record that verdict, then use the ordinary class path without inventing an axis. |
 
-**Don't wait for cycle 3 when the axis is already visible** (two cycles in, one theme: all failure-path, all concurrency, all auth-boundary, …).
-To attack an axis in the artifact:
+After the verdict, apply the P3 rule. If blocking findings remain, complete the
+resulting action and re-run; that re-run completes cycle 3. If only [P3] or no
+findings remain, use step 1's clean branch.
+
+### 3. Judge the accumulated set below the cap
+
+Judge all rounds together, not only the newest; the history is a dataset, not a
+news feed. New surface each round is necessary but not sufficient:
+
+- **Scattered:** no shared root → use the ordinary class path.
+- **Drift:** re-litigation or trivial/style nits; no additional below-cap
+  transition is specified.
+- **Shared root:** surface-different findings violate one invariant → use the
+  root-attack path.
+
+### 4. Sweep every blocking class, then re-run
+
+For each [P0]/[P1]/[P2] class:
+
+1. **Name it** — for example, "stale command," "`cd` that strands the shell," or
+   "unqualified threshold claim."
+2. **Enumerate it across the branch** — grep for the pattern and run each
+   executable documentation claim.
+3. **Fix every member before re-running.**
+
+This applies `sweeping-stale-references` and `adversarial-review`'s "Enumerate every
+class" to findings. Keep a proven one-member class bounded. A recurring class below
+the cap proves the prior sweep incomplete; sweep it fully rather than fixing one
+more instance. Address a different blocking class by its own class—difference is
+not a dismissal or deferral lever.
+
+Re-run the same reviewer against the new HEAD. The upstream per-task skill still
+chooses its reviewer under its own rules.
+
+### 5. Attack a visible shared root below the cap
+
+Attack one axis visible across rounds without waiting for cycle 3; never infer an
+axis from one isolated finding. When two cycles are complete, step 2's verdict
+comes first.
 
 1. **Name the axis.**
-2. **Enumerate every site that could violate the invariant — project-wide, across all code paths, not just the reviewed file(s) or cited locations.** A root closed only locally resurfaces elsewhere and restarts the loop there later. Use a ready checklist if one fits (e.g. the `durability` angle in `adversarial-review`).
+2. **Enumerate every site that could violate the invariant project-wide, across all
+   code paths and languages, including uncited and unreviewed locations.** Use a
+   ready checklist if one fits, such as `adversarial-review`'s `durability` angle.
 3. **Fix the whole axis in one pass, then re-run.**
 
-A **higher-order class-sweep**: step 1 sweeps one class within a round; this sweeps a class spanning rounds and surface-different symptoms.
+One invariant whose closure removes the class is a root; a shared topic is not.
+SQL injection and an N+1 query both touch a database but violate different
+invariants, so they remain scattered.
 
-**At the cap, escape — even for a shared root.** A [P0]/[P1]/[P2] finding on the 3rd cycle's re-run *is* the cap (3 cycles done, blocking findings remain) — not a new below-cap round to attack the root in.
-Root-attack is below-cap only; at the cap a shared root still goes to the cold-read escape (which may confirm the axis and call for a redo).
+### 6. Take the cold-read escape
 
-**Don't over-fire.** A shared root = findings that violate **one invariant** (closing it removes the class) — not a shared *topic*.
-A SQL-injection and an N+1 query both "touch the database" but violate different invariants (parameterize input vs. batch queries) → scattered, continue.
+Start or dispatch a fresh review with no conversation memory, using a subagent, another model, another human, or a clean new session.
 
-## At the cap: cold-read escape
+| Cold-read outcome | Transition |
+|---|---|
+| Confirms findings | Consider redo, not another ordinary iteration. |
+| Diverges materially | Trust the cold read and stop. Remain blocked if it has any P0–P2; declare clean only if it has none. |
+| Confirms fix-forward | Continue only if productive. Reset the cap for at most three more cycles, and require another escape if blocking findings persist. |
 
-Start/dispatch a fresh review with no conversation memory.
-Use a subagent, another model, another human, or a clean new session.
+Record the escape and verdict in a work artifact—plan, spec, PR, review thread, or, for design rationale, a code comment at the decision site—so the next reader sees why iteration stopped.
+No owner or criteria for `consider redo` or `productive` is specified.
 
-- **Confirms findings** → consider redo, not another iteration.
-- **Diverges materially** → trust the cold read and stop the loop. Remain blocked if
-  that read has any P0–P2; declare clean only if it has none.
-- **Confirms fix-forward** → continue only if productive; the cap resets for three more cycles, gated by another escape if findings persist.
+## Required records
 
-Record the escape and verdict in a work artifact (plan, spec, PR, review thread, or — for design rationale — a code comment at the decision site) so the next reader sees why iteration stopped.
+| Predicate | Record |
+|---|---|
+| Upstream task round completes | Truthful completed-round record in that task workflow. |
+| Cycle-3 entry | All-round pattern verdict in the loop work artifact; include the written reviewer ruling when that branch applies. |
+| P3 is not acted on | On-page defer/dismiss rationale. |
+| Cold-read escape | Escape and verdict in a work artifact. |
 
-## What counts as "clean"
-
-Zero [P0]/[P1]/[P2] findings on the latest run. [P3]-only is acceptable advisory — surface rationale on-page if ignoring.
+This skill names no separate durable artifact for an ordinary class inventory, ordinary review result, or the independent whole-branch counter.
 
 ## Rationalizations
 
 | Excuse | Reality |
 |---|---|
-| "We did a cold read, this must be drift now." | Cycle count isn't the criterion. Apply the per-cycle test (scattered / drift / shared-root) to the accumulated set as of each cycle. |
-| "The reviewer reported one finding, so there's one thing to fix." | It sampled one instance of a class. Fix the line, siblings return next round — enumerate the class, fix all. |
-| "Each round found a new nit, so iteration is productive." | One-nit-per-round on the same class is drift in a productivity mask. Sweep the class. |
-| "I can't declare clean off my own fix, so re-run now." | Re-run after the class-sweep, not before. Re-running a one-instance fix burns the round. |
-| "New surface, so one more sweep past the cap is fine." | At the cap the escape is mandatory — sweeping is a below-cap move, not a way to skip it. |
-| "Each round found a NEW, real issue — productive, keep going." | New + real + one shared root = symptoms of an unexamined axis. Audit the axis; don't fix the Nth symptom. |
-| "These findings are unrelated — different files and symptoms." | Surface-different, root-same. Test for one axis — in the artifact, your governing text, or the reviewer's behaviour — before calling them scattered. |
-| "The reviewer will confirm green next round." | It re-probes the open axis every round; new instances keep coming until you close it. |
-| "Stepping back to audit is slower than fixing this finding." | Many reactive rounds vs one audit. Once ≥2 rounds share a root, the audit is faster. |
-| "Both findings touch X (the DB / the parser / input) — that's the axis." | A shared topic isn't a root. An axis is one invariant whose closure removes the class; findings that violate different invariants are scattered → continue. |
-| "I closed the axis in the file under review — done." | An axis left open in other files resurfaces and restarts the loop there. Audit the pattern across the whole project, not just the reviewed location. |
-| "The 3rd cycle's re-run found a new shared-root issue — that's a new round, I'll attack the root." | A finding on the 3rd re-run **is** the cap: 3 cycles done, findings remain → escape. Root-attack is below-cap only; you don't get a 4th round to attack it in. |
-| "The prior rounds are in my context — I know what they said." | Knowing ≠ analysing. Write the verdict over the full set. |
-| "This round's findings are real — fix first, step back after." | The step-back gates cycle 3. Real findings every round is what an unattacked pattern looks like. Verdict first. |
+| "We did a cold read, this must be drift now." | Cycle count is not the criterion. Apply scattered / drift / shared-root to the accumulated set in each cycle. |
+| "The reviewer reported one finding, so there is one thing to fix." | It sampled one possible class member. Enumerate the class; keep a proven one-member class bounded. |
+| "Each round found a new nit, so iteration is productive." | Recurrence of one class is drift in a productivity mask. Complete the sweep. |
+| "I cannot declare clean from my fix, so I will re-run now." | Re-run only after completing the class-sweep; a one-instance fix burns the round. |
+| "New surface permits one more sweep past the cap." | At the cap, escape is mandatory; sweeping and root attack are below-cap moves. |
+| "Every finding is new and real, so keep going." | New, real findings can share one unexamined invariant. Audit the axis instead of fixing the next symptom. |
+| "Different files and symptoms mean the findings are unrelated." | Test whether one invariant spans the artifact, your governing text, or the reviewer before calling them scattered. |
+| "The reviewer will confirm green next round." | It will keep probing an open axis until the whole axis is closed. |
+| "Auditing the root is slower than fixing this finding." | Once two rounds share a root, one whole-axis audit replaces many reactive rounds. |
+| "Both findings touch the database, parser, or input, so that is the axis." | A shared topic is not a root. Different invariants remain scattered. |
+| "I closed the axis in the reviewed file." | Audit the invariant project-wide across every path, not only the reviewed location. |
+| "The third cycle's re-run found a new shared root, so I will attack it now." | That re-run is the cap. Escape; there is no fourth in-context root attack. |
+| "The prior rounds are already in my context." | Context is not analysis. Write the verdict over the full set. |
+| "Fix this round first and step back afterward." | Cycle-3 entry gates every fix. Write the verdict first. |
