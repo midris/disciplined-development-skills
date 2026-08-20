@@ -55,6 +55,221 @@ their complete-bundle parent/research context does not transfer scoring ownershi
 
 Exact bundle and file hashes are in [the fixture manifest](fixtures/dispatching-development-subagents/README.md).
 
+## Task 24 immediate readability control and section inventory (2026-08-16)
+
+Task 24 starts from exact HEAD
+`f8ae828861a67577f30b7c79751f65ca05a52678` with an unchanged
+`dispatching-development-subagents` skill at SHA-256
+`bf616daa594a90282ccfa22af210214b30393158838b5feb9220859268f9fe54`:
+**1,551 words, 107 lines, and 10,617 bytes**.
+The immediate control is the read-only scratch root
+`/private/tmp/dd-task24-readability-control-f8ae828-v2`.
+Its 46 files include all nine current skill bodies, the active
+`review_nudge.py`, the exact owned and discovery prompts, rubrics, and project
+fixtures, the active catalog's immutable Superpowers 6.2.0 scenario inputs, and
+the currently resolved Superpowers 6.3.0 execution and parallel dependencies.
+The canonical sorted member-hash digest is
+`e4d725ecb41c914454982b883d8a4e9ceee78aff5cb9eb3be434142977828187`.
+The dispatch skill matches the working-tree preimage byte for byte; the hook is
+`61f0603d…`; the frozen 6.2.0 execution/parallel inputs are `349a08ad…` and
+`19689230…`; and the resolved 6.3.0 inputs are `8dd1b8e6…` and `19689230…`.
+The resolved execution bytes differ, so active scenario runs retain their exact
+declared input while dependency review also inspects the current upstream shape.
+
+| Current section / lines | Meaning and ownership that a cleanup must preserve | Active evidence |
+|---|---|---|
+| Frontmatter, 1–4 | Route implementation, review-fix, and parallel development delegation; make research apply to factual dispatch, handoff, and landed-prose premises | `DISC-01`–`DISC-12`, especially `DISC-06`; `DSD-01`, `DSD-11` |
+| Role, 8–15 | Define the orchestrator audience; include commit-producing ad-hoc fixers; exclude research/review subagents; own scope, disclosure, and per-commit verification without taking upstream mechanics or parent gates; prohibit nested dispatch | `DSD-01`, `DSD-02`, `DSD-05`, `DSD-09` |
+| Overview, 17–22 | Treat the returned report as a claim and the diff as ground truth; prefer minimal verified work plus honest residual disclosure | `DSD-03`, `DSD-04` |
+| Dispatch grounding and scope, 24–28 | Require research before factual dispatch claims, precise claim/source mappings, one working root, in-scope changes, governing files, locked constraints, and resolving skill locators | `DSD-01`, `DSD-06`, `DSD-11` |
+| Identity, gates, and subagent verification, 29–40 | Keep the subagent distinct from the orchestrator; forbid review/checkpoint/PR/hook-gate action and nested dispatch; require its own direct running-system evidence first, truthful outcome classification, then a final parent-gate report and stop | `DSD-02`, `DSD-07`, `DSD-09`, `DSD-10` |
+| Handoff research, 41–43 | Apply research and source mapping again to factual returned or post-hook claims rather than assuming a dispatch-only instruction carries forward | `DSD-02`, `DSD-11` |
+| Finding and batch boundary, 44–46 | Default to one verbatim finding; permit only same-kind, non-overlapping, behavior-free batches; make explicit do-not-widen language a no-extras rule while keeping reference sweeps non-authorizing | `DSD-04`, `DSD-06`, `DSD-07` |
+| Format-independent disclosure, 47–51 | Extend whatever upstream report mechanism exists with a literal no-extra disclosure or an itemized extra-change list, without depending on a heading or report shape | `DSD-01`, `DSD-07`, `DSD-08` |
+| Out-of-scope gradient, 52–54 | Allow small, safe, obvious extras only as separate disclosed commits unless an explicit or governing no-extras rule applies; treat parent signed scope as that stricter rule | `DSD-01`, `DSD-03`, `DSD-04`, `DSD-07` |
+| Verified integration handoff, 55–60 | Map handoff and landed-prose claims to precise verified support; omit unsupported rationale; report exact invocations/results; preserve orchestrator diff inspection and pre-commit reference-sweep bookkeeping | `DSD-01`, `DSD-05`, `DSD-08`, `DSD-11` |
+| Verify — orchestrator, 62–68 | Inspect every returned commit's stat and complete diff, reconcile it to scope, apply the governing disposition, and reject reports, green tests, or planned invocations as substitutes | `DSD-03`, `DSD-08` |
+| Rationalizations and Red Flags, 70–99 | Defend the same boundaries under pressure while keeping orchestrator and subagent warnings audience-specific | `DSD-02`–`DSD-04`, `DSD-07`, `DSD-09`, `DSD-10` |
+| Composition, 101–107 | Leave task execution/review and fan-out mechanics upstream; add this overlay per development subagent; keep parent Principle 4 as the routing owner | `DSD-01`, `DSD-02`, `DISC-06` |
+
+The complete Task 24 active gate is **115 slots**: all eleven owned scenarios
+five times (55) plus `DISC-01`–`DISC-12` five times (60).
+Task 18A's 45/45 changed union excludes the active `DSD-03` and `DSD-04`
+preservation rows and therefore cannot substitute for this whole-skill gate.
+Historical controls also cannot serve as the immediate readability baseline
+because their sibling-skill bytes predate the current bundle.
+
+### Current-control readability RED
+
+Five fresh `gpt-5.6-sol` high-effort, read-only, no-agent processes reconstructed
+the dispatch/return lifecycle from the unchanged immediate control.
+The evaluator request SHA-256 was `1f0ba272…`; the withheld behavioral rubric was
+`657f106d…`; every process completed at attempt 1 with no retry or transport
+error.
+The response hashes were `502cf6ba…`, `665a8eb8…`, `ca5f8bf7…`,
+`07d2f788…`, and `260077b9…`.
+
+The strict structural result is **0/5**.
+All five reconstructions omitted the explicit boundary that no-commit
+research/review subagents remain outside this development overlay, and all five
+collapsed the safe same-kind/non-overlapping/behavior-free batching allowance
+into a one-finding-only presentation.
+Their main scope, identity, gate-ordering, disclosure, safe-extra gradient,
+handoff-evidence, and per-commit verification behavior remained sound.
+This is a readability RED for reconstructing the complete contract, not an
+active-scenario regression and not evidence that the missing behavior is absent
+from the control text.
+It authorizes a structural draft only; the tracked skill remained unchanged until
+the exact proposal was approved.
+
+### Task 24 historical candidate: `cd1a36de…`
+
+The exact scratch proposal is SHA-256
+`cd1a36deebf543908d2bb881add76bbe323918fea1ff86d82c1bea6b11f054d4`:
+**1,178 words, 103 lines, and 8,247 bytes**, a reduction of 373 words from the
+immediate control without changing the frontmatter.
+Its exact current-control diff is `task-24-proposed.diff` in the ignored plan
+workspace at SHA-256 `7b51c290…`.
+
+The first contract review blocked an over-broad one-finding/no-extras predicate.
+Fix round 1 limited that branch to an explicit one-finding/do-not-widen contract
+or another no-extras rule, restored conditional direct-verification wording, and
+retained the Gate 2 signed-scope boundary; scoped re-review found all three issues
+addressed.
+A fresh reviewer applying `superpowers:writing-skills` then blocked the omitted
+general governing-project no-extras branch and an invented `narrow` batching
+qualifier.
+Fix round 2 restored the governing-project branch, identified signed scope as its
+special case, and returned batching to the exact same-kind, non-overlapping,
+behavior-free predicate; scoped writing re-review cleared the block with no new
+Critical or Important finding.
+
+Both readability-RED omissions are now salient: findings-only research/review
+subagents are explicitly outside the overlay, and the limited safe-batching
+allowance is explicit without disabling the ordinary safe-extra gradient.
+The system `skill-creator` validator reports `Skill is valid!`, and proposal
+whitespace checks are clean. The owner-approved `cd1a36de…` proposal is retained
+as historical evidence. Its full candidate gate completed with `DISC-01`–`DISC-12`
+at **60/60** and the owned DSD scenarios at **40/55**; the candidate was
+rejected and did not become the shipped skill.
+
+The exact `cd1a36de…` candidate completed all 115 fresh producer slots at a1
+with zero retries or transport errors. Deterministic discovery passed 60/60.
+Eleven fresh contextful DSD scorers completed at a1 with zero retries or scorer
+infrastructure errors; their aggregate was **40/55 PASS**:
+
+| Scenario | R1 | R2 | R3 | R4 | R5 | Result |
+|---|---|---|---|---|---|---|
+| `DSD-01` | F | P | P | F | P | 3/5 |
+| `DSD-02` | F | F | F | F | F | 0/5 |
+| `DSD-03` | F | P | P | P | P | 4/5 |
+| `DSD-04` | P | P | P | P | F | 4/5 |
+| `DSD-05` | P | P | P | P | P | 5/5 |
+| `DSD-06` | P | P | P | P | P | 5/5 |
+| `DSD-07` | P | F | F | F | F | 1/5 |
+| `DSD-08` | P | P | P | P | P | 5/5 |
+| `DSD-09` | P | P | P | P | P | 5/5 |
+| `DSD-10` | P | P | P | P | P | 5/5 |
+| `DSD-11` | F | F | P | P | P | 3/5 |
+
+The orchestrator read all 55 raw outputs against their whole-artifact rubrics.
+Three independent read-only audits covered `DSD-01`–`DSD-04`, `DSD-05`–`DSD-08`,
+and `DSD-09`–`DSD-11`; all agreed with every verdict. The DSD aggregate SHA-256
+is `450af6eb…`; score freeze, plan, and inventory are `c052f1fd…`,
+`a94377b3…`, and `32243179…`.
+
+Eleven misses were genuine salience regressions: dispatch-only research was not
+carried into the expected handoff, unsupported-rationale omission was left
+implicit, or disclosure/diff contradiction handling was omitted. The four
+`DSD-07` misses instead exposed a fixture contradiction: its prompt said only
+`one bounded implementation finding`, while the approved skill correctly says
+that a bounded finding alone does not disable the ordinary safe-extra gradient;
+the rubric silently treated it as an explicit no-extras contract.
+
+### Task 24 historical candidate: `173972c0…`
+
+The owner-approved three-sentence repair at SHA-256
+`173972c020fb95cb835ad1b6c66296932a31862489e11b4d31f01f7397feccd4` was
+**1,239 words / 106 lines / 8,678 bytes** and restored explicit
+research carry-forward, unsupported-rationale omission in both handoff and
+landed prose, and undisclosed beyond-scope reconciliation without changing
+ownership or the safe-extra gradient. A fresh repair reviewer cleared the first
+two sentences and narrowed the third from every returned change to only changes
+beyond dispatched scope. The proposal is retained as historical evidence and
+was rejected. Its full producer gate completed at **115/115**, including
+`DISC-01`–`DISC-12` at **60/60**; the orchestrator's whole-artifact DSD scoring
+was **50/55**. The genuine misses were `DSD-04` repetitions R4 and R5 and
+`DSD-07` repetitions R1, R2, and R5.
+
+The `DSD-07` prompt now states its intended explicit one-finding/do-not-widen
+premise at SHA-256
+`366f109c8570927dec22908def32f52ff3f2119c116913666a7386d021b817a2`; the
+rubric is unchanged at SHA-256
+`50e6f2c823ff942820f99c659d2f660230359d380edc9ffa99048c6c05243d86`.
+The first repaired-candidate launch root remains excluded infrastructure history:
+the workspace sandbox blocked all processes before model initialization, so it
+produced zero responses and no accepted evidence.
+
+### Task 24 focused candidate: `d0dd095f…`
+
+The focused `d0dd095f…` candidate passed the targeted `DSD-04` plus `DSD-07`
+slice at **10/10**, but was rejected because its fresh full launch stopped
+fail-fast at **28/115** after `DSD-04` scored **3/5** (R1/R4/R5 PASS and R2/R3
+FAIL for failing to retain the ordinary out-of-scope gradient). No `DISC` or
+DSD scorer, readability, or blind-comparison run was launched for this
+candidate.
+
+### Task 24 restored-control disposition and post-freeze backfill
+
+The owner approved restoring the previously known-good committed and pushed
+skill. The worktree now retains the exact pushed HEAD bytes at SHA-256
+`bf616daa594a90282ccfa22af210214b30393158838b5feb9220859268f9fe54`:
+**1,551 words, 107 lines, and 10,617 bytes**, with no retained skill diff.
+The cleanup therefore has a final-approved rejected no-change disposition;
+the candidate proposals above remain history only. On 2026-08-20 the owner
+approved the exact restored in-place skill before repository verification and
+closure bookkeeping.
+
+The clarified `DSD-07` prompt has SHA-256
+`366f109c8570927dec22908def32f52ff3f2119c116913666a7386d021b817a2`; its
+rubric has SHA-256
+`50e6f2c823ff942820f99c659d2f660230359d380edc9ffa99048c6c05243d86`, and the
+fixture manifest already records the clarification.
+The fresh restored-control root is
+`/private/tmp/task24-dsd07-control-backfill-bf616daa-r1`.
+It produced exact-attempt-one responses with zero retries or transport errors:
+Sol-high scored **5/5** and Sol-low scored **4/5** with outcomes P/F/P/P/P.
+The Sol-high preservation gate is the shipped-skill result; Sol-low records
+robustness only.
+
+The restored-control backfill provenance is: freeze
+`517cf8a6…`, plan `3cbcc3b1…`, inventory `fd72bf38…`, launch
+`ab5a3455…`, and summary `312471b4…`. The Sol-low R2 miss is retained as
+diagnostic evidence; it omits nested dispatch, specific review/checkpoint/PR/hook
+authority, the parent-gate report and stop, complete no-extras handling including
+small/safe extras and delete/overwrite, and exact disclosure.
+
+Post-approval repository verification passed on the exact restored state: the
+hook suite reported **375 passed / 3 skipped**, the installer suite reported
+**11 passed**, and the research suite reported **4 passed**. The exact local
+Markdown-link command reported **5 working / 0 staged documents**;
+`git diff --check` and `git diff --cached --check` both passed. The skill still
+matches HEAD exactly at `bf616daa…`; only the plan, validation records, fixture
+manifest, and clarified `DSD-07` prompt remain in the Task 24 working diff.
+
+Fresh external Gate 5 then ran through Anthropic Claude Code 2.1.237 with model
+`claude-opus-4-8`, high effort, `--safe-mode`, no session persistence,
+read-only plan permissions, and Edit/Write/NotebookEdit/web/Task tools disabled.
+It reviewed the whole repository, active plan and design, exact five-file diff,
+restored skill, fixture contract, immutable backfill root, and harness report.
+The review independently reconciled the skill identity, candidate dispositions,
+prompt/rubric and provenance hashes, high/low results, closure ordering, section
+anchors, links, and diff checks. It reported no P0/P1/P2 findings and ended
+`DD-VERDICT: PASS`. Its two P3 notes—slightly loose “scored producer” wording
+for a clearly rejected candidate's completion count, and no symmetric Task 24
+paragraph in the design—are advisory and do not justify changing the reviewed
+bytes. The ignored review report is SHA-256 `e7de58a2…`.
+
 ### Current parent-architecture attribution (2026-08-10)
 
 `DSD-01` and `DSD-02` remain owned here as 10 separately attributed

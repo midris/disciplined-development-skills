@@ -23,7 +23,7 @@ not-exercisable outcomes before the orchestrator-owned gate report and stop.
 |---|---|---|---|
 | `DSD-05` | Verified integration handoff versus no-commit research-subagent boundary | `5917fa9a572dd8ecce515b4728b946754bd00233655ebf0d505ef26b5ea98f33` | `fc5d43057ffdb3055d2fbd20dba98f594ac3a654807132e5b768e8651f8b0d6b` |
 | `DSD-06` | Exact project finding, files, constraints, and primary-source mapping | `dce91ca050fb7e1cc3cad40d53b2df65c37c9184dc06fb0cb38a97190d672171` | `72246ee567b9c0353817a58d85f8ec632dd6bf89c59dbcffcc14e1fe12699769` |
-| `DSD-07` | Subagent identity, bounded authority, explicit one-finding/no-extras rule, and disclosure | `317fb7a0a394e95e9fe444b3cf1694afc70eaf06e468ee9ad41c1c0c00b67a84` | `50e6f2c823ff942820f99c659d2f660230359d380edc9ffa99048c6c05243d86` |
+| `DSD-07` | Subagent identity, bounded authority, explicit one-finding/no-extras rule, and disclosure | `366f109c8570927dec22908def32f52ff3f2119c116913666a7386d021b817a2` | `50e6f2c823ff942820f99c659d2f660230359d380edc9ffa99048c6c05243d86` |
 | `DSD-08` | Diff/evidence inspection and omission of unsupported landed rationale | `a08ec853a3a904b198c66667a8df8f85e5b3c60526d217878758d01b1ceb3cda` | `9a320803e86b35e3c0b8ab339714803e227a9da0c9529f2d453068928a2ed135` |
 | `DSD-09` | No orchestrator promotion, nested dispatch, or parent-gate action | `c46e94834202e37346cf031b9ed320c719d4e3b57e005a538cc055e0acff4653` | `87af699d793adfda35cf2a74114e632893bd668cc66aa4c5c14018469da5481c` |
 | `DSD-10` | Own running-system verification before reporting the orchestrator-owned gate and stopping | `cc6f0089b32768684ac28d15d41ee73f786a46f15953d48ce8719ad5bd05e69c` | `a4420e154601b7f6f53741165680cfafc4a9e6add569fbdd703537b1c9d3ff3e` |

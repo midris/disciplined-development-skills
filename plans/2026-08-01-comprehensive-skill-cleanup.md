@@ -2123,13 +2123,37 @@ Closure commit and push are authorized.
 **Validation scope:** integrated development group; use the complete bundle and cold
 Sol-high model gate with all declared orchestration dependencies.
 
-- [ ] Record the immediate readability-control word count and a section-level meaning inventory.
-- [ ] Draft the smallest coherent reorganization, show the diff, and wait for user approval.
-- [ ] Apply the approved draft and run the complete active suite plus affected composition scenarios 5/5 on Sol high.
-- [ ] Blindly compare subjective dispatch outputs with the immediate readability control where the rubric requires judgment.
-- [ ] Run cold editorial and skill-writing review; show proposed fixes, wait for user approval, apply them, and restart affected scenarios.
-- [ ] Show the final skill in place and wait for user approval.
-- [ ] After approval, run repository tests and commit as `docs(skills): clean up development subagent dispatch`.
+**Task 24 disposition (2026-08-20):** The exact previously committed and pushed
+skill was restored at SHA-256 `bf616daa…` (1,551 words / 107 lines / 10,617
+bytes), received final in-place owner approval, and has no retained skill delta. The `cd1a36de…` candidate is historical
+and rejected after DISC 60/60 and DSD 40/55; the `173972c0…` candidate is
+historical and rejected after producer 115/115 and whole-artifact DSD 50/55;
+the focused `d0dd095f…` candidate is historical and rejected after a fail-fast
+28/115 launch. The restored-control `DSD-07` backfill is recorded in the
+validation record; Sol high is the preservation gate and Sol low is robustness
+evidence only. Post-approval repository verification passed with hooks 375
+passed/3 skipped, installer 11 passed, research 4 passed, and clean local-link
+and working/cached diff checks. Independent Gate 5 passed, the authorized
+closure commit now exists, and only the final push remains.
+
+- [x] Record the immediate readability-control word count and a section-level meaning inventory.
+- [x] Draft the smallest coherent reorganization, show the diff, and wait for user approval.
+- [x] Apply the approved draft and run the complete active suite plus affected composition scenarios 5/5 on Sol high (completed as a rejection: candidate gates failed, the exact control was restored, and its changed-fixture backfill is recorded separately).
+- [x] Blindly compare subjective dispatch outputs with the immediate readability control where the rubric requires judgment (N/A: no candidate skill delta was retained, so no blind comparison was launched).
+- [x] Run cold editorial and skill-writing review; show proposed fixes, wait for user approval, apply them, and restart affected scenarios (N/A for the shipped skill because no candidate delta was retained; completed candidate reviews remain historical evidence).
+- [x] Show the final skill in place and wait for user approval.
+- [x] After approval, run repository tests and commit as `docs(skills): clean up development subagent dispatch`.
+
+Fresh external Gate 5 used Anthropic Claude Code 2.1.237, model
+`claude-opus-4-8`, high effort, with `--safe-mode`, no session persistence,
+read-only plan permissions, and Edit/Write/NotebookEdit/web/Task tools disabled.
+The exact invocation is recorded in ignored report
+`.superpowers/sdd/2026-08-01-comprehensive-skill-cleanup/task-24-gate5-claude-report.md`
+at SHA-256 `e7de58a2…`. The whole-repository, plan-anchored review found no
+P0/P1/P2 issues and ended `DD-VERDICT: PASS`; its two P3 documentation-symmetry
+and completion-versus-score wording observations were accepted as advisory.
+The closure item is complete because the atomic commit now exists; no PR or
+worktree removal is part of Task 24.
 
 ### Task 25: Clean `disciplined-development`
 
