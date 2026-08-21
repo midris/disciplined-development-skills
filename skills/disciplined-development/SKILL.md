@@ -5,23 +5,10 @@ description: 'Use when doing development work, including starting or resuming wo
 
 # Disciplined Development
 
-**Role:** Orchestrator — parent skill governing development sessions and invoking companion skills at their owning gates and principles.
-**Owns:** the Iron Law, the five gates, the principles, and the checkpoint-selection routing table.
-**Companions own:** their discovery and procedure.
-At each active gate or principle, require its artifact or outcome, preserve its owner and any blocked transition, and invoke its required skills for procedure.
-Load every `REQUIRED SUB-SKILL` named by an active gate or principle, even when it has no action to take.
-
-## Overview
-
-Written records govern a project.
-Memory of those records erodes with time and momentum.
-This skill is an acknowledgement of that erosion and a guard against it.
-
-**Core principle:** the file wins.
-Write it down before you forget; re-read it before you act; produce evidence before you claim done.
-**Gates** force specific actions at decision boundaries.
-**Principles** are the rules they enforce.
-No discipline is skippable on grounds of size, effort, or impact.
+**Role:** Orchestrator for development sessions.
+**Owns:** the Iron Law; selection and acceptance of the five gates and eight principles; their artifacts, blocks, and authority; and the checkpoint ledger.
+**Companions own:** discovery and procedure at their routed boundaries.
+Invoke every `REQUIRED SUB-SKILL` for an active gate or principle, using a locator that resolves in the current environment, even when the child determines that no further action is due.
 
 ## The Iron Law
 
@@ -29,253 +16,211 @@ No discipline is skippable on grounds of size, effort, or impact.
 NO PROGRESS PAST A GATE WITHOUT THE ARTIFACT IT REQUIRES
 ```
 
-Each gate is fail-closed.
-The artifact must exist — in writing, in chat, or in the running system — before the next action.
+Each gate is fail-closed: its written, conversational, or running-system artifact must exist before the blocked transition proceeds.
+Size, effort, urgency, and apparent simplicity create no exemption.
 
-## Operational gates
+## Five operational gates
 
-**Gate 1 — Read before writing.**
-Re-read every applicable source.
-At session start, a phase change, or a governing-artifact change, this fresh read is
-the first action: open every supplied applicable source before producing or updating
-the next-phase artifact or taking the next-phase action.
-Reading the resulting artifact after writing it does not satisfy this gate.
-This applies to all development work, including planned work, ad-hoc changes, bug fixes, docs edits, and code reviews (giving or receiving).
-"Last session" doesn't count; memory isn't a source.
+### Gate 1 — Read before writing
 
-Sources may include:
-
-- **Governing documents:** CLAUDE.md / AGENTS.md / CONTRIBUTING.md, ARCHITECTURE, and project memory.
-- **Task sources:** the active plan, linked specs/mockups/designs, design principles, API docs, and schemas.
-- **External sources:** library documentation, version information, and evidence of API behavior.
-
-Apply Principle 6 before a factual claim is stated, repeated, transformed, or relied on in any response, interaction, action, or task.
-Unresolved source ambiguity blocks planning and later gates until it is surfaced and the governing source or decision owner resolves it.
+At session start, a phase change, or a governing-artifact change, first freshly open every supplied applicable governing, task, and external source before producing or updating the next-phase artifact or taking the next-phase action.
+Reading the result after writing it does not count, and memory from an earlier session is not a source.
+This applies to planned work, ad-hoc changes, fixes, docs edits, and reviews given or received.
+Apply Principle 6 to every factual claim or relied-on premise.
+Surface unresolved source ambiguity to the governing source or decision owner; planning and later gates remain blocked until that owner resolves it.
 If no source applies, say so before proceeding.
 
-**Gate 2 — Translate to written before coding.**
-Before implementation delegation, planning, or coding, settle scope or design through a governing source or decision owner, then capture every applicable requirement and constraint—including each intentional deferral's reason and operational consequence—in written scope.
-Rereading alone does not release implementation planning; it stays Blocked until the complete written scope and required sign-off exist.
-Apply Principle 7's evidence threshold to the proposed implementation scope and
-record accepted edges; do not broaden scope beyond evidence-required consequences.
-Gate 2 remains Blocked if either the reason or the consequence of an intentional deferral is missing from that scope.
+### Gate 2 — Translate to written before coding
+
+Before implementation planning, development delegation, or coding, the governing source or decision owner must settle scope and design and sign off complete written scope.
+The artifact records every applicable requirement and constraint, each accepted edge, and every intentional deferral's reason and operational consequence.
+Apply Principle 7's evidence threshold; do not broaden scope beyond evidence-required consequences.
 Extract visible mockup strings into the plan.
-Plan review ends with a written diff signed off on the document.
-**REQUIRED SUB-SKILL when scope or design is unsettled:** `superpowers:brainstorming`.
-**REQUIRED SUB-SKILLS for plans and specs:** `superpowers:writing-plans` + `lean-plan-writing`.
+Plan review ends with the written diff signed off on the document.
+Implementation planning, development delegation, and coding remain blocked while scope/design is unsettled, the artifact is incomplete, a deferral lacks either required part, or sign-off is absent.
 
-**Gate 3 — Verify against the running system before claiming done.** Use direct evidence appropriate to the affected interface—for example, a screenshot or DOM snapshot for UI, a live HTTP response for an API, or an actual invocation for a CLI.
-Tests passing is necessary but not sufficient — mocks lie about live shapes.
-Paste evidence in chat.
-REQUIRED SUB-SKILL: `superpowers:verification-before-completion`.
+**REQUIRED SUB-SKILL while scope or design is unsettled:** `superpowers:brainstorming`.
+**REQUIRED SUB-SKILLS when the deliverable is a plan or spec:** `superpowers:writing-plans` + `lean-plan-writing`.
 
-**Gate 4 — Accept scope, then sweep stale references before commit.**
-First confirm returned work conforms to signed scope.
-A returned change absent from signed scope is unauthorized; do not provisionally verify, reconcile, accept, or commit it.
-Reject and remove unauthorized work, or stop for decision-owner Gate 2 resolution and signed revised scope before remediation, verification, reconciliation, acceptance, or commit involving it.
-Once unauthorized work is detected, dispose of it by one of those two paths before checking any other candidate evidence.
-At a checkpoint that identifies a specific unauthorized returned change, name that
-change and choose one disposition explicitly. A generic “if conforming” condition
-does not reject, remove, or re-scope known unauthorized work.
-After the candidate conforms to signed scope, resume the positive Gate 4 path: obtain required direct Gate 3 evidence, reconcile applicable references, record the truthful `References swept:` summary, and create the one coherent green commit.
-A Gate 4 checkpoint is incomplete if it states only rejection or remediation; the same executable checkpoint must carry the conforming candidate through that positive path before later gates.
-For each accepted load-bearing fact (code symbol, doc claim, schema, spec constraint), run an effective reference sweep across every relevant repository surface and reconcile all encodings in one commit.
-An effective sweep must be capable of finding each applicable old and new encoding,
-including language-specific syntax and prose forms; a superficially broad command
-with a quote-specific or otherwise narrow pattern is not sufficient.
-For a behavior change, that one green `feat:` or `fix:` commit contains the regression test, implementation, and reconciled references.
-In the commit body, record a concise, truthful `References swept:` summary of the surfaces checked and their disposition.
-Gate 4 remains Blocked until that single commit is ready with all three parts and its durable `References swept:` record; performing the sweep without recording and committing it does not satisfy the gate.
-REQUIRED SUB-SKILL: `sweeping-stale-references`.
+### Gate 3 — Verify against the running system before claiming done
 
-**Gate 5 — Whole-repository review and smoke before PR.**
-The orchestrator owns this fail-closed sequence.
-For either review, `DD-VERDICT: PASS` means zero `[P0]`/`[P1]`/`[P2]`; `[P3]` is advisory.
+Obtain fresh direct evidence appropriate to the affected interface, such as a screenshot or DOM snapshot for UI, a live HTTP response for an API, or an actual CLI invocation.
+Passing tests alone is insufficient.
+Paste the evidence in chat; completion remains blocked until it exists.
 
-1. **Self-review** — First re-read every supplied applicable source, including the Gate 2 artifact, active plan, governing files, and linked specs; only then review the whole repository against them. Naming Gate 1 or Principle 2 without actually ordering this fresh read before review is incomplete. Remediate through `adversarial-review-loop` and re-review until PASS.
-2. **External review** — After self-review passes, obtain a fresh review over the same whole-repository scope; remediate through `adversarial-review-loop` and rerun the external review until PASS.
-3. **Smoke pass** — After external review passes, smoke affected flows and record the exact commands and results in the Gate 2 artifact.
+**REQUIRED SUB-SKILL:** `superpowers:verification-before-completion`.
 
-A smoke step passes only when those fresh results are successful; recording a failed
-or unresolved result does not permit branch finishing.
+### Gate 4 — Accept scope, sweep references, then commit
 
-Remediation invalidates affected later review or smoke evidence; restart from the earliest affected stage.
-At the pre-PR checkpoint, self-review is the discovery action for an outside-diff discrepancy: run it and record the blocking finding before scope resolution or remediation, even when checkpoint context already flags the potential issue.
-When a Gate 5 finding requires a code change, the earliest affected path is signed Gate 2 scope (when scope changes), expected RED, code remediation, Gate 3 direct verification, and Gate 4 reconciliation/green commit before Gate 5 self-review starts again. Scope-record repair is not code remediation: no production remediation edit may precede the observed expected RED.
-The parent coordinates that restart and retains every gate, but parent-gate ownership
-does not transfer implementation: the applicable remediation-method owner performs
-the fix.
-A standalone or periodic whole-repository review is not Gate 5 unless it is the pre-PR Gate 5 checkpoint.
+First inspect returned work against signed scope.
+Do not provisionally verify, reconcile, accept, or commit an unauthorized returned change.
+Reject and remove it, or stop for decision-owner Gate 2 resolution and signed revised scope before any remediation or positive-path action involving it.
+When the checkpoint identifies a specific unauthorized change, name it and choose one disposition explicitly before checking other candidate evidence.
 
-All three must pass before branch finishing; PR creation then waits for the orchestrator or user to invoke `superpowers:finishing-a-development-branch`.
-Reviewers emit review verdicts; only the orchestrator or user accepts gate passage, performs the smoke pass, invokes branch finishing, or opens the PR.
+After the candidate conforms, complete the remaining Gate 4 steps before moving to any later gate:
 
-A development subagent may implement only bounded remediation under Principle 4.
-It may not run or gather either review, accept gate passage, perform the smoke pass, invoke branch finishing, or open the PR.
-It reports any due gate action and stops.
+1. Obtain the required Gate 3 evidence.
+2. Invoke `sweeping-stale-references` and reconcile applicable references.
+3. Retain its truthful child-owned `References swept:` artifact.
+4. Prepare one coherent commit.
 
-`adversarial-review-loop` owns Gate 5 remediation; the applicable execution skill owns per-task review loops.
+For a behavior change, that one coherent green `feat:` or `fix:` commit contains the regression test, implementation, and reconciled references.
+Gate 4 remains blocked until all four steps are complete.
+At a checkpoint involving unauthorized work, the checkpoint artifact must include both:
 
-REQUIRED SUB-SKILLS: `superpowers:requesting-code-review` + `adversarial-review` + `adversarial-review-loop`.
-REQUIRED SUB-SKILL before opening PR: `superpowers:finishing-a-development-branch`.
+- the chosen disposition; and
+- the complete conforming-candidate continuation through steps 1–4.
 
-## Principles
+Stopping after rejection or remediation, or omitting the durable `References swept:` artifact, is incomplete.
 
-**1. Write it down, don't remember it.**
-Verbal scope, design decisions, requirements, and plan changes go into a file the moment they're agreed.
-Conversation is not a contract; the file is.
+**REQUIRED SUB-SKILL:** `sweeping-stale-references`.
 
-Flip task checkboxes in active plans in the same commit where the task is completed.
+### Gate 5 — Whole-repository review and smoke before PR
 
-When the write-down includes an intentional descope, deferral, shortcut, exception, or design choice over a defensible alternative, any necessary rationale belongs on-page too — not only in chat.
-Use `writing-explicit-rationale` to determine what, if anything, needs to be written down.
-REQUIRED SUB-SKILL: `writing-explicit-rationale`.
+The orchestrator owns this pre-PR sequence and records one completion/acceptance path in the Gate 2 artifact:
 
-**2. Re-read, don't recall.**
-At session start and whenever work changes phase or governing artifact, open the actual files relevant to the next action.
-Plans drift; context decays.
+1. Freshly reread every supplied applicable source, including the Gate 2 artifact, active plan, governing files, and linked specs.
+2. Self-review the whole repository against them; remediate and re-review until PASS.
+3. After self-review passes, obtain a fresh external review over the same whole-repository scope; remediate and rerun it until PASS.
+4. After external review passes, smoke affected flows and record the exact successful commands and results.
+5. Invoke `superpowers:finishing-a-development-branch`.
+6. Only then open the PR.
 
-**3. Obey what's written; surface what isn't.**
-If a guideline says "do X," do X.
-Don't decide this case is the exception.
-Violating the letter is violating the spirit.
-Surface unclear or conflicting guidance to the user — do not silently resolve.
+For this parent gate, PR creation waits for invocation—not completion—of branch finishing.
+
+For either review, PASS means zero `[P0]`/`[P1]`/`[P2]`; `[P3]` is advisory and nonblocking, with disposition owned by `adversarial-review-loop`.
+A failed or unresolved smoke result does not pass.
+Remediation invalidates affected later review or smoke evidence and restarts the sequence at the earliest affected stage.
+At this checkpoint, whole-repository self-review must first discover and record an outside-diff discrepancy before scope resolution or remediation, even when the checkpoint context already flags it.
+For a finding requiring code change, restart at signed Gate 2 scope when scope changes, then expected RED, code remediation, Gate 3 evidence, Gate 4 reconciliation/green commit, and Gate 5 again.
+The parent coordinates the restart and retains every gate.
+Every executable restart record names the applicable remediation-method owner as the fixer; reviewers emit only findings and verdicts.
+A standalone or periodic whole-repository review is not Gate 5 unless it is this pre-PR checkpoint.
+
+Only the orchestrator or user accepts gate passage, performs smoke, invokes branch finishing, or opens the PR.
+A development subagent may implement bounded remediation under Principle 4, but it reports any due parent gate and stops.
+`adversarial-review-loop` owns cadence and whole-repository remediation; the active execution skill owns per-task review remediation; the reviewer owns neither.
+
+**REQUIRED SUB-SKILLS:** `superpowers:requesting-code-review` + `adversarial-review` + `adversarial-review-loop`.
+**REQUIRED SUB-SKILL before opening the PR:** `superpowers:finishing-a-development-branch`.
+
+## Eight principles
+
+### 1. Write it down, don't remember it
+
+Record agreed requirements, scope, design decisions, plan changes, completion, and acceptance in the durable project file.
+Flip an active-plan task checkbox in the same commit that completes the task.
+When the record includes an intentional descope, deferral, shortcut, exception, or choice over a defensible alternative, use `writing-explicit-rationale` to decide whether durable rationale is needed and where it belongs.
+
+**REQUIRED SUB-SKILL:** `writing-explicit-rationale`.
+
+### 2. Re-read, don't recall
+
+At every Gate 1 lifecycle trigger, open the actual files relevant to the next action; the Gate 1 block applies until then.
+
+### 3. Obey what's written; surface what isn't
+
+Follow clear governing text.
+Surface unclear or conflicting meaning to the user or decision owner; interpretation, technical evaluation, remediation, and implementation remain blocked until that owner resolves it.
 Approval of one decision does not authorize adjacent changes.
-Includes scope-ambiguous prompts: "our X" vs "X in general" — flag it or check both, don't pick silently.
+For scope-ambiguous prompts such as “our X” versus “X in general,” surface the ambiguity or check both meanings; never choose silently.
 
-**4. Carry the discipline into subagent dispatches.**
-Subagents don't auto-load skills.
-Every dispatch prompt contains this reload contract:
-- **Parent:** Load `disciplined-development` before work; if direct skill loading is unavailable, read `.claude/skills/disciplined-development/SKILL.md` first and follow it as binding guidance.
-- **Governing sources:** Name the files and require the subagent to re-read them before acting and again before reporting completion.
+### 4. Carry the discipline into development-subagent dispatches
 
-Gate summaries do not substitute for loading the skill.
-Pick the model based on task complexity.
-Dispatch a crisp scope contract.
-When work returns, inspect the actual diff against that contract — the report is not the diff.
-Complete the active execution skill's task-review loop at its governing boundary before accepting the work.
+The parent decides whether and what bounded work to delegate and selects model capability based on task complexity.
+For every development-subagent dispatch, invoke `dispatching-development-subagents` through an executable locator and follow its dispatch, scope, handoff, and verification method; merely naming or summarizing the child is insufficient.
+The orchestrator retains every parent gate and acceptance decision and inspects the actual returned diff against signed scope before accepting it.
+A development subagent implements assigned work; when a parent gate is due, it reports that gate to the orchestrator and stops.
 
-Principle 8 and Gate 5 are for the orchestrator, not the subagent.
-Tell the subagent not to dispatch its own subagents or act on hook nudges (review / checkpoint / PR); it reports a due gate and stops.
+**REQUIRED SUB-SKILL:** `dispatching-development-subagents`.
 
-REQUIRED SUB-SKILL: `dispatching-development-subagents`.
+### 5. Test first for behavior changes
 
-**5. Test-first for behavior changes — TDD non-negotiable.**
-Production behavior editing remains blocked until a test has been written, run, and observed failing for the expected missing behavior.
-The test and implementation land together in one green `feat:` or `fix:` commit.
-Exceptions require user approval: throwaway prototypes, generated code, and static configuration values—not schema or behavior changes.
+Production behavior editing remains blocked until a regression test has been written, run, and observed failing for the expected missing behavior.
+The test and implementation land together in the Gate 4 green `feat:` or `fix:` commit.
+Only the user's explicit approval permits these exceptions: throwaway prototypes, generated code, or static configuration values—not schema or behavior changes.
 
-REQUIRED SUB-SKILL: `superpowers:test-driven-development`.
+**REQUIRED SUB-SKILL:** `superpowers:test-driven-development`.
 
-**6. Ground every factual claim before you state, repeat, transform, or rely on it, and disclose its support.**
-**Required outcome:** Every factual claim is verified from the best available source before it is stated, repeated, transformed, or relied on. The accompanying response or durable record maps each claim unambiguously to that support.
-The parent owns selecting this checkpoint and keeping the dependent transition
-blocked. Assign the entire source-work ownership bundle—source selection and
-ranking, acquisition, verification, and support disclosure—to
-`disciplined-research`; naming only some of those duties is incomplete.
-Apply `disciplined-research` in full; merely loading or naming it is not enough.
-REQUIRED SUB-SKILL: `disciplined-research`.
+### 6. Ground every factual claim and disclose its support
 
-**7. Keep it simple — add complexity only when evidence demands it.**
-- Build to satisfy the requirement. Don't over-engineer.
-- Don't build for hypothetical futures. Don't prematurely optimize. Don't prematurely abstract (rule of three).
-- Generate absent, malformed, and out-of-scale cases during analysis, but implement only those required by contract, reachable from accepted input, observed in use, or necessary to make an invariant robust; record the rest as accepted edges.
-- A fragile or unstated invariant is not a deferrable edge case. Fix it by construction — that's the simpler design.
-- When iteration keeps surfacing new findings, remove layers — don't add more.
+Before any factual claim or premise is stated, repeated, transformed, or relied on in any response, interaction, action, or task, select this principle and keep every dependent transition blocked.
+Every claim must be verified from the best applicable source and support-mapped in the accompanying response or durable record.
+Every checkpoint that selects Principle 6 records both ownership seams: parent—selection and dependent block; `disciplined-research`—the complete source-work bundle (source selection/ranking, acquisition, verification, support disclosure).
+An omitted or partial seam is incomplete.
 
-Reviewer-side counterpart lives in `adversarial-review`.
+**REQUIRED SUB-SKILL:** `disciplined-research`.
 
-**8. Review periodically and catch problems early.**
+### 7. Add complexity only when evidence demands it
+
+Generate absent, malformed, and out-of-scale cases during analysis.
+Implement only cases required by contract, reachable from accepted input, observed in use, or necessary to make an invariant robust; record the rest as accepted edges.
+A fragile or unstated invariant is not a deferrable edge: fix it by construction.
+Choose the smallest sufficient action, avoid speculative configuration or abstraction, and remove layers when iteration keeps surfacing findings.
+The reviewer-side counterpart lives in `adversarial-review`.
+
+### 8. Review periodically and catch problems early
+
 Run adversarial review at chunk boundaries and after roughly 5 commits or 200 net lines since the last clean review.
-If local automation sets a stricter cadence, follow it; otherwise self-trigger.
-A dispatched subagent never runs this review itself — not even to gather findings.
-It reports that review is due and stops; a hook nudge or a hit cadence threshold doesn't change that.
-Cadence and whole-branch review remediation use `adversarial-review-loop`.
-Per-task review during a plan-execution workflow uses that execution skill's own remediation loop.
-REQUIRED SUB-SKILLS: `superpowers:requesting-code-review` + `adversarial-review` + `adversarial-review-loop`.
+Follow stricter local automation; otherwise self-trigger.
+A development subagent never performs or gathers this review; it reports the due gate to the orchestrator and stops.
+`adversarial-review-loop` owns cadence and whole-repository remediation, while the active execution skill owns per-task review remediation.
+Prior per-task rounds do not seed the whole-repository counter; if its third completed cycle remains blocking, take its child-owned cold-read escape rather than the per-task breaker.
 
-## Select gates and principles at each checkpoint
+**REQUIRED SUB-SKILLS:** `superpowers:requesting-code-review` + `adversarial-review` + `adversarial-review-loop`.
+
+## Route each checkpoint
 
 Classify each independent item in this ledger:
 
 | Independent item | Mode/checkpoint | Status | Due gates/principles | Artifact | Destination | Blocked transition | Owner |
 |---|---|---|---|---|---|---|---|
 
-Status: **Selected** due; **Blocked** by prerequisite; **Satisfied** accepted artifact exists; **Retained** evidence binds.
+Use **Selected** when due, **Blocked** when a prerequisite is missing, **Satisfied** when its artifact is accepted, and **Retained** when existing evidence still binds.
+Mode cues nominate candidates; section predicates decide what is due now, and later gates are not due.
+Every Selected row carries the section's artifact, destination, blocked transition, and owner.
 
-Mode cues nominate candidates; select only through matching predicate/section triggers, never re-adding conditional items:
-
-| Observable state | Classification |
+| Observable state | Select now |
 |---|---|
-| Sources for the next action are unread | Gate 1 is Selected; that action is Blocked. |
-| Session start, phase change, or governing-artifact change | Principle 2 is Selected until files are opened. |
-| Creating/updating a requirement, scope, decision, rationale, plan-change, completion, or acceptance record | Principle 1 is Selected until recorded. |
-| A factual claim will be stated, repeated, transformed, or relied on in a response, interaction, action, or task | Principle 6 is Selected until every claim is verified and the accompanying response or durable record maps it to support. |
-| Unresolved governing meaning | Principle 3 is Selected; surface the conflict; interpretation, technical evaluation, remediation, and implementation are Blocked until the decision owner resolves the meaning. |
-| Clear governing meaning; unresolved design choice | Principle 3 is not Selected; surface options to owner; Gate 2 stays Blocked. |
-| An independent implementation item lacks settled, signed scope | Gate 2 is classified for each independent implementation item: Selected after its choice settles, otherwise Blocked. |
-| An established behavior change reaches its pre-edit boundary | Principle 5 is Selected until expected RED; planned, conditional, or unsettled work does not select it. |
-| Deciding how an actual requirement, edge, or added complexity affects work | Principle 7 is Selected until its evidence-based consequence is recorded. |
-| Review cadence or a Gate 5 checkpoint | Principle 8 is Selected only at that predicate. |
+| Sources for the next action are unread | Gate 1; block that action. |
+| Session, phase, or governing-artifact boundary | Principle 2 until relevant files are open. |
+| Creating or updating a requirement, scope, decision, rationale, plan change, completion, or acceptance record | Principle 1 until recorded. |
+| A factual claim or premise will be stated, repeated, transformed, or relied on | Principle 6 until the complete support-mapped outcome exists. |
+| Governing meaning is unresolved | Principle 3; block interpretation, technical evaluation, remediation, and implementation through owner resolution. |
+| Governing meaning is clear but a design choice is unresolved | Do not select Principle 3; surface options and keep Gate 2 Blocked. |
+| An implementation item lacks settled, signed scope | Gate 2 for that item: Blocked until settled, then Selected until the signed artifact exists. |
+| An established behavior change reaches its pre-edit boundary | Principle 5 until expected RED; planned, conditional, or unsettled work does not select it. |
+| Deciding how an actual requirement, edge, or complexity affects work | Principle 7 until its evidence-based consequence is recorded. |
+| Review cadence or the pre-PR checkpoint | Principle 8; select Gate 5 only for the pre-PR checkpoint. |
 
 | Mode | Positive checkpoint cues |
 |---|---|
-| Brainstorming | Gate 1; Principles 1/2/6/7; evidence-grounded options; decision owner selects; Gate 2 per settled item; implementation planning and coding stay Blocked until owner selection and signed written scope. |
-| Plan writing | Gates 1–2; Principles 1/2/6/7 through signed scope; reread requirements first, evidence-ground the proposed scope and record accepted edges, then obtain sign-off; implementation planning, coding, and development delegation stay Blocked until that complete written plan diff is signed off. |
-| Implementation (sequential) | Gates 1–5; Principles 1/2/5/6/7/8 at predicates. |
-| Implementation (parallel, independent only) | Sequential cues; Principle 4 per bounded dispatch; implementation planning, dispatch, and coding for each item stay Blocked until applicable sources are reread and that item's decision is settled in signed scope. |
-| Debugging | Gate 1 contract reread and Gate 2 written fix scope block implementation planning; observed RED additionally blocks editing; Gates 3–4 follow their sections; Principles 1/2/5/6. |
-| Code review (giving) | Gate 1; Principles 2/3/6/7; reject or remove unsupported added complexity unless a contract, observation, or invariant meets Principle 7; Principle 8 only by its predicate. |
-| Code review (receiving) | Gate 1; Principles 2/3/6; unresolved governing meaning blocks action through owner resolution. |
-| Documentation or specification work | Gates 1/4; Principles 1/2/3/6 and Principle 7; limit edits to evidence-required consequences before reconciliation and commit. |
+| Brainstorming | Gate 1 and Principles 1/2/6/7; evidence-ground options without selecting for the owner; Gate 2 per settled item; block implementation planning and coding until owner selection and signed scope. |
+| Plan writing | Gates 1–2 and Principles 1/2/6/7; reread requirements, evidence-ground scope, record accepted edges, and obtain sign-off; block implementation planning, coding, and development delegation until the complete plan diff is signed. |
+| Implementation (sequential) | Gates 1–5 and Principles 1/2/5/6/7/8 at their predicates. |
+| Implementation (parallel, independent only) | Sequential cues plus Principle 4 per bounded dispatch; block each item's implementation planning, dispatch, and coding until its sources are reread and its decision is settled in signed scope. |
+| Debugging | Gate 1 contract reread; Gate 2 written fix scope blocks implementation planning; expected RED additionally blocks editing; Gates 3–4 follow; Principles 1/2/5/6. |
+| Code review (giving) | Gate 1 and Principles 2/3/6/7; reject or remove complexity unsupported by Principle 7; Principle 8 only at its predicate; preserve reviewer, remediation, and gate-acceptance owners. |
+| Code review (receiving) | Gate 1 and Principles 2/3/6; unresolved governing meaning blocks interpretation or technical action through owner resolution. |
+| Documentation or specification work | Nominate lifecycle candidates in order: Gate 1; for a plan/spec deliverable, Gate 2 and the plan/spec children; Gate 4 at the pre-commit boundary. For a plain doc edit, omit Gate 2 and the plan/spec children unless implementation scope is also being created, leaving Gate 1 then Gate 4 as candidates. Select each gate and child only at its section predicate. Both branches nominate Principles 1/2/3/6/7 and limit edits to evidence-required consequences before reconciliation and commit. |
 
-Each Selected row names its section-defined artifact, destination, owner, and Blocked transition; later gates are not due.
-For documentation or specification work, the artifact and block must explicitly
-limit edits to evidence-required consequences; naming Principle 7 or an accepted
-scope without stating that behavioral limit is incomplete.
-For a Principle 6 row, ownership is incomplete unless it states both seams: the
-parent retains the dependent block, while `disciplined-research` owns the entire
-source-work bundle above. Do not abbreviate that owner assignment to only
-verification, disclosure, or another subset.
-For Principle 4, the decision owner settles each unresolved design choice before its
-scope is signed. The orchestrator selects model capability, scopes each dispatch,
-verifies returned work, retains parent gates, and controls delegation; a bounded
-subagent implements assigned work, reports a due parent gate and stops.
-At a Gate 5 checkpoint, select Gate 5 and Principles 1, 2, 6, and 8.
-Its first parent action is the fresh Gate 1/Principle 2 reread required by the Gate 5
-self-review step; the review cannot be ordered before that action.
-Its Gate 2 destination owns one completion/acceptance record ordered self-review → external review → smoke → branch-finishing invocation → PR.
-Each review passes at zero P0/P1/P2; P3 is advisory; the remediation-method owner resolves findings.
-Reviewers emit verdicts; only the orchestrator or user accepts gate passage, performs smoke, invokes branch finishing, or opens the PR; PR stays Blocked until the branch-finishing workflow is invoked, not until that workflow completes.
-`adversarial-review-loop` owns remediation for cadence and whole-repository review;
-the active execution skill owns its per-task review remediation. The reviewer owns
-neither remediation path.
+## Prose route
 
-## Common parent rationalizations
+For reader-facing prose in project files or durable project records, invoke `concise-writing` and leave its method child-owned.
+For response-only prose, invoke it unless the user explicitly requests that the response itself be a detailed explanation.
 
-| Excuse | Reality |
-|--------|---------|
-| "I read it / wrote it / searched it last session." | Cross-session memory is stale. Re-read. |
-| "Last N tasks went fine." | Survivorship reasoning. Re-read anyway. |
-| "I'll remember to do X later." | Write it now. Memory rationalizes. |
-| "This case is different / smaller / simpler / trivial." | Every applicable gate and principle still applies; size is no exemption. |
-| "Bug fix too small for TDD." | Write the failing test first. |
-| "Spirit, not letter." | There is no separate spirit. Follow the letter. |
-| "A governing source requires it, so it is automatically in the current scope." | A clear requirement outside signed scope needs the decision owner's Gate 2 resolution before coding. |
-| "User wants speed." | Discipline now. Throwaway is slower. |
-| "Tests pass." | Mocks lie. Run Gate 3. |
-| "A separate RED or `test:` commit still proves test-first." | Editing order proves test-first; test and implementation still land together in one green `feat:` or `fix:` commit. |
-| "It's not behavior, it's presentation." | Visual is observable. Test anyway. |
-| "Future gate will catch it." | No gate ahead does this. Run it now. |
-| "The reviewer would approve it." | Don't preempt their judgment. |
-| "Plan says open the PR; smoke done." | Gate 5 has three steps. Plan doesn't override the gate. |
-| "External code review will catch it." | That's Step 2. Skipping Step 1 = loop-of-fixes at chunk scale. |
-| "I'll review at end of chunk." | Run at cadence — 5 commits or 200 lines, whichever first. |
-| "Write a function for this." | Don't prematurely abstract — wait until the pattern repeats. |
-| "Better safe than sorry." | Complexity has its own bug surface. Keep it simple. |
-| "Just one more layer." | Layers compound. Step back at two. |
-| "Defense in depth." | Only where evidence justifies it. |
-| "Every case must be handled." | Implement cases that meet Principle 7's contract / reachability / observation / invariant threshold. Record the rest as accepted edges. |
-| "That input can't happen — no caller passes it." | A crash or wrong output on a representable input is a defect, not an edge case. Fix by construction. |
-| "Make it configurable, just in case." | Configuration is API surface. Add for real use cases, not hypotheticals. |
-| "Reviewer keeps finding issues — keep iterating." | Findings accrete because the artifact has too many surfaces. Remove layers; don't add more. |
+**REQUIRED SUB-SKILL at either active prose boundary:** `concise-writing`.
+
+## Common rationalizations
+
+| Excuse | Required response |
+|---|---|
+| “I read it last session.” | Freshly reopen the applicable sources at Gate 1. |
+| “This is too small or urgent for the full process.” | Select every predicate that applies; size and urgency do not release a block. |
+| “The requirement is clear, so it is already in scope.” | Clear governing meaning still needs decision-owner Gate 2 scope before coding when it is outside signed scope. |
+| “Tests pass, so verification is done.” | Tests do not replace Gate 3 direct evidence. |
+| “A separate red test commit proves test-first.” | Observe expected RED before editing, then land test and implementation together in the green behavior commit. |
+| “The final external review can replace self-review.” | Gate 5 requires both reviews in order. |
+| “Every edge must be implemented.” | Apply Principle 7's contract, reachability, observation, and robust-invariant threshold; record the rest as accepted edges. |
+| “The input cannot happen because current callers avoid it.” | Determine whether it is reachable accepted input or exposes a demonstrably fragile invariant. Fix it by construction only in those cases; otherwise apply Principle 7's full threshold and record the accepted edge. |
+| “One more layer is safer.” | Added surface needs evidence; choose the smallest sufficient action. |

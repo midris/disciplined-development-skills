@@ -73,8 +73,8 @@ as deltas over its base skills.
 
 ```mermaid
 flowchart TB
-    DD["disciplined-development<br/>orchestrator — Iron Law · 5 gates · principles · mode table"]
-    subgraph COMP["companions — dispatched at gates / by mode"]
+    DD["disciplined-development<br/>orchestrator — Iron Law · 5 gates · principles · checkpoint router"]
+    subgraph COMP["companions — dispatched at active routed boundaries"]
         direction LR
         REV["adversarial-review<br/>+ loop"]
         AUTH["lean-plan-writing<br/>writing-explicit-rationale<br/>concise-writing"]
@@ -95,7 +95,7 @@ flowchart TB
 
 | Role | Skills | Owns |
 |---|---|---|
-| Orchestrator | `disciplined-development` | the Iron Law, 5 gates, principles, mode table |
+| Orchestrator | `disciplined-development` | the Iron Law, 5 gates, 8 principles, checkpoint-selection router |
 | Review | `adversarial-review`, `adversarial-review-loop` | reviewer posture + angle catalog; the review→fix→re-review loop |
 | Authoring discipline | `lean-plan-writing`, `writing-explicit-rationale`, `concise-writing` | plan density; rationale-on-page; prose tightening |
 | Grounding | `disciplined-research`, `sweeping-stale-references` | claims in current source; reconcile every stale reference |
@@ -130,12 +130,11 @@ The gates are action-forcing boundaries; behind them sit eight standing
 | 7 | Keep it simple |
 | 8 | Review periodically |
 
-A **mode-emphasis table** then routes which companions activate per mode —
-brainstorming, plan writing, implementation (sequential / parallel), debugging,
-code review (giving / receiving), doc editing. Required sub-skills are marked
-explicitly in the active gates and principles; the mode table names methodology
-skills. The full gate text, principle bodies, the gate↔principle mapping, and the
-routing table are in
+A checkpoint-selection router classifies each independent item from observable
+state. Eight mode cues — brainstorming, plan writing, implementation (sequential /
+parallel), debugging, code review (giving / receiving), and documentation or
+specification work — nominate candidates; section predicates decide which gates,
+principles, artifacts, blocks, and companion routes are due now. The full contract is in
 [`disciplined-development/SKILL.md`](skills/disciplined-development/SKILL.md).
 
 ## Sub-flows — skills in composition
@@ -156,10 +155,13 @@ leans on; the skills carry the detail.
   goes through
   [`dispatching-development-subagents`](skills/dispatching-development-subagents/SKILL.md):
   scope contract out, every returned commit diffed back.
-- **Edit docs / specs** — [`concise-writing`](skills/concise-writing/SKILL.md) +
+- **Edit docs / specs** — reader-facing prose routes through
+  [`concise-writing`](skills/concise-writing/SKILL.md) +
   [`writing-explicit-rationale`](skills/writing-explicit-rationale/SKILL.md),
-  with a [`sweeping-stale-references`](skills/sweeping-stale-references/SKILL.md)
-  pass when a load-bearing fact moves.
+  then [`sweeping-stale-references`](skills/sweeping-stale-references/SKILL.md)
+  at Gate 4. Plan/spec deliverables also pass Gate 2 through
+  `superpowers:writing-plans` + [`lean-plan-writing`](skills/lean-plan-writing/SKILL.md);
+  plain doc edits retain the Gate 1/Gate 4, evidence-bounded path.
 - **Review** — the deep dive below.
 
 ## The review model

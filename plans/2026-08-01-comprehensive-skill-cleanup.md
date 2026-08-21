@@ -2183,46 +2183,94 @@ Sol-high model gate across the authored development modes.
 - [ ] Show the final parent and any changed companion skills in place and wait for user approval.
 - [ ] After approval, run repository tests and commit as `docs(skills): clean up disciplined development`.
 
-### Task 26: Run the final Sol-high suite gate
+**2026-08-21 validation redesign ruling:** The owner approved pausing the current
+Task 25 wording loop and rebuilding validation around each skill's core identity.
+The current four-file tracked candidate remains intact and uncommitted while Tasks
+26–27 compare the original `main` skill forms with the current worktree forms. No
+additional skill wording change is authorized by this ruling.
+
+### Task 26: Rebuild the charter-first core validation suite
+
+**Files:**
+
+- Modify: `plans/specs/2026-08-01-comprehensive-skill-cleanup-design.md`
+- Modify: `plans/2026-08-01-comprehensive-skill-cleanup.md`
+- Modify: `skill-validation/README.md`
+- Modify: the nine per-skill validation records and affected prompt/rubric fixtures
+- Modify if retained: `skill-validation/skill-discovery.md` and shared composition records
+- Create: one charter/invariant inventory if the per-skill records cannot remain the clear single source
+- Create or modify: deterministic validation-result processing and its focused tests
+- Create: writable isolated fixtures only for promises that claim performed work
+
+**Produces:** A compact release-blocking suite whose every criterion maps to one of
+the nine approved charters, plus separate protocol, readability, task-fidelity, and
+infrastructure ledgers. Existing scenarios are retained, repaired, merged, or
+retired on that basis; historical evidence is preserved.
+
+- [x] For each skill, record its one-sentence charter, no more than four indispensable observable invariants, ownership boundary, and whether any exact output has a deterministic producer or consumer.
+- [x] Map every active scenario and rubric criterion to a charter invariant; mark unmapped criteria as protocol, readability, task/fixture fidelity, historical diagnostic, or retire.
+- [x] Select the smallest core portfolio: positive application, pressure/rationalization, and boundary/ownership coverage per companion; focused gate cases plus one integrated invalidation/restart lifecycle for the parent.
+- [x] Identify every protected promise that claims actual searching, editing, verification, commit, or other state change; replace read-only narration as proof with an isolated executable fixture and independent state assertions.
+- [x] Separate `adversarial-review` semantic scoring from deterministic renderer/checker scoring and retain the production terminal `DD-VERDICT` parser as its own protocol boundary.
+- [x] Write focused failing automated tests for result classification, exact-protocol isolation, independent executed-state verification, arm provenance, repetition counts, and fail-closed partial results.
+- [x] Run the focused tests and confirm each fails for the intended missing behavior before implementing the rebuilt result processor or harness path.
+- [ ] Implement only the processing and fixture support needed by the approved core portfolio, then run the focused and existing relevant harness tests green.
+- [ ] Run fresh read-only specification and quality reviews of the rebuilt contracts and harness; repair validation defects without changing skill wording.
+- [ ] Freeze the exact original arm from local `main` at `5219997ff580f7cfac4115e4c38d396d3dd9101e` and the exact current worktree arm with per-file hashes and identical scenario inputs.
+
+**2026-08-21 result-processor checkpoint:** The focused result-contract slice is
+complete test-first. `skill-validation/core_result_processor.py` SHA-256
+`189555ab170368c036e008340ae2f16a96cffae74c42e07e4d27f029591909be`
+and `skill-validation/tests/test_core_result_processor.py` SHA-256
+`c0c6bf2115b6e3204585e4b347e5b24482e8d3e41eb7d6ca0f2859102bc17b00`
+pass 55/55 focused tests plus the existing 37/37 validator and 32/32 renderer
+suites. Disposable mutation checks killed every effective targeted mutant. Fresh
+Sol-high acceptance rereview returned no P0-P3 findings with `SPEC-VERDICT: PASS`,
+`QUALITY-VERDICT: APPROVED`, and `DD-VERDICT: PASS`. This closes only the result
+processor: executable core fixtures, their harness support and review, complete input
+freezing, and every model campaign remain pending, so the combined steps above stay
+unchecked.
+
+**2026-08-21 executable-fixture foundation checkpoint:** The smallest reusable
+writable-fixture contract is complete test-first.
+`skill-validation/core_fixture_harness.py` SHA-256
+`1f4d422f8389535e5bbd2a960598f33162c9160d5ebd2e3d8a32db28bcf4990f`
+and `skill-validation/tests/test_core_fixture_harness.py` SHA-256
+`e1c25dad3a5ad9cfa73d84c89c5f60bb0e093580611a5a926b7bdba8dbddeaa4`
+pass 35/35 focused tests while the frozen processor, validator, and renderer remain
+green at 55/55, 37/37, and 32/32. Targeted disposable mutations are killed. Fresh
+Sol-high review of the final bytes found no P0-P3 issues and returned
+`SPEC-VERDICT: PASS`, `QUALITY-VERDICT: APPROVED`, and `DD-VERDICT: PASS`. The
+foundation prepares deterministic isolated micro-repositories, authenticates and
+executes a fixture-local helper, records immutable evidence, and independently
+reconciles Git, file, repository-inventory, milestone, response, and terminal state.
+The combined implementation and review steps remain unchecked because the approved
+portfolio's scenario-specific fixtures, complete campaign builder and inputs, and
+final freeze are still pending. No model campaign or skill wording change occurred.
+
+### Task 27: Iterate cheaply, run the stabilized comparison, and close
 
 **Files:**
 
 - Modify: `skill-validation/README.md`
-- Modify: `skill-validation/skill-discovery.md`
-- Modify: all nine per-skill validation records
-- Modify: every active shared or supporting scenario record
-- Create: `skill-validation/skill-composition.md`
-
-**Required final scenarios:** the shared all-nine description-discovery suite; direct invocation of each of the nine skills in its intended domain with declared dependencies; isolated non-software application of the three broad-domain companions; in-domain validation of the two development companions; complete-bundle composition for the integrated development group; parent routing across plan, implementation, debugging, review, documentation, and delegation modes; per-task versus whole-branch review ownership.
-
-**Produces:** A cross-suite composition record that links the owning scenario IDs and records joint results without duplicating their prompts or rubrics.
-
-- [ ] Freeze the 105-scenario active closure, excluding historical `LP-04` and `SSR-04`.
-- [ ] Rerun every scenario in the frozen 105-scenario closure five times on cold Sol high, including all focused regressions as well as the shared discovery, domain-appropriate direct-invocation, broad-domain isolated-application, development-companion dependency, and integrated composition sets; keep scenarios atomic unless composition is the behavior under test.
-- [ ] Manually score each protected promise and record any infrastructure failures separately.
-- [ ] If any result is below 5/5, stop and classify it through the design's failure gate; correct a cleanup regression in its owning task, and isolate any approved behavioral change in a separate RED/GREEN slice.
-- [ ] Record the final 5/5 results and commit as `docs(validation): record final skill composition greens`.
-
-### Task 27: Run the cleaned Sol-low comparison and final repository verification
-
-**Files:**
-
-- Modify: `skill-validation/README.md`
-- Modify: `skill-validation/skill-discovery.md`
-- Modify: `skill-validation/skill-composition.md`
-- Modify: all per-skill validation records with final Sol-low scores
-- Modify: every active shared or supporting scenario record with final Sol-low scores
+- Modify: every owning or shared validation record represented in the rebuilt core suite
 - Move after completion: `plans/2026-08-01-comprehensive-skill-cleanup.md` to `plans/completed/2026-08-01-comprehensive-skill-cleanup.md`
 - Move after completion: `plans/specs/2026-08-01-comprehensive-skill-cleanup-design.md` to `plans/completed/specs/2026-08-01-comprehensive-skill-cleanup-design.md`
 
-**Validation scope:** reuse the same 105 domain-appropriate scenarios and declared
-dependencies from the cold Sol-high gate. Sol-low measures effort robustness and does
-not create another portability domain or provider gate.
+**Validation scope:** Run identical rebuilt core scenarios against the frozen
+original-main and current-worktree arms. Sol low is the rapid behavioral feedback
+loop; three fresh Sol-high repetitions are the final stabilization gate. Model calls
+remain fresh-context, bounded, read-only unless the scenario explicitly uses an
+isolated writable execution fixture, and nested-agent tools remain disabled.
 
-- [ ] Freeze the 105-scenario final active suite, which excludes historical `LP-04` and `SSR-04`, and run every scenario five times on `gpt-5.6-sol` at low reasoning effort.
-- [ ] Compare control and cleaned scores by scenario and pause for user review on any decrease.
-- [ ] For every decrease, record the user-approved disposition in `skill-validation/README.md` and each affected record.
-- [ ] If accepted, record the what/why/accepted rationale; if remediation changes a skill or scenario contract, reopen its owning task, complete the required Sol-high backfill or regression suite, rerun the affected Sol-low arm, and return to this comparison.
+- [ ] Run three Sol-low repetitions per rebuilt behavioral scenario against both arms; inspect every artifact and classify misses into the five approved result ledgers.
+- [ ] Expand a Sol-low round to five repetitions when the first three split, expose rubric ambiguity, or show unstable task fidelity.
+- [ ] Repair non-diagnostic prompts, rubrics, fixtures, or processing test-first, invalidate both affected arms, and rerun them; do not edit skill wording during this loop.
+- [ ] When Sol-low results are stable, freeze the complete core suite and run three fresh Sol-high repetitions per scenario against both arms.
+- [ ] Require the current worktree arm to pass every core behavior and applicable deterministic protocol scenario 3/3. Treat original-pass/current-fail as a regression; record original-fail/current-pass as an improvement; classify shared failures before proposing any skill edit.
+- [ ] Independently verify executed-work fixtures from repository state rather than agent reports, and reconcile every final scorer verdict against the raw response or resulting state.
+- [ ] Run cold validation-design, skill-writing, consistency, and executability reviews over the complete evidence. Present any proposed skill wording change separately and obtain explicit owner approval before applying it.
+- [ ] Show every complete in-place skill and the comparative results to the owner for final approval before closure bookkeeping, staging, commit, or push.
 - [ ] Record final word-count deltas for all nine skills.
 - [ ] Run the hook, installer, and research pytest suites plus `git diff --check`.
 - [ ] Run a final cold consistency review against the design and this plan.

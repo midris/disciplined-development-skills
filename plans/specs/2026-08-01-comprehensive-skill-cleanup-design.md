@@ -9,6 +9,137 @@ The detailed method, source-set counts, execution status, invalidation condition
 
 Design decisions approved; execution controls amended through follow-up review on 2026-08-04.
 
+## Approved charter-first validation redesign (2026-08-21)
+
+The owner approved replacing the final exhaustive-format validation design with a
+charter-first behavioral design. Existing scenarios remain useful source material,
+but their prompts, rubrics, and results are reclassified against the reason each
+skill exists before they can enter the new acceptance denominator.
+
+### Skill charters
+
+| Skill | Core identity |
+|---|---|
+| `disciplined-development` | Prevent progress across development boundaries until the required evidence exists, while retaining parent gate authority. |
+| `disciplined-research` | Prevent unsupported factual claims or premises from entering reasoning or work. |
+| `writing-explicit-rationale` | Preserve decision-useful rationale in one durable, discoverable home without duplicating irrelevant history. |
+| `concise-writing` | Remove prose that adds no value without changing how a careful reader understands or uses the artifact. |
+| `lean-plan-writing` | Produce an executable behavioral contract without writing the implementation in the plan. |
+| `sweeping-stale-references` | Find, disposition, and reconcile every mutable encoding of a changed fact before the change is accepted. |
+| `dispatching-development-subagents` | Make delegated development changes safely integrable through bounded scope, retained parent authority, and returned-diff verification. |
+| `adversarial-review` | Find evidenced material defects that ordinary review misses without inventing requirements or false shared causes. |
+| `adversarial-review-loop` | Remediate findings by complete class or shared root, preserve counter ownership, and escape reactive churn at the cap. |
+
+Each charter owns at most four indispensable observable invariants. A core scenario
+must map every scored criterion to one of those invariants. A criterion that cannot
+be mapped is task fidelity, readability, protocol, or historical diagnostic evidence;
+it does not fail the skill's core behavior.
+
+### Validation layers
+
+1. **Core behavior — hard gate.** Use the smallest useful portfolio for each skill:
+   a positive application, a realistic pressure or known-rationalization case, and
+   an ownership or boundary case. `disciplined-development` may use focused gate
+   cases plus one integrated invalidation/restart lifecycle because its charter is
+   orchestration across distinct boundaries.
+2. **Executed-work evidence — hard gate when action is claimed.** A read-only
+   response proves action selection, not execution. When the protected promise is
+   that the agent searched, edited, verified, committed, or otherwise changed real
+   state, use a writable isolated micro-repository and independently inspect the
+   resulting state. The agent's report is never the proof.
+3. **Deterministic protocol — separate hard gate.** Exact rendering is a hard
+   requirement only for a genuine authored or machine-consumed interface backed by
+   a deterministic renderer, validator, or production consumer. Test semantic input
+   separately from rendered bytes. User-supplied literals and external schemas remain
+   exact data-integrity requirements, not skill-output formatting requirements.
+4. **Readability and processing — separate quality gate.** A cold reader must be
+   able to identify the skill's purpose, trigger, indispensable invariants, next
+   action, and ownership boundary. Blind comparison may identify a material loss;
+   word count, headings, placement, and preferred wording are otherwise diagnostic.
+
+The existing `adversarial-review` renderer/checker and the production terminal
+`DD-VERDICT` parser remain deterministic protocols. No other exact response shape is
+presumed to be a core contract. If another exact output is required, add its
+deterministic production or validation path before making exactness release-blocking.
+
+### Controls and model schedule
+
+Compare two independently frozen arms with identical rebuilt scenarios:
+
+- original skill forms from local branch `main` at
+  `5219997ff580f7cfac4115e4c38d396d3dd9101e`;
+- current skill forms from this worktree, freezing every supplied byte before each
+  campaign and recording the worktree skill hashes separately from tracked `HEAD`.
+
+Use `gpt-5.6-sol` at high reasoning effort for validation architecture, rubric
+judgment, evidence reconciliation, and final decisions. Lower-cost agents may perform
+bounded mechanical fixture, harness, inventory, and audit work, but the orchestrator
+retains integration and final scoring.
+
+During rebuild, run each behavioral scenario three times at Sol low. If the three
+responses split, expose rubric ambiguity, or show unstable task fidelity, expand that
+round to five before changing a skill or accepting the scenario. Iterate on the test
+contract quickly; do not treat low-effort variance as a portability failure.
+
+After the core suite and its result processing are stable, run three fresh Sol-high
+repetitions per core scenario for both frozen arms. This owner-approved three-run
+stabilization gate supersedes Tasks 26–27's earlier five-repetition Sol-high closure
+design. Every final core scenario must pass 3/3 for the current arm. Original-arm
+results are a comparative baseline: an original pass/current failure is a regression;
+an original failure/current pass is an improvement; shared failures require
+classification as a skill gap or non-diagnostic test before any skill wording change.
+
+### Result processing
+
+Score the whole artifact against observable actions, outcomes, ordering, ownership,
+blocked transitions, and truthful evidence. Record each miss in exactly one ledger:
+
+- core behavior;
+- deterministic protocol;
+- task or fixture fidelity;
+- readability;
+- infrastructure.
+
+Only core behavior and applicable deterministic protocol failures block skill
+acceptance. A claimed action passes only when independent state establishes it.
+Scorer verdicts remain advisory; the orchestrator reads the underlying artifacts and
+owns final adjudication. No skill wording changes follow automatically from a failed
+run: first prove the test is diagnostic, then present any proposed skill wording to
+the owner for explicit approval.
+
+The Task 26 result processor now enforces this proposed model without activating the
+replacement suite. Its frozen contract requires exact original/current arm identity,
+skill hashes, identical prompt/rubric/fixture/dependency/harness/executable hashes,
+campaign model and effort, complete consecutive result inventory, and one owning
+ledger per miss. It derives semantic and deterministic-protocol verdicts separately,
+checks writable-fixture Git and file state through one retained repository identity,
+and rejects partial, malformed, redirected, or tampered material. Low-effort cells are
+exactly three runs unless a first-three semantic split, rubric ambiguity, or task
+fidelity instability requires exactly five; stabilized-high cells are exactly three.
+Infrastructure attempts bind the exact repetition, remain outside the behavioral
+denominator, stop after three consecutive errors, and cannot be followed by a
+completion for that slot.
+
+The accepted processor and tests are SHA-256 `189555ab170368c036e008340ae2f16a96cffae74c42e07e4d27f029591909be`
+and `c0c6bf2115b6e3204585e4b347e5b24482e8d3e41eb7d6ca0f2859102bc17b00`.
+They pass 55 focused tests and the existing 37-validator/32-renderer suites; targeted
+mutation checks and fresh Sol-high specification, quality, and disciplined-development
+review pass.
+
+The reusable executable-fixture foundation is now accepted at
+`skill-validation/core_fixture_harness.py` SHA-256
+`1f4d422f8389535e5bbd2a960598f33162c9160d5ebd2e3d8a32db28bcf4990f`,
+with public contract `skill-validation/tests/test_core_fixture_harness.py` SHA-256
+`e1c25dad3a5ad9cfa73d84c89c5f60bb0e093580611a5a926b7bdba8dbddeaa4`.
+It materializes deterministic isolated writable micro-repositories, authenticates a
+fixture-local executable helper, records immutable execution evidence, and verifies
+actual Git, file, inventory, milestone, response, and terminal state independently of
+agent claims. The focused suite passes 35 tests, the complete relevant regression
+gate remains green, targeted disposable mutations are killed, and fresh Sol-high
+specification, quality, and disciplined-development review pass. Scenario-specific
+executable fixtures, the complete campaign builder and inputs, and their final freeze
+remain pending, so no rebuilt suite or model campaign is active yet.
+
 ## Objective
 
 Review all nine skills from top to bottom and make them compact, coherent, and easy for a human to read without weakening their established agent behavior.

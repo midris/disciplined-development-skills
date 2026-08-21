@@ -53,7 +53,7 @@ Phase tracker: {{LINK_TO_ROADMAP.MD_IF_USED}}. Don't duplicate phase status, shi
 
 ### Test-Driven Changes
 
-- **Test-first for behavior changes; commits land green.** Add or update the focused automated test BEFORE the implementation, in the same commit — never `test:` then `feat:` (every `test:` commit lands red). If true test-first ordering is impractical, the change must still ship with a test that would have failed before the impl. (Governed by the `disciplined-development` skill, Principle 5.)
+- **Test-first for behavior changes; commits land green.** Production behavior editing stays blocked until the focused regression test has been written, run, and observed failing for the expected missing behavior; land that test and its implementation together in the same green `feat:` or `fix:` commit. Exceptions require explicit user approval and are limited to throwaway prototypes, generated code, and static configuration values—not schema or behavior changes. (Governed by the `disciplined-development` skill, Principle 5.)
 - **Mandatory in high-risk areas:** {{LIST_HIGH_RISK_AREAS — typically auth, permissions, API contracts, schema changes, deletion flows, shared UI primitives, anything with security or data-loss surface}}.
 - **Keep tests targeted and contract-oriented.** Focused handler/service/component tests over broad snapshots. Run the most relevant focused tests before sign-off; report gaps if a full run isn't possible.
 - **Inline fixture-state dependencies.** When a test depends on shared fixture state seeded elsewhere (e.g. by a setup helper), add a one-line note at the call site pointing at the fixture — cross-file fixture dependencies that aren't called out get misread as bugs.
