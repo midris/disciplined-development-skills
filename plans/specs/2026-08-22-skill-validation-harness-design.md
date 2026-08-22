@@ -4,7 +4,7 @@
 
 Design approved by the owner on 2026-08-22.
 This specification records the settled runner contract.
-It authorizes no implementation, branch creation, worktree creation, model execution, scenario migration, skill edit, staging, or commit.
+It does not itself authorize implementation, branch creation, worktree creation, model execution, scenario migration, or skill edits; the approved implementation plan governs local commits and publication gates.
 
 ## Purpose
 
@@ -61,6 +61,10 @@ The run request supplies concrete source bytes and selects an execution profile.
 The runner owns deterministic preparation, invocation, capture, logging, and result formatting.
 The agent and owner own semantic interpretation and acceptance.
 
+This specification owns externally observable runner behavior and formats: tracked definitions, source selection, subject input, provider invocation, results, logging, CLI behavior, and promotion.
+The implementation plan owns sequencing and internal mechanics that do not alter those surfaces, including the run-identifier construction, child-environment allowlist, disposable Git identity, and copied-file mode normalization.
+Keeping those mechanics in the plan avoids turning implementation detail into public API; any such choice that later changes subject behavior or a persisted result must first be promoted into this specification.
+
 The runner does not:
 
 - issue an overall semantic PASS or FAIL;
@@ -69,7 +73,7 @@ The runner does not:
 - maintain plan approval, calibration, or acceptance state;
 - decide whether a baseline, candidate, mixed, or pinned dependency bundle is conceptually appropriate;
 - diagnose a skill wording defect from a behavioral result;
-- stage, commit, or publish anything.
+- stage, commit, or publish project or evidence changes; disposable workspace initialization may create the scenario's declared initial Git commit.
 
 ## Tracked definitions
 
@@ -184,6 +188,27 @@ The runner mechanically:
 
 It does not judge whether the tester should have chosen a different source mixture.
 
+## Subject input envelope
+
+Each repetition copies the snapshotted primary and dependency skills to `supplied-skills/<skill>/SKILL.md` beneath its workspace.
+That location is intentionally outside provider auto-discovery so the run does not depend on installed project skills.
+
+The runner constructs one UTF-8 subject input from this fixed five-line preamble followed immediately by the scenario prompt bytes:
+
+```text
+For skill instructions, use only the supplied files listed below.
+Primary: <primary-skill> — supplied-skills/<primary-skill>/SKILL.md
+Dependencies: <dependencies>
+Read those files before acting.
+Scenario follows:
+```
+
+The primary identifier comes from the test plan.
+`<dependencies>` is the literal `none` when the plan declares none; otherwise it is each `skill — supplied-skills/<skill>/SKILL.md` entry joined by `; ` in plan declaration order.
+The preamble uses LF line endings and ends with one LF after `Scenario follows:`; the runner then appends the scenario prompt file's exact bytes without trimming, newline normalization, or an inserted separator.
+Expected outcomes, consumers, profile names, and evaluator guidance never enter subject input.
+The complete constructed input is captured and digested with the run so behavioral changes caused by envelope drift remain visible.
+
 ## Execution
 
 Each `run` invocation is independent and stateless.
@@ -217,7 +242,8 @@ codex
   --json
   --color never
   --model <model>
-  -c 'model_reasoning_effort="<effort>"'
+  -c
+  model_reasoning_effort="<effort>"
   --sandbox <sandbox>
   --output-last-message <final-message-path>
   -
@@ -226,8 +252,9 @@ codex
 `--ask-for-approval`, optional `--search`, and the chosen deterministic placement of `--cd` are global flags and precede `exec`.
 The remaining flags are `exec` arguments.
 Reasoning effort is not a first-class `exec` flag: the adapter encodes it as the documented Codex configuration key through `-c`.
+The exact argv element after `-c` is `model_reasoning_effort="<effort>"`; the double quotes around the TOML string value are part of that element, and no single-quote characters are present.
 `--search` appears only when the scenario declares `web-search`.
-The final `-` makes the exact subject prompt arrive on standard input rather than in argv; JSONL events remain on stdout and the final response is also written to its separate artifact.
+The final `-` makes the complete subject input arrive on standard input rather than in argv; JSONL events remain on stdout and the final response is also written to its separate artifact.
 
 The runner uses argument lists without a shell, drains stdout and stderr concurrently, enforces a positive timeout, forwards interruption signals, terminates with a bounded grace period, and escalates termination if necessary.
 The existing disciplined-development external-review runner is prior art for subprocess lifecycle and offline stub-CLI tests only; its prompt, verdict, severity, gate, cadence, and review-log behavior are not reused.
@@ -276,6 +303,7 @@ Every invocation writes beneath the consistent Git-ignored root `.skilltest/runs
     skills/
   repetitions/
     001/
+      subject-input.txt
       final.txt
       events.jsonl
       stdout.txt
@@ -307,6 +335,7 @@ Version 1 has exactly seven top-level fields:
 
 Each repetition contains exactly `index`, `status`, `timing`, `execution`, nullable `infrastructure_error`, `artifacts`, `observers`, and `consumers`.
 Execution contains `provider`, `model`, `effort`, `sandbox`, `timeout_seconds`, `cli_path`, and `cli_version`.
+Artifacts reference the exact subject input, provider final response and streams, raw events, workspace snapshots, and declared observer or consumer outputs where applicable.
 Every artifact reference is `null` or contains only run-relative `path` and `sha256`; a missing inapplicable artifact is `null` rather than omitted ambiguously.
 Initial and final workspace snapshots live under `snapshots/<phase>/files/`; `snapshots/<phase>/manifest.json` records relative path, mode, and digest, and `.git/` is excluded because declared observers own Git history and state evidence.
 Observer and consumer arrays contain entries with identifier, mechanical status, exit code, timing, and stdout, stderr, and fact artifact references.
@@ -315,7 +344,7 @@ Semantic verdict, behavioral pass, aggregate score, and adjudication fields are 
 
 All paths to captured artifacts are relative to the run directory so a run remains movable and promotable.
 The result contains no duplicated summary object.
-The terminal and `inspect` views derive their counts from repetition records.
+The terminal run summary derives its counts from repetition records; `inspect` reports only the definitions, profile, capabilities, and optional sources it resolves before any run exists.
 
 The runner writes a simple per-run log at the fixed relative path `.skilltest/runs/<run-id>/runner.log` with timestamps, levels, phases, sanitized commands, working directories, artifact paths, timings, and infrastructure outcomes.
 Useful progress is mirrored to stderr while the run is active.
@@ -413,6 +442,11 @@ The implementation uses the standard library for argument parsing, subprocess su
 PyYAML is the only runtime dependency because tracked definitions are human-authored YAML.
 Pytest is a development-only dependency, consistent with existing repository tests.
 
+The package, `inspect`, `promote`, and the self-contained offline suite do not require an installed model CLI.
+`run` requires a compatible Codex CLI on `PATH`; a live invocation also requires working Codex authentication.
+Acceptance therefore keeps two checks separate: the default offline pytest suite uses a controlled fake executable, while a no-model local integration check invokes the installed CLI with `--help` and `--version` to authenticate its argv grammar.
+That local integration check requires no authentication or network access but is a required acceptance-environment prerequisite rather than part of the default pytest suite.
+
 Do not add Click, Typer, Pydantic, a JSON Schema library, Rich, a database package, or a plugin framework without a demonstrated need.
 
 ## Runner tests and implementation discipline
@@ -425,7 +459,7 @@ A bug found during implementation or later use first receives a reproducing fail
 Tests exercise real runner code, real disposable directories and Git repositories, and real subprocess boundaries.
 Small fake model-CLI executables are appropriate controlled dependencies because they exercise the actual process supervisor without spending tokens; do not mock the runner's own filesystem, subprocess, or result-writing behavior merely to make tests easier.
 
-Before migrating a real skill scenario, the offline suite must cover five synthetic mechanical families:
+Before migrating a real skill scenario, the self-contained offline suite must cover five synthetic mechanical families:
 
 1. A read-only happy path with fresh repetitions, captured CLI artifacts, logs, relative paths, digests, and a completed result.
 2. A writable disposable Git repository with an observed edit/commit plus passing and failing deterministic consumers, proving that consumer failure is a recorded test result rather than a runner failure.
@@ -475,10 +509,10 @@ The design is complete when the owner confirms this specification matches the du
 
 Runner implementation is complete when:
 
-- a clean environment can install and invoke the `skilltest` entry point through the documented `uv` workflow;
+- a clean Python environment can install and invoke the `skilltest` entry point through the documented `uv` workflow without requiring Codex for non-`run` commands;
 - `inspect`, `run`, and `promote` satisfy their documented contracts;
 - every production behavior was developed through a witnessed red-green-refactor cycle;
-- the complete offline suite passes, including all five synthetic mechanical families;
+- the complete self-contained offline suite passes, including all five synthetic mechanical families, and the separate installed-Codex parser check passes in the acceptance environment;
 - `.skilltest/runs/` is ignored and disposable and promoted evidence has no dependency on it;
 - every `result.json` satisfies the versioned structural contract, uses run-relative artifact paths, and contains no semantic verdict;
 - `runner.log`, stderr progress, raw CLI events, and captured artifacts diagnose every tested infrastructure failure;
