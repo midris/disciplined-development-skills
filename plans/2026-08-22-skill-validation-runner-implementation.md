@@ -373,12 +373,12 @@ The local commits preserve TDD evidence and recovery without publishing unfinish
 
 **Files:**
 - Read: committed feature-branch history and the retained disposable smoke repository
-- Modify: none
+- Modify after the first successful push: `plans/2026-08-22-skill-validation-runner-implementation.md` for Task 15 evidence and checkbox reconciliation only
 
 **Interfaces:**
 - Produces: one green, reviewable `feature/skill-validation-runner` branch. Does not open a PR.
 
-**Unhandled inputs and invariants:** This task is forbidden until every prior hard gate is green, Tasks 1–14 are committed locally, the worktree is clean, and the owner reviews the complete commit range, offline evidence, external review, and retained real smoke. Push the existing local history without rewriting it. Do not stage or create a final catch-all commit. The agent does not open a PR; after the push, the owner decides whether and when to open one and carries the Task 14 smoke evidence into its body.
+**Unhandled inputs and invariants:** This task is forbidden until every prior hard gate is green, Tasks 1–14 are committed locally, the worktree is clean, and the owner reviews the complete commit range, offline evidence, external review, and retained real smoke. Push the existing local history without rewriting it. Do not stage or create a final catch-all implementation commit. The agent does not open a PR; after the push, the owner decides whether and when to open one and carries the Task 14 smoke evidence into its body. Because a successful external push can only be recorded afterward, Task 15 evidence and checkbox reconciliation land in one follow-up documentation-only commit containing only this plan; the same owner approval authorizes publishing it and verifying upstream equality.
 
 - [ ] **Step 1: Present the final state.** Show branch/base, complete status/diff summary, exact tests, live smoke, review findings/dispositions, ignored run location, and every intentionally deferred area.
 - [ ] **Step 2: Verify the local history boundary.** Require a clean worktree, enumerate every `main..HEAD` commit, inspect the complete diff, and confirm no ignored evidence, skill wording, hooks, legacy validation, or unrelated files entered any commit.
