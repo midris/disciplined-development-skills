@@ -32,6 +32,7 @@ class ProviderResult:
     stderr_bytes: bytes = b""
     final_output_bytes: bytes | None = None
     output_error: str | None = None
+    artifact_error: str | None = None
 
 
 def invoke_provider(request: ProviderRequest) -> ProviderResult:
@@ -66,11 +67,11 @@ def invoke_provider(request: ProviderRequest) -> ProviderResult:
             arguments[0], True, process.returncode,
             stdout_bytes=stdout_bytes, stderr_bytes=stderr_bytes,
         )
-    final_output_bytes, output_error = _final_output(request, stdout_bytes)
+    final_output_bytes, output_error, artifact_error = _final_output(request, stdout_bytes)
     return ProviderResult(
         arguments[0], True, process.returncode, stdout_bytes=stdout_bytes,
         stderr_bytes=stderr_bytes, final_output_bytes=final_output_bytes,
-        output_error=output_error,
+        output_error=output_error, artifact_error=artifact_error,
     )
 
 
@@ -94,11 +95,16 @@ def _arguments(request: ProviderRequest) -> list[str]:
     raise ValueError(f"unsupported provider: {request.provider}")
 
 
-def _final_output(request: ProviderRequest, stdout_bytes: bytes) -> tuple[bytes | None, str | None]:
+def _final_output(
+    request: ProviderRequest, stdout_bytes: bytes
+) -> tuple[bytes | None, str | None, str | None]:
     if request.provider == "codex":
         if not request.final_output_path.is_file():
-            return None, "Codex did not write final output"
-        return request.final_output_path.read_bytes(), None
+            return None, "Codex did not write final output", None
+        try:
+            return request.final_output_path.read_bytes(), None, None
+        except OSError as error:
+            return None, None, f"could not read Codex final output: {error}"
     final_event: dict[str, object] | None = None
     saw_result_event = False
     for line in stdout_bytes.splitlines():
@@ -107,18 +113,21 @@ def _final_output(request: ProviderRequest, stdout_bytes: bytes) -> tuple[bytes 
         try:
             event = json.loads(line)
         except (UnicodeDecodeError, json.JSONDecodeError):
-            return None, "Claude emitted malformed JSONL"
+            return None, "Claude emitted malformed JSONL", None
         if not isinstance(event, dict):
-            return None, "Claude emitted malformed JSONL"
+            return None, "Claude emitted malformed JSONL", None
         final_event = event
         saw_result_event = saw_result_event or event.get("type") == "result"
     if final_event is None or not saw_result_event:
-        return None, "Claude did not emit a terminal result event"
+        return None, "Claude did not emit a terminal result event", None
     if final_event.get("type") != "result":
-        return None, "Claude terminal event is not a result"
+        return None, "Claude terminal event is not a result", None
     final_result = final_event.get("result")
     if not isinstance(final_result, str):
-        return None, "Claude terminal result is not a string"
+        return None, "Claude terminal result is not a string", None
     final_output_bytes = final_result.encode("utf-8")
-    request.final_output_path.write_bytes(final_output_bytes)
-    return final_output_bytes, None
+    try:
+        request.final_output_path.write_bytes(final_output_bytes)
+    except OSError as error:
+        return final_output_bytes, None, f"could not write Claude final output: {error}"
+    return final_output_bytes, None, None

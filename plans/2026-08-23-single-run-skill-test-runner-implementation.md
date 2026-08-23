@@ -2,7 +2,7 @@
 
 > **For agentic workers:** REQUIRED SUB-SKILL: Use `superpowers:subagent-driven-development` to implement this plan one task at a time. Use `superpowers:test-driven-development` for every task. Check boxes only after the implementation, focused tests, independent inspection, and task review are complete.
 
-**Status:** Approved by the owner on 2026-08-23. Tasks 1–3 are complete; pause for owner evaluation before Task 4.
+**Status:** Approved by the owner on 2026-08-23. Tasks 1–4 are complete; pause for owner evaluation before Task 5.
 
 **Goal:** Build a small CLI that reads one test configuration, prepares one unique local workspace, invokes the configured Codex or Claude Code CLI once, retains the raw result bundle, writes `result.json`, and exits.
 
@@ -87,7 +87,7 @@ No generic utilities, base-class hierarchy, plugin package, process supervisor, 
 
 **Produces:** a minimal installable test project and `load_config(path: Path) -> TestConfig`, plus immutable records for the exact root, skill, scenario, and execution declarations. `TestConfig` retains the original configuration bytes and resolved input paths needed by later tasks.
 
-**Unhandled inputs and invariants:** Reject all malformed or structurally invalid inputs listed by the spec before creating a run directory, including duplicate keys, non-finite JSON numbers, unknown keys, invalid identifiers, invalid provider declarations, missing or wrong-kind files, invalid UTF-8 prompt or `SKILL.md`, special files, duplicate skill identifiers, configuration containment, symlink escape to the configuration, fixture `supplied-skills` collision, and fixed-run-root overlap. Treat independent source roots and semantically odd but structurally valid combinations as valid. Accept the spec's trusted-input assumption about same-user mutation after preflight.
+**Unhandled inputs and invariants:** Reject all malformed or structurally invalid inputs listed by the spec before creating a run directory, including duplicate keys, non-finite JSON numbers, unknown keys, invalid identifiers, invalid provider declarations, missing or wrong-kind files, invalid UTF-8 prompt or `SKILL.md`, special or other non-regular entries, duplicate skill identifiers, configuration containment, fixture `supplied-skills` collision, and fixed-run-root overlap. Validation runs directly against development source directories in the DD skill repository; installer-created consumer skill links are outside runner scope. Treat independent source roots and semantically odd but structurally valid combinations as valid. Accept the spec's trusted-input assumption about same-user mutation after preflight.
 
 - [x] Bootstrap only the package and test environment: create the listed directories, package marker, and a minimal `pyproject.toml` with Python 3.11+, no runtime dependency, `pytest` and `jsonschema` as development dependencies, and `testpaths = ["tests"]`; generate `uv.lock`; and confirm `uv sync --locked` succeeds. This scaffolding contains no runner behavior and is the explicit exception that makes the first RED test executable.
 - [x] Write focused configuration tests as a compact validity table covering every reject category and the execute-without-judgment cases. Include Codex and Claude configurations whose execution objects contain only `provider`, `model`, and `effort`.
@@ -109,9 +109,9 @@ No generic utilities, base-class hierarchy, plugin package, process supervisor, 
 
 **Produces:** `create_run(config: TestConfig) -> RunContext` and `prepare_workspace(context: RunContext, config: TestConfig) -> PreparedRun`. The records expose only the fixed paths and timestamps later tasks require.
 
-**Unhandled inputs and invariants:** Use the fixed `${TMPDIR}/skilltest-runs/` parent and atomic unique-directory creation; never scan existing runs. Create the exact retained layout and marker, copy declared inputs before preparing the workspace, preserve ordinary symlinks and bytes, copy fixture contents into the workspace root, and put every supplied skill under `workspace/supplied-skills/<id>/`. Build the exact five-line preamble and append the prompt bytes without another separator. Keep the original configuration and expected outcome out of provider-visible files until after the provider attempt. Allocation failure before ownership produces no bundle; copy failure after allocation leaves the owned bundle for later error recording.
+**Unhandled inputs and invariants:** Use the fixed `${TMPDIR}/skilltest-runs/` parent and atomic unique-directory creation; never scan existing runs. Create the exact retained layout and marker, copy ordinary declared input files before preparing the workspace, copy fixture contents into the workspace root, and put every supplied skill under `workspace/supplied-skills/<id>/`. Build the exact five-line preamble and append the prompt bytes without another separator. Keep the original configuration and expected outcome out of provider-visible files until after the provider attempt. Allocation failure before ownership produces no bundle; copy failure after allocation leaves the owned bundle for later error recording.
 
-- [x] Write focused tests for two distinct serial directories, empty and populated fixtures, ordered dependency copies, symlink preservation, the exact retained layout, exact subject-input bytes, and absence of configuration/expected-outcome bytes from runner-added provider-visible material.
+- [x] Write focused tests for two distinct serial directories, empty and populated fixtures, ordered dependency copies, the exact retained layout, exact subject-input bytes, and absence of configuration/expected-outcome bytes from runner-added provider-visible material.
 - [x] Run `uv run pytest tests/test_workspace.py -q` and confirm failure because preparation is absent.
 - [x] Implement only unique allocation, retained copies, workspace preparation, and subject-input construction. Do not invoke providers, publish results, add cleanup, or inspect Git.
 - [x] Rerun `uv run pytest tests/test_workspace.py -q`, then `uv run pytest -q`; both must pass.
@@ -128,7 +128,7 @@ No generic utilities, base-class hierarchy, plugin package, process supervisor, 
 
 **Consumes:** prepared workspace, subject-input bytes, the final-output path, and the exact `provider`, `model`, and `effort` values.
 
-**Produces:** plain `ProviderRequest` and `ProviderResult` records and `invoke_provider(request: ProviderRequest) -> ProviderResult`. `ProviderResult` carries raw stdout and stderr bytes for Task 4 to persist exactly once; provider-specific final-output handling remains inside the built-in adapter.
+**Produces:** plain `ProviderRequest` and `ProviderResult` records and `invoke_provider(request: ProviderRequest) -> ProviderResult`. `ProviderResult` carries raw stdout and stderr bytes for Task 4 to persist exactly once, plus any adapter-side artifact error without discarding captured process fields; provider-specific final-output handling remains inside the built-in adapter.
 
 **Unhandled inputs and invariants:** Implement exactly two built-in branches, `codex` and `claude`; unknown providers are unreachable after Task 1 validation and still fail mechanically if passed internally. Use one shell-free synchronous child process, inherited authentication environment, workspace working directory, fixed 900-second timeout, five-second terminate grace, and no probes or descendant supervision. Pin the exact argument order from the spec. Codex requires its output-last-message file after exit zero. Claude preserves raw JSONL and requires the final non-empty object to be a string-valued result event. Classify missing executable, nonzero exit, timeout, missing Codex final output, malformed Claude JSONL, missing/nonterminal Claude result, and non-string Claude result mechanically. Detached writers and external interruption remain accepted unsupported edges.
 
@@ -156,12 +156,12 @@ No generic utilities, base-class hierarchy, plugin package, process supervisor, 
 
 **Unhandled inputs and invariants:** Write raw stdout and stderr exactly once, preserve the live workspace, write the original configuration bytes only after the provider attempt or a preparation failure, and publish `result.json` last by atomic replacement. Implement the exact result schema, digest ordering, status vocabulary, error codes, and first-applicable error precedence. A result-write failure cannot describe itself: Task 4 records it in `runner.log` and returns it in `RunOutcome.diagnostic`; Task 5 mirrors that diagnostic to stderr without writing the log. A required-artifact write failure after launch is infrastructure failure. Never interpret provider content semantically.
 
-- [ ] Write integration tests that drive `run_once` through real fake executables for completed Codex and Claude runs and each persisted infrastructure-error class. Validate every generated result with `result.schema.json`, verify input/artifact digests, and prove the original configuration appears only after the provider attempt. To reproduce post-allocation preparation and post-launch artifact-write failures, tests may narrowly monkeypatch the specific standard-library copy or write call; do not add a production injection seam, concurrent mutator, or filesystem framework.
-- [ ] Run `uv run pytest tests/test_run.py -q` and confirm failure because orchestration and result persistence are absent.
-- [ ] Implement the chronological runner log, digest/result construction, atomic publication, and a straight-line `run_once` composition of Tasks 1–3. Do not add callbacks, hooks, command lists, cleanup, comparison, or retry paths.
-- [ ] Rerun `uv run pytest tests/test_run.py -q`, then `uv run pytest -q`; both must pass.
-- [ ] Guardrail check: trace one successful call and prove it has one configuration load, one allocation, one preparation, one provider call, one result publication, and one return. Record cumulative line counts.
-- [ ] Run the task's spec-compliance and code-quality reviews. If clean, commit the allowlisted files in one local TDD commit.
+- [x] Write integration tests that drive `run_once` through real fake executables for completed Codex and Claude runs and each persisted infrastructure-error class. Validate every generated result with `result.schema.json`, verify input/artifact digests, and prove the original configuration appears only after the provider attempt. To reproduce post-allocation preparation and post-launch artifact-write failures, tests may narrowly monkeypatch the specific standard-library copy or write call; do not add a production injection seam, concurrent mutator, or filesystem framework.
+- [x] Run `uv run pytest tests/test_run.py -q` and confirm failure because orchestration and result persistence are absent.
+- [x] Implement the chronological runner log, digest/result construction, atomic publication, and a straight-line `run_once` composition of Tasks 1–3. Do not add callbacks, hooks, command lists, cleanup, comparison, or retry paths.
+- [x] Rerun `uv run pytest tests/test_run.py -q`, then `uv run pytest -q`; both must pass.
+- [x] Guardrail check: trace one successful call and prove it has one configuration load, one allocation, one preparation, one provider call, one result publication, and one return. Record cumulative line counts.
+- [x] Run the task's spec-compliance and code-quality reviews. If clean, commit the allowlisted files in one local TDD commit.
 
 ### Task 5: CLI, independence acceptance, and operator documentation
 

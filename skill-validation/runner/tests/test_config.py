@@ -225,23 +225,6 @@ def test_load_config_rejects_configuration_containment(tmp_path: Path) -> None:
         _reject(config_path, config)
 
 
-# Catches link-target mutations that allow source inputs to resolve to configuration material.
-def test_load_config_rejects_symlink_escape_to_configuration(tmp_path: Path) -> None:
-    preparations = [
-        lambda root, path: (root / "prompt.txt").unlink()
-        or os.symlink(path, root / "prompt.txt"),
-        lambda root, path: os.symlink(path, root / "primary" / "configuration-link"),
-        lambda root, path: os.symlink(path.parent, root / "fixture" / "configuration-directory-link"),
-    ]
-    for index, prepare in enumerate(preparations):
-        case_root = tmp_path / str(index)
-        config_path, config = _valid_config(case_root)
-        _save(config_path, config)
-        prepare(case_root, config_path)
-        with pytest.raises(ConfigError):
-            load_config(config_path)
-
-
 # Catches preparation-ambiguity mutations that permit the fixture's reserved directory.
 def test_load_config_rejects_fixture_supplied_skills_collision(tmp_path: Path) -> None:
     config_path, config = _valid_config(tmp_path)

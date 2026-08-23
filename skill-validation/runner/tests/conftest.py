@@ -28,12 +28,6 @@ def _write(path: Path, content: str | bytes = "") -> Path:
     return path
 
 
-def _symlink(path: Path, target: str) -> Path:
-    path.parent.mkdir(parents=True, exist_ok=True)
-    os.symlink(target, path)
-    return path
-
-
 @dataclass(frozen=True, slots=True)
 class FakeProvider:
     record_path: Path
@@ -61,6 +55,10 @@ class FakeProvider:
         assert len(records) == 1
         return json.loads(records[0])
 
+    def config_observations(self) -> list[dict[str, bool]]:
+        observation_path = self.record_path.with_name("config-observations.jsonl")
+        return [json.loads(line) for line in observation_path.read_text(encoding="utf-8").splitlines()]
+
 
 @pytest.fixture
 def fake_provider(tmp_path: Path, monkeypatch: pytest.MonkeyPatch) -> FakeProvider:
@@ -83,12 +81,20 @@ with record_path.open("a", encoding="utf-8") as record_file:
     "path_prefix": os.environ["PATH"].split(os.pathsep)[0],
     "marker": os.environ.get("SKILLTEST_FAKE_MARKER"),
     }), file=record_file)
+run_dir = Path(os.getcwd()).parent
+before_output = (run_dir / "config.json").exists()
 time.sleep(float(os.environ["SKILLTEST_FAKE_DELAY"]))
 sys.stdout.buffer.write(os.environ["SKILLTEST_FAKE_STDOUT"].encode("utf-8"))
 sys.stderr.buffer.write(os.environ["SKILLTEST_FAKE_STDERR"].encode("utf-8"))
 if sys.argv[0].endswith("codex") and os.environ["SKILLTEST_FAKE_WRITE_FINAL"] == "1":
     output_path = Path(sys.argv[sys.argv.index("--output-last-message") + 1])
     output_path.write_bytes(os.environ["SKILLTEST_FAKE_FINAL"].encode("utf-8"))
+observation_path = Path(os.environ["SKILLTEST_FAKE_CONFIG_OBSERVATIONS"])
+with observation_path.open("a", encoding="utf-8") as observation_file:
+    print(json.dumps({
+        "before_output": before_output,
+        "after_output": (run_dir / "config.json").exists(),
+    }), file=observation_file)
 sys.exit(int(os.environ["SKILLTEST_FAKE_EXIT"]))
 """
     for name in ("codex", "claude"):
@@ -97,6 +103,10 @@ sys.exit(int(os.environ["SKILLTEST_FAKE_EXIT"]))
         path.chmod(path.stat().st_mode | stat.S_IXUSR)
     monkeypatch.setenv("PATH", str(bin_dir) + os.pathsep + os.environ["PATH"])
     monkeypatch.setenv("SKILLTEST_FAKE_RECORD", str(record_path))
+    monkeypatch.setenv(
+        "SKILLTEST_FAKE_CONFIG_OBSERVATIONS",
+        str(record_path.with_name("config-observations.jsonl")),
+    )
     monkeypatch.setenv("SKILLTEST_FAKE_MARKER", "inherited")
     return FakeProvider(record_path)
 
@@ -138,7 +148,6 @@ def build_config_case(tmp_path: Path) -> object:
             if fixture == "populated":
                 _write(fixture_root / "docs" / "guide.txt", "fixture guide\n")
                 _write(fixture_root / "bin" / "start.sh", b"#!/bin/sh\necho fixture\n")
-                _symlink(fixture_root / "guide-link.txt", "docs/guide.txt")
             elif fixture != "empty":
                 raise ValueError(f"unknown fixture kind: {fixture}")
 

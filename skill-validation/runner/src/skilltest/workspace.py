@@ -89,24 +89,22 @@ def create_run(config: TestConfig) -> RunContext:
 
 def prepare_workspace(context: RunContext, config: TestConfig) -> PreparedRun:
     """Populate retained inputs, prepare the workspace, and write subject input."""
-    shutil.copy2(config.scenario.prompt, context.inputs_prompt_path, follow_symlinks=False)
+    shutil.copy2(config.scenario.prompt, context.inputs_prompt_path)
 
     for declaration in (config.skill, *config.dependencies):
         retained_skill = context.inputs_skills_dir / declaration.id
-        shutil.copytree(declaration.source, retained_skill, symlinks=True)
+        shutil.copytree(declaration.source, retained_skill)
 
     if config.scenario.fixture is not None:
         shutil.copytree(
             config.scenario.fixture,
             context.inputs_fixture_dir,
             dirs_exist_ok=True,
-            symlinks=True,
         )
         shutil.copytree(
             context.inputs_fixture_dir,
             context.workspace_dir,
             dirs_exist_ok=True,
-            symlinks=True,
         )
 
     supplied_skills_dir = context.workspace_dir / "supplied-skills"
@@ -115,7 +113,6 @@ def prepare_workspace(context: RunContext, config: TestConfig) -> PreparedRun:
         shutil.copytree(
             context.inputs_skills_dir / declaration.id,
             supplied_skills_dir / declaration.id,
-            symlinks=True,
         )
 
     subject_input_bytes = _subject_input_bytes(

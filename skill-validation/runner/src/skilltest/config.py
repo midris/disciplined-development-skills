@@ -195,8 +195,6 @@ def _preflight(
         if os.path.lexists(scenario.fixture / "supplied-skills"):
             raise ConfigError("fixture contains supplied-skills")
         _check_tree(scenario.fixture, config_path)
-    _check_link(scenario.prompt, config_path)
-
     run_root = (Path(tempfile.gettempdir()) / "skilltest-runs").resolve()
     roots = [config_path.parent, *(item.source for item in sources)]
     if scenario.fixture is not None:
@@ -216,37 +214,24 @@ def _check_tree(root: Path, config_path: Path) -> None:
                 mode = entry.lstat().st_mode
             except OSError as error:
                 raise ConfigError(f"cannot inspect {entry}: {error}") from error
-            if stat.S_ISLNK(mode):
-                _check_link(entry, config_path)
-            elif not stat.S_ISREG(mode) and not stat.S_ISDIR(mode):
+            if not stat.S_ISREG(mode) and not stat.S_ISDIR(mode):
                 raise ConfigError(f"special file in declared input: {entry}")
-
-
-def _check_link(link: Path, config_path: Path) -> None:
-    try:
-        if not link.is_symlink():
-            return
-        target = link.resolve(strict=False)
-    except OSError as error:
-        raise ConfigError(f"cannot resolve symbolic link {link}: {error}") from error
-    if target == config_path or (target.is_dir() and _contains(target, config_path)):
-        raise ConfigError("symbolic link resolves to configuration material")
 
 
 def _regular_file(path: Path, name: str) -> Path:
     try:
-        if not path.is_file():
+        if not stat.S_ISREG(path.lstat().st_mode):
             raise ConfigError(f"{name} must be a regular file")
-    except OSError as error:
+    except (OSError, ValueError) as error:
         raise ConfigError(f"cannot inspect {name}: {error}") from error
     return path
 
 
 def _directory(path: Path, name: str) -> Path:
     try:
-        if not path.is_dir():
+        if not stat.S_ISDIR(path.lstat().st_mode):
             raise ConfigError(f"{name} must be a directory")
-    except OSError as error:
+    except (OSError, ValueError) as error:
         raise ConfigError(f"cannot inspect {name}: {error}") from error
     return path
 
@@ -263,7 +248,7 @@ def _path(value: Any, base: Path, name: str) -> Path:
     if not isinstance(value, str):
         raise ConfigError(f"{name} must be a path string")
     try:
-        return (base / value).resolve(strict=False)
+        return base / value
     except (OSError, RuntimeError, ValueError) as error:
         raise ConfigError(f"cannot resolve {name}: {error}") from error
 

@@ -154,7 +154,7 @@ The expected outcome is required but mechanically opaque. It may be a string, ob
 
 ## Ordinary filesystem validity
 
-Inputs are local, trusted test definitions, not a hostile filesystem protocol. Before allocating a run directory, the runner performs structural preflight and rejects:
+Inputs are local, trusted test definitions in the DD skill repository, tested directly against development source directories; installer-created consumer skill symlinks are outside runner scope. Before allocating a run directory, the runner performs structural preflight and rejects:
 
 - an absent required path;
 - a path of the wrong kind;
@@ -163,12 +163,12 @@ Inputs are local, trusted test definitions, not a hostile filesystem protocol. B
 - unreadable or invalid UTF-8 prompt or `SKILL.md` content;
 - a special file beneath a supplied skill or fixture;
 - a resolved configuration path equal to the prompt or contained by a skill or fixture directory;
-- a symbolic link in the prompt, skill, or fixture whose resolved target is the configuration file or a directory containing it;
+- any non-regular entry in a declared input path or beneath a supplied skill or fixture;
 - the fixed run base overlapping the configuration directory, a skill source, or the fixture in either direction.
 
-The overlap checks prevent the runner from directly copying or linking the original configuration—and therefore the withheld expected outcome—into provider-visible input. They do not scan unrelated file content for deliberately repeated expected-outcome material; content chosen by the test author remains the author's responsibility.
+The overlap checks prevent the runner from directly copying the original configuration—and therefore the withheld expected outcome—into provider-visible input. They do not scan unrelated file content for deliberately repeated expected-outcome material; content chosen by the test author remains the author's responsibility.
 
-Other skill and fixture files are copied as bytes. Symbolic links are preserved as symbolic links using the standard library's ordinary tree-copy behavior; inputs are trusted and fixtures may legitimately exercise symlink behavior. Empty supporting files and empty fixture directories are valid. File modes are copied using the standard library's ordinary copy behavior; mode normalization is not part of the result contract.
+Other skill and fixture files are ordinary files copied as bytes. Empty supporting files and empty fixture directories are valid. File modes are copied using the standard library's ordinary copy behavior; mode normalization is not part of the result contract.
 
 Any I/O failure discovered during preflight is invalid input: exit `2`, with no run directory. Once preflight succeeds, the runner allocates the directory. An environmental copy or write failure after allocation but before provider launch is `PREPARATION_FAILED`; a required artifact write failure after launch is `ARTIFACT_WRITE_FAILED`. Both exit `1` with a best-effort result bundle. This phase boundary makes input errors repeatable without pretending the filesystem cannot change after preflight.
 
@@ -228,7 +228,7 @@ The complete subject input is saved before invocation. The provider receives tho
 Provider abstraction is a core requirement. Provider, model, and effort are test inputs, and provider CLIs have different invocation contracts. Keeping translation behind one small boundary prevents provider mechanics from leaking into the test configuration or preparation code:
 
 - a provider request contains the workspace, subject-input bytes, provider, model, effort, and the final-output path required by the adapter;
-- a provider result contains whether invocation started, exit code, timeout state, launch error, raw stdout and stderr bytes, final-output bytes, and any mechanical output error;
+- a provider result contains whether invocation started, exit code, timeout state, launch error, raw stdout and stderr bytes, final-output bytes, and any mechanical output or adapter-side artifact error;
 - one built-in provider implementation translates the request into one direct CLI invocation;
 - the runner selects the built-in implementation named by `execution.provider`.
 
@@ -313,11 +313,11 @@ The runner writes `result.json` last using a temporary file in the run directory
 
 `test` contains exactly `id` (string), `skill` (string), `dependencies` (ordered string array), and `scenario` (string). `execution` contains exactly `provider`, `model`, and `effort` copied from configuration; `executable` as the adapter-selected `codex` or `claude`; fixed integer `timeout_seconds: 900`; `invocation_started` and `timed_out` as booleans; and `exit_code` as an integer or `null`.
 
-Each `inputs` item contains exactly `path`, `kind`, `bytes`, `sha256`, and `link_target`. `path` is run-relative. `kind` is `file` or `symlink`. Regular files have non-negative integer `bytes`, lowercase 64-character hexadecimal `sha256`, and null `link_target`; symlinks have null `bytes` and `sha256` plus their literal string target. Records cover every file and symlink beneath `inputs/` and sort lexically by `path`.
+Each `inputs` item contains exactly `path`, `bytes`, and `sha256`. `path` is run-relative; `bytes` is a non-negative integer; and `sha256` is a lowercase 64-character hexadecimal digest. Records cover every ordinary file beneath `inputs/` and sort lexically by `path`.
 
-`artifacts` contains exactly `config`, `subject_input`, `stdout`, `stderr`, `final`, and `workspace`. The five file entries each contain exactly `path`, `exists`, `bytes`, and `sha256`; the `config` path is `config.json`, and size and digest are null when a file does not exist. `workspace` contains exactly `path` and `exists`. The workspace is retained directly and is not converted into a second manifest or snapshot.
+`artifacts` contains exactly `config`, `subject_input`, `stdout`, `stderr`, `final`, and `workspace`. The five file entries each contain exactly `path`, `exists`, `bytes`, and `sha256`; their fixed paths are `config.json`, `subject-input.txt`, `stdout.txt`, `stderr.txt`, and `final.txt`, and size and digest are null when a file does not exist. `workspace` contains exactly `path` and `exists`. The workspace is retained directly and is not converted into a second manifest or snapshot.
 
-`runner.log` and `.skilltest-run` have fixed paths but are not hashed inside `result.json`. The log may receive a terminal line after result publication, so hashing it would create a circular write-order contract; the marker has no evidentiary content.
+`runner.log` and `.skilltest-run` have fixed paths but are not hashed inside `result.json`. The log receives the terminal status before successful result publication and may receive a publication-failure diagnostic after an unsuccessful attempt; hashing it would create write-order coupling. The marker has no evidentiary content.
 
 `infrastructure_error` is null for `COMPLETED`; otherwise it contains exactly `code` and `message` strings. Timestamps use UTC with millisecond precision in `YYYY-MM-DDTHH:MM:SS.sssZ` form. Duration is a non-negative number rounded to milliseconds. The JSON Schema rejects unknown fields at every object level.
 

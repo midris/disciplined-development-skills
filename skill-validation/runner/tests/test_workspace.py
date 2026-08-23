@@ -164,7 +164,7 @@ def test_prepare_workspace_retains_declared_empty_fixture_directory(
     assert not run.config_path.exists()
 
 
-# Catches copy-order, symlink, and hidden-expected-outcome regressions for populated fixtures.
+# Catches copy-order and hidden-expected-outcome regressions for populated fixtures.
 def test_prepare_workspace_copies_populated_inputs_and_hides_expected_outcome(
     build_config_case: object, monkeypatch: pytest.MonkeyPatch
 ) -> None:
@@ -183,10 +183,8 @@ def test_prepare_workspace_copies_populated_inputs_and_hides_expected_outcome(
     assert run.inputs_prompt_path.read_bytes() == case.prompt_bytes
     assert (run.inputs_fixture_dir / "docs" / "guide.txt").read_text() == "fixture guide\n"
     assert (run.inputs_fixture_dir / "bin" / "start.sh").read_bytes() == b"#!/bin/sh\necho fixture\n"
-    assert os.readlink(run.inputs_fixture_dir / "guide-link.txt") == "docs/guide.txt"
     assert (prepared.workspace_dir / "docs" / "guide.txt").read_text() == "fixture guide\n"
     assert (prepared.workspace_dir / "bin" / "start.sh").read_bytes() == b"#!/bin/sh\necho fixture\n"
-    assert os.readlink(prepared.workspace_dir / "guide-link.txt") == "docs/guide.txt"
     assert not (prepared.workspace_dir / "fixture").exists()
     assert (
         prepared.workspace_dir / "supplied-skills" / "helper-b" / "resources" / "notes.txt"
