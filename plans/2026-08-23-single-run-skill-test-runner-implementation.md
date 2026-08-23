@@ -2,7 +2,7 @@
 
 > **For agentic workers:** REQUIRED SUB-SKILL: Use `superpowers:subagent-driven-development` to implement this plan one task at a time. Use `superpowers:test-driven-development` for every task. Check boxes only after the implementation, focused tests, independent inspection, and task review are complete.
 
-**Status:** Approved by the owner on 2026-08-23. Task 1 is authorized; pause for owner evaluation before Task 2.
+**Status:** Approved by the owner on 2026-08-23. Tasks 1–2 are complete; pause for owner evaluation before Task 3.
 
 **Goal:** Build a small CLI that reads one test configuration, prepares one unique local workspace, invokes the configured Codex or Claude Code CLI once, retains the raw result bundle, writes `result.json`, and exits.
 
@@ -111,12 +111,12 @@ No generic utilities, base-class hierarchy, plugin package, process supervisor, 
 
 **Unhandled inputs and invariants:** Use the fixed `${TMPDIR}/skilltest-runs/` parent and atomic unique-directory creation; never scan existing runs. Create the exact retained layout and marker, copy declared inputs before preparing the workspace, preserve ordinary symlinks and bytes, copy fixture contents into the workspace root, and put every supplied skill under `workspace/supplied-skills/<id>/`. Build the exact five-line preamble and append the prompt bytes without another separator. Keep the original configuration and expected outcome out of provider-visible files until after the provider attempt. Allocation failure before ownership produces no bundle; copy failure after allocation leaves the owned bundle for later error recording.
 
-- [ ] Write focused tests for two distinct serial directories, empty and populated fixtures, ordered dependency copies, symlink preservation, the exact retained layout, exact subject-input bytes, and absence of configuration/expected-outcome bytes from runner-added provider-visible material.
-- [ ] Run `uv run pytest tests/test_workspace.py -q` and confirm failure because preparation is absent.
-- [ ] Implement only unique allocation, retained copies, workspace preparation, and subject-input construction. Do not invoke providers, publish results, add cleanup, or inspect Git.
-- [ ] Rerun `uv run pytest tests/test_workspace.py -q`, then `uv run pytest -q`; both must pass.
-- [ ] Guardrail check: confirm one call creates one unique owned directory and one workspace without counters, locks, registries, retries, rollback machinery, or concurrency. Record cumulative line counts.
-- [ ] Run the task's spec-compliance and code-quality reviews. If clean, commit the allowlisted files in one local TDD commit.
+- [x] Write focused tests for two distinct serial directories, empty and populated fixtures, ordered dependency copies, symlink preservation, the exact retained layout, exact subject-input bytes, and absence of configuration/expected-outcome bytes from runner-added provider-visible material.
+- [x] Run `uv run pytest tests/test_workspace.py -q` and confirm failure because preparation is absent.
+- [x] Implement only unique allocation, retained copies, workspace preparation, and subject-input construction. Do not invoke providers, publish results, add cleanup, or inspect Git.
+- [x] Rerun `uv run pytest tests/test_workspace.py -q`, then `uv run pytest -q`; both must pass.
+- [x] Guardrail check: confirm one call creates one unique owned directory and one workspace without counters, locks, registries, retries, rollback machinery, or concurrency. Record cumulative line counts.
+- [x] Run the task's spec-compliance and code-quality reviews. If clean, commit the allowlisted files in one local TDD commit.
 
 ### Task 3: Fixed built-in provider invocation
 
