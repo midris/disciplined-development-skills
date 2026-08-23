@@ -2,7 +2,7 @@
 
 > **For agentic workers:** REQUIRED SUB-SKILL: Use `superpowers:subagent-driven-development` to implement this plan one task at a time. Use `superpowers:test-driven-development` for every task. Check boxes only after the implementation, focused tests, independent inspection, and task review are complete.
 
-**Status:** Approved by the owner on 2026-08-23. Tasks 1–2 are complete; pause for owner evaluation before Task 3.
+**Status:** Approved by the owner on 2026-08-23. Tasks 1–3 are complete; pause for owner evaluation before Task 4.
 
 **Goal:** Build a small CLI that reads one test configuration, prepares one unique local workspace, invokes the configured Codex or Claude Code CLI once, retains the raw result bundle, writes `result.json`, and exits.
 
@@ -132,13 +132,13 @@ No generic utilities, base-class hierarchy, plugin package, process supervisor, 
 
 **Unhandled inputs and invariants:** Implement exactly two built-in branches, `codex` and `claude`; unknown providers are unreachable after Task 1 validation and still fail mechanically if passed internally. Use one shell-free synchronous child process, inherited authentication environment, workspace working directory, fixed 900-second timeout, five-second terminate grace, and no probes or descendant supervision. Pin the exact argument order from the spec. Codex requires its output-last-message file after exit zero. Claude preserves raw JSONL and requires the final non-empty object to be a string-valued result event. Classify missing executable, nonzero exit, timeout, missing Codex final output, malformed Claude JSONL, missing/nonterminal Claude result, and non-string Claude result mechanically. Detached writers and external interruption remain accepted unsupported edges.
 
-- [ ] Create real fake `codex` and `claude` executables that record argv, cwd, stdin, and selected environment facts, then write controlled stdout, stderr, final output, exit codes, and delays. Tests must cross the real subprocess boundary; do not mock it.
-- [ ] Write focused provider tests for exact argv/stdin/cwd, provider/model/effort pass-through, stdout/stderr byte capture, success, launch failure, nonzero exit, timeout, Codex missing final output, and every specified Claude-output error. Timeout tests may monkeypatch the adapter's fixed timeout and grace constants; no timeout field may enter configuration or a production call signature.
-- [ ] Run `uv run pytest tests/test_providers.py -q` and confirm failure because invocation is absent.
-- [ ] Implement the minimum provider boundary and two fixed branches. Provider-specific executable, permissions, tools, timeout, isolation, output mode, and parsing remain constants, never configuration.
-- [ ] Rerun `uv run pytest tests/test_providers.py -q`, then `uv run pytest -q`; both must pass.
-- [ ] Guardrail check: confirm one successful call starts exactly one direct child, with no adapter registry, plugin discovery, APIs, SDKs, retries, helper probes, background workers, or configurable provider options. Record cumulative line counts.
-- [ ] Run the task's spec-compliance and code-quality reviews. If clean, commit the allowlisted files in one local TDD commit.
+- [x] Create real fake `codex` and `claude` executables that record argv, cwd, stdin, and selected environment facts, then write controlled stdout, stderr, final output, exit codes, and delays. Tests must cross the real subprocess boundary; do not mock it.
+- [x] Write focused provider tests for exact argv/stdin/cwd, provider/model/effort pass-through, stdout/stderr byte capture, success, launch failure, nonzero exit, timeout, Codex missing final output, and every specified Claude-output error. Timeout tests may monkeypatch the adapter's fixed timeout and grace constants; no timeout field may enter configuration or a production call signature.
+- [x] Run `uv run pytest tests/test_providers.py -q` and confirm failure because invocation is absent.
+- [x] Implement the minimum provider boundary and two fixed branches. Provider-specific executable, permissions, tools, timeout, isolation, output mode, and parsing remain constants, never configuration.
+- [x] Rerun `uv run pytest tests/test_providers.py -q`, then `uv run pytest -q`; both must pass.
+- [x] Guardrail check: confirm one successful call starts exactly one direct child, with no adapter registry, plugin discovery, APIs, SDKs, retries, helper probes, background workers, or configurable provider options. Record cumulative line counts.
+- [x] Run the task's spec-compliance and code-quality reviews. If clean, commit the allowlisted files in one local TDD commit.
 
 ### Task 4: Linear run orchestration and persisted result
 
