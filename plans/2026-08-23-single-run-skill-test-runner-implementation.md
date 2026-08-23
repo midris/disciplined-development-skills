@@ -89,13 +89,13 @@ No generic utilities, base-class hierarchy, plugin package, process supervisor, 
 
 **Unhandled inputs and invariants:** Reject all malformed or structurally invalid inputs listed by the spec before creating a run directory, including duplicate keys, non-finite JSON numbers, unknown keys, invalid identifiers, invalid provider declarations, missing or wrong-kind files, invalid UTF-8 prompt or `SKILL.md`, special files, duplicate skill identifiers, configuration containment, symlink escape to the configuration, fixture `supplied-skills` collision, and fixed-run-root overlap. Treat independent source roots and semantically odd but structurally valid combinations as valid. Accept the spec's trusted-input assumption about same-user mutation after preflight.
 
-- [ ] Bootstrap only the package and test environment: create the listed directories, package marker, and a minimal `pyproject.toml` with Python 3.11+, no runtime dependency, `pytest` and `jsonschema` as development dependencies, and `testpaths = ["tests"]`; generate `uv.lock`; and confirm `uv sync --locked` succeeds. This scaffolding contains no runner behavior and is the explicit exception that makes the first RED test executable.
-- [ ] Write focused configuration tests as a compact validity table covering every reject category and the execute-without-judgment cases. Include Codex and Claude configurations whose execution objects contain only `provider`, `model`, and `effort`.
-- [ ] Run `uv run pytest tests/test_config.py -q` and confirm the new tests fail because the loader does not exist.
-- [ ] Implement only the strict loader, immutable records, path resolution, and preflight required by those tests. Use the standard-library JSON parser with explicit duplicate-key and non-finite-number rejection. Configure pytest with `testpaths = ["tests"]` so the later installed-CLI acceptance directory is always opt-in. Do not allocate a run or invoke a process.
-- [ ] Rerun `uv run pytest tests/test_config.py -q`, then `uv run pytest -q`; both must pass.
-- [ ] Guardrail check: inspect the diff and confirm this task only turns one JSON file into validated mechanical input, performs no selection or judgment, and starts no child process. Record production and focused-test line counts.
-- [ ] Run the task's spec-compliance and code-quality reviews. If clean, commit the allowlisted files in one local TDD commit.
+- [x] Bootstrap only the package and test environment: create the listed directories, package marker, and a minimal `pyproject.toml` with Python 3.11+, no runtime dependency, `pytest` and `jsonschema` as development dependencies, and `testpaths = ["tests"]`; generate `uv.lock`; and confirm `uv sync --locked` succeeds. This scaffolding contains no runner behavior and is the explicit exception that makes the first RED test executable.
+- [x] Write focused configuration tests as a compact validity table covering every reject category and the execute-without-judgment cases. Include Codex and Claude configurations whose execution objects contain only `provider`, `model`, and `effort`.
+- [x] Run `uv run pytest tests/test_config.py -q` and confirm the new tests fail because the loader does not exist.
+- [x] Implement only the strict loader, immutable records, path resolution, and preflight required by those tests. Use the standard-library JSON parser with explicit duplicate-key and non-finite-number rejection. Configure pytest with `testpaths = ["tests"]` so the later installed-CLI acceptance directory is always opt-in. Do not allocate a run or invoke a process.
+- [x] Rerun `uv run pytest tests/test_config.py -q`, then `uv run pytest -q`; both must pass.
+- [x] Guardrail check: inspect the diff and confirm this task only turns one JSON file into validated mechanical input, performs no selection or judgment, and starts no child process. Record production and focused-test line counts.
+- [x] Run the task's spec-compliance and code-quality reviews. If clean, commit the allowlisted files in one local TDD commit.
 
 ### Task 2: Unique result directory and workspace preparation
 

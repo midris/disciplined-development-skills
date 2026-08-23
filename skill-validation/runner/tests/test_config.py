@@ -1,0 +1,298 @@
+import json
+import os
+from dataclasses import FrozenInstanceError
+from pathlib import Path
+
+import pytest
+
+from skilltest.config import ConfigError, load_config
+
+
+def _write(path: Path, content: str | bytes = "") -> Path:
+    path.parent.mkdir(parents=True, exist_ok=True)
+    path.write_bytes(content if isinstance(content, bytes) else content.encode())
+    return path
+
+
+def _valid_config(tmp_path: Path) -> tuple[Path, dict[str, object]]:
+    _write(tmp_path / "primary" / "SKILL.md", "primary")
+    _write(tmp_path / "dependency" / "SKILL.md", "dependency")
+    _write(tmp_path / "prompt.txt", "do the scenario")
+    (tmp_path / "fixture").mkdir()
+    return tmp_path / "case.json", {
+        "schema_version": 1,
+        "id": "valid-case",
+        "skill": {"id": "primary", "source": "primary"},
+        "dependencies": [{"id": "dependency", "source": "dependency"}],
+        "scenario": {"id": "case", "prompt": "prompt.txt", "fixture": "fixture"},
+        "expected_outcome": {"opaque": True},
+        "execution": {"provider": "codex", "model": "gpt-5.4", "effort": "medium"},
+    }
+
+
+def _save(path: Path, value: object) -> bytes:
+    raw = json.dumps(value, separators=(",", ":")).encode()
+    path.write_bytes(raw)
+    return raw
+
+
+def _reject(path: Path, value: object) -> None:
+    _save(path, value)
+    with pytest.raises(ConfigError):
+        load_config(path)
+
+
+# Catches a loader mutation that fails to preserve exact bytes, resolved paths, or record immutability.
+def test_load_config_accepts_exact_execution_declarations(tmp_path: Path) -> None:
+    for provider, model, effort in [("codex", "gpt-5.4", "medium"), ("claude", "sonnet", "high")]:
+        case_root = tmp_path / provider
+        config_path, config = _valid_config(case_root)
+        config["execution"] = {"provider": provider, "model": model, "effort": effort}
+        config["expected_outcome"] = {"nested": {"items": ["value"]}}
+        raw = _save(config_path, config)
+
+        loaded = load_config(config_path)
+
+        assert loaded.config_bytes == raw
+        assert loaded.config_path == config_path.resolve()
+        assert loaded.execution.provider == provider
+        assert loaded.execution.model == model
+        assert loaded.execution.effort == effort
+        assert loaded.skill.source == (case_root / "primary").resolve()
+        assert loaded.scenario.prompt == (case_root / "prompt.txt").resolve()
+        assert loaded.scenario.fixture == (case_root / "fixture").resolve()
+        with pytest.raises(FrozenInstanceError):
+            loaded.id = "other"  # type: ignore[misc]
+        with pytest.raises(FrozenInstanceError):
+            loaded.skill.id = "other"  # type: ignore[misc]
+        with pytest.raises(FrozenInstanceError):
+            loaded.scenario.id = "other"  # type: ignore[misc]
+        with pytest.raises(FrozenInstanceError):
+            loaded.execution.model = "other"  # type: ignore[misc]
+        with pytest.raises(TypeError):
+            loaded.expected_outcome["nested"]["items"][0] = "other"
+
+
+# Catches a loader mutation that judges independent roots or opaque valid values.
+def test_load_config_accepts_independent_and_semantically_odd_inputs(tmp_path: Path) -> None:
+    expected_outcomes = ["opaque", ["array"], 7, False]
+    for index, expected_outcome in enumerate(expected_outcomes):
+        case_root = tmp_path / str(index)
+        config_path, config = _valid_config(case_root)
+        config["dependencies"] = []
+        config["scenario"]["fixture"] = None
+        config["expected_outcome"] = expected_outcome
+        config["execution"] = {
+            "provider": "codex",
+            "model": "not-a-model",
+            "effort": "low-even-if-odd",
+        }
+        _save(config_path, config)
+
+        loaded = load_config(config_path)
+
+        assert loaded.dependencies == ()
+        assert loaded.scenario.fixture is None
+        assert loaded.expected_outcome == (tuple(expected_outcome) if isinstance(expected_outcome, list) else expected_outcome)
+        assert loaded.execution.model == "not-a-model"
+
+    external_source = tmp_path / "independent-skill"
+    _write(external_source / "SKILL.md", "independent")
+    config_path, config = _valid_config(tmp_path / "independent")
+    config["dependencies"] = [{"id": "outside", "source": str(external_source)}]
+    _save(config_path, config)
+    assert load_config(config_path).dependencies[0].source == external_source.resolve()
+
+
+# Catches a parser mutation that accepts non-RFC-8259 JSON or duplicate keys.
+def test_load_config_rejects_invalid_json(tmp_path: Path) -> None:
+    for index, raw in enumerate(
+        [
+            b"[1]",
+            b'{"schema_version":1,"schema_version":1}',
+            b'{"schema_version":NaN}',
+            b'{"schema_version":Infinity}',
+            b'{"schema_version":-Infinity}',
+            b'{"skill":{"id":"a","id":"b"}}',
+            b"not-json",
+        ]
+    ):
+        config_path = tmp_path / str(index) / "case.json"
+        config_path.parent.mkdir()
+        config_path.write_bytes(raw)
+        with pytest.raises(ConfigError):
+            load_config(config_path)
+
+
+# Catches schema-validation mutations that accept missing, null, or unknown fields.
+def test_load_config_rejects_invalid_structure(tmp_path: Path) -> None:
+    mutations = [
+        lambda value: value.pop("expected_outcome"),
+        lambda value: value.__setitem__("expected_outcome", None),
+        lambda value: value.__setitem__("extra", True),
+        lambda value: value["skill"].__setitem__("extra", True),
+        lambda value: value["scenario"].__setitem__("extra", True),
+        lambda value: value["execution"].__setitem__("extra", True),
+        lambda value: value.__setitem__("dependencies", {}),
+    ]
+    for index, mutate in enumerate(mutations):
+        config_path, config = _valid_config(tmp_path / str(index))
+        mutate(config)
+        _reject(config_path, config)
+
+
+# Catches identifier and execution mutations that broaden the public declaration.
+def test_load_config_rejects_invalid_identifiers_and_execution(tmp_path: Path) -> None:
+    mutations = [
+        lambda value: value.__setitem__("id", "Uppercase"),
+        lambda value: value["skill"].__setitem__("id", "has_space"),
+        lambda value: value["scenario"].__setitem__("id", "x" * 65),
+        lambda value: value.__setitem__("schema_version", 2),
+        lambda value: value["execution"].__setitem__("provider", "other"),
+        lambda value: value["execution"].__setitem__("provider", []),
+        lambda value: value["execution"].__setitem__("model", ""),
+        lambda value: value["execution"].__setitem__("effort", "too_much"),
+        lambda value: value["execution"].pop("effort"),
+    ]
+    for index, mutate in enumerate(mutations):
+        config_path, config = _valid_config(tmp_path / str(index))
+        mutate(config)
+        _reject(config_path, config)
+
+
+# Catches filesystem validation mutations that accept missing, wrong-kind, or non-UTF-8 inputs.
+def test_load_config_rejects_invalid_declared_paths(tmp_path: Path) -> None:
+    mutations = [
+        lambda root, value: value["skill"].__setitem__("source", "missing"),
+        lambda root, value: (
+            _write(root / "not-a-directory"),
+            value["skill"].__setitem__("source", "not-a-directory"),
+        ),
+        lambda root, value: (root / "primary" / "SKILL.md").unlink(),
+        lambda root, value: (root / "primary" / "SKILL.md").unlink()
+        or (root / "primary" / "SKILL.md").mkdir(),
+        lambda root, value: value["scenario"].__setitem__("prompt", "missing.txt"),
+        lambda root, value: value["scenario"].__setitem__("prompt", "fixture"),
+        lambda root, value: value["scenario"].__setitem__("fixture", "missing"),
+        lambda root, value: value["scenario"].__setitem__("fixture", "prompt.txt"),
+        lambda root, value: value["scenario"].__setitem__("prompt", "\x00"),
+        lambda root, value: _write(root / "prompt.txt"),
+        lambda root, value: _write(root / "prompt.txt", b"\xff"),
+        lambda root, value: _write(root / "primary" / "SKILL.md", b"\xff"),
+    ]
+    for index, mutate in enumerate(mutations):
+        case_root = tmp_path / str(index)
+        config_path, config = _valid_config(case_root)
+        mutate(case_root, config)
+        _reject(config_path, config)
+
+
+# Catches tree-walk mutations that allow special files in declared sources.
+def test_load_config_rejects_special_files(tmp_path: Path) -> None:
+    for index, relative in enumerate(["primary/pipe", "fixture/pipe"]):
+        case_root = tmp_path / str(index)
+        config_path, config = _valid_config(case_root)
+        os.mkfifo(case_root / relative)
+        _reject(config_path, config)
+
+
+# Catches uniqueness mutations that permit a dependency to reuse the primary identifier.
+def test_load_config_rejects_duplicate_skill_identifiers(tmp_path: Path) -> None:
+    dependencies = [
+        [{"id": "primary", "source": "dependency"}],
+        [
+            {"id": "duplicate", "source": "dependency"},
+            {"id": "duplicate", "source": "dependency"},
+        ],
+    ]
+    for index, value in enumerate(dependencies):
+        config_path, config = _valid_config(tmp_path / str(index))
+        config["dependencies"] = value
+        _reject(config_path, config)
+
+
+# Catches containment mutations that could copy the withheld configuration into inputs.
+def test_load_config_rejects_configuration_containment(tmp_path: Path) -> None:
+    mutations = [
+        lambda root, value, path: value["scenario"].__setitem__("prompt", path.name),
+        lambda root, value, path: value["skill"].__setitem__("source", "."),
+        lambda root, value, path: value["scenario"].__setitem__("fixture", "."),
+    ]
+    for index, mutate in enumerate(mutations):
+        case_root = tmp_path / str(index)
+        config_path, config = _valid_config(case_root)
+        mutate(case_root, config, config_path)
+        _reject(config_path, config)
+
+
+# Catches link-target mutations that allow source inputs to resolve to configuration material.
+def test_load_config_rejects_symlink_escape_to_configuration(tmp_path: Path) -> None:
+    preparations = [
+        lambda root, path: (root / "prompt.txt").unlink()
+        or os.symlink(path, root / "prompt.txt"),
+        lambda root, path: os.symlink(path, root / "primary" / "configuration-link"),
+        lambda root, path: os.symlink(path.parent, root / "fixture" / "configuration-directory-link"),
+    ]
+    for index, prepare in enumerate(preparations):
+        case_root = tmp_path / str(index)
+        config_path, config = _valid_config(case_root)
+        _save(config_path, config)
+        prepare(case_root, config_path)
+        with pytest.raises(ConfigError):
+            load_config(config_path)
+
+
+# Catches preparation-ambiguity mutations that permit the fixture's reserved directory.
+def test_load_config_rejects_fixture_supplied_skills_collision(tmp_path: Path) -> None:
+    config_path, config = _valid_config(tmp_path)
+    (tmp_path / "fixture" / "supplied-skills").mkdir()
+
+    _reject(config_path, config)
+
+
+# Catches fixed-root overlap mutations that place run bundles inside declared input roots.
+def test_load_config_rejects_fixed_run_root_overlap(
+    tmp_path: Path, monkeypatch: pytest.MonkeyPatch
+) -> None:
+    import skilltest.config as config_module
+
+    config_path, config = _valid_config(tmp_path / "config-contains-run-root")
+    with monkeypatch.context() as context:
+        context.setattr(config_module.tempfile, "gettempdir", lambda root=config_path.parent: str(root))
+        _save(config_path, config)
+        with pytest.raises(ConfigError):
+            load_config(config_path)
+
+    for index, kind in enumerate(["skill", "fixture"]):
+        parent = tmp_path / f"inside-{index}"
+        case_root = parent / "config"
+        config_path, config = _valid_config(case_root)
+        input_root = parent / "input" / kind
+        if kind == "skill":
+            _write(input_root / "SKILL.md", "primary")
+            config["skill"]["source"] = "../input/skill"
+        else:
+            input_root.mkdir(parents=True)
+            config["scenario"]["fixture"] = "../input/fixture"
+        with monkeypatch.context() as context:
+            context.setattr(config_module.tempfile, "gettempdir", lambda root=input_root: str(root))
+            _save(config_path, config)
+            with pytest.raises(ConfigError):
+                load_config(config_path)
+
+    for index, kind in enumerate(["skill", "fixture"]):
+        parent = tmp_path / f"contains-{index}"
+        case_root = parent / "config"
+        config_path, config = _valid_config(case_root)
+        run_input = parent / "skilltest-runs" / kind
+        if kind == "skill":
+            _write(run_input / "SKILL.md", "primary")
+            config["skill"]["source"] = "../skilltest-runs/skill"
+        else:
+            run_input.mkdir(parents=True)
+            config["scenario"]["fixture"] = "../skilltest-runs/fixture"
+        with monkeypatch.context() as context:
+            context.setattr(config_module.tempfile, "gettempdir", lambda root=parent: str(root))
+            _save(config_path, config)
+            with pytest.raises(ConfigError):
+                load_config(config_path)
