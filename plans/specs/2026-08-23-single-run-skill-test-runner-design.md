@@ -2,11 +2,11 @@
 
 ## Status
 
-Draft for owner review.
+Approved by the owner on 2026-08-23 for implementation.
 
 The accepted charter at `skill-validation/charter/core-contracts.md` remains the semantic foundation. Its canonical copy is 16,870 bytes with SHA-256 `4d172cfbcda96883a4ebc5fec6462e81545de9b862921f39de69f18eceb74aae`. This work does not change those bytes.
 
-No implementation is authorized by this draft. After owner approval, a separate implementation plan will define the work.
+Implementation begins only after the separate implementation plan is reviewed and approved.
 
 ## Purpose
 
@@ -227,10 +227,12 @@ The complete subject input is saved before invocation. The provider receives tho
 
 Provider abstraction is a core requirement. Provider, model, and effort are test inputs, and provider CLIs have different invocation contracts. Keeping translation behind one small boundary prevents provider mechanics from leaking into the test configuration or preparation code:
 
-- a provider request contains the workspace, subject-input bytes, provider, model, effort, and output paths;
-- a provider result contains whether invocation started, exit code, timeout state, launch error, final-output bytes, and any mechanical output error;
+- a provider request contains the workspace, subject-input bytes, provider, model, effort, and the final-output path required by the adapter;
+- a provider result contains whether invocation started, exit code, timeout state, launch error, raw stdout and stderr bytes, final-output bytes, and any mechanical output error;
 - one built-in provider implementation translates the request into one direct CLI invocation;
 - the runner selects the built-in implementation named by `execution.provider`.
+
+The adapter owns provider-specific final-output handling: Codex receives the `final.txt` path directly, while Claude extracts its terminal result and writes that path. The linear runner orchestration writes the raw stdout and stderr bytes returned by `ProviderResult` exactly once.
 
 There is no dynamic plugin discovery, entry-point loading, provider package API, fallback chain, or generalized adapter framework. The boundary may be a protocol plus plain request/result records; it does not justify a registry hierarchy or lifecycle framework. Version 1 implements built-in Codex and Claude Code providers.
 
@@ -278,7 +280,7 @@ With no prompt argument, `--print` reads the subject input from standard input. 
 
 `--safe-mode` disables project and user customizations, including automatic `CLAUDE.md`, skill, plugin, hook, MCP, command, and agent loading, while retaining normal authentication, model selection, built-in tools, and permissions. The supplied skill remains available through the subject envelope and copied workspace files. `--no-session-persistence` prevents resumable session state. Bypass permission mode lets the non-interactive invocation use built-in tools without a prompt. The external workspace limits project discovery but is not an operating-system sandbox; same-user host access remains an accepted trust-model limit. These are fixed adapter mechanics. Version 1 targets Claude Code 2.1.241.
 
-Claude Code emits line-delimited JSON on stdout. The adapter retains those exact bytes in `stdout.txt` and parses each non-empty line as one JSON object. After a zero process exit, the final non-empty line must be an object whose `type` is `result` and whose `result` value is a string; the adapter writes that string to `final.txt`. A malformed non-empty line, a missing final object, a final object of another type, or a non-string final `result` is `PROVIDER_OUTPUT_INVALID`. The runner does not interpret earlier tool or message events.
+Claude Code emits line-delimited JSON on stdout. The adapter returns those exact bytes in `ProviderResult` and parses each non-empty line as one JSON object. After a zero process exit, the final non-empty line must be an object whose `type` is `result` and whose `result` value is a string; the adapter writes that string to `final.txt`. A malformed non-empty line, a missing final object, a final object of another type, or a non-string final `result` is `PROVIDER_OUTPUT_INVALID`. The runner does not interpret earlier tool or message events.
 
 Building and offline-testing this provider is part of Version 1. Running a Claude model, calibrating Claude results, or beginning cross-model evaluation still requires fresh owner permission.
 
@@ -373,7 +375,7 @@ The focused offline suite covers:
 - serial rerun and externally launched simultaneous-process independence;
 - proof that expected outcomes never enter provider-visible runner additions.
 
-Installed-CLI parser checks verify both pinned argument sets without invoking a model. After the offline suite and owner review are clean, one announced, owner-approved Sol-low live smoke may spend model tokens. A Claude live smoke and Claude result calibration remain deferred and require fresh owner permission.
+Installed-CLI checks verify the targeted executable versions and required flag availability or placement through version and help commands that cannot invoke a model. Real fake executables prove the exact pinned inference argument lists and stdin behavior. After the offline suite and owner review are clean, one announced, owner-approved Sol-low live smoke may spend model tokens. A Claude live smoke and Claude result calibration remain deferred and require fresh owner permission.
 
 The expected core is roughly 300–500 production lines and 15–25 focused tests. These are drift tripwires, not quality targets. If the core exceeds 600 production lines, 30 focused tests, six implementation tasks, one working day, or one necessary child process per successful run, implementation stops for owner review. The remedy is to remove machinery or rewrite the task, not rationalize the growth.
 
