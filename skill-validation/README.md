@@ -9,30 +9,6 @@ It remains proposed rather than active until its rebuilt prompts, rubrics, resul
 processing, comparative controls, review, and owner approval are complete; the
 existing active catalogs remain binding during that transition.
 
-Task 26's fail-closed result-processing slice is implemented at
-[`core_result_processor.py`](core_result_processor.py), with its public contract in
-[`tests/test_core_result_processor.py`](tests/test_core_result_processor.py). The
-accepted SHA-256 values are `189555ab170368c036e008340ae2f16a96cffae74c42e07e4d27f029591909be`
-and `c0c6bf2115b6e3204585e4b347e5b24482e8d3e41eb7d6ca0f2859102bc17b00`.
-The focused suite passes 55/55, the existing adversarial-review validator and renderer
-suites pass 37/37 and 32/32, targeted mutations are killed, and fresh Sol-high
-acceptance review is clean. This evidence does not activate the replacement: rebuilt
-scenario inputs, comparison-arm freezing, control evidence, and owner approval remain
-pending, and the existing five-run catalogs and hard gates below stay binding.
-
-Task 26's reusable executable-fixture foundation is implemented at
-[`core_fixture_harness.py`](core_fixture_harness.py), with its public contract in
-[`tests/test_core_fixture_harness.py`](tests/test_core_fixture_harness.py). The
-accepted SHA-256 values are `1f4d422f8389535e5bbd2a960598f33162c9160d5ebd2e3d8a32db28bcf4990f`
-and `e1c25dad3a5ad9cfa73d84c89c5f60bb0e093580611a5a926b7bdba8dbddeaa4`.
-Its 35 focused tests, complete relevant regression gate, targeted disposable
-mutations, and fresh Sol-high specification, quality, and disciplined-development
-review pass. It supplies deterministic isolated micro-repositories, authenticated
-fixture-local execution, immutable evidence capture, and independent Git/file/event
-state verification. It does not yet supply the scenario-specific fixtures, complete
-campaign builder and inputs, or final comparison freeze required to activate the
-replacement.
-
 ## Roles and model policy
 
 - The orchestrator owns validation-bearing tasks, dispatch, result inspection, manual scoring, scorer and reviewer dispatch, user approval gates, commits, and Gate 5.

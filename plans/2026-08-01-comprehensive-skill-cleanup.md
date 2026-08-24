@@ -1,5 +1,9 @@
 # Comprehensive Skill Cleanup Implementation Plan
 
+> **Superseded at Task 26 on 2026-08-22.** Tasks 1–25 remain historical records.
+> Do not execute this plan's remaining Task 26 or Task 27 steps; the owner directed a
+> charter-baseline rollback and a replacement fresh-context plan.
+
 > **For agentic workers:** REQUIRED SUB-SKILL: Use `superpowers:executing-plans` with the orchestrator executing validation-bearing tasks inline. Do not delegate a whole validation-bearing task through `superpowers:subagent-driven-development`; its implementer would be prohibited from dispatching the required evaluator subagents. Steps use checkbox (`- [ ]`) syntax for tracking.
 
 **Goal:** Establish a trustworthy validation baseline, then make all nine skills compact and coherent without losing effectiveness.
@@ -2212,41 +2216,11 @@ retired on that basis; historical evidence is preserved.
 - [x] Select the smallest core portfolio: positive application, pressure/rationalization, and boundary/ownership coverage per companion; focused gate cases plus one integrated invalidation/restart lifecycle for the parent.
 - [x] Identify every protected promise that claims actual searching, editing, verification, commit, or other state change; replace read-only narration as proof with an isolated executable fixture and independent state assertions.
 - [x] Separate `adversarial-review` semantic scoring from deterministic renderer/checker scoring and retain the production terminal `DD-VERDICT` parser as its own protocol boundary.
-- [x] Write focused failing automated tests for result classification, exact-protocol isolation, independent executed-state verification, arm provenance, repetition counts, and fail-closed partial results.
-- [x] Run the focused tests and confirm each fails for the intended missing behavior before implementing the rebuilt result processor or harness path.
+- [ ] Write focused failing automated tests for result classification, exact-protocol isolation, independent executed-state verification, arm provenance, repetition counts, and fail-closed partial results.
+- [ ] Run the focused tests and confirm each fails for the intended missing behavior before implementing the rebuilt result processor or harness path.
 - [ ] Implement only the processing and fixture support needed by the approved core portfolio, then run the focused and existing relevant harness tests green.
 - [ ] Run fresh read-only specification and quality reviews of the rebuilt contracts and harness; repair validation defects without changing skill wording.
 - [ ] Freeze the exact original arm from local `main` at `5219997ff580f7cfac4115e4c38d396d3dd9101e` and the exact current worktree arm with per-file hashes and identical scenario inputs.
-
-**2026-08-21 result-processor checkpoint:** The focused result-contract slice is
-complete test-first. `skill-validation/core_result_processor.py` SHA-256
-`189555ab170368c036e008340ae2f16a96cffae74c42e07e4d27f029591909be`
-and `skill-validation/tests/test_core_result_processor.py` SHA-256
-`c0c6bf2115b6e3204585e4b347e5b24482e8d3e41eb7d6ca0f2859102bc17b00`
-pass 55/55 focused tests plus the existing 37/37 validator and 32/32 renderer
-suites. Disposable mutation checks killed every effective targeted mutant. Fresh
-Sol-high acceptance rereview returned no P0-P3 findings with `SPEC-VERDICT: PASS`,
-`QUALITY-VERDICT: APPROVED`, and `DD-VERDICT: PASS`. This closes only the result
-processor: executable core fixtures, their harness support and review, complete input
-freezing, and every model campaign remain pending, so the combined steps above stay
-unchecked.
-
-**2026-08-21 executable-fixture foundation checkpoint:** The smallest reusable
-writable-fixture contract is complete test-first.
-`skill-validation/core_fixture_harness.py` SHA-256
-`1f4d422f8389535e5bbd2a960598f33162c9160d5ebd2e3d8a32db28bcf4990f`
-and `skill-validation/tests/test_core_fixture_harness.py` SHA-256
-`e1c25dad3a5ad9cfa73d84c89c5f60bb0e093580611a5a926b7bdba8dbddeaa4`
-pass 35/35 focused tests while the frozen processor, validator, and renderer remain
-green at 55/55, 37/37, and 32/32. Targeted disposable mutations are killed. Fresh
-Sol-high review of the final bytes found no P0-P3 issues and returned
-`SPEC-VERDICT: PASS`, `QUALITY-VERDICT: APPROVED`, and `DD-VERDICT: PASS`. The
-foundation prepares deterministic isolated micro-repositories, authenticates and
-executes a fixture-local helper, records immutable evidence, and independently
-reconciles Git, file, repository-inventory, milestone, response, and terminal state.
-The combined implementation and review steps remain unchecked because the approved
-portfolio's scenario-specific fixtures, complete campaign builder and inputs, and
-final freeze are still pending. No model campaign or skill wording change occurred.
 
 ### Task 27: Iterate cheaply, run the stabilized comparison, and close
 

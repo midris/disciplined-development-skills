@@ -1,5 +1,10 @@
 # Comprehensive skill cleanup — design
 
+> **Superseded for post-charter execution on 2026-08-22.** This document preserves
+> the approved charter decision and earlier project history, but its Task 26–27
+> implementation path must not be resumed. A replacement behavioral-validation
+> design and plan require owner approval.
+
 ## Task 22 approved validation method (2026-08-15; activated 2026-08-16)
 
 Task 22 separates semantic review attribution from deterministic enforcement of the authored output envelope over the same bytes.
@@ -106,39 +111,6 @@ Scorer verdicts remain advisory; the orchestrator reads the underlying artifacts
 owns final adjudication. No skill wording changes follow automatically from a failed
 run: first prove the test is diagnostic, then present any proposed skill wording to
 the owner for explicit approval.
-
-The Task 26 result processor now enforces this proposed model without activating the
-replacement suite. Its frozen contract requires exact original/current arm identity,
-skill hashes, identical prompt/rubric/fixture/dependency/harness/executable hashes,
-campaign model and effort, complete consecutive result inventory, and one owning
-ledger per miss. It derives semantic and deterministic-protocol verdicts separately,
-checks writable-fixture Git and file state through one retained repository identity,
-and rejects partial, malformed, redirected, or tampered material. Low-effort cells are
-exactly three runs unless a first-three semantic split, rubric ambiguity, or task
-fidelity instability requires exactly five; stabilized-high cells are exactly three.
-Infrastructure attempts bind the exact repetition, remain outside the behavioral
-denominator, stop after three consecutive errors, and cannot be followed by a
-completion for that slot.
-
-The accepted processor and tests are SHA-256 `189555ab170368c036e008340ae2f16a96cffae74c42e07e4d27f029591909be`
-and `c0c6bf2115b6e3204585e4b347e5b24482e8d3e41eb7d6ca0f2859102bc17b00`.
-They pass 55 focused tests and the existing 37-validator/32-renderer suites; targeted
-mutation checks and fresh Sol-high specification, quality, and disciplined-development
-review pass.
-
-The reusable executable-fixture foundation is now accepted at
-`skill-validation/core_fixture_harness.py` SHA-256
-`1f4d422f8389535e5bbd2a960598f33162c9160d5ebd2e3d8a32db28bcf4990f`,
-with public contract `skill-validation/tests/test_core_fixture_harness.py` SHA-256
-`e1c25dad3a5ad9cfa73d84c89c5f60bb0e093580611a5a926b7bdba8dbddeaa4`.
-It materializes deterministic isolated writable micro-repositories, authenticates a
-fixture-local executable helper, records immutable execution evidence, and verifies
-actual Git, file, inventory, milestone, response, and terminal state independently of
-agent claims. The focused suite passes 35 tests, the complete relevant regression
-gate remains green, targeted disposable mutations are killed, and fresh Sol-high
-specification, quality, and disciplined-development review pass. Scenario-specific
-executable fixtures, the complete campaign builder and inputs, and their final freeze
-remain pending, so no rebuilt suite or model campaign is active yet.
 
 ## Objective
 
