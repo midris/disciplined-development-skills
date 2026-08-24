@@ -2,14 +2,15 @@
 
 ## Status
 
-Approved by the owner on 2026-08-23 for implementation. Amended during Task 5
-to make all tester-controlled content opaque and all provider-output formatting
-non-gating. The runner validates and reports mechanics; the tester judges the
-test and its result.
+Implemented and accepted by the owner on 2026-08-23 after whole-branch reviews
+and one live installed-Codex-CLI smoke; integrated through PR #40. Amended
+during Task 5 to make all tester-controlled content opaque and all
+provider-output formatting non-gating. The runner validates and reports
+mechanics; the tester judges the test and its result.
 
 The accepted charter at `skill-validation/charter/core-contracts.md` remains the semantic foundation. Its canonical copy is 16,870 bytes with SHA-256 `4d172cfbcda96883a4ebc5fec6462e81545de9b862921f39de69f18eceb74aae`. This work does not change those bytes.
 
-Implementation begins only after the separate implementation plan is reviewed and approved.
+The completed implementation plan is archived beside this specification.
 
 ## Purpose
 

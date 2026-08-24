@@ -2,7 +2,7 @@
 
 > **For agentic workers:** REQUIRED SUB-SKILL: Use `superpowers:subagent-driven-development` to implement this plan one task at a time. Use `superpowers:test-driven-development` for every task. Check boxes only after the implementation, focused tests, independent inspection, and task review are complete.
 
-**Status:** Approved by the owner on 2026-08-23. Tasks 1–4 are complete. During Task 5 the owner approved a whole-runner correction that removes test and output judgment; Task 5 owns that correction, final CLI work, and one reviewed local commit.
+**Status:** Completed and accepted by the owner on 2026-08-23 after whole-branch reviews and one live installed-Codex-CLI smoke. Integrated through PR #40. During Task 5 the owner approved a whole-runner correction that removed test and output judgment.
 
 **Goal:** Build a small CLI that reads one test configuration, prepares one unique local workspace, invokes the configured Codex or Claude Code CLI once, retains the raw result bundle, writes `result.json`, and exits.
 
@@ -10,7 +10,7 @@
 
 **Tech stack:** Python 3.11+, standard-library production runtime, `pytest` and `jsonschema` as test-only dependencies, `uv` for the local development environment, and the installed Codex and Claude Code CLIs.
 
-**Spec:** `plans/specs/2026-08-23-single-run-skill-test-runner-design.md`
+**Spec:** `plans/completed/specs/2026-08-23-single-run-skill-test-runner-design.md`
 
 ## Branch and merge boundary
 
@@ -172,8 +172,8 @@ No generic utilities, base-class hierarchy, plugin package, process supervisor, 
 - Modify: `CLAUDE.md`
 - Modify: `ARCHITECTURE.md`
 - Modify: `README.md`
-- Modify: `plans/specs/2026-08-23-single-run-skill-test-runner-design.md`
-- Modify: `plans/2026-08-23-single-run-skill-test-runner-implementation.md`
+- Modify: `plans/completed/specs/2026-08-23-single-run-skill-test-runner-design.md`
+- Modify: `plans/completed/2026-08-23-single-run-skill-test-runner-implementation.md`
 - Modify: `skill-validation/runner/result.schema.json`
 - Modify: `skill-validation/runner/src/skilltest/config.py`
 - Modify: `skill-validation/runner/src/skilltest/workspace.py`
@@ -213,10 +213,10 @@ No generic utilities, base-class hierarchy, plugin package, process supervisor, 
 
 After Task 5 is committed and all offline and installed-CLI version/help checks are fresh:
 
-- [ ] Announce the proposed Codex Sol-low smoke, including the exact synthetic configuration and expected model cost, and obtain owner approval before invoking it.
-- [ ] Run one approved Codex Sol-low smoke, inspect the bundle independently, and record the command and bundle path in an ignored local approval note. Do not promote, stage, or commit the run bundle.
-- [ ] Present the implementation diff, test counts, size audit, installed-CLI checks, live-smoke result, and any accepted limitations for final owner approval.
-- [ ] Only after final owner approval, push the implementation branch. Do not open a PR, merge, remove its worktree, or begin scenario migration in the same step.
+- [x] Announce the proposed Codex Sol-low smoke, including the exact synthetic configuration and expected model cost, and obtain owner approval before invoking it.
+- [x] Run one approved Codex Sol-low smoke, inspect the bundle independently, and record the command and bundle path in an ignored local approval note. Do not promote, stage, or commit the run bundle.
+- [x] Present the implementation diff, test counts, size audit, installed-CLI checks, live-smoke result, and any accepted limitations for final owner approval.
+- [x] Only after final owner approval, push the implementation branch. Do not open a PR, merge, remove its worktree, or begin scenario migration in the same step.
 
 ## Plan acceptance check
 
