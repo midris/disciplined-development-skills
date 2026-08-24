@@ -42,18 +42,25 @@ execution.
 
 ```json
 {
-  "schema_version": 1,
+  "schema_version": "0.1",
   "id": "draft-check",
-  "skill": {"id": "primary", "source": "skills/primary"},
-  "dependencies": [{"id": "helper", "source": "skills/helper"}],
+  "skill": {
+    "id": "primary",
+    "source": "skills/primary",
+    "include": ["SKILL.md", "scripts/tool.py"]
+  },
+  "dependencies": [
+    {"id": "helper", "source": "skills/helper", "include": ["SKILL.md"]}
+  ],
   "scenario": {"id": "empty-doc", "prompt": "prompt.txt", "fixture": null},
   "expected_outcome": null,
   "execution": {"provider": "codex", "model": "gpt-5.4", "effort": "medium"}
 }
 ```
 
-Each skill source is a directory containing `SKILL.md`; `prompt.txt` is a
-regular UTF-8 file and may be empty.
+Each skill declaration requires a non-empty `include` list of unique relative
+regular-file paths, including root-level `SKILL.md`. Only those files are copied.
+`prompt.txt` is a regular UTF-8 file and may be empty.
 
 ```mermaid
 sequenceDiagram

@@ -92,7 +92,11 @@ def prepare_workspace(context: RunContext, config: TestConfig) -> PreparedRun:
 
     for declaration in (config.skill, *config.dependencies):
         retained_skill = context.inputs_skills_dir / declaration.id
-        shutil.copytree(declaration.source, retained_skill)
+        retained_skill.mkdir()
+        for relative in declaration.include:
+            destination = retained_skill / relative
+            destination.parent.mkdir(parents=True, exist_ok=True)
+            shutil.copy2(declaration.source / relative, destination)
 
     if config.scenario.fixture is not None:
         shutil.copytree(

@@ -25,7 +25,7 @@ Total: 15 total, 0 ported, 15 not ported.
 ## adversarial-review-loop-scenarios
 
 - `CS` — `skill-validation/fixtures/adversarial-review-loop/prompts/cs.md` — not ported
-- `T2` — `skill-validation/fixtures/adversarial-review-loop/prompts/t2.md` — not ported
+- `T2` — `skill-validation/fixtures/adversarial-review-loop/prompts/t2.md` — [ported](adversarial-review-loop/t2/test.json)
 - `T3` — `skill-validation/fixtures/adversarial-review-loop/prompts/t3.md` — not ported
 - `T4` — `skill-validation/fixtures/adversarial-review-loop/prompts/t4.md` — not ported
 - `T5` — `skill-validation/fixtures/adversarial-review-loop/prompts/t5.md` — not ported
@@ -40,7 +40,7 @@ Total: 15 total, 0 ported, 15 not ported.
 - `OWN` — `skill-validation/fixtures/adversarial-review-loop/prompts/own.md` — not ported
 - `CE` — `skill-validation/fixtures/adversarial-review-loop/prompts/ce.md` — not ported
 
-Total: 15 total, 0 ported, 15 not ported.
+Total: 15 total, 1 ported, 14 not ported.
 
 ## concise-writing
 
@@ -160,7 +160,7 @@ Total: 6 total, 2 ported, 4 not ported.
 ## Totals
 
 - `adversarial-review`: 15 total, 0 ported, 15 not ported
-- `adversarial-review-loop-scenarios`: 15 total, 0 ported, 15 not ported
+- `adversarial-review-loop-scenarios`: 15 total, 1 ported, 14 not ported
 - `concise-writing`: 17 total, 0 ported, 17 not ported
 - `disciplined-development`: 9 total, 0 ported, 9 not ported
 - `disciplined-research`: 7 total, 0 ported, 7 not ported
@@ -169,4 +169,4 @@ Total: 6 total, 2 ported, 4 not ported.
 - `skill-discovery`: 12 total, 0 ported, 12 not ported
 - `sweeping-stale-references`: 6 total, 0 ported, 6 not ported
 - `writing-explicit-rationale`: 6 total, 2 ported, 4 not ported
-- Overall: 105 total, 2 ported, 103 not ported
+- Overall: 105 total, 3 ported, 102 not ported

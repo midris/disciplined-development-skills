@@ -133,7 +133,7 @@ flowchart TD
 
 ## Test configuration
 
-`skilltest run` accepts one UTF-8 JSON file parsed with Python's standard-library `json` module. The file must be an RFC 8259 object. Version 1 rejects duplicate object keys, `NaN`, `Infinity`, `-Infinity`, and unknown schema keys. This keeps configuration parsing deterministic without adding a parser dependency.
+`skilltest run` accepts one UTF-8 JSON file parsed with Python's standard-library `json` module. The file must be an RFC 8259 object. Configuration schema `"0.1"` rejects duplicate object keys, `NaN`, `Infinity`, `-Infinity`, and unknown schema keys. This keeps configuration parsing deterministic without adding a parser dependency.
 
 Configuration paths are resolved relative to the JSON file's directory.
 
@@ -141,7 +141,7 @@ The root contains exactly:
 
 | Field | Type | Meaning |
 |---|---|---|
-| `schema_version` | integer `1` | Configuration schema version. |
+| `schema_version` | string `"0.1"` | Configuration schema version. |
 | `id` | path-safe string | Stable test identifier for humans and results. |
 | `skill` | skill declaration | Primary skill under test. |
 | `dependencies` | list of skill declarations | Ordered supporting skills; may be empty. |
@@ -149,7 +149,7 @@ The root contains exactly:
 | `expected_outcome` | any JSON value | Withheld material for agent and owner review; opaque to the runner, including when null. |
 | `execution` | execution declaration | Provider, model, and effort. |
 
-Identifiers are 1–64 characters matching `[a-z0-9][a-z0-9-]{0,63}`. The bound keeps every identifier-derived path component within ordinary filesystem limits. A skill declaration contains exactly `id` and `source`. `source` names a directory containing a regular `SKILL.md`; the whole directory is supplied so referenced scripts, assets, and supporting files remain available. Skill identifiers are unique across the primary skill and dependencies.
+Identifiers are 1–64 characters matching `[a-z0-9][a-z0-9-]{0,63}`. The bound keeps every identifier-derived path component within ordinary filesystem limits. A skill declaration contains exactly `id`, `source`, and `include`. `include` is a non-empty list of unique relative regular-file paths inside `source` and must explicitly contain root-level `SKILL.md`; only those files are supplied, with nested relative paths preserved. Directories, symlinks, absolute paths, empty paths, `.` or `..` components, duplicates, missing files, and declarations without `SKILL.md` are invalid. Skill identifiers are unique across the primary skill and dependencies.
 
 Each skill source is independent and may name any local repository, worktree, or directory. The runner does not require a common root or inspect Git state. A tester swaps the primary skill or any dependency by changing that declaration's `source`; the runner copies the configured combination without judging it.
 
@@ -187,17 +187,17 @@ Inputs are local, trusted test definitions in the DD skill repository, tested di
 
 - an absent required path;
 - a path of the wrong kind;
-- a `source` directory without a regular `SKILL.md`;
+- a skill declaration without an included regular root-level `SKILL.md`;
 - a duplicate identifier;
 - unreadable or invalid UTF-8 prompt or `SKILL.md` content;
-- a special file beneath a supplied skill or fixture;
+- a declared skill file or fixture entry that is not regular;
 - a resolved configuration path equal to the prompt or contained by a skill or fixture directory;
-- any non-regular entry in a declared input path or beneath a supplied skill or fixture;
+- an invalid included skill path or any non-regular entry beneath a fixture;
 - the fixed run base overlapping the configuration directory, a skill source, or the fixture in either direction.
 
 The overlap checks prevent the runner from directly copying the original configuration—and therefore the withheld expected outcome—into provider-visible input. They do not scan unrelated file content for deliberately repeated expected-outcome material; content chosen by the test author remains the author's responsibility.
 
-Other skill and fixture files are ordinary files copied as bytes. Empty supporting files and empty fixture directories are valid. File modes are copied using the standard library's ordinary copy behavior; mode normalization is not part of the result contract.
+Included skill files and fixture files are copied as bytes. Empty supporting files and empty fixture directories are valid. File modes are copied using the standard library's ordinary copy behavior; mode normalization is not part of the result contract.
 
 An empty prompt and semantically odd skill, dependency, model, effort, prompt,
 fixture, or expected outcome are valid when their declared types and packaging

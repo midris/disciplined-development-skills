@@ -20,10 +20,12 @@ def _valid_config(tmp_path: Path) -> tuple[Path, dict[str, object]]:
     _write(tmp_path / "prompt.txt", "do the scenario")
     (tmp_path / "fixture").mkdir()
     return tmp_path / "case.json", {
-        "schema_version": 1,
+        "schema_version": "0.1",
         "id": "valid-case",
-        "skill": {"id": "primary", "source": "primary"},
-        "dependencies": [{"id": "dependency", "source": "dependency"}],
+        "skill": {"id": "primary", "source": "primary", "include": ["SKILL.md"]},
+        "dependencies": [
+            {"id": "dependency", "source": "dependency", "include": ["SKILL.md"]}
+        ],
         "scenario": {"id": "case", "prompt": "prompt.txt", "fixture": "fixture"},
         "expected_outcome": {"opaque": True},
         "execution": {"provider": "codex", "model": "gpt-5.4", "effort": "medium"},
@@ -40,6 +42,27 @@ def _reject(path: Path, value: object) -> None:
     _save(path, value)
     with pytest.raises(ConfigError):
         load_config(path)
+
+
+def test_load_config_accepts_required_file_includes(tmp_path: Path) -> None:
+    config_path, config = _valid_config(tmp_path)
+    _write(tmp_path / "primary" / "scripts" / "tool.py", "pass")
+    config["schema_version"] = "0.1"
+    config["skill"] = {
+        "id": "primary",
+        "source": "primary",
+        "include": ["SKILL.md", "scripts/tool.py"],
+    }
+    config["dependencies"] = [
+        {"id": "dependency", "source": "dependency", "include": ["SKILL.md"]}
+    ]
+    _save(config_path, config)
+
+    loaded = load_config(config_path)
+
+    assert loaded.schema_version == "0.1"
+    assert loaded.skill.include == (Path("SKILL.md"), Path("scripts/tool.py"))
+    assert loaded.dependencies[0].include == (Path("SKILL.md"),)
 
 
 # Catches a loader mutation that retains or transforms the opaque expected outcome.
@@ -100,7 +123,9 @@ def test_load_config_accepts_independent_and_semantically_odd_inputs(tmp_path: P
     external_source = tmp_path / "independent-skill"
     _write(external_source / "SKILL.md", "independent")
     config_path, config = _valid_config(tmp_path / "independent")
-    config["dependencies"] = [{"id": "outside", "source": str(external_source)}]
+    config["dependencies"] = [
+        {"id": "outside", "source": str(external_source), "include": ["SKILL.md"]}
+    ]
     _save(config_path, config)
     assert load_config(config_path).dependencies[0].source == external_source.resolve()
 
@@ -159,6 +184,7 @@ def test_load_config_rejects_invalid_structure(tmp_path: Path) -> None:
         lambda value: value.pop("expected_outcome"),
         lambda value: value.__setitem__("extra", True),
         lambda value: value["skill"].__setitem__("extra", True),
+        lambda value: value["skill"].pop("include"),
         lambda value: value["scenario"].__setitem__("extra", True),
         lambda value: value["execution"].__setitem__("extra", True),
         lambda value: value.__setitem__("dependencies", {}),
@@ -214,22 +240,79 @@ def test_load_config_rejects_invalid_declared_paths(tmp_path: Path) -> None:
         _reject(config_path, config)
 
 
-# Catches tree-walk mutations that allow special files in declared sources.
+# Catches mutations that allow an included special skill file or a special fixture entry.
 def test_load_config_rejects_special_files(tmp_path: Path) -> None:
     for index, relative in enumerate(["primary/pipe", "fixture/pipe"]):
         case_root = tmp_path / str(index)
         config_path, config = _valid_config(case_root)
         os.mkfifo(case_root / relative)
+        if relative.startswith("primary/"):
+            config["skill"]["include"].append("pipe")
         _reject(config_path, config)
+
+
+@pytest.mark.parametrize(
+    "kind",
+    [
+        "not-list",
+        "empty-list",
+        "non-string",
+        "directory",
+        "symlink",
+        "absolute",
+        "empty-path",
+        "dot-component",
+        "dotdot-component",
+        "duplicate",
+        "missing-file",
+        "missing-skill-md",
+    ],
+)
+def test_load_config_rejects_invalid_file_includes(tmp_path: Path, kind: str) -> None:
+    config_path, config = _valid_config(tmp_path)
+    include: object = ["SKILL.md"]
+
+    if kind == "not-list":
+        include = "SKILL.md"
+    elif kind == "empty-list":
+        include = []
+    elif kind == "non-string":
+        include = ["SKILL.md", 1]
+    elif kind == "directory":
+        (tmp_path / "primary" / "extra").mkdir()
+        include = ["SKILL.md", "extra"]
+    elif kind == "symlink":
+        (tmp_path / "primary" / "link").symlink_to("SKILL.md")
+        include = ["SKILL.md", "link"]
+    elif kind == "absolute":
+        include = ["SKILL.md", str(tmp_path / "primary" / "SKILL.md")]
+    elif kind == "empty-path":
+        include = ["SKILL.md", ""]
+    elif kind == "dot-component":
+        _write(tmp_path / "primary" / "extra.txt")
+        include = ["SKILL.md", "./extra.txt"]
+    elif kind == "dotdot-component":
+        _write(tmp_path / "outside.txt")
+        include = ["SKILL.md", "../outside.txt"]
+    elif kind == "duplicate":
+        include = ["SKILL.md", "SKILL.md"]
+    elif kind == "missing-file":
+        include = ["SKILL.md", "missing.txt"]
+    elif kind == "missing-skill-md":
+        _write(tmp_path / "primary" / "extra.txt")
+        include = ["extra.txt"]
+
+    config["skill"]["include"] = include
+    _reject(config_path, config)
 
 
 # Catches uniqueness mutations that permit a dependency to reuse the primary identifier.
 def test_load_config_rejects_duplicate_skill_identifiers(tmp_path: Path) -> None:
     dependencies = [
-        [{"id": "primary", "source": "dependency"}],
+        [{"id": "primary", "source": "dependency", "include": ["SKILL.md"]}],
         [
-            {"id": "duplicate", "source": "dependency"},
-            {"id": "duplicate", "source": "dependency"},
+            {"id": "duplicate", "source": "dependency", "include": ["SKILL.md"]},
+            {"id": "duplicate", "source": "dependency", "include": ["SKILL.md"]},
         ],
     ]
     for index, value in enumerate(dependencies):

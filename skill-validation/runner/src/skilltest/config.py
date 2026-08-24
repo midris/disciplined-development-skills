@@ -34,6 +34,7 @@ class SkillDeclaration:
     id: str
     source: Path
     skill_md: Path
+    include: tuple[Path, ...]
 
 
 @dataclass(frozen=True, slots=True)
@@ -52,7 +53,7 @@ class ExecutionDeclaration:
 
 @dataclass(frozen=True, slots=True)
 class TestConfig:
-    schema_version: int
+    schema_version: str
     id: str
     skill: SkillDeclaration
     dependencies: tuple[SkillDeclaration, ...]
@@ -70,8 +71,8 @@ def load_config(path: Path) -> TestConfig:
     _exact_keys(value, _ROOT_KEYS, "configuration")
 
     schema_version = value["schema_version"]
-    if type(schema_version) is not int or schema_version != 1:
-        raise ConfigError("schema_version must be integer 1")
+    if schema_version != "0.1":
+        raise ConfigError('schema_version must be "0.1"')
     test_id = _identifier(value["id"], "id")
     skill = _skill(value["skill"], config_path.parent, "skill")
     dependencies_value = value["dependencies"]
@@ -133,12 +134,37 @@ def _reject_nonfinite(value: str) -> None:
 
 
 def _skill(value: Any, base: Path, name: str) -> SkillDeclaration:
-    _exact_keys(value, {"id", "source"}, name)
+    _exact_keys(value, {"id", "source", "include"}, name)
     skill_id = _identifier(value["id"], f"{name}.id")
     source = _directory(_path(value["source"], base, f"{name}.source"), f"{name}.source").resolve()
+    include = _included_files(value["include"], source, f"{name}.include")
     skill_md = _regular_file(source / "SKILL.md", f"{name}.source/SKILL.md").resolve()
     _read_utf8(skill_md, f"{name}.source/SKILL.md")
-    return SkillDeclaration(skill_id, source, skill_md)
+    return SkillDeclaration(skill_id, source, skill_md, include)
+
+
+def _included_files(value: Any, source: Path, name: str) -> tuple[Path, ...]:
+    if not isinstance(value, list) or not value:
+        raise ConfigError(f"{name} must be a non-empty list")
+
+    included: list[Path] = []
+    for index, item in enumerate(value):
+        if not isinstance(item, str) or not item:
+            raise ConfigError(f"{name}[{index}] must be a non-empty path string")
+        relative = Path(item)
+        if relative.is_absolute() or any(part in {".", ".."} for part in item.split("/")):
+            raise ConfigError(f"{name}[{index}] must be a relative file path without dot components")
+        target = source / relative
+        if not _contains(source, target.resolve()):
+            raise ConfigError(f"{name}[{index}] must resolve inside the skill source")
+        _regular_file(target, f"{name}[{index}]")
+        included.append(relative)
+
+    if len(set(included)) != len(included):
+        raise ConfigError(f"{name} paths must be unique")
+    if Path("SKILL.md") not in included:
+        raise ConfigError(f"{name} must include SKILL.md")
+    return tuple(included)
 
 
 def _scenario(value: Any, base: Path) -> ScenarioDeclaration:
@@ -180,7 +206,6 @@ def _preflight(
     for declaration in sources:
         if _overlap(declaration.source, config_path):
             raise ConfigError("skill source contains configuration")
-        _check_tree(declaration.source, config_path)
     if scenario.fixture is not None:
         if _overlap(scenario.fixture, config_path):
             raise ConfigError("fixture contains configuration")

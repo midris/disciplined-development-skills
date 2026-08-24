@@ -126,7 +126,7 @@ def build_config_case(tmp_path: Path) -> object:
         _write(primary / "SKILL.md", "Primary skill instructions.\n")
         _write(primary / "scripts" / "tool.sh", b"#!/bin/sh\necho primary\n")
 
-        dependency_values: list[dict[str, str]] = []
+        dependency_values: list[dict[str, object]] = []
         for dependency in dependencies:
             dependency_root = root / dependency
             _write(dependency_root / "SKILL.md", f"{dependency} instructions.\n")
@@ -134,7 +134,13 @@ def build_config_case(tmp_path: Path) -> object:
                 dependency_root / "resources" / "notes.txt",
                 f"resource for {dependency}\n",
             )
-            dependency_values.append({"id": dependency, "source": dependency})
+            dependency_values.append(
+                {
+                    "id": dependency,
+                    "source": dependency,
+                    "include": ["SKILL.md", "resources/notes.txt"],
+                }
+            )
 
         prompt_path = _write(root / "prompt.txt", prompt_bytes)
 
@@ -155,9 +161,13 @@ def build_config_case(tmp_path: Path) -> object:
         config_path.write_bytes(
             json.dumps(
                 {
-                    "schema_version": 1,
+                    "schema_version": "0.1",
                     "id": f"{name}-run",
-                    "skill": {"id": "primary", "source": "primary"},
+                    "skill": {
+                        "id": "primary",
+                        "source": "primary",
+                        "include": ["SKILL.md", "scripts/tool.sh"],
+                    },
                     "dependencies": dependency_values,
                     "scenario": {
                         "id": f"{name}-scenario",

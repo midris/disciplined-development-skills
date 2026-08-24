@@ -111,6 +111,28 @@ def test_prepare_workspace_builds_exact_layout_for_absent_fixture(
     assert not run.config_path.exists()
 
 
+def test_prepare_workspace_copies_only_included_skill_files(
+    build_config_case: object, monkeypatch: pytest.MonkeyPatch
+) -> None:
+    case = build_config_case(name="included-files", fixture="none", dependencies=())
+    (case.root / "primary" / "ignored.txt").write_text("not included", encoding="utf-8")
+    with monkeypatch.context() as context:
+        context.setattr(workspace_module.tempfile, "gettempdir", lambda: str(case.root / "tmp"))
+        run = workspace_module.create_run(case.config)
+        prepared = workspace_module.prepare_workspace(run, case.config)
+
+    assert (run.inputs_skills_dir / "primary" / "SKILL.md").is_file()
+    assert (run.inputs_skills_dir / "primary" / "scripts" / "tool.sh").is_file()
+    assert not (run.inputs_skills_dir / "primary" / "ignored.txt").exists()
+    assert (prepared.workspace_dir / "supplied-skills" / "primary" / "SKILL.md").is_file()
+    assert (
+        prepared.workspace_dir / "supplied-skills" / "primary" / "scripts" / "tool.sh"
+    ).is_file()
+    assert not (
+        prepared.workspace_dir / "supplied-skills" / "primary" / "ignored.txt"
+    ).exists()
+
+
 # Catches layout regressions that treat a declared empty fixture like an absent one.
 def test_prepare_workspace_retains_declared_empty_fixture_directory(
     build_config_case: object, monkeypatch: pytest.MonkeyPatch
