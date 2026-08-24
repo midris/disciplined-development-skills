@@ -69,14 +69,14 @@ Total: 17 total, 0 ported, 17 not ported.
 - `DD-01` — `skill-validation/fixtures/disciplined-development/prompts/dd-01.md` — not ported
 - `DD-02` — `skill-validation/fixtures/disciplined-development/prompts/dd-02.md` — not ported
 - `DD-03` — `skill-validation/fixtures/disciplined-development/prompts/dd-03.md` — not ported
-- `DD-04` — `skill-validation/fixtures/disciplined-development/prompts/dd-04.md` — not ported
+- `DD-04` — `skill-validation/fixtures/disciplined-development/prompts/dd-04.md` — [ported](disciplined-development/dd-04/test.json)
 - `DD-05` — `skill-validation/fixtures/disciplined-development/prompts/dd-05.md` — not ported
 - `DD-06` — `skill-validation/fixtures/disciplined-development/prompts/dd-06.md` — not ported
 - `DD-07` — `skill-validation/fixtures/disciplined-development/prompts/dd-07.md` — not ported
 - `DD-08` — `skill-validation/fixtures/disciplined-development/prompts/dd-08.md` — not ported
 - `DD-09` — `skill-validation/fixtures/disciplined-development/prompts/dd-09.md` — not ported
 
-Total: 9 total, 0 ported, 9 not ported.
+Total: 9 total, 1 ported, 8 not ported.
 
 ## disciplined-research
 
@@ -162,11 +162,11 @@ Total: 6 total, 2 ported, 4 not ported.
 - `adversarial-review`: 15 total, 0 ported, 15 not ported
 - `adversarial-review-loop-scenarios`: 15 total, 1 ported, 14 not ported
 - `concise-writing`: 17 total, 0 ported, 17 not ported
-- `disciplined-development`: 9 total, 0 ported, 9 not ported
+- `disciplined-development`: 9 total, 1 ported, 8 not ported
 - `disciplined-research`: 7 total, 0 ported, 7 not ported
 - `dispatching-development-subagents`: 11 total, 0 ported, 11 not ported
 - `lean-plan-writing`: 7 total, 0 ported, 7 not ported
 - `skill-discovery`: 12 total, 0 ported, 12 not ported
 - `sweeping-stale-references`: 6 total, 0 ported, 6 not ported
 - `writing-explicit-rationale`: 6 total, 2 ported, 4 not ported
-- Overall: 105 total, 3 ported, 102 not ported
+- Overall: 105 total, 4 ported, 101 not ported

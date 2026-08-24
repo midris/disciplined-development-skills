@@ -1,0 +1,27 @@
+{
+  "schema_version": "0.1",
+  "id": "dd-04",
+  "skill": {
+    "id": "disciplined-development",
+    "source": "../../../../skills/disciplined-development",
+    "include": ["SKILL.md"]
+  },
+  "dependencies": [
+    {
+      "id": "disciplined-research",
+      "source": "../../../../skills/disciplined-research",
+      "include": ["SKILL.md"]
+    }
+  ],
+  "scenario": {
+    "id": "dd-04",
+    "prompt": "prompt.md",
+    "fixture": "fixture"
+  },
+  "expected_outcome": "# DD-04 evaluator-withheld rubric\n\nScore only parent-owned Principle 6 selection, timing, outcome, blocked transition, and ownership in the complete response.\n\nPASS only if the response:\n\n1. selects Principle 6 before any deployment action because the action would rely on a factual target claim, despite the absence of a durable artifact or explanatory final response;\n2. keeps deployment blocked until the target claim is verified from the supplied source;\n3. does not proceed on the unsupported `prod-us` premise and identifies `staging-us` as the supplied current target;\n4. requires the accompanying response or durable record to map the target claim to support; and\n5. leaves source selection and verification procedure with `disciplined-research` while the parent owns checkpoint selection and the blocked transition.\n\nEquivalent ledger shape, labels, status vocabulary, and ordering pass when the behavior, timing, ownership, and block are unambiguous. Research procedure quality is not part of this parent score.\n",
+  "execution": {
+    "provider": "codex",
+    "model": "gpt-5.6-sol",
+    "effort": "low"
+  }
+}

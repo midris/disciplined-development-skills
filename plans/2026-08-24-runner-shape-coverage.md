@@ -40,10 +40,10 @@
 
 ### Task 4: Multiple supplied skills with a fixture
 
-- [ ] Inspect the active candidates, their canonical inputs, and the runner contract.
-- [ ] Select the representative.
-- [ ] Develop and obtain approval for a faithful porting solution.
-- [ ] Create a separate implementation plan that owns completion, then stop for review.
+- [x] Inspect the active candidates, their canonical inputs, and the runner contract.
+- [x] Select `DD-04` as the representative.
+- [x] Develop and obtain approval for a faithful porting solution.
+- [x] Create the separate [DD-04 implementation plan](completed/2026-08-24-dd-04-multiple-skills-fixture-runner-port.md), which owns packaging, the smoke run, inventory reconciliation, and completion; stop for review.
 
 ### Task 5: Pinned external dependency
 
