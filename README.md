@@ -62,6 +62,11 @@ pressure scenarios that justify its content, kept re-runnable so a change can be
 re-tested before it ships. Non-shipped — a development record, not part of the
 installed bundle.
 
+[`skill-validation/runner/`](skill-validation/runner/) is also non-shipped: a
+small `skilltest run CONFIG` CLI for one retained, locally configured skill-test
+run. Its [operator guide](skill-validation/runner/README.md) covers setup,
+configuration, bundles, and the strict one-run boundary.
+
 ## How it fits together
 
 `install-skills.sh` symlinks the skill dirs and command templates into your
@@ -266,6 +271,14 @@ cd skills/disciplined-development/hooks && python3 -m pytest -q
 
 The settings-wiring test skips outside an in-tree consumer (it validates a
 consumer's `.claude/settings.json`, which isn't present in the bundle).
+
+The non-shipped runner has its own locked environment and offline suite:
+
+```
+cd skill-validation/runner
+uv sync --locked
+uv run pytest -q
+```
 
 ## Upgrading an existing deployment
 
