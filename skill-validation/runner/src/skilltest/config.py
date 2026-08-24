@@ -9,7 +9,6 @@ import stat
 import tempfile
 from dataclasses import dataclass
 from pathlib import Path
-from types import MappingProxyType
 from typing import Any
 
 
@@ -58,7 +57,6 @@ class TestConfig:
     skill: SkillDeclaration
     dependencies: tuple[SkillDeclaration, ...]
     scenario: ScenarioDeclaration
-    expected_outcome: Any
     execution: ExecutionDeclaration
     config_path: Path
     config_bytes: bytes
@@ -85,8 +83,6 @@ def load_config(path: Path) -> TestConfig:
     )
     _unique_skill_ids(skill, dependencies)
     scenario = _scenario(value["scenario"], config_path.parent)
-    if value["expected_outcome"] is None:
-        raise ConfigError("expected_outcome must not be null")
     execution = _execution(value["execution"])
 
     _preflight(config_path, skill, dependencies, scenario)
@@ -96,7 +92,6 @@ def load_config(path: Path) -> TestConfig:
         skill=skill,
         dependencies=dependencies,
         scenario=scenario,
-        expected_outcome=_freeze(value["expected_outcome"]),
         execution=execution,
         config_path=config_path,
         config_bytes=config_bytes,
@@ -110,7 +105,14 @@ def _parse_config(config_bytes: bytes, config_path: Path) -> dict[str, Any]:
             object_pairs_hook=_unique_object,
             parse_constant=_reject_nonfinite,
         )
-    except (UnicodeDecodeError, json.JSONDecodeError, ConfigError) as error:
+    except (
+        UnicodeDecodeError,
+        json.JSONDecodeError,
+        ConfigError,
+        MemoryError,
+        RecursionError,
+        ValueError,
+    ) as error:
         raise ConfigError(f"invalid JSON configuration {config_path}: {error}") from error
     if not isinstance(value, dict):
         raise ConfigError("configuration must be an object")
@@ -123,14 +125,6 @@ def _unique_object(pairs: list[tuple[str, Any]]) -> dict[str, Any]:
         if key in value:
             raise ConfigError(f"duplicate key: {key}")
         value[key] = item
-    return value
-
-
-def _freeze(value: Any) -> Any:
-    if isinstance(value, dict):
-        return MappingProxyType({key: _freeze(item) for key, item in value.items()})
-    if isinstance(value, list):
-        return tuple(_freeze(item) for item in value)
     return value
 
 
@@ -151,9 +145,7 @@ def _scenario(value: Any, base: Path) -> ScenarioDeclaration:
     _exact_keys(value, {"id", "prompt", "fixture"}, "scenario")
     scenario_id = _identifier(value["id"], "scenario.id")
     prompt = _regular_file(_path(value["prompt"], base, "scenario.prompt"), "scenario.prompt").resolve()
-    prompt_bytes, _ = _read_utf8(prompt, "scenario.prompt")
-    if not prompt_bytes:
-        raise ConfigError("scenario.prompt must not be empty")
+    _read_utf8(prompt, "scenario.prompt")
     fixture_value = value["fixture"]
     if fixture_value is None:
         fixture = None
@@ -240,7 +232,7 @@ def _read_utf8(path: Path, name: str) -> tuple[bytes, str]:
     try:
         contents = path.read_bytes()
         return contents, contents.decode("utf-8")
-    except (OSError, UnicodeDecodeError) as error:
+    except (OSError, UnicodeDecodeError, MemoryError) as error:
         raise ConfigError(f"{name} must be readable UTF-8: {error}") from error
 
 
@@ -250,7 +242,7 @@ def _path(value: Any, base: Path, name: str) -> Path:
     try:
         return base / value
     except (OSError, RuntimeError, ValueError) as error:
-        raise ConfigError(f"cannot resolve {name}: {error}") from error
+        raise ConfigError(f"cannot construct {name}: {error}") from error
 
 
 def _identifier(value: Any, name: str) -> str:

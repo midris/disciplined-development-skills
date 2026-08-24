@@ -57,7 +57,7 @@
       "anyOf": [
         {"type": "null"},
         {"type": "object", "additionalProperties": false, "required": ["code", "message"], "properties": {
-          "code": {"enum": ["PREPARATION_FAILED", "PROVIDER_LAUNCH_FAILED", "PROVIDER_TIMEOUT", "PROVIDER_EXIT_NONZERO", "PROVIDER_OUTPUT_INVALID", "FINAL_OUTPUT_MISSING", "ARTIFACT_WRITE_FAILED"]},
+          "code": {"enum": ["PREPARATION_FAILED", "PROVIDER_LAUNCH_FAILED", "PROVIDER_TIMEOUT", "PROVIDER_EXIT_NONZERO", "ARTIFACT_WRITE_FAILED"]},
           "message": {"type": "string"}
         }}
       ]

@@ -16,8 +16,7 @@ from skilltest.workspace import RunContext
 
 ERROR_CODES = {
     "PREPARATION_FAILED", "PROVIDER_LAUNCH_FAILED", "PROVIDER_TIMEOUT",
-    "PROVIDER_EXIT_NONZERO", "PROVIDER_OUTPUT_INVALID", "FINAL_OUTPUT_MISSING",
-    "ARTIFACT_WRITE_FAILED",
+    "PROVIDER_EXIT_NONZERO", "ARTIFACT_WRITE_FAILED",
 }
 
 
@@ -108,4 +107,8 @@ def _file_artifact(path: Path, run_dir: Path) -> dict[str, Any]:
 
 
 def _sha256(path: Path) -> str:
-    return hashlib.sha256(path.read_bytes()).hexdigest()
+    digest = hashlib.sha256()
+    with path.open("rb") as file:
+        for chunk in iter(lambda: file.read(1024 * 1024), b""):
+            digest.update(chunk)
+    return digest.hexdigest()

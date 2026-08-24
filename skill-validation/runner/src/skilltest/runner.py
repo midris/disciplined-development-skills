@@ -26,12 +26,12 @@ def run_once(config_path: Path) -> RunOutcome:
         config = load_config(config_path)
     except ConfigError as error:
         return RunOutcome(2, None, str(error))
+    started = monotonic()
     try:
         context = create_run(config)
     except OSError as error:
         return RunOutcome(1, None, f"run allocation failed: {error}")
 
-    started = monotonic()
     result = ProviderResult(config.execution.provider, False)
     error = _log_error(context, f"run {context.run_id} allocated", "PREPARATION_FAILED")
     if error is not None:
@@ -54,40 +54,35 @@ def run_once(config_path: Path) -> RunOutcome:
     error = _log_error(context, f"provider arguments: {_arguments(request)!r}", "PREPARATION_FAILED")
     if error is not None:
         return _finish(context, config, result, error, started)
+    error = _log_error(context, "provider invocation attempted", "PREPARATION_FAILED")
+    if error is not None:
+        return _finish(context, config, result, error, started)
     result = invoke_provider(request)
-    provider_error = _provider_error(result, config.execution.provider)
+    provider_error = _provider_error(result)
     log_error = _provider_log_error(context, result)
     artifact_error = _write_provider_artifacts(context, result)
     error = provider_error or log_error or artifact_error
     return _finish(context, config, result, error, started)
 
 
-def _provider_error(result: ProviderResult, provider: str) -> tuple[str, str] | None:
+def _provider_error(result: ProviderResult) -> tuple[str, str] | None:
     if not result.invocation_started:
         return "PROVIDER_LAUNCH_FAILED", f"{result.executable} launch failed: {result.launch_error}"
     if result.timed_out:
         return "PROVIDER_TIMEOUT", f"{result.executable} timed out"
     if result.exit_code != 0:
         return "PROVIDER_EXIT_NONZERO", f"{result.executable} exited with code {result.exit_code}"
-    if result.output_error is not None:
-        code = "FINAL_OUTPUT_MISSING" if provider == "codex" else "PROVIDER_OUTPUT_INVALID"
-        return code, result.output_error
-    if result.artifact_error is not None:
-        return "ARTIFACT_WRITE_FAILED", result.artifact_error
-    if result.final_output_bytes is None:
-        return "FINAL_OUTPUT_MISSING", f"{result.executable} did not produce final output"
     return None
 
 
 def _provider_log_error(context: RunContext, result: ProviderResult) -> tuple[str, str] | None:
     if not result.invocation_started:
         return _log_error(context, "provider launch failed", "ARTIFACT_WRITE_FAILED")
-    started = _log_error(context, "provider started", "ARTIFACT_WRITE_FAILED")
-    ended = _log_error(
-        context, "provider timed out" if result.timed_out else "provider exited",
+    return _log_error(
+        context,
+        "provider returned" if not result.timed_out else "provider timed out",
         "ARTIFACT_WRITE_FAILED",
     )
-    return started or ended
 
 
 def _write_provider_artifacts(
@@ -125,10 +120,10 @@ def _finish(
     terminal = "COMPLETED" if error is None else f"INFRA_ERROR {error[0]}"
     terminal_error = _log_error(context, terminal, "ARTIFACT_WRITE_FAILED")
     error = error or terminal_error
-    record = result_record(
-        context, config, result, error, _timestamp(), round(monotonic() - started, 3)
-    )
     try:
+        record = result_record(context, config, result, error, "", 0)
+        record["finished_at"] = _timestamp()
+        record["duration_seconds"] = round(monotonic() - started, 3)
         publish_result(context.result_path, record)
     except OSError as failure:
         diagnostic = f"result artifact write failed: {failure}"

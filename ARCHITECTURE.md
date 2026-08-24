@@ -59,6 +59,15 @@ optional, gracefully-degrading instruction (log a review round when the project
 provides a command). The hooks read per-branch state to decide whether to nudge
 or block; the two tools are the only **writers** of that state and the review log.
 
+## Non-shipped skill-test runner
+
+[`skill-validation/runner/`](skill-validation/runner/) is separate development
+tooling, not a fourth runtime layer or an installed consumer component.
+`skilltest run CONFIG` owns one configuration, bundle, workspace, provider
+process, result record, and exit; outside callers compose independent runs.
+Its operator contract and bundle layout are in its
+[README](skill-validation/runner/README.md).
+
 ## The skill layer
 
 Nine skills: one **orchestrator** and eight **companions** it dispatches, all
@@ -264,3 +273,4 @@ Durable (never aged out), append-only, sparse by source; the field groups are in
 - **Hook behavior, state model, observability:** [`hooks/README.md`](skills/disciplined-development/hooks/README.md)
 - **Config schema + env vars:** [`hooks/dd-config.md`](skills/disciplined-development/hooks/dd-config.md)
 - **Upgrading a deployment:** [`MIGRATIONS.md`](MIGRATIONS.md)
+- **One-run validation tooling:** [`skill-validation/runner/README.md`](skill-validation/runner/README.md)

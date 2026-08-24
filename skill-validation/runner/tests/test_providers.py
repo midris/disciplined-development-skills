@@ -10,7 +10,7 @@ from skilltest.providers import ProviderRequest, invoke_provider
 
 def _request(tmp_path, *, provider: str, model: str = "chosen-model", effort: str = "high"):
     workspace = tmp_path / "workspace"
-    workspace.mkdir()
+    workspace.mkdir(parents=True)
     return ProviderRequest(
         workspace_dir=workspace,
         subject_input_bytes=b"subject bytes\n",
@@ -39,8 +39,6 @@ def test_codex_invokes_one_fixed_cli_with_exact_request_values(tmp_path, monkeyp
     assert result.launch_error is None
     assert result.stdout_bytes == b'{"event":"done"}\n'
     assert result.stderr_bytes == b"codex warning\n"
-    assert result.final_output_bytes == b"Codex final response\n"
-    assert result.output_error is None
     assert fake_provider.record() == {
         "argv": [
             str(tmp_path / "fake-bin" / "codex"),
@@ -75,9 +73,9 @@ def test_codex_invokes_one_fixed_cli_with_exact_request_values(tmp_path, monkeyp
     }
 
 
-def test_claude_extracts_only_terminal_result_event(tmp_path, monkeypatch, fake_provider):
+def test_claude_retains_raw_jsonl_without_parsing_or_formatting(tmp_path, monkeypatch, fake_provider):
     request = _request(tmp_path, provider="claude", model="sonnet", effort="high")
-    stdout = b'{"type":"assistant","text":"intermediate"}\n{"type":"result","result":"Claude final"}\n'
+    stdout = b'not-json\n{"type":"result","result":7}\n'
     fake_provider.configure(monkeypatch, stdout=stdout, stderr=b"claude warning\n")
 
     result = invoke_provider(request)
@@ -89,9 +87,7 @@ def test_claude_extracts_only_terminal_result_event(tmp_path, monkeypatch, fake_
     assert result.launch_error is None
     assert result.stdout_bytes == stdout
     assert result.stderr_bytes == b"claude warning\n"
-    assert result.final_output_bytes == b"Claude final"
-    assert request.final_output_path.read_bytes() == b"Claude final"
-    assert result.output_error is None
+    assert not request.final_output_path.exists()
     record = fake_provider.record()
     assert record["argv"] == [
         str(tmp_path / "fake-bin" / "claude"),
@@ -127,8 +123,16 @@ def test_returns_launch_failure_without_starting_provider(tmp_path, monkeypatch)
     assert result.launch_error is not None
     assert result.stdout_bytes == b""
     assert result.stderr_bytes == b""
-    assert result.final_output_bytes is None
-    assert result.output_error is None
+
+    monkeypatch.setattr(
+        providers.subprocess,
+        "Popen",
+        lambda *args, **kwargs: (_ for _ in ()).throw(ValueError("unrepresentable launch")),
+    )
+    normalized = invoke_provider(_request(tmp_path / "value-error", provider="codex"))
+    assert normalized.invocation_started is False
+    assert normalized.exit_code is None
+    assert normalized.launch_error == "unrepresentable launch"
 
 
 def test_returns_nonzero_exit_before_examining_codex_final_output(tmp_path, monkeypatch, fake_provider):
@@ -141,8 +145,6 @@ def test_returns_nonzero_exit_before_examining_codex_final_output(tmp_path, monk
     assert result.timed_out is False
     assert result.stdout_bytes == b"out"
     assert result.stderr_bytes == b"err"
-    assert result.final_output_bytes is None
-    assert result.output_error is None
 
 
 def test_marks_timeout_after_terminating_direct_provider(tmp_path, monkeypatch, fake_provider):
@@ -157,40 +159,23 @@ def test_marks_timeout_after_terminating_direct_provider(tmp_path, monkeypatch, 
     assert result.timed_out is True
     assert result.stdout_bytes == b""
     assert result.stderr_bytes == b""
-    assert result.final_output_bytes is None
-    assert result.output_error is None
 
 
-def test_marks_missing_codex_final_output(tmp_path, monkeypatch, fake_provider):
-    fake_provider.configure(monkeypatch, write_final=False)
+def test_zero_exit_accepts_optional_or_arbitrary_provider_output(
+    tmp_path, monkeypatch, fake_provider
+):
+    for provider, stdout, write_final in (
+        ("codex", b"", False),
+        ("claude", b"not-json\n", True),
+        ("claude", b'{"type":"result","result":7}\n', True),
+    ):
+        fake_provider.configure(monkeypatch, stdout=stdout, write_final=write_final)
+        request = _request(tmp_path / provider / str(len(stdout)), provider=provider)
+        result = invoke_provider(request)
 
-    result = invoke_provider(_request(tmp_path, provider="codex"))
-
-    assert result.exit_code == 0
-    assert result.final_output_bytes is None
-    assert result.output_error == "Codex did not write final output"
-
-
-@pytest.mark.parametrize(
-    ("stdout", "message"),
-    [
-        (b"not-json\n", "Claude emitted malformed JSONL"),
-        (b'{"type":"assistant"}\n', "Claude did not emit a terminal result event"),
-        (
-            b'{"type":"result","result":"final"}\n{"type":"assistant"}\n',
-            "Claude terminal event is not a result",
-        ),
-        (b'{"type":"result","result":7}\n', "Claude terminal result is not a string"),
-    ],
-)
-def test_marks_invalid_claude_terminal_output(tmp_path, monkeypatch, fake_provider, stdout, message):
-    fake_provider.configure(monkeypatch, stdout=stdout)
-
-    result = invoke_provider(_request(tmp_path, provider="claude"))
-
-    assert result.exit_code == 0
-    assert result.final_output_bytes is None
-    assert result.output_error == message
+        assert result.exit_code == 0
+        assert result.stdout_bytes == stdout
+        assert not request.final_output_path.exists()
 
 
 def test_rejects_internal_unknown_provider_without_launching_child(tmp_path):

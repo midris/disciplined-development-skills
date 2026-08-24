@@ -42,7 +42,7 @@ def _reject(path: Path, value: object) -> None:
         load_config(path)
 
 
-# Catches a loader mutation that fails to preserve exact bytes, resolved paths, or record immutability.
+# Catches a loader mutation that retains or transforms the opaque expected outcome.
 def test_load_config_accepts_exact_execution_declarations(tmp_path: Path) -> None:
     for provider, model, effort in [("codex", "gpt-5.4", "medium"), ("claude", "sonnet", "high")]:
         case_root = tmp_path / provider
@@ -69,19 +69,19 @@ def test_load_config_accepts_exact_execution_declarations(tmp_path: Path) -> Non
             loaded.scenario.id = "other"  # type: ignore[misc]
         with pytest.raises(FrozenInstanceError):
             loaded.execution.model = "other"  # type: ignore[misc]
-        with pytest.raises(TypeError):
-            loaded.expected_outcome["nested"]["items"][0] = "other"
+        assert not hasattr(loaded, "expected_outcome")
 
 
 # Catches a loader mutation that judges independent roots or opaque valid values.
 def test_load_config_accepts_independent_and_semantically_odd_inputs(tmp_path: Path) -> None:
-    expected_outcomes = ["opaque", ["array"], 7, False]
+    expected_outcomes = [None, "opaque", ["array"], 7, False]
     for index, expected_outcome in enumerate(expected_outcomes):
         case_root = tmp_path / str(index)
         config_path, config = _valid_config(case_root)
         config["dependencies"] = []
         config["scenario"]["fixture"] = None
         config["expected_outcome"] = expected_outcome
+        _write(case_root / "prompt.txt", b"")
         config["execution"] = {
             "provider": "codex",
             "model": "not-a-model",
@@ -93,7 +93,8 @@ def test_load_config_accepts_independent_and_semantically_odd_inputs(tmp_path: P
 
         assert loaded.dependencies == ()
         assert loaded.scenario.fixture is None
-        assert loaded.expected_outcome == (tuple(expected_outcome) if isinstance(expected_outcome, list) else expected_outcome)
+        assert loaded.scenario.prompt.read_bytes() == b""
+        assert not hasattr(loaded, "expected_outcome")
         assert loaded.execution.model == "not-a-model"
 
     external_source = tmp_path / "independent-skill"
@@ -104,8 +105,10 @@ def test_load_config_accepts_independent_and_semantically_odd_inputs(tmp_path: P
     assert load_config(config_path).dependencies[0].source == external_source.resolve()
 
 
-# Catches a parser mutation that accepts non-RFC-8259 JSON or duplicate keys.
-def test_load_config_rejects_invalid_json(tmp_path: Path) -> None:
+# Catches a parser mutation that accepts invalid JSON or leaks capacity failure.
+def test_load_config_rejects_invalid_json_and_normalizes_capacity(
+    tmp_path: Path, monkeypatch: pytest.MonkeyPatch
+) -> None:
     for index, raw in enumerate(
         [
             b"[1]",
@@ -123,12 +126,37 @@ def test_load_config_rejects_invalid_json(tmp_path: Path) -> None:
         with pytest.raises(ConfigError):
             load_config(config_path)
 
+    config_path, config = _valid_config(tmp_path / "capacity")
+    _save(config_path, config)
+    original_read_bytes = Path.read_bytes
 
-# Catches schema-validation mutations that accept missing, null, or unknown fields.
+    def out_of_capacity(path: Path) -> bytes:
+        if path == config_path:
+            raise MemoryError("capacity exhausted")
+        return original_read_bytes(path)
+
+    monkeypatch.setattr(Path, "read_bytes", out_of_capacity)
+    with pytest.raises(ConfigError, match="capacity exhausted"):
+        load_config(config_path)
+    monkeypatch.setattr(Path, "read_bytes", original_read_bytes)
+
+    config_path, config = _valid_config(tmp_path / "large-number")
+    config.pop("expected_outcome")
+    config_path.write_text(
+        json.dumps(config, separators=(",", ":"))[:-1]
+        + ',"expected_outcome":'
+        + "9" * 5000
+        + "}",
+        encoding="utf-8",
+    )
+    with pytest.raises(ConfigError, match="Exceeds the limit"):
+        load_config(config_path)
+
+
+# Catches schema-validation mutations that accept missing or unknown fields.
 def test_load_config_rejects_invalid_structure(tmp_path: Path) -> None:
     mutations = [
         lambda value: value.pop("expected_outcome"),
-        lambda value: value.__setitem__("expected_outcome", None),
         lambda value: value.__setitem__("extra", True),
         lambda value: value["skill"].__setitem__("extra", True),
         lambda value: value["scenario"].__setitem__("extra", True),
@@ -176,7 +204,6 @@ def test_load_config_rejects_invalid_declared_paths(tmp_path: Path) -> None:
         lambda root, value: value["scenario"].__setitem__("fixture", "missing"),
         lambda root, value: value["scenario"].__setitem__("fixture", "prompt.txt"),
         lambda root, value: value["scenario"].__setitem__("prompt", "\x00"),
-        lambda root, value: _write(root / "prompt.txt"),
         lambda root, value: _write(root / "prompt.txt", b"\xff"),
         lambda root, value: _write(root / "primary" / "SKILL.md", b"\xff"),
     ]

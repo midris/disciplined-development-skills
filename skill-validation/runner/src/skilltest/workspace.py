@@ -46,13 +46,13 @@ def create_run(config: TestConfig) -> RunContext:
     started_at = _timestamp(now)
     run_root = Path(tempfile.gettempdir()).resolve() / "skilltest-runs"
     run_root.mkdir(parents=True, exist_ok=True)
-    run_id = Path(
+    run_dir = Path(
         tempfile.mkdtemp(
             prefix=f"{now.strftime('%Y%m%dT%H%M%S%f')[:-3]}Z-{config.id}-{uuid.uuid4()}-",
             dir=run_root,
         )
-    ).name
-    run_dir = run_root / run_id
+    )
+    run_id = run_dir.name
 
     marker_path = run_dir / ".skilltest-run"
     inputs_dir = run_dir / "inputs"
@@ -61,11 +61,6 @@ def create_run(config: TestConfig) -> RunContext:
     inputs_skills_dir = inputs_dir / "skills"
     subject_input_path = run_dir / "subject-input.txt"
     workspace_dir = run_dir / "workspace"
-
-    marker_path.touch()
-    inputs_fixture_dir.mkdir(parents=True)
-    inputs_skills_dir.mkdir()
-    workspace_dir.mkdir()
 
     return RunContext(
         run_id=run_id,
@@ -89,6 +84,10 @@ def create_run(config: TestConfig) -> RunContext:
 
 def prepare_workspace(context: RunContext, config: TestConfig) -> PreparedRun:
     """Populate retained inputs, prepare the workspace, and write subject input."""
+    context.marker_path.touch()
+    context.inputs_fixture_dir.mkdir(parents=True)
+    context.inputs_skills_dir.mkdir()
+    context.workspace_dir.mkdir()
     shutil.copy2(config.scenario.prompt, context.inputs_prompt_path)
 
     for declaration in (config.skill, *config.dependencies):

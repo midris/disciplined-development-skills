@@ -27,6 +27,7 @@ commands/                             # slash-command templates (installer symli
 examples/                             # reference configs consumers copy (hooks block, dd-config, CLAUDE.md snippet + starter template)
 research/                             # non-shipped experiment tooling (replay harness + its smoke test)
 skill-validation/                     # non-shipped validation records (skills, commands, project rules)
+skill-validation/runner/              # non-shipped one-run skill-test CLI, offline tests, and operator guide
 tests/                                # installer-level tests (the settings-wiring test skips outside a consumer)
 plans/                                # active plans (created on demand)
 plans/specs/                          # active design specs
@@ -49,6 +50,10 @@ python3 -m pytest research/ -q
 # Top-level installer-suite tests
 python3 -m pytest tests/ -q
 # The settings-wiring test skips outside an in-tree consumer — see tests/test_install_skills.py.
+
+# Non-shipped single-run skill-test CLI and its default offline suite
+cd skill-validation/runner && uv run pytest -q
+cd skill-validation/runner && uv run skilltest --help
 
 # Install this bundle into a consumer project
 ./install-skills.sh /path/to/consumer-project

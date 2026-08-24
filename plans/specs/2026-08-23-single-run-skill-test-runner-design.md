@@ -2,7 +2,10 @@
 
 ## Status
 
-Approved by the owner on 2026-08-23 for implementation.
+Approved by the owner on 2026-08-23 for implementation. Amended during Task 5
+to make all tester-controlled content opaque and all provider-output formatting
+non-gating. The runner validates and reports mechanics; the tester judges the
+test and its result.
 
 The accepted charter at `skill-validation/charter/core-contracts.md` remains the semantic foundation. Its canonical copy is 16,870 bytes with SHA-256 `4d172cfbcda96883a4ebc5fec6462e81545de9b862921f39de69f18eceb74aae`. This work does not change those bytes.
 
@@ -23,6 +26,15 @@ The core loop is:
 7. An agent and owner inspect the run against the withheld expected outcome.
 
 Changing a skill and running the same configuration again produces another independent result for comparison.
+
+```mermaid
+flowchart LR
+    AUTHOR["tester packages one configuration"] --> RUNNER["runner validates structure"]
+    RUNNER --> PROVIDER["one provider process"]
+    PROVIDER --> BUNDLE["raw outputs + workspace + result.json"]
+    BUNDLE --> REVIEWER["tester interprets behavior"]
+    REVIEWER --> VERDICT["behavioral verdict outside runner"]
+```
 
 ## Core guidance: simple, stateless, repeatable, single-scenario
 
@@ -65,7 +77,7 @@ Every implementation plan for this runner must place the following two blocks ne
 - Never add shared or lifecycle-managed state: no counters, indexes, databases, caches, locks, registries, latest pointers, retention state, or cleanup daemon. A unique disposable result bundle is output, not managed application state.
 - Never add judgment: no semantic validation of test choices, scoring, grading, behavioral PASS/FAIL, adjudication, automatic comparison, calibration, or recommendations.
 - Never add dynamic or test-specific selection policy: the runner does not choose or recommend skills, scenarios, dependencies, providers, models, or efforts. Each adapter applies one fixed, versioned set of permissions, tools, and isolation flags; it does not select them per test.
-- Never expose provider mechanics as test configuration. The public execution declaration contains exactly `provider`, `model`, and `effort`; each built-in adapter owns its executable, permissions, tools, timeout, isolation flags, output mode, and parsing.
+- Never expose provider mechanics as test configuration. The public execution declaration contains exactly `provider`, `model`, and `effort`; each built-in adapter owns its executable, permissions, tools, timeout, isolation flags, and output mode. Any provider-output formatting is optional packaging and cannot affect status.
 - Never add a generic workflow engine: no setup, observer, consumer, evaluator, validation, or post-run command framework.
 - Never add project lifecycle behavior: no Git-state checks, repository policy, staging, commits, branches, pushes, approval tracking, or cleanup-project state.
 - Never add hidden process machinery: one successful run starts only the configured provider CLI; no probes, helper processes, background supervisors, or descendant discovery.
@@ -78,6 +90,11 @@ Each plan task must include a short guardrail check naming how its deliverable a
 ## Responsibility boundary
 
 The test configuration is input, not policy. It selects the skill, dependency skills, scenario, expected outcome, provider, model, and effort. If those values are structurally valid, the runner executes them even when the combination appears unhelpful or nonsensical.
+
+Structural validity answers only whether the runner can load, copy, and dispatch
+the package. It never answers whether the package describes a meaningful,
+useful, or valid test. Empty or nonsensical tester-controlled text is accepted
+when its declared type and filesystem packaging are correct.
 
 The runner owns only mechanical work:
 
@@ -106,6 +123,13 @@ The runner does not:
 
 Deterministic output requirements belong in the scenario prompt and expected outcome. If a scenario needs a renderer, validator, or other deterministic tool, the subject may use one during its work or an agent may apply one while reviewing the retained workspace. The runner does not become a workflow engine to host it.
 
+```mermaid
+flowchart TD
+    VALUE["tester-controlled value"] --> CARRY{"mechanically loadable and packageable?"}
+    CARRY -->|no| STRUCTURE["configuration error"]
+    CARRY -->|yes| OPAQUE["carry unchanged; make no value judgment"]
+```
+
 ## Test configuration
 
 `skilltest run` accepts one UTF-8 JSON file parsed with Python's standard-library `json` module. The file must be an RFC 8259 object. Version 1 rejects duplicate object keys, `NaN`, `Infinity`, `-Infinity`, and unknown schema keys. This keeps configuration parsing deterministic without adding a parser dependency.
@@ -121,7 +145,7 @@ The root contains exactly:
 | `skill` | skill declaration | Primary skill under test. |
 | `dependencies` | list of skill declarations | Ordered supporting skills; may be empty. |
 | `scenario` | scenario declaration | Prompt and optional starting workspace. |
-| `expected_outcome` | any non-null JSON value | Withheld material for agent and owner review; opaque to the runner. |
+| `expected_outcome` | any JSON value | Withheld material for agent and owner review; opaque to the runner, including when null. |
 | `execution` | execution declaration | Provider, model, and effort. |
 
 Identifiers are 1–64 characters matching `[a-z0-9][a-z0-9-]{0,63}`. The bound keeps every identifier-derived path component within ordinary filesystem limits. A skill declaration contains exactly `id` and `source`. `source` names a directory containing a regular `SKILL.md`; the whole directory is supplied so referenced scripts, assets, and supporting files remain available. Skill identifiers are unique across the primary skill and dependencies.
@@ -133,7 +157,7 @@ The scenario declaration contains exactly:
 | Field | Type | Meaning |
 |---|---|---|
 | `id` | path-safe string | Scenario identifier recorded in the result. |
-| `prompt` | path | Non-empty regular file containing the subject-visible prompt. |
+| `prompt` | path | Regular UTF-8 file containing the subject-visible prompt; it may be empty or nonsensical. |
 | `fixture` | path or `null` | Directory whose contents become the workspace root. |
 
 The execution declaration contains exactly:
@@ -144,13 +168,17 @@ The execution declaration contains exactly:
 | `model` | non-empty string | Passed to the provider without runner interpretation. |
 | `effort` | string matching `[a-z0-9][a-z0-9-]*` | Passed to the provider without semantic interpretation; the restricted alphabet is safely representable in the pinned Codex TOML argument. |
 
-The execution declaration contains exactly those three fields for every provider. Executable selection, timeout, permissions, sandboxing, tool availability, isolation flags, output format, and provider-output parsing are adapter constants, not test-plan options.
+The execution declaration contains exactly those three fields for every provider. Executable selection, timeout, permissions, sandboxing, tool availability, isolation flags, and output format are adapter constants, not test-plan options.
 
 ```json
 {"provider": "claude", "model": "sonnet", "effort": "high"}
 ```
 
-The expected outcome is required but mechanically opaque. It may be a string, object, array, number, or boolean and may describe behavioral action, exact text, required structure, artifacts, or review guidance. The runner validates only that it is present and non-null, preserves it in the post-run configuration snapshot, and never passes it to the provider.
+The expected outcome field is required but mechanically opaque. It may be any
+JSON value, including null. The runner validates only that the field is present,
+preserves it through the original configuration bytes in the post-run snapshot,
+and never stores or recursively transforms it in runtime state. It is never
+passed to the provider.
 
 ## Ordinary filesystem validity
 
@@ -170,7 +198,12 @@ The overlap checks prevent the runner from directly copying the original configu
 
 Other skill and fixture files are ordinary files copied as bytes. Empty supporting files and empty fixture directories are valid. File modes are copied using the standard library's ordinary copy behavior; mode normalization is not part of the result contract.
 
-Any I/O failure discovered during preflight is invalid input: exit `2`, with no run directory. Once preflight succeeds, the runner allocates the directory. An environmental copy or write failure after allocation but before provider launch is `PREPARATION_FAILED`; a required artifact write failure after launch is `ARTIFACT_WRITE_FAILED`. Both exit `1` with a best-effort result bundle. This phase boundary makes input errors repeatable without pretending the filesystem cannot change after preflight.
+An empty prompt and semantically odd skill, dependency, model, effort, prompt,
+fixture, or expected outcome are valid when their declared types and packaging
+meet the mechanical contract. The provider, not the runner, reports whether a
+passed-through execution value is accepted by its CLI.
+
+Any I/O failure discovered during preflight is invalid input: exit `2`, with no run directory. Once the atomic temporary-directory call returns, the runner owns that directory even if marker or fixed-layout initialization then fails. An environmental copy or write failure after ownership but before provider launch is `PREPARATION_FAILED`; a required artifact write failure after launch is `ARTIFACT_WRITE_FAILED`. Both exit `1`, print the owned path, and retain a best-effort bundle. Only fixed-root creation or the atomic directory-allocation call itself may fail without an owned path.
 
 The runner assumes the caller does not modify the configuration, skills, prompt, or fixture while a run is copying them. It does not use audit hooks, inode pinning, descriptor-relative traversal, filesystem watchers, timing barriers, locks, rollback transactions, or post-copy source reconciliation. Same-user adversarial mutation is outside the tool's trust model. This accepted limitation keeps the tool proportional to local agent-assisted testing; if real use exposes a violated assumption, that observed case can justify a smaller targeted change.
 
@@ -201,11 +234,36 @@ The run directory is the retained result bundle; there is no staging tree or lat
   result.json
 ```
 
-The marker and directories are created first. Declared input bytes are copied into `inputs/`, then the workspace is prepared from that retained copy. The contents of `inputs/fixture/`, not the directory itself, become the workspace root. An absent fixture produces an empty retained fixture directory and otherwise empty workspace before supplied skills are added.
+```mermaid
+flowchart TD
+    RUN["<run-id>/"] --> INPUTS["inputs/"]
+    INPUTS --> PROMPT["prompt.txt"]
+    INPUTS --> FIXTURE["fixture/"]
+    INPUTS --> SKILLS["skills/<id>/"]
+    RUN --> SUBJECT["subject-input.txt"]
+    RUN --> WORKSPACE["workspace/"]
+    RUN --> RAW["stdout.txt + stderr.txt"]
+    RUN --> OPTIONAL["final.txt (optional)"]
+    RUN --> RESULT["runner.log + result.json"]
+```
+
+After atomic allocation establishes ownership, preparation creates the marker and fixed directories first. Declared input bytes are copied into `inputs/`, then the workspace is prepared from that retained copy. The contents of `inputs/fixture/`, not the directory itself, become the workspace root. An absent fixture produces an empty retained fixture directory and otherwise empty workspace before supplied skills are added.
 
 Every primary and dependency skill is copied to `workspace/supplied-skills/<id>/`. The fixture may not contain `supplied-skills`; this avoids an ambiguous overwrite rule.
 
 The runner reads the configuration bytes once before validation and retains those bytes in memory. It writes the same bytes to `config.json` only after the provider attempt is over, or after preparation fails without starting the provider. Until then, the expected outcome exists only in runner memory and the original caller-selected configuration file. It is absent from the subject input, copied inputs, workspace, environment additions, and provider arguments. This is withholding for normal test operation, not an operating-system confidentiality boundary: a provider running as the same user could search outside its workspace. The accepted boundary is appropriate because the runner facilitates evaluation rather than defending against a malicious subject.
+
+```mermaid
+sequenceDiagram
+    participant C as original configuration
+    participant R as runner memory
+    participant P as provider-visible workspace/input
+    participant B as retained bundle
+    C->>R: read exact bytes, including expected outcome
+    R->>P: copy inputs and subject input without expected outcome
+    P->>P: provider invocation
+    R->>B: write config.json after attempt
+```
 
 ## Subject input
 
@@ -228,11 +286,16 @@ The complete subject input is saved before invocation. The provider receives tho
 Provider abstraction is a core requirement. Provider, model, and effort are test inputs, and provider CLIs have different invocation contracts. Keeping translation behind one small boundary prevents provider mechanics from leaking into the test configuration or preparation code:
 
 - a provider request contains the workspace, subject-input bytes, provider, model, effort, and the final-output path required by the adapter;
-- a provider result contains whether invocation started, exit code, timeout state, launch error, raw stdout and stderr bytes, final-output bytes, and any mechanical output or adapter-side artifact error;
+- a provider result contains whether invocation started, exit code, timeout state, launch error, and raw stdout and stderr bytes;
 - one built-in provider implementation translates the request into one direct CLI invocation;
 - the runner selects the built-in implementation named by `execution.provider`.
 
-The adapter owns provider-specific final-output handling: Codex receives the `final.txt` path directly, while Claude extracts its terminal result and writes that path. The linear runner orchestration writes the raw stdout and stderr bytes returned by `ProviderResult` exactly once.
+The adapter owns provider-specific argument construction. Codex receives the
+`final.txt` path directly and the runner retains the file when Codex creates it.
+Claude's stream remains raw JSONL in `stdout.txt`; Version 1 does not parse it or
+manufacture a final response. `final.txt` is optional convenience evidence and
+its absence or content never affects status. The linear runner writes the raw
+stdout and stderr bytes returned by `ProviderResult` exactly once.
 
 There is no dynamic plugin discovery, entry-point loading, provider package API, fallback chain, or generalized adapter framework. The boundary may be a protocol plus plain request/result records; it does not justify a registry hierarchy or lifecycle framework. Version 1 implements built-in Codex and Claude Code providers.
 
@@ -280,7 +343,10 @@ With no prompt argument, `--print` reads the subject input from standard input. 
 
 `--safe-mode` disables project and user customizations, including automatic `CLAUDE.md`, skill, plugin, hook, MCP, command, and agent loading, while retaining normal authentication, model selection, built-in tools, and permissions. The supplied skill remains available through the subject envelope and copied workspace files. `--no-session-persistence` prevents resumable session state. Bypass permission mode lets the non-interactive invocation use built-in tools without a prompt. The external workspace limits project discovery but is not an operating-system sandbox; same-user host access remains an accepted trust-model limit. These are fixed adapter mechanics. Version 1 targets Claude Code 2.1.241.
 
-Claude Code emits line-delimited JSON on stdout. The adapter returns those exact bytes in `ProviderResult` and parses each non-empty line as one JSON object. After a zero process exit, the final non-empty line must be an object whose `type` is `result` and whose `result` value is a string; the adapter writes that string to `final.txt`. A malformed non-empty line, a missing final object, a final object of another type, or a non-string final `result` is `PROVIDER_OUTPUT_INVALID`. The runner does not interpret earlier tool or message events.
+Claude Code emits line-delimited JSON on stdout. The adapter returns those exact
+bytes without parsing, validation, extraction, or normalization. Empty output,
+malformed JSONL, absent result events, unusual event ordering, and arbitrary
+result values are retained facts for the tester; none is a runner error.
 
 Building and offline-testing this provider is part of Version 1. Running a Claude model, calibrating Claude results, or beginning cross-model evaluation still requires fresh owner permission.
 
@@ -288,15 +354,29 @@ Building and offline-testing this provider is part of Version 1. Running a Claud
 
 The runner uses one synchronous process call that sends stdin and drains stdout and stderr without runner-created worker processes or threads. Raw stdout and stderr are written once to `stdout.txt` and `stderr.txt`; they are not duplicated line-by-line into the runner log. Version 1 applies a fixed 900-second wall-clock timeout to either provider.
 
+```mermaid
+flowchart TD
+    CHILD["provider process"] --> EXIT["exit code + raw stdout/stderr"]
+    EXIT --> RAW["persist stdout.txt and stderr.txt, even when empty"]
+    EXIT --> OPTIONAL["retain provider-created final.txt when present"]
+    RAW --> RESULT["publish mechanical result"]
+    OPTIONAL -. "never gates status" .-> RESULT
+```
+
 On timeout, the runner terminates the provider, waits a fixed five-second grace period, then kills it if necessary. It does not install custom signal handlers, supervise descendants, or discover detached processes. The timeout guarantee assumes the provider closes its inherited pipes; a detached descendant that holds them open is unsupported. External interruption follows the operating system and Python defaults and may leave a marked partial run or live child; Version 1 makes no normalized result or exit-code promise for interruption.
 
 The retained `workspace/` is a live directory, not a point-in-time snapshot. For ordinary scenarios it contains the state left when the direct provider process exited, but the runner makes no stability guarantee after that boundary. A scenario or provider that leaves a detached writer makes later workspace comparison unreliable; the runner neither detects nor prevents that unsupported behavior and may still record `COMPLETED`. This accepted limitation avoids turning the single-process runner into a process supervisor. Tests and comparisons that require stable workspace evidence must use scenarios that leave no background writers.
 
 ## Logging and result contract
 
-`runner.log` is a plain UTF-8 chronological log for mechanical debugging. It records the run identifier, input-copy milestones, provider argument list, provider start, provider exit or timeout, artifact writes, and terminal runner status. It does not copy prompt, stdout, stderr, final response, expected outcome, or credentials into the log.
+`runner.log` is a plain UTF-8 chronological log for mechanical debugging. It
+records the run identifier, input-copy milestones, provider argument list,
+invocation attempt before the synchronous provider call, provider return or
+timeout after that call, artifact writes, and terminal runner status. It never
+claims an OS process started before launch is known, and it does not copy prompt,
+stdout, stderr, final response, expected outcome, or credentials into the log.
 
-The runner writes `result.json` last using a temporary file in the run directory followed by atomic replacement. A tracked JSON Schema is the executable Version 1 authority, and offline tests validate generated results against it. The production runner does not load a schema engine at runtime. The schema contains exactly these root fields:
+The runner writes `result.json` last using a temporary file in the run directory followed by atomic replacement. Result construction, retained-file traversal, digest reads, encoding, temporary-file writing, and replacement share one persistence-failure boundary so ordinary failures return an exit-1 diagnostic rather than a traceback. A tracked JSON Schema is the executable Version 1 authority, and offline tests validate generated results against it. The production runner does not load a schema engine at runtime. The schema contains exactly these root fields:
 
 | Field | Meaning |
 |---|---|
@@ -304,7 +384,7 @@ The runner writes `result.json` last using a temporary file in the run directory
 | `run_id` | Unique directory identifier. |
 | `status` | `COMPLETED` or `INFRA_ERROR`. |
 | `started_at`, `finished_at` | UTC RFC 3339 timestamps. |
-| `duration_seconds` | Total runner duration. |
+| `duration_seconds` | Owned-run duration from the allocation attempt through result construction. |
 | `test` | Exact test record defined below. |
 | `execution` | Exact execution record defined below. |
 | `inputs` | Exact input records defined below, sorted by relative path. |
@@ -313,7 +393,7 @@ The runner writes `result.json` last using a temporary file in the run directory
 
 `test` contains exactly `id` (string), `skill` (string), `dependencies` (ordered string array), and `scenario` (string). `execution` contains exactly `provider`, `model`, and `effort` copied from configuration; `executable` as the adapter-selected `codex` or `claude`; fixed integer `timeout_seconds: 900`; `invocation_started` and `timed_out` as booleans; and `exit_code` as an integer or `null`.
 
-Each `inputs` item contains exactly `path`, `bytes`, and `sha256`. `path` is run-relative; `bytes` is a non-negative integer; and `sha256` is a lowercase 64-character hexadecimal digest. Records cover every ordinary file beneath `inputs/` and sort lexically by `path`.
+Each `inputs` item contains exactly `path`, `bytes`, and `sha256`. `path` is run-relative; `bytes` is a non-negative integer; and `sha256` is a lowercase 64-character hexadecimal digest. Records cover every ordinary file beneath `inputs/` and sort lexically by `path`. Digests are streamed from retained bytes and identify evidence; they do not interpret it.
 
 `artifacts` contains exactly `config`, `subject_input`, `stdout`, `stderr`, `final`, and `workspace`. The five file entries each contain exactly `path`, `exists`, `bytes`, and `sha256`; their fixed paths are `config.json`, `subject-input.txt`, `stdout.txt`, `stderr.txt`, and `final.txt`, and size and digest are null when a file does not exist. `workspace` contains exactly `path` and `exists`. The workspace is retained directly and is not converted into a second manifest or snapshot.
 
@@ -321,11 +401,33 @@ Each `inputs` item contains exactly `path`, `bytes`, and `sha256`. `path` is run
 
 `infrastructure_error` is null for `COMPLETED`; otherwise it contains exactly `code` and `message` strings. Timestamps use UTC with millisecond precision in `YYYY-MM-DDTHH:MM:SS.sssZ` form. Duration is a non-negative number rounded to milliseconds. The JSON Schema rejects unknown fields at every object level.
 
-Fixed persisted infrastructure error codes are `PREPARATION_FAILED`, `PROVIDER_LAUNCH_FAILED`, `PROVIDER_TIMEOUT`, `PROVIDER_EXIT_NONZERO`, `PROVIDER_OUTPUT_INVALID`, `FINAL_OUTPUT_MISSING`, and `ARTIFACT_WRITE_FAILED`. Diagnostics describe mechanics only and never characterize the skill response. Provider launch failures include every operating-system failure before the child starts, such as a missing, non-executable, or invalid executable. A failure to write `result.json` is reported through standard error and `runner.log`; by definition it cannot be represented inside that missing record.
+Fixed persisted infrastructure error codes are `PREPARATION_FAILED`,
+`PROVIDER_LAUNCH_FAILED`, `PROVIDER_TIMEOUT`, `PROVIDER_EXIT_NONZERO`, and
+`ARTIFACT_WRITE_FAILED`. Diagnostics describe mechanics only and never
+characterize provider content. Provider launch failures include failures before
+the child starts, such as a missing executable or an argument the operating
+system cannot represent. A failure to construct or write `result.json` is
+reported through standard error and `runner.log`; by definition it cannot be
+represented inside that missing record.
 
-When several mechanical symptoms accompany one attempt, classification follows execution order: preparation failure before launch; launch failure; timeout regardless of the eventual process code; nonzero provider exit; zero exit with invalid provider output; zero exit with missing final output; then failure to write another required artifact. The runner records the first applicable code and does not infer a cause beyond that observation.
+When several mechanical symptoms accompany one attempt, classification follows
+execution order: preparation failure before launch; launch failure; timeout
+regardless of eventual process code; nonzero provider exit; then failure to
+write required evidence or the result. The runner records the first applicable
+code and does not infer a cause beyond that observation.
 
-Provider stdout, stderr, and `final.txt` may be empty unless the provider contract requires otherwise. Codex requires `final.txt` to exist after a zero exit because the runner explicitly supplied `--output-last-message`; absence is `FINAL_OUTPUT_MISSING`. Claude requires a valid terminal result event but permits its `result` string to be empty. The runner does not parse either provider's event stream for semantic behavior.
+Provider stdout, stderr, and `final.txt` may be empty, and `final.txt` may be
+absent. Non-empty stderr does not imply failure. After a zero provider exit,
+provider-output bytes and structure cannot change `COMPLETED` to `INFRA_ERROR`.
+The tester interprets all retained content.
+
+```mermaid
+flowchart LR
+    ZERO["provider exits 0"] --> COLLECT["required raw evidence persisted"]
+    COLLECT --> PUBLISH["result.json published"]
+    PUBLISH --> COMPLETE["COMPLETED / exit 0"]
+    CONTENT["empty, malformed, or unhelpful content"] -. "record only" .-> COLLECT
+```
 
 ## CLI output and exits
 
@@ -339,7 +441,7 @@ Progress and diagnostic messages go to standard error and `runner.log`. On any n
 
 Exit codes are:
 
-- `0`: the provider exited zero, its required final-output file exists, and `result.json` records `COMPLETED`;
+- `0`: the provider exited zero, required raw evidence was retained, and `result.json` records `COMPLETED`;
 - `1`: a structurally valid request encountered run allocation, preparation, provider execution, or result persistence failure;
 - `2`: CLI usage or configuration validation failed before a run directory was created.
 
@@ -358,6 +460,14 @@ The implementation must prove independence two ways:
 
 The second test puts concurrency outside the runner, matching real use. It does not authorize a multi-run command or in-process parallelism.
 
+```mermaid
+flowchart LR
+    CALLER["external caller"] --> A["skilltest run CONFIG\nprocess A"]
+    CALLER --> B["skilltest run CONFIG\nprocess B"]
+    A --> ARUN["unique bundle A\nworkspace A\nprovider A"]
+    B --> BRUN["unique bundle B\nworkspace B\nprovider B"]
+```
+
 ## Test strategy and size tripwires
 
 Implementation is test-driven. Each behavior begins with a failing test, then the minimum production change, then refactoring while green. Tests use a real fake-provider executable as the single child process; mocks must not substitute for the subprocess boundary.
@@ -369,9 +479,11 @@ The focused offline suite covers:
 - exact fixture and supplied-skill workspace preparation;
 - exact subject-input bytes;
 - exact Codex and Claude Code argument order and stdin;
-- success, nonzero exit, missing executable, missing final output, and timeout;
-- Claude output with a malformed line, no final result object, an event after a result object, or a non-string final result;
+- success, nonzero exit, missing executable, and timeout;
+- completed zero-exit runs with empty, malformed, or otherwise arbitrary provider output and no final-output file;
 - raw output, log, and `result.json` persistence;
+- truthful allocation ownership and invocation-attempt chronology;
+- complete independently enumerated input manifests and streamed digests;
 - serial rerun and externally launched simultaneous-process independence;
 - proof that expected outcomes never enter provider-visible runner additions.
 
@@ -398,6 +510,8 @@ The first implementation is acceptable only when all of the following are true:
 
 - one command reads one valid configuration, creates one unique directory and workspace, invokes the configured Codex or Claude Code provider once, retains raw outputs and the live workspace directory, writes the exact result contract, and exits;
 - the runner executes structurally valid but semantically odd configurations without judgment;
+- empty prompts and null expected outcomes are structurally valid;
+- a zero-exit provider run completes regardless of empty, malformed, or otherwise arbitrary output content and regardless of whether `final.txt` exists;
 - expected outcomes are retained for reviewers but not directly copied by the runner into subject input, workspace preparation, provider arguments, or runner-added environment values;
 - provider, model, and effort come from the configuration and are recorded exactly;
 - fake executables prove both provider contracts and the exact single-invocation boundary without model cost;

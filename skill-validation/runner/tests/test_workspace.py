@@ -27,7 +27,7 @@ def _visible_bytes(root: Path) -> list[bytes]:
     return values
 
 
-# Catches allocation regressions that reuse a run directory or create provider artifacts too early.
+# Catches allocation regressions that reuse a run directory or initialize it before ownership.
 def test_create_run_allocates_distinct_serial_directories(
     build_config_case: object, monkeypatch: pytest.MonkeyPatch
 ) -> None:
@@ -47,11 +47,10 @@ def test_create_run_allocates_distinct_serial_directories(
     assert case.config.id in first.run_dir.name
     assert case.config.id in second.run_dir.name
     assert first.started_at.endswith("Z")
-    assert first.marker_path.is_file()
-    assert first.inputs_dir.is_dir()
-    assert first.inputs_fixture_dir.is_dir()
-    assert first.inputs_skills_dir.is_dir()
-    assert first.workspace_dir.is_dir()
+    assert first.run_dir.is_dir()
+    assert not first.marker_path.exists()
+    assert not first.inputs_dir.exists()
+    assert not first.workspace_dir.exists()
     assert not first.config_path.exists()
     assert not first.subject_input_path.exists()
     assert not first.stdout_path.exists()
