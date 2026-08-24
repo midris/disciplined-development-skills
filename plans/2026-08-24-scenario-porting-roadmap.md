@@ -6,11 +6,13 @@
 
 **Contract:** `skill-validation/charter/core-contracts.md`
 
-**Current phase:** [`plans/2026-08-24-scenario-inventory.md`](2026-08-24-scenario-inventory.md)
+**Completed phase:** [`plans/completed/2026-08-24-scenario-inventory.md`](completed/2026-08-24-scenario-inventory.md)
+
+**Current phase:** Runner-shape coverage.
 
 ## Constraints
 
-- Treat `docs/comprehensive-skill-cleanup` at `13599fb7d3127334b0d07bfe468767e586ec5f9c` as the canonical scenario source and its clean `.worktrees/comprehensive-skill-cleanup/` checkout as read-only until migration is complete.
+- Treat `origin/docs/comprehensive-skill-cleanup` at `13599fb7d3127334b0d07bfe468767e586ec5f9c` as the canonical scenario source. Materialize a read-only local worktree from that commit only when needed.
 - Port active, replayable scenarios only. Record historical and retired scenarios as exclusions unless they are explicitly promoted later.
 - Preserve prompts, rubrics, fixtures, dependencies, and declared skill context faithfully; adapt only paths required by `skilltest` packaging.
 - Do not change skills or the runner to address behavioral fallout during migration.

@@ -1,5 +1,7 @@
 # Active Scenario Inventory Plan
 
+**Status:** Completed 2026-08-24.
+
 > **For agentic workers:** REQUIRED SUB-SKILL: Use `superpowers:executing-plans` to implement this plan task by task. Steps use checkbox (`- [ ]`) syntax for tracking.
 
 **Goal:** Produce a simple list of the active scenarios that are candidates for migration into `skilltest`.
