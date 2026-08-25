@@ -31,6 +31,19 @@ def result_record(
     """Build the version-one record from retained artifacts without interpreting content."""
     if error is not None and error[0] not in ERROR_CODES:
         raise ValueError(f"unknown infrastructure error code: {error[0]}")
+    if config.skill is None:
+        test = {
+            "id": config.id,
+            "skill_context": "none",
+            "scenario": config.scenario.id,
+        }
+    else:
+        test = {
+            "id": config.id,
+            "skill": config.skill.id,
+            "dependencies": [item.id for item in config.dependencies],
+            "scenario": config.scenario.id,
+        }
     return {
         "schema_version": 1,
         "run_id": context.run_id,
@@ -38,12 +51,7 @@ def result_record(
         "started_at": context.started_at,
         "finished_at": finished_at,
         "duration_seconds": duration_seconds,
-        "test": {
-            "id": config.id,
-            "skill": config.skill.id,
-            "dependencies": [item.id for item in config.dependencies],
-            "scenario": config.scenario.id,
-        },
+        "test": test,
         "execution": {
             "provider": config.execution.provider,
             "model": config.execution.model,

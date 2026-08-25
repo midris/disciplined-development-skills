@@ -65,6 +65,61 @@ def test_load_config_accepts_required_file_includes(tmp_path: Path) -> None:
     assert loaded.dependencies[0].include == (Path("SKILL.md"),)
 
 
+# Catches a loader mutation that continues to require skill declarations for tagged fixture-only runs.
+def test_load_config_accepts_explicit_no_skill_context(tmp_path: Path) -> None:
+    _write(tmp_path / "prompt.txt", b"use the supplied descriptions")
+    (tmp_path / "fixture").mkdir()
+    config_path = tmp_path / "case.json"
+    raw = _save(
+        config_path,
+        {
+            "schema_version": "0.1",
+            "id": "fixture-only",
+            "skill_context": "none",
+            "scenario": {
+                "id": "fixture-only-scenario",
+                "prompt": "prompt.txt",
+                "fixture": "fixture",
+            },
+            "expected_outcome": {"opaque": True},
+            "execution": {"provider": "codex", "model": "gpt-5.4", "effort": "medium"},
+        },
+    )
+
+    loaded = load_config(config_path)
+
+    assert loaded.config_bytes == raw
+    assert loaded.skill is None
+    assert loaded.dependencies == ()
+    assert loaded.scenario.fixture == (tmp_path / "fixture").resolve()
+
+
+# Catches a loader mutation that accepts ambiguous, untagged, unsupported, or mixed skill-context roots.
+def test_load_config_rejects_ambiguous_skill_context_shapes(tmp_path: Path) -> None:
+    config_path, normal = _valid_config(tmp_path)
+    no_skill_context = {
+        "schema_version": "0.1",
+        "id": "fixture-only",
+        "skill_context": "none",
+        "scenario": {"id": "case", "prompt": "prompt.txt", "fixture": "fixture"},
+        "expected_outcome": {"opaque": True},
+        "execution": {"provider": "codex", "model": "gpt-5.4", "effort": "medium"},
+    }
+    null_skill = dict(normal)
+    null_skill["skill"] = None
+    untagged_missing = dict(normal)
+    untagged_missing.pop("skill")
+    untagged_missing.pop("dependencies")
+    unsupported_tag = dict(no_skill_context)
+    unsupported_tag["skill_context"] = "primary"
+    mixed_shapes = dict(no_skill_context)
+    mixed_shapes["skill"] = normal["skill"]
+    mixed_shapes["dependencies"] = normal["dependencies"]
+
+    for value in (null_skill, untagged_missing, unsupported_tag, mixed_shapes):
+        _reject(config_path, value)
+
+
 # Catches a loader mutation that retains or transforms the opaque expected outcome.
 def test_load_config_accepts_exact_execution_declarations(tmp_path: Path) -> None:
     for provider, model, effort in [("codex", "gpt-5.4", "medium"), ("claude", "sonnet", "high")]:

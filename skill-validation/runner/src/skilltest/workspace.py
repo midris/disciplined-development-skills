@@ -86,17 +86,8 @@ def prepare_workspace(context: RunContext, config: TestConfig) -> PreparedRun:
     """Populate retained inputs, prepare the workspace, and write subject input."""
     context.marker_path.touch()
     context.inputs_fixture_dir.mkdir(parents=True)
-    context.inputs_skills_dir.mkdir()
     context.workspace_dir.mkdir()
     shutil.copy2(config.scenario.prompt, context.inputs_prompt_path)
-
-    for declaration in (config.skill, *config.dependencies):
-        retained_skill = context.inputs_skills_dir / declaration.id
-        retained_skill.mkdir()
-        for relative in declaration.include:
-            destination = retained_skill / relative
-            destination.parent.mkdir(parents=True, exist_ok=True)
-            shutil.copy2(declaration.source / relative, destination)
 
     if config.scenario.fixture is not None:
         shutil.copytree(
@@ -110,19 +101,30 @@ def prepare_workspace(context: RunContext, config: TestConfig) -> PreparedRun:
             dirs_exist_ok=True,
         )
 
-    supplied_skills_dir = context.workspace_dir / "supplied-skills"
-    supplied_skills_dir.mkdir()
-    for declaration in (config.skill, *config.dependencies):
-        shutil.copytree(
-            context.inputs_skills_dir / declaration.id,
-            supplied_skills_dir / declaration.id,
-        )
+    if config.skill is None:
+        subject_input_bytes = context.inputs_prompt_path.read_bytes()
+    else:
+        context.inputs_skills_dir.mkdir()
+        for declaration in (config.skill, *config.dependencies):
+            retained_skill = context.inputs_skills_dir / declaration.id
+            retained_skill.mkdir()
+            for relative in declaration.include:
+                destination = retained_skill / relative
+                destination.parent.mkdir(parents=True, exist_ok=True)
+                shutil.copy2(declaration.source / relative, destination)
 
-    subject_input_bytes = _subject_input_bytes(
-        primary_id=config.skill.id,
-        dependency_ids=tuple(declaration.id for declaration in config.dependencies),
-        prompt_bytes=context.inputs_prompt_path.read_bytes(),
-    )
+        supplied_skills_dir = context.workspace_dir / "supplied-skills"
+        supplied_skills_dir.mkdir()
+        for declaration in (config.skill, *config.dependencies):
+            shutil.copytree(
+                context.inputs_skills_dir / declaration.id,
+                supplied_skills_dir / declaration.id,
+            )
+        subject_input_bytes = _subject_input_bytes(
+            primary_id=config.skill.id,
+            dependency_ids=tuple(declaration.id for declaration in config.dependencies),
+            prompt_bytes=context.inputs_prompt_path.read_bytes(),
+        )
     context.subject_input_path.write_bytes(subject_input_bytes)
     return PreparedRun(
         workspace_dir=context.workspace_dir,

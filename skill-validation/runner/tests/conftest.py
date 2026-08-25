@@ -118,6 +118,7 @@ def build_config_case(tmp_path: Path) -> object:
         name: str = "case",
         fixture: str = "empty",
         dependencies: tuple[str, ...] = ("helper-b", "helper-a"),
+        no_skill_context: bool = False,
         prompt_bytes: bytes = b"follow the scenario carefully",
         expected_marker: str = "hidden-expected-outcome",
     ) -> ConfigCase:
@@ -157,33 +158,33 @@ def build_config_case(tmp_path: Path) -> object:
             elif fixture != "empty":
                 raise ValueError(f"unknown fixture kind: {fixture}")
 
+        config_value: dict[str, object] = {
+            "schema_version": "0.1",
+            "id": f"{name}-run",
+            "scenario": {
+                "id": f"{name}-scenario",
+                "prompt": prompt_path.name,
+                "fixture": fixture_value,
+            },
+            "expected_outcome": {"secret": expected_marker},
+            "execution": {
+                "provider": "codex",
+                "model": "gpt-5.4",
+                "effort": "medium",
+            },
+        }
+        if no_skill_context:
+            config_value["skill_context"] = "none"
+        else:
+            config_value["skill"] = {
+                "id": "primary",
+                "source": "primary",
+                "include": ["SKILL.md", "scripts/tool.sh"],
+            }
+            config_value["dependencies"] = dependency_values
+
         config_path = root / "case.json"
-        config_path.write_bytes(
-            json.dumps(
-                {
-                    "schema_version": "0.1",
-                    "id": f"{name}-run",
-                    "skill": {
-                        "id": "primary",
-                        "source": "primary",
-                        "include": ["SKILL.md", "scripts/tool.sh"],
-                    },
-                    "dependencies": dependency_values,
-                    "scenario": {
-                        "id": f"{name}-scenario",
-                        "prompt": prompt_path.name,
-                        "fixture": fixture_value,
-                    },
-                    "expected_outcome": {"secret": expected_marker},
-                    "execution": {
-                        "provider": "codex",
-                        "model": "gpt-5.4",
-                        "effort": "medium",
-                    },
-                },
-                separators=(",", ":"),
-            ).encode("utf-8")
-        )
+        config_path.write_bytes(json.dumps(config_value, separators=(",", ":")).encode("utf-8"))
 
         return ConfigCase(
             root=root,

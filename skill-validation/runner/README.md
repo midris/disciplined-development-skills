@@ -38,7 +38,8 @@ flowchart TD
 
 Paths are relative to the JSON file. `expected_outcome` is required but opaque,
 including when `null`; only `provider`, `model`, and `effort` configure
-execution.
+execution. There are exactly two mutually exclusive root shapes. The ordinary
+skill shape is:
 
 ```json
 {
@@ -57,6 +58,22 @@ execution.
   "execution": {"provider": "codex", "model": "gpt-5.4", "effort": "medium"}
 }
 ```
+
+The explicit no-skill-context shape has no `skill` or `dependencies` fields:
+
+```json
+{
+  "schema_version": "0.1",
+  "id": "description-only-check",
+  "skill_context": "none",
+  "scenario": {"id": "descriptions", "prompt": "prompt.txt", "fixture": "fixture"},
+  "expected_outcome": null,
+  "execution": {"provider": "codex", "model": "gpt-5.4", "effort": "medium"}
+}
+```
+
+Null skill fields, untagged omissions, any value other than `"none"` for
+`skill_context`, and mixtures of these shapes are invalid.
 
 Each skill declaration requires a non-empty `include` list of unique relative
 regular-file paths, including root-level `SKILL.md`. Only those files are copied.
@@ -78,7 +95,10 @@ sequenceDiagram
 
 Bundles live under `${TMPDIR}/skilltest-runs/` and retain copied inputs,
 `workspace/`, `stdout.txt`, `stderr.txt`, optional `final.txt`, `runner.log`,
-and `result.json`. Rerun the same command for a fresh, independent bundle.
+and `result.json`. Rerun the same command for a fresh, independent bundle. In
+the no-skill-context shape, `inputs/skills/` and `workspace/supplied-skills/`
+are absent: the workspace contains only the copied fixture, and the provider
+receives the prompt bytes unchanged (with no skill preamble).
 
 ```mermaid
 flowchart TD
@@ -102,6 +122,11 @@ flowchart TD
 The runner never scores a test or parses provider output into a verdict. Inspect
 the retained raw outputs and workspace against the withheld expected outcome
 outside the runner.
+
+`result.json` preserves the ordinary test record as `id`, `skill`,
+`dependencies`, and `scenario`. A no-skill-context run instead records exactly
+`id`, `skill_context: "none"`, and `scenario`; it does not use null skill
+metadata.
 
 ```mermaid
 flowchart LR

@@ -20,7 +20,7 @@ The core loop is:
 
 1. A tester writes one test configuration.
 2. The runner creates one unique run directory and one workspace.
-3. The runner prepares the declared skill, dependencies, fixture, and prompt.
+3. The runner prepares the declared skill context, or fixture-only context, and prompt.
 4. The runner invokes the configured provider once.
 5. The runner retains raw provider output and the workspace directory.
 6. The runner writes `result.json` and exits.
@@ -45,7 +45,7 @@ One `skilltest run CONFIG` process handles exactly:
 
 - one configuration;
 - one scenario;
-- one primary skill and its declared dependency skills;
+- one declared skill context, either one primary skill with declared dependencies or the explicit fixture-only form;
 - one workspace;
 - one provider invocation;
 - one result bundle;
@@ -137,7 +137,8 @@ flowchart TD
 
 Configuration paths are resolved relative to the JSON file's directory.
 
-The root contains exactly:
+There are exactly two mutually exclusive root shapes. The ordinary skill shape
+contains exactly:
 
 | Field | Type | Meaning |
 |---|---|---|
@@ -148,6 +149,13 @@ The root contains exactly:
 | `scenario` | scenario declaration | Prompt and optional starting workspace. |
 | `expected_outcome` | any JSON value | Withheld material for agent and owner review; opaque to the runner, including when null. |
 | `execution` | execution declaration | Provider, model, and effort. |
+
+The explicit no-skill-context shape contains exactly `schema_version`, `id`,
+`skill_context`, `scenario`, `expected_outcome`, and `execution`.
+`skill_context` is exactly the string `"none"`; this shape contains neither
+`skill` nor `dependencies`. Null skill fields, an untagged missing `skill` or
+`dependencies` field, an unsupported `skill_context` value, and any mixture of
+the two root shapes are invalid. The ordinary shape remains unchanged.
 
 Identifiers are 1–64 characters matching `[a-z0-9][a-z0-9-]{0,63}`. The bound keeps every identifier-derived path component within ordinary filesystem limits. A skill declaration contains exactly `id`, `source`, and `include`. `include` is a non-empty list of unique relative regular-file paths inside `source` and must explicitly contain root-level `SKILL.md`; only those files are supplied, with nested relative paths preserved. Directories, symlinks, absolute paths, empty paths, `.` or `..` components, duplicates, missing files, and declarations without `SKILL.md` are invalid. Skill identifiers are unique across the primary skill and dependencies.
 
@@ -223,10 +231,10 @@ The run directory is the retained result bundle; there is no staging tree or lat
   inputs/
     prompt.txt
     fixture/
-    skills/<skill-id>/...
+    skills/<skill-id>/... (ordinary skill shape only)
   subject-input.txt
   workspace/
-    supplied-skills/<skill-id>/...
+    supplied-skills/<skill-id>/... (ordinary skill shape only)
     ...fixture contents...
   stdout.txt
   stderr.txt
@@ -250,7 +258,12 @@ flowchart TD
 
 After atomic allocation establishes ownership, preparation creates the marker and fixed directories first. Declared input bytes are copied into `inputs/`, then the workspace is prepared from that retained copy. The contents of `inputs/fixture/`, not the directory itself, become the workspace root. An absent fixture produces an empty retained fixture directory and otherwise empty workspace before supplied skills are added.
 
-Every primary and dependency skill is copied to `workspace/supplied-skills/<id>/`. The fixture may not contain `supplied-skills`; this avoids an ambiguous overwrite rule.
+For the ordinary skill shape, every primary and dependency skill is copied to
+`workspace/supplied-skills/<id>/`. The fixture may not contain
+`supplied-skills`; this avoids an ambiguous overwrite rule. For the explicit
+no-skill-context shape, no retained `inputs/skills/` or workspace
+`supplied-skills/` directory is created; the copied fixture alone is the
+workspace.
 
 The runner reads the configuration bytes once before validation and retains those bytes in memory. It writes the same bytes to `config.json` only after the provider attempt is over, or after preparation fails without starting the provider. Until then, the expected outcome exists only in runner memory and the original caller-selected configuration file. It is absent from the subject input, copied inputs, workspace, environment additions, and provider arguments. This is withholding for normal test operation, not an operating-system confidentiality boundary: a provider running as the same user could search outside its workspace. The accepted boundary is appropriate because the runner facilitates evaluation rather than defending against a malicious subject.
 
@@ -268,7 +281,9 @@ sequenceDiagram
 
 ## Subject input
 
-The runner constructs `subject-input.txt` from this exact five-line UTF-8 preamble followed immediately by the exact prompt bytes:
+For the ordinary skill shape, the runner constructs `subject-input.txt` from
+this exact five-line UTF-8 preamble followed immediately by the exact prompt
+bytes:
 
 ```text
 For skill instructions, use only the supplied files listed below.
@@ -280,7 +295,10 @@ Scenario follows:
 
 The preamble uses LF endings and ends with one LF. `<dependencies>` is `none` when the list is empty. Otherwise it is each `id — supplied-skills/<id>/SKILL.md` entry joined by `; ` in configuration order. No extra separator, output instruction, expected outcome, or evaluator guidance is inserted before the prompt bytes.
 
-The complete subject input is saved before invocation. The provider receives those exact bytes on standard input.
+For the explicit no-skill-context shape, `subject-input.txt` is exactly the
+prompt bytes with no preamble, separator, or additional text. The complete
+subject input is saved before invocation. The provider receives those exact
+bytes on standard input.
 
 ## Provider boundary
 
@@ -392,7 +410,14 @@ The runner writes `result.json` last using a temporary file in the run directory
 | `artifacts` | Exact artifact record defined below. |
 | `infrastructure_error` | `null` or a fixed code and diagnostic message. |
 
-`test` contains exactly `id` (string), `skill` (string), `dependencies` (ordered string array), and `scenario` (string). `execution` contains exactly `provider`, `model`, and `effort` copied from configuration; `executable` as the adapter-selected `codex` or `claude`; fixed integer `timeout_seconds: 900`; `invocation_started` and `timed_out` as booleans; and `exit_code` as an integer or `null`.
+For the ordinary skill shape, `test` contains exactly `id` (string), `skill`
+(string), `dependencies` (ordered string array), and `scenario` (string). For
+the explicit no-skill-context shape, it instead contains exactly `id` (string),
+`skill_context: "none"`, and `scenario` (string), with no null skill metadata.
+`execution` contains exactly `provider`, `model`, and `effort` copied from
+configuration; `executable` as the adapter-selected `codex` or `claude`; fixed
+integer `timeout_seconds: 900`; `invocation_started` and `timed_out` as
+booleans; and `exit_code` as an integer or `null`.
 
 Each `inputs` item contains exactly `path`, `bytes`, and `sha256`. `path` is run-relative; `bytes` is a non-negative integer; and `sha256` is a lowercase 64-character hexadecimal digest. Records cover every ordinary file beneath `inputs/` and sort lexically by `path`. Digests are streamed from retained bytes and identify evidence; they do not interpret it.
 

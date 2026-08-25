@@ -165,6 +165,31 @@ def test_run_once_persists_complete_codex_and_claude_bundles(
     assert results_module._sha256(digest_path) == hashlib.sha256(b"not-json\n").hexdigest()
 
 
+# Catches a result mutation that omits the explicit mode or transforms the no-skill prompt before provider invocation.
+def test_run_once_persists_no_skill_context_result(
+    build_config_case, fake_provider, monkeypatch
+) -> None:
+    case = build_config_case(
+        name="no-skill-result",
+        fixture="populated",
+        no_skill_context=True,
+        prompt_bytes=b"use only the supplied descriptions",
+    )
+    fake_provider.configure(monkeypatch, final=b"final")
+
+    outcome = run_once(case.config_path)
+
+    assert outcome.exit_code == 0
+    assert outcome.run_dir is not None
+    result = _validate_result(outcome.run_dir)
+    assert fake_provider.record()["stdin"] == case.prompt_bytes.decode("utf-8")
+    assert result["test"] == {
+        "id": "no-skill-result-run",
+        "skill_context": "none",
+        "scenario": "no-skill-result-scenario",
+    }
+
+
 def test_run_once_persists_all_infrastructure_error_classes(
     build_config_case, fake_provider, monkeypatch
 ) -> None:

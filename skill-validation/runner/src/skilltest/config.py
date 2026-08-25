@@ -23,6 +23,14 @@ _ROOT_KEYS = {
     "expected_outcome",
     "execution",
 }
+_NO_SKILL_CONTEXT_ROOT_KEYS = {
+    "schema_version",
+    "id",
+    "skill_context",
+    "scenario",
+    "expected_outcome",
+    "execution",
+}
 
 
 class ConfigError(ValueError):
@@ -55,7 +63,7 @@ class ExecutionDeclaration:
 class TestConfig:
     schema_version: str
     id: str
-    skill: SkillDeclaration
+    skill: SkillDeclaration | None
     dependencies: tuple[SkillDeclaration, ...]
     scenario: ScenarioDeclaration
     execution: ExecutionDeclaration
@@ -68,21 +76,32 @@ def load_config(path: Path) -> TestConfig:
     config_path = _regular_file(path, "configuration").resolve()
     config_bytes = _read_utf8(config_path, "configuration")[0]
     value = _parse_config(config_bytes, config_path)
-    _exact_keys(value, _ROOT_KEYS, "configuration")
+    no_skill_context = "skill_context" in value
+    _exact_keys(
+        value,
+        _NO_SKILL_CONTEXT_ROOT_KEYS if no_skill_context else _ROOT_KEYS,
+        "configuration",
+    )
 
     schema_version = value["schema_version"]
     if schema_version != "0.1":
         raise ConfigError('schema_version must be "0.1"')
     test_id = _identifier(value["id"], "id")
-    skill = _skill(value["skill"], config_path.parent, "skill")
-    dependencies_value = value["dependencies"]
-    if not isinstance(dependencies_value, list):
-        raise ConfigError("dependencies must be a list")
-    dependencies = tuple(
-        _skill(item, config_path.parent, f"dependencies[{index}]")
-        for index, item in enumerate(dependencies_value)
-    )
-    _unique_skill_ids(skill, dependencies)
+    if no_skill_context:
+        if value["skill_context"] != "none":
+            raise ConfigError('skill_context must be "none"')
+        skill = None
+        dependencies = ()
+    else:
+        skill = _skill(value["skill"], config_path.parent, "skill")
+        dependencies_value = value["dependencies"]
+        if not isinstance(dependencies_value, list):
+            raise ConfigError("dependencies must be a list")
+        dependencies = tuple(
+            _skill(item, config_path.parent, f"dependencies[{index}]")
+            for index, item in enumerate(dependencies_value)
+        )
+        _unique_skill_ids(skill, dependencies)
     scenario = _scenario(value["scenario"], config_path.parent)
     execution = _execution(value["execution"])
 
@@ -196,11 +215,11 @@ def _execution(value: Any) -> ExecutionDeclaration:
 
 def _preflight(
     config_path: Path,
-    skill: SkillDeclaration,
+    skill: SkillDeclaration | None,
     dependencies: tuple[SkillDeclaration, ...],
     scenario: ScenarioDeclaration,
 ) -> None:
-    sources = (skill, *dependencies)
+    sources = (() if skill is None else (skill,)) + dependencies
     if scenario.prompt == config_path:
         raise ConfigError("configuration cannot be the scenario prompt")
     for declaration in sources:

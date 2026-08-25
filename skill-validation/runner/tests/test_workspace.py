@@ -111,6 +111,43 @@ def test_prepare_workspace_builds_exact_layout_for_absent_fixture(
     assert not run.config_path.exists()
 
 
+# Catches a preparation mutation that supplies skill files or prepends instructions for no-skill-context runs.
+def test_prepare_workspace_preserves_prompt_for_no_skill_context(
+    build_config_case: object, monkeypatch: pytest.MonkeyPatch
+) -> None:
+    case = build_config_case(
+        name="no-skill-context",
+        fixture="populated",
+        no_skill_context=True,
+        prompt_bytes=b"use only the three descriptions",
+    )
+    with monkeypatch.context() as context:
+        context.setattr(workspace_module.tempfile, "gettempdir", lambda: str(case.root / "tmp"))
+        run = workspace_module.create_run(case.config)
+        prepared = workspace_module.prepare_workspace(run, case.config)
+
+    assert _entries(run.run_dir) == [
+        ".skilltest-run",
+        "inputs",
+        "inputs/fixture",
+        "inputs/fixture/bin",
+        "inputs/fixture/bin/start.sh",
+        "inputs/fixture/docs",
+        "inputs/fixture/docs/guide.txt",
+        "inputs/prompt.txt",
+        "subject-input.txt",
+        "workspace",
+        "workspace/bin",
+        "workspace/bin/start.sh",
+        "workspace/docs",
+        "workspace/docs/guide.txt",
+    ]
+    assert not run.inputs_skills_dir.exists()
+    assert not (prepared.workspace_dir / "supplied-skills").exists()
+    assert prepared.subject_input_bytes == case.prompt_bytes
+    assert run.subject_input_path.read_bytes() == case.prompt_bytes
+
+
 def test_prepare_workspace_copies_only_included_skill_files(
     build_config_case: object, monkeypatch: pytest.MonkeyPatch
 ) -> None:
