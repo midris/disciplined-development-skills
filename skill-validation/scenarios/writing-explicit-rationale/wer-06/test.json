@@ -1,0 +1,9 @@
+{
+  "schema_version": "0.1",
+  "id": "wer-06",
+  "skill": {"id": "writing-explicit-rationale", "source": "../../../../skills/writing-explicit-rationale", "include": ["SKILL.md"]},
+  "dependencies": [],
+  "scenario": {"id": "wer-06", "prompt": "prompt.md", "fixture": null},
+  "expected_outcome": "The complete comment must tell a maintainer to preserve legacy leading zeroes and make clear that signature verification depends on exact serialized bytes, so normalization breaks that verification. Equivalent causal wording and unambiguous pronouns pass; the words `signatures` and `invalidate` are not required. Omit the migration year, Perl, and other backstory without a correctness or future-decision consequence. Comment syntax and formatting are task-fidelity notes unless meaning becomes ambiguous.\n",
+  "execution": {"provider": "codex", "model": "gpt-5.6-sol", "effort": "low"}
+}

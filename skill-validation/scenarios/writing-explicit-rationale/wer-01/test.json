@@ -1,0 +1,18 @@
+{
+  "schema_version": "0.1",
+  "id": "wer-01",
+  "skill": {"id": "writing-explicit-rationale", "source": "../../../../skills/writing-explicit-rationale", "include": ["SKILL.md"]},
+  "dependencies": [
+    {"id": "adversarial-review-loop", "source": "../../../../skills/adversarial-review-loop", "include": ["SKILL.md"]},
+    {"id": "adversarial-review", "source": "../../../../skills/adversarial-review", "include": ["SKILL.md"]},
+    {"id": "concise-writing", "source": "../../../../skills/concise-writing", "include": ["SKILL.md"]},
+    {"id": "disciplined-development", "source": "../../../../skills/disciplined-development", "include": ["SKILL.md"]},
+    {"id": "disciplined-research", "source": "../../../../skills/disciplined-research", "include": ["SKILL.md"]},
+    {"id": "dispatching-development-subagents", "source": "../../../../skills/dispatching-development-subagents", "include": ["SKILL.md"]},
+    {"id": "lean-plan-writing", "source": "../../../../skills/lean-plan-writing", "include": ["SKILL.md"]},
+    {"id": "sweeping-stale-references", "source": "../../../../skills/sweeping-stale-references", "include": ["SKILL.md"]}
+  ],
+  "scenario": {"id": "wer-01", "prompt": "prompt.md", "fixture": null},
+  "expected_outcome": "Score the complete artifact by effect: retain CSV and JSON in v1; defer XML; state unstable partner schema as the cause; state that XML clients wait for schema approval as the accepted impact; keep rationale adjacent in the revised item. Exact item syntax, unrelated plan work, sibling procedures, or process narration are separate task-fidelity or composition notes unless they obscure or contradict an owned decision, cause, impact, or rationale home.\n",
+  "execution": {"provider": "codex", "model": "gpt-5.6-sol", "effort": "low"}
+}
