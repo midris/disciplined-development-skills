@@ -23,19 +23,21 @@ Each catalog plan must:
 - For no-skill-context configurations, use explicit `skill_context: "none"` without `skill` or `dependencies`.
 - Load every configuration and prepare a disposable workspace without invoking a provider.
 - Verify packaged file paths and hashes, canonical prompt bytes, the runner-defined subject-input transport for the declared shape, and absence of the evaluator-withheld rubric from provider-visible input.
+- Preselect at least one scenario from the catalog for an end-to-end smoke run. After every catalog configuration passes mechanical preflight, invoke each selected scenario once through the real runner and configured provider. Validate the result schema, required fields and artifacts, artifact metadata, event ordering, packaging fidelity, and rubric isolation; do not inspect or score the response's semantic content.
 - Run the full runner suite, the local Markdown-link checker, and diff checks.
 - Mark scenarios ported only after every configuration in the current plan passes preflight, then reconcile the affected and overall inventory totals.
 - Archive the completed catalog plan and update the roadmap before review and merge.
 
 ## Boundaries
 
-- Do not run providers or repeat runner-shape smoke tests during catalog migration.
+- Run providers only for the scenario or scenarios preselected by the catalog plan. Do not invoke unselected scenarios or repeat a completed smoke run.
 - Do not change the runner, providers, skills, canonical scenario content, validation methodology, or testing methodology.
 - Do not modify already-ported scenario packages without separate owner approval.
 - Do not score scenarios, establish baselines, or commit raw output or temporary workspaces.
+- If a selected smoke run does not complete with provider exit `0` and no infrastructure error, record and commit the plan-only outcome, then stop for owner direction without changing the runner, skills, scenario package, inventory, or roadmap.
 - If a scenario requires an unsupported runner shape, an unavailable declared dependency, an ambiguous canonical input, or content adaptation beyond paths, stop that catalog and request separate owner approval.
 - Do not skip a blocked scenario and mark the rest of its catalog complete.
 
 ## Completion
 
-Catalog packaging is ready for readiness review when every active scenario is represented by a loadable configuration, the inventory reports none remaining, and every catalog plan is archived. Readiness review remains a separate roadmap phase with its own plan and confirms whether migration is complete.
+Catalog packaging is ready for readiness review when every active scenario is represented by a loadable configuration, the inventory reports none remaining, every catalog has at least one completed end-to-end smoke run, and every catalog plan is archived. Readiness review remains a separate roadmap phase with its own plan and confirms whether migration is complete.

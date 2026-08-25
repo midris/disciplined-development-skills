@@ -11,7 +11,7 @@
 - Use `origin/docs/comprehensive-skill-cleanup` at `13599fb7d3127334b0d07bfe468767e586ec5f9c` as the canonical scenario source.
 - Port only candidates in the [active scenario inventory](completed/2026-08-24-scenario-inventory.md); scenarios outside it remain out of scope unless promoted.
 - Preserve prompts, rubrics, fixtures, dependencies, and declared skill context faithfully; adapt only paths required by `skilltest` packaging.
-- Run one real smoke test only when first covering a runner shape.
+- During runner-shape coverage, run one real smoke test when first covering a shape. During catalog migration, preselect and smoke-run at least one scenario from each catalog end to end.
 - Keep behavioral evaluation, baselines, and skill changes out of migration; runner changes require separate approved scope.
 - Do not commit raw provider output or temporary result bundles.
 
@@ -32,7 +32,7 @@
 
 - Current phase.
 - Port the remaining active scenarios catalog by catalog.
-- Load every configuration and verify packaging fidelity without repeating smoke runs for covered shapes.
+- Load every configuration, verify packaging fidelity, then run at least one preselected scenario from the catalog through the real provider and collect mechanical evidence without scoring it.
 - Complete: [writing-explicit-rationale catalog migration](completed/2026-08-25-writing-explicit-rationale-catalog-migration.md).
 
 ### 4. Readiness review
@@ -48,4 +48,5 @@
 
 - Every candidate in the active inventory is represented by a loadable `skilltest` configuration.
 - Each distinct runner shape has completed one end-to-end smoke run.
+- Each migrated catalog has at least one completed end-to-end smoke run.
 - The runnable catalog is ready for testing-methodology design.
