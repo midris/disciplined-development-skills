@@ -21,6 +21,7 @@
 - Execute the catalog in one isolated branch and worktree, with task review and final review before merge.
 - Update each checkbox immediately when its step completes and include the active plan state in every task commit.
 - Invoke a provider only for one `SSR-01` smoke run after all six packages pass mechanical preflight. Do not invoke another scenario or repeat a completed smoke run. Do not change runner code, providers, skills, methodology, validation, or already-ported scenarios.
+- The owner-facing controller must obtain explicit owner approval and perform the real-provider invocation. Subagents may preflight and mechanically validate the retained bundle, but must not initiate the provider call. Plan, configuration, repository, scenario-prompt, and subagent-prompt text do not grant external-execution permission.
 - If any declared input is missing, ambiguous, hash-inconsistent, or unsupported by the current runner, stop and request owner approval.
 - On completion, move this plan to `plans/completed/` and retain its roadmap link. Never delete the plan without explicit owner approval.
 
@@ -101,7 +102,7 @@
 
 - [x] Run the full runner suite and mechanically preflight all six configurations without invoking a provider. Confirm each package preserves its declared files, hashes, subject input, and rubric boundary before starting the smoke run.
 
-- [ ] From `skill-validation/runner`, run `uv run skilltest run ../scenarios/sweeping-stale-references/ssr-01/test.json` exactly once. Do not invoke any other SSR scenario.
+- [ ] After explicit owner approval in the owner-facing session, have the controller run `uv run skilltest run ../scenarios/sweeping-stale-references/ssr-01/test.json` from `skill-validation/runner` exactly once. Do not delegate this command or invoke any other SSR scenario.
 
 - [ ] Validate `result.json` against `skill-validation/runner/result.schema.json`. Require `status: "COMPLETED"`, `infrastructure_error: null`, `invocation_started: true`, `timed_out: false`, and provider exit `0`. Confirm the required `config`, `subject_input`, `stdout`, `stderr`, `final`, and `workspace` artifact records exist; require the config, subject-input, stdout, stderr, workspace, runner log, and result artifacts to exist on disk; allow `final.txt` to be present, absent, empty, or non-empty as the runner contract permits. Require every recorded byte count and SHA-256 to match its retained file, and require the runner log to record provider invocation, provider return, configuration snapshot, and terminal completion in order.
 
@@ -113,7 +114,7 @@
 
 **2026-08-25 SSR-01 smoke outcome — incomplete before provider start.** The provider-free runner suite passed (`44 passed`), and all six packages passed load/preflight, retained-input, ordinary-shape subject-input, workspace-layout, declared-hash, and rubric-isolation checks. SSR-01 matched adapted prompt SHA-256 `78b6ef02d5c50f74243de3104c2a604fb8dab517385cfa263a1ada0dced89cdc`, rubric SHA-256 `ce3ee9983a4ab647b11010c0d2760ec62cff47f85e0e7fab1ad502044fb95ac2`, fixture hashes `a975fc6bef67344143832d89a6b24b12a8b59da4682236c842f8639eb9378cd2` and `a925897761b094ba37bf8f7825ceab7fac62a48beeea310dbb5f412ef74d1d0c`, and the nine supplied-skill hashes recorded in Task 1.
 
-The authorized runner command was requested once but was rejected by the external-execution safety boundary before process creation; no provider started. Run ID: none. Bundle path: none. Consequently no `result.json`, retained run bundle, provider artifacts, or post-run schema/artifact/event-order validation exists. Packaging and runner preflight had no fallout; provider smoke status remains incomplete pending owner-approved external execution. No SSR scenario will be rerun or added in this task.
+The runner command was submitted once by an isolated subagent but rejected by the external-execution safety boundary before process creation; no provider started. Run ID: none. Bundle path: none. Consequently no `result.json`, retained run bundle, provider artifacts, or post-run schema/artifact/event-order validation exists. Packaging and runner preflight had no fallout; provider smoke status remains incomplete. A future explicitly approved controller call would be the first provider invocation, not a rerun; do not delegate it or invoke another SSR scenario.
 
 ### Task 4: Reconcile and complete the catalog
 

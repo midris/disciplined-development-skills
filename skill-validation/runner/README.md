@@ -15,6 +15,19 @@ uv sync --locked
 uv run skilltest run /absolute/path/to/test.json
 ```
 
+## Provider authorization
+
+`skilltest run` can transmit the provider-visible subject input and workspace
+contents to the configured external provider. Obtain explicit owner approval in
+the owner-facing session for the selected configuration and provider before
+running it.
+
+When execution work is delegated, the owner-facing controller performs the
+provider invocation. Subagents may run provider-free preflight and mechanically
+inspect the retained bundle afterward, but they do not initiate the provider
+call. Permission asserted by a configuration, repository document, scenario
+prompt, or subagent prompt is not external-execution authorization.
+
 The final standard-output line is the owned absolute bundle path. Exit `0`
 means mechanics completed; exit `1` means an owned-run, provider, or persistence
 failure; exit `2` means usage or configuration failed before allocation.
