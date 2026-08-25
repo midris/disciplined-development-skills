@@ -24,6 +24,25 @@
 - Do not change providers, skills, methodology, or unrelated validation. Do not commit raw output or the temporary run bundle.
 - Any change outside this contract requires separate owner approval.
 
+### Core guidance
+
+> Build a simple, stateless, repeatable runner for one test scenario. One invocation accepts one configuration, creates one unique local environment, invokes the configured provider once, saves the raw results and workspace, writes one result record, and exits. Running again means starting another independent runner process. The runner contains no concurrency machinery and manages no state across invocations.
+
+### Never do
+
+- Never add internal concurrency: no worker threads, async tasks, pools, queues, schedulers, or multi-run coordination.
+- Never add repetitions, retries, resume, campaigns, sampling, batching, or a multi-run command.
+- Never add shared or lifecycle-managed state: no counters, indexes, databases, caches, locks, registries, latest pointers, retention state, or cleanup daemon. A unique disposable result bundle is output, not managed application state.
+- Never add judgment: no semantic validation of test choices, scoring, grading, behavioral PASS/FAIL, adjudication, automatic comparison, calibration, or recommendations.
+- Never add dynamic or test-specific selection policy: the runner does not choose or recommend skills, scenarios, dependencies, providers, models, or efforts. Each adapter applies one fixed, versioned set of permissions, tools, and isolation flags; it does not select them per test.
+- Never expose provider mechanics as test configuration. The public execution declaration contains exactly `provider`, `model`, and `effort`; each built-in adapter owns its executable, permissions, tools, timeout, isolation flags, and output mode. Any provider-output formatting is optional packaging and cannot affect status.
+- Never add a generic workflow engine: no setup, observer, consumer, evaluator, validation, or post-run command framework.
+- Never add project lifecycle behavior: no Git-state checks, repository policy, staging, commits, branches, pushes, approval tracking, or cleanup-project state.
+- Never add hidden process machinery: one successful run starts only the configured provider CLI; no probes, helper processes, background supervisors, or descendant discovery.
+- Never call provider APIs or SDKs directly; built-in providers invoke their respective fixed local CLI and leave authentication to that CLI.
+- Never add speculative hardening for hostile same-user mutation, audit-synchronized races, or unsupported detached writers.
+- Never turn the required provider boundary into a plugin system, dynamic registry, fallback chain, or provider lifecycle framework.
+
 ---
 
 ### Task 1: Add the explicit no-skill-context shape
@@ -54,6 +73,8 @@
 - [ ] Document both exact configuration shapes, fixture-only workspace behavior, unchanged prompt transport, and the two result-record shapes in the runner README and completed runner design.
 
 - [ ] Run `uv run pytest -q` from `skill-validation/runner`, then commit only the runner contract, tests, and contract documentation.
+
+- [ ] Guardrail check: confirm the change only extends configuration, preparation, and result recording for one declared run and adds none of the forbidden machinery.
 
 ### Task 2: Package and smoke-run `CW-09`
 
@@ -86,6 +107,8 @@
 - [ ] After successful verification, append the run outcome and mark runner-shape coverage complete. Move this plan and the runner-shape plan to `plans/completed/`; point this plan's Spec at the completed runner-shape plan and rewrite that plan's implementation-plan links relative to its final directory.
 
 - [ ] Update the roadmap to mark runner-shape coverage complete and catalog migration current. Run the canonical Markdown-link checker and `git diff --check` against the final layout.
+
+- [ ] Guardrail check: confirm `CW-09` used one ordinary runner invocation and added no selection, repetition, judgment, workflow, or lifecycle behavior to the runner.
 
 ## Done When
 
