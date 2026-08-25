@@ -77,17 +77,17 @@
 
 **Produces:** Three loadable inventory-fixture packages consumed by Task 3.
 
-- [ ] Verify canonical and adapted prompt SHA-256 pairs: `SSR-02` `79637843faf83489c19d07fa5cd99e5c8725c2931b8974d284713695d3b6ddd8` → `cf8c393fdf85792c4f2d4bae2c31a425cc457151a81a003c3b9b8a40c601c0df`; `SSR-03` `109ba0f3c5ee7afc94649b59624ca42683088f13a1cfca034540be83b0e963dc` → `52982822a23385815a0e1d40b2bb1ad3df361db942bc6134d6d29d2c5157ed68`; `SSR-05` `1e01a57689204f0647bfd4cbd952d8973d4a64c23f3ca5e844e56f7e1fa5832a` → `1cab9837f742e8052ff97105a2d7432ed05eb1fdf7638a1b166c4e0c9aea598a`. Each arrow represents only the approved `skills/` → `supplied-skills/` path substitution.
+- [x] Verify canonical and adapted prompt SHA-256 pairs: `SSR-02` `79637843faf83489c19d07fa5cd99e5c8725c2931b8974d284713695d3b6ddd8` → `cf8c393fdf85792c4f2d4bae2c31a425cc457151a81a003c3b9b8a40c601c0df`; `SSR-03` `109ba0f3c5ee7afc94649b59624ca42683088f13a1cfca034540be83b0e963dc` → `52982822a23385815a0e1d40b2bb1ad3df361db942bc6134d6d29d2c5157ed68`; `SSR-05` `1e01a57689204f0647bfd4cbd952d8973d4a64c23f3ca5e844e56f7e1fa5832a`. Each arrow represents only the approved `skills/` → `supplied-skills/` path substitution.
 
-- [ ] Extract each exact active-catalog rubric table cell with one trailing LF. Verify SHA-256 values: `SSR-02` `85e031214c456eab383b00e8a18d16e384d15902ace99491d2acbf2785a739bb`; `SSR-03` `803b8d4133d4b833f1c1c805ec82ba859c6aa9989c68038c3d10f1d1b178325d`; `SSR-05` `5a4cc77d65a97111082c168434028062de8fe5ac62b9a094eb43b1f331e3dfe5`.
+- [x] Extract each exact active-catalog rubric table cell with one trailing LF. Verify SHA-256 values: `SSR-02` `85e031214c456eab383b00e8a18d16e384d15902ace99491d2acbf2785a739bb`; `SSR-03` `803b8d4133d4b833f1c1c805ec82ba859c6aa9989c68038c3d10f1d1b178325d`; `SSR-05` `5a4cc77d65a97111082c168434028062de8fe5ac62b9a094eb43b1f331e3dfe5`.
 
-- [ ] Materialize the adapted prompts and canonical fixture files: `SSR-02` `context/match-inventory.md` at SHA-256 `43b3f8819da7b85ccff406f64a4d0c438ebc4cea35e5628ac4e0919a64e7dcf6`; `SSR-03` `context/grouping-inventory.md` at `0916a116c5d0d98089b000a65bcfe1b73ec26951b4659b6279e7f6df0c1e1b02`; `SSR-05` `context/single-file-search.md` at `48f863afc5e164a3d74f19271656f98f88e00c87c48d10d6995318a7aaece85f`.
+- [x] Materialize the adapted prompts and canonical fixture files: `SSR-02` `context/match-inventory.md` at SHA-256 `43b3f8819da7b85ccff406f64a4d0c438ebc4cea35e5628ac4e0919a64e7dcf6`; `SSR-03` `context/grouping-inventory.md` at `0916a116c5d0d98089b000a65bcfe1b73ec26951b4659b6279e7f6df0c1e1b02`; `SSR-05` `context/single-file-search.md` at `48f863afc5e164a3d74f19271656f98f88e00c87c48d10d6995318a7aaece85f`.
 
-- [ ] Create each `test.json` with matching lowercase IDs, fixture `fixture`, the exact rubric, and Codex `gpt-5.6-sol` at high effort. Configure only the primary `sweeping-stale-references` skill from `../../../../skills/sweeping-stale-references` with `include: ["SKILL.md"]` and no dependencies; verify its `SKILL.md` SHA-256 is `d6812c33cae026807bbb3ebe851d93b60b513dd87ea5efd98aea28f5c02f9157`.
+- [x] Create each `test.json` with matching lowercase IDs, fixture `fixture`, the exact rubric, and Codex `gpt-5.6-sol` at high effort. Configure only the primary `sweeping-stale-references` skill from `../../../../skills/sweeping-stale-references` with `include: ["SKILL.md"]` and no dependencies; verify its `SKILL.md` SHA-256 is `d6812c33cae026807bbb3ebe851d93b60b513dd87ea5efd98aea28f5c02f9157`.
 
-- [ ] Load all three configurations without invoking a provider. Prepare and remove disposable workspaces; require exactly one fixture file and `supplied-skills/sweeping-stale-references/SKILL.md` per scenario, the runner's exact ordinary-shape preamble followed by the adapted prompt bytes, and no rubric bytes in subject input or workspace.
+- [x] Load all three configurations without invoking a provider. Prepare and remove disposable workspaces; require exactly one fixture file and `supplied-skills/sweeping-stale-references/SKILL.md` per scenario, the runner's exact ordinary-shape preamble followed by the adapted prompt bytes, and no rubric bytes in subject input or workspace.
 
-- [ ] Run `uv run pytest -q` from `skill-validation/runner`, run `git diff --check`, then commit the scenario files with the current plan state.
+- [x] Run `uv run pytest -q` from `skill-validation/runner`, run `git diff --check`, then commit the scenario files with the current plan state.
 
 ### Task 3: Smoke-run SSR-01 end to end
 
