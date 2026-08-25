@@ -77,7 +77,7 @@
 
 **Produces:** Three loadable inventory-fixture packages consumed by Task 3.
 
-- [x] Verify canonical and adapted prompt SHA-256 pairs: `SSR-02` `79637843faf83489c19d07fa5cd99e5c8725c2931b8974d284713695d3b6ddd8` → `cf8c393fdf85792c4f2d4bae2c31a425cc457151a81a003c3b9b8a40c601c0df`; `SSR-03` `109ba0f3c5ee7afc94649b59624ca42683088f13a1cfca034540be83b0e963dc` → `52982822a23385815a0e1d40b2bb1ad3df361db942bc6134d6d29d2c5157ed68`; `SSR-05` `1e01a57689204f0647bfd4cbd952d8973d4a64c23f3ca5e844e56f7e1fa5832a`. Each arrow represents only the approved `skills/` → `supplied-skills/` path substitution.
+- [x] Verify canonical and adapted prompt SHA-256 pairs: `SSR-02` `79637843faf83489c19d07fa5cd99e5c8725c2931b8974d284713695d3b6ddd8` → `cf8c393fdf85792c4f2d4bae2c31a425cc457151a81a003c3b9b8a40c601c0df`; `SSR-03` `109ba0f3c5ee7afc94649b59624ca42683088f13a1cfca034540be83b0e963dc` → `52982822a23385815a0e1d40b2bb1ad3df361db942bc6134d6d29d2c5157ed68`; `SSR-05` `1e01a57689204f0647bfd4cbd952d8973d4a64c23f3ca5e844e56f7e1fa5832a` → `1cab9837f742e8052ff97105a2d7432ed05eb1fdf7638a1b166c4e0c9aea598a`. Each arrow represents only the approved `skills/` → `supplied-skills/` path substitution.
 
 - [x] Extract each exact active-catalog rubric table cell with one trailing LF. Verify SHA-256 values: `SSR-02` `85e031214c456eab383b00e8a18d16e384d15902ace99491d2acbf2785a739bb`; `SSR-03` `803b8d4133d4b833f1c1c805ec82ba859c6aa9989c68038c3d10f1d1b178325d`; `SSR-05` `5a4cc77d65a97111082c168434028062de8fe5ac62b9a094eb43b1f331e3dfe5`.
 
