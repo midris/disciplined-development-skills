@@ -99,7 +99,7 @@
 
 **Produces:** One recorded real-provider smoke outcome consumed by Task 4.
 
-- [ ] Run the full runner suite and mechanically preflight all six configurations without invoking a provider. Confirm each package preserves its declared files, hashes, subject input, and rubric boundary before starting the smoke run.
+- [x] Run the full runner suite and mechanically preflight all six configurations without invoking a provider. Confirm each package preserves its declared files, hashes, subject input, and rubric boundary before starting the smoke run.
 
 - [ ] From `skill-validation/runner`, run `uv run skilltest run ../scenarios/sweeping-stale-references/ssr-01/test.json` exactly once. Do not invoke any other SSR scenario.
 
@@ -107,9 +107,13 @@
 
 - [ ] Confirm retained inputs contain exactly the adapted prompt, two fixture files, and nine declared `SKILL.md` files with the preflighted hashes; confirm the workspace contains exactly the two fixture files and nine declared supplied-skill files; confirm subject input uses the runner's ordinary-shape transport and the rubric is absent from subject input and workspace. Do not inspect or compare the semantic content of `final.txt`, stdout, or stderr against the rubric.
 
-- [ ] Append a dated run outcome covering the run ID and bundle path, mechanical result, relevant hashes, and runner, packaging, and provider fallout. Do not describe or score response semantics, establish a behavioral result, or copy raw output or the temporary run bundle into the repository. If the run is incomplete, record it and proceed only to the plan-state check and commit below; do not change code, rerun, or begin Task 4.
+- [x] Append a dated run outcome covering the run ID and bundle path, mechanical result, relevant hashes, and runner, packaging, and provider fallout. Do not describe or score response semantics, establish a behavioral result, or copy raw output or the temporary run bundle into the repository. If the run is incomplete, record it and proceed only to the plan-state check and commit below; do not change code, rerun, or begin Task 4.
 
-- [ ] Run `git diff --check`, then commit only the updated plan state and recorded smoke outcome. If the run was incomplete, stop after this commit for owner direction.
+- [x] Run `git diff --check`, then commit only the updated plan state and recorded smoke outcome. If the run was incomplete, stop after this commit for owner direction.
+
+**2026-08-25 SSR-01 smoke outcome — incomplete before provider start.** The provider-free runner suite passed (`44 passed`), and all six packages passed load/preflight, retained-input, ordinary-shape subject-input, workspace-layout, declared-hash, and rubric-isolation checks. SSR-01 matched adapted prompt SHA-256 `78b6ef02d5c50f74243de3104c2a604fb8dab517385cfa263a1ada0dced89cdc`, rubric SHA-256 `ce3ee9983a4ab647b11010c0d2760ec62cff47f85e0e7fab1ad502044fb95ac2`, fixture hashes `a975fc6bef67344143832d89a6b24b12a8b59da4682236c842f8639eb9378cd2` and `a925897761b094ba37bf8f7825ceab7fac62a48beeea310dbb5f412ef74d1d0c`, and the nine supplied-skill hashes recorded in Task 1.
+
+The authorized runner command was requested once but was rejected by the external-execution safety boundary before process creation; no provider started. Run ID: none. Bundle path: none. Consequently no `result.json`, retained run bundle, provider artifacts, or post-run schema/artifact/event-order validation exists. Packaging and runner preflight had no fallout; provider smoke status remains incomplete pending owner-approved external execution. No SSR scenario will be rerun or added in this task.
 
 ### Task 4: Reconcile and complete the catalog
 
