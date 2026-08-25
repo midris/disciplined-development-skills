@@ -8,7 +8,7 @@
 
 **Tech Stack:** Python 3.11+, pytest, Markdown, JSON, `skilltest`, Codex CLI.
 
-**Spec:** `plans/completed/specs/2026-08-23-single-run-skill-test-runner-design.md`, `plans/2026-08-24-runner-shape-coverage.md`, `plans/2026-08-24-scenario-porting-roadmap.md`, and `skill-validation/charter/core-contracts.md`.
+**Spec:** `specs/2026-08-23-single-run-skill-test-runner-design.md`, `2026-08-24-runner-shape-coverage.md`, `../2026-08-24-scenario-porting-roadmap.md`, and `../../skill-validation/charter/core-contracts.md`.
 
 ## Global Constraints
 
@@ -94,25 +94,37 @@
 
 - [x] Load the configuration without invoking a provider. Confirm the explicit mode, unchanged hashes, no declared or packaged skill files, fixture paths, unchanged subject input, and withheld rubric. Run the full runner suite.
 
-- [ ] Obtain approval to export only the prompt and three description files, then run exactly once from `skill-validation/runner`:
+- [x] Obtain approval to export only the prompt and three description files, then run exactly once from `skill-validation/runner`:
 
   `uv run skilltest run ../scenarios/concise-writing/cw-09/test.json`
 
-- [ ] Confirm `COMPLETED`, `infrastructure_error: null`, no provider-visible skill files or `supplied-skills`, the three unchanged description files, subject input equal to the prompt, and a withheld rubric. Record mechanical fallout only; if incomplete, record it and stop.
+- [x] Confirm `COMPLETED`, `infrastructure_error: null`, no provider-visible skill files or `supplied-skills`, the three unchanged description files, subject input equal to the prompt, and a withheld rubric. Record mechanical fallout only; if incomplete, record it and stop.
 
-- [ ] Mark `CW-09` ported in `skill-validation/scenarios/README.md`; update concise-writing totals to 17 total / 1 ported / 16 not ported and overall totals to 105 / 6 / 99.
+- [x] Mark `CW-09` ported in `skill-validation/scenarios/README.md`; update concise-writing totals to 17 total / 1 ported / 16 not ported and overall totals to 105 / 6 / 99.
 
-- [ ] Run the full runner suite, `git diff --check`, and `git status --short`. Confirm no skill, raw-output, bundle, methodology, or unrelated change entered the work.
+- [x] Run the full runner suite, `git diff --check`, and `git status --short`. Confirm no skill, raw-output, bundle, methodology, or unrelated change entered the work.
 
-- [ ] After successful verification, append the run outcome and mark runner-shape coverage complete. Move this plan and the runner-shape plan to `plans/completed/`; point this plan's Spec at the completed runner-shape plan and rewrite that plan's implementation-plan links relative to its final directory.
+- [x] After successful verification, append the run outcome and mark runner-shape coverage complete. Move this plan and the runner-shape plan to `plans/completed/`; point this plan's Spec at the completed runner-shape plan and rewrite that plan's implementation-plan links relative to its final directory.
 
-- [ ] Update the roadmap to mark runner-shape coverage complete and catalog migration current. Run the canonical Markdown-link checker and `git diff --check` against the final layout.
+- [x] Update the roadmap to mark runner-shape coverage complete and catalog migration current. Run the canonical Markdown-link checker and `git diff --check` against the final layout.
 
-- [ ] Guardrail check: confirm `CW-09` used one ordinary runner invocation and added no selection, repetition, judgment, workflow, or lifecycle behavior to the runner.
+- [x] Guardrail check: confirm `CW-09` used one ordinary runner invocation and added no selection, repetition, judgment, workflow, or lifecycle behavior to the runner.
 
 ## Done When
 
 - [x] An explicit tag, not nulls or omission, distinguishes the no-skill-context configuration.
 - [x] Existing configurations and result records remain unchanged.
-- [ ] One successful `CW-09` run covers description-only routing with only its canonical prompt and fixture.
-- [ ] Inventory and plan bookkeeping are reconciled with no broader work.
+- [x] One successful `CW-09` run covers description-only routing with only its canonical prompt and fixture.
+- [x] Inventory and plan bookkeeping are reconciled with no broader work.
+
+## Run outcome — 2026-08-25
+
+- **Run:** `20260825T034356860Z-cw-09-d9f4d304-061b-4dad-aa4a-334df5a29e6c-br8yncqg`; bundle retained outside the repository.
+- **Mechanical result:** `COMPLETED`; `infrastructure_error: null`; provider exit `0`; no timeout; duration `11.125s`; Codex `gpt-5.6-sol` at low effort.
+- **Evidence:** the result records `id: "cw-09"`, `skill_context: "none"`, and `scenario: "cw-09"`. Subject input matches the canonical prompt (`e7adf2a8…`). The workspace contains only the three canonical description files, all with their preflighted hashes; neither `supplied-skills` nor retained input skill files exists. The rubric is absent from provider-visible input.
+- **Observed behavior:** not scored or reproduced in version control; this run is not a behavioral result or baseline.
+- **Runner fallout:** none. The ordinary one-run no-skill-context path retained sufficient mechanical evidence without adding selection, repetition, judgment, workflow, or lifecycle behavior.
+- **Packaging fallout:** none. The prompt and three description files match the canonical bytes.
+- **Provider fallout:** none blocking. Codex returned a final artifact and empty stderr.
+- **Scenario fallout:** none blocking. The declared description-only routing scenario completed without a runner infrastructure error.
+- **Skill-behavior fallout:** not assessed.

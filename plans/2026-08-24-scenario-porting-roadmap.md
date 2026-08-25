@@ -4,7 +4,7 @@
 
 **Contract:** `skill-validation/charter/core-contracts.md`
 
-**Current phase:** [Runner shape coverage](2026-08-24-runner-shape-coverage.md).
+**Current phase:** Catalog migration.
 
 ## Rules
 
@@ -26,9 +26,11 @@
 - For each uncovered shape, select a representative and agree on a faithful porting solution.
 - Create a separate plan to implement, smoke-run, and complete that shape.
 - Finish one shape before starting the next.
+- Complete: [runner-shape coverage](completed/2026-08-24-runner-shape-coverage.md).
 
 ### 3. Catalog migration
 
+- Current phase.
 - Port the remaining active scenarios catalog by catalog.
 - Load every configuration and verify packaging fidelity without repeating smoke runs for covered shapes.
 
