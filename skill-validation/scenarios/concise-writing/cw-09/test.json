@@ -1,0 +1,16 @@
+{
+  "schema_version": "0.1",
+  "id": "cw-09",
+  "skill_context": "none",
+  "scenario": {
+    "id": "cw-09",
+    "prompt": "prompt.md",
+    "fixture": "fixture"
+  },
+  "expected_outcome": "PASS is exactly `[\"concise-writing\",\"superpowers:writing-skills\"]`. Any prose,\nmalformed JSON, wrong order, missing required skill, or inclusion of\n`adversarial-review-loop` fails.\n",
+  "execution": {
+    "provider": "codex",
+    "model": "gpt-5.6-sol",
+    "effort": "low"
+  }
+}
