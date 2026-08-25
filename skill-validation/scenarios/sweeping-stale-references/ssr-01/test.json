@@ -1,0 +1,30 @@
+{
+  "schema_version": "0.1",
+  "id": "ssr-01",
+  "skill": {
+    "id": "sweeping-stale-references",
+    "source": "../../../../skills/sweeping-stale-references",
+    "include": ["SKILL.md"]
+  },
+  "dependencies": [
+    {"id": "adversarial-review-loop", "source": "../../../../skills/adversarial-review-loop", "include": ["SKILL.md"]},
+    {"id": "adversarial-review", "source": "../../../../skills/adversarial-review", "include": ["SKILL.md"]},
+    {"id": "concise-writing", "source": "../../../../skills/concise-writing", "include": ["SKILL.md"]},
+    {"id": "disciplined-development", "source": "../../../../skills/disciplined-development", "include": ["SKILL.md"]},
+    {"id": "disciplined-research", "source": "../../../../skills/disciplined-research", "include": ["SKILL.md"]},
+    {"id": "dispatching-development-subagents", "source": "../../../../skills/dispatching-development-subagents", "include": ["SKILL.md"]},
+    {"id": "lean-plan-writing", "source": "../../../../skills/lean-plan-writing", "include": ["SKILL.md"]},
+    {"id": "writing-explicit-rationale", "source": "../../../../skills/writing-explicit-rationale", "include": ["SKILL.md"]}
+  ],
+  "scenario": {
+    "id": "ssr-01",
+    "prompt": "prompt.md",
+    "fixture": "fixture"
+  },
+  "expected_outcome": "Inspect both project files and compose the load-bearing symbol/prose rename, preservation of its causal and accepted-tradeoff meaning, complete truthful `References swept:` evidence, and subsequent `Verification:` without a broken seam or unrelated procedure; complete inspection of both supplied files plus old/new symbol and prose-form search is an effective semantic sweep here—do not require the word `semantic`, another search-tool label, or unrelated synonyms; because the evaluator is read-only, truthful `Verification:` may report observed pre-edit discovery/inspection evidence and must not be failed for lacking a fabricated post-edit clean state; an additional observed project check such as parsing does not replace the sweep but does not fail a complete sweep; transparently classified candidates actually observed in a broad search do not fail merely because they need no update; do not fail exact wording or layout differences\n",
+  "execution": {
+    "provider": "codex",
+    "model": "gpt-5.6-sol",
+    "effort": "high"
+  }
+}
