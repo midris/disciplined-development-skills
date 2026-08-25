@@ -1,0 +1,9 @@
+{
+  "schema_version": "0.1",
+  "id": "wer-02",
+  "skill": {"id": "writing-explicit-rationale", "source": "../../../../skills/writing-explicit-rationale", "include": ["SKILL.md"]},
+  "dependencies": [],
+  "scenario": {"id": "wer-02", "prompt": "prompt.md", "fixture": null},
+  "expected_outcome": "Score the complete artifact by effect: inventory all three sites; batch durable rationale for ingest and quota at their decision sites or one referenced project home; preserve each chosen behavior, causal boundary, and consciously retained consequence; classify telemetry as needing no rationale. Equivalent wording passes, and a bounded consequence need not use the word `accepted`. Formatting and exact column text are task-fidelity notes unless they obscure an owned action.\n",
+  "execution": {"provider": "codex", "model": "gpt-5.6-sol", "effort": "low"}
+}
