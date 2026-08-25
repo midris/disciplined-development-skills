@@ -137,14 +137,14 @@ Total: 12 total, 0 ported, 12 not ported.
 
 ## sweeping-stale-references
 
-- `SSR-01` — `skill-validation/sweeping-stale-references.md#ssr-01--simple-direct-rename` — not ported
-- `SSR-02` — `skill-validation/sweeping-stale-references.md#ssr-02--reviewer-one-hit-completeness` — not ported
-- `SSR-03` — `skill-validation/sweeping-stale-references.md#ssr-03--126-match-grouped-sweep` — not ported
-- `SSR-05` — `skill-validation/sweeping-stale-references.md#ssr-05--required-negative-form` — not ported
-- `SSR-06` — `skill-validation/fixtures/sweeping-stale-references/prompts/ssr-06.md` — not ported
-- `SSR-07` — `skill-validation/fixtures/sweeping-stale-references/prompts/ssr-07.md` — not ported
+- `SSR-01` — `skill-validation/sweeping-stale-references.md#ssr-01--simple-direct-rename` — [ported](sweeping-stale-references/ssr-01/test.json)
+- `SSR-02` — `skill-validation/sweeping-stale-references.md#ssr-02--reviewer-one-hit-completeness` — [ported](sweeping-stale-references/ssr-02/test.json)
+- `SSR-03` — `skill-validation/sweeping-stale-references.md#ssr-03--126-match-grouped-sweep` — [ported](sweeping-stale-references/ssr-03/test.json)
+- `SSR-05` — `skill-validation/sweeping-stale-references.md#ssr-05--required-negative-form` — [ported](sweeping-stale-references/ssr-05/test.json)
+- `SSR-06` — `skill-validation/fixtures/sweeping-stale-references/prompts/ssr-06.md` — [ported](sweeping-stale-references/ssr-06/test.json)
+- `SSR-07` — `skill-validation/fixtures/sweeping-stale-references/prompts/ssr-07.md` — [ported](sweeping-stale-references/ssr-07/test.json)
 
-Total: 6 total, 0 ported, 6 not ported.
+Total: 6 total, 6 ported, 0 not ported.
 
 ## writing-explicit-rationale
 
@@ -167,6 +167,6 @@ Total: 6 total, 6 ported, 0 not ported.
 - `dispatching-development-subagents`: 11 total, 0 ported, 11 not ported
 - `lean-plan-writing`: 7 total, 1 ported, 6 not ported
 - `skill-discovery`: 12 total, 0 ported, 12 not ported
-- `sweeping-stale-references`: 6 total, 0 ported, 6 not ported
+- `sweeping-stale-references`: 6 total, 6 ported, 0 not ported
 - `writing-explicit-rationale`: 6 total, 6 ported, 0 not ported
-- Overall: 105 total, 10 ported, 95 not ported
+- Overall: 105 total, 16 ported, 89 not ported

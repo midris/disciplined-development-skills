@@ -8,7 +8,7 @@
 
 **Tech Stack:** Markdown, JSON schema `"0.1"`, Python 3.11+, pytest, `skilltest`.
 
-**Spec:** [catalog migration design](specs/2026-08-25-catalog-migration-design.md), [scenario porting roadmap](2026-08-24-scenario-porting-roadmap.md), and [core contracts](../skill-validation/charter/core-contracts.md).
+**Spec:** [catalog migration design](../specs/2026-08-25-catalog-migration-design.md), [scenario porting roadmap](../2026-08-24-scenario-porting-roadmap.md), and [core contracts](../../skill-validation/charter/core-contracts.md).
 
 ## Global Constraints
 
@@ -134,21 +134,21 @@ Retained inputs contain only the adapted prompt, the two fixture files, and the 
 
 **Produces:** Reconciled inventory and roadmap state plus the archived completed plan.
 
-- [ ] Mark all six active SSR scenarios ported. Update `sweeping-stale-references` to 6 total / 6 ported / 0 not ported and overall totals to 105 total / 16 ported / 89 not ported.
+- [x] Mark all six active SSR scenarios ported. Update `sweeping-stale-references` to 6 total / 6 ported / 0 not ported and overall totals to 105 total / 16 ported / 89 not ported.
 
-- [ ] Confirm the full runner suite, six-scenario mechanical preflight, and recorded `SSR-01` smoke outcome are complete before changing inventory state.
+- [x] Confirm the full runner suite, six-scenario mechanical preflight, and recorded `SSR-01` smoke outcome are complete before changing inventory state.
 
-- [ ] Update Phase 3 of the roadmap with a link to the completed catalog plan. Do not select or plan the next catalog in this change.
+- [x] Update Phase 3 of the roadmap with a link to the completed catalog plan. Do not select or plan the next catalog in this change.
 
-- [ ] Move this plan to `plans/completed/`; do not delete it. Change its Spec links to `../specs/2026-08-25-catalog-migration-design.md`, `../2026-08-24-scenario-porting-roadmap.md`, and `../../skill-validation/charter/core-contracts.md`.
+- [x] Move this plan to `plans/completed/`; do not delete it. Change its Spec links to `../specs/2026-08-25-catalog-migration-design.md`, `../2026-08-24-scenario-porting-roadmap.md`, and `../../skill-validation/charter/core-contracts.md`.
 
-- [ ] Run the canonical local Markdown-link checker, `git diff --check`, and `git status --short`. Confirm no runner, provider, skill, methodology, raw-output, temporary-workspace, or already-ported scenario change entered the work.
+- [x] Run the canonical local Markdown-link checker, `git diff --check`, and `git status --short`. Confirm no runner, provider, skill, methodology, raw-output, temporary-workspace, or already-ported scenario change entered the work.
 
-- [ ] Confirm every checkbox reflects completed work, then commit only the inventory, roadmap, and completed-plan bookkeeping.
+- [x] Confirm every checkbox reflects completed work, then commit only the inventory, roadmap, and completed-plan bookkeeping.
 
 ## Done When
 
-- [ ] All six active `sweeping-stale-references` scenarios have loadable schema `"0.1"` configurations.
-- [ ] Every package reproduces its canonical scenario-owned inputs with only approved path adaptation.
-- [ ] Exactly one `SSR-01` provider smoke run completed, no other SSR scenario was invoked, and no runner or skill code changed.
-- [ ] Inventory, roadmap, and archived-plan state agree.
+- [x] All six active `sweeping-stale-references` scenarios have loadable schema `"0.1"` configurations.
+- [x] Every package reproduces its canonical scenario-owned inputs with only approved path adaptation.
+- [x] Exactly one `SSR-01` provider smoke run completed, no other SSR scenario was invoked, and no runner or skill code changed.
+- [x] Inventory, roadmap, and archived-plan state agree.

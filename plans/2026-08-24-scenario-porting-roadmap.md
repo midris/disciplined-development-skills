@@ -34,6 +34,7 @@
 - Port the remaining active scenarios catalog by catalog.
 - Load every configuration, verify packaging fidelity, then run at least one preselected scenario from the catalog through the real provider and collect mechanical evidence without scoring it.
 - Complete: [writing-explicit-rationale catalog migration](completed/2026-08-25-writing-explicit-rationale-catalog-migration.md).
+- Complete: [sweeping-stale-references catalog migration](completed/2026-08-25-sweeping-stale-references-catalog-migration.md).
 
 ### 4. Readiness review
 
