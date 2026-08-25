@@ -1,6 +1,6 @@
 # Catalog Migration Design
 
-**Status:** Draft for owner review.
+**Status:** Owner-approved on 2026-08-25.
 
 ## Goal
 
