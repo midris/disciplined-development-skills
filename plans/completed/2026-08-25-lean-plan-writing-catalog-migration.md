@@ -8,7 +8,7 @@
 
 **Tech Stack:** Markdown, JSON schema `"0.1"`, Python 3.11+, pytest, `skilltest`.
 
-**Spec:** [catalog migration design](specs/2026-08-25-catalog-migration-design.md), [scenario porting roadmap](2026-08-24-scenario-porting-roadmap.md), and [core contracts](../skill-validation/charter/core-contracts.md).
+**Spec:** [catalog migration design](../specs/2026-08-25-catalog-migration-design.md), [scenario porting roadmap](../2026-08-24-scenario-porting-roadmap.md), and [core contracts](../../skill-validation/charter/core-contracts.md).
 
 ## Global Constraints
 
@@ -124,21 +124,21 @@
 
 **Produces:** Reconciled inventory and roadmap state plus the archived completed plan.
 
-- [ ] Mark `LP-01`, `LP-03`, `LP-05`, `LP-06`, `LP-07`, and `LP-08` ported without changing the existing `LP-02` entry. Update `lean-plan-writing` to 7 total / 7 ported / 0 not ported and overall totals to 105 total / 22 ported / 83 not ported.
+- [x] Mark `LP-01`, `LP-03`, `LP-05`, `LP-06`, `LP-07`, and `LP-08` ported without changing the existing `LP-02` entry. Update `lean-plan-writing` to 7 total / 7 ported / 0 not ported and overall totals to 105 total / 22 ported / 83 not ported.
 
-- [ ] Confirm the full runner suite, six-scenario mechanical preflight, and recorded `LP-05` smoke outcome are complete before changing inventory state.
+- [x] Confirm the full runner suite, six-scenario mechanical preflight, and recorded `LP-05` smoke outcome are complete before changing inventory state.
 
-- [ ] Update Phase 3 of the roadmap with a link to the completed catalog plan. Do not select or plan the next catalog in this change.
+- [x] Update Phase 3 of the roadmap with a link to the completed catalog plan. Do not select or plan the next catalog in this change.
 
-- [ ] Move this plan to `plans/completed/`; do not delete it. Change its Spec links to `../specs/2026-08-25-catalog-migration-design.md`, `../2026-08-24-scenario-porting-roadmap.md`, and `../../skill-validation/charter/core-contracts.md`.
+- [x] Move this plan to `plans/completed/`; do not delete it. Change its Spec links to `../specs/2026-08-25-catalog-migration-design.md`, `../2026-08-24-scenario-porting-roadmap.md`, and `../../skill-validation/charter/core-contracts.md`.
 
-- [ ] Run the canonical local Markdown-link checker, `git diff --check`, and `git status --short`. Confirm no runner, provider, skill, methodology, raw-output, temporary-workspace, or already-ported scenario change entered the work.
+- [x] Run the canonical local Markdown-link checker, `git diff --check`, and `git status --short`. Confirm no runner, provider, skill, methodology, raw-output, temporary-workspace, or already-ported scenario change entered the work.
 
-- [ ] Confirm every checkbox reflects completed work, then commit only the inventory, roadmap, and completed-plan bookkeeping.
+- [x] Confirm every checkbox reflects completed work, then commit only the inventory, roadmap, and completed-plan bookkeeping.
 
 ## Done When
 
-- [ ] All seven active `lean-plan-writing` scenarios have loadable schema `"0.1"` configurations.
-- [ ] Every new package reproduces its canonical scenario-owned inputs with only approved path adaptation.
-- [ ] Exactly one `LP-05` provider smoke run completed, no other new LP scenario was invoked, and no runner or skill code changed.
-- [ ] Inventory, roadmap, and archived-plan state agree.
+- [x] All seven active `lean-plan-writing` scenarios have loadable schema `"0.1"` configurations.
+- [x] Every new package reproduces its canonical scenario-owned inputs with only approved path adaptation.
+- [x] Exactly one `LP-05` provider smoke run completed, no other new LP scenario was invoked, and no runner or skill code changed.
+- [x] Inventory, roadmap, and archived-plan state agree.
