@@ -33,7 +33,7 @@
 - Current phase.
 - Port the remaining active scenarios catalog by catalog.
 - Load every configuration and verify packaging fidelity without repeating smoke runs for covered shapes.
-- Complete: [writing-explicit-rationale catalog migration](completed/2026-08-25-writing-explicit-rationale-catalog-migration.md).
+- Complete: `writing-explicit-rationale` catalog migration.
 
 ### 4. Readiness review
 
