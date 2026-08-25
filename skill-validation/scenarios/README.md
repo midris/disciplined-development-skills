@@ -109,14 +109,14 @@ Total: 11 total, 0 ported, 11 not ported.
 ## lean-plan-writing
 
 - `LP-01` — `skill-validation/lean-plan-writing.md#lp-01--full-bundle-json-report-plan` — not ported
-- `LP-02` — `skill-validation/lean-plan-writing.md#lp-02--parser-table-without-implementation` — not ported
+- `LP-02` — `skill-validation/lean-plan-writing.md#lp-02--parser-table-without-implementation` — [ported](lean-plan-writing/lp-02/test.json)
 - `LP-03` — `skill-validation/lean-plan-writing.md#lp-03--necessary-four-line-artifact-shape` — not ported
 - `LP-05` — `skill-validation/lean-plan-writing.md#lp-05--loud-csv-edge-inventory` — not ported
 - `LP-06` — `skill-validation/lean-plan-writing.md#lp-06--quiet-digest-edge-inventory` — not ported
 - `LP-07` — `skill-validation/lean-plan-writing.md#lp-07--oversized-program-boundary` — not ported
 - `LP-08` — `skill-validation/lean-plan-writing.md#lp-08--coupled-change-boundary` — not ported
 
-Total: 7 total, 0 ported, 7 not ported.
+Total: 7 total, 1 ported, 6 not ported.
 
 ## skill-discovery
 
@@ -165,8 +165,8 @@ Total: 6 total, 2 ported, 4 not ported.
 - `disciplined-development`: 9 total, 1 ported, 8 not ported
 - `disciplined-research`: 7 total, 0 ported, 7 not ported
 - `dispatching-development-subagents`: 11 total, 0 ported, 11 not ported
-- `lean-plan-writing`: 7 total, 0 ported, 7 not ported
+- `lean-plan-writing`: 7 total, 1 ported, 6 not ported
 - `skill-discovery`: 12 total, 0 ported, 12 not ported
 - `sweeping-stale-references`: 6 total, 0 ported, 6 not ported
 - `writing-explicit-rationale`: 6 total, 2 ported, 4 not ported
-- Overall: 105 total, 4 ported, 101 not ported
+- Overall: 105 total, 5 ported, 100 not ported

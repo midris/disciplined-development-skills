@@ -50,7 +50,7 @@
 - [x] Inspect the active candidates, their canonical inputs, and the runner contract.
 - [x] Select `LP-02` as the representative.
 - [x] Develop and obtain approval for a faithful porting solution.
-- [x] Create the separate [LP-02 implementation plan](2026-08-24-lp-02-external-dependency-runner-port.md), which owns packaging, the smoke run, inventory reconciliation, and completion; stop for review.
+- [x] Create the separate [LP-02 implementation plan](completed/2026-08-24-lp-02-external-dependency-runner-port.md), which owns packaging, the smoke run, inventory reconciliation, and completion; stop for review.
 
 ### Task 6: Description-only routing with no primary skill
 
