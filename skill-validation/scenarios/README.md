@@ -148,14 +148,14 @@ Total: 6 total, 0 ported, 6 not ported.
 
 ## writing-explicit-rationale
 
-- `WER-01` — `skill-validation/writing-explicit-rationale.md#wer-01--simple-direct-descope` — not ported
-- `WER-02` — `skill-validation/writing-explicit-rationale.md#wer-02--repeated-review-batch-audit` — not ported
+- `WER-01` — `skill-validation/writing-explicit-rationale.md#wer-01--simple-direct-descope` — [ported](writing-explicit-rationale/wer-01/test.json)
+- `WER-02` — `skill-validation/writing-explicit-rationale.md#wer-02--repeated-review-batch-audit` — [ported](writing-explicit-rationale/wer-02/test.json)
 - `WER-05` — `skill-validation/writing-explicit-rationale.md#wer-05--existing-rationale-reference` — [ported](writing-explicit-rationale/wer-05/test.json)
-- `WER-06` — `skill-validation/writing-explicit-rationale.md#wer-06--relevant-history-only` — not ported
-- `WER-07` — `skill-validation/fixtures/writing-explicit-rationale/prompts/wer-07.md` — not ported
+- `WER-06` — `skill-validation/writing-explicit-rationale.md#wer-06--relevant-history-only` — [ported](writing-explicit-rationale/wer-06/test.json)
+- `WER-07` — `skill-validation/fixtures/writing-explicit-rationale/prompts/wer-07.md` — [ported](writing-explicit-rationale/wer-07/test.json)
 - `WER-08` — `skill-validation/fixtures/writing-explicit-rationale/prompts/wer-08.md` — [ported](writing-explicit-rationale/wer-08/test.json)
 
-Total: 6 total, 2 ported, 4 not ported.
+Total: 6 total, 6 ported, 0 not ported.
 
 ## Totals
 
@@ -168,5 +168,5 @@ Total: 6 total, 2 ported, 4 not ported.
 - `lean-plan-writing`: 7 total, 1 ported, 6 not ported
 - `skill-discovery`: 12 total, 0 ported, 12 not ported
 - `sweeping-stale-references`: 6 total, 0 ported, 6 not ported
-- `writing-explicit-rationale`: 6 total, 2 ported, 4 not ported
-- Overall: 105 total, 6 ported, 99 not ported
+- `writing-explicit-rationale`: 6 total, 6 ported, 0 not ported
+- Overall: 105 total, 10 ported, 95 not ported

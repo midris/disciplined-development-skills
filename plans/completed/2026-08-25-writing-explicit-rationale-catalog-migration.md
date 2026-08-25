@@ -8,7 +8,7 @@
 
 **Tech Stack:** Markdown, JSON schema `"0.1"`, Python 3.11+, pytest, `skilltest`.
 
-**Spec:** [catalog migration design](specs/2026-08-25-catalog-migration-design.md), [scenario porting roadmap](2026-08-24-scenario-porting-roadmap.md), and [core contracts](../skill-validation/charter/core-contracts.md).
+**Spec:** [catalog migration design](../specs/2026-08-25-catalog-migration-design.md), [scenario porting roadmap](../2026-08-24-scenario-porting-roadmap.md), and [core contracts](../../skill-validation/charter/core-contracts.md).
 
 ## Global Constraints
 
@@ -89,21 +89,21 @@
 
 **Produces:** Reconciled inventory and roadmap state plus the archived completed plan.
 
-- [ ] Mark `WER-01`, `WER-02`, `WER-06`, and `WER-07` ported. Update `writing-explicit-rationale` to 6 total / 6 ported / 0 not ported and overall totals to 105 total / 10 ported / 95 not ported.
+- [x] Mark `WER-01`, `WER-02`, `WER-06`, and `WER-07` ported. Update `writing-explicit-rationale` to 6 total / 6 ported / 0 not ported and overall totals to 105 total / 10 ported / 95 not ported.
 
-- [ ] Add the completed catalog-plan link under the roadmap's catalog-migration phase. Do not select or plan the next catalog in this change.
+- [x] Add the completed catalog-plan link under the roadmap's catalog-migration phase. Do not select or plan the next catalog in this change.
 
-- [ ] Run the full runner suite. Load and mechanically preflight all six `writing-explicit-rationale` configurations without invoking a provider; confirm the two existing packages are unchanged and all six preserve their declared packaging boundaries.
+- [x] Run the full runner suite. Load and mechanically preflight all six `writing-explicit-rationale` configurations without invoking a provider; confirm the two existing packages are unchanged and all six preserve their declared packaging boundaries.
 
-- [ ] Run the canonical local Markdown-link checker, `git diff --check`, and `git status --short`. Confirm no runner, provider, skill, methodology, raw-output, temporary-workspace, or already-ported scenario change entered the work.
+- [x] Run the canonical local Markdown-link checker, `git diff --check`, and `git status --short`. Confirm no runner, provider, skill, methodology, raw-output, temporary-workspace, or already-ported scenario change entered the work.
 
-- [ ] Confirm every checkbox reflects completed work, move this plan to `plans/completed/`, change its Spec links to `../specs/2026-08-25-catalog-migration-design.md`, `../2026-08-24-scenario-porting-roadmap.md`, and `../../skill-validation/charter/core-contracts.md`, then rerun the link and diff checks.
+- [x] Confirm every checkbox reflects completed work, move this plan to `plans/completed/`, change its Spec links to `../specs/2026-08-25-catalog-migration-design.md`, `../2026-08-24-scenario-porting-roadmap.md`, and `../../skill-validation/charter/core-contracts.md`, then rerun the link and diff checks.
 
-- [ ] Commit only the inventory, roadmap, and completed-plan bookkeeping.
+- [x] Commit only the inventory, roadmap, and completed-plan bookkeeping.
 
 ## Done When
 
-- [ ] All six active `writing-explicit-rationale` scenarios have loadable schema `"0.1"` configurations.
-- [ ] The four new packages reproduce their canonical scenario-owned inputs with only approved path adaptation.
-- [ ] No provider was invoked and no runner or skill code changed.
-- [ ] Inventory, roadmap, and completed-plan state agree.
+- [x] All six active `writing-explicit-rationale` scenarios have loadable schema `"0.1"` configurations.
+- [x] The four new packages reproduce their canonical scenario-owned inputs with only approved path adaptation.
+- [x] No provider was invoked and no runner or skill code changed.
+- [x] Inventory, roadmap, and completed-plan state agree.
