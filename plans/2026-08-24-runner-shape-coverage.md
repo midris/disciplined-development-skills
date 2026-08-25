@@ -54,10 +54,10 @@
 
 ### Task 6: Description-only routing with no primary skill
 
-- [ ] Inspect the active candidates, their canonical inputs, and the runner contract.
-- [ ] Select the representative.
-- [ ] Develop and obtain approval for a faithful porting solution.
-- [ ] Create a separate implementation plan that owns completion, then stop for review.
+- [x] Inspect the active candidates, their canonical inputs, and the runner contract.
+- [x] Select `CW-09` as the representative.
+- [x] Develop and obtain approval for a faithful porting solution.
+- [x] Create the separate [CW-09 implementation plan](2026-08-24-cw-09-no-skill-context-runner-port.md), which owns the narrow runner contract, packaging, the smoke run, inventory reconciliation, and completion; stop for review.
 
 ## Done when
 
