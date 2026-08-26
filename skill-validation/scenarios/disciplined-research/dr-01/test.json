@@ -1,0 +1,62 @@
+{
+  "schema_version": "0.1",
+  "id": "dr-01",
+  "skill": {
+    "id": "disciplined-research",
+    "source": "../../../../skills/disciplined-research",
+    "include": ["SKILL.md"]
+  },
+  "dependencies": [
+    {
+      "id": "adversarial-review-loop",
+      "source": "../../../../skills/adversarial-review-loop",
+      "include": ["SKILL.md"]
+    },
+    {
+      "id": "adversarial-review",
+      "source": "../../../../skills/adversarial-review",
+      "include": ["SKILL.md"]
+    },
+    {
+      "id": "concise-writing",
+      "source": "../../../../skills/concise-writing",
+      "include": ["SKILL.md"]
+    },
+    {
+      "id": "disciplined-development",
+      "source": "../../../../skills/disciplined-development",
+      "include": ["SKILL.md"]
+    },
+    {
+      "id": "dispatching-development-subagents",
+      "source": "../../../../skills/dispatching-development-subagents",
+      "include": ["SKILL.md"]
+    },
+    {
+      "id": "lean-plan-writing",
+      "source": "../../../../skills/lean-plan-writing",
+      "include": ["SKILL.md"]
+    },
+    {
+      "id": "sweeping-stale-references",
+      "source": "../../../../skills/sweeping-stale-references",
+      "include": ["SKILL.md"]
+    },
+    {
+      "id": "writing-explicit-rationale",
+      "source": "../../../../skills/writing-explicit-rationale",
+      "include": ["SKILL.md"]
+    }
+  ],
+  "scenario": {
+    "id": "dr-01",
+    "prompt": "prompt.md",
+    "fixture": "fixture"
+  },
+  "expected_outcome": "State 45 days, reject or omit 30, cite `project/app/retention.py`, obey the two-line shape, and add no unsupported claim, blocker, or narration\n",
+  "execution": {
+    "provider": "codex",
+    "model": "gpt-5.6-sol",
+    "effort": "high"
+  }
+}
