@@ -70,11 +70,11 @@
 
 **Produces:** The final new package consumed by Task 3.
 
-- [ ] Extract the active linked prompt and rubric, apply only the three declared path substitutions, and verify the `OWN` hashes in the global manifest.
-- [ ] Create `test.json` with ID `own`, `fixture: null`, exact rubric, the declared primary, the three declared dependencies in canonical bundle order, and the required execution settings.
-- [ ] Verify each current dependency source exists and matches its recorded included-file hash. Do not infer hook files or other dependencies.
-- [ ] Load without a provider. Prepare and remove a disposable workspace; require exactly the four declared supplied `SKILL.md` files, ordinary subject transport containing the adapted prompt, and no rubric bytes in subject input or workspace.
-- [ ] Run `uv run pytest -q`, run `git diff --check`, update only Task 2 checkboxes, and commit.
+- [x] Extract the active linked prompt and rubric, apply only the three declared path substitutions, and verify the `OWN` hashes in the global manifest.
+- [x] Create `test.json` with ID `own`, `fixture: null`, exact rubric, the declared primary, the three declared dependencies in canonical bundle order, and the required execution settings.
+- [x] Verify each current dependency source exists and matches its recorded included-file hash. Do not infer hook files or other dependencies.
+- [x] Load without a provider. Prepare and remove a disposable workspace; require exactly the four declared supplied `SKILL.md` files, ordinary subject transport containing the adapted prompt, and no rubric bytes in subject input or workspace.
+- [x] Run `uv run pytest -q`, run `git diff --check`, update only Task 2 checkboxes, and commit.
 
 ### Task 3: Smoke-run CS end to end
 
