@@ -1,0 +1,6 @@
+{
+  "name": "orbital-migration-fixture",
+  "dependencies": {
+    "orbital-sdk": "3.4.2"
+  }
+}

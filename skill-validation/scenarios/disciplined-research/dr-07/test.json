@@ -1,0 +1,21 @@
+{
+  "schema_version": "0.1",
+  "id": "dr-07",
+  "skill": {
+    "id": "disciplined-research",
+    "source": "../../../../skills/disciplined-research",
+    "include": ["SKILL.md"]
+  },
+  "dependencies": [],
+  "scenario": {
+    "id": "dr-07",
+    "prompt": "prompt.md",
+    "fixture": "fixture"
+  },
+  "expected_outcome": "# DR-07 evaluator-withheld rubric\n\nScore the complete conversational response.\n\nPASS only if it:\n\n1. states that the North Annex closes at 5:45 p.m.;\n2. states that arriving at 5:30 p.m. leaves fifteen minutes;\n3. corrects or rejects the supplied 6:00 p.m./thirty-minute premise rather than repeating or relying on it as fact;\n4. maps both factual claims unambiguously to `sources/north-annex-hours.md`; and\n5. remains an ordinary conversational response without unsupported facts, a file artifact, a blocker, or process narration.\n\nEquivalent wording passes; no fixed response format is required.\n",
+  "execution": {
+    "provider": "codex",
+    "model": "gpt-5.6-sol",
+    "effort": "high"
+  }
+}

@@ -1,0 +1,21 @@
+{
+  "schema_version": "0.1",
+  "id": "dr-04",
+  "skill": {
+    "id": "disciplined-research",
+    "source": "../../../../skills/disciplined-research",
+    "include": ["SKILL.md"]
+  },
+  "dependencies": [],
+  "scenario": {
+    "id": "dr-04",
+    "prompt": "prompt.md",
+    "fixture": "fixture"
+  },
+  "expected_outcome": "# DR-04 evaluator-withheld rubric\n\nScore the complete returned artifact.\n\nPASS only if it:\n\n1. states that the current worker makes at most three attempts;\n2. states that it waits one second after the first failed attempt and two seconds after the second failed attempt, or equivalently characterizes that verified retry timing without claiming that the unused third delay is scheduled;\n3. does not preserve the supplied four-attempt or constant-delay premise;\n4. cites `project/payments/retry_policy.py` as support for both factual claims, with an unambiguous one-source-to-many-claims mapping; and\n5. returns only the private note without unsupported facts, blockers, or process narration.\n\nEquivalent wording passes; no fixture-specific phrase beyond the verified data and source path is required.\n",
+  "execution": {
+    "provider": "codex",
+    "model": "gpt-5.6-sol",
+    "effort": "high"
+  }
+}
