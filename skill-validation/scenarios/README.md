@@ -66,17 +66,17 @@ Total: 17 total, 1 ported, 16 not ported.
 
 ## disciplined-development
 
-- `DD-01` — `skill-validation/fixtures/disciplined-development/prompts/dd-01.md` — not ported
-- `DD-02` — `skill-validation/fixtures/disciplined-development/prompts/dd-02.md` — not ported
-- `DD-03` — `skill-validation/fixtures/disciplined-development/prompts/dd-03.md` — not ported
+- `DD-01` — `skill-validation/fixtures/disciplined-development/prompts/dd-01.md` — [ported](disciplined-development/dd-01/test.json)
+- `DD-02` — `skill-validation/fixtures/disciplined-development/prompts/dd-02.md` — [ported](disciplined-development/dd-02/test.json)
+- `DD-03` — `skill-validation/fixtures/disciplined-development/prompts/dd-03.md` — [ported](disciplined-development/dd-03/test.json)
 - `DD-04` — `skill-validation/fixtures/disciplined-development/prompts/dd-04.md` — [ported](disciplined-development/dd-04/test.json)
-- `DD-05` — `skill-validation/fixtures/disciplined-development/prompts/dd-05.md` — not ported
-- `DD-06` — `skill-validation/fixtures/disciplined-development/prompts/dd-06.md` — not ported
-- `DD-07` — `skill-validation/fixtures/disciplined-development/prompts/dd-07.md` — not ported
-- `DD-08` — `skill-validation/fixtures/disciplined-development/prompts/dd-08.md` — not ported
-- `DD-09` — `skill-validation/fixtures/disciplined-development/prompts/dd-09.md` — not ported
+- `DD-05` — `skill-validation/fixtures/disciplined-development/prompts/dd-05.md` — [ported](disciplined-development/dd-05/test.json)
+- `DD-06` — `skill-validation/fixtures/disciplined-development/prompts/dd-06.md` — [ported](disciplined-development/dd-06/test.json)
+- `DD-07` — `skill-validation/fixtures/disciplined-development/prompts/dd-07.md` — [ported](disciplined-development/dd-07/test.json)
+- `DD-08` — `skill-validation/fixtures/disciplined-development/prompts/dd-08.md` — [ported](disciplined-development/dd-08/test.json)
+- `DD-09` — `skill-validation/fixtures/disciplined-development/prompts/dd-09.md` — [ported](disciplined-development/dd-09/test.json)
 
-Total: 9 total, 1 ported, 8 not ported.
+Total: 9 total, 9 ported, 0 not ported.
 
 ## disciplined-research
 
@@ -162,11 +162,11 @@ Total: 6 total, 6 ported, 0 not ported.
 - `adversarial-review`: 15 total, 0 ported, 15 not ported
 - `adversarial-review-loop-scenarios`: 15 total, 1 ported, 14 not ported
 - `concise-writing`: 17 total, 1 ported, 16 not ported
-- `disciplined-development`: 9 total, 1 ported, 8 not ported
+- `disciplined-development`: 9 total, 9 ported, 0 not ported
 - `disciplined-research`: 7 total, 7 ported, 0 not ported
 - `dispatching-development-subagents`: 11 total, 0 ported, 11 not ported
 - `lean-plan-writing`: 7 total, 7 ported, 0 not ported
 - `skill-discovery`: 12 total, 0 ported, 12 not ported
 - `sweeping-stale-references`: 6 total, 6 ported, 0 not ported
 - `writing-explicit-rationale`: 6 total, 6 ported, 0 not ported
-- Overall: 105 total, 29 ported, 76 not ported
+- Overall: 105 total, 37 ported, 68 not ported

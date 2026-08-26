@@ -37,6 +37,7 @@
 - Complete: [sweeping-stale-references catalog migration](completed/2026-08-25-sweeping-stale-references-catalog-migration.md).
 - Complete: [lean-plan-writing catalog migration](completed/2026-08-25-lean-plan-writing-catalog-migration.md).
 - Complete: [disciplined-research catalog migration](completed/2026-08-25-disciplined-research-catalog-migration.md).
+- Complete: [disciplined-development catalog migration](completed/2026-08-26-disciplined-development-catalog-migration.md).
 
 ### 4. Readiness review
 
