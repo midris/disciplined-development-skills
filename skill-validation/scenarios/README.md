@@ -24,23 +24,23 @@ Total: 15 total, 0 ported, 15 not ported.
 
 ## adversarial-review-loop-scenarios
 
-- `CS` — `skill-validation/fixtures/adversarial-review-loop/prompts/cs.md` — not ported
+- `CS` — `skill-validation/fixtures/adversarial-review-loop/prompts/cs.md` — [ported](adversarial-review-loop/cs/test.json)
 - `T2` — `skill-validation/fixtures/adversarial-review-loop/prompts/t2.md` — [ported](adversarial-review-loop/t2/test.json)
-- `T3` — `skill-validation/fixtures/adversarial-review-loop/prompts/t3.md` — not ported
-- `T4` — `skill-validation/fixtures/adversarial-review-loop/prompts/t4.md` — not ported
-- `T5` — `skill-validation/fixtures/adversarial-review-loop/prompts/t5.md` — not ported
-- `T6` — `skill-validation/fixtures/adversarial-review-loop/prompts/t6.md` — not ported
-- `T7` — `skill-validation/fixtures/adversarial-review-loop/prompts/t7.md` — not ported
-- `NF` — `skill-validation/fixtures/adversarial-review-loop/prompts/nf.md` — not ported
-- `PW` — `skill-validation/fixtures/adversarial-review-loop/prompts/pw.md` — not ported
-- `XL` — `skill-validation/fixtures/adversarial-review-loop/prompts/xl.md` — not ported
-- `G3A` — `skill-validation/fixtures/adversarial-review-loop/prompts/g3a.md` — not ported
-- `G3B` — `skill-validation/fixtures/adversarial-review-loop/prompts/g3b.md` — not ported
-- `G3C` — `skill-validation/fixtures/adversarial-review-loop/prompts/g3c.md` — not ported
-- `OWN` — `skill-validation/fixtures/adversarial-review-loop/prompts/own.md` — not ported
-- `CE` — `skill-validation/fixtures/adversarial-review-loop/prompts/ce.md` — not ported
+- `T3` — `skill-validation/fixtures/adversarial-review-loop/prompts/t3.md` — [ported](adversarial-review-loop/t3/test.json)
+- `T4` — `skill-validation/fixtures/adversarial-review-loop/prompts/t4.md` — [ported](adversarial-review-loop/t4/test.json)
+- `T5` — `skill-validation/fixtures/adversarial-review-loop/prompts/t5.md` — [ported](adversarial-review-loop/t5/test.json)
+- `T6` — `skill-validation/fixtures/adversarial-review-loop/prompts/t6.md` — [ported](adversarial-review-loop/t6/test.json)
+- `T7` — `skill-validation/fixtures/adversarial-review-loop/prompts/t7.md` — [ported](adversarial-review-loop/t7/test.json)
+- `NF` — `skill-validation/fixtures/adversarial-review-loop/prompts/nf.md` — [ported](adversarial-review-loop/nf/test.json)
+- `PW` — `skill-validation/fixtures/adversarial-review-loop/prompts/pw.md` — [ported](adversarial-review-loop/pw/test.json)
+- `XL` — `skill-validation/fixtures/adversarial-review-loop/prompts/xl.md` — [ported](adversarial-review-loop/xl/test.json)
+- `G3A` — `skill-validation/fixtures/adversarial-review-loop/prompts/g3a.md` — [ported](adversarial-review-loop/g3a/test.json)
+- `G3B` — `skill-validation/fixtures/adversarial-review-loop/prompts/g3b.md` — [ported](adversarial-review-loop/g3b/test.json)
+- `G3C` — `skill-validation/fixtures/adversarial-review-loop/prompts/g3c.md` — [ported](adversarial-review-loop/g3c/test.json)
+- `OWN` — `skill-validation/fixtures/adversarial-review-loop/prompts/own.md` — [ported](adversarial-review-loop/own/test.json)
+- `CE` — `skill-validation/fixtures/adversarial-review-loop/prompts/ce.md` — [ported](adversarial-review-loop/ce/test.json)
 
-Total: 15 total, 1 ported, 14 not ported.
+Total: 15 total, 15 ported, 0 not ported.
 
 ## concise-writing
 
@@ -160,7 +160,7 @@ Total: 6 total, 6 ported, 0 not ported.
 ## Totals
 
 - `adversarial-review`: 15 total, 0 ported, 15 not ported
-- `adversarial-review-loop-scenarios`: 15 total, 1 ported, 14 not ported
+- `adversarial-review-loop-scenarios`: 15 total, 15 ported, 0 not ported
 - `concise-writing`: 17 total, 1 ported, 16 not ported
 - `disciplined-development`: 9 total, 9 ported, 0 not ported
 - `disciplined-research`: 7 total, 7 ported, 0 not ported
@@ -169,4 +169,4 @@ Total: 6 total, 6 ported, 0 not ported.
 - `skill-discovery`: 12 total, 0 ported, 12 not ported
 - `sweeping-stale-references`: 6 total, 6 ported, 0 not ported
 - `writing-explicit-rationale`: 6 total, 6 ported, 0 not ported
-- Overall: 105 total, 37 ported, 68 not ported
+- Overall: 105 total, 51 ported, 54 not ported

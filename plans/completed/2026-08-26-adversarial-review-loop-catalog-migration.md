@@ -8,7 +8,7 @@
 
 **Tech Stack:** Markdown, JSON schema `"0.1"`, Python 3.11+, pytest, `skilltest`.
 
-**Spec:** [catalog migration design](specs/2026-08-25-catalog-migration-design.md), [scenario porting roadmap](2026-08-24-scenario-porting-roadmap.md), and [core contracts](../skill-validation/charter/core-contracts.md).
+**Spec:** [catalog migration design](../specs/2026-08-25-catalog-migration-design.md), [scenario porting roadmap](../2026-08-24-scenario-porting-roadmap.md), and [core contracts](../../skill-validation/charter/core-contracts.md).
 
 ## Global Constraints
 
@@ -111,16 +111,16 @@ No runner, packaging, or provider-infrastructure fallout was recorded. Raw provi
 
 **Produces:** Reconciled inventory, roadmap state, and archived plan.
 
-- [ ] Mark the 14 newly packaged scenarios ported while preserving `T2`. Update `adversarial-review-loop-scenarios` to 15 total / 15 ported / 0 not ported and overall totals to 105 total / 51 ported / 54 not ported.
-- [ ] Confirm the full runner suite, 15-scenario preflight, unchanged `T2`, and recorded `CS` smoke are complete before changing inventory state.
-- [ ] Add a Phase 3 roadmap link to the completed plan without selecting the next catalog.
-- [ ] Move this plan to `plans/completed/`; repair its Spec links to `../specs/2026-08-25-catalog-migration-design.md`, `../2026-08-24-scenario-porting-roadmap.md`, and `../../skill-validation/charter/core-contracts.md`.
-- [ ] Run the canonical local Markdown-link checker, `git diff --check`, and `git status --short`. Confirm no runner, provider, skill, methodology, raw-output, temporary-workspace, `T2`, or other existing-scenario change entered the work.
-- [ ] Confirm every checkbox is complete, then commit only inventory, roadmap, and archived-plan bookkeeping.
+- [x] Mark the 14 newly packaged scenarios ported while preserving `T2`. Update `adversarial-review-loop-scenarios` to 15 total / 15 ported / 0 not ported and overall totals to 105 total / 51 ported / 54 not ported.
+- [x] Confirm the full runner suite, 15-scenario preflight, unchanged `T2`, and recorded `CS` smoke are complete before changing inventory state.
+- [x] Add a Phase 3 roadmap link to the completed plan without selecting the next catalog.
+- [x] Move this plan to `plans/completed/`; repair its Spec links to `../specs/2026-08-25-catalog-migration-design.md`, `../2026-08-24-scenario-porting-roadmap.md`, and `../../skill-validation/charter/core-contracts.md`.
+- [x] Run the canonical local Markdown-link checker, `git diff --check`, and `git status --short`. Confirm no runner, provider, skill, methodology, raw-output, temporary-workspace, `T2`, or other existing-scenario change entered the work.
+- [x] Confirm every checkbox is complete, then commit only inventory, roadmap, and archived-plan bookkeeping.
 
 ## Done When
 
-- [ ] All 15 active `adversarial-review-loop-scenarios` have loadable schema `"0.1"` configurations.
-- [ ] Every new package preserves canonical scenario-owned inputs with only the approved path substitutions, and `T2` remains unchanged.
-- [ ] Exactly one `CS` provider smoke completed; no other loop scenario ran and no runner or skill code changed.
-- [ ] Inventory, roadmap, and archived plan agree.
+- [x] All 15 active `adversarial-review-loop-scenarios` have loadable schema `"0.1"` configurations.
+- [x] Every new package preserves canonical scenario-owned inputs with only the approved path substitutions, and `T2` remains unchanged.
+- [x] Exactly one `CS` provider smoke completed; no other loop scenario ran and no runner or skill code changed.
+- [x] Inventory, roadmap, and archived plan agree.
