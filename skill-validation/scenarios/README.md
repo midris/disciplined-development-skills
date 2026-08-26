@@ -80,15 +80,15 @@ Total: 9 total, 1 ported, 8 not ported.
 
 ## disciplined-research
 
-- `DR-01` — `skill-validation/disciplined-research.md#dr-01--bundled-project-verification` — not ported
-- `DR-02` — `skill-validation/disciplined-research.md#dr-02--isolated-museum-procurement-deadline` — not ported
-- `DR-03` — `skill-validation/disciplined-research.md#dr-03--cross-domain-version-verification` — not ported
-- `DR-04` — `skill-validation/fixtures/disciplined-research/prompts/dr-04.md` — not ported
-- `DR-05` — `skill-validation/fixtures/disciplined-research/prompts/dr-05.md` — not ported
-- `DR-06` — `skill-validation/fixtures/disciplined-research/prompts/dr-06.md` — not ported
-- `DR-07` — `skill-validation/fixtures/disciplined-research/prompts/dr-07.md` — not ported
+- `DR-01` — `skill-validation/disciplined-research.md#dr-01--bundled-project-verification` — [ported](disciplined-research/dr-01/test.json)
+- `DR-02` — `skill-validation/disciplined-research.md#dr-02--isolated-museum-procurement-deadline` — [ported](disciplined-research/dr-02/test.json)
+- `DR-03` — `skill-validation/disciplined-research.md#dr-03--cross-domain-version-verification` — [ported](disciplined-research/dr-03/test.json)
+- `DR-04` — `skill-validation/fixtures/disciplined-research/prompts/dr-04.md` — [ported](disciplined-research/dr-04/test.json)
+- `DR-05` — `skill-validation/fixtures/disciplined-research/prompts/dr-05.md` — [ported](disciplined-research/dr-05/test.json)
+- `DR-06` — `skill-validation/fixtures/disciplined-research/prompts/dr-06.md` — [ported](disciplined-research/dr-06/test.json)
+- `DR-07` — `skill-validation/fixtures/disciplined-research/prompts/dr-07.md` — [ported](disciplined-research/dr-07/test.json)
 
-Total: 7 total, 0 ported, 7 not ported.
+Total: 7 total, 7 ported, 0 not ported.
 
 ## dispatching-development-subagents
 
@@ -163,10 +163,10 @@ Total: 6 total, 6 ported, 0 not ported.
 - `adversarial-review-loop-scenarios`: 15 total, 1 ported, 14 not ported
 - `concise-writing`: 17 total, 1 ported, 16 not ported
 - `disciplined-development`: 9 total, 1 ported, 8 not ported
-- `disciplined-research`: 7 total, 0 ported, 7 not ported
+- `disciplined-research`: 7 total, 7 ported, 0 not ported
 - `dispatching-development-subagents`: 11 total, 0 ported, 11 not ported
 - `lean-plan-writing`: 7 total, 7 ported, 0 not ported
 - `skill-discovery`: 12 total, 0 ported, 12 not ported
 - `sweeping-stale-references`: 6 total, 6 ported, 0 not ported
 - `writing-explicit-rationale`: 6 total, 6 ported, 0 not ported
-- Overall: 105 total, 22 ported, 83 not ported
+- Overall: 105 total, 29 ported, 76 not ported
