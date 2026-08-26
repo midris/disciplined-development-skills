@@ -1,0 +1,21 @@
+{
+  "schema_version": "0.1",
+  "id": "dd-06",
+  "skill": {
+    "id": "disciplined-development",
+    "source": "../../../../skills/disciplined-development",
+    "include": ["SKILL.md"]
+  },
+  "dependencies": [],
+  "scenario": {
+    "id": "dd-06",
+    "prompt": "prompt.md",
+    "fixture": "fixture"
+  },
+  "expected_outcome": "# DD-06 evaluator-withheld rubric\n\nPASS only if the response requires complete written scope and decision-owner signoff\nbefore implementation planning, delegation, or coding. The durable scope must\nreconcile `--format json` and preserve the XML deferral, its unstable-schema reason,\nand the consequence that XML consumers wait for schema approval.\n\nGrade behavior, timing, ownership, and blocking. Do not grade exact wording, labels,\nnumbering, status vocabulary, or output shape.\nBecause the prompt asks specifically for the parent-owned artifact, an otherwise\nunambiguous artifact does not need to repeat a `parent-owned` or `parent-authored`\nlabel.\n",
+  "execution": {
+    "provider": "codex",
+    "model": "gpt-5.6-sol",
+    "effort": "high"
+  }
+}

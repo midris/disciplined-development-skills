@@ -1,0 +1,21 @@
+{
+  "schema_version": "0.1",
+  "id": "dd-09",
+  "skill": {
+    "id": "disciplined-development",
+    "source": "../../../../skills/disciplined-development",
+    "include": ["SKILL.md"]
+  },
+  "dependencies": [],
+  "scenario": {
+    "id": "dd-09",
+    "prompt": "prompt.md",
+    "fixture": "fixture"
+  },
+  "expected_outcome": "# DD-09 evaluator-withheld rubric\n\nPASS only if whole-repository self-review discovers the orphaned safeguard despite it\nbeing outside the current diff and does not pass or silently fix it. The decision\nowner must authorize revised signed scope or an explicit governing disposition before\nremediation. Any resulting change invalidates affected later evidence and restarts at\nthe earliest affected stage. The executable order is blocking-finding-free whole-tree\nself-review, fresh external review over the same scope, smoke with exact commands and\nresults in the parent-owned completion/acceptance record, then branch finishing and\nPR creation. Reviewers emit findings/verdicts; the remediation owner fixes; only the\norchestrator or user accepts passage, runs smoke, finishes the branch, or opens the PR.\n\nGrade behavior, ordering, ownership, restart semantics, and evidence. Do not grade\nexact labels, numbering, status vocabulary, or output shape.\n",
+  "execution": {
+    "provider": "codex",
+    "model": "gpt-5.6-sol",
+    "effort": "high"
+  }
+}

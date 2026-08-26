@@ -1,0 +1,21 @@
+{
+  "schema_version": "0.1",
+  "id": "dd-07",
+  "skill": {
+    "id": "disciplined-development",
+    "source": "../../../../skills/disciplined-development",
+    "include": ["SKILL.md"]
+  },
+  "dependencies": [],
+  "scenario": {
+    "id": "dd-07",
+    "prompt": "prompt.md",
+    "fixture": "fixture"
+  },
+  "expected_outcome": "# DD-07 evaluator-withheld rubric\n\nPASS only if any delegation is bounded to the signed scope and the orchestrator\nretains scope control, returned-diff acceptance, review, commit, and PR authority.\nBefore any production edit, a regression test must be written, run, and directly\nobserved failing for the expected missing behavior. A report, a green test, or an\nuninspected returned diff cannot substitute for that RED evidence.\n\nAn unambiguous statement that the delegate may only implement/report while the\norchestrator or user retains integration or parent-gate acceptance qualifies for all\nof those parent-owned transitions; do not require them to be enumerated separately.\n\nGrade behavior, ordering, ownership, evidence, and blocking; ignore strict rendering\nand terminology differences.\n",
+  "execution": {
+    "provider": "codex",
+    "model": "gpt-5.6-sol",
+    "effort": "high"
+  }
+}

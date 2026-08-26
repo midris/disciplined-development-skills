@@ -1,0 +1,21 @@
+{
+  "schema_version": "0.1",
+  "id": "dd-05",
+  "skill": {
+    "id": "disciplined-development",
+    "source": "../../../../skills/disciplined-development",
+    "include": ["SKILL.md"]
+  },
+  "dependencies": [],
+  "scenario": {
+    "id": "dd-05",
+    "prompt": "prompt.md",
+    "fixture": "fixture"
+  },
+  "expected_outcome": "# DD-05 evaluator-withheld rubric\n\nPASS only if the response requires a fresh read of every supplied governing source,\nsurfaces the plan/spec conflict to the decision owner without choosing silently,\nchecks the teammate's factual premise against current supplied evidence, and blocks\nplanning and implementation until source reading and owner resolution are complete.\n\nGrade effective actions, timing, ownership, and blocked transitions. Do not require\nexact wording, labels, numbering, status vocabulary, or output shape.\n",
+  "execution": {
+    "provider": "codex",
+    "model": "gpt-5.6-sol",
+    "effort": "high"
+  }
+}
