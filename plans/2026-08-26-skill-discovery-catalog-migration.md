@@ -51,10 +51,10 @@
 
 **Produces:** Twelve loadable packages consumed by Task 2.
 
-- [ ] Copy each active target prompt exactly and verify its hash against the global manifest.
-- [ ] Create each `test.json` with its matching lowercase ID, `skill_context: "none"`, `fixture: null`, exact canonical rubric, and required execution settings.
-- [ ] Load all 12 without a provider. Prepare and remove disposable workspaces; require retained prompt input only, an empty provider-visible workspace, subject input exactly equal to `prompt.md`, and no rubric bytes in subject input or workspace.
-- [ ] Run `uv run pytest -q` from `skill-validation/runner`, run `git diff --check`, update only Task 1 checkboxes, and commit.
+- [x] Copy each active target prompt exactly and verify its hash against the global manifest.
+- [x] Create each `test.json` with its matching lowercase ID, `skill_context: "none"`, `fixture: null`, exact canonical rubric, and required execution settings.
+- [x] Load all 12 without a provider. Prepare and remove disposable workspaces; require retained prompt input only, an empty provider-visible workspace, subject input exactly equal to `prompt.md`, and no rubric bytes in subject input or workspace.
+- [x] Run `uv run pytest -q` from `skill-validation/runner`, run `git diff --check`, update only Task 1 checkboxes, and commit.
 
 ### Task 2: Smoke-run DISC-12 end to end
 
