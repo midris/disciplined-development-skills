@@ -120,20 +120,20 @@ Total: 7 total, 7 ported, 0 not ported.
 
 ## skill-discovery
 
-- `DISC-01` — `skill-validation/skill-discovery.md#active-catalog-definitions` — not ported
-- `DISC-02` — `skill-validation/skill-discovery.md#active-catalog-definitions` — not ported
-- `DISC-03` — `skill-validation/skill-discovery.md#active-catalog-definitions` — not ported
-- `DISC-04` — `skill-validation/skill-discovery.md#active-catalog-definitions` — not ported
-- `DISC-05` — `skill-validation/skill-discovery.md#active-catalog-definitions` — not ported
-- `DISC-06` — `skill-validation/skill-discovery.md#active-catalog-definitions` — not ported
-- `DISC-07` — `skill-validation/skill-discovery.md#active-catalog-definitions` — not ported
-- `DISC-08` — `skill-validation/skill-discovery.md#active-catalog-definitions` — not ported
-- `DISC-09` — `skill-validation/skill-discovery.md#active-catalog-definitions` — not ported
-- `DISC-10` — `skill-validation/skill-discovery.md#active-catalog-definitions` — not ported
-- `DISC-11` — `skill-validation/skill-discovery.md#active-catalog-definitions` — not ported
-- `DISC-12` — `skill-validation/skill-discovery.md#active-catalog-definitions` — not ported
+- `DISC-01` — `skill-validation/skill-discovery.md#active-catalog-definitions` — [ported](skill-discovery/disc-01/test.json)
+- `DISC-02` — `skill-validation/skill-discovery.md#active-catalog-definitions` — [ported](skill-discovery/disc-02/test.json)
+- `DISC-03` — `skill-validation/skill-discovery.md#active-catalog-definitions` — [ported](skill-discovery/disc-03/test.json)
+- `DISC-04` — `skill-validation/skill-discovery.md#active-catalog-definitions` — [ported](skill-discovery/disc-04/test.json)
+- `DISC-05` — `skill-validation/skill-discovery.md#active-catalog-definitions` — [ported](skill-discovery/disc-05/test.json)
+- `DISC-06` — `skill-validation/skill-discovery.md#active-catalog-definitions` — [ported](skill-discovery/disc-06/test.json)
+- `DISC-07` — `skill-validation/skill-discovery.md#active-catalog-definitions` — [ported](skill-discovery/disc-07/test.json)
+- `DISC-08` — `skill-validation/skill-discovery.md#active-catalog-definitions` — [ported](skill-discovery/disc-08/test.json)
+- `DISC-09` — `skill-validation/skill-discovery.md#active-catalog-definitions` — [ported](skill-discovery/disc-09/test.json)
+- `DISC-10` — `skill-validation/skill-discovery.md#active-catalog-definitions` — [ported](skill-discovery/disc-10/test.json)
+- `DISC-11` — `skill-validation/skill-discovery.md#active-catalog-definitions` — [ported](skill-discovery/disc-11/test.json)
+- `DISC-12` — `skill-validation/skill-discovery.md#active-catalog-definitions` — [ported](skill-discovery/disc-12/test.json)
 
-Total: 12 total, 0 ported, 12 not ported.
+Total: 12 total, 12 ported, 0 not ported.
 
 ## sweeping-stale-references
 
@@ -166,7 +166,7 @@ Total: 6 total, 6 ported, 0 not ported.
 - `disciplined-research`: 7 total, 7 ported, 0 not ported
 - `dispatching-development-subagents`: 11 total, 0 ported, 11 not ported
 - `lean-plan-writing`: 7 total, 7 ported, 0 not ported
-- `skill-discovery`: 12 total, 0 ported, 12 not ported
+- `skill-discovery`: 12 total, 12 ported, 0 not ported
 - `sweeping-stale-references`: 6 total, 6 ported, 0 not ported
 - `writing-explicit-rationale`: 6 total, 6 ported, 0 not ported
-- Overall: 105 total, 51 ported, 54 not ported
+- Overall: 105 total, 63 ported, 42 not ported
