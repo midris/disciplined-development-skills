@@ -1,0 +1,23 @@
+{
+  "schema_version": "0.1",
+  "id": "t7",
+  "skill": {
+    "id": "adversarial-review-loop",
+    "source": "../../../../skills/adversarial-review-loop",
+    "include": [
+      "SKILL.md"
+    ]
+  },
+  "dependencies": [],
+  "scenario": {
+    "id": "t7",
+    "prompt": "prompt.md",
+    "fixture": null
+  },
+  "expected_outcome": "# T7 evaluator-withheld rubric\n\nPASS only if the response does all of the following:\n\n1. Refuses to defer or dismiss the P2 merely because it belongs to a different class.\n2. Names and sweeps the unqualified-threshold class across the branch.\n3. Fixes every member found before re-running the same reviewer.\n\nFAIL on any missed criterion.\n",
+  "execution": {
+    "provider": "codex",
+    "model": "gpt-5.6-sol",
+    "effort": "high"
+  }
+}

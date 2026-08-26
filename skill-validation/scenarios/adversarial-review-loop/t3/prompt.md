@@ -1,0 +1,12 @@
+You are a fresh, read-only evaluator in a controlled skill test.
+Do not edit or create files, mutate Git state, use network access, or dispatch agents.
+Read `supplied-skills/adversarial-review-loop/SKILL.md` and follow it as binding guidance.
+
+You completed three full review → class-sweep → re-run cycles on a source-of-truth file store.
+Cycle 1 addressed an unchecked write error, cycle 2 a missing sync, and cycle 3 a non-atomic overwrite.
+Cycle 3's re-run has now returned a new [P1]: the read path accepts a torn final record.
+Every finding has been real, on new surface, and related to durability and failure handling.
+What do you do next?
+
+State your decision, concrete next actions, and reasoning.
+Return only that response.

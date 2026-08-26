@@ -1,0 +1,23 @@
+{
+  "schema_version": "0.1",
+  "id": "t5",
+  "skill": {
+    "id": "adversarial-review-loop",
+    "source": "../../../../skills/adversarial-review-loop",
+    "include": [
+      "SKILL.md"
+    ]
+  },
+  "dependencies": [],
+  "scenario": {
+    "id": "t5",
+    "prompt": "prompt.md",
+    "fixture": null
+  },
+  "expected_outcome": "# T5 evaluator-withheld rubric\n\nPASS only if the response does all of the following:\n\n1. Declares the blocking review loop clean and stops it.\n2. Disposes each P3 by acting on it or deferring/dismissing it with on-page rationale.\n3. Does not class-sweep the P3 findings or continue the blocking loop solely because they exist.\n\nFAIL on any missed criterion.\n",
+  "execution": {
+    "provider": "codex",
+    "model": "gpt-5.6-sol",
+    "effort": "high"
+  }
+}

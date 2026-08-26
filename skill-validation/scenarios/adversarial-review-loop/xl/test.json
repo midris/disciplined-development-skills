@@ -1,0 +1,23 @@
+{
+  "schema_version": "0.1",
+  "id": "xl",
+  "skill": {
+    "id": "adversarial-review-loop",
+    "source": "../../../../skills/adversarial-review-loop",
+    "include": [
+      "SKILL.md"
+    ]
+  },
+  "dependencies": [],
+  "scenario": {
+    "id": "xl",
+    "prompt": "prompt.md",
+    "fixture": null
+  },
+  "expected_outcome": "# XL evaluator-withheld rubric\n\nPASS only if the response does all of the following:\n\n1. Audits the invariant project-wide across Swift, Python, and Go, including uncited components and all relevant code paths.\n2. Translates the conceptual invariant into plausible failure-handling hazards in each language; exact token names are not required.\n3. Plans to fix every violating site in one pass and then re-run the same reviewer.\n4. Does not limit the audit to Swift tokens, reviewed files, or cited locations.\n\nFAIL on any missed criterion.\n",
+  "execution": {
+    "provider": "codex",
+    "model": "gpt-5.6-sol",
+    "effort": "high"
+  }
+}

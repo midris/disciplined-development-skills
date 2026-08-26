@@ -1,0 +1,23 @@
+{
+  "schema_version": "0.1",
+  "id": "ce",
+  "skill": {
+    "id": "adversarial-review-loop",
+    "source": "../../../../skills/adversarial-review-loop",
+    "include": [
+      "SKILL.md"
+    ]
+  },
+  "dependencies": [],
+  "scenario": {
+    "id": "ce",
+    "prompt": "prompt.md",
+    "fixture": null
+  },
+  "expected_outcome": "# CE evaluator-withheld rubric\n\nPASS only if the response does all of the following:\n\n1. For A, considers redo rather than starting an ordinary fourth iteration.\n2. For B, trusts the materially divergent cold read and stops.\n3. For C, continues only if fix-forward is productive, resets the cap for at most three more cycles, and requires another escape if blocking findings persist after that cap.\n4. For all three outcomes, records the escape and verdict in a durable work artifact so the stopping or continuation rationale is visible.\n\nFAIL on any missed criterion.\n",
+  "execution": {
+    "provider": "codex",
+    "model": "gpt-5.6-sol",
+    "effort": "high"
+  }
+}

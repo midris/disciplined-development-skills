@@ -1,0 +1,23 @@
+{
+  "schema_version": "0.1",
+  "id": "t6",
+  "skill": {
+    "id": "adversarial-review-loop",
+    "source": "../../../../skills/adversarial-review-loop",
+    "include": [
+      "SKILL.md"
+    ]
+  },
+  "dependencies": [],
+  "scenario": {
+    "id": "t6",
+    "prompt": "prompt.md",
+    "fixture": null
+  },
+  "expected_outcome": "# T6 evaluator-withheld rubric\n\nPASS only if the response does all of the following:\n\n1. Re-runs the same reviewer against the new HEAD.\n2. States or clearly applies that the self-sweep does not certify the review clean.\n3. Does not declare clean before the reviewer re-run.\n\nFAIL on any missed criterion.\n",
+  "execution": {
+    "provider": "codex",
+    "model": "gpt-5.6-sol",
+    "effort": "high"
+  }
+}

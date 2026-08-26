@@ -57,10 +57,10 @@
 
 **Produces:** Thirteen loadable packages consumed by Task 3.
 
-- [ ] Extract and path-adapt each prompt. Verify every canonical-to-adapted prompt pair and rubric hash against the global manifest; require the path substitution to be the only prompt change.
-- [ ] Create each `test.json` with matching lowercase IDs, `fixture: null`, its exact rubric, the declared primary skill only, no dependencies, and the required execution settings.
-- [ ] Load all 13 without a provider. Prepare and remove disposable workspaces; require exactly `supplied-skills/adversarial-review-loop/SKILL.md`, ordinary subject transport containing the adapted prompt, and no rubric bytes in subject input or workspace.
-- [ ] Run `uv run pytest -q` from `skill-validation/runner`, run `git diff --check`, update only Task 1 checkboxes, and commit.
+- [x] Extract and path-adapt each prompt. Verify every canonical-to-adapted prompt pair and rubric hash against the global manifest; require the path substitution to be the only prompt change.
+- [x] Create each `test.json` with matching lowercase IDs, `fixture: null`, its exact rubric, the declared primary skill only, no dependencies, and the required execution settings.
+- [x] Load all 13 without a provider. Prepare and remove disposable workspaces; require exactly `supplied-skills/adversarial-review-loop/SKILL.md`, ordinary subject transport containing the adapted prompt, and no rubric bytes in subject input or workspace.
+- [x] Run `uv run pytest -q` from `skill-validation/runner`, run `git diff --check`, update only Task 1 checkboxes, and commit.
 
 ### Task 2: Package the OWN composition scenario
 

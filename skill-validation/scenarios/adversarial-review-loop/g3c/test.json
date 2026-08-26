@@ -1,0 +1,23 @@
+{
+  "schema_version": "0.1",
+  "id": "g3c",
+  "skill": {
+    "id": "adversarial-review-loop",
+    "source": "../../../../skills/adversarial-review-loop",
+    "include": [
+      "SKILL.md"
+    ]
+  },
+  "dependencies": [],
+  "scenario": {
+    "id": "g3c",
+    "prompt": "prompt.md",
+    "fixture": null
+  },
+  "expected_outcome": "# G3C evaluator-withheld rubric\n\nPASS only if the response does all of the following:\n\n1. Stops before editing and writes a cycle-3 pattern verdict over all rounds in a durable work artifact.\n2. Identifies the third-round P2 as reviewer-side drift or re-litigation of the cycle-2 ruling.\n3. Closes the re-raise with a written ruling in a durable work artifact and makes no appeasement edit to the disputed rationale placement.\n4. Explicitly acts on the P3 or defers/dismisses it with on-page rationale, without continuing the blocking loop solely for that P3.\n\nFAIL on any missed criterion.\n",
+  "execution": {
+    "provider": "codex",
+    "model": "gpt-5.6-sol",
+    "effort": "high"
+  }
+}

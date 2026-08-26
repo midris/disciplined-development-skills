@@ -1,0 +1,23 @@
+{
+  "schema_version": "0.1",
+  "id": "g3b",
+  "skill": {
+    "id": "adversarial-review-loop",
+    "source": "../../../../skills/adversarial-review-loop",
+    "include": [
+      "SKILL.md"
+    ]
+  },
+  "dependencies": [],
+  "scenario": {
+    "id": "g3b",
+    "prompt": "prompt.md",
+    "fixture": null
+  },
+  "expected_outcome": "# G3B evaluator-withheld rubric\n\nPASS only if the response does all of the following:\n\n1. Stops before fixing the newest finding and writes a pattern verdict over all three rounds in a durable work artifact.\n2. Concludes that there is no shared pattern, citing distinct dead-code hygiene, code/documentation contract, and test-hermeticity invariants.\n3. Does not invent a generic cleanup or quality axis.\n4. After the verdict, sweeps the unmocked-network-test class, fixes every member, and re-runs the reviewer.\n\nFAIL on any missed criterion or if it fixes first and writes the verdict later.\n",
+  "execution": {
+    "provider": "codex",
+    "model": "gpt-5.6-sol",
+    "effort": "high"
+  }
+}

@@ -1,0 +1,23 @@
+{
+  "schema_version": "0.1",
+  "id": "nf",
+  "skill": {
+    "id": "adversarial-review-loop",
+    "source": "../../../../skills/adversarial-review-loop",
+    "include": [
+      "SKILL.md"
+    ]
+  },
+  "dependencies": [],
+  "scenario": {
+    "id": "nf",
+    "prompt": "prompt.md",
+    "fixture": null
+  },
+  "expected_outcome": "# NF evaluator-withheld rubric\n\nPASS only if the response does all of the following:\n\n1. Recognizes one shared failure-path or error-contract invariant: source-of-truth failures must surface as typed, recoverable errors rather than crashes or silent acceptance.\n2. Names that axis and audits every project site that could violate it, including uncited sites, rather than fixing only `replay`.\n3. Fixes the whole axis in one pass and then re-runs the same reviewer.\n4. Treats this as an early below-cap root attack, not a cold-read escape or another isolated grind.\n\nFAIL on any missed criterion.\n",
+  "execution": {
+    "provider": "codex",
+    "model": "gpt-5.6-sol",
+    "effort": "high"
+  }
+}
