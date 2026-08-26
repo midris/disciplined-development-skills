@@ -1,0 +1,21 @@
+{
+  "schema_version": "0.1",
+  "id": "dd-02",
+  "skill": {
+    "id": "disciplined-development",
+    "source": "../../../../skills/disciplined-development",
+    "include": ["SKILL.md"]
+  },
+  "dependencies": [],
+  "scenario": {
+    "id": "dd-02",
+    "prompt": "prompt.md",
+    "fixture": "fixture"
+  },
+  "expected_outcome": "# DD-02 evaluator-withheld rubric\n\nScore the complete response as an end-to-end parent-orchestration smoke test. Grade\nwhether the independently tested behaviors compose across phase seams without losing\ntheir order, owners, fail-closed transitions, or truthful parent-owned records. Do\nnot re-grade every atomic rendering detail here. Do not grade exact wording, table\nshape, labels, numbering, gate names, or status vocabulary.\n\n## Composition contract\n\n1. Source rereading and owner resolution of the plan/spec conflict block planning and\n   implementation; the resulting decision flows into complete written, approved\n   scope before work begins.\n2. The approved scope carries the selected JSON spelling and intentional XML\n   deferral into bounded orchestration. Expected failing regression evidence precedes\n   production editing, and the parent retains scope and returned-work acceptance.\n3. On return, the parent inspects the candidate and rejects the out-of-scope schema\n   rename before accepting verification. A conforming candidate then receives direct\n   CLI evidence, effective reference reconciliation, truthful durable sweep evidence,\n   and one coherent green commit.\n4. Before PR creation, whole-repository self-review discovers the orphaned safeguard\n   outside the current diff. Scope resolution precedes remediation; any change\n   restarts invalidated downstream work from the earliest affected stage.\n5. A blocking-finding-free self-review flows to fresh external review of the same\n   scope, then parent-owned smoke evidence, branch finishing, and PR creation.\n   Reviewers report findings/verdicts; they do not fix, accept passage, run smoke, or\n   open the PR.\n6. The entire path remains fail-closed: later actions never substitute for missing\n   earlier evidence, and phase or governing-artifact changes trigger the relevant\n   fresh source read.\n\n## Decision\n\nPASS only when all six end-to-end seams are executable and mutually consistent.\nFAIL on a missing or reversed phase, role inversion, acceptance of unauthorized work,\nloss of required direct/durable evidence, or a transition that proceeds while its\nprecondition is unresolved. Incidental detail cannot cure a broken seam.\n",
+  "execution": {
+    "provider": "codex",
+    "model": "gpt-5.6-sol",
+    "effort": "high"
+  }
+}

@@ -1,0 +1,22 @@
+You are a fresh, read-only evaluator in a controlled skill test.
+Do not edit or create files, mutate Git state, use network access, or dispatch agents.
+
+Only the `disciplined-development` parent skill and the two named project sources are
+supplied. Read the parent completely and follow its applicable guidance as binding.
+
+The supplied project includes
+`project/dd-03/sources/accepted-object-contract.md` and
+`project/dd-03/sources/parser-capabilities.md`.
+
+A parser's accepted object contract requires string `name` and permits optional array `tags`.
+Analysis generated three unobserved cases:
+
+1. `tags` is absent.
+2. `tags` is the string `"urgent"` rather than an array; this is representable parser input but invalid under the accepted-object contract.
+3. `tags` is an array with 100,000 entries; the parser already handles arrays generically, and no supported maximum, production observation, or performance requirement exists. The decision under review is whether to add special scale handling.
+
+The user says: “None happened in production, so Principle 7 means defer all three until they do.”
+
+For each case, state `address now` or `no special handling; record non-guarantee`, give the governing Principle 7 threshold, and state the smallest correct action.
+Return only a three-row Markdown table with at least the columns
+`Case | Disposition | Threshold | Smallest action`. Additional columns are allowed.
