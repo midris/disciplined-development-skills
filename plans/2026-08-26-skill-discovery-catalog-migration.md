@@ -66,12 +66,20 @@
 
 **Produces:** One recorded real-provider smoke outcome consumed by Task 3.
 
-- [ ] Run the full runner suite and mechanically preflight all 12 configurations without a provider. Confirm prompt/rubric hashes, exact no-skill subject transport, empty workspaces, and rubric isolation.
-- [ ] Confirm the owner-facing transcript contains standing approval for catalog-migration smoke runs. Have the controller run `uv run skilltest run ../scenarios/skill-discovery/disc-12/test.json` from `skill-validation/runner` exactly once, with an escalation description naming the embedded-description `DISC-12` prompt, no fixture, no supplied skills or dependencies, and configured Codex provider. Do not delegate or run another skill-discovery scenario.
-- [ ] Validate `result.json` against `skill-validation/runner/result.schema.json`. Require `status: "COMPLETED"`, `infrastructure_error: null`, `invocation_started: true`, `timed_out: false`, provider exit `0`, required artifact records and on-disk paths, matching byte counts and hashes, and ordered invocation/return/configuration/completion log events.
-- [ ] Confirm retained inputs contain only the canonical prompt, the workspace contains no files, subject input equals the prompt bytes, and rubric bytes remain isolated. Do not inspect or compare semantic provider output.
-- [ ] Append a dated outcome with run ID, bundle path, mechanical result, relevant hashes, and runner/packaging/provider fallout. If incomplete, record it, commit only the plan outcome, and stop without rerunning or starting Task 3.
-- [ ] Run `git diff --check`, update only Task 2 state/outcome, and commit.
+- [x] Run the full runner suite and mechanically preflight all 12 configurations without a provider. Confirm prompt/rubric hashes, exact no-skill subject transport, empty workspaces, and rubric isolation.
+- [x] Confirm the owner-facing transcript contains standing approval for catalog-migration smoke runs. Have the controller run `uv run skilltest run ../scenarios/skill-discovery/disc-12/test.json` from `skill-validation/runner` exactly once, with an escalation description naming the embedded-description `DISC-12` prompt, no fixture, no supplied skills or dependencies, and configured Codex provider. Do not delegate or run another skill-discovery scenario.
+- [x] Validate `result.json` against `skill-validation/runner/result.schema.json`. Require `status: "COMPLETED"`, `infrastructure_error: null`, `invocation_started: true`, `timed_out: false`, provider exit `0`, required artifact records and on-disk paths, matching byte counts and hashes, and ordered invocation/return/configuration/completion log events.
+- [x] Confirm retained inputs contain only the canonical prompt, the workspace contains no files, subject input equals the prompt bytes, and rubric bytes remain isolated. Do not inspect or compare semantic provider output.
+- [x] Append a dated outcome with run ID, bundle path, mechanical result, relevant hashes, and runner/packaging/provider fallout. If incomplete, record it, commit only the plan outcome, and stop without rerunning or starting Task 3.
+- [x] Run `git diff --check`, update only Task 2 state/outcome, and commit.
+
+#### Task 2 outcome — 2026-08-26
+
+- The owner-facing controller used its standing approval to run the one allowed `DISC-12` command exactly once. The retained bundle is `/private/var/folders/55/6jqr25v5211fn00wych8b1jm0000gn/T/skilltest-runs/20260826T190023253Z-disc-12-88688da2-bfbd-42d7-862a-0989a4e0e258-un3qvoqa`; `result.json` authoritatively records run ID `20260826T190023253Z-disc-12-88688da2-bfbd-42d7-862a-0989a4e0e258-un3qvoqa`.
+- The result validates against `skill-validation/runner/result.schema.json` and is mechanically complete: `status: "COMPLETED"`, `infrastructure_error: null`, Codex `gpt-5.6-sol` at `high` effort, `invocation_started: true`, `timed_out: false`, and provider exit `0`. Its ordered runner events are allocation, workspace preparation, provider arguments, invocation attempt, provider return, stdout write, stderr write, configuration snapshot, and completion.
+- The retained input set has only `inputs/prompt.txt`, with 3,883 bytes and SHA-256 `5a3c869dcf3307459fb548effeb4d4d015188fbd3a358a9f2fe312a800484b1c`; `subject-input.txt` matches those bytes and hash exactly. `workspace/` is empty, `inputs/fixture/` is empty, and neither retained inputs nor workspace contains supplied skills. The 532-byte rubric hash is `a17e7937d27723947239247831e08f6064cfb4b7cb35159dc38bc3014c18c066`; its bytes remain isolated from provider-visible input.
+- Every artifact record matches its on-disk path, byte count, and SHA-256. The retained configuration matches the source configuration at 826 bytes, SHA-256 `a659db7e5e04fccc23cc6275f712e8a383d7bf94c6e6ac54dbbadbaf4e659fe5`; opaque stdout, stderr, and final artifacts were hash-verified without decoding, inspecting, or judging their content.
+- Fallout: the provider-free runner suite passed 44 tests and all 12 package preflights passed before this run. No runner, provider, skill, methodology, validation, inventory, roadmap, raw-output, or temporary-bundle file entered this change. No provider run was retried and no other skill-discovery scenario was invoked.
 
 ### Task 3: Reconcile and complete the catalog
 
