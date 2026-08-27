@@ -83,12 +83,19 @@
 
 **Produces:** One recorded real-provider smoke outcome consumed by Task 3.
 
-- [ ] Run the full runner suite and mechanically preflight all 11 configurations without a provider. Confirm declared files and hashes, exact ordinary subject transport, and rubric isolation.
-- [ ] Confirm the owner-facing transcript contains standing approval for catalog-migration smoke runs. Have the controller run `uv run skilltest run ../scenarios/dispatching-development-subagents/dsd-03/test.json` from `skill-validation/runner` exactly once, with an escalation description naming the read-only/no-network/no-agent `DSD-03` prompt, no fixture, supplied dispatch `SKILL.md`, and configured Codex provider. Do not delegate or run another DSD scenario.
-- [ ] Validate `result.json` against `skill-validation/runner/result.schema.json`. Require `status: "COMPLETED"`, `infrastructure_error: null`, `invocation_started: true`, `timed_out: false`, provider exit `0`, required artifact records and paths, matching byte counts and hashes, and ordered invocation/return/configuration/completion events.
-- [ ] Confirm retained inputs and workspace contain exactly the adapted prompt and supplied dispatch `SKILL.md`; confirm ordinary transport and rubric isolation. Do not inspect or compare semantic provider output.
-- [ ] Append a dated outcome with run ID, bundle path, mechanical result, relevant hashes, and runner/packaging/provider fallout. If incomplete, commit only the plan outcome and stop without rerunning or starting Task 3.
-- [ ] Run `git diff --check`, update only Task 2 state/outcome, and commit.
+- [x] Run the full runner suite and mechanically preflight all 11 configurations without a provider. Confirm declared files and hashes, exact ordinary subject transport, and rubric isolation.
+- [x] Confirm the owner-facing transcript contains standing approval for catalog-migration smoke runs. Have the controller run `uv run skilltest run ../scenarios/dispatching-development-subagents/dsd-03/test.json` from `skill-validation/runner` exactly once, with an escalation description naming the read-only/no-network/no-agent `DSD-03` prompt, no fixture, supplied dispatch `SKILL.md`, and configured Codex provider. Do not delegate or run another DSD scenario.
+- [x] Validate `result.json` against `skill-validation/runner/result.schema.json`. Require `status: "COMPLETED"`, `infrastructure_error: null`, `invocation_started: true`, `timed_out: false`, provider exit `0`, required artifact records and paths, matching byte counts and hashes, and ordered invocation/return/configuration/completion events.
+- [x] Confirm retained inputs and workspace contain exactly the adapted prompt and supplied dispatch `SKILL.md`; confirm ordinary transport and rubric isolation. Do not inspect or compare semantic provider output.
+- [x] Append a dated outcome with run ID, bundle path, mechanical result, relevant hashes, and runner/packaging/provider fallout. If incomplete, commit only the plan outcome and stop without rerunning or starting Task 3.
+- [x] Run `git diff --check`, update only Task 2 state/outcome, and commit.
+
+#### Task 2 outcome — 2026-08-27 UTC
+
+- One controller-only DSD-03 invocation completed with run ID `20260827T005540543Z-dsd-03-3ab7d1e9-56f7-45e0-bba5-e47ac804ba65-wbcolttt` and process exit `0`; retained bundle: `/private/var/folders/55/6jqr25v5211fn00wych8b1jm0000gn/T/skilltest-runs/20260827T005540543Z-dsd-03-3ab7d1e9-56f7-45e0-bba5-e47ac804ba65-wbcolttt`.
+- `result.json` validates against the runner schema and records `COMPLETED`, no infrastructure error, a started non-timed-out Codex invocation with provider exit `0`, matching artifact metadata, and ordered invocation, return, configuration, and completion events.
+- Retained inputs and workspace exactly preserve adapted prompt `e11b5cc4abe38a31f2c66d0c9364b849462a59b4796a4b67a3f85de4cad62dbc` and supplied dispatch `SKILL.md` `b89b4db8af53bd136237cb2306f956c039757a0e321b1f704bd16d1a00580500`; rubric `c7b3fbf6eb092f8919cd8ec1eaa278af7f736f4fa1522bbb8e56bc536aab6570` remains isolated.
+- No runner, provider, skill, package, methodology, raw-output, or temporary-workspace change entered the work; semantic provider output was not inspected or committed.
 
 ### Task 3: Reconcile and complete the catalog
 
