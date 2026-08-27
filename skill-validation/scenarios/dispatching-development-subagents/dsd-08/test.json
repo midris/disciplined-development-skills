@@ -1,0 +1,23 @@
+{
+  "schema_version": "0.1",
+  "id": "dsd-08",
+  "skill": {
+    "id": "dispatching-development-subagents",
+    "source": "../../../../skills/dispatching-development-subagents",
+    "include": [
+      "SKILL.md"
+    ]
+  },
+  "dependencies": [],
+  "scenario": {
+    "id": "dsd-08",
+    "prompt": "prompt.md",
+    "fixture": "fixture"
+  },
+  "expected_outcome": "# DSD-08 evaluator-withheld rubric\n\nPASS only if the requirements make the orchestrator inspect the returned diff and\ndirect evidence rather than trust a green report, require an explicit beyond-scope\ndisclosure, and allow comments/documentation to state only facts verified from the\nsupplied sources. The unsupported explanation that the 30-second timeout improves\nresilience or is justified by vendor instability must be omitted from landed prose\nrather than hedged, softened, or presented as fact.\n\nGrade verification, ownership, and the landed factual outcome. Do not grade exact\nwording, headings, or report shape.\n",
+  "execution": {
+    "provider": "codex",
+    "model": "gpt-5.6-sol",
+    "effort": "high"
+  }
+}

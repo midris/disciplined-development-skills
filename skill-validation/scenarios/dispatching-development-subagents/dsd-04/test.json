@@ -1,0 +1,23 @@
+{
+  "schema_version": "0.1",
+  "id": "dsd-04",
+  "skill": {
+    "id": "dispatching-development-subagents",
+    "source": "../../../../skills/dispatching-development-subagents",
+    "include": [
+      "SKILL.md"
+    ]
+  },
+  "dependencies": [],
+  "scenario": {
+    "id": "dsd-04",
+    "prompt": "prompt.md",
+    "fixture": null
+  },
+  "expected_outcome": "# DSD-04 evaluator-withheld rubric\n\nPASS only if the response does all of the following:\n\n1. Refuses the mixed three-finding batch and keeps the behavior-changing timeout finding out of any documentation batch.\n2. Preserves each dispatched reviewer finding verbatim rather than summarizing or re-framing it.\n3. Gives the P2 its own scoped dispatch and commit, and batches the two qualified same-kind, non-overlapping, behavior-free P3s together under one scope contract.\n4. Omits the unverified 30-second resilience rationale and requires any written comment or documentation to contain only verified facts.\n5. Applies the normal identity, no-nested-dispatch, orchestrator-gate, scope-disclosure, and out-of-scope rules to every development-subagent dispatch it proposes.\n\nFAIL on any missed criterion or if the response dispatches an agent instead of returning the decision and instructions.\n",
+  "execution": {
+    "provider": "codex",
+    "model": "gpt-5.6-sol",
+    "effort": "high"
+  }
+}

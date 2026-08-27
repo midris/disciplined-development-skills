@@ -68,10 +68,10 @@
 
 **Produces:** Eleven loadable packages consumed by Task 2.
 
-- [ ] Materialize each adapted prompt, exact rubric, and applicable fixture files; verify every hash against the global manifests.
-- [ ] Create each `test.json` with matching lowercase IDs, the exact configuration group above, its exact rubric, its declared fixture or `null`, and the required execution settings.
-- [ ] Load all 11 without a provider. Prepare and remove disposable workspaces; require exactly the declared fixture and supplied files, the runner's ordinary subject transport followed by the adapted prompt, and no rubric bytes in subject input or workspace.
-- [ ] Run `uv run pytest -q` from `skill-validation/runner`, run `git diff --check`, update only Task 1 checkboxes, and commit.
+- [x] Materialize each adapted prompt, exact rubric, and applicable fixture files; verify every hash against the global manifests.
+- [x] Create each `test.json` with matching lowercase IDs, the exact configuration group above, its exact rubric, its declared fixture or `null`, and the required execution settings.
+- [x] Load all 11 without a provider. Prepare and remove disposable workspaces; require exactly the declared fixture and supplied files, the runner's ordinary subject transport followed by the adapted prompt, and no rubric bytes in subject input or workspace.
+- [x] Run `uv run pytest -q` from `skill-validation/runner`, run `git diff --check`, update only Task 1 checkboxes, and commit.
 
 ### Task 2: Smoke-run DSD-03 end to end
 

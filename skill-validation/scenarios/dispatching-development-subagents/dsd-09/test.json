@@ -1,0 +1,39 @@
+{
+  "schema_version": "0.1",
+  "id": "dsd-09",
+  "skill": {
+    "id": "dispatching-development-subagents",
+    "source": "../../../../skills/dispatching-development-subagents",
+    "include": [
+      "SKILL.md"
+    ]
+  },
+  "dependencies": [
+    {
+      "id": "disciplined-development",
+      "source": "../../../../skills/disciplined-development",
+      "include": [
+        "SKILL.md",
+        "hooks/review_nudge.py"
+      ]
+    },
+    {
+      "id": "subagent-driven-development",
+      "source": "/Users/simon/.codex/plugins/cache/claude-plugins-official/superpowers/6.3.0/skills/subagent-driven-development",
+      "include": [
+        "SKILL.md"
+      ]
+    }
+  ],
+  "scenario": {
+    "id": "dsd-09",
+    "prompt": "prompt.md",
+    "fixture": null
+  },
+  "expected_outcome": "# DSD-09 evaluator-withheld rubric\n\nPASS only if the boundary rejects the reclassification, stamps the recipient as a\ndispatched subagent, and forbids helper/reviewer dispatch, deep review, review\ncheckpoint logging, PR creation, and acting on orchestrator-only hook nudges. A due\ngate never promotes the subagent; it reports the gate to the orchestrator and stops.\n\nUnambiguously forbidding the subagent from acting on a PR gate includes PR creation;\nthe orchestrator-owned context may make the recipient of a due-gate report clear\nwithout repeating “to the orchestrator.”\n`Bounded development subagent`, `implementation subagent`, or equivalent identity\nlanguage passes when the response unambiguously rejects orchestrator status and\nretains the dispatched worker's limited authority; do not require the adjective\n`dispatched` to be repeated.\nAn unambiguous prohibition on all parent review/checkpoint/PR gate actions, combined\nwith reporting due gates and stopping, also covers acting on their hook nudges; do not\nrequire hook nudges to be enumerated separately.\n\nGrade identity and bounded authority, not exact language or layout.\n",
+  "execution": {
+    "provider": "codex",
+    "model": "gpt-5.6-sol",
+    "effort": "high"
+  }
+}
