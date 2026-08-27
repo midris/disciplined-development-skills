@@ -8,7 +8,7 @@
 
 **Tech Stack:** Markdown, JSON schema `"0.1"`, Python 3.11+, pytest, `skilltest`.
 
-**Spec:** [catalog migration design](specs/2026-08-25-catalog-migration-design.md), [scenario porting roadmap](2026-08-24-scenario-porting-roadmap.md), and [core contracts](../skill-validation/charter/core-contracts.md).
+**Spec:** [catalog migration design](../specs/2026-08-25-catalog-migration-design.md), [scenario porting roadmap](../2026-08-24-scenario-porting-roadmap.md), and [core contracts](../../skill-validation/charter/core-contracts.md).
 
 ## Global Constraints
 
@@ -109,16 +109,16 @@
 
 **Produces:** Reconciled inventory, roadmap state, and archived plan.
 
-- [ ] Mark all 11 scenarios ported. Update `dispatching-development-subagents` to 11 total / 11 ported / 0 not ported and overall totals to 105 total / 74 ported / 31 not ported.
-- [ ] Confirm the full runner suite, 11-scenario preflight, and recorded `DSD-03` smoke are complete before changing inventory state.
-- [ ] Add a Phase 3 roadmap link to the completed plan without selecting the next catalog.
-- [ ] Move this plan to `plans/completed/`; repair its Spec links to `../specs/2026-08-25-catalog-migration-design.md`, `../2026-08-24-scenario-porting-roadmap.md`, and `../../skill-validation/charter/core-contracts.md`.
-- [ ] Run the canonical local Markdown-link checker, `git diff --check`, and `git status --short`. Confirm no runner, provider, skill, methodology, raw-output, temporary-workspace, or existing-scenario change entered the work.
-- [ ] Confirm every checkbox is complete, then commit only inventory, roadmap, and archived-plan bookkeeping.
+- [x] Mark all 11 scenarios ported. Update `dispatching-development-subagents` to 11 total / 11 ported / 0 not ported and overall totals to 105 total / 74 ported / 31 not ported.
+- [x] Confirm the full runner suite, 11-scenario preflight, and recorded `DSD-03` smoke are complete before changing inventory state.
+- [x] Add a Phase 3 roadmap link to the completed plan without selecting the next catalog.
+- [x] Move this plan to `plans/completed/`; repair its Spec links to `../specs/2026-08-25-catalog-migration-design.md`, `../2026-08-24-scenario-porting-roadmap.md`, and `../../skill-validation/charter/core-contracts.md`.
+- [x] Run the canonical local Markdown-link checker, `git diff --check`, and `git status --short`. Confirm no runner, provider, skill, methodology, raw-output, temporary-workspace, or existing-scenario change entered the work.
+- [x] Confirm every checkbox is complete, then commit only inventory, roadmap, and archived-plan bookkeeping.
 
 ## Done When
 
-- [ ] All 11 active DSD scenarios have loadable schema `"0.1"` configurations with their declared context.
-- [ ] Every package preserves canonical scenario-owned inputs with only the approved path substitutions.
-- [ ] Exactly one `DSD-03` provider smoke completed; no other DSD scenario ran and no runner or skill code changed.
-- [ ] Inventory, roadmap, and archived plan agree.
+- [x] All 11 active DSD scenarios have loadable schema `"0.1"` configurations with their declared context.
+- [x] Every package preserves canonical scenario-owned inputs with only the approved path substitutions.
+- [x] Exactly one `DSD-03` provider smoke completed; no other DSD scenario ran and no runner or skill code changed.
+- [x] Inventory, roadmap, and archived plan agree.

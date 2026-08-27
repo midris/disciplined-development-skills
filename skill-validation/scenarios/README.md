@@ -92,19 +92,19 @@ Total: 7 total, 7 ported, 0 not ported.
 
 ## dispatching-development-subagents
 
-- `DSD-01` — `skill-validation/fixtures/dispatching-development-subagents/prompts/dsd-01.md` — not ported
-- `DSD-02` — `skill-validation/fixtures/dispatching-development-subagents/prompts/dsd-02.md` — not ported
-- `DSD-03` — `skill-validation/fixtures/dispatching-development-subagents/prompts/dsd-03.md` — not ported
-- `DSD-04` — `skill-validation/fixtures/dispatching-development-subagents/prompts/dsd-04.md` — not ported
-- `DSD-05` — `skill-validation/fixtures/dispatching-development-subagents/prompts/dsd-05.md` — not ported
-- `DSD-06` — `skill-validation/fixtures/dispatching-development-subagents/prompts/dsd-06.md` — not ported
-- `DSD-07` — `skill-validation/fixtures/dispatching-development-subagents/prompts/dsd-07.md` — not ported
-- `DSD-08` — `skill-validation/fixtures/dispatching-development-subagents/prompts/dsd-08.md` — not ported
-- `DSD-09` — `skill-validation/fixtures/dispatching-development-subagents/prompts/dsd-09.md` — not ported
-- `DSD-10` — `skill-validation/fixtures/dispatching-development-subagents/prompts/dsd-10.md` — not ported
-- `DSD-11` — `skill-validation/fixtures/dispatching-development-subagents/prompts/dsd-11.md` — not ported
+- `DSD-01` — `skill-validation/fixtures/dispatching-development-subagents/prompts/dsd-01.md` — [ported](dispatching-development-subagents/dsd-01/test.json)
+- `DSD-02` — `skill-validation/fixtures/dispatching-development-subagents/prompts/dsd-02.md` — [ported](dispatching-development-subagents/dsd-02/test.json)
+- `DSD-03` — `skill-validation/fixtures/dispatching-development-subagents/prompts/dsd-03.md` — [ported](dispatching-development-subagents/dsd-03/test.json)
+- `DSD-04` — `skill-validation/fixtures/dispatching-development-subagents/prompts/dsd-04.md` — [ported](dispatching-development-subagents/dsd-04/test.json)
+- `DSD-05` — `skill-validation/fixtures/dispatching-development-subagents/prompts/dsd-05.md` — [ported](dispatching-development-subagents/dsd-05/test.json)
+- `DSD-06` — `skill-validation/fixtures/dispatching-development-subagents/prompts/dsd-06.md` — [ported](dispatching-development-subagents/dsd-06/test.json)
+- `DSD-07` — `skill-validation/fixtures/dispatching-development-subagents/prompts/dsd-07.md` — [ported](dispatching-development-subagents/dsd-07/test.json)
+- `DSD-08` — `skill-validation/fixtures/dispatching-development-subagents/prompts/dsd-08.md` — [ported](dispatching-development-subagents/dsd-08/test.json)
+- `DSD-09` — `skill-validation/fixtures/dispatching-development-subagents/prompts/dsd-09.md` — [ported](dispatching-development-subagents/dsd-09/test.json)
+- `DSD-10` — `skill-validation/fixtures/dispatching-development-subagents/prompts/dsd-10.md` — [ported](dispatching-development-subagents/dsd-10/test.json)
+- `DSD-11` — `skill-validation/fixtures/dispatching-development-subagents/prompts/dsd-11.md` — [ported](dispatching-development-subagents/dsd-11/test.json)
 
-Total: 11 total, 0 ported, 11 not ported.
+Total: 11 total, 11 ported, 0 not ported.
 
 ## lean-plan-writing
 
@@ -164,9 +164,9 @@ Total: 6 total, 6 ported, 0 not ported.
 - `concise-writing`: 17 total, 1 ported, 16 not ported
 - `disciplined-development`: 9 total, 9 ported, 0 not ported
 - `disciplined-research`: 7 total, 7 ported, 0 not ported
-- `dispatching-development-subagents`: 11 total, 0 ported, 11 not ported
+- `dispatching-development-subagents`: 11 total, 11 ported, 0 not ported
 - `lean-plan-writing`: 7 total, 7 ported, 0 not ported
 - `skill-discovery`: 12 total, 12 ported, 0 not ported
 - `sweeping-stale-references`: 6 total, 6 ported, 0 not ported
 - `writing-explicit-rationale`: 6 total, 6 ported, 0 not ported
-- Overall: 105 total, 63 ported, 42 not ported
+- Overall: 105 total, 74 ported, 31 not ported

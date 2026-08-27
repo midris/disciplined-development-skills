@@ -40,6 +40,7 @@
 - Complete: [disciplined-development catalog migration](completed/2026-08-26-disciplined-development-catalog-migration.md).
 - Complete: [adversarial-review-loop catalog migration](completed/2026-08-26-adversarial-review-loop-catalog-migration.md).
 - Complete: [skill-discovery catalog migration](completed/2026-08-26-skill-discovery-catalog-migration.md).
+- Complete: [dispatching-development-subagents catalog migration](completed/2026-08-26-dispatching-development-subagents-catalog-migration.md).
 
 ### 4. Readiness review
 
