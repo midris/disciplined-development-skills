@@ -23,7 +23,7 @@ The JSON configuration contains exactly:
 
 | Field | Meaning |
 |---|---|
-| `schema_version` | Exact string `"0.1"`. |
+| `schema_version` | Exact string `"0.2"`. |
 | `id` | Path-safe test identifier. |
 | `prompt` | Path to one UTF-8 prompt template. |
 | `fixtures` | Ordered list of files to copy into the run fixture directory. May be empty. |
@@ -53,6 +53,35 @@ The following existing fields are removed:
 Skills, supporting skills, permissions, task instructions, and behavioral
 expectations belong in tester-authored prompts and fixtures. The runner neither
 injects nor validates them.
+
+The complete configuration shape is:
+
+```json
+{
+  "schema_version": "0.2",
+  "id": "runner-smoke",
+  "prompt": "prompt.md",
+  "fixtures": [
+    {
+      "source": "fixture/input.txt",
+      "target": "input.txt"
+    }
+  ],
+  "execution": {
+    "provider": "claude",
+    "model": "sonnet",
+    "effort": "low"
+  }
+}
+```
+
+No other root, fixture-entry, or execution fields are accepted. `id` retains
+the current path-safe identifier rules. `prompt` and each fixture `source` are
+configuration-relative paths to regular files. `target` is a non-empty relative
+path without `.` or `..` components. `fixtures` may be empty, but duplicate
+targets are invalid. `provider` is exactly `codex` or `claude`; `model` is a
+non-empty string; `effort` retains its current path-safe string syntax and is
+passed through without semantic validation.
 
 ## Runtime layout
 
@@ -99,12 +128,23 @@ passed through unchanged.
 The original template is retained as `prompt-template.txt`; the rendered prompt
 sent to the provider is retained as `prompt.txt`.
 
+For example, this template:
+
+```text
+Read {{fixture_dir}}/input.txt.
+Write any requested file beneath {{evidence_dir}}.
+Your working directory is {{workspace_dir}}.
+```
+
+is rendered by replacing each named token with the absolute directory allocated
+for that invocation. Repeated tokens are all replaced.
+
 ## Evidence
 
 The runner continues to retain stdout, stderr, the provider's final response,
 the runner log, the configuration snapshot, and the rendered prompt. It also
 adds a mechanical inventory of entries present beneath `workspace/evidence/`
-when the provider finishes. Every entry records its relative path and filesystem
+during run finalization. Every entry records its relative path and filesystem
 type. Regular files additionally record byte count and digest using the same
 artifact conventions as other retained files. The inventory does not follow
 symlinks.
@@ -141,10 +181,14 @@ CLI or sandbox enforcement.
 
 ### Claude
 
-Retain noninteractive print execution, no session persistence, structured
-output capture, model selection, effort selection, and normal Claude Code
-permission safeguards. Remove safe mode, Chrome suppression, and permission
-bypass options.
+Retain noninteractive print execution, no session persistence, raw output
+capture, model selection, effort selection, and normal Claude Code permission
+safeguards. Remove safe mode, Chrome suppression, structured-output options,
+verbosity options, and permission-bypass options. Claude's ordinary print-mode
+stdout is retained as both `stdout.txt` and, after a zero exit, `final.txt`.
+Codex continues to write `final.txt` through its last-message output option.
+`final.txt` is absent when the selected provider does not complete a final
+response.
 
 Launch Claude by adding this fixed environment to the inherited process
 environment, matching the owner's current local test baseline and preserving
@@ -177,26 +221,183 @@ Do not add semantic prompt checks, required template-token checks, skill checks,
 dependency checks, evidence expectations, provider capability checks, result
 judgment, retries, or compatibility abstractions.
 
-Existing exit-code and infrastructure-error behavior remains unless a removed
-field makes a record entry obsolete.
+Exit `0` means the run completed mechanically. Exit `1` means an owned-run,
+provider, timeout, or artifact-persistence failure. Exit `2` means usage or
+configuration failure before a run directory is owned. The infrastructure error
+codes remain exactly `PREPARATION_FAILED`, `PROVIDER_LAUNCH_FAILED`,
+`PROVIDER_TIMEOUT`, `PROVIDER_EXIT_NONZERO`, and `ARTIFACT_WRITE_FAILED`.
 
 ## Migration and verification
 
-Implementation updates the runner tests and documentation, then converts every
-checked-in scenario configuration and prompt to the new contract. Skill and
-dependency instructions previously assembled by the runner must become explicit
-prompt text, using fixture paths where needed.
+Implementation updates the runner tests and documentation, performs the catalog
+migration reset defined below, and does not migrate a behavioral catalog. Fresh
+catalog migration begins only after the redesigned runner is accepted. The
+configuration, prompt-rendering, and result examples in this specification are
+copied into the updated runner documentation after implementation is verified.
 
 Verification consists of:
 
 1. the runner unit and acceptance suite;
-2. a configuration-shape check across all checked-in scenarios;
-3. one approved end-to-end Codex invocation;
-4. one approved end-to-end Claude invocation using the fixed local baseline;
-5. mechanical inspection that each run produced the required stable artifacts
+2. a configuration-shape check for both retained provider smoke definitions;
+3. one approved end-to-end Codex smoke invocation;
+4. one approved end-to-end Claude smoke invocation using the fixed local baseline;
+5. mechanical inspection that each smoke produced the required stable artifacts
    and a valid evidence inventory.
 
 The smoke runs do not judge whether the model answered correctly.
+
+## Result contract
+
+The incompatible runner redesign replaces the existing numeric result schema
+version `1` with the string version `"0.2"`. A result contains exactly these
+top-level fields:
+
+| Field | Type |
+|---|---|
+| `schema_version` | Exact string `"0.2"`. |
+| `run_id` | String allocated by the runner. |
+| `status` | `COMPLETED` or `INFRA_ERROR`. |
+| `started_at` | UTC timestamp string. |
+| `finished_at` | UTC timestamp string. |
+| `duration_seconds` | Non-negative number. |
+| `test` | Object containing exactly `id`. |
+| `execution` | Mechanical provider invocation record. |
+| `artifacts` | Fixed artifact records described below. |
+| `infrastructure_error` | `null` or the existing exact `code` and `message` object. |
+
+`execution` contains exactly `provider`, `model`, `effort`, `executable`,
+`timeout_seconds`, `invocation_started`, `timed_out`, and `exit_code`, retaining
+their current meanings and types.
+
+`artifacts` contains exactly:
+
+| Field | Stable path | Record type |
+|---|---|---|
+| `config` | `config.json` | File artifact. |
+| `prompt_template` | `prompt-template.txt` | File artifact. |
+| `prompt` | `prompt.txt` | File artifact. |
+| `stdout` | `stdout.txt` | File artifact. |
+| `stderr` | `stderr.txt` | File artifact. |
+| `final` | `final.txt` | File artifact. |
+| `fixture` | `workspace/fixture` | Directory artifact. |
+| `evidence` | `workspace/evidence` | Directory artifact. |
+
+A file artifact contains exactly `path`, `exists`, `bytes`, and `sha256`.
+`bytes` and `sha256` are non-null only when `exists` is true.
+
+A directory artifact contains exactly `path`, `exists`, `empty`, and `entries`.
+When the directory exists, `empty` is a Boolean and `entries` is its
+lexicographically path-sorted recursive inventory. When it does not exist,
+`empty` is `null` and `entries` is empty.
+
+Each directory entry contains exactly `path`, `type`, `bytes`, and `sha256`.
+`path` is relative to its directory artifact. `type` is exactly `file`,
+`directory`, `symlink`, or `other`. Regular files have non-null `bytes` and
+`sha256`; every other type has `null` for both. Inventory does not follow
+symlinks. The fixture inventory describes the freshly copied fixture before
+provider invocation; the evidence inventory describes evidence at finalization,
+including after provider timeout or nonzero exit.
+
+An abbreviated completed result is:
+
+```json
+{
+  "schema_version": "0.2",
+  "run_id": "20260827T120000000Z-runner-smoke-<unique>",
+  "status": "COMPLETED",
+  "started_at": "2026-08-27T12:00:00.000Z",
+  "finished_at": "2026-08-27T12:00:04.000Z",
+  "duration_seconds": 4.0,
+  "test": {"id": "runner-smoke"},
+  "execution": {
+    "provider": "claude",
+    "model": "sonnet",
+    "effort": "low",
+    "executable": "claude",
+    "timeout_seconds": 900,
+    "invocation_started": true,
+    "timed_out": false,
+    "exit_code": 0
+  },
+  "artifacts": {
+    "config": {"path": "config.json", "exists": true, "bytes": 250, "sha256": "<64 lowercase hex characters>"},
+    "prompt_template": {"path": "prompt-template.txt", "exists": true, "bytes": 150, "sha256": "<64 lowercase hex characters>"},
+    "prompt": {"path": "prompt.txt", "exists": true, "bytes": 300, "sha256": "<64 lowercase hex characters>"},
+    "stdout": {"path": "stdout.txt", "exists": true, "bytes": 40, "sha256": "<64 lowercase hex characters>"},
+    "stderr": {"path": "stderr.txt", "exists": true, "bytes": 0, "sha256": "<64 lowercase hex characters>"},
+    "final": {"path": "final.txt", "exists": true, "bytes": 40, "sha256": "<64 lowercase hex characters>"},
+    "fixture": {
+      "path": "workspace/fixture",
+      "exists": true,
+      "empty": false,
+      "entries": [{"path": "input.txt", "type": "file", "bytes": 12, "sha256": "<64 lowercase hex characters>"}]
+    },
+    "evidence": {
+      "path": "workspace/evidence",
+      "exists": true,
+      "empty": false,
+      "entries": [{"path": "smoke-output.txt", "type": "file", "bytes": 20, "sha256": "<64 lowercase hex characters>"}]
+    }
+  },
+  "infrastructure_error": null
+}
+```
+
+The angle-bracket digest values illustrate the required shape and are not
+literal valid results. The implementation's JSON Schema encodes these exact
+objects, required fields, closed property sets, conditional nullability, and
+status/error relationship.
+
+## Catalog migration reset
+
+The existing packaged scenarios were produced for the retired skill-aware
+contract and will not be converted in place. Implementation performs this exact
+reset:
+
+- remove every existing migrated test package beneath
+  `skill-validation/scenarios/`;
+- rewrite `skill-validation/scenarios/README.md` as an empty active migration
+  inventory against schema `"0.2"`;
+- delete the active draft
+  `plans/2026-08-26-adversarial-review-catalog-migration.md`;
+- reset Phase 3 of `plans/2026-08-24-scenario-porting-roadmap.md` to zero
+  migrated catalogs and remove its completed-wave links;
+- retain the completed migration plans in `plans/completed/` as historical
+  records;
+- retain unrelated deferred plans, including the Codex-versus-Claude review
+  catalog.
+
+After the runner redesign is accepted, Phase 3 restarts from its first catalog.
+Each catalog receives a fresh migration plan against schema `"0.2"`, explicit
+tester-authored skill instructions, individual fixture files, and its own
+end-to-end mechanical smoke run.
+
+## Controlled provider acceptance smoke
+
+Runner acceptance includes one retained Codex smoke definition and one retained
+Claude smoke definition using the same controlled prompt and fixture. Each
+configuration selects its provider normally; neither uses catalog content or
+asserts skill behavior.
+
+The fixture contains one small text file. The prompt uses all three runtime
+tokens, directs the provider to read the fixture, write one named regular file
+beneath the evidence directory, and return a final response. Acceptance checks
+only runner mechanics:
+
+1. schema `"0.2"` loads;
+2. a unique run directory and fixed workspace directories exist;
+3. the fixture file was copied byte-for-byte to its declared target;
+4. all three prompt tokens were replaced with the current run's absolute paths;
+5. the configured provider was invoked once in the workspace directory;
+6. stdout, stderr, and final-response artifacts were written at their stable
+   paths;
+7. the evidence directory is non-empty and its generated file appears in the
+   result inventory; and
+8. `result.json` validates against the result schema.
+
+The acceptance test does not compare response wording, inspect generated-file
+contents for correctness, apply a rubric, or assign a behavioral verdict. Live
+provider execution remains an explicitly approved test action.
 
 ## Non-goals
 
