@@ -38,7 +38,7 @@
 - Produces: `FixtureDeclaration(source: Path, target: Path)`, unchanged `ExecutionDeclaration`, and `TestConfig(schema_version, id, prompt, fixtures, execution, config_path, config_bytes)`.
 - Produces: `load_config(path: Path) -> TestConfig` with the exact schema `"0.2"` contract.
 
-- [ ] **Step 1: Rewrite configuration tests for the accepted shape**
+- [x] **Step 1: Rewrite configuration tests for the accepted shape**
 
 Cover one valid empty-fixture configuration, one valid multi-file configuration with `..` sources, strict JSON rejection, exact keys, UTF-8 prompt loading, final-entry symlink rejection, canonical targets, target conflicts, and execution scalars. Write invalid UTF-8 bytes to the prompt file and assert `load_config()` raises `ConfigError` before any run allocation. Use direct cases such as:
 
@@ -57,7 +57,7 @@ value = {
 
 Parameterize invalid targets with `"/a"`, `"a/"`, `"a//b"`, `"a\\b"`, `"."`, `".."`, `"a/./b"`, and `"a/../b"`. Test conflicts `("a", "a")`, `("a", "a/b")`, and `("a/b", "a")`. Retain explicit duplicate-key and non-finite JSON tests.
 
-- [ ] **Step 2: Run the configuration tests and verify they fail against schema `"0.1"`**
+- [x] **Step 2: Run the configuration tests and verify they fail against schema `"0.1"`**
 
 Run:
 
@@ -68,7 +68,7 @@ uv run pytest -q tests/test_config.py
 
 Expected: failures reference missing schema `"0.2"` fields or retained skill/scenario fields.
 
-- [ ] **Step 3: Implement the minimal configuration dataclasses and loader**
+- [x] **Step 3: Implement the minimal configuration dataclasses and loader**
 
 Remove `SkillDeclaration`, `ScenarioDeclaration`, skill/dependency parsing, directory-tree checks, reserved-directory checks, and overlap policy. Add only:
 
@@ -91,7 +91,7 @@ class TestConfig:
 
 Parse targets by splitting the JSON string on `/`, reject the exact invalid forms from the spec, construct `Path(*parts)`, and compare component tuples for equality or prefix conflicts. Reject absolute prompt/source strings and allow `..`. For each prompt/source candidate, use `lstat()` on the final entry before `resolve()`: reject a final symlink or non-regular entry, while allowing normal resolution through symlinked ancestors. Call `_read_utf8(prompt, "prompt")` inside `load_config()` before returning so invalid prompt bytes are configuration failure, not preparation failure. Preserve `_parse_config`, `_unique_object`, `_reject_nonfinite`, `_identifier`, `_execution`, `_read_utf8`, and `_exact_keys` only as needed by schema `"0.2"`.
 
-- [ ] **Step 4: Replace the shared test builder with schema `"0.2"` fixtures**
+- [x] **Step 4: Replace the shared test builder with schema `"0.2"` fixtures**
 
 Make `build_config_case` write `prompt.md`, optional individual source files, and:
 
@@ -107,7 +107,7 @@ Make `build_config_case` write `prompt.md`, optional individual source files, an
 
 Remove expected-outcome, skill, dependency, and no-skill-context helpers.
 
-- [ ] **Step 5: Run focused tests and commit**
+- [x] **Step 5: Run focused tests and commit**
 
 ```bash
 cd "$(git rev-parse --show-toplevel)/skill-validation/runner"
@@ -132,7 +132,7 @@ Expected: configuration tests pass; no production code references skill declarat
 - Produces: `RunContext` paths for `prompt-template.txt`, `prompt.txt`, `workspace/fixture`, `workspace/evidence`, and existing runner-owned outputs.
 - Produces: `PreparedRun(workspace_dir: Path, prompt_bytes: bytes, final_output_path: Path)`.
 
-- [ ] **Step 1: Write failing layout, rendering, copying, and isolation tests**
+- [x] **Step 1: Write failing layout, rendering, copying, and isolation tests**
 
 Assert the exact prepared tree:
 
@@ -155,14 +155,14 @@ with ThreadPoolExecutor(max_workers=2) as pool:
 assert first.run_dir != second.run_dir
 ```
 
-- [ ] **Step 2: Run workspace tests and verify the old layout fails**
+- [x] **Step 2: Run workspace tests and verify the old layout fails**
 
 ```bash
 cd "$(git rev-parse --show-toplevel)/skill-validation/runner"
 uv run pytest -q tests/test_workspace.py
 ```
 
-- [ ] **Step 3: Implement the exact runtime paths and literal renderer**
+- [x] **Step 3: Implement the exact runtime paths and literal renderer**
 
 Remove retained input/skill paths and `_subject_input_bytes`. Create fixture and evidence directories before copying files. Retain the original template, render only:
 
@@ -178,7 +178,7 @@ for token, path in (
 
 Write rendered UTF-8 bytes to `prompt.txt` and return those exact bytes for provider stdin.
 
-- [ ] **Step 4: Run focused tests and commit**
+- [x] **Step 4: Run focused tests and commit**
 
 ```bash
 cd "$(git rev-parse --show-toplevel)/skill-validation/runner"
@@ -202,7 +202,7 @@ git commit -m "refactor(validation): prepare isolated prompt workspaces"
 - Preserves: `invoke_provider(request: ProviderRequest) -> ProviderResult` and timeout behavior.
 - Produces: Claude launch environment equal to the inherited environment plus the eight fixed baseline variables.
 
-- [ ] **Step 1: Write failing exact-argument and environment tests**
+- [x] **Step 1: Write failing exact-argument and environment tests**
 
 Assert Codex arguments are exactly:
 
@@ -227,14 +227,14 @@ Assert Claude arguments are exactly:
 
 Have the fake provider record the eight approved Claude variables and one unrelated inherited marker. Assert all nine are present for Claude and the inherited marker remains present for Codex. Retain launch-failure, timeout, nonzero, and raw stdout/stderr tests.
 
-- [ ] **Step 2: Run provider tests and verify old flags fail**
+- [x] **Step 2: Run provider tests and verify old flags fail**
 
 ```bash
 cd "$(git rev-parse --show-toplevel)/skill-validation/runner"
 uv run pytest -q tests/test_providers.py
 ```
 
-- [ ] **Step 3: Implement only the accepted argument and environment changes**
+- [x] **Step 3: Implement only the accepted argument and environment changes**
 
 Add one constant mapping:
 
@@ -256,7 +256,7 @@ the fixed non-bypass `--permission-mode acceptEdits` argument; for Codex,
 preserve the inherited environment. Do not add provider configuration or output
 parsing.
 
-- [ ] **Step 4: Run focused tests and commit**
+- [x] **Step 4: Run focused tests and commit**
 
 ```bash
 cd "$(git rev-parse --show-toplevel)/skill-validation/runner"
@@ -280,7 +280,7 @@ git commit -m "refactor(validation): simplify provider launch defaults"
 - Produces: `_directory_artifact(path: Path, run_dir: Path) -> dict[str, Any]` and lexicographically sorted, non-following entry inventory.
 - Preserves: atomic `publish_result` and streaming `_sha256`.
 
-- [ ] **Step 1: Write failing result-shape and inventory tests**
+- [x] **Step 1: Write failing result-shape and inventory tests**
 
 Construct completed and each infrastructure-error record directly. Validate them against `result.schema.json`; mutate every execution-state row into an invalid combination and require `jsonschema.ValidationError`.
 
@@ -305,14 +305,14 @@ Separately mutate a Codex record to `execution.executable: "claude"`. For every 
 
 Create an evidence tree containing a regular file, empty directory, and symlink. Assert entries have exactly `path`, `type`, `bytes`, and `sha256`; only regular files have non-null metadata; symlinks are not followed. Validate one manually constructed `type: "other"` entry against the JSON Schema without creating a device or socket. Assert fixture inventory reflects final retained state after a test mutation.
 
-- [ ] **Step 2: Run result tests and verify schema `1` fails**
+- [x] **Step 2: Run result tests and verify schema `1` fails**
 
 ```bash
 cd "$(git rev-parse --show-toplevel)/skill-validation/runner"
 uv run pytest -q tests/test_results.py
 ```
 
-- [ ] **Step 3: Implement schema `"0.2"` and mechanical directory inventory**
+- [x] **Step 3: Implement schema `"0.2"` and mechanical directory inventory**
 
 Build exactly:
 
@@ -342,7 +342,7 @@ Build exactly:
 
 Encode the six valid state rows and every closed object directly in the JSON Schema. Do not retain `inputs`, skill metadata, scenario metadata, or the generic workspace artifact.
 
-- [ ] **Step 4: Run focused tests and commit**
+- [x] **Step 4: Run focused tests and commit**
 
 ```bash
 cd "$(git rev-parse --show-toplevel)/skill-validation/runner"
@@ -366,24 +366,24 @@ git commit -m "refactor(validation): publish result schema 0.2"
 - Consumes: `PreparedRun.prompt_bytes`, schema `"0.2"` result construction, and unchanged `ProviderResult`.
 - Preserves: `run_once(config_path: Path) -> RunOutcome` and CLI exit behavior.
 
-- [ ] **Step 1: Write failing end-to-end fake-provider tests**
+- [x] **Step 1: Write failing end-to-end fake-provider tests**
 
 For both providers, assert one invocation receives the rendered prompt with the workspace as CWD; fixture and evidence directories are isolated; config/template/prompt/stdout/stderr/final/result occupy exact stable paths; Claude zero-exit stdout is copied byte-for-byte to `final.txt`; Codex uses its CLI-written final file.
 
 Retain one case for every error-state row. Extend `FakeProvider.configure()` with `fixture_bytes: bytes | None = None`, `evidence_name: str | None = None`, and `evidence_bytes: bytes = b""`; have the fake executable apply those actions before its delay or exit. In both the timeout and nonzero-exit cases, overwrite `workspace/fixture/input.txt`, create `workspace/evidence/provider-output.txt`, and assert both final inventories contain the changed retained state. Assert provider errors take precedence over later artifact errors, pre-invocation owned failures use `PREPARATION_FAILED`, invalid JSON and invalid UTF-8 prompts exit `2` with no run directory, and every emitted result validates.
 
-- [ ] **Step 2: Run runner and CLI tests and verify stale transport fails**
+- [x] **Step 2: Run runner and CLI tests and verify stale transport fails**
 
 ```bash
 cd "$(git rev-parse --show-toplevel)/skill-validation/runner"
 uv run pytest -q tests/test_run.py tests/test_cli.py
 ```
 
-- [ ] **Step 3: Update orchestration with no new layer**
+- [x] **Step 3: Update orchestration with no new layer**
 
 Pass `prepared.prompt_bytes` to `ProviderRequest`. Continue writing raw stdout and stderr. After a successful Claude invocation, write the same stdout bytes to `final.txt`; do not parse them. Preserve existing error precedence, logging, atomic result publication, and exit codes. Remove all subject-input and input-snapshot handling.
 
-- [ ] **Step 4: Run the complete offline runner suite and commit**
+- [x] **Step 4: Run the complete offline runner suite and commit**
 
 ```bash
 cd "$(git rev-parse --show-toplevel)/skill-validation/runner"
@@ -408,11 +408,11 @@ git commit -m "refactor(validation): run opaque prompts through schema 0.2"
 **Interfaces:**
 - Produces: two checked-in schema `"0.2"` configurations sharing one controlled prompt and fixture.
 
-- [ ] **Step 1: Add a failing provider-free acceptance test**
+- [x] **Step 1: Add a failing provider-free acceptance test**
 
 Load both real smoke configurations and prepare them beneath a monkeypatched temporary root. Assert provider/model/effort, fixture bytes, empty evidence, and exact rendering of all three absolute runtime paths. The test must not invoke a provider.
 
-- [ ] **Step 2: Create the exact controlled prompt and configurations**
+- [x] **Step 2: Create the exact controlled prompt and configurations**
 
 Use this prompt:
 
@@ -446,7 +446,7 @@ Write `fixture/input.txt` as the exact bytes `runner smoke fixture\n`. Use these
 }
 ```
 
-- [ ] **Step 3: Run provider-free acceptance and commit**
+- [x] **Step 3: Run provider-free acceptance and commit**
 
 ```bash
 cd "$(git rev-parse --show-toplevel)/skill-validation/runner"
@@ -476,7 +476,7 @@ git commit -m "test(validation): add controlled provider smokes"
 **Interfaces:**
 - Produces: zero active migrated catalogs and preserved links to the superseded schema `"0.1"` completed plans.
 
-- [ ] **Step 1: Remove only the nine listed packaged-scenario directories**
+- [x] **Step 1: Remove only the nine listed packaged-scenario directories**
 
 Use tracked-file deletion for those exact directories. Do not delete `skill-validation/scenarios/README.md`, canonical source catalogs, charter files, or any plan under `plans/completed/`.
 
@@ -493,15 +493,15 @@ git rm -r skill-validation/scenarios/sweeping-stale-references
 git rm -r skill-validation/scenarios/writing-explicit-rationale
 ```
 
-- [ ] **Step 2: Rewrite the active inventory for the restart**
+- [x] **Step 2: Rewrite the active inventory for the restart**
 
 Retain canonical source commit `13599fb7d3127334b0d07bfe468767e586ec5f9c`, state active packaging schema `"0.2"`, and mark these exact totals as zero migrated: adversarial-review 15, adversarial-review-loop 15, concise-writing 17, disciplined-development 9, disciplined-research 7, dispatching-development-subagents 11, lean-plan-writing 7, skill-discovery 12, sweeping-stale-references 6, and writing-explicit-rationale 6. Overall state is `105 total, 0 migrated, 105 not migrated`.
 
-- [ ] **Step 3: Reset roadmap Phase 3 without losing history**
+- [x] **Step 3: Reset roadmap Phase 3 without losing history**
 
 Replace skill/dependency packaging language with tester-authored prompt and individual-file fixture language. Mark current Phase 3 at zero catalogs. Move the eight completed plan links beneath `Superseded schema "0.1" migration wave`; do not mark them as current completions.
 
-- [ ] **Step 4: Remove the aborted active draft and verify the reset**
+- [x] **Step 4: Remove the aborted active draft and verify the reset**
 
 The draft is currently untracked in the original workspace, so the owner-facing controller removes that exact file after branch integration if it is not present in the implementation worktree. Verify:
 
@@ -513,7 +513,7 @@ rg -n 'Superseded schema `"0.1"` migration wave|0 migrated|schema `"0.2"`' plans
 git diff --check
 ```
 
-- [ ] **Step 5: Commit the tracked reset**
+- [x] **Step 5: Commit the tracked reset**
 
 ```bash
 cd "$(git rev-parse --show-toplevel)"
