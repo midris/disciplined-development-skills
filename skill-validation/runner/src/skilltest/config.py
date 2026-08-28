@@ -3,6 +3,7 @@
 from __future__ import annotations
 
 import json
+import ntpath
 import re
 import stat
 from dataclasses import dataclass
@@ -136,7 +137,12 @@ def _target(value: Any, name: str) -> Path:
     if not isinstance(value, str):
         raise ConfigError(f"{name} must be a path string")
     parts = value.split("/")
-    if "\\" in value or not value or any(part in {"", ".", ".."} for part in parts):
+    if (
+        ntpath.splitdrive(value)[0]
+        or "\\" in value
+        or not value
+        or any(part in {"", ".", ".."} for part in parts)
+    ):
         raise ConfigError(f"{name} must be a canonical relative path")
     return Path(*parts)
 

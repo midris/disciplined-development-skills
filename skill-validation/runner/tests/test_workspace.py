@@ -1,10 +1,12 @@
 import os
 from concurrent.futures import ThreadPoolExecutor
+from dataclasses import replace
 from pathlib import Path
 
 import pytest
 
 import skilltest.workspace as workspace_module
+from skilltest.config import FixtureDeclaration
 
 
 def _entries(root: Path) -> list[str]:
@@ -121,6 +123,62 @@ def test_prepare_workspace_builds_isolated_layout_and_renders_prompt(
     assert not (run.workspace_dir / "docs").exists()
     assert not (run.workspace_dir / "payload.bin").exists()
     assert not run.config_path.exists()
+
+
+# Catches a copy-boundary mutation that trusts a target constructed outside config loading.
+def test_prepare_workspace_rejects_destination_outside_resolved_fixture_root(
+    build_config_case: object, monkeypatch: pytest.MonkeyPatch
+) -> None:
+    case = build_config_case(
+        name="escaping-target",
+        fixtures=(("sources/input.txt", "input.txt", b"fixture bytes"),),
+    )
+    forged = replace(
+        case.config,
+        fixtures=(
+            FixtureDeclaration(
+                source=case.config.fixtures[0].source,
+                target=Path("..") / "escape.txt",
+            ),
+        ),
+    )
+    with monkeypatch.context() as context:
+        context.setattr(workspace_module.tempfile, "gettempdir", lambda: str(case.root / "tmp"))
+        run = workspace_module.create_run(forged)
+        with pytest.raises(OSError, match="outside fixture root"):
+            workspace_module.prepare_workspace(run, forged)
+
+    assert not (run.workspace_dir / "escape.txt").exists()
+
+
+# Catches a copy mutation that overwrites filesystem-equivalent target names.
+def test_prepare_workspace_rejects_filesystem_equivalent_target_collision_without_clobber(
+    build_config_case: object, monkeypatch: pytest.MonkeyPatch
+) -> None:
+    case = build_config_case(
+        name="case-collision",
+        fixtures=(
+            ("sources/one.txt", "a", b"first fixture"),
+            ("sources/two.txt", "A", b"second fixture"),
+        ),
+    )
+    with monkeypatch.context() as context:
+        context.setattr(workspace_module.tempfile, "gettempdir", lambda: str(case.root / "tmp"))
+        run = workspace_module.create_run(case.config)
+        original_open = os.open
+
+        def case_insensitive_open(path: object, *args: object, **kwargs: object) -> int:
+            candidate = Path(path)  # type: ignore[arg-type]
+            if candidate.parent == run.fixture_dir and candidate.name == "A":
+                path = candidate.with_name("a")
+            return original_open(path, *args, **kwargs)  # type: ignore[arg-type]
+
+        context.setattr(os, "open", case_insensitive_open)
+        with pytest.raises(FileExistsError):
+            workspace_module.prepare_workspace(run, case.config)
+
+    assert (run.fixture_dir / "a").read_bytes() == b"first fixture"
+    assert len(list(run.fixture_dir.iterdir())) == 1
 
 
 # Catches rendering changes that normalize CRLF or lone-CR prompt-template line endings.

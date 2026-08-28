@@ -2,6 +2,7 @@
 
 from __future__ import annotations
 
+import os
 import shutil
 import tempfile
 import uuid
@@ -89,16 +90,36 @@ def prepare_workspace(context: RunContext, config: TestConfig) -> PreparedRun:
     prompt_bytes = rendered.encode("utf-8")
     context.prompt_path.write_bytes(prompt_bytes)
 
+    fixture_root = context.fixture_dir.resolve()
     for fixture in config.fixtures:
-        destination = context.fixture_dir / fixture.target
+        destination = (fixture_root / fixture.target).resolve()
+        try:
+            relative_destination = destination.relative_to(fixture_root)
+        except ValueError as error:
+            raise OSError("fixture destination is outside fixture root") from error
+        if not relative_destination.parts:
+            raise OSError("fixture destination is outside fixture root")
         destination.parent.mkdir(parents=True, exist_ok=True)
-        shutil.copy2(fixture.source, destination)
+        _copy_fixture(fixture.source, destination)
 
     return PreparedRun(
         workspace_dir=context.workspace_dir,
         prompt_bytes=prompt_bytes,
         final_output_path=context.final_output_path,
     )
+
+
+def _copy_fixture(source: Path, destination: Path) -> None:
+    """Copy one regular file through an exclusively created destination."""
+    with source.open("rb") as source_file:
+        descriptor = os.open(destination, os.O_WRONLY | os.O_CREAT | os.O_EXCL, 0o666)
+        try:
+            with os.fdopen(descriptor, "wb") as destination_file:
+                shutil.copyfileobj(source_file, destination_file)
+            shutil.copystat(source, destination)
+        except BaseException:
+            destination.unlink(missing_ok=True)
+            raise
 
 
 def _timestamp(value: datetime) -> str:

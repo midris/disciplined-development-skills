@@ -156,7 +156,23 @@ def test_load_config_rejects_absolute_or_non_regular_declared_files(
 
 
 # Catches a target-path mutation that permits ambiguous or non-canonical workspace destinations.
-@pytest.mark.parametrize("target", ["/a", "a/", "a//b", "a\\b", ".", "..", "a/./b", "a/../b"])
+@pytest.mark.parametrize(
+    "target",
+    [
+        "/a",
+        "a/",
+        "a//b",
+        "a\\b",
+        ".",
+        "..",
+        "a/./b",
+        "a/../b",
+        "D:/escape.txt",
+        "D:escape.txt",
+        "//?/D:/escape.txt",
+        "//./NUL",
+    ],
+)
 def test_load_config_rejects_invalid_fixture_targets(tmp_path: Path, target: str) -> None:
     config_path, value = _valid_config(tmp_path)
     _write(tmp_path / "source.txt", "fixture")
