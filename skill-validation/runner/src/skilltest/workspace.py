@@ -1,4 +1,4 @@
-"""Run-directory allocation and workspace preparation."""
+"""Run-directory allocation and isolated prompt-workspace preparation."""
 
 from __future__ import annotations
 
@@ -19,12 +19,11 @@ class RunContext:
     run_dir: Path
     marker_path: Path
     config_path: Path
-    inputs_dir: Path
-    inputs_prompt_path: Path
-    inputs_fixture_dir: Path
-    inputs_skills_dir: Path
-    subject_input_path: Path
+    prompt_template_path: Path
+    prompt_path: Path
     workspace_dir: Path
+    fixture_dir: Path
+    evidence_dir: Path
     stdout_path: Path
     stderr_path: Path
     final_output_path: Path
@@ -35,8 +34,7 @@ class RunContext:
 @dataclass(frozen=True, slots=True)
 class PreparedRun:
     workspace_dir: Path
-    subject_input_path: Path
-    subject_input_bytes: bytes
+    prompt_bytes: bytes
     final_output_path: Path
 
 
@@ -53,27 +51,19 @@ def create_run(config: TestConfig) -> RunContext:
         )
     )
     run_id = run_dir.name
-
-    marker_path = run_dir / ".skilltest-run"
-    inputs_dir = run_dir / "inputs"
-    inputs_prompt_path = inputs_dir / "prompt.txt"
-    inputs_fixture_dir = inputs_dir / "fixture"
-    inputs_skills_dir = inputs_dir / "skills"
-    subject_input_path = run_dir / "subject-input.txt"
     workspace_dir = run_dir / "workspace"
 
     return RunContext(
         run_id=run_id,
         started_at=started_at,
         run_dir=run_dir,
-        marker_path=marker_path,
+        marker_path=run_dir / ".skilltest-run",
         config_path=run_dir / "config.json",
-        inputs_dir=inputs_dir,
-        inputs_prompt_path=inputs_prompt_path,
-        inputs_fixture_dir=inputs_fixture_dir,
-        inputs_skills_dir=inputs_skills_dir,
-        subject_input_path=subject_input_path,
+        prompt_template_path=run_dir / "prompt-template.txt",
+        prompt_path=run_dir / "prompt.txt",
         workspace_dir=workspace_dir,
+        fixture_dir=workspace_dir / "fixture",
+        evidence_dir=workspace_dir / "evidence",
         stdout_path=run_dir / "stdout.txt",
         stderr_path=run_dir / "stderr.txt",
         final_output_path=run_dir / "final.txt",
@@ -83,75 +73,32 @@ def create_run(config: TestConfig) -> RunContext:
 
 
 def prepare_workspace(context: RunContext, config: TestConfig) -> PreparedRun:
-    """Populate retained inputs, prepare the workspace, and write subject input."""
+    """Prepare an isolated fixture and evidence workspace plus rendered prompt."""
     context.marker_path.touch()
-    context.inputs_fixture_dir.mkdir(parents=True)
-    context.workspace_dir.mkdir()
-    shutil.copy2(config.scenario.prompt, context.inputs_prompt_path)
+    context.fixture_dir.mkdir(parents=True)
+    context.evidence_dir.mkdir()
+    shutil.copy2(config.prompt, context.prompt_template_path)
+    template = context.prompt_template_path.read_text(encoding="utf-8")
+    rendered = template
+    for token, path in (
+        ("{{workspace_dir}}", context.workspace_dir),
+        ("{{fixture_dir}}", context.fixture_dir),
+        ("{{evidence_dir}}", context.evidence_dir),
+    ):
+        rendered = rendered.replace(token, str(path.resolve()))
+    prompt_bytes = rendered.encode("utf-8")
+    context.prompt_path.write_bytes(prompt_bytes)
 
-    if config.scenario.fixture is not None:
-        shutil.copytree(
-            config.scenario.fixture,
-            context.inputs_fixture_dir,
-            dirs_exist_ok=True,
-        )
-        shutil.copytree(
-            context.inputs_fixture_dir,
-            context.workspace_dir,
-            dirs_exist_ok=True,
-        )
+    for fixture in config.fixtures:
+        destination = context.fixture_dir / fixture.target
+        destination.parent.mkdir(parents=True, exist_ok=True)
+        shutil.copy2(fixture.source, destination)
 
-    if config.skill is None:
-        subject_input_bytes = context.inputs_prompt_path.read_bytes()
-    else:
-        context.inputs_skills_dir.mkdir()
-        for declaration in (config.skill, *config.dependencies):
-            retained_skill = context.inputs_skills_dir / declaration.id
-            retained_skill.mkdir()
-            for relative in declaration.include:
-                destination = retained_skill / relative
-                destination.parent.mkdir(parents=True, exist_ok=True)
-                shutil.copy2(declaration.source / relative, destination)
-
-        supplied_skills_dir = context.workspace_dir / "supplied-skills"
-        supplied_skills_dir.mkdir()
-        for declaration in (config.skill, *config.dependencies):
-            shutil.copytree(
-                context.inputs_skills_dir / declaration.id,
-                supplied_skills_dir / declaration.id,
-            )
-        subject_input_bytes = _subject_input_bytes(
-            primary_id=config.skill.id,
-            dependency_ids=tuple(declaration.id for declaration in config.dependencies),
-            prompt_bytes=context.inputs_prompt_path.read_bytes(),
-        )
-    context.subject_input_path.write_bytes(subject_input_bytes)
     return PreparedRun(
         workspace_dir=context.workspace_dir,
-        subject_input_path=context.subject_input_path,
-        subject_input_bytes=subject_input_bytes,
+        prompt_bytes=prompt_bytes,
         final_output_path=context.final_output_path,
     )
-
-
-def _subject_input_bytes(
-    *, primary_id: str, dependency_ids: tuple[str, ...], prompt_bytes: bytes
-) -> bytes:
-    if dependency_ids:
-        dependencies = "; ".join(
-            f"{dependency_id} — supplied-skills/{dependency_id}/SKILL.md"
-            for dependency_id in dependency_ids
-        )
-    else:
-        dependencies = "none"
-    preamble = (
-        "For skill instructions, use only the supplied files listed below.\n"
-        f"Primary: {primary_id} — supplied-skills/{primary_id}/SKILL.md\n"
-        f"Dependencies: {dependencies}\n"
-        "Read those files before acting.\n"
-        "Scenario follows:\n"
-    ).encode("utf-8")
-    return preamble + prompt_bytes
 
 
 def _timestamp(value: datetime) -> str:
