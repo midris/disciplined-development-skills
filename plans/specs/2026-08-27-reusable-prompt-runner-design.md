@@ -19,7 +19,9 @@ run directory and shares no mutable runner state.
 
 ## Configuration contract
 
-The JSON configuration contains exactly:
+The configuration is a UTF-8 RFC 8259 JSON object. Parsing rejects duplicate
+object keys and the non-JSON constants `NaN`, `Infinity`, and `-Infinity`.
+The object contains exactly:
 
 | Field | Meaning |
 |---|---|
@@ -84,11 +86,13 @@ directory; absolute paths are invalid. They may contain `..` and resolve outside
 the configuration directory so a tester can deliberately select any locally
 available regular file. The final path itself must not be a symlink; ordinary
 operating-system resolution of symlinked ancestor directories is accepted.
-`target` is a non-empty relative path without `.` or `..` components.
-`fixtures` may be empty, but their targets must satisfy the pairwise conflict
-rule above. `provider` is exactly `codex` or `claude`; `model` is a non-empty
-string; `effort` matches `[a-z0-9][a-z0-9-]*` and is passed through without
-semantic validation.
+`target` is a canonical slash-separated relative file path. Backslashes,
+leading or trailing slashes, repeated slashes, and empty, `.` or `..`
+components are invalid. Conflict checks compare the component tuples obtained
+by splitting each accepted target on `/`. `fixtures` may be empty, but their
+targets must satisfy the pairwise conflict rule above. `provider` is exactly
+`codex` or `claude`; `model` is a non-empty string; `effort` matches
+`[a-z0-9][a-z0-9-]*` and is passed through without semantic validation.
 
 ## Runtime layout
 
@@ -220,9 +224,10 @@ concrete need exists.
 ## Errors and validation
 
 Keep validation mechanical and limited to what the runner must safely load or
-create: exact configuration shape, supported schema version and provider,
-required scalar types, regular prompt and fixture source files, safe relative
-fixture targets, pairwise non-conflicting targets, and filesystem failures.
+create: strict JSON parsing, exact configuration shape, supported schema version
+and provider, required scalar types, regular prompt and fixture source files,
+canonical relative fixture targets, pairwise non-conflicting targets, and
+filesystem failures.
 
 Do not add semantic prompt checks, required template-token checks, skill checks,
 dependency checks, evidence expectations, provider capability checks, result
