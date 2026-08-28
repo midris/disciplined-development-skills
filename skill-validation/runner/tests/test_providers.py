@@ -90,6 +90,8 @@ def test_claude_retains_raw_jsonl_without_parsing_or_formatting(tmp_path, monkey
         "sonnet",
         "--effort",
         "high",
+        "--permission-mode",
+        "acceptEdits",
     ]
     assert record["cwd"] == str(request.workspace_dir)
     assert record["stdin"] == "subject bytes\n"

@@ -221,6 +221,7 @@ Assert Claude arguments are exactly:
 [
     "claude", "--print", "--no-session-persistence",
     "--model", model, "--effort", effort,
+    "--permission-mode", "acceptEdits",
 ]
 ```
 
@@ -250,7 +251,10 @@ CLAUDE_BASELINE_ENV = {
 }
 ```
 
-For Claude, pass `env=os.environ | CLAUDE_BASELINE_ENV` to `Popen`; for Codex, preserve the inherited environment. Do not add provider configuration or output parsing.
+For Claude, pass `env=os.environ | CLAUDE_BASELINE_ENV` to `Popen` and include
+the fixed non-bypass `--permission-mode acceptEdits` argument; for Codex,
+preserve the inherited environment. Do not add provider configuration or output
+parsing.
 
 - [ ] **Step 4: Run focused tests and commit**
 
@@ -529,7 +533,7 @@ git commit -m "docs(validation): restart catalog migration for schema 0.2"
 - Consumes: the complete runner and both controlled smoke definitions.
 - Produces: mechanically inspected Codex and Claude bundles plus documentation matching the accepted contract.
 
-- [ ] **Step 1: Run the Codex smoke from the owner-facing session**
+- [x] **Step 1: Run the Codex smoke from the owner-facing session** — bundle: `/private/var/folders/55/6jqr25v5211fn00wych8b1jm0000gn/T/skilltest-runs/20260828T174827646Z-codex-runner-smoke-80920b0b-3b6a-4649-be3e-3026ac97a520-i5u89o7s`
 
 ```bash
 cd "$(git rev-parse --show-toplevel)/skill-validation/runner"
@@ -540,7 +544,7 @@ The assignment preserves `skilltest`'s exit status because it contains no
 pipeline. Stop unless it exits `0`. Record the printed bundle path in the plan
 checkbox note, but do not commit the bundle.
 
-- [ ] **Step 2: Mechanically inspect the Codex bundle**
+- [x] **Step 2: Mechanically inspect the Codex bundle**
 
 Run this mechanical inspection; it does not read response or generated-file contents:
 

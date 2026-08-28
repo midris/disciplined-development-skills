@@ -193,10 +193,11 @@ CLI or sandbox enforcement.
 ### Claude
 
 Retain noninteractive print execution, no session persistence, raw output
-capture, model selection, effort selection, and normal Claude Code permission
-safeguards. Remove safe mode, Chrome suppression, structured-output options,
-verbosity options, and permission-bypass options. Claude's ordinary print-mode
-stdout is retained as both `stdout.txt` and, after a zero exit, `final.txt`.
+capture, model selection, effort selection, and fixed non-bypass
+`--permission-mode acceptEdits` for the evidence-writing workspace. Remove safe
+mode, Chrome suppression, structured-output options, verbosity options, and
+permission-bypass options. Claude's ordinary print-mode stdout is retained as
+both `stdout.txt` and, after a zero exit, `final.txt`.
 Codex continues to write `final.txt` through its last-message output option.
 `final.txt` is absent when the selected provider does not complete a final
 response.

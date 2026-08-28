@@ -94,6 +94,6 @@ def _arguments(request: ProviderRequest) -> list[str]:
     if request.provider == "claude":
         return [
             "claude", "--print", "--no-session-persistence", "--model", request.model,
-            "--effort", request.effort,
+            "--effort", request.effort, "--permission-mode", "acceptEdits",
         ]
     raise ValueError(f"unsupported provider: {request.provider}")
