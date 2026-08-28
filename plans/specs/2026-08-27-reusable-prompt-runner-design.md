@@ -2,7 +2,7 @@
 
 ## Status
 
-Draft revised after review on 2026-08-27. This design replaces the runner's
+Approved after consistency review on 2026-08-28. This design replaces the runner's
 skill-specific input contract with a small, stateless prompt-execution contract.
 It does not begin implementation or resume catalog migration.
 
