@@ -1,6 +1,8 @@
-# Skill Scenario Porting Roadmap
+# Scenario Porting Roadmap
 
-**Goal:** Port every active, replayable skill scenario into `skilltest` before designing the repository's long-term testing methodology.
+**Goal:** Migrate every active, replayable scenario to the reusable prompt
+runner schema `"0.2"` before designing the repository's long-term testing
+methodology.
 
 **Contract:** `skill-validation/charter/core-contracts.md`
 
@@ -9,10 +11,10 @@
 ## Rules
 
 - Use `origin/docs/comprehensive-skill-cleanup` at `13599fb7d3127334b0d07bfe468767e586ec5f9c` as the canonical scenario source.
-- Port only candidates in the [active scenario inventory](completed/2026-08-24-scenario-inventory.md); scenarios outside it remain out of scope unless promoted.
-- Preserve prompts, rubrics, fixtures, dependencies, and declared skill context faithfully; adapt only paths required by `skilltest` packaging.
-- During runner-shape coverage, run one real smoke test when first covering a shape. During catalog migration, preselect and smoke-run at least one scenario from each catalog end to end.
-- Keep behavioral evaluation, baselines, and skill changes out of migration; runner changes require separate approved scope.
+- Migrate only candidates in the [active scenario inventory](../skill-validation/scenarios/README.md); scenarios outside it remain out of scope unless promoted.
+- Author tester-authored prompts and individual fixture files faithfully from the candidate scenario; the runner neither injects nor validates skill instructions, dependencies, permissions, or behavioral expectations.
+- During catalog migration, load every configuration and run at least one preselected scenario from the catalog through the real provider, collecting mechanical evidence without scoring it.
+- Keep behavioral evaluation, baselines, and runner changes out of migration; runner changes require separate approved scope.
 - Do not commit raw provider output or temporary result bundles.
 
 ## Phases
@@ -30,21 +32,25 @@
 
 ### 3. Catalog migration
 
-- Current phase.
-- Port the remaining active scenarios catalog by catalog.
-- Load every configuration, verify packaging fidelity, then run at least one preselected scenario from the catalog through the real provider and collect mechanical evidence without scoring it.
-- Complete: [writing-explicit-rationale catalog migration](completed/2026-08-25-writing-explicit-rationale-catalog-migration.md).
-- Complete: [sweeping-stale-references catalog migration](completed/2026-08-25-sweeping-stale-references-catalog-migration.md).
-- Complete: [lean-plan-writing catalog migration](completed/2026-08-25-lean-plan-writing-catalog-migration.md).
-- Complete: [disciplined-research catalog migration](completed/2026-08-25-disciplined-research-catalog-migration.md).
-- Complete: [disciplined-development catalog migration](completed/2026-08-26-disciplined-development-catalog-migration.md).
-- Complete: [adversarial-review-loop catalog migration](completed/2026-08-26-adversarial-review-loop-catalog-migration.md).
-- Complete: [skill-discovery catalog migration](completed/2026-08-26-skill-discovery-catalog-migration.md).
-- Complete: [dispatching-development-subagents catalog migration](completed/2026-08-26-dispatching-development-subagents-catalog-migration.md).
+- Current phase: 0 catalogs migrated under schema `"0.2"`.
+- Create a fresh migration plan for each catalog.
+- Author each catalog with tester-authored prompts and individual fixture files.
+- Load every configuration and run at least one preselected scenario from each catalog through the real provider, collecting mechanical evidence without scoring it.
+
+#### Superseded schema `"0.1"` migration wave
+
+- [writing-explicit-rationale catalog migration](completed/2026-08-25-writing-explicit-rationale-catalog-migration.md)
+- [sweeping-stale-references catalog migration](completed/2026-08-25-sweeping-stale-references-catalog-migration.md)
+- [lean-plan-writing catalog migration](completed/2026-08-25-lean-plan-writing-catalog-migration.md)
+- [disciplined-research catalog migration](completed/2026-08-25-disciplined-research-catalog-migration.md)
+- [disciplined-development catalog migration](completed/2026-08-26-disciplined-development-catalog-migration.md)
+- [adversarial-review-loop catalog migration](completed/2026-08-26-adversarial-review-loop-catalog-migration.md)
+- [skill-discovery catalog migration](completed/2026-08-26-skill-discovery-catalog-migration.md)
+- [dispatching-development-subagents catalog migration](completed/2026-08-26-dispatching-development-subagents-catalog-migration.md)
 
 ### 4. Readiness review
 
-- Reconcile the ported scenarios with the inventory.
+- Reconcile the migrated scenarios with the inventory.
 - Resolve or explicitly retain every blocker and ambiguity, then confirm migration is complete.
 
 ### 5. Testing methodology
@@ -53,7 +59,7 @@
 
 ## Done when
 
-- Every candidate in the active inventory is represented by a loadable `skilltest` configuration.
+- Every candidate in the active inventory is represented by a loadable schema `"0.2"` configuration.
 - Each distinct runner shape has completed one end-to-end smoke run.
 - Each migrated catalog has at least one completed end-to-end smoke run.
 - The runnable catalog is ready for testing-methodology design.
