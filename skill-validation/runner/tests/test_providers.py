@@ -13,7 +13,7 @@ def _request(tmp_path, *, provider: str, model: str = "chosen-model", effort: st
     workspace.mkdir(parents=True)
     return ProviderRequest(
         workspace_dir=workspace,
-        subject_input_bytes=b"subject bytes\n",
+        prompt_bytes=b"subject bytes\n",
         final_output_path=tmp_path / "final.txt",
         provider=provider,
         model=model,
@@ -39,38 +39,31 @@ def test_codex_invokes_one_fixed_cli_with_exact_request_values(tmp_path, monkeyp
     assert result.launch_error is None
     assert result.stdout_bytes == b'{"event":"done"}\n'
     assert result.stderr_bytes == b"codex warning\n"
-    assert fake_provider.record() == {
-        "argv": [
-            str(tmp_path / "fake-bin" / "codex"),
-            "--ask-for-approval",
-            "never",
-            "--search",
-            "--cd",
-            str(request.workspace_dir),
-            "exec",
-            "--strict-config",
-            "--ignore-user-config",
-            "--ignore-rules",
-            "--ephemeral",
-            "--skip-git-repo-check",
-            "--json",
-            "--color",
-            "never",
-            "--model",
-            "gpt-5.4",
-            "-c",
-            'model_reasoning_effort="medium"',
-            "--sandbox",
-            "workspace-write",
-            "--output-last-message",
-            str(request.final_output_path),
-            "-",
-        ],
-        "cwd": str(request.workspace_dir),
-        "stdin": "subject bytes\n",
-        "path_prefix": str(tmp_path / "fake-bin"),
-        "marker": "inherited",
-    }
+    record = fake_provider.record()
+    assert record["argv"] == [
+        str(tmp_path / "fake-bin" / "codex"),
+        "--cd",
+        str(request.workspace_dir),
+        "exec",
+        "--ephemeral",
+        "--skip-git-repo-check",
+        "--json",
+        "--color",
+        "never",
+        "--model",
+        "gpt-5.4",
+        "-c",
+        'model_reasoning_effort="medium"',
+        "--sandbox",
+        "workspace-write",
+        "--output-last-message",
+        str(request.final_output_path),
+        "-",
+    ]
+    assert record["cwd"] == str(request.workspace_dir)
+    assert record["stdin"] == "subject bytes\n"
+    assert record["path_prefix"] == str(tmp_path / "fake-bin")
+    assert record["marker"] == "inherited"
 
 
 def test_claude_retains_raw_jsonl_without_parsing_or_formatting(tmp_path, monkeypatch, fake_provider):
@@ -92,24 +85,25 @@ def test_claude_retains_raw_jsonl_without_parsing_or_formatting(tmp_path, monkey
     assert record["argv"] == [
         str(tmp_path / "fake-bin" / "claude"),
         "--print",
-        "--safe-mode",
         "--no-session-persistence",
-        "--no-chrome",
-        "--input-format",
-        "text",
-        "--output-format",
-        "stream-json",
-        "--verbose",
         "--model",
         "sonnet",
         "--effort",
         "high",
-        "--allow-dangerously-skip-permissions",
-        "--permission-mode",
-        "bypassPermissions",
     ]
     assert record["cwd"] == str(request.workspace_dir)
     assert record["stdin"] == "subject bytes\n"
+    assert record["marker"] == "inherited"
+    assert record["claude_baseline_env"] == {
+        "CLAUDE_CODE_SIMPLE_SYSTEM_PROMPT": "1",
+        "CLAUDE_CODE_DISABLE_AUTO_MEMORY": "1",
+        "CLAUDE_CODE_DISABLE_BUNDLED_SKILLS": "1",
+        "CLAUDE_CODE_DISABLE_EXPLORE_PLAN_AGENTS": "1",
+        "CLAUDE_CODE_DISABLE_WORKFLOWS": "1",
+        "CLAUDE_CODE_DISABLE_ARTIFACT": "1",
+        "CLAUDE_CODE_DISABLE_CRON": "1",
+        "CLAUDE_CODE_DISABLE_NONESSENTIAL_TRAFFIC": "1",
+    }
 
 
 def test_returns_launch_failure_without_starting_provider(tmp_path, monkeypatch):

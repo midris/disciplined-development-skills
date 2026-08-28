@@ -79,6 +79,19 @@ with record_path.open("a", encoding="utf-8") as record_file:
     "stdin": sys.stdin.buffer.read().decode("utf-8"),
     "path_prefix": os.environ["PATH"].split(os.pathsep)[0],
     "marker": os.environ.get("SKILLTEST_FAKE_MARKER"),
+    "claude_baseline_env": {
+        name: os.environ.get(name)
+        for name in (
+            "CLAUDE_CODE_SIMPLE_SYSTEM_PROMPT",
+            "CLAUDE_CODE_DISABLE_AUTO_MEMORY",
+            "CLAUDE_CODE_DISABLE_BUNDLED_SKILLS",
+            "CLAUDE_CODE_DISABLE_EXPLORE_PLAN_AGENTS",
+            "CLAUDE_CODE_DISABLE_WORKFLOWS",
+            "CLAUDE_CODE_DISABLE_ARTIFACT",
+            "CLAUDE_CODE_DISABLE_CRON",
+            "CLAUDE_CODE_DISABLE_NONESSENTIAL_TRAFFIC",
+        )
+    },
     }), file=record_file)
 run_dir = Path(os.getcwd()).parent
 before_output = (run_dir / "config.json").exists()

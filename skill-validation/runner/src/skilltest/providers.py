@@ -2,18 +2,29 @@
 
 from __future__ import annotations
 
+import os
 import subprocess
 from dataclasses import dataclass
 from pathlib import Path
 
 PROVIDER_TIMEOUT_SECONDS = 900
 TERMINATE_GRACE_SECONDS = 5
+CLAUDE_BASELINE_ENV = {
+    "CLAUDE_CODE_SIMPLE_SYSTEM_PROMPT": "1",
+    "CLAUDE_CODE_DISABLE_AUTO_MEMORY": "1",
+    "CLAUDE_CODE_DISABLE_BUNDLED_SKILLS": "1",
+    "CLAUDE_CODE_DISABLE_EXPLORE_PLAN_AGENTS": "1",
+    "CLAUDE_CODE_DISABLE_WORKFLOWS": "1",
+    "CLAUDE_CODE_DISABLE_ARTIFACT": "1",
+    "CLAUDE_CODE_DISABLE_CRON": "1",
+    "CLAUDE_CODE_DISABLE_NONESSENTIAL_TRAFFIC": "1",
+}
 
 
 @dataclass(frozen=True, slots=True)
 class ProviderRequest:
     workspace_dir: Path
-    subject_input_bytes: bytes
+    prompt_bytes: bytes
     final_output_path: Path
     provider: str
     model: str
@@ -34,16 +45,18 @@ class ProviderResult:
 def invoke_provider(request: ProviderRequest) -> ProviderResult:
     """Invoke one configured built-in CLI without a shell."""
     arguments = _arguments(request)
+    environment = os.environ | CLAUDE_BASELINE_ENV if request.provider == "claude" else None
     try:
         process = subprocess.Popen(
             arguments, cwd=request.workspace_dir, shell=False, stdin=subprocess.PIPE,
             stdout=subprocess.PIPE, stderr=subprocess.PIPE,
+            env=environment,
         )
     except (OSError, ValueError) as error:
         return ProviderResult(arguments[0], False, launch_error=str(error))
     try:
         stdout_bytes, stderr_bytes = process.communicate(
-            input=request.subject_input_bytes, timeout=PROVIDER_TIMEOUT_SECONDS
+            input=request.prompt_bytes, timeout=PROVIDER_TIMEOUT_SECONDS
         )
     except subprocess.TimeoutExpired:
         process.terminate()
@@ -72,18 +85,15 @@ def invoke_provider(request: ProviderRequest) -> ProviderResult:
 def _arguments(request: ProviderRequest) -> list[str]:
     if request.provider == "codex":
         return [
-            "codex", "--ask-for-approval", "never", "--search", "--cd",
-            str(request.workspace_dir), "exec", "--strict-config", "--ignore-user-config",
-            "--ignore-rules", "--ephemeral", "--skip-git-repo-check", "--json",
+            "codex", "--cd", str(request.workspace_dir), "exec", "--ephemeral",
+            "--skip-git-repo-check", "--json",
             "--color", "never", "--model", request.model, "-c",
             f'model_reasoning_effort="{request.effort}"', "--sandbox", "workspace-write",
-            "--output-last-message", str(request.final_output_path.resolve()), "-",
+            "--output-last-message", str(request.final_output_path), "-",
         ]
     if request.provider == "claude":
         return [
-            "claude", "--print", "--safe-mode", "--no-session-persistence", "--no-chrome",
-            "--input-format", "text", "--output-format", "stream-json", "--verbose",
-            "--model", request.model, "--effort", request.effort,
-            "--allow-dangerously-skip-permissions", "--permission-mode", "bypassPermissions",
+            "claude", "--print", "--no-session-persistence", "--model", request.model,
+            "--effort", request.effort,
         ]
     raise ValueError(f"unsupported provider: {request.provider}")
