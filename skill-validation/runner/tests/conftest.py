@@ -19,7 +19,6 @@ class ConfigCase:
     config_path: Path
     config: TestConfig
     prompt_bytes: bytes
-    expected_marker: str
 
 
 def _write(path: Path, content: str | bytes = "") -> Path:
@@ -116,72 +115,26 @@ def build_config_case(tmp_path: Path) -> object:
     def build(
         *,
         name: str = "case",
-        fixture: str = "empty",
-        dependencies: tuple[str, ...] = ("helper-b", "helper-a"),
-        no_skill_context: bool = False,
         prompt_bytes: bytes = b"follow the scenario carefully",
-        expected_marker: str = "hidden-expected-outcome",
+        fixtures: tuple[tuple[str, str, str | bytes], ...] = (),
+        provider: str = "codex",
+        model: str = "gpt-5.6-sol",
+        effort: str = "low",
     ) -> ConfigCase:
         root = tmp_path / name
-        primary = root / "primary"
-        _write(primary / "SKILL.md", "Primary skill instructions.\n")
-        _write(primary / "scripts" / "tool.sh", b"#!/bin/sh\necho primary\n")
-
-        dependency_values: list[dict[str, object]] = []
-        for dependency in dependencies:
-            dependency_root = root / dependency
-            _write(dependency_root / "SKILL.md", f"{dependency} instructions.\n")
-            _write(
-                dependency_root / "resources" / "notes.txt",
-                f"resource for {dependency}\n",
-            )
-            dependency_values.append(
-                {
-                    "id": dependency,
-                    "source": dependency,
-                    "include": ["SKILL.md", "resources/notes.txt"],
-                }
-            )
-
-        prompt_path = _write(root / "prompt.txt", prompt_bytes)
-
-        fixture_value: str | None
-        if fixture == "none":
-            fixture_value = None
-        else:
-            fixture_root = root / "fixture"
-            fixture_root.mkdir(parents=True, exist_ok=True)
-            fixture_value = "fixture"
-            if fixture == "populated":
-                _write(fixture_root / "docs" / "guide.txt", "fixture guide\n")
-                _write(fixture_root / "bin" / "start.sh", b"#!/bin/sh\necho fixture\n")
-            elif fixture != "empty":
-                raise ValueError(f"unknown fixture kind: {fixture}")
+        _write(root / "prompt.md", prompt_bytes)
+        fixture_entries: list[dict[str, str]] = []
+        for source, target, contents in fixtures:
+            _write(root / source, contents)
+            fixture_entries.append({"source": source, "target": target})
 
         config_value: dict[str, object] = {
-            "schema_version": "0.1",
+            "schema_version": "0.2",
             "id": f"{name}-run",
-            "scenario": {
-                "id": f"{name}-scenario",
-                "prompt": prompt_path.name,
-                "fixture": fixture_value,
-            },
-            "expected_outcome": {"secret": expected_marker},
-            "execution": {
-                "provider": "codex",
-                "model": "gpt-5.4",
-                "effort": "medium",
-            },
+            "prompt": "prompt.md",
+            "fixtures": fixture_entries,
+            "execution": {"provider": provider, "model": model, "effort": effort},
         }
-        if no_skill_context:
-            config_value["skill_context"] = "none"
-        else:
-            config_value["skill"] = {
-                "id": "primary",
-                "source": "primary",
-                "include": ["SKILL.md", "scripts/tool.sh"],
-            }
-            config_value["dependencies"] = dependency_values
 
         config_path = root / "case.json"
         config_path.write_bytes(json.dumps(config_value, separators=(",", ":")).encode("utf-8"))
@@ -191,7 +144,6 @@ def build_config_case(tmp_path: Path) -> object:
             config_path=config_path,
             config=load_config(config_path),
             prompt_bytes=prompt_bytes,
-            expected_marker=expected_marker,
         )
 
     return build
