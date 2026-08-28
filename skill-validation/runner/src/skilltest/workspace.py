@@ -78,7 +78,7 @@ def prepare_workspace(context: RunContext, config: TestConfig) -> PreparedRun:
     context.fixture_dir.mkdir(parents=True)
     context.evidence_dir.mkdir()
     shutil.copy2(config.prompt, context.prompt_template_path)
-    template = context.prompt_template_path.read_text(encoding="utf-8")
+    template = context.prompt_template_path.read_bytes().decode("utf-8")
     rendered = template
     for token, path in (
         ("{{workspace_dir}}", context.workspace_dir),

@@ -123,6 +123,38 @@ def test_prepare_workspace_builds_isolated_layout_and_renders_prompt(
     assert not run.config_path.exists()
 
 
+# Catches rendering changes that normalize CRLF or lone-CR prompt-template line endings.
+def test_prepare_workspace_preserves_template_line_endings_during_rendering(
+    build_config_case: object, monkeypatch: pytest.MonkeyPatch
+) -> None:
+    template = (
+        b"workspace={{workspace_dir}}\r\n"
+        b"fixture={{fixture_dir}}\r"
+        b"evidence={{evidence_dir}}\n"
+        b"unknown={{other}}\r\n"
+    )
+    case = build_config_case(name="line-endings", prompt_bytes=template)
+    with monkeypatch.context() as context:
+        context.setattr(workspace_module.tempfile, "gettempdir", lambda: str(case.root / "tmp"))
+        run = workspace_module.create_run(case.config)
+        prepared = workspace_module.prepare_workspace(run, case.config)
+
+    expected = b"".join(
+        (
+            b"workspace=",
+            str(run.workspace_dir.resolve()).encode("utf-8"),
+            b"\r\nfixture=",
+            str(run.fixture_dir.resolve()).encode("utf-8"),
+            b"\revidence=",
+            str(run.evidence_dir.resolve()).encode("utf-8"),
+            b"\nunknown={{other}}\r\n",
+        )
+    )
+    assert run.prompt_template_path.read_bytes() == template
+    assert run.prompt_path.read_bytes() == expected
+    assert prepared.prompt_bytes == expected
+
+
 # Catches a preparation mutation that skips required empty runtime directories.
 def test_prepare_workspace_creates_empty_fixture_and_evidence_directories(
     build_config_case: object, monkeypatch: pytest.MonkeyPatch
