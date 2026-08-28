@@ -2,9 +2,10 @@
 
 ## Status
 
-Approved after consistency review on 2026-08-28. This design replaces the runner's
+Implemented and accepted by the owner on 2026-08-28 after whole-branch review
+and live Codex and Claude smoke tests. This design replaces the runner's
 skill-specific input contract with a small, stateless prompt-execution contract.
-It does not begin implementation or resume catalog migration.
+The completed implementation plan is archived beside this specification.
 
 ## Purpose
 
