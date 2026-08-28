@@ -1,0 +1,7 @@
+{
+  "schema_version": "0.2",
+  "id": "codex-runner-smoke",
+  "prompt": "prompt.md",
+  "fixtures": [{"source": "fixture/input.txt", "target": "input.txt"}],
+  "execution": {"provider": "codex", "model": "gpt-5.6-sol", "effort": "low"}
+}

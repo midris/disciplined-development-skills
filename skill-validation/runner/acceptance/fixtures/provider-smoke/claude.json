@@ -1,0 +1,7 @@
+{
+  "schema_version": "0.2",
+  "id": "claude-runner-smoke",
+  "prompt": "prompt.md",
+  "fixtures": [{"source": "fixture/input.txt", "target": "input.txt"}],
+  "execution": {"provider": "claude", "model": "sonnet", "effort": "low"}
+}
