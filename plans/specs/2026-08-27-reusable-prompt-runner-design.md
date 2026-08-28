@@ -37,10 +37,10 @@ Each fixture entry contains exactly:
 | `target` | Relative file path below the runtime fixture directory. |
 
 The runner copies individual regular files only. It does not copy whole
-directories, follow or create symlinks, merge directories, infer includes, or
-interpret file contents. Parent directories required by a target are created
-mechanically. Duplicate targets are invalid because a fresh run never merges or
-overwrites fixture inputs.
+directories, accept a source entry that is a symlink, create symlinks, merge
+directories, infer includes, or interpret file contents. Parent directories
+required by a target are created mechanically. Duplicate targets are invalid
+because a fresh run never merges or overwrites fixture inputs.
 
 The following existing fields are removed:
 
@@ -77,10 +77,14 @@ The complete configuration shape is:
 
 No other root, fixture-entry, or execution fields are accepted. `id` is a
 1–64-character string matching `[a-z0-9][a-z0-9-]{0,63}`. `prompt` and each
-fixture `source` are configuration-relative paths to regular files. `target` is
-a non-empty relative path without `.` or `..` components. `fixtures` may be
-empty, but duplicate targets are invalid. `provider` is exactly `codex` or
-`claude`; `model` is a non-empty string; `effort` matches
+fixture `source` are non-empty relative paths interpreted from the configuration
+directory; absolute paths are invalid. They may contain `..` and resolve outside
+the configuration directory so a tester can deliberately select any locally
+available regular file. The final path itself must not be a symlink; ordinary
+operating-system resolution of symlinked ancestor directories is accepted.
+`target` is a non-empty relative path without `.` or `..` components.
+`fixtures` may be empty, but duplicate targets are invalid. `provider` is
+exactly `codex` or `claude`; `model` is a non-empty string; `effort` matches
 `[a-z0-9][a-z0-9-]*` and is passed through without semantic validation.
 
 ## Runtime layout
@@ -150,8 +154,8 @@ artifact conventions as other retained files. The inventory does not follow
 symlinks.
 
 An empty evidence directory is valid. The runner records whether it contains
-files but performs no content, schema, outcome, or quality validation. A tester
-or later reviewing tool interprets all collected evidence.
+entries but performs no content, schema, outcome, or quality validation. A
+tester or later reviewing tool interprets all collected evidence.
 
 ## Provider invocation
 
@@ -283,6 +287,28 @@ rule as the configuration.
 | `invocation_started` | Boolean. |
 | `timed_out` | Boolean. |
 | `exit_code` | Integer or `null`. |
+
+The result schema permits exactly these execution states:
+
+| Result state | `status` | `invocation_started` | `timed_out` | `exit_code` | `infrastructure_error` |
+|---|---|---:|---:|---|---|
+| Completed | `COMPLETED` | `true` | `false` | `0` | `null` |
+| Preparation failed | `INFRA_ERROR` | `false` | `false` | `null` | Code `PREPARATION_FAILED` |
+| Provider launch failed | `INFRA_ERROR` | `false` | `false` | `null` | Code `PROVIDER_LAUNCH_FAILED` |
+| Provider timed out | `INFRA_ERROR` | `true` | `true` | Integer | Code `PROVIDER_TIMEOUT` |
+| Provider exited nonzero | `INFRA_ERROR` | `true` | `false` | Any integer except `0` | Code `PROVIDER_EXIT_NONZERO` |
+| Artifact write failed | `INFRA_ERROR` | `true` | `false` | `0` | Code `ARTIFACT_WRITE_FAILED` |
+
+No other combination is valid. The error `message` remains mechanically
+generated text and is not constrained beyond being a string.
+
+Error precedence makes the table exhaustive. A provider launch failure,
+timeout, or nonzero exit remains the recorded infrastructure error if a later
+artifact write also fails; the execution fields preserve that provider outcome
+and the affected artifact record shows that its file is absent. Code
+`ARTIFACT_WRITE_FAILED` is used only when the provider completed with exit `0`
+and a required post-invocation artifact write failed. An owned failure before
+provider invocation is `PREPARATION_FAILED`.
 
 `artifacts` contains exactly:
 
