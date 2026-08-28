@@ -577,7 +577,7 @@ assert result["artifacts"]["evidence"]["empty"] is False
 PY
 ```
 
-- [ ] **Step 3: Run and inspect the Claude smoke from the owner-facing session**
+- [x] **Step 3: Run and inspect the Claude smoke from the owner-facing session** — passing bundle: `/private/var/folders/55/6jqr25v5211fn00wych8b1jm0000gn/T/skilltest-runs/20260828T182851670Z-claude-runner-smoke-4d4db6eb-6d1a-4236-965a-0b3fae567dc3-pdw723xp`
 
 ```bash
 cd "$(git rev-parse --show-toplevel)/skill-validation/runner"
@@ -593,11 +593,11 @@ cmp "$CLAUDE_RUN_DIR/stdout.txt" "$CLAUDE_RUN_DIR/final.txt"
 
 Do not score either provider response.
 
-- [ ] **Step 4: Rewrite runner documentation after both smokes pass mechanically**
+- [x] **Step 4: Rewrite runner documentation after both smokes pass mechanically**
 
 Document only `skilltest run CONFIG`, owner authorization, exact schema `"0.2"`, fixture source/target rules, three literal tokens, fixed bundle layout, result meaning, provider/model/effort selection, fixed provider behavior, and the configuration/prompt/result examples from the spec. State that ordinary evidence may be empty and that the runner never evaluates it.
 
-- [ ] **Step 5: Run final verification**
+- [x] **Step 5: Run final verification**
 
 ```bash
 cd "$(git rev-parse --show-toplevel)/skill-validation/runner"
@@ -611,7 +611,7 @@ git status --short
 
 Expected: all offline and provider-free acceptance tests pass; only intended implementation, reset, documentation, and plan-state changes remain.
 
-- [ ] **Step 6: Archive the completed plan and commit documentation**
+- [x] **Step 6: Archive the completed plan and commit documentation**
 
 ```bash
 cd "$(git rev-parse --show-toplevel)"
