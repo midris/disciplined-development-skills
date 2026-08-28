@@ -39,8 +39,10 @@ Each fixture entry contains exactly:
 The runner copies individual regular files only. It does not copy whole
 directories, accept a source entry that is a symlink, create symlinks, merge
 directories, infer includes, or interpret file contents. Parent directories
-required by a target are created mechanically. Duplicate targets are invalid
-because a fresh run never merges or overwrites fixture inputs.
+required by a target are created mechanically. Fixture targets must be pairwise
+non-conflicting: no two targets may be equal, and neither target may be a
+path-component ancestor of the other. A fresh run never merges or overwrites
+fixture inputs.
 
 The following existing fields are removed:
 
@@ -83,9 +85,10 @@ the configuration directory so a tester can deliberately select any locally
 available regular file. The final path itself must not be a symlink; ordinary
 operating-system resolution of symlinked ancestor directories is accepted.
 `target` is a non-empty relative path without `.` or `..` components.
-`fixtures` may be empty, but duplicate targets are invalid. `provider` is
-exactly `codex` or `claude`; `model` is a non-empty string; `effort` matches
-`[a-z0-9][a-z0-9-]*` and is passed through without semantic validation.
+`fixtures` may be empty, but their targets must satisfy the pairwise conflict
+rule above. `provider` is exactly `codex` or `claude`; `model` is a non-empty
+string; `effort` matches `[a-z0-9][a-z0-9-]*` and is passed through without
+semantic validation.
 
 ## Runtime layout
 
@@ -219,7 +222,7 @@ concrete need exists.
 Keep validation mechanical and limited to what the runner must safely load or
 create: exact configuration shape, supported schema version and provider,
 required scalar types, regular prompt and fixture source files, safe relative
-fixture targets, unique targets, and filesystem failures.
+fixture targets, pairwise non-conflicting targets, and filesystem failures.
 
 Do not add semantic prompt checks, required template-token checks, skill checks,
 dependency checks, evidence expectations, provider capability checks, result
