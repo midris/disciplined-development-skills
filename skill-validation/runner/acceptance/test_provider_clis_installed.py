@@ -43,7 +43,7 @@ def test_rejects_unknown_operation_before_subprocess(monkeypatch) -> None:
 
 def test_installed_codex_has_the_target_version_and_adapter_flags() -> None:
     # Version and help subcommands are structurally incapable of model invocation.
-    assert _output("codex-version").strip() == "codex-cli 0.149.0"
+    assert _output("codex-version").strip() == "codex-cli 0.150.1"
     global_help = _output("codex-help")
     exec_help = _output("codex-exec-help")
     for flag in ("--ask-for-approval", "--search", "--cd"):
@@ -66,7 +66,7 @@ def test_installed_codex_has_the_target_version_and_adapter_flags() -> None:
 
 def test_installed_claude_has_the_target_version_and_adapter_flags() -> None:
     # Version and help subcommands are structurally incapable of model invocation.
-    assert _output("claude-version").strip() == "2.1.241 (Claude Code)"
+    assert _output("claude-version").strip() == "2.1.250 (Claude Code)"
     help_output = _output("claude-help")
     for flag in (
         "--print",
