@@ -2,7 +2,7 @@
 
 ## Status
 
-Approved in discussion on 2026-08-27. This design replaces the runner's
+Draft revised after review on 2026-08-27. This design replaces the runner's
 skill-specific input contract with a small, stateless prompt-execution contract.
 It does not begin implementation or resume catalog migration.
 
@@ -75,13 +75,13 @@ The complete configuration shape is:
 }
 ```
 
-No other root, fixture-entry, or execution fields are accepted. `id` retains
-the current path-safe identifier rules. `prompt` and each fixture `source` are
-configuration-relative paths to regular files. `target` is a non-empty relative
-path without `.` or `..` components. `fixtures` may be empty, but duplicate
-targets are invalid. `provider` is exactly `codex` or `claude`; `model` is a
-non-empty string; `effort` retains its current path-safe string syntax and is
-passed through without semantic validation.
+No other root, fixture-entry, or execution fields are accepted. `id` is a
+1–64-character string matching `[a-z0-9][a-z0-9-]{0,63}`. `prompt` and each
+fixture `source` are configuration-relative paths to regular files. `target` is
+a non-empty relative path without `.` or `..` components. `fixtures` may be
+empty, but duplicate targets are invalid. `provider` is exactly `codex` or
+`claude`; `model` is a non-empty string; `effort` matches
+`[a-z0-9][a-z0-9-]*` and is passed through without semantic validation.
 
 ## Runtime layout
 
@@ -238,7 +238,7 @@ copied into the updated runner documentation after implementation is verified.
 Verification consists of:
 
 1. the runner unit and acceptance suite;
-2. a configuration-shape check for both retained provider smoke definitions;
+2. a configuration-shape check for both newly created provider smoke definitions;
 3. one approved end-to-end Codex smoke invocation;
 4. one approved end-to-end Claude smoke invocation using the fixed local baseline;
 5. mechanical inspection that each smoke produced the required stable artifacts
@@ -263,11 +263,26 @@ top-level fields:
 | `test` | Object containing exactly `id`. |
 | `execution` | Mechanical provider invocation record. |
 | `artifacts` | Fixed artifact records described below. |
-| `infrastructure_error` | `null` or the existing exact `code` and `message` object. |
+| `infrastructure_error` | `null` or the exact `code` and `message` object defined below. |
 
-`execution` contains exactly `provider`, `model`, `effort`, `executable`,
-`timeout_seconds`, `invocation_started`, `timed_out`, and `exit_code`, retaining
-their current meanings and types.
+`run_id` is a non-empty string. `started_at` and `finished_at` match
+`YYYY-MM-DDTHH:MM:SS.mmmZ`. `duration_seconds` is a non-negative number.
+
+`test` contains exactly `id`, a string satisfying the same path-safe identifier
+rule as the configuration.
+
+`execution` contains exactly:
+
+| Field | Type and value |
+|---|---|
+| `provider` | String enum `codex` or `claude`. |
+| `model` | Non-empty string copied from the configuration. |
+| `effort` | String matching `[a-z0-9][a-z0-9-]*`, copied from the configuration. |
+| `executable` | String enum `codex` or `claude`; it matches `provider`. |
+| `timeout_seconds` | Integer constant `900`. |
+| `invocation_started` | Boolean. |
+| `timed_out` | Boolean. |
+| `exit_code` | Integer or `null`. |
 
 `artifacts` contains exactly:
 
@@ -283,20 +298,33 @@ their current meanings and types.
 | `evidence` | `workspace/evidence` | Directory artifact. |
 
 A file artifact contains exactly `path`, `exists`, `bytes`, and `sha256`.
-`bytes` and `sha256` are non-null only when `exists` is true.
+`path` is the stable run-relative string specified above and `exists` is a
+Boolean. When `exists` is true, `bytes` is a non-negative integer and `sha256`
+is exactly 64 lowercase hexadecimal characters. When `exists` is false,
+`bytes` and `sha256` are both `null`.
 
 A directory artifact contains exactly `path`, `exists`, `empty`, and `entries`.
-When the directory exists, `empty` is a Boolean and `entries` is its
-lexicographically path-sorted recursive inventory. When it does not exist,
-`empty` is `null` and `entries` is empty.
+`path` is the stable run-relative string specified above and `exists` is a
+Boolean. When the directory exists, `empty` is a Boolean equal to whether
+`entries` has zero items, and `entries` is its lexicographically path-sorted
+recursive inventory. When it does not exist, `empty` is `null` and `entries`
+is empty.
 
 Each directory entry contains exactly `path`, `type`, `bytes`, and `sha256`.
 `path` is relative to its directory artifact. `type` is exactly `file`,
-`directory`, `symlink`, or `other`. Regular files have non-null `bytes` and
-`sha256`; every other type has `null` for both. Inventory does not follow
-symlinks. The fixture inventory describes the freshly copied fixture before
-provider invocation; the evidence inventory describes evidence at finalization,
-including after provider timeout or nonzero exit.
+`directory`, `symlink`, or `other`. For `file`, `bytes` is a non-negative
+integer and `sha256` is exactly 64 lowercase hexadecimal characters. Every
+other type has `null` for both. Inventory does not follow symlinks. Both fixture
+and evidence inventories describe their retained directories during
+finalization, including after provider timeout or nonzero exit. The runner does
+not compare final fixture contents with their initial copies or treat provider
+changes as an error.
+
+`infrastructure_error` is `null` exactly when `status` is `COMPLETED`. When
+`status` is `INFRA_ERROR`, it is an object containing exactly `code` and
+`message`. `code` is one of `PREPARATION_FAILED`, `PROVIDER_LAUNCH_FAILED`,
+`PROVIDER_TIMEOUT`, `PROVIDER_EXIT_NONZERO`, or `ARTIFACT_WRITE_FAILED`;
+`message` is a string.
 
 An abbreviated completed result is:
 
@@ -360,8 +388,10 @@ reset:
   inventory against schema `"0.2"`;
 - delete the active draft
   `plans/2026-08-26-adversarial-review-catalog-migration.md`;
-- reset Phase 3 of `plans/2026-08-24-scenario-porting-roadmap.md` to zero
-  migrated catalogs and remove its completed-wave links;
+- reset current Phase 3 progress in
+  `plans/2026-08-24-scenario-porting-roadmap.md` to zero migrated catalogs;
+- keep the completed-wave links in Phase 3 under a clearly labeled superseded
+  schema `"0.1"` migration-wave history;
 - retain the completed migration plans in `plans/completed/` as historical
   records;
 - retain unrelated deferred plans, including the Codex-versus-Claude review
@@ -374,10 +404,11 @@ end-to-end mechanical smoke run.
 
 ## Controlled provider acceptance smoke
 
-Runner acceptance includes one retained Codex smoke definition and one retained
-Claude smoke definition using the same controlled prompt and fixture. Each
-configuration selects its provider normally; neither uses catalog content or
-asserts skill behavior.
+Implementation creates one Codex smoke definition and one Claude smoke
+definition under `skill-validation/runner/acceptance/fixtures/provider-smoke/`.
+They share `prompt.md` and `fixture/input.txt`; `codex.json` selects
+`gpt-5.6-sol` at low effort and `claude.json` selects `sonnet` at low effort.
+Neither uses catalog content or asserts skill behavior.
 
 The fixture contains one small text file. The prompt uses all three runtime
 tokens, directs the provider to read the fixture, write one named regular file
