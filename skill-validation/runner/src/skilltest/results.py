@@ -5,6 +5,7 @@ from __future__ import annotations
 import hashlib
 import json
 import os
+import stat
 import tempfile
 from pathlib import Path
 from typing import Any
@@ -28,48 +29,37 @@ def result_record(
     finished_at: str,
     duration_seconds: float,
 ) -> dict[str, Any]:
-    """Build the version-one record from retained artifacts without interpreting content."""
+    """Build the schema 0.2 record from retained artifacts without interpreting content."""
     if error is not None and error[0] not in ERROR_CODES:
         raise ValueError(f"unknown infrastructure error code: {error[0]}")
-    if config.skill is None:
-        test = {
-            "id": config.id,
-            "skill_context": "none",
-            "scenario": config.scenario.id,
-        }
-    else:
-        test = {
-            "id": config.id,
-            "skill": config.skill.id,
-            "dependencies": [item.id for item in config.dependencies],
-            "scenario": config.scenario.id,
-        }
+    execution_record = {
+        "provider": config.execution.provider,
+        "model": config.execution.model,
+        "effort": config.execution.effort,
+        "executable": provider_result.executable,
+        "timeout_seconds": PROVIDER_TIMEOUT_SECONDS,
+        "invocation_started": provider_result.invocation_started,
+        "timed_out": provider_result.timed_out,
+        "exit_code": provider_result.exit_code,
+    }
     return {
-        "schema_version": 1,
+        "schema_version": "0.2",
         "run_id": context.run_id,
         "status": "COMPLETED" if error is None else "INFRA_ERROR",
         "started_at": context.started_at,
         "finished_at": finished_at,
         "duration_seconds": duration_seconds,
-        "test": test,
-        "execution": {
-            "provider": config.execution.provider,
-            "model": config.execution.model,
-            "effort": config.execution.effort,
-            "executable": provider_result.executable,
-            "timeout_seconds": PROVIDER_TIMEOUT_SECONDS,
-            "invocation_started": provider_result.invocation_started,
-            "timed_out": provider_result.timed_out,
-            "exit_code": provider_result.exit_code,
-        },
-        "inputs": _input_records(context.inputs_dir, context.run_dir),
+        "test": {"id": config.id},
+        "execution": execution_record,
         "artifacts": {
             "config": _file_artifact(context.config_path, context.run_dir),
-            "subject_input": _file_artifact(context.subject_input_path, context.run_dir),
+            "prompt_template": _file_artifact(context.prompt_template_path, context.run_dir),
+            "prompt": _file_artifact(context.prompt_path, context.run_dir),
             "stdout": _file_artifact(context.stdout_path, context.run_dir),
             "stderr": _file_artifact(context.stderr_path, context.run_dir),
             "final": _file_artifact(context.final_output_path, context.run_dir),
-            "workspace": {"path": "workspace", "exists": context.workspace_dir.is_dir()},
+            "fixture": _directory_artifact(context.fixture_dir, context.run_dir),
+            "evidence": _directory_artifact(context.evidence_dir, context.run_dir),
         },
         "infrastructure_error": (
             None if error is None else {"code": error[0], "message": error[1]}
@@ -91,20 +81,6 @@ def publish_result(path: Path, record: dict[str, Any]) -> None:
         raise
 
 
-def _input_records(inputs_dir: Path, run_dir: Path) -> list[dict[str, Any]]:
-    records: list[dict[str, Any]] = []
-    for directory, _, files in os.walk(inputs_dir):
-        for name in files:
-            path = Path(directory, name)
-            if path.is_file():
-                records.append({
-                    "path": path.relative_to(run_dir).as_posix(),
-                    "bytes": path.stat().st_size,
-                    "sha256": _sha256(path),
-                })
-    return sorted(records, key=lambda record: record["path"])
-
-
 def _file_artifact(path: Path, run_dir: Path) -> dict[str, Any]:
     record: dict[str, Any] = {"path": path.relative_to(run_dir).as_posix(), "exists": path.is_file()}
     if record["exists"]:
@@ -112,6 +88,55 @@ def _file_artifact(path: Path, run_dir: Path) -> dict[str, Any]:
     else:
         record.update({"bytes": None, "sha256": None})
     return record
+
+
+def _directory_artifact(path: Path, run_dir: Path) -> dict[str, Any]:
+    """Inventory one retained directory without following symlinks."""
+    try:
+        exists = stat.S_ISDIR(path.lstat().st_mode)
+    except FileNotFoundError:
+        exists = False
+
+    entries: list[dict[str, Any]] = []
+
+    def visit(directory: Path) -> None:
+        for child in directory.iterdir():
+            status = child.lstat()
+            mode = status.st_mode
+            if stat.S_ISREG(mode):
+                entry_type = "file"
+                size: int | None = status.st_size
+                digest: str | None = _sha256(child)
+            elif stat.S_ISDIR(mode):
+                entry_type = "directory"
+                size = None
+                digest = None
+            elif stat.S_ISLNK(mode):
+                entry_type = "symlink"
+                size = None
+                digest = None
+            else:
+                entry_type = "other"
+                size = None
+                digest = None
+            entries.append({
+                "path": child.relative_to(path).as_posix(),
+                "type": entry_type,
+                "bytes": size,
+                "sha256": digest,
+            })
+            if entry_type == "directory":
+                visit(child)
+
+    if exists:
+        visit(path)
+        entries.sort(key=lambda entry: entry["path"])
+    return {
+        "path": path.relative_to(run_dir).as_posix(),
+        "exists": exists,
+        "empty": not entries if exists else None,
+        "entries": entries,
+    }
 
 
 def _sha256(path: Path) -> str:
