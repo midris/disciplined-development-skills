@@ -48,7 +48,7 @@ def run_once(config_path: Path) -> RunOutcome:
         return _finish(context, config, result, error, started)
 
     request = ProviderRequest(
-        prepared.workspace_dir, prepared.subject_input_bytes, prepared.final_output_path,
+        prepared.workspace_dir, prepared.prompt_bytes, prepared.final_output_path,
         config.execution.provider, config.execution.model, config.execution.effort,
     )
     error = _log_error(context, f"provider arguments: {_arguments(request)!r}", "PREPARATION_FAILED")
@@ -61,7 +61,12 @@ def run_once(config_path: Path) -> RunOutcome:
     provider_error = _provider_error(result)
     log_error = _provider_log_error(context, result)
     artifact_error = _write_provider_artifacts(context, result)
-    error = provider_error or log_error or artifact_error
+    final_error = None
+    if provider_error is None and config.execution.provider == "claude":
+        final_error = _write_artifact(
+            context, context.final_output_path, result.stdout_bytes, "provider final output"
+        )
+    error = provider_error or log_error or artifact_error or final_error
     return _finish(context, config, result, error, started)
 
 

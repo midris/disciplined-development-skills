@@ -2,6 +2,7 @@
 
 from __future__ import annotations
 
+import base64
 import json
 import os
 import stat
@@ -41,13 +42,32 @@ class FakeProvider:
         exit_code: int = 0,
         delay_seconds: float = 0,
         write_final: bool = True,
+        fixture_bytes: bytes | None = None,
+        evidence_name: str | None = None,
+        evidence_bytes: bytes = b"",
     ) -> None:
-        monkeypatch.setenv("SKILLTEST_FAKE_STDOUT", stdout.decode("utf-8"))
-        monkeypatch.setenv("SKILLTEST_FAKE_STDERR", stderr.decode("utf-8"))
-        monkeypatch.setenv("SKILLTEST_FAKE_FINAL", final.decode("utf-8"))
+        monkeypatch.setenv("SKILLTEST_FAKE_STDOUT", base64.b64encode(stdout).decode("ascii"))
+        monkeypatch.setenv("SKILLTEST_FAKE_STDERR", base64.b64encode(stderr).decode("ascii"))
+        monkeypatch.setenv("SKILLTEST_FAKE_FINAL", base64.b64encode(final).decode("ascii"))
         monkeypatch.setenv("SKILLTEST_FAKE_EXIT", str(exit_code))
         monkeypatch.setenv("SKILLTEST_FAKE_DELAY", str(delay_seconds))
         monkeypatch.setenv("SKILLTEST_FAKE_WRITE_FINAL", "1" if write_final else "0")
+        if fixture_bytes is None:
+            monkeypatch.delenv("SKILLTEST_FAKE_FIXTURE", raising=False)
+        else:
+            monkeypatch.setenv(
+                "SKILLTEST_FAKE_FIXTURE",
+                base64.b64encode(fixture_bytes).decode("ascii"),
+            )
+        if evidence_name is None:
+            monkeypatch.delenv("SKILLTEST_FAKE_EVIDENCE_NAME", raising=False)
+            monkeypatch.delenv("SKILLTEST_FAKE_EVIDENCE", raising=False)
+        else:
+            monkeypatch.setenv("SKILLTEST_FAKE_EVIDENCE_NAME", evidence_name)
+            monkeypatch.setenv(
+                "SKILLTEST_FAKE_EVIDENCE",
+                base64.b64encode(evidence_bytes).decode("ascii"),
+            )
 
     def record(self) -> dict[str, object]:
         records = self.record_path.read_text(encoding="utf-8").splitlines()
@@ -65,6 +85,7 @@ def fake_provider(tmp_path: Path, monkeypatch: pytest.MonkeyPatch) -> FakeProvid
     bin_dir.mkdir()
     record_path = tmp_path / "provider-record.json"
     script = """#!/usr/bin/env python3
+import base64
 import json
 import os
 import sys
@@ -95,12 +116,20 @@ with record_path.open("a", encoding="utf-8") as record_file:
     }), file=record_file)
 run_dir = Path(os.getcwd()).parent
 before_output = (run_dir / "config.json").exists()
+fixture_payload = os.environ.get("SKILLTEST_FAKE_FIXTURE")
+if fixture_payload is not None:
+    Path("fixture/input.txt").write_bytes(base64.b64decode(fixture_payload))
+evidence_name = os.environ.get("SKILLTEST_FAKE_EVIDENCE_NAME")
+if evidence_name is not None:
+    evidence_path = Path("evidence") / evidence_name
+    evidence_path.parent.mkdir(parents=True, exist_ok=True)
+    evidence_path.write_bytes(base64.b64decode(os.environ["SKILLTEST_FAKE_EVIDENCE"]))
 time.sleep(float(os.environ["SKILLTEST_FAKE_DELAY"]))
-sys.stdout.buffer.write(os.environ["SKILLTEST_FAKE_STDOUT"].encode("utf-8"))
-sys.stderr.buffer.write(os.environ["SKILLTEST_FAKE_STDERR"].encode("utf-8"))
+sys.stdout.buffer.write(base64.b64decode(os.environ["SKILLTEST_FAKE_STDOUT"]))
+sys.stderr.buffer.write(base64.b64decode(os.environ["SKILLTEST_FAKE_STDERR"]))
 if sys.argv[0].endswith("codex") and os.environ["SKILLTEST_FAKE_WRITE_FINAL"] == "1":
     output_path = Path(sys.argv[sys.argv.index("--output-last-message") + 1])
-    output_path.write_bytes(os.environ["SKILLTEST_FAKE_FINAL"].encode("utf-8"))
+    output_path.write_bytes(base64.b64decode(os.environ["SKILLTEST_FAKE_FINAL"]))
 observation_path = Path(os.environ["SKILLTEST_FAKE_CONFIG_OBSERVATIONS"])
 with observation_path.open("a", encoding="utf-8") as observation_file:
     print(json.dumps({

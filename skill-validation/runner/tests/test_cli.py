@@ -52,6 +52,15 @@ def test_run_command_has_one_bundle_per_external_invocation(
     assert invalid.returncode == 2
     assert invalid.stdout == ""
     assert "invalid JSON configuration" in invalid.stderr
+    assert not (temporary_root / "skilltest-runs").exists()
+
+    invalid_utf8 = build_config_case(name="invalid-utf8")
+    (invalid_utf8.root / "prompt.md").write_bytes(b"\xff")
+    invalid_prompt = invoke("run", str(invalid_utf8.config_path))
+    assert invalid_prompt.returncode == 2
+    assert invalid_prompt.stdout == ""
+    assert "prompt must be readable UTF-8" in invalid_prompt.stderr
+    assert not (temporary_root / "skilltest-runs").exists()
 
     successful_runs = [invoke("run", str(case.config_path)) for _ in range(2)]
     serial_run_dirs = [Path(process.stdout.strip()) for process in successful_runs]
