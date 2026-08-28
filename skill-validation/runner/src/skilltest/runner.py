@@ -2,6 +2,8 @@
 
 from __future__ import annotations
 
+import os
+import tempfile
 from dataclasses import dataclass
 from datetime import UTC, datetime
 from pathlib import Path
@@ -102,10 +104,28 @@ def _write_artifact(
     context: RunContext, path: Path, contents: bytes, name: str
 ) -> tuple[str, str] | None:
     try:
-        path.write_bytes(contents)
+        _publish_artifact(path, contents)
     except OSError as error:
         return "ARTIFACT_WRITE_FAILED", f"{name} write failed: {error}"
     return _log_error(context, f"{name} written", "ARTIFACT_WRITE_FAILED")
+
+
+def _publish_artifact(path: Path, contents: bytes) -> None:
+    """Atomically publish one runner-owned file and remove partial output."""
+    temporary_path: Path | None = None
+    try:
+        descriptor, temporary_name = tempfile.mkstemp(
+            prefix=f".{path.name}-", dir=path.parent
+        )
+        temporary_path = Path(temporary_name)
+        os.close(descriptor)
+        temporary_path.write_bytes(contents)
+        temporary_path.replace(path)
+    except BaseException:
+        if temporary_path is not None:
+            temporary_path.unlink(missing_ok=True)
+        path.unlink(missing_ok=True)
+        raise
 
 
 def _finish(
@@ -116,7 +136,7 @@ def _finish(
     started: float,
 ) -> RunOutcome:
     try:
-        context.config_path.write_bytes(config.config_bytes)
+        _publish_artifact(context.config_path, config.config_bytes)
     except OSError as failure:
         config_error = ("ARTIFACT_WRITE_FAILED", f"configuration artifact write failed: {failure}")
     else:

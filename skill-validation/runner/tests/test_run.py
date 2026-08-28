@@ -69,6 +69,20 @@ def _assert_terminal_log(run_dir: Path, terminal: str) -> None:
     assert messages[-1] == terminal
 
 
+def _fail_after_partial_write(
+    monkeypatch: pytest.MonkeyPatch, artifact_name: str
+) -> None:
+    original_write_bytes = Path.write_bytes
+
+    def partial_write(path: Path, contents: bytes) -> int:
+        if path.name == artifact_name or path.name.startswith(f".{artifact_name}-"):
+            original_write_bytes(path, contents[:3])
+            raise OSError(f"{artifact_name} partial write")
+        return original_write_bytes(path, contents)
+
+    monkeypatch.setattr(Path, "write_bytes", partial_write)
+
+
 # Break caught: reconnecting the runner to subject-input bytes or a non-workspace CWD.
 @pytest.mark.parametrize(
     ("provider", "stdout", "stderr", "provider_final"),
@@ -256,14 +270,7 @@ def test_run_once_retains_failed_provider_mutations_and_provider_error_precedenc
     if timed_out:
         monkeypatch.setattr(providers_module, "PROVIDER_TIMEOUT_SECONDS", 0.2)
         monkeypatch.setattr(providers_module, "TERMINATE_GRACE_SECONDS", 0.01)
-    original_write_bytes = Path.write_bytes
-
-    def fail_stdout(path: Path, contents: bytes) -> int:
-        if path.name == "stdout.txt":
-            raise OSError("stdout failed")
-        return original_write_bytes(path, contents)
-
-    monkeypatch.setattr(Path, "write_bytes", fail_stdout)
+    _fail_after_partial_write(monkeypatch, "stdout.txt")
 
     outcome = run_once(case.config_path)
 
@@ -302,14 +309,7 @@ def test_run_once_emits_artifact_write_failed_after_successful_provider(
         stderr=b"raw stderr",
         final=b"final",
     )
-    original_write_bytes = Path.write_bytes
-
-    def fail_stdout(path: Path, contents: bytes) -> int:
-        if path.name == "stdout.txt":
-            raise OSError("stdout failed")
-        return original_write_bytes(path, contents)
-
-    monkeypatch.setattr(Path, "write_bytes", fail_stdout)
+    _fail_after_partial_write(monkeypatch, "stdout.txt")
 
     outcome = run_once(case.config_path)
 
@@ -324,6 +324,59 @@ def test_run_once_emits_artifact_write_failed_after_successful_provider(
     assert (outcome.run_dir / "stderr.txt").read_bytes() == b"raw stderr"
     assert (outcome.run_dir / "final.txt").read_bytes() == b"final"
     _assert_terminal_log(outcome.run_dir, "INFRA_ERROR ARTIFACT_WRITE_FAILED")
+
+
+# Break caught: inventorying a partially written provider artifact as retained output.
+def test_run_once_removes_provider_artifact_after_partial_write_failure(
+    build_config_case, fake_provider, monkeypatch
+) -> None:
+    case = build_config_case(name="partial-provider-artifact")
+    fake_provider.configure(
+        monkeypatch,
+        stdout=b"raw stdout",
+        stderr=b"raw stderr",
+        final=b"final",
+    )
+    _fail_after_partial_write(monkeypatch, "stdout.txt")
+
+    outcome = run_once(case.config_path)
+
+    assert outcome.exit_code == 1
+    assert outcome.run_dir is not None
+    result = _validate_result(outcome.run_dir)
+    assert result["infrastructure_error"]["code"] == "ARTIFACT_WRITE_FAILED"
+    assert result["artifacts"]["stdout"] == {
+        "path": "stdout.txt",
+        "exists": False,
+        "bytes": None,
+        "sha256": None,
+    }
+    assert not (outcome.run_dir / "stdout.txt").exists()
+    assert not list(outcome.run_dir.glob(".stdout.txt-*"))
+
+
+# Break caught: inventorying a partially written configuration snapshot as retained input.
+def test_run_once_removes_configuration_snapshot_after_partial_write_failure(
+    build_config_case, fake_provider, monkeypatch
+) -> None:
+    case = build_config_case(name="partial-config-artifact")
+    fake_provider.configure(monkeypatch, final=b"final")
+    _fail_after_partial_write(monkeypatch, "config.json")
+
+    outcome = run_once(case.config_path)
+
+    assert outcome.exit_code == 1
+    assert outcome.run_dir is not None
+    result = _validate_result(outcome.run_dir)
+    assert result["infrastructure_error"]["code"] == "ARTIFACT_WRITE_FAILED"
+    assert result["artifacts"]["config"] == {
+        "path": "config.json",
+        "exists": False,
+        "bytes": None,
+        "sha256": None,
+    }
+    assert not (outcome.run_dir / "config.json").exists()
+    assert not list(outcome.run_dir.glob(".config.json-*"))
 
 
 # Break caught: leaving a partial result behind when atomic publication fails.
