@@ -1,80 +1,78 @@
 # Scenario Porting Roadmap
 
-**Goal:** Migrate every active, replayable scenario to the reusable prompt
-runner schema `"0.2"` before designing the repository's long-term testing
-methodology.
+**Goal:** Package every active canonical scenario for reusable prompt runner
+schema `"0.2"` before designing the repository's long-term testing methodology.
 
 **Contract:** `skill-validation/charter/core-contracts.md`
 
 **Design:** [schema `"0.2"` catalog migration](specs/2026-08-29-catalog-migration-design.md)
 
-**Current phase:** Catalog migration.
+**Current phase:** Schema `"0.2"` catalog migration. See the scenario migration
+index for current totals.
 
-## Rules
+## Authorities
 
-- Use `origin/docs/comprehensive-skill-cleanup` at `13599fb7d3127334b0d07bfe468767e586ec5f9c` as the canonical scenario source.
-- Migrate only candidates in the [active scenario inventory](../skill-validation/scenarios/README.md); scenarios outside it remain out of scope unless promoted.
-- Author tester-authored prompts and individual fixture files faithfully from the candidate scenario; the runner neither injects nor validates skill instructions, dependencies, permissions, or behavioral expectations.
-- During catalog migration, load every configuration and run at least one preselected scenario from the catalog through the real provider, collecting mechanical evidence without scoring it.
-- Keep behavioral evaluation, baselines, and runner changes out of migration; runner changes require separate approved scope.
-- Do not commit raw provider output or temporary result bundles.
+- Source commit `13599fb7d3127334b0d07bfe468767e586ec5f9c` owns
+  canonical candidate scope and scenario content.
+- The migration design owns package, prompt, manifest, smoke, and completion
+  rules.
+- The [scenario migration index](../skill-validation/scenarios/README.md) owns
+  current totals and migrated scenario links.
+- This roadmap owns only phase and sequence status.
 
 ## Phases
 
-### 1. Inventory
+### 1. Canonical inventory — complete
 
-- Complete: [active scenario inventory](completed/2026-08-24-scenario-inventory.md).
+[Canonical scenario count reconciliation](completed/2026-08-24-scenario-inventory.md)
+established the 105-scenario scope.
 
-### 2. Runner-shape coverage
+### 2. Schema 0.1 feasibility — superseded
 
-- For each uncovered shape, select a representative and agree on a faithful porting solution.
-- Create a separate plan to implement, smoke-run, and complete that shape.
-- Finish one shape before starting the next.
-- Complete: [runner-shape coverage](completed/2026-08-24-runner-shape-coverage.md).
+[Runner-shape coverage](completed/2026-08-24-runner-shape-coverage.md) and the
+schema `"0.1"` catalog plans are historical feasibility evidence. They do not
+establish schema `"0.2"` package or catalog coverage.
 
-### 3. Catalog migration
+### 3. Schema 0.2 catalog migration — current
 
-- Current phase: 0 catalogs migrated under schema `"0.2"`.
-- Create a fresh migration plan for each catalog.
-- Author each catalog with tester-authored prompts and individual fixture files.
-- Give every scenario a README that owns its purpose, package inventory, arm
-  context, provenance, and latest smoke status.
-- Treat each checked-in `test.json` as a default smoke arm; scenario identity does
-  not include tester-selected skill or dependency versions.
-- Load every configuration and run at least one preselected scenario from each catalog through the real provider, collecting mechanical evidence without scoring it.
-- Retain only the latest mechanical `smoke-result.json` for a scenario that is
-  live-smoked; do not commit provider responses or temporary bundles.
+Create one catalog-specific plan at a time in this order. Complete and archive
+that plan and merge its catalog before creating the plan for the next catalog.
+Check a catalog only after its plan is complete and archived and its catalog is
+merged:
 
-Migrate catalogs in this order, finishing and merging one before planning the
-next: `writing-explicit-rationale`, `sweeping-stale-references`,
-`lean-plan-writing`, `disciplined-research`, `disciplined-development`,
-`adversarial-review-loop`, `skill-discovery`,
-`dispatching-development-subagents`, `concise-writing`, then
-`adversarial-review`.
+- [ ] `writing-explicit-rationale`
+- [ ] `sweeping-stale-references`
+- [ ] `lean-plan-writing`
+- [ ] `disciplined-research`
+- [ ] `disciplined-development`
+- [ ] `adversarial-review-loop`
+- [ ] `skill-discovery`
+- [ ] `dispatching-development-subagents`
+- [ ] `concise-writing`
+- [ ] `adversarial-review`
 
-#### Superseded schema `"0.1"` migration wave
+### 4. Readiness review — pending
 
-- [writing-explicit-rationale catalog migration](completed/2026-08-25-writing-explicit-rationale-catalog-migration.md)
-- [sweeping-stale-references catalog migration](completed/2026-08-25-sweeping-stale-references-catalog-migration.md)
-- [lean-plan-writing catalog migration](completed/2026-08-25-lean-plan-writing-catalog-migration.md)
-- [disciplined-research catalog migration](completed/2026-08-25-disciplined-research-catalog-migration.md)
-- [disciplined-development catalog migration](completed/2026-08-26-disciplined-development-catalog-migration.md)
-- [adversarial-review-loop catalog migration](completed/2026-08-26-adversarial-review-loop-catalog-migration.md)
-- [skill-discovery catalog migration](completed/2026-08-26-skill-discovery-catalog-migration.md)
-- [dispatching-development-subagents catalog migration](completed/2026-08-26-dispatching-development-subagents-catalog-migration.md)
+Reconcile all packages with the canonical inventory and resolve or explicitly
+retain every blocker and ambiguity.
 
-### 4. Readiness review
+### 5. Testing methodology — pending
 
-- Reconcile the migrated scenarios with the inventory.
-- Resolve or explicitly retain every blocker and ambiguity, then confirm migration is complete.
+After migration, approve canonical evaluator-transport enforcement and the
+testing methodology before establishing a behavioral baseline.
 
-### 5. Testing methodology
+## Historical schema 0.1 catalog plans
 
-- After migration, approve the testing methodology before establishing the initial baseline.
+- [writing-explicit-rationale](completed/2026-08-25-writing-explicit-rationale-catalog-migration.md)
+- [sweeping-stale-references](completed/2026-08-25-sweeping-stale-references-catalog-migration.md)
+- [lean-plan-writing](completed/2026-08-25-lean-plan-writing-catalog-migration.md)
+- [disciplined-research](completed/2026-08-25-disciplined-research-catalog-migration.md)
+- [disciplined-development](completed/2026-08-26-disciplined-development-catalog-migration.md)
+- [adversarial-review-loop](completed/2026-08-26-adversarial-review-loop-catalog-migration.md)
+- [skill-discovery](completed/2026-08-26-skill-discovery-catalog-migration.md)
+- [dispatching-development-subagents](completed/2026-08-26-dispatching-development-subagents-catalog-migration.md)
 
 ## Done when
 
-- Every candidate in the active inventory is represented by a loadable schema `"0.2"` configuration.
-- Each distinct runner shape has completed one end-to-end smoke run.
-- Each migrated catalog has at least one completed end-to-end smoke run.
-- The runnable catalog is ready for testing-methodology design.
+All ten catalog checkboxes are complete, the migration index reports 105/105,
+and the migration design's completion contract is satisfied.
