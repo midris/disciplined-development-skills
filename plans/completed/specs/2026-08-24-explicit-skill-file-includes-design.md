@@ -1,6 +1,7 @@
 # Explicit Skill File Includes Design
 
-**Status:** Owner-approved design on 2026-08-24.
+**Status:** Implemented under schema `"0.1"` and superseded on 2026-08-28 by
+the reusable prompt runner's schema `"0.2"` contract.
 
 ## Goal
 

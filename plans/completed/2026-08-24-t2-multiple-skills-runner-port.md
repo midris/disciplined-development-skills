@@ -8,7 +8,7 @@
 
 **Tech stack:** Python 3.11+, pytest, Markdown, JSON, `skilltest`, Codex CLI.
 
-**Spec:** `plans/specs/2026-08-24-explicit-skill-file-includes-design.md`, `plans/2026-08-24-runner-shape-coverage.md`, `plans/2026-08-24-scenario-porting-roadmap.md`, and `skill-validation/charter/core-contracts.md`.
+**Spec:** `plans/completed/specs/2026-08-24-explicit-skill-file-includes-design.md`, `plans/completed/2026-08-24-runner-shape-coverage.md`, `plans/2026-08-24-scenario-porting-roadmap.md`, and `skill-validation/charter/core-contracts.md`.
 
 ## Constraints
 

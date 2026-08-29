@@ -6,6 +6,8 @@ methodology.
 
 **Contract:** `skill-validation/charter/core-contracts.md`
 
+**Design:** [schema `"0.2"` catalog migration](specs/2026-08-29-catalog-migration-design.md)
+
 **Current phase:** Catalog migration.
 
 ## Rules
@@ -35,7 +37,20 @@ methodology.
 - Current phase: 0 catalogs migrated under schema `"0.2"`.
 - Create a fresh migration plan for each catalog.
 - Author each catalog with tester-authored prompts and individual fixture files.
+- Give every scenario a README that owns its purpose, package inventory, arm
+  context, provenance, and latest smoke status.
+- Treat each checked-in `test.json` as a default smoke arm; scenario identity does
+  not include tester-selected skill or dependency versions.
 - Load every configuration and run at least one preselected scenario from each catalog through the real provider, collecting mechanical evidence without scoring it.
+- Retain only the latest mechanical `smoke-result.json` for a scenario that is
+  live-smoked; do not commit provider responses or temporary bundles.
+
+Migrate catalogs in this order, finishing and merging one before planning the
+next: `writing-explicit-rationale`, `sweeping-stale-references`,
+`lean-plan-writing`, `disciplined-research`, `disciplined-development`,
+`adversarial-review-loop`, `skill-discovery`,
+`dispatching-development-subagents`, `concise-writing`, then
+`adversarial-review`.
 
 #### Superseded schema `"0.1"` migration wave
 
