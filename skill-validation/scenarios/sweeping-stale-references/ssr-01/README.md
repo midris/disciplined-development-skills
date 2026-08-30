@@ -8,4 +8,4 @@ Prompt adapted from the canonical `SSR-01` fenced block by replacing `The comple
 
 # Smoke
 
-No schema `"0.2"` result is retained.
+Runner status: `COMPLETED`. Retained result: [smoke-result.json](smoke-result.json).
