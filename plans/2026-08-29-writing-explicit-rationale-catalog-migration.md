@@ -208,10 +208,10 @@ rerunning affected checks after verified review repairs.
   `skill-validation/scenarios/writing-explicit-rationale/wer-02/`.
 - Modify this plan only to mark completed steps.
 
-- [ ] Create both packages from the catalog decisions above.
-- [ ] Confirm the two prompts have their planned resulting hashes and each
+- [x] Create both packages from the catalog decisions above.
+- [x] Confirm the two prompts have their planned resulting hashes and each
   configuration loads with the runner.
-- [ ] Review the package files against their canonical sources and commit the
+- [x] Review the package files against their canonical sources and commit the
   task changes.
 
 ## Task 2: Package `WER-05`, `WER-06`, and `WER-08`
