@@ -240,12 +240,12 @@ rerunning affected checks after verified review repairs.
   Packaged files table.
 - Modify this plan only to mark completed steps.
 
-- [ ] Verify the Superpowers 6.3.0 dependency is available with the planned
+- [x] Verify the Superpowers 6.3.0 dependency is available with the planned
   hash; stop if it is not.
-- [ ] Create the package, pinned dependency, and four canonical project files.
-- [ ] Confirm the prompt and packaged files have their planned hashes and the
+- [x] Create the package, pinned dependency, and four canonical project files.
+- [x] Confirm the prompt and packaged files have their planned hashes and the
   configuration loads with the runner.
-- [ ] Review the package files against their sources and commit the task
+- [x] Review the package files against their sources and commit the task
   changes.
 
 ## Task 4: Add catalog acceptance and verify preparation
