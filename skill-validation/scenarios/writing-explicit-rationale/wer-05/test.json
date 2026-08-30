@@ -1,0 +1,10 @@
+{
+  "schema_version": "0.2",
+  "id": "wer-05",
+  "prompt": "prompt.md",
+  "fixtures": [
+    {"source": "../../../../skills/writing-explicit-rationale/SKILL.md", "target": "skills/writing-explicit-rationale/SKILL.md"},
+    {"source": "fixture/docs/architecture/ingest.md", "target": "docs/architecture/ingest.md"}
+  ],
+  "execution": {"provider": "codex", "model": "gpt-5.6-sol", "effort": "low"}
+}

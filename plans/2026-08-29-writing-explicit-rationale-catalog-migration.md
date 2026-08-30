@@ -208,10 +208,10 @@ rerunning affected checks after verified review repairs.
   `skill-validation/scenarios/writing-explicit-rationale/wer-02/`.
 - Modify this plan only to mark completed steps.
 
-- [ ] Create both packages from the catalog decisions above.
-- [ ] Confirm the two prompts have their planned resulting hashes and each
+- [x] Create both packages from the catalog decisions above.
+- [x] Confirm the two prompts have their planned resulting hashes and each
   configuration loads with the runner.
-- [ ] Review the package files against their canonical sources and commit the
+- [x] Review the package files against their canonical sources and commit the
   task changes.
 
 ## Task 2: Package `WER-05`, `WER-06`, and `WER-08`
@@ -224,10 +224,10 @@ rerunning affected checks after verified review repairs.
   `skill-validation/scenarios/writing-explicit-rationale/wer-05/fixture/docs/architecture/ingest.md`.
 - Modify this plan only to mark completed steps.
 
-- [ ] Create all three packages and the `WER-05` scenario-owned fixture.
-- [ ] Confirm the prompts and copied canonical file have their planned hashes
+- [x] Create all three packages and the `WER-05` scenario-owned fixture.
+- [x] Confirm the prompts and copied canonical file have their planned hashes
   and each configuration loads with the runner.
-- [ ] Review the package files against their canonical sources and commit the
+- [x] Review the package files against their canonical sources and commit the
   task changes.
 
 ## Task 3: Package representative `WER-07`
@@ -240,12 +240,12 @@ rerunning affected checks after verified review repairs.
   Packaged files table.
 - Modify this plan only to mark completed steps.
 
-- [ ] Verify the Superpowers 6.3.0 dependency is available with the planned
+- [x] Verify the Superpowers 6.3.0 dependency is available with the planned
   hash; stop if it is not.
-- [ ] Create the package, pinned dependency, and four canonical project files.
-- [ ] Confirm the prompt and packaged files have their planned hashes and the
+- [x] Create the package, pinned dependency, and four canonical project files.
+- [x] Confirm the prompt and packaged files have their planned hashes and the
   configuration loads with the runner.
-- [ ] Review the package files against their sources and commit the task
+- [x] Review the package files against their sources and commit the task
   changes.
 
 ## Task 4: Add catalog acceptance and verify preparation
@@ -256,10 +256,10 @@ rerunning affected checks after verified review repairs.
   `skill-validation/runner/acceptance/test_writing_explicit_rationale_catalog.py`.
 - Modify this plan only to mark completed steps.
 
-- [ ] Implement the final six-scenario acceptance contract above using only
+- [x] Implement the final six-scenario acceptance contract above using only
   catalog-local data and helpers.
-- [ ] Run the focused acceptance and complete offline runner suite.
-- [ ] Review the test for exact agreement with the spec's package-only boundary
+- [x] Run the focused acceptance and complete offline runner suite.
+- [x] Review the test for exact agreement with the spec's package-only boundary
   and commit the task changes.
 
 ## Task 5: Run and record the representative smoke
@@ -273,23 +273,23 @@ rerunning affected checks after verified review repairs.
 - Modify `skill-validation/scenarios/README.md` only after a `COMPLETED` result.
 - Modify this plan only to mark completed steps.
 
-- [ ] Present the `WER-07` configuration to the owner and obtain explicit
+- [x] Present the `WER-07` configuration to the owner and obtain explicit
   approval for one Codex invocation.
-- [ ] From `skill-validation/runner`, run exactly
+- [x] From `skill-validation/runner`, run exactly
   `uv run skilltest run ../scenarios/writing-explicit-rationale/wer-07/test.json`
   once. Do not retry or run another scenario.
-- [ ] If the runner publishes `result.json`, copy its exact bytes to
+- [x] If the runner publishes `result.json`, copy its exact bytes to
   `wer-07/smoke-result.json`; otherwise remove any prior retained result.
-- [ ] Record the runner status and result link, when present, in the `WER-07`
+- [x] Record the runner status and result link, when present, in the `WER-07`
   README; remove the temporary run bundle and retain no other run artifact.
 - [ ] If no result is retained or its status is not `COMPLETED`, run catalog
   verification, review and commit the smoke disposition, README, and plan
   tracking, then stop and request owner direction. Do not update the migration
   index.
-- [ ] For a `COMPLETED` result, add the catalog to the migration index, link all
+- [x] For a `COMPLETED` result, add the catalog to the migration index, link all
   six READMEs, identify `WER-07` as representative, and update totals to 6/6 for
   this catalog and 6/105 overall.
-- [ ] Run catalog verification, review the smoke documentation and index update,
+- [x] Run catalog verification, review the smoke documentation and index update,
   and commit the task changes.
 
 ## Task 6: Final review, merge, and catalog bookkeeping
@@ -301,10 +301,10 @@ rerunning affected checks after verified review repairs.
   `plans/completed/2026-08-29-writing-explicit-rationale-catalog-migration.md`
   after merge.
 
-- [ ] Run catalog verification and complete a whole-catalog review against the
+- [x] Run catalog verification and complete a whole-catalog review against the
   governing design and this plan. Address verified findings and rerun affected
   checks.
-- [ ] Confirm the final diff is limited to this catalog's packages, its local
+- [x] Confirm the final diff is limited to this catalog's packages, its local
   acceptance test, migration index, and plan tracking.
 - [ ] Present the commits, verification results, retained smoke result, review
   disposition, and cleanup targets to the owner. Obtain explicit approval before
@@ -320,10 +320,10 @@ rerunning affected checks after verified review repairs.
 
 ## Done when
 
-- [ ] All six packages pass the catalog acceptance test and offline runner suite.
-- [ ] `WER-07` retains the latest runner-produced `COMPLETED`
+- [x] All six packages pass the catalog acceptance test and offline runner suite.
+- [x] `WER-07` retains the latest runner-produced `COMPLETED`
   `smoke-result.json` from one approved attempt.
-- [ ] The migration index reports 6/6 for this catalog and 6/105 overall.
-- [ ] Final review and repository verification pass.
+- [x] The migration index reports 6/6 for this catalog and 6/105 overall.
+- [x] Final review and repository verification pass.
 - [ ] With owner approval, the catalog is merged and pushed, the roadmap is
   checked, the plan is archived, and the worktree and feature branch are removed.
