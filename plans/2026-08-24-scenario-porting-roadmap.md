@@ -40,7 +40,7 @@ that plan and merge its catalog before creating the plan for the next catalog.
 Check a catalog only after its plan is complete and archived and its catalog is
 merged:
 
-- [ ] `writing-explicit-rationale`
+- [x] `writing-explicit-rationale`
 - [ ] `sweeping-stale-references`
 - [ ] `lean-plan-writing`
 - [ ] `disciplined-research`
