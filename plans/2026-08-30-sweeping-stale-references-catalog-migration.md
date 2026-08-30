@@ -252,11 +252,11 @@ rerunning affected checks after verified review repairs.
 - Create each scenario's listed inventory file at its package source path.
 - Modify this plan only to mark completed steps.
 
-- [ ] Create all three packages and their canonical inventory files from the
+- [x] Create all three packages and their canonical inventory files from the
   catalog decisions above.
-- [ ] Confirm the prompts and copied files have their planned hashes and each
+- [x] Confirm the prompts and copied files have their planned hashes and each
   configuration loads with the runner.
-- [ ] Review the package files against their canonical sources and commit the
+- [x] Review the package files against their canonical sources and commit the
   task changes.
 
 ## Task 3: Add catalog acceptance and verify preparation

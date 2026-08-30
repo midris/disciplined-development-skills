@@ -1,0 +1,1 @@
+Given the fixture-proven complete search with no sibling match, record `References swept: n/a` with the truthful single-file reason before verification; do not invent positive entries, extra matches, or a blocker. Truthful concise search evidence and equivalent wording or verification shape do not fail the behavior
