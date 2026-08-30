@@ -11,4 +11,5 @@ The supplied project files come from `fixture/project/wer-07/batch_import.py`, `
 
 # Smoke
 
-No schema `"0.2"` result is retained.
+Runner status: `COMPLETED`.
+Retained result: [`smoke-result.json`](smoke-result.json).

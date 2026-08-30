@@ -13,6 +13,17 @@ migrates, add its one-line purpose summary and scenario README link beneath its
 catalog. Keep detailed package, provenance, and smoke facts in the scenario
 README rather than duplicating them here.
 
+## writing-explicit-rationale
+
+Representative smoke: [`WER-07`](writing-explicit-rationale/wer-07/README.md)
+
+- [`WER-01`](writing-explicit-rationale/wer-01/README.md) — Apply a small direct plan descope while retaining its selected scope, cause, accepted impact, and adjacent rationale.
+- [`WER-02`](writing-explicit-rationale/wer-02/README.md) — Turn repeated review into a batched durable audit while distinguishing consequential choices from a consequence-free choice.
+- [`WER-05`](writing-explicit-rationale/wer-05/README.md) — Reference an existing authoritative rationale instead of duplicating it under reviewer pressure.
+- [`WER-06`](writing-explicit-rationale/wer-06/README.md) — Retain only history that constrains current correctness or future decisions.
+- [`WER-07`](writing-explicit-rationale/wer-07/README.md) — Exercise rationale, research, plan-writing, and parent-doctrine composition against multiple primary-source files.
+- [`WER-08`](writing-explicit-rationale/wer-08/README.md) — Apply the rationale policy outside software by placing a repeatedly requested cause in a durable nonprofit policy.
+
 ## Entry format
 
 Use the identities defined by the migration design. A migrated catalog has one
@@ -76,5 +87,5 @@ expose the evaluator-withheld rubric.
 - `lean-plan-writing`: 7 total, 0 migrated, 7 not migrated
 - `skill-discovery`: 12 total, 0 migrated, 12 not migrated
 - `sweeping-stale-references`: 6 total, 0 migrated, 6 not migrated
-- `writing-explicit-rationale`: 6 total, 0 migrated, 6 not migrated
-- Overall: 105 total, 0 migrated, 105 not migrated
+- `writing-explicit-rationale`: 6 total, 6 migrated, 0 not migrated
+- Overall: 105 total, 6 migrated, 99 not migrated

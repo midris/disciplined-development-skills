@@ -273,23 +273,23 @@ rerunning affected checks after verified review repairs.
 - Modify `skill-validation/scenarios/README.md` only after a `COMPLETED` result.
 - Modify this plan only to mark completed steps.
 
-- [ ] Present the `WER-07` configuration to the owner and obtain explicit
+- [x] Present the `WER-07` configuration to the owner and obtain explicit
   approval for one Codex invocation.
-- [ ] From `skill-validation/runner`, run exactly
+- [x] From `skill-validation/runner`, run exactly
   `uv run skilltest run ../scenarios/writing-explicit-rationale/wer-07/test.json`
   once. Do not retry or run another scenario.
-- [ ] If the runner publishes `result.json`, copy its exact bytes to
+- [x] If the runner publishes `result.json`, copy its exact bytes to
   `wer-07/smoke-result.json`; otherwise remove any prior retained result.
-- [ ] Record the runner status and result link, when present, in the `WER-07`
+- [x] Record the runner status and result link, when present, in the `WER-07`
   README; remove the temporary run bundle and retain no other run artifact.
 - [ ] If no result is retained or its status is not `COMPLETED`, run catalog
   verification, review and commit the smoke disposition, README, and plan
   tracking, then stop and request owner direction. Do not update the migration
   index.
-- [ ] For a `COMPLETED` result, add the catalog to the migration index, link all
+- [x] For a `COMPLETED` result, add the catalog to the migration index, link all
   six READMEs, identify `WER-07` as representative, and update totals to 6/6 for
   this catalog and 6/105 overall.
-- [ ] Run catalog verification, review the smoke documentation and index update,
+- [x] Run catalog verification, review the smoke documentation and index update,
   and commit the task changes.
 
 ## Task 6: Final review, merge, and catalog bookkeeping
