@@ -256,10 +256,10 @@ rerunning affected checks after verified review repairs.
   `skill-validation/runner/acceptance/test_writing_explicit_rationale_catalog.py`.
 - Modify this plan only to mark completed steps.
 
-- [ ] Implement the final six-scenario acceptance contract above using only
+- [x] Implement the final six-scenario acceptance contract above using only
   catalog-local data and helpers.
-- [ ] Run the focused acceptance and complete offline runner suite.
-- [ ] Review the test for exact agreement with the spec's package-only boundary
+- [x] Run the focused acceptance and complete offline runner suite.
+- [x] Review the test for exact agreement with the spec's package-only boundary
   and commit the task changes.
 
 ## Task 5: Run and record the representative smoke
