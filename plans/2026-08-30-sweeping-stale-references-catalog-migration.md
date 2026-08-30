@@ -235,11 +235,11 @@ rerunning affected checks after verified review repairs.
   source path.
 - Modify this plan only to mark completed steps.
 
-- [ ] Create all three packages and their separate canonical project-file
+- [x] Create all three packages and their separate canonical project-file
   copies from the catalog decisions above.
-- [ ] Confirm the prompts and copied files have their planned hashes and each
+- [x] Confirm the prompts and copied files have their planned hashes and each
   configuration loads with the runner.
-- [ ] Review the package files against their canonical sources and commit the
+- [x] Review the package files against their canonical sources and commit the
   task changes.
 
 ## Task 2: Package `SSR-02`, `SSR-03`, and `SSR-05`
