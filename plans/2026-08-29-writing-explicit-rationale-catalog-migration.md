@@ -301,10 +301,10 @@ rerunning affected checks after verified review repairs.
   `plans/completed/2026-08-29-writing-explicit-rationale-catalog-migration.md`
   after merge.
 
-- [ ] Run catalog verification and complete a whole-catalog review against the
+- [x] Run catalog verification and complete a whole-catalog review against the
   governing design and this plan. Address verified findings and rerun affected
   checks.
-- [ ] Confirm the final diff is limited to this catalog's packages, its local
+- [x] Confirm the final diff is limited to this catalog's packages, its local
   acceptance test, migration index, and plan tracking.
 - [ ] Present the commits, verification results, retained smoke result, review
   disposition, and cleanup targets to the owner. Obtain explicit approval before
@@ -324,6 +324,6 @@ rerunning affected checks after verified review repairs.
 - [x] `WER-07` retains the latest runner-produced `COMPLETED`
   `smoke-result.json` from one approved attempt.
 - [x] The migration index reports 6/6 for this catalog and 6/105 overall.
-- [ ] Final review and repository verification pass.
+- [x] Final review and repository verification pass.
 - [ ] With owner approval, the catalog is merged and pushed, the roadmap is
   checked, the plan is archived, and the worktree and feature branch are removed.
