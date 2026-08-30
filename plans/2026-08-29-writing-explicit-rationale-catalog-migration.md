@@ -224,10 +224,10 @@ rerunning affected checks after verified review repairs.
   `skill-validation/scenarios/writing-explicit-rationale/wer-05/fixture/docs/architecture/ingest.md`.
 - Modify this plan only to mark completed steps.
 
-- [ ] Create all three packages and the `WER-05` scenario-owned fixture.
-- [ ] Confirm the prompts and copied canonical file have their planned hashes
+- [x] Create all three packages and the `WER-05` scenario-owned fixture.
+- [x] Confirm the prompts and copied canonical file have their planned hashes
   and each configuration loads with the runner.
-- [ ] Review the package files against their canonical sources and commit the
+- [x] Review the package files against their canonical sources and commit the
   task changes.
 
 ## Task 3: Package representative `WER-07`
