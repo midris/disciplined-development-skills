@@ -327,7 +327,7 @@ rerunning affected checks after verified review repairs.
   `../2026-08-24-scenario-porting-roadmap.md`, and
   `../../skill-validation/scenarios/README.md`; run the Markdown link check and
   `git diff --check`, then commit those bookkeeping changes.
-- [ ] Run catalog verification on `main`, push `main`, then remove this catalog's
+- [x] Run catalog verification on `main`, push `main`, then remove this catalog's
   worktree and local feature branch. Do not create the next catalog plan in this
   task.
 
@@ -338,5 +338,5 @@ rerunning affected checks after verified review repairs.
   `smoke-result.json` from one approved attempt.
 - [ ] The migration index reports 6/6 for this catalog and 12/105 overall.
 - [x] Final review and repository verification pass.
-- [ ] With owner approval, the catalog is merged and pushed, the roadmap is
+- [x] With owner approval, the catalog is merged and pushed, the roadmap is
   checked, the plan is archived, and the worktree and feature branch are removed.
