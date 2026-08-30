@@ -1,0 +1,19 @@
+{
+  "schema_version": "0.2",
+  "id": "ssr-06",
+  "prompt": "prompt.md",
+  "fixtures": [
+    {"source": "../../../../skills/adversarial-review-loop/SKILL.md", "target": "skills/adversarial-review-loop/SKILL.md"},
+    {"source": "../../../../skills/adversarial-review/SKILL.md", "target": "skills/adversarial-review/SKILL.md"},
+    {"source": "../../../../skills/concise-writing/SKILL.md", "target": "skills/concise-writing/SKILL.md"},
+    {"source": "../../../../skills/disciplined-development/SKILL.md", "target": "skills/disciplined-development/SKILL.md"},
+    {"source": "../../../../skills/disciplined-research/SKILL.md", "target": "skills/disciplined-research/SKILL.md"},
+    {"source": "../../../../skills/dispatching-development-subagents/SKILL.md", "target": "skills/dispatching-development-subagents/SKILL.md"},
+    {"source": "../../../../skills/lean-plan-writing/SKILL.md", "target": "skills/lean-plan-writing/SKILL.md"},
+    {"source": "../../../../skills/sweeping-stale-references/SKILL.md", "target": "skills/sweeping-stale-references/SKILL.md"},
+    {"source": "../../../../skills/writing-explicit-rationale/SKILL.md", "target": "skills/writing-explicit-rationale/SKILL.md"},
+    {"source": "fixture/project/src/session.py", "target": "project/src/session.py"},
+    {"source": "fixture/project/docs/session-policy.md", "target": "project/docs/session-policy.md"}
+  ],
+  "execution": {"provider": "codex", "model": "gpt-5.6-sol", "effort": "high"}
+}

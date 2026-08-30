@@ -1,0 +1,10 @@
+{
+  "schema_version": "0.2",
+  "id": "ssr-05",
+  "prompt": "prompt.md",
+  "fixtures": [
+    {"source": "../../../../skills/sweeping-stale-references/SKILL.md", "target": "skills/sweeping-stale-references/SKILL.md"},
+    {"source": "fixture/context/single-file-search.md", "target": "context/single-file-search.md"}
+  ],
+  "execution": {"provider": "codex", "model": "gpt-5.6-sol", "effort": "high"}
+}

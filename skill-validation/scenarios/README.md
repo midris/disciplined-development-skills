@@ -23,6 +23,17 @@ Representative smoke: [`WER-07`](writing-explicit-rationale/wer-07/README.md)
 - [`WER-07`](writing-explicit-rationale/wer-07/README.md) — Exercise rationale, research, plan-writing, and parent-doctrine composition against multiple primary-source files.
 - [`WER-08`](writing-explicit-rationale/wer-08/README.md) — Apply the rationale policy outside software by placing a repeatedly requested cause in a durable nonprofit policy.
 
+## sweeping-stale-references
+
+Representative smoke: [`SSR-01`](sweeping-stale-references/ssr-01/README.md)
+
+- [`SSR-01`](sweeping-stale-references/ssr-01/README.md) — Exercise an end-to-end load-bearing rename with complete discovery, rationale-preserving reconciliation, durable sweep evidence, and verification.
+- [`SSR-02`](sweeping-stale-references/ssr-02/README.md) — Treat one reviewer hit as a sample and reconcile a complete cross-category search inventory.
+- [`SSR-03`](sweeping-stale-references/ssr-03/README.md) — Group a large sweep only by path and outcome while retaining precise locations, counts, and complete evidence.
+- [`SSR-05`](sweeping-stale-references/ssr-05/README.md) — Record the required truthful negative sweep form for a single-file change with no sibling matches.
+- [`SSR-06`](sweeping-stale-references/ssr-06/README.md) — Identify exactly the symbol, attached-rationale, and documentation updates required by the session rename.
+- [`SSR-07`](sweeping-stale-references/ssr-07/README.md) — Preserve the partner constraint and accepted refresh cost while renaming the session-setting rationale.
+
 ## Entry format
 
 Use the identities defined by the migration design. A migrated catalog has one
@@ -85,6 +96,6 @@ expose the evaluator-withheld rubric.
 - `dispatching-development-subagents`: 11 total, 0 migrated, 11 not migrated
 - `lean-plan-writing`: 7 total, 0 migrated, 7 not migrated
 - `skill-discovery`: 12 total, 0 migrated, 12 not migrated
-- `sweeping-stale-references`: 6 total, 0 migrated, 6 not migrated
+- `sweeping-stale-references`: 6 total, 6 migrated, 0 not migrated
 - `writing-explicit-rationale`: 6 total, 6 migrated, 0 not migrated
-- Overall: 105 total, 6 migrated, 99 not migrated
+- Overall: 105 total, 12 migrated, 93 not migrated
