@@ -19,9 +19,9 @@ representative smoke.
 **Tech Stack:** Markdown, RFC 8259 JSON, Python 3.11+, pytest, `uv`, and
 `skilltest` schema `"0.2"`.
 
-**Spec:** [schema `"0.2"` catalog migration design](specs/2026-08-29-catalog-migration-design.md),
-[scenario porting roadmap](2026-08-24-scenario-porting-roadmap.md), and
-[scenario migration index](../skill-validation/scenarios/README.md).
+**Spec:** [schema `"0.2"` catalog migration design](../specs/2026-08-29-catalog-migration-design.md),
+[scenario porting roadmap](../2026-08-24-scenario-porting-roadmap.md), and
+[scenario migration index](../../skill-validation/scenarios/README.md).
 
 ## Global constraints
 
@@ -317,11 +317,11 @@ rerunning affected checks after verified review repairs.
   checks.
 - [x] Confirm the final diff is limited to this catalog's packages, its local
   acceptance test, migration index, and plan tracking.
-- [ ] Present the commits, verification results, retained smoke result, review
+- [x] Present the commits, verification results, retained smoke result, review
   disposition, and cleanup targets to the owner. Obtain explicit approval before
   merging or pushing.
-- [ ] After approval, merge the feature branch into local `main`.
-- [ ] On `main`, check the `sweeping-stale-references` roadmap item and move this
+- [x] After approval, merge the feature branch into local `main`.
+- [x] On `main`, check the `sweeping-stale-references` roadmap item and move this
   plan to `plans/completed/`. Change its three header links to
   `../specs/2026-08-29-catalog-migration-design.md`,
   `../2026-08-24-scenario-porting-roadmap.md`, and

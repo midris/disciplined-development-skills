@@ -41,7 +41,7 @@ Check a catalog only after its plan is complete and archived and its catalog is
 merged:
 
 - [x] `writing-explicit-rationale`
-- [ ] `sweeping-stale-references`
+- [x] `sweeping-stale-references`
 - [ ] `lean-plan-writing`
 - [ ] `disciplined-research`
 - [ ] `disciplined-development`
