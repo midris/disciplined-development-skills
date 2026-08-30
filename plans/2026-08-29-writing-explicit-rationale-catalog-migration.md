@@ -320,10 +320,10 @@ rerunning affected checks after verified review repairs.
 
 ## Done when
 
-- [ ] All six packages pass the catalog acceptance test and offline runner suite.
-- [ ] `WER-07` retains the latest runner-produced `COMPLETED`
+- [x] All six packages pass the catalog acceptance test and offline runner suite.
+- [x] `WER-07` retains the latest runner-produced `COMPLETED`
   `smoke-result.json` from one approved attempt.
-- [ ] The migration index reports 6/6 for this catalog and 6/105 overall.
+- [x] The migration index reports 6/6 for this catalog and 6/105 overall.
 - [ ] Final review and repository verification pass.
 - [ ] With owner approval, the catalog is merged and pushed, the roadmap is
   checked, the plan is archived, and the worktree and feature branch are removed.
