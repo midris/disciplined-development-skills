@@ -1,0 +1,17 @@
+{
+  "schema_version": "0.2",
+  "id": "wer-07",
+  "prompt": "prompt.md",
+  "fixtures": [
+    {"source": "../../../../skills/disciplined-development/SKILL.md", "target": "skills/disciplined-development/SKILL.md"},
+    {"source": "../../../../skills/disciplined-research/SKILL.md", "target": "skills/disciplined-research/SKILL.md"},
+    {"source": "../../../../skills/lean-plan-writing/SKILL.md", "target": "skills/lean-plan-writing/SKILL.md"},
+    {"source": "../../../../skills/writing-explicit-rationale/SKILL.md", "target": "skills/writing-explicit-rationale/SKILL.md"},
+    {"source": "fixture/skills/writing-plans/SKILL.md", "target": "skills/writing-plans/SKILL.md"},
+    {"source": "fixture/project/wer-07/batch_import.py", "target": "project/wer-07/batch_import.py"},
+    {"source": "fixture/project/wer-07/sources/ingest-architecture.md", "target": "project/wer-07/sources/ingest-architecture.md"},
+    {"source": "fixture/project/wer-07/sources/quota-tokens.md", "target": "project/wer-07/sources/quota-tokens.md"},
+    {"source": "fixture/project/wer-07/sources/telemetry-comparison.md", "target": "project/wer-07/sources/telemetry-comparison.md"}
+  ],
+  "execution": {"provider": "codex", "model": "gpt-5.6-sol", "effort": "low"}
+}
