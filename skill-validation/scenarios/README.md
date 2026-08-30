@@ -8,10 +8,9 @@ This index tracks schema `"0.2"` migration output. The canonical commit above is
 the scenario and scope authority; the single plan for each catalog enumerates its
 exact active scenarios from that source before migration.
 
-No scenario packages have migrated under schema `"0.2"`. As each package
-migrates, add its one-line purpose summary and scenario README link beneath its
-catalog. Keep detailed package, provenance, and smoke facts in the scenario
-README rather than duplicating them here.
+As each package migrates, add its one-line purpose summary and scenario README
+link beneath its catalog. Keep detailed package, provenance, and smoke facts in
+the scenario README rather than duplicating them here.
 
 ## writing-explicit-rationale
 
