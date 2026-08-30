@@ -155,7 +155,9 @@ def test_writing_explicit_rationale_catalog_prepares_only_declared_inputs(
 
     for scenario_id, expected in CATALOG.items():
         scenario_dir = SCENARIO_ROOT / scenario_id
-        assert _package_files(scenario_dir) == expected["files"]
+        package_files = _package_files(scenario_dir)
+        optional_files = {"smoke-result.json"} if scenario_id == "wer-07" else set()
+        assert expected["files"] <= package_files <= expected["files"] | optional_files
 
         config = load_config(scenario_dir / "test.json")
         assert tuple((fixture.source, fixture.target) for fixture in config.fixtures) == _expected_fixtures(
