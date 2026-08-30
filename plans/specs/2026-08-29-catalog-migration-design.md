@@ -1,74 +1,98 @@
 # Schema 0.2 Catalog Migration Design
 
-**Status:** Owner-approved on 2026-08-29.
-
 ## Goal
 
 Package all 105 active canonical scenarios for reusable prompt runner schema
 `"0.2"`, one catalog at a time, without changing scenario meaning, runner
-behavior, or testing methodology. The first catalog establishes the migration
-process used by later catalogs.
+behavior, or testing methodology.
 
-## Authorities and ownership
+Use canonical source commit
+`13599fb7d3127334b0d07bfe468767e586ec5f9c` for candidate scope, scenario
+meaning, evaluator instructions, task, requested output, supplied-input
+representation, scenario-owned bytes, and evaluator-withheld rubrics. Use the
+schema `"0.2"` runner and its documentation for configuration, fixture copying,
+prompt rendering, execution, and result behavior.
 
-Use source commit `13599fb7d3127334b0d07bfe468767e586ec5f9c` as the
-authority for candidate scope, scenario meaning, evaluator instructions, task,
-requested output, supplied-input representation, scenario-owned bytes, and
-evaluator-withheld rubric. Use the schema `"0.2"` runner and its documentation as
-the authority for configuration, fixture-copy, prompt-rendering, execution, and
-result mechanics.
+The canonical source commit defines the content to migrate. It is not smoke-run
+provenance, and a smoke does not need to be tied to repository state.
 
-Each migration fact has one durable operational owner:
+## Phase boundary
 
-| Artifact | Owns |
-|---|---|
-| This design | Shared considerations, package rules, workflow, smoke contract, and completion rules for every catalog |
-| Catalog plan | All intended work and decisions specific to one catalog, including its candidates, scenario packages, representative, default executions, acceptance, and migration-time smoke record |
-| Scenario `README.md` | Implemented scenario purpose, provider-input manifest and provenance, adaptations actually applied, and current schema `"0.2"` smoke status |
-| Scenario migration index | Catalog totals, scenario links and summaries, representative marker, and liftable prompt template |
-| Roadmap | Migration order and phase status |
+This migration answers one question: can the minimal schema `"0.2"` runner
+configuration represent and prepare every canonical scenario? One representative
+invocation per catalog confirms the end-to-end runner path. Work proceeds catalog
+by catalog so each catalog establishes those mechanical results before the next
+catalog begins.
 
-While work is active, the catalog plan is the authority for catalog-specific
-instructions and decisions. After implementation, scenario READMEs and the index
-own the resulting current package and status facts; the archived plan links to
-them and retains the historical execution record.
+The migration verifies that checked-in prompts and fixture mappings match the
+catalog plan and that every configuration loads and prepares with the runner. It
+does not independently audit author-selected configuration choices beyond those
+mechanical checks. That is test-design validation, alongside test correctness,
+rubric correctness, response quality, behavioral results, evaluator parity, and
+the runner's effectiveness as an evaluation harness. Content selected or written
+incorrectly despite being mechanically representable is an authoring error, not a
+runner capability gap.
 
-## Program shape
+Do not add runner functionality, configuration options, validation beyond the
+package checks below, or safeguards to prevent possible authoring errors or
+anticipate later evaluation needs. After all scenarios are mechanically migrated,
+a separately scoped evaluation phase may assess the minimal harness and use
+observed evidence to justify any changes.
 
-Follow the catalog order in the roadmap. Create exactly one catalog-specific plan
-for the current catalog, complete and archive that plan, and merge the catalog
-before creating the plan for the next catalog. Keep only one active catalog plan
-at a time.
+## Minimality rule
 
-This design remains the general migration method. Each catalog plan applies it to
-one catalog and defines all catalog-specific work. A completed catalog may expose
-a reusable consideration that warrants a separately approved design amendment,
-but its input shape or implementation details do not become general rules by
-default. Do not introduce shared migration or catalog-test helpers during this
-migration.
+Catalog migration has exactly five responsibilities:
 
-## Scenario identity and evaluation arms
+1. package each canonical scenario;
+2. verify that every package loads and prepares correctly;
+3. run one approved representative smoke for the catalog;
+4. retain and document the latest smoke result; and
+5. update the catalog records and merge the completed catalog.
 
-A scenario contract consists of its purpose, evaluator instructions, task,
-requested output, evaluator-withheld rubric, and scenario-owned bytes. Skill and
-dependency versions are tester-selected evaluation-arm inputs, not scenario
-identity.
+> If work does not directly serve one of those responsibilities, it is outside
+> this migration.
 
-The checked-in `prompt.md` and `test.json` together define the default smoke arm.
-During migration, that arm selects current live repository skill text where the
-canonical representation permits a live file or an extraction from it. Required
-external dependency bytes are pinned beneath the scenario package with exact
-source, version, and hash provenance.
+In particular, do not add:
 
-A tester may create another prompt and configuration that select different arm
-bytes. Alternate arms may change prompt material, fixture sources, or both
-without a runner change. They are not committed during catalog migration unless
-separately approved. Revisit shared dependency storage only after multiple
-migrated scenarios require the same pinned bytes.
+- runner, provider, schema, or testing-methodology changes;
+- smoke-run Git-commit provenance, clean-commit smoke requirements, Git
+  snapshots, or synchronization rules;
+- a second result validator or reconstruction of checks already performed by
+  the runner;
+- prescribed authoring order, lifecycle state machines, or plan-status
+  transitions;
+- shared migration helpers, shared catalog-test helpers, or shared dependency
+  storage;
+- behavioral scoring, response judgment, baseline claims, or evaluator
+  transport enforcement; or
+- validation and bookkeeping unrelated to packaging, running, documenting, and
+  merging the catalog.
 
-## Package layout and identity
+Normal repository review, commit, merge, and push practices remain ordinary
+development workflow. They are not part of the runner or scenario contract. Do
+not merge or push a catalog without explicit owner approval.
 
-Every scenario uses this exact layout:
+## Catalog sequence and ownership
+
+Follow the order in the
+[scenario porting roadmap](../2026-08-24-scenario-porting-roadmap.md). Create one
+catalog-specific plan at a time. Complete, merge, and archive that catalog before
+creating the next catalog plan.
+
+This design owns the shared migration rules. Each catalog plan owns only that
+catalog's candidates, exact package mappings, permitted prompt adaptations,
+default executions, representative scenario, acceptance test, and implementation
+steps. Scenario READMEs document the finished packages and current smoke status.
+The [scenario migration index](../../skill-validation/scenarios/README.md) owns
+catalog totals, scenario links and summaries, representative markers, and the
+liftable sample prompt.
+
+Catalog-specific details do not become general rules automatically. A reusable
+change requires separate owner approval and a change to this design.
+
+## Scenario package
+
+Every scenario uses this layout:
 
 ```text
 skill-validation/scenarios/<catalog>/<scenario-id>/
@@ -80,245 +104,170 @@ skill-validation/scenarios/<catalog>/<scenario-id>/
   smoke-result.json        # optional
 ```
 
-`<catalog>` is the lowercase catalog name. `<scenario-id>` and `test.json`'s
-`id` are the lowercase form of the canonical scenario ID: `EXAMPLE-01` becomes
-`example-01`, and `EXAMPLE` becomes `example`. The canonical uppercase ID
-remains the documentation identity.
+`<catalog>` is the lowercase catalog name. `<scenario-id>` and `test.json.id`
+are the lowercase canonical ID: `EXAMPLE-01` becomes `example-01`.
 
-Package files have these roles:
+- `README.md` explains the scenario, its supplied inputs, their provenance, any
+  adaptations, and the current smoke status.
+- `prompt.md` is the complete self-contained provider-facing prompt template.
+- `rubric.md` is the exact evaluator-withheld canonical rubric.
+- `test.json` is one loadable schema `"0.2"` default configuration.
+- `fixture/` contains only files that must be stored with the scenario.
+- `smoke-result.json`, when present, is the exact latest `result.json` retained
+  for that scenario.
 
-- `README.md`: purpose, package provenance, adaptations actually applied, and
-  verification;
-- `prompt.md`: self-contained provider-facing prompt template;
-- `rubric.md`: exact evaluator-withheld rubric;
-- `test.json`: one loadable schema `"0.2"` default-arm configuration;
-- `fixture/`: packaged provider-visible files, present only when needed;
-- `smoke-result.json`: exact latest schema `"0.2"` mechanical result retained
-  for that scenario, present only after a result-producing attempt.
+Each scenario README has three sections:
 
-Each scenario README uses three sections:
+1. **Purpose** — what the scenario is built to test;
+2. **Inputs** — a compact inventory of the prompt and every supplied file,
+   including source or provenance and provider location, plus rubric provenance
+   and any prompt adaptations; and
+3. **Smoke** — the current result link and mechanical status, or a statement
+   that no schema `"0.2"` result is retained.
 
-1. **Purpose** — behavior, boundary, or pressure tested;
-2. **Package and provenance** — the provider-input manifest, canonical and
-   default-arm provenance, and adaptations actually applied;
-3. **Verification** — provider-free preflight and either the current schema
-   `"0.2"` smoke commit and result link or an explicit statement that no current
-   schema `"0.2"` result is retained.
+The README is documentation, not another executable configuration. `test.json`
+owns fixture source and target declarations. Do not require a machine-validated
+README schema or duplicate every `test.json` field in prose.
 
-## Provider-input manifest
+## Scenario inputs
 
-The catalog plan first defines each scenario's intended provider-visible inputs,
-mapping, provenance, and permitted adaptations. Before authoring the prompt,
-configuration, or fixtures, create the scenario README and transcribe those
-decisions into its initial manifest. After authoring those files, finalize the
-manifest's sources, targets, and hashes and reconcile its rows with `test.json`.
-Each manifest row records:
+A scenario consists of its evaluator instructions, task, requested output,
+evaluator-withheld rubric, and scenario-owned bytes. Skill and dependency versions
+are tester-selected inputs, not scenario identity.
 
-| Field | Meaning |
-|---|---|
-| Provider input | `prompt.md` or a stable label for one supplied file |
-| Ownership | `scenario`, `arm`, or both |
-| Representation | `prompt` or `file`, matching the canonical evaluator input |
-| Canonical and default-arm provenance | Canonical provenance and, when different, the exact origin of selected default-arm bytes; include paths, sections, revisions or external versions, and recorded canonical hashes as applicable |
-| Default-arm source | `prompt.md` or the regular file named by `test.json` |
-| Provider location | Rendered prompt or exact fixture target path |
-| Default-arm source SHA-256 | Complete `prompt.md` template bytes or exact declared source-file bytes before runner rendering or copying |
+The checked-in `prompt.md` and `test.json` define the migration's default smoke
+input. For this migration, use current live repository skill files directly when
+the canonical input is the complete skill file. Record their source paths, but do
+not pin their hashes as catalog requirements. The retained runner result records
+the files actually copied for a representative smoke.
 
-Each manifest has exactly one `prompt.md` row and one supplied-file row per
-`test.json.fixtures` entry. The prompt row records all canonical prompt sources
-and the provenance of any inline arm-selected material, plus the complete template
-hash; it does not divide the prompt into independently hashed fragments.
+Store scenario-owned files, derived files, and required external dependencies
+beneath the scenario's `fixture/` directory. Preserve scenario-owned bytes
+exactly. Record the source, version, and SHA-256 for pinned external dependencies
+and other copied canonical files.
 
-The manifest is the migration invariant:
+Testers may create other prompts or configurations using different skill or
+dependency versions. Those alternate inputs are outside catalog migration unless
+separately approved.
 
-> Preserve the canonical representation of every provider-visible input.
-> Preserve scenario-owned bytes exactly, record and reproduce the selected arm
-> bytes exactly, and adapt scenario prompt content only for paths, explicit read
-> instructions, and environment wording required by schema `"0.2"`.
+Preserve the canonical representation of every provider-visible input:
 
-Apply it mechanically:
+- inline canonical material remains in `prompt.md`;
+- canonical files remain individual files at their canonical bundle-relative
+  paths;
+- an extraction remains that extraction rather than becoming a complete source
+  file;
+- nested support files retain their canonical paths;
+- every supplied file is declared individually in `test.json`; and
+- files not visible to the canonical evaluator are not supplied.
 
-- canonical inline material remains in `prompt.md`;
-- canonical file material remains an individually declared file at its canonical
-  bundle-relative path;
-- a canonical extraction, such as a description file, is materialized as that
-  exact file rather than replaced with a full source file or inline text;
-- nested skill references and support files retain their canonical paths;
-- scenario-owned files retain their canonical paths;
-- every file is declared individually in `test.json`; the runner infers and
-  copies no directory;
-- current repository files may be direct configuration sources when their whole
-  bytes are the selected arm input;
-- derived arm files, scenario-owned files, and pinned external files live under
-  the scenario's `fixture/` directory;
-- files not visible to the canonical evaluator are not declared as fixtures.
+Stop if candidate scope, canonical representation, canonical bytes, rubric
+identity, or required provenance cannot be determined; a required dependency is
+unavailable; the runner cannot represent the scenario; or faithful packaging
+requires an unapproved adaptation.
 
-Do not transform prompt material into a file, a file into prompt material, an
-extraction into a complete source file, or a complete source file into an
-extraction without owner approval. Stop if the canonical representation or bytes
-cannot be determined.
+## Prompt and rubric
 
-## Prompt contract
+Every `prompt.md` is independently readable and preserves the canonical ordering,
+task meaning, and output requirements. It follows the
+[documented prompt anatomy](../../skill-validation/scenarios/README.md#prompt-anatomy)
+without adding a generic wrapper.
 
-Every `prompt.md` is independently readable, preserves the canonical relative
-ordering of its material, and accounts for each applicable semantic element in the
-[scenario migration index](../../skill-validation/scenarios/README.md#prompt-anatomy).
-The runner injects no wrapper, skill text, dependency text, or behavioral
-instructions.
+When the prompt directly names a supplied file or directory, root that reference
+at `{{fixture_dir}}`. Adapt canonical prompt text only for required paths,
+explicit read instructions, and environment wording. Any other content change
+requires owner approval.
 
-When a prompt directly names a canonical bundle-relative file or directory, it
-roots that reference at `{{fixture_dir}}`. Canonical support files loaded
-indirectly from an already rooted supplied file need not be listed redundantly
-in the prompt. All 105 canonical scenarios are response-only: prompts prohibit
-file mutation, do not name `{{evidence_dir}}`, and require no produced evidence.
+All scenarios are response-only. Prompts prohibit file mutation, do not name
+`{{evidence_dir}}`, and require no produced evidence.
 
-The scenario migration index owns the liftable sample `prompt.md`. Real prompts
-replace its placeholders and preserve the canonical task meaning and output
-requirements. Content adaptations beyond paths, explicit read instructions, and
-environment wording required by schema `"0.2"` require owner approval.
+Materialize the exact canonical rubric as `rubric.md`. Do not include the rubric
+in `test.json`, `prompt.md`, fixtures, provider arguments, or provider standard
+input. Catalog migration does not apply the rubric or inspect or score the
+response.
 
-## Rubric isolation
+## Catalog acceptance
 
-Materialize the exact canonical evaluator-withheld rubric as `rubric.md` and
-record its source and hash in the scenario README. The runner must not supply it
-through `test.json`, the rendered prompt, declared fixtures, evidence setup,
-provider arguments, or provider standard input.
+Each catalog has one catalog-local provider-free acceptance test. Keep its data
+and small helpers local to that test.
 
-This requirement does not claim filesystem isolation beyond existing runner
-permissions. Migration does not apply the rubric, inspect the response
-semantically, score behavior, or establish a baseline.
+Acceptance verifies only the package:
 
-## Evaluator transport boundary
+- the exact expected scenario directories and required package files exist;
+- every `test.json` loads and prepares successfully;
+- prompts, copied canonical files, pinned dependencies, fixture sources, and
+  fixture targets match the catalog plan;
+- prompt tokens resolve and no stale `supplied-skills/` paths remain;
+- rubric bytes are absent from declared and prepared provider input; and
+- initial evidence is empty.
 
-Schema `"0.2"` does not reproduce the canonical behavioral-evaluation transport.
-The canonical protocol uses a read-only sandbox, ignores user configuration and
-rules, and disables nested agents. The runner uses its fixed writable provider
-workspace and installed configuration. Prompt restrictions and post-run
-inventories do not make those transports equivalent.
+Acceptance does not invoke a provider, score a response, validate README prose,
+or independently validate runner result mechanics. Do not add shared migration
+or catalog-test machinery. It intentionally does not audit `rubric.md` contents:
+the rubric is retained for later evaluation, and incorrect rubric text is an
+authoring error rather than a runner capability failure.
 
-Representative smokes are mechanical packaging checks, not canonical replays or
-behavioral results. The later testing-methodology phase must approve enforcement
-of the canonical evaluator boundary before establishing a baseline. This
-migration does not change the runner or providers.
+Loading and preparation are the complete configuration acceptance check. Do not
+separately compare `id`, `prompt`, `execution.provider`, `execution.model`, or
+`execution.effort` with the catalog plan. The plan supplies those authoring
+choices; validating whether they are the right test-design choices belongs to the
+later testing-methodology phase.
 
-## Smoke evidence
+## Representative smoke
 
-Each explicit owner approval authorizes one attempt of the catalog plan's
-representative scenario from a named commit with clean tracked state. Every
-prompt, configuration, declared source, and other arm-defining file must be
-tracked and match that commit.
+Each catalog plan selects one representative scenario and specifies its exact
+`test.json` execution declaration. Obtain explicit owner approval for one attempt,
+then run that configuration once.
 
-Retain at most one `smoke-result.json` per scenario. It is the runner's exact
-`result.json`; do not retain stdout, stderr, final response, rendered prompt,
-configuration snapshot, evidence contents, or the temporary bundle.
+If the runner publishes `result.json`, replace any prior result for that scenario
+with its exact bytes as `smoke-result.json`. If it publishes no result, remove any
+prior smoke result. In either case, update the representative README with the
+mechanical outcome and remove the temporary run bundle. Retain no stdout, stderr,
+final response, rendered prompt, configuration snapshot, evidence contents, or
+other run artifact.
 
-Apply this disposition to the approved attempt:
+Use the status written by the runner. Do not compare the retained file back to
+the bundle, reconstruct its artifact inventory, tie it to a Git commit, or add a
+second result-validation procedure. The smoke satisfies catalog completion only
+when the retained result has status `COMPLETED`. Otherwise record the outcome and
+stop. Do not retry, modify the runner, weaken the scenario, or inspect the response
+without new owner direction.
 
-| Outcome | Retained state | Catalog disposition |
-|---|---|---|
-| Published `COMPLETED` result with null infrastructure error | Replace any prior result with the exact new file | Validate completed-state mechanics; satisfy the smoke requirement only when validation passes, otherwise record and stop |
-| Published `INFRA_ERROR` result | Replace any prior result with the exact new file | Validate it as the latest blocked-state evidence, record, and stop |
-| No published result | Remove any prior result; retain none | Record in the scenario README and catalog plan; stop |
+`COMPLETED` means that the runner completed the invocation mechanically. It does
+not mean that the response passed the scenario or that the harness is effective.
 
-Before discarding a result-producing attempt's bundle, compare the retained file
-byte-for-byte with its `result.json` and record the successful comparison in the
-catalog plan. For every published result, validate its schema, scenario ID,
-configured execution, status/error pairing, and recorded artifacts against the
-retained bundle and clean commit. For a `COMPLETED` result, also require the final
-fixture inventory to contain exactly the regular files declared by
-`test.json.fixtures` at their manifest-recorded targets, bytes, and hashes, plus
-only their target-implied parent directories. Require the evidence inventory to
-be empty. This comparison is required because the result records post-provider
-state.
-
-The representative scenario README links its current result when one exists. If
-the attempt publishes no result, it records the explicit no-result failure
-instead. Other scenario READMEs state that no current schema `"0.2"` result is
-retained. The migration index marks the representative using its documented
-entry format.
+Other scenario READMEs state that no schema `"0.2"` result is retained. The
+migration index identifies the catalog representative.
 
 ## Catalog workflow
 
 For each catalog:
 
-1. Create the catalog's sole plan. Make it the complete executable checklist for
-   that catalog: enumerate every canonical candidate; define each scenario's
-   package, input mapping, provenance, and permitted adaptations; select the
-   representative; specify every default configuration's exact provider, model,
-   and effort; define catalog-specific acceptance; and include implementation,
-   smoke, verification, archive, and merge work.
-2. For each candidate, create the scenario README and initial manifest, package
-   its prompt, rubric, declared files, and schema `"0.2"` configuration, then
-   finalize and reconcile the manifest.
-3. Add catalog-specific provider-free acceptance and preflight every
-   configuration against its manifest.
-4. Commit a clean provider-free catalog state, obtain explicit owner approval,
-   and run the approved representative attempt under the smoke contract.
-5. Verify the repository, reconcile index totals and roadmap catalog status,
-   archive the completed catalog plan, review the branch, and merge it before
-   planning the next catalog.
+1. Create the sole catalog plan. Enumerate the canonical candidates; define the
+   exact prompt, rubric, and file mappings; record each default configuration;
+   select the representative; and define the catalog-local acceptance test.
+2. Create every scenario package and README.
+3. Run catalog acceptance and the complete offline runner suite.
+4. Obtain approval, run the representative once, retain its latest result, and
+   update its README.
+5. Update the migration index, review the catalog, obtain merge and push
+   approval, merge it, update the roadmap, archive the plan, push `main`, and
+   remove the local worktree and feature branch.
 
-Each catalog uses catalog-specific acceptance. Shared catalog-test helpers remain
-outside this migration's scope.
+Do not create the next catalog plan before the current catalog is merged and its
+plan archived.
 
-## Provider-free acceptance
+## Completion
 
-Catalog acceptance verifies:
+A catalog is complete when:
 
-- exact expected scenario directories, canonical-to-runner ID mapping, and
-  required package files;
-- successful load and preparation of every `test.json`;
-- exact prompt, declared-source, target, byte, and hash agreement with each
-  provider-input manifest, plus exact rubric agreement with its recorded
-  provenance;
-- absence of rubric bytes from runner-declared provider input and the prepared
-  workspace;
-- resolved runner tokens, no stale `supplied-skills/` paths, and empty initial
-  evidence;
-- no unexpected `smoke-result.json`; when one is present, its schema, identity,
-  configured execution, recorded artifacts, and status/error pairing agree with
-  the smoke disposition. A `COMPLETED` result additionally satisfies the
-  completed-state fixture and evidence requirements above. A retained
-  `INFRA_ERROR` is valid blocked evidence but does not satisfy catalog completion.
+- every planned scenario has a loadable schema `"0.2"` package that passes its
+  catalog acceptance test;
+- its representative has one retained `COMPLETED` smoke result;
+- the migration index reports the catalog complete;
+- final catalog review passes; and
+- the catalog is merged, its roadmap item is checked, and its plan is archived.
 
-This is mechanical packaging verification, not behavioral evaluation.
-
-## Fail-closed conditions
-
-Stop and request owner direction when candidate scope, canonical representation,
-canonical bytes, rubric identity, or provenance is missing or ambiguous; a
-required dependency is unavailable; a scenario requires unsupported runner
-behavior; hashes do not reconcile; or faithful packaging requires an unapproved
-adaptation.
-
-Do not start a smoke when an arm-defining file is untracked or differs from the
-named commit. After an attempt, apply the smoke disposition above and stop unless
-the result is `COMPLETED` with null infrastructure error and all completed-state
-mechanics validate. Do not repeat the invocation, change the runner, weaken the
-scenario, inspect the response semantically, skip the scenario, or mark the
-catalog complete without new owner direction. Owner direction may authorize
-another invocation or a separately scoped contract change; it cannot make an
-incomplete run satisfy the current rule.
-
-These are catalog-plan and acceptance rules, not new hooks, runner validators,
-or provider behavior.
-
-## Verification and completion
-
-Each catalog runs the full runner suite, catalog-specific provider-free
-acceptance, mandatory repository hook suite, local Markdown-link check, and
-`git diff --check`. It receives task review and final whole-branch review before
-merge.
-
-Catalog migration does not change the runner, providers, skills, canonical
-scenario meaning or input representation, validation methodology, behavioral
-scoring, baselines, or raw provider artifacts. Runner changes, scenario redesign,
-alternate committed arms, shared dependency storage, shared test helpers,
-evaluator-transport enforcement, and testing methodology require separate
-approved scope.
-
-Migration is complete when all 105 scenarios have loadable schema `"0.2"`
-packages whose manifests, provenance, and provider-free preflight reconcile;
-every catalog's representative scenario has one current `COMPLETED` smoke result
-matching its clean smoke commit; the index reports none remaining; and every
-catalog plan is archived and its catalog is merged.
+The migration is complete when all 105 scenarios meet these package requirements,
+all catalog representatives have a retained `COMPLETED` smoke result, the index
+reports 105/105, and every catalog plan is archived and merged.

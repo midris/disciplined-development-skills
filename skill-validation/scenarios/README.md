@@ -62,8 +62,8 @@ Do not modify files, dispatch agents, or narrate your process. Return only the r
 ```
 
 Omit file-reading lines a scenario does not need. Add canonical inline context or
-additional declared-file instructions where its provider-input manifest requires
-them. Do not expose the evaluator-withheld rubric.
+additional file-reading instructions for files declared by `test.json`. Do not
+expose the evaluator-withheld rubric.
 
 ## Totals
 

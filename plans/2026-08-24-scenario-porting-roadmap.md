@@ -14,7 +14,7 @@ index for current totals.
 
 - Source commit `13599fb7d3127334b0d07bfe468767e586ec5f9c` owns
   canonical candidate scope and scenario content.
-- The migration design owns package, prompt, manifest, smoke, and completion
+- The migration design owns package, prompt, smoke, and completion
   rules.
 - The [scenario migration index](../skill-validation/scenarios/README.md) owns
   current totals and migrated scenario links.
