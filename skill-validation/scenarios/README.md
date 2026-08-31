@@ -34,6 +34,18 @@ Representative smoke: [`SSR-01`](sweeping-stale-references/ssr-01/README.md)
 - [`SSR-06`](sweeping-stale-references/ssr-06/README.md) — Identify exactly the symbol, attached-rationale, and documentation updates required by the session rename.
 - [`SSR-07`](sweeping-stale-references/ssr-07/README.md) — Preserve the partner constraint and accepted refresh cost while renaming the session-setting rationale.
 
+## lean-plan-writing
+
+Representative smoke: [`LP-01`](lean-plan-writing/lp-01/README.md)
+
+- [`LP-01`](lean-plan-writing/lp-01/README.md) — Preserve the upstream plan scaffold, TDD order, concrete files, rigor, and commit cadence while applying lean prose density.
+- [`LP-02`](lean-plan-writing/lp-02/README.md) — Keep implementation bodies and copyable templates out of a detailed parser task while preserving exact behavior through a complete tricky-case table.
+- [`LP-03`](lean-plan-writing/lp-03/README.md) — Permit exactly one bounded illustrative snippet when prose alone cannot specify an exact four-line artifact.
+- [`LP-05`](lean-plan-writing/lp-05/README.md) — Name and disposition absent, malformed, out-of-scale, uniqueness, atomicity, and actionable-error cases without embedding implementation bodies.
+- [`LP-06`](lean-plan-writing/lp-06/README.md) — Name and disposition quiet failure, scale, overlap, idempotency, quota, isolation, and timezone cases.
+- [`LP-07`](lean-plan-writing/lp-07/README.md) — Split oversized independently deployable work at qualitative review boundaries while preserving dependency order.
+- [`LP-08`](lean-plan-writing/lp-08/README.md) — Keep a small genuinely coupled rename in one atomic branch and merge.
+
 ## Entry format
 
 Use the identities defined by the migration design. A migrated catalog has one
@@ -94,8 +106,8 @@ expose the evaluator-withheld rubric.
 - `disciplined-development`: 9 total, 0 migrated, 9 not migrated
 - `disciplined-research`: 7 total, 0 migrated, 7 not migrated
 - `dispatching-development-subagents`: 11 total, 0 migrated, 11 not migrated
-- `lean-plan-writing`: 7 total, 0 migrated, 7 not migrated
+- `lean-plan-writing`: 7 total, 7 migrated, 0 not migrated
 - `skill-discovery`: 12 total, 0 migrated, 12 not migrated
 - `sweeping-stale-references`: 6 total, 6 migrated, 0 not migrated
 - `writing-explicit-rationale`: 6 total, 6 migrated, 0 not migrated
-- Overall: 105 total, 12 migrated, 93 not migrated
+- Overall: 105 total, 19 migrated, 86 not migrated

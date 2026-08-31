@@ -1,0 +1,1 @@
+Upstream title, agentic-worker line, Goal, Architecture, Tech Stack, Global Constraints, concrete files, checkbox task, test-fail/prose-implementation/test-pass/commit order, complete text/JSON/error behavior, no bodies or placeholders, and one branch/PR

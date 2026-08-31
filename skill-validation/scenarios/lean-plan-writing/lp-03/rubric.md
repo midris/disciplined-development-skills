@@ -1,0 +1,1 @@
+Exactly one four-line artifact block in order; UTF-8/no-BOM/LF/final-LF byte contract; byte-for-byte verification; no implementation/test bodies or fixture-repeating verification command; no placeholders; one plan step

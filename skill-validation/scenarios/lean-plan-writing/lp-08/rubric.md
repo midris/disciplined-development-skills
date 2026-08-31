@@ -1,0 +1,1 @@
+Exactly one branch/PR for all three files; reject per-file splitting; cite small, coupled, intermediate-red/inconsistent facts; no compatibility or staged rollout; return only boundary section and answer

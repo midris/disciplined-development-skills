@@ -1,0 +1,1 @@
+Explicit no-event, malformed-event, millions/100-per-minute, idempotency/overlap, per-account isolation, and account-local-day dispositions; behavioral tests, concrete files, TDD order, prose implementation, no bodies or placeholders

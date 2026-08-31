@@ -1,0 +1,1 @@
+Reject monolith; four sequential PRs or at least one per subsystem; every boundary green/reviewable with named verification; preserve dependency order; add no numeric heuristic; return only boundary section
