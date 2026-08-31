@@ -58,6 +58,20 @@ Representative smoke: [`DR-01`](disciplined-research/dr-01/README.md)
 - [`DR-06`](disciplined-research/dr-06/README.md) — Present an unsupported cause only as a stamped unverified investigation lead without attaching unrelated evidence as support.
 - [`DR-07`](disciplined-research/dr-07/README.md) — Correct a conversational premise and derive only the supported fifteen-minute result with source disclosure.
 
+## disciplined-development
+
+Representative smoke: [`DD-04`](disciplined-development/dd-04/README.md)
+
+- [`DD-01`](disciplined-development/dd-01/README.md) — Select the due parent modes, gates, principles, artifacts, outcomes, blocked transitions, and owner seams across eight independent vignettes.
+- [`DD-02`](disciplined-development/dd-02/README.md) — Preserve Gate 1–5 timing and order, parent artifacts and destinations, fail-closed transitions, and owner boundaries through one fixed sequence.
+- [`DD-03`](disciplined-development/dd-03/README.md) — Apply Principle 7 only for contract, reachable accepted input, observed use, or robust invariants rather than speculative scale.
+- [`DD-04`](disciplined-development/dd-04/README.md) — Ground a factual deployment premise before action, keep action blocked, and leave research procedure to the companion skill.
+- [`DD-05`](disciplined-development/dd-05/README.md) — Read governing sources, surface a plan/spec conflict, verify a recalled capability, and block planning and implementation.
+- [`DD-06`](disciplined-development/dd-06/README.md) — Require signed written scope to preserve a chosen spelling and an intentional deferral before delegation, planning, or coding.
+- [`DD-07`](disciplined-development/dd-07/README.md) — Keep delegation inside signed scope, require directly observed RED before production edits, and retain parent acceptance authority.
+- [`DD-08`](disciplined-development/dd-08/README.md) — Dispose of unauthorized work before direct CLI evidence, reference reconciliation, truthful bookkeeping, and one coherent green commit.
+- [`DD-09`](disciplined-development/dd-09/README.md) — Require whole-tree review, scope resolution, refreshed evidence, clean review and smoke, and finishing before PR creation.
+
 ## Entry format
 
 Use the identities defined by the migration design. A migrated catalog has one
@@ -115,11 +129,11 @@ expose the evaluator-withheld rubric.
 - `adversarial-review`: 15 total, 0 migrated, 15 not migrated
 - `adversarial-review-loop`: 15 total, 0 migrated, 15 not migrated
 - `concise-writing`: 17 total, 0 migrated, 17 not migrated
-- `disciplined-development`: 9 total, 0 migrated, 9 not migrated
+- `disciplined-development`: 9 total, 9 migrated, 0 not migrated
 - `disciplined-research`: 7 total, 7 migrated, 0 not migrated
 - `dispatching-development-subagents`: 11 total, 0 migrated, 11 not migrated
 - `lean-plan-writing`: 7 total, 7 migrated, 0 not migrated
 - `skill-discovery`: 12 total, 0 migrated, 12 not migrated
 - `sweeping-stale-references`: 6 total, 6 migrated, 0 not migrated
 - `writing-explicit-rationale`: 6 total, 6 migrated, 0 not migrated
-- Overall: 105 total, 26 migrated, 79 not migrated
+- Overall: 105 total, 35 migrated, 70 not migrated
