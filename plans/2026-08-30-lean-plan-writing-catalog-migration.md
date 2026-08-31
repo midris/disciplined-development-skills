@@ -1,7 +1,9 @@
 # Lean Plan Writing Schema 0.2 Catalog Migration Implementation Plan
 
 > **For agentic workers:** REQUIRED SUB-SKILL: Use
-> `superpowers:subagent-driven-development` to implement this plan task by task.
+> `superpowers:subagent-driven-development` to implement Tasks 1–4 task by task.
+> After Task 4, leave the subagent-driven task loop and perform the controller
+> closeout directly; do not dispatch that section as a task.
 > Use `superpowers:verification-before-completion` before completion claims.
 > Track progress with the checkboxes below.
 
@@ -225,8 +227,9 @@ Catalog verification consists of these existing checks:
 - Run `git diff --check`.
 
 Do not add another verifier. Run the focused acceptance and full offline runner
-suite after Task 3. Run the full catalog verification after Tasks 4 and 5,
-rerunning affected checks after verified review repairs.
+suite after Task 3. Run the full catalog verification after Task 4 and again
+during controller closeout, rerunning affected checks after verified review
+repairs.
 
 ## Task 1: Package representative `LP-01`
 
@@ -319,7 +322,7 @@ result-file reconstruction are outside this migration and remain unexamined.
 - [ ] Run catalog verification, review the smoke documentation and index update,
   and commit the task changes.
 
-## Task 5: Final review, merge, and catalog bookkeeping
+## Controller closeout: Final review, merge, and catalog bookkeeping
 
 **Files:**
 
@@ -327,6 +330,10 @@ result-file reconstruction are outside this migration and remain unexamined.
 - Move this plan to
   `plans/completed/2026-08-30-lean-plan-writing-catalog-migration.md` after
   merge.
+
+**Ownership:** This section is outside the subagent-driven task loop. The
+controller performs it directly under the repository's Gate 5 and branch-finishing
+rules.
 
 **Boundary:** A merge conflict, verification failure, or rejected push stops
 completion with the feature worktree and branch preserved. Only the named
