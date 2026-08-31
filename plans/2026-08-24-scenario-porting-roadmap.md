@@ -44,7 +44,7 @@ merged:
 - [x] `sweeping-stale-references`
 - [x] `lean-plan-writing`
 - [x] `disciplined-research`
-- [ ] `disciplined-development`
+- [x] `disciplined-development`
 - [ ] `adversarial-review-loop`
 - [ ] `skill-discovery`
 - [ ] `dispatching-development-subagents`
