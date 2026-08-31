@@ -304,22 +304,22 @@ recorded mechanically and stops the catalog without a retry. Response meaning,
 rubric satisfaction, provider stdout/stderr, result artifact inventories, and
 result-file reconstruction are outside this migration and remain unexamined.
 
-- [ ] Under the owner's standing approval, run exactly
+- [x] Under the owner's standing approval, run exactly
   `uv run skilltest run ../scenarios/lean-plan-writing/lp-01/test.json` once from
   `skill-validation/runner`. Do not retry or run another scenario.
-- [ ] If the runner publishes `result.json`, copy its exact bytes to
+- [x] If the runner publishes `result.json`, copy its exact bytes to
   `lp-01/smoke-result.json`; otherwise remove any prior retained result.
-- [ ] Record only the runner status and result link, when present, in the
+- [x] Record only the runner status and result link, when present, in the
   `LP-01` README; remove the temporary run bundle and retain no other run
   artifact.
 - [ ] If no result is retained or its status is not `COMPLETED`, run catalog
   verification, review and commit the smoke disposition, README, and plan
   tracking, then stop and request owner direction. Do not update the migration
   index.
-- [ ] For a `COMPLETED` result, add the catalog to the migration index, link all
+- [x] For a `COMPLETED` result, add the catalog to the migration index, link all
   seven READMEs, identify `LP-01` as representative, and update totals to 7/7
   for this catalog and 19/105 overall.
-- [ ] Run catalog verification, review the smoke documentation and index update,
+- [x] Run catalog verification, review the smoke documentation and index update,
   and commit the task changes.
 
 ## Controller closeout: Final review, merge, and catalog bookkeeping
