@@ -1,0 +1,211 @@
+{
+  "artifacts": {
+    "config": {
+      "bytes": 1440,
+      "exists": true,
+      "path": "config.json",
+      "sha256": "8a59e669b52da43cf6446f9831cc2a35ccc90495cee49c379304c2a5bad51b91"
+    },
+    "evidence": {
+      "empty": true,
+      "entries": [],
+      "exists": true,
+      "path": "workspace/evidence"
+    },
+    "final": {
+      "bytes": 59,
+      "exists": true,
+      "path": "final.txt",
+      "sha256": "3f3749a4b9d9296a457ea8d6763783b4f310662fa15391aa1e08bc2517b8fd05"
+    },
+    "fixture": {
+      "empty": false,
+      "entries": [
+        {
+          "bytes": null,
+          "path": "project",
+          "sha256": null,
+          "type": "directory"
+        },
+        {
+          "bytes": 54,
+          "path": "project/README.md",
+          "sha256": "49061feab313293d6a1b8f23cae43056c79eeee88a00745a741595f98d54f1db",
+          "type": "file"
+        },
+        {
+          "bytes": null,
+          "path": "project/app",
+          "sha256": null,
+          "type": "directory"
+        },
+        {
+          "bytes": 205,
+          "path": "project/app/retention.py",
+          "sha256": "900dd0268a517c797023f907ce3a14b6f66bc04b9c27787a153cd471dea6bec8",
+          "type": "file"
+        },
+        {
+          "bytes": null,
+          "path": "skills",
+          "sha256": null,
+          "type": "directory"
+        },
+        {
+          "bytes": null,
+          "path": "skills/adversarial-review",
+          "sha256": null,
+          "type": "directory"
+        },
+        {
+          "bytes": null,
+          "path": "skills/adversarial-review-loop",
+          "sha256": null,
+          "type": "directory"
+        },
+        {
+          "bytes": 8374,
+          "path": "skills/adversarial-review-loop/SKILL.md",
+          "sha256": "46b85eafc5db54cb521eed9c4a110e552c76d97cfae72e141f109c9dea10f0c6",
+          "type": "file"
+        },
+        {
+          "bytes": 10295,
+          "path": "skills/adversarial-review/SKILL.md",
+          "sha256": "9004ff153d5dc3a3690254667c4f666151dcabff7ef6f705cc751134be56499c",
+          "type": "file"
+        },
+        {
+          "bytes": null,
+          "path": "skills/concise-writing",
+          "sha256": null,
+          "type": "directory"
+        },
+        {
+          "bytes": 5616,
+          "path": "skills/concise-writing/SKILL.md",
+          "sha256": "4d12a2eb475c6b2ef57e2300c8c07af3f59c1e07b2b82695a3b7669eee1d6d72",
+          "type": "file"
+        },
+        {
+          "bytes": null,
+          "path": "skills/disciplined-development",
+          "sha256": null,
+          "type": "directory"
+        },
+        {
+          "bytes": 13112,
+          "path": "skills/disciplined-development/SKILL.md",
+          "sha256": "1151a7575a5b6f72e007229c97efdb7a829695d08e8f44450d0d71b232e75dec",
+          "type": "file"
+        },
+        {
+          "bytes": null,
+          "path": "skills/disciplined-research",
+          "sha256": null,
+          "type": "directory"
+        },
+        {
+          "bytes": 9400,
+          "path": "skills/disciplined-research/SKILL.md",
+          "sha256": "a5c4079e5aa21651ecd39b09e3fb2d9a58f4a1f3b99354b3b6927b2d44c6fb50",
+          "type": "file"
+        },
+        {
+          "bytes": null,
+          "path": "skills/dispatching-development-subagents",
+          "sha256": null,
+          "type": "directory"
+        },
+        {
+          "bytes": 5593,
+          "path": "skills/dispatching-development-subagents/SKILL.md",
+          "sha256": "b89b4db8af53bd136237cb2306f956c039757a0e321b1f704bd16d1a00580500",
+          "type": "file"
+        },
+        {
+          "bytes": null,
+          "path": "skills/lean-plan-writing",
+          "sha256": null,
+          "type": "directory"
+        },
+        {
+          "bytes": 5194,
+          "path": "skills/lean-plan-writing/SKILL.md",
+          "sha256": "6a3115a4d33ad2f99238f915a6a1b7869efd8c80a6cce422d3afae60c9857fac",
+          "type": "file"
+        },
+        {
+          "bytes": null,
+          "path": "skills/sweeping-stale-references",
+          "sha256": null,
+          "type": "directory"
+        },
+        {
+          "bytes": 7689,
+          "path": "skills/sweeping-stale-references/SKILL.md",
+          "sha256": "d6812c33cae026807bbb3ebe851d93b60b513dd87ea5efd98aea28f5c02f9157",
+          "type": "file"
+        },
+        {
+          "bytes": null,
+          "path": "skills/writing-explicit-rationale",
+          "sha256": null,
+          "type": "directory"
+        },
+        {
+          "bytes": 9181,
+          "path": "skills/writing-explicit-rationale/SKILL.md",
+          "sha256": "97eb06c649c194e8819b4dff68b808eda4ec7c948a6ead518da247daf31d6cfe",
+          "type": "file"
+        }
+      ],
+      "exists": true,
+      "path": "workspace/fixture"
+    },
+    "prompt": {
+      "bytes": 1493,
+      "exists": true,
+      "path": "prompt.txt",
+      "sha256": "0da46a179ce507195b4e6b5b343776f4708e044820724897baf19e4e3022ce25"
+    },
+    "prompt_template": {
+      "bytes": 763,
+      "exists": true,
+      "path": "prompt-template.txt",
+      "sha256": "b011d522027b31696e4e6db6c3dfb61e59b5886f6c0ba153a3eca75d0ff0f644"
+    },
+    "stderr": {
+      "bytes": 0,
+      "exists": true,
+      "path": "stderr.txt",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "stdout": {
+      "bytes": 11577,
+      "exists": true,
+      "path": "stdout.txt",
+      "sha256": "a10bb3eee47d700714de2b83f13f7ddbb382b742f04ce092c19257309326a1bf"
+    }
+  },
+  "duration_seconds": 31.752,
+  "execution": {
+    "effort": "high",
+    "executable": "codex",
+    "exit_code": 0,
+    "invocation_started": true,
+    "model": "gpt-5.6-sol",
+    "provider": "codex",
+    "timed_out": false,
+    "timeout_seconds": 900
+  },
+  "finished_at": "2026-08-31T14:23:25.625Z",
+  "infrastructure_error": null,
+  "run_id": "20260831T142253874Z-dr-01-eb324216-7571-45bb-86ab-a3007f9a6e3d-ltbin3zl",
+  "schema_version": "0.2",
+  "started_at": "2026-08-31T14:22:53.874Z",
+  "status": "COMPLETED",
+  "test": {
+    "id": "dr-01"
+  }
+}

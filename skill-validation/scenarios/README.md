@@ -46,6 +46,18 @@ Representative smoke: [`LP-01`](lean-plan-writing/lp-01/README.md)
 - [`LP-07`](lean-plan-writing/lp-07/README.md) — Split oversized independently deployable work at qualitative review boundaries while preserving dependency order.
 - [`LP-08`](lean-plan-writing/lp-08/README.md) — Keep a small genuinely coupled rename in one atomic branch and merge.
 
+## disciplined-research
+
+Representative smoke: [`DR-01`](disciplined-research/dr-01/README.md)
+
+- [`DR-01`](disciplined-research/dr-01/README.md) — Prefer current implementation over stale project documentation and correct a peer-fed retention claim with a source.
+- [`DR-02`](disciplined-research/dr-02/README.md) — Use a later controlling first-party addendum to disconfirm a supplied museum-procurement deadline.
+- [`DR-03`](disciplined-research/dr-03/README.md) — Verify project and upstream version state separately and correct a cross-domain claim.
+- [`DR-04`](disciplined-research/dr-04/README.md) — Apply acquire, verify, and source-disclosure rules to a private scratch note while mapping one source to multiple claims.
+- [`DR-05`](disciplined-research/dr-05/README.md) — Refuse to invent a datum missing from the only supplied source despite pressure for an uncaveated casual answer.
+- [`DR-06`](disciplined-research/dr-06/README.md) — Present an unsupported cause only as a stamped unverified investigation lead without attaching unrelated evidence as support.
+- [`DR-07`](disciplined-research/dr-07/README.md) — Correct a conversational premise and derive only the supported fifteen-minute result with source disclosure.
+
 ## Entry format
 
 Use the identities defined by the migration design. A migrated catalog has one
@@ -104,10 +116,10 @@ expose the evaluator-withheld rubric.
 - `adversarial-review-loop`: 15 total, 0 migrated, 15 not migrated
 - `concise-writing`: 17 total, 0 migrated, 17 not migrated
 - `disciplined-development`: 9 total, 0 migrated, 9 not migrated
-- `disciplined-research`: 7 total, 0 migrated, 7 not migrated
+- `disciplined-research`: 7 total, 7 migrated, 0 not migrated
 - `dispatching-development-subagents`: 11 total, 0 migrated, 11 not migrated
 - `lean-plan-writing`: 7 total, 7 migrated, 0 not migrated
 - `skill-discovery`: 12 total, 0 migrated, 12 not migrated
 - `sweeping-stale-references`: 6 total, 6 migrated, 0 not migrated
 - `writing-explicit-rationale`: 6 total, 6 migrated, 0 not migrated
-- Overall: 105 total, 19 migrated, 86 not migrated
+- Overall: 105 total, 26 migrated, 79 not migrated

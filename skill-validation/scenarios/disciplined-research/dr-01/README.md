@@ -8,4 +8,4 @@ Prompt is the canonical fenced evaluator input beneath `DR-01 — bundled projec
 
 # Smoke
 
-No schema `0.2` result is retained.
+Runner status: `COMPLETED`. Retained result: [smoke-result.json](smoke-result.json).
