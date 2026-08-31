@@ -1,10 +1,8 @@
 # Disciplined Development Schema 0.2 Catalog Migration Implementation Plan
 
-> **For agentic workers:** REQUIRED SUB-SKILL: Use
-> `superpowers:subagent-driven-development` to implement Tasks 1–4 task by task.
-> After Task 4, leave the subagent-driven task loop and perform the controller
-> review directly. Stop at the owner approval gate before merge or cleanup.
-> Use `superpowers:verification-before-completion` before completion claims.
+> **For agentic workers:** Use `superpowers:verification-before-completion`
+> before completion claims. Stop at the owner approval gate before merge or
+> cleanup.
 
 **Goal:** Package all nine active `disciplined-development` scenarios for the
 schema `"0.2"` runner, prove that the runner can load and prepare every package,
@@ -200,136 +198,107 @@ Permit only `DD-04` to add optional `smoke-result.json` after acceptance is
 established. Redirect the runner's temporary root to pytest's `tmp_path` so
 preparation leaves no run bundle outside the test directory.
 
-Acceptance does not invoke a provider; validate README prose, rubric content,
-or execution choices; inspect smoke results; validate response or result
-schemas; reconstruct a result; inventory provider artifacts; or add shared
-machinery. Those are accepted, unexamined edges outside this migration.
+Acceptance does not invoke a provider or validate README prose, rubric content,
+execution choices, smoke results, response or result schemas, or provider
+artifacts. It does not reconstruct a result or add shared machinery. Those are
+accepted, unexamined edges outside this migration.
 
 ## Verification
 
-After Task 3, run from `skill-validation/runner`:
+After package acceptance is implemented, run from `skill-validation/runner`:
 
 ```bash
 uv run pytest -q acceptance/test_disciplined_development_catalog.py
 uv run pytest -q
 ```
 
-After Task 4, rerun only the focused acceptance test because that task changes
-only the permitted result and records. If a later review repair changes a
+After the smoke record and index update, rerun only the focused acceptance test
+because those changes do not alter package preparation. If review repairs a
 package or acceptance behavior, rerun both commands; otherwise rerun only the
-affected check.
+affected check. Do not add another verifier or run unrelated skill test suites.
 
-Before every commit after Task 1, run the repository's existing local Markdown
-link check under `Verification commands` in the canonical
-`skill-validation/README.md`. Before every commit, run `git diff --check` and
-`git diff --cached --check`. Do not add another verifier or run unrelated skill
-test suites.
+## Task 1: Package `DD-01` through `DD-09`
 
-## Task 1: Package `DD-01` through `DD-04`
-
-**Files:** Create the four scenario packages and their declared fixture files.
-Modify this plan only to mark task progress.
+**Files:** Create all nine scenario packages and their declared fixture files.
 
 **Boundary:** Stop on a missing source, hash mismatch, malformed configuration,
 or required adaptation outside this plan.
 
-- [ ] Materialize canonical prompts, rubrics, and owned fixtures; apply only the
+- Materialize canonical prompts, rubrics, and owned fixtures; apply only the
   declared prompt substitutions.
-- [ ] Create the exact schema `"0.2"` configurations and minimal package READMEs.
-- [ ] Confirm planned hashes and successful configuration loading, review the
-  task diff, and commit as
-  `test(validation): package disciplined development scenarios 01-04`.
+- Create the exact schema `"0.2"` configurations and minimal package READMEs.
+- Exclude `operator-note.md` from all three copies of the `DD-02` set.
 
-## Task 2: Package `DD-05` through `DD-09`
-
-**Files:** Create the five remaining scenario packages and their declared
-fixture files. Modify this plan only to mark task progress.
-
-**Boundary:** Each package accepts only its declared canonical files. In
-particular, exclude `operator-note.md` from all three copies of the `DD-02` set.
-
-- [ ] Materialize canonical prompts, rubrics, and owned fixtures; apply only the
-  declared prompt substitutions.
-- [ ] Create the exact schema `"0.2"` configurations and minimal package READMEs.
-- [ ] Confirm planned hashes and successful configuration loading, review the
-  task diff, and commit as
-  `test(validation): package disciplined development scenarios 05-09`.
-
-## Task 3: Add catalog acceptance and verify preparation
+## Task 2: Add catalog acceptance and verify preparation
 
 **Files:** Create
 `skill-validation/runner/acceptance/test_disciplined_development_catalog.py`.
-Modify this plan only to mark task progress.
 
 **Boundary:** Provider behavior and result content remain accepted, unexamined
 edges. Do not add output checks, mutations, negative-test matrices, or shared
 helpers.
 
-- [ ] Implement exactly the catalog-local acceptance contract above.
-- [ ] Run the focused acceptance and the complete offline runner suite once.
-- [ ] Review the test against the package-only boundary and commit as
-  `test(validation): add disciplined development catalog acceptance`.
+- Implement exactly the catalog-local acceptance contract above.
+- Run the focused acceptance and the complete offline runner suite once.
+- Review the test against the package-only boundary.
 
-## Task 4: Run and record the representative smoke
+## Task 3: Run and record the representative smoke
 
 **Files:** Create
 `skill-validation/scenarios/disciplined-development/dd-04/smoke-result.json`
 only if the runner publishes `result.json`. Modify the `DD-04` README, the
-scenario migration index only after `COMPLETED`, and this plan only for task
-progress.
+scenario migration index only after `COMPLETED`.
 
 **Boundary:** Missing output or any status other than `COMPLETED` stops the
 catalog without retry. Response meaning, rubric satisfaction, stdout/stderr,
 artifact inventories, and result reconstruction remain unexamined.
 
-- [ ] From `skill-validation/runner`, invoke exactly once:
+- From `skill-validation/runner`, invoke exactly once:
   `uv run skilltest run ../scenarios/disciplined-development/dd-04/test.json`.
   Do not retry or run another scenario.
-- [ ] If the runner publishes `result.json`, copy its exact bytes to
-  `dd-04/smoke-result.json`. Retain no other run artifact.
-- [ ] If the retained result's runner status is `COMPLETED`, update only the
+- If the runner publishes `result.json`, replace any prior
+  `dd-04/smoke-result.json` with its exact bytes. If it publishes no result,
+  remove any prior retained result.
+- Record the runner's mechanical outcome in the `DD-04` README and remove the
+  owned temporary run directory in every outcome. Retain no other run artifact.
+- If the retained result's runner status is `COMPLETED`, update only the
   `DD-04` README and migration index, link all nine READMEs, identify `DD-04` as
   representative, and update totals to 9/9 and 35/105 overall.
-- [ ] If no result is retained or status is not `COMPLETED`, record that
-  mechanical disposition without updating the index, run the focused
-  acceptance and commit checks, commit the task state, then stop for owner
-  direction.
-- [ ] For `COMPLETED`, run focused acceptance and commit checks, review the
-  records, and commit as
-  `test(validation): record disciplined development catalog smoke`.
+- If no result is retained or status is not `COMPLETED`, do not update the
+  index; rerun focused acceptance and stop for owner direction.
+- For `COMPLETED`, rerun focused acceptance and review the records.
 
 ## Controller review and approval gate
 
-This section is outside the subagent-driven task loop. The controller performs
-it directly and does not dispatch an external review.
+The controller performs this review directly and does not dispatch an external
+review unless the owner requests one.
 
-- [ ] Review the whole catalog against the governing design and this plan.
+- Review the whole catalog against the governing design and this plan.
   Confirm the final diff is limited to the nine packages, their catalog-local
-  acceptance test, the migration index, and plan tracking.
-- [ ] Address only verified in-scope findings and rerun only checks affected by
+  acceptance test, and the migration index.
+- Address only verified in-scope findings and rerun only checks affected by
   repairs.
-- [ ] Report the four task commits, focused and full offline verification,
+- Report the implementation commits, focused and full offline verification,
   smoke attempt and retained result status, and internal-review disposition.
-- [ ] Stop and obtain explicit owner approval before merge, push, plan archive,
+- Stop and obtain explicit owner approval before merge, push, plan archive,
   roadmap update, feature worktree/branch removal, or next-catalog planning.
 
 ## Post-approval closeout
 
-- [ ] Merge the feature branch into local `main`.
-- [ ] On `main`, check the `disciplined-development` roadmap item and move this
+- Merge the feature branch into local `main`.
+- On `main`, check the `disciplined-development` roadmap item and move this
   plan to `plans/completed/`, adjusting its three header links for the new
-  location. Run the Markdown link check and `git diff --check`, then commit the
-  closeout.
-- [ ] Push `main`, then remove this catalog's worktree and local feature branch.
+  location, then commit the closeout.
+- Push `main`, then remove this catalog's worktree and local feature branch.
   Do not create the next catalog plan without separate owner approval.
 
 ## Done when
 
-- [ ] All nine packages pass catalog acceptance and the complete offline runner
+- All nine packages pass catalog acceptance and the complete offline runner
   suite.
-- [ ] One approved `DD-04` invocation retains the exact runner-produced
+- One approved `DD-04` invocation retains the exact runner-produced
   `COMPLETED` result.
-- [ ] The migration index reports 9/9 for this catalog and 35/105 overall.
-- [ ] Internal review passes without output or result judgment.
-- [ ] After owner approval, the catalog is merged and pushed, the roadmap and
+- The migration index reports 9/9 for this catalog and 35/105 overall.
+- Internal review passes without output or result judgment.
+- After owner approval, the catalog is merged and pushed, the roadmap and
   plan are closed, and the feature worktree and branch are removed.
