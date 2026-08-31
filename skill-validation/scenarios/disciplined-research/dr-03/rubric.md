@@ -1,0 +1,1 @@
+State project version 3.4.2 and supplied upstream stable 4.1.0, explicitly correct the claim that the project already uses 4.1.0, cite `project/package.json` and current official release notes in the required order, ignore the stale blog, and add no unsupported claim, blocker, or narration

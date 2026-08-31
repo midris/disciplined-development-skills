@@ -1,0 +1,12 @@
+{
+  "schema_version": "0.2",
+  "id": "dr-02",
+  "prompt": "prompt.md",
+  "fixtures": [
+    {"source": "../../../../skills/disciplined-research/SKILL.md", "target": "skills/disciplined-research/SKILL.md"},
+    {"source": "fixture/sources/city-museum-rfp.md", "target": "sources/city-museum-rfp.md"},
+    {"source": "fixture/sources/city-museum-addendum-2.md", "target": "sources/city-museum-addendum-2.md"},
+    {"source": "fixture/sources/friends-newsletter.md", "target": "sources/friends-newsletter.md"}
+  ],
+  "execution": {"provider": "codex", "model": "gpt-5.6-sol", "effort": "high"}
+}

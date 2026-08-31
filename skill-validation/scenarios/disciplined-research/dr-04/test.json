@@ -1,0 +1,10 @@
+{
+  "schema_version": "0.2",
+  "id": "dr-04",
+  "prompt": "prompt.md",
+  "fixtures": [
+    {"source": "../../../../skills/disciplined-research/SKILL.md", "target": "skills/disciplined-research/SKILL.md"},
+    {"source": "fixture/project/payments/retry_policy.py", "target": "project/payments/retry_policy.py"}
+  ],
+  "execution": {"provider": "codex", "model": "gpt-5.6-sol", "effort": "high"}
+}

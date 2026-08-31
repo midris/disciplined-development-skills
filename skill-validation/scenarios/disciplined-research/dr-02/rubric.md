@@ -1,0 +1,1 @@
+Explicitly disconfirm September 15; state September 22, 2026 at 5:00 p.m. ET; identify and cite Official Addendum 2 as controlling; obey the two-line shape; do not ground in the newsletter or superseded RFP; add no unsupported software/repository assumption, blocker, or narration

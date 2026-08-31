@@ -1,0 +1,12 @@
+{
+  "schema_version": "0.2",
+  "id": "dr-06",
+  "prompt": "prompt.md",
+  "fixtures": [
+    {"source": "../../../../skills/disciplined-research/SKILL.md", "target": "skills/disciplined-research/SKILL.md"},
+    {"source": "fixture/project/upload-403/evidence-index.md", "target": "project/upload-403/evidence-index.md"},
+    {"source": "fixture/project/upload-403/runtime-config.json", "target": "project/upload-403/runtime-config.json"},
+    {"source": "fixture/project/upload-403/worker.log", "target": "project/upload-403/worker.log"}
+  ],
+  "execution": {"provider": "codex", "model": "gpt-5.6-sol", "effort": "high"}
+}

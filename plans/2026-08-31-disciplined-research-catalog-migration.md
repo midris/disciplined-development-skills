@@ -264,10 +264,10 @@ Stop on a missing source, hash mismatch, malformed configuration, or required
 adaptation outside this plan. Do not reconstruct or normalize the large `DR-06`
 worker log.
 
-- [ ] Create all six self-contained packages from the catalog decisions above.
-- [ ] Confirm the prompts and packaged files have their planned hashes and each
+- [x] Create all six self-contained packages from the catalog decisions above.
+- [x] Confirm the prompts and packaged files have their planned hashes and each
   configuration loads with the runner.
-- [ ] Review the package files against their sources and commit the task changes.
+- [x] Review the package files against their sources and commit the task changes.
 
 ## Task 3: Add catalog acceptance and verify preparation
 
