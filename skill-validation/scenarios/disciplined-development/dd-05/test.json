@@ -1,0 +1,44 @@
+{
+  "schema_version": "0.2",
+  "id": "dd-05",
+  "prompt": "prompt.md",
+  "fixtures": [
+    {
+      "source": "../../../../skills/disciplined-development/SKILL.md",
+      "target": "skills/disciplined-development/SKILL.md"
+    },
+    {
+      "source": "fixture/project/dd-02/CLAUDE.md",
+      "target": "project/dd-02/CLAUDE.md"
+    },
+    {
+      "source": "fixture/project/dd-02/plans/export.md",
+      "target": "project/dd-02/plans/export.md"
+    },
+    {
+      "source": "fixture/project/dd-02/plans/specs/export.md",
+      "target": "project/dd-02/plans/specs/export.md"
+    },
+    {
+      "source": "fixture/project/dd-02/sources/cli-schema.md",
+      "target": "project/dd-02/sources/cli-schema.md"
+    },
+    {
+      "source": "fixture/project/dd-02/sources/git-history.md",
+      "target": "project/dd-02/sources/git-history.md"
+    },
+    {
+      "source": "fixture/project/dd-02/sources/library-api.md",
+      "target": "project/dd-02/sources/library-api.md"
+    },
+    {
+      "source": "fixture/project/dd-02/sources/vendor-schema-status.md",
+      "target": "project/dd-02/sources/vendor-schema-status.md"
+    }
+  ],
+  "execution": {
+    "provider": "codex",
+    "model": "gpt-5.6-sol",
+    "effort": "high"
+  }
+}
