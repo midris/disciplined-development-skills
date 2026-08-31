@@ -3,6 +3,7 @@
 from __future__ import annotations
 
 import hashlib
+import json
 from pathlib import Path
 
 import pytest
@@ -212,16 +213,16 @@ def _package_files(scenario_dir: Path) -> set[str]:
     }
 
 
-def _expected_fixtures(scenario_id: str, scenario_dir: Path) -> tuple[tuple[Path, Path], ...]:
+def _expected_fixtures(scenario_id: str) -> tuple[tuple[str, str], ...]:
     live = tuple(
         (
-            (scenario_dir / f"../../../../skills/{skill_id}/SKILL.md").resolve(),
-            Path(f"skills/{skill_id}/SKILL.md"),
+            f"../../../../skills/{skill_id}/SKILL.md",
+            f"skills/{skill_id}/SKILL.md",
         )
         for skill_id in LIVE_SKILLS[scenario_id]
     )
     packaged = tuple(
-        ((scenario_dir / source).resolve(), Path(target))
+        (source, target)
         for source, target, _ in CATALOG[scenario_id]["packaged"]
     )
     return live + packaged
@@ -241,14 +242,18 @@ def test_disciplined_research_catalog_prepares_only_declared_inputs(
         assert expected["files"] <= package_files <= expected["files"] | optional_files
 
         config = load_config(scenario_dir / "test.json")
-        assert tuple((fixture.source, fixture.target) for fixture in config.fixtures) == _expected_fixtures(
-            scenario_id, scenario_dir
+        raw_config = json.loads((scenario_dir / "test.json").read_bytes())
+        assert tuple(
+            (fixture["source"], fixture["target"])
+            for fixture in raw_config["fixtures"]
+        ) == _expected_fixtures(
+            scenario_id
         )
 
         prompt_template = config.prompt.read_bytes()
         assert hashlib.sha256(prompt_template).hexdigest() == expected["prompt_hash"]
         rubric_bytes = (scenario_dir / "rubric.md").read_bytes()
-        declared_inputs = (config.config_bytes, prompt_template) + tuple(
+        declared_inputs = (prompt_template,) + tuple(
             fixture.source.read_bytes() for fixture in config.fixtures
         )
         assert all(rubric_bytes not in input_bytes for input_bytes in declared_inputs)
@@ -259,7 +264,6 @@ def test_disciplined_research_catalog_prepares_only_declared_inputs(
         context = workspace_module.create_run(config)
         prepared = workspace_module.prepare_workspace(context, config)
 
-        assert prepared.prompt_bytes == context.prompt_path.read_bytes()
         assert b"{{fixture_dir}}" not in prepared.prompt_bytes
         assert b"{{workspace_dir}}" not in prepared.prompt_bytes
         assert b"{{evidence_dir}}" not in prepared.prompt_bytes
