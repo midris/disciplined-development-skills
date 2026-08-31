@@ -245,10 +245,10 @@ repairs.
 or if configuration loading requires an unlisted adaptation. Package size is
 bounded by the declared files; no other input is accepted.
 
-- [ ] Create the self-contained package from the catalog decisions above.
-- [ ] Confirm the prompt and packaged files have their planned hashes and the
+- [x] Create the self-contained package from the catalog decisions above.
+- [x] Confirm the prompt and packaged files have their planned hashes and the
   configuration loads with the runner.
-- [ ] Review the package files against their sources and commit the task changes.
+- [x] Review the package files against their sources and commit the task changes.
 
 ## Task 2: Package `LP-02`, `LP-03`, `LP-05`, `LP-06`, `LP-07`, and `LP-08`
 
