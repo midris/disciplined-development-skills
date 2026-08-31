@@ -265,10 +265,10 @@ bounded by the declared files; no other input is accepted.
 accept exactly one canonical context file. Stop on a missing source, hash
 mismatch, malformed configuration, or required adaptation outside this plan.
 
-- [ ] Create all six self-contained packages from the catalog decisions above.
-- [ ] Confirm the prompts and packaged files have their planned hashes and each
+- [x] Create all six self-contained packages from the catalog decisions above.
+- [x] Confirm the prompts and packaged files have their planned hashes and each
   configuration loads with the runner.
-- [ ] Review the package files against their sources and commit the task changes.
+- [x] Review the package files against their sources and commit the task changes.
 
 ## Task 3: Add catalog acceptance and verify preparation
 
