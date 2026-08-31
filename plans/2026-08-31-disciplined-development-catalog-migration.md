@@ -55,8 +55,9 @@ composition; the larger file sets are covered by package preparation.
 - Stop if a canonical source is unavailable or hash-mismatched, an unlisted
   adaptation is required, the existing runner cannot represent a package, or
   the smoke does not finish with runner status `COMPLETED`.
-- Do not merge, push, archive this plan, remove the feature branch or worktree,
-  or create the next catalog plan before new explicit owner approval.
+- Do not merge or push implementation changes, archive this plan, remove the
+  feature branch or worktree, or create the next catalog plan before new
+  explicit owner approval.
 
 ## Catalog definition
 
@@ -212,9 +213,9 @@ uv run pytest -q acceptance/test_disciplined_development_catalog.py
 uv run pytest -q
 ```
 
-After the smoke record and index update, rerun only the focused acceptance test
-because those changes do not alter package preparation. If review repairs a
-package or acceptance behavior, rerun both commands; otherwise rerun only the
+After the smoke record and any index update, rerun only the focused acceptance
+test because those changes do not alter package preparation. If review repairs
+a package or acceptance behavior, rerun both commands; otherwise rerun only the
 affected check. Do not add another verifier or run unrelated skill test suites.
 
 ## Task 1: Package `DD-01` through `DD-09`
@@ -261,9 +262,9 @@ artifact inventories, and result reconstruction remain unexamined.
   remove any prior retained result.
 - Record the runner's mechanical outcome in the `DD-04` README and remove the
   owned temporary run directory in every outcome. Retain no other run artifact.
-- If the retained result's runner status is `COMPLETED`, update only the
-  `DD-04` README and migration index, link all nine READMEs, identify `DD-04` as
-  representative, and update totals to 9/9 and 35/105 overall.
+- If the retained result's runner status is `COMPLETED`, update the migration
+  index, link all nine READMEs, identify `DD-04` as representative, and update
+  totals to 9/9 and 35/105 overall.
 - If no result is retained or status is not `COMPLETED`, do not update the
   index; rerun focused acceptance and stop for owner direction.
 - For `COMPLETED`, rerun focused acceptance and review the records.
