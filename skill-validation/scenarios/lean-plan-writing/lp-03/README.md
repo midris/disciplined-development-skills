@@ -1,6 +1,6 @@
 # Purpose
 
-Permit exactly one bounded illustrative snippet only when prose cannot specify an exact four-line artifact.
+Permit exactly one bounded illustrative snippet when prose alone cannot specify an exact four-line artifact.
 
 # Inputs
 
