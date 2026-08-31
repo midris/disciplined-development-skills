@@ -281,10 +281,10 @@ worker log.
 existing loader/preparation path. Provider behavior and result content are
 outside this test and remain accepted, unexamined edges.
 
-- [ ] Implement the final seven-scenario acceptance contract above using only
+- [x] Implement the final seven-scenario acceptance contract above using only
   catalog-local data and helpers.
-- [ ] Run the focused acceptance and complete offline runner suite.
-- [ ] Review the test for exact agreement with the spec's package-only boundary
+- [x] Run the focused acceptance and complete offline runner suite.
+- [x] Review the test for exact agreement with the spec's package-only boundary
   and commit the task changes.
 
 ## Task 4: Run and record the representative smoke
