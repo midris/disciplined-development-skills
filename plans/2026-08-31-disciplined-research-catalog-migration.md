@@ -75,11 +75,10 @@ scenario-owned files through one response-only run.
 
 `DR-01` is the sole representative because it composes the catalog's broadest
 provider input: all nine live repository skills and two canonical project files.
-`DR-06` has the largest fixture, including a 230,400-byte worker log, but catalog
-acceptance already exercises large-file preparation; the smoke should cover the
-broadest live-skill input instead. The older schema `"0.1"` plan selected
-`DR-05`, whose one-skill, one-file package is narrower than the schema `"0.2"`
-catalog shape.
+`DR-06` has the largest fixture, but catalog acceptance already exercises its
+preparation; the smoke should cover the broadest live-skill input instead. The
+older schema `"0.1"` plan selected `DR-05`, whose one-skill, one-file package is
+narrower than the schema `"0.2"` catalog shape.
 
 ### Canonical prompt and rubric provenance
 
@@ -137,27 +136,27 @@ target `skills/<skill-id>/SKILL.md`. Declare every used file separately.
 
 ### Packaged files
 
-| ID | Canonical source or fixture path | Package source | Fixture target | Bytes | SHA-256 |
-|---|---|---|---|---:|---|
-| `DR-01` | Inline `project/app/retention.py` fixture | `fixture/project/app/retention.py` | `project/app/retention.py` | 205 | `900dd0268a517c797023f907ce3a14b6f66bc04b9c27787a153cd471dea6bec8` |
-| `DR-01` | Inline `project/README.md` fixture | `fixture/project/README.md` | `project/README.md` | 54 | `49061feab313293d6a1b8f23cae43056c79eeee88a00745a741595f98d54f1db` |
-| `DR-02` | Inline `sources/city-museum-rfp.md` fixture | `fixture/sources/city-museum-rfp.md` | `sources/city-museum-rfp.md` | 329 | `5b50cf2558ef9a73335487198f2fd44a30339df58741df312374e169951340ca` |
-| `DR-02` | Inline `sources/city-museum-addendum-2.md` fixture | `fixture/sources/city-museum-addendum-2.md` | `sources/city-museum-addendum-2.md` | 267 | `a882f3e3753ca78357333238e5f808d65d251852df04e0506bf2582940bec64f` |
-| `DR-02` | Inline `sources/friends-newsletter.md` fixture | `fixture/sources/friends-newsletter.md` | `sources/friends-newsletter.md` | 257 | `a8746ab03403c6143e8f65d0e249436b5bb8341c2ebe4c953eb21797787fad5f` |
-| `DR-03` | Inline `project/package.json` fixture | `fixture/project/package.json` | `project/package.json` | 94 | `1c2bb8f53dce6c7a90c2411d53f177dbfcba8ace56861399dd4f55412e0fb262` |
-| `DR-03` | Inline `sources/orbital-release-notes.md` fixture | `fixture/sources/orbital-release-notes.md` | `sources/orbital-release-notes.md` | 164 | `1592db31a0848116b082b2093704d80847f672b540633c00b0ea6c30ad03c3f4` |
-| `DR-03` | Inline `sources/orbital-maintainer-blog.md` fixture | `fixture/sources/orbital-maintainer-blog.md` | `sources/orbital-maintainer-blog.md` | 135 | `3f6e47ed632fde9a22f94ec764ca2c98b5365a9db6190566e8efb29234347488` |
-| `DR-04` | `fixtures/disciplined-research/project/payments/retry_policy.py` | `fixture/project/payments/retry_policy.py` | `project/payments/retry_policy.py` | 437 | `a7099716223bf4a0c67fc32bda4c6816e6743be3e72aff5f52f3acc953f9a9c4` |
-| `DR-05` | `fixtures/disciplined-research/sources/nimbus-support-matrix.md` | `fixture/sources/nimbus-support-matrix.md` | `sources/nimbus-support-matrix.md` | 211 | `0abe5b18aaa9a6315fa982dba406a8bb6255dd9652674956426fb34fbd4c5843` |
-| `DR-06` | `fixtures/disciplined-research/project/upload-403/evidence-index.md` | `fixture/project/upload-403/evidence-index.md` | `project/upload-403/evidence-index.md` | 595 | `5ce87478b5f41f46f10dbba5b329f6eae004ca9b4a6895a495fa75ec292bfb46` |
-| `DR-06` | `fixtures/disciplined-research/project/upload-403/runtime-config.json` | `fixture/project/upload-403/runtime-config.json` | `project/upload-403/runtime-config.json` | 226 | `4ec39350c64e94229c7aaa59a719afc1c18c2c673d7d5215a8be38ee5307af13` |
-| `DR-06` | `fixtures/disciplined-research/project/upload-403/worker.log` | `fixture/project/upload-403/worker.log` | `project/upload-403/worker.log` | 230400 | `d381395b47ed8fb03ca12fc8c1ab9a1c17299d28149d591119319705aed39eba` |
-| `DR-07` | `fixtures/disciplined-research/sources/north-annex-hours.md` | `fixture/sources/north-annex-hours.md` | `sources/north-annex-hours.md` | 127 | `876d614b194ace2d807a947223565f3fdc9a597be45c6c1b753a9252a65e45da` |
+| ID | Canonical source or fixture path | Package source | Fixture target | SHA-256 |
+|---|---|---|---|---|
+| `DR-01` | Inline `project/app/retention.py` fixture | `fixture/project/app/retention.py` | `project/app/retention.py` | `900dd0268a517c797023f907ce3a14b6f66bc04b9c27787a153cd471dea6bec8` |
+| `DR-01` | Inline `project/README.md` fixture | `fixture/project/README.md` | `project/README.md` | `49061feab313293d6a1b8f23cae43056c79eeee88a00745a741595f98d54f1db` |
+| `DR-02` | Inline `sources/city-museum-rfp.md` fixture | `fixture/sources/city-museum-rfp.md` | `sources/city-museum-rfp.md` | `5b50cf2558ef9a73335487198f2fd44a30339df58741df312374e169951340ca` |
+| `DR-02` | Inline `sources/city-museum-addendum-2.md` fixture | `fixture/sources/city-museum-addendum-2.md` | `sources/city-museum-addendum-2.md` | `a882f3e3753ca78357333238e5f808d65d251852df04e0506bf2582940bec64f` |
+| `DR-02` | Inline `sources/friends-newsletter.md` fixture | `fixture/sources/friends-newsletter.md` | `sources/friends-newsletter.md` | `a8746ab03403c6143e8f65d0e249436b5bb8341c2ebe4c953eb21797787fad5f` |
+| `DR-03` | Inline `project/package.json` fixture | `fixture/project/package.json` | `project/package.json` | `1c2bb8f53dce6c7a90c2411d53f177dbfcba8ace56861399dd4f55412e0fb262` |
+| `DR-03` | Inline `sources/orbital-release-notes.md` fixture | `fixture/sources/orbital-release-notes.md` | `sources/orbital-release-notes.md` | `1592db31a0848116b082b2093704d80847f672b540633c00b0ea6c30ad03c3f4` |
+| `DR-03` | Inline `sources/orbital-maintainer-blog.md` fixture | `fixture/sources/orbital-maintainer-blog.md` | `sources/orbital-maintainer-blog.md` | `3f6e47ed632fde9a22f94ec764ca2c98b5365a9db6190566e8efb29234347488` |
+| `DR-04` | `fixtures/disciplined-research/project/payments/retry_policy.py` | `fixture/project/payments/retry_policy.py` | `project/payments/retry_policy.py` | `a7099716223bf4a0c67fc32bda4c6816e6743be3e72aff5f52f3acc953f9a9c4` |
+| `DR-05` | `fixtures/disciplined-research/sources/nimbus-support-matrix.md` | `fixture/sources/nimbus-support-matrix.md` | `sources/nimbus-support-matrix.md` | `0abe5b18aaa9a6315fa982dba406a8bb6255dd9652674956426fb34fbd4c5843` |
+| `DR-06` | `fixtures/disciplined-research/project/upload-403/evidence-index.md` | `fixture/project/upload-403/evidence-index.md` | `project/upload-403/evidence-index.md` | `5ce87478b5f41f46f10dbba5b329f6eae004ca9b4a6895a495fa75ec292bfb46` |
+| `DR-06` | `fixtures/disciplined-research/project/upload-403/runtime-config.json` | `fixture/project/upload-403/runtime-config.json` | `project/upload-403/runtime-config.json` | `4ec39350c64e94229c7aaa59a719afc1c18c2c673d7d5215a8be38ee5307af13` |
+| `DR-06` | `fixtures/disciplined-research/project/upload-403/worker.log` | `fixture/project/upload-403/worker.log` | `project/upload-403/worker.log` | `d381395b47ed8fb03ca12fc8c1ab9a1c17299d28149d591119319705aed39eba` |
+| `DR-07` | `fixtures/disciplined-research/sources/north-annex-hours.md` | `fixture/sources/north-annex-hours.md` | `sources/north-annex-hours.md` | `876d614b194ace2d807a947223565f3fdc9a597be45c6c1b753a9252a65e45da` |
 
 The canonical fixture directory no longer exists in the current tree. Extract
-every row from the source commit and fail closed if a path is unavailable, its
-size differs, or its SHA-256 differs. In particular, copy `worker.log` exactly;
-do not synthesize its repeated content.
+every row from the source commit and fail closed if a path is unavailable or its
+SHA-256 differs. In particular, copy `worker.log` exactly; do not synthesize its
+repeated content.
 
 ### Default configurations
 
@@ -198,7 +197,7 @@ all catalog data and small helpers in that file. It verifies only:
   `test.json`;
 - prompt bytes against the adapted prompt hashes above;
 - fixture source and target mappings against this plan;
-- packaged scenario-file bytes and sizes against the table above;
+- packaged scenario-file bytes against the hashes above;
 - resolved prompt tokens and absence of stale `supplied-skills/` paths;
 - absence of rubric bytes from declared and prepared provider inputs; and
 - an empty initial evidence directory.
@@ -215,22 +214,22 @@ omissions preserve the design's package-only boundary.
 
 ## Verification
 
-Catalog verification consists of these existing checks:
+After Task 3, run the focused catalog acceptance from
+`skill-validation/runner` with
+`uv run pytest -q acceptance/test_disciplined_research_catalog.py`, then run the
+complete offline runner suite with `uv run pytest -q`. After Task 4, rerun only
+the focused catalog acceptance because that task changes only the permitted
+smoke result and documentation. If review repairs a package or its acceptance
+test, rerun both runner commands; otherwise rerun only affected checks.
 
-- From `skill-validation/runner`, run
-  `uv run pytest -q acceptance/test_disciplined_research_catalog.py`.
-- From `skill-validation/runner`, run `uv run pytest -q`.
-- From the repository root, run
-  `cd skills/disciplined-development/hooks && python3 -m pytest -q`.
-- Run the repository's existing local Markdown-link check documented under
-  `Verification commands` in
-  `13599fb7d3127334b0d07bfe468767e586ec5f9c:skill-validation/README.md`.
-- Run `git diff --check`.
-
-Do not add another verifier. Run the focused acceptance and full offline runner
-suite after Task 3. Run the full catalog verification after Task 4 and again
-during controller closeout, rerunning affected checks after verified review
-repairs.
+Before each commit, run the repository's existing local Markdown-link check
+documented under `Verification commands` in
+`13599fb7d3127334b0d07bfe468767e586ec5f9c:skill-validation/README.md`,
+`git diff --check`, and `git diff --cached --check`. During controller closeout,
+run the repository-required hook suite once with
+`cd skills/disciplined-development/hooks && python3 -m pytest -q`. This hook
+suite is repository sign-off, not catalog acceptance; do not repeat it after
+Task 4 or on `main`. Do not add another verifier.
 
 ## Task 1: Package representative `DR-01`
 
@@ -261,9 +260,9 @@ by the declared files; no other input is accepted.
 - Modify this plan only to mark completed steps.
 
 **Boundary:** Each package accepts exactly the canonical files declared above.
-Stop on a missing source, byte-count or hash mismatch, malformed configuration,
-or required adaptation outside this plan. Do not reconstruct or normalize the
-large `DR-06` worker log.
+Stop on a missing source, hash mismatch, malformed configuration, or required
+adaptation outside this plan. Do not reconstruct or normalize the large `DR-06`
+worker log.
 
 - [ ] Create all six self-contained packages from the catalog decisions above.
 - [ ] Confirm the prompts and packaged files have their planned hashes and each
@@ -313,14 +312,14 @@ result-file reconstruction are outside this migration and remain unexamined.
   `DR-01` README; remove the temporary run bundle and retain no other run
   artifact.
 - [ ] If no result is retained or its status is not `COMPLETED`, run catalog
-  verification, review and commit the smoke disposition, README, and plan
-  tracking, then stop and request owner direction. Do not update the migration
-  index.
+  acceptance and the repository commit checks, review and commit the smoke
+  disposition, README, and plan tracking, then stop and request owner direction.
+  Do not update the migration index.
 - [ ] For a `COMPLETED` result, add the catalog to the migration index, link all
   seven READMEs, identify `DR-01` as representative, and update totals to 7/7
   for this catalog and 26/105 overall.
-- [ ] Run catalog verification, review the smoke documentation and index update,
-  and commit the task changes.
+- [ ] Run focused catalog acceptance and the repository commit checks, review
+  the smoke documentation and index update, and commit the task changes.
 
 ## Controller closeout: Final review, merge, and catalog bookkeeping
 
@@ -339,9 +338,9 @@ branch-finishing rules.
 completion with the feature worktree and branch preserved. Only the named
 roadmap, plan, index, acceptance, and package paths belong to this catalog.
 
-- [ ] Run catalog verification and complete a whole-catalog review against the
-  governing design and this plan. Address verified findings and rerun affected
-  checks.
+- [ ] Complete a whole-catalog review against the governing design and this
+  plan. Address verified findings, rerun only affected migration checks, and run
+  the repository hook suite once before sign-off.
 - [ ] Confirm the final diff is limited to this catalog's packages, its local
   acceptance test, migration index, and plan tracking.
 - [ ] Present the commits, verification results, retained smoke result, review
@@ -355,9 +354,8 @@ roadmap, plan, index, acceptance, and package paths belong to this catalog.
   `../2026-08-24-scenario-porting-roadmap.md`, and
   `../../skill-validation/scenarios/README.md`; run the Markdown link check and
   `git diff --check`, then commit those bookkeeping changes.
-- [ ] Run catalog verification on `main`, push `main`, then remove this catalog's
-  worktree and local feature branch. Do not create the next catalog plan in this
-  task.
+- [ ] Push `main`, then remove this catalog's worktree and local feature branch.
+  Do not create the next catalog plan in this task.
 
 ## Done when
 
