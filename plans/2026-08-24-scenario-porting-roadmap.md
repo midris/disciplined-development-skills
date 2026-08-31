@@ -42,7 +42,7 @@ merged:
 
 - [x] `writing-explicit-rationale`
 - [x] `sweeping-stale-references`
-- [ ] `lean-plan-writing`
+- [x] `lean-plan-writing`
 - [ ] `disciplined-research`
 - [ ] `disciplined-development`
 - [ ] `adversarial-review-loop`
