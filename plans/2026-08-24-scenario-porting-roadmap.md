@@ -43,7 +43,7 @@ merged:
 - [x] `writing-explicit-rationale`
 - [x] `sweeping-stale-references`
 - [x] `lean-plan-writing`
-- [ ] `disciplined-research`
+- [x] `disciplined-research`
 - [ ] `disciplined-development`
 - [ ] `adversarial-review-loop`
 - [ ] `skill-discovery`

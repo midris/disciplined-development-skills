@@ -20,9 +20,9 @@ scenario-owned files through one response-only run.
 **Tech Stack:** Markdown, RFC 8259 JSON, Python 3.11+, pytest, `uv`, and
 `skilltest` schema `"0.2"`.
 
-**Spec:** [schema `"0.2"` catalog migration design](specs/2026-08-29-catalog-migration-design.md),
-[scenario porting roadmap](2026-08-24-scenario-porting-roadmap.md), and
-[scenario migration index](../skill-validation/scenarios/README.md).
+**Spec:** [schema `"0.2"` catalog migration design](../specs/2026-08-29-catalog-migration-design.md),
+[scenario porting roadmap](../2026-08-24-scenario-porting-roadmap.md), and
+[scenario migration index](../../skill-validation/scenarios/README.md).
 
 ## Global constraints
 
@@ -338,17 +338,17 @@ branch-finishing rules.
 completion with the feature worktree and branch preserved. Only the named
 roadmap, plan, index, acceptance, and package paths belong to this catalog.
 
-- [ ] Complete a whole-catalog review against the governing design and this
+- [x] Complete a whole-catalog review against the governing design and this
   plan. Address verified findings, rerun only affected migration checks, and run
   the repository hook suite once before sign-off.
-- [ ] Confirm the final diff is limited to this catalog's packages, its local
+- [x] Confirm the final diff is limited to this catalog's packages, its local
   acceptance test, migration index, and plan tracking.
-- [ ] Present the commits, verification results, retained smoke result, review
+- [x] Present the commits, verification results, retained smoke result, review
   disposition, and cleanup targets to the owner. Obtain explicit approval before
   merging, pushing, archiving this plan, or removing the feature branch or
   worktree.
-- [ ] After approval, merge the feature branch into local `main`.
-- [ ] On `main`, check the `disciplined-research` roadmap item and move this plan
+- [x] After approval, merge the feature branch into local `main`.
+- [x] On `main`, check the `disciplined-research` roadmap item and move this plan
   to `plans/completed/`. Change its three header links to
   `../specs/2026-08-29-catalog-migration-design.md`,
   `../2026-08-24-scenario-porting-roadmap.md`, and
@@ -359,11 +359,11 @@ roadmap, plan, index, acceptance, and package paths belong to this catalog.
 
 ## Done when
 
-- [ ] All seven packages pass the catalog acceptance test and offline runner
+- [x] All seven packages pass the catalog acceptance test and offline runner
   suite.
-- [ ] `DR-01` retains the latest runner-produced `COMPLETED`
+- [x] `DR-01` retains the latest runner-produced `COMPLETED`
   `smoke-result.json` from one approved attempt.
-- [ ] The migration index reports 7/7 for this catalog and 26/105 overall.
-- [ ] Final review and repository verification pass.
+- [x] The migration index reports 7/7 for this catalog and 26/105 overall.
+- [x] Final review and repository verification pass.
 - [ ] With owner approval, the catalog is merged and pushed, the roadmap is
   checked, the plan is archived, and the worktree and feature branch are removed.
