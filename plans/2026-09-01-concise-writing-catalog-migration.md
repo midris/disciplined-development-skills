@@ -186,10 +186,13 @@ and requires package-owned inputs beneath each owning package.
 ### Package records
 
 Before the smoke, every package contains `README.md`, `prompt.md`, `rubric.md`,
-and `test.json`, plus only its declared `fixture/` files. Each README records the
-scenario purpose, input provenance and mappings, prompt adaptations, and that no
-schema `"0.2"` result is retained. After the smoke, only `CW-09` may contain and
-link `smoke-result.json`; its README reports only the runner's mechanical status.
+and `test.json`, plus only its declared `fixture/` files. Each README has the
+required `Purpose`, `Inputs`, and `Smoke` sections. Keep `Inputs` to a compact
+inventory of input provenance and provider mappings, rubric provenance, and
+prompt adaptations; do not duplicate the configuration. Before the smoke,
+`Smoke` states that no schema `"0.2"` result is retained. After the smoke, only
+`CW-09` may contain and link `smoke-result.json`; its README reports only the
+runner's mechanical status.
 
 ## Catalog acceptance
 
