@@ -12,6 +12,28 @@ As each package migrates, add its one-line purpose summary and scenario README
 link beneath its catalog. Keep detailed package, provenance, and smoke facts in
 the scenario README rather than duplicating them here.
 
+## concise-writing
+
+Representative smoke: [`CW-09`](concise-writing/cw-09/README.md)
+
+- [`CW-01`](concise-writing/cw-01/README.md) — Remove simple padding while preserving four states and their distinct completion and failure details.
+- [`CW-02`](concise-writing/cw-02/README.md) — Compress duplicate retry prose while preserving framing, causality, navigation, and the final failure rule.
+- [`CW-03`](concise-writing/cw-03/README.md) — Remove cross-section duplication without losing recipient or reissue requirements.
+- [`CW-04`](concise-writing/cw-04/README.md) — Collapse unnecessary one-sentence sections while preserving timeout, warning, activity, and recovery facts.
+- [`CW-05`](concise-writing/cw-05/README.md) — Remove unsupported elaboration while preserving the authoritative archive facts.
+- [`CW-06`](concise-writing/cw-06/README.md) — Remove emphasis and hedge inflation without weakening the API-key rule.
+- [`CW-07`](concise-writing/cw-07/README.md) — Complete a direct concise-writing task with the complete repository skill bundle and no project state.
+- [`CW-08`](concise-writing/cw-08/README.md) — Apply concise writing to policy prose while preserving every protected eligibility, deadline, accommodation, appeal, and navigation fact.
+- [`CW-09`](concise-writing/cw-09/README.md) — Co-select concise writing and writing-skills for skill-description prose while excluding an unrelated candidate.
+- [`CW-10`](concise-writing/cw-10/README.md) — Extract the skill-authoring ownership and validation sentence from the concise-writing contract.
+- [`CW-11`](concise-writing/cw-11/README.md) — Co-select concise writing and writing-skills for reference prose while excluding an unrelated candidate.
+- [`CW-12`](concise-writing/cw-12/README.md) — Extract the reference-authoring ownership and validation sentence from the concise-writing contract.
+- [`CW-13`](concise-writing/cw-13/README.md) — Route a pressured discipline-skill edit through the skill-authoring lifecycle and its required validation.
+- [`CW-14`](concise-writing/cw-14/README.md) — Route a pressured supporting-reference edit through the reference-authoring lifecycle and its required validation.
+- [`CW-17`](concise-writing/cw-17/README.md) — Preserve the response-only detailed-explanation exemption at discovery and contract-application boundaries.
+- [`CW-18`](concise-writing/cw-18/README.md) — Keep detailed project-file prose in scope despite an accompanying brief response.
+- [`CW-19`](concise-writing/cw-19/README.md) — Tighten a coupled cutover runbook without losing actors, exact thresholds and complements, ordering, boundaries, or rationales.
+
 ## writing-explicit-rationale
 
 Representative smoke: [`WER-07`](writing-explicit-rationale/wer-07/README.md)
@@ -181,7 +203,7 @@ expose the evaluator-withheld rubric.
 
 - `adversarial-review`: 15 total, 0 migrated, 15 not migrated
 - `adversarial-review-loop`: 15 total, 15 migrated, 0 not migrated
-- `concise-writing`: 17 total, 0 migrated, 17 not migrated
+- `concise-writing`: 17 total, 17 migrated, 0 not migrated
 - `disciplined-development`: 9 total, 9 migrated, 0 not migrated
 - `disciplined-research`: 7 total, 7 migrated, 0 not migrated
 - `dispatching-development-subagents`: 11 total, 11 migrated, 0 not migrated
@@ -189,4 +211,4 @@ expose the evaluator-withheld rubric.
 - `skill-discovery`: 12 total, 12 migrated, 0 not migrated
 - `sweeping-stale-references`: 6 total, 6 migrated, 0 not migrated
 - `writing-explicit-rationale`: 6 total, 6 migrated, 0 not migrated
-- Overall: 105 total, 73 migrated, 32 not migrated
+- Overall: 105 total, 90 migrated, 15 not migrated

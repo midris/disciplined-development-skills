@@ -8,4 +8,4 @@ Prompt is the canonical `CW-09` input from `skill-validation/concise-writing.md`
 
 # Smoke
 
-No schema `"0.2"` result is retained.
+Runner status: `COMPLETED`. Retained result: [smoke-result.json](smoke-result.json).

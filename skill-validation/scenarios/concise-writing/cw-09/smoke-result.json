@@ -1,0 +1,97 @@
+{
+  "artifacts": {
+    "config": {
+      "bytes": 598,
+      "exists": true,
+      "path": "config.json",
+      "sha256": "7bf9733c9878619a2bb69c1149de73ee4bb9814cfe1f271273db545e727d6171"
+    },
+    "evidence": {
+      "empty": true,
+      "entries": [],
+      "exists": true,
+      "path": "workspace/evidence"
+    },
+    "final": {
+      "bytes": 30,
+      "exists": true,
+      "path": "final.txt",
+      "sha256": "a20c109464cfa8cac786ce3423c937384181be39936c8febb742088ab54850dd"
+    },
+    "fixture": {
+      "empty": false,
+      "entries": [
+        {
+          "bytes": null,
+          "path": "descriptions",
+          "sha256": null,
+          "type": "directory"
+        },
+        {
+          "bytes": 362,
+          "path": "descriptions/adversarial-review-loop.txt",
+          "sha256": "38843f7718501f52116bfd4f95a6640cb16b560851767df540c808a1ed18cefa",
+          "type": "file"
+        },
+        {
+          "bytes": 301,
+          "path": "descriptions/concise-writing.txt",
+          "sha256": "586a741a9cb28746078ca1b5f7aa570a4e621a5d2cdecac16e31bd6d2c82fd62",
+          "type": "file"
+        },
+        {
+          "bytes": 98,
+          "path": "descriptions/superpowers-writing-skills.txt",
+          "sha256": "5504b0825ec458aa8c20e9a55c6a932b36849e261a97aaf98af366e19a937154",
+          "type": "file"
+        }
+      ],
+      "exists": true,
+      "path": "workspace/fixture"
+    },
+    "prompt": {
+      "bytes": 1338,
+      "exists": true,
+      "path": "prompt.txt",
+      "sha256": "adad9332dc8f81261c22b2f716b19997ba64fbb71d1d22964326f98f05f0985a"
+    },
+    "prompt_template": {
+      "bytes": 900,
+      "exists": true,
+      "path": "prompt-template.txt",
+      "sha256": "169a425529c0cfb5f0c77bcc99ef63e41244b94b46b068c83d48e491d9c17f16"
+    },
+    "stderr": {
+      "bytes": 0,
+      "exists": true,
+      "path": "stderr.txt",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "stdout": {
+      "bytes": 1857,
+      "exists": true,
+      "path": "stdout.txt",
+      "sha256": "866a1c21e50fd7fc9676f54d28613681dd2ab4e821681207be04ce0bb82e98dc"
+    }
+  },
+  "duration_seconds": 10.792,
+  "execution": {
+    "effort": "high",
+    "executable": "codex",
+    "exit_code": 0,
+    "invocation_started": true,
+    "model": "gpt-5.6-sol",
+    "provider": "codex",
+    "timed_out": false,
+    "timeout_seconds": 900
+  },
+  "finished_at": "2026-09-01T18:04:31.935Z",
+  "infrastructure_error": null,
+  "run_id": "20260901T180421143Z-cw-09-188b86d0-df18-4283-b4d8-95f5edef4ae9-c6l1zrjo",
+  "schema_version": "0.2",
+  "started_at": "2026-09-01T18:04:21.143Z",
+  "status": "COMPLETED",
+  "test": {
+    "id": "cw-09"
+  }
+}
