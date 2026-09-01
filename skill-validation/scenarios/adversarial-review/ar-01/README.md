@@ -17,4 +17,4 @@ Exercise direct adversarial review, severity, output, and composition over a com
 
 # Smoke
 
-No schema `0.2` result is retained.
+Runner status: `COMPLETED`. Retained result: [smoke-result.json](smoke-result.json).

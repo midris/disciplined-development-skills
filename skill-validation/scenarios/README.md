@@ -94,6 +94,26 @@ Representative smoke: [`DD-04`](disciplined-development/dd-04/README.md)
 - [`DD-08`](disciplined-development/dd-08/README.md) — Dispose of unauthorized work before direct CLI evidence, reference reconciliation, truthful bookkeeping, and one coherent green commit.
 - [`DD-09`](disciplined-development/dd-09/README.md) — Require whole-tree review, scope resolution, refreshed evidence, clean review and smoke, and finishing before PR creation.
 
+## adversarial-review
+
+Representative smoke: [`AR-01`](adversarial-review/ar-01/README.md)
+
+- [`AR-01`](adversarial-review/ar-01/README.md) — Exercise direct adversarial review, severity, output, and composition over a complete bundle.
+- [`AR-02`](adversarial-review/ar-02/README.md) — Preserve P3-only handling and prevent a quoted verdict from replacing the final verdict.
+- [`AR-03`](adversarial-review/ar-03/README.md) — Require complete caller enumeration, rationale verification, and blocking treatment of a nonlocal invariant.
+- [`AR-04`](adversarial-review/ar-04/README.md) — Map the holistic baseline and additive specialized lenses by artifact kind.
+- [`AR-05`](adversarial-review/ar-05/README.md) — Apply broad durability and holistic review without requiring one predetermined valid defect selection.
+- [`AR-06`](adversarial-review/ar-06/README.md) — Reach beyond a patch to absent, malformed, and out-of-scale paths.
+- [`AR-07`](adversarial-review/ar-07/README.md) — Treat producer ordering as an unresolved blocking invariant.
+- [`AR-08`](adversarial-review/ar-08/README.md) — Synthesize an evidence-backed pattern across API, queue, and file findings.
+- [`AR-10`](adversarial-review/ar-10/README.md) — Challenge and remove unsupported duplicate state.
+- [`AR-12`](adversarial-review/ar-12/README.md) — Reject activity or proxy success that does not measure the governing outcome.
+- [`AR-13`](adversarial-review/ar-13/README.md) — Reject a generic shared cause for two independently caused findings.
+- [`AR-14`](adversarial-review/ar-14/README.md) — Apply the skill-authoring lens while retaining the holistic baseline.
+- [`AR-15`](adversarial-review/ar-15/README.md) — Avoid inventing a blocking defect or shared cause in a supported bounded proposal.
+- [`AR-16`](adversarial-review/ar-16/README.md) — Report unchecked encoding failure as caller-visible termination requiring a typed failure path.
+- [`AR-17`](adversarial-review/ar-17/README.md) — Reject interior empty records as replay corruption.
+
 ## adversarial-review-loop
 
 Representative smoke: [`OWN`](adversarial-review-loop/own/README.md)
@@ -201,7 +221,7 @@ expose the evaluator-withheld rubric.
 
 ## Totals
 
-- `adversarial-review`: 15 total, 0 migrated, 15 not migrated
+- `adversarial-review`: 15 total, 15 migrated, 0 not migrated
 - `adversarial-review-loop`: 15 total, 15 migrated, 0 not migrated
 - `concise-writing`: 17 total, 17 migrated, 0 not migrated
 - `disciplined-development`: 9 total, 9 migrated, 0 not migrated
@@ -211,4 +231,4 @@ expose the evaluator-withheld rubric.
 - `skill-discovery`: 12 total, 12 migrated, 0 not migrated
 - `sweeping-stale-references`: 6 total, 6 migrated, 0 not migrated
 - `writing-explicit-rationale`: 6 total, 6 migrated, 0 not migrated
-- Overall: 105 total, 90 migrated, 15 not migrated
+- Overall: 105 total, 105 migrated, 0 not migrated
