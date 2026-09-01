@@ -10,4 +10,4 @@ Require commit-by-commit inspection and disposition of an out-of-scope commit be
 
 # Smoke
 
-No schema `0.2` result is retained.
+Runner status: `COMPLETED`. Retained result: [smoke-result.json](smoke-result.json).
