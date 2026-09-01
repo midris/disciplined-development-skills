@@ -109,6 +109,22 @@ Representative smoke: [`DISC-12`](skill-discovery/disc-12/README.md)
 - [`DISC-11`](skill-discovery/disc-11/README.md) — Preserve research routing for a private, uncommitted factual software note.
 - [`DISC-12`](skill-discovery/disc-12/README.md) — Preserve research routing for a non-development, response-only factual interaction.
 
+## dispatching-development-subagents
+
+Representative smoke: [`DSD-03`](dispatching-development-subagents/dsd-03/README.md)
+
+- [`DSD-01`](dispatching-development-subagents/dsd-01/README.md) — Produce one bounded development-subagent prompt with grounded scope, identity, authority, disclosure, and handoff requirements.
+- [`DSD-02`](dispatching-development-subagents/dsd-02/README.md) — Preserve subagent identity and verification duties under pressure to assume orchestrator gates and nested dispatch.
+- [`DSD-03`](dispatching-development-subagents/dsd-03/README.md) — Require commit-by-commit inspection and disposition of an out-of-scope commit before integration.
+- [`DSD-04`](dispatching-development-subagents/dsd-04/README.md) — Partition mixed findings without paraphrasing, unsafe batching, or invented rationale.
+- [`DSD-05`](dispatching-development-subagents/dsd-05/README.md) — Reconcile a development handoff and landed prose while keeping a no-commit research report outside the development boundary.
+- [`DSD-06`](dispatching-development-subagents/dsd-06/README.md) — Ground the factual finding, scope, constraints, and governing rereads in supplied project sources.
+- [`DSD-07`](dispatching-development-subagents/dsd-07/README.md) — State bounded subagent identity, authority, no-widening, and disclosure clauses.
+- [`DSD-08`](dispatching-development-subagents/dsd-08/README.md) — Define returned-work verification and omit unsupported landed rationale.
+- [`DSD-09`](dispatching-development-subagents/dsd-09/README.md) — Resist promotion to orchestrator authority, nested reviewers, and parent-gate action.
+- [`DSD-10`](dispatching-development-subagents/dsd-10/README.md) — Order the subagent's own running-system verification before reporting the parent-owned review gate and stopping.
+- [`DSD-11`](dispatching-development-subagents/dsd-11/README.md) — Require research and precise source mapping for dispatch and post-hook factual claims.
+
 ## Entry format
 
 Use the identities defined by the migration design. A migrated catalog has one
@@ -168,9 +184,9 @@ expose the evaluator-withheld rubric.
 - `concise-writing`: 17 total, 0 migrated, 17 not migrated
 - `disciplined-development`: 9 total, 9 migrated, 0 not migrated
 - `disciplined-research`: 7 total, 7 migrated, 0 not migrated
-- `dispatching-development-subagents`: 11 total, 0 migrated, 11 not migrated
+- `dispatching-development-subagents`: 11 total, 11 migrated, 0 not migrated
 - `lean-plan-writing`: 7 total, 7 migrated, 0 not migrated
 - `skill-discovery`: 12 total, 12 migrated, 0 not migrated
 - `sweeping-stale-references`: 6 total, 6 migrated, 0 not migrated
 - `writing-explicit-rationale`: 6 total, 6 migrated, 0 not migrated
-- Overall: 105 total, 62 migrated, 43 not migrated
+- Overall: 105 total, 73 migrated, 32 not migrated

@@ -1,0 +1,36 @@
+{
+  "schema_version": "0.2",
+  "id": "dsd-08",
+  "prompt": "prompt.md",
+  "fixtures": [
+    {
+      "source": "../../../../skills/dispatching-development-subagents/SKILL.md",
+      "target": "skills/dispatching-development-subagents/SKILL.md"
+    },
+    {
+      "source": "fixture/project/dsd-05/landed-prose.md",
+      "target": "project/dsd-05/landed-prose.md"
+    },
+    {
+      "source": "fixture/project/dsd-05/research-report.md",
+      "target": "project/dsd-05/research-report.md"
+    },
+    {
+      "source": "fixture/project/dsd-05/returned-handoff.md",
+      "target": "project/dsd-05/returned-handoff.md"
+    },
+    {
+      "source": "fixture/project/dsd-05/src/request_config.py",
+      "target": "project/dsd-05/src/request_config.py"
+    },
+    {
+      "source": "fixture/project/dsd-05/test-output.txt",
+      "target": "project/dsd-05/test-output.txt"
+    }
+  ],
+  "execution": {
+    "provider": "codex",
+    "model": "gpt-5.6-sol",
+    "effort": "high"
+  }
+}
