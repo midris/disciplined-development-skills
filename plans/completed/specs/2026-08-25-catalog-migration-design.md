@@ -10,7 +10,7 @@ Port every remaining active scenario into a loadable `skilltest` configuration w
 
 ## Unit of work
 
-Use the existing [scenario porting roadmap](../../2026-08-24-scenario-porting-roadmap.md) as the program tracker. Migrate one complete catalog at a time, with one implementation plan, branch, worktree, review, and merge per catalog. Do not keep more than one catalog migration in progress.
+Use the existing [scenario porting roadmap](../2026-08-24-scenario-porting-roadmap.md) as the program tracker. Migrate one complete catalog at a time, with one implementation plan, branch, worktree, review, and merge per catalog. Do not keep more than one catalog migration in progress.
 
 Select the next catalog only after the current catalog merges. Do not create speculative implementation plans for later catalogs.
 

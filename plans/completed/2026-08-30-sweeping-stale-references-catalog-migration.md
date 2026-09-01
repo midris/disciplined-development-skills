@@ -19,8 +19,8 @@ representative smoke.
 **Tech Stack:** Markdown, RFC 8259 JSON, Python 3.11+, pytest, `uv`, and
 `skilltest` schema `"0.2"`.
 
-**Spec:** [schema `"0.2"` catalog migration design](../specs/2026-08-29-catalog-migration-design.md),
-[scenario porting roadmap](../2026-08-24-scenario-porting-roadmap.md), and
+**Spec:** [schema `"0.2"` catalog migration design](specs/2026-08-29-catalog-migration-design.md),
+[scenario porting roadmap](2026-08-24-scenario-porting-roadmap.md), and
 [scenario migration index](../../skill-validation/scenarios/README.md).
 
 ## Global constraints

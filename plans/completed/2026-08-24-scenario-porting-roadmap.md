@@ -1,5 +1,7 @@
 # Scenario Porting Roadmap
 
+**Status:** Completed and archived 2026-09-01.
+
 **Goal:** Package every active canonical scenario for reusable prompt runner
 schema `"0.2"` before designing the repository's long-term testing methodology.
 
@@ -7,8 +9,8 @@ schema `"0.2"` before designing the repository's long-term testing methodology.
 
 **Design:** [schema `"0.2"` catalog migration](specs/2026-08-29-catalog-migration-design.md)
 
-**Current phase:** Schema `"0.2"` catalog migration. See the scenario migration
-index for current totals.
+**Current phase:** Schema `"0.2"` catalog migration complete. Readiness review
+remains pending.
 
 ## Authorities
 
@@ -16,7 +18,7 @@ index for current totals.
   canonical candidate scope and scenario content.
 - The migration design owns package, prompt, smoke, and completion
   rules.
-- The [scenario migration index](../skill-validation/scenarios/README.md) owns
+- The [scenario migration index](../../skill-validation/scenarios/README.md) owns
   current totals and migrated scenario links.
 - This roadmap owns only phase and sequence status.
 
@@ -24,16 +26,16 @@ index for current totals.
 
 ### 1. Canonical inventory — complete
 
-[Canonical scenario count reconciliation](completed/2026-08-24-scenario-inventory.md)
+[Canonical scenario count reconciliation](2026-08-24-scenario-inventory.md)
 established the 105-scenario scope.
 
 ### 2. Schema 0.1 feasibility — superseded
 
-[Runner-shape coverage](completed/2026-08-24-runner-shape-coverage.md) and the
+[Runner-shape coverage](2026-08-24-runner-shape-coverage.md) and the
 schema `"0.1"` catalog plans are historical feasibility evidence. They do not
 establish schema `"0.2"` package or catalog coverage.
 
-### 3. Schema 0.2 catalog migration — current
+### 3. Schema 0.2 catalog migration — complete
 
 Create one catalog-specific plan at a time in this order. Complete and archive
 that plan and merge its catalog before creating the plan for the next catalog.
@@ -63,14 +65,14 @@ testing methodology before establishing a behavioral baseline.
 
 ## Historical schema 0.1 catalog plans
 
-- [writing-explicit-rationale](completed/2026-08-25-writing-explicit-rationale-catalog-migration.md)
-- [sweeping-stale-references](completed/2026-08-25-sweeping-stale-references-catalog-migration.md)
-- [lean-plan-writing](completed/2026-08-25-lean-plan-writing-catalog-migration.md)
-- [disciplined-research](completed/2026-08-25-disciplined-research-catalog-migration.md)
-- [disciplined-development](completed/2026-08-26-disciplined-development-catalog-migration.md)
-- [adversarial-review-loop](completed/2026-08-26-adversarial-review-loop-catalog-migration.md)
-- [skill-discovery](completed/2026-08-26-skill-discovery-catalog-migration.md)
-- [dispatching-development-subagents](completed/2026-08-26-dispatching-development-subagents-catalog-migration.md)
+- [writing-explicit-rationale](2026-08-25-writing-explicit-rationale-catalog-migration.md)
+- [sweeping-stale-references](2026-08-25-sweeping-stale-references-catalog-migration.md)
+- [lean-plan-writing](2026-08-25-lean-plan-writing-catalog-migration.md)
+- [disciplined-research](2026-08-25-disciplined-research-catalog-migration.md)
+- [disciplined-development](2026-08-26-disciplined-development-catalog-migration.md)
+- [adversarial-review-loop](2026-08-26-adversarial-review-loop-catalog-migration.md)
+- [skill-discovery](2026-08-26-skill-discovery-catalog-migration.md)
+- [dispatching-development-subagents](2026-08-26-dispatching-development-subagents-catalog-migration.md)
 
 ## Done when
 
