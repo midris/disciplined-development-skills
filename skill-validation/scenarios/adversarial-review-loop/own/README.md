@@ -8,4 +8,4 @@ Prompt and rubric are the canonical `own.md` files under `skill-validation/fixtu
 
 # Smoke
 
-No schema `0.2` result is retained.
+Runner status: `COMPLETED`. Retained result: [smoke-result.json](smoke-result.json).

@@ -72,6 +72,26 @@ Representative smoke: [`DD-04`](disciplined-development/dd-04/README.md)
 - [`DD-08`](disciplined-development/dd-08/README.md) — Dispose of unauthorized work before direct CLI evidence, reference reconciliation, truthful bookkeeping, and one coherent green commit.
 - [`DD-09`](disciplined-development/dd-09/README.md) — Require whole-tree review, scope resolution, refreshed evidence, clean review and smoke, and finishing before PR creation.
 
+## adversarial-review-loop
+
+Representative smoke: [`OWN`](adversarial-review-loop/own/README.md)
+
+- [`CS`](adversarial-review-loop/cs/README.md) — Treat recurrence after a one-line fix as evidence of an incomplete class sweep before re-review.
+- [`T2`](adversarial-review-loop/t2/README.md) — Keep a proven one-member class bounded and still require the safe reviewer re-run.
+- [`T3`](adversarial-review-loop/t3/README.md) — Take the memory-free cold-read escape after the third completed blocking cycle rather than starting a fourth cycle.
+- [`T4`](adversarial-review-loop/t4/README.md) — Keep unrelated below-cap findings scattered and continue without inventing an umbrella axis.
+- [`T5`](adversarial-review-loop/t5/README.md) — Treat a P3-only result as blocking-loop clean while disposing every P3 explicitly.
+- [`T6`](adversarial-review-loop/t6/README.md) — Require the same-reviewer re-run after a complete self-sweep rather than self-certifying clean.
+- [`T7`](adversarial-review-loop/t7/README.md) — Address a new blocking class rather than using class difference as a deferral or dismissal lever.
+- [`NF`](adversarial-review-loop/nf/README.md) — Attack a visible below-cap error-contract invariant across its complete axis before re-review.
+- [`PW`](adversarial-review-loop/pw/README.md) — Extend a shared-axis audit project-wide to uncited persistence components and paths.
+- [`XL`](adversarial-review-loop/xl/README.md) — Translate one source-of-truth error invariant across all languages and code paths.
+- [`G3A`](adversarial-review-loop/g3a/README.md) — At cycle-3 entry, locate a shared pattern in governing text and record the verdict before fixing.
+- [`G3B`](adversarial-review-loop/g3b/README.md) — Permit a written no-shared-pattern cycle-3 verdict without over-firing a root attack.
+- [`G3C`](adversarial-review-loop/g3c/README.md) — Treat a cycle-3 re-raise as reviewer-side re-litigation, record a ruling, and dispose the P3 without appeasement.
+- [`OWN`](adversarial-review-loop/own/README.md) — Preserve individual-task and whole-branch owners, rules, and counters while grounding factual workflow claims.
+- [`CE`](adversarial-review-loop/ce/README.md) — Route each cold-read outcome to its distinct stop, redo, or productive reset branch and record it.
+
 ## Entry format
 
 Use the identities defined by the migration design. A migrated catalog has one
@@ -127,7 +147,7 @@ expose the evaluator-withheld rubric.
 ## Totals
 
 - `adversarial-review`: 15 total, 0 migrated, 15 not migrated
-- `adversarial-review-loop`: 15 total, 0 migrated, 15 not migrated
+- `adversarial-review-loop`: 15 total, 15 migrated, 0 not migrated
 - `concise-writing`: 17 total, 0 migrated, 17 not migrated
 - `disciplined-development`: 9 total, 9 migrated, 0 not migrated
 - `disciplined-research`: 7 total, 7 migrated, 0 not migrated
@@ -136,4 +156,4 @@ expose the evaluator-withheld rubric.
 - `skill-discovery`: 12 total, 0 migrated, 12 not migrated
 - `sweeping-stale-references`: 6 total, 6 migrated, 0 not migrated
 - `writing-explicit-rationale`: 6 total, 6 migrated, 0 not migrated
-- Overall: 105 total, 35 migrated, 70 not migrated
+- Overall: 105 total, 50 migrated, 55 not migrated
