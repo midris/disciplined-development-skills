@@ -48,7 +48,7 @@ merged:
 - [x] `adversarial-review-loop`
 - [x] `skill-discovery`
 - [x] `dispatching-development-subagents`
-- [ ] `concise-writing`
+- [x] `concise-writing`
 - [ ] `adversarial-review`
 
 ### 4. Readiness review — pending
