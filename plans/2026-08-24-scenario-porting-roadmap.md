@@ -49,7 +49,7 @@ merged:
 - [x] `skill-discovery`
 - [x] `dispatching-development-subagents`
 - [x] `concise-writing`
-- [ ] `adversarial-review`
+- [x] `adversarial-review`
 
 ### 4. Readiness review — pending
 
