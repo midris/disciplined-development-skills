@@ -47,7 +47,7 @@ merged:
 - [x] `disciplined-development`
 - [x] `adversarial-review-loop`
 - [x] `skill-discovery`
-- [ ] `dispatching-development-subagents`
+- [x] `dispatching-development-subagents`
 - [ ] `concise-writing`
 - [ ] `adversarial-review`
 
