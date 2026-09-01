@@ -273,10 +273,10 @@ shared helpers.
 runner publishes `result.json`. Modify the `CW-09` README in every outcome;
 modify the scenario migration index only after `COMPLETED`.
 
-**Boundary:** Missing output or any status other than `COMPLETED` stops the
-catalog without retry. Response meaning, rubric satisfaction, stdout/stderr,
-artifact inventories, result schemas, and result reconstruction remain
-unexamined.
+**Boundary:** If the runner publishes no `result.json`, or its status is not
+`COMPLETED`, stop the catalog without retry. Response meaning, rubric
+satisfaction, stdout/stderr, artifact inventories, result schemas, and result
+reconstruction remain unexamined.
 
 - From `skill-validation/runner`, invoke exactly once:
   `uv run skilltest run ../scenarios/concise-writing/cw-09/test.json`. Do not
