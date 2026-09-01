@@ -274,7 +274,6 @@ configuration, required unlisted adaptation, or unsupported package shape.
   with exactly the declared mappings.
 - Confirm the package diff contains no runner, provider, schema, skill,
   shared-helper, other-catalog, or historical replay material.
-- Commit only the eleven scenario packages.
 
 ## Task 2: Add catalog acceptance and verify preparation
 
@@ -287,12 +286,11 @@ or shared helpers.
 
 - Implement exactly the catalog-local acceptance contract above.
 - Run the focused acceptance test and complete offline runner suite once.
-- Review the test against the package-only boundary and commit it.
+- Review the test against the package-only boundary.
 
 ## Smoke approval gate
 
-- Report the package and acceptance commits plus focused and full offline
-  verification.
+- Report package state plus focused and full offline verification.
 - Obtain explicit owner approval for exactly one Codex `DSD-03` invocation.
   Do not treat plan approval or implementation approval as smoke approval.
 
@@ -321,10 +319,11 @@ unexamined.
   owned temporary run directory. Retain no other run artifact.
 - If status is `COMPLETED`, add the catalog's eleven README links and
   `DSD-03` representative marker to the migration index; update this catalog to
-  11/11 and overall totals to 73/105. Otherwise leave the index unchanged and
-  stop for owner direction.
-- Rerun focused acceptance and commit the smoke record, README, and index
-  update.
+  11/11 and overall totals to 73/105.
+- If no result is retained or status is not `COMPLETED`, leave the index
+  unchanged; rerun focused acceptance and stop for owner direction.
+- For `COMPLETED`, rerun focused acceptance and review the smoke record, README,
+  and index update.
 
 ## Controller review and final approval gate
 
