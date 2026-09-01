@@ -51,8 +51,8 @@ only runner mechanics, never response quality.
   catalog, shared helpers, or other catalogs.
 - Run the focused catalog acceptance and the complete offline runner suite, then
   stop for explicit smoke approval. Do not invoke a provider before approval.
-- The approved smoke is one `AR-01` attempt with no retry. A result other than
-  runner status `COMPLETED` stops the migration for owner direction.
+- The approved smoke is one `AR-01` attempt with no retry. A missing result or
+  runner status other than `COMPLETED` stops the migration for owner direction.
 
 ## Catalog definition
 
@@ -337,11 +337,12 @@ Proceed only after explicit owner approval.
 - Record the mechanical outcome, including absence of a result if applicable,
   in the `AR-01` README and remove the temporary run directory. Retain no other
   run artifact.
-- If status is not `COMPLETED`, do not update the migration index or retry;
-  stop for owner direction.
-- If status is `COMPLETED`, add the fifteen scenario links and `AR-01`
-  representative line to `skill-validation/scenarios/README.md`, update totals
-  to 15/15 for `adversarial-review` and 105/105 overall, and rerun only:
+- If no result is retained or its status is not `COMPLETED`, do not update the
+  migration index or retry; stop for owner direction.
+- If the retained result's status is `COMPLETED`, add the fifteen scenario links
+  and `AR-01` representative line to
+  `skill-validation/scenarios/README.md`, update totals to 15/15 for
+  `adversarial-review` and 105/105 overall, and rerun only:
 
   ```bash
   uv run pytest -q acceptance/test_adversarial_review_catalog.py
