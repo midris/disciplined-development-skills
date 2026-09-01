@@ -45,7 +45,7 @@ merged:
 - [x] `lean-plan-writing`
 - [x] `disciplined-research`
 - [x] `disciplined-development`
-- [ ] `adversarial-review-loop`
+- [x] `adversarial-review-loop`
 - [ ] `skill-discovery`
 - [ ] `dispatching-development-subagents`
 - [ ] `concise-writing`
