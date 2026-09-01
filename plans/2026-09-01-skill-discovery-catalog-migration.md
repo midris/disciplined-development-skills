@@ -52,8 +52,9 @@ shape.
   only `DISC-12`, once, with no retry.
 - Skip external review. The controller owns the internal catalog review.
 - Stop if a canonical source is unavailable or hash-mismatched, an adaptation
-  or fixture is required, the existing runner cannot represent an empty-fixture
-  package, or the smoke does not finish with runner status `COMPLETED`.
+  or fixture is required, or the existing runner cannot represent an
+  empty-fixture package. After recording and cleaning up the smoke attempt, stop
+  if its runner status is not `COMPLETED`.
 - Do not merge or push implementation changes, archive this plan, update the
   roadmap, remove the feature branch or worktree, or create the next catalog
   plan before new explicit owner approval.
@@ -127,12 +128,12 @@ skill, dependency, project, evidence, manifest, or bundle files.
 
 ### Package records
 
-Each package contains exactly `README.md`, `prompt.md`, `rubric.md`, and
-`test.json`. Before the smoke, no package contains a result. Each README
-records only the scenario purpose, prompt and rubric provenance, the empty
-fixture mapping, and smoke status. After a successful smoke, only `DISC-12`
-links the exact retained result and states the runner's mechanical status. Do
-not make a behavioral claim or duplicate result contents.
+Before the smoke, each package contains exactly `README.md`, `prompt.md`,
+`rubric.md`, and `test.json`. Each README records only the scenario purpose,
+prompt and rubric provenance, the empty fixture mapping, and smoke status. After
+the smoke, only `DISC-12` may contain and link the exact retained result; its
+README states the runner's mechanical status. Do not make a behavioral claim or
+duplicate result contents.
 
 ## Catalog acceptance
 
