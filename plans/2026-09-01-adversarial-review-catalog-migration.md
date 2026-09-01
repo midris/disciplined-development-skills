@@ -121,7 +121,8 @@ Start from each canonical prompt and make only these literal changes:
 - `AR-08`: replace `` `plan.md` `` with
   `` `{{fixture_dir}}/project/plan.md` ``.
 - `AR-13`: replace `` `skills/` `` with
-  `` `{{fixture_dir}}/skills/` ``.
+  `` `{{fixture_dir}}/skills/` `` and replace `` `project/` `` with
+  `` `{{fixture_dir}}/project/` ``.
 - `AR-14`: add ``under `{{fixture_dir}}/skills/` `` after “base code-review
   skills”; replace `` `project/SKILL.md` `` with
   `` `{{fixture_dir}}/project/SKILL.md` ``.
