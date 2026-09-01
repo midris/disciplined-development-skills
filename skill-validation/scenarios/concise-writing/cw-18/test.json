@@ -1,0 +1,28 @@
+{
+  "schema_version": "0.2",
+  "id": "cw-18",
+  "prompt": "prompt.md",
+  "fixtures": [
+    {
+      "source": "fixture/descriptions/adversarial-review-loop.txt",
+      "target": "descriptions/adversarial-review-loop.txt"
+    },
+    {
+      "source": "fixture/descriptions/concise-writing.txt",
+      "target": "descriptions/concise-writing.txt"
+    },
+    {
+      "source": "fixture/descriptions/superpowers-writing-skills.txt",
+      "target": "descriptions/superpowers-writing-skills.txt"
+    },
+    {
+      "source": "../../../../skills/concise-writing/SKILL.md",
+      "target": "skills/concise-writing/SKILL.md"
+    }
+  ],
+  "execution": {
+    "provider": "codex",
+    "model": "gpt-5.6-sol",
+    "effort": "high"
+  }
+}
