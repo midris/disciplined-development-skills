@@ -166,7 +166,7 @@ code, project, evidence, hook, manifest, or bundle fixtures.
 ### Package records
 
 Each package contains exactly `README.md`, `prompt.md`, `rubric.md`, `test.json`,
-and its declared `fixture/` file, if any. Before the smoke, no package contains a
+and its declared `fixture/` files, if any. Before the smoke, no package contains a
 result. Each README records only the scenario purpose, input/provenance mapping,
 and smoke status. After a successful smoke, only `OWN` links the exact retained
 result and states the runner's mechanical status. Do not make a behavioral claim
@@ -245,8 +245,8 @@ matrices, or shared helpers.
 
 **Files:** Create
 `skill-validation/scenarios/adversarial-review-loop/own/smoke-result.json` only
-if the runner publishes `result.json`. Modify the `OWN` README and the scenario
-migration index only after `COMPLETED`.
+if the runner publishes `result.json`. Modify the `OWN` README in every outcome;
+modify the scenario migration index only after `COMPLETED`.
 
 **Boundary:** Missing output or any status other than `COMPLETED` stops the
 catalog without retry. Response meaning, rubric satisfaction, stdout/stderr,
