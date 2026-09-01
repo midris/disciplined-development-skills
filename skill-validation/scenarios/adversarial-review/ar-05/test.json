@@ -1,0 +1,40 @@
+{
+  "schema_version": "0.2",
+  "id": "ar-05",
+  "prompt": "prompt.md",
+  "fixtures": [
+    {
+      "source": "../../../../skills/adversarial-review/SKILL.md",
+      "target": "skills/adversarial-review/SKILL.md"
+    },
+    {
+      "source": "fixture/skills/superpowers/requesting-code-review/SKILL.md",
+      "target": "skills/superpowers/requesting-code-review/SKILL.md"
+    },
+    {
+      "source": "fixture/skills/superpowers/requesting-code-review/code-reviewer.md",
+      "target": "skills/superpowers/requesting-code-review/code-reviewer.md"
+    },
+    {
+      "source": "fixture/subject/plans/2026-06-18-recording-slice.md",
+      "target": "subject/plans/2026-06-18-recording-slice.md"
+    },
+    {
+      "source": "fixture/subject/swift/Steno/Sources/Steno/Events/EventEnvelope.swift",
+      "target": "subject/swift/Steno/Sources/Steno/Events/EventEnvelope.swift"
+    },
+    {
+      "source": "fixture/subject/swift/Steno/Sources/Steno/Events/EventLog.swift",
+      "target": "subject/swift/Steno/Sources/Steno/Events/EventLog.swift"
+    },
+    {
+      "source": "fixture/subject/swift/Steno/Tests/StenoTests/EventLogTests.swift",
+      "target": "subject/swift/Steno/Tests/StenoTests/EventLogTests.swift"
+    }
+  ],
+  "execution": {
+    "provider": "codex",
+    "model": "gpt-5.6-sol",
+    "effort": "high"
+  }
+}

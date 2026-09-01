@@ -1,0 +1,32 @@
+{
+  "schema_version": "0.2",
+  "id": "ar-12",
+  "prompt": "prompt.md",
+  "fixtures": [
+    {
+      "source": "../../../../skills/adversarial-review/SKILL.md",
+      "target": "skills/adversarial-review/SKILL.md"
+    },
+    {
+      "source": "fixture/skills/superpowers/requesting-code-review/SKILL.md",
+      "target": "skills/superpowers/requesting-code-review/SKILL.md"
+    },
+    {
+      "source": "fixture/skills/superpowers/requesting-code-review/code-reviewer.md",
+      "target": "skills/superpowers/requesting-code-review/code-reviewer.md"
+    },
+    {
+      "source": "fixture/project/brief.md",
+      "target": "project/brief.md"
+    },
+    {
+      "source": "fixture/project/proposal.md",
+      "target": "project/proposal.md"
+    }
+  ],
+  "execution": {
+    "provider": "codex",
+    "model": "gpt-5.6-sol",
+    "effort": "high"
+  }
+}

@@ -1,0 +1,64 @@
+{
+  "schema_version": "0.2",
+  "id": "ar-14",
+  "prompt": "prompt.md",
+  "fixtures": [
+    {
+      "source": "../../../../skills/adversarial-review/SKILL.md",
+      "target": "skills/adversarial-review/SKILL.md"
+    },
+    {
+      "source": "fixture/skills/superpowers/requesting-code-review/SKILL.md",
+      "target": "skills/superpowers/requesting-code-review/SKILL.md"
+    },
+    {
+      "source": "fixture/skills/superpowers/requesting-code-review/code-reviewer.md",
+      "target": "skills/superpowers/requesting-code-review/code-reviewer.md"
+    },
+    {
+      "source": "fixture/skills/superpowers/test-driven-development/SKILL.md",
+      "target": "skills/superpowers/test-driven-development/SKILL.md"
+    },
+    {
+      "source": "fixture/skills/superpowers/using-superpowers/references/codex-tools.md",
+      "target": "skills/superpowers/using-superpowers/references/codex-tools.md"
+    },
+    {
+      "source": "fixture/skills/superpowers/writing-skills/SKILL.md",
+      "target": "skills/superpowers/writing-skills/SKILL.md"
+    },
+    {
+      "source": "fixture/skills/superpowers/writing-skills/anthropic-best-practices.md",
+      "target": "skills/superpowers/writing-skills/anthropic-best-practices.md"
+    },
+    {
+      "source": "fixture/skills/superpowers/writing-skills/examples/CLAUDE_MD_TESTING.md",
+      "target": "skills/superpowers/writing-skills/examples/CLAUDE_MD_TESTING.md"
+    },
+    {
+      "source": "fixture/skills/superpowers/writing-skills/graphviz-conventions.dot",
+      "target": "skills/superpowers/writing-skills/graphviz-conventions.dot"
+    },
+    {
+      "source": "fixture/skills/superpowers/writing-skills/persuasion-principles.md",
+      "target": "skills/superpowers/writing-skills/persuasion-principles.md"
+    },
+    {
+      "source": "fixture/skills/superpowers/writing-skills/render-graphs.js",
+      "target": "skills/superpowers/writing-skills/render-graphs.js"
+    },
+    {
+      "source": "fixture/skills/superpowers/writing-skills/testing-skills-with-subagents.md",
+      "target": "skills/superpowers/writing-skills/testing-skills-with-subagents.md"
+    },
+    {
+      "source": "fixture/project/SKILL.md",
+      "target": "project/SKILL.md"
+    }
+  ],
+  "execution": {
+    "provider": "codex",
+    "model": "gpt-5.6-sol",
+    "effort": "high"
+  }
+}

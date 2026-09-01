@@ -1,0 +1,2 @@
+class BoundaryError(ValueError):
+    pass

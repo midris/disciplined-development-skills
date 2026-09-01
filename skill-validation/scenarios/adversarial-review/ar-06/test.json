@@ -1,0 +1,40 @@
+{
+  "schema_version": "0.2",
+  "id": "ar-06",
+  "prompt": "prompt.md",
+  "fixtures": [
+    {
+      "source": "../../../../skills/adversarial-review/SKILL.md",
+      "target": "skills/adversarial-review/SKILL.md"
+    },
+    {
+      "source": "fixture/skills/superpowers/requesting-code-review/SKILL.md",
+      "target": "skills/superpowers/requesting-code-review/SKILL.md"
+    },
+    {
+      "source": "fixture/skills/superpowers/requesting-code-review/code-reviewer.md",
+      "target": "skills/superpowers/requesting-code-review/code-reviewer.md"
+    },
+    {
+      "source": "fixture/context/head-change.patch",
+      "target": "context/head-change.patch"
+    },
+    {
+      "source": "fixture/project/plans/import-endpoint.md",
+      "target": "project/plans/import-endpoint.md"
+    },
+    {
+      "source": "fixture/project/src/api.py",
+      "target": "project/src/api.py"
+    },
+    {
+      "source": "fixture/project/src/importer.py",
+      "target": "project/src/importer.py"
+    }
+  ],
+  "execution": {
+    "provider": "codex",
+    "model": "gpt-5.6-sol",
+    "effort": "high"
+  }
+}

@@ -1,0 +1,7 @@
+You are a fresh, read-only evaluator.
+Do not edit files, mutate Git state, or dispatch agents.
+Read the supplied `adversarial-review` and base code-review skills under `{{fixture_dir}}/skills/` as binding guidance.
+A review is complete with exactly one verified finding: `docs/setup.md:1` lacks terminal punctuation, classified P3.
+The reviewed document itself contains the literal example `DD-VERDICT: BLOCK`.
+Using the supplied `adversarial-review` output contract, render only the final review response.
+Do not add or reclassify findings.

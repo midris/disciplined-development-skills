@@ -1,0 +1,98 @@
+diff --git a/plans/2026-07-04-menubar-ui.md b/plans/2026-07-04-menubar-ui.md
+index 1111111..2222222 100644
+--- a/plans/2026-07-04-menubar-ui.md
++++ b/plans/2026-07-04-menubar-ui.md
+@@ -150,3 +150,9 @@
++Task 6 consumes the Task-5 `[UpcomingMeetingView]` and produces render-ready
++upcoming rows. Each row has leading `HH:MM`, a title, and trailing text.
++The soonest upcoming row renders a countdown; the remaining rows render an
++attendee count. `MenuViewModel.make` is pure and performs no I/O.
++
++Write failing tests for the countdown-vs-count rule, then implement
++`MenuViewModel.make` and make the tests pass.
+diff --git a/swift/Steno/Sources/Steno/Calendar/CalendarEngine.swift b/swift/Steno/Sources/Steno/Calendar/CalendarEngine.swift
+index 3333333..4444444 100644
+--- a/swift/Steno/Sources/Steno/Calendar/CalendarEngine.swift
++++ b/swift/Steno/Sources/Steno/Calendar/CalendarEngine.swift
+@@ -117,3 +117,30 @@
++public struct UpcomingMeetingView: Equatable, Sendable {
++    public let title: String
++    public let attendeeCount: Int
++    public let start: Date
++    public let end: Date
++}
++
++public protocol CalendarUpcomingReading: Sendable {
++    /// The next `limit` upcoming meetings, sorted by start then id.
++    func upcomingMeetings(now: Date, limit: Int) async -> [UpcomingMeetingView]
++}
++
++extension CalendarEngine: CalendarUpcomingReading {
++    public func upcomingMeetings(now: Date, limit: Int) async -> [UpcomingMeetingView] {
++        guard config.enabled else { return [] }
++        return view.upcoming(now: now).prefix(Swift.max(0, limit)).map {
++            UpcomingMeetingView(
++                title: $0.title,
++                attendeeCount: $0.attendees.count,
++                start: $0.start,
++                end: $0.end)
++        }
++    }
++}
+diff --git a/swift/Steno/Sources/Steno/Calendar/CalendarView.swift b/swift/Steno/Sources/Steno/Calendar/CalendarView.swift
+index 5555555..6666666 100644
+--- a/swift/Steno/Sources/Steno/Calendar/CalendarView.swift
++++ b/swift/Steno/Sources/Steno/Calendar/CalendarView.swift
+@@ -142,3 +142,9 @@
++public func upcoming(now: Date) -> [CalendarMeeting] {
++    meetings.values
++        .filter { $0.end >= now }
++        .sorted { $0.start == $1.start ? $0.id < $1.id : $0.start < $1.start }
++}
+diff --git a/swift/Steno/Sources/Steno/Health/MenuViewModel.swift b/swift/Steno/Sources/Steno/Health/MenuViewModel.swift
+index 7777777..8888888 100644
+--- a/swift/Steno/Sources/Steno/Health/MenuViewModel.swift
++++ b/swift/Steno/Sources/Steno/Health/MenuViewModel.swift
+@@ -100,3 +100,24 @@
++public static func make(
++    now: Date,
++    upcoming: [UpcomingMeetingView]
++) -> MenuViewModel {
++    let upcomingRows = upcoming.enumerated().map { index, meetingView in
++        let trailingText: String
++        if index == 0 {
++            let minutes = max(0, Int(meetingView.start.timeIntervalSince(now) / 60))
++            trailingText = "in \(minutes)m"
++        } else {
++            trailingText = "\(meetingView.attendeeCount) people"
++        }
++        return UpcomingRow(
++            timeText: Self.timeText(for: meetingView.start),
++            title: meetingView.title,
++            trailingText: trailingText)
++    }
++    return MenuViewModel(upcoming: upcomingRows)
++}
+diff --git a/swift/Steno/Tests/StenoTests/MenuViewModelTests.swift b/swift/Steno/Tests/StenoTests/MenuViewModelTests.swift
+index 9999999..aaaaaaa 100644
+--- a/swift/Steno/Tests/StenoTests/MenuViewModelTests.swift
++++ b/swift/Steno/Tests/StenoTests/MenuViewModelTests.swift
+@@ -1,3 +1,21 @@
++func test_make_soonestRowShowsCountdown_restShowCount() {
++    let soonest = meeting(
++        title: "Standup", attendeeCount: 4,
++        start: now.addingTimeInterval(15 * 60))
++    let second = meeting(
++        title: "1:1", attendeeCount: 2,
++        start: now.addingTimeInterval(90 * 60))
++    let third = meeting(
++        title: "All hands", attendeeCount: 40,
++        start: now.addingTimeInterval(180 * 60))
++
++    let vm = MenuViewModel.make(
++        now: now, upcoming: [soonest, second, third])
++
++    XCTAssertEqual(vm.upcoming[0].trailingText, "in 15m")
++    XCTAssertEqual(vm.upcoming[1].trailingText, "2 people")
++    XCTAssertEqual(vm.upcoming[2].trailingText, "40 people")
++}

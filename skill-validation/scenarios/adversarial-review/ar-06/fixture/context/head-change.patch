@@ -1,0 +1,15 @@
+diff --git a/src/api.py b/src/api.py
+index 895721a..9610d40 100644
+--- a/src/api.py
++++ b/src/api.py
+@@ -1,2 +1,10 @@
++from .importer import load_records
++
++
+ def health():
+     return {"status": "ok"}, 200
++
++
++def import_records(request):
++    records = load_records(request.json["source_path"])
++    return {"count": len(records)}, 200
