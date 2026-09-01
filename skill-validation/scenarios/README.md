@@ -92,6 +92,23 @@ Representative smoke: [`OWN`](adversarial-review-loop/own/README.md)
 - [`OWN`](adversarial-review-loop/own/README.md) — Preserve individual-task and whole-branch owners, rules, and counters while grounding factual workflow claims.
 - [`CE`](adversarial-review-loop/ce/README.md) — Route each cold-read outcome to its distinct stop, redo, or productive reset branch and record it.
 
+## skill-discovery
+
+Representative smoke: [`DISC-12`](skill-discovery/disc-12/README.md)
+
+- [`DISC-01`](skill-discovery/disc-01/README.md) — Route internal logical review of supplied API text to review, parent-development, and research guidance.
+- [`DISC-02`](skill-discovery/disc-02/README.md) — Route remediation of already-reported findings to the review loop without starting a new review.
+- [`DISC-03`](skill-discovery/disc-03/README.md) — Route a purely stylistic sentence shortening through concise writing, parent development, and research.
+- [`DISC-04`](skill-discovery/disc-04/README.md) — Route resumed implementation through verification and commit with parent-development and research guidance.
+- [`DISC-05`](skill-discovery/disc-05/README.md) — Route a repository handler fact request through parent-development and research guidance.
+- [`DISC-06`](skill-discovery/disc-06/README.md) — Route a development-subagent request through parent-development, research, and dispatch guidance.
+- [`DISC-07`](skill-discovery/disc-07/README.md) — Route plan creation through parent-development, research, and lean-plan guidance.
+- [`DISC-08`](skill-discovery/disc-08/README.md) — Route a mechanical cross-code-and-documentation rename through parent-development, research, and stale-reference sweeping.
+- [`DISC-09`](skill-discovery/disc-09/README.md) — Route a temporary-shortcut record through parent-development, research, and explicit-rationale guidance.
+- [`DISC-10`](skill-discovery/disc-10/README.md) — Route a plan deferral with supplied rationale through parent-development, research, lean-plan, and explicit-rationale guidance.
+- [`DISC-11`](skill-discovery/disc-11/README.md) — Preserve research routing for a private, uncommitted factual software note.
+- [`DISC-12`](skill-discovery/disc-12/README.md) — Preserve research routing for a non-development, response-only factual interaction.
+
 ## Entry format
 
 Use the identities defined by the migration design. A migrated catalog has one
@@ -153,7 +170,7 @@ expose the evaluator-withheld rubric.
 - `disciplined-research`: 7 total, 7 migrated, 0 not migrated
 - `dispatching-development-subagents`: 11 total, 0 migrated, 11 not migrated
 - `lean-plan-writing`: 7 total, 7 migrated, 0 not migrated
-- `skill-discovery`: 12 total, 0 migrated, 12 not migrated
+- `skill-discovery`: 12 total, 12 migrated, 0 not migrated
 - `sweeping-stale-references`: 6 total, 6 migrated, 0 not migrated
 - `writing-explicit-rationale`: 6 total, 6 migrated, 0 not migrated
-- Overall: 105 total, 50 migrated, 55 not migrated
+- Overall: 105 total, 62 migrated, 43 not migrated

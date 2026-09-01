@@ -10,4 +10,4 @@ Fixture mapping is empty; no prompt adaptations are applied.
 
 # Smoke
 
-No schema `"0.2"` result is retained.
+Runner status: `COMPLETED`. Retained result: [smoke-result.json](smoke-result.json).
