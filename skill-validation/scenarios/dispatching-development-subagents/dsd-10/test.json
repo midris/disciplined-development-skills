@@ -1,0 +1,24 @@
+{
+  "schema_version": "0.2",
+  "id": "dsd-10",
+  "prompt": "prompt.md",
+  "fixtures": [
+    {
+      "source": "../../../../skills/dispatching-development-subagents/SKILL.md",
+      "target": "skills/dispatching-development-subagents/SKILL.md"
+    },
+    {
+      "source": "../../../../skills/disciplined-development/SKILL.md",
+      "target": "skills/disciplined-development/SKILL.md"
+    },
+    {
+      "source": "../../../../skills/disciplined-development/hooks/review_nudge.py",
+      "target": "skills/disciplined-development/hooks/review_nudge.py"
+    }
+  ],
+  "execution": {
+    "provider": "codex",
+    "model": "gpt-5.6-sol",
+    "effort": "high"
+  }
+}

@@ -1,0 +1,60 @@
+{
+  "schema_version": "0.2",
+  "id": "dsd-01",
+  "prompt": "prompt.md",
+  "fixtures": [
+    {
+      "source": "../../../../skills/dispatching-development-subagents/SKILL.md",
+      "target": "skills/dispatching-development-subagents/SKILL.md"
+    },
+    {
+      "source": "../../../../skills/adversarial-review-loop/SKILL.md",
+      "target": "skills/adversarial-review-loop/SKILL.md"
+    },
+    {
+      "source": "../../../../skills/adversarial-review/SKILL.md",
+      "target": "skills/adversarial-review/SKILL.md"
+    },
+    {
+      "source": "../../../../skills/concise-writing/SKILL.md",
+      "target": "skills/concise-writing/SKILL.md"
+    },
+    {
+      "source": "../../../../skills/disciplined-development/SKILL.md",
+      "target": "skills/disciplined-development/SKILL.md"
+    },
+    {
+      "source": "../../../../skills/disciplined-research/SKILL.md",
+      "target": "skills/disciplined-research/SKILL.md"
+    },
+    {
+      "source": "../../../../skills/lean-plan-writing/SKILL.md",
+      "target": "skills/lean-plan-writing/SKILL.md"
+    },
+    {
+      "source": "../../../../skills/sweeping-stale-references/SKILL.md",
+      "target": "skills/sweeping-stale-references/SKILL.md"
+    },
+    {
+      "source": "../../../../skills/writing-explicit-rationale/SKILL.md",
+      "target": "skills/writing-explicit-rationale/SKILL.md"
+    },
+    {
+      "source": "fixture/project/dsd-01/AGENTS.md",
+      "target": "project/dsd-01/AGENTS.md"
+    },
+    {
+      "source": "fixture/project/dsd-01/plans/pagination.md",
+      "target": "project/dsd-01/plans/pagination.md"
+    },
+    {
+      "source": "fixture/project/dsd-01/reviews/pagination.md",
+      "target": "project/dsd-01/reviews/pagination.md"
+    }
+  ],
+  "execution": {
+    "provider": "codex",
+    "model": "gpt-5.6-sol",
+    "effort": "high"
+  }
+}
