@@ -121,8 +121,39 @@ substitutions. Preserve all other bytes and the trailing LF.
 | `DSD-06` | Replace `Invoke \`dispatching-development-subagents\` directly and read it completely.` with `Read \`{{fixture_dir}}/skills/dispatching-development-subagents/SKILL.md\` completely.`; prefix the backticked `project/dsd-01/AGENTS.md` path with `{{fixture_dir}}/`. |
 | `DSD-07` | Apply the `DSD-06` dispatch-read substitution. |
 | `DSD-08` | Apply the `DSD-06` dispatch-read substitution; prefix the backticked `project/dsd-05` directory with `{{fixture_dir}}/`. |
-| `DSD-09`, `DSD-10` | Apply the `DSD-06` dispatch-read substitution; replace the two-line `Read the` / `supplied parent and hook files.` sentence with explicit complete-read paths for `{{fixture_dir}}/skills/disciplined-development/SKILL.md` and `{{fixture_dir}}/skills/disciplined-development/hooks/review_nudge.py`. |
-| `DSD-11` | Apply the `DSD-06` dispatch-read substitution; replace the two-line `Read the` / `supplied parent, hook, and upstream subagent files.` sentence with explicit complete-read paths for the parent `SKILL.md`, `review_nudge.py`, and `{{fixture_dir}}/skills/superpowers/subagent-driven-development/SKILL.md`. |
+| `DSD-09`, `DSD-10` | Apply the `DSD-06` dispatch-read substitution and the exact parent-and-hook substitution below. |
+| `DSD-11` | Apply the `DSD-06` dispatch-read substitution and the exact parent-hook-and-upstream substitution below. |
+
+For the `DSD-09` and `DSD-10` parent-and-hook substitution, replace these
+exact two lines:
+
+```text
+Read the
+supplied parent and hook files.
+```
+
+with these exact two lines:
+
+```text
+Read `{{fixture_dir}}/skills/disciplined-development/SKILL.md` and
+`{{fixture_dir}}/skills/disciplined-development/hooks/review_nudge.py` completely.
+```
+
+For the `DSD-11` parent-hook-and-upstream substitution, replace these exact
+two lines:
+
+```text
+Read the
+supplied parent, hook, and upstream subagent files.
+```
+
+with these exact three lines:
+
+```text
+Read `{{fixture_dir}}/skills/disciplined-development/SKILL.md`,
+`{{fixture_dir}}/skills/disciplined-development/hooks/review_nudge.py`, and
+`{{fixture_dir}}/skills/superpowers/subagent-driven-development/SKILL.md` completely.
+```
 
 These substitutions expose already-supplied inputs at schema `"0.2"` paths.
 They add no task, output, artifact, or evaluation requirement.
@@ -144,19 +175,22 @@ Use these live repository mappings where the scenario table below names them:
 | `sweep` | `../../../../skills/sweeping-stale-references/SKILL.md` | `skills/sweeping-stale-references/SKILL.md` |
 | `rationale` | `../../../../skills/writing-explicit-rationale/SKILL.md` | `skills/writing-explicit-rationale/SKILL.md` |
 
-Materialize these package-owned mappings only in scenarios that name them:
+Materialize these package-owned mappings only in scenarios that name them.
+Copy each `p01-*` and `p05-*` origin from the canonical commit. Copy `upstream`
+from the installed Superpowers `6.3.0` path shown below. Stop on any hash
+mismatch.
 
-| Label | Package source and provider target | Provenance and SHA-256 |
-|---|---|---|
-| `p01-agents` | `fixture/project/dsd-01/AGENTS.md` -> `project/dsd-01/AGENTS.md` | Canonical commit, `567ded3276c9ecaabbfea7f34229a528652476cf2cfe1f7a81573b4577c866fe` |
-| `p01-plan` | `fixture/project/dsd-01/plans/pagination.md` -> `project/dsd-01/plans/pagination.md` | Canonical commit, `e18ce80cae7233db26ed903116fee411162433d2ef82cfbcfa574835efcf35c4` |
-| `p01-review` | `fixture/project/dsd-01/reviews/pagination.md` -> `project/dsd-01/reviews/pagination.md` | Canonical commit, `884e1ee1a6c7109134144ff3ab1cddf6bd9bd522a249373e4ce7e1571b77a80a` |
-| `p05-prose` | `fixture/project/dsd-05/landed-prose.md` -> `project/dsd-05/landed-prose.md` | Canonical commit, `dc1c4a0881580f5a883d126ddcbc00b70dfd3e226129e44aa6ed06381fbc4aae` |
-| `p05-research` | `fixture/project/dsd-05/research-report.md` -> `project/dsd-05/research-report.md` | Canonical commit, `0d7d31036a68767b0a586b7aad0c228999316c6463dfd39009f8d7e7131360d5` |
-| `p05-handoff` | `fixture/project/dsd-05/returned-handoff.md` -> `project/dsd-05/returned-handoff.md` | Canonical commit, `1c9f3979e4a123c584f3ddd072f6869df6a241adca1c4da4cc484b8f6815ecab` |
-| `p05-source` | `fixture/project/dsd-05/src/request_config.py` -> `project/dsd-05/src/request_config.py` | Canonical commit, `f0ff7ba51f0b758aea2f9b248c754f832dd57c6d2110036a80f886690ecdee6c` |
-| `p05-tests` | `fixture/project/dsd-05/test-output.txt` -> `project/dsd-05/test-output.txt` | Canonical commit, `dbff34df084976e0006cd15b2bd1cf6e3b5419b626c19f0030544a1c174ec3d7` |
-| `upstream` | `fixture/skills/superpowers/subagent-driven-development/SKILL.md` -> `skills/superpowers/subagent-driven-development/SKILL.md` | Installed Superpowers `6.3.0`, `8dd1b8e698edec3700c6d89517dbe96febd3bacd3f6ea21c1a3569c62ea104b5` |
+| Label | Origin | Package source -> provider target | SHA-256 |
+|---|---|---|---|
+| `p01-agents` | `skill-validation/fixtures/dispatching-development-subagents/project/dsd-01/AGENTS.md` | `fixture/project/dsd-01/AGENTS.md` -> `project/dsd-01/AGENTS.md` | `567ded3276c9ecaabbfea7f34229a528652476cf2cfe1f7a81573b4577c866fe` |
+| `p01-plan` | `skill-validation/fixtures/dispatching-development-subagents/project/dsd-01/plans/pagination.md` | `fixture/project/dsd-01/plans/pagination.md` -> `project/dsd-01/plans/pagination.md` | `e18ce80cae7233db26ed903116fee411162433d2ef82cfbcfa574835efcf35c4` |
+| `p01-review` | `skill-validation/fixtures/dispatching-development-subagents/project/dsd-01/reviews/pagination.md` | `fixture/project/dsd-01/reviews/pagination.md` -> `project/dsd-01/reviews/pagination.md` | `884e1ee1a6c7109134144ff3ab1cddf6bd9bd522a249373e4ce7e1571b77a80a` |
+| `p05-prose` | `skill-validation/fixtures/dispatching-development-subagents/project/dsd-05/landed-prose.md` | `fixture/project/dsd-05/landed-prose.md` -> `project/dsd-05/landed-prose.md` | `dc1c4a0881580f5a883d126ddcbc00b70dfd3e226129e44aa6ed06381fbc4aae` |
+| `p05-research` | `skill-validation/fixtures/dispatching-development-subagents/project/dsd-05/research-report.md` | `fixture/project/dsd-05/research-report.md` -> `project/dsd-05/research-report.md` | `0d7d31036a68767b0a586b7aad0c228999316c6463dfd39009f8d7e7131360d5` |
+| `p05-handoff` | `skill-validation/fixtures/dispatching-development-subagents/project/dsd-05/returned-handoff.md` | `fixture/project/dsd-05/returned-handoff.md` -> `project/dsd-05/returned-handoff.md` | `1c9f3979e4a123c584f3ddd072f6869df6a241adca1c4da4cc484b8f6815ecab` |
+| `p05-source` | `skill-validation/fixtures/dispatching-development-subagents/project/dsd-05/src/request_config.py` | `fixture/project/dsd-05/src/request_config.py` -> `project/dsd-05/src/request_config.py` | `f0ff7ba51f0b758aea2f9b248c754f832dd57c6d2110036a80f886690ecdee6c` |
+| `p05-tests` | `skill-validation/fixtures/dispatching-development-subagents/project/dsd-05/test-output.txt` | `fixture/project/dsd-05/test-output.txt` -> `project/dsd-05/test-output.txt` | `dbff34df084976e0006cd15b2bd1cf6e3b5419b626c19f0030544a1c174ec3d7` |
+| `upstream` | `/Users/simon/.codex/plugins/cache/claude-plugins-official/superpowers/6.3.0/skills/subagent-driven-development/SKILL.md` | `fixture/skills/superpowers/subagent-driven-development/SKILL.md` -> `skills/superpowers/subagent-driven-development/SKILL.md` | `8dd1b8e698edec3700c6d89517dbe96febd3bacd3f6ea21c1a3569c62ea104b5` |
 
 Declare mappings in the listed order:
 
@@ -234,13 +268,13 @@ skill test suites.
 **Boundary:** Stop on a missing source, hash mismatch, malformed
 configuration, required unlisted adaptation, or unsupported package shape.
 
-- [ ] Materialize every adapted prompt, exact rubric, canonical project file,
+- Materialize every adapted prompt, exact rubric, canonical project file,
   and package-local upstream dependency from the sources above.
-- [ ] Create every schema `"0.2"` configuration and minimal scenario README
+- Create every schema `"0.2"` configuration and minimal scenario README
   with exactly the declared mappings.
-- [ ] Confirm the package diff contains no runner, provider, schema, skill,
+- Confirm the package diff contains no runner, provider, schema, skill,
   shared-helper, other-catalog, or historical replay material.
-- [ ] Commit only the eleven scenario packages.
+- Commit only the eleven scenario packages.
 
 ## Task 2: Add catalog acceptance and verify preparation
 
@@ -251,15 +285,15 @@ configuration, required unlisted adaptation, or unsupported package shape.
 edges. Do not add output checks, result checks, mutations, negative matrices,
 or shared helpers.
 
-- [ ] Implement exactly the catalog-local acceptance contract above.
-- [ ] Run the focused acceptance test and complete offline runner suite once.
-- [ ] Review the test against the package-only boundary and commit it.
+- Implement exactly the catalog-local acceptance contract above.
+- Run the focused acceptance test and complete offline runner suite once.
+- Review the test against the package-only boundary and commit it.
 
 ## Smoke approval gate
 
-- [ ] Report the package and acceptance commits plus focused and full offline
+- Report the package and acceptance commits plus focused and full offline
   verification.
-- [ ] Obtain explicit owner approval for exactly one Codex `DSD-03` invocation.
+- Obtain explicit owner approval for exactly one Codex `DSD-03` invocation.
   Do not treat plan approval or implementation approval as smoke approval.
 
 ## Task 3: Run and record the representative smoke
@@ -274,47 +308,47 @@ catalog without retry. Response meaning, rubric satisfaction, stdout/stderr,
 artifact inventories, result schemas, and result reconstruction remain
 unexamined.
 
-- [ ] From `skill-validation/runner`, invoke exactly once:
+- From `skill-validation/runner`, invoke exactly once:
   `uv run skilltest run ../scenarios/dispatching-development-subagents/dsd-03/test.json`.
   Do not retry or run another scenario.
-- [ ] If the runner publishes `result.json`, retain its exact bytes as
+- If the runner publishes `result.json`, retain its exact bytes as
   `dsd-03/smoke-result.json`. If no result is published, remove any prior
   retained result.
-- [ ] Read only the runner-written mechanical status needed for disposition.
+- Read only the runner-written mechanical status needed for disposition.
   Do not compare the retained file with the run bundle or validate another
   result field.
-- [ ] Record the mechanical outcome in the `DSD-03` README and remove the
+- Record the mechanical outcome in the `DSD-03` README and remove the
   owned temporary run directory. Retain no other run artifact.
-- [ ] If status is `COMPLETED`, add the catalog's eleven README links and
+- If status is `COMPLETED`, add the catalog's eleven README links and
   `DSD-03` representative marker to the migration index; update this catalog to
   11/11 and overall totals to 73/105. Otherwise leave the index unchanged and
   stop for owner direction.
-- [ ] Rerun focused acceptance and commit the smoke record, README, and index
+- Rerun focused acceptance and commit the smoke record, README, and index
   update.
 
 ## Controller review and final approval gate
 
-- [ ] Review the complete catalog against the governing design and this plan.
+- Review the complete catalog against the governing design and this plan.
   Confirm the final implementation diff is limited to the eleven packages,
   their catalog-local acceptance test, and the migration index.
-- [ ] Confirm that no response judgment, result validation,
+- Confirm that no response judgment, result validation,
   runner/provider/schema/skill change, shared helper, lifecycle machinery,
   historical replay material, or unrelated bookkeeping entered the work.
-- [ ] Address only verified in-scope findings and rerun only checks affected by
+- Address only verified in-scope findings and rerun only checks affected by
   repairs.
-- [ ] Report implementation commits, focused and full offline verification,
+- Report implementation commits, focused and full offline verification,
   the one smoke attempt and retained mechanical status, and internal-review
   disposition.
-- [ ] Stop and obtain explicit owner approval before merge, push, plan archive,
+- Stop and obtain explicit owner approval before merge, push, plan archive,
   roadmap update, worktree/branch removal, or next-catalog planning.
 
 ## Post-approval closeout
 
-- [ ] Merge the feature branch into local `main`.
-- [ ] On `main`, check the `dispatching-development-subagents` roadmap item and
+- Merge the feature branch into local `main`.
+- On `main`, check the `dispatching-development-subagents` roadmap item and
   move this plan to `plans/completed/`, adjusting its three header links for
   the new location, then commit the closeout.
-- [ ] Push `main`, then remove this catalog's worktree and local feature branch.
+- Push `main`, then remove this catalog's worktree and local feature branch.
   Do not create the next catalog plan without separate owner approval.
 
 ## Done when
