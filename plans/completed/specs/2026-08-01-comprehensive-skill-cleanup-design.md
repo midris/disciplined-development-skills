@@ -2,7 +2,21 @@
 
 ## Status
 
-Design decisions approved; execution controls amended through follow-up review on 2026-08-01.
+Retired without execution on 2026-09-01. This design fixed a comparative scoring
+and skill-cleanup process before scenario preparation, model invocation, and
+evidence retention had a trustworthy foundation. The project instead implemented
+the [reusable prompt runner](2026-08-27-reusable-prompt-runner-design.md) and
+migrated all 105 scenarios under the [schema `"0.2"` catalog design](2026-08-29-catalog-migration-design.md).
+
+Future methodology is governed by the [validation charter](../../../skill-validation/charter/core-contracts.md)
+and begins by confirming that the migrated prompts and supplied files produce
+evidence suitable for charter-based evaluation. The runner remains a simple test
+invocation mechanism; additional tooling requires an observed need for
+deterministic simplification. The accepted consequence is that this design's
+baseline, portability, cleanup, and comparison workflow was never executed and
+must not be treated as the current testing contract. See the
+[retired implementation plan](../2026-08-01-comprehensive-skill-cleanup.md) for
+the preserved historical checklist.
 
 ## Objective
 

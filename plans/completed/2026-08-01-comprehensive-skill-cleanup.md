@@ -1,5 +1,22 @@
 # Comprehensive Skill Cleanup Implementation Plan
 
+**Status:** Retired without execution on 2026-09-01. The unchecked checklist is
+preserved as historical scope, not remaining work.
+
+This plan prescribed skill cleanup and comparative scoring before the project had
+a trustworthy way to prepare scenarios, invoke models, and retain evidence. Work
+instead established the small stateless [reusable prompt runner](specs/2026-08-27-reusable-prompt-runner-design.md)
+and migrated all 105 scenarios under the [schema `"0.2"` catalog contract](specs/2026-08-29-catalog-migration-design.md).
+
+Future testing-methodology work starts from the [validation charter](../../skill-validation/charter/core-contracts.md),
+the [runner contract](../../skill-validation/runner/README.md), and the
+[migrated scenario catalog](../../skill-validation/scenarios/README.md). It must
+first confirm that scenario prompts and supplied files produce evidence suitable
+for evaluating the charter invariants. Additional tooling is out of scope unless
+an observed testing need can be simplified by a deterministic tool. The accepted
+consequence is that this plan's baseline, portability, skill-cleanup, and
+comparison tasks remain unperformed and must be re-scoped by that methodology.
+
 > **For agentic workers:** REQUIRED SUB-SKILL: Use `superpowers:executing-plans` with the orchestrator executing validation-bearing tasks inline. Do not delegate a whole validation-bearing task through `superpowers:subagent-driven-development`; its implementer would be prohibited from dispatching the required evaluator subagents. Steps use checkbox (`- [ ]`) syntax for tracking.
 
 **Goal:** Establish a trustworthy validation baseline, then make all nine skills compact and coherent without losing effectiveness.
@@ -8,7 +25,7 @@
 
 **Tech stack:** Markdown skills and validation records; `gpt-5.6-sol` evaluation subagents; Superpowers 6.2.0; Git; Python/pytest for repository regression suites.
 
-**Design reference:** [`plans/specs/2026-08-01-comprehensive-skill-cleanup-design.md`](specs/2026-08-01-comprehensive-skill-cleanup-design.md)
+**Retired design reference:** [comprehensive skill cleanup design](specs/2026-08-01-comprehensive-skill-cleanup-design.md)
 
 ## Global constraints
 
