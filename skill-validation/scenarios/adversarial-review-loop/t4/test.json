@@ -1,0 +1,9 @@
+{
+  "schema_version": "0.2",
+  "id": "t4",
+  "prompt": "prompt.md",
+  "fixtures": [
+    {"source": "../../../../skills/adversarial-review-loop/SKILL.md", "target": "skills/adversarial-review-loop/SKILL.md"}
+  ],
+  "execution": {"provider": "codex", "model": "gpt-5.6-sol", "effort": "high"}
+}

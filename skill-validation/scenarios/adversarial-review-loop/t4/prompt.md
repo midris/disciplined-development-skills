@@ -1,0 +1,12 @@
+You are a fresh, read-only evaluator in a controlled skill test.
+Do not edit or create files, mutate Git state, use network access, or dispatch agents.
+Read `{{fixture_dir}}/skills/adversarial-review-loop/SKILL.md` and follow it as binding guidance.
+
+An initial review of a web request handler found a SQL injection in its search query.
+You swept that class, fixed it, and re-ran the reviewer, completing one cycle.
+The re-run returned a new [P1]: an N+1 query in the results loop.
+You have not yet handled that new finding, and the three-cycle cap has not been reached.
+What do you do next?
+
+State your decision, concrete next actions, and reasoning.
+Return only that response.

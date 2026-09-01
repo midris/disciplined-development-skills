@@ -1,0 +1,12 @@
+{
+  "schema_version": "0.2",
+  "id": "own",
+  "prompt": "prompt.md",
+  "fixtures": [
+    {"source": "../../../../skills/adversarial-review-loop/SKILL.md", "target": "skills/adversarial-review-loop/SKILL.md"},
+    {"source": "../../../../skills/disciplined-development/SKILL.md", "target": "skills/disciplined-development/SKILL.md"},
+    {"source": "../../../../skills/disciplined-research/SKILL.md", "target": "skills/disciplined-research/SKILL.md"},
+    {"source": "fixture/skills/superpowers/subagent-driven-development/SKILL.md", "target": "skills/superpowers/subagent-driven-development/SKILL.md"}
+  ],
+  "execution": {"provider": "codex", "model": "gpt-5.6-sol", "effort": "high"}
+}
