@@ -226,7 +226,7 @@ config-key changes, default flips, removed flags, schema/format changes, symlink
 Applies when the diff touches the installer, the public surface (skill / command / config
 names, file layout), or any persisted-state format. Strong discrimination candidate (codex
 caught it; the current angles + baseline did not) — validate per the angle-necessity bar in
-[skill-validation/adversarial-review.md](../../skill-validation/adversarial-review.md) before adding.
+[skill-validation/adversarial-review.md](../../skill-validation/archive/skill-records/adversarial-review.md) before adding.
 
 **Acceptance.** A discrimination test where holistic misses an upgrade/old-state regression
 that the migration angle catches; added to `adversarial-review` "Review angles" + "When to

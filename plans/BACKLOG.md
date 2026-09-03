@@ -83,7 +83,7 @@ B19 remains — it rides the same angle-discrimination cycle as Tier 2's B4–B6
   whole-repo test on PR #25's pre-fix tree: reliable out-of-scale lift (baseline 1/5 → +rule ~70%,
   face 6/6) — ships on that. A (absent/HF) is a knowledge gap (0/19); B (malformed/payload) is
   outlier-hard (0/N specific, though the enumeration form reaches its trust boundary). Adopted the
-  plan's enumeration form; anti-bloat trim confirmed non-degrading. Record: `skill-validation/adversarial-review.md`.)*
+  plan's enumeration form; anti-bloat trim confirmed non-degrading. Record: `skill-validation/archive/skill-records/adversarial-review.md`.)*
 - **B19 · `traversal` (path/structure-completeness) angle** — review-angles · 2026-06-25 · M/med.
   Add an angle that follows a new datum / message / field through **every** layer it must cross
   (producer → transport → decoder → stub → consumer → status → wire → UI) and flags any layer that
@@ -107,7 +107,7 @@ B19 remains — it rides the same angle-discrimination cycle as Tier 2's B4–B6
   measured, placement-insensitive** (digest, 5 reps/arm): dedicated collected+labeled edge-case section 5/5
   (both a titled and the shipped folded placement) vs 0/5 control; malformed-boundary reach 5/5 folded / 4/5
   titled vs 0/5 control, landing as cheap defensive hygiene; no degradation. Effect is line-wording-driven,
-  not heading-driven. Record: `skill-validation/lean-plan-writing.md`.)*
+  not heading-driven. Record: `skill-validation/archive/skill-records/lean-plan-writing.md`.)*
 
 ## Tier 1 — quick wins (small, self-contained, low risk)
 
@@ -143,7 +143,7 @@ B19 remains — it rides the same angle-discrimination cycle as Tier 2's B4–B6
   mandatory-cite floor; five approaches (explicit recipe, terse, cite-but-tag-unverified, minimal nudge,
   honest-memory-citation) all failed to move it — a hard task-level "must cite" requirement overrides
   skill guidance. Softer conditions already ground. Not shipped; full record in
-  `skill-validation/disciplined-research.md`.)*
+  `skill-validation/archive/skill-records/disciplined-research.md`.)*
 - **B2 · pre-PR gate announces itself** — pre-pr-gate / observability · 2026-06-08 · S/low.
   Gate runs codex ~minutes silently on `gh pr create`. Add a Gate-5 instruction to announce
   the review before invoking it (optionally a hook start-line). Acceptance: model announces

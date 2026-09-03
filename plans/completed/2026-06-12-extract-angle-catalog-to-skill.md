@@ -60,7 +60,7 @@ Holistic caught the planted target for 6/7 candidates on small artifacts →
   description trap + rationalization loopholes holistic missed).
 
 Full record + the "discrimination is the angle-necessity bar" principle and its
-limits: [skill-validation/adversarial-review.md](../../skill-validation/adversarial-review.md).
+limits: [skill-validation/adversarial-review.md](../../skill-validation/archive/skill-records/adversarial-review.md).
 
 ## Why deferred (not folded into PR-4)
 

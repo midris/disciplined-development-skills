@@ -8,7 +8,7 @@ and the set is re-runnable.
 rule (Claude Code: `Explore`). Test-specific: one scenario per agent, text-only.
 
 **Re-runnable suite.** The full scenario set — exact prompts, pass criteria, reps —
-is codified in [adversarial-review-loop-scenarios.md](adversarial-review-loop-scenarios.md).
+is codified in [adversarial-review-loop-scenarios.md](../shared-records/adversarial-review-loop-scenarios.md).
 Run it before and after any change.
 
 ## Method

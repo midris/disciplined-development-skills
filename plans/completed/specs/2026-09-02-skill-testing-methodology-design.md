@@ -5,10 +5,10 @@
 The mechanical worksheet generator specified here was implemented and accepted by
 the owner on 2026-09-03 after whole-branch review and offline verification. The
 owner-authorized DR-02 manual pilot also completed on 2026-09-03; its evidence
-remains scratch-only. The active
+remains scratch-only. The broader
 [baseline organization design](../../specs/2026-09-03-skill-validation-baseline-design.md)
-records the resulting lifecycle and rollup decisions. The completed implementation
-plan is archived beside this specification.
+is deferred pending an incremental redesign of its authority and evidence lifecycle.
+The completed implementation plan is archived beside this specification.
 
 ## Purpose
 

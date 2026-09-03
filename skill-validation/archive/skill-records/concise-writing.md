@@ -9,7 +9,7 @@ PASS cuts the first two, preserves the latter three, and runs the global duplica
 
 **Unprimed control: 5/5 PASS. Unprimed GREEN after removal: 5/5 PASS.** Every evaluator preserved the anti-over-trim and global-altitude behavior.
 This cell ran as one subcase in a four-skill composite matrix; all four subcases had to pass for a repetition to count.
-Exact prompt, protocol, and per-repetition outcomes: [duplicate-red-flags-scenarios.md](duplicate-red-flags-scenarios.md).
+Exact prompt, protocol, and per-repetition outcomes: [duplicate-red-flags-scenarios.md](../shared-records/duplicate-red-flags-scenarios.md).
 
 Built and maintained test-first per `superpowers:writing-skills` (skills are TDD
 for process docs: no skill — and no edit — without a failing test first). This

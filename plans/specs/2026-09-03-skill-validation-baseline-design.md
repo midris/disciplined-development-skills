@@ -1,6 +1,6 @@
 # Skill Validation Baseline Organization Design
 
-**Status:** Revised after a third owner-requested review on 2026-09-03; awaiting owner re-review.
+**Status:** Deferred on 2026-09-03 after the review loop exposed an unresolved end-to-end authority and evidence lifecycle. This document remains design input, not implementation authority. The owner authorized only the legacy-record archive and root validation index before selecting the next incremental baseline step.
 
 ## Purpose
 
@@ -229,7 +229,7 @@ A mixed set remains valid descriptive baseline evidence when it fulfills the app
 
 The home for pre-baseline validation records that currently sit at the `skill-validation/` root.
 The archive README explains that relocation is organizational, not a claim that the evidence is obsolete or invalid.
-No new results are recorded in the archived files.
+Until an approved catalog replaces a legacy skill record, that archived record remains the update target required by `CLAUDE.md`; after cutover it becomes read-only historical evidence.
 
 The move preserves prose and evidence.
 Only links and navigation metadata needed for the new location may change.

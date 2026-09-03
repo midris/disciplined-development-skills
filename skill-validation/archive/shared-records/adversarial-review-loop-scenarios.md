@@ -2,7 +2,7 @@
 
 Codified scenario set for the loop skill. Run before **and** after any change to
 the skill to catch regressions. Companion to
-[adversarial-review-loop.md](adversarial-review-loop.md) (narrative + results).
+[adversarial-review-loop.md](../skill-records/adversarial-review-loop.md) (narrative + results).
 
 These are **decision pressure-tests**: the subagent is the orchestrator mid-loop;
 each scenario asks what it does next. Scoring is by hand against the **PASS**
@@ -97,5 +97,5 @@ the cross-language scope (XL); weakening it to "pattern"/"topic" regresses both.
 ## Results log
 
 Record each run's date, the skill commit/snapshot under test, and per-cell pass
-counts in [adversarial-review-loop.md](adversarial-review-loop.md). Latest baseline
+counts in [adversarial-review-loop.md](../skill-records/adversarial-review-loop.md). Latest baseline
 is recorded there.

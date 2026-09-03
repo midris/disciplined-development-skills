@@ -5,7 +5,7 @@ Records two re-runnable subagent pressure-tests behind the
 dispatched subagent from acting on review/checkpoint/PR signals.
 
 **Dispatch protocol.** Read-only (`Explore`), text-only — the agents state
-intent, they don't execute. See [evaluation-subagents-read-only](evaluation-subagents-read-only.md).
+intent, they don't execute. See [evaluation-subagents-read-only](../shared-records/evaluation-subagents-read-only.md).
 
 ## Background
 
