@@ -1,10 +1,10 @@
 # Skill Validation Baseline Organization Design
 
-**Status:** Design approved in conversation on 2026-09-03; written artifact awaiting owner review.
+**Status:** Revised after owner-requested review on 2026-09-03; awaiting owner re-review.
 
 ## Purpose
 
-Establish a consistent, skill-by-skill process for auditing the existing validation portfolio and recording reproducible baselines for the skills currently on `main`.
+Establish a consistent, catalog-by-catalog process for auditing the existing validation portfolio and recording reproducible baselines for the skills currently on `main`.
 
 The baseline is descriptive, not aspirational.
 A judgeable failure is valid baseline evidence when it accurately records current behavior.
@@ -23,11 +23,25 @@ The existing methodology remains authoritative for:
 - infrastructure retry classification; and
 - accepted-result replacement through Git history.
 
-This design becomes authoritative for validation-record organization, scenario disposition, skill-level baseline rollups, and accepted baseline-set layout after implementation.
+This design becomes authoritative for validation-record organization, portfolio classification, catalog-level baseline rollups, and accepted baseline-set layout after implementation.
 Its accepted baseline-set layout supersedes the single-run `accepted/` layout in the earlier methodology.
 
-The first implementation slice includes only repository organization and the `disciplined-research` audit.
+The initial implementation sequence includes only repository organization and the `disciplined-research` audit.
 It does not authorize provider invocations.
+It changes Markdown documentation only; runner code, skills, scenario configurations, prompts, rubrics, and executable fixtures remain unchanged.
+
+## Resolution of Earlier Open Decisions
+
+The earlier methodology listed five decisions as open when it was completed.
+This design resolves or defers them as follows:
+
+| Earlier decision | Resolution |
+|---|---|
+| Exact provider, model, effort, and invocation for the DR-02 pilot | Resolved operationally on 2026-09-03 under a separately approved Codex `gpt-5.6-sol` high-effort command. The pilot remains scratch-only and does not authorize future commands. |
+| Review required before accepted replacement | Resolved below: the orchestrator completes the candidate set in scratch, and the owner explicitly approves that exact set before one atomic accepted-record replacement. |
+| When repetitions, comparison arms, or advisory scorers are justified | Current-skill repetitions are chosen in each catalog's execution policy and require exact-command approval. Comparison arms and advisory scorers remain deferred until current baselines are complete. |
+| When execution or draft scoring may move to a test subagent | Deferred until repeated manual use demonstrates a stable delegation boundary. |
+| Skill- and suite-level rollup | Resolved below through catalog READMEs, the suite index, and descriptive state rather than numeric aggregation. |
 
 ## Design Principles
 
@@ -36,9 +50,9 @@ It does not authorize provider invocations.
 2. **Separate current authority from historical evidence.**
    Active contracts and audit state remain easy to find, while the pre-baseline validation records remain available for provenance.
 3. **Keep semantic judgment human-owned.**
-   Scripts may generate or validate mechanical artifacts, but they do not decide scenario purpose, disposition, coverage, or verdict.
-4. **Finish one skill before starting the next.**
-   Each skill receives a coherent portfolio review, repair pass, execution policy, and baseline rollup rather than accumulating cross-skill partial work.
+   Scripts may generate or validate mechanical artifacts, but they do not decide scenario purpose, portfolio classification, coverage, or verdict.
+4. **Finish one catalog before starting the next.**
+   Each catalog receives a coherent portfolio review, repair pass, execution policy, and baseline rollup rather than accumulating cross-catalog partial work.
 5. **Preserve historical truth.**
    Commit-qualified references keep the path that was valid at the named commit, even after the live file moves.
 
@@ -52,7 +66,7 @@ skill-validation/
   runner/
   scenarios/
     README.md
-    <skill>/
+    <catalog>/
       README.md
       <scenario>/
         README.md
@@ -96,32 +110,45 @@ It also states which documents are normative and which are historical.
 ### `skill-validation/scenarios/README.md`
 
 The suite-wide catalog and progress index.
-It lists every skill, its audit state, scenario count, baseline subject, and link to the skill README.
-It defines the required skill README sections so the repository does not need a separate generated manifest or template file.
+It lists every catalog, its kind, audit state, scenario count, baseline subject, and README link.
+It defines the required catalog README sections so the repository does not need a separate generated manifest or template file.
 
-### `skill-validation/scenarios/<skill>/README.md`
+The suite has two catalog kinds:
 
-The manually maintained skill audit and baseline rollup.
+- `SKILL` for each of the nine directories under `skills/`; and
+- `SUITE_COMPOSITION` for `skill-discovery`, whose scenarios test routing and composition across the nine-skill bundle rather than a nonexistent `skill-discovery` skill.
+
+### `skill-validation/scenarios/<catalog>/README.md`
+
+The manually maintained catalog audit and baseline rollup.
 It contains:
 
-- the exact baseline subject: skill path, source commit, and content hash;
+- the catalog kind;
+- the exact baseline subject;
 - the applicable charter invariants;
 - a complete scenario inventory;
-- each scenario's disposition and rationale;
+- each scenario's portfolio classification, owner, and rationale;
 - invariant and behavior coverage;
 - overlap and identified gaps;
 - the approved execution policy, once one exists;
 - links to accepted scenario summaries; and
-- the skill-level conclusion, including failures and limitations.
+- the catalog-level conclusion, including failures and limitations.
+
+A `SKILL` catalog records one skill path, the `main` commit resolved when its audit begins, and that file's content hash.
+The `SUITE_COMPOSITION` catalog records one resolved `main` commit plus all nine skill paths and hashes.
+Later movement of `main` does not change a frozen subject, but a changed supplied skill byte invalidates affected evidence and requires an explicit re-freeze.
 
 This file is the proposed manifest under the cleaner name `README.md`.
 It is a semantic review artifact and is not generated.
 
-### `skill-validation/scenarios/<skill>/<scenario>/README.md`
+### `skill-validation/scenarios/<catalog>/<scenario>/README.md`
 
 The scenario-package contract.
-It records the scenario's purpose, provenance, intended invariant or behavior, disposition, and any task-fidelity constraints that the rubric must enforce.
+It records the scenario's purpose, provenance, intended invariant or behavior, portfolio classification, owning catalog, and any task-fidelity constraints that the rubric must enforce.
 It links to the accepted baseline summary when accepted evidence exists.
+
+Physical catalog location identifies the owner unless the audit explicitly rehomes the scenario.
+Non-owning catalogs link to composition coverage without duplicating its execution or rollup.
 
 ### `accepted/summary.md`
 
@@ -130,8 +157,7 @@ It records:
 
 - the baseline subject and run identities;
 - provider, model, effort, and repetition policy;
-- verdicts by run;
-- the scenario-level conclusion;
+- the ordered run verdicts and run-set characterization;
 - semantic, protocol, task-fidelity, and composition findings as applicable;
 - infrastructure retries and their effect on interpretation; and
 - reviewer notes and known limitations.
@@ -139,14 +165,36 @@ It records:
 `summary.md` is not generated.
 The runner may continue to generate worksheet skeletons and mechanical run bundles, but the reviewer completes the worksheets and writes the summary.
 
-### `accepted/runs/<run-id>/`
+### `accepted/runs/<repetition-id>/`
 
 The immutable-in-review evidence bundle for one accepted repetition.
-Run identifiers use the stable sequence `r1`, `r2`, and so on within the accepted set.
-Each run retains the generated result, final provider text, completed worksheet, and any supporting evidence.
+Repetition identifiers use the stable sequence `r1`, `r2`, and so on within the accepted set.
+Each repetition retains the generated result, final provider text, completed worksheet, and any supporting evidence.
+The summary maps every repetition identifier to the runner's globally unique run ID.
 
 The `accepted/` directory represents the latest reviewed baseline set.
 When a new set supersedes it, the set is replaced in place and prior sets remain recoverable through Git history.
+
+## Accepted Baseline-Set Lifecycle
+
+All attempts, completed worksheets, and the draft summary remain in scratch until review finishes.
+Only judgeable `PASS` and `FAIL` runs may enter an accepted set.
+Infrastructure failures, `SCENARIO_INVALID` results, and row-level `NOT_JUDGEABLE` results remain scratch-only; the summary may describe retries without copying their bundles.
+
+The orchestrator presents the complete candidate tree, its run IDs, and its file hashes to the owner.
+The owner must explicitly approve that exact candidate set before any `accepted/` write.
+Promotion replaces the whole accepted set in one repository change; partial replacement is invalid.
+
+The summary preserves every per-run verdict and assigns only one run-set characterization:
+
+| Characterization | Meaning |
+|---|---|
+| `SINGLE` | The approved policy required one judgeable run. |
+| `CONSISTENT` | Two or more judgeable runs have the same verdict. |
+| `MIXED` | Judgeable runs contain both `PASS` and `FAIL`. |
+
+The summary does not synthesize a new PASS or FAIL verdict across repetitions.
+A mixed set remains valid descriptive baseline evidence when it fulfills the approved repetition policy.
 
 ### `skill-validation/archive/`
 
@@ -164,85 +212,114 @@ References that describe live repository authority must follow moved files to th
 References qualified by a historical commit retain the path that was correct at that commit.
 For example, `skill-validation/disciplined-research.md at commit 13599fb` remains unchanged even after that file moves into the archive, because changing it would falsify the provenance statement.
 
+Unqualified scenario provenance that names a moved root record changes to the archive path and gains the known source commit.
+If the source commit cannot be established from repository evidence, the reference remains unchanged and the scenario receives `REPAIR`; the implementation must not invent provenance.
+
+Completed plans and other historical documents retain paths that describe their historical tree.
+Current navigation, authority, and backlog links change to the archive path.
 The implementation must classify references by meaning before editing them; a global path replacement is not acceptable.
 
-## Scenario Dispositions
+## Portfolio Classifications
 
-Every inventoried scenario receives exactly one disposition.
+Every inventoried scenario receives exactly one portfolio classification.
 
-| Disposition | Meaning |
+| Classification | Meaning |
 |---|---|
-| `CORE` | Directly tests a required invariant or primary skill behavior and remains in the baseline portfolio. |
-| `COMPOSITION` | Tests interaction with another skill or process and remains in the portfolio under one named owning skill. |
+| `CORE` | Directly tests a required invariant or primary catalog behavior and remains in the baseline portfolio. |
+| `COMPOSITION` | Tests interaction with another skill or process and remains in the portfolio under one named owning catalog. |
 | `DIAGNOSTIC` | Intentionally isolates a narrower behavior or failure mode and remains useful as non-core evidence. |
 | `MERGE` | Temporarily marks scenarios whose useful coverage should be consolidated into one retained scenario. |
 | `REPAIR` | Temporarily marks a scenario that should remain but cannot be relied on until its prompt, fixture, rubric, or provenance is corrected. |
 | `HISTORICAL` | Preserved for provenance but excluded from future baseline execution. |
 
 `MERGE` and `REPAIR` are transitional.
-A skill audit is not complete while either disposition remains.
+A catalog audit is not complete while either classification remains.
+A merged-away scenario finishes as `HISTORICAL` and links to the retained scenario that absorbed its coverage.
+A repaired scenario is reassigned one of the four final classifications after provider-free validation.
 
 Composition scenarios have one owner to prevent duplicate execution and conflicting rollups.
-Non-owning skills may link to the scenario as coverage but do not count or run it independently.
+Non-owning catalogs may link to the scenario as coverage but do not count or run it independently.
+
+Portfolio classification is separate from the existing run verdict and evidence disposition:
+
+- portfolio classification: `CORE`, `COMPOSITION`, `DIAGNOSTIC`, `MERGE`, `REPAIR`, or `HISTORICAL`;
+- run verdict: `PASS`, `FAIL`, `SCENARIO_INVALID`, or `INFRA_RETRY`; and
+- evidence disposition: accepted or scratch-only.
+
+Every final active classification—`CORE`, `COMPOSITION`, or `DIAGNOSTIC`—requires accepted baseline evidence under its approved execution policy.
+`HISTORICAL` scenarios are not executed.
 
 ## Audit Workflow
 
-The audit proceeds one skill at a time:
+The audit proceeds one catalog at a time:
 
-1. Re-read the current skill and its charter invariants.
-2. Freeze the proposed baseline subject by source commit and skill content hash.
-3. Inventory every scenario currently associated with the skill.
+1. Re-read the current skill or skill bundle and its charter invariants.
+2. Resolve `main` to one exact commit and freeze the applicable skill paths and hashes.
+3. Inventory every scenario currently associated with the catalog.
 4. Audit each prompt, rubric, fixture, and provenance record.
 5. Separate semantic correctness, protocol compliance, task fidelity, and composition concerns.
-6. Assign a disposition with a written rationale.
+6. Assign a portfolio classification, owning catalog, and written rationale.
 7. Map retained scenarios to invariants and behaviors; identify overlap and gaps.
-8. Merge, repair, or retire scenarios until all dispositions are final.
+8. Merge, repair, or retire scenarios until all classifications are final.
 9. Run provider-free structural validation for every retained scenario.
 10. Propose the exact provider, model, effort, repetition policy, and commands for owner approval.
 11. Invoke providers only after explicit approval of those exact commands.
-12. Review the evidence and record scenario and skill baseline conclusions.
+12. Review the evidence and record scenario and catalog baseline conclusions.
 
 No scenario result is promoted merely because the runner completed.
 The worksheet and summary must account for all applicable dimensions before recording a verdict.
 
 ## Audit and Baseline States
 
-The suite index uses four skill states:
+The suite index uses four catalog states:
 
 | State | Meaning |
 |---|---|
-| `NOT_STARTED` | The legacy inventory exists, but the skill-level audit has not begun. |
-| `IN_PROGRESS` | Inventory, disposition, repair, or provider-free validation is underway. |
+| `NOT_STARTED` | The legacy inventory exists, but the catalog-level audit has not begun. |
+| `IN_PROGRESS` | Inventory, classification, repair, or provider-free validation is underway. |
 | `REVIEW_READY` | The portfolio and execution proposal are complete and await owner approval or review. |
-| `BASELINED` | Final dispositions are recorded and all retained run-eligible scenarios have reviewed accepted evidence under the approved policy. |
+| `BASELINED` | Final classifications are recorded and every active scenario has reviewed accepted evidence fulfilling its approved policy. |
 
-A `BASELINED` skill may include passing and failing scenarios.
-The state means the evidence is complete and reviewed, not that the skill passed every scenario.
+A `BASELINED` catalog may include passing, failing, and mixed scenario sets.
+The state means the evidence is complete and reviewed, not that every scenario passed.
 
-## First Implementation Slice
+## Initial Implementation Sequence
 
-The first implementation plan must cover one reviewable documentation change set:
+The first implementation plan contains two documentation-only merge boundaries.
+
+### Boundary 1: Validation record organization
 
 1. Add the root validation authority map.
 2. Add the archive explanation and create the archive categories.
 3. Move the nine skill records and three shared records into the archive.
 4. Sweep live references while preserving commit-qualified historical paths.
-5. Update the suite catalog with the skill README contract and audit-state fields.
-6. Create `skill-validation/scenarios/disciplined-research/README.md` and complete the seven-scenario audit from repository evidence.
-7. Record the DR-02 scratch pilot as audit input without moving or promoting it; create accepted evidence only through a later, explicitly approved acceptance step.
-8. Run provider-free validation and repository documentation checks.
+5. Update the suite catalog with catalog kinds, the catalog README contract, and audit-state fields.
+6. Run repository documentation checks.
 
-The slice stops before provider execution.
+### Boundary 2: `disciplined-research` portfolio audit
+
+1. Create `skill-validation/scenarios/disciplined-research/README.md` and audit all seven scenario packages from repository evidence.
+2. Add portfolio classification, ownership, coverage, and audit status to the seven scenario READMEs.
+3. Record the DR-02 scratch pilot as audit input without moving or promoting it.
+4. Run provider-free validation without changing scenario inputs.
+
+This boundary ends at `REVIEW_READY` only if every classification is final and the execution proposal is complete.
+If the audit finds `MERGE` or `REPAIR` work, it ends at `IN_PROGRESS` and records the exact follow-up instead of expanding scope.
+
+Any scenario merge or repair is a later, separately approved boundary.
+It may change scenario documentation or test inputs, but it does not change runner or skill code unless a new design explicitly authorizes that work.
+
+The initial plan stops before scenario repair and provider execution.
 Any later provider run requires the existing exact-command approval gate.
 
 ## End Goal
 
-The current-skill baseline phase is complete when every skill in the suite is `BASELINED` and:
+The current-skill baseline phase is complete when all nine `SKILL` catalogs and the `SUITE_COMPOSITION` catalog are `BASELINED` and:
 
-- every scenario has a final disposition;
+- every scenario has a final portfolio classification;
 - every retained scenario has a clear owner and invariant or behavior mapping;
-- all retained run-eligible scenarios have provider-free validation and reviewed accepted evidence;
-- every skill README states current behavior, including failures and limitations;
+- every active scenario has provider-free validation and reviewed accepted evidence fulfilling its approved repetition policy;
+- every catalog README states current behavior, including failures and limitations;
 - suite-wide overlaps and gaps are visible; and
 - the exact skill source, run configuration, and evidence are reproducible.
 
@@ -256,10 +333,11 @@ This design does not:
 - compare current and rewritten skills;
 - require current behavior to pass;
 - authorize a provider invocation;
-- automate semantic disposition, coverage, or verdict decisions;
+- automate semantic classification, coverage, or verdict decisions;
 - add a `manifest.md` generator;
-- add a new structural checker without an observed recurring failure; or
-- move or promote the DR-02 manual-pilot outputs from `scratch/`; or
+- add a new structural checker without an observed recurring failure;
+- move or promote the DR-02 manual-pilot outputs from `scratch/`;
+- change runner code, skill content, scenario configurations, prompts, rubrics, or executable fixtures in the initial implementation plan; or
 - bulk-edit scenario content before its owning skill is audited.
 
 ## Rationale for Deferred Tooling

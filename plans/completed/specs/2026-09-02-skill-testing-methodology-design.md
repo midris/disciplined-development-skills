@@ -4,9 +4,11 @@
 
 The mechanical worksheet generator specified here was implemented and accepted by
 the owner on 2026-09-03 after whole-branch review and offline verification. The
-manual pilot and open methodology decisions below remain pending and require
-separate owner authorization. The completed implementation plan is archived beside
-this specification.
+owner-authorized DR-02 manual pilot also completed on 2026-09-03; its evidence
+remains scratch-only. The active
+[baseline organization design](../../specs/2026-09-03-skill-validation-baseline-design.md)
+records the resulting lifecycle and rollup decisions. The completed implementation
+plan is archived beside this specification.
 
 ## Purpose
 
@@ -396,7 +398,10 @@ Omitting the corrected calendar date, repeating September 15 as controlling,
 inventing another date, selecting the wrong authority, or falsely mapping support
 is a semantic failure.
 
-## Decisions still open
+## Decisions open when this design was completed
+
+The baseline organization design linked in the status above resolves or explicitly
+defers these items. This list remains as the historical handoff from this design.
 
 - The exact provider, model, effort, and owner-authorized invocation for the first pilot.
 - The review required before an accepted record replaces its predecessor.
