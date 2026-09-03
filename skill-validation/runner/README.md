@@ -25,7 +25,7 @@ skilltest worksheet SCENARIO RUN_BUNDLE --output PATH
 one retained runner bundle, and `PATH` is a nonexisting scratch output whose parent
 already exists. The command populates only mechanical fields; the orchestrator
 completes and reviews the worksheet according to the
-[testing methodology](../../plans/specs/2026-09-02-skill-testing-methodology-design.md).
+[testing methodology](../../plans/completed/specs/2026-09-02-skill-testing-methodology-design.md).
 
 Success exits `0` and prints the resolved output path to standard output. Usage or
 input failure exits `2`; output collision or write failure exits `1`. Failures emit

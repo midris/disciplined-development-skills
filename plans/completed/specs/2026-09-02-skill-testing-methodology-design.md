@@ -2,11 +2,11 @@
 
 ## Status
 
-Live design started 2026-09-02.
-This document records owner-approved methodology decisions as they are made.
-It does not authorize a provider run, activate a complete test suite, or authorize
-implementation.
-The only new tool specified by this design is the mechanical worksheet generator.
+The mechanical worksheet generator specified here was implemented and accepted by
+the owner on 2026-09-03 after whole-branch review and offline verification. The
+manual pilot and open methodology decisions below remain pending and require
+separate owner authorization. The completed implementation plan is archived beside
+this specification.
 
 ## Purpose
 
@@ -15,10 +15,10 @@ The methodology must distinguish semantic behavior from deterministic protocol, 
 
 ## Authorities
 
-- The [validation charter](../../skill-validation/charter/core-contracts.md) defines skill invariants, evaluation ledgers, and acceptance ownership.
-- The [runner contract](../../skill-validation/runner/README.md) defines scenario preparation, model invocation, and mechanical evidence collection.
-- The [scenario catalog](../../skill-validation/scenarios/README.md) indexes the migrated prompts, rubrics, configurations, and supplied files.
-- The [retired comprehensive cleanup plan](../completed/2026-08-01-comprehensive-skill-cleanup.md) and [design](../completed/specs/2026-08-01-comprehensive-skill-cleanup-design.md) are historical context, not current methodology.
+- The [validation charter](../../../skill-validation/charter/core-contracts.md) defines skill invariants, evaluation ledgers, and acceptance ownership.
+- The [runner contract](../../../skill-validation/runner/README.md) defines scenario preparation, model invocation, and mechanical evidence collection.
+- The [scenario catalog](../../../skill-validation/scenarios/README.md) indexes the migrated prompts, rubrics, configurations, and supplied files.
+- The [retired comprehensive cleanup plan](../2026-08-01-comprehensive-skill-cleanup.md) and [design](2026-08-01-comprehensive-skill-cleanup-design.md) are historical context, not current methodology.
 
 ## Responsibility boundary
 
@@ -351,7 +351,7 @@ before then.
 
 ## Initial manual pilot
 
-The first pilot uses [`DR-02`](../../skill-validation/scenarios/disciplined-research/dr-02/README.md).
+The first pilot uses [`DR-02`](../../../skill-validation/scenarios/disciplined-research/dr-02/README.md).
 It validates the low-level methodology before introducing test-operator subagents,
 scorer agents, repetitions, control arms, suite automation, or tooling beyond the
 worksheet generator.

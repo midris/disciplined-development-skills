@@ -48,7 +48,7 @@ No other file is in implementation scope.
 - Produces: `WorksheetOutputError`, raised only for output collision or write failure.
 - Produces: `write_worksheet(scenario_argument: str, run_bundle: Path, output_path: Path) -> Path`, returning the resolved written path.
 
-- [ ] **Step 1: Write exact-output and failure tests**
+- [x] **Step 1: Write exact-output and failure tests**
 
 Create a local test builder that writes `rubric.md` and the smallest `result.json` containing every field the renderer consumes:
 
@@ -112,7 +112,7 @@ Cover these behavioral rows without introducing a schema-test matrix:
 
 Assert the renderer does not require unused result-schema fields and does not inspect `final.txt`, evidence files, scenario `test.json`, or the run marker.
 
-- [ ] **Step 2: Run the focused test and observe RED**
+- [x] **Step 2: Run the focused test and observe RED**
 
 ```bash
 cd "$(git rev-parse --show-toplevel)/skill-validation/runner"
@@ -121,7 +121,7 @@ uv run pytest -q tests/test_worksheet.py
 
 Expected: collection fails because `skilltest.worksheet` does not exist.
 
-- [ ] **Step 3: Implement the minimal worksheet module**
+- [x] **Step 3: Implement the minimal worksheet module**
 
 Define only the public boundary needed by Task 2:
 
@@ -157,7 +157,7 @@ Keep all helpers private and local to `worksheet.py`:
 
 Do not import `jsonschema`, the runner, provider modules, or scenario configuration code. Do not add a generalized renderer, template file, result model, validation helper, or output publication framework.
 
-- [ ] **Step 4: Run focused tests and verify GREEN**
+- [x] **Step 4: Run focused tests and verify GREEN**
 
 ```bash
 cd "$(git rev-parse --show-toplevel)/skill-validation/runner"
@@ -167,7 +167,7 @@ git diff --check
 
 Expected: every worksheet test passes and the diff check reports no errors.
 
-- [ ] **Step 5: Inspect and commit the renderer**
+- [x] **Step 5: Inspect and commit the renderer**
 
 Confirm the diff contains only `worksheet.py` and `test_worksheet.py`, the test uses no provider, and production code contains no scoring or schema validation. Then commit:
 
@@ -193,7 +193,7 @@ git commit -m "feat(validation): render skill test worksheets"
 - Produces: `skilltest worksheet SCENARIO RUN_BUNDLE --output PATH` with the exact exit and output-channel contract from the spec.
 - Preserves: `skilltest run CONFIG` argument parsing, diagnostics, stdout bundle path, and exit codes.
 
-- [ ] **Step 1: Write failing public-command tests**
+- [x] **Step 1: Write failing public-command tests**
 
 Extend the existing black-box CLI coverage with:
 
@@ -214,7 +214,7 @@ Cover only these public rows:
 - `skilltest --help` lists both `run` and `worksheet` and still lists no lifecycle command;
 - every existing `skilltest run` assertion remains unchanged and green.
 
-- [ ] **Step 2: Run the CLI test and observe RED**
+- [x] **Step 2: Run the CLI test and observe RED**
 
 ```bash
 cd "$(git rev-parse --show-toplevel)/skill-validation/runner"
@@ -223,7 +223,7 @@ uv run pytest -q tests/test_cli.py
 
 Expected: worksheet invocations fail because the parser does not recognize the command.
 
-- [ ] **Step 3: Add the thin CLI dispatch**
+- [x] **Step 3: Add the thin CLI dispatch**
 
 Register exactly two positional arguments and one required option:
 
@@ -242,7 +242,7 @@ for the new subcommand.
 
 Do not add shared outcome types, callback dispatch, a command registry, or changes to `runner.py`.
 
-- [ ] **Step 4: Document the public command**
+- [x] **Step 4: Document the public command**
 
 Adjust the README's opening sentence so it covers both mechanical operations, then
 add one concise `Worksheet` section after the existing `Run` section. Document:
@@ -256,9 +256,9 @@ add one concise `Worksheet` section after the existing `Run` section. Document:
 
 Do not duplicate the full worksheet template or methodology verdict rules in the
 runner README; link to
-`../../plans/specs/2026-09-02-skill-testing-methodology-design.md` instead.
+`../../plans/completed/specs/2026-09-02-skill-testing-methodology-design.md` instead.
 
-- [ ] **Step 5: Run focused and full offline verification**
+- [x] **Step 5: Run focused and full offline verification**
 
 ```bash
 cd "$(git rev-parse --show-toplevel)/skill-validation/runner"
@@ -269,7 +269,7 @@ git diff --check
 
 Expected: focused worksheet/CLI tests and the complete default offline runner suite pass; no acceptance test, installed/live provider, or model is invoked; the diff check reports no errors. Existing fake-provider subprocess tests remain ordinary offline coverage.
 
-- [ ] **Step 6: Inspect and commit the public command**
+- [x] **Step 6: Inspect and commit the public command**
 
 Confirm the complete implementation changes exactly the five files in this plan, `skilltest run` retains its prior tests and behavior, and no dependency, schema, provider, scenario, skill, or lifecycle file changed. Then commit:
 
