@@ -1,6 +1,6 @@
 # Skill Validation Baseline Organization Design
 
-**Status:** Revised after a second owner-requested review on 2026-09-03; awaiting owner re-review.
+**Status:** Revised after a third owner-requested review on 2026-09-03; awaiting owner re-review.
 
 ## Purpose
 
@@ -66,7 +66,7 @@ Later movement of `main` does not change the campaign anchor.
 Replacing the anchor requires explicit owner approval and starts a replacement campaign; prior evidence remains historical but does not satisfy the replacement campaign.
 One campaign-wide anchor is required because per-catalog commits would make cross-catalog and `skill-discovery` evidence incomparable.
 
-The scratch-only DR-02 pilot predates the campaign anchor and informs methodology only.
+The scratch-only [DR-02 pilot outcome](../completed/specs/2026-09-02-skill-testing-methodology-design.md#dr-02-pilot-outcome) predates the campaign anchor and informs methodology only.
 It is not campaign baseline evidence.
 
 ## Target Directory Structure
@@ -164,14 +164,15 @@ Non-owning catalogs link to composition coverage without duplicating its executi
 
 ### `accepted/summary.md`
 
-The human-reviewed conclusion for the current accepted baseline set.
+The human-reviewed conclusion for the most recently accepted baseline set.
 It records:
 
 - the baseline subject and run identities;
 - provider, model, effort, and repetition policy;
 - the ordered run verdicts and run-set characterization;
 - semantic, protocol, task-fidelity, and composition findings as applicable;
-- infrastructure retries and their effect on interpretation; and
+- infrastructure retries and their effect on interpretation;
+- whether the set is current or stale, including the reason and date when stale; and
 - reviewer notes and known limitations.
 
 `summary.md` is not generated.
@@ -184,7 +185,7 @@ Repetition identifiers use the stable sequence `r1`, `r2`, and so on within the 
 Each repetition retains the generated result, final provider text, completed worksheet, and any supporting evidence.
 The summary maps every repetition identifier to the runner's globally unique run ID.
 
-The `accepted/` directory represents the latest reviewed baseline set.
+The `accepted/` directory represents the latest reviewed baseline set, whether current or subsequently marked stale.
 When a new set supersedes it, the set is replaced in place and prior sets remain recoverable through Git history.
 
 ## Accepted Baseline-Set Lifecycle
@@ -193,16 +194,21 @@ All attempts, completed worksheets, and the draft summary remain in scratch unti
 Only judgeable `PASS` and `FAIL` runs may enter an accepted set.
 Infrastructure failures, `SCENARIO_INVALID` results, and row-level `NOT_JUDGEABLE` results remain scratch-only; the summary may describe retries without copying their bundles.
 
-Every repetition in one candidate or accepted set must share the exact:
+Every repetition in one candidate or accepted set must share this stable comparison key:
 
 - campaign anchor and supplied skill hashes;
-- scenario ID and prompt, rubric, configuration, fixture, and dependency hashes;
+- scenario ID and checked-in prompt-template, rubric, execution-configuration, fixture, and dependency hashes;
 - provider, model, and effort; and
 - runner result-schema version.
 
-Only run identity, timestamps, response, and produced evidence may differ between repetitions.
-A mismatch starts a separate candidate set and cannot be characterized with the existing repetitions.
-Changing any shared value invalidates the accepted set for the current campaign; Git history preserves it as evidence for its original inputs.
+Run identity, timestamps, duration, run-owned absolute paths substituted into the rendered prompt, provider stdout and stderr, telemetry, response, and produced evidence may differ between repetitions.
+The reviewer must confirm that rendered-prompt differences are limited to declared run-root substitution; any other rendered-prompt difference makes the run ineligible for that candidate set.
+
+A run whose stable comparison key differs starts a separate candidate set and cannot be characterized with the existing repetitions.
+Creating or reviewing such a candidate has no effect on the current accepted set.
+An accepted set becomes stale only after an authoritative, owner-approved change to its campaign anchor, checked-in scenario or evaluation inputs, approved execution policy, or runner result contract.
+When that happens, its summary records the invalidation reason and date, the catalog returns to `IN_PROGRESS`, and the existing files remain clearly labeled stale evidence until an approved replacement is promoted atomically.
+Stale evidence does not satisfy the current campaign, but Git history continues to preserve it for its original inputs.
 
 The orchestrator presents the complete candidate tree, its run IDs, and its file hashes to the owner.
 The owner must explicitly approve that exact candidate set before any `accepted/` write.
@@ -236,7 +242,9 @@ References qualified by a historical commit retain the displayed path that was c
 For example, `skill-validation/disciplined-research.md at commit 13599fb` remains unchanged even after that file moves into the archive, because changing it would falsify the provenance statement.
 
 Unqualified scenario provenance is normalized only during its owning catalog audit, not during the archive move.
-When repository evidence establishes the source commit, the audit records the archive path and commit; otherwise it preserves the statement and assigns `REPAIR` rather than inventing provenance.
+When repository evidence establishes the source commit, the audit preserves the historical path text, adds the source commit, and links separately to the record's current archive location.
+It must not describe the archive path as existing at a commit where the record still had its original path.
+When the source commit cannot be established, the audit preserves the statement and assigns `REPAIR` rather than inventing provenance.
 
 Markdown link destinations are current navigation rather than historical claims, so links to moved records retarget the archive copy even when their displayed historical path remains unchanged.
 Completed plans and other historical documents retain historical path text but receive working archive link destinations.
@@ -300,12 +308,14 @@ The suite index uses four catalog states:
 | State | Meaning |
 |---|---|
 | `NOT_STARTED` | The legacy inventory exists, but the catalog-level audit has not begun. |
-| `IN_PROGRESS` | Inventory, classification, repair, or provider-free validation is underway. |
+| `IN_PROGRESS` | Inventory, classification, repair, provider-free validation, approved provider execution, evidence review, or candidate assembly is underway. |
 | `REVIEW_READY` | The portfolio and current review packet—execution proposal or completed baseline rollup—await an owner decision. |
 | `BASELINED` | Final classifications are recorded and every active scenario has reviewed accepted evidence fulfilling its approved policy. |
 
 A `BASELINED` catalog may include passing, failing, and mixed scenario sets.
 The state means the evidence is complete and reviewed, not that every scenario passed.
+The normal transition is `NOT_STARTED` to `IN_PROGRESS` for audit and repair, then `REVIEW_READY` for the execution proposal, back to `IN_PROGRESS` for approved runs, evidence review, and candidate assembly, then `REVIEW_READY` for the completed rollup, and finally `BASELINED` after owner approval.
+An invalidated accepted set returns a `BASELINED` catalog to `IN_PROGRESS` as defined above.
 After all required scenario sets are accepted, the orchestrator presents the completed catalog README and suite-index transition to the owner.
 The owner must explicitly approve the catalog conclusion before its state changes to `BASELINED`.
 
@@ -327,7 +337,7 @@ The first implementation plan contains two documentation-only merge boundaries.
 
 1. Create `skill-validation/scenarios/disciplined-research/README.md` and audit all seven scenario packages from repository evidence.
 2. Add portfolio classification, ownership, coverage, and audit status to the seven scenario READMEs.
-3. Record the DR-02 scratch pilot as audit input without moving or promoting it.
+3. Use the durable [DR-02 pilot outcome](../completed/specs/2026-09-02-skill-testing-methodology-design.md#dr-02-pilot-outcome) as audit input without moving or promoting the raw scratch artifacts; surviving scratch may corroborate the record but is not required.
 4. Run provider-free validation without changing scenario inputs.
 
 This boundary ends at `REVIEW_READY` only if every classification is final and the execution proposal is complete.

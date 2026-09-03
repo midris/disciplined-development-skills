@@ -398,6 +398,28 @@ Omitting the corrected calendar date, repeating September 15 as controlling,
 inventing another date, selecting the wrong authority, or falsely mapping support
 is a semantic failure.
 
+### `DR-02` pilot outcome
+
+The owner authorized one Codex `gpt-5.6-sol` high-effort invocation and an escalated
+retry of that same command after the first attempt exited nonzero during nested
+Codex initialization under the host sandbox.
+The first attempt was classified `INFRA_RETRY` and was not scored.
+The retry completed mechanically and received an overall `PASS`: semantic invariants
+`DR-I1` through `DR-I4` passed, deterministic protocol was `N/A`, and the requested
+two-line format and deadline content passed their task-fidelity check.
+The source-path form failed one non-blocking task-fidelity check because the response
+used provider-working-directory-relative `fixture/sources/city-museum-addendum-2.md`
+rather than the catalog's fixture-root-relative `sources/city-museum-addendum-2.md`.
+That difference did not prevent semantic judgment or precise source identification.
+
+The pilot remains methodology evidence only.
+Its raw outputs remain scratch-only, were not promoted into `accepted/`, and may be
+discarded under the scratch lifecycle above; later audits rely on this durable outcome
+record rather than requiring the scratch bundle.
+The pilot established two follow-ups for later execution design: citation roots must
+be stated explicitly, and a Codex provider launched from a sandboxed Codex host may
+require an owner-approved sandbox escalation.
+
 ## Decisions open when this design was completed
 
 The baseline organization design linked in the status above resolves or explicitly
