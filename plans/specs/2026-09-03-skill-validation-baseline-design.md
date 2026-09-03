@@ -1,6 +1,6 @@
 # Skill Validation Baseline Organization Design
 
-**Status:** Revised after owner-requested review on 2026-09-03; awaiting owner re-review.
+**Status:** Revised after a second owner-requested review on 2026-09-03; awaiting owner re-review.
 
 ## Purpose
 
@@ -8,7 +8,7 @@ Establish a consistent, catalog-by-catalog process for auditing the existing val
 
 The baseline is descriptive, not aspirational.
 A judgeable failure is valid baseline evidence when it accurately records current behavior.
-Rewrite evaluation begins only after the current-skill baseline portfolio is complete enough to support a fair comparison.
+Rewrite evaluation begins only after the current-skill baseline campaign is complete.
 
 ## Authority and Scope
 
@@ -55,6 +55,19 @@ This design resolves or defers them as follows:
    Each catalog receives a coherent portfolio review, repair pass, execution policy, and baseline rollup rather than accumulating cross-catalog partial work.
 5. **Preserve historical truth.**
    Commit-qualified references keep the path that was valid at the named commit, even after the live file moves.
+
+## Baseline Campaign Anchor
+
+Before the first catalog audit, resolve `main` once to a full commit ID and record it in the suite index as the baseline campaign anchor.
+Every catalog baseline subject and provider run in the campaign uses skill bytes from that commit.
+Documentation-only audit branches may advance independently, but the supplied skill hashes must match the campaign anchor before every run.
+
+Later movement of `main` does not change the campaign anchor.
+Replacing the anchor requires explicit owner approval and starts a replacement campaign; prior evidence remains historical but does not satisfy the replacement campaign.
+One campaign-wide anchor is required because per-catalog commits would make cross-catalog and `skill-discovery` evidence incomparable.
+
+The scratch-only DR-02 pilot predates the campaign anchor and informs methodology only.
+It is not campaign baseline evidence.
 
 ## Target Directory Structure
 
@@ -134,9 +147,8 @@ It contains:
 - links to accepted scenario summaries; and
 - the catalog-level conclusion, including failures and limitations.
 
-A `SKILL` catalog records one skill path, the `main` commit resolved when its audit begins, and that file's content hash.
-The `SUITE_COMPOSITION` catalog records one resolved `main` commit plus all nine skill paths and hashes.
-Later movement of `main` does not change a frozen subject, but a changed supplied skill byte invalidates affected evidence and requires an explicit re-freeze.
+A `SKILL` catalog records the campaign anchor, one skill path, and that file's anchored content hash.
+The `SUITE_COMPOSITION` catalog records the same anchor plus all nine skill paths and anchored hashes.
 
 This file is the proposed manifest under the cleaner name `README.md`.
 It is a semantic review artifact and is not generated.
@@ -181,6 +193,17 @@ All attempts, completed worksheets, and the draft summary remain in scratch unti
 Only judgeable `PASS` and `FAIL` runs may enter an accepted set.
 Infrastructure failures, `SCENARIO_INVALID` results, and row-level `NOT_JUDGEABLE` results remain scratch-only; the summary may describe retries without copying their bundles.
 
+Every repetition in one candidate or accepted set must share the exact:
+
+- campaign anchor and supplied skill hashes;
+- scenario ID and prompt, rubric, configuration, fixture, and dependency hashes;
+- provider, model, and effort; and
+- runner result-schema version.
+
+Only run identity, timestamps, response, and produced evidence may differ between repetitions.
+A mismatch starts a separate candidate set and cannot be characterized with the existing repetitions.
+Changing any shared value invalidates the accepted set for the current campaign; Git history preserves it as evidence for its original inputs.
+
 The orchestrator presents the complete candidate tree, its run IDs, and its file hashes to the owner.
 The owner must explicitly approve that exact candidate set before any `accepted/` write.
 Promotion replaces the whole accepted set in one repository change; partial replacement is invalid.
@@ -209,14 +232,15 @@ Only links and navigation metadata needed for the new location may change.
 
 References that describe live repository authority must follow moved files to their new paths.
 
-References qualified by a historical commit retain the path that was correct at that commit.
+References qualified by a historical commit retain the displayed path that was correct at that commit.
 For example, `skill-validation/disciplined-research.md at commit 13599fb` remains unchanged even after that file moves into the archive, because changing it would falsify the provenance statement.
 
-Unqualified scenario provenance that names a moved root record changes to the archive path and gains the known source commit.
-If the source commit cannot be established from repository evidence, the reference remains unchanged and the scenario receives `REPAIR`; the implementation must not invent provenance.
+Unqualified scenario provenance is normalized only during its owning catalog audit, not during the archive move.
+When repository evidence establishes the source commit, the audit records the archive path and commit; otherwise it preserves the statement and assigns `REPAIR` rather than inventing provenance.
 
-Completed plans and other historical documents retain paths that describe their historical tree.
-Current navigation, authority, and backlog links change to the archive path.
+Markdown link destinations are current navigation rather than historical claims, so links to moved records retarget the archive copy even when their displayed historical path remains unchanged.
+Completed plans and other historical documents retain historical path text but receive working archive link destinations.
+Current navigation, authority, and backlog references change both their text and destination to the archive path.
 The implementation must classify references by meaning before editing them; a global path replacement is not acceptable.
 
 ## Portfolio Classifications
@@ -254,7 +278,7 @@ Every final active classification—`CORE`, `COMPOSITION`, or `DIAGNOSTIC`—req
 The audit proceeds one catalog at a time:
 
 1. Re-read the current skill or skill bundle and its charter invariants.
-2. Resolve `main` to one exact commit and freeze the applicable skill paths and hashes.
+2. Read the campaign anchor and freeze the applicable anchored skill paths and hashes.
 3. Inventory every scenario currently associated with the catalog.
 4. Audit each prompt, rubric, fixture, and provenance record.
 5. Separate semantic correctness, protocol compliance, task fidelity, and composition concerns.
@@ -277,11 +301,13 @@ The suite index uses four catalog states:
 |---|---|
 | `NOT_STARTED` | The legacy inventory exists, but the catalog-level audit has not begun. |
 | `IN_PROGRESS` | Inventory, classification, repair, or provider-free validation is underway. |
-| `REVIEW_READY` | The portfolio and execution proposal are complete and await owner approval or review. |
+| `REVIEW_READY` | The portfolio and current review packet—execution proposal or completed baseline rollup—await an owner decision. |
 | `BASELINED` | Final classifications are recorded and every active scenario has reviewed accepted evidence fulfilling its approved policy. |
 
 A `BASELINED` catalog may include passing, failing, and mixed scenario sets.
 The state means the evidence is complete and reviewed, not that every scenario passed.
+After all required scenario sets are accepted, the orchestrator presents the completed catalog README and suite-index transition to the owner.
+The owner must explicitly approve the catalog conclusion before its state changes to `BASELINED`.
 
 ## Initial Implementation Sequence
 
@@ -292,9 +318,10 @@ The first implementation plan contains two documentation-only merge boundaries.
 1. Add the root validation authority map.
 2. Add the archive explanation and create the archive categories.
 3. Move the nine skill records and three shared records into the archive.
-4. Sweep live references while preserving commit-qualified historical paths.
-5. Update the suite catalog with catalog kinds, the catalog README contract, and audit-state fields.
-6. Run repository documentation checks.
+4. Retarget current navigation and Markdown link destinations while preserving historical path text; defer scenario-provenance normalization to each catalog audit.
+5. Resolve and record the single baseline campaign anchor.
+6. Update the suite catalog with catalog kinds, the catalog README contract, and audit-state fields.
+7. Run repository documentation checks.
 
 ### Boundary 2: `disciplined-research` portfolio audit
 
@@ -347,7 +374,7 @@ The proposed README and summary files capture judgments that require reading the
 Generating those judgments would conceal reviewer decisions rather than make the process more reproducible.
 
 A future checker may validate required files, links, hashes, identifiers, or state transitions if manual work demonstrates a repeated mechanical error.
-It must not infer dispositions or verdicts.
+It must not infer portfolio classifications, run verdicts, or evidence dispositions.
 
 ## Review and Implementation Boundary
 
