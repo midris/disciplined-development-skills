@@ -1,7 +1,7 @@
 # skilltest
 
-`skilltest` runs one supplied prompt through one configured local model CLI and retains mechanical evidence from that invocation.
-It is synchronous and stateless: each invocation owns a unique run directory.
+`skilltest` runs one supplied prompt through one configured local model CLI and retains mechanical evidence, or renders one fixed blank worksheet from retained inputs.
+`run` is synchronous and stateless: each invocation owns a unique run directory.
 It does not understand or evaluate the prompt, fixtures, evidence, or provider response.
 
 ## Run
@@ -12,6 +12,25 @@ skilltest run CONFIG
 
 `CONFIG` is the path to one configuration JSON file.
 The final standard-output line is the owned absolute bundle path.
+
+## Worksheet
+
+From the repository root, invoke:
+
+```text
+skilltest worksheet SCENARIO RUN_BUNDLE --output PATH
+```
+
+`SCENARIO` is the repository-relative path to a scenario package, `RUN_BUNDLE` is
+one retained runner bundle, and `PATH` is a nonexisting scratch output whose parent
+already exists. The command populates only mechanical fields; the orchestrator
+completes and reviews the worksheet according to the
+[testing methodology](../../plans/specs/2026-09-02-skill-testing-methodology-design.md).
+
+Success exits `0` and prints the resolved output path to standard output. Usage or
+input failure exits `2`; output collision or write failure exits `1`. Failures emit
+one `skilltest:` diagnostic and no standard output. The command never invokes a
+provider, scores output, validates an assessment, or writes `accepted/`.
 
 ## Owner authorization
 

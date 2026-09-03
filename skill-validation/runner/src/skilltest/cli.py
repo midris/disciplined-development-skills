@@ -1,4 +1,4 @@
-"""The one-command public interface for one skill-test run."""
+"""The public interface for mechanical skill-test operations."""
 
 from __future__ import annotations
 
@@ -8,15 +8,34 @@ import sys
 from typing import Sequence
 
 from skilltest.runner import run_once
+from skilltest.worksheet import WorksheetInputError, WorksheetOutputError, write_worksheet
 
 
 def main(arguments: Sequence[str] | None = None) -> int:
-    """Run one configuration and return its mechanical exit code."""
+    """Dispatch one mechanical operation and return its exit code."""
     parser = argparse.ArgumentParser(prog="skilltest")
     commands = parser.add_subparsers(dest="command", required=True)
     run = commands.add_parser("run")
     run.add_argument("config", metavar="CONFIG")
+    worksheet = commands.add_parser("worksheet")
+    worksheet.add_argument("scenario", metavar="SCENARIO")
+    worksheet.add_argument("run_bundle", metavar="RUN_BUNDLE")
+    worksheet.add_argument("--output", required=True, metavar="PATH")
     parsed = parser.parse_args(arguments)
+
+    if parsed.command == "worksheet":
+        try:
+            written_path = write_worksheet(
+                parsed.scenario, Path(parsed.run_bundle), Path(parsed.output)
+            )
+        except WorksheetInputError as error:
+            print(f"skilltest: {error}", file=sys.stderr)
+            return 2
+        except WorksheetOutputError as error:
+            print(f"skilltest: {error}", file=sys.stderr)
+            return 1
+        print(written_path)
+        return 0
 
     outcome = run_once(Path(parsed.config))
     if outcome.diagnostic is not None:
