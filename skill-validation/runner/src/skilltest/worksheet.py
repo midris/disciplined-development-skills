@@ -146,6 +146,6 @@ def write_worksheet(
     try:
         with output_path.open("x", encoding="utf-8", newline="\n") as output_file:
             output_file.write(worksheet)
-    except OSError as error:
+    except (OSError, UnicodeError) as error:
         raise WorksheetOutputError(f"worksheet output failed: {error}") from error
     return output_path.resolve()

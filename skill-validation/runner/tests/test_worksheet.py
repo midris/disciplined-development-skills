@@ -351,3 +351,18 @@ def test_selected_output_open_failure_is_an_output_error(
         write_worksheet(SCENARIO_ARGUMENT, run_bundle, output_path)
 
     assert not output_path.exists()
+
+
+def test_output_encoding_failure_is_an_output_error(
+    tmp_path: Path, monkeypatch: pytest.MonkeyPatch
+) -> None:
+    # Break caught: leaking a UTF-8 write failure outside the output-error boundary.
+    record, _, run_bundle, output_path = _build_inputs(tmp_path, monkeypatch)
+    record["infrastructure_error"] = {
+        "code": "ARTIFACT_WRITE_FAILED",
+        "message": "invalid surrogate: \ud800",
+    }
+    _write_record(run_bundle, record)
+
+    with pytest.raises(WorksheetOutputError):
+        write_worksheet(SCENARIO_ARGUMENT, run_bundle, output_path)
