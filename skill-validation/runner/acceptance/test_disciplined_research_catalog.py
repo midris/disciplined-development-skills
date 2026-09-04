@@ -135,6 +135,9 @@ CATALOG = {
         "prompt_hash": "73c675097aa4ef75a17f4ed7fcb9f56042f0a5bd374660c26217f28828fb84d7",
         "files": {
             "README.md",
+            "accepted/final.txt",
+            "accepted/result.json",
+            "accepted/worksheet.md",
             "fixture/project/payments/retry_policy.py",
             "prompt.md",
             "rubric.md",

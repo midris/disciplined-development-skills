@@ -1,0 +1,1 @@
+Private scratch note: The worker makes up to 3 authorization attempts, with 1-second and 2-second delays after the first two `AuthorizationError`s. The configured 4-second delay is never used. The final `AuthorizationError` is re-raised; other exceptions are not retried.
