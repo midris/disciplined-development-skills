@@ -1,0 +1,103 @@
+{
+  "artifacts": {
+    "config": {
+      "bytes": 401,
+      "exists": true,
+      "path": "config.json",
+      "sha256": "bfb030eaedc1f6d76ede26e4521ed4c68e1849c0b395dfdc267e770e3877fad2"
+    },
+    "evidence": {
+      "empty": true,
+      "entries": [],
+      "exists": true,
+      "path": "workspace/evidence"
+    },
+    "final": {
+      "bytes": 71,
+      "exists": true,
+      "path": "final.txt",
+      "sha256": "b8e8dadc97fbf1faa461e88811866ddc03c3dcc18afad83d444768e285f7295d"
+    },
+    "fixture": {
+      "empty": false,
+      "entries": [
+        {
+          "bytes": null,
+          "path": "context",
+          "sha256": null,
+          "type": "directory"
+        },
+        {
+          "bytes": 309,
+          "path": "context/single-file-search.md",
+          "sha256": "48f863afc5e164a3d74f19271656f98f88e00c87c48d10d6995318a7aaece85f",
+          "type": "file"
+        },
+        {
+          "bytes": null,
+          "path": "skills",
+          "sha256": null,
+          "type": "directory"
+        },
+        {
+          "bytes": null,
+          "path": "skills/sweeping-stale-references",
+          "sha256": null,
+          "type": "directory"
+        },
+        {
+          "bytes": 7689,
+          "path": "skills/sweeping-stale-references/SKILL.md",
+          "sha256": "d6812c33cae026807bbb3ebe851d93b60b513dd87ea5efd98aea28f5c02f9157",
+          "type": "file"
+        }
+      ],
+      "exists": true,
+      "path": "workspace/fixture"
+    },
+    "prompt": {
+      "bytes": 654,
+      "exists": true,
+      "path": "prompt.txt",
+      "sha256": "fc85bda2d19448f9107f111b507fa2295d2ee21ba0da8ec1f4c62ceb87e96781"
+    },
+    "prompt_template": {
+      "bytes": 400,
+      "exists": true,
+      "path": "prompt-template.txt",
+      "sha256": "8d9f3a242802100fbe7ded2b7ace37f0647030502c9b5c3dd0b1efd9c268477c"
+    },
+    "stderr": {
+      "bytes": 0,
+      "exists": true,
+      "path": "stderr.txt",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "stdout": {
+      "bytes": 9162,
+      "exists": true,
+      "path": "stdout.txt",
+      "sha256": "d9ab2aeaf3627a7ede51f65e8efdc0d9b09978097c9b7530ebc62134f7d84deb"
+    }
+  },
+  "duration_seconds": 14.267,
+  "execution": {
+    "effort": "high",
+    "executable": "codex",
+    "exit_code": 0,
+    "invocation_started": true,
+    "model": "gpt-5.6-sol",
+    "provider": "codex",
+    "timed_out": false,
+    "timeout_seconds": 900
+  },
+  "finished_at": "2026-09-04T14:16:59.702Z",
+  "infrastructure_error": null,
+  "run_id": "20260904T141645435Z-ssr-05-a23186ee-8993-4b5e-bead-34d63a3f9b5d-p97s4pmh",
+  "schema_version": "0.2",
+  "started_at": "2026-09-04T14:16:45.435Z",
+  "status": "COMPLETED",
+  "test": {
+    "id": "ssr-05"
+  }
+}
