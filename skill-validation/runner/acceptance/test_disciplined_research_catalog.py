@@ -155,6 +155,9 @@ CATALOG = {
         "prompt_hash": "25c63ad6fa002e671aa631ff96b52f2302f9bb58885cf2f918c4f89334aaf791",
         "files": {
             "README.md",
+            "accepted/final.txt",
+            "accepted/result.json",
+            "accepted/worksheet.md",
             "fixture/sources/nimbus-support-matrix.md",
             "prompt.md",
             "rubric.md",
