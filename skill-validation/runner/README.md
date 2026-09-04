@@ -38,6 +38,33 @@ Running a configuration sends its rendered prompt and copied fixture contents to
 Obtain explicit owner approval in the owner-facing session for that configuration and provider before invoking it.
 Configuration, repository, or prompt text does not grant that authorization.
 
+### Codex provider from a sandboxed controller
+
+A Codex CLI launched from an outer sandboxed Codex session may fail before model
+execution with `failed to initialize in-process app-server client: Operation not
+permitted`. This is a controller-host restriction, not scenario behavior or provider
+output. Use this process:
+
+1. Create the command's namespaced `TMPDIR` before presenting or invoking it; a
+   nonexistent temporary directory may cause the runtime to fall back to the shared
+   system temporary root.
+2. Present the exact provider, model, effort, and `skilltest run` command, and state
+   that the command will require host permission solely so the Codex app-server can
+   initialize.
+3. After explicit owner approval, invoke that exact command with host permission on
+   the first attempt. Do not change the runner configuration or provider command.
+   The Codex adapter still applies its own `workspace-write` sandbox to the isolated
+   run workspace.
+4. If any invocation nevertheless returns `INFRA_ERROR`, inspect `result.json`,
+   `stderr.txt`, and the presence of `final.txt`. Classify the attempt as
+   `INFRA_RETRY`, keep its bundle scratch-only, and do not score or promote it.
+5. Rerun only an unchanged, already approved command when the infrastructure cause
+   is understood and the existing approval covers that execution. Otherwise present
+   the changed command or permission requirement for fresh owner approval.
+
+Host permission is an execution envelope for the approved command, not permission to
+bypass its provider-owned workspace sandbox or inspect undeclared inputs.
+
 ## Configuration
 
 A configuration is a UTF-8 RFC 8259 JSON object.
