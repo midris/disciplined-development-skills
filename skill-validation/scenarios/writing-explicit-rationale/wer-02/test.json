@@ -5,5 +5,5 @@
   "fixtures": [
     {"source": "../../../../skills/writing-explicit-rationale/SKILL.md", "target": "skills/writing-explicit-rationale/SKILL.md"}
   ],
-  "execution": {"provider": "codex", "model": "gpt-5.6-sol", "effort": "low"}
+  "execution": {"provider": "codex", "model": "gpt-5.6-sol", "effort": "high"}
 }

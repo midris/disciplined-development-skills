@@ -13,5 +13,5 @@
     {"source": "fixture/project/wer-07/sources/quota-tokens.md", "target": "project/wer-07/sources/quota-tokens.md"},
     {"source": "fixture/project/wer-07/sources/telemetry-comparison.md", "target": "project/wer-07/sources/telemetry-comparison.md"}
   ],
-  "execution": {"provider": "codex", "model": "gpt-5.6-sol", "effort": "low"}
+  "execution": {"provider": "codex", "model": "gpt-5.6-sol", "effort": "high"}
 }
