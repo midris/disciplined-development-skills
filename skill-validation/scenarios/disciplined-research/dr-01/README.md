@@ -9,3 +9,8 @@ Prompt is the canonical fenced evaluator input beneath `DR-01 — bundled projec
 # Smoke
 
 Runner status: `COMPLETED`. Retained result: [smoke-result.json](smoke-result.json).
+
+# Accepted baseline
+
+The latest accepted record is a judgeable `PASS`; see
+[accepted/worksheet.md](accepted/worksheet.md).

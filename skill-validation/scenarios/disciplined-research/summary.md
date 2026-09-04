@@ -17,7 +17,7 @@ This is a human-authored audit record, not a generated manifest.
 
 | Scenario | Decision | Coverage and rationale | Evidence disposition |
 |---|---|---|---|
-| [DR-01](dr-01/README.md) | Keep | Tests choosing the current implementation over a stale README and mapping the answer to the supplied sources. Its exact two-line shape, source order, and lack of narration are task fidelity, not deterministic protocol. | Historical results reported passes on the current skill, but the retained smoke result proves only mechanical completion and does not include the raw response. Run again for baseline evidence. |
+| [DR-01](dr-01/README.md) | Keep | Tests choosing the current implementation over a stale README and mapping the answer to the supplied sources. Its exact two-line shape, source order, and lack of narration are task fidelity, not deterministic protocol. | The [accepted baseline](dr-01/accepted/worksheet.md) is a judgeable `PASS`. DR-I1 through DR-I3 passed; DR-I4 was not independently pressured. The response's `fixture/project/...` path prefix instead of `project/...` was a non-blocking task-fidelity failure. |
 | [DR-02](dr-02/README.md) | Keep | Tests authority, recency, conflict resolution, premise correction, and source mapping within one domain. | The [accepted baseline](dr-02/accepted/worksheet.md) is a judgeable `PASS`. All four semantic rows passed; the response's `fixture/sources/...` path prefix instead of `sources/...` was a non-blocking task-fidelity failure. One earlier infrastructure-error attempt remains scratch-only. |
 | [DR-03](dr-03/README.md) | Keep; repaired 2026-09-03 | Tests verification across project and official upstream sources. The prompt and rubric now ask for and assess the dependency version declared in `package.json`, not an installed version. Exact three-line shape and source order remain task fidelity. | The [accepted baseline](dr-03/accepted/worksheet.md) is a judgeable `FAIL`: the response said the project “uses” 3.4.2 even though `package.json` proves only that the dependency is declared. All four semantic invariants failed; task fidelity passed. |
 | [DR-04](dr-04/README.md) | Keep; expected `FAIL` | Tests the threshold that excludes a private, uncommitted, unshared scratch note even when it conflicts with the current implementation. The fixture implements at most three attempts with waits of one and two seconds; the third tuple value is unused. | Historical results indicate a known current-skill failure, but the raw run and evaluation evidence are unavailable. A judgeable `FAIL` is a valid baseline result. Run again. |
@@ -58,6 +58,6 @@ consumer, so their formatting constraints remain on the task-fidelity ledger.
 
 ## Next actions
 
-1. Run DR-01, DR-04, DR-05, and DR-07 one at a time, presenting each exact
+1. Run DR-04, DR-05, and DR-07 one at a time, presenting each exact
    provider command for owner approval before invocation and evaluating its scratch
    evidence under the testing methodology.

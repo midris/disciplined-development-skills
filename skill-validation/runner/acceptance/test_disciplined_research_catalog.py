@@ -45,6 +45,9 @@ CATALOG = {
         "prompt_hash": "b011d522027b31696e4e6db6c3dfb61e59b5886f6c0ba153a3eca75d0ff0f644",
         "files": {
             "README.md",
+            "accepted/final.txt",
+            "accepted/result.json",
+            "accepted/worksheet.md",
             "fixture/project/README.md",
             "fixture/project/app/retention.py",
             "prompt.md",

@@ -1,0 +1,2 @@
+Archives are retained for 45 days.
+Source: fixture/project/app/retention.py
