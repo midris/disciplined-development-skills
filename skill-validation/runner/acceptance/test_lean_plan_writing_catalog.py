@@ -166,6 +166,9 @@ CATALOG = {
         "prompt_hash": "0eb903aeb088ebacb45dd1d90e6c2364c949a60f6c337f3c8ca35a017f1d6e12",
         "files": {
             "README.md",
+            "accepted/final.txt",
+            "accepted/result.json",
+            "accepted/worksheet.md",
             "fixture/context/coupled-spec.md",
             "fixture/skills/writing-plans/SKILL.md",
             "prompt.md",

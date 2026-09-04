@@ -1,0 +1,8 @@
+## Merge Boundary
+
+- [ ] **One branch, one PR:** atomically rename `quota_mode` to `limit_mode` across `src/config_schema.py`, `src/config_loader.py`, and `tests/test_config.py`.
+- Do not split by file. Each partial PR would be failing or internally inconsistent, and none forms an independently testable deliverable.
+- Include no compatibility alias or staged rollout; the configuration is private and unreleased.
+- Merge only when the updated tests pass and no `quota_mode` references remain.
+
+A single sub-150-line PR is the more disciplined boundary because one review pass can validate the complete schema–loader–test contract.
