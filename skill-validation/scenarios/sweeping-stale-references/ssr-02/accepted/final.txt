@@ -1,0 +1,20 @@
+Disposition: the inventory is complete; the author’s IDE claim is insufficient. All 13 mutable-tree matches require explicit accounting. The three immutable-history hits are out of scope.
+
+```text
+Sweep inventory: 13 matches across 11 paths (10 update, 1 intentionally stale, 2 false positives).
+
+References swept:
+- src/cache_config.py:12 — update (declaration; 1 match)
+- src/cache_loader.py:27,41 — update (callsite + comment; 2 matches)
+- README.md:88,103 — update (examples; 2 matches)
+- tests/fixtures/cache.json:6 — update (fixture key; 1 match)
+- config/defaults.yaml:5 — update (default key; 1 match)
+- scripts/cache-smoke.sh:9 — update (script argument; 1 match)
+- .github/workflows/cache.yml:22 — update (environment mapping; 1 match)
+- Makefile:31 — update (exported key; 1 match)
+- plans/completed/cache-migration.md:44 — intentionally stale: completed plan accurately records the old key used before this branch (1 match)
+- vendor/acme-cache/defaults.py:8 — false positive: vendored third-party package is outside the maintained rename scope (1 match)
+- src/http_headers.py:55 — false positive: HTTP `max-age` response directive is unrelated to the configuration key (1 match)
+
+Verification:
+```

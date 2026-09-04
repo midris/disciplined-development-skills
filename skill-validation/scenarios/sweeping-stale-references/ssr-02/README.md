@@ -9,3 +9,8 @@ Prompt adapted from the canonical `SSR-02` fenced block by rooting every canonic
 # Smoke
 
 No schema `"0.2"` result is retained.
+
+# Accepted baseline
+
+The latest accepted record is a judgeable `PASS`; see
+[accepted/worksheet.md](accepted/worksheet.md).
