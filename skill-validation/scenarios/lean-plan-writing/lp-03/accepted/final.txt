@@ -1,0 +1,12 @@
+- [ ] **Emit and verify `release-envelope.txt`**
+
+Create `release-envelope.txt` as exactly 72 UTF-8 bytes: no BOM, LF line endings, literal braces, the prescribed line order, and one final LF after the fourth line.
+
+```text
+TYPE={type}
+VERSION={version}
+CREATED={iso8601}
+PAYLOAD={relative_path}
+```
+
+Verify byte-for-byte against the expected UTF-8 byte sequence, asserting the complete contents, 72-byte length, absence of `\r` and BOM bytes, and exactly one trailing `\n`.

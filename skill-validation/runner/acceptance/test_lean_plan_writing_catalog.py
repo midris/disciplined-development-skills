@@ -86,6 +86,9 @@ CATALOG = {
         "prompt_hash": "41a94175c01f78325bce620c6a30ee6f600ed8a8ebd6fce051710cdafc2e00e9",
         "files": {
             "README.md",
+            "accepted/final.txt",
+            "accepted/result.json",
+            "accepted/worksheet.md",
             "fixture/skills/writing-plans/SKILL.md",
             "prompt.md",
             "rubric.md",
