@@ -9,3 +9,9 @@ Prompt is the canonical `LP-06 — quiet digest edge inventory` input from `skil
 # Smoke
 
 No schema `"0.2"` result is retained.
+
+# Accepted baseline
+
+The latest accepted baseline is a `PASS` from `codex` / `gpt-5.6-sol` / `high`, accepted on 2026-09-04. The accepted worksheet records a separate `superpowers:writing-plans` composition-owner `PASS` and a nonblocking precision note about a supplementary unnamed full-suite command.
+
+Retained artifacts: `accepted/worksheet.md`, `accepted/result.json`, and `accepted/final.txt`. No evidence files were emitted.

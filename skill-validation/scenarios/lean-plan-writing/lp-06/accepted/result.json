@@ -1,0 +1,115 @@
+{
+  "artifacts": {
+    "config": {
+      "bytes": 472,
+      "exists": true,
+      "path": "config.json",
+      "sha256": "ac3bbf3cec61d01603493fec40e7b1048b649293629f65a0cc09e1c60fdf680d"
+    },
+    "evidence": {
+      "empty": true,
+      "entries": [],
+      "exists": true,
+      "path": "workspace/evidence"
+    },
+    "final": {
+      "bytes": 6675,
+      "exists": true,
+      "path": "final.txt",
+      "sha256": "f1183022cc510c36c3836bc7087899c39f5e6c43d86171776016543b66067977"
+    },
+    "fixture": {
+      "empty": false,
+      "entries": [
+        {
+          "bytes": null,
+          "path": "context",
+          "sha256": null,
+          "type": "directory"
+        },
+        {
+          "bytes": 628,
+          "path": "context/digest-brief.md",
+          "sha256": "4df040c40f8888fb406265b3643e1c51e1eeaa91ad469d859dec0fd6f92dc792",
+          "type": "file"
+        },
+        {
+          "bytes": null,
+          "path": "skills",
+          "sha256": null,
+          "type": "directory"
+        },
+        {
+          "bytes": null,
+          "path": "skills/lean-plan-writing",
+          "sha256": null,
+          "type": "directory"
+        },
+        {
+          "bytes": 5194,
+          "path": "skills/lean-plan-writing/SKILL.md",
+          "sha256": "6a3115a4d33ad2f99238f915a6a1b7869efd8c80a6cce422d3afae60c9857fac",
+          "type": "file"
+        },
+        {
+          "bytes": null,
+          "path": "skills/writing-plans",
+          "sha256": null,
+          "type": "directory"
+        },
+        {
+          "bytes": 7053,
+          "path": "skills/writing-plans/SKILL.md",
+          "sha256": "48508f44bbfd7d24b029fbf3a314f3cd14c9615599059366e922f47b8dc08cf2",
+          "type": "file"
+        }
+      ],
+      "exists": true,
+      "path": "workspace/fixture"
+    },
+    "prompt": {
+      "bytes": 883,
+      "exists": true,
+      "path": "prompt.txt",
+      "sha256": "faf8be09b68be9238ee1787216e50047715b946f62254d99f7bba14325979d71"
+    },
+    "prompt_template": {
+      "bytes": 508,
+      "exists": true,
+      "path": "prompt-template.txt",
+      "sha256": "e00cf13f429928a48129058a7391e4c5adeb07bce24c494047157e3b2d855902"
+    },
+    "stderr": {
+      "bytes": 0,
+      "exists": true,
+      "path": "stderr.txt",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "stdout": {
+      "bytes": 21002,
+      "exists": true,
+      "path": "stdout.txt",
+      "sha256": "6af3a15b889a6177da55707e82f550052e54b7e1d09ab18987ce1f92f0b57bf3"
+    }
+  },
+  "duration_seconds": 85.578,
+  "execution": {
+    "effort": "high",
+    "executable": "codex",
+    "exit_code": 0,
+    "invocation_started": true,
+    "model": "gpt-5.6-sol",
+    "provider": "codex",
+    "timed_out": false,
+    "timeout_seconds": 900
+  },
+  "finished_at": "2026-09-04T20:33:47.943Z",
+  "infrastructure_error": null,
+  "run_id": "20260904T203222365Z-lp-06-bb1590ed-782e-4295-92e4-c7fb96842375-u8orf68g",
+  "schema_version": "0.2",
+  "started_at": "2026-09-04T20:32:22.365Z",
+  "status": "COMPLETED",
+  "test": {
+    "id": "lp-06"
+  }
+}

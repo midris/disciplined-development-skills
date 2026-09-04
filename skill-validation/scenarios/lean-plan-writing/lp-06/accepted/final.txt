@@ -1,0 +1,92 @@
+### Task 1: Make nightly digest delivery bounded, isolated, rate-limited, and retry-safe
+
+**Merge boundary:** One PR containing the complete, independently testable digest reliability change.
+
+**Files:**
+
+- Modify: `src/nightly_digest.py`
+- Test: `tests/test_nightly_digest.py`
+
+**Interfaces:**
+
+- Preserve the existing digest content and account-enumeration behavior.
+- The orchestration entry point must accept an injected UTC clock and worker identifier for deterministic scheduling and lease tests.
+- Analytics pagination must expose the account ID, account-local date, current cursor, page events, and next cursor.
+- Delivery state must support a durable `(account_id, local_date)` claim with an expiry, completion recording, and claim release after failure.
+- Every send must use the stable idempotency key `nightly-digest:{account_id}:{local_date}`.
+- The sender must provide persistent idempotency for that key; this is required to prevent duplication when a worker loses its claim after the API accepted a message but before completion was recorded.
+- The rate limiter must coordinate across workers under one shared digest scope and admit no more than 100 sends in any 60-second window.
+- Report sent, empty, already-completed, concurrently-claimed, malformed-event, and failed-account outcomes without converting account-local failures into job-wide failures.
+
+**Pinned edge behavior:**
+
+| Input or failure | Required outcome |
+|---|---|
+| Missing or invalid IANA account timezone | Record an account failure; do not fetch or send; continue with other accounts. |
+| Previously completed account/local-date key | Skip fetching and sending. |
+| Another worker holds an unexpired claim | Skip that account without sending. |
+| Expired claim after a worker crash | Retry using the same idempotency key. |
+| No events, or only malformed events | Send nothing and mark the account/local-date complete. |
+| Malformed individual event | Count and skip it; continue processing the page and later pages. |
+| Malformed page envelope, fetch exception, or repeated pagination cursor | Fail and release that account’s claim; continue with other accounts. |
+| Send failure or ambiguous response | Release the claim for retry; reuse the same idempotency key on retry. |
+| Millions of events | Consume one page at a time and retain only one page plus the digest’s fixed-size aggregate state. |
+| Upstream page larger than its documented page-size limit | Accepted invariant: memory remains bounded by that single upstream page, not by total event count. |
+
+- [ ] **Step 1: Add failing local-day and durable-delivery tests**
+
+Add behavior-focused tests proving that UTC execution time is converted independently through each account’s IANA timezone, including dates on opposite sides of UTC midnight and a daylight-saving transition. Cover completed deliveries, simultaneous workers, expired claims, and a retry after acceptance-before-completion; assert that retries retain the identical idempotency key and produce one physical delivery.
+
+Run: `pytest tests/test_nightly_digest.py -k "local_day or claim or idempotency" -v`  
+Expected: FAIL because local-date claims, lease recovery, or stable send idempotency are not yet implemented.
+
+- [ ] **Step 2: Implement account-local claims and idempotent completion**
+
+Derive the calendar date with `zoneinfo`, acquire the durable account/date claim before analytics access, skip completed or actively claimed keys, and mark completion only after the empty or successful-send outcome is known. Release claims after fetch or send failures. Pass the stable account/date idempotency key to every send.
+
+Run: `pytest tests/test_nightly_digest.py -k "local_day or claim or idempotency" -v`  
+Expected: PASS.
+
+Commit: `feat: make nightly digest delivery retry safe`
+
+- [ ] **Step 3: Add failing pagination, malformed-input, and isolation tests**
+
+Add tests covering multiple pages, an empty result, malformed events mixed with valid events, an all-malformed result, malformed page envelopes, repeated cursors, analytics exceptions, send exceptions, and invalid timezones. In every account failure case, assert that a later healthy account still completes.
+
+Add a synthetic millions-of-events test whose pages are generated lazily. Instrument page lifetime or accumulator size to prove processing retains at most the current page and fixed-size digest state rather than collecting every event.
+
+Run: `pytest tests/test_nightly_digest.py -k "pagination or malformed or isolated or millions or timezone" -v`  
+Expected: FAIL on the unsupported streaming, validation, cursor-safety, or failure-isolation behavior.
+
+- [ ] **Step 4: Implement bounded pagination and per-account failure isolation**
+
+Process analytics pages incrementally, validate each event before adding it to the existing digest aggregate, and count invalid events without aborting the account. Reject invalid page envelopes and repeated non-null cursors as account fetch failures. Wrap each account’s complete claim/fetch/send lifecycle so its exception is recorded, its claim is released when appropriate, and iteration continues with the next account.
+
+Run: `pytest tests/test_nightly_digest.py -k "pagination or malformed or isolated or millions or timezone" -v`  
+Expected: PASS.
+
+Commit: `feat: stream digest events and isolate account failures`
+
+- [ ] **Step 5: Add failing shared rate-limit tests**
+
+Use a fake monotonic clock and a shared fake limiter backend to test 100 immediate sends, a 101st send delayed until capacity exists, and overlapping workers whose combined reservations never exceed 100 sends in a rolling 60-second window. Assert skipped, empty, and failed accounts consume no send reservation.
+
+Run: `pytest tests/test_nightly_digest.py -k "rate_limit" -v`  
+Expected: FAIL because sends are not yet coordinated through the shared limiter.
+
+- [ ] **Step 6: Enforce the shared 100-per-minute send limit**
+
+Acquire one shared-scope rate-limit reservation immediately before each actual sender call. Ensure waits do not hold pagination resources and that concurrent workers use the same backend scope. Do not reserve capacity for accounts that will not send.
+
+Run: `pytest tests/test_nightly_digest.py -k "rate_limit" -v`  
+Expected: PASS.
+
+- [ ] **Step 7: Verify the complete digest contract**
+
+Run: `pytest tests/test_nightly_digest.py -v`  
+Expected: PASS with no duplicate-delivery, unbounded-pagination, cross-account-failure, or rate-limit regressions.
+
+Run the repository’s standard full test command if one is documented in the supplied project configuration.  
+Expected: PASS.
+
+Commit: `test: cover nightly digest reliability boundaries`
