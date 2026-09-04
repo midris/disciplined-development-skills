@@ -68,6 +68,9 @@ CATALOG = {
         "prompt_hash": "74dc6208dc12771c5754b8293efff7a632a11f2ad4a3082887e80d3dfb36faf0",
         "files": {
             "README.md",
+            "accepted/final.txt",
+            "accepted/result.json",
+            "accepted/worksheet.md",
             "fixture/sources/city-museum-addendum-2.md",
             "fixture/sources/city-museum-rfp.md",
             "fixture/sources/friends-newsletter.md",

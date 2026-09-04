@@ -1,0 +1,115 @@
+{
+  "artifacts": {
+    "config": {
+      "bytes": 592,
+      "exists": true,
+      "path": "config.json",
+      "sha256": "6471efb634458d6f9f54b0b61de178919d24a54d51ae48f7570c5e2952bab878"
+    },
+    "evidence": {
+      "empty": true,
+      "entries": [],
+      "exists": true,
+      "path": "workspace/evidence"
+    },
+    "final": {
+      "bytes": 273,
+      "exists": true,
+      "path": "final.txt",
+      "sha256": "b8363fdee340e091b0c114ecfa6d6e2d9ee89a5c9ae93d2057c4056f9d28a4c1"
+    },
+    "fixture": {
+      "empty": false,
+      "entries": [
+        {
+          "bytes": null,
+          "path": "skills",
+          "sha256": null,
+          "type": "directory"
+        },
+        {
+          "bytes": null,
+          "path": "skills/disciplined-research",
+          "sha256": null,
+          "type": "directory"
+        },
+        {
+          "bytes": 9400,
+          "path": "skills/disciplined-research/SKILL.md",
+          "sha256": "a5c4079e5aa21651ecd39b09e3fb2d9a58f4a1f3b99354b3b6927b2d44c6fb50",
+          "type": "file"
+        },
+        {
+          "bytes": null,
+          "path": "sources",
+          "sha256": null,
+          "type": "directory"
+        },
+        {
+          "bytes": 267,
+          "path": "sources/city-museum-addendum-2.md",
+          "sha256": "a882f3e3753ca78357333238e5f808d65d251852df04e0506bf2582940bec64f",
+          "type": "file"
+        },
+        {
+          "bytes": 329,
+          "path": "sources/city-museum-rfp.md",
+          "sha256": "5b50cf2558ef9a73335487198f2fd44a30339df58741df312374e169951340ca",
+          "type": "file"
+        },
+        {
+          "bytes": 257,
+          "path": "sources/friends-newsletter.md",
+          "sha256": "a8746ab03403c6143e8f65d0e249436b5bb8341c2ebe4c953eb21797787fad5f",
+          "type": "file"
+        }
+      ],
+      "exists": true,
+      "path": "workspace/fixture"
+    },
+    "prompt": {
+      "bytes": 1239,
+      "exists": true,
+      "path": "prompt.txt",
+      "sha256": "9522e85b04b6ba3599d3e79703a7a7dfeebc1ea72cfbdd77263612457ce2a787"
+    },
+    "prompt_template": {
+      "bytes": 751,
+      "exists": true,
+      "path": "prompt-template.txt",
+      "sha256": "74dc6208dc12771c5754b8293efff7a632a11f2ad4a3082887e80d3dfb36faf0"
+    },
+    "stderr": {
+      "bytes": 0,
+      "exists": true,
+      "path": "stderr.txt",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "stdout": {
+      "bytes": 12769,
+      "exists": true,
+      "path": "stdout.txt",
+      "sha256": "9d65aeb0149ee70e8eb6b91f70eb26b23581ba08fe0427610235374c35aafdd1"
+    }
+  },
+  "duration_seconds": 29.071,
+  "execution": {
+    "effort": "high",
+    "executable": "codex",
+    "exit_code": 0,
+    "invocation_started": true,
+    "model": "gpt-5.6-sol",
+    "provider": "codex",
+    "timed_out": false,
+    "timeout_seconds": 900
+  },
+  "finished_at": "2026-09-03T14:10:56.721Z",
+  "infrastructure_error": null,
+  "run_id": "20260903T141027650Z-dr-02-2f0b68ef-c77d-43b3-bea7-4297e7e5fbcd-pey8e2yz",
+  "schema_version": "0.2",
+  "started_at": "2026-09-03T14:10:27.650Z",
+  "status": "COMPLETED",
+  "test": {
+    "id": "dr-02"
+  }
+}
