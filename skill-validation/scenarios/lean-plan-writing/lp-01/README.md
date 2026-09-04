@@ -9,3 +9,9 @@ Prompt is the canonical `LP-01 — full-bundle JSON report plan` input from `ski
 # Smoke
 
 Runner status: `COMPLETED`. Retained result: [smoke-result.json](smoke-result.json).
+
+# Accepted baseline
+
+The latest accepted record has a judgeable `PASS` for the `lean-plan-writing`
+owner and a separate composition-owner `PASS`; see
+[accepted/worksheet.md](accepted/worksheet.md).
