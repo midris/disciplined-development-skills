@@ -1,0 +1,12 @@
+## Merge Boundaries
+
+Use four sequential branches and PRs. Do not combine the program into one branch or PR. Each boundary preserves an independently reviewable, testable, and deployable subsystem of approximately six commits and 35–45 KB of diff.
+
+| PR | Scope | Dependency | Merge gate |
+|---|---|---|---|
+| 1 | Storage schema and migration | None | Compatibility tests pass; schema can deploy independently. |
+| 2 | Ingestion worker | PR 1 merged and available | Unit and live queue smoke tests pass; worker can deploy independently. |
+| 3 | Query API | PR 2 merged and available | Contract and live HTTP tests pass; API can deploy independently. |
+| 4 | Operator dashboard | PR 3 merged and available | Browser verification passes and operator documentation is complete. |
+
+Each PR must contain only its subsystem’s implementation, tests, and directly required documentation or configuration. Follow-up work begins from the merged predecessor so every review is against an established integration point.
