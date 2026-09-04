@@ -1,0 +1,169 @@
+### Task 1: Implement the ordered key/value parser and CLI failure behavior
+
+**Status:** Not started  
+**Merge boundary:** One branch and one PR containing the parser, CLI entry point, and tests.
+
+**Files:**
+
+- Create: `src/key_value_parser.py`
+- Create: `tests/test_key_value_parser.py`
+
+**Interfaces:**
+
+- Produces: `parse_key_value_lines(lines: Iterable[str]) -> Optional[list[tuple[str, str]]]`
+- Produces: `main() -> int`
+- CLI entry point: `python -m src.key_value_parser`
+- Returns `None` when the first nonblank malformed line is encountered; otherwise returns an ordered list, including an empty list when there are no nonblank lines.
+- Each input element represents one logical line and may end in `\n` or `\r\n`. Exclude that line terminator from parsing, but preserve every other character exactly.
+- The CLI reads lines from standard input, returns status `2` when parsing returns `None`, and returns status `0` otherwise.
+- Successful CLI output is outside this task’s contract; do not invent a serialization format.
+
+**Behavior contract:**
+
+| Input lines | Expected parser result |
+|---|---|
+| `[]` | `[]` |
+| `["", "\n", "   \n", "\t\r\n"]` | `[]` |
+| `["name=value\n"]` | `[("name", "value")]` |
+| `["name=value=with=equals\n"]` | `[("name", "value=with=equals")]` |
+| `[" key = value \n"]` | `[(" key ", " value ")]` |
+| `["\t=\t\r\n"]` | `[("\t", "\t")]` |
+| `["=value\n", "key=\n", "=\n"]` | `[("", "value"), ("key", ""), ("", "")]` |
+| `["key=first\n", "key=second\n"]` | `[("key", "first"), ("key", "second")]` |
+| `["a=1\n", "\n", " b =2=3 \r\n"]` | `[("a", "1"), (" b ", "2=3 ")]` |
+| `["malformed\n"]` | `None` |
+| `["good=1\n", "   \n", "malformed\n", "later=2\n"]` | `None`; discard the earlier pair and stop consuming input before `later=2` |
+| `["   \n", "valid=\n"]` | `[("valid", "")]`; blank lines without `=` are skipped rather than rejected |
+
+**Unhandled-input decisions and invariants:**
+
+- Inputs must be text strings; bytes, `None`, and non-string elements are outside scope.
+- An element must represent one logical line. Embedded line separators within an element are outside scope.
+- Remove at most the logical trailing line terminator before classifying or splitting the line. Spaces and tabs before that terminator remain significant.
+- Determine blankness from the line content after removing its terminator. Blank lines may contain any Python whitespace.
+- Do not trim, normalize, case-fold, deduplicate, sort, or otherwise transform keys or values.
+- Do not return accumulated pairs after a malformed nonblank line.
+- Do not consume additional iterable elements after detecting the malformed line.
+- No exception message or diagnostic text is specified for malformed CLI input; only the empty result and exit status are contractual.
+- Keep the implementation dependency-free and compatible with the project’s supported Python version.
+
+- [ ] **Step 1: Add the initial parser tests**
+
+  In `tests/test_key_value_parser.py`, add complete pytest test functions named:
+
+  - `test_empty_input_returns_empty_list`
+  - `test_skips_empty_and_whitespace_only_lines`
+  - `test_splits_nonblank_line_into_key_and_value`
+
+  Cover the first three relevant rows of the behavior table. Assert the complete returned list so ordering and tuple structure are verified.
+
+- [ ] **Step 2: Verify the initial tests fail**
+
+  Run: `python -m pytest tests/test_key_value_parser.py -v`
+
+  Expected: FAIL during import or execution because `parse_key_value_lines` does not exist yet.
+
+- [ ] **Step 3: Implement the smallest parser that satisfies the initial tests**
+
+  In `src/key_value_parser.py`, define the documented parser interface. Iterate through the supplied lines, remove only their logical trailing line terminator, skip blank content, and return ordered two-item tuples.
+
+  Keep this increment limited to the currently tested basic behavior.
+
+- [ ] **Step 4: Verify the initial parser tests pass**
+
+  Run: `python -m pytest tests/test_key_value_parser.py -v`
+
+  Expected: all three initial tests PASS.
+
+- [ ] **Step 5: Add exact-splitting and preservation tests**
+
+  Add complete pytest test functions named:
+
+  - `test_only_first_equals_separates_key_and_value`
+  - `test_preserves_whitespace_exactly`
+  - `test_allows_empty_keys_and_values`
+  - `test_preserves_duplicate_keys_in_input_order`
+  - `test_handles_mixed_blank_lf_and_crlf_lines`
+
+  Use the corresponding behavior-table rows verbatim as the test inputs and expected results. Assert whole-list equality rather than checking individual elements independently.
+
+- [ ] **Step 6: Run the preservation tests before refining the implementation**
+
+  Run: `python -m pytest tests/test_key_value_parser.py -v`
+
+  Expected: at least one newly added test FAILS if the initial implementation split every `=`, stripped surrounding whitespace, rejected empty fields, or retained a line terminator.
+
+- [ ] **Step 7: Refine splitting without normalizing data**
+
+  Update the parser so the first `=` alone is the separator. Preserve subsequent `=` characters in the value, allow either side to be empty, and preserve duplicate pairs in encounter order.
+
+  Ensure line-ending removal cannot remove meaningful spaces or tabs adjacent to the terminator.
+
+- [ ] **Step 8: Verify all valid-input tests pass**
+
+  Run: `python -m pytest tests/test_key_value_parser.py -v`
+
+  Expected: every valid-input test PASS.
+
+- [ ] **Step 9: Add malformed-input and short-circuit tests**
+
+  Add complete pytest test functions named:
+
+  - `test_returns_none_for_first_malformed_nonblank_line`
+  - `test_discards_pairs_collected_before_malformed_line`
+  - `test_blank_line_without_equals_is_not_malformed`
+  - `test_stops_consuming_after_malformed_line`
+
+  For the short-circuit test, supply a stateful iterator that yields a valid line and then a malformed line, but raises an assertion failure if the parser requests another element. Assert that parsing returns `None` without triggering that failure.
+
+- [ ] **Step 10: Verify malformed-input behavior fails before implementation**
+
+  Run: `python -m pytest tests/test_key_value_parser.py -v`
+
+  Expected: the new malformed-input tests FAIL because the parser does not yet return `None` and stop immediately.
+
+- [ ] **Step 11: Implement immediate malformed-line termination**
+
+  Before splitting a nonblank line, check whether it contains `=`. Return `None` immediately when it does not, without exposing accumulated pairs or advancing the iterator again.
+
+- [ ] **Step 12: Verify all parser tests pass**
+
+  Run: `python -m pytest tests/test_key_value_parser.py -v`
+
+  Expected: all parser tests PASS.
+
+- [ ] **Step 13: Add CLI exit-status tests**
+
+  Add complete subprocess-based pytest test functions named:
+
+  - `test_cli_exits_zero_for_valid_input`
+  - `test_cli_exits_zero_for_blank_input`
+  - `test_cli_exits_two_for_malformed_input`
+
+  Invoke the module with the current interpreter through `sys.executable`, pass input through standard input, and assert the exact return code. The malformed case must include a valid line before the malformed line so it also guards against partial success. Assert that malformed input produces no standard-output representation of accumulated pairs; do not constrain standard error.
+
+- [ ] **Step 14: Verify the CLI tests fail**
+
+  Run: `python -m pytest tests/test_key_value_parser.py -v`
+
+  Expected: the CLI tests FAIL because the module does not yet provide the required entry-point behavior.
+
+- [ ] **Step 15: Implement the CLI entry point**
+
+  Add `main()` to read `sys.stdin` through `parse_key_value_lines`, translate `None` to return status `2`, and return `0` for every successful parse, including an empty result. Add the standard module-execution guard so the returned status becomes the process exit status.
+
+- [ ] **Step 16: Run focused and full verification**
+
+  Run: `python -m pytest tests/test_key_value_parser.py -v`
+
+  Expected: all key/value parser and CLI tests PASS.
+
+  Then run: `python -m pytest`
+
+  Expected: the complete project test suite PASS with no regressions.
+
+- [ ] **Step 17: Commit the independently testable task**
+
+  Stage `src/key_value_parser.py` and `tests/test_key_value_parser.py`, then commit with message: `feat: add ordered key value parser`
+
+**Plan-authoring constraint:** The behavior table and prose are the implementation contract. The requested full function, complete test bodies, and file-generating shell heredoc belong in the implementation files and are intentionally not embedded in this plan.

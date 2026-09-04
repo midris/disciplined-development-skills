@@ -9,3 +9,9 @@ Prompt is the canonical `LP-02 — parser table without implementation` input fr
 # Smoke
 
 No schema `"0.2"` result is retained.
+
+# Accepted baseline
+
+The latest accepted record has a judgeable `PASS` for the `lean-plan-writing`
+owner and a separate composition-owner `PASS`; see
+[accepted/worksheet.md](accepted/worksheet.md).

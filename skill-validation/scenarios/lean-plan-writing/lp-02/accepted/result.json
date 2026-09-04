@@ -1,0 +1,103 @@
+{
+  "artifacts": {
+    "config": {
+      "bytes": 384,
+      "exists": true,
+      "path": "config.json",
+      "sha256": "81a7d1e1e3c51e8c874129d13017e7b7bc13c0002a5a14eac4c418da6348b71f"
+    },
+    "evidence": {
+      "empty": true,
+      "entries": [],
+      "exists": true,
+      "path": "workspace/evidence"
+    },
+    "final": {
+      "bytes": 8503,
+      "exists": true,
+      "path": "final.txt",
+      "sha256": "2398d57de7e16aac279ebfad2459b1025602f55585f9a2b1b4d02c90754830eb"
+    },
+    "fixture": {
+      "empty": false,
+      "entries": [
+        {
+          "bytes": null,
+          "path": "skills",
+          "sha256": null,
+          "type": "directory"
+        },
+        {
+          "bytes": null,
+          "path": "skills/lean-plan-writing",
+          "sha256": null,
+          "type": "directory"
+        },
+        {
+          "bytes": 5194,
+          "path": "skills/lean-plan-writing/SKILL.md",
+          "sha256": "6a3115a4d33ad2f99238f915a6a1b7869efd8c80a6cce422d3afae60c9857fac",
+          "type": "file"
+        },
+        {
+          "bytes": null,
+          "path": "skills/writing-plans",
+          "sha256": null,
+          "type": "directory"
+        },
+        {
+          "bytes": 7053,
+          "path": "skills/writing-plans/SKILL.md",
+          "sha256": "48508f44bbfd7d24b029fbf3a314f3cd14c9615599059366e922f47b8dc08cf2",
+          "type": "file"
+        }
+      ],
+      "exists": true,
+      "path": "workspace/fixture"
+    },
+    "prompt": {
+      "bytes": 1301,
+      "exists": true,
+      "path": "prompt.txt",
+      "sha256": "a7080ba04853b0fe791dc5815f3a79e27b678cacc2420fcf72a34a73eb22b467"
+    },
+    "prompt_template": {
+      "bytes": 1051,
+      "exists": true,
+      "path": "prompt-template.txt",
+      "sha256": "52dc170f02d4d055456982381adba708b7be011ca7896da2a9ebf2a75b8356a3"
+    },
+    "stderr": {
+      "bytes": 0,
+      "exists": true,
+      "path": "stderr.txt",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "stdout": {
+      "bytes": 22486,
+      "exists": true,
+      "path": "stdout.txt",
+      "sha256": "ab4af19add86de078c951c0d653fe8930c0356a227545f30d5f4228e9ef27d45"
+    }
+  },
+  "duration_seconds": 97.99,
+  "execution": {
+    "effort": "high",
+    "executable": "codex",
+    "exit_code": 0,
+    "invocation_started": true,
+    "model": "gpt-5.6-sol",
+    "provider": "codex",
+    "timed_out": false,
+    "timeout_seconds": 900
+  },
+  "finished_at": "2026-09-04T18:48:23.301Z",
+  "infrastructure_error": null,
+  "run_id": "20260904T184645312Z-lp-02-1ed49161-d911-4fb8-b8db-13045439e89f-nq395kka",
+  "schema_version": "0.2",
+  "started_at": "2026-09-04T18:46:45.312Z",
+  "status": "COMPLETED",
+  "test": {
+    "id": "lp-02"
+  }
+}
