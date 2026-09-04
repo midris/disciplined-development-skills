@@ -1,0 +1,8 @@
+Sweep inventory: 3 matches across 2 paths (3 update).
+
+References swept:
+- src/session.py:1,3 — update (2 matches: prose + declaration)
+- docs/session-policy.md:3 — update (1 match: prose)
+
+Verification:
+- Project-wide rename search identified 3 references across 2 files.

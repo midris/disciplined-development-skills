@@ -9,3 +9,8 @@ Prompt adapted from the canonical `SSR-01` fenced block by replacing `The comple
 # Smoke
 
 Runner status: `COMPLETED`. Retained result: [smoke-result.json](smoke-result.json).
+
+# Accepted baseline
+
+The latest accepted record is a judgeable `FAIL`; see
+[accepted/worksheet.md](accepted/worksheet.md).
