@@ -1,0 +1,2 @@
+# Preserve leading zeroes in legacy numeric strings: archived signatures cover the
+# exact serialized bytes, so noncanonical text is accepted to keep verification valid.
