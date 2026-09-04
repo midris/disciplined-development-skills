@@ -1,0 +1,1 @@
+Ship CSV and JSON export in v1. Defer XML until the partner approves a stable schema; customers requiring XML will wait for that approval.

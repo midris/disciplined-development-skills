@@ -44,7 +44,15 @@ LIVE_SKILLS = {
 CATALOG = {
     "wer-01": {
         "prompt_hash": "1f6ea36007f027fef44dc12d60f1f33dff7fbde4b2cbd283f5e2399f8e6adf30",
-        "files": {"README.md", "prompt.md", "rubric.md", "test.json"},
+        "files": {
+            "README.md",
+            "accepted/final.txt",
+            "accepted/result.json",
+            "accepted/worksheet.md",
+            "prompt.md",
+            "rubric.md",
+            "test.json",
+        },
         "packaged": (),
     },
     "wer-02": {
