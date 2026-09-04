@@ -9,3 +9,8 @@ Prompt copied from `skill-validation/fixtures/writing-explicit-rationale/prompts
 # Smoke
 
 No schema `"0.2"` result is retained.
+
+# Accepted baseline
+
+The latest accepted record is a judgeable `PASS` with a non-blocking
+task-fidelity observation; see [accepted/worksheet.md](accepted/worksheet.md).
