@@ -1,0 +1,109 @@
+{
+  "artifacts": {
+    "config": {
+      "bytes": 398,
+      "exists": true,
+      "path": "config.json",
+      "sha256": "03a86911a486ea5d4b6536a459cdd6c6b4bcd463965690a7aed5a5963940bb14"
+    },
+    "evidence": {
+      "empty": true,
+      "entries": [],
+      "exists": true,
+      "path": "workspace/evidence"
+    },
+    "final": {
+      "bytes": 503,
+      "exists": true,
+      "path": "final.txt",
+      "sha256": "9afeb0b384baeb9e02b95d72de9bd1ab57022a83e1e632a1802f79d7403de0b4"
+    },
+    "fixture": {
+      "empty": false,
+      "entries": [
+        {
+          "bytes": null,
+          "path": "docs",
+          "sha256": null,
+          "type": "directory"
+        },
+        {
+          "bytes": null,
+          "path": "docs/architecture",
+          "sha256": null,
+          "type": "directory"
+        },
+        {
+          "bytes": 289,
+          "path": "docs/architecture/ingest.md",
+          "sha256": "5e25960ed19f0e046ecb263282d9244b9a5026695cc16a7ddb08663f422e4f7e",
+          "type": "file"
+        },
+        {
+          "bytes": null,
+          "path": "skills",
+          "sha256": null,
+          "type": "directory"
+        },
+        {
+          "bytes": null,
+          "path": "skills/writing-explicit-rationale",
+          "sha256": null,
+          "type": "directory"
+        },
+        {
+          "bytes": 9181,
+          "path": "skills/writing-explicit-rationale/SKILL.md",
+          "sha256": "97eb06c649c194e8819b4dff68b808eda4ec7c948a6ead518da247daf31d6cfe",
+          "type": "file"
+        }
+      ],
+      "exists": true,
+      "path": "workspace/fixture"
+    },
+    "prompt": {
+      "bytes": 1144,
+      "exists": true,
+      "path": "prompt.txt",
+      "sha256": "2ace4e39af7ec7f8e8f5df9451114ec1bc28c4894095a015bae9f36cac9a2fff"
+    },
+    "prompt_template": {
+      "bytes": 890,
+      "exists": true,
+      "path": "prompt-template.txt",
+      "sha256": "dc35cfaa391e9f802a9b9de8c4fc21058ef61c1399381e26c4d836c0b5c6b01c"
+    },
+    "stderr": {
+      "bytes": 0,
+      "exists": true,
+      "path": "stderr.txt",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "stdout": {
+      "bytes": 11079,
+      "exists": true,
+      "path": "stdout.txt",
+      "sha256": "100bd5deac7f589e4e1129b769f3b855a36811a12b174aed9e56add062082577"
+    }
+  },
+  "duration_seconds": 11.364,
+  "execution": {
+    "effort": "low",
+    "executable": "codex",
+    "exit_code": 0,
+    "invocation_started": true,
+    "model": "gpt-5.6-sol",
+    "provider": "codex",
+    "timed_out": false,
+    "timeout_seconds": 900
+  },
+  "finished_at": "2026-09-04T05:56:59.473Z",
+  "infrastructure_error": null,
+  "run_id": "20260904T055648109Z-wer-05-fef12893-b126-4042-ae7f-11a3f8e28db2-mmvg75hi",
+  "schema_version": "0.2",
+  "started_at": "2026-09-04T05:56:48.109Z",
+  "status": "COMPLETED",
+  "test": {
+    "id": "wer-05"
+  }
+}
