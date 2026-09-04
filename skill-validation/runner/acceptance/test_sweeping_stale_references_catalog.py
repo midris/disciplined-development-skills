@@ -89,6 +89,9 @@ CATALOG = {
         "prompt_hash": "5e1a1fa2f60db6cf2aeceaed4a85b869366e4e6a8b20cfe8bf0e4398de46f39e",
         "files": {
             "README.md",
+            "accepted/final.txt",
+            "accepted/result.json",
+            "accepted/worksheet.md",
             "fixture/context/grouping-inventory.md",
             "prompt.md",
             "rubric.md",

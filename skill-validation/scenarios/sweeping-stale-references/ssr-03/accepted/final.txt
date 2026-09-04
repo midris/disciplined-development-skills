@@ -1,0 +1,16 @@
+References swept:
+- src/cache_a.py:10–29 — update (20 matches)
+- src/cache_b.py:40–54 — update (15 matches)
+- tests/test_cache.py:12–26 — update (15 matches)
+- config/cache.yaml:5–14 — update (10 matches)
+- docs/cache.md:100–109 — update (10 matches)
+- scripts/cache-check.sh:2–11 — update (10 matches)
+- archive/cache-plan-2024.md:50–69 — intentionally stale: historical plan records the old key (20 matches)
+- archive/cache-postmortem-2025.md:70–89 — intentionally stale: postmortem quotes the old production state (20 matches)
+- src/http_cache.py:30–32 — false positive: HTTP `max-age` directive (3 matches)
+- tests/test_http_cache.py:40–42 — false positive: assertion for HTTP `max-age` directive (3 matches)
+
+Verification:
+- Reconciled 126 matches: 80 updates, 40 intentionally stale, and 6 false positives.
+- Grouping is limited to matches sharing both path and outcome.
+- The normal under-72-lines body preference applies after grouping; this grouped artifact remains under 72 lines without omitting correctness evidence.
