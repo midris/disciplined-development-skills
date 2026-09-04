@@ -9,3 +9,8 @@ Prompt adapted from `skill-validation/fixtures/sweeping-stale-references/prompts
 # Smoke
 
 No schema `"0.2"` result is retained.
+
+# Accepted baseline
+
+The latest accepted record is a judgeable `PASS` with non-blocking
+task-fidelity observations; see [accepted/worksheet.md](accepted/worksheet.md).
