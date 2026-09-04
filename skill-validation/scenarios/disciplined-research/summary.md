@@ -2,10 +2,10 @@
 
 ## Status
 
-The scenario-by-scenario audit was completed on 2026-09-03. All seven scenarios
-remain in the catalog. DR-03 and DR-06 were repaired on 2026-09-03. This audit
-does not establish a catalog-wide baseline or define a suite-wide repetition
-policy.
+The scenario-by-scenario audit and first current-main baseline were completed on
+2026-09-04. All seven scenarios remain in the catalog. DR-03 and DR-06 were
+repaired on 2026-09-03. The baseline contains one accepted run per scenario and
+does not define a suite-wide repetition policy.
 
 The audited subject was `main` at
 `ac45ab2f3d467f5df0a49c543d8b3242423789b1`. The supplied
@@ -23,7 +23,7 @@ This is a human-authored audit record, not a generated manifest.
 | [DR-04](dr-04/README.md) | Keep | Tests the threshold that excludes a private, uncommitted, unshared scratch note even when it conflicts with the current implementation. The fixture implements at most three attempts with waits of one and two seconds; the third tuple value is unused. | The [accepted baseline](dr-04/accepted/worksheet.md) is a judgeable `FAIL`: verified retry facts were accurate and supported, but the private note contained no source citation or support mapping. DR-I1, DR-I2, and DR-I4 and task fidelity passed; DR-I3 failed. |
 | [DR-05](dr-05/README.md) | Keep | Tests omission of an unsupported compatibility claim: the supplied matrix does not contain Nimbus 2.7. The two-line limit is task fidelity. | The [accepted baseline](dr-05/accepted/worksheet.md) is a judgeable `PASS`. DR-I1 through DR-I4 and task fidelity passed: the response omitted the unsupported date and mapped the verified absence to the sole supplied matrix. One infrastructure-error attempt remains scratch-only. |
 | [DR-06](dr-06/README.md) | Keep; repaired 2026-09-03 | Tests preserving a useful investigation lead while clearly disclosing that its claimed cause is unsupported. The fixture contains three HTTP 403s, a truncated log, malformed runtime configuration, and no identity-session evidence; it does not support credential expiry. The rubric now accepts equivalent clear uncertainty wording instead of requiring a literal stamp. The exact four-line/prefix layout remains task fidelity. | The [accepted baseline](dr-06/accepted/worksheet.md) is a judgeable `FAIL`: semantic uncertainty wording passed, but the response did not explicitly say that no supplied source supports credential expiry. DR-I1 through DR-I3 and task fidelity passed; DR-I4 failed. |
-| [DR-07](dr-07/README.md) | Keep | Tests correcting a conversational premise from an official schedule and showing the simple derivation: a 5:30 arrival before a 5:45 close leaves 15 minutes. No fixed output format applies. | No isolated original-main evidence is available; previously recorded aggregate passes belonged to later candidate work. Run for baseline evidence. |
+| [DR-07](dr-07/README.md) | Keep | Tests correcting a conversational premise from an official schedule and showing the simple derivation: a 5:30 arrival before a 5:45 close leaves 15 minutes. No fixed output format applies. | The [accepted baseline](dr-07/accepted/worksheet.md) is a judgeable `PASS`. DR-I1 through DR-I4 and task fidelity passed: the response corrected the premise, derived fifteen minutes, and linked both claims to the official schedule. Its absolute scratch citation path is precise but nonportable. One infrastructure-error attempt remains scratch-only. |
 
 ## Catalog assessment
 
@@ -58,6 +58,6 @@ consumer, so their formatting constraints remain on the task-fidelity ledger.
 
 ## Next actions
 
-1. Run DR-07, presenting the exact
-   provider command for owner approval before invocation and evaluating its scratch
-   evidence under the testing methodology.
+1. Select the next skill catalog for the same scenario-by-scenario current-main
+   baseline process. Do not begin rewrite comparison or rewrite work until the
+   current-main baselines are established.

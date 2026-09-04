@@ -207,6 +207,9 @@ CATALOG = {
         "prompt_hash": "0a73303a85788bf3a23942d6be800a5f6162bc45526e14d05c7253c1482f6b0f",
         "files": {
             "README.md",
+            "accepted/final.txt",
+            "accepted/result.json",
+            "accepted/worksheet.md",
             "fixture/sources/north-annex-hours.md",
             "prompt.md",
             "rubric.md",
