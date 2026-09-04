@@ -155,6 +155,9 @@ CATALOG = {
         "prompt_hash": "86a40957dad5091eac5f650ad44f8a71ab85aa318038f77e982952fa7294187f",
         "files": {
             "README.md",
+            "accepted/final.txt",
+            "accepted/result.json",
+            "accepted/worksheet.md",
             "fixture/project/docs/session-policy.md",
             "fixture/project/src/session.py",
             "prompt.md",

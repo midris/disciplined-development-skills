@@ -1,0 +1,6 @@
+```python
+# The session TTL stays at 30 minutes because the partner rejects longer sessions.
+# This accepts more frequent refreshes to preserve partner compatibility.
+```
+
+It preserves the 30-minute limit, the partner constraint, and the accepted tradeoff of more frequent refreshes.

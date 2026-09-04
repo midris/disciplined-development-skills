@@ -1,0 +1,217 @@
+{
+  "artifacts": {
+    "config": {
+      "bytes": 1463,
+      "exists": true,
+      "path": "config.json",
+      "sha256": "ad91d9325fa8305ce1179832ed726612c6b1afdc344d082ca4cea19c88359c67"
+    },
+    "evidence": {
+      "empty": true,
+      "entries": [],
+      "exists": true,
+      "path": "workspace/evidence"
+    },
+    "final": {
+      "bytes": 283,
+      "exists": true,
+      "path": "final.txt",
+      "sha256": "bde283dc10eb799302d35f8b1d17d528b474dde4c073848b697db85e6c903666"
+    },
+    "fixture": {
+      "empty": false,
+      "entries": [
+        {
+          "bytes": null,
+          "path": "project",
+          "sha256": null,
+          "type": "directory"
+        },
+        {
+          "bytes": null,
+          "path": "project/docs",
+          "sha256": null,
+          "type": "directory"
+        },
+        {
+          "bytes": 47,
+          "path": "project/docs/session-policy.md",
+          "sha256": "a925897761b094ba37bf8f7825ceab7fac62a48beeea310dbb5f412ef74d1d0c",
+          "type": "file"
+        },
+        {
+          "bytes": null,
+          "path": "project/src",
+          "sha256": null,
+          "type": "directory"
+        },
+        {
+          "bytes": 178,
+          "path": "project/src/session.py",
+          "sha256": "a975fc6bef67344143832d89a6b24b12a8b59da4682236c842f8639eb9378cd2",
+          "type": "file"
+        },
+        {
+          "bytes": null,
+          "path": "skills",
+          "sha256": null,
+          "type": "directory"
+        },
+        {
+          "bytes": null,
+          "path": "skills/adversarial-review",
+          "sha256": null,
+          "type": "directory"
+        },
+        {
+          "bytes": null,
+          "path": "skills/adversarial-review-loop",
+          "sha256": null,
+          "type": "directory"
+        },
+        {
+          "bytes": 8374,
+          "path": "skills/adversarial-review-loop/SKILL.md",
+          "sha256": "46b85eafc5db54cb521eed9c4a110e552c76d97cfae72e141f109c9dea10f0c6",
+          "type": "file"
+        },
+        {
+          "bytes": 10295,
+          "path": "skills/adversarial-review/SKILL.md",
+          "sha256": "9004ff153d5dc3a3690254667c4f666151dcabff7ef6f705cc751134be56499c",
+          "type": "file"
+        },
+        {
+          "bytes": null,
+          "path": "skills/concise-writing",
+          "sha256": null,
+          "type": "directory"
+        },
+        {
+          "bytes": 5616,
+          "path": "skills/concise-writing/SKILL.md",
+          "sha256": "4d12a2eb475c6b2ef57e2300c8c07af3f59c1e07b2b82695a3b7669eee1d6d72",
+          "type": "file"
+        },
+        {
+          "bytes": null,
+          "path": "skills/disciplined-development",
+          "sha256": null,
+          "type": "directory"
+        },
+        {
+          "bytes": 13112,
+          "path": "skills/disciplined-development/SKILL.md",
+          "sha256": "1151a7575a5b6f72e007229c97efdb7a829695d08e8f44450d0d71b232e75dec",
+          "type": "file"
+        },
+        {
+          "bytes": null,
+          "path": "skills/disciplined-research",
+          "sha256": null,
+          "type": "directory"
+        },
+        {
+          "bytes": 9400,
+          "path": "skills/disciplined-research/SKILL.md",
+          "sha256": "a5c4079e5aa21651ecd39b09e3fb2d9a58f4a1f3b99354b3b6927b2d44c6fb50",
+          "type": "file"
+        },
+        {
+          "bytes": null,
+          "path": "skills/dispatching-development-subagents",
+          "sha256": null,
+          "type": "directory"
+        },
+        {
+          "bytes": 5593,
+          "path": "skills/dispatching-development-subagents/SKILL.md",
+          "sha256": "b89b4db8af53bd136237cb2306f956c039757a0e321b1f704bd16d1a00580500",
+          "type": "file"
+        },
+        {
+          "bytes": null,
+          "path": "skills/lean-plan-writing",
+          "sha256": null,
+          "type": "directory"
+        },
+        {
+          "bytes": 5194,
+          "path": "skills/lean-plan-writing/SKILL.md",
+          "sha256": "6a3115a4d33ad2f99238f915a6a1b7869efd8c80a6cce422d3afae60c9857fac",
+          "type": "file"
+        },
+        {
+          "bytes": null,
+          "path": "skills/sweeping-stale-references",
+          "sha256": null,
+          "type": "directory"
+        },
+        {
+          "bytes": 7689,
+          "path": "skills/sweeping-stale-references/SKILL.md",
+          "sha256": "d6812c33cae026807bbb3ebe851d93b60b513dd87ea5efd98aea28f5c02f9157",
+          "type": "file"
+        },
+        {
+          "bytes": null,
+          "path": "skills/writing-explicit-rationale",
+          "sha256": null,
+          "type": "directory"
+        },
+        {
+          "bytes": 9181,
+          "path": "skills/writing-explicit-rationale/SKILL.md",
+          "sha256": "97eb06c649c194e8819b4dff68b808eda4ec7c948a6ead518da247daf31d6cfe",
+          "type": "file"
+        }
+      ],
+      "exists": true,
+      "path": "workspace/fixture"
+    },
+    "prompt": {
+      "bytes": 1302,
+      "exists": true,
+      "path": "prompt.txt",
+      "sha256": "432b53194f3c004e803df7deacc98eabc47350a037764ffb4a03d944d7e7d05d"
+    },
+    "prompt_template": {
+      "bytes": 794,
+      "exists": true,
+      "path": "prompt-template.txt",
+      "sha256": "86a40957dad5091eac5f650ad44f8a71ab85aa318038f77e982952fa7294187f"
+    },
+    "stderr": {
+      "bytes": 0,
+      "exists": true,
+      "path": "stderr.txt",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "stdout": {
+      "bytes": 10669,
+      "exists": true,
+      "path": "stdout.txt",
+      "sha256": "a5a48e32135cbae0793630b646acb8c4e18ada85b82cc3e43f6cafc6f4e7b5e1"
+    }
+  },
+  "duration_seconds": 30.099,
+  "execution": {
+    "effort": "high",
+    "executable": "codex",
+    "exit_code": 0,
+    "invocation_started": true,
+    "model": "gpt-5.6-sol",
+    "provider": "codex",
+    "timed_out": false,
+    "timeout_seconds": 900
+  },
+  "finished_at": "2026-09-04T15:38:41.270Z",
+  "infrastructure_error": null,
+  "run_id": "20260904T153811171Z-ssr-07-1a7151db-0927-44ea-9e35-3f0d92e4c201-_ropzxhc",
+  "schema_version": "0.2",
+  "started_at": "2026-09-04T15:38:11.171Z",
+  "status": "COMPLETED",
+  "test": {
+    "id": "ssr-07"
+  }
+}
