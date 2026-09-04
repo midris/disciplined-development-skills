@@ -1,0 +1,5 @@
+| Location | Plan text |
+|---|---|
+| Interactive ingest handlers | Keep tenant rate-limit guards in the two interactive handlers rather than shared `persist()`: `batch_import.py` is the only other caller and submits only approved batches. Accept two duplicated guards; revisit placement when a third interactive caller appears. ([architecture](fixture/project/wer-07/sources/ingest-architecture.md), [`batch_import.py`](fixture/project/wer-07/batch_import.py)) |
+| Quota downgrade path | Preserve the previous quota for 60 seconds after downgrade rather than enforcing the lower quota immediately, because in-flight requests retain their old token until it expires. Accept up to 60 seconds of elevated quota. ([token behavior](fixture/project/wer-07/sources/quota-tokens.md)) |
+| Telemetry integration | Use Library A as an arbitrary tie-break. No comparative rationale or trade-off applies because Libraries A and B are equally maintained and secure, behave identically, and have no downstream consequence; either choice is acceptable. ([comparison](fixture/project/wer-07/sources/telemetry-comparison.md)) |

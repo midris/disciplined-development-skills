@@ -105,6 +105,9 @@ CATALOG = {
         "prompt_hash": "a8da5c8b16a2c9cefbce2af41d0e1dc436ddac78d49795652f3a2fd45fd7e295",
         "files": {
             "README.md",
+            "accepted/final.txt",
+            "accepted/result.json",
+            "accepted/worksheet.md",
             "fixture/project/wer-07/batch_import.py",
             "fixture/project/wer-07/sources/ingest-architecture.md",
             "fixture/project/wer-07/sources/quota-tokens.md",

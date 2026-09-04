@@ -13,3 +13,9 @@ The supplied project files come from `fixture/project/wer-07/batch_import.py`, `
 
 Runner status: `COMPLETED`.
 Retained result: [`smoke-result.json`](smoke-result.json).
+
+# Accepted baseline
+
+The latest accepted record has a judgeable `PASS` for the
+`writing-explicit-rationale` owner and a separate composition-owner `PASS`; see
+[accepted/worksheet.md](accepted/worksheet.md).

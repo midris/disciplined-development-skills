@@ -1,0 +1,181 @@
+{
+  "artifacts": {
+    "config": {
+      "bytes": 1243,
+      "exists": true,
+      "path": "config.json",
+      "sha256": "862cde67ca487cbaabea76b2a200ecee8f5fb5d0942c2300ba416fcbd7358053"
+    },
+    "evidence": {
+      "empty": true,
+      "entries": [],
+      "exists": true,
+      "path": "workspace/evidence"
+    },
+    "final": {
+      "bytes": 1109,
+      "exists": true,
+      "path": "final.txt",
+      "sha256": "a4174016526a0017e13f9dc227a93e91597a6a509c1e9457c4979d2246318bd0"
+    },
+    "fixture": {
+      "empty": false,
+      "entries": [
+        {
+          "bytes": null,
+          "path": "project",
+          "sha256": null,
+          "type": "directory"
+        },
+        {
+          "bytes": null,
+          "path": "project/wer-07",
+          "sha256": null,
+          "type": "directory"
+        },
+        {
+          "bytes": 161,
+          "path": "project/wer-07/batch_import.py",
+          "sha256": "2fbe0370868be60a4b8a96907c7404c65ae7b969bc5b63cfb0a6b521306beb20",
+          "type": "file"
+        },
+        {
+          "bytes": null,
+          "path": "project/wer-07/sources",
+          "sha256": null,
+          "type": "directory"
+        },
+        {
+          "bytes": 306,
+          "path": "project/wer-07/sources/ingest-architecture.md",
+          "sha256": "abc91b3248cae99aef1b3baa1418e5ea4eb0d943c99aa3460f75fd6fbec2f46a",
+          "type": "file"
+        },
+        {
+          "bytes": 238,
+          "path": "project/wer-07/sources/quota-tokens.md",
+          "sha256": "0c06c4c7edc867de42105325eaccf30fb9112a7888a38eb812ec4b03945eeeef",
+          "type": "file"
+        },
+        {
+          "bytes": 179,
+          "path": "project/wer-07/sources/telemetry-comparison.md",
+          "sha256": "34853c94fa465fc5ba2ef01b810419f2b3200b61a03b2111bdb2a150f31ba49a",
+          "type": "file"
+        },
+        {
+          "bytes": null,
+          "path": "skills",
+          "sha256": null,
+          "type": "directory"
+        },
+        {
+          "bytes": null,
+          "path": "skills/disciplined-development",
+          "sha256": null,
+          "type": "directory"
+        },
+        {
+          "bytes": 13112,
+          "path": "skills/disciplined-development/SKILL.md",
+          "sha256": "1151a7575a5b6f72e007229c97efdb7a829695d08e8f44450d0d71b232e75dec",
+          "type": "file"
+        },
+        {
+          "bytes": null,
+          "path": "skills/disciplined-research",
+          "sha256": null,
+          "type": "directory"
+        },
+        {
+          "bytes": 9400,
+          "path": "skills/disciplined-research/SKILL.md",
+          "sha256": "a5c4079e5aa21651ecd39b09e3fb2d9a58f4a1f3b99354b3b6927b2d44c6fb50",
+          "type": "file"
+        },
+        {
+          "bytes": null,
+          "path": "skills/lean-plan-writing",
+          "sha256": null,
+          "type": "directory"
+        },
+        {
+          "bytes": 5194,
+          "path": "skills/lean-plan-writing/SKILL.md",
+          "sha256": "6a3115a4d33ad2f99238f915a6a1b7869efd8c80a6cce422d3afae60c9857fac",
+          "type": "file"
+        },
+        {
+          "bytes": null,
+          "path": "skills/writing-explicit-rationale",
+          "sha256": null,
+          "type": "directory"
+        },
+        {
+          "bytes": 9181,
+          "path": "skills/writing-explicit-rationale/SKILL.md",
+          "sha256": "97eb06c649c194e8819b4dff68b808eda4ec7c948a6ead518da247daf31d6cfe",
+          "type": "file"
+        },
+        {
+          "bytes": null,
+          "path": "skills/writing-plans",
+          "sha256": null,
+          "type": "directory"
+        },
+        {
+          "bytes": 7053,
+          "path": "skills/writing-plans/SKILL.md",
+          "sha256": "48508f44bbfd7d24b029fbf3a314f3cd14c9615599059366e922f47b8dc08cf2",
+          "type": "file"
+        }
+      ],
+      "exists": true,
+      "path": "workspace/fixture"
+    },
+    "prompt": {
+      "bytes": 2715,
+      "exists": true,
+      "path": "prompt.txt",
+      "sha256": "81866dc738bf6f2ab0625f14abf6ec06c6df9e04afa7033796933e7cb1f0c693"
+    },
+    "prompt_template": {
+      "bytes": 1699,
+      "exists": true,
+      "path": "prompt-template.txt",
+      "sha256": "a8da5c8b16a2c9cefbce2af41d0e1dc436ddac78d49795652f3a2fd45fd7e295"
+    },
+    "stderr": {
+      "bytes": 0,
+      "exists": true,
+      "path": "stderr.txt",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "stdout": {
+      "bytes": 49777,
+      "exists": true,
+      "path": "stdout.txt",
+      "sha256": "3784a5372b749d1f5374e9b0b202d239571a786f3b25ed9c3a18482a578dc8ac"
+    }
+  },
+  "duration_seconds": 45.925,
+  "execution": {
+    "effort": "high",
+    "executable": "codex",
+    "exit_code": 0,
+    "invocation_started": true,
+    "model": "gpt-5.6-sol",
+    "provider": "codex",
+    "timed_out": false,
+    "timeout_seconds": 900
+  },
+  "finished_at": "2026-09-04T11:45:57.651Z",
+  "infrastructure_error": null,
+  "run_id": "20260904T114511727Z-wer-07-16d26f42-1036-4f57-be10-31a30b1fca9c-u6lwzxq9",
+  "schema_version": "0.2",
+  "started_at": "2026-09-04T11:45:11.727Z",
+  "status": "COMPLETED",
+  "test": {
+    "id": "wer-07"
+  }
+}
