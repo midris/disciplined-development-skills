@@ -1,0 +1,17 @@
+| Location | Action |
+|---|---|
+| `src/ingest.py:44` | Add rationale beside the tenant rate-limit guard. |
+| `src/admin_ingest.py` | Add the same rationale beside the duplicated guard. |
+| `src/quota.py:73` | Add rationale beside the downgrade grace behavior. |
+| `src/telemetry.py:19` | None; the libraries are equivalent and the choice has no downstream consequence. |
+
+```python
+# Keep this guard at interactive ingest rather than shared persist():
+# batch_import.py persists already-approved batches. This deliberately duplicates
+# admin_ingest.py's guard; consolidate if a third interactive caller appears.
+```
+
+```python
+# Preserve the previous quota while in-flight requests may still carry its token.
+# This deliberately accepts up to 60 seconds of elevated quota after a downgrade.
+```

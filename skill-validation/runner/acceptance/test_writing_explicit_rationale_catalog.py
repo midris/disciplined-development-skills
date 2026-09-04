@@ -57,7 +57,15 @@ CATALOG = {
     },
     "wer-02": {
         "prompt_hash": "743d95a448c6cd7d1a5cef4e839f6482ec989b7ebe219bdc9b0a360a696dd2a9",
-        "files": {"README.md", "prompt.md", "rubric.md", "test.json"},
+        "files": {
+            "README.md",
+            "accepted/final.txt",
+            "accepted/result.json",
+            "accepted/worksheet.md",
+            "prompt.md",
+            "rubric.md",
+            "test.json",
+        },
         "packaged": (),
     },
     "wer-05": {
