@@ -8,4 +8,9 @@ Prompt is derived from the canonical fenced evaluator input beneath `DR-03 — c
 
 # Smoke
 
-No schema `0.2` result is retained.
+No schema `0.2` smoke result is retained.
+
+# Accepted baseline
+
+The latest accepted record is a judgeable `FAIL`; see
+[accepted/worksheet.md](accepted/worksheet.md).

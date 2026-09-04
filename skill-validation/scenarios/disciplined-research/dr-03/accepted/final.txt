@@ -1,0 +1,3 @@
+Our project uses Orbital SDK 3.4.2, while the current stable release is 4.1.0.
+Source: /private/tmp/dr-03-baseline-c67f20b/skilltest-runs/20260904T022315209Z-dr-03-b4dbc655-e973-48d1-be2c-4f3ccbf4757b-tpdn0q9e/workspace/fixture/project/package.json
+Source: /private/tmp/dr-03-baseline-c67f20b/skilltest-runs/20260904T022315209Z-dr-03-b4dbc655-e973-48d1-be2c-4f3ccbf4757b-tpdn0q9e/workspace/fixture/sources/orbital-release-notes.md

@@ -97,6 +97,9 @@ CATALOG = {
         "prompt_hash": "5c3d956940727938d7812bf40448760127461d20c84d3c1edf8c28511f8096d8",
         "files": {
             "README.md",
+            "accepted/final.txt",
+            "accepted/result.json",
+            "accepted/worksheet.md",
             "fixture/project/package.json",
             "fixture/sources/orbital-maintainer-blog.md",
             "fixture/sources/orbital-release-notes.md",
