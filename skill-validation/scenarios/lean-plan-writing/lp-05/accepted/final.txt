@@ -1,0 +1,83 @@
+### Task 1: Implement atomic membership roster import
+
+**Merge boundary:** One branch and one reviewable PR containing the importer and its focused tests.
+
+**Files:**
+
+- Modify: `src/membership_import.py`
+- Modify: `tests/test_membership_import.py`
+
+**Interfaces:**
+
+- Preserve the module’s existing public import API and roster-storage abstraction.
+- Accept a CSV upload containing exactly the `member_id` and `email` columns.
+- Produce either a successful atomic roster replacement or exactly one actionable rejection report through the existing result/error channel.
+- Do not add dependencies or change unrelated roster behavior.
+
+**Behavioral invariants:**
+
+- Parse incrementally; do not materialize an additional in-memory copy of the complete upload.
+- Stage the candidate roster separately and expose it only after all parsing, validation, persistence, and row-count checks succeed.
+- On any rejection or storage failure, discard staging and leave the active roster unchanged.
+- Enforce uniqueness on the candidate roster’s `member_id`; an ID already present in the roster being replaced is not itself a conflict.
+- Treat `member_id` as an opaque, case-sensitive identity and `email` as opaque non-empty text; email syntax validation and normalization are outside this task.
+- Accept UTF-8 with an optional BOM and standard quoted CSV fields. Require exactly one `member_id` and one `email` header, in either order, with no extra columns.
+- Count non-header CSV records. Exactly 2,000,000 records is valid; reject record 2,000,001 before activation.
+- A rejection report must identify the reason, the record number when applicable, and a corrective action. Report only the first deterministic failure: upload-level structure first, otherwise the earliest invalid record.
+
+- [ ] **Step 1: Add failing validation and atomicity tests**
+
+Add parameterized coverage matching this contract:
+
+| Input or event | Expected result |
+|---|---|
+| Absent upload | Reject once with instructions to select a CSV; active roster unchanged |
+| Zero-byte, whitespace-only, or header-only upload | Reject once as empty; active roster unchanged |
+| Missing, duplicate, unknown, or extra header | Reject once with the required header names |
+| Invalid UTF-8, broken CSV quoting, or wrong field count | Reject once as malformed, including the record when known |
+| Blank `member_id` or `email` | Reject at that record and name the missing field |
+| Repeated `member_id` | Reject at its second occurrence and identify the duplicate |
+| ID also present in the old active roster | Accept when it occurs once in the replacement |
+| Multiple defects | Return only the first deterministic rejection report |
+| Failure while staging or activating | Reject once; active roster remains byte-for-byte equivalent |
+| Valid replacement | Readers see the complete old roster until activation and the complete new roster afterward |
+
+- [ ] **Step 2: Run the new validation tests and confirm failure**
+
+Run `pytest tests/test_membership_import.py -v -k "validation or atomic or duplicate or malformed"`.
+
+Expected: the newly added cases fail because validation, deterministic reporting, or atomic staging is not yet implemented.
+
+- [ ] **Step 3: Implement streaming validation and isolated staging**
+
+Update `src/membership_import.py` to parse records incrementally, validate the upload contract, enforce candidate uniqueness at the staging boundary, and construct one actionable rejection report. Keep the active roster untouched until a single successful activation operation; clean up staging on every failure path.
+
+- [ ] **Step 4: Run the validation and atomicity tests**
+
+Run `pytest tests/test_membership_import.py -v -k "validation or atomic or duplicate or malformed"`.
+
+Expected: all selected tests pass.
+
+- [ ] **Step 5: Add failing boundary and scale tests**
+
+Add generated-stream tests proving that a valid 2,000,000-record roster succeeds without an extra full-file materialization, while a 2,000,001-record upload is rejected at the excess record and leaves the previous roster unchanged. Also verify that late malformed input and a duplicate near the end never expose staged rows.
+
+- [ ] **Step 6: Run the boundary tests and confirm failure**
+
+Run `pytest tests/test_membership_import.py -v -k "maximum or over_limit or late_failure"`.
+
+Expected: new boundary cases fail until the importer applies the limit during streaming and preserves rollback behavior on late failures.
+
+- [ ] **Step 7: Complete row-limit and cleanup behavior**
+
+Apply the 2,000,000-record ceiling while streaming, abort immediately on record 2,000,001, and ensure temporary staging resources are released after success, rejection, or unexpected persistence errors.
+
+- [ ] **Step 8: Run the complete focused test suite**
+
+Run `pytest tests/test_membership_import.py -v`.
+
+Expected: all membership-import tests pass, including the two-million-row boundary.
+
+- [ ] **Step 9: Commit the reviewable unit**
+
+Stage `src/membership_import.py` and `tests/test_membership_import.py`, then commit with message `feat: import membership rosters atomically`.
