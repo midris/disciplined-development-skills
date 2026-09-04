@@ -1,0 +1,121 @@
+{
+  "artifacts": {
+    "config": {
+      "bytes": 622,
+      "exists": true,
+      "path": "config.json",
+      "sha256": "83fa7b25db610110fcbc0fb0b3610d83373efddbdebef2c7338a0efea823ccfc"
+    },
+    "evidence": {
+      "empty": true,
+      "entries": [],
+      "exists": true,
+      "path": "workspace/evidence"
+    },
+    "final": {
+      "bytes": 531,
+      "exists": true,
+      "path": "final.txt",
+      "sha256": "a0dc3feff448b40bfcb0ac6f1736beb8c987f3e2eb27b8adef81e6070383cce3"
+    },
+    "fixture": {
+      "empty": false,
+      "entries": [
+        {
+          "bytes": null,
+          "path": "project",
+          "sha256": null,
+          "type": "directory"
+        },
+        {
+          "bytes": null,
+          "path": "project/upload-403",
+          "sha256": null,
+          "type": "directory"
+        },
+        {
+          "bytes": 595,
+          "path": "project/upload-403/evidence-index.md",
+          "sha256": "5ce87478b5f41f46f10dbba5b329f6eae004ca9b4a6895a495fa75ec292bfb46",
+          "type": "file"
+        },
+        {
+          "bytes": 226,
+          "path": "project/upload-403/runtime-config.json",
+          "sha256": "4ec39350c64e94229c7aaa59a719afc1c18c2c673d7d5215a8be38ee5307af13",
+          "type": "file"
+        },
+        {
+          "bytes": 230400,
+          "path": "project/upload-403/worker.log",
+          "sha256": "d381395b47ed8fb03ca12fc8c1ab9a1c17299d28149d591119319705aed39eba",
+          "type": "file"
+        },
+        {
+          "bytes": null,
+          "path": "skills",
+          "sha256": null,
+          "type": "directory"
+        },
+        {
+          "bytes": null,
+          "path": "skills/disciplined-research",
+          "sha256": null,
+          "type": "directory"
+        },
+        {
+          "bytes": 9400,
+          "path": "skills/disciplined-research/SKILL.md",
+          "sha256": "a5c4079e5aa21651ecd39b09e3fb2d9a58f4a1f3b99354b3b6927b2d44c6fb50",
+          "type": "file"
+        }
+      ],
+      "exists": true,
+      "path": "workspace/fixture"
+    },
+    "prompt": {
+      "bytes": 1316,
+      "exists": true,
+      "path": "prompt.txt",
+      "sha256": "7905f618c0ef06cc0ebd16bd98169960e23595fa3eee3a5387a244b50ac8d6c6"
+    },
+    "prompt_template": {
+      "bytes": 816,
+      "exists": true,
+      "path": "prompt-template.txt",
+      "sha256": "14c9968aae4616b3e19105d82e53b4b2a000bb7bb21027a5d8292705a409b1c2"
+    },
+    "stderr": {
+      "bytes": 0,
+      "exists": true,
+      "path": "stderr.txt",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "stdout": {
+      "bytes": 484963,
+      "exists": true,
+      "path": "stdout.txt",
+      "sha256": "0d4f627aa6ba78e5644fcf0a96d3fca67e7f1dbed94a8976f7e6a05550035f23"
+    }
+  },
+  "duration_seconds": 43.385,
+  "execution": {
+    "effort": "high",
+    "executable": "codex",
+    "exit_code": 0,
+    "invocation_started": true,
+    "model": "gpt-5.6-sol",
+    "provider": "codex",
+    "timed_out": false,
+    "timeout_seconds": 900
+  },
+  "finished_at": "2026-09-04T03:07:17.790Z",
+  "infrastructure_error": null,
+  "run_id": "20260904T030634405Z-dr-06-bbe71d12-04cf-48aa-ae95-588baa55d635-nu06t04o",
+  "schema_version": "0.2",
+  "started_at": "2026-09-04T03:06:34.405Z",
+  "status": "COMPLETED",
+  "test": {
+    "id": "dr-06"
+  }
+}

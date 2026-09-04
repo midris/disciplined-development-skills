@@ -163,6 +163,9 @@ CATALOG = {
         "prompt_hash": "14c9968aae4616b3e19105d82e53b4b2a000bb7bb21027a5d8292705a409b1c2",
         "files": {
             "README.md",
+            "accepted/final.txt",
+            "accepted/result.json",
+            "accepted/worksheet.md",
             "fixture/project/upload-403/evidence-index.md",
             "fixture/project/upload-403/runtime-config.json",
             "fixture/project/upload-403/worker.log",

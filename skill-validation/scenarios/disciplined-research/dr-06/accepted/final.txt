@@ -1,0 +1,4 @@
+Observed: Three PUT attempts returned HTTP 403 during the release upload.
+Cause to check first: Expired temporary credentials—the incident lead’s hypothesis, not yet confirmed.
+Evidence: `worker.log` lines 253, 779, and 1323 record the 403s; `evidence-index.md` says the log is truncated, `runtime-config.json` is incomplete, and `identity-session.json` is unavailable.
+Next check: Retrieve the identity-session or credential-provider records and compare credential expiration with the three request timestamps and request IDs.

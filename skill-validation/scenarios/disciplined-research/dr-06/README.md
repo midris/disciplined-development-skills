@@ -8,4 +8,9 @@ Prompt is canonical `skill-validation/fixtures/disciplined-research/prompts/dr-0
 
 # Smoke
 
-No schema `0.2` result is retained.
+No schema `0.2` smoke result is retained.
+
+# Accepted baseline
+
+The latest accepted record is a judgeable `FAIL`; see
+[accepted/worksheet.md](accepted/worksheet.md).
