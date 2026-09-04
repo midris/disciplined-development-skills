@@ -3,9 +3,9 @@
 ## Status
 
 The scenario-by-scenario audit was completed on 2026-09-03. All seven scenarios
-remain in the catalog; DR-03 and DR-06 need the repairs described below before
-they are run. This audit does not establish a baseline, accept a run, or define a
-suite-wide repetition policy.
+remain in the catalog. DR-03 was repaired on 2026-09-03; DR-06 still needs the
+repair described below before it is run. This audit does not establish a baseline,
+accept a run, or define a suite-wide repetition policy.
 
 The audited subject was `main` at
 `ac45ab2f3d467f5df0a49c543d8b3242423789b1`. The supplied
@@ -19,7 +19,7 @@ This is a human-authored audit record, not a generated manifest.
 |---|---|---|---|
 | [DR-01](dr-01/README.md) | Keep | Tests choosing the current implementation over a stale README and mapping the answer to the supplied sources. Its exact two-line shape, source order, and lack of narration are task fidelity, not deterministic protocol. | Historical results reported passes on the current skill, but the retained smoke result proves only mechanical completion and does not include the raw response. Run again for baseline evidence. |
 | [DR-02](dr-02/README.md) | Keep | Tests authority, recency, conflict resolution, premise correction, and source mapping within one domain. | The scratch pilot run `20260903T141027650Z-dr-02-2f0b68ef-c77d-43b3-bea7-4297e7e5fbcd-pey8e2yz` used `codex`, `gpt-5.6-sol`, and `high` effort against inputs identical to the audited subject. All four semantic rows passed. The response's `fixture/sources/...` path prefix instead of `sources/...` was a non-blocking task-fidelity failure, so the reviewed verdict was `PASS`. The run remains scratch-only and is candidate baseline evidence; no rerun is presently required. |
-| [DR-03](dr-03/README.md) | Repair, then keep | Tests verification across project and official upstream sources. The fixture proves the dependency version declared in `package.json`, not an installed version. Change the prompt and rubric to ask for and assess the declared dependency version. Exact three-line shape and source order remain task fidelity. | Historical results are not a substitute for a run of the repaired scenario. Run after repair. |
+| [DR-03](dr-03/README.md) | Keep; repaired 2026-09-03 | Tests verification across project and official upstream sources. The prompt and rubric now ask for and assess the dependency version declared in `package.json`, not an installed version. Exact three-line shape and source order remain task fidelity. | The repaired package passes its provider-free catalog acceptance check. Historical results are not a substitute for a post-repair run; run for baseline evidence. |
 | [DR-04](dr-04/README.md) | Keep; expected `FAIL` | Tests the threshold that excludes a private, uncommitted, unshared scratch note even when it conflicts with the current implementation. The fixture implements at most three attempts with waits of one and two seconds; the third tuple value is unused. | Historical results indicate a known current-skill failure, but the raw run and evaluation evidence are unavailable. A judgeable `FAIL` is a valid baseline result. Run again. |
 | [DR-05](dr-05/README.md) | Keep; expected `PASS` | Tests omission of an unsupported compatibility claim: the supplied matrix does not contain Nimbus 2.7. The two-line limit is task fidelity. | Historical results reported passes on the current skill, but the raw evidence is unavailable. Run again. |
 | [DR-06](dr-06/README.md) | Repair, then keep | Tests preserving a useful investigation lead while clearly disclosing that its claimed cause is unsupported. The fixture contains three HTTP 403s, a truncated log, malformed runtime configuration, and no identity-session evidence; it does not support credential expiry. Relax the rubric's exact literal disclosure stamp so equivalent clear wording passes. The exact four-line/prefix layout remains task fidelity. | Historical failures cannot establish semantic behavior because the literal-string gate may explain them. Run after repair. |
@@ -58,10 +58,9 @@ consumer, so their formatting constraints remain on the task-fidelity ledger.
 
 ## Next actions
 
-1. Repair DR-03's installed-versus-declared version contract.
-2. Repair DR-06's semantic disclosure criterion.
-3. Run provider-free package checks for both repairs.
-4. Present each exact provider command for owner approval before invocation, then
+1. Repair DR-06's semantic disclosure criterion.
+2. Run its provider-free package checks.
+3. Present each exact provider command for owner approval before invocation, then
    evaluate its scratch evidence under the testing methodology.
-5. Decide separately whether to accept the existing DR-02 pilot evidence; leave
+4. Decide separately whether to accept the existing DR-02 pilot evidence; leave
    `accepted/` untouched until that decision is made.

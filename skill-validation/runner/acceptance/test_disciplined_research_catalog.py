@@ -94,7 +94,7 @@ CATALOG = {
         ),
     },
     "dr-03": {
-        "prompt_hash": "4a2ecdc36d1b647bfeac840c054c880958a0331457979cf416fe533348e7ec10",
+        "prompt_hash": "5c3d956940727938d7812bf40448760127461d20c84d3c1edf8c28511f8096d8",
         "files": {
             "README.md",
             "fixture/project/package.json",
