@@ -3,9 +3,9 @@
 ## Status
 
 The scenario-by-scenario audit was completed on 2026-09-03. All seven scenarios
-remain in the catalog. DR-03 was repaired on 2026-09-03; DR-06 still needs the
-repair described below before it is run. This audit does not establish a baseline,
-accept a run, or define a suite-wide repetition policy.
+remain in the catalog. DR-03 and DR-06 were repaired on 2026-09-03. This audit
+does not establish a catalog-wide baseline or define a suite-wide repetition
+policy.
 
 The audited subject was `main` at
 `ac45ab2f3d467f5df0a49c543d8b3242423789b1`. The supplied
@@ -22,7 +22,7 @@ This is a human-authored audit record, not a generated manifest.
 | [DR-03](dr-03/README.md) | Keep; repaired 2026-09-03 | Tests verification across project and official upstream sources. The prompt and rubric now ask for and assess the dependency version declared in `package.json`, not an installed version. Exact three-line shape and source order remain task fidelity. | The [accepted baseline](dr-03/accepted/worksheet.md) is a judgeable `FAIL`: the response said the project “uses” 3.4.2 even though `package.json` proves only that the dependency is declared. All four semantic invariants failed; task fidelity passed. |
 | [DR-04](dr-04/README.md) | Keep; expected `FAIL` | Tests the threshold that excludes a private, uncommitted, unshared scratch note even when it conflicts with the current implementation. The fixture implements at most three attempts with waits of one and two seconds; the third tuple value is unused. | Historical results indicate a known current-skill failure, but the raw run and evaluation evidence are unavailable. A judgeable `FAIL` is a valid baseline result. Run again. |
 | [DR-05](dr-05/README.md) | Keep; expected `PASS` | Tests omission of an unsupported compatibility claim: the supplied matrix does not contain Nimbus 2.7. The two-line limit is task fidelity. | Historical results reported passes on the current skill, but the raw evidence is unavailable. Run again. |
-| [DR-06](dr-06/README.md) | Repair, then keep | Tests preserving a useful investigation lead while clearly disclosing that its claimed cause is unsupported. The fixture contains three HTTP 403s, a truncated log, malformed runtime configuration, and no identity-session evidence; it does not support credential expiry. Relax the rubric's exact literal disclosure stamp so equivalent clear wording passes. The exact four-line/prefix layout remains task fidelity. | Historical failures cannot establish semantic behavior because the literal-string gate may explain them. Run after repair. |
+| [DR-06](dr-06/README.md) | Keep; repaired 2026-09-03 | Tests preserving a useful investigation lead while clearly disclosing that its claimed cause is unsupported. The fixture contains three HTTP 403s, a truncated log, malformed runtime configuration, and no identity-session evidence; it does not support credential expiry. The rubric now accepts equivalent clear uncertainty wording instead of requiring a literal stamp. The exact four-line/prefix layout remains task fidelity. | The repaired package passes its provider-free catalog acceptance check. Historical failures cannot establish semantic behavior because the former literal-string gate may explain them; run for post-repair baseline evidence. |
 | [DR-07](dr-07/README.md) | Keep | Tests correcting a conversational premise from an official schedule and showing the simple derivation: a 5:30 arrival before a 5:45 close leaves 15 minutes. No fixed output format applies. | No isolated original-main evidence is available; previously recorded aggregate passes belonged to later candidate work. Run for baseline evidence. |
 
 ## Catalog assessment
@@ -58,9 +58,7 @@ consumer, so their formatting constraints remain on the task-fidelity ledger.
 
 ## Next actions
 
-1. Repair DR-06's semantic disclosure criterion.
-2. Run its provider-free package checks.
-3. Present each exact provider command for owner approval before invocation, then
+1. Present each exact provider command for owner approval before invocation, then
    evaluate its scratch evidence under the testing methodology.
-4. Decide separately whether to accept the existing DR-02 pilot evidence; leave
+2. Decide separately whether to accept the existing DR-02 pilot evidence; leave
    `accepted/` untouched until that decision is made.

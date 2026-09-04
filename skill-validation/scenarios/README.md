@@ -77,7 +77,7 @@ Representative smoke: [`DR-01`](disciplined-research/dr-01/README.md)
 - [`DR-03`](disciplined-research/dr-03/README.md) — Verify project and upstream version state separately and correct a cross-domain claim.
 - [`DR-04`](disciplined-research/dr-04/README.md) — Apply acquire, verify, and source-disclosure rules to a private scratch note while mapping one source to multiple claims.
 - [`DR-05`](disciplined-research/dr-05/README.md) — Refuse to invent a datum missing from the only supplied source despite pressure for an uncaveated casual answer.
-- [`DR-06`](disciplined-research/dr-06/README.md) — Present an unsupported cause only as a stamped unverified investigation lead without attaching unrelated evidence as support.
+- [`DR-06`](disciplined-research/dr-06/README.md) — Present an unsupported cause only as an explicitly unverified investigation lead without attaching unrelated evidence as support.
 - [`DR-07`](disciplined-research/dr-07/README.md) — Correct a conversational premise and derive only the supported fifteen-minute result with source disclosure.
 
 ## disciplined-development
