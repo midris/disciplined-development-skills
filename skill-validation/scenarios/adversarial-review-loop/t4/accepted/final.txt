@@ -1,0 +1,5 @@
+Proceed with cycle 2.
+
+Name the class “N+1 queries caused by database access inside result loops.” Enumerate that pattern across the branch, fix every instance using batching, joins, or eager loading as appropriate, and verify with relevant tests and query-count assertions. Then re-run the same reviewer against the updated HEAD.
+
+The SQL injection and N+1 findings share a database topic but not one invariant: parameterized input prevents injection, while batched retrieval prevents N+1 behavior. They are scattered findings, so below the three-cycle cap the correct action is another class-wide remediation and re-review—not a cold-read escape or a broad shared-root audit.
