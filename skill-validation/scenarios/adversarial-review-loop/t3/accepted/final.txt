@@ -1,0 +1,13 @@
+Decision: stop the current loop. The third re-run hit the three-cycle cap, so do not patch the torn-record finding and begin a fourth cycle.
+
+Next actions:
+
+1. Record the accumulated pattern verdict: all four findings indicate a shared root—there is no end-to-end crash-consistency invariant ensuring readers see either the previous committed record or a fully durable, validated replacement, never partial state.
+2. Initiate a genuinely cold review with no conversation memory, focused on the current store implementation and its durability/failure semantics.
+3. Record the cold-read result:
+   - If it confirms the finding or shared root, prefer redesigning the persistence protocol over another local fix.
+   - If it materially diverges, trust the cold read and stop.
+   - If it explicitly confirms that fix-forward remains productive, begin a new capped loop of at most three cycles.
+4. Preserve the escape decision and rationale in the review/work artifact.
+
+The finding is real and on new surface, but that does not permit exceeding the cap. Its alignment with the earlier write-error, sync, and atomicity failures strengthens the case for a protocol-level redo rather than another symptom patch.
