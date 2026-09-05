@@ -1,0 +1,193 @@
+{
+  "artifacts": {
+    "config": {
+      "bytes": 1324,
+      "exists": true,
+      "path": "config.json",
+      "sha256": "41bbdf3e392093767e54b11be44c4fe175e5a8b5209b86dbd08e6c16caf00a7f"
+    },
+    "evidence": {
+      "empty": true,
+      "entries": [],
+      "exists": true,
+      "path": "workspace/evidence"
+    },
+    "final": {
+      "bytes": 2363,
+      "exists": true,
+      "path": "final.txt",
+      "sha256": "a41bb9e8a5a0e7a4addc7f6e95f59c2ab45ccd0bce9f9cb0780fb2bffec9b8ea"
+    },
+    "fixture": {
+      "empty": false,
+      "entries": [
+        {
+          "bytes": null,
+          "path": "skills",
+          "sha256": null,
+          "type": "directory"
+        },
+        {
+          "bytes": null,
+          "path": "skills/adversarial-review",
+          "sha256": null,
+          "type": "directory"
+        },
+        {
+          "bytes": 10295,
+          "path": "skills/adversarial-review/SKILL.md",
+          "sha256": "9004ff153d5dc3a3690254667c4f666151dcabff7ef6f705cc751134be56499c",
+          "type": "file"
+        },
+        {
+          "bytes": null,
+          "path": "skills/superpowers",
+          "sha256": null,
+          "type": "directory"
+        },
+        {
+          "bytes": null,
+          "path": "skills/superpowers/requesting-code-review",
+          "sha256": null,
+          "type": "directory"
+        },
+        {
+          "bytes": 2956,
+          "path": "skills/superpowers/requesting-code-review/SKILL.md",
+          "sha256": "d71cc01ba56d2325cf8af5f7c11837819b63ecd57de0bfdb812f7f3ff7751df8",
+          "type": "file"
+        },
+        {
+          "bytes": 5213,
+          "path": "skills/superpowers/requesting-code-review/code-reviewer.md",
+          "sha256": "b2f2ec7596925fe52dac158fdfbca19b3a7d779d619c481e6706a6c0001662d3",
+          "type": "file"
+        },
+        {
+          "bytes": null,
+          "path": "subject",
+          "sha256": null,
+          "type": "directory"
+        },
+        {
+          "bytes": null,
+          "path": "subject/plans",
+          "sha256": null,
+          "type": "directory"
+        },
+        {
+          "bytes": 48816,
+          "path": "subject/plans/2026-06-18-recording-slice.md",
+          "sha256": "1d10c2845101df73f4418c7a4db147a79d53335a6f08f5bec822073e2e180c40",
+          "type": "file"
+        },
+        {
+          "bytes": null,
+          "path": "subject/swift",
+          "sha256": null,
+          "type": "directory"
+        },
+        {
+          "bytes": null,
+          "path": "subject/swift/Steno",
+          "sha256": null,
+          "type": "directory"
+        },
+        {
+          "bytes": null,
+          "path": "subject/swift/Steno/Sources",
+          "sha256": null,
+          "type": "directory"
+        },
+        {
+          "bytes": null,
+          "path": "subject/swift/Steno/Sources/Steno",
+          "sha256": null,
+          "type": "directory"
+        },
+        {
+          "bytes": null,
+          "path": "subject/swift/Steno/Sources/Steno/Events",
+          "sha256": null,
+          "type": "directory"
+        },
+        {
+          "bytes": 4983,
+          "path": "subject/swift/Steno/Sources/Steno/Events/EventEnvelope.swift",
+          "sha256": "42cd5c2df5a1dadb34df0e15cafa6e36f76588661e1cb99f93f83e158488800b",
+          "type": "file"
+        },
+        {
+          "bytes": 6303,
+          "path": "subject/swift/Steno/Sources/Steno/Events/EventLog.swift",
+          "sha256": "26b7accda8f8115ef23249243512384413fb198ab702961f65a3103f0f090aa0",
+          "type": "file"
+        },
+        {
+          "bytes": null,
+          "path": "subject/swift/Steno/Tests",
+          "sha256": null,
+          "type": "directory"
+        },
+        {
+          "bytes": null,
+          "path": "subject/swift/Steno/Tests/StenoTests",
+          "sha256": null,
+          "type": "directory"
+        },
+        {
+          "bytes": 6398,
+          "path": "subject/swift/Steno/Tests/StenoTests/EventLogTests.swift",
+          "sha256": "65134b891cd8ee803c1367518ea7c3b832fca4a862fa411ed848146d656a4b52",
+          "type": "file"
+        }
+      ],
+      "exists": true,
+      "path": "workspace/fixture"
+    },
+    "prompt": {
+      "bytes": 663,
+      "exists": true,
+      "path": "prompt.txt",
+      "sha256": "7453151a0c446fb9a82db65c7aea24845a9587ca26448df230376f059a0a524f"
+    },
+    "prompt_template": {
+      "bytes": 413,
+      "exists": true,
+      "path": "prompt-template.txt",
+      "sha256": "0f62c02acd47bf781d762420897a9a6a14ab7a94026494dfbed71cce9de1be41"
+    },
+    "stderr": {
+      "bytes": 0,
+      "exists": true,
+      "path": "stderr.txt",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "stdout": {
+      "bytes": 182960,
+      "exists": true,
+      "path": "stdout.txt",
+      "sha256": "1aa57e7a053e6c7401eeea43a90441180bc373abbbd94bcfe901b43f1014d8ab"
+    }
+  },
+  "duration_seconds": 218.538,
+  "execution": {
+    "effort": "high",
+    "executable": "codex",
+    "exit_code": 0,
+    "invocation_started": true,
+    "model": "gpt-5.6-sol",
+    "provider": "codex",
+    "timed_out": false,
+    "timeout_seconds": 900
+  },
+  "finished_at": "2026-09-05T13:53:20.344Z",
+  "infrastructure_error": null,
+  "run_id": "20260905T134941806Z-ar-05-acb47308-2714-4720-a0e3-f1e6192260a7-d7ojqhls",
+  "schema_version": "0.2",
+  "started_at": "2026-09-05T13:49:41.806Z",
+  "status": "COMPLETED",
+  "test": {
+    "id": "ar-05"
+  }
+}

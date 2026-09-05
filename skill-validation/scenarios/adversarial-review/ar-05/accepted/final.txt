@@ -1,0 +1,19 @@
+- [P1] swift/Steno/Sources/Steno/Events/EventLog.swift:54: `append` turns recoverable encoding and filesystem failures into process crashes
+  A valid `Codable` payload can still fail encoding (for example, NaN/∞), while open and `fsync` can fail from permissions, ENOSPC, EIO, or EINTR. The `try!` and `fatalError` paths deny callers a typed error and may leave an ambiguous partial append in the source-of-truth log.
+
+- [P1] swift/Steno/Sources/Steno/Events/EventLog.swift:106: Replay accepts corrupt JSONL framing
+  Splitting with `omittingEmptySubsequences: true` silently ignores interior blank records, and a valid JSON object without its terminating newline is accepted as committed. The latter can represent a torn final write; reopening and appending also concatenates the next object directly onto it.
+
+- [P1] swift/Steno/Sources/Steno/Events/EventLog.swift:123: Sequence initialization extends an existing log without validating it
+  `resolveSeq` suppresses read errors and derives the next sequence from the number of nonempty lines rather than replaying or validating the final sequence. An unreadable log can be treated as empty, while a malformed, gapped, duplicated, or out-of-order log is mutated further instead of rejecting the append.
+
+- [P1] swift/Steno/Sources/Steno/Events/EventEnvelope.swift:93: Payload decoding is not dispatched or validated against the envelope `type`
+  `Payload.self` only sees the nested payload container and cannot inspect the already-decoded sibling `type`. Because append likewise accepts `type` and `payload` independently, contradictory pairs can decode successfully, violating Task 2.1 and leaving the planned PR-4 event protocol without the required dispatch mechanism.
+
+- [P2] plans/2026-06-18-recording-slice.md:193: Task 2.1 is marked complete without its required `EventEnvelopeTests.swift`
+  The supplied subject has no direct coverage for absent versus present optional keys, exact timestamp round-tripping, all-field round-tripping, or envelope-level schema rejection.
+
+- [P2] swift/Steno/Tests/StenoTests/EventLogTests.swift:65: The required out-of-order sequence case is not tested
+  Despite the test name and comment claiming gap-or-out-of-order coverage, the fixture only supplies `1, 2, 4`, which exercises a forward gap. It never tests duplicate or decreasing sequence values.
+
+DD-VERDICT: BLOCK

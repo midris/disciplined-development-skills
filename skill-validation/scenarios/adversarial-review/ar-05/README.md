@@ -19,3 +19,9 @@ Apply broad durability and holistic review without requiring one predetermined v
 # Smoke
 
 No schema `0.2` result is retained.
+
+# Accepted baseline
+
+The latest accepted baseline is a `FAIL` from `codex` / `gpt-5.6-sol` / `high`, accepted on 2026-09-05. The response found the required durable-mutation, replay/recovery, and independent whole-artifact defects, but it did not require construction- or recovery-level remedies for the durability defects.
+
+Retained artifacts: `accepted/worksheet.md`, `accepted/result.json`, and `accepted/final.txt`. No evidence files were emitted.
