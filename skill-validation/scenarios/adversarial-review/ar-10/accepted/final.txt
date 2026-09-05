@@ -1,0 +1,4 @@
+- [P2] fixture/project/proposal.md:4: The debugging database is an unsupported duplicate source of durable, privacy-sensitive submission data
+  The brief requires the existing record to remain the source of truth and already enables resend; no observed debugging need justifies duplicating every submission. This adds retention enforcement, security, consistency, partial-write, and deletion-failure paths without specifying how they are handled. Remove the duplicate database from the proposal.
+
+DD-VERDICT: BLOCK

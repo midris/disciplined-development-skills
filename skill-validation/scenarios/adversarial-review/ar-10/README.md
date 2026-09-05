@@ -17,3 +17,12 @@ Challenge and remove unsupported duplicate state.
 # Smoke
 
 No schema `0.2` result is retained.
+
+# Accepted baseline
+
+The latest accepted baseline is a `PASS` from `codex` / `gpt-5.6-sol` / `high`, accepted on 2026-09-05.
+The response explicitly calls for removing the unsupported duplicate database while preserving the required email-receipt feature.
+The owner accepted the result with the worksheet's input-fidelity qualification: the provider also read the installed `using-superpowers` skill outside the declared fixtures, limiting attribution to the pinned skill alone.
+
+Retained artifacts: `accepted/worksheet.md`, `accepted/result.json`, and `accepted/final.txt`.
+No evidence files were emitted.
