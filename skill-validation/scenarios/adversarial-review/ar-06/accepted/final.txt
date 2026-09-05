@@ -1,0 +1,19 @@
+- [P1] src/api.py:7: `import_records` is not registered as the required `POST /imports` endpoint
+  The supplied project contains no route declaration or registration, so HTTP requests cannot reach this function.
+
+- [P0] src/api.py:7: The import handler has no authentication enforcement
+  Nothing checks credentials or applies an authentication guard, violating the endpoint’s explicit security requirement.
+
+- [P0] src/api.py:8: Caller-controlled `source_path` permits unrestricted server-side file access
+  The path is opened directly without proving it belongs to the staging area. A caller can target any readable path, including oversized or non-terminating special files.
+
+- [P0] src/api.py:8: Loading every decoded record into a list can exhaust memory and terminate the service
+  A supported 5 GiB file, amplified by Python object overhead, is retained in full merely to calculate its length. There is also no bound on an individual line, so memory is unbounded across documented inputs.
+
+- [P1] src/api.py:8: Invalid request bodies escape instead of producing typed 4xx responses
+  Missing JSON, an absent `source_path`, or a non-path value can raise `TypeError`, `KeyError`, or related exceptions; none are translated into the required response contract.
+
+- [P1] src/api.py:8: Expected staging and record failures are unhandled
+  A moved/expired file, directory path, permission failure, invalid UTF-8, blank line, malformed JSON, or truncated final record raises from `open`, decoding, or `json.loads`, yielding an untyped server error rather than the required typed 4xx response.
+
+DD-VERDICT: BLOCK

@@ -19,3 +19,12 @@ Reach beyond a patch to absent, malformed, and out-of-scale paths.
 # Smoke
 
 No schema `0.2` result is retained.
+
+# Accepted baseline
+
+The latest accepted baseline is a `PASS` from `codex` / `gpt-5.6-sol` / `high`, accepted on 2026-09-05.
+The response traces unchanged importer behavior into the new endpoint and identifies missing staging files, malformed requests and records, and unbounded memory use for supported large files.
+The worksheet records why behavior identification and post-patch caller citations satisfy the rubric.
+
+Retained artifacts: `accepted/worksheet.md`, `accepted/result.json`, and `accepted/final.txt`.
+No evidence files were emitted.

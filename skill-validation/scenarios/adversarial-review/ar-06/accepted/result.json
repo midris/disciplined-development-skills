@@ -1,0 +1,163 @@
+{
+  "artifacts": {
+    "config": {
+      "bytes": 1092,
+      "exists": true,
+      "path": "config.json",
+      "sha256": "3e60337b58384991fbd5732f5fc1929f7f0ad3d5d70a0c18f541c81b2d52764a"
+    },
+    "evidence": {
+      "empty": true,
+      "entries": [],
+      "exists": true,
+      "path": "workspace/evidence"
+    },
+    "final": {
+      "bytes": 1612,
+      "exists": true,
+      "path": "final.txt",
+      "sha256": "72cfc05753a700651781fc9109d8f96d6ff0fd50a0267a12be7c92ba221d567a"
+    },
+    "fixture": {
+      "empty": false,
+      "entries": [
+        {
+          "bytes": null,
+          "path": "context",
+          "sha256": null,
+          "type": "directory"
+        },
+        {
+          "bytes": 339,
+          "path": "context/head-change.patch",
+          "sha256": "ba2d42b8dd3c3b1b04a1a81f217f4a215aeae5b68d89ae80f05a3e7c1d21a8df",
+          "type": "file"
+        },
+        {
+          "bytes": null,
+          "path": "project",
+          "sha256": null,
+          "type": "directory"
+        },
+        {
+          "bytes": null,
+          "path": "project/plans",
+          "sha256": null,
+          "type": "directory"
+        },
+        {
+          "bytes": 597,
+          "path": "project/plans/import-endpoint.md",
+          "sha256": "2c38ef43ecfa7d63efcfdf079a4a81a14503e1002d27ac3f1bac95a255308c2f",
+          "type": "file"
+        },
+        {
+          "bytes": null,
+          "path": "project/src",
+          "sha256": null,
+          "type": "directory"
+        },
+        {
+          "bytes": 47,
+          "path": "project/src/api.py",
+          "sha256": "43246548de85a93a0c973d9893a3d23d4493e134250d04f5a0574e7a70bfb152",
+          "type": "file"
+        },
+        {
+          "bytes": 162,
+          "path": "project/src/importer.py",
+          "sha256": "6657310fb0eb39c2cf2927be270d6c9204ff62b7743f7e39180e6356e28e1b8e",
+          "type": "file"
+        },
+        {
+          "bytes": null,
+          "path": "skills",
+          "sha256": null,
+          "type": "directory"
+        },
+        {
+          "bytes": null,
+          "path": "skills/adversarial-review",
+          "sha256": null,
+          "type": "directory"
+        },
+        {
+          "bytes": 10295,
+          "path": "skills/adversarial-review/SKILL.md",
+          "sha256": "9004ff153d5dc3a3690254667c4f666151dcabff7ef6f705cc751134be56499c",
+          "type": "file"
+        },
+        {
+          "bytes": null,
+          "path": "skills/superpowers",
+          "sha256": null,
+          "type": "directory"
+        },
+        {
+          "bytes": null,
+          "path": "skills/superpowers/requesting-code-review",
+          "sha256": null,
+          "type": "directory"
+        },
+        {
+          "bytes": 2956,
+          "path": "skills/superpowers/requesting-code-review/SKILL.md",
+          "sha256": "d71cc01ba56d2325cf8af5f7c11837819b63ecd57de0bfdb812f7f3ff7751df8",
+          "type": "file"
+        },
+        {
+          "bytes": 5213,
+          "path": "skills/superpowers/requesting-code-review/code-reviewer.md",
+          "sha256": "b2f2ec7596925fe52dac158fdfbca19b3a7d779d619c481e6706a6c0001662d3",
+          "type": "file"
+        }
+      ],
+      "exists": true,
+      "path": "workspace/fixture"
+    },
+    "prompt": {
+      "bytes": 876,
+      "exists": true,
+      "path": "prompt.txt",
+      "sha256": "4f78fea096f0b7d15a0d8b89202d9feee34963a6b45fc86812ee861ebe2afe16"
+    },
+    "prompt_template": {
+      "bytes": 501,
+      "exists": true,
+      "path": "prompt-template.txt",
+      "sha256": "64297e2b5919d9026c259bbdde24e64e929a812e59db10d7bd5cede490afe01b"
+    },
+    "stderr": {
+      "bytes": 0,
+      "exists": true,
+      "path": "stderr.txt",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "stdout": {
+      "bytes": 26142,
+      "exists": true,
+      "path": "stdout.txt",
+      "sha256": "c06e419a22437c4baf1f08574645d4c88ce9f32711ea26e41175abbfd6736bb1"
+    }
+  },
+  "duration_seconds": 87.888,
+  "execution": {
+    "effort": "high",
+    "executable": "codex",
+    "exit_code": 0,
+    "invocation_started": true,
+    "model": "gpt-5.6-sol",
+    "provider": "codex",
+    "timed_out": false,
+    "timeout_seconds": 900
+  },
+  "finished_at": "2026-09-05T14:02:45.131Z",
+  "infrastructure_error": null,
+  "run_id": "20260905T140117243Z-ar-06-dd8632da-f623-433f-80ad-2a32882a7225-ydq1jzon",
+  "schema_version": "0.2",
+  "started_at": "2026-09-05T14:01:17.243Z",
+  "status": "COMPLETED",
+  "test": {
+    "id": "ar-06"
+  }
+}
