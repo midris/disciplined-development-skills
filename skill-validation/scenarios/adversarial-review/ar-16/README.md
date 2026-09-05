@@ -17,3 +17,14 @@ Report unchecked encoding failure as caller-visible termination requiring a type
 # Smoke
 
 No schema `0.2` result is retained.
+
+# Accepted baseline
+
+The latest accepted baseline is a `FAIL` from `codex` / `gpt-5.6-sol` / `high`, accepted on 2026-09-05.
+The response correctly reports the unchecked runtime encoding failure, rejects the static-type rationale, and blocks on the missing typed caller path.
+The overall result fails because the rubric explicitly forbids outside-root inspection while the provider read installed `using-superpowers/SKILL.md` and `using-superpowers/references/codex-tools.md` outside the declared fixture inventory.
+The provider-facing prompt does not state that isolation restriction as explicitly as AR-13 and AR-14, which is retained as a scenario-design observation.
+No authenticated deterministic `DD-PATTERN` checker was available; exact marker syntax was not scored.
+
+Retained artifacts: `accepted/worksheet.md`, `accepted/result.json`, and `accepted/final.txt`.
+No evidence files were emitted.

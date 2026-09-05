@@ -1,0 +1,4 @@
+- [P1] fixture/project/EventLog.swift:24: `try!` terminates the process for valid `Codable` payloads whose runtime encoding throws
+  `append` is also non-throwing, so the documented typed encoding failure cannot reach the caller.
+
+DD-VERDICT: BLOCK
