@@ -17,3 +17,14 @@ Reject interior empty records as replay corruption.
 # Smoke
 
 No schema `0.2` result is retained.
+
+# Accepted baseline
+
+The latest accepted baseline is a `FAIL` from `codex` / `gpt-5.6-sol` / `high`, accepted on 2026-09-05.
+The response correctly reports that empty-subsequence filtering silently accepts interior empty records as replay corruption, distinguishes the permitted final delimiter, and blocks on rejection by construction.
+The overall result fails because the rubric explicitly forbids outside-root inspection while the provider read an installed `using-superpowers/SKILL.md` outside the declared fixture inventory.
+As in AR-16, the provider-facing prompt does not state that isolation restriction as explicitly as AR-13 and AR-14; this is retained as a scenario-design observation.
+No authenticated deterministic `DD-PATTERN` checker was available; exact marker syntax was not scored.
+
+Retained artifacts: `accepted/worksheet.md`, `accepted/result.json`, and `accepted/final.txt`.
+No evidence files were emitted.

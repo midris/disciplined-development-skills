@@ -1,0 +1,4 @@
+- [P1] fixture/project/EventLog.swift:20: Empty records are silently discarded instead of rejected as corruption
+  `omittingEmptySubsequences: true` accepts leading, interior, and multiple trailing newlines, including a newline-only file. This violates the contract’s exact-record replay and single optional terminator requirements.
+
+DD-VERDICT: BLOCK
