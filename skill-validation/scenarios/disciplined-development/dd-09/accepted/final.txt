@@ -1,0 +1,8 @@
+1. **Discover:** Reconcile the active plan and git history against the whole repository and current branch diff; trace every `confirm_overwrite()` reference and the destructive export path.
+2. **Resolve scope:** Record the discovered missing safeguard. Before editing, obtain written sign-off either to restore it or to amend the plan with an explicit rationale. A reviewer cannot authorize this scope change. If unresolved, stop—no PR.
+3. **Implement if authorized:** Restore the safeguard test-first, verify the live destructive and JSON export flows, sweep stale references, and commit code, tests, plan/checklist updates, and `References swept:` together.
+4. **Invalidate stale evidence:** Discard prior JSON-only verification or review evidence after any scope-resolving edit; rerun verification against the final branch state.
+5. **Parent self-review:** Run the required deep, whole-repository, plan-anchored adversarial review and resolve findings. Any remediation restarts this review checkpoint.
+6. **External review:** Review the same whole-branch, plan-anchored scope. `[P0]`–`[P2]` block; fixes restart parent self-review and external review. `[P3]` is advisory. No dispatched agent performs Gate 5 or opens the PR.
+7. **Durable smoke:** On the final reviewed commit, smoke both affected JSON and destructive-export flows; preserve commands, outputs, and artifacts in the prepared PR body.
+8. **First permitted PR:** Invoke the finishing-branch workflow; only the parent or user may open the PR, using that evidence-bearing body.
