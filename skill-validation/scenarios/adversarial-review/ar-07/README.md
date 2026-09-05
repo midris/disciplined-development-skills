@@ -15,3 +15,12 @@ Treat producer ordering as an unresolved blocking invariant.
 # Smoke
 
 No schema `0.2` result is retained.
+
+# Accepted baseline
+
+The latest accepted baseline is a `PASS` from `codex` / `gpt-5.6-sol` / `high`, accepted on 2026-09-05.
+The response identifies the unenforced producer-ordering invariant, grades it P2, and gives a blocking disposition.
+The worksheet records malformed fixture hunk counts and an ambiguous additional finding; neither prevents judgment of the focused ordering criteria.
+
+Retained artifacts: `accepted/worksheet.md`, `accepted/result.json`, and `accepted/final.txt`.
+No evidence files were emitted.

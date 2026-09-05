@@ -1,0 +1,10 @@
+- [P1] fixture/subject/review-series.patch:5: Malformed hunk counts make the patch unappliable
+  The first hunk declares three original lines and nine resulting lines but contains only six additions and no context lines; `git apply --numstat` fails at line 13. The remaining hunks have the same malformed structure.
+
+- [P1] swift/Steno/Sources/Steno/Calendar/CalendarView.swift:144: Ongoing meetings are returned as “upcoming”
+  Filtering on `end >= now` includes meetings whose start is already past, so an ongoing meeting can consume the limit, sort ahead of future meetings, and render as `in 0m`. The documented “next upcoming meetings” contract requires filtering by start time.
+
+- [P2] swift/Steno/Sources/Steno/Health/MenuViewModel.swift:106: Countdown assignment relies on an unenforced input-order invariant
+  `make` gives the countdown to index zero without finding or validating the soonest meeting. Its public array parameter does not state or enforce sorting, so alternate callers or mocks can produce a countdown on the wrong row.
+
+DD-VERDICT: BLOCK
