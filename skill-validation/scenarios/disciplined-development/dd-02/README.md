@@ -18,3 +18,9 @@ Preserve Gate 1–5 timing and order, parent artifacts and destinations, fail-cl
 # Smoke
 
 No schema `0.2` result is retained.
+
+# Accepted baseline
+
+The latest accepted baseline is a behavioral `FAIL` from `codex` / `gpt-5.6-sol` / `high`, accepted on 2026-09-04. Task fidelity passes, while the accepted worksheet records composition failures at the whole-branch discovery and post-remediation invalidation seams.
+
+Retained artifacts: `accepted/worksheet.md`, `accepted/result.json`, and `accepted/final.txt`. No evidence files were emitted.
