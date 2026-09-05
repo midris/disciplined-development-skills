@@ -157,6 +157,13 @@ CATALOG = {
     },
 }
 
+ACCEPTED_SCENARIOS = {"dd-01"}
+ACCEPTED_FILES = {
+    "accepted/final.txt",
+    "accepted/result.json",
+    "accepted/worksheet.md",
+}
+
 
 def _package_files(scenario_dir: Path) -> set[str]:
     return {
@@ -167,9 +174,12 @@ def _package_files(scenario_dir: Path) -> set[str]:
 
 
 def _expected_files(scenario_id: str) -> set[str]:
-    return {"README.md", "prompt.md", "rubric.md", "test.json"} | {
+    files = {"README.md", "prompt.md", "rubric.md", "test.json"} | {
         source for source, _, _ in CATALOG[scenario_id]["packaged"]
     }
+    if scenario_id in ACCEPTED_SCENARIOS:
+        files |= ACCEPTED_FILES
+    return files
 
 
 def _expected_fixtures(scenario_id: str) -> tuple[tuple[str, str], ...]:
