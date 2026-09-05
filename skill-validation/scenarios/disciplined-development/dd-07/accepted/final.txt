@@ -1,0 +1,11 @@
+{
+  "state": "scope_approved_no_dispatch",
+  "delegation_bound": "Only the signed buffered `--format json` behavior and its regression test; require skill/scope reread, no sub-dispatch, and stop before orchestrator-owned review/PR gates.",
+  "first_required_evidence": "A producer-shaped regression test is written first, run, and observed failing for the missing JSON behavior.",
+  "acceptance_authority": "orchestrator",
+  "blocked": [
+    "production implementation",
+    "candidate diff or commit",
+    "acceptance or completion claims"
+  ]
+}
