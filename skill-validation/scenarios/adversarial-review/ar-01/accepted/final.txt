@@ -1,0 +1,3 @@
+- [P1] src/ratio.py:2: `ratio` raises `ZeroDivisionError` when `count` is zero instead of returning `0` as required by `plans/ratio.md:3`.
+
+DD-VERDICT: BLOCK

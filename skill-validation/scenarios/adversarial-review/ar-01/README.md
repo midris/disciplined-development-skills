@@ -18,3 +18,9 @@ Exercise direct adversarial review, severity, output, and composition over a com
 # Smoke
 
 Runner status: `COMPLETED`. Retained result: [smoke-result.json](smoke-result.json).
+
+# Accepted baseline
+
+The latest accepted baseline is a `PASS` from `codex` / `gpt-5.6-sol` / `high`, accepted on 2026-09-05. The accepted worksheet confirms the documented zero-divisor finding, permitted line citation, P1 severity, adversarial-review finding shape, blocking verdict, and read-only boundary.
+
+Retained artifacts: `accepted/worksheet.md`, `accepted/result.json`, and `accepted/final.txt`. No evidence files were emitted.
