@@ -73,10 +73,12 @@ task-fidelity concerns rather than authenticated parser protocols. LP-06's optio
 unnamed repository-wide command is therefore retained as a precision note, not
 promoted into a semantic failure when all required commands are runnable.
 
-The scenario READMEs still describe their provenance using the validation
-document's former pre-archive path. This does not affect prompt, rubric, fixture,
-or accepted-run integrity, but the wording should be corrected once across all
-seven scenarios rather than piecemeal.
+The scenario READMEs intentionally retain the validation document's source-era
+`skill-validation/lean-plan-writing.md` path as provenance. Archive commit
+`a8e9550865ee38775c47d1d4e9b2e5224b4bd74e` explicitly classified all seven
+matches as intentionally stale source-record provenance; they identify where the
+canonical catalog text lived historically rather than acting as current links.
+No README rewrite is required.
 
 ## Execution-process observation
 
@@ -104,9 +106,7 @@ runs do not answer those questions.
 
 ## Next actions
 
-1. Correct the former validation-document path consistently across all seven
-   scenario READMEs as a catalog-wide documentation cleanup.
-2. Select the next skill catalog for the same scenario-by-scenario current-main
+1. Select the next skill catalog for the same scenario-by-scenario current-main
    audit and single-run process-development exercise.
-3. Do not begin rewrite comparison, model-matrix execution, or rewrite work until
+2. Do not begin rewrite comparison, model-matrix execution, or rewrite work until
    the current scenario portfolio and scoring process are sufficiently established.
