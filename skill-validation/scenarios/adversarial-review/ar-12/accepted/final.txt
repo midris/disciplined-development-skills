@@ -1,0 +1,4 @@
+- [P1] fixture/project/proposal.md:4: The rollout criterion does not measure the governing outcome
+  Final-screen completion among wizard starters neither measures time from signup nor requires a successful export, and it excludes users who never start the wizard. The rollout could reach 90% while median signup-to-first-successful-export worsens or remains unchanged.
+
+DD-VERDICT: BLOCK
