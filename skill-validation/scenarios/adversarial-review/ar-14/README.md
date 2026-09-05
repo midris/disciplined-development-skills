@@ -25,3 +25,13 @@ Apply the skill-authoring lens while retaining the holistic baseline.
 # Smoke
 
 No schema `0.2` result is retained.
+
+# Accepted baseline
+
+The latest accepted baseline is a `FAIL` from `codex` / `gpt-5.6-sol` / `high`, accepted on 2026-09-05.
+The response catches the workflow-description trap, missing watched evidence, and three independent release-process defects, but it does not identify that the bare discipline rules remain open to rationalization because they lack concrete excuses and counters.
+The provider transcript reads only declared fixture paths and satisfies the fixture-only execution boundary.
+No authenticated deterministic response checker applies.
+
+Retained artifacts: `accepted/worksheet.md`, `accepted/result.json`, and `accepted/final.txt`.
+No evidence files were emitted.

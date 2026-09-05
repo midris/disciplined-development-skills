@@ -1,0 +1,16 @@
+- [P1] fixture/project/SKILL.md:10: Validation failures do not block the release
+  The skill requires checks to be executed, but never requires them to pass or instructs the agent to stop before changelog, tag, and push operations.
+
+- [P1] fixture/project/SKILL.md:8: “Every validation command” is impossible to enumerate or execute
+  The release plan’s location and format are undefined, no validation commands are listed, and behavior for an absent or malformed plan is unspecified.
+
+- [P1] fixture/project/SKILL.md:8: Release mutations lack targets and partial-failure handling
+  The changelog path and format, tag name/type/commit, push remote/refspec, and retry behavior are unspecified. A failure after tagging can leave ambiguous state that a retry may mishandle.
+
+- [P2] fixture/project/SKILL.md:3: The description improperly summarizes the complete workflow
+  Skill-authoring guidance requires descriptions to contain triggering conditions only; this description lets agents shortcut the body, which merely repeats it on line 8.
+
+- [P2] fixture/project/SKILL.md:10: The discipline rule is unsupported by a watched failure
+  The supplied artifact includes no failing baseline, pressure scenario, compliance test, or observed rationalization demonstrating that these instructions prevent skipped validation.
+
+DD-VERDICT: BLOCK

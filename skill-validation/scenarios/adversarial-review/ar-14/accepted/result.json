@@ -1,0 +1,211 @@
+{
+  "artifacts": {
+    "config": {
+      "bytes": 2310,
+      "exists": true,
+      "path": "config.json",
+      "sha256": "5b782b6a9f8dd441152e6c49699cc2bc1322f2d8b3c079c42713f0d42850e4ff"
+    },
+    "evidence": {
+      "empty": true,
+      "entries": [],
+      "exists": true,
+      "path": "workspace/evidence"
+    },
+    "final": {
+      "bytes": 1339,
+      "exists": true,
+      "path": "final.txt",
+      "sha256": "cc71af707af2a3c5fb7cd58ccfbb34e5bb247476282f8b0f1482eb6b42fc55d7"
+    },
+    "fixture": {
+      "empty": false,
+      "entries": [
+        {
+          "bytes": null,
+          "path": "project",
+          "sha256": null,
+          "type": "directory"
+        },
+        {
+          "bytes": 397,
+          "path": "project/SKILL.md",
+          "sha256": "2a51181ec6e1f7f990bcd04e78f2459a88922ceaa121446c1e1b9696966c061b",
+          "type": "file"
+        },
+        {
+          "bytes": null,
+          "path": "skills",
+          "sha256": null,
+          "type": "directory"
+        },
+        {
+          "bytes": null,
+          "path": "skills/adversarial-review",
+          "sha256": null,
+          "type": "directory"
+        },
+        {
+          "bytes": 10295,
+          "path": "skills/adversarial-review/SKILL.md",
+          "sha256": "9004ff153d5dc3a3690254667c4f666151dcabff7ef6f705cc751134be56499c",
+          "type": "file"
+        },
+        {
+          "bytes": null,
+          "path": "skills/superpowers",
+          "sha256": null,
+          "type": "directory"
+        },
+        {
+          "bytes": null,
+          "path": "skills/superpowers/requesting-code-review",
+          "sha256": null,
+          "type": "directory"
+        },
+        {
+          "bytes": 2956,
+          "path": "skills/superpowers/requesting-code-review/SKILL.md",
+          "sha256": "d71cc01ba56d2325cf8af5f7c11837819b63ecd57de0bfdb812f7f3ff7751df8",
+          "type": "file"
+        },
+        {
+          "bytes": 5213,
+          "path": "skills/superpowers/requesting-code-review/code-reviewer.md",
+          "sha256": "b2f2ec7596925fe52dac158fdfbca19b3a7d779d619c481e6706a6c0001662d3",
+          "type": "file"
+        },
+        {
+          "bytes": null,
+          "path": "skills/superpowers/test-driven-development",
+          "sha256": null,
+          "type": "directory"
+        },
+        {
+          "bytes": 9015,
+          "path": "skills/superpowers/test-driven-development/SKILL.md",
+          "sha256": "bf1b8216e523851a411e91d429a7c1c2a173e79d88957bc78e348218d50edd54",
+          "type": "file"
+        },
+        {
+          "bytes": null,
+          "path": "skills/superpowers/using-superpowers",
+          "sha256": null,
+          "type": "directory"
+        },
+        {
+          "bytes": null,
+          "path": "skills/superpowers/using-superpowers/references",
+          "sha256": null,
+          "type": "directory"
+        },
+        {
+          "bytes": 1774,
+          "path": "skills/superpowers/using-superpowers/references/codex-tools.md",
+          "sha256": "d3f113a8ebbd748e8ba847b09b57b7685442775ca4ee194d693ce3663f8fac68",
+          "type": "file"
+        },
+        {
+          "bytes": null,
+          "path": "skills/superpowers/writing-skills",
+          "sha256": null,
+          "type": "directory"
+        },
+        {
+          "bytes": 26360,
+          "path": "skills/superpowers/writing-skills/SKILL.md",
+          "sha256": "d34db5c8aed6a4e0440132bd0613aace70a693ec7819d5637ad77481d8e10d1b",
+          "type": "file"
+        },
+        {
+          "bytes": 46197,
+          "path": "skills/superpowers/writing-skills/anthropic-best-practices.md",
+          "sha256": "217629b356c09c9bd11017c9788e8fc654ca1b32c92d4a51cd490e16dd65e59a",
+          "type": "file"
+        },
+        {
+          "bytes": null,
+          "path": "skills/superpowers/writing-skills/examples",
+          "sha256": null,
+          "type": "directory"
+        },
+        {
+          "bytes": 5423,
+          "path": "skills/superpowers/writing-skills/examples/CLAUDE_MD_TESTING.md",
+          "sha256": "0b379a3415e185d3c434b3ad283d8aa132f3022c2a4f210f168865b5986bcef0",
+          "type": "file"
+        },
+        {
+          "bytes": 5970,
+          "path": "skills/superpowers/writing-skills/graphviz-conventions.dot",
+          "sha256": "e2890a593c91370e384b42f2f67b1a6232c9e69dddea7891a0c1c46d7b20b694",
+          "type": "file"
+        },
+        {
+          "bytes": 5901,
+          "path": "skills/superpowers/writing-skills/persuasion-principles.md",
+          "sha256": "a51bc9bf75189ea73a27b3fb504a2fdfdb966fb1f7f1cdf03203230a216ccc03",
+          "type": "file"
+        },
+        {
+          "bytes": 4857,
+          "path": "skills/superpowers/writing-skills/render-graphs.js",
+          "sha256": "ccda971a87bb185f8febf81c56b556a20d026fa980c17b35fa3e8824fbb37852",
+          "type": "file"
+        },
+        {
+          "bytes": 12558,
+          "path": "skills/superpowers/writing-skills/testing-skills-with-subagents.md",
+          "sha256": "c711346852c911b24a84aa161e0cff06a4cd7f4e2fa9e9c0a266cead5afcbade",
+          "type": "file"
+        }
+      ],
+      "exists": true,
+      "path": "workspace/fixture"
+    },
+    "prompt": {
+      "bytes": 843,
+      "exists": true,
+      "path": "prompt.txt",
+      "sha256": "13836435828f3750bc52e2bbbe4b5827031fe97963e3fec54f4a279850cf38f7"
+    },
+    "prompt_template": {
+      "bytes": 593,
+      "exists": true,
+      "path": "prompt-template.txt",
+      "sha256": "02531c56c34ec74e7148730ab81388aba27cbc4d7a68d4a8577d8ac9c83c3539"
+    },
+    "stderr": {
+      "bytes": 0,
+      "exists": true,
+      "path": "stderr.txt",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "stdout": {
+      "bytes": 62353,
+      "exists": true,
+      "path": "stdout.txt",
+      "sha256": "e5b9dde17104400b7704cc4559fccb828e24ca5ee80681401499688aea34ba7a"
+    }
+  },
+  "duration_seconds": 104.601,
+  "execution": {
+    "effort": "high",
+    "executable": "codex",
+    "exit_code": 0,
+    "invocation_started": true,
+    "model": "gpt-5.6-sol",
+    "provider": "codex",
+    "timed_out": false,
+    "timeout_seconds": 900
+  },
+  "finished_at": "2026-09-05T16:01:56.193Z",
+  "infrastructure_error": null,
+  "run_id": "20260905T160011594Z-ar-14-ad458f10-fa5f-49a4-9926-6b54bd146d2f-gcqe7jx1",
+  "schema_version": "0.2",
+  "started_at": "2026-09-05T16:00:11.594Z",
+  "status": "COMPLETED",
+  "test": {
+    "id": "ar-14"
+  }
+}
