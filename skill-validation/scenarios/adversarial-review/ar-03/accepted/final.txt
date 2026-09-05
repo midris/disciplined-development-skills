@@ -1,0 +1,7 @@
+- [P1] src/retry.py:5: `retry_batch` violates `normalize_tasks`’ documented ordered-input precondition
+  Unlike the other call sites, it passes tasks through unsorted, so retries can produce incorrectly ordered results.
+
+- [P2] plans/normalize.md:5: The sorting-overhead rationale contradicts the governing benchmark
+  The plan claims 18% overhead, while `benchmarks/sort.json:1` records 1.8%—a tenfold overstatement that invalidates the stated justification.
+
+DD-VERDICT: BLOCK

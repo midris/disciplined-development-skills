@@ -1,0 +1,175 @@
+{
+  "artifacts": {
+    "config": {
+      "bytes": 1296,
+      "exists": true,
+      "path": "config.json",
+      "sha256": "a794ed3466b46aa08f24fe9f4e348cc996f81ac93f8cef25eeade7c3f27641b5"
+    },
+    "evidence": {
+      "empty": true,
+      "entries": [],
+      "exists": true,
+      "path": "workspace/evidence"
+    },
+    "final": {
+      "bytes": 482,
+      "exists": true,
+      "path": "final.txt",
+      "sha256": "87d7692a9463345b52cd28fb085d877ea94f954fc8b4aeb55703386b1190abd8"
+    },
+    "fixture": {
+      "empty": false,
+      "entries": [
+        {
+          "bytes": null,
+          "path": "project",
+          "sha256": null,
+          "type": "directory"
+        },
+        {
+          "bytes": null,
+          "path": "project/benchmarks",
+          "sha256": null,
+          "type": "directory"
+        },
+        {
+          "bytes": 31,
+          "path": "project/benchmarks/sort.json",
+          "sha256": "2a3c39905224a730da2182fa14aad68215caf7a536e251f818f751d4c2e4f2ae",
+          "type": "file"
+        },
+        {
+          "bytes": null,
+          "path": "project/plans",
+          "sha256": null,
+          "type": "directory"
+        },
+        {
+          "bytes": 200,
+          "path": "project/plans/normalize.md",
+          "sha256": "963cae0e7dbd0d03ad3dc944d53d79bf5166a029e2ee08ccc8b3e0c7c007ecd1",
+          "type": "file"
+        },
+        {
+          "bytes": null,
+          "path": "project/src",
+          "sha256": null,
+          "type": "directory"
+        },
+        {
+          "bytes": 110,
+          "path": "project/src/bulk.py",
+          "sha256": "1640200ee740a66856d513fc3534ab6b62301f0838a0ebc438499620db2bbab0",
+          "type": "file"
+        },
+        {
+          "bytes": 72,
+          "path": "project/src/normalize.py",
+          "sha256": "947c4926116f228a4843a7aa213cf46c86c03553315f55735b43b5085998223d",
+          "type": "file"
+        },
+        {
+          "bytes": 99,
+          "path": "project/src/retry.py",
+          "sha256": "424d10fc3e9c4ef274312c2bffe331f60b53ad1d6ed5d873a0d13fb07aa9ff7f",
+          "type": "file"
+        },
+        {
+          "bytes": 110,
+          "path": "project/src/validate.py",
+          "sha256": "020d6e30bd07ed9d44fe122dc0772cdf7080434947be2cc2dc21a878e5dbbbb0",
+          "type": "file"
+        },
+        {
+          "bytes": null,
+          "path": "skills",
+          "sha256": null,
+          "type": "directory"
+        },
+        {
+          "bytes": null,
+          "path": "skills/adversarial-review",
+          "sha256": null,
+          "type": "directory"
+        },
+        {
+          "bytes": 10295,
+          "path": "skills/adversarial-review/SKILL.md",
+          "sha256": "9004ff153d5dc3a3690254667c4f666151dcabff7ef6f705cc751134be56499c",
+          "type": "file"
+        },
+        {
+          "bytes": null,
+          "path": "skills/superpowers",
+          "sha256": null,
+          "type": "directory"
+        },
+        {
+          "bytes": null,
+          "path": "skills/superpowers/requesting-code-review",
+          "sha256": null,
+          "type": "directory"
+        },
+        {
+          "bytes": 2956,
+          "path": "skills/superpowers/requesting-code-review/SKILL.md",
+          "sha256": "d71cc01ba56d2325cf8af5f7c11837819b63ecd57de0bfdb812f7f3ff7751df8",
+          "type": "file"
+        },
+        {
+          "bytes": 5213,
+          "path": "skills/superpowers/requesting-code-review/code-reviewer.md",
+          "sha256": "b2f2ec7596925fe52dac158fdfbca19b3a7d779d619c481e6706a6c0001662d3",
+          "type": "file"
+        }
+      ],
+      "exists": true,
+      "path": "workspace/fixture"
+    },
+    "prompt": {
+      "bytes": 686,
+      "exists": true,
+      "path": "prompt.txt",
+      "sha256": "ae4b64fc456be5240cc2f121596914f59c3bed5f7c2bf2460d053c11d8237a52"
+    },
+    "prompt_template": {
+      "bytes": 436,
+      "exists": true,
+      "path": "prompt-template.txt",
+      "sha256": "a32a3269f7e89640a65b041b3f9d1ec5907f7397b032593e9473e59e42518fc8"
+    },
+    "stderr": {
+      "bytes": 0,
+      "exists": true,
+      "path": "stderr.txt",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "stdout": {
+      "bytes": 43765,
+      "exists": true,
+      "path": "stdout.txt",
+      "sha256": "6c5bfc5d5ad7dc327758ca6d61264f77beee8d9b09dfa2e75a79eb0598c0f64a"
+    }
+  },
+  "duration_seconds": 79.96,
+  "execution": {
+    "effort": "high",
+    "executable": "codex",
+    "exit_code": 0,
+    "invocation_started": true,
+    "model": "gpt-5.6-sol",
+    "provider": "codex",
+    "timed_out": false,
+    "timeout_seconds": 900
+  },
+  "finished_at": "2026-09-05T13:22:20.629Z",
+  "infrastructure_error": null,
+  "run_id": "20260905T132100669Z-ar-03-936e0f22-09cb-448c-9cb3-1fc63044e6d5-kb5ge5wj",
+  "schema_version": "0.2",
+  "started_at": "2026-09-05T13:21:00.669Z",
+  "status": "COMPLETED",
+  "test": {
+    "id": "ar-03"
+  }
+}

@@ -21,3 +21,9 @@ Require complete caller enumeration, rationale verification, and blocking treatm
 # Smoke
 
 No schema `0.2` result is retained.
+
+# Accepted baseline
+
+The latest accepted baseline is a `FAIL` from `codex` / `gpt-5.6-sol` / `high`, accepted on 2026-09-05. It correctly identifies the unsorted retry path, rejects the false benchmark rationale, assigns blocking severities, and remains read-only, but it does not explicitly enumerate and account for the two sorting callers.
+
+Retained artifacts: `accepted/worksheet.md`, `accepted/result.json`, and `accepted/final.txt`. No evidence files were emitted.
