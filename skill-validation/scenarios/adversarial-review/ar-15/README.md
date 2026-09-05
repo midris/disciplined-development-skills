@@ -21,3 +21,13 @@ Avoid inventing a blocking defect or shared cause in a supported bounded proposa
 # Smoke
 
 No schema `0.2` result is retained.
+
+# Accepted baseline
+
+The latest accepted baseline is a qualified `PASS` from `codex` / `gpt-5.6-sol` / `high`, accepted on 2026-09-05.
+After reading all six governing project files, the response reports no findings, invents no unsupported blocker, and preserves the bounded display-only outcome.
+The provider also read an installed `using-superpowers/SKILL.md` outside the declared fixture inventory; this input-fidelity failure limits causal attribution to the pinned skills but does not prevent direct semantic judgment of the response.
+No authenticated deterministic response checker applies.
+
+Retained artifacts: `accepted/worksheet.md`, `accepted/result.json`, and `accepted/final.txt`.
+No evidence files were emitted.
