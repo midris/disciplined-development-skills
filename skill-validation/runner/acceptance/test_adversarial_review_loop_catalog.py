@@ -76,6 +76,13 @@ OWN_DEPENDENCY = (
     "8dd1b8e698edec3700c6d89517dbe96febd3bacd3f6ea21c1a3569c62ea104b5",
 )
 
+ACCEPTED_SCENARIOS = {"cs"}
+ACCEPTED_FILES = {
+    "accepted/final.txt",
+    "accepted/result.json",
+    "accepted/worksheet.md",
+}
+
 
 def _package_files(scenario_dir: Path) -> set[str]:
     return {
@@ -89,6 +96,8 @@ def _expected_files(scenario_id: str) -> set[str]:
     files = {"README.md", "prompt.md", "rubric.md", "test.json"}
     if scenario_id == "own":
         files.add(OWN_DEPENDENCY[0])
+    if scenario_id in ACCEPTED_SCENARIOS:
+        files |= ACCEPTED_FILES
     return files
 
 

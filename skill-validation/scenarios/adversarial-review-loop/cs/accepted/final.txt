@@ -1,0 +1,12 @@
+Do not fix only `runbook.md:18`.
+
+This is the same class as round 1: documentation commands that use `cd` and leave the caller in another directory. The repeated finding shows the first remediation was an incomplete class sweep.
+
+Next:
+
+1. Record the shared-axis verdict in the review work artifact.
+2. Search the entire branch—especially every setup/runbook document and shell snippet—for directory-changing commands that can strand the shell.
+3. Fix all instances in one pass using scoped forms such as `(cd build && ./configure)` or command-native directory options like `make -C build`.
+4. Validate the affected command sequences, then rerun the same reviewer against the new HEAD.
+
+That rerun completes cycle 2. Continue only until a clean review or the three-cycle cap; if cycle 3 still reports a P0–P2 finding, use the mandatory fresh cold-read escape rather than starting cycle 4.
