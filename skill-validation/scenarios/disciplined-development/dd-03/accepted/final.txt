@@ -1,0 +1,5 @@
+| Case | Disposition | Threshold | Smallest action |
+|---|---|---|---|
+| `tags` absent | address now | Required by contract; omission is valid accepted input. | Ensure omission is accepted; add the minimal contract test if coverage is absent. |
+| `tags: "urgent"` | address now | Representable parser input producing a crash or wrong result is a defect; contract validation must robustly reject malformed input. | Reject non-array `tags` with the existing validation mechanism; add one rejection test. |
+| `tags` with 100,000 entries | no special handling; record non-guarantee | No contract requirement, supported maximum, production observation, performance requirement, or fragile invariant demands special handling. | Keep generic array handling and record that extreme-size performance is not guaranteed. |

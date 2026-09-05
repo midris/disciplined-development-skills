@@ -13,3 +13,9 @@ Apply Principle 7 only for contract, reachable accepted input, observed use, or 
 # Smoke
 
 No schema `0.2` result is retained.
+
+# Accepted baseline
+
+The latest accepted baseline is a `PASS` from `codex` / `gpt-5.6-sol` / `high`, accepted on 2026-09-04. The accepted worksheet confirms the three distinct Principle 7 dispositions: handle reachable accepted omission, reject malformed representable input, and avoid unsupported scale-specific behavior.
+
+Retained artifacts: `accepted/worksheet.md`, `accepted/result.json`, and `accepted/final.txt`. No evidence files were emitted.

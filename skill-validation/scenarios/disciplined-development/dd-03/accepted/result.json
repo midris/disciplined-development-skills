@@ -1,0 +1,121 @@
+{
+  "artifacts": {
+    "config": {
+      "bytes": 636,
+      "exists": true,
+      "path": "config.json",
+      "sha256": "1afa4645581e998e7156e6ddfdf63a27a5decd77d2d61699861c2685eb624282"
+    },
+    "evidence": {
+      "empty": true,
+      "entries": [],
+      "exists": true,
+      "path": "workspace/evidence"
+    },
+    "final": {
+      "bytes": 811,
+      "exists": true,
+      "path": "final.txt",
+      "sha256": "aa7a89b16a22da9adcd24161745fb19172de7d031eeb6ea178a0779bd3e783de"
+    },
+    "fixture": {
+      "empty": false,
+      "entries": [
+        {
+          "bytes": null,
+          "path": "project",
+          "sha256": null,
+          "type": "directory"
+        },
+        {
+          "bytes": null,
+          "path": "project/dd-03",
+          "sha256": null,
+          "type": "directory"
+        },
+        {
+          "bytes": null,
+          "path": "project/dd-03/sources",
+          "sha256": null,
+          "type": "directory"
+        },
+        {
+          "bytes": 132,
+          "path": "project/dd-03/sources/accepted-object-contract.md",
+          "sha256": "a7dd65af335e4d25626a543e42d61e78761155906b3cc42ef2c362cf81d8bdb5",
+          "type": "file"
+        },
+        {
+          "bytes": 250,
+          "path": "project/dd-03/sources/parser-capabilities.md",
+          "sha256": "717b21cb61d87637ca241791407d9c57594e29c122cd0ef6c35e3476b5c1bee1",
+          "type": "file"
+        },
+        {
+          "bytes": null,
+          "path": "skills",
+          "sha256": null,
+          "type": "directory"
+        },
+        {
+          "bytes": null,
+          "path": "skills/disciplined-development",
+          "sha256": null,
+          "type": "directory"
+        },
+        {
+          "bytes": 13112,
+          "path": "skills/disciplined-development/SKILL.md",
+          "sha256": "1151a7575a5b6f72e007229c97efdb7a829695d08e8f44450d0d71b232e75dec",
+          "type": "file"
+        }
+      ],
+      "exists": true,
+      "path": "workspace/fixture"
+    },
+    "prompt": {
+      "bytes": 1873,
+      "exists": true,
+      "path": "prompt.txt",
+      "sha256": "bf113dfba70730232e86d52a3e326d2df754860013d28444cfe4e5d1417b16c2"
+    },
+    "prompt_template": {
+      "bytes": 1498,
+      "exists": true,
+      "path": "prompt-template.txt",
+      "sha256": "8804abc9cd643a9e54e96c0409d01cda4243ee2226f3abbdcc25ae62d1866680"
+    },
+    "stderr": {
+      "bytes": 0,
+      "exists": true,
+      "path": "stderr.txt",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "stdout": {
+      "bytes": 15699,
+      "exists": true,
+      "path": "stdout.txt",
+      "sha256": "bcb03a2f9223b6ebc1ee8a9a2f837faa82c707870b5de4250cfa45770d17804e"
+    }
+  },
+  "duration_seconds": 20.599,
+  "execution": {
+    "effort": "high",
+    "executable": "codex",
+    "exit_code": 0,
+    "invocation_started": true,
+    "model": "gpt-5.6-sol",
+    "provider": "codex",
+    "timed_out": false,
+    "timeout_seconds": 900
+  },
+  "finished_at": "2026-09-05T02:03:41.484Z",
+  "infrastructure_error": null,
+  "run_id": "20260905T020320884Z-dd-03-63810529-0fc1-49b5-a482-904d12626fa7-6ic29hz0",
+  "schema_version": "0.2",
+  "started_at": "2026-09-05T02:03:20.884Z",
+  "status": "COMPLETED",
+  "test": {
+    "id": "dd-03"
+  }
+}
