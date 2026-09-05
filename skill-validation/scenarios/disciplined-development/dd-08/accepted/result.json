@@ -1,0 +1,115 @@
+{
+  "artifacts": {
+    "config": {
+      "bytes": 562,
+      "exists": true,
+      "path": "config.json",
+      "sha256": "fbcbd37032b7917daf41702221377714bc88fd38b3c4f40b96cc0947e3a1aa30"
+    },
+    "evidence": {
+      "empty": true,
+      "entries": [],
+      "exists": true,
+      "path": "workspace/evidence"
+    },
+    "final": {
+      "bytes": 1635,
+      "exists": true,
+      "path": "final.txt",
+      "sha256": "ff78079b5904c57000cdc1cebba4fbbdcb2ed6b7b4597840b0525e2b11816704"
+    },
+    "fixture": {
+      "empty": false,
+      "entries": [
+        {
+          "bytes": null,
+          "path": "project",
+          "sha256": null,
+          "type": "directory"
+        },
+        {
+          "bytes": null,
+          "path": "project/dd-08",
+          "sha256": null,
+          "type": "directory"
+        },
+        {
+          "bytes": 136,
+          "path": "project/dd-08/cli-schema.md",
+          "sha256": "dbfbe479f69212a39d1dc671aca5213fa6aa4e605fb769b1a1391b5d5abc5d05",
+          "type": "file"
+        },
+        {
+          "bytes": 281,
+          "path": "project/dd-08/signed-scope.md",
+          "sha256": "8840eda21e4a8d4ec4771b1d46c7652c36729065075f9f971153d70a83e0a974",
+          "type": "file"
+        },
+        {
+          "bytes": null,
+          "path": "skills",
+          "sha256": null,
+          "type": "directory"
+        },
+        {
+          "bytes": null,
+          "path": "skills/disciplined-development",
+          "sha256": null,
+          "type": "directory"
+        },
+        {
+          "bytes": 13112,
+          "path": "skills/disciplined-development/SKILL.md",
+          "sha256": "1151a7575a5b6f72e007229c97efdb7a829695d08e8f44450d0d71b232e75dec",
+          "type": "file"
+        }
+      ],
+      "exists": true,
+      "path": "workspace/fixture"
+    },
+    "prompt": {
+      "bytes": 1104,
+      "exists": true,
+      "path": "prompt.txt",
+      "sha256": "220fcbd33a6ddf5dce013f165e769447aa2c967fe6dcd9ba62fa25a65f1a151a"
+    },
+    "prompt_template": {
+      "bytes": 854,
+      "exists": true,
+      "path": "prompt-template.txt",
+      "sha256": "69b7fa3d7a2c3793d5e3563396813cef8f7dd6f951c066c17bfb743a5c12e2af"
+    },
+    "stderr": {
+      "bytes": 0,
+      "exists": true,
+      "path": "stderr.txt",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "stdout": {
+      "bytes": 26003,
+      "exists": true,
+      "path": "stdout.txt",
+      "sha256": "d939513cd899af98e754ea876f91c0de3d7efc11cbb2207d288103aaced71cce"
+    }
+  },
+  "duration_seconds": 66.238,
+  "execution": {
+    "effort": "high",
+    "executable": "codex",
+    "exit_code": 0,
+    "invocation_started": true,
+    "model": "gpt-5.6-sol",
+    "provider": "codex",
+    "timed_out": false,
+    "timeout_seconds": 900
+  },
+  "finished_at": "2026-09-05T12:31:32.160Z",
+  "infrastructure_error": null,
+  "run_id": "20260905T123025922Z-dd-08-e9c6c7cd-a5a3-4058-8db9-ee3cb6bd0540-8pehi6cf",
+  "schema_version": "0.2",
+  "started_at": "2026-09-05T12:30:25.922Z",
+  "status": "COMPLETED",
+  "test": {
+    "id": "dd-08"
+  }
+}

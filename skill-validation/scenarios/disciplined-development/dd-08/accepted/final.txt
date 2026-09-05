@@ -1,0 +1,19 @@
+1. **Gate 1 — reject candidate as-is:** Re-read `signed-scope.md` and `cli-schema.md`; inspect the complete diff. Record: `output_mode → format` is unsigned scope drift. **No commit.**
+2. **Reconcile scope:** Restore `output_mode` in code, schema, examples, and docs. Retain only buffered `--format json` behavior and its regression test.
+3. **Prove regression:** Temporarily remove the implementation, run the focused test and capture its failure; restore implementation, then capture the focused test passing.
+4. **Gate 3 — fresh runtime evidence:** Run the full unit suite and capture command, complete output, zero failures, and exit `0`. Invoke the real CLI with `--format json`; capture command, JSON stdout, buffered-export behavior, and exit `0`.
+5. **Gate 4 — stale-reference sweep:** Search code, schema, examples, and docs for both `output_mode` and the erroneous schema-key use of `format`; reconcile all results. Reinspect the final diff against the signed scope.
+6. **Durable bookkeeping:** Update any active-plan checkbox in this same commit. Stage only the approved implementation, regression test, and required bookkeeping. Verify the staged diff.
+7. **First permitted green commit:** Create one `feat:` commit containing test and implementation together. Include:
+
+   ```text
+   References swept:
+   - code, schema, examples, and documentation
+   - output_mode preserved as the schema key
+   - --format json retained solely as the approved CLI export option
+
+   Verification:
+   - <focused red/green evidence>
+   - <full unit-suite command and exit 0>
+   - <actual CLI command, JSON result, and exit 0>
+   ```

@@ -165,6 +165,7 @@ ACCEPTED_SCENARIOS = {
     "dd-05",
     "dd-06",
     "dd-07",
+    "dd-08",
 }
 ACCEPTED_FILES = {
     "accepted/final.txt",
