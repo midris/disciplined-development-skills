@@ -1,0 +1,19 @@
+I do not patch the cited line or open the PR yet. Cycle 3 requires a pattern verdict first. I write this verbatim in the review-loop artifact:
+
+```text
+Cycle 3 pattern verdict: shared root.
+
+Cycle 1 normalized missing `needs_auth` into “available.”
+Cycle 2 normalized an unreadable snapshot into an empty result.
+Cycle 3 normalized an absent provider pin into “auto,” allowing selection to proceed.
+
+These are surface-different instances of one fail-open state-modeling defect: provider/cache anomalies are being collapsed into benign states. The governing requirement to keep the interface available does not permit reporting an anomaly as healthy or silently proceeding as though configuration exists.
+
+Invariant: graceful degradation may select a default only after that fallback is explicitly validated as usable, while preserving and surfacing the original anomaly. Missing authentication, unreadable state, absent configuration, empty results, and healthy automatic selection must remain distinct states.
+
+Action: audit this axis project-wide across provider discovery, authentication, snapshot loading, cache parsing, pin resolution, fallback selection, status mapping, and UI rendering. Fix every violating path in one pass, then rerun the same reviewer.
+
+Gate: if the cycle-3 rerun returns any [P0]/[P1]/[P2], stop and initiate a memory-free cold review. Open the PR only after a clean rerun or a recorded cold-read verdict authorizing fix-forward.
+```
+
+I then perform that project-wide audit, fix the complete state-conflation class, and rerun the same reviewer. If it is clean, I open the PR today. If it returns another blocking finding, I use the mandatory cold-read escape instead of starting a fourth cycle.
