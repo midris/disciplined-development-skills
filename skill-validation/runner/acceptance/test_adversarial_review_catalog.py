@@ -389,6 +389,7 @@ CATALOG = {
 
 ACCEPTED_SCENARIOS = {
     "ar-01",
+    "ar-02",
 }
 ACCEPTED_FILES = {
     "accepted/final.txt",
