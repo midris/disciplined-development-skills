@@ -1,0 +1,5 @@
+A. Stop the loop and route the work toward a redo/replan; do not perform another incremental fix cycle. The cap remains exhausted—any redo is a new effort, not cycle four. Record the cold-read escape, confirmed blockers, and the redo/stop decision in the work artifact.
+
+B. Trust the cold read and stop remediation of the disputed blockers. The cap remains exhausted and does not reset. Record the escape, the material divergence, why the blockers were rejected, and why iteration stopped.
+
+C. Execute the bounded fix-forward path, sweeping the confirmed class/root before re-review. Reset the cap to three new cycles; if blocking findings remain after those cycles, require another cold-read escape. Record the escape verdict, bounded scope, fix-forward rationale, cap reset, and subsequent review outcomes.
