@@ -1,0 +1,12 @@
+checkpoint:
+  next_artifact: "Parent-authored, decision-owner-signed implementation-scope diff aligning the active export plan with the specification"
+  preserve:
+    - "JSON CLI spelling: --format json"
+    - "Selection key: output_mode"
+    - "Buffered JSON only; no streaming guarantee"
+    - "Destructive export calls confirm_overwrite() before writing"
+    - "XML deferred; consumers wait for vendor-schema approval"
+  approver: "Decision owner"
+  blocked:
+    - "All implementation until scope approval"
+    - "XML implementation until schema approval"

@@ -18,3 +18,9 @@ Require signed written scope to preserve a chosen spelling and an intentional de
 # Smoke
 
 No schema `0.2` result is retained.
+
+# Accepted baseline
+
+The latest accepted baseline is a behavioral `FAIL` from `codex` / `gpt-5.6-sol` / `high`, accepted on 2026-09-05. The accepted worksheet records that the selected JSON spelling and signed scope artifact pass, while the unstable-schema rationale and explicit planning/delegation blocks are omitted.
+
+Retained artifacts: `accepted/worksheet.md`, `accepted/result.json`, and `accepted/final.txt`. No evidence files were emitted.
