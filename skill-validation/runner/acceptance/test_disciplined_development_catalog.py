@@ -157,7 +157,7 @@ CATALOG = {
     },
 }
 
-ACCEPTED_SCENARIOS = {"dd-01", "dd-02", "dd-03"}
+ACCEPTED_SCENARIOS = {"dd-01", "dd-02", "dd-03", "dd-04"}
 ACCEPTED_FILES = {
     "accepted/final.txt",
     "accepted/result.json",
