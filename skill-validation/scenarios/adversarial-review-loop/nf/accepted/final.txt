@@ -1,0 +1,11 @@
+Do not re-run yet. Treat the accumulated findings as a shared-root pattern: **every EventLog I/O or integrity failure must surface as a typed, recoverable error—never crash and never silently discard data.**
+
+Before the next re-run:
+
+1. Record that pattern verdict in the loop’s work artifact, citing both rounds.
+2. Perform a project-wide higher-order sweep of all EventLog paths: open/create, append/write/sync, read/replay, parsing/decoding, malformed or partial records, blank records, and any catch/skip or force-crash behavior.
+3. Fix every violation of that invariant. Specifically, make an interior blank line return a typed corruption error while preserving valid cases such as an empty log or a final newline.
+4. Add tests for interior blank lines and the other enumerated failure paths, then run the relevant test suite.
+5. Only after that full axis sweep passes, re-run the same reviewer.
+
+The new finding is surface-different but shares the original root: failures in a source-of-truth log are not consistently represented explicitly and recoverably. Fixing only `replay` would risk spending another review cycle on the next manifestation of that same open axis.
