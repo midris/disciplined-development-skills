@@ -1,0 +1,8 @@
+All artifacts receive a deep, whole-repository adversarial review, composed with `superpowers:requesting-code-review`. The baseline always includes enumerating claimed classes, verifying rationale, challenging necessity, generating absent/malformed/out-of-scale cases, and grading relied-upon invariants.
+
+| Artifact | Specialized lenses and review work |
+|---|---|
+| `runbook` | **Consistency** across all three Markdown files; **executability** for zero-context setup execution. Apply `concise-writing` to detect padding. No durability review. |
+| `skill` | **Consistency**, **executability**, and **skill-authoring** via `superpowers:writing-skills`; scrutinize the description, rationalization loopholes, and whether claims are backed by observed failures. Apply `concise-writing`. No durability review. |
+| `durable-log` | **Consistency** and **durability**. Run both durability checklists: mutation/partial-state failures and read/replay corruption, versioning, ordering, retry, and empty-versus-corrupt behavior. No executability or skill-authoring lens. |
+| `limiter` | **Consistency** plus the holistic baseline, especially unstated timing/order assumptions and absent, malformed, or out-of-scale inputs. No executability, skill-authoring, or durability lens because it is pure in-memory code. |

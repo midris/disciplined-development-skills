@@ -15,3 +15,9 @@ Map the holistic baseline and additive specialized lenses by artifact kind.
 # Smoke
 
 No schema `0.2` result is retained.
+
+# Accepted baseline
+
+The latest accepted baseline is a `PASS` from `codex` / `gpt-5.6-sol` / `high`, accepted on 2026-09-05. The accepted worksheet confirms the always-on review baseline, universal consistency lens, additive artifact-specific lenses, and the mapping-only boundary.
+
+Retained artifacts: `accepted/worksheet.md`, `accepted/result.json`, and `accepted/final.txt`. No evidence files were emitted.

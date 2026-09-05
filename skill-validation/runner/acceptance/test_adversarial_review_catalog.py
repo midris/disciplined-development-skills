@@ -391,6 +391,7 @@ ACCEPTED_SCENARIOS = {
     "ar-01",
     "ar-02",
     "ar-03",
+    "ar-04",
 }
 ACCEPTED_FILES = {
     "accepted/final.txt",
