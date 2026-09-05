@@ -1,0 +1,5 @@
+Re-run the same reviewer against the updated HEAD. Do not declare the loop clean merely because the reported instance was fixed.
+
+Before re-review, verify the fix with boundary cases, especially exact multiples (`total == pageSize`, `total == 2 * pageSize`) and adjacent nonmultiples. The branch-wide class sweep has already established there are no analogous pagination sites.
+
+If the re-run reports zero [P0]/[P1]/[P2] findings, stop: the review is clean. Otherwise, classify and sweep each new finding across the branch, then continue within the three-cycle cap. A cold read is not warranted after this first cycle.

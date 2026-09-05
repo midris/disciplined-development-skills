@@ -76,7 +76,10 @@ OWN_DEPENDENCY = (
     "8dd1b8e698edec3700c6d89517dbe96febd3bacd3f6ea21c1a3569c62ea104b5",
 )
 
-ACCEPTED_SCENARIOS = {"cs"}
+ACCEPTED_SCENARIOS = {
+    "cs",
+    "t2",
+}
 ACCEPTED_FILES = {
     "accepted/final.txt",
     "accepted/result.json",
