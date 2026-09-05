@@ -19,3 +19,13 @@ Reject a generic shared cause for two independently caused findings.
 # Smoke
 
 No schema `0.2` result is retained.
+
+# Accepted baseline
+
+The latest accepted baseline is a `FAIL` from `codex` / `gpt-5.6-sol` / `high`, accepted on 2026-09-05.
+The response finds both required defects but does not use the supplied provenance to state that their causes are independent.
+Unlike the preceding qualified runs, this provider transcript reads only declared fixture paths and satisfies the fixture-only execution boundary.
+No authenticated deterministic `DD-PATTERN` checker was available; exact marker syntax was not scored.
+
+Retained artifacts: `accepted/worksheet.md`, `accepted/result.json`, and `accepted/final.txt`.
+No evidence files were emitted.

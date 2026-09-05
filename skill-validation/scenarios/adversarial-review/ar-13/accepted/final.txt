@@ -1,0 +1,7 @@
+- [P0] src/audit.py:2: Logging the complete payload exposes the forbidden `api_key` field and value
+  Any payload containing credentials is printed verbatim, leaking secrets into audit logs.
+
+- [P1] src/ratio.py:2: `ratio` raises `ZeroDivisionError` when `count` is zero
+  The governing contract requires returning `0` for this documented input.
+
+DD-VERDICT: BLOCK
