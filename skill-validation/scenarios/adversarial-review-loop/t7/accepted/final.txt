@@ -1,0 +1,11 @@
+Decision: do not call it out of scope. It is a real [P2], so remediate it by class.
+
+Next actions:
+
+1. Record the class as “unqualified threshold claim.”
+2. Search the entire branch/project for similar vague quantitative claims such as “large,” “small,” “high,” or “fast” where no measurable threshold is defined.
+3. Replace each with a qualified threshold tied to configuration or evidence, or remove the unsupported claim.
+4. Record the accumulated-pattern verdict: “stale command” and “unqualified threshold” violate different invariants, so they are scattered findings unless broader evidence shows a common documentation-accuracy root.
+5. Re-run the same reviewer against the resulting HEAD.
+
+Schedule pressure does not justify deferring a [P2]. Only a clean run—zero [P0]/[P1]/[P2]—can pass. If this is the third completed cycle, stop instead and invoke the mandatory cold-read escape; do not begin a fourth sweep.
