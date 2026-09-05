@@ -1,0 +1,11 @@
+status: BLOCKED
+gate_1: complete
+parent_actions:
+  - Ask the user/spec owner to resolve `--json` vs `--format json`; do not choose silently.
+  - Reconcile both plan files and obtain written diff signoff.
+  - Record scope: preserve `output_mode`; restore `confirm_overwrite()`; buffered JSON only.
+  - After signoff, begin test-first implementation.
+blocked:
+  - All implementation until plan and specification agree.
+  - Streaming JSON until current library support is verified.
+  - XML until vendor-schema approval.

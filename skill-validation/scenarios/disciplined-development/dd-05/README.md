@@ -18,3 +18,9 @@ Read governing sources, surface a plan/spec conflict, verify a recalled capabili
 # Smoke
 
 No schema `0.2` result is retained.
+
+# Accepted baseline
+
+The latest accepted baseline is a behavioral `FAIL` from `codex` / `gpt-5.6-sol` / `high`, accepted on 2026-09-04. Source rereading, owner resolution, and capability correction pass; the accepted worksheet records that implementation is blocked but the required planning block is omitted.
+
+Retained artifacts: `accepted/worksheet.md`, `accepted/result.json`, and `accepted/final.txt`. No evidence files were emitted.
