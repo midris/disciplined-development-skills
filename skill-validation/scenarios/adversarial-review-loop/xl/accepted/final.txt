@@ -1,0 +1,22 @@
+Decision: this is a shared-root pattern, not scattered findings. The invariant is: every persistence failure must become a typed, recoverable error with its cause preserved—never a crash, ignored failure, false success, or accepted corruption. Because the axis is visible below the three-cycle cap, audit and repair it now rather than waiting for another review.
+
+Scope: project-wide, across every Swift, Python, and Go persistence path—not merely files or components previously cited. Include storage interfaces and implementations, repositories, serializers, database and filesystem adapters, transaction helpers, caches that write through, background workers, import/export and migration code, startup recovery, RPC/FFI boundaries, and all callers that translate or consume persistence errors. Cover create, read/decode, update, delete, batch operations, commit/rollback, flush/sync/close, retries, recovery, and corruption detection.
+
+Look for:
+
+- Swift: `try!`, `try?`, force unwraps/casts, `fatalError`, assertions used for runtime failures, empty or overly broad `catch` blocks, discarded `Result` values, unchecked database/filesystem return values, unobserved `Task` failures, and `NSError` bridging that loses type or cause. Verify all paths throw or return a domain `PersistenceError`, preserve the underlying error, reject invalid decoded state, and leave transactions/files atomically recoverable.
+- Python: `except: pass`, broad catches returning defaults or success, `assert`/`sys.exit` on runtime persistence failures, unchecked `commit`, `flush`, `fsync`, `close`, serialization, rename, and transaction operations, plus background-task exceptions that are never observed. Require domain exception subclasses, `raise ... from ...` cause chaining, rollback/cleanup without masking the primary failure, and explicit corruption errors rather than defaulting malformed data.
+- Go: discarded errors (`_`), unchecked `Write`, `Close`, `Sync`, `Rename`, `Exec`, `Commit`, `Rollback`, `rows.Err`, scanner and codec errors, `panic`, `log.Fatal`, `Must` helpers, deferred cleanup errors, short writes, and error wrapping that breaks `errors.Is`/`errors.As`. Require typed or sentinel-compatible persistence errors, `%w` cause preservation, atomic update semantics, and correct handling of commit-versus-rollback failures.
+- Cross-cutting boundaries: ensure adapters do not translate failures into empty values, booleans, or success responses; retries do not hide permanent failures; cleanup errors do not overwrite primary errors; partial writes cannot be treated as success; and corrupt or incompatible stored data is surfaced distinctly from “not found.”
+
+Concrete next actions:
+
+1. Record the shared-root verdict and invariant in the review artifact.
+2. Inventory every persistence entry point and implementation across all three languages, including uncited components.
+3. Search mechanically for crash constructs, ignored errors, broad suppression, unchecked durability operations, and silent decode fallbacks.
+4. Trace representative operations end-to-end through adapters and callers to verify typed error preservation at every boundary.
+5. Repair the entire axis in one pass, using consistent domain error categories such as unavailable, permission, conflict, serialization, corruption, transaction, and durability failure.
+6. Add fault-injection tests for write, sync, rename, commit, rollback, close, encode/decode, partial-write, and corrupt-data failures, plus contract tests confirming callers receive recoverable typed errors.
+7. Re-run the same reviewer only after the full sweep. Continue under the existing cap; if findings remain on the third cycle’s re-run, use the mandatory cold-read escape instead of starting a fourth fix round.
+
+Reasoning: the successive findings differ only in surface location; closing this single invariant project-wide removes the whole class. Fixing cited instances would leave sibling paths open and predictably consume further review cycles.
