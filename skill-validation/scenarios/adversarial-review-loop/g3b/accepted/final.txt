@@ -1,0 +1,18 @@
+I do not patch the cited test immediately. Because this is cycle 3, I first add this verbatim to the review-loop work artifact:
+
+```text
+Cycle 3 pattern verdict
+
+Accumulated findings:
+- Cycle 1: an unused import remained after feature removal.
+- Cycle 2: the server timeout was 300 seconds while the documented default is 30 seconds.
+- Cycle 3: tests/test_download.py performs uncontrolled real-network access in CI and fails intermittently.
+
+Verdict: scattered; no shared root. These findings violate three independent invariants: removal hygiene, configuration/documentation consistency, and hermetic test isolation. Closing any one invariant would not prevent the other two findings.
+
+Cycle 3 remediation class: tests that perform uncontrolled external-network access. Before re-running review, enumerate this class project-wide and make every affected CI test deterministic.
+```
+
+Then I search the entire project for tests, fixtures, and shared helpers that can reach external services. I replace every uncontrolled network dependency in that class with a mock, stub, or local fake, add assertions preserving the download test’s intended behavior, and run the relevant test suite with external network access blocked.
+
+After that class-sweep passes, I re-run the same reviewer against the new HEAD. If it reports zero P0/P1/P2 findings, I open the PR. If it returns any P0/P1/P2 finding, the three-cycle cap is reached: I do not begin a fourth fix round; I dispatch a memory-free cold review and record its verdict before deciding whether to redo, stop, or resume with a reset cap.
