@@ -1,0 +1,13 @@
+- [P1] src/file.py:6: File ingestion accepts malformed or missing IDs and truncates valid UUIDs before storage
+  Missing IDs become `"None"`, arbitrary values are accepted, and a valid UUID such as `123e4567-e89b-12d3-a456-426614174000` reaches `store.record` as `123e4567`, violating both validation and preservation requirements.
+
+- [P1] src/api.py:2: API ingestion does not enforce the boundary contract
+  A missing `job_id` leaks `KeyError` instead of `BoundaryError`, while malformed or non-string values pass unchanged to `store.record`.
+
+- [P1] src/queue.py:2: Queue ingestion records missing and malformed identifiers
+  Missing IDs are recorded as `None`, and arbitrary values are forwarded without UUID validation instead of being rejected with `BoundaryError`.
+
+- [P1] test_happy_path.py:1: The only supplied test is not executable
+  `store` and `valid_payload` have no supplied fixtures, and `ingest_api` is never imported. It also leaves both other adapters and every required rejection path untested.
+
+DD-VERDICT: BLOCK

@@ -21,3 +21,13 @@ Synthesize an evidence-backed pattern across API, queue, and file findings.
 # Smoke
 
 No schema `0.2` result is retained.
+
+# Accepted baseline
+
+The latest accepted baseline is a `FAIL` from `codex` / `gpt-5.6-sol` / `high`, accepted on 2026-09-05.
+The response identifies defects in all three adapters but does not state their shared validation failure.
+The owner accepted the result with the worksheet's input-fidelity qualification: the provider also read the installed `using-superpowers` skill outside the declared fixtures, limiting attribution to the pinned skill alone.
+No authenticated deterministic response checker was available; the missing synthesis was scored semantically.
+
+Retained artifacts: `accepted/worksheet.md`, `accepted/result.json`, and `accepted/final.txt`.
+No evidence files were emitted.
