@@ -1,0 +1,13 @@
+Decision: this is a shared-root axis, not a set of isolated `EventLog.swift` defects. Pause line-by-line remediation and do not spend another review round on an EventLog-only fix.
+
+The audit scope is project-wide: every code path that reads, writes, restores, compacts, migrates, imports, or recovers source-of-truth state. That includes `SnapshotStore.swift`, storage abstractions and callers, startup/recovery paths, and any other persistence implementation—not merely files already reviewed. Explicitly classify `CacheWriter.swift`: exclude it only if its data is truly disposable and cannot become authoritative; otherwise include it. Even if excluded, verify cache corruption cannot contaminate authoritative state.
+
+Next actions:
+
+- Record the pattern verdict: the accumulated findings violate one persistence error-contract invariant—recoverable I/O errors must propagate without crashing, and corrupt authoritative data must be detected rather than accepted, defaulted, or silently truncated.
+- Enumerate every potentially violating persistence site and every failure path.
+- Add focused tests for thrown I/O errors, permission/space failures, partial or interrupted writes, malformed/truncated data, and recovery behavior.
+- Fix all members of the axis in one pass, preserving explicit error propagation and corruption rejection.
+- Only then rerun the same reviewer against the new HEAD.
+
+Because this is still below the three-cycle cap, a project-wide root attack is required now. If the third cycle’s rerun still returns a P0–P2 finding, stop and use the mandatory memory-free cold-read escape rather than starting a fourth sweep.
