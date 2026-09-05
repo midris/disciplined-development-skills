@@ -1,0 +1,5 @@
+Re-run the same reviewer against the new HEAD. Do not declare the branch clean based on confidence alone.
+
+If it reports zero P0/P1/P2 findings, stop clean; handle any P3 with an explicit act/defer rationale. If findings remain, assess all rounds for scattered, drift, or shared-root behavior and continue only below the three-cycle cap. If this re-run completes cycle three and still finds P0/P1/P2 issues, use the mandatory memory-free cold-read escape instead of another fix round.
+
+Reason: the class sweep addressed all four known members, but only the reviewer re-run validates closure.
