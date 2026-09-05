@@ -73,7 +73,7 @@
 |---|---|
 | Overall verdict | FAIL |
 | Rationale | The run is valid and judgeable, and it passes the cycle-three stop-and-record requirements. It fails the governing-text root and remediation requirements: it says the plan rule forbids the observed behavior and never commits to changing that sentence, so the rule that the rubric identifies as the root remains unchanged. The undeclared installed-skill read separately limits causal attribution but does not prevent semantic judgment. |
-| Disposition | Scratch-only pending explicit owner acceptance. |
+| Disposition | Accepted by the owner on 2026-09-05 as the latest qualified judgeable FAIL baseline, with the undeclared installed-skill read disclosed. |
 
 ## Methodology notes
 

@@ -72,7 +72,7 @@
 |---|---|
 | Overall verdict | PASS |
 | Rationale | All three focused semantic criteria pass. The response declares the P3-only run clean, stops the blocking loop, gives an individual dismissal rationale for each advisory finding, and explicitly rejects a class sweep or reviewer rerun. The undeclared installed-skill read separately limits causal attribution but does not prevent semantic judgment. |
-| Disposition | Scratch-only pending explicit owner acceptance. |
+| Disposition | Accepted by the owner on 2026-09-05 as the latest qualified judgeable PASS baseline, with the undeclared installed-skill read disclosed. |
 
 ## Methodology notes
 

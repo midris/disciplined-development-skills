@@ -73,7 +73,7 @@
 |---|---|
 | Overall verdict | PASS |
 | Rationale | All four semantic criteria pass. The response routes confirmed blockers to redo rather than cycle four, trusts material divergence and stops, bounds productive fix-forward to three reset cycles with another required escape, and records each branch durably. The undeclared installed-skill read separately limits causal attribution but does not prevent semantic judgment. |
-| Disposition | Scratch-only pending explicit owner acceptance. |
+| Disposition | Accepted by the owner on 2026-09-05 as the latest qualified judgeable PASS baseline, with the undeclared installed-skill read disclosed. |
 
 ## Methodology notes
 

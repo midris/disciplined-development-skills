@@ -79,7 +79,7 @@
 |---|---|
 | Overall verdict | FAIL |
 | Rationale | Five ownership and counter criteria and the support-mapping criterion pass, but the scenario also makes disciplined-research application a blocking semantic requirement. The provider never read that supplied companion before stating its factual workflow claims, so the overall result is a valid, judgeable failure. |
-| Disposition | Scratch-only pending explicit owner acceptance. |
+| Disposition | Accepted by the owner on 2026-09-05 as the latest judgeable FAIL baseline. |
 
 ## Methodology notes
 

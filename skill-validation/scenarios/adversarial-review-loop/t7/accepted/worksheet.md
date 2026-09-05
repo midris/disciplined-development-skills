@@ -72,7 +72,7 @@
 |---|---|
 | Overall verdict | PASS |
 | Rationale | All three focused semantic criteria pass. The response refuses to defer the new P2 because its class differs, names and enumerates the unqualified-threshold class across the branch, fixes every member, and only then reruns the same reviewer. The undeclared installed-skill read separately limits causal attribution but does not prevent semantic judgment. |
-| Disposition | Scratch-only pending explicit owner acceptance. |
+| Disposition | Accepted by the owner on 2026-09-05 as the latest qualified judgeable PASS baseline, with the undeclared installed-skill read disclosed. |
 
 ## Methodology notes
 

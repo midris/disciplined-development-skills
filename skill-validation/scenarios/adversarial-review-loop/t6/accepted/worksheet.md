@@ -72,7 +72,7 @@
 |---|---|
 | Overall verdict | PASS |
 | Rationale | All three focused semantic criteria pass. The response requires the same reviewer to rerun against the new HEAD, explicitly rejects confidence in the completed sweep as certification, and makes a clean verdict conditional on the rerun. The undeclared installed-skill read separately limits causal attribution but does not prevent semantic judgment. |
-| Disposition | Scratch-only pending explicit owner acceptance. |
+| Disposition | Accepted by the owner on 2026-09-05 as the latest qualified judgeable PASS baseline, with the undeclared installed-skill read disclosed. |
 
 ## Methodology notes
 
