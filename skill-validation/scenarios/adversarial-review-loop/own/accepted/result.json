@@ -1,0 +1,133 @@
+{
+  "artifacts": {
+    "config": {
+      "bytes": 688,
+      "exists": true,
+      "path": "config.json",
+      "sha256": "2424dccf5bb2f0c08c1acdc6eeae185d6522b823fbc15231acfd52bc01083f1c"
+    },
+    "evidence": {
+      "empty": true,
+      "entries": [],
+      "exists": true,
+      "path": "workspace/evidence"
+    },
+    "final": {
+      "bytes": 963,
+      "exists": true,
+      "path": "final.txt",
+      "sha256": "225392310887dcd23b4c3289144e80c34290ab6d7cc38e560faea771f408a56b"
+    },
+    "fixture": {
+      "empty": false,
+      "entries": [
+        {
+          "bytes": null,
+          "path": "skills",
+          "sha256": null,
+          "type": "directory"
+        },
+        {
+          "bytes": null,
+          "path": "skills/adversarial-review-loop",
+          "sha256": null,
+          "type": "directory"
+        },
+        {
+          "bytes": 8374,
+          "path": "skills/adversarial-review-loop/SKILL.md",
+          "sha256": "46b85eafc5db54cb521eed9c4a110e552c76d97cfae72e141f109c9dea10f0c6",
+          "type": "file"
+        },
+        {
+          "bytes": null,
+          "path": "skills/disciplined-development",
+          "sha256": null,
+          "type": "directory"
+        },
+        {
+          "bytes": 13112,
+          "path": "skills/disciplined-development/SKILL.md",
+          "sha256": "1151a7575a5b6f72e007229c97efdb7a829695d08e8f44450d0d71b232e75dec",
+          "type": "file"
+        },
+        {
+          "bytes": null,
+          "path": "skills/disciplined-research",
+          "sha256": null,
+          "type": "directory"
+        },
+        {
+          "bytes": 9400,
+          "path": "skills/disciplined-research/SKILL.md",
+          "sha256": "a5c4079e5aa21651ecd39b09e3fb2d9a58f4a1f3b99354b3b6927b2d44c6fb50",
+          "type": "file"
+        },
+        {
+          "bytes": null,
+          "path": "skills/superpowers",
+          "sha256": null,
+          "type": "directory"
+        },
+        {
+          "bytes": null,
+          "path": "skills/superpowers/subagent-driven-development",
+          "sha256": null,
+          "type": "directory"
+        },
+        {
+          "bytes": 32339,
+          "path": "skills/superpowers/subagent-driven-development/SKILL.md",
+          "sha256": "8dd1b8e698edec3700c6d89517dbe96febd3bacd3f6ea21c1a3569c62ea104b5",
+          "type": "file"
+        }
+      ],
+      "exists": true,
+      "path": "workspace/fixture"
+    },
+    "prompt": {
+      "bytes": 1605,
+      "exists": true,
+      "path": "prompt.txt",
+      "sha256": "cbc785baa39d9d4d9ef7eba781a2075cabd19487b47fc67e50f00f3f0a39b89e"
+    },
+    "prompt_template": {
+      "bytes": 1230,
+      "exists": true,
+      "path": "prompt-template.txt",
+      "sha256": "5e6901b8b4a0c2b999876185d99276a6c1c5275132ff762acd36dfe375aab3c2"
+    },
+    "stderr": {
+      "bytes": 0,
+      "exists": true,
+      "path": "stderr.txt",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "stdout": {
+      "bytes": 101260,
+      "exists": true,
+      "path": "stdout.txt",
+      "sha256": "45f135c0bfefa29bd2e892218591a3f6890c95cb10e72cab75d4c96b2bb18b7e"
+    }
+  },
+  "duration_seconds": 52.831,
+  "execution": {
+    "effort": "high",
+    "executable": "codex",
+    "exit_code": 0,
+    "invocation_started": true,
+    "model": "gpt-5.6-sol",
+    "provider": "codex",
+    "timed_out": false,
+    "timeout_seconds": 900
+  },
+  "finished_at": "2026-09-05T23:19:28.772Z",
+  "infrastructure_error": null,
+  "run_id": "20260905T231835942Z-own-12dbb761-9402-4dc7-82ad-a72d8d3c7b8f-tkas7ub1",
+  "schema_version": "0.2",
+  "started_at": "2026-09-05T23:18:35.942Z",
+  "status": "COMPLETED",
+  "test": {
+    "id": "own"
+  }
+}
