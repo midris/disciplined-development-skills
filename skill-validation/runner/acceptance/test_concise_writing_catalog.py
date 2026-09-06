@@ -134,7 +134,7 @@ PROMPT_HASHES = {
     "cw-19": "df33a3add2dc4ad6445076a381e35be307c35fdfbc50426fd0db4072a10b26b3",
 }
 
-ACCEPTED_SCENARIOS = {"cw-01", "cw-02", "cw-03"}
+ACCEPTED_SCENARIOS = {"cw-01", "cw-02", "cw-03", "cw-04"}
 ACCEPTED_FILES = {
     "accepted/final.txt",
     "accepted/result.json",
