@@ -1,0 +1,1 @@
+Archives are generated nightly at 02:00 UTC, contain completed orders from the previous UTC day, and are retained for 30 days.
