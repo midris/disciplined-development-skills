@@ -1,0 +1,91 @@
+{
+  "artifacts": {
+    "config": {
+      "bytes": 314,
+      "exists": true,
+      "path": "config.json",
+      "sha256": "71137ffd3022de0e85d94ccb96b7f64ddd4f860b5dbcb961bfb5396e1e20cf6b"
+    },
+    "evidence": {
+      "empty": true,
+      "entries": [],
+      "exists": true,
+      "path": "workspace/evidence"
+    },
+    "final": {
+      "bytes": 64,
+      "exists": true,
+      "path": "final.txt",
+      "sha256": "4524bcc23ea1483b4e5875f4a81e1b6922fdbfde766edb580b01b3ac4719761a"
+    },
+    "fixture": {
+      "empty": false,
+      "entries": [
+        {
+          "bytes": null,
+          "path": "skills",
+          "sha256": null,
+          "type": "directory"
+        },
+        {
+          "bytes": null,
+          "path": "skills/concise-writing",
+          "sha256": null,
+          "type": "directory"
+        },
+        {
+          "bytes": 5616,
+          "path": "skills/concise-writing/SKILL.md",
+          "sha256": "4d12a2eb475c6b2ef57e2300c8c07af3f59c1e07b2b82695a3b7669eee1d6d72",
+          "type": "file"
+        }
+      ],
+      "exists": true,
+      "path": "workspace/fixture"
+    },
+    "prompt": {
+      "bytes": 937,
+      "exists": true,
+      "path": "prompt.txt",
+      "sha256": "e23d871e1ebff2fb9c9f289d21acaceaec17f9dc85b6b3580734f2d45091607a"
+    },
+    "prompt_template": {
+      "bytes": 835,
+      "exists": true,
+      "path": "prompt-template.txt",
+      "sha256": "d89691bec1d5ee09531e65c1e2a5785e409196c118ce9ae76b708627e4852b35"
+    },
+    "stderr": {
+      "bytes": 0,
+      "exists": true,
+      "path": "stderr.txt",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "stdout": {
+      "bytes": 6809,
+      "exists": true,
+      "path": "stdout.txt",
+      "sha256": "bc8b8c7eb0046d2c8ed6b6b5e7ec9e88d10abd097c518923bd991b1abdf0bcce"
+    }
+  },
+  "duration_seconds": 11.882,
+  "execution": {
+    "effort": "high",
+    "executable": "codex",
+    "exit_code": 0,
+    "invocation_started": true,
+    "model": "gpt-5.6-sol",
+    "provider": "codex",
+    "timed_out": false,
+    "timeout_seconds": 900
+  },
+  "finished_at": "2026-09-06T03:51:43.031Z",
+  "infrastructure_error": null,
+  "run_id": "20260906T035131149Z-cw-10-2b84acaf-ab78-4ded-8c73-d0a3cb5aa4bf-lqej7rsw",
+  "schema_version": "0.2",
+  "started_at": "2026-09-06T03:51:31.149Z",
+  "status": "COMPLETED",
+  "test": {
+    "id": "cw-10"
+  }
+}
