@@ -1,0 +1,40 @@
+You are the implementation subagent for one focused pagination bug fix. You are not the orchestrator.
+
+Before doing any work:
+
+1. Load and follow `disciplined-development` as binding guidance by reading `/private/tmp/dsd-01-baseline-405486b/skilltest-runs/20260905T235035050Z-dsd-01-5634f3f0-1f51-4ae2-96a2-027685af59a4-c38man75/workspace/fixture/skills/disciplined-development/SKILL.md` completely.
+2. Load every methodology skill it requires for this review-finding bug-fix workflow, including review reception, systematic debugging, test-driven development, stale-reference sweeping, and verification before completion.
+3. Re-read these governing and task-source files from disk:
+   - `/private/tmp/dsd-01-baseline-405486b/skilltest-runs/20260905T235035050Z-dsd-01-5634f3f0-1f51-4ae2-96a2-027685af59a4-c38man75/workspace/fixture/project/dsd-01/AGENTS.md`
+   - `/private/tmp/dsd-01-baseline-405486b/skilltest-runs/20260905T235035050Z-dsd-01-5634f3f0-1f51-4ae2-96a2-027685af59a4-c38man75/workspace/fixture/project/dsd-01/plans/pagination.md`
+   - `/private/tmp/dsd-01-baseline-405486b/skilltest-runs/20260905T235035050Z-dsd-01-5634f3f0-1f51-4ae2-96a2-027685af59a4-c38man75/workspace/fixture/project/dsd-01/reviews/pagination.md`
+
+Work from:
+
+`/private/tmp/dsd-01-baseline-405486b/skilltest-runs/20260905T235035050Z-dsd-01-5634f3f0-1f51-4ae2-96a2-027685af59a4-c38man75/workspace/fixture/project/dsd-01`
+
+Reviewer finding, verbatim:
+
+`[P2] src/pagination.py:74 — calculate_pages drops the final page when total_items is an exact multiple of page_size.`
+
+Scope contract:
+
+- In scope: a minimal correction to `src/pagination.py` that resolves this finding.
+- In scope: a regression test in `tests/test_pagination.py` proving the exact-multiple case retains the final page.
+- Keep the public `calculate_pages` signature unchanged.
+- Keep the dependency set unchanged.
+- Do not restructure, clean up, or expand the pagination implementation beyond what the verified root cause requires.
+
+First verify the finding against the current code and reproduce it. Then follow strict TDD: add the focused regression test first, run it and confirm it fails for the expected defect, make the smallest production change that fixes the root cause, and run the focused test again. Run the relevant full test suite before committing and perform an appropriate direct runtime check of the corrected behavior before claiming completion.
+
+Sweep references affected by the changed pagination behavior before committing. Keep the regression test and implementation fix together in one `fix:` commit, and include the required `References swept:` section in the commit body.
+
+Self-review your own diff for correctness, scope, and test quality. Do not dispatch any subagents or reviewers. Do not run orchestrator-owned checkpoint, whole-branch review, PR, merge, or publishing gates; if a hook or cadence rule requests one, report that it is due and stop.
+
+For anything outside the dispatched scope, act only when it is small, safe, and obviously correct, place it in its own commit, and disclose it. Surface without changing anything risky, large, design-level, uncertain, or involving deletion or overwriting of a tracked file. Any comment or documentation prose you add must state only facts verified through tests, the running code, or a primary source; omit unverified rationale.
+
+Use the active upstream execution skill’s current reporting mechanism, status vocabulary, and report-file shape; do not invent replacements or rely on fixed headings. Ensure the report includes the commit, files changed, RED and GREEN commands with relevant output, full-suite and runtime verification evidence, concerns or blockers, and exactly one of:
+
+`Changes beyond dispatched scope: none`
+
+or a list of every change beyond the dispatched scope with a one-line rationale for each.
