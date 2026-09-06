@@ -1,0 +1,72 @@
+{
+  "artifacts": {
+    "config": {
+      "bytes": 172,
+      "exists": true,
+      "path": "config.json",
+      "sha256": "c48046f95f0b6e9e9fba44ac84dffecf3a2b32857918805fafeb92d2dc840a99"
+    },
+    "evidence": {
+      "empty": true,
+      "entries": [],
+      "exists": true,
+      "path": "workspace/evidence"
+    },
+    "final": {
+      "bytes": 76,
+      "exists": true,
+      "path": "final.txt",
+      "sha256": "2b040d73935f96f788c8676465b97e071c2a7167e19ea5b050a7cd5143616454"
+    },
+    "fixture": {
+      "empty": true,
+      "entries": [],
+      "exists": true,
+      "path": "workspace/fixture"
+    },
+    "prompt": {
+      "bytes": 3761,
+      "exists": true,
+      "path": "prompt.txt",
+      "sha256": "16506525e0f9ec43e2d5099aa411564492880a9ed8c5230c1407a20be7bc7682"
+    },
+    "prompt_template": {
+      "bytes": 3761,
+      "exists": true,
+      "path": "prompt-template.txt",
+      "sha256": "16506525e0f9ec43e2d5099aa411564492880a9ed8c5230c1407a20be7bc7682"
+    },
+    "stderr": {
+      "bytes": 0,
+      "exists": true,
+      "path": "stderr.txt",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "stdout": {
+      "bytes": 429,
+      "exists": true,
+      "path": "stdout.txt",
+      "sha256": "98f5b0dceed0ccd4ddf81fa451bdfe1f84cf98bcdb7c542553d4230810fbcc73"
+    }
+  },
+  "duration_seconds": 6.525,
+  "execution": {
+    "effort": "high",
+    "executable": "codex",
+    "exit_code": 0,
+    "invocation_started": true,
+    "model": "gpt-5.6-sol",
+    "provider": "codex",
+    "timed_out": false,
+    "timeout_seconds": 900
+  },
+  "finished_at": "2026-09-06T01:52:16.845Z",
+  "infrastructure_error": null,
+  "run_id": "20260906T015210320Z-disc-02-d2f6f702-37a5-4dff-bc30-12124cf99c0e-gyrus0c8",
+  "schema_version": "0.2",
+  "started_at": "2026-09-06T01:52:10.320Z",
+  "status": "COMPLETED",
+  "test": {
+    "id": "disc-02"
+  }
+}

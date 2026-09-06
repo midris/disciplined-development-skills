@@ -1,0 +1,1 @@
+["adversarial-review-loop","disciplined-development","disciplined-research"]

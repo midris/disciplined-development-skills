@@ -34,7 +34,7 @@ PROMPT_HASHES = {
 }
 
 REQUIRED_FILES = {"README.md", "prompt.md", "rubric.md", "test.json"}
-ACCEPTED_SCENARIOS = {"disc-01"}
+ACCEPTED_SCENARIOS = {"disc-01", "disc-02"}
 ACCEPTED_FILES = {
     "accepted/final.txt",
     "accepted/result.json",
