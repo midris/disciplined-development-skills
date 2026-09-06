@@ -1,8 +1,8 @@
 # Skilltest Codex Input Isolation Feasibility Plan
 
-**Status:** Deferred until the current-skill baseline campaign is complete. This
-plan authorizes no runner changes, provider invocations, or changes to accepted
-evidence. When activated, it begins with a throwaway scratch spike. Production
+**Status:** Active. The current-skill baseline campaign is complete. This plan
+authorizes no runner changes or changes to accepted evidence. It begins with a
+throwaway scratch spike. Production
 design and implementation planning occur only after the owner reviews the spike.
 
 > **Execution:** Use `superpowers:executing-plans` when this plan is activated.
@@ -26,12 +26,12 @@ proof of enforcement. Stop after reporting the spike outcome for owner review.
 **Tech stack:** macOS, the installed Codex CLI, shell commands retained in scratch,
 and the current Python skilltest runner as read-only context.
 
-## Why this is deferred
+## Why this was deferred
 
 The baseline campaign is teaching us how to audit scenarios and apply the scoring
 methodology. Changing the provider boundary during that campaign would change the
 approved execution policy. Under the
-[baseline-set lifecycle](../specs/2026-09-03-skill-validation-baseline-design.md#accepted-baseline-set-lifecycle),
+[baseline-set lifecycle](specs/2026-09-03-skill-validation-baseline-design.md#accepted-baseline-set-lifecycle),
 that creates a new comparison key and makes existing accepted sets unsuitable as
 an arm of the new campaign.
 
@@ -51,7 +51,7 @@ declared scenario fixture.
 
 For the current baseline campaign, disclose such reads as fixture/task-fidelity
 failures and apply the existing
-[scenario verdict order](../completed/specs/2026-09-02-skill-testing-methodology-design.md#scenario-verdict).
+[scenario verdict order](completed/specs/2026-09-02-skill-testing-methodology-design.md#scenario-verdict).
 Do not claim strict fixture-only execution. Edit and A/B effectiveness testing
 remain blocked until both arms can run under the same qualified boundary.
 
@@ -114,9 +114,9 @@ isolation.
 
 Do not begin the spike until all of these are true:
 
-- [ ] All current-skill catalogs and the suite-composition catalog have completed
+- [x] All current-skill catalogs and the suite-composition catalog have completed
   the baseline campaign.
-- [ ] The owner explicitly activates this deferred plan.
+- [x] The owner explicitly activates this plan by promoting it from `plans/deferred/`.
 - [ ] The owner agrees that the spike is exploratory and scratch-only.
 - [ ] The owner agrees that any later isolated campaign is a new comparison
   campaign and that both arms must use the same runner version and isolation
@@ -400,7 +400,7 @@ status names.
 
 ## Completion criteria
 
-This deferred plan is complete when:
+This plan is complete when:
 
 - the scratch spike answers each spike question or records a precise blocker;
 - direct allowed, forbidden, and symlink-escape probes have exact evidence;
