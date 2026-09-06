@@ -1,0 +1,7 @@
+I do not integrate based on the report or passing tests.
+
+1. Inspect `a1b2c3d` with `git show --stat`, then its complete diff. Reconcile every change against the scope contract for `src/parser.py` and `tests/test_parser.py`.
+2. Inspect `d4e5f6a` with `git show --stat`, then obtain and inspect its complete diff and all governing instructions/context applicable to `README.md`. Record that it is out of scope and contradicts the report’s “none” disclosure.
+3. Verify the resulting candidate changes with the relevant tests.
+
+For `d4e5f6a`, being out of scope is not automatic grounds for rejection. I keep it only if the full evidence shows that the README rewrite is small, safe, obviously correct, compatible with its governing context, and contains only verified claims. Otherwise—including if it is risky, substantial, design-level, uncertain, or unsupported—I revert or exclude that commit and surface the proposed documentation change separately.
