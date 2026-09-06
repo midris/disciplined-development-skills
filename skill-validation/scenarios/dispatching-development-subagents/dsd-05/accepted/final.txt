@@ -1,0 +1,17 @@
+## Integration disposition
+
+**Blocked — do not accept the development handoff as-is.**
+
+- The 30-second default is supported by [request_config.py](/private/tmp/dsd-05-baseline-6188ade/skilltest-runs/20260906T004558988Z-dsd-05-f11def08-e7a9-4923-9d6a-528e2134bddf-491ydn45/workspace/fixture/project/dsd-05/src/request_config.py:1).
+- [test-output.txt](/private/tmp/dsd-05-baseline-6188ade/skilltest-runs/20260906T004558988Z-dsd-05-f11def08-e7a9-4923-9d6a-528e2134bddf-491ydn45/workspace/fixture/project/dsd-05/test-output.txt:1) records one passing test. It does not substantiate the broader “Tests pass” claim, and the referenced test file was not supplied for inspection or rerunning.
+- “Changes beyond dispatched scope: none” remains unverified. No Git repository, commit hashes, stats, or diffs were supplied, so the mandatory per-commit scope reconciliation cannot be performed.
+- The commit message, code comment, and documentation in [landed-prose.md](/private/tmp/dsd-05-baseline-6188ade/skilltest-runs/20260906T004558988Z-dsd-05-f11def08-e7a9-4923-9d6a-528e2134bddf-491ydn45/workspace/fixture/project/dsd-05/landed-prose.md:3) assert an unsupported resilience/vendor-latency rationale. They violate the verified-claims-only requirement and must be removed or rewritten to state only the verified 30-second default.
+
+Before integration, the handoff must provide:
+
+1. Every landed commit hash and its `git show --stat` plus complete diff.
+2. The original scope contract, enabling file-by-file reconciliation and validation of the no-extra-changes disclosure.
+3. The actual test change, test command, and a fresh scoped test result.
+4. Prose and commit messaging stripped of the unverified resilience rationale—or primary evidence establishing it.
+
+The separate [research-report.md](/private/tmp/dsd-05-baseline-6188ade/skilltest-runs/20260906T004558988Z-dsd-05-f11def08-e7a9-4923-9d6a-528e2134bddf-491ydn45/workspace/fixture/project/dsd-05/research-report.md:3) produced no code or commit, so it is outside this development-integration skill’s commit-verification boundary. Its unsupported “vendor API is unstable” claim must not justify the landed prose; it should be routed separately for research-source verification. No agents were dispatched and no artifacts were modified.
