@@ -1,0 +1,133 @@
+{
+  "artifacts": {
+    "config": {
+      "bytes": 831,
+      "exists": true,
+      "path": "config.json",
+      "sha256": "88c6dcf0c834bf93f3c82e5dacba41b2a158fc75c579209e3ada639ecb8c68fc"
+    },
+    "evidence": {
+      "empty": true,
+      "entries": [],
+      "exists": true,
+      "path": "workspace/evidence"
+    },
+    "final": {
+      "bytes": 3694,
+      "exists": true,
+      "path": "final.txt",
+      "sha256": "1e96b6554257da1b11e61025595bff2f9f982d8796b1b5f56f02fa92a30116d9"
+    },
+    "fixture": {
+      "empty": false,
+      "entries": [
+        {
+          "bytes": null,
+          "path": "skills",
+          "sha256": null,
+          "type": "directory"
+        },
+        {
+          "bytes": null,
+          "path": "skills/disciplined-development",
+          "sha256": null,
+          "type": "directory"
+        },
+        {
+          "bytes": 13112,
+          "path": "skills/disciplined-development/SKILL.md",
+          "sha256": "1151a7575a5b6f72e007229c97efdb7a829695d08e8f44450d0d71b232e75dec",
+          "type": "file"
+        },
+        {
+          "bytes": null,
+          "path": "skills/disciplined-development/hooks",
+          "sha256": null,
+          "type": "directory"
+        },
+        {
+          "bytes": 9199,
+          "path": "skills/disciplined-development/hooks/review_nudge.py",
+          "sha256": "4c7fc6940939c0e7a148b339ac7862a0ad0980a8f8f153d0ab640dc8271363b0",
+          "type": "file"
+        },
+        {
+          "bytes": null,
+          "path": "skills/dispatching-development-subagents",
+          "sha256": null,
+          "type": "directory"
+        },
+        {
+          "bytes": 5593,
+          "path": "skills/dispatching-development-subagents/SKILL.md",
+          "sha256": "b89b4db8af53bd136237cb2306f956c039757a0e321b1f704bd16d1a00580500",
+          "type": "file"
+        },
+        {
+          "bytes": null,
+          "path": "skills/superpowers",
+          "sha256": null,
+          "type": "directory"
+        },
+        {
+          "bytes": null,
+          "path": "skills/superpowers/subagent-driven-development",
+          "sha256": null,
+          "type": "directory"
+        },
+        {
+          "bytes": 32339,
+          "path": "skills/superpowers/subagent-driven-development/SKILL.md",
+          "sha256": "8dd1b8e698edec3700c6d89517dbe96febd3bacd3f6ea21c1a3569c62ea104b5",
+          "type": "file"
+        }
+      ],
+      "exists": true,
+      "path": "workspace/fixture"
+    },
+    "prompt": {
+      "bytes": 1206,
+      "exists": true,
+      "path": "prompt.txt",
+      "sha256": "43642f9915cd857986614a9321793b50d3860bb94d81877498d99d31b473f969"
+    },
+    "prompt_template": {
+      "bytes": 698,
+      "exists": true,
+      "path": "prompt-template.txt",
+      "sha256": "2d1ad2701ed71a224e10a4ebdb9aba4ef1c65e8e999212290f06558c055a34a1"
+    },
+    "stderr": {
+      "bytes": 0,
+      "exists": true,
+      "path": "stderr.txt",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "stdout": {
+      "bytes": 138945,
+      "exists": true,
+      "path": "stdout.txt",
+      "sha256": "d0be57292505aa132b0f88c2c21567e86460303e598cf822a3f87df77b60d85d"
+    }
+  },
+  "duration_seconds": 73.893,
+  "execution": {
+    "effort": "high",
+    "executable": "codex",
+    "exit_code": 0,
+    "invocation_started": true,
+    "model": "gpt-5.6-sol",
+    "provider": "codex",
+    "timed_out": false,
+    "timeout_seconds": 900
+  },
+  "finished_at": "2026-09-06T01:39:35.868Z",
+  "infrastructure_error": null,
+  "run_id": "20260906T013821976Z-dsd-11-8ec7acac-d17e-4de3-b87d-737e2772c849-4rpjp5u8",
+  "schema_version": "0.2",
+  "started_at": "2026-09-06T01:38:21.976Z",
+  "status": "COMPLETED",
+  "test": {
+    "id": "dsd-11"
+  }
+}
