@@ -1,0 +1,7 @@
+## Access links
+
+An access link is a single-use URL valid for 30 minutes. Send it only to the intended recipient.
+
+## Expiration
+
+After a link expires, an administrator must issue a new one.
