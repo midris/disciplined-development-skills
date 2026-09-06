@@ -134,6 +134,13 @@ PROMPT_HASHES = {
     "cw-19": "df33a3add2dc4ad6445076a381e35be307c35fdfbc50426fd0db4072a10b26b3",
 }
 
+ACCEPTED_SCENARIOS = {"cw-01"}
+ACCEPTED_FILES = {
+    "accepted/final.txt",
+    "accepted/result.json",
+    "accepted/worksheet.md",
+}
+
 
 def _package_files(scenario_dir: Path) -> set[str]:
     return {
@@ -189,6 +196,8 @@ def test_concise_writing_catalog_prepares_only_declared_inputs(
         expected_files = {"README.md", "prompt.md", "rubric.md", "test.json"} | {
             PACKAGE_INPUTS[label][0] for label in PACKAGED_LABELS[scenario_id]
         }
+        if scenario_id in ACCEPTED_SCENARIOS:
+            expected_files |= ACCEPTED_FILES
         package_files = _package_files(scenario_dir)
         optional_files = {"smoke-result.json"} if scenario_id == "cw-09" else set()
         assert expected_files <= package_files <= expected_files | optional_files
