@@ -1,415 +1,292 @@
-# Skilltest Codex Input Isolation Feasibility Plan
+# Skilltest Codex Controlled-Input Feasibility Plan
 
-**Status:** Active. The current-skill baseline campaign is complete. This plan
-authorizes no runner changes or changes to accepted evidence. It begins with a
-throwaway scratch spike. Production
-design and implementation planning occur only after the owner reviews the spike.
+**Status:** Completed and owner-accepted on 2026-09-06 for the scoped Codex
+controlled-input claim. The result and limits are recorded below. This document
+is the only repository change; runner, methodology, scenario, skill, schema and
+accepted-evidence files remain unchanged. Production design and implementation
+are separate follow-up work.
 
-> **Execution:** Use `superpowers:executing-plans` when this plan is activated.
-> Keep every spike artifact in scratch. Before the single integration probe,
-> present the exact provider, model, effort, and command and wait for explicit
-> approval.
+> **Execution:** Use `superpowers:executing-plans` in the existing isolated
+> `.worktrees/skilltest-input-isolation-spike` worktree. Retain every spike artifact
+> in a fresh scratch package. Before any integration call, show the exact provider,
+> model, effort, prompt and complete command; wait for explicit owner approval.
 
-**Goal:** Determine the smallest maintainable Codex-only boundary that excludes
-undeclared host inputs, keeps authentication unavailable to model-generated
-commands, and deterministically denies non-operational reads outside the declared
-workspace while allowing the minimum recorded runtime dependencies.
+**Goal:** Establish an auditable harness in which the assigned skill version is
+the only intended semantic difference between comparison arms.
 
-**Architecture:** Provision a private `HOME` and `CODEX_HOME`, suppress
-documented user configuration and rules discovery, and evaluate a separately
-qualified filesystem boundary around the Codex process. Provision authentication
-through a documented login flow rather than passing credentials to `codex exec`.
-Prove allowed and denied filesystem behavior with deterministic commands before
-using a provider. Treat provider transcripts as integration evidence, never as
-proof of enforcement. Stop after reporting the spike outcome for owner review.
+**Architecture:** Fresh private HOME, CODEX_HOME, temporary directory and scratch
+Git project for each launch; explicit environment/configuration; declared-file
+manifests and observable model-input comparisons. Use synthetic A/B skills and
+positive contamination controls before one approved integration probe.
 
-**Tech stack:** macOS, the installed Codex CLI, shell commands retained in scratch,
-and the current Python skilltest runner as read-only context.
+**Tech stack:** Codex CLI in iTerm2 on macOS, shell/Python scratch probes, installed
+CLI help and debug capabilities. This is an experiment-control feasibility spike,
+not production implementation or an effectiveness study.
 
-## Why this was deferred
+## Change of objective and historical result
 
-The baseline campaign is teaching us how to audit scenarios and apply the scoring
-methodology. Changing the provider boundary during that campaign would change the
-approved execution policy. Under the
-[baseline-set lifecycle](specs/2026-09-03-skill-validation-baseline-design.md#accepted-baseline-set-lifecycle),
-that creates a new comparison key and makes existing accepted sets unsuitable as
-an arm of the new campaign.
+The original plan required outer filesystem enforcement and an inner boundary
+protecting credentials from model commands. The first spike at base commit
+`c39fd41d0009370282b6ac9773c38cf5ad70852c` returned BLOCKED: the candidate profile
+allowed outside-file, symlink and parent-instruction reads. Preserve that result
+at `/private/tmp/skilltest-input-isolation.xAqAqY/report.md`. Its references to an
+application sandbox mean the CLI session's execution sandbox; this session runs in
+iTerm2, not the Codex desktop app. The cause of its profile failure remains unknown.
 
-Finish the current campaign first. Existing accepted records remain valid
-historical evidence for the inputs and runner contract under which they were
-collected. Do not rewrite or retroactively relabel them. Before current-skill versus
-rewritten-skill comparisons, run this spike and decide whether a production
-isolation boundary is feasible.
+The owner now authorizes the narrower experiment-control goal. Strict read denial
+and proof that arbitrary model commands cannot read credentials are not prerequisites
+for this experiment. Do not imply that this amendment repaired filesystem isolation.
 
-## Observed defect
+The eventual supportable claim is “B performs differently from A under this
+recorded harness.” Common provider instructions may interact with the edits, so
+results do not establish effectiveness independently of those instructions.
 
-The Codex adapter currently passes `env=None` to `subprocess.Popen`, so the child
-inherits the controller environment. A prepared temporary workspace does not
-prevent Codex from discovering inputs through the host profile. During baseline
-testing, Codex read the installed `using-superpowers/SKILL.md`, which was not a
-declared scenario fixture.
+## Scope and controls
 
-For the current baseline campaign, disclose such reads as fixture/task-fidelity
-failures and apply the existing
-[scenario verdict order](completed/specs/2026-09-02-skill-testing-methodology-design.md#scenario-verdict).
-Do not claim strict fixture-only execution. Edit and A/B effectiveness testing
-remain blocked until both arms can run under the same qualified boundary.
+- The 105 accepted baseline observations remain historical evidence; never reopen,
+  rescore, replace or use them as an arm of a new controlled-input campaign.
+- Do not inspect the comprehensive-skill-cleanup worktree.
+- Do not modify production code, repository skills, scenarios, methodology or accepted/.
+  Synthetic scratch skills are discovery instruments, not rewritten-skill tests.
+- No containers, custom Seatbelt work or credential-exposure probes in this spike.
+- Keep ordinary sandboxing for integration. Never print, hash or retain credentials
+  in evidence, prompts, command arguments or the later exec environment.
+- Every provider invocation still needs approval of its exact command; use
+  codex / gpt-5.6-sol / high unless the owner explicitly approves otherwise.
+- Debug output establishes observed discovery, not filesystem inaccessibility or
+  equivalence to exec. Integration and subsequent trace audit remain required.
 
-## Scope
+Use fresh processes/runtimes; never resume sessions or reuse conversation history,
+memory, caches or task modifications. Set env -i with private HOME, CODEX_HOME,
+TMPDIR, fixed PATH and only established operational additions. Clean runtimes have
+no base config.toml. Later exec uses --ignore-user-config, --ignore-rules,
+--ephemeral and explicit -c settings.
 
-This plan deliberately stops before production design:
+Declared inputs are the common prompt, project instructions, fixture, assigned skill,
+launch options and observable common provider inputs. The same-name skill must occupy
+the same project-relative path in both arms; only its file may differ. Give each
+variant distinct description and body markers to distinguish discovery from loading.
 
-- The spike covers Codex only. Claude isolation is a separate future decision.
-- The spike does not modify the runner, skills, scenarios, methodology, result
-  schema, or `accepted/`.
-- The spike does not design a transcript parser or a new status taxonomy.
-- Prompt instructions are not an isolation boundary.
-- A model's refusal, self-report, or failure to mention an outside input does not
-  prove that the input was unavailable.
-- A successful spike qualifies only the exact host platform, Codex version,
-  authentication mechanism, and boundary policy tested. It does not establish
-  universal enforcement.
+Enumerate stable provider-bundled inputs. Identify host-admin/ambient inputs separately;
+never silently label them bundled. An unexplained or competing target skill fails the
+gate. Deliberately admitting any common ambient input needs owner review before design.
 
-## Input and evidence distinctions
+### Predetermined audit rules
 
-- **Declared semantic inputs:** retained prompt template, rendered prompt, and
-  declared fixture copies.
-- **Declared operational inputs:** executable and version, model, effort, fixed
-  adapter flags, network/service access, authentication mechanism, and the minimum
-  environment required to operate.
-- **Forbidden ambient inputs:** host project instructions, user configuration,
-  rules, memories, MCP configuration, plugins, user-installed skills, and files not
-  declared by the scenario.
-- **Provider-bundled behavior:** functionality compiled or packaged with the pinned
-  Codex release that cannot be disabled. This is an operational input, not a
-  scenario fixture.
-- **Host-admin input:** host-managed configuration or skills such as
-  `/etc/codex/skills`. These are ambient inputs and are distinct from
-  provider-bundled behavior.
-- **Policy applied:** the intended launch options and filesystem policy were
-  mechanically installed for this run.
-- **Boundary qualified:** deterministic probes passed for the recorded platform,
-  Codex version, and policy digest.
-- **Transcript audit:** the observed model/tool trace was clean, showed a
-  violation, or was unavailable. A clean transcript does not establish boundary
-  qualification.
+- Preserve raw outputs. Normalize only exact per-launch root paths, separately
+  recorded session/date metadata, and the intended A/B marker. Never discard whole
+  instruction blocks to force equality.
+- Require exactly one assigned skill catalog entry, pointing inside its declared
+  project, without opposite-arm or contamination markers in a clean launch.
+- Compare all other observable prompt content and common fixture hashes. Fail on
+  unexplained differences; missing observations produce INCONCLUSIVE.
+- Unexpected semantic-file reads invalidate an integration observation. Do not
+  silently drop contaminated arms or retry for a better verdict. Later campaigns
+  must report contamination by arm and assess differential exclusions.
+- An omitted exact integration read is INCONCLUSIVE; self-report is not provenance.
+- Infrastructure-only attempts follow existing INFRA_RETRY handling: scratch-only
+  evidence and retry only the exact unchanged approved command.
 
-Codex can discover skills from repository, user, admin, system, and plugin
-locations ([skills documentation](https://developers.openai.com/codex/skills)).
-`codex exec` supplies `--ignore-user-config` and `--ignore-rules`
-([CLI reference](https://developers.openai.com/codex/cli/reference)).
-Authentication is provisioned with `codex login`, and credentials may be stored
-in `CODEX_HOME/auth.json` or an OS credential store
-([authentication documentation](https://developers.openai.com/codex/auth)).
-`shell_environment_policy` controls what model-generated subprocesses inherit
-([configuration reference](https://developers.openai.com/codex/config-reference)).
-Codex permission profiles can deny reads outside workspace roots and can be selected
-for direct `codex sandbox` probes
-([permissions documentation](https://developers.openai.com/codex/permissions)). They
-are beta, so any result is specific to the tested CLI version.
-These controls must be tested together; none alone establishes full input
-isolation.
+## Task 1: Allocate and record the package
 
-## Activation gate
+- [x] Allocate mode-0700 `/private/tmp/skilltest-controlled-inputs.XXXXXX` with
+  README.md, report.md, commands/, outputs/, fixtures/ and runtime/.
+- [x] Record base commit and amended-plan SHA-256, platform/CLI version, launcher
+  context, non-secret environment and initial repository state.
+- [x] Create a recorder retaining argv, cwd, stdout, stderr and exit status with
+  unique labels; never overwrite earlier attempts.
+- [x] Retain synthetic A/B SKILL.md files named discovery-probe, shared AGENTS.md,
+  allowed.txt and task prompt. Manifest their hashes.
+- [x] Create a scratch-only ambient home with a same-name competitor skill,
+  global-instruction canary and config-instruction canary. Never install host canaries.
+- [x] Give each scratch project its own .git root and no skill symlinks. Put a
+  parent AGENTS.md canary outside the projects to check ancestry discovery.
 
-Do not begin the spike until all of these are true:
+## Task 2: Inventory controls and contamination detection
 
-- [x] All current-skill catalogs and the suite-composition catalog have completed
-  the baseline campaign.
-- [x] The owner explicitly activates this plan by promoting it from `plans/deferred/`.
-- [ ] The owner agrees that the spike is exploratory and scratch-only.
-- [ ] The owner agrees that any later isolated campaign is a new comparison
-  campaign and that both arms must use the same runner version and isolation
-  policy.
+- [x] Capture version, exec help and debug prompt-input help through the private wrapper.
+- [x] Enumerate actual user/admin/plugin discovery root existence without opening
+  host instruction or credential payloads. Record the clean debug catalog separately.
+- [x] Run debug prompt-input under the deliberately contaminated scratch home.
+  Require the competing-skill, global and config markers to be observed.
+- [x] Run from a nested directory under a controlled parent AGENTS.md as a separate
+  positive control. Require the clean project-root launch to exclude the outside parent.
+- [x] All required positive-control canaries were observed; no alternate-path
+  investigation was needed. An ineffective canary would not prove suppression.
 
-## Spike questions
+## Task 3: Compare four fresh synthetic launches
 
-The spike answers only these questions:
+- [x] Launch A, B, B, A with fresh runtimes/projects. This order checks carryover;
+  it is not effectiveness sampling or a sufficient randomization scheme.
+- [x] Require equal common-file manifests and only the assigned skill difference.
+  Reject symlinked skills and cross-arm references.
+- [x] Require one assigned skill entry at the declared path in every launch, no
+  competitor/opposite marker and no parent/global/config canary.
+- [x] Retain raw JSON and normalized comparisons using the rules above. Inventory
+  every common skill and provider instruction block.
+- [x] Hash private bootstrap skill files for equality across launches. Never hash auth.
+- [x] Report debug blind spots (exec rules, tool connections, subsequent body reads);
+  do not declare overall FEASIBLE before integration.
 
-1. Can Codex authenticate from a private runtime without passing a credential in
-   the environment of `codex exec`?
-2. Can documented flags and the private runtime suppress host profile, rules, and
-   skill discovery?
-3. Can the boundary keep credentials and credential-shaped environment values
-   unavailable to model-generated commands?
-4. Can a deterministic command read a declared file while direct and symlinked
-   reads of a non-operational file outside the declared workspace fail?
+Stop provider preparation if a required discovery control fails: BLOCKED for a
+demonstrated failure, INCONCLUSIVE for unavailable evidence. Do not substitute a
+filesystem-enforcement requirement for this experiment-control gate.
 
-## Task 1: Allocate a disposable spike package
+## Task 4: Prepare one integration probe after provider-free gates pass
 
-Create one mode-`0700` directory under `/private/tmp` with this layout:
+- [x] Use a fifth fresh synthetic A launch with the same declared inputs, explicit
+  exec controls and normal sandbox restrictions.
+- [x] Provision auth only when needed via documented stdin login or explicitly
+  file-backed private auth-cache copy, mode 0600. Retain only method and success/failure.
+  Do not inspect secrets to determine the store. If unavailable, report INCONCLUSIVE.
+- [x] Prepare complete command, prompt and output paths. Prompt requests
+  $discovery-probe and exact reads of declared SKILL.md and allowed.txt, then their
+  non-secret markers. Do not request host/credential reads.
+- [x] Show provider codex, model gpt-5.6-sol, effort high, complete command including
+  environment/cwd/redirections, and prompt. Wait for explicit approval.
+- [x] Run once after approval, subject to unchanged INFRA_RETRY. Inspect complete
+  JSONL/tool trace for actual assigned-skill/fixture reads and unexpected semantic
+  inputs. Record exec/debug differences.
 
-```text
-<spike-root>/
-  README.md
-  commands/
-  outputs/
-  runtime/
-    home/
-    codex-home/
-    tmp/
-  project/
-    .git/
-    AGENTS.md
-    workspace/
-      fixture/
-        allowed.txt
-      outside-link
-  outside/
-    denied.txt
-  report.md
+This is one-arm wiring corroboration, not an A/B result. Later implementation must
+verify both arms. While awaiting approval, retain only an unauthenticated runtime
+or recreate and re-audit a fresh one later; do not leave copied credentials.
+
+## Task 5: Report and stop
+
+- [x] FEASIBLE requires all provider-free gates and approved integration to pass;
+  BLOCKED means a demonstrated control failure; INCONCLUSIVE means missing evidence,
+  pending approval or unavailable authentication.
+- [x] Report checklist, version/environment, manifests, normalizations, exact
+  commands/statuses, comparisons, contamination controls, approval/attempt counts,
+  common provider inputs and unresolved blind spots.
+- [x] After recording the report, delete the exact private runtime directories and
+  verify absence. Preserve credential-free commands, fixtures, outputs and report.
+- [x] Verify main unchanged and feature worktree diff limited to this plan. Present
+  the scratch report and stop for owner review.
+
+## Accepted result: controlled-input harness is feasible
+
+The owner accepted the final result with “that is great, document that” after
+reviewing the successful integration summary. This is acceptance of the scoped
+feasibility finding, not authorization to implement the production runner or
+begin effectiveness/rewrite comparisons.
+
+| Check | Retained finding |
+| --- | --- |
+| Platform | Codex CLI 0.153.4, macOS 26.6.2 (25G83), arm64; iTerm2 |
+| Contamination detection | Scratch competitor skill, global/config instructions and parent instruction controls were observed |
+| Four fresh launches | A/B/B/A each discovered exactly one assigned skill at its declared path |
+| Input comparison | Complete debug inputs equal after exact runtime-path, assigned marker, message-ID and creation-time normalization |
+| Fixture/bootstrap comparison | Common files and all 60 bootstrap files matched; only assigned skill differed |
+| Authentication | Private file-backed ChatGPT cache validated, mode 0600; no credential in exec environment |
+| Approved integration | codex / gpt-5.6-sol / high; one attempt, exit 0, empty stderr |
+| Model-issued command | Exact requested cat of assigned SKILL.md and fixture; output matched both retained files |
+| Other visible tool actions | None |
+| Cleanup | All private runtimes and copied authentication removed; scratch evidence retained |
+
+The observed model command was:
+
+```sh
+/bin/zsh -lc '/bin/cat .agents/skills/discovery-probe/SKILL.md fixture/allowed.txt'
 ```
 
-- [ ] Record the plan commit, date, OS version, architecture, and installed Codex
-  version in `README.md`.
-- [ ] Put unique, non-secret sentinel text in `allowed.txt` and `denied.txt`.
-- [ ] Make `outside-link` a symlink to `outside/denied.txt`.
-- [ ] Initialize `project/` as a scratch Git repository and put a unique,
-  non-secret forbidden-instruction sentinel in `project/AGENTS.md`. Run Codex from
-  `project/workspace/`, making the parent file an effective project-instruction
-  discovery canary rather than an instruction for the spike executor.
-- [ ] Create `commands/run-private.sh` so every capability check, sandbox probe,
-  debug command, private login command, and later provider command starts with an
-  explicit minimal environment: `HOME=<spike-root>/runtime/home`,
-  `CODEX_HOME=<spike-root>/runtime/codex-home`,
-  `TMPDIR=<spike-root>/runtime/tmp`, a fixed `PATH`, and only the locale, TLS, and
-  proxy variables shown to be operationally necessary. Do not source a host shell
-  profile or inherit the controller environment wholesale.
-- [ ] Save the non-secret environment variable names and values used by the wrapper
-  in scratch. Never save authentication values or secret-bearing proxy values in
-  the wrapper or its logs; inject any required secret value only at execution time.
-- [ ] Leave `$CODEX_HOME/config.toml` absent. Put every spike-specific setting in
-  the explicitly selected named profile or an explicit CLI override.
-- [ ] Retain every command, exit status, stdout, and stderr under the spike root.
-- [ ] Confirm the repository is clean before and after the spike. Do not create or
-  modify repository files while running it.
+It returned the assigned `CI_BODY_A_MTAyGQ` and `CI_FIXTURE_MTAyGQ` markers.
+Provider approval was explicit: “approved, let's try it”. No INFRA_RETRY occurred.
 
-## Task 2: Inventory the installed Codex contract without a provider
+The tested pre-result plan digest was
+`8b55c012534715db62846e34a68133f7f5d7e981413b70413903139839111352`;
+the base commit was `c39fd41d0009370282b6ac9773c38cf5ad70852c`. This completion
+record changes the document digest; it does not change which plan was tested.
 
-- [ ] Capture `codex --version`, `codex exec --help`, and
-  `codex sandbox --help` through `commands/run-private.sh`.
-- [ ] Run one separately labeled host-context `codex login status` preflight only
-  to identify the available authentication method. This is controller inventory,
-  not isolation evidence. Do not invoke a model or reuse any other host profile
-  state.
-- [ ] Record only the authentication method. Do not read, print, copy into the
-  report, hash, or otherwise retain credential payloads.
-- [ ] Determine whether the active authentication is file-backed or keyring-backed
-  without exposing secrets. If `codex login status` does not name the store, check
-  only whether the host `auth.json` exists and the configured
-  `cli_auth_credentials_store` value; never open `auth.json`. Report
-  `INCONCLUSIVE` if those metadata do not determine the store.
-- [ ] Confirm support for `--ignore-user-config`, `--ignore-rules`, private
-  `CODEX_HOME`, and a restrictive `shell_environment_policy`.
-- [ ] Confirm that settings which must remain active with `--ignore-user-config`
-  can be supplied as explicit CLI `-c` overrides.
+The durable result is this section. Detailed evidence remains disposable scratch,
+not accepted scenario evidence, and may disappear if the host clears /private/tmp:
 
-If a required CLI control is demonstrably absent, report `BLOCKED` with the affected
-spike question and stop before provider use. If the installed CLI cannot establish
-whether the control exists or applies, report `INCONCLUSIVE`.
+- Final report: `/private/tmp/skilltest-controlled-inputs.MTAyGQ/report.md`.
+- Exact invocation/prompt: `commands/provider-command.sh`, `commands/provider-prompt.txt`.
+- Deterministic evidence: `outputs/audit.json`, `outputs/manifests.json`,
+  per-launch raw/normalized inputs and diffs.
+- Integration evidence: `outputs/provider-approval.json`,
+  `outputs/provider-attempt.json`, `outputs/provider-stdout.jsonl`,
+  `outputs/provider-stderr.txt`, `outputs/integration-audit.json`.
+- Cleanup evidence: `outputs/cleanup-final.json`.
 
-## Task 3: Qualify the outer discovery boundary deterministically
+### Limits carried into production design
 
-The **outer discovery boundary** surrounds the complete Codex process. It may read
-the recorded executable/runtime dependencies and private runtime, but it must deny
-host semantic inputs. Evaluate `codex sandbox` first because it is shipped with the
-installed CLI. If it cannot express that boundary, test one minimal macOS Seatbelt
-profile. Do not add container work to this spike; record it as a separately approved
-alternative if the native approaches fail.
+- The original strict filesystem-isolation result remains BLOCKED.
+- Five common bootstrap skills remained: imagegen, openai-docs, plugin-creator,
+  skill-creator and skill-installer. Results are conditional on that common harness.
+- Debug JSON and exec traces do not expose the full provider request or every
+  automatic runtime read. Login-shell startup reads were not independently audited.
+- Private local runtimes do not clear remote prompt caching. The integration
+  reported 28,442 input tokens, 24,576 cached input tokens and 136 output tokens.
+  Record and consider caching in later comparisons; distinguish it from reused
+  local session state.
+- Only synthetic arm A was provider-tested. Both production arms and actual
+  scenarios still need verification; these observations are not effectiveness data.
+- No existing baseline was reopened and no rewritten skills were evaluated.
 
-- [ ] Save the exact sandbox command and policy text in scratch.
-- [ ] Run a direct command through the candidate boundary that reads
-  `workspace/fixture/allowed.txt`; require the exact sentinel and exit zero.
-- [ ] Run a direct command through the same boundary that reads
-  `outside/denied.txt`; require a filesystem denial and nonzero exit.
-- [ ] Run a direct command through the same boundary that reads
-  `workspace/outside-link`; require a filesystem denial and nonzero exit.
-- [ ] Run a direct command through the same boundary that reads the controlled
-  parent `AGENTS.md`; require a filesystem denial and nonzero exit.
-- [ ] Enumerate the effective host user-skill, plugin, and host-admin discovery
-  root paths without opening file payloads. For each existing root, select one known
-  non-secret file and require a direct read through the boundary to fail. For an
-  absent root, record the absence and confirm that the policy grants it no explicit
-  access.
-- [ ] Record exact exit statuses and denial diagnostics.
-- [ ] Confirm the policy surrounds the Codex process itself, not only commands that
-  Codex may later generate.
-- [ ] Before applying the outer boundary, run `codex debug prompt-input` from
-  `project/workspace/` through `commands/run-private.sh` as a positive control and
-  require the controlled parent `AGENTS.md` sentinel to appear.
-- [ ] Run `codex debug prompt-input` through `commands/run-private.sh` and the exact
-  outer boundary from the same directory. Require that its model-visible input list
-  contains no parent
-  `AGENTS.md`, host user skill, plugin, or host-admin input. Classify any unavoidable
-  provider-bundled input separately and record the Codex version.
+## Claude capability assessment: available, not yet qualified
 
-These deterministic probes qualify only the recorded platform, CLI version, and
-policy. A prompt-driven canary is not a substitute. If any denied read succeeds or
-the debug input contains a forbidden ambient input, report `BLOCKED` for spike
-question 2 or 4, as applicable, and do not invoke a provider.
+Provider-free inventory on 2026-09-06 confirmed installed Claude Code 2.1.261.
+The existing runner already accepts provider `claude`, model and effort and invokes
+noninteractive runs with session persistence disabled. Its current environment
+inherits the controller environment plus baseline overrides; it is not yet a
+qualified controlled-input adapter.
 
-## Task 4: Qualify the inner model-command boundary and authentication
+The installed help exposes `--setting-sources`, `--settings`,
+`--strict-mcp-config`, `--no-session-persistence`, `--output-format stream-json`,
+`--debug-file`, explicit model/effort and tool/permission controls.
+These are sufficient to justify a separate feasibility investigation, not to
+declare Claude qualified from the Codex result.
 
-The **inner model-command boundary** is the policy Codex applies to subprocesses
-requested by the model. It is distinct from the outer discovery boundary: Codex
-itself must be able to use authentication, while model-generated commands must not
-be able to read it. If the installed CLI cannot expose or reproduce this exact inner
-policy in a provider-free command, report `INCONCLUSIVE`; do not infer it from the
-outer-boundary probes.
+Prefer investigating fresh private HOME/CLAUDE_CONFIG_DIR, an explicitly selected
+project skill, controlled settings/MCP sources, contamination controls and a trace
+audit. Keep native skill discovery/invocation in scope. Simply disabling all
+skills or pasting a skill into the system prompt would test a different mechanism.
 
-Create `$CODEX_HOME/spike-isolation.config.toml` as a declared operational input.
-It must select a permission profile named `fixture-only` that denies `:root`, reads only
-`:minimal` and `:workspace_roots`, and explicitly denies `:tmpdir` and `:slash_tmp`.
-It must also set `shell_environment_policy.inherit = "none"`. Retain the exact file
-and digest in scratch. Do not pass legacy `--sandbox` settings, because those take
-precedence over permission profiles in current Codex.
+The installed `--bare` help says it skips several automatic inputs including
+CLAUDE.md and keychain reads, still resolves explicit /skill-name invocation, and
+requires API-key/helper authentication for Anthropic rather than OAuth/keychain.
+Do not select it without checking that authentication and skill invocation match
+the intended experiment. Managed settings also require inventory.
 
-Provision the private `CODEX_HOME` with one documented method:
+An equivalent to Codex's provider-free `debug prompt-input` command was not
+identified in the inspected top-level help. This does not prove one is unavailable.
+A Claude spike must establish an observable discovery/provenance check or report
+that evidence limitation before integration.
 
-- API key: pipe the value on standard input to
-  `codex login --with-api-key`;
-- access token: pipe the value on standard input to
-  `codex login --with-access-token`; or
-- file-backed ChatGPT login fallback: copy only `auth.json` to the private
-  `CODEX_HOME` with mode `0600`.
+Raw installed version/help and explicit private inventory environment are retained
+at `/private/tmp/skilltest-claude-inventory.J5v2CW/outputs/`. Only version/help were
+invoked; no Claude model or authentication was invoked. Current
+[CLI documentation](https://code.claude.com/docs/en/cli-reference) and
+[programmatic usage](https://code.claude.com/docs/en/headless) were consulted;
+installed-version observations take precedence over assuming identical behavior.
 
-Never pass `OPENAI_API_KEY` or `CODEX_ACCESS_TOKEN` to the later
-`codex exec` process. Select the scratch profile explicitly with
-`--profile spike-isolation --ignore-user-config`. Also pass
-`-c 'shell_environment_policy.inherit="none"'` so the security-relevant environment
-setting is visible in the retained command rather than relying only on the selected
-profile.
+A Claude spike is separate follow-up work. Select its exact model, effort and
+authentication approach during planning; present every proposed integration command
+for explicit approval. Do not silently carry Codex model names or the existing
+Claude pin expectations into a new comparison.
 
-- [ ] Run `codex login status` against the private `CODEX_HOME` and retain only
-  the method and success/failure.
-- [ ] If the active login is keyring-backed and neither documented stdin login
-  credential is available, report `BLOCKED` for spike question 1 and stop.
-- [ ] Confirm provider-free that
-  `codex sandbox --profile spike-isolation --permission-profile fixture-only`
-  loads `$CODEX_HOME/spike-isolation.config.toml`. Retain
-  `--profile spike-isolation --ignore-user-config` in the later `codex exec`
-  command; Task 5 verifies that the provider path applies the selected profile.
-- [ ] Prove provider-free configuration recognition by showing that an invalid
-  `shell_environment_policy.inherit` value is rejected while `none` is accepted.
-  Do not claim this proves runtime application; Task 5 observes that separately.
-- [ ] Reproduce the exact named inner permission profile with
-  `codex sandbox --profile spike-isolation --permission-profile fixture-only` and
-  save the command and policy digest separately from the outer-boundary command and
-  digest.
-- [ ] Through that direct inner-profile command, read
-  `project/workspace/fixture/allowed.txt`; require the exact sentinel and exit zero.
-- [ ] Through that direct inner-profile command, attempt reads of
-  `outside/denied.txt`, `project/workspace/outside-link`, and the private
-  authentication file by exact path; require filesystem denials and nonzero exits.
-- [ ] Set a unique, non-secret credential-shaped environment marker in the
-  `codex exec` launch environment. Do not place it in the profile's environment
-  allowlist; Task 5 will inspect the exact model-command output for its absence.
-- [ ] Confirm all created credential files have mode `0600` and the runtime
-  directories have mode `0700`.
+## Post-spike decision
 
-A copied ChatGPT authentication cache may need to persist refreshed state. The
-spike may discard such refreshes, but a later production design must either
-re-provision every run or define a safe refresh lifecycle. If model-generated
-commands can access any credential material, report `BLOCKED` for spike question 3
-and do not invoke a provider.
+After owner acceptance of FEASIBLE, prepare a design amendment and separate
+test-driven implementation plan; do not implement automatically. Before effectiveness
+runs, reconcile the methodology's strict-isolation language with this scoped claim:
+comparison eligibility, contamination handling, common-input manifests and invalidation.
 
-## Task 5: Run one approved provider integration probe
+Then plan repeated randomized/interleaved within-scenario comparisons: Sol high,
+medium and low as separate strata; Terra high as a possible separate baseline-model
+comparison. Define sample sizes, metrics and stopping rules before collecting data.
+Account for provider drift and contamination by arm. No rewritten-skill comparisons
+until the harness and methodology are owner-accepted.
 
-This task is allowed only if every provider-free gate in Tasks 1-4 passes.
+## References
 
-- [ ] Prepare `commands/provider-command.txt`,
-  `commands/provider-prompt.txt`, `outputs/provider-stdout.jsonl`,
-  `outputs/provider-stderr.txt`, and a draft `report.md` in scratch.
-- [ ] Use the proven private runtime, boundary command, discovery opt-outs, and
-  explicit restrictive shell environment policy. Apply both the qualified outer
-  discovery boundary and the qualified inner model-command policy.
-- [ ] Use provider `codex`, model `gpt-5.6-sol`, and effort `high`, unless the
-  owner explicitly approves a different exact combination.
-- [ ] Ask Codex to read the declared sentinel, attempt the direct and symlinked
-  outside reads, attempt the private authentication-file read by exact path without
-  printing any content, and print whether the non-secret credential-shaped marker
-  is set. Do not ask it to expose real credentials.
-- [ ] Present the exact provider, model, effort, and complete command to the owner.
-  Do not invoke the provider until that exact command is explicitly approved.
-- [ ] Apply the existing `INFRA_RETRY` procedure if the provider attempt has an
-  infrastructure-only failure.
-- [ ] Inspect the complete JSONL and tool trace. Record observed behavior, including
-  any ambient skill or instruction exposure that the trace makes visible.
-- [ ] Require the trace to show the exact probe commands, the declared sentinel,
-  filesystem denials for the forbidden paths, and an absent environment marker. If
-  the model changes or omits a probe, report `INCONCLUSIVE`; if a forbidden read or
-  marker succeeds, report `BLOCKED` for spike question 3 or 4.
+- [Baseline lifecycle](specs/2026-09-03-skill-validation-baseline-design.md#accepted-baseline-set-lifecycle)
+- [Existing verdict order](completed/specs/2026-09-02-skill-testing-methodology-design.md#scenario-verdict)
+- [Codex skills](https://developers.openai.com/codex/skills)
+- [CLI reference](https://developers.openai.com/codex/cli/reference)
+- [Authentication](https://developers.openai.com/codex/auth)
 
-The provider result corroborates integration only. Model self-report and a clean
-trace do not replace the deterministic boundary probes.
-
-## Task 6: Classify and report the spike
-
-Use one outcome:
-
-- `FEASIBLE`: all four spike questions were answered yes and the approved
-  integration probe behaved consistently with both qualified boundaries.
-- `BLOCKED`: at least one spike question was answered no. Identify each failed
-  question and retain the passing evidence; do not invent a more granular status.
-- `INCONCLUSIVE`: no question was answered no, but tooling or evidence could not
-  answer at least one question. Identify every unanswered question.
-
-The report must include:
-
-- exact platform and Codex version;
-- authentication mechanism, never a secret or host credential path;
-- exact non-secret commands and exit statuses;
-- separate outer- and inner-boundary policies and digests;
-- deterministic probe evidence;
-- provider command approval and attempt count, if reached;
-- integration observations; and
-- the outcome with unresolved questions.
-
-Present `report.md` to the owner. Keep it and all evidence in scratch. Do not
-promote it to `accepted/`.
-
-- [ ] After recording the report, delete the private runtime and verify deletion.
-  Preserve the credential-free commands, outputs, and report elsewhere in the
-  scratch root.
-
-## Post-spike decision gate
-
-Do not begin production implementation automatically.
-
-- If the owner accepts `FEASIBLE`, write a Codex-only design amendment and a
-  separate test-driven implementation plan. Let the methodology define comparison
-  eligibility before changing the result schema or runner statuses.
-- If the outcome is `BLOCKED`, propose only the smallest follow-up investigation
-  for each failed question. Partial profile isolation is insufficient for strict
-  fixture-only edit or A/B testing. A container or another platform boundary
-  requires separate owner approval.
-- If the outcome is `INCONCLUSIVE`, preserve the scratch evidence and defer the
-  design.
-
-A later production design should keep these concepts separate:
-
-1. the requested policy identifier and Codex version;
-2. whether that policy was mechanically applied;
-3. whether its exact platform/version/policy combination was independently
-   qualified; and
-4. whether the run transcript was `CLEAN`, `VIOLATION`, or `UNAVAILABLE`.
-
-Comparison eligibility is derived from those facts. `CLEAN` must never be treated
-as proof of enforcement, and this spike does not pre-commit the eventual schema or
-status names.
-
-## Completion criteria
-
-This plan is complete when:
-
-- the scratch spike answers each spike question or records a precise blocker;
-- direct allowed, forbidden, and symlink-escape probes have exact evidence;
-- authentication is provisioned through a documented private-runtime flow;
-- deterministic inner-profile probes deny the tested authentication file and
-  forbidden ambient sentinels, and the integration trace shows that the non-secret
-  environment marker is absent;
-- any provider invocation occurred only after approval of its exact command;
-- the report makes claims only for the tested platform, Codex version, auth
-  mechanism, and policy;
-- the owner has reviewed the scratch report; and
-- no runner, scenario, methodology, skill, or `accepted/` file changed.
+Installed-version evidence governs the spike; documentation is context, not proof.
