@@ -9,9 +9,10 @@ from pathlib import Path
 import jsonschema
 import pytest
 
-import skilltest.providers as providers_module
 import skilltest.results as results_module
+import skilltest.runner as runner_module
 import skilltest.workspace as workspace_module
+from skilltest.providers import ProviderRequest, ProviderResult
 from skilltest.runner import run_once
 
 
@@ -235,10 +236,10 @@ def test_run_once_emits_provider_launch_failed(
 
 # Break caught: losing provider mutations on failure or letting an artifact error mask it.
 @pytest.mark.parametrize(
-    ("name", "delay_seconds", "exit_code", "expected_code", "timed_out"),
+    ("name", "exit_code", "expected_code", "timed_out"),
     (
-        ("timeout", 1, 0, "PROVIDER_TIMEOUT", True),
-        ("nonzero", 0, 9, "PROVIDER_EXIT_NONZERO", False),
+        ("timeout", -15, "PROVIDER_TIMEOUT", True),
+        ("nonzero", 9, "PROVIDER_EXIT_NONZERO", False),
     ),
 )
 def test_run_once_retains_failed_provider_mutations_and_provider_error_precedence(
@@ -246,7 +247,6 @@ def test_run_once_retains_failed_provider_mutations_and_provider_error_precedenc
     fake_provider,
     monkeypatch,
     name: str,
-    delay_seconds: float,
     exit_code: int,
     expected_code: str,
     timed_out: bool,
@@ -257,19 +257,29 @@ def test_run_once_retains_failed_provider_mutations_and_provider_error_precedenc
     )
     fixture_bytes = f"{name} fixture\n".encode()
     evidence_bytes = f"{name} evidence\n".encode()
-    fake_provider.configure(
-        monkeypatch,
-        stdout=b"raw stdout",
-        stderr=b"raw stderr",
-        exit_code=exit_code,
-        delay_seconds=delay_seconds,
-        fixture_bytes=fixture_bytes,
-        evidence_name="provider-output.txt",
-        evidence_bytes=evidence_bytes,
-    )
     if timed_out:
-        monkeypatch.setattr(providers_module, "PROVIDER_TIMEOUT_SECONDS", 0.2)
-        monkeypatch.setattr(providers_module, "TERMINATE_GRACE_SECONDS", 0.01)
+        # Seed completed writes before reporting timeout; subprocess startup is not
+        # this persistence test's clock. test_providers.py covers real termination.
+        def timeout_after_writes(request: ProviderRequest) -> ProviderResult:
+            (request.workspace_dir / "fixture/input.txt").write_bytes(fixture_bytes)
+            (request.workspace_dir / "evidence/provider-output.txt").write_bytes(evidence_bytes)
+            return ProviderResult(
+                executable="codex", invocation_started=True, exit_code=-15,
+                timed_out=True, stdout_bytes=b"raw stdout", stderr_bytes=b"raw stderr",
+            )
+
+        monkeypatch.setattr(runner_module, "invoke_provider", timeout_after_writes)
+    else:
+        # The shared fake_provider fixture in conftest.py writes before exiting.
+        fake_provider.configure(
+            monkeypatch,
+            stdout=b"raw stdout",
+            stderr=b"raw stderr",
+            exit_code=exit_code,
+            fixture_bytes=fixture_bytes,
+            evidence_name="provider-output.txt",
+            evidence_bytes=evidence_bytes,
+        )
     _fail_after_partial_write(monkeypatch, "stdout.txt")
 
     outcome = run_once(case.config_path)
@@ -279,12 +289,10 @@ def test_run_once_retains_failed_provider_mutations_and_provider_error_precedenc
     result = _validate_result(outcome.run_dir)
     assert result["execution"]["invocation_started"] is True
     assert result["execution"]["timed_out"] is timed_out
-    if timed_out:
-        assert isinstance(result["execution"]["exit_code"], int)
-    else:
-        assert result["execution"]["exit_code"] == 9
+    assert result["execution"]["exit_code"] == exit_code
     assert result["infrastructure_error"]["code"] == expected_code
     assert result["artifacts"]["stdout"]["exists"] is False
+    assert (outcome.run_dir / "stderr.txt").read_bytes() == b"raw stderr"
     assert result["artifacts"]["fixture"]["entries"] == [
         _file_entry("input.txt", fixture_bytes)
     ]

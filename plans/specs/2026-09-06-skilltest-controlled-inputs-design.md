@@ -23,7 +23,7 @@ This section is the durable home of the overall goal; repository entry points li
 ## Accepted immediate scope: one usable pilot
 
 Build and exercise one small testing path before deciding the final testing organization; practical use should expose missing capabilities and unnecessary procedure.
-The first path uses Codex / gpt-5.6-sol / high with a few representative scenarios, current-DD and no-DD conditions, fixed declared Superpowers and no DD hooks.
+The first path uses Codex / gpt-5.6-sol / low with a few representative scenarios, current-DD and no-DD conditions, fixed declared Superpowers and no DD hooks.
 Select the exact scenarios, counts and order in the pilot runbook before execution; this provider/model/effort choice is not approval of a provider command.
 
 The deliverables are one short provisional agent runbook, existing-format configs and fixture inputs, the necessary Codex invocation/setup/validation changes, and the CLI-version worksheet field with its 105-record historical backfill.
@@ -33,10 +33,15 @@ Use existing commands and recoverable source files for input preparation and pro
 
 Qualify the selected discovery, composition, task-tool and evidence-write paths, then exercise preparation, execution, scoring and owner handoff end to end under exact-command approval.
 Use the pilot to assess the procedure, not to claim skill effectiveness or full-suite coverage; do not label procedure success as skill GREEN.
+Produce complete run records and scored worksheets to exercise the whole process; a judgeable skill FAIL can still demonstrate that the testing procedure works.
+Start at low because this is process qualification and no need for higher effort has been demonstrated.
+If a concrete workflow problem warrants a medium-effort diagnostic, record the reason, retain the low-effort attempt and obtain the required exact-command approval; do not automatically increase effort to obtain a passing skill result.
+Keep medium diagnostics separately identified, not replacements for low observations or unchanged-command infrastructure retries.
 Walk through interruption/failure handling and the later edit workflow using retained or synthetic evidence where useful, without authoring candidate DD skills or claiming RED/GREEN validation from a dry run.
 Stop for owner review of the pilot and adjust the procedure before scaling.
 
-Defer Claude runner integration, the Sol medium/low and possible Terra comparison, full controlled-baseline collection, campaign-wide sampling rules, detailed edit/regression runbooks and directory reorganization.
+Defer Claude runner integration, the Sol high/medium/low effectiveness matrix and possible Terra comparison, full controlled-baseline collection, campaign-wide sampling rules, detailed edit/regression runbooks and directory reorganization.
+After owner acceptance of the process, freeze the agreed inputs and procedure and collect fresh effectiveness results; do not promote pilot observations into that campaign.
 The accepted Claude feasibility evidence remains available for later work; it is not a dependency of this Codex pilot.
 Retain the RED/GREEN, validity and evidence requirements below, but settle only the concrete choices needed for the pilot now.
 This scope does not authorize implementation or provider calls; the exact Codex change map and a separate test-driven implementation plan still require approval.
@@ -95,7 +100,7 @@ This does not authorize editing the accepted scenario packages or rewriting thei
 
 Fresh controlled baseline collection includes both the current-DD composition and the no-DD control, recorded and reported separately.
 Retain the no-DD observations for later comparisons even when they pass; they become RED evidence only when they demonstrate a judgeable targeted failure.
-Both conditions retain the declared Superpowers substrate and exclude DD hooks as specified here; the pilot fixes Codex / gpt-5.6-sol / high, while its scenarios and repetition counts still require agreement.
+Both conditions retain the declared Superpowers substrate and exclude DD hooks as specified here; the pilot starts with Codex / gpt-5.6-sol / low, while its scenarios and repetition counts still require agreement.
 
 Record the actual subject-provider CLI version alongside provider, model and effort for every baseline observation and subsequent edit-test observation.
 Its durable scoring home is the completed worksheet: add a blank `Provider CLI version` field to the run-identity table for the orchestrator to fill while scoring.
@@ -173,7 +178,7 @@ The [scenario index](../../skill-validation/scenarios/README.md), catalog summar
 |---|---|---|
 | Purpose and authority | Charter, catalog summaries, scenario rubrics and validation entry points | Name the selected scenarios and paths they exercise; distinguish procedure qualification, action-selection evidence and executed-work claims. Link governing criteria instead of duplicating them. |
 | Inputs and setup | Existing configs/fixtures, Codex spike findings and fixture-root decision | Freeze and check valid no-DD/current inputs, Superpowers and ordinary tools; exclude DD hooks and evaluator guidance. Document the selected CLI version, safe authentication, required checks and cleanup. |
-| Execution | One-run CLI, scratch bundles and worksheet command | Give exact working directories, setup/run/version-capture commands, counts, order and approval checkpoints for Codex / gpt-5.6-sol / high; apply the accepted stop/retry rules. |
+| Execution | One-run CLI, scratch bundles and worksheet command | Give exact working directories, setup/run/version-capture commands, counts, order and approval checkpoints for Codex / gpt-5.6-sol / low; apply the accepted stop/retry rules. |
 | Judgment | Existing rubrics, blank worksheets and separate ledgers | Score all judgeable observations, fill CLI provenance and report conditions separately; disclose ambiguity and invalid attempts. No new pooled score, effectiveness estimate or skill-acceptance threshold. |
 | Evidence and handoff | Existing bundles, worksheets, frozen sources and one Markdown summary | Link every planned/completed condition and repetition, evidence and deviations; identify where to resume, what needs owner review and what must survive cleanup. Keep credentials out. |
 
@@ -277,26 +282,40 @@ Do not drop a required control to make the diff smaller or claim full isolation 
 This scope keeps testing infrastructure subordinate to skill development while preserving the accepted controlled-input claim.
 It does not authorize implementation or provider calls; the exact minimal change set still requires design approval and a separate test-driven plan.
 
-### Next design step: Codex invocation delta
+### Proposed Codex change map — pending owner agreement
 
-This is a proposal derived from the recorded spike command, not an approved production command or a fresh CLI-capability check.
-The scratch source is `/private/tmp/skilltest-controlled-inputs.MTAyGQ/commands/provider-command.sh`; the [durable Codex result](../2026-09-05-skilltest-provider-input-isolation.md#accepted-result-controlled-input-harness-is-feasible) records its qualification limits.
+The [durable Codex result](../2026-09-05-skilltest-provider-input-isolation.md#accepted-result-controlled-input-harness-is-feasible) and scratch `commands/provider-command.sh`, `auth-check.py` and `run-approved-integration.py` under `/private/tmp/skilltest-controlled-inputs.MTAyGQ/` supply the starting evidence.
+Provider-free inspection on 2026-09-06 found `/opt/homebrew/bin/codex --version` reports `0.153.4`; its `exec --help` documents `--ignore-user-config`, `--ignore-rules` and `--add-dir` for additional writable directories.
+Help establishes available options, not enforcement; the writable pilot combination still requires qualification.
 
-| Surface | Smallest candidate change or decision |
-|---|---|
-| CLI arguments in `providers.py` | Add the recorded `--ignore-user-config`, `--ignore-rules` and `-c 'shell_environment_policy.inherit="none"'` controls; retain existing model/effort, ephemeral execution and output capture. |
-| Child environment in `providers.py` | Replace inherited Codex environment with the necessary explicit operational values and private HOME/CODEX_HOME/TMPDIR; these directories require setup, not just additional argv entries. |
-| Authentication | The recorded `-c 'cli_auth_credentials_store="file"'` requires private credential provisioning and cleanup; settle the smallest safe setup before adopting it. |
-| Sandbox and approvals | The spike used read-only sandboxing and `-c 'approval_policy="never"'`; the runner supports evidence writing with `workspace-write`. Preserve required write capability and qualify the chosen approval policy instead of copying the spike command unchanged. |
-| Skill discovery | Use the accepted fixture project root with native skill targets; retain declared fixture hashes and qualify discovery and evidence access under the changed working directory. |
+| Surface | Proposed minimum change | Required verification |
+|---|---|---|
+| Codex argv/cwd in `providers.py` | Run from `workspace/fixture/`; retain model/effort, ephemeral JSONL, final output and `workspace-write`. Add `--add-dir` for `workspace/evidence/`, `--ignore-user-config`, `--ignore-rules`, and fixed config overrides for `shell_environment_policy.inherit="none"`, `cli_auth_credentials_store="file"` and `approval_policy="never"`. | Exact argv/cwd test; real qualification of native loading, relative reads and sibling evidence writes without interactive approval or broader sandbox bypass. |
+| Private runtime around the Codex invocation | A small Codex-specific helper creates fresh private HOME/CODEX_HOME/TMPDIR outside the retained bundle; launch with only those values and an explicit operational PATH. Resolve the CLI executable before replacing the environment, then use that same executable for preflight and invocation. | Fake-provider tests show private directories, no inherited semantic settings/API-key variables, and fresh state on consecutive runs. Log the actual resolved argv, not a pre-setup approximation. |
+| Authentication and cleanup | Copy only the existing file-backed `auth.json` from the invoking Codex profile into private CODEX_HOME with mode 0600 and private parent directories; check private login status without retaining credential-bearing output. No new login, keychain extraction, host-profile copy or shared-account logout. Remove the private runtime on success, launch failure, nonzero exit, timeout and handled interruption. | Dummy credentials only in automated tests; unavailable/invalid auth stops before the model call, partial setup is cleaned up, and cleanup failure is surfaced without masking an earlier failure. Never report successful cleanup without verifying it. |
+| Fixture preparation and mechanical checks | Preserve the spike's fresh project boundary with an empty, template-free Git repository in the fixture root. Before initialization, reject a declared or existing `.git` file/tree instead of overwriting it. Check prepared prompt/fixture bytes against the declared sources and ensure the private profile contains no copied settings/instructions. Keep auth outside fixture/evidence inventories. | Provider-free tests reject setup mismatches before invocation. Separately qualify native discovery and stable common inputs using the same runtime setup; do not build a general catalog parser or claim file copying proves discovery. |
+| Existing run orchestration and worksheet | Make only the necessary `runner.py` integration for preparation failure, actual invocation logging and cleanup reporting. Add the blank CLI-version worksheet field and targeted test; retain the existing result shape, output capture and manual scoring. | Preserve Claude argv/env/cwd; test new lifecycle failure reporting and verify that the historical backfill changes only authorized metadata and adds no inferred versions. |
 
-Focused tests must cover the chosen argv/env and setup failure paths; qualification must exercise the resulting combination, not assume the read-only synthetic probe proves the writable runner path.
-No config-schema extension is established by this mapping.
+Runtime preparation and cleanup belong to the runner because every run needs them; the runbook should not reproduce the spike's Python wrappers or provision secret files by hand for each invocation.
+Use the existing invoking-profile location (CODEX_HOME, otherwise the normal `.codex` directory) only to locate the credential source, never to inherit its instructions or settings.
+Support the demonstrated file-cache path first; unavailable credentials are a setup blocker, not a reason to add another authentication backend.
+Bound each setup subprocess, including Git initialization and private login-status checks, to 30 seconds; keep the existing 900-second model timeout and five-second termination grace.
+For Codex, start owned subprocesses in a separate process group; on timeout or handled interruption, terminate/escalate that group and reap the direct child before deleting its runtime. Never signal unrelated host sessions.
+On normal return, stop any remaining owned group members before runtime cleanup as well.
+Do not promise cleanup of processes that deliberately escape the owned group or survive an uncatchable runner kill; log the exact private-runtime path without contents for manual recovery, and keep such attempts outside qualified pilot evidence until resolved.
+The current infrastructure-code enum lacks a runtime-cleanup failure: add only `PROVIDER_CLEANUP_FAILED` to the existing result contract, not a new schema version or status framework.
+If cleanup fails after an otherwise successful call, return a nonzero runner outcome with that infrastructure error while preserving the provider's actual exit and captured output; if an earlier error exists, keep it primary and record cleanup failure additionally in the runner log.
+Do not treat a retained evaluable response with a cleanup failure as an automatically retryable infrastructure-only attempt.
+The runbook owns frozen source preparation, per-run CLI-version evidence, declared common-input qualification, complete worksheet scoring and the pilot summary; the runner owns the bounded pre-launch mechanical checks listed above.
+Qualify catalogs and observed bootstrap/common inputs once for the pinned pilot harness and repeat qualification on relevant CLI, input, setup or tool changes; review each run's observable trace for violations. This separates effective-control validation from per-run setup checks without asserting hidden inputs are absent.
+Keep shell-startup/common-input limits explicit during qualification: neither `inherit="none"` nor a private profile alone proves absence of automatic shell reads.
+Use the resolved executable's directory followed by `/usr/bin:/bin:/usr/sbin:/sbin` as the explicit pilot PATH, with no inherited extra entries; qualify the selected task tools under it.
+Pin recovery commands and qualification calls in the runbook before execution; this mapping approves no code, new config schema or provider call.
 
 ## Review sequence
 
 1. **Finish the pilot design.** Select a few scenarios that exercise the required paths, their exact counts/order and frozen-input preparation; map the Codex controls to the smallest argv/env/setup changes and focused checks. Do not settle the full campaign or final directory layout.
-2. **Approve a separate test-driven implementation plan.** Cover the Codex changes, worksheet field and historical backfill, and one provisional runbook with existing-format inputs. Keep tests tied to the selected contracts.
+2. **Approve the [draft test-driven implementation plan](../2026-09-06-skilltest-sol-low-pilot.md).** It covers the Codex changes, worksheet field and historical backfill, and one provisional runbook with existing-format inputs. Keep tests tied to the selected contracts.
 3. **Implement and qualify — not yet authorized.** Run provider-free tests first, then representative real qualification under exact-command approval. Validate before collecting the pilot's no-DD/current observations.
 4. **Exercise the runbook and stop for owner review.** Report setup, execution, scoring and handoff results, validity limitations and practical procedure changes in one Markdown summary; do not proceed automatically to a full baseline campaign or skill edits.
 5. **Expand only after pilot feedback.** Separately approve detailed baseline/edit procedures, campaign metrics and sampling, additional providers/models or layout changes when needed.
@@ -309,6 +328,27 @@ This order prevents a feasible scratch mechanism from becoming a production cont
 Settle only the selected scenarios and their fixed inputs, exact counts/order, Codex invocation/auth/access delta and checks, and the runbook's concrete command/evidence paths before execution.
 Use existing charter criteria and worksheet judgments; do not ask the owner to restate skill purpose or success criteria.
 Broad sampling, detailed edit/regression coverage, Claude integration and reorganization are explicitly deferred, not missing pilot requirements.
+
+### Proposed scenario set and run count — pending owner agreement
+
+Use two fresh pilot variants, not replacements for their source packages or accepted results:
+
+| Source | Pilot coverage | Required adaptation |
+|---|---|---|
+| [DR-02](../../skill-validation/scenarios/disciplined-research/dr-02/README.md) | Native research-skill loading, reads of three local sources, judgment from controlling evidence, and sibling evidence-directory writes | Keep the procurement task and semantic rubric; explicitly request saving the same two-line answer returned in the final response to `{{evidence_dir}}/deadline-note.md`. Replace the blanket read-only restriction in both conditions with permission to write only that file. Record the saved artifact as task fidelity, not a new skill-behavior criterion. |
+| [LP-01](../../skill-validation/scenarios/lean-plan-writing/lp-01/README.md) | DD/Superpowers composition and plan-artifact scoring | Retain the JSON-report task, rubric and supplied writing-plans guidance; adapt native fixture paths and condition-specific loading instructions while keeping the response-only task boundary. |
+
+For both variants, supply all nine current DD skills in the current-DD condition and none in no-DD; hold the explicitly inventoried Superpowers inputs and ordinary task tools fixed.
+No-DD prompts must not request absent DD skills; LP-01 still invokes the supplied writing-plans guidance in both conditions.
+Freeze and audit the common task/rubric and declared loading differences before collection; any adaptation creates new pilot provenance, not a historical-baseline rerun.
+Do not add a separate description-routing scenario: [DISC-07](../../skill-validation/scenarios/skill-discovery/disc-07/README.md), for example, forbids file reads and supplies descriptions inline, so it would not prove native CLI discovery.
+Native discovery, actual loading, composition inputs and write access still require explicit qualification; a subject choosing not to use a successfully qualified capability is scored as behavior/task fidelity, not automatically an environment failure.
+
+Propose two repetitions per condition per scenario: eight planned scenario runs, all Codex / gpt-5.6-sol / low, with a fresh runtime each time.
+Run DR-02 first, then LP-01; within each, use no-DD, current-DD, current-DD, no-DD order.
+This exercises repeat setup and both order positions without claiming a useful effectiveness estimate or satisfying later skill-authoring repetition requirements.
+Keep all planned judgeable results, including failures; do not add repetitions to obtain a preferred verdict.
+Required pre-collection qualification calls and permitted infrastructure retries are separately counted, not included in the eight; fix qualification commands/counts with the Codex change map before requesting execution approval.
 
 ## Existing authorities to reconcile after decisions
 
