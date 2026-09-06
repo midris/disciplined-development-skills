@@ -20,6 +20,16 @@ overlays `superpowers:subagent-driven-development`, `lean-plan-writing` refines
 among several. The doctrine travels wherever that platform runs; the hook stack is
 Claude Code-specific. See [Requirements](#requirements).
 
+## Developing or evaluating these skills
+
+Start with the [validation charter](skill-validation/charter/core-contracts.md): it defines what each skill is supposed to do and the invariants used to judge it.
+Use the existing contracts and scenario rubrics rather than inventing new success criteria from the current skill wording.
+The charter's proposed suite changes retain their stated approval and activation conditions.
+
+The [rewrite goal and design principles](plans/specs/2026-09-06-skilltest-controlled-inputs-design.md#overall-goal) explain the intended direction: cleaner, lighter, more effective skills, with dumb tools for smart agents and repeatable RED/GREEN evidence.
+The [validation guide](skill-validation/README.md) routes to the charter, scenarios, methodology, runner and current design work.
+Agents must also read [CLAUDE.md](CLAUDE.md); [AGENTS.md](AGENTS.md) is the Codex entry point to that shared guidance.
+
 ## What's included
 
 Nine skills (each a `skills/<name>/SKILL.md`):
@@ -56,11 +66,11 @@ The hook stack (under `skills/disciplined-development/hooks/`) is documented in 
 [`hooks/README.md`](skills/disciplined-development/hooks/README.md); config schema in
 [`hooks/dd-config.md`](skills/disciplined-development/hooks/dd-config.md).
 
-Skill behavior is validated by recorded subagent scenarios in
-[`skill-validation/`](skill-validation/): per skill (or command), the RED/GREEN
-pressure scenarios that justify its content, kept re-runnable so a change can be
-re-tested before it ships. Non-shipped — a development record, not part of the
-installed bundle.
+Packaged scenarios and retained validation records live in
+[`skill-validation/`](skill-validation/README.md).
+They support repeatable skill testing; historical current-skill observations are
+distinct from the no-skill RED controls required for authoring.
+These are development records, not part of the installed bundle.
 
 [`skill-validation/runner/`](skill-validation/runner/) is also non-shipped: a
 small `skilltest run CONFIG` CLI for one retained, locally configured skill-test

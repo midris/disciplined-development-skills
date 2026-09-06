@@ -61,6 +61,9 @@ or block; the two tools are the only **writers** of that state and the review lo
 
 ## Non-shipped skill-test runner
 
+The [validation charter](skill-validation/charter/core-contracts.md) defines intended skill behavior and evaluation responsibilities.
+The [rewrite goal and design principles](plans/specs/2026-09-06-skilltest-controlled-inputs-design.md#overall-goal) guide future changes; they do not describe an already-implemented runner redesign.
+
 [`skill-validation/runner/`](skill-validation/runner/) is separate development
 tooling, not a fourth runtime layer or an installed consumer component.
 `skilltest run CONFIG` owns one configuration, bundle, workspace, provider
@@ -274,3 +277,4 @@ Durable (never aged out), append-only, sparse by source; the field groups are in
 - **Config schema + env vars:** [`hooks/dd-config.md`](skills/disciplined-development/hooks/dd-config.md)
 - **Upgrading a deployment:** [`MIGRATIONS.md`](MIGRATIONS.md)
 - **One-run validation tooling:** [`skill-validation/runner/README.md`](skill-validation/runner/README.md)
+- **Skill behavior contracts and validation navigation:** [charter](skill-validation/charter/core-contracts.md), [validation guide](skill-validation/README.md)

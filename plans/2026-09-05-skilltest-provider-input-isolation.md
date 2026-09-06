@@ -228,6 +228,10 @@ not accepted scenario evidence, and may disappear if the host clears /private/tm
 
 ## Claude capability assessment: available, not yet qualified
 
+This section records the initial assessment.
+The separate [Claude spike](2026-09-06-skilltest-claude-controlled-inputs.md#accepted-scope-and-next-checkpoint) subsequently reached owner-accepted scoped feasibility.
+Its evidence and limits are independently established, not inferred from the Codex result.
+
 Provider-free inventory on 2026-09-06 confirmed installed Claude Code 2.1.261.
 The existing runner already accepts provider `claude`, model and effort and invokes
 noninteractive runs with session persistence disabled. Its current environment

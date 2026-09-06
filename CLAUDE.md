@@ -1,10 +1,12 @@
 # CLAUDE.md
 
-Single source of truth for agent guidance in this repository. If `AGENTS.md` / `GEMINI.md` get added later for Codex/Gemini, route them here rather than duplicating content.
+Single source of truth for agent guidance in this repository.
+[AGENTS.md](AGENTS.md) routes Codex here; any future `GEMINI.md` should do the same rather than duplicate these rules.
 
 ## Highest Priority Rules
 
 - At session start, load the doctrine: `Read skills/disciplined-development/SKILL.md`. **The Skill tool doesn't see it** — the skill dirs live under `skills/` (the installer symlinks them out to consumers), and no harness enumerates skills from there. Load companion `SKILL.md` files the same way when the parent dispatches: `skills/adversarial-review`, `skills/adversarial-review-loop`, `skills/concise-writing`, `skills/disciplined-research`, `skills/dispatching-development-subagents`, `skills/lean-plan-writing`, `skills/sweeping-stale-references`, `skills/writing-explicit-rationale`.
+- Before skill authoring, rewriting, validation or test-harness design, read the [validation charter](skill-validation/charter/core-contracts.md), [validation guide](skill-validation/README.md), and [rewrite goal and design principles](plans/specs/2026-09-06-skilltest-controlled-inputs-design.md#overall-goal). The charter defines intended skill behavior; use its invariants and the existing scenario rubrics rather than asking the owner to redefine success. Respect each document's status: a proposed suite or draft design is not implementation authority.
 - Cross-reference `ARCHITECTURE.md` (current component interplay + diagrams), `README.md` (bundle overview, install/recovery flow), and `skills/disciplined-development/hooks/README.md` (hook design + state model) before non-trivial changes. Hook config schema: `skills/disciplined-development/hooks/dd-config.md`.
 - Treat active plans and design specs under `plans/` as live sources of truth — update them in the same change set as the work they track.
 - Test-first for behavior changes — see "Test-Driven Changes" below.
