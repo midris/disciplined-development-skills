@@ -1,0 +1,27 @@
+## Orders schema cutover
+
+### Preflight
+
+1. Run `./bin/schema-cutover preflight --plan orders-v3 --json`.
+2. Attach the JSON output, including the pre-cutover snapshot ID, to `CHG-4821`.
+3. Confirm that both conditions hold continuously during the same uninterrupted 15-minute window:
+   - Replica lag is at most 2 seconds.
+   - Dual-write mismatch rate is below 0.1%.
+
+If preflight fails or either threshold is breached before promotion, stop. Post `BLOCKED` with the `CHG-4821` link in `#schema-cutover` and tag the database incident commander.
+
+### Promotion
+
+After the readiness window passes:
+
+1. Post the `CHG-4821` link in `#schema-cutover`.
+2. Wait for the database incident commander to reply `GO`.
+3. Only then run `./bin/schema-cutover promote --plan orders-v3`.
+
+Never add `--force`; it bypasses the readiness and `GO` checks and can expose partially backfilled rows.
+
+### Recovery boundary
+
+In-place rollback is allowed only before the application accepts its first write containing an `orders-v3`-only field. That write is irreversible because the old schema cannot represent it.
+
+After that boundary, do not run `./bin/schema-cutover rollback --plan orders-v3`. Only the database incident commander—not the release engineer—may decide whether to continue forward or restore the pre-cutover snapshot recorded in `CHG-4821`.
