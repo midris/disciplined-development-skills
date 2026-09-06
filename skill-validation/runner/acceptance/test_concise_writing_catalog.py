@@ -141,6 +141,7 @@ ACCEPTED_SCENARIOS = {
     "cw-04",
     "cw-05",
     "cw-06",
+    "cw-07",
 }
 ACCEPTED_FILES = {
     "accepted/final.txt",
