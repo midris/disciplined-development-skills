@@ -9,6 +9,7 @@
 | Scenario purpose | Treat one reviewer hit as a sample and reconcile a complete cross-category search inventory. |
 | Run ID | 20260904T132646155Z-ssr-02-b173ecf7-6232-4eae-a224-8b68270c31a7-zdx27w1t |
 | Provider | codex |
+| Provider CLI version | Unknown — no contemporaneous CLI-version evidence found in the accepted record or matching retained scratch logs. |
 | Model | gpt-5.6-sol |
 | Effort | high |
 | Started | 2026-09-04T13:26:46.155Z |

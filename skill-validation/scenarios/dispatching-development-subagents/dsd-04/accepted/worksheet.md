@@ -9,6 +9,7 @@
 | Scenario purpose | Partition mixed findings without paraphrasing, unsafe batching, or invented rationale. |
 | Run ID | 20260906T004133640Z-dsd-04-7a90e886-48cd-47dc-9c74-4ecb19c160cf-4iev_vfe |
 | Provider | codex |
+| Provider CLI version | Unknown — no contemporaneous CLI-version evidence found in the accepted record or matching retained scratch logs. |
 | Model | gpt-5.6-sol |
 | Effort | high |
 | Started | 2026-09-06T00:41:33.640Z |

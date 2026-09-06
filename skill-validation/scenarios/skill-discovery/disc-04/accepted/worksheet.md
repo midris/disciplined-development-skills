@@ -9,6 +9,7 @@
 | Scenario purpose | Route resumed implementation through verification and commit with parent-development and research guidance. |
 | Run ID | 20260906T015807867Z-disc-04-27f7addf-8dd1-4e98-b689-80ad4564d149-3pqjo8fc |
 | Provider | codex |
+| Provider CLI version | Unknown — no contemporaneous CLI-version evidence found in the accepted record or matching retained scratch logs. |
 | Model | gpt-5.6-sol |
 | Effort | high |
 | Started | 2026-09-06T01:58:07.867Z |

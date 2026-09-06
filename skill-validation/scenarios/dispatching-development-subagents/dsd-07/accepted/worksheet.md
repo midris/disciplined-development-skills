@@ -9,6 +9,7 @@
 | Scenario purpose | State bounded subagent identity, authority, no-widening, and disclosure clauses. |
 | Run ID | 20260906T010238917Z-dsd-07-167c5d8d-3c99-4b38-b035-b8e26bdd23af-_y9ln_rb |
 | Provider | codex |
+| Provider CLI version | Unknown — no contemporaneous CLI-version evidence found in the accepted record or matching retained scratch logs. |
 | Model | gpt-5.6-sol |
 | Effort | high |
 | Started | 2026-09-06T01:02:38.917Z |

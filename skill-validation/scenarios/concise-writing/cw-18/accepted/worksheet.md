@@ -9,6 +9,7 @@
 | Scenario purpose | Keep detailed project-file prose in scope despite an accompanying brief response. |
 | Run ID | 20260906T073041725Z-cw-18-8c87314a-fcab-4f9f-9e0b-6c6af7cfc9d2-lgsvvx2z |
 | Provider | codex |
+| Provider CLI version | Unknown — no contemporaneous CLI-version evidence found in the accepted record or matching retained scratch logs. |
 | Model | gpt-5.6-sol |
 | Effort | high |
 | Started | 2026-09-06T07:30:41.725Z |

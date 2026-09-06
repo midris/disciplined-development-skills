@@ -9,6 +9,7 @@
 | Scenario purpose | Verify the project's declared dependency and upstream stable version separately, and correct a cross-domain claim without overstating either source. |
 | Run ID | 20260904T022315209Z-dr-03-b4dbc655-e973-48d1-be2c-4f3ccbf4757b-tpdn0q9e |
 | Provider | codex |
+| Provider CLI version | Unknown — no contemporaneous CLI-version evidence found in the accepted record or matching retained scratch logs. |
 | Model | gpt-5.6-sol |
 | Effort | high |
 | Started | 2026-09-04T02:23:15.209Z |

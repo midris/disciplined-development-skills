@@ -9,6 +9,7 @@
 | Scenario purpose | Attack a visible below-cap error-contract invariant across its complete axis before re-review. |
 | Run ID | 20260905T223439576Z-nf-870eda20-7b8e-43f9-b041-9bb69c5327c7-_qksfatg |
 | Provider | codex |
+| Provider CLI version | Unknown — no contemporaneous CLI-version evidence found in the accepted record or matching retained scratch logs. |
 | Model | gpt-5.6-sol |
 | Effort | high |
 | Started | 2026-09-05T22:34:39.576Z |

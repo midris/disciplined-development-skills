@@ -115,7 +115,7 @@ The worksheet records:
 1. scenario package path and ID, plus a blank purpose field for the orchestrator;
 2. supplied skill paths and content hashes as ordinary executed fixture entries;
 3. prompt, rubric, configuration, and remaining fixture hashes;
-4. provider, model, effort, and run ID;
+4. provider, provider CLI version with retained evidence reference, model, effort, and run ID;
 5. infrastructure outcome;
 6. one row per applicable charter invariant with `PASS`, `FAIL`, or `NOT_JUDGEABLE`, plus a precise evidence reference;
 7. deterministic-protocol rows or an explicit `N/A` rationale;
@@ -216,7 +216,7 @@ scenario's `accepted/` record without the required orchestrator review.
 
 The generated worksheet uses these sections in order:
 
-1. **Run identity:** scenario path and ID, run ID, provider, model, effort, and
+1. **Run identity:** scenario path and ID, run ID, provider, provider CLI version, model, effort, and
    timestamps.
 2. **Infrastructure:** runner status and any recorded infrastructure error.
 3. **Executed inputs:** retained configuration, prompt-template, rendered-prompt,
@@ -234,7 +234,11 @@ The generated worksheet uses these sections in order:
 
 The generator prefills the mechanical slots in sections 1 through 4 from explicit
 paths and retained records without interpreting scenario prose; the scenario-purpose
-cell remains blank.
+cell and the `Provider CLI version` cell remain blank.
+The orchestrator fills the CLI-version cell from retained evidence captured from the same executable immediately before the run, including each repetition or retry; version and evidence reference share that cell.
+The generator stays offline and never queries the current CLI or infers a version from an expected pin.
+The owner-authorized historical backfill adds only this row to completed worksheets, using `Unknown` plus the evidence limitation where no tied version can be established; it does not regenerate, rescore or rerun accepted observations.
+For new controlled runs, unusable version provenance follows the [failure/drift policy](../../specs/2026-09-06-skilltest-controlled-inputs-design.md#accepted-failure-and-drift-policy), not an automatic skill FAIL.
 Supplied skills remain ordinary fixture rows; the generator does not classify or
 handle them separately.
 It renders sections 5 through 10 as blank scoring structure for the orchestrator.
@@ -264,6 +268,7 @@ It uses these literal headings, fields, and table columns:
 | Scenario purpose |  |
 | Run ID | <run ID> |
 | Provider | <provider> |
+| Provider CLI version |  |
 | Model | <model> |
 | Effort | <effort> |
 | Started | <started timestamp> |

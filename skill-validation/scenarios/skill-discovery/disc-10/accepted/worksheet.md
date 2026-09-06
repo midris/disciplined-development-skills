@@ -9,6 +9,7 @@
 | Scenario purpose | Route a plan deferral with supplied rationale through parent-development, research, lean-plan, and explicit-rationale guidance. |
 | Run ID | 20260906T022131776Z-disc-10-69802e5e-cea9-4d41-98d3-4f3315c48816-rc7fiujy |
 | Provider | codex |
+| Provider CLI version | Unknown — no contemporaneous CLI-version evidence found in the accepted record or matching retained scratch logs. |
 | Model | gpt-5.6-sol |
 | Effort | high |
 | Started | 2026-09-06T02:21:31.776Z |

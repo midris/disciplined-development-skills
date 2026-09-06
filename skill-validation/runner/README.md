@@ -27,6 +27,12 @@ already exists. The command populates only mechanical fields; the orchestrator
 completes and reviews the worksheet according to the
 [testing methodology](../../plans/completed/specs/2026-09-02-skill-testing-methodology-design.md).
 
+`Provider CLI version` is deliberately blank after `Provider` in the run-identity table.
+Fill it with the version and a retained evidence reference in the same cell, captured from the same executable immediately before that run (including repetitions and retries).
+The generator never queries the current CLI or substitutes an expected pin for historical evidence.
+For the historical backfill, use `Unknown` with the evidence limitation when a run's version cannot be established.
+For new controlled runs, missing or unusable version evidence pauses comparison under the [failure/drift policy](../../plans/specs/2026-09-06-skilltest-controlled-inputs-design.md#accepted-failure-and-drift-policy), not an automatic skill FAIL.
+
 Success exits `0` and prints the resolved output path to standard output. Usage or
 input failure exits `2`; output collision or write failure exits `1`. Failures emit
 one `skilltest:` diagnostic and no standard output. The command never invokes a

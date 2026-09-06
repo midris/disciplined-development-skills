@@ -9,6 +9,7 @@
 | Scenario purpose | Require research and precise source mapping for dispatch and post-hook factual claims. |
 | Run ID | 20260906T013821976Z-dsd-11-8ec7acac-d17e-4de3-b87d-737e2772c849-4rpjp5u8 |
 | Provider | codex |
+| Provider CLI version | Unknown — no contemporaneous CLI-version evidence found in the accepted record or matching retained scratch logs. |
 | Model | gpt-5.6-sol |
 | Effort | high |
 | Started | 2026-09-06T01:38:21.976Z |

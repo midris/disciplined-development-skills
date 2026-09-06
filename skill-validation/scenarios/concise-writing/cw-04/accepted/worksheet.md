@@ -9,6 +9,7 @@
 | Scenario purpose | Collapse unnecessary one-sentence sections while preserving timeout, warning, activity, and recovery facts. |
 | Run ID | 20260906T025727936Z-cw-04-e0173583-c88e-4bc9-95c2-40774f46079f-6oyntrn5 |
 | Provider | codex |
+| Provider CLI version | Unknown — no contemporaneous CLI-version evidence found in the accepted record or matching retained scratch logs. |
 | Model | gpt-5.6-sol |
 | Effort | high |
 | Started | 2026-09-06T02:57:27.936Z |

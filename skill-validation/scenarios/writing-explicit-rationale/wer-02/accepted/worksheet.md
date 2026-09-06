@@ -9,6 +9,7 @@
 | Scenario purpose | Test whether repeated review triggers a complete batched decision-site audit that preserves necessary rationale without rationalizing a consequence-free choice or creating competing rationale homes. |
 | Run ID | 20260904T052511880Z-wer-02-7718d3bd-e373-4860-8ef7-2f94489e02f1-oo_e4jsj |
 | Provider | codex |
+| Provider CLI version | Unknown — no contemporaneous CLI-version evidence found in the accepted record or matching retained scratch logs. |
 | Model | gpt-5.6-sol |
 | Effort | low |
 | Started | 2026-09-04T05:25:11.880Z |

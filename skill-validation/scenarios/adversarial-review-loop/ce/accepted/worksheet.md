@@ -9,6 +9,7 @@
 | Scenario purpose | Route each cold-read outcome to its distinct stop, redo, or productive reset branch and record it. |
 | Run ID | 20260905T233159729Z-ce-f3d58671-2f5f-426a-9dd3-82f4581d98a3-ono8smhq |
 | Provider | codex |
+| Provider CLI version | Unknown — no contemporaneous CLI-version evidence found in the accepted record or matching retained scratch logs. |
 | Model | gpt-5.6-sol |
 | Effort | high |
 | Started | 2026-09-05T23:31:59.729Z |

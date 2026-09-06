@@ -9,6 +9,7 @@
 | Scenario purpose | Route a purely stylistic sentence shortening through concise writing, parent development, and research. |
 | Run ID | 20260906T015602911Z-disc-03-67de4497-7408-4c2e-b0b9-ec0382bbf91c-gsvkdlrh |
 | Provider | codex |
+| Provider CLI version | Unknown — no contemporaneous CLI-version evidence found in the accepted record or matching retained scratch logs. |
 | Model | gpt-5.6-sol |
 | Effort | high |
 | Started | 2026-09-06T01:56:02.911Z |

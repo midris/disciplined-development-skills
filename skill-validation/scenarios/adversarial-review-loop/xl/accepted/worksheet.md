@@ -9,6 +9,7 @@
 | Scenario purpose | Translate one source-of-truth error invariant across all languages and code paths. |
 | Run ID | 20260905T224656821Z-xl-ee3eb945-fb87-420c-b9a6-8627336751e0-bbf1ximh |
 | Provider | codex |
+| Provider CLI version | Unknown — no contemporaneous CLI-version evidence found in the accepted record or matching retained scratch logs. |
 | Model | gpt-5.6-sol |
 | Effort | high |
 | Started | 2026-09-05T22:46:56.821Z |

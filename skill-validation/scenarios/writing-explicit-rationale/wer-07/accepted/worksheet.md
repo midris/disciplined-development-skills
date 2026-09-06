@@ -9,6 +9,7 @@
 | Scenario purpose | Test rationale, research, plan-writing, and parent-doctrine composition while preserving separate owner verdicts. |
 | Run ID | 20260904T114511727Z-wer-07-16d26f42-1036-4f57-be10-31a30b1fca9c-u6lwzxq9 |
 | Provider | codex |
+| Provider CLI version | Unknown — no contemporaneous CLI-version evidence found in the accepted record or matching retained scratch logs. |
 | Model | gpt-5.6-sol |
 | Effort | high |
 | Started | 2026-09-04T11:45:11.727Z |

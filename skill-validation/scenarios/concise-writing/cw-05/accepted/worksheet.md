@@ -9,6 +9,7 @@
 | Scenario purpose | Remove unsupported elaboration while preserving the authoritative archive facts. |
 | Run ID | 20260906T030004589Z-cw-05-4669745a-030f-459a-9d7b-9c5717fb8ca7-4wi91vq4 |
 | Provider | codex |
+| Provider CLI version | Unknown — no contemporaneous CLI-version evidence found in the accepted record or matching retained scratch logs. |
 | Model | gpt-5.6-sol |
 | Effort | high |
 | Started | 2026-09-06T03:00:04.589Z |

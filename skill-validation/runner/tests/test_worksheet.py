@@ -3,6 +3,7 @@
 from __future__ import annotations
 
 import json
+import subprocess
 from pathlib import Path
 
 import pytest
@@ -82,6 +83,11 @@ def test_completed_result_writes_exact_blank_worksheet(
     # Break caught: changing the fixed worksheet layout or reading undeclared artifacts.
     _, _, run_bundle, output_path = _build_inputs(tmp_path, monkeypatch)
 
+    def reject_cli_lookup(*args: object, **kwargs: object) -> None:
+        pytest.fail("worksheet generation must not query an installed provider")
+
+    monkeypatch.setattr(subprocess, "Popen", reject_cli_lookup)
+
     written_path = write_worksheet(SCENARIO_ARGUMENT, run_bundle, output_path)
 
     expected = """# Skill Test Worksheet
@@ -95,6 +101,7 @@ def test_completed_result_writes_exact_blank_worksheet(
 | Scenario purpose |  |
 | Run ID | 20260902T120000000Z-worksheet-case-unique |
 | Provider | codex |
+| Provider CLI version |  |
 | Model | gpt-5.6-sol |
 | Effort | high |
 | Started | 2026-09-02T12:00:00.000Z |

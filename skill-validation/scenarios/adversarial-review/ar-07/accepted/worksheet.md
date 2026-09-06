@@ -9,6 +9,7 @@
 | Scenario purpose | Treat producer ordering as an unresolved blocking invariant. |
 | Run ID | 20260905T142434348Z-ar-07-120aea97-3f1e-4e6b-9c9f-bd1fa48658d7-wu44as4u |
 | Provider | codex |
+| Provider CLI version | Unknown — no contemporaneous CLI-version evidence found in the accepted record or matching retained scratch logs. |
 | Model | gpt-5.6-sol |
 | Effort | high |
 | Started | 2026-09-05T14:24:34.348Z |

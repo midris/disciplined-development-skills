@@ -9,6 +9,7 @@
 | Scenario purpose | Preserve expired temporary credentials as the requested investigation lead while making its unsupported status explicit and mapping supplied sources only to facts they contain. |
 | Run ID | 20260904T030634405Z-dr-06-bbe71d12-04cf-48aa-ae95-588baa55d635-nu06t04o |
 | Provider | codex |
+| Provider CLI version | Unknown — no contemporaneous CLI-version evidence found in the accepted record or matching retained scratch logs. |
 | Model | gpt-5.6-sol |
 | Effort | high |
 | Started | 2026-09-04T03:06:34.405Z |

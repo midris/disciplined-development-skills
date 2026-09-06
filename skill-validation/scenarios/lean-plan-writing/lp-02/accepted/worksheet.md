@@ -9,6 +9,7 @@
 | Scenario purpose | Keep implementation bodies and copyable templates out of a detailed parser task while preserving exact behavior through a complete tricky-case table. |
 | Run ID | 20260904T184645312Z-lp-02-1ed49161-d911-4fb8-b8db-13045439e89f-nq395kka |
 | Provider | codex |
+| Provider CLI version | Unknown — no contemporaneous CLI-version evidence found in the accepted record or matching retained scratch logs. |
 | Model | gpt-5.6-sol |
 | Effort | high |
 | Started | 2026-09-04T18:46:45.312Z |

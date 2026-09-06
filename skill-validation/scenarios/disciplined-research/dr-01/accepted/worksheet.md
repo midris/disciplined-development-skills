@@ -9,6 +9,7 @@
 | Scenario purpose | Correct a stale project-retention claim from the current implementation and map the corrected fact to its authoritative project source. |
 | Run ID | 20260904T032032060Z-dr-01-6646b128-bf5c-40ea-bac6-1caaae639e7e-qvveeu9n |
 | Provider | codex |
+| Provider CLI version | Unknown — no contemporaneous CLI-version evidence found in the accepted record or matching retained scratch logs. |
 | Model | gpt-5.6-sol |
 | Effort | high |
 | Started | 2026-09-04T03:20:32.060Z |

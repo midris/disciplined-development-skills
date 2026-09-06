@@ -9,6 +9,7 @@
 | Scenario purpose | Reject a generic shared cause for two independently caused findings. |
 | Run ID | 20260905T154622558Z-ar-13-77654389-da01-42c2-8858-5a95d88b7e27-3y3t6klg |
 | Provider | codex |
+| Provider CLI version | Unknown — no contemporaneous CLI-version evidence found in the accepted record or matching retained scratch logs. |
 | Model | gpt-5.6-sol |
 | Effort | high |
 | Started | 2026-09-05T15:46:22.558Z |

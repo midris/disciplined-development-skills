@@ -2,8 +2,9 @@
 
 > **For agentic workers:** REQUIRED SUB-SKILL: Use `superpowers:executing-plans` task by task, stopping at the review checkpoints below.
 
-**Status:** Pilot tasks remain draft for owner review; do not implement them or invoke providers yet.
-The owner separately authorized the preparatory timeout-test repair described below.
+**Status:** Task 1 is complete following the owner's request to commit, push and continue.
+Tasks 2–3 remain draft for owner review; no provider calls are authorized.
+The owner separately authorized the completed preparatory timeout-test repair described below.
 The proposed scenarios, eight observation runs and two real qualification calls below require approval with this plan; each provider command also requires its separate exact-command approval.
 
 **Goal:** Exercise one agent-led preparation, execution, scoring and handoff workflow, not collect effectiveness estimates.
@@ -24,14 +25,19 @@ The proposed scenarios, eight observation runs and two real qualification calls 
 
 ## Task 1: Worksheet field and historical provenance
 
-**Files:** `skill-validation/runner/src/skilltest/worksheet.py`, `skill-validation/runner/tests/test_worksheet.py`, `skill-validation/runner/README.md`, the worksheet contract in `plans/completed/specs/2026-09-02-skill-testing-methodology-design.md`, and the 105 existing `accepted/worksheet.md` files.
+**Files:** `skill-validation/runner/src/skilltest/worksheet.py`, `skill-validation/runner/tests/test_worksheet.py`, the CLI worksheet expectation in `skill-validation/runner/tests/test_cli.py`, `skill-validation/runner/README.md`, the worksheet contract in `plans/completed/specs/2026-09-02-skill-testing-methodology-design.md`, and the 105 existing `accepted/worksheet.md` files.
 Retain only credential-free historical version evidence needed by the new references; do not copy whole scratch bundles.
+Keep the 105 metadata-only worksheet changes atomic with the template contract; the required per-file reference inventory therefore exceeds the usual commit-body length preference.
 
-- [ ] Add an exact-template test requiring a blank `Provider CLI version` row after `Provider`, with no CLI lookup during worksheet generation; run it and observe failure.
-- [ ] Add that row and update the worksheet contract/docs in the same change. The scorer fills version and evidence reference in the value cell.
-- [ ] Audit each accepted run's contemporaneous evidence before scratch cleanup; add the metadata row directly to its completed worksheet. Use `Unknown` plus the evidence limitation when no tied version evidence exists. Never regenerate a completed worksheet or infer a version from a pin/current installation.
-- [ ] Verify all 105 worksheets have the row; removing only that added row in memory must reproduce their pre-change bytes. Verify all other accepted files and original scenario inputs are unchanged. Check evidence references resolve.
-- [ ] Run `.venv/bin/python -m pytest -q` from `skill-validation/runner`, review the diff and commit the green worksheet/backfill unit. Do not delete scratch as part of this task.
+- [x] Add an exact-template test requiring a blank `Provider CLI version` row after `Provider`, with no CLI lookup during worksheet generation; run it and observe failure.
+- [x] Add that row and update the worksheet contract/docs in the same change. The scorer fills version and evidence reference in the value cell.
+- [x] Audit each accepted run's contemporaneous evidence before scratch cleanup; add the metadata row directly to its completed worksheet. Use `Unknown` plus the evidence limitation when no tied version evidence exists. Never regenerate a completed worksheet or infer a version from a pin/current installation.
+- [x] Verify all 105 worksheets have the row; removing only that added row in memory must reproduce their pre-change bytes. Verify all other accepted files and original scenario inputs are unchanged. Check evidence references resolve.
+- [x] Run `.venv/bin/python -m pytest -q` from `skill-validation/runner`, review the diff and commit the green worksheet/backfill unit. Do not delete scratch as part of this task.
+
+Verification: the missing-row test failed before implementation; all 15 worksheet tests and the public CLI template pass, with 160 runner tests and 263 hook tests passing (three hook skips).
+Every historical worksheet's pre-change bytes are reproduced by removing only its new row; other accepted files and scenario inputs are unchanged.
+All historical CLI versions remain `Unknown` under the [evidence limitations in the spec](specs/2026-09-06-skilltest-controlled-inputs-design.md#accepted-baseline-decision-current-dd-and-no-dd-with-cli-provenance).
 
 ## Task 2: Controlled Codex invocation and bounded runtime lifecycle
 

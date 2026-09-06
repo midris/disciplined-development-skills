@@ -9,6 +9,7 @@
 | Scenario purpose | Require whole-tree review, scope resolution, refreshed evidence, clean review and smoke, and finishing before PR creation. |
 | Run ID | 20260905T123653661Z-dd-09-834c2146-83ce-4ab6-a118-ab69c8499d29-re6aavqm |
 | Provider | codex |
+| Provider CLI version | Unknown — no contemporaneous CLI-version evidence found in the accepted record or matching retained scratch logs. |
 | Model | gpt-5.6-sol |
 | Effort | high |
 | Started | 2026-09-05T12:36:53.661Z |

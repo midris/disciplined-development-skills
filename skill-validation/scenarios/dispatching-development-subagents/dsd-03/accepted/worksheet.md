@@ -9,6 +9,7 @@
 | Scenario purpose | Require commit-by-commit inspection and disposition of an out-of-scope commit before integration. |
 | Run ID | 20260906T003050499Z-dsd-03-25df3b81-b443-4dbd-84e8-0d8232071878-vyf4edex |
 | Provider | codex |
+| Provider CLI version | Unknown — no contemporaneous CLI-version evidence found in the accepted record or matching retained scratch logs. |
 | Model | gpt-5.6-sol |
 | Effort | high |
 | Started | 2026-09-06T00:30:50.499Z |

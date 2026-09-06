@@ -9,6 +9,7 @@
 | Scenario purpose | Compress duplicate retry prose while preserving framing, causality, navigation, and the final failure rule. |
 | Run ID | 20260906T025056780Z-cw-02-c0eddff0-142d-4a42-a73c-7aada85de04b-m7hzgtpp |
 | Provider | codex |
+| Provider CLI version | Unknown — no contemporaneous CLI-version evidence found in the accepted record or matching retained scratch logs. |
 | Model | gpt-5.6-sol |
 | Effort | high |
 | Started | 2026-09-06T02:50:56.780Z |

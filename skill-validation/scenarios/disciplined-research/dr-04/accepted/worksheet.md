@@ -9,6 +9,7 @@
 | Scenario purpose | Test whether verified retry facts in a private, uncommitted, unshared scratch note still receive precise support mapping. |
 | Run ID | 20260904T033421964Z-dr-04-f80d946e-aca1-4090-ae2f-56d684d74c92-p38861kp |
 | Provider | codex |
+| Provider CLI version | Unknown — no contemporaneous CLI-version evidence found in the accepted record or matching retained scratch logs. |
 | Model | gpt-5.6-sol |
 | Effort | high |
 | Started | 2026-09-04T03:34:21.964Z |

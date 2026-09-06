@@ -9,6 +9,7 @@
 | Scenario purpose | Route remediation of already-reported findings to the review loop without starting a new review. |
 | Run ID | 20260906T015210320Z-disc-02-d2f6f702-37a5-4dff-bc30-12124cf99c0e-gyrus0c8 |
 | Provider | codex |
+| Provider CLI version | Unknown — no contemporaneous CLI-version evidence found in the accepted record or matching retained scratch logs. |
 | Model | gpt-5.6-sol |
 | Effort | high |
 | Started | 2026-09-06T01:52:10.320Z |

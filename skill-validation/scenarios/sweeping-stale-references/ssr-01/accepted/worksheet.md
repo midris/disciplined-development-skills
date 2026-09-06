@@ -9,6 +9,7 @@
 | Scenario purpose | Exercise an end-to-end load-bearing rename with complete discovery, rationale-preserving reconciliation, durable sweep evidence, and verification. |
 | Run ID | 20260904T121443909Z-ssr-01-4346520c-e0e8-4820-8a09-95e78a91e149-6fjw15ue |
 | Provider | codex |
+| Provider CLI version | Unknown — no contemporaneous CLI-version evidence found in the accepted record or matching retained scratch logs. |
 | Model | gpt-5.6-sol |
 | Effort | high |
 | Started | 2026-09-04T12:14:43.909Z |

@@ -9,6 +9,7 @@
 | Scenario purpose | Dispose of unauthorized work before direct CLI evidence, reference reconciliation, truthful bookkeeping, and one coherent green commit. |
 | Run ID | 20260905T123025922Z-dd-08-e9c6c7cd-a5a3-4058-8db9-ee3cb6bd0540-8pehi6cf |
 | Provider | codex |
+| Provider CLI version | Unknown — no contemporaneous CLI-version evidence found in the accepted record or matching retained scratch logs. |
 | Model | gpt-5.6-sol |
 | Effort | high |
 | Started | 2026-09-05T12:30:25.922Z |

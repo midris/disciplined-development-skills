@@ -9,6 +9,7 @@
 | Scenario purpose | Preserve individual-task and whole-branch owners, rules, and counters while grounding factual workflow claims. |
 | Run ID | 20260905T231835942Z-own-12dbb761-9402-4dc7-82ad-a72d8d3c7b8f-tkas7ub1 |
 | Provider | codex |
+| Provider CLI version | Unknown — no contemporaneous CLI-version evidence found in the accepted record or matching retained scratch logs. |
 | Model | gpt-5.6-sol |
 | Effort | high |
 | Started | 2026-09-05T23:18:35.942Z |

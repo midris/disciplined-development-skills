@@ -9,6 +9,7 @@
 | Scenario purpose | Synthesize an evidence-backed pattern across API, queue, and file findings. |
 | Run ID | 20260905T145843821Z-ar-08-c12719a0-de2e-4bf2-9caa-a68929ecd57f-otaa31ld |
 | Provider | codex |
+| Provider CLI version | Unknown — no contemporaneous CLI-version evidence found in the accepted record or matching retained scratch logs. |
 | Model | gpt-5.6-sol |
 | Effort | high |
 | Started | 2026-09-05T14:58:43.821Z |

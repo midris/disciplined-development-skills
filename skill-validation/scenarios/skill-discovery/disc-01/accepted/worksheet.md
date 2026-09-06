@@ -9,6 +9,7 @@
 | Scenario purpose | Route internal logical review of supplied API text to review, parent-development, and research guidance. |
 | Run ID | 20260906T014813072Z-disc-01-e3b2367c-012b-4979-96dc-eb10946ee162-n3qbpc93 |
 | Provider | codex |
+| Provider CLI version | Unknown — no contemporaneous CLI-version evidence found in the accepted record or matching retained scratch logs. |
 | Model | gpt-5.6-sol |
 | Effort | high |
 | Started | 2026-09-06T01:48:13.072Z |

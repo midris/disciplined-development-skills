@@ -203,6 +203,7 @@ def test_run_command_has_one_bundle_per_external_invocation(
 | Scenario purpose |  |
 | Run ID | 20260902T120000000Z-worksheet-case-cli |
 | Provider | codex |
+| Provider CLI version |  |
 | Model | gpt-5.6-sol |
 | Effort | high |
 | Started | 2026-09-02T12:00:00.000Z |

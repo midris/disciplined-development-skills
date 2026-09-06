@@ -9,6 +9,7 @@
 | Scenario purpose | Co-select concise writing and writing-skills for skill-description prose while excluding an unrelated candidate. |
 | Run ID | 20260906T034407930Z-cw-09-fa6eafed-db57-44e3-b448-95c04c383e63-vqdy67m_ |
 | Provider | codex |
+| Provider CLI version | Unknown — no contemporaneous CLI-version evidence found in the accepted record or matching retained scratch logs. |
 | Model | gpt-5.6-sol |
 | Effort | high |
 | Started | 2026-09-06T03:44:07.930Z |

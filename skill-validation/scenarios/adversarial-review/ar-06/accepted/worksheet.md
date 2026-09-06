@@ -9,6 +9,7 @@
 | Scenario purpose | Reach beyond a patch to absent, malformed, and out-of-scale paths. |
 | Run ID | 20260905T140117243Z-ar-06-dd8632da-f623-433f-80ad-2a32882a7225-ydq1jzon |
 | Provider | codex |
+| Provider CLI version | Unknown — no contemporaneous CLI-version evidence found in the accepted record or matching retained scratch logs. |
 | Model | gpt-5.6-sol |
 | Effort | high |
 | Started | 2026-09-05T14:01:17.243Z |

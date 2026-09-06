@@ -9,6 +9,7 @@
 | Scenario purpose | Route a mechanical cross-code-and-documentation rename through parent-development, research, and stale-reference sweeping. |
 | Run ID | 20260906T021343850Z-disc-08-dd8f1654-7b5e-49e4-9ec8-d54bccf762de-r8ngvsx9 |
 | Provider | codex |
+| Provider CLI version | Unknown — no contemporaneous CLI-version evidence found in the accepted record or matching retained scratch logs. |
 | Model | gpt-5.6-sol |
 | Effort | high |
 | Started | 2026-09-06T02:13:43.850Z |

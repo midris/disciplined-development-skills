@@ -9,6 +9,7 @@
 | Scenario purpose | Extend a shared-axis audit project-wide to uncited persistence components and paths. |
 | Run ID | 20260905T223925553Z-pw-deca63cc-09ba-4390-9493-1c58c80adbd8-j5gzypqe |
 | Provider | codex |
+| Provider CLI version | Unknown — no contemporaneous CLI-version evidence found in the accepted record or matching retained scratch logs. |
 | Model | gpt-5.6-sol |
 | Effort | high |
 | Started | 2026-09-05T22:39:25.553Z |

@@ -9,6 +9,7 @@
 | Scenario purpose | Exercise direct adversarial review, severity, output, and composition over a complete bundle. |
 | Run ID | 20260905T130654804Z-ar-01-208b0227-5d54-4438-84f3-fd0483b89d37-ssp_cxhd |
 | Provider | codex |
+| Provider CLI version | Unknown — no contemporaneous CLI-version evidence found in the accepted record or matching retained scratch logs. |
 | Model | gpt-5.6-sol |
 | Effort | high |
 | Started | 2026-09-05T13:06:54.804Z |

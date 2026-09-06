@@ -9,6 +9,7 @@
 | Scenario purpose | Preserve Gate 1–5 timing and order, parent artifacts and destinations, fail-closed transitions, and owner boundaries through one fixed sequence. |
 | Run ID | 20260905T013916993Z-dd-02-6f2ab6ec-b871-4cf1-ae61-458c622c4621-p9kk8ktg |
 | Provider | codex |
+| Provider CLI version | Unknown — no contemporaneous CLI-version evidence found in the accepted record or matching retained scratch logs. |
 | Model | gpt-5.6-sol |
 | Effort | high |
 | Started | 2026-09-05T01:39:16.993Z |

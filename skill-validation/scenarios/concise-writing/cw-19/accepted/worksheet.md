@@ -9,6 +9,7 @@
 | Scenario purpose | Tighten a coupled cutover runbook without losing actors, exact thresholds and complements, ordering, boundaries, or rationales. |
 | Run ID | 20260906T073902636Z-cw-19-39caf899-4c6d-4a53-8221-bedd27e1e72e-45hnb_z3 |
 | Provider | codex |
+| Provider CLI version | Unknown — no contemporaneous CLI-version evidence found in the accepted record or matching retained scratch logs. |
 | Model | gpt-5.6-sol |
 | Effort | high |
 | Started | 2026-09-06T07:39:02.636Z |

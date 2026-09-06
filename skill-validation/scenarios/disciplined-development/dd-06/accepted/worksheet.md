@@ -9,6 +9,7 @@
 | Scenario purpose | Require signed written scope to preserve a chosen spelling and an intentional deferral before delegation, planning, or coding. |
 | Run ID | 20260905T043613816Z-dd-06-fb6b6b48-a393-4e0f-84b8-295bf6f88baa-a3co5a7r |
 | Provider | codex |
+| Provider CLI version | Unknown — no contemporaneous CLI-version evidence found in the accepted record or matching retained scratch logs. |
 | Model | gpt-5.6-sol |
 | Effort | high |
 | Started | 2026-09-05T04:36:13.816Z |

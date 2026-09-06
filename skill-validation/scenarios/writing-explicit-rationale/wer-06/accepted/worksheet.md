@@ -9,6 +9,7 @@
 | Scenario purpose | Test whether a code comment retains only the historical context that constrains current serializer correctness. |
 | Run ID | 20260904T113851544Z-wer-06-c79a07b6-600d-4c4e-9b91-68702ac9f06f-kz6hc45b |
 | Provider | codex |
+| Provider CLI version | Unknown — no contemporaneous CLI-version evidence found in the accepted record or matching retained scratch logs. |
 | Model | gpt-5.6-sol |
 | Effort | high |
 | Started | 2026-09-04T11:38:51.544Z |

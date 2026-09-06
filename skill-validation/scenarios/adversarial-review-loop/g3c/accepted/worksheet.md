@@ -9,6 +9,7 @@
 | Scenario purpose | Treat a cycle-three re-raise as reviewer-side re-litigation, record a ruling, and dispose of the P3 without appeasement. |
 | Run ID | 20260905T231412130Z-g3c-1e810d4a-dc4a-4079-80fc-e372a1743937-rsggqp6q |
 | Provider | codex |
+| Provider CLI version | Unknown — no contemporaneous CLI-version evidence found in the accepted record or matching retained scratch logs. |
 | Model | gpt-5.6-sol |
 | Effort | high |
 | Started | 2026-09-05T23:14:12.130Z |

@@ -9,6 +9,7 @@
 | Scenario purpose | Challenge and remove unsupported duplicate state. |
 | Run ID | 20260905T150455515Z-ar-10-3610abad-3288-48ea-b717-3fc337ecc79e-jrqf0p7n |
 | Provider | codex |
+| Provider CLI version | Unknown — no contemporaneous CLI-version evidence found in the accepted record or matching retained scratch logs. |
 | Model | gpt-5.6-sol |
 | Effort | high |
 | Started | 2026-09-05T15:04:55.515Z |

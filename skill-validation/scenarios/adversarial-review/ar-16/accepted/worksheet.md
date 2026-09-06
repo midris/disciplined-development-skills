@@ -9,6 +9,7 @@
 | Scenario purpose | Report unchecked encoding failure as caller-visible termination requiring a typed failure path. |
 | Run ID | 20260905T192139483Z-ar-16-90d64e9f-662c-4640-ad46-b77e88f1483e-pxh60yrp |
 | Provider | codex |
+| Provider CLI version | Unknown — no contemporaneous CLI-version evidence found in the accepted record or matching retained scratch logs. |
 | Model | gpt-5.6-sol |
 | Effort | high |
 | Started | 2026-09-05T19:21:39.483Z |

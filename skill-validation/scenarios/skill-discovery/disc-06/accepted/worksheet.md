@@ -9,6 +9,7 @@
 | Scenario purpose | Route a development-subagent request through parent-development, research, and dispatch guidance. |
 | Run ID | 20260906T020510416Z-disc-06-6ab546e5-12fb-405b-b573-c6a683b4eb24-qpp2pafd |
 | Provider | codex |
+| Provider CLI version | Unknown — no contemporaneous CLI-version evidence found in the accepted record or matching retained scratch logs. |
 | Model | gpt-5.6-sol |
 | Effort | high |
 | Started | 2026-09-06T02:05:10.416Z |

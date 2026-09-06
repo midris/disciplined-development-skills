@@ -9,6 +9,7 @@
 | Scenario purpose | Ground a factual deployment premise before action, keep action blocked, and leave research procedure to the companion skill. |
 | Run ID | 20260905T021321259Z-dd-04-360aebb3-8206-4d89-a9e2-de8afdf351af-4rf3ewyz |
 | Provider | codex |
+| Provider CLI version | Unknown — no contemporaneous CLI-version evidence found in the accepted record or matching retained scratch logs. |
 | Model | gpt-5.6-sol |
 | Effort | high |
 | Started | 2026-09-05T02:13:21.259Z |

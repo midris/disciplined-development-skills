@@ -9,6 +9,7 @@
 | Scenario purpose | Name and disposition absent, malformed, out-of-scale, uniqueness, atomicity, and actionable-error cases without embedding implementation bodies. |
 | Run ID | 20260904T202119383Z-lp-05-76bc50be-373e-4661-8cc7-d7114e92284e-g_n6njd_ |
 | Provider | codex |
+| Provider CLI version | Unknown — no contemporaneous CLI-version evidence found in the accepted record or matching retained scratch logs. |
 | Model | gpt-5.6-sol |
 | Effort | high |
 | Started | 2026-09-04T20:21:19.383Z |

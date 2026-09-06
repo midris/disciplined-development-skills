@@ -1,9 +1,11 @@
 # Controlled-Input Skill Testing: Pilot-First Design Amendment
 
 **Status:** Live design discussion, not an approved implementation specification.
+Exception: the owner authorized Task 1 of the [implementation plan](../2026-09-06-skilltest-sol-low-pilot.md): the worksheet CLI-version field and metadata-only historical backfill.
+The remaining runner controls, pilot scenarios/counts and provider commands retain the approval gates below.
 The owner accepted the scoped feasibility findings on 2026-09-06 and requested review of the next steps one at a time.
 The owner selected the pilot-first scope below; broader methodology decisions remain constraints for later expansion, not prerequisites to design every future workflow now.
-This draft does not change scoring rules or authorize runner implementation, provider calls, or effectiveness testing.
+Apart from that worksheet-only unit, this draft does not change scoring rules or authorize runner implementation, provider calls, or effectiveness testing.
 It is a reviewed decision record in progress, not an executable implementation contract; the exact invocation changes and unresolved decisions below still require approval.
 
 ## Overall goal
@@ -103,7 +105,7 @@ Retain the no-DD observations for later comparisons even when they pass; they be
 Both conditions retain the declared Superpowers substrate and exclude DD hooks as specified here; the pilot starts with Codex / gpt-5.6-sol / low, while its scenarios and repetition counts still require agreement.
 
 Record the actual subject-provider CLI version alongside provider, model and effort for every baseline observation and subsequent edit-test observation.
-Its durable scoring home is the completed worksheet: add a blank `Provider CLI version` field to the run-identity table for the orchestrator to fill while scoring.
+Its durable scoring home is the completed worksheet: the generator leaves a blank `Provider CLI version` field in the run-identity table for the orchestrator to fill while scoring.
 Capture version evidence from the same executable immediately before each run, including repetitions and retries, and link it to that run ID; a batch-start check, expected dependency pin or later lookup is not per-run provenance.
 The orchestrator fills the new field with the captured version and a reference to its retained evidence in the same value cell; ordinary version evidence does not belong in the worksheet's ambiguity, defect or proposed-change fields.
 Worksheet generation remains offline and leaves the field blank; it must not query the then-installed CLI and present it as the version used earlier.
@@ -111,10 +113,12 @@ If version evidence is missing, unusable or contradicted by detected drift, stat
 Record detected CLI changes rather than silently treating different versions as the same harness; a pre-run version check is diagnostic provenance, not proof against an update during execution.
 This provenance helps investigate changed results with unchanged skills; a version difference is diagnostic context, not proof of the cause.
 Use version commands for capture and the existing worksheet generator for the added blank field; this is a targeted template addition, not a new metadata framework or result-schema change.
-The current worksheet template does not contain this field; implement and document it with a focused test in the separately approved implementation work, rather than hand-changing the fixed worksheet structure or mechanical result files now.
-When adding the template field, audit all 105 accepted baseline runs and add CLI-version provenance to their existing worksheets so later harness comparisons can also use the historical observations.
+Task 1 adds this field with a focused offline test and updates the worksheet contract.
+The metadata-only audit covers all 105 accepted baseline runs: 104 matched retained scratch bundles by result/final bytes, but none supplied a recorded CLI version or matching persisted session metadata; DR-02's matching bundle was unavailable.
+The additional retained baseline/audit text files supplied no tied version evidence either; all 105 historical fields therefore read `Unknown` with their evidence limitation.
+Catalog-level installed-version observations, expected pins and later spike versions do not establish the CLI used for each earlier run.
 This is a metadata-only exception to baseline preservation: leave verdicts, assessments, run identities, result.json, final.txt and judged evidence unchanged; do not regenerate completed worksheets or rerun baselines.
-Use contemporaneous evidence tied to the accepted run, retaining a credential-free evidence reference in the new field; do not substitute the currently installed version, an expected pin or a later spike's version.
+If historical provenance becomes available later, use contemporaneous evidence tied to the accepted run, retaining a credential-free evidence reference in the new field; do not substitute the currently installed version, an expected pin or a later spike's version.
 Where the historical version cannot be established, record `Unknown` with the evidence limitation rather than guessing.
 Check relevant scratch evidence before cleanup and preserve any version evidence needed to support the backfill; the new metadata does not make historical runs qualified controlled-comparison arms.
 

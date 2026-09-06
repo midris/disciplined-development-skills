@@ -9,6 +9,7 @@
 | Scenario purpose | Require the same-reviewer re-run after a complete self-sweep rather than self-certifying clean. |
 | Run ID | 20260905T221820669Z-t6-fb0bf446-3bc4-4263-be80-ce526f087c5b-1bx_sa3y |
 | Provider | codex |
+| Provider CLI version | Unknown — no contemporaneous CLI-version evidence found in the accepted record or matching retained scratch logs. |
 | Model | gpt-5.6-sol |
 | Effort | high |
 | Started | 2026-09-05T22:18:20.669Z |

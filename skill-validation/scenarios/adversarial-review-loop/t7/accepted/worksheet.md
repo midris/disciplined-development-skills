@@ -9,6 +9,7 @@
 | Scenario purpose | Address a new blocking class rather than using class difference as a deferral or dismissal lever. |
 | Run ID | 20260905T222509848Z-t7-5d79045b-1c41-4d38-aafe-15c2f7435e97-qu8l4cja |
 | Provider | codex |
+| Provider CLI version | Unknown — no contemporaneous CLI-version evidence found in the accepted record or matching retained scratch logs. |
 | Model | gpt-5.6-sol |
 | Effort | high |
 | Started | 2026-09-05T22:25:09.848Z |

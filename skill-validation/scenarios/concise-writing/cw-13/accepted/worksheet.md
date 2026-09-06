@@ -9,6 +9,7 @@
 | Scenario purpose | Route a pressured edit to a discipline-enforcing skill through the skill-authoring lifecycle and behavioral validation. |
 | Run ID | 20260906T040718313Z-cw-13-f789776f-3e6b-486a-b052-ee97a2a0b1a8-ruyf8qny |
 | Provider | codex |
+| Provider CLI version | Unknown — no contemporaneous CLI-version evidence found in the accepted record or matching retained scratch logs. |
 | Model | gpt-5.6-sol |
 | Effort | high |
 | Started | 2026-09-06T04:07:18.313Z |

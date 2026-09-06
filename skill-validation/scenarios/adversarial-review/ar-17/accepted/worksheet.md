@@ -9,6 +9,7 @@
 | Scenario purpose | Reject interior empty records as replay corruption. |
 | Run ID | 20260905T193156176Z-ar-17-2823a1d7-0b7b-477e-b14d-c8af6089924e-wt973s09 |
 | Provider | codex |
+| Provider CLI version | Unknown — no contemporaneous CLI-version evidence found in the accepted record or matching retained scratch logs. |
 | Model | gpt-5.6-sol |
 | Effort | high |
 | Started | 2026-09-05T19:31:56.176Z |

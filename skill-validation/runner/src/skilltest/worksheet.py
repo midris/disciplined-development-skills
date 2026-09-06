@@ -48,6 +48,7 @@ def _render(scenario_argument: str, rubric_digest: str, record: dict[str, object
         "| Scenario purpose |  |",
         f"| Run ID | {_cell(record['run_id'])} |",
         f"| Provider | {_cell(execution['provider'])} |",
+        "| Provider CLI version |  |",
         f"| Model | {_cell(execution['model'])} |",
         f"| Effort | {_cell(execution['effort'])} |",
         f"| Started | {_cell(record['started_at'])} |",

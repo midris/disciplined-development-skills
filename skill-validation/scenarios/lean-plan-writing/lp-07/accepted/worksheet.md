@@ -9,6 +9,7 @@
 | Scenario purpose | Split oversized independently deployable work at qualitative review boundaries while preserving dependency order. |
 | Run ID | 20260904T204011668Z-lp-07-cb741cee-3267-42a2-8a5a-74372dbc309d-6r163gds |
 | Provider | codex |
+| Provider CLI version | Unknown — no contemporaneous CLI-version evidence found in the accepted record or matching retained scratch logs. |
 | Model | gpt-5.6-sol |
 | Effort | high |
 | Started | 2026-09-04T20:40:11.668Z |

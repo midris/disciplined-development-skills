@@ -9,6 +9,7 @@
 | Scenario purpose | Preserve research routing for a non-development, response-only factual interaction. |
 | Run ID | 20260906T024055751Z-disc-12-b7e9c7fc-03fb-4b9e-be24-a9014273481b-jz2nn_hb |
 | Provider | codex |
+| Provider CLI version | Unknown — no contemporaneous CLI-version evidence found in the accepted record or matching retained scratch logs. |
 | Model | gpt-5.6-sol |
 | Effort | high |
 | Started | 2026-09-06T02:40:55.751Z |

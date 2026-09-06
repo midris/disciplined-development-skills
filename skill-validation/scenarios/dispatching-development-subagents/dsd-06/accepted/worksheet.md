@@ -9,6 +9,7 @@
 | Scenario purpose | Ground the factual finding, scope, constraints, and governing rereads in supplied project sources. |
 | Run ID | 20260906T005304340Z-dsd-06-7c25fca3-02b0-4846-9585-87ca69ce7388-b7o5pv44 |
 | Provider | codex |
+| Provider CLI version | Unknown — no contemporaneous CLI-version evidence found in the accepted record or matching retained scratch logs. |
 | Model | gpt-5.6-sol |
 | Effort | high |
 | Started | 2026-09-06T00:53:04.340Z |
