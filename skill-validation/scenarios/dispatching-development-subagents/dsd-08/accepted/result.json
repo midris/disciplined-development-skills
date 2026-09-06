@@ -1,0 +1,139 @@
+{
+  "artifacts": {
+    "config": {
+      "bytes": 977,
+      "exists": true,
+      "path": "config.json",
+      "sha256": "6ef63bfa43833ccd2008052563cb293db4bccd08890fe3681a8ebba90af107f8"
+    },
+    "evidence": {
+      "empty": true,
+      "entries": [],
+      "exists": true,
+      "path": "workspace/evidence"
+    },
+    "final": {
+      "bytes": 1169,
+      "exists": true,
+      "path": "final.txt",
+      "sha256": "e14af7b5945d6431f6b1b90a251d1c81e5494ddce7550106df29bba98b584014"
+    },
+    "fixture": {
+      "empty": false,
+      "entries": [
+        {
+          "bytes": null,
+          "path": "project",
+          "sha256": null,
+          "type": "directory"
+        },
+        {
+          "bytes": null,
+          "path": "project/dsd-05",
+          "sha256": null,
+          "type": "directory"
+        },
+        {
+          "bytes": 321,
+          "path": "project/dsd-05/landed-prose.md",
+          "sha256": "dc1c4a0881580f5a883d126ddcbc00b70dfd3e226129e44aa6ed06381fbc4aae",
+          "type": "file"
+        },
+        {
+          "bytes": 155,
+          "path": "project/dsd-05/research-report.md",
+          "sha256": "0d7d31036a68767b0a586b7aad0c228999316c6463dfd39009f8d7e7131360d5",
+          "type": "file"
+        },
+        {
+          "bytes": 191,
+          "path": "project/dsd-05/returned-handoff.md",
+          "sha256": "1c9f3979e4a123c584f3ddd072f6869df6a241adca1c4da4cc484b8f6815ecab",
+          "type": "file"
+        },
+        {
+          "bytes": null,
+          "path": "project/dsd-05/src",
+          "sha256": null,
+          "type": "directory"
+        },
+        {
+          "bytes": 29,
+          "path": "project/dsd-05/src/request_config.py",
+          "sha256": "f0ff7ba51f0b758aea2f9b248c754f832dd57c6d2110036a80f886690ecdee6c",
+          "type": "file"
+        },
+        {
+          "bytes": 77,
+          "path": "project/dsd-05/test-output.txt",
+          "sha256": "dbff34df084976e0006cd15b2bd1cf6e3b5419b626c19f0030544a1c174ec3d7",
+          "type": "file"
+        },
+        {
+          "bytes": null,
+          "path": "skills",
+          "sha256": null,
+          "type": "directory"
+        },
+        {
+          "bytes": null,
+          "path": "skills/dispatching-development-subagents",
+          "sha256": null,
+          "type": "directory"
+        },
+        {
+          "bytes": 5593,
+          "path": "skills/dispatching-development-subagents/SKILL.md",
+          "sha256": "b89b4db8af53bd136237cb2306f956c039757a0e321b1f704bd16d1a00580500",
+          "type": "file"
+        }
+      ],
+      "exists": true,
+      "path": "workspace/fixture"
+    },
+    "prompt": {
+      "bytes": 842,
+      "exists": true,
+      "path": "prompt.txt",
+      "sha256": "024ff729ba4284d12f3ed11af2410cc4feab2644ffd8f77ef035167587ed9064"
+    },
+    "prompt_template": {
+      "bytes": 588,
+      "exists": true,
+      "path": "prompt-template.txt",
+      "sha256": "43ac03009dd981bcc6633d75d21921fe496fb8d69c57629711a341ac666aae6c"
+    },
+    "stderr": {
+      "bytes": 0,
+      "exists": true,
+      "path": "stderr.txt",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "stdout": {
+      "bytes": 14469,
+      "exists": true,
+      "path": "stdout.txt",
+      "sha256": "2d14b570d00fd0c7c6b2dd9652d95663e2cb30b13c97a9eb4a71b2971f7fba8b"
+    }
+  },
+  "duration_seconds": 40.394,
+  "execution": {
+    "effort": "high",
+    "executable": "codex",
+    "exit_code": 0,
+    "invocation_started": true,
+    "model": "gpt-5.6-sol",
+    "provider": "codex",
+    "timed_out": false,
+    "timeout_seconds": 900
+  },
+  "finished_at": "2026-09-06T01:12:04.322Z",
+  "infrastructure_error": null,
+  "run_id": "20260906T011123928Z-dsd-08-68f9019f-ca5d-41c3-8533-9a3a4ed5338d-gbyvqai5",
+  "schema_version": "0.2",
+  "started_at": "2026-09-06T01:11:23.928Z",
+  "status": "COMPLETED",
+  "test": {
+    "id": "dsd-08"
+  }
+}

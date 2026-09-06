@@ -1,0 +1,7 @@
+- Dispatch the reviewer’s finding verbatim and define in-scope files/change shape, governing files, and locked constraints.
+- State that the subagent is not the orchestrator: it must not dispatch agents or run checkpoint, review, PR, or hook gates; it only reports gates due.
+- Require out-of-scope work to be surfaced. Only small, safe, obvious fixes may be made, each in a separate commit.
+- The handoff must identify every commit, report tests run and results, and include exactly `Changes beyond dispatched scope: none` or list every extra change with a one-line rationale.
+- For every commit, the orchestrator must inspect `git show --stat` and the full diff, reconcile it against the scope contract, and independently keep or revert out-of-scope changes. Passing tests alone do not verify scope.
+- Land prose only when its factual claims are supported by a compiler, test, or primary source.
+- The source and test support only: “The default request timeout is 30 seconds.” Nothing supplied supports vendor instability or improved resilience. Remove the resilience rationale from the handoff, commit message, code comment, and documentation; do not hedge it.
