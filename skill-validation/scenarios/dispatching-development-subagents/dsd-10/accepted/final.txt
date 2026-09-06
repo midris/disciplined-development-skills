@@ -1,0 +1,2 @@
+1. Verify the commit against the running system using the relevant test, preview, or live call; report the evidence or why it is not exercisable.
+2. Report that the deep-review cadence gate is due, then stop. Do not run the review, log it, checkpoint, dispatch another agent, or open a PR.

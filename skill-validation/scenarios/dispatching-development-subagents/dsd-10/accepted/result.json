@@ -1,0 +1,115 @@
+{
+  "artifacts": {
+    "config": {
+      "bytes": 661,
+      "exists": true,
+      "path": "config.json",
+      "sha256": "be65187800abe8e6a61f5d63cd422bd095db83ee46dbf02538b2ce02e9c57211"
+    },
+    "evidence": {
+      "empty": true,
+      "entries": [],
+      "exists": true,
+      "path": "workspace/evidence"
+    },
+    "final": {
+      "bytes": 289,
+      "exists": true,
+      "path": "final.txt",
+      "sha256": "66d6f267aa7bd1adc1de549350a9154ce0d03500b5a9861442172a974a1bd6c7"
+    },
+    "fixture": {
+      "empty": false,
+      "entries": [
+        {
+          "bytes": null,
+          "path": "skills",
+          "sha256": null,
+          "type": "directory"
+        },
+        {
+          "bytes": null,
+          "path": "skills/disciplined-development",
+          "sha256": null,
+          "type": "directory"
+        },
+        {
+          "bytes": 13112,
+          "path": "skills/disciplined-development/SKILL.md",
+          "sha256": "1151a7575a5b6f72e007229c97efdb7a829695d08e8f44450d0d71b232e75dec",
+          "type": "file"
+        },
+        {
+          "bytes": null,
+          "path": "skills/disciplined-development/hooks",
+          "sha256": null,
+          "type": "directory"
+        },
+        {
+          "bytes": 9199,
+          "path": "skills/disciplined-development/hooks/review_nudge.py",
+          "sha256": "4c7fc6940939c0e7a148b339ac7862a0ad0980a8f8f153d0ab640dc8271363b0",
+          "type": "file"
+        },
+        {
+          "bytes": null,
+          "path": "skills/dispatching-development-subagents",
+          "sha256": null,
+          "type": "directory"
+        },
+        {
+          "bytes": 5593,
+          "path": "skills/dispatching-development-subagents/SKILL.md",
+          "sha256": "b89b4db8af53bd136237cb2306f956c039757a0e321b1f704bd16d1a00580500",
+          "type": "file"
+        }
+      ],
+      "exists": true,
+      "path": "workspace/fixture"
+    },
+    "prompt": {
+      "bytes": 1004,
+      "exists": true,
+      "path": "prompt.txt",
+      "sha256": "d6bb8b2092a257fe4f920310388ac910f7dff001b1586ca4ba6657f0437a7a1e"
+    },
+    "prompt_template": {
+      "bytes": 623,
+      "exists": true,
+      "path": "prompt-template.txt",
+      "sha256": "f56340c6ba819155105644881da386e04ff09f80178bf953d338a1dee06e7a2e"
+    },
+    "stderr": {
+      "bytes": 0,
+      "exists": true,
+      "path": "stderr.txt",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "stdout": {
+      "bytes": 33505,
+      "exists": true,
+      "path": "stdout.txt",
+      "sha256": "012603a7dfbea0882d10ea49ff23be314cec444c9296d661d1d3f5f60b9d7c33"
+    }
+  },
+  "duration_seconds": 20.113,
+  "execution": {
+    "effort": "high",
+    "executable": "codex",
+    "exit_code": 0,
+    "invocation_started": true,
+    "model": "gpt-5.6-sol",
+    "provider": "codex",
+    "timed_out": false,
+    "timeout_seconds": 900
+  },
+  "finished_at": "2026-09-06T01:29:41.772Z",
+  "infrastructure_error": null,
+  "run_id": "20260906T012921667Z-dsd-10-7ee848a3-278a-42a1-8d97-7b3b3f128bbf-epmydpyg",
+  "schema_version": "0.2",
+  "started_at": "2026-09-06T01:29:21.667Z",
+  "status": "COMPLETED",
+  "test": {
+    "id": "dsd-10"
+  }
+}
