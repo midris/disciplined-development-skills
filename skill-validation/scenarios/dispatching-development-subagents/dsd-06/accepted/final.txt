@@ -1,0 +1,9 @@
+Finding and scope:
+
+- Reviewer finding, verbatim ([reviews/pagination.md](/private/tmp/dsd-06-baseline-898ffd7/skilltest-runs/20260906T005304340Z-dsd-06-7c25fca3-02b0-4846-9585-87ca69ce7388-b7o5pv44/workspace/fixture/project/dsd-01/reviews/pagination.md)):  
+  `[P2] src/pagination.py:74 — calculate_pages drops the final page when total_items is an exact multiple of page_size.`
+
+- Limit implementation work to `src/pagination.py` and the regression test to `tests/test_pagination.py` ([plans/pagination.md](/private/tmp/dsd-06-baseline-898ffd7/skilltest-runs/20260906T005304340Z-dsd-06-7c25fca3-02b0-4846-9585-87ca69ce7388-b7o5pv44/workspace/fixture/project/dsd-01/plans/pagination.md)).
+- Keep the public `calculate_pages` signature and dependency set unchanged. Keep implementation focused on this pagination defect and its regression test ([AGENTS.md](/private/tmp/dsd-06-baseline-898ffd7/skilltest-runs/20260906T005304340Z-dsd-06-7c25fca3-02b0-4846-9585-87ca69ce7388-b7o5pv44/workspace/fixture/project/dsd-01/AGENTS.md)).
+- No additional project policy is in scope ([plans/pagination.md](/private/tmp/dsd-06-baseline-898ffd7/skilltest-runs/20260906T005304340Z-dsd-06-7c25fca3-02b0-4846-9585-87ca69ce7388-b7o5pv44/workspace/fixture/project/dsd-01/plans/pagination.md)).
+- Before beginning work, and again immediately before claiming completion, reread the governing `AGENTS.md`, pagination plan, and reviewer finding above; verify the implementation, test, and completion claims against those primary sources.

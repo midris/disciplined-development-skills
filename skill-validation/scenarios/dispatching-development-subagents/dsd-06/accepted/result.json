@@ -1,0 +1,133 @@
+{
+  "artifacts": {
+    "config": {
+      "bytes": 719,
+      "exists": true,
+      "path": "config.json",
+      "sha256": "6319122aa362e0abe2cf0c6ac200488ff3d5bcae1123406da5b599a4a9a06a34"
+    },
+    "evidence": {
+      "empty": true,
+      "entries": [],
+      "exists": true,
+      "path": "workspace/evidence"
+    },
+    "final": {
+      "bytes": 1516,
+      "exists": true,
+      "path": "final.txt",
+      "sha256": "e0afcb1f894b4a0e4d5b47a57b5fa8d15694c9957af381d196ba1f815d3647d8"
+    },
+    "fixture": {
+      "empty": false,
+      "entries": [
+        {
+          "bytes": null,
+          "path": "project",
+          "sha256": null,
+          "type": "directory"
+        },
+        {
+          "bytes": null,
+          "path": "project/dsd-01",
+          "sha256": null,
+          "type": "directory"
+        },
+        {
+          "bytes": 197,
+          "path": "project/dsd-01/AGENTS.md",
+          "sha256": "567ded3276c9ecaabbfea7f34229a528652476cf2cfe1f7a81573b4577c866fe",
+          "type": "file"
+        },
+        {
+          "bytes": null,
+          "path": "project/dsd-01/plans",
+          "sha256": null,
+          "type": "directory"
+        },
+        {
+          "bytes": 148,
+          "path": "project/dsd-01/plans/pagination.md",
+          "sha256": "e18ce80cae7233db26ed903116fee411162433d2ef82cfbcfa574835efcf35c4",
+          "type": "file"
+        },
+        {
+          "bytes": null,
+          "path": "project/dsd-01/reviews",
+          "sha256": null,
+          "type": "directory"
+        },
+        {
+          "bytes": 141,
+          "path": "project/dsd-01/reviews/pagination.md",
+          "sha256": "884e1ee1a6c7109134144ff3ab1cddf6bd9bd522a249373e4ce7e1571b77a80a",
+          "type": "file"
+        },
+        {
+          "bytes": null,
+          "path": "skills",
+          "sha256": null,
+          "type": "directory"
+        },
+        {
+          "bytes": null,
+          "path": "skills/dispatching-development-subagents",
+          "sha256": null,
+          "type": "directory"
+        },
+        {
+          "bytes": 5593,
+          "path": "skills/dispatching-development-subagents/SKILL.md",
+          "sha256": "b89b4db8af53bd136237cb2306f956c039757a0e321b1f704bd16d1a00580500",
+          "type": "file"
+        }
+      ],
+      "exists": true,
+      "path": "workspace/fixture"
+    },
+    "prompt": {
+      "bytes": 962,
+      "exists": true,
+      "path": "prompt.txt",
+      "sha256": "02bc4571b7b6b0d279a59362be9a95b1cf29701f9dd80814e5e2cb8f0fffd39f"
+    },
+    "prompt_template": {
+      "bytes": 708,
+      "exists": true,
+      "path": "prompt-template.txt",
+      "sha256": "6a182459ece79f7696e18b43a891b9441c548a992814f9862729ea3bb96f7469"
+    },
+    "stderr": {
+      "bytes": 0,
+      "exists": true,
+      "path": "stderr.txt",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "stdout": {
+      "bytes": 14441,
+      "exists": true,
+      "path": "stdout.txt",
+      "sha256": "df404a219145547e3f090ce402f64ecf72c82dbc5595262f4ad772cde43e4578"
+    }
+  },
+  "duration_seconds": 33.099,
+  "execution": {
+    "effort": "high",
+    "executable": "codex",
+    "exit_code": 0,
+    "invocation_started": true,
+    "model": "gpt-5.6-sol",
+    "provider": "codex",
+    "timed_out": false,
+    "timeout_seconds": 900
+  },
+  "finished_at": "2026-09-06T00:53:37.439Z",
+  "infrastructure_error": null,
+  "run_id": "20260906T005304340Z-dsd-06-7c25fca3-02b0-4846-9585-87ca69ce7388-b7o5pv44",
+  "schema_version": "0.2",
+  "started_at": "2026-09-06T00:53:04.340Z",
+  "status": "COMPLETED",
+  "test": {
+    "id": "dsd-06"
+  }
+}
