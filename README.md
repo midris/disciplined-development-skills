@@ -28,6 +28,7 @@ The charter's proposed suite changes retain their stated approval and activation
 
 The [rewrite goal and design principles](plans/specs/2026-09-06-skilltest-controlled-inputs-design.md#overall-goal) explain the intended direction: cleaner, lighter, more effective skills, with dumb tools for smart agents and repeatable RED/GREEN evidence.
 The [validation guide](skill-validation/README.md) routes to the charter, scenarios, methodology, runner and current design work.
+Testing is [model-led, supported by small deterministic tools](skill-validation/README.md#model-led-testing): the agent designs and judges tests; the tools prepare runs and record evidence.
 Agents must also read [CLAUDE.md](CLAUDE.md); [AGENTS.md](AGENTS.md) is the Codex entry point to that shared guidance.
 
 ## What's included
