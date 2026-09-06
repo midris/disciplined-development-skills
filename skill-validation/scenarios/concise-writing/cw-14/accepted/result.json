@@ -1,0 +1,121 @@
+{
+  "artifacts": {
+    "config": {
+      "bytes": 740,
+      "exists": true,
+      "path": "config.json",
+      "sha256": "cf746798d9ecea20384e27876be50fa545223cd1ae3671f14d488fedefed8b36"
+    },
+    "evidence": {
+      "empty": true,
+      "entries": [],
+      "exists": true,
+      "path": "workspace/evidence"
+    },
+    "final": {
+      "bytes": 125,
+      "exists": true,
+      "path": "final.txt",
+      "sha256": "293674bd988f66b7c67ac7a72c7e4ef9da23fb983ee7a9097901014796827a88"
+    },
+    "fixture": {
+      "empty": false,
+      "entries": [
+        {
+          "bytes": null,
+          "path": "skills",
+          "sha256": null,
+          "type": "directory"
+        },
+        {
+          "bytes": null,
+          "path": "skills/concise-writing",
+          "sha256": null,
+          "type": "directory"
+        },
+        {
+          "bytes": 5616,
+          "path": "skills/concise-writing/SKILL.md",
+          "sha256": "4d12a2eb475c6b2ef57e2300c8c07af3f59c1e07b2b82695a3b7669eee1d6d72",
+          "type": "file"
+        },
+        {
+          "bytes": null,
+          "path": "skills/test-driven-development",
+          "sha256": null,
+          "type": "directory"
+        },
+        {
+          "bytes": 9015,
+          "path": "skills/test-driven-development/SKILL.md",
+          "sha256": "bf1b8216e523851a411e91d429a7c1c2a173e79d88957bc78e348218d50edd54",
+          "type": "file"
+        },
+        {
+          "bytes": null,
+          "path": "skills/writing-skills",
+          "sha256": null,
+          "type": "directory"
+        },
+        {
+          "bytes": 26360,
+          "path": "skills/writing-skills/SKILL.md",
+          "sha256": "d34db5c8aed6a4e0440132bd0613aace70a693ec7819d5637ad77481d8e10d1b",
+          "type": "file"
+        },
+        {
+          "bytes": 12558,
+          "path": "skills/writing-skills/testing-skills-with-subagents.md",
+          "sha256": "c711346852c911b24a84aa161e0cff06a4cd7f4e2fa9e9c0a266cead5afcbade",
+          "type": "file"
+        }
+      ],
+      "exists": true,
+      "path": "workspace/fixture"
+    },
+    "prompt": {
+      "bytes": 2240,
+      "exists": true,
+      "path": "prompt.txt",
+      "sha256": "a21e856802b791b33df5778cb5380ab23940143a8a0f55f2b8f2412f4dc9d140"
+    },
+    "prompt_template": {
+      "bytes": 1865,
+      "exists": true,
+      "path": "prompt-template.txt",
+      "sha256": "8ccb4f0d0aa82c2c06d3c861c153e93161e32f4580dd41706273010acd9339d9"
+    },
+    "stderr": {
+      "bytes": 0,
+      "exists": true,
+      "path": "stderr.txt",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "stdout": {
+      "bytes": 60710,
+      "exists": true,
+      "path": "stdout.txt",
+      "sha256": "90168501e03200408af51230d124f21e709d85917fc310134eefb81aa82fa33e"
+    }
+  },
+  "duration_seconds": 50.105,
+  "execution": {
+    "effort": "high",
+    "executable": "codex",
+    "exit_code": 0,
+    "invocation_started": true,
+    "model": "gpt-5.6-sol",
+    "provider": "codex",
+    "timed_out": false,
+    "timeout_seconds": 900
+  },
+  "finished_at": "2026-09-06T04:17:45.031Z",
+  "infrastructure_error": null,
+  "run_id": "20260906T041654925Z-cw-14-66a5f5b3-215a-4974-970e-882fae7bc0ae-jqctta4k",
+  "schema_version": "0.2",
+  "started_at": "2026-09-06T04:16:54.925Z",
+  "status": "COMPLETED",
+  "test": {
+    "id": "cw-14"
+  }
+}
