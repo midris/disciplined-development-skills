@@ -42,6 +42,7 @@ ACCEPTED_SCENARIOS = {
     "disc-05",
     "disc-06",
     "disc-07",
+    "disc-08",
 }
 ACCEPTED_FILES = {
     "accepted/final.txt",
