@@ -34,6 +34,12 @@ PROMPT_HASHES = {
 }
 
 REQUIRED_FILES = {"README.md", "prompt.md", "rubric.md", "test.json"}
+ACCEPTED_SCENARIOS = {"disc-01"}
+ACCEPTED_FILES = {
+    "accepted/final.txt",
+    "accepted/result.json",
+    "accepted/worksheet.md",
+}
 
 
 def _package_files(scenario_dir: Path) -> set[str]:
@@ -57,7 +63,10 @@ def test_skill_discovery_catalog_prepares_only_declared_inputs(
         scenario_dir = SCENARIO_ROOT / scenario_id
         package_files = _package_files(scenario_dir)
         optional_files = {"smoke-result.json"} if scenario_id == "disc-12" else set()
-        assert REQUIRED_FILES <= package_files <= REQUIRED_FILES | optional_files
+        expected_files = set(REQUIRED_FILES)
+        if scenario_id in ACCEPTED_SCENARIOS:
+            expected_files |= ACCEPTED_FILES
+        assert expected_files <= package_files <= expected_files | optional_files
 
         config = load_config(scenario_dir / "test.json")
         raw_config = json.loads((scenario_dir / "test.json").read_bytes())
