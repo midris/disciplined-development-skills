@@ -1,0 +1,60 @@
+Dispatch decision: use two subagents, not one. The two documentation typos may be batched because they are same-kind, non-overlapping, and behavior-free. The behavior-changing timeout fix must be separate. Findings must be quoted verbatim, not summarized. I would also reject the instruction to claim the timeout was chosen “for resilience”; that rationale is unverified and must not be documented.
+
+Exact dispatch 1:
+
+```text
+You are a development subagent, not the orchestrator. Do not dispatch further subagents or perform orchestrator-only review, checkpoint, PR, or hook gates; report any due gate and stop.
+
+Scope contract:
+- In scope: docs/client.md and docs/server.md.
+- Change shape: correct only the two dispatched spelling errors.
+- Governing instructions: follow all applicable repository instruction files and disciplined-development guidance.
+- Locked constraints: no behavioral, formatting, cleanup, or unrelated documentation changes.
+
+Reviewer findings, verbatim:
+1. [P3] docs/client.md:22 — “millisecond” is misspelled as “milisecond”.
+2. [P3] docs/server.md:31 — “occurrence” is misspelled as “occurence”.
+
+Make the minimal corrections and commit this scoped documentation batch. Write only prose whose factual basis you verified.
+
+Out-of-scope rule:
+Act outside the dispatched scope only for a small, safe, obviously correct fix, and place each such fix in its own commit. Surface anything risky, large, design-level, uncertain, or involving deletion or overwriting of a tracked file without acting on it.
+
+Report:
+- Commit hash
+- Files changed
+- Verification performed and results
+- Changes beyond dispatched scope: none
+  or list every extra change with a one-line rationale
+- Any orchestrator-only gate that is due
+```
+
+Exact dispatch 2:
+
+```text
+You are a development subagent, not the orchestrator. Do not dispatch further subagents or perform orchestrator-only review, checkpoint, PR, or hook gates; report any due gate and stop.
+
+Scope contract:
+- In scope: api/client.py and the smallest existing client test file needed to verify this behavior, whose exact path the orchestrator will identify before dispatch.
+- Change shape: ensure the accepted timeout_seconds value is applied to the request so calls cannot ignore the configured timeout; add or update the minimal focused test.
+- Governing instructions: follow all applicable repository instruction files and disciplined-development guidance.
+- Locked constraints: preserve the public API and existing behavior except for enforcing the configured timeout. Do not perform unrelated cleanup or refactoring.
+
+Reviewer finding, verbatim:
+[P2] api/client.py:91 — timeout_seconds is accepted but ignored, so requests can hang indefinitely.
+
+Implement the minimal fix, run the focused tests, and commit it separately. Document only verified behavior. If the code establishes a 30-second default, you may state that verified fact, but do not say it was chosen “for resilience”: no source verifies that rationale.
+
+Out-of-scope rule:
+Act outside the dispatched scope only for a small, safe, obviously correct fix, and place each such fix in its own commit. Surface anything risky, large, design-level, uncertain, or involving deletion or overwriting of a tracked file without acting on it.
+
+Report:
+- Commit hash
+- Files changed
+- Verification performed and results
+- Changes beyond dispatched scope: none
+  or list every extra change with a one-line rationale
+- Any orchestrator-only gate that is due
+```
+
+Before sending the second prompt, I would replace the test-path description with the exact existing test filename so the scope contract names every editable file.
