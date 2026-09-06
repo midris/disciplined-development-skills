@@ -1,0 +1,145 @@
+{
+  "artifacts": {
+    "config": {
+      "bytes": 967,
+      "exists": true,
+      "path": "config.json",
+      "sha256": "22674dde67f0a256edaa8766328947ac027c676b62b49bc547ce66dc1845f693"
+    },
+    "evidence": {
+      "empty": true,
+      "entries": [],
+      "exists": true,
+      "path": "workspace/evidence"
+    },
+    "final": {
+      "bytes": 1992,
+      "exists": true,
+      "path": "final.txt",
+      "sha256": "f5926d793e68f0419f4fad662fb36c3266c277c7fb9feede226b9833dc0fa499"
+    },
+    "fixture": {
+      "empty": false,
+      "entries": [
+        {
+          "bytes": null,
+          "path": "skills",
+          "sha256": null,
+          "type": "directory"
+        },
+        {
+          "bytes": null,
+          "path": "skills/disciplined-development",
+          "sha256": null,
+          "type": "directory"
+        },
+        {
+          "bytes": 13112,
+          "path": "skills/disciplined-development/SKILL.md",
+          "sha256": "1151a7575a5b6f72e007229c97efdb7a829695d08e8f44450d0d71b232e75dec",
+          "type": "file"
+        },
+        {
+          "bytes": null,
+          "path": "skills/disciplined-development/hooks",
+          "sha256": null,
+          "type": "directory"
+        },
+        {
+          "bytes": 9199,
+          "path": "skills/disciplined-development/hooks/review_nudge.py",
+          "sha256": "4c7fc6940939c0e7a148b339ac7862a0ad0980a8f8f153d0ab640dc8271363b0",
+          "type": "file"
+        },
+        {
+          "bytes": null,
+          "path": "skills/disciplined-research",
+          "sha256": null,
+          "type": "directory"
+        },
+        {
+          "bytes": 9400,
+          "path": "skills/disciplined-research/SKILL.md",
+          "sha256": "a5c4079e5aa21651ecd39b09e3fb2d9a58f4a1f3b99354b3b6927b2d44c6fb50",
+          "type": "file"
+        },
+        {
+          "bytes": null,
+          "path": "skills/dispatching-development-subagents",
+          "sha256": null,
+          "type": "directory"
+        },
+        {
+          "bytes": 5593,
+          "path": "skills/dispatching-development-subagents/SKILL.md",
+          "sha256": "b89b4db8af53bd136237cb2306f956c039757a0e321b1f704bd16d1a00580500",
+          "type": "file"
+        },
+        {
+          "bytes": null,
+          "path": "skills/superpowers",
+          "sha256": null,
+          "type": "directory"
+        },
+        {
+          "bytes": null,
+          "path": "skills/superpowers/subagent-driven-development",
+          "sha256": null,
+          "type": "directory"
+        },
+        {
+          "bytes": 32339,
+          "path": "skills/superpowers/subagent-driven-development/SKILL.md",
+          "sha256": "8dd1b8e698edec3700c6d89517dbe96febd3bacd3f6ea21c1a3569c62ea104b5",
+          "type": "file"
+        }
+      ],
+      "exists": true,
+      "path": "workspace/fixture"
+    },
+    "prompt": {
+      "bytes": 2408,
+      "exists": true,
+      "path": "prompt.txt",
+      "sha256": "8cff64638bf7609d9b59ae412caa4ef8e6ab7a921616d0b9d647815d4f96355b"
+    },
+    "prompt_template": {
+      "bytes": 1996,
+      "exists": true,
+      "path": "prompt-template.txt",
+      "sha256": "d4c03e13a68a7c25a480d07dfb075e7b23d2bbda79d330ce00a3d52b92054cca"
+    },
+    "stderr": {
+      "bytes": 0,
+      "exists": true,
+      "path": "stderr.txt",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "stdout": {
+      "bytes": 133990,
+      "exists": true,
+      "path": "stdout.txt",
+      "sha256": "be7731fbe44a9dc995f9e65a5bb44ade1beb0737053a72bcf89144a52ddd10b0"
+    }
+  },
+  "duration_seconds": 107.903,
+  "execution": {
+    "effort": "high",
+    "executable": "codex",
+    "exit_code": 0,
+    "invocation_started": true,
+    "model": "gpt-5.6-sol",
+    "provider": "codex",
+    "timed_out": false,
+    "timeout_seconds": 900
+  },
+  "finished_at": "2026-09-06T00:02:44.247Z",
+  "infrastructure_error": null,
+  "run_id": "20260906T000056344Z-dsd-02-9db243c9-334c-4af9-8143-05652e2e70e6-bitf2_q5",
+  "schema_version": "0.2",
+  "started_at": "2026-09-06T00:00:56.344Z",
+  "status": "COMPLETED",
+  "test": {
+    "id": "dsd-02"
+  }
+}
