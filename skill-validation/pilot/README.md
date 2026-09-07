@@ -17,7 +17,8 @@ The [Codex adapter](../runner/README.md#codex) owns private HOME/CODEX_HOME/TMPD
 
 Before collection, present every fully expanded command, working directory, frozen input revision, provider/model/effort, count and order as one bounded batch for explicit owner approval.
 An approved batch authorizes only those commands and repetitions; judgeable outcomes, including FAILs, do not require another conversational checkpoint before the next approved command.
-Changed commands, inputs, model/effort, counts or order require renewed approval; failed controls, drift, unexpected infrastructure failures or unresolved cleanup pause the batch under the recovery policy below.
+Changed commands, inputs, model/effort, counts or order require renewed approval; failed controls, drift, compromised required evidence, unexpected execution failures or unresolved cleanup pause the batch under the recovery policy below.
+Inspect unexpected diagnostics for those effects; their presence or log severity alone does not pause a completed, judgeable run.
 Understood infrastructure-only retries retain the existing exact-unchanged-command rule. Host approval dialogs still apply.
 This policy is not approval of a batch; completed pilot commands are historical records, not reusable launch permission.
 
@@ -93,9 +94,9 @@ There are no permitted fixture/evidence edits, network task calls or agent dispa
 AR-03 uses the supplied reviewer criteria directly, not a Git-range or delegated review. LP-05 supplies task facts only, not application source/tests.
 Compare results only within each frozen pair; the completed original four observations are not matching-input repetitions.
 
-## Prepared CW inputs — owner review required
+## CW purpose-separated inputs
 
-These four configs implement three purposes, not an approved run batch:
+These four configs implement three purposes; approval and collection status live in the active plan, not this reusable input table:
 
 | Purpose / condition | Config | Prompt | Evaluator-only rubric |
 |---|---|---|---|
@@ -122,7 +123,7 @@ Before collection, obtain prompt/rubric approval, freeze the recoverable revisio
 Qualification checks availability and observability, not whether CW chooses the expected route; an observed discovery FAIL is not itself a setup failure.
 Do not add a read directive to a discovery prompt to make that qualification pass; explicit-load qualification stays a separate setup check.
 Provider-free copying proves prepared bytes only; if the necessary trace/control boundary cannot be established, stop as inconclusive rather than infer hidden behavior.
-Use the routine commands below only after an exact finite batch is approved. No extra runner capability or paid qualification call is automatically authorized.
+Use the routine commands below only for an explicitly approved finite batch; completed commands are not reusable launch permission. No extra runner capability or paid qualification call is automatically authorized.
 
 ## Per-run commands and checks
 
@@ -151,7 +152,7 @@ cmp "$PILOT_REFERENCE/cli-sha256.txt" "$PILOT_ATTEMPT/cli-sha256.txt"
 ```
 
 Inspect version-command stderr before launch; exit 0 is not evidence of empty stderr.
-Disposition an understood warning against the required controls, retaining the capture; unknown warnings or unusable provenance stop launch.
+Inspect warnings against the required controls and retain the capture; unusable provenance or an unproved required control stops launch, not an unfamiliar message alone.
 Never silence warnings or refresh references to hide drift; capture version/digest immediately before every invocation, including retries.
 After the batch's explicit approval covers its fully expanded form, execute the row's one-run command:
 
@@ -208,6 +209,8 @@ Routine record: runner bundle + CLI/command evidence + completed worksheet + sum
 
 Apply the [failure/drift policy](../../plans/specs/2026-09-06-skilltest-controlled-inputs-design.md#accepted-failure-and-drift-policy):
 
+- Nonfatal CLI diagnostics: retain stderr and note the diagnostic, supporting checks and uncertainty in the worksheet. Continue the approved batch without retry or renewed approval when runner/provider completion succeeds, the response is judgeable, required input/provenance/trace/cleanup checks pass, and there is no evidence of changed model/effort, contamination or compromised controls. A log labeled ERROR is not by itself a failed run; exit 0 alone is not sufficient either.
+- Unexpected execution failure: retain evidence and stop to investigate; do not retry until it meets the understood infrastructure-only rule below.
 - Required control, input or CLI provenance missing/drifted: stop; retain affected evidence and qualify the changed boundary before continuing.
 - Post-run contamination: retain/explain and exclude from valid comparison evidence, without assigning automatic skill FAIL.
 - Understood infrastructure-only failure with no evaluable response: record INFRA_RETRY; preserve all prior command/CLI captures in a unique retry-evidence directory and update their summary links before reusing the original attempt path. Verify the move succeeded and capture destinations are absent, then repeat all prelaunch checks and retry only the unchanged approved command, including redirections. Retain the prior bundle and a separate row for each attempt.

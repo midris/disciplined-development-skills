@@ -209,7 +209,8 @@ The original four observations remain tied to `e537c03909eb2b4f1986e4170a3f1b662
 The owner approved applying the pilot's workflow improvements, not another provider batch or retrospective scoring changes.
 Present the complete expanded commands, working directories, recoverable frozen inputs, provider/model/effort, counts and order together for explicit approval of one finite batch.
 Continue through approved commands after each run's validation/scoring; a judgeable skill FAIL or passing no-DD control is not itself a reason to stop or request another approval.
-Changed commands, inputs, models/efforts, counts or order require renewed approval. Failed controls, drift, unexpected infrastructure failures or unresolved cleanup pause the batch; understood unchanged-command infrastructure retries retain their existing policy.
+Changed commands, inputs, models/efforts, counts or order require renewed approval. Failed controls, drift, compromised required evidence, unexpected execution failures or unresolved cleanup pause the batch; inspect unexpected diagnostics under the failure/drift policy below rather than treating log severity alone as failure.
+Understood unchanged-command infrastructure retries retain their existing policy.
 Host permission dialogs and owner acceptance of results remain separate; policy approval grants no invocation authority by itself.
 
 Treat the batch as one verification/commit unit: establish passing offline harness evidence before collection and rerun relevant tests if code/environment changes or a failure invalidates it.
@@ -274,6 +275,10 @@ Choose exact pilot scenarios, counts and commands before execution; campaign sch
 
 ### Accepted failure and drift policy
 
+Retain and assess CLI diagnostics by their observed effect, not their severity label alone.
+The owner accepts nonfatal diagnostics as non-blocking when runner/provider completion succeeds, the response is judgeable, required input/provenance/trace/cleanup checks pass, and no evidence indicates changed model/effort, contamination or compromised controls.
+Record the warning, supporting checks and remaining uncertainty in the worksheet, then continue the approved batch without retry or renewed approval.
+This avoids discarding usable observations for incidental CLI failures; it does not prove zero hidden impact or excuse incomplete required evidence.
 If a required isolation check fails or cannot be completed before launch, stop without invoking the provider.
 If contamination is discovered afterward, retain and explain the attempt under the scratch-review policy, but exclude it from valid comparison evidence without automatically assigning a skill FAIL.
 If the CLI version changes during a comparison, pause that comparison, validate the changed harness and establish matching versions and conditions before continuing; do not automatically rerun the whole baseline suite.

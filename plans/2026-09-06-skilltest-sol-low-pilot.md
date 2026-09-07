@@ -2,11 +2,11 @@
 
 > **For agentic workers:** REQUIRED SUB-SKILL: Use `superpowers:executing-plans` task by task, stopping at the review checkpoints below.
 
-**Status:** Tasks 1–6 are complete through preparation of the owner-review handoff; acceptance is pending.
+**Status:** Task 9's CW collection and review handoff are complete; owner acceptance of this batch and the earlier pilot/extension remains pending.
 The initial four observations and six separately approved extension observations are scored and retained in scratch, without provider retries or unresolved cleanup.
 No-DD/current-DD real qualification and the extension's affected provider-free qualification are complete; the documented reuse decision required no additional paid qualification call.
 Stop for owner review: no further provider invocation, fixture revision/recollection, effectiveness campaign, discovery coverage work or skill edit is authorized by these completed calls.
-The extension evidence pointers are in Task 6; Task 8 records the owner's approval to prepare the three CW purposes, not invoke providers.
+The extension evidence pointers are in Task 6; Tasks 8–9 record the separately approved CW inputs and completed four-command procedure batch.
 
 **Goal:** Exercise one agent-led preparation, execution, scoring and handoff workflow, not collect effectiveness estimates.
 **Architecture:** Preserve the one-run runner and config schema; add only Codex runtime controls and a worksheet field, then exercise them through one written runbook.
@@ -238,15 +238,31 @@ This is input preparation only: no provider/CLI-auth invocation, new sampling de
 - [x] Prepare the behavior pair with identical rubrics/task text and only the current-DD loading prefix plus DD availability differing.
 - [x] Prepare positive/non-trigger current-DD discovery tasks without loading hints; define observable selection/loading, missing-trace handling and separate fidelity in withheld rubrics.
 - [x] Audit configs and rendered fixtures using existing provider-free helpers; verify frozen dependencies, withholding and protected inputs, then review the complete change and run the required hook suite.
-- [x] Prepare the [exact prompt/rubric handoff](../skill-validation/pilot/README.md#prepared-cw-inputs--owner-review-required) in this commit; no results collected and no native-discovery qualification claim.
+- [x] Prepare the [exact prompt/rubric handoff](../skill-validation/pilot/README.md#cw-purpose-separated-inputs) in the input-preparation commit; no results collected or native-discovery qualification claimed by that step.
 
 Provider-free audit: [input-audit.json](/private/tmp/skilltest-sol-low-pilot.Lunoau/cw-inputs.veav95/input-audit.json), produced from the feature-worktree root by `skill-validation/runner/.venv/bin/python /private/tmp/skilltest-sol-low-pilot.Lunoau/cw-inputs.veav95/audit-inputs.py`.
 All four configs/rendered inventories match; current-DD uses the unchanged 13 guidance files and no-DD the same four common files. Prompt relationships, rubric equality and frozen source bytes pass.
 The audit's pre-freeze HEAD is preparation provenance only; this committed unit makes the new inputs recoverable. Its initial whitespace-comparison defect is retained in scratch, not counted as a model attempt or INFRA_RETRY.
 Verification: hooks pass 263 tests with three skips; 147 local links/anchors resolve; protected runner, skills, historical scenarios/accepted files and previous pilot inputs are unchanged.
-Inline review clarified that qualification proves observation capability, not the expected discovery result; no no-write-tool reviewer type is available. Owner input approval remains pending.
+Inline review clarified that qualification proves observation capability, not the expected discovery result; no no-write-tool reviewer type is available. The owner subsequently approved the inputs and qualification checkpoint.
 
-Next checkpoint: owner review of these inputs, then affected qualification and a separately approved finite command/count batch before any model run.
+## Task 9: Qualify and exercise the CW purposes
+
+**Authority:** Owner approved the exact four-command batch at input revision `f28ea6569b7eb5b65245e77635a5ff7d12fc1082`: CW-01 no-DD behavior, current-DD loaded behavior, positive discovery, then CW-17 non-trigger discovery, once each on Codex / gpt-5.6-sol / low.
+Scope remains these three purposes; no broader catalog activation, skill edit or effectiveness campaign.
+
+- [x] Reconcile affected qualification using identical guidance targets/bytes, pinned CLI and unchanged runtime/read/trace mechanisms; no additional paid qualification.
+- [x] Execute all four approved commands once in order; inspect full traces, protected inputs, CLI provenance and runtime cleanup, and complete separate worksheets.
+- [x] Retain the first run's nonfatal model-catalog refresh warning under the owner's explicit non-blocking disposition; preserve its evaluable response with no retry, input change or hidden-impact claim.
+- [x] Reconcile warning policy and coverage/status references; keep all judgments and attempt evidence in the [scratch summary](/private/tmp/skilltest-sol-low-pilot.Lunoau/cw-inputs.veav95/summary.md) and its worksheets.
+- [x] Review and verify the documentation/evidence handoff for the bounded documentation commit; stop for owner review.
+
+All four commands completed with runner/provider exit 0, matching CLI 0.153.4/digest and unchanged declared inputs; no retries or unresolved cleanup.
+The warning-policy amendment was approved between commands 1 and 2 and retained in scratch during collection; scenario prompts, rubrics, fixture sources and commands remained frozen throughout.
+Per-purpose observations stay separate; do not promote them to effectiveness estimates, authoring RED/GREEN acceptance or accepted baseline evidence.
+Verification: four worksheets preserve generated mechanical fields and tied CLI captures; all 209 local links/anchors across eleven documents resolve, the four approved commands and 169 prior extension evidence files are unchanged, protected input/runner/skill/scenario diffs are empty, and hooks pass 263 tests with three skips.
+Runner verification is reused from the unchanged 231-test checkpoint. Inline review retained the stop rule for actual unexpected execution failures while separating nonfatal diagnostics; no no-write-tool reviewer type is available.
+Next checkpoint: owner review of this batch and the warning-policy clarification; no further provider command is queued.
 
 ## Approval and verification checkpoints
 

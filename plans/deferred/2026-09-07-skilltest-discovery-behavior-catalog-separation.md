@@ -2,11 +2,11 @@
 
 > **For agentic workers:** On owner activation, use `superpowers:executing-plans` task by task with review checkpoints.
 
-**Status:** Broader catalog implementation remains DEFERRED. The active plan's Task 8 authorizes preparation of the three CW purposes only; exact prompts/rubrics remain subject to owner review and no provider run is authorized.
+**Status:** Broader catalog implementation remains DEFERRED. The active plan's Tasks 8–9 track the separately approved three-purpose CW preparation and bounded procedure batch; they do not activate the remaining portfolio.
 **Goal:** Give every one of the nine DD skills separately identified discoverability tests and explicitly loaded behavioral-effectiveness tests.
 **Approach:** Reuse existing scenario material, runner configs, worksheets and written runbooks; no new testing framework or schema.
 **Authority:** [Test-purpose separation](../specs/2026-09-06-skilltest-controlled-inputs-design.md#accepted-separation-setup-discovery-and-behavior) and [charter](../../skill-validation/charter/core-contracts.md).
-**Return to:** [Current owner checkpoint](../2026-09-06-skilltest-sol-low-pilot.md#task-8-prepare-the-three-cw-purposes-for-review).
+**Return to:** [Current owner checkpoint](../2026-09-06-skilltest-sol-low-pilot.md#task-9-qualify-and-exercise-the-cw-purposes).
 
 ## Audit findings
 
@@ -31,7 +31,7 @@ The seeds are source material, not ready native tests or execution approval.
 
 ## Deferred work
 
-The active plan records the bounded mapping and subsequent CW input-preparation approval; all other Task 2 repairs and Task 3 collection remain deferred.
+The active plan records the bounded mapping, CW input preparation and separately approved CW procedure batch; all other Task 2 repairs and Task 3 collection remain deferred.
 The [batch/fixture-design amendment](../specs/2026-09-06-skilltest-controlled-inputs-design.md#accepted-bounded-batch-operation) governs later preparation and collection, not permission to launch them.
 
 ### Task 1: Map purposes without moving the catalog
@@ -58,10 +58,10 @@ Use the complete frozen rubric when scoring; exact presentation is fidelity unle
 | AR-03 clauses 3–5: benchmark, material defect and conclusion | AR-I3 and AR-I1 / respective semantic criteria | Review corrects 18% to 1.8%, explains the asymmetric ordering defect and blocks. These do not substitute for caller coverage. |
 | AR-03 extra claims / future precision criterion | AR-I1 / semantic when explicitly included in a new rubric | Existing clause 2 does not require a post-normalization output-order finding. Retain completed caveats; a future rubric can explicitly reject unsupported extra findings, but not retrofit that verdict rule onto this pair. |
 
-### First CW repair — input review pending
+### First CW repair — bounded purposes
 
 Start with concise-writing because it has a small real prose task and the clearest documented selection/application conflation; no new task-tool capability is needed to draft these inputs.
-The owner approved preparing only these three purposes, retaining all existing packages; the [prepared inputs](../../skill-validation/pilot/README.md#prepared-cw-inputs--owner-review-required) contain the exact prompts and complete criterion tables for review:
+Only these three purposes belong to the bounded CW increment, retaining all existing packages; the [prepared inputs](../../skill-validation/pilot/README.md#cw-purpose-separated-inputs) contain the exact prompts and complete criterion tables:
 
 | New variant purpose | Reuse | Contract to preserve or separate |
 |---|---|---|
