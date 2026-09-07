@@ -104,7 +104,8 @@ Update that summary after every attempt, including failures and interruptions.
 Prepared-input checks and the first native-catalog comparison pass in the current scratch package.
 The observed common catalog is `imagegen`, `openai-docs`, `plugin-creator`, `skill-creator`, `skill-installer` and the supplied `writing-plans`: six entries in no-DD, fifteen in current-DD.
 All 60 private bootstrap file hashes and the remaining diagnostic prompt content matched under the normalization above.
-Contamination-control reconciliation and representative shell/tool checks are still pending; do not request a real call yet.
+Provider-free qualification now passes; scratch `preflight/reconciliation.md` records reuse of the four accepted contamination controls, successful loopback policy checks, representative shell/tool reads and verified runtime removal.
+The fixed CLI provenance is retained under `preflight/`; actual exec loading and sibling evidence writes remain unqualified until the two separately approved real calls pass.
 `debug prompt-input` does not accept exec's `--ignore-user-config`, `--ignore-rules` or sibling `--add-dir` options and does not prove runtime enforcement, subsequent reads or hidden inputs.
 The separate real qualification covers the exercised exec/read/write path; neither stage claims universal filesystem isolation.
 
