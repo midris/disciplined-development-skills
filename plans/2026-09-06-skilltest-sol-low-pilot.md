@@ -3,9 +3,10 @@
 > **For agentic workers:** REQUIRED SUB-SKILL: Use `superpowers:executing-plans` task by task, stopping at the review checkpoints below.
 
 **Status:** Tasks 1–2 are complete following the owner's requests to continue.
-Task 3 and all provider calls remain behind their review/approval checkpoints; no real qualification or pilot observations have been run under this plan.
+Task 3's runbook/fixture preparation and proposed DR-02/LP-01 eight-observation scope are owner-approved and in progress.
+All provider calls remain behind exact-command approval; no real qualification or pilot observations have been run under this plan.
 The owner separately authorized the completed preparatory timeout-test repair described below.
-The proposed scenarios, eight observation runs and two real qualification calls below require approval with this plan; each provider command also requires its separate exact-command approval.
+The two planned real qualification calls and every observation command require separate exact-command approval after their preparation gates pass.
 
 **Goal:** Exercise one agent-led preparation, execution, scoring and handoff workflow, not collect effectiveness estimates.
 **Architecture:** Preserve the one-run runner and config schema; add only Codex runtime controls and a worksheet field, then exercise them through one written runbook.
@@ -75,15 +76,25 @@ Review was performed inline because this session has no no-write-tool reviewer t
 These are new pilot inputs in the existing validation tree, not moved or replaced scenario packages.
 Results remain scratch-only through owner review; use one Markdown summary linking each run and its worksheets.
 
-- [ ] Prepare separate current/no-DD variants from DR-02 and LP-01 as specified in the design. Both DR-02 prompts explicitly request the evidence-note write and permit no other edits; LP-01 remains response-only. Keep semantic rubrics unchanged and document the added file-output check as task fidelity. Permission alone is not a request whose omission can be scored.
-- [ ] Freeze the nine current DD skills from the recorded main revision and the required Superpowers 6.3.0 package files, including writing-plans and its referenced guidance. Inventory exact supplied files in the runbook and configs, not references to mutable installed paths. Use the same Superpowers files in both conditions and audit valid loading instructions without leaking DD descriptions into no-DD.
-- [ ] Write the short runbook with concrete preparation/version/run/worksheet commands, working directories, frozen-input checks, output paths and owner checkpoints. Use the existing config fixture targets for native `.agents/skills/` placement; no installation script or manifest format. Preserve pre-run input sources separately from post-run files and score against the frozen rubric.
+- [x] Prepare separate current/no-DD variants from DR-02 and LP-01 as specified in the design. Both DR-02 prompts explicitly request the evidence-note write and permit no other edits; LP-01 remains response-only. Keep semantic rubrics unchanged and document the added file-output check as task fidelity. Permission alone is not a request whose omission can be scored.
+- [x] Freeze the nine current DD skills from the recorded main revision and the required Superpowers 6.3.0 package files, including writing-plans and its referenced guidance. Inventory exact supplied files in the runbook and configs, not references to mutable installed paths. Use the same Superpowers files in both conditions and audit valid loading instructions without leaking DD descriptions into no-DD.
+- [x] Write the short runbook with concrete preparation/version/run/worksheet commands, working directories, frozen-input checks, output paths and owner checkpoints. Use the existing config fixture targets for native `.agents/skills/` placement; no installation script or manifest format. Preserve pre-run input sources separately from post-run files and score against the frozen rubric.
 - [ ] Document provider-free qualification using the implemented runtime setup, installed CLI inspection and the accepted spike's contamination-control method. Verify no-DD/current native catalogs and declared common inputs before model calls; keep raw evidence and explicit normalization limits in scratch. Do not convert the spike into a generic production inventory parser. If the selected controls cannot be proved, stop and report the precise gap.
 - [ ] Prepare two real qualification commands, one per condition, using the pilot's frozen skills/tools: require supplied-source reads and an evidence-directory write in both; require the intended research/plan skill loads in current-DD and the declared writing-plans load in both. Keep these setup checks separate from behavioral scoring. Show each complete command, provider/model/effort and wait for explicit approval before invoking it.
 - [ ] After qualification passes, request exact-command approval for the eight observation runs: DR-02 first, then LP-01; each runs no-DD, current-DD, current-DD, no-DD in fresh runtimes. Capture CLI version immediately before each run from the same executable. Stop on validation failure or drift; infrastructure-only unchanged-command retries follow the existing policy and are separately recorded.
 - [ ] Complete a worksheet for each judgeable observation, including FAILs. Inspect saved files and observable reads rather than trusting the final answer's assertions. Record missing writes as task fidelity when write access is established; do not confuse model behavior with a failed setup control.
 - [ ] Exercise handoff and failure/recovery bookkeeping using retained or synthetic evidence where possible, without deliberately spending more provider calls to manufacture failures. The summary identifies completed/planned runs, exclusions, deviations and the next resumable action.
 - [ ] Present the complete pilot record and practical runbook findings, then stop for owner review. Do not expand the matrix, author skill edits, promote pilot observations into an effectiveness baseline, or clean up evidence automatically.
+
+Preparation is at [the pilot runbook](../skill-validation/pilot/README.md), with four behavioral configs and two qualification configs.
+All nine DD files match main `ca14bbe24f8aea957dbcfeece3511226e929243d`; both conditions use the same frozen writing-plans and reviewer-guidance files from Superpowers 6.3.0.
+The first provider-free catalog check found six common entries and exactly nine DD additions; normalized common prompt content and 60 bootstrap file hashes matched.
+Remaining provider-free work is contamination-control reconciliation and representative shell/tool checks before any real-command approval request.
+The runbook now pins the retained-evidence inspection and remaining provider-free commands, requires version/digest comparison before each launch, and stops for owner-assisted recovery when process ownership cannot be established.
+These documentation repairs do not complete qualification or authorize a provider call.
+Current verification gate: a fresh offline suite reported 198 passed and one Git-setup timeout cleanup-verification failure; the unchanged focused rerun passed, so the cause remains unresolved.
+Resolve that failure before real qualification; scratch `runbook-review-verification.md` records the commands, error and retained dummy-runtime path.
+Raw preparation evidence stays in `/private/tmp/skilltest-sol-low-pilot.Lunoau/`; no real authentication or model call was used.
 
 ## Approval and verification checkpoints
 

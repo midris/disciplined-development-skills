@@ -21,10 +21,11 @@ Reuse these tools for the testing workflow; extend them only when an observed me
 The intended workflow is agent-followed written runbooks for baseline collection and skill edits, not more shell or Python programs.
 Those runbooks specify fixture setup, exact commands, models/effort, actual CLI-version capture, repetitions, validation and evidence review before collection; routine test changes belong in those documents and test inputs, not runner code.
 The [pilot-first scope](../plans/specs/2026-09-06-skilltest-controlled-inputs-design.md#accepted-immediate-scope-one-usable-pilot) starts with one provisional runbook and a few Codex / gpt-5.6-sol / low scenarios in the existing layout, with medium available for justified workflow diagnostics; Claude integration, the broader campaign and reorganization wait for practical feedback.
+The [provisional pilot runbook](pilot/README.md) provides frozen DR-02/LP-01 inputs, commands and checkpoints; preparation is in progress and no real pilot runs are qualified or collected yet.
 For new controlled testing, keep current accepted evidence in the working tree and recover superseded accepted results from Git history, rather than maintaining dated result archives; commit accepted evidence before replacing it.
 Active experiments remain scratch-only pending review; historical baseline judgments and evidence remain protected, with only the [metadata-only CLI-version worksheet backfill](../plans/specs/2026-09-06-skilltest-controlled-inputs-design.md#accepted-baseline-decision-current-dd-and-no-dd-with-cli-provenance) authorized.
 The orchestrator owns evidence-backed judgments, the owner retains acceptance authority, and provider calls remain subject to approval.
-The [live design](../plans/specs/2026-09-06-skilltest-controlled-inputs-design.md#accepted-methodology-decision-model-led-testing-with-simple-tools) records the accepted model/tool boundary and the remaining controlled-comparison design work; that work is not yet implemented.
+The [live design](../plans/specs/2026-09-06-skilltest-controlled-inputs-design.md#accepted-methodology-decision-model-led-testing-with-simple-tools) records the accepted model/tool boundary and remaining controlled-comparison work; the Codex runtime controls and worksheet provenance field are implemented, while pilot qualification remains pending.
 
 ## Authority map
 
@@ -42,7 +43,7 @@ The [live design](../plans/specs/2026-09-06-skilltest-controlled-inputs-design.m
   update target required by `CLAUDE.md`.
 - [Controlled-input design amendment](../plans/specs/2026-09-06-skilltest-controlled-inputs-design.md)
   records accepted feasibility constraints and the current step-by-step design discussion.
-  It is not yet an approved production implementation specification.
+  Its status identifies approved implementation units separately from deferred work and provider-call approvals.
 
 The broader baseline organization design is deferred. This index does not designate
 accepted baselines, create manifests or campaign state, or declare any scenario

@@ -2,11 +2,11 @@
 
 **Status:** Live design discussion, not an approved implementation specification.
 Exceptions: the owner authorized Tasks 1–2 of the [implementation plan](../2026-09-06-skilltest-sol-low-pilot.md): the worksheet/backfill unit and Codex invocation/runtime controls are complete with offline verification; real qualification remains pending.
-The pilot scenarios/counts and provider commands retain the approval gates below.
+The owner also approved Task 3 preparation for DR-02/LP-01 with eight planned observations; provider commands retain the separate approval gates below.
 The owner accepted the scoped feasibility findings on 2026-09-06 and requested review of the next steps one at a time.
 The owner selected the pilot-first scope below; broader methodology decisions remain constraints for later expansion, not prerequisites to design every future workflow now.
 Apart from those implementation units, this draft does not change scoring rules or authorize provider calls or effectiveness testing.
-It is a reviewed decision record in progress, not an executable implementation contract; the exact invocation changes and unresolved decisions below still require approval.
+It is a reviewed decision record in progress; the implementation plan identifies completed units, authorized preparation and unresolved approval checkpoints.
 
 ## Overall goal
 
@@ -18,7 +18,8 @@ When exact parsing, rendering, validation or evidence recording is necessary, us
 Do not make hooks or deterministic checkers responsible for deciding whether the agent exercised sound semantic judgment.
 
 Use a fixed, repeatable testing workflow to establish RED before authoring, verify GREEN, detect regressions and support simplification.
-The earlier rewrite attempts lacked a sufficiently repeatable testing foundation; the mechanical runner and accepted current-skill observations now provide that foundation, with controlled-input integration still to design and implement.
+The earlier rewrite attempts lacked a sufficiently repeatable testing foundation; the mechanical runner and accepted current-skill observations now provide that foundation.
+The Codex runtime controls are now implemented with offline verification; effective discovery/tool qualification for the pilot remains pending.
 The testing system is supporting infrastructure for evidence-led skill edits, not a separate goal or a reason to restart the charter and baseline work.
 This section is the durable home of the overall goal; repository entry points link here instead of maintaining parallel explanations.
 
@@ -46,7 +47,7 @@ Defer Claude runner integration, the Sol high/medium/low effectiveness matrix an
 After owner acceptance of the process, freeze the agreed inputs and procedure and collect fresh effectiveness results; do not promote pilot observations into that campaign.
 The accepted Claude feasibility evidence remains available for later work; it is not a dependency of this Codex pilot.
 Retain the RED/GREEN, validity and evidence requirements below, but settle only the concrete choices needed for the pilot now.
-This scope does not authorize implementation or provider calls; the exact Codex change map and a separate test-driven implementation plan still require approval.
+Only the explicitly approved implementation and preparation units in the linked plan are authorized; this scope grants no provider-call permission.
 
 ## Accepted starting constraints
 
@@ -102,7 +103,7 @@ This does not authorize editing the accepted scenario packages or rewriting thei
 
 Fresh controlled baseline collection includes both the current-DD composition and the no-DD control, recorded and reported separately.
 Retain the no-DD observations for later comparisons even when they pass; they become RED evidence only when they demonstrate a judgeable targeted failure.
-Both conditions retain the declared Superpowers substrate and exclude DD hooks as specified here; the pilot starts with Codex / gpt-5.6-sol / low, while its scenarios and repetition counts still require agreement.
+Both conditions retain the declared Superpowers substrate and exclude DD hooks as specified here; the approved pilot preparation uses Codex / gpt-5.6-sol / low with DR-02/LP-01 and the counts below.
 
 Record the actual subject-provider CLI version alongside provider, model and effort for every baseline observation and subsequent edit-test observation.
 Its durable scoring home is the completed worksheet: the generator leaves a blank `Provider CLI version` field in the run-identity table for the orchestrator to fill while scoring.
@@ -207,7 +208,7 @@ Frozen-input evidence must identify recoverable versions of the prompt, rubric, 
 The current runner inventories fixture contents at finalization, and worksheet generation hashes the rubric at that later invocation; neither establishes a pre-launch snapshot on its own.
 Specify how prepared inputs are checked against frozen sources and how worksheet generation uses the matching frozen rubric.
 For executed-work scenarios, distinguish protected guidance/test inputs from task files the subject is expected to edit; retain the initial state and judged outputs rather than treating every fixture edit as contamination.
-The smallest preparation/check mechanism remains to be designed using existing tools first; this requirement does not approve another schema or a general snapshot system, nor does it reopen historical observations.
+The [pilot runbook](../../skill-validation/pilot/README.md#preparation-and-freeze) uses frozen files, Git provenance and existing runner checks; this does not introduce another schema or a general snapshot system, nor reopen historical observations.
 
 Review the pilot's preparation/qualification, no-DD/current collection, scoring, interruption/failure recovery and handoff; a paper walkthrough of a later edit may expose gaps without requiring a complete edit runbook now.
 Choose exact pilot scenarios, counts and commands before execution; campaign schedules and directory moves remain deferred.
@@ -237,7 +238,7 @@ An unproved required control cannot be treated as a validated comparison environ
 Isolation retains the accepted controlled-input scope and provider observability limits; this does not reopen universal filesystem isolation as a requirement.
 The current runner config declares prompt, fixtures, provider, model and effort, while provider environment controls are fixed adapter behavior.
 The missing capability is the appropriate controlled-input provider invocation and its validation, not necessarily a larger configuration schema.
-The current runner does not implement the accepted spike controls; those controls remain to be integrated and qualified.
+The Codex adapter now implements its approved runtime controls; qualification of the selected pilot inputs and tools remains pending, and Claude integration remains deferred.
 
 ### Accepted placement decision: fixture directory as project root
 
@@ -271,7 +272,7 @@ The evidence identifies these gaps to resolve in the minimal change map:
 | Gap | Existing evidence and constraint |
 |---|---|
 | Codex profile/auth setup | The accepted spike used private HOME/CODEX_HOME and a private auth cache as well as CLI flags; it did not prove flags alone sufficient. |
-| Native skill placement | Use the fixture directory as the provider project root, as agreed above; changing the working directory and qualifying discovery plus sibling evidence writes remain implementation work. |
+| Native skill placement | The Codex working-directory change is implemented; qualify actual loading and sibling evidence writes with the selected pilot inputs before collection. |
 | Frozen-input provenance | `runner.py` finalizes fixture hashes after provider execution; `worksheet.py` hashes the currently supplied rubric. Specify frozen source preparation and validation without representing these records as pre-launch evidence. |
 
 These are evidenced integration questions, not authorization to add a profile framework or copy entire host configurations.
@@ -284,7 +285,7 @@ Use the qualified spike evidence and separately approved real-provider qualifica
 Do not drop a required control to make the diff smaller or claim full isolation from a flag-only test.
 
 This scope keeps testing infrastructure subordinate to skill development while preserving the accepted controlled-input claim.
-Implementation authority is limited to the owner's approval of Tasks 1–2 in the separate test-driven plan; this scope does not authorize provider calls.
+Authority is limited to the owner's approval of Tasks 1–2 and Task 3 preparation in the separate test-driven plan; this scope does not authorize provider calls.
 
 ### Codex change map — Task 2 implemented, qualification pending
 
@@ -316,11 +317,13 @@ Qualify catalogs and observed bootstrap/common inputs once for the pinned pilot 
 Keep shell-startup/common-input limits explicit during qualification: neither `inherit="none"` nor a private profile alone proves absence of automatic shell reads.
 Use the resolved executable's directory followed by `/usr/bin:/bin:/usr/sbin:/sbin` as the explicit pilot PATH, with no inherited extra entries; qualify the selected task tools under it.
 Pin recovery commands and qualification calls in the runbook before execution; the Task 2 approval does not approve a new config schema or provider call.
+The pilot's [command checklist](../../skill-validation/pilot/README.md#provider-free-command-checklist) and recovery procedure keep these operator steps explicit: compare each pre-launch CLI capture to fixed qualification evidence, and retain unresolved private runtimes for owner-assisted recovery when process ownership is unknown.
+That exceptional recovery fallback does not require new process-management code or weaken the runner's normal cleanup contract.
 
 ## Review sequence
 
 1. **Finish the pilot design.** Select a few scenarios that exercise the required paths, their exact counts/order and frozen-input preparation; map the Codex controls to the smallest argv/env/setup changes and focused checks. Do not settle the full campaign or final directory layout.
-2. **Approve implementation task by task in the [test-driven plan](../2026-09-06-skilltest-sol-low-pilot.md).** Tasks 1–2 are authorized; the provisional runbook, proposed scenarios/counts and provider calls retain their separate checkpoints. Keep tests tied to the selected contracts.
+2. **Approve implementation task by task in the [test-driven plan](../2026-09-06-skilltest-sol-low-pilot.md).** Tasks 1–2 and the provisional runbook/fixture preparation are authorized; provider calls retain separate checkpoints. Keep tests tied to the selected contracts.
 3. **Implement, then separately qualify.** Run provider-free tests first, then representative real qualification under exact-command approval. Validate before collecting the pilot's no-DD/current observations.
 4. **Exercise the runbook and stop for owner review.** Report setup, execution, scoring and handoff results, validity limitations and practical procedure changes in one Markdown summary; do not proceed automatically to a full baseline campaign or skill edits.
 5. **Expand only after pilot feedback.** Separately approve detailed baseline/edit procedures, campaign metrics and sampling, additional providers/models or layout changes when needed.
@@ -328,13 +331,13 @@ Pin recovery commands and qualification calls in the runbook before execution; t
 Rewritten-skill comparisons remain deferred until the harness and methodology are owner-accepted.
 This order prevents a feasible scratch mechanism from becoming a production contract before its evidence and scoring consequences are agreed.
 
-## Pilot decisions still pending
+## Remaining pilot preparation
 
-Settle only the selected scenarios and their fixed inputs, exact counts/order, Codex invocation/auth/access delta and checks, and the runbook's concrete command/evidence paths before execution.
+Finish qualification of the frozen inputs and Codex controls, review the runbook and resolve each actual command/evidence path before execution; the scenarios, counts and order below are approved for preparation.
 Use existing charter criteria and worksheet judgments; do not ask the owner to restate skill purpose or success criteria.
 Broad sampling, detailed edit/regression coverage, Claude integration and reorganization are explicitly deferred, not missing pilot requirements.
 
-### Proposed scenario set and run count — pending owner agreement
+### Approved pilot scenario set and run count — provider calls pending
 
 Use two fresh pilot variants, not replacements for their source packages or accepted results:
 
@@ -349,7 +352,7 @@ Freeze and audit the common task/rubric and declared loading differences before 
 Do not add a separate description-routing scenario: [DISC-07](../../skill-validation/scenarios/skill-discovery/disc-07/README.md), for example, forbids file reads and supplies descriptions inline, so it would not prove native CLI discovery.
 Native discovery, actual loading, composition inputs and write access still require explicit qualification; a subject choosing not to use a successfully qualified capability is scored as behavior/task fidelity, not automatically an environment failure.
 
-Propose two repetitions per condition per scenario: eight planned scenario runs, all Codex / gpt-5.6-sol / low, with a fresh runtime each time.
+Use two repetitions per condition per scenario: eight planned scenario runs, all Codex / gpt-5.6-sol / low, with a fresh runtime each time.
 Run DR-02 first, then LP-01; within each, use no-DD, current-DD, current-DD, no-DD order.
 This exercises repeat setup and both order positions without claiming a useful effectiveness estimate or satisfying later skill-authoring repetition requirements.
 Keep all planned judgeable results, including failures; do not add repetitions to obtain a preferred verdict.
