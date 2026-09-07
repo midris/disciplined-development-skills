@@ -8,6 +8,10 @@ No-DD/current-DD real qualification and the extension's affected provider-free q
 Stop for owner review: no further provider invocation, fixture revision/recollection, effectiveness campaign, discovery coverage work or skill edit is authorized by these completed calls.
 The extension evidence pointers are in Task 6; Tasks 8–9 record the separately approved CW inputs and completed four-command procedure batch.
 
+**Integration handoff:** The owner authorized merging this branch into main, removing completed local/remote branches and the completed worktree, then creating `feature/cw-validation-design` in `.worktrees/cw-validation-design`.
+That next workspace is for minimal CW test-set design; this does not promote scratch observations into accepted baselines or authorize new provider calls.
+Retain scratch evidence outside the removed worktree; recorded commands and frozen revisions remain historical provenance.
+
 **Goal:** Exercise one agent-led preparation, execution, scoring and handoff workflow, not collect effectiveness estimates.
 **Architecture:** Preserve the one-run runner and config schema; add only Codex runtime controls and a worksheet field, then exercise them through one written runbook.
 **Tech stack:** Existing Python runner, pytest, Git and the locally qualified Codex CLI on macOS.
@@ -15,14 +19,14 @@ The extension evidence pointers are in Task 6; Tasks 8–9 record the separately
 
 ## Global constraints
 
-- Work only in `.worktrees/skilltest-input-isolation-spike` on `spike/skilltest-input-isolation`; preserve main and the unrelated rewrite worktree.
+- Pilot execution used `.worktrees/skilltest-input-isolation-spike` on `spike/skilltest-input-isolation`; the integration handoff above supersedes that workspace requirement. Preserve the unrelated rewrite worktree.
 - Start with Codex / gpt-5.6-sol / low. Medium is a justified, separately identified diagnostic under exact-command approval, not an automatic retry.
 - Current-DD supplies all nine DD skills; no-DD supplies none. Freeze the same declared Superpowers and ordinary tools across both, with no DD hooks.
 - Do not edit skills or source scenario packages, rescore accepted baselines, or replace their result/final/evidence files. The sole historical exception is the CLI-version worksheet metadata backfill. Task 4 separately authorizes a future-input clarification to the two LP-01 pilot prompts, without changing completed observations.
 - Keep the existing config schema and result shape. The only proposed error-enum addition is `PROVIDER_CLEANUP_FAILED`; preserve Claude invocation behavior.
 - No generic inventory/status framework, campaign engine, automatic scorer, hooks work, directory migration, candidate skill authoring or effectiveness campaign.
 - Never print or retain credentials. Keep private runtime outside retained bundles, and never modify shared authentication or host sessions.
-- Deliver on this feature branch with independently green commits; no PR, merge or branch deletion is authorized by this plan.
+- Deliver independently green commits; integration and completed-branch cleanup are now owner-authorized as recorded above. No PR or unrelated rewrite work is included.
 
 ## Task 1: Worksheet field and historical provenance
 

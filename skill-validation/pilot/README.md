@@ -30,7 +30,8 @@ Keep progress in scratch during collection so the worktree remains clean without
 
 ## Preparation and freeze
 
-Work in `/Users/simon/work/personal/disciplined-development-skills/.worktrees/skilltest-input-isolation-spike` on `spike/skilltest-input-isolation`.
+The completed pilot used `.worktrees/skilltest-input-isolation-spike` on `spike/skilltest-input-isolation`; that workspace is being retired under the [integration handoff](../../plans/2026-09-06-skilltest-sol-low-pilot.md).
+Future collection must use its own designated isolated worktree and newly approved absolute command paths; historical workspace paths below are not launch instructions for a new batch.
 Preserve main, the unrelated rewrite worktree and all 105 accepted historical records.
 Before collection, audit and commit the prompt, rubric, config, scoring interpretation and declared fixture/dependency files; record that full revision in the scratch summary.
 Require a clean worktree and retain a recoverable input revision plus the qualification decision.
