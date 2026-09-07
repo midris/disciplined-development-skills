@@ -6,7 +6,7 @@
 **Goal:** Give every one of the nine DD skills separately identified discoverability tests and explicitly loaded behavioral-effectiveness tests.
 **Approach:** Reuse existing scenario material, runner configs, worksheets and written runbooks; no new testing framework or schema.
 **Authority:** [Test-purpose separation](../specs/2026-09-06-skilltest-controlled-inputs-design.md#accepted-separation-setup-discovery-and-behavior) and [charter](../../skill-validation/charter/core-contracts.md).
-**Return to:** [Current behavior-only pilot](../2026-09-06-skilltest-sol-low-pilot.md#task-4-simplify-the-routine-and-propose-a-bounded-extension).
+**Return to:** [Current owner checkpoint](../2026-09-06-skilltest-sol-low-pilot.md#task-6-execute-and-score-the-bounded-behavior-extension).
 
 ## Audit findings
 
@@ -44,12 +44,13 @@ Each skill must also retain independently identified explicitly loaded behavior 
 ## Deferred work
 
 Activate only after the current procedure pilot is owner-reviewed and the owner explicitly selects this work.
-Do not make completing this catalog program a prerequisite for the current six proposed behavior observations.
+The completed procedure pilot does not activate this catalog program; the owner-approved [batch/fixture-design amendment](../specs/2026-09-06-skilltest-controlled-inputs-design.md#accepted-bounded-batch-operation) governs it when separately activated.
 
 ### Task 1: Map purposes without moving the catalog
 
 - [ ] Add a concise per-skill coverage table to the validation guide or existing catalog summaries: loaded behavior, native discoverability, and optional contract/description diagnostics. Link scenario IDs; do not create a parallel manifest.
 - [ ] Map existing charter invariants and rubric clauses to their owning test purpose and observable evidence. Preserve useful composition tests without claiming they isolate each skill's independent contribution.
+- [ ] Apply the runbook's criterion/evidence table: distinguish required response accounts from tool-read evidence and targeted AR defect detection from any separately selected unsupported-finding criterion. Keep completed scores fixed.
 - [ ] Identify proposed replacements/new variants and get owner agreement before changing test contracts. Resolve the disclosed CW and DISC-08 ambiguities against charter intent, not desired outcomes.
 
 ### Task 2: Prepare separate variants
@@ -57,12 +58,13 @@ Do not make completing this catalog program a prerequisite for the current six p
 - [ ] Split CW-13/14 and CW-17/18's future selection and loaded-application purposes into separate prompts/rubrics; retain only useful diagnostics from CW-09–12.
 - [ ] For every DD skill, prepare native-discovery tasks without explicit skill names, paths, pasted descriptions or loading hints in the task prompt. Use frozen skills in the provider's qualified native paths. Start with relevant positive and boundary/non-trigger cases; reuse task ideas and approve exact counts before collection rather than multiplying the whole catalog.
 - [ ] Keep behavior tasks explicitly loaded, with target/composed skill reads verified. No-DD omits all DD files/directives and retains the same relevant Superpowers; preserve common task facts, tools and criteria. Pin any companion whose actual behavior is judged rather than relying on ambient discovery.
+- [ ] Supply prerequisite task facts in new fixtures. For LP variants requiring runnable verification, give both arms the same framework, command and cwd while retaining the explicit absent-source boundary; do not edit or recollect the completed pilot pair.
 - [ ] Freeze separate discovery expectations: catalog availability is setup, observed unprompted selection/body loading is the measured path, and correct task output alone is not discovery success. Define missing/ambiguous trace handling without treating absence of evidence as proof of hidden non-use.
 
 ### Task 3: Audit, exercise and accept under separate approval
 
 - [ ] Use existing config/preparation checks to validate sources, native targets, composition, withheld rubrics, CLI provenance and changed qualification controls. Missing dependencies or unproved controls stop launch.
-- [ ] Publish written runbook commands, provider/model/effort, counts/order and separate worksheets before collection; obtain required exact-command approvals. Effectiveness sampling and acceptance criteria must be agreed before making effectiveness claims; one procedure observation is insufficient.
+- [ ] Publish written runbook commands, provider/model/effort, counts/order and separate worksheets before collection; obtain explicit approval of the bounded exact-command batch. Effectiveness sampling and acceptance criteria must be agreed before making effectiveness claims; one procedure observation is insufficient.
 - [ ] Retain ignored loading instructions, behavioral FAILs and discovery failures; label fidelity/observability limits rather than discarding inconvenient observations. Do not pool discovery, contract diagnostics and effectiveness into one success score.
 - [ ] Preserve all 105 historical accepted records. Collect new variants with fresh provenance; replace retained current sets only under the existing owner-accepted whole-set/Git-history policy. No automatic archive growth, directory migration or scratch cleanup.
 
@@ -70,5 +72,5 @@ Do not make completing this catalog program a prerequisite for the current six p
 
 Expected work is documentation, prompts, fixtures/configs and evaluator rubrics; change runner code only for a demonstrated required mechanical gap under separately approved scope.
 No skill rewriting, hook work, Claude integration, model-matrix execution or unrelated worktree inspection belongs to this plan.
-Before each activated unit's handoff, check changed links/anchors, config loading, frozen input comparability and protected-record preservation; run relevant offline tests and the repository-required hook suite.
+Use the [batch verification cadence](../../skill-validation/pilot/README.md#bounded-batches-and-approval): verify harness changes before collection, keep per-run controls, then check links/configs/evidence preservation and run the required hook suite once at the batch/unit handoff, not per observation.
 Completion requires separately identifiable discovery and loaded-behavior coverage for all nine skills, reviewed evidence and an honest statement of what remains unexercised—not all observed skill results being PASS.

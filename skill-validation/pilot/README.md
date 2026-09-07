@@ -13,6 +13,20 @@ For a qualified setup the routine path is: check inputs/version → run → insp
 Do not repeat canaries, dummy profile setup, synthetic worksheet exercises or paid qualification calls per observation.
 The [Codex adapter](../runner/README.md#codex) owns private HOME/CODEX_HOME/TMPDIR, auth preflight, template-free Git boundary, input checks, exact invocation and cleanup; never duplicate that setup around a real run.
 
+## Bounded batches and approval
+
+Before collection, present every fully expanded command, working directory, frozen input revision, provider/model/effort, count and order as one bounded batch for explicit owner approval.
+An approved batch authorizes only those commands and repetitions; judgeable outcomes, including FAILs, do not require another conversational checkpoint before the next approved command.
+Changed commands, inputs, model/effort, counts or order require renewed approval; failed controls, drift, unexpected infrastructure failures or unresolved cleanup pause the batch under the recovery policy below.
+Understood infrastructure-only retries retain the existing exact-unchanged-command rule. Host approval dialogs still apply.
+This policy is not approval of a batch; completed pilot commands are historical records, not reusable launch permission.
+
+Treat a bounded collection batch as one verification/commit unit, not each observation as a new implementation unit.
+Before collection, require passing offline harness verification for the unchanged code/environment; run the runner suite once when that evidence is absent or invalidated, not after every model response.
+At batch handoff, check records, protected inputs and changed documentation, run the repository-required hook suite once, and commit authorized repository changes together.
+Rerun relevant tests after code/environment changes or a failure that invalidates prior verification; this cadence does not weaken per-run checks below.
+Keep progress in scratch during collection so the worktree remains clean without per-observation status commits.
+
 ## Preparation and freeze
 
 Work in `/Users/simon/work/personal/disciplined-development-skills/.worktrees/skilltest-input-isolation-spike` on `spike/skilltest-input-isolation`.
@@ -28,6 +42,9 @@ Current-DD supplies all nine DD skills, no-DD supplies none; both retain the sam
 Keep evaluator instructions, rubrics, accepted outputs and credentials out of subject inputs; reject undeclared sources and symlinks.
 
 Audit prompt pairs for equal task/output boundaries and only intended treatment differences.
+Supply the task facts needed by the rubric before collection; if runnable verification is required, provide the test framework, command and working directory in the fixture unless selecting them is the explicit test purpose.
+For a future LP variant, supply that toolchain context identically in both arms while keeping absent application source explicit; do not require a model to guess a framework or claim it executed unavailable tests.
+This is a requirement for future fixture design, not permission to edit or rerun completed pilot inputs.
 Declare whether the scenario tests behavior or discovery, following the [separate test-purpose contract](../../plans/specs/2026-09-06-skilltest-controlled-inputs-design.md#accepted-separation-setup-discovery-and-behavior).
 Behavior prompts explicitly load the target/composed skills: common Superpowers directives stay the same, while no-DD omits DD directives and files.
 Verify requested reads in the trace; retain ignored directives as fidelity failures without claiming loaded-skill behavior or silently excluding the observation.
@@ -39,31 +56,19 @@ Their retained evidence and judgments are unchanged.
 
 ## Execution record
 
-Use one scratch summary with the frozen revision, qualification reference, provider/model/effort, ordered attempt table and exact approved commands.
-Link the active plan for the next project action; keep attempt-specific recovery instructions with their evidence.
-Each row links its runner bundle, CLI capture and completed worksheet; record exclusions/retries and unresolved cleanup there.
-Do not routinely create a second per-run result narrative or rewrite the runner's logs into a custom audit report.
-Preserve required raw evidence and verification outcomes; add a separate note only when an exception needs explanation.
+Use one scratch summary with frozen provenance, qualification reference, one row per attempt and the exact approved command list.
+Each row records approval/execution status and links its runner bundle, CLI capture and worksheet; include exclusions/retries and unresolved cleanup.
+The bundle owns raw/mechanical evidence, the worksheet owns judgments and caveats, the summary owns attempt/approval tracking, and the active plan owns only the project checkpoint and scope.
+Link these homes instead of copying verdict explanations or run narratives into the summary and plan; reuse existing commands and logs instead of rebuilding mechanical reports per observation.
+Preserve raw evidence; add extra exception notes only when the worksheet/summary cannot explain the recovery safely.
 Existing pilot evidence is retained through owner review, not deleted to conform to the simpler future layout.
 
-The initial sequence below specifies Codex / gpt-5.6-sol / low, fresh runtime each time; consult the active plan for completion and approval status:
-
-| Label | Config beneath this directory | Role |
-|---|---|---|
-| q-no-dd | qualification/no-dd/test.json | Qualification |
-| q-current-dd | qualification/current-dd/test.json | Qualification |
-| dr-01 | dr-02/no-dd/test.json | No-DD observation |
-| dr-02 | dr-02/current-dd/test.json | Current-DD observation |
-| lp-01 | lp-01/no-dd/test.json | No-DD observation |
-| lp-02 | lp-01/current-dd/test.json | Current-DD observation |
-
-Counts and order for any extension must be approved and frozen before collection.
-Keep every planned judgeable result, including FAILs; do not increase effort or add repetitions to obtain a preferred verdict.
-Medium diagnostics and all new provider commands require separate exact-command approval.
+The completed initial sequence used two qualification calls and four DR-02/LP-01 observations; its exact attempt labels, commands and evidence live in the original scratch summary linked by the active plan.
+Every future batch freezes its own counts/order; retain judgeable FAILs and passing controls without increasing effort or adding repetitions to obtain a preferred verdict.
 
 ### Behavior extension inputs
 
-Use the same routine with these six input configs, in the listed order; preparation does not authorize their provider commands:
+These are the six completed extension configs, in their recorded order, not a new approved batch:
 
 | Attempt label | Config beneath this directory |
 |---|---|
@@ -98,7 +103,7 @@ An absent TMPDIR can redirect temporary allocation outside the intended scratch 
 Create the attempt directory once without `-p`; a collision means inspect/resume existing evidence, not overwrite it.
 Expand all abbreviations in the complete provider command shown for owner approval.
 
-Run each prelaunch check separately, require exit 0, and require status output to be empty:
+Run each prelaunch check separately, require exit 0, and require Git status output to be empty:
 
 ```sh
 git status --short
@@ -112,8 +117,10 @@ cmp "$PILOT_REFERENCE/cli-version.txt" "$PILOT_ATTEMPT/cli-version.txt"
 cmp "$PILOT_REFERENCE/cli-sha256.txt" "$PILOT_ATTEMPT/cli-sha256.txt"
 ```
 
-Do not replace fixed references to hide drift; capture version/digest immediately before every invocation, including retries.
-After explicit approval of its fully expanded form, execute the row's one-run command:
+Inspect version-command stderr before launch; exit 0 is not evidence of empty stderr.
+Disposition an understood warning against the required controls, retaining the capture; unknown warnings or unusable provenance stop launch.
+Never silence warnings or refresh references to hide drift; capture version/digest immediately before every invocation, including retries.
+After the batch's explicit approval covers its fully expanded form, execute the row's one-run command:
 
 ```sh
 /usr/bin/env TMPDIR="$PILOT_SCRATCH/runs" PATH=/opt/homebrew/bin:/usr/bin:/bin:/usr/sbin:/sbin /Users/simon/work/personal/disciplined-development-skills/.worktrees/skilltest-input-isolation-spike/skill-validation/runner/.venv/bin/skilltest run "$PILOT_CONFIG" > "$PILOT_ATTEMPT/command-stdout.txt" 2> "$PILOT_ATTEMPT/command-stderr.txt"
@@ -128,7 +135,10 @@ Final fixture inventories are not prelaunch evidence, and absence of a visible v
 
 ## Scoring and handoff
 
-Before collecting a new scenario or rubric revision, record a short evaluator-only mapping from its existing criteria to charter invariants, ledgers and observable evidence.
+Before collecting a new scenario or rubric revision, freeze a short evaluator-only table with one row per criterion: criterion/rubric reference, owning invariant and ledger, required observable evidence, and pass/fail boundary.
+Use the existing rubric's location or its linked runbook section; do not add a scoring schema or duplicate the table in every worksheet.
+Distinguish identifying a defect, explicitly accounting for each caller, and avoiding unsupported extra findings; include each only when that is a declared test obligation.
+Specify whether evidence is an action in the trace, model-authored response, or saved artifact; a file appearing in tool output does not itself prove the response explains its contents.
 Use the same interpretation across conditions; do not invent extra requirements while scoring.
 The mapping is part of frozen evaluation input, not supplied to the subject.
 For this pilot's task families:
@@ -158,7 +168,7 @@ Use source/trace/file evidence, not the subject's self-reported success.
 Inspect the complete response trace, including model-authored progress messages, not just `final.txt`; a compliant final artifact can coexist with a response-level fidelity failure such as prohibited narration.
 Use tool calls and outputs as evidence of reads/actions, not as model-authored answer prose; apply each frozen criterion to its stated response or artifact boundary.
 Score all judgeable results, including failures, with separate semantic, protocol, fidelity and readability judgments; no pooled effectiveness score.
-Update the summary row, retain evidence through owner review, and stop at the agreed handoff.
+Update the summary row and continue to the next approved command only after its required checks pass; stop for owner review at the batch boundary or a recovery gate.
 Routine record: runner bundle + CLI/command evidence + completed worksheet + summary row.
 
 ## Failure and recovery

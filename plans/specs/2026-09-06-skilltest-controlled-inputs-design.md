@@ -2,7 +2,7 @@
 
 **Authority:** The [active plan](../2026-09-06-skilltest-sol-low-pilot.md) is the single source for execution status, approved work and next checkpoints.
 This spec records accepted design decisions and clearly labeled proposals, not provider-call permission.
-The owner approved the workflow simplifications and behavior-extension input preparation below; qualification and exact provider commands retain separate approval checkpoints.
+The owner approved the post-pilot bounded-batch workflow below; qualification and provider invocation remain distinct approvals, with exact commands eligible for approval together as a finite batch.
 Broader campaign decisions remain deferred rather than prerequisites to design every future workflow now.
 
 ## Overall goal
@@ -139,7 +139,7 @@ The testing workflow is model-driven, using the existing reusable deterministic 
 The orchestrating model selects or prepares scenarios against the charter, audits the declared conditions, invokes tools within the owner's permissions, reads raw evidence, applies the existing rubrics and records judgments.
 The tools perform mechanical preparation, execution, hashing, evidence capture and worksheet rendering; they do not choose behavioral criteria or assign semantic verdicts.
 Use the existing runner and worksheet workflow first; add or extend a small deterministic tool only for a demonstrated mechanical gap, not to build a separate autonomous testing framework.
-The owner retains acceptance authority, and provider-call approval requirements remain unchanged.
+The owner retains acceptance authority; provider calls require exact-command approval under the bounded-batch policy below.
 
 Distinguish the orchestrator's testing tools from tools available to the model under test.
 Keep ordinary subject task tools fixed across comparison conditions.
@@ -201,9 +201,28 @@ This is written scoring guidance, not a new schema, automatic scorer or subject 
 The active plan owns current project status and owner checkpoints.
 README entry points and this spec link there without repeating progress claims; the scratch summary retains per-attempt evidence rather than becoming a second project-status narrative.
 
-Clarify both LP-01 pilot prompts that only task facts are supplied, application source/tests are absent, and the model should plan from the facts without searching for those files or assuming their implementation.
-This is a future-input revision: the four completed pilot observations remain tied to `e537c03909eb2b4f1986e4170a3f1b662d29a719` and must not be rescored, relabeled or replayed against the amended prompt.
-It avoids unnecessary lookups without adding a fake application or changing the task/rubric.
+The earlier LP-01 prompt clarification states that application source/tests are absent and planning must use supplied facts without assuming an implementation or searching for those files.
+The original four observations remain tied to `e537c03909eb2b4f1986e4170a3f1b662d29a719`, not that later prompt revision; do not rescore, relabel or replay them against amended inputs.
+
+### Accepted bounded-batch operation
+
+The owner approved applying the pilot's workflow improvements, not another provider batch or retrospective scoring changes.
+Present the complete expanded commands, working directories, recoverable frozen inputs, provider/model/effort, counts and order together for explicit approval of one finite batch.
+Continue through approved commands after each run's validation/scoring; a judgeable skill FAIL or passing no-DD control is not itself a reason to stop or request another approval.
+Changed commands, inputs, models/efforts, counts or order require renewed approval. Failed controls, drift, unexpected infrastructure failures or unresolved cleanup pause the batch; understood unchanged-command infrastructure retries retain their existing policy.
+Host permission dialogs and owner acceptance of results remain separate; policy approval grants no invocation authority by itself.
+
+Treat the batch as one verification/commit unit: establish passing offline harness evidence before collection and rerun relevant tests if code/environment changes or a failure invalidates it.
+Keep per-run CLI capture, frozen-input checks, full-trace/loading inspection, protected-file validation, worksheet scoring and cleanup verification.
+At handoff, reconcile evidence and documentation, run the repository-required hook suite once, and commit authorized changes together; do not repeat unchanged suites or status commits per observation.
+This reduces orchestration overhead without changing runner code or weakening runtime controls.
+
+The routine [scoring procedure](../../skill-validation/pilot/README.md#scoring-and-handoff) defines a short pre-collection criterion/evidence table, not another automatic scorer.
+Keep verdict detail in worksheets, mechanical facts in bundles, attempt/approval rows in one summary and only checkpoint/scope in the active plan.
+The LP pilot exposed an omitted task fact: future planning fixtures requiring runnable verification must supply framework/command/cwd unless selecting the toolchain is the explicit test purpose.
+Both arms receive identical context; preserve absent-source boundaries rather than inventing application code. No completed LP prompt, fixture, rubric or result changes under this amendment.
+AR targeted defect detection, explicit caller coverage and unsupported-extra-finding precision are distinct obligations; freeze those selected before new collection, without retrofitting new criteria onto the completed pair.
+Resolve these fixture/purpose improvements in the next owner-activated catalog-design unit; no additional process spike or runner capability is required by this amendment.
 
 ### Accepted sequencing: requirements before directory layout
 

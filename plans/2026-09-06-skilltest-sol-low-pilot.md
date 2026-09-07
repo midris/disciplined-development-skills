@@ -128,7 +128,7 @@ DR-02 passed both conditions; current-DD also has a non-blocking task-fidelity f
 LP-01 failed without DD for implementation/test bodies and passed with current DD for its prose contract and single-PR boundary.
 Both LP runs attempted to read application source absent from the response-only fixture, then continued; no declared input was missing and both plans remain judgeable.
 The four calls completed without retries, input changes or unresolved runtime cleanup; worksheet metadata/rubric checks passed.
-Scratch `summary.md` links every result, worksheet and audit; `recovery-handoff-walkthrough.md` records the retained/hypothetical recovery exercise, not a live interruption test.
+The [original scratch summary](/private/tmp/skilltest-sol-low-pilot.Lunoau/summary.md) links every result, worksheet and audit; `recovery-handoff-walkthrough.md` records the retained/hypothetical recovery exercise, not a live interruption test.
 No runner change was needed to exercise the procedure.
 Task 4 clarifies future LP-01 inputs while preserving this recorded input revision and all four observations.
 These single observations are not effectiveness estimates or formal authoring RED/GREEN acceptance.
@@ -188,45 +188,31 @@ Extension qualification is recorded in scratch `preflight/reconciliation.md`: CL
 The strict historical comparison stopped on the injected September 6→7 date change, which was explicitly reviewed rather than silently normalized; both new arms share September 7 and the tasks use fixed facts.
 Two earlier scratch-audit path-parser defects are retained separately; neither involved a model call or unresolved runtime.
 Runtime production code and read mechanisms are unchanged from the successful real qualification, so its controls are reused without another paid qualification call.
-The first exact observation command and its owner approval are recorded in the extension scratch summary. Remaining commands require approval at their checkpoints.
+The completed extension's exact commands and individual approvals are retained in its scratch summary; future collection uses the bounded-batch policy.
 
 ## Task 6: Execute and score the bounded behavior extension
 
-Use the frozen Task 5 inputs and routine runbook; each command requires its own exact approval before execution.
-Do not add repetitions, discovery testing, skill edits or effectiveness claims; retain all judgeable outcomes and stop for owner review after the six planned observations.
-
-- [x] DR-05/no-DD: owner-approved command completed once, Codex / gpt-5.6-sol / low, CLI 0.153.4; runner/provider exit 0, 18.777 seconds, no retry. Full matrix read, final `Not listed.`, semantic PASS / protocol N/A / fidelity PASS. Inputs unchanged and runtime cleanup verified; worksheet retained in extension scratch.
-- [x] DR-05/current-DD: separately approved command completed once, same provider/model/effort and CLI; runner/provider exit 0, 22.207 seconds, no retry. Full research-skill read precedes the full matrix read; final truthfully states the missing date. Semantic PASS / protocol N/A / fidelity FAIL for extra progress narration. Inputs unchanged and runtime cleanup verified; worksheet retained in extension scratch.
-- [x] LP-05/no-DD: approved command completed once on the same provider/model/effort and CLI; runner/provider exit 0, 123.723 seconds, no retry. Full writing-plans/brief reads observed; semantic FAIL for implementation/test bodies and missing runnable verification command, protocol N/A, fidelity PASS. Inputs and cleanup verified; the separate version-command PATH-alias warning is dispositioned in the scratch worksheet.
-- [x] LP-05/current-DD: separately approved command completed once with the same provider/model/effort and CLI; runner/provider exit 0, 132.494 seconds, no retry. Required planning skills and brief read fully; two supplied DD companions also read. Prose/test-contract and edge criteria pass, but missing runnable verification makes overall semantic FAIL; protocol N/A, fidelity PASS. Inputs and cleanup verified; worksheet retained in scratch.
-- [x] AR-03/no-DD: approved command completed once with the same provider/model/effort and CLI; runner/provider exit 0, 107.637 seconds, no retry. Both review guides and all project files read fully; required caller/precondition/benchmark/blocking criteria PASS, protocol N/A, fidelity PASS. Inputs and cleanup verified. Extra output-order overreach and successful Python-probe diagnostics remain disclosed in the scratch worksheet; the targeted verdict does not endorse every additional claim.
-- [x] AR-03/current-DD: separately approved command completed once with the same provider/model/effort and CLI; runner/provider exit 0, 61.393 seconds, no retry. Required review guides and all project files read fully. Semantic FAIL: names bulk_normalize but does not explicitly account for its sorting before normalization; retry finding, benchmark correction and BLOCK conclusion pass. Protocol N/A, fidelity PASS; inputs and cleanup verified. Extra output-order wording remains caveated consistently with no-DD.
-- [x] Prepare the complete six-observation process handoff for owner review; stop before broader catalog/effectiveness work. Owner acceptance is pending.
-
-Both DR-05 conditions pass semantically; the pair is not targeted-failure RED/GREEN evidence or an effectiveness estimate.
-Both LP-05 arms fail runnable verification; current-DD passes the prose/test-contract criteria that no-DD fails, without establishing an overall RED/GREEN success.
-At owner handoff, consider supplying the unspecified test command in a future LP fixture revision; do not change or rerun this frozen pair during collection.
-Next checkpoint: owner review of the completed procedure and its documented fixture/coverage limits; no more model commands are queued.
-Original observations/accepted records remain unchanged; detailed evidence and scoring live in the scratch summary and worksheets.
+- [x] Execute all six separately approved observations once in the frozen order and complete their worksheets.
+- [x] Verify required loading, input/CLI provenance, protected files and runtime cleanup; retain every judgeable outcome and caveat.
+- [x] Prepare the owner-review handoff; no further provider commands are queued.
 
 ### Extension handoff — owner acceptance pending
 
-Evidence: `/private/tmp/skilltest-sol-low-pilot.Lunoau/extension.xWS8Q2/summary.md`, linking all six bundles, tied CLI captures and completed worksheets.
-All six used Codex / gpt-5.6-sol / low with CLI 0.153.4 and matching executable digest; each completed once without retries, input changes or unresolved runtime cleanup.
-Required full skill loads were observed; LP current-DD additionally read supplied research and concise-writing companions, and AR no-DD exercised a read-only Python example.
-These are recorded composition/tool choices within the frozen conditions, not discovery measurements.
+The [scratch summary](/private/tmp/skilltest-sol-low-pilot.Lunoau/extension.xWS8Q2/summary.md) owns the six attempt/approval rows and links the unchanged bundles and scored worksheets.
+Do not duplicate per-run judgments here or promote these procedure observations into effectiveness estimates.
+Original observations and all 105 accepted records remain unchanged; retain the evidence pending owner acceptance.
 
-| Pair | No-DD | Current-DD | Scope of observation |
-|---|---|---|---|
-| DR-05 | PASS | PASS; fidelity FAIL for narration | Both refuse an unsupported date. |
-| LP-05 | FAIL | FAIL | Both omit a runnable test command; only no-DD embeds implementation/test bodies. |
-| AR-03 | PASS with extra-claim caveat | FAIL with extra-claim caveat | Both identify retry/benchmark defects; current-DD omits the explicit bulk sorting account. |
+### Post-pilot workflow amendment
 
-The procedure produced reviewable records and retained judgeable failures; a correct final conclusion alone did not satisfy every behavioral criterion.
-No new runner capability is indicated. Full-trace scoring is now explicit in the runbook; inspect version warnings rather than equating exit 0 with empty stderr.
-Before later test design, review the LP fixture's missing toolchain fact and the distinction between AR targeted detection and broader review precision.
-Do not repair those by retrospectively changing this pair's criteria or automatically rerunning it.
-After owner acceptance, choose the next bounded documentation/catalog-design increment; deferred discovery/behavior implementation, repeated effectiveness collection, Claude pilot testing and rewritten-skill comparisons remain outside this completed unit.
+The owner approved applying the five process improvements in the [bounded-batch design](specs/2026-09-06-skilltest-controlled-inputs-design.md#accepted-bounded-batch-operation).
+Scope: batch approvals and verification cadence, prerequisite task facts, a short criterion/evidence table, and one home per record.
+This documentation unit does not authorize another batch, alter completed fixtures/rubrics/scores, or activate catalog repairs.
+
+- [x] Update the routine runbook, design authority and deferred-plan pointers; remove duplicated per-run narratives from this plan and the extension summary while preserving approvals and evidence.
+- [x] Review all five changed repository documents and the scratch summary; reconcile approval/status references and verify protected evidence/inputs. All 106 local links resolve; hooks pass 263 tests with three skips and `git diff --check` passes. Runner verification is reused from the unchanged `17f0e90` checkpoint (231 passing tests). Review was inline because no no-write-tool reviewer type is available.
+
+Next checkpoint: owner review of this documentation unit, then explicit selection of a bounded deferred catalog-design task before formal effectiveness collection.
+No runner expansion, additional process spike, provider run, Claude pilot or rewritten-skill comparison is included.
 
 ## Approval and verification checkpoints
 
@@ -238,6 +224,7 @@ After owner acceptance, choose the next bounded documentation/catalog-design inc
   The test-related pause is cleared; pilot-task and provider-command approvals remain separate.
 
 Review this plan and the amended spec before Task 1. Scenario/count approval does not approve provider commands.
-Before signing off each implementation unit, run the offline runner suite and `python3 -m pytest -q` in `skills/disciplined-development/hooks`, check local documentation links and run `git diff --check`.
+Before signing off a code-changing implementation unit, run the offline runner and hook suites, check local documentation links and run `git diff --check`.
+For documentation-only or collection units, use the [bounded-batch cadence](../skill-validation/pilot/README.md#bounded-batches-and-approval): retain unchanged harness verification, check affected artifacts and run the required hook suite once at handoff.
 After Task 2, confirm the final invocation/setup matches the approved design before any Task 3 real calls.
 The pilot is successful when the procedure produces trustworthy, reviewable records and exposes its limitations; skill PASS is not its completion criterion.
