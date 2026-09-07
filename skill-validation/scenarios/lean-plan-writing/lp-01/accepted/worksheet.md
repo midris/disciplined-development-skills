@@ -9,6 +9,7 @@
 | Scenario purpose | Preserve the upstream plan scaffold, TDD order, concrete files, rigor, and commit cadence while applying lean prose density. |
 | Run ID | 20260904T170512008Z-lp-01-8130e7dc-a547-4d1a-bc98-1099728cf242-2zxtd6zh |
 | Provider | codex |
+| Provider CLI version | Unknown — no contemporaneous CLI-version evidence found in the accepted record or matching retained scratch logs. |
 | Model | gpt-5.6-sol |
 | Effort | high |
 | Started | 2026-09-04T17:05:12.008Z |

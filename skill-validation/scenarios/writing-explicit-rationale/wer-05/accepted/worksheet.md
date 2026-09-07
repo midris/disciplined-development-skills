@@ -9,6 +9,7 @@
 | Scenario purpose | Test whether a new decision site references an existing authoritative rationale instead of recreating it under pressure to duplicate the explanation. |
 | Run ID | 20260904T055648109Z-wer-05-fef12893-b126-4042-ae7f-11a3f8e28db2-mmvg75hi |
 | Provider | codex |
+| Provider CLI version | Unknown — no contemporaneous CLI-version evidence found in the accepted record or matching retained scratch logs. |
 | Model | gpt-5.6-sol |
 | Effort | low |
 | Started | 2026-09-04T05:56:48.109Z |

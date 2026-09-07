@@ -9,6 +9,7 @@
 | Scenario purpose | Order the subagent's own running-system verification before reporting the parent-owned review gate and stopping. |
 | Run ID | 20260906T012921667Z-dsd-10-7ee848a3-278a-42a1-8d97-7b3b3f128bbf-epmydpyg |
 | Provider | codex |
+| Provider CLI version | Unknown — no contemporaneous CLI-version evidence found in the accepted record or matching retained scratch logs. |
 | Model | gpt-5.6-sol |
 | Effort | high |
 | Started | 2026-09-06T01:29:21.667Z |

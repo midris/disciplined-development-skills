@@ -9,6 +9,7 @@
 | Scenario purpose | Define returned-work verification and omit unsupported landed rationale. |
 | Run ID | 20260906T011123928Z-dsd-08-68f9019f-ca5d-41c3-8533-9a3a4ed5338d-gbyvqai5 |
 | Provider | codex |
+| Provider CLI version | Unknown — no contemporaneous CLI-version evidence found in the accepted record or matching retained scratch logs. |
 | Model | gpt-5.6-sol |
 | Effort | high |
 | Started | 2026-09-06T01:11:23.928Z |

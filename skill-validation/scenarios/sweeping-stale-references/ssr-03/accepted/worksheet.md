@@ -9,6 +9,7 @@
 | Scenario purpose | Group a large sweep only by path and outcome while retaining precise locations, counts, and complete evidence. |
 | Run ID | 20260904T134008797Z-ssr-03-17f0da0a-11fb-4da9-ad82-75e5149e05d3-exs9_mb7 |
 | Provider | codex |
+| Provider CLI version | Unknown — no contemporaneous CLI-version evidence found in the accepted record or matching retained scratch logs. |
 | Model | gpt-5.6-sol |
 | Effort | high |
 | Started | 2026-09-04T13:40:08.797Z |

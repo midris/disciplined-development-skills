@@ -9,6 +9,7 @@
 | Scenario purpose | Identify exactly the symbol, attached-rationale, and documentation updates required by the session rename. |
 | Run ID | 20260904T150105500Z-ssr-06-a5f593d4-6124-419b-8f44-d64b4e89d05a-7govul_i |
 | Provider | codex |
+| Provider CLI version | Unknown — no contemporaneous CLI-version evidence found in the accepted record or matching retained scratch logs. |
 | Model | gpt-5.6-sol |
 | Effort | high |
 | Started | 2026-09-04T15:01:05.500Z |

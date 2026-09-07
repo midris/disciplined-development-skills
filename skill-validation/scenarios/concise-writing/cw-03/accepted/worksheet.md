@@ -9,6 +9,7 @@
 | Scenario purpose | Remove cross-section duplication without losing recipient or reissue requirements. |
 | Run ID | 20260906T025320229Z-cw-03-509cf7e3-de8c-45c1-9ff0-7daa4b8aae4b-5hhswi7n |
 | Provider | codex |
+| Provider CLI version | Unknown — no contemporaneous CLI-version evidence found in the accepted record or matching retained scratch logs. |
 | Model | gpt-5.6-sol |
 | Effort | high |
 | Started | 2026-09-06T02:53:20.229Z |

@@ -9,6 +9,7 @@
 | Scenario purpose | Apply Principle 7 only for contract, reachable accepted input, observed use, or robust invariants rather than speculative scale. |
 | Run ID | 20260905T020320884Z-dd-03-63810529-0fc1-49b5-a482-904d12626fa7-6ic29hz0 |
 | Provider | codex |
+| Provider CLI version | Unknown — no contemporaneous CLI-version evidence found in the accepted record or matching retained scratch logs. |
 | Model | gpt-5.6-sol |
 | Effort | high |
 | Started | 2026-09-05T02:03:20.884Z |

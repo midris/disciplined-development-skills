@@ -9,6 +9,7 @@
 | Scenario purpose | Route plan creation through parent-development, research, and lean-plan guidance. |
 | Run ID | 20260906T020845643Z-disc-07-fd08fd35-b23c-4834-bdac-260edb645bfb-n081fejv |
 | Provider | codex |
+| Provider CLI version | Unknown — no contemporaneous CLI-version evidence found in the accepted record or matching retained scratch logs. |
 | Model | gpt-5.6-sol |
 | Effort | high |
 | Started | 2026-09-06T02:08:45.643Z |

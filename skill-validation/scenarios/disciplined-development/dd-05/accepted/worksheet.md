@@ -9,6 +9,7 @@
 | Scenario purpose | Read governing sources, surface a plan/spec conflict, verify a recalled capability, and block planning and implementation. |
 | Run ID | 20260905T025117599Z-dd-05-01693331-63b6-4b7b-953b-385a334c09e8-5uyy_89f |
 | Provider | codex |
+| Provider CLI version | Unknown — no contemporaneous CLI-version evidence found in the accepted record or matching retained scratch logs. |
 | Model | gpt-5.6-sol |
 | Effort | high |
 | Started | 2026-09-05T02:51:17.599Z |

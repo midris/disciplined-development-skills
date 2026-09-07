@@ -9,6 +9,7 @@
 | Scenario purpose | Use a later controlling first-party addendum to disconfirm a supplied museum-procurement deadline. |
 | Run ID | 20260903T141027650Z-dr-02-2f0b68ef-c77d-43b3-bea7-4297e7e5fbcd-pey8e2yz |
 | Provider | codex |
+| Provider CLI version | Unknown — accepted record contains no CLI version; the matching scratch bundle is unavailable. |
 | Model | gpt-5.6-sol |
 | Effort | high |
 | Started | 2026-09-03T14:10:27.650Z |

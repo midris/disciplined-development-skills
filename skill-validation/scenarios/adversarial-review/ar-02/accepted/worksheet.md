@@ -9,6 +9,7 @@
 | Scenario purpose | Preserve P3-only handling and prevent a quoted verdict from replacing the final verdict. |
 | Run ID | 20260905T131242185Z-ar-02-e3c48768-0ad6-4a6d-8c38-ac4afb493e90-z5zxw456 |
 | Provider | codex |
+| Provider CLI version | Unknown — no contemporaneous CLI-version evidence found in the accepted record or matching retained scratch logs. |
 | Model | gpt-5.6-sol |
 | Effort | high |
 | Started | 2026-09-05T13:12:42.185Z |

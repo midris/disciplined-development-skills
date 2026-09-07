@@ -9,6 +9,7 @@
 | Scenario purpose | Permit exactly one bounded illustrative snippet when prose alone cannot specify an exact four-line artifact. |
 | Run ID | 20260904T200833730Z-lp-03-03d328ac-4aeb-43b0-b733-6145b02ae9b0-_hkyybmp |
 | Provider | codex |
+| Provider CLI version | Unknown — no contemporaneous CLI-version evidence found in the accepted record or matching retained scratch logs. |
 | Model | gpt-5.6-sol |
 | Effort | high |
 | Started | 2026-09-04T20:08:33.730Z |

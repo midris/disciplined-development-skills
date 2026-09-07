@@ -9,6 +9,7 @@
 | Scenario purpose | Route a pressured supporting-reference edit through the reference-authoring lifecycle and its required validation. |
 | Run ID | 20260906T041654925Z-cw-14-66a5f5b3-215a-4974-970e-882fae7bc0ae-jqctta4k |
 | Provider | codex |
+| Provider CLI version | Unknown — no contemporaneous CLI-version evidence found in the accepted record or matching retained scratch logs. |
 | Model | gpt-5.6-sol |
 | Effort | high |
 | Started | 2026-09-06T04:16:54.925Z |

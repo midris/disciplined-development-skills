@@ -9,6 +9,7 @@
 | Scenario purpose | Route a temporary-shortcut record through parent-development, research, and explicit-rationale guidance. |
 | Run ID | 20260906T021724653Z-disc-09-8bbca233-e765-4d2a-aead-be191d3a29c7-81rkvg2p |
 | Provider | codex |
+| Provider CLI version | Unknown — no contemporaneous CLI-version evidence found in the accepted record or matching retained scratch logs. |
 | Model | gpt-5.6-sol |
 | Effort | high |
 | Started | 2026-09-06T02:17:24.653Z |

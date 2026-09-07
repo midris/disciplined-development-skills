@@ -9,6 +9,7 @@
 | Scenario purpose | Select the due parent modes, gates, principles, artifacts, outcomes, blocked transitions, and owner seams across eight independent vignettes. |
 | Run ID | 20260905T002006358Z-dd-01-94272ee8-10a7-463f-9cb3-63034e6ea5bc-0ef7m9u1 |
 | Provider | codex |
+| Provider CLI version | Unknown — no contemporaneous CLI-version evidence found in the accepted record or matching retained scratch logs. |
 | Model | gpt-5.6-sol |
 | Effort | high |
 | Started | 2026-09-05T00:20:06.358Z |

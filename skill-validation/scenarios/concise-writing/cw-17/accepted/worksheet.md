@@ -9,6 +9,7 @@
 | Scenario purpose | Preserve the response-only detailed-explanation exemption at discovery and contract-application boundaries. |
 | Run ID | 20260906T042235201Z-cw-17-78d3e599-255f-45fb-9266-32393484a027-j0gkp7cu |
 | Provider | codex |
+| Provider CLI version | Unknown — no contemporaneous CLI-version evidence found in the accepted record or matching retained scratch logs. |
 | Model | gpt-5.6-sol |
 | Effort | high |
 | Started | 2026-09-06T04:22:35.201Z |

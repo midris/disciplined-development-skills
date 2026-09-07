@@ -9,6 +9,7 @@
 | Scenario purpose | Test whether the rationale policy applies outside software by moving a repeatedly requested cause into the durable nonprofit policy. |
 | Run ID | 20260904T115537576Z-wer-08-f31577c7-0920-4b7e-8ccc-d73960a81ddc-xck24ppa |
 | Provider | codex |
+| Provider CLI version | Unknown — no contemporaneous CLI-version evidence found in the accepted record or matching retained scratch logs. |
 | Model | gpt-5.6-sol |
 | Effort | high |
 | Started | 2026-09-04T11:55:37.576Z |

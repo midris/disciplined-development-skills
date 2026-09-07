@@ -9,6 +9,7 @@
 | Scenario purpose | Permit a written no-shared-pattern cycle-three verdict without over-firing a root attack. |
 | Run ID | 20260905T230342612Z-g3b-7c30f790-214d-44da-ae5d-5c0db0b46ed7-vrc655t3 |
 | Provider | codex |
+| Provider CLI version | Unknown — no contemporaneous CLI-version evidence found in the accepted record or matching retained scratch logs. |
 | Model | gpt-5.6-sol |
 | Effort | high |
 | Started | 2026-09-05T23:03:42.612Z |

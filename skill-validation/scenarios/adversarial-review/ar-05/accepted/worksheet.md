@@ -9,6 +9,7 @@
 | Scenario purpose | Apply broad durability and holistic review without requiring one predetermined valid defect selection. |
 | Run ID | 20260905T134941806Z-ar-05-acb47308-2714-4720-a0e3-f1e6192260a7-d7ojqhls |
 | Provider | codex |
+| Provider CLI version | Unknown — no contemporaneous CLI-version evidence found in the accepted record or matching retained scratch logs. |
 | Model | gpt-5.6-sol |
 | Effort | high |
 | Started | 2026-09-05T13:49:41.806Z |

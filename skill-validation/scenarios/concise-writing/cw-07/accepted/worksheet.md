@@ -9,6 +9,7 @@
 | Scenario purpose | Complete a direct concise-writing task with the complete repository skill bundle and no project state. |
 | Run ID | 20260906T030853085Z-cw-07-1e3957f0-a043-426b-ac97-8aac6d1476e0-bnzhb7my |
 | Provider | codex |
+| Provider CLI version | Unknown — no contemporaneous CLI-version evidence found in the accepted record or matching retained scratch logs. |
 | Model | gpt-5.6-sol |
 | Effort | high |
 | Started | 2026-09-06T03:08:53.085Z |

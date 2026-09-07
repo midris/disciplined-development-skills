@@ -9,6 +9,7 @@
 | Scenario purpose | Record the required truthful negative sweep form for a single-file change with no sibling matches. |
 | Run ID | 20260904T141645435Z-ssr-05-a23186ee-8993-4b5e-bead-34d63a3f9b5d-p97s4pmh |
 | Provider | codex |
+| Provider CLI version | Unknown — no contemporaneous CLI-version evidence found in the accepted record or matching retained scratch logs. |
 | Model | gpt-5.6-sol |
 | Effort | high |
 | Started | 2026-09-04T14:16:45.435Z |

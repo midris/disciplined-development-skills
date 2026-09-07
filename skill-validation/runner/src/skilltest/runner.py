@@ -2,6 +2,7 @@
 
 from __future__ import annotations
 
+import json
 import os
 import tempfile
 from dataclasses import dataclass
@@ -9,6 +10,7 @@ from datetime import UTC, datetime
 from pathlib import Path
 from time import monotonic
 
+from skilltest.codex_runtime import PreparationError, check_inputs
 from skilltest.config import ConfigError, TestConfig, load_config
 from skilltest.providers import ProviderRequest, ProviderResult, _arguments, invoke_provider
 from skilltest.results import publish_result, result_record
@@ -53,13 +55,25 @@ def run_once(config_path: Path) -> RunOutcome:
         prepared.workspace_dir, prepared.prompt_bytes, prepared.final_output_path,
         config.execution.provider, config.execution.model, config.execution.effort,
     )
-    error = _log_error(context, f"provider arguments: {_arguments(request)!r}", "PREPARATION_FAILED")
-    if error is not None:
-        return _finish(context, config, result, error, started)
-    error = _log_error(context, "provider invocation attempted", "PREPARATION_FAILED")
-    if error is not None:
-        return _finish(context, config, result, error, started)
-    result = invoke_provider(request)
+
+    def log_provider(message: str) -> None:
+        failure = _log_error(context, message, "PREPARATION_FAILED")
+        if failure is not None:
+            raise OSError(failure[1])
+
+    if request.provider == "codex":
+        try:
+            hashes = check_inputs(context, config)
+            log_provider(f"pre-launch input SHA-256: {json.dumps(hashes, sort_keys=True)}")
+        except (PreparationError, OSError, UnicodeError) as failure:
+            return _finish(context, config, result, ("PREPARATION_FAILED", str(failure)), started)
+        result = invoke_provider(request, log=log_provider)
+    else:
+        for message in (f"provider arguments: {_arguments(request)!r}", "provider invocation attempted"):
+            error = _log_error(context, message, "PREPARATION_FAILED")
+            if error is not None:
+                return _finish(context, config, result, error, started)
+        result = invoke_provider(request)
     provider_error = _provider_error(result)
     log_error = _provider_log_error(context, result)
     artifact_error = _write_provider_artifacts(context, result)
@@ -73,16 +87,22 @@ def run_once(config_path: Path) -> RunOutcome:
 
 
 def _provider_error(result: ProviderResult) -> tuple[str, str] | None:
+    if result.preparation_error is not None:
+        return "PREPARATION_FAILED", result.preparation_error
     if not result.invocation_started:
         return "PROVIDER_LAUNCH_FAILED", f"{result.executable} launch failed: {result.launch_error}"
     if result.timed_out:
         return "PROVIDER_TIMEOUT", f"{result.executable} timed out"
     if result.exit_code != 0:
         return "PROVIDER_EXIT_NONZERO", f"{result.executable} exited with code {result.exit_code}"
+    if result.cleanup_error is not None:
+        return "PROVIDER_CLEANUP_FAILED", result.cleanup_error
     return None
 
 
 def _provider_log_error(context: RunContext, result: ProviderResult) -> tuple[str, str] | None:
+    if result.preparation_error is not None:
+        return _log_error(context, "provider preparation failed", "ARTIFACT_WRITE_FAILED")
     if not result.invocation_started:
         return _log_error(context, "provider launch failed", "ARTIFACT_WRITE_FAILED")
     return _log_error(

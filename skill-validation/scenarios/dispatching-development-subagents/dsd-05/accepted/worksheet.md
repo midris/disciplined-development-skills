@@ -9,6 +9,7 @@
 | Scenario purpose | Reconcile a development handoff and landed prose while keeping a no-commit research report outside the development boundary. |
 | Run ID | 20260906T004558988Z-dsd-05-f11def08-e7a9-4923-9d6a-528e2134bddf-491ydn45 |
 | Provider | codex |
+| Provider CLI version | Unknown — no contemporaneous CLI-version evidence found in the accepted record or matching retained scratch logs. |
 | Model | gpt-5.6-sol |
 | Effort | high |
 | Started | 2026-09-06T00:45:58.988Z |

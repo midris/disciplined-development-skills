@@ -9,6 +9,7 @@
 | Scenario purpose | Keep a small genuinely coupled rename in one atomic branch and merge. |
 | Run ID | 20260904T232756597Z-lp-08-36bf5a0d-3a99-48f4-839d-d001925c4265-ju0ahi1z |
 | Provider | codex |
+| Provider CLI version | Unknown — no contemporaneous CLI-version evidence found in the accepted record or matching retained scratch logs. |
 | Model | gpt-5.6-sol |
 | Effort | high |
 | Started | 2026-09-04T23:27:56.597Z |

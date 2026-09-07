@@ -9,6 +9,7 @@
 | Scenario purpose | Route a repository handler fact request through parent-development and research guidance. |
 | Run ID | 20260906T020302875Z-disc-05-ff16af26-2fee-44d0-a2aa-c5238918f18b-aosm5qhs |
 | Provider | codex |
+| Provider CLI version | Unknown — no contemporaneous CLI-version evidence found in the accepted record or matching retained scratch logs. |
 | Model | gpt-5.6-sol |
 | Effort | high |
 | Started | 2026-09-06T02:03:02.875Z |

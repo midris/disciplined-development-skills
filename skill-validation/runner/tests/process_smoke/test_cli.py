@@ -1,4 +1,4 @@
-"""Black-box checks for the skilltest commands."""
+"""Real CLI wiring smoke with executable dummy providers, never installed CLIs."""
 
 from __future__ import annotations
 
@@ -8,12 +8,8 @@ from pathlib import Path
 import subprocess
 import sys
 
-from skilltest import cli as cli_module
-from skilltest.runner import RunOutcome
-
-
 def test_run_command_has_one_bundle_per_external_invocation(
-    build_config_case, capsys, fake_provider, monkeypatch, tmp_path: Path
+    build_config_case, fake_provider, tmp_path: Path
 ) -> None:
     # Break caught: removing the public ``skilltest run CONFIG`` entry point.
     command = Path(sys.executable).with_name("skilltest")
@@ -22,7 +18,7 @@ def test_run_command_has_one_bundle_per_external_invocation(
     case = build_config_case(name="cli")
     temporary_root = tmp_path / "temporary-root"
     temporary_root.mkdir()
-    fake_provider.configure(monkeypatch, final=b"final")
+    fake_provider.configure(final=b"final")
 
     def normal_environment() -> dict[str, str]:
         return os.environ.copy() | {"TMPDIR": str(temporary_root)}
@@ -39,6 +35,7 @@ def test_run_command_has_one_bundle_per_external_invocation(
             text=True,
             env=normal_environment() if env is None else env,
             cwd=cwd,
+            timeout=30,
         )
 
     for arguments in (
@@ -74,26 +71,16 @@ def test_run_command_has_one_bundle_per_external_invocation(
     assert all(process.stderr == "" for process in successful_runs)
     assert all(run_dir.is_absolute() and run_dir.is_dir() for run_dir in serial_run_dirs)
     assert len(set(serial_run_dirs)) == 2
+    for run_dir in serial_run_dirs:
+        result = json.loads((run_dir / "result.json").read_text())
+        assert any(entry["path"] == ".git/config" for entry in result["artifacts"]["fixture"]["entries"])
 
-    fake_provider.configure(monkeypatch, final=b"final", exit_code=9)
+    fake_provider.configure(final=b"final", exit_code=9)
     provider_failure = invoke("run", str(case.config_path))
     failed_run_dir = Path(provider_failure.stdout.strip())
     assert provider_failure.returncode == 1
     assert provider_failure.stderr == "skilltest: run failed\n"
     assert failed_run_dir.is_absolute() and failed_run_dir.is_dir()
-
-    # Break caught: dropping either output channel when a failed run owns a bundle.
-    diagnostic_run_dir = tmp_path / "diagnostic-run"
-    diagnostic_run_dir.mkdir()
-    monkeypatch.setattr(
-        cli_module,
-        "run_once",
-        lambda _: RunOutcome(1, diagnostic_run_dir, "result artifact write failed"),
-    )
-    assert cli_module.main(["run", "ignored.json"]) == 1
-    captured = capsys.readouterr()
-    assert captured.err == "skilltest: result artifact write failed\n"
-    assert captured.out == f"{diagnostic_run_dir.resolve()}\n"
 
     allocation_root = tmp_path / "allocation-root"
     allocation_root.mkdir()
@@ -104,7 +91,7 @@ def test_run_command_has_one_bundle_per_external_invocation(
     assert allocation_failure.stdout == ""
     assert "run allocation failed:" in allocation_failure.stderr
 
-    fake_provider.configure(monkeypatch, final=b"final")
+    fake_provider.configure(final=b"final")
     processes = [
         subprocess.Popen(
             [str(command), "run", str(case.config_path)],
@@ -115,7 +102,13 @@ def test_run_command_has_one_bundle_per_external_invocation(
         )
         for _ in range(2)
     ]
-    simultaneous_results = [process.communicate() for process in processes]
+    try:
+        simultaneous_results = [process.communicate(timeout=30) for process in processes]
+    finally:
+        for process in processes:
+            if process.poll() is None:
+                process.kill()
+            process.wait(timeout=5)
     simultaneous_run_dirs = [Path(stdout.strip()) for stdout, _ in simultaneous_results]
     assert all(process.returncode == 0 for process in processes)
     assert all(stderr == "" for _, stderr in simultaneous_results)
@@ -203,6 +196,7 @@ def test_run_command_has_one_bundle_per_external_invocation(
 | Scenario purpose |  |
 | Run ID | 20260902T120000000Z-worksheet-case-cli |
 | Provider | codex |
+| Provider CLI version |  |
 | Model | gpt-5.6-sol |
 | Effort | high |
 | Started | 2026-09-02T12:00:00.000Z |

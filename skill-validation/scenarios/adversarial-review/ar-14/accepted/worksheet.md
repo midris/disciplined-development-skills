@@ -9,6 +9,7 @@
 | Scenario purpose | Apply the skill-authoring lens while retaining the holistic baseline. |
 | Run ID | 20260905T160011594Z-ar-14-ad458f10-fa5f-49a4-9926-6b54bd146d2f-gcqe7jx1 |
 | Provider | codex |
+| Provider CLI version | Unknown — no contemporaneous CLI-version evidence found in the accepted record or matching retained scratch logs. |
 | Model | gpt-5.6-sol |
 | Effort | high |
 | Started | 2026-09-05T16:00:11.594Z |

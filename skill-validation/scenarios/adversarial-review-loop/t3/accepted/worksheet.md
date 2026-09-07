@@ -9,6 +9,7 @@
 | Scenario purpose | Take the memory-free cold-read escape after the third completed blocking cycle rather than starting a fourth cycle. |
 | Run ID | 20260905T202811324Z-t3-b91f2981-0fe3-40a6-a55a-4a2d3ece3b71-hinirqw7 |
 | Provider | codex |
+| Provider CLI version | Unknown — no contemporaneous CLI-version evidence found in the accepted record or matching retained scratch logs. |
 | Model | gpt-5.6-sol |
 | Effort | high |
 | Started | 2026-09-05T20:28:11.324Z |

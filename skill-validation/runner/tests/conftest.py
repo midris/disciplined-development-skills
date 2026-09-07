@@ -2,16 +2,36 @@
 
 from __future__ import annotations
 
-import base64
 import json
 import os
-import stat
+import subprocess
+import tempfile
+import time
 from dataclasses import dataclass
 from pathlib import Path
 
 import pytest
 
 from skilltest.config import TestConfig, load_config
+
+
+def pytest_collection_modifyitems(items):
+    for item in items:
+        if "process_smoke" in item.path.parts:
+            item.add_marker(pytest.mark.process_smoke)
+
+
+@pytest.fixture(autouse=True)
+def unit_process_boundary(request, monkeypatch):
+    if request.node.get_closest_marker("process_smoke"):
+        return
+
+    def unexpected(*args, **kwargs):
+        pytest.fail("unit test crossed a real process/time boundary; mock it or use process_smoke")
+
+    monkeypatch.setattr(subprocess, "Popen", unexpected)
+    monkeypatch.setattr(os, "killpg", unexpected)
+    monkeypatch.setattr(time, "sleep", unexpected)
 
 
 @dataclass(frozen=True, slots=True)
@@ -28,128 +48,17 @@ def _write(path: Path, content: str | bytes = "") -> Path:
     return path
 
 
-@dataclass(frozen=True, slots=True)
-class FakeProvider:
-    record_path: Path
-
-    def configure(
-        self,
-        monkeypatch: pytest.MonkeyPatch,
-        *,
-        stdout: bytes = b"",
-        stderr: bytes = b"",
-        final: bytes = b"",
-        exit_code: int = 0,
-        delay_seconds: float = 0,
-        write_final: bool = True,
-        fixture_bytes: bytes | None = None,
-        evidence_name: str | None = None,
-        evidence_bytes: bytes = b"",
-    ) -> None:
-        monkeypatch.setenv("SKILLTEST_FAKE_STDOUT", base64.b64encode(stdout).decode("ascii"))
-        monkeypatch.setenv("SKILLTEST_FAKE_STDERR", base64.b64encode(stderr).decode("ascii"))
-        monkeypatch.setenv("SKILLTEST_FAKE_FINAL", base64.b64encode(final).decode("ascii"))
-        monkeypatch.setenv("SKILLTEST_FAKE_EXIT", str(exit_code))
-        monkeypatch.setenv("SKILLTEST_FAKE_DELAY", str(delay_seconds))
-        monkeypatch.setenv("SKILLTEST_FAKE_WRITE_FINAL", "1" if write_final else "0")
-        if fixture_bytes is None:
-            monkeypatch.delenv("SKILLTEST_FAKE_FIXTURE", raising=False)
-        else:
-            monkeypatch.setenv(
-                "SKILLTEST_FAKE_FIXTURE",
-                base64.b64encode(fixture_bytes).decode("ascii"),
-            )
-        if evidence_name is None:
-            monkeypatch.delenv("SKILLTEST_FAKE_EVIDENCE_NAME", raising=False)
-            monkeypatch.delenv("SKILLTEST_FAKE_EVIDENCE", raising=False)
-        else:
-            monkeypatch.setenv("SKILLTEST_FAKE_EVIDENCE_NAME", evidence_name)
-            monkeypatch.setenv(
-                "SKILLTEST_FAKE_EVIDENCE",
-                base64.b64encode(evidence_bytes).decode("ascii"),
-            )
-
-    def record(self) -> dict[str, object]:
-        records = self.record_path.read_text(encoding="utf-8").splitlines()
-        assert len(records) == 1
-        return json.loads(records[0])
-
-    def config_observations(self) -> list[dict[str, bool]]:
-        observation_path = self.record_path.with_name("config-observations.jsonl")
-        return [json.loads(line) for line in observation_path.read_text(encoding="utf-8").splitlines()]
-
-
-@pytest.fixture
-def fake_provider(tmp_path: Path, monkeypatch: pytest.MonkeyPatch) -> FakeProvider:
-    bin_dir = tmp_path / "fake-bin"
-    bin_dir.mkdir()
-    record_path = tmp_path / "provider-record.json"
-    script = """#!/usr/bin/env python3
-import base64
-import json
-import os
-import sys
-import time
-from pathlib import Path
-
-record_path = Path(os.environ["SKILLTEST_FAKE_RECORD"])
-with record_path.open("a", encoding="utf-8") as record_file:
-    print(json.dumps({
-    "argv": sys.argv,
-    "cwd": os.getcwd(),
-    "stdin": sys.stdin.buffer.read().decode("utf-8"),
-    "path_prefix": os.environ["PATH"].split(os.pathsep)[0],
-    "marker": os.environ.get("SKILLTEST_FAKE_MARKER"),
-    "claude_baseline_env": {
-        name: os.environ.get(name)
-        for name in (
-            "CLAUDE_CODE_SIMPLE_SYSTEM_PROMPT",
-            "CLAUDE_CODE_DISABLE_AUTO_MEMORY",
-            "CLAUDE_CODE_DISABLE_BUNDLED_SKILLS",
-            "CLAUDE_CODE_DISABLE_EXPLORE_PLAN_AGENTS",
-            "CLAUDE_CODE_DISABLE_WORKFLOWS",
-            "CLAUDE_CODE_DISABLE_ARTIFACT",
-            "CLAUDE_CODE_DISABLE_CRON",
-            "CLAUDE_CODE_DISABLE_NONESSENTIAL_TRAFFIC",
-        )
-    },
-    }), file=record_file)
-run_dir = Path(os.getcwd()).parent
-before_output = (run_dir / "config.json").exists()
-fixture_payload = os.environ.get("SKILLTEST_FAKE_FIXTURE")
-if fixture_payload is not None:
-    Path("fixture/input.txt").write_bytes(base64.b64decode(fixture_payload))
-evidence_name = os.environ.get("SKILLTEST_FAKE_EVIDENCE_NAME")
-if evidence_name is not None:
-    evidence_path = Path("evidence") / evidence_name
-    evidence_path.parent.mkdir(parents=True, exist_ok=True)
-    evidence_path.write_bytes(base64.b64decode(os.environ["SKILLTEST_FAKE_EVIDENCE"]))
-time.sleep(float(os.environ["SKILLTEST_FAKE_DELAY"]))
-sys.stdout.buffer.write(base64.b64decode(os.environ["SKILLTEST_FAKE_STDOUT"]))
-sys.stderr.buffer.write(base64.b64decode(os.environ["SKILLTEST_FAKE_STDERR"]))
-if sys.argv[0].endswith("codex") and os.environ["SKILLTEST_FAKE_WRITE_FINAL"] == "1":
-    output_path = Path(sys.argv[sys.argv.index("--output-last-message") + 1])
-    output_path.write_bytes(base64.b64decode(os.environ["SKILLTEST_FAKE_FINAL"]))
-observation_path = Path(os.environ["SKILLTEST_FAKE_CONFIG_OBSERVATIONS"])
-with observation_path.open("a", encoding="utf-8") as observation_file:
-    print(json.dumps({
-        "before_output": before_output,
-        "after_output": (run_dir / "config.json").exists(),
-    }), file=observation_file)
-sys.exit(int(os.environ["SKILLTEST_FAKE_EXIT"]))
-"""
-    for name in ("codex", "claude"):
-        path = bin_dir / name
-        path.write_text(script, encoding="utf-8")
-        path.chmod(path.stat().st_mode | stat.S_IXUSR)
-    monkeypatch.setenv("PATH", str(bin_dir) + os.pathsep + os.environ["PATH"])
-    monkeypatch.setenv("SKILLTEST_FAKE_RECORD", str(record_path))
-    monkeypatch.setenv(
-        "SKILLTEST_FAKE_CONFIG_OBSERVATIONS",
-        str(record_path.with_name("config-observations.jsonl")),
-    )
-    monkeypatch.setenv("SKILLTEST_FAKE_MARKER", "inherited")
-    return FakeProvider(record_path)
+@pytest.fixture(autouse=True)
+def private_test_profile(tmp_path: Path, monkeypatch: pytest.MonkeyPatch) -> Path:
+    # No default offline test may read the owner's authentication or settings.
+    home = tmp_path / "invoking-home"
+    profile = tmp_path / "invoking-codex"
+    home.mkdir()
+    profile.mkdir()
+    monkeypatch.setenv("HOME", str(home))
+    monkeypatch.setenv("CODEX_HOME", str(profile))
+    monkeypatch.setattr(tempfile, "tempdir", str(tmp_path))
+    return profile
 
 
 @pytest.fixture

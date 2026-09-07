@@ -9,6 +9,7 @@
 | Scenario purpose | Remove simple padding while preserving four states and their distinct completion and failure details. |
 | Run ID | 20260906T024432676Z-cw-01-44b9172e-c5a7-4f99-a95e-0fbc3eb9dfb0-qo8yugqk |
 | Provider | codex |
+| Provider CLI version | Unknown — no contemporaneous CLI-version evidence found in the accepted record or matching retained scratch logs. |
 | Model | gpt-5.6-sol |
 | Effort | high |
 | Started | 2026-09-06T02:44:32.676Z |

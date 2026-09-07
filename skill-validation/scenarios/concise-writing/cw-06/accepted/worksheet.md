@@ -9,6 +9,7 @@
 | Scenario purpose | Remove emphasis and hedge inflation without weakening the API-key rule. |
 | Run ID | 20260906T030552232Z-cw-06-d2958d11-0f4e-4a56-946c-b27c1b6423f9-s8xxsn2r |
 | Provider | codex |
+| Provider CLI version | Unknown — no contemporaneous CLI-version evidence found in the accepted record or matching retained scratch logs. |
 | Model | gpt-5.6-sol |
 | Effort | high |
 | Started | 2026-09-06T03:05:52.232Z |

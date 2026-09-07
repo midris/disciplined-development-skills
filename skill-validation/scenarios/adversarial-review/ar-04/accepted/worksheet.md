@@ -9,6 +9,7 @@
 | Scenario purpose | Map the holistic baseline and additive specialized lenses by artifact kind. |
 | Run ID | 20260905T132755442Z-ar-04-75e551f9-cf29-4fa9-8ff2-8e96bdb71504-eandeutw |
 | Provider | codex |
+| Provider CLI version | Unknown — no contemporaneous CLI-version evidence found in the accepted record or matching retained scratch logs. |
 | Model | gpt-5.6-sol |
 | Effort | high |
 | Started | 2026-09-05T13:27:55.442Z |

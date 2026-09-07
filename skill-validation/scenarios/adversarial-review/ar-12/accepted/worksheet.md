@@ -9,6 +9,7 @@
 | Scenario purpose | Reject activity or proxy success that does not measure the governing outcome. |
 | Run ID | 20260905T152427448Z-ar-12-ac1480d9-e95d-4525-b0b8-78630dcf9c99-weg4b5dl |
 | Provider | codex |
+| Provider CLI version | Unknown — no contemporaneous CLI-version evidence found in the accepted record or matching retained scratch logs. |
 | Model | gpt-5.6-sol |
 | Effort | high |
 | Started | 2026-09-05T15:24:27.448Z |

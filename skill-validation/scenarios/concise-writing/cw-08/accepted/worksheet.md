@@ -9,6 +9,7 @@
 | Scenario purpose | Apply concise writing to policy prose while preserving every protected eligibility, deadline, accommodation, appeal, and navigation fact. |
 | Run ID | 20260906T031840280Z-cw-08-3537c587-cf02-4147-b690-72d57be62a69-exbm1m7j |
 | Provider | codex |
+| Provider CLI version | Unknown — no contemporaneous CLI-version evidence found in the accepted record or matching retained scratch logs. |
 | Model | gpt-5.6-sol |
 | Effort | high |
 | Started | 2026-09-06T03:18:40.280Z |

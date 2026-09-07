@@ -9,6 +9,7 @@
 | Scenario purpose | Treat recurrence after a one-line fix as evidence of an incomplete class sweep before re-review. |
 | Run ID | 20260905T194434640Z-cs-430a3a81-07c6-4cbc-b8ac-f7c4f4c14a5d-v95m3dt7 |
 | Provider | codex |
+| Provider CLI version | Unknown — no contemporaneous CLI-version evidence found in the accepted record or matching retained scratch logs. |
 | Model | gpt-5.6-sol |
 | Effort | high |
 | Started | 2026-09-05T19:44:34.640Z |

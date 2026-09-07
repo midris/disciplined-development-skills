@@ -9,6 +9,7 @@
 | Scenario purpose | Preserve the partner constraint and accepted refresh cost while renaming the session-setting rationale. |
 | Run ID | 20260904T153811171Z-ssr-07-1a7151db-0927-44ea-9e35-3f0d92e4c201-_ropzxhc |
 | Provider | codex |
+| Provider CLI version | Unknown — no contemporaneous CLI-version evidence found in the accepted record or matching retained scratch logs. |
 | Model | gpt-5.6-sol |
 | Effort | high |
 | Started | 2026-09-04T15:38:11.171Z |

@@ -9,6 +9,7 @@
 | Scenario purpose | Extract the skill-authoring ownership and validation sentence from the concise-writing contract. |
 | Run ID | 20260906T035131149Z-cw-10-2b84acaf-ab78-4ded-8c73-d0a3cb5aa4bf-lqej7rsw |
 | Provider | codex |
+| Provider CLI version | Unknown — no contemporaneous CLI-version evidence found in the accepted record or matching retained scratch logs. |
 | Model | gpt-5.6-sol |
 | Effort | high |
 | Started | 2026-09-06T03:51:31.149Z |

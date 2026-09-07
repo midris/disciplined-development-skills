@@ -9,6 +9,7 @@
 | Scenario purpose | Treat a P3-only result as blocking-loop clean while disposing every P3 explicitly. |
 | Run ID | 20260905T221217100Z-t5-f8fbf50a-5cd0-4d40-9826-2b984293b6dc-u9d7dp9f |
 | Provider | codex |
+| Provider CLI version | Unknown — no contemporaneous CLI-version evidence found in the accepted record or matching retained scratch logs. |
 | Model | gpt-5.6-sol |
 | Effort | high |
 | Started | 2026-09-05T22:12:17.100Z |

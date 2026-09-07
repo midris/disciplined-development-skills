@@ -9,6 +9,7 @@
 | Scenario purpose | Keep a proven one-member class bounded and still require the safe reviewer re-run. |
 | Run ID | 20260905T201912199Z-t2-c6a633fa-a971-46ef-a575-1f3ee1eb6294-jm8eckcz |
 | Provider | codex |
+| Provider CLI version | Unknown — no contemporaneous CLI-version evidence found in the accepted record or matching retained scratch logs. |
 | Model | gpt-5.6-sol |
 | Effort | high |
 | Started | 2026-09-05T20:19:12.199Z |

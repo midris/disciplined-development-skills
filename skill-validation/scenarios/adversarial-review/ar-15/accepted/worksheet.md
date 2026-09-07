@@ -9,6 +9,7 @@
 | Scenario purpose | Avoid inventing a blocking defect or shared cause in a supported bounded proposal. |
 | Run ID | 20260905T185854760Z-ar-15-00a6667a-3e66-4463-b5db-aa4cad0acd94-v76ejdvo |
 | Provider | codex |
+| Provider CLI version | Unknown — no contemporaneous CLI-version evidence found in the accepted record or matching retained scratch logs. |
 | Model | gpt-5.6-sol |
 | Effort | high |
 | Started | 2026-09-05T18:58:54.760Z |

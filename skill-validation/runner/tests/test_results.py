@@ -25,6 +25,7 @@ ERROR_CODES = (
     "PROVIDER_TIMEOUT",
     "PROVIDER_EXIT_NONZERO",
     "ARTIFACT_WRITE_FAILED",
+    "PROVIDER_CLEANUP_FAILED",
 )
 
 
@@ -146,10 +147,19 @@ def _config(context: RunContext) -> Config:
     )
 
 
-# Catches removal or widening of any of the six exhaustive execution states.
+# Catches removal or widening of any of the seven exhaustive execution states.
 @pytest.mark.parametrize("code", (None, *ERROR_CODES))
 def test_schema_accepts_each_valid_execution_state(code: str | None) -> None:
     _validate(_state_record(code))
+
+
+def test_codex_timeout_can_report_unknown_exit_without_widening_claude():
+    # A bounded failed reap cannot honestly supply an integer exit code.
+    record = _state_record("PROVIDER_TIMEOUT")
+    record["execution"]["exit_code"] = None
+    _validate(record)
+    record["execution"].update(provider="claude", executable="claude")
+    _reject(record)
 
 
 # Catches state branches that validate fields independently instead of as one row.
@@ -162,6 +172,7 @@ def test_schema_accepts_each_valid_execution_state(code: str | None) -> None:
         ("PROVIDER_TIMEOUT", "execution.timed_out", False),
         ("PROVIDER_EXIT_NONZERO", "execution.exit_code", 0),
         ("ARTIFACT_WRITE_FAILED", "execution.exit_code", 7),
+        ("PROVIDER_CLEANUP_FAILED", "execution.exit_code", 7),
     ),
 )
 def test_schema_rejects_an_invalid_mutation_of_every_execution_state(

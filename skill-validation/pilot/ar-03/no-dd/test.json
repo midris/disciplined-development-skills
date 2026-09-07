@@ -1,0 +1,52 @@
+{
+  "schema_version": "0.2",
+  "id": "pilot-ar-03-no-dd",
+  "prompt": "prompt.md",
+  "fixtures": [
+    {
+      "source": "../../inputs/superpowers/writing-plans/SKILL.md",
+      "target": ".agents/skills/writing-plans/SKILL.md"
+    },
+    {
+      "source": "../../inputs/superpowers/writing-plans/plan-document-reviewer-prompt.md",
+      "target": ".agents/skills/writing-plans/plan-document-reviewer-prompt.md"
+    },
+    {
+      "source": "../../inputs/superpowers/requesting-code-review/SKILL.md",
+      "target": ".agents/skills/requesting-code-review/SKILL.md"
+    },
+    {
+      "source": "../../inputs/superpowers/requesting-code-review/code-reviewer.md",
+      "target": ".agents/skills/requesting-code-review/code-reviewer.md"
+    },
+    {
+      "source": "../../inputs/tasks/ar-03/project/benchmarks/sort.json",
+      "target": "project/benchmarks/sort.json"
+    },
+    {
+      "source": "../../inputs/tasks/ar-03/project/plans/normalize.md",
+      "target": "project/plans/normalize.md"
+    },
+    {
+      "source": "../../inputs/tasks/ar-03/project/src/bulk.py",
+      "target": "project/src/bulk.py"
+    },
+    {
+      "source": "../../inputs/tasks/ar-03/project/src/normalize.py",
+      "target": "project/src/normalize.py"
+    },
+    {
+      "source": "../../inputs/tasks/ar-03/project/src/retry.py",
+      "target": "project/src/retry.py"
+    },
+    {
+      "source": "../../inputs/tasks/ar-03/project/src/validate.py",
+      "target": "project/src/validate.py"
+    }
+  ],
+  "execution": {
+    "provider": "codex",
+    "model": "gpt-5.6-sol",
+    "effort": "low"
+  }
+}

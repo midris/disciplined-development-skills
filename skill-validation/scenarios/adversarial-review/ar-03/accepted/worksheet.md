@@ -9,6 +9,7 @@
 | Scenario purpose | Require complete caller enumeration, rationale verification, and blocking treatment of a nonlocal invariant. |
 | Run ID | 20260905T132100669Z-ar-03-936e0f22-09cb-448c-9cb3-1fc63044e6d5-kb5ge5wj |
 | Provider | codex |
+| Provider CLI version | Unknown — no contemporaneous CLI-version evidence found in the accepted record or matching retained scratch logs. |
 | Model | gpt-5.6-sol |
 | Effort | high |
 | Started | 2026-09-05T13:21:00.669Z |

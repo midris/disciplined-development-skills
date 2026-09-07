@@ -9,6 +9,7 @@
 | Scenario purpose | Produce one bounded development-subagent prompt with grounded scope, identity, authority, disclosure, and handoff requirements. |
 | Run ID | 20260905T235035050Z-dsd-01-5634f3f0-1f51-4ae2-96a2-027685af59a4-c38man75 |
 | Provider | codex |
+| Provider CLI version | Unknown — no contemporaneous CLI-version evidence found in the accepted record or matching retained scratch logs. |
 | Model | gpt-5.6-sol |
 | Effort | high |
 | Started | 2026-09-05T23:50:35.050Z |

@@ -9,6 +9,7 @@
 | Scenario purpose | Keep unrelated below-cap findings scattered and continue without inventing an umbrella axis. |
 | Run ID | 20260905T220813827Z-t4-9047aa48-9852-4357-a885-2c377ce067e9-7pdu9kvk |
 | Provider | codex |
+| Provider CLI version | Unknown — no contemporaneous CLI-version evidence found in the accepted record or matching retained scratch logs. |
 | Model | gpt-5.6-sol |
 | Effort | high |
 | Started | 2026-09-05T22:08:13.827Z |

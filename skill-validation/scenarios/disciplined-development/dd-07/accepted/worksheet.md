@@ -9,6 +9,7 @@
 | Scenario purpose | Keep delegation inside signed scope, require directly observed RED before production edits, and retain parent acceptance authority. |
 | Run ID | 20260905T122512009Z-dd-07-9defb4d6-e968-4469-8369-33dd20c30315-vc0pot22 |
 | Provider | codex |
+| Provider CLI version | Unknown — no contemporaneous CLI-version evidence found in the accepted record or matching retained scratch logs. |
 | Model | gpt-5.6-sol |
 | Effort | high |
 | Started | 2026-09-05T12:25:12.009Z |

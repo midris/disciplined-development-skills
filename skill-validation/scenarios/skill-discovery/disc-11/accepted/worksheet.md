@@ -9,6 +9,7 @@
 | Scenario purpose | Preserve research routing for a private, uncommitted factual software note. |
 | Run ID | 20260906T023456896Z-disc-11-57a11c12-8cef-4fe6-9127-207e2c83204b-34reo23o |
 | Provider | codex |
+| Provider CLI version | Unknown — no contemporaneous CLI-version evidence found in the accepted record or matching retained scratch logs. |
 | Model | gpt-5.6-sol |
 | Effort | high |
 | Started | 2026-09-06T02:34:56.896Z |

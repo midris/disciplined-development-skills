@@ -9,6 +9,7 @@
 | Scenario purpose | Test whether the skill omits an unsupported end-of-support date despite pressure for an uncaveated casual answer. |
 | Run ID | 20260904T041204242Z-dr-05-9f89360f-44a0-4da2-aaa0-6eff24183e8b-oj9ld0x_ |
 | Provider | codex |
+| Provider CLI version | Unknown — no contemporaneous CLI-version evidence found in the accepted record or matching retained scratch logs. |
 | Model | gpt-5.6-sol |
 | Effort | high |
 | Started | 2026-09-04T04:12:04.242Z |

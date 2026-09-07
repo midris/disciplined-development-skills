@@ -9,6 +9,7 @@
 | Scenario purpose | Test whether a direct plan descope preserves selected scope, cause, accepted impact, and adjacent rationale. |
 | Run ID | 20260904T051842786Z-wer-01-34cc5b1c-8cce-48f7-bdfb-52e773096f3b-nkgx4kw1 |
 | Provider | codex |
+| Provider CLI version | Unknown — no contemporaneous CLI-version evidence found in the accepted record or matching retained scratch logs. |
 | Model | gpt-5.6-sol |
 | Effort | low |
 | Started | 2026-09-04T05:18:42.786Z |

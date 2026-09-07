@@ -9,6 +9,7 @@
 | Scenario purpose | Name and disposition quiet failure, scale, overlap, idempotency, quota, isolation, and timezone cases. |
 | Run ID | 20260904T203222365Z-lp-06-bb1590ed-782e-4295-92e4-c7fb96842375-u8orf68g |
 | Provider | codex |
+| Provider CLI version | Unknown — no contemporaneous CLI-version evidence found in the accepted record or matching retained scratch logs. |
 | Model | gpt-5.6-sol |
 | Effort | high |
 | Started | 2026-09-04T20:32:22.365Z |

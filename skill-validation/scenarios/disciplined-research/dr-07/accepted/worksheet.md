@@ -9,6 +9,7 @@
 | Scenario purpose | Test whether the skill corrects a conversational premise, derives the supported fifteen-minute result, and discloses its source. |
 | Run ID | 20260904T045211656Z-dr-07-0b56b945-e5e4-433b-8cfa-76241ee70dc6-8oomenyd |
 | Provider | codex |
+| Provider CLI version | Unknown — no contemporaneous CLI-version evidence found in the accepted record or matching retained scratch logs. |
 | Model | gpt-5.6-sol |
 | Effort | high |
 | Started | 2026-09-04T04:52:11.656Z |

@@ -9,6 +9,7 @@
 | Scenario purpose | At cycle-three entry, locate a shared pattern in governing text and record the verdict before fixing. |
 | Run ID | 20260905T225526858Z-g3a-0e599d57-be07-4c4e-b4a6-1511babd6585-yoow6kvt |
 | Provider | codex |
+| Provider CLI version | Unknown — no contemporaneous CLI-version evidence found in the accepted record or matching retained scratch logs. |
 | Model | gpt-5.6-sol |
 | Effort | high |
 | Started | 2026-09-05T22:55:26.858Z |
