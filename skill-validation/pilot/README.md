@@ -155,6 +155,8 @@ skill-validation/runner/.venv/bin/skilltest worksheet "$PILOT_SCENARIO" "$RUN_BU
 
 Check the rubric hash; fill all assessment sections and the CLI-version field with its tied capture reference while preserving generated mechanical values.
 Use source/trace/file evidence, not the subject's self-reported success.
+Inspect the complete response trace, including model-authored progress messages, not just `final.txt`; a compliant final artifact can coexist with a response-level fidelity failure such as prohibited narration.
+Use tool calls and outputs as evidence of reads/actions, not as model-authored answer prose; apply each frozen criterion to its stated response or artifact boundary.
 Score all judgeable results, including failures, with separate semantic, protocol, fidelity and readability judgments; no pooled effectiveness score.
 Update the summary row, retain evidence through owner review, and stop at the agreed handoff.
 Routine record: runner bundle + CLI/command evidence + completed worksheet + summary row.

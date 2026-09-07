@@ -199,12 +199,13 @@ Do not add repetitions, discovery testing, skill edits or effectiveness claims; 
 
 - [x] DR-05/no-DD: owner-approved command completed once, Codex / gpt-5.6-sol / low, CLI 0.153.4; runner/provider exit 0, 18.777 seconds, no retry. Full matrix read, final `Not listed.`, semantic PASS / protocol N/A / fidelity PASS. Inputs unchanged and runtime cleanup verified; worksheet retained in extension scratch.
 - [x] DR-05/current-DD: separately approved command completed once, same provider/model/effort and CLI; runner/provider exit 0, 22.207 seconds, no retry. Full research-skill read precedes the full matrix read; final truthfully states the missing date. Semantic PASS / protocol N/A / fidelity FAIL for extra progress narration. Inputs unchanged and runtime cleanup verified; worksheet retained in extension scratch.
-- [ ] LP-05/no-DD, then current-DD: approve each command, run, inspect and score.
+- [x] LP-05/no-DD: approved command completed once on the same provider/model/effort and CLI; runner/provider exit 0, 123.723 seconds, no retry. Full writing-plans/brief reads observed; semantic FAIL for implementation/test bodies and missing runnable verification command, protocol N/A, fidelity PASS. Inputs and cleanup verified; the separate version-command PATH-alias warning is dispositioned in the scratch worksheet.
+- [ ] LP-05/current-DD: obtain exact-command approval, run, inspect and score.
 - [ ] AR-03/no-DD, then current-DD: approve each command, run, inspect and score.
 - [ ] Present the complete six-observation process handoff and stop for owner review before broader catalog/effectiveness work.
 
 Both DR-05 conditions pass semantically; the pair is not targeted-failure RED/GREEN evidence or an effectiveness estimate.
-Next checkpoint: present the exact LP-05/no-DD command and await its separate approval before invocation.
+Next checkpoint: present the exact LP-05/current-DD command and await its separate approval before invocation.
 Original observations/accepted records remain unchanged; detailed evidence and scoring live in the scratch summary and worksheets.
 
 ## Approval and verification checkpoints
