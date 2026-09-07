@@ -155,7 +155,7 @@ It adds explicitly loaded missing-evidence/edge-case pressure and real-code revi
 The owner requires separate explicit discovery and behavior scenarios: the revised behavior prompts name the target/composed skills; a dedicated native-discovery scenario remains outside these six runs and needs separate prompt/count approval.
 The owner also requires both coverage types for every DD skill. The [completed catalog-purpose audit and deferred plan](deferred/2026-09-07-skilltest-discovery-behavior-catalog-separation.md) capture that broader work without changing historical scenarios or expanding the immediate pilot.
 The new review dependency needs affected qualification; any required real qualification call is separately counted and approved.
-Next checkpoint: Task 5's affected catalog/common-input qualification, then exact-command approval; input preparation and its provider-free audit are complete.
+Next checkpoint: exact-command approval for the first DR-05/no-DD observation; Task 5's provider-free qualification and retained-control review are complete.
 
 Review addressed task-neutral AR verdict scoring, the new dependency's qualification boundary, scratch-directory preconditions, duplicated status and historical-prompt provenance.
 Owner feedback separated explicitly loaded behavior from native discovery; the catalog audit found the concrete CW mixing and missing native discovery coverage and placed repairs in the deferred plan.
@@ -173,7 +173,7 @@ No additional provider commands ran.
 - [x] Preserve DR-05/LP-05 source rubrics; adapt AR-03 only to a task-neutral severity/blocking conclusion. Freeze the shared scoring interpretation and record loading fidelity separately.
 - [x] Verify Superpowers 6.3.0 review files and source fixture bytes; audit config targets, common-input equality, prompt differences, withheld rubric boundaries and copied bytes through the runner's provider-free preparation helpers.
 - [x] Review and verify the input/documentation unit, then commit its recoverable revision before collection. Keep audit evidence in disposable scratch; preserve original pilot/scenario results.
-- [ ] Determine and perform affected provider-free catalog/common-input qualification; reuse unaffected controls only with evidence. Stop on drift or unproved controls.
+- [x] Determine and perform affected provider-free catalog/common-input qualification; reuse unaffected controls only with evidence. Stop on drift or unproved controls.
 - [ ] Present any necessary real qualification and the six observation commands for their respective exact-command approvals; do not invoke them as part of preparation.
 
 Sequence remains DR-05, LP-05, AR-03, each no-DD then current-DD once on Codex / gpt-5.6-sol / low.
@@ -185,6 +185,12 @@ All six prompts/rubrics and prepared fixture maps passed pair/source checks; ten
 The audit did not call any CLI, authenticate, prepare a private runtime or qualify a native catalog; those controls are not inferred from copying success.
 Verification: 231 runner tests passed, hooks passed 263 with three skips, 108 local links/anchors resolved, and the inline input/spec review found no remaining blocking findings.
 Original scenario/accepted records, runner code and DD skills are unchanged; no additional model commands ran.
+
+Extension qualification is recorded in scratch `preflight/reconciliation.md`: CLI 0.153.4 and digest unchanged; native catalogs 7/16 with nine DD additions; common content and all 60 bootstrap hashes match; all AR fixture/guidance shell reads and private-runtime cleanup pass.
+The strict historical comparison stopped on the injected September 6→7 date change, which was explicitly reviewed rather than silently normalized; both new arms share September 7 and the tasks use fixed facts.
+Two earlier scratch-audit path-parser defects are retained separately; neither involved a model call or unresolved runtime.
+Runtime production code and read mechanisms are unchanged from the successful real qualification, so its controls are reused without another paid qualification call.
+The first exact observation command is recorded as unapproved in the extension scratch summary. Remaining commands will be presented at their checkpoints; no observation has started.
 
 ## Approval and verification checkpoints
 
