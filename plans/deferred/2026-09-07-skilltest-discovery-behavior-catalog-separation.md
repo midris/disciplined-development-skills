@@ -2,11 +2,11 @@
 
 > **For agentic workers:** On owner activation, use `superpowers:executing-plans` task by task with review checkpoints.
 
-**Status:** DEFERRED. Catalog-purpose audit complete; no catalog repairs, new scenario configs or provider runs authorized by this plan.
+**Status:** Catalog implementation remains DEFERRED. The active plan's Task 7 authorizes the Task 1 documentation map/proposal only; no repaired prompts, new scenario configs or provider runs are authorized.
 **Goal:** Give every one of the nine DD skills separately identified discoverability tests and explicitly loaded behavioral-effectiveness tests.
 **Approach:** Reuse existing scenario material, runner configs, worksheets and written runbooks; no new testing framework or schema.
 **Authority:** [Test-purpose separation](../specs/2026-09-06-skilltest-controlled-inputs-design.md#accepted-separation-setup-discovery-and-behavior) and [charter](../../skill-validation/charter/core-contracts.md).
-**Return to:** [Current owner checkpoint](../2026-09-06-skilltest-sol-low-pilot.md#task-6-execute-and-score-the-bounded-behavior-extension).
+**Return to:** [Current owner checkpoint](../2026-09-06-skilltest-sol-low-pilot.md#task-7-map-catalog-purposes-and-propose-the-first-repair).
 
 ## Audit findings
 
@@ -26,32 +26,55 @@ This partitions prompt design only, not run validity or effectiveness.
 
 ## Per-skill coverage and reusable discovery seeds
 
-All rows need distinct native-discovery coverage; the DISC references are seed tasks to adapt, not ready native tests or approval to execute.
-Each skill must also retain independently identified explicitly loaded behavior coverage; a shared composition scenario may reference multiple skills only with separate owner criteria/results.
-
-| DD skill | Existing catalog and behavior material | Description-selection seeds / focused improvement |
-|---|---|---|
-| concise-writing | 17 scenarios; CW-01–08/19 exercise prose, CW-10/12 contract extraction | DISC-03; CW-09/11 and CW-17/18 supply boundary ideas. Separate the four combined cases and distinguish contract checks from prose application. |
-| writing-explicit-rationale | 6; explicit target loads, WER-07 separates composition ownership | DISC-09/10. Retain target/companion scoring separation. |
-| sweeping-stale-references | 6; explicit loads, read-only sweep/rename artifacts | DISC-08. Resolve its existing optional-concise-writing ambiguity for new inputs, not old judgments. |
-| lean-plan-writing | 7; explicit target + writing-plans composition | DISC-07/10; contrast plan execution in DISC-04. Keep Superpowers fixed across behavior conditions. |
-| disciplined-research | 7; explicit loads and source-grounded answers | DISC-05/11/12. Verify new trigger expectations against the frozen skill/charter, not copied historical description text alone. |
-| disciplined-development | 9; explicit parent loads, gate/action decisions | DISC-04/05 versus non-development DISC-12. Do not mislabel repository-defect discovery in DD-02/09 as skill discovery. |
-| adversarial-review | 15; explicitly loaded review and review-contract tasks | DISC-01 versus remediation DISC-02. Keep lens selection as loaded review behavior. |
-| adversarial-review-loop | 15; explicit loads and next-action/ownership decisions | DISC-02 versus new review DISC-01. Read-only loop decisions do not prove actual repeated execution. |
-| dispatching-development-subagents | 11; explicit loads, dispatch/handoff construction and decisions | DISC-06. Freeze required composition and distinguish selecting a companion from executing it. |
+The [validation guide's purpose map](../../skill-validation/README.md#coverage-by-test-purpose) is the single coverage table, with charter ownership, representative scenario links and discovery seeds for all nine skills.
+The seeds are source material, not ready native tests or execution approval.
 
 ## Deferred work
 
-Activate only after the current procedure pilot is owner-reviewed and the owner explicitly selects this work.
-The completed procedure pilot does not activate this catalog program; the owner-approved [batch/fixture-design amendment](../specs/2026-09-06-skilltest-controlled-inputs-design.md#accepted-bounded-batch-operation) governs it when separately activated.
+The active plan records authorization for the bounded Task 1 map/proposal; Tasks 2–3 still require owner selection.
+The [batch/fixture-design amendment](../specs/2026-09-06-skilltest-controlled-inputs-design.md#accepted-bounded-batch-operation) governs later preparation and collection, not permission to launch them.
 
 ### Task 1: Map purposes without moving the catalog
 
-- [ ] Add a concise per-skill coverage table to the validation guide or existing catalog summaries: loaded behavior, native discoverability, and optional contract/description diagnostics. Link scenario IDs; do not create a parallel manifest.
-- [ ] Map existing charter invariants and rubric clauses to their owning test purpose and observable evidence. Preserve useful composition tests without claiming they isolate each skill's independent contribution.
-- [ ] Apply the runbook's criterion/evidence table: distinguish required response accounts from tool-read evidence and targeted AR defect detection from any separately selected unsupported-finding criterion. Keep completed scores fixed.
-- [ ] Identify proposed replacements/new variants and get owner agreement before changing test contracts. Resolve the disclosed CW and DISC-08 ambiguities against charter intent, not desired outcomes.
+- [x] Add one nine-skill coverage table to the validation guide: loaded behavior material, missing native discovery and separate diagnostics, with linked scenario IDs and charter ownership.
+- [x] Map representative rubric clauses to evidence boundaries below. Preserve composition attribution and distinguish proposed workflow actions from executed work; this is not a clause-by-clause audit of all 105 rubrics.
+- [x] Apply the criterion/evidence distinction to the pilot's LP and AR gaps without rescoring completed observations.
+- [ ] Obtain owner agreement on the first proposed variants and contract dispositions below before editing test inputs. Freeze the complete criterion table for each selected new variant during Task 2, not from this representative map alone.
+
+### Representative criterion boundaries
+
+These are design mappings, not replacement rubrics or new judgments of accepted runs.
+Use the complete frozen rubric when scoring; exact presentation is fidelity unless an authenticated consumer gives it protocol ownership.
+
+| Existing criterion | Owner / ledger | Required evidence and boundary |
+|---|---|---|
+| [CW-01](../../skill-validation/scenarios/concise-writing/cw-01/rubric.md): retain four states and download/error distinctions; add nothing | CW-I1 / semantic | Compare returned prose to supplied input. Missing a state/distinction or adding unsupported meaning fails preservation. A claimed skill read is not this evidence. |
+| CW-01: remove the opener and both restatements | CW-I2 / semantic | Inspect the actual revision; retaining targeted padding fails. Shortness alone does not pass preservation. |
+| [DD-05](../../skill-validation/scenarios/disciplined-development/dd-05/rubric.md): owner resolution before planning/implementation | DD-I1 / semantic | The checkpoint response must require fresh sources, owner resolution and both blocks. It proves the decision, not executed planning or a real approval. |
+| [SSR-01](../../skill-validation/scenarios/sweeping-stale-references/ssr-01/rubric.md): read-only sweep evidence | SSR-I1–I4 / semantic | Actual reads/searches can support a proposed inventory and preserved rationale, not a completed edit or commit. Do not demand fabricated post-edit verification. |
+| [DSD-03](../../skill-validation/scenarios/dispatching-development-subagents/dsd-03/prompt.md): integration inspection/disclosure | DSD-I3/I4 / semantic | Absent diffs permit only an inspection sequence and conditional disposition. Require each commit's stat/full-diff inspection in the response and flag the undisclosed README change; do not claim actual integration. |
+| [LP-05](../../skill-validation/pilot/lp-05/current-dd/rubric.md): concrete tests and runnable verification | LP-I2 / semantic | The plan names behavioral tests and a command with usable task context; “run tests” does not suffice. Future fixtures supply framework/command/cwd; this does not mean the subject must execute absent application tests. |
+| [AR-03](../../skill-validation/pilot/ar-03/current-dd/rubric.md) clauses 1–2: account for all callers and sorting | AR-I2 / semantic | Model-authored review must account for each caller's precondition. Tool output containing all source files is loading/inspection evidence, not an explicit caller account. |
+| AR-03 clauses 3–5: benchmark, material defect and conclusion | AR-I3 and AR-I1 / respective semantic criteria | Review corrects 18% to 1.8%, explains the asymmetric ordering defect and blocks. These do not substitute for caller coverage. |
+| AR-03 extra claims / future precision criterion | AR-I1 / semantic when explicitly included in a new rubric | Existing clause 2 does not require a post-normalization output-order finding. Retain completed caveats; a future rubric can explicitly reject unsupported extra findings, but not retrofit that verdict rule onto this pair. |
+
+### Proposed first repair — owner decision pending
+
+Start with concise-writing because it has a small real prose task and the clearest documented selection/application conflation; no new task-tool capability is needed to draft these inputs.
+Prepare only these three separate scenario purposes after approval, retaining all existing packages:
+
+| New variant purpose | Reuse | Contract to preserve or separate |
+|---|---|---|
+| Loaded behavior | CW-01's supplied job-state prose and preservation/removal rubric | Explicitly load CW in current-DD; no-DD omits all DD directives/files. Compare the same actual prose task under fixed common inputs. |
+| Native discovery, positive | The same prose task, using DISC-03's shortening trigger | Remove skill names, paths, descriptions and loading hints from the task prompt; supply qualified native skills. Judge observable unprompted CW selection/body loading, not prose effectiveness under the same verdict. |
+| Native discovery, non-trigger | CW-17's response-only detailed-explanation request | Apply the charter's CW-I3 detailed-response exception without asking a routing quiz or loading CW first. Missing/ambiguous trace evidence is inconclusive, not proof of non-use. A complete observable trace supports only the scoped no-selection claim. |
+
+The non-trigger expectation follows the charter even though current CW lacks that exception; retain any resulting failure rather than weakening the test to match the implementation.
+CW-18's durable-file contrast and a separately loaded CW-I3 application test remain later work; this first increment does not complete the whole CW contract or nine-skill portfolio.
+Keep CW-09–14 as historical authoring/contract diagnostics for now: the charter proposes treating them as composition rather than core compression, and the current skill deliberately excludes authoring. Do not add an implicit CW co-selection requirement to the first behavior task.
+For a future DISC-08 derivative, propose no CW selection for the explicit mechanical-only rename: the task forbids prose revision. Preserve the accepted optional-CW verdict under its original rubric until the owner approves a new contract.
+No-DD is a behavioral control, not a discovery failure for an unavailable skill. The native-discovery variants test current-DD with target availability qualified and other skill loads disclosed.
+Approve the exact prompts, input/criterion freeze and sampling separately before collection; this proposal supplies neither run counts nor provider-call permission.
 
 ### Task 2: Prepare separate variants
 

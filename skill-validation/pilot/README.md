@@ -100,16 +100,18 @@ From the feature-worktree root, set these path abbreviations from the approved s
 For the recorded pilot, scratch is `/private/tmp/skilltest-sol-low-pilot.Lunoau` and reference is its `preflight/` directory.
 Verify that the approved scratch root, its `runs/` directory and the attempt parent directory exist before launch; otherwise stop and prepare those exact scratch paths before using the command.
 An absent TMPDIR can redirect temporary allocation outside the intended scratch package; never rely on fallback allocation.
-Create the attempt directory once without `-p`; a collision means inspect/resume existing evidence, not overwrite it.
+Before a first launch, create the attempt directory once with `mkdir "$PILOT_ATTEMPT"` (no `-p`); a collision means inspect/resume existing evidence, not overwrite it.
+For an authorized unchanged-command infrastructure retry, preserve the prior captures under the recovery procedure and reuse the original attempt path; do not repeat directory creation.
 Expand all abbreviations in the complete provider command shown for owner approval.
+The frozen-input diff must cover every declared source and evaluator mapping, including linked guidance outside `pilot/`; extend the path list below for the selected batch.
 
 Run each prelaunch check separately, require exit 0, and require Git status output to be empty:
 
 ```sh
 git status --short
-git diff --exit-code "$PILOT_INPUT_REVISION" -- skill-validation/pilot skill-validation/runner
+git diff --exit-code "$PILOT_INPUT_REVISION" -- skill-validation/pilot skill-validation/runner plans/specs/2026-09-06-skilltest-controlled-inputs-design.md
 test -d "$PILOT_SCRATCH/runs" && test -d "$(dirname "$PILOT_ATTEMPT")"
-mkdir "$PILOT_ATTEMPT"
+test -d "$PILOT_ATTEMPT"
 /opt/homebrew/bin/codex --version > "$PILOT_ATTEMPT/cli-version.txt" 2> "$PILOT_ATTEMPT/version-stderr.txt"
 /usr/bin/shasum -a 256 /opt/homebrew/bin/codex > "$PILOT_ATTEMPT/cli-sha256.txt"
 test -s "$PILOT_REFERENCE/cli-version.txt" && test -s "$PILOT_REFERENCE/cli-sha256.txt"
@@ -136,7 +138,7 @@ Final fixture inventories are not prelaunch evidence, and absence of a visible v
 ## Scoring and handoff
 
 Before collecting a new scenario or rubric revision, freeze a short evaluator-only table with one row per criterion: criterion/rubric reference, owning invariant and ledger, required observable evidence, and pass/fail boundary.
-Use the existing rubric's location or its linked runbook section; do not add a scoring schema or duplicate the table in every worksheet.
+Prefer the existing rubric's location so its hash covers the mapping; a linked runbook section must also be frozen and included in the prelaunch diff. Do not add a scoring schema or duplicate the table in every worksheet.
 Distinguish identifying a defect, explicitly accounting for each caller, and avoiding unsupported extra findings; include each only when that is a declared test obligation.
 Specify whether evidence is an action in the trace, model-authored response, or saved artifact; a file appearing in tool output does not itself prove the response explains its contents.
 Use the same interpretation across conditions; do not invent extra requirements while scoring.
@@ -177,7 +179,7 @@ Apply the [failure/drift policy](../../plans/specs/2026-09-06-skilltest-controll
 
 - Required control, input or CLI provenance missing/drifted: stop; retain affected evidence and qualify the changed boundary before continuing.
 - Post-run contamination: retain/explain and exclude from valid comparison evidence, without assigning automatic skill FAIL.
-- Understood infrastructure-only failure with no evaluable response: record INFRA_RETRY; move prior captures into a unique retry-evidence directory, update references, capture fresh CLI provenance, then retry only the unchanged approved command, including redirections.
+- Understood infrastructure-only failure with no evaluable response: record INFRA_RETRY; preserve all prior command/CLI captures in a unique retry-evidence directory and update their summary links before reusing the original attempt path. Verify the move succeeded and capture destinations are absent, then repeat all prelaunch checks and retry only the unchanged approved command, including redirections. Retain the prior bundle and a separate row for each attempt.
 - Evaluable response plus cleanup failure: preserve it and stop for recovery/owner review; no automatic retry.
 - Interruption: use the retained bundle's runner.log, not a newest-path guess, to resolve its exact private-runtime path beneath the approved scratch runs directory.
 

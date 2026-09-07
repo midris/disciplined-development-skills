@@ -6,7 +6,7 @@
 The initial four observations and six separately approved extension observations are scored and retained in scratch, without provider retries or unresolved cleanup.
 No-DD/current-DD real qualification and the extension's affected provider-free qualification are complete; the documented reuse decision required no additional paid qualification call.
 Stop for owner review: no further provider invocation, fixture revision/recollection, effectiveness campaign, discovery coverage work or skill edit is authorized by these completed calls.
-The current extension handoff and evidence pointers are in Task 6 below; earlier task verification records describe their respective completed units.
+The extension evidence pointers are in Task 6; the owner's subsequent request to continue authorizes the bounded documentation mapping in Task 7, not scenario changes or provider calls.
 
 **Goal:** Exercise one agent-led preparation, execution, scoring and handoff workflow, not collect effectiveness estimates.
 **Architecture:** Preserve the one-run runner and config schema; add only Codex runtime controls and a worksheet field, then exercise them through one written runbook.
@@ -211,8 +211,21 @@ This documentation unit does not authorize another batch, alter completed fixtur
 - [x] Update the routine runbook, design authority and deferred-plan pointers; remove duplicated per-run narratives from this plan and the extension summary while preserving approvals and evidence.
 - [x] Review all five changed repository documents and the scratch summary; reconcile approval/status references and verify protected evidence/inputs. All 106 local links resolve; hooks pass 263 tests with three skips and `git diff --check` passes. Runner verification is reused from the unchanged `17f0e90` checkpoint (231 passing tests). Review was inline because no no-write-tool reviewer type is available.
 
-Next checkpoint: owner review of this documentation unit, then explicit selection of a bounded deferred catalog-design task before formal effectiveness collection.
+The owner's subsequent review-and-continue request advances to Task 7 below.
 No runner expansion, additional process spike, provider run, Claude pilot or rewritten-skill comparison is included.
+
+## Task 7: Map catalog purposes and propose the first repair
+
+Scope: the mapping portion of [catalog Task 1](deferred/2026-09-07-skilltest-discovery-behavior-catalog-separation.md#task-1-map-purposes-without-moving-the-catalog), using the charter, existing summaries and representative prompts/rubrics.
+Keep one coverage table in `skill-validation/README.md`; retain the repair proposal in the existing deferred plan rather than creating another manifest or plan.
+This authorizes documentation only, not the whole catalog program, test-contract changes, provider commands or promotion of pilot evidence into accepted results.
+
+- [x] Re-review the five workflow documents and scratch summary; clarify retry-directory reuse and include linked evaluator guidance in the frozen-input check. Completed evidence is unchanged.
+- [x] Publish the nine-skill purpose map and representative criterion/evidence boundaries; distinguish actual artifacts from hypothetical workflow answers.
+- [x] Propose three separate CW purposes for owner agreement before preparing variants; keep unresolved authoring diagnostics and further catalog repairs deferred.
+- [x] Verify 156 local links/anchors, the 105-config native-target inventory, protected inputs and retained evidence/commands; hooks pass 263 tests with three skips. Review completed inline with no remaining blocking findings; runner verification is reused because its code/environment are unchanged.
+
+Next checkpoint: owner review of the proposed first repair; remaining catalog implementation and effectiveness sampling stay deferred.
 
 ## Approval and verification checkpoints
 
