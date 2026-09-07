@@ -3,10 +3,10 @@
 > **For agentic workers:** REQUIRED SUB-SKILL: Use `superpowers:executing-plans` task by task, stopping at the review checkpoints below.
 
 **Status:** Tasks 1–2 are complete following the owner's requests to continue.
-Task 3's runbook/fixture preparation and minimal DR-02/LP-01 four-observation scope are owner-approved and in progress.
-All provider calls remain behind exact-command approval; no-DD and current-DD real qualification each passed in one approved attempt, and no pilot observations have run.
+Task 3's four owner-approved observations are complete and scored; the pilot is at the owner-review checkpoint.
+No-DD and current-DD qualification each passed once; all four separately approved observation commands completed without retries or cleanup failures.
 The owner separately authorized the completed preparatory timeout-test repair described below.
-The two planned real qualification calls and every observation command require separate exact-command approval after their preparation gates pass.
+The completed calls do not authorize further provider invocations, effectiveness collection or skill edits.
 
 **Goal:** Exercise one agent-led preparation, execution, scoring and handoff workflow, not collect effectiveness estimates.
 **Architecture:** Preserve the one-run runner and config schema; add only Codex runtime controls and a worksheet field, then exercise them through one written runbook.
@@ -101,10 +101,10 @@ Results remain scratch-only through owner review; use one Markdown summary linki
 - [x] Write the short runbook with concrete preparation/version/run/worksheet commands, working directories, frozen-input checks, output paths and owner checkpoints. Use the existing config fixture targets for native `.agents/skills/` placement; no installation script or manifest format. Preserve pre-run input sources separately from post-run files and score against the frozen rubric.
 - [x] Document provider-free qualification using the implemented runtime setup, installed CLI inspection and the accepted spike's contamination-control method. Verify no-DD/current native catalogs and declared common inputs before model calls; keep raw evidence and explicit normalization limits in scratch. Do not convert the spike into a generic production inventory parser. If the selected controls cannot be proved, stop and report the precise gap.
 - [x] Prepare two real qualification commands, one per condition, using the pilot's frozen skills/tools: require supplied-source reads and an evidence-directory write in both; require the intended research/plan skill loads in current-DD and the declared writing-plans load in both. Keep these setup checks separate from behavioral scoring. Show each complete command, provider/model/effort and wait for explicit approval before invoking it.
-- [ ] After qualification passes, request exact-command approval for the four observation runs: DR-02 first, then LP-01; each runs no-DD once, then current-DD once, in fresh runtimes. This exercises the minimal workflow; repetitions and order balancing are deferred to later campaign design. Capture CLI version immediately before each run from the same executable. Stop on validation failure or drift; infrastructure-only unchanged-command retries follow the existing policy and are separately recorded.
-- [ ] Complete a worksheet for each judgeable observation, including FAILs. Inspect saved files and observable reads rather than trusting the final answer's assertions. Record missing writes as task fidelity when write access is established; do not confuse model behavior with a failed setup control.
-- [ ] Exercise handoff and failure/recovery bookkeeping using retained or synthetic evidence where possible, without deliberately spending more provider calls to manufacture failures. The summary identifies completed/planned runs, exclusions, deviations and the next resumable action.
-- [ ] Present the complete pilot record and practical runbook findings, then stop for owner review. Do not expand the matrix, author skill edits, promote pilot observations into an effectiveness baseline, or clean up evidence automatically.
+- [x] After qualification passes, request exact-command approval for the four observation runs: DR-02 first, then LP-01; each runs no-DD once, then current-DD once, in fresh runtimes. This exercises the minimal workflow; repetitions and order balancing are deferred to later campaign design. Capture CLI version immediately before each run from the same executable. Stop on validation failure or drift; infrastructure-only unchanged-command retries follow the existing policy and are separately recorded.
+- [x] Complete a worksheet for each judgeable observation, including FAILs. Inspect saved files and observable reads rather than trusting the final answer's assertions. Record missing writes as task fidelity when write access is established; do not confuse model behavior with a failed setup control.
+- [x] Exercise handoff and failure/recovery bookkeeping using retained or synthetic evidence where possible, without deliberately spending more provider calls to manufacture failures. The summary identifies completed/planned runs, exclusions, deviations and the next resumable action.
+- [x] Prepare the complete pilot record and practical runbook findings for owner review, then stop. Do not expand the matrix, author skill edits, promote pilot observations into an effectiveness baseline, or clean up evidence automatically.
 
 Preparation is at [the pilot runbook](../skill-validation/pilot/README.md), with four behavioral configs and two qualification configs.
 All nine DD files match main `ca14bbe24f8aea957dbcfeece3511226e929243d`; both conditions use the same frozen writing-plans and reviewer-guidance files from Superpowers 6.3.0.
@@ -121,6 +121,19 @@ The approved no-DD qualification passed in 42.17 seconds: all six required reads
 The separately approved current-DD qualification passed in 40.29 seconds: all eight required full reads were observed, the evidence write was correct, all fifteen supplied files remained unchanged, and exact private-runtime removal was verified without a cleanup error.
 Both calls used Codex / gpt-5.6-sol / low and CLI 0.153.4 with the same verified digest; neither required a retry or collected an effectiveness observation.
 Scratch `attempts/q-no-dd/result.md` and `attempts/q-current-dd/result.md` record run IDs, tied CLI provenance, raw traces, audits and cleanup evidence beneath `/private/tmp/skilltest-sol-low-pilot.Lunoau/`.
+
+### Pilot handoff — owner acceptance pending
+
+All four observations used clean input revision `e537c03909eb2b4f1986e4170a3f1b662d29a719`, Codex / gpt-5.6-sol / low and CLI 0.153.4 with matching per-run executable digests.
+DR-02 passed both conditions; current-DD also has a non-blocking task-fidelity failure for extra progress narration.
+LP-01 failed without DD for implementation/test bodies and passed with current DD for its prose contract and single-PR boundary.
+Both LP runs attempted to read application source absent from the response-only fixture, then continued; no declared input was missing and both plans remain judgeable.
+The four calls completed without retries, input changes or unresolved runtime cleanup; worksheet metadata/rubric checks passed.
+Scratch `summary.md` links every result, worksheet and audit; `recovery-handoff-walkthrough.md` records the retained/hypothetical recovery exercise, not a live interruption test.
+No runner change was needed to exercise the procedure.
+Possible later clarification: state explicitly that LP supplies task facts rather than application source; preserve current inputs and observations unchanged.
+These single observations are not effectiveness estimates or formal authoring RED/GREEN acceptance.
+Stop here for owner review; no additional testing or rewrite work is authorized by pilot completion.
 
 ## Approval and verification checkpoints
 

@@ -2,7 +2,7 @@
 
 **Status:** Live design discussion, not an approved implementation specification.
 Exceptions: the owner authorized Tasks 1–2 of the [implementation plan](../2026-09-06-skilltest-sol-low-pilot.md): the worksheet/backfill unit and Codex invocation/runtime controls are complete with offline verification; both separately approved pilot read/write qualifications passed, with limits and evidence recorded in that plan.
-The owner also approved Task 3 preparation for DR-02/LP-01 with four planned observations; provider commands retain the separate approval gates below.
+The owner separately approved all four Task 3 DR-02/LP-01 observation commands; execution and scoring are complete at the [pilot handoff](../2026-09-06-skilltest-sol-low-pilot.md#pilot-handoff--owner-acceptance-pending), awaiting owner review.
 The owner accepted the scoped feasibility findings on 2026-09-06 and requested review of the next steps one at a time.
 The owner selected the pilot-first scope below; broader methodology decisions remain constraints for later expansion, not prerequisites to design every future workflow now.
 Apart from those implementation units, this draft does not change scoring rules or authorize provider calls or effectiveness testing.
@@ -337,11 +337,11 @@ The owner approved a runner-test boundary cleanup before qualification: determin
 Keep filesystem behavior real when it is what the test validates; do not mix simulated timeouts with incidental real-process cleanup in orchestration tests.
 The implementation plan's Task 2a tracks this test-only work; it neither changes production behavior nor authorizes real provider calls.
 
-With scoped qualification complete, resolve and present each behavioral command/evidence path for approval before execution; the scenarios, counts and order below are approved for preparation, not provider invocation.
+Scoped qualification and the four separately approved observation commands are complete; review the pilot handoff before any further execution.
 Use existing charter criteria and worksheet judgments; do not ask the owner to restate skill purpose or success criteria.
 Broad sampling, detailed edit/regression coverage, Claude integration and reorganization are explicitly deferred, not missing pilot requirements.
 
-### Approved pilot scenario set and run count — provider calls pending
+### Approved pilot scenario set and run count
 
 Use two fresh pilot variants, not replacements for their source packages or accepted results:
 
