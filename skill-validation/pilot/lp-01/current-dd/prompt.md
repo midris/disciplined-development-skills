@@ -3,6 +3,8 @@ Do not edit files, change git state, inspect anything outside the supplied fixtu
 Read `{{fixture_dir}}/.agents/skills/writing-plans/SKILL.md` completely and follow it as binding guidance.
 Read `{{fixture_dir}}/.agents/skills/lean-plan-writing/SKILL.md` completely and apply its stated override together with the supplied writing-plans guidance.
 Read `{{fixture_dir}}/context/task.md`.
+Only task facts are supplied; the application source and tests named in the task are not present.
+Plan from those facts without searching for application files or assuming an unverified implementation.
 
 Write a compact implementation plan for the supplied JSON report CLI change.
 Return only the plan.

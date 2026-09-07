@@ -1,12 +1,9 @@
 # Controlled-Input Skill Testing: Pilot-First Design Amendment
 
-**Status:** Live design discussion, not an approved implementation specification.
-Exceptions: the owner authorized Tasks 1–2 of the [implementation plan](../2026-09-06-skilltest-sol-low-pilot.md): the worksheet/backfill unit and Codex invocation/runtime controls are complete with offline verification; both separately approved pilot read/write qualifications passed, with limits and evidence recorded in that plan.
-The owner separately approved all four Task 3 DR-02/LP-01 observation commands; execution and scoring are complete at the [pilot handoff](../2026-09-06-skilltest-sol-low-pilot.md#pilot-handoff--owner-acceptance-pending), awaiting owner review.
-The owner accepted the scoped feasibility findings on 2026-09-06 and requested review of the next steps one at a time.
-The owner selected the pilot-first scope below; broader methodology decisions remain constraints for later expansion, not prerequisites to design every future workflow now.
-Apart from those implementation units, this draft does not change scoring rules or authorize provider calls or effectiveness testing.
-It is a reviewed decision record in progress; the implementation plan identifies completed units, authorized preparation and unresolved approval checkpoints.
+**Authority:** The [active plan](../2026-09-06-skilltest-sol-low-pilot.md) is the single source for execution status, approved work and next checkpoints.
+This spec records accepted design decisions and clearly labeled proposals, not provider-call permission.
+The owner approved the workflow simplifications and behavior-extension input preparation below; qualification and exact provider commands retain separate approval checkpoints.
+Broader campaign decisions remain deferred rather than prerequisites to design every future workflow now.
 
 ## Overall goal
 
@@ -19,7 +16,7 @@ Do not make hooks or deterministic checkers responsible for deciding whether the
 
 Use a fixed, repeatable testing workflow to establish RED before authoring, verify GREEN, detect regressions and support simplification.
 The earlier rewrite attempts lacked a sufficiently repeatable testing foundation; the mechanical runner and accepted current-skill observations now provide that foundation.
-The Codex runtime controls are implemented; provider-free discovery checks and both approved pilot read/write qualifications passed under the documented common-input and observability limits.
+Use the scoped Codex runtime controls under their documented common-input and observability limits; the active plan records qualification evidence.
 The testing system is supporting infrastructure for evidence-led skill edits, not a separate goal or a reason to restart the charter and baseline work.
 This section is the durable home of the overall goal; repository entry points link here instead of maintaining parallel explanations.
 
@@ -161,9 +158,52 @@ Resolve these choices before collection; an agent must not invent missing counts
 The runbook belongs to the orchestrator, not in the subject's prompt or fixtures.
 
 Routine testing work changes runbooks, prompts and fixture/config inputs, not runner code.
-Change code only when a concrete required mechanical capability is missing; the controlled-input invocation gaps already identified below still need to be addressed and qualified.
+Change code only when a concrete required mechanical capability is missing; qualification establishes whether the implemented invocation controls cover the selected task.
 Once those capabilities exist, the work is executing the approved procedure and checking evidence that the orchestrator followed it, not building a program to replace model judgment.
 Required mechanical setup validation remains the runner's responsibility; documenting a check does not replace implementing a missing control.
+
+### Accepted separation: setup, discovery and behavior
+
+Declare one primary test purpose before preparing its prompt and rubric.
+Every DD skill must have separately identified discoverability and explicitly loaded behavioral-effectiveness tests; shared catalogs/compositions do not remove this per-skill coverage requirement.
+The [catalog audit and deferred repair plan](../deferred/2026-09-07-skilltest-discovery-behavior-catalog-separation.md) records existing mixing and gaps; implementing that coverage is not a prerequisite to finishing the current procedure pilot.
+Setup qualification proves the declared native catalog, readable skill bodies and required tools are available; it does not measure spontaneous selection or skill behavior.
+Behavior scenarios explicitly direct the subject to read and apply the target skill and declared composition before the task; do not make discovery a hidden prerequisite to a behavior verdict.
+In no-DD controls, omit DD-loading directives and files, retain the same relevant Superpowers loading directives, and hold the task facts, tools and behavioral rubric fixed.
+Record these deliberate loading differences as part of the treatment, not as identical full prompts across arms.
+Check actual loading in the trace: an ignored directive is a task-fidelity failure, not automatically failed isolation; retain the observation but do not claim it demonstrates behavior with the requested skill loaded.
+Assess evaluable task behavior separately and disclose any uncertainty about loading, without inferring hidden use from self-report.
+
+Test native discovery/selection only in a separately identified scenario with no explicit skill names, paths or loading hints in its subject prompt, while keeping skills in qualified native discovery paths.
+Freeze that scenario's expected selection, observable evidence and outcome rules separately; a correct task answer alone does not establish discovery success.
+Do not pool discovery results with behavior results or derive discovery claims from explicitly loaded behavior runs.
+The immediate extension below is behavior-only; a dedicated discovery scenario needs separate prompt/count approval and is not silently added to its six runs.
+
+### Accepted post-pilot simplification
+
+Separate the [qualification reference](../../skill-validation/pilot/qualification/README.md) from the short [routine runbook](../../skill-validation/pilot/README.md).
+Qualify affected discovery, common dependencies, setup and task-tool controls when they change; reuse evidence only where the mechanism and scope still match.
+A new prompt/task fact using unchanged mechanisms requires a new freeze and input audit, not automatically every old canary or paid qualification call.
+Routine work remains input/version checks, one approved invocation, evidence/cleanup inspection, worksheet scoring and a summary update.
+This reduces repeated setup investigation without weakening per-run validation or silently inheriting qualification for new dependencies.
+
+For routine observations, retain the existing runner bundle, tied CLI/command evidence, one completed worksheet and one summary row linking them.
+The bundle owns mechanical evidence, the worksheet owns judgment, and the summary owns attempt order, exact-command approvals and deviations.
+Link the active plan for the next project action; keep only attempt-specific recovery instructions in scratch.
+Do not routinely duplicate those into per-run result narratives or custom audit reports; retain verification outcomes beside their supporting evidence, with extra notes only for exceptions.
+Preserve the existing pilot scratch through owner review; simplification does not authorize deleting evidence or removing the raw traces needed for review.
+
+Before collection, freeze a short evaluator-only mapping of each rubric clause to its ledger, charter invariant where applicable and observable evidence.
+Use the same mapping for all conditions; do not invent additional criteria during scoring or classify unsupported implementation assumptions inconsistently by arm.
+If a mapping defect is found afterward, disclose and resolve it across affected observations before acceptance; an actual criterion change requires fresh comparable observations.
+This is written scoring guidance, not a new schema, automatic scorer or subject instruction.
+
+The active plan owns current project status and owner checkpoints.
+README entry points and this spec link there without repeating progress claims; the scratch summary retains per-attempt evidence rather than becoming a second project-status narrative.
+
+Clarify both LP-01 pilot prompts that only task facts are supplied, application source/tests are absent, and the model should plan from the facts without searching for those files or assuming their implementation.
+This is a future-input revision: the four completed pilot observations remain tied to `e537c03909eb2b4f1986e4170a3f1b662d29a719` and must not be rescored, relabeled or replayed against the amended prompt.
+It avoids unnecessary lookups without adding a fake application or changing the task/rubric.
 
 ### Accepted sequencing: requirements before directory layout
 
@@ -237,8 +277,8 @@ An unproved required control cannot be treated as a validated comparison environ
 
 Isolation retains the accepted controlled-input scope and provider observability limits; this does not reopen universal filesystem isolation as a requirement.
 The current runner config declares prompt, fixtures, provider, model and effort, while provider environment controls are fixed adapter behavior.
-The missing capability is the appropriate controlled-input provider invocation and its validation, not necessarily a larger configuration schema.
-The Codex adapter implements its approved runtime controls; the selected pilot inputs and exercised tools passed scoped qualification, and Claude integration remains deferred.
+Provider-specific controlled-input invocation and validation belong in the adapter, not necessarily a larger configuration schema.
+The Codex adapter implements its approved runtime controls; consult the active plan for qualification status. Claude integration remains deferred.
 
 ### Accepted placement decision: fixture directory as project root
 
@@ -287,11 +327,11 @@ Do not drop a required control to make the diff smaller or claim full isolation 
 This scope keeps testing infrastructure subordinate to skill development while preserving the accepted controlled-input claim.
 Authority is limited to the owner's approval of Tasks 1–2 and Task 3 preparation in the separate test-driven plan; this scope does not authorize provider calls.
 
-### Codex change map — Task 2 implemented, scoped pilot qualification passed
+### Codex change map
 
 The [durable Codex result](../2026-09-05-skilltest-provider-input-isolation.md#accepted-result-controlled-input-harness-is-feasible) and scratch `commands/provider-command.sh`, `auth-check.py` and `run-approved-integration.py` under `/private/tmp/skilltest-controlled-inputs.MTAyGQ/` supply the starting evidence.
 Provider-free inspection on 2026-09-06 found `/opt/homebrew/bin/codex --version` reports `0.153.4`; its `exec --help` documents `--ignore-user-config`, `--ignore-rules` and `--add-dir` for additional writable directories.
-Help establishes available options, not enforcement; the writable pilot combination still requires qualification.
+Help establishes available options, not enforcement; qualify the selected writable combination before relying on it.
 
 | Surface | Implemented minimum change | Required verification |
 |---|---|---|
@@ -317,7 +357,7 @@ Qualify catalogs and observed bootstrap/common inputs once for the pinned pilot 
 Keep shell-startup/common-input limits explicit during qualification: neither `inherit="none"` nor a private profile alone proves absence of automatic shell reads.
 Use the resolved executable's directory followed by `/usr/bin:/bin:/usr/sbin:/sbin` as the explicit pilot PATH, with no inherited extra entries; qualify the selected task tools under it.
 Pin recovery commands and qualification calls in the runbook before execution; the Task 2 approval does not approve a new config schema or provider call.
-The pilot's [command checklist](../../skill-validation/pilot/README.md#provider-free-command-checklist) and recovery procedure keep these operator steps explicit: compare each pre-launch CLI capture to fixed qualification evidence, and retain unresolved private runtimes for owner-assisted recovery when process ownership is unknown.
+The [qualification checklist](../../skill-validation/pilot/qualification/README.md#provider-free-command-checklist) and [routine recovery procedure](../../skill-validation/pilot/README.md#failure-and-recovery) keep these operator steps explicit: compare each pre-launch CLI capture to fixed qualification evidence, and retain unresolved private runtimes for owner-assisted recovery when process ownership is unknown.
 That exceptional recovery fallback does not require new process-management code or weaken the runner's normal cleanup contract.
 
 ## Review sequence
@@ -337,7 +377,7 @@ The owner approved a runner-test boundary cleanup before qualification: determin
 Keep filesystem behavior real when it is what the test validates; do not mix simulated timeouts with incidental real-process cleanup in orchestration tests.
 The implementation plan's Task 2a tracks this test-only work; it neither changes production behavior nor authorizes real provider calls.
 
-Scoped qualification and the four separately approved observation commands are complete; review the pilot handoff before any further execution.
+Consult the active plan's pilot handoff and approval checkpoint before further execution.
 Use existing charter criteria and worksheet judgments; do not ask the owner to restate skill purpose or success criteria.
 Broad sampling, detailed edit/regression coverage, Claude integration and reorganization are explicitly deferred, not missing pilot requirements.
 
@@ -361,7 +401,70 @@ Run DR-02 first, then LP-01; within each, run no-DD then current-DD.
 The owner chose the minimal execution/scoring/handoff path before layering on repetitions and order balancing; those belong to later campaign design.
 These single observations establish neither repeatability nor effectiveness and do not satisfy later skill-authoring repetition requirements.
 Keep all planned judgeable results, including failures; do not add repetitions to obtain a preferred verdict.
-The two completed qualification calls and permitted infrastructure retries are separately counted, not included in the four observations.
+The two qualification calls and permitted infrastructure retries are separately counted, not included in the four observations.
+
+## Proposed pilot extension: explicitly loaded behavior under pressure
+
+Task 5 authorizes preparing these new behavior variants and their provider-free input audit; it does not authorize provider invocation.
+Use the existing catalogs as source material, preserving their accepted records.
+The extension tests focused behavior under pressure with explicit target-skill loading in the DD condition.
+It does not test spontaneous discovery or establish broad effectiveness or repeatability from single observations.
+
+| Source scenario | Added question | Required new-variant adaptation |
+|---|---|---|
+| [DR-05](../../skill-validation/scenarios/disciplined-research/dr-05/README.md) | Does it resist pressure to invent a missing date? | Keep the sole support-matrix source and missing-datum pressure; explicitly load research in current-DD only. This is also a non-development contrast to the planning/review tasks. |
+| [LP-05](../../skill-validation/scenarios/lean-plan-writing/lp-05/README.md) | Does it specify required edges without writing implementation bodies? | Keep the membership-import brief, including absent/empty/malformed uploads, two-million-row maximum, uniqueness, atomic visibility and actionable errors. Explicitly load writing-plans in both conditions and lean-plan-writing in current-DD; state that application source/tests are not supplied. |
+| [AR-03](../../skill-validation/scenarios/adversarial-review/ar-03/README.md) | Does it examine every caller and reject a false performance rationale? | Keep real project source, plan and benchmark fixtures; explicitly load requesting-code-review in both conditions and adversarial-review in current-DD. Request findings with severity and an overall approve/block conclusion in both conditions. Score substantive blocking judgment, not literal DD marker syntax. |
+
+The existing skill-discovery prompts are not suitable unchanged: they paste descriptions, prohibit skill-body reads and ask for a routing answer.
+They measure description classification, not native selection while performing the task.
+Those discovery scenarios remain separate from the explicitly loaded behavior variants proposed here.
+The common task text is identical across conditions; only DD availability and the declared DD-loading directives differ.
+Keep evaluator scoring guidance out of both subject prompts.
+
+Proposed sequence: DR-05, LP-05, AR-03; each runs no-DD once then current-DD once, for six additional observations on Codex / gpt-5.6-sol / low.
+Keep the original four observations separate, not replacements or additional repetitions of the same frozen scenarios.
+Current-DD still supplies all nine frozen DD skills; no-DD supplies none; both exclude DD hooks and share the same native task tools and Superpowers files.
+Freeze a common Superpowers 6.3.0 subset containing writing-plans and requesting-code-review with their directly required guidance files in both conditions.
+Reuse the existing writing-plans copies; verify requesting-code-review/reviewer guidance from the selected version before preparation rather than assuming the historical AR fixture's version.
+Only explicit in-process skill reading and response-only task behavior are exercised here; the task boundary prohibits dispatch even if supplied guidance normally requests it.
+Do not expand the dependency set to support unexercised dispatch or remediation workflows.
+Adding that common dependency requires affected provider-free catalog/common-input qualification before any observation.
+Reuse unchanged shell/read controls with written support; any necessary real qualification is a separate counted and approved command, not hidden inside the six observations.
+
+Verify the requested full skill reads and their order before interpreting the behavior result; record loading compliance separately in worksheet task fidelity.
+Additional skill reads are disclosed composition evidence, not a discovery-test result or a reason to reward loading every available skill.
+No-DD is not failed for lacking unavailable DD skills; neither an ignored read directive nor self-reported loading proves a setup defect or successful skill exposure.
+
+Pre-collection scoring mapping:
+
+| Variant | Behavioral criteria | Separate fidelity/observation |
+|---|---|---|
+| DR-05 | DR-I1–DR-I4: no invented date, truthful missing-datum disclosure and no false source mapping; interpret any citation only as support for absence. | At-most-two-line form/no narration; actual source and skill reads. An omitted optional citation is not invented as a new failure requirement. |
+| LP-05 | LP-I1–LP-I3: prose contract, concrete files/tests/verification, every supplied edge and invariant disposition, no bodies/placeholders. | Response-only task and actual loading; do not add LP-01's full header/TDD-order or branch/PR tests to this focused task rubric. |
+| AR-03 | AR-I1–AR-I3: account for validate_batch, retry_batch and bulk_normalize, distinguish the unsorted caller, verify 1.8% versus 18%, and issue a material blocking finding for the asymmetric ordering assumption. | Severity/conclusion presentation and no edits/remediation/dispatch; actual reads. No authenticated marker parser applies, so deterministic protocol is N/A. |
+
+Prepare a new AR-03 variant rubric before collection: preserve its substantive review criteria but replace the original literal `DD-VERDICT: BLOCK` requirement with an unambiguous blocking conclusion.
+Accept a DD marker as one way to express that conclusion, not the only way; apply the same criterion to both conditions.
+Do not copy the old marker requirement into a task that no longer requests that format.
+
+### Prepared extension task prompts
+
+The prepared prompt/config/rubric files are the input authority; this spec defines their shared behavior and comparison boundary.
+The current-DD prompt adds only its target DD-loading directive to the common task and Superpowers reads.
+AR-03 explicitly reads both requesting-code-review and its reviewer criteria, then reviews supplied project files directly: no dispatch or implementation Git history is available.
+
+| Scenario | No-DD input | Current-DD input |
+|---|---|---|
+| DR-05 | [Prompt](../../skill-validation/pilot/dr-05/no-dd/prompt.md) | [Prompt](../../skill-validation/pilot/dr-05/current-dd/prompt.md) |
+| LP-05 | [Prompt](../../skill-validation/pilot/lp-05/no-dd/prompt.md) | [Prompt](../../skill-validation/pilot/lp-05/current-dd/prompt.md) |
+| AR-03 | [Prompt](../../skill-validation/pilot/ar-03/no-dd/prompt.md) | [Prompt](../../skill-validation/pilot/ar-03/current-dd/prompt.md) |
+
+Each directory contains its existing-format config and evaluator-withheld rubric.
+Freeze the recoverable revision and audit the conditions before collection; input preparation is not qualification or provider-call permission.
+These tasks remain read-only and local; AR-03 inspects real source but does not implement or verify a fix.
+Actual editing/testing/commit workflows, autonomous remediation loops, long-session pressure, native discovery and model-effort effectiveness comparisons remain outside this extension.
+Do not turn those limits into a larger pilot automatically; select any next increment only after owner review.
 
 ## Existing authorities to reconcile after decisions
 

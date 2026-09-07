@@ -1,0 +1,68 @@
+{
+  "schema_version": "0.2",
+  "id": "pilot-lp-05-current-dd",
+  "prompt": "prompt.md",
+  "fixtures": [
+    {
+      "source": "../../inputs/superpowers/writing-plans/SKILL.md",
+      "target": ".agents/skills/writing-plans/SKILL.md"
+    },
+    {
+      "source": "../../inputs/superpowers/writing-plans/plan-document-reviewer-prompt.md",
+      "target": ".agents/skills/writing-plans/plan-document-reviewer-prompt.md"
+    },
+    {
+      "source": "../../inputs/superpowers/requesting-code-review/SKILL.md",
+      "target": ".agents/skills/requesting-code-review/SKILL.md"
+    },
+    {
+      "source": "../../inputs/superpowers/requesting-code-review/code-reviewer.md",
+      "target": ".agents/skills/requesting-code-review/code-reviewer.md"
+    },
+    {
+      "source": "../../inputs/dd/adversarial-review-loop/SKILL.md",
+      "target": ".agents/skills/adversarial-review-loop/SKILL.md"
+    },
+    {
+      "source": "../../inputs/dd/adversarial-review/SKILL.md",
+      "target": ".agents/skills/adversarial-review/SKILL.md"
+    },
+    {
+      "source": "../../inputs/dd/concise-writing/SKILL.md",
+      "target": ".agents/skills/concise-writing/SKILL.md"
+    },
+    {
+      "source": "../../inputs/dd/disciplined-development/SKILL.md",
+      "target": ".agents/skills/disciplined-development/SKILL.md"
+    },
+    {
+      "source": "../../inputs/dd/disciplined-research/SKILL.md",
+      "target": ".agents/skills/disciplined-research/SKILL.md"
+    },
+    {
+      "source": "../../inputs/dd/dispatching-development-subagents/SKILL.md",
+      "target": ".agents/skills/dispatching-development-subagents/SKILL.md"
+    },
+    {
+      "source": "../../inputs/dd/lean-plan-writing/SKILL.md",
+      "target": ".agents/skills/lean-plan-writing/SKILL.md"
+    },
+    {
+      "source": "../../inputs/dd/sweeping-stale-references/SKILL.md",
+      "target": ".agents/skills/sweeping-stale-references/SKILL.md"
+    },
+    {
+      "source": "../../inputs/dd/writing-explicit-rationale/SKILL.md",
+      "target": ".agents/skills/writing-explicit-rationale/SKILL.md"
+    },
+    {
+      "source": "../../inputs/tasks/lp-05/context/import-brief.md",
+      "target": "context/import-brief.md"
+    }
+  ],
+  "execution": {
+    "provider": "codex",
+    "model": "gpt-5.6-sol",
+    "effort": "low"
+  }
+}

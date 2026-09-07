@@ -1,0 +1,1 @@
+Explicit absent/empty, malformed, two-million/outscale, uniqueness, atomic visibility, and actionable-error dispositions; behavioral tests and runnable verification, concrete files, prose implementation, no bodies or placeholders. Upstream TDD ordering is scored once in `LP-01`, not duplicated here

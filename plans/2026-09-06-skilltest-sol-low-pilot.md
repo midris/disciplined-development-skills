@@ -7,6 +7,8 @@ Task 3's four owner-approved observations are complete and scored; the pilot is 
 No-DD and current-DD qualification each passed once; all four separately approved observation commands completed without retries or cleanup failures.
 The owner separately authorized the completed preparatory timeout-test repair described below.
 The completed calls do not authorize further provider invocations, effectiveness collection or skill edits.
+The owner approved the five post-pilot workflow simplifications in Task 4 and proceeding with Task 5's three-scenario behavior-input preparation.
+Extension qualification and exact provider commands remain separate checkpoints; no new model call is authorized.
 
 **Goal:** Exercise one agent-led preparation, execution, scoring and handoff workflow, not collect effectiveness estimates.
 **Architecture:** Preserve the one-run runner and config schema; add only Codex runtime controls and a worksheet field, then exercise them through one written runbook.
@@ -18,7 +20,7 @@ The completed calls do not authorize further provider invocations, effectiveness
 - Work only in `.worktrees/skilltest-input-isolation-spike` on `spike/skilltest-input-isolation`; preserve main and the unrelated rewrite worktree.
 - Start with Codex / gpt-5.6-sol / low. Medium is a justified, separately identified diagnostic under exact-command approval, not an automatic retry.
 - Current-DD supplies all nine DD skills; no-DD supplies none. Freeze the same declared Superpowers and ordinary tools across both, with no DD hooks.
-- Do not edit skills or existing scenario inputs, rescore accepted baselines, or replace their result/final/evidence files. The sole historical exception is the CLI-version worksheet metadata backfill.
+- Do not edit skills or source scenario packages, rescore accepted baselines, or replace their result/final/evidence files. The sole historical exception is the CLI-version worksheet metadata backfill. Task 4 separately authorizes a future-input clarification to the two LP-01 pilot prompts, without changing completed observations.
 - Keep the existing config schema and result shape. The only proposed error-enum addition is `PROVIDER_CLEANUP_FAILED`; preserve Claude invocation behavior.
 - No generic inventory/status framework, campaign engine, automatic scorer, hooks work, directory migration, candidate skill authoring or effectiveness campaign.
 - Never print or retain credentials. Keep private runtime outside retained bundles, and never modify shared authentication or host sessions.
@@ -97,7 +99,7 @@ These are new pilot inputs in the existing validation tree, not moved or replace
 Results remain scratch-only through owner review; use one Markdown summary linking each run and its worksheets.
 
 - [x] Prepare separate current/no-DD variants from DR-02 and LP-01 as specified in the design. Both DR-02 prompts explicitly request the evidence-note write and permit no other edits; LP-01 remains response-only. Keep semantic rubrics unchanged and document the added file-output check as task fidelity. Permission alone is not a request whose omission can be scored.
-- [x] Freeze the nine current DD skills from the recorded main revision and the required Superpowers 6.3.0 package files, including writing-plans and its referenced guidance. Inventory exact supplied files in the runbook and configs, not references to mutable installed paths. Use the same Superpowers files in both conditions and audit valid loading instructions without leaking DD descriptions into no-DD.
+- [x] Freeze the nine current DD skills from the recorded main revision and the required Superpowers 6.3.0 package files, including writing-plans and its referenced guidance. Use configs as the exact file/target inventory, linked from the runbook, not references to mutable installed paths. Use the same Superpowers files in both conditions and audit valid loading instructions without leaking DD descriptions into no-DD.
 - [x] Write the short runbook with concrete preparation/version/run/worksheet commands, working directories, frozen-input checks, output paths and owner checkpoints. Use the existing config fixture targets for native `.agents/skills/` placement; no installation script or manifest format. Preserve pre-run input sources separately from post-run files and score against the frozen rubric.
 - [x] Document provider-free qualification using the implemented runtime setup, installed CLI inspection and the accepted spike's contamination-control method. Verify no-DD/current native catalogs and declared common inputs before model calls; keep raw evidence and explicit normalization limits in scratch. Do not convert the spike into a generic production inventory parser. If the selected controls cannot be proved, stop and report the precise gap.
 - [x] Prepare two real qualification commands, one per condition, using the pilot's frozen skills/tools: require supplied-source reads and an evidence-directory write in both; require the intended research/plan skill loads in current-DD and the declared writing-plans load in both. Keep these setup checks separate from behavioral scoring. Show each complete command, provider/model/effort and wait for explicit approval before invoking it.
@@ -111,8 +113,7 @@ All nine DD files match main `ca14bbe24f8aea957dbcfeece3511226e929243d`; both co
 The first provider-free catalog check found six common entries and exactly nine DD additions; normalized common prompt content and 60 bootstrap file hashes matched.
 Provider-free gates pass: the four accepted contamination controls were reconciled to the private-profile/project-boundary setup, loopback positive/denied controls passed under host execution, and the selected shell/file tools read the qualification fixtures successfully.
 Scratch `preflight/reconciliation.md` records exact evidence references, CLI version/digest, cleanup, and the limits of debug inspection and untraced login-shell startup reads.
-The runbook now pins the retained-evidence inspection and remaining provider-free commands, requires version/digest comparison before each launch, and stops for owner-assisted recovery when process ownership cannot be established.
-These documentation repairs do not complete qualification or authorize a provider call.
+The [qualification reference](../skill-validation/pilot/qualification/README.md) pins retained-evidence inspection and provider-free checks; the routine runbook requires version/digest comparison before each launch and owner-assisted recovery when process ownership cannot be established.
 The prior mixed Git-timeout test is replaced by deterministic setup-failure checks and explicit real-process smoke coverage in Task 2a; its original OS failure cause remains unconfirmed.
 Task 2a verification passes; scratch `runbook-review-verification.md` preserves the original error and retained dummy-runtime path without claiming a production fix.
 The test-only review separated CLI diagnostic formatting into the guarded unit group and restored cleanup-error logging coverage at the provider adapter boundary.
@@ -131,9 +132,59 @@ Both LP runs attempted to read application source absent from the response-only 
 The four calls completed without retries, input changes or unresolved runtime cleanup; worksheet metadata/rubric checks passed.
 Scratch `summary.md` links every result, worksheet and audit; `recovery-handoff-walkthrough.md` records the retained/hypothetical recovery exercise, not a live interruption test.
 No runner change was needed to exercise the procedure.
-Possible later clarification: state explicitly that LP supplies task facts rather than application source; preserve current inputs and observations unchanged.
+Task 4 clarifies future LP-01 inputs while preserving this recorded input revision and all four observations.
 These single observations are not effectiveness estimates or formal authoring RED/GREEN acceptance.
-Stop here for owner review; no additional testing or rewrite work is authorized by pilot completion.
+Owner acceptance remains pending; approved documentation refinement below does not authorize additional model testing or rewrite work.
+
+## Task 4: Simplify the routine and propose a bounded extension
+
+**Files:** the governing spec, this plan, validation/pilot READMEs, `pilot/qualification/README.md` and both `pilot/lp-01/*/prompt.md` files.
+No runner, skill, source-scenario or accepted-evidence changes; preserve all existing scratch.
+
+- [x] Separate change-triggered qualification from routine input/version checks, invocation, evidence/cleanup inspection, scoring and handoff.
+- [x] Keep the ordinary record to the existing bundle, CLI/command captures, one worksheet and one summary row; extra narratives only for exceptions.
+- [x] Freeze evaluator-only rubric/ledger interpretations before new collection; keep the same interpretation across conditions.
+- [x] Clarify future LP-01 prompts symmetrically: task facts only, no application source or assumed implementation; do not relabel the completed runs.
+- [x] Make this plan the single current project-status home; link it from the spec/README and retain attempt evidence in scratch.
+- [x] Propose DR-05, LP-05 and AR-03 behavior variants and exact loading prefixes/task prompts in the [spec](specs/2026-09-06-skilltest-controlled-inputs-design.md#proposed-pilot-extension-explicitly-loaded-behavior-under-pressure), without creating executable variants or invoking providers.
+- [x] Review the amended spec/runbook against the charter and source rubrics, address findings, and run provider-free verification.
+- [x] Present the proposed scenarios and exact prompts for owner review, then stop before extension preparation.
+
+The proposal is six additional observations: each scenario once without DD and once with current DD, Codex / gpt-5.6-sol / low.
+It adds explicitly loaded missing-evidence/edge-case pressure and real-code review; it does not test discovery, establish effectiveness, exercise implementation or replace the original four runs.
+The owner requires separate explicit discovery and behavior scenarios: the revised behavior prompts name the target/composed skills; a dedicated native-discovery scenario remains outside these six runs and needs separate prompt/count approval.
+The owner also requires both coverage types for every DD skill. The [completed catalog-purpose audit and deferred plan](deferred/2026-09-07-skilltest-discovery-behavior-catalog-separation.md) capture that broader work without changing historical scenarios or expanding the immediate pilot.
+The new review dependency needs affected qualification; any required real qualification call is separately counted and approved.
+Next checkpoint: Task 5's affected catalog/common-input qualification, then exact-command approval; input preparation and its provider-free audit are complete.
+
+Review addressed task-neutral AR verdict scoring, the new dependency's qualification boundary, scratch-directory preconditions, duplicated status and historical-prompt provenance.
+Owner feedback separated explicitly loaded behavior from native discovery; the catalog audit found the concrete CW mixing and missing native discovery coverage and placed repairs in the deferred plan.
+The final inline review found no remaining blocking findings; no no-write-tool reviewer type is available in this session.
+Verification: 231 offline runner tests passed; hooks passed 263 with three skips; 99 local links/anchors resolved; all six existing configs loaded and the 105-scenario configuration inventory was checked.
+Both LP prompt edits are exactly the same two-line insertion; skills, runner, source scenarios/accepted evidence, frozen fixtures, configs and rubrics are unchanged.
+No additional provider commands ran.
+
+## Task 5: Prepare the explicitly loaded behavior extension
+
+**Authority:** Owner's request to continue the current pilot authorizes input preparation, not provider invocation or the deferred catalog program.
+**Files:** `skill-validation/pilot/{dr-05,lp-05,ar-03}/{no-dd,current-dd}/` prompt/config/rubric files; frozen task inputs and Superpowers requesting-code-review files under `pilot/inputs/`; active spec/plan and routine runbook.
+
+- [x] Prepare the three paired tasks with explicit DD loading only in current-DD and the same relevant Superpowers reads in both arms; supply all nine frozen DD skills versus none, no hooks.
+- [x] Preserve DR-05/LP-05 source rubrics; adapt AR-03 only to a task-neutral severity/blocking conclusion. Freeze the shared scoring interpretation and record loading fidelity separately.
+- [x] Verify Superpowers 6.3.0 review files and source fixture bytes; audit config targets, common-input equality, prompt differences, withheld rubric boundaries and copied bytes through the runner's provider-free preparation helpers.
+- [x] Review and verify the input/documentation unit, then commit its recoverable revision before collection. Keep audit evidence in disposable scratch; preserve original pilot/scenario results.
+- [ ] Determine and perform affected provider-free catalog/common-input qualification; reuse unaffected controls only with evidence. Stop on drift or unproved controls.
+- [ ] Present any necessary real qualification and the six observation commands for their respective exact-command approvals; do not invoke them as part of preparation.
+
+Sequence remains DR-05, LP-05, AR-03, each no-DD then current-DD once on Codex / gpt-5.6-sol / low.
+AR-03 supplies project files, not implementation Git history; its common prompt must explicitly apply the supplied reviewer criteria directly without dispatch or an unavailable Git-range review.
+This bounds the same review task in both arms rather than introducing fake history or a new runner capability.
+
+Input audit evidence is retained under `/private/tmp/skilltest-sol-low-pilot.Lunoau/extension.xWS8Q2/`: `audit-inputs.py`, the exact command in `summary.md`, and `preflight/input-audit.json` with empty stderr.
+All six prompts/rubrics and prepared fixture maps passed pair/source checks; ten new source copies match, and all nine DD copies retain their recorded main bytes.
+The audit did not call any CLI, authenticate, prepare a private runtime or qualify a native catalog; those controls are not inferred from copying success.
+Verification: 231 runner tests passed, hooks passed 263 with three skips, 108 local links/anchors resolved, and the inline input/spec review found no remaining blocking findings.
+Original scenario/accepted records, runner code and DD skills are unchanged; no additional model commands ran.
 
 ## Approval and verification checkpoints
 
