@@ -4,7 +4,7 @@
 
 **Status:** Tasks 1–2 are complete following the owner's requests to continue.
 Task 3's runbook/fixture preparation and proposed DR-02/LP-01 eight-observation scope are owner-approved and in progress.
-All provider calls remain behind exact-command approval; no real qualification or pilot observations have been run under this plan.
+All provider calls remain behind exact-command approval; no-DD real qualification passed in one approved attempt, current-DD is pending, and no pilot observations have run.
 The owner separately authorized the completed preparatory timeout-test repair described below.
 The two planned real qualification calls and every observation command require separate exact-command approval after their preparation gates pass.
 
@@ -117,8 +117,9 @@ The prior mixed Git-timeout test is replaced by deterministic setup-failure chec
 Task 2a verification passes; scratch `runbook-review-verification.md` preserves the original error and retained dummy-runtime path without claiming a production fix.
 The test-only review separated CLI diagnostic formatting into the guarded unit group and restored cleanup-error logging coverage at the provider adapter boundary.
 The additional requested review found no new test-change findings; a fresh combined runner suite passes 231 tests.
-Freeze this documentation checkpoint before requesting approval for the first real qualification command; no model call has run.
-Raw preparation evidence stays in `/private/tmp/skilltest-sol-low-pilot.Lunoau/`; no real authentication or model call was used.
+The approved no-DD qualification passed in 42.17 seconds: all six required reads matched full supplied bytes, the correct evidence file was written and reread, declared inputs remained unchanged, and private-runtime removal was verified without a cleanup error.
+Current-DD remains behind separate exact-command approval; no effectiveness observation is collected by this qualification.
+Scratch `attempts/q-no-dd/result.md` records the run ID, tied CLI provenance, raw trace, audit and cleanup evidence beneath `/private/tmp/skilltest-sol-low-pilot.Lunoau/`.
 
 ## Approval and verification checkpoints
 

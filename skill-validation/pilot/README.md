@@ -1,6 +1,6 @@
 # Sol-low procedure pilot
 
-Status: preparation for owner review; no real qualification calls or behavioral observations have run.
+Status: qualification in progress; no behavioral observations have run. The implementation plan and scratch summary track each condition's qualification result and approval.
 Use the [implementation plan](../../plans/2026-09-06-skilltest-sol-low-pilot.md), [charter](../charter/core-contracts.md) and [methodology](../../plans/completed/specs/2026-09-02-skill-testing-methodology-design.md).
 This is an agent-followed runbook, not a campaign program or an effectiveness baseline.
 Claude work remains deferred.
@@ -105,7 +105,7 @@ Prepared-input checks and the first native-catalog comparison pass in the curren
 The observed common catalog is `imagegen`, `openai-docs`, `plugin-creator`, `skill-creator`, `skill-installer` and the supplied `writing-plans`: six entries in no-DD, fifteen in current-DD.
 All 60 private bootstrap file hashes and the remaining diagnostic prompt content matched under the normalization above.
 Provider-free qualification now passes; scratch `preflight/reconciliation.md` records reuse of the four accepted contamination controls, successful loopback policy checks, representative shell/tool reads and verified runtime removal.
-The fixed CLI provenance is retained under `preflight/`; actual exec loading and sibling evidence writes remain unqualified until the two separately approved real calls pass.
+The fixed CLI provenance is retained under `preflight/`; both separately approved real calls must pass before observations begin, with each result retained in the scratch summary.
 `debug prompt-input` does not accept exec's `--ignore-user-config`, `--ignore-rules` or sibling `--add-dir` options and does not prove runtime enforcement, subsequent reads or hidden inputs.
 The separate real qualification covers the exercised exec/read/write path; neither stage claims universal filesystem isolation.
 
