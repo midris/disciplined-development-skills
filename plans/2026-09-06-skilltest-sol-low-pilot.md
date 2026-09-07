@@ -198,12 +198,14 @@ Use the frozen Task 5 inputs and routine runbook; each command requires its own 
 Do not add repetitions, discovery testing, skill edits or effectiveness claims; retain all judgeable outcomes and stop for owner review after the six planned observations.
 
 - [x] DR-05/no-DD: owner-approved command completed once, Codex / gpt-5.6-sol / low, CLI 0.153.4; runner/provider exit 0, 18.777 seconds, no retry. Full matrix read, final `Not listed.`, semantic PASS / protocol N/A / fidelity PASS. Inputs unchanged and runtime cleanup verified; worksheet retained in extension scratch.
-- [ ] DR-05/current-DD: obtain exact-command approval, run, inspect and score.
+- [x] DR-05/current-DD: separately approved command completed once, same provider/model/effort and CLI; runner/provider exit 0, 22.207 seconds, no retry. Full research-skill read precedes the full matrix read; final truthfully states the missing date. Semantic PASS / protocol N/A / fidelity FAIL for extra progress narration. Inputs unchanged and runtime cleanup verified; worksheet retained in extension scratch.
 - [ ] LP-05/no-DD, then current-DD: approve each command, run, inspect and score.
 - [ ] AR-03/no-DD, then current-DD: approve each command, run, inspect and score.
 - [ ] Present the complete six-observation process handoff and stop for owner review before broader catalog/effectiveness work.
 
-The passing no-DD observation is not targeted-failure RED evidence or an effectiveness estimate. Original observations/accepted records remain unchanged; detailed evidence and scoring live in the scratch summary and worksheet.
+Both DR-05 conditions pass semantically; the pair is not targeted-failure RED/GREEN evidence or an effectiveness estimate.
+Next checkpoint: present the exact LP-05/no-DD command and await its separate approval before invocation.
+Original observations/accepted records remain unchanged; detailed evidence and scoring live in the scratch summary and worksheets.
 
 ## Approval and verification checkpoints
 
