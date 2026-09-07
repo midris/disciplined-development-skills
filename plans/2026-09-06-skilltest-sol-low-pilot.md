@@ -26,7 +26,7 @@ The two planned real qualification calls and every observation command require s
 
 ## Task 1: Worksheet field and historical provenance
 
-**Files:** `skill-validation/runner/src/skilltest/worksheet.py`, `skill-validation/runner/tests/test_worksheet.py`, the CLI worksheet expectation in `skill-validation/runner/tests/test_cli.py`, `skill-validation/runner/README.md`, the worksheet contract in `plans/completed/specs/2026-09-02-skill-testing-methodology-design.md`, and the 105 existing `accepted/worksheet.md` files.
+**Files:** `skill-validation/runner/src/skilltest/worksheet.py`, `skill-validation/runner/tests/test_worksheet.py`, the CLI worksheet expectation in `skill-validation/runner/tests/process_smoke/test_cli.py`, `skill-validation/runner/README.md`, the worksheet contract in `plans/completed/specs/2026-09-02-skill-testing-methodology-design.md`, and the 105 existing `accepted/worksheet.md` files.
 Retain only credential-free historical version evidence needed by the new references; do not copy whole scratch bundles.
 Keep the 105 metadata-only worksheet changes atomic with the template contract; the required per-file reference inventory therefore exceeds the usual commit-body length preference.
 
@@ -70,6 +70,26 @@ The schema retains its shape/version and provider labels; only the cleanup enum/
 The [operator guide](../skill-validation/runner/README.md#codex) documents the implemented controls and remaining qualification limits.
 Review was performed inline because this session has no no-write-tool reviewer type; no provider-backed review or real authentication was used.
 
+## Task 2a: Consistent unit/process-smoke boundaries
+
+Owner-approved after the Git-timeout test's intermittent cleanup failure.
+Scope: runner tests, test configuration and operator documentation only; preserve production behavior and all pilot inputs.
+Keep temporary filesystem operations real where they are the subject of the test; mock subprocesses, process signals and waiting in unit tests.
+Real-process tests cover wiring and lifecycle behavior that mocks cannot establish, use dummy credentials, and never call an installed model CLI.
+
+- [x] Add a unit-test guard rejecting unexpected subprocess launches/signals/sleeps; observe the mixed tests fail before restructuring them.
+- [x] Separate runner persistence/provider/runtime unit tests from a small named process-smoke group; mock each unit's external boundary consistently, including both arms of failure parametrizations.
+- [x] Retain real CLI wiring, Git template/profile isolation, and owned-process termination smoke coverage; use readiness signals rather than short startup deadlines and bound all waits.
+- [x] Replace the ineffective provider-grace patch with checks at the actual Codex lifecycle boundary; preserve timeout, interruption, error precedence, secret handling and cleanup coverage.
+- [x] Verify unit and smoke groups separately, mutation-check critical timeout/cleanup assertions, run the combined runner and hook suites, and document the two commands and remaining limits.
+
+Verification: 224 guarded unit tests and seven local process smoke cases pass separately; the combined suite passes 231 tests, and hooks pass 263 with three skips.
+In-memory mutations of the setup deadline, process shutdown and runtime removal are rejected; production files remain unchanged.
+The [runner testing guide](../skill-validation/runner/README.md#testing-the-runner-code) documents selection and ownership of each boundary.
+
+This removes incidental process scheduling from orchestration assertions; it does not establish the original failure's root cause or excuse a failing process smoke test.
+No production fix, provider qualification, hooks redesign or repository-wide test rewrite is included.
+
 ## Task 3: One provisional runbook, then a bounded pilot
 
 **Files:** `skill-validation/pilot/README.md`; new `pilot/dr-02/` and `pilot/lp-01/` prompt/config/rubric files; explicit frozen input files under `pilot/inputs/`; small qualification configs/prompts under `pilot/qualification/`; and a link from `skill-validation/README.md`.
@@ -92,15 +112,17 @@ The first provider-free catalog check found six common entries and exactly nine 
 Remaining provider-free work is contamination-control reconciliation and representative shell/tool checks before any real-command approval request.
 The runbook now pins the retained-evidence inspection and remaining provider-free commands, requires version/digest comparison before each launch, and stops for owner-assisted recovery when process ownership cannot be established.
 These documentation repairs do not complete qualification or authorize a provider call.
-Current verification gate: a fresh offline suite reported 198 passed and one Git-setup timeout cleanup-verification failure; the unchanged focused rerun passed, so the cause remains unresolved.
-Resolve that failure before real qualification; scratch `runbook-review-verification.md` records the commands, error and retained dummy-runtime path.
+The prior mixed Git-timeout test is replaced by deterministic setup-failure checks and explicit real-process smoke coverage in Task 2a; its original OS failure cause remains unconfirmed.
+Task 2a verification passes; scratch `runbook-review-verification.md` preserves the original error and retained dummy-runtime path without claiming a production fix.
+The test-only review separated CLI diagnostic formatting into the guarded unit group and restored cleanup-error logging coverage at the provider adapter boundary.
+After committing these changes, refresh the recorded runner revision before continuing the remaining provider-free gates.
 Raw preparation evidence stays in `/private/tmp/skilltest-sol-low-pilot.Lunoau/`; no real authentication or model call was used.
 
 ## Approval and verification checkpoints
 
 - [x] Repair the observed timeout-test startup race before Task 1.
   The timeout case now writes fixture/evidence files synchronously at the provider boundary and returns a simulated timeout; the real runner still performs output publication, inventory, error precedence and result validation.
-  The nonzero case retains its fake subprocess, and `test_marks_timeout_after_terminating_direct_provider` retains real timeout coverage.
+  Task 2a subsequently applies the in-memory provider boundary to both cases and moves real timeout/termination coverage to `tests/process_smoke/test_runtime.py`.
   This removes the 0.2-second startup assumption without changing production code or adding synchronization machinery.
   Verified: three focused cases pass, the full runner suite passes 160 tests, and an in-memory primary-error mutation is rejected by the revised test.
   The test-related pause is cleared; pilot-task and provider-command approvals remain separate.

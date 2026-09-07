@@ -333,6 +333,10 @@ This order prevents a feasible scratch mechanism from becoming a production cont
 
 ## Remaining pilot preparation
 
+The owner approved a runner-test boundary cleanup before qualification: deterministic unit tests mock external processes/time, while a small explicitly selected smoke group exercises real local processes with dummy providers.
+Keep filesystem behavior real when it is what the test validates; do not mix simulated timeouts with incidental real-process cleanup in orchestration tests.
+The implementation plan's Task 2a tracks this test-only work; it neither changes production behavior nor authorizes real provider calls.
+
 Finish qualification of the frozen inputs and Codex controls, review the runbook and resolve each actual command/evidence path before execution; the scenarios, counts and order below are approved for preparation.
 Use existing charter criteria and worksheet judgments; do not ask the owner to restate skill purpose or success criteria.
 Broad sampling, detailed edit/regression coverage, Claude integration and reorganization are explicitly deferred, not missing pilot requirements.

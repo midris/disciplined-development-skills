@@ -4,6 +4,32 @@
 `run` is synchronous and stateless: each invocation owns a unique run directory.
 It does not understand or evaluate the prompt, fixtures, evidence, or provider response.
 
+## Testing the runner code
+
+These tests validate the testing tool, not skill effectiveness or model latency.
+Run from `skill-validation/runner/`:
+
+```sh
+.venv/bin/python -m pytest -q -m 'not process_smoke'
+.venv/bin/python -m pytest -q -m process_smoke
+.venv/bin/python -m pytest -q
+```
+
+The first command runs unit tests; the second runs local process smoke tests; the last runs both.
+Neither group invokes an installed Codex/Claude CLI or needs real credentials or network access.
+
+- Unit tests mock the external boundary of the component under test: provider outcomes for runner persistence, runtime/process outcomes for adapter orchestration, and process/selector/clock operations for lifecycle logic.
+  Keep temporary files real when testing copying, hashing, permissions, publication or removal.
+  The shared guard rejects unmocked `subprocess.Popen`, process-group signals and sleeps; a new test must select its boundary explicitly.
+- `tests/process_smoke/` contains real CLI wiring, private-profile/Git setup and owned-process termination checks with executable dummy providers.
+  Termination tests wait for a child readiness signal before exercising a real timeout; they do not synthesize timeout results while incidentally killing a starting Git process.
+  Keep process waits bounded and retain useful PID/PGID diagnostics on cleanup failure.
+- Installed-provider checks under `acceptance/` and actual model qualification remain separate, opt-in workflows with their existing permission requirements.
+  An offline test pass is not proof of provider isolation or skill effectiveness.
+
+Do not add real process dependencies to tests that only check result classification or artifact persistence.
+Conversely, mocks cannot prove actual OS cleanup or CLI wiring: preserve the targeted smoke coverage when refactoring unit tests.
+
 ## Run
 
 ```text
