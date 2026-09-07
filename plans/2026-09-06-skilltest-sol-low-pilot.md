@@ -4,7 +4,7 @@
 
 **Status:** Tasks 1–2 are complete following the owner's requests to continue.
 Task 3's runbook/fixture preparation and proposed DR-02/LP-01 eight-observation scope are owner-approved and in progress.
-All provider calls remain behind exact-command approval; no-DD real qualification passed in one approved attempt, current-DD is pending, and no pilot observations have run.
+All provider calls remain behind exact-command approval; no-DD and current-DD real qualification each passed in one approved attempt, and no pilot observations have run.
 The owner separately authorized the completed preparatory timeout-test repair described below.
 The two planned real qualification calls and every observation command require separate exact-command approval after their preparation gates pass.
 
@@ -100,7 +100,7 @@ Results remain scratch-only through owner review; use one Markdown summary linki
 - [x] Freeze the nine current DD skills from the recorded main revision and the required Superpowers 6.3.0 package files, including writing-plans and its referenced guidance. Inventory exact supplied files in the runbook and configs, not references to mutable installed paths. Use the same Superpowers files in both conditions and audit valid loading instructions without leaking DD descriptions into no-DD.
 - [x] Write the short runbook with concrete preparation/version/run/worksheet commands, working directories, frozen-input checks, output paths and owner checkpoints. Use the existing config fixture targets for native `.agents/skills/` placement; no installation script or manifest format. Preserve pre-run input sources separately from post-run files and score against the frozen rubric.
 - [x] Document provider-free qualification using the implemented runtime setup, installed CLI inspection and the accepted spike's contamination-control method. Verify no-DD/current native catalogs and declared common inputs before model calls; keep raw evidence and explicit normalization limits in scratch. Do not convert the spike into a generic production inventory parser. If the selected controls cannot be proved, stop and report the precise gap.
-- [ ] Prepare two real qualification commands, one per condition, using the pilot's frozen skills/tools: require supplied-source reads and an evidence-directory write in both; require the intended research/plan skill loads in current-DD and the declared writing-plans load in both. Keep these setup checks separate from behavioral scoring. Show each complete command, provider/model/effort and wait for explicit approval before invoking it.
+- [x] Prepare two real qualification commands, one per condition, using the pilot's frozen skills/tools: require supplied-source reads and an evidence-directory write in both; require the intended research/plan skill loads in current-DD and the declared writing-plans load in both. Keep these setup checks separate from behavioral scoring. Show each complete command, provider/model/effort and wait for explicit approval before invoking it.
 - [ ] After qualification passes, request exact-command approval for the eight observation runs: DR-02 first, then LP-01; each runs no-DD, current-DD, current-DD, no-DD in fresh runtimes. Capture CLI version immediately before each run from the same executable. Stop on validation failure or drift; infrastructure-only unchanged-command retries follow the existing policy and are separately recorded.
 - [ ] Complete a worksheet for each judgeable observation, including FAILs. Inspect saved files and observable reads rather than trusting the final answer's assertions. Record missing writes as task fidelity when write access is established; do not confuse model behavior with a failed setup control.
 - [ ] Exercise handoff and failure/recovery bookkeeping using retained or synthetic evidence where possible, without deliberately spending more provider calls to manufacture failures. The summary identifies completed/planned runs, exclusions, deviations and the next resumable action.
@@ -118,8 +118,9 @@ Task 2a verification passes; scratch `runbook-review-verification.md` preserves 
 The test-only review separated CLI diagnostic formatting into the guarded unit group and restored cleanup-error logging coverage at the provider adapter boundary.
 The additional requested review found no new test-change findings; a fresh combined runner suite passes 231 tests.
 The approved no-DD qualification passed in 42.17 seconds: all six required reads matched full supplied bytes, the correct evidence file was written and reread, declared inputs remained unchanged, and private-runtime removal was verified without a cleanup error.
-Current-DD remains behind separate exact-command approval; no effectiveness observation is collected by this qualification.
-Scratch `attempts/q-no-dd/result.md` records the run ID, tied CLI provenance, raw trace, audit and cleanup evidence beneath `/private/tmp/skilltest-sol-low-pilot.Lunoau/`.
+The separately approved current-DD qualification passed in 40.29 seconds: all eight required full reads were observed, the evidence write was correct, all fifteen supplied files remained unchanged, and exact private-runtime removal was verified without a cleanup error.
+Both calls used Codex / gpt-5.6-sol / low and CLI 0.153.4 with the same verified digest; neither required a retry or collected an effectiveness observation.
+Scratch `attempts/q-no-dd/result.md` and `attempts/q-current-dd/result.md` record run IDs, tied CLI provenance, raw traces, audits and cleanup evidence beneath `/private/tmp/skilltest-sol-low-pilot.Lunoau/`.
 
 ## Approval and verification checkpoints
 

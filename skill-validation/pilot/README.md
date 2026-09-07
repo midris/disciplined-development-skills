@@ -1,6 +1,6 @@
 # Sol-low procedure pilot
 
-Status: qualification in progress; no behavioral observations have run. The implementation plan and scratch summary track each condition's qualification result and approval.
+Status: both conditions passed qualification for the exercised read/write paths; no behavioral observations have run. The implementation plan and scratch summary track results and approvals; the eight observations still require exact-command approval.
 Use the [implementation plan](../../plans/2026-09-06-skilltest-sol-low-pilot.md), [charter](../charter/core-contracts.md) and [methodology](../../plans/completed/specs/2026-09-02-skill-testing-methodology-design.md).
 This is an agent-followed runbook, not a campaign program or an effectiveness baseline.
 Claude work remains deferred.
