@@ -2,11 +2,11 @@
 
 > **For agentic workers:** On owner activation, use `superpowers:executing-plans` task by task with review checkpoints.
 
-**Status:** Catalog implementation remains DEFERRED. The active plan's Task 7 authorizes the Task 1 documentation map/proposal only; no repaired prompts, new scenario configs or provider runs are authorized.
+**Status:** Broader catalog implementation remains DEFERRED. The active plan's Task 8 authorizes preparation of the three CW purposes only; exact prompts/rubrics remain subject to owner review and no provider run is authorized.
 **Goal:** Give every one of the nine DD skills separately identified discoverability tests and explicitly loaded behavioral-effectiveness tests.
 **Approach:** Reuse existing scenario material, runner configs, worksheets and written runbooks; no new testing framework or schema.
 **Authority:** [Test-purpose separation](../specs/2026-09-06-skilltest-controlled-inputs-design.md#accepted-separation-setup-discovery-and-behavior) and [charter](../../skill-validation/charter/core-contracts.md).
-**Return to:** [Current owner checkpoint](../2026-09-06-skilltest-sol-low-pilot.md#task-7-map-catalog-purposes-and-propose-the-first-repair).
+**Return to:** [Current owner checkpoint](../2026-09-06-skilltest-sol-low-pilot.md#task-8-prepare-the-three-cw-purposes-for-review).
 
 ## Audit findings
 
@@ -31,7 +31,7 @@ The seeds are source material, not ready native tests or execution approval.
 
 ## Deferred work
 
-The active plan records authorization for the bounded Task 1 map/proposal; Tasks 2–3 still require owner selection.
+The active plan records the bounded mapping and subsequent CW input-preparation approval; all other Task 2 repairs and Task 3 collection remain deferred.
 The [batch/fixture-design amendment](../specs/2026-09-06-skilltest-controlled-inputs-design.md#accepted-bounded-batch-operation) governs later preparation and collection, not permission to launch them.
 
 ### Task 1: Map purposes without moving the catalog
@@ -39,7 +39,7 @@ The [batch/fixture-design amendment](../specs/2026-09-06-skilltest-controlled-in
 - [x] Add one nine-skill coverage table to the validation guide: loaded behavior material, missing native discovery and separate diagnostics, with linked scenario IDs and charter ownership.
 - [x] Map representative rubric clauses to evidence boundaries below. Preserve composition attribution and distinguish proposed workflow actions from executed work; this is not a clause-by-clause audit of all 105 rubrics.
 - [x] Apply the criterion/evidence distinction to the pilot's LP and AR gaps without rescoring completed observations.
-- [ ] Obtain owner agreement on the first proposed variants and contract dispositions below before editing test inputs. Freeze the complete criterion table for each selected new variant during Task 2, not from this representative map alone.
+- [x] Obtain owner approval to prepare the three CW purposes for exact prompt/rubric review; keep broader contract dispositions such as DISC-08 pending.
 
 ### Representative criterion boundaries
 
@@ -58,10 +58,10 @@ Use the complete frozen rubric when scoring; exact presentation is fidelity unle
 | AR-03 clauses 3–5: benchmark, material defect and conclusion | AR-I3 and AR-I1 / respective semantic criteria | Review corrects 18% to 1.8%, explains the asymmetric ordering defect and blocks. These do not substitute for caller coverage. |
 | AR-03 extra claims / future precision criterion | AR-I1 / semantic when explicitly included in a new rubric | Existing clause 2 does not require a post-normalization output-order finding. Retain completed caveats; a future rubric can explicitly reject unsupported extra findings, but not retrofit that verdict rule onto this pair. |
 
-### Proposed first repair — owner decision pending
+### First CW repair — input review pending
 
 Start with concise-writing because it has a small real prose task and the clearest documented selection/application conflation; no new task-tool capability is needed to draft these inputs.
-Prepare only these three separate scenario purposes after approval, retaining all existing packages:
+The owner approved preparing only these three purposes, retaining all existing packages; the [prepared inputs](../../skill-validation/pilot/README.md#prepared-cw-inputs--owner-review-required) contain the exact prompts and complete criterion tables for review:
 
 | New variant purpose | Reuse | Contract to preserve or separate |
 |---|---|---|
@@ -74,9 +74,11 @@ CW-18's durable-file contrast and a separately loaded CW-I3 application test rem
 Keep CW-09–14 as historical authoring/contract diagnostics for now: the charter proposes treating them as composition rather than core compression, and the current skill deliberately excludes authoring. Do not add an implicit CW co-selection requirement to the first behavior task.
 For a future DISC-08 derivative, propose no CW selection for the explicit mechanical-only rename: the task forbids prose revision. Preserve the accepted optional-CW verdict under its original rubric until the owner approves a new contract.
 No-DD is a behavioral control, not a discovery failure for an unavailable skill. The native-discovery variants test current-DD with target availability qualified and other skill loads disclosed.
-Approve the exact prompts, input/criterion freeze and sampling separately before collection; this proposal supplies neither run counts nor provider-call permission.
+Approve the exact prompts, input/criterion freeze and sampling separately before collection; preparation supplies neither run counts nor provider-call permission.
 
 ### Task 2: Prepare separate variants
+
+The bounded CW preparation is tracked in active Task 8; the unchecked items below describe the remaining full portfolio, not permission to expand this unit.
 
 - [ ] Split CW-13/14 and CW-17/18's future selection and loaded-application purposes into separate prompts/rubrics; retain only useful diagnostics from CW-09–12.
 - [ ] For every DD skill, prepare native-discovery tasks without explicit skill names, paths, pasted descriptions or loading hints in the task prompt. Use frozen skills in the provider's qualified native paths. Start with relevant positive and boundary/non-trigger cases; reuse task ideas and approve exact counts before collection rather than multiplying the whole catalog.

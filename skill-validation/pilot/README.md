@@ -93,6 +93,37 @@ There are no permitted fixture/evidence edits, network task calls or agent dispa
 AR-03 uses the supplied reviewer criteria directly, not a Git-range or delegated review. LP-05 supplies task facts only, not application source/tests.
 Compare results only within each frozen pair; the completed original four observations are not matching-input repetitions.
 
+## Prepared CW inputs — owner review required
+
+These four configs implement three purposes, not an approved run batch:
+
+| Purpose / condition | Config | Prompt | Evaluator-only rubric |
+|---|---|---|---|
+| CW-01 loaded behavior / no-DD | [Config](cw-01/no-dd/test.json) | [Prompt](cw-01/no-dd/prompt.md) | [Rubric](cw-01/no-dd/rubric.md) |
+| CW-01 loaded behavior / current-DD | [Config](cw-01/current-dd/test.json) | [Prompt](cw-01/current-dd/prompt.md) | [Rubric](cw-01/current-dd/rubric.md) |
+| CW-01 native discovery / current-DD | [Config](cw-01/discovery/test.json) | [Prompt](cw-01/discovery/prompt.md) | [Rubric](cw-01/discovery/rubric.md) |
+| CW-17 native non-trigger / current-DD | [Config](cw-17/discovery/test.json) | [Prompt](cw-17/discovery/prompt.md) | [Rubric](cw-17/discovery/rubric.md) |
+
+Reuse the extension's frozen nine DD skills and four Superpowers files, with all DD omitted only in the behavioral control; no hooks or additional subject tools.
+Task facts remain inline from CW-01 and CW-17, and no evaluator rubric or runbook is a fixture.
+The behavior prompts differ only by the current-DD CW read directive; their rubrics are identical.
+The positive discovery prompt is byte-identical to the no-DD behavior prompt but runs with the current-DD native fixtures and a separate selection rubric.
+Neither discovery prompt names a skill, points at skill paths, pastes descriptions or requests a routing answer.
+Current-DD is the discovery condition; no-DD is not a native-discovery failure for unavailable skills.
+
+Discovery means observable model-initiated selection/body access under the declared composition, not independent routing or hidden method use.
+The positive needs full CW loading before the answer; the non-trigger needs no observed selection/access on a completed task with complete trace coverage.
+Disclose composition-mediated and other skill loads; catalog availability alone is not selection, and missing evidence cannot pass a negative test.
+The withheld rubrics define the boundaries; do not use prose quality as a proxy for discovery or apply their expectations to completed historical runs.
+CW-17 retains the charter's detailed-response exception despite its absence from the frozen current skill.
+
+All configs specify Codex / gpt-5.6-sol / low for consistency with the current preparation path; no counts, order or commands are approved by these files.
+Before collection, obtain prompt/rubric approval, freeze the recoverable revision, and reconcile affected qualification: native catalog/body availability and the trace coverage needed to observe selection or its absence under the same common inputs.
+Qualification checks availability and observability, not whether CW chooses the expected route; an observed discovery FAIL is not itself a setup failure.
+Do not add a read directive to a discovery prompt to make that qualification pass; explicit-load qualification stays a separate setup check.
+Provider-free copying proves prepared bytes only; if the necessary trace/control boundary cannot be established, stop as inconclusive rather than infer hidden behavior.
+Use the routine commands below only after an exact finite batch is approved. No extra runner capability or paid qualification call is automatically authorized.
+
 ## Per-run commands and checks
 
 From the feature-worktree root, set these path abbreviations from the approved summary row, not a newest-directory guess:

@@ -6,7 +6,7 @@
 The initial four observations and six separately approved extension observations are scored and retained in scratch, without provider retries or unresolved cleanup.
 No-DD/current-DD real qualification and the extension's affected provider-free qualification are complete; the documented reuse decision required no additional paid qualification call.
 Stop for owner review: no further provider invocation, fixture revision/recollection, effectiveness campaign, discovery coverage work or skill edit is authorized by these completed calls.
-The extension evidence pointers are in Task 6; the owner's subsequent request to continue authorizes the bounded documentation mapping in Task 7, not scenario changes or provider calls.
+The extension evidence pointers are in Task 6; Task 8 records the owner's approval to prepare the three CW purposes, not invoke providers.
 
 **Goal:** Exercise one agent-led preparation, execution, scoring and handoff workflow, not collect effectiveness estimates.
 **Architecture:** Preserve the one-run runner and config schema; add only Codex runtime controls and a worksheet field, then exercise them through one written runbook.
@@ -225,7 +225,28 @@ This authorizes documentation only, not the whole catalog program, test-contract
 - [x] Propose three separate CW purposes for owner agreement before preparing variants; keep unresolved authoring diagnostics and further catalog repairs deferred.
 - [x] Verify 156 local links/anchors, the 105-config native-target inventory, protected inputs and retained evidence/commands; hooks pass 263 tests with three skips. Review completed inline with no remaining blocking findings; runner verification is reused because its code/environment are unchanged.
 
-Next checkpoint: owner review of the proposed first repair; remaining catalog implementation and effectiveness sampling stay deferred.
+The owner approved preparing the three proposed CW purposes for prompt/rubric review; broader catalog implementation and effectiveness sampling stay deferred.
+
+## Task 8: Prepare the three CW purposes for review
+
+**Files:** new `skill-validation/pilot/cw-01/{no-dd,current-dd,discovery}/` and `pilot/cw-17/discovery/` prompt/config/rubric files; the routine runbook, this plan and the existing catalog repair plan.
+Reuse frozen `pilot/inputs/dd/` and the same four Superpowers files used by the behavior extension; no skill, runner, historical scenario or existing pilot-input edits.
+CW has no explicitly required upstream task workflow, so none of these prompts forces an unrelated Superpowers read; availability remains identical across conditions apart from DD.
+Task facts stay inline, preserving CW-01's source paragraph and CW-17's nested natural request without another fixture-copy layer.
+This is input preparation only: no provider/CLI-auth invocation, new sampling decision, accepted-evidence promotion or broader catalog activation.
+
+- [x] Prepare the behavior pair with identical rubrics/task text and only the current-DD loading prefix plus DD availability differing.
+- [x] Prepare positive/non-trigger current-DD discovery tasks without loading hints; define observable selection/loading, missing-trace handling and separate fidelity in withheld rubrics.
+- [x] Audit configs and rendered fixtures using existing provider-free helpers; verify frozen dependencies, withholding and protected inputs, then review the complete change and run the required hook suite.
+- [x] Prepare the [exact prompt/rubric handoff](../skill-validation/pilot/README.md#prepared-cw-inputs--owner-review-required) in this commit; no results collected and no native-discovery qualification claim.
+
+Provider-free audit: [input-audit.json](/private/tmp/skilltest-sol-low-pilot.Lunoau/cw-inputs.veav95/input-audit.json), produced from the feature-worktree root by `skill-validation/runner/.venv/bin/python /private/tmp/skilltest-sol-low-pilot.Lunoau/cw-inputs.veav95/audit-inputs.py`.
+All four configs/rendered inventories match; current-DD uses the unchanged 13 guidance files and no-DD the same four common files. Prompt relationships, rubric equality and frozen source bytes pass.
+The audit's pre-freeze HEAD is preparation provenance only; this committed unit makes the new inputs recoverable. Its initial whitespace-comparison defect is retained in scratch, not counted as a model attempt or INFRA_RETRY.
+Verification: hooks pass 263 tests with three skips; 147 local links/anchors resolve; protected runner, skills, historical scenarios/accepted files and previous pilot inputs are unchanged.
+Inline review clarified that qualification proves observation capability, not the expected discovery result; no no-write-tool reviewer type is available. Owner input approval remains pending.
+
+Next checkpoint: owner review of these inputs, then affected qualification and a separately approved finite command/count batch before any model run.
 
 ## Approval and verification checkpoints
 
