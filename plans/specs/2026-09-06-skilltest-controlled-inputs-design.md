@@ -2,7 +2,7 @@
 
 **Status:** Live design discussion, not an approved implementation specification.
 Exceptions: the owner authorized Tasks 1–2 of the [implementation plan](../2026-09-06-skilltest-sol-low-pilot.md): the worksheet/backfill unit and Codex invocation/runtime controls are complete with offline verification; both separately approved pilot read/write qualifications passed, with limits and evidence recorded in that plan.
-The owner also approved Task 3 preparation for DR-02/LP-01 with eight planned observations; provider commands retain the separate approval gates below.
+The owner also approved Task 3 preparation for DR-02/LP-01 with four planned observations; provider commands retain the separate approval gates below.
 The owner accepted the scoped feasibility findings on 2026-09-06 and requested review of the next steps one at a time.
 The owner selected the pilot-first scope below; broader methodology decisions remain constraints for later expansion, not prerequisites to design every future workflow now.
 Apart from those implementation units, this draft does not change scoring rules or authorize provider calls or effectiveness testing.
@@ -356,11 +356,12 @@ Freeze and audit the common task/rubric and declared loading differences before 
 Do not add a separate description-routing scenario: [DISC-07](../../skill-validation/scenarios/skill-discovery/disc-07/README.md), for example, forbids file reads and supplies descriptions inline, so it would not prove native CLI discovery.
 Native discovery, actual loading, composition inputs and write access still require explicit qualification; a subject choosing not to use a successfully qualified capability is scored as behavior/task fidelity, not automatically an environment failure.
 
-Use two repetitions per condition per scenario: eight planned scenario runs, all Codex / gpt-5.6-sol / low, with a fresh runtime each time.
-Run DR-02 first, then LP-01; within each, use no-DD, current-DD, current-DD, no-DD order.
-This exercises repeat setup and both order positions without claiming a useful effectiveness estimate or satisfying later skill-authoring repetition requirements.
+Use one run per condition per scenario: four planned scenario runs, all Codex / gpt-5.6-sol / low, with a fresh runtime each time.
+Run DR-02 first, then LP-01; within each, run no-DD then current-DD.
+The owner chose the minimal execution/scoring/handoff path before layering on repetitions and order balancing; those belong to later campaign design.
+These single observations establish neither repeatability nor effectiveness and do not satisfy later skill-authoring repetition requirements.
 Keep all planned judgeable results, including failures; do not add repetitions to obtain a preferred verdict.
-Required pre-collection qualification calls and permitted infrastructure retries are separately counted, not included in the eight; fix qualification commands/counts with the Codex change map before requesting execution approval.
+The two completed qualification calls and permitted infrastructure retries are separately counted, not included in the four observations.
 
 ## Existing authorities to reconcile after decisions
 

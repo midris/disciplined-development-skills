@@ -1,6 +1,6 @@
 # Sol-low procedure pilot
 
-Status: both conditions passed qualification for the exercised read/write paths; no behavioral observations have run. The implementation plan and scratch summary track results and approvals; the eight observations still require exact-command approval.
+Status: both conditions passed qualification for the exercised read/write paths; no behavioral observations have run. The implementation plan and scratch summary track results and approvals; the four observations still require exact-command approval.
 Use the [implementation plan](../../plans/2026-09-06-skilltest-sol-low-pilot.md), [charter](../charter/core-contracts.md) and [methodology](../../plans/completed/specs/2026-09-02-skill-testing-methodology-design.md).
 This is an agent-followed runbook, not a campaign program or an effectiveness baseline.
 Claude work remains deferred.
@@ -188,21 +188,18 @@ Missing required loading/write evidence leaves qualification incomplete, even wi
 
 ## Exact run sequence and command procedure
 
-Use the following order; qualification is separate from the eight observations.
+Use the following order; the two completed qualifications are separate from the four observations.
+Run each condition once per scenario to exercise the minimal workflow; repetitions and order balancing wait for later campaign design, so this pilot establishes neither repeatability nor effectiveness.
 Every row is a fresh `skilltest run`, never a resumed session or overwritten bundle.
 
 | Attempt label | Config beneath `skill-validation/pilot/` | Purpose |
 |---|---|---|
 | `q-no-dd` | `qualification/no-dd/test.json` | Qualification |
 | `q-current-dd` | `qualification/current-dd/test.json` | Qualification |
-| `dr-01` | `dr-02/no-dd/test.json` | No-DD repetition 1 |
-| `dr-02` | `dr-02/current-dd/test.json` | Current-DD repetition 1 |
-| `dr-03` | `dr-02/current-dd/test.json` | Current-DD repetition 2 |
-| `dr-04` | `dr-02/no-dd/test.json` | No-DD repetition 2 |
-| `lp-01` | `lp-01/no-dd/test.json` | No-DD repetition 1 |
-| `lp-02` | `lp-01/current-dd/test.json` | Current-DD repetition 1 |
-| `lp-03` | `lp-01/current-dd/test.json` | Current-DD repetition 2 |
-| `lp-04` | `lp-01/no-dd/test.json` | No-DD repetition 2 |
+| `dr-01` | `dr-02/no-dd/test.json` | No-DD observation |
+| `dr-02` | `dr-02/current-dd/test.json` | Current-DD observation |
+| `lp-01` | `lp-01/no-dd/test.json` | No-DD observation |
+| `lp-02` | `lp-01/current-dd/test.json` | Current-DD observation |
 
 Before every attempt, create its nonexisting scratch attempt directory, verify the recorded input revision is unchanged, and capture CLI version/digest from the same executable immediately before the run.
 Read `PILOT_INPUT_REVISION` from the retained summary, not the then-current HEAD; run `git diff --exit-code "$PILOT_INPUT_REVISION" -- skill-validation/pilot skill-validation/runner` and require `git status --short` to be empty.
@@ -228,7 +225,7 @@ Inspect `runner.log` to confirm the actual absolute Codex executable and fixed a
 When the controller sandbox requires host execution, obtain that permission for the same approved command; keep Codex's own workspace-write sandbox.
 Do not silently change authentication, model, effort, tools, fixtures or flags to make an attempt work.
 
-After both qualifications pass, obtain approval for the eight observation commands before running them in order.
+After both qualifications pass, obtain approval for the four observation commands before running them in order.
 Medium is a separately approved diagnostic for an identified mechanics problem, never an automatic replacement for a low-effort FAIL.
 
 ## Scoring, recovery and handoff
