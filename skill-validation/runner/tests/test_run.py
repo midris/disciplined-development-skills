@@ -139,7 +139,7 @@ def test_run_once_invokes_provider_with_rendered_prompt_and_retains_stable_bundl
         f"evidence={(workspace / 'evidence').resolve()}\n"
     ).encode("utf-8")
     invocation = fake_provider.record()
-    assert invocation["cwd"] == str(workspace)
+    assert invocation["cwd"] == str(workspace / "fixture" if provider == "codex" else workspace)
     assert invocation["stdin"].encode("utf-8") == expected_prompt
     assert (run_dir / "prompt-template.txt").read_bytes() == template
     assert (run_dir / "prompt.txt").read_bytes() == expected_prompt
@@ -169,7 +169,10 @@ def test_run_once_invokes_provider_with_rendered_prompt_and_retains_stable_bundl
         "exit_code": 0,
     }
     assert result["infrastructure_error"] is None
-    assert result["artifacts"]["fixture"] == {
+    fixture_record = result["artifacts"]["fixture"]
+    git_entries = [e for e in fixture_record["entries"] if e["path"].split("/")[0] == ".git"]
+    assert bool(git_entries) is (provider == "codex")
+    assert fixture_record | {"entries": [e for e in fixture_record["entries"] if e not in git_entries]} == {
         "path": "workspace/fixture",
         "exists": True,
         "empty": False,
@@ -217,7 +220,7 @@ def test_run_once_emits_preparation_failed_before_provider_invocation(
 def test_run_once_emits_provider_launch_failed(
     build_config_case, fake_provider, monkeypatch
 ) -> None:
-    case = build_config_case(name="launch-failed")
+    case = build_config_case(name="launch-failed", provider="claude")
     fake_provider.configure(monkeypatch)
     monkeypatch.setenv("PATH", str(case.root / "missing-bin"))
 
@@ -260,7 +263,7 @@ def test_run_once_retains_failed_provider_mutations_and_provider_error_precedenc
     if timed_out:
         # Seed completed writes before reporting timeout; subprocess startup is not
         # this persistence test's clock. test_providers.py covers real termination.
-        def timeout_after_writes(request: ProviderRequest) -> ProviderResult:
+        def timeout_after_writes(request: ProviderRequest, **kwargs: object) -> ProviderResult:
             (request.workspace_dir / "fixture/input.txt").write_bytes(fixture_bytes)
             (request.workspace_dir / "evidence/provider-output.txt").write_bytes(evidence_bytes)
             return ProviderResult(
@@ -293,7 +296,7 @@ def test_run_once_retains_failed_provider_mutations_and_provider_error_precedenc
     assert result["infrastructure_error"]["code"] == expected_code
     assert result["artifacts"]["stdout"]["exists"] is False
     assert (outcome.run_dir / "stderr.txt").read_bytes() == b"raw stderr"
-    assert result["artifacts"]["fixture"]["entries"] == [
+    assert [e for e in result["artifacts"]["fixture"]["entries"] if e["path"].split("/")[0] != ".git"] == [
         _file_entry("input.txt", fixture_bytes)
     ]
     assert result["artifacts"]["evidence"]["entries"] == [

@@ -1,11 +1,11 @@
 # Controlled-Input Skill Testing: Pilot-First Design Amendment
 
 **Status:** Live design discussion, not an approved implementation specification.
-Exception: the owner authorized Task 1 of the [implementation plan](../2026-09-06-skilltest-sol-low-pilot.md): the worksheet CLI-version field and metadata-only historical backfill.
-The remaining runner controls, pilot scenarios/counts and provider commands retain the approval gates below.
+Exceptions: the owner authorized Tasks 1–2 of the [implementation plan](../2026-09-06-skilltest-sol-low-pilot.md): the worksheet/backfill unit and Codex invocation/runtime controls are complete with offline verification; real qualification remains pending.
+The pilot scenarios/counts and provider commands retain the approval gates below.
 The owner accepted the scoped feasibility findings on 2026-09-06 and requested review of the next steps one at a time.
 The owner selected the pilot-first scope below; broader methodology decisions remain constraints for later expansion, not prerequisites to design every future workflow now.
-Apart from that worksheet-only unit, this draft does not change scoring rules or authorize runner implementation, provider calls, or effectiveness testing.
+Apart from those implementation units, this draft does not change scoring rules or authorize provider calls or effectiveness testing.
 It is a reviewed decision record in progress, not an executable implementation contract; the exact invocation changes and unresolved decisions below still require approval.
 
 ## Overall goal
@@ -284,15 +284,15 @@ Use the qualified spike evidence and separately approved real-provider qualifica
 Do not drop a required control to make the diff smaller or claim full isolation from a flag-only test.
 
 This scope keeps testing infrastructure subordinate to skill development while preserving the accepted controlled-input claim.
-It does not authorize implementation or provider calls; the exact minimal change set still requires design approval and a separate test-driven plan.
+Implementation authority is limited to the owner's approval of Tasks 1–2 in the separate test-driven plan; this scope does not authorize provider calls.
 
-### Proposed Codex change map — pending owner agreement
+### Codex change map — Task 2 implemented, qualification pending
 
 The [durable Codex result](../2026-09-05-skilltest-provider-input-isolation.md#accepted-result-controlled-input-harness-is-feasible) and scratch `commands/provider-command.sh`, `auth-check.py` and `run-approved-integration.py` under `/private/tmp/skilltest-controlled-inputs.MTAyGQ/` supply the starting evidence.
 Provider-free inspection on 2026-09-06 found `/opt/homebrew/bin/codex --version` reports `0.153.4`; its `exec --help` documents `--ignore-user-config`, `--ignore-rules` and `--add-dir` for additional writable directories.
 Help establishes available options, not enforcement; the writable pilot combination still requires qualification.
 
-| Surface | Proposed minimum change | Required verification |
+| Surface | Implemented minimum change | Required verification |
 |---|---|---|
 | Codex argv/cwd in `providers.py` | Run from `workspace/fixture/`; retain model/effort, ephemeral JSONL, final output and `workspace-write`. Add `--add-dir` for `workspace/evidence/`, `--ignore-user-config`, `--ignore-rules`, and fixed config overrides for `shell_environment_policy.inherit="none"`, `cli_auth_credentials_store="file"` and `approval_policy="never"`. | Exact argv/cwd test; real qualification of native loading, relative reads and sibling evidence writes without interactive approval or broader sandbox bypass. |
 | Private runtime around the Codex invocation | A small Codex-specific helper creates fresh private HOME/CODEX_HOME/TMPDIR outside the retained bundle; launch with only those values and an explicit operational PATH. Resolve the CLI executable before replacing the environment, then use that same executable for preflight and invocation. | Fake-provider tests show private directories, no inherited semantic settings/API-key variables, and fresh state on consecutive runs. Log the actual resolved argv, not a pre-setup approximation. |
@@ -307,20 +307,21 @@ Bound each setup subprocess, including Git initialization and private login-stat
 For Codex, start owned subprocesses in a separate process group; on timeout or handled interruption, terminate/escalate that group and reap the direct child before deleting its runtime. Never signal unrelated host sessions.
 On normal return, stop any remaining owned group members before runtime cleanup as well.
 Do not promise cleanup of processes that deliberately escape the owned group or survive an uncatchable runner kill; log the exact private-runtime path without contents for manual recovery, and keep such attempts outside qualified pilot evidence until resolved.
-The current infrastructure-code enum lacks a runtime-cleanup failure: add only `PROVIDER_CLEANUP_FAILED` to the existing result contract, not a new schema version or status framework.
+Add only `PROVIDER_CLEANUP_FAILED` to the infrastructure-code enum, not a new schema version or status framework.
+Keep the existing nullable exit-code field: a bounded Codex timeout that cannot reap its child must record `null`, never fabricate an exit code; permit this Codex-only timeout state in the schema and log the unresolved cleanup.
 If cleanup fails after an otherwise successful call, return a nonzero runner outcome with that infrastructure error while preserving the provider's actual exit and captured output; if an earlier error exists, keep it primary and record cleanup failure additionally in the runner log.
 Do not treat a retained evaluable response with a cleanup failure as an automatically retryable infrastructure-only attempt.
 The runbook owns frozen source preparation, per-run CLI-version evidence, declared common-input qualification, complete worksheet scoring and the pilot summary; the runner owns the bounded pre-launch mechanical checks listed above.
 Qualify catalogs and observed bootstrap/common inputs once for the pinned pilot harness and repeat qualification on relevant CLI, input, setup or tool changes; review each run's observable trace for violations. This separates effective-control validation from per-run setup checks without asserting hidden inputs are absent.
 Keep shell-startup/common-input limits explicit during qualification: neither `inherit="none"` nor a private profile alone proves absence of automatic shell reads.
 Use the resolved executable's directory followed by `/usr/bin:/bin:/usr/sbin:/sbin` as the explicit pilot PATH, with no inherited extra entries; qualify the selected task tools under it.
-Pin recovery commands and qualification calls in the runbook before execution; this mapping approves no code, new config schema or provider call.
+Pin recovery commands and qualification calls in the runbook before execution; the Task 2 approval does not approve a new config schema or provider call.
 
 ## Review sequence
 
 1. **Finish the pilot design.** Select a few scenarios that exercise the required paths, their exact counts/order and frozen-input preparation; map the Codex controls to the smallest argv/env/setup changes and focused checks. Do not settle the full campaign or final directory layout.
-2. **Approve the [draft test-driven implementation plan](../2026-09-06-skilltest-sol-low-pilot.md).** It covers the Codex changes, worksheet field and historical backfill, and one provisional runbook with existing-format inputs. Keep tests tied to the selected contracts.
-3. **Implement and qualify — not yet authorized.** Run provider-free tests first, then representative real qualification under exact-command approval. Validate before collecting the pilot's no-DD/current observations.
+2. **Approve implementation task by task in the [test-driven plan](../2026-09-06-skilltest-sol-low-pilot.md).** Tasks 1–2 are authorized; the provisional runbook, proposed scenarios/counts and provider calls retain their separate checkpoints. Keep tests tied to the selected contracts.
+3. **Implement, then separately qualify.** Run provider-free tests first, then representative real qualification under exact-command approval. Validate before collecting the pilot's no-DD/current observations.
 4. **Exercise the runbook and stop for owner review.** Report setup, execution, scoring and handoff results, validity limitations and practical procedure changes in one Markdown summary; do not proceed automatically to a full baseline campaign or skill edits.
 5. **Expand only after pilot feedback.** Separately approve detailed baseline/edit procedures, campaign metrics and sampling, additional providers/models or layout changes when needed.
 

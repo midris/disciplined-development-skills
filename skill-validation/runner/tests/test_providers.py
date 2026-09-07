@@ -11,6 +11,8 @@ from skilltest.providers import ProviderRequest, invoke_provider
 def _request(tmp_path, *, provider: str, model: str = "chosen-model", effort: str = "high"):
     workspace = tmp_path / "workspace"
     workspace.mkdir(parents=True)
+    (workspace / "fixture").mkdir()
+    (workspace / "evidence").mkdir()
     return ProviderRequest(
         workspace_dir=workspace,
         prompt_bytes=b"subject bytes\n",
@@ -29,6 +31,15 @@ def test_codex_invokes_one_fixed_cli_with_exact_request_values(tmp_path, monkeyp
         stderr=b"codex warning\n",
         final=b"Codex final response\n",
     )
+    real_popen = providers.subprocess.Popen
+
+    def checked_popen(arguments, **kwargs):
+        if arguments[0].endswith("codex"):
+            assert set(kwargs["env"]) == {"HOME", "CODEX_HOME", "TMPDIR", "PATH"}
+            assert kwargs["start_new_session"] is True
+        return real_popen(arguments, **kwargs)
+
+    monkeypatch.setattr(providers.subprocess, "Popen", checked_popen)
 
     result = invoke_provider(request)
 
@@ -43,7 +54,7 @@ def test_codex_invokes_one_fixed_cli_with_exact_request_values(tmp_path, monkeyp
     assert record["argv"] == [
         str(tmp_path / "fake-bin" / "codex"),
         "--cd",
-        str(request.workspace_dir),
+        str(request.workspace_dir / "fixture"),
         "exec",
         "--ephemeral",
         "--skip-git-repo-check",
@@ -56,14 +67,29 @@ def test_codex_invokes_one_fixed_cli_with_exact_request_values(tmp_path, monkeyp
         'model_reasoning_effort="medium"',
         "--sandbox",
         "workspace-write",
+        "--add-dir",
+        str(request.workspace_dir / "evidence"),
+        "--ignore-user-config",
+        "--ignore-rules",
+        "-c",
+        'shell_environment_policy.inherit="none"',
+        "-c",
+        'cli_auth_credentials_store="file"',
+        "-c",
+        'approval_policy="never"',
         "--output-last-message",
         str(request.final_output_path),
         "-",
     ]
-    assert record["cwd"] == str(request.workspace_dir)
+    assert record["cwd"] == str(request.workspace_dir / "fixture")
     assert record["stdin"] == "subject bytes\n"
     assert record["path_prefix"] == str(tmp_path / "fake-bin")
-    assert record["marker"] == "inherited"
+    assert record["marker"] is None
+    # Python/macOS may add these during startup; checked_popen verifies the actual launch env.
+    assert set(record["environment_keys"]) <= {"HOME", "CODEX_HOME", "TMPDIR", "PATH", "LC_CTYPE", "__CF_USER_TEXT_ENCODING"}
+    assert record["environment"]["PATH"] == f"{tmp_path / 'fake-bin'}:/usr/bin:/bin:/usr/sbin:/sbin"
+    assert record["environment"]["HOME"] != str(tmp_path / "invoking-home")
+    assert (request.workspace_dir / "fixture/.git/config").is_file()
 
 
 def test_claude_retains_raw_jsonl_without_parsing_or_formatting(tmp_path, monkeypatch, fake_provider):
@@ -111,7 +137,7 @@ def test_claude_retains_raw_jsonl_without_parsing_or_formatting(tmp_path, monkey
 def test_returns_launch_failure_without_starting_provider(tmp_path, monkeypatch):
     monkeypatch.setenv("PATH", str(tmp_path / "empty-bin"))
 
-    result = invoke_provider(_request(tmp_path, provider="codex"))
+    result = invoke_provider(_request(tmp_path, provider="claude"))
 
     assert result.invocation_started is False
     assert result.exit_code is None
@@ -125,7 +151,7 @@ def test_returns_launch_failure_without_starting_provider(tmp_path, monkeypatch)
         "Popen",
         lambda *args, **kwargs: (_ for _ in ()).throw(ValueError("unrepresentable launch")),
     )
-    normalized = invoke_provider(_request(tmp_path / "value-error", provider="codex"))
+    normalized = invoke_provider(_request(tmp_path / "value-error", provider="claude"))
     assert normalized.invocation_started is False
     assert normalized.exit_code is None
     assert normalized.launch_error == "unrepresentable launch"

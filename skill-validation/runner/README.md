@@ -62,8 +62,10 @@ output. Use this process:
    The Codex adapter still applies its own `workspace-write` sandbox to the isolated
    run workspace.
 4. If any invocation nevertheless returns `INFRA_ERROR`, inspect `result.json`,
-   `stderr.txt`, and the presence of `final.txt`. Classify the attempt as
-   `INFRA_RETRY`, keep its bundle scratch-only, and do not score or promote it.
+   `runner.log`, `stderr.txt`, and any `final.txt`. Only an understood
+   infrastructure-only attempt with no evaluable response is `INFRA_RETRY`.
+   Keep it scratch-only and do not score or promote it; a response accompanied by
+   cleanup failure instead needs owner review and recovery.
 5. Rerun only an unchanged, already approved command when the infrastructure cause
    is understood and the existing approval covers that execution. Otherwise present
    the changed command or permission requirement for fresh owner approval.
@@ -125,7 +127,6 @@ All occurrences are replaced; unknown text and brace expressions remain unchange
 ```text
 Read {{fixture_dir}}/input.txt.
 Write any requested file beneath {{evidence_dir}}.
-Your working directory is {{workspace_dir}}.
 ```
 
 The original template is retained as `prompt-template.txt` and the rendered prompt sent to the provider as `prompt.txt`.
@@ -152,15 +153,59 @@ Each invocation retains this fixed layout beneath the temporary run root:
 
 `workspace/fixture/` receives the declared file copies.
 `workspace/evidence/` starts empty and is writable by the provider.
-The provider runs with `workspace/` as its working directory.
+Codex runs from `workspace/fixture/`; Claude continues to run from `workspace/`.
+For Codex, the fixture inventory also includes a runner-created, template-free `.git/` boundary.
+Declared or existing fixture-root `.git` entries block Codex preparation and are never overwritten.
 Completed bundles are retained; the runner never cleans or reuses them.
 
 ## Providers
 
 Provider flags and environment variables are fixed adapter behavior, not configuration.
 
-Codex uses ephemeral noninteractive execution with JSON and last-message capture, the configured model and effort, the workspace current directory, the `workspace-write` sandbox, and the Git-repository bypass required for a standalone fixture workspace.
-It otherwise uses its installed configuration and normal permission safeguards.
+### Codex
+
+Codex uses ephemeral noninteractive execution with JSON and last-message capture, the configured model/effort, and `workspace/fixture/` as both cwd and `--cd` root.
+It retains `--sandbox workspace-write` and `--skip-git-repo-check`, and grants sibling evidence writes through `--add-dir <workspace/evidence>`.
+The adapter fixes these additional controls:
+
+```text
+--ignore-user-config --ignore-rules
+-c shell_environment_policy.inherit="none"
+-c cli_auth_credentials_store="file"
+-c approval_policy="never"
+```
+
+Each invocation creates private HOME, CODEX_HOME and TMPDIR directories outside its retained bundle, with private parents mode 0700.
+The child receives only these three variables and PATH: the resolved Codex executable's directory followed by `/usr/bin:/bin:/usr/sbin:/sbin`.
+Resolve Codex through the invoking PATH before replacing the environment; use that same absolute executable for login-status preflight and the model call, recording the actual model argv in `runner.log`.
+`execution.executable` remains the provider label `codex`.
+
+Authentication requires an existing regular, non-symlink `auth.json` in the invoking CODEX_HOME (or HOME's `.codex` when CODEX_HOME is unset).
+Copy only that file into the private profile, mode 0600; do not copy settings/instructions or fall back to environment API keys, keychain extraction or a new login.
+Private `login status` must succeed and identify ChatGPT or API-key authentication before the model call.
+Its raw output stays in memory, limited to 8 KiB to bound preflight handling, and is never logged or retained.
+Missing Codex, unavailable/malformed auth or failed setup produces `PREPARATION_FAILED` without a model invocation.
+No shared login, logout or profile write is performed.
+
+Before invocation, compare the prepared prompt/fixture bytes to the declared sources and log their SHA-256 hashes.
+Initialize the fresh fixture Git boundary without templates or inherited user/system Git settings.
+The runbook must freeze source files and capture CLI-version evidence; these checks do not replace that provenance or interpret skill catalogs.
+
+Setup subprocesses have 30-second timeouts; the model keeps its 900-second timeout.
+Codex-owned subprocesses start in separate process groups: terminate remaining owned group members on normal return, failure, timeout or handled interruption, allow five seconds before escalating to kill, and bound subsequent reaping/draining waits too.
+Remove the private runtime only after owned-group cleanup is verified; never signal unrelated sessions.
+On cleanup failure, retain model output and the actual exit code, report infrastructure failure, and log the exact runtime path for manual recovery without its contents.
+If a timed-out Codex child cannot be reaped, its exit code is `null`, not an invented integer; cleanup failure is recorded additionally in the log.
+
+An unhandled termination can leave the runtime behind; its recovery path is logged before authentication is copied.
+Do not promise cleanup of escaped processes, and keep unresolved attempts outside qualified comparison evidence.
+Before manual removal, verify the exact logged directory and that its owned processes have stopped; never target a shared profile or broad temporary root.
+Do not copy the runtime into a retained evidence package.
+
+These are controlled-input mechanisms, not proof of exhaustive filesystem isolation or effective native discovery.
+Real CLI qualification of supplied skills, common/bootstrap inputs, shell-startup behavior and evidence writes remains a separate owner-approved step in the [pilot plan](../../plans/2026-09-06-skilltest-sol-low-pilot.md).
+
+### Claude
 
 Claude uses noninteractive print execution, no session persistence, the configured model and effort, and the fixed non-bypass `--permission-mode acceptEdits` for the evidence-writing workspace.
 Claude inherits its launch environment plus this fixed local baseline:
@@ -183,12 +228,14 @@ Codex writes `final.txt` through its last-message output option.
 ## Result
 
 `result.json` has exact schema version `"0.2"` and records the run identity, timestamps, duration, test id, mechanical invocation state, fixed artifacts, and an infrastructure error when one occurred.
-`status` is `COMPLETED` only for a mechanically completed invocation; otherwise it is `INFRA_ERROR` with one of `PREPARATION_FAILED`, `PROVIDER_LAUNCH_FAILED`, `PROVIDER_TIMEOUT`, `PROVIDER_EXIT_NONZERO`, or `ARTIFACT_WRITE_FAILED`.
+`status` is `COMPLETED` only for a mechanically completed invocation; otherwise it is `INFRA_ERROR` with one of `PREPARATION_FAILED`, `PROVIDER_LAUNCH_FAILED`, `PROVIDER_TIMEOUT`, `PROVIDER_EXIT_NONZERO`, `ARTIFACT_WRITE_FAILED`, or `PROVIDER_CLEANUP_FAILED`.
+The Codex-only cleanup code applies after an otherwise successful model call; earlier preparation/launch/timeout/provider errors stay primary, with cleanup failure logged additionally.
 Exit `0` means the run completed mechanically, exit `1` means an owned-run, provider, timeout, or artifact-persistence failure, and exit `2` means usage or configuration failed before a run directory was owned.
 
 The `fixture` and `evidence` artifact records are recursive, lexicographically path-sorted inventories of retained filesystem entries.
 Entries record relative path and type; regular files also record byte count and SHA-256 digest.
 Inventory does not follow symlinks.
+These are final-state inventories (including Codex's Git boundary), not the pre-launch input hashes recorded in `runner.log`.
 Ordinary evidence may be empty.
 The runner never evaluates evidence or assigns a behavioral verdict.
 

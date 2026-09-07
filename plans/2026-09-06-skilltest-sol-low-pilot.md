@@ -2,8 +2,8 @@
 
 > **For agentic workers:** REQUIRED SUB-SKILL: Use `superpowers:executing-plans` task by task, stopping at the review checkpoints below.
 
-**Status:** Task 1 is complete following the owner's request to commit, push and continue.
-Tasks 2–3 remain draft for owner review; no provider calls are authorized.
+**Status:** Tasks 1–2 are complete following the owner's requests to continue.
+Task 3 and all provider calls remain behind their review/approval checkpoints; no real qualification or pilot observations have been run under this plan.
 The owner separately authorized the completed preparatory timeout-test repair described below.
 The proposed scenarios, eight observation runs and two real qualification calls below require approval with this plan; each provider command also requires its separate exact-command approval.
 
@@ -41,11 +41,14 @@ All historical CLI versions remain `Unknown` under the [evidence limitations in 
 
 ## Task 2: Controlled Codex invocation and bounded runtime lifecycle
 
-**Files:** `skill-validation/runner/src/skilltest/providers.py`, a small `codex_runtime.py` beside it, necessary integration in `runner.py`, the error enum in `results.py`, and corresponding runner tests/docs.
+**Files:** `skill-validation/runner/src/skilltest/providers.py`, a small `codex_runtime.py` beside it, necessary integration in `runner.py`, the error enum in `results.py` and `skill-validation/runner/result.schema.json`, and corresponding runner tests/docs.
 Use existing `TestConfig`, `RunContext` and provider request/result structures; no new public CLI or config interface is required.
 This task owns the internal setup-to-invocation boundary together, including logging the actual resolved command and propagating lifecycle failures.
+Keep `execution.executable` as the existing provider label; record the absolute resolved invocation in runner.log instead of widening that schema field.
+Keep an unknown exit code as `null` if bounded Codex timeout cleanup cannot reap the child; the Codex-only timeout schema branch must accept this existing field shape instead of requiring a fabricated integer.
+The Codex-only runtime owns private directories, file-cache authentication, template-free Git initialization and owned process-group cleanup; preparation checks compare declared prompt/fixture bytes before that invocation.
 
-- [ ] Write failing contracts in `test_providers.py`, `test_run.py`, `test_results.py` and focused runtime tests for the behaviors below. Observe failures before implementing each behavior.
+- [x] Write failing contracts in `test_providers.py`, `test_run.py`, `test_results.py` and focused runtime tests for the behaviors below. Observe failures before implementing each behavior.
 
 | Contract | Required cases |
 |---|---|
@@ -56,9 +59,15 @@ This task owns the internal setup-to-invocation boundary together, including log
 | Reporting | Keep actual provider exit/output. Preflight failures use preparation reporting with no model invocation. Cleanup failure returns a nonzero outcome and `PROVIDER_CLEANUP_FAILED` if no earlier error exists; otherwise retain the earlier error and log cleanup failure additionally. Log the exact recovery path without contents. |
 | Test isolation | Rework Codex fake-provider configuration so it does not rely on inherited `SKILLTEST_FAKE_*` variables; do not add a production environment bypass to keep old tests passing. Tests never read the owner's auth cache or contact a provider. |
 
-- [ ] Implement the smallest helper and adapter changes satisfying those tests. Per-run checks cover owned setup and declared copied bytes, not semantic catalog interpretation. Record safe pre-launch input hashes in the existing runner log; retain final-state inventory semantics in result.json.
-- [ ] Update runner documentation for the Codex-only cwd change, private-runtime requirements, added error code and manual recovery limitation after uncatchable kills. Keep raw model artifacts even when cleanup fails; do not classify an evaluable response as automatically retryable merely because cleanup failed.
-- [ ] Run the full offline runner suite and the hook suite; review the complete change and commit this independently green unit. No real-provider qualification yet.
+- [x] Implement the smallest helper and adapter changes satisfying those tests. Per-run checks cover owned setup and declared copied bytes, not semantic catalog interpretation. Record safe pre-launch input hashes in the existing runner log; retain final-state inventory semantics in result.json.
+- [x] Update runner documentation for the Codex-only cwd change, private-runtime requirements, added error code and manual recovery limitation after uncatchable kills. Keep raw model artifacts even when cleanup fails; do not classify an evaluable response as automatically retryable merely because cleanup failed.
+- [x] Run the full offline runner suite and the hook suite; review the complete change and commit this independently green unit. No real-provider qualification yet.
+
+Verification: 199 offline runner tests pass; the hook suite passes 263 tests with three skips.
+Lifecycle review fixed deadline-edge reaping, false cleanup reporting after successful deletion, and unclosed pipes on handled interruption, with failing regression checks observed before each correction.
+The schema retains its shape/version and provider labels; only the cleanup enum/state and truthful Codex timeout-with-unknown-exit case are added.
+The [operator guide](../skill-validation/runner/README.md#codex) documents the implemented controls and remaining qualification limits.
+Review was performed inline because this session has no no-write-tool reviewer type; no provider-backed review or real authentication was used.
 
 ## Task 3: One provisional runbook, then a bounded pilot
 

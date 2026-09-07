@@ -84,7 +84,13 @@
     {
       "properties": {
         "status": {"const": "INFRA_ERROR"},
-        "execution": {"properties": {"invocation_started": {"const": true}, "timed_out": {"const": true}, "exit_code": {"type": "integer"}}},
+        "execution": {
+          "properties": {"invocation_started": {"const": true}, "timed_out": {"const": true}},
+          "anyOf": [
+            {"properties": {"exit_code": {"type": "integer"}}},
+            {"properties": {"provider": {"const": "codex"}, "exit_code": {"type": "null"}}}
+          ]
+        },
         "infrastructure_error": {"type": "object", "properties": {"code": {"const": "PROVIDER_TIMEOUT"}}}
       }
     },
@@ -100,6 +106,13 @@
         "status": {"const": "INFRA_ERROR"},
         "execution": {"properties": {"invocation_started": {"const": true}, "timed_out": {"const": false}, "exit_code": {"const": 0}}},
         "infrastructure_error": {"type": "object", "properties": {"code": {"const": "ARTIFACT_WRITE_FAILED"}}}
+      }
+    },
+    {
+      "properties": {
+        "status": {"const": "INFRA_ERROR"},
+        "execution": {"properties": {"provider": {"const": "codex"}, "invocation_started": {"const": true}, "timed_out": {"const": false}, "exit_code": {"const": 0}}},
+        "infrastructure_error": {"type": "object", "properties": {"code": {"const": "PROVIDER_CLEANUP_FAILED"}}}
       }
     }
   ],
@@ -155,7 +168,7 @@
       "additionalProperties": false,
       "required": ["code", "message"],
       "properties": {
-        "code": {"enum": ["PREPARATION_FAILED", "PROVIDER_LAUNCH_FAILED", "PROVIDER_TIMEOUT", "PROVIDER_EXIT_NONZERO", "ARTIFACT_WRITE_FAILED"]},
+        "code": {"enum": ["PREPARATION_FAILED", "PROVIDER_LAUNCH_FAILED", "PROVIDER_TIMEOUT", "PROVIDER_EXIT_NONZERO", "ARTIFACT_WRITE_FAILED", "PROVIDER_CLEANUP_FAILED"]},
         "message": {"type": "string"}
       }
     }

@@ -6,6 +6,7 @@ import base64
 import json
 import os
 import stat
+import sys
 from dataclasses import dataclass
 from pathlib import Path
 
@@ -31,6 +32,7 @@ def _write(path: Path, content: str | bytes = "") -> Path:
 @dataclass(frozen=True, slots=True)
 class FakeProvider:
     record_path: Path
+    settings_path: Path
 
     def configure(
         self,
@@ -45,6 +47,9 @@ class FakeProvider:
         fixture_bytes: bytes | None = None,
         evidence_name: str | None = None,
         evidence_bytes: bytes = b"",
+        login_exit: int = 0,
+        login_delay_seconds: float = 0,
+        login_output: str = "Logged in using ChatGPT",
     ) -> None:
         monkeypatch.setenv("SKILLTEST_FAKE_STDOUT", base64.b64encode(stdout).decode("ascii"))
         monkeypatch.setenv("SKILLTEST_FAKE_STDERR", base64.b64encode(stderr).decode("ascii"))
@@ -68,6 +73,12 @@ class FakeProvider:
                 "SKILLTEST_FAKE_EVIDENCE",
                 base64.b64encode(evidence_bytes).decode("ascii"),
             )
+        settings = {
+            key: value for key, value in os.environ.items()
+            if key.startswith("SKILLTEST_FAKE_")
+        }
+        settings.update(login_exit=login_exit, login_delay_seconds=login_delay_seconds, login_output=login_output)
+        self.settings_path.write_text(json.dumps(settings), encoding="utf-8")
 
     def record(self) -> dict[str, object]:
         records = self.record_path.read_text(encoding="utf-8").splitlines()
@@ -79,12 +90,24 @@ class FakeProvider:
         return [json.loads(line) for line in observation_path.read_text(encoding="utf-8").splitlines()]
 
 
+@pytest.fixture(autouse=True)
+def private_test_profile(tmp_path: Path, monkeypatch: pytest.MonkeyPatch) -> Path:
+    # No default offline test may read the owner's authentication or settings.
+    home = tmp_path / "invoking-home"
+    profile = tmp_path / "invoking-codex"
+    home.mkdir()
+    profile.mkdir()
+    monkeypatch.setenv("HOME", str(home))
+    monkeypatch.setenv("CODEX_HOME", str(profile))
+    return profile
+
+
 @pytest.fixture
-def fake_provider(tmp_path: Path, monkeypatch: pytest.MonkeyPatch) -> FakeProvider:
+def fake_provider(tmp_path: Path, monkeypatch: pytest.MonkeyPatch, private_test_profile: Path) -> FakeProvider:
     bin_dir = tmp_path / "fake-bin"
     bin_dir.mkdir()
     record_path = tmp_path / "provider-record.json"
-    script = """#!/usr/bin/env python3
+    script = """#!PYTHON_EXECUTABLE
 import base64
 import json
 import os
@@ -92,7 +115,22 @@ import sys
 import time
 from pathlib import Path
 
-record_path = Path(os.environ["SKILLTEST_FAKE_RECORD"])
+settings = json.loads(Path(__file__).with_name("provider-settings.json").read_text())
+record_path = Path(settings["SKILLTEST_FAKE_RECORD"])
+if "login" in sys.argv and "status" in sys.argv:
+    auth = Path(os.environ["CODEX_HOME"]) / "auth.json"
+    record_path.with_name("login-record.json").write_text(json.dumps({
+        "argv": sys.argv,
+        "environment": {k: os.environ[k] for k in ("HOME", "CODEX_HOME", "TMPDIR", "PATH") if k in os.environ},
+        "environment_keys": sorted(os.environ),
+        "auth_mode": auth.stat().st_mode & 0o777,
+        "profile_mode": auth.parent.stat().st_mode & 0o777,
+        "profile_files": sorted(p.name for p in auth.parent.iterdir()),
+    }))
+    time.sleep(settings["login_delay_seconds"])
+    print(settings["login_output"])
+    print("DUMMY_AUTH_STATUS_MUST_NOT_BE_RETAINED", file=sys.stderr)
+    sys.exit(settings["login_exit"])
 with record_path.open("a", encoding="utf-8") as record_file:
     print(json.dumps({
     "argv": sys.argv,
@@ -100,6 +138,8 @@ with record_path.open("a", encoding="utf-8") as record_file:
     "stdin": sys.stdin.buffer.read().decode("utf-8"),
     "path_prefix": os.environ["PATH"].split(os.pathsep)[0],
     "marker": os.environ.get("SKILLTEST_FAKE_MARKER"),
+    "environment": {k: os.environ[k] for k in ("HOME", "CODEX_HOME", "TMPDIR", "PATH") if k in os.environ},
+    "environment_keys": sorted(os.environ),
     "claude_baseline_env": {
         name: os.environ.get(name)
         for name in (
@@ -114,30 +154,33 @@ with record_path.open("a", encoding="utf-8") as record_file:
         )
     },
     }), file=record_file)
-run_dir = Path(os.getcwd()).parent
+codex_fixture = sys.argv[0].endswith("codex") and Path.cwd().name == "fixture"
+run_dir = Path.cwd().parent.parent if codex_fixture else Path.cwd().parent
 before_output = (run_dir / "config.json").exists()
-fixture_payload = os.environ.get("SKILLTEST_FAKE_FIXTURE")
+fixture_payload = settings.get("SKILLTEST_FAKE_FIXTURE")
 if fixture_payload is not None:
-    Path("fixture/input.txt").write_bytes(base64.b64decode(fixture_payload))
-evidence_name = os.environ.get("SKILLTEST_FAKE_EVIDENCE_NAME")
+    fixture_file = Path("input.txt") if codex_fixture else Path("fixture/input.txt")
+    fixture_file.write_bytes(base64.b64decode(fixture_payload))
+evidence_name = settings.get("SKILLTEST_FAKE_EVIDENCE_NAME")
 if evidence_name is not None:
-    evidence_path = Path("evidence") / evidence_name
+    evidence_path = (Path("../evidence") if codex_fixture else Path("evidence")) / evidence_name
     evidence_path.parent.mkdir(parents=True, exist_ok=True)
-    evidence_path.write_bytes(base64.b64decode(os.environ["SKILLTEST_FAKE_EVIDENCE"]))
-time.sleep(float(os.environ["SKILLTEST_FAKE_DELAY"]))
-sys.stdout.buffer.write(base64.b64decode(os.environ["SKILLTEST_FAKE_STDOUT"]))
-sys.stderr.buffer.write(base64.b64decode(os.environ["SKILLTEST_FAKE_STDERR"]))
-if sys.argv[0].endswith("codex") and os.environ["SKILLTEST_FAKE_WRITE_FINAL"] == "1":
+    evidence_path.write_bytes(base64.b64decode(settings["SKILLTEST_FAKE_EVIDENCE"]))
+time.sleep(float(settings["SKILLTEST_FAKE_DELAY"]))
+sys.stdout.buffer.write(base64.b64decode(settings["SKILLTEST_FAKE_STDOUT"]))
+sys.stderr.buffer.write(base64.b64decode(settings["SKILLTEST_FAKE_STDERR"]))
+if sys.argv[0].endswith("codex") and settings["SKILLTEST_FAKE_WRITE_FINAL"] == "1":
     output_path = Path(sys.argv[sys.argv.index("--output-last-message") + 1])
-    output_path.write_bytes(base64.b64decode(os.environ["SKILLTEST_FAKE_FINAL"]))
-observation_path = Path(os.environ["SKILLTEST_FAKE_CONFIG_OBSERVATIONS"])
+    output_path.write_bytes(base64.b64decode(settings["SKILLTEST_FAKE_FINAL"]))
+observation_path = Path(settings["SKILLTEST_FAKE_CONFIG_OBSERVATIONS"])
 with observation_path.open("a", encoding="utf-8") as observation_file:
     print(json.dumps({
         "before_output": before_output,
         "after_output": (run_dir / "config.json").exists(),
     }), file=observation_file)
-sys.exit(int(os.environ["SKILLTEST_FAKE_EXIT"]))
+sys.exit(int(settings["SKILLTEST_FAKE_EXIT"]))
 """
+    script = script.replace("PYTHON_EXECUTABLE", sys.executable, 1)
     for name in ("codex", "claude"):
         path = bin_dir / name
         path.write_text(script, encoding="utf-8")
@@ -149,7 +192,10 @@ sys.exit(int(os.environ["SKILLTEST_FAKE_EXIT"]))
         str(record_path.with_name("config-observations.jsonl")),
     )
     monkeypatch.setenv("SKILLTEST_FAKE_MARKER", "inherited")
-    return FakeProvider(record_path)
+    (private_test_profile / "auth.json").write_text('{"tokens":{"access_token":"dummy-test-only"}}')
+    fake = FakeProvider(record_path, bin_dir / "provider-settings.json")
+    fake.configure(monkeypatch)
+    return fake
 
 
 @pytest.fixture
