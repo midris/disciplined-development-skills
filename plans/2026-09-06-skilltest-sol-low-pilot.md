@@ -155,7 +155,7 @@ It adds explicitly loaded missing-evidence/edge-case pressure and real-code revi
 The owner requires separate explicit discovery and behavior scenarios: the revised behavior prompts name the target/composed skills; a dedicated native-discovery scenario remains outside these six runs and needs separate prompt/count approval.
 The owner also requires both coverage types for every DD skill. The [completed catalog-purpose audit and deferred plan](deferred/2026-09-07-skilltest-discovery-behavior-catalog-separation.md) capture that broader work without changing historical scenarios or expanding the immediate pilot.
 The new review dependency needs affected qualification; any required real qualification call is separately counted and approved.
-Next checkpoint: exact-command approval for the first DR-05/no-DD observation; Task 5's provider-free qualification and retained-control review are complete.
+Next checkpoint: exact-command approval for DR-05/current-DD; the first extension observation (DR-05/no-DD) completed and passed scoring.
 
 Review addressed task-neutral AR verdict scoring, the new dependency's qualification boundary, scratch-directory preconditions, duplicated status and historical-prompt provenance.
 Owner feedback separated explicitly loaded behavior from native discovery; the catalog audit found the concrete CW mixing and missing native discovery coverage and placed repairs in the deferred plan.
@@ -190,7 +190,20 @@ Extension qualification is recorded in scratch `preflight/reconciliation.md`: CL
 The strict historical comparison stopped on the injected September 6→7 date change, which was explicitly reviewed rather than silently normalized; both new arms share September 7 and the tasks use fixed facts.
 Two earlier scratch-audit path-parser defects are retained separately; neither involved a model call or unresolved runtime.
 Runtime production code and read mechanisms are unchanged from the successful real qualification, so its controls are reused without another paid qualification call.
-The first exact observation command is recorded as unapproved in the extension scratch summary. Remaining commands will be presented at their checkpoints; no observation has started.
+The first exact observation command and its owner approval are recorded in the extension scratch summary. Remaining commands require approval at their checkpoints.
+
+## Task 6: Execute and score the bounded behavior extension
+
+Use the frozen Task 5 inputs and routine runbook; each command requires its own exact approval before execution.
+Do not add repetitions, discovery testing, skill edits or effectiveness claims; retain all judgeable outcomes and stop for owner review after the six planned observations.
+
+- [x] DR-05/no-DD: owner-approved command completed once, Codex / gpt-5.6-sol / low, CLI 0.153.4; runner/provider exit 0, 18.777 seconds, no retry. Full matrix read, final `Not listed.`, semantic PASS / protocol N/A / fidelity PASS. Inputs unchanged and runtime cleanup verified; worksheet retained in extension scratch.
+- [ ] DR-05/current-DD: obtain exact-command approval, run, inspect and score.
+- [ ] LP-05/no-DD, then current-DD: approve each command, run, inspect and score.
+- [ ] AR-03/no-DD, then current-DD: approve each command, run, inspect and score.
+- [ ] Present the complete six-observation process handoff and stop for owner review before broader catalog/effectiveness work.
+
+The passing no-DD observation is not targeted-failure RED evidence or an effectiveness estimate. Original observations/accepted records remain unchanged; detailed evidence and scoring live in the scratch summary and worksheet.
 
 ## Approval and verification checkpoints
 
