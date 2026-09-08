@@ -2,12 +2,13 @@
 
 > **For agentic workers:** On owner activation, use `superpowers:executing-plans` task by task with review checkpoints.
 
-**Status:** Broader catalog implementation remains DEFERRED. The active plan's Tasks 8–9 track the separately approved three-purpose CW preparation and bounded procedure batch; they do not activate the remaining portfolio.
+**Status:** CW-only catalog preparation is ACTIVE under the [CW design](../specs/2026-09-07-cw-validation-design.md); other-skill repairs and further provider calls remain DEFERRED or separately gated.
+The pilot plan's Tasks 8–9 retain the completed first CW procedure batch, not the current preparation scope.
 **Goal:** Give every one of the nine DD skills separately identified discoverability tests and explicitly loaded behavioral-effectiveness tests.
 **Approach:** Reuse existing scenario material, runner configs, worksheets and written runbooks; no new testing framework or schema.
 **Authority:** [Test-purpose separation](../specs/2026-09-06-skilltest-controlled-inputs-design.md#accepted-separation-setup-discovery-and-behavior) and [charter](../../skill-validation/charter/core-contracts.md).
 **Return to:** [CW design and review checkpoint](../specs/2026-09-07-cw-validation-design.md#review-checkpoint).
-The owner approved the next bounded CW portfolio and baseline/edit runbook draft; this does not activate the remaining nine-skill repairs.
+The owner approved porting all existing CW sources and separating mixed purposes before baseline collection and rewrite evaluation; this does not activate the other eight skills' repairs.
 
 ## Audit findings
 
@@ -32,7 +33,7 @@ The seeds are source material, not ready native tests or execution approval.
 
 ## Deferred work
 
-The active plan records the bounded mapping, CW input preparation and separately approved CW procedure batch; all other Task 2 repairs and Task 3 collection remain deferred.
+The [CW mapping](../../skill-validation/pilot/cw-catalog.md) records the activated CW portion of Task 2; other-skill repairs and Task 3 collection remain separately gated.
 The [batch/fixture-design amendment](../specs/2026-09-06-skilltest-controlled-inputs-design.md#accepted-bounded-batch-operation) governs later preparation and collection, not permission to launch them.
 
 ### Task 1: Map purposes without moving the catalog
@@ -62,7 +63,7 @@ Use the complete frozen rubric when scoring; exact presentation is fidelity unle
 ### First CW repair — bounded purposes
 
 Start with concise-writing because it has a small real prose task and the clearest documented selection/application conflation; no new task-tool capability is needed to draft these inputs.
-Only these three purposes belong to the bounded CW increment, retaining all existing packages; the [prepared inputs](../../skill-validation/pilot/README.md#cw-purpose-separated-inputs) contain the exact prompts and complete criterion tables:
+These three purposes defined the first CW increment, retaining all existing packages; the [prepared inputs](../../skill-validation/pilot/README.md#cw-purpose-separated-inputs) contain those unchanged prompts and criterion tables:
 
 | New variant purpose | Reuse | Contract to preserve or separate |
 |---|---|---|
@@ -71,18 +72,20 @@ Only these three purposes belong to the bounded CW increment, retaining all exis
 | Native discovery, non-trigger | CW-17's response-only detailed-explanation request | Apply the charter's CW-I3 detailed-response exception without asking a routing quiz or loading CW first. Missing/ambiguous trace evidence is inconclusive, not proof of non-use. A complete observable trace supports only the scoped no-selection claim. |
 
 The non-trigger expectation follows the charter even though current CW lacks that exception; retain any resulting failure rather than weakening the test to match the implementation.
-CW-18's durable-file contrast and a separately loaded CW-I3 application test remain later work; this first increment does not complete the whole CW contract or nine-skill portfolio.
-The subsequent [minimal CW portfolio](../specs/2026-09-07-cw-validation-design.md#selected-portfolio) uses CW-08 and CW-19 for routine loaded behavior and retains the prepared discovery pair; completed CW-01 behavior remains unchanged rather than routinely repeated.
-Keep CW-09–14 as historical authoring/contract diagnostics for now: the charter proposes treating them as composition rather than core compression, and the current skill deliberately excludes authoring. Do not add an implicit CW co-selection requirement to the first behavior task.
+The [full-CW expansion](../../skill-validation/pilot/cw-catalog.md) now prepares CW-18 durable-file discovery, separate loaded scope decisions, the remaining prose tasks and authoring/contract diagnostics.
+The earlier CW-08/19 behavior pairs and discovery pair remain unchanged and eligible for audited medium-result reuse; CW-01 behavior receives new medium configs.
+CW-09–14 remain composition/contract coverage, not core compression; the current skill deliberately excludes authoring, and its historical target mismatches are preserved.
+Scope-contract answers do not establish hidden method use or actual authoring; that limit remains after this expansion.
 For a future DISC-08 derivative, propose no CW selection for the explicit mechanical-only rename: the task forbids prose revision. Preserve the accepted optional-CW verdict under its original rubric until the owner approves a new contract.
 No-DD is a behavioral control, not a discovery failure for an unavailable skill. The native-discovery variants test current-DD with target availability qualified and other skill loads disclosed.
 Approve the exact prompts, input/criterion freeze and sampling separately before collection; preparation supplies neither run counts nor provider-call permission.
 
 ### Task 2: Prepare separate variants
 
-The bounded CW preparation is tracked in active Task 8; the unchecked items below describe the remaining full portfolio, not permission to expand this unit.
+The CW-only preparation and its review/qualification checkpoints are tracked by the [CW design](../specs/2026-09-07-cw-validation-design.md#review-checkpoint).
+Other-skill items below remain deferred; no prepared config grants launch permission.
 
-- [ ] Split CW-13/14 and CW-17/18's future selection and loaded-application purposes into separate prompts/rubrics; retain only useful diagnostics from CW-09–12.
+- [x] Prepare CW-13/14 native selection versus loaded lifecycle decisions and CW-17/18 native selection versus loaded scope diagnostics; retain CW-09–12 as labeled diagnostics. Owner input review and affected qualification remain pending in the CW design.
 - [ ] For every DD skill, prepare native-discovery tasks without explicit skill names, paths, pasted descriptions or loading hints in the task prompt. Use frozen skills in the provider's qualified native paths. Start with relevant positive and boundary/non-trigger cases; reuse task ideas and approve exact counts before collection rather than multiplying the whole catalog.
 - [ ] Keep behavior tasks explicitly loaded, with target/composed skill reads verified. No-DD omits all DD files/directives and retains the same relevant Superpowers; preserve common task facts, tools and criteria. Pin any companion whose actual behavior is judged rather than relying on ambient discovery.
 - [ ] Supply prerequisite task facts in new fixtures. For LP variants requiring runnable verification, give both arms the same framework, command and cwd while retaining the explicit absent-source boundary; do not edit or recollect the completed pilot pair.

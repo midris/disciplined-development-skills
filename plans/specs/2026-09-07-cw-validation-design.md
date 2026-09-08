@@ -1,83 +1,93 @@
-# Minimal CW baseline and edit testing
+# CW catalog baseline and edit testing
 
-**Status:** All 18 owner-approved Codex / gpt-5.6-sol / medium observations are collected and fully scored, three per condition; owner review and acceptance are pending.
-The exact command batch is complete, not reusable authorization.
-No further provider call, skill edit, additional model/catalog campaign or evidence promotion is authorized.
+**Status:** Owner approved the complete CW catalog mapping, including purpose-separated variants and the proposed three-observation Sol-medium schedule, before rewrite evaluation.
+The earlier 18 Sol-medium observations are collected and scored; owner acceptance remains pending.
+This preparation authorizes no provider call, skill edit or evidence promotion.
 **Workspace:** `.worktrees/cw-validation-design`, branch `feature/cw-validation-design`.
-**Contract:** [CW charter](../../skill-validation/charter/core-contracts.md#concise-writing), [controlled-input decisions](2026-09-06-skilltest-controlled-inputs-design.md), and the [CW runbook](../../skill-validation/pilot/cw-runbook.md).
+**Contract:** [CW charter](../../skill-validation/charter/core-contracts.md#concise-writing), [controlled-input decisions](2026-09-06-skilltest-controlled-inputs-design.md), and [CW runbook](../../skill-validation/pilot/cw-runbook.md).
 
 ## Selected portfolio
 
-| Source | Primary purpose | Conditions |
-|---|---|---|
-| CW-08 | Loaded behavior: remove policy padding without losing eligibility, dates, exceptions or navigation; CW-I1/I2 and the non-software domain of CW-I3. | No-DD and current-DD; candidate-DD after separately authorized authoring. |
-| CW-19 | Loaded behavior: conserve exact thresholds, actors, order, authorization, rationale and recovery boundaries under compression; CW-I1/I2. | No-DD and current-DD; candidate-DD after separately authorized authoring. |
-| Prepared CW-01 discovery variant | Native positive discovery for a prose-shortening task; CW-I3. | Current-DD; candidate-DD when comparing edits. |
-| Prepared CW-17 discovery variant | Native non-trigger for an explicitly detailed response-only request; CW-I3. | Current-DD; candidate-DD when comparing edits. |
+Port all 17 existing CW sources: CW-01–14 and CW-17–19; there are no CW-15/16 packages.
+Preserve their task facts and intended criteria, separating mixed purposes into new variants rather than modifying accepted packages.
+The [catalog mapping](../../skill-validation/pilot/cw-catalog.md) is the single inventory of variants, conditions, prompt changes, criterion attribution and proposed counts.
+It retains the already prepared positive native-discovery variant as separate coverage, not a replacement for CW-01 behavior.
 
-CW-08 overlaps the pilot's ordinary CW-01 behavior case while adding a non-software boundary, so the routine set does not repeat CW-01 behavior.
-Keep that completed evidence and its inputs unchanged; it remains available for a targeted regression if a later edit warrants it.
-CW-19 protects a distinct, previously observed conservation failure; the historical result does not predict a new no-DD result or establish controlled RED.
+The baseline measures current pre-rewrite DD plus meaningful no-DD controls at Codex / gpt-5.6-sol / medium, three observations per scenario/condition.
+Compression, transport, authoring composition, description/contract diagnostics and native discovery remain separately reported.
+A contract interpretation or next-action decision is not evidence of actual prose application, authoring, validation or deployment.
+Do not turn a declared absent ownership clause or an unavailable DD target into a no-DD behavioral failure.
 
-This is useful focused coverage, not the whole charter or a replacement for all historical scenarios.
-Explicitly loaded detailed-response handling, CW-18's durable-file contrast, the remaining padding patterns and skill-authoring composition remain outside this increment.
-They need separate observable contracts rather than being inferred from discovery, response length or a good rewrite.
-The [broader catalog repairs](../deferred/2026-09-07-skilltest-discovery-behavior-catalog-separation.md) remain deferred.
+CW-13/14 separate native selection from explicitly loaded lifecycle decisions.
+CW-17/18 separate native selection from explicitly loaded scope interpretation; the latter remains a contract diagnostic, not proof of hidden method use.
+Only the CW portion of the [deferred separation plan](../deferred/2026-09-07-skilltest-discovery-behavior-catalog-separation.md) is activated for preparation.
+Other catalogs, new coverage ideas, hooks, Claude, other models/efforts, skill edits and rewrite evaluation remain deferred.
 
 ## Inputs and attribution
 
-Add CW-08/CW-19 pairs alongside existing pilot packages; preserve historical scenarios and completed pilot inputs.
-Reuse the already frozen nine DD bodies and four Superpowers files; current-DD is this recorded pre-rewrite composition, not a moving alias for installed skills.
-No-DD removes all DD files and loading directives, retaining the same Superpowers files and ordinary task tools.
-Both behavior tasks explicitly load only CW in current-DD, then revise supplied prose; they do not execute the operational commands quoted in the prose.
-Other observed skill reads are disclosed composition evidence, not independently attributed CW effectiveness.
-Discovery reuses its existing hint-free prompts, native paths and separate selection rubrics without modification.
-No DD hooks, new subject tools, runner changes, schema changes or directory migration are needed.
+Keep all 105 historical accepted records, original scenario packages, completed pilot inputs and collected evidence unchanged.
+Use existing fixture directories, config schema, runner and worksheets; no runner feature or directory migration is required by this design.
+Reuse the nine frozen DD bodies; current-DD is a recorded composition, not installed skills or the rewritten worktree.
+No-DD removes every DD file/directive but preserves each pair's common Superpowers, task facts, tools and rubric.
+Native fixtures use `.agents/skills/`; description-only diagnostics retain their explicit description inputs and prohibition on body reads.
 
-Use identical task text, rubric and restrictions within each behavior pair; the CW loading prefix and DD availability are the intended treatment differences.
-CW-19's existing eight semantic criteria and actor/context rules remain normative; the new rubric explicitly separates output-only/read-only fidelity from semantics.
-Freeze linked evaluator guidance as well as each local rubric; worksheet hashing of the local rubric alone does not freeze its links.
-Keep all evaluator guidance outside subject inputs.
+Retain the existing four-file Superpowers substrate for ordinary prose and scope cases.
+Authoring cases add their already checked-in writing-skills, testing reference and TDD fixtures identically across paired conditions.
+Keep that added substrate confined to the authoring group, avoiding an unrelated input change to completed CW-08/19 and discovery controls.
+Audit all sources, dependencies and native catalog differences; required unproved controls stop launch.
+Record every incidental companion read and attribute composition decisions to the owning skill.
+
+Behavior prompts explicitly load the target and any judged companion; discovery prompts give no skill names, paths, descriptions or loading instructions.
+The description/contract quizzes are deliberately labeled diagnostics, not native discovery.
+Rubrics preserve semantic obligations while separating ordinary JSON/Markdown presentation and requested loading from semantic judgment.
+In ownership extraction, explicit ownership is a contract requirement; a truthful null can pass extraction fidelity while failing that requirement.
+Do not freeze one preferred ownership sentence as the only acceptable semantic wording.
+Freeze every linked evaluator source outside subject inputs.
 
 ## Collection and edit boundary
 
-The approved schedule is six conditions × three repetitions at Sol medium = 18 fresh observations: 12 behavior and six discovery.
-Sol medium matches the owner's ordinary workload; retain repetitions to observe some run-to-run variation while deferring cross-effort/model comparisons.
-Low, high, Astra, Terra, Claude and the remaining CW scenarios are excluded; these results do not establish effectiveness in those settings.
-The former 54-command proposal is superseded and must not be executed.
-The [runbook](../../skill-validation/pilot/cw-runbook.md#test-set) fixes order, config/rubric mapping and reporting before execution.
-Three repetitions give an initial view of variation, not a precise reliability estimate, universal effectiveness claim or automatic skill-GREEN decision.
-Report each scenario/condition/effort separately with all criterion judgments; do not pool discovery with behavior or increase counts in response to split verdicts.
-Later authoring acceptance/repetition rules still require agreement; this schedule does not activate the charter's conditional historical suite or waive applicable writing-skills requirements.
+The mapping's proposed count replaces the provisional 51-current-DD estimate, which assumed no splits.
+Three observations per declared condition are fixed; do not increase repetitions or effort in response to a FAIL or split result.
+Before calls, review exact prompts/rubrics, reconcile qualification and reuse, freeze a recoverable clean revision, and obtain approval of the fully expanded finite command batch.
+Preparation and a proposed schedule are not launch approval.
 
-Before authoring, identify a judgeable no-DD failure against a frozen behavior criterion.
-If no-DD passes, retain it as a passing control; do not label the absence of DD as RED or raise effort/repeat until failure.
-Current-DD versus candidate-DD tests improvements/regressions in the declared composition; no-DD remains the authoring control.
-Discovery failures are separate from behavioral RED, and an unavailable target is not a discovery failure.
-The runbook specifies candidate preparation and evidence reuse checks without authorizing candidate files or assuming a fixed number of edit iterations.
+Reuse completed medium observations only for unchanged task text, rubric and linked interpretation, source bytes, model/effort, relevant provider invocation and qualified controls, with tied actual CLI version/digest and complete evidence.
+The reuse decision must name the original bundles and input revision; an equal scenario number, current CLI version or historical high/low observation is insufficient.
+Changed variants require three fresh observations; changed controls require fresh affected comparison evidence.
+Record reused observations once with their original timestamps and provenance, not as fresh or newly accepted results.
+Do not reuse the native-discovery observations as historical routing-quiz results.
+Retained control reuse avoids redundant calls but leaves a noncontemporaneous, fixed-order sampling limitation; disclose it rather than claiming randomized causal evidence.
+
+Report each variant/condition separately, with criterion judgments, evaluable denominators and fidelity/readability/validity caveats.
+No pooled catalog effectiveness score, precise reliability estimate, automatic GREEN threshold or skill-deployment acceptance follows from three runs.
+The charter's conditional historical schedule and writing-skills authoring requirements are not silently replaced.
+
+Complete and review this baseline before evaluating the existing rewritten CW candidate or authoring new edits.
+Later candidate evaluation must pin the candidate bytes and surrounding composition, compare the same tests and obtain separate command approval.
+It cannot establish that an already-written candidate was authored after these RED observations.
+New authoring requires a judgeable targeted no-DD failure and agreed writing-skills validation; a passing control remains a passing control.
 
 ## Review checkpoint
 
-- [x] Record the owner-approved portfolio and bounded omissions.
-- [x] Prepare and provider-free audit the four new input packages; preserve all previous inputs/evidence.
-- [x] Draft and review one baseline/edit runbook with existing commands and linked recovery/scoring procedures.
-- [x] Owner reviews the presented inputs and approves the medium-only 18-run baseline schedule; candidate authoring remains separately gated.
-- [x] Prepare and audit the six selected medium configs; review the schedule amendment.
-- [x] Reconcile qualification against retained evidence; no new paid setup probe is required for unchanged controls.
-- [x] Freeze the reviewed revision and obtain approval of the exact finite command batch.
-- [x] Collect and score all 18 observations; verify inputs, full traces, CLI provenance, cleanup and worksheets.
-- [ ] Owner reviews the complete scratch set and decides acceptance and the next authoring/design step.
+- [x] Collect and fully score the earlier six-condition, 18-observation medium batch.
+- [x] Owner chooses full-CW baseline preparation before rewrite evaluation, with three Sol-medium observations per condition and purpose separation.
+- [x] Map every source, prepare exact variant prompts/rubrics/configs and review the resulting counts.
+- [x] Provider-free audit config loading, prepared bytes, pair differences, explicit input paths and withheld guidance.
+- [x] Owner approves the reviewed mapping and its prompt/rubric changes; final call count remains subject to reuse checks and exact-command approval.
+- [x] Resolve affected catalog/dependency and permitted-write qualification plus exact retained-result reuse: all 18 completed medium observations qualify; 81 new calls remain.
+- [ ] Freeze reviewed inputs and approve the expanded command batch.
+- [ ] Collect and score the remaining observations, then audit the complete baseline set.
+- [ ] Owner accepts the baseline evidence and selects the next candidate-evaluation step.
 
-Stop for owner review; completion of this batch does not authorize further provider calls or candidate authoring.
-The selected six medium configs are unchanged members of the provider-free audited matrix: shared prompt/fixture identity, paired rubric/loading differences, withheld inputs and argv controls were verified.
-Unused low/high configs remain outside the authorized schedule; no input or runner change is required to narrow collection.
-Protected skills, runner code, historical scenarios and previous pilot inputs are unchanged; the frozen-input verification passed 231 runner tests and 263 hook tests with three skips.
-Preparation review was inline because the session has no no-write-tool reviewer type; it used no provider or authentication call.
+The [preparation evidence](/private/tmp/skilltest-cw-catalog-prep.QoUFVI/summary.md) records the provider-free audit of all 33 configs and 11 pairs, source preservation, link checks and inline review fixes.
+The hook suite passed 263 tests with three skips; no provider call was made.
+The [qualification and reuse evidence](/private/tmp/skilltest-cw-catalog-qualification.YiAoRu/summary.md) confirms the added native catalogs, shared inputs, scoped dependency sufficiency, CW-18 file creation/retention and reuse of all 18 original medium observations.
+No additional paid qualification call is required under that scoped reconciliation; clean freeze and exact-command approval remain pending.
 
 ## Collection handoff
 
-The [scratch summary and evidence ledger](/private/tmp/skilltest-cw-baseline.ksDeiD/summary.md) records the approved commands, per-condition counts, criterion worksheets and control checks.
-Collection used frozen revision `6fb4780fce37710a76116dbbeaa832a6a42289cd`; the subsequent status update changes no test input or scoring rule.
-All 18 runs completed without infrastructure retries, invalid/excluded observations or unresolved cleanup.
-The handoff audit verified mechanical worksheet preservation, evidence links and serial execution; the fresh hook suite passed 263 tests with three skips.
-No runner or process change was required; all results remain scratch-only, and the 105 historical accepted records are unchanged.
+The [earlier scratch summary and evidence ledger](/private/tmp/skilltest-cw-baseline.ksDeiD/summary.md) retains the completed 18 commands, per-condition counts, worksheets and controls.
+Those observations used frozen revision `6fb4780fce37710a76116dbbeaa832a6a42289cd`; no test input or scoring rule is changed retroactively.
+All 18 completed without infrastructure retries, invalid/excluded observations or unresolved cleanup.
+The subsequent handoff audit checked mechanical worksheet preservation, evidence links and serial execution.
+Results remain scratch-only pending owner acceptance; their command approvals are exhausted.

@@ -1,40 +1,33 @@
 # CW baseline and edit runbook
 
-**The medium-only 18-run baseline is collected and scored; owner review is pending.**
-The command shapes below are procedural reference, not authorization to repeat the completed batch.
-The [CW design](../../plans/specs/2026-09-07-cw-validation-design.md) owns this increment's scope and checkpoint.
+**The owner approved the full-CW catalog mapping, and qualification/reuse checks pass; clean input freeze and provider-command approval remain pending.**
+The earlier 18 medium observations are collected and scored, pending owner acceptance; their command approvals are exhausted.
+The [CW design](../../plans/specs/2026-09-07-cw-validation-design.md) owns scope and checkpoints, and the [catalog mapping](cw-catalog.md) owns exact inputs, purpose separation, counts and order.
 This is an agent-followed procedure using `skilltest`, not a new program.
 Reuse the [routine scoring](README.md#scoring-and-handoff), [recovery policy](README.md#failure-and-recovery) and [qualification reference](qualification/README.md); this page supplies CW-specific inputs and baseline/edit decisions.
 The existing `pilot/` location avoids a migration; it does not make future observations repetitions of the completed procedure pilot.
 
 ## Test set
 
-The scenario directories contain the shared prompts and evaluator-only rubrics.
-Use only the medium configs below; they reference those same prompt and fixture sources without duplicating or modifying task or scoring inputs.
-Existing low/high configs are not part of this schedule.
-Read them, the [charter](../charter/core-contracts.md#concise-writing) and any rubric-linked source before proposing collection.
+Use the [catalog mapping](cw-catalog.md#source-to-variant-map): each condition links its exact prompt, evaluator-only rubric and medium config.
+The worksheet scenario is the directory containing that prompt/rubric, not `efforts/medium/`.
+Read the complete rubric and linked sources before scoring.
+Keep source IDs and variant purposes distinct; a discovery observation cannot stand in for the source's loaded behavior or contract quiz.
 
-| Row | Purpose / condition | Medium config | Worksheet scenario beneath pilot/ |
-|---|---|---|---|
-| 1 | CW-08 policy rewrite / no-DD | [Config](efforts/medium/cw08-no-dd.json) | `cw-08/no-dd` |
-| 2 | CW-08 policy rewrite / current-DD | [Config](efforts/medium/cw08-current-dd.json) | `cw-08/current-dd` |
-| 3 | CW-19 complex conservation / no-DD | [Config](efforts/medium/cw19-no-dd.json) | `cw-19/no-dd` |
-| 4 | CW-19 complex conservation / current-DD | [Config](efforts/medium/cw19-current-dd.json) | `cw-19/current-dd` |
-| 5 | CW-01 positive native discovery / current-DD | [Config](efforts/medium/cw01-discovery.json) | `cw-01/discovery` |
-| 6 | CW-17 native non-trigger / current-DD | [Config](efforts/medium/cw17-discovery.json) | `cw-17/discovery` |
+The proposed schedule is 33 conditions × three repetitions = 99 observations, including 66 current-DD and 33 no-DD.
+The [record-by-record checks](cw-catalog.md#counts-order-and-reuse) support reuse of 18 completed observations, leaving 81 new calls.
+The exact command list requires approval before launch; drift requires affected requalification and a revised count, not automatic recollection.
+No other models/efforts, other catalogs or candidate evaluation are included.
+Run serially in the map's fixed order, skipping only explicitly recorded reused observations.
+Use fresh runtimes and distinct attempt directories; do not add repetitions to improve verdicts.
+Any required live qualification is separately approved and reported, never counted as effectiveness.
+Understood infrastructure-only retries retain the routine unchanged-command policy.
 
-**Approved schedule:** Codex / gpt-5.6-sol / medium only, three repetitions of each row: 18 total (12 behavior, six discovery).
-This prioritizes the owner's ordinary workload and repeated observations over cross-effort/model coverage.
-Execute serially: repetitions 1–3 each visit rows 1–6 in order.
-This fixed order is simple to audit, not randomized or fully counterbalanced; retain timestamps and harness provenance and disclose possible order effects.
-Use fresh runtimes for every repetition and distinct attempt directories; no parallel subject runs or adaptive stopping on skill verdicts.
-No extra qualification model call or retry is included in the count; only understood infrastructure-only retries follow the linked unchanged-command policy.
-No low/high, Astra, Terra, Claude, remaining-CW collection or candidate skill edit is included.
-The completed batch used the replacement medium-only list; neither it nor the superseded 54-command proposal authorizes another launch.
-Report PASS/FAIL/INCONCLUSIVE counts and the evaluable denominator for each scenario/condition/effort, with criterion-level judgments and separate fidelity/readability/validity caveats.
-Disclose excluded infrastructure/contamination attempts separately; never discard judgeable FAILs or pool discovery into behavior.
-Three repetitions provide an initial view of variation, not a precise reliability estimate or automatic GREEN/acceptance threshold; owner review decides baseline acceptance, and later authoring criteria/repetitions require separate agreement.
-Do not use old pilot observations as fresh baseline repetitions or rerun CW-01 behavior routinely.
+Report each purpose/condition separately with criterion judgments, PASS/FAIL/INCONCLUSIVE counts, evaluable denominator and fidelity/readability/validity caveats.
+Retain all judgeable FAILs and passing no-DD controls.
+Three runs expose some variation, not a precise reliability estimate, automatic GREEN or deployment acceptance.
+Disclose fixed-order and noncontemporaneous-reuse limits.
+Historical low/high procedure observations are not medium baseline repetitions.
 
 ## Fixture setup and freeze
 
@@ -42,20 +35,24 @@ Work from the root of `.worktrees/cw-validation-design` on `feature/cw-validatio
 Use the existing runner environment; if absent, run `uv sync --frozen` from `skill-validation/runner/`, then return to the worktree root.
 Dependency or harness changes require relevant offline verification before collection.
 
-The configs are the exact fixture inventory: four common Superpowers 6.3.0 files at native `.agents/skills/` targets; current-DD adds the nine frozen DD bodies from `inputs/dd/`.
-No-DD supplies none of those DD bodies.
-Keep their existing source bytes, target names and supporting files fixed across the selected configs; the [input provenance](README.md#behavior-extension-inputs) records their origin.
-No new task files are needed: the prose is inline, and CW-19's shell commands are text to preserve, not commands to execute.
-All six tasks prohibit file edits, Git changes, outside-fixture inspection, network and dispatch.
-Do not supply rubrics, runbooks, charter text, accepted answers, credentials or other evaluator guidance as fixtures.
-The runner owns private HOME/CODEX_HOME/TMPDIR, native fixture copying, the Git boundary, authentication preflight and cleanup; do not provision a second runtime around it.
+The configs are the exact file/target inventory; the [mapping](cw-catalog.md#fixture-groups-and-evidence-boundaries) defines ordinary, authoring and description-only groups.
+Do not add authoring dependencies to ordinary cases: that would change the surrounding inputs of the completed observations.
+Within each behavior pair, common Superpowers/task files stay identical and no-DD omits all DD bodies/directives.
+Description diagnostics expose the declared description texts, not the nine DD bodies.
+No-DD is N/A for these inspected-contract/description tasks and unavailable-target discovery.
+
+All tests are read-only except CW-18 discovery, which may create only `fixture/clothing-swap-guide.md`.
+All pre-existing fixture files remain protected; operational shell commands quoted in source prose are never executable tasks.
+No Git mutation, outside-fixture inspection, network task calls or dispatch is permitted.
+Do not supply rubrics, runbooks, charter text, accepted answers, credentials or evaluator guidance as fixtures.
+The runner owns private HOME/CODEX_HOME/TMPDIR, fixture copying, Git boundary, authentication preflight and cleanup; do not provision a second runtime around it.
 
 Before collection:
 
 1. Audit each config with the existing `load_config` and `prepare_workspace` helpers in disposable scratch, without invoking a provider; inspect rendered prompts and compare every prepared file to its declared source. These internal helpers are the existing provider-free preparation path, not a new public CLI. Check for symlinked sources/ancestors and undeclared files too.
-2. Verify behavior-pair task/rubric equality, with only the current-DD CW-loading prefix and DD files differing; verify discovery prompts have no loading hints. Confirm all requested body paths resolve inside their prepared fixture.
+2. Verify behavior-pair task/rubric equality, with only the current-DD CW-loading prefix and DD files differing; authoring pairs retain identical common loading directives. Verify discovery prompts have no loading hints and description diagnostics cannot be mistaken for native-discovery tests. Confirm all requested body paths resolve inside their prepared fixture.
 3. Commit the reviewed inputs, rubrics, this runbook and linked scoring guidance; record the full recoverable revision in one scratch summary. Require a clean worktree, including no untracked inputs.
-4. Reconcile relevant qualification against the [retained CW/extension evidence](../../plans/2026-09-06-skilltest-sol-low-pilot.md#task-9-qualify-and-exercise-the-cw-purposes). Reuse only demonstrably unchanged controls; a new prose task does not automatically require another paid setup probe. Missing evidence or changed CLI/catalog/tool controls must be resolved before launch.
+4. Reconcile relevant qualification against the [retained CW/extension evidence](../../plans/2026-09-06-skilltest-sol-low-pilot.md#task-9-qualify-and-exercise-the-cw-purposes). Reuse only demonstrably unchanged controls; a new prose task does not automatically require another paid setup probe. Reconcile the added authoring group, description-only inputs and CW-18's file-creation/retention path explicitly. Missing evidence or changed CLI/catalog/tool controls must be resolved before launch.
 5. Record the selected CLI executable and fixed qualified version/digest capture directory. Do not treat an old version pin or a current version command as historical run provenance.
 6. Create a fresh scratch root with `mktemp -d /private/tmp/skilltest-cw-baseline.XXXXXX`, then its `runs/` and `attempts/` directories. Put the frozen revision, qualified-control reference, ordered condition/repetition rows and command list in its `summary.md`.
 
@@ -66,7 +63,7 @@ Historical command approvals do not transfer to this runbook.
 ## Execute one approved row
 
 From the frozen worktree root, set `CW_ROOT` to that absolute root and `CW_SCRATCH`, `CW_ATTEMPT`, `CW_REFERENCE`, `CW_REVISION` to the exact approved summary values.
-Set `CW_SCENARIO` to `skill-validation/pilot/` plus the table's worksheet-scenario path, and `CW_CONFIG` to the selected effort config's absolute path.
+Set `CW_SCENARIO` to the repository-relative directory containing the mapping's linked prompt/rubric, and `CW_CONFIG` to its linked medium config's absolute path.
 The medium config directory is not the worksheet scenario directory; use the mapped shared rubric rather than looking for a rubric under `efforts/`.
 `CW_REFERENCE` is the fixed qualified CLI capture directory, not the new attempt directory.
 For a first attempt, create `CW_ATTEMPT` once with `mkdir` without `-p`; a collision requires inspection, never overwrite.
@@ -77,7 +74,7 @@ Run these checks individually and stop on nonzero exit; Git status must also be 
 
 ```sh
 git status --short
-git diff --exit-code "$CW_REVISION" -- skill-validation/pilot skill-validation/runner skill-validation/charter/core-contracts.md skill-validation/scenarios/concise-writing/cw-08 skill-validation/scenarios/concise-writing/cw-19 plans/specs/2026-09-07-cw-validation-design.md plans/specs/2026-09-06-skilltest-controlled-inputs-design.md plans/completed/specs/2026-09-02-skill-testing-methodology-design.md
+git diff --exit-code "$CW_REVISION" -- skill-validation/pilot skill-validation/runner skill-validation/charter/core-contracts.md skill-validation/scenarios/concise-writing plans/specs/2026-09-07-cw-validation-design.md plans/specs/2026-09-06-skilltest-controlled-inputs-design.md plans/completed/specs/2026-09-02-skill-testing-methodology-design.md
 test -d "$CW_SCRATCH/runs" && test -d "$CW_ATTEMPT"
 /opt/homebrew/bin/codex --version > "$CW_ATTEMPT/cli-version.txt" 2> "$CW_ATTEMPT/version-stderr.txt"
 /usr/bin/shasum -a 256 /opt/homebrew/bin/codex > "$CW_ATTEMPT/cli-sha256.txt"
@@ -99,6 +96,8 @@ Record exit status and stdout's exact bundle path as `RUN_BUNDLE`; never select 
 Apply the linked recovery policy if execution or required controls fail.
 Inspect result.json, runner.log, stdout/stderr, the entire model response trace, final.txt and final fixture/evidence inventories.
 Verify exact invocation, prelaunch hashes against frozen inputs, protected-file preservation, body-loading evidence and recorded owned-process/runtime cleanup.
+For CW-18 discovery, independently read the retained fixture/clothing-swap-guide.md and require it to be the only added task file; no existing input may change.
+Do not apply the read-only variants' no-new-file check to that permitted output or accept a completion notice without the artifact.
 Check that the exact logged runtime path is absent without reading its credential-bearing contents; missing ownership/cleanup evidence is unresolved, not a successful cleanup claim.
 Only then render the worksheet from the matching frozen rubric:
 
@@ -108,16 +107,19 @@ Only then render the worksheet from the matching frozen rubric:
 
 Fill every assessment and the provider CLI-version cell with its tied capture reference; preserve generated mechanical fields.
 Score the full response trace, including narration, not just final.txt; tool output proves reads/actions, not model-authored prose quality.
-Judge behavior, discovery, fidelity, readability and infrastructure under their separate contracts; deterministic protocol is N/A for this set.
+Judge prose behavior, transport, composition decisions, description/contract diagnostics, native discovery, fidelity, readability and infrastructure under their separate contracts; deterministic protocol is N/A for this set.
 Retain all judgeable results, including FAILs and passing no-DD controls, then update the summary row and continue through the approved batch when required checks pass.
 Nonfatal diagnostics are non-blocking only under the linked recovery policy's evidence checks; neither an ERROR label nor exit 0 alone decides validity.
 
 ## Use the baseline for an edit
 
-1. Review both behavior pairs for a targeted, judgeable no-DD failure before authoring. If the control passes, retain that result; select or design a separately approved diagnostic rather than declaring RED, weakening criteria or repeating until failure. A current-DD failure alone is not the required no-DD control.
+Finish the full-CW baseline and owner review before evaluating the existing rewrite or authoring an edit.
+Testing an existing candidate can compare its frozen bytes, but cannot establish a prior RED-before-authoring chronology.
+
+1. Review the relevant behavior pairs for a targeted, judgeable no-DD failure before authoring. If the control passes, retain that result; select or design a separately approved diagnostic rather than declaring RED, weakening criteria or repeating until failure. A current-DD failure alone is not the required no-DD control.
 2. Agree the edit hypothesis, required RED/GREEN repetitions, regression coverage and acceptance rule under `superpowers:writing-skills` before authoring or collecting candidate evidence. This baseline schedule does not waive that skill's applicable requirements. The original conditional charter schedule is not activated automatically.
-3. Freeze current-DD; prepare candidate copies in separately named directories after authoring is authorized. For a CW-only edit, replace only the CW source bytes in candidate configs, keeping its native target, the other eight DD bodies, common Superpowers, task prompt and rubric unchanged. Separate candidate IDs/source paths record the condition; do not overwrite frozen current inputs. A new dedicated tool is a separately approved skill-plus-tool change.
-4. Default regression coverage is both loaded-behavior tasks plus both discovery tasks for the candidate. A behavior-only edit can still change native selection, so do not silently drop discovery. This portfolio cannot support claims about the deferred detailed-response application, durable-file or authoring-composition boundaries; add the necessary focused tests before editing those contracts.
+3. After owner approval of candidate preparation, freeze current-DD and snapshot the existing candidate or authorized new edit into separately named inputs. For a CW-only change, replace only CW source bytes in body-based configs; for CW-09/11, replace only the CW description with the candidate's exact frontmatter value. Keep native targets, other DD inputs, common Superpowers, task prompt and rubric unchanged. Separate candidate IDs/source paths record the condition; never overwrite frozen current inputs. A new dedicated tool is a separately approved skill-plus-tool change.
+4. Agree candidate coverage against the full catalog before collection. Keep discovery separate from behavior and retain relevant regressions; an existing-candidate catalog comparison and a targeted new edit need not have identical scope. Loaded contract/decision diagnostics do not prove executed prose-method application or an authoring lifecycle; do not broaden claims beyond their evidence.
 5. Reuse prior no-DD/current observations only when their recoverable inputs, model/effort, actual CLI/version/digest, required qualification, scoring rules and agreed sampling remain comparable. Otherwise propose fresh affected controls; do not stitch mismatched observations into a comparison or automatically rerun the entire historical catalog.
 6. Present the complete candidate/control/regression command batch for approval, with its fixed counts/order. Collect and score under the same procedure; any test-contract change needs fresh affected comparison evidence. Report targeted improvement and regressions separately, without pooling discovery into prose effectiveness or attributing a composition-wide result solely to CW.
 

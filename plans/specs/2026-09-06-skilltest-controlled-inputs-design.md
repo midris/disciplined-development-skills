@@ -4,7 +4,7 @@
 This spec records accepted design decisions and clearly labeled proposals, not provider-call permission.
 The owner approved the post-pilot bounded-batch workflow below; qualification and provider invocation remain distinct approvals, with exact commands eligible for approval together as a finite batch.
 Broader campaign decisions remain deferred rather than prerequisites to design every future workflow now.
-The subsequent [minimal CW design](2026-09-07-cw-validation-design.md) owns the owner-approved CW portfolio/runbook preparation and its next review checkpoint; the pilot plan retains the completed execution record.
+The subsequent [CW design](2026-09-07-cw-validation-design.md) owns the owner-approved full-CW catalog preparation and baseline-before-rewrite sequence; the pilot plan retains the completed procedure record.
 
 ## Overall goal
 
@@ -61,7 +61,8 @@ The [Codex finding](../2026-09-05-skilltest-provider-input-isolation.md#accepted
 Preserve all 105 owner-accepted baseline observations without rescoring or replacing them.
 The CLI-provenance decision below permits a metadata-only addition to their worksheets when the template is updated.
 They establish historical methodology evidence, not an arm of a new controlled comparison.
-Do not inspect or compare the unrelated rewritten-skills worktree.
+Leave the unrelated rewritten-skills worktree unchanged.
+The owner later permitted read-only inspection of its CW candidate, but the [CW design](2026-09-07-cw-validation-design.md) defers further candidate work until the full-CW baseline is reviewed; other rewritten skills remain out of scope.
 Qualify the no-DD and current-DD environments, their declared Superpowers composition and representative scenario tools before controlled baseline collection; the synthetic spikes did not establish those production conditions.
 Qualify the candidate's actual inputs and any changed discovery/tool requirements before its comparison runs, after RED and candidate authoring; do not require a rewrite as a prerequisite for collecting RED.
 Harness qualification may use synthetic A/B variants to test switching and loading, but those variants are not skill candidates or effectiveness observations.
