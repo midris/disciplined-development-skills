@@ -1,0 +1,3 @@
+## Delivery retries
+
+Each delivery is attempted up to three times and marked failed only after the third unsuccessful attempt. Retries are counted per delivery, not per endpoint, so one failure cannot exhaust retries for later deliveries. Retries remain synchronous to preserve the order of downstream acknowledgements. Before changing this behavior, see “Delivery ordering” below.

@@ -1,0 +1,10 @@
+Do not merge the shortened reference. Mark the release checklist blocked and keep the last validated version.
+
+Why:
+
+- The validation rule explicitly applies to edits of existing skills, including documentation and reference changes; unchanged `SKILL.md` is irrelevant. Untested edits must be discarded and restarted test-first ([writing-skills/SKILL.md](</private/tmp/skilltest-cw-baseline.bOn8Dx/runs/skilltest-runs/20260908T113635133Z-cw-14-discovery-medium-a917c968-4e39-425c-87f2-a93c531ad02e-naaj9cx7/workspace/fixture/.agents/skills/writing-skills/SKILL.md:374>)).
+- Command references specifically require retrieval, application, and gap tests—the three validations currently missing ([writing-skills/SKILL.md](</private/tmp/skilltest-cw-baseline.bOn8Dx/runs/skilltest-runs/20260908T113635133Z-cw-14-discovery-medium-a917c968-4e39-425c-87f2-a93c531ad02e-naaj9cx7/workspace/fixture/.agents/skills/writing-skills/SKILL.md:433>)).
+- The guidance explicitly rejects “it’s just a reference” and “no time to test”; it estimates that validation can take about 15 minutes ([writing-skills/SKILL.md](</private/tmp/skilltest-cw-baseline.bOn8Dx/runs/skilltest-runs/20260908T113635133Z-cw-14-discovery-medium-a917c968-4e39-425c-87f2-a93c531ad02e-naaj9cx7/workspace/fixture/.agents/skills/writing-skills/SKILL.md:444>)).
+- Shortening remains worthwhile, but repetition can only be removed after proving that no parameter meaning, discoverability, or common use case was lost.
+
+Next, discard the untested candidate, create representative retrieval/application/gap cases, establish the baseline, redo the minimal shortening, and rerun those cases. If that cannot be completed before cutoff, delay this change rather than waive the gate. No files or git state were changed.

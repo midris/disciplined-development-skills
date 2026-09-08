@@ -1,0 +1,1 @@
+Reports now download as UTF-8-encoded CSV files with the report’s active filters applied. Existing PDF download behavior is unchanged.

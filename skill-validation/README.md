@@ -39,7 +39,8 @@ This is a design map of reusable scenario material, not an effectiveness score o
 The catalog summaries retain detailed scenario assessments; representative IDs below link directly to the relevant task or rubric.
 None of the 105 historical configs declares native skill targets; DISC-01–12 paste descriptions and prohibit body reads.
 Those historical packages do not test native discoverability; the explicitly loaded pilot and setup qualification do not fill that gap.
-The separate [CW procedure batch](../plans/2026-09-06-skilltest-sol-low-pilot.md#task-9-qualify-and-exercise-the-cw-purposes) adds one positive and one non-trigger native-discovery observation, pending owner acceptance; native discovery remains unexercised for the other eight skills.
+The [CW mapping](pilot/cw-catalog.md) separates loaded behavior, contract diagnostics and native discovery in the controlled portfolio; the [CW design](../plans/specs/2026-09-07-cw-validation-design.md) owns its current collection and acceptance status.
+Dedicated native-discovery validation for the other eight DD targets remains deferred; incidental companion loading in CW tests does not replace it.
 The discovery seeds below need fresh natural-task prompts and frozen native fixtures before use, not replay of the routing quizzes.
 
 | Skill / charter | Explicitly loaded behavior material | Diagnostics, composition and discovery seeds |

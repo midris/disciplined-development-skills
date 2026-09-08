@@ -62,9 +62,11 @@ Preserve all 105 owner-accepted baseline observations without rescoring or repla
 The CLI-provenance decision below permits a metadata-only addition to their worksheets when the template is updated.
 They establish historical methodology evidence, not an arm of a new controlled comparison.
 Leave the unrelated rewritten-skills worktree unchanged.
-The owner later permitted read-only inspection of its CW candidate, but the [CW design](2026-09-07-cw-validation-design.md) defers further candidate work until the full-CW baseline is reviewed; other rewritten skills remain out of scope.
+The [CW design](2026-09-07-cw-validation-design.md#existing-cw-candidate-preparation) owns the baseline-review and existing-candidate preparation checkpoints; follow its current status and separate command-approval gate.
+Only the unchanged CW candidate may be copied for that comparison; other rewritten skills remain out of scope.
 Qualify the no-DD and current-DD environments, their declared Superpowers composition and representative scenario tools before controlled baseline collection; the synthetic spikes did not establish those production conditions.
-Qualify the candidate's actual inputs and any changed discovery/tool requirements before its comparison runs, after RED and candidate authoring; do not require a rewrite as a prerequisite for collecting RED.
+Qualify the candidate's actual inputs and any changed discovery/tool requirements before its comparison runs; do not require a rewrite as a prerequisite for collecting RED.
+New authoring follows RED; testing an already-written snapshot cannot establish that chronology retroactively.
 Harness qualification may use synthetic A/B variants to test switching and loading, but those variants are not skill candidates or effectiveness observations.
 The runner remains responsible for mechanical evidence; the orchestrator owns semantic/protocol judgment and the owner retains acceptance authority.
 

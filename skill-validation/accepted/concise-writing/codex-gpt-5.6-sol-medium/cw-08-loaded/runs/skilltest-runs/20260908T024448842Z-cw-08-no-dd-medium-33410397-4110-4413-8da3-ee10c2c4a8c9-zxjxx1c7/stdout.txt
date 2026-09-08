@@ -1,0 +1,4 @@
+{"type":"thread.started","thread_id":"01a07ee7-6688-7673-8344-48fd8b14ae08"}
+{"type":"turn.started"}
+{"type":"item.completed","item":{"id":"item_0","type":"agent_message","text":"## Community arts grants\n\nApplicants must be 501(c)(3) organizations with annual budgets under $2 million. Organizations without 501(c)(3) status may apply through an eligible fiscal sponsor; see Appendix A for requirements.\n\nApplications are due October 15 at 5:00 p.m. ET. Late applications will not be reviewed. To request an accommodation, email `access@communityarts.example` at least five business days before the deadline.\n\nDenied applicants may appeal within 10 calendar days using the form specified in Appeals. Appeal decisions are final."}}
+{"type":"turn.completed","usage":{"input_tokens":15296,"cached_input_tokens":10624,"cache_write_input_tokens":0,"output_tokens":144,"reasoning_output_tokens":26}}

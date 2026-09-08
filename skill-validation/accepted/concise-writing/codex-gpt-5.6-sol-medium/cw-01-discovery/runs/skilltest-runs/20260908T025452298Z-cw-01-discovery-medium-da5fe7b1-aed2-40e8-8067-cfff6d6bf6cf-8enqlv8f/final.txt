@@ -1,0 +1,3 @@
+## Export status
+
+The status indicates whether an export is queued, running, complete, or failed. Completed exports include a download link; failed exports include an error code.

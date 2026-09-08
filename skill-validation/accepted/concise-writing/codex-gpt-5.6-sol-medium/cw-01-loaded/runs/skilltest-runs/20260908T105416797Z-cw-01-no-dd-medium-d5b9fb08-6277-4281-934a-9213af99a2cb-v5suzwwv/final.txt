@@ -1,0 +1,8 @@
+## Export status
+
+An export can have one of four statuses:
+
+- **Queued:** Waiting to start.
+- **Running:** In progress.
+- **Complete:** Ready to download using the provided link.
+- **Failed:** Unsuccessful; includes an error code.

@@ -1,0 +1,175 @@
+{
+  "artifacts": {
+    "config": {
+      "bytes": 865,
+      "exists": true,
+      "path": "config.json",
+      "sha256": "cd3b86ca48285e2ab515c6b68e6cbb837840566f68b93a750e8780fc49553e37"
+    },
+    "evidence": {
+      "empty": true,
+      "entries": [],
+      "exists": true,
+      "path": "workspace/evidence"
+    },
+    "final": {
+      "bytes": 551,
+      "exists": true,
+      "path": "final.txt",
+      "sha256": "7f4d524bb41947c788da3e012e79656254c01bfbb36a1c864b3f52fdc7c820d8"
+    },
+    "fixture": {
+      "empty": false,
+      "entries": [
+        {
+          "bytes": null,
+          "path": ".agents",
+          "sha256": null,
+          "type": "directory"
+        },
+        {
+          "bytes": null,
+          "path": ".agents/skills",
+          "sha256": null,
+          "type": "directory"
+        },
+        {
+          "bytes": null,
+          "path": ".agents/skills/requesting-code-review",
+          "sha256": null,
+          "type": "directory"
+        },
+        {
+          "bytes": 2956,
+          "path": ".agents/skills/requesting-code-review/SKILL.md",
+          "sha256": "d71cc01ba56d2325cf8af5f7c11837819b63ecd57de0bfdb812f7f3ff7751df8",
+          "type": "file"
+        },
+        {
+          "bytes": 5669,
+          "path": ".agents/skills/requesting-code-review/code-reviewer.md",
+          "sha256": "5eca5fcfd48a50e0a526ce5ffd64bf625d6b81bb46d11795274dae451fe6ffd4",
+          "type": "file"
+        },
+        {
+          "bytes": null,
+          "path": ".agents/skills/writing-plans",
+          "sha256": null,
+          "type": "directory"
+        },
+        {
+          "bytes": 7053,
+          "path": ".agents/skills/writing-plans/SKILL.md",
+          "sha256": "48508f44bbfd7d24b029fbf3a314f3cd14c9615599059366e922f47b8dc08cf2",
+          "type": "file"
+        },
+        {
+          "bytes": 1713,
+          "path": ".agents/skills/writing-plans/plan-document-reviewer-prompt.md",
+          "sha256": "aa728b96aad603c8be28875a4305637f6c984aa81ffcadcb13e743202fa2a0c7",
+          "type": "file"
+        },
+        {
+          "bytes": null,
+          "path": ".git",
+          "sha256": null,
+          "type": "directory"
+        },
+        {
+          "bytes": 23,
+          "path": ".git/HEAD",
+          "sha256": "f6f2b945f6c411b02ba3da9c7ace88dcf71b6af65ba2e0d89aa82900042b5a10",
+          "type": "file"
+        },
+        {
+          "bytes": 137,
+          "path": ".git/config",
+          "sha256": "cae33efdb02cf774435c1ff9cb16bcc1014606908530c6e1dc727615fe3e8cda",
+          "type": "file"
+        },
+        {
+          "bytes": null,
+          "path": ".git/objects",
+          "sha256": null,
+          "type": "directory"
+        },
+        {
+          "bytes": null,
+          "path": ".git/objects/info",
+          "sha256": null,
+          "type": "directory"
+        },
+        {
+          "bytes": null,
+          "path": ".git/objects/pack",
+          "sha256": null,
+          "type": "directory"
+        },
+        {
+          "bytes": null,
+          "path": ".git/refs",
+          "sha256": null,
+          "type": "directory"
+        },
+        {
+          "bytes": null,
+          "path": ".git/refs/heads",
+          "sha256": null,
+          "type": "directory"
+        },
+        {
+          "bytes": null,
+          "path": ".git/refs/tags",
+          "sha256": null,
+          "type": "directory"
+        }
+      ],
+      "exists": true,
+      "path": "workspace/fixture"
+    },
+    "prompt": {
+      "bytes": 955,
+      "exists": true,
+      "path": "prompt.txt",
+      "sha256": "7b0828c0e2919ba57bb12e82ff30f1f457a6cf463eecd8f055c537f929892d4a"
+    },
+    "prompt_template": {
+      "bytes": 955,
+      "exists": true,
+      "path": "prompt-template.txt",
+      "sha256": "7b0828c0e2919ba57bb12e82ff30f1f457a6cf463eecd8f055c537f929892d4a"
+    },
+    "stderr": {
+      "bytes": 0,
+      "exists": true,
+      "path": "stderr.txt",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "stdout": {
+      "bytes": 903,
+      "exists": true,
+      "path": "stdout.txt",
+      "sha256": "d17b40cf0d6516ba727b41d7ca4e6cd2ab53d3d5dfb31c516a9c71fbf272f164"
+    }
+  },
+  "duration_seconds": 9.166,
+  "execution": {
+    "effort": "medium",
+    "executable": "codex",
+    "exit_code": 0,
+    "invocation_started": true,
+    "model": "gpt-5.6-sol",
+    "provider": "codex",
+    "timed_out": false,
+    "timeout_seconds": 900
+  },
+  "finished_at": "2026-09-08T02:34:42.264Z",
+  "infrastructure_error": null,
+  "run_id": "20260908T023433098Z-cw-08-no-dd-medium-e62bc4df-0c00-4406-adb6-8545307443d2-_xc9rgo2",
+  "schema_version": "0.2",
+  "started_at": "2026-09-08T02:34:33.098Z",
+  "status": "COMPLETED",
+  "test": {
+    "id": "cw-08-no-dd-medium"
+  }
+}

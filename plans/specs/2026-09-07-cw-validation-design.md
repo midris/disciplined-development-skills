@@ -1,8 +1,9 @@
 # CW catalog baseline and edit testing
 
-**Status:** Owner approved the complete CW catalog mapping, including purpose-separated variants and the proposed three-observation Sol-medium schedule, before rewrite evaluation.
-The earlier 18 Sol-medium observations are collected and scored; owner acceptance remains pending.
-This preparation authorizes no provider call, skill edit or evidence promotion.
+**Status:** The complete CW baseline is collected, scored and mechanically audited: 81 fresh Sol-medium observations plus 18 qualified reused observations.
+The owner accepted the complete baseline on 2026-09-08 and authorized preparing the existing rewritten CW candidate next.
+The [accepted evidence index](../../skill-validation/accepted/concise-writing/codex-gpt-5.6-sol-medium/README.md) retains all results, complete bundles and provenance; archives have passed independent restoration checks.
+The baseline command batch is exhausted; candidate preparation does not authorize provider calls, new skill wording or deployment.
 **Workspace:** `.worktrees/cw-validation-design`, branch `feature/cw-validation-design`.
 **Contract:** [CW charter](../../skill-validation/charter/core-contracts.md#concise-writing), [controlled-input decisions](2026-09-06-skilltest-controlled-inputs-design.md), and [CW runbook](../../skill-validation/pilot/cw-runbook.md).
 
@@ -10,7 +11,7 @@ This preparation authorizes no provider call, skill edit or evidence promotion.
 
 Port all 17 existing CW sources: CW-01–14 and CW-17–19; there are no CW-15/16 packages.
 Preserve their task facts and intended criteria, separating mixed purposes into new variants rather than modifying accepted packages.
-The [catalog mapping](../../skill-validation/pilot/cw-catalog.md) is the single inventory of variants, conditions, prompt changes, criterion attribution and proposed counts.
+The [catalog mapping](../../skill-validation/pilot/cw-catalog.md) is the single inventory of variants, conditions, prompt changes, criterion attribution and fixed counts.
 It retains the already prepared positive native-discovery variant as separate coverage, not a replacement for CW-01 behavior.
 
 The baseline measures current pre-rewrite DD plus meaningful no-DD controls at Codex / gpt-5.6-sol / medium, three observations per scenario/condition.
@@ -20,8 +21,9 @@ Do not turn a declared absent ownership clause or an unavailable DD target into 
 
 CW-13/14 separate native selection from explicitly loaded lifecycle decisions.
 CW-17/18 separate native selection from explicitly loaded scope interpretation; the latter remains a contract diagnostic, not proof of hidden method use.
-Only the CW portion of the [deferred separation plan](../deferred/2026-09-07-skilltest-discovery-behavior-catalog-separation.md) is activated for preparation.
-Other catalogs, new coverage ideas, hooks, Claude, other models/efforts, skill edits and rewrite evaluation remain deferred.
+Only the CW portion of the [deferred separation plan](../deferred/2026-09-07-skilltest-discovery-behavior-catalog-separation.md) was activated for this baseline.
+Other catalogs, new coverage ideas, hooks, Claude, other models/efforts and new skill wording remain deferred.
+Only the CW candidate preparation below is active; paid comparison and deployment retain separate approval gates.
 
 ## Inputs and attribution
 
@@ -46,7 +48,7 @@ Freeze every linked evaluator source outside subject inputs.
 
 ## Collection and edit boundary
 
-The mapping's proposed count replaces the provisional 51-current-DD estimate, which assumed no splits.
+The mapping's fixed count replaces the provisional 51-current-DD estimate, which assumed no splits.
 Three observations per declared condition are fixed; do not increase repetitions or effort in response to a FAIL or split result.
 Before calls, review exact prompts/rubrics, reconcile qualification and reuse, freeze a recoverable clean revision, and obtain approval of the fully expanded finite command batch.
 Preparation and a proposed schedule are not launch approval.
@@ -74,20 +76,52 @@ New authoring requires a judgeable targeted no-DD failure and agreed writing-ski
 - [x] Map every source, prepare exact variant prompts/rubrics/configs and review the resulting counts.
 - [x] Provider-free audit config loading, prepared bytes, pair differences, explicit input paths and withheld guidance.
 - [x] Owner approves the reviewed mapping and its prompt/rubric changes; final call count remains subject to reuse checks and exact-command approval.
-- [x] Resolve affected catalog/dependency and permitted-write qualification plus exact retained-result reuse: all 18 completed medium observations qualify; 81 new calls remain.
-- [ ] Freeze reviewed inputs and approve the expanded command batch.
-- [ ] Collect and score the remaining observations, then audit the complete baseline set.
-- [ ] Owner accepts the baseline evidence and selects the next candidate-evaluation step.
+- [x] Resolve affected catalog/dependency and permitted-write qualification plus exact retained-result reuse: 18 reused observations and an 81-call fresh batch.
+- [x] Freeze reviewed inputs and approve the expanded command batch.
+- [x] Collect and score the remaining observations, then audit the complete baseline set.
+- [x] Owner accepts the baseline evidence and selects the existing rewritten CW candidate for comparison preparation.
 
 The [preparation evidence](/private/tmp/skilltest-cw-catalog-prep.QoUFVI/summary.md) records the provider-free audit of all 33 configs and 11 pairs, source preservation, link checks and inline review fixes.
 The hook suite passed 263 tests with three skips; no provider call was made.
 The [qualification and reuse evidence](/private/tmp/skilltest-cw-catalog-qualification.YiAoRu/summary.md) confirms the added native catalogs, shared inputs, scoped dependency sufficiency, CW-18 file creation/retention and reuse of all 18 original medium observations.
-No additional paid qualification call is required under that scoped reconciliation; clean freeze and exact-command approval remain pending.
+No additional paid qualification call was required under that scoped reconciliation.
 
 ## Collection handoff
+
+The [complete-set summary](/private/tmp/skilltest-cw-baseline.bOn8Dx/summary.md) links all new worksheets and the 99-record audit, with per-condition results and sampling/evidence caveats.
+New collection used clean frozen revision `dfd638ce5c1ac5f654110d05ce9138e5384d6afc`; only handoff status/navigation changes followed the audit.
+The fresh handoff hook suite passed 263 tests with three skips.
+No runner change, evidence promotion or candidate evaluation occurred.
 
 The [earlier scratch summary and evidence ledger](/private/tmp/skilltest-cw-baseline.ksDeiD/summary.md) retains the completed 18 commands, per-condition counts, worksheets and controls.
 Those observations used frozen revision `6fb4780fce37710a76116dbbeaa832a6a42289cd`; no test input or scoring rule is changed retroactively.
 All 18 completed without infrastructure retries, invalid/excluded observations or unresolved cleanup.
 The subsequent handoff audit checked mechanical worksheet preservation, evidence links and serial execution.
-Results remain scratch-only pending owner acceptance; their command approvals are exhausted.
+All 99 observations are owner-accepted and preserved in the linked evidence index, with original scratch retained.
+Preservation restored 100 archives, checked 4,401 entries and 531 worksheet links, and reconciled all counts without rescoring.
+The evidence commit must be verified before candidate collection or scratch cleanup.
+Their command approvals are exhausted; acceptance changes no recorded verdict, rubric or historical run provenance.
+
+## Existing CW candidate preparation
+
+Use only the CW file from `docs/comprehensive-skill-cleanup` at `13599fb7d3127334b0d07bfe468767e586ec5f9c`, copied unchanged into [candidate inputs](../../skill-validation/pilot/inputs/candidates/cw-rewrite/SKILL.md).
+Do not edit that worktree, import its other rewritten skills, or replace the shipped CW skill.
+This tests an already-written candidate; it cannot establish RED-before-authoring chronology or satisfy deployment acceptance by inspection.
+
+Prepare the same catalog at Codex / gpt-5.6-sol / medium, three observations per candidate condition.
+Larger samples, possibly five observations, are explicitly deferred until after this comparison: finish the end-to-end evaluation workflow before spending on more repetitions.
+Five is not an agreed decisiveness threshold, and split results do not authorize adaptive repeats.
+Candidate-versus-current differences are limited to CW body/description bytes and recording IDs/paths; hold prompts, rubrics, native targets, other DD skills, Superpowers and task tools fixed.
+Inspect and qualify any changed dependency or discovery requirements before proposing launch.
+
+The comparison asks whether the snapshot improves the observed conservation/padding, description/ownership and scope/discovery results without regressing the other catalog criteria.
+Use all 22 candidate conditions and the same frozen rubric criteria; report each against its comparable accepted current-DD observations, with no-DD context where available.
+Equal repetition labels are not matched experimental pairs, and better diagnostic answers are not proof of better prose behavior.
+The outcome is a descriptive comparison for owner review, not a new GREEN threshold, proof of authoring compliance or deployment approval.
+
+- [x] Pin the unchanged candidate body and derived description, and prepare matching configs with provider-free source/target/prompt checks: [22-config mapping](../../skill-validation/pilot/cw-catalog.md#cw-rewrite-candidate-configs).
+- [x] Preserve and restore-check all 99 accepted observations under the whole-set/Git-history policy without changing the 105 historical records; include them in the clean freeze below.
+- [x] Review candidate coverage and comparison interpretation and reconcile reuse/qualification: [provider-free qualification](/private/tmp/skilltest-cw-candidate.pITN2u/qualification/summary.md) supports 66 candidate calls and reuse of all 99 accepted observations.
+- [x] Freeze reviewed inputs, guidance and preserved evidence together; record and verify the resulting full revision in the candidate command-approval package before launch.
+- [ ] Obtain approval of the complete exact candidate command batch before collection.
+- [ ] Collect, score and compare separately by purpose/condition; report improvements, regressions and uncertainty for owner review without automatic adoption.

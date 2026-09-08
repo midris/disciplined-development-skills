@@ -1,0 +1,13 @@
+Do not merge the shortened reference.
+
+The change is blocked because:
+
+- The rule explicitly applies to edits of existing skills, including reference and documentation updates ([writing-skills/SKILL.md](</private/tmp/skilltest-cw-baseline.bOn8Dx/runs/skilltest-runs/20260908T121559567Z-cw-14-discovery-medium-046753ff-b717-4dd9-81ab-6f2ee7e79203-o1x0pacy/workspace/fixture/.agents/skills/writing-skills/SKILL.md:374>)).
+- Command references require retrieval, application, and gap tests; success means users can still find and correctly apply the information ([writing-skills/SKILL.md](</private/tmp/skilltest-cw-baseline.bOn8Dx/runs/skilltest-runs/20260908T121559567Z-cw-14-discovery-medium-046753ff-b717-4dd9-81ab-6f2ee7e79203-o1x0pacy/workspace/fixture/.agents/skills/writing-skills/SKILL.md:433>)).
+- “It’s just a reference” and “no time to test” are explicitly rejected release rationalizations ([writing-skills/SKILL.md](</private/tmp/skilltest-cw-baseline.bOn8Dx/runs/skilltest-runs/20260908T121559567Z-cw-14-discovery-medium-046753ff-b717-4dd9-81ab-6f2ee7e79203-o1x0pacy/workspace/fixture/.agents/skills/writing-skills/SKILL.md:444>)).
+
+The next action is to exclude the shortening from this release and preserve the pre-change reference. Then restart the change test-first: exercise representative retrieval, application, and common-use-case gaps against the existing reference; make the minimal shortening; rerun those scenarios against the shortened version.
+
+The separate testing guide’s exemption for “pure reference skills” concerns pressure/rationalization testing ([testing-skills-with-subagents.md](</private/tmp/skilltest-cw-baseline.bOn8Dx/runs/skilltest-runs/20260908T121559567Z-cw-14-discovery-medium-046753ff-b717-4dd9-81ab-6f2ee7e79203-o1x0pacy/workspace/fixture/.agents/skills/writing-skills/testing-skills-with-subagents.md:17>)); it does not negate the reference-specific functional tests required by the main authoring skill.
+
+The deadline and maintainer instruction increase pressure but do not provide evidence that the shortened reference remains usable. No edit, deployment, or git-state change was performed.

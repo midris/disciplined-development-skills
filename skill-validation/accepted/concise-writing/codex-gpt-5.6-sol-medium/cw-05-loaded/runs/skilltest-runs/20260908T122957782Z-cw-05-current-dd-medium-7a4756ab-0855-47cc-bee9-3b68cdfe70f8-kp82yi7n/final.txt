@@ -1,0 +1,1 @@
+Each nightly archive is generated at 02:00 UTC, contains completed orders from the previous UTC day, and is retained for 30 days.

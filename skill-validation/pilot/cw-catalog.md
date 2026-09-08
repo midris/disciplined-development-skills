@@ -1,7 +1,8 @@
 # CW catalog mapping
 
-**Status:** Owner-approved mapping; provider-free qualification and reuse checks pass. Clean input freeze and exact-command approval remain pending.
-No provider calls are authorized by this approval.
+**Status:** The owner accepted the complete baseline and authorized CW-only candidate preparation on 2026-09-08.
+The [accepted evidence index](../accepted/concise-writing/codex-gpt-5.6-sol-medium/README.md) retains results and recoverable provenance.
+Baseline commands are exhausted; candidate inputs below require qualification/reuse reconciliation, freeze and exact-command approval before provider calls.
 The [spec](../../plans/specs/2026-09-07-cw-validation-design.md) owns scope and checkpoints; the [runbook](cw-runbook.md) owns execution.
 All rows use Codex / gpt-5.6-sol / medium, three observations per condition.
 A linked config is an input declaration, not permission to invoke it.
@@ -64,7 +65,7 @@ CW-17/18 contract variants score the declared application decision only; native 
 Neither contract answers nor writing style prove that a model internally applied or withheld a method.
 The full catalog still does not establish executed skill authoring or every charter behavior; new coverage ideas wait until after the baseline.
 
-## Rubric changes requiring review
+## Reviewed rubric changes
 
 Keep every historical semantic target, including targets absent from current main.
 Do not erase an accepted failure by changing its old rubric or rescoring its evidence.
@@ -84,7 +85,7 @@ Do not erase an accepted failure by changing its old rubric or rescoring its evi
   Preserve the charter's false/true response-versus-file polarity, even when the supplied skill lacks the response exception.
   Discovery uses natural tasks and full observable traces rather than the old closed-list JSON selection.
 
-These are proposed future scoring contracts; original prompts, rubrics and accepted results remain untouched.
+These are the owner-approved contracts frozen for this baseline; historical source prompts, rubrics and accepted results remain untouched.
 No exact-format criterion has an authenticated consumer, so deterministic protocol is N/A throughout this set.
 
 ## Counts, order and reuse
@@ -109,7 +110,7 @@ The audit checks each original bundle, frozen revision, prompt/rubric/linked gui
 Reuse does not change owner-acceptance status.
 The [earlier summary](/private/tmp/skilltest-cw-baseline.ksDeiD/summary.md) owns those records.
 Keep their original timestamps and outcome, referencing rather than copying or relabeling them.
-The remaining batch is 81 new calls, pending exact-command approval.
+The 81-call fresh batch is complete; the linked complete-set summary reconciles it with these 18 reused observations.
 If inputs or controls drift before launch, re-evaluate affected reuse; replace complete three-observation sets and disclose any changed count before approval.
 Never substitute the completed discovery variants for historical routing/contract quizzes, or low/high pilot observations for medium repetitions.
 
@@ -122,4 +123,45 @@ Never substitute the completed discovery variants for historical routing/contrac
    Missing trace, permission, dependency or control evidence stops the affected launch; any required live qualification gets separate exact-command approval.
 4. Resolve reuse, review and freeze exact prompts/rubrics with the owner, then freeze a recoverable clean revision and allocate scratch.
 5. Show the complete finite command list, cwd, final count/order and provider/model/effort for explicit approval.
-   Collecting a baseline does not authorize rewrite evaluation, evidence promotion or new skill edits.
+   A preparation or baseline approval does not itself authorize candidate provider calls or new skill edits.
+
+## CW rewrite candidate configs
+
+The [candidate snapshot](inputs/candidates/cw-rewrite/README.md) pins the unchanged source body and its exact description.
+Each candidate config below reuses its baseline config's prompt and evaluator-only rubric, fixture targets, other supplied bytes and execution settings.
+Only CW body/description bytes and recording IDs/source paths differ; no extra candidate hint is added to subject prompts.
+The worksheet scenario remains the original prompt/rubric directory, even when its name contains `current-dd`; the candidate scenario ID and recorded fixture hash identify the treatment.
+The two description diagnostics replace only `descriptions/concise-writing.txt`, not their other description inputs.
+Rubric remarks that the frozen CW excludes authoring (CW-09/11) or lacks the response exception (CW-17) describe the baseline arm, not candidate facts.
+Keep the same required outcomes and source-faithfulness judgments, checking the actual supplied candidate bytes; do not copy a baseline mismatch into a candidate score.
+
+| Baseline config / shared test contract | Candidate config |
+|---|---|
+| [cw01-current-dd.json](efforts/medium/cw01-current-dd.json) | [candidate](efforts/medium/cw-rewrite/cw01-current-dd.json) |
+| [cw01-discovery.json](efforts/medium/cw01-discovery.json) | [candidate](efforts/medium/cw-rewrite/cw01-discovery.json) |
+| [cw02-current-dd.json](efforts/medium/cw02-current-dd.json) | [candidate](efforts/medium/cw-rewrite/cw02-current-dd.json) |
+| [cw03-current-dd.json](efforts/medium/cw03-current-dd.json) | [candidate](efforts/medium/cw-rewrite/cw03-current-dd.json) |
+| [cw04-current-dd.json](efforts/medium/cw04-current-dd.json) | [candidate](efforts/medium/cw-rewrite/cw04-current-dd.json) |
+| [cw05-current-dd.json](efforts/medium/cw05-current-dd.json) | [candidate](efforts/medium/cw-rewrite/cw05-current-dd.json) |
+| [cw06-current-dd.json](efforts/medium/cw06-current-dd.json) | [candidate](efforts/medium/cw-rewrite/cw06-current-dd.json) |
+| [cw07-current-dd.json](efforts/medium/cw07-current-dd.json) | [candidate](efforts/medium/cw-rewrite/cw07-current-dd.json) |
+| [cw08-current-dd.json](efforts/medium/cw08-current-dd.json) | [candidate](efforts/medium/cw-rewrite/cw08-current-dd.json) |
+| [cw09-description.json](efforts/medium/cw09-description.json) | [candidate](efforts/medium/cw-rewrite/cw09-description.json) |
+| [cw10-contract.json](efforts/medium/cw10-contract.json) | [candidate](efforts/medium/cw-rewrite/cw10-contract.json) |
+| [cw11-description.json](efforts/medium/cw11-description.json) | [candidate](efforts/medium/cw-rewrite/cw11-description.json) |
+| [cw12-contract.json](efforts/medium/cw12-contract.json) | [candidate](efforts/medium/cw-rewrite/cw12-contract.json) |
+| [cw13-current-dd.json](efforts/medium/cw13-current-dd.json) | [candidate](efforts/medium/cw-rewrite/cw13-current-dd.json) |
+| [cw13-discovery.json](efforts/medium/cw13-discovery.json) | [candidate](efforts/medium/cw-rewrite/cw13-discovery.json) |
+| [cw14-current-dd.json](efforts/medium/cw14-current-dd.json) | [candidate](efforts/medium/cw-rewrite/cw14-current-dd.json) |
+| [cw14-discovery.json](efforts/medium/cw14-discovery.json) | [candidate](efforts/medium/cw-rewrite/cw14-discovery.json) |
+| [cw17-contract.json](efforts/medium/cw17-contract.json) | [candidate](efforts/medium/cw-rewrite/cw17-contract.json) |
+| [cw17-discovery.json](efforts/medium/cw17-discovery.json) | [candidate](efforts/medium/cw-rewrite/cw17-discovery.json) |
+| [cw18-contract.json](efforts/medium/cw18-contract.json) | [candidate](efforts/medium/cw-rewrite/cw18-contract.json) |
+| [cw18-discovery.json](efforts/medium/cw18-discovery.json) | [candidate](efforts/medium/cw-rewrite/cw18-discovery.json) |
+| [cw19-current-dd.json](efforts/medium/cw19-current-dd.json) | [candidate](efforts/medium/cw-rewrite/cw19-current-dd.json) |
+
+Proposed collection: three repetitions, traversing the source-to-variant map in order and selecting its candidate config once per row, for 66 candidate observations.
+Reuse of accepted current-DD/no-DD observations remains subject to recorded comparability and CLI/control checks; these 22 configs do not authorize 66 calls.
+The [provider-free preparation audit](/private/tmp/skilltest-cw-candidate.pITN2u/input-audit.json) checks all 22 configs and prepared fixtures, including exact source bytes, unchanged tasks/rubrics, and one changed CW target each.
+The [separate provider-free qualification](/private/tmp/skilltest-cw-candidate.pITN2u/qualification/summary.md) now checks the actual candidate catalogs/dependencies and supports reuse of all 99 accepted observations.
+The file-copy audit alone does not establish those controls; clean freeze and complete command approval remain launch gates.

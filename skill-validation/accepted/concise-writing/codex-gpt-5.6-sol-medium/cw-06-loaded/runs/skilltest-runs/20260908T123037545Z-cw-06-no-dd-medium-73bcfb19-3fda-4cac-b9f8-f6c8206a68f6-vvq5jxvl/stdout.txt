@@ -1,0 +1,4 @@
+{"type":"thread.started","thread_id":"01a080ff-b99c-7873-9ba4-305c3631ca9a"}
+{"type":"turn.started"}
+{"type":"item.completed","item":{"id":"item_0","type":"agent_message","text":"Every request must include an API key in the `Authorization` header. Requests without one are rejected."}}
+{"type":"turn.completed","usage":{"input_tokens":15172,"cached_input_tokens":10624,"cache_write_input_tokens":0,"output_tokens":24,"reasoning_output_tokens":0}}

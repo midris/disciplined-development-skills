@@ -1,0 +1,4 @@
+{"type":"thread.started","thread_id":"01a080ac-1b94-7fd0-b2a8-1c3c52a00a36"}
+{"type":"turn.started"}
+{"type":"item.completed","item":{"id":"item_0","type":"agent_message","text":"## Delivery retries\n\nEach delivery is attempted up to three times and marked failed only after the third unsuccessful attempt. Retries are counted per delivery, not per endpoint, so one failure cannot exhaust retries for later deliveries. Retries remain synchronous to preserve the order of downstream acknowledgements. Before changing this behavior, see “Delivery ordering” below."}}
+{"type":"turn.completed","usage":{"input_tokens":15238,"cached_input_tokens":10624,"cache_write_input_tokens":0,"output_tokens":72,"reasoning_output_tokens":0}}

@@ -1,0 +1,4 @@
+{"type":"thread.started","thread_id":"01a08100-ebbf-7a03-987b-6be238549fdb"}
+{"type":"turn.started"}
+{"type":"item.completed","item":{"id":"item_0","type":"agent_message","text":"Reports now download as UTF-8-encoded CSV files that preserve the report’s active filters. PDF downloads are unchanged."}}
+{"type":"turn.completed","usage":{"input_tokens":15214,"cached_input_tokens":10624,"cache_write_input_tokens":0,"output_tokens":28,"reasoning_output_tokens":0}}
