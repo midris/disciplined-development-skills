@@ -23,12 +23,14 @@ Those runbooks specify fixture setup, exact commands, models/effort, actual CLI-
 The [pilot-first scope](../plans/specs/2026-09-06-skilltest-controlled-inputs-design.md#accepted-immediate-scope-one-usable-pilot) starts with one provisional runbook and a few Codex / gpt-5.6-sol / low scenarios in the existing layout, with medium available for justified workflow diagnostics; Claude integration, the broader campaign and reorganization wait for practical feedback.
 Use the [routine runbook](pilot/README.md) for input/version checks, execution, evidence inspection, worksheet scoring and summary updates; consult the separate [qualification reference](pilot/qualification/README.md) when relevant controls change.
 Use its [bounded-batch approval and verification cadence](pilot/README.md#bounded-batches-and-approval); retain per-run controls without repeated unchanged test suites or per-observation status commits.
-The [active plan](../plans/2026-09-06-skilltest-sol-low-pilot.md) owns current status and approval checkpoints; this README is navigation, not another progress record.
+The [pilot plan](../plans/2026-09-06-skilltest-sol-low-pilot.md) retains completed procedure/qualification checkpoints; the [CW design](../plans/specs/2026-09-07-cw-validation-design.md) owns the next bounded test-set/runbook review.
+Use the draft [CW baseline/edit runbook](pilot/cw-runbook.md) for that selected portfolio, not historical pilot command paths.
+This README is navigation, not another progress record.
 For new controlled testing, keep current accepted evidence in the working tree and recover superseded accepted results from Git history, rather than maintaining dated result archives; commit accepted evidence before replacing it.
 Active experiments remain scratch-only pending review; historical baseline judgments and evidence remain protected, with only the [metadata-only CLI-version worksheet backfill](../plans/specs/2026-09-06-skilltest-controlled-inputs-design.md#accepted-baseline-decision-current-dd-and-no-dd-with-cli-provenance) authorized.
 The orchestrator owns evidence-backed judgments, the owner retains acceptance authority, and provider calls remain subject to approval.
 Keep [setup qualification, discovery and behavior tests separate](../plans/specs/2026-09-06-skilltest-controlled-inputs-design.md#accepted-separation-setup-discovery-and-behavior): behavior prompts explicitly load the relevant skills; only dedicated discovery scenarios omit loading hints.
-Every DD skill needs both discoverability and loaded-behavior coverage; the [catalog audit and repair proposal](../plans/deferred/2026-09-07-skilltest-discovery-behavior-catalog-separation.md) track gaps, with current authorization owned by the active plan.
+Every DD skill needs both discoverability and loaded-behavior coverage; the [catalog audit and repair proposal](../plans/deferred/2026-09-07-skilltest-discovery-behavior-catalog-separation.md) track gaps and link the currently authorized CW increment without activating the broader repairs.
 The [live design](../plans/specs/2026-09-06-skilltest-controlled-inputs-design.md#accepted-methodology-decision-model-led-testing-with-simple-tools) records the accepted model/tool boundary, workflow decisions and separately labeled proposals.
 
 ## Coverage by test purpose

@@ -11,6 +11,8 @@ The extension evidence pointers are in Task 6; Tasks 8–9 record the separately
 **Integration handoff:** The owner authorized merging this branch into main, removing completed local/remote branches and the completed worktree, then creating `feature/cw-validation-design` in `.worktrees/cw-validation-design`.
 That next workspace is for minimal CW test-set design; this does not promote scratch observations into accepted baselines or authorize new provider calls.
 Retain scratch evidence outside the removed worktree; recorded commands and frozen revisions remain historical provenance.
+The [CW design and review checkpoint](specs/2026-09-07-cw-validation-design.md) now tracks the owner-approved CW-08/CW-19 behavior portfolio, retained discovery pair and draft baseline/edit runbook.
+That scoped documentation/input preparation supersedes this pilot's stop boundary only for the new unit; prior results and provider approvals remain unchanged.
 
 **Goal:** Exercise one agent-led preparation, execution, scoring and handoff workflow, not collect effectiveness estimates.
 **Architecture:** Preserve the one-run runner and config schema; add only Codex runtime controls and a worksheet field, then exercise them through one written runbook.

@@ -6,7 +6,8 @@
 **Goal:** Give every one of the nine DD skills separately identified discoverability tests and explicitly loaded behavioral-effectiveness tests.
 **Approach:** Reuse existing scenario material, runner configs, worksheets and written runbooks; no new testing framework or schema.
 **Authority:** [Test-purpose separation](../specs/2026-09-06-skilltest-controlled-inputs-design.md#accepted-separation-setup-discovery-and-behavior) and [charter](../../skill-validation/charter/core-contracts.md).
-**Return to:** [Current owner checkpoint](../2026-09-06-skilltest-sol-low-pilot.md#task-9-qualify-and-exercise-the-cw-purposes).
+**Return to:** [CW design and review checkpoint](../specs/2026-09-07-cw-validation-design.md#review-checkpoint).
+The owner approved the next bounded CW portfolio and baseline/edit runbook draft; this does not activate the remaining nine-skill repairs.
 
 ## Audit findings
 
@@ -71,6 +72,7 @@ Only these three purposes belong to the bounded CW increment, retaining all exis
 
 The non-trigger expectation follows the charter even though current CW lacks that exception; retain any resulting failure rather than weakening the test to match the implementation.
 CW-18's durable-file contrast and a separately loaded CW-I3 application test remain later work; this first increment does not complete the whole CW contract or nine-skill portfolio.
+The subsequent [minimal CW portfolio](../specs/2026-09-07-cw-validation-design.md#selected-portfolio) uses CW-08 and CW-19 for routine loaded behavior and retains the prepared discovery pair; completed CW-01 behavior remains unchanged rather than routinely repeated.
 Keep CW-09–14 as historical authoring/contract diagnostics for now: the charter proposes treating them as composition rather than core compression, and the current skill deliberately excludes authoring. Do not add an implicit CW co-selection requirement to the first behavior task.
 For a future DISC-08 derivative, propose no CW selection for the explicit mechanical-only rename: the task forbids prose revision. Preserve the accepted optional-CW verdict under its original rubric until the owner approves a new contract.
 No-DD is a behavioral control, not a discovery failure for an unavailable skill. The native-discovery variants test current-DD with target availability qualified and other skill loads disclosed.

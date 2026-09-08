@@ -4,6 +4,7 @@
 This spec records accepted design decisions and clearly labeled proposals, not provider-call permission.
 The owner approved the post-pilot bounded-batch workflow below; qualification and provider invocation remain distinct approvals, with exact commands eligible for approval together as a finite batch.
 Broader campaign decisions remain deferred rather than prerequisites to design every future workflow now.
+The subsequent [minimal CW design](2026-09-07-cw-validation-design.md) owns the owner-approved CW portfolio/runbook preparation and its next review checkpoint; the pilot plan retains the completed execution record.
 
 ## Overall goal
 

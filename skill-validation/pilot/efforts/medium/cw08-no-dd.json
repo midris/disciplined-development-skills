@@ -1,0 +1,28 @@
+{
+  "schema_version": "0.2",
+  "id": "cw-08-no-dd-medium",
+  "prompt": "../../cw-08/no-dd/prompt.md",
+  "fixtures": [
+    {
+      "source": "../../inputs/superpowers/writing-plans/SKILL.md",
+      "target": ".agents/skills/writing-plans/SKILL.md"
+    },
+    {
+      "source": "../../inputs/superpowers/writing-plans/plan-document-reviewer-prompt.md",
+      "target": ".agents/skills/writing-plans/plan-document-reviewer-prompt.md"
+    },
+    {
+      "source": "../../inputs/superpowers/requesting-code-review/SKILL.md",
+      "target": ".agents/skills/requesting-code-review/SKILL.md"
+    },
+    {
+      "source": "../../inputs/superpowers/requesting-code-review/code-reviewer.md",
+      "target": ".agents/skills/requesting-code-review/code-reviewer.md"
+    }
+  ],
+  "execution": {
+    "provider": "codex",
+    "model": "gpt-5.6-sol",
+    "effort": "medium"
+  }
+}
