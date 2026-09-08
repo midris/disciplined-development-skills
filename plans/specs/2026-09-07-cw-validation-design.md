@@ -1,6 +1,6 @@
 # Minimal CW baseline and edit testing
 
-**Status:** The owner approved the presented portfolio/inputs and the 54-run baseline schedule: Codex / gpt-5.6-sol at low, medium and high, three repetitions per condition at each effort, fully scored.
+**Status:** The owner approved the presented portfolio/inputs and an 18-run baseline schedule: Codex / gpt-5.6-sol / medium only, three repetitions per condition, fully scored.
 Preparation and freezing may proceed; provider invocation still requires explicit approval of the exact command list.
 No skill edit, additional model/catalog campaign or promotion of pilot evidence is authorized.
 **Workspace:** `.worktrees/cw-validation-design`, branch `feature/cw-validation-design`.
@@ -41,8 +41,10 @@ Keep all evaluator guidance outside subject inputs.
 
 ## Collection and edit boundary
 
-The approved schedule replaces the earlier six-call low-only proposal: six conditions × three efforts × three repetitions = 54 fresh observations.
-Each effort contributes 12 behavior observations and six discovery observations; Terra, Claude and the remaining CW scenarios are excluded.
+The approved schedule is six conditions × three repetitions at Sol medium = 18 fresh observations: 12 behavior and six discovery.
+Sol medium matches the owner's ordinary workload; retain repetitions to observe some run-to-run variation while deferring cross-effort/model comparisons.
+Low, high, Astra, Terra, Claude and the remaining CW scenarios are excluded; these results do not establish effectiveness in those settings.
+The former 54-command proposal is superseded and must not be executed.
 The [runbook](../../skill-validation/pilot/cw-runbook.md#test-set) fixes order, config/rubric mapping and reporting before execution.
 Three repetitions give an initial view of variation, not a precise reliability estimate, universal effectiveness claim or automatic skill-GREEN decision.
 Report each scenario/condition/effort separately with all criterion judgments; do not pool discovery with behavior or increase counts in response to split verdicts.
@@ -59,12 +61,13 @@ The runbook specifies candidate preparation and evidence reuse checks without au
 - [x] Record the owner-approved portfolio and bounded omissions.
 - [x] Prepare and provider-free audit the four new input packages; preserve all previous inputs/evidence.
 - [x] Draft and review one baseline/edit runbook with existing commands and linked recovery/scoring procedures.
-- [x] Owner reviews the presented inputs and approves the 54-run baseline schedule; candidate authoring remains separately gated.
-- [x] Prepare effort-specific configs, audit the complete matrix and review the schedule amendment.
+- [x] Owner reviews the presented inputs and approves the medium-only 18-run baseline schedule; candidate authoring remains separately gated.
+- [x] Prepare and audit the six selected medium configs; review the schedule amendment.
 - [x] Reconcile qualification against retained evidence; no new paid setup probe is required for unchanged controls.
 - [ ] Freeze the reviewed revision and present a fully expanded finite command batch for approval.
 
 Stop at exact-command approval; no provider command is approved by completing the preceding checks.
-Provider-free preparation verified all 18 configs, shared prompt/fixture identity across efforts, paired rubric/loading differences, withheld inputs and argv changes limited to the requested effort.
-Protected skills, runner code, historical scenarios and previous pilot inputs are unchanged; runner tests pass 231 and hooks pass 263 with three skips.
+The selected six medium configs are unchanged members of the provider-free audited matrix: shared prompt/fixture identity, paired rubric/loading differences, withheld inputs and argv controls were verified.
+Unused low/high configs remain outside the authorized schedule; no input or runner change is required to narrow collection.
+Protected skills, runner code, historical scenarios and previous pilot inputs are unchanged; the frozen-input verification passed 231 runner tests and 263 hook tests with three skips.
 Review was inline because the session has no no-write-tool reviewer type; no provider or authentication call was used.

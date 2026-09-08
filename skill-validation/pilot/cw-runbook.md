@@ -1,6 +1,6 @@
 # CW baseline and edit runbook
 
-**Portfolio and 54-run schedule approved; exact provider commands await approval.**
+**Portfolio and medium-only 18-run schedule approved; exact provider commands await approval.**
 The [CW design](../../plans/specs/2026-09-07-cw-validation-design.md) owns this increment's scope and checkpoint.
 This is an agent-followed procedure using `skilltest`, not a new program.
 Reuse the [routine scoring](README.md#scoring-and-handoff), [recovery policy](README.md#failure-and-recovery) and [qualification reference](qualification/README.md); this page supplies CW-specific inputs and baseline/edit decisions.
@@ -8,25 +8,28 @@ The existing `pilot/` location avoids a migration; it does not make future obser
 
 ## Test set
 
-The low-effort scenario directories contain the shared prompts and evaluator-only rubrics.
-Medium/high configs reference those same prompt and fixture sources; they do not duplicate or modify the task or scoring inputs.
+The scenario directories contain the shared prompts and evaluator-only rubrics.
+Use only the medium configs below; they reference those same prompt and fixture sources without duplicating or modifying task or scoring inputs.
+Existing low/high configs are not part of this schedule.
 Read them, the [charter](../charter/core-contracts.md#concise-writing) and any rubric-linked source before proposing collection.
 
-| Row | Purpose / condition | Low config | Medium config | High config | Worksheet scenario beneath pilot/ |
-|---|---|---|---|---|---|
-| 1 | CW-08 policy rewrite / no-DD | [Low](cw-08/no-dd/test.json) | [Medium](efforts/medium/cw08-no-dd.json) | [High](efforts/high/cw08-no-dd.json) | `cw-08/no-dd` |
-| 2 | CW-08 policy rewrite / current-DD | [Low](cw-08/current-dd/test.json) | [Medium](efforts/medium/cw08-current-dd.json) | [High](efforts/high/cw08-current-dd.json) | `cw-08/current-dd` |
-| 3 | CW-19 complex conservation / no-DD | [Low](cw-19/no-dd/test.json) | [Medium](efforts/medium/cw19-no-dd.json) | [High](efforts/high/cw19-no-dd.json) | `cw-19/no-dd` |
-| 4 | CW-19 complex conservation / current-DD | [Low](cw-19/current-dd/test.json) | [Medium](efforts/medium/cw19-current-dd.json) | [High](efforts/high/cw19-current-dd.json) | `cw-19/current-dd` |
-| 5 | CW-01 positive native discovery / current-DD | [Low](cw-01/discovery/test.json) | [Medium](efforts/medium/cw01-discovery.json) | [High](efforts/high/cw01-discovery.json) | `cw-01/discovery` |
-| 6 | CW-17 native non-trigger / current-DD | [Low](cw-17/discovery/test.json) | [Medium](efforts/medium/cw17-discovery.json) | [High](efforts/high/cw17-discovery.json) | `cw-17/discovery` |
+| Row | Purpose / condition | Medium config | Worksheet scenario beneath pilot/ |
+|---|---|---|---|
+| 1 | CW-08 policy rewrite / no-DD | [Config](efforts/medium/cw08-no-dd.json) | `cw-08/no-dd` |
+| 2 | CW-08 policy rewrite / current-DD | [Config](efforts/medium/cw08-current-dd.json) | `cw-08/current-dd` |
+| 3 | CW-19 complex conservation / no-DD | [Config](efforts/medium/cw19-no-dd.json) | `cw-19/no-dd` |
+| 4 | CW-19 complex conservation / current-DD | [Config](efforts/medium/cw19-current-dd.json) | `cw-19/current-dd` |
+| 5 | CW-01 positive native discovery / current-DD | [Config](efforts/medium/cw01-discovery.json) | `cw-01/discovery` |
+| 6 | CW-17 native non-trigger / current-DD | [Config](efforts/medium/cw17-discovery.json) | `cw-17/discovery` |
 
-**Approved schedule:** Codex / gpt-5.6-sol at low, medium and high, three repetitions of each row at each effort: 18 runs per effort, 54 total (36 behavior, 18 discovery).
-Execute serially: low, then medium, then high; within each effort, repetitions 1–3 each visit rows 1–6 in order.
-This fixed order is simple to audit, not randomized or fully counterbalanced; retain timestamps and harness provenance rather than attributing any observed difference solely to effort.
+**Approved schedule:** Codex / gpt-5.6-sol / medium only, three repetitions of each row: 18 total (12 behavior, six discovery).
+This prioritizes the owner's ordinary workload and repeated observations over cross-effort/model coverage.
+Execute serially: repetitions 1–3 each visit rows 1–6 in order.
+This fixed order is simple to audit, not randomized or fully counterbalanced; retain timestamps and harness provenance and disclose possible order effects.
 Use fresh runtimes for every repetition and distinct attempt directories; no parallel subject runs or adaptive stopping on skill verdicts.
 No extra qualification model call or retry is included in the count; only understood infrastructure-only retries follow the linked unchanged-command policy.
-No Terra, Claude, remaining-CW collection or candidate skill edit is included.
+No low/high, Astra, Terra, Claude, remaining-CW collection or candidate skill edit is included.
+Replace the superseded 54-command proposal with an explicitly approved medium-only list before launch.
 Report PASS/FAIL/INCONCLUSIVE counts and the evaluable denominator for each scenario/condition/effort, with criterion-level judgments and separate fidelity/readability/validity caveats.
 Disclose excluded infrastructure/contamination attempts separately; never discard judgeable FAILs or pool discovery into behavior.
 Three repetitions provide an initial view of variation, not a precise reliability estimate or automatic GREEN/acceptance threshold; owner review decides baseline acceptance, and later authoring criteria/repetitions require separate agreement.
@@ -63,7 +66,7 @@ Historical command approvals do not transfer to this runbook.
 
 From the frozen worktree root, set `CW_ROOT` to that absolute root and `CW_SCRATCH`, `CW_ATTEMPT`, `CW_REFERENCE`, `CW_REVISION` to the exact approved summary values.
 Set `CW_SCENARIO` to `skill-validation/pilot/` plus the table's worksheet-scenario path, and `CW_CONFIG` to the selected effort config's absolute path.
-For medium/high, the config directory is not the worksheet scenario directory; use the mapped shared rubric rather than looking for a rubric under `efforts/`.
+The medium config directory is not the worksheet scenario directory; use the mapped shared rubric rather than looking for a rubric under `efforts/`.
 `CW_REFERENCE` is the fixed qualified CLI capture directory, not the new attempt directory.
 For a first attempt, create `CW_ATTEMPT` once with `mkdir` without `-p`; a collision requires inspection, never overwrite.
 Require the scratch `runs/` directory and attempt parents to exist.
