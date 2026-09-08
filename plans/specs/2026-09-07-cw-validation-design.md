@@ -1,8 +1,8 @@
 # Minimal CW baseline and edit testing
 
-**Status:** The owner approved the presented portfolio/inputs and an 18-run baseline schedule: Codex / gpt-5.6-sol / medium only, three repetitions per condition, fully scored.
-Preparation and freezing may proceed; provider invocation still requires explicit approval of the exact command list.
-No skill edit, additional model/catalog campaign or promotion of pilot evidence is authorized.
+**Status:** All 18 owner-approved Codex / gpt-5.6-sol / medium observations are collected and fully scored, three per condition; owner review and acceptance are pending.
+The exact command batch is complete, not reusable authorization.
+No further provider call, skill edit, additional model/catalog campaign or evidence promotion is authorized.
 **Workspace:** `.worktrees/cw-validation-design`, branch `feature/cw-validation-design`.
 **Contract:** [CW charter](../../skill-validation/charter/core-contracts.md#concise-writing), [controlled-input decisions](2026-09-06-skilltest-controlled-inputs-design.md), and the [CW runbook](../../skill-validation/pilot/cw-runbook.md).
 
@@ -64,10 +64,20 @@ The runbook specifies candidate preparation and evidence reuse checks without au
 - [x] Owner reviews the presented inputs and approves the medium-only 18-run baseline schedule; candidate authoring remains separately gated.
 - [x] Prepare and audit the six selected medium configs; review the schedule amendment.
 - [x] Reconcile qualification against retained evidence; no new paid setup probe is required for unchanged controls.
-- [ ] Freeze the reviewed revision and present a fully expanded finite command batch for approval.
+- [x] Freeze the reviewed revision and obtain approval of the exact finite command batch.
+- [x] Collect and score all 18 observations; verify inputs, full traces, CLI provenance, cleanup and worksheets.
+- [ ] Owner reviews the complete scratch set and decides acceptance and the next authoring/design step.
 
-Stop at exact-command approval; no provider command is approved by completing the preceding checks.
+Stop for owner review; completion of this batch does not authorize further provider calls or candidate authoring.
 The selected six medium configs are unchanged members of the provider-free audited matrix: shared prompt/fixture identity, paired rubric/loading differences, withheld inputs and argv controls were verified.
 Unused low/high configs remain outside the authorized schedule; no input or runner change is required to narrow collection.
 Protected skills, runner code, historical scenarios and previous pilot inputs are unchanged; the frozen-input verification passed 231 runner tests and 263 hook tests with three skips.
-Review was inline because the session has no no-write-tool reviewer type; no provider or authentication call was used.
+Preparation review was inline because the session has no no-write-tool reviewer type; it used no provider or authentication call.
+
+## Collection handoff
+
+The [scratch summary and evidence ledger](/private/tmp/skilltest-cw-baseline.ksDeiD/summary.md) records the approved commands, per-condition counts, criterion worksheets and control checks.
+Collection used frozen revision `6fb4780fce37710a76116dbbeaa832a6a42289cd`; the subsequent status update changes no test input or scoring rule.
+All 18 runs completed without infrastructure retries, invalid/excluded observations or unresolved cleanup.
+The handoff audit verified mechanical worksheet preservation, evidence links and serial execution; the fresh hook suite passed 263 tests with three skips.
+No runner or process change was required; all results remain scratch-only, and the 105 historical accepted records are unchanged.

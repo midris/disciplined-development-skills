@@ -1,6 +1,7 @@
 # CW baseline and edit runbook
 
-**Portfolio and medium-only 18-run schedule approved; exact provider commands await approval.**
+**The medium-only 18-run baseline is collected and scored; owner review is pending.**
+The command shapes below are procedural reference, not authorization to repeat the completed batch.
 The [CW design](../../plans/specs/2026-09-07-cw-validation-design.md) owns this increment's scope and checkpoint.
 This is an agent-followed procedure using `skilltest`, not a new program.
 Reuse the [routine scoring](README.md#scoring-and-handoff), [recovery policy](README.md#failure-and-recovery) and [qualification reference](qualification/README.md); this page supplies CW-specific inputs and baseline/edit decisions.
@@ -29,7 +30,7 @@ This fixed order is simple to audit, not randomized or fully counterbalanced; re
 Use fresh runtimes for every repetition and distinct attempt directories; no parallel subject runs or adaptive stopping on skill verdicts.
 No extra qualification model call or retry is included in the count; only understood infrastructure-only retries follow the linked unchanged-command policy.
 No low/high, Astra, Terra, Claude, remaining-CW collection or candidate skill edit is included.
-Replace the superseded 54-command proposal with an explicitly approved medium-only list before launch.
+The completed batch used the replacement medium-only list; neither it nor the superseded 54-command proposal authorizes another launch.
 Report PASS/FAIL/INCONCLUSIVE counts and the evaluable denominator for each scenario/condition/effort, with criterion-level judgments and separate fidelity/readability/validity caveats.
 Disclose excluded infrastructure/contamination attempts separately; never discard judgeable FAILs or pool discovery into behavior.
 Three repetitions provide an initial view of variation, not a precise reliability estimate or automatic GREEN/acceptance threshold; owner review decides baseline acceptance, and later authoring criteria/repetitions require separate agreement.
