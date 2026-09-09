@@ -1,0 +1,10 @@
+- [P1] project/src/retry.py:5: `retry_batch` passes unsorted input to `normalize_tasks`, violating the plan’s required ordered-input precondition.
+  Callers can receive incorrectly ordered results. Sort before normalization or enforce ordering inside `normalize_tasks`.
+
+- [P2] project/plans/normalize.md:5: The stated 18% sorting overhead contradicts the supplied benchmark’s 1.8%.
+  This tenfold discrepancy invalidates the documented rationale for omitting local sorting.
+
+- [P2] project/plans/normalize.md:4: The plan incorrectly presents `validateBatch` as the ordering guard, but `bulk_normalize` and `retry_batch` also call `normalize_tasks`.
+  The invariant is neither complete nor symmetric across callers, and no tests are supplied to enforce it.
+
+DD-VERDICT: BLOCK

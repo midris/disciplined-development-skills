@@ -1,9 +1,9 @@
 # CW baseline and edit runbook
 
-**The owner accepted the full-CW baseline on 2026-09-08; CW-only candidate preparation is active.**
+**Baseline and candidate collection are complete; candidate evidence awaits owner review.**
 The [accepted evidence index](../accepted/concise-writing/codex-gpt-5.6-sol-medium/README.md) retains results, frozen revisions and verification for 81 fresh plus 18 reused observations.
-All baseline commands are exhausted; the [candidate mapping](cw-catalog.md#cw-rewrite-candidate-configs) prepares the next comparison without authorizing provider calls.
-The [CW design](../../plans/specs/2026-09-07-cw-validation-design.md) owns scope and checkpoints, and the [catalog mapping](cw-catalog.md) owns exact inputs, purpose separation, counts and order.
+Both command batches are exhausted; follow the [current testing plan](../../plans/2026-09-09-dd-skill-testing.md#remaining-work), not the reusable collection instructions below, for the next action.
+The [archived CW design](../../plans/completed/specs/2026-09-07-cw-validation-design.md) preserves the completed comparison contract, and the [catalog mapping](cw-catalog.md) owns exact inputs, purpose separation, counts and order.
 This is an agent-followed procedure using `skilltest`, not a new program.
 Reuse the [routine scoring](README.md#scoring-and-handoff), [recovery policy](README.md#failure-and-recovery) and [qualification reference](qualification/README.md); this page supplies CW-specific inputs and baseline/edit decisions.
 The existing `pilot/` location avoids a migration; it does not make future observations repetitions of the completed procedure pilot.
@@ -18,7 +18,8 @@ Keep source IDs and variant purposes distinct; a discovery observation cannot st
 The completed schedule is 33 conditions × three repetitions = 99 observations, including 66 current-DD and 33 no-DD.
 The [record-by-record checks](cw-catalog.md#counts-order-and-reuse) supported reuse of 18 observations; the 81 new calls are now complete.
 Any future exact command list requires new approval before launch; drift requires affected requalification and a revised count, not automatic recollection.
-No other models/efforts or catalogs are included; candidate collection has its own freeze, qualification/reuse and command-approval checkpoints.
+The candidate schedule added 66 observations under its own freeze, qualification/reuse and command approval; those observations are also complete.
+No other models/efforts or catalogs are included.
 Run serially in the map's fixed order, skipping only explicitly recorded reused observations.
 Use fresh runtimes and distinct attempt directories; do not add repetitions to improve verdicts.
 Any required live qualification is separately approved and reported, never counted as effectiveness.
@@ -52,7 +53,7 @@ Before collection:
 
 1. Audit each config with the existing `load_config` and `prepare_workspace` helpers in disposable scratch, without invoking a provider; inspect rendered prompts and compare every prepared file to its declared source. These internal helpers are the existing provider-free preparation path, not a new public CLI. Check for symlinked sources/ancestors and undeclared files too.
 2. Verify behavior-pair task/rubric equality, with only the current-DD CW-loading prefix and DD files differing; authoring pairs retain identical common loading directives. Verify discovery prompts have no loading hints and description diagnostics cannot be mistaken for native-discovery tests. Confirm all requested body paths resolve inside their prepared fixture.
-3. Reconcile relevant qualification against the [retained CW/extension evidence](../../plans/2026-09-06-skilltest-sol-low-pilot.md#task-9-qualify-and-exercise-the-cw-purposes). Reuse only demonstrably unchanged controls; a new prose task does not automatically require another paid setup probe. Reconcile the added authoring group, description-only inputs and CW-18's file-creation/retention path explicitly. Missing evidence or changed CLI/catalog/tool controls must be resolved before launch.
+3. Reconcile relevant qualification against the [retained CW/extension evidence](../../plans/completed/2026-09-06-skilltest-sol-low-pilot.md#task-9-qualify-and-exercise-the-cw-purposes). Reuse only demonstrably unchanged controls; a new prose task does not automatically require another paid setup probe. Reconcile the added authoring group, description-only inputs and CW-18's file-creation/retention path explicitly. Missing evidence or changed CLI/catalog/tool controls must be resolved before launch.
 4. Record the selected CLI executable and fixed qualified version/digest capture directory, and resolve affected observation reuse. Do not treat an old version pin or a current version command as historical run provenance.
 5. After those decisions and any required corrections, commit the reviewed inputs, rubrics, this runbook and linked scoring guidance; record the full recoverable revision in one scratch summary. Require a clean worktree, including no untracked inputs. Subsequent input or guidance changes invalidate that freeze and require affected checks and a new freeze before command approval.
 6. Create a fresh scratch root with `mktemp -d /private/tmp/skilltest-cw-baseline.XXXXXX` for baseline collection or `mktemp -d /private/tmp/skilltest-cw-candidate.XXXXXX` for candidate collection, then its `runs/` and `attempts/` directories. Keep preparation evidence separate. Put the frozen revision, qualified-control reference, ordered condition/repetition rows and command list in its `summary.md`.
@@ -75,7 +76,7 @@ Run these checks individually and stop on nonzero exit; Git status must also be 
 
 ```sh
 git status --short
-git diff --exit-code "$CW_REVISION" -- skill-validation/pilot skill-validation/runner skill-validation/charter/core-contracts.md skill-validation/scenarios/concise-writing plans/specs/2026-09-07-cw-validation-design.md plans/specs/2026-09-06-skilltest-controlled-inputs-design.md plans/completed/specs/2026-09-02-skill-testing-methodology-design.md
+git diff --exit-code "$CW_REVISION" -- skill-validation/pilot skill-validation/runner skill-validation/charter/core-contracts.md skill-validation/scenarios/concise-writing plans/2026-09-09-dd-skill-testing.md plans/completed/specs/2026-09-07-cw-validation-design.md plans/completed/specs/2026-09-06-skilltest-controlled-inputs-design.md plans/completed/specs/2026-09-02-skill-testing-methodology-design.md
 test -d "$CW_SCRATCH/runs" && test -d "$CW_ATTEMPT"
 /opt/homebrew/bin/codex --version > "$CW_ATTEMPT/cli-version.txt" 2> "$CW_ATTEMPT/version-stderr.txt"
 /usr/bin/shasum -a 256 /opt/homebrew/bin/codex > "$CW_ATTEMPT/cli-sha256.txt"
@@ -114,9 +115,10 @@ Nonfatal diagnostics are non-blocking only under the linked recovery policy's ev
 
 ## Use the baseline for an edit
 
-The full-CW baseline and owner review are complete; the owner selected the existing rewritten CW for comparison preparation.
+The full-CW baseline is owner-accepted; the existing rewritten CW comparison is complete and awaits owner review.
 Testing an existing candidate can compare its frozen bytes, but cannot establish a prior RED-before-authoring chronology.
-For this unchanged candidate, use the [existing-candidate comparison contract](../../plans/specs/2026-09-07-cw-validation-design.md#existing-cw-candidate-preparation) and steps 3–6 below; steps 1–2 govern new authoring, not a prerequisite to evaluating the snapshot.
+The unchanged candidate was evaluated under the [existing-candidate comparison contract](../../plans/completed/specs/2026-09-07-cw-validation-design.md#existing-cw-candidate-preparation) and steps 3–6 below; steps 1–2 govern new authoring, not a prerequisite to evaluating that snapshot.
+These steps remain a procedure for separately approved future work, not authorization to repeat completed runs.
 
 1. Review the relevant behavior pairs for a targeted, judgeable no-DD failure before authoring. If the control passes, retain that result; select or design a separately approved diagnostic rather than declaring RED, weakening criteria or repeating until failure. A current-DD failure alone is not the required no-DD control.
 2. Before new authoring, agree the edit hypothesis, required RED/GREEN repetitions, regression coverage and acceptance rule under `superpowers:writing-skills`. This baseline schedule does not waive that skill's applicable requirements. The original conditional charter schedule is not activated automatically.
@@ -135,5 +137,5 @@ The accepted CW baseline is stored under `skill-validation/accepted/concise-writ
 Its [index](../accepted/concise-writing/codex-gpt-5.6-sol-medium/README.md) records archive restoration checks and preserved provenance; verify the evidence commit before candidate collection or scratch cleanup.
 Before packaging, record the exact destination and retained contents in the scratch summary; preserve complete bundles, full traces and permitted outputs, worksheets, tied CLI/command captures and the qualification/provenance needed to interpret them.
 Verify preserved bytes and navigation independently of the original scratch paths before committing; retain the source packages until that check succeeds.
-When a new accepted set is authorized, retain the complete scenario/provider/model/effort set, including declared conditions, repetitions and failures, under the [whole-set/Git-history policy](../../plans/specs/2026-09-06-skilltest-controlled-inputs-design.md#working-requirements-inventory).
+When a new accepted set is authorized, retain the complete scenario/provider/model/effort set, including declared conditions, repetitions and failures, under the [whole-set/Git-history policy](../../plans/completed/specs/2026-09-06-skilltest-controlled-inputs-design.md#working-requirements-inventory).
 Commit accepted evidence and recoverable provenance before a later whole-set replacement; do not accumulate dated checked-out archives or delete scratch still needed for review.

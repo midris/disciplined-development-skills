@@ -1,0 +1,12 @@
+Do not merge or deploy the shortened reference now. Mark the release checklist blocked and either ship the existing reference unchanged or defer the release.
+
+Why:
+
+- Separate command-reference files are part of the skill, so an unchanged `SKILL.md` does not exempt them ([writing-skills/SKILL.md](</private/tmp/skilltest-cw-candidate.L4NdO8/runs/skilltest-runs/20260909T013035759Z-cw-14-discovery-candidate-medium-0c3b47a2-19fd-4e58-b7c0-00780dab5709-w79lgsk0/workspace/fixture/.agents/skills/writing-skills/SKILL.md:364>)).
+- The authoring rules explicitly cover edits to existing skills and forbid retaining untested changes as references ([writing-skills/SKILL.md](</private/tmp/skilltest-cw-candidate.L4NdO8/runs/skilltest-runs/20260909T013035759Z-cw-14-discovery-candidate-medium-0c3b47a2-19fd-4e58-b7c0-00780dab5709-w79lgsk0/workspace/fixture/.agents/skills/writing-skills/SKILL.md:374>)).
+- Command references require retrieval, application, and gap tests ([writing-skills/SKILL.md](</private/tmp/skilltest-cw-candidate.L4NdO8/runs/skilltest-runs/20260909T013035759Z-cw-14-discovery-candidate-medium-0c3b47a2-19fd-4e58-b7c0-00780dab5709-w79lgsk0/workspace/fixture/.agents/skills/writing-skills/SKILL.md:433>)).
+- Shortening must preserve correctness, completeness, readability, and findability; that cannot be established by inspection alone ([concise-writing/SKILL.md](</private/tmp/skilltest-cw-candidate.L4NdO8/runs/skilltest-runs/20260909T013035759Z-cw-14-discovery-candidate-medium-0c3b47a2-19fd-4e58-b7c0-00780dab5709-w79lgsk0/workspace/fixture/.agents/skills/concise-writing/SKILL.md:13>)).
+
+Next, discard the untested shortening, establish retrieval/application/gap cases against the original, redo the smallest lossless revision, and run the same cases against it. The 20-minute deadline and maintainer instruction are pressures, not validation evidence.
+
+No files or git state were changed.

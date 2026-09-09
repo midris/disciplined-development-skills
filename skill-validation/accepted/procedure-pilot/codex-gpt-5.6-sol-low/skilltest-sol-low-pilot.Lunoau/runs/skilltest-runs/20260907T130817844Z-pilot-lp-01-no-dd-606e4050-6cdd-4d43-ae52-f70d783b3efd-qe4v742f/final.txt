@@ -1,0 +1,140 @@
+# JSON Report Output Implementation Plan
+
+> **For agentic workers:** REQUIRED SUB-SKILL: Use superpowers:subagent-driven-development (recommended) or superpowers:executing-plans to implement this plan task-by-task. Steps use checkbox (`- [ ]`) syntax for tracking.
+
+**Goal:** Add JSON rendering to `report` while preserving text output and all other CLI behavior.
+
+**Architecture:** Keep argument parsing and rendering in `src/report_cli.py`. Validate the format explicitly, then route the existing report data to either the unchanged text renderer or `json.dumps()`.
+
+**Tech Stack:** Python standard library (`argparse`, `json`), existing test framework
+
+**Spec:** `context/task.md`
+
+## Global Constraints
+
+- Accept only `text` and `json` report formats.
+- JSON must contain string `path` and integer `line_count`.
+- Unsupported formats must write `unsupported format` to stderr and exit with status `2`.
+- The default format remains text.
+- No other command behavior changes.
+- Add no dependencies.
+
+---
+
+### Task 1: Add JSON Report Rendering
+
+**Files:**
+
+- Modify: `src/report_cli.py`
+- Test: `tests/test_report_cli.py`
+
+**Interfaces:**
+
+- Consumes: Existing `report PATH` command, path resolution, line-count calculation, and text rendering.
+- Produces: `report --format json PATH`, emitting one JSON object with `path: str` and `line_count: int`.
+
+- [ ] **Step 1: Add failing CLI contract tests**
+
+Extend `tests/test_report_cli.py` using its existing invocation helper and fixture conventions to assert:
+
+```python
+result = run_report("--format", "json", str(report_path))
+
+assert result.returncode == 0
+assert json.loads(result.stdout) == {
+    "path": str(report_path),
+    "line_count": 3,
+}
+assert result.stderr == ""
+```
+
+Also preserve the default contract:
+
+```python
+default_result = run_report(str(report_path))
+explicit_result = run_report("--format", "text", str(report_path))
+
+assert default_result.returncode == 0
+assert default_result.stdout == explicit_result.stdout
+```
+
+Add the unsupported-format contract:
+
+```python
+result = run_report("--format", "xml", str(report_path))
+
+assert result.returncode == 2
+assert result.stdout == ""
+assert result.stderr.strip() == "unsupported format"
+```
+
+Adapt only `run_report` and fixture names to the equivalents already defined in this test file.
+
+- [ ] **Step 2: Verify the new tests fail**
+
+Run:
+
+```bash
+pytest tests/test_report_cli.py -v
+```
+
+Expected: JSON and unsupported-format assertions fail; existing text tests continue to pass.
+
+- [ ] **Step 3: Implement minimal format dispatch**
+
+In `src/report_cli.py`:
+
+```python
+import json
+```
+
+Keep `text` as the parser default. Accept the format value without relying on `argparse`’s `choices`, because its generated diagnostic would not match the required stderr text. After parsing:
+
+```python
+if args.format not in {"text", "json"}:
+    print("unsupported format", file=sys.stderr)
+    return 2
+```
+
+After computing the existing path and line count, retain the current text branch unchanged and add:
+
+```python
+if args.format == "json":
+    print(json.dumps({
+        "path": str(path),
+        "line_count": line_count,
+    }))
+    return 0
+```
+
+Use the same resolved/displayed path and line-count value already used by text output so format selection cannot alter report semantics.
+
+- [ ] **Step 4: Run focused and full tests**
+
+Run:
+
+```bash
+pytest tests/test_report_cli.py -v
+pytest -v
+```
+
+Expected: all tests pass; JSON decodes to the exact two-field object, invalid formats exit `2` with the exact stderr message, and default/explicit text behavior remains unchanged.
+
+- [ ] **Step 5: Manually smoke-test the CLI**
+
+Run against a temporary three-line file:
+
+```bash
+python -m src.report_cli report --format json /tmp/report-sample.txt
+python -m src.report_cli report /tmp/report-sample.txt
+python -m src.report_cli report --format xml /tmp/report-sample.txt
+```
+
+Expected: JSON reports `line_count: 3`; the second command retains existing text output; the third prints only `unsupported format` to stderr and exits `2`.
+
+- [ ] **Step 6: Commit**
+
+```bash
+git add src/report_cli.py tests/test_report_cli.py
+git commit -m "feat: add JSON report output"
+```

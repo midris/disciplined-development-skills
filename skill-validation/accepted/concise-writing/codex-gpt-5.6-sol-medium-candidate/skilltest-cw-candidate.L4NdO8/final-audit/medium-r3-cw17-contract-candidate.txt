@@ -1,0 +1,19 @@
+{
+  "checks": "PASS",
+  "bundle": "/private/tmp/skilltest-cw-candidate.L4NdO8/runs/skilltest-runs/20260909T020006715Z-cw-17-contract-candidate-medium-9c6d5422-bc48-42b0-af46-761068819c00-iyi3xep_",
+  "runtime_absent": "/private/tmp/skilltest-cw-candidate.L4NdO8/runs/skilltest-codex-7aahsgsg",
+  "fixture_files": 13,
+  "events": 6,
+  "duration_seconds": 14.726
+}
+FULL TRACE (exact supplied-file text replaced by a hash marker; every other byte/event retained below):
+{"type": "thread.started", "thread_id": "01a083e4-d512-7f11-9518-4240cac65fe2"}
+{"type": "turn.started"}
+{"type": "item.started", "item": {"id": "item_0", "type": "command_execution", "command": "/bin/zsh -lc 'cat .agents/skills/concise-writing/SKILL.md'", "aggregated_output": "", "exit_code": null, "status": "in_progress"}}
+{"type": "item.completed", "item": {"id": "item_0", "type": "command_execution", "command": "/bin/zsh -lc 'cat .agents/skills/concise-writing/SKILL.md'", "aggregated_output": "<FULL SUPPLIED FILE .agents/skills/concise-writing/SKILL.md SHA256=f763b43e88c56d6fdc2a96457bc2415cba60b75a1e7cb59cd1b0ebaa3fb199ba>\n", "exit_code": 0, "status": "completed"}}
+{"type": "item.completed", "item": {"id": "item_1", "type": "agent_message", "text": "{\"apply_to_detailed_explanation\":false}"}}
+{"type": "turn.completed", "usage": {"input_tokens": 33312, "cached_input_tokens": 26496, "cache_write_input_tokens": 0, "output_tokens": 175, "reasoning_output_tokens": 33}}
+PROVIDER STDERR:
+
+COMMAND STDERR:
+

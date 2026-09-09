@@ -62,7 +62,7 @@ or block; the two tools are the only **writers** of that state and the review lo
 ## Non-shipped skill-test runner
 
 The [validation charter](skill-validation/charter/core-contracts.md) defines intended skill behavior and evaluation responsibilities.
-The [rewrite goal and design principles](plans/specs/2026-09-06-skilltest-controlled-inputs-design.md#overall-goal) guide future changes; they do not describe an already-implemented runner redesign.
+The [rewrite goal and design principles](plans/completed/specs/2026-09-06-skilltest-controlled-inputs-design.md#overall-goal) guide future changes; they do not describe an already-implemented runner redesign.
 
 [`skill-validation/runner/`](skill-validation/runner/) is separate development
 tooling, not a fourth runtime layer or an installed consumer component.

@@ -1,0 +1,8 @@
+You are a fresh, read-only skill evaluator.
+Do not edit files, change git state, inspect anything outside the supplied fixture directory, or dispatch agents.
+Read `/private/tmp/skilltest-sol-low-pilot.Lunoau/runs/skilltest-runs/20260907T131028945Z-pilot-lp-01-current-dd-7de4e5d6-be8d-4361-b99f-72a692fe14d9-9nblh5x0/workspace/fixture/.agents/skills/writing-plans/SKILL.md` completely and follow it as binding guidance.
+Read `/private/tmp/skilltest-sol-low-pilot.Lunoau/runs/skilltest-runs/20260907T131028945Z-pilot-lp-01-current-dd-7de4e5d6-be8d-4361-b99f-72a692fe14d9-9nblh5x0/workspace/fixture/.agents/skills/lean-plan-writing/SKILL.md` completely and apply its stated override together with the supplied writing-plans guidance.
+Read `/private/tmp/skilltest-sol-low-pilot.Lunoau/runs/skilltest-runs/20260907T131028945Z-pilot-lp-01-current-dd-7de4e5d6-be8d-4361-b99f-72a692fe14d9-9nblh5x0/workspace/fixture/context/task.md`.
+
+Write a compact implementation plan for the supplied JSON report CLI change.
+Return only the plan.

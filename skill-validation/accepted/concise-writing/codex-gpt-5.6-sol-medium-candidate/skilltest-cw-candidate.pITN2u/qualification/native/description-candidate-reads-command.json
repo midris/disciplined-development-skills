@@ -1,0 +1,23 @@
+{
+  "argv": [
+    "/bin/zsh",
+    "-lc",
+    "cd \"$1\" || exit; shift; cat \"$@\" >/dev/null",
+    "cw-tools",
+    "/private/tmp/skilltest-cw-candidate.pITN2u/qualification/native/skilltest-runs/20260908T195110594Z-cw-09-description-candidate-medium-940d5fb3-0737-402c-b02a-220571553913-gxnd9lki/workspace/fixture",
+    ".agents/skills/writing-plans/SKILL.md",
+    ".agents/skills/writing-plans/plan-document-reviewer-prompt.md",
+    ".agents/skills/requesting-code-review/SKILL.md",
+    ".agents/skills/requesting-code-review/code-reviewer.md",
+    "descriptions/adversarial-review-loop.txt",
+    "descriptions/concise-writing.txt",
+    "descriptions/superpowers-writing-skills.txt"
+  ],
+  "cwd": "/private/tmp/skilltest-cw-candidate.pITN2u/qualification/native/skilltest-runs/20260908T195110594Z-cw-09-description-candidate-medium-940d5fb3-0737-402c-b02a-220571553913-gxnd9lki/workspace/fixture",
+  "env": {
+    "HOME": "/private/tmp/skilltest-cw-candidate.pITN2u/qualification/native/skilltest-codex-pfpb7mwc/home",
+    "CODEX_HOME": "/private/tmp/skilltest-cw-candidate.pITN2u/qualification/native/skilltest-codex-pfpb7mwc/codex",
+    "TMPDIR": "/private/tmp/skilltest-cw-candidate.pITN2u/qualification/native/skilltest-codex-pfpb7mwc/tmp",
+    "PATH": "/opt/homebrew/bin:/usr/bin:/bin:/usr/sbin:/sbin"
+  }
+}

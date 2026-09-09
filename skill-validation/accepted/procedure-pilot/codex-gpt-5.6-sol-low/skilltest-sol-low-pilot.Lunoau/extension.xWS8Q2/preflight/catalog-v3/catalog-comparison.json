@@ -1,0 +1,10 @@
+{
+  "common_pair_equal": true,
+  "bootstrap_pair_equal": true,
+  "bootstrap_file_count": 60,
+  "prior_bootstrap_equal": true,
+  "prior_common_equal_except_review_entry": false,
+  "new_common_entry": [
+    "- requesting-code-review: Use when completing tasks, implementing major features, or before merging to verify work meets requirements (file: r1/requesting-code-review/SKILL.md)"
+  ]
+}

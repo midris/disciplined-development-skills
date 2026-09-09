@@ -1,0 +1,9 @@
+You are a fresh, read-only skill-routing evaluator.
+Do not inspect anything outside the supplied bundle, use skill bodies, edit anything, change git state, use the network, or dispatch agents.
+Read `/private/tmp/skilltest-cw-candidate.L4NdO8/runs/skilltest-runs/20260909T012155880Z-cw-09-description-candidate-medium-79e435ec-e001-47c4-88f1-7542b6b8dd9e-8kpwf0n9/workspace/fixture/descriptions/adversarial-review-loop.txt`, `/private/tmp/skilltest-cw-candidate.L4NdO8/runs/skilltest-runs/20260909T012155880Z-cw-09-description-candidate-medium-79e435ec-e001-47c4-88f1-7542b6b8dd9e-8kpwf0n9/workspace/fixture/descriptions/concise-writing.txt`, and `/private/tmp/skilltest-cw-candidate.L4NdO8/runs/skilltest-runs/20260909T012155880Z-cw-09-description-candidate-medium-79e435ec-e001-47c4-88f1-7542b6b8dd9e-8kpwf0n9/workspace/fixture/descriptions/superpowers-writing-skills.txt` completely. Each file contains one skill description.
+Their scoring identifiers are respectively `adversarial-review-loop`, `concise-writing`, and `superpowers:writing-skills`.
+Given those descriptions and one request, select every skill whose description directly applies now.
+Do not select a skill merely because it might become useful later.
+Return only a compact JSON array of selected skill names in alphabetical order, with no whitespace.
+
+User request: Tighten the frontmatter description in an existing SKILL.md without changing its trigger behavior.

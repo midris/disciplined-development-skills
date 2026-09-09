@@ -1,0 +1,38 @@
+skill-validation/runner/.venv/bin/python - <<'PY'
+import ast,hashlib,json,re
+from pathlib import Path
+b=Path('/private/tmp/skilltest-sol-low-pilot.Lunoau/cw-inputs.veav95/runs/skilltest-runs/20260907T213143642Z-pilot-cw-01-no-dd-9da0992f-c087-4fc9-9eb0-d11111a00562-6rjoy_ux')
+root=Path('/private/tmp/skilltest-sol-low-pilot.Lunoau/cw-inputs.veav95')
+h=lambda p:hashlib.sha256(p.read_bytes()).hexdigest()
+record=json.loads((b/'result.json').read_text())
+a=json.loads((root/'input-audit.json').read_text())['configs']['cw-01/no-dd']
+assert record['status']=='COMPLETED' and record['infrastructure_error'] is None
+assert record['execution']['exit_code']==0 and not record['execution']['timed_out']
+assert h(b/'config.json')==a['config_sha256']
+assert h(b/'prompt-template.txt')==a['prompt_sha256']==h(b/'prompt.txt')
+fixture=b/'workspace/fixture'
+actual={str(p.relative_to(fixture)):h(p) for p in fixture.rglob('*') if p.is_file() and '.git' not in p.relative_to(fixture).parts}
+assert actual==a['fixture_hashes']
+assert not any(p.is_symlink() for p in fixture.rglob('*'))
+assert not list((b/'workspace/evidence').iterdir())
+log=(b/'runner.log').read_text()
+pre=json.loads(next(line.split('pre-launch input SHA-256: ',1)[1] for line in log.splitlines() if 'pre-launch input SHA-256: ' in line))
+assert pre=={'prompt-template.txt':a['prompt_sha256'],'prompt.txt':a['prompt_sha256'],**{'workspace/fixture/'+k:v for k,v in actual.items()}}
+argv=ast.literal_eval(next(line.split('provider arguments: ',1)[1] for line in log.splitlines() if 'provider arguments: ' in line))
+from skilltest.providers import ProviderRequest,_arguments
+req=ProviderRequest(b/'workspace',(b/'prompt.txt').read_bytes(),b/'final.txt','codex','gpt-5.6-sol','low')
+assert argv==_arguments(req,executable='/opt/homebrew/bin/codex')
+runtime=Path(next(line.split('(manual recovery if interrupted): ',1)[1] for line in log.splitlines() if 'private Codex runtime (' in line))
+assert runtime.parent==root/'runs' and runtime.name.startswith('skilltest-codex-')
+assert not runtime.exists() and not runtime.is_symlink()
+assert 'cleanup failed' not in log and 'provider returned' in log
+events=[json.loads(line) for line in (b/'stdout.txt').read_text().splitlines()]
+assert [e['type'] for e in events]==['thread.started','turn.started','item.completed','turn.completed']
+assert events[2]['item']['type']=='agent_message' and events[2]['item']['text']==(b/'final.txt').read_text()
+for key in ('config','prompt_template','prompt','stdout','stderr','final'):
+    item=record['artifacts'][key]
+    assert h(b/item['path'])==item['sha256']
+print('PASS: actual argv equals pinned adapter command; config/prompt/prelaunch/final fixture hashes match; all four guidance files unchanged; evidence empty; complete four-event response-only trace; recorded artifact hashes match; exact private runtime absent and no reported cleanup failure.')
+print('CAVEAT: two model-catalog refresh timeouts in provider stderr. Retain the evaluable response; comparison qualification is unresolved, not INFRA_RETRY.')
+print('runtime:',runtime)
+PY

@@ -1,0 +1,12 @@
+{
+  "argv": [
+    "/usr/bin/sandbox-exec",
+    "-f",
+    "/private/tmp/skilltest-sol-low-pilot.Lunoau/extension.xWS8Q2/no-network.sb",
+    "/opt/homebrew/bin/python3",
+    "-c",
+    "import socket; s=socket.socket(); s.bind((\"127.0.0.1\", 0)); s.close(); print(\"BIND_OK\")"
+  ],
+  "cwd": "/Users/simon/work/personal/disciplined-development-skills/.worktrees/skilltest-input-isolation-spike",
+  "exit_code": 1
+}

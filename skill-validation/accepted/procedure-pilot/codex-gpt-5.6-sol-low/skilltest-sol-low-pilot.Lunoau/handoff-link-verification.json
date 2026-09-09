@@ -1,0 +1,8 @@
+{
+  "command": "skill-validation/runner/.venv/bin/python - <<'PY'\nimport re\nfrom pathlib import Path\nfiles=[Path(p) for p in ['plans/2026-09-06-skilltest-sol-low-pilot.md','plans/specs/2026-09-06-skilltest-controlled-inputs-design.md','skill-validation/pilot/README.md','skill-validation/README.md']]\nfiles += [Path('/private/tmp/skilltest-sol-low-pilot.Lunoau/summary.md')]\nfiles += list(Path('/private/tmp/skilltest-sol-low-pilot.Lunoau/attempts').glob('*/result.md')) + list(Path('/private/tmp/skilltest-sol-low-pilot.Lunoau/attempts').glob('*/worksheet.md'))\nn=0\nfor f in files:\n for u in re.findall(r'\\]\\(([^)]+)\\)',f.read_text()):\n  if re.match(r'[a-z]+:',u): continue\n  path,_,anchor=u.partition('#')\n  target=(f.parent/path) if path else f\n  assert target.exists(),(str(f),u)\n  if anchor and target.suffix=='.md':\n   headings=[re.sub(r'[^\\w\\- ]','',h.strip().lower()).replace(' ','-') for h in re.findall(r'^#+ (.+)$',target.read_text(),re.M)]\n   assert anchor in headings,(str(f),u,headings)\n  n+=1\nprint(f'{n} local link targets and applicable heading anchors pass')\nPY",
+  "chunk_id": "357926",
+  "wall_time_seconds": 0.000002583,
+  "exit_code": 0,
+  "original_token_count": 15,
+  "output": "101 local link targets and applicable heading anchors pass\n"
+}

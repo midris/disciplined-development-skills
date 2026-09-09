@@ -1,0 +1,19 @@
+{
+  "status": "PASS",
+  "comparison_rows": 22,
+  "summary_links": 83,
+  "repositories": [
+    {
+      "path": "/Users/simon/work/personal/disciplined-development-skills",
+      "head": "4c4ba1b2792b8fd5ed0a046f2a6ac6a2c5428165",
+      "tracking_ref": "origin/main",
+      "clean": true
+    },
+    {
+      "path": "/Users/simon/work/personal/disciplined-development-skills/.worktrees/cw-validation-design",
+      "head": "595f8e2bce0a62c5d4143ffebcdcf30cf8422b0d",
+      "tracking_ref": "origin/feature/cw-validation-design",
+      "clean": true
+    }
+  ]
+}

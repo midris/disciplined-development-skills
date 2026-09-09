@@ -11,5 +11,5 @@ This is a byte-for-byte test snapshot, not the shipped skill or an accepted repl
 
 Only CW is imported; the remaining DD and Superpowers files stay at their accepted baseline bytes.
 No source worktree, shipped skill, historical scenario or scored evidence is changed.
-The [CW design](../../../../../plans/specs/2026-09-07-cw-validation-design.md#existing-cw-candidate-preparation) owns scope and approval gates; the [catalog](../../../cw-catalog.md#cw-rewrite-candidate-configs) maps candidate configs to existing prompts/rubrics.
+The [CW design](../../../../../plans/completed/specs/2026-09-07-cw-validation-design.md#existing-cw-candidate-preparation) owns scope and approval gates; the [catalog](../../../cw-catalog.md#cw-rewrite-candidate-configs) maps candidate configs to existing prompts/rubrics.
 Later tests cannot establish this existing candidate's RED-before-authoring chronology.

@@ -1,0 +1,8 @@
+{
+  "argv": [
+    "/opt/homebrew/bin/codex",
+    "--version"
+  ],
+  "cwd": "/Users/simon/work/personal/disciplined-development-skills/.worktrees/skilltest-input-isolation-spike",
+  "exit_code": 0
+}

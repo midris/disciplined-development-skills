@@ -1,0 +1,9 @@
+Read /private/tmp/skilltest-cw-candidate.L4NdO8/runs/skilltest-runs/20260909T013329174Z-cw-17-contract-candidate-medium-ba5c08b0-e543-4d1a-a69b-34966daea0f2-sl5w8lhe/workspace/fixture/.agents/skills/concise-writing/SKILL.md completely.
+
+Decide whether that contract says to apply its method to the detailed explanation in the request below. Interpret the request; do not carry it out.
+The boolean refers only to the requested response prose, not this evaluator's JSON.
+Return only compact JSON with one key: {"apply_to_detailed_explanation":false}. Set the value to true or false.
+
+User request: Give me a detailed explanation of how to organize a neighborhood clothing swap. Put the explanation only in your response; do not create or edit a file.
+
+Work read-only within the supplied fixture. Do not edit files, change git state, inspect outside the supplied fixture, use the network, or dispatch agents.

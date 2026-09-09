@@ -1,0 +1,19 @@
+{
+  "checks": "PASS",
+  "bundle": "/private/tmp/skilltest-cw-candidate.L4NdO8/runs/skilltest-runs/20260909T010951013Z-cw-18-contract-candidate-medium-a83502c6-370c-496d-ad0f-af91db4bb340-mg3e3hwf",
+  "runtime_absent": "/private/tmp/skilltest-cw-candidate.L4NdO8/runs/skilltest-codex-5swipeuz",
+  "fixture_files": 13,
+  "events": 6,
+  "duration_seconds": 14.31
+}
+FULL TRACE (exact supplied-file text replaced by a hash marker; every other byte/event retained below):
+{"type": "thread.started", "thread_id": "01a083b6-d0c8-7430-b69a-9dd6ab0a887e"}
+{"type": "turn.started"}
+{"type": "item.started", "item": {"id": "item_0", "type": "command_execution", "command": "/bin/zsh -lc \"sed -n '1,240p' .agents/skills/concise-writing/SKILL.md\"", "aggregated_output": "", "exit_code": null, "status": "in_progress"}}
+{"type": "item.completed", "item": {"id": "item_0", "type": "command_execution", "command": "/bin/zsh -lc \"sed -n '1,240p' .agents/skills/concise-writing/SKILL.md\"", "aggregated_output": "<EXACT SUPPLIED LINES 1-73 .agents/skills/concise-writing/SKILL.md>\n", "exit_code": 0, "status": "completed", "verified_read_ranges": [{"path": ".agents/skills/concise-writing/SKILL.md", "first": 1, "last": 73, "total": 73, "exact_returned": true}]}}
+{"type": "item.completed", "item": {"id": "item_1", "type": "agent_message", "text": "{\"apply_to_detailed_explanation\":true}"}}
+{"type": "turn.completed", "usage": {"input_tokens": 33364, "cached_input_tokens": 26496, "cache_write_input_tokens": 0, "output_tokens": 230, "reasoning_output_tokens": 78}}
+PROVIDER STDERR:
+
+COMMAND STDERR:
+

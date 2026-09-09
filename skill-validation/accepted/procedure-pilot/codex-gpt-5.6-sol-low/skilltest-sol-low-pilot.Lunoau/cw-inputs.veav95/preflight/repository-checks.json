@@ -1,0 +1,47 @@
+[
+  {
+    "cmd": "/opt/homebrew/bin/codex --version",
+    "cwd": "/Users/simon/work/personal/disciplined-development-skills/.worktrees/skilltest-input-isolation-spike",
+    "chunk_id": "87207e",
+    "wall_time_seconds": 0.000006916,
+    "exit_code": 0,
+    "original_token_count": 31,
+    "output": "WARNING: proceeding, even though we could not create PATH aliases: Operation not permitted (os error 1)\ncodex-cli 0.153.4\n"
+  },
+  {
+    "cmd": "/usr/bin/shasum -a 256 /opt/homebrew/bin/codex",
+    "cwd": "/Users/simon/work/personal/disciplined-development-skills/.worktrees/skilltest-input-isolation-spike",
+    "chunk_id": "6b70fe",
+    "wall_time_seconds": 0.282865458,
+    "exit_code": 0,
+    "original_token_count": 23,
+    "output": "b973d440acac501fd2594a43e7ca9ce41e0a65b9dfb28d0d7a7837c99e1261e3  /opt/homebrew/bin/codex\n"
+  },
+  {
+    "cmd": "git diff --exit-code 0a22a44701032d5d3c367ea9c84f13bfc5202e62 HEAD -- skill-validation/runner/src",
+    "cwd": "/Users/simon/work/personal/disciplined-development-skills/.worktrees/skilltest-input-isolation-spike",
+    "chunk_id": "4347e7",
+    "wall_time_seconds": 0.00000275,
+    "exit_code": 0,
+    "original_token_count": 0,
+    "output": ""
+  },
+  {
+    "cmd": "git diff --exit-code f28ea6569b7eb5b65245e77635a5ff7d12fc1082 -- skill-validation/pilot skill-validation/runner plans/specs/2026-09-06-skilltest-controlled-inputs-design.md skill-validation/charter/core-contracts.md plans/completed/specs/2026-09-02-skill-testing-methodology-design.md",
+    "cwd": "/Users/simon/work/personal/disciplined-development-skills/.worktrees/skilltest-input-isolation-spike",
+    "chunk_id": "f8d82c",
+    "wall_time_seconds": 0.000002375,
+    "exit_code": 0,
+    "original_token_count": 0,
+    "output": ""
+  },
+  {
+    "cmd": "git status --short",
+    "cwd": "/Users/simon/work/personal/disciplined-development-skills/.worktrees/skilltest-input-isolation-spike",
+    "chunk_id": "ca4781",
+    "wall_time_seconds": 0.000002792,
+    "exit_code": 0,
+    "original_token_count": 0,
+    "output": ""
+  }
+]

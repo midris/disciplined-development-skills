@@ -1,0 +1,5 @@
+Traceback (most recent call last):
+  File "/private/tmp/skilltest-sol-low-pilot.Lunoau/extension.xWS8Q2/audit-native-catalog.py", line 76, in <module>
+    assert "(file: "+str(context.fixture_dir/".agents/skills"/name/"SKILL.md")+")" in line,line
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: - requesting-code-review: Use when completing tasks, implementing major features, or before merging to verify work meets requirements (file: r1/requesting-code-review/SKILL.md)

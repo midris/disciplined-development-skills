@@ -54,7 +54,7 @@ This is evidence supporting the current accepted set, not an archive of unrelate
 After extracting it to a fresh directory, the original complete-set ledger is `skilltest-cw-baseline.bOn8Dx/summary.md`; the original 18-row ledger is `skilltest-cw-baseline.ksDeiD/summary.md`.
 Their scratch paths and historical pending/approval statements are original provenance, not instructions to rerun exhausted commands.
 Original absolute scratch references map to the same suffix below the extraction directory.
-The live [CW runbook](../../../pilot/cw-runbook.md) and [design](../../../../plans/specs/2026-09-07-cw-validation-design.md) own future execution gates.
+The live [CW runbook](../../../pilot/cw-runbook.md) and [design](../../../../plans/completed/specs/2026-09-07-cw-validation-design.md) own future execution gates.
 
 ## Inspect or restore
 

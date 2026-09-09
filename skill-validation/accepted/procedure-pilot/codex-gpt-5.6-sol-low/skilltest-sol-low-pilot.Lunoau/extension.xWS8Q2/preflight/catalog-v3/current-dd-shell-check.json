@@ -1,0 +1,33 @@
+{
+  "argv": [
+    "/bin/zsh",
+    "-lc",
+    "cd \"$1\" || exit; shift; command -v cat || exit; cat \"$@\" >/dev/null",
+    "extension-tool-check",
+    "/private/tmp/skilltest-sol-low-pilot.Lunoau/extension.xWS8Q2/preflight/catalog-v3/catalog-tmp/skilltest-runs/20260907T180819954Z-pilot-ar-03-current-dd-b2ac1760-bf03-4e16-8b7b-00ab4008eab3-3mkkorig/workspace/fixture",
+    ".agents/skills/writing-plans/SKILL.md",
+    ".agents/skills/writing-plans/plan-document-reviewer-prompt.md",
+    ".agents/skills/requesting-code-review/SKILL.md",
+    ".agents/skills/requesting-code-review/code-reviewer.md",
+    ".agents/skills/adversarial-review-loop/SKILL.md",
+    ".agents/skills/adversarial-review/SKILL.md",
+    ".agents/skills/concise-writing/SKILL.md",
+    ".agents/skills/disciplined-development/SKILL.md",
+    ".agents/skills/disciplined-research/SKILL.md",
+    ".agents/skills/dispatching-development-subagents/SKILL.md",
+    ".agents/skills/lean-plan-writing/SKILL.md",
+    ".agents/skills/sweeping-stale-references/SKILL.md",
+    ".agents/skills/writing-explicit-rationale/SKILL.md",
+    "project/benchmarks/sort.json",
+    "project/plans/normalize.md",
+    "project/src/bulk.py",
+    "project/src/normalize.py",
+    "project/src/retry.py",
+    "project/src/validate.py"
+  ],
+  "cwd": "/private/tmp/skilltest-sol-low-pilot.Lunoau/extension.xWS8Q2/preflight/catalog-v3/catalog-tmp/skilltest-runs/20260907T180819954Z-pilot-ar-03-current-dd-b2ac1760-bf03-4e16-8b7b-00ab4008eab3-3mkkorig/workspace/fixture",
+  "exit_code": 0,
+  "timed_out": false,
+  "stdout": "/bin/cat\n",
+  "stderr": ""
+}

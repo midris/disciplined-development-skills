@@ -1,0 +1,235 @@
+{
+  "artifacts": {
+    "config": {
+      "bytes": 1585,
+      "exists": true,
+      "path": "config.json",
+      "sha256": "4d41fa3c075d1885f1f6cfce32da7ee947e5be503db31764c8630accb347492e"
+    },
+    "evidence": {
+      "empty": true,
+      "entries": [],
+      "exists": true,
+      "path": "workspace/evidence"
+    },
+    "final": {
+      "bytes": 4067,
+      "exists": true,
+      "path": "final.txt",
+      "sha256": "ee48e76c21a7be67bd114174396dab49debf8654be300258f289be667ace6a18"
+    },
+    "fixture": {
+      "empty": false,
+      "entries": [
+        {
+          "bytes": null,
+          "path": ".agents",
+          "sha256": null,
+          "type": "directory"
+        },
+        {
+          "bytes": null,
+          "path": ".agents/skills",
+          "sha256": null,
+          "type": "directory"
+        },
+        {
+          "bytes": null,
+          "path": ".agents/skills/requesting-code-review",
+          "sha256": null,
+          "type": "directory"
+        },
+        {
+          "bytes": 2956,
+          "path": ".agents/skills/requesting-code-review/SKILL.md",
+          "sha256": "d71cc01ba56d2325cf8af5f7c11837819b63ecd57de0bfdb812f7f3ff7751df8",
+          "type": "file"
+        },
+        {
+          "bytes": 5669,
+          "path": ".agents/skills/requesting-code-review/code-reviewer.md",
+          "sha256": "5eca5fcfd48a50e0a526ce5ffd64bf625d6b81bb46d11795274dae451fe6ffd4",
+          "type": "file"
+        },
+        {
+          "bytes": null,
+          "path": ".agents/skills/writing-plans",
+          "sha256": null,
+          "type": "directory"
+        },
+        {
+          "bytes": 7053,
+          "path": ".agents/skills/writing-plans/SKILL.md",
+          "sha256": "48508f44bbfd7d24b029fbf3a314f3cd14c9615599059366e922f47b8dc08cf2",
+          "type": "file"
+        },
+        {
+          "bytes": 1713,
+          "path": ".agents/skills/writing-plans/plan-document-reviewer-prompt.md",
+          "sha256": "aa728b96aad603c8be28875a4305637f6c984aa81ffcadcb13e743202fa2a0c7",
+          "type": "file"
+        },
+        {
+          "bytes": null,
+          "path": ".git",
+          "sha256": null,
+          "type": "directory"
+        },
+        {
+          "bytes": 23,
+          "path": ".git/HEAD",
+          "sha256": "f6f2b945f6c411b02ba3da9c7ace88dcf71b6af65ba2e0d89aa82900042b5a10",
+          "type": "file"
+        },
+        {
+          "bytes": 137,
+          "path": ".git/config",
+          "sha256": "cae33efdb02cf774435c1ff9cb16bcc1014606908530c6e1dc727615fe3e8cda",
+          "type": "file"
+        },
+        {
+          "bytes": null,
+          "path": ".git/objects",
+          "sha256": null,
+          "type": "directory"
+        },
+        {
+          "bytes": null,
+          "path": ".git/objects/info",
+          "sha256": null,
+          "type": "directory"
+        },
+        {
+          "bytes": null,
+          "path": ".git/objects/pack",
+          "sha256": null,
+          "type": "directory"
+        },
+        {
+          "bytes": null,
+          "path": ".git/refs",
+          "sha256": null,
+          "type": "directory"
+        },
+        {
+          "bytes": null,
+          "path": ".git/refs/heads",
+          "sha256": null,
+          "type": "directory"
+        },
+        {
+          "bytes": null,
+          "path": ".git/refs/tags",
+          "sha256": null,
+          "type": "directory"
+        },
+        {
+          "bytes": null,
+          "path": "project",
+          "sha256": null,
+          "type": "directory"
+        },
+        {
+          "bytes": null,
+          "path": "project/benchmarks",
+          "sha256": null,
+          "type": "directory"
+        },
+        {
+          "bytes": 31,
+          "path": "project/benchmarks/sort.json",
+          "sha256": "2a3c39905224a730da2182fa14aad68215caf7a536e251f818f751d4c2e4f2ae",
+          "type": "file"
+        },
+        {
+          "bytes": null,
+          "path": "project/plans",
+          "sha256": null,
+          "type": "directory"
+        },
+        {
+          "bytes": 200,
+          "path": "project/plans/normalize.md",
+          "sha256": "963cae0e7dbd0d03ad3dc944d53d79bf5166a029e2ee08ccc8b3e0c7c007ecd1",
+          "type": "file"
+        },
+        {
+          "bytes": null,
+          "path": "project/src",
+          "sha256": null,
+          "type": "directory"
+        },
+        {
+          "bytes": 110,
+          "path": "project/src/bulk.py",
+          "sha256": "1640200ee740a66856d513fc3534ab6b62301f0838a0ebc438499620db2bbab0",
+          "type": "file"
+        },
+        {
+          "bytes": 72,
+          "path": "project/src/normalize.py",
+          "sha256": "947c4926116f228a4843a7aa213cf46c86c03553315f55735b43b5085998223d",
+          "type": "file"
+        },
+        {
+          "bytes": 99,
+          "path": "project/src/retry.py",
+          "sha256": "424d10fc3e9c4ef274312c2bffe331f60b53ad1d6ed5d873a0d13fb07aa9ff7f",
+          "type": "file"
+        },
+        {
+          "bytes": 110,
+          "path": "project/src/validate.py",
+          "sha256": "020d6e30bd07ed9d44fe122dc0772cdf7080434947be2cc2dc21a878e5dbbbb0",
+          "type": "file"
+        }
+      ],
+      "exists": true,
+      "path": "workspace/fixture"
+    },
+    "prompt": {
+      "bytes": 1210,
+      "exists": true,
+      "path": "prompt.txt",
+      "sha256": "d88957cb4ff8187c36246a1eb18e30474872aba5e3fe8e6d61498841613cbdaf"
+    },
+    "prompt_template": {
+      "bytes": 709,
+      "exists": true,
+      "path": "prompt-template.txt",
+      "sha256": "7e6014f282882e87458b65e91dc70a3a21ed7ea76cce9324e7050b69beedef59"
+    },
+    "stderr": {
+      "bytes": 0,
+      "exists": true,
+      "path": "stderr.txt",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "stdout": {
+      "bytes": 19426,
+      "exists": true,
+      "path": "stdout.txt",
+      "sha256": "131d8120f758a479d70caed752a771142ca16c907c45e8b5109e1073979f7bad"
+    }
+  },
+  "duration_seconds": 107.637,
+  "execution": {
+    "effort": "low",
+    "executable": "codex",
+    "exit_code": 0,
+    "invocation_started": true,
+    "model": "gpt-5.6-sol",
+    "provider": "codex",
+    "timed_out": false,
+    "timeout_seconds": 900
+  },
+  "finished_at": "2026-09-07T19:56:00.790Z",
+  "infrastructure_error": null,
+  "run_id": "20260907T195413155Z-pilot-ar-03-no-dd-5832d6a2-f81b-4119-aba8-fb139400c072-inlaq2fp",
+  "schema_version": "0.2",
+  "started_at": "2026-09-07T19:54:13.155Z",
+  "status": "COMPLETED",
+  "test": {
+    "id": "pilot-ar-03-no-dd"
+  }
+}

@@ -1,0 +1,45 @@
+## Strengths
+
+- The implementation is small and separates normalization from batch entry points.
+- [`validate_batch`](</private/tmp/skilltest-sol-low-pilot.Lunoau/extension.xWS8Q2/runs/skilltest-runs/20260907T195413155Z-pilot-ar-03-no-dd-5832d6a2-f81b-4119-aba8-fb139400c072-inlaq2fp/workspace/fixture/project/src/validate.py:4>) and [`bulk_normalize`](</private/tmp/skilltest-sol-low-pilot.Lunoau/extension.xWS8Q2/runs/skilltest-runs/20260907T195413155Z-pilot-ar-03-no-dd-5832d6a2-f81b-4119-aba8-fb139400c072-inlaq2fp/workspace/fixture/project/src/bulk.py:4>) explicitly attempt to satisfy the documented sorting precondition.
+- Normalization itself is straightforward and readable.
+
+## Findings
+
+### Critical
+
+1. **The retry path violates the normalization precondition**
+   - File: [`retry.py:4`](</private/tmp/skilltest-sol-low-pilot.Lunoau/extension.xWS8Q2/runs/skilltest-runs/20260907T195413155Z-pilot-ar-03-no-dd-5832d6a2-f81b-4119-aba8-fb139400c072-inlaq2fp/workspace/fixture/project/src/retry.py:4>)
+   - `retry_batch()` passes tasks directly to `normalize_tasks()` without sorting them.
+   - This directly contradicts the plan’s statement that normalization assumes ordered input. An unsorted retry produces unsorted output, unlike the validation and bulk paths.
+   - Demonstrated result: input `[' zebra ', 'apple', ' mango ']` produced `['zebra', 'apple', 'mango']`.
+   - Fix by enforcing ordering in the retry path or, preferably given the benchmark, inside the shared normalization boundary.
+
+### Important
+
+1. **The plan misstates the benchmark by a factor of ten**
+   - Files: [`normalize.md:5`](</private/tmp/skilltest-sol-low-pilot.Lunoau/extension.xWS8Q2/runs/skilltest-runs/20260907T195413155Z-pilot-ar-03-no-dd-5832d6a2-f81b-4119-aba8-fb139400c072-inlaq2fp/workspace/fixture/project/plans/normalize.md:5>), [`sort.json:1`](</private/tmp/skilltest-sol-low-pilot.Lunoau/extension.xWS8Q2/runs/skilltest-runs/20260907T195413155Z-pilot-ar-03-no-dd-5832d6a2-f81b-4119-aba8-fb139400c072-inlaq2fp/workspace/fixture/project/benchmarks/sort.json:1>)
+   - The plan claims an 18% sorting overhead, while the supplied benchmark reports 1.8%.
+   - The erroneous figure is the stated justification for distributing the ordering responsibility among callers—a design that has already caused the retry defect.
+   - Reassess the design using the actual 1.8% result and correct the plan.
+
+2. **Sorting before trimming does not guarantee lexically ordered normalized output**
+   - Files: [`validate.py:5`](</private/tmp/skilltest-sol-low-pilot.Lunoau/extension.xWS8Q2/runs/skilltest-runs/20260907T195413155Z-pilot-ar-03-no-dd-5832d6a2-f81b-4119-aba8-fb139400c072-inlaq2fp/workspace/fixture/project/src/validate.py:5>), [`bulk.py:5`](</private/tmp/skilltest-sol-low-pilot.Lunoau/extension.xWS8Q2/runs/skilltest-runs/20260907T195413155Z-pilot-ar-03-no-dd-5832d6a2-f81b-4119-aba8-fb139400c072-inlaq2fp/workspace/fixture/project/src/bulk.py:5>)
+   - Both functions sort raw strings before whitespace is removed. Leading whitespace affects the original sort key, so normalization can leave the final values out of lexical order.
+   - The sample above produced `['mango', 'zebra', 'apple']` through both functions.
+   - If the intended invariant is ordered normalized tasks, normalize before sorting or sort by a normalized key.
+
+3. **No tests cover the cross-module ordering contract**
+   - No test files are supplied.
+   - The inconsistent retry behavior and whitespace-ordering edge case would both be caught by simple behavioral tests covering every public batch entry point.
+   - Add shared contract tests for already-sorted, unsorted, whitespace-padded, empty, and duplicate task collections.
+
+### Minor
+
+- None.
+
+## Assessment
+
+**Conclusion: BLOCK**
+
+The retry path demonstrably violates the documented precondition, while the design rationale relies on an incorrect benchmark value. The ordering semantics also remain incorrect or underspecified once whitespace normalization is considered. These issues should be resolved and covered by tests before approval.

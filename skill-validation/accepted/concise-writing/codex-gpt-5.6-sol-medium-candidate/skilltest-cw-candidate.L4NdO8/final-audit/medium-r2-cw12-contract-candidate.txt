@@ -1,0 +1,19 @@
+{
+  "checks": "PASS",
+  "bundle": "/private/tmp/skilltest-cw-candidate.L4NdO8/runs/skilltest-runs/20260909T012358685Z-cw-12-contract-candidate-medium-1bcbce53-bb37-4d8c-90ee-1532d48ce25a-3zz8h1ie",
+  "runtime_absent": "/private/tmp/skilltest-cw-candidate.L4NdO8/runs/skilltest-codex-991fj41x",
+  "fixture_files": 13,
+  "events": 6,
+  "duration_seconds": 14.605
+}
+FULL TRACE (exact supplied-file text replaced by a hash marker; every other byte/event retained below):
+{"type": "thread.started", "thread_id": "01a083c3-c013-7a30-ad9d-ed289b0cd55f"}
+{"type": "turn.started"}
+{"type": "item.started", "item": {"id": "item_0", "type": "command_execution", "command": "/bin/zsh -lc 'cat .agents/skills/concise-writing/SKILL.md'", "aggregated_output": "", "exit_code": null, "status": "in_progress"}}
+{"type": "item.completed", "item": {"id": "item_0", "type": "command_execution", "command": "/bin/zsh -lc 'cat .agents/skills/concise-writing/SKILL.md'", "aggregated_output": "<FULL SUPPLIED FILE .agents/skills/concise-writing/SKILL.md SHA256=f763b43e88c56d6fdc2a96457bc2415cba60b75a1e7cb59cd1b0ebaa3fb199ba>\n", "exit_code": 0, "status": "completed"}}
+{"type": "item.completed", "item": {"id": "item_1", "type": "agent_message", "text": "{\"authoring_owner\":\"superpowers:writing-skills\",\"validation_owner\":\"superpowers:writing-skills\",\"evidence\":\"During skill or reference authoring, `superpowers:writing-skills` owns authoring decisions and validation.\"}"}}
+{"type": "turn.completed", "usage": {"input_tokens": 33523, "cached_input_tokens": 26624, "cache_write_input_tokens": 0, "output_tokens": 248, "reasoning_output_tokens": 61}}
+PROVIDER STDERR:
+
+COMMAND STDERR:
+

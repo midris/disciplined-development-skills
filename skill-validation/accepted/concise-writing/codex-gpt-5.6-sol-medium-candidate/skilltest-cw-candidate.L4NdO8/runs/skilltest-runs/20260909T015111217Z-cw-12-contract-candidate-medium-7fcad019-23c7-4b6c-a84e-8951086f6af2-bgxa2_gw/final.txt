@@ -1,0 +1,1 @@
+{"authoring_owner":"superpowers:writing-skills","validation_owner":"superpowers:writing-skills","evidence":"During skill or reference authoring, `superpowers:writing-skills` owns authoring decisions and validation."}

@@ -1,0 +1,13 @@
+Command from feature-worktree root:
+skill-validation/runner/.venv/bin/python /private/tmp/skilltest-sol-low-pilot.Lunoau/cw-inputs.veav95/audit-inputs.py
+Exit: 1. No provider/CLI/auth call; failed before workspace preparation.
+
+Traceback (most recent call last):
+  File "/private/tmp/skilltest-sol-low-pilot.Lunoau/cw-inputs.veav95/audit-inputs.py", line 44, in <module>
+    assert ("Tighten this reader-facing" + source) in base
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError
+
+Cause: the scratch check used strip() on the substring after "Tighten this reader-facing", dropping its leading space before recombining it with the prefix.
+The source/pilot diff showed the complete task paragraph unchanged. The check now uses rstrip(); the audit's parent directory can be reused, while each existing create_run() call still allocates a unique prepared workspace.
+This is an audit-script defect, not a model observation or INFRA_RETRY.

@@ -1,0 +1,20 @@
+{
+  "checks": "PASS",
+  "bundle": "/private/tmp/skilltest-cw-candidate.L4NdO8/runs/skilltest-runs/20260909T014359783Z-cw-02-candidate-medium-c2de718e-d5db-4fa0-b3a6-d9e286a44a19-cimquzos",
+  "runtime_absent": "/private/tmp/skilltest-cw-candidate.L4NdO8/runs/skilltest-codex-vyvks7h8",
+  "fixture_files": 13,
+  "events": 7,
+  "duration_seconds": 23.669
+}
+FULL TRACE (exact supplied-file text replaced by a hash marker; every other byte/event retained below):
+{"type": "thread.started", "thread_id": "01a083d6-148e-7811-8009-0fa29416937c"}
+{"type": "turn.started"}
+{"type": "item.completed", "item": {"id": "item_0", "type": "agent_message", "text": "I’ll apply the specified concise-writing guidance and keep the fixture unchanged."}}
+{"type": "item.started", "item": {"id": "item_1", "type": "command_execution", "command": "/bin/zsh -lc \"sed -n '1,240p' .agents/skills/concise-writing/SKILL.md\"", "aggregated_output": "", "exit_code": null, "status": "in_progress"}}
+{"type": "item.completed", "item": {"id": "item_1", "type": "command_execution", "command": "/bin/zsh -lc \"sed -n '1,240p' .agents/skills/concise-writing/SKILL.md\"", "aggregated_output": "<EXACT SUPPLIED LINES 1-73 .agents/skills/concise-writing/SKILL.md>\n", "exit_code": 0, "status": "completed", "verified_read_ranges": [{"path": ".agents/skills/concise-writing/SKILL.md", "first": 1, "last": 73, "total": 73, "exact_returned": true}]}}
+{"type": "item.completed", "item": {"id": "item_2", "type": "agent_message", "text": "## Delivery retries\n\nEach delivery is attempted up to three times. Retries are counted per delivery, not per endpoint, so one failing delivery cannot exhaust retries for later deliveries. Retries remain synchronous because downstream acknowledgements must preserve delivery order; before changing this behavior, see “Delivery ordering” below. A delivery is marked failed only after its third unsuccessful attempt."}}
+{"type": "turn.completed", "usage": {"input_tokens": 33227, "cached_input_tokens": 26368, "cache_write_input_tokens": 0, "output_tokens": 473, "reasoning_output_tokens": 230}}
+PROVIDER STDERR:
+
+COMMAND STDERR:
+

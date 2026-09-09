@@ -1,9 +1,9 @@
 # CW catalog mapping
 
-**Status:** The owner accepted the complete baseline and authorized CW-only candidate preparation on 2026-09-08.
+**Status:** The complete baseline is owner-accepted; candidate collection is complete and awaits owner review under the [current testing plan](../../plans/2026-09-09-dd-skill-testing.md#remaining-work).
 The [accepted evidence index](../accepted/concise-writing/codex-gpt-5.6-sol-medium/README.md) retains results and recoverable provenance.
-Baseline commands are exhausted; candidate inputs below require qualification/reuse reconciliation, freeze and exact-command approval before provider calls.
-The [spec](../../plans/specs/2026-09-07-cw-validation-design.md) owns scope and checkpoints; the [runbook](cw-runbook.md) owns execution.
+Both command batches are exhausted; this mapping preserves their declared inputs and does not authorize further provider calls.
+The [archived spec](../../plans/completed/specs/2026-09-07-cw-validation-design.md) preserves the completed comparison contract; the [runbook](cw-runbook.md) owns execution.
 All rows use Codex / gpt-5.6-sol / medium, three observations per condition.
 A linked config is an input declaration, not permission to invoke it.
 
@@ -160,8 +160,34 @@ Keep the same required outcomes and source-faithfulness judgments, checking the 
 | [cw18-discovery.json](efforts/medium/cw18-discovery.json) | [candidate](efforts/medium/cw-rewrite/cw18-discovery.json) |
 | [cw19-current-dd.json](efforts/medium/cw19-current-dd.json) | [candidate](efforts/medium/cw-rewrite/cw19-current-dd.json) |
 
-Proposed collection: three repetitions, traversing the source-to-variant map in order and selecting its candidate config once per row, for 66 candidate observations.
-Reuse of accepted current-DD/no-DD observations remains subject to recorded comparability and CLI/control checks; these 22 configs do not authorize 66 calls.
+Completed candidate collection: three repetitions, traversing the source-to-variant map in order and selecting its candidate config once per row, for 66 observations.
+The handoff links collection and audit evidence, including qualified reuse of all 99 accepted current-DD/no-DD observations; these configs do not authorize replaying the batch.
 The [provider-free preparation audit](/private/tmp/skilltest-cw-candidate.pITN2u/input-audit.json) checks all 22 configs and prepared fixtures, including exact source bytes, unchanged tasks/rubrics, and one changed CW target each.
 The [separate provider-free qualification](/private/tmp/skilltest-cw-candidate.pITN2u/qualification/summary.md) now checks the actual candidate catalogs/dependencies and supports reuse of all 99 accepted observations.
 The file-copy audit alone does not establish those controls; clean freeze and complete command approval remain launch gates.
+
+## Routine suite proposal awaiting owner review
+
+The 2026-09-09 provider-free audit mapped all 22 variants above to the shared categories, charter obligations and distinct risks.
+The owner's subsequent framing is a routine suite of distinct, clearly runnable and scoreable questions, with no requirement to retain every historical scenario or match counts across skills.
+The following is the latest proposal, not approval to change inputs, retire evidence or run models.
+It supersedes the audit's more conservative recommendation to keep most diagnostics in the routine suite.
+
+| Existing coverage | Proposed routine disposition and reason |
+|---|---|
+| CW-01–06, CW-08 and CW-19 loaded prose | Keep their distinct conservation/removal cases: local states/outcomes; rationale/navigation; global definitions; structural padding; unsupported advice; emphasis/universal force; non-software policy; complex operational boundaries. Passing no-DD controls remain useful regressions, not evidence that the skill is unnecessary elsewhere. |
+| CW-01/13/14/17/18 native discovery | Keep five separate contexts: explicit tightening, discipline authoring, reference authoring, detailed-response non-trigger and durable-file creation. Preserve per-target loading evidence and the response/file polarity. |
+| CW-09/11 description and CW-17/18 scope quizzes | Move out of the routine suite into optional diagnostics; they may explain selection failures but do not demonstrate actual application. |
+| CW-10/12 ownership extraction | Drop from routine model testing; extracting the same ownership clause adds little beyond composition behavior. Preserve original records. |
+| CW-07 direct-load transport | Retain with invocation/qualification checks, outside routine skill-effectiveness claims. |
+| CW-13/14 loaded lifecycle decisions | Replace or strengthen the multiple-choice tasks with actual warning/reference revision material and observable composition criteria. Preserve distinct discipline-pressure and reference-validation contexts; a safe answer is not executed validation. |
+
+Proposed missing coverage: restraint on already-effective prose; a longer artifact mixing wasteful duplication with useful recap/warning/navigation; and actual loaded response-only versus durable-file output cases.
+These are coverage hypotheses, not frozen scenarios or an approved count.
+A future CW case composed with plan completeness, rationale ownership or referenced-anchor reconciliation remains deferred behind those choices; no other catalog is activated.
+Keep removal and conservation outcomes separately visible within a revision test; split scenarios only when the questions need different setup, evidence or independent diagnosis.
+CW-19 remains an integrated case with criterion-level failures; a threshold-only microcase is optional diagnostic work, not automatically another permanent test.
+
+Before keeping a proposed case, identify its distinct question, observable result, scoring boundary and the coverage lost if it is removed.
+Approve one concrete membership/input proposal before implementation; use this mapping and the existing runbook rather than creating another registry or tooling layer.
+The 99 accepted baseline and 66 scratch candidate observations keep their original inputs and judgments regardless of prospective suite membership.

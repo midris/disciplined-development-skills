@@ -1,0 +1,25 @@
+{
+  "argv": [
+    "/opt/homebrew/bin/codex",
+    "debug",
+    "prompt-input",
+    "-c",
+    "model=\"gpt-5.6-sol\"",
+    "-c",
+    "model_reasoning_effort=\"medium\"",
+    "-c",
+    "shell_environment_policy.inherit=\"none\"",
+    "-c",
+    "cli_auth_credentials_store=\"file\"",
+    "-c",
+    "approval_policy=\"never\"",
+    "Provider-free catalog inspection."
+  ],
+  "cwd": "/private/tmp/skilltest-cw-candidate.pITN2u/qualification/native/skilltest-runs/20260908T195110312Z-cw-13-candidate-medium-6876c394-9f7f-418d-b74e-480baa4fa13a-0u53_pvi/workspace/fixture",
+  "env": {
+    "HOME": "/private/tmp/skilltest-cw-candidate.pITN2u/qualification/native/skilltest-codex-mz0_56nf/home",
+    "CODEX_HOME": "/private/tmp/skilltest-cw-candidate.pITN2u/qualification/native/skilltest-codex-mz0_56nf/codex",
+    "TMPDIR": "/private/tmp/skilltest-cw-candidate.pITN2u/qualification/native/skilltest-codex-mz0_56nf/tmp",
+    "PATH": "/opt/homebrew/bin:/usr/bin:/bin:/usr/sbin:/sbin"
+  }
+}

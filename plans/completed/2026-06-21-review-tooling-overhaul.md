@@ -1,7 +1,7 @@
 # Proposed Architecture — Review Tooling Overhaul
 
-**Status:** Proposed architecture (design). Pre-implementation. The implementation
-plan + merge-boundary task breakdown follow on approval.
+**Status:** Implemented and merged in June 2026; retained as the design record for the shipped review-tooling overhaul.
+The design-time wording below is historical, not an open implementation plan.
 **Date:** 2026-06-21.
 **Supersedes scope of:** deferred plans #2 (uniform logging) and #3-item-2
 (whole-repo cold-read); folds in #1 (pre-PR fail-closed) and the reviewer-declared

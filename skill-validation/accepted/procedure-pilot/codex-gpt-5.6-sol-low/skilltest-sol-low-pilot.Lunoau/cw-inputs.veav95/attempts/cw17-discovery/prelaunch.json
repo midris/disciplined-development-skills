@@ -1,0 +1,93 @@
+{
+  "cwd": "/Users/simon/work/personal/disciplined-development-skills/.worktrees/skilltest-input-isolation-spike",
+  "checks": [
+    {
+      "cmd": "mkdir /private/tmp/skilltest-sol-low-pilot.Lunoau/cw-inputs.veav95/attempts/cw17-discovery",
+      "chunk_id": "c8e800",
+      "wall_time_seconds": 0.000005708,
+      "exit_code": 0,
+      "original_token_count": 0,
+      "output": ""
+    },
+    {
+      "cmd": "git status --short",
+      "chunk_id": "a933de",
+      "wall_time_seconds": 0.000002875,
+      "exit_code": 0,
+      "original_token_count": 0,
+      "output": ""
+    },
+    {
+      "cmd": "git diff --exit-code f28ea6569b7eb5b65245e77635a5ff7d12fc1082 -- skill-validation/pilot skill-validation/runner plans/specs/2026-09-06-skilltest-controlled-inputs-design.md skill-validation/charter/core-contracts.md plans/completed/specs/2026-09-02-skill-testing-methodology-design.md",
+      "chunk_id": "d8dbec",
+      "wall_time_seconds": 0.000002333,
+      "exit_code": 0,
+      "original_token_count": 0,
+      "output": ""
+    },
+    {
+      "cmd": "test -d /private/tmp/skilltest-sol-low-pilot.Lunoau/cw-inputs.veav95/runs && test -d /private/tmp/skilltest-sol-low-pilot.Lunoau/cw-inputs.veav95/attempts",
+      "chunk_id": "2c4e41",
+      "wall_time_seconds": 0.000002208,
+      "exit_code": 0,
+      "original_token_count": 0,
+      "output": ""
+    },
+    {
+      "cmd": "test -d /private/tmp/skilltest-sol-low-pilot.Lunoau/cw-inputs.veav95/attempts/cw17-discovery",
+      "chunk_id": "a5c25c",
+      "wall_time_seconds": 0.000002292,
+      "exit_code": 0,
+      "original_token_count": 0,
+      "output": ""
+    },
+    {
+      "cmd": "/opt/homebrew/bin/codex --version > /private/tmp/skilltest-sol-low-pilot.Lunoau/cw-inputs.veav95/attempts/cw17-discovery/cli-version.txt 2> /private/tmp/skilltest-sol-low-pilot.Lunoau/cw-inputs.veav95/attempts/cw17-discovery/version-stderr.txt",
+      "chunk_id": "ad15df",
+      "wall_time_seconds": 0.000002833,
+      "exit_code": 0,
+      "original_token_count": 0,
+      "output": ""
+    },
+    {
+      "cmd": "/usr/bin/shasum -a 256 /opt/homebrew/bin/codex > /private/tmp/skilltest-sol-low-pilot.Lunoau/cw-inputs.veav95/attempts/cw17-discovery/cli-sha256.txt",
+      "chunk_id": "68cc0b",
+      "wall_time_seconds": 0.266899167,
+      "exit_code": 0,
+      "original_token_count": 0,
+      "output": ""
+    },
+    {
+      "cmd": "test -s /private/tmp/skilltest-sol-low-pilot.Lunoau/extension.xWS8Q2/preflight/cli-version.txt && test -s /private/tmp/skilltest-sol-low-pilot.Lunoau/extension.xWS8Q2/preflight/cli-sha256.txt",
+      "chunk_id": "dda2ce",
+      "wall_time_seconds": 0.0000025,
+      "exit_code": 0,
+      "original_token_count": 0,
+      "output": ""
+    },
+    {
+      "cmd": "cmp /private/tmp/skilltest-sol-low-pilot.Lunoau/extension.xWS8Q2/preflight/cli-version.txt /private/tmp/skilltest-sol-low-pilot.Lunoau/cw-inputs.veav95/attempts/cw17-discovery/cli-version.txt",
+      "chunk_id": "ac12da",
+      "wall_time_seconds": 0.00000225,
+      "exit_code": 0,
+      "original_token_count": 0,
+      "output": ""
+    },
+    {
+      "cmd": "cmp /private/tmp/skilltest-sol-low-pilot.Lunoau/extension.xWS8Q2/preflight/cli-sha256.txt /private/tmp/skilltest-sol-low-pilot.Lunoau/cw-inputs.veav95/attempts/cw17-discovery/cli-sha256.txt",
+      "chunk_id": "731e60",
+      "wall_time_seconds": 0.000002375,
+      "exit_code": 0,
+      "original_token_count": 0,
+      "output": ""
+    },
+    {
+      "cmd": "cat /private/tmp/skilltest-sol-low-pilot.Lunoau/cw-inputs.veav95/attempts/cw17-discovery/version-stderr.txt",
+      "chunk_id": "9dcca5",
+      "wall_time_seconds": 0.000002709,
+      "exit_code": 0,
+      "original_token_count": 26,
+      "output": "WARNING: proceeding, even though we could not create PATH aliases: Operation not permitted (os error 1)\n"
+    }
+  ]
+}

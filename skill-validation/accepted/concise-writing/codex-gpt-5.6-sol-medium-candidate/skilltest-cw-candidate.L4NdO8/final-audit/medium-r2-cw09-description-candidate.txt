@@ -1,0 +1,19 @@
+{
+  "checks": "PASS",
+  "bundle": "/private/tmp/skilltest-cw-candidate.L4NdO8/runs/skilltest-runs/20260909T012155880Z-cw-09-description-candidate-medium-79e435ec-e001-47c4-88f1-7542b6b8dd9e-8kpwf0n9",
+  "runtime_absent": "/private/tmp/skilltest-cw-candidate.L4NdO8/runs/skilltest-codex-z7mlvqme",
+  "fixture_files": 7,
+  "events": 6,
+  "duration_seconds": 16.38
+}
+FULL TRACE (exact supplied-file text replaced by a hash marker; every other byte/event retained below):
+{"type": "thread.started", "thread_id": "01a083c1-e074-7f83-bc45-fde6b8def0e2"}
+{"type": "turn.started"}
+{"type": "item.started", "item": {"id": "item_0", "type": "command_execution", "command": "/bin/zsh -lc \"sed -n '1,240p' descriptions/adversarial-review-loop.txt descriptions/concise-writing.txt descriptions/superpowers-writing-skills.txt\"", "aggregated_output": "", "exit_code": null, "status": "in_progress"}}
+{"type": "item.completed", "item": {"id": "item_0", "type": "command_execution", "command": "/bin/zsh -lc \"sed -n '1,240p' descriptions/adversarial-review-loop.txt descriptions/concise-writing.txt descriptions/superpowers-writing-skills.txt\"", "aggregated_output": "<FULL SUPPLIED FILE descriptions/adversarial-review-loop.txt SHA256=38843f7718501f52116bfd4f95a6640cb16b560851767df540c808a1ed18cefa>\n<FULL SUPPLIED FILE descriptions/concise-writing.txt SHA256=642b8ec050a0cc782e391fcf88ca7414186e28fa7ba8a145f313097f9c75f0cd>\n<FULL SUPPLIED FILE descriptions/superpowers-writing-skills.txt SHA256=5504b0825ec458aa8c20e9a55c6a932b36849e261a97aaf98af366e19a937154>\n", "exit_code": 0, "status": "completed"}}
+{"type": "item.completed", "item": {"id": "item_1", "type": "agent_message", "text": "[\"concise-writing\",\"superpowers:writing-skills\"]"}}
+{"type": "turn.completed", "usage": {"input_tokens": 31251, "cached_input_tokens": 25728, "cache_write_input_tokens": 0, "output_tokens": 247, "reasoning_output_tokens": 79}}
+PROVIDER STDERR:
+
+COMMAND STDERR:
+

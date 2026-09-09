@@ -1,0 +1,328 @@
+I’m using the writing-plans skill to create the implementation plan.
+
+# Membership Roster Import Implementation Plan
+
+> **For agentic workers:** REQUIRED SUB-SKILL: Use superpowers:subagent-driven-development (recommended) or superpowers:executing-plans to implement this plan task-by-task. Steps use checkbox (`- [ ]`) syntax for tracking.
+
+**Goal:** Safely replace the active membership roster from a validated CSV containing at most two million members, with atomic visibility and one actionable rejection report.
+
+**Architecture:** Stream the upload so memory usage does not grow with the file size, while staging validated rows in temporary storage that enforces unique `member_id` values. After the complete upload passes validation, pass the staged roster to the application’s persistence boundary for one atomic replacement; every rejection path must leave the active roster untouched.
+
+**Tech Stack:** Python standard-library CSV parsing and temporary storage; the project’s existing Python test framework and roster persistence mechanism, to be confirmed from the two named files during implementation.
+
+**Spec:** `context/import-brief.md`
+
+## Global Constraints
+
+- Each non-header row has `member_id` and `email`.
+- `member_id` is the immutable external identity and must be unique within the file and active roster.
+- The replacement becomes visible only after the entire file succeeds; no partial roster may be visible.
+- Uploads may be absent, empty, malformed, or as large as two million rows.
+- Two million rows is the supported maximum; reject larger uploads without changing the active roster.
+- The operator needs one actionable error report when an import is rejected.
+- Do not introduce an email-format policy beyond requiring the specified `email` field unless the existing contract already defines one.
+- Preserve the established public API, storage abstractions, test runner, and error conventions found in the named files; the concrete names below describe the required behavior and should be mapped onto those conventions rather than creating duplicate APIs.
+
+---
+
+## File Structure
+
+- Modify `src/membership_import.py`: own upload validation, streaming CSV parsing, bounded staging, rejection reporting, and invocation of the atomic roster-replacement boundary.
+- Modify `tests/test_membership_import.py`: specify accepted CSV behavior, every rejection category, the two-million-row boundary, uniqueness enforcement, and atomic visibility.
+
+No additional application files are named in the brief. If inspection during implementation proves that the atomic persistence boundary lives elsewhere, stop and revise the plan with that verified path before editing it.
+
+### Task 1: Define rejection behavior and basic CSV validation
+
+**Files:**
+
+- Modify: `tests/test_membership_import.py`
+- Modify: `src/membership_import.py`
+
+**Interfaces:**
+
+- Consumes: the existing import entry point and active-roster abstraction found in the named files.
+- Produces: one import result or exception carrying exactly one operator-facing report with `code`, `message`, and optional `row_number`; a validated row shaped as `member_id: str` and `email: str`.
+
+- [ ] **Step 1: Read only the two named source files and record the existing import function signature, storage boundary, error type, and test command.**
+
+Do not search for other application files. Map the behavioral names used below onto the verified local names.
+
+- [ ] **Step 2: Write failing tests for absent, empty, header-only, and malformed uploads.**
+
+Use the existing entry point to cover these exact cases:
+
+```python
+cases = [
+    (None, "upload_missing"),
+    (b"", "upload_empty"),
+    (b"member_id,email\n", "roster_empty"),
+    (b"id,email\nm-1,a@example.test\n", "invalid_header"),
+    (b"member_id,email\nm-1\n", "malformed_row"),
+    (b"member_id,email\n,email@example.test\n", "missing_member_id"),
+    (b"member_id,email\nm-1,\n", "missing_email"),
+]
+```
+
+For each rejection, assert:
+
+```python
+assert rejection.report.code == expected_code
+assert rejection.report.message
+assert active_roster_after == active_roster_before
+```
+
+Also assert the caller receives one report object—not a list of unrelated errors—and that row-specific reports identify the physical CSV row.
+
+- [ ] **Step 3: Run the focused tests and verify that the new cases fail.**
+
+Run the project’s verified focused-test command for `tests/test_membership_import.py`. Expected: the new rejection cases fail because validation/reporting is incomplete.
+
+- [ ] **Step 4: Implement minimal streaming parsing and a single rejection-report path.**
+
+The implementation should follow this behavioral shape, adapted to existing names:
+
+```python
+@dataclass(frozen=True)
+class ImportErrorReport:
+    code: str
+    message: str
+    row_number: int | None = None
+
+class ImportRejected(Exception):
+    def __init__(self, report: ImportErrorReport) -> None:
+        super().__init__(report.message)
+        self.report = report
+```
+
+Parse with `csv.reader` or `csv.DictReader` from a text wrapper over the upload stream. Require the exact two-column header `member_id,email`, reject non-two-column rows and blank required values, and count only non-header rows toward the roster size. Do not mutate the active roster in this phase.
+
+- [ ] **Step 5: Run the focused tests and verify that they pass.**
+
+Expected: every invalid-input case returns one actionable report and leaves the prior roster unchanged.
+
+- [ ] **Step 6: Commit the independently testable validation change.**
+
+```bash
+git add src/membership_import.py tests/test_membership_import.py
+git commit -m "feat: validate membership roster uploads"
+```
+
+### Task 2: Enforce uniqueness and the two-million-row limit with bounded memory
+
+**Files:**
+
+- Modify: `tests/test_membership_import.py`
+- Modify: `src/membership_import.py`
+
+**Interfaces:**
+
+- Consumes: validated `(member_id, email)` rows from Task 1.
+- Produces: a replayable staged roster containing at most `2_000_000` unique rows; duplicate and oversize uploads produce one rejection report.
+
+- [ ] **Step 1: Write failing tests for duplicate identities and size boundaries.**
+
+Add cases proving:
+
+```python
+# Duplicate within the upload:
+member_id,email
+m-1,first@example.test
+m-1,second@example.test
+```
+
+Expected report:
+
+```python
+code == "duplicate_member_id"
+row_number == 3
+message includes "m-1" and the first occurrence row "2"
+```
+
+Add generated-stream tests for exactly `2_000_000` data rows and `2_000_001` data rows. The maximum-size upload must proceed to replacement; the oversized upload must reject immediately upon reading data row `2_000_001` and leave the active roster unchanged.
+
+- [ ] **Step 2: Run the focused duplicate and boundary tests to verify that they fail.**
+
+Expected: duplicate enforcement or the exact maximum boundary is not yet implemented.
+
+- [ ] **Step 3: Implement disk-backed staging with uniqueness enforcement.**
+
+Use temporary, automatically cleaned-up storage rather than retaining two million rows in a Python collection. A standard-library SQLite staging table is a suitable concrete design:
+
+```sql
+CREATE TABLE staged_members (
+    member_id TEXT PRIMARY KEY,
+    email TEXT NOT NULL,
+    source_row INTEGER NOT NULL
+);
+```
+
+For each parsed row:
+
+```python
+data_row_count += 1
+if data_row_count > 2_000_000:
+    reject(code="row_limit_exceeded", row_number=csv_row_number)
+
+try:
+    insert(member_id, email, csv_row_number)
+except duplicate_primary_key:
+    reject(
+        code="duplicate_member_id",
+        row_number=csv_row_number,
+        message=f"member_id {member_id!r} duplicates row {first_row}",
+    )
+```
+
+Ensure the staging resource is closed and removed on success and on every exception. Do not call the active-roster replacement boundary until parsing and staging finish.
+
+- [ ] **Step 4: Run the duplicate and boundary tests and verify that they pass.**
+
+Expected: exactly two million rows are accepted, row 2,000,001 is rejected, duplicates identify both occurrences, and peak application memory is not proportional to row count.
+
+- [ ] **Step 5: Run all tests in `tests/test_membership_import.py`.**
+
+Expected: PASS.
+
+- [ ] **Step 6: Commit the bounded staging change.**
+
+```bash
+git add src/membership_import.py tests/test_membership_import.py
+git commit -m "feat: stage and bound membership imports"
+```
+
+### Task 3: Atomically replace the active roster
+
+**Files:**
+
+- Modify: `tests/test_membership_import.py`
+- Modify: `src/membership_import.py`
+
+**Interfaces:**
+
+- Consumes: the complete staged roster from Task 2.
+- Produces: one atomic replacement of the active roster; success makes the new roster visible, while parsing, validation, staging, or persistence failure preserves the old roster.
+
+- [ ] **Step 1: Write failing atomicity tests.**
+
+Cover:
+
+```python
+old_roster = {
+    "old-1": "old1@example.test",
+    "old-2": "old2@example.test",
+}
+new_csv = b"member_id,email\nnew-1,new1@example.test\nnew-2,new2@example.test\n"
+```
+
+Assert that successful import replaces rather than merges:
+
+```python
+assert active_roster == {
+    "new-1": "new1@example.test",
+    "new-2": "new2@example.test",
+}
+```
+
+Instrument the existing storage abstraction to assert no intermediate state is observable while rows are parsed. Add an injected replacement failure and assert:
+
+```python
+assert active_roster == old_roster
+assert rejection.report.code == "replacement_failed"
+assert len(received_reports) == 1
+```
+
+If the active-roster store already contains `new-1`, verify replacement succeeds when `new-1` appears exactly once in the uploaded replacement: uniqueness applies to the resulting active roster, not as a prohibition against retaining an existing immutable identity.
+
+- [ ] **Step 2: Run the atomicity tests and verify that they fail.**
+
+Expected: replacement is not yet connected to the completed staging operation or rollback behavior is incomplete.
+
+- [ ] **Step 3: Implement the single atomic replacement call.**
+
+After validation completes, invoke the verified persistence boundary once, inside its transaction mechanism:
+
+```python
+with roster_store.atomic_replacement() as replacement:
+    replacement.load_from(staged_rows)
+    replacement.activate()
+```
+
+The names above are behavioral, not assumptions about the missing implementation. Map them to the existing transaction API. The required semantics are:
+
+1. Build the replacement without changing readers’ active-roster pointer.
+2. Enforce `member_id` uniqueness in the replacement store as a final invariant.
+3. Activate the complete replacement with one commit/swap.
+4. Roll back on any exception.
+5. Convert an expected import/storage failure into one actionable report without exposing sensitive internals; allow process-level failures to follow established application policy.
+
+If the verified storage API cannot provide those semantics, do not emulate atomicity with sequential delete-and-insert operations; identify the required persistence change and revise the plan with its exact file path.
+
+- [ ] **Step 4: Run the atomicity tests and verify that they pass.**
+
+Expected: readers observe either the complete old roster or the complete new roster, never an empty or partially loaded roster.
+
+- [ ] **Step 5: Run the complete verified test suite.**
+
+Expected: all existing and new tests pass, including malformed-input, duplicate, maximum-size, oversized, replacement-success, and rollback cases.
+
+- [ ] **Step 6: Commit the atomic replacement change.**
+
+```bash
+git add src/membership_import.py tests/test_membership_import.py
+git commit -m "feat: atomically replace membership roster"
+```
+
+### Task 4: Verify operator reporting and resource cleanup
+
+**Files:**
+
+- Modify: `tests/test_membership_import.py`
+- Modify: `src/membership_import.py` only if verification exposes a defect
+
+**Interfaces:**
+
+- Consumes: all rejection paths from Tasks 1–3.
+- Produces: consistent actionable reports and deterministic cleanup of upload and staging resources.
+
+- [ ] **Step 1: Add a parameterized rejection-contract test.**
+
+For missing upload, empty upload, malformed row, duplicate ID, row-limit overflow, and replacement failure, assert that each attempted import emits exactly one report containing:
+
+```python
+assert report.code
+assert report.message.strip()
+assert report.row_number is None or report.row_number >= 1
+```
+
+Also assert the old roster remains active and temporary staging is closed/removed after each case.
+
+- [ ] **Step 2: Run the rejection-contract test and verify its initial result.**
+
+Expected: PASS if all earlier paths share the reporting and cleanup mechanism; otherwise FAIL on the inconsistent path.
+
+- [ ] **Step 3: If needed, route the failing path through the established rejection helper and cleanup block.**
+
+Use one control path equivalent to:
+
+```python
+try:
+    validate_stage_and_replace(upload)
+except KnownImportFailure as error:
+    raise ImportRejected(error.report) from error
+finally:
+    staging.close()
+```
+
+Do not aggregate cascaded parser errors after the import is already known to be invalid.
+
+- [ ] **Step 4: Run the complete test suite.**
+
+Expected: PASS with one report per rejected import, unchanged active data on every failure, and no leaked staging resources.
+
+- [ ] **Step 5: Commit the final verification change.**
+
+```bash
+git add src/membership_import.py tests/test_membership_import.py
+git commit -m "test: verify membership import rejection contract"
+```

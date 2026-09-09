@@ -1,0 +1,3 @@
+## Session behavior
+
+Sessions expire after 20 minutes without mouse, keyboard, or touch input. A warning appears two minutes before expiration. Any such input resets the inactivity timer. After expiration, users must sign in again.

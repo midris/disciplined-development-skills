@@ -1,7 +1,7 @@
 # Codex pilot qualification reference
 
 Qualification is separate from routine execution; use the [routine runbook](../README.md) after the required controls are established.
-The [active plan](../../../plans/2026-09-06-skilltest-sol-low-pilot.md) owns current execution/approval status.
+The [active plan](../../../plans/completed/2026-09-06-skilltest-sol-low-pilot.md) owns current execution/approval status.
 
 Revisit only affected controls when CLI version/digest, adapter setup, skill catalog/dependencies, task tools or discovery boundaries change.
 A prompt/task-fact edit using unchanged mechanisms still needs a fresh input freeze and audit; it does not automatically require replaying every canary or paid qualification call.

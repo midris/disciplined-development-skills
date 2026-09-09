@@ -1,0 +1,25 @@
+[
+  {
+    "arm": "no-dd",
+    "fixture": "/private/tmp/skilltest-sol-low-pilot.Lunoau/extension.xWS8Q2/preflight/catalog-tmp/skilltest-runs/20260907T180601752Z-pilot-ar-03-no-dd-2d6e20a2-3f51-4cba-a577-d2c99c1dd23b-6htjnf4p/workspace/fixture",
+    "prelaunch_hashes": {
+      "prompt-template.txt": "7e6014f282882e87458b65e91dc70a3a21ed7ea76cce9324e7050b69beedef59",
+      "prompt.txt": "5cebf5df605197e22d90e7be08448234e5d455c04c541bee1e5035e4489ddd51",
+      "workspace/fixture/.agents/skills/writing-plans/SKILL.md": "48508f44bbfd7d24b029fbf3a314f3cd14c9615599059366e922f47b8dc08cf2",
+      "workspace/fixture/.agents/skills/writing-plans/plan-document-reviewer-prompt.md": "aa728b96aad603c8be28875a4305637f6c984aa81ffcadcb13e743202fa2a0c7",
+      "workspace/fixture/.agents/skills/requesting-code-review/SKILL.md": "d71cc01ba56d2325cf8af5f7c11837819b63ecd57de0bfdb812f7f3ff7751df8",
+      "workspace/fixture/.agents/skills/requesting-code-review/code-reviewer.md": "5eca5fcfd48a50e0a526ce5ffd64bf625d6b81bb46d11795274dae451fe6ffd4",
+      "workspace/fixture/project/benchmarks/sort.json": "2a3c39905224a730da2182fa14aad68215caf7a536e251f818f751d4c2e4f2ae",
+      "workspace/fixture/project/plans/normalize.md": "963cae0e7dbd0d03ad3dc944d53d79bf5166a029e2ee08ccc8b3e0c7c007ecd1",
+      "workspace/fixture/project/src/bulk.py": "1640200ee740a66856d513fc3534ab6b62301f0838a0ebc438499620db2bbab0",
+      "workspace/fixture/project/src/normalize.py": "947c4926116f228a4843a7aa213cf46c86c03553315f55735b43b5085998223d",
+      "workspace/fixture/project/src/retry.py": "424d10fc3e9c4ef274312c2bffe331f60b53ad1d6ed5d873a0d13fb07aa9ff7f",
+      "workspace/fixture/project/src/validate.py": "020d6e30bd07ed9d44fe122dc0772cdf7080434947be2cc2dc21a878e5dbbbb0"
+    },
+    "exit_code": 0,
+    "timed_out": false,
+    "runtime": "/private/tmp/skilltest-sol-low-pilot.Lunoau/extension.xWS8Q2/preflight/catalog-tmp/skilltest-codex-bnyqetk3",
+    "cleanup": null,
+    "runtime_absent": true
+  }
+]

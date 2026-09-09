@@ -1,0 +1,5 @@
+Traceback (most recent call last):
+  File "/private/tmp/skilltest-sol-low-pilot.Lunoau/extension.xWS8Q2/audit-native-catalog-v2.py", line 78, in <module>
+    ref=re.search(r"\\(file: ([^)]+)\\)$",line).group(1)
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AttributeError: 'NoneType' object has no attribute 'group'

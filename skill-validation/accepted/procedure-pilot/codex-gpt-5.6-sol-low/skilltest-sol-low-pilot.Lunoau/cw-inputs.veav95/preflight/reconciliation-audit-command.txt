@@ -1,0 +1,77 @@
+skill-validation/runner/.venv/bin/python - <<'PY'
+import hashlib,json,re,subprocess
+from pathlib import Path
+root=Path('/private/tmp/skilltest-sol-low-pilot.Lunoau')
+cw=root/'cw-inputs.veav95'
+catdir=root/'extension.xWS8Q2/preflight/catalog-v3'
+audit=json.loads((cw/'input-audit.json').read_text())
+catalog=json.loads((catdir/'catalog-audit.json').read_text())
+h=lambda p:hashlib.sha256(p.read_bytes()).hexdigest()
+out={}
+version=subprocess.run(['/opt/homebrew/bin/codex','--version'],capture_output=True,text=True,check=True)
+digest=subprocess.run(['/usr/bin/shasum','-a','256','/opt/homebrew/bin/codex'],capture_output=True,text=True,check=True)
+assert version.stdout==(root/'extension.xWS8Q2/preflight/cli-version.txt').read_text()
+assert digest.stdout==(root/'extension.xWS8Q2/preflight/cli-sha256.txt').read_text()
+out['cli']={'version':version.stdout,'version_stderr':version.stderr,'digest':digest.stdout,'digest_stderr':digest.stderr,'exit_codes':[version.returncode,digest.returncode]}
+for name,row in audit['configs'].items():
+    base=Path('skill-validation/pilot')/name
+    for file,key in [('test.json','config_sha256'),('prompt.md','prompt_sha256'),('rubric.md','rubric_sha256')]:
+        assert h(base/file)==row[key],(name,file)
+    config=json.loads((base/'test.json').read_text())
+    assert config['execution']=={'provider':'codex','model':'gpt-5.6-sol','effort':'low'}
+    mapped={f['target']:h((base/f['source']).resolve()) for f in config['fixtures']}
+    assert mapped==row['fixture_hashes']
+    fixture=Path(row['prepared_fixture'])
+    assert not any(p.is_symlink() for p in fixture.rglob('*'))
+    assert {str(p.relative_to(fixture)):h(p) for p in fixture.rglob('*') if p.is_file()}==mapped
+    prior=catalog[0 if name.endswith('/no-dd') else 1]
+    prior_guidance={k.removeprefix('workspace/fixture/'):v for k,v in prior['prelaunch_hashes'].items() if k.startswith('workspace/fixture/.agents/skills/')}
+    assert mapped==prior_guidance
+    assert not list((fixture.parent/'evidence').iterdir())
+    assert not (fixture.parents[1]/'result.json').exists()
+    out[name]={'frozen_files':'match','prepared_fixture':'match','qualified_guidance':'identical','files':len(mapped)}
+assert len(catalog[0]['native_entries'])==7 and len(catalog[1]['native_entries'])==16
+assert catalog[0]['bootstrap']==catalog[1]['bootstrap'] and len(catalog[0]['bootstrap'])==60
+assert (catdir/'no-dd-normalized.json').read_bytes()==(catdir/'current-dd-normalized.json').read_bytes()
+cwpath=Path('skill-validation/pilot/inputs/dd/concise-writing/SKILL.md')
+body=cwpath.read_text().split('---',2)[2].strip()
+for arm in ('no-dd','current-dd'):
+    diagnostic=json.loads((catdir/f'{arm}-prompt-input.json').read_text())
+    texts=[]
+    def walk(node):
+        if isinstance(node,str): texts.append(node)
+        elif isinstance(node,list):
+            for val in node: walk(val)
+        elif isinstance(node,dict):
+            for val in node.values(): walk(val)
+    walk(diagnostic)
+    assert not any(body in text or '# The compression pass' in text or '## The compression pass' in text for text in texts)
+    shell=json.loads((catdir/f'{arm}-shell-check.json').read_text())
+    assert shell['exit_code']==0
+    old=catalog[0 if arm=='no-dd' else 1]
+    assert old['runtime_absent'] and old['cleanup'] is None
+    assert not Path(old['runtime']).exists() and not Path(old['runtime']).is_symlink()
+    if arm=='current-dd':
+        assert '.agents/skills/concise-writing/SKILL.md' in old['shell_read_files']
+        entries=[s for s in old['native_entries'] if s.startswith('- concise-writing:')]
+        assert len(entries)==1 and '(file: r1/concise-writing/SKILL.md)' in entries[0]
+        assert any(old['fixture']+'/.agents/skills' in t for t in texts)
+out['retained_catalog']={'counts':[7,16],'matching_bootstrap_files':60,'common_prompt_equal':True,'cw_catalog_and_shell_read':True,'automatic_cw_body_injection_observed':False}
+q=root/'runs/skilltest-runs/20260907T075831064Z-pilot-qualification-current-dd-e5b3395b-e57b-495d-a62c-93a01b94815c-k8cni6s5'
+events=[json.loads(line) for line in (q/'stdout.txt').read_text().splitlines()]
+assert events[0]['type']=='thread.started' and events[1]['type']=='turn.started' and events[-1]['type']=='turn.completed'
+started={e['item']['id'] for e in events if e['type']=='item.started'}
+completed={e['item']['id'] for e in events if e['type']=='item.completed'}
+assert started<=completed
+commands=[e['item'] for e in events if e['type']=='item.completed' and e.get('item',{}).get('type')=='command_execution']
+assert len(commands)==1 and commands[0]['exit_code']==0
+for skill in ('writing-plans','disciplined-research','lean-plan-writing'):
+    text=(q/'workspace/fixture/.agents/skills'/skill/'SKILL.md').read_text().strip()
+    assert text in commands[0]['aggregated_output']
+messages=[e['item']['text'] for e in events if e.get('item',{}).get('type')=='agent_message']
+assert len(messages)==3 and messages[-1].strip()==(q/'final.txt').read_text().strip()
+assert json.loads((q/'result.json').read_text())['execution']['exit_code']==0
+assert (q/'stderr.txt').read_bytes()==b''
+out['retained_real_trace']={'bundle':str(q),'events':len(events),'all_started_items_completed':True,'full_skill_reads':3,'model_authored_messages':len(messages),'terminal_turn_completed':True,'final_matches':True}
+print(json.dumps(out,indent=2))
+PY

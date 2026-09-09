@@ -1,0 +1,23 @@
+Read /private/tmp/skilltest-cw-candidate.L4NdO8/runs/skilltest-runs/20260909T014522940Z-cw-04-candidate-medium-ce47a6f8-bf7e-43bf-bc9a-8792faf72177-c1yodi3_/workspace/fixture/.agents/skills/concise-writing/SKILL.md completely and follow it as binding guidance for this task.
+
+Tighten this short guide and return only the revised text:
+
+## Session behavior
+
+### Timeout
+
+Sessions expire after 20 minutes of inactivity.
+
+### Warning
+
+A warning appears two minutes before expiration.
+
+### Activity
+
+Mouse, keyboard, or touch input resets the inactivity timer.
+
+### Recovery
+
+Expired sessions require signing in again.
+
+Work read-only within the supplied fixture. Do not edit files, change git state, inspect outside the supplied fixture, use the network, or dispatch agents.

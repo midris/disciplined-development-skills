@@ -1,0 +1,25 @@
+{
+  "argv": [
+    "/opt/homebrew/bin/codex",
+    "debug",
+    "prompt-input",
+    "-c",
+    "model=\"gpt-5.6-sol\"",
+    "-c",
+    "model_reasoning_effort=\"low\"",
+    "-c",
+    "shell_environment_policy.inherit=\"none\"",
+    "-c",
+    "cli_auth_credentials_store=\"file\"",
+    "-c",
+    "approval_policy=\"never\"",
+    "Pilot provider-free catalog inspection."
+  ],
+  "cwd": "/private/tmp/skilltest-sol-low-pilot.Lunoau/extension.xWS8Q2/preflight/catalog-v3/catalog-tmp/skilltest-runs/20260907T180819807Z-pilot-ar-03-no-dd-d47f9ef8-2608-4bb1-bea6-c88cda6bd571-zzc77fzf/workspace/fixture",
+  "env": {
+    "HOME": "/private/tmp/skilltest-sol-low-pilot.Lunoau/extension.xWS8Q2/preflight/catalog-v3/catalog-tmp/skilltest-codex-1y_s70ue/home",
+    "CODEX_HOME": "/private/tmp/skilltest-sol-low-pilot.Lunoau/extension.xWS8Q2/preflight/catalog-v3/catalog-tmp/skilltest-codex-1y_s70ue/codex",
+    "TMPDIR": "/private/tmp/skilltest-sol-low-pilot.Lunoau/extension.xWS8Q2/preflight/catalog-v3/catalog-tmp/skilltest-codex-1y_s70ue/tmp",
+    "PATH": "/opt/homebrew/bin:/usr/bin:/bin:/usr/sbin:/sbin"
+  }
+}

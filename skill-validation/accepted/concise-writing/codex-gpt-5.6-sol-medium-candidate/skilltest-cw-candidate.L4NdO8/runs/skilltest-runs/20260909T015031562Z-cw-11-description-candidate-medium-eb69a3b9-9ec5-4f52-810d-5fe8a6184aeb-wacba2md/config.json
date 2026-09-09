@@ -1,0 +1,40 @@
+{
+  "schema_version": "0.2",
+  "id": "cw-11-description-candidate-medium",
+  "prompt": "../../../cw-11/description/prompt.md",
+  "fixtures": [
+    {
+      "source": "../../../inputs/superpowers/writing-plans/SKILL.md",
+      "target": ".agents/skills/writing-plans/SKILL.md"
+    },
+    {
+      "source": "../../../inputs/superpowers/writing-plans/plan-document-reviewer-prompt.md",
+      "target": ".agents/skills/writing-plans/plan-document-reviewer-prompt.md"
+    },
+    {
+      "source": "../../../inputs/superpowers/requesting-code-review/SKILL.md",
+      "target": ".agents/skills/requesting-code-review/SKILL.md"
+    },
+    {
+      "source": "../../../inputs/superpowers/requesting-code-review/code-reviewer.md",
+      "target": ".agents/skills/requesting-code-review/code-reviewer.md"
+    },
+    {
+      "source": "../../../../scenarios/concise-writing/cw-11/fixture/descriptions/adversarial-review-loop.txt",
+      "target": "descriptions/adversarial-review-loop.txt"
+    },
+    {
+      "source": "../../../inputs/candidates/cw-rewrite/description.txt",
+      "target": "descriptions/concise-writing.txt"
+    },
+    {
+      "source": "../../../../scenarios/concise-writing/cw-11/fixture/descriptions/superpowers-writing-skills.txt",
+      "target": "descriptions/superpowers-writing-skills.txt"
+    }
+  ],
+  "execution": {
+    "provider": "codex",
+    "model": "gpt-5.6-sol",
+    "effort": "medium"
+  }
+}

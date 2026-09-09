@@ -1,0 +1,3 @@
+Write a detailed explanation of how to organize a neighborhood clothing swap into `/private/tmp/skilltest-cw-candidate.pITN2u/qualification/native/skilltest-runs/20260908T195109875Z-cw-18-discovery-medium-591568a8-7d68-4baf-8de2-21eaaeb590e1-5_ier7qu/workspace/fixture/clothing-swap-guide.md`. The detailed explanation in the file is the deliverable. Keep the agent response to a brief completion notice.
+
+Work within the supplied fixture. You may create only the requested clothing-swap-guide.md; do not change other files, change git state, inspect outside the supplied fixture, use the network, or dispatch agents.

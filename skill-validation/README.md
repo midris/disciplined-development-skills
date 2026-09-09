@@ -6,7 +6,10 @@ and links its governing contracts; it creates no new scoring rules or execution 
 
 Before authoring, editing or evaluating a skill, read the [charter](charter/core-contracts.md).
 It already defines each skill's intended behavior through named invariants; test that contract rather than reconstructing it from the current skill's wording.
-The [overall rewrite goal](../plans/specs/2026-09-06-skilltest-controlled-inputs-design.md#overall-goal) and [RED/GREEN authoring requirement](../plans/specs/2026-09-06-skilltest-controlled-inputs-design.md#redgreen-authoring-requirement) explain what this testing infrastructure supports.
+The [overall rewrite goal](../plans/completed/specs/2026-09-06-skilltest-controlled-inputs-design.md#overall-goal) and [RED/GREEN authoring requirement](../plans/completed/specs/2026-09-06-skilltest-controlled-inputs-design.md#redgreen-authoring-requirement) explain what this testing infrastructure supports.
+
+For current state and the next decision, read the [single active testing plan](../plans/2026-09-09-dd-skill-testing.md).
+Completed implementation and collection plans are archived; their accepted methodology contracts remain applicable.
 
 ## Model-led testing
 
@@ -20,26 +23,33 @@ The tools scaffold execution and record results; they do not decide what good sk
 Reuse these tools for the testing workflow; extend them only when an observed mechanical gap justifies it, rather than building a separate autonomous testing framework.
 The intended workflow is agent-followed written runbooks for baseline collection and skill edits, not more shell or Python programs.
 Those runbooks specify fixture setup, exact commands, models/effort, actual CLI-version capture, repetitions, validation and evidence review before collection; routine test changes belong in those documents and test inputs, not runner code.
-The [pilot-first scope](../plans/specs/2026-09-06-skilltest-controlled-inputs-design.md#accepted-immediate-scope-one-usable-pilot) starts with one provisional runbook and a few Codex / gpt-5.6-sol / low scenarios in the existing layout, with medium available for justified workflow diagnostics; Claude integration, the broader campaign and reorganization wait for practical feedback.
+The [completed pilot](../plans/completed/2026-09-06-skilltest-sol-low-pilot.md) exercised this procedure; baseline tooling is settled for the current Codex workflow.
+Claude test support is now queued in the active plan; broader model campaigns and testing-directory reorganization remain deferred.
 Use the [routine runbook](pilot/README.md) for input/version checks, execution, evidence inspection, worksheet scoring and summary updates; consult the separate [qualification reference](pilot/qualification/README.md) when relevant controls change.
 Use its [bounded-batch approval and verification cadence](pilot/README.md#bounded-batches-and-approval); retain per-run controls without repeated unchanged test suites or per-observation status commits.
-The [pilot plan](../plans/2026-09-06-skilltest-sol-low-pilot.md) retains completed procedure/qualification checkpoints; the [CW design](../plans/specs/2026-09-07-cw-validation-design.md) owns full-CW catalog preparation, collection and owner review before rewrite evaluation.
+The [archived CW design](../plans/completed/specs/2026-09-07-cw-validation-design.md) retains the completed baseline/candidate comparison contract and its evidence handoff.
 Use the [CW baseline/edit runbook](pilot/cw-runbook.md) and [source-to-variant mapping](pilot/cw-catalog.md), not historical pilot command paths.
 This README is navigation, not another progress record.
 For new controlled testing, keep current accepted evidence in the working tree and recover superseded accepted results from Git history, rather than maintaining dated result archives; commit accepted evidence before replacing it.
-Active experiments remain scratch-only pending review; historical baseline judgments and evidence remain protected, with only the [metadata-only CLI-version worksheet backfill](../plans/specs/2026-09-06-skilltest-controlled-inputs-design.md#accepted-baseline-decision-current-dd-and-no-dd-with-cli-provenance) authorized.
+Active experiments remain scratch-only pending review; historical baseline judgments and evidence remain protected, including the completed [metadata-only CLI-version worksheet backfill](../plans/completed/specs/2026-09-06-skilltest-controlled-inputs-design.md#accepted-baseline-decision-current-dd-and-no-dd-with-cli-provenance).
 The orchestrator owns evidence-backed judgments, the owner retains acceptance authority, and provider calls remain subject to approval.
-Keep [setup qualification, discovery and behavior tests separate](../plans/specs/2026-09-06-skilltest-controlled-inputs-design.md#accepted-separation-setup-discovery-and-behavior): behavior prompts explicitly load the relevant skills; only dedicated discovery scenarios omit loading hints.
+On 2026-09-09 the owner accepted the validity of the [66-observation CW candidate comparison](accepted/concise-writing/codex-gpt-5.6-sol-medium-candidate/README.md) and [14 procedure-pilot observations](accepted/procedure-pilot/codex-gpt-5.6-sol-low/README.md).
+Their complete packages are preserved separately from the baseline; further evaluation and skill decisions remain open.
+Keep [setup qualification, discovery and behavior tests separate](../plans/completed/specs/2026-09-06-skilltest-controlled-inputs-design.md#accepted-separation-setup-discovery-and-behavior): behavior prompts explicitly load the relevant skills; only dedicated discovery scenarios omit loading hints.
 Every DD skill needs both discoverability and loaded-behavior coverage; the [catalog audit and repair proposal](../plans/deferred/2026-09-07-skilltest-discovery-behavior-catalog-separation.md) track gaps and link the currently authorized CW increment without activating the broader repairs.
-The [live design](../plans/specs/2026-09-06-skilltest-controlled-inputs-design.md#accepted-methodology-decision-model-led-testing-with-simple-tools) records the accepted model/tool boundary, workflow decisions and separately labeled proposals.
+The [accepted design decisions](../plans/completed/specs/2026-09-06-skilltest-controlled-inputs-design.md#accepted-methodology-decision-model-led-testing-with-simple-tools) record the accepted model/tool boundary, workflow decisions and separately labeled proposals.
 
 ## Coverage by test purpose
+
+Use the shared categories **discoverability, effectiveness and composition**, with skill-specific charter cases beneath them.
+The [coverage policy](../plans/completed/specs/2026-09-06-skilltest-controlled-inputs-design.md#accepted-methodology-decision-shared-test-categories-and-coverage) defines evidence boundaries, supporting diagnostics, overlap/gap review and model-dependent interpretation.
+Keep multiple tests when they cover distinct failures, boundaries or meaningful contexts; neither matching test counts across skills nor superficial variations establish adequate coverage.
 
 This is a design map of reusable scenario material, not an effectiveness score or a claim that every charter invariant has executed-work coverage.
 The catalog summaries retain detailed scenario assessments; representative IDs below link directly to the relevant task or rubric.
 None of the 105 historical configs declares native skill targets; DISC-01–12 paste descriptions and prohibit body reads.
 Those historical packages do not test native discoverability; the explicitly loaded pilot and setup qualification do not fill that gap.
-The [CW mapping](pilot/cw-catalog.md) separates loaded behavior, contract diagnostics and native discovery in the controlled portfolio; the [CW design](../plans/specs/2026-09-07-cw-validation-design.md) owns its current collection and acceptance status.
+The [CW mapping](pilot/cw-catalog.md) separates loaded behavior, contract diagnostics and native discovery in the controlled portfolio; the [active testing plan](../plans/2026-09-09-dd-skill-testing.md) owns remaining evidence decisions and prospective suite work.
 Dedicated native-discovery validation for the other eight DD targets remains deferred; incidental companion loading in CW tests does not replace it.
 The discovery seeds below need fresh natural-task prompts and frozen native fixtures before use, not replay of the routing quizzes.
 
@@ -56,7 +66,7 @@ The discovery seeds below need fresh natural-task prompts and frozen native fixt
 | [dispatching-development-subagents](charter/core-contracts.md#dispatching-development-subagents) | [DSD-01](scenarios/dispatching-development-subagents/dsd-01/rubric.md)/04/07: scope (DSD-I1); DSD-02/09/10: child authority (DSD-I2); [DSD-03](scenarios/dispatching-development-subagents/dsd-03/prompt.md)/08: inspection and disclosure decisions (DSD-I3/I4). | [Catalog](scenarios/dispatching-development-subagents/summary.md): DSD-09 omits an upstream read directive; DSD-11 supplies no research body. Method selection does not prove companion execution. [DISC-06](scenarios/skill-discovery/disc-06/prompt.md) seeds discovery. |
 
 Composition results belong to their owning skills, not a pooled verdict; supplied availability, observed loading and applied behavior remain different facts.
-The [criterion map and first-repair proposal](../plans/deferred/2026-09-07-skilltest-discovery-behavior-catalog-separation.md#task-1-map-purposes-without-moving-the-catalog) identify the next design checkpoint without activating the charter's broader rebuilt suite.
+The [criterion map and first-repair proposal](../plans/deferred/2026-09-07-skilltest-discovery-behavior-catalog-separation.md#task-1-map-purposes-without-moving-the-catalog) retain the earlier audit without activating the charter's broader rebuilt suite.
 
 ## Authority map
 
@@ -72,8 +82,8 @@ The [criterion map and first-repair proposal](../plans/deferred/2026-09-07-skill
 - [Legacy archive](archive/README.md) holds the pre-baseline validation records.
   Until an approved catalog replaces one, its archived per-skill record remains the
   update target required by `CLAUDE.md`.
-- [Controlled-input design amendment](../plans/specs/2026-09-06-skilltest-controlled-inputs-design.md)
-  records accepted feasibility constraints and the current step-by-step design discussion.
+- [Controlled-input design amendment](../plans/completed/specs/2026-09-06-skilltest-controlled-inputs-design.md)
+  preserves accepted feasibility/methodology constraints and the completed pilot design.
   Its status identifies approved implementation units separately from deferred work and provider-call approvals.
 
 The broader baseline organization design is deferred. This index does not designate

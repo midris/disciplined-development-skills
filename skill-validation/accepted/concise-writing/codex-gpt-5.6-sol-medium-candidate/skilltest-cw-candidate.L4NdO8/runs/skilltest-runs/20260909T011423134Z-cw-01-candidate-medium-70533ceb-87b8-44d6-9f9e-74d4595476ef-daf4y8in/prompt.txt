@@ -1,0 +1,9 @@
+Read /private/tmp/skilltest-cw-candidate.L4NdO8/runs/skilltest-runs/20260909T011423134Z-cw-01-candidate-medium-70533ceb-87b8-44d6-9f9e-74d4595476ef-daf4y8in/workspace/fixture/.agents/skills/concise-writing/SKILL.md completely and follow it as binding guidance for this task.
+
+Tighten this reader-facing documentation and return only the revised text:
+
+## Export status
+
+This section explains the export status. An export can be queued, running, complete, or failed. The status reports which of these four states the export is currently in. Completed exports include a download link. Failed exports include an error code. In other words, complete jobs have a link, while failed jobs have an error code.
+
+Work read-only within the supplied fixture. Do not edit files, change git state, inspect outside the supplied fixture, use the network, or dispatch agents.

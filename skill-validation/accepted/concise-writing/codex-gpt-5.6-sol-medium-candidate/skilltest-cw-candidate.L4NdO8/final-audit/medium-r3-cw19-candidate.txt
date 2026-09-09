@@ -1,0 +1,19 @@
+{
+  "checks": "PASS",
+  "bundle": "/private/tmp/skilltest-cw-candidate.L4NdO8/runs/skilltest-runs/20260909T020757160Z-cw-19-candidate-medium-06ecc0fe-0376-48d5-b4ec-4bad4ea8b595-joksjgom",
+  "runtime_absent": "/private/tmp/skilltest-cw-candidate.L4NdO8/runs/skilltest-codex-uutaisxi",
+  "fixture_files": 13,
+  "events": 6,
+  "duration_seconds": 33.777
+}
+FULL TRACE (exact supplied-file text replaced by a hash marker; every other byte/event retained below):
+{"type": "thread.started", "thread_id": "01a083ec-02f6-7492-99d3-22230fe300c6"}
+{"type": "turn.started"}
+{"type": "item.started", "item": {"id": "item_0", "type": "command_execution", "command": "/bin/zsh -lc \"sed -n '1,240p' .agents/skills/concise-writing/SKILL.md\"", "aggregated_output": "", "exit_code": null, "status": "in_progress"}}
+{"type": "item.completed", "item": {"id": "item_0", "type": "command_execution", "command": "/bin/zsh -lc \"sed -n '1,240p' .agents/skills/concise-writing/SKILL.md\"", "aggregated_output": "<EXACT SUPPLIED LINES 1-73 .agents/skills/concise-writing/SKILL.md>\n", "exit_code": 0, "status": "completed", "verified_read_ranges": [{"path": ".agents/skills/concise-writing/SKILL.md", "first": 1, "last": 73, "total": 73, "exact_returned": true}]}}
+{"type": "item.completed", "item": {"id": "item_1", "type": "agent_message", "text": "## Orders schema cutover\n\n### Preflight and readiness\n\nRun `./bin/schema-cutover preflight --plan orders-v3 --json`. Attach the JSON output, which records the pre-cutover snapshot ID, to change ticket `CHG-4821`.\n\nPromotion is ready only after both conditions hold throughout the same uninterrupted 15-minute window:\n\n- Database replica lag is at most 2 seconds.\n- The dual-write mismatch rate is below 0.1%.\n\nBefore promotion, stop if preflight fails, replica lag exceeds 2 seconds, or the mismatch rate reaches 0.1% or higher. Post `BLOCKED` with a link to `CHG-4821` in `#schema-cutover` and tag the database incident commander.\n\n### Promotion\n\nAfter the readiness window passes, post the `CHG-4821` link in `#schema-cutover` and wait for the database incident commander to reply `GO`. Only then run:\n\n`./bin/schema-cutover promote --plan orders-v3`\n\nDo not add `--force`; it skips the readiness and `GO` checks and can expose partially backfilled rows.\n\n### Recovery boundary\n\nIn-place rollback is allowed only until the application accepts its first write containing an `orders-v3`-only field. That write is the irreversible in-place rollback boundary.\n\nAfter that boundary, do not run:\n\n`./bin/schema-cutover rollback --plan orders-v3`\n\nThe old schema cannot represent the write. Only the database incident commander—not the release engineer—may decide whether to continue forward or restore the pre-cutover snapshot recorded in `CHG-4821`."}}
+{"type": "turn.completed", "usage": {"input_tokens": 34031, "cached_input_tokens": 26880, "cache_write_input_tokens": 0, "output_tokens": 690, "reasoning_output_tokens": 210}}
+PROVIDER STDERR:
+
+COMMAND STDERR:
+
