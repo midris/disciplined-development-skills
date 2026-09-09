@@ -80,23 +80,9 @@ configuration, bundles, and the strict one-run boundary.
 
 ## How it fits together
 
-`install-skills.sh` symlinks the skill dirs and command templates into your
-project; you merge the hooks block into `.claude/settings.json` (and optionally
-drop a `dd-config.json`). At runtime the hooks resolve their scripts through the
-symlinks and fire at tool calls, commits, PR creation, and session start.
-
-```mermaid
-flowchart TB
-    CLONE["clone of disciplined-development-skills"]
-    CLONE -->|"install-skills.sh &lt;project&gt;<br/>(symlinks, idempotent)"| PROJ
-    subgraph PROJ["your project · .claude/"]
-        direction LR
-        SK["skills/* + commands/dd-log.md<br/>(symlinks into the clone)"]
-        ST["settings.json<br/>hooks block (manual merge)"]
-        CF["dd-config.json<br/>overrides (optional)"]
-    end
-    PROJ --> HK["hook stack fires at<br/>tool calls · commits · PR · session start<br/>(scripts resolve via the skill symlinks)"]
-```
+`install-skills.sh` copies skill directories into your project.
+The default `.claude` installation also copies command templates; merge the hooks block into `.claude/settings.json` separately.
+Hooks run from the installed copies, so changing branches in the DD source checkout does not change a consumer's installation.
 
 ## Requirements
 
@@ -126,53 +112,35 @@ flowchart TB
   `PATH`). Without `codex` the gate fails closed — skip it with
   `DD_SKIP_PR_REVIEW`.
 
-## Install (clone-and-symlink)
+## Install
 
-**Prerequisite:** install the `superpowers` substrate first (see
-[Requirements](#requirements)) — the skills dispatch to it and won't work without
-it.
+Install the `superpowers` substrate first (see [Requirements](#requirements)).
+Clone this repository and run the Bash installer:
 
-The skills must live under a project's `.claude/skills/`. Rather than copy them,
-clone this repo once and symlink the skill dirs into each consuming project:
-
-```
+```bash
 git clone github-personal:midris/disciplined-development-skills.git
 ./disciplined-development-skills/install-skills.sh /path/to/your/project
 ```
 
-`install-skills.sh` symlinks each skill dir into `<project>/.claude/skills/`
-(idempotent; it skips and warns rather than clobbering a real dir or a
-differently-targeted symlink). Re-run it whenever the symlinks drop — they're not tracked (see Recovery for
-what drops them).
+This copies complete skill directories into `<project>/.claude/skills/` and command templates into `<project>/.claude/commands/`.
+For skills under `.agents`, use:
 
-**Gitignore the symlinks** — they're machine-specific, not tracked content. If
-your project doesn't otherwise track `.claude/skills/`, one pattern covers them:
-
-```
-.claude/skills/
+```bash
+./disciplined-development-skills/install-skills.sh /path/to/your/project .agents
 ```
 
-If `.claude/skills/` *is* trackable in your project (e.g. your `.gitignore` has a
-`!.claude/skills` negation), a glob won't catch the symlinks — list one line per
-skill instead, and add a line whenever the bundle gains a skill:
+The `.agents` option installs skills only; the commands and hook configuration below are Claude-specific.
 
-```
-.claude/skills/adversarial-review
-.claude/skills/adversarial-review-loop
-.claude/skills/concise-writing
-.claude/skills/disciplined-development
-.claude/skills/disciplined-research
-.claude/skills/dispatching-development-subagents
-.claude/skills/lean-plan-writing
-.claude/skills/sweeping-stale-references
-.claude/skills/writing-explicit-rationale
-```
+**Rerunning replaces each shipped skill directory and command completely**, discarding local edits and extra files inside those skill directories.
+Existing same-name symlinks, including dangling or foreign links, are removed without changing their targets.
+Other skills, commands, settings, custom hooks, memory and `.claude/.dd-state/` logs and history remain untouched.
+Shared installation directories (`.claude` or `.agents`, `skills`, and Claude's `commands`) must be real directories.
 
-> **Symlink caveat.** Claude Code skill discovery follows symlinks on current
-> builds (verified on the Claude CLI and desktop app), but an older build may hit
-> [claude-code#25367](https://github.com/anthropics/claude-code/issues/25367)
-> (symlinked skills error `Unknown skill`). If discovery misbehaves, copy the
-> skill dirs in instead of symlinking.
+Copies are independent snapshots: source edits, pulls and branch switches only reach consumers when you rerun the installer.
+Commit the copies or gitignore the installed paths according to your project's policy.
+Keep consumer records outside the replaced skill directories.
+The installer copies whole folders, so use a source checkout containing the files you want to distribute.
+There is no ownership receipt, backup or automatic removal of skill names or commands absent from the current source.
 
 ## Wire the hooks
 
@@ -180,7 +148,7 @@ Hooks are not auto-registered. Merge the `hooks` block from
 [`examples/settings.hooks.json`](examples/settings.hooks.json) into the consuming
 project's `.claude/settings.json` (if the file already has a `hooks` key, merge
 the event arrays rather than replacing them). The commands resolve the scripts
-through the symlinks via `$CLAUDE_PROJECT_DIR`, so no paths need editing.
+from the installed copies via `$CLAUDE_PROJECT_DIR`, so no paths need editing.
 
 That block wires the full set — plan-state injection, the re-ground counter,
 the review cadence (edit-counter nudge/block, commit nudge, commit-count
@@ -201,18 +169,15 @@ Per-hook behavior + the `DD_SKIP_<HOOK>` bypass env vars are in
   `CLAUDE.md`, use [`examples/starter.CLAUDE.md`](examples/starter.CLAUDE.md)
   as a full drop-in template (fill in the `{{PLACEHOLDERS}}`); the snippet is
   for threading into an existing file.
-- **Wire `dd-log`:** the installer places `dd-log.md` automatically as a symlink
-  at `<project>/.claude/commands/dd-log.md`. Gitignore the symlink alongside
-  the skill symlinks. If you need a customized copy instead, place a real file
-  there before running the installer — the installer skips and warns rather
-  than clobbering it.
+- **Wire `dd-log`:** the default installer copies `dd-log.md` to `<project>/.claude/commands/dd-log.md`.
+  Explicit reinstalls overwrite edits to this command template.
 
 ## Verify it worked
 
 Start a Claude session in the project and ask it to **list its available
 skills** — the nine `disciplined-development` skills should appear (alongside the
 `superpowers:*` set). A fresh session also opens with the session-start re-ground
-preamble. If the skills are missing, re-check the symlinks and the `superpowers`
+preamble. If the skills are missing, re-check the installed files and the `superpowers`
 install; if every tool call is blocked, see
 [Recovery / troubleshooting](#recovery--troubleshooting).
 
@@ -227,52 +192,27 @@ skill and logging it with `/dd-log`. The full model is in
 
 ## Recovery / troubleshooting
 
-The skill symlinks are **machine-local and untracked**, so anything that resets
-the working tree drops them: a fresh clone, a new worktree, a branch switch, or a
-merge that moves you off the branch. When they're gone the hook commands point at
-missing files.
+If installed skill or hook files are missing, rerun the installer from your DD checkout:
 
-**Symptom — every tool call is blocked.** The `*`-matcher `discipline_nudge.py`
-runs before every tool; with its path missing it exits non-zero, which Claude
-Code treats as a *block* — the agent is locked out of all tools, not just a
-silently-skipped nudge.
-
-**Fix** — re-run the installer from your clone:
-
-```
+```bash
 /path/to/disciplined-development-skills/install-skills.sh /path/to/your/project
 ```
 
-**Mid-lockout — you have to fix it by hand; the agent can't.** Once tool calls
-are blocked, Claude cannot run the installer or edit files for you — every tool
-it would use is gated by the same failing hook. Break the cycle yourself, in a
-terminal or editor outside the agent:
+This also replaces old same-name symlinks after a source-directory reorganization.
+A failed copy exits nonzero and may leave an incomplete installation; fix the reported filesystem problem and rerun.
+There is no rollback or automatic recovery.
 
-1. Open `.claude/settings.json` and **delete the `hooks` block** (or set the
-   relevant `DD_SKIP_<HOOK>` env vars). Either stops the blocking immediately.
-2. Repoint the skills — re-run the installer (or the reorg steps below if the
-   symlinks dangle rather than being absent).
-3. **Restore the `hooks` block** you removed in step 1.
-
-The hooks resolve again the moment their target paths are back.
-
-**After a bundle reorg that moves the skill source dirs.** Distinct from dropped
-symlinks: here the symlinks still exist but point at the *old* source paths and
-dangle. Re-running the installer alone does **not** fix this — it skips any
-symlink whose target differs (a dangling one included) with a warning, leaving
-the stale link in place. Remove the broken skill symlinks first, then re-run.
-This deletes only dangling symlinks — real dirs and live/foreign symlinks are
-untouched:
-
-```
-find /path/to/your/project/.claude/skills -maxdepth 1 -type l ! -exec test -e {} \; -delete
-/path/to/disciplined-development-skills/install-skills.sh /path/to/your/project
-```
-
-Hooks wired through `.claude/skills/.../hooks/...` need no edit — repointing the
-symlink fixes them.
+If a missing hook script blocks Claude's tool calls, run the installer in a terminal outside the agent.
+If needed, temporarily remove the affected hook entries from `.claude/settings.json`, reinstall, then restore them.
+Existing hook paths remain valid for copied installations.
 
 ## Tests
+
+Installer:
+
+```bash
+python3 -m pytest tests/ -q
+```
 
 Hook stack:
 

@@ -1,107 +1,58 @@
 #!/usr/bin/env bash
-# install-skills.sh — symlink this clone's skills + command file into a project
-#
-# Usage: install-skills.sh <target-project-dir>
-#
-# For every skill dir under skills/ in this clone (a subdir containing
-# a SKILL.md), creates a symlink <target>/.claude/skills/<name> ->
-# <this-clone>/skills/<name>. Idempotent and safe: skips (with a warning) any
-# name that already exists as a real path or a symlink pointing elsewhere —
-# it never clobbers a project-local skill.
-#
-# Also symlinks every command template under commands/ in this clone:
-#   <this-clone>/commands/<name>.md
-#   -> <target>/.claude/commands/<name>.md
-# Same guards apply: idempotent; skips with a warning if the dest is a real file
-# or a symlink pointing elsewhere (never clobbers).
-#
-# It does NOT edit the consumer's tracked files (settings.json, dd-config.json).
-# Gitignore the resulting symlinks and wire the hooks manually (see the README).
+# Replace this bundle's skill directories with copies; leave other names alone.
+# Usage: install-skills.sh <target-project-dir> [.claude|.agents]
 set -euo pipefail
 
-if [ $# -ne 1 ]; then
-  echo "usage: $0 <target-project-dir>" >&2
+if [ "$#" -lt 1 ] || [ "$#" -gt 2 ]; then
+  echo "usage: $0 <target-project-dir> [.claude|.agents]" >&2
   exit 2
 fi
 
-TARGET=$1
-if [ ! -d "$TARGET" ]; then
-  echo "error: target project dir does not exist: $TARGET" >&2
+INSTALL_DIR=${2:-.claude}
+case "$INSTALL_DIR" in
+  .claude|.agents) ;;
+  *) echo "error: destination must be .claude or .agents" >&2; exit 2 ;;
+esac
+if [ ! -d "$1" ]; then
+  echo "error: target project dir does not exist: $1" >&2
   exit 2
 fi
 
 CLONE=$(cd "$(dirname "$0")" && pwd -P)
-TARGET=$(cd "$TARGET" && pwd -P)
-SKILLS="$TARGET/.claude/skills"
-mkdir -p "$SKILLS"
+TARGET=$(cd "$1" && pwd -P)
+BASE="$TARGET/$INSTALL_DIR"
 
-created=0
-already=0
-skipped=0
+# Never traverse a shared parent link while deleting same-name destinations.
+parents=("$BASE" "$BASE/skills")
+if [ "$INSTALL_DIR" = .claude ]; then
+  parents+=("$BASE/commands")
+fi
+for parent in "${parents[@]}"; do
+  if [ -L "$parent" ] || { [ -e "$parent" ] && [ ! -d "$parent" ]; }; then
+    echo "error: installation parent must be a real directory: $parent" >&2
+    exit 1
+  fi
+done
+mkdir -p "$BASE/skills"
 
 for skill_md in "$CLONE"/skills/*/SKILL.md; do
-  [ -e "$skill_md" ] || continue          # no matches -> literal glob, skip
-  src=$(cd "$(dirname "$skill_md")" && pwd -P)
-  name=$(basename "$src")
-  dest="$SKILLS/$name"
-
-  if [ -L "$dest" ]; then
-    resolved=$(cd "$dest" 2>/dev/null && pwd -P || true)
-    if [ "$resolved" = "$src" ]; then
-      echo "already linked: $name"
-      already=$((already + 1))
-    else
-      echo "WARN: $name is a symlink to a different target ($(readlink "$dest")) — skipping" >&2
-      skipped=$((skipped + 1))
-    fi
-    continue
-  fi
-
-  if [ -e "$dest" ]; then
-    echo "WARN: $name already exists as a real path — skipping (won't clobber)" >&2
-    skipped=$((skipped + 1))
-    continue
-  fi
-
-  ln -s "$src" "$dest"
-  echo "linked: $name -> $src"
-  created=$((created + 1))
+  [ -f "$skill_md" ] || continue
+  src=$(dirname "$skill_md")
+  dest="$BASE/skills/$(basename "$src")"
+  # No trailing slash: rm removes an existing link, never its target.
+  rm -rf "$dest"
+  cp -RPp "$src" "$dest"
+  echo "copied: $dest"
 done
 
-# --- Command file symlinks --------------------------------------------------
-# Glob every commands/*.md and mirror the skill loop above: one symlink per
-# command, idempotent, never clobbering a real file or a foreign symlink. A
-# stale link from an earlier layout is just another foreign symlink (skip+warn).
-CMD_DIR="$TARGET/.claude/commands"
-
-for cmd_src in "$CLONE"/commands/*.md; do
-  [ -e "$cmd_src" ] || continue          # no matches -> literal glob, skip
-  src=$(cd "$(dirname "$cmd_src")" && pwd -P)/$(basename "$cmd_src")
-  name=$(basename "$cmd_src")
-  mkdir -p "$CMD_DIR"
-  dest="$CMD_DIR/$name"
-
-  if [ -L "$dest" ]; then
-    resolved=$(readlink -f "$dest" 2>/dev/null || true)
-    if [ "$resolved" = "$src" ]; then
-      echo "already linked: $name"
-      already=$((already + 1))
-    else
-      echo "WARN: $name is a symlink to a different target ($(readlink "$dest")) — skipping" >&2
-      skipped=$((skipped + 1))
-    fi
-    continue
-  fi
-
-  if [ -e "$dest" ]; then
-    echo "WARN: $name already exists as a real file — skipping (won't clobber)" >&2
-    skipped=$((skipped + 1))
-    continue
-  fi
-
-  ln -s "$src" "$dest"
-  echo "linked: $name -> $src"
-  created=$((created + 1))
-done
-
-echo "done: $created created, $already already-linked, $skipped skipped"
+# Slash-command templates use Claude-specific paths and variables.
+if [ "$INSTALL_DIR" = .claude ]; then
+  for src in "$CLONE"/commands/*.md; do
+    [ -f "$src" ] || continue
+    mkdir -p "$BASE/commands"
+    dest="$BASE/commands/$(basename "$src")"
+    rm -rf "$dest"
+    cp -p "$src" "$dest"
+    echo "copied: $dest"
+  done
+fi

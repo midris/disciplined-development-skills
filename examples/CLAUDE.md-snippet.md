@@ -28,6 +28,6 @@ overlays *on top of* it.
 
 ---
 
-> The skill dirs are symlinked in from a clone of `disciplined-development-skills`
-> (see the repo README's install section). Gitignore the symlinks — they're
-> machine-specific.
+> Skill directories are copied from a clone of `disciplined-development-skills`.
+> Rerun its installer to update; this replaces the installed skill directories completely.
+> Commit or gitignore these copies according to your project's policy.

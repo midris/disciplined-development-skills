@@ -59,6 +59,14 @@ optional, gracefully-degrading instruction (log a review round when the project
 provides a command). The hooks read per-branch state to decide whether to nudge
 or block; the two tools are the only **writers** of that state and the review log.
 
+## Installation boundary
+
+`install-skills.sh` replaces shipped skill directories with whole-folder copies under `.claude/skills/` or `.agents/skills/`.
+The default Claude installation also replaces shipped command templates under `.claude/commands/`.
+Source checkout changes reach consumers only through explicit reinstallation.
+Other consumer files, including `.claude/.dd-state/` history, remain outside the replacement boundary.
+See [installation instructions](README.md#install) for usage and overwrite behavior.
+
 ## Non-shipped skill-test runner
 
 The [validation charter](skill-validation/charter/core-contracts.md) defines intended skill behavior and evaluation responsibilities.

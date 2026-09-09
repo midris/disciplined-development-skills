@@ -229,7 +229,7 @@ Separately, an already-scoped angle plan (not a candidate to vet):
   ticketing system (probably GitHub Issues). Out of scope now; revisit when more people use
   dd. This doc is the interim single-source for "what's next."
 - **Distributable dd artifact** — package the bundle for real distribution (beyond the
-  symlink installer) once external adoption grows. Out of scope now.
+  copy installer) once external adoption grows. Out of scope now.
 
 ## Resolved / obsoleted by the review-tooling overhaul (2026-06-22)
 

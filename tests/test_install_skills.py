@@ -1,212 +1,165 @@
-"""Tests for install-skills.sh — the clone-and-symlink installer.
-
-Each test builds an isolated fake "clone" (a copy of the script + stub skill
-dirs) and a fake target project under tmp_path, then runs the installer and
-asserts on the resulting symlinks. No network, no real skills.
-"""
-
+"""Exercise the installer against real disposable clones and consumers."""
 from __future__ import annotations
 
-import os
 import shutil
 import subprocess
 from pathlib import Path
 
+import pytest
+
 REPO_ROOT = Path(__file__).resolve().parents[1]
-SCRIPT_SRC = REPO_ROOT / "install-skills.sh"
 
 
-def _make_clone(tmp_path: Path, skill_names=("alpha-skill", "beta-skill")) -> Path:
-    clone = tmp_path / "clone"
+def _make_clone(tmp_path):
+    clone = tmp_path / 'clone with spaces'
     clone.mkdir()
-    shutil.copy(SCRIPT_SRC, clone / "install-skills.sh")
-    os.chmod(clone / "install-skills.sh", 0o755)
-    skills_dir = clone / "skills"
-    skills_dir.mkdir()
-    for name in skill_names:
-        (skills_dir / name).mkdir()
-        (skills_dir / name / "SKILL.md").write_text(f"---\nname: {name}\n---\n# {name}\n")
-    # a dir WITHOUT a SKILL.md under skills/ — must be ignored
-    (skills_dir / "not-a-skill").mkdir()
-    (skills_dir / "not-a-skill" / "readme.txt").write_text("nope")
-    # a stray file under skills/ — must be ignored
-    (skills_dir / "README.md").write_text("# clone")
-    return clone
-
-
-def _run(clone: Path, target: Path) -> subprocess.CompletedProcess:
-    return subprocess.run(
-        [str(clone / "install-skills.sh"), str(target)],
-        capture_output=True, text=True,
-    )
-
-
-def test_creates_symlink_per_skill_dir(tmp_path):
-    clone = _make_clone(tmp_path)
-    target = tmp_path / "project"
+    shutil.copy2(REPO_ROOT / 'install-skills.sh', clone)
+    for name in ('alpha', 'beta'):
+        skill = clone / 'skills' / name
+        skill.mkdir(parents=True)
+        (skill / 'SKILL.md').write_text(f'# {name}\n')
+    (clone / 'skills/not-a-skill').mkdir()
+    (clone / 'skills/not-a-skill/note.txt').write_text('not installed')
+    (clone / 'commands').mkdir()
+    (clone / 'commands/generic.md').write_text('command v1')
+    target = tmp_path / 'consumer with spaces'
     target.mkdir()
-    r = _run(clone, target)
-    assert r.returncode == 0, r.stderr
-    skills = target / ".claude" / "skills"
-    for name in ("alpha-skill", "beta-skill"):
-        link = skills / name
-        assert link.is_symlink(), f"{name} not a symlink"
-        assert link.resolve() == (clone / "skills" / name).resolve()
-    assert not (skills / "not-a-skill").exists()
-    assert not (skills / "README.md").exists()
+    return clone, target
 
 
-def test_creates_skills_dir_when_absent(tmp_path):
-    clone = _make_clone(tmp_path)
-    target = tmp_path / "project"
-    target.mkdir()
-    r = _run(clone, target)
-    assert r.returncode == 0, r.stderr
-    assert (target / ".claude" / "skills").is_dir()
+def _run(clone, target, *args):
+    return subprocess.run([str(clone / 'install-skills.sh'), str(target), *args],
+                          capture_output=True, text=True)
 
 
-def test_idempotent_rerun(tmp_path):
-    clone = _make_clone(tmp_path)
-    target = tmp_path / "project"
-    target.mkdir()
-    _run(clone, target)
-    skills = target / ".claude" / "skills"
-    before = sorted(p.name for p in skills.iterdir())
-    r = _run(clone, target)
-    assert r.returncode == 0, r.stderr
-    after = sorted(p.name for p in skills.iterdir())
-    assert before == after
-    assert (skills / "alpha-skill").is_symlink()
+def _ok(clone, target):
+    result = _run(clone, target)
+    assert result.returncode == 0, result.stderr
+    return result
 
 
-def test_skips_preexisting_real_dir(tmp_path):
-    clone = _make_clone(tmp_path)
-    target = tmp_path / "project"
-    skills = target / ".claude" / "skills"
-    skills.mkdir(parents=True)
-    (skills / "alpha-skill").mkdir()
-    (skills / "alpha-skill" / "SKILL.md").write_text("local skill")
-    r = _run(clone, target)
-    assert r.returncode == 0, r.stderr
-    assert (skills / "alpha-skill").is_dir()
-    assert not (skills / "alpha-skill").is_symlink()
-    assert (skills / "alpha-skill" / "SKILL.md").read_text() == "local skill"
-    assert (skills / "beta-skill").is_symlink()
-    assert "alpha-skill" in (r.stdout + r.stderr)
+def test_copies_complete_skills_commands_permissions_and_empty_directories(tmp_path):
+    clone, target = _make_clone(tmp_path)
+    src = clone / 'skills/alpha'
+    (src / 'references/empty').mkdir(parents=True)
+    (src / '.hidden').write_text('hidden support')
+    executable = src / 'references/run.sh'
+    executable.write_text('#!/bin/sh\nexit 0\n')
+    executable.chmod(0o755)
+    _ok(clone, target)
+    dest = target / '.claude/skills/alpha'
+    assert dest.is_dir() and not dest.is_symlink()
+    assert (dest / 'SKILL.md').read_bytes() == (src / 'SKILL.md').read_bytes()
+    assert (dest / 'references/run.sh').stat().st_mode & 0o777 == 0o755
+    assert (dest / 'references/empty').is_dir()
+    assert (dest / '.hidden').read_text() == 'hidden support'
+    command = target / '.claude/commands/generic.md'
+    assert command.read_text() == 'command v1' and not command.is_symlink()
+    assert not (target / '.claude/skills/not-a-skill').exists()
+    shutil.rmtree(clone)
+    assert (dest / 'SKILL.md').read_text() == '# alpha\n'
+    assert command.read_text() == 'command v1'
 
 
-def test_skips_symlink_to_different_target(tmp_path):
-    clone = _make_clone(tmp_path)
-    target = tmp_path / "project"
-    skills = target / ".claude" / "skills"
-    skills.mkdir(parents=True)
-    other = tmp_path / "other"
-    other.mkdir()
-    (skills / "alpha-skill").symlink_to(other)
-    r = _run(clone, target)
-    assert r.returncode == 0, r.stderr
-    assert (skills / "alpha-skill").resolve() == other.resolve()
-    assert "alpha-skill" in (r.stdout + r.stderr)
+def test_replaces_whole_skill_and_command_but_preserves_consumer_history(tmp_path):
+    clone, target = _make_clone(tmp_path)
+    skill = target / '.claude/skills/alpha'
+    skill.mkdir(parents=True)
+    (skill / 'SKILL.md').write_text('local edit')
+    (skill / 'obsolete.md').write_text('remove me')
+    kept = ['.claude/.dd-state/.logs/reviews.jsonl',
+            '.claude/.dd-state/.logs/dd-hooks-20200101.jsonl',
+            '.claude/.dd-state/branches/main/edits.count',
+            '.claude/.logs/old.log', '.claude/memory/notes.md',
+            '.claude/hooks/custom.py', '.claude/settings.json',
+            '.claude/skills/custom/SKILL.md', '.claude/commands/custom.md']
+    for name in kept:
+        path = target / name
+        path.parent.mkdir(parents=True, exist_ok=True)
+        path.write_bytes(b'preserve exactly\n')
+        path.chmod(0o640)
+    command = target / '.claude/commands/generic.md'
+    command.write_text('local command')
+    _ok(clone, target)
+    assert (skill / 'SKILL.md').read_text() == '# alpha\n'
+    assert not (skill / 'obsolete.md').exists()
+    assert command.read_text() == 'command v1'
+    (clone / 'skills/alpha/SKILL.md').write_text('v2')
+    _ok(clone, target)
+    _ok(clone, target)
+    assert (skill / 'SKILL.md').read_text() == 'v2'
+    for name in kept:
+        assert (target / name).read_bytes() == b'preserve exactly\n'
+        assert (target / name).stat().st_mode & 0o777 == 0o640
+    assert not list((target / '.claude').glob('.dd-install*'))
 
 
-# ---------------------------------------------------------------------------
-# Command-file symlink tests
-# The installer globs every commands/*.md (no single hardcoded command). These
-# tests seed an ARBITRARY command name into the clone so the assertions exercise
-# the generic glob, not a dd-review-specific path. _make_clone seeds no
-# commands/ by default; the seeder below adds one.
-# ---------------------------------------------------------------------------
-
-def _add_command_src(clone: Path, name: str = "generic-cmd.md") -> Path:
-    """Seed commands/<name> into a test clone (arbitrary, non-dd-review name)."""
-    cmd_src = clone / "commands"
-    cmd_src.mkdir(parents=True, exist_ok=True)
-    src_file = cmd_src / name
-    src_file.write_text(f"---\ndescription: {name} command template\n---\n")
-    return src_file
-
-
-def test_command_symlink_created_and_resolves(tmp_path):
-    clone = _make_clone(tmp_path)
-    _add_command_src(clone)
-    target = tmp_path / "project"
-    target.mkdir()
-    r = _run(clone, target)
-    assert r.returncode == 0, r.stderr
-    dest = target / ".claude" / "commands" / "generic-cmd.md"
-    assert dest.is_symlink(), "generic-cmd.md not a symlink"
-    expected_src = clone / "commands" / "generic-cmd.md"
-    assert dest.resolve() == expected_src.resolve()
+@pytest.mark.parametrize('kind', ['source-link', 'foreign-link', 'dangling-link', 'file'])
+def test_replaces_existing_entries_without_writing_through_links(tmp_path, kind):
+    clone, target = _make_clone(tmp_path)
+    for relative in ['skills/alpha', 'commands/generic.md']:
+        dest = target / '.claude' / relative
+        dest.parent.mkdir(parents=True, exist_ok=True)
+        foreign = tmp_path / ('foreign-' + dest.name)
+        if kind == 'file':
+            dest.write_text('old')
+        elif kind == 'source-link':
+            dest.symlink_to(clone / relative)
+        else:
+            if kind == 'foreign-link':
+                foreign.mkdir()
+                (foreign / 'keep').write_text('untouched')
+            dest.symlink_to(foreign)
+    _ok(clone, target)
+    assert not (target / '.claude/skills/alpha').is_symlink()
+    assert (target / '.claude/skills/alpha/SKILL.md').read_text() == '# alpha\n'
+    assert not (target / '.claude/commands/generic.md').is_symlink()
+    assert (target / '.claude/commands/generic.md').read_text() == 'command v1'
+    assert (clone / 'skills/alpha/SKILL.md').read_text() == '# alpha\n'
+    assert (clone / 'commands/generic.md').read_text() == 'command v1'
+    if kind == 'foreign-link':
+        for foreign in tmp_path.glob('foreign-*'):
+            assert (foreign / 'keep').read_text() == 'untouched'
 
 
-def test_command_symlinks_every_command_in_glob(tmp_path):
-    """The installer mirrors the skill loop: a glob over commands/*.md, so
-    multiple command files each get their own symlink."""
-    clone = _make_clone(tmp_path)
-    _add_command_src(clone, "alpha-cmd.md")
-    _add_command_src(clone, "beta-cmd.md")
-    target = tmp_path / "project"
-    target.mkdir()
-    r = _run(clone, target)
-    assert r.returncode == 0, r.stderr
-    commands = target / ".claude" / "commands"
-    for name in ("alpha-cmd.md", "beta-cmd.md"):
-        dest = commands / name
-        assert dest.is_symlink(), f"{name} not a symlink"
-        assert dest.resolve() == (clone / "commands" / name).resolve()
+@pytest.mark.parametrize('destination', ['.claude', '.agents'])
+def test_explicit_destination_installs_skills_and_only_claude_commands(tmp_path, destination):
+    clone, target = _make_clone(tmp_path)
+    result = _run(clone, target, destination)
+    assert result.returncode == 0, result.stderr
+    assert (target / destination / 'skills/alpha/SKILL.md').is_file()
+    assert (target / destination / 'commands/generic.md').exists() == (destination == '.claude')
+    if destination == '.agents':
+        assert not (target / '.claude').exists()
 
 
-def test_no_commands_dir_is_noop(tmp_path):
-    """Zero commands/*.md (no commands/ dir at all) must not error — a literal
-    unmatched glob is skipped, mirroring the skill loop's guard."""
-    clone = _make_clone(tmp_path)  # no _add_command_src -> no commands/ dir
-    target = tmp_path / "project"
-    target.mkdir()
-    r = _run(clone, target)
-    assert r.returncode == 0, r.stderr
-    assert not (target / ".claude" / "commands" / "generic-cmd.md").exists()
+@pytest.mark.parametrize('parent', ['.claude', '.claude/skills', '.claude/commands', '.agents/skills'])
+def test_rejects_symlinked_shared_parents_without_external_writes(tmp_path, parent):
+    clone, target = _make_clone(tmp_path)
+    foreign = tmp_path / 'foreign'
+    foreign.mkdir()
+    dest = target / parent
+    dest.parent.mkdir(parents=True, exist_ok=True)
+    dest.symlink_to(foreign)
+    assert _run(clone, target, parent.split('/')[0]).returncode != 0
+    assert list(foreign.iterdir()) == []
 
 
-def test_command_symlink_idempotent(tmp_path):
-    clone = _make_clone(tmp_path)
-    _add_command_src(clone)
-    target = tmp_path / "project"
-    target.mkdir()
-    _run(clone, target)
-    r = _run(clone, target)
-    assert r.returncode == 0, r.stderr
-    dest = target / ".claude" / "commands" / "generic-cmd.md"
-    assert dest.is_symlink()
-    # idempotent: still resolves to the same source
-    expected_src = clone / "commands" / "generic-cmd.md"
-    assert dest.resolve() == expected_src.resolve()
+def test_replaces_nested_symlink_without_deleting_external_files(tmp_path):
+    clone, target = _make_clone(tmp_path)
+    skill = target / '.claude/skills/alpha'
+    skill.mkdir(parents=True)
+    external = tmp_path / 'external'
+    external.mkdir()
+    (external / 'keep').write_text('keep')
+    (skill / 'nested').symlink_to(external)
+    _ok(clone, target)
+    assert not (skill / 'nested').exists()
+    assert (external / 'keep').read_text() == 'keep'
 
 
-def test_command_real_file_not_clobbered(tmp_path):
-    clone = _make_clone(tmp_path)
-    _add_command_src(clone)
-    target = tmp_path / "project"
-    commands_dir = target / ".claude" / "commands"
-    commands_dir.mkdir(parents=True)
-    dest = commands_dir / "generic-cmd.md"
-    dest.write_text("custom consumer content")
-    r = _run(clone, target)
-    assert r.returncode == 0, r.stderr
-    assert not dest.is_symlink(), "real file was replaced by a symlink"
-    assert dest.read_text() == "custom consumer content"
-
-
-def test_command_foreign_symlink_not_clobbered(tmp_path):
-    clone = _make_clone(tmp_path)
-    _add_command_src(clone)
-    target = tmp_path / "project"
-    commands_dir = target / ".claude" / "commands"
-    commands_dir.mkdir(parents=True)
-    other = tmp_path / "other-command.md"
-    other.write_text("other")
-    dest = commands_dir / "generic-cmd.md"
-    dest.symlink_to(other)
-    r = _run(clone, target)
-    assert r.returncode == 0, r.stderr
-    assert dest.resolve() == other.resolve(), "foreign symlink was overwritten"
-    assert "generic-cmd.md" in (r.stdout + r.stderr)
+def test_invalid_arguments_do_not_install(tmp_path):
+    clone, target = _make_clone(tmp_path)
+    assert _run(clone, target, '../elsewhere').returncode == 2
+    assert _run(clone, target / 'missing').returncode == 2
+    assert not (target / '.claude').exists()

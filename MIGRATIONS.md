@@ -5,22 +5,24 @@ Steps for upgrading an **existing** deployment across breaking changes.
 > **Installing fresh? Skip this file** — none of it applies to a new install.
 > It only matters if you already have an older deployment of this bundle.
 
+## From symlinks to copies
+
+Rerun `install-skills.sh <project>` to replace the shipped skill and command paths with copies.
+Existing links are removed without modifying their targets; existing same-name directories and files are replaced completely.
+Keep any desired local skill customizations in the source before reinstalling.
+Consumer settings, memory, custom hooks and `.claude/.dd-state/` logs and history remain untouched.
+Future source edits require an explicit reinstall.
+
 ## Across the skills-dir reorg
 
-The reorg moved the skill dirs under `skills/`, which moved the symlink
-*targets*. Auto-update holds only for changes *within* a skill dir — here the
-symlinks dangle, and re-running the installer alone skips them (it warns and
-skips any symlink whose target differs, a dangling one included). Delete the
-stale symlinks first, then re-run — see
-[Recovery / troubleshooting](README.md#recovery--troubleshooting). Hooks wired
-through `.claude/skills/.../hooks/...` need no edit once the symlinks repoint.
+The reorg moved source skill directories under `skills/`.
+The current installer replaces old same-name links, including dangling links; no manual link cleanup is needed.
+Hook commands using `.claude/skills/.../hooks/...` keep the same paths.
 
 ## Across the review-tooling overhaul (engine + `/dd-review` removed)
 
-Symlinked skill dirs auto-update, so the removed review engine, the deleted
-`/dd-review` command, the consolidated review tools (`log_review.py`,
-`external_review.py`), and every cadence hook resolve through the symlink with
-no consumer action. Three things still need a manual touch:
+Reinstall to pick up the consolidated review tools and cadence hooks.
+Three things still need a manual touch:
 
 **1. `.claude/commands/dd-review.md`** — this command was **removed** in the
 review-tooling overhaul. If a stale `dd-review.md` symlink exists in your

@@ -1,9 +1,9 @@
 ---
 # Consumer template for the /dd-log slash command. Paths below assume the
 # consumer-side install layout: the disciplined-development skill (and its
-# hooks/ subdir) is symlinked under .claude/skills/ by install-skills.sh from a
+# hooks/ subdir) is copied under .claude/skills/ by install-skills.sh from a
 # clone of disciplined-development-skills. Copy this file to your project's
-# .claude/commands/dd-log.md (or let the installer symlink it);
+# .claude/commands/dd-log.md (or let the installer copy it);
 # commit-or-gitignore is your choice.
 description: Use after each round of an in-session adversarial review, once you have aggregated that round's findings — including a clean "No findings." round — to record it to the durable review log and (on a clean round) reset the review cadence counters.
 argument-hint: <what-triggered-the-review> [round-number]

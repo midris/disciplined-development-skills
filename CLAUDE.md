@@ -5,7 +5,7 @@ Single source of truth for agent guidance in this repository.
 
 ## Highest Priority Rules
 
-- At session start, load the doctrine: `Read skills/disciplined-development/SKILL.md`. **The Skill tool doesn't see it** — the skill dirs live under `skills/` (the installer symlinks them out to consumers), and no harness enumerates skills from there. Load companion `SKILL.md` files the same way when the parent dispatches: `skills/adversarial-review`, `skills/adversarial-review-loop`, `skills/concise-writing`, `skills/disciplined-research`, `skills/dispatching-development-subagents`, `skills/lean-plan-writing`, `skills/sweeping-stale-references`, `skills/writing-explicit-rationale`.
+- At session start, load the doctrine: `Read skills/disciplined-development/SKILL.md`. **The Skill tool doesn't see it** — the skill dirs live under `skills/` (the installer copies them to consumers), and no harness enumerates skills from there. Load companion `SKILL.md` files the same way when the parent dispatches: `skills/adversarial-review`, `skills/adversarial-review-loop`, `skills/concise-writing`, `skills/disciplined-research`, `skills/dispatching-development-subagents`, `skills/lean-plan-writing`, `skills/sweeping-stale-references`, `skills/writing-explicit-rationale`.
 - Before skill authoring, rewriting, validation or test-harness design, read the [validation charter](skill-validation/charter/core-contracts.md), [validation guide](skill-validation/README.md), and [rewrite goal and design principles](plans/specs/2026-09-06-skilltest-controlled-inputs-design.md#overall-goal). The charter defines intended skill behavior; use its invariants and the existing scenario rubrics rather than asking the owner to redefine success. Respect each document's status: a proposed suite or draft design is not implementation authority.
 - Cross-reference `ARCHITECTURE.md` (current component interplay + diagrams), `README.md` (bundle overview, install/recovery flow), and `skills/disciplined-development/hooks/README.md` (hook design + state model) before non-trivial changes. Hook config schema: `skills/disciplined-development/hooks/dd-config.md`.
 - Treat active plans and design specs under `plans/` as live sources of truth — update them in the same change set as the work they track.
@@ -13,29 +13,29 @@ Single source of truth for agent guidance in this repository.
 - Periodic adversarial review per `disciplined-development` Principle 8 — at review-nudge signals or natural pauses, run a deep review per the adversarial-review skill, then log it via `dd-log` to reset the counter; iterate per `adversarial-review-loop` until clean.
 - After meaningful work, update docs that drifted — see "Documentation Update Checklist" below.
 - **Single source of truth, derive the rest.** Describe current state and durable rules — not history. If a fact can be derived from `git log`, schema/code, or a SKILL.md on disk, do not duplicate it.
-- **Skill/hook surface is the public API.** Consumers symlink these dirs into their projects; the hook command names, `dd-config.json` keys, skill dir names, and `examples/*` files are the contract. When that contract changes, update `examples/` and the relevant README in the same commit. Prefer one clean breaking change over a compatibility shim — flag breakage in the commit body.
-- **Never commit:** the default ignored cruft (`__pycache__/`, `.pytest_cache/`, `.dd-state/`, `baseline-*.md` — `.gitignore` covers them, don't bypass); subagent transcripts or skill-build scratch notes (move to a scratch dir outside the repo); anything that leaked back through an installer symlink from a test-consumer project.
+- **Skill/hook surface is the public API.** Consumers copy these dirs into their projects; the hook command names, `dd-config.json` keys, skill dir names, and `examples/*` files are the contract. When that contract changes, update `examples/` and the relevant README in the same commit. Prefer one clean breaking change over a compatibility shim — flag breakage in the commit body.
+- **Never commit:** the default ignored cruft (`__pycache__/`, `.pytest_cache/`, `.dd-state/`, `baseline-*.md` — `.gitignore` covers them, don't bypass); subagent transcripts or skill-build scratch notes (move to a scratch dir outside the repo); anything that leaked back through a legacy installer symlink from a test-consumer project.
 
 ## Project Snapshot
 
-A bundle of harness-portable **skills** (the doctrine) + a Claude Code **hook stack** that keep an agent on-track during long, semi-autonomous development. Skills are the doctrine (model-facing), portable wherever the `superpowers` substrate runs; hooks are Claude Code-specific dumb triggers that surface the discipline at concrete boundaries (tool calls, commits, PRs, session resumes). Consumers symlink the skill dirs into `.claude/skills/` via `install-skills.sh` and merge `examples/settings.hooks.json` into their `.claude/settings.json`. Stack: Python 3 (hooks), bash (installer), pytest (tests); skills are pure markdown. No DB, no env file, no server.
+A bundle of harness-portable **skills** (the doctrine) + a Claude Code **hook stack** that keep an agent on-track during long, semi-autonomous development. Skills are the doctrine (model-facing), portable wherever the `superpowers` substrate runs; hooks are Claude Code-specific dumb triggers that surface the discipline at concrete boundaries (tool calls, commits, PRs, session resumes). Consumers copy the skill dirs into `.claude/skills/` (or `.agents/skills/`) via `install-skills.sh` and merge `examples/settings.hooks.json` into their `.claude/settings.json`. Stack: Python 3 (hooks), bash (installer), pytest (tests); skills are pure markdown. No DB, no env file, no server.
 
 ## Repository Structure
 
 ```text
 skills/<skill>/                       # nine skill dirs under skills/, each with a SKILL.md
 skills/disciplined-development/hooks/ # hook stack + hook tests
-commands/                             # slash-command templates (installer symlinks into consumers' .claude/commands/; currently: dd-log.md)
+commands/                             # slash-command templates (installer copies into consumers' .claude/commands/; currently: dd-log.md)
 examples/                             # reference configs consumers copy (hooks block, dd-config, CLAUDE.md snippet + starter template)
 research/                             # non-shipped experiment tooling (replay harness + its smoke test)
 skill-validation/                     # non-shipped validation records (skills, commands, project rules)
 skill-validation/runner/              # non-shipped one-run skill-test CLI, offline tests, and operator guide
-tests/                                # installer-level tests (the settings-wiring test skips outside a consumer)
+tests/                                # installer-level tests
 plans/                                # active plans (created on demand)
 plans/specs/                          # active design specs
 plans/completed/, plans/deferred/     # archived / deferred work
 reviews/                              # architecture / code-review findings (non-shipped records)
-install-skills.sh                     # symlink installer
+install-skills.sh                     # copy installer
 ARCHITECTURE.md                       # component interplay + diagrams
 README.md                             # bundle overview + install + recovery
 ```
@@ -51,7 +51,7 @@ python3 -m pytest research/ -q
 
 # Top-level installer-suite tests
 python3 -m pytest tests/ -q
-# The settings-wiring test skips outside an in-tree consumer — see tests/test_install_skills.py.
+# The hook suite contains the settings-wiring test; it skips outside a consumer.
 
 # Non-shipped single-run skill-test CLI and its default offline suite
 cd skill-validation/runner && uv run pytest -q
@@ -81,7 +81,7 @@ No `ROADMAP.md`. Active work is tracked in `plans/` (when a plan is open) or dir
 - **Hook code:** Python 3, no third-party runtime deps (stdlib only — the hooks must run on a vanilla Python in any consumer environment). Tests use pytest.
 - **Logging from hooks:** structured JSONL into `.claude/.dd-state/.logs/` per the layout in `skills/disciplined-development/hooks/README.md` ("Observability"). Do not add a logging dependency.
 - **Skill content:** see the `concise-writing` and `writing-explicit-rationale` skills for the prose discipline. Don't expand a SKILL.md without a concrete failure mode it's catching. Write prose one sentence per line so edits produce sentence-scoped diffs; preserve natural structural lines for frontmatter, headings, lists, tables, block quotes, code/literal blocks, commands, and URLs.
-- **Installer (`install-skills.sh`):** bash, idempotent, never clobbers a real path or a differently-targeted symlink. Any change here must preserve those invariants — tested via `tests/test_install_skills.py`.
+- **Installer (`install-skills.sh`):** Bash, direct remove-and-copy into `.claude` or `.agents`. Replace same-name shipped skills (whole directories) and Claude commands, including existing symlinks; preserve all other names and consumer state outside those directories. No ownership tracking or recovery machinery. Cover replacement boundaries via `tests/test_install_skills.py`.
 
 ## Workflow and Checklists
 
@@ -90,7 +90,7 @@ No `ROADMAP.md`. Active work is tracked in `plans/` (when a plan is open) or dir
 - **Test-first for behavior changes; commits land green.** Add or update the focused automated test BEFORE the implementation, in the same commit — never `test:` then `feat:` (every `test:` commit lands red). If true test-first ordering is impractical, the change must still ship with a test that would have failed before the impl. (Governed by the `disciplined-development` skill, Principle 5.)
 - **Mandatory in high-risk areas:**
   - **Hook stack (`skills/disciplined-development/hooks/`).** A misbehaving hook — especially `discipline_nudge.py`, which matches `*` on PreToolUse — can block every tool call in every consumer project. Biggest blast radius in the repo. Every hook change needs a test.
-  - **`install-skills.sh`.** Touches consumer filesystems and must not clobber project-local skills. Regressions are silent (the user finds out later). Cover via `tests/test_install_skills.py`.
+  - **`install-skills.sh`.** Touches consumer filesystems and must not touch unrelated skill names or consumer history outside replaced skill directories. Regressions are silent (the user finds out later). Cover via `tests/test_install_skills.py`.
   - **`external_review.py` review gate.** Model-callable CLI that gates PR creation. Wrong verdict = a blocked PR or a false pass. Cover the verdict + dispatch logic.
   - **Skill `SKILL.md` content changes.** No test catches a worse instruction. Substitute: run a deep review per the adversarial-review skill on the staged branch and address findings before commit.
 - **Keep tests targeted and contract-oriented.** Focused unit tests over end-to-end. Run the hook test suite (`cd skills/disciplined-development/hooks && python3 -m pytest -q`) before sign-off; report gaps if a full run isn't possible.
