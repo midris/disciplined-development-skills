@@ -39,6 +39,8 @@ Read {{fixture_dir}}/.agents/skills/writing-skills/SKILL.md, {{fixture_dir}}/.ag
 For a separately selected Claude batch, substitute `.claude/skills/` for `.agents/skills/` in these prefixes and every declared native skill target; no task or rubric change follows from provider choice.
 Loading must follow the supplied skill's applicability rules: CW-17 asks for the detailed response, not a boolean declaration of internal method use.
 Keep no-DD/current-DD/candidate tasks and rubrics identical; omit DD files and the CW prefix only in no-DD.
+No-DD versus current-DD compares the supplied DD bundle, not CW in isolation: all nine DD bodies are absent in no-DD.
+Current-DD versus candidate isolates the CW wording change because every other supplied skill remains identical.
 For each ordinary case, use the corresponding ordinary fixture group; CW-20 uses CW-01's group, and CW-17/18 loaded replacements use the ordinary group rather than description inputs.
 For composition, use the corresponding CW-13/14 authoring group, keeping all common Superpowers bytes identical between conditions.
 Candidate preparation replaces only the CW body with the retained unchanged candidate snapshot; no new skill edit or adoption is implied.
@@ -72,6 +74,9 @@ Reuse the existing semantic, protocol, fidelity, readability and infrastructure 
 - Assess padding and preservation together for revisions. No removal target is planted in CW-20, and CW-17's explicit detailed-response case measures requested depth; their CW-I2 removal rows are N/A, not evidence of padding removal.
 
 Successful provider-free preparation or a review of these materials establishes input readiness only; skill effectiveness requires separately approved, judgeable observations.
+For a first evidence pass on new tasks, one observation per selected condition can reveal scoring or task defects without committing to repetitions of every new input.
+Keep these judgeable observations if later unchanged-input repetitions are approved; do not discard or replay them merely to assemble a larger comparison.
+One observation cannot establish consistency, and three observations are not a precise reliability estimate; choose additional sampling for the decision it must support, never to replace an unwanted result.
 
 ## Completed-comparison procedure
 

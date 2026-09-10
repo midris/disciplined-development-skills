@@ -220,7 +220,7 @@ The row order matches the source-to-variant map; treatment arms and repetitions 
 
 Retain the response-generation and restraint cases for their different failure triggers: suppressing explicitly requested depth versus damaging already-effective prose when asked to shorten it.
 The file case instead requires lossless removal inside the durable deliverable despite a brief completion response; changing the output destination alone would not justify an additional effectiveness case.
-At exact-input review, check these distinct failure examples against the proposed criteria; if the response and restraint cases reduce to the same preservation check, consolidate them and revise the provisional count before collection.
+Exact-input review checked these failure examples against the criteria: response generation and restraint editing remain distinct, so both are retained in the approved input map.
 Keep removal and conservation criteria together for each revision.
 
 For both authoring composition replacements, draft authorization permits only the bounded candidate revision, not deployment or a waiver of the authoring owner's prerequisites.
@@ -261,13 +261,18 @@ No existing config automatically points at a new routine task.
 | CW-13 warning draft and deployment decision | Composition | Replacement [common prompt](cw-13/routine/prompt.md) / [rubric](cw-13/routine/rubric.md). |
 | CW-14 reference draft and deployment decision | Composition | Replacement [common prompt](cw-14/routine/prompt.md) / [rubric](cw-14/routine/rubric.md). |
 
-This replaces the previous open-ended gap list with a concrete review proposal: seven current variants leave routine testing, three output-producing cases enter, and three retained purposes gain stronger material.
+The approved mapping removes seven previous variants from routine testing, adds three output-producing cases, and strengthens three retained purposes.
 Of those seven removals, four quizzes remain optional diagnostics (CW-09/11/17/18), two ownership extractors leave routine model testing entirely (CW-10/12), and one transport case belongs to qualification (CW-07).
 The 18-case total is the consequence of these distinct questions, not a target count or a rule for other skills.
 Keep meaningful no-DD controls and ordinary cases; a pass without DD on Sol medium does not establish lack of value on every model or task.
 
 The owner approved these exact tasks/rubrics after commit `6867030`; freezing and approving a provider-specific batch remains a separate gate under the existing runbook.
 The response task requires generating causal explanations and worked examples from notes; the restraint task supplies complete prose whose useful explanations must survive a tightening request.
-Those concrete failure boundaries remain distinct, so provider-free review retains both purposes for owner review rather than consolidating them.
+The owner-reviewed inputs retain both purposes on those distinct boundaries.
 No model schedule, provider run, skill edit or adoption is approved by this mapping.
 The 99 accepted baseline and 66 accepted candidate observations retain their original inputs and judgments, including any mismatch between the supplied skill and the historical target contract.
+
+Coverage is sufficient for the next CW evidence pass: the retained ordinary cases cover local padding, structure, unsupported elaboration, emphasis and domain variation; CW-03/19 cover whole-artifact interactions, and CW-17/18/20 cover depth, destination and restraint boundaries.
+The five discoverability cases include positive and negative selection, while composition coverage is limited to warning/reference authoring with writing-skills.
+This does not establish plan/rationale/reference-maintenance composition behavior, every model or every real-world context; those extensions remain deferred rather than implicitly covered.
+Keep the ordinary cases and CW-19's integrated criteria together; further case splitting or consolidation needs a demonstrated distinct question or redundant criterion, not a target suite size.
