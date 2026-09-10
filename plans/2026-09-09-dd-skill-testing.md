@@ -2,7 +2,7 @@
 
 **Status:** Installation and baseline tooling are settled for the current Codex and Claude local workflows.
 The accepted CW evidence and completed-plan cleanup are consolidated on `main`; ongoing testing work uses this primary checkout.
-Next: owner review of the six prepared CW prompt and rubric packages under the agreed coverage, before preparing a collection batch.
+Next: owner approval of a finite collection batch for the six reviewed CW input packages.
 This is the single active testing plan; the [validation guide](../skill-validation/README.md) indexes the durable contracts and execution instructions.
 
 **Goal:** A repeatable set of tests for each DD skill’s discoverability, effectiveness and composition, with distinct questions and observable scoring criteria.
@@ -42,10 +42,14 @@ Its complete `.claude` DD log/state history is copied and hash-verified under `/
 - [x] Agree one concrete routine CW suite in the [existing catalog mapping](../skill-validation/pilot/cw-catalog.md), identifying every retained, retired, replaced and new case and its observable scoring boundary.
 - [ ] Evaluate what the accepted CW comparison supports and what remains uncertain before any skill-change or adoption decision.
 - [x] Prepare and review CW-03/13/14/17/18 replacements and CW-20 restraint inputs, update the existing catalog/runbook, and check the distinct response-generation and restraint criteria. All completed-comparison inputs are preserved; no runner code or skill edits.
-- [ ] Obtain owner review of the exact inputs, then prepare provider/model/effort, composition, sampling, qualification and expanded commands for a separately approved finite batch.
+- [x] Obtain owner review of the six exact input packages; approval was given after commit `6867030`.
+- [ ] Approve and execute a separately frozen finite batch. The prepared Codex / Sol medium option covers only CW-03/13/14/17/18/20: no-DD, current-DD and unchanged candidate, three observations each (54 calls). Provider/model selection and the expanded commands remain pending approval; the other 12 routine cases remain historical context rather than fresh observations.
 
 The [routine input map](../skill-validation/pilot/cw-catalog.md#routine-input-map) links all 18 purposes and the six changed/new packages.
 Provider-free preparation evidence remains in `/private/tmp/dd-cw-routine-inputs-6gx080gt/summary.md`; it exercises no-DD/current-DD/candidate assembly, not a new provider schedule or skill-effectiveness claim.
+The proposed batch, exact commands, frozen inputs and qualification reconciliation are retained under `/private/tmp/skilltest-cw-routine.c81p4an9/summary.md`.
+Codex's executable matches the completed comparison; fresh provider-free catalogs/common-input checks cover the current runner and fixture groups.
+Claude is now `2.1.267`, newer than the qualified `2.1.266`; choosing Claude requires affected-control reconciliation before collection.
 
 The current rubrics remain usable for their existing examples.
 The next decision concerns distinct coverage and unnecessary overlap, not redesigning scoring or manufacturing failures.

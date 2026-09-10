@@ -11,7 +11,8 @@ The existing `pilot/` location avoids a migration; it does not make future obser
 ## Routine suite preparation
 
 The owner approved preparation under the [routine coverage](cw-catalog.md#routine-suite-coverage).
-The six `routine/` prompt/rubric pairs in the [input map](cw-catalog.md#routine-input-map) are prospective materials awaiting exact-input review; the other 12 purposes retain their linked material.
+The owner reviewed and approved the six `routine/` prompt/rubric pairs in the [input map](cw-catalog.md#routine-input-map) after commit `6867030`; the other 12 purposes retain their linked material.
+This approves the task contracts, not a provider/model schedule or command batch.
 Use the primary repository checkout on `main` for preparation.
 Do not edit the old comparison prompts, rubrics, configs or accepted packages; changed tasks require new comparison evidence under a new approved batch.
 

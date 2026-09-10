@@ -1,6 +1,6 @@
 # CW catalog mapping
 
-**Status:** Baseline and candidate evidence validity are owner-accepted. The owner approved preparation under the [routine coverage](#routine-suite-coverage); its six changed/new input packages await exact-input review under the [current testing plan](../../plans/2026-09-09-dd-skill-testing.md#remaining-work).
+**Status:** Baseline and candidate evidence validity are owner-accepted. The owner approved the [routine coverage](#routine-suite-coverage) and reviewed its six changed/new input packages after commit `6867030`; the next gate is finite-batch approval under the [current testing plan](../../plans/2026-09-09-dd-skill-testing.md#remaining-work).
 The [accepted evidence index](../accepted/concise-writing/codex-gpt-5.6-sol-medium/README.md) retains results and recoverable provenance.
 Both command batches are exhausted; this mapping preserves their declared inputs and does not authorize further provider calls.
 The [archived spec](../../plans/completed/specs/2026-09-07-cw-validation-design.md) preserves the completed comparison contract; the [runbook](cw-runbook.md) owns execution.
@@ -266,7 +266,7 @@ Of those seven removals, four quizzes remain optional diagnostics (CW-09/11/17/1
 The 18-case total is the consequence of these distinct questions, not a target count or a rule for other skills.
 Keep meaningful no-DD controls and ordinary cases; a pass without DD on Sol medium does not establish lack of value on every model or task.
 
-Input preparation is approved; owner review of these exact tasks/rubrics precedes freezing a provider-specific batch under the existing runbook.
+The owner approved these exact tasks/rubrics after commit `6867030`; freezing and approving a provider-specific batch remains a separate gate under the existing runbook.
 The response task requires generating causal explanations and worked examples from notes; the restraint task supplies complete prose whose useful explanations must survive a tightening request.
 Those concrete failure boundaries remain distinct, so provider-free review retains both purposes for owner review rather than consolidating them.
 No model schedule, provider run, skill edit or adoption is approved by this mapping.
