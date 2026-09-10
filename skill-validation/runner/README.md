@@ -55,6 +55,11 @@ already exists. The command populates only mechanical fields; the orchestrator
 completes and reviews the worksheet according to the
 [testing methodology](../../plans/completed/specs/2026-09-02-skill-testing-methodology-design.md).
 
+`Test category / supporting purpose` is deliberately blank beside `Scenario purpose`.
+Fill it from the scenario's declared primary purpose in its catalog/rubric, using one of five labels: `Discoverability`, `Effectiveness`, `Composition`, `Supporting diagnostic`, or `Harness qualification`.
+The [coverage policy](../../plans/completed/specs/2026-09-06-skilltest-controlled-inputs-design.md#accepted-methodology-decision-shared-test-categories-and-coverage) defines the three skill-test categories and the two supporting purposes; supporting purposes do not establish skill effectiveness.
+The generator does not infer a category or require new configuration metadata, and existing accepted worksheets remain unchanged.
+
 `Provider CLI version` is deliberately blank after `Provider` in the run-identity table.
 Fill it with the version and a retained evidence reference in the same cell, captured from the same executable immediately before that run (including repetitions and retries).
 The generator never queries the current CLI or substitutes an expected pin for historical evidence.

@@ -99,6 +99,7 @@ def test_completed_result_writes_exact_blank_worksheet(
 | Scenario path | skill-validation/scenarios/example/worksheet-case |
 | Scenario ID | worksheet-case |
 | Scenario purpose |  |
+| Test category / supporting purpose |  |
 | Run ID | 20260902T120000000Z-worksheet-case-unique |
 | Provider | codex |
 | Provider CLI version |  |

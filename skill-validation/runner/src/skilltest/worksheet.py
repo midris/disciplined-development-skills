@@ -46,6 +46,7 @@ def _render(scenario_argument: str, rubric_digest: str, record: dict[str, object
         f"| Scenario path | {_cell(scenario_argument)} |",
         f"| Scenario ID | {_cell(test['id'])} |",
         "| Scenario purpose |  |",
+        "| Test category / supporting purpose |  |",
         f"| Run ID | {_cell(record['run_id'])} |",
         f"| Provider | {_cell(execution['provider'])} |",
         "| Provider CLI version |  |",

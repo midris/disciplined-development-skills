@@ -196,6 +196,7 @@ def test_run_command_has_one_bundle_per_external_invocation(
 | Scenario path | skill-validation/scenarios/example/worksheet-case |
 | Scenario ID | worksheet-case |
 | Scenario purpose |  |
+| Test category / supporting purpose |  |
 | Run ID | 20260902T120000000Z-worksheet-case-cli |
 | Provider | codex |
 | Provider CLI version |  |

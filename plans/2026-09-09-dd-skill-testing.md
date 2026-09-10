@@ -19,13 +19,13 @@ The [charter](../skill-validation/charter/core-contracts.md) supplies intended b
 | Historical records and procedure pilot | All 105 historical records and 14 procedure observations are preserved. These are not matching-input controls for the later CW comparison. [Historical catalog](../skill-validation/scenarios/README.md), [accepted pilot package](../skill-validation/accepted/procedure-pilot/codex-gpt-5.6-sol-low/README.md). |
 | CW baseline | Owner-accepted: 99 observations covering 22 purpose-separated variants, current-DD and meaningful no-DD conditions, Sol medium. [Accepted baseline](../skill-validation/accepted/concise-writing/codex-gpt-5.6-sol-medium/README.md). |
 | Existing CW candidate comparison | All 66 observations are collected, scored and audited under unchanged criteria; their validity is owner-accepted. Further interpretation remains open and the candidate is not adopted. [Accepted candidate package](../skill-validation/accepted/concise-writing/codex-gpt-5.6-sol-medium-candidate/README.md), [comparison contract](completed/specs/2026-09-07-cw-validation-design.md). |
-| Coverage discussion | The existing [catalog proposal](../skill-validation/pilot/cw-catalog.md#routine-suite-proposal-awaiting-owner-review) distinguishes routine coverage from diagnostics and qualification. Membership/input changes still need owner agreement. |
+| Coverage audit | The [catalog proposal](../skill-validation/pilot/cw-catalog.md#routine-suite-proposal-awaiting-owner-review) maps all 22 existing variants and proposes 18 routine purposes: 11 effectiveness, five discoverability and two composition. Membership/input changes still need owner agreement. |
 
 ## Retained and deferred work
 
 Keep `docs/comprehensive-skill-cleanup` and its worktree active at `13599fb7d3127334b0d07bfe468767e586ec5f9c` as a source of candidates after methodology settles.
 Only its unchanged CW snapshot has undergone the completed comparison; no other rewritten skill is evaluated or adopted here.
-The CW collection history and accepted evidence are integrated on `main`; retire its branch/worktree after verifying the pushed merge.
+The CW collection history and accepted evidence are integrated on pushed `main`; its local/remote branch and worktree are retired.
 Its complete `.claude` DD log/state history is copied and hash-verified under `/private/tmp/dd-cw-retirement-5qvesacx/`; retain that package alongside the original validation scratch.
 
 - Strict universal input isolation was replaced by scoped controls and disclosed common-input/hidden-provider limits; do not restart that project.
@@ -38,6 +38,7 @@ Its complete `.claude` DD log/state history is copied and hash-verified under `/
 - [x] Consolidate completed plans and preserve the accepted evidence packages without changing judgments.
 - [x] Implement the copy installer and update Steno’s `.claude` and `.agents` installations.
 - [x] Complete and qualify Claude support through the existing runner and worksheets.
+- [x] Add a blank `Test category / supporting purpose` worksheet field and document the five labels for the evaluator; retain existing configuration and accepted evidence unchanged.
 - [ ] Agree one concrete routine CW suite in the [existing catalog mapping](../skill-validation/pilot/cw-catalog.md), identifying every retained, retired, replaced and new case and its observable scoring boundary.
 - [ ] Evaluate what the accepted CW comparison supports and what remains uncertain before any skill-change or adoption decision.
 - [ ] After suite agreement, prepare only approved prompt/rubric and runbook changes; review exact inputs before proposing a finite provider batch.

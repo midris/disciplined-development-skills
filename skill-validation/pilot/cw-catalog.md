@@ -1,6 +1,6 @@
 # CW catalog mapping
 
-**Status:** The complete baseline is owner-accepted; candidate collection is complete and awaits owner review under the [current testing plan](../../plans/2026-09-09-dd-skill-testing.md#remaining-work).
+**Status:** Baseline and candidate evidence validity are owner-accepted; further interpretation and suite selection await owner review under the [current testing plan](../../plans/2026-09-09-dd-skill-testing.md#remaining-work).
 The [accepted evidence index](../accepted/concise-writing/codex-gpt-5.6-sol-medium/README.md) retains results and recoverable provenance.
 Both command batches are exhausted; this mapping preserves their declared inputs and does not authorize further provider calls.
 The [archived spec](../../plans/completed/specs/2026-09-07-cw-validation-design.md) preserves the completed comparison contract; the [runbook](cw-runbook.md) owns execution.
@@ -168,26 +168,74 @@ The file-copy audit alone does not establish those controls; clean freeze and co
 
 ## Routine suite proposal awaiting owner review
 
-The 2026-09-09 provider-free audit mapped all 22 variants above to the shared categories, charter obligations and distinct risks.
-The owner's subsequent framing is a routine suite of distinct, clearly runnable and scoreable questions, with no requirement to retain every historical scenario or match counts across skills.
-The following is the latest proposal, not approval to change inputs, retire evidence or run models.
-It supersedes the audit's more conservative recommendation to keep most diagnostics in the routine suite.
+This provider-free audit refines the preserved coverage discussion against the 22 existing purpose-separated prompts and rubrics above.
+It proposes routine membership and coverage boundaries; it does not change any prompt, rubric, skill or accepted judgment, and authorizes no provider calls.
+The current criteria remain usable for their existing examples.
+The question is which distinct risks deserve routine tests, not how to produce more failures or minimize a word count.
 
-| Existing coverage | Proposed routine disposition and reason |
-|---|---|
-| CW-01–06, CW-08 and CW-19 loaded prose | Keep their distinct conservation/removal cases: local states/outcomes; rationale/navigation; global definitions; structural padding; unsupported advice; emphasis/universal force; non-software policy; complex operational boundaries. Passing no-DD controls remain useful regressions, not evidence that the skill is unnecessary elsewhere. |
-| CW-01/13/14/17/18 native discovery | Keep five separate contexts: explicit tightening, discipline authoring, reference authoring, detailed-response non-trigger and durable-file creation. Preserve per-target loading evidence and the response/file polarity. |
-| CW-09/11 description and CW-17/18 scope quizzes | Move out of the routine suite into optional diagnostics; they may explain selection failures but do not demonstrate actual application. |
-| CW-10/12 ownership extraction | Drop from routine model testing; extracting the same ownership clause adds little beyond composition behavior. Preserve original records. |
-| CW-07 direct-load transport | Retain with invocation/qualification checks, outside routine skill-effectiveness claims. |
-| CW-13/14 loaded lifecycle decisions | Replace or strengthen the multiple-choice tasks with actual warning/reference revision material and observable composition criteria. Preserve distinct discipline-pressure and reference-validation contexts; a safe answer is not executed validation. |
+CW-I1 preserves consequential meaning, rationale and useful framing; CW-I2 removes lossless local/global padding; CW-I3 governs domain and the detailed-response boundary.
+Authoring ownership and validation remain with `superpowers:writing-skills`; CW’s composition responsibility is subordinate, lossless prose revision.
+Discovery scores observable selection/body access; loaded effectiveness scores the artifact; composition attributes each responsibility to its owner.
+Supporting diagnostics and transport qualification do not become extra effectiveness results.
 
-Proposed missing coverage: restraint on already-effective prose; a longer artifact mixing wasteful duplication with useful recap/warning/navigation; and actual loaded response-only versus durable-file output cases.
-These are coverage hypotheses, not frozen scenarios or an approved count.
-A future CW case composed with plan completeness, rationale ownership or referenced-anchor reconciliation remains deferred behind those choices; no other catalog is activated.
-Keep removal and conservation outcomes separately visible within a revision test; split scenarios only when the questions need different setup, evidence or independent diagnosis.
-CW-19 remains an integrated case with criterion-level failures; a threshold-only microcase is optional diagnostic work, not automatically another permanent test.
+### Every existing purpose-separated variant
 
-Before keeping a proposed case, identify its distinct question, observable result, scoring boundary and the coverage lost if it is removed.
-Approve one concrete membership/input proposal before implementation; use this mapping and the existing runbook rather than creating another registry or tooling layer.
-The 99 accepted baseline and 66 scratch candidate observations keep their original inputs and judgments regardless of prospective suite membership.
+The row order matches the source-to-variant map; treatment arms and repetitions are not additional scenarios.
+“Drop” means no routine model test, never deletion or rescoring of historical evidence.
+
+| Existing variant | Common category or support role | Obligation / distinct failure mode or context | Recommendation and observable boundary |
+|---|---|---|---|
+| CW-01 loaded prose | Effectiveness | CW-I1/I2: ordinary local restatements around four states and distinct outcomes. | **Keep.** Remove the opener and two restatements; retain every state and correct link/error relationship, with no added meaning. Removing it loses the small ordinary revision regression. |
+| CW-01 native discovery | Discoverability | CW-I3: explicit tightening request without a skill-loading hint. | **Keep.** Require complete model-initiated CW body access before the revision; good prose alone cannot pass discovery. This separates selection failure from loaded behavior on the same task. |
+| CW-02 loaded prose | Effectiveness | CW-I1/I2: short mixed passage where rationale, navigation and an exact failure boundary must survive trimming. | **Keep.** Preserve per-delivery scope, synchronous-order rationale, navigation and third-unsuccessful-attempt boundary while removing actual duplication. CW-01 does not protect those framing functions. |
+| CW-03 loaded prose | Effectiveness | CW-I1/I2: whole-document duplication across sections, rather than adjacent repetition. | **Strengthen and consolidate** the proposed longer-document gap here. Retain the access-link use/recovery facts, but distinguish redundant definitions from a useful recap or repeated warning in a longer complete artifact. Score waste removed and useful framing preserved separately; do not add a second routine global-duplication case. |
+| CW-04 loaded prose | Effectiveness | CW-I1/I2: structural padding from four one-sentence subheadings. | **Keep.** Collapse the structure while retaining timeout, warning timing, reset inputs and recovery. Sentence-level duplicate removal does not exercise this decision. |
+| CW-05 loaded prose | Effectiveness | CW-I1/I2: unsupported advice already present in a draft, contrasted with supplied authoritative notes. | **Keep.** Remove both unsupported recommendations and preserve the three source facts without inventing replacements. Other cases mostly prohibit additions; this requires removing an existing unsupported elaboration. |
+| CW-06 loaded prose | Effectiveness | CW-I1/I2: inflated emphasis versus necessary universal scope and obligation. | **Keep.** Remove redundant emphasis/repetition while preserving every-request key/header requirements and rejection. Do not turn illustrative words into a blacklist or weaken universal force. |
+| CW-07 direct-load transport | Supporting qualification | Standalone invocation must not acquire an unnecessary project/workflow prerequisite; prose checks overlap CW-01. | **Remove from routine effectiveness; retain for affected invocation/qualification checks.** Require standalone completion and actual supplied-body access when that path changes. Repeating it for every CW wording change adds transport coverage already established elsewhere. |
+| CW-08 loaded prose | Effectiveness | CW-I1/I2/I3: non-software policy with eligibility exception, contact route, deadlines and appeal navigation. | **Keep.** Preserve all policy conditions and means of acting on them, remove duplicate deadline/meta prose, add no software assumptions. This is meaningful domain coverage even if a Codex control passes. |
+| CW-09 description classification | Supporting diagnostic | Authoring composition applicability in frontmatter, inferred from three supplied descriptions. | **Optional diagnostic only.** Use to investigate a description-related discovery failure; distinguish source-faithful classification from the intended CW/writing-skills pairing. A closed list does not demonstrate native selection. |
+| CW-10 ownership extraction | Supporting diagnostic | Explicit writing-skills ownership in CW’s body, not exercised lifecycle behavior. | **Drop from routine model testing altogether.** Inspect the contract during skill review if needed; native composition/actual behavior carry the useful test burden. Preserve the historical absent-clause results. |
+| CW-11 description classification | Supporting diagnostic | Reference-file authoring applicability in the same closed description list. | **Optional diagnostic only.** Keep the reference context available for diagnosis, not as a second routine selection mechanism. Its distinct boundary belongs in CW-14 discovery/composition. |
+| CW-12 ownership extraction | Supporting diagnostic | Supporting-reference wording asks for the same explicit ownership clause as CW-10. | **Drop from routine model testing altogether.** It repeats extraction rather than testing reference behavior; preserve the actual reference-specific validation boundary in CW-14. |
+| CW-13 loaded lifecycle decision | Composition | CW-I1/I2 plus writing-skills authority: deadline/seniority pressure to halve a warning whose protective purpose is evidenced. | **Replace the multiple-choice task with supplied warning text and an observable bounded revision/authorization decision.** Judge preservation of the pressure guard and whether deployment remains blocked without required validation. A prewritten safe option cannot prove a useful revision or executed testing. |
+| CW-13 native discovery | Discoverability | CW-I3 and authoring-owner selection under discipline/release pressure. | **Keep.** Require separate full CW and writing-skills loads before the decision; disclose composition-mediated routes. Do not score the lifecycle decision a second time as effectiveness. |
+| CW-14 loaded lifecycle decision | Composition | CW-I1/I2 plus writing-skills authority: a supporting reference changes even though SKILL.md does not. | **Replace the multiple-choice task with actual reference material and an observable bounded revision/authorization decision.** Preserve parameter relationships and findable use; unchanged SKILL.md must not justify claiming retrieval/application/gap validation was done. Keep separate from CW-13 because this is a different scope/validation bypass. |
+| CW-14 native discovery | Discoverability | CW-I3 and authoring-owner selection for a shipped reference, without main-body edits. | **Keep.** Require separate complete CW/writing-skills loads before the decision. This catches the supporting-file scope boundary that the discipline-warning context does not. |
+| CW-17 loaded scope quiz | Supporting diagnostic | CW-I3: the explicit detailed, response-only exception, expressed as a boolean. | **Remove the quiz from routine testing; replace its coverage with an actual loaded response-only deliverable.** Keep the quiz optional for contract diagnosis. Score requested detail and completeness, not a claimed hidden decision to withhold the method. |
+| CW-17 native non-trigger | Discoverability | CW-I3: inappropriate selection for explicitly detailed response-only prose. | **Keep.** Require no observed CW selection/body access on a completed task with qualified availability and complete trace. Shortness or quality of the answer is not evidence of non-selection. |
+| CW-18 loaded scope quiz | Supporting diagnostic | CW-I3: a detailed file remains in scope despite a brief completion response. | **Remove the quiz from routine testing; replace its coverage with an actual loaded file deliverable.** Keep the quiz optional for contract diagnosis. Inspect the file’s preservation/padding outcome and the brief notice separately. |
+| CW-18 native discovery | Discoverability | CW-I3: durable-file generation with a brief response, contrasting CW-17’s sole response deliverable. | **Keep.** Require full CW loading before file prose and independently verify the file. This proves selection and task execution, not lossless application; keep that distinction from the proposed loaded case. |
+| CW-19 loaded prose | Effectiveness | CW-I1/I2: integrated operational requirements, exact threshold conjunctions, order, authority and irreversible recovery boundary. | **Keep as one integrated test.** Retain criterion-level failures for all eight source criteria and unsupported meaning. Splitting every threshold into a separate routine case loses the whole-artifact interaction and needlessly repeats setup. |
+
+### Gaps and how to cover them
+
+| Gap | Proposed coverage | Scoring boundary to settle before input implementation |
+|---|---|---|
+| Restraint when the source is already effective | **One new loaded-effectiveness case.** Supply prose whose detail and framing are useful, with no planted redundant passage. | No consequential fact, relationship, rationale or necessary framing lost; no unsupported additions or less readable compression. An unchanged answer or harmless equivalent wording may pass. Do not require edits or an exact-copy answer. |
+| A longer artifact containing both wasteful repetition and useful repetition | **Strengthen CW-03**, rather than add another routine case. | A source map distinguishes each unnecessary duplicate from a recap/warning/navigation element with a reader-use purpose. Require lossless removal and preservation of those purposes across the whole artifact; no maximum word count or “every fact once” rule for intentional reinforcement. |
+| Loaded response-only versus loaded durable-file behavior | **Two replacement cases** derived from CW-17/18’s scope quizzes. | Supply a common factual brief and clear content requirements. In the response case, retain the explicitly requested detailed explanation; in the file case, preserve required detail while removing supplied lossless padding and keep the notice brief. Inspect actual deliverables. Neither output nor self-report proves an unobserved internal method was applied or withheld. |
+| CW’s actual contribution inside authoring composition | **Replace CW-13/14’s decision-only inputs** as described above. | Supply the prose, applicable existing evidence and an explicit editable boundary. Score revision quality under CW and validation/authorization under writing-skills separately. Do not claim a full authoring lifecycle or completed behavioral tests unless the fixture and trace actually execute them. |
+
+The two output destinations need separate cases because the requested artifact and observable boundaries differ; this is a useful split, unlike splitting removal and conservation criteria that must hold together for the same revision.
+The proposed restraint case is the only wholly new task family; the other gaps strengthen or replace existing purposes.
+No new routine threshold microcase, standalone generic prose-format test, or separate CW-10/12 ownership model call is recommended.
+Plan-completeness, rationale-owner and anchor-reconciliation composition extensions remain deferred; this audit activates no other skill catalog.
+
+### Proposed routine membership
+
+| Category | Membership | Cases |
+|---|---|---:|
+| Effectiveness | CW-01–06 (CW-03 strengthened), CW-08, CW-19, the two loaded response/file replacements, and the new restraint case | 11 |
+| Discoverability | CW-01, CW-13, CW-14, CW-17 and CW-18 discovery variants | 5 |
+| Composition | Two material-based replacements for CW-13/14 loaded decisions | 2 |
+| Total | Proposed purposes, not provider calls, treatment arms or repetitions | 18 |
+
+This replaces the previous open-ended gap list with a concrete review proposal: seven current variants leave routine testing, three output-producing cases enter, and three retained purposes gain stronger material.
+Of those seven removals, four quizzes remain optional diagnostics (CW-09/11/17/18), two ownership extractors leave routine model testing entirely (CW-10/12), and one transport case belongs to qualification (CW-07).
+The 18-case total is the consequence of these distinct questions, not a target count or a rule for other skills.
+Keep meaningful no-DD controls and ordinary cases; a pass without DD on Sol medium does not establish lack of value on every model or task.
+
+Before implementation, the owner reviews this membership and each proposed changed case’s observable boundary; then freeze the exact prompt/rubric/fixture revision under the existing runbook.
+No rubric rewrite, scenario implementation, model schedule, skill edit or adoption is approved by this mapping.
+The 99 accepted baseline and 66 accepted candidate observations retain their original inputs and judgments, including any mismatch between the supplied skill and the historical target contract.
