@@ -1,8 +1,8 @@
 # Claude skill testing: Codex capability parity
 
-**Status:** Implemented and verified offline on `main`.
+**Status:** Completed on `main`; offline verification and scoped live qualification passed.
 Owner implementation approval was received on 2026-09-09; one separately requested live CW-01 smoke passed using Sonnet low.
-Full live parity qualification remains pending and separately gated.
+The approved remaining A/B qualification batch passed; its scratch evidence remains available for owner review.
 Work stays on `main` in the primary checkout.
 The accepted CW evidence and methodology consolidation remain on `feature/cw-validation-design`; this work does not merge or alter them.
 
@@ -19,7 +19,7 @@ Two existing result-validation restrictions must admit Claude's equivalent lifec
 This is an internal compatibility correction using existing fields and error codes, not a new testing interface.
 Existing Codex behavior and retained records must continue to pass the same consumers.
 
-Use the [accepted Claude feasibility findings](../2026-09-06-skilltest-claude-controlled-inputs.md#accepted-scope-and-next-checkpoint).
+Use the [accepted Claude feasibility findings](../../2026-09-06-skilltest-claude-controlled-inputs.md#accepted-scope-and-next-checkpoint).
 No new testing tool, campaign manager, scorer, scenario catalog, behavioral criterion or provider/model matrix is included.
 
 ## Provider integration
@@ -110,8 +110,9 @@ No provider call is authorized by implementation approval.
 - [x] Retain Claude trace/final output and accept equivalent lifecycle results through existing consumers.
 - [x] Integrate controlled Claude runtime and shared owned-process mechanics; verify with dummy-provider unit and process tests.
 - [x] Reconcile current runner/operator guidance and review the change; run required checks.
-- [x] Document affected qualification checks in the existing [qualification reference](../../skill-validation/pilot/qualification/README.md#claude-qualification-checkpoint).
-- [ ] Prepare the exact live qualification batch and obtain separate approval; this remains follow-up work, not part of offline implementation completion.
+- [x] Document affected qualification checks in the existing [qualification reference](../../../skill-validation/pilot/qualification/README.md#claude-qualification-checkpoint).
+- [x] Prepare and audit the exact remaining qualification batch using provider-free checks.
+- [x] Obtain approval and execute the two prepared live calls; inspect evidence before closing qualification.
 
 ## Implementation verification
 
@@ -145,3 +146,36 @@ This is a successful exploratory smoke, not an accepted controlled comparison or
 The read-only scenario did not exercise file writes, edits, shell/Git operations, no-DD/A/B conditions or companion loading.
 Its common native skill names matched the prior real spike; full request equality and broader provider parity remain unproved.
 The single-call authorization is exhausted; further calls need a separately approved scope.
+
+## Remaining qualification preparation
+
+The owner authorized preparing the remaining checks and presenting the live batch before execution.
+The proposed batch is two Sonnet-low calls using the same task and companion fixtures, changing only the historical synthetic probe from A to B.
+Both calls require native body loading, file search/read/write/edit and one fixture-local Git commit with explicit test identity.
+Combining these operations keeps the batch small while preserving comparable A/B inputs; it does not assess skill effectiveness.
+No-DD catalog inspection and a competing-user-skill positive control use initialization-only diagnostics with surrogate profiles, dummy authentication and verified network denial.
+The preparation and exact proposed commands are retained in `/private/tmp/skilltest-claude-qualification-6khgqirh/summary.md`.
+Provider-free preparation passed with unchanged Claude Code `2.1.266`: A/B initialization metadata matches after PID/assigned-marker normalization; no-DD differs only by the 12 supplied skills, with 40 common command entries unchanged.
+The user-enabled positive/denied pair verifies suppression of a competing surrogate user skill; actual preparation rejects a surrogate ancestor instruction before authentication.
+All initialization diagnostics used verified network denial, remained idle without model messages and removed their temporary runtimes.
+The scratch record retains the initial network-probe cwd correction and non-discriminating project-only positive control, plus their successful follow-up checks.
+Inline preparation review found no remaining issues; no runner or skill code changes were needed.
+The owner approved both exact commands; each completed once without retry.
+The comprehensive rewrite and accepted CW evidence are unchanged.
+
+## Qualification completion
+
+The A/B calls both passed on Claude Code `2.1.266`, model `claude-sonnet-5`, low effort: A completed in 46.649 seconds and B in 41.808 seconds, both exit 0.
+Each trace contains the correct synthetic probe body plus complete DD/CW/WER/writing-plans bodies, support/task reads and all seven configured tools.
+Independent inspection confirmed the requested evidence write/edit, all original fixture bytes unchanged, and one fixture-local commit with explicit identity containing only `fixture/allowed.txt`.
+The existing worksheet command consumed both live bundles without modification.
+Provider stderr and permission-denial lists were empty; owned runtimes and recorded process-specific sockets were removed.
+The live catalogs match; full initialization metadata differs only by cwd, session ID, event UUID and messaging-socket path.
+
+Together with the recorded offline tests, no-DD/A/B catalog controls, user/ancestor controls and earlier CW smoke, this completes the listed local-workflow parity checks.
+No further tooling changes were needed.
+The finding remains conditional on the pinned setup and exercised local operations; hidden provider requests, automatic shell-startup reads and broader filesystem isolation retain their documented limits.
+New skill/dependency/tool or CLI changes use the existing affected-control requalification rule rather than inheriting universal coverage.
+The B subject used a weak relative-path check for the evidence location; its actual file-tool paths and independent Git-root inspection establish the required state, with the limitation retained in its worksheet.
+The scratch summary links both full traces, worksheets, artifact/Git audits, prepared commands and input provenance: `/private/tmp/skilltest-claude-qualification-6khgqirh/summary.md`.
+The two-call approval is exhausted; no effectiveness campaign or accepted-evidence promotion is implied.

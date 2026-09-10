@@ -265,9 +265,9 @@ Malformed, missing or provider-reported error output does not fabricate a proces
 Mechanical completion and evidence validity remain distinct: inspect the raw trace before scoring or accepting the run.
 Codex continues to capture its final answer through its own last-message option.
 
-The adapter has offline verification; installed-provider qualification remains separate.
+The adapter passed offline verification and the [scoped live qualification](../pilot/qualification/README.md#claude-qualification-checkpoint) on Claude Code `2.1.266`.
 Use the [Claude qualification checkpoint](../pilot/qualification/README.md#claude-qualification-checkpoint) before a real comparison, including native no-DD/A/B/composition catalogs, required reads/writes, shell/Git behavior and common-input drift.
-The earlier Read/Skill feasibility spike does not qualify the current executable or expanded tool set.
+The completed qualification adds actual companion loading, file search/write/edit and shell/Git operations to the earlier Read/Skill feasibility evidence; repeat only affected controls when that setup changes.
 
 ## Result
 

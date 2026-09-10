@@ -9,7 +9,7 @@ Record why retained evidence applies, repeat checks where it does not, and stop 
 Any necessary real qualification command needs its own exact-command approval.
 New scenarios do not inherit qualification for undeclared tools or dependencies.
 
-The Codex sections below retain that pilot's qualification record; the [Claude checkpoint](#claude-qualification-checkpoint) describes the pending adapter qualification.
+The Codex sections below retain that pilot's qualification record; the [Claude checkpoint](#claude-qualification-checkpoint) records the completed local adapter qualification and its reuse limits.
 The concrete Codex paths and commands below identify the retained pilot qualification.
 Do not rerun its one-shot scripts or overwrite evidence; if a reference is missing, prepare and audit a fresh scratch qualification command instead.
 Routine runs need the retained qualification decision and fixed CLI-reference captures, not a reread of every spike artifact.
@@ -110,13 +110,15 @@ Missing required loading/write evidence leaves qualification incomplete, even wi
 
 ## Claude qualification checkpoint
 
-Claude adapter implementation is tracked in the [approved parity spec](../../../plans/specs/2026-09-09-claude-skill-testing-design.md).
+Claude adapter implementation is tracked in the [approved parity spec](../../../plans/completed/specs/2026-09-09-claude-skill-testing-design.md).
 Offline tests exercise runtime preparation, child policy, Git and evidence writes with executable dummy providers, plus the unchanged run/result/worksheet interfaces.
 They do not prove native discovery, actual model loading or absence of hidden provider inputs.
-One separately requested CW-01/Sonnet-low live smoke passed; its [record and limits](../../../plans/specs/2026-09-09-claude-skill-testing-design.md#first-live-smoke) do not complete this qualification matrix.
-That single-call authorization is exhausted; no further real qualification batch is currently approved.
+The CW-01 smoke and the approved two-call Sonnet-low A/B batch passed; the [completion record](../../../plans/completed/specs/2026-09-09-claude-skill-testing-design.md#qualification-completion) links their evidence and limits.
+The checks cover native catalogs/loading, companion access, all seven configured local tools, Git, evidence capture and cleanup on Claude Code `2.1.266`.
+These approvals are exhausted; no further live batch is authorized.
+Reuse this evidence for unchanged controls, repeating only affected checks when the executable, inputs or tool requirements change.
 
-Before presenting a batch:
+For affected requalification before presenting a new batch:
 
 1. Capture the resolved Claude executable/version/digest and relevant help; pin that executable for the batch.
    Compare it with the [accepted feasibility evidence](../../../plans/2026-09-06-skilltest-claude-controlled-inputs.md#accepted-scope-and-next-checkpoint); the historical spike used `2.1.261`, while implementation inspection found `2.1.266`.
