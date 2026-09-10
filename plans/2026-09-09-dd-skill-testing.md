@@ -2,7 +2,7 @@
 
 **Status:** Installation and baseline tooling are settled for the current Codex and Claude local workflows.
 The accepted CW evidence and completed-plan cleanup are consolidated on `main`; ongoing testing work uses this primary checkout.
-Next: execute and score the owner-approved 18-call initial evidence pass for the six reviewed CW input packages.
+Next: owner review of the completed 18-call initial CW evidence pass, then interpret the evidence before any skill-change or adoption decision.
 This is the single active testing plan; the [validation guide](../skill-validation/README.md) indexes the durable contracts and execution instructions.
 
 **Goal:** A repeatable set of tests for each DD skill’s discoverability, effectiveness and composition, with distinct questions and observable scoring criteria.
@@ -43,15 +43,15 @@ Its complete `.claude` DD log/state history is copied and hash-verified under `/
 - [ ] Evaluate what the accepted CW comparison supports and what remains uncertain before any skill-change or adoption decision.
 - [x] Prepare and review CW-03/13/14/17/18 replacements and CW-20 restraint inputs, update the existing catalog/runbook, and check the distinct response-generation and restraint criteria. All completed-comparison inputs are preserved; no runner code or skill edits.
 - [x] Obtain owner review of the six exact input packages; approval was given after commit `6867030`.
-- [ ] Approve and execute a separately frozen initial evidence pass. The owner-approved Codex / Sol medium batch covers only CW-03/13/14/17/18/20: no-DD, current-DD and unchanged candidate, one observation each (18 calls). This reduces the first commitment while exposing real scoring/task issues; it does not establish consistency. Further repetitions require a decision-specific sampling choice and separate approval, retaining these initial observations. The other 12 routine cases remain historical context rather than fresh observations.
+- [x] Approve and execute a separately frozen initial evidence pass. The completed Codex / Sol medium batch covered only CW-03/13/14/17/18/20: no-DD, current-DD and unchanged candidate, one observation each (18 calls). This reduces the first commitment while exposing real scoring/task issues; it does not establish consistency. Further repetitions require a decision-specific sampling choice and separate approval, retaining these initial observations. The other 12 routine cases remain historical context rather than fresh observations.
 
 The [routine input map](../skill-validation/pilot/cw-catalog.md#routine-input-map) links all 18 purposes and the six changed/new packages.
 Provider-free preparation evidence remains in `/private/tmp/dd-cw-routine-inputs-6gx080gt/summary.md`; it exercises no-DD/current-DD/candidate assembly, not a new provider schedule or skill-effectiveness claim.
-The approved batch, exact commands, frozen inputs and qualification reconciliation are retained under `/private/tmp/skilltest-cw-routine.c81p4an9/summary.md`; the superseded 54-call proposal is preserved under `prior-54-proposal/` in that package and authorizes no calls.
+All 18 observations are collected, scored and mechanically audited with no infrastructure retries. Their evidence remains scratch-only pending owner review. The exhausted command batch, worksheets, full traces, frozen inputs and qualification reconciliation are retained under `/private/tmp/skilltest-cw-routine.c81p4an9/summary.md`; the superseded 54-call proposal is preserved under `prior-54-proposal/` in that package and authorizes no calls.
 Codex's executable matches the completed comparison; fresh provider-free catalogs/common-input checks cover the current runner and fixture groups.
 Claude is now `2.1.267`, newer than the qualified `2.1.266`; choosing Claude requires affected-control reconciliation before collection.
 
 The current rubrics remain usable for their existing examples.
-The owner approved the exact 18-call batch and requested commit/push followed by execution; the 18-case coverage and six exact input packages are also approved.
+The exact 18-call approval is exhausted. Review its evidence and interpretation next; no automatic repetitions, promotion or candidate adoption follow. The scratch summary reports CW prose, authoring authority and task fidelity separately, including one corrected evaluator assumption about where an explanation must appear.
 Retain ordinary cases even when a particular no-DD model passes them; the owner’s experience of model verbosity is context, not a measured cross-provider result.
 Once an agreed CW suite works end to end, use that method for the next owner-selected skill; a complete nine-skill campaign is not a prerequisite to finishing CW.
