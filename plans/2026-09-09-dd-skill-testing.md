@@ -2,7 +2,7 @@
 
 **Status:** Installation and baseline tooling are settled for the current Codex and Claude local workflows.
 The accepted CW evidence and completed-plan cleanup are consolidated on `main`; ongoing testing work uses this primary checkout.
-Next: review the completed CW catalog audit and its coverage proposal, prepare the agreed repairs/additions, then settle scoring.
+Next: define and review scoring for the approved CW task inputs.
 This is the single active testing plan; the [validation guide](../skill-validation/README.md) indexes the durable contracts and execution instructions.
 
 **Goal:** A repeatable set of tests for each DD skill’s discoverability, effectiveness and composition, with distinct questions and observable scoring criteria.
@@ -20,7 +20,9 @@ Follow the [baseline-specification-first method](../skill-validation/README.md#b
 The [reviewed CW specification](specs/2026-09-10-cw-baseline-specification.md) records the exact baseline source and extracts its scope, rules, exceptions, method and companion boundaries; the owner authorized proceeding to catalog evaluation.
 The [completed catalog audit](../skill-validation/pilot/cw-catalog.md#routine-suite-coverage) recommends a disposition for all 22 historical purpose variants and six subsequent packages, and maps every specification obligation to proposed coverage or an explicit evidence limit.
 Its proposal retains ordinary cases, replaces mismatched discovery expectations, retires authoring/extraction tasks from routine CW coverage and adds uncertain-framing plus two named-companion composition cases.
-The proposed 18 purposes comprise 12 effectiveness, four discoverability and two composition cases; approval and implementation of gap remedies remain open.
+The owner authorized preparing the 18-purpose proposal: 12 effectiveness, four discoverability and two composition cases.
+Following input review and remediation, the owner authorized committing and pushing the prepared tasks.
+Input review is complete; scoring remains to be defined, with no provider schedule or calls authorized.
 CW remains the pilot: review specification fidelity first, then evaluate the complete catalog and address gaps or unnecessary overlap, then define scoring from the settled specification and scenarios.
 Do not continue adjusting scores while those earlier steps remain open.
 Earlier observations remain evidence under their recorded contracts; neither their collection nor the retrospective corrections establish a completed baseline against this new specification.
@@ -71,7 +73,9 @@ Its complete `.claude` DD log/state history is copied and hash-verified under `/
 - [x] Draft the CW baseline specification from the exact existing skill and charter, and identify mismatches in the existing catalog without implementing new scenarios.
 - [x] Review the CW specification against the complete baseline skill and obtain owner authorization to proceed to catalog evaluation.
 - [x] Reevaluate the full CW catalog against that specification, covering retained, replaced and diagnostic purposes; propose gap remedies and consolidations in the existing mapping.
-- [ ] Review the coverage proposal, then prepare and review the agreed repairs/additions, including representative standalone CW conditions and DD-guided development composition with required Superpowers available; the identified gaps are not closed by documenting them.
+- [x] Obtain owner authorization to prepare the coverage proposal.
+- [x] Prepare and internally review the agreed task inputs, including representative standalone CW conditions and DD-guided development composition with required Superpowers available.
+- [x] Complete input review and remediation and obtain owner authorization to commit/push the prepared tasks; this does not establish measured coverage or skill effectiveness.
 - [ ] Once the catalog and gaps are settled, define/reconcile scoring, then determine what evidence is needed to establish baseline effectiveness.
 - [x] Consolidate completed plans and preserve the accepted evidence packages without changing judgments.
 - [x] Implement the copy installer and update Steno’s `.claude` and `.agents` installations.
@@ -84,6 +88,24 @@ Its complete `.claude` DD log/state history is copied and hash-verified under `/
 - [x] Prepare and review CW-03/13/14/17/18 replacements and CW-20 restraint inputs, update the existing catalog/runbook, and check the distinct response-generation and restraint criteria. All completed-comparison inputs are preserved; no runner code or skill edits.
 - [x] Obtain owner review of the six exact input packages; approval was given after commit `6867030`.
 - [x] Approve and execute a separately frozen initial evidence pass. The completed Codex / Sol medium batch covered only CW-03/13/14/17/18/20: no-DD, current-DD and unchanged candidate, one observation each (18 calls). This reduces the first commitment while exposing real scoring/task issues; it does not establish consistency. Further repetitions require a decision-specific sampling choice and separate approval, retaining these initial observations. The other 12 routine cases remain historical context rather than fresh observations.
+
+### Current input preparation
+
+Use new `specification/` packages beneath the existing CW scenario directories, with their task inputs linked from the catalog.
+This keeps the earlier prompts/rubrics recoverable without introducing another tracking system.
+
+- [x] Prepare CW-02/04/08 context/structure repairs, CW-13/14 authoring-scope discovery inputs and CW-21 uncertain framing.
+- [x] Prepare CW-22 plan/rationale and CW-23 linked-document fixtures with explicit work boundaries and actual required guidance available.
+- [x] Map all 18 purposes to exact task inputs and declare representative standalone conditions without duplicating the suite.
+- [x] Review source fidelity, scope observability, companion dependencies and input consistency; run provider-free verification and present the inputs for owner review.
+- [x] Address the follow-up review: provide CW-22's unchanged comparison copy, align its design's input-stability assumption, and make CW-23's comparison/commit setup compatible with the existing adapters' empty Git boundary.
+
+No scoring changes, runner changes, skill edits, evidence changes or provider calls belong to this preparation step.
+Execution configurations and a frozen collection package follow agreement on task inputs and scoring.
+The [prospective input map](../skill-validation/pilot/cw-catalog.md#prospective-input-map) links the reviewable tasks and fixture conditions.
+Provider-free previews, frozen source copies, checks and review notes are retained in [/private/tmp/dd-cw-specification-inputs-n_sfodg5/summary.md](/private/tmp/dd-cw-specification-inputs-n_sfodg5/summary.md).
+The [corrected composition previews and probes](/private/tmp/dd-cw-specification-inputs-n_sfodg5/review-1/summary.md) supersede the earlier CW-22/23 previews; the other task previews are unchanged.
+The checks exercise both native path layouts, matching control inputs, file comparison and a disposable Git index/commit sequence; they are not model observations or a provider schedule.
 
 The [routine input map](../skill-validation/pilot/cw-catalog.md#routine-input-map) links the six packages used in the initial pass; the proposed portfolio and full audit are above it in the same catalog.
 Provider-free preparation evidence remains in `/private/tmp/dd-cw-routine-inputs-6gx080gt/summary.md`; it exercises no-DD/current-DD/candidate assembly, not a new provider schedule or skill-effectiveness claim.

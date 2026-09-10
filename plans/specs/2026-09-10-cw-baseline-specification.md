@@ -85,4 +85,5 @@ Judge a later rewrite against the same agreed promises and comparison conditions
 If a new behavior is desired, explicitly revise the specification and affected tests before measuring that change; do not redefine success to fit the candidate's output.
 
 The [catalog audit](../../skill-validation/pilot/cw-catalog.md#routine-suite-coverage) now identifies the proposed repairs, retirements and additions.
-Coverage approval, gap remediation and scoring design remain separate next steps; other skills and new provider calls are not activated by this specification.
+The [resulting task inputs](../../skill-validation/pilot/cw-catalog.md#prospective-input-map) have completed review and remediation, with owner authorization to commit/push; scoring design is next.
+Other skills and new provider calls are not activated by this specification.

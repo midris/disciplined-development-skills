@@ -10,12 +10,13 @@ The existing `pilot/` location avoids a migration; it does not make future obser
 
 ## Routine suite preparation
 
-The [baseline specification](../../plans/specs/2026-09-10-cw-baseline-specification.md) has been reviewed; the resulting [catalog coverage proposal](cw-catalog.md#routine-suite-coverage) awaits owner review before input preparation and scoring design.
+The [baseline specification](../../plans/specs/2026-09-10-cw-baseline-specification.md) has been reviewed, and the owner authorized preparing the resulting coverage proposal.
+The [prospective input map and fixture conditions](cw-catalog.md#prospective-input-map) own the reviewed tasks approved for commit/push; scoring design is next.
 The prior coverage approval and retrospective assessments do not establish a completed baseline under that specification.
 
 The following preparation procedure describes the earlier approved suite and its retained observations.
 The owner reviewed and approved the six `routine/` prompt/rubric pairs in the [input map](cw-catalog.md#routine-input-map) after commit `6867030`; the other 12 purposes in that earlier suite retained their linked material.
-That approval does not extend to the new coverage proposal or a new provider batch.
+That earlier approval does not authorize a new provider batch or bind the prospective tasks to the historical preparation details below.
 Use the primary repository checkout on `main` for preparation.
 Do not edit the old comparison prompts, rubrics, configs or accepted packages; changed tasks require new comparison evidence under a new approved batch.
 
