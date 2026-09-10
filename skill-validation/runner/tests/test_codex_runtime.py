@@ -11,8 +11,10 @@ from unittest.mock import Mock, call
 
 import pytest
 
+from skilltest import runtime as process_runtime
 from skilltest import codex_runtime, runner
-from skilltest.codex_runtime import CodexRuntime, PreparationError
+from skilltest.codex_runtime import CodexRuntime
+from skilltest.runtime import PreparationError
 from skilltest.providers import ProviderRequest, invoke_provider
 
 
@@ -35,7 +37,7 @@ def setup_calls(tmp_path, monkeypatch, private_test_profile):
     stop = Mock(return_value=None)
     monkeypatch.setattr(codex_runtime.subprocess, "Popen", popen)
     monkeypatch.setattr(CodexRuntime, "_check_login", login)
-    monkeypatch.setattr(codex_runtime, "stop_owned", stop)
+    monkeypatch.setattr(process_runtime, "stop_owned", stop)
     return SimpleNamespace(popen=popen, process=process, login=login, stop=stop)
 
 
@@ -240,10 +242,10 @@ def login_boundary(monkeypatch):
     clock = Mock(return_value=0)
     stop = Mock(return_value=None)
     monkeypatch.setattr(codex_runtime.subprocess, "Popen", popen)
-    monkeypatch.setattr(codex_runtime.selectors, "DefaultSelector", Mock(return_value=selector_context))
+    monkeypatch.setattr(process_runtime.selectors, "DefaultSelector", Mock(return_value=selector_context))
     monkeypatch.setattr(codex_runtime.os, "read", read)
-    monkeypatch.setattr(codex_runtime.time, "monotonic", clock)
-    monkeypatch.setattr(codex_runtime, "stop_owned", stop)
+    monkeypatch.setattr(process_runtime.time, "monotonic", clock)
+    monkeypatch.setattr(process_runtime, "stop_owned", stop)
     return SimpleNamespace(process=process, popen=popen, read=read, clock=clock, stop=stop, selector=selector)
 
 
@@ -298,7 +300,7 @@ def test_communicate_stops_processes_closes_pipes_and_preserves_output(monkeypat
         "interrupt": KeyboardInterrupt, "unreaped": [timeout, timeout],
     }[outcome]
     stop = Mock(return_value="unproved" if outcome == "unreaped" else None)
-    monkeypatch.setattr(codex_runtime, "stop_owned", stop)
+    monkeypatch.setattr(process_runtime, "stop_owned", stop)
     runtime = CodexRuntime(lambda _: None)
     if outcome == "interrupt":
         with pytest.raises(KeyboardInterrupt):
@@ -343,11 +345,11 @@ def test_owned_group_shutdown_is_bounded_and_reaps_only_its_child(monkeypatch, r
     process = Mock(pid=987654, returncode=None)
     exists = Mock(side_effect=remaining)
     kill = Mock()
-    monkeypatch.setattr(codex_runtime, "_group_exists", exists)
-    monkeypatch.setattr(codex_runtime.time, "monotonic", Mock(side_effect=range(100)))
-    monkeypatch.setattr(codex_runtime, "TERMINATE_GRACE_SECONDS", 0)
+    monkeypatch.setattr(process_runtime, "_group_exists", exists)
+    monkeypatch.setattr(process_runtime.time, "monotonic", Mock(side_effect=range(100)))
+    monkeypatch.setattr(process_runtime, "TERMINATE_GRACE_SECONDS", 0)
     monkeypatch.setattr(os, "killpg", kill)
-    result = codex_runtime.stop_owned(process)
+    result = process_runtime.stop_owned(process)
     assert bool(result) is error
     assert kill.call_args_list == [call(987654, sig) for sig in signals]
     if not error:
@@ -360,21 +362,21 @@ def test_owned_group_shutdown_is_bounded_and_reaps_only_its_child(monkeypatch, r
 def test_shutdown_reports_unverifiable_os_outcome(monkeypatch, error):
     # Break: pretending an OS error or unreaped child establishes cleanup.
     process = Mock(pid=987654)
-    monkeypatch.setattr(codex_runtime, "_group_exists", Mock(return_value=False))
+    monkeypatch.setattr(process_runtime, "_group_exists", Mock(return_value=False))
     process.wait.side_effect = error
-    assert codex_runtime.stop_owned(process) == "owned Codex process group cleanup could not be verified"
+    assert process_runtime.stop_owned(process) == "owned provider process group cleanup could not be verified"
 
 
 def test_shutdown_waits_only_for_each_five_second_grace(monkeypatch):
     # Break: changing the real grace deadline or polling beyond either bounded phase.
     process = Mock(pid=987654)
-    monkeypatch.setattr(codex_runtime, "_group_exists", Mock(side_effect=[True, True, True, True, False]))
-    monkeypatch.setattr(codex_runtime.time, "monotonic", Mock(side_effect=[0, 1, 6, 7, 8, 13]))
+    monkeypatch.setattr(process_runtime, "_group_exists", Mock(side_effect=[True, True, True, True, False]))
+    monkeypatch.setattr(process_runtime.time, "monotonic", Mock(side_effect=[0, 1, 6, 7, 8, 13]))
     sleep = Mock()
     kill = Mock()
-    monkeypatch.setattr(codex_runtime.time, "sleep", sleep)
+    monkeypatch.setattr(process_runtime.time, "sleep", sleep)
     monkeypatch.setattr(os, "killpg", kill)
-    assert codex_runtime.stop_owned(process) is None
+    assert process_runtime.stop_owned(process) is None
     assert kill.call_args_list == [call(987654, signal.SIGTERM), call(987654, signal.SIGKILL)]
     assert sleep.call_args_list == [call(0.01), call(0.01)]
     process.wait.assert_called_once_with(timeout=5)
@@ -389,5 +391,5 @@ def test_group_check_reaps_before_probing_and_handles_disappearance(monkeypatch)
         events.append((pid, sig))
         raise ProcessLookupError
     monkeypatch.setattr(os, "killpg", disappeared)
-    assert codex_runtime._group_exists(process) is False
+    assert process_runtime._group_exists(process) is False
     assert events == ["reap", (987654, 0)]

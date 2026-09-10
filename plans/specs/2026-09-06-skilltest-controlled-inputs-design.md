@@ -302,7 +302,9 @@ An unproved required control cannot be treated as a validated comparison environ
 Isolation retains the accepted controlled-input scope and provider observability limits; this does not reopen universal filesystem isolation as a requirement.
 The current runner config declares prompt, fixtures, provider, model and effort, while provider environment controls are fixed adapter behavior.
 Provider-specific controlled-input invocation and validation belong in the adapter, not necessarily a larger configuration schema.
-The Codex adapter implements its approved runtime controls; consult the active plan for qualification status. Claude integration remains deferred.
+The Codex adapter implements its approved runtime controls; consult the active plan for qualification status.
+Claude was deferred from this pilot; its subsequent implementation is governed by the [Claude parity spec](2026-09-09-claude-skill-testing-design.md).
+The pilot-specific preservation and deferral instructions below describe that earlier unit, not a prohibition on the separately approved Claude work.
 
 ### Accepted placement decision: fixture directory as project root
 

@@ -10,9 +10,10 @@ from datetime import UTC, datetime
 from pathlib import Path
 from time import monotonic
 
-from skilltest.codex_runtime import PreparationError, check_inputs
+from skilltest.claude_output import final_answer
+from skilltest.runtime import PreparationError, check_inputs
 from skilltest.config import ConfigError, TestConfig, load_config
-from skilltest.providers import ProviderRequest, ProviderResult, _arguments, invoke_provider
+from skilltest.providers import ProviderRequest, ProviderResult, invoke_provider
 from skilltest.results import publish_result, result_record
 from skilltest.workspace import RunContext, create_run, prepare_workspace
 
@@ -61,27 +62,22 @@ def run_once(config_path: Path) -> RunOutcome:
         if failure is not None:
             raise OSError(failure[1])
 
-    if request.provider == "codex":
-        try:
-            hashes = check_inputs(context, config)
-            log_provider(f"pre-launch input SHA-256: {json.dumps(hashes, sort_keys=True)}")
-        except (PreparationError, OSError, UnicodeError) as failure:
-            return _finish(context, config, result, ("PREPARATION_FAILED", str(failure)), started)
-        result = invoke_provider(request, log=log_provider)
-    else:
-        for message in (f"provider arguments: {_arguments(request)!r}", "provider invocation attempted"):
-            error = _log_error(context, message, "PREPARATION_FAILED")
-            if error is not None:
-                return _finish(context, config, result, error, started)
-        result = invoke_provider(request)
+    try:
+        hashes = check_inputs(context, config)
+        log_provider(f"pre-launch input SHA-256: {json.dumps(hashes, sort_keys=True)}")
+    except (PreparationError, OSError, UnicodeError) as failure:
+        return _finish(context, config, result, ("PREPARATION_FAILED", str(failure)), started)
+    result = invoke_provider(request, log=log_provider)
     provider_error = _provider_error(result)
     log_error = _provider_log_error(context, result)
     artifact_error = _write_provider_artifacts(context, result)
     final_error = None
-    if provider_error is None and config.execution.provider == "claude":
-        final_error = _write_artifact(
-            context, context.final_output_path, result.stdout_bytes, "provider final output"
-        )
+    if config.execution.provider == "claude" and result.invocation_started:
+        answer = final_answer(result.stdout_bytes)
+        if answer is not None:
+            final_error = _write_artifact(context, context.final_output_path, answer, "provider final output")
+        else:
+            final_error = _log_error(context, "Claude final answer unavailable; inspect raw trace before scoring", "ARTIFACT_WRITE_FAILED")
     error = provider_error or log_error or artifact_error or final_error
     return _finish(context, config, result, error, started)
 

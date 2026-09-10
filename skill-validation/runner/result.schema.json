@@ -88,7 +88,7 @@
           "properties": {"invocation_started": {"const": true}, "timed_out": {"const": true}},
           "anyOf": [
             {"properties": {"exit_code": {"type": "integer"}}},
-            {"properties": {"provider": {"const": "codex"}, "exit_code": {"type": "null"}}}
+            {"properties": {"exit_code": {"type": "null"}}}
           ]
         },
         "infrastructure_error": {"type": "object", "properties": {"code": {"const": "PROVIDER_TIMEOUT"}}}
@@ -111,7 +111,7 @@
     {
       "properties": {
         "status": {"const": "INFRA_ERROR"},
-        "execution": {"properties": {"provider": {"const": "codex"}, "invocation_started": {"const": true}, "timed_out": {"const": false}, "exit_code": {"const": 0}}},
+        "execution": {"properties": {"invocation_started": {"const": true}, "timed_out": {"const": false}, "exit_code": {"const": 0}}},
         "infrastructure_error": {"type": "object", "properties": {"code": {"const": "PROVIDER_CLEANUP_FAILED"}}}
       }
     }

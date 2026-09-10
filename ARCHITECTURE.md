@@ -78,6 +78,8 @@ tooling, not a fourth runtime layer or an installed consumer component.
 process, result record, and exit; outside callers compose independent runs.
 Its operator contract and bundle layout are in its
 [README](skill-validation/runner/README.md).
+Codex and Claude adapters share prepared-input checks and owned-process lifecycle mechanics; each owns its authentication and launch controls.
+Claude preserves raw stream output alongside the extracted final answer, using the same result and worksheet interfaces.
 
 ## The skill layer
 

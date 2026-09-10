@@ -153,13 +153,13 @@ def test_schema_accepts_each_valid_execution_state(code: str | None) -> None:
     _validate(_state_record(code))
 
 
-def test_codex_timeout_can_report_unknown_exit_without_widening_claude():
+def test_both_providers_can_report_unknown_exit_after_timeout():
     # A bounded failed reap cannot honestly supply an integer exit code.
     record = _state_record("PROVIDER_TIMEOUT")
     record["execution"]["exit_code"] = None
     _validate(record)
     record["execution"].update(provider="claude", executable="claude")
-    _reject(record)
+    _validate(record)
 
 
 # Catches state branches that validate fields independently instead of as one row.

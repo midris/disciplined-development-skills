@@ -1,4 +1,4 @@
-# Codex pilot qualification reference
+# Provider qualification reference
 
 Qualification is separate from routine execution; use the [routine runbook](../README.md) after the required controls are established.
 The [active plan](../../../plans/2026-09-06-skilltest-sol-low-pilot.md) owns current execution/approval status.
@@ -9,7 +9,8 @@ Record why retained evidence applies, repeat checks where it does not, and stop 
 Any necessary real qualification command needs its own exact-command approval.
 New scenarios do not inherit qualification for undeclared tools or dependencies.
 
-The concrete paths and commands below identify the retained pilot qualification.
+The Codex sections below retain that pilot's qualification record; the [Claude checkpoint](#claude-qualification-checkpoint) describes the pending adapter qualification.
+The concrete Codex paths and commands below identify the retained pilot qualification.
 Do not rerun its one-shot scripts or overwrite evidence; if a reference is missing, prepare and audit a fresh scratch qualification command instead.
 Routine runs need the retained qualification decision and fixed CLI-reference captures, not a reread of every spike artifact.
 
@@ -106,3 +107,32 @@ Inspect the raw tool trace and saved `qualification.txt`: require observable rea
 Inspect permission denials and unexpected semantic reads; self-reported completion is insufficient.
 Do not score qualification as skill effectiveness, or turn its forced-load criterion into an exclusion rule for subsequent observations.
 Missing required loading/write evidence leaves qualification incomplete, even with exit 0.
+
+## Claude qualification checkpoint
+
+Claude adapter implementation is tracked in the [approved parity spec](../../../plans/specs/2026-09-09-claude-skill-testing-design.md).
+Offline tests exercise runtime preparation, child policy, Git and evidence writes with executable dummy providers, plus the unchanged run/result/worksheet interfaces.
+They do not prove native discovery, actual model loading or absence of hidden provider inputs.
+One separately requested CW-01/Sonnet-low live smoke passed; its [record and limits](../../../plans/specs/2026-09-09-claude-skill-testing-design.md#first-live-smoke) do not complete this qualification matrix.
+That single-call authorization is exhausted; no further real qualification batch is currently approved.
+
+Before presenting a batch:
+
+1. Capture the resolved Claude executable/version/digest and relevant help; pin that executable for the batch.
+   Compare it with the [accepted feasibility evidence](../../../plans/2026-09-06-skilltest-claude-controlled-inputs.md#accepted-scope-and-next-checkpoint); the historical spike used `2.1.261`, while implementation inspection found `2.1.266`.
+2. Prepare frozen no-DD, assigned A/B and companion-composition conditions using existing config fields and `.claude/skills/` targets.
+   Retain only declared common dependencies and task inputs; keep rubrics and expected answers outside subject fixtures.
+   Use the existing input audit and manifest comparison, not installed host skill copies.
+3. Reconcile each affected control against retained evidence: user/ancestor contamination, subscription reuse, provider catalog/common inputs, expanded Read/Skill/Glob/Grep/Write/Edit/Bash access and shell startup.
+   Use surrogate homes and verified network denial for any provider-free CLI checks; never forward real authentication to a mock endpoint or replay exhausted spike commands.
+   Provider-managed input changes must be recorded and explained before evidence is accepted.
+4. Prepare the fewest exact live commands that demonstrate the required condition catalogs, native assigned/companion reads, fixture-derived response, evidence write/edit and representative shell/Git operations.
+   Supply Git test identity explicitly; require no external service or delegated model calls.
+   Present every command, prompt, config, provider/model/effort, call count, output root and host-permission requirement for separate owner approval.
+5. After approved execution, inspect each raw trace, evidence artifact, input hash record and cleanup outcome.
+   Verify expected native catalogs and actual reads/writes; initialization metadata alone is not full-request equality.
+   Record the qualification disposition in the existing scratch summary and reuse only the controls it establishes.
+
+Do not change scoring or scenario rubrics to obtain qualification.
+Forced loading proves wiring, while subsequent scenario observations test spontaneous discovery, effectiveness or composition under their own criteria.
+The existing routine runbook and worksheet command apply after qualification; no separate Claude campaign tool is needed.

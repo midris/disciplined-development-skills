@@ -17,6 +17,8 @@ Run from `skill-validation/runner/`:
 
 The first command runs unit tests; the second runs local process smoke tests; the last runs both.
 Neither group invokes an installed Codex/Claude CLI or needs real credentials or network access.
+Claude process smokes require macOS and exercise the real `sandbox-exec` policy against surrogate homes.
+When an outer sandbox denies `sandbox-exec`, run this offline suite with host permission; do not disable the policy to make it pass.
 
 - Unit tests mock the external boundary of the component under test: provider outcomes for runner persistence, runtime/process outcomes for adapter orchestration, and process/selector/clock operations for lifecycle logic.
   Keep temporary files real when testing copying, hashing, permissions, publication or removal.
@@ -179,9 +181,9 @@ Each invocation retains this fixed layout beneath the temporary run root:
 
 `workspace/fixture/` receives the declared file copies.
 `workspace/evidence/` starts empty and is writable by the provider.
-Codex runs from `workspace/fixture/`; Claude continues to run from `workspace/`.
-For Codex, the fixture inventory also includes a runner-created, template-free `.git/` boundary.
-Declared or existing fixture-root `.git` entries block Codex preparation and are never overwritten.
+Both providers run from `workspace/fixture/`, with access to sibling `workspace/evidence/`.
+For both providers, the fixture inventory includes a runner-created, template-free `.git/` boundary.
+Declared or existing fixture-root `.git` entries block preparation and are never overwritten.
 Completed bundles are retained; the runner never cleans or reuses them.
 
 ## Providers
@@ -233,29 +235,45 @@ Real CLI qualification of supplied skills, common/bootstrap inputs, shell-startu
 
 ### Claude
 
-Claude uses noninteractive print execution, no session persistence, the configured model and effort, and the fixed non-bypass `--permission-mode acceptEdits` for the evidence-writing workspace.
-Claude inherits its launch environment plus this fixed local baseline:
+Claude uses noninteractive print execution from `workspace/fixture/`, native skills supplied under `.claude/skills/`, and `--add-dir` for sibling evidence access.
+The configured model and effort pass through unchanged.
+Fixed flags select project settings only, an empty strict MCP configuration, no Chrome integration, no session persistence and verbose `stream-json` output.
+Read, Skill, Glob, Grep, Write, Edit and Bash are explicitly available and allowed with `--permission-mode dontAsk --permission-prompts none`; permission bypass is not used.
 
-```text
-CLAUDE_CODE_SIMPLE_SYSTEM_PROMPT=1
-CLAUDE_CODE_DISABLE_AUTO_MEMORY=1
-CLAUDE_CODE_DISABLE_BUNDLED_SKILLS=1
-CLAUDE_CODE_DISABLE_EXPLORE_PLAN_AGENTS=1
-CLAUDE_CODE_DISABLE_WORKFLOWS=1
-CLAUDE_CODE_DISABLE_ARTIFACT=1
-CLAUDE_CODE_DISABLE_CRON=1
-CLAUDE_CODE_DISABLE_NONESSENTIAL_TRAFFIC=1
-```
+The controlled Claude runtime requires macOS `sandbox-exec` and an existing claude.ai subscription login.
+It retains normal HOME/USER for authentication and launches with an explicit operational PATH, fresh private temporary directories and the accepted memory/history/telemetry controls.
+It does not inherit API keys, profile overrides, shell-startup environment variables or the old simple-system-prompt/bundled-skill suppression baseline.
+The child policy denies writes beneath HOME and reads beneath the recorded user instruction, settings, skill, command, plugin, agent and project-history paths in `~/.claude/`.
+Runtime and fixture directories must be outside HOME; use an existing temporary root such as `/private/tmp` for the controller's TMPDIR.
+Preparation rejects ambient instruction/configuration/skill entries in fixture ancestry.
+This is scoped contamination control, not exhaustive filesystem isolation.
 
-For Claude, zero-exit stdout is retained as both `stdout.txt` and `final.txt`.
-Codex writes `final.txt` through its last-message output option.
-`final.txt` is absent when the selected provider does not complete a final response.
+Authentication preflight runs that same resolved Claude executable under the same child policy.
+Status is inspected only in bounded memory, never logged or retained; no credentials are extracted or copied, no new login/logout occurs, and existing sessions are not manipulated.
+Authentication/control failures stop preparation rather than falling back to an uncontrolled launch.
+Git setup uses no templates, and inherited system/global Git settings are disabled both during setup and in the Claude environment.
+A fixture needing commits must provide its own test identity.
+
+Prepared-input hashes, model argv, setup/model time limits and owned-process cleanup use the same mechanics as Codex.
+Unresolved processes retain their runtime path for manual handling; never remove a shared profile or use logout as cleanup.
+The Claude runtime contains no copied credentials.
+
+`stdout.txt` retains the complete raw Claude trace and `stderr.txt` retains stderr.
+The runner writes `final.txt` only when one unambiguous successful terminal result supplies a text answer; an explicit empty successful answer is retained as an empty file.
+Otherwise the final file is absent and `runner.log` records the extraction limitation.
+Malformed, missing or provider-reported error output does not fabricate a process error or a file-write failure.
+Mechanical completion and evidence validity remain distinct: inspect the raw trace before scoring or accepting the run.
+Codex continues to capture its final answer through its own last-message option.
+
+The adapter has offline verification; installed-provider qualification remains separate.
+Use the [Claude qualification checkpoint](../pilot/qualification/README.md#claude-qualification-checkpoint) before a real comparison, including native no-DD/A/B/composition catalogs, required reads/writes, shell/Git behavior and common-input drift.
+The earlier Read/Skill feasibility spike does not qualify the current executable or expanded tool set.
 
 ## Result
 
 `result.json` has exact schema version `"0.2"` and records the run identity, timestamps, duration, test id, mechanical invocation state, fixed artifacts, and an infrastructure error when one occurred.
 `status` is `COMPLETED` only for a mechanically completed invocation; otherwise it is `INFRA_ERROR` with one of `PREPARATION_FAILED`, `PROVIDER_LAUNCH_FAILED`, `PROVIDER_TIMEOUT`, `PROVIDER_EXIT_NONZERO`, `ARTIFACT_WRITE_FAILED`, or `PROVIDER_CLEANUP_FAILED`.
-The Codex-only cleanup code applies after an otherwise successful model call; earlier preparation/launch/timeout/provider errors stay primary, with cleanup failure logged additionally.
+The cleanup code applies to either provider after an otherwise successful model call; earlier preparation/launch/timeout/provider errors stay primary, with cleanup failure logged additionally.
 Exit `0` means the run completed mechanically, exit `1` means an owned-run, provider, timeout, or artifact-persistence failure, and exit `2` means usage or configuration failed before a run directory was owned.
 
 The `fixture` and `evidence` artifact records are recursive, lexicographically path-sorted inventories of retained filesystem entries.

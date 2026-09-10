@@ -33,11 +33,14 @@ def fake_provider(tmp_path, monkeypatch, private_test_profile):
     bin_dir.mkdir()
     fake = FakeProvider(tmp_path / "provider-record.jsonl", bin_dir / "provider-settings.json")
     script = """#!PYTHON_EXECUTABLE
-import base64,json,os,sys
+import base64,json,os,sys,subprocess
 from pathlib import Path
 settings=json.loads(Path(__file__).with_name("provider-settings.json").read_text())
 record=Path(settings["record"])
 environment={k: os.environ[k] for k in ("HOME","CODEX_HOME","TMPDIR","PATH") if k in os.environ}
+if "auth" in sys.argv and "status" in sys.argv:
+    print(json.dumps({"loggedIn": True, "authMethod": "claude.ai", "test_marker": "DUMMY_AUTH_STATUS_MUST_NOT_BE_RETAINED"}))
+    sys.exit(0)
 if "login" in sys.argv and "status" in sys.argv:
     auth=Path(os.environ["CODEX_HOME"])/"auth.json"
     record.with_name("login-record.json").write_text(json.dumps({
@@ -50,6 +53,15 @@ if "login" in sys.argv and "status" in sys.argv:
     print("Logged in using ChatGPT")
     print("DUMMY_AUTH_STATUS_MUST_NOT_BE_RETAINED", file=sys.stderr)
     sys.exit(0)
+if Path(sys.argv[0]).name == "claude":
+    fixture=Path.cwd()
+    assert (fixture/".git/config").is_file()
+    assert os.environ["GIT_CONFIG_NOSYSTEM"] == "1" and os.environ["GIT_CONFIG_GLOBAL"] == os.devnull
+    answer=fixture.parent/"evidence/dummy-tool-write.txt"
+    answer.write_text("dummy evidence")
+    (fixture/"tracked.txt").write_text("local git fixture")
+    subprocess.run(["git", "add", "tracked.txt"], check=True, stdout=subprocess.DEVNULL)
+    subprocess.run(["git", "-c", "user.name=Fixture", "-c", "user.email=fixture@example.invalid", "commit", "--quiet", "-m", "fixture"], check=True, stdout=subprocess.DEVNULL)
 with record.open("a") as stream:
     print(json.dumps({"argv": sys.argv, "cwd": os.getcwd(),
         "stdin": sys.stdin.buffer.read().decode(),

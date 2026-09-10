@@ -8,6 +8,8 @@ from pathlib import Path
 import subprocess
 import sys
 
+import pytest
+
 def test_run_command_has_one_bundle_per_external_invocation(
     build_config_case, fake_provider, tmp_path: Path
 ) -> None:
@@ -330,3 +332,39 @@ def test_run_command_has_one_bundle_per_external_invocation(
     assert missing_parent.stderr.startswith("skilltest: ")
     assert missing_parent.stderr.count("skilltest:") == 1
     assert not missing_parent_output.parent.exists()
+
+
+@pytest.mark.skipif(sys.platform != "darwin", reason="Claude controlled runtime uses macOS sandbox-exec")
+@pytest.mark.parametrize('condition', ['no-dd', 'a', 'b', 'composition'])
+def test_claude_same_cli_bundle_and_worksheet_with_declared_skill_inputs(tmp_path, build_config_case, fake_provider, condition):
+    # Exercises the actual public commands with a dummy CLI, not native model discovery.
+    fixtures = [('input.txt', 'input.txt', 'task input')]
+    if condition != 'no-dd':
+        fixtures.append(('assigned.md', '.claude/skills/assigned/SKILL.md', f'---\nname: assigned\ndescription: {condition}\n---\n{condition}'))
+    if condition == 'composition':
+        fixtures.append(('companion.md', '.claude/skills/companion/SKILL.md', '---\nname: companion\ndescription: companion\n---\ncompanion'))
+    case = build_config_case(provider='claude', fixtures=tuple(fixtures))
+    trace = b'{"type":"system","subtype":"init"}\n{"type":"result","subtype":"success","is_error":false,"result":"answer"}\n'
+    fake_provider.configure(stdout=trace)
+    result = subprocess.run([sys.executable, '-m', 'skilltest', 'run', str(case.config_path)],
+        capture_output=True, text=True, timeout=30)
+    assert result.returncode == 0, result.stderr
+    bundle = Path(result.stdout.strip())
+    record = json.loads((bundle/'result.json').read_text())
+    assert record['execution']['provider'] == 'claude'
+    assert (bundle/'stdout.txt').read_bytes() == trace
+    assert (bundle/'final.txt').read_text() == 'answer'
+    assert (bundle/'workspace/evidence/dummy-tool-write.txt').is_file()
+    assert (bundle/'workspace/fixture/.git/HEAD').is_file()
+    for _, target, content in fixtures:
+        assert (bundle/'workspace/fixture'/target).read_text() == content
+    scenario = tmp_path/'scenario'
+    scenario.mkdir()
+    (scenario/'rubric.md').write_text('Existing rubric')
+    output = tmp_path/'worksheet.md'
+    worksheet = subprocess.run([sys.executable, '-m', 'skilltest', 'worksheet', 'scenario', str(bundle), '--output', str(output)],
+        cwd=tmp_path, capture_output=True, text=True, timeout=10)
+    assert worksheet.returncode == 0, worksheet.stderr
+    assert '| Provider | claude |' in output.read_text()
+    assert '|  |  |  |  |  |' in output.read_text()
+    assert b'DUMMY_AUTH_STATUS' not in b''.join(p.read_bytes() for p in bundle.iterdir() if p.is_file())

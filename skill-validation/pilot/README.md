@@ -12,6 +12,9 @@ Reuse its evidence only for controls demonstrably unchanged; unproved controls s
 For a qualified setup the routine path is: check inputs/version → run → inspect evidence/cleanup → score → update the summary.
 Do not repeat canaries, dummy profile setup, synthetic worksheet exercises or paid qualification calls per observation.
 The [Codex adapter](../runner/README.md#codex) owns private HOME/CODEX_HOME/TMPDIR, auth preflight, template-free Git boundary, input checks, exact invocation and cleanup; never duplicate that setup around a real run.
+The [Claude adapter](../runner/README.md#claude) supplies the equivalent local workflow using its qualified macOS controls and existing subscription, with `.claude/skills/` fixture targets.
+Claude qualification is pending; the same batch approval, freeze, evidence review and worksheet procedure applies once it passes.
+Both adapters produce raw traces and a separate final answer when available; inspect the full trace, not just `final.txt`.
 
 ## Bounded batches and approval
 
@@ -31,7 +34,8 @@ Keep progress in scratch during collection so the worktree remains clean without
 ## Preparation and freeze
 
 The completed pilot used `.worktrees/skilltest-input-isolation-spike` on `spike/skilltest-input-isolation`; that workspace is being retired under the [integration handoff](../../plans/2026-09-06-skilltest-sol-low-pilot.md).
-Future collection must use its own designated isolated worktree and newly approved absolute command paths; historical workspace paths below are not launch instructions for a new batch.
+Future collection must use the owner-designated checkout and newly approved absolute command paths; current testing development is on `main` in the primary checkout by owner instruction.
+Historical workspace paths below are not launch instructions for a new batch.
 Preserve main, the unrelated rewrite worktree and all 105 accepted historical records.
 Before collection, audit and commit the prompt, rubric, config, scoring interpretation and declared fixture/dependency files; record that full revision in the scratch summary.
 Require a clean worktree and retain a recoverable input revision plus the qualification decision.

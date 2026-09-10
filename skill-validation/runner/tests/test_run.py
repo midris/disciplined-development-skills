@@ -69,7 +69,7 @@ def test_rendered_request_and_raw_artifacts_are_preserved(build_config_case, pro
     for name, content in {
         "config.json": case.config_path.read_bytes(), "prompt-template.txt": template,
         "prompt.txt": expected.encode(), "stdout.txt": b"not-json\n", "stderr.txt": b"warning",
-        "final.txt": b"final\x00bytes" if provider == "codex" else b"not-json\n",
+        **({"final.txt": b"final\x00bytes"} if provider == "codex" else {}),
     }.items():
         assert (outcome.run_dir / name).read_bytes() == content
     value = record(outcome)
@@ -184,3 +184,39 @@ def test_result_publication_failure_removes_partial_file(build_config_case, prov
     assert outcome.diagnostic == "result artifact write failed: result failed"
     assert not (outcome.run_dir / "result.json").exists()
     assert not list(outcome.run_dir.glob(".result-*"))
+
+
+@pytest.mark.parametrize("stdout, final", [
+    (b'{"type":"system","subtype":"init"}\n{"type":"result","subtype":"success","is_error":false,"result":"answer"}\n', b"answer"),
+    (b'{"type":"result","subtype":"success","is_error":false,"result":""}\n', b""),
+    (b"not-json\n", None),
+    (b"", None),
+    (b'{"type":"result","subtype":"error_during_execution","is_error":true,"result":"error"}\n', None),
+    (b'{"type":"result","subtype":"success","is_error":false,"result":"one"}\n{"type":"result","subtype":"success","is_error":false,"result":"two"}\n', None),
+])
+def test_claude_trace_is_retained_and_only_unambiguous_final_is_extracted(build_config_case, provider_call, stdout, final):
+    provider_call.return_value = ProviderResult("claude", True, exit_code=0, stdout_bytes=stdout)
+    outcome = runner.run_once(build_config_case(provider="claude").config_path)
+    value = record(outcome)
+    assert outcome.exit_code == 0 and value["status"] == "COMPLETED"
+    assert (outcome.run_dir / "stdout.txt").read_bytes() == stdout
+    path = outcome.run_dir / "final.txt"
+    if final is None:
+        assert not path.exists()
+        assert "final answer" in (outcome.run_dir / "runner.log").read_text()
+    else:
+        assert path.read_bytes() == final
+
+
+@pytest.mark.parametrize("timed_out, exit_code, cleanup_error, code", [
+    (True, None, "unreaped", "PROVIDER_TIMEOUT"),
+    (False, 0, "cleanup failed", "PROVIDER_CLEANUP_FAILED"),
+])
+def test_claude_lifecycle_results_use_existing_schema_and_codes(build_config_case, provider_call, timed_out, exit_code, cleanup_error, code):
+    provider_call.return_value = ProviderResult("claude", True, exit_code=exit_code,
+        timed_out=timed_out, cleanup_error=cleanup_error, stdout_bytes=b"partial trace")
+    outcome = runner.run_once(build_config_case(provider="claude").config_path)
+    value = record(outcome)
+    assert value["infrastructure_error"]["code"] == code
+    assert value["execution"]["exit_code"] == exit_code
+    assert (outcome.run_dir / "stdout.txt").read_bytes() == b"partial trace"

@@ -10,6 +10,7 @@ import sys
 
 import pytest
 
+from skilltest import runtime as process_runtime
 from skilltest import codex_runtime
 from skilltest.codex_runtime import CodexRuntime
 from skilltest.providers import ProviderRequest, invoke_provider
@@ -58,20 +59,29 @@ def test_private_profile_git_and_dummy_provider_wiring(tmp_path, monkeypatch, fa
     assert (source / "auth.json").read_bytes() == original_auth
 
 
-def test_claude_dummy_provider_stdio_and_environment_wiring(tmp_path, fake_provider):
-    # Break: mocked adapter assertions passing while Claude's real process I/O/env differs.
+@pytest.mark.skipif(sys.platform != "darwin", reason="Claude controlled runtime uses macOS sandbox-exec")
+def test_claude_dummy_provider_uses_policy_fixture_git_and_raw_trace(tmp_path, fake_provider):
     workspace = tmp_path / "workspace"
-    workspace.mkdir()
-    fake_provider.configure(stdout=b"not-json\n", stderr=b"warning")
+    (workspace / "fixture").mkdir(parents=True)
+    (workspace / "evidence").mkdir()
+    home = Path(os.environ["HOME"])
+    (home / ".gitconfig").write_text("invalid global Git config: must not read")
+    trace = b'{"type":"result","subtype":"success","is_error":false,"result":"answer"}\n'
+    fake_provider.configure(stdout=trace, stderr=b"warning")
     request = ProviderRequest(workspace, b"prompt", tmp_path / "final.txt", "claude", "sonnet", "high")
     result = invoke_provider(request)
-    assert result.exit_code == 0 and result.invocation_started
-    assert (result.stdout_bytes, result.stderr_bytes) == (b"not-json\n", b"warning")
+    assert result.exit_code == 0 and result.invocation_started, result
+    assert result.cleanup_error is None
+    assert (result.stdout_bytes, result.stderr_bytes) == (trace, b"warning")
     observed = fake_provider.record()
-    assert observed["cwd"] == str(workspace) and observed["stdin"] == "prompt"
+    assert observed["cwd"] == str(workspace / "fixture") and observed["stdin"] == "prompt"
     assert observed["argv"][0] == str(fake_provider.settings_path.with_name("claude"))
-    assert observed["claude_baseline_env"]["CLAUDE_CODE_SIMPLE_SYSTEM_PROMPT"] == "1"
-    assert not request.final_output_path.exists()
+    assert observed["environment"]["HOME"] == str(home)
+    assert "CLAUDE_CODE_SIMPLE_SYSTEM_PROMPT" not in observed["claude_baseline_env"]
+    assert not Path(observed["environment"]["TMPDIR"]).exists()
+    assert (workspace / "evidence/dummy-tool-write.txt").read_text() == "dummy evidence"
+    assert (home / ".gitconfig").read_text() == "invalid global Git config: must not read"
+    assert not request.final_output_path.exists()  # Runner, not adapter, extracts the final answer.
 
 
 @pytest.mark.parametrize("ignore_term, expected_exit", [(False, -signal.SIGTERM), (True, -signal.SIGKILL)])
@@ -86,7 +96,7 @@ def test_ready_child_is_terminated_and_reaped_on_real_timeout(monkeypatch, ignor
     process = subprocess.Popen([sys.executable, "-c", script], stdin=subprocess.PIPE,
                                stdout=subprocess.PIPE, stderr=subprocess.PIPE, start_new_session=True)
     # Shorten the actual grace period at the Codex-owned boundary; no clock or timeout is mocked.
-    monkeypatch.setattr(codex_runtime, "TERMINATE_GRACE_SECONDS", 0.2)
+    monkeypatch.setattr(process_runtime, "TERMINATE_GRACE_SECONDS", 0.2)
     runtime = CodexRuntime(lambda _: None)
     try:
         ready, _, _ = select.select([process.stdout], [], [], 10)
@@ -100,7 +110,7 @@ def test_ready_child_is_terminated_and_reaped_on_real_timeout(monkeypatch, ignor
             os.killpg(process.pid, 0)
         assert all(stream.closed for stream in (process.stdin, process.stdout, process.stderr))
     finally:
-        error = codex_runtime.stop_owned(process)
+        error = process_runtime.stop_owned(process)
         for stream in (process.stdin, process.stdout, process.stderr):
             stream.close()
         assert error is None, f"smoke cleanup unresolved: owned PID/PGID {process.pid}: {error}"
@@ -124,7 +134,43 @@ def test_normal_parent_exit_stops_remaining_owned_worker():
         with pytest.raises(ProcessLookupError):
             os.killpg(process.pid, 0)
     finally:
-        error = codex_runtime.stop_owned(process)
+        error = process_runtime.stop_owned(process)
         process.stdout.close()
         process.stderr.close()
         assert error is None, f"smoke cleanup unresolved: owned PID/PGID {process.pid}: {error}"
+
+
+@pytest.mark.skipif(sys.platform != 'darwin', reason='macOS policy check')
+def test_claude_child_policy_denies_surrogate_semantic_reads_and_home_writes(tmp_path, fake_provider):
+    from skilltest.claude_runtime import ClaudeRuntime
+    home = Path(os.environ['HOME'])
+    inputs = home/'.claude'
+    inputs.mkdir()
+    secret = inputs/'settings.json'
+    secret.write_text('surrogate instruction canary')
+    assert secret.read_text() == 'surrogate instruction canary'  # Positive read control.
+    positive = home/'positive-write'
+    positive.write_text('allowed outside child policy')
+    fixture = tmp_path/'fixture'
+    fixture.mkdir()
+    runtime = ClaudeRuntime(lambda _: None)
+    try:
+        runtime.prepare(fixture)
+        probe = (
+            'from pathlib import Path\nimport sys\n'
+            'for operation in [lambda: Path(sys.argv[1]).read_bytes(), lambda: Path(sys.argv[2]).write_text("forbidden")]:\n'
+            ' try: operation()\n'
+            ' except PermissionError: pass\n'
+            ' else: raise AssertionError("policy did not deny access")\n'
+            'print("DENIED_BOTH")\n'
+        )
+        process = subprocess.Popen([*runtime.prefix, sys.executable, '-c', probe, str(secret), str(home/'negative-write')],
+            cwd=fixture, env=runtime.environment, stdin=subprocess.DEVNULL,
+            stdout=subprocess.PIPE, stderr=subprocess.PIPE, start_new_session=True)
+        stdout, stderr, timed_out = runtime.communicate(process, None, 10)
+        assert not timed_out and process.returncode == 0, stderr
+        assert stdout == b'DENIED_BOTH\n'
+        assert secret.read_text() == 'surrogate instruction canary'
+        assert not (home/'negative-write').exists()
+    finally:
+        assert runtime.cleanup() is None
