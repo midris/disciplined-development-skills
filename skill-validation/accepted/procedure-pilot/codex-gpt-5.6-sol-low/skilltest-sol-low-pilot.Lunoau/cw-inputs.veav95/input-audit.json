@@ -1,0 +1,89 @@
+{
+  "configs": {
+    "cw-01/current-dd": {
+      "config_sha256": "36c3ff70842b1949f1cfbff41481a8e1f2d995582be3a915285e69a9c6debe47",
+      "fixture_hashes": {
+        ".agents/skills/adversarial-review-loop/SKILL.md": "46b85eafc5db54cb521eed9c4a110e552c76d97cfae72e141f109c9dea10f0c6",
+        ".agents/skills/adversarial-review/SKILL.md": "9004ff153d5dc3a3690254667c4f666151dcabff7ef6f705cc751134be56499c",
+        ".agents/skills/concise-writing/SKILL.md": "4d12a2eb475c6b2ef57e2300c8c07af3f59c1e07b2b82695a3b7669eee1d6d72",
+        ".agents/skills/disciplined-development/SKILL.md": "1151a7575a5b6f72e007229c97efdb7a829695d08e8f44450d0d71b232e75dec",
+        ".agents/skills/disciplined-research/SKILL.md": "a5c4079e5aa21651ecd39b09e3fb2d9a58f4a1f3b99354b3b6927b2d44c6fb50",
+        ".agents/skills/dispatching-development-subagents/SKILL.md": "b89b4db8af53bd136237cb2306f956c039757a0e321b1f704bd16d1a00580500",
+        ".agents/skills/lean-plan-writing/SKILL.md": "6a3115a4d33ad2f99238f915a6a1b7869efd8c80a6cce422d3afae60c9857fac",
+        ".agents/skills/requesting-code-review/SKILL.md": "d71cc01ba56d2325cf8af5f7c11837819b63ecd57de0bfdb812f7f3ff7751df8",
+        ".agents/skills/requesting-code-review/code-reviewer.md": "5eca5fcfd48a50e0a526ce5ffd64bf625d6b81bb46d11795274dae451fe6ffd4",
+        ".agents/skills/sweeping-stale-references/SKILL.md": "d6812c33cae026807bbb3ebe851d93b60b513dd87ea5efd98aea28f5c02f9157",
+        ".agents/skills/writing-explicit-rationale/SKILL.md": "97eb06c649c194e8819b4dff68b808eda4ec7c948a6ead518da247daf31d6cfe",
+        ".agents/skills/writing-plans/SKILL.md": "48508f44bbfd7d24b029fbf3a314f3cd14c9615599059366e922f47b8dc08cf2",
+        ".agents/skills/writing-plans/plan-document-reviewer-prompt.md": "aa728b96aad603c8be28875a4305637f6c984aa81ffcadcb13e743202fa2a0c7"
+      },
+      "prepared_fixture": "/private/tmp/skilltest-sol-low-pilot.Lunoau/cw-inputs.veav95/prepared/skilltest-runs/20260907T211340480Z-pilot-cw-01-current-dd-28536f69-de75-436d-a50f-590910aff90f-gu_kkuyk/workspace/fixture",
+      "prompt_sha256": "ee17c7de4730f7dd0190e75e4d76292bf914f202dfdb6bc7ee160b5a65877e3e",
+      "rendered_prompt_sha256": "9dfa46f3236c2b6e2135acb8cea5920a3764d8b7b476ff9ce74dc7db8a925f01",
+      "rubric_sha256": "06a8adb2930f11c242dec98476a9640bf581fc000bd624d3ad4a50f658533d88",
+      "withholding": "exact fixture inventory; no rubric, evaluator docs, hooks or credentials"
+    },
+    "cw-01/discovery": {
+      "config_sha256": "b21ea2bce578c5edc5cb9be5edf754970e69f1a62ff9bc02559747cf495942d9",
+      "fixture_hashes": {
+        ".agents/skills/adversarial-review-loop/SKILL.md": "46b85eafc5db54cb521eed9c4a110e552c76d97cfae72e141f109c9dea10f0c6",
+        ".agents/skills/adversarial-review/SKILL.md": "9004ff153d5dc3a3690254667c4f666151dcabff7ef6f705cc751134be56499c",
+        ".agents/skills/concise-writing/SKILL.md": "4d12a2eb475c6b2ef57e2300c8c07af3f59c1e07b2b82695a3b7669eee1d6d72",
+        ".agents/skills/disciplined-development/SKILL.md": "1151a7575a5b6f72e007229c97efdb7a829695d08e8f44450d0d71b232e75dec",
+        ".agents/skills/disciplined-research/SKILL.md": "a5c4079e5aa21651ecd39b09e3fb2d9a58f4a1f3b99354b3b6927b2d44c6fb50",
+        ".agents/skills/dispatching-development-subagents/SKILL.md": "b89b4db8af53bd136237cb2306f956c039757a0e321b1f704bd16d1a00580500",
+        ".agents/skills/lean-plan-writing/SKILL.md": "6a3115a4d33ad2f99238f915a6a1b7869efd8c80a6cce422d3afae60c9857fac",
+        ".agents/skills/requesting-code-review/SKILL.md": "d71cc01ba56d2325cf8af5f7c11837819b63ecd57de0bfdb812f7f3ff7751df8",
+        ".agents/skills/requesting-code-review/code-reviewer.md": "5eca5fcfd48a50e0a526ce5ffd64bf625d6b81bb46d11795274dae451fe6ffd4",
+        ".agents/skills/sweeping-stale-references/SKILL.md": "d6812c33cae026807bbb3ebe851d93b60b513dd87ea5efd98aea28f5c02f9157",
+        ".agents/skills/writing-explicit-rationale/SKILL.md": "97eb06c649c194e8819b4dff68b808eda4ec7c948a6ead518da247daf31d6cfe",
+        ".agents/skills/writing-plans/SKILL.md": "48508f44bbfd7d24b029fbf3a314f3cd14c9615599059366e922f47b8dc08cf2",
+        ".agents/skills/writing-plans/plan-document-reviewer-prompt.md": "aa728b96aad603c8be28875a4305637f6c984aa81ffcadcb13e743202fa2a0c7"
+      },
+      "prepared_fixture": "/private/tmp/skilltest-sol-low-pilot.Lunoau/cw-inputs.veav95/prepared/skilltest-runs/20260907T211340484Z-pilot-cw-01-discovery-9a8eeef5-f523-4184-a976-9aea2bff6646-eayy_kbh/workspace/fixture",
+      "prompt_sha256": "56a9c1f62782b81ed01801acaeef034534abb21ec55963863e941f4d1c10de86",
+      "rendered_prompt_sha256": "56a9c1f62782b81ed01801acaeef034534abb21ec55963863e941f4d1c10de86",
+      "rubric_sha256": "11b5b229ba0f05cbffaaa19942b1d1b838ee354703870f40f7e40fdd1628eb8b",
+      "withholding": "exact fixture inventory; no rubric, evaluator docs, hooks or credentials"
+    },
+    "cw-01/no-dd": {
+      "config_sha256": "e93671af5d590c57bb92cb784a8e95aaf1e43d8625cb61c4a48d769ac19bb974",
+      "fixture_hashes": {
+        ".agents/skills/requesting-code-review/SKILL.md": "d71cc01ba56d2325cf8af5f7c11837819b63ecd57de0bfdb812f7f3ff7751df8",
+        ".agents/skills/requesting-code-review/code-reviewer.md": "5eca5fcfd48a50e0a526ce5ffd64bf625d6b81bb46d11795274dae451fe6ffd4",
+        ".agents/skills/writing-plans/SKILL.md": "48508f44bbfd7d24b029fbf3a314f3cd14c9615599059366e922f47b8dc08cf2",
+        ".agents/skills/writing-plans/plan-document-reviewer-prompt.md": "aa728b96aad603c8be28875a4305637f6c984aa81ffcadcb13e743202fa2a0c7"
+      },
+      "prepared_fixture": "/private/tmp/skilltest-sol-low-pilot.Lunoau/cw-inputs.veav95/prepared/skilltest-runs/20260907T211340478Z-pilot-cw-01-no-dd-35a5a392-6e21-4746-a61c-bac90fd7565b-mrd__ri8/workspace/fixture",
+      "prompt_sha256": "56a9c1f62782b81ed01801acaeef034534abb21ec55963863e941f4d1c10de86",
+      "rendered_prompt_sha256": "56a9c1f62782b81ed01801acaeef034534abb21ec55963863e941f4d1c10de86",
+      "rubric_sha256": "06a8adb2930f11c242dec98476a9640bf581fc000bd624d3ad4a50f658533d88",
+      "withholding": "exact fixture inventory; no rubric, evaluator docs, hooks or credentials"
+    },
+    "cw-17/discovery": {
+      "config_sha256": "65fde6eccf603f31677b21119bac108cf7b97cb70c901bfdb0e6b5c2e08a5cda",
+      "fixture_hashes": {
+        ".agents/skills/adversarial-review-loop/SKILL.md": "46b85eafc5db54cb521eed9c4a110e552c76d97cfae72e141f109c9dea10f0c6",
+        ".agents/skills/adversarial-review/SKILL.md": "9004ff153d5dc3a3690254667c4f666151dcabff7ef6f705cc751134be56499c",
+        ".agents/skills/concise-writing/SKILL.md": "4d12a2eb475c6b2ef57e2300c8c07af3f59c1e07b2b82695a3b7669eee1d6d72",
+        ".agents/skills/disciplined-development/SKILL.md": "1151a7575a5b6f72e007229c97efdb7a829695d08e8f44450d0d71b232e75dec",
+        ".agents/skills/disciplined-research/SKILL.md": "a5c4079e5aa21651ecd39b09e3fb2d9a58f4a1f3b99354b3b6927b2d44c6fb50",
+        ".agents/skills/dispatching-development-subagents/SKILL.md": "b89b4db8af53bd136237cb2306f956c039757a0e321b1f704bd16d1a00580500",
+        ".agents/skills/lean-plan-writing/SKILL.md": "6a3115a4d33ad2f99238f915a6a1b7869efd8c80a6cce422d3afae60c9857fac",
+        ".agents/skills/requesting-code-review/SKILL.md": "d71cc01ba56d2325cf8af5f7c11837819b63ecd57de0bfdb812f7f3ff7751df8",
+        ".agents/skills/requesting-code-review/code-reviewer.md": "5eca5fcfd48a50e0a526ce5ffd64bf625d6b81bb46d11795274dae451fe6ffd4",
+        ".agents/skills/sweeping-stale-references/SKILL.md": "d6812c33cae026807bbb3ebe851d93b60b513dd87ea5efd98aea28f5c02f9157",
+        ".agents/skills/writing-explicit-rationale/SKILL.md": "97eb06c649c194e8819b4dff68b808eda4ec7c948a6ead518da247daf31d6cfe",
+        ".agents/skills/writing-plans/SKILL.md": "48508f44bbfd7d24b029fbf3a314f3cd14c9615599059366e922f47b8dc08cf2",
+        ".agents/skills/writing-plans/plan-document-reviewer-prompt.md": "aa728b96aad603c8be28875a4305637f6c984aa81ffcadcb13e743202fa2a0c7"
+      },
+      "prepared_fixture": "/private/tmp/skilltest-sol-low-pilot.Lunoau/cw-inputs.veav95/prepared/skilltest-runs/20260907T211340489Z-pilot-cw-17-discovery-f5ce2056-9288-4075-be6f-97259e6d52e7-tz294kzq/workspace/fixture",
+      "prompt_sha256": "ce90fecc0cc9a2a764863b797d50ef232e5b013437cf320d8251009bc5c4cd1c",
+      "rendered_prompt_sha256": "ce90fecc0cc9a2a764863b797d50ef232e5b013437cf320d8251009bc5c4cd1c",
+      "rubric_sha256": "5692e3cdf6c73670df719360439a6430e50838a27707df70b972f90b0d05457d",
+      "withholding": "exact fixture inventory; no rubric, evaluator docs, hooks or credentials"
+    }
+  },
+  "kind": "provider-free CW preparation, not qualification or a model observation",
+  "source_head_before_freeze": "e082e057b8d8caa1328889977e7ef39265903912"
+}

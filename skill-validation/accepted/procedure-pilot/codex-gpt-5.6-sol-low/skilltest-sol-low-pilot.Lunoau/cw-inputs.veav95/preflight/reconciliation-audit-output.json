@@ -1,0 +1,55 @@
+{
+  "cli": {
+    "version": "codex-cli 0.153.4\n",
+    "version_stderr": "WARNING: proceeding, even though we could not create PATH aliases: Operation not permitted (os error 1)\n",
+    "digest": "b973d440acac501fd2594a43e7ca9ce41e0a65b9dfb28d0d7a7837c99e1261e3  /opt/homebrew/bin/codex\n",
+    "digest_stderr": "",
+    "exit_codes": [
+      0,
+      0
+    ]
+  },
+  "cw-01/current-dd": {
+    "frozen_files": "match",
+    "prepared_fixture": "match",
+    "qualified_guidance": "identical",
+    "files": 13
+  },
+  "cw-01/discovery": {
+    "frozen_files": "match",
+    "prepared_fixture": "match",
+    "qualified_guidance": "identical",
+    "files": 13
+  },
+  "cw-01/no-dd": {
+    "frozen_files": "match",
+    "prepared_fixture": "match",
+    "qualified_guidance": "identical",
+    "files": 4
+  },
+  "cw-17/discovery": {
+    "frozen_files": "match",
+    "prepared_fixture": "match",
+    "qualified_guidance": "identical",
+    "files": 13
+  },
+  "retained_catalog": {
+    "counts": [
+      7,
+      16
+    ],
+    "matching_bootstrap_files": 60,
+    "common_prompt_equal": true,
+    "cw_catalog_and_shell_read": true,
+    "automatic_cw_body_injection_observed": false
+  },
+  "retained_real_trace": {
+    "bundle": "/private/tmp/skilltest-sol-low-pilot.Lunoau/runs/skilltest-runs/20260907T075831064Z-pilot-qualification-current-dd-e5b3395b-e57b-495d-a62c-93a01b94815c-k8cni6s5",
+    "events": 10,
+    "all_started_items_completed": true,
+    "full_skill_reads": 3,
+    "model_authored_messages": 3,
+    "terminal_turn_completed": true,
+    "final_matches": true
+  }
+}

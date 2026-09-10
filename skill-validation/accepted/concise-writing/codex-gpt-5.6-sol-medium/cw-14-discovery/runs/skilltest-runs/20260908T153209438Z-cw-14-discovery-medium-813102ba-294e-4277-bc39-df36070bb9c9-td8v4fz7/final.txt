@@ -1,0 +1,14 @@
+Do not merge the shortened reference yet.
+
+The governing skill explicitly says its test-first rule applies to edits—including documentation and supporting references—and forbids retaining untested edits as “reference” ([SKILL.md](/private/tmp/skilltest-cw-baseline.bOn8Dx/runs/skilltest-runs/20260908T153209438Z-cw-14-discovery-medium-813102ba-294e-4277-bc39-df36070bb9c9-td8v4fz7/workspace/fixture/.agents/skills/writing-skills/SKILL.md:374)). Command references specifically require retrieval, application, and gap tests ([SKILL.md](/private/tmp/skilltest-cw-baseline.bOn8Dx/runs/skilltest-runs/20260908T153209438Z-cw-14-discovery-medium-813102ba-294e-4277-bc39-df36070bb9c9-td8v4fz7/workspace/fixture/.agents/skills/writing-skills/SKILL.md:433)). An unchanged main `SKILL.md` does not exempt its supporting files.
+
+There is conflicting wording in the testing supplement saying not to test pure reference skills ([testing-skills-with-subagents.md](/private/tmp/skilltest-cw-baseline.bOn8Dx/runs/skilltest-runs/20260908T153209438Z-cw-14-discovery-medium-813102ba-294e-4277-bc39-df36070bb9c9-td8v4fz7/workspace/fixture/.agents/skills/writing-skills/testing-skills-with-subagents.md:25)). That appears to exclude reference skills from pressure/compliance testing, not from the reference-specific functional tests enumerated by the main skill. Regardless, conflicting guidance must be surfaced rather than treated as permission to skip validation.
+
+Next:
+
+- Hold the shortened change.
+- Use the remaining window for representative retrieval, application, and gap tests.
+- Merge only if those pass and the removed repetition is shown to carry neither unique information nor necessary context.
+- If validation cannot finish, ship the previously approved reference unchanged, if one exists; otherwise hold the release.
+
+The deadline and maintainer direction are pressures, not evidence that the shortened reference remains usable. No files or git state were changed.

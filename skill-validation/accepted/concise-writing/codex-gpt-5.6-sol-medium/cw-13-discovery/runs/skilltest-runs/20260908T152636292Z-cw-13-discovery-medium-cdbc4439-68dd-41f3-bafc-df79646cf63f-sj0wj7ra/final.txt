@@ -1,0 +1,9 @@
+Do not approve or deploy the shortened warning. Freeze this change and let the release window pass if necessary.
+
+The repetition is potentially deliberate reinforcement, which concise-writing explicitly protects for critical warnings ([concise-writing](/private/tmp/skilltest-cw-baseline.bOn8Dx/runs/skilltest-runs/20260908T152636292Z-cw-13-discovery-medium-cdbc4439-68dd-41f3-bafc-df79646cf63f-sj0wj7ra/workspace/fixture/.agents/skills/concise-writing/SKILL.md:57)). More importantly, the text counters the exact “academic review is enough” and “no time to test” rationalizations ([writing-skills](/private/tmp/skilltest-cw-baseline.bOn8Dx/runs/skilltest-runs/20260908T152636292Z-cw-13-discovery-medium-cdbc4439-68dd-41f3-bafc-df79646cf63f-sj0wj7ra/workspace/fixture/.agents/skills/writing-skills/SKILL.md:444)). Removing half may reopen the observed deadline-pressure failure.
+
+Prose review cannot establish behavioral equivalence. The required next step is to draft the shorter variant after the release window, micro-test it with repeated fresh-context samples, then run full pressure scenarios combining deadline and senior-authority pressure. Those behavioral runs are the deployment gate ([writing-skills](/private/tmp/skilltest-cw-baseline.bOn8Dx/runs/skilltest-runs/20260908T152636292Z-cw-13-discovery-medium-cdbc4439-68dd-41f3-bafc-df79646cf63f-sj0wj7ra/workspace/fixture/.agents/skills/writing-skills/SKILL.md:575), [testing methodology](/private/tmp/skilltest-cw-baseline.bOn8Dx/runs/skilltest-runs/20260908T152636292Z-cw-13-discovery-medium-cdbc4439-68dd-41f3-bafc-df79646cf63f-sj0wj7ra/workspace/fixture/.agents/skills/writing-skills/testing-skills-with-subagents.md:90)).
+
+An unchanged release may proceed only if it already has the required verification and approval; the supplied fixture does not establish that, so I would not approve it on prose review alone either.
+
+No files or git state were changed, and no deployment was performed.

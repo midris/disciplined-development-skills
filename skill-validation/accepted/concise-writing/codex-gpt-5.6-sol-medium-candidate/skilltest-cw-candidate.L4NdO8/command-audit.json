@@ -1,0 +1,14 @@
+{
+  "result": "PASS",
+  "provider_calls": 0,
+  "commands": 66,
+  "conditions": 22,
+  "repetitions": 3,
+  "provider": "codex",
+  "model": "gpt-5.6-sol",
+  "effort": "medium",
+  "revision": "595f8e2bce0a62c5d4143ffebcdcf30cf8422b0d",
+  "clean_and_pushed": true,
+  "empty_attempt_directories": 66,
+  "approval_document_sha256": "21b35b9dc5ea062f9f31af3fe92e0d8bc8186769f680070fb992a1fec6625c6b"
+}

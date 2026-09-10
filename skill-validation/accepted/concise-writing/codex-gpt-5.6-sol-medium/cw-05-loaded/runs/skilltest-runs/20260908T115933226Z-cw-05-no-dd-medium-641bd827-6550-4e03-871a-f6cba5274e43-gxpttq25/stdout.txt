@@ -1,0 +1,4 @@
+{"type":"thread.started","thread_id":"01a080e3-473b-7810-b19b-de2f8ab756ff"}
+{"type":"turn.started"}
+{"type":"item.completed","item":{"id":"item_0","type":"agent_message","text":"The archive is generated nightly at 02:00 UTC and contains completed orders from the previous UTC day. Archives are retained for 30 days."}}
+{"type":"turn.completed","usage":{"input_tokens":15184,"cached_input_tokens":10624,"cache_write_input_tokens":0,"output_tokens":33,"reasoning_output_tokens":0}}

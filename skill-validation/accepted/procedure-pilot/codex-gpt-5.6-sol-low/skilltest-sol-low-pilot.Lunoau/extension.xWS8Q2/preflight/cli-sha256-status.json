@@ -1,0 +1,10 @@
+{
+  "argv": [
+    "/usr/bin/shasum",
+    "-a",
+    "256",
+    "/opt/homebrew/bin/codex"
+  ],
+  "cwd": "/Users/simon/work/personal/disciplined-development-skills/.worktrees/skilltest-input-isolation-spike",
+  "exit_code": 0
+}

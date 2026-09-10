@@ -1,0 +1,4 @@
+{"type":"thread.started","thread_id":"01a080e0-fa93-7862-8310-1f6ac6874c1c"}
+{"type":"turn.started"}
+{"type":"item.completed","item":{"id":"item_0","type":"agent_message","text":"## Access links\n\nAn access link is a single-use URL. Send it only to the intended recipient.\n\n## Expiration\n\nAccess links expire after 30 minutes. After expiration, an administrator must issue a new link."}}
+{"type":"turn.completed","usage":{"input_tokens":15169,"cached_input_tokens":10624,"cache_write_input_tokens":0,"output_tokens":72,"reasoning_output_tokens":22}}

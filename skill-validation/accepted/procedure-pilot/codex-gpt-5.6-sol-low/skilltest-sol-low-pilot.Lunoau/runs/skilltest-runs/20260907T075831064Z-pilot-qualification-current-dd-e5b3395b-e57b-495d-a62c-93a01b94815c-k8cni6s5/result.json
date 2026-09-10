@@ -1,0 +1,308 @@
+{
+  "artifacts": {
+    "config": {
+      "bytes": 2355,
+      "exists": true,
+      "path": "config.json",
+      "sha256": "07d8a47c4c74ef7a0362c8de978b64c8bfc14afae625a3ae76656182688ee0b9"
+    },
+    "evidence": {
+      "empty": false,
+      "entries": [
+        {
+          "bytes": 320,
+          "path": "qualification.txt",
+          "sha256": "2c636c3a8bdecfb4e83fad466459b5c61f9c0bdcced8d6d6d42ba4e3f72acc90",
+          "type": "file"
+        }
+      ],
+      "exists": true,
+      "path": "workspace/evidence"
+    },
+    "final": {
+      "bytes": 264,
+      "exists": true,
+      "path": "final.txt",
+      "sha256": "50174f2f1bcdd0e61346855551d32b493b33040c56ef948964f0e2215bded1f4"
+    },
+    "fixture": {
+      "empty": false,
+      "entries": [
+        {
+          "bytes": null,
+          "path": ".agents",
+          "sha256": null,
+          "type": "directory"
+        },
+        {
+          "bytes": null,
+          "path": ".agents/skills",
+          "sha256": null,
+          "type": "directory"
+        },
+        {
+          "bytes": null,
+          "path": ".agents/skills/adversarial-review",
+          "sha256": null,
+          "type": "directory"
+        },
+        {
+          "bytes": null,
+          "path": ".agents/skills/adversarial-review-loop",
+          "sha256": null,
+          "type": "directory"
+        },
+        {
+          "bytes": 8374,
+          "path": ".agents/skills/adversarial-review-loop/SKILL.md",
+          "sha256": "46b85eafc5db54cb521eed9c4a110e552c76d97cfae72e141f109c9dea10f0c6",
+          "type": "file"
+        },
+        {
+          "bytes": 10295,
+          "path": ".agents/skills/adversarial-review/SKILL.md",
+          "sha256": "9004ff153d5dc3a3690254667c4f666151dcabff7ef6f705cc751134be56499c",
+          "type": "file"
+        },
+        {
+          "bytes": null,
+          "path": ".agents/skills/concise-writing",
+          "sha256": null,
+          "type": "directory"
+        },
+        {
+          "bytes": 5616,
+          "path": ".agents/skills/concise-writing/SKILL.md",
+          "sha256": "4d12a2eb475c6b2ef57e2300c8c07af3f59c1e07b2b82695a3b7669eee1d6d72",
+          "type": "file"
+        },
+        {
+          "bytes": null,
+          "path": ".agents/skills/disciplined-development",
+          "sha256": null,
+          "type": "directory"
+        },
+        {
+          "bytes": 13112,
+          "path": ".agents/skills/disciplined-development/SKILL.md",
+          "sha256": "1151a7575a5b6f72e007229c97efdb7a829695d08e8f44450d0d71b232e75dec",
+          "type": "file"
+        },
+        {
+          "bytes": null,
+          "path": ".agents/skills/disciplined-research",
+          "sha256": null,
+          "type": "directory"
+        },
+        {
+          "bytes": 9400,
+          "path": ".agents/skills/disciplined-research/SKILL.md",
+          "sha256": "a5c4079e5aa21651ecd39b09e3fb2d9a58f4a1f3b99354b3b6927b2d44c6fb50",
+          "type": "file"
+        },
+        {
+          "bytes": null,
+          "path": ".agents/skills/dispatching-development-subagents",
+          "sha256": null,
+          "type": "directory"
+        },
+        {
+          "bytes": 5593,
+          "path": ".agents/skills/dispatching-development-subagents/SKILL.md",
+          "sha256": "b89b4db8af53bd136237cb2306f956c039757a0e321b1f704bd16d1a00580500",
+          "type": "file"
+        },
+        {
+          "bytes": null,
+          "path": ".agents/skills/lean-plan-writing",
+          "sha256": null,
+          "type": "directory"
+        },
+        {
+          "bytes": 5194,
+          "path": ".agents/skills/lean-plan-writing/SKILL.md",
+          "sha256": "6a3115a4d33ad2f99238f915a6a1b7869efd8c80a6cce422d3afae60c9857fac",
+          "type": "file"
+        },
+        {
+          "bytes": null,
+          "path": ".agents/skills/sweeping-stale-references",
+          "sha256": null,
+          "type": "directory"
+        },
+        {
+          "bytes": 7689,
+          "path": ".agents/skills/sweeping-stale-references/SKILL.md",
+          "sha256": "d6812c33cae026807bbb3ebe851d93b60b513dd87ea5efd98aea28f5c02f9157",
+          "type": "file"
+        },
+        {
+          "bytes": null,
+          "path": ".agents/skills/writing-explicit-rationale",
+          "sha256": null,
+          "type": "directory"
+        },
+        {
+          "bytes": 9181,
+          "path": ".agents/skills/writing-explicit-rationale/SKILL.md",
+          "sha256": "97eb06c649c194e8819b4dff68b808eda4ec7c948a6ead518da247daf31d6cfe",
+          "type": "file"
+        },
+        {
+          "bytes": null,
+          "path": ".agents/skills/writing-plans",
+          "sha256": null,
+          "type": "directory"
+        },
+        {
+          "bytes": 7053,
+          "path": ".agents/skills/writing-plans/SKILL.md",
+          "sha256": "48508f44bbfd7d24b029fbf3a314f3cd14c9615599059366e922f47b8dc08cf2",
+          "type": "file"
+        },
+        {
+          "bytes": 1713,
+          "path": ".agents/skills/writing-plans/plan-document-reviewer-prompt.md",
+          "sha256": "aa728b96aad603c8be28875a4305637f6c984aa81ffcadcb13e743202fa2a0c7",
+          "type": "file"
+        },
+        {
+          "bytes": null,
+          "path": ".git",
+          "sha256": null,
+          "type": "directory"
+        },
+        {
+          "bytes": 23,
+          "path": ".git/HEAD",
+          "sha256": "f6f2b945f6c411b02ba3da9c7ace88dcf71b6af65ba2e0d89aa82900042b5a10",
+          "type": "file"
+        },
+        {
+          "bytes": 137,
+          "path": ".git/config",
+          "sha256": "cae33efdb02cf774435c1ff9cb16bcc1014606908530c6e1dc727615fe3e8cda",
+          "type": "file"
+        },
+        {
+          "bytes": null,
+          "path": ".git/objects",
+          "sha256": null,
+          "type": "directory"
+        },
+        {
+          "bytes": null,
+          "path": ".git/objects/info",
+          "sha256": null,
+          "type": "directory"
+        },
+        {
+          "bytes": null,
+          "path": ".git/objects/pack",
+          "sha256": null,
+          "type": "directory"
+        },
+        {
+          "bytes": null,
+          "path": ".git/refs",
+          "sha256": null,
+          "type": "directory"
+        },
+        {
+          "bytes": null,
+          "path": ".git/refs/heads",
+          "sha256": null,
+          "type": "directory"
+        },
+        {
+          "bytes": null,
+          "path": ".git/refs/tags",
+          "sha256": null,
+          "type": "directory"
+        },
+        {
+          "bytes": null,
+          "path": "context",
+          "sha256": null,
+          "type": "directory"
+        },
+        {
+          "bytes": 551,
+          "path": "context/task.md",
+          "sha256": "c1de457ec9789a1345c72d3bf638486f5362d582bbb9917949eef8e00de5cabd",
+          "type": "file"
+        },
+        {
+          "bytes": null,
+          "path": "sources",
+          "sha256": null,
+          "type": "directory"
+        },
+        {
+          "bytes": 267,
+          "path": "sources/city-museum-addendum-2.md",
+          "sha256": "a882f3e3753ca78357333238e5f808d65d251852df04e0506bf2582940bec64f",
+          "type": "file"
+        },
+        {
+          "bytes": 329,
+          "path": "sources/city-museum-rfp.md",
+          "sha256": "5b50cf2558ef9a73335487198f2fd44a30339df58741df312374e169951340ca",
+          "type": "file"
+        },
+        {
+          "bytes": 257,
+          "path": "sources/friends-newsletter.md",
+          "sha256": "a8746ab03403c6143e8f65d0e249436b5bb8341c2ebe4c953eb21797787fad5f",
+          "type": "file"
+        }
+      ],
+      "exists": true,
+      "path": "workspace/fixture"
+    },
+    "prompt": {
+      "bytes": 2331,
+      "exists": true,
+      "path": "prompt.txt",
+      "sha256": "7c2bb0b31b95b2095f7e977e453027bc59ecc4a735c37d716730a2f9cb814e20"
+    },
+    "prompt_template": {
+      "bytes": 1190,
+      "exists": true,
+      "path": "prompt-template.txt",
+      "sha256": "6e86198566ca6e300d1685125e0c3fb4e571f1bf833563dc69a9401550e1fc6b"
+    },
+    "stderr": {
+      "bytes": 0,
+      "exists": true,
+      "path": "stderr.txt",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "stdout": {
+      "bytes": 29782,
+      "exists": true,
+      "path": "stdout.txt",
+      "sha256": "8563cb41ca5bfc176f9e09badcbc3de9dfc153b0399ab63a239efacf58236924"
+    }
+  },
+  "duration_seconds": 40.29,
+  "execution": {
+    "effort": "low",
+    "executable": "codex",
+    "exit_code": 0,
+    "invocation_started": true,
+    "model": "gpt-5.6-sol",
+    "provider": "codex",
+    "timed_out": false,
+    "timeout_seconds": 900
+  },
+  "finished_at": "2026-09-07T07:59:11.354Z",
+  "infrastructure_error": null,
+  "run_id": "20260907T075831064Z-pilot-qualification-current-dd-e5b3395b-e57b-495d-a62c-93a01b94815c-k8cni6s5",
+  "schema_version": "0.2",
+  "started_at": "2026-09-07T07:58:31.064Z",
+  "status": "COMPLETED",
+  "test": {
+    "id": "pilot-qualification-current-dd"
+  }
+}

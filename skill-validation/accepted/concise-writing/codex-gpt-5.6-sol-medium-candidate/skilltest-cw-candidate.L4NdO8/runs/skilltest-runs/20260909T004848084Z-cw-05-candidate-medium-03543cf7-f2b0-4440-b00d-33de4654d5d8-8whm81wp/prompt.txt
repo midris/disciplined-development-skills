@@ -1,0 +1,9 @@
+Read /private/tmp/skilltest-cw-candidate.L4NdO8/runs/skilltest-runs/20260909T004848084Z-cw-05-candidate-medium-03543cf7-f2b0-4440-b00d-33de4654d5d8-8whm81wp/workspace/fixture/.agents/skills/concise-writing/SKILL.md completely and follow it as binding guidance for this task.
+
+Authoritative notes: The archive is generated nightly at 02:00 UTC. It contains completed orders from the previous UTC day. Archives are retained for 30 days.
+
+Tighten this documentation and return only the revised text:
+
+The archive is generated nightly at 02:00 UTC. It contains completed orders from the previous UTC day. Archives are retained for 30 days. Teams should download every archive immediately to avoid any chance of data loss. For best performance, process archives before business hours.
+
+Work read-only within the supplied fixture. Do not edit files, change git state, inspect outside the supplied fixture, use the network, or dispatch agents.

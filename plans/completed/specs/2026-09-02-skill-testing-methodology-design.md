@@ -6,7 +6,7 @@ The mechanical worksheet generator specified here was implemented and accepted b
 the owner on 2026-09-03 after whole-branch review and offline verification. The
 owner-authorized DR-02 manual pilot also completed on 2026-09-03; its evidence
 remains scratch-only. The broader
-[baseline organization design](../../specs/2026-09-03-skill-validation-baseline-design.md)
+[baseline organization design](../../deferred/2026-09-03-skill-validation-baseline-design.md)
 is deferred pending an incremental redesign of its authority and evidence lifecycle.
 The completed implementation plan is archived beside this specification.
 
@@ -18,6 +18,7 @@ The methodology must distinguish semantic behavior from deterministic protocol, 
 ## Authorities
 
 - The [validation charter](../../../skill-validation/charter/core-contracts.md) defines skill invariants, evaluation ledgers, and acceptance ownership.
+- The live [test-category and coverage amendment](2026-09-06-skilltest-controlled-inputs-design.md#accepted-methodology-decision-shared-test-categories-and-coverage) defines shared discoverability/effectiveness/composition categories, non-redundant skill-specific coverage and model-dependent interpretation without changing the ledger/verdict rules here.
 - The [runner contract](../../../skill-validation/runner/README.md) defines scenario preparation, model invocation, and mechanical evidence collection.
 - The [scenario catalog](../../../skill-validation/scenarios/README.md) indexes the migrated prompts, rubrics, configurations, and supplied files.
 - The [retired comprehensive cleanup plan](../2026-08-01-comprehensive-skill-cleanup.md) and [design](2026-08-01-comprehensive-skill-cleanup-design.md) are historical context, not current methodology.
@@ -238,7 +239,7 @@ cell and the `Provider CLI version` cell remain blank.
 The orchestrator fills the CLI-version cell from retained evidence captured from the same executable immediately before the run, including each repetition or retry; version and evidence reference share that cell.
 The generator stays offline and never queries the current CLI or infers a version from an expected pin.
 The owner-authorized historical backfill adds only this row to completed worksheets, using `Unknown` plus the evidence limitation where no tied version can be established; it does not regenerate, rescore or rerun accepted observations.
-For new controlled runs, unusable version provenance follows the [failure/drift policy](../../specs/2026-09-06-skilltest-controlled-inputs-design.md#accepted-failure-and-drift-policy), not an automatic skill FAIL.
+For new controlled runs, unusable version provenance follows the [failure/drift policy](2026-09-06-skilltest-controlled-inputs-design.md#accepted-failure-and-drift-policy), not an automatic skill FAIL.
 Supplied skills remain ordinary fixture rows; the generator does not classify or
 handle them separately.
 It renders sections 5 through 10 as blank scoring structure for the orchestrator.

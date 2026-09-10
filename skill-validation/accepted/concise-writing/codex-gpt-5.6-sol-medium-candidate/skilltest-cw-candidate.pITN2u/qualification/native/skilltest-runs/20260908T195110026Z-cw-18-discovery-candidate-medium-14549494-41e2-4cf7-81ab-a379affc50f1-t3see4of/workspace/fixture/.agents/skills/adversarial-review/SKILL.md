@@ -1,0 +1,186 @@
+---
+name: adversarial-review
+description: Use when code-reviewing or self-reviewing code, specs, plans, or designs — especially same-family pairings where the default reviewer posture risks compounding over-engineering, accepting unverified rationale, or missing unenumerated edge cases.
+---
+
+# Adversarial Review
+
+## Overview
+
+Reviewer skill that injects adversarial posture.
+Use directly, paste into a review prompt, or feed to local automation.
+
+## Role
+
+Adapter on top of `superpowers:requesting-code-review`.
+Augments; does NOT replace.
+Base skill = what code review *is*; this skill = what *mode* to be in.
+
+## Posture
+
+**Default mental model: something is wrong here; find it.**
+
+- Thorough reviewer asks "is this complete?" → expands scope, adds rigor.
+- Adversarial reviewer asks "is this wrong?" → scrutinizes claims, challenges necessity.
+- Adversarial ≠ antagonistic. Adversarial = presumption of flaw + duty to find + verification over trust.
+- Adversarial is the requested service. Soft review and not surfacing issues quickly is failure to deliver.
+- Apply across code, architecture, design choices, and rationale.
+
+## End of posture
+
+Adversarial posture is scoped to the review.
+When the review completes, return to your pre-review posture.
+
+Don't carry the reviewer's verification duty past the review.
+
+## Severity rubric
+
+- **[P0]** — critical / blocks merge. Data loss, security hole, broken core path.
+- **[P1]** — important / resolve before opening the PR. Incorrect behavior on documented input, regression on tested path.
+- **[P2]** — minor / resolve before opening the PR. Cleanup, naming, comment drift; code that's correct only by a fragile, unstated invariant ("fix by construction").
+- **[P3]** — nit / optional. Style preference, missing punctuation.
+
+## Output format
+
+One finding per line, the line starting with its severity token; put any detail on indented lines beneath:
+
+```
+- [PN] <path>:<line>: <one-line summary>
+  <optional indented reasoning>
+```
+
+A line that starts with `[P0]`–`[P3]` is read as a finding — so start no other line with one.
+Emit findings (or `No findings.`) only after enumerating, verifying, and challenging, then close with the verdict line.
+
+**Verdict line.** The last non-blank line, nothing after it, containing only `DD-VERDICT: PASS` or `DD-VERDICT: BLOCK`: PASS = zero `[P0]`/`[P1]`/`[P2]` (`[P3]`-only passes), BLOCK = one or more.
+
+## Rules
+
+### Enumerate every class
+
+When the artifact references a class — "every X," "all Y," "handles Z" — list members and trace each.
+
+- "Handles all `git commit` forms" → bare, `-a`, `<pathspec>`. Does the design hold for each?
+- "Covers all error paths" → list them. Walk each.
+- Coverage claimed without enumeration is itself a finding.
+
+### Verify every rationale claim
+
+For every "we chose X because Y" / "Y doesn't support Z" / "Y is too slow":
+
+- Y is presumed unverified.
+- Check from primary sources (docs, code, measured behavior).
+- If Y can't be verified from the artifact + linked context, flag the rationale.
+
+Author confidence is not evidence.
+Citations are not verification.
+
+### Challenge every piece for necessity
+
+For each piece of the artifact, ask:
+
+- Observed failure mode, or hypothetical?
+- Real use case, or "just in case"?
+- Defense-in-depth justified by evidence, or by convention?
+- Feature, or non-feature framed as a feature?
+
+Hypothetical / just-in-case / convention / non-feature → flag for removal.
+This is `disciplined-development` Principle 7 applied to review.
+In prose the same test catches padding — load `concise-writing` when reviewing docs.
+
+### Generate the unexercised cases
+
+Code rests on assumptions it never states; a passing test or clean read confirms they held this run, not that they hold.
+Generate what it doesn't handle; surface what it leans on.
+
+**Inputs and conditions.** List every input read, resource depended on, boundary crossed, bound set; for each, generate the case the happy path skips:
+
+- *Absent* — resource/precondition missing (model, file, permission, config): typed error, or silent download / fallback / hang?
+- *Malformed* — value across a trust boundary (peer reply, API response, parsed field) used or committed unvalidated: a bad value stored as valid?
+- *Out-of-scale* — timeout/limit/buffer sized to the common case: holds for the largest real input?
+
+Skipping the enumeration — checking only what caught your eye — is itself the gap.
+
+**The invariant it relied on.** When correctness rests on an unstated or fragile assumption (ordering, init order, timing window, a sibling guarding the same hazard this path leaves implicit), grade it:
+
+- *Stated?* written (comment/assert/type), not re-derived.
+- *Local?* checkable here, not three functions away.
+- *Robust?* an inserted `await`/log/reorder can't silently break it.
+- *Symmetric?* the same hazard handled the same way in siblings.
+
+Any "no" is a finding, even if the code works today.
+Fix it by construction: enforce or unify until every axis is "yes".
+A doc comment only flips *Stated?*; a test flips none.
+Neither lowers the severity.
+
+**Before dismissing a false positive:** if your reason is "it can't happen" (tests pass, the scheduler prevents it, the caller never does), name the assumption that makes it safe and grade it (above) first — explaining the safety usually surfaces the finding.
+
+## Review angles
+
+The posture and rules above are the always-on baseline of every review — the **holistic** read that finds bugs, verifies rationale, challenges necessity, and generates the unexercised cases.
+An **angle** adds one specialized lens; it never narrows what you review.
+Bug-finding, rationale, necessity, and the unexercised-case sweep are the baseline, not angles — reserve an angle for a lens the baseline lacks.
+
+| Angle | Looks for |
+|-------|-----------|
+| **consistency** | divergence across the corpus — contract / signature / import drift, terminology drift (one concept, different names), wording drift, single-source duplication |
+| **executability** | could a zero-context implementer execute this? missing definitions, ambiguous contracts, misdirecting file lists |
+| **skill-authoring** | apply `superpowers:writing-skills` — a `description` that summarizes the workflow (agents skip the body), discipline rules with open rationalization loopholes, claims not backed by a watched failure |
+| **durability** | failure and partial-state paths of durable / source-of-truth state: non-atomic mutations, and reads that accept non-committed data |
+
+**When to apply:**
+- **consistency** — every artifact.
+- **executability** — artifacts with instructions a reader must execute (plans, specs, runbooks, command / setup docs).
+- **skill-authoring** — when the artifact is a skill (a `SKILL.md`).
+- **durability** — the artifact creates, persists, or reads durable / source-of-truth state (file write, append-only log, transaction, journal, spool, or any store another component treats as the source of truth). Skip for pure in-memory / stateless code. Run two checklists:
+  - *Mutation:* partial write then error → rolled back? flush/commit fails after the write → acknowledged anyway? process killed mid-op → torn record? a write-path crash on bad input (panic/abort, unchecked unwrap, `try!`/assert; NaN/±Inf, oversized) → typed error, or process crash? ('it's a programmer error / our own typed data' is no pass — a statically-valid value can be unserializable at runtime; the crash tears the record, and even a pre-write crash denies the caller a recoverable error) failure surfaced as the documented error type, or a leaked lower-layer one? retry after a failure → duplicate / gap / reorder?
+  - *Read/replay:* torn/partial final record (missing terminator) rejected? interior corruption (blank line, gap, out-of-order) rejected, not skipped? unknown/forward version loud, not mis-parsed? empty distinguished from corrupt?
+
+Every review is deep and whole-repo, anchored to the active plan and governing docs — no light or diff-scoped tier.
+Only the angles vary: the holistic baseline always runs; add each per its "when to apply" row.
+
+## Few-shot examples
+
+### Findings present
+
+```
+- [P1] spec.md:124: stdout-marker detection silently misses `git commit --quiet`
+  Quiet commits land without emitting `[<branch> <sha>]`. The counter
+  drifts. Either document `--quiet` as unsupported or use HEAD-before/
+  after as the detection signal.
+
+- [P2] spec.md:127: `mkdir -p` doesn't establish the documented mode-0600
+  `mkdir -p` honors umask; `mv` preserves temp file mode. Either
+  `umask 077` for the section or `chmod 600` before rename.
+
+DD-VERDICT: BLOCK
+```
+
+### Clean pass
+
+```
+No findings.
+
+DD-VERDICT: PASS
+```
+
+## Common reviewer rationalizations
+
+| Excuse | Reality |
+|--------|---------|
+| "Looks reasonable to me." | "Reasonable" is not a finding. State what's broken or `No findings.` |
+| "The author cited a reason." | Citations ≠ verification. Check the claim. |
+| "I don't see anything obvious." | Adversarial = look harder. Enumerate, verify, challenge, generate the unexercised cases. |
+| "Trivial piece; nothing to scrutinize." | Necessity check applies most where complexity hides — "obviously harmless" pieces. |
+| "Author deferred the choice; that's a valid design move." | A design that punts decisions punts the spec. Flag the unmade choice. |
+| "Don't be harsh." | Adversarial is the requested service. Softening = failing to deliver. |
+| "It's a false positive." | Name the assumption that makes it safe — that's usually the finding. |
+| "The tests prove it can't happen." | They prove it doesn't *now* — not that the assumption is stated, local, or robust. |
+| "Safe by how the runtime schedules it." | Safe by accident — one edit from broken. |
+| "The model's always there / the result's well-formed / inputs are small." | That's the assumption. Remove it and re-read. |
+
+## Composition
+
+- **`superpowers:requesting-code-review`** — base skill for request/response mechanics; this skill adds the posture.
+- **`superpowers:receiving-code-review`** — implementer-side discipline for handling findings.
+- **`disciplined-development` Principle 7** — implementer-side counterpart (don't add what evidence doesn't demand).

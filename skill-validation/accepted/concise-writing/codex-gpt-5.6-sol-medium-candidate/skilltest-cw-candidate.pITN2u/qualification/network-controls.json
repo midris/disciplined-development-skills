@@ -1,0 +1,27 @@
+[
+  {
+    "label": "positive",
+    "argv": [
+      "/opt/homebrew/bin/python3",
+      "-c",
+      "import socket; s=socket.socket(); s.bind((\"127.0.0.1\", 0)); s.close(); print(\"BIND_OK\")"
+    ],
+    "exit_code": 0,
+    "stdout": "BIND_OK\n",
+    "stderr": ""
+  },
+  {
+    "label": "denied",
+    "argv": [
+      "/usr/bin/sandbox-exec",
+      "-f",
+      "/private/tmp/skilltest-cw-candidate.pITN2u/qualification/no-network.sb",
+      "/opt/homebrew/bin/python3",
+      "-c",
+      "import socket; s=socket.socket(); s.bind((\"127.0.0.1\", 0)); s.close(); print(\"BIND_OK\")"
+    ],
+    "exit_code": 1,
+    "stdout": "",
+    "stderr": "Traceback (most recent call last):\n  File \"<string>\", line 1, in <module>\n    import socket; s=socket.socket(); s.bind((\"127.0.0.1\", 0)); s.close(); print(\"BIND_OK\")\n                                      ~~~~~~^^^^^^^^^^^^^^^^^^\nPermissionError: [Errno 1] Operation not permitted\n"
+  }
+]

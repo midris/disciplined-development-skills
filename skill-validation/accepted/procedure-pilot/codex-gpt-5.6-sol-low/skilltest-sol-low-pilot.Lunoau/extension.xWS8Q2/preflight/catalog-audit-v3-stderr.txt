@@ -1,0 +1,5 @@
+Traceback (most recent call last):
+  File "/private/tmp/skilltest-sol-low-pilot.Lunoau/extension.xWS8Q2/audit-native-catalog-v3.py", line 123, in <module>
+    assert comparison["prior_common_equal_except_review_entry"],"additional prior/common difference; review required"
+           ~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: additional prior/common difference; review required

@@ -1,0 +1,9 @@
+Controlling procurement deadline: September 22, 2026, at 5:00 p.m. ET.
+
+Report JSON fields:
+- path: string
+- line_count: integer
+
+Skill file titles:
+- Writing Plans
+- Plan Document Reviewer Prompt Template

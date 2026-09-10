@@ -59,7 +59,7 @@ completes and reviews the worksheet according to the
 Fill it with the version and a retained evidence reference in the same cell, captured from the same executable immediately before that run (including repetitions and retries).
 The generator never queries the current CLI or substitutes an expected pin for historical evidence.
 For the historical backfill, use `Unknown` with the evidence limitation when a run's version cannot be established.
-For new controlled runs, missing or unusable version evidence pauses comparison under the [failure/drift policy](../../plans/specs/2026-09-06-skilltest-controlled-inputs-design.md#accepted-failure-and-drift-policy), not an automatic skill FAIL.
+For new controlled runs, missing or unusable version evidence pauses comparison under the [failure/drift policy](../../plans/completed/specs/2026-09-06-skilltest-controlled-inputs-design.md#accepted-failure-and-drift-policy), not an automatic skill FAIL.
 
 Success exits `0` and prints the resolved output path to standard output. Usage or
 input failure exits `2`; output collision or write failure exits `1`. Failures emit
@@ -231,7 +231,7 @@ Before manual removal, verify the exact logged directory and that its owned proc
 Do not copy the runtime into a retained evidence package.
 
 These are controlled-input mechanisms, not proof of exhaustive filesystem isolation or effective native discovery.
-Real CLI qualification of supplied skills, common/bootstrap inputs, shell-startup behavior and evidence writes remains a separate owner-approved step in the [pilot plan](../../plans/2026-09-06-skilltest-sol-low-pilot.md).
+Real CLI qualification of supplied skills, common/bootstrap inputs, shell-startup behavior and evidence writes remains a separate owner-approved step in the [pilot plan](../../plans/completed/2026-09-06-skilltest-sol-low-pilot.md).
 
 ### Claude
 

@@ -1,0 +1,24 @@
+{
+  "argv": [
+    "/bin/zsh",
+    "-lc",
+    "cd \"$1\" || exit; shift; command -v cat || exit; cat \"$@\" >/dev/null",
+    "extension-tool-check",
+    "/private/tmp/skilltest-sol-low-pilot.Lunoau/extension.xWS8Q2/preflight/catalog-v3/catalog-tmp/skilltest-runs/20260907T180819807Z-pilot-ar-03-no-dd-d47f9ef8-2608-4bb1-bea6-c88cda6bd571-zzc77fzf/workspace/fixture",
+    ".agents/skills/writing-plans/SKILL.md",
+    ".agents/skills/writing-plans/plan-document-reviewer-prompt.md",
+    ".agents/skills/requesting-code-review/SKILL.md",
+    ".agents/skills/requesting-code-review/code-reviewer.md",
+    "project/benchmarks/sort.json",
+    "project/plans/normalize.md",
+    "project/src/bulk.py",
+    "project/src/normalize.py",
+    "project/src/retry.py",
+    "project/src/validate.py"
+  ],
+  "cwd": "/private/tmp/skilltest-sol-low-pilot.Lunoau/extension.xWS8Q2/preflight/catalog-v3/catalog-tmp/skilltest-runs/20260907T180819807Z-pilot-ar-03-no-dd-d47f9ef8-2608-4bb1-bea6-c88cda6bd571-zzc77fzf/workspace/fixture",
+  "exit_code": 0,
+  "timed_out": false,
+  "stdout": "/bin/cat\n",
+  "stderr": ""
+}

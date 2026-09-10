@@ -1,0 +1,29 @@
+{
+  "argv": [
+    "/bin/zsh",
+    "-lc",
+    "cd \"$1\" || exit; shift; cat \"$@\" >/dev/null",
+    "cw-tools",
+    "/private/tmp/skilltest-cw-candidate.pITN2u/qualification/native/skilltest-runs/20260908T195110026Z-cw-18-discovery-candidate-medium-14549494-41e2-4cf7-81ab-a379affc50f1-t3see4of/workspace/fixture",
+    ".agents/skills/writing-plans/SKILL.md",
+    ".agents/skills/writing-plans/plan-document-reviewer-prompt.md",
+    ".agents/skills/requesting-code-review/SKILL.md",
+    ".agents/skills/requesting-code-review/code-reviewer.md",
+    ".agents/skills/adversarial-review-loop/SKILL.md",
+    ".agents/skills/adversarial-review/SKILL.md",
+    ".agents/skills/concise-writing/SKILL.md",
+    ".agents/skills/disciplined-development/SKILL.md",
+    ".agents/skills/disciplined-research/SKILL.md",
+    ".agents/skills/dispatching-development-subagents/SKILL.md",
+    ".agents/skills/lean-plan-writing/SKILL.md",
+    ".agents/skills/sweeping-stale-references/SKILL.md",
+    ".agents/skills/writing-explicit-rationale/SKILL.md"
+  ],
+  "cwd": "/private/tmp/skilltest-cw-candidate.pITN2u/qualification/native/skilltest-runs/20260908T195110026Z-cw-18-discovery-candidate-medium-14549494-41e2-4cf7-81ab-a379affc50f1-t3see4of/workspace/fixture",
+  "env": {
+    "HOME": "/private/tmp/skilltest-cw-candidate.pITN2u/qualification/native/skilltest-codex-ut8ttkxq/home",
+    "CODEX_HOME": "/private/tmp/skilltest-cw-candidate.pITN2u/qualification/native/skilltest-codex-ut8ttkxq/codex",
+    "TMPDIR": "/private/tmp/skilltest-cw-candidate.pITN2u/qualification/native/skilltest-codex-ut8ttkxq/tmp",
+    "PATH": "/opt/homebrew/bin:/usr/bin:/bin:/usr/sbin:/sbin"
+  }
+}

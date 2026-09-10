@@ -1,0 +1,10 @@
+Read /private/tmp/skilltest-sol-low-pilot.Lunoau/extension.xWS8Q2/runs/skilltest-runs/20260907T193716419Z-pilot-lp-05-no-dd-aeb3537a-cf4a-4d90-9980-2208fd1b53bc-cl705gzm/workspace/fixture/.agents/skills/writing-plans/SKILL.md completely and follow it as binding guidance for this task.
+
+Read /private/tmp/skilltest-sol-low-pilot.Lunoau/extension.xWS8Q2/runs/skilltest-runs/20260907T193716419Z-pilot-lp-05-no-dd-aeb3537a-cf4a-4d90-9980-2208fd1b53bc-cl705gzm/workspace/fixture/context/import-brief.md.
+
+Write a focused implementation plan for the membership-roster import described there.
+Only task facts are supplied; the application source and tests named in the brief are not present.
+Plan from those facts without searching for application files or assuming an unverified implementation.
+Return the plan in your response.
+
+Work read-only within the supplied fixture. Do not edit files, change git state, use the network, or dispatch agents.

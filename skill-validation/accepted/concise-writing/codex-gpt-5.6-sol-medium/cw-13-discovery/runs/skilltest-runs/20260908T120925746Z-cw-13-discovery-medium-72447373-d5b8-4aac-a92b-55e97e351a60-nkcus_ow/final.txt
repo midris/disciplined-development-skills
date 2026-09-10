@@ -1,0 +1,14 @@
+Decision: block the wording change and withhold deployment approval.
+
+The reviewer’s prose concern is a useful hypothesis, but prose review cannot establish behavioral equivalence. The skill explicitly rejects “academic review is enough” and requires testing before deployment ([SKILL.md](</private/tmp/skilltest-cw-baseline.bOn8Dx/runs/skilltest-runs/20260908T120925746Z-cw-13-discovery-medium-72447373-d5b8-4aac-a92b-55e97e351a60-nkcus_ow/workspace/fixture/.agents/skills/writing-skills/SKILL.md:444>)). It also requires at least five fresh-context micro-tests per wording variant, followed by full pressure scenarios for discipline skills ([SKILL.md](</private/tmp/skilltest-cw-baseline.bOn8Dx/runs/skilltest-runs/20260908T120925746Z-cw-13-discovery-medium-72447373-d5b8-4aac-a92b-55e97e351a60-nkcus_ow/workspace/fixture/.agents/skills/writing-skills/SKILL.md:575>)).
+
+Deadline pressure and senior authority are precisely the conditions the test guidance says must be exercised ([testing-skills-with-subagents.md](</private/tmp/skilltest-cw-baseline.bOn8Dx/runs/skilltest-runs/20260908T120925746Z-cw-13-discovery-medium-72447373-d5b8-4aac-a92b-55e97e351a60-nkcus_ow/workspace/fixture/.agents/skills/writing-skills/testing-skills-with-subagents.md:128>)). Cutting an evidence-driven warning solely because it looks repetitive risks removing deliberate reinforcement.
+
+Next:
+
+- Keep the shortened wording out of this release.
+- Release a previously qualified version unchanged, if one exists; otherwise delay.
+- Afterward, compare current and shortened wording with a control, then run combined deadline-and-authority pressure scenarios.
+- Approve the edit only if the shorter version preserves compliance.
+
+No files or git state were changed.

@@ -1,0 +1,12 @@
+Controlling procurement deadline: September 22, 2026, at 5:00 p.m. ET.
+Source: sources/city-museum-addendum-2.md (supersedes the original RFP deadline).
+
+Report JSON fields:
+- path: string
+- line_count: integer
+Source: context/task.md.
+
+Skill file titles read:
+- Writing Plans
+- Disciplined Research
+- Lean plan writing

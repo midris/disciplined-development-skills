@@ -1,0 +1,11 @@
+{
+  "checked_at": "2026-09-08T02:55:36.803369+00:00",
+  "version": "codex-cli 0.153.4\n",
+  "version_stderr": "WARNING: proceeding, even though we could not create PATH aliases: Operation not permitted (os error 1)\n",
+  "digest": "b973d440acac501fd2594a43e7ca9ce41e0a65b9dfb28d0d7a7837c99e1261e3  /opt/homebrew/bin/codex\n",
+  "digest_stderr": "",
+  "config": "/Users/simon/work/personal/disciplined-development-skills/.worktrees/cw-validation-design/skill-validation/pilot/efforts/medium/cw17-discovery.json",
+  "config_sha256": "ba4ddb0dfd204b88560575a880459441d2bce85fcd7bead121425a09a38e46bc",
+  "frozen_revision": "6fb4780fce37710a76116dbbeaa832a6a42289cd",
+  "clean": true
+}

@@ -1,6 +1,7 @@
 # Skill-test pilot runbook
 
-[Current status, approval boundaries and next action](../../plans/2026-09-06-skilltest-sol-low-pilot.md) live in the active plan.
+[Current status, approval boundaries and next action](../../plans/2026-09-09-dd-skill-testing.md) live in the active testing plan.
+Pilot collection is complete; this document remains the reusable execution/scoring procedure.
 The [charter](../charter/core-contracts.md) and [methodology](../../plans/completed/specs/2026-09-02-skill-testing-methodology-design.md) govern judgment.
 This is a procedure for an agent, not a campaign program; configs declare inputs and the runner owns runtime setup.
 Do not rerun a completed attempt or invoke a proposed config merely because it appears in a document.
@@ -33,7 +34,7 @@ Keep progress in scratch during collection so the worktree remains clean without
 
 ## Preparation and freeze
 
-The completed pilot used `.worktrees/skilltest-input-isolation-spike` on `spike/skilltest-input-isolation`; that workspace is being retired under the [integration handoff](../../plans/2026-09-06-skilltest-sol-low-pilot.md).
+The completed pilot used `.worktrees/skilltest-input-isolation-spike` on `spike/skilltest-input-isolation`; that workspace was retired under the [integration handoff](../../plans/completed/2026-09-06-skilltest-sol-low-pilot.md).
 Future collection must use the owner-designated checkout and newly approved absolute command paths; current testing development is on `main` in the primary checkout by owner instruction.
 Historical workspace paths below are not launch instructions for a new batch.
 Preserve main, the unrelated rewrite worktree and all 105 accepted historical records.
@@ -51,7 +52,7 @@ Audit prompt pairs for equal task/output boundaries and only intended treatment 
 Supply the task facts needed by the rubric before collection; if runnable verification is required, provide the test framework, command and working directory in the fixture unless selecting them is the explicit test purpose.
 For a future LP variant, supply that toolchain context identically in both arms while keeping absent application source explicit; do not require a model to guess a framework or claim it executed unavailable tests.
 This is a requirement for future fixture design, not permission to edit or rerun completed pilot inputs.
-Declare whether the scenario tests behavior or discovery, following the [separate test-purpose contract](../../plans/specs/2026-09-06-skilltest-controlled-inputs-design.md#accepted-separation-setup-discovery-and-behavior).
+Declare whether the scenario tests behavior or discovery, following the [separate test-purpose contract](../../plans/completed/specs/2026-09-06-skilltest-controlled-inputs-design.md#accepted-separation-setup-discovery-and-behavior).
 Behavior prompts explicitly load the target/composed skills: common Superpowers directives stay the same, while no-DD omits DD directives and files.
 Verify requested reads in the trace; retain ignored directives as fidelity failures without claiming loaded-skill behavior or silently excluding the observation.
 Only dedicated discovery scenarios omit skill-loading hints and judge spontaneous selection; do not conflate either type with setup qualification.
@@ -69,7 +70,7 @@ Link these homes instead of copying verdict explanations or run narratives into 
 Preserve raw evidence; add extra exception notes only when the worksheet/summary cannot explain the recovery safely.
 Existing pilot evidence is retained through owner review, not deleted to conform to the simpler future layout.
 
-The completed initial sequence used two qualification calls and four DR-02/LP-01 observations; its exact attempt labels, commands and evidence live in the original scratch summary linked by the active plan.
+The completed initial sequence used two qualification calls and four DR-02/LP-01 observations; its exact attempt labels, commands and evidence live in the original scratch summary linked by the [completed pilot record](../../plans/completed/2026-09-06-skilltest-sol-low-pilot.md#pilot-handoff--owner-acceptance-pending).
 Every future batch freezes its own counts/order; retain judgeable FAILs and passing controls without increasing effort or adding repetitions to obtain a preferred verdict.
 
 ### Behavior extension inputs
@@ -92,7 +93,7 @@ The existing MIT notice remains outside subject fixtures; all nine DD copies are
 Source/target inventories live in the configs; audit their copied bytes and retain tied hashes in scratch before collection.
 The added review skill changes the common catalog: complete affected catalog/common-input qualification and check the CLI version/digest before inheriting the original pilot's controls.
 
-The [extension scoring mapping](../../plans/specs/2026-09-06-skilltest-controlled-inputs-design.md#proposed-pilot-extension-explicitly-loaded-behavior-under-pressure) and paired rubrics are evaluator-only.
+The [extension scoring mapping](../../plans/completed/specs/2026-09-06-skilltest-controlled-inputs-design.md#proposed-pilot-extension-explicitly-loaded-behavior-under-pressure) and paired rubrics are evaluator-only.
 DR-05/LP-05 rubrics preserve their source bytes; AR-03 permits equivalent material severity and blocking-conclusion wording instead of requiring DD marker syntax.
 For every extension run, record all requested full skill reads and their order as loading fidelity; keep it separate from semantic task behavior and native discovery.
 There are no permitted fixture/evidence edits, network task calls or agent dispatches. These are fidelity checks, not new skill invariants; ordinary answer formatting has no authenticated consumer, so deterministic protocol is N/A.
@@ -101,7 +102,7 @@ Compare results only within each frozen pair; the completed original four observ
 
 ## CW purpose-separated inputs
 
-These four configs implement three purposes; approval and collection status live in the active plan, not this reusable input table:
+These four configs implemented the completed three-purpose pilot; its [archived record](../../plans/completed/2026-09-06-skilltest-sol-low-pilot.md#task-9-qualify-and-exercise-the-cw-purposes) retains approval and collection status:
 
 | Purpose / condition | Config | Prompt | Evaluator-only rubric |
 |---|---|---|---|
@@ -146,7 +147,7 @@ Run each prelaunch check separately, require exit 0, and require Git status outp
 
 ```sh
 git status --short
-git diff --exit-code "$PILOT_INPUT_REVISION" -- skill-validation/pilot skill-validation/runner plans/specs/2026-09-06-skilltest-controlled-inputs-design.md
+git diff --exit-code "$PILOT_INPUT_REVISION" -- skill-validation/pilot skill-validation/runner plans/completed/specs/2026-09-06-skilltest-controlled-inputs-design.md
 test -d "$PILOT_SCRATCH/runs" && test -d "$(dirname "$PILOT_ATTEMPT")"
 test -d "$PILOT_ATTEMPT"
 /opt/homebrew/bin/codex --version > "$PILOT_ATTEMPT/cli-version.txt" 2> "$PILOT_ATTEMPT/version-stderr.txt"
@@ -212,7 +213,7 @@ Routine record: runner bundle + CLI/command evidence + completed worksheet + sum
 
 ## Failure and recovery
 
-Apply the [failure/drift policy](../../plans/specs/2026-09-06-skilltest-controlled-inputs-design.md#accepted-failure-and-drift-policy):
+Apply the [failure/drift policy](../../plans/completed/specs/2026-09-06-skilltest-controlled-inputs-design.md#accepted-failure-and-drift-policy):
 
 - Nonfatal CLI diagnostics: retain stderr and note the diagnostic, supporting checks and uncertainty in the worksheet. Continue the approved batch without retry or renewed approval when runner/provider completion succeeds, the response is judgeable, required input/provenance/trace/cleanup checks pass, and there is no evidence of changed model/effort, contamination or compromised controls. A log labeled ERROR is not by itself a failed run; exit 0 alone is not sufficient either.
 - Unexpected execution failure: retain evidence and stop to investigate; do not retry until it meets the understood infrastructure-only rule below.

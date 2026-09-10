@@ -1,0 +1,1 @@
+PASS: baseline/candidate native catalogs 16/16, 18/18, 7/7; CW descriptions match each supplied body; normalized common inputs equal; historical bootstrap bytes equal; local reads and cleanup verified. CW18 write reuses retained qualification.

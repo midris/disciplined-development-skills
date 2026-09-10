@@ -1,0 +1,178 @@
+{
+  "scope": "provider-free input/config/copy audit only; no CLI, authentication, runtime or native-catalog qualification",
+  "status": "PASS",
+  "source_revision": "d6ba84546e4e5547b457a8ed6f1982af75944c73",
+  "superpowers_version": "6.3.0",
+  "manifest_sha256": "d0d56f9f3a6adbf341d5d49850f63def17bfb7e9a39704b517745b2c554498c3",
+  "source_copies": {
+    "skill-validation/pilot/inputs/tasks/dr-05/sources/nimbus-support-matrix.md": {
+      "source": "skill-validation/scenarios/disciplined-research/dr-05/fixture/sources/nimbus-support-matrix.md",
+      "sha256": "0abe5b18aaa9a6315fa982dba406a8bb6255dd9652674956426fb34fbd4c5843"
+    },
+    "skill-validation/pilot/inputs/tasks/lp-05/context/import-brief.md": {
+      "source": "skill-validation/scenarios/lean-plan-writing/lp-05/fixture/context/import-brief.md",
+      "sha256": "8789920dd0f54b1804e2a0aab65adfbcc728d525598d1d30a1d13b28c901c128"
+    },
+    "skill-validation/pilot/inputs/tasks/ar-03/project/benchmarks/sort.json": {
+      "source": "skill-validation/scenarios/adversarial-review/ar-03/fixture/project/benchmarks/sort.json",
+      "sha256": "2a3c39905224a730da2182fa14aad68215caf7a536e251f818f751d4c2e4f2ae"
+    },
+    "skill-validation/pilot/inputs/tasks/ar-03/project/plans/normalize.md": {
+      "source": "skill-validation/scenarios/adversarial-review/ar-03/fixture/project/plans/normalize.md",
+      "sha256": "963cae0e7dbd0d03ad3dc944d53d79bf5166a029e2ee08ccc8b3e0c7c007ecd1"
+    },
+    "skill-validation/pilot/inputs/tasks/ar-03/project/src/bulk.py": {
+      "source": "skill-validation/scenarios/adversarial-review/ar-03/fixture/project/src/bulk.py",
+      "sha256": "1640200ee740a66856d513fc3534ab6b62301f0838a0ebc438499620db2bbab0"
+    },
+    "skill-validation/pilot/inputs/tasks/ar-03/project/src/normalize.py": {
+      "source": "skill-validation/scenarios/adversarial-review/ar-03/fixture/project/src/normalize.py",
+      "sha256": "947c4926116f228a4843a7aa213cf46c86c03553315f55735b43b5085998223d"
+    },
+    "skill-validation/pilot/inputs/tasks/ar-03/project/src/retry.py": {
+      "source": "skill-validation/scenarios/adversarial-review/ar-03/fixture/project/src/retry.py",
+      "sha256": "424d10fc3e9c4ef274312c2bffe331f60b53ad1d6ed5d873a0d13fb07aa9ff7f"
+    },
+    "skill-validation/pilot/inputs/tasks/ar-03/project/src/validate.py": {
+      "source": "skill-validation/scenarios/adversarial-review/ar-03/fixture/project/src/validate.py",
+      "sha256": "020d6e30bd07ed9d44fe122dc0772cdf7080434947be2cc2dc21a878e5dbbbb0"
+    },
+    "skill-validation/pilot/inputs/superpowers/requesting-code-review/SKILL.md": {
+      "source": "/Users/simon/.codex/plugins/cache/claude-plugins-official/superpowers/6.3.0/skills/requesting-code-review/SKILL.md",
+      "sha256": "d71cc01ba56d2325cf8af5f7c11837819b63ecd57de0bfdb812f7f3ff7751df8"
+    },
+    "skill-validation/pilot/inputs/superpowers/requesting-code-review/code-reviewer.md": {
+      "source": "/Users/simon/.codex/plugins/cache/claude-plugins-official/superpowers/6.3.0/skills/requesting-code-review/code-reviewer.md",
+      "sha256": "5eca5fcfd48a50e0a526ce5ffd64bf625d6b81bb46d11795274dae451fe6ffd4"
+    }
+  },
+  "rows": [
+    {
+      "scenario": "dr-05",
+      "condition": "no-dd",
+      "config": "/Users/simon/work/personal/disciplined-development-skills/.worktrees/skilltest-input-isolation-spike/skill-validation/pilot/dr-05/no-dd/test.json",
+      "prepared_fixture": "/private/tmp/skilltest-sol-low-pilot.Lunoau/extension.xWS8Q2/preflight/prepared/skilltest-runs/20260907T172323878Z-pilot-dr-05-no-dd-cd192fee-addd-44f4-89fb-95f48202710d-2zt51az5/workspace/fixture",
+      "prompt_sha256": "d3410e0baf3ff7b953bde20855c57010b04e52afb10ae234a40d5b9e182393d5",
+      "rubric_sha256": "f34530f4d3fcb87fb2e8097168f462bfc906843d4d793f0f4ab68e88b0920ed8",
+      "fixtures": {
+        ".agents/skills/writing-plans/SKILL.md": "48508f44bbfd7d24b029fbf3a314f3cd14c9615599059366e922f47b8dc08cf2",
+        ".agents/skills/writing-plans/plan-document-reviewer-prompt.md": "aa728b96aad603c8be28875a4305637f6c984aa81ffcadcb13e743202fa2a0c7",
+        ".agents/skills/requesting-code-review/SKILL.md": "d71cc01ba56d2325cf8af5f7c11837819b63ecd57de0bfdb812f7f3ff7751df8",
+        ".agents/skills/requesting-code-review/code-reviewer.md": "5eca5fcfd48a50e0a526ce5ffd64bf625d6b81bb46d11795274dae451fe6ffd4",
+        "sources/nimbus-support-matrix.md": "0abe5b18aaa9a6315fa982dba406a8bb6255dd9652674956426fb34fbd4c5843"
+      }
+    },
+    {
+      "scenario": "dr-05",
+      "condition": "current-dd",
+      "config": "/Users/simon/work/personal/disciplined-development-skills/.worktrees/skilltest-input-isolation-spike/skill-validation/pilot/dr-05/current-dd/test.json",
+      "prepared_fixture": "/private/tmp/skilltest-sol-low-pilot.Lunoau/extension.xWS8Q2/preflight/prepared/skilltest-runs/20260907T172323881Z-pilot-dr-05-current-dd-556074ab-5b6b-4faa-b74e-6a42f34e2136-xzh19woe/workspace/fixture",
+      "prompt_sha256": "7d2c0a9dc67dff51c11072e640e1194bbc1a6cd621488d6497030fae984ba588",
+      "rubric_sha256": "f34530f4d3fcb87fb2e8097168f462bfc906843d4d793f0f4ab68e88b0920ed8",
+      "fixtures": {
+        ".agents/skills/writing-plans/SKILL.md": "48508f44bbfd7d24b029fbf3a314f3cd14c9615599059366e922f47b8dc08cf2",
+        ".agents/skills/writing-plans/plan-document-reviewer-prompt.md": "aa728b96aad603c8be28875a4305637f6c984aa81ffcadcb13e743202fa2a0c7",
+        ".agents/skills/requesting-code-review/SKILL.md": "d71cc01ba56d2325cf8af5f7c11837819b63ecd57de0bfdb812f7f3ff7751df8",
+        ".agents/skills/requesting-code-review/code-reviewer.md": "5eca5fcfd48a50e0a526ce5ffd64bf625d6b81bb46d11795274dae451fe6ffd4",
+        ".agents/skills/adversarial-review-loop/SKILL.md": "46b85eafc5db54cb521eed9c4a110e552c76d97cfae72e141f109c9dea10f0c6",
+        ".agents/skills/adversarial-review/SKILL.md": "9004ff153d5dc3a3690254667c4f666151dcabff7ef6f705cc751134be56499c",
+        ".agents/skills/concise-writing/SKILL.md": "4d12a2eb475c6b2ef57e2300c8c07af3f59c1e07b2b82695a3b7669eee1d6d72",
+        ".agents/skills/disciplined-development/SKILL.md": "1151a7575a5b6f72e007229c97efdb7a829695d08e8f44450d0d71b232e75dec",
+        ".agents/skills/disciplined-research/SKILL.md": "a5c4079e5aa21651ecd39b09e3fb2d9a58f4a1f3b99354b3b6927b2d44c6fb50",
+        ".agents/skills/dispatching-development-subagents/SKILL.md": "b89b4db8af53bd136237cb2306f956c039757a0e321b1f704bd16d1a00580500",
+        ".agents/skills/lean-plan-writing/SKILL.md": "6a3115a4d33ad2f99238f915a6a1b7869efd8c80a6cce422d3afae60c9857fac",
+        ".agents/skills/sweeping-stale-references/SKILL.md": "d6812c33cae026807bbb3ebe851d93b60b513dd87ea5efd98aea28f5c02f9157",
+        ".agents/skills/writing-explicit-rationale/SKILL.md": "97eb06c649c194e8819b4dff68b808eda4ec7c948a6ead518da247daf31d6cfe",
+        "sources/nimbus-support-matrix.md": "0abe5b18aaa9a6315fa982dba406a8bb6255dd9652674956426fb34fbd4c5843"
+      }
+    },
+    {
+      "scenario": "lp-05",
+      "condition": "no-dd",
+      "config": "/Users/simon/work/personal/disciplined-development-skills/.worktrees/skilltest-input-isolation-spike/skill-validation/pilot/lp-05/no-dd/test.json",
+      "prepared_fixture": "/private/tmp/skilltest-sol-low-pilot.Lunoau/extension.xWS8Q2/preflight/prepared/skilltest-runs/20260907T172323885Z-pilot-lp-05-no-dd-52abb3c0-94c2-4b35-b127-a244a8ca72eb-icaomu7f/workspace/fixture",
+      "prompt_sha256": "ff6a3fbd6a69f9112dc9b4226aafc45215705c07560a7c7d5dfa8adeeb395d44",
+      "rubric_sha256": "237f61c94a6e3ec5be12afe4e8d5a2d78482651a43c217ab65c5aa9ea9bf27ac",
+      "fixtures": {
+        ".agents/skills/writing-plans/SKILL.md": "48508f44bbfd7d24b029fbf3a314f3cd14c9615599059366e922f47b8dc08cf2",
+        ".agents/skills/writing-plans/plan-document-reviewer-prompt.md": "aa728b96aad603c8be28875a4305637f6c984aa81ffcadcb13e743202fa2a0c7",
+        ".agents/skills/requesting-code-review/SKILL.md": "d71cc01ba56d2325cf8af5f7c11837819b63ecd57de0bfdb812f7f3ff7751df8",
+        ".agents/skills/requesting-code-review/code-reviewer.md": "5eca5fcfd48a50e0a526ce5ffd64bf625d6b81bb46d11795274dae451fe6ffd4",
+        "context/import-brief.md": "8789920dd0f54b1804e2a0aab65adfbcc728d525598d1d30a1d13b28c901c128"
+      }
+    },
+    {
+      "scenario": "lp-05",
+      "condition": "current-dd",
+      "config": "/Users/simon/work/personal/disciplined-development-skills/.worktrees/skilltest-input-isolation-spike/skill-validation/pilot/lp-05/current-dd/test.json",
+      "prepared_fixture": "/private/tmp/skilltest-sol-low-pilot.Lunoau/extension.xWS8Q2/preflight/prepared/skilltest-runs/20260907T172323887Z-pilot-lp-05-current-dd-8e5e58b7-76c9-4ea8-91bd-d528c253e351-vq3rmws_/workspace/fixture",
+      "prompt_sha256": "03cea3290d7aa6a33b25a11aa4f19c5c68dee8898ed69cc424c4e7a97692a31d",
+      "rubric_sha256": "237f61c94a6e3ec5be12afe4e8d5a2d78482651a43c217ab65c5aa9ea9bf27ac",
+      "fixtures": {
+        ".agents/skills/writing-plans/SKILL.md": "48508f44bbfd7d24b029fbf3a314f3cd14c9615599059366e922f47b8dc08cf2",
+        ".agents/skills/writing-plans/plan-document-reviewer-prompt.md": "aa728b96aad603c8be28875a4305637f6c984aa81ffcadcb13e743202fa2a0c7",
+        ".agents/skills/requesting-code-review/SKILL.md": "d71cc01ba56d2325cf8af5f7c11837819b63ecd57de0bfdb812f7f3ff7751df8",
+        ".agents/skills/requesting-code-review/code-reviewer.md": "5eca5fcfd48a50e0a526ce5ffd64bf625d6b81bb46d11795274dae451fe6ffd4",
+        ".agents/skills/adversarial-review-loop/SKILL.md": "46b85eafc5db54cb521eed9c4a110e552c76d97cfae72e141f109c9dea10f0c6",
+        ".agents/skills/adversarial-review/SKILL.md": "9004ff153d5dc3a3690254667c4f666151dcabff7ef6f705cc751134be56499c",
+        ".agents/skills/concise-writing/SKILL.md": "4d12a2eb475c6b2ef57e2300c8c07af3f59c1e07b2b82695a3b7669eee1d6d72",
+        ".agents/skills/disciplined-development/SKILL.md": "1151a7575a5b6f72e007229c97efdb7a829695d08e8f44450d0d71b232e75dec",
+        ".agents/skills/disciplined-research/SKILL.md": "a5c4079e5aa21651ecd39b09e3fb2d9a58f4a1f3b99354b3b6927b2d44c6fb50",
+        ".agents/skills/dispatching-development-subagents/SKILL.md": "b89b4db8af53bd136237cb2306f956c039757a0e321b1f704bd16d1a00580500",
+        ".agents/skills/lean-plan-writing/SKILL.md": "6a3115a4d33ad2f99238f915a6a1b7869efd8c80a6cce422d3afae60c9857fac",
+        ".agents/skills/sweeping-stale-references/SKILL.md": "d6812c33cae026807bbb3ebe851d93b60b513dd87ea5efd98aea28f5c02f9157",
+        ".agents/skills/writing-explicit-rationale/SKILL.md": "97eb06c649c194e8819b4dff68b808eda4ec7c948a6ead518da247daf31d6cfe",
+        "context/import-brief.md": "8789920dd0f54b1804e2a0aab65adfbcc728d525598d1d30a1d13b28c901c128"
+      }
+    },
+    {
+      "scenario": "ar-03",
+      "condition": "no-dd",
+      "config": "/Users/simon/work/personal/disciplined-development-skills/.worktrees/skilltest-input-isolation-spike/skill-validation/pilot/ar-03/no-dd/test.json",
+      "prepared_fixture": "/private/tmp/skilltest-sol-low-pilot.Lunoau/extension.xWS8Q2/preflight/prepared/skilltest-runs/20260907T172323892Z-pilot-ar-03-no-dd-20783166-6219-4b3e-97e2-b7957e794b1e-6xnq7094/workspace/fixture",
+      "prompt_sha256": "7e6014f282882e87458b65e91dc70a3a21ed7ea76cce9324e7050b69beedef59",
+      "rubric_sha256": "fcc3beb9f0c9f566e75b538a6ec443c0e201374957197a8b30501be78fbf9efd",
+      "fixtures": {
+        ".agents/skills/writing-plans/SKILL.md": "48508f44bbfd7d24b029fbf3a314f3cd14c9615599059366e922f47b8dc08cf2",
+        ".agents/skills/writing-plans/plan-document-reviewer-prompt.md": "aa728b96aad603c8be28875a4305637f6c984aa81ffcadcb13e743202fa2a0c7",
+        ".agents/skills/requesting-code-review/SKILL.md": "d71cc01ba56d2325cf8af5f7c11837819b63ecd57de0bfdb812f7f3ff7751df8",
+        ".agents/skills/requesting-code-review/code-reviewer.md": "5eca5fcfd48a50e0a526ce5ffd64bf625d6b81bb46d11795274dae451fe6ffd4",
+        "project/benchmarks/sort.json": "2a3c39905224a730da2182fa14aad68215caf7a536e251f818f751d4c2e4f2ae",
+        "project/plans/normalize.md": "963cae0e7dbd0d03ad3dc944d53d79bf5166a029e2ee08ccc8b3e0c7c007ecd1",
+        "project/src/bulk.py": "1640200ee740a66856d513fc3534ab6b62301f0838a0ebc438499620db2bbab0",
+        "project/src/normalize.py": "947c4926116f228a4843a7aa213cf46c86c03553315f55735b43b5085998223d",
+        "project/src/retry.py": "424d10fc3e9c4ef274312c2bffe331f60b53ad1d6ed5d873a0d13fb07aa9ff7f",
+        "project/src/validate.py": "020d6e30bd07ed9d44fe122dc0772cdf7080434947be2cc2dc21a878e5dbbbb0"
+      }
+    },
+    {
+      "scenario": "ar-03",
+      "condition": "current-dd",
+      "config": "/Users/simon/work/personal/disciplined-development-skills/.worktrees/skilltest-input-isolation-spike/skill-validation/pilot/ar-03/current-dd/test.json",
+      "prepared_fixture": "/private/tmp/skilltest-sol-low-pilot.Lunoau/extension.xWS8Q2/preflight/prepared/skilltest-runs/20260907T172323895Z-pilot-ar-03-current-dd-4af09b02-88c0-4017-80f6-978a0e8d049e-s8t5_rzx/workspace/fixture",
+      "prompt_sha256": "0438a9713e78921d6a2cda0813546bac7534204678780d76ecdab094ac2cda14",
+      "rubric_sha256": "fcc3beb9f0c9f566e75b538a6ec443c0e201374957197a8b30501be78fbf9efd",
+      "fixtures": {
+        ".agents/skills/writing-plans/SKILL.md": "48508f44bbfd7d24b029fbf3a314f3cd14c9615599059366e922f47b8dc08cf2",
+        ".agents/skills/writing-plans/plan-document-reviewer-prompt.md": "aa728b96aad603c8be28875a4305637f6c984aa81ffcadcb13e743202fa2a0c7",
+        ".agents/skills/requesting-code-review/SKILL.md": "d71cc01ba56d2325cf8af5f7c11837819b63ecd57de0bfdb812f7f3ff7751df8",
+        ".agents/skills/requesting-code-review/code-reviewer.md": "5eca5fcfd48a50e0a526ce5ffd64bf625d6b81bb46d11795274dae451fe6ffd4",
+        ".agents/skills/adversarial-review-loop/SKILL.md": "46b85eafc5db54cb521eed9c4a110e552c76d97cfae72e141f109c9dea10f0c6",
+        ".agents/skills/adversarial-review/SKILL.md": "9004ff153d5dc3a3690254667c4f666151dcabff7ef6f705cc751134be56499c",
+        ".agents/skills/concise-writing/SKILL.md": "4d12a2eb475c6b2ef57e2300c8c07af3f59c1e07b2b82695a3b7669eee1d6d72",
+        ".agents/skills/disciplined-development/SKILL.md": "1151a7575a5b6f72e007229c97efdb7a829695d08e8f44450d0d71b232e75dec",
+        ".agents/skills/disciplined-research/SKILL.md": "a5c4079e5aa21651ecd39b09e3fb2d9a58f4a1f3b99354b3b6927b2d44c6fb50",
+        ".agents/skills/dispatching-development-subagents/SKILL.md": "b89b4db8af53bd136237cb2306f956c039757a0e321b1f704bd16d1a00580500",
+        ".agents/skills/lean-plan-writing/SKILL.md": "6a3115a4d33ad2f99238f915a6a1b7869efd8c80a6cce422d3afae60c9857fac",
+        ".agents/skills/sweeping-stale-references/SKILL.md": "d6812c33cae026807bbb3ebe851d93b60b513dd87ea5efd98aea28f5c02f9157",
+        ".agents/skills/writing-explicit-rationale/SKILL.md": "97eb06c649c194e8819b4dff68b808eda4ec7c948a6ead518da247daf31d6cfe",
+        "project/benchmarks/sort.json": "2a3c39905224a730da2182fa14aad68215caf7a536e251f818f751d4c2e4f2ae",
+        "project/plans/normalize.md": "963cae0e7dbd0d03ad3dc944d53d79bf5166a029e2ee08ccc8b3e0c7c007ecd1",
+        "project/src/bulk.py": "1640200ee740a66856d513fc3534ab6b62301f0838a0ebc438499620db2bbab0",
+        "project/src/normalize.py": "947c4926116f228a4843a7aa213cf46c86c03553315f55735b43b5085998223d",
+        "project/src/retry.py": "424d10fc3e9c4ef274312c2bffe331f60b53ad1d6ed5d873a0d13fb07aa9ff7f",
+        "project/src/validate.py": "020d6e30bd07ed9d44fe122dc0772cdf7080434947be2cc2dc21a878e5dbbbb0"
+      }
+    }
+  ]
+}

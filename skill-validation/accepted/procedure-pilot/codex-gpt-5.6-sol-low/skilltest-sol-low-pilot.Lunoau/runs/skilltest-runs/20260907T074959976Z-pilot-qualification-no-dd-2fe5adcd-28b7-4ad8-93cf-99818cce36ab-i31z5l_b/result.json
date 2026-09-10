@@ -1,0 +1,200 @@
+{
+  "artifacts": {
+    "config": {
+      "bytes": 1041,
+      "exists": true,
+      "path": "config.json",
+      "sha256": "3de28d42013464f0980a8433b1441bc60a52dfd65d92a2fbf5969a419178d5ba"
+    },
+    "evidence": {
+      "empty": false,
+      "entries": [
+        {
+          "bytes": 206,
+          "path": "qualification.txt",
+          "sha256": "a5eb857be0ccca85b0e09837ed424876416cc86d74ed9d3cdd19490b37fea95b",
+          "type": "file"
+        }
+      ],
+      "exists": true,
+      "path": "workspace/evidence"
+    },
+    "final": {
+      "bytes": 250,
+      "exists": true,
+      "path": "final.txt",
+      "sha256": "271db15baa11b23a29c2f5d9835f81254956570d8f85db623c48bdf58571aa80"
+    },
+    "fixture": {
+      "empty": false,
+      "entries": [
+        {
+          "bytes": null,
+          "path": ".agents",
+          "sha256": null,
+          "type": "directory"
+        },
+        {
+          "bytes": null,
+          "path": ".agents/skills",
+          "sha256": null,
+          "type": "directory"
+        },
+        {
+          "bytes": null,
+          "path": ".agents/skills/writing-plans",
+          "sha256": null,
+          "type": "directory"
+        },
+        {
+          "bytes": 7053,
+          "path": ".agents/skills/writing-plans/SKILL.md",
+          "sha256": "48508f44bbfd7d24b029fbf3a314f3cd14c9615599059366e922f47b8dc08cf2",
+          "type": "file"
+        },
+        {
+          "bytes": 1713,
+          "path": ".agents/skills/writing-plans/plan-document-reviewer-prompt.md",
+          "sha256": "aa728b96aad603c8be28875a4305637f6c984aa81ffcadcb13e743202fa2a0c7",
+          "type": "file"
+        },
+        {
+          "bytes": null,
+          "path": ".git",
+          "sha256": null,
+          "type": "directory"
+        },
+        {
+          "bytes": 23,
+          "path": ".git/HEAD",
+          "sha256": "f6f2b945f6c411b02ba3da9c7ace88dcf71b6af65ba2e0d89aa82900042b5a10",
+          "type": "file"
+        },
+        {
+          "bytes": 137,
+          "path": ".git/config",
+          "sha256": "cae33efdb02cf774435c1ff9cb16bcc1014606908530c6e1dc727615fe3e8cda",
+          "type": "file"
+        },
+        {
+          "bytes": null,
+          "path": ".git/objects",
+          "sha256": null,
+          "type": "directory"
+        },
+        {
+          "bytes": null,
+          "path": ".git/objects/info",
+          "sha256": null,
+          "type": "directory"
+        },
+        {
+          "bytes": null,
+          "path": ".git/objects/pack",
+          "sha256": null,
+          "type": "directory"
+        },
+        {
+          "bytes": null,
+          "path": ".git/refs",
+          "sha256": null,
+          "type": "directory"
+        },
+        {
+          "bytes": null,
+          "path": ".git/refs/heads",
+          "sha256": null,
+          "type": "directory"
+        },
+        {
+          "bytes": null,
+          "path": ".git/refs/tags",
+          "sha256": null,
+          "type": "directory"
+        },
+        {
+          "bytes": null,
+          "path": "context",
+          "sha256": null,
+          "type": "directory"
+        },
+        {
+          "bytes": 551,
+          "path": "context/task.md",
+          "sha256": "c1de457ec9789a1345c72d3bf638486f5362d582bbb9917949eef8e00de5cabd",
+          "type": "file"
+        },
+        {
+          "bytes": null,
+          "path": "sources",
+          "sha256": null,
+          "type": "directory"
+        },
+        {
+          "bytes": 267,
+          "path": "sources/city-museum-addendum-2.md",
+          "sha256": "a882f3e3753ca78357333238e5f808d65d251852df04e0506bf2582940bec64f",
+          "type": "file"
+        },
+        {
+          "bytes": 329,
+          "path": "sources/city-museum-rfp.md",
+          "sha256": "5b50cf2558ef9a73335487198f2fd44a30339df58741df312374e169951340ca",
+          "type": "file"
+        },
+        {
+          "bytes": 257,
+          "path": "sources/friends-newsletter.md",
+          "sha256": "a8746ab03403c6143e8f65d0e249436b5bb8341c2ebe4c953eb21797787fad5f",
+          "type": "file"
+        }
+      ],
+      "exists": true,
+      "path": "workspace/fixture"
+    },
+    "prompt": {
+      "bytes": 1709,
+      "exists": true,
+      "path": "prompt.txt",
+      "sha256": "978ccdb75f1b03148ab25d9075417c575ff58d20db4d7305ce1178133597e63e"
+    },
+    "prompt_template": {
+      "bytes": 919,
+      "exists": true,
+      "path": "prompt-template.txt",
+      "sha256": "fd931da66abc0d82b21df52e28c39612c09aa2edf787293581f06b39a41d7409"
+    },
+    "stderr": {
+      "bytes": 0,
+      "exists": true,
+      "path": "stderr.txt",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "stdout": {
+      "bytes": 16373,
+      "exists": true,
+      "path": "stdout.txt",
+      "sha256": "782695ebf7baeaaf8c057b3a75e6052178ef669cf485aebd31ae995bf311ed4b"
+    }
+  },
+  "duration_seconds": 42.17,
+  "execution": {
+    "effort": "low",
+    "executable": "codex",
+    "exit_code": 0,
+    "invocation_started": true,
+    "model": "gpt-5.6-sol",
+    "provider": "codex",
+    "timed_out": false,
+    "timeout_seconds": 900
+  },
+  "finished_at": "2026-09-07T07:50:42.146Z",
+  "infrastructure_error": null,
+  "run_id": "20260907T074959976Z-pilot-qualification-no-dd-2fe5adcd-28b7-4ad8-93cf-99818cce36ab-i31z5l_b",
+  "schema_version": "0.2",
+  "started_at": "2026-09-07T07:49:59.976Z",
+  "status": "COMPLETED",
+  "test": {
+    "id": "pilot-qualification-no-dd"
+  }
+}

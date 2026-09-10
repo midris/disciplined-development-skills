@@ -1,0 +1,48 @@
+skill-validation/runner/.venv/bin/python - <<'PY'
+import hashlib,json,re
+from pathlib import Path
+from skilltest.worksheet import _render
+root=Path('/private/tmp/skilltest-sol-low-pilot.Lunoau/cw-inputs.veav95')
+files=[Path(p) for p in ['skill-validation/pilot/README.md','skill-validation/README.md','plans/2026-09-06-skilltest-sol-low-pilot.md','plans/specs/2026-09-06-skilltest-controlled-inputs-design.md','plans/deferred/2026-09-07-skilltest-discovery-behavior-catalog-separation.md']]
+files += [root/'summary.md',root/'refresh-warning.md']
+count=0
+for label,name in [('cw01-no-dd','cw-01/no-dd'),('cw01-current-dd','cw-01/current-dd'),('cw01-discovery','cw-01/discovery'),('cw17-discovery','cw-17/discovery')]:
+    at=root/'attempts'/label
+    b=Path((at/'command-stdout.txt').read_text().strip())
+    assert b.parent==root/'runs/skilltest-runs'
+    r=json.loads((b/'result.json').read_text())
+    scenario='skill-validation/pilot/'+name
+    rubric=hashlib.sha256((Path(scenario)/'rubric.md').read_bytes()).hexdigest()
+    blank=_render(scenario,rubric,r);filled=(at/'worksheet.md').read_text()
+    for section in ('Infrastructure','Executed inputs','Withheld evaluation input'):
+        pattern=r'## '+section+r'\n(.*?)(?=\n## |\Z)'
+        assert re.search(pattern,blank,re.S).group(1)==re.search(pattern,filled,re.S).group(1)
+    ident=re.search(r'## Run identity\n(.*?)(?=\n## )',blank,re.S).group(1)
+    for line in ident.splitlines():
+        if not line.startswith(('| Scenario purpose |','| Provider CLI version |')): assert line in filled
+    assert '|  |  |' not in filled and r['execution']['exit_code']==0 and r['infrastructure_error'] is None
+    for cap in ['cli-version.txt','cli-sha256.txt']:
+        assert (at/cap).read_bytes()==(root.parent/'extension.xWS8Q2/preflight'/cap).read_bytes()
+    assert (at/'command-stderr.txt').read_bytes()==b''
+    files.append(at/'worksheet.md')
+assert len(list((root/'runs/skilltest-runs').iterdir()))==4
+assert len(list((root/'attempts').iterdir()))==4
+for file in files:
+    text=file.read_text()
+    for link in re.findall(r'\]\(([^)]+)\)',text):
+        if link.startswith(('https://','http://')): continue
+        path,_,anchor=link.partition('#')
+        target=(file.parent/path) if path else file
+        assert target.exists(),(str(file),link)
+        if anchor:
+            headings=re.findall(r'^#{1,6}\s+(.*?)\s*#*$',target.read_text(),re.M)
+            anchors=[]
+            for heading in headings:
+                heading=re.sub(r'[^\w\- ]','',heading.lower()).replace(' ','-')
+                anchors.append(heading)
+            assert anchor in anchors,(str(file),link)
+        count+=1
+summary=(root/'summary.md').read_text()
+commands=re.findall(r'```sh\n(.*?)\n```',summary,re.S)
+print(json.dumps({'local_links_and_anchors':count,'documents':len(files),'worksheets_checked':4,'attempts':4,'commands':commands},indent=2))
+PY

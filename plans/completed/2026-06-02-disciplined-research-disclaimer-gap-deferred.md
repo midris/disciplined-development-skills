@@ -5,7 +5,7 @@ disconfirmed the premise: the "I'll verify before it lands" hedge (edits 1–2) 
 3 scenario designs, and the load-bearing-by-use sharpening (edits 3–4) closes no gap — the current
 skill already grounds the deferral-framed scenario (3/3 fetched + cited a canonical source, consistent
 dates). The reproducible, unfixed failure is *citation-as-substitute* — agents satisfy "cite the source"
-with fabricated authority under output-now pressure — now tracked as **B17** in `plans/BACKLOG.md`. RED
+with fabricated authority under output-now pressure — now tracked as **B17** in `plans/deferred/2026-07-17-dd-skills-backlog.md`. RED
 evidence: `skill-validation/disciplined-research.md`. Original proposal retained below for the record.
 
 Surfaced 2026-06-02 during the Meetily / audio-capture pivot discussion. Deferred so the skill edit doesn't drag the in-flight design work.

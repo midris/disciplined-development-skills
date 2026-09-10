@@ -1,0 +1,15 @@
+{
+  "argv": [
+    "/usr/bin/sandbox-exec",
+    "-f",
+    "/private/tmp/skilltest-sol-low-pilot.Lunoau/no-network.sb",
+    "/opt/homebrew/bin/python3",
+    "-c",
+    "import socket; s=socket.socket(); s.bind((\"127.0.0.1\", 0)); s.close(); print(\"BIND_OK\")"
+  ],
+  "stdout": "",
+  "stderr": "sandbox-exec: sandbox_apply: Operation not permitted\n",
+  "exit_code": 71,
+  "cwd": "/Users/simon/work/personal/disciplined-development-skills/.worktrees/skilltest-input-isolation-spike",
+  "controller": "workspace sandbox"
+}

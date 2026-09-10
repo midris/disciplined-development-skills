@@ -1,7 +1,7 @@
 # Provider qualification reference
 
 Qualification is separate from routine execution; use the [routine runbook](../README.md) after the required controls are established.
-The [active plan](../../../plans/2026-09-06-skilltest-sol-low-pilot.md) owns current execution/approval status.
+The [active plan](../../../plans/completed/2026-09-06-skilltest-sol-low-pilot.md) owns current execution/approval status.
 
 Revisit only affected controls when CLI version/digest, adapter setup, skill catalog/dependencies, task tools or discovery boundaries change.
 A prompt/task-fact edit using unchanged mechanisms still needs a fresh input freeze and audit; it does not automatically require replaying every canary or paid qualification call.
@@ -121,7 +121,7 @@ Reuse this evidence for unchanged controls, repeating only affected checks when 
 For affected requalification before presenting a new batch:
 
 1. Capture the resolved Claude executable/version/digest and relevant help; pin that executable for the batch.
-   Compare it with the [accepted feasibility evidence](../../../plans/2026-09-06-skilltest-claude-controlled-inputs.md#accepted-scope-and-next-checkpoint); the historical spike used `2.1.261`, while implementation inspection found `2.1.266`.
+   Compare it with the [accepted feasibility evidence](../../../plans/completed/2026-09-06-skilltest-claude-controlled-inputs.md#accepted-scope-and-next-checkpoint); the historical spike used `2.1.261`, while implementation inspection found `2.1.266`.
 2. Prepare frozen no-DD, assigned A/B and companion-composition conditions using existing config fields and `.claude/skills/` targets.
    Retain only declared common dependencies and task inputs; keep rubrics and expected answers outside subject fixtures.
    Use the existing input audit and manifest comparison, not installed host skill copies.

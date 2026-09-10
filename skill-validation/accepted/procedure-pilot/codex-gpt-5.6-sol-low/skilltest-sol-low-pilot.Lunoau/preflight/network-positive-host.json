@@ -1,0 +1,12 @@
+{
+  "argv": [
+    "/opt/homebrew/bin/python3",
+    "-c",
+    "import socket; s=socket.socket(); s.bind((\"127.0.0.1\", 0)); s.close(); print(\"BIND_OK\")"
+  ],
+  "stdout": "BIND_OK\n",
+  "stderr": "",
+  "exit_code": 0,
+  "cwd": "/Users/simon/work/personal/disciplined-development-skills/.worktrees/skilltest-input-isolation-spike",
+  "controller": "approved host execution"
+}

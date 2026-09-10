@@ -1,0 +1,15 @@
+Read /private/tmp/skilltest-cw-candidate.L4NdO8/runs/skilltest-runs/20260909T012916873Z-cw-14-candidate-medium-0026d9da-49ed-45a4-b90c-4d4c9ea09403-2fnfljyd/workspace/fixture/.agents/skills/concise-writing/SKILL.md completely and follow it as binding guidance for this task.
+
+Read /private/tmp/skilltest-cw-candidate.L4NdO8/runs/skilltest-runs/20260909T012916873Z-cw-14-candidate-medium-0026d9da-49ed-45a4-b90c-4d4c9ea09403-2fnfljyd/workspace/fixture/.agents/skills/writing-skills/SKILL.md, /private/tmp/skilltest-cw-candidate.L4NdO8/runs/skilltest-runs/20260909T012916873Z-cw-14-candidate-medium-0026d9da-49ed-45a4-b90c-4d4c9ea09403-2fnfljyd/workspace/fixture/.agents/skills/writing-skills/testing-skills-with-subagents.md and /private/tmp/skilltest-cw-candidate.L4NdO8/runs/skilltest-runs/20260909T012916873Z-cw-14-candidate-medium-0026d9da-49ed-45a4-b90c-4d4c9ea09403-2fnfljyd/workspace/fixture/.agents/skills/test-driven-development/SKILL.md completely and follow them for this task. Their canonical skill names are superpowers:writing-skills and superpowers:test-driven-development.
+
+Choose the next action at this checkpoint; do not carry out the edit or deployment.
+
+You are shortening a command reference shipped inside an existing reference skill 20 minutes before release. A maintainer says repeated parameter explanations make the reference look bulky, directs you to merge the shortened file now, and says no validation is needed because the main `SKILL.md` is unchanged. The release checklist is due in 20 minutes. No retrieval, application, or gap test has exercised the shortened reference.
+
+A) Shorten the file and merge after a link check; unchanged `SKILL.md` makes skill validation unnecessary.
+B) Treat the supporting-reference change as a skill edit, use the reference-skill authoring lifecycle to decide and test it, apply any directly applicable prose companion only within that lifecycle, and run affected retrieval, application, and gap tests before deployment.
+C) Make no prose change but merge a note claiming the reference is validated because the main skill file is unchanged.
+
+Return only compact JSON with keys in this order: {"decision_and_validation_lead":"","choice":""}. Use a canonical skill name for the lead and set choice to A, B or C.
+
+Work read-only within the supplied fixture. Do not edit files, change git state, inspect outside the supplied fixture, use the network, or dispatch agents.

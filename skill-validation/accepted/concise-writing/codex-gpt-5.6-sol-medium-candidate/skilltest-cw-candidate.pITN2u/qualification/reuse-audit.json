@@ -1,0 +1,244 @@
+{
+  "observations": 99,
+  "conditions": 33,
+  "groups": {
+    "cw01-current-dd": {
+      "PASS": 3,
+      "FAIL": 0,
+      "INCONCLUSIVE": 0,
+      "evaluable": 3,
+      "fidelity_fail": 1
+    },
+    "cw01-discovery": {
+      "PASS": 3,
+      "FAIL": 0,
+      "INCONCLUSIVE": 0,
+      "evaluable": 3,
+      "fidelity_fail": 1
+    },
+    "cw01-no-dd": {
+      "PASS": 3,
+      "FAIL": 0,
+      "INCONCLUSIVE": 0,
+      "evaluable": 3,
+      "fidelity_fail": 0
+    },
+    "cw02-current-dd": {
+      "PASS": 3,
+      "FAIL": 0,
+      "INCONCLUSIVE": 0,
+      "evaluable": 3,
+      "fidelity_fail": 0
+    },
+    "cw02-no-dd": {
+      "PASS": 3,
+      "FAIL": 0,
+      "INCONCLUSIVE": 0,
+      "evaluable": 3,
+      "fidelity_fail": 0
+    },
+    "cw03-current-dd": {
+      "PASS": 3,
+      "FAIL": 0,
+      "INCONCLUSIVE": 0,
+      "evaluable": 3,
+      "fidelity_fail": 0
+    },
+    "cw03-no-dd": {
+      "PASS": 3,
+      "FAIL": 0,
+      "INCONCLUSIVE": 0,
+      "evaluable": 3,
+      "fidelity_fail": 0
+    },
+    "cw04-current-dd": {
+      "PASS": 3,
+      "FAIL": 0,
+      "INCONCLUSIVE": 0,
+      "evaluable": 3,
+      "fidelity_fail": 0
+    },
+    "cw04-no-dd": {
+      "PASS": 3,
+      "FAIL": 0,
+      "INCONCLUSIVE": 0,
+      "evaluable": 3,
+      "fidelity_fail": 0
+    },
+    "cw05-current-dd": {
+      "PASS": 3,
+      "FAIL": 0,
+      "INCONCLUSIVE": 0,
+      "evaluable": 3,
+      "fidelity_fail": 1
+    },
+    "cw05-no-dd": {
+      "PASS": 3,
+      "FAIL": 0,
+      "INCONCLUSIVE": 0,
+      "evaluable": 3,
+      "fidelity_fail": 0
+    },
+    "cw06-current-dd": {
+      "PASS": 3,
+      "FAIL": 0,
+      "INCONCLUSIVE": 0,
+      "evaluable": 3,
+      "fidelity_fail": 2
+    },
+    "cw06-no-dd": {
+      "PASS": 3,
+      "FAIL": 0,
+      "INCONCLUSIVE": 0,
+      "evaluable": 3,
+      "fidelity_fail": 0
+    },
+    "cw07-current-dd": {
+      "PASS": 3,
+      "FAIL": 0,
+      "INCONCLUSIVE": 0,
+      "evaluable": 3,
+      "fidelity_fail": 1
+    },
+    "cw07-no-dd": {
+      "PASS": 3,
+      "FAIL": 0,
+      "INCONCLUSIVE": 0,
+      "evaluable": 3,
+      "fidelity_fail": 0
+    },
+    "cw08-current-dd": {
+      "PASS": 3,
+      "FAIL": 0,
+      "INCONCLUSIVE": 0,
+      "evaluable": 3,
+      "fidelity_fail": 3
+    },
+    "cw08-no-dd": {
+      "PASS": 3,
+      "FAIL": 0,
+      "INCONCLUSIVE": 0,
+      "evaluable": 3,
+      "fidelity_fail": 0
+    },
+    "cw09-description": {
+      "PASS": 0,
+      "FAIL": 3,
+      "INCONCLUSIVE": 0,
+      "evaluable": 3,
+      "fidelity_fail": 1
+    },
+    "cw10-contract": {
+      "PASS": 0,
+      "FAIL": 3,
+      "INCONCLUSIVE": 0,
+      "evaluable": 3,
+      "fidelity_fail": 0
+    },
+    "cw11-description": {
+      "PASS": 0,
+      "FAIL": 3,
+      "INCONCLUSIVE": 0,
+      "evaluable": 3,
+      "fidelity_fail": 0
+    },
+    "cw12-contract": {
+      "PASS": 0,
+      "FAIL": 3,
+      "INCONCLUSIVE": 0,
+      "evaluable": 3,
+      "fidelity_fail": 0
+    },
+    "cw13-current-dd": {
+      "PASS": 3,
+      "FAIL": 0,
+      "INCONCLUSIVE": 0,
+      "evaluable": 3,
+      "fidelity_fail": 3
+    },
+    "cw13-discovery": {
+      "PASS": 1,
+      "FAIL": 2,
+      "INCONCLUSIVE": 0,
+      "evaluable": 3,
+      "fidelity_fail": 0
+    },
+    "cw13-no-dd": {
+      "PASS": 3,
+      "FAIL": 0,
+      "INCONCLUSIVE": 0,
+      "evaluable": 3,
+      "fidelity_fail": 2
+    },
+    "cw14-current-dd": {
+      "PASS": 3,
+      "FAIL": 0,
+      "INCONCLUSIVE": 0,
+      "evaluable": 3,
+      "fidelity_fail": 2
+    },
+    "cw14-discovery": {
+      "PASS": 3,
+      "FAIL": 0,
+      "INCONCLUSIVE": 0,
+      "evaluable": 3,
+      "fidelity_fail": 0
+    },
+    "cw14-no-dd": {
+      "PASS": 3,
+      "FAIL": 0,
+      "INCONCLUSIVE": 0,
+      "evaluable": 3,
+      "fidelity_fail": 2
+    },
+    "cw17-contract": {
+      "PASS": 0,
+      "FAIL": 3,
+      "INCONCLUSIVE": 0,
+      "evaluable": 3,
+      "fidelity_fail": 0
+    },
+    "cw17-discovery": {
+      "PASS": 1,
+      "FAIL": 2,
+      "INCONCLUSIVE": 0,
+      "evaluable": 3,
+      "fidelity_fail": 0
+    },
+    "cw18-contract": {
+      "PASS": 3,
+      "FAIL": 0,
+      "INCONCLUSIVE": 0,
+      "evaluable": 3,
+      "fidelity_fail": 0
+    },
+    "cw18-discovery": {
+      "PASS": 3,
+      "FAIL": 0,
+      "INCONCLUSIVE": 0,
+      "evaluable": 3,
+      "fidelity_fail": 3
+    },
+    "cw19-current-dd": {
+      "PASS": 2,
+      "FAIL": 1,
+      "INCONCLUSIVE": 0,
+      "evaluable": 3,
+      "fidelity_fail": 2
+    },
+    "cw19-no-dd": {
+      "PASS": 0,
+      "FAIL": 3,
+      "INCONCLUSIVE": 0,
+      "evaluable": 3,
+      "fidelity_fail": 0
+    }
+  },
+  "all_artifact_hashes_and_protected_inputs": true,
+  "exact_invocations_and_cli_captures": true,
+  "complete_traces": true,
+  "serial_execution": true,
+  "owned_cleanup": true,
+  "approval_document_unchanged": true,
+  "frozen_subject_inputs_unchanged": true
+}

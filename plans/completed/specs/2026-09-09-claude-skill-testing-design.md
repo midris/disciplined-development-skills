@@ -4,7 +4,7 @@
 Owner implementation approval was received on 2026-09-09; one separately requested live CW-01 smoke passed using Sonnet low.
 The approved remaining A/B qualification batch passed; its scratch evidence remains available for owner review.
 Work stays on `main` in the primary checkout.
-The accepted CW evidence and methodology consolidation remain on `feature/cw-validation-design`; this work does not merge or alter them.
+The accepted CW evidence and methodology consolidation are integrated separately on `main`; this qualification does not alter their judgments.
 
 ## Purpose and compatibility
 
@@ -19,7 +19,7 @@ Two existing result-validation restrictions must admit Claude's equivalent lifec
 This is an internal compatibility correction using existing fields and error codes, not a new testing interface.
 Existing Codex behavior and retained records must continue to pass the same consumers.
 
-Use the [accepted Claude feasibility findings](../../2026-09-06-skilltest-claude-controlled-inputs.md#accepted-scope-and-next-checkpoint).
+Use the [accepted Claude feasibility findings](../2026-09-06-skilltest-claude-controlled-inputs.md#accepted-scope-and-next-checkpoint).
 No new testing tool, campaign manager, scorer, scenario catalog, behavioral criterion or provider/model matrix is included.
 
 ## Provider integration

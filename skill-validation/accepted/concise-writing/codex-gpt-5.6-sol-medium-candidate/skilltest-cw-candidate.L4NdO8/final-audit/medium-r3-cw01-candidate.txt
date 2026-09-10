@@ -1,0 +1,19 @@
+{
+  "checks": "PASS",
+  "bundle": "/private/tmp/skilltest-cw-candidate.L4NdO8/runs/skilltest-runs/20260909T014234320Z-cw-01-candidate-medium-b77c0d5b-99ca-4598-8cd6-50697d5ce330-4d_9zl25",
+  "runtime_absent": "/private/tmp/skilltest-cw-candidate.L4NdO8/runs/skilltest-codex-6br8cirw",
+  "fixture_files": 13,
+  "events": 6,
+  "duration_seconds": 17.585
+}
+FULL TRACE (exact supplied-file text replaced by a hash marker; every other byte/event retained below):
+{"type": "thread.started", "thread_id": "01a083d4-c626-7da2-bfb5-98c3023349e4"}
+{"type": "turn.started"}
+{"type": "item.started", "item": {"id": "item_0", "type": "command_execution", "command": "/bin/zsh -lc 'cat .agents/skills/concise-writing/SKILL.md'", "aggregated_output": "", "exit_code": null, "status": "in_progress"}}
+{"type": "item.completed", "item": {"id": "item_0", "type": "command_execution", "command": "/bin/zsh -lc 'cat .agents/skills/concise-writing/SKILL.md'", "aggregated_output": "<FULL SUPPLIED FILE .agents/skills/concise-writing/SKILL.md SHA256=f763b43e88c56d6fdc2a96457bc2415cba60b75a1e7cb59cd1b0ebaa3fb199ba>\n", "exit_code": 0, "status": "completed"}}
+{"type": "item.completed", "item": {"id": "item_1", "type": "agent_message", "text": "## Export status\n\nAn export’s status is queued, running, complete, or failed. Completed exports include a download link; failed exports include an error code."}}
+{"type": "turn.completed", "usage": {"input_tokens": 33186, "cached_input_tokens": 21248, "cache_write_input_tokens": 0, "output_tokens": 255, "reasoning_output_tokens": 86}}
+PROVIDER STDERR:
+
+COMMAND STDERR:
+

@@ -1,0 +1,201 @@
+# Membership Roster Import Implementation Plan
+
+> **For agentic workers:** REQUIRED SUB-SKILL: Use superpowers:subagent-driven-development (recommended) or superpowers:executing-plans to implement this plan task-by-task. Steps use checkbox (`- [ ]`) syntax for tracking.
+
+**Goal:** Safely replace the active membership roster from a CSV of up to two million members, exposing the replacement only after complete validation and returning one actionable rejection report.
+
+**Architecture:** Parse and validate the upload as a stream into an isolated candidate roster, never mutating the active roster during ingestion. Activate the candidate through the application’s existing atomic commit or swap mechanism only after parsing, validation, and persistence succeed; discard it on every rejection or runtime failure.
+
+**Tech Stack:** Python; the project’s existing CSV, persistence, transaction, and test conventions. Do not introduce dependencies unless the existing implementation cannot meet the two-million-row requirement without one.
+
+**Spec:** `context/import-brief.md`
+
+## Global Constraints
+
+- Each non-header row has `member_id` and `email`.
+- `member_id` is the immutable external identity and must be unique within the file and active roster.
+- The replacement becomes visible only after the entire file succeeds; no partial roster may be visible.
+- Uploads may be absent, empty, malformed, or as large as two million rows.
+- Two million rows is the supported maximum; reject larger uploads without changing the active roster.
+- The operator needs one actionable error report when an import is rejected.
+- Do not add email-format validation; the brief requires the field to be present, but defines no email syntax.
+- Treat a previously active `member_id` as the same external member, not as a conflict merely because it appears in the replacement. Enforce uniqueness within the candidate and in the activated roster.
+- Preserve the existing public API and project conventions after inspecting the named files at implementation time; this plan does not invent signatures unavailable in the supplied facts.
+
+## File structure
+
+- Modify `src/membership_import.py`: streaming CSV ingestion, validation, candidate construction, atomic activation, and rejection reporting.
+- Modify `tests/test_membership_import.py`: behavioral, atomicity, boundary, and scale tests.
+
+No new file is justified by the supplied scope. If the implementation reveals an established project convention that separates parsing or error types, follow that convention without broad refactoring.
+
+---
+
+### Task 1: Reject unusable uploads without changing the roster
+
+**Merge boundary:** PR 1 — input and row-validation behavior.
+
+**Files:**
+
+- Modify: `tests/test_membership_import.py`
+- Modify: `src/membership_import.py`
+
+**Interfaces:**
+
+- Consumes: The existing import entry point and active-roster access mechanism discovered in the two named files.
+- Produces: The same public import interface, with deterministic rejection behavior and no active-roster mutation on validation failure.
+
+- [ ] Inspect only the named implementation and test files plus the minimum project configuration needed to identify the existing test command and persistence conventions. Record the current public interface before changing it.
+
+- [ ] Add failing tests that pre-populate an active roster and prove it remains unchanged for:
+
+  - absent upload;
+  - zero-byte upload;
+  - header-only upload;
+  - missing or invalid header;
+  - malformed CSV syntax;
+  - a row missing `member_id`;
+  - a row missing `email`;
+  - a row with the wrong number of columns;
+  - duplicate `member_id` values, including nonadjacent duplicates.
+
+- [ ] Require each rejection to return or raise exactly one operator-facing report through the existing error channel. The report must identify the cause and, when applicable, the offending CSV row; duplicate-ID reports must include the duplicated ID and both row numbers.
+
+- [ ] Run the focused tests and verify they fail for the missing behavior, not because the fixture or invocation is invalid.
+
+- [ ] Implement streaming parsing and validation. Avoid loading the complete CSV or complete diagnostic history into memory; stop once a definitive rejection can be reported.
+
+- [ ] Track incoming `member_id` values with a representation that can support two million entries within the application’s expected resource envelope. Do not use repeated scans of accumulated rows.
+
+- [ ] Keep all parsed rows isolated from the active roster throughout validation.
+
+- [ ] Run the focused tests, then the complete membership-import test file using the repository-established command. Expected result: all tests pass.
+
+- [ ] Commit as `feat: validate membership roster uploads`.
+
+**Unhandled-input contract:**
+
+| Input | Required outcome |
+|---|---|
+| Upload absent | Reject once; active roster unchanged |
+| Zero bytes | Reject once; active roster unchanged |
+| Header only | Reject as empty roster; active roster unchanged |
+| Malformed header or CSV | Report the structural problem; active roster unchanged |
+| Missing required value | Report field and row; active roster unchanged |
+| Duplicate `member_id` | Report ID and both rows; active roster unchanged |
+| Extra unspecified columns | Follow the existing CSV policy if one is present; otherwise reject as malformed rather than silently reinterpret data |
+| Invalid email syntax | Accept if nonempty; syntax validation is outside the brief |
+| Extremely long fields | Process without copying the full roster; surface the parser’s single actionable failure if platform limits reject the field |
+
+**Invariants:**
+
+- Validation never mutates the active roster.
+- Row numbering is consistent and treats the header separately.
+- A rejection produces one report, not one exception or message per row.
+
+---
+
+### Task 2: Enforce the row limit and atomic replacement
+
+**Merge boundary:** PR 2 — bounded ingestion and all-or-nothing activation.
+
+**Files:**
+
+- Modify: `tests/test_membership_import.py`
+- Modify: `src/membership_import.py`
+
+**Interfaces:**
+
+- Consumes: Task 1’s validated streaming ingestion and unchanged public import interface.
+- Produces: An isolated candidate roster that becomes active through one atomic activation boundary after complete success.
+
+- [ ] Add failing boundary tests for:
+
+  - exactly 2,000,000 data rows succeeding;
+  - 2,000,001 data rows being rejected;
+  - the header not counting toward the row limit;
+  - an oversize rejection preserving the prior active roster;
+  - a late malformed row preserving the prior active roster;
+  - a failure while writing or activating the candidate preserving the prior active roster;
+  - successful replacement removing members omitted from the upload;
+  - successful replacement retaining the supplied `member_id` and `email` values;
+  - readers observing either the complete old roster or complete new roster, never an intermediate candidate.
+
+- [ ] Generate scale-test input incrementally rather than constructing two million row objects or one giant CSV string in the test. Use the real limit for the boundary test; keep ordinary failure-path tests small.
+
+- [ ] Run the new focused tests and confirm failures demonstrate non-atomic behavior or missing limit enforcement.
+
+- [ ] Reject immediately when the parser encounters data row 2,000,001. The single report must state the supported maximum and that the upload exceeded it.
+
+- [ ] Build the replacement through the existing transaction, staging, or snapshot facility. If the current implementation has no such facility, keep the candidate isolated and introduce the narrowest single commit/swap boundary supported by its storage model.
+
+- [ ] Activate only after end-of-file validation and successful candidate persistence. On parse, validation, persistence, or activation failure, roll back or discard the candidate and preserve the old active roster.
+
+- [ ] Ensure the activated storage representation enforces one active record per `member_id`; do not rely solely on an earlier in-memory duplicate check if concurrent or direct writes could violate the invariant.
+
+- [ ] Run the focused boundary and atomicity tests. Expected result: all pass without exposing partial state.
+
+- [ ] Run the complete membership-import test file and project test suite using repository-established commands. Expected result: all pass.
+
+- [ ] Commit as `feat: atomically replace membership roster`.
+
+**Unhandled-input contract:**
+
+| Input or failure | Required outcome |
+|---|---|
+| Exactly 2,000,000 rows | Accept if otherwise valid |
+| 2,000,001 or more rows | Reject at row 2,000,001; old roster remains active |
+| Parse error near end of file | Discard candidate; old roster remains active |
+| Candidate persistence failure | Roll back candidate; old roster remains active |
+| Activation failure | Old roster remains authoritative |
+| Member omitted from valid replacement | Member is absent from the new active roster |
+| Existing immutable ID included again | Update/retain that member under the same identity; do not create a duplicate |
+| Concurrent read during activation | Return a complete old or complete new roster |
+
+**Invariants:**
+
+- Successful import is replacement, not append or merge.
+- The row limit counts non-header rows.
+- Activation has one atomic visibility boundary.
+- No rejected import changes active membership data.
+
+---
+
+### Task 3: Regression and operational verification
+
+**Merge boundary:** PR 3 — final verification hardening, only if it adds independently reviewable tests or fixes. Fold it into PR 2 if no production change is needed.
+
+**Files:**
+
+- Modify: `tests/test_membership_import.py`
+- Modify: `src/membership_import.py` only if verification exposes a defect.
+
+**Interfaces:**
+
+- Consumes: The completed validation and atomic replacement behavior.
+- Produces: A regression suite covering every requirement in `context/import-brief.md`.
+
+- [ ] Review the tests against every global constraint and confirm each requirement has a direct assertion.
+
+- [ ] Add a resource-behavior regression proving ingestion is streaming—for example, an input iterator that fails if the importer requests rows after the first definitive error.
+
+- [ ] Verify error reports contain no partial-success wording and provide enough information for the operator to correct the upload and retry.
+
+- [ ] Run the membership-import tests repeatedly to detect state leakage between imports.
+
+- [ ] Run the full project test suite.
+
+- [ ] Run the real two-million-row boundary test once in the project’s integration or slow-test lane and record its runtime and peak-memory result using the repository’s established tooling. Do not invent a new performance threshold absent a project requirement; fail only on incorrect behavior or resource exhaustion.
+
+- [ ] Confirm the final diff changes only the import behavior and tests required by the brief.
+
+- [ ] Commit any independent hardening as `test: cover membership import boundaries`.
+
+## Completion criteria
+
+- All specified absent, empty, malformed, duplicate, oversize, and failure cases yield one actionable rejection report.
+- Every rejected import preserves the complete prior roster.
+- A valid upload of exactly two million rows succeeds.
+- The active roster switches from old to new only after complete success.
+- `member_id` remains the unique immutable identity.
+- The focused and full project test suites pass.

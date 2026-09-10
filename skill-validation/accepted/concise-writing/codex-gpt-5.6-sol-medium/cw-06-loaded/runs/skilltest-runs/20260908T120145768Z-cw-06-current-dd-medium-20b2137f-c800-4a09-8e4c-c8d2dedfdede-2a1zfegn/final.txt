@@ -1,0 +1,1 @@
+Every request must include an API key in the `Authorization` header; requests without one are rejected.

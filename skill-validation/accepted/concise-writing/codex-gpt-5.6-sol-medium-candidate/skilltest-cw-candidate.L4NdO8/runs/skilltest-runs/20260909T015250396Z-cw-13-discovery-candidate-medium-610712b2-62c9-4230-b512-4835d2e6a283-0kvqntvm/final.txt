@@ -1,0 +1,14 @@
+Do not approve or deploy the shortened warning.
+
+The repetition may be intentional resistance to the exact deadline-pressure failure recorded in the baseline. Prose review cannot establish behavioral equivalence: the fixture requires edits to existing skills to be tested and requires discipline-enforcing skills to pass pressure scenarios ([writing-skills/SKILL.md](</private/tmp/skilltest-cw-candidate.L4NdO8/runs/skilltest-runs/20260909T015250396Z-cw-13-discovery-candidate-medium-610712b2-62c9-4230-b512-4835d2e6a283-0kvqntvm/workspace/fixture/.agents/skills/writing-skills/SKILL.md:374>), [testing methodology](</private/tmp/skilltest-cw-candidate.L4NdO8/runs/skilltest-runs/20260909T015250396Z-cw-13-discovery-candidate-medium-610712b2-62c9-4230-b512-4835d2e6a283-0kvqntvm/workspace/fixture/.agents/skills/writing-skills/testing-skills-with-subagents.md:90>)). Concision is acceptable only when effectiveness is preserved; uncertainty is a hard failure ([concise-writing/SKILL.md](</private/tmp/skilltest-cw-candidate.L4NdO8/runs/skilltest-runs/20260909T015250396Z-cw-13-discovery-candidate-medium-610712b2-62c9-4230-b512-4835d2e6a283-0kvqntvm/workspace/fixture/.agents/skills/concise-writing/SKILL.md:13>)).
+
+Next:
+
+- Record the shorter wording as an unverified candidate.
+- Micro-test it in full context against a control, with at least five fresh runs per variant.
+- Then rerun the relevant deadline-and-authority pressure scenario.
+- Approve only if compliance is preserved.
+
+For this release, ship the unchanged version only if prior GREEN evidence already exists; otherwise hold the release. Baseline failure evidence alone does not prove either wording passes.
+
+No files or git state were changed.

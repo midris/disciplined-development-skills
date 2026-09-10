@@ -1,0 +1,85 @@
+# JSON Report CLI Implementation Plan
+
+> **For agentic workers:** REQUIRED SUB-SKILL: Use superpowers:subagent-driven-development (recommended) or superpowers:executing-plans to implement this plan task-by-task. Steps use checkbox (`- [ ]`) syntax for tracking.
+
+**Goal:** Add JSON report output while preserving the existing text CLI contract.
+
+**Architecture:** Extend the existing format dispatch in `src/report_cli.py`; reuse the current path and line-count calculation, rendering either text or a JSON object. Lock the behavior down through CLI-level tests.
+
+**Tech Stack:** Python standard library (`argparse`, `json`), pytest
+
+**Spec:** `context/task.md`
+
+## Global Constraints
+
+- Accept `--format json` as well as `text`.
+- JSON output has string field `path` and integer field `line_count`.
+- Unsupported formats write `unsupported format` to stderr and exit with status 2.
+- The default remains text.
+- No other command behavior changes.
+- Add no dependencies.
+
+## File Map
+
+- Modify `src/report_cli.py`: format validation and JSON rendering.
+- Modify `tests/test_report_cli.py`: CLI contract coverage for JSON, defaults, explicit text, and invalid formats.
+
+## Merge Boundary
+
+One PR: the parser, renderer, and contract tests form one independently reviewable CLI change.
+
+---
+
+### Task 1: Extend the report format contract
+
+**Files:**
+
+- Modify: `tests/test_report_cli.py`
+- Modify: `src/report_cli.py`
+
+**Interfaces:**
+
+- Consumes: existing `report [--format FORMAT] PATH` parsing, file reading, line counting, and text rendering.
+- Produces: `--format json` output parseable as an object containing exactly `path: str` and `line_count: int`; existing text behavior remains the default.
+
+**Unhandled inputs and invariants:**
+
+- Missing, unreadable, or otherwise invalid paths retain their current behavior.
+- Option ordering and all unrelated arguments retain their current behavior.
+- JSON whitespace and key ordering are not contractual; semantic fields and types are.
+- Output represents the same path value and line count used by text rendering.
+- Unsupported values, including empty or differently cased values, are invalid and must not fall back to text.
+
+- [ ] **Step 1: Add failing CLI contract tests**
+
+  Cover:
+
+  - `report --format json PATH` exits successfully and emits parseable JSON.
+  - The parsed object contains exactly `path` and `line_count`, with string and integer types respectively.
+  - The values match the supplied path and fixture file’s existing line-count semantics.
+  - `report PATH` still produces the current text output.
+  - `report --format text PATH` still produces that same text output.
+  - An unsupported format exits with status `2`, writes `unsupported format` to stderr, and emits no report to stdout.
+
+- [ ] **Step 2: Verify the new tests fail for the expected missing behavior**
+
+  Run: `pytest tests/test_report_cli.py -v`
+
+  Expected: JSON and unsupported-format contract tests fail, while existing text tests continue to pass.
+
+- [ ] **Step 3: Implement format validation and JSON rendering**
+
+  Extend argument handling to recognize only `text` and `json`, retaining `text` as the default. For JSON, serialize the existing report data as one object with the required fields and types. Ensure invalid values follow the specified stderr message and exit status without changing path processing or text rendering.
+
+- [ ] **Step 4: Run focused and full verification**
+
+  Run:
+
+  - `pytest tests/test_report_cli.py -v`
+  - `pytest -v`
+
+  Expected: all tests pass; focused coverage confirms JSON semantics, invalid-format handling, and unchanged default and explicit text output.
+
+- [ ] **Step 5: Commit the independently testable change**
+
+  Commit message: `feat: add JSON report output`

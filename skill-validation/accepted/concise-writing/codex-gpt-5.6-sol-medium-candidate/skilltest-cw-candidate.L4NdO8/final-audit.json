@@ -1,0 +1,1079 @@
+{
+  "status": "PASS",
+  "fresh_observations": 66,
+  "conditions": 22,
+  "worksheet_links": 267,
+  "counts": {
+    "cw-01-candidate-medium": {
+      "PASS": 3,
+      "FAIL": 0,
+      "INCONCLUSIVE": 0,
+      "fidelity_fail": 0
+    },
+    "cw-01-discovery-candidate-medium": {
+      "PASS": 3,
+      "FAIL": 0,
+      "INCONCLUSIVE": 0,
+      "fidelity_fail": 0
+    },
+    "cw-02-candidate-medium": {
+      "PASS": 3,
+      "FAIL": 0,
+      "INCONCLUSIVE": 0,
+      "fidelity_fail": 1
+    },
+    "cw-03-candidate-medium": {
+      "PASS": 3,
+      "FAIL": 0,
+      "INCONCLUSIVE": 0,
+      "fidelity_fail": 0
+    },
+    "cw-04-candidate-medium": {
+      "PASS": 3,
+      "FAIL": 0,
+      "INCONCLUSIVE": 0,
+      "fidelity_fail": 1
+    },
+    "cw-05-candidate-medium": {
+      "PASS": 3,
+      "FAIL": 0,
+      "INCONCLUSIVE": 0,
+      "fidelity_fail": 1
+    },
+    "cw-06-candidate-medium": {
+      "PASS": 3,
+      "FAIL": 0,
+      "INCONCLUSIVE": 0,
+      "fidelity_fail": 1
+    },
+    "cw-07-candidate-medium": {
+      "PASS": 3,
+      "FAIL": 0,
+      "INCONCLUSIVE": 0,
+      "fidelity_fail": 2
+    },
+    "cw-08-candidate-medium": {
+      "PASS": 3,
+      "FAIL": 0,
+      "INCONCLUSIVE": 0,
+      "fidelity_fail": 2
+    },
+    "cw-09-description-candidate-medium": {
+      "PASS": 3,
+      "FAIL": 0,
+      "INCONCLUSIVE": 0,
+      "fidelity_fail": 0
+    },
+    "cw-10-contract-candidate-medium": {
+      "PASS": 3,
+      "FAIL": 0,
+      "INCONCLUSIVE": 0,
+      "fidelity_fail": 0
+    },
+    "cw-11-description-candidate-medium": {
+      "PASS": 3,
+      "FAIL": 0,
+      "INCONCLUSIVE": 0,
+      "fidelity_fail": 1
+    },
+    "cw-12-contract-candidate-medium": {
+      "PASS": 3,
+      "FAIL": 0,
+      "INCONCLUSIVE": 0,
+      "fidelity_fail": 1
+    },
+    "cw-13-candidate-medium": {
+      "PASS": 3,
+      "FAIL": 0,
+      "INCONCLUSIVE": 0,
+      "fidelity_fail": 1
+    },
+    "cw-13-discovery-candidate-medium": {
+      "PASS": 2,
+      "FAIL": 1,
+      "INCONCLUSIVE": 0,
+      "fidelity_fail": 0
+    },
+    "cw-14-candidate-medium": {
+      "PASS": 3,
+      "FAIL": 0,
+      "INCONCLUSIVE": 0,
+      "fidelity_fail": 2
+    },
+    "cw-14-discovery-candidate-medium": {
+      "PASS": 3,
+      "FAIL": 0,
+      "INCONCLUSIVE": 0,
+      "fidelity_fail": 0
+    },
+    "cw-17-contract-candidate-medium": {
+      "PASS": 3,
+      "FAIL": 0,
+      "INCONCLUSIVE": 0,
+      "fidelity_fail": 0
+    },
+    "cw-17-discovery-candidate-medium": {
+      "PASS": 3,
+      "FAIL": 0,
+      "INCONCLUSIVE": 0,
+      "fidelity_fail": 0
+    },
+    "cw-18-contract-candidate-medium": {
+      "PASS": 3,
+      "FAIL": 0,
+      "INCONCLUSIVE": 0,
+      "fidelity_fail": 0
+    },
+    "cw-18-discovery-candidate-medium": {
+      "PASS": 3,
+      "FAIL": 0,
+      "INCONCLUSIVE": 0,
+      "fidelity_fail": 3
+    },
+    "cw-19-candidate-medium": {
+      "PASS": 1,
+      "FAIL": 2,
+      "INCONCLUSIVE": 0,
+      "fidelity_fail": 0
+    }
+  },
+  "records": [
+    {
+      "order": 1,
+      "attempt": "medium-r1-cw01-candidate",
+      "id": "cw-01-candidate-medium",
+      "repetition": 1,
+      "bundle": "/private/tmp/skilltest-cw-candidate.L4NdO8/runs/skilltest-runs/20260909T004202908Z-cw-01-candidate-medium-69367a00-276d-412f-ac6a-f38bf84f67d5-o46frtv1",
+      "primary": "PASS",
+      "fidelity": "PASS",
+      "worksheet_sha256": "0a235fbd16c5560f60831a4b8f792fbd9cb8b170b4db9462fe2955e62c27fe61"
+    },
+    {
+      "order": 2,
+      "attempt": "medium-r1-cw01-discovery-candidate",
+      "id": "cw-01-discovery-candidate-medium",
+      "repetition": 1,
+      "bundle": "/private/tmp/skilltest-cw-candidate.L4NdO8/runs/skilltest-runs/20260909T004502203Z-cw-01-discovery-candidate-medium-c3ce495f-0dc6-46f4-a91d-a0db4e2e318b-5_qy5522",
+      "primary": "PASS",
+      "fidelity": "PASS",
+      "worksheet_sha256": "b43d3d21805b35018012d451855141950d21856c8f2db82f4874ea0f0b8ff9cb"
+    },
+    {
+      "order": 3,
+      "attempt": "medium-r1-cw02-candidate",
+      "id": "cw-02-candidate-medium",
+      "repetition": 1,
+      "bundle": "/private/tmp/skilltest-cw-candidate.L4NdO8/runs/skilltest-runs/20260909T004603338Z-cw-02-candidate-medium-175a50b3-ef68-48f5-9d26-08cd1f370719-go9ud9uj",
+      "primary": "PASS",
+      "fidelity": "PASS",
+      "worksheet_sha256": "bf115f662de2c506062f10fac4c9079b5c50ef6f96c8c8fd0eb39640c7ac5cf9"
+    },
+    {
+      "order": 4,
+      "attempt": "medium-r1-cw03-candidate",
+      "id": "cw-03-candidate-medium",
+      "repetition": 1,
+      "bundle": "/private/tmp/skilltest-cw-candidate.L4NdO8/runs/skilltest-runs/20260909T004701580Z-cw-03-candidate-medium-534f3910-da57-414e-becd-ab92313cfbd5-p1mmjsww",
+      "primary": "PASS",
+      "fidelity": "PASS",
+      "worksheet_sha256": "c2addc407ca64f6328491d83f28644ac5e0b7ad583f60e90b67a49c9c6418fa9"
+    },
+    {
+      "order": 5,
+      "attempt": "medium-r1-cw04-candidate",
+      "id": "cw-04-candidate-medium",
+      "repetition": 1,
+      "bundle": "/private/tmp/skilltest-cw-candidate.L4NdO8/runs/skilltest-runs/20260909T004758966Z-cw-04-candidate-medium-0631d9b1-0808-4538-9d56-38d8c3ce2449-rtpss4ta",
+      "primary": "PASS",
+      "fidelity": "PASS",
+      "worksheet_sha256": "53ce37a35df23e8999defd59c8edcd772523e9fd21c69adcc25d70451721b40d"
+    },
+    {
+      "order": 6,
+      "attempt": "medium-r1-cw05-candidate",
+      "id": "cw-05-candidate-medium",
+      "repetition": 1,
+      "bundle": "/private/tmp/skilltest-cw-candidate.L4NdO8/runs/skilltest-runs/20260909T004848084Z-cw-05-candidate-medium-03543cf7-f2b0-4440-b00d-33de4654d5d8-8whm81wp",
+      "primary": "PASS",
+      "fidelity": "PASS",
+      "worksheet_sha256": "ddd87f85e47b4ebd2f4b63146fcb879ff33e3baa30d240a8f605a31477adb2a3"
+    },
+    {
+      "order": 7,
+      "attempt": "medium-r1-cw06-candidate",
+      "id": "cw-06-candidate-medium",
+      "repetition": 1,
+      "bundle": "/private/tmp/skilltest-cw-candidate.L4NdO8/runs/skilltest-runs/20260909T004931042Z-cw-06-candidate-medium-89757d66-2794-4f83-a466-691660978fcf-beu1v03i",
+      "primary": "PASS",
+      "fidelity": "PASS",
+      "worksheet_sha256": "5135448287889dad32c342dd004b71956f9fae269204d9e20a8faa64c7c12cd7"
+    },
+    {
+      "order": 8,
+      "attempt": "medium-r1-cw07-candidate",
+      "id": "cw-07-candidate-medium",
+      "repetition": 1,
+      "bundle": "/private/tmp/skilltest-cw-candidate.L4NdO8/runs/skilltest-runs/20260909T005011055Z-cw-07-candidate-medium-4a0dd274-e4a9-4c9a-aa9d-fdc342c8e6b8-75_22m3d",
+      "primary": "PASS",
+      "fidelity": "FAIL",
+      "worksheet_sha256": "f217f1fe9e4f72c9e69ba4d90b3e62613a0b65c78195915c8a4df26d8ab86dab"
+    },
+    {
+      "order": 9,
+      "attempt": "medium-r1-cw08-candidate",
+      "id": "cw-08-candidate-medium",
+      "repetition": 1,
+      "bundle": "/private/tmp/skilltest-cw-candidate.L4NdO8/runs/skilltest-runs/20260909T005123185Z-cw-08-candidate-medium-0e1b2087-a5f2-4550-b4d5-f462be6007ba-nwjv2_qr",
+      "primary": "PASS",
+      "fidelity": "FAIL",
+      "worksheet_sha256": "7a6ef5000147406d8e823b37c762048c2032c37a0b4bcd4433b3fd4a746f4c3a"
+    },
+    {
+      "order": 10,
+      "attempt": "medium-r1-cw09-description-candidate",
+      "id": "cw-09-description-candidate-medium",
+      "repetition": 1,
+      "bundle": "/private/tmp/skilltest-cw-candidate.L4NdO8/runs/skilltest-runs/20260909T005217442Z-cw-09-description-candidate-medium-5696868c-3869-4e32-a51f-a1d9e53be1f9-rsfjdqox",
+      "primary": "PASS",
+      "fidelity": "PASS",
+      "worksheet_sha256": "7dbef7e98f49cee0aff9ef1da61448a84cdf2e6e20c45614c8aa4c265126aa28"
+    },
+    {
+      "order": 11,
+      "attempt": "medium-r1-cw10-contract-candidate",
+      "id": "cw-10-contract-candidate-medium",
+      "repetition": 1,
+      "bundle": "/private/tmp/skilltest-cw-candidate.L4NdO8/runs/skilltest-runs/20260909T005307984Z-cw-10-contract-candidate-medium-547edb11-b7f2-438a-a78c-46744494ae01-3e0zlj2b",
+      "primary": "PASS",
+      "fidelity": "PASS",
+      "worksheet_sha256": "c476c0d9f8dee01097bd9af0c08edfd12886839beca67561d078b794c2d45202"
+    },
+    {
+      "order": 12,
+      "attempt": "medium-r1-cw11-description-candidate",
+      "id": "cw-11-description-candidate-medium",
+      "repetition": 1,
+      "bundle": "/private/tmp/skilltest-cw-candidate.L4NdO8/runs/skilltest-runs/20260909T005351731Z-cw-11-description-candidate-medium-27d3757d-ce0d-4cb4-a260-384a0339bbce-t_tbna0r",
+      "primary": "PASS",
+      "fidelity": "PASS",
+      "worksheet_sha256": "6b8e4589ec3244398d1ba671029fe2d61a06df9bb3f0cd03fb76b9f97d3fa480"
+    },
+    {
+      "order": 13,
+      "attempt": "medium-r1-cw12-contract-candidate",
+      "id": "cw-12-contract-candidate-medium",
+      "repetition": 1,
+      "bundle": "/private/tmp/skilltest-cw-candidate.L4NdO8/runs/skilltest-runs/20260909T005446996Z-cw-12-contract-candidate-medium-f996133f-7859-4b46-91fb-35e46062c66e-r6tunait",
+      "primary": "PASS",
+      "fidelity": "PASS",
+      "worksheet_sha256": "e23573b9bb962519303621c1c51c60c64a94eda0b2e53ec225629da43c3cbd87"
+    },
+    {
+      "order": 14,
+      "attempt": "medium-r1-cw13-candidate",
+      "id": "cw-13-candidate-medium",
+      "repetition": 1,
+      "bundle": "/private/tmp/skilltest-cw-candidate.L4NdO8/runs/skilltest-runs/20260909T005530017Z-cw-13-candidate-medium-8696e0e5-e7ca-4c47-b0dc-2b01bc4708e6-h0b4l0wt",
+      "primary": "PASS",
+      "fidelity": "FAIL",
+      "worksheet_sha256": "22c4d5bddb3fdc250cc1980a24e3e096e248865d7cdee8d41c085f9527e70ab8"
+    },
+    {
+      "order": 15,
+      "attempt": "medium-r1-cw13-discovery-candidate",
+      "id": "cw-13-discovery-candidate-medium",
+      "repetition": 1,
+      "bundle": "/private/tmp/skilltest-cw-candidate.L4NdO8/runs/skilltest-runs/20260909T005744108Z-cw-13-discovery-candidate-medium-54422f7e-ee52-4377-b96c-85695cda326a-_b6193ql",
+      "primary": "FAIL",
+      "fidelity": "PASS",
+      "worksheet_sha256": "a81d8931e6566eb0a59b13487076e904bba1158ec71091fc72478b5bb1bc8815"
+    },
+    {
+      "order": 16,
+      "attempt": "medium-r1-cw14-candidate",
+      "id": "cw-14-candidate-medium",
+      "repetition": 1,
+      "bundle": "/private/tmp/skilltest-cw-candidate.L4NdO8/runs/skilltest-runs/20260909T010256035Z-cw-14-candidate-medium-c77edcd2-9485-4980-8014-f348279d90ee-80xcq1r0",
+      "primary": "PASS",
+      "fidelity": "PASS",
+      "worksheet_sha256": "9081e84075d0672a4b49c4cd81350407c7d5a6fde8968985d3482da82b7b2cb3"
+    },
+    {
+      "order": 17,
+      "attempt": "medium-r1-cw14-discovery-candidate",
+      "id": "cw-14-discovery-candidate-medium",
+      "repetition": 1,
+      "bundle": "/private/tmp/skilltest-cw-candidate.L4NdO8/runs/skilltest-runs/20260909T010400521Z-cw-14-discovery-candidate-medium-52057edc-7d06-48e7-98c3-10c41d468d16-pjn20yxt",
+      "primary": "PASS",
+      "fidelity": "PASS",
+      "worksheet_sha256": "a81dce0c892dbb7f972215f5e5f2e54370b29edbfb3ebe03a51d348e2ec679dc"
+    },
+    {
+      "order": 18,
+      "attempt": "medium-r1-cw17-contract-candidate",
+      "id": "cw-17-contract-candidate-medium",
+      "repetition": 1,
+      "bundle": "/private/tmp/skilltest-cw-candidate.L4NdO8/runs/skilltest-runs/20260909T010722726Z-cw-17-contract-candidate-medium-e812bc52-8ce9-4fbc-92fd-177130bf148b-goamsqye",
+      "primary": "PASS",
+      "fidelity": "PASS",
+      "worksheet_sha256": "11e36284d804200d3b4c37da574a9bb9cc0972412ddd4fc6840b2736a967956a"
+    },
+    {
+      "order": 19,
+      "attempt": "medium-r1-cw17-discovery-candidate",
+      "id": "cw-17-discovery-candidate-medium",
+      "repetition": 1,
+      "bundle": "/private/tmp/skilltest-cw-candidate.L4NdO8/runs/skilltest-runs/20260909T010754260Z-cw-17-discovery-candidate-medium-68e93c0f-0020-4e1c-8124-9134111140ef-3hs1g64m",
+      "primary": "PASS",
+      "fidelity": "PASS",
+      "worksheet_sha256": "ce992b22468f14ace980d60a6cbecae33b60c885a2586f006c55ccc655402ebe"
+    },
+    {
+      "order": 20,
+      "attempt": "medium-r1-cw18-contract-candidate",
+      "id": "cw-18-contract-candidate-medium",
+      "repetition": 1,
+      "bundle": "/private/tmp/skilltest-cw-candidate.L4NdO8/runs/skilltest-runs/20260909T010951013Z-cw-18-contract-candidate-medium-a83502c6-370c-496d-ad0f-af91db4bb340-mg3e3hwf",
+      "primary": "PASS",
+      "fidelity": "PASS",
+      "worksheet_sha256": "5ede78ba4d05f7f68b8e7fdd608bc3d80342f568c282da381d54ad439f0b7fb9"
+    },
+    {
+      "order": 21,
+      "attempt": "medium-r1-cw18-discovery-candidate",
+      "id": "cw-18-discovery-candidate-medium",
+      "repetition": 1,
+      "bundle": "/private/tmp/skilltest-cw-candidate.L4NdO8/runs/skilltest-runs/20260909T011023350Z-cw-18-discovery-candidate-medium-4ebac2c5-26b3-4378-ac1f-3a53680a7a70-n2i5ykhg",
+      "primary": "PASS",
+      "fidelity": "FAIL",
+      "worksheet_sha256": "a156ee69a744e4c173c800bf83d7f718bff801087f3e7e589d2a93b2be72b68a"
+    },
+    {
+      "order": 22,
+      "attempt": "medium-r1-cw19-candidate",
+      "id": "cw-19-candidate-medium",
+      "repetition": 1,
+      "bundle": "/private/tmp/skilltest-cw-candidate.L4NdO8/runs/skilltest-runs/20260909T011325128Z-cw-19-candidate-medium-d0db3be9-d381-40a8-91a0-e94d40f63587-sc2mfspp",
+      "primary": "FAIL",
+      "fidelity": "PASS",
+      "worksheet_sha256": "0e768cc34622b528a7623156eb1a4953d89d2e3810cfbac10ebbe352d8ec5de9"
+    },
+    {
+      "order": 23,
+      "attempt": "medium-r2-cw01-candidate",
+      "id": "cw-01-candidate-medium",
+      "repetition": 2,
+      "bundle": "/private/tmp/skilltest-cw-candidate.L4NdO8/runs/skilltest-runs/20260909T011423134Z-cw-01-candidate-medium-70533ceb-87b8-44d6-9f9e-74d4595476ef-daf4y8in",
+      "primary": "PASS",
+      "fidelity": "PASS",
+      "worksheet_sha256": "3d2a3c6c09cd57e20c53d9785057c0f4ca27a883084ccb460142b3b08980be0c"
+    },
+    {
+      "order": 24,
+      "attempt": "medium-r2-cw01-discovery-candidate",
+      "id": "cw-01-discovery-candidate-medium",
+      "repetition": 2,
+      "bundle": "/private/tmp/skilltest-cw-candidate.L4NdO8/runs/skilltest-runs/20260909T011511653Z-cw-01-discovery-candidate-medium-51c3f7f9-2f4b-4aee-9794-5637a11451c4-a9z94qkr",
+      "primary": "PASS",
+      "fidelity": "PASS",
+      "worksheet_sha256": "90a092ff1844ceb03dcb46c2701b4e56db521d7f0f1e2eae2b11316cd006c88e"
+    },
+    {
+      "order": 25,
+      "attempt": "medium-r2-cw02-candidate",
+      "id": "cw-02-candidate-medium",
+      "repetition": 2,
+      "bundle": "/private/tmp/skilltest-cw-candidate.L4NdO8/runs/skilltest-runs/20260909T011555885Z-cw-02-candidate-medium-d370ea40-2fb8-4edd-a8df-ebac2c7e8b9a-uc74cglo",
+      "primary": "PASS",
+      "fidelity": "PASS",
+      "worksheet_sha256": "6e7d1eaee01478233e607f3d125b3f6a81686ab2172261be584683c9e442754a"
+    },
+    {
+      "order": 26,
+      "attempt": "medium-r2-cw03-candidate",
+      "id": "cw-03-candidate-medium",
+      "repetition": 2,
+      "bundle": "/private/tmp/skilltest-cw-candidate.L4NdO8/runs/skilltest-runs/20260909T011714076Z-cw-03-candidate-medium-3c9cca00-f08d-4ca5-8c66-9d0a6ebcdc95-lq_sk03q",
+      "primary": "PASS",
+      "fidelity": "PASS",
+      "worksheet_sha256": "9c54b42d185bd393ca7e632a774a0c2c507b10a1c5ef4a6a9a1c4fe90fa4e981"
+    },
+    {
+      "order": 27,
+      "attempt": "medium-r2-cw04-candidate",
+      "id": "cw-04-candidate-medium",
+      "repetition": 2,
+      "bundle": "/private/tmp/skilltest-cw-candidate.L4NdO8/runs/skilltest-runs/20260909T011757996Z-cw-04-candidate-medium-da54104c-370e-4c9f-8217-c9336f339143-cx1ab1lx",
+      "primary": "PASS",
+      "fidelity": "FAIL",
+      "worksheet_sha256": "882308edbabe5a86c96e68bbd17363ba08604759cd0eb0c8afc699af14b2b31e"
+    },
+    {
+      "order": 28,
+      "attempt": "medium-r2-cw05-candidate",
+      "id": "cw-05-candidate-medium",
+      "repetition": 2,
+      "bundle": "/private/tmp/skilltest-cw-candidate.L4NdO8/runs/skilltest-runs/20260909T011840767Z-cw-05-candidate-medium-421773d3-ad7a-4408-b848-e3481f9f04f0-y4e260bp",
+      "primary": "PASS",
+      "fidelity": "FAIL",
+      "worksheet_sha256": "1cdc40b4d16fc315cbc2aa11f944149749869d1f778c545328d6aec3df6a9b9e"
+    },
+    {
+      "order": 29,
+      "attempt": "medium-r2-cw06-candidate",
+      "id": "cw-06-candidate-medium",
+      "repetition": 2,
+      "bundle": "/private/tmp/skilltest-cw-candidate.L4NdO8/runs/skilltest-runs/20260909T011922901Z-cw-06-candidate-medium-fae668a9-8374-4eb7-aec9-7c844b7abc18-2ubuxmr0",
+      "primary": "PASS",
+      "fidelity": "FAIL",
+      "worksheet_sha256": "d611245a3c5cf3ae6d524155bb1d294513cf550ae6c3c5f80ea862091c957ef2"
+    },
+    {
+      "order": 30,
+      "attempt": "medium-r2-cw07-candidate",
+      "id": "cw-07-candidate-medium",
+      "repetition": 2,
+      "bundle": "/private/tmp/skilltest-cw-candidate.L4NdO8/runs/skilltest-runs/20260909T012012538Z-cw-07-candidate-medium-6ba1a98e-72a0-4744-a35b-dbf977533d71-9_ti5gk8",
+      "primary": "PASS",
+      "fidelity": "FAIL",
+      "worksheet_sha256": "0d5978af1aae1236f055ce55561a74e21923b05d6e1b53ca6c64c3f71f20a2db"
+    },
+    {
+      "order": 31,
+      "attempt": "medium-r2-cw08-candidate",
+      "id": "cw-08-candidate-medium",
+      "repetition": 2,
+      "bundle": "/private/tmp/skilltest-cw-candidate.L4NdO8/runs/skilltest-runs/20260909T012107589Z-cw-08-candidate-medium-f0ac9da5-a979-4eca-b63f-da27b02d63a7-3nl4hq16",
+      "primary": "PASS",
+      "fidelity": "FAIL",
+      "worksheet_sha256": "0f2019411f71532a1900fb5594d4e4cac43d46909fa69bcce3454b97725952f2"
+    },
+    {
+      "order": 32,
+      "attempt": "medium-r2-cw09-description-candidate",
+      "id": "cw-09-description-candidate-medium",
+      "repetition": 2,
+      "bundle": "/private/tmp/skilltest-cw-candidate.L4NdO8/runs/skilltest-runs/20260909T012155880Z-cw-09-description-candidate-medium-79e435ec-e001-47c4-88f1-7542b6b8dd9e-8kpwf0n9",
+      "primary": "PASS",
+      "fidelity": "PASS",
+      "worksheet_sha256": "605514274f9ab618da6383e92a9e2240f7c1897502e4afe13be2d32eef4e3a2e"
+    },
+    {
+      "order": 33,
+      "attempt": "medium-r2-cw10-contract-candidate",
+      "id": "cw-10-contract-candidate-medium",
+      "repetition": 2,
+      "bundle": "/private/tmp/skilltest-cw-candidate.L4NdO8/runs/skilltest-runs/20260909T012231406Z-cw-10-contract-candidate-medium-2e137c0a-569d-49c7-b33a-e810981f7a43-i4j8tyl6",
+      "primary": "PASS",
+      "fidelity": "PASS",
+      "worksheet_sha256": "df968f3283383925a4313e92deb6894309548701584884f24a4f42ef544a5744"
+    },
+    {
+      "order": 34,
+      "attempt": "medium-r2-cw11-description-candidate",
+      "id": "cw-11-description-candidate-medium",
+      "repetition": 2,
+      "bundle": "/private/tmp/skilltest-cw-candidate.L4NdO8/runs/skilltest-runs/20260909T012315869Z-cw-11-description-candidate-medium-9b850e42-316a-49b1-83f1-726adc59624e-r8gfg5yr",
+      "primary": "PASS",
+      "fidelity": "PASS",
+      "worksheet_sha256": "aed9ce5efed1dd36361f875032d04ea8b01a15f61e94d9f508c6edf62fe48fcc"
+    },
+    {
+      "order": 35,
+      "attempt": "medium-r2-cw12-contract-candidate",
+      "id": "cw-12-contract-candidate-medium",
+      "repetition": 2,
+      "bundle": "/private/tmp/skilltest-cw-candidate.L4NdO8/runs/skilltest-runs/20260909T012358685Z-cw-12-contract-candidate-medium-1bcbce53-bb37-4d8c-90ee-1532d48ce25a-3zz8h1ie",
+      "primary": "PASS",
+      "fidelity": "PASS",
+      "worksheet_sha256": "e51c4ea1e997a8bbb33f9bf6a64e161a161b2bf4152486397f914e1e4c2f9b36"
+    },
+    {
+      "order": 36,
+      "attempt": "medium-r2-cw13-candidate",
+      "id": "cw-13-candidate-medium",
+      "repetition": 2,
+      "bundle": "/private/tmp/skilltest-cw-candidate.L4NdO8/runs/skilltest-runs/20260909T012500562Z-cw-13-candidate-medium-09e8234a-090b-4a03-bd8b-32d40a4954ac-myghf4uk",
+      "primary": "PASS",
+      "fidelity": "PASS",
+      "worksheet_sha256": "72f0fd2d71de1e4dacd0c859994fe6ce17f804478cfeb625f466ba1e7083eea0"
+    },
+    {
+      "order": 37,
+      "attempt": "medium-r2-cw13-discovery-candidate",
+      "id": "cw-13-discovery-candidate-medium",
+      "repetition": 2,
+      "bundle": "/private/tmp/skilltest-cw-candidate.L4NdO8/runs/skilltest-runs/20260909T012555393Z-cw-13-discovery-candidate-medium-59e2eb4c-999a-4efe-a834-b69c87b70685-dxi9phs8",
+      "primary": "PASS",
+      "fidelity": "PASS",
+      "worksheet_sha256": "0097cbf182fef9c3d942c1867cbd2f8c10664cf36fb4ad07d29985bb20c31d05"
+    },
+    {
+      "order": 38,
+      "attempt": "medium-r2-cw14-candidate",
+      "id": "cw-14-candidate-medium",
+      "repetition": 2,
+      "bundle": "/private/tmp/skilltest-cw-candidate.L4NdO8/runs/skilltest-runs/20260909T012916873Z-cw-14-candidate-medium-0026d9da-49ed-45a4-b90c-4d4c9ea09403-2fnfljyd",
+      "primary": "PASS",
+      "fidelity": "FAIL",
+      "worksheet_sha256": "9aac8684489313f14b9e516a7ea556d6d4e22237ff6ef919bd7a176df18718f3"
+    },
+    {
+      "order": 39,
+      "attempt": "medium-r2-cw14-discovery-candidate",
+      "id": "cw-14-discovery-candidate-medium",
+      "repetition": 2,
+      "bundle": "/private/tmp/skilltest-cw-candidate.L4NdO8/runs/skilltest-runs/20260909T013035759Z-cw-14-discovery-candidate-medium-0c3b47a2-19fd-4e58-b7c0-00780dab5709-w79lgsk0",
+      "primary": "PASS",
+      "fidelity": "PASS",
+      "worksheet_sha256": "e0f59ecaab5d4fa4a69389744b5f1531cfd43a75404d202357941d7c3589c383"
+    },
+    {
+      "order": 40,
+      "attempt": "medium-r2-cw17-contract-candidate",
+      "id": "cw-17-contract-candidate-medium",
+      "repetition": 2,
+      "bundle": "/private/tmp/skilltest-cw-candidate.L4NdO8/runs/skilltest-runs/20260909T013329174Z-cw-17-contract-candidate-medium-ba5c08b0-e543-4d1a-a69b-34966daea0f2-sl5w8lhe",
+      "primary": "PASS",
+      "fidelity": "PASS",
+      "worksheet_sha256": "f694f92642c8f23c59cf5d12320f66eae8466f4ba3177942626af7278ac9558d"
+    },
+    {
+      "order": 41,
+      "attempt": "medium-r2-cw17-discovery-candidate",
+      "id": "cw-17-discovery-candidate-medium",
+      "repetition": 2,
+      "bundle": "/private/tmp/skilltest-cw-candidate.L4NdO8/runs/skilltest-runs/20260909T013405258Z-cw-17-discovery-candidate-medium-1393076a-e412-428e-a8c1-363d4dc8012f-42h7hm31",
+      "primary": "PASS",
+      "fidelity": "PASS",
+      "worksheet_sha256": "5905fac47045dac332d947c2639a51168b1f36089690024cb1ddf6f6a62f0438"
+    },
+    {
+      "order": 42,
+      "attempt": "medium-r2-cw18-contract-candidate",
+      "id": "cw-18-contract-candidate-medium",
+      "repetition": 2,
+      "bundle": "/private/tmp/skilltest-cw-candidate.L4NdO8/runs/skilltest-runs/20260909T013559785Z-cw-18-contract-candidate-medium-62d87b29-d5c3-48af-8355-eb82a9143654-3dsyo0b3",
+      "primary": "PASS",
+      "fidelity": "PASS",
+      "worksheet_sha256": "2d2963d71baa2cd91de0d9945ea06eef66b66c4e4fd0b3a59b56b6752b4cb112"
+    },
+    {
+      "order": 43,
+      "attempt": "medium-r2-cw18-discovery-candidate",
+      "id": "cw-18-discovery-candidate-medium",
+      "repetition": 2,
+      "bundle": "/private/tmp/skilltest-cw-candidate.L4NdO8/runs/skilltest-runs/20260909T013630831Z-cw-18-discovery-candidate-medium-598ba1ac-eb9a-49bc-8a54-ce6b73b41358-vi72m5j7",
+      "primary": "PASS",
+      "fidelity": "FAIL",
+      "worksheet_sha256": "561a184b983aa653fd7c8f728bd9c75a23ec6291ac17ed6370390df4675ccb7c"
+    },
+    {
+      "order": 44,
+      "attempt": "medium-r2-cw19-candidate",
+      "id": "cw-19-candidate-medium",
+      "repetition": 2,
+      "bundle": "/private/tmp/skilltest-cw-candidate.L4NdO8/runs/skilltest-runs/20260909T014016476Z-cw-19-candidate-medium-5903f01d-a1e0-4ce3-b7cb-7faa5128e49e-v4xura13",
+      "primary": "FAIL",
+      "fidelity": "PASS",
+      "worksheet_sha256": "97d35a6eed87a4437b069949346539f2bf6ff173c12c4a39df1b9c577394c7c2"
+    },
+    {
+      "order": 45,
+      "attempt": "medium-r3-cw01-candidate",
+      "id": "cw-01-candidate-medium",
+      "repetition": 3,
+      "bundle": "/private/tmp/skilltest-cw-candidate.L4NdO8/runs/skilltest-runs/20260909T014234320Z-cw-01-candidate-medium-b77c0d5b-99ca-4598-8cd6-50697d5ce330-4d_9zl25",
+      "primary": "PASS",
+      "fidelity": "PASS",
+      "worksheet_sha256": "70af0b7a8f671fb5a57f752aa59150cabebe129e3db4a5cf72ad55694bae6d4d"
+    },
+    {
+      "order": 46,
+      "attempt": "medium-r3-cw01-discovery-candidate",
+      "id": "cw-01-discovery-candidate-medium",
+      "repetition": 3,
+      "bundle": "/private/tmp/skilltest-cw-candidate.L4NdO8/runs/skilltest-runs/20260909T014307216Z-cw-01-discovery-candidate-medium-95b40f3b-96d2-4c3c-8945-a04fc4a60893-_olrxqf7",
+      "primary": "PASS",
+      "fidelity": "PASS",
+      "worksheet_sha256": "f74efb14de16dc24dc1aeae80402d6348ebe6f71f494bd41aa79680143db0981"
+    },
+    {
+      "order": 47,
+      "attempt": "medium-r3-cw02-candidate",
+      "id": "cw-02-candidate-medium",
+      "repetition": 3,
+      "bundle": "/private/tmp/skilltest-cw-candidate.L4NdO8/runs/skilltest-runs/20260909T014359783Z-cw-02-candidate-medium-c2de718e-d5db-4fa0-b3a6-d9e286a44a19-cimquzos",
+      "primary": "PASS",
+      "fidelity": "FAIL",
+      "worksheet_sha256": "e0c22347e52f5b9505d0067deb0696674a570e578125a23e769fa46432a16c6f"
+    },
+    {
+      "order": 48,
+      "attempt": "medium-r3-cw03-candidate",
+      "id": "cw-03-candidate-medium",
+      "repetition": 3,
+      "bundle": "/private/tmp/skilltest-cw-candidate.L4NdO8/runs/skilltest-runs/20260909T014446358Z-cw-03-candidate-medium-81534c29-17a4-42d5-856d-d9eedf8d4849-_5y8dxcp",
+      "primary": "PASS",
+      "fidelity": "PASS",
+      "worksheet_sha256": "53e249eb3f5365bdc408c5bad2d04b1c98bd3f75570186118b0b2f40475a5775"
+    },
+    {
+      "order": 49,
+      "attempt": "medium-r3-cw04-candidate",
+      "id": "cw-04-candidate-medium",
+      "repetition": 3,
+      "bundle": "/private/tmp/skilltest-cw-candidate.L4NdO8/runs/skilltest-runs/20260909T014522940Z-cw-04-candidate-medium-ce47a6f8-bf7e-43bf-bc9a-8792faf72177-c1yodi3_",
+      "primary": "PASS",
+      "fidelity": "PASS",
+      "worksheet_sha256": "9e28d11d2b35ab02fca896021401b26c3cf84fdc22b91f6293b08ad3e58dc493"
+    },
+    {
+      "order": 50,
+      "attempt": "medium-r3-cw05-candidate",
+      "id": "cw-05-candidate-medium",
+      "repetition": 3,
+      "bundle": "/private/tmp/skilltest-cw-candidate.L4NdO8/runs/skilltest-runs/20260909T014558386Z-cw-05-candidate-medium-239c7042-4eb7-4096-bcc2-4675784496b2-xg7fokvd",
+      "primary": "PASS",
+      "fidelity": "PASS",
+      "worksheet_sha256": "a92bafa79496d6335f2e8fc03f7d62fc7732b217ba6177679986738120946b2a"
+    },
+    {
+      "order": 51,
+      "attempt": "medium-r3-cw06-candidate",
+      "id": "cw-06-candidate-medium",
+      "repetition": 3,
+      "bundle": "/private/tmp/skilltest-cw-candidate.L4NdO8/runs/skilltest-runs/20260909T014638423Z-cw-06-candidate-medium-c135281b-2e88-4da8-91c4-d5d8170e334f-3b_29gc_",
+      "primary": "PASS",
+      "fidelity": "PASS",
+      "worksheet_sha256": "f95a9db484acd867582acb9531f285f225eec6f7edb2fd34d9ddb8988689ef43"
+    },
+    {
+      "order": 52,
+      "attempt": "medium-r3-cw07-candidate",
+      "id": "cw-07-candidate-medium",
+      "repetition": 3,
+      "bundle": "/private/tmp/skilltest-cw-candidate.L4NdO8/runs/skilltest-runs/20260909T014713684Z-cw-07-candidate-medium-dfa55cdd-9e54-4c0b-aa4b-77793a9b7d14-u8_dzi_b",
+      "primary": "PASS",
+      "fidelity": "PASS",
+      "worksheet_sha256": "5f8ba580f8b0b8f37088c1c458b3ca8385a4a19a45263dc2467a4bed0d0f78e2"
+    },
+    {
+      "order": 53,
+      "attempt": "medium-r3-cw08-candidate",
+      "id": "cw-08-candidate-medium",
+      "repetition": 3,
+      "bundle": "/private/tmp/skilltest-cw-candidate.L4NdO8/runs/skilltest-runs/20260909T014754296Z-cw-08-candidate-medium-85fef7b9-f950-491a-953e-82ebea67aa65-kitkpiyz",
+      "primary": "PASS",
+      "fidelity": "PASS",
+      "worksheet_sha256": "87904a4226fa9d976521d31961e2772e0fc68bb970e4dd89f7237f93534a4fd7"
+    },
+    {
+      "order": 54,
+      "attempt": "medium-r3-cw09-description-candidate",
+      "id": "cw-09-description-candidate-medium",
+      "repetition": 3,
+      "bundle": "/private/tmp/skilltest-cw-candidate.L4NdO8/runs/skilltest-runs/20260909T014926611Z-cw-09-description-candidate-medium-4a3a4cb2-fddc-4ca3-a386-56583efe821f-mhy4hidh",
+      "primary": "PASS",
+      "fidelity": "PASS",
+      "worksheet_sha256": "bcb7913c2bff8b4aeb77556d2461a33e4b84d260a2763b1d2f7f168f56f9546f"
+    },
+    {
+      "order": 55,
+      "attempt": "medium-r3-cw10-contract-candidate",
+      "id": "cw-10-contract-candidate-medium",
+      "repetition": 3,
+      "bundle": "/private/tmp/skilltest-cw-candidate.L4NdO8/runs/skilltest-runs/20260909T015000069Z-cw-10-contract-candidate-medium-52360be3-b72a-49a9-91ec-c00040327e5d-a_1ypz9q",
+      "primary": "PASS",
+      "fidelity": "PASS",
+      "worksheet_sha256": "55ce448a8fab3b8b815015bca4c6adf70e8ab1a9674438ed57ae3d97abf80af1"
+    },
+    {
+      "order": 56,
+      "attempt": "medium-r3-cw11-description-candidate",
+      "id": "cw-11-description-candidate-medium",
+      "repetition": 3,
+      "bundle": "/private/tmp/skilltest-cw-candidate.L4NdO8/runs/skilltest-runs/20260909T015031562Z-cw-11-description-candidate-medium-eb69a3b9-9ec5-4f52-810d-5fe8a6184aeb-wacba2md",
+      "primary": "PASS",
+      "fidelity": "FAIL",
+      "worksheet_sha256": "ba755c779318ed9adb6ba988e4ed78dd5756e88b9142443672393d86cd71b5ac"
+    },
+    {
+      "order": 57,
+      "attempt": "medium-r3-cw12-contract-candidate",
+      "id": "cw-12-contract-candidate-medium",
+      "repetition": 3,
+      "bundle": "/private/tmp/skilltest-cw-candidate.L4NdO8/runs/skilltest-runs/20260909T015111217Z-cw-12-contract-candidate-medium-7fcad019-23c7-4b6c-a84e-8951086f6af2-bgxa2_gw",
+      "primary": "PASS",
+      "fidelity": "FAIL",
+      "worksheet_sha256": "2452a8a414be3bffe92b18acd7d8f9f9ea4063af58f940d6ecd3ff8162c2e0be"
+    },
+    {
+      "order": 58,
+      "attempt": "medium-r3-cw13-candidate",
+      "id": "cw-13-candidate-medium",
+      "repetition": 3,
+      "bundle": "/private/tmp/skilltest-cw-candidate.L4NdO8/runs/skilltest-runs/20260909T015157559Z-cw-13-candidate-medium-fd0d2184-5f32-4f3e-b8ea-b86813ba5eb2-p_0yxjsx",
+      "primary": "PASS",
+      "fidelity": "PASS",
+      "worksheet_sha256": "a8dbc2246e12e7238241f655e710c5332c2e61e6de9f1967d1198978f8e8157f"
+    },
+    {
+      "order": 59,
+      "attempt": "medium-r3-cw13-discovery-candidate",
+      "id": "cw-13-discovery-candidate-medium",
+      "repetition": 3,
+      "bundle": "/private/tmp/skilltest-cw-candidate.L4NdO8/runs/skilltest-runs/20260909T015250396Z-cw-13-discovery-candidate-medium-610712b2-62c9-4230-b512-4835d2e6a283-0kvqntvm",
+      "primary": "PASS",
+      "fidelity": "PASS",
+      "worksheet_sha256": "9547566a2d3ab7d68e6116c7ab3e9d72f7974e298fe93fc234ced08e3030c9b6"
+    },
+    {
+      "order": 60,
+      "attempt": "medium-r3-cw14-candidate",
+      "id": "cw-14-candidate-medium",
+      "repetition": 3,
+      "bundle": "/private/tmp/skilltest-cw-candidate.L4NdO8/runs/skilltest-runs/20260909T015604002Z-cw-14-candidate-medium-c03aa53b-e0fd-4772-b494-7d3910290b0d-ha__1qtf",
+      "primary": "PASS",
+      "fidelity": "FAIL",
+      "worksheet_sha256": "7d9a20253da5daa8d139b9affcefd58652f2c833572f20d8d83bedeae2eefa38"
+    },
+    {
+      "order": 61,
+      "attempt": "medium-r3-cw14-discovery-candidate",
+      "id": "cw-14-discovery-candidate-medium",
+      "repetition": 3,
+      "bundle": "/private/tmp/skilltest-cw-candidate.L4NdO8/runs/skilltest-runs/20260909T015723856Z-cw-14-discovery-candidate-medium-fc60894b-94c8-4cd5-9721-59142f70eeba-0qzoumnc",
+      "primary": "PASS",
+      "fidelity": "PASS",
+      "worksheet_sha256": "606ac151c933660a0c8d0d3d4f2b74ebaeae8c6d9784c323452fe73187b3c231"
+    },
+    {
+      "order": 62,
+      "attempt": "medium-r3-cw17-contract-candidate",
+      "id": "cw-17-contract-candidate-medium",
+      "repetition": 3,
+      "bundle": "/private/tmp/skilltest-cw-candidate.L4NdO8/runs/skilltest-runs/20260909T020006715Z-cw-17-contract-candidate-medium-9c6d5422-bc48-42b0-af46-761068819c00-iyi3xep_",
+      "primary": "PASS",
+      "fidelity": "PASS",
+      "worksheet_sha256": "3bb1b6006450cee052157d02e74b0354b5d355be4bbff935e5c99cc1050a38fe"
+    },
+    {
+      "order": 63,
+      "attempt": "medium-r3-cw17-discovery-candidate",
+      "id": "cw-17-discovery-candidate-medium",
+      "repetition": 3,
+      "bundle": "/private/tmp/skilltest-cw-candidate.L4NdO8/runs/skilltest-runs/20260909T020047520Z-cw-17-discovery-candidate-medium-5168deba-22be-46a3-9edb-bba1d3079156-3md_ko41",
+      "primary": "PASS",
+      "fidelity": "PASS",
+      "worksheet_sha256": "66eb967cbfeae42571d6634488d624be13a8d885483a9585fbe22f536e537b4b"
+    },
+    {
+      "order": 64,
+      "attempt": "medium-r3-cw18-contract-candidate",
+      "id": "cw-18-contract-candidate-medium",
+      "repetition": 3,
+      "bundle": "/private/tmp/skilltest-cw-candidate.L4NdO8/runs/skilltest-runs/20260909T020338536Z-cw-18-contract-candidate-medium-f31289e2-5591-4929-869f-fb4f3b1ba84a-wux1438k",
+      "primary": "PASS",
+      "fidelity": "PASS",
+      "worksheet_sha256": "6154d26d827436162693b296750434d15ea1c07deac56e0f152655c090593b02"
+    },
+    {
+      "order": 65,
+      "attempt": "medium-r3-cw18-discovery-candidate",
+      "id": "cw-18-discovery-candidate-medium",
+      "repetition": 3,
+      "bundle": "/private/tmp/skilltest-cw-candidate.L4NdO8/runs/skilltest-runs/20260909T020413433Z-cw-18-discovery-candidate-medium-a453b78b-0d83-4409-8a7e-b703aa66d662-f0w7r_bl",
+      "primary": "PASS",
+      "fidelity": "FAIL",
+      "worksheet_sha256": "935ddb1a4ab7873141e14d04de8cb86d98ea682ef320dbf479d5a6b4a53bd5ac"
+    },
+    {
+      "order": 66,
+      "attempt": "medium-r3-cw19-candidate",
+      "id": "cw-19-candidate-medium",
+      "repetition": 3,
+      "bundle": "/private/tmp/skilltest-cw-candidate.L4NdO8/runs/skilltest-runs/20260909T020757160Z-cw-19-candidate-medium-06ecc0fe-0376-48d5-b4ec-4bad4ea8b595-joksjgom",
+      "primary": "PASS",
+      "fidelity": "PASS",
+      "worksheet_sha256": "2fedb4036251a404c2ea17ccbaf2aa3f8af64d248ea8347334a60dd80c2fdce8"
+    }
+  ],
+  "accepted_baseline_counts": {
+    "cw-01-discovery": {
+      "discovery": {
+        "PASS": 3,
+        "FAIL": 0,
+        "INCONCLUSIVE": 0,
+        "evaluable": 3,
+        "fidelity_fail": 1
+      }
+    },
+    "cw-01-loaded": {
+      "current-dd": {
+        "PASS": 3,
+        "FAIL": 0,
+        "INCONCLUSIVE": 0,
+        "evaluable": 3,
+        "fidelity_fail": 1
+      },
+      "no-dd": {
+        "PASS": 3,
+        "FAIL": 0,
+        "INCONCLUSIVE": 0,
+        "evaluable": 3,
+        "fidelity_fail": 0
+      }
+    },
+    "cw-02-loaded": {
+      "current-dd": {
+        "PASS": 3,
+        "FAIL": 0,
+        "INCONCLUSIVE": 0,
+        "evaluable": 3,
+        "fidelity_fail": 0
+      },
+      "no-dd": {
+        "PASS": 3,
+        "FAIL": 0,
+        "INCONCLUSIVE": 0,
+        "evaluable": 3,
+        "fidelity_fail": 0
+      }
+    },
+    "cw-03-loaded": {
+      "current-dd": {
+        "PASS": 3,
+        "FAIL": 0,
+        "INCONCLUSIVE": 0,
+        "evaluable": 3,
+        "fidelity_fail": 0
+      },
+      "no-dd": {
+        "PASS": 3,
+        "FAIL": 0,
+        "INCONCLUSIVE": 0,
+        "evaluable": 3,
+        "fidelity_fail": 0
+      }
+    },
+    "cw-04-loaded": {
+      "current-dd": {
+        "PASS": 3,
+        "FAIL": 0,
+        "INCONCLUSIVE": 0,
+        "evaluable": 3,
+        "fidelity_fail": 0
+      },
+      "no-dd": {
+        "PASS": 3,
+        "FAIL": 0,
+        "INCONCLUSIVE": 0,
+        "evaluable": 3,
+        "fidelity_fail": 0
+      }
+    },
+    "cw-05-loaded": {
+      "current-dd": {
+        "PASS": 3,
+        "FAIL": 0,
+        "INCONCLUSIVE": 0,
+        "evaluable": 3,
+        "fidelity_fail": 1
+      },
+      "no-dd": {
+        "PASS": 3,
+        "FAIL": 0,
+        "INCONCLUSIVE": 0,
+        "evaluable": 3,
+        "fidelity_fail": 0
+      }
+    },
+    "cw-06-loaded": {
+      "current-dd": {
+        "PASS": 3,
+        "FAIL": 0,
+        "INCONCLUSIVE": 0,
+        "evaluable": 3,
+        "fidelity_fail": 2
+      },
+      "no-dd": {
+        "PASS": 3,
+        "FAIL": 0,
+        "INCONCLUSIVE": 0,
+        "evaluable": 3,
+        "fidelity_fail": 0
+      }
+    },
+    "cw-07-loaded": {
+      "current-dd": {
+        "PASS": 3,
+        "FAIL": 0,
+        "INCONCLUSIVE": 0,
+        "evaluable": 3,
+        "fidelity_fail": 1
+      },
+      "no-dd": {
+        "PASS": 3,
+        "FAIL": 0,
+        "INCONCLUSIVE": 0,
+        "evaluable": 3,
+        "fidelity_fail": 0
+      }
+    },
+    "cw-08-loaded": {
+      "current-dd": {
+        "PASS": 3,
+        "FAIL": 0,
+        "INCONCLUSIVE": 0,
+        "evaluable": 3,
+        "fidelity_fail": 3
+      },
+      "no-dd": {
+        "PASS": 3,
+        "FAIL": 0,
+        "INCONCLUSIVE": 0,
+        "evaluable": 3,
+        "fidelity_fail": 0
+      }
+    },
+    "cw-09-description": {
+      "description": {
+        "PASS": 0,
+        "FAIL": 3,
+        "INCONCLUSIVE": 0,
+        "evaluable": 3,
+        "fidelity_fail": 1
+      }
+    },
+    "cw-10-contract": {
+      "contract": {
+        "PASS": 0,
+        "FAIL": 3,
+        "INCONCLUSIVE": 0,
+        "evaluable": 3,
+        "fidelity_fail": 0
+      }
+    },
+    "cw-11-description": {
+      "description": {
+        "PASS": 0,
+        "FAIL": 3,
+        "INCONCLUSIVE": 0,
+        "evaluable": 3,
+        "fidelity_fail": 0
+      }
+    },
+    "cw-12-contract": {
+      "contract": {
+        "PASS": 0,
+        "FAIL": 3,
+        "INCONCLUSIVE": 0,
+        "evaluable": 3,
+        "fidelity_fail": 0
+      }
+    },
+    "cw-13-discovery": {
+      "discovery": {
+        "PASS": 1,
+        "FAIL": 2,
+        "INCONCLUSIVE": 0,
+        "evaluable": 3,
+        "fidelity_fail": 0
+      }
+    },
+    "cw-13-loaded": {
+      "current-dd": {
+        "PASS": 3,
+        "FAIL": 0,
+        "INCONCLUSIVE": 0,
+        "evaluable": 3,
+        "fidelity_fail": 3
+      },
+      "no-dd": {
+        "PASS": 3,
+        "FAIL": 0,
+        "INCONCLUSIVE": 0,
+        "evaluable": 3,
+        "fidelity_fail": 2
+      }
+    },
+    "cw-14-discovery": {
+      "discovery": {
+        "PASS": 3,
+        "FAIL": 0,
+        "INCONCLUSIVE": 0,
+        "evaluable": 3,
+        "fidelity_fail": 0
+      }
+    },
+    "cw-14-loaded": {
+      "current-dd": {
+        "PASS": 3,
+        "FAIL": 0,
+        "INCONCLUSIVE": 0,
+        "evaluable": 3,
+        "fidelity_fail": 2
+      },
+      "no-dd": {
+        "PASS": 3,
+        "FAIL": 0,
+        "INCONCLUSIVE": 0,
+        "evaluable": 3,
+        "fidelity_fail": 2
+      }
+    },
+    "cw-17-contract": {
+      "contract": {
+        "PASS": 0,
+        "FAIL": 3,
+        "INCONCLUSIVE": 0,
+        "evaluable": 3,
+        "fidelity_fail": 0
+      }
+    },
+    "cw-17-discovery": {
+      "discovery": {
+        "PASS": 1,
+        "FAIL": 2,
+        "INCONCLUSIVE": 0,
+        "evaluable": 3,
+        "fidelity_fail": 0
+      }
+    },
+    "cw-18-contract": {
+      "contract": {
+        "PASS": 3,
+        "FAIL": 0,
+        "INCONCLUSIVE": 0,
+        "evaluable": 3,
+        "fidelity_fail": 0
+      }
+    },
+    "cw-18-discovery": {
+      "discovery": {
+        "PASS": 3,
+        "FAIL": 0,
+        "INCONCLUSIVE": 0,
+        "evaluable": 3,
+        "fidelity_fail": 3
+      }
+    },
+    "cw-19-loaded": {
+      "current-dd": {
+        "PASS": 2,
+        "FAIL": 1,
+        "INCONCLUSIVE": 0,
+        "evaluable": 3,
+        "fidelity_fail": 2
+      },
+      "no-dd": {
+        "PASS": 0,
+        "FAIL": 3,
+        "INCONCLUSIVE": 0,
+        "evaluable": 3,
+        "fidelity_fail": 0
+      }
+    }
+  }
+}

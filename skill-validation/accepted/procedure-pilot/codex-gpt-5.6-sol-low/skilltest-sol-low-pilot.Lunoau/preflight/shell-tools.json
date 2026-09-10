@@ -1,0 +1,19 @@
+{
+  "argv": [
+    "/usr/bin/env",
+    "-i",
+    "HOME=/private/tmp/skilltest-sol-low-pilot.Lunoau/preflight/home",
+    "CODEX_HOME=/private/tmp/skilltest-sol-low-pilot.Lunoau/preflight/codex",
+    "TMPDIR=/private/tmp/skilltest-sol-low-pilot.Lunoau/preflight/tmp",
+    "PATH=/opt/homebrew/bin:/usr/bin:/bin:/usr/sbin:/sbin",
+    "/bin/zsh",
+    "-lc",
+    "cd \"$1\" || exit; for tool in cat sed rg; do command -v \"$tool\" || exit; done; cat .agents/skills/writing-plans/SKILL.md sources/city-museum-rfp.md sources/city-museum-addendum-2.md sources/friends-newsletter.md context/task.md >/dev/null",
+    "pilot-tool-check",
+    "/private/tmp/skilltest-sol-low-pilot.Lunoau/tmp/skilltest-runs/20260907T010105074Z-pilot-qualification-no-dd-02dc21ae-a0b1-41e5-b336-ee58b1525f12-jad7174w/workspace/fixture"
+  ],
+  "stdout": "/bin/cat\n/usr/bin/sed\n/opt/homebrew/bin/rg\n",
+  "stderr": "",
+  "exit_code": 0,
+  "cwd": "/Users/simon/work/personal/disciplined-development-skills/.worktrees/skilltest-input-isolation-spike"
+}

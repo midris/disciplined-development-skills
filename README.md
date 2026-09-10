@@ -26,8 +26,9 @@ Start with the [validation charter](skill-validation/charter/core-contracts.md):
 Use the existing contracts and scenario rubrics rather than inventing new success criteria from the current skill wording.
 The charter's proposed suite changes retain their stated approval and activation conditions.
 
-The [rewrite goal and design principles](plans/specs/2026-09-06-skilltest-controlled-inputs-design.md#overall-goal) explain the intended direction: cleaner, lighter, more effective skills, with dumb tools for smart agents and repeatable RED/GREEN evidence.
-The [validation guide](skill-validation/README.md) routes to the charter, scenarios, methodology, runner and current design work.
+The [rewrite goal and design principles](plans/completed/specs/2026-09-06-skilltest-controlled-inputs-design.md#overall-goal) explain the intended direction: cleaner, lighter, more effective skills, with dumb tools for smart agents and repeatable RED/GREEN evidence.
+The [validation guide](skill-validation/README.md) routes to the charter, scenarios, methodology and runner.
+The [current testing plan](plans/2026-09-09-dd-skill-testing.md) identifies completed work, retained candidate branches and the next decision.
 Testing is [model-led, supported by small deterministic tools](skill-validation/README.md#model-led-testing): the agent designs and judges tests; the tools prepare runs and record evidence.
 Agents must also read [CLAUDE.md](CLAUDE.md); [AGENTS.md](AGENTS.md) is the Codex entry point to that shared guidance.
 

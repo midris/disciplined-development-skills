@@ -1,0 +1,283 @@
+{
+  "artifacts": {
+    "config": {
+      "bytes": 2157,
+      "exists": true,
+      "path": "config.json",
+      "sha256": "36c3ff70842b1949f1cfbff41481a8e1f2d995582be3a915285e69a9c6debe47"
+    },
+    "evidence": {
+      "empty": true,
+      "entries": [],
+      "exists": true,
+      "path": "workspace/evidence"
+    },
+    "final": {
+      "bytes": 160,
+      "exists": true,
+      "path": "final.txt",
+      "sha256": "0616fb5c9f72cbc5c4b7df0dd86a8e4ac99cc9fab6465f9185600ff0dfcc2273"
+    },
+    "fixture": {
+      "empty": false,
+      "entries": [
+        {
+          "bytes": null,
+          "path": ".agents",
+          "sha256": null,
+          "type": "directory"
+        },
+        {
+          "bytes": null,
+          "path": ".agents/skills",
+          "sha256": null,
+          "type": "directory"
+        },
+        {
+          "bytes": null,
+          "path": ".agents/skills/adversarial-review",
+          "sha256": null,
+          "type": "directory"
+        },
+        {
+          "bytes": null,
+          "path": ".agents/skills/adversarial-review-loop",
+          "sha256": null,
+          "type": "directory"
+        },
+        {
+          "bytes": 8374,
+          "path": ".agents/skills/adversarial-review-loop/SKILL.md",
+          "sha256": "46b85eafc5db54cb521eed9c4a110e552c76d97cfae72e141f109c9dea10f0c6",
+          "type": "file"
+        },
+        {
+          "bytes": 10295,
+          "path": ".agents/skills/adversarial-review/SKILL.md",
+          "sha256": "9004ff153d5dc3a3690254667c4f666151dcabff7ef6f705cc751134be56499c",
+          "type": "file"
+        },
+        {
+          "bytes": null,
+          "path": ".agents/skills/concise-writing",
+          "sha256": null,
+          "type": "directory"
+        },
+        {
+          "bytes": 5616,
+          "path": ".agents/skills/concise-writing/SKILL.md",
+          "sha256": "4d12a2eb475c6b2ef57e2300c8c07af3f59c1e07b2b82695a3b7669eee1d6d72",
+          "type": "file"
+        },
+        {
+          "bytes": null,
+          "path": ".agents/skills/disciplined-development",
+          "sha256": null,
+          "type": "directory"
+        },
+        {
+          "bytes": 13112,
+          "path": ".agents/skills/disciplined-development/SKILL.md",
+          "sha256": "1151a7575a5b6f72e007229c97efdb7a829695d08e8f44450d0d71b232e75dec",
+          "type": "file"
+        },
+        {
+          "bytes": null,
+          "path": ".agents/skills/disciplined-research",
+          "sha256": null,
+          "type": "directory"
+        },
+        {
+          "bytes": 9400,
+          "path": ".agents/skills/disciplined-research/SKILL.md",
+          "sha256": "a5c4079e5aa21651ecd39b09e3fb2d9a58f4a1f3b99354b3b6927b2d44c6fb50",
+          "type": "file"
+        },
+        {
+          "bytes": null,
+          "path": ".agents/skills/dispatching-development-subagents",
+          "sha256": null,
+          "type": "directory"
+        },
+        {
+          "bytes": 5593,
+          "path": ".agents/skills/dispatching-development-subagents/SKILL.md",
+          "sha256": "b89b4db8af53bd136237cb2306f956c039757a0e321b1f704bd16d1a00580500",
+          "type": "file"
+        },
+        {
+          "bytes": null,
+          "path": ".agents/skills/lean-plan-writing",
+          "sha256": null,
+          "type": "directory"
+        },
+        {
+          "bytes": 5194,
+          "path": ".agents/skills/lean-plan-writing/SKILL.md",
+          "sha256": "6a3115a4d33ad2f99238f915a6a1b7869efd8c80a6cce422d3afae60c9857fac",
+          "type": "file"
+        },
+        {
+          "bytes": null,
+          "path": ".agents/skills/requesting-code-review",
+          "sha256": null,
+          "type": "directory"
+        },
+        {
+          "bytes": 2956,
+          "path": ".agents/skills/requesting-code-review/SKILL.md",
+          "sha256": "d71cc01ba56d2325cf8af5f7c11837819b63ecd57de0bfdb812f7f3ff7751df8",
+          "type": "file"
+        },
+        {
+          "bytes": 5669,
+          "path": ".agents/skills/requesting-code-review/code-reviewer.md",
+          "sha256": "5eca5fcfd48a50e0a526ce5ffd64bf625d6b81bb46d11795274dae451fe6ffd4",
+          "type": "file"
+        },
+        {
+          "bytes": null,
+          "path": ".agents/skills/sweeping-stale-references",
+          "sha256": null,
+          "type": "directory"
+        },
+        {
+          "bytes": 7689,
+          "path": ".agents/skills/sweeping-stale-references/SKILL.md",
+          "sha256": "d6812c33cae026807bbb3ebe851d93b60b513dd87ea5efd98aea28f5c02f9157",
+          "type": "file"
+        },
+        {
+          "bytes": null,
+          "path": ".agents/skills/writing-explicit-rationale",
+          "sha256": null,
+          "type": "directory"
+        },
+        {
+          "bytes": 9181,
+          "path": ".agents/skills/writing-explicit-rationale/SKILL.md",
+          "sha256": "97eb06c649c194e8819b4dff68b808eda4ec7c948a6ead518da247daf31d6cfe",
+          "type": "file"
+        },
+        {
+          "bytes": null,
+          "path": ".agents/skills/writing-plans",
+          "sha256": null,
+          "type": "directory"
+        },
+        {
+          "bytes": 7053,
+          "path": ".agents/skills/writing-plans/SKILL.md",
+          "sha256": "48508f44bbfd7d24b029fbf3a314f3cd14c9615599059366e922f47b8dc08cf2",
+          "type": "file"
+        },
+        {
+          "bytes": 1713,
+          "path": ".agents/skills/writing-plans/plan-document-reviewer-prompt.md",
+          "sha256": "aa728b96aad603c8be28875a4305637f6c984aa81ffcadcb13e743202fa2a0c7",
+          "type": "file"
+        },
+        {
+          "bytes": null,
+          "path": ".git",
+          "sha256": null,
+          "type": "directory"
+        },
+        {
+          "bytes": 23,
+          "path": ".git/HEAD",
+          "sha256": "f6f2b945f6c411b02ba3da9c7ace88dcf71b6af65ba2e0d89aa82900042b5a10",
+          "type": "file"
+        },
+        {
+          "bytes": 137,
+          "path": ".git/config",
+          "sha256": "cae33efdb02cf774435c1ff9cb16bcc1014606908530c6e1dc727615fe3e8cda",
+          "type": "file"
+        },
+        {
+          "bytes": null,
+          "path": ".git/objects",
+          "sha256": null,
+          "type": "directory"
+        },
+        {
+          "bytes": null,
+          "path": ".git/objects/info",
+          "sha256": null,
+          "type": "directory"
+        },
+        {
+          "bytes": null,
+          "path": ".git/objects/pack",
+          "sha256": null,
+          "type": "directory"
+        },
+        {
+          "bytes": null,
+          "path": ".git/refs",
+          "sha256": null,
+          "type": "directory"
+        },
+        {
+          "bytes": null,
+          "path": ".git/refs/heads",
+          "sha256": null,
+          "type": "directory"
+        },
+        {
+          "bytes": null,
+          "path": ".git/refs/tags",
+          "sha256": null,
+          "type": "directory"
+        }
+      ],
+      "exists": true,
+      "path": "workspace/fixture"
+    },
+    "prompt": {
+      "bytes": 877,
+      "exists": true,
+      "path": "prompt.txt",
+      "sha256": "87f3f139663bb69a2199e0999496e93be4f1e99f46bda6ef373e1f46760bcc6d"
+    },
+    "prompt_template": {
+      "bytes": 705,
+      "exists": true,
+      "path": "prompt-template.txt",
+      "sha256": "ee17c7de4730f7dd0190e75e4d76292bf914f202dfdb6bc7ee160b5a65877e3e"
+    },
+    "stderr": {
+      "bytes": 0,
+      "exists": true,
+      "path": "stderr.txt",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "stdout": {
+      "bytes": 6681,
+      "exists": true,
+      "path": "stdout.txt",
+      "sha256": "62df677190bf89f3f51bb5f6e2f39bfe472226dd0afea5f313d2baf1846b52ac"
+    }
+  },
+  "duration_seconds": 19.245,
+  "execution": {
+    "effort": "low",
+    "executable": "codex",
+    "exit_code": 0,
+    "invocation_started": true,
+    "model": "gpt-5.6-sol",
+    "provider": "codex",
+    "timed_out": false,
+    "timeout_seconds": 900
+  },
+  "finished_at": "2026-09-07T22:08:30.805Z",
+  "infrastructure_error": null,
+  "run_id": "20260907T220811560Z-pilot-cw-01-current-dd-1beecd65-6338-45d9-b3b0-5193bf194596-9vu_90p4",
+  "schema_version": "0.2",
+  "started_at": "2026-09-07T22:08:11.560Z",
+  "status": "COMPLETED",
+  "test": {
+    "id": "pilot-cw-01-current-dd"
+  }
+}

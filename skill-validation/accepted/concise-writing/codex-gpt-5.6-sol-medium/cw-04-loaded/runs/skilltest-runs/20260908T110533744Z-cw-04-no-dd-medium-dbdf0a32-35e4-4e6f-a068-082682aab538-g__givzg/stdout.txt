@@ -1,0 +1,4 @@
+{"type":"thread.started","thread_id":"01a080b1-d8c4-7840-a63a-43f8afdaf3d5"}
+{"type":"turn.started"}
+{"type":"item.completed","item":{"id":"item_0","type":"agent_message","text":"## Session behavior\n\nSessions expire after 20 minutes of inactivity. A warning appears two minutes before expiration. Mouse, keyboard, or touch input resets the timer. After expiration, sign in again."}}
+{"type":"turn.completed","usage":{"input_tokens":15123,"cached_input_tokens":10624,"cache_write_input_tokens":0,"output_tokens":62,"reasoning_output_tokens":17}}

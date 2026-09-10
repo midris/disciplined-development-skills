@@ -1,0 +1,12 @@
+Do not merge the shortened reference yet.
+
+The change is part of the skill even though `SKILL.md` is unchanged. The governing guidance explicitly applies test-first validation to edits and requires command references to pass retrieval, application, and gap tests ([writing-skills/SKILL.md](</private/tmp/skilltest-cw-candidate.L4NdO8/runs/skilltest-runs/20260909T015723856Z-cw-14-discovery-candidate-medium-fc60894b-94c8-4cd5-9721-59142f70eeba-0qzoumnc/workspace/fixture/.agents/skills/writing-skills/SKILL.md:374>), [reference testing requirements](</private/tmp/skilltest-cw-candidate.L4NdO8/runs/skilltest-runs/20260909T015723856Z-cw-14-discovery-candidate-medium-fc60894b-94c8-4cd5-9721-59142f70eeba-0qzoumnc/workspace/fixture/.agents/skills/writing-skills/SKILL.md:433>)). Shortening is acceptable only if meaning, completeness, correctness, and findability remain lossless ([concise-writing/SKILL.md](</private/tmp/skilltest-cw-candidate.L4NdO8/runs/skilltest-runs/20260909T015723856Z-cw-14-discovery-candidate-medium-fc60894b-94c8-4cd5-9721-59142f70eeba-0qzoumnc/workspace/fixture/.agents/skills/concise-writing/SKILL.md:13>)).
+
+Next:
+
+- Mark the proposed change blocked rather than checking off validation.
+- Discard the unvalidated draft and restart from the last release-approved version with tests defined first.
+- Verify that users can find every parameter, construct commands correctly, and cover common use cases without relying on removed repetition.
+- Merge only if those checks pass. If they cannot finish within 20 minutes, ship the previously approved version if available; otherwise delay the release.
+
+Pure references do not need discipline-style pressure testing, but that exemption does not waive reference-focused retrieval, application, and gap testing. The deadline and maintainer direction are pressures, not evidence of correctness. No files or git state were changed.
