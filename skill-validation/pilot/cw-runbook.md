@@ -10,9 +10,12 @@ The existing `pilot/` location avoids a migration; it does not make future obser
 
 ## Routine suite preparation
 
-The owner approved preparation under the [routine coverage](cw-catalog.md#routine-suite-coverage).
-The owner reviewed and approved the six `routine/` prompt/rubric pairs in the [input map](cw-catalog.md#routine-input-map) after commit `6867030`; the other 12 purposes retain their linked material.
-This approves the task contracts, not a provider/model schedule or command batch.
+The [baseline specification](../../plans/specs/2026-09-10-cw-baseline-specification.md) has been reviewed; the resulting [catalog coverage proposal](cw-catalog.md#routine-suite-coverage) awaits owner review before input preparation and scoring design.
+The prior coverage approval and retrospective assessments do not establish a completed baseline under that specification.
+
+The following preparation procedure describes the earlier approved suite and its retained observations.
+The owner reviewed and approved the six `routine/` prompt/rubric pairs in the [input map](cw-catalog.md#routine-input-map) after commit `6867030`; the other 12 purposes in that earlier suite retained their linked material.
+That approval does not extend to the new coverage proposal or a new provider batch.
 Use the primary repository checkout on `main` for preparation.
 Do not edit the old comparison prompts, rubrics, configs or accepted packages; changed tasks require new comparison evidence under a new approved batch.
 
@@ -60,18 +63,35 @@ Requalify CW-07 when invocation mechanics or skill/composition wording changes p
 
 ## Routine suite assessment
 
+This section records the assessment method used for the latest 18 observations and their authorized retrospective review.
+It is not the scoring contract for the proposed specification-based suite; the catalog identifies pending changes, including CW-17's treatment of generated verbosity.
+
 Read the complete case rubric and this section before scoring; freeze both as withheld evaluation inputs.
 Fill the worksheet's `Test category / supporting purpose` from the catalog and the rubric, and record the exact case/condition in `Scenario purpose`.
 Reuse the existing semantic, protocol, fidelity, readability and infrastructure ledgers; category is metadata, not another score.
 
 - Judge actual returned prose or the independently inspected output file against each case's source facts and criteria, with criterion-level evidence. Apply identical semantic rules to no-DD/current-DD/candidate; a no-DD pass remains a valid result.
+- Judge the complete deliverable for its intended reader and use, allowing ordinary comprehension of surrounding text. Preserve actual lookup needs, but do not require each fragment to stand alone. In composition cases, the draft warning/reference is the reader's artifact; the separate deployment decision cannot supply meaning missing from it.
+- For each conservation failure, identify the consequential loss of meaning, rationale or correct action in context. A removed heading, cross-reference or example is not itself a failure when its reader function remains. Explicitly requested worked explanations, such as CW-17's examples, remain requirements.
+- For padding failures, assess information and framing separately: repetition may add no fact while still providing emphasis, retention, orientation or a useful reminder. A new example, action or context is not required to justify reinforcement. Explain why the repeated wording serves no useful reader function before marking it padding; when that distinction is uncertain, retain it as an observation rather than infer a failure. Overall shortening does not excuse demonstrated padding, but a merely possible stylistic improvement is not a failure.
 - Require every applicable semantic criterion for semantic PASS; any judgeable failed criterion is FAIL. Disclose incomplete or ambiguous evidence rather than assuming a pass or inventing missing behavior.
 - For composition, report CW revision criteria and writing-skills authority criteria separately. Neither can substitute for the other; a composition-wide result is not solely a CW result.
 - Record full requested body reads under task fidelity. Ignored loading does not establish loaded behavior and is not by itself an infrastructure failure. No-DD has no CW-loading requirement; its common authoring loads still apply.
 - Assess requested deliverables and mutation boundaries under fidelity. A missing draft/file leaves its semantic behavior unassessed and cannot produce a successful whole-case claim; do not turn an absent artifact into an invented semantic verdict. Assess any independently judgeable decision separately.
 - Inspect the complete trace and final inventory. Pre-existing fixture files are protected; only the named CW-18 file can be added in the new cases. No Git mutation, outside-fixture task reads, network tasks or dispatch is permitted.
-- Deterministic protocol is N/A. Assess readability separately for lost findability, material ambiguity or harder-to-process compression. Do not require a word count, exact prose, hidden method-use claim or specific heading unless a case names a reader-use requirement.
+- Deterministic protocol is N/A. Record readability as improved, equivalent or degraded against the source, citing organization, repetition, findability or processing effort. For CW-17, assess usability of the requested explanation against the supplied notes; this is generation, not compression of a draft.
+- Add one CW-I1 semantic criterion for no material degradation of comprehension/use. Use the readability ledger for comparative evidence, not a second scored failure; if an existing conservation row already captures the same reader consequence, reference that row rather than failing twice. Equivalent readability can pass; improvement is not mandatory. Do not require a word count, exact prose, hidden method-use claim or specific heading unless it serves the case's reader-use requirement.
+- Follow the [methodology's verdict rules](../../plans/completed/specs/2026-09-02-skill-testing-methodology-design.md#scenario-verdict): a fidelity failure remains visible but does not change a semantic PASS into FAIL unless it prevents judgment.
 - Assess padding and preservation together for revisions. No removal target is planted in CW-20, and CW-17's explicit detailed-response case measures requested depth; their CW-I2 removal rows are N/A, not evidence of padding removal.
+
+### Authorized retrospective assessment
+
+On 2026-09-10 the owner authorized rescoring the latest 18 CW-03/13/14/17/18/20 observations under this clarified whole-document contract.
+Their revised `routine/` rubrics and this method govern the reassessment; preserve copies of these evaluation inputs alongside the new worksheets.
+Keep original collection inputs, rubric snapshots, worksheets, schedule and audit intact; link separate rescored worksheets from the existing summary.
+Report criterion changes separately from evaluator corrections under the original rules.
+This is retrospective interpretation after inspecting outcomes, not fresh validation under a predeclared contract or grounds for automatic adoption.
+The accepted 99/66-run comparison and historical records are outside this authorization; the other 12 routine purposes retain their inputs pending any future input review.
 
 Successful provider-free preparation or a review of these materials establishes input readiness only; skill effectiveness requires separately approved, judgeable observations.
 For a first evidence pass on new tasks, one observation per selected condition can reveal scoring or task defects without committing to repetitions of every new input.
@@ -189,6 +209,9 @@ Retain all judgeable results, including FAILs and passing no-DD controls, then u
 Nonfatal diagnostics are non-blocking only under the linked recovery policy's evidence checks; neither an ERROR label nor exit 0 alone decides validity.
 
 ## Use the baseline for an edit
+
+For prospective work, first settle the reviewed specification, catalog coverage and scoring under the [active plan](../../plans/2026-09-09-dd-skill-testing.md#remaining-work).
+The steps below retain the earlier comparison mechanics; use only scenarios and conditions agreed for the new edit, rather than automatically including the historical quizzes or fixture groups.
 
 The full-CW baseline and existing rewritten CW comparison have owner-accepted evidence validity; further interpretation and skill decisions remain open.
 Testing an existing candidate can compare its frozen bytes, but cannot establish a prior RED-before-authoring chronology.

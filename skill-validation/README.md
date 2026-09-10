@@ -4,8 +4,8 @@ This directory contains the repository's validation contracts, packaged scenario
 mechanical runner, and legacy records. This page summarizes the testing approach
 and links its governing contracts; it creates no new scoring rules or execution authority.
 
-Before authoring, editing or evaluating a skill, read the [charter](charter/core-contracts.md).
-It already defines each skill's intended behavior through named invariants; test that contract rather than reconstructing it from the current skill's wording.
+Before authoring, editing or evaluating a skill, read the [charter](charter/core-contracts.md) and the complete existing skill body.
+The charter gives core intent; the skill defines the specifics that its tests must measure, including scope, exceptions and companion responsibilities.
 The [overall rewrite goal](../plans/completed/specs/2026-09-06-skilltest-controlled-inputs-design.md#overall-goal) and [RED/GREEN authoring requirement](../plans/completed/specs/2026-09-06-skilltest-controlled-inputs-design.md#redgreen-authoring-requirement) explain what this testing infrastructure supports.
 
 For current state and the next decision, read the [single active testing plan](../plans/2026-09-09-dd-skill-testing.md).
@@ -14,7 +14,7 @@ Completed implementation and collection plans are archived; their accepted metho
 ## Model-led testing
 
 Testing is model-led, built around the existing simple, reusable, deterministic tools: dumb tools for smart agents.
-The orchestrating model selects or prepares tests from the charter, audits inputs, invokes the tools, inspects raw evidence and applies the scenario rubrics.
+The orchestrating model derives tests from the reviewed baseline specification, audits inputs, invokes the tools, inspects raw evidence and applies the scenario rubrics.
 The tools scaffold execution and record results; they do not decide what good skill behavior means.
 
 - [`skilltest run CONFIG`](runner/README.md#run) prepares one declared run, invokes the configured provider and retains mechanical evidence.
@@ -39,9 +39,63 @@ Keep [setup qualification, discovery and behavior tests separate](../plans/compl
 Every DD skill needs both discoverability and loaded-behavior coverage; the [catalog audit and repair proposal](../plans/deferred/2026-09-07-skilltest-discovery-behavior-catalog-separation.md) track gaps and link the currently authorized CW increment without activating the broader repairs.
 The [accepted design decisions](../plans/completed/specs/2026-09-06-skilltest-controlled-inputs-design.md#accepted-methodology-decision-model-led-testing-with-simple-tools) record the accepted model/tool boundary, workflow decisions and separately labeled proposals.
 
+## Baseline specification first
+
+The owner established this approach on 2026-09-10.
+Read the charter and the exact baseline skill body, then write a behavioral specification grounded in both: purpose, applicability, promised behavior, exceptions, method and composition boundaries.
+Record the source revision/hash so a later rewrite cannot silently change the specification.
+Where the charter, historical targets or existing rubrics differ from the baseline's actual promises, document the difference; do not score a desired future rule as an existing-skill failure.
+
+Review that specification, then derive or reconcile scenarios and rubrics against its concrete obligations and reader outcomes.
+Use existing catalog/rubric mappings and worksheet ledgers; do not add a tracking framework.
+Establish how effectively the baseline fulfills those promises using actual evidence and meaningful controls, then compare rewrites against the agreed specification and conditions.
+A baseline specification describes intended behavior; it does not assume the baseline passes its tests.
+Preserve prior evidence and frozen judgments when correcting a specification or evaluator assumption.
+
+The [reviewed CW baseline specification](../plans/specs/2026-09-10-cw-baseline-specification.md) is the first pilot under this approach; its [catalog audit](pilot/cw-catalog.md#routine-suite-coverage) proposes coverage repairs and additions for owner review.
+This changes the source of test requirements, not the settled tools, common categories or evidence ledgers.
+
+### Starting the next skill
+
+Apply this workflow to each owner-selected skill; CW is the pilot, not the only recipient of these requirements.
+Use the [baseline composition map](../ARCHITECTURE.md#composition-boundaries) to identify leaf tasks and required upstream workflows, then verify those relationships against the selected skill bodies.
+In that skill's baseline specification, record its primary development use, applicable broader uses, standalone limits, required Superpowers guidance and DD companion responsibilities using [intended use and dependencies](#intended-use-and-dependencies).
+Read `superpowers:writing-skills` and the testing guidance relevant to that skill's behavior before auditing its catalog, using [Superpowers authoring guidance](#superpowers-authoring-guidance) to identify appropriate application, pressure, boundary and edit-regression coverage.
+Review the specification against the actual skill, audit its full catalog and resolve coverage gaps, then settle scoring before collecting evidence or judging edits.
+Keep the decisions in the skill's specification and existing catalog, with progress in the active plan; do not create a separate checklist system or activate other catalogs automatically.
+
 ## Coverage by test purpose
 
-Use the shared categories **discoverability, effectiveness and composition**, with skill-specific charter cases beneath them.
+### Intended use and dependencies
+
+Development projects are the primary use case: the DD bundle should work together through realistic project tasks.
+Some skills also serve non-development projects; preserve representative cases where their baseline scope supports that use.
+The owner specifically wants this broader usefulness from concise-writing and disciplined-development; record any mismatch with a skill's existing scope before proposing an extension.
+For each specification, identify whether the skill orchestrates other skills, refines a named upstream skill, or can perform its task independently of other DD skills.
+Standalone use still assumes Superpowers is installed and available, together with any dependencies required by the task.
+DD hooks are not a prerequisite for skill effectiveness.
+
+Cover the relevant standalone behavior and actual composition responsibilities, without requiring every skill pair or a full development lifecycle in every test.
+Use the existing fixture declarations and worksheets to distinguish supplied skills, observed loading and behavior.
+A successful run with the full DD bundle available does not by itself establish standalone effectiveness or isolate one skill's contribution.
+
+### Superpowers authoring guidance
+
+Use `superpowers:writing-skills` and its applicable testing reference when preparing skill edits; record the exact supplied version/bytes with the evaluation inputs.
+Its RED-GREEN-REFACTOR and wording-test requirements are retained in the [authoring contract](../plans/completed/specs/2026-09-06-skilltest-controlled-inputs-design.md#redgreen-authoring-requirement).
+Match test design to the behavior: discipline rules need realistic pressure and bypass opportunities; techniques need application, variation and missing-context cases; patterns need recognition and counterexamples; references need retrieval and use.
+These approaches fit beneath the common categories below; they do not create additional categories or a fixed case count.
+
+When reviewing an edit, inspect discoverable descriptions, usable instructions/examples/references, preserved scope and exceptions, and compatibility with required companions.
+Record structural authoring checks as supporting review evidence; behavioral claims still require observable task evidence under the skill's specification.
+Classify an observed failure before choosing a remedy: bypassed discipline, ineffective output, an omitted element or a mishandled condition need different guidance.
+Use the existing cases for regressions and variations where they exercise that distinction; add a test only for a missing behavior or boundary.
+An ordinary control pass remains useful baseline evidence even when it supplies no RED for new guidance.
+Applying writing-skills to the authoring workflow does not make it a required companion of every skill being tested or impose its word-count targets on CW task outputs.
+
+### Shared categories
+
+Use the shared categories **discoverability, effectiveness and composition**, with cases derived from each skill's baseline specification beneath them.
 The [coverage policy](../plans/completed/specs/2026-09-06-skilltest-controlled-inputs-design.md#accepted-methodology-decision-shared-test-categories-and-coverage) defines evidence boundaries, supporting diagnostics, overlap/gap review and model-dependent interpretation.
 Keep multiple tests when they cover distinct failures, boundaries or meaningful contexts; neither matching test counts across skills nor superficial variations establish adequate coverage.
 
@@ -55,7 +109,7 @@ The discovery seeds below need fresh natural-task prompts and frozen native fixt
 
 | Skill / charter | Explicitly loaded behavior material | Diagnostics, composition and discovery seeds |
 |---|---|---|
-| [concise-writing](charter/core-contracts.md#concise-writing) | [CW-01](scenarios/concise-writing/cw-01/rubric.md)–06/08: lossless compression (CW-I1/I2); [CW-19](scenarios/concise-writing/cw-19/rubric.md): complex conservation. | [Catalog](scenarios/concise-writing/summary.md): CW-07 transport, CW-09/11 description classification, CW-10/12 literal contract extraction. CW-13/14 and CW-17/18 mix selection with contract decisions. [DISC-03](scenarios/skill-discovery/disc-03/prompt.md) seeds positive discovery; CW-I3's response/file boundary needs separate tests. |
+| [concise-writing](charter/core-contracts.md#concise-writing) | [CW-01](scenarios/concise-writing/cw-01/rubric.md)–06/08: lossless compression (CW-I1/I2); [CW-19](scenarios/concise-writing/cw-19/rubric.md): complex conservation. | [Historical catalog](scenarios/concise-writing/summary.md): transport, classification, extraction and mixed selection/contract tasks. The [current CW audit](pilot/cw-catalog.md#routine-suite-coverage) replaces the old response/file polarity and authoring targets with proposed baseline-aligned coverage; those historical expectations remain evidence context only. |
 | [writing-explicit-rationale](charter/core-contracts.md#writing-explicit-rationale) | [WER-01](scenarios/writing-explicit-rationale/wer-01/rubric.md)/06/08: useful rationale and placement (WER-I1/I2); [WER-05](scenarios/writing-explicit-rationale/wer-05/rubric.md): one home (WER-I2/I3); WER-02: repeated-challenge audit (WER-I4). | [Catalog](scenarios/writing-explicit-rationale/summary.md): WER-07 keeps target and composition-owner judgments separate. [DISC-09](scenarios/skill-discovery/disc-09/prompt.md)/10 seed discovery. |
 | [sweeping-stale-references](charter/core-contracts.md#sweeping-stale-references) | [SSR-01](scenarios/sweeping-stale-references/ssr-01/rubric.md)/02: observed reads/searches and proposed reconciliation (SSR-I1–I4); SSR-03/05/06: inventory/count boundaries; SSR-07: rationale preservation. | [Catalog](scenarios/sweeping-stale-references/summary.md): no actual edit/commit claim from read-only answers. [DISC-08](scenarios/skill-discovery/disc-08/prompt.md) seeds discovery; its optional CW route needs a future-contract decision. |
 | [lean-plan-writing](charter/core-contracts.md#lean-plan-writing) | [LP-02](scenarios/lean-plan-writing/lp-02/rubric.md)/03: prose versus necessary illustration (LP-I1/I3); [LP-05](scenarios/lean-plan-writing/lp-05/rubric.md)/06: executable contract and edges (LP-I2); LP-07/08: split/atomic polarity (LP-I4). | [Catalog](scenarios/lean-plan-writing/summary.md): retain writing-plans composition, with LP-01's upstream scaffold separate. [DISC-07](scenarios/skill-discovery/disc-07/prompt.md)/10 versus plan execution in DISC-04 seed discovery boundaries. |

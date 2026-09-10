@@ -54,10 +54,9 @@ flowchart TB
     class TOOLS,LIB m
 ```
 
-The portable layer never calls the machinery directly except through one
-optional, gracefully-degrading instruction (log a review round when the project
-provides a command). The hooks read per-branch state to decide whether to nudge
-or block; the two tools are the only **writers** of that state and the review log.
+Project guidance connects model reviews to `dd-log`; the skill bodies define the review discipline.
+Hooks read and update per-branch counters to decide when to nudge or block.
+The review tools record outcomes and reset review cadence on a clean pass; the pre-PR hook can also log a setup error.
 
 ## Installation boundary
 
@@ -83,9 +82,9 @@ Claude preserves raw stream output alongside the extracted final answer, using t
 
 ## The skill layer
 
-Nine skills: one **orchestrator** and eight **companions** it dispatches, all
-sitting on the [`superpowers`](https://claude.com/plugins/superpowers) substrate
-as deltas over its base skills.
+Nine skills: one **orchestrator** and eight **companions** it dispatches, with
+[`superpowers`](https://claude.com/plugins/superpowers) installed and available.
+Some companions define a usable procedure themselves; others explicitly refine an upstream workflow.
 
 ```mermaid
 flowchart TB
@@ -99,8 +98,8 @@ flowchart TB
     end
     SP["superpowers substrate<br/>brainstorming · writing-plans · TDD · code-review · …"]
     DD --> COMP
-    DD -.->|"deltas over"| SP
-    COMP -.-> SP
+    DD -.->|"methodology workflows"| SP
+    COMP -.->|"applicable upstream guidance"| SP
     classDef o fill:#cdeccd,stroke:#2e7d32,color:#10250f;
     classDef c fill:#d6f5d6,stroke:#2e7d32,color:#102a10;
     classDef sp fill:#eeeeee,stroke:#888888,color:#222222;
@@ -109,16 +108,27 @@ flowchart TB
     class SP sp
 ```
 
-| Role | Skills | Owns |
+### Composition boundaries
+
+For test selection, a **leaf task** exercises a skill's own procedure without requiring another DD skill's workflow.
+This is task-dependent: a pairing can become required when its trigger is present.
+Ownership references and incoming calls from the orchestrator do not themselves require loading the whole bundle.
+
+| Baseline skill | Own procedure | Composition relevant to test selection |
 |---|---|---|
-| Orchestrator | `disciplined-development` | the Iron Law, 5 gates, principles, mode table |
-| Review | `adversarial-review`, `adversarial-review-loop` | reviewer posture + angle catalog; the review→fix→re-review loop |
-| Authoring discipline | `lean-plan-writing`, `writing-explicit-rationale`, `concise-writing` | plan density; rationale-on-page; prose tightening |
-| Grounding | `disciplined-research`, `sweeping-stale-references` | claims in current source; reconcile every stale reference |
-| Dispatch | `dispatching-development-subagents` | subagent scope contract + verify-every-commit |
+| [concise-writing](skills/concise-writing/SKILL.md) | Remove verbosity while preserving information and useful framing. | Ordinary prose editing is a leaf task. Plans/specs pair with lean-plan-writing; rationale with writing-explicit-rationale; removing a referenced anchor triggers sweeping-stale-references. No unconditional DD-parent or named Superpowers-workflow dependency in its body. |
+| [disciplined-research](skills/disciplined-research/SKILL.md) | Acquire and verify load-bearing claims against applicable sources. | A bounded source-grounding task is a leaf task. It assigns later sweeps and decision rationale to other owners without requiring those workflows for every claim. Source/tool availability still matters. |
+| [sweeping-stale-references](skills/sweeping-stale-references/SKILL.md) | Search, triage and reconcile changed facts, including commit accounting. | Can perform its sweep without a DD parent. Grounding and rationale have separate owners; realistic execution needs searchable project state and the permitted commit boundary. |
+| [writing-explicit-rationale](skills/writing-explicit-rationale/SKILL.md) | Put decision-useful what/why/accepted trade-offs beside a choice. | An ordinary decision-note task can stand alone. Plans/specs pair with lean-plan-writing; changed facts with stale rationale pair with sweeping-stale-references. |
+| [lean-plan-writing](skills/lean-plan-writing/SKILL.md) | Keep plans/specs as concrete prose contracts rather than implementations. | Always composes with Superpowers writing-plans, overriding its code-in-every-step rule while retaining scaffolding. Pairs with writing-explicit-rationale for relevant choices. |
+| [adversarial-review](skills/adversarial-review/SKILL.md) | Apply review posture, necessity checks, evidence scrutiny and applicable angles. | Adapter over Superpowers requesting-code-review; receiving-code-review governs handling findings. Explicitly loads CW for document reviews and writing-skills for skill-authoring review. |
+| [adversarial-review-loop](skills/adversarial-review-loop/SKILL.md) | Govern class-wide remediation, repeated review and the cap/escape decision. | Builds on review findings and sweeping/adversarial review responsibilities. Defers per-task loops to Superpowers subagent-driven-development; whole-branch remediation uses this skill's rules. Requires review history and reviewer interaction for full execution evidence. |
+| [dispatching-development-subagents](skills/dispatching-development-subagents/SKILL.md) | Bound development delegation and verify every returned commit. | Overlay on Superpowers subagent-driven-development or dispatching-parallel-agents, also covering ad-hoc fixers. Child instructions require disciplined-development; parent gates remain with the orchestrator. |
+| [disciplined-development](skills/disciplined-development/SKILL.md) | Own the Iron Law, gates, principles and mode routing. | Orchestrates all eight companions and the applicable Superpowers methodology workflows. Full validation requires their handoffs and parent/child authority boundaries. |
 
 Each skill's `SKILL.md` under [`skills/`](skills/) is the source of truth for its
 rules — this table is the map, not the content.
+The map describes declared relationships, not measured effectiveness or a requirement to validate every dependency before a leaf task.
 
 ## Orchestration — how a session is governed
 
@@ -200,7 +210,7 @@ flowchart TD
     G -- no --> B
     G -- yes --> H["Cold-read escape<br/>fresh-context reviewer"]
     D -- no --> I["Log clean round<br/>→ reset edits + checkpoint"]
-    H --> I
+    H --> J["Resolve fresh assessment<br/>redo, stop or continue per loop rules"]
     classDef safe fill:#cdeccd,stroke:#2e7d32,color:#10250f;
     classDef warn fill:#fdf0c8,stroke:#b8860b,color:#2a2410;
     class I safe
@@ -250,12 +260,13 @@ human overrides with `DD_SKIP_PR_REVIEW`.
 
 The hooks are dumb triggers — seven event hooks, three of them hard blocks (the
 edit ceiling, the commit ceiling, the pre-PR gate); the rest are advisory nudges.
-A hook fires a fixed message at a boundary and nothing more. Two per-branch state
-files — `edits.count` and `review.checkpoint` — drive the cadence; the edit- and
+A hook emits a configured boundary signal; counting hooks also update state.
+The per-branch `edits.count` and `review.checkpoint` drive review cadence; a separate `discipline.count` drives re-ground nudges.
+The edit- and
 commit-cadence state machines are diagrammed in
 [`hooks/README.md` § State model](skills/disciplined-development/hooks/README.md#state-model).
 
-Two tools do the writing — `log_review.py` (records a round; resets cadence on a
+Two tools record review outcomes — `log_review.py` (records a round; resets cadence on a
 clean pass) and `external_review.py` (the codex gate) — on top of `lib/` (state,
 logging, severity-parsing, subprocess). The hook table, observability, and
 extension rules are in

@@ -10,7 +10,7 @@ Apply the [routine-suite assessment rules](../../cw-runbook.md#routine-suite-ass
 | CW-I1 | Preserve the inability-to-reach-desk condition, calling the coordinator via the key-tag number before the deadline, and the coordinator arranging the handoff. |
 | CW-I1 | Preserve that voicemail is not confirmation and the borrower keeps the key until both recipient and location are confirmed. |
 | CW-I1 | Preserve the letter-slot prohibition and its public-corridor versus locked-office rationale. |
-| CW-I1 | Preserve the example's application: an east-desk key returned at 17:30 needs a previously arranged handoff despite the west desk being open. A comparably explicit example between the two closing times is acceptable; a general deadline rule alone loses the illustration. |
+| CW-I1 | The reader can apply the late-return lesson: an east-desk key returned at 17:30 needs a previously arranged handoff despite the west desk being open. Equivalent illustration or integrated explanation may work. The source requires calling before closing and confirmation before handoff; do not invent a requirement that confirmation itself precede closing. |
 | CW-I1 | Add no unsupported return route, exception, penalty or contact detail. |
 
 An unchanged notice passes the semantic criteria and is a valid response to this request.

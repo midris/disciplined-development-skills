@@ -15,15 +15,16 @@ skill platform: its gates dispatch to `superpowers:*` sub-skills throughout, and
 several skills are explicit deltas over a superpowers base — `adversarial-review`
 adapts `superpowers:requesting-code-review`, `dispatching-development-subagents`
 overlays `superpowers:subagent-driven-development`, `lean-plan-writing` refines
-`superpowers:writing-plans`, `concise-writing` defers skill-authoring to
-`superpowers:writing-skills`. Superpowers is the substrate, not one dependency
+`superpowers:writing-plans`. CW excludes skill/reference authoring; this
+repository uses `superpowers:writing-skills` to author and validate skills.
+Superpowers is the substrate, not one dependency
 among several. The doctrine travels wherever that platform runs; the hook stack is
 Claude Code-specific. See [Requirements](#requirements).
 
 ## Developing or evaluating these skills
 
-Start with the [validation charter](skill-validation/charter/core-contracts.md): it defines what each skill is supposed to do and the invariants used to judge it.
-Use the existing contracts and scenario rubrics rather than inventing new success criteria from the current skill wording.
+Read the [validation charter](skill-validation/charter/core-contracts.md) for core intent and the complete existing skill for its detailed behavior, scope and exceptions.
+Follow [baseline specification first](skill-validation/README.md#baseline-specification-first): document those promises, derive tests and rubrics, establish observed baseline effectiveness, then compare rewrites against the agreed specification.
 The charter's proposed suite changes retain their stated approval and activation conditions.
 
 The [rewrite goal and design principles](plans/completed/specs/2026-09-06-skilltest-controlled-inputs-design.md#overall-goal) explain the intended direction: cleaner, lighter, more effective skills, with dumb tools for smart agents and repeatable RED/GREEN evidence.

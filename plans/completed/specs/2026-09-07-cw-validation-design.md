@@ -2,7 +2,7 @@
 
 **Archive status (2026-09-09):** Baseline and existing-candidate collection, scoring and mechanical auditing are complete.
 The owner accepted candidate evidence validity on 2026-09-09; further evaluation and adoption decisions remain open in the [current testing plan](../../2026-09-09-dd-skill-testing.md#remaining-work).
-The owner approved preparation under the subsequent [routine coverage](../../../skill-validation/pilot/cw-catalog.md#routine-suite-coverage); exact input review and provider-batch approval remain separate from this completed comparison.
+The subsequent routine suite produced six approved input packages and an initial evidence pass; the [current catalog proposal](../../../skill-validation/pilot/cw-catalog.md#routine-suite-coverage) now reevaluates coverage against the baseline specification and awaits its own review.
 This document preserves the completed comparison contract and its handoff, not a pending collection plan.
 
 **Status:** The owner accepted the complete 99-observation CW baseline on 2026-09-08; the subsequent 66-observation candidate comparison is collected, scored, audited and accepted as valid evidence on 2026-09-09.
@@ -28,7 +28,7 @@ CW-13/14 separate native selection from explicitly loaded lifecycle decisions.
 CW-17/18 separate native selection from explicitly loaded scope interpretation; the latter remains a contract diagnostic, not proof of hidden method use.
 Only the CW portion of the [deferred separation plan](../../deferred/2026-09-07-skilltest-discovery-behavior-catalog-separation.md) was activated for this baseline.
 Other catalogs, new coverage ideas, hooks, Claude, other models/efforts and new skill wording remain deferred.
-Candidate collection is complete; owner review of its evidence remains pending, and any further testing or deployment retains separate approval gates.
+Candidate collection and evidence-validity acceptance are complete; further interpretation remains open, and any further testing or deployment retains separate approval gates.
 
 ## Inputs and attribution
 

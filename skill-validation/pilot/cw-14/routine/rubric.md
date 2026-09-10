@@ -22,4 +22,5 @@ Assess the actual reference and decision separately; a named owner or correct de
 A missing draft fails deliverable fidelity and leaves CW behavior unassessed; copying the source unchanged fails CW-I2.
 A good revision with premature approval fails composition authority.
 The example and existing-output lookup serve different reader tasks; their useful explanation is not the same as the targeted adjacent restatements.
+Assess the reference as a whole: source preservation in the parameter description can explain the example, and requiring a nonexistent output path can communicate choosing an unused path.
 Assess finding the overwrite rule under readability: a heading, table entry or clear short passage can work; do not prescribe a layout or score the same issue twice.

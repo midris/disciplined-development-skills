@@ -14,7 +14,7 @@ The subsequent [CW design](2026-09-07-cw-validation-design.md) owns the owner-ap
 ## Overall goal
 
 Rewrite the organically grown, mostly agent-authored and partly hand-tuned DD skills into a cleaner, lighter and more effective system.
-Preserve charter-defined behavior while reducing unnecessary prose, repetition and procedural burden; shorter text alone is not evidence of improvement.
+Preserve the reviewed baseline specification, grounded in the charter and existing skill, while reducing unnecessary prose, repetition and procedural burden; shorter text alone is not evidence of improvement.
 
 Follow **dumb tools for smart agents**: skills guide judgment, sequencing and decisions; targeted tools perform specific mechanical, repeatable operations deterministically; hooks surface checks at observable boundaries.
 When exact parsing, rendering, validation or evidence recording is necessary, use a small mechanical tool rather than asking the model to reproduce deterministic work from prose.
@@ -53,6 +53,9 @@ Retain the RED/GREEN, validity and evidence requirements below, but settle only 
 Only the explicitly approved implementation and preparation units in the linked plan are authorized; this scope grants no provider-call permission.
 
 ## Accepted starting constraints
+
+**Current requirement source (owner clarification, 2026-09-10):** Follow [baseline specification first](../../../skill-validation/README.md#baseline-specification-first): the charter gives core intent, while the existing skill text defines the detailed promises from which tests and rubrics are derived.
+This supersedes charter-only requirement sourcing below; it does not change the frozen contracts or judgments of completed observations.
 
 The [charter](../../../skill-validation/charter/core-contracts.md#skill-contracts-and-proposed-core-portfolios) already defines each skill's intended behavior through named invariants.
 Use those contracts and the existing audited scenario rubrics; do not redefine success as part of harness design.

@@ -11,6 +11,9 @@ evidence, review, and owner approval.
 
 ## Acceptance model
 
+For current testing, this charter gives core intent; the existing skill body supplies the detailed baseline specification, including its exceptions.
+Follow [baseline specification first](../README.md#baseline-specification-first) before deriving or applying new test contracts; historical portfolio targets do not automatically describe what the existing skill promises.
+
 Every scored criterion belongs to exactly one ledger:
 
 | Ledger | What it measures | Blocks skill acceptance |
@@ -92,14 +95,23 @@ Keep `WER-03` and `WER-DEV` historical.
 
 **Charter:** Remove prose that adds no value without changing how a careful reader
 understands or uses the artifact.
+Judge the complete artifact for its intended reader and use: preserve effectiveness, fidelity and intent while reducing unnecessary reading effort.
+Readability may improve or remain equivalent; materially harder comprehension or use is a consequential loss even when the facts remain present.
+Shorter text alone is not success, and useful framing or reinforcement is not padding.
 
 | Invariant | Observable promise |
 |---|---|
 | `CW-I1` | Every consequential fact, relationship, boundary, rationale, and findable use remains; the revision adds no unsupported meaning. |
 | `CW-I2` | Local and whole-artifact padding, duplication, and unsupported elaboration are removed when lossless. |
-| `CW-I3` | The method applies to its reader-facing and durable-prose domain while respecting the explicit detailed-response exception. |
+| `CW-I3` | The method applies within the baseline skill's declared reader-facing and durable-prose scope while preserving the requested purpose and level of detail. |
 
-Proposed core sources: a merged ordinary positive corpus based on `CW-01`–`CW-06`,
+The owner clarified whole-document assessment on 2026-09-10 and authorized reassessment of the latest 18 routine observations.
+The [CW runbook](../pilot/cw-runbook.md#routine-suite-assessment) applies that clarification with separate readability evidence and reader-outcome criteria.
+Historical accepted judgments and their frozen contracts remain unchanged; this clarification does not activate the other proposed portfolios or authorize collection.
+The [reviewed baseline specification](../../plans/specs/2026-09-10-cw-baseline-specification.md) records the skill's actual scope: its authoring exclusion and lack of a detailed-response exclusion differ from earlier test targets, which remain frozen with their historical evidence.
+
+The following is the earlier CW portfolio proposal, retained as historical context; the [current audit](../pilot/cw-catalog.md#routine-suite-coverage) owns its proposed replacement.
+Earlier proposed core sources: a merged ordinary positive corpus based on `CW-01`–`CW-06`,
 `CW-19` as the complex conservation pressure case, and `CW-08` as the isolated
 broad-domain boundary.
 Keep `CW-17`/`CW-18` as shared routing polarity if still necessary.
