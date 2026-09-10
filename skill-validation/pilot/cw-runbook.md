@@ -1,12 +1,81 @@
 # CW baseline and edit runbook
 
-**Baseline and candidate collection are complete; candidate evidence awaits owner review.**
+**Baseline and candidate evidence validity are owner-accepted; further interpretation remains open.**
 The [accepted evidence index](../accepted/concise-writing/codex-gpt-5.6-sol-medium/README.md) retains results, frozen revisions and verification for 81 fresh plus 18 reused observations.
 Both command batches are exhausted; follow the [current testing plan](../../plans/2026-09-09-dd-skill-testing.md#remaining-work), not the reusable collection instructions below, for the next action.
 The [archived CW design](../../plans/completed/specs/2026-09-07-cw-validation-design.md) preserves the completed comparison contract, and the [catalog mapping](cw-catalog.md) owns exact inputs, purpose separation, counts and order.
 This is an agent-followed procedure using `skilltest`, not a new program.
 Reuse the [routine scoring](README.md#scoring-and-handoff), [recovery policy](README.md#failure-and-recovery) and [qualification reference](qualification/README.md); this page supplies CW-specific inputs and baseline/edit decisions.
 The existing `pilot/` location avoids a migration; it does not make future observations repetitions of the completed procedure pilot.
+
+## Routine suite preparation
+
+The owner approved preparation under the [routine coverage](cw-catalog.md#routine-suite-coverage).
+The six `routine/` prompt/rubric pairs in the [input map](cw-catalog.md#routine-input-map) are prospective materials awaiting exact-input review; the other 12 purposes retain their linked material.
+Use the primary repository checkout on `main` for preparation.
+Do not edit the old comparison prompts, rubrics, configs or accepted packages; changed tasks require new comparison evidence under a new approved batch.
+
+Each new `routine/prompt.md` contains the common task, not condition-specific skill-loading instructions.
+Prepare condition prompts in fresh scratch using these exact prefixes, followed by a blank line and the unchanged common task:
+
+- Ordinary effectiveness no-DD: no prefix.
+- Ordinary effectiveness current-DD or candidate: the CW prefix below.
+- CW-13/14 composition no-DD: the common authoring prefix below.
+- CW-13/14 composition current-DD or candidate: the CW prefix, a blank line, then the common authoring prefix.
+
+CW prefix for Codex:
+
+```text
+Read {{fixture_dir}}/.agents/skills/concise-writing/SKILL.md completely and follow it as binding guidance for this task.
+```
+
+Common authoring prefix for Codex:
+
+```text
+Read {{fixture_dir}}/.agents/skills/writing-skills/SKILL.md, {{fixture_dir}}/.agents/skills/writing-skills/testing-skills-with-subagents.md and {{fixture_dir}}/.agents/skills/test-driven-development/SKILL.md completely and follow them for this task. Their canonical skill names are superpowers:writing-skills and superpowers:test-driven-development.
+```
+
+For a separately selected Claude batch, substitute `.claude/skills/` for `.agents/skills/` in these prefixes and every declared native skill target; no task or rubric change follows from provider choice.
+Loading must follow the supplied skill's applicability rules: CW-17 asks for the detailed response, not a boolean declaration of internal method use.
+Keep no-DD/current-DD/candidate tasks and rubrics identical; omit DD files and the CW prefix only in no-DD.
+For each ordinary case, use the corresponding ordinary fixture group; CW-20 uses CW-01's group, and CW-17/18 loaded replacements use the ordinary group rather than description inputs.
+For composition, use the corresponding CW-13/14 authoring group, keeping all common Superpowers bytes identical between conditions.
+Candidate preparation replaces only the CW body with the retained unchanged candidate snapshot; no new skill edit or adoption is implied.
+Retained discovery cases keep their hint-free prompts and native-selection criteria, with only a declared provider-native path transformation if needed.
+
+The new task text is embedded in the prompts; no additional task-source files are required.
+CW-18 routine permits creating only `fixture/clothing-swap-guide.md`; CW-03/13/14/17/20 routine return prose and remain read-only.
+The authoring checkpoint records are synthetic scenario premises, not newly collected evidence or a claim that the subject executed a validation lifecycle.
+The subject may read supplied skills, revise the quoted material in its response and state its decision; it cannot deploy, run the quoted command, change a skill or dispatch tests.
+Keep rubric/runbook text out of subject prompts and fixtures.
+
+Before proposing a batch, use the existing `load_config`/`prepare_workspace` helpers without launching a provider to inspect each final prompt, declared fixture, allowed output and shared-input equality.
+Scratch-only preparation configs may reuse historical provider/model declarations to exercise the helpers; that does not select or approve a new collection schedule.
+Select the real batch's provider/model/effort, skill/composition snapshots, counts/order, qualified CLI and necessary control checks explicitly, then freeze its recoverable inputs and show the expanded commands for approval.
+The old 99/66-call schedules below are exhausted and do not supply defaults for new calls.
+Requalify CW-07 when invocation mechanics or skill/composition wording changes project prerequisites, companion dependencies or mandatory procedures, even if the runner is unchanged.
+
+## Routine suite assessment
+
+Read the complete case rubric and this section before scoring; freeze both as withheld evaluation inputs.
+Fill the worksheet's `Test category / supporting purpose` from the catalog and the rubric, and record the exact case/condition in `Scenario purpose`.
+Reuse the existing semantic, protocol, fidelity, readability and infrastructure ledgers; category is metadata, not another score.
+
+- Judge actual returned prose or the independently inspected output file against each case's source facts and criteria, with criterion-level evidence. Apply identical semantic rules to no-DD/current-DD/candidate; a no-DD pass remains a valid result.
+- Require every applicable semantic criterion for semantic PASS; any judgeable failed criterion is FAIL. Disclose incomplete or ambiguous evidence rather than assuming a pass or inventing missing behavior.
+- For composition, report CW revision criteria and writing-skills authority criteria separately. Neither can substitute for the other; a composition-wide result is not solely a CW result.
+- Record full requested body reads under task fidelity. Ignored loading does not establish loaded behavior and is not by itself an infrastructure failure. No-DD has no CW-loading requirement; its common authoring loads still apply.
+- Assess requested deliverables and mutation boundaries under fidelity. A missing draft/file leaves its semantic behavior unassessed and cannot produce a successful whole-case claim; do not turn an absent artifact into an invented semantic verdict. Assess any independently judgeable decision separately.
+- Inspect the complete trace and final inventory. Pre-existing fixture files are protected; only the named CW-18 file can be added in the new cases. No Git mutation, outside-fixture task reads, network tasks or dispatch is permitted.
+- Deterministic protocol is N/A. Assess readability separately for lost findability, material ambiguity or harder-to-process compression. Do not require a word count, exact prose, hidden method-use claim or specific heading unless a case names a reader-use requirement.
+- Assess padding and preservation together for revisions. No removal target is planted in CW-20, and CW-17's explicit detailed-response case measures requested depth; their CW-I2 removal rows are N/A, not evidence of padding removal.
+
+Successful provider-free preparation or a review of these materials establishes input readiness only; skill effectiveness requires separately approved, judgeable observations.
+
+## Completed-comparison procedure
+
+The following schedule and variant-specific instructions document the completed comparison.
+Reuse mechanics only after reconciling them with the prospective case's actual boundaries above; do not replay historical commands.
 
 ## Test set
 
@@ -33,7 +102,7 @@ Historical low/high procedure observations are not medium baseline repetitions.
 
 ## Fixture setup and freeze
 
-Work from the root of `.worktrees/cw-validation-design` on `feature/cw-validation-design`; any future workspace change must be reflected in the next approved command list.
+The completed collection used `.worktrees/cw-validation-design` on `feature/cw-validation-design`, now retired; new work uses the primary checkout, reflected in the next approved command list.
 Use the existing runner environment; if absent, run `uv sync --frozen` from `skill-validation/runner/`, then return to the worktree root.
 Dependency or harness changes require relevant offline verification before collection.
 
@@ -107,7 +176,7 @@ Only then render the worksheet from the matching frozen rubric:
 "$CW_ROOT/skill-validation/runner/.venv/bin/skilltest" worksheet "$CW_SCENARIO" "$RUN_BUNDLE" --output "$CW_ATTEMPT/worksheet.md"
 ```
 
-Fill every assessment and the provider CLI-version cell with its tied capture reference; preserve generated mechanical fields.
+Fill every assessment, the declared category/supporting purpose, and the provider CLI-version cell with its tied capture reference; preserve generated mechanical fields.
 Score the full response trace, including narration, not just final.txt; tool output proves reads/actions, not model-authored prose quality.
 Judge prose behavior, transport, composition decisions, description/contract diagnostics, native discovery, fidelity, readability and infrastructure under their separate contracts; deterministic protocol is N/A for this set.
 Retain all judgeable results, including FAILs and passing no-DD controls, then update the summary row and continue through the approved batch when required checks pass.
@@ -115,7 +184,7 @@ Nonfatal diagnostics are non-blocking only under the linked recovery policy's ev
 
 ## Use the baseline for an edit
 
-The full-CW baseline is owner-accepted; the existing rewritten CW comparison is complete and awaits owner review.
+The full-CW baseline and existing rewritten CW comparison have owner-accepted evidence validity; further interpretation and skill decisions remain open.
 Testing an existing candidate can compare its frozen bytes, but cannot establish a prior RED-before-authoring chronology.
 The unchanged candidate was evaluated under the [existing-candidate comparison contract](../../plans/completed/specs/2026-09-07-cw-validation-design.md#existing-cw-candidate-preparation) and steps 3–6 below; steps 1–2 govern new authoring, not a prerequisite to evaluating that snapshot.
 These steps remain a procedure for separately approved future work, not authorization to repeat completed runs.

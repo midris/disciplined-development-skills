@@ -2,7 +2,7 @@
 
 **Status:** Installation and baseline tooling are settled for the current Codex and Claude local workflows.
 The accepted CW evidence and completed-plan cleanup are consolidated on `main`; ongoing testing work uses this primary checkout.
-Next: agree the concrete CW test coverage before editing prompts, skills or collecting more observations.
+Next: owner review of the six prepared CW prompt and rubric packages under the agreed coverage, before preparing a collection batch.
 This is the single active testing plan; the [validation guide](../skill-validation/README.md) indexes the durable contracts and execution instructions.
 
 **Goal:** A repeatable set of tests for each DD skill’s discoverability, effectiveness and composition, with distinct questions and observable scoring criteria.
@@ -19,7 +19,7 @@ The [charter](../skill-validation/charter/core-contracts.md) supplies intended b
 | Historical records and procedure pilot | All 105 historical records and 14 procedure observations are preserved. These are not matching-input controls for the later CW comparison. [Historical catalog](../skill-validation/scenarios/README.md), [accepted pilot package](../skill-validation/accepted/procedure-pilot/codex-gpt-5.6-sol-low/README.md). |
 | CW baseline | Owner-accepted: 99 observations covering 22 purpose-separated variants, current-DD and meaningful no-DD conditions, Sol medium. [Accepted baseline](../skill-validation/accepted/concise-writing/codex-gpt-5.6-sol-medium/README.md). |
 | Existing CW candidate comparison | All 66 observations are collected, scored and audited under unchanged criteria; their validity is owner-accepted. Further interpretation remains open and the candidate is not adopted. [Accepted candidate package](../skill-validation/accepted/concise-writing/codex-gpt-5.6-sol-medium-candidate/README.md), [comparison contract](completed/specs/2026-09-07-cw-validation-design.md). |
-| Coverage audit | The [catalog proposal](../skill-validation/pilot/cw-catalog.md#routine-suite-proposal-awaiting-owner-review) maps all 22 existing variants and proposes 18 routine purposes: 11 effectiveness, five discoverability and two composition. Membership/input changes still need owner agreement. |
+| Coverage audit | The owner approved preparation under the revised [18-case coverage](../skill-validation/pilot/cw-catalog.md#routine-suite-coverage): 11 effectiveness, five discoverability and two composition. Exact-input review must confirm distinct coverage or consolidate overlapping cases; approval of the coverage does not authorize collection. |
 
 ## Retained and deferred work
 
@@ -39,9 +39,13 @@ Its complete `.claude` DD log/state history is copied and hash-verified under `/
 - [x] Implement the copy installer and update Steno’s `.claude` and `.agents` installations.
 - [x] Complete and qualify Claude support through the existing runner and worksheets.
 - [x] Add a blank `Test category / supporting purpose` worksheet field and document the five labels for the evaluator; retain existing configuration and accepted evidence unchanged.
-- [ ] Agree one concrete routine CW suite in the [existing catalog mapping](../skill-validation/pilot/cw-catalog.md), identifying every retained, retired, replaced and new case and its observable scoring boundary.
+- [x] Agree one concrete routine CW suite in the [existing catalog mapping](../skill-validation/pilot/cw-catalog.md), identifying every retained, retired, replaced and new case and its observable scoring boundary.
 - [ ] Evaluate what the accepted CW comparison supports and what remains uncertain before any skill-change or adoption decision.
-- [ ] After suite agreement, prepare only approved prompt/rubric and runbook changes; review exact inputs before proposing a finite provider batch.
+- [x] Prepare and review CW-03/13/14/17/18 replacements and CW-20 restraint inputs, update the existing catalog/runbook, and check the distinct response-generation and restraint criteria. All completed-comparison inputs are preserved; no runner code or skill edits.
+- [ ] Obtain owner review of the exact inputs, then prepare provider/model/effort, composition, sampling, qualification and expanded commands for a separately approved finite batch.
+
+The [routine input map](../skill-validation/pilot/cw-catalog.md#routine-input-map) links all 18 purposes and the six changed/new packages.
+Provider-free preparation evidence remains in `/private/tmp/dd-cw-routine-inputs-6gx080gt/summary.md`; it exercises no-DD/current-DD/candidate assembly, not a new provider schedule or skill-effectiveness claim.
 
 The current rubrics remain usable for their existing examples.
 The next decision concerns distinct coverage and unnecessary overlap, not redesigning scoring or manufacturing failures.

@@ -2,7 +2,7 @@
 
 **Archive status (2026-09-09):** Baseline and existing-candidate collection, scoring and mechanical auditing are complete.
 The owner accepted candidate evidence validity on 2026-09-09; further evaluation and adoption decisions remain open in the [current testing plan](../../2026-09-09-dd-skill-testing.md#remaining-work).
-The provider-free coverage audit has since been presented; prospective suite changes remain unapproved in the [catalog proposal](../../../skill-validation/pilot/cw-catalog.md#routine-suite-proposal-awaiting-owner-review).
+The owner approved preparation under the subsequent [routine coverage](../../../skill-validation/pilot/cw-catalog.md#routine-suite-coverage); exact input review and provider-batch approval remain separate from this completed comparison.
 This document preserves the completed comparison contract and its handoff, not a pending collection plan.
 
 **Status:** The owner accepted the complete 99-observation CW baseline on 2026-09-08; the subsequent 66-observation candidate comparison is collected, scored, audited and accepted as valid evidence on 2026-09-09.
