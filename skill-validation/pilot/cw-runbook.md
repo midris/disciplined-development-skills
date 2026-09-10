@@ -11,7 +11,7 @@ The existing `pilot/` location avoids a migration; it does not make future obser
 ## Routine suite preparation
 
 The [baseline specification](../../plans/specs/2026-09-10-cw-baseline-specification.md) has been reviewed, and the owner authorized preparing the resulting coverage proposal.
-The [prospective input map and fixture conditions](cw-catalog.md#prospective-input-map) own the reviewed tasks approved for commit/push; scoring design is next.
+The [prospective input map and fixture conditions](cw-catalog.md#prospective-input-map) own the reviewed tasks approved for commit/push; the [reviewed scoring](#prospective-scoring) is approved for commit/push.
 The prior coverage approval and retrospective assessments do not establish a completed baseline under that specification.
 
 The following preparation procedure describes the earlier approved suite and its retained observations.
@@ -61,6 +61,75 @@ Scratch-only preparation configs may reuse historical provider/model declaration
 Select the real batch's provider/model/effort, skill/composition snapshots, counts/order, qualified CLI and necessary control checks explicitly, then freeze its recoverable inputs and show the expanded commands for approval.
 The old 99/66-call schedules below are exhausted and do not supply defaults for new calls.
 Requalify CW-07 when invocation mechanics or skill/composition wording changes project prerequisites, companion dependencies or mandatory procedures, even if the runner is unchanged.
+
+## Prospective scoring
+
+**Status:** Reviewed scoring approved for commit/push; the collection schedule and commands require separate approval.
+Use the exact purpose's rubric in the [input map](cw-catalog.md#prospective-input-map), grounded in the [baseline specification](../../plans/specs/2026-09-10-cw-baseline-specification.md) and its declared source bodies.
+Historical rubrics and judgments remain unchanged.
+
+### Worksheet and evidence
+
+Freeze selected rubrics, these rules, the specification and relevant source bodies as withheld evaluator inputs.
+Record their recoverable revisions/paths and hashes once in the existing collection summary’s input section; each worksheet links that same input record from methodology notes.
+Keep this input record fixed while adding results elsewhere in the summary.
+The generator already records the local rubric hash; leave generated identity fields unchanged and keep evaluator inputs out of subject fixtures.
+
+Fill the existing category and purpose fields, including the condition.
+Write one semantic result per rubric assessment group, using its bullets as a checklist rather than separately scoring every fact.
+A group passes only when all applicable checks pass; a demonstrated violation fails it.
+Missing evidence is NOT_JUDGEABLE, not a pass; distinguish an absent source fact in a visible output (a judgeable omission) from an unavailable output.
+If a group has both a known violation and missing evidence, retain the violation in its notes and mark the group NOT_JUDGEABLE.
+Omit inapplicable conditional groups with a reason; do not average results.
+Use existing [verdict precedence](../../plans/completed/specs/2026-09-02-skill-testing-methodology-design.md#scenario-verdict): infrastructure disposition, then invalid/unjudgeable, then failure, otherwise pass.
+
+For effectiveness/composition, assess the complete source and final artifact before inspecting condition labels or loading traces where practical; treat this as a reading order, not a claim of blind evaluation.
+Then inspect the full trace and actual file/Git state to verify exposure, task boundaries and any process-owned behavior before finalizing results.
+Self-reported reads, edits, searches or commits are not execution evidence; a missing file prevents judging its contents.
+For explicitly loaded conditions, missing/unproven required body access invalidates that intended condition; retain separately observable task outcomes.
+No-DD omits DD loads; CW-22's common writing-plans load still applies.
+
+### Effectiveness and comparison
+
+Assess preservation (CW-I1) and economy (CW-I2) separately; CW-17 also includes its requested explanation under CW-I3.
+Preserve source meaning and add no unsupported claims.
+Check the whole artifact for its intended reader: original wording, placement or repetition need not survive if information and useful framing do.
+Useful repetition can support emphasis, retention, orientation or point-of-use recall without adding a new fact.
+No word-count reduction, heading quota or mandatory rewrite applies; an unchanged effective source can pass.
+Generation still has an economy obligation, but its length is not compared with raw source notes as though they were a prior draft.
+
+Give a brief, evidence-linked reason for each result, detailing every failure: what meaning changed and what the reader could misunderstand/do differently; what passage is removable without lost value; or what became harder to find or understand.
+A preference for a tighter alternative or evaluator uncertainty about padding is not enough to fail.
+Record readability in its existing section: improved, equivalent or degraded against the source for revisions; usability for the requested reader for generation.
+Materially harder comprehension/use is a preservation failure; cross-reference the readability evidence rather than scoring the same defect twice.
+In composition, keep each companion's assessment separate; cross-reference shared defects without counting them as independent failures or claiming full companion validation.
+
+Apply the same outcome criteria to matching no-DD and baseline conditions.
+Finish individual judgments before comparing their outputs.
+In the existing collection summary, explain whether the supplied skills materially helped, made little difference or hurt on those observations; say when evidence is insufficient or mixed.
+Two passes do not prove added benefit, and a passing no-DD control is useful evidence.
+Describe the actual supplied bundle and observed loads: a bundle comparison does not isolate CW's contribution, and a small sample does not establish reliability.
+
+### Discovery and task boundaries
+
+Discovery scores selection/exposure (CW-I3), not prose effectiveness.
+Positive cases require model-initiated access to the complete CW body before final handoff; direct or companion-mediated access and jointly complete chunks count.
+With qualified availability and a complete trace, absent/partial access or a claim without access fails; pre-injected bodies or inadequate trace coverage invalidate native-discovery judgment.
+For excluded-authoring cases, reading CW to check scope or using it to word the separate proposal is allowed; selecting it as guidance for the excluded edit fails.
+A clear alternative method can pass without naming CW; an unresolved method is NOT_JUDGEABLE.
+
+Record task shape, requested read/diff mechanics and mutation/authority boundaries under fidelity unless the rubric identifies a skill-owned consequence.
+Fidelity defects do not erase independently judgeable semantic results, but invalidate a condition when they prevent its intended judgment.
+All 18 purposes have protocol N/A; CW-23's actual reconciliation/accounting is semantic, while its exact heading and accounting presentation are fidelity.
+
+### First collection and scoring check
+
+Start with the [six-purpose subset](cw-catalog.md#initial-pilot-selection) to check scoring usability before extending collection; model, effort, counts and exact commands still need separate approval.
+Before scoring that batch, select one effectiveness observation and one composition observation for a second assessment without consulting their first worksheets.
+Use the same frozen rules and retained evidence, make no additional provider calls, and retain both assessments separately.
+Explain disagreements as an ambiguous rule, missed evidence or unresolved judgment in the collection summary; this small self-check does not establish independent evaluator agreement.
+If clarification is needed, document the proposed rule change and its effect, resolve it with the owner before broader collection, and preserve the original rules and judgments.
+The [CW-21 rubric](cw-21/specification/rubric.md) records its provisional uncertainty coverage and when to reconsider the task.
 
 ## Routine suite assessment
 

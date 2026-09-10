@@ -1,6 +1,6 @@
 # CW catalog mapping
 
-**Status:** Historical baseline and candidate evidence validity are owner-accepted; the six earlier routine packages have completed their 18-call initial pass and retrospective assessment. The [prospective task inputs](#prospective-input-map) have completed review and remediation, with owner authorization to commit/push; next define scoring under the [current testing plan](../../plans/2026-09-09-dd-skill-testing.md#remaining-work).
+**Status:** Historical baseline and candidate evidence validity are owner-accepted; the six earlier routine packages have completed their 18-call initial pass and retrospective assessment. The [prospective task inputs](#prospective-input-map) have completed review and remediation, with owner authorization to commit/push; scoring is reviewed and approved for commit/push; next prepare the initial collection under the [current testing plan](../../plans/2026-09-09-dd-skill-testing.md#remaining-work).
 The [accepted evidence index](../accepted/concise-writing/codex-gpt-5.6-sol-medium/README.md) retains results and recoverable provenance.
 Both command batches are exhausted; this mapping preserves their declared inputs and does not authorize further provider calls.
 The [archived spec](../../plans/completed/specs/2026-09-07-cw-validation-design.md) preserves the completed comparison contract; the [runbook](cw-runbook.md) owns execution.
@@ -174,7 +174,7 @@ The file-copy audit alone does not establish those controls; clean freeze and co
 **Status:** Full CW catalog audit complete against the [reviewed baseline specification](../../plans/specs/2026-09-10-cw-baseline-specification.md); the owner authorized preparing its coverage proposal.
 The [new task inputs](#prospective-input-map) implement the reviewed repairs/additions.
 Historical prompts, rubrics, recorded scores, accepted evidence and skill bodies remain unchanged.
-Scoring remains paused until the catalog and its gaps are settled.
+Applying scores remains paused; drafting prospective rubrics is authorized after task-input review.
 
 The inventory covers all 22 completed-comparison purpose variants and all six subsequent `routine/` packages: 28 concrete purpose/version entries below.
 No-DD/current-DD are comparison conditions, not extra purposes; their 11 paired task bodies differ only by the CW-loading prefix and their rubrics are identical.
@@ -236,7 +236,7 @@ The three named companions were read from the baseline repository, and their has
 Only their responsibilities relevant to CW composition were inspected; their own catalogs and comprehensive rewrites remain untouched.
 During preparation, include the actual required companion/substrate guidance and usable task fixtures; do not turn missing dependencies or ungranted work into apparent CW failures.
 CW-21/22/23 now have task packages, including project fixtures for CW-22/23.
-They have no prospective scoring rubrics or approved execution configurations yet.
+Their prospective scoring rubrics are reviewed and approved for commit/push; no execution configurations or calls are approved.
 
 ### Proposed routine portfolio
 
@@ -251,6 +251,20 @@ The unchanged total is incidental: remove the old CW-17 non-trigger and two rout
 The two authoring discovery cases change purpose; they are not unchanged repetitions of their old positive-selection tests.
 CW-07 remains separate qualification; CW-09/10/11/12 and CW-17/18 quizzes require no standing routine model calls.
 No count of provider calls, model/effort schedule or repeated observations is selected by this portfolio.
+
+### Initial pilot selection
+
+The owner authorized a small first collection approach to check scoring usability before extending the portfolio.
+Start with CW-03 whole-document revision, CW-17 detailed generation, CW-20 restraint, CW-01 positive discovery, CW-13 excluded-authoring discovery and CW-22 plan/rationale composition.
+Use baseline conditions and matching no-DD controls where applicable; discovery has no no-DD condition.
+This selection exercises the three categories and the main judgment boundaries; it does not establish complete coverage or consistency.
+Provider/model/effort, observation counts, order and exact commands still require a separate collection decision and approval; candidate comparisons come later.
+The [runbook](cw-runbook.md#first-collection-and-scoring-check) defines the small repeat-assessment check using those same observations.
+
+Keep the other 12 purposes available: CW-01/02/04/05/06/08/18/19/21 effectiveness, CW-18/14 discovery and CW-23 composition.
+They retain distinct intended coverage; deferring their execution lets us correct scoring problems before multiplying collection work.
+Expand or consolidate based on what the pilot teaches us; all 18 are not mandatory for every batch, and an unrun purpose supplies no observed coverage.
+CW-21 is provisional: if responses do not expose uncertainty, repair or replace its task before collecting more evidence for keep-and-flag behavior rather than claiming coverage from unrelated passes.
 
 ### Why retain the ordinary cases and avoid more splits
 
@@ -280,41 +294,43 @@ The plan/rationale composition case combines responsibilities that act on the sa
 | Six named verbosity patterns | Meta/local/global: CW-01/03/18; structure: repaired CW-04; unsupported elaboration: CW-05 and generated CW-17; inflation: CW-06. |
 | Useful repetition, orientation, recaps, navigation and rationale | CW-02/03/08/18/19/20, with CW-22/23 for companion responsibilities. |
 | Draft/compare instruction and durable-artifact timing | CW-18/22/23 permit observable editing evidence. Source/output inspection establishes conservation; hidden mental comparison remains unproven. No new internal-method quiz. |
-| Keep and flag when uncertain | Proposed CW-21; do not infer subject uncertainty solely from evaluator disagreement. |
+| Keep and flag when uncertain | CW-21 is provisional: score expressed uncertainty only; if it remains unobserved, reconsider the task before further collection for this purpose. |
 | Named companion ownership | CW-22 covers LP/WER contributions; CW-23 covers SSR contribution. This is CW composition coverage, not full validation of those skills. |
-| Readability without mechanical minimization | Assess throughout the relevant artifacts, including already-good CW-20. Detailed scoring follows coverage approval and input preparation. |
+| Readability without mechanical minimization | Assess throughout the relevant artifacts, including already-good CW-20. Use the shared readability assessment with concrete reader consequences. |
 
-The coverage proposal accounts for each specification obligation; the task inputs below have completed review but have not been empirically qualified.
-Next design scoring before deciding what evidence to collect.
+The coverage proposal maps each specification obligation to an intended test or explicit limit; CW-21 remains provisional, and the task inputs have not been empirically qualified.
+Next select the initial collection schedule and prepare its exact commands under the reviewed scoring.
 No further rescoring, provider call, skill edit or evidence promotion occurs during that work without its applicable authorization.
 
 ### Prospective input map
 
-**Status:** Reviewed task inputs approved for commit/push; scoring and collection readiness remain pending.
+**Status:** Task inputs and the linked rubrics/[shared scoring rules](cw-runbook.md#prospective-scoring) are reviewed and approved for commit/push. Collection readiness remains pending.
 New versions live in `specification/`; reused tasks retain their existing paths and bytes.
-Only the linked prompt supplies the task: do not inherit its neighboring historical rubric or execution configuration into a new comparison.
+Only the linked prompt supplies the task; use the new rubric in its own worksheet scenario directory, not a neighboring historical rubric or execution configuration.
+The shared rules govern all prospective rubrics; record shared provenance once in the collection summary’s fixed input section and link it from each worksheet.
+Rubric bullets are source checklists grouped into a few scored outcomes; no historical judgment changes.
 Category, purpose and source obligations remain in the inventory above; this map supplies concrete inputs and permissions.
 
-| Purpose | Exact common task | Context and deliverable |
-|---|---|---|
-| CW-01 effectiveness | [Existing task](cw-01/no-dd/prompt.md) | Small export-status edit; response only. Representative standalone case. |
-| CW-02 effectiveness | [Repaired task](cw-02/specification/prompt.md) | Both retry and ordering sections are now supplied and revised together. |
-| CW-03 effectiveness | [Whole guide](cw-03/routine/prompt.md) | Response revision with distant repetition and useful reinforcement. |
-| CW-04 effectiveness | [Repaired task](cw-04/specification/prompt.md) | Nested fragments and content-free lead-ins alongside useful warning/recovery lookup structure. No required heading count or layout. |
-| CW-05 effectiveness | [Existing task](cw-05/no-dd/prompt.md) | Authoritative archive notes versus unsupported advice in a draft. |
-| CW-06 effectiveness | [Existing task](cw-06/no-dd/prompt.md) | Inflated emphasis versus universal force. |
-| CW-08 effectiveness | [Repaired task](cw-08/specification/prompt.md) | Grant policy, sponsor requirements and actual appeal-form route supplied together. |
-| CW-17 effectiveness | [Detailed generation](cw-17/routine/prompt.md) | Generate useful explanation/examples from notes; inspect economy as well as depth. |
-| CW-18 effectiveness | [File revision](cw-18/routine/prompt.md) | Produce `clothing-swap-guide.md` from the supplied guide. |
-| CW-19 effectiveness | [Existing task](cw-19/no-dd/prompt.md) | Keep operational conditions together in one runbook revision. |
-| CW-20 effectiveness | [Restraint](cw-20/routine/prompt.md) | Already-effective notice; leaving it unchanged is permissible. Representative standalone case. |
-| CW-21 effectiveness | [New task](cw-21/specification/prompt.md) | Obvious padding plus an unexplained training cue; revised guide and an editorial note. |
-| CW-01 discoverability | [Existing task](cw-01/discovery/prompt.md) | Explicit tightening request without a skill-loading hint. |
-| CW-18 discoverability | [Existing task](cw-18/discovery/prompt.md) | Implicit prose creation in `clothing-swap-guide.md`; selection evidence, not a constrained-source effectiveness claim. |
-| CW-13 discoverability | [Replacement task](cw-13/specification/prompt.md) | Actual warning excerpt; select guidance for a proposed SKILL.md edit, stopping before authoring. |
-| CW-14 discoverability | [Replacement task](cw-14/specification/prompt.md) | Actual command-reference excerpt; select guidance for a proposed supporting-file edit, stopping before authoring. |
-| CW-22 composition | [New task](cw-22/specification/prompt.md), [fixture](cw-22/specification/fixture/) | Revise the plan against an approved design; only `plans/linecount.md` is writable. Preserve requirements, sequence and rationale without embedding implementation. |
-| CW-23 composition | [New task](cw-23/specification/prompt.md), [fixture](cw-23/specification/fixture/) | Merge two restart sections; reconcile sibling navigation and make one actual documentation commit in a disposable fixture repository. |
+| Purpose | Exact common task | Context and deliverable | Proposed scoring |
+|---|---|---|---|
+| CW-01 effectiveness | [Existing task](cw-01/no-dd/prompt.md) | Small export-status edit; response only. Representative standalone case. | [Rubric](cw-01/specification/rubric.md) |
+| CW-02 effectiveness | [Repaired task](cw-02/specification/prompt.md) | Both retry and ordering sections are now supplied and revised together. | [Rubric](cw-02/specification/rubric.md) |
+| CW-03 effectiveness | [Whole guide](cw-03/routine/prompt.md) | Response revision with distant repetition and useful reinforcement. | [Rubric](cw-03/specification/rubric.md) |
+| CW-04 effectiveness | [Repaired task](cw-04/specification/prompt.md) | Nested fragments and content-free lead-ins alongside useful warning/recovery lookup structure. No required heading count or layout. | [Rubric](cw-04/specification/rubric.md) |
+| CW-05 effectiveness | [Existing task](cw-05/no-dd/prompt.md) | Authoritative archive notes versus unsupported advice in a draft. | [Rubric](cw-05/specification/rubric.md) |
+| CW-06 effectiveness | [Existing task](cw-06/no-dd/prompt.md) | Inflated emphasis versus universal force. | [Rubric](cw-06/specification/rubric.md) |
+| CW-08 effectiveness | [Repaired task](cw-08/specification/prompt.md) | Grant policy, sponsor requirements and actual appeal-form route supplied together. | [Rubric](cw-08/specification/rubric.md) |
+| CW-17 effectiveness | [Detailed generation](cw-17/routine/prompt.md) | Generate useful explanation/examples from notes; inspect economy as well as depth. | [Rubric](cw-17/specification/rubric.md) |
+| CW-18 effectiveness | [File revision](cw-18/routine/prompt.md) | Produce `clothing-swap-guide.md` from the supplied guide. | [Rubric](cw-18/specification/rubric.md) |
+| CW-19 effectiveness | [Existing task](cw-19/no-dd/prompt.md) | Keep operational conditions together in one runbook revision. | [Rubric](cw-19/specification/rubric.md) |
+| CW-20 effectiveness | [Restraint](cw-20/routine/prompt.md) | Already-effective notice; leaving it unchanged is permissible. Representative standalone case. | [Rubric](cw-20/specification/rubric.md) |
+| CW-21 effectiveness | [New task](cw-21/specification/prompt.md) | Obvious padding plus an unexplained training cue; revised guide and an editorial note. | [Rubric](cw-21/specification/rubric.md) |
+| CW-01 discoverability | [Existing task](cw-01/discovery/prompt.md) | Explicit tightening request without a skill-loading hint. | [Rubric](cw-01/specification/discovery/rubric.md) |
+| CW-18 discoverability | [Existing task](cw-18/discovery/prompt.md) | Implicit prose creation in `clothing-swap-guide.md`; selection evidence, not a constrained-source effectiveness claim. | [Rubric](cw-18/specification/discovery/rubric.md) |
+| CW-13 discoverability | [Replacement task](cw-13/specification/prompt.md) | Actual warning excerpt; select guidance for a proposed SKILL.md edit, stopping before authoring. | [Rubric](cw-13/specification/rubric.md) |
+| CW-14 discoverability | [Replacement task](cw-14/specification/prompt.md) | Actual command-reference excerpt; select guidance for a proposed supporting-file edit, stopping before authoring. | [Rubric](cw-14/specification/rubric.md) |
+| CW-22 composition | [New task](cw-22/specification/prompt.md), [fixture](cw-22/specification/fixture/) | Revise the plan against an approved design; only `plans/linecount.md` is writable. Preserve requirements, sequence and rationale without embedding implementation. | [Rubric](cw-22/specification/rubric.md) |
+| CW-23 composition | [New task](cw-23/specification/prompt.md), [fixture](cw-23/specification/fixture/) | Merge two restart sections; reconcile sibling navigation and make one actual documentation commit in a disposable fixture repository. | [Rubric](cw-23/specification/rubric.md) |
 
 CW-21 creates a missing-context opportunity; it does not prove that every subject is uncertain.
 Its editorial note exposes unresolved issues without demanding hidden reasoning.
@@ -373,4 +389,4 @@ The [prospective input map](#prospective-input-map) above owns the next task ver
 
 The full [purpose inventory](#every-existing-purpose-and-package), [gap remedies](#gaps-and-proposed-remedies) and [specification coverage check](#specification-coverage-check) above replace the preliminary alignment notes.
 The specification is the source of intended behavior; the inventory distinguishes baseline obligations from historical targets and conditional authoring experiments.
-The next checkpoint is scoring design and review, followed by a separate evidence decision.
+The next checkpoint is the initial collection decision: provider/model/effort, counts and order, followed by preparation and approval of exact commands.

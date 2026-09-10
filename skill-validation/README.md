@@ -52,8 +52,9 @@ Establish how effectively the baseline fulfills those promises using actual evid
 A baseline specification describes intended behavior; it does not assume the baseline passes its tests.
 Preserve prior evidence and frozen judgments when correcting a specification or evaluator assumption.
 
-The [reviewed CW baseline specification](../plans/specs/2026-09-10-cw-baseline-specification.md) is the first pilot under this approach; its [catalog audit](pilot/cw-catalog.md#routine-suite-coverage) led to [reviewed task inputs](pilot/cw-catalog.md#prospective-input-map), with scoring design next.
+The [reviewed CW baseline specification](../plans/specs/2026-09-10-cw-baseline-specification.md) is the first pilot under this approach; its [catalog audit](pilot/cw-catalog.md#routine-suite-coverage) led to [reviewed task inputs](pilot/cw-catalog.md#prospective-input-map), and [reviewed scoring](pilot/cw-runbook.md#prospective-scoring) approved for commit/push; the initial collection schedule is next.
 This changes the source of test requirements, not the settled tools, common categories or evidence ledgers.
+CW now uses grouped outcomes with source checklists and a [small initial selection](pilot/cw-catalog.md#initial-pilot-selection) to check scoring usability before broader collection.
 
 ### Starting the next skill
 

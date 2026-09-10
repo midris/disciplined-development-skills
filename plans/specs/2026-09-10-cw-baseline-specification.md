@@ -59,7 +59,8 @@ First review this specification against the complete baseline skill, then reeval
 Only after those steps are settled should scoring criteria be finalized; the following retains the existing category and evidence boundaries rather than approving new rubric details.
 
 Use the existing categories and worksheet ledgers.
-For each criterion, identify its baseline section, applicable charter invariant, scenario-specific reader need and observable success/failure boundary.
+For each assessment group, identify its baseline section, applicable charter invariants, scenario-specific reader needs and observable success/failure boundary.
+Use source facts as checks within that result, not a separate score per fact; grouping does not relax any requirement.
 Keep this mapping in the existing catalog or rubric; no additional tracking system is needed.
 
 - **Discoverability:** does the agent find and load the skill where its actual scope calls for it, with the declared provider's qualified access mechanism?
@@ -85,5 +86,6 @@ Judge a later rewrite against the same agreed promises and comparison conditions
 If a new behavior is desired, explicitly revise the specification and affected tests before measuring that change; do not redefine success to fit the candidate's output.
 
 The [catalog audit](../../skill-validation/pilot/cw-catalog.md#routine-suite-coverage) now identifies the proposed repairs, retirements and additions.
-The [resulting task inputs](../../skill-validation/pilot/cw-catalog.md#prospective-input-map) have completed review and remediation, with owner authorization to commit/push; scoring design is next.
+The [resulting task inputs](../../skill-validation/pilot/cw-catalog.md#prospective-input-map) have completed review and remediation, with owner authorization to commit/push; [reviewed scoring](../../skill-validation/pilot/cw-runbook.md#prospective-scoring) is also approved for commit/push.
+The next decision is the initial collection schedule and exact-command approval.
 Other skills and new provider calls are not activated by this specification.

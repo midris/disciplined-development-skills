@@ -2,7 +2,7 @@
 
 **Status:** Installation and baseline tooling are settled for the current Codex and Claude local workflows.
 The accepted CW evidence and completed-plan cleanup are consolidated on `main`; ongoing testing work uses this primary checkout.
-Next: define and review scoring for the approved CW task inputs.
+Next: choose the initial collection schedule, then prepare and approve its exact commands.
 This is the single active testing plan; the [validation guide](../skill-validation/README.md) indexes the durable contracts and execution instructions.
 
 **Goal:** A repeatable set of tests for each DD skill’s discoverability, effectiveness and composition, with distinct questions and observable scoring criteria.
@@ -22,7 +22,7 @@ The [completed catalog audit](../skill-validation/pilot/cw-catalog.md#routine-su
 Its proposal retains ordinary cases, replaces mismatched discovery expectations, retires authoring/extraction tasks from routine CW coverage and adds uncertain-framing plus two named-companion composition cases.
 The owner authorized preparing the 18-purpose proposal: 12 effectiveness, four discoverability and two composition cases.
 Following input review and remediation, the owner authorized committing and pushing the prepared tasks.
-Input review is complete; scoring remains to be defined, with no provider schedule or calls authorized.
+Input and scoring review are complete, with owner authorization to commit/push; no provider schedule or calls are authorized.
 CW remains the pilot: review specification fidelity first, then evaluate the complete catalog and address gaps or unnecessary overlap, then define scoring from the settled specification and scenarios.
 Do not continue adjusting scores while those earlier steps remain open.
 Earlier observations remain evidence under their recorded contracts; neither their collection nor the retrospective corrections establish a completed baseline against this new specification.
@@ -106,6 +106,28 @@ The [prospective input map](../skill-validation/pilot/cw-catalog.md#prospective-
 Provider-free previews, frozen source copies, checks and review notes are retained in [/private/tmp/dd-cw-specification-inputs-n_sfodg5/summary.md](/private/tmp/dd-cw-specification-inputs-n_sfodg5/summary.md).
 The [corrected composition previews and probes](/private/tmp/dd-cw-specification-inputs-n_sfodg5/review-1/summary.md) supersede the earlier CW-22/23 previews; the other task previews are unchanged.
 The checks exercise both native path layouts, matching control inputs, file comparison and a disposable Git index/commit sequence; they are not model observations or a provider schedule.
+
+### Current scoring preparation
+
+The owner approved simplifying the draft and improving evaluation before further collection.
+Use evaluator-only rubrics under each case's `specification/` directory, with CW-01/18 discovery in its `discovery/` subdirectory; the [input map](../skill-validation/pilot/cw-catalog.md#prospective-input-map) links all 18.
+The [shared rules](../skill-validation/pilot/cw-runbook.md#prospective-scoring) define grouped results, source checklists and readability evidence using the unchanged worksheet generator.
+Record shared provenance once per collection summary, inspect prose before condition labels where practical, then verify the trace and compare matching control outcomes.
+
+- [x] Draft and internally review all 18 source-grounded rubrics and verify compatibility with the existing worksheet generator.
+- [x] Simplify scoring and repeated boilerplate while preserving concrete source checks and separate companion ownership.
+- [x] Propose the [six-purpose first collection](../skill-validation/pilot/cw-catalog.md#initial-pilot-selection) and a repeat assessment of two future observations; retain all other purposes without requiring every case in every batch.
+- [x] Mark CW-21's uncertainty coverage provisional, with repair/replacement considered if that behavior is not observed.
+- [x] Review all edited documents, address findings and reverify preservation, links and worksheet compatibility.
+- [x] Complete owner review of the revised scoring and obtain authorization to commit/push.
+- [ ] Select the initial collection schedule, then prepare and obtain approval for its exact commands.
+
+This smaller first collection checks whether scoring is usable before investing in wider coverage; it does not establish baseline reliability or approve candidate comparison.
+The earlier [draft review](/private/tmp/dd-cw-scoring-review-kowdw1x0/summary.md) remains retained; [simplification review](/private/tmp/dd-cw-scoring-streamline-w12bzsmf/summary.md) records the current verification.
+Approved prompts, fixture declarations, skill bodies and retained evidence remain unchanged.
+The future repeat assessment is limited to observations from the future separately approved pilot batch and preserves both judgments; it does not authorize rescoring historical evidence or making provider calls now.
+
+### Retained earlier routine evidence
 
 The [routine input map](../skill-validation/pilot/cw-catalog.md#routine-input-map) links the six packages used in the initial pass; the proposed portfolio and full audit are above it in the same catalog.
 Provider-free preparation evidence remains in `/private/tmp/dd-cw-routine-inputs-6gx080gt/summary.md`; it exercises no-DD/current-DD/candidate assembly, not a new provider schedule or skill-effectiveness claim.
