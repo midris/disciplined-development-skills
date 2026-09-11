@@ -2,7 +2,7 @@
 
 **Status:** Reviewed scoring approved for commit/push; collection requires separate approval.
 Test category / supporting purpose: **Effectiveness**.
-Task: [approved prompt](../routine/prompt.md).
+Task: [approved prompt](prompt.md).
 Apply the [prospective scoring rules](../../cw-runbook.md#prospective-scoring).
 Baseline anchors: Durable prose and whole-artifact pass; useful examples, reinforcement and orientation.
 

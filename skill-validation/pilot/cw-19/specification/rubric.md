@@ -2,7 +2,7 @@
 
 **Status:** Reviewed scoring approved for commit/push; collection requires separate approval.
 Test category / supporting purpose: **Effectiveness**.
-Task: [approved prompt](../no-dd/prompt.md).
+Task: [approved prompt](prompt.md).
 Apply the [prospective scoring rules](../../cw-runbook.md#prospective-scoring).
 Baseline anchors: Core conservation test; global pass; warnings, causal rationale and actor/order boundaries.
 

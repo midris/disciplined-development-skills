@@ -77,7 +77,9 @@ Materially worse comprehension or use is a semantic loss; record the same conseq
 Task-only narration and shape issues remain fidelity unless they prevent judgment; no deterministic protocol applies without a real consumer requirement.
 
 Passing a task with CW loaded establishes observed task success, not that CW caused it.
-Use meaningful no-DD controls to assess added benefit; retain ordinary control passes and disclose the supplied surrounding skills.
+Use meaningful no-DD controls to assess added benefit and whether CW preserves successful behavior without degrading comprehension or use.
+CW need not outperform the control on every task; a direct paired comparison showing no observed degradation is useful evidence.
+Support that conclusion with the actual outputs and readability evidence, not merely two PASS labels; retain ordinary control passes and disclose the supplied surrounding skills.
 Treat observations as evidence about the selected model, task and context, not a universal reliability estimate.
 
 ## Establishing the baseline and judging rewrites

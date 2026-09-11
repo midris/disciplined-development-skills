@@ -2,7 +2,7 @@
 
 **Status:** Installation and baseline tooling are settled for the current Codex and Claude local workflows.
 The accepted CW evidence and completed-plan cleanup are consolidated on `main`; ongoing testing work uses this primary checkout.
-Current work: all six CW-05/06/08 observations completed and pass preservation/economy; results are ready for owner review.
+Current work: the owner reviewed CW-05/06/08 and authorized the scoring clarifications below; the final three coverage purposes remain unrun.
 Both CW-05 conditions separately fail the output-only request by emitting progress messages.
 CW-14 separately fails proposal fidelity for omitting the selected authoring method’s observed-failure gate.
 The preceding approved-design CW-23 pair completed the edit and commit in both conditions; both results are judgeable.
@@ -300,7 +300,7 @@ Control passes are valid evidence; this single observation per condition extends
 - [x] Obtain owner approval for the six-call batch and preparation/results commit/push workflow.
 - [x] Collect the first observation and pass its live-control checkpoint before continuing.
 - [x] Collect and assess all six; review evidence and reconcile the remaining coverage.
-- [ ] Review these results with the owner before selecting further collection.
+- [x] Review these results with the owner; the owner authorized scoring clarifications before further collection.
 
 Both CW-05 conditions remove the two unsupported recommendations and retain all archive facts; their extra progress messages fail the explicit output-only task boundary separately.
 Both CW-06 conditions preserve universal key/header/rejection requirements while trimming inflated emphasis; they also obey the output-only instruction.
@@ -314,6 +314,30 @@ Judgeable coverage now includes 15 of 18 purposes: effectiveness CW-02/03/04/05/
 The inventory contains 26 judgeable observations plus three retained unjudgeable CW-23 attempts; these are coverage counts, not a pooled score.
 CW-01, CW-18 and CW-19 effectiveness remain unobserved under the reviewed contract.
 The six-call approval is exhausted; review the results before selecting that remaining coverage, retaining every observation and judgment scratch-only.
+
+### Scoring clarifications before final coverage
+
+The owner clarified that CW need not outperform the control on every test: preserving successful behavior is a useful outcome.
+Record no observed degradation when a direct paired comparison supports equivalent task success and readability; two PASS labels alone do not establish equivalence or universal reliability.
+The [specification](specs/2026-09-10-cw-baseline-specification.md) and [comparison rules](../skill-validation/pilot/cw-runbook.md#comparing-conditions) own that interpretation.
+
+The authorized documentation change makes CW-08 repetition assessment explicitly depend on reader function and uses its retained two outputs as calibration.
+The [output-scope rules](../skill-validation/pilot/cw-runbook.md#output-scope) distinguish final-answer content from conversation-wide silence.
+New prospective prompt copies for the unrun CW-01/18/19 effectiveness tasks clarify final-answer scope while preserving source prose, permissions and historical prompts; both arms must receive the same common task.
+Future selected tasks with ambiguous output scope require the same explicit clarification before their next freeze, recorded as changed task input rather than silently applied to old observations.
+All original runs, frozen evaluation inputs and successive judgments remain unchanged, including CW-05's recorded fidelity failures.
+No skill edit, subject call or historical reassessment belongs to this documentation change.
+
+- [x] Review and verify the specification, shared scoring, CW-08 rubric and three clarified prospective tasks; reconcile their catalog/rubric links.
+- [ ] After the remaining three coverage purposes, prepare a small independent scoring check using a different evaluator without access to current judgments.
+
+[Verification](/private/tmp/cw-scoring-clarifications-zw1r9j57/verification.json) and [review](/private/tmp/cw-scoring-clarifications-zw1r9j57/review.md) confirm only response-scope wording changed in the three copied prompts, all 646 retained files are unchanged, and Markdown destinations/anchors resolve.
+The hook suite passed with 263 tests and three skips; no provider was called and no observation was rescored.
+
+That later check should include useful repetition, meaning-preservation judgment and the CW-14 proposal omission, with source tasks, applicable frozen rules and complete evidence available.
+Assess artifacts before revealing condition/trace information where practical, then verify the trace for loading and fidelity; record what could not be blinded.
+Retain separate assessments and explain disagreements without overwriting originals; it measures scoring agreement and requires no subject rerun.
+Select the exact observations and evaluator before execution; no evaluator provider call or reassessment is launched by this change.
 
 ### Retained earlier routine evidence
 

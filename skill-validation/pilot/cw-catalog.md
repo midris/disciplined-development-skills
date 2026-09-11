@@ -310,10 +310,11 @@ Only the linked prompt supplies the task; use the new rubric in its own workshee
 The shared rules govern all prospective rubrics; record shared provenance once in the collection summary’s fixed input section and link it from each worksheet.
 Rubric bullets are source checklists grouped into a few scored outcomes; no historical judgment changes.
 Category, purpose and source obligations remain in the inventory above; this map supplies concrete inputs and permissions.
+CW-01/18/19 effectiveness use prospective copies with explicit final-answer scope under the [output-scope rules](cw-runbook.md#output-scope); source prose and work permissions are unchanged, and historical prompts remain intact.
 
 | Purpose | Exact common task | Context and deliverable | Proposed scoring |
 |---|---|---|---|
-| CW-01 effectiveness | [Existing task](cw-01/no-dd/prompt.md) | Small export-status edit; response only. Representative standalone case. | [Rubric](cw-01/specification/rubric.md) |
+| CW-01 effectiveness | [Clarified task](cw-01/specification/prompt.md) | Small export-status edit; response only. Representative standalone case. | [Rubric](cw-01/specification/rubric.md) |
 | CW-02 effectiveness | [Repaired task](cw-02/specification/prompt.md) | Both retry and ordering sections are now supplied and revised together. | [Rubric](cw-02/specification/rubric.md) |
 | CW-03 effectiveness | [Whole guide](cw-03/routine/prompt.md) | Response revision with distant repetition and useful reinforcement. | [Rubric](cw-03/specification/rubric.md) |
 | CW-04 effectiveness | [Repaired task](cw-04/specification/prompt.md) | Nested fragments and content-free lead-ins alongside useful warning/recovery lookup structure. No required heading count or layout. | [Rubric](cw-04/specification/rubric.md) |
@@ -321,8 +322,8 @@ Category, purpose and source obligations remain in the inventory above; this map
 | CW-06 effectiveness | [Existing task](cw-06/no-dd/prompt.md) | Inflated emphasis versus universal force. | [Rubric](cw-06/specification/rubric.md) |
 | CW-08 effectiveness | [Repaired task](cw-08/specification/prompt.md) | Grant policy, sponsor requirements and actual appeal-form route supplied together. | [Rubric](cw-08/specification/rubric.md) |
 | CW-17 effectiveness | [Detailed generation](cw-17/routine/prompt.md) | Generate useful explanation/examples from notes; inspect economy as well as depth. | [Rubric](cw-17/specification/rubric.md) |
-| CW-18 effectiveness | [File revision](cw-18/routine/prompt.md) | Produce `clothing-swap-guide.md` from the supplied guide. | [Rubric](cw-18/specification/rubric.md) |
-| CW-19 effectiveness | [Existing task](cw-19/no-dd/prompt.md) | Keep operational conditions together in one runbook revision. | [Rubric](cw-19/specification/rubric.md) |
+| CW-18 effectiveness | [File revision](cw-18/specification/prompt.md) | Produce `clothing-swap-guide.md` from the supplied guide. | [Rubric](cw-18/specification/rubric.md) |
+| CW-19 effectiveness | [Clarified task](cw-19/specification/prompt.md) | Keep operational conditions together in one runbook revision. | [Rubric](cw-19/specification/rubric.md) |
 | CW-20 effectiveness | [Restraint](cw-20/routine/prompt.md) | Already-effective notice; leaving it unchanged is permissible. Representative standalone case. | [Rubric](cw-20/specification/rubric.md) |
 | CW-21 effectiveness | [New task](cw-21/specification/prompt.md) | Obvious padding plus an unexplained training cue; revised guide and an editorial note. | [Rubric](cw-21/specification/rubric.md) |
 | CW-01 discoverability | [Existing task](cw-01/discovery/prompt.md) | Explicit tightening request without a skill-loading hint. | [Rubric](cw-01/specification/discovery/rubric.md) |

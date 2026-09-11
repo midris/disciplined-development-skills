@@ -16,7 +16,11 @@ Baseline anchors: Core test; non-development scope; anti-over-trimming of except
 
 ## Economy (CW-I2)
 
-- Remove the content-free policy announcement and demonstrated duplicate deadline/finality wording. Useful reminders at the place of action remain permissible.
+- Remove the content-free policy announcement. Assess repeated deadline/finality wording by its reader function; remove repetition only when it supplies neither information nor useful framing.
+- An overview warning can help applicants decide or navigate, and a reminder beside the appeal instructions can help them act correctly. Neither placement nor repeated facts alone establish waste; apply the shared padding-failure check.
+
+Calibration: the [retained CW-08 pair](/private/tmp/skilltest-cw-policy-w_12rbzo/summary.md#pair-comparisons) illustrates two valid approaches: no-DD repeats appeal timing/finality in the overview and detailed procedure, while current-DD uses an overview pointer and keeps the details in Appeals.
+Both preserve useful reader function; neither layout is required, and this example does not exempt all repetition from assessment.
 
 ## Reading and task notes
 

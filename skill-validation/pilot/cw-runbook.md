@@ -127,7 +127,10 @@ These are contextual judgments, not a whitelist of sentences or a blanket exempt
 Apply the same outcome criteria to matching no-DD and baseline conditions.
 Finish individual judgments before comparing their outputs.
 In the existing collection summary, explain whether the supplied skills materially helped, made little difference or hurt on those observations; say when evidence is insufficient or mixed.
-Two passes do not prove added benefit, and a passing no-DD control is useful evidence.
+CW need not outperform the control for a test to be useful.
+Record no observed degradation when direct comparison shows that the CW condition preserves successful task behavior and equivalent or better readability; cite the output features supporting that conclusion.
+Two PASS labels alone establish neither equivalence nor added benefit, and an unresolved comparison remains unresolved.
+Retain ordinary control passes and cases that check preservation of successful behavior; do not redesign them merely to force a control failure or a CW win.
 Describe the actual supplied bundle and observed loads: a bundle comparison does not isolate CW's contribution, and a small sample does not establish reliability.
 
 ### Discovery and task boundaries
@@ -141,6 +144,18 @@ A clear alternative method can pass without naming CW; an unresolved method is N
 Record task shape, requested read/diff mechanics and mutation/authority boundaries under fidelity unless the rubric identifies a skill-owned consequence.
 Fidelity defects do not erase independently judgeable semantic results, but invalidate a condition when they prevent its intended judgment.
 All 18 purposes have protocol N/A; CW-23's actual reconciliation/accounting is semantic, while its exact heading and accounting presentation are fidelity.
+
+#### Output scope
+
+Before freezing a new collection, make output restrictions explicit in the common task received by both conditions.
+For ordinary prose revisions, use “In your final answer, return only the revised text”; for file deliverables, explicitly limit the final answer to the requested completion notice.
+These constrain the final answer, so a separate progress message alone is not a fidelity violation of that restriction.
+If silence throughout the conversation is a material task requirement, say “Do not send progress messages; your only prose response must be the final revised text,” and score all emitted prose against that boundary.
+Do not infer conversation-wide silence from an unspecified “return only.”
+
+Update the selected prospective prompt and its input-map/rubric links before freezing; keep historical source prompts and retained packages unchanged.
+Record the clarification as changed task input, preserve all other task facts and permissions, and apply it equally to both arms.
+These prospective instructions do not reinterpret earlier runs: CW-05's recorded output-only failures, and other historical fidelity judgments, retain their original evaluation contract.
 
 ### First collection and scoring check
 
