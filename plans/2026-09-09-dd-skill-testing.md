@@ -5,7 +5,8 @@ The accepted CW evidence and completed-plan cleanup are consolidated on `main`; 
 Current work: CW-01/18/19 collection and scoring are complete; all 18 purposes now have judgeable initial evidence.
 The final batch has five passes and one CW-19/current-DD preservation failure; owner review identifies lost execution responsibility, change-ticket context and operational clarity in the revised runbook.
 The four-case independent scoring check is complete; the fresh grader missed CW-19's preservation failure and CW-14's separate proposal-fidelity failure.
-Review the scoring disagreements and evidence-checking gaps before further grading; original and owner-revised judgments remain unchanged.
+The owner authorized repeating the same four-case check with a stronger model; Opus 5 preparation is underway with unchanged prompts and medium effort.
+Original and owner-revised judgments remain unchanged.
 Both CW-05 conditions separately fail the output-only request by emitting progress messages.
 CW-14 separately fails proposal fidelity for omitting the selected authoring method’s observed-failure gate.
 The preceding approved-design CW-23 pair completed the edit and commit in both conditions; both results are judgeable.
@@ -389,6 +390,22 @@ The [audit](/private/tmp/cw-independent-scoring-j4sxgwi0/collection-audit.json) 
 The second prompt was derived only from frozen evidence and its own unchanged first report; no feedback about disagreement was supplied.
 The two-call approval is exhausted, and both grader reports remain separate scratch records.
 Next, discuss requiring concrete output/trace support for each applicable rubric obligation and an omission check within the existing grouped scores; this improvement is proposed, not implemented or authorized for another call.
+
+### Stronger-model scoring comparison
+
+The owner requested Opus 4.8 or 5, or Sonnet 5 after the completed independent check.
+The [new package](/private/tmp/cw-independent-opus5-0z_e8u7x/summary.md) selects `claude-opus-5`, retaining medium effort and the same four cases, original frozen rules, system prompt and two-stage procedure.
+[Anthropic's current documentation](https://platform.claude.com/docs/en/models/opus-5/whats-new-opus-5) identifies that model; the first approved invocation must verify actual account availability and resolved model identity.
+All copied grading inputs are byte-identical to the previous package; stage 2 receives this new grader's own unchanged first report, never the earlier grader's report or operator feedback.
+This keeps model choice as the intended comparison variable; equivalent named effort does not guarantee identical internal computation across models.
+The proposed evidence-grounding prompt improvement above remains deferred while this comparison runs.
+
+The [authorization](/private/tmp/cw-independent-opus5-0z_e8u7x/authorization.md) covers exactly two serial no-tool evaluator calls, with the existing first-stage checkpoint and private-runtime controls.
+Current CLI version/digest match the preceding check; a fresh provider-free authentication, option-parsing and host-protection check passed.
+Retain every original report and subject artifact; no automatic verdict replacement, new subject collection, skill/rubric edit or evidence promotion.
+
+- [ ] Review and commit/push the model-only preparation, then execute both stages with the checkpoint.
+- [ ] Compare both graders with the retained judgments and report evidence-supported differences and limits.
 
 ### Scoring clarifications before final coverage
 
