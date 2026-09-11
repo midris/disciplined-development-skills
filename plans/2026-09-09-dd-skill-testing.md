@@ -3,7 +3,7 @@
 **Status:** Installation and baseline tooling are settled for the current Codex and Claude local workflows.
 The accepted CW evidence and completed-plan cleanup are consolidated on `main`; ongoing testing work uses this primary checkout.
 Current work: CW-01/18/19 collection and scoring are complete; all 18 purposes now have judgeable initial evidence.
-The final batch has five passes and one CW-19/current-DD preservation failure: the revised runbook omits the release engineer's execution responsibility.
+The final batch has five passes and one CW-19/current-DD preservation failure; owner review identifies lost execution responsibility, change-ticket context and operational clarity in the revised runbook.
 Review these results before preparing the independent scoring check; initial coverage does not establish reliability.
 Both CW-05 conditions separately fail the output-only request by emitting progress messages.
 CW-14 separately fails proposal fidelity for omitting the selected authoring method’s observed-failure gate.
@@ -342,9 +342,13 @@ Compare successful pairs directly for reader value and no observed degradation w
 
 CW-01 and CW-18 pass preservation/economy in both conditions, with direct paired comparison supporting no observed degradation in task success and usability.
 CW-18/current-DD condenses the one-token-at-closing example into the unused-token example and universal expiry/stop rules; the worksheet records why the practical lesson remains available from the complete guide.
-CW-19/no-DD preserves the named release engineer and passes; current-DD removes that actor everywhere and fails preservation, while economy and fidelity pass.
-Both runbooks retain the operational thresholds, shared readiness window, GO ordering, force warning and recovery boundary.
-This is a judgeable omission with valid controls, not an infrastructure failure or permission to replay it.
+CW-19/no-DD passes; current-DD fails preservation, while economy and fidelity pass.
+The [owner-revised failure notes](/private/tmp/skilltest-cw-final-p2sc4e3n/worksheets/06-cw19-current-dd-owner-revised.md) record four shortcomings of the post-CW output: the release engineer is never named, the example identifier CHG-4821 is never introduced as a change ticket, the technically correct metric boundary statement becomes harder to read, and “Never add --force” loses its explicit reference to the promotion command.
+The compressed stop condition makes readers reconstruct differently inclusive failure bounds; the warning's section placement supplies context but does not replace a clear command reference.
+CHG-4821 is fictional test text; no real-ticket lookup is involved.
+The numeric thresholds, shared readiness window, GO ordering and recovery conditions remain present, but that alone does not preserve operational readability.
+The original assessment remains unchanged; the separate owner revision expands the failure rationale under the existing information/readability contract without changing scores, rubrics or skills.
+These are judgeable output shortcomings with valid controls, not an infrastructure failure or permission to replay the run.
 
 The [collection audit](/private/tmp/skilltest-cw-final-p2sc4e3n/collection-audit.json) verifies six serial calls without retries, 230 frozen inputs, 339 artifact-entry hashes, allowed output boundaries, all six built-in maps and runtime cleanup.
 All six fidelity results pass under their clarified final-answer scope; original fidelity judgments remain unchanged.
