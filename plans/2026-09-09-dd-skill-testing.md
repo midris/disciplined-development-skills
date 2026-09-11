@@ -3,7 +3,7 @@
 **Status:** Installation and baseline tooling are settled for the current Codex and Claude local workflows.
 The accepted CW evidence and completed-plan cleanup are consolidated on `main`; ongoing testing work uses this primary checkout.
 Current work: CW-18/CW-21 yielded three judgeable observations; CW-23’s Git boundary is repaired, but both approved replacement conditions stopped for design approval without producing an edit or commit.
-Both replacements are `SCENARIO_INVALID`; next resolve the bounded task/workflow handoff before any further CW-23 calls.
+Those runs retain their recorded `SCENARIO_INVALID` label; the owner approved the prospective name `RUN_NOT_JUDGEABLE` and an explicit design-approval premise for fresh CW-23 task preparation.
 This is the single active testing plan; the [validation guide](../skill-validation/README.md) indexes the durable contracts and execution instructions.
 
 **Goal:** A repeatable set of tests for each DD skill’s discoverability, effectiveness and composition, with distinct questions and observable scoring criteria.
@@ -38,7 +38,7 @@ Use the next small batch to test remaining distinct boundaries; tooling is settl
 
 On the same machine, resume in this primary checkout on `main`, read `AGENTS.md` → `CLAUDE.md`, then this plan and the linked next-batch summary; verify actual Git state before acting.
 The reviewed preparation notes were committed and pushed before the approved batch; its scratch package records the clean launch revision and session approval.
-Continue from the [CW-23 replacement results](#next-coverage-preparation), preserving both packages and all six observations, including three invalid CW-23 attempts.
+Continue from the [CW-23 approved-design preparation](#cw-23-approved-design-preparation), preserving the earlier packages and all six observations, including three unjudgeable CW-23 attempts.
 The replacement approval is exhausted; do not resume/replay those observations or execute the original unrun fifth command.
 Recent raw observations and preparation packages under `/private/tmp` are retained local evidence, not a durable Git backup or cross-device handoff; do not delete them or assume their links alone preserve their contents.
 The repository contains the methodology and current decisions; continuity must not depend on conversation memory being available in another app.
@@ -182,7 +182,9 @@ The first CW-18 call passed the required live execution, capture, input-provenan
 - [x] Review the repair and freeze two replacement CW-23 commands with unchanged task/skill/scoring inputs.
 - [x] Obtain approval for the two replacement calls and collect both after the first-call infrastructure checkpoint passed.
 - [x] Assess both as `SCENARIO_INVALID`: design approval requested, with no revised artifact or local commit.
-- [ ] Resolve CW-23’s single-turn execution handoff before proposing a revised task and any new collection.
+- [x] Obtain owner approval for an explicit approved-design premise in the common CW-23 prompt and the prospective `RUN_NOT_JUDGEABLE` label.
+- [x] Prepare and review a fresh no-DD/current-DD pair with that premise under the owner’s retry request and approval.
+- [ ] Collect the two fresh calls serially, with a first-call live-control checkpoint, then assess and review their retained evidence.
 
 CW-18 passed discovery with complete CW access before file creation; extra progress messages failed its brief-completion-only fidelity requirement.
 Both CW-21 outputs preserve operating facts and remove clear padding, and both express unresolved uncertainty about the training cue.
@@ -198,7 +200,7 @@ The evidence establishes a concrete qualification gap, not when the restriction 
 
 Call 5 remains unrun; the original batch stopped without retries, extra model calls or execution-policy changes.
 The owner authorized the narrow repair after reviewing the failure; its [repair and replacement package](/private/tmp/skilltest-cw-git-repair-c7bwwsv7/summary.md) retains scope, provider-free evidence and the two exact commands.
-Change the fixed Codex adapter policy, not scenario inputs or scoring; retain the runtime’s existing rejection of preexisting fixture `.git` entries.
+That repair changed the fixed Codex adapter policy while preserving scenario inputs, scoring and the runtime’s rejection of preexisting fixture `.git` entries.
 Use an exact path grant to avoid granting Git writes in sibling evidence or other repositories; unsupported profile syntax must fail without a broader fallback.
 Provider-free checks passed the complete Git/link path for both unchanged CW-23 fixtures, with all supplied skills and project guidance unchanged.
 Native catalogs match the earlier conditions, paired common messages match after declared DD entries and allocated paths are normalized, and all 60 built-in guidance hashes are unchanged.
@@ -206,12 +208,24 @@ The current CLI’s custom-profile inheritance did not retain built-in protected
 The separate installed-CLI check exercises protected-path writes and network binding; these are bounded controls, not a claim of exhaustive filesystem isolation or model effectiveness.
 The owner approved the frozen replacement pair; both calls completed with verified inputs, retained emitted streams and verified runtime cleanup, without retries or extra calls.
 No-DD successfully staged originals, then requested design approval; current-DD loaded all required DD/CW/SSR bodies but requested design approval before staging.
-Neither edited the guide, changed navigation or committed, so all three semantic groups are `NOT_JUDGEABLE` and both scenarios are invalid; the task-completion failures remain visible separately.
+Neither edited the guide, changed navigation or committed, so all three semantic groups are `NOT_JUDGEABLE` and both runs are unjudgeable; the task-completion failures remain visible separately.
 The second trace’s compound-read event exposes only trailing Git output; complete required DD/CW/SSR body access is verified in its earlier event, but later body reads are not independently confirmed.
 Both conditions stopped at a design gate, leaving no CW-23 semantic comparison; this does not establish a DD benefit or regression.
-Resolve the concrete task/workflow handoff around the supplied brainstorming approval gate, keeping the reviewed CW specification and scoring intact.
+The owner subsequently approved the task clarification below; the reviewed CW specification and scoring criteria remain intact.
 The pair’s two-call approval is exhausted; any task change or further collection needs a reviewed proposal and fresh approval.
 All new evidence remains scratch-only pending owner review, with no historical rescoring, promotion or adoption.
+
+### CW-23 approved-design preparation
+
+The owner accepted `RUN_NOT_JUDGEABLE` as the prospective run verdict, with the same conditions and precedence as `SCENARIO_INVALID`; historical labels and frozen judgments remain unchanged.
+The revised common task explicitly states the approved edit design and directs execution; both conditions receive that paragraph, with their existing loading prefixes unchanged.
+This addresses the observed approval hold without changing the CW specification, rubric, skills or requested documentation outcome; whether the subject now reaches execution remains to be observed.
+The [fresh pair](/private/tmp/skilltest-cw-approved-design-ikjawbad/summary.md) freezes two serial calls, no-DD then current-DD, on Codex CLI 0.154.0 / gpt-5.6-sol / medium under the repaired Git policy.
+The owner’s retry request and approval cover this pair; its expanded commands and authorization are retained in the package.
+Provider-free checks verified both rendered prompts, all fixture bytes, withheld evaluation inputs, 85 frozen inputs, 46 unchanged runner files, and the unchanged CLI version/digest.
+Of 68 supplied files, 66 match the previous pair byte-for-byte; only the two condition prompts gain the approved common paragraph.
+Prior fixture capability qualification remains applicable because the CLI, policy and all fixture/skill bytes are unchanged; the first-call live-control checkpoint still applies.
+No provider observation has yet been collected for this pair.
 
 ### Retained earlier routine evidence
 

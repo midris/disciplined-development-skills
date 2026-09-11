@@ -131,7 +131,7 @@ The [criterion map and first-repair proposal](../plans/deferred/2026-09-07-skill
 - [Scenario index](scenarios/README.md) inventories the packaged schema `"0.2"`
   scenarios and identifies their source and packaging authority.
 - [Methodology](../plans/completed/specs/2026-09-02-skill-testing-methodology-design.md)
-  defines the evaluation ledgers, evidence review and scenario verdicts.
+  defines the evaluation ledgers, evidence review and run verdicts.
 - [Runner](runner/README.md) defines the mechanical `skilltest` interface. It does
   not score evidence or assign behavioral verdicts, and provider invocation still
   requires explicit owner approval.

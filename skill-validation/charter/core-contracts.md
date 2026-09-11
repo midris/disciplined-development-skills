@@ -20,7 +20,7 @@ Every scored criterion belongs to exactly one ledger:
 |---|---|---|
 | Core behavior | Observable action, outcome, order, owner, blocked transition, or truthful evidence mapped to a charter invariant | Yes |
 | Deterministic protocol | Bytes consumed or produced by an authenticated renderer, validator, or production consumer | Yes, when applicable |
-| Task or fixture fidelity | Requested shape or datum that does not change the skill-owned behavior | No; if it prevents judgment, repair and invalidate the scenario |
+| Task or fixture fidelity | Requested shape or datum that does not change the skill-owned behavior | No; if it prevents judgment, repair the task/fixture and mark the run not judgeable |
 | Readability | Findability, processing effort, and material clarity | Separate quality gate |
 | Infrastructure | Transport or harness failure with no evaluable response | No; exclude from the behavioral denominator and retry under the recorded policy |
 

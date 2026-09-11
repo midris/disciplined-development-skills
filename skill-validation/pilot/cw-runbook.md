@@ -81,7 +81,7 @@ A group passes only when all applicable checks pass; a demonstrated violation fa
 Missing evidence is NOT_JUDGEABLE, not a pass; distinguish an absent source fact in a visible output (a judgeable omission) from an unavailable output.
 If a group has both a known violation and missing evidence, retain the violation in its notes and mark the group NOT_JUDGEABLE.
 Omit inapplicable conditional groups with a reason; do not average results.
-Use existing [verdict precedence](../../plans/completed/specs/2026-09-02-skill-testing-methodology-design.md#scenario-verdict): infrastructure disposition, then invalid/unjudgeable, then failure, otherwise pass.
+Use existing [verdict precedence](../../plans/completed/specs/2026-09-02-skill-testing-methodology-design.md#scenario-verdict): infrastructure disposition, then `RUN_NOT_JUDGEABLE`, then failure, otherwise pass.
 
 For effectiveness/composition, assess the complete source and final artifact before inspecting condition labels or loading traces where practical; treat this as a reading order, not a claim of blind evaluation.
 Then inspect the full trace and actual file/Git state to verify exposure, task boundaries and any process-owned behavior before finalizing results.

@@ -1,3 +1,6 @@
+The approved design is to merge the restart-check sections, tighten the wording without changing policy, reconcile incoming links, verify the diff and navigation, and commit the three documents.
+Proceed with execution; design approval is complete.
+
 Read `{{fixture_dir}}/AGENTS.md` and the project documentation.
 Tighten `{{fixture_dir}}/docs/restarting.md` and combine its "Before restarting" and "Final check" subsections under the heading "Restart checks".
 Keep the restart procedure usable for an on-call developer and maintain the project's navigation after this edit.

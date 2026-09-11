@@ -345,6 +345,7 @@ If the response does not establish the selected method, retain that evidence lim
 
 CW-22 measures CW's prose contribution alongside LP's plan contract and WER's on-page decision/rationale/accepted-cost responsibility.
 CW-23 measures prose/navigation preservation alongside SSR's actual search, reconciliation and commit accounting.
+Its common task starts at an explicitly approved editing-design checkpoint so a single-turn run can reach that interaction; this premise supplies no completed edit, sweep or verification evidence.
 Both stop at explicit project checkpoints; no PR, external review, service operation or full DD lifecycle is requested.
 Their task prompts and fixture guidance authorize the required document work without making claims that later gates have passed.
 

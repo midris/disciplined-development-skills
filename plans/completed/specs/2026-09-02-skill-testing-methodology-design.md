@@ -28,7 +28,7 @@ The methodology must distinguish semantic behavior from deterministic protocol, 
 The runner prepares declared files, renders a prompt, invokes one configured provider, and retains mechanical evidence.
 It does not understand skills, apply rubrics, score responses, or assign behavioral verdicts.
 
-The methodology determines whether scenario inputs are valid, maps observable results to charter invariants, records separate ledger scores, and assigns an overall scenario verdict.
+The methodology determines whether scenario inputs are valid, maps observable results to charter invariants, records separate ledger scores, and assigns an overall run verdict.
 The orchestrator reads the raw retained run evidence and owns the final ledger assignments and verdict.
 
 Do not add test tooling until an observed testing need can be simplified by a deterministic program.
@@ -40,29 +40,33 @@ Every scored requirement belongs to exactly one ledger.
 
 | Ledger | Score | Effect |
 |---|---|---|
-| Semantic behavior | `PASS`, `FAIL`, or `NOT_JUDGEABLE` per applicable charter invariant | Blocks the scenario verdict. |
+| Semantic behavior | `PASS`, `FAIL`, or `NOT_JUDGEABLE` per applicable charter invariant | Blocks the run verdict. |
 | Deterministic protocol | `PASS`, `FAIL`, or `NOT_JUDGEABLE` per applicable requirement; one ledger-level `N/A` row when no requirement applies | Blocks when a real authenticated renderer, validator, parser, or production consumer applies. |
 | Task or fixture fidelity | `PASS`, `FAIL`, or `NOT_JUDGEABLE` | Does not block unless the defect prevents semantic or protocol judgment. |
 | Readability | Recorded separately when the scenario is designed to evaluate it | Never substituted for semantic or protocol evidence. |
 | Infrastructure | `COMPLETED` or an infrastructure failure | An infrastructure failure is not a scored result and remains scratch-only. |
 
 Do not combine ledger results into a numeric score, percentage, weighted total, or average.
-The worksheet preserves the cause of each result so the orchestrator can assign the scenario verdict directly.
+The worksheet preserves the cause of each result so the orchestrator can assign the run verdict directly.
 
 ## Scenario verdict
 
+This verdict describes one run, not whether the scenario should be retained.
+`RUN_NOT_JUDGEABLE` replaces the historical label `SCENARIO_INVALID` prospectively; its conditions and precedence are unchanged.
+Preserve earlier worksheets and frozen evaluation sources under their original labels; this rename does not rescore them.
+
 The orchestrator applies these rules in order so no result matches two verdicts:
 
-| Priority | Condition | Scenario disposition or verdict |
+| Priority | Condition | Run disposition or verdict |
 |---|---|---|
 | 1 | The runner reports an infrastructure failure. | `INFRA_RETRY`; scratch-only and not scored. |
-| 2 | Any applicable semantic or deterministic-protocol row is `NOT_JUDGEABLE`, or a task/fixture-fidelity defect prevents semantic or protocol judgment. | `SCENARIO_INVALID`; scratch-only. |
+| 2 | Any applicable semantic or deterministic-protocol row is `NOT_JUDGEABLE`, or a task/fixture-fidelity defect prevents semantic or protocol judgment. | `RUN_NOT_JUDGEABLE`; scratch-only. |
 | 3 | The remaining judgeable semantic or applicable deterministic-protocol rows contain any `FAIL`. | `FAIL`. |
 | 4 | Every semantic row and every applicable deterministic-protocol row is `PASS`, or no deterministic protocol applies and the ledger contains one explicit `N/A` row with its rationale. | `PASS`. |
 
 `FAIL` is a valid accepted result when the scenario and evidence are judgeable.
 The semantic and protocol rows record whether the failure was semantic, deterministic, or both.
-`SCENARIO_INVALID`, row-level `NOT_JUDGEABLE`, and infrastructure failures are not accepted test results.
+`RUN_NOT_JUDGEABLE`, row-level `NOT_JUDGEABLE`, and infrastructure failures are not accepted test results.
 
 Task-fidelity differences remain visible but do not change a semantic pass into a failure unless they prevent judgment.
 Equivalent wording, punctuation, capitalization, ordering, and rendering pass unless an applicable deterministic consumer requires them.
@@ -191,7 +195,7 @@ assessment; copy an accepted record; or add lifecycle, scoring, or suite machine
    fields populated.
 7. The orchestrator examines `final.txt`, `result.json`, produced evidence, the
    withheld rubric, and the applicable charter invariants.
-8. The orchestrator fills the assessment fields and assigns the scenario verdict.
+8. The orchestrator fills the assessment fields and assigns the run verdict.
 9. After the required review, a judgeable `PASS` or `FAIL` result may replace the
    scenario's `accepted/` record.
 
