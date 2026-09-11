@@ -3,7 +3,8 @@
 **Status:** Installation and baseline tooling are settled for the current Codex and Claude local workflows.
 The accepted CW evidence and completed-plan cleanup are consolidated on `main`; ongoing testing work uses this primary checkout.
 Current work: the fresh approved-design CW-23 pair completed the edit and commit in both conditions; both results are judgeable.
-Preservation passes in both, economy fails in both, and reference reconciliation/accounting fails in no-DD but passes in current-DD; owner review is next.
+After owner review, preservation and economy pass in both; reference reconciliation/accounting fails in no-DD but passes in current-DD.
+Current-DD is PASS overall; no-DD remains FAIL for missing substantive reference accounting.
 The prospective run verdict is now `RUN_NOT_JUDGEABLE`; earlier records retain their original `SCENARIO_INVALID` labels.
 This is the single active testing plan; the [validation guide](../skill-validation/README.md) indexes the durable contracts and execution instructions.
 
@@ -221,7 +222,7 @@ All new evidence remains scratch-only pending owner review, with no historical r
 
 The owner accepted `RUN_NOT_JUDGEABLE` as the prospective run verdict, with the same conditions and precedence as `SCENARIO_INVALID`; historical labels and frozen judgments remain unchanged.
 The revised common task explicitly states the approved edit design and directs execution; both conditions receive that paragraph, with their existing loading prefixes unchanged.
-This addresses the observed approval hold without changing the CW specification, rubric, skills or requested documentation outcome; whether the subject now reaches execution remains to be observed.
+This addressed the observed approval hold without changing the CW specification, rubric, skills or requested documentation outcome.
 The [fresh pair](/private/tmp/skilltest-cw-approved-design-ikjawbad/summary.md) freezes two serial calls, no-DD then current-DD, on Codex CLI 0.154.0 / gpt-5.6-sol / medium under the repaired Git policy.
 The owner’s retry request and approval cover this pair; its expanded commands and authorization are retained in the package.
 Provider-free checks verified both rendered prompts, all fixture bytes, withheld evaluation inputs, 85 frozen inputs, 46 unchanged runner files, and the unchanged CLI version/digest.
@@ -229,10 +230,12 @@ Of 68 supplied files, 66 match the previous pair byte-for-byte; only the two con
 Prior fixture capability qualification remains applicable because the CLI, policy and all fixture/skill bytes are unchanged; the first-call live-control checkpoint still applies.
 Both calls completed with exit 0 and no infrastructure error; 163 artifact files, both 60-file live bootstrap maps and private-runtime cleanup verified.
 Both created one local commit containing only the three project documents, and all four links resolve in each committed tree.
-Preservation passes in both; both retain a redundant opening announcement and fail economy.
+Preservation and economy pass in both after the owner identified useful reader orientation in their introductory sentences.
+The initial economy failures treated removability as proof of padding; the [owner-review correction](/private/tmp/skilltest-cw-approved-design-ikjawbad/owner-framing-review.md) applies the existing framing allowance, preserving original and revised worksheets separately.
 Current-DD passes SSR reconciliation/accounting with ten independently reconcilable occurrences across six source lines; no-DD fixes navigation but omits substantive commit sweep accounting and fails SSR-I4.
-Both overall verdicts are judgeable `FAIL`, not `RUN_NOT_JUDGEABLE`.
-The supplied bundle is associated with better reference accounting in this pair, but no added CW economy benefit is observed; one pair does not establish isolated causation or reliability.
+The revised overall verdicts are current-DD `PASS` and no-DD `FAIL` for SSR-I4; both remain judgeable.
+Both conditions pass the CW prose criteria; no added CW prose benefit is established.
+The supplied bundle is associated with better reference accounting in this pair; one pair does not establish isolated causation or reliability.
 The approved task premise reached execution in both conditions; the earlier approval holds remain preserved under their original contracts.
 The pair’s approval is exhausted. Retain all results scratch-only for owner review, with no retries, extra calls, historical rescoring or promotion.
 
