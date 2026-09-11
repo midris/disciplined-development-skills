@@ -2,7 +2,8 @@
 
 **Status:** Installation and baseline tooling are settled for the current Codex and Claude local workflows.
 The accepted CW evidence and completed-plan cleanup are consolidated on `main`; ongoing testing work uses this primary checkout.
-Current work: the next five CW observations are prepared and reviewed; committing/pushing the status notes and executing the batch await owner approval.
+Current work: the approved five-call CW batch paused after three judgeable observations and one invalid CW-23 attempt; the subject sandbox denied required Git writes, and the fifth call remains unrun.
+Next decide the bounded Git-permission and qualification repair before further CW-23 collection.
 This is the single active testing plan; the [validation guide](../skill-validation/README.md) indexes the durable contracts and execution instructions.
 
 **Goal:** A repeatable set of tests for each DD skill’s discoverability, effectiveness and composition, with distinct questions and observable scoring criteria.
@@ -36,7 +37,8 @@ Continue from the reviewed CW specification, catalog and scoring rather than reo
 Use the next small batch to test remaining distinct boundaries; tooling is settled unless an observed mechanical gap requires a change.
 
 On the same machine, resume in this primary checkout on `main`, read `AGENTS.md` → `CLAUDE.md`, then this plan and the linked next-batch summary; verify actual Git state before acting.
-The latest completion/preparation and handoff notes are local uncommitted documentation changes pending commit/push approval.
+The reviewed preparation notes were committed and pushed before the approved batch; its scratch package records the clean launch revision and session approval.
+Continue from the [Git control failure](#next-coverage-preparation), preserving all four attempts; do not run the remaining command or replay CW-23 under the failed permission boundary.
 Recent raw observations and preparation packages under `/private/tmp` are retained local evidence, not a durable Git backup or cross-device handoff; do not delete them or assume their links alone preserve their contents.
 The repository contains the methodology and current decisions; continuity must not depend on conversation memory being available in another app.
 No new test calls, historical rescoring, evidence promotion or candidate adoption follow from moving interfaces.
@@ -157,23 +159,39 @@ Evidence remains scratch-only, with no automatic promotion, further calls or can
 
 ### Next coverage preparation
 
-Prepare five calls from existing tasks/rubrics, one observation per condition, Codex / gpt-5.6-sol / medium:
+The owner approved five calls from existing tasks/rubrics, one observation per condition, Codex / gpt-5.6-sol / medium:
 
 - CW-18 discoverability: current-DD only; implicit prose creation without a tightening request.
 - CW-21 effectiveness: no-DD and current-DD; uncertain framing. If uncertainty is not expressed, record keep-and-flag as unobserved rather than claiming coverage or manufacturing a failure.
 - CW-23 composition: no-DD and current-DD; preserve the restart guide and reconcile linked documents in one local fixture commit.
 
 These exercise distinct remaining boundaries before broader sampling; no candidate, repetitions or additional scoring self-check is scheduled.
-The [preparation package](/private/tmp/skilltest-cw-next-_24fuk1d/summary.md) links rendered inputs, exact proposed commands and qualification evidence.
+The [collection package](/private/tmp/skilltest-cw-next-_24fuk1d/summary.md) links frozen inputs, exact commands, qualification, all four attempted observations and their worksheets.
 Codex changed from 0.153.4 to 0.154.0, including built-in OpenAI documentation guidance; keep this provenance separate from the earlier pilot.
-The DD and Superpowers snapshots and runner are unchanged. Fresh provider-free catalog, surrogate-profile/ancestor and local file/Git checks cover the affected controls.
-The first approved CW-18 call also checks the new CLI's actual execution, capture and cleanup; inspect that evidence before proceeding to the remaining calls. A missing control stops the batch without authorizing extra calls.
+The DD and Superpowers snapshots and runner are unchanged.
+The first CW-18 call passed the required live execution, capture, input-provenance and cleanup checkpoint; all four attempts matched the qualified 60-file built-in guidance map.
 
 - [x] Finish provider-free preparation and review of all five exact commands; local input/control checks and 263 hook tests passed (three skipped).
-- [ ] Obtain approval to commit/push the reviewed preparation notes and execute the new five-call batch.
-- [ ] Collect and assess each approved observation, checking complete traces and actual file/commit state; retain valid control passes and failures alike.
+- [x] Obtain approval to commit/push the reviewed preparation notes and execute the new five-call batch.
+- [x] Collect and assess CW-18 discovery and the CW-21 pair; retain the fourth attempt as invalid and pause before call 5 on the failed Git control.
+- [ ] Resolve the bounded Git-write/qualification decision, then review changed execution conditions and approve matching CW-23 collection.
 
-No provider calls are authorized by preparation. The previous ten-call approval remains exhausted.
+CW-18 passed discovery with complete CW access before file creation; extra progress messages failed its brief-completion-only fidelity requirement.
+Both CW-21 outputs preserve operating facts and remove clear padding, and both express unresolved uncertainty about the training cue.
+The no-DD control removes the cue and fails keep-and-flag; current-DD retains and flags it, passing all applicable groups.
+The conditional behavior was observed, so the provisional unobserved-uncertainty rule does not call for task repair on these results.
+This is one observed difference under the supplied bundle, not isolated causation or established reliability.
+
+CW-23/no-DD stopped before editing when `git add` could not create `.git/index.lock`.
+The runner completed and captured the blocker, but unchanged documents, an empty index and no commit leave the intended composition interaction unjudgeable: `SCENARIO_INVALID`, not a CW failure or an unchanged-command infrastructure retry.
+The [diagnosis](/private/tmp/skilltest-cw-next-_24fuk1d/git-control-failure.md) shows that the preparation probe ran Git directly on the host; it did not establish the subject sandbox's Git-write capability.
+A provider-free probe through the current built-in workspace profile reproduced ordinary-file writes succeeding while Git staging was denied.
+The evidence establishes a concrete qualification gap, not when the restriction changed or a need to reopen CW methodology.
+
+Call 5 remains unrun; no retries, extra model calls or execution-policy changes were made.
+Before more CW-23 collection, authorize the narrow fixture Git-write repair and qualify staging, source comparison, actual commit and protected-path boundaries through the sandbox.
+Changed conditions require a new freeze and matching-pair command approval; the earlier approval does not bypass this stop.
+All new evidence remains scratch-only pending owner review, with no historical rescoring, promotion or adoption.
 
 ### Retained earlier routine evidence
 
