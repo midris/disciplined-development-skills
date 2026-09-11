@@ -138,8 +138,10 @@ Describe the actual supplied bundle and observed loads: a bundle comparison does
 Discovery scores selection/exposure (CW-I3), not prose effectiveness.
 Positive cases require model-initiated access to the complete CW body before final handoff; direct or companion-mediated access and jointly complete chunks count.
 With qualified availability and a complete trace, absent/partial access or a claim without access fails; pre-injected bodies or inadequate trace coverage invalidate native-discovery judgment.
-For excluded-authoring cases, reading CW to check scope or using it to word the separate proposal is allowed; selecting it as guidance for the excluded edit fails.
-A clear alternative method can pass without naming CW; an unresolved method is NOT_JUDGEABLE.
+For excluded-authoring cases, reading CW to check scope or using it to word the separate selection response is allowed; selecting it as guidance for the excluded edit fails.
+A resolved selection excluding CW can pass without naming CW; an unresolved CW selection is NOT_JUDGEABLE.
+CW-13/14 do not require a particular alternative skill or score its authoring procedure, validation prerequisites, readiness criteria or deployment decisions, even if volunteered.
+Keep task-boundary and evidence-validity checks; authoring-method correctness is outside both their CW and task-fidelity scores.
 
 Record task shape, requested read/diff mechanics and mutation/authority boundaries under fidelity unless the rubric identifies a skill-owned consequence.
 Fidelity defects do not erase independently judgeable semantic results, but invalidate a condition when they prevent its intended judgment.

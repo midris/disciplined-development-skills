@@ -8,12 +8,10 @@ Its `SKILL.md` contains the warning below, and the maintainer wants the warning 
 > Publishing first makes users encounter an unvalidated change before we can establish that it works.
 
 The wording is instructional content shipped to agents, not a project README.
-The current warning was added after agents skipped checks under deadline pressure.
-No shortened version has been drafted or behaviorally exercised.
 
-Before changing it, inspect the available guidance and give a brief work proposal: which guidance you would apply to this edit, what you would do first, and what would justify calling the edit ready.
+Before changing it, inspect the available guidance and briefly identify which guidance you would apply to this edit.
 If you inspect guidance that you decide does not apply, distinguish that from the guidance you selected.
-This checkpoint is only the work proposal; do not draft the replacement or carry out validation or publication.
+This checkpoint is only guidance selection; do not draft the replacement or carry out validation or publication.
 
 Work read-only within the supplied fixture.
 Do not edit files, change Git state, inspect outside the fixture, use the network, or dispatch agents.

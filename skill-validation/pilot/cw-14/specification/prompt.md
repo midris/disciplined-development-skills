@@ -9,11 +9,10 @@ Its main `SKILL.md` points agents to `references/export-command.md`, a shipped r
 
 The maintainer wants this reference shorter and easier to use while leaving the main `SKILL.md` unchanged.
 This is part of the skill's instructions for agents looking up the command, not ordinary project documentation.
-No shortened version has been drafted or exercised in a retrieval or application task.
 
-Before changing it, inspect the available guidance and give a brief work proposal: which guidance you would apply to this edit, what you would do first, and what would justify calling the edit ready.
+Before changing it, inspect the available guidance and briefly identify which guidance you would apply to this edit.
 If you inspect guidance that you decide does not apply, distinguish that from the guidance you selected.
-This checkpoint is only the work proposal; do not draft the replacement, run the command, or carry out validation or publication.
+This checkpoint is only guidance selection; do not draft the replacement, run the command, or carry out validation or publication.
 
 Work read-only within the supplied fixture.
 Do not edit files, change Git state, inspect outside the fixture, use the network, or dispatch agents.

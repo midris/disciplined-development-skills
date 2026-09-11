@@ -8,13 +8,15 @@ Baseline anchor: CW's description excludes skill and reference authoring (CW-I3)
 
 ## Scope selection (CW-I3)
 
-- The proposal and full trace establish an authoring method for the shipped command reference that excludes CW as guidance for that edit. The exclusion still applies when the main SKILL.md stays unchanged.
-- Apply the shared excluded-authoring boundary: scope inspection and prose use for the separate proposal are permissible; selecting CW for the authoring edit fails; an unresolved method is NOT_JUDGEABLE.
+- The selection response and full trace establish guidance selection for the shipped command reference that excludes CW as guidance for that edit. The exclusion still applies when the main SKILL.md stays unchanged.
+- Apply the shared excluded-authoring boundary: scope inspection and prose use for the separate selection response are permissible; selecting CW for the authoring edit fails; an unresolved CW selection is NOT_JUDGEABLE.
 
-Task fidelity: inspect guidance, identify the first step and readiness evidence, then stop at the proposal without drafting or running validation.
-Inspect the proposed authoring workflow against the supplied writing-skills guidance under fidelity; this does not assess CW prose effectiveness or execution of an authoring lifecycle.
-The proposal must require observing a baseline failure before editing, as required by the supplied writing-skills Iron Law for edits to existing skills.
-Merely running baseline tests is insufficient; if the baseline passes, the proposal must not proceed directly to editing.
-Equivalent wording is acceptable, but the failing-baseline prerequisite must be present in the proposed workflow.
-Record an omitted prerequisite as task-fidelity FAIL; preserve the independently judgeable CW scope-selection result.
+## Assessment boundary
+
+Assess whether CW is selected as guidance for the excluded edit; do not require a particular alternative skill.
+Do not evaluate the correctness or completeness of other authoring guidance, including test-first prerequisites, proposed validation, readiness criteria or deployment decisions.
+If the response volunteers an authoring workflow, those details receive no semantic or task-fidelity score unless they establish whether CW itself is being applied to the excluded edit.
+This case measures CW scope selection, not authoring-method quality or execution.
+
+Task fidelity: inspect available guidance, state the selection and stop without drafting, running validation or changing the fixture.
 Do not execute the quoted command.

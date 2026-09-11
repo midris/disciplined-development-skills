@@ -2,17 +2,12 @@
 
 **Status:** Installation and baseline tooling are settled for the current Codex and Claude local workflows.
 The accepted CW evidence and completed-plan cleanup are consolidated on `main`; ongoing testing work uses this primary checkout.
-Current work: CW-01/18/19 collection and scoring are complete; all 18 purposes now have judgeable initial evidence.
-The final batch has five passes and one CW-19/current-DD preservation failure; owner review identifies lost execution responsibility, change-ticket context and operational clarity in the revised runbook.
-The four-case independent scoring check is complete; the fresh grader missed CW-19's preservation failure and CW-14's separate proposal-fidelity failure.
-The authorized Opus 5 comparison is complete: it improves evidence inspection but still passes CW-19 preservation and CW-14 proposal fidelity despite the retained failures.
-The CW-14 rubric clarification retest is complete: Opus 5 now records scope selection PASS and separate proposal-fidelity FAIL; the other three final score sets are unchanged.
-Original and owner-revised judgments remain unchanged.
-Both CW-05 conditions separately fail the output-only request by emitting progress messages.
-CW-14 separately fails proposal fidelity for omitting the selected authoring method’s observed-failure gate.
-The preceding approved-design CW-23 pair completed the edit and commit in both conditions; both results are judgeable.
-After owner review, preservation and economy pass in both; reference reconciliation/accounting fails in no-DD but passes in current-DD.
-In that CW-23 pair, current-DD is PASS overall; no-DD remains FAIL for missing substantive reference accounting.
+Current work: the CW pilot relevance audit is complete; all 18 purposes have initial judgeable evidence, but companion-only and incidental fidelity outcomes must not be presented as CW effectiveness.
+CW-13/14 passed their scope boundary; the owner directed that other authoring-method correctness be excluded from these tests.
+Their prospective tasks and rubrics now ask for guidance selection only and explicitly omit authoring-workflow scoring.
+The earlier CW-14 fidelity clarification and evaluator reports remain historical records, not evidence of a CW failure or grounds for further CW calls.
+CW-19's owner-reviewed preservation failure remains directly relevant; CW-23's no-DD overall failure is companion accounting despite both CW prose results passing.
+All original and owner-revised judgments remain unchanged.
 The prospective run verdict is now `RUN_NOT_JUDGEABLE`; earlier records retain their original `SCENARIO_INVALID` labels.
 This is the single active testing plan; the [validation guide](../skill-validation/README.md) indexes the durable contracts and execution instructions.
 
@@ -46,7 +41,8 @@ Desired new behavior requires an explicit specification change before evaluation
 Continue from the reviewed CW specification, catalog and scoring rather than reopening those stages without a concrete mismatch or new evidence.
 Keep all skill bodies unchanged while establishing the tests and consistent scoring; skill wording changes remain deferred.
 Capture the readability and useful-repetition allowance in the specification and shared rubric instructions, then apply it to scoring rather than treating an evaluator error as a reason to rewrite the skill.
-Use the next small batch to test remaining distinct boundaries; tooling is settled unless an observed mechanical gap requires a change.
+Use the relevance audit below before selecting further evidence; a non-CW procedure defect is not a reason for another CW batch.
+Tooling is settled unless an observed mechanical gap requires a change.
 
 On the same machine, resume in this primary checkout on `main`, read `AGENTS.md` → `CLAUDE.md`, then this plan and the linked next-batch summary; verify actual Git state before acting.
 The reviewed preparation notes were committed and pushed before the approved batch; its scratch package records the clean launch revision and session approval.
@@ -55,6 +51,26 @@ Both two-call approvals are exhausted; do not resume/replay those observations o
 Recent raw observations and preparation packages under `/private/tmp` are retained local evidence, not a durable Git backup or cross-device handoff; do not delete them or assume their links alone preserve their contents.
 The repository contains the methodology and current decisions; continuity must not depend on conversation memory being available in another app.
 No new test calls, historical rescoring, evidence promotion or candidate adoption follow from moving interfaces.
+
+## Pilot relevance audit and current scope
+
+The [relevance audit](../reviews/2026-09-11-cw-pilot-relevance-audit.md) checks all 18 current purposes and 32 judgeable observations, the three unjudgeable CW-23 attempts and the earlier catalog's retired mismatches.
+It identifies useful cases with unnecessary checks: CW-13/14 authoring-method fidelity, CW-23's companion-only commit accounting and historical progress-message failures on CW-03/05/18.
+Ordinary prose, restraint, uncertainty and scope-boundary tests remain meaningful; no-DD passes are valid comparison evidence.
+CW-22's actual loss of source rationale/requirements is materially different from grading an unrelated selected authoring workflow.
+
+The owner authorized keeping CW-13/14 while removing authoring-guidance correctness from their assessment.
+Both prospective tasks now request only guidance selection; their rubrics and shared rules explicitly ignore unsolicited authoring-procedure details under both semantics and fidelity unless they reveal CW being selected for the excluded edit.
+No particular alternative skill is required, and read-only/evidence checks remain.
+Source excerpts are unchanged; these are revised prospective task contracts, not unchanged-input repetitions or reinterpretations of the retained observations.
+The recent CW-14 rubric clarification and every associated report remain preserved in Git history and frozen packages.
+
+- [x] Audit current CW purposes/results for skill relevance and incidental scoring.
+- [x] Narrow both authoring-exclusion tasks/rubrics and reconcile the shared rules and catalog under owner authorization.
+- [ ] Review separation of CW-23's prose/navigation interaction from detailed SSR accounting before changing that composition contract.
+
+No new provider calls, historical rescoring or skill edits are authorized by this audit or scope repair.
+Completed sections below preserve the criteria and decisions that governed those observations; this section owns the current scope decision.
 
 ## Owner clarification: CW effectiveness and readability
 

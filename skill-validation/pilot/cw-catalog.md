@@ -328,8 +328,8 @@ CW-01/18/19 effectiveness use prospective copies with explicit final-answer scop
 | CW-21 effectiveness | [New task](cw-21/specification/prompt.md) | Obvious padding plus an unexplained training cue; revised guide and an editorial note. | [Rubric](cw-21/specification/rubric.md) |
 | CW-01 discoverability | [Existing task](cw-01/discovery/prompt.md) | Explicit tightening request without a skill-loading hint. | [Rubric](cw-01/specification/discovery/rubric.md) |
 | CW-18 discoverability | [Existing task](cw-18/discovery/prompt.md) | Implicit prose creation in `clothing-swap-guide.md`; selection evidence, not a constrained-source effectiveness claim. | [Rubric](cw-18/specification/discovery/rubric.md) |
-| CW-13 discoverability | [Replacement task](cw-13/specification/prompt.md) | Actual warning excerpt; select guidance for a proposed SKILL.md edit, stopping before authoring. | [Rubric](cw-13/specification/rubric.md) |
-| CW-14 discoverability | [Replacement task](cw-14/specification/prompt.md) | Actual command-reference excerpt; select guidance for a proposed supporting-file edit, stopping before authoring. | [Rubric](cw-14/specification/rubric.md) |
+| CW-13 discoverability | [Replacement task](cw-13/specification/prompt.md) | Actual warning excerpt; select guidance for a proposed SKILL.md edit. Score CW exclusion only, not the alternative authoring method. | [Rubric](cw-13/specification/rubric.md) |
+| CW-14 discoverability | [Replacement task](cw-14/specification/prompt.md) | Actual command-reference excerpt; select guidance for a proposed supporting-file edit. Score CW exclusion only, not the alternative authoring method. | [Rubric](cw-14/specification/rubric.md) |
 | CW-22 composition | [New task](cw-22/specification/prompt.md), [fixture](cw-22/specification/fixture/) | Revise the plan against an approved design; only `plans/linecount.md` is writable. Preserve requirements, sequence and rationale without embedding implementation. | [Rubric](cw-22/specification/rubric.md) |
 | CW-23 composition | [New task](cw-23/specification/prompt.md), [fixture](cw-23/specification/fixture/) | Merge two restart sections; reconcile sibling navigation and make one actual documentation commit in a disposable fixture repository. | [Rubric](cw-23/specification/rubric.md) |
 
@@ -338,7 +338,9 @@ Its editorial note exposes unresolved issues without demanding hidden reasoning.
 A supported resolution remains permissible; uncertainty cannot be inferred just because the evaluator would decide differently.
 The unexplained cue does not authorize invented operating instructions.
 
-CW-13/14 ask for a work proposal after inspecting available guidance, with no target name, loading prefix or list of answer choices.
+CW-13/14 ask only for guidance selection after inspecting available guidance, with no target name, loading prefix or list of answer choices.
+They do not request first steps or readiness criteria, and unsolicited authoring-workflow details are not scored for correctness.
+Only the resolved use/exclusion of CW for the edit matters; no particular alternative skill is required.
 The response distinguishes selected guidance from guidance inspected and rejected; the native trace can corroborate access.
 Reading CW to check scope is not misapplication, and editing clearly does not occur at this checkpoint.
 These are discovery/selection boundaries, not effectiveness tests or evidence that writing-skills validation was executed.
