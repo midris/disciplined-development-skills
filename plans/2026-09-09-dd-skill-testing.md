@@ -3,7 +3,7 @@
 **Status:** Installation and baseline tooling are settled for the current Codex and Claude local workflows.
 The accepted CW evidence and completed-plan cleanup are consolidated on `main`; ongoing testing work uses this primary checkout.
 Current work: the approved five-call CW batch paused after three judgeable observations and one invalid CW-23 attempt; the subject sandbox denied required Git writes, and the fifth call remains unrun.
-Next decide the bounded Git-permission and qualification repair before further CW-23 collection.
+The owner authorized the fixture Git-permission repair; the repaired policy and both unchanged CW-23 fixtures passed provider-free checks. The reviewed replacement pair is frozen and awaits execution approval.
 This is the single active testing plan; the [validation guide](../skill-validation/README.md) indexes the durable contracts and execution instructions.
 
 **Goal:** A repeatable set of tests for each DD skill’s discoverability, effectiveness and composition, with distinct questions and observable scoring criteria.
@@ -174,7 +174,12 @@ The first CW-18 call passed the required live execution, capture, input-provenan
 - [x] Finish provider-free preparation and review of all five exact commands; local input/control checks and 263 hook tests passed (three skipped).
 - [x] Obtain approval to commit/push the reviewed preparation notes and execute the new five-call batch.
 - [x] Collect and assess CW-18 discovery and the CW-21 pair; retain the fourth attempt as invalid and pause before call 5 on the failed Git control.
-- [ ] Resolve the bounded Git-write/qualification decision, then review changed execution conditions and approve matching CW-23 collection.
+- [x] Obtain owner authorization to continue the bounded fixture Git-write repair.
+- [x] Verify a workspace-based profile with a write grant for the exact disposable fixture `.git` path and explicit read-only rules for protected directories elsewhere.
+- [x] Test-first update the Codex adapter and provider tests, add a provider-free installed-CLI acceptance check, and reconcile the runner README.
+- [x] Qualify staging, original-source diff, linked-document reconciliation and one root commit through the emitted policy; verify protected-path write denials and network-bind denial in fresh surrogate fixtures.
+- [x] Review the repair and freeze two replacement CW-23 commands with unchanged task/skill/scoring inputs.
+- [ ] Obtain approval for the two replacement calls, then collect with the first-call live checkpoint.
 
 CW-18 passed discovery with complete CW access before file creation; extra progress messages failed its brief-completion-only fidelity requirement.
 Both CW-21 outputs preserve operating facts and remove clear padding, and both express unresolved uncertainty about the training cue.
@@ -188,8 +193,14 @@ The [diagnosis](/private/tmp/skilltest-cw-next-_24fuk1d/git-control-failure.md) 
 A provider-free probe through the current built-in workspace profile reproduced ordinary-file writes succeeding while Git staging was denied.
 The evidence establishes a concrete qualification gap, not when the restriction changed or a need to reopen CW methodology.
 
-Call 5 remains unrun; no retries, extra model calls or execution-policy changes were made.
-Before more CW-23 collection, authorize the narrow fixture Git-write repair and qualify staging, source comparison, actual commit and protected-path boundaries through the sandbox.
+Call 5 remains unrun; the original batch stopped without retries, extra model calls or execution-policy changes.
+The owner authorized the narrow repair after reviewing the failure; its [repair and replacement package](/private/tmp/skilltest-cw-git-repair-c7bwwsv7/summary.md) retains scope, provider-free evidence and the two exact commands.
+Change the fixed Codex adapter policy, not scenario inputs or scoring; retain the runtime’s existing rejection of preexisting fixture `.git` entries.
+Use an exact path grant to avoid granting Git writes in sibling evidence or other repositories; unsupported profile syntax must fail without a broader fallback.
+Provider-free checks passed the complete Git/link path for both unchanged CW-23 fixtures, with all supplied skills and project guidance unchanged.
+Native catalogs match the earlier conditions, paired common messages match after declared DD entries and allocated paths are normalized, and all 60 built-in guidance hashes are unchanged.
+The current CLI’s custom-profile inheritance did not retain built-in protected-directory exclusions in a differential sandbox probe; explicit `.git`, `.codex` and `.agents` read-only rules preserve them, with only the exact fixture Git override writable.
+The separate installed-CLI check exercises protected-path writes and network binding; these are bounded controls, not a claim of exhaustive filesystem isolation or model effectiveness.
 Changed conditions require a new freeze and matching-pair command approval; the earlier approval does not bypass this stop.
 All new evidence remains scratch-only pending owner review, with no historical rescoring, promotion or adoption.
 

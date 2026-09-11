@@ -1,6 +1,7 @@
 """Provider orchestration contracts with mocked runtime/process boundaries."""
 
 import subprocess
+import tomllib
 from unittest.mock import Mock, call
 
 import pytest
@@ -37,7 +38,13 @@ def test_codex_invokes_fixed_command_environment_and_deadline(tmp_path, boundari
     runtime, process, popen = boundaries
     request = request_at(tmp_path)
     result = invoke_provider(request)
-    assert popen.call_args.args[0] == [
+    arguments = popen.call_args.args[0]
+    # The parsed policy contract is checked separately, including path quoting.
+    policy_indices = {i for i, arg in enumerate(arguments)
+                      if arg == "-c" and arguments[i+1].startswith(("default_permissions=", "permissions.skilltest="))}
+    without_policy = [arg for i, arg in enumerate(arguments)
+                      if i not in policy_indices and i-1 not in policy_indices]
+    assert without_policy == [
         "/stub/bin/codex",
         "--cd",
         str(request.workspace_dir / "fixture"),
@@ -51,10 +58,7 @@ def test_codex_invokes_fixed_command_environment_and_deadline(tmp_path, boundari
         "gpt-5.4",
         "-c",
         'model_reasoning_effort="medium"',
-        "--sandbox",
-        "workspace-write",
-        "--add-dir",
-        str(request.workspace_dir / "evidence"),
+        "--strict-config",
         "--ignore-user-config",
         "--ignore-rules",
         "-c",
@@ -181,3 +185,27 @@ def test_unknown_provider_never_launches(tmp_path, boundaries):
     with pytest.raises(ValueError, match="unsupported provider"):
         invoke_provider(request_at(tmp_path, "other"))
     popen.assert_not_called()
+
+@pytest.mark.parametrize("workspace_name", ["workspace", 'workspace with \"quotes\" and .dots'])
+def test_codex_grants_only_fixture_git_with_workspace_protections(tmp_path, workspace_name):
+    # Break: absent/overbroad Git grant, lost evidence root, network enablement,
+    # or malformed TOML for a concrete fixture path.
+    workspace = tmp_path / workspace_name
+    request = ProviderRequest(workspace, b"task", tmp_path / "final.txt", "codex", "chosen", "medium")
+    arguments = providers._arguments(request)
+    config = tomllib.loads("\n".join(arguments[i+1] for i, arg in enumerate(arguments) if arg == "-c"))
+    assert "--sandbox" not in arguments
+    assert config["default_permissions"] == "skilltest"
+    assert config["permissions"] == {"skilltest": {
+        "extends": ":workspace",
+        "filesystem": {
+            ":workspace_roots": {".git": "read", ".codex": "read", ".agents": "read"},
+            str(workspace / "fixture/.git"): "write",
+        },
+        "workspace_roots": {str(workspace / "evidence"): True},
+        "network": {"enabled": False},
+    }}
+    assert config["approval_policy"] == "never"
+    assert config["shell_environment_policy"] == {"inherit": "none"}
+    assert "--strict-config" in arguments
+    assert "--ignore-user-config" in arguments and "--ignore-rules" in arguments

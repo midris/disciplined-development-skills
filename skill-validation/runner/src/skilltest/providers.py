@@ -2,6 +2,7 @@
 
 from __future__ import annotations
 
+import json
 import subprocess
 from dataclasses import dataclass, replace
 from pathlib import Path
@@ -84,13 +85,23 @@ def invoke_provider(request: ProviderRequest, *, log: Callable[[str], None] = la
 
 def _arguments(request: ProviderRequest, *, executable: str = "codex") -> list[str]:
     if request.provider == "codex":
+        # Explicitly retain protected directories: on qualified Codex 0.154.0,
+        # extending :workspace alone does not preserve its dynamic exclusions.
+        # Encode paths inside one TOML table: dotted CLI keys split periods in paths.
+        policy = (
+            'permissions.skilltest={extends=":workspace",'
+            'filesystem={":workspace_roots"={".git"="read",".codex"="read",".agents"="read"},'
+            f'{json.dumps(str(request.workspace_dir / "fixture/.git"))}="write"}},'
+            f'workspace_roots={{{json.dumps(str(request.workspace_dir / "evidence"))}=true}},'
+            'network={enabled=false}}'
+        )
         return [
             executable, "--cd", str(request.workspace_dir / "fixture"), "exec", "--ephemeral",
             "--skip-git-repo-check", "--json",
             "--color", "never", "--model", request.model, "-c",
-            f'model_reasoning_effort="{request.effort}"', "--sandbox", "workspace-write",
-            "--add-dir", str(request.workspace_dir / "evidence"),
-            "--ignore-user-config", "--ignore-rules", "-c", 'shell_environment_policy.inherit="none"',
+            f'model_reasoning_effort="{request.effort}"',
+            "-c", 'default_permissions="skilltest"', "-c", policy,
+            "--strict-config", "--ignore-user-config", "--ignore-rules", "-c", 'shell_environment_policy.inherit="none"',
             "-c", 'cli_auth_credentials_store="file"', "-c", 'approval_policy="never"',
             "--output-last-message", str(request.final_output_path), "-",
         ]

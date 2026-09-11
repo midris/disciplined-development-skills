@@ -92,7 +92,7 @@ output. Use this process:
    initialize.
 3. After explicit owner approval, invoke that exact command with host permission on
    the first attempt. Do not change the runner configuration or provider command.
-   The Codex adapter still applies its own `workspace-write` sandbox to the isolated
+   The Codex adapter still applies its own workspace-based permission profile to the isolated
    run workspace.
 4. If any invocation nevertheless returns `INFRA_ERROR`, inspect `result.json`,
    `runner.log`, `stderr.txt`, and any `final.txt`. Only an understood
@@ -198,11 +198,27 @@ Provider flags and environment variables are fixed adapter behavior, not configu
 ### Codex
 
 Codex uses ephemeral noninteractive execution with JSON and last-message capture, the configured model/effort, and `workspace/fixture/` as both cwd and `--cd` root.
-It retains `--sandbox workspace-write` and `--skip-git-repo-check`, and grants sibling evidence writes through `--add-dir <workspace/evidence>`.
+It retains `--skip-git-repo-check` and selects the fixed `skilltest` permission profile through command-local configuration.
+The profile extends `:workspace`, adds sibling `workspace/evidence/` as a workspace root, disables command network access, and explicitly keeps `.git`, `.codex` and `.agents` read-only under both roots.
+One exact-path override makes only `workspace/fixture/.git/` writable so tasks can stage originals and create local commits.
+Approval remains disabled; no global configuration or fallback to broader access is used.
+The exact emitted profile is recorded in `runner.log` with the other provider arguments.
+
+Codex 0.154.0 sandbox qualification found that a custom profile extending `:workspace` alone did not retain the built-in profile’s protected-directory exclusions; the explicit read-only entries preserve those boundaries.
+Use a CLI supporting these permission-profile fields; unsupported syntax must fail, not silently fall back to the old Git-blocking sandbox.
+The [installed sandbox check](acceptance/test_codex_git_sandbox.py) passes the adapter’s emitted configuration to `codex sandbox` and verifies staging, original-source comparison, linked-document changes, a root commit, evidence writes, protected-path write denials and network-bind denial.
+It uses a fresh empty profile without authentication or model calls and retains every allocated fixture and command result beneath an existing caller-selected directory:
+
+```sh
+SKILLTEST_SANDBOX_EVIDENCE_DIR=/absolute/retained/scratch .venv/bin/python -m pytest acceptance/test_codex_git_sandbox.py -q -s
+```
+
+On macOS the check may need host permission to launch the inner sandbox.
+Its profile qualification does not establish model behavior, native discovery or exhaustive filesystem isolation; inspect the first approved observation under changed conditions before continuing its batch.
 The adapter fixes these additional controls:
 
 ```text
---ignore-user-config --ignore-rules
+--strict-config --ignore-user-config --ignore-rules
 -c shell_environment_policy.inherit="none"
 -c cli_auth_credentials_store="file"
 -c approval_policy="never"
