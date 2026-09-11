@@ -4,7 +4,8 @@
 The accepted CW evidence and completed-plan cleanup are consolidated on `main`; ongoing testing work uses this primary checkout.
 Current work: CW-01/18/19 collection and scoring are complete; all 18 purposes now have judgeable initial evidence.
 The final batch has five passes and one CW-19/current-DD preservation failure; owner review identifies lost execution responsibility, change-ticket context and operational clarity in the revised runbook.
-The owner reviewed CW-19's output shortcomings and approved the four-case independent scoring check; preparation is complete and its two evaluator stages are next.
+The four-case independent scoring check is complete; the fresh grader missed CW-19's preservation failure and CW-14's separate proposal-fidelity failure.
+Review the scoring disagreements and evidence-checking gaps before further grading; original and owner-revised judgments remain unchanged.
 Both CW-05 conditions separately fail the output-only request by emitting progress messages.
 CW-14 separately fails proposal fidelity for omitting the selected authoring method’s observed-failure gate.
 The preceding approved-design CW-23 pair completed the edit and commit in both conditions; both results are judgeable.
@@ -359,22 +360,35 @@ The six-call subject authorization is exhausted; the separately approved indepen
 ### Independent scoring check
 
 The owner approved a fresh AI grader after reviewing the purpose and separation from this conversation.
-The [prepared package](/private/tmp/cw-independent-scoring-j4sxgwi0/summary.md) selects four retained observations: CW-08/no-DD for useful repetition, CW-18/current-DD for condensed examples, CW-19/current-DD for preservation/readability, and CW-14/discovery for scope selection versus proposal fidelity.
-Use Claude Opus 4.6 (`claude-opus-4-6`) at medium effort in exactly two serial, no-tool evaluator calls.
-The first receives common source tasks, outputs and their original frozen scoring rules with neutral case labels; the second additionally receives its own unchanged first assessment, full subject traces and factual mechanical evidence.
+The [completed package](/private/tmp/cw-independent-scoring-j4sxgwi0/summary.md) assessed four retained observations: CW-08/no-DD for useful repetition, CW-18/current-DD for condensed examples, CW-19/current-DD for preservation/readability, and CW-14/discovery for scope selection versus proposal fidelity.
+Claude Opus 4.6 (`claude-opus-4-6`) at medium effort completed exactly two serial, no-tool evaluator calls.
+The first received common source tasks, outputs and their original frozen scoring rules with neutral case labels; the second additionally received its own unchanged first assessment, full subject traces and factual mechanical evidence.
 The discovery proposal reveals some condition information itself; stage 2 deliberately reveals loading and execution evidence.
 Prior operator judgments and owner comments are withheld throughout, and each evaluator report is retained separately.
 This targeted check tests agreement on meaningful cases; it does not establish statistical independence or population reliability.
 
 The current Claude CLI is 2.1.268, with a frozen executable digest and fresh provider-free authentication, option-parsing, host-state protection and runtime-cleanup checks.
 The scratch launcher reuses unchanged private-runtime code and disables tools, skills, MCP and customizations; it introduces no runner or skill change.
-The first live report must verify model identity, empty tool exposure, unchanged fixture and cleanup before the second stage.
+The first live report verified model identity, empty tool exposure, unchanged fixture and cleanup before the second stage; both stages passed these controls.
 The package freezes 66 source/control files; stage 2's only dynamic grading input is the first report, hashed at its checkpoint.
 No subject rerun, third evaluator call, automatic verdict replacement, evidence promotion or skill edit follows from this approval.
 
 - [x] Select the four observations and different evaluator; prepare, qualify and review the withheld-input package.
-- [ ] Commit/push preparation and run the two stages with the first-stage checkpoint.
-- [ ] Compare independent judgments with retained original and owner-revised assessments; preserve disagreements for owner review.
+- [x] Commit/push preparation and run the two stages with the first-stage checkpoint.
+- [x] Compare independent judgments with retained original and owner-revised assessments; preserve disagreements for owner review.
+- [ ] Review the disagreement analysis with the owner before changing the grading procedure or running more assessments.
+
+The [independent final report](/private/tmp/cw-independent-scoring-j4sxgwi0/attempts/2/final.md) passes all four cases and their fidelity checks.
+The [comparison](/private/tmp/cw-independent-scoring-j4sxgwi0/comparison.md) records agreement on CW-08 and CW-18 scores, but CW-19 preservation PASS conflicts with the retained FAIL and CW-14 fidelity PASS misses the retained proposal-method omission.
+The grader claims CW-19's actor is preserved even though the output never names the release engineer; the rubric already explicitly requires that actor.
+It also claims CW-18's trace contains the guide read-back text, although the command's recorded output contains only diagnostics and Git status; the separately retained actual guide remains sufficient evidence to judge its contents.
+These are grader evidence-checking/completeness gaps, not grounds for automatically replacing the original judgments or redesigning CW methodology.
+The owner-reviewed threshold/warning clarity shortcomings involve reader judgment; the grader's blanket readability PASS does not examine or resolve those tradeoffs.
+
+The [audit](/private/tmp/cw-independent-scoring-j4sxgwi0/collection-audit.json) verifies two distinct fresh sessions, one model turn each, no retries or subject reruns, 66 frozen files, 40 retained source files and both runtime removals.
+The second prompt was derived only from frozen evidence and its own unchanged first report; no feedback about disagreement was supplied.
+The two-call approval is exhausted, and both grader reports remain separate scratch records.
+Next, discuss requiring concrete output/trace support for each applicable rubric obligation and an omission check within the existing grouped scores; this improvement is proposed, not implemented or authorized for another call.
 
 ### Scoring clarifications before final coverage
 
