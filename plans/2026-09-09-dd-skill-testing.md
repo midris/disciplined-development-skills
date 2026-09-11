@@ -2,7 +2,7 @@
 
 **Status:** Installation and baseline tooling are settled for the current Codex and Claude local workflows.
 The accepted CW evidence and completed-plan cleanup are consolidated on `main`; ongoing testing work uses this primary checkout.
-Current work: the owner reviewed CW-05/06/08 and authorized the scoring clarifications below; the final three coverage purposes remain unrun.
+Current work: the owner approved the final six observations for CW-01/18/19 using the clarified prompts; preparation is complete and collection is next.
 Both CW-05 conditions separately fail the output-only request by emitting progress messages.
 CW-14 separately fails proposal fidelity for omitting the selected authoring method’s observed-failure gate.
 The preceding approved-design CW-23 pair completed the edit and commit in both conditions; both results are judgeable.
@@ -45,7 +45,7 @@ Use the next small batch to test remaining distinct boundaries; tooling is settl
 
 On the same machine, resume in this primary checkout on `main`, read `AGENTS.md` → `CLAUDE.md`, then this plan and the linked next-batch summary; verify actual Git state before acting.
 The reviewed preparation notes were committed and pushed before the approved batch; its scratch package records the clean launch revision and session approval.
-Continue from the [CW-05/06/08 coverage batch](#cw-050608-coverage-batch), preserving every preceding package and its original and revised judgments.
+Continue from the [CW-01/18/19 final coverage batch](#cw-011819-final-coverage-batch), preserving every preceding package and its original and revised judgments.
 Both two-call approvals are exhausted; do not resume/replay those observations or execute the original unrun fifth command.
 Recent raw observations and preparation packages under `/private/tmp` are retained local evidence, not a durable Git backup or cross-device handoff; do not delete them or assume their links alone preserve their contents.
 The repository contains the methodology and current decisions; continuity must not depend on conversation memory being available in another app.
@@ -314,6 +314,28 @@ Judgeable coverage now includes 15 of 18 purposes: effectiveness CW-02/03/04/05/
 The inventory contains 26 judgeable observations plus three retained unjudgeable CW-23 attempts; these are coverage counts, not a pooled score.
 CW-01, CW-18 and CW-19 effectiveness remain unobserved under the reviewed contract.
 The six-call approval is exhausted; review the results before selecting that remaining coverage, retaining every observation and judgment scratch-only.
+
+### CW-01/18/19 final coverage batch
+
+The owner approved six serial Codex / gpt-5.6-sol / medium observations, one per condition, after the scoring clarifications below:
+
+- CW-01 effectiveness: no-DD, then standalone current-CW alongside Superpowers.
+- CW-18 effectiveness: no-DD, then current-DD; create only the requested volunteer guide.
+- CW-19 effectiveness: no-DD, then current-DD; revise the operational runbook read-only.
+
+The [prepared package](/private/tmp/skilltest-cw-final-p2sc4e3n/summary.md) freezes the clarified common prompts, condition prefixes, matching source inputs, evaluator sources and exact commands.
+The fresh provider-free native check verifies CW-01's standalone catalog and matching normalized context; unchanged full-bundle and sandbox controls reuse their recorded qualifications.
+All 60 source files and 46 runner files match the qualified versions; 230 frozen files include the new qualification evidence.
+The session authorization covers preparation/results review and commit/push, existing private-runtime authentication and necessary host/network execution permissions.
+Before call 2, verify the first call's actual capture, inputs, runtime policy, built-in hashes, task mutation boundaries and cleanup.
+Each CW-18 file must be inspected directly; final-answer-only limits permit separate progress messages in all three tasks.
+Compare successful pairs directly for reader value and no observed degradation without requiring CW to win; these single observations do not establish reliability.
+
+- [x] Prepare six previews and qualify the standalone condition without provider calls.
+- [x] Freeze and review the inputs, commands and bounded session authorization.
+- [x] Review and verify preparation for commit/push; record the clean launch revision before launch.
+- [ ] Collect and score six observations, retaining every result without replay.
+- [ ] Reconcile all 18 purposes and review results before independent scoring or further collection.
 
 ### Scoring clarifications before final coverage
 
