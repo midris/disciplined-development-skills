@@ -5,7 +5,7 @@ The accepted CW evidence and completed-plan cleanup are consolidated on `main`; 
 Current work: CW-01/18/19 collection and scoring are complete; all 18 purposes now have judgeable initial evidence.
 The final batch has five passes and one CW-19/current-DD preservation failure; owner review identifies lost execution responsibility, change-ticket context and operational clarity in the revised runbook.
 The four-case independent scoring check is complete; the fresh grader missed CW-19's preservation failure and CW-14's separate proposal-fidelity failure.
-The owner authorized repeating the same four-case check with a stronger model; Opus 5 preparation is committed, but automatic approval review blocked execution pending explicit payload/destination confirmation.
+The authorized Opus 5 comparison is complete: it improves evidence inspection but still passes CW-19 preservation and CW-14 proposal fidelity despite the retained failures.
 Original and owner-revised judgments remain unchanged.
 Both CW-05 conditions separately fail the output-only request by emitting progress messages.
 CW-14 separately fails proposal fidelity for omitting the selected authoring method’s observed-failure gate.
@@ -393,25 +393,34 @@ Next, discuss requiring concrete output/trace support for each applicable rubric
 
 ### Stronger-model scoring comparison
 
-The owner requested Opus 4.8 or 5, or Sonnet 5 after the completed independent check.
-The [new package](/private/tmp/cw-independent-opus5-0z_e8u7x/summary.md) selects `claude-opus-5`, retaining medium effort and the same four cases, original frozen rules, system prompt and two-stage procedure.
-[Anthropic's current documentation](https://platform.claude.com/docs/en/models/opus-5/whats-new-opus-5) identifies that model; the first approved invocation must verify actual account availability and resolved model identity.
-All copied grading inputs are byte-identical to the previous package; stage 2 receives this new grader's own unchanged first report, never the earlier grader's report or operator feedback.
-This keeps model choice as the intended comparison variable; equivalent named effort does not guarantee identical internal computation across models.
-The proposed evidence-grounding prompt improvement above remains deferred while this comparison runs.
+The owner requested a stronger Claude model and explicitly approved sending the same retained four-case inputs and full traces to Anthropic after automatic approval review blocked the initial launch requests.
+Those two rejections occurred before process creation; neither was a model observation or infrastructure retry.
+The [completed package](/private/tmp/cw-independent-opus5-0z_e8u7x/summary.md) contains exactly two serial `claude-opus-5` evaluator calls at medium effort, with the original first-stage checkpoint.
+The live records verify the requested model, empty tool/MCP/skill/plugin exposure, unchanged fixtures and removal of both private runtimes.
+The [audit](/private/tmp/cw-independent-opus5-0z_e8u7x/collection-audit.json) verifies 64 frozen files and 40 retained source files unchanged, distinct fresh sessions and no subject reruns or provider retries.
 
-The [authorization](/private/tmp/cw-independent-opus5-0z_e8u7x/authorization.md) covers exactly two serial no-tool evaluator calls, with the existing first-stage checkpoint and private-runtime controls.
-Current CLI version/digest match the preceding check; a fresh provider-free authentication, option-parsing and host-protection check passed.
-Retain every original report and subject artifact; no automatic verdict replacement, new subject collection, skill/rubric edit or evidence promotion.
+The source packets, rules and prompt templates are byte-identical to the Opus 4.6 check; stage 2 receives this new grader's own unchanged first report, never the earlier grader's report or operator feedback.
+Model choice is the intended comparison variable; equivalent named effort does not guarantee identical internal computation or tokenization across models.
+The proposed evidence-grounding prompt change remains deferred and has not been tested.
 
 - [x] Review and commit/push the model-only preparation.
-- [ ] Execute both stages with the checkpoint after resolving automatic approval review.
-- [ ] Compare both graders with the retained judgments and report evidence-supported differences and limits.
+- [x] Execute both stages with the checkpoint after resolving automatic approval review.
+- [x] Compare both graders with retained judgments and report evidence-supported differences and limits.
+- [ ] Review the remaining disagreements and proposed obligation-to-evidence check with the owner before changing prompts or running more assessments.
 
-Automatic approval review rejected the first launch and a retry of the approval request after byte-equality checks.
-No evaluator process or provider call started; neither stage has run.
-The reviewer requires explicit confirmation to send the unchanged four-case task/output/rubric packet and original full traces to Anthropic for this Opus 5 comparison; the [payload audit](/private/tmp/cw-independent-opus5-0z_e8u7x/approval-payload-audit.json) verifies equality with the earlier authorized Claude inputs.
-These are approval-request rejections, not model observations or infrastructure retries.
+The [final report](/private/tmp/cw-independent-opus5-0z_e8u7x/attempts/2/final.md) passes all four semantic outcomes and their fidelity checks, with a minor CW-14 gap-scenario note.
+The [comparison](/private/tmp/cw-independent-opus5-0z_e8u7x/comparison.md) distinguishes improved inspection from unresolved rule application.
+Opus 5 correctly identifies CW-18's absent read-back text and relies on the separately retained artifact.
+It notices CW-19's missing release-engineer role but excuses it as a label loss, even though the rubric requires the execution assignment and the complete output does not supply it.
+It quotes writing-skills' failing-test rule for CW-14 but treats baseline evaluation alone as sufficient; the proposal still omits an observed failing baseline before drafting.
+The owner's ticket-context and operational-readability concerns remain unresolved by the grader's blanket PASS.
+
+The initial grader prompt already requires checking every rubric bullet; merely repeating that instruction is not a new remedy.
+A proposed next change would require an output/trace quote or explicit omission marker for each applicable obligation before the grouped score, with any claimed functional equivalence explained.
+The intended improvement is to expose missing actor assignments or preconditions while preserving equivalent wording and useful repetition; its effectiveness remains untested.
+This proposal is not implemented or authorized for another call.
+All original and owner-revised judgments and both graders' reports remain unchanged; the two-call approval is exhausted.
+No subject collection, skill/rubric edit, automatic verdict replacement or evidence promotion follows.
 
 ### Scoring clarifications before final coverage
 
