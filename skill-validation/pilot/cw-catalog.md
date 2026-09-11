@@ -1,6 +1,6 @@
 # CW catalog mapping
 
-**Status:** Historical baseline and candidate evidence validity are owner-accepted; the six earlier routine packages have completed their 18-call initial pass and retrospective assessment. The [prospective task inputs](#prospective-input-map) have completed review and remediation, with owner authorization to commit/push; scoring is reviewed and approved for commit/push; next prepare the initial collection under the [current testing plan](../../plans/2026-09-09-dd-skill-testing.md#remaining-work).
+**Status:** Historical baseline and candidate evidence validity are owner-accepted; the six earlier routine packages have completed their 18-call initial pass and retrospective assessment. The [prospective task inputs](#prospective-input-map) and scoring have completed review. The [current testing plan](../../plans/2026-09-09-dd-skill-testing.md#current-scoring-preparation) records collection results, owner decisions and the next batch.
 The [accepted evidence index](../accepted/concise-writing/codex-gpt-5.6-sol-medium/README.md) retains results and recoverable provenance.
 Both command batches are exhausted; this mapping preserves their declared inputs and does not authorize further provider calls.
 The [archived spec](../../plans/completed/specs/2026-09-07-cw-validation-design.md) preserves the completed comparison contract; the [runbook](cw-runbook.md) owns execution.
@@ -298,13 +298,13 @@ The plan/rationale composition case combines responsibilities that act on the sa
 | Named companion ownership | CW-22 covers LP/WER contributions; CW-23 covers SSR contribution. This is CW composition coverage, not full validation of those skills. |
 | Readability without mechanical minimization | Assess throughout the relevant artifacts, including already-good CW-20. Use the shared readability assessment with concrete reader consequences. |
 
-The coverage proposal maps each specification obligation to an intended test or explicit limit; CW-21 remains provisional, and the task inputs have not been empirically qualified.
-Next select the initial collection schedule and prepare its exact commands under the reviewed scoring.
-No further rescoring, provider call, skill edit or evidence promotion occurs during that work without its applicable authorization.
+The coverage proposal maps each specification obligation to an intended test or explicit limit; CW-21 remains provisional, and a completed scoring pilot does not establish measured coverage across the full portfolio.
+The [active testing plan](../../plans/2026-09-09-dd-skill-testing.md#current-scoring-preparation) owns collection progress and remaining evidence decisions.
+Further rescoring, provider calls, skill edits and evidence promotion require their applicable authorization.
 
 ### Prospective input map
 
-**Status:** Task inputs and the linked rubrics/[shared scoring rules](cw-runbook.md#prospective-scoring) are reviewed and approved for commit/push. Collection readiness remains pending.
+**Status:** Task inputs and the linked rubrics/[shared scoring rules](cw-runbook.md#prospective-scoring) are reviewed. Readiness and exact-command approval are established per batch in the active testing plan.
 New versions live in `specification/`; reused tasks retain their existing paths and bytes.
 Only the linked prompt supplies the task; use the new rubric in its own worksheet scenario directory, not a neighboring historical rubric or execution configuration.
 The shared rules govern all prospective rubrics; record shared provenance once in the collection summary’s fixed input section and link it from each worksheet.
@@ -389,4 +389,4 @@ The [prospective input map](#prospective-input-map) above owns the next task ver
 
 The full [purpose inventory](#every-existing-purpose-and-package), [gap remedies](#gaps-and-proposed-remedies) and [specification coverage check](#specification-coverage-check) above replace the preliminary alignment notes.
 The specification is the source of intended behavior; the inventory distinguishes baseline obligations from historical targets and conditional authoring experiments.
-The next checkpoint is the initial collection decision: provider/model/effort, counts and order, followed by preparation and approval of exact commands.
+For the next checkpoint, follow the [active testing plan](../../plans/2026-09-09-dd-skill-testing.md#next-coverage-preparation); the catalog remains the source-to-test mapping rather than a parallel execution record.

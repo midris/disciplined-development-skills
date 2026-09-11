@@ -87,5 +87,5 @@ If a new behavior is desired, explicitly revise the specification and affected t
 
 The [catalog audit](../../skill-validation/pilot/cw-catalog.md#routine-suite-coverage) now identifies the proposed repairs, retirements and additions.
 The [resulting task inputs](../../skill-validation/pilot/cw-catalog.md#prospective-input-map) have completed review and remediation, with owner authorization to commit/push; [reviewed scoring](../../skill-validation/pilot/cw-runbook.md#prospective-scoring) is also approved for commit/push.
-The next decision is the initial collection schedule and exact-command approval.
+The [active testing plan](../2026-09-09-dd-skill-testing.md#current-scoring-preparation) records collection results, owner decisions and the next batch; this specification does not track execution status.
 Other skills and new provider calls are not activated by this specification.

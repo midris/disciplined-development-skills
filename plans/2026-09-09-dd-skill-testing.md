@@ -2,7 +2,7 @@
 
 **Status:** Installation and baseline tooling are settled for the current Codex and Claude local workflows.
 The accepted CW evidence and completed-plan cleanup are consolidated on `main`; ongoing testing work uses this primary checkout.
-Current work: execute and assess the owner-approved 10-call CW pilot after committing its preparation note.
+Current work: the next five CW observations are prepared and reviewed; committing/pushing the status notes and executing the batch await owner approval.
 This is the single active testing plan; the [validation guide](../skill-validation/README.md) indexes the durable contracts and execution instructions.
 
 **Goal:** A repeatable set of tests for each DD skill’s discoverability, effectiveness and composition, with distinct questions and observable scoring criteria.
@@ -22,10 +22,24 @@ The [completed catalog audit](../skill-validation/pilot/cw-catalog.md#routine-su
 Its proposal retains ordinary cases, replaces mismatched discovery expectations, retires authoring/extraction tasks from routine CW coverage and adds uncertain-framing plus two named-companion composition cases.
 The owner authorized preparing the 18-purpose proposal: 12 effectiveness, four discoverability and two composition cases.
 Following input review and remediation, the owner authorized committing and pushing the prepared tasks.
-Input and scoring review are complete, with owner authorization to commit/push; no provider schedule or calls are authorized.
-CW remains the pilot: review specification fidelity first, then evaluate the complete catalog and address gaps or unnecessary overlap, then define scoring from the settled specification and scenarios.
-Do not continue adjusting scores while those earlier steps remain open.
+Input and scoring review are complete, and the approved ten-call scoring pilot below is collected and assessed.
+Its exact-command approval is exhausted; additional collection requires a new evidence decision and approval.
 Earlier observations remain evidence under their recorded contracts; neither their collection nor the retrospective corrections establish a completed baseline against this new specification.
+
+### Resuming this work
+
+The specification-first decision above is settled methodology for every DD skill, not an open CW-only proposal.
+The question is how effectively the existing skill fulfills its actual promises; the charter supplies core intent, and the complete skill supplies specifics and exceptions.
+An extraction error calls for correcting the specification or test; a demonstrated failure to fulfill an actual promise is evidence about the skill.
+Desired new behavior requires an explicit specification change before evaluation.
+Continue from the reviewed CW specification, catalog and scoring rather than reopening those stages without a concrete mismatch or new evidence.
+Use the next small batch to test remaining distinct boundaries; tooling is settled unless an observed mechanical gap requires a change.
+
+On the same machine, resume in this primary checkout on `main`, read `AGENTS.md` → `CLAUDE.md`, then this plan and the linked next-batch summary; verify actual Git state before acting.
+The latest completion/preparation and handoff notes are local uncommitted documentation changes pending commit/push approval.
+Recent raw observations and preparation packages under `/private/tmp` are retained local evidence, not a durable Git backup or cross-device handoff; do not delete them or assume their links alone preserve their contents.
+The repository contains the methodology and current decisions; continuity must not depend on conversation memory being available in another app.
+No new test calls, historical rescoring, evidence promotion or candidate adoption follow from moving interfaces.
 
 ## Owner clarification: CW effectiveness and readability
 
@@ -76,12 +90,14 @@ Its complete `.claude` DD log/state history is copied and hash-verified under `/
 - [x] Obtain owner authorization to prepare the coverage proposal.
 - [x] Prepare and internally review the agreed task inputs, including representative standalone CW conditions and DD-guided development composition with required Superpowers available.
 - [x] Complete input review and remediation and obtain owner authorization to commit/push the prepared tasks; this does not establish measured coverage or skill effectiveness.
-- [ ] Once the catalog and gaps are settled, define/reconcile scoring, then determine what evidence is needed to establish baseline effectiveness.
+- [x] Define and reconcile scoring from the reviewed specification and catalog; complete the initial scoring-usability pilot.
+- [x] Review the pilot judgments and select the next distinct coverage gaps.
+- [ ] Complete the additional evidence needed to establish baseline effectiveness; a small coverage batch does not establish reliability or the complete portfolio.
 - [x] Consolidate completed plans and preserve the accepted evidence packages without changing judgments.
 - [x] Implement the copy installer and update Steno’s `.claude` and `.agents` installations.
 - [x] Complete and qualify Claude support through the existing runner and worksheets.
 - [x] Add a blank `Test category / supporting purpose` worksheet field and document the five labels for the evaluator; retain existing configuration and accepted evidence unchanged.
-- [x] Agree the earlier routine CW suite, identifying every retained, retired, replaced and new case and its observable scoring boundary. The new specification-based proposal above requires its own review.
+- [x] Agree the earlier routine CW suite, identifying every retained, retired, replaced and new case and its observable scoring boundary. Its separately reviewed specification-based successor is recorded above.
 - [ ] Evaluate what the accepted CW comparison supports and what remains uncertain before any skill-change or adoption decision.
 - [x] Document the clarified CW contract in its durable homes, reconcile the six affected routine rubrics and rescore all 18 latest observations separately from their original judgments.
 - [ ] Revisit earlier scored outcomes after specification, catalog coverage and scoring are settled; preserve all prior judgments meanwhile.
@@ -122,15 +138,42 @@ Record shared provenance once per collection summary, inspect prose before condi
 - [x] Complete owner review of the revised scoring and obtain authorization to commit/push.
 - [x] Prepare the initial 10-call proposal: Codex / gpt-5.6-sol / medium, one observation per condition across the six selected purposes.
 - [x] Obtain approval for the ten exact commands and committing/pushing the preparation note.
-- [ ] Execute and assess the approved batch after the clean-checkout and frozen-input checks; retain both selected repeat assessments.
+- [x] Execute and assess the approved batch after the clean-checkout and frozen-input checks; retain both selected repeat assessments.
+- [x] Obtain owner review of the new evidence and scoring judgments before expanding collection.
 
 This smaller first collection checks whether scoring is usable before investing in wider coverage; it does not establish baseline reliability or approve candidate comparison.
-The [prepared package](/private/tmp/skilltest-cw-pilot-1eqpbvg1/summary.md) links all ten approved commands, frozen inputs and qualification evidence; collection has not started.
+The [completed scratch package](/private/tmp/skilltest-cw-pilot-1eqpbvg1/summary.md) links all ten observations, frozen inputs, full traces, worksheets and the final audit.
+All calls completed without infrastructure retries; the exact-command approval is exhausted.
+Eight semantic results pass; the no-DD CW-20 notice adds a confirmation deadline, and the no-DD CW-22 plan loses rationale/context and weakens a required test.
+CW-03/current-DD passes semantics with a separate delivery-preface failure.
+CW-13's final proposal correctly excludes CW after correcting its initial selection; preserve that distinction for owner review.
+The two retained repeat assessments agree on semantic results, fidelity and readability; this same-evaluator check does not establish independent agreement or skill reliability.
 Sol medium keeps the provider/model/effort consistent with the prior CW comparison while testing the new scoring and supplied context; it does not reuse those observations.
-Reassess CW-03/current-DD and CW-22/current-DD from the same new evidence to check scoring consistency, retaining both judgments without extra calls.
 The earlier [draft review](/private/tmp/dd-cw-scoring-review-kowdw1x0/summary.md) remains retained; [simplification review](/private/tmp/dd-cw-scoring-streamline-w12bzsmf/summary.md) records the current verification.
 Approved prompts, fixture declarations, skill bodies and retained evidence remain unchanged.
-The future repeat assessment is limited to observations from the future separately approved pilot batch and preserves both judgments; it does not authorize rescoring historical evidence or making provider calls now.
+The repeat assessments use only CW-03/current-DD and CW-22/current-DD from this new batch and preserve both judgments; historical evidence remains unchanged.
+The owner agreed the scoring is usable and authorized moving to the next coverage preparation; a passing control is valid evidence and no control failure is required.
+Evidence remains scratch-only, with no automatic promotion, further calls or candidate adoption.
+
+### Next coverage preparation
+
+Prepare five calls from existing tasks/rubrics, one observation per condition, Codex / gpt-5.6-sol / medium:
+
+- CW-18 discoverability: current-DD only; implicit prose creation without a tightening request.
+- CW-21 effectiveness: no-DD and current-DD; uncertain framing. If uncertainty is not expressed, record keep-and-flag as unobserved rather than claiming coverage or manufacturing a failure.
+- CW-23 composition: no-DD and current-DD; preserve the restart guide and reconcile linked documents in one local fixture commit.
+
+These exercise distinct remaining boundaries before broader sampling; no candidate, repetitions or additional scoring self-check is scheduled.
+The [preparation package](/private/tmp/skilltest-cw-next-_24fuk1d/summary.md) links rendered inputs, exact proposed commands and qualification evidence.
+Codex changed from 0.153.4 to 0.154.0, including built-in OpenAI documentation guidance; keep this provenance separate from the earlier pilot.
+The DD and Superpowers snapshots and runner are unchanged. Fresh provider-free catalog, surrogate-profile/ancestor and local file/Git checks cover the affected controls.
+The first approved CW-18 call also checks the new CLI's actual execution, capture and cleanup; inspect that evidence before proceeding to the remaining calls. A missing control stops the batch without authorizing extra calls.
+
+- [x] Finish provider-free preparation and review of all five exact commands; local input/control checks and 263 hook tests passed (three skipped).
+- [ ] Obtain approval to commit/push the reviewed preparation notes and execute the new five-call batch.
+- [ ] Collect and assess each approved observation, checking complete traces and actual file/commit state; retain valid control passes and failures alike.
+
+No provider calls are authorized by preparation. The previous ten-call approval remains exhausted.
 
 ### Retained earlier routine evidence
 
@@ -141,6 +184,6 @@ The initial-pass preparation verified Codex's executable against the completed c
 That preparation recorded Claude `2.1.267`, newer than its qualification at `2.1.266`; any future collection requires checking the then-selected executable and reconciling affected controls.
 
 Original rubrics still define their frozen records; the separate retrospective worksheets apply the clarified contract without replacing those records.
-The exact 18-call approval is exhausted; further evidence interpretation waits for the specification, coverage and scoring work above. No automatic repetitions, promotion or candidate adoption follow. The scratch summary reports the original and revised judgments with separate CW prose, authoring authority, task fidelity and comparative readability evidence.
+The exact 18-call approval is exhausted; further interpretation of these older observations remains a separate decision now that specification, coverage and scoring review are complete. No automatic repetitions, promotion or candidate adoption follow. The scratch summary reports the original and revised judgments with separate CW prose, authoring authority, task fidelity and comparative readability evidence.
 Retain ordinary cases even when a particular no-DD model passes them; the owner’s experience of model verbosity is context, not a measured cross-provider result.
 Once an agreed CW suite works end to end, follow the [per-skill starting workflow](../skill-validation/README.md#starting-the-next-skill) for the next owner-selected skill; a complete nine-skill campaign is not a prerequisite to finishing CW.
