@@ -2,7 +2,7 @@
 
 **Status:** Installation and baseline tooling are settled for the current Codex and Claude local workflows.
 The accepted CW evidence and completed-plan cleanup are consolidated on `main`; ongoing testing work uses this primary checkout.
-Next: choose the initial collection schedule, then prepare and approve its exact commands.
+Current work: execute and assess the owner-approved 10-call CW pilot after committing its preparation note.
 This is the single active testing plan; the [validation guide](../skill-validation/README.md) indexes the durable contracts and execution instructions.
 
 **Goal:** A repeatable set of tests for each DD skill’s discoverability, effectiveness and composition, with distinct questions and observable scoring criteria.
@@ -120,9 +120,14 @@ Record shared provenance once per collection summary, inspect prose before condi
 - [x] Mark CW-21's uncertainty coverage provisional, with repair/replacement considered if that behavior is not observed.
 - [x] Review all edited documents, address findings and reverify preservation, links and worksheet compatibility.
 - [x] Complete owner review of the revised scoring and obtain authorization to commit/push.
-- [ ] Select the initial collection schedule, then prepare and obtain approval for its exact commands.
+- [x] Prepare the initial 10-call proposal: Codex / gpt-5.6-sol / medium, one observation per condition across the six selected purposes.
+- [x] Obtain approval for the ten exact commands and committing/pushing the preparation note.
+- [ ] Execute and assess the approved batch after the clean-checkout and frozen-input checks; retain both selected repeat assessments.
 
 This smaller first collection checks whether scoring is usable before investing in wider coverage; it does not establish baseline reliability or approve candidate comparison.
+The [prepared package](/private/tmp/skilltest-cw-pilot-1eqpbvg1/summary.md) links all ten approved commands, frozen inputs and qualification evidence; collection has not started.
+Sol medium keeps the provider/model/effort consistent with the prior CW comparison while testing the new scoring and supplied context; it does not reuse those observations.
+Reassess CW-03/current-DD and CW-22/current-DD from the same new evidence to check scoring consistency, retaining both judgments without extra calls.
 The earlier [draft review](/private/tmp/dd-cw-scoring-review-kowdw1x0/summary.md) remains retained; [simplification review](/private/tmp/dd-cw-scoring-streamline-w12bzsmf/summary.md) records the current verification.
 Approved prompts, fixture declarations, skill bodies and retained evidence remain unchanged.
 The future repeat assessment is limited to observations from the future separately approved pilot batch and preserves both judgments; it does not authorize rescoring historical evidence or making provider calls now.
