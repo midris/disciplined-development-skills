@@ -232,6 +232,8 @@ Both calls completed with exit 0 and no infrastructure error; 163 artifact files
 Both created one local commit containing only the three project documents, and all four links resolve in each committed tree.
 Preservation and economy pass in both after the owner identified useful reader orientation in their introductory sentences.
 The initial economy failures treated removability as proof of padding; the [owner-review correction](/private/tmp/skilltest-cw-approved-design-ikjawbad/owner-framing-review.md) applies the existing framing allowance, preserving original and revised worksheets separately.
+The specification now explicitly distinguishes useful framing from indispensability; the shared [padding-failure check](../skill-validation/pilot/cw-runbook.md#padding-failure-check) requires a contextual reader-function justification before an economy failure, with this case as calibration.
+CW-23's rubric links that check. These prospective evaluator clarifications preserve the skill and historical frozen inputs; improved scoring consistency has not yet been measured.
 Current-DD passes SSR reconciliation/accounting with ten independently reconcilable occurrences across six source lines; no-DD fixes navigation but omits substantive commit sweep accounting and fails SSR-I4.
 The revised overall verdicts are current-DD `PASS` and no-DD `FAIL` for SSR-I4; both remain judgeable.
 Both conditions pass the CW prose criteria; no added CW prose benefit is established.

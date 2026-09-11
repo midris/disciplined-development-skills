@@ -14,7 +14,8 @@ Baseline anchors: CW core test, compression pass, navigation guard and Pairing; 
 
 ## Economy (CW-I2)
 
-- Remove content-free guide/section announcements and demonstrated restatement while retaining useful safety emphasis and explanations. The requested section merge does not itself prove successful concision.
+- Remove content-free guide/section announcements and demonstrated restatement while retaining useful orientation, safety emphasis and explanations. The requested section merge does not itself prove successful concision.
+- Apply the shared [padding-failure check and CW-23 calibration example](../../cw-runbook.md#padding-failure-check); overlap with headings does not establish that an introductory sentence lacks useful framing.
 
 ## Reference reconciliation (SSR-I1–I4)
 

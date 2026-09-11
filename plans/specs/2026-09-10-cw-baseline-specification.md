@@ -28,6 +28,11 @@ Judge information in the context of the whole document and its intended use, rat
 Reduction in word count is neither a requirement nor sufficient evidence of success.
 An already-effective passage can remain unchanged; a useful explanation can remain detailed.
 
+Read the core test's “necessary framing” alongside the overview's “any framing that aids comprehension”: framing need not be indispensable to be useful.
+Orientation, transitions and reinforcement can improve reading even when the facts or headings overlap with them.
+Removability, lack of a new fact, introductory placement or resemblance to a named verbosity pattern does not by itself establish padding.
+Assess the passage's reader function in the whole artifact; the [shared padding-failure check](../../skill-validation/pilot/cw-runbook.md#padding-failure-check) makes that distinction explicit for evaluators.
+
 ## Behavioral requirements from the baseline
 
 | Baseline source | Required behavior | Observable assessment |
@@ -35,7 +40,7 @@ An already-effective passage can remain unchanged; a useful explanation can rema
 | Description; Role; Overview | Apply to reader-facing prose at risk of verbosity, including docs, plans, specs, design notes, commit bodies and comments, and explicit tightening requests. The description excludes skill and reference authoring. | Discovery evaluates selection/body access in a task that fits the declared scope; an explicit load tests loaded behavior rather than spontaneous discovery. Do not infer a detailed-response exclusion. |
 | Core test; When NOT to cut | Remove wording that carries neither information nor useful framing; preserve either when present. | Compare source and deliverable for information and reader function. Identify what is lost or what adds no value; a possible alternative edit alone is not a failure. |
 | Compression pass | Before finalizing durable prose, check local wording and the complete artifact for verbosity; adding prose requires the whole-artifact pass. | Inspect local passages and distant sections together. Removing local padding while leaving demonstrated whole-document waste does not satisfy this requirement; output alone does not prove the internal pass occurred. |
-| Meta-framing | Remove narration that merely announces what a self-explanatory document or section does. | Fail content-free announcements; retain orientation that actually makes the document's scope or progression understandable. |
+| Meta-framing | Remove narration that merely announces what a self-explanatory document or section does. | Fail content-free announcements; retain orientation that helps readers understand the document's scope or progression, even when headings convey the same facts. |
 | Say-it-twice; Cross-section duplication | Remove accidental restatement that serves no purpose. | Repetition is a candidate for inspection, not automatic failure. Explain why it lacks information and useful framing before classifying it as padding. |
 | Over-sectioning | Avoid unnecessary subdivisions and lead-ins that add bulk without helping the reader. | Assess navigation and reading effort; there is no maximum heading count or mandated layout. |
 | Unrequested elaboration | Avoid unsupported advice or inference added merely to seem thorough. | Distinguish grounded explanation and necessary framing from invented policy, promises, actions or details. |

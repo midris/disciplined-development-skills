@@ -104,6 +104,26 @@ Record readability in its existing section: improved, equivalent or degraded aga
 Materially harder comprehension/use is a preservation failure; cross-reference the readability evidence rather than scoring the same defect twice.
 In composition, keep each companion's assessment separate; cross-reference shared defects without counting them as independent failures or claiming full companion validation.
 
+#### Padding-failure check
+
+Before assigning an economy failure for padding, record in the existing worksheet's evidence/notes:
+
+1. The passage and its context for the intended reader.
+2. Any plausible reader function, including orientation, transitions, emphasis, retention or point-of-use recall even when it adds no fact, or why none applies.
+3. Why that function supplies no useful value in this context, as well as why no information would be lost by cutting it.
+
+“It is removable,” “the headings already say this,” or “it adds no new fact” is insufficient justification on its own.
+Ground a claimed framing benefit in the artifact's actual reader and use, rather than inventing a hypothetical benefit.
+If a useful function remains plausible and unresolved, note that uncertainty without assigning a padding failure on that basis; this does not excuse another demonstrated defect.
+Evaluator uncertainty about value is not missing evidence and does not by itself make the run `RUN_NOT_JUDGEABLE`; nor does it establish that the subject expressed uncertainty under CW-21.
+
+Calibration example: in CW-23's short restart guide, “Use these checks before and after restarting a worker” usefully orients the reader to both stages despite overlap with the title and headings.
+Retaining that sentence is not an economy failure.
+By contrast, “This section describes the final check” immediately beneath “Final check” is padding when it merely repeats the heading without a useful orienting or other reader function.
+These are contextual judgments, not a whitelist of sentences or a blanket exemption for introductions.
+
+#### Comparing conditions
+
 Apply the same outcome criteria to matching no-DD and baseline conditions.
 Finish individual judgments before comparing their outputs.
 In the existing collection summary, explain whether the supplied skills materially helped, made little difference or hurt on those observations; say when evidence is insufficient or mixed.
