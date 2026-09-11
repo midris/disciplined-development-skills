@@ -94,7 +94,7 @@ No-DD omits DD loads; CW-22's common writing-plans load still applies.
 Assess preservation (CW-I1) and economy (CW-I2) separately; CW-17 also includes its requested explanation under CW-I3.
 Preserve source meaning and add no unsupported claims.
 Check the whole artifact for its intended reader: original wording, placement or repetition need not survive if information and useful framing do.
-Useful repetition can support emphasis, retention, orientation or point-of-use recall without adding a new fact.
+Repetition is allowed when it improves clarity, readability or effectiveness for the intended reader, including emphasis, retention, orientation or point-of-use recall without adding a new fact.
 No word-count reduction, heading quota or mandatory rewrite applies; an unchanged effective source can pass.
 Generation still has an economy obligation, but its length is not compared with raw source notes as though they were a prior draft.
 

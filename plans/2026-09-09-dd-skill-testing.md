@@ -36,6 +36,8 @@ The question is how effectively the existing skill fulfills its actual promises;
 An extraction error calls for correcting the specification or test; a demonstrated failure to fulfill an actual promise is evidence about the skill.
 Desired new behavior requires an explicit specification change before evaluation.
 Continue from the reviewed CW specification, catalog and scoring rather than reopening those stages without a concrete mismatch or new evidence.
+Keep all skill bodies unchanged while establishing the tests and consistent scoring; skill wording changes remain deferred.
+Capture the readability and useful-repetition allowance in the specification and shared rubric instructions, then apply it to scoring rather than treating an evaluator error as a reason to rewrite the skill.
 Use the next small batch to test remaining distinct boundaries; tooling is settled unless an observed mechanical gap requires a change.
 
 On the same machine, resume in this primary checkout on `main`, read `AGENTS.md` → `CLAUDE.md`, then this plan and the linked next-batch summary; verify actual Git state before acting.
