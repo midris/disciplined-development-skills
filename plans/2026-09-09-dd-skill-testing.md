@@ -2,10 +2,11 @@
 
 **Status:** Installation and baseline tooling are settled for the current Codex and Claude local workflows.
 The accepted CW evidence and completed-plan cleanup are consolidated on `main`; ongoing testing work uses this primary checkout.
-Current work: the owner approved five further observations for CW-02/04 effectiveness and CW-14 discoverability; the frozen preparation is ready for collection.
+Current work: all five approved CW-02/04/14 observations completed and pass their CW criteria; results are ready for owner review.
+CW-14 separately fails proposal fidelity for omitting the selected authoring method’s observed-failure gate.
 The preceding approved-design CW-23 pair completed the edit and commit in both conditions; both results are judgeable.
 After owner review, preservation and economy pass in both; reference reconciliation/accounting fails in no-DD but passes in current-DD.
-Current-DD is PASS overall; no-DD remains FAIL for missing substantive reference accounting.
+In that CW-23 pair, current-DD is PASS overall; no-DD remains FAIL for missing substantive reference accounting.
 The prospective run verdict is now `RUN_NOT_JUDGEABLE`; earlier records retain their original `SCENARIO_INVALID` labels.
 This is the single active testing plan; the [validation guide](../skill-validation/README.md) indexes the durable contracts and execution instructions.
 
@@ -256,14 +257,28 @@ The [collection package](/private/tmp/skilltest-cw-structure-7fbp_ugd/summary.md
 All 60 DD/Superpowers source files match the preceding qualified contexts; the 46 runner files, CLI 0.154.0 and executable digest remain unchanged.
 The fixtures contain only supplied skills, so the prior plain-context native availability qualification applies; there are no project instructions or writable task outputs.
 All five tasks require read-only work, including unchanged Git state; the existing fixture Git capability grants no task authorization to mutate it.
-Verify actual policy, input/capture and 60-file built-in provenance, read-only state and private-runtime cleanup after the first call before continuing.
+The first call passed its live-control checkpoint before call 2; all five observations verified actual policy, input/capture and 60-file built-in provenance, read-only state and private-runtime cleanup.
 Keep every observation and original judgment; no candidate, skill edit, extra call, historical rescoring, evidence promotion or extra scoring self-check is included.
 These cases extend distinct coverage; a single observation per condition does not establish reliability or isolated CW causation.
 
 - [x] Freeze and review the approved five-call preparation using the existing runner and previously qualified contexts.
 - [x] Obtain owner approval for this batch and session commit/push workflow.
-- [ ] Collect the first call and pass its live-control checkpoint before the remaining four.
-- [ ] Collect and assess all five observations; review results and reconcile coverage before selecting further collection.
+- [x] Collect the first call and pass its live-control checkpoint before the remaining four.
+- [x] Collect and assess all five observations; review results and reconcile coverage before selecting further collection.
+- [ ] Review these results with the owner before selecting the next bounded batch.
+
+Both CW-02 conditions preserve retry limits, per-delivery scope/rationale, synchronous ordering and usable navigation while removing clear duplication.
+Both CW-04 conditions preserve session timing and recovery, collapse unnecessary structure and retain the repeated warning input rule for useful point-of-use recall.
+All four pass preservation/economy; the pairs show no material DD task-success advantage.
+CW-14 reads CW and explicitly rejects it for reference authoring, passing the scope boundary.
+Its proposed writing-skills workflow tests before drafting but omits the required observed baseline failure before editing, so proposal fidelity fails separately; no authoring lifecycle was executed.
+All five runs remain judgeable overall PASS under the separate-ledger rules.
+The [collection audit](/private/tmp/skilltest-cw-structure-7fbp_ugd/collection-audit.json) verifies five unique serial calls, no retries, five worksheets, 292 artifact-entry hashes, frozen inputs and cleanup.
+
+Judgeable evidence now covers 12 of 18 purposes: effectiveness CW-02/03/04/17/20/21, discovery CW-01/13/14/18, and composition CW-22/23.
+That inventory contains 20 judgeable observations plus three retained unjudgeable CW-23 attempts, without pooling their scores or claiming reliability.
+Remaining unobserved effectiveness purposes under the reviewed contract are CW-01/05/06/08/18/19; historical versions do not substitute for them.
+This batch’s five-call approval is exhausted; preserve all results scratch-only and review them before selecting further collection.
 
 ### Retained earlier routine evidence
 
