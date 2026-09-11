@@ -2,7 +2,7 @@
 
 **Status:** Installation and baseline tooling are settled for the current Codex and Claude local workflows.
 The accepted CW evidence and completed-plan cleanup are consolidated on `main`; ongoing testing work uses this primary checkout.
-Current work: all five approved CW-02/04/14 observations completed and pass their CW criteria; results are ready for owner review.
+Current work: the owner reviewed the CW-02/04/14 results and approved six further observations for CW-05/06/08 effectiveness; preparation is frozen for collection.
 CW-14 separately fails proposal fidelity for omitting the selected authoring method’s observed-failure gate.
 The preceding approved-design CW-23 pair completed the edit and commit in both conditions; both results are judgeable.
 After owner review, preservation and economy pass in both; reference reconciliation/accounting fails in no-DD but passes in current-DD.
@@ -44,7 +44,7 @@ Use the next small batch to test remaining distinct boundaries; tooling is settl
 
 On the same machine, resume in this primary checkout on `main`, read `AGENTS.md` → `CLAUDE.md`, then this plan and the linked next-batch summary; verify actual Git state before acting.
 The reviewed preparation notes were committed and pushed before the approved batch; its scratch package records the clean launch revision and session approval.
-Continue from the [CW-02/04/14 coverage batch](#cw-020414-coverage-batch), preserving the three preceding packages and eight observations: five judgeable and three earlier unjudgeable CW-23 attempts.
+Continue from the [CW-05/06/08 coverage batch](#cw-050608-coverage-batch), preserving every preceding package and its original and revised judgments.
 Both two-call approvals are exhausted; do not resume/replay those observations or execute the original unrun fifth command.
 Recent raw observations and preparation packages under `/private/tmp` are retained local evidence, not a durable Git backup or cross-device handoff; do not delete them or assume their links alone preserve their contents.
 The repository contains the methodology and current decisions; continuity must not depend on conversation memory being available in another app.
@@ -265,7 +265,7 @@ These cases extend distinct coverage; a single observation per condition does no
 - [x] Obtain owner approval for this batch and session commit/push workflow.
 - [x] Collect the first call and pass its live-control checkpoint before the remaining four.
 - [x] Collect and assess all five observations; review results and reconcile coverage before selecting further collection.
-- [ ] Review these results with the owner before selecting the next bounded batch.
+- [x] Review these results with the owner before selecting the next bounded batch; the owner approved CW-05/06/08 after discussing the interpretation limits.
 
 Both CW-02 conditions preserve retry limits, per-delivery scope/rationale, synchronous ordering and usable navigation while removing clear duplication.
 Both CW-04 conditions preserve session timing and recovery, collapse unnecessary structure and retain the repeated warning input rule for useful point-of-use recall.
@@ -277,8 +277,28 @@ The [collection audit](/private/tmp/skilltest-cw-structure-7fbp_ugd/collection-a
 
 Judgeable evidence now covers 12 of 18 purposes: effectiveness CW-02/03/04/17/20/21, discovery CW-01/13/14/18, and composition CW-22/23.
 That inventory contains 20 judgeable observations plus three retained unjudgeable CW-23 attempts, without pooling their scores or claiming reliability.
-Remaining unobserved effectiveness purposes under the reviewed contract are CW-01/05/06/08/18/19; historical versions do not substitute for them.
+After that batch, unobserved effectiveness purposes under the reviewed contract were CW-01/05/06/08/18/19; the next selection is below. Historical versions do not substitute for them.
 This batch’s five-call approval is exhausted; preserve all results scratch-only and review them before selecting further collection.
+
+### CW-05/06/08 coverage batch
+
+The owner approved six serial observations using the existing reviewed tasks, rubrics and shared scoring, Codex / gpt-5.6-sol / medium, one per condition:
+
+- CW-05 effectiveness: no-DD then current-DD; remove unsupported operational advice while preserving the authoritative archive facts.
+- CW-06 effectiveness: no-DD then current-DD; trim inflated emphasis without weakening a universal requirement.
+- CW-08 effectiveness: no-DD then current-DD; preserve eligibility exceptions, deadlines and usable sponsor/appeal routes in a fictional applicant handbook.
+
+The [collection package](/private/tmp/skilltest-cw-policy-w_12rbzo/summary.md) contains the six exact commands, frozen task/configuration bytes and withheld evaluation sources.
+All 60 supplied DD/Superpowers files, 46 runner files and CLI 0.154.0 executable bytes match the preceding qualified contexts.
+Every task is read-only; no-DD supplies only the common Superpowers substrate, while current-DD adds the nine baseline DD bodies and explicitly loads CW.
+The first call must verify live capture, actual execution policy, input and built-in provenance, read-only fixture/Git state and private-runtime cleanup before the remaining five.
+Keep all results scratch-only, including judgeable failures, with no replay, extra observations, historical rescoring, evidence promotion, candidate adoption or skill edits.
+Control passes are valid evidence; this single observation per condition extends coverage rather than establishing reliability or requiring a control failure.
+
+- [x] Prepare and review six matching-input previews and frozen commands under the owner-approved session workflow.
+- [x] Obtain owner approval for the six-call batch and preparation/results commit/push workflow.
+- [ ] Collect the first observation and pass its live-control checkpoint before continuing.
+- [ ] Collect and assess all six; review evidence and reconcile the remaining coverage.
 
 ### Retained earlier routine evidence
 
