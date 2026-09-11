@@ -2,8 +2,9 @@
 
 **Status:** Installation and baseline tooling are settled for the current Codex and Claude local workflows.
 The accepted CW evidence and completed-plan cleanup are consolidated on `main`; ongoing testing work uses this primary checkout.
-Current work: CW-18/CW-21 yielded three judgeable observations; CW-23’s Git boundary is repaired, but both approved replacement conditions stopped for design approval without producing an edit or commit.
-Those runs retain their recorded `SCENARIO_INVALID` label; the owner approved the prospective name `RUN_NOT_JUDGEABLE` and an explicit design-approval premise for fresh CW-23 task preparation.
+Current work: the fresh approved-design CW-23 pair completed the edit and commit in both conditions; both results are judgeable.
+Preservation passes in both, economy fails in both, and reference reconciliation/accounting fails in no-DD but passes in current-DD; owner review is next.
+The prospective run verdict is now `RUN_NOT_JUDGEABLE`; earlier records retain their original `SCENARIO_INVALID` labels.
 This is the single active testing plan; the [validation guide](../skill-validation/README.md) indexes the durable contracts and execution instructions.
 
 **Goal:** A repeatable set of tests for each DD skill’s discoverability, effectiveness and composition, with distinct questions and observable scoring criteria.
@@ -38,8 +39,8 @@ Use the next small batch to test remaining distinct boundaries; tooling is settl
 
 On the same machine, resume in this primary checkout on `main`, read `AGENTS.md` → `CLAUDE.md`, then this plan and the linked next-batch summary; verify actual Git state before acting.
 The reviewed preparation notes were committed and pushed before the approved batch; its scratch package records the clean launch revision and session approval.
-Continue from the [CW-23 approved-design preparation](#cw-23-approved-design-preparation), preserving the earlier packages and all six observations, including three unjudgeable CW-23 attempts.
-The replacement approval is exhausted; do not resume/replay those observations or execute the original unrun fifth command.
+Continue from the [CW-23 approved-design preparation](#cw-23-approved-design-preparation), preserving all three recent packages and eight observations: five judgeable and three earlier unjudgeable CW-23 attempts.
+Both two-call approvals are exhausted; do not resume/replay those observations or execute the original unrun fifth command.
 Recent raw observations and preparation packages under `/private/tmp` are retained local evidence, not a durable Git backup or cross-device handoff; do not delete them or assume their links alone preserve their contents.
 The repository contains the methodology and current decisions; continuity must not depend on conversation memory being available in another app.
 No new test calls, historical rescoring, evidence promotion or candidate adoption follow from moving interfaces.
@@ -184,7 +185,8 @@ The first CW-18 call passed the required live execution, capture, input-provenan
 - [x] Assess both as `SCENARIO_INVALID`: design approval requested, with no revised artifact or local commit.
 - [x] Obtain owner approval for an explicit approved-design premise in the common CW-23 prompt and the prospective `RUN_NOT_JUDGEABLE` label.
 - [x] Prepare and review a fresh no-DD/current-DD pair with that premise under the owner’s retry request and approval.
-- [ ] Collect the two fresh calls serially, with a first-call live-control checkpoint, then assess and review their retained evidence.
+- [x] Collect the two fresh calls serially after the first-call live-control checkpoint; assess and review their retained evidence.
+- [ ] Review the fresh pair with the owner before selecting further collection or evidence promotion.
 
 CW-18 passed discovery with complete CW access before file creation; extra progress messages failed its brief-completion-only fidelity requirement.
 Both CW-21 outputs preserve operating facts and remove clear padding, and both express unresolved uncertainty about the training cue.
@@ -225,7 +227,14 @@ The owner’s retry request and approval cover this pair; its expanded commands 
 Provider-free checks verified both rendered prompts, all fixture bytes, withheld evaluation inputs, 85 frozen inputs, 46 unchanged runner files, and the unchanged CLI version/digest.
 Of 68 supplied files, 66 match the previous pair byte-for-byte; only the two condition prompts gain the approved common paragraph.
 Prior fixture capability qualification remains applicable because the CLI, policy and all fixture/skill bytes are unchanged; the first-call live-control checkpoint still applies.
-No provider observation has yet been collected for this pair.
+Both calls completed with exit 0 and no infrastructure error; 163 artifact files, both 60-file live bootstrap maps and private-runtime cleanup verified.
+Both created one local commit containing only the three project documents, and all four links resolve in each committed tree.
+Preservation passes in both; both retain a redundant opening announcement and fail economy.
+Current-DD passes SSR reconciliation/accounting with ten independently reconcilable occurrences across six source lines; no-DD fixes navigation but omits substantive commit sweep accounting and fails SSR-I4.
+Both overall verdicts are judgeable `FAIL`, not `RUN_NOT_JUDGEABLE`.
+The supplied bundle is associated with better reference accounting in this pair, but no added CW economy benefit is observed; one pair does not establish isolated causation or reliability.
+The approved task premise reached execution in both conditions; the earlier approval holds remain preserved under their original contracts.
+The pair’s approval is exhausted. Retain all results scratch-only for owner review, with no retries, extra calls, historical rescoring or promotion.
 
 ### Retained earlier routine evidence
 
