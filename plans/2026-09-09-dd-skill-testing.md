@@ -5,7 +5,7 @@ The accepted CW evidence and completed-plan cleanup are consolidated on `main`; 
 Current work: CW-01/18/19 collection and scoring are complete; all 18 purposes now have judgeable initial evidence.
 The final batch has five passes and one CW-19/current-DD preservation failure; owner review identifies lost execution responsibility, change-ticket context and operational clarity in the revised runbook.
 The four-case independent scoring check is complete; the fresh grader missed CW-19's preservation failure and CW-14's separate proposal-fidelity failure.
-The owner authorized repeating the same four-case check with a stronger model; Opus 5 preparation is underway with unchanged prompts and medium effort.
+The owner authorized repeating the same four-case check with a stronger model; Opus 5 preparation is committed, but automatic approval review blocked execution pending explicit payload/destination confirmation.
 Original and owner-revised judgments remain unchanged.
 Both CW-05 conditions separately fail the output-only request by emitting progress messages.
 CW-14 separately fails proposal fidelity for omitting the selected authoring method’s observed-failure gate.
@@ -404,8 +404,14 @@ The [authorization](/private/tmp/cw-independent-opus5-0z_e8u7x/authorization.md)
 Current CLI version/digest match the preceding check; a fresh provider-free authentication, option-parsing and host-protection check passed.
 Retain every original report and subject artifact; no automatic verdict replacement, new subject collection, skill/rubric edit or evidence promotion.
 
-- [ ] Review and commit/push the model-only preparation, then execute both stages with the checkpoint.
+- [x] Review and commit/push the model-only preparation.
+- [ ] Execute both stages with the checkpoint after resolving automatic approval review.
 - [ ] Compare both graders with the retained judgments and report evidence-supported differences and limits.
+
+Automatic approval review rejected the first launch and a retry of the approval request after byte-equality checks.
+No evaluator process or provider call started; neither stage has run.
+The reviewer requires explicit confirmation to send the unchanged four-case task/output/rubric packet and original full traces to Anthropic for this Opus 5 comparison; the [payload audit](/private/tmp/cw-independent-opus5-0z_e8u7x/approval-payload-audit.json) verifies equality with the earlier authorized Claude inputs.
+These are approval-request rejections, not model observations or infrastructure retries.
 
 ### Scoring clarifications before final coverage
 
