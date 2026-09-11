@@ -2,7 +2,9 @@
 
 **Status:** Installation and baseline tooling are settled for the current Codex and Claude local workflows.
 The accepted CW evidence and completed-plan cleanup are consolidated on `main`; ongoing testing work uses this primary checkout.
-Current work: the owner approved the final six observations for CW-01/18/19 using the clarified prompts; preparation is complete and collection is next.
+Current work: CW-01/18/19 collection and scoring are complete; all 18 purposes now have judgeable initial evidence.
+The final batch has five passes and one CW-19/current-DD preservation failure: the revised runbook omits the release engineer's execution responsibility.
+Review these results before preparing the independent scoring check; initial coverage does not establish reliability.
 Both CW-05 conditions separately fail the output-only request by emitting progress messages.
 CW-14 separately fails proposal fidelity for omitting the selected authoring method’s observed-failure gate.
 The preceding approved-design CW-23 pair completed the edit and commit in both conditions; both results are judgeable.
@@ -310,10 +312,10 @@ All six are judgeable overall PASS; no material DD task-success advantage appear
 Complete CW access is verified in each loaded condition, but the full available bundle and single observations do not establish isolated causation or reliability.
 The [collection audit](/private/tmp/skilltest-cw-policy-w_12rbzo/collection-audit.json) verifies six serial calls, no retries, six worksheets, 345 artifact-entry hashes, 95 unchanged frozen inputs, six built-in maps and runtime cleanup.
 
-Judgeable coverage now includes 15 of 18 purposes: effectiveness CW-02/03/04/05/06/08/17/20/21, discovery CW-01/13/14/18 and composition CW-22/23.
-The inventory contains 26 judgeable observations plus three retained unjudgeable CW-23 attempts; these are coverage counts, not a pooled score.
-CW-01, CW-18 and CW-19 effectiveness remain unobserved under the reviewed contract.
-The six-call approval is exhausted; review the results before selecting that remaining coverage, retaining every observation and judgment scratch-only.
+After that batch, judgeable coverage included 15 of 18 purposes: effectiveness CW-02/03/04/05/06/08/17/20/21, discovery CW-01/13/14/18 and composition CW-22/23.
+The inventory then contained 26 judgeable observations plus three retained unjudgeable CW-23 attempts; these are coverage counts, not a pooled score.
+That left CW-01, CW-18 and CW-19 effectiveness unobserved; their subsequent approved collection is recorded below.
+This batch's six-call approval is exhausted; every observation and judgment remains scratch-only.
 
 ### CW-01/18/19 final coverage batch
 
@@ -323,19 +325,32 @@ The owner approved six serial Codex / gpt-5.6-sol / medium observations, one per
 - CW-18 effectiveness: no-DD, then current-DD; create only the requested volunteer guide.
 - CW-19 effectiveness: no-DD, then current-DD; revise the operational runbook read-only.
 
-The [prepared package](/private/tmp/skilltest-cw-final-p2sc4e3n/summary.md) freezes the clarified common prompts, condition prefixes, matching source inputs, evaluator sources and exact commands.
+The [collection package](/private/tmp/skilltest-cw-final-p2sc4e3n/summary.md) retains the clarified common prompts, condition prefixes, matching source inputs, evaluator sources, exact commands and six completed worksheets.
 The fresh provider-free native check verifies CW-01's standalone catalog and matching normalized context; unchanged full-bundle and sandbox controls reuse their recorded qualifications.
 All 60 source files and 46 runner files match the qualified versions; 230 frozen files include the new qualification evidence.
 The session authorization covers preparation/results review and commit/push, existing private-runtime authentication and necessary host/network execution permissions.
-Before call 2, verify the first call's actual capture, inputs, runtime policy, built-in hashes, task mutation boundaries and cleanup.
-Each CW-18 file must be inspected directly; final-answer-only limits permit separate progress messages in all three tasks.
+Before call 2, the first call passed checks of actual capture, inputs, runtime policy, built-in hashes, task mutation boundaries and cleanup.
+Both actual CW-18 files were inspected directly; final-answer-only limits permit separate progress messages in all three tasks.
 Compare successful pairs directly for reader value and no observed degradation without requiring CW to win; these single observations do not establish reliability.
 
 - [x] Prepare six previews and qualify the standalone condition without provider calls.
 - [x] Freeze and review the inputs, commands and bounded session authorization.
-- [x] Review and verify preparation for commit/push; record the clean launch revision before launch.
-- [ ] Collect and score six observations, retaining every result without replay.
-- [ ] Reconcile all 18 purposes and review results before independent scoring or further collection.
+- [x] Commit/push preparation and record the clean launch revision before launch.
+- [x] Collect and score six observations, retaining every result without replay.
+- [x] Reconcile judgeable initial coverage across all 18 purposes.
+- [ ] Review these results with the owner before independent scoring or further collection.
+
+CW-01 and CW-18 pass preservation/economy in both conditions, with direct paired comparison supporting no observed degradation in task success and usability.
+CW-18/current-DD condenses the one-token-at-closing example into the unused-token example and universal expiry/stop rules; the worksheet records why the practical lesson remains available from the complete guide.
+CW-19/no-DD preserves the named release engineer and passes; current-DD removes that actor everywhere and fails preservation, while economy and fidelity pass.
+Both runbooks retain the operational thresholds, shared readiness window, GO ordering, force warning and recovery boundary.
+This is a judgeable omission with valid controls, not an infrastructure failure or permission to replay it.
+
+The [collection audit](/private/tmp/skilltest-cw-final-p2sc4e3n/collection-audit.json) verifies six serial calls without retries, 230 frozen inputs, 339 artifact-entry hashes, allowed output boundaries, all six built-in maps and runtime cleanup.
+All six fidelity results pass under their clarified final-answer scope; original fidelity judgments remain unchanged.
+The [coverage inventory](/private/tmp/skilltest-cw-final-p2sc4e3n/coverage-inventory.md) links 32 judgeable observations across 12 effectiveness, four discovery and two composition purposes, plus three retained unjudgeable CW-23 attempts.
+Its counts describe initial purpose coverage, not a pooled score, repeated reliability or independent evaluator agreement.
+The six-call authorization is exhausted; the next decision is owner review, then a bounded independent scoring check using retained outputs with existing judgments withheld.
 
 ### Scoring clarifications before final coverage
 
