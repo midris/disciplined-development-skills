@@ -6,6 +6,7 @@ Current work: CW-01/18/19 collection and scoring are complete; all 18 purposes n
 The final batch has five passes and one CW-19/current-DD preservation failure; owner review identifies lost execution responsibility, change-ticket context and operational clarity in the revised runbook.
 The four-case independent scoring check is complete; the fresh grader missed CW-19's preservation failure and CW-14's separate proposal-fidelity failure.
 The authorized Opus 5 comparison is complete: it improves evidence inspection but still passes CW-19 preservation and CW-14 proposal fidelity despite the retained failures.
+The owner approved making CW-14’s failing-baseline prerequisite explicit in its rubric and retesting with Opus 5; preparation is underway.
 Original and owner-revised judgments remain unchanged.
 Both CW-05 conditions separately fail the output-only request by emitting progress messages.
 CW-14 separately fails proposal fidelity for omitting the selected authoring method’s observed-failure gate.
@@ -421,6 +422,24 @@ The intended improvement is to expose missing actor assignments or preconditions
 This proposal is not implemented or authorized for another call.
 All original and owner-revised judgments and both graders' reports remain unchanged; the two-call approval is exhausted.
 No subject collection, skill/rubric edit, automatic verdict replacement or evidence promotion follows.
+
+### CW-14 rubric clarification and retest
+
+The owner approved the explicit failing-baseline clarification and a repeat Opus evaluation after discussing that CW-14 had been reviewed at batch level, without recorded detailed owner inspection of its source/output.
+The [current rubric](../skill-validation/pilot/cw-14/specification/rubric.md) now requires an observed baseline failure before editing, rejects proceeding directly from a passing baseline and permits equivalent wording.
+This makes the selected writing-skills prerequisite explicit under proposal fidelity; it does not change CW-I3 scope selection or assert that an authoring lifecycle occurred.
+The original rubric remains frozen in every previous collection/grading package and in Git history; original judgments remain unchanged.
+
+The [retest package](/private/tmp/cw14-rubric-opus5-l71k7bfe/summary.md) retains the same four-case context, Opus 5 / medium and two serial fresh no-tool stages with the existing checkpoint.
+Only CW-14's rubric changes substantively; neutral first-stage metadata says supplied scoring rather than historical rules to describe the revised input accurately.
+All other tasks, outputs, historical shared rules, source bodies, traces and prompt templates stay unchanged.
+Stage 2 receives only this retest's own unchanged first assessment in addition to the frozen packet; no earlier grades or owner feedback are supplied.
+This is retrospective evaluator calibration, not fresh subject effectiveness or evidence of reliability.
+The broader obligation-to-evidence prompt proposal and CW-19 rubric changes remain outside this retest.
+
+- [ ] Verify and review the clarification and input delta; commit/push preparation.
+- [ ] Execute exactly two authorized evaluator calls with the first-stage checkpoint.
+- [ ] Compare rubric application and preserve all original/new reports; record limits before further scoring changes.
 
 ### Scoring clarifications before final coverage
 
