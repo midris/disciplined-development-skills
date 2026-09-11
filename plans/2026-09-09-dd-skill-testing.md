@@ -2,8 +2,8 @@
 
 **Status:** Installation and baseline tooling are settled for the current Codex and Claude local workflows.
 The accepted CW evidence and completed-plan cleanup are consolidated on `main`; ongoing testing work uses this primary checkout.
-Current work: the approved five-call CW batch paused after three judgeable observations and one invalid CW-23 attempt; the subject sandbox denied required Git writes, and the fifth call remains unrun.
-The owner authorized the fixture Git-permission repair; the repaired policy and both unchanged CW-23 fixtures passed provider-free checks. The reviewed replacement pair is frozen and awaits execution approval.
+Current work: CW-18/CW-21 yielded three judgeable observations; CW-23’s Git boundary is repaired, but both approved replacement conditions stopped for design approval without producing an edit or commit.
+Both replacements are `SCENARIO_INVALID`; next resolve the bounded task/workflow handoff before any further CW-23 calls.
 This is the single active testing plan; the [validation guide](../skill-validation/README.md) indexes the durable contracts and execution instructions.
 
 **Goal:** A repeatable set of tests for each DD skill’s discoverability, effectiveness and composition, with distinct questions and observable scoring criteria.
@@ -38,7 +38,8 @@ Use the next small batch to test remaining distinct boundaries; tooling is settl
 
 On the same machine, resume in this primary checkout on `main`, read `AGENTS.md` → `CLAUDE.md`, then this plan and the linked next-batch summary; verify actual Git state before acting.
 The reviewed preparation notes were committed and pushed before the approved batch; its scratch package records the clean launch revision and session approval.
-Continue from the [Git control failure](#next-coverage-preparation), preserving all four attempts; do not run the remaining command or replay CW-23 under the failed permission boundary.
+Continue from the [CW-23 replacement results](#next-coverage-preparation), preserving both packages and all six observations, including three invalid CW-23 attempts.
+The replacement approval is exhausted; do not resume/replay those observations or execute the original unrun fifth command.
 Recent raw observations and preparation packages under `/private/tmp` are retained local evidence, not a durable Git backup or cross-device handoff; do not delete them or assume their links alone preserve their contents.
 The repository contains the methodology and current decisions; continuity must not depend on conversation memory being available in another app.
 No new test calls, historical rescoring, evidence promotion or candidate adoption follow from moving interfaces.
@@ -179,7 +180,9 @@ The first CW-18 call passed the required live execution, capture, input-provenan
 - [x] Test-first update the Codex adapter and provider tests, add a provider-free installed-CLI acceptance check, and reconcile the runner README.
 - [x] Qualify staging, original-source diff, linked-document reconciliation and one root commit through the emitted policy; verify protected-path write denials and network-bind denial in fresh surrogate fixtures.
 - [x] Review the repair and freeze two replacement CW-23 commands with unchanged task/skill/scoring inputs.
-- [ ] Obtain approval for the two replacement calls, then collect with the first-call live checkpoint.
+- [x] Obtain approval for the two replacement calls and collect both after the first-call infrastructure checkpoint passed.
+- [x] Assess both as `SCENARIO_INVALID`: design approval requested, with no revised artifact or local commit.
+- [ ] Resolve CW-23’s single-turn execution handoff before proposing a revised task and any new collection.
 
 CW-18 passed discovery with complete CW access before file creation; extra progress messages failed its brief-completion-only fidelity requirement.
 Both CW-21 outputs preserve operating facts and remove clear padding, and both express unresolved uncertainty about the training cue.
@@ -201,7 +204,13 @@ Provider-free checks passed the complete Git/link path for both unchanged CW-23 
 Native catalogs match the earlier conditions, paired common messages match after declared DD entries and allocated paths are normalized, and all 60 built-in guidance hashes are unchanged.
 The current CLI’s custom-profile inheritance did not retain built-in protected-directory exclusions in a differential sandbox probe; explicit `.git`, `.codex` and `.agents` read-only rules preserve them, with only the exact fixture Git override writable.
 The separate installed-CLI check exercises protected-path writes and network binding; these are bounded controls, not a claim of exhaustive filesystem isolation or model effectiveness.
-Changed conditions require a new freeze and matching-pair command approval; the earlier approval does not bypass this stop.
+The owner approved the frozen replacement pair; both calls completed with verified inputs, retained emitted streams and verified runtime cleanup, without retries or extra calls.
+No-DD successfully staged originals, then requested design approval; current-DD loaded all required DD/CW/SSR bodies but requested design approval before staging.
+Neither edited the guide, changed navigation or committed, so all three semantic groups are `NOT_JUDGEABLE` and both scenarios are invalid; the task-completion failures remain visible separately.
+The second trace’s compound-read event exposes only trailing Git output; complete required DD/CW/SSR body access is verified in its earlier event, but later body reads are not independently confirmed.
+Both conditions stopped at a design gate, leaving no CW-23 semantic comparison; this does not establish a DD benefit or regression.
+Resolve the concrete task/workflow handoff around the supplied brainstorming approval gate, keeping the reviewed CW specification and scoring intact.
+The pair’s two-call approval is exhausted; any task change or further collection needs a reviewed proposal and fresh approval.
 All new evidence remains scratch-only pending owner review, with no historical rescoring, promotion or adoption.
 
 ### Retained earlier routine evidence
