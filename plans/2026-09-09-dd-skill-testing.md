@@ -4,7 +4,7 @@
 The accepted CW evidence and completed-plan cleanup are consolidated on `main`; ongoing testing work uses this primary checkout.
 Current work: CW-01/18/19 collection and scoring are complete; all 18 purposes now have judgeable initial evidence.
 The final batch has five passes and one CW-19/current-DD preservation failure; owner review identifies lost execution responsibility, change-ticket context and operational clarity in the revised runbook.
-Review these results before preparing the independent scoring check; initial coverage does not establish reliability.
+The owner reviewed CW-19's output shortcomings and approved the four-case independent scoring check; preparation is complete and its two evaluator stages are next.
 Both CW-05 conditions separately fail the output-only request by emitting progress messages.
 CW-14 separately fails proposal fidelity for omitting the selected authoring method’s observed-failure gate.
 The preceding approved-design CW-23 pair completed the edit and commit in both conditions; both results are judgeable.
@@ -338,7 +338,7 @@ Compare successful pairs directly for reader value and no observed degradation w
 - [x] Commit/push preparation and record the clean launch revision before launch.
 - [x] Collect and score six observations, retaining every result without replay.
 - [x] Reconcile judgeable initial coverage across all 18 purposes.
-- [ ] Review these results with the owner before independent scoring or further collection.
+- [x] Review results with the owner and obtain approval for the bounded independent scoring check below.
 
 CW-01 and CW-18 pass preservation/economy in both conditions, with direct paired comparison supporting no observed degradation in task success and usability.
 CW-18/current-DD condenses the one-token-at-closing example into the unused-token example and universal expiry/stop rules; the worksheet records why the practical lesson remains available from the complete guide.
@@ -354,7 +354,27 @@ The [collection audit](/private/tmp/skilltest-cw-final-p2sc4e3n/collection-audit
 All six fidelity results pass under their clarified final-answer scope; original fidelity judgments remain unchanged.
 The [coverage inventory](/private/tmp/skilltest-cw-final-p2sc4e3n/coverage-inventory.md) links 32 judgeable observations across 12 effectiveness, four discovery and two composition purposes, plus three retained unjudgeable CW-23 attempts.
 Its counts describe initial purpose coverage, not a pooled score, repeated reliability or independent evaluator agreement.
-The six-call authorization is exhausted; the next decision is owner review, then a bounded independent scoring check using retained outputs with existing judgments withheld.
+The six-call subject authorization is exhausted; the separately approved independent scoring check below uses retained outputs with existing judgments withheld.
+
+### Independent scoring check
+
+The owner approved a fresh AI grader after reviewing the purpose and separation from this conversation.
+The [prepared package](/private/tmp/cw-independent-scoring-j4sxgwi0/summary.md) selects four retained observations: CW-08/no-DD for useful repetition, CW-18/current-DD for condensed examples, CW-19/current-DD for preservation/readability, and CW-14/discovery for scope selection versus proposal fidelity.
+Use Claude Opus 4.6 (`claude-opus-4-6`) at medium effort in exactly two serial, no-tool evaluator calls.
+The first receives common source tasks, outputs and their original frozen scoring rules with neutral case labels; the second additionally receives its own unchanged first assessment, full subject traces and factual mechanical evidence.
+The discovery proposal reveals some condition information itself; stage 2 deliberately reveals loading and execution evidence.
+Prior operator judgments and owner comments are withheld throughout, and each evaluator report is retained separately.
+This targeted check tests agreement on meaningful cases; it does not establish statistical independence or population reliability.
+
+The current Claude CLI is 2.1.268, with a frozen executable digest and fresh provider-free authentication, option-parsing, host-state protection and runtime-cleanup checks.
+The scratch launcher reuses unchanged private-runtime code and disables tools, skills, MCP and customizations; it introduces no runner or skill change.
+The first live report must verify model identity, empty tool exposure, unchanged fixture and cleanup before the second stage.
+The package freezes 66 source/control files; stage 2's only dynamic grading input is the first report, hashed at its checkpoint.
+No subject rerun, third evaluator call, automatic verdict replacement, evidence promotion or skill edit follows from this approval.
+
+- [x] Select the four observations and different evaluator; prepare, qualify and review the withheld-input package.
+- [ ] Commit/push preparation and run the two stages with the first-stage checkpoint.
+- [ ] Compare independent judgments with retained original and owner-revised assessments; preserve disagreements for owner review.
 
 ### Scoring clarifications before final coverage
 
@@ -370,7 +390,7 @@ All original runs, frozen evaluation inputs and successive judgments remain unch
 No skill edit, subject call or historical reassessment belongs to this documentation change.
 
 - [x] Review and verify the specification, shared scoring, CW-08 rubric and three clarified prospective tasks; reconcile their catalog/rubric links.
-- [ ] After the remaining three coverage purposes, prepare a small independent scoring check using a different evaluator without access to current judgments.
+- [x] After the remaining three coverage purposes, prepare a small independent scoring check using a different evaluator without access to current judgments; see the selected package above.
 
 [Verification](/private/tmp/cw-scoring-clarifications-zw1r9j57/verification.json) and [review](/private/tmp/cw-scoring-clarifications-zw1r9j57/review.md) confirm only response-scope wording changed in the three copied prompts, all 646 retained files are unchanged, and Markdown destinations/anchors resolve.
 The hook suite passed with 263 tests and three skips; no provider was called and no observation was rescored.
