@@ -2,7 +2,8 @@
 
 **Status:** Installation and baseline tooling are settled for the current Codex and Claude local workflows.
 The accepted CW evidence and completed-plan cleanup are consolidated on `main`; ongoing testing work uses this primary checkout.
-Current work: the fresh approved-design CW-23 pair completed the edit and commit in both conditions; both results are judgeable.
+Current work: the owner approved five further observations for CW-02/04 effectiveness and CW-14 discoverability; the frozen preparation is ready for collection.
+The preceding approved-design CW-23 pair completed the edit and commit in both conditions; both results are judgeable.
 After owner review, preservation and economy pass in both; reference reconciliation/accounting fails in no-DD but passes in current-DD.
 Current-DD is PASS overall; no-DD remains FAIL for missing substantive reference accounting.
 The prospective run verdict is now `RUN_NOT_JUDGEABLE`; earlier records retain their original `SCENARIO_INVALID` labels.
@@ -42,7 +43,7 @@ Use the next small batch to test remaining distinct boundaries; tooling is settl
 
 On the same machine, resume in this primary checkout on `main`, read `AGENTS.md` → `CLAUDE.md`, then this plan and the linked next-batch summary; verify actual Git state before acting.
 The reviewed preparation notes were committed and pushed before the approved batch; its scratch package records the clean launch revision and session approval.
-Continue from the [CW-23 approved-design preparation](#cw-23-approved-design-preparation), preserving all three recent packages and eight observations: five judgeable and three earlier unjudgeable CW-23 attempts.
+Continue from the [CW-02/04/14 coverage batch](#cw-020414-coverage-batch), preserving the three preceding packages and eight observations: five judgeable and three earlier unjudgeable CW-23 attempts.
 Both two-call approvals are exhausted; do not resume/replay those observations or execute the original unrun fifth command.
 Recent raw observations and preparation packages under `/private/tmp` are retained local evidence, not a durable Git backup or cross-device handoff; do not delete them or assume their links alone preserve their contents.
 The repository contains the methodology and current decisions; continuity must not depend on conversation memory being available in another app.
@@ -189,7 +190,7 @@ The first CW-18 call passed the required live execution, capture, input-provenan
 - [x] Obtain owner approval for an explicit approved-design premise in the common CW-23 prompt and the prospective `RUN_NOT_JUDGEABLE` label.
 - [x] Prepare and review a fresh no-DD/current-DD pair with that premise under the owner’s retry request and approval.
 - [x] Collect the two fresh calls serially after the first-call live-control checkpoint; assess and review their retained evidence.
-- [ ] Review the fresh pair with the owner before selecting further collection or evidence promotion.
+- [x] Review the fresh pair with the owner before selecting further collection; the owner corrected its economy judgments and approved the next coverage batch. Evidence promotion remains unapproved.
 
 CW-18 passed discovery with complete CW access before file creation; extra progress messages failed its brief-completion-only fidelity requirement.
 Both CW-21 outputs preserve operating facts and remove clear padding, and both express unresolved uncertainty about the training cue.
@@ -241,7 +242,28 @@ The revised overall verdicts are current-DD `PASS` and no-DD `FAIL` for SSR-I4; 
 Both conditions pass the CW prose criteria; no added CW prose benefit is established.
 The supplied bundle is associated with better reference accounting in this pair; one pair does not establish isolated causation or reliability.
 The approved task premise reached execution in both conditions; the earlier approval holds remain preserved under their original contracts.
-The pair’s approval is exhausted. Retain all results scratch-only for owner review, with no retries, extra calls, historical rescoring or promotion.
+The pair’s approval is exhausted. Retain all results and successive owner-reviewed judgments scratch-only; no replay, historical rescoring or promotion follows.
+
+### CW-02/04/14 coverage batch
+
+The owner approved five serial calls using the existing reviewed tasks and current shared scoring, Codex / gpt-5.6-sol / medium, one observation per condition:
+
+- CW-02 effectiveness: no-DD then current-DD; retry scope, rationale and usable ordering navigation.
+- CW-04 effectiveness: no-DD then current-DD; simpler structure with useful warning/recovery lookup.
+- CW-14 discoverability: current-DD only; exclude CW from shipped reference authoring while selecting the applicable authoring method.
+
+The [collection package](/private/tmp/skilltest-cw-structure-7fbp_ugd/summary.md) freezes all five commands, task/configuration bytes, selected rubrics and the clarified specification/shared padding check.
+All 60 DD/Superpowers source files match the preceding qualified contexts; the 46 runner files, CLI 0.154.0 and executable digest remain unchanged.
+The fixtures contain only supplied skills, so the prior plain-context native availability qualification applies; there are no project instructions or writable task outputs.
+All five tasks require read-only work, including unchanged Git state; the existing fixture Git capability grants no task authorization to mutate it.
+Verify actual policy, input/capture and 60-file built-in provenance, read-only state and private-runtime cleanup after the first call before continuing.
+Keep every observation and original judgment; no candidate, skill edit, extra call, historical rescoring, evidence promotion or extra scoring self-check is included.
+These cases extend distinct coverage; a single observation per condition does not establish reliability or isolated CW causation.
+
+- [x] Freeze and review the approved five-call preparation using the existing runner and previously qualified contexts.
+- [x] Obtain owner approval for this batch and session commit/push workflow.
+- [ ] Collect the first call and pass its live-control checkpoint before the remaining four.
+- [ ] Collect and assess all five observations; review results and reconcile coverage before selecting further collection.
 
 ### Retained earlier routine evidence
 
