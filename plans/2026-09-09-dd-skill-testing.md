@@ -6,7 +6,7 @@ Current work: CW-01/18/19 collection and scoring are complete; all 18 purposes n
 The final batch has five passes and one CW-19/current-DD preservation failure; owner review identifies lost execution responsibility, change-ticket context and operational clarity in the revised runbook.
 The four-case independent scoring check is complete; the fresh grader missed CW-19's preservation failure and CW-14's separate proposal-fidelity failure.
 The authorized Opus 5 comparison is complete: it improves evidence inspection but still passes CW-19 preservation and CW-14 proposal fidelity despite the retained failures.
-The owner approved making CW-14’s failing-baseline prerequisite explicit in its rubric and retesting with Opus 5; preparation is underway.
+The CW-14 rubric clarification retest is complete: Opus 5 now records scope selection PASS and separate proposal-fidelity FAIL; the other three final score sets are unchanged.
 Original and owner-revised judgments remain unchanged.
 Both CW-05 conditions separately fail the output-only request by emitting progress messages.
 CW-14 separately fails proposal fidelity for omitting the selected authoring method’s observed-failure gate.
@@ -437,9 +437,21 @@ Stage 2 receives only this retest's own unchanged first assessment in addition t
 This is retrospective evaluator calibration, not fresh subject effectiveness or evidence of reliability.
 The broader obligation-to-evidence prompt proposal and CW-19 rubric changes remain outside this retest.
 
-- [ ] Verify and review the clarification and input delta; commit/push preparation.
-- [ ] Execute exactly two authorized evaluator calls with the first-stage checkpoint.
-- [ ] Compare rubric application and preserve all original/new reports; record limits before further scoring changes.
+- [x] Verify and review the clarification and input delta; commit/push preparation.
+- [x] Execute exactly two authorized evaluator calls with the first-stage checkpoint.
+- [x] Compare rubric application and preserve all original/new reports; record limits before further scoring changes.
+
+The [final report](/private/tmp/cw14-rubric-opus5-l71k7bfe/attempts/2/final.md) now identifies the absent failing-baseline prerequisite under fidelity, while verifying correct CW scope exclusion from the trace.
+CW-08, CW-18 and CW-19 retain their previous Opus 5 final scores; CW-19's preservation disagreement remains unresolved.
+The [comparison](/private/tmp/cw14-rubric-opus5-l71k7bfe/comparison.md) records the evaluator's verdict-precedence and reference-testing caveats without adopting them as new rules.
+The full methodology already makes this fidelity failure non-blocking for the independently judgeable scope result; overall PASS with separate fidelity FAIL remains the intended ledger treatment.
+The selected writing-skills body requires reference retrieval/application/gap tests; the pressure-testing reference's pure-reference exclusion does not justify omitting the stated authoring prerequisite.
+
+The [audit](/private/tmp/cw14-rubric-opus5-l71k7bfe/collection-audit.json) verifies two distinct successful Opus 5 sessions, no tools or retries, the serial checkpoint, unchanged fixtures and both runtime removals.
+All 66 frozen files, 40 original source files and the 98-file preceding Opus 5 package remain unchanged.
+The clarification was applied in this attempt; a single retrospective comparison does not establish grading reliability or isolate causality from stochastic variation.
+Both new reports and every prior judgment remain separate, and the two-call approval is exhausted.
+Review this calibration result with the owner before selecting another scoring change or provider call.
 
 ### Scoring clarifications before final coverage
 
