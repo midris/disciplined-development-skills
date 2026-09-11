@@ -2,7 +2,8 @@
 
 **Status:** Installation and baseline tooling are settled for the current Codex and Claude local workflows.
 The accepted CW evidence and completed-plan cleanup are consolidated on `main`; ongoing testing work uses this primary checkout.
-Current work: the CW pilot relevance audit is complete; all 18 purposes have initial judgeable evidence, but companion-only and incidental fidelity outcomes must not be presented as CW effectiveness.
+Current work: the owner approved a fresh scoring rebuild for CW-02 followed by CW-19; start at the [bounded handoff](#fresh-scoring-rebuild-approved-handoff).
+The CW pilot relevance audit is complete; all 18 purposes have initial judgeable evidence, but companion-only and incidental fidelity outcomes must not be presented as CW effectiveness.
 CW-13/14 passed their scope boundary; the owner directed that other authoring-method correctness be excluded from these tests.
 Their prospective tasks and rubrics now ask for guidance selection only and explicitly omit authoring-workflow scoring.
 The earlier CW-14 fidelity clarification and evaluator reports remain historical records, not evidence of a CW failure or grounds for further CW calls.
@@ -44,13 +45,68 @@ Capture the readability and useful-repetition allowance in the specification and
 Use the relevance audit below before selecting further evidence; a non-CW procedure defect is not a reason for another CW batch.
 Tooling is settled unless an observed mechanical gap requires a change.
 
-On the same machine, resume in this primary checkout on `main`, read `AGENTS.md` → `CLAUDE.md`, then this plan and the linked next-batch summary; verify actual Git state before acting.
+On the same machine, resume in this primary checkout on `main`, read `AGENTS.md` → `CLAUDE.md`, and verify actual Git state before acting.
+For the fresh scoring rebuild, read only the handoff section below before deriving criteria; defer historical plan sections and batch summaries until its checkpoints permit them.
 The reviewed preparation notes were committed and pushed before the approved batch; its scratch package records the clean launch revision and session approval.
-Continue from the [CW-01/18/19 final coverage batch](#cw-011819-final-coverage-batch), preserving every preceding package and its original and revised judgments.
+For the approved scoring rebuild, follow the source exposure order and checkpoints in the [handoff below](#fresh-scoring-rebuild-approved-handoff), preserving every preceding package and its original and revised judgments.
 Both two-call approvals are exhausted; do not resume/replay those observations or execute the original unrun fifth command.
 Recent raw observations and preparation packages under `/private/tmp` are retained local evidence, not a durable Git backup or cross-device handoff; do not delete them or assume their links alone preserve their contents.
 The repository contains the methodology and current decisions; continuity must not depend on conversation memory being available in another app.
 No new test calls, historical rescoring, evidence promotion or candidate adoption follow from moving interfaces.
+
+## Fresh scoring rebuild: approved handoff
+
+The owner approved rebuilding scoring from the reviewed specification and scenario inputs, beginning with **CW-02**, then **CW-19**.
+The concrete reason is the relevance audit's discovery of unrelated authoring-method checks and the owner's corrections to padding and preservation judgments: checking only disputed failures leaves inherited pass criteria insufficiently examined.
+Keep the reviewed scenarios and specification; derive their scoring afresh rather than editing old checklists into another version.
+This is a bounded scoring repair, not a restart of methodology design or skill authoring.
+
+Use a fresh session for derivation because the current session has extensively read the old rubrics and grades.
+Before derivation, read only this handoff section of the active plan, required project guidance, the complete [baseline CW](../skills/concise-writing/SKILL.md), the [reviewed specification](specs/2026-09-10-cw-baseline-specification.md), the charter's acceptance model and CW contract, and the exact [CW-02 task](../skill-validation/pilot/cw-02/specification/prompt.md) and [CW-19 task](../skill-validation/pilot/cw-19/specification/prompt.md).
+Read the validation guide's baseline-specification-first section and the controlled-input design's overall goal as required by project guidance; use the methodology's ledger and verdict rules without importing old scenario criteria.
+Do not follow links into old rubrics, catalog scoring descriptions, worksheets, evaluator reports, subject outputs or completed result sections until the checkpoints below permit them.
+The reviewed specification remains an authority even where it already contains observable assessment guidance; the withheld material is prior scenario-specific scoring and judgments.
+This controls exposure, not a claim of independent or fully blind evaluation: the owner feedback below deliberately discloses known CW-19 shortcomings.
+
+### Owner feedback to carry into derivation
+
+These are owner interpretations of the existing preservation/readability promises, not instructions to change the skill or reproduce an old grade.
+Map each to the complete baseline and specification, and surface any actual conflict before scoring.
+
+- Useful framing need not be indispensable. The owner accepted an opening that oriented readers to checks before and after restarting a worker even though headings overlapped with it: “having the sentence there provides useful framing and helps the readability”.
+- Repetition is allowed when it improves clarity, readability, retention or effectiveness, including without adding a fact. Judge the whole artifact and intended reader function; neither removability nor a shorter alternative establishes padding.
+- CW need not win every comparison. Evidence that the loaded skill preserves already-successful behavior is useful; support equivalence or degradation with the actual paired outputs, not merely matching pass labels.
+- Score CW's promised contribution. In exclusion cases, correctness of another selected skill's authoring guidance is outside CW scoring. Incidental task-fidelity issues must not masquerade as CW failures.
+- The owner's four CW-19 observations concern the **post-CW output**, not defects in the source: the release engineer is never named; `CHG-4821` remains but is no longer introduced as a change ticket; the metric boundary is technically correct but harder to read and easy to confuse; and “Never add --force” floats without an explicit reference to the promotion command.
+- The metric concern is readability, not an incorrect threshold: interpreting “either limit is breached” requires reconstructing lag above 2 seconds versus mismatch at least 0.1%. Section placement offers some command context for the flag warning, but the owner found it insufficiently explicit for clear operational use.
+- `CHG-4821` is the fictional example change ticket in the task. The owner's `CMG-4821` spelling referred to that same example; no real ticket lookup is involved.
+
+The CW-19 comments must inform general, source-grounded preservation criteria, not become an exhaustive four-item checklist or require the original sentence structure.
+Evaluate every consequential source obligation and relationship, including portions never discussed as failures; exercise acceptable paraphrases and useful repetition as well as damaging omissions.
+A readability improvement elsewhere cannot silently cancel a material local loss.
+
+### Derivation and review checkpoints
+
+- [x] Record the approved CW-02/CW-19 scope and owner feedback, and prepare a source-only handoff packet.
+- [ ] For CW-02, state the CW question, intended reader/use, applicable specification promises, explicit exclusions and evidence limits. Derive criteria with observable pass/fail boundaries and source mappings without opening its old rubric or results.
+- [ ] Challenge those criteria with clearly labeled constructed acceptable/unacceptable examples and minimal variations: lost information or relationships, unsupported meaning, confusing compression, harmless paraphrase and useful framing/repetition. These calibrate scoring; they are not subject observations or reliability evidence. Record why each boundary follows from the source rather than preference.
+- [ ] Review the CW-02 criteria and both acceptable and unacceptable examples with the owner before applying them to retained outputs. Use that review to inform the CW-19 derivation, carrying all owner comments above and covering the full source. Review CW-19 criteria/examples at the same boundary.
+- [ ] After each scenario's criteria review, freeze that version and assess both retained conditions with prior grades withheld. Require evidence for every applicable pass and failure; missing evidence is not an automatic pass. Keep semantics, fidelity, readability and run judgeability distinct under the existing methodology.
+- [ ] Only after recording the new assessments, compare the old rubric and judgments. Explain intentional removals, previously missed obligations, changed outcomes and remaining uncertainty. Preserve both versions; any resulting criteria change gets a new version and renewed review, never an undisclosed adjustment to fit an output.
+- [ ] Review the two-case result with the owner before replacing current rubric files or extending the rebuild to the other CW scenarios.
+
+Use new scratch drafts and separate assessments; preserve current rubric files, accepted records, original/revised judgments, raw outputs, all retained scratch and DD logs/history.
+No new provider calls or subject runs are needed for the next step; existing batch approvals are exhausted.
+Do not edit skills, adopt candidates, promote evidence, merge, delete, expand other catalogs or alter hooks.
+Continue on primary `main`; retain `.worktrees/comprehensive-skill-cleanup` unchanged.
+Existing session authorization covers documentation preparation and commit/push; review checkpoints govern scoring application and rollout.
+
+The source-only packet is `/private/tmp/cw-scoring-rebuild-gep1e4ek`; start with its `START-HERE.md`.
+It contains exact copies with provenance hashes, plus this handoff; relative links inside copied sources still refer to their original repository homes and are not directions to read withheld material.
+If a copied source is absent or differs from its recorded hash, recover the exact bytes from the recorded revision or original source before deriving criteria; do not silently use a newer contract.
+The packet is local convenience, not a cross-device backup: this section and its linked repository sources retain the approved work contract.
+Later, after criteria review, locate retained CW-02 raw evidence in `/private/tmp/skilltest-cw-structure-7fbp_ugd` and CW-19 in `/private/tmp/skilltest-cw-final-p2sc4e3n`; select actual tasks/outputs and necessary traces without reading assessment cells or worksheets first.
+Missing retained evidence blocks that assessment, not the source-grounded derivation; never recreate observations by an unapproved provider call.
 
 ## Pilot relevance audit and current scope
 
