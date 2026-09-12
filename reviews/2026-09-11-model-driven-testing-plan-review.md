@@ -92,4 +92,18 @@ The documentation reset is being preserved separately from the old untracked tes
 The source-preservation and link checks passed, and the hook suite passed with 263 passed and 3 skipped.
 External reviewer acceptance and owner confirmation of the candidate/limits remain open; the earlier internal PASS below is not their substitute.
 
+## Response to Claude's third external review
+
+The external review closes the structural objections. Its new resource and preservation concerns are addressed within the existing six stages.
+Across the three rounds, no single correction would close all findings: the first identified missing safeguards, the second conflicting execution structures, and the third allocation timing and incomplete storage specifications. This pass fixes the resource/storage class without introducing another workflow.
+
+The budget concern is accepted as a feasibility risk, not a demonstrated impossibility: three properties do not require three separate cases, the comparison's third condition is conditional, and observed differences can be reported without claiming a stable variability estimate.
+Stage 1 now requires the allocation table before case selection. Proposed pools remain 60 total (40 subject, 12 evaluator, 4 authoring, 4 retry), with protected comparison capacity and no automatic transfers.
+The proposed time limit is 20 active hours, excluding documented owner-response waits; candidate and budget approval remain pending.
+
+Private primary and backup locations must be canonical absolute paths, and every backup must pass file/hash verification before dispatch continues. Both copies are excluded from author access.
+Project navigation now names the planned study directory and private stores. The spec no longer duplicates candidate progress, and the plan explicitly preserves entire development bundles, including raw streams, while keeping reserved bundles out of repository history.
+The temporary packet has a verified local snapshot with a versioned manifest; its scratch payload is excluded from Git. The eight abandoned v2 inputs are archived byte-for-byte for removal from the active paths after their archive commit is verified.
+These are the implementation responses; external acceptance is still pending.
+
 DD-VERDICT: PASS

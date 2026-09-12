@@ -2,7 +2,6 @@
 
 Status: current design specification for authorized preparation, under external review.
 Follow these requirements when preparing a study; authority to run providers, rewrite a skill or adopt a change comes from the recorded owner decisions in the execution plan and study protocol.
-No candidate skill has been selected for this framework.
 The [fresh testing plan](../2026-09-11-model-driven-skill-testing.md) owns execution order, progress and the next action.
 
 ## Goal and starting point

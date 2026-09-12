@@ -26,36 +26,39 @@ This plan owns progress; the spec owns general rules; the protocol owns study-sp
 On resumption, use recorded decisions and evidence to select the next incomplete action; do not repeat settled approvals or infer authorization from a checked box.
 
 Historical material stays in place with its abandonment notices.
-Snapshot `/private/tmp/cw-scoring-rebuild-gep1e4ek/` to `skill-validation/archive/local-cw-scoring-rebuild-2026-09-11/` and verify the inventory before any source removal; missing files are recorded as missing.
+The [preservation record](../skill-validation/archive/local-cw-scoring-rebuild-2026-09-11/README.md) indexes a verified local snapshot of `/private/tmp/cw-scoring-rebuild-gep1e4ek/` and the eight archived CW-17/CW-18 inputs; the scratch payload stays outside Git, while the inputs and manifest are versioned.
 A broader archival reorganization is outside this study.
 
 ## Proposed limits and information boundaries
 
-**Proposed outer limit: 60 study provider invocations and five calendar days from the recorded start of Stage 1.**
+**Proposed outer limits: 40 subject, 12 evaluator, 4 authoring and 4 retry invocations (60 total), plus 20 hours of active study work.**
 The owner must confirm or revise this proposal before the study starts; no calls are authorized now.
-The time limit includes preparation and review. Calls include subjects, evaluators, calibration, authoring/development invocations, final comparisons and retries.
-The protocol may allocate less, and must reserve calls for rewrite/comparison before spending on baseline refinement.
+Track active sessions from Stage 1, including preparation, review and model-run waits; exclude recorded periods awaiting owner input.
+Stage 1's allocation table must fit pilot, baseline, comparison, calibration and development within these separate pools before Stage 2 chooses cases and repetitions.
+Protect the comparison allocation: evaluation repairs cannot consume subject/authoring capacity, and every retry uses the retry pool. No automatic transfers or extensions are allowed.
 At either limit, stop collection and close with the supported decision or uncertainty. Inspect which framework steps consumed effort and remove or combine steps that did not support the decision before proposing further work; do not silently extend the limit or weaken correctness criteria.
 
-Keep reserved cases, reference answers and revealing results in a separately backed-up sibling store, `../skill-study-private/sweeping-stale-references/`, outside this repository and its Git history.
+Keep reserved cases, reference answers and revealing results in `../skill-study-private/sweeping-stale-references/`, with verified copies in `../skill-study-backups/sweeping-stale-references/`, outside this repository and its Git history.
+Stage 1 records both absolute paths resolved from the canonical project checkout, not a worktree's working directory. These local copies protect against loss of a working copy, not loss of the host.
 Record their identities and storage references in an evaluator-only index; give the author only the development protocol and permitted evidence.
-A fresh author must use an isolated input workspace with filesystem/tool permissions that prevent reading the private store or the evaluator's checkout; verify those restrictions before claiming unexposed transfer evidence.
+A fresh author must use an isolated input workspace with filesystem/tool permissions that prevent reading either private copy or the evaluator's checkout; verify those restrictions before claiming unexposed transfer evidence.
 A different directory or branch alone is insufficient. If isolation cannot be established within the budget, classify affected cases as development evidence and disclose the limit.
 
 ## Stage 1: agree on the skill and its contract
 
 - [x] Recommend `sweeping-stale-references` as the first candidate: fixtures can expose required changes, intentional historical references and unrelated matches with checkable expected outcomes.
-- [ ] Confirm the candidate and outer limits with the owner, record the study start/deadline, and open its protocol.
+- [ ] Confirm the candidate and outer limits with the owner, record the study start and active-time accounting, and open its protocol.
 - [ ] Read the complete skill, relevant dependencies and installed `writing-skills` testing guidance; record versions and missing capabilities before dependent work.
 - [ ] Derive intended behavior, exclusions, ownership and observable evidence from those sources. Review the contract and unresolved interpretations with the owner.
-- [ ] Inspect the runner paths needed for this candidate and preserve the known scratch evidence. Distinguish code/document inspection from live qualification.
+- [ ] Write the phase-by-role allocation table, with feasible case/repetition and evaluator-batch assumptions, protected comparison capacity and repair reserves. Declare whether the affordable repetitions support a variability estimate or only descriptive observations; otherwise report variability as not estimable.
+- [ ] Inspect the runner paths needed for this candidate. Distinguish code/document inspection from live qualification.
 
-**Complete when:** the protocol identifies the exact original, the agreed contract, the study limits and the capabilities requiring pilot verification.
+**Complete when:** the protocol identifies the exact original, agreed contract, feasible allocation, absolute storage paths and capabilities requiring pilot verification.
 The recommendation is already made; a survey of all nine skills is not a prerequisite.
 
 ## Stage 2: define representative tests and assessment
 
-- [ ] Prepare a small set of distinct cases covering required reconciliation, correct preservation and complete accounting; map each assessed property to the contract and evidence.
+- [ ] Prepare cases covering reconciliation, preservation and accounting within Stage 1's allocation; one case may exercise multiple properties. Map each assessed property to the contract and evidence.
 - [ ] Define source-supported expected outcomes, valid alternatives and failure/insufficient-evidence boundaries. Counting replacements alone does not establish correct triage or preservation.
 - [ ] Designate development and reserved cases before calibration or pilot exposure. Keep reference answers out of subject inputs and model-evaluator inputs when testing evaluator accuracy.
 - [ ] Select deterministic checks for properties they fully establish, and model judgments for the remaining questions. Have the model assess known outcomes and compare its reasoning and verdicts with independently checked references.
@@ -78,7 +81,7 @@ For every conditional safeguard, record its implementation or its evidence limit
 
 - [ ] Run the original-skill and no-target-skill conditions under the frozen protocol, recording which companions and surrounding instructions remain in the control.
 - [ ] Assess raw evidence with the declared checks and fresh model contexts. Conceal condition labels using the mechanism established in Stage 3, or apply its recorded limitation.
-- [ ] Report per-case outcomes, evaluator agreement with checked references, variability, costs and coverage limits. Inspect evidence supporting passes as well as failures.
+- [ ] Report per-case outcomes, evaluator accuracy, costs and observed variation; apply Stage 1's declared limit on variability estimation. Inspect evidence supporting passes as well as failures.
 - [ ] Resolve defective tests or criteria through a versioned amendment applied consistently across affected conditions; preserve prior records and recollect only where necessary and authorized.
 - [ ] Present supported rewrite opportunities and agree on an objective, or proceed to closure retaining the original.
 
@@ -105,11 +108,12 @@ A successful no-skill control is useful evidence, not a reason to invent a failu
 ## Evidence and version control
 
 After every invocation stops writing, copy the entire bundle to durable study storage, verify file identities and index its original/preserved locations before the next dispatch.
-Keep reserved bundles in the private store. Preserve raw contents and historical absolute paths; the index resolves their new locations.
+Keep reserved bundles in the private store; verify each backup against the primary's file/hash inventory before the next dispatch. Record successful verification and both absolute locations in the private index.
+Preserve raw contents and historical absolute paths; the index resolves their new locations.
 Stop dispatch if preservation fails. Retain unsuccessful attempts; a runner completion status is not a behavioral pass.
 The run index accounts for case, condition, repetition, attempts, configuration identity, authorization and remaining call budget, so a later agent can resume without duplication.
-Commit the reset and reviewed protocol before measured collection; preserve reviewed development evidence in Git at stage boundaries and back up private evidence separately.
-Keep unrelated old test-input changes separate. Do not add a tool unless a demonstrated mechanical need justifies its interface and focused tests.
+Commit the reset and reviewed protocol before measured collection. At stage boundaries, commit each complete reviewed development bundle, including inputs, workspace state, stdout/stderr, final output, logs and result metadata; use its file inventory as the completeness check.
+Reserved bundles and revealing assessments stay entirely in the verified private stores, never in public Git history. Do not add a tool unless a demonstrated mechanical need justifies its interface and focused tests.
 
 ## Current next action
 

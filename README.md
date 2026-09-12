@@ -66,11 +66,9 @@ The hook stack (under `skills/disciplined-development/hooks/`) is documented in 
 [`hooks/README.md`](skills/disciplined-development/hooks/README.md); config schema in
 [`hooks/dd-config.md`](skills/disciplined-development/hooks/dd-config.md).
 
-Packaged scenarios and retained validation records live in
-[`skill-validation/`](skill-validation/README.md).
-They support repeatable skill testing; historical current-skill observations are
-distinct from the no-skill RED controls required for authoring.
-These are development records, not part of the installed bundle.
+Historical scenarios and validation records remain in [`skill-validation/`](skill-validation/README.md) under the abandoned-process notices.
+New study protocols and development evidence will live in `skill-studies/`; these are non-shipped development records.
+Reserved tests and verified backups stay outside this repository and the author's accessible environment, using absolute paths recorded under the [study storage rules](plans/2026-09-11-model-driven-skill-testing.md#proposed-limits-and-information-boundaries).
 
 [`skill-validation/runner/`](skill-validation/runner/) is also non-shipped: a
 small `skilltest run CONFIG` CLI for one retained, locally configured skill-test

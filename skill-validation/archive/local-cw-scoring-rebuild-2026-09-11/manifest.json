@@ -1,0 +1,257 @@
+{
+  "status": "abandoned historical process; not current execution authority",
+  "scratch_source": "/private/tmp/cw-scoring-rebuild-gep1e4ek",
+  "scratch_storage": "scratch-snapshot/ (local-only, excluded from Git)",
+  "scratch_files": {
+    "CONTINUE-CLEAN.md": {
+      "bytes": 16541,
+      "sha256": "eb82bcc6773e22f1a76250d677bc6eaf10aadbeb0233849713652cab1302b421"
+    },
+    "CONTINUE-REVIEW.md": {
+      "bytes": 5395,
+      "sha256": "e2a734ec4c626c7b92fef69d8e5e89d49a48704a3ec56e1554c7ad4ece9cc3d7"
+    },
+    "START-HERE.md": {
+      "bytes": 8715,
+      "sha256": "867c69dfc6e4c760a2473aedefef07e1b7e8528829ebf3cfdbf60cbacbd06e7b"
+    },
+    "abandoned-docs-hooks.txt": {
+      "bytes": 352,
+      "sha256": "35699edc9a48db7ac61551729a2628ab468261fe863f55f627cc6c813b8a1c4d"
+    },
+    "abandoned-docs-insertions.json": {
+      "bytes": 32105,
+      "sha256": "39bc2cab48adfe413e034ae4922135987fe3ce736e5ae8cd1ef7920aba97a667"
+    },
+    "abandoned-docs-inventory.json": {
+      "bytes": 6500,
+      "sha256": "689fec9e69082130e14ca41052e314e84736177d07f43c18433bb564422b6c94"
+    },
+    "abandoned-docs-review.md": {
+      "bytes": 31,
+      "sha256": "491cf8f97d8b188e2c364774303191e263af295b9d4e036ef4b598cbf9c73d8d"
+    },
+    "abandoned-handoff-insertions.json": {
+      "bytes": 1310,
+      "sha256": "6c6a105a29431d52dae562d46878083304e9ae1068dbeaaa15a8c7d53732d1d2"
+    },
+    "build-cw19-examples.py": {
+      "bytes": 15784,
+      "sha256": "627175d72d8c594698ace0ecae9ef731fb37a748c8e21d73721c2b547eb5d053"
+    },
+    "build-v2-draft.py": {
+      "bytes": 14678,
+      "sha256": "527968798972b64e3746e65641c26492852f6d365d3f383fd620e35be76fc5d2"
+    },
+    "consolidated-plan-hooks.txt": {
+      "bytes": 352,
+      "sha256": "9425dc4a381c1b0d1f5148c7dbc581f6aa0d40a3a4cc4bd9745dccd313c369cb"
+    },
+    "consolidated-plan-local-review.md": {
+      "bytes": 31,
+      "sha256": "491cf8f97d8b188e2c364774303191e263af295b9d4e036ef4b598cbf9c73d8d"
+    },
+    "cw-02-constructed-a-v2.md": {
+      "bytes": 775,
+      "sha256": "b74bd8875d4fe0f616bf670077e537a2459b4ecc5edd86496c96823438229d21"
+    },
+    "cw-02-constructed-b-v2.md": {
+      "bytes": 710,
+      "sha256": "eba8909c2bbecb67fcd0a4b28509a436ba29c5a6bd159786cfc87971882e57de"
+    },
+    "cw-02-constructed-c-v4.md": {
+      "bytes": 796,
+      "sha256": "4fb206e9f96568e37a0dc90b53e62cd1fb51781e49229eecbe90d0f638be4959"
+    },
+    "cw-02-counts-v2.md": {
+      "bytes": 83,
+      "sha256": "bc2c6e89caf8bfa247c8e9c36ccdb559b373dbd1d22c3952d5cf1bcc0dd3f654"
+    },
+    "cw-02-criteria-v1-draft.md": {
+      "bytes": 23374,
+      "sha256": "e8738ddf045b18078bf850f57d3e7e4f26d63f81960e4042c95f4ad1a53c0bde"
+    },
+    "cw-02-criteria-v2-draft.md": {
+      "bytes": 18555,
+      "sha256": "5b1a96dc19e1a06a963e133b0b62343214041ac08349f31b0e780affffcc1792"
+    },
+    "cw-02-criteria-v3-draft.md": {
+      "bytes": 19401,
+      "sha256": "e996f12db66fd02df300ae60b10abfa197d7105d20fc2f7444465e9581564fa8"
+    },
+    "cw-02-criteria-v4-draft.md": {
+      "bytes": 22594,
+      "sha256": "a00448533e66e0a0c9bb47482593ddb0547b96471e891c28a5cd76967f8003c1"
+    },
+    "cw-02-source-v2.md": {
+      "bytes": 959,
+      "sha256": "c26a7ebb981d0247e9da43e77b7f3937fe5bf441288c80d5ed813ebb53a50d50"
+    },
+    "cw-19-criteria-v1-draft.md": {
+      "bytes": 40510,
+      "sha256": "ac8f220a26e096969d54bbd0e21bbef8992c4cbbb6ac2c297e98cba6346b118a"
+    },
+    "cw-19-v1-source-review.md": {
+      "bytes": 2637,
+      "sha256": "df80c1d322142867b6152c8ab769647456d025c8033d6a65848569a03b38c313"
+    },
+    "cw-prompt-audit-config-map-v2.json": {
+      "bytes": 224326,
+      "sha256": "92491f1940dc2cfddeeb51e421e84722dbb3d9990b95c41168609095e66c3a11"
+    },
+    "cw-prompt-audit-config-map.json": {
+      "bytes": 20028,
+      "sha256": "cb9c28bc5f8871e703ef8b12e4f189cbdb1d4b6dff4c165c600362af64064928"
+    },
+    "cw-prompt-audit-inventory.json": {
+      "bytes": 12497,
+      "sha256": "059f7e59fbc1dad087339bcabd491f2d7c7aa1accda1cec1709cfa07fb709cca"
+    },
+    "cw-prompt-repairs.json": {
+      "bytes": 1599,
+      "sha256": "5e73b947afc4986306592cc0f9ec6541c5c18caa1412d715bba705fac72cf8eb"
+    },
+    "cw19-active-section-before.md": {
+      "bytes": 13684,
+      "sha256": "59b1be0c8b237456dc3ad4910fd57a963bca72d16d06804cf3ae9436ee2c56b8"
+    },
+    "cw19-plan-outside-section-hashes.json": {
+      "bytes": 162,
+      "sha256": "a19073b8a89ae706afb431879f06838e6be4635262e1cb528cab424554f871cf"
+    },
+    "first-study-proposal-hooks.txt": {
+      "bytes": 352,
+      "sha256": "1fe9fd4d65af3cb8a8594f1aed595825e562b16e409b9d98550ce3e41bb1b4a8"
+    },
+    "framework-handoff-hooks.txt": {
+      "bytes": 352,
+      "sha256": "a79bb169eaf8ded7805120701ec35123b75cba7642198a613e2a30237147c427"
+    },
+    "framework-handoff-review-round1.md": {
+      "bytes": 1233,
+      "sha256": "6b77514fbdee7b9387a039705b575bc5b63c49998c8baea50c465e6d37839592"
+    },
+    "framework-handoff-review-round2.md": {
+      "bytes": 31,
+      "sha256": "491cf8f97d8b188e2c364774303191e263af295b9d4e036ef4b598cbf9c73d8d"
+    },
+    "framework-review-hooks.txt": {
+      "bytes": 352,
+      "sha256": "9fd0105aba8b102bec1a638a82cc5b23da4e0f84f0cd6a0d27eca4712db159c2"
+    },
+    "framework-review-round1.md": {
+      "bytes": 1384,
+      "sha256": "6588de05798e4906ed84dd06eb2a9ea29571516d85d748c5b7d889b4e9cf5be7"
+    },
+    "framework-review-round2.md": {
+      "bytes": 31,
+      "sha256": "491cf8f97d8b188e2c364774303191e263af295b9d4e036ef4b598cbf9c73d8d"
+    },
+    "plan-before-consolidation.md": {
+      "bytes": 28872,
+      "sha256": "5f094e41ba2da1278292bd0eb3230d3fa09cd44c0944cc024578141307399608"
+    },
+    "prepare-v2.py": {
+      "bytes": 3461,
+      "sha256": "d5c4fe1efea61c7cf171dc4a5ed9ac89069dcc1eac8bfe9c0f35513bb89bcdc4"
+    },
+    "repair-prompt-cues.py": {
+      "bytes": 3182,
+      "sha256": "d6777a522eb6bed192dfc645082b0e52ced9ae7d0053838fa06aa7eaa3bc4f5f"
+    },
+    "reset-commit-files.json": {
+      "bytes": 3472,
+      "sha256": "5a69016b4c57b882ff0ecd2e038ac047aed5a958e03bb1c60d0d7018fef43ab3"
+    },
+    "reset-commit-message.txt": {
+      "bytes": 6442,
+      "sha256": "a94d39acc757d769472f62a1f45c3b88ae699b0ad269c87a66d8a9be4f1252ee"
+    },
+    "reset-commit-paths.txt": {
+      "bytes": 3184,
+      "sha256": "54dcb60bf0f7798bafcfb555aeaaf304eeabfd532d21deb163524650c0c678a8"
+    },
+    "review-contract-before-runbook-hashes.json": {
+      "bytes": 1015,
+      "sha256": "81541d67c465da4cd023d3b254d7e7de7107ab6eb7ef660b34b96b945a00cd20"
+    },
+    "review.md": {
+      "bytes": 971,
+      "sha256": "512d16ec069fb0f0aa4a15d72b89df4bf2f7f6da173316962800bc6cb9f99828"
+    },
+    "source-hashes.json": {
+      "bytes": 2082,
+      "sha256": "88a43442e45373fd1f1a533ce824c9dfeb1cfb7efb29b68d322b85a6b3013d7f"
+    },
+    "sources/plans/completed/specs/2026-09-02-skill-testing-methodology-design.md": {
+      "bytes": 23259,
+      "sha256": "0417afb90a2bff978c62a9d18a087a125cac8b5e13e3fac78ca1e73429603728"
+    },
+    "sources/plans/completed/specs/2026-09-06-skilltest-controlled-inputs-design.md": {
+      "bytes": 69691,
+      "sha256": "e2ae555e94bb643f513264025956cb5aa582c8900b60747f6c803c8ac8dc1a77"
+    },
+    "sources/plans/specs/2026-09-10-cw-baseline-specification.md": {
+      "bytes": 11966,
+      "sha256": "a81d0cef91ac729b258a82f94d6b7296b0b8f10ed6d904038da077dad6ed8380"
+    },
+    "sources/skill-validation/README.md": {
+      "bytes": 20378,
+      "sha256": "7ce862dd7421046ab7642b26b7438c572007529feafb33720e0a6d2f397b6351"
+    },
+    "sources/skill-validation/charter/core-contracts.md": {
+      "bytes": 18597,
+      "sha256": "763b8aeab1f0988024e5b6fdc53965606d08db6100e038197dff88214b564f7a"
+    },
+    "sources/skill-validation/pilot/cw-02/specification/prompt.md": {
+      "bytes": 1291,
+      "sha256": "7d05a7071a8b5633311c7c1c45b2186673575ac2bc3970542a1dc6fb3405cc3c"
+    },
+    "sources/skill-validation/pilot/cw-19/specification/prompt.md": {
+      "bytes": 2301,
+      "sha256": "f6acf72cf901651cb95614e38a99464848608f02b143513ae5a617c396251b2f"
+    },
+    "sources/skills/concise-writing/SKILL.md": {
+      "bytes": 5616,
+      "sha256": "4d12a2eb475c6b2ef57e2300c8c07af3f59c1e07b2b82695a3b7669eee1d6d72"
+    },
+    "verification.json": {
+      "bytes": 136,
+      "sha256": "36177d2c7020dad4a84ee6c7334410785b9ea47882438e2b006c8c7bed0ee94b"
+    }
+  },
+  "untracked_inputs": {
+    "skill-validation/pilot/cw-17/contract/prompt-v2.md": {
+      "archive_path": "untracked-inputs/skill-validation/pilot/cw-17/contract/prompt-v2.md",
+      "sha256": "b634ef2104d9ea8a5cf36e5827a58cec619783adbcff18b1fedf71611500e42a"
+    },
+    "skill-validation/pilot/cw-18/contract/prompt-v2.md": {
+      "archive_path": "untracked-inputs/skill-validation/pilot/cw-18/contract/prompt-v2.md",
+      "sha256": "282d8ad672e46eba665f8d0f62b664f02db8f4bbc2d7683966fd3d54256f75fb"
+    },
+    "skill-validation/pilot/efforts/medium/cw17-contract-v2.json": {
+      "archive_path": "untracked-inputs/skill-validation/pilot/efforts/medium/cw17-contract-v2.json",
+      "sha256": "d95567dd16c8c2385d4600927ae1a7353f154377ae12ca71decde8b3c4bc5e4d"
+    },
+    "skill-validation/pilot/efforts/medium/cw18-contract-v2.json": {
+      "archive_path": "untracked-inputs/skill-validation/pilot/efforts/medium/cw18-contract-v2.json",
+      "sha256": "4dc3231d65fcf99340cbd53a0465dd422836d5e61d2961e310b2fd4724d56f64"
+    },
+    "skill-validation/scenarios/concise-writing/cw-17/prompt-v2.md": {
+      "archive_path": "untracked-inputs/skill-validation/scenarios/concise-writing/cw-17/prompt-v2.md",
+      "sha256": "e314d75837175336c6981feb87ed0b53fc3cf2d3f55f11e521bcd2db2806dafe"
+    },
+    "skill-validation/scenarios/concise-writing/cw-17/test-v2.json": {
+      "archive_path": "untracked-inputs/skill-validation/scenarios/concise-writing/cw-17/test-v2.json",
+      "sha256": "6ec1b0632bf2de902298038c3b4aad8c1fd73c614ab638a8b6deee2fe3e7efe7"
+    },
+    "skill-validation/scenarios/concise-writing/cw-18/prompt-v2.md": {
+      "archive_path": "untracked-inputs/skill-validation/scenarios/concise-writing/cw-18/prompt-v2.md",
+      "sha256": "b97b2dd70b3c3b2f842f9db1eb75cc42cdee53bcb60f577dbc1a8d4e8f36d1e6"
+    },
+    "skill-validation/scenarios/concise-writing/cw-18/test-v2.json": {
+      "archive_path": "untracked-inputs/skill-validation/scenarios/concise-writing/cw-18/test-v2.json",
+      "sha256": "a68166a01a3d8a009ed0dc52dba0f7b0df263473f1700e82ab33c6811697cd40"
+    }
+  }
+}
