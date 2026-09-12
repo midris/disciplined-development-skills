@@ -125,3 +125,11 @@ Claude describes round 4 as its cold read, although fresh-context isolation is n
 The reference sweep updated current plan/review claims; prior review sections remain historical, and abandoned plans, runner history and unrelated fixture matches retain their existing scope. The general spec already assigns safeguard limitations, proportional evaluation and bounded dispatch to the study, so it requires no amendment.
 The owner's latest instruction limits this work to the plan and review record followed by proposed next steps. Candidate and limits remain pending confirmation; no protocol, fixtures, provider calls or skill edits are authorized by this update.
 Verification: hook suite (`python3 -m pytest -q` in `skills/disciplined-development/hooks`) — 263 passed, 3 skipped; document links resolve, six stages remain, and `git diff --check` passes. These are repository/document checks, not another external review or evidence of study effectiveness.
+
+## Stage 1 transition — 2026-09-12
+
+The owner subsequently accepted preparation for `sweeping-stale-references`, with limits provisional until the allocation walkthrough, and requested Sol low or Terra medium for initial process checks.
+The [study protocol](../skill-studies/sweeping-stale-references/protocol.md) records the selected Sol-low pilot setting, source identities, proposed contract/control and allocation, installed writing-skills requirements and runner inspection.
+The file-by-file fixture constraint is confirmed in the loader and workspace implementation; no new preparation tool is justified yet.
+The protocol surfaces the parent's missing-companion conflict and unqualified filesystem isolation before test design, rather than treating them as collection bookkeeping.
+This is implementation of Stage 1 preparation, not another external review. Contract and limit acceptance, test design and provider dispatch remain pending.

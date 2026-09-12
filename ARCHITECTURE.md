@@ -71,7 +71,7 @@ See [installation instructions](README.md#install) for usage and overwrite behav
 The [fresh framework specification](plans/specs/2026-09-11-model-driven-skill-testing-framework.md) proposes the testing responsibilities; the [current plan](plans/2026-09-11-model-driven-skill-testing.md) owns execution order and decisions.
 They retain checked-in skills and existing tooling as the foundation; the previous testing frameworks and pending workflows are abandoned.
 The new documents describe the direction for testing work, not an implemented runner redesign.
-The planned `skill-studies/` directory holds non-shipped protocols and development evidence; reserved material and verified backups use private stores outside the repository.
+The `skill-studies/` directory holds non-shipped protocols and development evidence; reserved material and verified backups use private stores outside the repository.
 The [study plan](plans/2026-09-11-model-driven-skill-testing.md#proposed-limits-and-information-boundaries) specifies the storage boundary and requires canonical absolute paths in each protocol, including worktree executions.
 
 [`skill-validation/runner/`](skill-validation/runner/) is separate development

@@ -1,0 +1,88 @@
+{
+  "captured_at": "2026-09-12",
+  "repository_revision": "53a06ff4e2fcefb3c7706565bebe07d88e2782ea",
+  "superpowers_version": "6.3.0",
+  "scope": "Stage 1 source inspection, not a frozen subject input manifest",
+  "files": [
+    {
+      "path": "/Users/simon/work/personal/disciplined-development-skills/skills/sweeping-stale-references/SKILL.md",
+      "bytes": 7689,
+      "sha256": "d6812c33cae026807bbb3ebe851d93b60b513dd87ea5efd98aea28f5c02f9157"
+    },
+    {
+      "path": "/Users/simon/work/personal/disciplined-development-skills/skills/disciplined-development/SKILL.md",
+      "bytes": 13112,
+      "sha256": "1151a7575a5b6f72e007229c97efdb7a829695d08e8f44450d0d71b232e75dec"
+    },
+    {
+      "path": "/Users/simon/work/personal/disciplined-development-skills/skills/disciplined-research/SKILL.md",
+      "bytes": 9400,
+      "sha256": "a5c4079e5aa21651ecd39b09e3fb2d9a58f4a1f3b99354b3b6927b2d44c6fb50"
+    },
+    {
+      "path": "/Users/simon/work/personal/disciplined-development-skills/skills/writing-explicit-rationale/SKILL.md",
+      "bytes": 9181,
+      "sha256": "97eb06c649c194e8819b4dff68b808eda4ec7c948a6ead518da247daf31d6cfe"
+    },
+    {
+      "path": "/Users/simon/.codex/plugins/cache/claude-plugins-official/superpowers/6.3.0/.claude-plugin/plugin.json",
+      "bytes": 497,
+      "sha256": "d0d56f9f3a6adbf341d5d49850f63def17bfb7e9a39704b517745b2c554498c3"
+    },
+    {
+      "path": "/Users/simon/.codex/plugins/cache/claude-plugins-official/superpowers/6.3.0/skills/writing-skills/SKILL.md",
+      "bytes": 26360,
+      "sha256": "d34db5c8aed6a4e0440132bd0613aace70a693ec7819d5637ad77481d8e10d1b"
+    },
+    {
+      "path": "/Users/simon/.codex/plugins/cache/claude-plugins-official/superpowers/6.3.0/skills/writing-skills/testing-skills-with-subagents.md",
+      "bytes": 12558,
+      "sha256": "c711346852c911b24a84aa161e0cff06a4cd7f4e2fa9e9c0a266cead5afcbade"
+    },
+    {
+      "path": "/Users/simon/.codex/plugins/cache/claude-plugins-official/superpowers/6.3.0/skills/test-driven-development/SKILL.md",
+      "bytes": 9015,
+      "sha256": "bf1b8216e523851a411e91d429a7c1c2a173e79d88957bc78e348218d50edd54"
+    },
+    {
+      "path": "/Users/simon/work/personal/disciplined-development-skills/skill-validation/runner/README.md",
+      "bytes": 22149,
+      "sha256": "5d37bb25b66142332c5ffc2ab942032446cc9e162b09342c1423b84438705aaf"
+    },
+    {
+      "path": "/Users/simon/work/personal/disciplined-development-skills/skill-validation/runner/pyproject.toml",
+      "bytes": 473,
+      "sha256": "a23de4a8c95ebe9c675585e54ec4d50b3e6b4d21a0d219a6107f635de9977b63"
+    },
+    {
+      "path": "/Users/simon/work/personal/disciplined-development-skills/skill-validation/runner/src/skilltest/config.py",
+      "bytes": 6549,
+      "sha256": "10e566f2bc8a79bc7bc1a55f4d86c21adcb4d666b573e6ea500f8b82f8309e76"
+    },
+    {
+      "path": "/Users/simon/work/personal/disciplined-development-skills/skill-validation/runner/src/skilltest/workspace.py",
+      "bytes": 4254,
+      "sha256": "982d28162cd2e6344faabab88fabcba6eba105316b3f54e041a969fdc2b39fb9"
+    },
+    {
+      "path": "/Users/simon/work/personal/disciplined-development-skills/skill-validation/runner/src/skilltest/providers.py",
+      "bytes": 5147,
+      "sha256": "ffe8453b6c7e3c657d2d5b09daf1fb2fc6650dd537eb2e6f9a9c5e04d1db0bf0"
+    },
+    {
+      "path": "/Users/simon/work/personal/disciplined-development-skills/skill-validation/runner/src/skilltest/codex_runtime.py",
+      "bytes": 3649,
+      "sha256": "3c187663e70c23fd4b4576792826a2281d96b50ac1e0992ada64e40f0776ccbe"
+    },
+    {
+      "path": "/Users/simon/work/personal/disciplined-development-skills/skill-validation/runner/src/skilltest/claude_runtime.py",
+      "bytes": 4481,
+      "sha256": "723cff06206fd5fa131c977d64c5bc994ec49ea44ebfbc605b4673022562d0a2"
+    },
+    {
+      "path": "/Users/simon/work/personal/disciplined-development-skills/skill-validation/runner/src/skilltest/runtime.py",
+      "bytes": 7307,
+      "sha256": "7f6a346b1d5cf8cbe38b80f77df1d073f00accc5685ae3ab20030d2129fe4c22"
+    }
+  ]
+}

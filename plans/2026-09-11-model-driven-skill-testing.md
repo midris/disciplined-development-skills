@@ -11,7 +11,7 @@
 Preparation and documentation work are authorized. Candidate selection, provider spending, a rewrite objective and adoption require the owner decisions identified below; no experiment or rewrite has begun.
 The spec governs how the study is designed. Neither document grants provider-run authorization.
 Claude's fourth review recommended moving to Stage 1, with one P2 and two P3 findings addressed below; its reported BLOCK remains the latest external verdict, not a PASS on these edits.
-The owner requested these documentation updates and a next-step proposal before proceeding. Stage 1 remains unstarted; candidate and limit confirmation remain pending.
+On 2026-09-12 the owner accepted the next steps and selected `sweeping-stale-references`. Stage 1 preparation is active; limits remain provisional until the contract/allocation walkthrough, before test design.
 
 ## Starting or resuming without conversation history
 
@@ -21,7 +21,7 @@ Use the [runner guide](../skill-validation/runner/README.md) for mechanics; its 
 Read installed workflow skills from the available catalog rather than relying on a previous installation path.
 
 The study workspace is `skill-studies/sweeping-stale-references/`.
-Its only new narrative document is `protocol.md`: it holds concrete decisions, versions, commands, artifact links, run accounting and the final conclusion, without another task checklist.
+Its only new narrative document is [protocol.md](../skill-studies/sweeping-stale-references/protocol.md): it holds concrete decisions, versions, commands, artifact links, run accounting and the final conclusion, without another task checklist.
 Fixtures, checkers, raw bundles and assessments are supporting artifacts linked from that record.
 This plan owns progress; the spec owns general rules; the protocol owns study-specific facts and decisions.
 On resumption, use recorded decisions and evidence to select the next incomplete action; do not repeat settled approvals or infer authorization from a checked box.
@@ -33,7 +33,7 @@ A broader archival reorganization is outside this study.
 ## Proposed limits and information boundaries
 
 **Proposed outer limits: 40 subject, 12 evaluator, 4 authoring and 4 retry invocations (60 total), plus 20 hours of active study work.**
-The owner must confirm or revise this proposal before the study starts; no calls are authorized now.
+Use these provisional ceilings to prepare Stage 1's allocation; the owner confirms or revises them at the contract/allocation walkthrough before Stage 2. No provider calls are authorized now.
 Track active sessions from Stage 1, including preparation, review and model-run waits; exclude recorded periods awaiting owner input.
 Keep model latency inside the ceiling to bound actual study time and expose tooling costs. Budget for sequential execution initially, then replace estimates with pilot timings; do not assume all available calls must be used.
 Stage 1's allocation table must fit pilot, baseline, comparison, calibration and development within these separate pools before Stage 2 chooses cases and repetitions.
@@ -49,11 +49,12 @@ A different directory or branch alone is insufficient. If isolation cannot be es
 ## Stage 1: agree on the skill and its contract
 
 - [x] Recommend `sweeping-stale-references` as the first candidate: fixtures can expose required changes, intentional historical references and unrelated matches with checkable expected outcomes.
-- [ ] Confirm the candidate and outer limits with the owner, record the study start and active-time accounting, and open its protocol.
-- [ ] Read the complete skill, relevant dependencies and installed `writing-skills` testing guidance; record versions and missing capabilities before dependent work.
+- [x] Record the owner-selected candidate, study start and active-time accounting, and open its protocol. Keep limits provisional until the allocation is reviewed.
+- [x] Read the complete skill, relevant dependencies and installed `writing-skills` testing guidance; record versions and missing capabilities before dependent work.
 - [ ] Derive intended behavior, exclusions, ownership and observable evidence from those sources. Review the contract and unresolved interpretations with the owner.
-- [ ] Write the phase-by-role allocation table, with feasible case/repetition assumptions, evaluator batch composition, estimated preparation/run/review time, protected comparison capacity and repair reserves. Declare whether the affordable repetitions support a variability estimate or only descriptive observations; otherwise report variability as not estimable.
-- [ ] Inspect the runner paths needed for this candidate. Distinguish code/document inspection from live qualification.
+- [x] Write the phase-by-role allocation table, with feasible case/repetition assumptions, evaluator batch composition, estimated preparation/run/review time, protected comparison capacity and repair reserves. Declare whether the affordable repetitions support a variability estimate or only descriptive observations; otherwise report variability as not estimable.
+- [x] Inspect the runner paths needed for this candidate. Distinguish code/document inspection from live qualification.
+- [ ] Walk through the proposed contract, control context and feasible allocation with the owner; confirm the limits before designing tests.
 
 **Complete when:** the protocol identifies the exact original, agreed contract, feasible allocation, absolute storage paths and capabilities requiring pilot verification.
 The recommendation is already made; a survey of all nine skills is not a prerequisite.
@@ -124,5 +125,6 @@ Reserved bundles and revealing assessments stay entirely in the verified private
 
 ## Current next action
 
-Present the proposed Stage 1 work to the owner before proceeding: confirm `sweeping-stale-references` and the outer limits, then prepare the contract and feasible allocation for owner review before designing cases.
+Walk through the proposed contract, control context and provisional limits in the study protocol with the owner before designing cases. Source inventory, allocation arithmetic and runner inspection are prepared; contract/limit acceptance remains open.
+The owner selected Sol low for initial process checks (Terra medium is an alternative); the protocol keeps the five-repetition wording campaign conditional on reaching authoring, outside the initial pilot.
 The reset documents and abandonment notices are prepared; experimental stages remain incomplete.

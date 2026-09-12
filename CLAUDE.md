@@ -32,7 +32,7 @@ examples/                             # reference configs consumers copy (hooks 
 research/                             # non-shipped experiment tooling (replay harness + its smoke test)
 skill-validation/                     # non-shipped validation records (skills, commands, project rules)
 skill-validation/runner/              # non-shipped one-run skill-test CLI, offline tests, and operator guide
-skill-studies/                        # planned non-shipped study protocols and development evidence; see active plan
+skill-studies/                        # non-shipped study protocols and development evidence; see active plan
 tests/                                # installer-level tests
 plans/                                # active plans (created on demand)
 plans/specs/                          # active design specs

@@ -38,7 +38,7 @@ This history does not establish that every old test or tool failed.
 The conversation exposed repeated confusion between intended behavior, test validity and output judgment, including settled whole-document standards being reopened and constructed calibration examples being confused with measured results.
 The working diagnosis is that procedural expansion and repeated evaluation displaced progress toward a justified rewrite decision; this is an interpretation of the experience, not a measured attribution of cost to each cause.
 The proposed response is one bounded, written study through a skill decision, with source-grounded expectations, a fixed evaluation procedure, durable evidence and an explicit disposition when the effort limit is reached.
-The first-study plan makes that response concrete, with candidate and spending decisions explicitly pending; it does not authorize experiments.
+The first-study plan makes that response concrete and records candidate and spending decisions; it does not itself authorize experiments.
 
 ## Architecture: seven responsibilities
 
