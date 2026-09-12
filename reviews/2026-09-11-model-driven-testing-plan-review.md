@@ -211,3 +211,10 @@ One historical attribution correction: the HOME containment guard was already pr
 
 The observation about document growth is retained for Stage 6's existing review of which framework steps to remove or combine; it does not introduce another review round.
 The PASS applies to the reviewed commits, not these follow-up edits or unqualified model execution. The subsequent owner walkthrough accepted the outer ceilings and directed conceptual coverage review before scenario selection, with minimal initial real-model runs to establish the process. No model calls or skill changes occurred.
+
+## External review of 9058f4a
+
+The owner supplied Claude's **DD-VERDICT: PASS** and accepted the seven conceptual facets.
+Claude verified the storage-anchor sweep and time reconstruction; its observation that the allowed four-minute turn ran longer is handled by cumulative recomputation, not another additive allowance.
+The P3 about repeated Stage 3 checkboxes is addressed by a pilot-only status table: pilot configuration, authorization, check validation, execution qualification and retention are scoped to the two calls; whole-collection boxes remain open, and the measured-collection freeze cannot be closed by the pilot.
+The next external review should inspect the two actual bundles, including traces, Git history and functional/procedural evidence; no additional document review is scheduled.

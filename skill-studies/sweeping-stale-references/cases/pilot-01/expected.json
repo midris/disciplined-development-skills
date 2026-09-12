@@ -1,0 +1,91 @@
+{
+  "purpose": "Case-author expectations for process qualification; never supplied to subject models. No old rubric or model result is imported.",
+  "original_term": "cache_ttl",
+  "replacement_term": "max_age",
+  "value_seconds": 30,
+  "required_updates": [
+    {
+      "path": "README.md",
+      "original_lines": [
+        6
+      ],
+      "old_literal_count": 1
+    },
+    {
+      "path": "docs/configuration.md",
+      "original_lines": [
+        3
+      ],
+      "old_literal_count": 1
+    },
+    {
+      "path": "config/defaults.json",
+      "original_lines": [
+        1
+      ],
+      "old_literal_count": 1
+    },
+    {
+      "path": "tests/fixtures/cache.json",
+      "original_lines": [
+        1
+      ],
+      "old_literal_count": 1
+    },
+    {
+      "path": "scripts/cache-smoke.sh",
+      "original_lines": [
+        3
+      ],
+      "old_literal_count": 1
+    },
+    {
+      "path": ".github/workflows/cache.yml",
+      "original_lines": [
+        8
+      ],
+      "old_literal_count": 1
+    },
+    {
+      "path": "Makefile",
+      "original_lines": [
+        3
+      ],
+      "old_literal_count": 1
+    }
+  ],
+  "preserve": [
+    {
+      "path": "plans/completed/cache-migration.md",
+      "original_lines": [
+        3
+      ],
+      "outcome": "intentionally stale",
+      "reason": "Completed historical account of the earlier application interface."
+    },
+    {
+      "path": "vendor/acme_cache/defaults.py",
+      "original_lines": [
+        3
+      ],
+      "outcome": "false positive",
+      "reason": "Independently versioned third-party interface, not used by this application."
+    },
+    {
+      "path": "src/http_headers.py",
+      "original_lines": [
+        3
+      ],
+      "outcome": "false positive if encountered by a broader query",
+      "reason": "HTTP max-age directive is independent of the application setting."
+    }
+  ],
+  "known_old_literal_inventory": {
+    "total": 9,
+    "required_updates": 7,
+    "historical": 1,
+    "vendor": 1
+  },
+  "count_scope": "Original tracked project input locations only. Deduplicate repeated queries by path and location. Actual queries can legitimately find additional matches, including the new name; reconcile those to their own retained results, not to a forced total of nine.",
+  "acceptable_variation": "Equivalent functioning commands, JSON formatting and documentation wording are allowed. Retained literal matches or byte changes initiate inspection; they are not sufficient by themselves to assign a semantic verdict."
+}

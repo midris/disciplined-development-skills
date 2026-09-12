@@ -10,8 +10,8 @@
 **Authority and state:** This is the current plan for preparing the study; it replaces the previous nine-task plan and its separate six-stage proposal.
 Preparation and documentation work are authorized. Candidate selection, provider spending, a rewrite objective and adoption require the owner decisions identified below; no experiment or rewrite has begun.
 The spec governs how the study is designed. Neither document grants provider-run authorization.
-External reviews and responses are recorded in the [review record](../reviews/2026-09-11-model-driven-testing-plan-review.md); the latest supplied review of `463e0e2` and `cc978be` reported PASS with two non-blocking walkthrough items.
-On 2026-09-12 the owner selected `sweeping-stale-references`, settled the contract and accepted the outer ceilings while directing minimal initial real-model runs to establish the process. Stage 1 is complete; Stage 2 begins with conceptual coverage review, before inspecting prior scenarios for possible reuse.
+External reviews and responses are recorded in the [review record](../reviews/2026-09-11-model-driven-testing-plan-review.md); the latest supplied review of `9058f4a` reported PASS with one non-blocking clarification about pilot checkbox scope.
+On 2026-09-12 the owner selected `sweeping-stale-references`, settled the contract and accepted the outer ceilings while directing minimal initial real-model runs to establish the process. Stage 1 and conceptual coverage review are complete; one adapted pilot case is prepared. Broader Stage 2 coverage remains incomplete, and the two pilot configurations await dispatch approval.
 
 ## Starting or resuming without conversation history
 
@@ -68,12 +68,15 @@ The evaluator pool need not cover every subject run with a separate call: alloca
 
 ## Stage 2: define representative tests and assessment
 
-- [ ] Review the protocol's proposed facets and observation methods with the owner before choosing scenarios.
-- [ ] After conceptual coverage is agreed, inspect prior scenarios for fit. Reuse/adapt a suitable scenario under the current contract; create a new one where no good fit exists. Do not inherit old scores or methodology.
+- [x] Review the protocol's proposed facets and observation methods with the owner before choosing scenarios.
+- [x] After conceptual coverage is agreed, inspect prior scenarios for fit. Reuse/adapt a suitable scenario under the current contract; create a new one where no good fit exists. Do not inherit old scores or methodology.
+  Inspected the six existing SSR prompts and their fixture shapes. Adapt ssr-02's reviewer-triggered config rename into an executable repository for the process pilot; the old supplied inventory, rubric and accepted results are not subject inputs or scoring authority.
 - [ ] Prepare cases covering reconciliation, preservation and accounting within Stage 1's allocation; one case may exercise multiple properties. Map each assessed property to the contract and evidence.
+  Pilot 01 is prepared with an executable project, task, expected outcomes and paired configurations; broader case construction remains pending.
   Initial contribution cases present the trigger without directing the sweep or enumerating consumers; an explicit sweep request tests a separately identified execution question. Preserve clear task scope and permission to fix related files.
   Include at least one case with a plausible functional miss beyond the triggering reference, including latent consumers in config, CI or fixtures. This supplies an opportunity to observe scope expansion, not a requirement that the control fail.
 - [ ] Define source-supported expected outcomes, valid alternatives and failure/insufficient-evidence boundaries. Counting replacements alone does not establish correct triage or preservation.
+  Pilot-specific setup, functional and procedural criteria are recorded in its assessment artifact. No independent evaluator rubric is frozen yet.
   Map criteria to functional outcomes or procedure/mechanics, recording any overlap and the agreed failure consequence. Expose both dimensions in assessments; do not let format success offset an outcome failure or hide non-blocking procedural defects.
 - [ ] Designate development and reserved cases before calibration or pilot exposure. Keep reference answers out of subject inputs and model-evaluator inputs when testing evaluator accuracy.
 - [ ] Select deterministic checks for properties they fully establish, and model judgments for the remaining questions. Have the model assess known outcomes and compare its reasoning and verdicts with independently checked references.
@@ -83,6 +86,17 @@ Follow the spec's proportional evaluation rule; do not add model calibration for
 Separate process qualification from suite construction: prepare one non-reserved pilot case and its required checks first, then exercise Stage 3 on that subset before expanding the suite. Keep unbuilt coverage and unchecked assessment work visible; a successful process pilot does not complete Stage 2 or establish a baseline.
 
 ## Stage 3: qualify and freeze execution
+
+The checkboxes below describe the whole measured collection and stay open while only the pilot subset is prepared or exercised. Track pilot-only progress in the table; expanding cases, inputs, evaluator settings or runtime conditions requires checking the affected items again.
+
+| Stage 3 item | What the pilot can establish | Pilot status |
+|---|---|---|
+| Configurations and identities | Exact inputs and commands for the two pilot conditions only. | Prepared in the protocol and pilot manifest; verify again before dispatch. |
+| Authorization | Scope covering those exact two calls; no baseline, evaluator or extra pilot dispatch implied. | Pending |
+| Check validation/calibration | Checks used on the pilot case; unused semantic evaluators remain unqualified. | Existing runtime checks and inventory inspection exercised on five constructed variants; actual trace/accounting usability awaits the pilot. No model evaluator used yet. |
+| Execution qualification | Observed task feasibility, loading, evidence and control integrity for this setup; no reserved-case isolation claim. | Pending |
+| Bundle inspection/retention | First-bundle retention decision and verified copies for both pilot attempts. | Pending |
+| Freeze measured collection | Pilot findings inform this later step; the pilot itself cannot close it. | Not started |
 
 - [ ] Write exact configurations, input identities, provider/model/effort, commands, working directories, permissions, evidence checks and call allocation in the protocol before proposing dispatch.
 - [ ] Record authorization for the concrete pilot and evaluation calls; use existing authorization when it already covers them.
@@ -136,7 +150,7 @@ Reserved bundles and revealing assessments stay entirely in the verified private
 
 ## Current next action
 
-Review conceptual SSR coverage with the owner. Then inspect earlier scenarios for a fit and prepare one pilot case, adapting or creating it as needed. Keep the initial real-model runs minimal and use their evidence to establish the process before expanding coverage. Contract and outer limits are settled; current time accounting is in the protocol.
+Present the prepared pilot case and obtain exact-configuration approval for the two Sol-low calls, then preserve and inspect their bundles before expanding the suite. Conceptual coverage is accepted; pilot-only preparation and qualification status are tracked separately under Stage 3.
 Evaluator permission feasibility is established through the implemented read-only modes and local sandbox probes; exact evaluator configuration and model-run qualification remain Stage 3 work.
 The first study evaluates sweeping-stale-references alone against the same task without skill guidance; the earlier DD-present control is superseded. Exact input isolation remains a pilot requirement.
 The owner selected Sol low for initial process checks (Terra medium is an alternative); the protocol keeps the five-repetition wording campaign conditional on reaching authoring, outside the initial pilot.

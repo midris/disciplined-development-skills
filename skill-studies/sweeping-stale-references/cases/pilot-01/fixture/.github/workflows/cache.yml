@@ -1,0 +1,8 @@
+name: Cache smoke
+on: [push]
+jobs:
+  smoke:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - run: python3 src/cache.py --cache_ttl 30

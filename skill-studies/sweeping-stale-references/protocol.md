@@ -1,10 +1,10 @@
 # Sweeping stale references: study protocol
 
-Status: Stage 1 complete; Stage 2 conceptual coverage proposed for owner review, 2026-09-12.
+Status: Stage 1 complete; Stage 2 conceptual coverage accepted and pilot case preparation active, 2026-09-12.
 The owner selected `sweeping-stale-references`, authorized contract/allocation preparation and clarified that this skill should be evaluated independently.
 The behavioral contract and outer ceilings are agreed; exact execution setup remains to be presented before provider dispatch.
 Progress belongs to the [plan](../../plans/2026-09-11-model-driven-skill-testing.md); general requirements belong to the [spec](../../plans/specs/2026-09-11-model-driven-skill-testing-framework.md).
-No test cases, provider configurations, model observations or skill rewrites have been created.
+One executable pilot case and two provider configurations are prepared; no model observations or skill rewrites have been created.
 
 ## Sources and intended use
 
@@ -92,10 +92,10 @@ The previous Gate 4 setup and missing-companion exception are superseded and mus
 Pilot acceptance requires evidence that the original loaded the intended target, the control received no skill guidance or instruction to retrieve a missing skill, and both could perform the same task.
 Ambient guidance, inaccessible required task inputs or a setup-induced missing-skill stop invalidate that condition; repair the setup within authorization instead of scoring it as a behavioral failure.
 
-## Proposed conceptual coverage
+## Conceptual coverage
 
 Owner direction: agree on what to test and how before selecting scenarios. After that review, inspect earlier scenarios for a fit; adapt a suitable one or create a new one where coverage is missing. Old expectations and results are not inherited as authority.
-This is a facet proposal, not a scenario set or scoring rubric; no earlier scenarios have been inspected for this selection.
+The owner accepted these seven facets on 2026-09-12. They define conceptual coverage, not seven required cases or a complete scoring rubric.
 
 | Facet | What to exercise | How to observe it |
 |---|---|---|
@@ -110,6 +110,28 @@ This is a facet proposal, not a scenario set or scoring rubric; no earlier scena
 Facets may share cases; this does not require seven scenarios or seven initial runs.
 Start process qualification with one non-reserved case exposing scope expansion, triage, reconciliation and accounting. Paths and semantic drift can be covered in later cases if the first would become overloaded; untested facets remain explicit gaps.
 The initial real-model pilot asks whether inputs/skills are loaded as intended, tasks are feasible, traces and Git changes are retained, and separate functional/procedural judgments can be supported. It can expose case defects but does not establish coverage or stable skill effectiveness.
+
+## Prepared two-run process pilot
+
+The [pilot case](cases/pilot-01/assessment.md) adapts the earlier ssr-02 situation into real files and executable consumers; the [expected outcomes](cases/pilot-01/expected.json) and [local qualification record](cases/pilot-01/qualification.json) replace the old inventory/rubric.
+The first pass covers scope expansion, preservation, complete reconciliation and accounting. Remaining facets stay unbuilt; the [plan's pilot-status table](../../plans/2026-09-11-model-driven-skill-testing.md#stage-3-qualify-and-freeze-execution) scopes partial completion.
+Both configurations and all declared source files are identified in [manifest.json](cases/pilot-01/manifest.json). Configuration loading, prompt parity and byte-for-byte fixture preparation passed without provider invocation: 14 common inputs, plus only the target skill in the original condition.
+Five constructed fixture variants demonstrate task feasibility and limitations of runtime-only checks; 70 synthetic files are hash-verified in the primary and backup paths recorded by the qualification record. These are local tool observations, not model performance.
+
+Initial order is control, then original, one attempt each, using Codex `gpt-5.6-sol`, low effort, `workspace-write`, and the runner's 900-second per-call timeout. Installed Codex 0.154.0 and its executable hash match the prior permission qualification; no authentication or model availability check has been performed in this preparation.
+No model evaluator is dispatched in this first pair: the orchestrator inspects pilot mechanics and developmental criteria directly. Independent model judgments and calibration remain unqualified for later measured collection.
+
+Proposed exact commands, run from `/Users/simon/work/personal/disciplined-development-skills`; the namespaced temporary directory already exists:
+
+```sh
+TMPDIR=/private/tmp/ssr-process-pilot-20260912 skill-validation/runner/.venv/bin/python -m skilltest run skill-studies/sweeping-stale-references/cases/pilot-01/control.json
+TMPDIR=/private/tmp/ssr-process-pilot-20260912 skill-validation/runner/.venv/bin/python -m skilltest run skill-studies/sweeping-stale-references/cases/pilot-01/original.json
+```
+
+Authorization status: awaiting approval of these exact configurations and commands under the [runner guide](../../skill-validation/runner/README.md#owner-authorization). Host permission allows the Codex app-server to initialize; the provider's workspace sandbox remains enabled. The external provider receives the declared synthetic project/task inputs and, in the original condition, SSR.
+Before each dispatch verify the manifest and CLI identity; preserve each completed attempt's entire bundle with hash-verified primary and backup copies beneath the existing development stores at `pilot-01-runs/<run-id>/` before the next dispatch. Record source/destination paths and configuration identity in the run index.
+Inspect the first bundle's contents and size and record retention policy before any evidence commit. No raw model trace is committed by this proposal.
+Stop after the two attempts for process review; a setup failure, contamination, unreadable trace or preservation failure stops progression for diagnosis. No automatic retry, case mutation or additional model call is authorized by the outer ceiling.
 
 ## Authoring guidance and allocation
 
@@ -207,13 +229,13 @@ This preparation consumes active study time toward the accepted ceiling; recorde
 Dispatched study invocations so far: **0 subject, 0 evaluator, 0 authoring, 0 retry**.
 The orchestrator's preparation conversation and local tool calls consume active time, not provider-invocation slots; model assessments or authoring work must be accounted under their declared roles.
 
-Owner walkthrough: the contract and outer limits are settled. Review conceptual coverage before inspecting old scenarios or constructing cases.
+Owner walkthrough: the contract, outer limits and conceptual coverage are settled. Prepare the selected pilot case and concrete execution configurations.
 Independent use is settled; Stage 3 must still qualify the exact standalone input setup and permissions.
 
-Preparation accounting updated, 2026-09-12: **book 65 active minutes through this coverage proposal**, leaving **18 hours 55 minutes** under the accepted 20-hour ceiling. This replaces, rather than adds to, earlier bookings.
+Preparation accounting updated, 2026-09-12: **book 82 active minutes through pilot preparation**, leaving **18 hours 38 minutes** under the accepted 20-hour ceiling. This replaces, rather than adds to, earlier bookings.
 Source: the current task's local log at `/Users/simon/.codex/sessions/2026/09/11/rollout-2026-09-11T17-59-42-01a0927b-cef5-7db0-8a30-c76c5b1ae838.jsonl`; only boundary timestamps were extracted, not conversation contents.
-Reconstruction sums the union of `task_complete` and `turn_aborted` intervals since Stage 1 began: 36 closed intervals from 04:22:08 through 14:01:46 UTC total **3,496 seconds (58.27 minutes)**, including local execution and model/tool waits inside turns while excluding inter-turn owner-wait.
-Retain the original two-minute opening allowance, allow four minutes for the current turn beginning at 14:05:24 UTC, and round up to 65 minutes. The current-turn allowance and rounding are estimates; this is reconstructed orchestrator active time, not independently measured owner/Claude review effort.
+Reconstruction sums the union of `task_complete` and `turn_aborted` intervals since Stage 1 began: 38 closed intervals total **3,769 seconds (62.82 minutes)**, including local execution and model/tool waits inside turns while excluding inter-turn owner-wait.
+The current turn began at 14:15:23 UTC and adds 876 seconds at the 14:29:59 checkpoint. Retain the original two-minute opening allowance, allow two minutes for completion, and round the resulting 81.42 minutes up to 82. The closing allowance and rounding are estimates; this is reconstructed orchestrator active time, not independently measured owner/Claude review effort.
 At the next checkpoint, recompute cumulative closed-turn intervals plus the opening allowance and round up; do not add already counted turns or restore the superseded checkpoints. If the completed current turn exceeds the booking, correct the total before approving the remaining budget.
 
 Relationship-correction verification: all **21** source identities match, including all nine DD skills at the recorded revision; local links resolve and `git diff --check` passes.

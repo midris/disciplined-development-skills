@@ -1,0 +1,752 @@
+{
+  "purpose": "Offline qualification of pilot fixture and existing checks; runtime checks alone do not establish semantic correctness or audit compliance.",
+  "created_at": "2026-09-12T14:23:09.716946+00:00",
+  "variants": [
+    {
+      "variant": "initial",
+      "source": "Constructed by the study orchestrator using the current case expectations; not a model observation.",
+      "path": "/private/tmp/ssr-process-pilot-20260912/offline-qualification/initial",
+      "commands": [
+        {
+          "argv": [
+            "python3",
+            "-m",
+            "unittest",
+            "discover",
+            "-s",
+            "tests"
+          ],
+          "exit_code": 1,
+          "stdout": "",
+          "stderr": "EE\n======================================================================\nERROR: test_default_settings (test_cache.CacheSettingsTests.test_default_settings)\n----------------------------------------------------------------------\nTraceback (most recent call last):\n  File \"/private/tmp/ssr-process-pilot-20260912/offline-qualification/initial/tests/test_cache.py\", line 12, in test_default_settings\n    self.assertEqual(load_settings(ROOT / \"config/defaults.json\"), 30)\n                     ~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/private/tmp/ssr-process-pilot-20260912/offline-qualification/initial/src/cache.py\", line 9, in load_settings\n    value = json.loads(Path(path).read_text())[\"max_age\"]\n            ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^\nKeyError: 'max_age'\n\n======================================================================\nERROR: test_example_settings (test_cache.CacheSettingsTests.test_example_settings)\n----------------------------------------------------------------------\nTraceback (most recent call last):\n  File \"/private/tmp/ssr-process-pilot-20260912/offline-qualification/initial/tests/test_cache.py\", line 15, in test_example_settings\n    self.assertEqual(load_settings(ROOT / \"tests/fixtures/cache.json\"), 30)\n                     ~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/private/tmp/ssr-process-pilot-20260912/offline-qualification/initial/src/cache.py\", line 9, in load_settings\n    value = json.loads(Path(path).read_text())[\"max_age\"]\n            ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^\nKeyError: 'max_age'\n\n----------------------------------------------------------------------\nRan 2 tests in 0.001s\n\nFAILED (errors=2)\n"
+        },
+        {
+          "argv": [
+            "sh",
+            "scripts/cache-smoke.sh"
+          ],
+          "exit_code": 2,
+          "stdout": "",
+          "stderr": "usage: cache.py [-h] [--max_age MAX_AGE] [--config CONFIG]\ncache.py: error: unrecognized arguments: --cache_ttl 30\n"
+        },
+        {
+          "argv": [
+            "make",
+            "smoke"
+          ],
+          "exit_code": 2,
+          "stdout": "python3 src/cache.py --cache_ttl 30\n",
+          "stderr": "usage: cache.py [-h] [--max_age MAX_AGE] [--config CONFIG]\ncache.py: error: unrecognized arguments: --cache_ttl 30\nmake: *** [smoke] Error 2\n"
+        },
+        {
+          "argv": [
+            "python3",
+            "src/cache.py",
+            "--cache_ttl",
+            "30"
+          ],
+          "exit_code": 2,
+          "stdout": "",
+          "stderr": "usage: cache.py [-h] [--max_age MAX_AGE] [--config CONFIG]\ncache.py: error: unrecognized arguments: --cache_ttl 30\n"
+        }
+      ],
+      "preserved_bytes": {
+        "plans/completed/cache-migration.md": true,
+        "vendor/acme_cache/defaults.py": true,
+        "src/http_headers.py": true
+      },
+      "remaining_old_literal_locations": [
+        {
+          "path": ".github/workflows/cache.yml",
+          "lines": [
+            8
+          ]
+        },
+        {
+          "path": "Makefile",
+          "lines": [
+            3
+          ]
+        },
+        {
+          "path": "README.md",
+          "lines": [
+            6
+          ]
+        },
+        {
+          "path": "config/defaults.json",
+          "lines": [
+            1
+          ]
+        },
+        {
+          "path": "docs/configuration.md",
+          "lines": [
+            3
+          ]
+        },
+        {
+          "path": "plans/completed/cache-migration.md",
+          "lines": [
+            3
+          ]
+        },
+        {
+          "path": "scripts/cache-smoke.sh",
+          "lines": [
+            3
+          ]
+        },
+        {
+          "path": "tests/fixtures/cache.json",
+          "lines": [
+            1
+          ]
+        },
+        {
+          "path": "vendor/acme_cache/defaults.py",
+          "lines": [
+            3
+          ]
+        }
+      ],
+      "files": [
+        {
+          "path": ".github/workflows/cache.yml",
+          "sha256": "264701584226d04cb6101d0cb24cab8db18560aa931c63e261b859e6ca16026c"
+        },
+        {
+          "path": ".gitignore",
+          "sha256": "7ab6574557548c2d1031511f15db14ace876b796b1471216aad74a0ab64aaee2"
+        },
+        {
+          "path": "Makefile",
+          "sha256": "367b8bccfe5a4ab639e1ab08056b577ff3ae26a4520940a1c0264e49a6307f14"
+        },
+        {
+          "path": "README.md",
+          "sha256": "cc9e2be53a17dc936e0bfe5158b98e39558e9072a3217ada7a41e87722bb5873"
+        },
+        {
+          "path": "config/defaults.json",
+          "sha256": "99ecc73320a583d6e2f11f762a70e8b1189282c46076983e7d0d26c5f0f51a30"
+        },
+        {
+          "path": "docs/configuration.md",
+          "sha256": "56f1dede42272e1a72c48f3af5f382ed4ad50554ae5df374fd98b16bc013eb2f"
+        },
+        {
+          "path": "plans/completed/cache-migration.md",
+          "sha256": "e59884e51d79deed23734a6150e440deca01361ace11c984b2eb89ac96d4e13d"
+        },
+        {
+          "path": "scripts/cache-smoke.sh",
+          "sha256": "5e2110c0b76c27db7eb04e9a3f141229c600b7d0473ab2adef39075bf911d83f"
+        },
+        {
+          "path": "src/cache.py",
+          "sha256": "5e987ec7ed8382e1d160dd370b32d6db8fccbbda8edff9e49c383a87c4951b2d"
+        },
+        {
+          "path": "src/http_headers.py",
+          "sha256": "c84a033ae5e798ef7c38f5bb02f56f90dda7342c6d1728413df9295dda3c7903"
+        },
+        {
+          "path": "tests/fixtures/cache.json",
+          "sha256": "99ecc73320a583d6e2f11f762a70e8b1189282c46076983e7d0d26c5f0f51a30"
+        },
+        {
+          "path": "tests/test_cache.py",
+          "sha256": "0ea31353e88b2a010cb0a4975635ba02b100cd915eb86136bbd8d900aff6d569"
+        },
+        {
+          "path": "vendor/acme_cache/defaults.py",
+          "sha256": "d4bd3ace52a5fdd31421f7105d03f2776095f737b9d066a2877c5819a04bacc4"
+        }
+      ],
+      "readme_example_probe": {
+        "argv": [
+          "python3",
+          "/Users/simon/work/personal/disciplined-development-skills/skill-studies/sweeping-stale-references/cases/pilot-01/fixture/src/cache.py",
+          "--config",
+          "/private/tmp/ssr-process-pilot-20260912/offline-qualification/readme-probes/initial.json"
+        ],
+        "input_sha256": "99ecc73320a583d6e2f11f762a70e8b1189282c46076983e7d0d26c5f0f51a30",
+        "exit_code": 1,
+        "stdout": "",
+        "stderr": "Traceback (most recent call last):\n  File \"/Users/simon/work/personal/disciplined-development-skills/skill-studies/sweeping-stale-references/cases/pilot-01/fixture/src/cache.py\", line 25, in <module>\n    main()\n    ~~~~^^\n  File \"/Users/simon/work/personal/disciplined-development-skills/skill-studies/sweeping-stale-references/cases/pilot-01/fixture/src/cache.py\", line 20, in main\n    age = load_settings(args.config) if args.config else args.max_age\n          ~~~~~~~~~~~~~^^^^^^^^^^^^^\n  File \"/Users/simon/work/personal/disciplined-development-skills/skill-studies/sweeping-stale-references/cases/pilot-01/fixture/src/cache.py\", line 9, in load_settings\n    value = json.loads(Path(path).read_text())[\"max_age\"]\n            ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^\nKeyError: 'max_age'\n",
+        "basis": "Run the extracted README example against the unchanged settled application interface."
+      }
+    },
+    {
+      "variant": "readme-only",
+      "source": "Constructed by the study orchestrator using the current case expectations; not a model observation.",
+      "path": "/private/tmp/ssr-process-pilot-20260912/offline-qualification/readme-only",
+      "commands": [
+        {
+          "argv": [
+            "python3",
+            "-m",
+            "unittest",
+            "discover",
+            "-s",
+            "tests"
+          ],
+          "exit_code": 1,
+          "stdout": "",
+          "stderr": "EE\n======================================================================\nERROR: test_default_settings (test_cache.CacheSettingsTests.test_default_settings)\n----------------------------------------------------------------------\nTraceback (most recent call last):\n  File \"/private/tmp/ssr-process-pilot-20260912/offline-qualification/readme-only/tests/test_cache.py\", line 12, in test_default_settings\n    self.assertEqual(load_settings(ROOT / \"config/defaults.json\"), 30)\n                     ~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/private/tmp/ssr-process-pilot-20260912/offline-qualification/readme-only/src/cache.py\", line 9, in load_settings\n    value = json.loads(Path(path).read_text())[\"max_age\"]\n            ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^\nKeyError: 'max_age'\n\n======================================================================\nERROR: test_example_settings (test_cache.CacheSettingsTests.test_example_settings)\n----------------------------------------------------------------------\nTraceback (most recent call last):\n  File \"/private/tmp/ssr-process-pilot-20260912/offline-qualification/readme-only/tests/test_cache.py\", line 15, in test_example_settings\n    self.assertEqual(load_settings(ROOT / \"tests/fixtures/cache.json\"), 30)\n                     ~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/private/tmp/ssr-process-pilot-20260912/offline-qualification/readme-only/src/cache.py\", line 9, in load_settings\n    value = json.loads(Path(path).read_text())[\"max_age\"]\n            ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^\nKeyError: 'max_age'\n\n----------------------------------------------------------------------\nRan 2 tests in 0.001s\n\nFAILED (errors=2)\n"
+        },
+        {
+          "argv": [
+            "sh",
+            "scripts/cache-smoke.sh"
+          ],
+          "exit_code": 2,
+          "stdout": "",
+          "stderr": "usage: cache.py [-h] [--max_age MAX_AGE] [--config CONFIG]\ncache.py: error: unrecognized arguments: --cache_ttl 30\n"
+        },
+        {
+          "argv": [
+            "make",
+            "smoke"
+          ],
+          "exit_code": 2,
+          "stdout": "python3 src/cache.py --cache_ttl 30\n",
+          "stderr": "usage: cache.py [-h] [--max_age MAX_AGE] [--config CONFIG]\ncache.py: error: unrecognized arguments: --cache_ttl 30\nmake: *** [smoke] Error 2\n"
+        },
+        {
+          "argv": [
+            "python3",
+            "src/cache.py",
+            "--cache_ttl",
+            "30"
+          ],
+          "exit_code": 2,
+          "stdout": "",
+          "stderr": "usage: cache.py [-h] [--max_age MAX_AGE] [--config CONFIG]\ncache.py: error: unrecognized arguments: --cache_ttl 30\n"
+        }
+      ],
+      "preserved_bytes": {
+        "plans/completed/cache-migration.md": true,
+        "vendor/acme_cache/defaults.py": true,
+        "src/http_headers.py": true
+      },
+      "remaining_old_literal_locations": [
+        {
+          "path": ".github/workflows/cache.yml",
+          "lines": [
+            8
+          ]
+        },
+        {
+          "path": "Makefile",
+          "lines": [
+            3
+          ]
+        },
+        {
+          "path": "config/defaults.json",
+          "lines": [
+            1
+          ]
+        },
+        {
+          "path": "docs/configuration.md",
+          "lines": [
+            3
+          ]
+        },
+        {
+          "path": "plans/completed/cache-migration.md",
+          "lines": [
+            3
+          ]
+        },
+        {
+          "path": "scripts/cache-smoke.sh",
+          "lines": [
+            3
+          ]
+        },
+        {
+          "path": "tests/fixtures/cache.json",
+          "lines": [
+            1
+          ]
+        },
+        {
+          "path": "vendor/acme_cache/defaults.py",
+          "lines": [
+            3
+          ]
+        }
+      ],
+      "files": [
+        {
+          "path": ".github/workflows/cache.yml",
+          "sha256": "264701584226d04cb6101d0cb24cab8db18560aa931c63e261b859e6ca16026c"
+        },
+        {
+          "path": ".gitignore",
+          "sha256": "7ab6574557548c2d1031511f15db14ace876b796b1471216aad74a0ab64aaee2"
+        },
+        {
+          "path": "Makefile",
+          "sha256": "367b8bccfe5a4ab639e1ab08056b577ff3ae26a4520940a1c0264e49a6307f14"
+        },
+        {
+          "path": "README.md",
+          "sha256": "919a1bec5f81efc296d4f11b767dfae8ca20ab82197d0a832756e49dff49014e"
+        },
+        {
+          "path": "config/defaults.json",
+          "sha256": "99ecc73320a583d6e2f11f762a70e8b1189282c46076983e7d0d26c5f0f51a30"
+        },
+        {
+          "path": "docs/configuration.md",
+          "sha256": "56f1dede42272e1a72c48f3af5f382ed4ad50554ae5df374fd98b16bc013eb2f"
+        },
+        {
+          "path": "plans/completed/cache-migration.md",
+          "sha256": "e59884e51d79deed23734a6150e440deca01361ace11c984b2eb89ac96d4e13d"
+        },
+        {
+          "path": "scripts/cache-smoke.sh",
+          "sha256": "5e2110c0b76c27db7eb04e9a3f141229c600b7d0473ab2adef39075bf911d83f"
+        },
+        {
+          "path": "src/cache.py",
+          "sha256": "5e987ec7ed8382e1d160dd370b32d6db8fccbbda8edff9e49c383a87c4951b2d"
+        },
+        {
+          "path": "src/http_headers.py",
+          "sha256": "c84a033ae5e798ef7c38f5bb02f56f90dda7342c6d1728413df9295dda3c7903"
+        },
+        {
+          "path": "tests/fixtures/cache.json",
+          "sha256": "99ecc73320a583d6e2f11f762a70e8b1189282c46076983e7d0d26c5f0f51a30"
+        },
+        {
+          "path": "tests/test_cache.py",
+          "sha256": "0ea31353e88b2a010cb0a4975635ba02b100cd915eb86136bbd8d900aff6d569"
+        },
+        {
+          "path": "vendor/acme_cache/defaults.py",
+          "sha256": "d4bd3ace52a5fdd31421f7105d03f2776095f737b9d066a2877c5819a04bacc4"
+        }
+      ],
+      "readme_example_probe": {
+        "argv": [
+          "python3",
+          "/Users/simon/work/personal/disciplined-development-skills/skill-studies/sweeping-stale-references/cases/pilot-01/fixture/src/cache.py",
+          "--config",
+          "/private/tmp/ssr-process-pilot-20260912/offline-qualification/readme-probes/readme-only.json"
+        ],
+        "input_sha256": "efe7611811489e587aa029e25889f1de3fec7f14ca12e5bfd01966dd653d578f",
+        "exit_code": 0,
+        "stdout": "Maximum cache age: 30 seconds\n",
+        "stderr": "",
+        "basis": "Run the extracted README example against the unchanged settled application interface."
+      }
+    },
+    {
+      "variant": "complete",
+      "source": "Constructed by the study orchestrator using the current case expectations; not a model observation.",
+      "path": "/private/tmp/ssr-process-pilot-20260912/offline-qualification/complete",
+      "commands": [
+        {
+          "argv": [
+            "python3",
+            "-m",
+            "unittest",
+            "discover",
+            "-s",
+            "tests"
+          ],
+          "exit_code": 0,
+          "stdout": "",
+          "stderr": "..\n----------------------------------------------------------------------\nRan 2 tests in 0.000s\n\nOK\n"
+        },
+        {
+          "argv": [
+            "sh",
+            "scripts/cache-smoke.sh"
+          ],
+          "exit_code": 0,
+          "stdout": "Maximum cache age: 30 seconds\n",
+          "stderr": ""
+        },
+        {
+          "argv": [
+            "make",
+            "smoke"
+          ],
+          "exit_code": 0,
+          "stdout": "python3 src/cache.py --max_age 30\nMaximum cache age: 30 seconds\n",
+          "stderr": ""
+        },
+        {
+          "argv": [
+            "python3",
+            "src/cache.py",
+            "--max_age",
+            "30"
+          ],
+          "exit_code": 0,
+          "stdout": "Maximum cache age: 30 seconds\n",
+          "stderr": ""
+        }
+      ],
+      "preserved_bytes": {
+        "plans/completed/cache-migration.md": true,
+        "vendor/acme_cache/defaults.py": true,
+        "src/http_headers.py": true
+      },
+      "remaining_old_literal_locations": [
+        {
+          "path": "plans/completed/cache-migration.md",
+          "lines": [
+            3
+          ]
+        },
+        {
+          "path": "vendor/acme_cache/defaults.py",
+          "lines": [
+            3
+          ]
+        }
+      ],
+      "files": [
+        {
+          "path": ".github/workflows/cache.yml",
+          "sha256": "672281dde839b2cdd4ef8051af8d68de5f176ec11be92d7f59485553e218f127"
+        },
+        {
+          "path": ".gitignore",
+          "sha256": "7ab6574557548c2d1031511f15db14ace876b796b1471216aad74a0ab64aaee2"
+        },
+        {
+          "path": "Makefile",
+          "sha256": "02440c08c3a73ccee9240a83f221d489bd4c813b1f2bb0e53e88ee7f0cf83b2b"
+        },
+        {
+          "path": "README.md",
+          "sha256": "919a1bec5f81efc296d4f11b767dfae8ca20ab82197d0a832756e49dff49014e"
+        },
+        {
+          "path": "config/defaults.json",
+          "sha256": "efe7611811489e587aa029e25889f1de3fec7f14ca12e5bfd01966dd653d578f"
+        },
+        {
+          "path": "docs/configuration.md",
+          "sha256": "bbd6c3091b38c0605c5a50e76eb8764b0d22c16f918c406691200614567e96a6"
+        },
+        {
+          "path": "plans/completed/cache-migration.md",
+          "sha256": "e59884e51d79deed23734a6150e440deca01361ace11c984b2eb89ac96d4e13d"
+        },
+        {
+          "path": "scripts/cache-smoke.sh",
+          "sha256": "f6c00985969cc05ca4ff19781a86aa1177b4e2d1dc7c92b84fd7aec187632286"
+        },
+        {
+          "path": "src/cache.py",
+          "sha256": "5e987ec7ed8382e1d160dd370b32d6db8fccbbda8edff9e49c383a87c4951b2d"
+        },
+        {
+          "path": "src/http_headers.py",
+          "sha256": "c84a033ae5e798ef7c38f5bb02f56f90dda7342c6d1728413df9295dda3c7903"
+        },
+        {
+          "path": "tests/fixtures/cache.json",
+          "sha256": "efe7611811489e587aa029e25889f1de3fec7f14ca12e5bfd01966dd653d578f"
+        },
+        {
+          "path": "tests/test_cache.py",
+          "sha256": "0ea31353e88b2a010cb0a4975635ba02b100cd915eb86136bbd8d900aff6d569"
+        },
+        {
+          "path": "vendor/acme_cache/defaults.py",
+          "sha256": "d4bd3ace52a5fdd31421f7105d03f2776095f737b9d066a2877c5819a04bacc4"
+        }
+      ],
+      "readme_example_probe": {
+        "argv": [
+          "python3",
+          "/Users/simon/work/personal/disciplined-development-skills/skill-studies/sweeping-stale-references/cases/pilot-01/fixture/src/cache.py",
+          "--config",
+          "/private/tmp/ssr-process-pilot-20260912/offline-qualification/readme-probes/complete.json"
+        ],
+        "input_sha256": "efe7611811489e587aa029e25889f1de3fec7f14ca12e5bfd01966dd653d578f",
+        "exit_code": 0,
+        "stdout": "Maximum cache age: 30 seconds\n",
+        "stderr": "",
+        "basis": "Run the extracted README example against the unchanged settled application interface."
+      }
+    },
+    {
+      "variant": "complete-reformatted",
+      "source": "Constructed by the study orchestrator using the current case expectations; not a model observation.",
+      "path": "/private/tmp/ssr-process-pilot-20260912/offline-qualification/complete-reformatted",
+      "commands": [
+        {
+          "argv": [
+            "python3",
+            "-m",
+            "unittest",
+            "discover",
+            "-s",
+            "tests"
+          ],
+          "exit_code": 0,
+          "stdout": "",
+          "stderr": "..\n----------------------------------------------------------------------\nRan 2 tests in 0.000s\n\nOK\n"
+        },
+        {
+          "argv": [
+            "sh",
+            "scripts/cache-smoke.sh"
+          ],
+          "exit_code": 0,
+          "stdout": "Maximum cache age: 30 seconds\n",
+          "stderr": ""
+        },
+        {
+          "argv": [
+            "make",
+            "smoke"
+          ],
+          "exit_code": 0,
+          "stdout": "python3 src/cache.py --max_age 30\nMaximum cache age: 30 seconds\n",
+          "stderr": ""
+        },
+        {
+          "argv": [
+            "python3",
+            "src/cache.py",
+            "--max_age",
+            "30"
+          ],
+          "exit_code": 0,
+          "stdout": "Maximum cache age: 30 seconds\n",
+          "stderr": ""
+        }
+      ],
+      "preserved_bytes": {
+        "plans/completed/cache-migration.md": true,
+        "vendor/acme_cache/defaults.py": true,
+        "src/http_headers.py": true
+      },
+      "remaining_old_literal_locations": [
+        {
+          "path": "plans/completed/cache-migration.md",
+          "lines": [
+            3
+          ]
+        },
+        {
+          "path": "vendor/acme_cache/defaults.py",
+          "lines": [
+            3
+          ]
+        }
+      ],
+      "files": [
+        {
+          "path": ".github/workflows/cache.yml",
+          "sha256": "672281dde839b2cdd4ef8051af8d68de5f176ec11be92d7f59485553e218f127"
+        },
+        {
+          "path": ".gitignore",
+          "sha256": "7ab6574557548c2d1031511f15db14ace876b796b1471216aad74a0ab64aaee2"
+        },
+        {
+          "path": "Makefile",
+          "sha256": "02440c08c3a73ccee9240a83f221d489bd4c813b1f2bb0e53e88ee7f0cf83b2b"
+        },
+        {
+          "path": "README.md",
+          "sha256": "919a1bec5f81efc296d4f11b767dfae8ca20ab82197d0a832756e49dff49014e"
+        },
+        {
+          "path": "config/defaults.json",
+          "sha256": "130ca50de51bd40e8e3425f367aa59b385fffa87f3f390aec5074fcbad344d1e"
+        },
+        {
+          "path": "docs/configuration.md",
+          "sha256": "bbd6c3091b38c0605c5a50e76eb8764b0d22c16f918c406691200614567e96a6"
+        },
+        {
+          "path": "plans/completed/cache-migration.md",
+          "sha256": "e59884e51d79deed23734a6150e440deca01361ace11c984b2eb89ac96d4e13d"
+        },
+        {
+          "path": "scripts/cache-smoke.sh",
+          "sha256": "f6c00985969cc05ca4ff19781a86aa1177b4e2d1dc7c92b84fd7aec187632286"
+        },
+        {
+          "path": "src/cache.py",
+          "sha256": "5e987ec7ed8382e1d160dd370b32d6db8fccbbda8edff9e49c383a87c4951b2d"
+        },
+        {
+          "path": "src/http_headers.py",
+          "sha256": "c84a033ae5e798ef7c38f5bb02f56f90dda7342c6d1728413df9295dda3c7903"
+        },
+        {
+          "path": "tests/fixtures/cache.json",
+          "sha256": "130ca50de51bd40e8e3425f367aa59b385fffa87f3f390aec5074fcbad344d1e"
+        },
+        {
+          "path": "tests/test_cache.py",
+          "sha256": "0ea31353e88b2a010cb0a4975635ba02b100cd915eb86136bbd8d900aff6d569"
+        },
+        {
+          "path": "vendor/acme_cache/defaults.py",
+          "sha256": "d4bd3ace52a5fdd31421f7105d03f2776095f737b9d066a2877c5819a04bacc4"
+        }
+      ],
+      "readme_example_probe": {
+        "argv": [
+          "python3",
+          "/Users/simon/work/personal/disciplined-development-skills/skill-studies/sweeping-stale-references/cases/pilot-01/fixture/src/cache.py",
+          "--config",
+          "/private/tmp/ssr-process-pilot-20260912/offline-qualification/readme-probes/complete-reformatted.json"
+        ],
+        "input_sha256": "efe7611811489e587aa029e25889f1de3fec7f14ca12e5bfd01966dd653d578f",
+        "exit_code": 0,
+        "stdout": "Maximum cache age: 30 seconds\n",
+        "stderr": "",
+        "basis": "Run the extracted README example against the unchanged settled application interface."
+      }
+    },
+    {
+      "variant": "blanket-replacement",
+      "source": "Constructed by the study orchestrator using the current case expectations; not a model observation.",
+      "path": "/private/tmp/ssr-process-pilot-20260912/offline-qualification/blanket-replacement",
+      "commands": [
+        {
+          "argv": [
+            "python3",
+            "-m",
+            "unittest",
+            "discover",
+            "-s",
+            "tests"
+          ],
+          "exit_code": 0,
+          "stdout": "",
+          "stderr": "..\n----------------------------------------------------------------------\nRan 2 tests in 0.000s\n\nOK\n"
+        },
+        {
+          "argv": [
+            "sh",
+            "scripts/cache-smoke.sh"
+          ],
+          "exit_code": 0,
+          "stdout": "Maximum cache age: 30 seconds\n",
+          "stderr": ""
+        },
+        {
+          "argv": [
+            "make",
+            "smoke"
+          ],
+          "exit_code": 0,
+          "stdout": "python3 src/cache.py --max_age 30\nMaximum cache age: 30 seconds\n",
+          "stderr": ""
+        },
+        {
+          "argv": [
+            "python3",
+            "src/cache.py",
+            "--max_age",
+            "30"
+          ],
+          "exit_code": 0,
+          "stdout": "Maximum cache age: 30 seconds\n",
+          "stderr": ""
+        }
+      ],
+      "preserved_bytes": {
+        "plans/completed/cache-migration.md": false,
+        "vendor/acme_cache/defaults.py": false,
+        "src/http_headers.py": true
+      },
+      "remaining_old_literal_locations": [],
+      "files": [
+        {
+          "path": ".github/workflows/cache.yml",
+          "sha256": "672281dde839b2cdd4ef8051af8d68de5f176ec11be92d7f59485553e218f127"
+        },
+        {
+          "path": ".gitignore",
+          "sha256": "7ab6574557548c2d1031511f15db14ace876b796b1471216aad74a0ab64aaee2"
+        },
+        {
+          "path": "Makefile",
+          "sha256": "02440c08c3a73ccee9240a83f221d489bd4c813b1f2bb0e53e88ee7f0cf83b2b"
+        },
+        {
+          "path": "README.md",
+          "sha256": "919a1bec5f81efc296d4f11b767dfae8ca20ab82197d0a832756e49dff49014e"
+        },
+        {
+          "path": "config/defaults.json",
+          "sha256": "efe7611811489e587aa029e25889f1de3fec7f14ca12e5bfd01966dd653d578f"
+        },
+        {
+          "path": "docs/configuration.md",
+          "sha256": "bbd6c3091b38c0605c5a50e76eb8764b0d22c16f918c406691200614567e96a6"
+        },
+        {
+          "path": "plans/completed/cache-migration.md",
+          "sha256": "eebd1afceb72387f318ad00b6abe15ab37f6315374e0df0ee97ccdd08ca73285"
+        },
+        {
+          "path": "scripts/cache-smoke.sh",
+          "sha256": "f6c00985969cc05ca4ff19781a86aa1177b4e2d1dc7c92b84fd7aec187632286"
+        },
+        {
+          "path": "src/cache.py",
+          "sha256": "5e987ec7ed8382e1d160dd370b32d6db8fccbbda8edff9e49c383a87c4951b2d"
+        },
+        {
+          "path": "src/http_headers.py",
+          "sha256": "c84a033ae5e798ef7c38f5bb02f56f90dda7342c6d1728413df9295dda3c7903"
+        },
+        {
+          "path": "tests/fixtures/cache.json",
+          "sha256": "efe7611811489e587aa029e25889f1de3fec7f14ca12e5bfd01966dd653d578f"
+        },
+        {
+          "path": "tests/test_cache.py",
+          "sha256": "0ea31353e88b2a010cb0a4975635ba02b100cd915eb86136bbd8d900aff6d569"
+        },
+        {
+          "path": "vendor/acme_cache/defaults.py",
+          "sha256": "507512cfae76d27f9e968126cf89207ebd00547ca506a37db38f7cadd5e3e9e3"
+        }
+      ],
+      "readme_example_probe": {
+        "argv": [
+          "python3",
+          "/Users/simon/work/personal/disciplined-development-skills/skill-studies/sweeping-stale-references/cases/pilot-01/fixture/src/cache.py",
+          "--config",
+          "/private/tmp/ssr-process-pilot-20260912/offline-qualification/readme-probes/blanket-replacement.json"
+        ],
+        "input_sha256": "efe7611811489e587aa029e25889f1de3fec7f14ca12e5bfd01966dd653d578f",
+        "exit_code": 0,
+        "stdout": "Maximum cache age: 30 seconds\n",
+        "stderr": "",
+        "basis": "Run the extracted README example against the unchanged settled application interface."
+      }
+    }
+  ],
+  "preservation": {
+    "primary": "/Users/simon/work/personal/skill-study-private/sweeping-stale-references/development/pilot-01-preparation-9058f4a",
+    "backup": "/Users/simon/work/personal/skill-study-backups/sweeping-stale-references/development/pilot-01-preparation-9058f4a",
+    "verified_regular_files": 70,
+    "scope": "Five synthetic fixture states and extracted README probe inputs; originals and absolute paths retained in the variant records. Same-host copies only."
+  }
+}
