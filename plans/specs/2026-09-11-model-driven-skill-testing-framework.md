@@ -77,6 +77,12 @@ Distinguish a required behavior from one implementation technique for achieving 
 Do not discard an explicit process requirement merely because an attractive final answer is possible without it.
 Conversely, do not elevate every heading, example or wording choice into a behavioral obligation.
 
+**Required consumer check:** when defining every skill's contract, identify known consumers of its generated outputs and procedural artifacts: people, other skills/agents, commands or programs.
+Record who consumes each artifact, what content or exact structure they rely on, the evidence for that dependency, and what omission or inconsistency would break.
+Known consumers are the first check for output importance, not the only possible reason; document other consequences when they matter.
+If no consumer is identified, record “none identified” with the scope of inspection; if the dependency is uncertain, record it as unresolved rather than inventing one or assuming format is irrelevant.
+Carry these findings into procedural severity and test design: verify exact conformance where a consumer requires it, and assess usability where the consumer tolerates equivalent forms.
+
 For each proposed obligation, record its source, intended effect and how it could be observed.
 Identify conflicts, unclear intent and behavior the owner wants that the current skill does not promise.
 Bring those specific choices to the owner with a recommended interpretation before using them to judge the existing skill.
@@ -114,6 +120,14 @@ For artifact quality, local differences initiate investigation; the complete art
 
 Specify acceptable variation, consequential failure and insufficient-evidence conditions.
 Distinguish behavioral failure, task-only deviation, quality differences and execution problems; define their effects explicitly rather than inheriting old labels or averaging unrelated dimensions.
+Owner clarification, 2026-09-12: assess functional effectiveness and procedural/mechanical effectiveness separately, with their relative importance determined by the skill.
+Functional effectiveness asks whether the skill achieves its intended useful outcomes; failure of an agreed outcome criterion is a hard failure and cannot be offset by procedural success.
+Procedural/mechanical effectiveness asks whether required actions, accounting and output contracts are performed reliably.
+Record procedural deviations even when the useful outcome succeeds; decide before collection which are hard failures and which are non-blocking defects, citing their consequence for that skill and its consumers.
+For example, inconsistent adversarial-review output can break downstream consumption, whereas missing sweeping-stale-references accounting can leave a correct reconciliation less auditable without making the reconciliation itself incorrect.
+These dimensions may overlap: a broken output contract that prevents a required downstream action also fails that functional outcome. Identify both consequences without counting them as independent failures in an aggregate.
+Tests and reports must expose each dimension at the criterion level; do not force equal weighting or combine them into a score that hides a hard failure.
+Use evidence-backed criterion judgments, with insufficient evidence distinct from failure; numerical summaries are optional and must retain the underlying judgments.
 Use deterministic validation only for genuine mechanical requirements with a known consumer or independently checkable result.
 
 Construct contrasting examples when a criterion is unclear, including different successful solutions and subtle consequential failures.
@@ -176,6 +190,10 @@ Do not confuse final-state file inventories with a complete history of actions; 
 New tools are justified only when a specific needed operation can be made simpler and deterministic, such as input preparation, identity checks, bounded batch dispatch, evidence indexing, file comparison or aggregation of recorded judgments.
 Specify inputs, outputs, failure handling and a focused verification case for each proposed tool before adding it.
 Keep semantic interpretation and criterion selection in the model's procedure.
+Apply the same division when improving a skill: models supply intelligence and judgment; simple programs or reusable commands can handle required mechanical consistency when observations reveal a need.
+A prompt-based command can standardize an interaction, but model-generated output still requires validation where exact conformance matters; the prompt alone is not deterministic enforcement.
+Distinguish tools used only to assess evidence from tools supplied to the subject to produce its output.
+Adding a subject-facing helper changes the tested implementation or execution setup: version it, disclose which conditions receive it, and compare under that declared setup rather than crediting its effect to a wording-only rewrite.
 
 Output: immutable observations with sufficient provenance to inspect and reproduce the experiment within stated limits.
 Exit condition: valid observations and unusable attempts are accounted for under the agreed collection policy.

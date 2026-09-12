@@ -52,8 +52,9 @@ A different directory or branch alone is insufficient. If isolation cannot be es
 - [x] Recommend `sweeping-stale-references` as the first candidate: fixtures can expose required changes, intentional historical references and unrelated matches with checkable expected outcomes.
 - [x] Record the owner-selected candidate, study start and active-time accounting, and open its protocol. Keep limits provisional until the allocation is reviewed.
 - [x] Read the complete skill, relevant dependencies and installed `writing-skills` testing guidance; record versions and missing capabilities before dependent work.
-- [ ] Derive intended behavior, exclusions, ownership and observable evidence from those sources. Review the contract and unresolved interpretations with the owner.
-  All nine skills have been read and their purpose/relationships recorded in the architecture map. The owner agreed with the broad purpose, clarified path-move reconciliation and code-to-documentation drift, and directed independent evaluation. The protocol now specifies skill-only versus no skill guidance; detailed procedural interpretations and execution qualification remain open.
+- [x] Derive intended behavior, exclusions, ownership and observable evidence from those sources. Review the contract and unresolved interpretations with the owner.
+  Record the spec's required consumer check in the protocol: known output consumers, their dependencies and the consequences of inconsistent output; carry these into assessment severity.
+  All nine skills have been read and their purpose/relationships recorded in the architecture map. The owner agreed with the broad purpose, clarified path-move reconciliation and code-to-documentation drift, directed independent evaluation, and accepted that single-file/no-sweep requires checking scope. Functional outcomes and procedural/mechanical effectiveness are scored separately; outcome failures are hard failures. Within the owner's discretion for this skill, the protocol treats purely procedural failures as visible, non-blocking defects. Limits remain for the walkthrough; execution qualification follows in Stage 3.
 - [x] Write the phase-by-role allocation table, with feasible case/repetition assumptions, evaluator batch composition, estimated preparation/run/review time, protected comparison capacity and repair reserves. Declare whether the affordable repetitions support a variability estimate or only descriptive observations; otherwise report variability as not estimable.
 - [x] Inspect the runner paths needed for this candidate. Distinguish code/document inspection from live qualification.
 - [x] Identify a feasible model-evaluator mechanism before Stage 2 selects model-assessed criteria.
@@ -70,6 +71,7 @@ The evaluator pool need not cover every subject run with a separate call: alloca
 - [ ] Prepare cases covering reconciliation, preservation and accounting within Stage 1's allocation; one case may exercise multiple properties. Map each assessed property to the contract and evidence.
   Initial contribution cases present the trigger without directing the sweep or enumerating consumers; an explicit sweep request tests a separately identified execution question. Preserve clear task scope and permission to fix related files.
 - [ ] Define source-supported expected outcomes, valid alternatives and failure/insufficient-evidence boundaries. Counting replacements alone does not establish correct triage or preservation.
+  Map criteria to functional outcomes or procedure/mechanics, recording any overlap and the agreed failure consequence. Expose both dimensions in assessments; do not let format success offset an outcome failure or hide non-blocking procedural defects.
 - [ ] Designate development and reserved cases before calibration or pilot exposure. Keep reference answers out of subject inputs and model-evaluator inputs when testing evaluator accuracy.
 - [ ] Select deterministic checks for properties they fully establish, and model judgments for the remaining questions. Have the model assess known outcomes and compare its reasoning and verdicts with independently checked references.
 
@@ -130,7 +132,7 @@ Reserved bundles and revealing assessments stay entirely in the verified private
 
 ## Current next action
 
-Walk through the remaining procedural interpretations and provisional limits in the study protocol with the owner before designing cases. Source inventory, allocation arithmetic and runner inspection are prepared; detailed contract/limit acceptance remains open.
+Confirm or revise the provisional allocation and limits before designing cases, first reconciling the disclosed gap in active-time accounting. The behavioral contract, functional/procedural distinction and single-file/no-sweep interpretation are settled; do not reopen them. Source inventory, allocation arithmetic and runner inspection are prepared; limit acceptance remains incomplete.
 Evaluator permission feasibility is established through the implemented read-only modes and local sandbox probes; exact evaluator configuration and model-run qualification remain Stage 3 work.
 The first study evaluates sweeping-stale-references alone against the same task without skill guidance; the earlier DD-present control is superseded. Exact input isolation remains a pilot requirement.
 The owner selected Sol low for initial process checks (Terra medium is an alternative); the protocol keeps the five-repetition wording campaign conditional on reaching authoring, outside the initial pilot.

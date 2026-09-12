@@ -1,8 +1,8 @@
 # Sweeping stale references: study protocol
 
-Status: Stage 1 proposal for owner review, 2026-09-12.
+Status: Stage 1 behavioral contract agreed; allocation and limits await owner review, 2026-09-12.
 The owner selected `sweeping-stale-references`, authorized contract/allocation preparation and clarified that this skill should be evaluated independently.
-The detailed contract, execution setup and limits remain proposed, not approved collection instructions.
+The behavioral contract records settled owner intent and the selected procedural severity policy; execution setup and limits remain proposed, not approved collection instructions.
 Progress belongs to the [plan](../../plans/2026-09-11-model-driven-skill-testing.md); general requirements belong to the [spec](../../plans/specs/2026-09-11-model-driven-skill-testing-framework.md).
 No test cases, provider configurations, model observations or skill rewrites have been created.
 
@@ -23,7 +23,7 @@ The first study measures independent application to a change and reconciliation 
 These ownership boundaries do not require loading either sibling into the subject context.
 The task must supply a settled change and sufficient project context, rather than score this skill for inventing the desired change or resolving an unspecified business rule.
 
-## Proposed behavioral contract
+## Behavioral contract
 
 Owner clarification, 2026-09-12: the intended outcome includes preventing documentation drift when project structure or code facts change.
 When a file moves, find references to its old path and reconcile affected links, commands and other current consumers to the new location, resolving relative paths from each consumer.
@@ -33,7 +33,7 @@ Applying that procedure to moved paths and semantically equivalent descriptions 
 Record those criteria as owner-clarified outcomes, not a quotation or proof that the original explicitly taught every technique needed to achieve them.
 Assess those outcomes across both conditions, separately from compliance with the original's explicit procedure; a miss does not by itself establish disobedience to an explicit instruction.
 Historical references and unrelated matches still receive the stated triage, rather than blanket replacement.
-The broad purpose and independent evaluation direction are settled; detailed procedural interpretations remain under review.
+The broad purpose, independent evaluation direction and outcome/procedure distinction are settled; limits remain for owner review before test design.
 
 Judge the completed reconciliation, search evidence and commit record together.
 Explicit procedural obligations remain observable requirements; an attractive final file state does not prove that the prescribed search or accounting occurred.
@@ -50,7 +50,20 @@ Accept any effective search tool, sensible query order, equivalent edits and con
 Do not require a particular document structure, word count or wording from a constructed reference answer beyond the explicitly prescribed labels/header and negative form.
 Useful repetition and document restructuring remain acceptable when the resulting document is at least as effective; local text differences are evidence to inspect, not automatic failures.
 
-For owner review: interpret “single-file/no-sweep” as a justified outcome after checking scope, not permission to skip searching because only one file was initially named.
+Owner accepted, 2026-09-12: interpret “single-file/no-sweep” as a justified outcome after checking scope, not permission to skip searching because only one file was initially named.
+Owner clarification, 2026-09-12: score functional effectiveness and procedural/mechanical effectiveness separately. Outcome failures are hard failures; the consequence of procedural inconsistency depends on the skill.
+The owner considers `References swept:` important but does not require its omission to be a hard failure, and permits either procedural severity choice for this study.
+Selected policy: assess each agreed criterion as met, not met or insufficient evidence, retaining the supporting evidence and consequence. Keep the two dimensions visible instead of combining them into a single score.
+Incomplete or incorrect reconciliation, including damage to material that should be preserved, is a hard functional failure.
+Purely procedural deviations are non-blocking defects for this study: report search-order, classification/accounting, commit-grouping and format failures explicitly without treating them alone as a failed functional outcome.
+This severity policy does not make the original's explicit requirements optional or establish full compliance when they are missed.
+Known output consumers: people and reviewing agents inspecting the reconciliation commit use `References swept:` as an audit account; the skill's Output artifact section explains the locations, outcomes and count reconciliation they need. DD Gate 4 and this project's commit guidance require that account.
+Inspection of shipped skills, hooks, commands, examples and top-level tests found no named program consuming this format, and a targeted search of hook Python sources found no `References swept` parser. This bounds the inspection, not a claim about every consumer installation.
+Missing or inconsistent accounting impairs auditability; no identified program requires exact syntax to perform the reconciliation itself. That supports the selected non-blocking accounting policy while retaining the original's explicit format checks.
+Complete reconciliation with correct preservation but missing `References swept:` therefore meets the functional criteria and fails the accounting criterion; a well-formatted account cannot offset unresolved current references or incorrectly changed historical references.
+Where a procedural deviation also causes a functional failure, record that consequence and apply the functional hard-failure rule.
+A procedural regression remains relevant to the later adoption decision even when non-blocking; agree on the rewrite's acceptance boundaries before authoring rather than treating this policy as automatic adoption approval.
+Apply the useful-outcome criteria to both conditions; target-specific compliance describes the original condition and must not penalize the unguided control for undisclosed instructions.
 Count and location conventions must be fixed with the eventual checkers, including repeated searches of the same location, so duplicate search hits cannot inflate claimed coverage.
 Missing action traces yield insufficient evidence for order/completeness claims, not an invented behavioral failure or pass.
 Historical commits, PR descriptions and chat logs are not rewrite targets; vendor/archive files still require triage under the skill's stated distinctions.
@@ -163,7 +176,8 @@ Canonical project checkout: `/Users/simon/work/personal/disciplined-development-
 Reserved primary: `/Users/simon/work/personal/skill-study-private/sweeping-stale-references/`.
 Reserved backup: `/Users/simon/work/personal/skill-study-backups/sweeping-stale-references/`.
 Proposed external raw development primary: `/Users/simon/work/personal/skill-study-private/sweeping-stale-references/development/`; backup: `/Users/simon/work/personal/skill-study-backups/sweeping-stale-references/development/`.
-These locations are resolved from the canonical checkout and have not been created or access-qualified; an author receives only permitted copied development evidence, not access to their reserved parent directories.
+These locations are resolved from the canonical checkout. The development primary and backup now contain the permission-probe bundles indexed above; reserved-case access isolation remains unqualified.
+An author receives only permitted copied development evidence, not access to their reserved parent directories.
 Apply the plan's copy/hash/backup barrier before each later dispatch, and inspect the first pilot bundle before deciding Git retention.
 Both copies remain on this host; they do not protect against host loss.
 
@@ -172,12 +186,14 @@ This preparation consumes active study time toward the provisional ceiling; reco
 Dispatched study invocations so far: **0 subject, 0 evaluator, 0 authoring, 0 retry**.
 The orchestrator's preparation conversation and local tool calls consume active time, not provider-invocation slots; model assessments or authoring work must be accounted under their declared roles.
 
-Owner walkthrough: resolve the remaining procedural interpretations and confirm or revise the allocation/limits before Stage 2 designs cases.
+Owner walkthrough: the functional/procedural distinction and single-file/no-sweep interpretation are settled; confirm or revise the allocation/limits before Stage 2 designs cases.
 Independent use is settled; Stage 3 must still qualify the exact standalone input setup and permissions.
 
 Initial preparation pause: 2026-09-12 04:28:30 UTC; **9 minutes** charged at that checkpoint (opening allowance included, rounded up).
 Subsequent contract clarification, the full skill read and these documentation corrections were not continuously clocked; nine minutes is not the current cumulative total.
 Reconcile that preparation time with an explicitly labeled estimate before confirming the remaining time budget; exclude owner-wait rather than charging the entire elapsed conversation.
+Scope-interpretation walkthrough update: checkpoint 2026-09-12 07:01:09 UTC through 07:01:45 UTC, rounded to one active minute, plus a one-minute estimate for opening reads; charge two minutes for this update. Earlier unclocked preparation remains unreconciled; this is not a cumulative total.
+Outcome/procedure clarification update: checkpoint 2026-09-12 12:40:21 UTC through 12:41:19 UTC, rounded to one active minute, plus a one-minute allowance for opening/final documentation work; charge two minutes. The intervening owner-wait is excluded; earlier unclocked preparation still requires reconciliation.
 Verification at this checkpoint: 16 source hashes and allocation arithmetic checked; document links and `git diff --check` passed; hook suite **263 passed, 3 skipped**. No provider process was invoked.
 
 Relationship-correction verification: all **21** source identities match, including all nine DD skills at the recorded revision; local links resolve and `git diff --check` passes.
