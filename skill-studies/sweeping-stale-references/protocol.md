@@ -145,6 +145,9 @@ The owner approved exposing read-only permissions for both providers, replacing 
 The runner now accepts optional `execution.permissions`: `workspace-write` preserves existing behavior; `read-only` denies model writes to project files, supplied evidence and Git while retaining read/search tools.
 Codex uses a read-only permission profile; Claude applies a process-tree sandbox with only private runtime scratch and `/dev/null` write exceptions.
 Controller-owned preparation and output capture remain available; neither permission mode disables skills or limits reads to the supplied evidence alone.
+Claude read-only runs omit dedicated Write/Edit tools while retaining sandboxed Bash and evidence reads.
+New result records use schema `0.3` and include the resolved `execution.permissions`; input configurations remain schema `0.2`.
+Before scoring, compare that mode and the configuration identity against the frozen condition: subjects require `workspace-write`, evaluators require `read-only`. A mismatch is an invalid setup, not a skill failure.
 CLAUDE.md now explicitly accepts verified read-only permissions as an alternative to a no-write-tool agent type.
 
 Provider-free checks against Codex **0.154.0** and Claude Code **2.1.269** passed: evidence reads and captured output, denied overwrites/deletion/renames/directory creation, denied Git mutations and outside-workspace writes, and denied symlink escapes.

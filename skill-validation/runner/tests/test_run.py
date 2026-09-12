@@ -76,6 +76,7 @@ def test_rendered_request_and_raw_artifacts_are_preserved(build_config_case, pro
     assert value["status"] == "COMPLETED" and value["infrastructure_error"] is None
     assert value["execution"] == {
         "provider": provider, "model": "gpt-5.6-sol", "effort": "low", "executable": provider,
+        "permissions": "workspace-write",
         "timeout_seconds": 900, "invocation_started": True, "timed_out": False, "exit_code": 0,
     }
     for kind, name, content in [("fixture", "input.txt", b"changed"), ("evidence", "note.txt", b"evidence")]:
@@ -241,3 +242,4 @@ def test_read_only_mode_reaches_provider_and_preserves_assessment(build_config_c
     assert (outcome.run_dir / 'final.txt').read_text() == 'assessment'
     assert (outcome.run_dir / 'workspace/fixture/input.txt').read_bytes() == b'original'
     assert json.loads((outcome.run_dir / 'config.json').read_text())['execution']['permissions'] == 'read-only'
+    assert record(outcome)['execution']['permissions'] == 'read-only'

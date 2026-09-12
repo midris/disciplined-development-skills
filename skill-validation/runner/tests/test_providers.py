@@ -232,3 +232,14 @@ def test_claude_read_only_request_reaches_runtime(tmp_path, boundaries):
     result = invoke_provider(request)
     assert result.invocation_started
     assert providers.ClaudeRuntime.call_args.kwargs == {'permissions': 'read-only'}
+
+
+# Break: a read-only Claude run advertises dedicated mutation tools despite its sandbox.
+def test_claude_read_only_tools_match_permission_contract(tmp_path):
+    from dataclasses import replace
+    request = replace(request_at(tmp_path, provider='claude'), permissions='read-only')
+    argv = providers._arguments(request)
+    for flag in ('--tools', '--allowedTools'):
+        assert argv[argv.index(flag)+1].split(',') == ['Read', 'Skill', 'Glob', 'Grep', 'Bash']
+    # This is read access to evidence; the process-tree policy still denies writes.
+    assert argv[argv.index('--add-dir')+1] == str(request.workspace_dir/'evidence')

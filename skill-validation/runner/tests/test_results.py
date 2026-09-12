@@ -39,7 +39,7 @@ def _directory(path: str) -> dict[str, Any]:
 
 def _completed_record() -> dict[str, Any]:
     return {
-        "schema_version": "0.2",
+        "schema_version": "0.3",
         "run_id": "20260828T120000000Z-result-case-unique",
         "status": "COMPLETED",
         "started_at": "2026-08-28T12:00:00.000Z",
@@ -50,6 +50,7 @@ def _completed_record() -> dict[str, Any]:
             "provider": "codex",
             "model": "gpt-5.6-sol",
             "effort": "high",
+            "permissions": "workspace-write",
             "executable": "codex",
             "timeout_seconds": 900,
             "invocation_started": True,
@@ -451,3 +452,30 @@ def test_result_record_uses_schema_02_paths_and_final_retained_fixture_state(
         artifact = record["artifacts"][artifact_name]
         assert artifact["bytes"] == len(contents[path])
         assert artifact["sha256"] == hashlib.sha256(contents[path]).hexdigest()
+
+
+# Break: readers cannot distinguish permission modes, including pre-launch failures.
+@pytest.mark.parametrize('permissions', ['read-only', 'workspace-write'])
+@pytest.mark.parametrize('failed', [False, True])
+def test_result_records_permissions_in_versioned_execution(tmp_path, permissions, failed):
+    from dataclasses import replace
+    context = _context(tmp_path)
+    config = _config(context)
+    config = replace(config, execution=replace(config.execution, permissions=permissions))
+    result = results_module.result_record(context, config, ProviderResult('codex', not failed, exit_code=None if failed else 0),
+                           ('PREPARATION_FAILED', 'stopped') if failed else None,
+                           '2026-08-28T12:00:01.000Z', 1.0)
+    assert result['schema_version'] == '0.3'
+    assert result['execution']['permissions'] == permissions
+    _validate(result)
+
+
+# Break: new records silently omit the selected mode or accept invalid values.
+@pytest.mark.parametrize('permissions', [None, '', 'readonly', True, []])
+def test_result_schema_requires_valid_permissions(permissions):
+    record = _completed_record()
+    if permissions is not None:
+        record['execution']['permissions'] = permissions
+    else:
+        record['execution'].pop('permissions', None)
+    _reject(record)

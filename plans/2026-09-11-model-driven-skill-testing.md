@@ -57,7 +57,7 @@ A different directory or branch alone is insufficient. If isolation cannot be es
 - [x] Write the phase-by-role allocation table, with feasible case/repetition assumptions, evaluator batch composition, estimated preparation/run/review time, protected comparison capacity and repair reserves. Declare whether the affordable repetitions support a variability estimate or only descriptive observations; otherwise report variability as not estimable.
 - [x] Inspect the runner paths needed for this candidate. Distinguish code/document inspection from live qualification.
 - [x] Identify a feasible model-evaluator mechanism before Stage 2 selects model-assessed criteria.
-  Owner-approved read-only permissions are implemented for both providers. Actual local sandbox probes passed with no authentication/model calls; the protocol links retained evidence. Stage 3 must still qualify the selected model, assessment capture and input isolation before evaluator dispatch.
+  Owner-approved read-only permissions are implemented for both providers. Actual local sandbox probes passed with no authentication/model calls; the protocol links retained evidence. The result now records permissions under schema 0.3; Claude read-only mode omits Write/Edit tools. Stage 3 must still qualify the selected model, assessment capture and input isolation before evaluator dispatch.
 - [ ] Walk through the proposed contract, control context and feasible allocation with the owner; confirm the limits before designing tests.
 
 **Complete when:** the protocol identifies the exact original, agreed contract, feasible allocation, absolute storage paths and capabilities requiring pilot verification.

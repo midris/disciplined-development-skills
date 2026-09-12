@@ -29,13 +29,14 @@ def result_record(
     finished_at: str,
     duration_seconds: float,
 ) -> dict[str, Any]:
-    """Build the schema 0.2 record from retained artifacts without interpreting content."""
+    """Build the schema 0.3 record from retained artifacts without interpreting content."""
     if error is not None and error[0] not in ERROR_CODES:
         raise ValueError(f"unknown infrastructure error code: {error[0]}")
     execution_record = {
         "provider": config.execution.provider,
         "model": config.execution.model,
         "effort": config.execution.effort,
+        "permissions": config.execution.permissions,
         "executable": provider_result.executable,
         "timeout_seconds": PROVIDER_TIMEOUT_SECONDS,
         "invocation_started": provider_result.invocation_started,
@@ -43,7 +44,7 @@ def result_record(
         "exit_code": provider_result.exit_code,
     }
     return {
-        "schema_version": "0.2",
+        "schema_version": "0.3",
         "run_id": context.run_id,
         "status": "COMPLETED" if error is None else "INFRA_ERROR",
         "started_at": context.started_at,

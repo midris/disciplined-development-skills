@@ -112,12 +112,14 @@ def _arguments(request: ProviderRequest, *, executable: str = "codex") -> list[s
             "--output-last-message", str(request.final_output_path), "-",
         ]
     if request.provider == "claude":
+        tools = ("Read,Skill,Glob,Grep,Bash" if request.permissions == "read-only"
+                 else "Read,Skill,Glob,Grep,Write,Edit,Bash")
         return [
             executable, "--print", "--no-session-persistence", "--model", request.model,
             "--effort", request.effort, "--permission-mode", "dontAsk", "--permission-prompts", "none",
             "--setting-sources", "project", "--strict-mcp-config", "--mcp-config", '{"mcpServers":{}}',
-            "--no-chrome", "--tools", "Read,Skill,Glob,Grep,Write,Edit,Bash",
-            "--allowedTools", "Read,Skill,Glob,Grep,Write,Edit,Bash",
+            "--no-chrome", "--tools", tools,
+            "--allowedTools", tools,
             "--add-dir", str(request.workspace_dir / "evidence"), "--output-format", "stream-json", "--verbose",
         ]
     raise ValueError(f"unsupported provider: {request.provider}")

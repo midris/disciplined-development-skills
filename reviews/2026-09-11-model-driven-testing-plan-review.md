@@ -181,3 +181,19 @@ Installed local probes passed for both read-only policies and the existing Codex
 No authentication or model calls occurred; initial nested-sandbox failures were preserved before host-permitted probes succeeded.
 The [qualification index](../skill-studies/sweeping-stale-references/permissions-qualification.json) records source/CLI identities and verified same-host primary/backup evidence copies.
 This is implementation verification, not a new external PASS or study-effectiveness result.
+
+## Response to external review of dd5880c
+
+Claude reports the prior design findings closed and independently reproduced 273 runner unit passes and 263 hook passes with 3 skips; it did not repeat process smokes or installed sandbox checks.
+The new external verdict is BLOCK for two P2s, with one P3 advisory.
+
+| Finding | Disposition |
+|---|---|
+| P2: Claude read-only advertises Write/Edit. | Removed both dedicated mutation tools from read-only `--tools` and `--allowedTools`; writable mode is unchanged. Bash remains useful for reading and is still constrained by the process sandbox. `--add-dir` retains evidence read access, not a sandbox write exception. The change removes avoidable write-tool affordances; it does not guarantee that no model will attempt a denied shell write. |
+| P2: Canonical result lacks permission mode. | Every new result records resolved `execution.permissions`, including pre-launch failures. Output schema is now 0.3 with a required enum; input schema stays 0.2 with the optional, defaulted extension. Existing input configurations retain behavior. Historical result files are not rewritten; consumers must distinguish versions rather than assume a missing permission mode. The protocol checks mode/configuration identity against the intended condition before scoring. |
+| P3: Runtime/HOME exclusion is only documented. | Not reproduced: `ClaudeRuntime.prepare()` already rejects a runtime root or fixture beneath resolved HOME before authentication, Git setup and child-policy use. Added both containment regression cases; both passed against the existing guard without changing production behavior. |
+
+The tool-list and result-record tests failed before implementation and now pass.
+The previously qualified filesystem policies are unchanged; retained sandbox evidence remains applicable to those boundaries, while the updated tool list and result contract receive focused and process regression coverage.
+Validation: runner unit suite **285 passed**, dummy-provider process suite **12 passed**, hook suite **263 passed, 3 skipped**. All five original qualification source hashes match `dd5880c`; all four follow-up source hashes match the current files. No authentication or model calls occurred.
+This response is not an external PASS or authorization for model collection.

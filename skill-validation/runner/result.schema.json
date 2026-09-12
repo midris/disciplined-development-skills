@@ -4,7 +4,7 @@
   "additionalProperties": false,
   "required": ["schema_version", "run_id", "status", "started_at", "finished_at", "duration_seconds", "test", "execution", "artifacts", "infrastructure_error"],
   "properties": {
-    "schema_version": {"const": "0.2"},
+    "schema_version": {"const": "0.3"},
     "run_id": {"type": "string", "minLength": 1},
     "status": {"enum": ["COMPLETED", "INFRA_ERROR"]},
     "started_at": {"type": "string", "pattern": "^[0-9]{4}-[0-9]{2}-[0-9]{2}T[0-9]{2}:[0-9]{2}:[0-9]{2}\\.[0-9]{3}Z$"},
@@ -21,11 +21,12 @@
     "execution": {
       "type": "object",
       "additionalProperties": false,
-      "required": ["provider", "model", "effort", "executable", "timeout_seconds", "invocation_started", "timed_out", "exit_code"],
+      "required": ["provider", "model", "effort", "permissions", "executable", "timeout_seconds", "invocation_started", "timed_out", "exit_code"],
       "properties": {
         "provider": {"enum": ["codex", "claude"]},
         "model": {"type": "string", "minLength": 1},
         "effort": {"type": "string", "pattern": "^[a-z0-9][a-z0-9-]*$"},
+        "permissions": {"enum": ["workspace-write", "read-only"]},
         "executable": {"enum": ["codex", "claude"]},
         "timeout_seconds": {"const": 900},
         "invocation_started": {"type": "boolean"},

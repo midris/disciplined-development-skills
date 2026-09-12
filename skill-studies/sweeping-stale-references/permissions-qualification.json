@@ -792,5 +792,29 @@
       "bytes": 9,
       "sha256": "25718360e05d3c2d0963d1381e9dd4dae5fca789244ee4b9f861adcc0cc96218"
     }
-  ]
+  ],
+  "sources_scope": "Sources used for the original filesystem probes, committed in dd5880c; followup identifies later changes.",
+  "followup": {
+    "base_revision": "dd5880c",
+    "scope": "Remove dedicated Claude write tools and record permissions in result schema 0.3; no filesystem policy change.",
+    "sandbox_evidence_reuse": "Codex permission profile and Claude SBPL construction are unchanged. Existing sandbox denials remain evidence for those boundaries; model round-trip qualification remains pending.",
+    "sources": [
+      {
+        "path": "skill-validation/runner/src/skilltest/providers.py",
+        "sha256": "2d8a54187c67c963cbb29c2e7d58935e0099eb4dd299a9f2e4db504ee7f521b9"
+      },
+      {
+        "path": "skill-validation/runner/src/skilltest/results.py",
+        "sha256": "427e7bf1e659f5f6b6ae54558da5689d3b2c8377004e11c3a5a5a7ffe5fecb5f"
+      },
+      {
+        "path": "skill-validation/runner/result.schema.json",
+        "sha256": "8a18b17aa70bd0d4b2397ca0b3a1ca4ef513a769a2da262c396daea993611cdf"
+      },
+      {
+        "path": "skill-validation/runner/src/skilltest/claude_runtime.py",
+        "sha256": "3282f0a06bdee4545faf0409761622ac7de2cbfd11c840d218354c7bbe754b80"
+      }
+    ]
+  }
 }

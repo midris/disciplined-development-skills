@@ -146,7 +146,8 @@ Fixture targets must be pairwise non-conflicting: no target may equal or be a pa
 Both providers support both modes.
 Read-only mode denies model-initiated writes to fixtures, evidence, Git state and other project paths while retaining read/search tools.
 The runner and provider runtime still perform setup, output capture and private bookkeeping; this is not an all-tools-disabled mode or a restriction to reading only declared files.
-The original configuration snapshot and logged launch policy identify the selected mode; the result schema remains unchanged.
+The original configuration snapshot and logged launch policy identify the selected mode; result schema `0.3` also records the resolved mode in `execution.permissions`.
+Input schema remains `0.2`: this optional field preserves existing configurations and their writable default; input and result versions describe separate contracts.
 `provider` is `codex` or `claude`.
 `model` is a non-empty string, and `effort` matches `[a-z0-9][a-z0-9-]*`.
 The runner passes model and effort through without semantic validation.
@@ -277,7 +278,10 @@ Real CLI qualification of supplied skills, common/bootstrap inputs, shell-startu
 Claude uses noninteractive print execution from `workspace/fixture/`, native skills supplied under `.claude/skills/`, and `--add-dir` for sibling evidence access.
 The configured model and effort pass through unchanged.
 Fixed flags select project settings only, an empty strict MCP configuration, no Chrome integration, no session persistence and verbose `stream-json` output.
-Read, Skill, Glob, Grep, Write, Edit and Bash are explicitly available and allowed with `--permission-mode dontAsk --permission-prompts none`; permission bypass is not used.
+In `workspace-write` mode, Read, Skill, Glob, Grep, Write, Edit and Bash are explicitly available and allowed.
+In `read-only` mode, the list is Read, Skill, Glob, Grep and Bash; dedicated Write/Edit tools are omitted, and the sandbox still denies mutations attempted through Bash.
+Both modes use `--permission-mode dontAsk --permission-prompts none`; permission bypass is not used.
+The sibling evidence directory remains available for reading; `--add-dir` does not override the process sandbox.
 
 The controlled Claude runtime requires macOS `sandbox-exec` and an existing claude.ai subscription login.
 It retains normal HOME/USER for authentication and launches with an explicit operational PATH, fresh private temporary directories and the accepted memory/history/telemetry controls.
@@ -315,7 +319,11 @@ The completed qualification adds actual companion loading, file search/write/edi
 
 ## Result
 
-`result.json` has exact schema version `"0.2"` and records the run identity, timestamps, duration, test id, mechanical invocation state, fixed artifacts, and an infrastructure error when one occurred.
+`result.json` has exact schema version `"0.3"` and records the run identity, timestamps, duration, test id, mechanical invocation state, fixed artifacts, and an infrastructure error when one occurred.
+`execution.permissions` is required and records `workspace-write` or `read-only`, including failures before provider launch; an omitted input field is recorded as its resolved `workspace-write` default.
+The result version changes because the machine-readable execution contract now requires this field.
+Historical `0.2` results remain unchanged and must be interpreted with their version and retained configuration; a missing mode is not evidence of either permission setting.
+Consumers validating new results must use the updated result schema; the worksheet reader continues to read the fields common to both versions.
 `status` is `COMPLETED` only for a mechanically completed invocation; otherwise it is `INFRA_ERROR` with one of `PREPARATION_FAILED`, `PROVIDER_LAUNCH_FAILED`, `PROVIDER_TIMEOUT`, `PROVIDER_EXIT_NONZERO`, `ARTIFACT_WRITE_FAILED`, or `PROVIDER_CLEANUP_FAILED`.
 The cleanup code applies to either provider after an otherwise successful model call; earlier preparation/launch/timeout/provider errors stay primary, with cleanup failure logged additionally.
 Exit `0` means the run completed mechanically, exit `1` means an owned-run, provider, timeout, or artifact-persistence failure, and exit `2` means usage or configuration failed before a run directory was owned.
@@ -329,7 +337,7 @@ The runner never evaluates evidence or assigns a behavioral verdict.
 
 ```json
 {
-  "schema_version": "0.2",
+  "schema_version": "0.3",
   "run_id": "20260827T120000000Z-runner-smoke-<unique>",
   "status": "COMPLETED",
   "started_at": "2026-08-27T12:00:00.000Z",
@@ -340,6 +348,7 @@ The runner never evaluates evidence or assigns a behavioral verdict.
     "provider": "claude",
     "model": "sonnet",
     "effort": "low",
+    "permissions": "workspace-write",
     "executable": "claude",
     "timeout_seconds": 900,
     "invocation_started": true,

@@ -121,3 +121,24 @@ def test_failed_setup_stops_before_model_and_cleans_runtime(tmp_path, setup, mon
 def test_auth_status_requires_subscription_without_retaining_payload(data, expected):
     from skilltest.claude_runtime import authenticated
     assert authenticated(bytearray(data)) is expected
+
+
+# Break: HOME containment no longer stops before authentication and Git setup.
+@pytest.mark.parametrize('inside_home', ['runtime', 'fixture'])
+def test_home_containment_is_rejected_before_authentication(setup, monkeypatch, inside_home):
+    import tempfile
+    home = Path(os.environ['HOME'])
+    fixture = setup.workspace/'fixture'
+    if inside_home == 'runtime':
+        monkeypatch.setattr(tempfile, 'tempdir', str(home))
+    else:
+        fixture = home/'fixture'
+        fixture.mkdir()
+    runtime = setup.type(lambda _: None, permissions='read-only')
+    try:
+        with pytest.raises(PreparationError, match='outside HOME'):
+            runtime.prepare(fixture)
+        setup.login.assert_not_called()
+        setup.popen.assert_not_called()
+    finally:
+        assert runtime.cleanup() is None
