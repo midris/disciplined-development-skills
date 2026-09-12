@@ -133,3 +133,24 @@ The [study protocol](../skill-studies/sweeping-stale-references/protocol.md) rec
 The file-by-file fixture constraint is confirmed in the loader and workspace implementation; no new preparation tool is justified yet.
 The protocol surfaces the parent's missing-companion conflict and unqualified filesystem isolation before test design, rather than treating them as collection bookkeeping.
 This is implementation of Stage 1 preparation, not another external review. Contract and limit acceptance, test design and provider dispatch remain pending.
+
+## Protocol review and skill-relationship correction — 2026-09-12
+
+The owner supplied Claude's protocol review (BLOCK), then clarified that DD orchestrates sibling skills rather than making them dependent on DD, and requested a complete skill read and durable account of their purposes.
+All nine checked-in skill bodies have now been read; the [architecture map](../ARCHITECTURE.md#composition-boundaries) records their purposes and directional relationships, with all nine identities in the study source inventory.
+The previous map already allowed standalone sweeping-stale-references; the study author failed to apply it and inferred a dependency from DD's Gate 4 invocation.
+The spec and resumption guidance now require distinguishing independent use, explicit pairings and orchestration before selecting subject context.
+This is a correction to the study design, not a change to the skill bodies or a new testing framework.
+
+| Review issue | Current disposition |
+|---|---|
+| Path/document drift presented as an explicit existing promise. | The protocol distinguishes the skill's explicit documented-behavior/synonym scope, the interpretation that this covers moved paths, and the owner's intended outcomes. Missing literal wording does not prove exclusion; neither does owner clarification retroactively make relative-path handling an explicit instruction. Outcome assessment remains separate from procedural compliance. |
+| DD/target overlap and the coherence of the missing-companion control. | Superseded by owner-directed standalone evaluation: original target alone versus no skill guidance, with identical task and neutral setup. No Gate 4 bootstrap or missing-companion exception remains in the operative design. Input isolation and successful target loading still require pilot evidence. |
+| Wording campaign spends original/candidate capacity before checking the control. | Run the five no-target diagnostics first, conditional on reaching this later campaign. Stop if they supply no failure supporting the rewrite; do not automatically hunt for another failing probe. The initial pilot remains two proposed Sol-low calls. |
+| Commit accounting omits grouping/length permission. | The contract now preserves grouping before exceeding normal commit-body preferences and permits necessary audit detail after grouping. No hard word/line cap is invented. |
+| Evaluator dispatch lacks a qualified read-only mechanism. | Still unresolved before dispatch. Both collaboration's missing no-write-tool type and the runner's write-capable execution are stated; prompting alone does not satisfy repository policy. |
+
+The study remains at Stage 1, with detailed contract interpretations and limits awaiting walkthrough, and no provider calls or skill rewrites.
+These dispositions are an implementation response, not external acceptance or a new PASS verdict.
+Verification: all 21 recorded source identities match; local document link targets resolve; `git diff --check` passes; hook suite **263 passed, 3 skipped**.
+The protocol also marks the nine-minute time entry as an initial checkpoint, with subsequent unclocked preparation still to reconcile before confirming remaining capacity.

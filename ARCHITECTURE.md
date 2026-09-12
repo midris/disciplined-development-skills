@@ -85,14 +85,16 @@ Claude preserves raw stream output alongside the extracted final answer, using t
 
 ## The skill layer
 
-Nine skills: one **orchestrator** and eight **companions** it dispatches, with
+Nine sibling skills: **disciplined-development** orchestrates a development methodology and invokes the others in specific situations, with
 [`superpowers`](https://claude.com/plugins/superpowers) installed and available.
-Some companions define a usable procedure themselves; others explicitly refine an upstream workflow.
+Some skills define an independent procedure; others explicitly refine an upstream workflow or govern an interaction.
+DD invoking a skill does not make DD a prerequisite for using that skill.
+The arrows below show invocation and applicable upstream guidance, not dependencies inherited by every skill.
 
 ```mermaid
 flowchart TB
     DD["disciplined-development<br/>orchestrator — Iron Law · 5 gates · principles · mode table"]
-    subgraph COMP["companions — dispatched at gates / by mode"]
+    subgraph COMP["sibling skills — invoked at gates / by mode"]
         direction LR
         REV["adversarial-review<br/>+ loop"]
         AUTH["lean-plan-writing<br/>writing-explicit-rationale<br/>concise-writing"]
@@ -113,25 +115,29 @@ flowchart TB
 
 ### Composition boundaries
 
-For test selection, a **leaf task** exercises a skill's own procedure without requiring another DD skill's workflow.
-This is task-dependent: a pairing can become required when its trigger is present.
-Ownership references and incoming calls from the orchestrator do not themselves require loading the whole bundle.
+This is the durable purpose and relationship map for skill-testing preparation, based on a complete read of all nine checked-in skills and the owner's clarification on 2026-09-12.
+Distinguish independent use, an explicit adapter/base pairing, and orchestration that chooses when to invoke a sibling.
+Default to testing a skill independently when its selected use does not explicitly require composition.
+An adapter's named base belongs in that test context; DD and unrelated siblings do not enter merely because they are distributed together.
+Pairings are directional and task-dependent: adversarial-review-loop uses adversarial-review, while adversarial-review can run without the loop or DD.
+Ownership references identify where another responsibility lives; they do not by themselves require loading that owner's workflow.
 
-| Baseline skill | Own procedure | Composition relevant to test selection |
+| Skill | Purpose and useful outcome | Composition relevant to test selection |
 |---|---|---|
-| [concise-writing](skills/concise-writing/SKILL.md) | Remove verbosity while preserving information and useful framing. | Ordinary prose editing is a leaf task. Plans/specs pair with lean-plan-writing; rationale with writing-explicit-rationale; removing a referenced anchor triggers sweeping-stale-references. No unconditional DD-parent or named Superpowers-workflow dependency in its body. |
-| [disciplined-research](skills/disciplined-research/SKILL.md) | Acquire and verify load-bearing claims against applicable sources. | A bounded source-grounding task is a leaf task. It assigns later sweeps and decision rationale to other owners without requiring those workflows for every claim. Source/tool availability still matters. |
-| [sweeping-stale-references](skills/sweeping-stale-references/SKILL.md) | Search, triage and reconcile changed facts, including commit accounting. | Can perform its sweep without a DD parent. Grounding and rationale have separate owners; realistic execution needs searchable project state and the permitted commit boundary. |
+| [concise-writing](skills/concise-writing/SKILL.md) | Make prose easier to read by removing padding while preserving substance, useful framing and warranted repetition. Judge effectiveness across the document. | Ordinary prose editing can stand alone. Plans/specs pair with lean-plan-writing; rationale with writing-explicit-rationale; removing a referenced anchor triggers sweeping-stale-references. Skill/reference authoring is excluded; no unconditional DD or named Superpowers-workflow dependency in its body. |
+| [disciplined-research](skills/disciplined-research/SKILL.md) | Acquire and verify load-bearing claims against current, applicable evidence, exposing uncertainty instead of treating memory as proof. | A bounded source-grounding task can stand alone. It assigns later sweeps and decision rationale to other owners without requiring those workflows for every claim. Source/tool availability still matters. |
+| [sweeping-stale-references](skills/sweeping-stale-references/SKILL.md) | Keep the project consistent when a shared fact changes: search for affected references, triage them, reconcile current consumers and account for preserved matches in the commit. | Can stand alone, without DD or a named Superpowers base. Grounding and rationale have separate owners; execution needs searchable project state and a permitted commit boundary. The owner includes moved paths and code-to-documentation drift in its intended use; the study contract distinguishes that intent from explicit instructions. |
 | [writing-explicit-rationale](skills/writing-explicit-rationale/SKILL.md) | Put decision-useful what/why/accepted trade-offs beside a choice. | An ordinary decision-note task can stand alone. Plans/specs pair with lean-plan-writing; changed facts with stale rationale pair with sweeping-stale-references. |
 | [lean-plan-writing](skills/lean-plan-writing/SKILL.md) | Keep plans/specs as concrete prose contracts rather than implementations. | Always composes with Superpowers writing-plans, overriding its code-in-every-step rule while retaining scaffolding. Pairs with writing-explicit-rationale for relevant choices. |
-| [adversarial-review](skills/adversarial-review/SKILL.md) | Apply review posture, necessity checks, evidence scrutiny and applicable angles. | Adapter over Superpowers requesting-code-review; receiving-code-review governs handling findings. Explicitly loads CW for document reviews and writing-skills for skill-authoring review. |
-| [adversarial-review-loop](skills/adversarial-review-loop/SKILL.md) | Govern class-wide remediation, repeated review and the cap/escape decision. | Builds on review findings and sweeping/adversarial review responsibilities. Defers per-task loops to Superpowers subagent-driven-development; whole-branch remediation uses this skill's rules. Requires review history and reviewer interaction for full execution evidence. |
+| [adversarial-review](skills/adversarial-review/SKILL.md) | Challenge correctness, necessity and evidence through applicable review angles; return actionable, severity-graded findings supported by evidence. | Usable without DD or adversarial-review-loop. Adapter over Superpowers requesting-code-review; receiving-code-review governs handling findings. Explicitly loads CW for document reviews and writing-skills for skill-authoring review. |
+| [adversarial-review-loop](skills/adversarial-review-loop/SKILL.md) | Turn findings into class-wide fixes, recognize recurring failure patterns and bound review iteration with a cap and cold-read decision. | Works with adversarial-review and sweeping responsibilities. Defers per-task loops to Superpowers subagent-driven-development; whole-branch remediation uses this skill's rules. Requires review history and reviewer interaction for full execution evidence; a single review cannot establish loop behavior. |
 | [dispatching-development-subagents](skills/dispatching-development-subagents/SKILL.md) | Bound development delegation and verify every returned commit. | Overlay on Superpowers subagent-driven-development or dispatching-parallel-agents, also covering ad-hoc fixers. Child instructions require disciplined-development; parent gates remain with the orchestrator. |
-| [disciplined-development](skills/disciplined-development/SKILL.md) | Own the Iron Law, gates, principles and mode routing. | Orchestrates all eight companions and the applicable Superpowers methodology workflows. Full validation requires their handoffs and parent/child authority boundaries. |
+| [disciplined-development](skills/disciplined-development/SKILL.md) | Keep development grounded, scoped, tested, verified, reconciled and reviewed by requiring evidence at gates and routing the relevant skills. | Orchestrates the other eight skills and applicable Superpowers workflows. Full validation requires handoffs and boundaries between orchestrator and delegated-agent authority. That orchestration does not impose a reverse dependency on every sibling. |
 
 Each skill's `SKILL.md` under [`skills/`](skills/) is the source of truth for its
 rules — this table is the map, not the content.
-The map describes declared relationships, not measured effectiveness or a requirement to validate every dependency before a leaf task.
+The map describes intended roles and declared relationships, not measured effectiveness or a requirement to validate every dependency before studying one skill.
+Use it to orient a study, then derive and source the selected contract from the full skill and owner intent under the [testing spec](plans/specs/2026-09-11-model-driven-skill-testing-framework.md#1-understand-and-agree-on-the-behavioral-contract).
 
 ## Orchestration — how a session is governed
 

@@ -10,7 +10,7 @@
 **Authority and state:** This is the current plan for preparing the study; it replaces the previous nine-task plan and its separate six-stage proposal.
 Preparation and documentation work are authorized. Candidate selection, provider spending, a rewrite objective and adoption require the owner decisions identified below; no experiment or rewrite has begun.
 The spec governs how the study is designed. Neither document grants provider-run authorization.
-Claude's fourth review recommended moving to Stage 1, with one P2 and two P3 findings addressed below; its reported BLOCK remains the latest external verdict, not a PASS on these edits.
+External reviews and responses are recorded in the [review record](../reviews/2026-09-11-model-driven-testing-plan-review.md); the latest supplied protocol review reported BLOCK, with no subsequent external PASS on these edits.
 On 2026-09-12 the owner accepted the next steps and selected `sweeping-stale-references`. Stage 1 preparation is active; limits remain provisional until the contract/allocation walkthrough, before test design.
 
 ## Starting or resuming without conversation history
@@ -19,6 +19,7 @@ Read [CLAUDE.md](../CLAUDE.md), this plan and the spec; inspect the working tree
 Preserve unrelated changes and identify original skill bytes by revision and hash.
 Use the [runner guide](../skill-validation/runner/README.md) for mechanics; its fixed worksheet and historical methodology links do not govern this study.
 Read installed workflow skills from the available catalog rather than relying on a previous installation path.
+Read the [purpose and relationship map](../ARCHITECTURE.md#composition-boundaries) for orientation; distinguish independent use, explicit pairings and DD orchestration before deciding subject context.
 
 The study workspace is `skill-studies/sweeping-stale-references/`.
 Its only new narrative document is [protocol.md](../skill-studies/sweeping-stale-references/protocol.md): it holds concrete decisions, versions, commands, artifact links, run accounting and the final conclusion, without another task checklist.
@@ -52,12 +53,13 @@ A different directory or branch alone is insufficient. If isolation cannot be es
 - [x] Record the owner-selected candidate, study start and active-time accounting, and open its protocol. Keep limits provisional until the allocation is reviewed.
 - [x] Read the complete skill, relevant dependencies and installed `writing-skills` testing guidance; record versions and missing capabilities before dependent work.
 - [ ] Derive intended behavior, exclusions, ownership and observable evidence from those sources. Review the contract and unresolved interpretations with the owner.
+  All nine skills have been read and their purpose/relationships recorded in the architecture map. The owner agreed with the broad purpose, clarified path-move reconciliation and code-to-documentation drift, and directed independent evaluation. The protocol now specifies skill-only versus no skill guidance; detailed procedural interpretations and execution qualification remain open.
 - [x] Write the phase-by-role allocation table, with feasible case/repetition assumptions, evaluator batch composition, estimated preparation/run/review time, protected comparison capacity and repair reserves. Declare whether the affordable repetitions support a variability estimate or only descriptive observations; otherwise report variability as not estimable.
 - [x] Inspect the runner paths needed for this candidate. Distinguish code/document inspection from live qualification.
 - [ ] Walk through the proposed contract, control context and feasible allocation with the owner; confirm the limits before designing tests.
 
 **Complete when:** the protocol identifies the exact original, agreed contract, feasible allocation, absolute storage paths and capabilities requiring pilot verification.
-The recommendation is already made; a survey of all nine skills is not a prerequisite.
+The candidate and independent-use direction are settled; do not reopen them as prerequisites for the remaining walkthrough.
 Batch evaluator inputs across distinct cases, never across conditions of the same case in one evaluator context, and use fresh contexts for later batches. Conceal condition labels and identifying metadata in evaluator copies while preserving raw evidence separately; content may still reveal the condition, so record that residual limit and its effect on claims before collection.
 The evaluator pool need not cover every subject run with a separate call: allocate model judgments only where used or measured, and independently validate deterministic checks for the other properties.
 
@@ -125,6 +127,7 @@ Reserved bundles and revealing assessments stay entirely in the verified private
 
 ## Current next action
 
-Walk through the proposed contract, control context and provisional limits in the study protocol with the owner before designing cases. Source inventory, allocation arithmetic and runner inspection are prepared; contract/limit acceptance remains open.
+Walk through the remaining procedural interpretations and provisional limits in the study protocol with the owner before designing cases. Source inventory, allocation arithmetic and runner inspection are prepared; detailed contract/limit acceptance remains open.
+The first study evaluates sweeping-stale-references alone against the same task without skill guidance; the earlier DD-present control is superseded. Exact input isolation remains a pilot requirement.
 The owner selected Sol low for initial process checks (Terra medium is an alternative); the protocol keeps the five-repetition wording campaign conditional on reaching authoring, outside the initial pilot.
 The reset documents and abandonment notices are prepared; experimental stages remain incomplete.

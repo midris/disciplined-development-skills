@@ -1,34 +1,48 @@
 # Sweeping stale references: study protocol
 
 Status: Stage 1 proposal for owner review, 2026-09-12.
-The owner selected `sweeping-stale-references` and authorized contract/allocation preparation; the limits, contract and control below are proposed, not approved collection instructions.
+The owner selected `sweeping-stale-references`, authorized contract/allocation preparation and clarified that this skill should be evaluated independently.
+The detailed contract, execution setup and limits remain proposed, not approved collection instructions.
 Progress belongs to the [plan](../../plans/2026-09-11-model-driven-skill-testing.md); general requirements belong to the [spec](../../plans/specs/2026-09-11-model-driven-skill-testing-framework.md).
 No test cases, provider configurations, model observations or skill rewrites have been created.
 
 ## Sources and intended use
 
 The original is [sweeping-stale-references](../../skills/sweeping-stale-references/SKILL.md) at repository revision `53a06ff4e2fcefb3c7706565bebe07d88e2782ea`, SHA-256 `d6812c33cae026807bbb3ebe851d93b60b513dd87ea5efd98aea28f5c02f9157`.
-[sources.json](sources.json) records inspected file paths, sizes and hashes, including the parent doctrine, ownership companions, installed authoring guidance and runner implementation.
+[sources.json](sources.json) records inspected file paths, sizes and hashes, including all nine DD skills, installed authoring guidance and runner implementation.
 This inventory identifies preparation sources; it is not the frozen manifest of inputs supplied to subjects.
 
 The skill combines a search-and-reconciliation technique with discipline against stopping after one cited defect.
 Its intended user is a development agent changing a fact shared across project files or responding to a reviewer who found one stale reference.
-The [parent doctrine](../../skills/disciplined-development/SKILL.md#operational-gates) dispatches it at Gate 4, before commit; the companion also has its own explicit trigger.
-The first study should measure behavior at that checkpoint, with discovery and the entire development lifecycle excluded from the initial claim.
+The skill has its own trigger and procedure; it does not require DD or a named Superpowers base to perform a sweep.
+DD invokes it at Gate 4, but that incoming invocation is not a dependency of the skill.
+The [purpose and relationship map](../../ARCHITECTURE.md#composition-boundaries) records this distinction across all nine skills.
+The first study measures independent application to a change and reconciliation commit; native discovery and DD orchestration are outside its claim.
 [Disciplined research](../../skills/disciplined-research/SKILL.md) owns grounding the changed fact; [writing explicit rationale](../../skills/writing-explicit-rationale/SKILL.md) owns why it changed.
-The task must supply a settled change and sufficient project context, rather than score this companion for inventing the desired change or resolving an unspecified business rule.
+These ownership boundaries do not require loading either sibling into the subject context.
+The task must supply a settled change and sufficient project context, rather than score this skill for inventing the desired change or resolving an unspecified business rule.
 
 ## Proposed behavioral contract
+
+Owner clarification, 2026-09-12: the intended outcome includes preventing documentation drift when project structure or code facts change.
+When a file moves, find references to its old path and reconcile affected links, commands and other current consumers to the new location, resolving relative paths from each consumer.
+When a code fact changes, find and update documentation describing that fact even when it uses different words rather than the changed identifier; search terms locate candidates, and the meaning of each reference determines the change.
+The current text explicitly covers changed documented behavior, literal strings and synonyms, and doc/comment citations.
+Applying that procedure to moved paths and semantically equivalent descriptions of code facts is a supported interpretation, reinforced by the owner's intended use; relative-path resolution is not an explicit instruction in the current skill.
+Record those criteria as owner-clarified outcomes, not a quotation or proof that the original explicitly taught every technique needed to achieve them.
+Assess those outcomes across both conditions, separately from compliance with the original's explicit procedure; a miss does not by itself establish disobedience to an explicit instruction.
+Historical references and unrelated matches still receive the stated triage, rather than blanket replacement.
+The broad purpose and independent evaluation direction are settled; detailed procedural interpretations remain under review.
 
 Judge the completed reconciliation, search evidence and commit record together.
 Explicit procedural obligations remain observable requirements; an attractive final file state does not prove that the prescribed search or accounting occurred.
 
 | Obligation and source | Intended effect | Observable evidence |
 |---|---|---|
-| Search before reconciliation edits; search literal references and plausible synonyms across code, docs, tests and config/build/CI, including vendor/archive triage. Skill: Quick reference, Procedure 1, What counts as a reference. | Find siblings of the triggering defect across the project, not just the cited file. | Retained search commands/results and edit ordering, checked against the supplied project and relevant reference inventory. |
+| Search before reconciliation edits; search literal references, relevant path variants and plausible synonyms across code, docs, tests and config/build/CI, including vendor/archive triage. Skill: Quick reference, Procedure 1, What counts as a reference; owner clarification above. | Find siblings of the triggering defect, including broken path references and documentation of changed code facts. | Retained search commands/results and edit ordering, checked against the supplied project, resolved paths and statements of affected behavior. |
 | Classify matches as update, false positive with reason, or intentionally stale with reason. Skill: Procedure 2. | Reconcile real consumers while preserving unrelated matches and historical meaning. | Final changes, unchanged material and reasons linked to each matching location. |
 | Reconcile all required updates in one commit. Skill: Procedure 3. | Avoid committing an inconsistent intermediate project state. | Git history/diff relative to the prepared original; all required changes in one reconciliation commit. |
-| Account for matches in `References swept:`, grouped only by the same path and outcome, with precise locations and counts. Skill: Output artifact. | Make coverage and deliberate preservation independently inspectable. | Commit body reconciled to retained searches and final changes; after narrative and before a Verification section when present. |
+| Account for matches in `References swept:`, grouped only by the same path and outcome, with precise locations and counts. Group before exceeding the normal commit-body preference; a broad sweep may exceed it after grouping. Skill: Output artifact. | Make coverage and deliberate preservation independently inspectable without treating necessary audit detail as verbosity. | Commit body reconciled to retained searches and final changes; after narrative and before a Verification section when present. No invented hard length cap. |
 | Give the required `References swept: n/a — <reason>` in the single-file/no-sweep case. Skill: Quick reference and Output artifact. | Distinguish a justified negative finding from forgotten accounting. | Recorded search/scope basis and the negative-form commit line. |
 
 Accept any effective search tool, sensible query order, equivalent edits and concise grouping that preserve these obligations.
@@ -40,21 +54,23 @@ Count and location conventions must be fixed with the eventual checkers, includi
 Missing action traces yield insufficient evidence for order/completeness claims, not an invented behavioral failure or pass.
 Historical commits, PR descriptions and chat logs are not rewrite targets; vendor/archive files still require triage under the skill's stated distinctions.
 
-## Proposed control and attribution
+## Standalone control and attribution
 
-Use the same parent doctrine and necessary surrounding guidance in original, no-target and eventual candidate conditions; vary the target companion's presence/version.
-Start at the Gate 4 checkpoint with an explicit load of the parent and available companion, rather than treating native discovery as established.
-This measures the companion's incremental contribution within the composed workflow and later the candidate relative to the original; it does not measure the whole DD bundle against an unguided model.
+Owner direction: evaluate this skill independently; do not include DD merely because it invokes the skill.
+Use the same ordinary task, project files, tools, permissions, model settings and neutral execution setup across conditions.
+The original condition explicitly loads only the recorded sweeping-stale-references skill; the no-target condition receives no DD, sibling or Superpowers skill guidance.
+An eventual candidate condition replaces only the original target bytes.
+Freeze and inspect all supplied instructions before dispatch; the task/setup must not reproduce the target's procedure, accounting format or reference answers.
+The assistant conducting this study follows project skills, but those instructions are not subject inputs.
 
-Removing the companion alone leaves the parent's required-load instruction unsatisfied.
-Proposed resolution for owner review: a common study bootstrap in every condition says that when this companion is unavailable, continue Gate 4 using the remaining guidance and do not retrieve a replacement from the host or network.
-This is an explicit study-level exception to the parent's missing-skill stop behavior, not a change to either checked-in skill.
-The parent still supplies the broad sweep requirement, so the control is not “no sweep guidance.”
-Other required guidance remains available; Stage 2 must enumerate its complete dependency closure and freeze identical surrounding bytes across conditions before dispatch.
-Unrelated lifecycle gates are outside this checkpoint task, not scored as companion failures; the final bootstrap must state the checkpoint scope without supplying the target's detailed method or expected results.
+This comparison asks whether the skill improves independent reconciliation over the model's ordinary task behavior, and later whether the rewrite is at least as effective as the original.
+Assess useful outcomes across both conditions; separately record evidence of the target's prescribed search, triage and commit accounting.
+Failure to reproduce an undisclosed target-only format is not by itself evidence that the control performed the ordinary task poorly.
+DD handoffs, interaction with other skills and native skill discovery require separate tests if later selected; this allocation does not establish them.
 
-Recommendation: use this composed control first, rather than add a fourth condition removing all guidance.
-If the owner prefers a fully unguided control, revise the attribution question and allocation explicitly before test design.
+The previous Gate 4 setup and missing-companion exception are superseded and must not appear in the frozen inputs.
+Pilot acceptance requires evidence that the original loaded the intended target, the control received no skill guidance or instruction to retrieve a missing skill, and both could perform the same task.
+Ambient guidance, inaccessible required task inputs or a setup-induced missing-skill stop invalidate that condition; repair the setup within authorization instead of scoring it as a behavioral failure.
 
 ## Authoring guidance and allocation
 
@@ -87,8 +103,9 @@ Model judgments used for baseline/comparison occur in the evaluator allocation; 
 Pilot mechanics use direct evidence inspection. Wording diagnostics must be checkable with validated mechanical checks plus author inspection of every flagged match; any needed independent semantic evaluation must fit the evaluator reserve or trigger an allocation revision before dispatch.
 Author inspection is development evidence, not independent evaluation.
 
-For a shaping rewrite, run the five no-target and five original diagnostic samples before authoring, then the five candidate samples after authoring.
-If the no-target control already succeeds, retain that result and resolve the pure-cleanup/RED conflict with the owner before editing; never manufacture failure.
+For a shaping rewrite, run the five no-target diagnostic samples first and inspect them before spending the five original and five candidate slots.
+If the control supplies no observed failure supporting the proposed rewrite, retain that result and stop the diagnostic campaign; resolve the pure-cleanup/RED conflict with the owner before editing, without automatically selecting another probe to hunt for failure.
+Otherwise run the five original samples before authoring and the five candidate samples afterward.
 Any edit after candidate diagnostic results creates a new variant requiring its own qualifying evidence; the present allocation does not promise that second cycle.
 The final comparison must use the exact selected candidate bytes.
 
@@ -118,7 +135,8 @@ This verifies existing local mechanics, not installed-provider behavior or this 
 Reserved-case isolation remains an explicit capability gap, not authorization to expand the runner.
 Keep the transfer slot only if restrictions can be established within the budget; otherwise classify it as additional development evidence and disclose the reduced claim before collection.
 The no-target control separately requires demonstrating that the omitted skill is not loaded through host files or ambient instructions; if that fails, the control is invalid for contribution claims.
-The available collaboration tool does not expose a no-write-tool reviewer type, so it is not being used as a supposedly read-only evaluator; evaluate any alternative against repository policy before dispatch.
+The available collaboration tool does not expose a no-write-tool reviewer type, and the inspected runner adapters expose write-capable execution; neither is qualified as a read-only evaluator by an instruction saying “do not edit.”
+Establish an evaluator mechanism satisfying repository policy before evaluator dispatch; this remains a capability gap, not justification for a new tool without a concrete need.
 
 ## Storage and accounting
 
@@ -135,7 +153,13 @@ This preparation consumes active study time toward the provisional ceiling; reco
 Dispatched study invocations so far: **0 subject, 0 evaluator, 0 authoring, 0 retry**.
 The orchestrator's preparation conversation and local tool calls consume active time, not provider-invocation slots; model assessments or authoring work must be accounted under their declared roles.
 
-Owner walkthrough: agree on the behavioral contract and missing-companion control, then confirm or revise the allocation/limits before Stage 2 designs cases.
+Owner walkthrough: resolve the remaining procedural interpretations and confirm or revise the allocation/limits before Stage 2 designs cases.
+Independent use is settled; Stage 3 must still qualify the exact standalone input setup and permissions.
 
-Preparation pause: 2026-09-12 04:28:30 UTC; charge **9 minutes** so far (opening allowance included, rounded up). Resume accounting when work resumes; the pending owner walkthrough is excluded wait time.
+Initial preparation pause: 2026-09-12 04:28:30 UTC; **9 minutes** charged at that checkpoint (opening allowance included, rounded up).
+Subsequent contract clarification, the full skill read and these documentation corrections were not continuously clocked; nine minutes is not the current cumulative total.
+Reconcile that preparation time with an explicitly labeled estimate before confirming the remaining time budget; exclude owner-wait rather than charging the entire elapsed conversation.
 Verification at this checkpoint: 16 source hashes and allocation arithmetic checked; document links and `git diff --check` passed; hook suite **263 passed, 3 skipped**. No provider process was invoked.
+
+Relationship-correction verification: all **21** source identities match, including all nine DD skills at the recorded revision; local links resolve and `git diff --check` passes.
+Hook suite: **263 passed, 3 skipped**. These documentation checks do not qualify provider execution or demonstrate skill effectiveness.

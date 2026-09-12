@@ -36,9 +36,10 @@ Nine skills (each a `skills/<name>/SKILL.md`):
 
 - **`disciplined-development`** — the doctrine
   ([`skills/disciplined-development/SKILL.md`](skills/disciplined-development/SKILL.md)):
-  the Iron Law, the five gates, the principles, the rationalization tables. The
-  parent skill; the rest are its companions. Its `hooks/` subdir holds the hook
-  stack.
+  the Iron Law, the five gates, the principles, the rationalization tables.
+  DD orchestrates sibling skills in specific situations; they do not automatically depend on it.
+  The [relationship map](ARCHITECTURE.md#composition-boundaries) distinguishes independent use and explicit pairings.
+  Its `hooks/` subdir holds the hook stack.
 - **`adversarial-review`** / **`adversarial-review-loop`** — reviewer posture, the
   angle catalog + per-artifact selection, and the severity contract (P0/P1/P2
   block, P3 advisory); plus the review→fix→re-review iteration cap with a

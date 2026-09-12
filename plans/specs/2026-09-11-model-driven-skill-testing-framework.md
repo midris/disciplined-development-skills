@@ -64,6 +64,11 @@ Changing intended behavior creates a new comparison contract; it must not be dis
 ### 1. Understand and agree on the behavioral contract
 
 Read the complete skill, referenced materials used by its procedure and relevant companion skills.
+Use the [skill purpose and relationship map](../../ARCHITECTURE.md#composition-boundaries) for orientation, then verify relationships against the selected skill's procedure.
+Distinguish an independent procedure, an explicit adapter/base pairing, and an orchestrator invoking a sibling at a particular moment.
+Default to independent evaluation unless the selected use explicitly requires composition or inter-skill interaction.
+An incoming DD invocation or an ownership reference is not a reverse dependency; bundle installation requirements do not require every skill to be loaded into every subject context.
+For an explicit pairing, record its direction, trigger and necessary context; evaluate broader orchestration separately when that is the question.
 Establish whether it teaches a technique, supplies a reasoning pattern or reference, enforces discipline, coordinates other skills, or combines these functions.
 Use that classification to guide investigation, not to force a skill into a single category.
 
@@ -138,6 +143,9 @@ Agree on the sample and stopping policy before the measured collection; label pi
 The main comparison conditions are no target skill, the original skill and, later, the rewritten skill.
 Keep model settings, tasks, permissions and necessary surrounding context comparable across conditions.
 Removing the target may still leave dependencies present; describe exactly what the control removes and what remains.
+For an independent skill, compare the skill alone with the same task without skill guidance; preserve the ordinary task, tools and necessary neutral setup.
+For an adapter or interaction test, retain the explicitly required base/context across conditions and identify the resulting attribution limit.
+Keep the orchestrator's own project instructions separate from subject inputs; loading skills to conduct a study does not authorize leaking them into its control.
 If the target cannot be isolated without breaking a composed workflow, narrow the attribution claim or design a different experiment.
 For discovery tests, preserve natural availability and observe selection; explicit loading tests a different question.
 Record available provider/CLI versions and other mutable execution dependencies in addition to requested model names, and disclose any version information the provider does not expose.

@@ -25,6 +25,31 @@
       "sha256": "97eb06c649c194e8819b4dff68b808eda4ec7c948a6ead518da247daf31d6cfe"
     },
     {
+      "path": "/Users/simon/work/personal/disciplined-development-skills/skills/adversarial-review/SKILL.md",
+      "bytes": 10295,
+      "sha256": "9004ff153d5dc3a3690254667c4f666151dcabff7ef6f705cc751134be56499c"
+    },
+    {
+      "path": "/Users/simon/work/personal/disciplined-development-skills/skills/adversarial-review-loop/SKILL.md",
+      "bytes": 8374,
+      "sha256": "46b85eafc5db54cb521eed9c4a110e552c76d97cfae72e141f109c9dea10f0c6"
+    },
+    {
+      "path": "/Users/simon/work/personal/disciplined-development-skills/skills/concise-writing/SKILL.md",
+      "bytes": 5616,
+      "sha256": "4d12a2eb475c6b2ef57e2300c8c07af3f59c1e07b2b82695a3b7669eee1d6d72"
+    },
+    {
+      "path": "/Users/simon/work/personal/disciplined-development-skills/skills/dispatching-development-subagents/SKILL.md",
+      "bytes": 5593,
+      "sha256": "b89b4db8af53bd136237cb2306f956c039757a0e321b1f704bd16d1a00580500"
+    },
+    {
+      "path": "/Users/simon/work/personal/disciplined-development-skills/skills/lean-plan-writing/SKILL.md",
+      "bytes": 5194,
+      "sha256": "6a3115a4d33ad2f99238f915a6a1b7869efd8c80a6cce422d3afae60c9857fac"
+    },
+    {
       "path": "/Users/simon/.codex/plugins/cache/claude-plugins-official/superpowers/6.3.0/.claude-plugin/plugin.json",
       "bytes": 497,
       "sha256": "d0d56f9f3a6adbf341d5d49850f63def17bfb7e9a39704b517745b2c554498c3"
