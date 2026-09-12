@@ -9,6 +9,7 @@ One executable pilot case and two provider configurations are prepared; no model
 ## Sources and intended use
 
 The original is [sweeping-stale-references](../../skills/sweeping-stale-references/SKILL.md) at repository revision `53a06ff4e2fcefb3c7706565bebe07d88e2782ea`, SHA-256 `d6812c33cae026807bbb3ebe851d93b60b513dd87ea5efd98aea28f5c02f9157`.
+Original-condition runs load the [frozen study snapshot](cases/skill-original/SKILL.md), not the live skill path. Preserve these bytes for contemporaneous original-versus-candidate comparisons; candidate edits must not replace this snapshot.
 [sources.json](sources.json) records inspected file paths, sizes and hashes, including all nine DD skills, installed authoring guidance and runner implementation.
 This inventory identifies the initial preparation sources at the recorded revision, including the runner before its permission extension; it is not the frozen manifest of inputs supplied to subjects.
 The permission qualification index below identifies the updated runner sources.
@@ -116,6 +117,7 @@ The initial real-model pilot asks whether inputs/skills are loaded as intended, 
 The [pilot case](cases/pilot-01/assessment.md) adapts the earlier ssr-02 situation into real files and executable consumers; the [expected outcomes](cases/pilot-01/expected.json) and [local qualification record](cases/pilot-01/qualification.json) replace the old inventory/rubric.
 The first pass covers scope expansion, preservation, complete reconciliation and accounting. Remaining facets stay unbuilt; the [plan's pilot-status table](../../plans/2026-09-11-model-driven-skill-testing.md#stage-3-qualify-and-freeze-execution) scopes partial completion.
 Both configurations and all declared source files are identified in [manifest.json](cases/pilot-01/manifest.json). Configuration loading, prompt parity and byte-for-byte fixture preparation passed without provider invocation: 14 common inputs, plus only the target skill in the original condition.
+The original config now sources the frozen snapshot; subject-visible skill bytes and both prompts are unchanged. The manifest records the new source path and updated config/assessment hashes. The Setup criterion records control exploration of the common `.agents/` ignore entry without treating exploration alone as contamination.
 Five constructed fixture variants demonstrate task feasibility and limitations of runtime-only checks; 70 synthetic files are hash-verified in the primary and backup paths recorded by the qualification record. These are local tool observations, not model performance.
 
 Initial order is control, then original, one attempt each, using Codex `gpt-5.6-sol`, low effort, `workspace-write`, and the runner's 900-second per-call timeout. Installed Codex 0.154.0 and its executable hash match the prior permission qualification; no authentication or model availability check has been performed in this preparation.

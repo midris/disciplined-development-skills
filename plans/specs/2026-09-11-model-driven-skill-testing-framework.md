@@ -227,6 +227,7 @@ Re-read them before authoring and reconcile any version change with the planned 
 Choose a specific rewrite objective from the baseline: correct a demonstrated weakness, clarify a condition, remove ineffective procedural burden or simplify successful guidance while preserving behavior.
 Match the instructional change to the observed failure rather than adding generic warnings or pursuing a word-count target.
 Keep the original skill and the agreed tests available throughout the work.
+Original-condition configurations must source a preserved, versioned study copy of the original bytes, not the live skill path that authoring may change; retain identity checks and store candidates separately.
 
 The current `writing-skills` workflow emphasizes failing no-guidance controls, RED–GREEN–REFACTOR, matching guidance form to failure type and repeated wording tests where applicable.
 Plan for those evidence requirements in the control and experiment design.

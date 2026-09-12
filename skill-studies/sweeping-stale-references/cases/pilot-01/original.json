@@ -60,7 +60,7 @@
       "target": "TASK.md"
     },
     {
-      "source": "../../../../skills/sweeping-stale-references/SKILL.md",
+      "source": "../skill-original/SKILL.md",
       "target": ".agents/skills/sweeping-stale-references/SKILL.md"
     }
   ],

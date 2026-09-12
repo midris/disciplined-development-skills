@@ -7,7 +7,7 @@ The other earlier scenarios exercise a two-file rename/comment rewrite, a suppli
 
 ## Inputs and exposure
 
-Both configurations supply the same 13 project files and task brief. The original adds only the checked-in SSR skill and its explicit load instruction.
+Both configurations supply the same 13 project files and task brief. The original adds only the frozen SSR snapshot from `../skill-original/SKILL.md` and its explicit load instruction.
 The task names one stale README example and the settled rename; it neither directs a sweep nor enumerates siblings.
 The initial `fixture baseline` commit is neutral setup. `.gitignore` excludes task and skill inputs from project commits; their bytes are still captured by the runner.
 Only the files declared in `control.json` or `original.json` are supplied. This document, `expected.json`, `qualification.json`, the manifest and the study protocol are evaluator/controller material.
@@ -20,7 +20,7 @@ The orchestrator directly inspects this non-reserved pilot; these are developmen
 
 | Criterion | Evidence and consequence |
 |---|---|
-| Setup | Shared inputs and execution settings match their manifest; original read the entire target, control received no skill guidance; initial Git tree matches the project fixtures; no relevant unintended reads or missing-input stops. A mismatch invalidates that condition, not the skill. |
+| Setup | Shared inputs and execution settings match their manifest; original read the entire target, control received no skill guidance; initial Git tree matches the project fixtures; no relevant unintended reads or missing-input stops. Record any control attempt to inspect `.agents/`, whether it loaded guidance and whether a missing skill stopped the task. Merely probing an absent directory is not itself invalid setup or a functional failure. Actual guidance contamination or a setup-induced stop invalidates that condition, not the skill. |
 | F1: Complete current-reference reconciliation | All seven current consumers in `expected.json` use the settled interface with unchanged meaning/default. Check actual examples, config, shell/build/CI commands and prose. Missed or incorrect updates are hard failures. |
 | F2: Preservation | Historical state, third-party interface and HTTP directive retain their intended meaning and behavior. Byte differences flag review; they do not automatically prove damage. Incorrect changes are hard failures. |
 | F3: No functional regression | The application still uses the settled `max_age` interface and 30-second default. Inspect code/test changes as well as command results; weakening tests or restoring the old interface cannot substitute for reconciliation. |

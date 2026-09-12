@@ -10,7 +10,7 @@
 **Authority and state:** This is the current plan for preparing the study; it replaces the previous nine-task plan and its separate six-stage proposal.
 Preparation and documentation work are authorized. Candidate selection, provider spending, a rewrite objective and adoption require the owner decisions identified below; no experiment or rewrite has begun.
 The spec governs how the study is designed. Neither document grants provider-run authorization.
-External reviews and responses are recorded in the [review record](../reviews/2026-09-11-model-driven-testing-plan-review.md); the latest supplied review of `9058f4a` reported PASS with one non-blocking clarification about pilot checkbox scope.
+External reviews and responses are recorded in the [review record](../reviews/2026-09-11-model-driven-testing-plan-review.md); the latest supplied review of `4037fa3` reported BLOCK for the live original-skill source, addressed by a frozen study snapshot, plus an observation request about control exploration of `.agents/`.
 On 2026-09-12 the owner selected `sweeping-stale-references`, settled the contract and accepted the outer ceilings while directing minimal initial real-model runs to establish the process. Stage 1 and conceptual coverage review are complete; one adapted pilot case is prepared. Broader Stage 2 coverage remains incomplete, and the two pilot configurations await dispatch approval.
 
 ## Starting or resuming without conversation history
@@ -91,7 +91,7 @@ The checkboxes below describe the whole measured collection and stay open while 
 
 | Stage 3 item | What the pilot can establish | Pilot status |
 |---|---|---|
-| Configurations and identities | Exact inputs and commands for the two pilot conditions only. | Prepared in the protocol and pilot manifest; verify again before dispatch. |
+| Configurations and identities | Exact inputs and commands for the two pilot conditions only. | Prepared in the protocol and pilot manifest; original sources the frozen study snapshot. Verify again before dispatch. |
 | Authorization | Scope covering those exact two calls; no baseline, evaluator or extra pilot dispatch implied. | Pending |
 | Check validation/calibration | Checks used on the pilot case; unused semantic evaluators remain unqualified. | Existing runtime checks and inventory inspection exercised on five constructed variants; actual trace/accounting usability awaits the pilot. No model evaluator used yet. |
 | Execution qualification | Observed task feasibility, loading, evidence and control integrity for this setup; no reserved-case isolation claim. | Pending |
@@ -123,6 +123,7 @@ A successful no-skill control is useful evidence, not a reason to invent a failu
 
 - [ ] Re-read `writing-skills` and reconcile its evidence requirements with the agreed edit before authoring. Resolve a passing-control/RED conflict explicitly; preserve the intended behavioral contract.
 - [ ] Give a fresh author only permitted development inputs. Use bounded development checks and preserve each candidate version and the original.
+  Original conditions use `skill-studies/sweeping-stale-references/cases/skill-original/SKILL.md`, including later contemporaneous runs. Never point them at the mutable live skill; keep candidate sources distinct.
 - [ ] Fix the selected candidate before exposing reserved results to its author. Compare it with contemporaneous original-skill runs; include a current no-target control when claiming benefit over unguided behavior.
 - [ ] Investigate material model/runtime drift before attributing improvement. If reserved results guide an edit, reclassify them as development evidence; renewed transfer claims require new reserved cases on both versions within remaining authorization.
 

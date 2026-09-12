@@ -218,3 +218,10 @@ The owner supplied Claude's **DD-VERDICT: PASS** and accepted the seven conceptu
 Claude verified the storage-anchor sweep and time reconstruction; its observation that the allowed four-minute turn ran longer is handled by cumulative recomputation, not another additive allowance.
 The P3 about repeated Stage 3 checkboxes is addressed by a pilot-only status table: pilot configuration, authorization, check validation, execution qualification and retention are scoped to the two calls; whole-collection boxes remain open, and the measured-collection freeze cannot be closed by the pilot.
 The next external review should inspect the two actual bundles, including traces, Git history and functional/procedural evidence; no additional document review is scheduled.
+
+## External review of 4037fa3
+
+Claude independently verified the fixture inventory, condition manifests and reachable runtime failures, and reported **DD-VERDICT: BLOCK** for a future original-source attribution risk; the prior pilot-checkbox P3 is closed.
+P2 addressed now: `original.json` sources a byte-identical snapshot at `cases/skill-original/SKILL.md` instead of the live skill path. A scratch-checkout check with a different live candidate confirmed the original config still loads the pinned original; the live repository skill was not modified.
+P3 addressed as an observation: record control attempts to inspect `.agents/`, whether guidance was loaded, and whether absence stopped the task. A harmless missing-directory probe alone is not a new task failure or evidence of contamination.
+Config loading, shared-input/settings parity, prompt parity and original-byte identity pass; manifests and the study's future original-condition routing are updated. No model calls occurred, and this response does not claim an external PASS on the edits.

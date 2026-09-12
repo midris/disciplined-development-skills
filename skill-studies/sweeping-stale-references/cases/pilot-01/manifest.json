@@ -110,8 +110,8 @@
       "files": [
         {
           "path": "skill-studies/sweeping-stale-references/cases/pilot-01/original.json",
-          "bytes": 1760,
-          "sha256": "54488c1b0a093c9075c03ab493dd6e1dc20dc25037ec81bc94630ba5a3184949"
+          "bytes": 1733,
+          "sha256": "acd174498348b32ec533fc8e14810daf9f2acc3ad36d6d650794b641e44a953a"
         },
         {
           "path": "skill-studies/sweeping-stale-references/cases/pilot-01/prompt-original.md",
@@ -189,7 +189,7 @@
           "sha256": "9788641daf0dabdc8560578f3464f12e32df816b1a1fb8011244703a51cae115"
         },
         {
-          "path": "skills/sweeping-stale-references/SKILL.md",
+          "path": "skill-studies/sweeping-stale-references/cases/skill-original/SKILL.md",
           "bytes": 7689,
           "sha256": "d6812c33cae026807bbb3ebe851d93b60b513dd87ea5efd98aea28f5c02f9157"
         }
@@ -199,7 +199,7 @@
   "controller_artifacts": [
     {
       "path": "skill-studies/sweeping-stale-references/cases/pilot-01/assessment.md",
-      "sha256": "f5453522d17a3c4da12602799d239842f375e1cdecc979e102f6e2dfe6a106cd"
+      "sha256": "03a5933112bac6ec1755fb03a82bf941a14cfdabd00502556755a27e97156404"
     },
     {
       "path": "skill-studies/sweeping-stale-references/cases/pilot-01/expected.json",
@@ -219,5 +219,14 @@
       "path": "skill-validation/scenarios/sweeping-stale-references/ssr-02/fixture/context/match-inventory.md",
       "sha256": "43b3f8819da7b85ccff406f64a4d0c438ebc4cea35e5628ac4e0919a64e7dcf6"
     }
-  ]
+  ],
+  "original_snapshot": {
+    "path": "skill-studies/sweeping-stale-references/cases/skill-original/SKILL.md",
+    "source_revision": "53a06ff4e2fcefb3c7706565bebe07d88e2782ea",
+    "source_path": "skills/sweeping-stale-references/SKILL.md",
+    "sha256": "d6812c33cae026807bbb3ebe851d93b60b513dd87ea5efd98aea28f5c02f9157",
+    "bytes": 7689,
+    "source_binding_amended_after": "4037fa3",
+    "subject_bytes_changed": false
+  }
 }
