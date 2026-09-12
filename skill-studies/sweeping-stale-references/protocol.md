@@ -147,6 +147,13 @@ Copied workspaces protect originals from ordinary in-workspace edits, and the ad
 The current adapters allow mutation of copied evidence, so claiming stronger isolation requires verified boundaries and evidence integrity; accepting a write-capable evaluator as an alternative would also require an explicit change to repository policy.
 This remains a capability gap, not justification for a new tool without a concrete need.
 
+Feasibility inspection after `d4e6a11`: installed Claude Code **2.1.269** documents `--tools ""` to disable all built-in tools, `--disable-slash-commands` to disable skills, and strict empty MCP configuration to exclude MCP tools.
+Proposed evaluator: a fresh invocation with no model tools, receiving the complete bounded assessment packet in its prompt and returning its assessment through captured output; the controller retains original evidence and owns persistence.
+This supplies a concrete route to a no-write-tool evaluator without weakening repository policy, but CLI help is not live qualification.
+The current runner's strict execution schema permits only provider/model/effort, and its Claude adapter hard-codes write-capable tools, so this mode needs a narrowly scoped runner extension before use through the existing tooling.
+Bring that extension's contract, evaluator model/cost and packet-size limits to the owner before implementation; initial subject pilots remain Sol low.
+Only local help/version and source inspection were performed; no authentication check or model invocation occurred.
+
 ## Storage and accounting
 
 Canonical project checkout: `/Users/simon/work/personal/disciplined-development-skills`.

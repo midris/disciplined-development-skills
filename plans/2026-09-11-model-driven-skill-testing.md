@@ -57,6 +57,7 @@ A different directory or branch alone is insufficient. If isolation cannot be es
 - [x] Write the phase-by-role allocation table, with feasible case/repetition assumptions, evaluator batch composition, estimated preparation/run/review time, protected comparison capacity and repair reserves. Declare whether the affordable repetitions support a variability estimate or only descriptive observations; otherwise report variability as not estimable.
 - [x] Inspect the runner paths needed for this candidate. Distinguish code/document inspection from live qualification.
 - [ ] Identify a feasible model-evaluator mechanism satisfying the no-write-tool rule before Stage 2 selects model-assessed criteria. Inspect existing options first; record a concrete alternative or narrower scope for owner decision if none fits. Stage 3 verifies actual permissions and evidence integrity before evaluator dispatch.
+  Local Claude 2.1.269 help exposes a no-tools invocation; the protocol records a proposed bounded-packet evaluator. The existing runner cannot select this mode, so a minimal adapter/schema extension and evaluator model remain proposed, not implemented or qualified.
 - [ ] Walk through the proposed contract, control context and feasible allocation with the owner; confirm the limits before designing tests.
 
 **Complete when:** the protocol identifies the exact original, agreed contract, feasible allocation, absolute storage paths and capabilities requiring pilot verification.
