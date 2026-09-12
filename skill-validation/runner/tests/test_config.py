@@ -209,3 +209,25 @@ def test_load_config_validates_execution_scalars(tmp_path: Path) -> None:
         config_path, value = _valid_config(tmp_path / str(index))
         mutate(value)
         _reject(config_path, value)
+
+
+# Break: silently defaulting a requested read-only run to writable execution.
+@pytest.mark.parametrize('provider', ['codex', 'claude'])
+@pytest.mark.parametrize('permissions', [None, 'workspace-write', 'read-only'])
+def test_execution_permissions_default_and_selection(tmp_path, provider, permissions):
+    path, value = _valid_config(tmp_path)
+    value['execution']['provider'] = provider
+    if permissions is not None:
+        value['execution']['permissions'] = permissions
+    _save(path, value)
+    assert load_config(path).execution.permissions == (permissions or 'workspace-write')
+
+
+# Break: accepting misspelled or malformed modes that could broaden permissions.
+@pytest.mark.parametrize('permissions', ['', 'readonly', 'full-access', None, True, [], {}])
+def test_execution_permissions_reject_invalid_values(tmp_path, permissions):
+    path, value = _valid_config(tmp_path)
+    value['execution']['permissions'] = permissions
+    _save(path, value)
+    with pytest.raises(ConfigError, match='permissions'):
+        load_config(path)

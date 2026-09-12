@@ -2,7 +2,7 @@
   "captured_at": "2026-09-12",
   "repository_revision": "53a06ff4e2fcefb3c7706565bebe07d88e2782ea",
   "superpowers_version": "6.3.0",
-  "scope": "Stage 1 source inspection, not a frozen subject input manifest",
+  "scope": "Initial Stage 1 source inspection at repository_revision, not current runner bytes or a frozen subject input manifest; updated runner identities are in permissions-qualification.json",
   "files": [
     {
       "path": "/Users/simon/work/personal/disciplined-development-skills/skills/sweeping-stale-references/SKILL.md",

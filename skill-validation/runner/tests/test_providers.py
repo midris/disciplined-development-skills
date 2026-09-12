@@ -209,3 +209,26 @@ def test_codex_grants_only_fixture_git_with_workspace_protections(tmp_path, work
     assert config["shell_environment_policy"] == {"inherit": "none"}
     assert "--strict-config" in arguments
     assert "--ignore-user-config" in arguments and "--ignore-rules" in arguments
+
+
+# Break: read-only requests still receive the fixture Git/evidence write grants.
+def test_codex_read_only_launch_has_no_workspace_write_grants(tmp_path):
+    from dataclasses import replace
+    request = replace(request_at(tmp_path), permissions='read-only')
+    argv = providers._arguments(request)
+    config = tomllib.loads('\n'.join(argv[i+1] for i, a in enumerate(argv) if a == '-c'))
+    policy = config['permissions']['skilltest']
+    assert policy['extends'] == ':read-only'
+    assert policy['network']['enabled'] is False
+    assert 'filesystem' not in policy
+    assert 'workspace_roots' not in policy
+    assert 'approval_policy="never"' in argv
+
+
+# Break: Claude read-only mode is lost before runtime policy construction.
+def test_claude_read_only_request_reaches_runtime(tmp_path, boundaries):
+    from dataclasses import replace
+    request = replace(request_at(tmp_path, provider='claude'), permissions='read-only')
+    result = invoke_provider(request)
+    assert result.invocation_started
+    assert providers.ClaudeRuntime.call_args.kwargs == {'permissions': 'read-only'}

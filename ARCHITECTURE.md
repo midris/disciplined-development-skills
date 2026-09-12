@@ -81,6 +81,8 @@ process, result record, and exit; outside callers compose independent runs.
 Its operator contract and bundle layout are in its
 [README](skill-validation/runner/README.md).
 Codex and Claude adapters share prepared-input checks and owned-process lifecycle mechanics; each owns its authentication and launch controls.
+Both accept the runner's `execution.permissions` choice: the existing writable default or enforced read-only access for model actions, with controller-owned output capture.
+The [runner guide](skill-validation/runner/README.md#providers) defines the provider-specific boundaries and qualification checks; read-only does not mean all tools or skills are disabled.
 Claude preserves raw stream output alongside the extracted final answer, using the same result and worksheet interfaces.
 
 ## The skill layer

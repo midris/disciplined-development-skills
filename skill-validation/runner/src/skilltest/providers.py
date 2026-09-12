@@ -23,6 +23,7 @@ class ProviderRequest:
     provider: str
     model: str
     effort: str
+    permissions: str = "workspace-write"
 
 
 @dataclass(frozen=True, slots=True)
@@ -43,7 +44,7 @@ def invoke_provider(request: ProviderRequest, *, log: Callable[[str], None] = la
     if request.provider == "codex":
         runtime = CodexRuntime(log)
     elif request.provider == "claude":
-        runtime = ClaudeRuntime(log)
+        runtime = ClaudeRuntime(log, permissions=request.permissions)
     else:
         raise ValueError(f"unsupported provider: {request.provider}")
     result = ProviderResult(request.provider, False)
@@ -84,6 +85,8 @@ def invoke_provider(request: ProviderRequest, *, log: Callable[[str], None] = la
 
 
 def _arguments(request: ProviderRequest, *, executable: str = "codex") -> list[str]:
+    if request.permissions not in {"workspace-write", "read-only"}:
+        raise ValueError(f"unsupported permissions: {request.permissions}")
     if request.provider == "codex":
         # Explicitly retain protected directories: on qualified Codex 0.154.0,
         # extending :workspace alone does not preserve its dynamic exclusions.
@@ -95,6 +98,9 @@ def _arguments(request: ProviderRequest, *, executable: str = "codex") -> list[s
             f'workspace_roots={{{json.dumps(str(request.workspace_dir / "evidence"))}=true}},'
             'network={enabled=false}}'
         )
+        if request.permissions == "read-only":
+            # No fixture Git exception or additional writable evidence root.
+            policy = 'permissions.skilltest={extends=":read-only",network={enabled=false}}'
         return [
             executable, "--cd", str(request.workspace_dir / "fixture"), "exec", "--ephemeral",
             "--skip-git-repo-check", "--json",

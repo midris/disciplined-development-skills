@@ -55,6 +55,7 @@ def run_once(config_path: Path) -> RunOutcome:
     request = ProviderRequest(
         prepared.workspace_dir, prepared.prompt_bytes, prepared.final_output_path,
         config.execution.provider, config.execution.model, config.execution.effort,
+        config.execution.permissions,
     )
 
     def log_provider(message: str) -> None:

@@ -32,6 +32,7 @@ class ExecutionDeclaration:
     provider: str
     model: str
     effort: str
+    permissions: str = "workspace-write"
 
 
 @dataclass(frozen=True, slots=True)
@@ -157,17 +158,22 @@ def _reject_target_conflicts(fixtures: tuple[FixtureDeclaration, ...]) -> None:
 
 
 def _execution(value: Any) -> ExecutionDeclaration:
-    _exact_keys(value, {"provider", "model", "effort"}, "execution")
+    required = {"provider", "model", "effort"}
+    if not isinstance(value, dict) or not required <= value.keys() or value.keys() - required - {"permissions"}:
+        raise ConfigError("execution has invalid keys")
     provider = value["provider"]
     model = value["model"]
     effort = value["effort"]
+    permissions = value.get("permissions", "workspace-write")
     if not isinstance(provider, str) or provider not in {"codex", "claude"}:
         raise ConfigError("execution.provider must be codex or claude")
     if not isinstance(model, str) or not model:
         raise ConfigError("execution.model must be a non-empty string")
     if not isinstance(effort, str) or not _EFFORT.fullmatch(effort):
         raise ConfigError("execution.effort is invalid")
-    return ExecutionDeclaration(provider, model, effort)
+    if not isinstance(permissions, str) or permissions not in {"workspace-write", "read-only"}:
+        raise ConfigError("execution.permissions must be workspace-write or read-only")
+    return ExecutionDeclaration(provider, model, effort, permissions)
 
 
 def _regular_file(path: Path, name: str) -> Path:

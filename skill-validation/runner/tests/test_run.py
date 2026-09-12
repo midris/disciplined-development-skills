@@ -220,3 +220,24 @@ def test_claude_lifecycle_results_use_existing_schema_and_codes(build_config_cas
     assert value["infrastructure_error"]["code"] == code
     assert value["execution"]["exit_code"] == exit_code
     assert (outcome.run_dir / "stdout.txt").read_bytes() == b"partial trace"
+
+
+# Break: runner drops the selected mode or cannot retain a read-only assessment.
+@pytest.mark.parametrize('provider', ['codex', 'claude'])
+def test_read_only_mode_reaches_provider_and_preserves_assessment(build_config_case, provider_call, provider):
+    case = build_config_case(provider=provider, fixtures=(("source.txt", "input.txt", b"original"),))
+    value = json.loads(case.config_path.read_text())
+    value['execution']['permissions'] = 'read-only'
+    case.config_path.write_text(json.dumps(value))
+    def respond(request, **kwargs):
+        assert request.permissions == 'read-only'
+        if provider == 'codex':
+            request.final_output_path.write_text('assessment')
+        return ProviderResult(provider, True, exit_code=0,
+            stdout_bytes=b'{"type":"result","subtype":"success","is_error":false,"result":"assessment"}\n')
+    provider_call.side_effect = respond
+    outcome = runner.run_once(case.config_path)
+    assert outcome.exit_code == 0
+    assert (outcome.run_dir / 'final.txt').read_text() == 'assessment'
+    assert (outcome.run_dir / 'workspace/fixture/input.txt').read_bytes() == b'original'
+    assert json.loads((outcome.run_dir / 'config.json').read_text())['execution']['permissions'] == 'read-only'

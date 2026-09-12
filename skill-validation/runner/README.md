@@ -141,7 +141,12 @@ Targets may not contain backslashes, leading or trailing slashes, repeated slash
 Fixture targets must be pairwise non-conflicting: no target may equal or be a path-component ancestor of another target.
 `fixtures` may be empty.
 
-`execution` contains exactly `provider`, `model`, and `effort`.
+`execution` requires `provider`, `model`, and `effort`, and accepts optional `permissions`.
+`permissions` is `workspace-write` (the default when omitted) or `read-only`; unknown values fail configuration preflight.
+Both providers support both modes.
+Read-only mode denies model-initiated writes to fixtures, evidence, Git state and other project paths while retaining read/search tools.
+The runner and provider runtime still perform setup, output capture and private bookkeeping; this is not an all-tools-disabled mode or a restriction to reading only declared files.
+The original configuration snapshot and logged launch policy identify the selected mode; the result schema remains unchanged.
 `provider` is `codex` or `claude`.
 `model` is a non-empty string, and `effort` matches `[a-z0-9][a-z0-9-]*`.
 The runner passes model and effort through without semantic validation.
@@ -185,7 +190,8 @@ Each invocation retains this fixed layout beneath the temporary run root:
 ```
 
 `workspace/fixture/` receives the declared file copies.
-`workspace/evidence/` starts empty and is writable by the provider.
+`workspace/evidence/` starts empty; it is writable by the provider only in `workspace-write` mode.
+Supply evaluator evidence as declared fixture files and return assessments through final output in `read-only` mode.
 Both providers run from `workspace/fixture/`, with access to sibling `workspace/evidence/`.
 For both providers, the fixture inventory includes a runner-created, template-free `.git/` boundary.
 Declared or existing fixture-root `.git` entries block preparation and are never overwritten.
@@ -193,14 +199,15 @@ Completed bundles are retained; the runner never cleans or reuses them.
 
 ## Providers
 
-Provider flags and environment variables are fixed adapter behavior, not configuration.
+Provider flags and environment variables are adapter-owned; `execution.permissions` selects one of the two fixed permission modes, not arbitrary CLI overrides.
 
 ### Codex
 
 Codex uses ephemeral noninteractive execution with JSON and last-message capture, the configured model/effort, and `workspace/fixture/` as both cwd and `--cd` root.
 It retains `--skip-git-repo-check` and selects the fixed `skilltest` permission profile through command-local configuration.
-The profile extends `:workspace`, adds sibling `workspace/evidence/` as a workspace root, disables command network access, and explicitly keeps `.git`, `.codex` and `.agents` read-only under both roots.
-One exact-path override makes only `workspace/fixture/.git/` writable so tasks can stage originals and create local commits.
+In `workspace-write` mode, the profile extends `:workspace`, adds sibling `workspace/evidence/` as a workspace root, disables command network access, and explicitly keeps `.git`, `.codex` and `.agents` read-only under both roots.
+In that mode, one exact-path override makes only `workspace/fixture/.git/` writable so tasks can stage originals and create local commits.
+In `read-only` mode, the profile extends `:read-only`, keeps command network access disabled, and supplies neither the Git write exception nor the additional writable evidence root.
 Approval remains disabled; no global configuration or fallback to broader access is used.
 The exact emitted profile is recorded in `runner.log` with the other provider arguments.
 
@@ -215,6 +222,17 @@ SKILLTEST_SANDBOX_EVIDENCE_DIR=/absolute/retained/scratch .venv/bin/python -m py
 
 On macOS the check may need host permission to launch the inner sandbox.
 Its profile qualification does not establish model behavior, native discovery or exhaustive filesystem isolation; inspect the first approved observation under changed conditions before continuing its batch.
+The [read-only checks](acceptance/test_read_only_sandbox.py) exercise each adapter's actual policy with local commands, without authentication or model calls.
+They verify evidence reads, overwrite/delete/rename/create denials, Git mutation denials, paths outside the workspace, and symlink escape denial; Claude also checks its private scratch allowance.
+Run them with an existing retained scratch directory:
+
+```sh
+SKILLTEST_SANDBOX_EVIDENCE_DIR=/absolute/retained/scratch .venv/bin/python -m pytest acceptance/test_read_only_sandbox.py -q -s
+```
+
+These checks may require host permission to launch the inner sandbox.
+They qualify filesystem enforcement, not the installed provider's full model/tool round trip; the first authorized model pilot must verify the chosen mode and final-output capture.
+
 The adapter fixes these additional controls:
 
 ```text
@@ -265,6 +283,11 @@ The controlled Claude runtime requires macOS `sandbox-exec` and an existing clau
 It retains normal HOME/USER for authentication and launches with an explicit operational PATH, fresh private temporary directories and the accepted memory/history/telemetry controls.
 It does not inherit API keys, profile overrides, shell-startup environment variables or the old simple-system-prompt/bundled-skill suppression baseline.
 The child policy denies writes beneath HOME and reads beneath the recorded user instruction, settings, skill, command, plugin, agent and project-history paths in `~/.claude/`.
+In `read-only` mode it additionally denies filesystem writes across the process tree, including file tools and Bash descendants, except private runtime `tmp/` and `/dev/null`.
+That scratch allowance supports CLI bookkeeping and contains no supplied evidence; symlinks from it do not grant writes to external targets.
+The controller creates the fixture Git boundary before model launch and captures output outside that policy.
+The emitted sandbox policy is retained in `runner.log`, since the runtime policy file is removed during cleanup.
+Read permissions and model-network connectivity are unchanged; this mode does not establish hidden-input isolation.
 Runtime and fixture directories must be outside HOME; use an existing temporary root such as `/private/tmp` for the controller's TMPDIR.
 Preparation rejects ambient instruction/configuration/skill entries in fixture ancestry.
 This is scoped contamination control, not exhaustive filesystem isolation.

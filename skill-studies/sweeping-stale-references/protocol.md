@@ -10,7 +10,8 @@ No test cases, provider configurations, model observations or skill rewrites hav
 
 The original is [sweeping-stale-references](../../skills/sweeping-stale-references/SKILL.md) at repository revision `53a06ff4e2fcefb3c7706565bebe07d88e2782ea`, SHA-256 `d6812c33cae026807bbb3ebe851d93b60b513dd87ea5efd98aea28f5c02f9157`.
 [sources.json](sources.json) records inspected file paths, sizes and hashes, including all nine DD skills, installed authoring guidance and runner implementation.
-This inventory identifies preparation sources; it is not the frozen manifest of inputs supplied to subjects.
+This inventory identifies the initial preparation sources at the recorded revision, including the runner before its permission extension; it is not the frozen manifest of inputs supplied to subjects.
+The permission qualification index below identifies the updated runner sources.
 
 The skill combines a search-and-reconciliation technique with discipline against stopping after one cited defect.
 Its intended user is a development agent changing a fact shared across project files or responding to a reviewer who found one stale reference.
@@ -135,24 +136,23 @@ This verifies existing local mechanics, not installed-provider behavior or this 
 | The runner creates a fresh template-free Git boundary and rejects fixture-root `.git` input. | Do not copy Git directories. Supply a test identity and arrange a verified original baseline before reconciliation; any bootstrap baseline commit is setup, followed by the one scored reconciliation commit. Pilot must demonstrate this sequence and retained history. |
 | Providers capture raw streams and final filesystem inventories; inventories alone do not prove action order. | Pilot must establish readable search/edit/commit traces, prepared-input hashes, preserved original bytes and the first-bundle retention decision. |
 | Codex has a private profile and explicit configuration controls; Claude has scoped HOME contamination denials. Neither inspected adapter explicitly denies reading the proposed study stores or canonical source checkout. | Do not claim hidden-case or omitted-skill isolation from directory separation. Qualify read restrictions against the stores, source skill copies and evaluator checkout before those attribution claims; the current runner alone has not established them. |
-| Model calls are synchronous with a fixed 900-second timeout; provider/model/effort fields are passed through. | Verify the selected initial Sol-low configuration, executable version and permissions in Stage 3. No installed CLI version, model availability, authentication or latency was qualified in this preparation. |
+| Model calls are synchronous with a fixed 900-second timeout; provider/model/effort fields are passed through. | Verify the selected initial Sol-low configuration, executable version and permissions in Stage 3. CLI identities for the permission probes are recorded below; model availability, authentication and model latency remain unqualified. |
 
 Reserved-case isolation remains an explicit capability gap, not authorization to expand the runner.
 Keep the transfer slot only if restrictions can be established within the budget; otherwise classify it as additional development evidence and disclose the reduced claim before collection.
 The no-target control separately requires demonstrating that the omitted skill is not loaded through host files or ambient instructions; if that fails, the control is invalid for contribution claims.
-The available collaboration tool does not expose a no-write-tool reviewer type, and the inspected runner adapters expose write-capable execution; neither is qualified as a read-only evaluator by an instruction saying “do not edit.”
-The study orchestrator must identify a feasible evaluator mechanism during the remaining Stage 1 preparation, before Stage 2 commits to model-assessed criteria; Stage 3 qualifies its actual permissions and evidence handling before dispatch.
-Inspect existing no-write-tool options first and record the selected mechanism or the precise unmet requirement; if none is feasible, bring a concrete alternative or narrower assessment scope to the owner rather than assuming the evaluator allocation is executable.
-Copied workspaces protect originals from ordinary in-workspace edits, and the adapters add provider-specific permission controls, but directory separation alone proves neither write confinement nor compliance with the no-write-tool rule.
-The current adapters allow mutation of copied evidence, so claiming stronger isolation requires verified boundaries and evidence integrity; accepting a write-capable evaluator as an alternative would also require an explicit change to repository policy.
-This remains a capability gap, not justification for a new tool without a concrete need.
+The owner approved exposing read-only permissions for both providers, replacing the earlier no-tools proposal.
+The runner now accepts optional `execution.permissions`: `workspace-write` preserves existing behavior; `read-only` denies model writes to project files, supplied evidence and Git while retaining read/search tools.
+Codex uses a read-only permission profile; Claude applies a process-tree sandbox with only private runtime scratch and `/dev/null` write exceptions.
+Controller-owned preparation and output capture remain available; neither permission mode disables skills or limits reads to the supplied evidence alone.
+CLAUDE.md now explicitly accepts verified read-only permissions as an alternative to a no-write-tool agent type.
 
-Feasibility inspection after `d4e6a11`: installed Claude Code **2.1.269** documents `--tools ""` to disable all built-in tools, `--disable-slash-commands` to disable skills, and strict empty MCP configuration to exclude MCP tools.
-Proposed evaluator: a fresh invocation with no model tools, receiving the complete bounded assessment packet in its prompt and returning its assessment through captured output; the controller retains original evidence and owns persistence.
-This supplies a concrete route to a no-write-tool evaluator without weakening repository policy, but CLI help is not live qualification.
-The current runner's strict execution schema permits only provider/model/effort, and its Claude adapter hard-codes write-capable tools, so this mode needs a narrowly scoped runner extension before use through the existing tooling.
-Bring that extension's contract, evaluator model/cost and packet-size limits to the owner before implementation; initial subject pilots remain Sol low.
-Only local help/version and source inspection were performed; no authentication check or model invocation occurred.
+Provider-free checks against Codex **0.154.0** and Claude Code **2.1.269** passed: evidence reads and captured output, denied overwrites/deletion/renames/directory creation, denied Git mutations and outside-workspace writes, and denied symlink escapes.
+Claude's private scratch allowance and Codex's existing writable Git behavior were also exercised.
+The initial nested-sandbox attempts failed at host sandbox setup; rerunning the same local probes with host permission passed, without authentication or model calls.
+Retained evidence, CLI identities and implementation source hashes are indexed in [permissions-qualification.json](permissions-qualification.json).
+This establishes a feasible evaluator permission mechanism; Stage 3 still must qualify the actual selected model run, assessment capture and information boundaries.
+Evaluator model/effort, exact evidence inputs, criteria and spending authorization remain to be fixed before dispatch; initial subjects remain Sol low.
 
 ## Storage and accounting
 

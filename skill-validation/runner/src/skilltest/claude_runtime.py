@@ -8,6 +8,7 @@ import subprocess
 import sys
 import tempfile
 from pathlib import Path
+from typing import Callable
 
 from skilltest.runtime import PreparationError, ProcessRuntime, SETUP_TIMEOUT_SECONDS
 
@@ -37,6 +38,12 @@ def authenticated(output: bytearray) -> bool:
 
 class ClaudeRuntime(ProcessRuntime):
     label = "Claude"
+
+    def __init__(self, log: Callable[[str], None], *, permissions: str = "workspace-write"):
+        super().__init__(log)
+        if permissions not in {"workspace-write", "read-only"}:
+            raise ValueError(f"unsupported permissions: {permissions}")
+        self.permissions = permissions
 
     def prepare(self, fixture: Path) -> None:
         if sys.platform != "darwin":
@@ -71,9 +78,18 @@ class ClaudeRuntime(ProcessRuntime):
         policy = self.root / "policy.sb"
         policy.write_text(
             '(version 1)\n(allow default)\n'
+            + (
+                # Enforce on the whole process tree, including Bash and file tools.
+                # Only private CLI scratch and /dev/null remain writable; neither
+                # contains supplied evidence or the runner's authoritative bundle.
+                '(deny file-write*)\n'
+                + f'(allow file-write* (subpath {json.dumps(str(self.root / "tmp"))}) (literal "/dev/null"))\n'
+                if self.permissions == "read-only" else ''
+            )
             + f'(deny file-write* (subpath {json.dumps(str(home))}))\n'
             + ''.join(f'(deny file-read* (subpath {json.dumps(str(home / ".claude" / name))}))\n' for name in HOST_INPUTS)
         )
+        self.log(f"Claude sandbox policy: {json.dumps(policy.read_text())}")
         self.prefix = [sandbox, "-f", str(policy)]
         self._check_login(fixture)
         git = shutil.which("git", path=self.environment["PATH"])

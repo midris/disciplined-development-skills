@@ -168,3 +168,16 @@ Its new verdict is BLOCK for two P2 findings, with two P3 clarifications; this r
 | P3: Format differences could dominate the contribution claim. | The protocol now bars format presence/spelling alone from supporting effectiveness, and prioritizes search breadth, triage, complete reconciliation and useful audit evidence. The control could independently emit the format; its absence is not guaranteed by construction. |
 
 No provider calls, skill edits or new tooling were performed. Evaluator feasibility remains open and explicitly scheduled; the contract and limits retain their recorded owner-review status.
+
+## Implemented evaluator permission modes
+
+After inspecting the current runner and historical launch records, the owner approved read-only permissions for both Codex and Claude instead of disabling all tools.
+The runner accepts optional `execution.permissions`, preserving the existing writable default, and CLAUDE.md explicitly accepts verified read-only enforcement as an alternative to a no-write-tool type.
+The evaluator mechanism is now feasible; the earlier no-tools proposal and unimplemented-mode statements above are historical.
+Read isolation, exact evaluator configuration and an authorized model/tool round trip remain separate qualification requirements.
+
+Validation: new configuration/propagation/capture tests failed before implementation, then passed; runner unit suite **273 passed**, local dummy-provider process suite **12 passed**, hook suite **263 passed, 3 skipped**.
+Installed local probes passed for both read-only policies and the existing Codex writable Git policy, including actual mutation denials and Claude scratch symlink escape denial.
+No authentication or model calls occurred; initial nested-sandbox failures were preserved before host-permitted probes succeeded.
+The [qualification index](../skill-studies/sweeping-stale-references/permissions-qualification.json) records source/CLI identities and verified same-host primary/backup evidence copies.
+This is implementation verification, not a new external PASS or study-effectiveness result.

@@ -121,7 +121,7 @@ Small, single-developer meta-project — no phase/chunk model.
 - Each PR must pass `cd skills/disciplined-development/hooks && python3 -m pytest -q` before merge.
 - **Never squash-merge.** Use `gh pr merge --merge` (merge-commit). Feature branches are deleted after merge; the merge commit is the only way per-branch commit history survives on `main`.
 - When dispatching a code-review agent on a branch, list new test functions by name in the prompt — agents grep by contract and miss new tests that overlap with older ones in the same file.
-- **Evaluation subagents run read-only and bounded.** Dispatch test / review / research subagents (findings, not commits) via a no-write-tool agent type (Claude Code: `Explore`) and keep it to a small fixed set of rounds — a "don't edit" instruction is not enough, and open-ended pressure-test/review loops are the failure to avoid.
+- **Evaluation agents run read-only and bounded.** Dispatch test / review / research agents (findings, not commits) using a no-write-tool type (Claude Code: `Explore`) or a verified read-only permission profile that blocks writes to project files and supplied evidence, including writes through shell commands. Private runtime scratch and controller-owned output capture may remain writable; they must not grant writes to protected inputs through aliases or symlinks. Keep a small fixed set of rounds. A "don't edit" instruction or a separate working directory alone is insufficient; qualify the actual boundary before relying on it. The [runner guide](skill-validation/runner/README.md#providers) describes its permission modes and qualification checks.
 
 ### Commit Messages
 
