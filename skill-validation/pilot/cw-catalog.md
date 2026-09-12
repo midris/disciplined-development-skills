@@ -1,5 +1,10 @@
 # CW catalog mapping
 
+> **Abandoned testing process — historical reference only (2026-09-11).**
+> Testing-framework instructions, approvals and pending work below are no longer current. Follow the [new framework spec](../../plans/specs/2026-09-11-model-driven-skill-testing-framework.md) and [new testing plan](../../plans/2026-09-11-model-driven-skill-testing.md).
+> The original text is preserved as history; this notice does not retire existing runner tooling or core skills.
+
+
 **Status:** Historical baseline and candidate evidence validity are owner-accepted; the six earlier routine packages have completed their 18-call initial pass and retrospective assessment. The [prospective task inputs](#prospective-input-map) and scoring have completed review. The [current testing plan](../../plans/2026-09-09-dd-skill-testing.md#current-scoring-preparation) records collection results, owner decisions and the next batch.
 The [accepted evidence index](../accepted/concise-writing/codex-gpt-5.6-sol-medium/README.md) retains results and recoverable provenance.
 Both command batches are exhausted; this mapping preserves their declared inputs and does not authorize further provider calls.

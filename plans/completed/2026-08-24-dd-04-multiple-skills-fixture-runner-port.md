@@ -1,5 +1,10 @@
 # DD-04 Multiple Skills with Fixture Runner Port Plan
 
+> **Abandoned testing process — historical reference only (2026-09-11).**
+> Testing-framework instructions, approvals and pending work below are no longer current. Follow the [new framework spec](../specs/2026-09-11-model-driven-skill-testing-framework.md) and [new testing plan](../2026-09-11-model-driven-skill-testing.md).
+> The original text is preserved as history; this notice does not retire existing runner tooling or core skills.
+
+
 > **For agentic workers:** REQUIRED SUB-SKILL: Use `superpowers:executing-plans` to implement this plan task by task. Steps use checkbox (`- [ ]`) syntax for tracking.
 
 **Goal:** Package and smoke-run `DD-04` as the representative for multiple supplied repository skills with a fixture.

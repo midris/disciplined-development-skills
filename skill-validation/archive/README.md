@@ -1,5 +1,10 @@
 # Legacy Skill Validation Records
 
+> **Abandoned testing process — historical reference only (2026-09-11).**
+> Testing-framework instructions, approvals and pending work below are no longer current. Follow the [new framework spec](../../plans/specs/2026-09-11-model-driven-skill-testing-framework.md) and [new testing plan](../../plans/2026-09-11-model-driven-skill-testing.md).
+> The original text is preserved as history; this notice does not retire existing runner tooling or core skills.
+
+
 This directory holds the validation records that previously lived at the
 `skill-validation/` root. The move is organizational: it does not activate the
 deferred baseline design, change recorded results, or retire an existing validation

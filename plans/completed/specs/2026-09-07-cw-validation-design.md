@@ -1,5 +1,10 @@
 # CW catalog baseline and edit testing
 
+> **Abandoned testing process — historical reference only (2026-09-11).**
+> Testing-framework instructions, approvals and pending work below are no longer current. Follow the [new framework spec](../../specs/2026-09-11-model-driven-skill-testing-framework.md) and [new testing plan](../../2026-09-11-model-driven-skill-testing.md).
+> The original text is preserved as history; this notice does not retire existing runner tooling or core skills.
+
+
 **Archive status (2026-09-09):** Baseline and existing-candidate collection, scoring and mechanical auditing are complete.
 The owner accepted candidate evidence validity on 2026-09-09; further evaluation and adoption decisions remain open in the [current testing plan](../../2026-09-09-dd-skill-testing.md#remaining-work).
 The subsequent routine suite produced six approved input packages and an initial evidence pass; the [current catalog proposal](../../../skill-validation/pilot/cw-catalog.md#routine-suite-coverage) now reevaluates coverage against the baseline specification and awaits its own review.

@@ -1,5 +1,10 @@
 # Scenario Porting Roadmap
 
+> **Abandoned testing process — historical reference only (2026-09-11).**
+> Testing-framework instructions, approvals and pending work below are no longer current. Follow the [new framework spec](../specs/2026-09-11-model-driven-skill-testing-framework.md) and [new testing plan](../2026-09-11-model-driven-skill-testing.md).
+> The original text is preserved as history; this notice does not retire existing runner tooling or core skills.
+
+
 **Status:** Completed and archived 2026-09-01.
 
 **Goal:** Package every active canonical scenario for reusable prompt runner

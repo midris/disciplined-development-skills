@@ -23,14 +23,11 @@ Claude Code-specific. See [Requirements](#requirements).
 
 ## Developing or evaluating these skills
 
-Read the [validation charter](skill-validation/charter/core-contracts.md) for core intent and the complete existing skill for its detailed behavior, scope and exceptions.
-Follow [baseline specification first](skill-validation/README.md#baseline-specification-first): document those promises, derive tests and rubrics, establish observed baseline effectiveness, then compare rewrites against the agreed specification.
-The charter's proposed suite changes retain their stated approval and activation conditions.
-
-The [rewrite goal and design principles](plans/completed/specs/2026-09-06-skilltest-controlled-inputs-design.md#overall-goal) explain the intended direction: cleaner, lighter, more effective skills, with dumb tools for smart agents and repeatable RED/GREEN evidence.
-The [validation guide](skill-validation/README.md) routes to the charter, scenarios, methodology and runner.
-The [current testing plan](plans/2026-09-09-dd-skill-testing.md) identifies completed work, retained candidate branches and the next decision.
-Testing is [model-led, supported by small deterministic tools](skill-validation/README.md#model-led-testing): the agent designs and judges tests; the tools prepare runs and record evidence.
+Start with the [fresh framework specification](plans/specs/2026-09-11-model-driven-skill-testing-framework.md) and [current testing plan](plans/2026-09-11-model-driven-skill-testing.md), including its instructions for resuming without conversation history.
+The checked-in skills and existing [runner](skill-validation/runner/README.md) are the foundation; the previous framework and layout are being reconsidered on their merits.
+Derive intended behavior from the complete selected skill and relevant dependencies, review the contract, then design tests, establish measured baselines and compare rewrites through Superpowers `writing-skills`.
+The model designs and judges tests; deterministic tools prepare runs and record evidence.
+The previous testing frameworks are abandoned; the [validation directory](skill-validation/README.md) retains their historical material for later review, without making those records current guidance.
 Agents must also read [CLAUDE.md](CLAUDE.md); [AGENTS.md](AGENTS.md) is the Codex entry point to that shared guidance.
 
 ## What's included

@@ -1,5 +1,10 @@
 # Lean Plan Writing Schema 0.2 Catalog Migration Implementation Plan
 
+> **Abandoned testing process — historical reference only (2026-09-11).**
+> Testing-framework instructions, approvals and pending work below are no longer current. Follow the [new framework spec](../specs/2026-09-11-model-driven-skill-testing-framework.md) and [new testing plan](../2026-09-11-model-driven-skill-testing.md).
+> The original text is preserved as history; this notice does not retire existing runner tooling or core skills.
+
+
 > **For agentic workers:** REQUIRED SUB-SKILL: Use
 > `superpowers:subagent-driven-development` to implement Tasks 1–4 task by task.
 > After Task 4, leave the subagent-driven task loop and perform the controller

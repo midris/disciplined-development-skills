@@ -68,8 +68,9 @@ See [installation instructions](README.md#install) for usage and overwrite behav
 
 ## Non-shipped skill-test runner
 
-The [validation charter](skill-validation/charter/core-contracts.md) defines intended skill behavior and evaluation responsibilities.
-The [rewrite goal and design principles](plans/completed/specs/2026-09-06-skilltest-controlled-inputs-design.md#overall-goal) guide future changes; they do not describe an already-implemented runner redesign.
+The [fresh framework specification](plans/specs/2026-09-11-model-driven-skill-testing-framework.md) proposes the testing responsibilities; the [current plan](plans/2026-09-11-model-driven-skill-testing.md) owns execution order and decisions.
+They retain checked-in skills and existing tooling as the foundation; the previous testing frameworks and pending workflows are abandoned.
+The new documents describe the direction for testing work, not an implemented runner redesign.
 
 [`skill-validation/runner/`](skill-validation/runner/) is separate development
 tooling, not a fourth runtime layer or an installed consumer component.
@@ -298,4 +299,5 @@ Durable (never aged out), append-only, sparse by source; the field groups are in
 - **Config schema + env vars:** [`hooks/dd-config.md`](skills/disciplined-development/hooks/dd-config.md)
 - **Upgrading a deployment:** [`MIGRATIONS.md`](MIGRATIONS.md)
 - **One-run validation tooling:** [`skill-validation/runner/README.md`](skill-validation/runner/README.md)
-- **Skill behavior contracts and validation navigation:** [charter](skill-validation/charter/core-contracts.md), [validation guide](skill-validation/README.md)
+- **Current skill-testing design and execution:** [framework spec](plans/specs/2026-09-11-model-driven-skill-testing-framework.md), [testing plan](plans/2026-09-11-model-driven-skill-testing.md)
+- **Preserved validation material:** [validation directory](skill-validation/README.md)

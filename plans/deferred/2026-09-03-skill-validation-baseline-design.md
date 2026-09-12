@@ -1,5 +1,10 @@
 # Skill Validation Baseline Organization Design
 
+> **Abandoned testing process — historical reference only (2026-09-11).**
+> Testing-framework instructions, approvals and pending work below are no longer current. Follow the [new framework spec](../specs/2026-09-11-model-driven-skill-testing-framework.md) and [new testing plan](../2026-09-11-model-driven-skill-testing.md).
+> The original text is preserved as history; this notice does not retire existing runner tooling or core skills.
+
+
 **Status:** Deferred on 2026-09-03 after the review loop exposed an unresolved end-to-end authority and evidence lifecycle. This document remains design input, not implementation authority. The owner authorized only the legacy-record archive and root validation index before selecting the next incremental baseline step.
 
 ## Purpose

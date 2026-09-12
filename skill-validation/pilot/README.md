@@ -1,5 +1,10 @@
 # Skill-test pilot runbook
 
+> **Abandoned testing process — historical reference only (2026-09-11).**
+> Testing-framework instructions, approvals and pending work below are no longer current. Follow the [new framework spec](../../plans/specs/2026-09-11-model-driven-skill-testing-framework.md) and [new testing plan](../../plans/2026-09-11-model-driven-skill-testing.md).
+> The original text is preserved as history; this notice does not retire existing runner tooling or core skills.
+
+
 [Current status, approval boundaries and next action](../../plans/2026-09-09-dd-skill-testing.md) live in the active testing plan.
 Pilot collection is complete; this document remains the reusable execution/scoring procedure.
 The [charter](../charter/core-contracts.md) and [methodology](../../plans/completed/specs/2026-09-02-skill-testing-methodology-design.md) govern judgment.

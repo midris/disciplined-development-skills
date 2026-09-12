@@ -1,5 +1,10 @@
 # CW pilot relevance audit
 
+> **Abandoned testing process — historical reference only (2026-09-11).**
+> Testing-framework instructions, approvals and pending work below are no longer current. Follow the [new framework spec](../plans/specs/2026-09-11-model-driven-skill-testing-framework.md) and [new testing plan](../plans/2026-09-11-model-driven-skill-testing.md).
+> The original text is preserved as history; this notice does not retire existing runner tooling or core skills.
+
+
 Status: current-purpose audit complete; the owner-authorized CW-13/14 scope-only repair is implemented in the prospective tasks/rubrics.
 Other recommendations below are not rubric changes or new collection approval.
 

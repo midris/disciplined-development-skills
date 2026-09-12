@@ -1,5 +1,10 @@
 # Scenario migration index
 
+> **Abandoned testing process — historical reference only (2026-09-11).**
+> Testing-framework instructions, approvals and pending work below are no longer current. Follow the [new framework spec](../../plans/specs/2026-09-11-model-driven-skill-testing-framework.md) and [new testing plan](../../plans/2026-09-11-model-driven-skill-testing.md).
+> The original text is preserved as history; this notice does not retire existing runner tooling or core skills.
+
+
 Canonical source commit: `13599fb7d3127334b0d07bfe468767e586ec5f9c`.
 
 Active packaging schema: `"0.2"`.

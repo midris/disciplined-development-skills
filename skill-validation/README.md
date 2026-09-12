@@ -1,5 +1,17 @@
 # Skill Validation
 
+Current testing development follows the [fresh framework specification](../plans/specs/2026-09-11-model-driven-skill-testing-framework.md) and [fresh testing plan](../plans/2026-09-11-model-driven-skill-testing.md).
+The checked-in skills and [runner](runner/README.md) are the foundation; the framework and organization are being reconsidered on their merits.
+The prior testing frameworks and their pending workflows are **abandoned**.
+Their scenarios and results remain preserved for later reference, not adopted as requirements or validated baselines of the new design.
+Archive migration is planned but has not yet been performed.
+
+## Historical framework reference
+
+Everything below describes the abandoned framework, including its imperative instructions, former approvals and active-plan links.
+Do not follow those instructions for fresh testing work; use the current spec and plan above.
+The text remains here to preserve context until archival is verified.
+
 This directory contains the repository's validation contracts, packaged scenarios,
 mechanical runner, and legacy records. This page summarizes the testing approach
 and links its governing contracts; it creates no new scoring rules or execution authority.

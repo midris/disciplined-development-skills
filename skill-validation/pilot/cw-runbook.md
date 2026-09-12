@@ -1,5 +1,10 @@
 # CW baseline and edit runbook
 
+> **Abandoned testing process — historical reference only (2026-09-11).**
+> Testing-framework instructions, approvals and pending work below are no longer current. Follow the [new framework spec](../../plans/specs/2026-09-11-model-driven-skill-testing-framework.md) and [new testing plan](../../plans/2026-09-11-model-driven-skill-testing.md).
+> The original text is preserved as history; this notice does not retire existing runner tooling or core skills.
+
+
 **Baseline and candidate evidence validity are owner-accepted; further interpretation remains open.**
 The [accepted evidence index](../accepted/concise-writing/codex-gpt-5.6-sol-medium/README.md) retains results, frozen revisions and verification for 81 fresh plus 18 reused observations.
 Both command batches are exhausted; follow the [current testing plan](../../plans/2026-09-09-dd-skill-testing.md#remaining-work), not the reusable collection instructions below, for the next action.

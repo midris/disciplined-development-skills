@@ -1,5 +1,10 @@
 # Concise writing: baseline behavioral specification
 
+> **Abandoned testing process — historical reference only (2026-09-11).**
+> Testing-framework instructions, approvals and pending work below are no longer current. Follow the [new framework spec](2026-09-11-model-driven-skill-testing-framework.md) and [new testing plan](../2026-09-11-model-driven-skill-testing.md).
+> The original text is preserved as history; this notice does not retire existing runner tooling or core skills.
+
+
 **Status:** Reviewed against the complete existing skill; the owner authorized proceeding to catalog evaluation under this specification.
 This specifies what the current skill promises; it does not establish that the skill works, approve a rewrite or authorize test collection.
 The [active testing plan](../2026-09-09-dd-skill-testing.md) owns next steps; the [existing catalog](../../skill-validation/pilot/cw-catalog.md#baseline-specification-alignment) owns test mapping and reconciliation.
@@ -9,6 +14,7 @@ The [active testing plan](../2026-09-09-dd-skill-testing.md) owns next steps; th
 The [charter](../../skill-validation/charter/core-contracts.md#concise-writing) supplies the core purpose: remove prose that adds no value while preserving reader understanding and use.
 The full [baseline skill](../../skills/concise-writing/SKILL.md) supplies the specific scope, rules, exceptions, method and responsibility boundaries.
 Read them together; neither the short charter nor the skill's individual slogans substitute for the complete skill.
+When an assessment interpretation is doubtful, return to the complete baseline skill; this specification is derived from it and must be corrected if it diverges.
 
 Baseline source: `skills/concise-writing/SKILL.md` at repository revision `76b520cc581afed49135b95c874c6a6c02403d26`.
 SHA-256: `4d12a2eb475c6b2ef57e2300c8c07af3f59c1e07b2b82695a3b7669eee1d6d72`.
@@ -25,6 +31,12 @@ Different desired behavior belongs in a separately approved specification change
 Produce a rich, complete, easy-to-read artifact with unnecessary prose removed.
 Preserve the intended information, relationships, conditions, rationale and framing that help its reader understand and act correctly.
 Judge information in the context of the whole document and its intended use, rather than requiring every sentence to repeat its context.
+The unit of final judgment is the complete revised document compared with the complete source: can the intended reader understand and use what is here at least as well as what was here before?
+Substantial rewriting, reordering, consolidation and redistribution of information are allowed; a compressed or removed passage is not a loss if the complete revision preserves its meaning and reader function.
+A local concern must be checked against the whole revision before concluding that comprehension or use has worsened.
+An explicit source statement need not have an equally explicit counterpart: its consequential meaning may be conveyed by the revised document's structure, context or other passages.
+A preservation failure requires a source-grounded explanation of what the intended reader would understand or use less well, rather than a textual omission alone; context must actually convey the meaning, not merely leave the evaluator able to supply it from the original.
+Record total characters and words before and after as simple descriptive measures of document compression; use the same counting convention and artifact boundaries for both.
 Reduction in word count is neither a requirement nor sufficient evidence of success.
 An already-effective passage can remain unchanged; a useful explanation can remain detailed.
 
