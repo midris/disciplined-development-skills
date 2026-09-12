@@ -154,3 +154,17 @@ The study remains at Stage 1, with detailed contract interpretations and limits 
 These dispositions are an implementation response, not external acceptance or a new PASS verdict.
 Verification: all 21 recorded source identities match; local document link targets resolve; `git diff --check` passes; hook suite **263 passed, 3 skipped**.
 The protocol also marks the nine-minute time entry as an initial checkpoint, with subsequent unclocked preparation still to reconcile before confirming remaining capacity.
+
+## Response to external review of 86f2286
+
+Claude reports the previous scope, parent-attribution, control-coherence, grouping and diagnostic-sequencing findings closed, and independently reports 21 matching source hashes.
+Its new verdict is BLOCK for two P2 findings, with two P3 clarifications; this response is not external acceptance.
+
+| Finding | Response |
+|---|---|
+| P2: Outcome instructions can supply the sweep being measured. | Initial contribution cases now present a realistic trigger without directing the sweep or enumerating consumers, while preserving clear task scope and permission to reconcile related files. An explicit sweep request can still test execution quality; it does not null all possible comparisons, but cannot establish that the skill prompted scope expansion. No guaranteed control failure is assumed. |
+| P2: Evaluator feasibility is an unscheduled gap. | The plan now assigns mechanism selection to the study orchestrator in Stage 1, before selecting model-assessed criteria, with live qualification in Stage 3. The proposed argument alone does not close the gap: `providers.py` grants writes to fixture/evidence, and Claude exposes Write/Edit/Bash. Codex uses a workspace permission profile; Claude's runtime denies HOME writes, but these controls are not a no-write-tool evaluator type and copied evidence remains mutable. Inspect existing compliant options first; any alternative requiring a policy change must be explicit. |
+| P3: The first contract row blends instruction and clarified intent. | The row now labels the explicit procedure and owner-clarified outcome inline, and states that a path-handling miss alone does not prove violation of an explicit instruction. |
+| P3: Format differences could dominate the contribution claim. | The protocol now bars format presence/spelling alone from supporting effectiveness, and prioritizes search breadth, triage, complete reconciliation and useful audit evidence. The control could independently emit the format; its absence is not guaranteed by construction. |
+
+No provider calls, skill edits or new tooling were performed. Evaluator feasibility remains open and explicitly scheduled; the contract and limits retain their recorded owner-review status.

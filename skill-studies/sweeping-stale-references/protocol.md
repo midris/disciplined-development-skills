@@ -39,7 +39,7 @@ Explicit procedural obligations remain observable requirements; an attractive fi
 
 | Obligation and source | Intended effect | Observable evidence |
 |---|---|---|
-| Search before reconciliation edits; search literal references, relevant path variants and plausible synonyms across code, docs, tests and config/build/CI, including vendor/archive triage. Skill: Quick reference, Procedure 1, What counts as a reference; owner clarification above. | Find siblings of the triggering defect, including broken path references and documentation of changed code facts. | Retained search commands/results and edit ordering, checked against the supplied project, resolved paths and statements of affected behavior. |
+| **Explicit procedure:** search before reconciliation edits; search literal references and plausible synonyms across code, docs, tests and config/build/CI, including vendor/archive triage. Source: Quick reference, Procedure 1, What counts as a reference. **Owner-clarified outcome:** reconcile moved paths and documentation of changed code facts; relevant path variants and relative-path resolution are applications of that intent, not explicit instructions in the skill. | Find siblings of the triggering defect, including broken path references and documentation of changed code facts. | Retained search commands/results and edit ordering, checked against supplied project state. Record a path-handling miss under the clarified outcome; do not infer an explicit-instruction violation from that miss alone. |
 | Classify matches as update, false positive with reason, or intentionally stale with reason. Skill: Procedure 2. | Reconcile real consumers while preserving unrelated matches and historical meaning. | Final changes, unchanged material and reasons linked to each matching location. |
 | Reconcile all required updates in one commit. Skill: Procedure 3. | Avoid committing an inconsistent intermediate project state. | Git history/diff relative to the prepared original; all required changes in one reconciliation commit. |
 | Account for matches in `References swept:`, grouped only by the same path and outcome, with precise locations and counts. Group before exceeding the normal commit-body preference; a broad sweep may exceed it after grouping. Skill: Output artifact. | Make coverage and deliberate preservation independently inspectable without treating necessary audit detail as verbosity. | Commit body reconciled to retained searches and final changes; after narrative and before a Verification section when present. No invented hard length cap. |
@@ -61,11 +61,16 @@ Use the same ordinary task, project files, tools, permissions, model settings an
 The original condition explicitly loads only the recorded sweeping-stale-references skill; the no-target condition receives no DD, sibling or Superpowers skill guidance.
 An eventual candidate condition replaces only the original target bytes.
 Freeze and inspect all supplied instructions before dispatch; the task/setup must not reproduce the target's procedure, accounting format or reference answers.
+For the initial contribution cases, present a realistic trigger without directing a project-wide sweep or enumerating affected consumers: for example, one reviewer-flagged reference with discoverable siblings, or a settled change with its consumers left for the agent to identify.
+Keep the required change and permission to reconcile related files clear; do not impose a one-file-only constraint or make the task ambiguous to manufacture failure.
+An explicit “update every reference” request may test execution quality in a separately identified case, but cannot establish that the skill caused the decision to broaden the work.
 The assistant conducting this study follows project skills, but those instructions are not subject inputs.
 
 This comparison asks whether the skill improves independent reconciliation over the model's ordinary task behavior, and later whether the rewrite is at least as effective as the original.
 Assess useful outcomes across both conditions; separately record evidence of the target's prescribed search, triage and commit accounting.
 Failure to reproduce an undisclosed target-only format is not by itself evidence that the control performed the ordinary task poorly.
+Differences in the presence or spelling of `References swept:` cannot alone support the effectiveness claim; lead with observed search breadth, triage correctness, complete single-commit reconciliation and useful audit evidence.
+The control is not supplied the format, but may independently produce it; neither success nor failure is guaranteed by condition assignment.
 DD handoffs, interaction with other skills and native skill discovery require separate tests if later selected; this allocation does not establish them.
 
 The previous Gate 4 setup and missing-companion exception are superseded and must not appear in the frozen inputs.
@@ -136,7 +141,11 @@ Reserved-case isolation remains an explicit capability gap, not authorization to
 Keep the transfer slot only if restrictions can be established within the budget; otherwise classify it as additional development evidence and disclose the reduced claim before collection.
 The no-target control separately requires demonstrating that the omitted skill is not loaded through host files or ambient instructions; if that fails, the control is invalid for contribution claims.
 The available collaboration tool does not expose a no-write-tool reviewer type, and the inspected runner adapters expose write-capable execution; neither is qualified as a read-only evaluator by an instruction saying “do not edit.”
-Establish an evaluator mechanism satisfying repository policy before evaluator dispatch; this remains a capability gap, not justification for a new tool without a concrete need.
+The study orchestrator must identify a feasible evaluator mechanism during the remaining Stage 1 preparation, before Stage 2 commits to model-assessed criteria; Stage 3 qualifies its actual permissions and evidence handling before dispatch.
+Inspect existing no-write-tool options first and record the selected mechanism or the precise unmet requirement; if none is feasible, bring a concrete alternative or narrower assessment scope to the owner rather than assuming the evaluator allocation is executable.
+Copied workspaces protect originals from ordinary in-workspace edits, and the adapters add provider-specific permission controls, but directory separation alone proves neither write confinement nor compliance with the no-write-tool rule.
+The current adapters allow mutation of copied evidence, so claiming stronger isolation requires verified boundaries and evidence integrity; accepting a write-capable evaluator as an alternative would also require an explicit change to repository policy.
+This remains a capability gap, not justification for a new tool without a concrete need.
 
 ## Storage and accounting
 
