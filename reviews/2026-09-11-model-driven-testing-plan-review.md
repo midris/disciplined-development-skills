@@ -197,3 +197,17 @@ The tool-list and result-record tests failed before implementation and now pass.
 The previously qualified filesystem policies are unchanged; retained sandbox evidence remains applicable to those boundaries, while the updated tool list and result contract receive focused and process regression coverage.
 Validation: runner unit suite **285 passed**, dummy-provider process suite **12 passed**, hook suite **263 passed, 3 skipped**. All five original qualification source hashes match `dd5880c`; all four follow-up source hashes match the current files. No authentication or model calls occurred.
 This response is not an external PASS or authorization for model collection.
+
+## External review of 463e0e2 and cc978be
+
+The owner supplied Claude's review with **DD-VERDICT: PASS**, closing the prior runner findings and accepting the contract decisions.
+Claude reports independently reproducing 285 runner unit passes and checking schema versioning and output consumers; it did not repeat process smokes or installed sandbox probes.
+One historical attribution correction: the HOME containment guard was already present in `dd5880c`; `463e0e2` added regression coverage, not that production guard. Verified against the committed source.
+
+| Walkthrough item | Disposition |
+|---|---|
+| P3: Cases need a functional opportunity beyond accounting differences. | Stage 2 explicitly requires a case with latent config, CI or fixture consumers beyond the trigger. Successful controls remain valid evidence. The protocol also makes a functional tie plus procedural advantage visible, instead of collapsing it to “no difference.” |
+| P3: Reconcile preparation time before confirming the ceiling. | Reconstructed closed active-turn intervals from the local task log, replacing the incomplete checkpoints with a cumulative booking and labeled allowance/rounding. The protocol owns the current total and remaining time. |
+
+The observation about document growth is retained for Stage 6's existing review of which framework steps to remove or combine; it does not introduce another review round.
+The PASS applies to the reviewed commits, not these follow-up edits or unqualified model execution. The subsequent owner walkthrough accepted the outer ceilings and directed conceptual coverage review before scenario selection, with minimal initial real-model runs to establish the process. No model calls or skill changes occurred.

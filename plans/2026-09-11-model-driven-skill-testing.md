@@ -10,8 +10,8 @@
 **Authority and state:** This is the current plan for preparing the study; it replaces the previous nine-task plan and its separate six-stage proposal.
 Preparation and documentation work are authorized. Candidate selection, provider spending, a rewrite objective and adoption require the owner decisions identified below; no experiment or rewrite has begun.
 The spec governs how the study is designed. Neither document grants provider-run authorization.
-External reviews and responses are recorded in the [review record](../reviews/2026-09-11-model-driven-testing-plan-review.md); the latest supplied protocol review reported BLOCK, with no subsequent external PASS on these edits.
-On 2026-09-12 the owner accepted the next steps and selected `sweeping-stale-references`. Stage 1 preparation is active; limits remain provisional until the contract/allocation walkthrough, before test design.
+External reviews and responses are recorded in the [review record](../reviews/2026-09-11-model-driven-testing-plan-review.md); the latest supplied review of `463e0e2` and `cc978be` reported PASS with two non-blocking walkthrough items.
+On 2026-09-12 the owner selected `sweeping-stale-references`, settled the contract and accepted the outer ceilings while directing minimal initial real-model runs to establish the process. Stage 1 is complete; Stage 2 begins with conceptual coverage review, before inspecting prior scenarios for possible reuse.
 
 ## Starting or resuming without conversation history
 
@@ -31,10 +31,10 @@ Historical material stays in place with its abandonment notices.
 The [preservation record](../skill-validation/archive/local-cw-scoring-rebuild-2026-09-11/README.md) indexes a verified local snapshot of `/private/tmp/cw-scoring-rebuild-gep1e4ek/` and the eight archived CW-17/CW-18 inputs; the scratch payload stays outside Git, while the inputs and manifest are versioned.
 A broader archival reorganization is outside this study.
 
-## Proposed limits and information boundaries
+## Limits and information boundaries
 
-**Proposed outer limits: 40 subject, 12 evaluator, 4 authoring and 4 retry invocations (60 total), plus 20 hours of active study work.**
-Use these provisional ceilings to prepare Stage 1's allocation; the owner confirms or revises them at the contract/allocation walkthrough before Stage 2. No provider calls are authorized now.
+**Accepted outer limits: 40 subject, 12 evaluator, 4 authoring and 4 retry invocations (60 total), plus 20 hours of active study work.**
+These are ceilings, not a dispatch commitment. The owner wants a few real-model runs to establish the process before broader testing; initially prepare the two-subject Sol-low pilot, with exact inputs/configurations presented before dispatch. Further pilot calls require a specific unresolved process question and recorded allocation; no automatic full campaign follows.
 Track active sessions from Stage 1, including preparation, review and model-run waits; exclude recorded periods awaiting owner input.
 Keep model latency inside the ceiling to bound actual study time and expose tooling costs. Budget for sequential execution initially, then replace estimates with pilot timings; do not assume all available calls must be used.
 Stage 1's allocation table must fit pilot, baseline, comparison, calibration and development within these separate pools before Stage 2 chooses cases and repetitions.
@@ -54,12 +54,12 @@ A different directory or branch alone is insufficient. If isolation cannot be es
 - [x] Read the complete skill, relevant dependencies and installed `writing-skills` testing guidance; record versions and missing capabilities before dependent work.
 - [x] Derive intended behavior, exclusions, ownership and observable evidence from those sources. Review the contract and unresolved interpretations with the owner.
   Record the spec's required consumer check in the protocol: known output consumers, their dependencies and the consequences of inconsistent output; carry these into assessment severity.
-  All nine skills have been read and their purpose/relationships recorded in the architecture map. The owner agreed with the broad purpose, clarified path-move reconciliation and code-to-documentation drift, directed independent evaluation, and accepted that single-file/no-sweep requires checking scope. Functional outcomes and procedural/mechanical effectiveness are scored separately; outcome failures are hard failures. Within the owner's discretion for this skill, the protocol treats purely procedural failures as visible, non-blocking defects. Limits remain for the walkthrough; execution qualification follows in Stage 3.
+  All nine skills have been read and their purpose/relationships recorded in the architecture map. The owner agreed with the broad purpose, clarified path-move reconciliation and code-to-documentation drift, directed independent evaluation, and accepted that single-file/no-sweep requires checking scope. Functional outcomes and procedural/mechanical effectiveness are scored separately; outcome failures are hard failures. Within the owner's discretion for this skill, the protocol treats purely procedural failures as visible, non-blocking defects. Limits are accepted as outer ceilings; execution qualification follows in Stage 3.
 - [x] Write the phase-by-role allocation table, with feasible case/repetition assumptions, evaluator batch composition, estimated preparation/run/review time, protected comparison capacity and repair reserves. Declare whether the affordable repetitions support a variability estimate or only descriptive observations; otherwise report variability as not estimable.
 - [x] Inspect the runner paths needed for this candidate. Distinguish code/document inspection from live qualification.
 - [x] Identify a feasible model-evaluator mechanism before Stage 2 selects model-assessed criteria.
   Owner-approved read-only permissions are implemented for both providers. Actual local sandbox probes passed with no authentication/model calls; the protocol links retained evidence. The result now records permissions under schema 0.3; Claude read-only mode omits Write/Edit tools. Stage 3 must still qualify the selected model, assessment capture and input isolation before evaluator dispatch.
-- [ ] Walk through the proposed contract, control context and feasible allocation with the owner; confirm the limits before designing tests.
+- [x] Walk through the proposed contract, control context and feasible allocation with the owner; confirm the limits before designing tests.
 
 **Complete when:** the protocol identifies the exact original, agreed contract, feasible allocation, absolute storage paths and capabilities requiring pilot verification.
 The candidate and independent-use direction are settled; do not reopen them as prerequisites for the remaining walkthrough.
@@ -68,8 +68,11 @@ The evaluator pool need not cover every subject run with a separate call: alloca
 
 ## Stage 2: define representative tests and assessment
 
+- [ ] Review the protocol's proposed facets and observation methods with the owner before choosing scenarios.
+- [ ] After conceptual coverage is agreed, inspect prior scenarios for fit. Reuse/adapt a suitable scenario under the current contract; create a new one where no good fit exists. Do not inherit old scores or methodology.
 - [ ] Prepare cases covering reconciliation, preservation and accounting within Stage 1's allocation; one case may exercise multiple properties. Map each assessed property to the contract and evidence.
   Initial contribution cases present the trigger without directing the sweep or enumerating consumers; an explicit sweep request tests a separately identified execution question. Preserve clear task scope and permission to fix related files.
+  Include at least one case with a plausible functional miss beyond the triggering reference, including latent consumers in config, CI or fixtures. This supplies an opportunity to observe scope expansion, not a requirement that the control fail.
 - [ ] Define source-supported expected outcomes, valid alternatives and failure/insufficient-evidence boundaries. Counting replacements alone does not establish correct triage or preservation.
   Map criteria to functional outcomes or procedure/mechanics, recording any overlap and the agreed failure consequence. Expose both dimensions in assessments; do not let format success offset an outcome failure or hide non-blocking procedural defects.
 - [ ] Designate development and reserved cases before calibration or pilot exposure. Keep reference answers out of subject inputs and model-evaluator inputs when testing evaluator accuracy.
@@ -77,6 +80,7 @@ The evaluator pool need not cover every subject run with a separate call: alloca
 
 **Complete when:** every selected criterion has an observable basis, the checks preserve valid alternatives, and coverage gaps and information boundaries are explicit.
 Follow the spec's proportional evaluation rule; do not add model calibration for a judgment the study never uses.
+Separate process qualification from suite construction: prepare one non-reserved pilot case and its required checks first, then exercise Stage 3 on that subset before expanding the suite. Keep unbuilt coverage and unchecked assessment work visible; a successful process pilot does not complete Stage 2 or establish a baseline.
 
 ## Stage 3: qualify and freeze execution
 
@@ -132,7 +136,7 @@ Reserved bundles and revealing assessments stay entirely in the verified private
 
 ## Current next action
 
-Confirm or revise the provisional allocation and limits before designing cases, first reconciling the disclosed gap in active-time accounting. The behavioral contract, functional/procedural distinction and single-file/no-sweep interpretation are settled; do not reopen them. Source inventory, allocation arithmetic and runner inspection are prepared; limit acceptance remains incomplete.
+Review conceptual SSR coverage with the owner. Then inspect earlier scenarios for a fit and prepare one pilot case, adapting or creating it as needed. Keep the initial real-model runs minimal and use their evidence to establish the process before expanding coverage. Contract and outer limits are settled; current time accounting is in the protocol.
 Evaluator permission feasibility is established through the implemented read-only modes and local sandbox probes; exact evaluator configuration and model-run qualification remain Stage 3 work.
 The first study evaluates sweeping-stale-references alone against the same task without skill guidance; the earlier DD-present control is superseded. Exact input isolation remains a pilot requirement.
 The owner selected Sol low for initial process checks (Terra medium is an alternative); the protocol keeps the five-repetition wording campaign conditional on reaching authoring, outside the initial pilot.

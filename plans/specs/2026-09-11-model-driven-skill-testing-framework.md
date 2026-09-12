@@ -101,6 +101,8 @@ Test discovery separately from behavior after an explicit load when both matter.
 For each scenario, state what it tests, why that situation is representative, what failure it could expose, what context is necessary and what evidence must be observable.
 Choose the smallest initial set that spans distinct consequential behaviors and boundaries.
 Record coverage gaps and why overlapping cases remain; do not use case count as a proxy for completeness.
+Agree on conceptual facets and how to observe them before selecting fixtures. Where the owner permits historical reuse, then inspect earlier scenarios for fit, adapt a suitable one or create a new one for an uncovered need.
+Revalidate reused inputs and expected outcomes against the current contract; previous rubrics, approvals and results do not establish validity for the new study.
 
 The subject task should resemble actual work and permit a competent solution without access to hidden expectations.
 Keep the evaluation rubric and calibration answers out of subject inputs unless the experiment explicitly measures behavior with that guidance supplied.

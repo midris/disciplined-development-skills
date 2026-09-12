@@ -72,7 +72,7 @@ The [fresh framework specification](plans/specs/2026-09-11-model-driven-skill-te
 They retain checked-in skills and existing tooling as the foundation; the previous testing frameworks and pending workflows are abandoned.
 The new documents describe the direction for testing work, not an implemented runner redesign.
 The `skill-studies/` directory holds non-shipped protocols and development evidence; reserved material and verified backups use private stores outside the repository.
-The [study plan](plans/2026-09-11-model-driven-skill-testing.md#proposed-limits-and-information-boundaries) specifies the storage boundary and requires canonical absolute paths in each protocol, including worktree executions.
+The [study plan](plans/2026-09-11-model-driven-skill-testing.md#limits-and-information-boundaries) specifies the storage boundary and requires canonical absolute paths in each protocol, including worktree executions.
 
 [`skill-validation/runner/`](skill-validation/runner/) is separate development
 tooling, not a fourth runtime layer or an installed consumer component.

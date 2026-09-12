@@ -43,7 +43,7 @@ ARCHITECTURE.md                       # component interplay + diagrams
 README.md                             # bundle overview + install + recovery
 ```
 
-Reserved study material and its backup live outside the repository, at absolute paths recorded in the study protocol; see the [study storage rules](plans/2026-09-11-model-driven-skill-testing.md#proposed-limits-and-information-boundaries).
+Reserved study material and its backup live outside the repository, at absolute paths recorded in the study protocol; see the [study storage rules](plans/2026-09-11-model-driven-skill-testing.md#limits-and-information-boundaries).
 
 ## Commands
 

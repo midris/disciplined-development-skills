@@ -1,8 +1,8 @@
 # Sweeping stale references: study protocol
 
-Status: Stage 1 behavioral contract agreed; allocation and limits await owner review, 2026-09-12.
+Status: Stage 1 complete; Stage 2 conceptual coverage proposed for owner review, 2026-09-12.
 The owner selected `sweeping-stale-references`, authorized contract/allocation preparation and clarified that this skill should be evaluated independently.
-The behavioral contract records settled owner intent and the selected procedural severity policy; execution setup and limits remain proposed, not approved collection instructions.
+The behavioral contract and outer ceilings are agreed; exact execution setup remains to be presented before provider dispatch.
 Progress belongs to the [plan](../../plans/2026-09-11-model-driven-skill-testing.md); general requirements belong to the [spec](../../plans/specs/2026-09-11-model-driven-skill-testing-framework.md).
 No test cases, provider configurations, model observations or skill rewrites have been created.
 
@@ -33,7 +33,7 @@ Applying that procedure to moved paths and semantically equivalent descriptions 
 Record those criteria as owner-clarified outcomes, not a quotation or proof that the original explicitly taught every technique needed to achieve them.
 Assess those outcomes across both conditions, separately from compliance with the original's explicit procedure; a miss does not by itself establish disobedience to an explicit instruction.
 Historical references and unrelated matches still receive the stated triage, rather than blanket replacement.
-The broad purpose, independent evaluation direction and outcome/procedure distinction are settled; limits remain for owner review before test design.
+The broad purpose, independent evaluation direction, outcome/procedure distinction and outer limits are settled.
 
 Judge the completed reconciliation, search evidence and commit record together.
 Explicit procedural obligations remain observable requirements; an attractive final file state does not prove that the prescribed search or accounting occurred.
@@ -83,7 +83,8 @@ The assistant conducting this study follows project skills, but those instructio
 This comparison asks whether the skill improves independent reconciliation over the model's ordinary task behavior, and later whether the rewrite is at least as effective as the original.
 Assess useful outcomes across both conditions; separately record evidence of the target's prescribed search, triage and commit accounting.
 Failure to reproduce an undisclosed target-only format is not by itself evidence that the control performed the ordinary task poorly.
-Differences in the presence or spelling of `References swept:` cannot alone support the effectiveness claim; lead with observed search breadth, triage correctness, complete single-commit reconciliation and useful audit evidence.
+Differences in the presence or spelling of `References swept:` cannot alone support a functional-effectiveness claim; report functional and procedural findings together, including observed search breadth, triage correctness, complete single-commit reconciliation and useful audit evidence.
+If functional outcomes tie but useful accounting differs, report that functional tie and the procedural advantage explicitly; do not summarize the observation as “no difference.”
 The control is not supplied the format, but may independently produce it; neither success nor failure is guaranteed by condition assignment.
 DD handoffs, interaction with other skills and native skill discovery require separate tests if later selected; this allocation does not establish them.
 
@@ -91,11 +92,30 @@ The previous Gate 4 setup and missing-companion exception are superseded and mus
 Pilot acceptance requires evidence that the original loaded the intended target, the control received no skill guidance or instruction to retrieve a missing skill, and both could perform the same task.
 Ambient guidance, inaccessible required task inputs or a setup-induced missing-skill stop invalidate that condition; repair the setup within authorization instead of scoring it as a behavioral failure.
 
+## Proposed conceptual coverage
+
+Owner direction: agree on what to test and how before selecting scenarios. After that review, inspect earlier scenarios for a fit; adapt a suitable one or create a new one where coverage is missing. Old expectations and results are not inherited as authority.
+This is a facet proposal, not a scenario set or scoring rubric; no earlier scenarios have been inspected for this selection.
+
+| Facet | What to exercise | How to observe it |
+|---|---|---|
+| Broaden beyond the trigger | One cited defect has unstated siblings, including config, CI or fixtures. | Check required consumers in final state; inspect traces separately for search breadth and search-before-edit order. |
+| Recognize equivalent references and changed facts | References use synonyms or describe changed code behavior without repeating its identifier. | Model judgment checks meaning against the settled fact and permitted alternatives; mechanical checks cover exact known values only. |
+| Reconcile moved paths | Consumers use different relative paths, links or commands to a moved file. | Resolve each consumer's target and check it still works; assess prose context where needed. Relative-path handling is an owner-clarified outcome, not an explicit technique in the original. |
+| Triage and preserve | Current consumers coexist with unrelated matches, history and vendor material. | Compare changed and preserved content; assess the correctness of each decision separately from whether its reason was recorded. |
+| Complete reconciliation and commit it together | All required fixes must be complete, with no unrelated damage. | Check the final project and retained Git history. Functional completeness and the procedural single-commit requirement receive separate judgments. |
+| Produce useful sweep accounting | The audit covers updates, false positives and intentional preservation, with correct locations/counts and grouping. | Mechanical checks cover syntax and count reconciliation; judgment checks whether the account and reasons match the evidence. Missing accounting is a non-blocking procedural defect under the settled policy. |
+| Justify a genuinely local change | Checking scope finds no related updates. | Inspect the scope evidence and preserved project, then check the required negative-form line separately. A one-file task description alone is not justification. |
+
+Facets may share cases; this does not require seven scenarios or seven initial runs.
+Start process qualification with one non-reserved case exposing scope expansion, triage, reconciliation and accounting. Paths and semantic drift can be covered in later cases if the first would become overloaded; untested facets remain explicit gaps.
+The initial real-model pilot asks whether inputs/skills are loaded as intended, tasks are feasible, traces and Git changes are retained, and separate functional/procedural judgments can be supported. It can expose case defects but does not establish coverage or stable skill effectiveness.
+
 ## Authoring guidance and allocation
 
 Initial process checks will use **Codex `gpt-5.6-sol`, low effort**, following the owner's request to use Sol low or Terra medium while establishing the process.
 `gpt-5.6-terra`, medium effort, is the alternative if the pilot exposes a reason to switch; do not silently pool different models' observations.
-The owner requested considering two or three initial runs; recommend the two pilot invocations below, one original and one no-target, before deciding whether a third has a specific mechanical purpose. The five-repetition wording campaign is a later conditional allocation, not part of initial process qualification.
+The owner directed minimal real-model runs to establish the process before broader testing. Initially prepare two Sol-low subject invocations, one original and one no-target; use the pilot evidence to decide whether another run has a specific unresolved process purpose. The five-repetition wording campaign is a later conditional allocation, not part of initial process qualification.
 Choose the measured baseline model after the pilot and keep it fixed across comparison conditions; exact commands and provider-run authorization remain Stage 3 work.
 
 Installed Superpowers is version **6.3.0**, verified from its plugin manifest; the inspected `writing-skills`, `testing-skills-with-subagents.md` and required TDD background are hashed in the source inventory.
@@ -103,7 +123,7 @@ The guidance requires observed failure without the target before authoring, a ch
 It also calls for combined realistic pressures for discipline behavior and actual action rather than reciting the rule.
 These inform Stage 2 design; illustrative multiple-choice prompts and historical performance claims in the guidance do not become this study's evidence or universal acceptance criteria.
 
-The provisional allocation below fits **40 subject / 12 evaluator / 4 authoring / 4 retry invocations**, with one selected rewrite attempt.
+The owner accepted outer ceilings of **40 subject / 12 evaluator / 4 authoring / 4 retry invocations** and **20 active hours**. The phase allocation below remains a planning envelope for at most one selected rewrite attempt, not authorization to run the whole campaign.
 Case slots are arithmetic assumptions, not designed or approved tests: two development slots and one transfer slot, with overlapping properties allowed.
 
 | Phase | Subject | Evaluator | Authoring | Retry | Allocation basis |
@@ -152,6 +172,7 @@ This verifies existing local mechanics, not installed-provider behavior or this 
 | Model calls are synchronous with a fixed 900-second timeout; provider/model/effort fields are passed through. | Verify the selected initial Sol-low configuration, executable version and permissions in Stage 3. CLI identities for the permission probes are recorded below; model availability, authentication and model latency remain unqualified. |
 
 Reserved-case isolation remains an explicit capability gap, not authorization to expand the runner.
+Owner direction: the abandoned testing effort included skill/environment isolation work. Do not investigate it now; consult that implementation or evidence if a concrete isolation issue arises, verifying applicability to the current runner and treating it as technical reference rather than authority to resume the abandoned methodology.
 Keep the transfer slot only if restrictions can be established within the budget; otherwise classify it as additional development evidence and disclose the reduced claim before collection.
 The no-target control separately requires demonstrating that the omitted skill is not loaded through host files or ambient instructions; if that fails, the control is invalid for contribution claims.
 The owner approved exposing read-only permissions for both providers, replacing the earlier no-tools proposal.
@@ -182,19 +203,18 @@ Apply the plan's copy/hash/backup barrier before each later dispatch, and inspec
 Both copies remain on this host; they do not protect against host loss.
 
 Accounting began at the first recorded clock checkpoint, **2026-09-12 04:22:19 UTC**, with a conservative **two-minute allowance** for the opening read before that checkpoint.
-This preparation consumes active study time toward the provisional ceiling; recorded owner-wait intervals are excluded.
+This preparation consumes active study time toward the accepted ceiling; recorded owner-wait intervals are excluded.
 Dispatched study invocations so far: **0 subject, 0 evaluator, 0 authoring, 0 retry**.
 The orchestrator's preparation conversation and local tool calls consume active time, not provider-invocation slots; model assessments or authoring work must be accounted under their declared roles.
 
-Owner walkthrough: the functional/procedural distinction and single-file/no-sweep interpretation are settled; confirm or revise the allocation/limits before Stage 2 designs cases.
+Owner walkthrough: the contract and outer limits are settled. Review conceptual coverage before inspecting old scenarios or constructing cases.
 Independent use is settled; Stage 3 must still qualify the exact standalone input setup and permissions.
 
-Initial preparation pause: 2026-09-12 04:28:30 UTC; **9 minutes** charged at that checkpoint (opening allowance included, rounded up).
-Subsequent contract clarification, the full skill read and these documentation corrections were not continuously clocked; nine minutes is not the current cumulative total.
-Reconcile that preparation time with an explicitly labeled estimate before confirming the remaining time budget; exclude owner-wait rather than charging the entire elapsed conversation.
-Scope-interpretation walkthrough update: checkpoint 2026-09-12 07:01:09 UTC through 07:01:45 UTC, rounded to one active minute, plus a one-minute estimate for opening reads; charge two minutes for this update. Earlier unclocked preparation remains unreconciled; this is not a cumulative total.
-Outcome/procedure clarification update: checkpoint 2026-09-12 12:40:21 UTC through 12:41:19 UTC, rounded to one active minute, plus a one-minute allowance for opening/final documentation work; charge two minutes. The intervening owner-wait is excluded; earlier unclocked preparation still requires reconciliation.
-Verification at this checkpoint: 16 source hashes and allocation arithmetic checked; document links and `git diff --check` passed; hook suite **263 passed, 3 skipped**. No provider process was invoked.
+Preparation accounting updated, 2026-09-12: **book 65 active minutes through this coverage proposal**, leaving **18 hours 55 minutes** under the accepted 20-hour ceiling. This replaces, rather than adds to, earlier bookings.
+Source: the current task's local log at `/Users/simon/.codex/sessions/2026/09/11/rollout-2026-09-11T17-59-42-01a0927b-cef5-7db0-8a30-c76c5b1ae838.jsonl`; only boundary timestamps were extracted, not conversation contents.
+Reconstruction sums the union of `task_complete` and `turn_aborted` intervals since Stage 1 began: 36 closed intervals from 04:22:08 through 14:01:46 UTC total **3,496 seconds (58.27 minutes)**, including local execution and model/tool waits inside turns while excluding inter-turn owner-wait.
+Retain the original two-minute opening allowance, allow four minutes for the current turn beginning at 14:05:24 UTC, and round up to 65 minutes. The current-turn allowance and rounding are estimates; this is reconstructed orchestrator active time, not independently measured owner/Claude review effort.
+At the next checkpoint, recompute cumulative closed-turn intervals plus the opening allowance and round up; do not add already counted turns or restore the superseded checkpoints. If the completed current turn exceeds the booking, correct the total before approving the remaining budget.
 
 Relationship-correction verification: all **21** source identities match, including all nine DD skills at the recorded revision; local links resolve and `git diff --check` passes.
 Hook suite: **263 passed, 3 skipped**. These documentation checks do not qualify provider execution or demonstrate skill effectiveness.

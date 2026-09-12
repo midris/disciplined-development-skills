@@ -69,7 +69,7 @@ The hook stack (under `skills/disciplined-development/hooks/`) is documented in 
 
 Historical scenarios and validation records remain in [`skill-validation/`](skill-validation/README.md) under the abandoned-process notices.
 Current study protocols and development evidence live in `skill-studies/`; these are non-shipped development records.
-Reserved tests and verified backups stay outside this repository and the author's accessible environment, using absolute paths recorded under the [study storage rules](plans/2026-09-11-model-driven-skill-testing.md#proposed-limits-and-information-boundaries).
+Reserved tests and verified backups stay outside this repository and the author's accessible environment, using absolute paths recorded under the [study storage rules](plans/2026-09-11-model-driven-skill-testing.md#limits-and-information-boundaries).
 
 [`skill-validation/runner/`](skill-validation/runner/) is also non-shipped: a
 small `skilltest run CONFIG` CLI for one retained, locally configured skill-test
