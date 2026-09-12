@@ -1,7 +1,7 @@
 # Fresh testing framework: plan and specification review
 
-Status: record of the completed internal reviews below.
-Claude's subsequent external review remains open, with a consolidated response in the [current plan](../plans/2026-09-11-model-driven-skill-testing.md); the PASS verdict below does not close that later review.
+Status: historical internal reviews and responses to four owner-supplied external reviews.
+Claude's latest reported verdict is BLOCK (round 4: one P2); the response below addresses its findings in the [current plan](../plans/2026-09-11-model-driven-skill-testing.md), without claiming external approval of these edits.
 Earlier task numbers and layout descriptions below refer to the revisions reviewed at the time, not the current six-stage checklist.
 
 Reviewed the [plan](../plans/2026-09-11-model-driven-skill-testing.md) and [specification](../plans/specs/2026-09-11-model-driven-skill-testing-framework.md) for consistency, executability, evidence quality and unnecessary prerequisites.
@@ -106,4 +106,22 @@ Project navigation now names the planned study directory and private stores. The
 The temporary packet has a verified local snapshot with a versioned manifest; its scratch payload is excluded from Git. The eight abandoned v2 inputs are archived byte-for-byte for removal from the active paths after their archive commit is verified.
 These are the implementation responses; external acceptance is still pending.
 
-DD-VERDICT: PASS
+Historical internal verdict, preceding the fourth external review: **PASS**.
+
+## Response to Claude's fourth external review — 2026-09-12
+
+The owner supplied Claude's report that round 3 findings were closed and its independent verification matched all 54 preserved scratch files and eight archived inputs; this response does not claim to have repeated that verification.
+Claude reported **DD-VERDICT: BLOCK** for one P2, with two P3 advisories, and recommended beginning Stage 1 rather than another general document review.
+
+Across the four rounds, the findings concern missing safeguards, duplicate execution structures, resource/storage feasibility, and concrete batch/retention/latency choices. There is no single invariant whose correction closes all four sets; severity has declined as the execution structure was consolidated.
+Claude describes round 4 as its cold read, although fresh-context isolation is not independently established here. Accept its recommendation to stop general document iteration and carry the remaining implementation checks into the existing stages; do not relabel its BLOCK as PASS or launch another review cycle.
+
+| Finding | Disposition |
+|---|---|
+| P2: Evaluator batching can expose comparison conditions. | Stage 1 must specify batch composition: distinct cases, no different conditions of one case in a shared evaluator context, and fresh contexts between batches. Conceal labels/identifying metadata in evaluator copies; preserve originals separately and disclose content-based inference limits before collection. Twelve evaluator calls do not alone force batching because validated deterministic checks may establish some properties without model assessment. |
+| P3: Complete bundles commit raw provider streams permanently. | Preserve the first pilot bundle outside Git, inspect its contents and size, and estimate total storage before any raw evidence commit. Stage 3 records the retention decision, respecting CLAUDE.md's never-commit rules. Stage boundaries commit reviewed development artifacts plus complete evidence manifests; external raw evidence requires verified primary/backup copies and absolute locations. Completeness of preservation is required regardless of Git placement. |
+| P3: Model latency consumes the 20-hour ceiling. | Retain waits in the ceiling to bound study time and make tooling costs visible. Stage 1 budgets sequential latency; Stage 3 substitutes pilot timings. Consider bounded concurrency only after demonstrated need and verification of isolation, ordering and preservation. The suggested 15–25% latency share is an estimate, not a measured result of this study. |
+
+The reference sweep updated current plan/review claims; prior review sections remain historical, and abandoned plans, runner history and unrelated fixture matches retain their existing scope. The general spec already assigns safeguard limitations, proportional evaluation and bounded dispatch to the study, so it requires no amendment.
+The owner's latest instruction limits this work to the plan and review record followed by proposed next steps. Candidate and limits remain pending confirmation; no protocol, fixtures, provider calls or skill edits are authorized by this update.
+Verification: hook suite (`python3 -m pytest -q` in `skills/disciplined-development/hooks`) — 263 passed, 3 skipped; document links resolve, six stages remain, and `git diff --check` passes. These are repository/document checks, not another external review or evidence of study effectiveness.

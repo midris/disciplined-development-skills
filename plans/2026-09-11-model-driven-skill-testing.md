@@ -10,7 +10,8 @@
 **Authority and state:** This is the current plan for preparing the study; it replaces the previous nine-task plan and its separate six-stage proposal.
 Preparation and documentation work are authorized. Candidate selection, provider spending, a rewrite objective and adoption require the owner decisions identified below; no experiment or rewrite has begun.
 The spec governs how the study is designed. Neither document grants provider-run authorization.
-Claude's external review remains open pending assessment of this revision.
+Claude's fourth review recommended moving to Stage 1, with one P2 and two P3 findings addressed below; its reported BLOCK remains the latest external verdict, not a PASS on these edits.
+The owner requested these documentation updates and a next-step proposal before proceeding. Stage 1 remains unstarted; candidate and limit confirmation remain pending.
 
 ## Starting or resuming without conversation history
 
@@ -34,6 +35,7 @@ A broader archival reorganization is outside this study.
 **Proposed outer limits: 40 subject, 12 evaluator, 4 authoring and 4 retry invocations (60 total), plus 20 hours of active study work.**
 The owner must confirm or revise this proposal before the study starts; no calls are authorized now.
 Track active sessions from Stage 1, including preparation, review and model-run waits; exclude recorded periods awaiting owner input.
+Keep model latency inside the ceiling to bound actual study time and expose tooling costs. Budget for sequential execution initially, then replace estimates with pilot timings; do not assume all available calls must be used.
 Stage 1's allocation table must fit pilot, baseline, comparison, calibration and development within these separate pools before Stage 2 chooses cases and repetitions.
 Protect the comparison allocation: evaluation repairs cannot consume subject/authoring capacity, and every retry uses the retry pool. No automatic transfers or extensions are allowed.
 At either limit, stop collection and close with the supported decision or uncertainty. Inspect which framework steps consumed effort and remove or combine steps that did not support the decision before proposing further work; do not silently extend the limit or weaken correctness criteria.
@@ -50,11 +52,13 @@ A different directory or branch alone is insufficient. If isolation cannot be es
 - [ ] Confirm the candidate and outer limits with the owner, record the study start and active-time accounting, and open its protocol.
 - [ ] Read the complete skill, relevant dependencies and installed `writing-skills` testing guidance; record versions and missing capabilities before dependent work.
 - [ ] Derive intended behavior, exclusions, ownership and observable evidence from those sources. Review the contract and unresolved interpretations with the owner.
-- [ ] Write the phase-by-role allocation table, with feasible case/repetition and evaluator-batch assumptions, protected comparison capacity and repair reserves. Declare whether the affordable repetitions support a variability estimate or only descriptive observations; otherwise report variability as not estimable.
+- [ ] Write the phase-by-role allocation table, with feasible case/repetition assumptions, evaluator batch composition, estimated preparation/run/review time, protected comparison capacity and repair reserves. Declare whether the affordable repetitions support a variability estimate or only descriptive observations; otherwise report variability as not estimable.
 - [ ] Inspect the runner paths needed for this candidate. Distinguish code/document inspection from live qualification.
 
 **Complete when:** the protocol identifies the exact original, agreed contract, feasible allocation, absolute storage paths and capabilities requiring pilot verification.
 The recommendation is already made; a survey of all nine skills is not a prerequisite.
+Batch evaluator inputs across distinct cases, never across conditions of the same case in one evaluator context, and use fresh contexts for later batches. Conceal condition labels and identifying metadata in evaluator copies while preserving raw evidence separately; content may still reveal the condition, so record that residual limit and its effect on claims before collection.
+The evaluator pool need not cover every subject run with a separate call: allocate model judgments only where used or measured, and independently validate deterministic checks for the other properties.
 
 ## Stage 2: define representative tests and assessment
 
@@ -72,6 +76,7 @@ Follow the spec's proportional evaluation rule; do not add model calibration for
 - [ ] Record authorization for the concrete pilot and evaluation calls; use existing authorization when it already covers them.
 - [ ] Verify deterministic checkers on known correct and incorrect artifacts. For model judgments actually used, declare reference distinctions, repeats and allowed disagreement before calibration; repair unresolved decision-changing errors or reduce the evaluated scope explicitly.
 - [ ] Pilot task feasibility, context isolation, skill availability, evidence capture and preservation. Keep infrastructure failures distinct from behavioral failures, and account for every attempt.
+- [ ] Inspect and measure the first complete pilot bundle before committing raw evidence; record the retention decision under the evidence rules below. Use measured latency to update the allocation within the existing ceiling. Consider bounded concurrent dispatch only if timing demonstrates a need and isolation, run ordering and preservation barriers can be maintained; record the mechanism before use.
 - [ ] Use pilot findings to freeze tasks, criteria, model/evaluator settings, repetitions, run order, retry/stopping rules and acceptance boundaries. Confirm that recorded authorization covers the baseline and later comparison allocation.
 
 **Complete when:** mechanical paths and the evaluation procedure pass their declared checks and the measured collection has concrete authorization within the whole-study ceiling.
@@ -112,10 +117,12 @@ Keep reserved bundles in the private store; verify each backup against the prima
 Preserve raw contents and historical absolute paths; the index resolves their new locations.
 Stop dispatch if preservation fails. Retain unsuccessful attempts; a runner completion status is not a behavioral pass.
 The run index accounts for case, condition, repetition, attempts, configuration identity, authorization and remaining call budget, so a later agent can resume without duplication.
-Commit the reset and reviewed protocol before measured collection. At stage boundaries, commit each complete reviewed development bundle, including inputs, workspace state, stdout/stderr, final output, logs and result metadata; use its file inventory as the completeness check.
+Preserve complete bundles, including inputs, workspace state, stdout/stderr, final output, logs and result metadata; use file inventories as the completeness check.
+Commit the reset and reviewed protocol before measured collection. Preserve the first pilot bundle outside Git, inspect its contents and byte size, and estimate whole-study storage before deciding what belongs in repository history; raw provider streams can be large and cannot be removed from history by an ordinary deletion.
+Record the retention decision before the first evidence commit and measured collection, following CLAUDE.md's never-commit rules for transcripts and scratch notes. At stage boundaries, commit reviewed development artifacts and a manifest of the complete retained evidence. Any raw evidence kept outside Git requires recorded absolute primary/backup paths and verified file/hash copies before the next dispatch; do not describe a manifest-only checkout as containing the raw evidence.
 Reserved bundles and revealing assessments stay entirely in the verified private stores, never in public Git history. Do not add a tool unless a demonstrated mechanical need justifies its interface and focused tests.
 
 ## Current next action
 
-Confirm `sweeping-stale-references` and the proposed outer limits, then begin Stage 1's contract work.
+Present the proposed Stage 1 work to the owner before proceeding: confirm `sweeping-stale-references` and the outer limits, then prepare the contract and feasible allocation for owner review before designing cases.
 The reset documents and abandonment notices are prepared; experimental stages remain incomplete.
