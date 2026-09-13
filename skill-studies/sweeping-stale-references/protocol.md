@@ -53,10 +53,17 @@ Useful repetition and document restructuring remain acceptable when the resultin
 
 Owner accepted, 2026-09-12: interpret “single-file/no-sweep” as a justified outcome after checking scope, not permission to skip searching because only one file was initially named.
 Owner clarification, 2026-09-12: score functional effectiveness and procedural/mechanical effectiveness separately. Outcome failures are hard failures; the consequence of procedural inconsistency depends on the skill.
-The owner considers `References swept:` important but does not require its omission to be a hard failure, and permits either procedural severity choice for this study.
+The owner initially permitted either procedural severity choice; the pilot walkthrough clarified the priority: the actual committed reconciliation matters, while a fully detailed commit message is nice to have.
+
+### Current SSR assessment policy
+
+Policy identity: **SSR-assessment-2**, owner-confirmed 2026-09-12. This section is the authoritative assessment policy for subsequent SSR runs; the pilot report records the decision's context.
 Selected policy: assess each agreed criterion as met, not met or insufficient evidence, retaining the supporting evidence and consequence. Keep the two dimensions visible instead of combining them into a single score.
 Incomplete or incorrect reconciliation, including damage to material that should be preserved, is a hard functional failure.
+When the task requires committing the repair, verify that every required edit is committed; a correct but uncommitted working tree does not meet that task outcome. Separately assess whether the edits were grouped into one commit.
+Lead the result with whether all affected references were correctly reconciled, protected material preserved, and required edits committed. Derive these judgments from the project, checks and Git history, not the completeness or confidence of the commit message.
 Purely procedural deviations are non-blocking defects for this study: report search-order, classification/accounting, commit-grouping and format failures explicitly without treating them alone as a failed functional outcome.
+Detailed accounting is secondary: an omission may be recorded against the original skill's explicit instructions, but cannot turn functional success into failure, block progression by itself, or require another run merely to obtain a fuller message. This SSR policy does not weaken output contracts for other skills with downstream consumers.
 This severity policy does not make the original's explicit requirements optional or establish full compliance when they are missed.
 Known output consumers: people and reviewing agents inspecting the reconciliation commit use `References swept:` as an audit account; the skill's Output artifact section explains the locations, outcomes and count reconciliation they need. DD Gate 4 and this project's commit guidance require that account.
 Inspection of shipped skills, hooks, commands, examples and top-level tests found no named program consuming this format, and a targeted search of hook Python sources found no `References swept` parser. This bounds the inspection, not a claim about every consumer installation.
@@ -68,6 +75,11 @@ Apply the useful-outcome criteria to both conditions; target-specific compliance
 Count and location conventions must be fixed with the eventual checkers, including repeated searches of the same location, so duplicate search hits cannot inflate claimed coverage.
 Missing action traces yield insufficient evidence for order/completeness claims, not an invented behavioral failure or pass.
 Historical commits, PR descriptions and chat logs are not rewrite targets; vendor/archive files still require triage under the skill's stated distinctions.
+
+For every subsequent assessment, copy this policy and the applicable case criteria into the controller/evaluator evidence package, record their policy identity and exact revision/hash alongside the assessment, and verify those inputs before relying on the judgment. Keep assessment instructions out of subject inputs.
+Before another case is dispatched, map its criteria to functional or procedural outcomes and their consequences under this policy. Before using a model evaluator, qualify it on contrasting examples: complete committed reconciliation with sparse accounting must succeed functionally; incomplete reconciliation with a perfect account must fail functionally. Include correct-but-uncommitted work when committing is a task requirement.
+If a judgment contradicts those boundaries, treat it as an assessment defect and resolve it before accepting the result; do not blame the subject or rerun it to repair the evaluator. The runner captures evidence and configuration identity; it does not enforce these semantic judgments automatically.
+The completed pilot's frozen assessment, manifest and raw bundles retain their original identities. This clarification does not change its functional verdicts; any later reassessment must be separately identified with its applied policy, rather than overwriting the original record.
 
 ## Standalone control and attribution
 

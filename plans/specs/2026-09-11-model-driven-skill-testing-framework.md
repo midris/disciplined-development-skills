@@ -131,6 +131,7 @@ These dimensions may overlap: a broken output contract that prevents a required 
 Tests and reports must expose each dimension at the criterion level; do not force equal weighting or combine them into a score that hides a hard failure.
 Use evidence-backed criterion judgments, with insufficient evidence distinct from failure; numerical summaries are optional and must retain the underlying judgments.
 Use deterministic validation only for genuine mechanical requirements with a known consumer or independently checkable result.
+The study protocol owns the current assessment policy, including owner clarifications and their effective identity. Before relying on a subsequent assessment, include the applicable policy and case criteria in its controller/evaluator inputs and record their exact revision/hash with the judgment; a conversation or review note alone is not an operational scoring instruction. Validate clarified boundaries with contrasting examples before using the affected evaluator. Preserve prior frozen inputs and assessments; version any reassessment instead of silently changing its rules or result.
 
 Construct contrasting examples when a criterion is unclear, including different successful solutions and subtle consequential failures.
 Label who constructed them, what guidance they used and why they exist.

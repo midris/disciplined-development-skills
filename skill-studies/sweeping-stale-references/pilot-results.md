@@ -34,6 +34,7 @@ This is a non-blocking procedural defect under the settled policy, with no funct
 During the accounting walkthrough, the owner emphasized that the actual commit is what matters: all affected references should be reconciled and all edits committed; a fully detailed commit message is nice to have.
 Reinspection confirmed all seven required edits in `cb4e261`, one commit after the fixture baseline, with a clean working tree and protected material unchanged.
 The accounting omission remains a secondary observation against the original text, not a blocker or a requirement to expand the audit format before continuing.
+The [current SSR assessment policy](protocol.md#current-ssr-assessment-policy) carries this decision into subsequent cases and assessments; this pilot record is not the source of operational scoring instructions.
 
 ## Evidence and qualification
 
