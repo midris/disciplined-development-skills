@@ -166,6 +166,7 @@ Keep the orchestrator's own project instructions separate from subject inputs; l
 If the target cannot be isolated without breaking a composed workflow, narrow the attribution claim or design a different experiment.
 For discovery tests, preserve natural availability and observe selection; explicit loading tests a different question.
 Record available provider/CLI versions and other mutable execution dependencies in addition to requested model names, and disclose any version information the provider does not expose.
+For public-source fixtures, distinguish in-session input isolation from possible prior model familiarity with the source, layout or upstream API. Record source provenance, study-specific changes, explicit upstream-knowledge claims in traces and the resulting attribution limits. Absence of such claims does not establish non-exposure, and familiarity itself does not invalidate a run. Judge the stated task outcome separately from claims about why the model succeeded or failed; equal public-source exposure across conditions does not prove a measured difference was caused by the skill.
 For the eventual rewrite comparison, run a contemporaneous original-skill condition alongside the candidate under the declared run-order policy.
 Include a contemporaneous no-target-skill control when claiming current benefit over unguided behavior; the original/candidate comparison alone supports only their relative performance.
 Use the earlier baseline to guide development and detect drift, rather than attributing a difference between an old original run and a new candidate run solely to the rewrite.
@@ -260,6 +261,46 @@ Distinguish review of a recommendation from an authorization to run tests or dep
 An accepted calibration example is not approval of the full evaluation contract.
 Record each settled decision in its authoritative artifact and maintain artifact links, progress and the next authorized action in the testing plan.
 These records must support resumption without conversation history; keep reserved-case details out of material passed to the rewrite author.
+
+## Working artifact organization
+
+The SSR study supplies the current working layout below. Reuse its ownership and information boundaries; universal case counts are not prescribed.
+Owner direction: settle a versioned protocol template at the end of baseline design, before freezing collection. Define stable section names/order, required fields, optional sections and their applicability, artifact links, and decision/amendment conventions. Apply the agreed version 1 to SSR and subsequent skills. Agree on the related artifact contracts below at the same checkpoint. A contrasting skill tests their generality; any needed structural change receives an explicit new version rather than silently changing the format.
+The active plan owns the checklist, this spec owns general requirements, and `skill-studies/<skill>/protocol.md` owns the skill-specific contract, coverage map, assessment policy, execution decisions and artifact index.
+A suite is the explicitly selected set of cases under that protocol, not every case directory or historical run present on disk.
+
+| Artifact, relative to a study directory | Purpose |
+|---|---|
+| `sources.json`; `cases/skill-original/SKILL.md` | Source identities and preserved original skill bytes. Candidates remain separate. |
+| `cases/<case>/task.md`, prompts and `fixture/` | Realistic subject task, condition-specific setup and supplied source material. A fixture can be documents or other task inputs; it need not be a software repository. |
+| `cases/<case>/control.json`, `original.json` | Existing runner configurations declaring every supplied regular file and execution settings. Candidate configuration is added when needed. |
+| `cases/<case>/assessment.md`, `expected.json`, `assessment-policy.txt` | Pre-run criteria, valid alternatives, known facts, uncertainty boundaries and the exact applicable policy. These are controller inputs, not completed-run judgments or subject guidance. |
+| `cases/<case>/check_*.py`, checker tests, `qualification.json` | Optional deterministic observations and evidence that the chosen checks work on known outcomes. Use model judgments where semantics require them; qualify model evaluators before relying on those judgments. |
+| `cases/<case>/manifest.json`; source provenance where needed | Exact input and controller identities, including versions and hashes. |
+| `<phase>-results.md`, `<phase>-checks.json`, `<phase>-run-index.json` | Post-run judgments, observed facts and an index of every attempt, condition, repetition, policy identity, cost and retained evidence location. Existing pilot files use this pattern; future phase filenames are assigned when that phase is prepared. |
+
+Full run bundles and their verified backups stay in the external stores recorded by the protocol; Git holds permitted case materials, policies, manifests and reports. Reserved cases and revealing results stay outside the rewrite author's accessible checkout/history. Verify that access boundary before claiming reserved transfer evidence.
+Case files may be reused in a later authorized phase without relabeling prior pilot observations. Once assessed, preserve their identities; version changed cases or assessments explicitly. Redundant and rejected cases can remain as history without belonging to the active suite.
+
+### Format decisions and document tooling
+
+Owner requested a template generator and conformance validator after the formats are settled. Agree on a small version 1 contract set at the design checkpoint; the following are the proposed companion boundaries to the protocol template, not finalized schemas:
+
+Existing example: [`skilltest worksheet`](../../skill-validation/runner/README.md#worksheet), implemented in `skill-validation/runner/src/skilltest/worksheet.py`, renders a fixed blank assessment from a run's `result.json` and a scenario's `rubric.md`. Inspection confirmed that it fills mechanical identity fields, leaves judgments blank, writes exclusively and makes no provider call. It does not validate completed assessments or arbitrary study documents. This is evidence of the recurring generation/validation pattern, not a required implementation base or scoring authority.
+Owner clarification: choose the best deterministic tool design from the agreed requirements. Reusing, adapting, replacing or retiring the existing worksheet are all available choices. Its command shape, document layout, rubric dependency and code structure impose no requirement on the new design. Update scoring/assessment formats and tooling as needed under the settled functional/procedural policy, while preserving versioned historical evidence. Evaluate the runner interfaces as integration constraints and version any necessary changes explicitly.
+
+| Contract to settle | Stable contents and relationships |
+|---|---|
+| Case and evaluation definition | Case/criterion identifiers, purpose and coverage references, subject inputs, functional/procedural classification, consequences, acceptable alternatives, evidence requirements and uncertainty. Skill-specific payload and judgment remain flexible. |
+| Execution and evidence index | Phase, case, condition, repetition and attempt identity; settings, authorization, allocation and evidence locations. Define the interface to runner configuration/result records; explicitly version any necessary changes and preserve historical record identities. |
+| Source and freeze manifest | Artifact identities, spec/template/policy versions, source revisions, hashes and the relationships between subject and controller inputs. |
+| Assessment and comparison record | Criterion judgments with evidence references, uncertainty, functional/procedural separation, comparison conditions and limitations; no universal numeric score or fixed acceptance threshold. |
+| Layout and lifecycle | Canonical locations and artifact roles, active-suite membership, reserved/development boundaries, status meanings, and how frozen material is superseded or reassessed without overwriting history. |
+
+Build the document tool after these contracts are agreed. Generation and validation should consume the same versioned structural definitions so they cannot drift independently. Generation creates the selected artifact or study skeleton with declared version and clearly unfinished content; it does not invent behavioral contracts, findings or approvals. Validation checks required sections/fields, types and allowed values, identifiers, links, cross-artifact references, declared versions, applicable hashes and deterministic allocation arithmetic. Distinguish a structurally valid draft from a complete artifact eligible for a declared stage; unresolved placeholders must not pass readiness checks.
+The validator reports file/field or line locations and specific failed rules, with human-readable output and a machine-readable form/exit status for automation. Unknown versions are reported as unsupported; do not silently reinterpret or migrate existing documents. Validation is read-only and generation must not overwrite existing work. Historical artifacts retain their declared versions and statuses; migration is an explicit, separate operation.
+Document validation does not establish semantic coverage, realistic scenarios, correct causal attribution, evaluator reliability or actual owner consent. It can check that required evidence/approval references are recorded, not substitute for judging their meaning. Models remain responsible for those judgments.
+Qualify the tool using generated valid drafts, representative complete documents and deliberately invalid examples, including missing requirements, unresolved references, wrong versions/hashes and inconsistent run counts. Agree on its concrete CLI, supported document representations and integration point with the existing runner before implementation; no provider dispatch or new testing service is implied.
 
 ## Practical rollout and open design choices
 

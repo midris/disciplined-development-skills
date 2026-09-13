@@ -1,7 +1,7 @@
 # Discovery case: settled Shiv option rename
 
-Status: locally prepared for owner review; no model run authorized or made.
-This is a development case, not a measured baseline or a demonstrated discovery advantage.
+Status: locally qualified; owner authorized baseline design, including consideration of this case. No model run is authorized or made.
+Prepared during development; baseline membership and collection settings are not frozen, and no discovery advantage is demonstrated.
 
 ## Purpose and source
 
@@ -14,6 +14,7 @@ The fixture copies Shiv revision `ff542cbe75ea832df3a989d07c7fdf5214f727fa`, wit
 The settled rename and stale consumers are study inventions, not upstream history.
 The resulting project has 50 files / 106,979 bytes, excluding 19 runtime files / 424,152 bytes.
 This is meaningful source, tests and documentation, but size does not establish discovery difficulty: a subject may still inspect every consumer.
+All four required consumers contain the same retired literal, so this exercises location diversity, not a requirement for lexical variants. Prior familiarity with public Shiv source may reduce discovery cost; absence of an upstream-reference statement does not prove unfamiliarity. Neither limitation warrants adding consumers merely to make a control fail.
 
 ## Task and conditions
 
@@ -39,13 +40,15 @@ Functional outcomes lead; procedure is reported separately, with no combined sco
 
 | Criterion | Evidence and consequence |
 |---|---|
-| Setup | Verify declared inputs/settings and identical initial project trees, full original-skill read, control guidance integrity and usable traces. Record absent-guidance probes; probing alone is not contamination. Runtime/setup failures invalidate attribution rather than count as skill failures. |
+| Setup | Verify declared inputs/settings and identical initial project trees, full original-skill read, control guidance integrity and usable traces. Record absent-guidance probes and explicit upstream/remembered-API statements, distinguishing supplied-source evidence from outside retrieval; neither alone proves contamination or pretraining exposure. Runtime/setup failures invalidate attribution rather than count as skill failures. |
 | F1: Current consumers | All four commands produce the intended runnable greeting archive. The local script works from the project root and elsewhere. Missing/deleted consumers, no-op commands or wrong archives fail. `--destination`, its equals form, and `-o` are acceptable repairs. |
 | F2: Preservation | Preserve the settled CLI, short alias, greeting behavior, historical record, independent inventory tool and unrelated project behavior. Restoring the retired option to mask stale consumers fails. Byte differences require semantic inspection rather than automatic failure. |
 | F3: Committed repair | Required edits must be in retained Git history after the baseline; edits left only in the working tree fail even when replay succeeds. |
 | P1: Discovery and triage | For each consumer separately record when retained tool output exposed stale content, explicit repair/preservation decisions, and committed outcome. Filename-only listings are not content exposure. Missing/truncated output makes awareness uncertain. Record repository breadth and search-before-edit ordering without claiming access proves internal attention. Procedural deviations are non-blocking. |
 | P2: Commit grouping | One complete repair commit satisfies the original's grouping requirement. Multiple complete commits are a non-blocking procedural deviation; distinguish them from missing committed edits under F3. |
 | P3: Useful account | The nine literal occurrences across eight project paths in expected.json define scope: four updates, one historical occurrence and four false positives. The two deliberate negative assertions share one test file. Exclude task/skill/runtime and already-current or additional exploratory hits. Judge usefulness; missing detail is secondary and cannot fail a functional outcome or justify another run. |
+
+Review any upstream-restoring edit against the explicit settled task and inspect its stated rationale before attributing the result to SSR. A verified rollback remains an F2 functional failure; possible prior knowledge affects causal interpretation and does not excuse the failed outcome. Record task disobedience, observed search/triage behavior and any unresolved cause separately.
 
 Apply target-specific procedure to original only; do not impose undisclosed output requirements on control.
 Report met / not met / insufficient evidence per criterion, with trace and Git pointers.
@@ -73,8 +76,9 @@ Missing commands, parser limits and timeouts require separating infrastructure l
 
 ## Next decision
 
-Proposed settings remain Codex `gpt-5.6-sol`, low, `workspace-write`, one control then one original, preserving and assessing each bundle before continuing.
+The owner closed pre-baseline development at four subject calls and authorized baseline design on 2026-09-13. Consider this prepared case within the existing baseline allocation; do not dispatch the formerly proposed extra development pair.
+The working baseline arithmetic is two selected cases × original/control × two repetitions (eight subject calls), with the case set and evaluation settings still to be agreed.
+Codex `gpt-5.6-sol`, low, `workspace-write` remains the prepared subject configuration; baseline run order and exact commands must be frozen before authorization.
 Recheck executable identity and all input hashes before any authorized dispatch.
-Only one additional-development subject slot remains, so this pair requires an explicit allocation revision; the unused outer ceiling does not authorize a transfer.
-No evaluator call, retry or protected comparison capacity is proposed for use.
+No provider calls or capacity transfers follow from approval to design the baseline. The remaining additional-development slot stays unused.
 Broader coverage, evaluator qualification and population reliability remain open.

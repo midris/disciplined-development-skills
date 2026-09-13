@@ -311,3 +311,28 @@ All remaining limits are explicit: actual Shiv subject behavior and discovery di
 DD-VERDICT: PASS
 
 Staged-checkout verification: all manifest-referenced files match their staged Git blobs, including the 19 runtime files ignored only for subject baselines. A clean checkout of the index loads and copies both runner configurations and passes all four public CLI tests without the preparation scratch environment. The staged diff passes whitespace checks and changes no prior assessed fixture, report or raw bundle.
+
+## External review of 314b72e
+
+Claude reports PASS on committed preparation, independently reproducing the project/runtime sizes, nine-match inventory, paired input boundaries, frozen skill identity, 14 checker tests, four CLI tests and hook suite. It raises two P2 decision issues before further allocation and one advisory coverage limitation.
+
+- Development termination: confirmed that the current per-call process-purpose gate has no phase exit. Recommend closing pre-baseline development now at four subject calls and selecting Shiv for baseline design instead of buying another pilot pair. The protocol records the proposed stopping rule and the existing eight-call/two-case baseline arithmetic; the plan routes the owner to that decision. This remains pending owner approval, with no capacity transfer, new call or retroactive baseline classification. Precision correction: two pairs have run, not four; the rejected synthetic draft and Shiv preparation have not run.
+- Public-source exposure: confirmed as an unrecorded attribution limit, not demonstrated knowledge of any particular model. General spec, study attribution guidance and Shiv Setup now distinguish possible prior familiarity from in-session leakage. Trace inspection records upstream-API claims without inferring non-exposure from silence. An upstream-restoring edit receives task/evidence and attribution review; verified violation of the explicitly settled rename remains a hard F2 failure under the owner's policy. We do not adopt an exemption from functional scoring or assume a failure was caused by memory. The suggested invented option is already present as --destination; a study rename necessarily differs from this pinned upstream interface.
+- Lexical diversity: accepted as a limitation and deferred as additional fixture work. All four current consumers contain the retired literal; the case adds meaningful location diversity but does not require variant search. Pilot 02 exercised relative-path variants in a small fixture; pilot 01 does not establish difficult lexical discovery because its control exposed every current consumer. Record the gap without adding a consumer or another pair solely to force difficulty.
+
+Only controller guidance, phase recommendations and their identities changed. Skill bytes, task/prompts, fixture/configuration bytes, deterministic checks, prior results and SSR-assessment-2 remain unchanged. Preparation remains mechanically qualified; the phase-exit decision is explicitly pending. No new model call, evaluator dispatch, budget transfer, commit or push is implied by this review response.
+Verification: all current manifest hashes and active document file links resolve; both complete subject input sets are byte-identical to 314b72e, and the SSR-assessment-2 policy copy remains verbatim and unchanged. `git diff --check` passes; hook suite: 263 passed, 3 skipped. No code or fixture changed, so the prior CLI/checker qualification remains applicable. The proposed phase exit is the only owner decision requested by this response; it has not been marked accepted.
+
+
+## Owner decision: baseline design
+
+Owner approved ending pre-baseline development at the four completed calls and moving to baseline design. The remaining additional-development slot stays unused. The plan, protocol and unrun Shiv case metadata now route to baseline selection and freeze rather than another pilot allocation request. This closes the pending phase-exit decision from the review of 314b72e; the eight-call baseline remains a design envelope, not dispatch authorization. Earlier proposal/approval statements above remain historical records.
+
+
+## Owner decisions: artifact formats and deterministic tooling
+
+At the end of baseline design, agree on version 1 of the protocol and companion case/criteria, run-index, manifest, assessment/comparison and layout/lifecycle contracts. The plan owns the checkpoint; the framework spec owns the proposed boundaries and generator/validator requirements. These are recorded design decisions, not completed schemas or implemented tools.
+
+Inspected the existing worksheet command, implementation and focused tests. It generates blank assessments with mechanical run identity; it does not validate completed assessments or general study documents. The owner explicitly rejected making it a required foundation: choose reuse, adaptation, replacement or retirement from the agreed deterministic requirements, and update scoring tooling as needed while preserving settled assessment policy and historical evidence.
+
+Consistency review reconciled remaining current-state pilot instructions with the accepted baseline transition. Historical review proposals above remain intentionally preserved and are superseded by the owner decision. No subject inputs, skill bytes, executable checks or prior judgments changed. Focused worksheet tests: 15 passed; hook suite: 263 passed, 3 skipped. Manifest hashes, unchanged subject inputs and policy copy, active file links and diff whitespace are checked before commit. No provider call was made.

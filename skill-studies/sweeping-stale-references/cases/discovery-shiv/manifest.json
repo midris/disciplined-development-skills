@@ -1,6 +1,6 @@
 {
   "purpose": "Locally prepared development case; verify identities before any owner-authorized dispatch.",
-  "authorization": "No provider dispatch authorized; one development slot remains and a pair requires allocation revision.",
+  "authorization": "Owner approved baseline design after closing pre-baseline development. Case selection, measured-collection freeze and provider dispatch remain pending; no transfer of the unused development slot.",
   "preparation_base_revision": "ac971b0cf5017fd5a4d68e72fd9a25cb9388d198",
   "execution": {
     "provider": "codex",
@@ -907,8 +907,8 @@
     },
     {
       "path": "skill-studies/sweeping-stale-references/cases/discovery-shiv/assessment.md",
-      "bytes": 7992,
-      "sha256": "3d6f541f01142625ffcc15d58ed73521c60e05a85b486ab63826a4b62f514a00",
+      "bytes": 9294,
+      "sha256": "79305dc851fab99adc5f3ff5781cc988768874b44b75cf6de05ba69db242aa5a",
       "mode": "0o644"
     },
     {
@@ -925,8 +925,8 @@
     },
     {
       "path": "skill-studies/sweeping-stale-references/cases/discovery-shiv/preparation.json",
-      "bytes": 917,
-      "sha256": "2f887bc6ce4cdd0b4ae843f301d1d13ad34d547b431cde77576c6ebbf16dbdaa",
+      "bytes": 1668,
+      "sha256": "1d5b5c56455280029f987ad5362f816aa958944c23f6798e0ba11f442276ef57",
       "mode": "0o644"
     },
     {

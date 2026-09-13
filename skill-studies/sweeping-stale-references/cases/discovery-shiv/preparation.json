@@ -10,5 +10,17 @@
     "copy_sha256": "625e91999ba68e18eda230b92b6da1e6f6ea51a42aa89f5cbce674e41a097837"
   },
   "prior_draft": "cases/pilot-03 stays preserved/undispatched; this is a distinct replacement case, not an assessment revision.",
-  "owner_context": "Owner approved proceeding with Shiv and clarified packaging is only the scenario domain; the tested behavior is discovery and reconciliation."
+  "owner_context": "Owner approved proceeding with Shiv and clarified packaging is only the scenario domain; the tested behavior is discovery and reconciliation.",
+  "review_amendment": {
+    "reviewed_revision": "314b72e456f373d63ce0d20ec5b1e569b784f7ef",
+    "scope": "Controller criteria clarify public-source familiarity, causal attribution versus unchanged functional outcomes, and location-only discovery coverage. Owner accepted closure of pre-baseline development and authorized baseline design; exact suite and dispatch remain unapproved.",
+    "subject_bytes_changed": false,
+    "policy_id_unchanged": "SSR-assessment-2"
+  },
+  "phase_transition": {
+    "date": "2026-09-13",
+    "decision": "Pre-baseline development closed at four subject calls; baseline design authorized.",
+    "case_status": "Candidate for baseline selection; no model observation collected.",
+    "dispatch_authorized": false
+  }
 }
