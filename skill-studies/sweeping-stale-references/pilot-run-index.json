@@ -1388,5 +1388,55 @@
     "authorized_unspent_subject_attempts": 0,
     "further_dispatch": "Not authorized by this pair; stop for process review."
   },
-  "assessment": "pilot-results.md"
+  "assessment": "pilot-results.md",
+  "assessment_revisions": [
+    {
+      "id": "pilot-01-assessment-1",
+      "repository_revision": "5615f58e35254e47827b5c6ebf1aa06aa6c86e25",
+      "path": "pilot-results.md",
+      "sha256": "4bd60148e7400e6bf4b0fcdf452c883cbb90ab74503c6c5f4845e755ceadde18",
+      "status": "superseded for P2/P4 disposition; functional results retained"
+    },
+    {
+      "id": "pilot-01-assessment-2",
+      "path": "pilot-results.md",
+      "sha256": "113a5cb3305457dc8eff3539ad28e21e1112b7ee8ee21562e082a282ad3118ef",
+      "reason": "External review exposed competing accounting-scope interpretations; withdraw confirmed procedural defect and retain ambiguity. Clarify preservation outcome versus observed triage.",
+      "policy": {
+        "id": "SSR-assessment-2",
+        "repository_revision": "5615f58e35254e47827b5c6ebf1aa06aa6c86e25",
+        "path": "skill-studies/sweeping-stale-references/protocol.md",
+        "sha256": "4749776ec6bb6bc52f0da37d5b4dd54e632cc003a6c8d2f52427780486c8c10c"
+      },
+      "case_criteria": [
+        {
+          "path": "skill-studies/sweeping-stale-references/cases/pilot-01/assessment.md",
+          "sha256": "03a5933112bac6ec1755fb03a82bf941a14cfdabd00502556755a27e97156404"
+        },
+        {
+          "path": "skill-studies/sweeping-stale-references/cases/pilot-01/expected.json",
+          "sha256": "750b29a8669058d44b0a2fadda3c30913da5c9829b5ef2e98394fe1e895102a9"
+        }
+      ],
+      "assessment_method": "Orchestrator reinspection of existing criteria and retained events/Git; no new model invocation. Current protocol adds routing to this correction, not a changed functional or severity rule.",
+      "controller_input_package": {
+        "path": "/private/tmp/ssr-process-pilot-20260912/assessment-review-2",
+        "files": [
+          {
+            "path": "assessment.md",
+            "sha256": "03a5933112bac6ec1755fb03a82bf941a14cfdabd00502556755a27e97156404"
+          },
+          {
+            "path": "expected.json",
+            "sha256": "750b29a8669058d44b0a2fadda3c30913da5c9829b5ef2e98394fe1e895102a9"
+          },
+          {
+            "path": "protocol.md",
+            "sha256": "4749776ec6bb6bc52f0da37d5b4dd54e632cc003a6c8d2f52427780486c8c10c"
+          }
+        ],
+        "durable_source": "Pinned Git policy revision and unchanged case criteria identified above; scratch copies are reconstructible and are not provider evidence."
+      }
+    }
+  ]
 }

@@ -238,3 +238,10 @@ The original repaired all seven current consumers; the control found the sibling
 The original's nine-entry account omitted six broader-search matches, a non-blocking procedural defect under the pre-run criteria.
 Both complete raw bundles have verified primary and backup copies outside Git. No additional model call, skill edit or measured-baseline claim follows from this checkpoint.
 This is orchestrator inspection, not a new independent review verdict. The next review target is the two bundles and their interpretation.
+
+## External review of the pilot through 5615f58
+
+Claude reported **DD-VERDICT: BLOCK** with one P2 concerning the accounting disposition and one P3 concerning the presentation of preservation. Its independent checks confirmed the functional results, retained commits, bundle sizes and two-call limit.
+P2 response: withdraw the confirmed P2/P4 procedural-defect disposition in a versioned assessment correction and retain the accounting-scope ambiguity; it is not evidence supporting a rewrite objective. The review's assertion that the registered scope says the opposite is not established: both the frozen assessment and `expected.json` expressly discuss additional query results, including the new name. Accordingly, neither an unequivocal full-compliance verdict nor a definite skill-defect verdict follows from the disputed scope.
+P3 response: retain equal F2 outcomes and distinguish inspection/triage behavior. The review's claim that the control never looked at the historical plan is contradicted by control trace line 10, which reads it explicitly; no vendor-content read is observed. The original's explicit historical/vendor accounting remains a procedural advantage.
+The prior pilot assessment at `5615f58` and all frozen inputs/raw evidence remain unchanged in history. The current report and run index identify the correction and applied policy/criteria. No subject/evaluator call, skill rewrite or new independent PASS is claimed.

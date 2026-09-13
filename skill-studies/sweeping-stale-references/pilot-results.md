@@ -2,7 +2,7 @@
 
 Both authorized subject calls completed on 2026-09-12 using Codex `gpt-5.6-sol`, low effort, `workspace-write`.
 The original skill achieved the functional outcome; the control repaired only the reported README example.
-The original's accounting was useful but incomplete.
+The original correctly accounted for all nine old-name matches; whether its broader exploratory hits also required entries is an assessment-scope ambiguity, not an established skill defect.
 These are orchestrator-inspected development observations from one case and one run per condition, not a measured baseline, independent evaluator scores or a reliability estimate.
 
 ## Results
@@ -11,13 +11,13 @@ These are orchestrator-inspected development observations from one case and one 
 |---|---|---|
 | Setup | Met within the observed-input boundary below | Met within the same boundary; entire frozen skill read |
 | F1: Complete current-reference reconciliation | **Not met:** 1/7 current references repaired | **Met:** 7/7 repaired |
-| F2: Preservation | Met: historical, vendor and HTTP content unchanged | Met: all three unchanged |
+| F2: Preservation | Met as a file outcome: historical, vendor and HTTP content unchanged; inspection behavior differs below | Met as a file outcome: all three unchanged; explicit historical/vendor triage recorded |
 | F3: No functional regression | Met: implementation/tests unchanged; existing breakage remains under F1 | Met: implementation/tests unchanged; settled interface and default retained |
 | Command checks | README example passes; unit, shell, Make and CI-command checks fail | All five checks pass, including both unit tests |
 | P1: Search before repair | Observed, including all seven current consumers | Met: literal and broader searches precede edits, including hidden CI |
-| P2: Triage account | Describes a narrow scope decision; target format not required of control | **Not fully met:** nine old-name matches accounted for; broader-search dispositions omitted |
+| P2: Triage account | Describes narrow scope; historical plan read, no vendor-content read observed; target format not required | Met for all nine old-name dispositions and reasons; broader-hit accounting scope unresolved |
 | P3: Single reconciliation commit | One repair commit, but six required updates absent under F1 | Met: all seven updates in one repair commit |
-| P4: Useful output contract | No `References swept:` section; no penalty for undisclosed format | **Not fully met:** correct placement, labels and grouping for nine entries, incomplete search reconciliation |
+| P4: Useful output contract | No `References swept:` section; no penalty for undisclosed format | Met for the nine-entry account's placement, labels, grouping and counts; insufficient basis for an overall defect verdict on broader-hit scope |
 
 The control found the sibling references before editing and explicitly treated their repair as outside the requested README task.
 Its functional miss is therefore an observed scope/reconciliation decision, not a failure to discover the files.
@@ -26,15 +26,21 @@ This confirms the existing F1 expectation of complete current-reference reconcil
 The original repaired every current consumer with seven one-line substitutions, preserving meaning and the 30-second default.
 This pair is consistent with a useful skill effect on scope completion; a single unreplicated comparison cannot establish a stable causal effect.
 
-The original's broader pre-edit search returned 15 distinct path/line locations after deduplication, while its commit accounts for nine.
-Omitted locations are `src/http_headers.py:3`, `src/cache.py:9,11,17,20`, and `README.md:10`.
-The HTTP match is unrelated and the other five already express the current fact; they were correctly left unchanged, but their dispositions were not recorded.
-The frozen skill explicitly requires accounting for every match; the pre-run assessment also distinguishes the nine known old-literal matches from actual query totals.
-This is a non-blocking procedural defect under the settled policy, with no functional damage and no post-run criterion change.
+The original's broader pre-edit search returned 15 distinct path/line locations after deduplication, while its commit accounts accurately for the nine literal old-name matches.
+The six additional locations are `src/http_headers.py:3`, `src/cache.py:9,11,17,20`, and `README.md:10`.
+The HTTP match is unrelated and the other five already express the current fact; they were correctly left unchanged, without additional account entries.
+The frozen skill says to account for every match, but its worked example accounts for old-term results and its labels do not clearly describe already-current references.
+The frozen assessment and `expected.json` also mention additional query results, including the new name; they do not unequivocally establish an old-term-only scope. The competing interpretations should not be resolved by treating either the strict defect verdict or full compliance as established.
 During the accounting walkthrough, the owner emphasized that the actual commit is what matters: all affected references should be reconciled and all edits committed; a fully detailed commit message is nice to have.
 Reinspection confirmed all seven required edits in `cb4e261`, one commit after the fixture baseline, with a clean working tree and protected material unchanged.
-The accounting omission remains a secondary observation against the original text, not a blocker or a requirement to expand the audit format before continuing.
+This accounting-scope ambiguity is not evidence of a failed reconciliation, does not justify a rewrite objective, and does not require another run or an expanded audit format before continuing.
 The [current SSR assessment policy](protocol.md#current-ssr-assessment-policy) carries this decision into subsequent cases and assessments; this pilot record is not the source of operational scoring instructions.
+
+### Assessment correction 2, 2026-09-12
+
+Following the external review of `5615f58`, this correction withdraws the confirmed P2/P4 procedural-defect disposition and records the unresolved accounting scope above. Functional judgments and observed files/actions are unchanged.
+The prior assessment remains available as `pilot-results.md` at commit `5615f58e35254e47827b5c6ebf1aa06aa6c86e25`; frozen case criteria, manifests and raw bundles are unchanged. The run index identifies the policy and criteria used for this correction. This is an assessment correction, not new subject evidence or an adopted skill requirement.
+F2 deliberately compares preservation outcomes. The control's search at trace line 8 omitted vendor and plan paths, but line 10 explicitly reads `plans/completed/cache-migration.md`; its later report says historical records were left untouched. No vendor-content inspection appears in its recorded commands. The original searched both categories and documented their dispositions. Equal file outcomes do not establish equal search or triage behavior.
 
 ## Evidence and qualification
 
