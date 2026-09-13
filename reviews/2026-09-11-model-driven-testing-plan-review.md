@@ -336,3 +336,19 @@ At the end of baseline design, agree on version 1 of the protocol and companion 
 Inspected the existing worksheet command, implementation and focused tests. It generates blank assessments with mechanical run identity; it does not validate completed assessments or general study documents. The owner explicitly rejected making it a required foundation: choose reuse, adaptation, replacement or retirement from the agreed deterministic requirements, and update scoring tooling as needed while preserving settled assessment policy and historical evidence.
 
 Consistency review reconciled remaining current-state pilot instructions with the accepted baseline transition. Historical review proposals above remain intentionally preserved and are superseded by the owner decision. No subject inputs, skill bytes, executable checks or prior judgments changed. Focused worksheet tests: 15 passed; hook suite: 263 passed, 3 skipped. Manifest hashes, unchanged subject inputs and policy copy, active file links and diff whitespace are checked before commit. No provider call was made.
+
+
+## External review of 7f8d38b
+
+Claude reports PASS, confirms the prior P2 closures, and corrects its earlier pair count. Three new observations were checked against the current plan and protocol:
+
+- Time tracking: accepted. The original 240/180-minute preparation/qualification targets had no actual-versus-forecast reconciliation. The protocol now exposes the mixed historical booking without inventing a split, forecasts remaining work, shows the preparation/qualification shortfall, and requires reconciliation at subsequent checkpoints. Tool implementation has a separate zero-funded row and a proposed 120-minute ceiling; neither a transfer nor additional capacity is approved. The baseline-design walkthrough must settle the shortfall; this finding is not declared budget-resolved merely because tracking exists.
+- Tool sequencing: accepted as a planning correction. Format agreements remain before collection freeze. Tool design/build/qualification move after baseline collection and assessment, with scope and funding agreed first. The owner requested formats before tooling, not tooling before measurement. Manual structural/identity checks remain required, and the requested tool remains an outstanding deliverable.
+- Rename collision: corrected our reading. Claude meant the retired upstream name, not the new name. The framework now requires considering both-name invention and documenting the choice; it is an optional mitigation, not a universal requirement or proof of no prior exposure. The qualified Shiv fixture stays unchanged: the task explicitly settles its rename, and a verified rollback remains an F2 failure.
+
+No provider dispatch, fixture change, new tool implementation or budget increase follows from these edits. The proposed tool cap and any time reallocation remain owner decisions.
+
+
+## Owner clarification: estimates are not failure criteria
+
+The owner confirmed that effort estimates are useful and that variance can prompt checking test scope, but missing a time budget is not a failure in itself. This supersedes the phase-cap, mandatory reallocation and tooling stop-limit language in the preceding review response. The spec owns the general distinction; the plan and protocol now treat phase amounts and the preliminary tooling estimate as planning aids. The separately agreed overall autonomous-work ceiling remains an authorization boundary, not a scoring threshold. Necessary work is not weakened to meet an estimate, and incomplete evidence is reported as a limitation rather than a failed skill outcome. No fixture, frozen scoring-policy bytes or prior result changed.

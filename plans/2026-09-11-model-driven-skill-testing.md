@@ -85,8 +85,7 @@ The evaluator pool need not cover every subject run with a separate call: alloca
 - [ ] Select deterministic checks for properties they fully establish, and model judgments for the remaining questions. Have the model assess known outcomes and compare its reasoning and verdicts with independently checked references.
 - [ ] At the end of baseline design, agree with the owner on a versioned protocol template before freezing collection. Fix section names/order, required fields, optional sections with applicability rules, artifact links, and how decisions or amendments are recorded. Apply version 1 to SSR and use it for subsequent skills; later changes require an explicit template version rather than ad hoc structural drift.
 - [ ] At that checkpoint, agree on the companion case/criteria, run-index, manifest, assessment/comparison and layout/lifecycle contracts described in the spec. Check the runner's configuration/result interfaces and version any required changes; keep skill-specific expectations and semantic judgments outside structural conformance rules.
-- [ ] After the contracts are agreed, design and implement the owner-requested document generator/validator against shared versioned definitions. Generate drafts without overwriting files; validate existing documents read-only with actionable diagnostics and distinct structural/readiness results. Verify cross-document identities and valid/invalid examples, then apply the tool to current study documents without rewriting frozen evidence. Agree on the CLI and implementation scope before coding.
-  Treat the inspected `skilltest worksheet` and its tests as evidence of the recurring pattern, not a required basis. Choose reuse, adaptation, replacement or retirement against the agreed deterministic-tool requirements. Update scoring/assessment tooling and formats as needed without inheriting the abandoned methodology or silently rewriting historical evidence.
+- [ ] Reconcile active time by work category and forecast remaining design/format and qualification work against the protocol allocation before freezing collection. Use forecast variance to review scope and effort, not to assign failure or create a phase gate. Preserve the separate overall authorization ceiling; estimate document tooling explicitly.
 
 **Complete when:** every selected criterion has an observable basis, the checks preserve valid alternatives, and coverage gaps and information boundaries are explicit.
 Follow the spec's proportional evaluation rule; do not add model calibration for a judgment the study never uses.
@@ -128,6 +127,13 @@ For every conditional safeguard, record its implementation or its evidence limit
 
 **Complete when:** conclusions trace to retained evidence and distinguish observed success, attributed skill contribution, evaluator error and uncertainty.
 A successful no-skill control is useful evidence, not a reason to invent a failure.
+
+## Document tooling: after baseline collection
+
+This work follows format agreement and baseline assessment; it is not a Stage 2/3 completion or collection-freeze requirement. Existing explicit document checks remain in use for SSR. This avoids delaying first measurement for general conformance automation while preserving the owner's requested tool deliverable. Its scope and CLI must be agreed before implementation, with an explicit effort estimate and attention to the overall authorization ceiling. Exceeding a phase estimate alone does not block progress or imply failure.
+
+- [ ] After baseline collection and assessment, agree an effort estimate and implementation scope, then design and implement the owner-requested document generator/validator against shared versioned definitions. Generate drafts without overwriting files; validate existing documents read-only with actionable diagnostics and distinct structural/readiness results. Verify cross-document identities and valid/invalid examples, then apply the tool to current study documents without rewriting frozen evidence. Agree on the CLI and implementation scope before coding.
+  Treat the inspected `skilltest worksheet` and its tests as evidence of the recurring pattern, not a required basis. Choose reuse, adaptation, replacement or retirement against the agreed deterministic-tool requirements. Update scoring/assessment tooling and formats as needed without inheriting the abandoned methodology or silently rewriting historical evidence.
 
 ## Stage 5: rewrite and compare
 

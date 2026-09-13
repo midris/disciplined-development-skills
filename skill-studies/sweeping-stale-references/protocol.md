@@ -238,7 +238,26 @@ The final comparison supports original-versus-candidate performance only; a new 
 Two repetitions per full case and one transfer slot support descriptive observations, not a stable reliability or variability estimate; report variability as **not estimable** for population-level claims.
 If the allocation cannot support a decision, close inconclusive or retain the original rather than weaken the acceptance question.
 
-Proposed time allocation: 4 hours for contract/test preparation, 3 for qualification/calibration, 3 for baseline, 5 for authoring/diagnostics, 4 for comparison and 1 for closure: **20 hours**, including review, storage work and model waits.
+### Time allocation and forecast
+
+The original planning targets remain 240 minutes for contract/test preparation and 180 for qualification/calibration, followed by 180 baseline, 300 authoring/diagnostics, 240 comparison and 60 closure: **1,200 minutes total**. They were not separately metered. The original 220-minute booking includes mixed preparation, tooling investigation, qualification and review; its historical split is unknown. The subsequent 6 booked minutes are preparation review and budget reconciliation, for 226 minutes total. Reconcile that shared 420-minute envelope below without inventing phase-level actuals. These phase targets are effort estimates, not individually enforced limits; the overall authorization ceiling remains separate.
+
+| Work category | Original estimate (minutes) | Booked use | Estimate less use | Estimated remaining work / status |
+|---|---:|---:|---:|---|
+| Preparation + qualification (240 + 180) | 420 | 220 historical + 6 preparation review | 194 | 210–300; forecast variance of 16–106 minutes above the original estimate. Review scope and forecast at baseline design; variance is not failure. |
+| Baseline collection and assessment | 180 | 0 | 180 | Reforecast from frozen cases, evaluator configuration and measured latencies before dispatch; fit not yet established. |
+| Authoring and diagnostics | 300 | 0 | 300 | Objective-dependent; unstarted, no fit claim. |
+| Comparison | 240 | 0 | 240 | Reforecast after comparison design; preserve necessary comparison work. |
+| Closure | 60 | 0 | 60 | Unstarted; retain allowance. |
+| Document-tool implementation and qualification | Not in original estimate | 0 implementation | Not applicable | Preliminary 120-minute estimate after baseline assessment; refine with scoped design. This adds forecast effort, not authorized capacity. |
+| Original total / overall authorization ceiling | 1,200 | 226 | 974 | Forecast phase variance remains visible; it is not a failure verdict. |
+
+The forward preparation/qualification estimate is a controller planning estimate, not measured effort: 60–90 minutes for baseline case selection/design, 60–90 for six concise artifact contracts and their application, and 90–120 for evaluator setup, constructed references, two calibration calls and assessment. Those estimates total 210–300 minutes; calibration is still unqualified. Format agreement is inside preparation; implementation and its own tests belong to the separate tooling estimate. The preliminary 120-minute estimate is neither a cap nor a promise of completion.
+
+At every active-work checkpoint, update this table with the cumulative accounting below: assign new time to its work category, preserve the mixed historical booking as such, and reconcile total use once. Include review, storage and model waits in the category they support. Revise remaining-work estimates when scope or observed effort changes. Unknown estimates remain explicit uncertainty. A forecast overrun prompts checking whether the test scope and required work are appropriate, then updating the forecast; it does not automatically block collection, mandate cuts or require a phase-budget transfer.
+
+**Owner clarification:** missing an effort estimate or time budget is not a failure in itself. Do not score it as a functional/procedural defect or use it alone to reject a skill, test or study. Keep necessary qualification and evidence standards intact. The agreed 20-hour ceiling remains a limit on autonomous work, not a quality threshold: bring the remaining work and revised estimate to the owner if an extension is needed. If work stops, describe the uncompleted evidence and resulting limits without converting a timing variance into a failed skill outcome.
+
 Pilot 01 model durations were 47.936 and 59.891 seconds (107.827 seconds total). Pilot 02 took 37.782 and 76.784 seconds (114.566 seconds total). At the four-call mean, 60 similar calls would take about 56 minutes; this is illustrative, not a forecast for longer subjects/evaluators. The runner's 900-second timeout is not an expected duration.
 At that timeout for every call, latency alone would consume 15 hours, so the ceilings are not a promise that every call fits; substitute pilot measurements and stop under the agreed limit.
 Default to sequential dispatch; no concurrency tool is proposed now.
@@ -296,10 +315,10 @@ The orchestrator's preparation conversation and local tool calls consume active 
 Owner walkthrough: the contract, outer limits, pilot 01 findings and pilot 02 concept are settled. Pilot 02 results and the path-count explanation have been walked through with the owner; that checkpoint was committed and pushed. Shiv case preparation is complete. Baseline design is now authorized; case selection, collection freeze and provider dispatch remain pending.
 Independent use is settled; Stage 3 has observed the declared standalone setup for this pair; broader isolation and model-evaluator qualification remain open.
 
-Accounting updated, 2026-09-13: **book 220 active minutes through baseline transition and document-tooling decisions before commit**, leaving **16 hours 20 minutes** under the accepted 20-hour ceiling. This replaces, rather than adds to, earlier bookings.
+Accounting updated, 2026-09-13: **book 226 active minutes through effort-estimate clarification and commit verification**, leaving **16 hours 14 minutes** under the accepted 20-hour ceiling. This replaces, rather than adds to, earlier bookings.
 Source: the current task's local log at `/Users/simon/.codex/sessions/2026/09/11/rollout-2026-09-11T17-59-42-01a0927b-cef5-7db0-8a30-c76c5b1ae838.jsonl`; only boundary timestamps were extracted, not conversation contents.
-Reconstruction sums the union of 86 closed `task_complete` / `turn_aborted` intervals since Stage 1 began: **12,715.0 seconds (211.92 minutes)**, including model/tool waits inside turns and excluding inter-turn owner-wait.
-The current turn began at 2026-09-13 15:30:32 UTC and adds 221 seconds at the 2026-09-13 15:34:13 UTC checkpoint. Retain the original two-minute opening allowance and allow two minutes for completion; round 219.60 minutes up to 220. Closing allowance and rounding are estimates, not independently measured owner/Claude effort. Provider durations are already inside active-turn time and are not added again.
+Reconstruction sums the union of 89 closed `task_complete` / `turn_aborted` intervals since Stage 1 began: **13,236.0 seconds (220.60 minutes)**, including model/tool waits inside turns and excluding inter-turn owner-wait.
+The current turn began at 2026-09-13 16:48:42 UTC and adds 31 seconds at the 2026-09-13 16:49:13 UTC checkpoint. Retain the original two-minute opening allowance and allow two minutes for completion; round 225.12 minutes up to 226. Closing allowance and rounding are estimates, not independently measured owner/Claude effort. Provider durations are already inside active-turn time and are not added again.
 At the next checkpoint, recompute cumulative closed-turn intervals plus the opening allowance and round up; do not add already counted turns or restore the superseded checkpoints. If the completed current turn exceeds the booking, correct the total before approving the remaining budget.
 
 Relationship-correction verification: all **21** source identities match, including all nine DD skills at the recorded revision; local links resolve and `git diff --check` passes.
