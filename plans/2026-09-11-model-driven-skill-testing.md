@@ -151,7 +151,7 @@ Reserved bundles and revealing assessments stay entirely in the verified private
 
 ## Current next action
 
-Review the completed [pilot pair](../skill-studies/sweeping-stale-references/pilot-results.md), especially the control scope decision and original accounting omission, before expanding the suite. Conceptual coverage is accepted; pilot-only preparation and qualification status are tracked separately under Stage 3.
+The owner walkthrough of the [pilot pair](../skill-studies/sweeping-stale-references/pilot-results.md) resolved the scope and accounting questions: complete reconciliation and committed edits take priority over detailed commit-message accounting. Return to coverage design; the recommended next small case exercises a moved file with references from different directories. Present its conceptual expectations before selecting or building the fixture and proposing any further calls. Conceptual coverage is accepted; pilot-only qualification is tracked separately under Stage 3, and broader Stage 2 work remains incomplete.
 Evaluator permission feasibility is established through the implemented read-only modes and local sandbox probes; exact evaluator configuration and model-run qualification remain Stage 3 work.
 The first study evaluates sweeping-stale-references alone against the same task without skill guidance; the earlier DD-present control is superseded. Observed input integrity is documented for this pair; stronger read isolation remains unqualified.
 The owner selected Sol low for initial process checks (Terra medium is an alternative); the protocol keeps the five-repetition wording campaign conditional on reaching authoring, outside the initial pilot.

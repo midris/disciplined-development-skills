@@ -31,6 +31,9 @@ Omitted locations are `src/http_headers.py:3`, `src/cache.py:9,11,17,20`, and `R
 The HTTP match is unrelated and the other five already express the current fact; they were correctly left unchanged, but their dispositions were not recorded.
 The frozen skill explicitly requires accounting for every match; the pre-run assessment also distinguishes the nine known old-literal matches from actual query totals.
 This is a non-blocking procedural defect under the settled policy, with no functional damage and no post-run criterion change.
+During the accounting walkthrough, the owner emphasized that the actual commit is what matters: all affected references should be reconciled and all edits committed; a fully detailed commit message is nice to have.
+Reinspection confirmed all seven required edits in `cb4e261`, one commit after the fixture baseline, with a clean working tree and protected material unchanged.
+The accounting omission remains a secondary observation against the original text, not a blocker or a requirement to expand the audit format before continuing.
 
 ## Evidence and qualification
 
@@ -72,6 +75,6 @@ Stop at two subject calls: no evaluator, authoring, retry or third pilot call wa
 The existing runner supplied enough evidence to inspect loading, ordering, Git reconciliation and separate functional/procedural outcomes for this case; no new tool is needed for those observations.
 Broader coverage, model-evaluator qualification, reserved-input isolation, measured collection and skill rewriting remain open.
 
-The owner has confirmed the scope expectation behind the control's functional assessment. Next review the original's incomplete account and the remaining evidence interpretation.
+The owner has confirmed the scope expectation behind the control's functional assessment and clarified that committed functional completeness takes priority over detailed accounting. The accounting walkthrough is resolved; review any remaining evidence concerns before returning to coverage design.
 If that review accepts the process evidence, return to the agreed coverage map and prepare the next missing facet before proposing further calls.
 Do not rerun this case merely to obtain cleaner accounting or extrapolate this pair into a baseline.
