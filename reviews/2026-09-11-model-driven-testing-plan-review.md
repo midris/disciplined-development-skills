@@ -251,3 +251,16 @@ The prior pilot assessment at `5615f58` and all frozen inputs/raw evidence remai
 Claude supplied **DD-VERDICT: PASS**, verifying the prior/current assessment identities, applied policy and frozen case criteria. It accepted the unresolved accounting scope, corrected its earlier claim about control inspection of the historical plan, and confirmed the functional findings and two-call limit.
 Its precision note is verified: the preservation statement comes from the control's mid-run agent message at `stdout.txt:13`, not `final.txt`. The report now points there; assessment judgments are unchanged and the index retains the reviewed report identity alongside the editorial update.
 Pilot review is closed. Next is the moved-file facet, with owner-clarified outcomes distinguished from explicit instructions before fixture construction. No new run or skill rewrite is authorized by this review.
+
+## External review of c1ca959
+
+Claude supplied **DD-VERDICT: PASS — no findings** for the simplified pilot 02 package. It independently verified the four required consumers, preservation cases, all manifest/policy identities and subject-input boundaries, and reproduced eight passing observer tests. Its probes confirmed that blanket basename replacement damages the vendor link and that a cwd-relative export repair fails from outside the project, both covered by the assessment.
+The review confirms that accounting scope is explicit before collection and the proposed pair fits two additional-development slots. No case change or further document review is required. Exact provider dispatch remains pending owner authorization; model-call usage remains two subjects from pilot 01.
+
+## Pilot 02 execution checkpoint, 2026-09-13
+
+The owner approved the exact control/original Sol-low pair after the preparation PASS. Both calls completed; the [assessment](../skill-studies/sweeping-stale-references/pilot-02-results.md) records 4/4 committed repairs for original versus 1/4 for control, with preservation met in both. No independent post-run model review is claimed; owner review of the bundles is next.
+Controller inspection verified identical initial trees, complete original-skill loading, ordered traces, committed diffs and replay from two working directories. Full source/primary/backup inventories and frozen input hashes were reverified after inspection. The six-versus-seven-path summary error is a minor procedural defect with no functional consequence. No scoring-policy amendment or extra run is warranted by it.
+A controller-package omission was corrected by copying and verifying the checker's existing pristine-fixture dependency; frozen inputs and checks were unchanged. Active plan/protocol status and allocation now reflect four subject calls, no evaluator/authoring/retry calls and no unspent dispatch authorization. Local document links, JSON parsing and `git diff --check` pass; hook suite: 263 passed, 3 skipped.
+
+Owner follow-up: accepted the explanation that seven real matches occupy six paths, with no invented reference or unwanted edit, and requested commit/push. This closes the requested walkthrough; it does not constitute an independent post-run review or authorize more model calls.

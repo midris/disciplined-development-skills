@@ -1,0 +1,1229 @@
+{
+  "study": "sweeping-stale-references",
+  "phase": "development-pilot",
+  "case": "pilot-02",
+  "tested_repository_revision": "c1ca9599abba6acc6a3ef884a9ac00a24e72e83c",
+  "manifest_path": "skill-studies/sweeping-stale-references/cases/pilot-02/manifest.json",
+  "manifest_sha256": "cf0bdc925dd73aea7df48791556f5b39efb925a22a11fe548136ffc44325ec86",
+  "authorization": "Owner explicitly approved the presented exact control/original commands on 2026-09-13. One subject attempt per condition, with complete-bundle preservation/inspection between calls; no evaluator, extra attempt or automatic retry.",
+  "authorized_subject_attempts": 2,
+  "model": "gpt-5.6-sol",
+  "effort": "low",
+  "permissions": "workspace-write",
+  "assessment_policy": {
+    "id": "SSR-assessment-2",
+    "source_revision": "f36ffa001fc4e24b04436fc89d75811c6421e480",
+    "source_path": "skill-studies/sweeping-stale-references/protocol.md",
+    "source_sha256": "3d84c42a129c9da60d8263a5e63d27c0845f0ac68bc22ae8c85d5de765fd2c74",
+    "extraction": "Current SSR assessment policy section up to Standalone control and attribution",
+    "copy": "skill-studies/sweeping-stale-references/cases/pilot-02/assessment-policy.txt",
+    "sha256": "625e91999ba68e18eda230b92b6da1e6f6ea51a42aa89f5cbce674e41a097837"
+  },
+  "assessment_criteria": [
+    {
+      "path": "skill-studies/sweeping-stale-references/cases/pilot-02/assessment.md",
+      "sha256": "7eb2c16e72ae13d6895ad44b31bd2790c2a4b79ae32d761b490c0e9ba24305d0"
+    },
+    {
+      "path": "skill-studies/sweeping-stale-references/cases/pilot-02/expected.json",
+      "sha256": "7c2539f37f33b37e68339252cea73a7020c0d0a2f030ea6f562e826682c38730"
+    },
+    {
+      "path": "skill-studies/sweeping-stale-references/cases/pilot-02/check_paths.py",
+      "sha256": "c8b600d0fb4779ea0751d687887b45452ed22cd45076c930767c9dda62364513"
+    }
+  ],
+  "retention_decision": "Entire raw bundles outside Git in the existing development primary and backup stores, under pilot-02-runs/<run-id>, verified against full inventories before the next dispatch. Git retains index and concise assessments.",
+  "attempts": [
+    {
+      "condition": "control",
+      "attempt": 1,
+      "status": "assessed",
+      "started_at": "2026-09-13T05:02:32.118671+00:00",
+      "config": "cases/pilot-02/control.json",
+      "primary": "/Users/simon/work/personal/skill-study-private/sweeping-stale-references/development/pilot-02-runs/20260913T050236805Z-ssr-pilot-02-control-6e56c3fc-6dac-4156-b761-604010d452cd-u9ioklrw",
+      "backup": "/Users/simon/work/personal/skill-study-backups/sweeping-stale-references/development/pilot-02-runs/20260913T050236805Z-ssr-pilot-02-control-6e56c3fc-6dac-4156-b761-604010d452cd-u9ioklrw",
+      "source": "/private/tmp/ssr-pilot-02-20260913/skilltest-runs/20260913T050236805Z-ssr-pilot-02-control-6e56c3fc-6dac-4156-b761-604010d452cd-u9ioklrw",
+      "run_id": "20260913T050236805Z-ssr-pilot-02-control-6e56c3fc-6dac-4156-b761-604010d452cd-u9ioklrw",
+      "result_status": "COMPLETED",
+      "execution": {
+        "effort": "low",
+        "executable": "codex",
+        "exit_code": 0,
+        "invocation_started": true,
+        "model": "gpt-5.6-sol",
+        "permissions": "workspace-write",
+        "provider": "codex",
+        "timed_out": false,
+        "timeout_seconds": 900
+      },
+      "infrastructure_error": null,
+      "duration_seconds": 37.782,
+      "finished_at": "2026-09-13T05:03:14.588Z",
+      "inventory": [
+        {
+          "path": ".skilltest-run",
+          "type": "file",
+          "bytes": 0,
+          "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+        },
+        {
+          "path": "config.json",
+          "type": "file",
+          "bytes": 1216,
+          "sha256": "7d329e69ceeff1b9899accbc270c767ffb6366f95b5b6cb7254f6e110eeae30f"
+        },
+        {
+          "path": "final.txt",
+          "type": "file",
+          "bytes": 268,
+          "sha256": "8cb5c19fc907cd38b8a2df6fb98ec30c5add5185f85823a8ffb6865847806afe"
+        },
+        {
+          "path": "prompt-template.txt",
+          "type": "file",
+          "bytes": 469,
+          "sha256": "17438b8155af2ff3ba779ff39eee0426aa7d0783fec006ce6519dfebce18447f"
+        },
+        {
+          "path": "prompt.txt",
+          "type": "file",
+          "bytes": 608,
+          "sha256": "44533668c98c831b09c2e6765631920b5415d5985742ccad89ce2f27f4059455"
+        },
+        {
+          "path": "result.json",
+          "type": "file",
+          "bytes": 15962,
+          "sha256": "d344055a20f4bf7263e3b9b265d52920701ec8146d37ae2393d10e23dad3cd34"
+        },
+        {
+          "path": "runner.log",
+          "type": "file",
+          "bytes": 3217,
+          "sha256": "6a5acf32300bbeafdd699d55f0016c6d3c2a03f6dde83f36afcae5fb695de27b"
+        },
+        {
+          "path": "stderr.txt",
+          "type": "file",
+          "bytes": 0,
+          "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+        },
+        {
+          "path": "stdout.txt",
+          "type": "file",
+          "bytes": 10305,
+          "sha256": "ddd19bf2df083892cc2ee1dabbba40c8aab650756c2423e17afd4014c5544eee"
+        },
+        {
+          "path": "workspace",
+          "type": "directory"
+        },
+        {
+          "path": "workspace/evidence",
+          "type": "directory"
+        },
+        {
+          "path": "workspace/fixture",
+          "type": "directory"
+        },
+        {
+          "path": "workspace/fixture/.git",
+          "type": "directory"
+        },
+        {
+          "path": "workspace/fixture/.git/COMMIT_EDITMSG",
+          "type": "file",
+          "bytes": 29,
+          "sha256": "3e453c6aa403f4b25295200e5ec912280444b24af6c12d59d039aa4ffe835499"
+        },
+        {
+          "path": "workspace/fixture/.git/HEAD",
+          "type": "file",
+          "bytes": 23,
+          "sha256": "f6f2b945f6c411b02ba3da9c7ace88dcf71b6af65ba2e0d89aa82900042b5a10"
+        },
+        {
+          "path": "workspace/fixture/.git/config",
+          "type": "file",
+          "bytes": 201,
+          "sha256": "0532bb550e64acf2e13dce506a482b4011fe76760927d9efbb43d6ca0eb20890"
+        },
+        {
+          "path": "workspace/fixture/.git/index",
+          "type": "file",
+          "bytes": 1096,
+          "sha256": "3e7c6c562f0cff689e5e956c2c94dbf6951e9ced174eecddcf774d600e42ac7b"
+        },
+        {
+          "path": "workspace/fixture/.git/logs",
+          "type": "directory"
+        },
+        {
+          "path": "workspace/fixture/.git/logs/HEAD",
+          "type": "file",
+          "bytes": 354,
+          "sha256": "0ce10e06224f5f7c908b594a3add8f4069f586c89e3b4ca6684d5edd3d4121a4"
+        },
+        {
+          "path": "workspace/fixture/.git/logs/refs",
+          "type": "directory"
+        },
+        {
+          "path": "workspace/fixture/.git/logs/refs/heads",
+          "type": "directory"
+        },
+        {
+          "path": "workspace/fixture/.git/logs/refs/heads/master",
+          "type": "file",
+          "bytes": 354,
+          "sha256": "0ce10e06224f5f7c908b594a3add8f4069f586c89e3b4ca6684d5edd3d4121a4"
+        },
+        {
+          "path": "workspace/fixture/.git/objects",
+          "type": "directory"
+        },
+        {
+          "path": "workspace/fixture/.git/objects/2d",
+          "type": "directory"
+        },
+        {
+          "path": "workspace/fixture/.git/objects/2d/03c5cd7c81d078e599a206a9d7ca1d0d42205e",
+          "type": "file",
+          "bytes": 209,
+          "sha256": "73e5ff42908cbb200c296ce77bc7e61fa280edb5c0ee9cee2f5481768601cbaa"
+        },
+        {
+          "path": "workspace/fixture/.git/objects/36",
+          "type": "directory"
+        },
+        {
+          "path": "workspace/fixture/.git/objects/36/91df6cca19932a889c2266a37542025445c4fb",
+          "type": "file",
+          "bytes": 110,
+          "sha256": "19e61a7a12944d8a270644d5fbf63add7cf1ce1da754bd08e7c25e9e8cbbd7cd"
+        },
+        {
+          "path": "workspace/fixture/.git/objects/42",
+          "type": "directory"
+        },
+        {
+          "path": "workspace/fixture/.git/objects/42/b276ddf3faf79b17d2fcaded9a270e6d9a53e2",
+          "type": "file",
+          "bytes": 58,
+          "sha256": "261ebd032def7f04ba0979b16aa311ec215e2e3459b342f16655994fb312ffc7"
+        },
+        {
+          "path": "workspace/fixture/.git/objects/50",
+          "type": "directory"
+        },
+        {
+          "path": "workspace/fixture/.git/objects/50/f59a96e6e734407ae07ba6d2b2133d71b89668",
+          "type": "file",
+          "bytes": 104,
+          "sha256": "bdd3e48b2afc8aa9f3a8fda8143996944f7cfdd6a7e1e6f93d32c6e685093bc0"
+        },
+        {
+          "path": "workspace/fixture/.git/objects/59",
+          "type": "directory"
+        },
+        {
+          "path": "workspace/fixture/.git/objects/59/df80b49155f1f70c4584b9af20ec5336d845ed",
+          "type": "file",
+          "bytes": 84,
+          "sha256": "99c846d3c50d5d1eea2ecfc132cd772136d3906d2152edc5c7bc847b2b94242e"
+        },
+        {
+          "path": "workspace/fixture/.git/objects/63",
+          "type": "directory"
+        },
+        {
+          "path": "workspace/fixture/.git/objects/63/99241409f87e2adeb1206d8ba21433df402fb6",
+          "type": "file",
+          "bytes": 60,
+          "sha256": "ad8b991099e9daab7b57f9912a804a51213c1e1bc1d353c62fb3a9787bba7176"
+        },
+        {
+          "path": "workspace/fixture/.git/objects/6e",
+          "type": "directory"
+        },
+        {
+          "path": "workspace/fixture/.git/objects/6e/00bf4ba2b251873ad137e5ce42409064a28fe2",
+          "type": "file",
+          "bytes": 51,
+          "sha256": "37ed78189893a01407f385ba5873e35d6e76fb27635e15838350b1af454c926c"
+        },
+        {
+          "path": "workspace/fixture/.git/objects/74",
+          "type": "directory"
+        },
+        {
+          "path": "workspace/fixture/.git/objects/74/a0b13deaf130864b7173451f09964fc4fa5468",
+          "type": "file",
+          "bytes": 190,
+          "sha256": "86eb7657f9360e1b127987555005136d954bbdf85f1c9b917176539ad82d9082"
+        },
+        {
+          "path": "workspace/fixture/.git/objects/78",
+          "type": "directory"
+        },
+        {
+          "path": "workspace/fixture/.git/objects/78/d1972faafdd3daa00c0c9aa33005d544caa303",
+          "type": "file",
+          "bytes": 53,
+          "sha256": "2421d30c1be8668e0c6235daaae651cb81b2641f0208e6867f20927ebc893938"
+        },
+        {
+          "path": "workspace/fixture/.git/objects/79",
+          "type": "directory"
+        },
+        {
+          "path": "workspace/fixture/.git/objects/79/3da1a546082cacb635cf38884d1f0ea20a9a22",
+          "type": "file",
+          "bytes": 150,
+          "sha256": "414ec5d370fcf4cde03f9053afccbea73700b6c106232c5a603db1ce5bf85694"
+        },
+        {
+          "path": "workspace/fixture/.git/objects/7d",
+          "type": "directory"
+        },
+        {
+          "path": "workspace/fixture/.git/objects/7d/c57b77a860e2a164635d801f0992a009a8193e",
+          "type": "file",
+          "bytes": 48,
+          "sha256": "90507056d180843290a38991f26227ce59713347a5b20c63909462b545207eff"
+        },
+        {
+          "path": "workspace/fixture/.git/objects/83",
+          "type": "directory"
+        },
+        {
+          "path": "workspace/fixture/.git/objects/83/d9ecdb19484209b284a03a1d1a3ac327d28f85",
+          "type": "file",
+          "bytes": 90,
+          "sha256": "788cbdf77b12fb81fb3e32d949c2a557a1ec882bfb6780d95d8b5773515c5859"
+        },
+        {
+          "path": "workspace/fixture/.git/objects/8e",
+          "type": "directory"
+        },
+        {
+          "path": "workspace/fixture/.git/objects/8e/681e9ac04cf6792e255c7ffa7b4ed61be18e51",
+          "type": "file",
+          "bytes": 196,
+          "sha256": "289fd098c54e7120f11341ac526125197d32aab00922e687e84229d32883cc93"
+        },
+        {
+          "path": "workspace/fixture/.git/objects/99",
+          "type": "directory"
+        },
+        {
+          "path": "workspace/fixture/.git/objects/99/7f0c61b4e2933183d19dce9159c0e2ac81fd06",
+          "type": "file",
+          "bytes": 123,
+          "sha256": "5f8c23f5c0252b8f550c7e4cd220d316a8c5e8d5c901511a46853d9d96cbbbcf"
+        },
+        {
+          "path": "workspace/fixture/.git/objects/a0",
+          "type": "directory"
+        },
+        {
+          "path": "workspace/fixture/.git/objects/a0/a1132ec75cf9f2b12cb2723313ded939ca142a",
+          "type": "file",
+          "bytes": 134,
+          "sha256": "c209a95df2b5dc955af36998f49a2b7e3aba2813a022942175f226e02b01c207"
+        },
+        {
+          "path": "workspace/fixture/.git/objects/b7",
+          "type": "directory"
+        },
+        {
+          "path": "workspace/fixture/.git/objects/b7/5c27ef29bd4c1e46a93a9eb965df824ef5dac0",
+          "type": "file",
+          "bytes": 209,
+          "sha256": "1494b8ffee03ab07cbc0f8fd9689e24b030fd6a4f5e6c7c77ad671fc503cb3d5"
+        },
+        {
+          "path": "workspace/fixture/.git/objects/ba",
+          "type": "directory"
+        },
+        {
+          "path": "workspace/fixture/.git/objects/ba/e8ab028bc1b433ea7cbca2d58ffb1d19ad5b87",
+          "type": "file",
+          "bytes": 137,
+          "sha256": "55430bf0d1eb49828d0d60ea11fbf32b98c110200eacacb19fb5cd65412ef710"
+        },
+        {
+          "path": "workspace/fixture/.git/objects/bf",
+          "type": "directory"
+        },
+        {
+          "path": "workspace/fixture/.git/objects/bf/542d5ccd5b1fa3842acc93c3a41254839e318a",
+          "type": "file",
+          "bytes": 132,
+          "sha256": "c5ec6d5fa71fb5f09b70bf73c2a970139fceb06596a1c8973e22919075ab659e"
+        },
+        {
+          "path": "workspace/fixture/.git/objects/d6",
+          "type": "directory"
+        },
+        {
+          "path": "workspace/fixture/.git/objects/d6/63a6158e23fbf4caefb360f157db251c5edd36",
+          "type": "file",
+          "bytes": 180,
+          "sha256": "24dee0720a96096eeec5fd86fa33ff6d8005069df7be7c76c4c9bd54b9af7814"
+        },
+        {
+          "path": "workspace/fixture/.git/objects/e9",
+          "type": "directory"
+        },
+        {
+          "path": "workspace/fixture/.git/objects/e9/f30b80e54ab3c92ed587656dae58ceb04b7156",
+          "type": "file",
+          "bytes": 98,
+          "sha256": "f5b04ff395d4ec80606c5ae03c31fba97be8405c343a043f7ad6a366c1d93ec9"
+        },
+        {
+          "path": "workspace/fixture/.git/objects/f1",
+          "type": "directory"
+        },
+        {
+          "path": "workspace/fixture/.git/objects/f1/32e1ff99a6de7212631fd884208e052910412a",
+          "type": "file",
+          "bytes": 50,
+          "sha256": "7aa2b23fb66d5db60a5c2df41914263fdbbb658efc83d74f423e50bbfca34e1a"
+        },
+        {
+          "path": "workspace/fixture/.git/objects/fd",
+          "type": "directory"
+        },
+        {
+          "path": "workspace/fixture/.git/objects/fd/420f52f04fdee37ac35936e21f64e0d52d5895",
+          "type": "file",
+          "bytes": 59,
+          "sha256": "8a2156bd95d5d8461197474f80cff207aa7d8d532b5687531ce9cb73ae675dc5"
+        },
+        {
+          "path": "workspace/fixture/.git/objects/info",
+          "type": "directory"
+        },
+        {
+          "path": "workspace/fixture/.git/objects/pack",
+          "type": "directory"
+        },
+        {
+          "path": "workspace/fixture/.git/refs",
+          "type": "directory"
+        },
+        {
+          "path": "workspace/fixture/.git/refs/heads",
+          "type": "directory"
+        },
+        {
+          "path": "workspace/fixture/.git/refs/heads/master",
+          "type": "file",
+          "bytes": 41,
+          "sha256": "af33f135d3a34cfc27b7ed6102a0f2047de5b10329c01886af82603cf7a0aad0"
+        },
+        {
+          "path": "workspace/fixture/.git/refs/tags",
+          "type": "directory"
+        },
+        {
+          "path": "workspace/fixture/.gitignore",
+          "type": "file",
+          "bytes": 36,
+          "sha256": "7ab6574557548c2d1031511f15db14ace876b796b1471216aad74a0ab64aaee2"
+        },
+        {
+          "path": "workspace/fixture/README.md",
+          "type": "file",
+          "bytes": 258,
+          "sha256": "9e97a73685d83fddaddac027c2e1f38fa225d087f5f3a32ff8da1f9937aaf2b5"
+        },
+        {
+          "path": "workspace/fixture/TASK.md",
+          "type": "file",
+          "bytes": 395,
+          "sha256": "4b72fb7e8ff4beebcbf95282e502b7427a9622c21693fd48e397b044a603f11b"
+        },
+        {
+          "path": "workspace/fixture/docs",
+          "type": "directory"
+        },
+        {
+          "path": "workspace/fixture/docs/index.md",
+          "type": "file",
+          "bytes": 87,
+          "sha256": "4449bfe65c1cc6a59bc692a8077377a6e56b0f378870be229000a70a943bb609"
+        },
+        {
+          "path": "workspace/fixture/docs/reference",
+          "type": "directory"
+        },
+        {
+          "path": "workspace/fixture/docs/reference/setup.md",
+          "type": "file",
+          "bytes": 139,
+          "sha256": "c7a759fbfc829c024b57d3a79f63fa6a4718e173dfb5a7e2b943f4e44f47a5b9"
+        },
+        {
+          "path": "workspace/fixture/docs/tutorials",
+          "type": "directory"
+        },
+        {
+          "path": "workspace/fixture/docs/tutorials/quickstart.md",
+          "type": "file",
+          "bytes": 100,
+          "sha256": "b856f45737cb568d58ee7ebbec0b12123c4be3fac93c6994c64508ca86763365"
+        },
+        {
+          "path": "workspace/fixture/plans",
+          "type": "directory"
+        },
+        {
+          "path": "workspace/fixture/plans/completed",
+          "type": "directory"
+        },
+        {
+          "path": "workspace/fixture/plans/completed/docs-layout.md",
+          "type": "file",
+          "bytes": 165,
+          "sha256": "64f544d394b479f0e7a30c6bdd56e52aaf7352509c0f8b08d4148994eb628932"
+        },
+        {
+          "path": "workspace/fixture/scripts",
+          "type": "directory"
+        },
+        {
+          "path": "workspace/fixture/scripts/export-guide.sh",
+          "type": "file",
+          "bytes": 109,
+          "sha256": "06fdfdc2080354658cfa73fbe443799dafcb9afc2bdd41f152bff8d3fe72f82f"
+        },
+        {
+          "path": "workspace/fixture/vendor",
+          "type": "directory"
+        },
+        {
+          "path": "workspace/fixture/vendor/widget",
+          "type": "directory"
+        },
+        {
+          "path": "workspace/fixture/vendor/widget/README.md",
+          "type": "file",
+          "bytes": 94,
+          "sha256": "7e28eb12cddc29de9f3ef2ba7b3f759bbb92af864f573f4c8556b441344799b0"
+        },
+        {
+          "path": "workspace/fixture/vendor/widget/setup.md",
+          "type": "file",
+          "bytes": 143,
+          "sha256": "9ea5c2f793cd0128db290b87d35b46f8a9fe6f7d32f6a44bfea32530e49ac2ab"
+        }
+      ],
+      "preservation_verified_at": "2026-09-13T05:03:38.526313+00:00",
+      "regular_file_count": 48,
+      "total_regular_file_bytes": 38194,
+      "setup_checks": {
+        "baseline_commit": "bae8ab028bc1b433ea7cbca2d58ffb1d19ad5b87",
+        "baseline_files_matched": 9,
+        "task_unchanged": true,
+        "ignore_unchanged": true,
+        "trace_json_parses": true,
+        "agents_directory_present": false,
+        "qualification_limit": "Declared inputs and recorded commands inspected; no exhaustive read-isolation or hidden-case claim.",
+        "recorded_unintended_guidance_read": false,
+        "absent_AGENTS_probe": true,
+        "target_retrieval_attempt": false
+      },
+      "repair_commit": "d663a6158e23fbf4caefb360f157db251c5edd36",
+      "repair_commit_count": 1,
+      "working_tree_clean": true,
+      "changed_paths": [
+        "README.md"
+      ]
+    },
+    {
+      "condition": "original",
+      "attempt": 1,
+      "status": "assessed",
+      "started_at": "2026-09-13T05:08:34.369865+00:00",
+      "config": "cases/pilot-02/original.json",
+      "primary": "/Users/simon/work/personal/skill-study-private/sweeping-stale-references/development/pilot-02-runs/20260913T050847016Z-ssr-pilot-02-original-7ee12856-0a4f-4d0a-b489-1fddc8655ee8-uafjv_4i",
+      "backup": "/Users/simon/work/personal/skill-study-backups/sweeping-stale-references/development/pilot-02-runs/20260913T050847016Z-ssr-pilot-02-original-7ee12856-0a4f-4d0a-b489-1fddc8655ee8-uafjv_4i",
+      "source": "/private/tmp/ssr-pilot-02-20260913/skilltest-runs/20260913T050847016Z-ssr-pilot-02-original-7ee12856-0a4f-4d0a-b489-1fddc8655ee8-uafjv_4i",
+      "run_id": "20260913T050847016Z-ssr-pilot-02-original-7ee12856-0a4f-4d0a-b489-1fddc8655ee8-uafjv_4i",
+      "result_status": "COMPLETED",
+      "execution": {
+        "effort": "low",
+        "executable": "codex",
+        "exit_code": 0,
+        "invocation_started": true,
+        "model": "gpt-5.6-sol",
+        "permissions": "workspace-write",
+        "provider": "codex",
+        "timed_out": false,
+        "timeout_seconds": 900
+      },
+      "infrastructure_error": null,
+      "duration_seconds": 76.784,
+      "finished_at": "2026-09-13T05:10:03.800Z",
+      "inventory": [
+        {
+          "path": ".skilltest-run",
+          "type": "file",
+          "bytes": 0,
+          "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+        },
+        {
+          "path": "config.json",
+          "type": "file",
+          "bytes": 1345,
+          "sha256": "a8818589ca32a0867b79082388cbd51994b9d63225c8ffba8da8b863cd3abd49"
+        },
+        {
+          "path": "final.txt",
+          "type": "file",
+          "bytes": 757,
+          "sha256": "31f00e6a80baa8e46a18a4a05307e759d00dbf00411ef99436533523d5049d37"
+        },
+        {
+          "path": "prompt-template.txt",
+          "type": "file",
+          "bytes": 595,
+          "sha256": "6695cbb23cfd7d8656a122b2e9ea4ba35fdea581f7a15780e146d84a0732b588"
+        },
+        {
+          "path": "prompt.txt",
+          "type": "file",
+          "bytes": 735,
+          "sha256": "63fc0b2690ed8d08de45c75d230c47610aefc06f965cab960de180e1fdc7c9db"
+        },
+        {
+          "path": "result.json",
+          "type": "file",
+          "bytes": 18863,
+          "sha256": "c02cf9859fa63ab02021c6e4f0b9b2c5649ae2675c51cb5efde35a94a7956985"
+        },
+        {
+          "path": "runner.log",
+          "type": "file",
+          "bytes": 3361,
+          "sha256": "1c6254eca41e2442d84881afbe2770b96baac66a9ea2071b962797d4891dd353"
+        },
+        {
+          "path": "stderr.txt",
+          "type": "file",
+          "bytes": 0,
+          "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+        },
+        {
+          "path": "stdout.txt",
+          "type": "file",
+          "bytes": 28218,
+          "sha256": "fe5529a1db0db0cc934941d29b15731fa2f4a46332fcc48a75441af8a4866a49"
+        },
+        {
+          "path": "workspace",
+          "type": "directory"
+        },
+        {
+          "path": "workspace/evidence",
+          "type": "directory"
+        },
+        {
+          "path": "workspace/fixture",
+          "type": "directory"
+        },
+        {
+          "path": "workspace/fixture/.agents",
+          "type": "directory"
+        },
+        {
+          "path": "workspace/fixture/.agents/skills",
+          "type": "directory"
+        },
+        {
+          "path": "workspace/fixture/.agents/skills/sweeping-stale-references",
+          "type": "directory"
+        },
+        {
+          "path": "workspace/fixture/.agents/skills/sweeping-stale-references/SKILL.md",
+          "type": "file",
+          "bytes": 7689,
+          "sha256": "d6812c33cae026807bbb3ebe851d93b60b513dd87ea5efd98aea28f5c02f9157"
+        },
+        {
+          "path": "workspace/fixture/.git",
+          "type": "directory"
+        },
+        {
+          "path": "workspace/fixture/.git/COMMIT_EDITMSG",
+          "type": "file",
+          "bytes": 965,
+          "sha256": "30d126b2ce0018a769e35fae3f5b18fad148f4fb0b0782d1a8defe5322ffe4b0"
+        },
+        {
+          "path": "workspace/fixture/.git/HEAD",
+          "type": "file",
+          "bytes": 23,
+          "sha256": "f6f2b945f6c411b02ba3da9c7ace88dcf71b6af65ba2e0d89aa82900042b5a10"
+        },
+        {
+          "path": "workspace/fixture/.git/config",
+          "type": "file",
+          "bytes": 201,
+          "sha256": "0532bb550e64acf2e13dce506a482b4011fe76760927d9efbb43d6ca0eb20890"
+        },
+        {
+          "path": "workspace/fixture/.git/index",
+          "type": "file",
+          "bytes": 1096,
+          "sha256": "cbf3a0339a0d2e15c8bbc4ba97ef56998fa70dd6958e525389861754a51915c1"
+        },
+        {
+          "path": "workspace/fixture/.git/logs",
+          "type": "directory"
+        },
+        {
+          "path": "workspace/fixture/.git/logs/HEAD",
+          "type": "file",
+          "bytes": 360,
+          "sha256": "43c848cd9ea4eb5b87276660440f225acf17f24141942ea8c6be9c2c10faaaa1"
+        },
+        {
+          "path": "workspace/fixture/.git/logs/refs",
+          "type": "directory"
+        },
+        {
+          "path": "workspace/fixture/.git/logs/refs/heads",
+          "type": "directory"
+        },
+        {
+          "path": "workspace/fixture/.git/logs/refs/heads/master",
+          "type": "file",
+          "bytes": 360,
+          "sha256": "43c848cd9ea4eb5b87276660440f225acf17f24141942ea8c6be9c2c10faaaa1"
+        },
+        {
+          "path": "workspace/fixture/.git/objects",
+          "type": "directory"
+        },
+        {
+          "path": "workspace/fixture/.git/objects/12",
+          "type": "directory"
+        },
+        {
+          "path": "workspace/fixture/.git/objects/12/59fd8ad0ec3928e9ce96d834abaf0351255220",
+          "type": "file",
+          "bytes": 209,
+          "sha256": "1b7d0eb9ae44ec790166e733bec8f9e7e48ddd4a5390da22fdec990602ff6a34"
+        },
+        {
+          "path": "workspace/fixture/.git/objects/2d",
+          "type": "directory"
+        },
+        {
+          "path": "workspace/fixture/.git/objects/2d/03c5cd7c81d078e599a206a9d7ca1d0d42205e",
+          "type": "file",
+          "bytes": 209,
+          "sha256": "73e5ff42908cbb200c296ce77bc7e61fa280edb5c0ee9cee2f5481768601cbaa"
+        },
+        {
+          "path": "workspace/fixture/.git/objects/33",
+          "type": "directory"
+        },
+        {
+          "path": "workspace/fixture/.git/objects/33/a2b1622a0f87d14c9ffa6713206cd1e6cd70df",
+          "type": "file",
+          "bytes": 111,
+          "sha256": "68ed374225d1831ba721a7d01041d4c183653bc04e671eeb78fca1dbc2cfae97"
+        },
+        {
+          "path": "workspace/fixture/.git/objects/36",
+          "type": "directory"
+        },
+        {
+          "path": "workspace/fixture/.git/objects/36/91df6cca19932a889c2266a37542025445c4fb",
+          "type": "file",
+          "bytes": 110,
+          "sha256": "19e61a7a12944d8a270644d5fbf63add7cf1ce1da754bd08e7c25e9e8cbbd7cd"
+        },
+        {
+          "path": "workspace/fixture/.git/objects/42",
+          "type": "directory"
+        },
+        {
+          "path": "workspace/fixture/.git/objects/42/b276ddf3faf79b17d2fcaded9a270e6d9a53e2",
+          "type": "file",
+          "bytes": 58,
+          "sha256": "261ebd032def7f04ba0979b16aa311ec215e2e3459b342f16655994fb312ffc7"
+        },
+        {
+          "path": "workspace/fixture/.git/objects/50",
+          "type": "directory"
+        },
+        {
+          "path": "workspace/fixture/.git/objects/50/f59a96e6e734407ae07ba6d2b2133d71b89668",
+          "type": "file",
+          "bytes": 104,
+          "sha256": "bdd3e48b2afc8aa9f3a8fda8143996944f7cfdd6a7e1e6f93d32c6e685093bc0"
+        },
+        {
+          "path": "workspace/fixture/.git/objects/57",
+          "type": "directory"
+        },
+        {
+          "path": "workspace/fixture/.git/objects/57/b579eab6d219c028debcf7a56bc3f21b6f442c",
+          "type": "file",
+          "bytes": 58,
+          "sha256": "d9aab13add3b8b89e550ce848b90d527c9415392bea2a38cbf39bf0e553ea8b2"
+        },
+        {
+          "path": "workspace/fixture/.git/objects/59",
+          "type": "directory"
+        },
+        {
+          "path": "workspace/fixture/.git/objects/59/df80b49155f1f70c4584b9af20ec5336d845ed",
+          "type": "file",
+          "bytes": 84,
+          "sha256": "99c846d3c50d5d1eea2ecfc132cd772136d3906d2152edc5c7bc847b2b94242e"
+        },
+        {
+          "path": "workspace/fixture/.git/objects/63",
+          "type": "directory"
+        },
+        {
+          "path": "workspace/fixture/.git/objects/63/99241409f87e2adeb1206d8ba21433df402fb6",
+          "type": "file",
+          "bytes": 60,
+          "sha256": "ad8b991099e9daab7b57f9912a804a51213c1e1bc1d353c62fb3a9787bba7176"
+        },
+        {
+          "path": "workspace/fixture/.git/objects/6a",
+          "type": "directory"
+        },
+        {
+          "path": "workspace/fixture/.git/objects/6a/0796197699378bd1cc3e5df634e3829110ad83",
+          "type": "file",
+          "bytes": 98,
+          "sha256": "7db86332ce7826e8cabb55d0662c34d582d41d5571c4f363a0779369b0b6fff9"
+        },
+        {
+          "path": "workspace/fixture/.git/objects/6e",
+          "type": "directory"
+        },
+        {
+          "path": "workspace/fixture/.git/objects/6e/00bf4ba2b251873ad137e5ce42409064a28fe2",
+          "type": "file",
+          "bytes": 51,
+          "sha256": "37ed78189893a01407f385ba5873e35d6e76fb27635e15838350b1af454c926c"
+        },
+        {
+          "path": "workspace/fixture/.git/objects/74",
+          "type": "directory"
+        },
+        {
+          "path": "workspace/fixture/.git/objects/74/a0b13deaf130864b7173451f09964fc4fa5468",
+          "type": "file",
+          "bytes": 190,
+          "sha256": "86eb7657f9360e1b127987555005136d954bbdf85f1c9b917176539ad82d9082"
+        },
+        {
+          "path": "workspace/fixture/.git/objects/77",
+          "type": "directory"
+        },
+        {
+          "path": "workspace/fixture/.git/objects/77/9e420faed2f35f0fa0b2eb2be2d86abdec5d63",
+          "type": "file",
+          "bytes": 123,
+          "sha256": "c9ac0d55cced7b5ce35f53e420792c1a329c96394327034be0db9d37db442b53"
+        },
+        {
+          "path": "workspace/fixture/.git/objects/78",
+          "type": "directory"
+        },
+        {
+          "path": "workspace/fixture/.git/objects/78/d1972faafdd3daa00c0c9aa33005d544caa303",
+          "type": "file",
+          "bytes": 53,
+          "sha256": "2421d30c1be8668e0c6235daaae651cb81b2641f0208e6867f20927ebc893938"
+        },
+        {
+          "path": "workspace/fixture/.git/objects/79",
+          "type": "directory"
+        },
+        {
+          "path": "workspace/fixture/.git/objects/79/3da1a546082cacb635cf38884d1f0ea20a9a22",
+          "type": "file",
+          "bytes": 150,
+          "sha256": "414ec5d370fcf4cde03f9053afccbea73700b6c106232c5a603db1ce5bf85694"
+        },
+        {
+          "path": "workspace/fixture/.git/objects/7d",
+          "type": "directory"
+        },
+        {
+          "path": "workspace/fixture/.git/objects/7d/c57b77a860e2a164635d801f0992a009a8193e",
+          "type": "file",
+          "bytes": 48,
+          "sha256": "90507056d180843290a38991f26227ce59713347a5b20c63909462b545207eff"
+        },
+        {
+          "path": "workspace/fixture/.git/objects/83",
+          "type": "directory"
+        },
+        {
+          "path": "workspace/fixture/.git/objects/83/d9ecdb19484209b284a03a1d1a3ac327d28f85",
+          "type": "file",
+          "bytes": 90,
+          "sha256": "788cbdf77b12fb81fb3e32d949c2a557a1ec882bfb6780d95d8b5773515c5859"
+        },
+        {
+          "path": "workspace/fixture/.git/objects/8d",
+          "type": "directory"
+        },
+        {
+          "path": "workspace/fixture/.git/objects/8d/2cb2adf9087fced0686f4db4b80cb4e04a4fca",
+          "type": "file",
+          "bytes": 60,
+          "sha256": "ad53c38df2202af47b494370579172f4838cc093059293eed478fa9e1e06ce40"
+        },
+        {
+          "path": "workspace/fixture/.git/objects/8e",
+          "type": "directory"
+        },
+        {
+          "path": "workspace/fixture/.git/objects/8e/681e9ac04cf6792e255c7ffa7b4ed61be18e51",
+          "type": "file",
+          "bytes": 196,
+          "sha256": "289fd098c54e7120f11341ac526125197d32aab00922e687e84229d32883cc93"
+        },
+        {
+          "path": "workspace/fixture/.git/objects/95",
+          "type": "directory"
+        },
+        {
+          "path": "workspace/fixture/.git/objects/95/8a5e180e9d85c59becd62c245bd01a9b5ffb78",
+          "type": "file",
+          "bytes": 593,
+          "sha256": "b442e99a794eb1cc4fd6398e6c63ccae60ac2ef9d97c970630b468c3cf7efd18"
+        },
+        {
+          "path": "workspace/fixture/.git/objects/99",
+          "type": "directory"
+        },
+        {
+          "path": "workspace/fixture/.git/objects/99/7f0c61b4e2933183d19dce9159c0e2ac81fd06",
+          "type": "file",
+          "bytes": 123,
+          "sha256": "5f8c23f5c0252b8f550c7e4cd220d316a8c5e8d5c901511a46853d9d96cbbbcf"
+        },
+        {
+          "path": "workspace/fixture/.git/objects/a0",
+          "type": "directory"
+        },
+        {
+          "path": "workspace/fixture/.git/objects/a0/a1132ec75cf9f2b12cb2723313ded939ca142a",
+          "type": "file",
+          "bytes": 134,
+          "sha256": "c209a95df2b5dc955af36998f49a2b7e3aba2813a022942175f226e02b01c207"
+        },
+        {
+          "path": "workspace/fixture/.git/objects/bf",
+          "type": "directory"
+        },
+        {
+          "path": "workspace/fixture/.git/objects/bf/542d5ccd5b1fa3842acc93c3a41254839e318a",
+          "type": "file",
+          "bytes": 132,
+          "sha256": "c5ec6d5fa71fb5f09b70bf73c2a970139fceb06596a1c8973e22919075ab659e"
+        },
+        {
+          "path": "workspace/fixture/.git/objects/c6",
+          "type": "directory"
+        },
+        {
+          "path": "workspace/fixture/.git/objects/c6/67e0adc6d8c81a2c6bf9f01f03e1ff42ebfba2",
+          "type": "file",
+          "bytes": 120,
+          "sha256": "e799dc9d291edc4f05459fbd6dbbd34749641f30b5dc77dca7b783e814d5c828"
+        },
+        {
+          "path": "workspace/fixture/.git/objects/dc",
+          "type": "directory"
+        },
+        {
+          "path": "workspace/fixture/.git/objects/dc/9030ae70b520085576a2f7d33a89b78c536dc8",
+          "type": "file",
+          "bytes": 137,
+          "sha256": "eb1816b2563e590f1b2f8c92abf5118e9ca921e3f5add1ec145102446a311670"
+        },
+        {
+          "path": "workspace/fixture/.git/objects/e9",
+          "type": "directory"
+        },
+        {
+          "path": "workspace/fixture/.git/objects/e9/f30b80e54ab3c92ed587656dae58ceb04b7156",
+          "type": "file",
+          "bytes": 98,
+          "sha256": "f5b04ff395d4ec80606c5ae03c31fba97be8405c343a043f7ad6a366c1d93ec9"
+        },
+        {
+          "path": "workspace/fixture/.git/objects/f1",
+          "type": "directory"
+        },
+        {
+          "path": "workspace/fixture/.git/objects/f1/32e1ff99a6de7212631fd884208e052910412a",
+          "type": "file",
+          "bytes": 50,
+          "sha256": "7aa2b23fb66d5db60a5c2df41914263fdbbb658efc83d74f423e50bbfca34e1a"
+        },
+        {
+          "path": "workspace/fixture/.git/objects/fd",
+          "type": "directory"
+        },
+        {
+          "path": "workspace/fixture/.git/objects/fd/420f52f04fdee37ac35936e21f64e0d52d5895",
+          "type": "file",
+          "bytes": 59,
+          "sha256": "8a2156bd95d5d8461197474f80cff207aa7d8d532b5687531ce9cb73ae675dc5"
+        },
+        {
+          "path": "workspace/fixture/.git/objects/info",
+          "type": "directory"
+        },
+        {
+          "path": "workspace/fixture/.git/objects/pack",
+          "type": "directory"
+        },
+        {
+          "path": "workspace/fixture/.git/refs",
+          "type": "directory"
+        },
+        {
+          "path": "workspace/fixture/.git/refs/heads",
+          "type": "directory"
+        },
+        {
+          "path": "workspace/fixture/.git/refs/heads/master",
+          "type": "file",
+          "bytes": 41,
+          "sha256": "6b07fac9db09b728386ae545d81ad2ed6e20999b1ba17d6c4c305bc06b01a74f"
+        },
+        {
+          "path": "workspace/fixture/.git/refs/tags",
+          "type": "directory"
+        },
+        {
+          "path": "workspace/fixture/.gitignore",
+          "type": "file",
+          "bytes": 36,
+          "sha256": "7ab6574557548c2d1031511f15db14ace876b796b1471216aad74a0ab64aaee2"
+        },
+        {
+          "path": "workspace/fixture/README.md",
+          "type": "file",
+          "bytes": 258,
+          "sha256": "9e97a73685d83fddaddac027c2e1f38fa225d087f5f3a32ff8da1f9937aaf2b5"
+        },
+        {
+          "path": "workspace/fixture/TASK.md",
+          "type": "file",
+          "bytes": 395,
+          "sha256": "4b72fb7e8ff4beebcbf95282e502b7427a9622c21693fd48e397b044a603f11b"
+        },
+        {
+          "path": "workspace/fixture/docs",
+          "type": "directory"
+        },
+        {
+          "path": "workspace/fixture/docs/index.md",
+          "type": "file",
+          "bytes": 97,
+          "sha256": "96144ff7b607b53498e91dee88d5e34f254459c04a29da7afeb3bebfc71e22b6"
+        },
+        {
+          "path": "workspace/fixture/docs/reference",
+          "type": "directory"
+        },
+        {
+          "path": "workspace/fixture/docs/reference/setup.md",
+          "type": "file",
+          "bytes": 139,
+          "sha256": "c7a759fbfc829c024b57d3a79f63fa6a4718e173dfb5a7e2b943f4e44f47a5b9"
+        },
+        {
+          "path": "workspace/fixture/docs/tutorials",
+          "type": "directory"
+        },
+        {
+          "path": "workspace/fixture/docs/tutorials/quickstart.md",
+          "type": "file",
+          "bytes": 110,
+          "sha256": "c61c0daedb88e2462da72311fa3fc547be7632cf571a5a2e5d50d32448ff992f"
+        },
+        {
+          "path": "workspace/fixture/plans",
+          "type": "directory"
+        },
+        {
+          "path": "workspace/fixture/plans/completed",
+          "type": "directory"
+        },
+        {
+          "path": "workspace/fixture/plans/completed/docs-layout.md",
+          "type": "file",
+          "bytes": 165,
+          "sha256": "64f544d394b479f0e7a30c6bdd56e52aaf7352509c0f8b08d4148994eb628932"
+        },
+        {
+          "path": "workspace/fixture/scripts",
+          "type": "directory"
+        },
+        {
+          "path": "workspace/fixture/scripts/export-guide.sh",
+          "type": "file",
+          "bytes": 119,
+          "sha256": "afd80dc1ebc98978102750682bac98af191e12ad272aaf1ce98dbbdb03dab7ac"
+        },
+        {
+          "path": "workspace/fixture/vendor",
+          "type": "directory"
+        },
+        {
+          "path": "workspace/fixture/vendor/widget",
+          "type": "directory"
+        },
+        {
+          "path": "workspace/fixture/vendor/widget/README.md",
+          "type": "file",
+          "bytes": 94,
+          "sha256": "7e28eb12cddc29de9f3ef2ba7b3f759bbb92af864f573f4c8556b441344799b0"
+        },
+        {
+          "path": "workspace/fixture/vendor/widget/setup.md",
+          "type": "file",
+          "bytes": 143,
+          "sha256": "9ea5c2f793cd0128db290b87d35b46f8a9fe6f7d32f6a44bfea32530e49ac2ab"
+        }
+      ],
+      "preservation_verified_at": "2026-09-13T05:10:22.684498+00:00",
+      "regular_file_count": 55,
+      "total_regular_file_bytes": 69673,
+      "setup_checks": {
+        "baseline_commit": "dc9030ae70b520085576a2f7d33a89b78c536dc8",
+        "baseline_files_matched": 9,
+        "task_unchanged": true,
+        "ignore_unchanged": true,
+        "trace_json_parses": true,
+        "agents_directory_present": true,
+        "qualification_limit": "Declared inputs and recorded commands inspected; no exhaustive read-isolation or hidden-case claim.",
+        "frozen_skill_unchanged": true,
+        "full_skill_in_command_output": true,
+        "recorded_unintended_guidance_read": false,
+        "absent_AGENTS_probe": true,
+        "target_retrieval_attempt": true
+      },
+      "repair_commit": "958a5e180e9d85c59becd62c245bd01a9b5ffb78",
+      "repair_commit_count": 1,
+      "working_tree_clean": true,
+      "changed_paths": [
+        "README.md",
+        "docs/index.md",
+        "docs/tutorials/quickstart.md",
+        "scripts/export-guide.sh"
+      ]
+    }
+  ],
+  "controller_input_package": {
+    "path": "/private/tmp/ssr-pilot-02-20260913/assessment/inputs",
+    "files": [
+      {
+        "path": "assessment-policy.txt",
+        "sha256": "625e91999ba68e18eda230b92b6da1e6f6ea51a42aa89f5cbce674e41a097837"
+      },
+      {
+        "path": "assessment.md",
+        "sha256": "7eb2c16e72ae13d6895ad44b31bd2790c2a4b79ae32d761b490c0e9ba24305d0"
+      },
+      {
+        "path": "check_paths.py",
+        "sha256": "c8b600d0fb4779ea0751d687887b45452ed22cd45076c930767c9dda62364513"
+      },
+      {
+        "path": "expected.json",
+        "sha256": "7c2539f37f33b37e68339252cea73a7020c0d0a2f030ea6f562e826682c38730"
+      },
+      {
+        "path": "fixture/.gitignore",
+        "sha256": "7ab6574557548c2d1031511f15db14ace876b796b1471216aad74a0ab64aaee2"
+      },
+      {
+        "path": "fixture/README.md",
+        "sha256": "098f558258086dd934d009abf9d0a56f49a7e2618f3cd21050553037c0e86075"
+      },
+      {
+        "path": "fixture/docs/index.md",
+        "sha256": "4449bfe65c1cc6a59bc692a8077377a6e56b0f378870be229000a70a943bb609"
+      },
+      {
+        "path": "fixture/docs/reference/setup.md",
+        "sha256": "c7a759fbfc829c024b57d3a79f63fa6a4718e173dfb5a7e2b943f4e44f47a5b9"
+      },
+      {
+        "path": "fixture/docs/tutorials/quickstart.md",
+        "sha256": "b856f45737cb568d58ee7ebbec0b12123c4be3fac93c6994c64508ca86763365"
+      },
+      {
+        "path": "fixture/plans/completed/docs-layout.md",
+        "sha256": "64f544d394b479f0e7a30c6bdd56e52aaf7352509c0f8b08d4148994eb628932"
+      },
+      {
+        "path": "fixture/scripts/export-guide.sh",
+        "sha256": "06fdfdc2080354658cfa73fbe443799dafcb9afc2bdd41f152bff8d3fe72f82f"
+      },
+      {
+        "path": "fixture/vendor/widget/README.md",
+        "sha256": "7e28eb12cddc29de9f3ef2ba7b3f759bbb92af864f573f4c8556b441344799b0"
+      },
+      {
+        "path": "fixture/vendor/widget/setup.md",
+        "sha256": "9ea5c2f793cd0128db290b87d35b46f8a9fe6f7d32f6a44bfea32530e49ac2ab"
+      }
+    ],
+    "durable_sources": "Exact case/controller inputs identified in the unchanged manifest; this scratch package is reconstructible."
+  },
+  "assessment": {
+    "version": 1,
+    "method": "Direct controller development inspection; no independent model evaluator",
+    "policy_id": "SSR-assessment-2",
+    "report": {
+      "path": "skill-studies/sweeping-stale-references/pilot-02-results.md",
+      "sha256": "eb936785ab3855f493bc7001d5dac936f1fcf28bc9467bf58afad2e74dfbe146"
+    },
+    "observations": {
+      "path": "skill-studies/sweeping-stale-references/pilot-02-checks.json",
+      "sha256": "5d42de9ea7bb2a9ae522f8efae5152fa0f8eb2281dcd12998f314730d88869c8"
+    },
+    "raw_inventories_reverified_at": "2026-09-13T05:25:49.221271+00:00"
+  },
+  "budget": {
+    "study_used": {
+      "subject": 4,
+      "evaluator": 0,
+      "authoring": 0,
+      "retry": 0
+    },
+    "study_remaining_ceiling": {
+      "subject": 36,
+      "evaluator": 12,
+      "authoring": 4,
+      "retry": 4
+    },
+    "additional_development_slots_used": 2,
+    "additional_development_slots_remaining": 1,
+    "unspent_authorized_calls": 0
+  }
+}

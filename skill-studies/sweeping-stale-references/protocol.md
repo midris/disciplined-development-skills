@@ -1,10 +1,10 @@
 # Sweeping stale references: study protocol
 
-Status: Stage 1 complete; Stage 2 conceptual coverage accepted; pilot 01 complete and externally reviewed PASS. Pilot 02's moved-file case is prepared and locally qualified, with no new model calls, 2026-09-13.
+Status: Stage 1 complete; Stage 2 conceptual coverage accepted; pilot 01 complete and externally reviewed PASS. Pilot 02's approved moved-file pair is complete; the owner accepted the results walkthrough and clarified path-count explanation, 2026-09-13.
 The owner selected `sweeping-stale-references`, authorized contract/allocation preparation and clarified that this skill should be evaluated independently.
-The behavioral contract and outer ceilings are agreed; the authorized pilot pair is complete and further execution remains subject to its own recorded scope.
+The behavioral contract and outer ceilings are agreed; both authorized pilot pairs are complete and further execution remains subject to its own recorded scope.
 Progress belongs to the [plan](../../plans/2026-09-11-model-driven-skill-testing.md); general requirements belong to the [spec](../../plans/specs/2026-09-11-model-driven-skill-testing-framework.md).
-Two subject observations are recorded in the [pilot report](pilot-results.md), [run index](pilot-run-index.json) and [controller checks](pilot-checks.json). No measured baseline or skill rewrite has been created.
+Four subject observations are recorded across [pilot 01](pilot-results.md) and [pilot 02](pilot-02-results.md), each linking its run index and controller checks. No measured baseline or skill rewrite has been created.
 
 ## Sources and intended use
 
@@ -149,22 +149,25 @@ Both attempts are complete; stop for process review; a setup failure, contaminat
 
 ## Authoring guidance and allocation
 
-### Prepared moved-file development pair
+### Completed moved-file development pair
 
 The owner approved the moved-file concept and local preparation on 2026-09-13. [Pilot 02](cases/pilot-02/assessment.md) is a new fixture: none of the six inspected historical SSR prompts exercises relative-path resolution. The owner subsequently selected the simpler three-Markdown-link/export-script version, retaining historical and unrelated same-name material to preserve. The site-config consumer was removed because it had no real builder; further consumer types can be added if needed.
 The task flags one broken README link after a settled move. Expected path reconciliation is an owner-clarified functional outcome; a miss is not by itself disobedience to an explicit relative-path instruction. The case fixes accounting scope before observation, prioritizes the actual committed repair, and includes a controller-only copy of `SSR-assessment-2` with source/hash provenance in its manifest.
 Local qualification: eight path-observer tests and seven constructed variants distinguish incomplete repair, correct equivalent paths, a wrong existing destination, damaged historical/vendor material and restoration of the old path. The export script fails in the initial/README-only states and works after complete repair from both project and external working directories. These are constructed local observations, not model results or calibrated model judgments.
 Both configurations pass the real loader and workspace-copy checks: nine common project files plus the task, with only frozen SSR added to the original. Model settings remain Codex `gpt-5.6-sol`, low, `workspace-write`; CLI version/hash are recorded and must be rechecked before dispatch.
+External review of `c1ca959` returned PASS with no findings, independently confirming the fixture, checks, input boundaries and proposed allocation. The owner then approved the exact pair below; both calls are complete. Frozen case documents retain their preparation-time status; this protocol and the run index record subsequent authorization and execution.
 
-Proposed exact commands from the canonical checkout; the namespaced temporary directory exists:
+Approved commands executed from the canonical checkout:
 
 ```sh
 TMPDIR=/private/tmp/ssr-pilot-02-20260913 skill-validation/runner/.venv/bin/python -m skilltest run skill-studies/sweeping-stale-references/cases/pilot-02/control.json
 TMPDIR=/private/tmp/ssr-pilot-02-20260913 skill-validation/runner/.venv/bin/python -m skilltest run skill-studies/sweeping-stale-references/cases/pilot-02/original.json
 ```
 
-Authorization is pending for these exact calls; local fixture approval does not dispatch providers. Host permission will be needed for Codex app-server initialization while retaining the provider sandbox. The provider would receive the synthetic project/task and, for the original only, frozen SSR. No controller criteria, checks, expected outcomes or policy copy are subject inputs.
-If authorized, run control then original once each, preserving and inspecting complete bundles between calls under `development/pilot-02-runs/<run-id>/` in the existing primary/backup stores. Proposed cost is two of the three additional-development subject slots; all other pools and measured-comparison capacity remain unchanged. Stop after the pair; no evaluator call, third run or automatic retry is proposed. Read isolation remains bounded by the earlier pilot's limitations.
+The owner explicitly approved these exact two calls on 2026-09-13 after their commands, provider settings and preservation sequence were presented. Host permission allowed Codex app-server initialization while retaining the provider sandbox. The provider received the synthetic project/task and, for the original only, frozen SSR. No controller criteria, checks, expected outcomes or policy copy are subject inputs.
+Control then original ran once each, preserving and inspecting complete bundles between calls under `development/pilot-02-runs/<run-id>/` in the existing primary/backup stores. The pair spent two of the three additional-development subject slots, leaving one; all other pools and measured-comparison capacity remain unchanged. Execution has stopped; no evaluator call, third run or automatic retry is authorized. Read isolation remains bounded by the earlier pilot's limitations.
+
+[Pilot 02 results](pilot-02-results.md): original repaired and committed 4/4 consumers; control repaired and committed only README (1/4). Both preserved all protected material. The original searched before editing and supplied a useful complete account, with a minor six-versus-seven-path summary error that does not affect the functional result. The [run index](pilot-02-run-index.json) and [controller checks](pilot-02-checks.json) retain identities, preservation verification, Git evidence and independent replay facts. These are development inspections, not calibrated model-evaluator judgments. The owner accepted the results walkthrough and clarified that the seven matches were real, with README counted twice in the path summary. No case or scoring-policy change is required by these observations.
 
 ### Whole-study allocation
 
@@ -208,7 +211,7 @@ Two repetitions per full case and one transfer slot support descriptive observat
 If the allocation cannot support a decision, close inconclusive or retain the original rather than weaken the acceptance question.
 
 Proposed time allocation: 4 hours for contract/test preparation, 3 for qualification/calibration, 3 for baseline, 5 for authoring/diagnostics, 4 for comparison and 1 for closure: **20 hours**, including review, storage work and model waits.
-Pilot model durations were 47.936 and 59.891 seconds (107.827 seconds total). At their mean, 60 similar calls would take about 54 minutes; this is illustrative, not a forecast for longer subjects/evaluators. The runner's 900-second timeout is not an expected duration.
+Pilot 01 model durations were 47.936 and 59.891 seconds (107.827 seconds total). Pilot 02 took 37.782 and 76.784 seconds (114.566 seconds total). At the four-call mean, 60 similar calls would take about 56 minutes; this is illustrative, not a forecast for longer subjects/evaluators. The runner's 900-second timeout is not an expected duration.
 At that timeout for every call, latency alone would consume 15 hours, so the ceilings are not a promise that every call fits; substitute pilot measurements and stop under the agreed limit.
 Default to sequential dispatch; no concurrency tool is proposed now.
 
@@ -252,23 +255,23 @@ Canonical project checkout: `/Users/simon/work/personal/disciplined-development-
 Reserved primary: `/Users/simon/work/personal/skill-study-private/sweeping-stale-references/`.
 Reserved backup: `/Users/simon/work/personal/skill-study-backups/sweeping-stale-references/`.
 External raw development primary: `/Users/simon/work/personal/skill-study-private/sweeping-stale-references/development/`; backup: `/Users/simon/work/personal/skill-study-backups/sweeping-stale-references/development/`.
-These locations are resolved from the canonical checkout. The development primary and backup now contain the permission-probe bundles and both complete pilot bundles indexed above; reserved-case access isolation remains unqualified.
+These locations are resolved from the canonical checkout. The development primary and backup now contain the permission-probe bundles and all four complete pilot bundles indexed above; reserved-case access isolation remains unqualified.
 An author receives only permitted copied development evidence, not access to their reserved parent directories.
 Apply the plan's copy/hash/backup barrier before each later dispatch, and inspect the first pilot bundle before deciding Git retention.
 Both copies remain on this host; they do not protect against host loss.
 
 Accounting began at the first recorded clock checkpoint, **2026-09-12 04:22:19 UTC**, with a conservative **two-minute allowance** for the opening read before that checkpoint.
 This preparation consumes active study time toward the accepted ceiling; recorded owner-wait intervals are excluded.
-Dispatched study invocations so far: **2 subject, 0 evaluator, 0 authoring, 0 retry**. Remaining outer capacity is 38 / 12 / 4 / 4 respectively; no further call is authorized by the completed pilot pair.
+Dispatched study invocations so far: **4 subject, 0 evaluator, 0 authoring, 0 retry**. Remaining outer capacity is 36 / 12 / 4 / 4 respectively; no further call is authorized by either completed pair.
 The orchestrator's preparation conversation and local tool calls consume active time, not provider-invocation slots; model assessments or authoring work must be accounted under their declared roles.
 
-Owner walkthrough: the contract, outer limits, pilot 01 findings and pilot 02 concept are settled. Pilot 02 is prepared for review of its exact inputs and proposed spending.
+Owner walkthrough: the contract, outer limits, pilot 01 findings and pilot 02 concept are settled. Pilot 02 results and the path-count explanation have been walked through with the owner; commit and push are authorized.
 Independent use is settled; Stage 3 has observed the declared standalone setup for this pair; broader isolation and model-evaluator qualification remain open.
 
-Accounting updated, 2026-09-13: **book 126 active minutes through moved-file case preparation**, leaving **17 hours 54 minutes** under the accepted 20-hour ceiling. This replaces, rather than adds to, earlier bookings.
+Accounting updated, 2026-09-13: **book 145 active minutes through pilot 02 execution and assessment**, leaving **17 hours 35 minutes** under the accepted 20-hour ceiling. This replaces, rather than adds to, earlier bookings.
 Source: the current task's local log at `/Users/simon/.codex/sessions/2026/09/11/rollout-2026-09-11T17-59-42-01a0927b-cef5-7db0-8a30-c76c5b1ae838.jsonl`; only boundary timestamps were extracted, not conversation contents.
-Reconstruction sums the union of 59 closed `task_complete` / `turn_aborted` intervals since Stage 1 began: **6,801 seconds (113.35 minutes)**, including model/tool waits inside turns and excluding inter-turn owner-wait.
-The current turn began at 2026-09-13 04:17:07 UTC and adds 501 seconds at the 2026-09-13 04:25:28 UTC checkpoint. Retain the original two-minute opening allowance and allow two minutes for completion; round 125.70 minutes up to 126. Closing allowance and rounding are estimates, not independently measured owner/Claude effort. Provider durations are already inside active-turn time and are not added again.
+Reconstruction sums the union of 67 closed `task_complete` / `turn_aborted` intervals since Stage 1 began: **8,385 seconds (139.75 minutes)**, including model/tool waits inside turns and excluding inter-turn owner-wait.
+The current turn began at 2026-09-13 05:25:08 UTC and adds 41 seconds at the 2026-09-13 05:25:49 UTC checkpoint. Retain the original two-minute opening allowance and allow two minutes for completion; round 144.43 minutes up to 145. Closing allowance and rounding are estimates, not independently measured owner/Claude effort. Provider durations are already inside active-turn time and are not added again.
 At the next checkpoint, recompute cumulative closed-turn intervals plus the opening allowance and round up; do not add already counted turns or restore the superseded checkpoints. If the completed current turn exceeds the booking, correct the total before approving the remaining budget.
 
 Relationship-correction verification: all **21** source identities match, including all nine DD skills at the recorded revision; local links resolve and `git diff --check` passes.
