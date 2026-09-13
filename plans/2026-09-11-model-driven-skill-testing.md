@@ -8,10 +8,10 @@
 **Spec:** [General testing responsibilities](specs/2026-09-11-model-driven-skill-testing-framework.md).
 
 **Authority and state:** This is the current plan for preparing the study; it replaces the previous nine-task plan and its separate six-stage proposal.
-Preparation and documentation work are authorized. Candidate selection, provider spending, a rewrite objective and adoption require the owner decisions identified below; no experiment or rewrite has begun.
+Preparation and documentation work are authorized. Candidate selection, provider spending, a rewrite objective and adoption require the owner decisions identified below. The first process pilot is complete; measured collection and rewriting have not begun.
 The spec governs how the study is designed. Neither document grants provider-run authorization.
-External reviews and responses are recorded in the [review record](../reviews/2026-09-11-model-driven-testing-plan-review.md); the latest supplied review of `4037fa3` reported BLOCK for the live original-skill source, addressed by a frozen study snapshot, plus an observation request about control exploration of `.agents/`.
-On 2026-09-12 the owner selected `sweeping-stale-references`, settled the contract and accepted the outer ceilings while directing minimal initial real-model runs to establish the process. Stage 1 and conceptual coverage review are complete; one adapted pilot case is prepared. Broader Stage 2 coverage remains incomplete, and the two pilot configurations await dispatch approval.
+External reviews and responses are recorded in the [review record](../reviews/2026-09-11-model-driven-testing-plan-review.md); the latest supplied review of `2ca4701` reported PASS with no findings, closing the original-source and control-probe items.
+On 2026-09-12 the owner selected `sweeping-stale-references`, settled the contract and accepted the outer ceilings while directing minimal initial real-model runs to establish the process. Stage 1 and conceptual coverage review are complete; one adapted pilot case is prepared. Broader Stage 2 coverage remains incomplete. Both authorized pilot attempts are complete; review the [pilot evidence](../skill-studies/sweeping-stale-references/pilot-results.md) before further dispatch.
 
 ## Starting or resuming without conversation history
 
@@ -91,11 +91,11 @@ The checkboxes below describe the whole measured collection and stay open while 
 
 | Stage 3 item | What the pilot can establish | Pilot status |
 |---|---|---|
-| Configurations and identities | Exact inputs and commands for the two pilot conditions only. | Prepared in the protocol and pilot manifest; original sources the frozen study snapshot. Verify again before dispatch. |
-| Authorization | Scope covering those exact two calls; no baseline, evaluator or extra pilot dispatch implied. | Pending |
-| Check validation/calibration | Checks used on the pilot case; unused semantic evaluators remain unqualified. | Existing runtime checks and inventory inspection exercised on five constructed variants; actual trace/accounting usability awaits the pilot. No model evaluator used yet. |
-| Execution qualification | Observed task feasibility, loading, evidence and control integrity for this setup; no reserved-case isolation claim. | Pending |
-| Bundle inspection/retention | First-bundle retention decision and verified copies for both pilot attempts. | Pending |
+| Configurations and identities | Exact inputs and commands for the two pilot conditions only. | Verified before both calls; identities and frozen-original bytes retained in the pilot run index. |
+| Authorization | Scope covering those exact two calls; no baseline, evaluator or extra pilot dispatch implied. | Owner requested dispatch after review of `2ca4701`, 2026-09-12; both authorized attempts complete, no further calls authorized by this pair. |
+| Check validation/calibration | Checks used on the pilot case; unused semantic evaluators remain unqualified. | Five constructed variants and both actual bundles inspected; traces support order/accounting judgments. No model evaluator used or qualified. |
+| Execution qualification | Observed task feasibility, loading, evidence and control integrity for this setup; no reserved-case isolation claim. | Both completed; explicit original loading and comparable initial trees verified, no unintended guidance read observed. See pilot report for limits. |
+| Bundle inspection/retention | First-bundle retention decision and verified copies for both pilot attempts. | Complete: both bundles hash-verified in primary/backup stores; raw transcripts outside Git, index and assessment in checkout. |
 | Freeze measured collection | Pilot findings inform this later step; the pilot itself cannot close it. | Not started |
 
 - [ ] Write exact configurations, input identities, provider/model/effort, commands, working directories, permissions, evidence checks and call allocation in the protocol before proposing dispatch.
@@ -151,8 +151,8 @@ Reserved bundles and revealing assessments stay entirely in the verified private
 
 ## Current next action
 
-Present the prepared pilot case and obtain exact-configuration approval for the two Sol-low calls, then preserve and inspect their bundles before expanding the suite. Conceptual coverage is accepted; pilot-only preparation and qualification status are tracked separately under Stage 3.
+Review the completed [pilot pair](../skill-studies/sweeping-stale-references/pilot-results.md), especially the control scope decision and original accounting omission, before expanding the suite. Conceptual coverage is accepted; pilot-only preparation and qualification status are tracked separately under Stage 3.
 Evaluator permission feasibility is established through the implemented read-only modes and local sandbox probes; exact evaluator configuration and model-run qualification remain Stage 3 work.
-The first study evaluates sweeping-stale-references alone against the same task without skill guidance; the earlier DD-present control is superseded. Exact input isolation remains a pilot requirement.
+The first study evaluates sweeping-stale-references alone against the same task without skill guidance; the earlier DD-present control is superseded. Observed input integrity is documented for this pair; stronger read isolation remains unqualified.
 The owner selected Sol low for initial process checks (Terra medium is an alternative); the protocol keeps the five-repetition wording campaign conditional on reaching authoring, outside the initial pilot.
 The reset documents and abandonment notices are prepared; experimental stages remain incomplete.

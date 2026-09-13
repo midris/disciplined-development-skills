@@ -225,3 +225,16 @@ Claude independently verified the fixture inventory, condition manifests and rea
 P2 addressed now: `original.json` sources a byte-identical snapshot at `cases/skill-original/SKILL.md` instead of the live skill path. A scratch-checkout check with a different live candidate confirmed the original config still loads the pinned original; the live repository skill was not modified.
 P3 addressed as an observation: record control attempts to inspect `.agents/`, whether guidance was loaded, and whether absence stopped the task. A harmless missing-directory probe alone is not a new task failure or evidence of contamination.
 Config loading, shared-input/settings parity, prompt parity and original-byte identity pass; manifests and the study's future original-condition routing are updated. No model calls occurred, and this response does not claim an external PASS on the edits.
+
+## External review of 2ca4701
+
+Claude supplied **DD-VERDICT: PASS — no findings**, closing the original-source and control-probe items. It independently verified the snapshot/manifest hashes and loaded both configurations with the real loader without provider invocation.
+The owner continuation requests dispatch of the reviewed pair. Execution evidence, not another document review, is the next qualification step; the protocol and pilot run index record the bounded authorization and attempts.
+
+## Pilot execution checkpoint, 2026-09-12
+
+Both authorized Sol-low subject calls completed; [the pilot report](../skill-studies/sweeping-stale-references/pilot-results.md) links retained evidence and separate functional/procedural observations.
+The original repaired all seven current consumers; the control found the siblings but repaired only the README.
+The original's nine-entry account omitted six broader-search matches, a non-blocking procedural defect under the pre-run criteria.
+Both complete raw bundles have verified primary and backup copies outside Git. No additional model call, skill edit or measured-baseline claim follows from this checkpoint.
+This is orchestrator inspection, not a new independent review verdict. The next review target is the two bundles and their interpretation.

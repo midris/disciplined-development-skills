@@ -1,0 +1,214 @@
+{
+  "observations": [
+    {
+      "condition": "control",
+      "source_bundle": "/Users/simon/work/personal/skill-study-private/sweeping-stale-references/development/pilot-01-runs/20260912T202007761Z-ssr-pilot-01-control-4c303201-8464-453b-a1fc-ea2dcdc9aa35-3k3wksq7",
+      "assessment_copy": "/private/tmp/ssr-process-pilot-20260912/assessment/control",
+      "purpose": "Controller replay on a disposable copy after raw-bundle preservation, not an additional model invocation.",
+      "commands": [
+        {
+          "argv": [
+            "python3",
+            "-m",
+            "unittest",
+            "discover",
+            "-s",
+            "tests"
+          ],
+          "exit_code": 1,
+          "stdout": "",
+          "stderr": "EE\n======================================================================\nERROR: test_default_settings (test_cache.CacheSettingsTests.test_default_settings)\n----------------------------------------------------------------------\nTraceback (most recent call last):\n  File \"/private/tmp/ssr-process-pilot-20260912/assessment/control/tests/test_cache.py\", line 12, in test_default_settings\n    self.assertEqual(load_settings(ROOT / \"config/defaults.json\"), 30)\n                     ~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/private/tmp/ssr-process-pilot-20260912/assessment/control/src/cache.py\", line 9, in load_settings\n    value = json.loads(Path(path).read_text())[\"max_age\"]\n            ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^\nKeyError: 'max_age'\n\n======================================================================\nERROR: test_example_settings (test_cache.CacheSettingsTests.test_example_settings)\n----------------------------------------------------------------------\nTraceback (most recent call last):\n  File \"/private/tmp/ssr-process-pilot-20260912/assessment/control/tests/test_cache.py\", line 15, in test_example_settings\n    self.assertEqual(load_settings(ROOT / \"tests/fixtures/cache.json\"), 30)\n                     ~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/private/tmp/ssr-process-pilot-20260912/assessment/control/src/cache.py\", line 9, in load_settings\n    value = json.loads(Path(path).read_text())[\"max_age\"]\n            ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^\nKeyError: 'max_age'\n\n----------------------------------------------------------------------\nRan 2 tests in 0.000s\n\nFAILED (errors=2)\n"
+        },
+        {
+          "argv": [
+            "sh",
+            "scripts/cache-smoke.sh"
+          ],
+          "exit_code": 2,
+          "stdout": "",
+          "stderr": "usage: cache.py [-h] [--max_age MAX_AGE] [--config CONFIG]\ncache.py: error: unrecognized arguments: --cache_ttl 30\n"
+        },
+        {
+          "argv": [
+            "make",
+            "smoke"
+          ],
+          "exit_code": 2,
+          "stdout": "python3 src/cache.py --cache_ttl 30\n",
+          "stderr": "usage: cache.py [-h] [--max_age MAX_AGE] [--config CONFIG]\ncache.py: error: unrecognized arguments: --cache_ttl 30\nmake: *** [smoke] Error 2\n"
+        },
+        {
+          "argv": [
+            "python3",
+            "src/cache.py",
+            "--cache_ttl",
+            "30"
+          ],
+          "exit_code": 2,
+          "stdout": "",
+          "stderr": "usage: cache.py [-h] [--max_age MAX_AGE] [--config CONFIG]\ncache.py: error: unrecognized arguments: --cache_ttl 30\n"
+        },
+        {
+          "argv": [
+            "python3",
+            "src/cache.py",
+            "--config",
+            "/private/tmp/ssr-process-pilot-20260912/assessment/control-readme.json"
+          ],
+          "exit_code": 0,
+          "stdout": "Maximum cache age: 30 seconds\n",
+          "stderr": ""
+        }
+      ],
+      "required_update_locations": [
+        {
+          "path": "README.md",
+          "old_literal_remaining": false
+        },
+        {
+          "path": "docs/configuration.md",
+          "old_literal_remaining": true
+        },
+        {
+          "path": "config/defaults.json",
+          "old_literal_remaining": true
+        },
+        {
+          "path": "tests/fixtures/cache.json",
+          "old_literal_remaining": true
+        },
+        {
+          "path": "scripts/cache-smoke.sh",
+          "old_literal_remaining": true
+        },
+        {
+          "path": ".github/workflows/cache.yml",
+          "old_literal_remaining": true
+        },
+        {
+          "path": "Makefile",
+          "old_literal_remaining": true
+        }
+      ],
+      "preserved_locations": [
+        {
+          "path": "plans/completed/cache-migration.md",
+          "byte_identical": true
+        },
+        {
+          "path": "vendor/acme_cache/defaults.py",
+          "byte_identical": true
+        },
+        {
+          "path": "src/http_headers.py",
+          "byte_identical": true
+        }
+      ]
+    },
+    {
+      "condition": "original",
+      "source_bundle": "/Users/simon/work/personal/skill-study-private/sweeping-stale-references/development/pilot-01-runs/20260912T202346556Z-ssr-pilot-01-original-87d2f22e-412b-47db-ae95-f40399309243-ex75b6rx",
+      "assessment_copy": "/private/tmp/ssr-process-pilot-20260912/assessment/original",
+      "purpose": "Controller replay on a disposable copy after raw-bundle preservation, not an additional model invocation.",
+      "commands": [
+        {
+          "argv": [
+            "python3",
+            "-m",
+            "unittest",
+            "discover",
+            "-s",
+            "tests"
+          ],
+          "exit_code": 0,
+          "stdout": "",
+          "stderr": "..\n----------------------------------------------------------------------\nRan 2 tests in 0.000s\n\nOK\n"
+        },
+        {
+          "argv": [
+            "sh",
+            "scripts/cache-smoke.sh"
+          ],
+          "exit_code": 0,
+          "stdout": "Maximum cache age: 30 seconds\n",
+          "stderr": ""
+        },
+        {
+          "argv": [
+            "make",
+            "smoke"
+          ],
+          "exit_code": 0,
+          "stdout": "python3 src/cache.py --max_age 30\nMaximum cache age: 30 seconds\n",
+          "stderr": ""
+        },
+        {
+          "argv": [
+            "python3",
+            "src/cache.py",
+            "--max_age",
+            "30"
+          ],
+          "exit_code": 0,
+          "stdout": "Maximum cache age: 30 seconds\n",
+          "stderr": ""
+        },
+        {
+          "argv": [
+            "python3",
+            "src/cache.py",
+            "--config",
+            "/private/tmp/ssr-process-pilot-20260912/assessment/original-readme.json"
+          ],
+          "exit_code": 0,
+          "stdout": "Maximum cache age: 30 seconds\n",
+          "stderr": ""
+        }
+      ],
+      "required_update_locations": [
+        {
+          "path": "README.md",
+          "old_literal_remaining": false
+        },
+        {
+          "path": "docs/configuration.md",
+          "old_literal_remaining": false
+        },
+        {
+          "path": "config/defaults.json",
+          "old_literal_remaining": false
+        },
+        {
+          "path": "tests/fixtures/cache.json",
+          "old_literal_remaining": false
+        },
+        {
+          "path": "scripts/cache-smoke.sh",
+          "old_literal_remaining": false
+        },
+        {
+          "path": ".github/workflows/cache.yml",
+          "old_literal_remaining": false
+        },
+        {
+          "path": "Makefile",
+          "old_literal_remaining": false
+        }
+      ],
+      "preserved_locations": [
+        {
+          "path": "plans/completed/cache-migration.md",
+          "byte_identical": true
+        },
+        {
+          "path": "vendor/acme_cache/defaults.py",
+          "byte_identical": true
+        },
+        {
+          "path": "src/http_headers.py",
+          "byte_identical": true
+        }
+      ]
+    }
+  ]
+}
