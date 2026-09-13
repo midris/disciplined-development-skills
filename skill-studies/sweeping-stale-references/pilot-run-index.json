@@ -1400,7 +1400,7 @@
     {
       "id": "pilot-01-assessment-2",
       "path": "pilot-results.md",
-      "sha256": "113a5cb3305457dc8eff3539ad28e21e1112b7ee8ee21562e082a282ad3118ef",
+      "sha256": "1b5b4cac68e1e96555c31b1f6f7e258dff734159e43ab48a5fa00b0f908c9245",
       "reason": "External review exposed competing accounting-scope interpretations; withdraw confirmed procedural defect and retain ambiguity. Clarify preservation outcome versus observed triage.",
       "policy": {
         "id": "SSR-assessment-2",
@@ -1436,7 +1436,13 @@
           }
         ],
         "durable_source": "Pinned Git policy revision and unchanged case criteria identified above; scratch copies are reconstructible and are not provider evidence."
-      }
+      },
+      "reviewed_version": {
+        "repository_revision": "f36ffa001fc4e24b04436fc89d75811c6421e480",
+        "sha256": "113a5cb3305457dc8eff3539ad28e21e1112b7ee8ee21562e082a282ad3118ef",
+        "external_verdict": "PASS"
+      },
+      "editorial_update": "Clarify control preservation statement as stdout.txt:13 mid-run message and record pilot-review closure. No assessment judgment changed."
     }
   ]
 }

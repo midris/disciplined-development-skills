@@ -1,0 +1,1114 @@
+{
+  "purpose": "Local constructed-variant checks; no provider/model invocation. Variants reconstruct from fixture/ and listed mutations. Scratch paths are not durable evidence stores.",
+  "checker_tests": {
+    "command": "PYTHONDONTWRITEBYTECODE=1 python3 -m unittest discover -s skill-studies/sweeping-stale-references/cases/pilot-02 -p test_*.py",
+    "red": "8 assertion failures against empty observer stub before implementation",
+    "green": "8 passed",
+    "simplification_red": "3 count assertions failed before removing site config; all 8 tests passed after simplifying fixture and observer."
+  },
+  "variants": [
+    {
+      "variant": "initial",
+      "constructed_by": "orchestrator, not a model subject",
+      "source": "fixture/",
+      "mutations": [],
+      "fixture_inventory": [
+        {
+          "path": ".gitignore",
+          "sha256": "7ab6574557548c2d1031511f15db14ace876b796b1471216aad74a0ab64aaee2"
+        },
+        {
+          "path": "README.md",
+          "sha256": "098f558258086dd934d009abf9d0a56f49a7e2618f3cd21050553037c0e86075"
+        },
+        {
+          "path": "docs/index.md",
+          "sha256": "4449bfe65c1cc6a59bc692a8077377a6e56b0f378870be229000a70a943bb609"
+        },
+        {
+          "path": "docs/reference/setup.md",
+          "sha256": "c7a759fbfc829c024b57d3a79f63fa6a4718e173dfb5a7e2b943f4e44f47a5b9"
+        },
+        {
+          "path": "docs/tutorials/quickstart.md",
+          "sha256": "b856f45737cb568d58ee7ebbec0b12123c4be3fac93c6994c64508ca86763365"
+        },
+        {
+          "path": "plans/completed/docs-layout.md",
+          "sha256": "64f544d394b479f0e7a30c6bdd56e52aaf7352509c0f8b08d4148994eb628932"
+        },
+        {
+          "path": "scripts/export-guide.sh",
+          "sha256": "06fdfdc2080354658cfa73fbe443799dafcb9afc2bdd41f152bff8d3fe72f82f"
+        },
+        {
+          "path": "vendor/widget/README.md",
+          "sha256": "7e28eb12cddc29de9f3ef2ba7b3f759bbb92af864f573f4c8556b441344799b0"
+        },
+        {
+          "path": "vendor/widget/setup.md",
+          "sha256": "9ea5c2f793cd0128db290b87d35b46f8a9fe6f7d32f6a44bfea32530e49ac2ab"
+        }
+      ],
+      "observations": {
+        "references": [
+          {
+            "path": "README.md",
+            "role": "service",
+            "targets": [
+              {
+                "text": "docs/setup.md",
+                "resolved": "/private/tmp/ssr-moved-file-simplified-20260913/initial/docs/setup.md",
+                "exists": false,
+                "intended": false
+              }
+            ],
+            "correct_target": false,
+            "status": "observed"
+          },
+          {
+            "path": "docs/index.md",
+            "role": "service",
+            "targets": [
+              {
+                "text": "setup.md",
+                "resolved": "/private/tmp/ssr-moved-file-simplified-20260913/initial/docs/setup.md",
+                "exists": false,
+                "intended": false
+              }
+            ],
+            "correct_target": false,
+            "status": "observed"
+          },
+          {
+            "path": "docs/tutorials/quickstart.md",
+            "role": "service",
+            "targets": [
+              {
+                "text": "../setup.md",
+                "resolved": "/private/tmp/ssr-moved-file-simplified-20260913/initial/docs/setup.md",
+                "exists": false,
+                "intended": false
+              }
+            ],
+            "correct_target": false,
+            "status": "observed"
+          },
+          {
+            "path": "vendor/widget/README.md",
+            "role": "independent",
+            "targets": [
+              {
+                "text": "setup.md",
+                "resolved": "/private/tmp/ssr-moved-file-simplified-20260913/initial/vendor/widget/setup.md",
+                "exists": true,
+                "intended": true
+              }
+            ],
+            "correct_target": true,
+            "status": "observed"
+          }
+        ],
+        "preserved_bytes": {
+          "docs/reference/setup.md": true,
+          "plans/completed/docs-layout.md": true,
+          "vendor/widget/README.md": true,
+          "vendor/widget/setup.md": true
+        },
+        "old_path_present": false,
+        "limit": "Facts only. Unsupported forms, changed preservation bytes, Git history and semantic outcomes require inspection. Shell consumer must be executed separately on a disposable copy."
+      },
+      "commands": [
+        {
+          "argv": [
+            "sh",
+            "/private/tmp/ssr-moved-file-simplified-20260913/initial/scripts/export-guide.sh"
+          ],
+          "cwd": "/private/tmp/ssr-moved-file-simplified-20260913/initial",
+          "exit_code": 1,
+          "stdout": "",
+          "stderr": "cat: /private/tmp/ssr-moved-file-simplified-20260913/initial/scripts/../docs/setup.md: No such file or directory\n",
+          "matches_service_guide": false
+        },
+        {
+          "argv": [
+            "sh",
+            "/private/tmp/ssr-moved-file-simplified-20260913/initial/scripts/export-guide.sh"
+          ],
+          "cwd": "/private/tmp/ssr-moved-file-simplified-20260913",
+          "exit_code": 1,
+          "stdout": "",
+          "stderr": "cat: /private/tmp/ssr-moved-file-simplified-20260913/initial/scripts/../docs/setup.md: No such file or directory\n",
+          "matches_service_guide": false
+        }
+      ]
+    },
+    {
+      "variant": "readme_only",
+      "constructed_by": "orchestrator, not a model subject",
+      "source": "fixture/",
+      "mutations": [
+        {
+          "path": "README.md",
+          "replace": "docs/setup.md",
+          "with": "docs/reference/setup.md"
+        }
+      ],
+      "fixture_inventory": [
+        {
+          "path": ".gitignore",
+          "sha256": "7ab6574557548c2d1031511f15db14ace876b796b1471216aad74a0ab64aaee2"
+        },
+        {
+          "path": "README.md",
+          "sha256": "9e97a73685d83fddaddac027c2e1f38fa225d087f5f3a32ff8da1f9937aaf2b5"
+        },
+        {
+          "path": "docs/index.md",
+          "sha256": "4449bfe65c1cc6a59bc692a8077377a6e56b0f378870be229000a70a943bb609"
+        },
+        {
+          "path": "docs/reference/setup.md",
+          "sha256": "c7a759fbfc829c024b57d3a79f63fa6a4718e173dfb5a7e2b943f4e44f47a5b9"
+        },
+        {
+          "path": "docs/tutorials/quickstart.md",
+          "sha256": "b856f45737cb568d58ee7ebbec0b12123c4be3fac93c6994c64508ca86763365"
+        },
+        {
+          "path": "plans/completed/docs-layout.md",
+          "sha256": "64f544d394b479f0e7a30c6bdd56e52aaf7352509c0f8b08d4148994eb628932"
+        },
+        {
+          "path": "scripts/export-guide.sh",
+          "sha256": "06fdfdc2080354658cfa73fbe443799dafcb9afc2bdd41f152bff8d3fe72f82f"
+        },
+        {
+          "path": "vendor/widget/README.md",
+          "sha256": "7e28eb12cddc29de9f3ef2ba7b3f759bbb92af864f573f4c8556b441344799b0"
+        },
+        {
+          "path": "vendor/widget/setup.md",
+          "sha256": "9ea5c2f793cd0128db290b87d35b46f8a9fe6f7d32f6a44bfea32530e49ac2ab"
+        }
+      ],
+      "observations": {
+        "references": [
+          {
+            "path": "README.md",
+            "role": "service",
+            "targets": [
+              {
+                "text": "docs/reference/setup.md",
+                "resolved": "/private/tmp/ssr-moved-file-simplified-20260913/readme_only/docs/reference/setup.md",
+                "exists": true,
+                "intended": true
+              }
+            ],
+            "correct_target": true,
+            "status": "observed"
+          },
+          {
+            "path": "docs/index.md",
+            "role": "service",
+            "targets": [
+              {
+                "text": "setup.md",
+                "resolved": "/private/tmp/ssr-moved-file-simplified-20260913/readme_only/docs/setup.md",
+                "exists": false,
+                "intended": false
+              }
+            ],
+            "correct_target": false,
+            "status": "observed"
+          },
+          {
+            "path": "docs/tutorials/quickstart.md",
+            "role": "service",
+            "targets": [
+              {
+                "text": "../setup.md",
+                "resolved": "/private/tmp/ssr-moved-file-simplified-20260913/readme_only/docs/setup.md",
+                "exists": false,
+                "intended": false
+              }
+            ],
+            "correct_target": false,
+            "status": "observed"
+          },
+          {
+            "path": "vendor/widget/README.md",
+            "role": "independent",
+            "targets": [
+              {
+                "text": "setup.md",
+                "resolved": "/private/tmp/ssr-moved-file-simplified-20260913/readme_only/vendor/widget/setup.md",
+                "exists": true,
+                "intended": true
+              }
+            ],
+            "correct_target": true,
+            "status": "observed"
+          }
+        ],
+        "preserved_bytes": {
+          "docs/reference/setup.md": true,
+          "plans/completed/docs-layout.md": true,
+          "vendor/widget/README.md": true,
+          "vendor/widget/setup.md": true
+        },
+        "old_path_present": false,
+        "limit": "Facts only. Unsupported forms, changed preservation bytes, Git history and semantic outcomes require inspection. Shell consumer must be executed separately on a disposable copy."
+      },
+      "commands": [
+        {
+          "argv": [
+            "sh",
+            "/private/tmp/ssr-moved-file-simplified-20260913/readme_only/scripts/export-guide.sh"
+          ],
+          "cwd": "/private/tmp/ssr-moved-file-simplified-20260913/readme_only",
+          "exit_code": 1,
+          "stdout": "",
+          "stderr": "cat: /private/tmp/ssr-moved-file-simplified-20260913/readme_only/scripts/../docs/setup.md: No such file or directory\n",
+          "matches_service_guide": false
+        },
+        {
+          "argv": [
+            "sh",
+            "/private/tmp/ssr-moved-file-simplified-20260913/readme_only/scripts/export-guide.sh"
+          ],
+          "cwd": "/private/tmp/ssr-moved-file-simplified-20260913",
+          "exit_code": 1,
+          "stdout": "",
+          "stderr": "cat: /private/tmp/ssr-moved-file-simplified-20260913/readme_only/scripts/../docs/setup.md: No such file or directory\n",
+          "matches_service_guide": false
+        }
+      ]
+    },
+    {
+      "variant": "complete",
+      "constructed_by": "orchestrator, not a model subject",
+      "source": "fixture/",
+      "mutations": [
+        {
+          "path": "README.md",
+          "replace": "docs/setup.md",
+          "with": "docs/reference/setup.md"
+        },
+        {
+          "path": "docs/index.md",
+          "replace": "setup.md",
+          "with": "reference/setup.md"
+        },
+        {
+          "path": "docs/tutorials/quickstart.md",
+          "replace": "../setup.md",
+          "with": "../reference/setup.md"
+        },
+        {
+          "path": "scripts/export-guide.sh",
+          "replace": "../docs/setup.md",
+          "with": "../docs/reference/setup.md"
+        }
+      ],
+      "fixture_inventory": [
+        {
+          "path": ".gitignore",
+          "sha256": "7ab6574557548c2d1031511f15db14ace876b796b1471216aad74a0ab64aaee2"
+        },
+        {
+          "path": "README.md",
+          "sha256": "9e97a73685d83fddaddac027c2e1f38fa225d087f5f3a32ff8da1f9937aaf2b5"
+        },
+        {
+          "path": "docs/index.md",
+          "sha256": "96144ff7b607b53498e91dee88d5e34f254459c04a29da7afeb3bebfc71e22b6"
+        },
+        {
+          "path": "docs/reference/setup.md",
+          "sha256": "c7a759fbfc829c024b57d3a79f63fa6a4718e173dfb5a7e2b943f4e44f47a5b9"
+        },
+        {
+          "path": "docs/tutorials/quickstart.md",
+          "sha256": "c61c0daedb88e2462da72311fa3fc547be7632cf571a5a2e5d50d32448ff992f"
+        },
+        {
+          "path": "plans/completed/docs-layout.md",
+          "sha256": "64f544d394b479f0e7a30c6bdd56e52aaf7352509c0f8b08d4148994eb628932"
+        },
+        {
+          "path": "scripts/export-guide.sh",
+          "sha256": "afd80dc1ebc98978102750682bac98af191e12ad272aaf1ce98dbbdb03dab7ac"
+        },
+        {
+          "path": "vendor/widget/README.md",
+          "sha256": "7e28eb12cddc29de9f3ef2ba7b3f759bbb92af864f573f4c8556b441344799b0"
+        },
+        {
+          "path": "vendor/widget/setup.md",
+          "sha256": "9ea5c2f793cd0128db290b87d35b46f8a9fe6f7d32f6a44bfea32530e49ac2ab"
+        }
+      ],
+      "observations": {
+        "references": [
+          {
+            "path": "README.md",
+            "role": "service",
+            "targets": [
+              {
+                "text": "docs/reference/setup.md",
+                "resolved": "/private/tmp/ssr-moved-file-simplified-20260913/complete/docs/reference/setup.md",
+                "exists": true,
+                "intended": true
+              }
+            ],
+            "correct_target": true,
+            "status": "observed"
+          },
+          {
+            "path": "docs/index.md",
+            "role": "service",
+            "targets": [
+              {
+                "text": "reference/setup.md",
+                "resolved": "/private/tmp/ssr-moved-file-simplified-20260913/complete/docs/reference/setup.md",
+                "exists": true,
+                "intended": true
+              }
+            ],
+            "correct_target": true,
+            "status": "observed"
+          },
+          {
+            "path": "docs/tutorials/quickstart.md",
+            "role": "service",
+            "targets": [
+              {
+                "text": "../reference/setup.md",
+                "resolved": "/private/tmp/ssr-moved-file-simplified-20260913/complete/docs/reference/setup.md",
+                "exists": true,
+                "intended": true
+              }
+            ],
+            "correct_target": true,
+            "status": "observed"
+          },
+          {
+            "path": "vendor/widget/README.md",
+            "role": "independent",
+            "targets": [
+              {
+                "text": "setup.md",
+                "resolved": "/private/tmp/ssr-moved-file-simplified-20260913/complete/vendor/widget/setup.md",
+                "exists": true,
+                "intended": true
+              }
+            ],
+            "correct_target": true,
+            "status": "observed"
+          }
+        ],
+        "preserved_bytes": {
+          "docs/reference/setup.md": true,
+          "plans/completed/docs-layout.md": true,
+          "vendor/widget/README.md": true,
+          "vendor/widget/setup.md": true
+        },
+        "old_path_present": false,
+        "limit": "Facts only. Unsupported forms, changed preservation bytes, Git history and semantic outcomes require inspection. Shell consumer must be executed separately on a disposable copy."
+      },
+      "commands": [
+        {
+          "argv": [
+            "sh",
+            "/private/tmp/ssr-moved-file-simplified-20260913/complete/scripts/export-guide.sh"
+          ],
+          "cwd": "/private/tmp/ssr-moved-file-simplified-20260913/complete",
+          "exit_code": 0,
+          "stdout": "# Orbit service setup\n\nSet `ORBIT_PORT=8042` and start the service with `orbit serve`.\nVerify readiness at `http://localhost:8042/health`.\n",
+          "stderr": "",
+          "matches_service_guide": true
+        },
+        {
+          "argv": [
+            "sh",
+            "/private/tmp/ssr-moved-file-simplified-20260913/complete/scripts/export-guide.sh"
+          ],
+          "cwd": "/private/tmp/ssr-moved-file-simplified-20260913",
+          "exit_code": 0,
+          "stdout": "# Orbit service setup\n\nSet `ORBIT_PORT=8042` and start the service with `orbit serve`.\nVerify readiness at `http://localhost:8042/health`.\n",
+          "stderr": "",
+          "matches_service_guide": true
+        }
+      ]
+    },
+    {
+      "variant": "equivalent_paths",
+      "constructed_by": "orchestrator, not a model subject",
+      "source": "fixture/",
+      "mutations": [
+        {
+          "path": "README.md",
+          "replace": "docs/setup.md",
+          "with": "docs/reference/setup.md"
+        },
+        {
+          "path": "docs/index.md",
+          "replace": "setup.md",
+          "with": "reference/setup.md"
+        },
+        {
+          "path": "docs/tutorials/quickstart.md",
+          "replace": "../setup.md",
+          "with": "../reference/setup.md"
+        },
+        {
+          "path": "scripts/export-guide.sh",
+          "replace": "../docs/setup.md",
+          "with": "../docs/reference/setup.md"
+        },
+        {
+          "path": "docs/tutorials/quickstart.md",
+          "replace": "../reference/setup.md",
+          "with": "../../docs/reference/./setup.md"
+        }
+      ],
+      "fixture_inventory": [
+        {
+          "path": ".gitignore",
+          "sha256": "7ab6574557548c2d1031511f15db14ace876b796b1471216aad74a0ab64aaee2"
+        },
+        {
+          "path": "README.md",
+          "sha256": "9e97a73685d83fddaddac027c2e1f38fa225d087f5f3a32ff8da1f9937aaf2b5"
+        },
+        {
+          "path": "docs/index.md",
+          "sha256": "96144ff7b607b53498e91dee88d5e34f254459c04a29da7afeb3bebfc71e22b6"
+        },
+        {
+          "path": "docs/reference/setup.md",
+          "sha256": "c7a759fbfc829c024b57d3a79f63fa6a4718e173dfb5a7e2b943f4e44f47a5b9"
+        },
+        {
+          "path": "docs/tutorials/quickstart.md",
+          "sha256": "e6e3db47e110eb3524dcaa9e3b002229dc86112a90403e706e449c3eec65c952"
+        },
+        {
+          "path": "plans/completed/docs-layout.md",
+          "sha256": "64f544d394b479f0e7a30c6bdd56e52aaf7352509c0f8b08d4148994eb628932"
+        },
+        {
+          "path": "scripts/export-guide.sh",
+          "sha256": "afd80dc1ebc98978102750682bac98af191e12ad272aaf1ce98dbbdb03dab7ac"
+        },
+        {
+          "path": "vendor/widget/README.md",
+          "sha256": "7e28eb12cddc29de9f3ef2ba7b3f759bbb92af864f573f4c8556b441344799b0"
+        },
+        {
+          "path": "vendor/widget/setup.md",
+          "sha256": "9ea5c2f793cd0128db290b87d35b46f8a9fe6f7d32f6a44bfea32530e49ac2ab"
+        }
+      ],
+      "observations": {
+        "references": [
+          {
+            "path": "README.md",
+            "role": "service",
+            "targets": [
+              {
+                "text": "docs/reference/setup.md",
+                "resolved": "/private/tmp/ssr-moved-file-simplified-20260913/equivalent_paths/docs/reference/setup.md",
+                "exists": true,
+                "intended": true
+              }
+            ],
+            "correct_target": true,
+            "status": "observed"
+          },
+          {
+            "path": "docs/index.md",
+            "role": "service",
+            "targets": [
+              {
+                "text": "reference/setup.md",
+                "resolved": "/private/tmp/ssr-moved-file-simplified-20260913/equivalent_paths/docs/reference/setup.md",
+                "exists": true,
+                "intended": true
+              }
+            ],
+            "correct_target": true,
+            "status": "observed"
+          },
+          {
+            "path": "docs/tutorials/quickstart.md",
+            "role": "service",
+            "targets": [
+              {
+                "text": "../../docs/reference/./setup.md",
+                "resolved": "/private/tmp/ssr-moved-file-simplified-20260913/equivalent_paths/docs/reference/setup.md",
+                "exists": true,
+                "intended": true
+              }
+            ],
+            "correct_target": true,
+            "status": "observed"
+          },
+          {
+            "path": "vendor/widget/README.md",
+            "role": "independent",
+            "targets": [
+              {
+                "text": "setup.md",
+                "resolved": "/private/tmp/ssr-moved-file-simplified-20260913/equivalent_paths/vendor/widget/setup.md",
+                "exists": true,
+                "intended": true
+              }
+            ],
+            "correct_target": true,
+            "status": "observed"
+          }
+        ],
+        "preserved_bytes": {
+          "docs/reference/setup.md": true,
+          "plans/completed/docs-layout.md": true,
+          "vendor/widget/README.md": true,
+          "vendor/widget/setup.md": true
+        },
+        "old_path_present": false,
+        "limit": "Facts only. Unsupported forms, changed preservation bytes, Git history and semantic outcomes require inspection. Shell consumer must be executed separately on a disposable copy."
+      },
+      "commands": [
+        {
+          "argv": [
+            "sh",
+            "/private/tmp/ssr-moved-file-simplified-20260913/equivalent_paths/scripts/export-guide.sh"
+          ],
+          "cwd": "/private/tmp/ssr-moved-file-simplified-20260913/equivalent_paths",
+          "exit_code": 0,
+          "stdout": "# Orbit service setup\n\nSet `ORBIT_PORT=8042` and start the service with `orbit serve`.\nVerify readiness at `http://localhost:8042/health`.\n",
+          "stderr": "",
+          "matches_service_guide": true
+        },
+        {
+          "argv": [
+            "sh",
+            "/private/tmp/ssr-moved-file-simplified-20260913/equivalent_paths/scripts/export-guide.sh"
+          ],
+          "cwd": "/private/tmp/ssr-moved-file-simplified-20260913",
+          "exit_code": 0,
+          "stdout": "# Orbit service setup\n\nSet `ORBIT_PORT=8042` and start the service with `orbit serve`.\nVerify readiness at `http://localhost:8042/health`.\n",
+          "stderr": "",
+          "matches_service_guide": true
+        }
+      ]
+    },
+    {
+      "variant": "wrong_existing_target",
+      "constructed_by": "orchestrator, not a model subject",
+      "source": "fixture/",
+      "mutations": [
+        {
+          "path": "README.md",
+          "replace": "docs/setup.md",
+          "with": "docs/reference/setup.md"
+        },
+        {
+          "path": "docs/index.md",
+          "replace": "setup.md",
+          "with": "reference/setup.md"
+        },
+        {
+          "path": "docs/tutorials/quickstart.md",
+          "replace": "../setup.md",
+          "with": "../reference/setup.md"
+        },
+        {
+          "path": "scripts/export-guide.sh",
+          "replace": "../docs/setup.md",
+          "with": "../docs/reference/setup.md"
+        },
+        {
+          "path": "README.md",
+          "replace": "docs/reference/setup.md",
+          "with": "vendor/widget/setup.md"
+        }
+      ],
+      "fixture_inventory": [
+        {
+          "path": ".gitignore",
+          "sha256": "7ab6574557548c2d1031511f15db14ace876b796b1471216aad74a0ab64aaee2"
+        },
+        {
+          "path": "README.md",
+          "sha256": "33c4fa664264767cd5be8e4ad9956c7764692262b9f6ccc73577be58030bc6cd"
+        },
+        {
+          "path": "docs/index.md",
+          "sha256": "96144ff7b607b53498e91dee88d5e34f254459c04a29da7afeb3bebfc71e22b6"
+        },
+        {
+          "path": "docs/reference/setup.md",
+          "sha256": "c7a759fbfc829c024b57d3a79f63fa6a4718e173dfb5a7e2b943f4e44f47a5b9"
+        },
+        {
+          "path": "docs/tutorials/quickstart.md",
+          "sha256": "c61c0daedb88e2462da72311fa3fc547be7632cf571a5a2e5d50d32448ff992f"
+        },
+        {
+          "path": "plans/completed/docs-layout.md",
+          "sha256": "64f544d394b479f0e7a30c6bdd56e52aaf7352509c0f8b08d4148994eb628932"
+        },
+        {
+          "path": "scripts/export-guide.sh",
+          "sha256": "afd80dc1ebc98978102750682bac98af191e12ad272aaf1ce98dbbdb03dab7ac"
+        },
+        {
+          "path": "vendor/widget/README.md",
+          "sha256": "7e28eb12cddc29de9f3ef2ba7b3f759bbb92af864f573f4c8556b441344799b0"
+        },
+        {
+          "path": "vendor/widget/setup.md",
+          "sha256": "9ea5c2f793cd0128db290b87d35b46f8a9fe6f7d32f6a44bfea32530e49ac2ab"
+        }
+      ],
+      "observations": {
+        "references": [
+          {
+            "path": "README.md",
+            "role": "service",
+            "targets": [
+              {
+                "text": "vendor/widget/setup.md",
+                "resolved": "/private/tmp/ssr-moved-file-simplified-20260913/wrong_existing_target/vendor/widget/setup.md",
+                "exists": true,
+                "intended": false
+              }
+            ],
+            "correct_target": false,
+            "status": "observed"
+          },
+          {
+            "path": "docs/index.md",
+            "role": "service",
+            "targets": [
+              {
+                "text": "reference/setup.md",
+                "resolved": "/private/tmp/ssr-moved-file-simplified-20260913/wrong_existing_target/docs/reference/setup.md",
+                "exists": true,
+                "intended": true
+              }
+            ],
+            "correct_target": true,
+            "status": "observed"
+          },
+          {
+            "path": "docs/tutorials/quickstart.md",
+            "role": "service",
+            "targets": [
+              {
+                "text": "../reference/setup.md",
+                "resolved": "/private/tmp/ssr-moved-file-simplified-20260913/wrong_existing_target/docs/reference/setup.md",
+                "exists": true,
+                "intended": true
+              }
+            ],
+            "correct_target": true,
+            "status": "observed"
+          },
+          {
+            "path": "vendor/widget/README.md",
+            "role": "independent",
+            "targets": [
+              {
+                "text": "setup.md",
+                "resolved": "/private/tmp/ssr-moved-file-simplified-20260913/wrong_existing_target/vendor/widget/setup.md",
+                "exists": true,
+                "intended": true
+              }
+            ],
+            "correct_target": true,
+            "status": "observed"
+          }
+        ],
+        "preserved_bytes": {
+          "docs/reference/setup.md": true,
+          "plans/completed/docs-layout.md": true,
+          "vendor/widget/README.md": true,
+          "vendor/widget/setup.md": true
+        },
+        "old_path_present": false,
+        "limit": "Facts only. Unsupported forms, changed preservation bytes, Git history and semantic outcomes require inspection. Shell consumer must be executed separately on a disposable copy."
+      },
+      "commands": [
+        {
+          "argv": [
+            "sh",
+            "/private/tmp/ssr-moved-file-simplified-20260913/wrong_existing_target/scripts/export-guide.sh"
+          ],
+          "cwd": "/private/tmp/ssr-moved-file-simplified-20260913/wrong_existing_target",
+          "exit_code": 0,
+          "stdout": "# Orbit service setup\n\nSet `ORBIT_PORT=8042` and start the service with `orbit serve`.\nVerify readiness at `http://localhost:8042/health`.\n",
+          "stderr": "",
+          "matches_service_guide": true
+        },
+        {
+          "argv": [
+            "sh",
+            "/private/tmp/ssr-moved-file-simplified-20260913/wrong_existing_target/scripts/export-guide.sh"
+          ],
+          "cwd": "/private/tmp/ssr-moved-file-simplified-20260913",
+          "exit_code": 0,
+          "stdout": "# Orbit service setup\n\nSet `ORBIT_PORT=8042` and start the service with `orbit serve`.\nVerify readiness at `http://localhost:8042/health`.\n",
+          "stderr": "",
+          "matches_service_guide": true
+        }
+      ]
+    },
+    {
+      "variant": "blanket_basename",
+      "constructed_by": "orchestrator, not a model subject",
+      "source": "fixture/",
+      "mutations": [
+        {
+          "path": "README.md",
+          "replace": "setup.md",
+          "with": "reference/setup.md"
+        },
+        {
+          "path": "docs/index.md",
+          "replace": "setup.md",
+          "with": "reference/setup.md"
+        },
+        {
+          "path": "docs/tutorials/quickstart.md",
+          "replace": "setup.md",
+          "with": "reference/setup.md"
+        },
+        {
+          "path": "plans/completed/docs-layout.md",
+          "replace": "setup.md",
+          "with": "reference/setup.md"
+        },
+        {
+          "path": "scripts/export-guide.sh",
+          "replace": "setup.md",
+          "with": "reference/setup.md"
+        },
+        {
+          "path": "vendor/widget/README.md",
+          "replace": "setup.md",
+          "with": "reference/setup.md"
+        }
+      ],
+      "fixture_inventory": [
+        {
+          "path": ".gitignore",
+          "sha256": "7ab6574557548c2d1031511f15db14ace876b796b1471216aad74a0ab64aaee2"
+        },
+        {
+          "path": "README.md",
+          "sha256": "9e97a73685d83fddaddac027c2e1f38fa225d087f5f3a32ff8da1f9937aaf2b5"
+        },
+        {
+          "path": "docs/index.md",
+          "sha256": "96144ff7b607b53498e91dee88d5e34f254459c04a29da7afeb3bebfc71e22b6"
+        },
+        {
+          "path": "docs/reference/setup.md",
+          "sha256": "c7a759fbfc829c024b57d3a79f63fa6a4718e173dfb5a7e2b943f4e44f47a5b9"
+        },
+        {
+          "path": "docs/tutorials/quickstart.md",
+          "sha256": "c61c0daedb88e2462da72311fa3fc547be7632cf571a5a2e5d50d32448ff992f"
+        },
+        {
+          "path": "plans/completed/docs-layout.md",
+          "sha256": "b6e4294e761d6c6d27d15fe97c918531c51b68de829d05955477eb1b1c7a5568"
+        },
+        {
+          "path": "scripts/export-guide.sh",
+          "sha256": "afd80dc1ebc98978102750682bac98af191e12ad272aaf1ce98dbbdb03dab7ac"
+        },
+        {
+          "path": "vendor/widget/README.md",
+          "sha256": "78e8dc40d7e9da9d0ef40d1b50c38a64afce29764bcafa0d7e25fdaf82c22f30"
+        },
+        {
+          "path": "vendor/widget/setup.md",
+          "sha256": "9ea5c2f793cd0128db290b87d35b46f8a9fe6f7d32f6a44bfea32530e49ac2ab"
+        }
+      ],
+      "observations": {
+        "references": [
+          {
+            "path": "README.md",
+            "role": "service",
+            "targets": [
+              {
+                "text": "docs/reference/setup.md",
+                "resolved": "/private/tmp/ssr-moved-file-simplified-20260913/blanket_basename/docs/reference/setup.md",
+                "exists": true,
+                "intended": true
+              }
+            ],
+            "correct_target": true,
+            "status": "observed"
+          },
+          {
+            "path": "docs/index.md",
+            "role": "service",
+            "targets": [
+              {
+                "text": "reference/setup.md",
+                "resolved": "/private/tmp/ssr-moved-file-simplified-20260913/blanket_basename/docs/reference/setup.md",
+                "exists": true,
+                "intended": true
+              }
+            ],
+            "correct_target": true,
+            "status": "observed"
+          },
+          {
+            "path": "docs/tutorials/quickstart.md",
+            "role": "service",
+            "targets": [
+              {
+                "text": "../reference/setup.md",
+                "resolved": "/private/tmp/ssr-moved-file-simplified-20260913/blanket_basename/docs/reference/setup.md",
+                "exists": true,
+                "intended": true
+              }
+            ],
+            "correct_target": true,
+            "status": "observed"
+          },
+          {
+            "path": "vendor/widget/README.md",
+            "role": "independent",
+            "targets": [
+              {
+                "text": "reference/setup.md",
+                "resolved": "/private/tmp/ssr-moved-file-simplified-20260913/blanket_basename/vendor/widget/reference/setup.md",
+                "exists": false,
+                "intended": false
+              }
+            ],
+            "correct_target": false,
+            "status": "observed"
+          }
+        ],
+        "preserved_bytes": {
+          "docs/reference/setup.md": true,
+          "plans/completed/docs-layout.md": false,
+          "vendor/widget/README.md": false,
+          "vendor/widget/setup.md": true
+        },
+        "old_path_present": false,
+        "limit": "Facts only. Unsupported forms, changed preservation bytes, Git history and semantic outcomes require inspection. Shell consumer must be executed separately on a disposable copy."
+      },
+      "commands": [
+        {
+          "argv": [
+            "sh",
+            "/private/tmp/ssr-moved-file-simplified-20260913/blanket_basename/scripts/export-guide.sh"
+          ],
+          "cwd": "/private/tmp/ssr-moved-file-simplified-20260913/blanket_basename",
+          "exit_code": 0,
+          "stdout": "# Orbit service setup\n\nSet `ORBIT_PORT=8042` and start the service with `orbit serve`.\nVerify readiness at `http://localhost:8042/health`.\n",
+          "stderr": "",
+          "matches_service_guide": true
+        },
+        {
+          "argv": [
+            "sh",
+            "/private/tmp/ssr-moved-file-simplified-20260913/blanket_basename/scripts/export-guide.sh"
+          ],
+          "cwd": "/private/tmp/ssr-moved-file-simplified-20260913",
+          "exit_code": 0,
+          "stdout": "# Orbit service setup\n\nSet `ORBIT_PORT=8042` and start the service with `orbit serve`.\nVerify readiness at `http://localhost:8042/health`.\n",
+          "stderr": "",
+          "matches_service_guide": true
+        }
+      ]
+    },
+    {
+      "variant": "restored_old_path",
+      "constructed_by": "orchestrator, not a model subject",
+      "source": "fixture/",
+      "mutations": [
+        {
+          "path": "README.md",
+          "replace": "docs/setup.md",
+          "with": "docs/reference/setup.md"
+        },
+        {
+          "path": "docs/index.md",
+          "replace": "setup.md",
+          "with": "reference/setup.md"
+        },
+        {
+          "path": "docs/tutorials/quickstart.md",
+          "replace": "../setup.md",
+          "with": "../reference/setup.md"
+        },
+        {
+          "path": "scripts/export-guide.sh",
+          "replace": "../docs/setup.md",
+          "with": "../docs/reference/setup.md"
+        },
+        {
+          "copy": "docs/reference/setup.md",
+          "to": "docs/setup.md"
+        }
+      ],
+      "fixture_inventory": [
+        {
+          "path": ".gitignore",
+          "sha256": "7ab6574557548c2d1031511f15db14ace876b796b1471216aad74a0ab64aaee2"
+        },
+        {
+          "path": "README.md",
+          "sha256": "9e97a73685d83fddaddac027c2e1f38fa225d087f5f3a32ff8da1f9937aaf2b5"
+        },
+        {
+          "path": "docs/index.md",
+          "sha256": "96144ff7b607b53498e91dee88d5e34f254459c04a29da7afeb3bebfc71e22b6"
+        },
+        {
+          "path": "docs/reference/setup.md",
+          "sha256": "c7a759fbfc829c024b57d3a79f63fa6a4718e173dfb5a7e2b943f4e44f47a5b9"
+        },
+        {
+          "path": "docs/setup.md",
+          "sha256": "c7a759fbfc829c024b57d3a79f63fa6a4718e173dfb5a7e2b943f4e44f47a5b9"
+        },
+        {
+          "path": "docs/tutorials/quickstart.md",
+          "sha256": "c61c0daedb88e2462da72311fa3fc547be7632cf571a5a2e5d50d32448ff992f"
+        },
+        {
+          "path": "plans/completed/docs-layout.md",
+          "sha256": "64f544d394b479f0e7a30c6bdd56e52aaf7352509c0f8b08d4148994eb628932"
+        },
+        {
+          "path": "scripts/export-guide.sh",
+          "sha256": "afd80dc1ebc98978102750682bac98af191e12ad272aaf1ce98dbbdb03dab7ac"
+        },
+        {
+          "path": "vendor/widget/README.md",
+          "sha256": "7e28eb12cddc29de9f3ef2ba7b3f759bbb92af864f573f4c8556b441344799b0"
+        },
+        {
+          "path": "vendor/widget/setup.md",
+          "sha256": "9ea5c2f793cd0128db290b87d35b46f8a9fe6f7d32f6a44bfea32530e49ac2ab"
+        }
+      ],
+      "observations": {
+        "references": [
+          {
+            "path": "README.md",
+            "role": "service",
+            "targets": [
+              {
+                "text": "docs/reference/setup.md",
+                "resolved": "/private/tmp/ssr-moved-file-simplified-20260913/restored_old_path/docs/reference/setup.md",
+                "exists": true,
+                "intended": true
+              }
+            ],
+            "correct_target": true,
+            "status": "observed"
+          },
+          {
+            "path": "docs/index.md",
+            "role": "service",
+            "targets": [
+              {
+                "text": "reference/setup.md",
+                "resolved": "/private/tmp/ssr-moved-file-simplified-20260913/restored_old_path/docs/reference/setup.md",
+                "exists": true,
+                "intended": true
+              }
+            ],
+            "correct_target": true,
+            "status": "observed"
+          },
+          {
+            "path": "docs/tutorials/quickstart.md",
+            "role": "service",
+            "targets": [
+              {
+                "text": "../reference/setup.md",
+                "resolved": "/private/tmp/ssr-moved-file-simplified-20260913/restored_old_path/docs/reference/setup.md",
+                "exists": true,
+                "intended": true
+              }
+            ],
+            "correct_target": true,
+            "status": "observed"
+          },
+          {
+            "path": "vendor/widget/README.md",
+            "role": "independent",
+            "targets": [
+              {
+                "text": "setup.md",
+                "resolved": "/private/tmp/ssr-moved-file-simplified-20260913/restored_old_path/vendor/widget/setup.md",
+                "exists": true,
+                "intended": true
+              }
+            ],
+            "correct_target": true,
+            "status": "observed"
+          }
+        ],
+        "preserved_bytes": {
+          "docs/reference/setup.md": true,
+          "plans/completed/docs-layout.md": true,
+          "vendor/widget/README.md": true,
+          "vendor/widget/setup.md": true
+        },
+        "old_path_present": true,
+        "limit": "Facts only. Unsupported forms, changed preservation bytes, Git history and semantic outcomes require inspection. Shell consumer must be executed separately on a disposable copy."
+      },
+      "commands": [
+        {
+          "argv": [
+            "sh",
+            "/private/tmp/ssr-moved-file-simplified-20260913/restored_old_path/scripts/export-guide.sh"
+          ],
+          "cwd": "/private/tmp/ssr-moved-file-simplified-20260913/restored_old_path",
+          "exit_code": 0,
+          "stdout": "# Orbit service setup\n\nSet `ORBIT_PORT=8042` and start the service with `orbit serve`.\nVerify readiness at `http://localhost:8042/health`.\n",
+          "stderr": "",
+          "matches_service_guide": true
+        },
+        {
+          "argv": [
+            "sh",
+            "/private/tmp/ssr-moved-file-simplified-20260913/restored_old_path/scripts/export-guide.sh"
+          ],
+          "cwd": "/private/tmp/ssr-moved-file-simplified-20260913",
+          "exit_code": 0,
+          "stdout": "# Orbit service setup\n\nSet `ORBIT_PORT=8042` and start the service with `orbit serve`.\nVerify readiness at `http://localhost:8042/health`.\n",
+          "stderr": "",
+          "matches_service_guide": true
+        }
+      ]
+    }
+  ],
+  "runner_preparation": {
+    "provider_invoked": false,
+    "config_loader": "skilltest.config.load_config",
+    "workspace_preparation": "skilltest.workspace.prepare_workspace",
+    "shared_fixture_entries": 10,
+    "extra_original_entries": 1,
+    "checks": "All prepared bytes match declarations; execution settings equal; prompts differ only by SSR load instruction; controller files absent from declared inputs.",
+    "allocated_local_preparation_dirs": {
+      "control": "/private/tmp/ssr-pilot-02-20260913/skilltest-runs/20260913T043758225Z-ssr-pilot-02-control-e220696f-8f5a-4932-ae19-e4f7bbad5424-e7ho6_7m",
+      "original": "/private/tmp/ssr-pilot-02-20260913/skilltest-runs/20260913T043758229Z-ssr-pilot-02-original-32f9b88f-66eb-4fae-ada8-1d480f3af82f-vg643r7g"
+    }
+  }
+}

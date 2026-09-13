@@ -1,0 +1,224 @@
+{
+  "purpose": "Prepared moved-file development case; verify identities before any authorized dispatch. No model calls made.",
+  "preparation_base_revision": "f36ffa001fc4e24b04436fc89d75811c6421e480",
+  "authorization": "Local preparation approved; exact provider dispatch not yet authorized.",
+  "execution": {
+    "provider": "codex",
+    "model": "gpt-5.6-sol",
+    "effort": "low",
+    "permissions": "workspace-write"
+  },
+  "proposed_run_order": [
+    "control",
+    "original"
+  ],
+  "cli": {
+    "path": "/opt/homebrew/Caskroom/codex/0.154.0/bin/codex",
+    "version": "codex-cli 0.154.0",
+    "sha256": "4f85982624b3898c8991cb80c0981b2aa71070e3537046c9a95950318a95afcc"
+  },
+  "configurations": {
+    "control": {
+      "config": "skill-studies/sweeping-stale-references/cases/pilot-02/control.json",
+      "fixture_entries": 10,
+      "files": [
+        {
+          "path": "skill-studies/sweeping-stale-references/cases/pilot-02/control.json",
+          "bytes": 1216,
+          "sha256": "7d329e69ceeff1b9899accbc270c767ffb6366f95b5b6cb7254f6e110eeae30f"
+        },
+        {
+          "path": "skill-studies/sweeping-stale-references/cases/pilot-02/prompt-control.md",
+          "bytes": 469,
+          "sha256": "17438b8155af2ff3ba779ff39eee0426aa7d0783fec006ce6519dfebce18447f"
+        },
+        {
+          "path": "skill-studies/sweeping-stale-references/cases/pilot-02/fixture/.gitignore",
+          "bytes": 36,
+          "sha256": "7ab6574557548c2d1031511f15db14ace876b796b1471216aad74a0ab64aaee2"
+        },
+        {
+          "path": "skill-studies/sweeping-stale-references/cases/pilot-02/fixture/README.md",
+          "bytes": 248,
+          "sha256": "098f558258086dd934d009abf9d0a56f49a7e2618f3cd21050553037c0e86075"
+        },
+        {
+          "path": "skill-studies/sweeping-stale-references/cases/pilot-02/fixture/docs/index.md",
+          "bytes": 87,
+          "sha256": "4449bfe65c1cc6a59bc692a8077377a6e56b0f378870be229000a70a943bb609"
+        },
+        {
+          "path": "skill-studies/sweeping-stale-references/cases/pilot-02/fixture/docs/reference/setup.md",
+          "bytes": 139,
+          "sha256": "c7a759fbfc829c024b57d3a79f63fa6a4718e173dfb5a7e2b943f4e44f47a5b9"
+        },
+        {
+          "path": "skill-studies/sweeping-stale-references/cases/pilot-02/fixture/docs/tutorials/quickstart.md",
+          "bytes": 100,
+          "sha256": "b856f45737cb568d58ee7ebbec0b12123c4be3fac93c6994c64508ca86763365"
+        },
+        {
+          "path": "skill-studies/sweeping-stale-references/cases/pilot-02/fixture/plans/completed/docs-layout.md",
+          "bytes": 165,
+          "sha256": "64f544d394b479f0e7a30c6bdd56e52aaf7352509c0f8b08d4148994eb628932"
+        },
+        {
+          "path": "skill-studies/sweeping-stale-references/cases/pilot-02/fixture/scripts/export-guide.sh",
+          "bytes": 109,
+          "sha256": "06fdfdc2080354658cfa73fbe443799dafcb9afc2bdd41f152bff8d3fe72f82f"
+        },
+        {
+          "path": "skill-studies/sweeping-stale-references/cases/pilot-02/fixture/vendor/widget/README.md",
+          "bytes": 94,
+          "sha256": "7e28eb12cddc29de9f3ef2ba7b3f759bbb92af864f573f4c8556b441344799b0"
+        },
+        {
+          "path": "skill-studies/sweeping-stale-references/cases/pilot-02/fixture/vendor/widget/setup.md",
+          "bytes": 143,
+          "sha256": "9ea5c2f793cd0128db290b87d35b46f8a9fe6f7d32f6a44bfea32530e49ac2ab"
+        },
+        {
+          "path": "skill-studies/sweeping-stale-references/cases/pilot-02/task.md",
+          "bytes": 395,
+          "sha256": "4b72fb7e8ff4beebcbf95282e502b7427a9622c21693fd48e397b044a603f11b"
+        }
+      ]
+    },
+    "original": {
+      "config": "skill-studies/sweeping-stale-references/cases/pilot-02/original.json",
+      "fixture_entries": 11,
+      "files": [
+        {
+          "path": "skill-studies/sweeping-stale-references/cases/pilot-02/original.json",
+          "bytes": 1345,
+          "sha256": "a8818589ca32a0867b79082388cbd51994b9d63225c8ffba8da8b863cd3abd49"
+        },
+        {
+          "path": "skill-studies/sweeping-stale-references/cases/pilot-02/prompt-original.md",
+          "bytes": 595,
+          "sha256": "6695cbb23cfd7d8656a122b2e9ea4ba35fdea581f7a15780e146d84a0732b588"
+        },
+        {
+          "path": "skill-studies/sweeping-stale-references/cases/pilot-02/fixture/.gitignore",
+          "bytes": 36,
+          "sha256": "7ab6574557548c2d1031511f15db14ace876b796b1471216aad74a0ab64aaee2"
+        },
+        {
+          "path": "skill-studies/sweeping-stale-references/cases/pilot-02/fixture/README.md",
+          "bytes": 248,
+          "sha256": "098f558258086dd934d009abf9d0a56f49a7e2618f3cd21050553037c0e86075"
+        },
+        {
+          "path": "skill-studies/sweeping-stale-references/cases/pilot-02/fixture/docs/index.md",
+          "bytes": 87,
+          "sha256": "4449bfe65c1cc6a59bc692a8077377a6e56b0f378870be229000a70a943bb609"
+        },
+        {
+          "path": "skill-studies/sweeping-stale-references/cases/pilot-02/fixture/docs/reference/setup.md",
+          "bytes": 139,
+          "sha256": "c7a759fbfc829c024b57d3a79f63fa6a4718e173dfb5a7e2b943f4e44f47a5b9"
+        },
+        {
+          "path": "skill-studies/sweeping-stale-references/cases/pilot-02/fixture/docs/tutorials/quickstart.md",
+          "bytes": 100,
+          "sha256": "b856f45737cb568d58ee7ebbec0b12123c4be3fac93c6994c64508ca86763365"
+        },
+        {
+          "path": "skill-studies/sweeping-stale-references/cases/pilot-02/fixture/plans/completed/docs-layout.md",
+          "bytes": 165,
+          "sha256": "64f544d394b479f0e7a30c6bdd56e52aaf7352509c0f8b08d4148994eb628932"
+        },
+        {
+          "path": "skill-studies/sweeping-stale-references/cases/pilot-02/fixture/scripts/export-guide.sh",
+          "bytes": 109,
+          "sha256": "06fdfdc2080354658cfa73fbe443799dafcb9afc2bdd41f152bff8d3fe72f82f"
+        },
+        {
+          "path": "skill-studies/sweeping-stale-references/cases/pilot-02/fixture/vendor/widget/README.md",
+          "bytes": 94,
+          "sha256": "7e28eb12cddc29de9f3ef2ba7b3f759bbb92af864f573f4c8556b441344799b0"
+        },
+        {
+          "path": "skill-studies/sweeping-stale-references/cases/pilot-02/fixture/vendor/widget/setup.md",
+          "bytes": 143,
+          "sha256": "9ea5c2f793cd0128db290b87d35b46f8a9fe6f7d32f6a44bfea32530e49ac2ab"
+        },
+        {
+          "path": "skill-studies/sweeping-stale-references/cases/pilot-02/task.md",
+          "bytes": 395,
+          "sha256": "4b72fb7e8ff4beebcbf95282e502b7427a9622c21693fd48e397b044a603f11b"
+        },
+        {
+          "path": "skill-studies/sweeping-stale-references/cases/skill-original/SKILL.md",
+          "bytes": 7689,
+          "sha256": "d6812c33cae026807bbb3ebe851d93b60b513dd87ea5efd98aea28f5c02f9157"
+        }
+      ]
+    }
+  },
+  "policy": {
+    "id": "SSR-assessment-2",
+    "source_revision": "f36ffa001fc4e24b04436fc89d75811c6421e480",
+    "source_path": "skill-studies/sweeping-stale-references/protocol.md",
+    "source_sha256": "3d84c42a129c9da60d8263a5e63d27c0845f0ac68bc22ae8c85d5de765fd2c74",
+    "extraction": "Current SSR assessment policy section up to Standalone control and attribution",
+    "copy": "skill-studies/sweeping-stale-references/cases/pilot-02/assessment-policy.txt",
+    "sha256": "625e91999ba68e18eda230b92b6da1e6f6ea51a42aa89f5cbce674e41a097837"
+  },
+  "reuse_inspection": {
+    "decision": "New fixture; earlier six prompts do not cover moved-path resolution. No old rubric or results read as authority.",
+    "prompts": [
+      {
+        "path": "skill-validation/scenarios/sweeping-stale-references/ssr-01/prompt.md",
+        "sha256": "b87520036c0f72d5eadeb9d43f1cc50ed2ff144f604e5ca7b9277f1fb51390c3"
+      },
+      {
+        "path": "skill-validation/scenarios/sweeping-stale-references/ssr-02/prompt.md",
+        "sha256": "a6113dc283c5dd61c79698f96d4d0a5a09a327619c64969e4bd25178975be93d"
+      },
+      {
+        "path": "skill-validation/scenarios/sweeping-stale-references/ssr-03/prompt.md",
+        "sha256": "5e1a1fa2f60db6cf2aeceaed4a85b869366e4e6a8b20cfe8bf0e4398de46f39e"
+      },
+      {
+        "path": "skill-validation/scenarios/sweeping-stale-references/ssr-05/prompt.md",
+        "sha256": "8d9f3a242802100fbe7ded2b7ace37f0647030502c9b5c3dd0b1efd9c268477c"
+      },
+      {
+        "path": "skill-validation/scenarios/sweeping-stale-references/ssr-06/prompt.md",
+        "sha256": "a39d26e62ad7ec6070e51655b0282ac8072547349f12ae39e0642f541dc1c401"
+      },
+      {
+        "path": "skill-validation/scenarios/sweeping-stale-references/ssr-07/prompt.md",
+        "sha256": "86a40957dad5091eac5f650ad44f8a71ab85aa318038f77e982952fa7294187f"
+      }
+    ]
+  },
+  "controller_artifacts": [
+    {
+      "path": "skill-studies/sweeping-stale-references/cases/pilot-02/assessment.md",
+      "sha256": "7eb2c16e72ae13d6895ad44b31bd2790c2a4b79ae32d761b490c0e9ba24305d0"
+    },
+    {
+      "path": "skill-studies/sweeping-stale-references/cases/pilot-02/assessment-policy.txt",
+      "sha256": "625e91999ba68e18eda230b92b6da1e6f6ea51a42aa89f5cbce674e41a097837"
+    },
+    {
+      "path": "skill-studies/sweeping-stale-references/cases/pilot-02/expected.json",
+      "sha256": "7c2539f37f33b37e68339252cea73a7020c0d0a2f030ea6f562e826682c38730"
+    },
+    {
+      "path": "skill-studies/sweeping-stale-references/cases/pilot-02/check_paths.py",
+      "sha256": "c8b600d0fb4779ea0751d687887b45452ed22cd45076c930767c9dda62364513"
+    },
+    {
+      "path": "skill-studies/sweeping-stale-references/cases/pilot-02/test_check_paths.py",
+      "sha256": "3e14f46f8a55d5caa05b33a226fcaf71241183451561da63a8ee95636d177844"
+    },
+    {
+      "path": "skill-studies/sweeping-stale-references/cases/pilot-02/qualification.json",
+      "sha256": "19f9853e69c231dff65715954f7cb5ca32f4edf6aeb9c4cf7905b1013b084647"
+    }
+  ],
+  "preparation_scope": "Owner-selected simplified version: three Markdown consumers and one export script; no site configuration consumer."
+}

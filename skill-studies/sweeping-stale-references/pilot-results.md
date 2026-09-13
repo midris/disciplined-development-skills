@@ -40,7 +40,7 @@ The [current SSR assessment policy](protocol.md#current-ssr-assessment-policy) c
 
 Following the external review of `5615f58`, this correction withdraws the confirmed P2/P4 procedural-defect disposition and records the unresolved accounting scope above. Functional judgments and observed files/actions are unchanged.
 The prior assessment remains available as `pilot-results.md` at commit `5615f58e35254e47827b5c6ebf1aa06aa6c86e25`; frozen case criteria, manifests and raw bundles are unchanged. The run index identifies the policy and criteria used for this correction. This is an assessment correction, not new subject evidence or an adopted skill requirement.
-F2 deliberately compares preservation outcomes. The control's search at trace line 8 omitted vendor and plan paths, but line 10 explicitly reads `plans/completed/cache-migration.md`; its later report says historical records were left untouched. No vendor-content inspection appears in its recorded commands. The original searched both categories and documented their dispositions. Equal file outcomes do not establish equal search or triage behavior.
+F2 deliberately compares preservation outcomes. The control's search at trace line 8 omitted vendor and plan paths, but line 10 explicitly reads `plans/completed/cache-migration.md`; its mid-run agent message at `stdout.txt:13` says historical records were left untouched. No vendor-content inspection appears in its recorded commands. The original searched both categories and documented their dispositions. Equal file outcomes do not establish equal search or triage behavior.
 
 ## Evidence and qualification
 
@@ -82,6 +82,6 @@ Stop at two subject calls: no evaluator, authoring, retry or third pilot call wa
 The existing runner supplied enough evidence to inspect loading, ordering, Git reconciliation and separate functional/procedural outcomes for this case; no new tool is needed for those observations.
 Broader coverage, model-evaluator qualification, reserved-input isolation, measured collection and skill rewriting remain open.
 
-The owner has confirmed the scope expectation behind the control's functional assessment and clarified that committed functional completeness takes priority over detailed accounting. The accounting walkthrough is resolved; review any remaining evidence concerns before returning to coverage design.
-If that review accepts the process evidence, return to the agreed coverage map and prepare the next missing facet before proposing further calls.
+The owner has confirmed the scope expectation behind the control's functional assessment and clarified that committed functional completeness takes priority over detailed accounting. The subsequent external review of `f36ffa0` returned PASS, accepting the versioned correction and closing pilot review; the trace-pointer precision correction above does not change any judgment.
+Return to the agreed coverage map and prepare the next missing facet before proposing further calls. Moved-path handling is an owner-clarified outcome, not an explicit relative-path technique taught by the frozen skill; carry that distinction into the next case's expectations.
 Do not rerun this case merely to obtain cleaner accounting or extrapolate this pair into a baseline.

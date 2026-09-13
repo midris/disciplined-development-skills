@@ -1,0 +1,53 @@
+{
+  "schema_version": "0.2",
+  "id": "ssr-pilot-02-control",
+  "prompt": "prompt-control.md",
+  "fixtures": [
+    {
+      "source": "fixture/.gitignore",
+      "target": ".gitignore"
+    },
+    {
+      "source": "fixture/README.md",
+      "target": "README.md"
+    },
+    {
+      "source": "fixture/docs/index.md",
+      "target": "docs/index.md"
+    },
+    {
+      "source": "fixture/docs/reference/setup.md",
+      "target": "docs/reference/setup.md"
+    },
+    {
+      "source": "fixture/docs/tutorials/quickstart.md",
+      "target": "docs/tutorials/quickstart.md"
+    },
+    {
+      "source": "fixture/plans/completed/docs-layout.md",
+      "target": "plans/completed/docs-layout.md"
+    },
+    {
+      "source": "fixture/scripts/export-guide.sh",
+      "target": "scripts/export-guide.sh"
+    },
+    {
+      "source": "fixture/vendor/widget/README.md",
+      "target": "vendor/widget/README.md"
+    },
+    {
+      "source": "fixture/vendor/widget/setup.md",
+      "target": "vendor/widget/setup.md"
+    },
+    {
+      "source": "task.md",
+      "target": "TASK.md"
+    }
+  ],
+  "execution": {
+    "provider": "codex",
+    "model": "gpt-5.6-sol",
+    "effort": "low",
+    "permissions": "workspace-write"
+  }
+}

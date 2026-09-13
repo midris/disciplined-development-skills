@@ -1,6 +1,6 @@
 # Sweeping stale references: study protocol
 
-Status: Stage 1 complete; Stage 2 conceptual coverage accepted; first two-run process pilot complete, awaiting evidence review, 2026-09-12.
+Status: Stage 1 complete; Stage 2 conceptual coverage accepted; pilot 01 complete and externally reviewed PASS. Pilot 02's moved-file case is prepared and locally qualified, with no new model calls, 2026-09-13.
 The owner selected `sweeping-stale-references`, authorized contract/allocation preparation and clarified that this skill should be evaluated independently.
 The behavioral contract and outer ceilings are agreed; the authorized pilot pair is complete and further execution remains subject to its own recorded scope.
 Progress belongs to the [plan](../../plans/2026-09-11-model-driven-skill-testing.md); general requirements belong to the [spec](../../plans/specs/2026-09-11-model-driven-skill-testing-framework.md).
@@ -149,6 +149,25 @@ Both attempts are complete; stop for process review; a setup failure, contaminat
 
 ## Authoring guidance and allocation
 
+### Prepared moved-file development pair
+
+The owner approved the moved-file concept and local preparation on 2026-09-13. [Pilot 02](cases/pilot-02/assessment.md) is a new fixture: none of the six inspected historical SSR prompts exercises relative-path resolution. The owner subsequently selected the simpler three-Markdown-link/export-script version, retaining historical and unrelated same-name material to preserve. The site-config consumer was removed because it had no real builder; further consumer types can be added if needed.
+The task flags one broken README link after a settled move. Expected path reconciliation is an owner-clarified functional outcome; a miss is not by itself disobedience to an explicit relative-path instruction. The case fixes accounting scope before observation, prioritizes the actual committed repair, and includes a controller-only copy of `SSR-assessment-2` with source/hash provenance in its manifest.
+Local qualification: eight path-observer tests and seven constructed variants distinguish incomplete repair, correct equivalent paths, a wrong existing destination, damaged historical/vendor material and restoration of the old path. The export script fails in the initial/README-only states and works after complete repair from both project and external working directories. These are constructed local observations, not model results or calibrated model judgments.
+Both configurations pass the real loader and workspace-copy checks: nine common project files plus the task, with only frozen SSR added to the original. Model settings remain Codex `gpt-5.6-sol`, low, `workspace-write`; CLI version/hash are recorded and must be rechecked before dispatch.
+
+Proposed exact commands from the canonical checkout; the namespaced temporary directory exists:
+
+```sh
+TMPDIR=/private/tmp/ssr-pilot-02-20260913 skill-validation/runner/.venv/bin/python -m skilltest run skill-studies/sweeping-stale-references/cases/pilot-02/control.json
+TMPDIR=/private/tmp/ssr-pilot-02-20260913 skill-validation/runner/.venv/bin/python -m skilltest run skill-studies/sweeping-stale-references/cases/pilot-02/original.json
+```
+
+Authorization is pending for these exact calls; local fixture approval does not dispatch providers. Host permission will be needed for Codex app-server initialization while retaining the provider sandbox. The provider would receive the synthetic project/task and, for the original only, frozen SSR. No controller criteria, checks, expected outcomes or policy copy are subject inputs.
+If authorized, run control then original once each, preserving and inspecting complete bundles between calls under `development/pilot-02-runs/<run-id>/` in the existing primary/backup stores. Proposed cost is two of the three additional-development subject slots; all other pools and measured-comparison capacity remain unchanged. Stop after the pair; no evaluator call, third run or automatic retry is proposed. Read isolation remains bounded by the earlier pilot's limitations.
+
+### Whole-study allocation
+
 Initial process checks will use **Codex `gpt-5.6-sol`, low effort**, following the owner's request to use Sol low or Terra medium while establishing the process.
 `gpt-5.6-terra`, medium effort, is the alternative if the pilot exposes a reason to switch; do not silently pool different models' observations.
 The owner directed minimal real-model runs to establish the process before broader testing. The initial two Sol-low subject invocations, one original and one no-target, are complete; use the pilot evidence to decide whether another run has a specific unresolved process purpose. The five-repetition wording campaign is a later conditional allocation, not part of initial process qualification.
@@ -243,13 +262,13 @@ This preparation consumes active study time toward the accepted ceiling; recorde
 Dispatched study invocations so far: **2 subject, 0 evaluator, 0 authoring, 0 retry**. Remaining outer capacity is 38 / 12 / 4 / 4 respectively; no further call is authorized by the completed pilot pair.
 The orchestrator's preparation conversation and local tool calls consume active time, not provider-invocation slots; model assessments or authoring work must be accounted under their declared roles.
 
-Owner walkthrough: the contract, outer limits and conceptual coverage are settled. Review the completed pilot evidence before selecting further case preparation or spending.
+Owner walkthrough: the contract, outer limits, pilot 01 findings and pilot 02 concept are settled. Pilot 02 is prepared for review of its exact inputs and proposed spending.
 Independent use is settled; Stage 3 has observed the declared standalone setup for this pair; broader isolation and model-evaluator qualification remain open.
 
-Accounting updated, 2026-09-12: **book 107 active minutes through pilot review and commit preparation**, leaving **18 hours 13 minutes** under the accepted 20-hour ceiling. This replaces, rather than adds to, earlier bookings.
+Accounting updated, 2026-09-13: **book 126 active minutes through moved-file case preparation**, leaving **17 hours 54 minutes** under the accepted 20-hour ceiling. This replaces, rather than adds to, earlier bookings.
 Source: the current task's local log at `/Users/simon/.codex/sessions/2026/09/11/rollout-2026-09-11T17-59-42-01a0927b-cef5-7db0-8a30-c76c5b1ae838.jsonl`; only boundary timestamps were extracted, not conversation contents.
-Reconstruction sums the union of 47 closed `task_complete` / `turn_aborted` intervals since Stage 1 began: **6,119 seconds (101.98 minutes)**, including model/tool waits inside turns and excluding inter-turn owner-wait.
-The current turn began at 02:52:10 UTC and adds 43 seconds at the 02:52:53 checkpoint. Retain the original two-minute opening allowance and allow two minutes for completion; round 106.70 minutes up to 107. Closing allowance and rounding are estimates, not independently measured owner/Claude effort. Provider durations are already inside active-turn time and are not added again.
+Reconstruction sums the union of 59 closed `task_complete` / `turn_aborted` intervals since Stage 1 began: **6,801 seconds (113.35 minutes)**, including model/tool waits inside turns and excluding inter-turn owner-wait.
+The current turn began at 2026-09-13 04:17:07 UTC and adds 501 seconds at the 2026-09-13 04:25:28 UTC checkpoint. Retain the original two-minute opening allowance and allow two minutes for completion; round 125.70 minutes up to 126. Closing allowance and rounding are estimates, not independently measured owner/Claude effort. Provider durations are already inside active-turn time and are not added again.
 At the next checkpoint, recompute cumulative closed-turn intervals plus the opening allowance and round up; do not add already counted turns or restore the superseded checkpoints. If the completed current turn exceeds the booking, correct the total before approving the remaining budget.
 
 Relationship-correction verification: all **21** source identities match, including all nine DD skills at the recorded revision; local links resolve and `git diff --check` passes.
