@@ -1,0 +1,319 @@
+{
+  "purpose": "Select a substantial first-party implementation base before constructing another discovery fixture. No provider calls.",
+  "decision": "Use pinned upstream Shiv as the replacement base; pilot-03 remains an undispatched draft. This selection-time record establishes feasibility; current case preparation and qualification are recorded in cases/discovery-shiv/assessment.md and qualification.json.",
+  "upstream": {
+    "url": "https://github.com/linkedin/shiv",
+    "revision": "ff542cbe75ea832df3a989d07c7fdf5214f727fa",
+    "checkout": "/private/tmp/ssr-discovery-shiv",
+    "tracked_files": 40,
+    "tracked_bytes": 100998,
+    "areas": {
+      "src": {
+        "files": 12,
+        "bytes": 38647,
+        "lines": 1153
+      },
+      "test": {
+        "files": 9,
+        "bytes": 26159,
+        "lines": 762
+      },
+      "docs": {
+        "files": 7,
+        "bytes": 18816,
+        "lines": 557
+      },
+      ".github": {
+        "files": 1,
+        "bytes": 1043,
+        "lines": 42
+      }
+    },
+    "inventory": [
+      {
+        "path": ".github/workflows/tox.yml",
+        "bytes": 1043,
+        "sha256": "c9134958aaae897e137be339ae1ecbd9afa888d3fac44e66a40d36e12e0313e5"
+      },
+      {
+        "path": ".gitignore",
+        "bytes": 885,
+        "sha256": "2ea45306d66be71f9bc9c2644cccf0fa4fbcf5ff5bc9ea410aa243547b6f5afe"
+      },
+      {
+        "path": ".readthedocs.yml",
+        "bytes": 146,
+        "sha256": "b007b647aa6c66dde072127135990a0d4a1eebda8e3253f5289cebdc524e33ac"
+      },
+      {
+        "path": "CONTRIBUTING.md",
+        "bytes": 1202,
+        "sha256": "d0758cdef5279083fdde0329e9e404ea59feae22297f7cf90073cbf4b348c086"
+      },
+      {
+        "path": "LICENSE",
+        "bytes": 1326,
+        "sha256": "ade0fc62f14848627283169c38316c38def3a314ba76f31df66fb7fe0922dc99"
+      },
+      {
+        "path": "MANIFEST.in",
+        "bytes": 155,
+        "sha256": "c95531f69859851f909ab781c4554425e9106c4ab719975a1f60c6a7fb0e52ec"
+      },
+      {
+        "path": "NOTICE",
+        "bytes": 174,
+        "sha256": "d4291847bbf81e16e02ace396847a02010e99d69fae69d82f4ba6e45bca43d35"
+      },
+      {
+        "path": "README.md",
+        "bytes": 3832,
+        "sha256": "c866c1a488e88ab77a11af53232916f59da183edccd04cbee0c2b52163e1013c"
+      },
+      {
+        "path": "docs/api.rst",
+        "bytes": 731,
+        "sha256": "036167d0f5966793b803ff046f766a1791c73055c22e01a06f5b53524aeed14d"
+      },
+      {
+        "path": "docs/cli-reference.rst",
+        "bytes": 1192,
+        "sha256": "02e63e0d50cab6430a20b606f8e3cf5e0462eca27d479c709220d345c691a727"
+      },
+      {
+        "path": "docs/conf.py",
+        "bytes": 540,
+        "sha256": "b0898d831aa506a256e5341307224623697840f60dbae6d1726323f9634acc47"
+      },
+      {
+        "path": "docs/django.rst",
+        "bytes": 2008,
+        "sha256": "799dfd7e4953a0f433bd7db601bcdf6722bf80bebe655bf221f34ada3d130acc"
+      },
+      {
+        "path": "docs/history.rst",
+        "bytes": 3015,
+        "sha256": "266f3d9ee1931a24220fc3dcefd528ee8ec50db06e4a9b756e2ccc5b65cb0416"
+      },
+      {
+        "path": "docs/index.rst",
+        "bytes": 11281,
+        "sha256": "601d3a6474aeea208ebf93942693218d194b68523d5a073da9ee3abc6d0dc246"
+      },
+      {
+        "path": "docs/requirements.txt",
+        "bytes": 49,
+        "sha256": "246ffce391aac05c672f3147e1700e0873a7bf9803edfca9f117b5ac481428a0"
+      },
+      {
+        "path": "logo.png",
+        "bytes": 6732,
+        "sha256": "88c1586d81e59d542ce713ea86af61056a19017e327ef56beccdc0cda5f3bd42"
+      },
+      {
+        "path": "pyproject.toml",
+        "bytes": 117,
+        "sha256": "af994ae6dd72855f580e9d00e47ea090a2dd1ed59aab9717031b5ab8b0d1f360"
+      },
+      {
+        "path": "setup.cfg",
+        "bytes": 1506,
+        "sha256": "06de07a65a140ccad8c53ba50b67904b888783708e5af66b46b74e17408b8f2d"
+      },
+      {
+        "path": "src/shiv/__init__.py",
+        "bytes": 45,
+        "sha256": "5f71229de526a25004a276666d8329d66f4b65b3a9a2993aac8ab67d18f59ea6"
+      },
+      {
+        "path": "src/shiv/__main__.py",
+        "bytes": 139,
+        "sha256": "b580391f6327b070c168dd948a316367ff92e5e6f6a20066404c1de761723aac"
+      },
+      {
+        "path": "src/shiv/__version__.py",
+        "bytes": 22,
+        "sha256": "2c6550c83b1689f7400a8eeacedc1bf115961ddb3513bb90f99a83f12023cb0e"
+      },
+      {
+        "path": "src/shiv/bootstrap/__init__.py",
+        "bytes": 9259,
+        "sha256": "2aad2a71f8de656e583665b9e7f3e9cf66e4d4b0092a29bcfa1f6670fc740ed8"
+      },
+      {
+        "path": "src/shiv/bootstrap/environment.py",
+        "bytes": 3787,
+        "sha256": "6e6044c53889f81523b4e7f78e3d38cf24f6784748491e89b323b8400d507a05"
+      },
+      {
+        "path": "src/shiv/bootstrap/filelock.py",
+        "bytes": 2063,
+        "sha256": "b72de8da60c7f373cf13a76583897e0a5e51a69a75b629fd00d5ca55bc64bb9d"
+      },
+      {
+        "path": "src/shiv/bootstrap/interpreter.py",
+        "bytes": 1762,
+        "sha256": "1bcaf5d4e0afd7ab50066901316b10d1746bf1ae003b3b62ed2d8fdda5444e02"
+      },
+      {
+        "path": "src/shiv/builder.py",
+        "bytes": 7470,
+        "sha256": "e497fdc4b9b4093e05e4ffcbe8ff9a3e6a5f3912b7f33a9c3aaa3926dad623be"
+      },
+      {
+        "path": "src/shiv/cli.py",
+        "bytes": 9521,
+        "sha256": "569eeabb87e8e3cd6950b575bc058cef5aab4a32f14c69e869d53f98fa922ec3"
+      },
+      {
+        "path": "src/shiv/constants.py",
+        "bytes": 1586,
+        "sha256": "8cce8bbc9395a6099a8479b90bb3af8049db78764cc46faead691c60f92a46bf"
+      },
+      {
+        "path": "src/shiv/info.py",
+        "bytes": 1010,
+        "sha256": "d1515db4f3e9dceae06b8a6584c271ceaf535783cd05cc4c2b0f8bf024987723"
+      },
+      {
+        "path": "src/shiv/pip.py",
+        "bytes": 1983,
+        "sha256": "46c6e4dd95e855d9359993bbbc8993789ec557a4e4605c3e7ac0cd2b2cbb07bd"
+      },
+      {
+        "path": "test/conftest.py",
+        "bytes": 917,
+        "sha256": "859bfefefa2d40b28fa26a132cf03ad7278c092e8ba6f6e4c476d116b929f70b"
+      },
+      {
+        "path": "test/package/hello/__init__.py",
+        "bytes": 37,
+        "sha256": "1e8d5b8a6839487a4211229f69b76a5f901515dcad7f111a4bdd5b30d9e96020"
+      },
+      {
+        "path": "test/package/hello/script.sh",
+        "bytes": 28,
+        "sha256": "e0f99a6f14e11b85ef604445e24e11d7193a3f0a8fed3d1964880088017f9b1a"
+      },
+      {
+        "path": "test/package/setup.py",
+        "bytes": 200,
+        "sha256": "2e27bfca1ad8526d1524d8d47a8f605f887879d44a54699cfeae88377899eabe"
+      },
+      {
+        "path": "test/test.zip",
+        "bytes": 342,
+        "sha256": "bc13cd033733495bef6b26eaf91723a68e1e2b7ae5f10f8f3f51e93de16a2a85"
+      },
+      {
+        "path": "test/test_bootstrap.py",
+        "bytes": 7575,
+        "sha256": "68bf6ec5e406cf89e9ac086e5bee51c8cdcee9c1415df1a78c08cfcf04bf1da7"
+      },
+      {
+        "path": "test/test_builder.py",
+        "bytes": 2378,
+        "sha256": "da9bd4d61625a748e73a0ad6be795f0dd6381e90fc3f255d0023aaf9444f5fb8"
+      },
+      {
+        "path": "test/test_cli.py",
+        "bytes": 14303,
+        "sha256": "fc774be230dec2b86a7417534b63819e94abee106cc9a8a3197ec52e589086d4"
+      },
+      {
+        "path": "test/test_pip.py",
+        "bytes": 379,
+        "sha256": "ce08b0360dfb8ba3b181a5926b06708743ef06bca612e8405a856b9df74da98d"
+      },
+      {
+        "path": "tox.ini",
+        "bytes": 258,
+        "sha256": "a439ff52735d0cfaad3b189c09e4093111754cf8c1f55eb260c1bee01d955caa"
+      }
+    ]
+  },
+  "alternatives": [
+    {
+      "project": "steno",
+      "observation": "Substantial first-party Python/Swift/web project; primary commands depend on app services, platform build paths or ML environment. Not chosen for this offline packaging case."
+    },
+    {
+      "project": "comics_app",
+      "observation": "Substantial first-party Go/React project; CLI operations generally require running backend services. Not chosen for this offline packaging case."
+    },
+    {
+      "project": "existing skilltest runner",
+      "observation": "Real first-party code and offline worksheet path exist, but testing-specific context would complicate keeping study/skill guidance out of subjects. Not chosen."
+    }
+  ],
+  "qualification": {
+    "baseline": {
+      "source_revision": "ff542cbe75ea832df3a989d07c7fdf5214f727fa",
+      "interpreter": "/Users/simon/work/personal/steno/python/.venv/bin/python",
+      "argv": [
+        "--site-packages",
+        "site",
+        "-e",
+        "greeting:main",
+        "--output-file",
+        "greeting.pyz"
+      ],
+      "build_exit": 0,
+      "run_exit": 0,
+      "run_stdout": "discovery-fixture-ok\n",
+      "pip_install": "guarded: unexpected invocation would raise; none occurred",
+      "model_calls": 0
+    },
+    "rename": {
+      "purpose": "Throwaway source adaptation feasibility; not a subject case or model run",
+      "source_changes": [
+        "src/shiv/cli.py: long option rename with callback parameter retained",
+        "src/shiv/constants.py: current error message"
+      ],
+      "results": [
+        {
+          "option": "--destination",
+          "exit_code": 0,
+          "output": "",
+          "artifact_exists": true,
+          "artifact_exit": 0,
+          "artifact_stdout": "discovery-fixture-ok\n"
+        },
+        {
+          "option": "--output-file",
+          "exit_code": 1,
+          "output": "\nYou must provide an output file option! (--destination/-o)\n\n",
+          "artifact_exists": false
+        },
+        {
+          "option": "-o",
+          "exit_code": 0,
+          "output": "",
+          "artifact_exists": true,
+          "artifact_exit": 0,
+          "artifact_stdout": "discovery-fixture-ok\n"
+        }
+      ],
+      "model_calls": 0
+    },
+    "scripts": [
+      {
+        "path": "/private/tmp/ssr-shiv-feasibility/probe.py",
+        "sha256": "bf2197ca6dd7baf11c336e6f79176058f3ff3f2c51b63a4ae2e514730f90426b",
+        "source": "from pathlib import Path\nimport json,os,subprocess,sys\nsys.dont_write_bytecode=True\nsys.path.insert(0,'/private/tmp/ssr-discovery-shiv/src')\nfrom click.testing import CliRunner\nfrom shiv.cli import main\nimport shiv.pip\n\ndef no_install(*args,**kwargs):\n    raise AssertionError('Unexpected pip installation in offline probe')\nshiv.pip.install=no_install\nroot=Path('/private/tmp/ssr-shiv-feasibility')\nresult=CliRunner().invoke(main,['--site-packages',str(root/'site'),'-e','greeting:main','--output-file',str(root/'greeting.pyz')])\nassert result.exit_code==0,(result.output,str(result.exception))\nenv=os.environ|{'SHIV_ROOT':str(root/'cache'),'PYTHONDONTWRITEBYTECODE':'1','PYTHONNOUSERSITE':'1'}\nr=subprocess.run([sys.executable,str(root/'greeting.pyz')],env=env,capture_output=True,text=True)\nassert r.returncode==0 and r.stdout=='discovery-fixture-ok\\n',(r.returncode,r.stdout,r.stderr)\nrecord={'source_revision':subprocess.check_output(['git','-C','/private/tmp/ssr-discovery-shiv','rev-parse','HEAD'],text=True).strip(),'interpreter':sys.executable,'argv':['--site-packages','site','-e','greeting:main','--output-file','greeting.pyz'],'build_exit':result.exit_code,'run_exit':r.returncode,'run_stdout':r.stdout,'pip_install':'guarded: unexpected invocation would raise; none occurred','model_calls':0}\n(root/'result.json').write_text(json.dumps(record,indent=2)+'\\n');print(json.dumps(record,indent=2))\n"
+      },
+      {
+        "path": "/private/tmp/ssr-shiv-feasibility/rename_probe.py",
+        "sha256": "dad6f5e473f70e938b5f7ece57ba2787624e030801d51a09fea25db0ff6940e3",
+        "source": "from pathlib import Path\nimport hashlib,json,os,shutil,subprocess,sys\nsys.dont_write_bytecode=True\nroot=Path('/private/tmp/ssr-shiv-feasibility');target=root/'renamed-src'\nassert not target.exists()\nshutil.copytree('/private/tmp/ssr-discovery-shiv/src',target)\np=target/'shiv/cli.py';s=p.read_text();old='@click.option(\"--output-file\", \"-o\", help=\"The path to the output file for shiv to create.\")';assert s.count(old)==1;p.write_text(s.replace(old,'@click.option(\"--destination\", \"-o\", \"output_file\", help=\"The path to the output file for shiv to create.\")'))\np=target/'shiv/constants.py';p.write_text(p.read_text().replace('(--output-file/-o)','(--destination/-o)'))\nsys.path.insert(0,str(target))\nfrom click.testing import CliRunner\nfrom shiv.cli import main\nimport shiv.pip\ndef forbid_install(*args,**kwargs):raise AssertionError('Unexpected pip invocation')\nshiv.pip.install=forbid_install\nresults=[]\nfor option in ['--destination','--output-file','-o']:\n artifact=root/('probe-'+option.replace('-','')+'.pyz')\n result=CliRunner().invoke(main,['--site-packages',str(root/'site'),'-e','greeting:main',option,str(artifact)])\n record={'option':option,'exit_code':result.exit_code,'output':result.output,'artifact_exists':artifact.exists()}\n if option=='--output-file':assert result.exit_code!=0 and not artifact.exists()\n else:\n  assert result.exit_code==0,(result.output,str(result.exception))\n  p=subprocess.run([sys.executable,str(artifact)],capture_output=True,text=True,env=os.environ|{'SHIV_ROOT':str(root/'cache'),'PYTHONDONTWRITEBYTECODE':'1'})\n  assert p.returncode==0 and p.stdout=='discovery-fixture-ok\\n';record.update(artifact_exit=p.returncode,artifact_stdout=p.stdout)\n results.append(record)\n(root/'rename-result.json').write_text(json.dumps({'purpose':'Throwaway source adaptation feasibility; not a subject case or model run','source_changes':['src/shiv/cli.py: long option rename with callback parameter retained','src/shiv/constants.py: current error message'],'results':results,'model_calls':0},indent=2)+'\\n')\nprint(json.dumps(results,indent=2))\n"
+      }
+    ]
+  },
+  "limits": [
+    "40-file real project is an opportunity for selective search, not proof it is difficult or that controls will miss references.",
+    "Probe reused an existing local Python environment for feasibility only; subject dependency isolation and portability remain unqualified.",
+    "No source copied into an active case yet; no local user project changed.",
+    "Upstream source alone is not a finished scenario: task, consumers, preservation scope, checker expectations and input manifests still need preparation.",
+    "Only one additional-development call remains; no pair or budget transfer authorized."
+  ]
+}

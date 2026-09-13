@@ -1,0 +1,405 @@
+{
+  "upstream": {
+    "url": "https://github.com/linkedin/shiv",
+    "revision": "ff542cbe75ea832df3a989d07c7fdf5214f727fa",
+    "files": [
+      {
+        "path": ".github/workflows/tox.yml",
+        "sha256": "c9134958aaae897e137be339ae1ecbd9afa888d3fac44e66a40d36e12e0313e5",
+        "bytes": 1043,
+        "mode": "0o644"
+      },
+      {
+        "path": ".gitignore",
+        "sha256": "2ea45306d66be71f9bc9c2644cccf0fa4fbcf5ff5bc9ea410aa243547b6f5afe",
+        "bytes": 885,
+        "mode": "0o644"
+      },
+      {
+        "path": ".readthedocs.yml",
+        "sha256": "b007b647aa6c66dde072127135990a0d4a1eebda8e3253f5289cebdc524e33ac",
+        "bytes": 146,
+        "mode": "0o644"
+      },
+      {
+        "path": "CONTRIBUTING.md",
+        "sha256": "d0758cdef5279083fdde0329e9e404ea59feae22297f7cf90073cbf4b348c086",
+        "bytes": 1202,
+        "mode": "0o644"
+      },
+      {
+        "path": "LICENSE",
+        "sha256": "ade0fc62f14848627283169c38316c38def3a314ba76f31df66fb7fe0922dc99",
+        "bytes": 1326,
+        "mode": "0o644"
+      },
+      {
+        "path": "MANIFEST.in",
+        "sha256": "c95531f69859851f909ab781c4554425e9106c4ab719975a1f60c6a7fb0e52ec",
+        "bytes": 155,
+        "mode": "0o644"
+      },
+      {
+        "path": "NOTICE",
+        "sha256": "d4291847bbf81e16e02ace396847a02010e99d69fae69d82f4ba6e45bca43d35",
+        "bytes": 174,
+        "mode": "0o644"
+      },
+      {
+        "path": "README.md",
+        "sha256": "c866c1a488e88ab77a11af53232916f59da183edccd04cbee0c2b52163e1013c",
+        "bytes": 3832,
+        "mode": "0o644"
+      },
+      {
+        "path": "docs/api.rst",
+        "sha256": "036167d0f5966793b803ff046f766a1791c73055c22e01a06f5b53524aeed14d",
+        "bytes": 731,
+        "mode": "0o644"
+      },
+      {
+        "path": "docs/cli-reference.rst",
+        "sha256": "02e63e0d50cab6430a20b606f8e3cf5e0462eca27d479c709220d345c691a727",
+        "bytes": 1192,
+        "mode": "0o644"
+      },
+      {
+        "path": "docs/conf.py",
+        "sha256": "b0898d831aa506a256e5341307224623697840f60dbae6d1726323f9634acc47",
+        "bytes": 540,
+        "mode": "0o644"
+      },
+      {
+        "path": "docs/django.rst",
+        "sha256": "799dfd7e4953a0f433bd7db601bcdf6722bf80bebe655bf221f34ada3d130acc",
+        "bytes": 2008,
+        "mode": "0o644"
+      },
+      {
+        "path": "docs/history.rst",
+        "sha256": "266f3d9ee1931a24220fc3dcefd528ee8ec50db06e4a9b756e2ccc5b65cb0416",
+        "bytes": 3015,
+        "mode": "0o644"
+      },
+      {
+        "path": "docs/index.rst",
+        "sha256": "601d3a6474aeea208ebf93942693218d194b68523d5a073da9ee3abc6d0dc246",
+        "bytes": 11281,
+        "mode": "0o644"
+      },
+      {
+        "path": "docs/requirements.txt",
+        "sha256": "246ffce391aac05c672f3147e1700e0873a7bf9803edfca9f117b5ac481428a0",
+        "bytes": 49,
+        "mode": "0o644"
+      },
+      {
+        "path": "logo.png",
+        "sha256": "88c1586d81e59d542ce713ea86af61056a19017e327ef56beccdc0cda5f3bd42",
+        "bytes": 6732,
+        "mode": "0o644"
+      },
+      {
+        "path": "pyproject.toml",
+        "sha256": "af994ae6dd72855f580e9d00e47ea090a2dd1ed59aab9717031b5ab8b0d1f360",
+        "bytes": 117,
+        "mode": "0o644"
+      },
+      {
+        "path": "setup.cfg",
+        "sha256": "06de07a65a140ccad8c53ba50b67904b888783708e5af66b46b74e17408b8f2d",
+        "bytes": 1506,
+        "mode": "0o644"
+      },
+      {
+        "path": "src/shiv/__init__.py",
+        "sha256": "5f71229de526a25004a276666d8329d66f4b65b3a9a2993aac8ab67d18f59ea6",
+        "bytes": 45,
+        "mode": "0o644"
+      },
+      {
+        "path": "src/shiv/__main__.py",
+        "sha256": "b580391f6327b070c168dd948a316367ff92e5e6f6a20066404c1de761723aac",
+        "bytes": 139,
+        "mode": "0o644"
+      },
+      {
+        "path": "src/shiv/__version__.py",
+        "sha256": "2c6550c83b1689f7400a8eeacedc1bf115961ddb3513bb90f99a83f12023cb0e",
+        "bytes": 22,
+        "mode": "0o644"
+      },
+      {
+        "path": "src/shiv/bootstrap/__init__.py",
+        "sha256": "2aad2a71f8de656e583665b9e7f3e9cf66e4d4b0092a29bcfa1f6670fc740ed8",
+        "bytes": 9259,
+        "mode": "0o644"
+      },
+      {
+        "path": "src/shiv/bootstrap/environment.py",
+        "sha256": "6e6044c53889f81523b4e7f78e3d38cf24f6784748491e89b323b8400d507a05",
+        "bytes": 3787,
+        "mode": "0o644"
+      },
+      {
+        "path": "src/shiv/bootstrap/filelock.py",
+        "sha256": "b72de8da60c7f373cf13a76583897e0a5e51a69a75b629fd00d5ca55bc64bb9d",
+        "bytes": 2063,
+        "mode": "0o644"
+      },
+      {
+        "path": "src/shiv/bootstrap/interpreter.py",
+        "sha256": "1bcaf5d4e0afd7ab50066901316b10d1746bf1ae003b3b62ed2d8fdda5444e02",
+        "bytes": 1762,
+        "mode": "0o644"
+      },
+      {
+        "path": "src/shiv/builder.py",
+        "sha256": "e497fdc4b9b4093e05e4ffcbe8ff9a3e6a5f3912b7f33a9c3aaa3926dad623be",
+        "bytes": 7470,
+        "mode": "0o644"
+      },
+      {
+        "path": "src/shiv/cli.py",
+        "sha256": "569eeabb87e8e3cd6950b575bc058cef5aab4a32f14c69e869d53f98fa922ec3",
+        "bytes": 9521,
+        "mode": "0o644"
+      },
+      {
+        "path": "src/shiv/constants.py",
+        "sha256": "8cce8bbc9395a6099a8479b90bb3af8049db78764cc46faead691c60f92a46bf",
+        "bytes": 1586,
+        "mode": "0o644"
+      },
+      {
+        "path": "src/shiv/info.py",
+        "sha256": "d1515db4f3e9dceae06b8a6584c271ceaf535783cd05cc4c2b0f8bf024987723",
+        "bytes": 1010,
+        "mode": "0o644"
+      },
+      {
+        "path": "src/shiv/pip.py",
+        "sha256": "46c6e4dd95e855d9359993bbbc8993789ec557a4e4605c3e7ac0cd2b2cbb07bd",
+        "bytes": 1983,
+        "mode": "0o644"
+      },
+      {
+        "path": "test/conftest.py",
+        "sha256": "859bfefefa2d40b28fa26a132cf03ad7278c092e8ba6f6e4c476d116b929f70b",
+        "bytes": 917,
+        "mode": "0o644"
+      },
+      {
+        "path": "test/package/hello/__init__.py",
+        "sha256": "1e8d5b8a6839487a4211229f69b76a5f901515dcad7f111a4bdd5b30d9e96020",
+        "bytes": 37,
+        "mode": "0o644"
+      },
+      {
+        "path": "test/package/hello/script.sh",
+        "sha256": "e0f99a6f14e11b85ef604445e24e11d7193a3f0a8fed3d1964880088017f9b1a",
+        "bytes": 28,
+        "mode": "0o755"
+      },
+      {
+        "path": "test/package/setup.py",
+        "sha256": "2e27bfca1ad8526d1524d8d47a8f605f887879d44a54699cfeae88377899eabe",
+        "bytes": 200,
+        "mode": "0o644"
+      },
+      {
+        "path": "test/test.zip",
+        "sha256": "bc13cd033733495bef6b26eaf91723a68e1e2b7ae5f10f8f3f51e93de16a2a85",
+        "bytes": 342,
+        "mode": "0o644"
+      },
+      {
+        "path": "test/test_bootstrap.py",
+        "sha256": "68bf6ec5e406cf89e9ac086e5bee51c8cdcee9c1415df1a78c08cfcf04bf1da7",
+        "bytes": 7575,
+        "mode": "0o644"
+      },
+      {
+        "path": "test/test_builder.py",
+        "sha256": "da9bd4d61625a748e73a0ad6be795f0dd6381e90fc3f255d0023aaf9444f5fb8",
+        "bytes": 2378,
+        "mode": "0o644"
+      },
+      {
+        "path": "test/test_cli.py",
+        "sha256": "fc774be230dec2b86a7417534b63819e94abee106cc9a8a3197ec52e589086d4",
+        "bytes": 14303,
+        "mode": "0o644"
+      },
+      {
+        "path": "test/test_pip.py",
+        "sha256": "ce08b0360dfb8ba3b181a5926b06708743ef06bca612e8405a856b9df74da98d",
+        "bytes": 379,
+        "mode": "0o644"
+      },
+      {
+        "path": "tox.ini",
+        "sha256": "a439ff52735d0cfaad3b189c09e4093111754cf8c1f55eb260c1bee01d955caa",
+        "bytes": 258,
+        "mode": "0o644"
+      }
+    ]
+  },
+  "runtime_dependency": {
+    "name": "click",
+    "version": "8.4.2",
+    "source": "Existing installed package, copied with license; no installation or network needed by supplied local consumers.",
+    "files": [
+      {
+        "source": "/Users/simon/work/personal/steno/python/.venv/lib/python3.12/site-packages/click/__init__.py",
+        "target": ".runtime/click/__init__.py",
+        "sha256": "1487767d7092241df27960fe7b6b8e37e9818456b661cf4cbd71a61eef0e5c6d"
+      },
+      {
+        "source": "/Users/simon/work/personal/steno/python/.venv/lib/python3.12/site-packages/click/_compat.py",
+        "target": ".runtime/click/_compat.py",
+        "sha256": "80f36d5d0f6af86e908a5d9bf8c0b90ac1ec186710e2ee98496cbdfed966ba17"
+      },
+      {
+        "source": "/Users/simon/work/personal/steno/python/.venv/lib/python3.12/site-packages/click/_termui_impl.py",
+        "target": ".runtime/click/_termui_impl.py",
+        "sha256": "086760db801e5e28de192cdbbb467bc7773869a6a15458d506911b6e3850e4ae"
+      },
+      {
+        "source": "/Users/simon/work/personal/steno/python/.venv/lib/python3.12/site-packages/click/_textwrap.py",
+        "target": ".runtime/click/_textwrap.py",
+        "sha256": "ed9d0ded59a7fbae933524d4c29e8e5c96dc5174666044fd87d736b9c0fca104"
+      },
+      {
+        "source": "/Users/simon/work/personal/steno/python/.venv/lib/python3.12/site-packages/click/_utils.py",
+        "target": ".runtime/click/_utils.py",
+        "sha256": "782642b7026db180f941892435627c318ffc001223cbc31cce030cc95637dab4"
+      },
+      {
+        "source": "/Users/simon/work/personal/steno/python/.venv/lib/python3.12/site-packages/click/_winconsole.py",
+        "target": ".runtime/click/_winconsole.py",
+        "sha256": "292c5f35b3256116ba18e26e08b82c8363dbddd56480934fa8b24f69ef8f6b5d"
+      },
+      {
+        "source": "/Users/simon/work/personal/steno/python/.venv/lib/python3.12/site-packages/click/core.py",
+        "target": ".runtime/click/core.py",
+        "sha256": "ad9cfbea284d4c5578636b31a771fe9bddc6c4bd9a703e4faacd08a1b12f9ae9"
+      },
+      {
+        "source": "/Users/simon/work/personal/steno/python/.venv/lib/python3.12/site-packages/click/decorators.py",
+        "target": ".runtime/click/decorators.py",
+        "sha256": "f5ed4d76ee2384601c3fa44674d3c0c005adb8ff6112ce044e9d6ede52a61f5a"
+      },
+      {
+        "source": "/Users/simon/work/personal/steno/python/.venv/lib/python3.12/site-packages/click/exceptions.py",
+        "target": ".runtime/click/exceptions.py",
+        "sha256": "1ef498df81b86ae8ff6d8451f3e4fc094f09c2aff5f8e72c454e1ecdfa337849"
+      },
+      {
+        "source": "/Users/simon/work/personal/steno/python/.venv/lib/python3.12/site-packages/click/formatting.py",
+        "target": ".runtime/click/formatting.py",
+        "sha256": "f125b628692f8dfcfd43535b7a88cc1ee64137471f9d0243b389aa0cfea85e6b"
+      },
+      {
+        "source": "/Users/simon/work/personal/steno/python/.venv/lib/python3.12/site-packages/click/globals.py",
+        "target": ".runtime/click/globals.py",
+        "sha256": "80cf8d87a0383341c1fd2824685e4ce2770618c0c773f7e51d7bbdfe88781845"
+      },
+      {
+        "source": "/Users/simon/work/personal/steno/python/.venv/lib/python3.12/site-packages/click/parser.py",
+        "target": ".runtime/click/parser.py",
+        "sha256": "a09f9f53fde6bf1ba022e36d1da0804d9e7a9601261d18208c9892a84818ae30"
+      },
+      {
+        "source": "/Users/simon/work/personal/steno/python/.venv/lib/python3.12/site-packages/click/py.typed",
+        "target": ".runtime/click/py.typed",
+        "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+      },
+      {
+        "source": "/Users/simon/work/personal/steno/python/.venv/lib/python3.12/site-packages/click/shell_completion.py",
+        "target": ".runtime/click/shell_completion.py",
+        "sha256": "e6d186639a55de6019d7bc53db73a7b8aad6ab3132c8b56dac9df49e95318e45"
+      },
+      {
+        "source": "/Users/simon/work/personal/steno/python/.venv/lib/python3.12/site-packages/click/termui.py",
+        "target": ".runtime/click/termui.py",
+        "sha256": "567f5e866ad097ddb3dbfe91e1b5593ac1d423a8fc2eb4fcbb44733595290af6"
+      },
+      {
+        "source": "/Users/simon/work/personal/steno/python/.venv/lib/python3.12/site-packages/click/testing.py",
+        "target": ".runtime/click/testing.py",
+        "sha256": "4bd23ea6ca409491f746f6495834282576fe3349eb0042735dc533ad55ec4f7e"
+      },
+      {
+        "source": "/Users/simon/work/personal/steno/python/.venv/lib/python3.12/site-packages/click/types.py",
+        "target": ".runtime/click/types.py",
+        "sha256": "f46e0307e9c18fea2603f5d6b18c1b4371fd064a47f36c098fe93120f49c2a60"
+      },
+      {
+        "source": "/Users/simon/work/personal/steno/python/.venv/lib/python3.12/site-packages/click/utils.py",
+        "target": ".runtime/click/utils.py",
+        "sha256": "5f0ac3c4ecd4fffae71e7fabbc9989703ede71bca950a31e0c94118cdd85f8e0"
+      },
+      {
+        "source": "/Users/simon/work/personal/steno/python/.venv/lib/python3.12/site-packages/click-8.4.2.dist-info/licenses/LICENSE.txt",
+        "target": ".runtime/licenses/click/LICENSE.txt",
+        "sha256": "9a8ad106a394e853bfe21f42f4e72d592819a22805d991b5f3275029292b658d"
+      }
+    ]
+  },
+  "adaptations": {
+    "changed_upstream": [
+      {
+        "path": ".gitignore",
+        "upstream_sha256": "2ea45306d66be71f9bc9c2644cccf0fa4fbcf5ff5bc9ea410aa243547b6f5afe",
+        "fixture_sha256": "e9542eec883f95fb0a64d2a9deca8bbcde5af2bf7a7ec0bd855a10f391471585"
+      },
+      {
+        "path": "README.md",
+        "upstream_sha256": "c866c1a488e88ab77a11af53232916f59da183edccd04cbee0c2b52163e1013c",
+        "fixture_sha256": "d2c3e86ea8071cdd66ffc84ce69556634c9c1bad1cf92b489e69893f94c1d1b8"
+      },
+      {
+        "path": "src/shiv/cli.py",
+        "upstream_sha256": "569eeabb87e8e3cd6950b575bc058cef5aab4a32f14c69e869d53f98fa922ec3",
+        "fixture_sha256": "71304522859c6769f398ee445a18f664aec47ee1ca5108ccea4af885f11157ff"
+      },
+      {
+        "path": "src/shiv/constants.py",
+        "upstream_sha256": "8cce8bbc9395a6099a8479b90bb3af8049db78764cc46faead691c60f92a46bf",
+        "fixture_sha256": "9684ca65ec3e47fd9e5bef97430f5fa0549ef979fd28e6b5a3883d40838a570e"
+      }
+    ],
+    "added_project_files": [
+      ".github/workflows/offline-example.yml",
+      "Makefile",
+      "build-support/release/example.mk",
+      "docs/history/output-option.md",
+      "docs/local-development.md",
+      "examples/greeting/greeting.py",
+      "scripts/build-example.sh",
+      "tests_local/test_offline.py",
+      "tools/inventory.py",
+      "tools/shiv-local.py"
+    ],
+    "reasons": {
+      "README.md": "Add an executable offline example and local-test instructions while retaining upstream documentation.",
+      ".gitignore": "Ignore supplied runtime, skill and task inputs; other upstream rules retained.",
+      "src/shiv/cli.py": "Study-only settled long option rename; preserve -o alias and output_file callback parameter.",
+      "src/shiv/constants.py": "Bring the error message into agreement with the settled interface."
+    },
+    "synthetic_material": "Greeting application, four stale consumers, independent inventory tool/docs, historical note and local CLI tests are study-authored additions, not upstream history."
+  },
+  "size": {
+    "project": {
+      "files": 50,
+      "bytes": 106979,
+      "lines_including_binary_payload_lines": 3083
+    },
+    "runtime": {
+      "files": 19,
+      "bytes": 424152,
+      "lines_including_binary_payload_lines": 12207
+    }
+  }
+}

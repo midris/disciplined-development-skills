@@ -1,0 +1,14 @@
+{
+  "status": "Local case preparation, no model calls or dispatch authorization",
+  "base_revision": "ac971b0cf5017fd5a4d68e72fd9a25cb9388d198",
+  "policy": {
+    "id": "SSR-assessment-2",
+    "source_revision": "ac971b0cf5017fd5a4d68e72fd9a25cb9388d198",
+    "source_path": "skill-studies/sweeping-stale-references/protocol.md",
+    "source_sha256": "704e15d15ecb8173d4c750842a88d94103fc24e2b3822eb36c31dde41a15011a",
+    "extraction": "Current SSR assessment policy section, excluding blank separator before following heading.",
+    "copy_sha256": "625e91999ba68e18eda230b92b6da1e6f6ea51a42aa89f5cbce674e41a097837"
+  },
+  "prior_draft": "cases/pilot-03 stays preserved/undispatched; this is a distinct replacement case, not an assessment revision.",
+  "owner_context": "Owner approved proceeding with Shiv and clarified packaging is only the scenario domain; the tested behavior is discovery and reconciliation."
+}

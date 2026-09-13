@@ -1,0 +1,609 @@
+{
+  "status": "Local qualification only; no providers invoked",
+  "python": {
+    "argv": [
+      "python3",
+      "--version"
+    ],
+    "cwd": "/Users/simon/work/personal/disciplined-development-skills",
+    "exit_code": 0,
+    "stdout": "Python 3.14.7\n",
+    "stderr": ""
+  },
+  "suites": [
+    {
+      "argv": [
+        "python3",
+        "-B",
+        "-m",
+        "unittest",
+        "discover",
+        "-s",
+        "/Users/simon/work/personal/disciplined-development-skills/skill-studies/sweeping-stale-references/cases/discovery-shiv/fixture/tests_local"
+      ],
+      "cwd": "/Users/simon/work/personal/disciplined-development-skills",
+      "exit_code": 0,
+      "stdout": "",
+      "stderr": "....\n----------------------------------------------------------------------\nRan 4 tests in 0.404s\n\nOK\n"
+    },
+    {
+      "argv": [
+        "python3",
+        "-B",
+        "-m",
+        "unittest",
+        "discover",
+        "-s",
+        "/Users/simon/work/personal/disciplined-development-skills/skill-studies/sweeping-stale-references/cases/discovery-shiv",
+        "-p",
+        "test_check_*.py"
+      ],
+      "cwd": "/Users/simon/work/personal/disciplined-development-skills",
+      "exit_code": 0,
+      "stdout": "",
+      "stderr": "..............\n----------------------------------------------------------------------\nRan 14 tests in 12.388s\n\nOK\n"
+    }
+  ],
+  "hook_suite": {
+    "argv": [
+      "python3",
+      "-m",
+      "pytest",
+      "-q"
+    ],
+    "cwd": "/Users/simon/work/personal/disciplined-development-skills/skills/disciplined-development/hooks",
+    "exit_code": 0,
+    "stdout": "........................................................................ [ 27%]\n........................................................................ [ 54%]\n.................................................................sss.... [ 81%]\n..................................................                       [100%]\n263 passed, 3 skipped in 23.15s\n",
+    "stderr": ""
+  },
+  "runner_preparation": {
+    "control": {
+      "fixture_entries": 70,
+      "all_bytes_and_modes_match": true,
+      "baseline_project_files": 50,
+      "scratch_path": "/private/var/folders/55/6jqr25v5211fn00wych8b1jm0000gn/T/skilltest-runs/20260913T145216253Z-ssr-discovery-shiv-control-dfd2d734-5955-4a92-8e09-a4b3a7b8a815-91q0ps4p/workspace/fixture",
+      "prompt_rendered": true
+    },
+    "original": {
+      "fixture_entries": 71,
+      "all_bytes_and_modes_match": true,
+      "baseline_project_files": 50,
+      "scratch_path": "/private/var/folders/55/6jqr25v5211fn00wych8b1jm0000gn/T/skilltest-runs/20260913T145216304Z-ssr-discovery-shiv-original-3a07bcd6-f8cc-409a-9ffd-f77eec5e2a8a-0fb1cvk9/workspace/fixture",
+      "prompt_rendered": true
+    }
+  },
+  "prompt_difference": [
+    "--- ",
+    "+++ ",
+    "@@ -1,3 +1,5 @@",
+    "+Read `.agents/skills/sweeping-stale-references/SKILL.md` completely and apply it when performing the development task below.",
+    "+",
+    " Work in `{{fixture_dir}}`.",
+    " Set repository-local Git identity to `Skill Study <skill-study@example.invalid>`.",
+    " First record the supplied project as a baseline commit with the message `fixture baseline`; use the supplied `.gitignore` and leave it unchanged. This initial commit is workspace setup, not the requested repair."
+  ],
+  "input_parity": {
+    "common_entries": 70,
+    "only_addition": ".agents/skills/sweeping-stale-references/SKILL.md",
+    "common_bytes_identical": true
+  },
+  "constructed_replays": {
+    "pristine": {
+      "consumers": [
+        {
+          "path": "README.md",
+          "status": "observed",
+          "artifact_correct": false,
+          "command": {
+            "argv": [
+              "sh",
+              "-c",
+              "mkdir -p build && python3 -I tools/shiv-local.py --site-packages examples/greeting -e greeting:main --output-file build/readme.pyz"
+            ],
+            "cwd": "/private/var/folders/55/6jqr25v5211fn00wych8b1jm0000gn/T/ssr-shiv-final-184ikkd9/pristine",
+            "exit_code": 1,
+            "stdout": "",
+            "stderr": "\nYou must provide an output file option! (--destination/-o)\n\n"
+          }
+        },
+        {
+          "path": "scripts/build-example.sh",
+          "status": "observed",
+          "artifact_correct": false,
+          "command": {
+            "argv": [
+              "sh",
+              "/private/var/folders/55/6jqr25v5211fn00wych8b1jm0000gn/T/ssr-shiv-final-184ikkd9/pristine/scripts/build-example.sh"
+            ],
+            "cwd": "/private/var/folders/55/6jqr25v5211fn00wych8b1jm0000gn/T/ssr-shiv-final-184ikkd9/pristine",
+            "exit_code": 1,
+            "stdout": "",
+            "stderr": "\nYou must provide an output file option! (--destination/-o)\n\n"
+          }
+        },
+        {
+          "path": "build-support/release/example.mk",
+          "status": "observed",
+          "artifact_correct": false,
+          "command": {
+            "argv": [
+              "make",
+              "release-example"
+            ],
+            "cwd": "/private/var/folders/55/6jqr25v5211fn00wych8b1jm0000gn/T/ssr-shiv-final-184ikkd9/pristine",
+            "exit_code": 2,
+            "stdout": "mkdir -p build\npython3 -I tools/shiv-local.py --site-packages examples/greeting -e greeting:main --output-file build/release.pyz\n",
+            "stderr": "\nYou must provide an output file option! (--destination/-o)\n\nmake: *** [release-example] Error 1\n"
+          }
+        },
+        {
+          "path": ".github/workflows/offline-example.yml",
+          "status": "observed",
+          "artifact_correct": false,
+          "command": {
+            "argv": [
+              "sh",
+              "-c",
+              "mkdir -p build && python3 -I tools/shiv-local.py --site-packages examples/greeting -e greeting:main --output-file build/ci.pyz"
+            ],
+            "cwd": "/private/var/folders/55/6jqr25v5211fn00wych8b1jm0000gn/T/ssr-shiv-final-184ikkd9/pristine",
+            "exit_code": 1,
+            "stdout": "",
+            "stderr": "\nYou must provide an output file option! (--destination/-o)\n\n"
+          }
+        }
+      ],
+      "local_from_outside": {
+        "path": "scripts/build-example.sh",
+        "status": "observed",
+        "artifact_correct": false,
+        "command": {
+          "argv": [
+            "sh",
+            "/private/var/folders/55/6jqr25v5211fn00wych8b1jm0000gn/T/ssr-shiv-final-184ikkd9/pristine/scripts/build-example.sh"
+          ],
+          "cwd": "/private/var/folders/55/6jqr25v5211fn00wych8b1jm0000gn/T/ssr-shiv-final-184ikkd9",
+          "exit_code": 1,
+          "stdout": "",
+          "stderr": "\nYou must provide an output file option! (--destination/-o)\n\n"
+        }
+      },
+      "independent_tool": {
+        "path": "docs/local-development.md",
+        "status": "observed",
+        "artifact_correct": true,
+        "command": {
+          "argv": [
+            "sh",
+            "-c",
+            "python3 -I tools/inventory.py examples/greeting --output-file build/inventory.json"
+          ],
+          "cwd": "/private/var/folders/55/6jqr25v5211fn00wych8b1jm0000gn/T/ssr-shiv-final-184ikkd9/pristine",
+          "exit_code": 0,
+          "stdout": "",
+          "stderr": ""
+        }
+      },
+      "canonical_cli": {
+        "path": "canonical CLI",
+        "status": "observed",
+        "artifact_correct": true,
+        "command": {
+          "argv": [
+            "/opt/homebrew/opt/python@3.14/bin/python3.14",
+            "-I",
+            "-B",
+            "/private/var/folders/55/6jqr25v5211fn00wych8b1jm0000gn/T/ssr-shiv-final-184ikkd9/pristine/tools/shiv-local.py",
+            "--site-packages",
+            "examples/greeting",
+            "-e",
+            "greeting:main",
+            "--destination",
+            "build/canonical.pyz"
+          ],
+          "cwd": "/private/var/folders/55/6jqr25v5211fn00wych8b1jm0000gn/T/ssr-shiv-final-184ikkd9/pristine",
+          "exit_code": 0,
+          "stdout": "",
+          "stderr": ""
+        },
+        "artifact": {
+          "path": "build/canonical.pyz",
+          "exists": true,
+          "payload_matches": true,
+          "entry_point_matches": true,
+          "execution": {
+            "argv": [
+              "/opt/homebrew/opt/python@3.14/bin/python3.14",
+              "-I",
+              "-B",
+              "/private/var/folders/55/6jqr25v5211fn00wych8b1jm0000gn/T/ssr-shiv-final-184ikkd9/pristine/build/canonical.pyz"
+            ],
+            "cwd": "/private/var/folders/55/6jqr25v5211fn00wych8b1jm0000gn/T/ssr-shiv-final-184ikkd9/pristine",
+            "exit_code": 0,
+            "stdout": "discovery-fixture-ok\n",
+            "stderr": ""
+          }
+        }
+      },
+      "short_alias": {
+        "path": "supported alias",
+        "status": "observed",
+        "artifact_correct": true,
+        "command": {
+          "argv": [
+            "/opt/homebrew/opt/python@3.14/bin/python3.14",
+            "-I",
+            "-B",
+            "/private/var/folders/55/6jqr25v5211fn00wych8b1jm0000gn/T/ssr-shiv-final-184ikkd9/pristine/tools/shiv-local.py",
+            "--site-packages",
+            "examples/greeting",
+            "-e",
+            "greeting:main",
+            "-o",
+            "build/alias.pyz"
+          ],
+          "cwd": "/private/var/folders/55/6jqr25v5211fn00wych8b1jm0000gn/T/ssr-shiv-final-184ikkd9/pristine",
+          "exit_code": 0,
+          "stdout": "",
+          "stderr": ""
+        },
+        "artifact": {
+          "path": "build/alias.pyz",
+          "exists": true,
+          "payload_matches": true,
+          "entry_point_matches": true,
+          "execution": {
+            "argv": [
+              "/opt/homebrew/opt/python@3.14/bin/python3.14",
+              "-I",
+              "-B",
+              "/private/var/folders/55/6jqr25v5211fn00wych8b1jm0000gn/T/ssr-shiv-final-184ikkd9/pristine/build/alias.pyz"
+            ],
+            "cwd": "/private/var/folders/55/6jqr25v5211fn00wych8b1jm0000gn/T/ssr-shiv-final-184ikkd9/pristine",
+            "exit_code": 0,
+            "stdout": "discovery-fixture-ok\n",
+            "stderr": ""
+          }
+        }
+      },
+      "retired_option_probe": {
+        "argv": [
+          "/opt/homebrew/opt/python@3.14/bin/python3.14",
+          "-I",
+          "-B",
+          "/private/var/folders/55/6jqr25v5211fn00wych8b1jm0000gn/T/ssr-shiv-final-184ikkd9/pristine/tools/shiv-local.py",
+          "--site-packages",
+          "examples/greeting",
+          "-e",
+          "greeting:main",
+          "--output-file",
+          "build/retired.pyz"
+        ],
+        "cwd": "/private/var/folders/55/6jqr25v5211fn00wych8b1jm0000gn/T/ssr-shiv-final-184ikkd9/pristine",
+        "exit_code": 1,
+        "stdout": "",
+        "stderr": "\nYou must provide an output file option! (--destination/-o)\n\n"
+      },
+      "retired_option_nonzero": true,
+      "retired_artifact_exists": false,
+      "changed_nonconsumer_files": [],
+      "limit": "Facts only. Inspect semantics, extra files, preserved-content changes, unsupported forms, traces and Git separately. Only the CI build command is replayed locally; no hosted CI or dependency-install step is executed."
+    },
+    "complete": {
+      "consumers": [
+        {
+          "path": "README.md",
+          "status": "observed",
+          "artifact_correct": true,
+          "command": {
+            "argv": [
+              "sh",
+              "-c",
+              "mkdir -p build && python3 -I tools/shiv-local.py --site-packages examples/greeting -e greeting:main --destination build/readme.pyz"
+            ],
+            "cwd": "/private/var/folders/55/6jqr25v5211fn00wych8b1jm0000gn/T/ssr-shiv-final-184ikkd9/complete",
+            "exit_code": 0,
+            "stdout": "",
+            "stderr": ""
+          },
+          "artifact": {
+            "path": "build/readme.pyz",
+            "exists": true,
+            "payload_matches": true,
+            "entry_point_matches": true,
+            "execution": {
+              "argv": [
+                "/opt/homebrew/opt/python@3.14/bin/python3.14",
+                "-I",
+                "-B",
+                "/private/var/folders/55/6jqr25v5211fn00wych8b1jm0000gn/T/ssr-shiv-final-184ikkd9/complete/build/readme.pyz"
+              ],
+              "cwd": "/private/var/folders/55/6jqr25v5211fn00wych8b1jm0000gn/T/ssr-shiv-final-184ikkd9/complete",
+              "exit_code": 0,
+              "stdout": "discovery-fixture-ok\n",
+              "stderr": ""
+            }
+          }
+        },
+        {
+          "path": "scripts/build-example.sh",
+          "status": "observed",
+          "artifact_correct": true,
+          "command": {
+            "argv": [
+              "sh",
+              "/private/var/folders/55/6jqr25v5211fn00wych8b1jm0000gn/T/ssr-shiv-final-184ikkd9/complete/scripts/build-example.sh"
+            ],
+            "cwd": "/private/var/folders/55/6jqr25v5211fn00wych8b1jm0000gn/T/ssr-shiv-final-184ikkd9/complete",
+            "exit_code": 0,
+            "stdout": "",
+            "stderr": ""
+          },
+          "artifact": {
+            "path": "build/local.pyz",
+            "exists": true,
+            "payload_matches": true,
+            "entry_point_matches": true,
+            "execution": {
+              "argv": [
+                "/opt/homebrew/opt/python@3.14/bin/python3.14",
+                "-I",
+                "-B",
+                "/private/var/folders/55/6jqr25v5211fn00wych8b1jm0000gn/T/ssr-shiv-final-184ikkd9/complete/build/local.pyz"
+              ],
+              "cwd": "/private/var/folders/55/6jqr25v5211fn00wych8b1jm0000gn/T/ssr-shiv-final-184ikkd9/complete",
+              "exit_code": 0,
+              "stdout": "discovery-fixture-ok\n",
+              "stderr": ""
+            }
+          }
+        },
+        {
+          "path": "build-support/release/example.mk",
+          "status": "observed",
+          "artifact_correct": true,
+          "command": {
+            "argv": [
+              "make",
+              "release-example"
+            ],
+            "cwd": "/private/var/folders/55/6jqr25v5211fn00wych8b1jm0000gn/T/ssr-shiv-final-184ikkd9/complete",
+            "exit_code": 0,
+            "stdout": "mkdir -p build\npython3 -I tools/shiv-local.py --site-packages examples/greeting -e greeting:main --destination build/release.pyz\n",
+            "stderr": ""
+          },
+          "artifact": {
+            "path": "build/release.pyz",
+            "exists": true,
+            "payload_matches": true,
+            "entry_point_matches": true,
+            "execution": {
+              "argv": [
+                "/opt/homebrew/opt/python@3.14/bin/python3.14",
+                "-I",
+                "-B",
+                "/private/var/folders/55/6jqr25v5211fn00wych8b1jm0000gn/T/ssr-shiv-final-184ikkd9/complete/build/release.pyz"
+              ],
+              "cwd": "/private/var/folders/55/6jqr25v5211fn00wych8b1jm0000gn/T/ssr-shiv-final-184ikkd9/complete",
+              "exit_code": 0,
+              "stdout": "discovery-fixture-ok\n",
+              "stderr": ""
+            }
+          }
+        },
+        {
+          "path": ".github/workflows/offline-example.yml",
+          "status": "observed",
+          "artifact_correct": true,
+          "command": {
+            "argv": [
+              "sh",
+              "-c",
+              "mkdir -p build && python3 -I tools/shiv-local.py --site-packages examples/greeting -e greeting:main --destination build/ci.pyz"
+            ],
+            "cwd": "/private/var/folders/55/6jqr25v5211fn00wych8b1jm0000gn/T/ssr-shiv-final-184ikkd9/complete",
+            "exit_code": 0,
+            "stdout": "",
+            "stderr": ""
+          },
+          "artifact": {
+            "path": "build/ci.pyz",
+            "exists": true,
+            "payload_matches": true,
+            "entry_point_matches": true,
+            "execution": {
+              "argv": [
+                "/opt/homebrew/opt/python@3.14/bin/python3.14",
+                "-I",
+                "-B",
+                "/private/var/folders/55/6jqr25v5211fn00wych8b1jm0000gn/T/ssr-shiv-final-184ikkd9/complete/build/ci.pyz"
+              ],
+              "cwd": "/private/var/folders/55/6jqr25v5211fn00wych8b1jm0000gn/T/ssr-shiv-final-184ikkd9/complete",
+              "exit_code": 0,
+              "stdout": "discovery-fixture-ok\n",
+              "stderr": ""
+            }
+          }
+        }
+      ],
+      "local_from_outside": {
+        "path": "scripts/build-example.sh",
+        "status": "observed",
+        "artifact_correct": true,
+        "command": {
+          "argv": [
+            "sh",
+            "/private/var/folders/55/6jqr25v5211fn00wych8b1jm0000gn/T/ssr-shiv-final-184ikkd9/complete/scripts/build-example.sh"
+          ],
+          "cwd": "/private/var/folders/55/6jqr25v5211fn00wych8b1jm0000gn/T/ssr-shiv-final-184ikkd9",
+          "exit_code": 0,
+          "stdout": "",
+          "stderr": ""
+        },
+        "artifact": {
+          "path": "build/local.pyz",
+          "exists": true,
+          "payload_matches": true,
+          "entry_point_matches": true,
+          "execution": {
+            "argv": [
+              "/opt/homebrew/opt/python@3.14/bin/python3.14",
+              "-I",
+              "-B",
+              "/private/var/folders/55/6jqr25v5211fn00wych8b1jm0000gn/T/ssr-shiv-final-184ikkd9/complete/build/local.pyz"
+            ],
+            "cwd": "/private/var/folders/55/6jqr25v5211fn00wych8b1jm0000gn/T/ssr-shiv-final-184ikkd9/complete",
+            "exit_code": 0,
+            "stdout": "discovery-fixture-ok\n",
+            "stderr": ""
+          }
+        }
+      },
+      "independent_tool": {
+        "path": "docs/local-development.md",
+        "status": "observed",
+        "artifact_correct": true,
+        "command": {
+          "argv": [
+            "sh",
+            "-c",
+            "python3 -I tools/inventory.py examples/greeting --output-file build/inventory.json"
+          ],
+          "cwd": "/private/var/folders/55/6jqr25v5211fn00wych8b1jm0000gn/T/ssr-shiv-final-184ikkd9/complete",
+          "exit_code": 0,
+          "stdout": "",
+          "stderr": ""
+        }
+      },
+      "canonical_cli": {
+        "path": "canonical CLI",
+        "status": "observed",
+        "artifact_correct": true,
+        "command": {
+          "argv": [
+            "/opt/homebrew/opt/python@3.14/bin/python3.14",
+            "-I",
+            "-B",
+            "/private/var/folders/55/6jqr25v5211fn00wych8b1jm0000gn/T/ssr-shiv-final-184ikkd9/complete/tools/shiv-local.py",
+            "--site-packages",
+            "examples/greeting",
+            "-e",
+            "greeting:main",
+            "--destination",
+            "build/canonical.pyz"
+          ],
+          "cwd": "/private/var/folders/55/6jqr25v5211fn00wych8b1jm0000gn/T/ssr-shiv-final-184ikkd9/complete",
+          "exit_code": 0,
+          "stdout": "",
+          "stderr": ""
+        },
+        "artifact": {
+          "path": "build/canonical.pyz",
+          "exists": true,
+          "payload_matches": true,
+          "entry_point_matches": true,
+          "execution": {
+            "argv": [
+              "/opt/homebrew/opt/python@3.14/bin/python3.14",
+              "-I",
+              "-B",
+              "/private/var/folders/55/6jqr25v5211fn00wych8b1jm0000gn/T/ssr-shiv-final-184ikkd9/complete/build/canonical.pyz"
+            ],
+            "cwd": "/private/var/folders/55/6jqr25v5211fn00wych8b1jm0000gn/T/ssr-shiv-final-184ikkd9/complete",
+            "exit_code": 0,
+            "stdout": "discovery-fixture-ok\n",
+            "stderr": ""
+          }
+        }
+      },
+      "short_alias": {
+        "path": "supported alias",
+        "status": "observed",
+        "artifact_correct": true,
+        "command": {
+          "argv": [
+            "/opt/homebrew/opt/python@3.14/bin/python3.14",
+            "-I",
+            "-B",
+            "/private/var/folders/55/6jqr25v5211fn00wych8b1jm0000gn/T/ssr-shiv-final-184ikkd9/complete/tools/shiv-local.py",
+            "--site-packages",
+            "examples/greeting",
+            "-e",
+            "greeting:main",
+            "-o",
+            "build/alias.pyz"
+          ],
+          "cwd": "/private/var/folders/55/6jqr25v5211fn00wych8b1jm0000gn/T/ssr-shiv-final-184ikkd9/complete",
+          "exit_code": 0,
+          "stdout": "",
+          "stderr": ""
+        },
+        "artifact": {
+          "path": "build/alias.pyz",
+          "exists": true,
+          "payload_matches": true,
+          "entry_point_matches": true,
+          "execution": {
+            "argv": [
+              "/opt/homebrew/opt/python@3.14/bin/python3.14",
+              "-I",
+              "-B",
+              "/private/var/folders/55/6jqr25v5211fn00wych8b1jm0000gn/T/ssr-shiv-final-184ikkd9/complete/build/alias.pyz"
+            ],
+            "cwd": "/private/var/folders/55/6jqr25v5211fn00wych8b1jm0000gn/T/ssr-shiv-final-184ikkd9/complete",
+            "exit_code": 0,
+            "stdout": "discovery-fixture-ok\n",
+            "stderr": ""
+          }
+        }
+      },
+      "retired_option_probe": {
+        "argv": [
+          "/opt/homebrew/opt/python@3.14/bin/python3.14",
+          "-I",
+          "-B",
+          "/private/var/folders/55/6jqr25v5211fn00wych8b1jm0000gn/T/ssr-shiv-final-184ikkd9/complete/tools/shiv-local.py",
+          "--site-packages",
+          "examples/greeting",
+          "-e",
+          "greeting:main",
+          "--output-file",
+          "build/retired.pyz"
+        ],
+        "cwd": "/private/var/folders/55/6jqr25v5211fn00wych8b1jm0000gn/T/ssr-shiv-final-184ikkd9/complete",
+        "exit_code": 1,
+        "stdout": "",
+        "stderr": "\nYou must provide an output file option! (--destination/-o)\n\n"
+      },
+      "retired_option_nonzero": true,
+      "retired_artifact_exists": false,
+      "changed_nonconsumer_files": [],
+      "limit": "Facts only. Inspect semantics, extra files, preserved-content changes, unsupported forms, traces and Git separately. Only the CI build command is replayed locally; no hosted CI or dependency-install step is executed."
+    }
+  },
+  "isolated_runtime_probe": {
+    "argv": [
+      "python3",
+      "-I",
+      "-B",
+      "/var/folders/55/6jqr25v5211fn00wych8b1jm0000gn/T/ssr-shiv-final-184ikkd9/runtime-probe.py",
+      "/var/folders/55/6jqr25v5211fn00wych8b1jm0000gn/T/ssr-shiv-final-184ikkd9/complete"
+    ],
+    "cwd": "/var/folders/55/6jqr25v5211fn00wych8b1jm0000gn/T/ssr-shiv-final-184ikkd9/complete",
+    "exit_code": 0,
+    "stdout": "{\"click_path\": \"/private/var/folders/55/6jqr25v5211fn00wych8b1jm0000gn/T/ssr-shiv-final-184ikkd9/complete/.runtime/click/__init__.py\", \"shiv_path\": \"/private/var/folders/55/6jqr25v5211fn00wych8b1jm0000gn/T/ssr-shiv-final-184ikkd9/complete/src/shiv/__init__.py\", \"isolated\": 1, \"pip_install_guard\": \"not reached\", \"exit_code\": 0}\n",
+    "stderr": ""
+  },
+  "scope_limits": [
+    "No model calls, evaluator qualification or discovery effectiveness measured.",
+    "Offline public CLI tests only; full upstream pip/network and hosted-CI behavior not qualified.",
+    "Known-outcome qualification does not establish search difficulty or subject isolation; inspect actual runs."
+  ],
+  "reproduction_script": {
+    "source": "/private/tmp/ssr-shiv-qualify.py",
+    "sha256": "a560ce5028d51c49b6ef1d9135ea1c4ad1bf048523f2e571dce9c92a367d988d",
+    "text": "import hashlib, importlib.util, json, os, pathlib, shutil, subprocess, sys, tempfile\nROOT=pathlib.Path('/Users/simon/work/personal/disciplined-development-skills')\nCASE=ROOT/'skill-studies/sweeping-stale-references/cases/discovery-shiv'\nsys.dont_write_bytecode=True\nsys.path.insert(0,str(ROOT/'skill-validation/runner/src'))\nsys.path.insert(0,str(CASE))\nfrom skilltest.config import load_config\nfrom skilltest.workspace import create_run, prepare_workspace\nfrom check_consumers import observe\n\ndef run(argv,cwd=ROOT):\n p=subprocess.run(argv,cwd=cwd,capture_output=True,text=True,env=dict(os.environ,PYTHONDONTWRITEBYTECODE='1'))\n result=dict(argv=argv,cwd=str(cwd),exit_code=p.returncode,stdout=p.stdout,stderr=p.stderr)\n assert p.returncode==0,result\n return result\n\ndef sha(p): return hashlib.sha256(p.read_bytes()).hexdigest()\nq=dict(status='Local qualification only; no providers invoked',python=run(['python3','--version']),suites=[])\nfor folder in ['fixture/tests_local','.']:\n args=['python3','-B','-m','unittest','discover','-s',str(CASE/folder)]\n if folder=='.': args+=['-p','test_check_*.py']\n q['suites'].append(run(args))\nq['hook_suite']=run(['python3','-m','pytest','-q'],ROOT/'skills/disciplined-development/hooks')\nq['runner_preparation']={}\ncopied={}\nfor condition in ['control','original']:\n cfg=load_config(CASE/f'{condition}.json'); ctx=create_run(cfg); prep=prepare_workspace(ctx,cfg)\n hashes={}\n for f in cfg.fixtures:\n  target=ctx.fixture_dir/f.target\n  assert sha(f.source)==sha(target)\n  assert (f.source.stat().st_mode&0o777)==(target.stat().st_mode&0o777)\n  hashes[f.target.as_posix()]=sha(target)\n copied[condition]=hashes\n run(['git','init','-q'],ctx.fixture_dir)\n run(['git','add','.'],ctx.fixture_dir)\n tracked=run(['git','ls-files'],ctx.fixture_dir)['stdout'].splitlines()\n assert len(tracked)==50,len(tracked)\n assert not any(x.startswith(('.runtime/','.agents/')) or x=='TASK.md' for x in tracked)\n q['runner_preparation'][condition]=dict(fixture_entries=len(hashes),all_bytes_and_modes_match=True,baseline_project_files=len(tracked),scratch_path=str(ctx.fixture_dir),prompt_rendered='{{' not in prep.prompt_bytes.decode())\n skill='.agents/skills/sweeping-stale-references/SKILL.md'\n assert (skill in hashes)==(condition=='original')\nassert set(copied['original'])-set(copied['control'])=={skill}\nassert all(copied['original'][k]==v for k,v in copied['control'].items())\ncontrol=(CASE/'prompt-control.md').read_text(); original=(CASE/'prompt-original.md').read_text()\nextra='Read `.agents/skills/sweeping-stale-references/SKILL.md` in full and apply that skill while completing the task.\\n\\n'\n# Prompt templates already qualified in prior pilot; compare exact extra block here.\nimport difflib\nq['prompt_difference']=list(difflib.unified_diff(control.splitlines(),original.splitlines(),lineterm=''))\nq['input_parity']=dict(common_entries=len(copied['control']),only_addition=skill,common_bytes_identical=True)\nq['constructed_replays']={}\nwith tempfile.TemporaryDirectory(prefix='ssr-shiv-final-') as temp:\n for variant in ['pristine','complete']:\n  fixture=pathlib.Path(temp)/variant\n  shutil.copytree(CASE/'fixture',fixture)\n  if variant=='complete':\n   for name in json.loads((CASE/'expected.json').read_text())['required_consumers']:\n    p=fixture/name;p.write_text(p.read_text().replace('--output-file','--destination'))\n  facts=observe(fixture)\n  assert [x['artifact_correct'] for x in facts['consumers']]==([False]*4 if variant=='pristine' else [True]*4)\n  q['constructed_replays'][variant]=facts\n # Probe copied modules, isolated interpreter, and prohibit pip install at the call site.\n probe=pathlib.Path(temp)/'runtime-probe.py'\n probe.write_text('''import json, pathlib, runpy, sys\nroot=pathlib.Path(sys.argv[1]).resolve()\nrunpy.run_path(str(root/'tools/shiv-local.py'),run_name='qualification')\nimport click, shiv, shiv.pip\nfrom click.testing import CliRunner\nfrom shiv.cli import main\nassert pathlib.Path(click.__file__).is_relative_to(root/'.runtime')\nassert pathlib.Path(shiv.__file__).is_relative_to(root/'src')\ndef forbidden(*args,**kwargs): raise AssertionError('offline build attempted pip installation')\nshiv.pip.install=forbidden\nresult=CliRunner().invoke(main,['--site-packages',str(root/'examples/greeting'),'-e','greeting:main','--destination',str(root/'build/runtime-probe.pyz')])\nassert result.exit_code==0,(result.output,repr(result.exception))\nprint(json.dumps(dict(click_path=click.__file__,shiv_path=shiv.__file__,isolated=sys.flags.isolated,pip_install_guard='not reached',exit_code=result.exit_code)))\n''')\n q['isolated_runtime_probe']=run(['python3','-I','-B',str(probe),str(fixture)],fixture)\nq['scope_limits']=['No model calls, evaluator qualification or discovery effectiveness measured.','Offline public CLI tests only; full upstream pip/network and hosted-CI behavior not qualified.','Known-outcome qualification does not establish search difficulty or subject isolation; inspect actual runs.']\n(CASE/'qualification.json').write_text(json.dumps(q,indent=2)+'\\n')\nprint(json.dumps({k:v for k,v in q.items() if k in ['runner_preparation','input_parity','isolated_runtime_probe']},indent=2))\nprint('Qualification complete: 4 CLI tests, 14 controller tests; hook result: '+q['hook_suite']['stdout'])\n",
+    "note": "Recorded preparation script; re-running replaces qualification.json and allocates scratch copies, never invokes providers. Repository absolute path must be adapted on another host."
+  },
+  "scratch_retention": "Temporary constructed replay copies were deleted; complete facts and reproduction script are retained here. Runner copy scratch paths are diagnostic locations, not durable provider evidence."
+}
