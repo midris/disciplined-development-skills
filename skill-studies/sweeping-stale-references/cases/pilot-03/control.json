@@ -1,0 +1,213 @@
+{
+  "schema_version": "0.2",
+  "id": "ssr-pilot-03-control",
+  "prompt": "prompt-control.md",
+  "fixtures": [
+    {
+      "source": "fixture/.github/workflows/release.yml",
+      "target": ".github/workflows/release.yml"
+    },
+    {
+      "source": "fixture/.gitignore",
+      "target": ".gitignore"
+    },
+    {
+      "source": "fixture/Makefile",
+      "target": "Makefile"
+    },
+    {
+      "source": "fixture/README.md",
+      "target": "README.md"
+    },
+    {
+      "source": "fixture/docs/archive-format.md",
+      "target": "docs/archive-format.md"
+    },
+    {
+      "source": "fixture/docs/manifests.md",
+      "target": "docs/manifests.md"
+    },
+    {
+      "source": "fixture/docs/releases.md",
+      "target": "docs/releases.md"
+    },
+    {
+      "source": "fixture/examples/site/app.js",
+      "target": "examples/site/app.js"
+    },
+    {
+      "source": "fixture/examples/site/index.html",
+      "target": "examples/site/index.html"
+    },
+    {
+      "source": "fixture/examples/site/style.css",
+      "target": "examples/site/style.css"
+    },
+    {
+      "source": "fixture/ops/release/archive.mk",
+      "target": "ops/release/archive.mk"
+    },
+    {
+      "source": "fixture/plans/completed/cli-v1.md",
+      "target": "plans/completed/cli-v1.md"
+    },
+    {
+      "source": "fixture/project.json",
+      "target": "project.json"
+    },
+    {
+      "source": "fixture/scripts/package-local.sh",
+      "target": "scripts/package-local.sh"
+    },
+    {
+      "source": "fixture/src/relaypack/__init__.py",
+      "target": "src/relaypack/__init__.py"
+    },
+    {
+      "source": "fixture/src/relaypack/archive.py",
+      "target": "src/relaypack/archive.py"
+    },
+    {
+      "source": "fixture/src/relaypack/cli.py",
+      "target": "src/relaypack/cli.py"
+    },
+    {
+      "source": "fixture/src/relaypack/project.py",
+      "target": "src/relaypack/project.py"
+    },
+    {
+      "source": "fixture/tests/test_packager.py",
+      "target": "tests/test_packager.py"
+    },
+    {
+      "source": "fixture/tools/relaypack.py",
+      "target": "tools/relaypack.py"
+    },
+    {
+      "source": "fixture/vendor/README.md",
+      "target": "vendor/README.md"
+    },
+    {
+      "source": "fixture/vendor/assetprobe/README.md",
+      "target": "vendor/assetprobe/README.md"
+    },
+    {
+      "source": "fixture/vendor/assetprobe/export.py",
+      "target": "vendor/assetprobe/export.py"
+    },
+    {
+      "source": "fixture/vendor/packaging/__init__.py",
+      "target": "vendor/packaging/__init__.py"
+    },
+    {
+      "source": "fixture/vendor/packaging/_elffile.py",
+      "target": "vendor/packaging/_elffile.py"
+    },
+    {
+      "source": "fixture/vendor/packaging/_manylinux.py",
+      "target": "vendor/packaging/_manylinux.py"
+    },
+    {
+      "source": "fixture/vendor/packaging/_musllinux.py",
+      "target": "vendor/packaging/_musllinux.py"
+    },
+    {
+      "source": "fixture/vendor/packaging/_parser.py",
+      "target": "vendor/packaging/_parser.py"
+    },
+    {
+      "source": "fixture/vendor/packaging/_ranges.py",
+      "target": "vendor/packaging/_ranges.py"
+    },
+    {
+      "source": "fixture/vendor/packaging/_structures.py",
+      "target": "vendor/packaging/_structures.py"
+    },
+    {
+      "source": "fixture/vendor/packaging/_tokenizer.py",
+      "target": "vendor/packaging/_tokenizer.py"
+    },
+    {
+      "source": "fixture/vendor/packaging/dependency_groups.py",
+      "target": "vendor/packaging/dependency_groups.py"
+    },
+    {
+      "source": "fixture/vendor/packaging/direct_url.py",
+      "target": "vendor/packaging/direct_url.py"
+    },
+    {
+      "source": "fixture/vendor/packaging/errors.py",
+      "target": "vendor/packaging/errors.py"
+    },
+    {
+      "source": "fixture/vendor/packaging/licenses/__init__.py",
+      "target": "vendor/packaging/licenses/__init__.py"
+    },
+    {
+      "source": "fixture/vendor/packaging/licenses/_spdx.py",
+      "target": "vendor/packaging/licenses/_spdx.py"
+    },
+    {
+      "source": "fixture/vendor/packaging/markers.py",
+      "target": "vendor/packaging/markers.py"
+    },
+    {
+      "source": "fixture/vendor/packaging/metadata.py",
+      "target": "vendor/packaging/metadata.py"
+    },
+    {
+      "source": "fixture/vendor/packaging/py.typed",
+      "target": "vendor/packaging/py.typed"
+    },
+    {
+      "source": "fixture/vendor/packaging/pylock.py",
+      "target": "vendor/packaging/pylock.py"
+    },
+    {
+      "source": "fixture/vendor/packaging/ranges.py",
+      "target": "vendor/packaging/ranges.py"
+    },
+    {
+      "source": "fixture/vendor/packaging/requirements.py",
+      "target": "vendor/packaging/requirements.py"
+    },
+    {
+      "source": "fixture/vendor/packaging/specifiers.py",
+      "target": "vendor/packaging/specifiers.py"
+    },
+    {
+      "source": "fixture/vendor/packaging/tags.py",
+      "target": "vendor/packaging/tags.py"
+    },
+    {
+      "source": "fixture/vendor/packaging/utils.py",
+      "target": "vendor/packaging/utils.py"
+    },
+    {
+      "source": "fixture/vendor/packaging/version.py",
+      "target": "vendor/packaging/version.py"
+    },
+    {
+      "source": "fixture/vendor/packaging-licenses/LICENSE",
+      "target": "vendor/packaging-licenses/LICENSE"
+    },
+    {
+      "source": "fixture/vendor/packaging-licenses/LICENSE.APACHE",
+      "target": "vendor/packaging-licenses/LICENSE.APACHE"
+    },
+    {
+      "source": "fixture/vendor/packaging-licenses/LICENSE.BSD",
+      "target": "vendor/packaging-licenses/LICENSE.BSD"
+    },
+    {
+      "source": "task.md",
+      "target": "TASK.md"
+    }
+  ],
+  "execution": {
+    "provider": "codex",
+    "model": "gpt-5.6-sol",
+    "effort": "low",
+    "permissions": "workspace-write"
+  }
+}

@@ -1,0 +1,597 @@
+{
+  "purpose": "Prepared discovery case; no model calls authorized or made. Mechanical qualification does not close the documented discovery-scale limitation.",
+  "preparation_base_revision": "d2100c3c51993c7cf69e0748ac458c3ae4c6ba46",
+  "authorization": "Owner approved concept and local preparation only.",
+  "execution": {
+    "provider": "codex",
+    "model": "gpt-5.6-sol",
+    "effort": "low",
+    "permissions": "workspace-write"
+  },
+  "configurations": {
+    "control": {
+      "fixture_entries": 50,
+      "files": [
+        {
+          "path": "skill-studies/sweeping-stale-references/cases/pilot-03/control.json",
+          "bytes": 5732,
+          "sha256": "72abec4639ef72121fd7af50ac7583d9aeac06d2dd30ce9b2dece0a6b6b997ab"
+        },
+        {
+          "path": "skill-studies/sweeping-stale-references/cases/pilot-03/prompt-control.md",
+          "bytes": 469,
+          "sha256": "17438b8155af2ff3ba779ff39eee0426aa7d0783fec006ce6519dfebce18447f"
+        },
+        {
+          "path": "skill-studies/sweeping-stale-references/cases/pilot-03/fixture/.github/workflows/release.yml",
+          "bytes": 468,
+          "sha256": "7081fdaa48140dc89dbf027da1ec067ba4d3b473a614615f246b1a44772a91c3"
+        },
+        {
+          "path": "skill-studies/sweeping-stale-references/cases/pilot-03/fixture/.gitignore",
+          "bytes": 43,
+          "sha256": "0931000681d1a2063bea3f3d3915c63596d3453c55ec744c24c20de4a8224db7"
+        },
+        {
+          "path": "skill-studies/sweeping-stale-references/cases/pilot-03/fixture/Makefile",
+          "bytes": 240,
+          "sha256": "23b57e97b113fb096265041ea4b36ea12b61424dbe308310e49fef6c51c24604"
+        },
+        {
+          "path": "skill-studies/sweeping-stale-references/cases/pilot-03/fixture/README.md",
+          "bytes": 849,
+          "sha256": "cf0ee37411b0ce0401c2a9dfc1770d614c3e0dc7ee97e3379e0d32c3d9376ab1"
+        },
+        {
+          "path": "skill-studies/sweeping-stale-references/cases/pilot-03/fixture/docs/archive-format.md",
+          "bytes": 434,
+          "sha256": "10e25092cd12acc4db97b2f7b0aca73f2fbe895fc2678a3705c1827654646daa"
+        },
+        {
+          "path": "skill-studies/sweeping-stale-references/cases/pilot-03/fixture/docs/manifests.md",
+          "bytes": 436,
+          "sha256": "1e55fba3bf003964bd288f937afd8dccc9bc4e31202416cc0f709c49f1faa1d0"
+        },
+        {
+          "path": "skill-studies/sweeping-stale-references/cases/pilot-03/fixture/docs/releases.md",
+          "bytes": 459,
+          "sha256": "6a92ad5782c936b12abe508ae5a8aab1314f80b6b30004cd0386a39857187b42"
+        },
+        {
+          "path": "skill-studies/sweeping-stale-references/cases/pilot-03/fixture/examples/site/app.js",
+          "bytes": 143,
+          "sha256": "f1c7233cb5d11fe80745f3e63b96cae51fa6007c7cb5c34a63277c4f62d8e9ba"
+        },
+        {
+          "path": "skill-studies/sweeping-stale-references/cases/pilot-03/fixture/examples/site/index.html",
+          "bytes": 261,
+          "sha256": "2a216b56ba240073f003067f6fa03a3169d92c205e0df768a1dec73cc21df0ed"
+        },
+        {
+          "path": "skill-studies/sweeping-stale-references/cases/pilot-03/fixture/examples/site/style.css",
+          "bytes": 115,
+          "sha256": "af82c83a51453695ba70e1455b18b935b449b9e7a337d1a38c29ce68447af0ef"
+        },
+        {
+          "path": "skill-studies/sweeping-stale-references/cases/pilot-03/fixture/ops/release/archive.mk",
+          "bytes": 110,
+          "sha256": "c30b73758e427f7c3972eadaa82b597df22b8ecee232cbfe071ac477ec1dcfd3"
+        },
+        {
+          "path": "skill-studies/sweeping-stale-references/cases/pilot-03/fixture/plans/completed/cli-v1.md",
+          "bytes": 243,
+          "sha256": "3e4f6ce73ac2b922ac56146aa196af6ac636ab5d42dff7e1bfb82c1f011109a3"
+        },
+        {
+          "path": "skill-studies/sweeping-stale-references/cases/pilot-03/fixture/project.json",
+          "bytes": 329,
+          "sha256": "13898eb7035437405ef85bc30ec5efb910ebaabb9e888e861d4b82fc6f6c4457"
+        },
+        {
+          "path": "skill-studies/sweeping-stale-references/cases/pilot-03/fixture/scripts/package-local.sh",
+          "bytes": 153,
+          "sha256": "e19a1517fd75ca524fcdf2e74f6090e70f9c3696fb9cb8f15bbf8cc88a4b6e09"
+        },
+        {
+          "path": "skill-studies/sweeping-stale-references/cases/pilot-03/fixture/src/relaypack/__init__.py",
+          "bytes": 55,
+          "sha256": "958599d49b9c8e631f88eeb96d0c911fdf9169a27d6bd84a935cc6e3d06155b3"
+        },
+        {
+          "path": "skill-studies/sweeping-stale-references/cases/pilot-03/fixture/src/relaypack/archive.py",
+          "bytes": 1391,
+          "sha256": "08fd72b34b92ed961e7737392fe753d3876d5bf808b023f8c5514769016cd11e"
+        },
+        {
+          "path": "skill-studies/sweeping-stale-references/cases/pilot-03/fixture/src/relaypack/cli.py",
+          "bytes": 957,
+          "sha256": "1dc0eb8c9e09cd6a1bf6b97f1024d374a1cdb1ec1a1d6fe959c568f586c1e67e"
+        },
+        {
+          "path": "skill-studies/sweeping-stale-references/cases/pilot-03/fixture/src/relaypack/project.py",
+          "bytes": 1316,
+          "sha256": "3de3a45d82097267603f068a1a31781295ad4ab08ed121f0ece8b1f003f89cb7"
+        },
+        {
+          "path": "skill-studies/sweeping-stale-references/cases/pilot-03/fixture/tests/test_packager.py",
+          "bytes": 2749,
+          "sha256": "92781f0f8ff312ba9d0def466f1b1c5fe492e3a11aad9e77328eddd56df152f3"
+        },
+        {
+          "path": "skill-studies/sweeping-stale-references/cases/pilot-03/fixture/tools/relaypack.py",
+          "bytes": 328,
+          "sha256": "eab9ada3572f391d7cb7d059212415684120c24bb63715dc778ee8b96ea90ab5"
+        },
+        {
+          "path": "skill-studies/sweeping-stale-references/cases/pilot-03/fixture/vendor/README.md",
+          "bytes": 380,
+          "sha256": "a7c2ae0d5fc933b1efe6128022a039e5d2a40fe1ccbcc47820b1a93d9487e131"
+        },
+        {
+          "path": "skill-studies/sweeping-stale-references/cases/pilot-03/fixture/vendor/assetprobe/README.md",
+          "bytes": 312,
+          "sha256": "aa01b0a17e893b2424c979c4bcf43e97fa398f2fe3eaf2a261a1aa66ea929335"
+        },
+        {
+          "path": "skill-studies/sweeping-stale-references/cases/pilot-03/fixture/vendor/assetprobe/export.py",
+          "bytes": 475,
+          "sha256": "1f464f8160445ee39651236fc63913eea4afee2f84a78f0bb03193ff71426641"
+        },
+        {
+          "path": "skill-studies/sweeping-stale-references/cases/pilot-03/fixture/vendor/packaging/__init__.py",
+          "bytes": 494,
+          "sha256": "6e758cdd0028b2cad74c739b9adc9c9f06f054932306280b878bfe59d39219b5"
+        },
+        {
+          "path": "skill-studies/sweeping-stale-references/cases/pilot-03/fixture/vendor/packaging/_elffile.py",
+          "bytes": 3236,
+          "sha256": "1f025f54c573f1a85740c4fbd908cc1d1fb0c177c14377ebf5f09d6cd5368780"
+        },
+        {
+          "path": "skill-studies/sweeping-stale-references/cases/pilot-03/fixture/vendor/packaging/_manylinux.py",
+          "bytes": 10000,
+          "sha256": "5b6e84324c42538ab4cdb148e2430fdba36f04427b0efda55bea083a35fa6136"
+        },
+        {
+          "path": "skill-studies/sweeping-stale-references/cases/pilot-03/fixture/vendor/packaging/_musllinux.py",
+          "bytes": 2774,
+          "sha256": "0328fb827b1170c77df4c107d49be8df8d37262103490a61e8acad8a2f9cadff"
+        },
+        {
+          "path": "skill-studies/sweeping-stale-references/cases/pilot-03/fixture/vendor/packaging/_parser.py",
+          "bytes": 12639,
+          "sha256": "88a348115209327497e453b635e5db099fd592f9335d710c7313b29cdb30c50c"
+        },
+        {
+          "path": "skill-studies/sweeping-stale-references/cases/pilot-03/fixture/vendor/packaging/_ranges.py",
+          "bytes": 30850,
+          "sha256": "b7b595f2e692aeb3697c545b85c24cbbcb4552f2adc6d9059aa82d0877e816b7"
+        },
+        {
+          "path": "skill-studies/sweeping-stale-references/cases/pilot-03/fixture/vendor/packaging/_structures.py",
+          "bytes": 1109,
+          "sha256": "eb48d16c5efca7ccf930a9cd77a700a6b80e69d0891d5d03966526441a8565cb"
+        },
+        {
+          "path": "skill-studies/sweeping-stale-references/cases/pilot-03/fixture/vendor/packaging/_tokenizer.py",
+          "bytes": 5573,
+          "sha256": "cc25e57c0d564c89e15073471d6e1c264299ca946fb17c0e1e4af54ef7713ee6"
+        },
+        {
+          "path": "skill-studies/sweeping-stale-references/cases/pilot-03/fixture/vendor/packaging/dependency_groups.py",
+          "bytes": 11224,
+          "sha256": "5309cc564ca3022dfb594816e9d593bb09cdf34208c1fb8c5ec9afb6c670278c"
+        },
+        {
+          "path": "skill-studies/sweeping-stale-references/cases/pilot-03/fixture/vendor/packaging/direct_url.py",
+          "bytes": 11645,
+          "sha256": "843baa95d04cbb49288de9d9fd77ee946e862cb603123e7e46a69e171fa7d06b"
+        },
+        {
+          "path": "skill-studies/sweeping-stale-references/cases/pilot-03/fixture/vendor/packaging/errors.py",
+          "bytes": 2680,
+          "sha256": "ea17c461701ff2ffc817ae7e94569d24e30889e04fdb120ab721178c6d67188b"
+        },
+        {
+          "path": "skill-studies/sweeping-stale-references/cases/pilot-03/fixture/vendor/packaging/licenses/__init__.py",
+          "bytes": 7859,
+          "sha256": "590d12eee73ddbec53b4e9ee5bfc64d9cb3aacb4940e8ebcba260757ce56740b"
+        },
+        {
+          "path": "skill-studies/sweeping-stale-references/cases/pilot-03/fixture/vendor/packaging/licenses/_spdx.py",
+          "bytes": 51122,
+          "sha256": "596ec35e2ca0ebcba9fd8343ff0a51625af548786257815f24b41f7e08613314"
+        },
+        {
+          "path": "skill-studies/sweeping-stale-references/cases/pilot-03/fixture/vendor/packaging/markers.py",
+          "bytes": 20554,
+          "sha256": "6cbe860d35d98d2b599e7f0ec73feab124e015711b30be9045e678c92940d9cc"
+        },
+        {
+          "path": "skill-studies/sweeping-stale-references/cases/pilot-03/fixture/vendor/packaging/metadata.py",
+          "bytes": 42059,
+          "sha256": "934149f420a5449e6f376aa61d6f26a0823eb82cc7c6a1c8cde5aa7be43d0f63"
+        },
+        {
+          "path": "skill-studies/sweeping-stale-references/cases/pilot-03/fixture/vendor/packaging/py.typed",
+          "bytes": 0,
+          "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+        },
+        {
+          "path": "skill-studies/sweeping-stale-references/cases/pilot-03/fixture/vendor/packaging/pylock.py",
+          "bytes": 35232,
+          "sha256": "1bce0a9fe63e42b87e8ced05da272baf16a68aa704b3718405e2735a6112467c"
+        },
+        {
+          "path": "skill-studies/sweeping-stale-references/cases/pilot-03/fixture/vendor/packaging/ranges.py",
+          "bytes": 83054,
+          "sha256": "b4781ce913e5dff9e07906f20585c54c3028e1f7ff56341828e79d522ddbfab6"
+        },
+        {
+          "path": "skill-studies/sweeping-stale-references/cases/pilot-03/fixture/vendor/packaging/requirements.py",
+          "bytes": 7040,
+          "sha256": "459476eb2107fe30e6b1310051a5bdb44c7d3b7f78e0e87bada268282cba62f5"
+        },
+        {
+          "path": "skill-studies/sweeping-stale-references/cases/pilot-03/fixture/vendor/packaging/specifiers.py",
+          "bytes": 52798,
+          "sha256": "661ad31ddf45ffb861d2626734f4e3d66966029b8fdb79586bb105825d8d9d59"
+        },
+        {
+          "path": "skill-studies/sweeping-stale-references/cases/pilot-03/fixture/vendor/packaging/tags.py",
+          "bytes": 38302,
+          "sha256": "0e717a082a79620d79cf0321b420df15593c4916fcda03c27cb9d82e07ef5d6e"
+        },
+        {
+          "path": "skill-studies/sweeping-stale-references/cases/pilot-03/fixture/vendor/packaging/utils.py",
+          "bytes": 12215,
+          "sha256": "a13742cd9994eeca5adfb0249d126408c478026eb1f48cb97afbf2fe9f28ecc6"
+        },
+        {
+          "path": "skill-studies/sweeping-stale-references/cases/pilot-03/fixture/vendor/packaging/version.py",
+          "bytes": 39040,
+          "sha256": "558b2fb50fd198c660a4c082f96b8919c565911b6b4b6e07f34b6b60c074be97"
+        },
+        {
+          "path": "skill-studies/sweeping-stale-references/cases/pilot-03/fixture/vendor/packaging-licenses/LICENSE",
+          "bytes": 197,
+          "sha256": "cad1ef5bd340d73e074ba614d26f7deaca5c7940c3d8c34852e65c4909686c48"
+        },
+        {
+          "path": "skill-studies/sweeping-stale-references/cases/pilot-03/fixture/vendor/packaging-licenses/LICENSE.APACHE",
+          "bytes": 10174,
+          "sha256": "0d542e0c8804e39aa7f37eb00da5a762149dc682d7829451287e11b938e94594"
+        },
+        {
+          "path": "skill-studies/sweeping-stale-references/cases/pilot-03/fixture/vendor/packaging-licenses/LICENSE.BSD",
+          "bytes": 1344,
+          "sha256": "b70e7e9b742f1cc6f948b34c16aa39ffece94196364bc88ff0d2180f0028fac5"
+        },
+        {
+          "path": "skill-studies/sweeping-stale-references/cases/pilot-03/task.md",
+          "bytes": 406,
+          "sha256": "c5b5a6965dfa173c4be40890dc4ba0aed2ea26b5dea9f2cc9ac3f6def501dc5e"
+        }
+      ]
+    },
+    "original": {
+      "fixture_entries": 51,
+      "files": [
+        {
+          "path": "skill-studies/sweeping-stale-references/cases/pilot-03/original.json",
+          "bytes": 5861,
+          "sha256": "6522384b24630e073380f15f7f3f83cf59b7b5c656a0060d60500b29855cb87c"
+        },
+        {
+          "path": "skill-studies/sweeping-stale-references/cases/pilot-03/prompt-original.md",
+          "bytes": 595,
+          "sha256": "6695cbb23cfd7d8656a122b2e9ea4ba35fdea581f7a15780e146d84a0732b588"
+        },
+        {
+          "path": "skill-studies/sweeping-stale-references/cases/pilot-03/fixture/.github/workflows/release.yml",
+          "bytes": 468,
+          "sha256": "7081fdaa48140dc89dbf027da1ec067ba4d3b473a614615f246b1a44772a91c3"
+        },
+        {
+          "path": "skill-studies/sweeping-stale-references/cases/pilot-03/fixture/.gitignore",
+          "bytes": 43,
+          "sha256": "0931000681d1a2063bea3f3d3915c63596d3453c55ec744c24c20de4a8224db7"
+        },
+        {
+          "path": "skill-studies/sweeping-stale-references/cases/pilot-03/fixture/Makefile",
+          "bytes": 240,
+          "sha256": "23b57e97b113fb096265041ea4b36ea12b61424dbe308310e49fef6c51c24604"
+        },
+        {
+          "path": "skill-studies/sweeping-stale-references/cases/pilot-03/fixture/README.md",
+          "bytes": 849,
+          "sha256": "cf0ee37411b0ce0401c2a9dfc1770d614c3e0dc7ee97e3379e0d32c3d9376ab1"
+        },
+        {
+          "path": "skill-studies/sweeping-stale-references/cases/pilot-03/fixture/docs/archive-format.md",
+          "bytes": 434,
+          "sha256": "10e25092cd12acc4db97b2f7b0aca73f2fbe895fc2678a3705c1827654646daa"
+        },
+        {
+          "path": "skill-studies/sweeping-stale-references/cases/pilot-03/fixture/docs/manifests.md",
+          "bytes": 436,
+          "sha256": "1e55fba3bf003964bd288f937afd8dccc9bc4e31202416cc0f709c49f1faa1d0"
+        },
+        {
+          "path": "skill-studies/sweeping-stale-references/cases/pilot-03/fixture/docs/releases.md",
+          "bytes": 459,
+          "sha256": "6a92ad5782c936b12abe508ae5a8aab1314f80b6b30004cd0386a39857187b42"
+        },
+        {
+          "path": "skill-studies/sweeping-stale-references/cases/pilot-03/fixture/examples/site/app.js",
+          "bytes": 143,
+          "sha256": "f1c7233cb5d11fe80745f3e63b96cae51fa6007c7cb5c34a63277c4f62d8e9ba"
+        },
+        {
+          "path": "skill-studies/sweeping-stale-references/cases/pilot-03/fixture/examples/site/index.html",
+          "bytes": 261,
+          "sha256": "2a216b56ba240073f003067f6fa03a3169d92c205e0df768a1dec73cc21df0ed"
+        },
+        {
+          "path": "skill-studies/sweeping-stale-references/cases/pilot-03/fixture/examples/site/style.css",
+          "bytes": 115,
+          "sha256": "af82c83a51453695ba70e1455b18b935b449b9e7a337d1a38c29ce68447af0ef"
+        },
+        {
+          "path": "skill-studies/sweeping-stale-references/cases/pilot-03/fixture/ops/release/archive.mk",
+          "bytes": 110,
+          "sha256": "c30b73758e427f7c3972eadaa82b597df22b8ecee232cbfe071ac477ec1dcfd3"
+        },
+        {
+          "path": "skill-studies/sweeping-stale-references/cases/pilot-03/fixture/plans/completed/cli-v1.md",
+          "bytes": 243,
+          "sha256": "3e4f6ce73ac2b922ac56146aa196af6ac636ab5d42dff7e1bfb82c1f011109a3"
+        },
+        {
+          "path": "skill-studies/sweeping-stale-references/cases/pilot-03/fixture/project.json",
+          "bytes": 329,
+          "sha256": "13898eb7035437405ef85bc30ec5efb910ebaabb9e888e861d4b82fc6f6c4457"
+        },
+        {
+          "path": "skill-studies/sweeping-stale-references/cases/pilot-03/fixture/scripts/package-local.sh",
+          "bytes": 153,
+          "sha256": "e19a1517fd75ca524fcdf2e74f6090e70f9c3696fb9cb8f15bbf8cc88a4b6e09"
+        },
+        {
+          "path": "skill-studies/sweeping-stale-references/cases/pilot-03/fixture/src/relaypack/__init__.py",
+          "bytes": 55,
+          "sha256": "958599d49b9c8e631f88eeb96d0c911fdf9169a27d6bd84a935cc6e3d06155b3"
+        },
+        {
+          "path": "skill-studies/sweeping-stale-references/cases/pilot-03/fixture/src/relaypack/archive.py",
+          "bytes": 1391,
+          "sha256": "08fd72b34b92ed961e7737392fe753d3876d5bf808b023f8c5514769016cd11e"
+        },
+        {
+          "path": "skill-studies/sweeping-stale-references/cases/pilot-03/fixture/src/relaypack/cli.py",
+          "bytes": 957,
+          "sha256": "1dc0eb8c9e09cd6a1bf6b97f1024d374a1cdb1ec1a1d6fe959c568f586c1e67e"
+        },
+        {
+          "path": "skill-studies/sweeping-stale-references/cases/pilot-03/fixture/src/relaypack/project.py",
+          "bytes": 1316,
+          "sha256": "3de3a45d82097267603f068a1a31781295ad4ab08ed121f0ece8b1f003f89cb7"
+        },
+        {
+          "path": "skill-studies/sweeping-stale-references/cases/pilot-03/fixture/tests/test_packager.py",
+          "bytes": 2749,
+          "sha256": "92781f0f8ff312ba9d0def466f1b1c5fe492e3a11aad9e77328eddd56df152f3"
+        },
+        {
+          "path": "skill-studies/sweeping-stale-references/cases/pilot-03/fixture/tools/relaypack.py",
+          "bytes": 328,
+          "sha256": "eab9ada3572f391d7cb7d059212415684120c24bb63715dc778ee8b96ea90ab5"
+        },
+        {
+          "path": "skill-studies/sweeping-stale-references/cases/pilot-03/fixture/vendor/README.md",
+          "bytes": 380,
+          "sha256": "a7c2ae0d5fc933b1efe6128022a039e5d2a40fe1ccbcc47820b1a93d9487e131"
+        },
+        {
+          "path": "skill-studies/sweeping-stale-references/cases/pilot-03/fixture/vendor/assetprobe/README.md",
+          "bytes": 312,
+          "sha256": "aa01b0a17e893b2424c979c4bcf43e97fa398f2fe3eaf2a261a1aa66ea929335"
+        },
+        {
+          "path": "skill-studies/sweeping-stale-references/cases/pilot-03/fixture/vendor/assetprobe/export.py",
+          "bytes": 475,
+          "sha256": "1f464f8160445ee39651236fc63913eea4afee2f84a78f0bb03193ff71426641"
+        },
+        {
+          "path": "skill-studies/sweeping-stale-references/cases/pilot-03/fixture/vendor/packaging/__init__.py",
+          "bytes": 494,
+          "sha256": "6e758cdd0028b2cad74c739b9adc9c9f06f054932306280b878bfe59d39219b5"
+        },
+        {
+          "path": "skill-studies/sweeping-stale-references/cases/pilot-03/fixture/vendor/packaging/_elffile.py",
+          "bytes": 3236,
+          "sha256": "1f025f54c573f1a85740c4fbd908cc1d1fb0c177c14377ebf5f09d6cd5368780"
+        },
+        {
+          "path": "skill-studies/sweeping-stale-references/cases/pilot-03/fixture/vendor/packaging/_manylinux.py",
+          "bytes": 10000,
+          "sha256": "5b6e84324c42538ab4cdb148e2430fdba36f04427b0efda55bea083a35fa6136"
+        },
+        {
+          "path": "skill-studies/sweeping-stale-references/cases/pilot-03/fixture/vendor/packaging/_musllinux.py",
+          "bytes": 2774,
+          "sha256": "0328fb827b1170c77df4c107d49be8df8d37262103490a61e8acad8a2f9cadff"
+        },
+        {
+          "path": "skill-studies/sweeping-stale-references/cases/pilot-03/fixture/vendor/packaging/_parser.py",
+          "bytes": 12639,
+          "sha256": "88a348115209327497e453b635e5db099fd592f9335d710c7313b29cdb30c50c"
+        },
+        {
+          "path": "skill-studies/sweeping-stale-references/cases/pilot-03/fixture/vendor/packaging/_ranges.py",
+          "bytes": 30850,
+          "sha256": "b7b595f2e692aeb3697c545b85c24cbbcb4552f2adc6d9059aa82d0877e816b7"
+        },
+        {
+          "path": "skill-studies/sweeping-stale-references/cases/pilot-03/fixture/vendor/packaging/_structures.py",
+          "bytes": 1109,
+          "sha256": "eb48d16c5efca7ccf930a9cd77a700a6b80e69d0891d5d03966526441a8565cb"
+        },
+        {
+          "path": "skill-studies/sweeping-stale-references/cases/pilot-03/fixture/vendor/packaging/_tokenizer.py",
+          "bytes": 5573,
+          "sha256": "cc25e57c0d564c89e15073471d6e1c264299ca946fb17c0e1e4af54ef7713ee6"
+        },
+        {
+          "path": "skill-studies/sweeping-stale-references/cases/pilot-03/fixture/vendor/packaging/dependency_groups.py",
+          "bytes": 11224,
+          "sha256": "5309cc564ca3022dfb594816e9d593bb09cdf34208c1fb8c5ec9afb6c670278c"
+        },
+        {
+          "path": "skill-studies/sweeping-stale-references/cases/pilot-03/fixture/vendor/packaging/direct_url.py",
+          "bytes": 11645,
+          "sha256": "843baa95d04cbb49288de9d9fd77ee946e862cb603123e7e46a69e171fa7d06b"
+        },
+        {
+          "path": "skill-studies/sweeping-stale-references/cases/pilot-03/fixture/vendor/packaging/errors.py",
+          "bytes": 2680,
+          "sha256": "ea17c461701ff2ffc817ae7e94569d24e30889e04fdb120ab721178c6d67188b"
+        },
+        {
+          "path": "skill-studies/sweeping-stale-references/cases/pilot-03/fixture/vendor/packaging/licenses/__init__.py",
+          "bytes": 7859,
+          "sha256": "590d12eee73ddbec53b4e9ee5bfc64d9cb3aacb4940e8ebcba260757ce56740b"
+        },
+        {
+          "path": "skill-studies/sweeping-stale-references/cases/pilot-03/fixture/vendor/packaging/licenses/_spdx.py",
+          "bytes": 51122,
+          "sha256": "596ec35e2ca0ebcba9fd8343ff0a51625af548786257815f24b41f7e08613314"
+        },
+        {
+          "path": "skill-studies/sweeping-stale-references/cases/pilot-03/fixture/vendor/packaging/markers.py",
+          "bytes": 20554,
+          "sha256": "6cbe860d35d98d2b599e7f0ec73feab124e015711b30be9045e678c92940d9cc"
+        },
+        {
+          "path": "skill-studies/sweeping-stale-references/cases/pilot-03/fixture/vendor/packaging/metadata.py",
+          "bytes": 42059,
+          "sha256": "934149f420a5449e6f376aa61d6f26a0823eb82cc7c6a1c8cde5aa7be43d0f63"
+        },
+        {
+          "path": "skill-studies/sweeping-stale-references/cases/pilot-03/fixture/vendor/packaging/py.typed",
+          "bytes": 0,
+          "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+        },
+        {
+          "path": "skill-studies/sweeping-stale-references/cases/pilot-03/fixture/vendor/packaging/pylock.py",
+          "bytes": 35232,
+          "sha256": "1bce0a9fe63e42b87e8ced05da272baf16a68aa704b3718405e2735a6112467c"
+        },
+        {
+          "path": "skill-studies/sweeping-stale-references/cases/pilot-03/fixture/vendor/packaging/ranges.py",
+          "bytes": 83054,
+          "sha256": "b4781ce913e5dff9e07906f20585c54c3028e1f7ff56341828e79d522ddbfab6"
+        },
+        {
+          "path": "skill-studies/sweeping-stale-references/cases/pilot-03/fixture/vendor/packaging/requirements.py",
+          "bytes": 7040,
+          "sha256": "459476eb2107fe30e6b1310051a5bdb44c7d3b7f78e0e87bada268282cba62f5"
+        },
+        {
+          "path": "skill-studies/sweeping-stale-references/cases/pilot-03/fixture/vendor/packaging/specifiers.py",
+          "bytes": 52798,
+          "sha256": "661ad31ddf45ffb861d2626734f4e3d66966029b8fdb79586bb105825d8d9d59"
+        },
+        {
+          "path": "skill-studies/sweeping-stale-references/cases/pilot-03/fixture/vendor/packaging/tags.py",
+          "bytes": 38302,
+          "sha256": "0e717a082a79620d79cf0321b420df15593c4916fcda03c27cb9d82e07ef5d6e"
+        },
+        {
+          "path": "skill-studies/sweeping-stale-references/cases/pilot-03/fixture/vendor/packaging/utils.py",
+          "bytes": 12215,
+          "sha256": "a13742cd9994eeca5adfb0249d126408c478026eb1f48cb97afbf2fe9f28ecc6"
+        },
+        {
+          "path": "skill-studies/sweeping-stale-references/cases/pilot-03/fixture/vendor/packaging/version.py",
+          "bytes": 39040,
+          "sha256": "558b2fb50fd198c660a4c082f96b8919c565911b6b4b6e07f34b6b60c074be97"
+        },
+        {
+          "path": "skill-studies/sweeping-stale-references/cases/pilot-03/fixture/vendor/packaging-licenses/LICENSE",
+          "bytes": 197,
+          "sha256": "cad1ef5bd340d73e074ba614d26f7deaca5c7940c3d8c34852e65c4909686c48"
+        },
+        {
+          "path": "skill-studies/sweeping-stale-references/cases/pilot-03/fixture/vendor/packaging-licenses/LICENSE.APACHE",
+          "bytes": 10174,
+          "sha256": "0d542e0c8804e39aa7f37eb00da5a762149dc682d7829451287e11b938e94594"
+        },
+        {
+          "path": "skill-studies/sweeping-stale-references/cases/pilot-03/fixture/vendor/packaging-licenses/LICENSE.BSD",
+          "bytes": 1344,
+          "sha256": "b70e7e9b742f1cc6f948b34c16aa39ffece94196364bc88ff0d2180f0028fac5"
+        },
+        {
+          "path": "skill-studies/sweeping-stale-references/cases/pilot-03/task.md",
+          "bytes": 406,
+          "sha256": "c5b5a6965dfa173c4be40890dc4ba0aed2ea26b5dea9f2cc9ac3f6def501dc5e"
+        },
+        {
+          "path": "skill-studies/sweeping-stale-references/cases/skill-original/SKILL.md",
+          "bytes": 7689,
+          "sha256": "d6812c33cae026807bbb3ebe851d93b60b513dd87ea5efd98aea28f5c02f9157"
+        }
+      ]
+    }
+  },
+  "policy": {
+    "id": "SSR-assessment-2",
+    "source_revision": "d2100c3c51993c7cf69e0748ac458c3ae4c6ba46",
+    "source_path": "skill-studies/sweeping-stale-references/protocol.md",
+    "source_sha256": "b88c89422c3ff09ac49511106e12db2eeb75c38813a55306b52372c9444901a6",
+    "copy": {
+      "path": "skill-studies/sweeping-stale-references/cases/pilot-03/assessment-policy.txt",
+      "bytes": 5567,
+      "sha256": "625e91999ba68e18eda230b92b6da1e6f6ea51a42aa89f5cbce674e41a097837"
+    },
+    "extraction": "Current SSR assessment policy section; exclude the blank separator before the following heading."
+  },
+  "controller_artifacts": [
+    {
+      "path": "skill-studies/sweeping-stale-references/cases/pilot-03/assessment.md",
+      "bytes": 9215,
+      "sha256": "d1ad248487c7b6058aacd1288d2ec17c6d745a8427ed150a62b3ce90c6432cea"
+    },
+    {
+      "path": "skill-studies/sweeping-stale-references/cases/pilot-03/expected.json",
+      "bytes": 2732,
+      "sha256": "eba3d099268d37b1ed890fe7ae40040923f89f86b2af1e423a9305dcc88ba25d"
+    },
+    {
+      "path": "skill-studies/sweeping-stale-references/cases/pilot-03/check_consumers.py",
+      "bytes": 6487,
+      "sha256": "1fe214f904aa8b070aebcb8ddb4b085e8cc1478528c5ffc3ddc0c87498abdc69"
+    },
+    {
+      "path": "skill-studies/sweeping-stale-references/cases/pilot-03/test_check_consumers.py",
+      "bytes": 4755,
+      "sha256": "7f088a7914a7315946fc7462e53eac6e38bc92c208a22982c2a29b464e771447"
+    },
+    {
+      "path": "skill-studies/sweeping-stale-references/cases/pilot-03/qualification.json",
+      "bytes": 12275,
+      "sha256": "55b9dd63b9822b3c9f90ae23d1c32ca78a735fa6af61a84458c69e88baa69601"
+    },
+    {
+      "path": "skill-studies/sweeping-stale-references/cases/pilot-03/preparation.json",
+      "bytes": 1899,
+      "sha256": "8b72fee239f7a3c0f6ae4c9c362925b54b9aee9dad0b47db8c9f052dd3c0c62c"
+    },
+    {
+      "path": "skill-studies/sweeping-stale-references/cases/pilot-03/dependency-provenance.json",
+      "bytes": 8155,
+      "sha256": "4503fb419040b47520f0386eb4e8ff7a1df8cc4e1d88d7cf9bd040f8cc33d0ab"
+    }
+  ]
+}

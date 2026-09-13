@@ -1,0 +1,80 @@
+{
+  "required_consumers": [
+    "README.md",
+    "scripts/package-local.sh",
+    "ops/release/archive.mk",
+    ".github/workflows/release.yml"
+  ],
+  "artifact": {
+    "name": "relay-demo",
+    "version": "1.4.0",
+    "members": {
+      "site/index.html": "examples/site/index.html",
+      "site/style.css": "examples/site/style.css",
+      "site/app.js": "examples/site/app.js"
+    }
+  },
+  "old_option": "--output-dir",
+  "new_option": "--destination",
+  "literal_matches": [
+    {
+      "path": ".github/workflows/release.yml",
+      "line": 12,
+      "occurrences": 1,
+      "outcome": "update",
+      "reason": "current Relaypack consumer"
+    },
+    {
+      "path": "README.md",
+      "line": 10,
+      "occurrences": 1,
+      "outcome": "update",
+      "reason": "current Relaypack consumer"
+    },
+    {
+      "path": "ops/release/archive.mk",
+      "line": 3,
+      "occurrences": 1,
+      "outcome": "update",
+      "reason": "current Relaypack consumer"
+    },
+    {
+      "path": "plans/completed/cli-v1.md",
+      "line": 3,
+      "occurrences": 1,
+      "outcome": "intentionally stale",
+      "reason": "completed record of the former interface"
+    },
+    {
+      "path": "scripts/package-local.sh",
+      "line": 4,
+      "occurrences": 1,
+      "outcome": "update",
+      "reason": "current Relaypack consumer"
+    },
+    {
+      "path": "tests/test_packager.py",
+      "line": 45,
+      "occurrences": 1,
+      "outcome": "false positive",
+      "reason": "negative test requires retired option to remain rejected"
+    },
+    {
+      "path": "vendor/assetprobe/README.md",
+      "line": 7,
+      "occurrences": 1,
+      "outcome": "false positive",
+      "reason": "independent Assetprobe interface"
+    },
+    {
+      "path": "vendor/assetprobe/export.py",
+      "line": 7,
+      "occurrences": 1,
+      "outcome": "false positive",
+      "reason": "independent Assetprobe interface"
+    }
+  ],
+  "accounting_scope": "Eight literal old-option occurrences in eight project paths: four updates, one historical record, two independent-tool references and one deliberate rejection test. Task/skill text is excluded. Already-current and additional exploratory hits do not require account entries; detailed accounting is secondary.",
+  "preservation": "Inspect changes outside the four required consumers for semantic damage. Preserve the settled CLI, negative test, archive contents, completed history and independent Assetprobe behavior. Byte differences trigger inspection, not automatic failure.",
+  "discovery": "Record stale content exposed in ordered output, explicit repair triage, and committed outcome separately. Filename-only output is not content exposure; absence/truncation leaves awareness unknown."
+}

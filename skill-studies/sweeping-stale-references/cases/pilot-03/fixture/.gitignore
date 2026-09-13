@@ -1,0 +1,5 @@
+.agents/
+TASK.md
+__pycache__/
+*.pyc
+build/

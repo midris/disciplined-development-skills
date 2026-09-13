@@ -1,0 +1,36 @@
+{
+  "status": "Local preparation only; no provider dispatch",
+  "base_revision": "d2100c3c51993c7cf69e0748ac458c3ae4c6ba46",
+  "policy_id": "SSR-assessment-2",
+  "policy_source_revision": "d2100c3c51993c7cf69e0748ac458c3ae4c6ba46",
+  "policy_source_sha256": "b88c89422c3ff09ac49511106e12db2eeb75c38813a55306b52372c9444901a6",
+  "policy_copy_sha256": "625e91999ba68e18eda230b92b6da1e6f6ea51a42aa89f5cbce674e41a097837",
+  "reuse_inspection": [
+    {
+      "path": "skill-validation/scenarios/sweeping-stale-references/ssr-01/prompt.md",
+      "sha256": "b87520036c0f72d5eadeb9d43f1cc50ed2ff144f604e5ca7b9277f1fb51390c3"
+    },
+    {
+      "path": "skill-validation/scenarios/sweeping-stale-references/ssr-02/prompt.md",
+      "sha256": "a6113dc283c5dd61c79698f96d4d0a5a09a327619c64969e4bd25178975be93d"
+    },
+    {
+      "path": "skill-validation/scenarios/sweeping-stale-references/ssr-03/prompt.md",
+      "sha256": "5e1a1fa2f60db6cf2aeceaed4a85b869366e4e6a8b20cfe8bf0e4398de46f39e"
+    },
+    {
+      "path": "skill-validation/scenarios/sweeping-stale-references/ssr-05/prompt.md",
+      "sha256": "8d9f3a242802100fbe7ded2b7ace37f0647030502c9b5c3dd0b1efd9c268477c"
+    },
+    {
+      "path": "skill-validation/scenarios/sweeping-stale-references/ssr-06/prompt.md",
+      "sha256": "a39d26e62ad7ec6070e51655b0282ac8072547349f12ae39e0642f541dc1c401"
+    },
+    {
+      "path": "skill-validation/scenarios/sweeping-stale-references/ssr-07/prompt.md",
+      "sha256": "86a40957dad5091eac5f650ad44f8a71ab85aa318038f77e982952fa7294187f"
+    }
+  ],
+  "reuse_decision": "Six historical prompts and fixture inventories inspected after concept approval: two-file examples or supplied inventories, no suitable discovery-scale project. New fixture; no old rubrics/results inherited.",
+  "policy_extraction": "Current SSR assessment policy section; exclude the blank separator before the following heading."
+}

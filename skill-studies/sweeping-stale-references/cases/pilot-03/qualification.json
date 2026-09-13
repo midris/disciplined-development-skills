@@ -1,0 +1,306 @@
+{
+  "purpose": "Local qualification only; no providers invoked. Discovery adequacy remains a documented design limitation.",
+  "scratch": "/private/tmp/ssr03-qualification-d_k2x6mr",
+  "test_first": {
+    "fixture_cli": "Four public behavior tests written first; two positive-path failures with absent CLI, then four passing after implementation.",
+    "checker": "Tests written first; import failed with missing checker, then all eleven known-variant tests passed after implementation."
+  },
+  "commands": [
+    {
+      "argv": [
+        "python3",
+        "-m",
+        "unittest",
+        "discover",
+        "-s",
+        "/Users/simon/work/personal/disciplined-development-skills/skill-studies/sweeping-stale-references/cases/pilot-03/fixture/tests"
+      ],
+      "cwd": "/Users/simon/work/personal/disciplined-development-skills",
+      "exit_code": 0,
+      "stdout": "",
+      "stderr": "....\n----------------------------------------------------------------------\nRan 4 tests in 0.246s\n\nOK\n"
+    },
+    {
+      "argv": [
+        "python3",
+        "-m",
+        "unittest",
+        "discover",
+        "-s",
+        "/Users/simon/work/personal/disciplined-development-skills/skill-studies/sweeping-stale-references/cases/pilot-03",
+        "-p",
+        "test_check_*.py"
+      ],
+      "cwd": "/Users/simon/work/personal/disciplined-development-skills",
+      "exit_code": 0,
+      "stdout": "",
+      "stderr": "...........\n----------------------------------------------------------------------\nRan 11 tests in 3.708s\n\nOK\n"
+    }
+  ],
+  "constructed_observations": [
+    {
+      "variant": "pristine",
+      "observations": {
+        "consumers": [
+          {
+            "path": "README.md",
+            "status": "observed",
+            "artifact_correct": false,
+            "argv": [
+              "sh",
+              "-c",
+              "python3 tools/relaypack.py build --manifest project.json --output-dir build/quickstart"
+            ],
+            "cwd": "/private/tmp/ssr03-qualification-d_k2x6mr/pristine",
+            "exit_code": 2,
+            "stdout": "",
+            "stderr": "usage: relaypack.py build [-h] --manifest MANIFEST --destination DESTINATION\nrelaypack.py build: error: the following arguments are required: --destination\n"
+          },
+          {
+            "path": "scripts/package-local.sh",
+            "status": "observed",
+            "artifact_correct": false,
+            "argv": [
+              "sh",
+              "/private/tmp/ssr03-qualification-d_k2x6mr/pristine/scripts/package-local.sh"
+            ],
+            "cwd": "/private/tmp/ssr03-qualification-d_k2x6mr/pristine",
+            "exit_code": 2,
+            "stdout": "",
+            "stderr": "usage: relaypack.py build [-h] --manifest MANIFEST --destination DESTINATION\nrelaypack.py build: error: the following arguments are required: --destination\n"
+          },
+          {
+            "path": "ops/release/archive.mk",
+            "status": "observed",
+            "artifact_correct": false,
+            "argv": [
+              "make",
+              "release"
+            ],
+            "cwd": "/private/tmp/ssr03-qualification-d_k2x6mr/pristine",
+            "exit_code": 2,
+            "stdout": "python3 tools/relaypack.py build --manifest project.json --output-dir build/release\n",
+            "stderr": "usage: relaypack.py build [-h] --manifest MANIFEST --destination DESTINATION\nrelaypack.py build: error: the following arguments are required: --destination\nmake: *** [release] Error 2\n"
+          },
+          {
+            "path": ".github/workflows/release.yml",
+            "status": "observed",
+            "artifact_correct": false,
+            "argv": [
+              "sh",
+              "-c",
+              "python3 tools/relaypack.py build --manifest project.json --output-dir build/ci"
+            ],
+            "cwd": "/private/tmp/ssr03-qualification-d_k2x6mr/pristine",
+            "exit_code": 2,
+            "stdout": "",
+            "stderr": "usage: relaypack.py build [-h] --manifest MANIFEST --destination DESTINATION\nrelaypack.py build: error: the following arguments are required: --destination\n"
+          }
+        ],
+        "local_from_outside": {
+          "path": "scripts/package-local.sh",
+          "status": "observed",
+          "artifact_correct": false,
+          "argv": [
+            "sh",
+            "/private/tmp/ssr03-qualification-d_k2x6mr/pristine/scripts/package-local.sh"
+          ],
+          "cwd": "/private/tmp/ssr03-qualification-d_k2x6mr",
+          "exit_code": 2,
+          "stdout": "",
+          "stderr": "usage: relaypack.py build [-h] --manifest MANIFEST --destination DESTINATION\nrelaypack.py build: error: the following arguments are required: --destination\n"
+        },
+        "independent_tool": {
+          "path": "vendor/assetprobe/README.md",
+          "status": "observed",
+          "artifact_correct": true,
+          "argv": [
+            "sh",
+            "-c",
+            "python3 vendor/assetprobe/export.py --output-dir build/inventory"
+          ],
+          "cwd": "/private/tmp/ssr03-qualification-d_k2x6mr/pristine",
+          "exit_code": 0,
+          "stdout": "",
+          "stderr": ""
+        },
+        "canonical_cli": {
+          "path": "canonical current CLI",
+          "status": "observed",
+          "artifact_correct": true,
+          "argv": [
+            "/Users/simon/work/personal/disciplined-development-skills/skill-validation/runner/.venv/bin/python",
+            "/private/tmp/ssr03-qualification-d_k2x6mr/pristine/tools/relaypack.py",
+            "build",
+            "--manifest",
+            "project.json",
+            "--destination",
+            "build/canonical"
+          ],
+          "cwd": "/private/tmp/ssr03-qualification-d_k2x6mr/pristine",
+          "exit_code": 0,
+          "stdout": "build/canonical/relay-demo-1.4.0.zip\n",
+          "stderr": ""
+        },
+        "retired_option_probe": {
+          "argv": [
+            "/Users/simon/work/personal/disciplined-development-skills/skill-validation/runner/.venv/bin/python",
+            "/private/tmp/ssr03-qualification-d_k2x6mr/pristine/tools/relaypack.py",
+            "build",
+            "--manifest",
+            "project.json",
+            "--output-dir",
+            "build/retired"
+          ],
+          "cwd": "/private/tmp/ssr03-qualification-d_k2x6mr/pristine",
+          "exit_code": 2,
+          "stdout": "",
+          "stderr": "usage: relaypack.py build [-h] --manifest MANIFEST --destination DESTINATION\nrelaypack.py build: error: the following arguments are required: --destination\n"
+        },
+        "retired_option_nonzero": true,
+        "changed_nonconsumer_files": [],
+        "limit": "Changed preservation bytes, unsupported syntax, extra files, action traces, settled CLI behavior and complete committed work require inspection. CI command runs locally, not on GitHub."
+      }
+    },
+    {
+      "variant": "complete",
+      "observations": {
+        "consumers": [
+          {
+            "path": "README.md",
+            "status": "observed",
+            "artifact_correct": true,
+            "argv": [
+              "sh",
+              "-c",
+              "python3 tools/relaypack.py build --manifest project.json --destination build/quickstart"
+            ],
+            "cwd": "/private/tmp/ssr03-qualification-d_k2x6mr/complete",
+            "exit_code": 0,
+            "stdout": "build/quickstart/relay-demo-1.4.0.zip\n",
+            "stderr": ""
+          },
+          {
+            "path": "scripts/package-local.sh",
+            "status": "observed",
+            "artifact_correct": true,
+            "argv": [
+              "sh",
+              "/private/tmp/ssr03-qualification-d_k2x6mr/complete/scripts/package-local.sh"
+            ],
+            "cwd": "/private/tmp/ssr03-qualification-d_k2x6mr/complete",
+            "exit_code": 0,
+            "stdout": "build/local/relay-demo-1.4.0.zip\n",
+            "stderr": ""
+          },
+          {
+            "path": "ops/release/archive.mk",
+            "status": "observed",
+            "artifact_correct": true,
+            "argv": [
+              "make",
+              "release"
+            ],
+            "cwd": "/private/tmp/ssr03-qualification-d_k2x6mr/complete",
+            "exit_code": 0,
+            "stdout": "python3 tools/relaypack.py build --manifest project.json --destination build/release\nbuild/release/relay-demo-1.4.0.zip\n",
+            "stderr": ""
+          },
+          {
+            "path": ".github/workflows/release.yml",
+            "status": "observed",
+            "artifact_correct": true,
+            "argv": [
+              "sh",
+              "-c",
+              "python3 tools/relaypack.py build --manifest project.json --destination build/ci"
+            ],
+            "cwd": "/private/tmp/ssr03-qualification-d_k2x6mr/complete",
+            "exit_code": 0,
+            "stdout": "build/ci/relay-demo-1.4.0.zip\n",
+            "stderr": ""
+          }
+        ],
+        "local_from_outside": {
+          "path": "scripts/package-local.sh",
+          "status": "observed",
+          "artifact_correct": true,
+          "argv": [
+            "sh",
+            "/private/tmp/ssr03-qualification-d_k2x6mr/complete/scripts/package-local.sh"
+          ],
+          "cwd": "/private/tmp/ssr03-qualification-d_k2x6mr",
+          "exit_code": 0,
+          "stdout": "build/local/relay-demo-1.4.0.zip\n",
+          "stderr": ""
+        },
+        "independent_tool": {
+          "path": "vendor/assetprobe/README.md",
+          "status": "observed",
+          "artifact_correct": true,
+          "argv": [
+            "sh",
+            "-c",
+            "python3 vendor/assetprobe/export.py --output-dir build/inventory"
+          ],
+          "cwd": "/private/tmp/ssr03-qualification-d_k2x6mr/complete",
+          "exit_code": 0,
+          "stdout": "",
+          "stderr": ""
+        },
+        "canonical_cli": {
+          "path": "canonical current CLI",
+          "status": "observed",
+          "artifact_correct": true,
+          "argv": [
+            "/Users/simon/work/personal/disciplined-development-skills/skill-validation/runner/.venv/bin/python",
+            "/private/tmp/ssr03-qualification-d_k2x6mr/complete/tools/relaypack.py",
+            "build",
+            "--manifest",
+            "project.json",
+            "--destination",
+            "build/canonical"
+          ],
+          "cwd": "/private/tmp/ssr03-qualification-d_k2x6mr/complete",
+          "exit_code": 0,
+          "stdout": "build/canonical/relay-demo-1.4.0.zip\n",
+          "stderr": ""
+        },
+        "retired_option_probe": {
+          "argv": [
+            "/Users/simon/work/personal/disciplined-development-skills/skill-validation/runner/.venv/bin/python",
+            "/private/tmp/ssr03-qualification-d_k2x6mr/complete/tools/relaypack.py",
+            "build",
+            "--manifest",
+            "project.json",
+            "--output-dir",
+            "build/retired"
+          ],
+          "cwd": "/private/tmp/ssr03-qualification-d_k2x6mr/complete",
+          "exit_code": 2,
+          "stdout": "",
+          "stderr": "usage: relaypack.py build [-h] --manifest MANIFEST --destination DESTINATION\nrelaypack.py build: error: the following arguments are required: --destination\n"
+        },
+        "retired_option_nonzero": true,
+        "changed_nonconsumer_files": [],
+        "limit": "Changed preservation bytes, unsupported syntax, extra files, action traces, settled CLI behavior and complete committed work require inspection. CI command runs locally, not on GitHub."
+      }
+    }
+  ],
+  "workspace_preparation": [
+    {
+      "condition": "control",
+      "path": "/private/tmp/ssr03-qualification-d_k2x6mr/skilltest-runs/20260913T140525436Z-ssr-pilot-03-control-58916cd6-a0f8-4399-8b8b-da437a18106e-rxws2_au",
+      "fixture_entries": 50,
+      "all_bytes_match": true,
+      "provider_invoked": false
+    },
+    {
+      "condition": "original",
+      "path": "/private/tmp/ssr03-qualification-d_k2x6mr/skilltest-runs/20260913T140525450Z-ssr-pilot-03-original-a883dcdf-4469-407b-bb45-1b6001d20a04-txy01zns",
+      "fixture_entries": 51,
+      "all_bytes_match": true,
+      "provider_invoked": false
+    }
+  ]
+}

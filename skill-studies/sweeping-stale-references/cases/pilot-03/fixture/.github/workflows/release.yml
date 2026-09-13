@@ -1,0 +1,16 @@
+name: Release archive
+on: [workflow_dispatch]
+jobs:
+  archive:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Build handoff
+        run: python3 tools/relaypack.py build --manifest project.json --output-dir build/ci
+      - uses: actions/upload-artifact@v4
+        with:
+          name: relay-demo
+          path: build/ci/relay-demo-1.4.0.zip
