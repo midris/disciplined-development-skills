@@ -112,6 +112,10 @@ Ambient guidance, inaccessible required task inputs or a setup-induced missing-s
 Owner direction: agree on what to test and how before selecting scenarios. After that review, inspect earlier scenarios for a fit; adapt a suitable one or create a new one where coverage is missing. Old expectations and results are not inherited as authority.
 The owner accepted these seven facets on 2026-09-12. They define conceptual coverage, not seven required cases or a complete scoring rubric.
 
+**Owner priority, 2026-09-13:** establish the core value first: identify affected references beyond the cited defect, reconcile them correctly, preserve unrelated and historical meaning, and commit the completed repair. Broad searching is part of the skill's explicit procedure; finding more than the control is a diagnostic comparison, not an additional success requirement. Observe search, triage and accounting under SSR-assessment-2 without making a discovery advantage or exhaustive facet coverage a prerequisite to the first baseline. Complete repairs prompted by SSR remain useful evidence even when the control saw the same references.
+
+**Owner coverage decision:** include three core situations in baseline design: interface rename, moved file and changed behavior described in documentation. Use Shiv and the moved-guide case as the prepared foundations, and design semantic drift before freezing collection. The earlier proposal to defer semantic drift is superseded. Specialized discovery challenges and additional boundaries can wait; trustworthy functional checks and evaluator qualification remain necessary.
+
 | Facet | What to exercise | How to observe it |
 |---|---|---|
 | Broaden beyond the trigger | One cited defect has unstated siblings, including config, CI or fixtures. Distinguish discovering consumers from deciding to repair consumers already seen. | Check required consumers in final state; inspect traces separately for discovery, search breadth and search-before-edit order. The two pilots observe scope completion and broad-search behavior but do not discriminate discovery effectiveness. |
@@ -122,9 +126,7 @@ The owner accepted these seven facets on 2026-09-12. They define conceptual cove
 | Produce useful sweep accounting | The audit covers updates, false positives and intentional preservation, with correct locations/counts and grouping. | Mechanical checks cover syntax and count reconciliation; judgment checks whether the account and reasons match the evidence. Missing accounting is a non-blocking procedural defect under the settled policy. |
 | Justify a genuinely local change | Checking scope finds no related updates. | Inspect the scope evidence and preserved project, then check the required negative-form line separately. A one-file task description alone is not justification. |
 
-Current coverage gap: **discovery under realistic repository complexity**, alongside semantic code-to-documentation drift and the justified-local-change boundary. Both pilot controls encountered all required current consumers before choosing a narrow repair (pilot 01 control `stdout.txt:8`; pilot 02 control `stdout.txt:10`). Broad search was observed, but these small fixtures do not establish that the skill improves discovery when reading every file is impractical. This limits the coverage claim; it does not change either assessment.
-For a later discovery case, agree on a plausible repository structure and sufficient relevant context to make selective search meaningful, with a real consumer in a less obvious config, CI, build or fixture location. Keep consumers reachable by ordinary repository search; avoid arbitrary filler, hidden access barriers or requiring the control to miss. Record which consumers each condition actually encounters before judging its subsequent repair decisions. If both discover everything, report that result without claiming a discovery advantage. Review conceptual coverage before inspecting old scenarios for fit or constructing the fixture; budget and exact dispatch still require their existing decisions.
-
+Coverage limits: both pilot controls encountered all required current consumers before choosing a narrow repair (pilot 01 control `stdout.txt:8`; pilot 02 control `stdout.txt:10`). The completed pairs therefore support a repair-scope comparison, while discovery under larger-project conditions remains unobserved. The prepared Shiv case offers that observation alongside its primary functional outcomes; no extra case or repeat is required merely to demonstrate a discovery advantage. Semantic code-to-documentation drift is now required in baseline design; justified-local-change coverage remains deferred.
 Facets may share cases; this does not require seven scenarios or seven initial runs.
 Start process qualification with one non-reserved case exposing scope expansion, triage, reconciliation and accounting. Paths and semantic drift can be covered in later cases if the first would become overloaded; untested facets remain explicit gaps.
 The initial real-model pilot asks whether inputs/skills are loaded as intended, tasks are feasible, traces and Git changes are retained, and separate functional/procedural judgments can be supported. It can expose case defects but does not establish coverage or stable skill effectiveness.
@@ -151,6 +153,50 @@ The [qualification record](cases/discovery-shiv/qualification.json), [source pro
 **Owner approved, 2026-09-13:** pre-baseline development is closed at four completed subject calls. Its one remaining additional-development slot stays unused. Baseline design is authorized, with Shiv considered for that suite instead of another development pair. This replaces the proposal to request an extra development slot. Prior pilot observations remain pilot evidence; no baseline invocation, capacity transfer or skill rewrite is authorized.
 Choose the smallest baseline case set that supports the intended comparison, freezing cases, repetitions, assessment and commands before authorization. The existing baseline arithmetic is two cases × two conditions × two repetitions (eight calls); selecting Shiv within that set need not transfer capacity. Broader case coverage requires an explicit design/allocation decision, not an assumption that all named facets fit those two slots.
 New discovery, semantic-drift or justified-local-change facets are designed for the baseline/transfer set when they help the decision, or remain explicit coverage gaps. They do not each trigger a new pre-baseline pair. Functional ties, successful controls, limited novelty and sparse accounting do not reopen development. An unresolved execution/evaluation defect is a readiness blocker to resolve or a reason to close inconclusive; any additional diagnostic invocation requires a named defect and separate owner-approved exception rather than an automatic extension. Later rewrite diagnostics remain a separate, already bounded phase.
+
+
+### Proposed baseline case selection
+
+**Status: owner accepted the three core situations on 2026-09-13; detailed case design, collection freeze and dispatch remain open.** The baseline will address standalone reconciliation after an interface rename, a moved file and changed behavior described in documentation. This supersedes the earlier two-case proposal; the two-case call table remains an unrevised allocation, not authority for expanded collection.
+
+| Core situation | Case foundation | Status and useful evidence |
+|---|---|---|
+| Interface rename | [Shiv](cases/discovery-shiv/assessment.md) | Locally qualified, no model run. Four executable consumers across README, script, build and CI. Check complete repair, preservation and committed edits; discovery-versus-action is supporting evidence. |
+| Moved file | [Pilot 02: moved guide](cases/pilot-02/assessment.md) | One development pair complete; fresh baseline runs still needed. Resolve different relative spellings to the intended guide, execute the export script from two directories and preserve the independent same-name vendor link. |
+| Changed behavior | [Semantic delivery policy](cases/semantic-delivery/assessment.md) | Locally prepared and mechanically qualified. Three current claims express the same changed fact differently; historical and independent policies must be preserved. Semantic evaluator calibration remains open. |
+
+The owner accepted the [semantic-drift concept below](#semantic-drift-concept-delivery-retries) and authorized construction. The six earlier SSR prompts were inspected for fit; none supplied the needed changed-behavior mechanism, so the case is newly authored. No historical rubric or result was inherited.
+
+Pilot 01's cache-setting rename adds JSON/config representations but overlaps Shiv's literal-rename problem; retain its development evidence outside the selected baseline foundations. Preserve the rejected synthetic draft without resuming it. Selection uses observed pilot behavior, so these are development cases, not reserved evidence; new runs do not erase exposure or selection bias.
+
+| Accepted facet | Planned baseline coverage | Limit |
+|---|---|---|
+| Broaden beyond the trigger | Unstated current consumers in the prepared cases and planned semantic case. | Complete reconciliation leads; discovering more than the control is not required. |
+| Equivalent references and changed facts | Relative spellings in the moved-guide case; meaning-based documentation repair in the semantic case. | Inputs, runtime facts and semantic reference criteria are prepared; independent evaluator qualification remains open. |
+| Moved paths | Three links and an executable export consumer. | Owner-clarified outcome, not proof the original explicitly teaches path resolution. |
+| Triage and preservation | Historical records, independent interfaces, a same-name vendor link and semantic distinctions to define. | Preservation is judged by meaning and behavior, not byte identity alone. |
+| Complete and commit | Working consumers and all required edits in retained Git history. | One-commit grouping is assessed separately from functional completeness. |
+| Useful accounting | Each case's predefined scope under SSR-assessment-2. | Secondary procedural evidence; no aggregate score hiding outcome failures. |
+| Genuinely local change | Deferred. | No claim about a justified negative sweep or its required negative-form account. |
+
+Qualify model evaluation for semantic correctness/preservation, accepted alternatives, audit usefulness and trace interpretation before relying on it. Runtime/path tools and Git supply mechanical evidence; checker tests alone do not qualify the evaluator. Use contrasting examples from the current policy and batch across cases, never conditions of one case.
+
+Rework subject/evaluator allocation after the semantic design. Three cases × original/no-target × two repetitions would be 12 baseline subject calls, versus the previously budgeted eight; retaining all three plus one transfer case with two repetitions in final original/candidate comparison would be 16, versus 12. These are scope illustrations, not approved counts. Reconcile repetitions, diagnostic capacity, comparison coverage and evaluation batches within the owner-approved pools, or propose an explicit revision. Do not silently transfer capacity or treat the original two-case arithmetic as a reason to omit core coverage.
+
+Existing subject configurations use Codex Sol-low and workspace-write; recommend retaining them for continuity, with identities and order settled at freeze. Preserve the original skill snapshot, pilot criteria and old observations. The baseline index and versioned evaluation package will identify current case membership, source bytes, policy and fresh run identities; historical pilot commands do not authorize baseline dispatch.
+
+Specialized search difficulty, justified-local-change behavior, native skill discovery, composition and population reliability remain outside this baseline design. Revisit a gap when needed for a proposed rewrite or a later coverage expansion; passing the selected cases alone does not establish universal SSR effectiveness. No reserved transfer case or provider invocation is authorized here.
+
+
+### Semantic-drift concept: delivery retries
+
+**Owner accepted the concept and authorized local construction.** The [case package](cases/semantic-delivery/assessment.md) now implements a small notification worker whose settled policy allows one initial send plus up to three retries, stopping on success. Three stale current descriptions express total attempts, additional tries and exhaustion. The historical policy and independent download helper retain their former/current three-attempt meanings respectively. No identifier or file move is involved.
+
+The [task](cases/semantic-delivery/task.md) names only the README defect, permits project edits and requests a commit. Nine project files are supplied with TASK.md in both conditions; original alone adds the frozen skill. The runner loaded and copied 10 control versus 11 original entries with identical nine-file baseline trees and one prompt-line difference. The [manifest](cases/semantic-delivery/manifest.json) identifies subject and controller bytes; this verifies local preparation, not actual provider loading or host-wide guidance isolation.
+
+Seven public behavior tests establish delivery exhaustion/early success and the independent helper's limit. Twelve controller tests cover facts-only replay and qualification integrity: rollback, altered limits, continued sends after success, missing APIs, timeouts, malformed/incomplete output, optimized Python and inherited Git overrides. The probe does not score prose. The [qualification record](cases/semantic-delivery/qualification.json) retains nine reconstructed documentation variants and their runtime/Git facts: pristine, README-only, complete, blanket number replacement, attempts/retries confusion, always-four wording, removed explanations, equivalent consolidation and correct-but-uncommitted work. All nine retain passing code tests, demonstrating why semantic assessment must inspect the documents.
+
+The [expected meanings and accounting scope](cases/semantic-delivery/expected.json) permit equivalent wording and effective restructuring, with history/independent meaning preserved and all required repairs committed. Reference judgments are orchestrator-constructed and locally inspected; they are not model observations or independent evaluator qualification. Keep reference judgments out of future calibration packets. Model-evaluator qualification, neutral evidence packaging, versioned baseline formats and revised call allocation remain the next preparation work. No provider call, extra development pair or skill edit occurred during construction.
 
 ## Two-run process pilot
 
@@ -199,10 +245,10 @@ Control then original ran once each, preserving and inspecting complete bundles 
 
 ### Whole-study allocation
 
-Initial process checks will use **Codex `gpt-5.6-sol`, low effort**, following the owner's request to use Sol low or Terra medium while establishing the process.
-`gpt-5.6-terra`, medium effort, is the alternative if the pilot exposes a reason to switch; do not silently pool different models' observations.
-The owner directed minimal real-model runs to establish the process before broader testing. The initial two Sol-low subject invocations, one original and one no-target, are complete; use the pilot evidence to decide whether another run has a specific unresolved process purpose. The five-repetition wording campaign is a later conditional allocation, not part of initial process qualification.
-Choose the measured baseline model after the pilot and keep it fixed across comparison conditions; exact commands and provider-run authorization remain Stage 3 work.
+The four completed process checks used **Codex `gpt-5.6-sol`, low effort**, following the owner's request to use Sol low or Terra medium while establishing the process.
+`gpt-5.6-terra`, medium effort, remains an alternative if later evidence supports a switch; do not silently pool different models' observations.
+Pre-baseline development is closed at two completed original/no-target pairs. Apply the [closure rule](#transition-to-baseline-design) to any proposed diagnostic exception; this allocation grants no additional pilot run. The five-repetition wording campaign remains conditional later work.
+Choose the measured baseline model before collection freeze and keep it fixed across comparison conditions; exact commands and provider-run authorization remain Stage 3 work.
 
 Installed Superpowers is version **6.3.0**, verified from its plugin manifest; the inspected `writing-skills`, `testing-skills-with-subagents.md` and required TDD background are hashed in the source inventory.
 The guidance requires observed failure without the target before authoring, a change matched to the failure type, and five or more repetitions per variant for wording micro-tests.
@@ -210,7 +256,7 @@ It also calls for combined realistic pressures for discipline behavior and actua
 These inform Stage 2 design; illustrative multiple-choice prompts and historical performance claims in the guidance do not become this study's evidence or universal acceptance criteria.
 
 The owner accepted outer ceilings of **40 subject / 12 evaluator / 4 authoring / 4 retry invocations** and **20 active hours**. The phase allocation below remains a planning envelope for at most one selected rewrite attempt, not authorization to run the whole campaign.
-Case slots are arithmetic assumptions, not designed or approved tests: two development slots and one transfer slot, with overlapping properties allowed.
+The table retains the original two-development-case/one-transfer-case arithmetic for comparison with the pending revision. It is superseded as a case-selection proposal by the [three accepted core situations](#proposed-baseline-case-selection); revise baseline and final-comparison counts together before freeze. Neither the table nor remaining capacity authorizes dispatch.
 
 | Phase | Subject | Evaluator | Authoring | Retry | Allocation basis |
 |---|---:|---:|---:|---:|---|
@@ -240,23 +286,32 @@ If the allocation cannot support a decision, close inconclusive or retain the or
 
 ### Time allocation and forecast
 
-The original planning targets remain 240 minutes for contract/test preparation and 180 for qualification/calibration, followed by 180 baseline, 300 authoring/diagnostics, 240 comparison and 60 closure: **1,200 minutes total**. They were not separately metered. The original 220-minute booking includes mixed preparation, tooling investigation, qualification and review; its historical split is unknown. The subsequent 6 booked minutes are preparation review and budget reconciliation, for 226 minutes total. Reconcile that shared 420-minute envelope below without inventing phase-level actuals. These phase targets are effort estimates, not individually enforced limits; the overall authorization ceiling remains separate.
+The original planning targets remain 240 minutes for contract/test preparation and 180 for qualification/calibration, followed by 180 baseline, 300 authoring/diagnostics, 240 comparison and 60 closure: **1,200 minutes total**. They were not separately metered. The original 220-minute booking includes mixed preparation, tooling investigation, qualification and review; its historical split is unknown. The subsequent 42 booked minutes cover preparation review, budget reconciliation, baseline case design and semantic-delivery construction/qualification/remediation and commit verification, for 262 minutes total. Reconcile that shared 420-minute envelope below without inventing phase-level actuals.
 
 | Work category | Original estimate (minutes) | Booked use | Estimate less use | Estimated remaining work / status |
 |---|---:|---:|---:|---|
-| Preparation + qualification (240 + 180) | 420 | 220 historical + 6 preparation review | 194 | 210–300; forecast variance of 16–106 minutes above the original estimate. Review scope and forecast at baseline design; variance is not failure. |
+| Preparation + qualification (240 + 180) | 420 | 220 historical + 42 preparation/qualification | 158 | 210–300; forecast variance of 52–142 minutes above the original estimate. |
 | Baseline collection and assessment | 180 | 0 | 180 | Reforecast from frozen cases, evaluator configuration and measured latencies before dispatch; fit not yet established. |
 | Authoring and diagnostics | 300 | 0 | 300 | Objective-dependent; unstarted, no fit claim. |
 | Comparison | 240 | 0 | 240 | Reforecast after comparison design; preserve necessary comparison work. |
 | Closure | 60 | 0 | 60 | Unstarted; retain allowance. |
 | Document-tool implementation and qualification | Not in original estimate | 0 implementation | Not applicable | Preliminary 120-minute estimate after baseline assessment; refine with scoped design. This adds forecast effort, not authorized capacity. |
-| Original total / overall authorization ceiling | 1,200 | 226 | 974 | Forecast phase variance remains visible; it is not a failure verdict. |
+| Original total / overall authorization ceiling | 1,200 | 262 | 938 | See aggregate forecast below. |
 
-The forward preparation/qualification estimate is a controller planning estimate, not measured effort: 60–90 minutes for baseline case selection/design, 60–90 for six concise artifact contracts and their application, and 90–120 for evaluator setup, constructed references, two calibration calls and assessment. Those estimates total 210–300 minutes; calibration is still unqualified. Format agreement is inside preparation; implementation and its own tests belong to the separate tooling estimate. The preliminary 120-minute estimate is neither a cap nor a promise of completion.
+Aggregate planning scenario: carry forward 180 + 300 + 240 + 60 = 780 minutes for baseline, authoring/diagnostics, comparison and closure, alongside the updated 210–300-minute preparation/qualification forecast. The later phases have not been re-estimated; this scenario assumes the full rewrite/comparison work proceeds.
 
-At every active-work checkpoint, update this table with the cumulative accounting below: assign new time to its work category, preserve the mixed historical booking as such, and reconcile total use once. Include review, storage and model waits in the category they support. Revise remaining-work estimates when scope or observed effort changes. Unknown estimates remain explicit uncertainty. A forecast overrun prompts checking whether the test scope and required work are appropriate, then updating the forecast; it does not automatically block collection, mandate cuts or require a phase-budget transfer.
+| Scope | Remaining forecast (minutes) | Projected whole-study total, including 262 booked | Forecast above 1,200-minute ceiling |
+|---|---:|---:|---:|
+| Study excluding document-tool implementation | 990–1,080 | 1252–1342 | 52–142 |
+| Study including preliminary 120-minute tool estimate | 1,110–1,200 | 1372–1462 | 172–262 |
 
-**Owner clarification:** missing an effort estimate or time budget is not a failure in itself. Do not score it as a functional/procedural defect or use it alone to reject a skill, test or study. Keep necessary qualification and evidence standards intact. The agreed 20-hour ceiling remains a limit on autonomous work, not a quality threshold: bring the remaining work and revised estimate to the owner if an extension is needed. If work stops, describe the uncompleted evidence and resulting limits without converting a timing variance into a failed skill outcome.
+Remaining authorized time is **938 minutes**, below both scenario ranges. Present this potential extension need now and refine it at the baseline-design walkthrough using the selected cases, evaluator work and tool scope. No extension is approved by this forecast. Continue currently authorized design within the remaining ceiling; do not remove necessary qualification merely to make the arithmetic fit.
+
+The forward preparation/qualification estimate is a controller planning estimate, not measured effort: 60–90 minutes for baseline case selection/design, 60–90 for six concise artifact contracts and their application, and 90–120 for evaluator setup, constructed references, two calibration calls and assessment. Those estimates total 210–300 minutes; calibration is still unqualified. They predate the three-situation coverage decision and remain an illustrative planning scenario, not a forecast validated for the expanded suite. The semantic case is now constructed; replace this scenario with an updated forecast when setting the three-case allocation, evaluator work and remaining format preparation. It is not a current fit claim. Format agreement is inside preparation; implementation and its own tests belong to the separate tooling estimate. The preliminary 120-minute estimate is neither a cap nor a promise of completion.
+
+At every active-work checkpoint, update this table with the cumulative accounting below: assign new time to its work category, preserve the mixed historical booking as such, and reconcile total use once. Include review, storage and model waits in the category they support. Revise remaining-work estimates when scope or observed effort changes. Unknown estimates remain explicit uncertainty. Compare aggregate remaining effort with remaining authorized time and update the extension forecast alongside the phase rows.
+
+**SSR application of the [effort policy](../../plans/specs/2026-09-11-model-driven-skill-testing-framework.md#4-pilot-and-freeze-the-experiment-plan):** timing variance prompts scope review, not a failure verdict or weaker qualification. The 20-hour autonomous-work ceiling remains unchanged; present forecast extension needs at the baseline-design walkthrough and obtain approval before exceeding it.
 
 Pilot 01 model durations were 47.936 and 59.891 seconds (107.827 seconds total). Pilot 02 took 37.782 and 76.784 seconds (114.566 seconds total). At the four-call mean, 60 similar calls would take about 56 minutes; this is illustrative, not a forecast for longer subjects/evaluators. The runner's 900-second timeout is not an expected duration.
 At that timeout for every call, latency alone would consume 15 hours, so the ceilings are not a promise that every call fits; substitute pilot measurements and stop under the agreed limit.
@@ -312,13 +367,13 @@ This preparation consumes active study time toward the accepted ceiling; recorde
 Dispatched study invocations so far: **4 subject, 0 evaluator, 0 authoring, 0 retry**. Remaining outer capacity is 36 / 12 / 4 / 4 respectively; no further call is authorized by either completed pair.
 The orchestrator's preparation conversation and local tool calls consume active time, not provider-invocation slots; model assessments or authoring work must be accounted under their declared roles.
 
-Owner walkthrough: the contract, outer limits, pilot 01 findings and pilot 02 concept are settled. Pilot 02 results and the path-count explanation have been walked through with the owner; that checkpoint was committed and pushed. Shiv case preparation is complete. Baseline design is now authorized; case selection, collection freeze and provider dispatch remain pending.
+Owner walkthrough: the contract, outer limits, pilot 01 findings and pilot 02 concept are settled. Pilot 02 results and the path-count explanation have been walked through with the owner; that checkpoint was committed and pushed. Shiv case preparation is complete. Three core situations are accepted and their case foundations are prepared; exact suite freeze, evaluator qualification, revised allocation and provider dispatch remain pending.
 Independent use is settled; Stage 3 has observed the declared standalone setup for this pair; broader isolation and model-evaluator qualification remain open.
 
-Accounting updated, 2026-09-13: **book 226 active minutes through effort-estimate clarification and commit verification**, leaving **16 hours 14 minutes** under the accepted 20-hour ceiling. This replaces, rather than adds to, earlier bookings.
+Accounting updated, 2026-09-13: **book 262 active minutes through semantic-delivery review, verification and commit preparation**, leaving **15 hours 38 minutes** under the accepted 20-hour ceiling. This replaces, rather than adds to, earlier bookings.
 Source: the current task's local log at `/Users/simon/.codex/sessions/2026/09/11/rollout-2026-09-11T17-59-42-01a0927b-cef5-7db0-8a30-c76c5b1ae838.jsonl`; only boundary timestamps were extracted, not conversation contents.
-Reconstruction sums the union of 89 closed `task_complete` / `turn_aborted` intervals since Stage 1 began: **13,236.0 seconds (220.60 minutes)**, including model/tool waits inside turns and excluding inter-turn owner-wait.
-The current turn began at 2026-09-13 16:48:42 UTC and adds 31 seconds at the 2026-09-13 16:49:13 UTC checkpoint. Retain the original two-minute opening allowance and allow two minutes for completion; round 225.12 minutes up to 226. Closing allowance and rounding are estimates, not independently measured owner/Claude effort. Provider durations are already inside active-turn time and are not added again.
+Reconstruction sums the union of 107 closed `task_complete` / `turn_aborted` intervals since Stage 1 began: **15,418.0 seconds (256.97 minutes)**, including model/tool waits inside turns and excluding inter-turn owner-wait.
+The current turn began at 2026-09-14 00:31:31 UTC and adds 53 seconds at the 2026-09-14 00:32:24 UTC checkpoint. Retain the original two-minute opening allowance and allow two minutes for completion; round 261.85 minutes up to 262. Closing allowance and rounding are estimates, not independently measured owner/Claude effort. Provider durations are already inside active-turn time and are not added again.
 At the next checkpoint, recompute cumulative closed-turn intervals plus the opening allowance and round up; do not add already counted turns or restore the superseded checkpoints. If the completed current turn exceeds the booking, correct the total before approving the remaining budget.
 
 Relationship-correction verification: all **21** source identities match, including all nine DD skills at the recorded revision; local links resolve and `git diff --check` passes.

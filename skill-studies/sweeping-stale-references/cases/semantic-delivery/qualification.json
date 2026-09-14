@@ -1,0 +1,662 @@
+{
+  "scope": "Local runtime/input/constructed-reference qualification; model evaluator remains unqualified.",
+  "scratch": "/var/folders/55/6jqr25v5211fn00wych8b1jm0000gn/T/ssr-semantic-qualification-tlc_e36i",
+  "variants": [
+    {
+      "id": "pristine",
+      "fixture": "/var/folders/55/6jqr25v5211fn00wych8b1jm0000gn/T/ssr-semantic-qualification-tlc_e36i/pristine",
+      "runtime": {
+        "status": "observed",
+        "probes": {
+          "delivery_fail": {
+            "status": "observed",
+            "calls": 4,
+            "returned": false
+          },
+          "delivery_first": {
+            "status": "observed",
+            "calls": 1,
+            "returned": true
+          },
+          "delivery_second": {
+            "status": "observed",
+            "calls": 2,
+            "returned": true
+          },
+          "delivery_fourth": {
+            "status": "observed",
+            "calls": 4,
+            "returned": true
+          },
+          "download_fail": {
+            "status": "observed",
+            "calls": 3,
+            "returned": false
+          },
+          "download_first": {
+            "status": "observed",
+            "calls": 1,
+            "returned": true
+          },
+          "download_third": {
+            "status": "observed",
+            "calls": 3,
+            "returned": true
+          }
+        }
+      },
+      "subject_tests_exit": 0,
+      "baseline": "6ef70efb33ab78bc61916b4e0274846deab4cdee",
+      "head": "6ef70efb33ab78bc61916b4e0274846deab4cdee",
+      "committed_paths": [],
+      "uncommitted_paths": [],
+      "reference_judgments": {
+        "F1": "not met",
+        "F2": "met",
+        "F3": "not met"
+      },
+      "rationale": "Three current claims contradict the settled worker; no repair committed.",
+      "documents": {
+        "README.md": "# Notification worker\n\nThe worker sends a notification through a caller-provided transport.\nA transport returns true on success and false when that attempt fails.\n\n## Delivery limit\n\nThe worker makes at most three delivery attempts for a notification.\nIt stops as soon as delivery succeeds and reports failure if delivery is exhausted.\n\nFor operational handling, see [the operations guide](docs/operations.md) and\n[troubleshooting](docs/troubleshooting.md).\nThe independent [download helper](docs/download-helper.md) is a separate operation.\n\n## Local verification\n\nNo network service or third-party package is required:\n\n```sh\npython3 -m unittest discover -s tests\n```\n",
+        "docs/download-helper.md": "# Download helper\n\n`fetch` in `src/download.py` is independent of notification delivery.\nIt makes at most three attempts to obtain an artifact, stopping after success.\nThe caller receives false if all attempts fail. This helper does not call the\nnotification worker or share its retry policy.\n",
+        "docs/operations.md": "# Operating notification delivery\n\nThis guide describes the current notification worker exposed by `deliver` in\n`src/delivery.py`.\n\nAfter the first failed send, the worker has two additional tries available.\nSuccessful delivery ends processing immediately; no further copies are sent.\nWhen the worker returns false, record the notification for operator follow-up.\nDo not start a second delivery cycle automatically.\n",
+        "docs/troubleshooting.md": "# Notification delivery troubleshooting\n\nFor the current notification worker, the third consecutive failed send exhausts\nautomatic delivery attempts. A false result means the notification needs\noperator attention.\n\nA true result means delivery succeeded; do not resend that notification merely\nbecause earlier attempts failed.\n",
+        "plans/completed/delivery-policy.md": "# Completed: initial delivery policy\n\nHistorical record of the policy before the current branch's change.\nThe former notification worker allowed three attempts in total: the initial\nsend followed by up to two further tries. Success ended the cycle early.\nThis records the former design, not current operating instructions.\n"
+      }
+    },
+    {
+      "id": "readme_only",
+      "fixture": "/var/folders/55/6jqr25v5211fn00wych8b1jm0000gn/T/ssr-semantic-qualification-tlc_e36i/readme_only",
+      "runtime": {
+        "status": "observed",
+        "probes": {
+          "delivery_fail": {
+            "status": "observed",
+            "calls": 4,
+            "returned": false
+          },
+          "delivery_first": {
+            "status": "observed",
+            "calls": 1,
+            "returned": true
+          },
+          "delivery_second": {
+            "status": "observed",
+            "calls": 2,
+            "returned": true
+          },
+          "delivery_fourth": {
+            "status": "observed",
+            "calls": 4,
+            "returned": true
+          },
+          "download_fail": {
+            "status": "observed",
+            "calls": 3,
+            "returned": false
+          },
+          "download_first": {
+            "status": "observed",
+            "calls": 1,
+            "returned": true
+          },
+          "download_third": {
+            "status": "observed",
+            "calls": 3,
+            "returned": true
+          }
+        }
+      },
+      "subject_tests_exit": 0,
+      "baseline": "6ef70efb33ab78bc61916b4e0274846deab4cdee",
+      "head": "689573574437ad2478758d67b297b7b0214c6862",
+      "committed_paths": [
+        "README.md"
+      ],
+      "uncommitted_paths": [],
+      "reference_judgments": {
+        "F1": "not met",
+        "F2": "met",
+        "F3": "not met"
+      },
+      "rationale": "The operations and troubleshooting claims remain stale.",
+      "documents": {
+        "README.md": "# Notification worker\n\nThe worker sends a notification through a caller-provided transport.\nA transport returns true on success and false when that attempt fails.\n\n## Delivery limit\n\nThe worker makes at most four delivery attempts for a notification.\nIt stops as soon as delivery succeeds and reports failure if delivery is exhausted.\n\nFor operational handling, see [the operations guide](docs/operations.md) and\n[troubleshooting](docs/troubleshooting.md).\nThe independent [download helper](docs/download-helper.md) is a separate operation.\n\n## Local verification\n\nNo network service or third-party package is required:\n\n```sh\npython3 -m unittest discover -s tests\n```\n",
+        "docs/download-helper.md": "# Download helper\n\n`fetch` in `src/download.py` is independent of notification delivery.\nIt makes at most three attempts to obtain an artifact, stopping after success.\nThe caller receives false if all attempts fail. This helper does not call the\nnotification worker or share its retry policy.\n",
+        "docs/operations.md": "# Operating notification delivery\n\nThis guide describes the current notification worker exposed by `deliver` in\n`src/delivery.py`.\n\nAfter the first failed send, the worker has two additional tries available.\nSuccessful delivery ends processing immediately; no further copies are sent.\nWhen the worker returns false, record the notification for operator follow-up.\nDo not start a second delivery cycle automatically.\n",
+        "docs/troubleshooting.md": "# Notification delivery troubleshooting\n\nFor the current notification worker, the third consecutive failed send exhausts\nautomatic delivery attempts. A false result means the notification needs\noperator attention.\n\nA true result means delivery succeeded; do not resend that notification merely\nbecause earlier attempts failed.\n",
+        "plans/completed/delivery-policy.md": "# Completed: initial delivery policy\n\nHistorical record of the policy before the current branch's change.\nThe former notification worker allowed three attempts in total: the initial\nsend followed by up to two further tries. Success ended the cycle early.\nThis records the former design, not current operating instructions.\n"
+      }
+    },
+    {
+      "id": "complete",
+      "fixture": "/var/folders/55/6jqr25v5211fn00wych8b1jm0000gn/T/ssr-semantic-qualification-tlc_e36i/complete",
+      "runtime": {
+        "status": "observed",
+        "probes": {
+          "delivery_fail": {
+            "status": "observed",
+            "calls": 4,
+            "returned": false
+          },
+          "delivery_first": {
+            "status": "observed",
+            "calls": 1,
+            "returned": true
+          },
+          "delivery_second": {
+            "status": "observed",
+            "calls": 2,
+            "returned": true
+          },
+          "delivery_fourth": {
+            "status": "observed",
+            "calls": 4,
+            "returned": true
+          },
+          "download_fail": {
+            "status": "observed",
+            "calls": 3,
+            "returned": false
+          },
+          "download_first": {
+            "status": "observed",
+            "calls": 1,
+            "returned": true
+          },
+          "download_third": {
+            "status": "observed",
+            "calls": 3,
+            "returned": true
+          }
+        }
+      },
+      "subject_tests_exit": 0,
+      "baseline": "6ef70efb33ab78bc61916b4e0274846deab4cdee",
+      "head": "6ae23ae0cd71a5c6d2b60650e7493ea73efecd1c",
+      "committed_paths": [
+        "README.md",
+        "docs/operations.md",
+        "docs/troubleshooting.md"
+      ],
+      "uncommitted_paths": [],
+      "reference_judgments": {
+        "F1": "met",
+        "F2": "met",
+        "F3": "met"
+      },
+      "rationale": "All three meanings repaired; early success and preserved context remain accurate. Sparse commit accounting does not change functional success.",
+      "documents": {
+        "README.md": "# Notification worker\n\nThe worker sends a notification through a caller-provided transport.\nA transport returns true on success and false when that attempt fails.\n\n## Delivery limit\n\nThe worker makes at most four delivery attempts for a notification.\nIt stops as soon as delivery succeeds and reports failure if delivery is exhausted.\n\nFor operational handling, see [the operations guide](docs/operations.md) and\n[troubleshooting](docs/troubleshooting.md).\nThe independent [download helper](docs/download-helper.md) is a separate operation.\n\n## Local verification\n\nNo network service or third-party package is required:\n\n```sh\npython3 -m unittest discover -s tests\n```\n",
+        "docs/download-helper.md": "# Download helper\n\n`fetch` in `src/download.py` is independent of notification delivery.\nIt makes at most three attempts to obtain an artifact, stopping after success.\nThe caller receives false if all attempts fail. This helper does not call the\nnotification worker or share its retry policy.\n",
+        "docs/operations.md": "# Operating notification delivery\n\nThis guide describes the current notification worker exposed by `deliver` in\n`src/delivery.py`.\n\nAfter the first failed send, the worker has up to three additional tries available.\nSuccessful delivery ends processing immediately; no further copies are sent.\nWhen the worker returns false, record the notification for operator follow-up.\nDo not start a second delivery cycle automatically.\n",
+        "docs/troubleshooting.md": "# Notification delivery troubleshooting\n\nFor the current notification worker, the fourth consecutive failed send exhausts\nautomatic delivery attempts. A false result means the notification needs\noperator attention.\n\nA true result means delivery succeeded; do not resend that notification merely\nbecause earlier attempts failed.\n",
+        "plans/completed/delivery-policy.md": "# Completed: initial delivery policy\n\nHistorical record of the policy before the current branch's change.\nThe former notification worker allowed three attempts in total: the initial\nsend followed by up to two further tries. Success ended the cycle early.\nThis records the former design, not current operating instructions.\n"
+      }
+    },
+    {
+      "id": "blanket_numbers",
+      "fixture": "/var/folders/55/6jqr25v5211fn00wych8b1jm0000gn/T/ssr-semantic-qualification-tlc_e36i/blanket_numbers",
+      "runtime": {
+        "status": "observed",
+        "probes": {
+          "delivery_fail": {
+            "status": "observed",
+            "calls": 4,
+            "returned": false
+          },
+          "delivery_first": {
+            "status": "observed",
+            "calls": 1,
+            "returned": true
+          },
+          "delivery_second": {
+            "status": "observed",
+            "calls": 2,
+            "returned": true
+          },
+          "delivery_fourth": {
+            "status": "observed",
+            "calls": 4,
+            "returned": true
+          },
+          "download_fail": {
+            "status": "observed",
+            "calls": 3,
+            "returned": false
+          },
+          "download_first": {
+            "status": "observed",
+            "calls": 1,
+            "returned": true
+          },
+          "download_third": {
+            "status": "observed",
+            "calls": 3,
+            "returned": true
+          }
+        }
+      },
+      "subject_tests_exit": 0,
+      "baseline": "6ef70efb33ab78bc61916b4e0274846deab4cdee",
+      "head": "505c89fa7de5dd62e2770a0727bd36df47467a88",
+      "committed_paths": [
+        "README.md",
+        "docs/download-helper.md",
+        "docs/operations.md",
+        "docs/troubleshooting.md",
+        "plans/completed/delivery-policy.md"
+      ],
+      "uncommitted_paths": [],
+      "reference_judgments": {
+        "F1": "met",
+        "F2": "not met",
+        "F3": "met"
+      },
+      "rationale": "Current meanings repaired, but historical and independent helper documentation now state the wrong policies.",
+      "documents": {
+        "README.md": "# Notification worker\n\nThe worker sends a notification through a caller-provided transport.\nA transport returns true on success and false when that attempt fails.\n\n## Delivery limit\n\nThe worker makes at most four delivery attempts for a notification.\nIt stops as soon as delivery succeeds and reports failure if delivery is exhausted.\n\nFor operational handling, see [the operations guide](docs/operations.md) and\n[troubleshooting](docs/troubleshooting.md).\nThe independent [download helper](docs/download-helper.md) is a separate operation.\n\n## Local verification\n\nNo network service or third-party package is required:\n\n```sh\npython3 -m unittest discover -s tests\n```\n",
+        "docs/download-helper.md": "# Download helper\n\n`fetch` in `src/download.py` is independent of notification delivery.\nIt makes at most four attempts to obtain an artifact, stopping after success.\nThe caller receives false if all attempts fail. This helper does not call the\nnotification worker or share its retry policy.\n",
+        "docs/operations.md": "# Operating notification delivery\n\nThis guide describes the current notification worker exposed by `deliver` in\n`src/delivery.py`.\n\nAfter the first failed send, the worker has three additional tries available.\nSuccessful delivery ends processing immediately; no further copies are sent.\nWhen the worker returns false, record the notification for operator follow-up.\nDo not start a second delivery cycle automatically.\n",
+        "docs/troubleshooting.md": "# Notification delivery troubleshooting\n\nFor the current notification worker, the fourth consecutive failed send exhausts\nautomatic delivery attempts. A false result means the notification needs\noperator attention.\n\nA true result means delivery succeeded; do not resend that notification merely\nbecause earlier attempts failed.\n",
+        "plans/completed/delivery-policy.md": "# Completed: initial delivery policy\n\nHistorical record of the policy before the current branch's change.\nThe former notification worker allowed four attempts in total: the initial\nsend followed by up to three further tries. Success ended the cycle early.\nThis records the former design, not current operating instructions.\n"
+      }
+    },
+    {
+      "id": "attempts_vs_retries",
+      "fixture": "/var/folders/55/6jqr25v5211fn00wych8b1jm0000gn/T/ssr-semantic-qualification-tlc_e36i/attempts_vs_retries",
+      "runtime": {
+        "status": "observed",
+        "probes": {
+          "delivery_fail": {
+            "status": "observed",
+            "calls": 4,
+            "returned": false
+          },
+          "delivery_first": {
+            "status": "observed",
+            "calls": 1,
+            "returned": true
+          },
+          "delivery_second": {
+            "status": "observed",
+            "calls": 2,
+            "returned": true
+          },
+          "delivery_fourth": {
+            "status": "observed",
+            "calls": 4,
+            "returned": true
+          },
+          "download_fail": {
+            "status": "observed",
+            "calls": 3,
+            "returned": false
+          },
+          "download_first": {
+            "status": "observed",
+            "calls": 1,
+            "returned": true
+          },
+          "download_third": {
+            "status": "observed",
+            "calls": 3,
+            "returned": true
+          }
+        }
+      },
+      "subject_tests_exit": 0,
+      "baseline": "6ef70efb33ab78bc61916b4e0274846deab4cdee",
+      "head": "47fa7b1d67348f283c16444290238e64089ec75a",
+      "committed_paths": [
+        "README.md",
+        "docs/operations.md",
+        "docs/troubleshooting.md"
+      ],
+      "uncommitted_paths": [],
+      "reference_judgments": {
+        "F1": "not met",
+        "F2": "met",
+        "F3": "not met"
+      },
+      "rationale": "Four retries means five attempts, contradicting the worker and the other repaired guidance.",
+      "documents": {
+        "README.md": "# Notification worker\n\nThe worker sends a notification through a caller-provided transport.\nA transport returns true on success and false when that attempt fails.\n\n## Delivery limit\n\nThe worker allows up to four retries after the initial delivery attempt.\nIt stops as soon as delivery succeeds and reports failure if delivery is exhausted.\n\nFor operational handling, see [the operations guide](docs/operations.md) and\n[troubleshooting](docs/troubleshooting.md).\nThe independent [download helper](docs/download-helper.md) is a separate operation.\n\n## Local verification\n\nNo network service or third-party package is required:\n\n```sh\npython3 -m unittest discover -s tests\n```\n",
+        "docs/download-helper.md": "# Download helper\n\n`fetch` in `src/download.py` is independent of notification delivery.\nIt makes at most three attempts to obtain an artifact, stopping after success.\nThe caller receives false if all attempts fail. This helper does not call the\nnotification worker or share its retry policy.\n",
+        "docs/operations.md": "# Operating notification delivery\n\nThis guide describes the current notification worker exposed by `deliver` in\n`src/delivery.py`.\n\nAfter the first failed send, the worker has up to three additional tries available.\nSuccessful delivery ends processing immediately; no further copies are sent.\nWhen the worker returns false, record the notification for operator follow-up.\nDo not start a second delivery cycle automatically.\n",
+        "docs/troubleshooting.md": "# Notification delivery troubleshooting\n\nFor the current notification worker, the fourth consecutive failed send exhausts\nautomatic delivery attempts. A false result means the notification needs\noperator attention.\n\nA true result means delivery succeeded; do not resend that notification merely\nbecause earlier attempts failed.\n",
+        "plans/completed/delivery-policy.md": "# Completed: initial delivery policy\n\nHistorical record of the policy before the current branch's change.\nThe former notification worker allowed three attempts in total: the initial\nsend followed by up to two further tries. Success ended the cycle early.\nThis records the former design, not current operating instructions.\n"
+      }
+    },
+    {
+      "id": "always_four",
+      "fixture": "/var/folders/55/6jqr25v5211fn00wych8b1jm0000gn/T/ssr-semantic-qualification-tlc_e36i/always_four",
+      "runtime": {
+        "status": "observed",
+        "probes": {
+          "delivery_fail": {
+            "status": "observed",
+            "calls": 4,
+            "returned": false
+          },
+          "delivery_first": {
+            "status": "observed",
+            "calls": 1,
+            "returned": true
+          },
+          "delivery_second": {
+            "status": "observed",
+            "calls": 2,
+            "returned": true
+          },
+          "delivery_fourth": {
+            "status": "observed",
+            "calls": 4,
+            "returned": true
+          },
+          "download_fail": {
+            "status": "observed",
+            "calls": 3,
+            "returned": false
+          },
+          "download_first": {
+            "status": "observed",
+            "calls": 1,
+            "returned": true
+          },
+          "download_third": {
+            "status": "observed",
+            "calls": 3,
+            "returned": true
+          }
+        }
+      },
+      "subject_tests_exit": 0,
+      "baseline": "6ef70efb33ab78bc61916b4e0274846deab4cdee",
+      "head": "f8f6a08afd80f514efb1afb0fdbba2cf14670704",
+      "committed_paths": [
+        "README.md",
+        "docs/operations.md",
+        "docs/troubleshooting.md"
+      ],
+      "uncommitted_paths": [],
+      "reference_judgments": {
+        "F1": "not met",
+        "F2": "met",
+        "F3": "not met"
+      },
+      "rationale": "Exactly four conflicts with stopping on success, including the accurate following sentence.",
+      "documents": {
+        "README.md": "# Notification worker\n\nThe worker sends a notification through a caller-provided transport.\nA transport returns true on success and false when that attempt fails.\n\n## Delivery limit\n\nThe worker makes exactly four delivery attempts for every notification.\nIt stops as soon as delivery succeeds and reports failure if delivery is exhausted.\n\nFor operational handling, see [the operations guide](docs/operations.md) and\n[troubleshooting](docs/troubleshooting.md).\nThe independent [download helper](docs/download-helper.md) is a separate operation.\n\n## Local verification\n\nNo network service or third-party package is required:\n\n```sh\npython3 -m unittest discover -s tests\n```\n",
+        "docs/download-helper.md": "# Download helper\n\n`fetch` in `src/download.py` is independent of notification delivery.\nIt makes at most three attempts to obtain an artifact, stopping after success.\nThe caller receives false if all attempts fail. This helper does not call the\nnotification worker or share its retry policy.\n",
+        "docs/operations.md": "# Operating notification delivery\n\nThis guide describes the current notification worker exposed by `deliver` in\n`src/delivery.py`.\n\nAfter the first failed send, the worker has up to three additional tries available.\nSuccessful delivery ends processing immediately; no further copies are sent.\nWhen the worker returns false, record the notification for operator follow-up.\nDo not start a second delivery cycle automatically.\n",
+        "docs/troubleshooting.md": "# Notification delivery troubleshooting\n\nFor the current notification worker, the fourth consecutive failed send exhausts\nautomatic delivery attempts. A false result means the notification needs\noperator attention.\n\nA true result means delivery succeeded; do not resend that notification merely\nbecause earlier attempts failed.\n",
+        "plans/completed/delivery-policy.md": "# Completed: initial delivery policy\n\nHistorical record of the policy before the current branch's change.\nThe former notification worker allowed three attempts in total: the initial\nsend followed by up to two further tries. Success ended the cycle early.\nThis records the former design, not current operating instructions.\n"
+      }
+    },
+    {
+      "id": "removed_limits",
+      "fixture": "/var/folders/55/6jqr25v5211fn00wych8b1jm0000gn/T/ssr-semantic-qualification-tlc_e36i/removed_limits",
+      "runtime": {
+        "status": "observed",
+        "probes": {
+          "delivery_fail": {
+            "status": "observed",
+            "calls": 4,
+            "returned": false
+          },
+          "delivery_first": {
+            "status": "observed",
+            "calls": 1,
+            "returned": true
+          },
+          "delivery_second": {
+            "status": "observed",
+            "calls": 2,
+            "returned": true
+          },
+          "delivery_fourth": {
+            "status": "observed",
+            "calls": 4,
+            "returned": true
+          },
+          "download_fail": {
+            "status": "observed",
+            "calls": 3,
+            "returned": false
+          },
+          "download_first": {
+            "status": "observed",
+            "calls": 1,
+            "returned": true
+          },
+          "download_third": {
+            "status": "observed",
+            "calls": 3,
+            "returned": true
+          }
+        }
+      },
+      "subject_tests_exit": 0,
+      "baseline": "6ef70efb33ab78bc61916b4e0274846deab4cdee",
+      "head": "a44f0f91c65111425c3b8bddee828400966a799c",
+      "committed_paths": [
+        "README.md",
+        "docs/operations.md",
+        "docs/troubleshooting.md"
+      ],
+      "uncommitted_paths": [],
+      "reference_judgments": {
+        "F1": "not met",
+        "F2": "met",
+        "F3": "not met"
+      },
+      "rationale": "Removing every limit/exhaustion explanation leaves the reader without the needed information.",
+      "documents": {
+        "README.md": "# Notification worker\n\nThe worker sends a notification through a caller-provided transport.\nA transport returns true on success and false when that attempt fails.\n\n## Delivery limit\n\n\nIt stops as soon as delivery succeeds and reports failure if delivery is exhausted.\n\nFor operational handling, see [the operations guide](docs/operations.md) and\n[troubleshooting](docs/troubleshooting.md).\nThe independent [download helper](docs/download-helper.md) is a separate operation.\n\n## Local verification\n\nNo network service or third-party package is required:\n\n```sh\npython3 -m unittest discover -s tests\n```\n",
+        "docs/download-helper.md": "# Download helper\n\n`fetch` in `src/download.py` is independent of notification delivery.\nIt makes at most three attempts to obtain an artifact, stopping after success.\nThe caller receives false if all attempts fail. This helper does not call the\nnotification worker or share its retry policy.\n",
+        "docs/operations.md": "# Operating notification delivery\n\nThis guide describes the current notification worker exposed by `deliver` in\n`src/delivery.py`.\n\n\nSuccessful delivery ends processing immediately; no further copies are sent.\nWhen the worker returns false, record the notification for operator follow-up.\nDo not start a second delivery cycle automatically.\n",
+        "docs/troubleshooting.md": "# Notification delivery troubleshooting\n\n A false result means the notification needs\noperator attention.\n\nA true result means delivery succeeded; do not resend that notification merely\nbecause earlier attempts failed.\n",
+        "plans/completed/delivery-policy.md": "# Completed: initial delivery policy\n\nHistorical record of the policy before the current branch's change.\nThe former notification worker allowed three attempts in total: the initial\nsend followed by up to two further tries. Success ended the cycle early.\nThis records the former design, not current operating instructions.\n"
+      }
+    },
+    {
+      "id": "equivalent_consolidation",
+      "fixture": "/var/folders/55/6jqr25v5211fn00wych8b1jm0000gn/T/ssr-semantic-qualification-tlc_e36i/equivalent_consolidation",
+      "runtime": {
+        "status": "observed",
+        "probes": {
+          "delivery_fail": {
+            "status": "observed",
+            "calls": 4,
+            "returned": false
+          },
+          "delivery_first": {
+            "status": "observed",
+            "calls": 1,
+            "returned": true
+          },
+          "delivery_second": {
+            "status": "observed",
+            "calls": 2,
+            "returned": true
+          },
+          "delivery_fourth": {
+            "status": "observed",
+            "calls": 4,
+            "returned": true
+          },
+          "download_fail": {
+            "status": "observed",
+            "calls": 3,
+            "returned": false
+          },
+          "download_first": {
+            "status": "observed",
+            "calls": 1,
+            "returned": true
+          },
+          "download_third": {
+            "status": "observed",
+            "calls": 3,
+            "returned": true
+          }
+        }
+      },
+      "subject_tests_exit": 0,
+      "baseline": "6ef70efb33ab78bc61916b4e0274846deab4cdee",
+      "head": "398dba055ed01f94743f4f4b721b3daedc8d9f73",
+      "committed_paths": [
+        "README.md",
+        "docs/operations.md",
+        "docs/troubleshooting.md"
+      ],
+      "uncommitted_paths": [],
+      "reference_judgments": {
+        "F1": "met",
+        "F2": "met",
+        "F3": "met"
+      },
+      "rationale": "README gives a precise shared explanation; both guides link to its existing heading and retain operational handling.",
+      "documents": {
+        "README.md": "# Notification worker\n\nThe worker sends a notification through a caller-provided transport.\nA transport returns true on success and false when that attempt fails.\n\n## Delivery limit\n\nDelivery begins with one send. If it fails, up to three further sends are available.\nIt stops as soon as delivery succeeds and reports failure if delivery is exhausted.\n\nFor operational handling, see [the operations guide](docs/operations.md) and\n[troubleshooting](docs/troubleshooting.md).\nThe independent [download helper](docs/download-helper.md) is a separate operation.\n\n## Local verification\n\nNo network service or third-party package is required:\n\n```sh\npython3 -m unittest discover -s tests\n```\n",
+        "docs/download-helper.md": "# Download helper\n\n`fetch` in `src/download.py` is independent of notification delivery.\nIt makes at most three attempts to obtain an artifact, stopping after success.\nThe caller receives false if all attempts fail. This helper does not call the\nnotification worker or share its retry policy.\n",
+        "docs/operations.md": "# Operating notification delivery\n\nThis guide describes the current notification worker exposed by `deliver` in\n`src/delivery.py`.\n\nUse the [delivery limit](../README.md#delivery-limit) for the number of sends available.\nSuccessful delivery ends processing immediately; no further copies are sent.\nWhen the worker returns false, record the notification for operator follow-up.\nDo not start a second delivery cycle automatically.\n",
+        "docs/troubleshooting.md": "# Notification delivery troubleshooting\n\nFor the current notification worker, automatic attempts are exhausted after\nthe [delivery limit](../README.md#delivery-limit) is reached without success. A false result means the notification needs\noperator attention.\n\nA true result means delivery succeeded; do not resend that notification merely\nbecause earlier attempts failed.\n",
+        "plans/completed/delivery-policy.md": "# Completed: initial delivery policy\n\nHistorical record of the policy before the current branch's change.\nThe former notification worker allowed three attempts in total: the initial\nsend followed by up to two further tries. Success ended the cycle early.\nThis records the former design, not current operating instructions.\n"
+      }
+    },
+    {
+      "id": "correct_uncommitted",
+      "fixture": "/var/folders/55/6jqr25v5211fn00wych8b1jm0000gn/T/ssr-semantic-qualification-tlc_e36i/correct_uncommitted",
+      "runtime": {
+        "status": "observed",
+        "probes": {
+          "delivery_fail": {
+            "status": "observed",
+            "calls": 4,
+            "returned": false
+          },
+          "delivery_first": {
+            "status": "observed",
+            "calls": 1,
+            "returned": true
+          },
+          "delivery_second": {
+            "status": "observed",
+            "calls": 2,
+            "returned": true
+          },
+          "delivery_fourth": {
+            "status": "observed",
+            "calls": 4,
+            "returned": true
+          },
+          "download_fail": {
+            "status": "observed",
+            "calls": 3,
+            "returned": false
+          },
+          "download_first": {
+            "status": "observed",
+            "calls": 1,
+            "returned": true
+          },
+          "download_third": {
+            "status": "observed",
+            "calls": 3,
+            "returned": true
+          }
+        }
+      },
+      "subject_tests_exit": 0,
+      "baseline": "4b6bf26492284a410c0476c4589ead5371837292",
+      "head": "4b6bf26492284a410c0476c4589ead5371837292",
+      "committed_paths": [],
+      "uncommitted_paths": [
+        "README.md",
+        "docs/operations.md",
+        "docs/troubleshooting.md"
+      ],
+      "reference_judgments": {
+        "F1": "met",
+        "F2": "met",
+        "F3": "not met"
+      },
+      "rationale": "Working documents are correct, but none of their required changes is committed.",
+      "documents": {
+        "README.md": "# Notification worker\n\nThe worker sends a notification through a caller-provided transport.\nA transport returns true on success and false when that attempt fails.\n\n## Delivery limit\n\nThe worker makes at most four delivery attempts for a notification.\nIt stops as soon as delivery succeeds and reports failure if delivery is exhausted.\n\nFor operational handling, see [the operations guide](docs/operations.md) and\n[troubleshooting](docs/troubleshooting.md).\nThe independent [download helper](docs/download-helper.md) is a separate operation.\n\n## Local verification\n\nNo network service or third-party package is required:\n\n```sh\npython3 -m unittest discover -s tests\n```\n",
+        "docs/download-helper.md": "# Download helper\n\n`fetch` in `src/download.py` is independent of notification delivery.\nIt makes at most three attempts to obtain an artifact, stopping after success.\nThe caller receives false if all attempts fail. This helper does not call the\nnotification worker or share its retry policy.\n",
+        "docs/operations.md": "# Operating notification delivery\n\nThis guide describes the current notification worker exposed by `deliver` in\n`src/delivery.py`.\n\nAfter the first failed send, the worker has up to three additional tries available.\nSuccessful delivery ends processing immediately; no further copies are sent.\nWhen the worker returns false, record the notification for operator follow-up.\nDo not start a second delivery cycle automatically.\n",
+        "docs/troubleshooting.md": "# Notification delivery troubleshooting\n\nFor the current notification worker, the fourth consecutive failed send exhausts\nautomatic delivery attempts. A false result means the notification needs\noperator attention.\n\nA true result means delivery succeeded; do not resend that notification merely\nbecause earlier attempts failed.\n",
+        "plans/completed/delivery-policy.md": "# Completed: initial delivery policy\n\nHistorical record of the policy before the current branch's change.\nThe former notification worker allowed three attempts in total: the initial\nsend followed by up to two further tries. Success ended the cycle early.\nThis records the former design, not current operating instructions.\n"
+      }
+    }
+  ],
+  "reference_judgments_source": "qualification-variants.json (orchestrator-authored)",
+  "runner_preparation": {
+    "entry_counts": {
+      "control": 10,
+      "original": 11
+    },
+    "only_extra_entry": ".agents/skills/sweeping-stale-references/SKILL.md",
+    "common_bytes_and_modes_match": true,
+    "baseline_trees": {
+      "control": "4c3fc06b2ed59e0e17ef2b0519b21a95a9454119",
+      "original": "4c3fc06b2ed59e0e17ef2b0519b21a95a9454119"
+    },
+    "baseline_project_files": 9,
+    "paths": {
+      "control": "/private/var/folders/55/6jqr25v5211fn00wych8b1jm0000gn/T/skilltest-runs/20260914T002917162Z-ssr-semantic-delivery-control-c443d3b2-972a-421d-a6d2-28d9f1695ea6-d0xusr7s/workspace/fixture",
+      "original": "/private/var/folders/55/6jqr25v5211fn00wych8b1jm0000gn/T/skilltest-runs/20260914T002917189Z-ssr-semantic-delivery-original-2f1d5370-f5f2-466c-82e7-afea0c4ac3ee-13pgp3hd/workspace/fixture"
+    },
+    "prompt_difference": "Only the original-skill read instruction."
+  },
+  "inputs": {
+    "assessment-policy.txt": "625e91999ba68e18eda230b92b6da1e6f6ea51a42aa89f5cbce674e41a097837",
+    "assessment.md": "75c3ff4efb56aeeb3422324a928900a96b877b7a0ac9f05d13902bd07315c22c",
+    "control.json": "2847a0eedbb110457ece2493d805e4105ac017d5afb500e85feb061bd85e6ee0",
+    "expected.json": "91e9529a6ecd82c45e9c3a73eef294557afcbc6807a7fef7c496507731af84ec",
+    "fixture/.gitignore": "7ab6574557548c2d1031511f15db14ace876b796b1471216aad74a0ab64aaee2",
+    "fixture/README.md": "1a4b23b1f53af5b7aa42ac8e72f59282374435831bd35f542c23bd7dfdccb6e3",
+    "fixture/docs/download-helper.md": "8d6d58a231c01678279d8e00ea0f03f9306c1b36a474b8cb4dd5967b657453bb",
+    "fixture/docs/operations.md": "7d3c3810c532bdd87af795cf543171deeaff0595e4a13f7fdee39e8dfdef18d2",
+    "fixture/docs/troubleshooting.md": "8e8a5cb48d7d3f3ca8e7212e9c29764f6e8f6cdaaf4f4d8d0762aaeaca906f1f",
+    "fixture/plans/completed/delivery-policy.md": "ef7513eb13148ad5c6b215959ae917c6ef42a24050dc8df5ff64fe814dcfd376",
+    "fixture/src/delivery.py": "554df6c0a7d0bf116cc593c4fdf3384e8645ab98c7d4e38780637b75577cda52",
+    "fixture/src/download.py": "3a618d709d2be580ccb53f2f660822be9f90b091af41e3ce3b7aaed31e894eb0",
+    "fixture/tests/test_retry_behavior.py": "71160952f35e3a255d68cca629a0a66d79e3e4b4c30431786f6945a28ede54f3",
+    "original.json": "0ce2ad84f03a870a62f002ef547e2d75a64b8c8cf9d48362a8e1a35c0ed329a5",
+    "preparation.json": "19a4e8641786d0845cc0605af53addbb46ce63f38335becc2e15eb57d4f79eb1",
+    "probe_behavior.py": "0f8a60b53f48e8fc5e195a60084b75057175ab46df3d2f2f1c0093538bc40cf3",
+    "prompt-control.md": "17438b8155af2ff3ba779ff39eee0426aa7d0783fec006ce6519dfebce18447f",
+    "prompt-original.md": "6695cbb23cfd7d8656a122b2e9ea4ba35fdea581f7a15780e146d84a0732b588",
+    "qualification-variants.json": "a1733b3c4edf68a8bfcf2903f7e2d4427f361616f2552125643b2647ba8a49ce",
+    "qualify_case.py": "cd6f72e97d99bece0e30af4e43f97b92f8098509110a6e420e8aa6ae7cb5f0a4",
+    "task.md": "6c9685054ae4f4dd6f32a76a18401366e4206b829466367640370554bf33f683",
+    "test_probe_behavior.py": "309ff619c05e348482e50195ce2a8f1848c350bec66ef2ffc89c04277fe7b268",
+    "test_qualification.py": "3a9d208cc2cb259bfda9af521636c9df16c0a54f839940c02356b86497d616fe"
+  },
+  "verification": {
+    "subject_tests": {
+      "command": "python3 -B -m unittest discover -s skill-studies/sweeping-stale-references/cases/semantic-delivery/fixture/tests",
+      "passed": 7,
+      "red": "Seven assertion failures against return-None stubs before implementation."
+    },
+    "controller_tests": {
+      "command": "python3 -B -m unittest discover -s skill-studies/sweeping-stale-references/cases/semantic-delivery -p 'test_*.py'",
+      "passed": 12,
+      "red": "Eight status assertion failures against a pending-observation stub before implementation.",
+      "review_regressions": "Before fixes, four valid-JSON subcases and two qualification tests failed; undecodable stdout separately raised UnicodeDecodeError. All pass after remediation."
+    },
+    "hook_suite": {
+      "command": "python3 -m pytest -q",
+      "cwd": "skills/disciplined-development/hooks",
+      "passed": 263,
+      "skipped": 3
+    },
+    "probe_cli": "Executed via python3 -I -B; observed expected delivery/download call counts and results.",
+    "semantic_review": "Orchestrator inspected all nine resulting document sets against the settled behavior, preservation meanings and retained Git changes. These are authored reference judgments, not independent model-evaluator accuracy.",
+    "review_scope": "Local self-review and reconstruction; no provider or independent evaluator invoked. Subject inputs and reference judgments unchanged."
+  }
+}

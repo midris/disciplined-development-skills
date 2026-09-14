@@ -352,3 +352,50 @@ No provider dispatch, fixture change, new tool implementation or budget increase
 ## Owner clarification: estimates are not failure criteria
 
 The owner confirmed that effort estimates are useful and that variance can prompt checking test scope, but missing a time budget is not a failure in itself. This supersedes the phase-cap, mandatory reallocation and tooling stop-limit language in the preceding review response. The spec owns the general distinction; the plan and protocol now treat phase amounts and the preliminary tooling estimate as planning aids. The separately agreed overall autonomous-work ceiling remains an authorization boundary, not a scoring threshold. Necessary work is not weakened to meet an estimate, and incomplete evidence is reported as a limitation rather than a failed skill outcome. No fixture, frozen scoring-policy bytes or prior result changed.
+
+
+## External review of 718f06d
+
+Claude reports PASS and verifies prior arithmetic. Accepted the missing aggregate: carrying forward the later phase estimates yields 990–1,080 remaining minutes without tooling, or 1,110–1,200 with its preliminary estimate. The protocol now compares both with remaining authorized time, reports projected whole-study totals and extension needs, and labels the unchanged later-phase estimates as planning assumptions rather than fresh forecasts. The need is presented for the owner walkthrough; no extension or provider dispatch is inferred.
+
+Trimmed repeated timing-policy statements within the spec, plan and protocol. The spec owns the general rule; the protocol links to it and states SSR's ceiling and next decision; the plan owns the reconciliation checkpoint. Historical review responses remain intact. Checks cover aggregate arithmetic, current accounting, active links, unchanged frozen policy and diff whitespace.
+
+
+## Owner priority: core outcomes before expanded coverage
+
+The owner asked to focus on real value and establish the core before edges. The protocol now leads with complete, correct, preserved and committed reconciliation. Broad search remains an explicit procedural obligation; a discovery advantage over the control is diagnostic, not a separate success criterion or collection prerequisite. The plan uses the prepared Shiv/moved-guide pair as its working proposal and routes next to evaluation preparation rather than another scenario-choice loop. Semantic drift remains intended behavior with deferred coverage, not an excluded requirement. Case freeze and provider authorization remain outstanding; current policy bytes and prior judgments are unchanged.
+
+
+## Owner decision: three core baseline situations
+
+The owner accepted interface rename, moved file and semantic documentation drift as necessary core coverage for this design stage. This supersedes the immediately preceding two-case proposal and semantic deferral. The protocol now distinguishes prepared Shiv/moved-guide foundations from the undesigned semantic case; the plan routes next to its conceptual review before reuse or construction. The prior call table is explicitly pending revision for both baseline and later comparison. Core-first prioritization does not exclude an intended core outcome merely because it needs a new case. No run or budget extension is approved by the coverage decision.
+
+
+## Semantic-delivery case: local preparation review
+
+The owner accepted the retry-policy concept and authorized construction. Inspected all six historical SSR prompts after concept acceptance; none supplies the semantic-drift mechanism. The new nine-file fixture leaves code correct and three differently worded current claims stale, with historical/independent preservation targets. Subject conditions differ only by the frozen skill and read instruction.
+
+Local review checked the task against the core contract, the five reference blocks against actual files, the attempts/retries arithmetic, valid consolidation links, unchanged early-success behavior, and all nine constructed document/Git variants. The runtime probe reports facts independently of subject tests and distinguishes missing/failed probe evidence from observed behavior. All documentation variants pass runtime checks despite different semantic reference judgments; the records do not claim independent model-evaluator qualification. Kept incomplete-repair/perfect-account calibration as an explicit remaining evaluator requirement rather than implying the sparse-account variants qualify it. Overlapping F1/F3 consequences are identified as a shared cause, not independent failures.
+
+Verification: seven subject behavior tests and eight controller tests passed after recorded failing stubs; all nine variants reconstructed with inspected Git changes; real runner loading/copy yielded 10/11 inputs and identical nine-file baseline trees. Hook suite: 263 passed, 3 skipped. No provider calls, old-result edits, scoring-policy changes or tool-framework implementation occurred. Verified 34 manifest records, 22 qualification-source hashes, original-skill/policy identities, active and fixture links, and Git inclusion of every case input.
+
+No unresolved findings in local case preparation. Baseline freeze, model-evaluator calibration, information-boundary qualification and revised allocation remain outstanding study work.
+
+DD-VERDICT: PASS
+
+## Semantic-delivery preparation: requested review and remediation
+
+Reviewed the complete case, constructed evidence and current plan/protocol/spec against the owner’s core-coverage and scoring decisions. Re-read all nine reconstructed current-document sets, checked the five reference meanings, runtime schedules and committed/uncommitted distinctions, and exercised failure paths in the controller. The case remains a semantic reconciliation test; search advantage and exact prose/accounting format are not functional gates.
+
+Findings verified and resolved:
+
+- [P2] `cases/semantic-delivery/probe_behavior.py`: successful subprocess exit plus parseable JSON was accepted without a complete observation record. A module printing null, a list or an incomplete object and exiting reproduced missing/false evidence; undecodable output also escaped as an exception. The observer now requires all seven schedule records and consistent observed types/status, and reports malformed/incomplete output as needing inspection. This is evidence-shape checking, not semantic scoring or a security boundary.
+- [P2] `cases/semantic-delivery/qualify_case.py`: optimized Python silently removed the assertions that establish qualification. An actual `python -O` invocation returned success before the fix; qualification now rejects optimization before creating scratch output.
+- [P2] `cases/semantic-delivery/qualify_case.py`: inherited Git directory/worktree/index overrides could redirect scratch operations. A test using only disposable paths reproduced the redirection. The child environment now clears inherited `GIT_*` overrides before applying its explicit configuration. The sweep found no other current case qualification CLI; embedded historical reconstruction text remains evidence of its original execution, not a replacement command to dispatch.
+- [P2] `protocol.md`, whole-study allocation: stale initial-pilot wording invited another process run, and the original two-case table lacked a local supersession notice. The section now records both completed pairs, links the closure rule, and marks the old allocation pending revision for the three accepted core situations. Resumption status and the plan now route to formats, evaluator preparation and allocation.
+
+Verification after fixes: seven subject tests and twelve controller tests pass; all nine variants reconstruct with expected runtime/Git facts, and real runner preparation retains identical nine-file baseline trees with 10/11 declared inputs. Hook suite: 263 passed, 3 skipped. All 35 manifest records plus the frozen skill record and all 23 qualification-source hashes verify; the policy slice is unchanged. Regression tests failed before remediation. Subject fixture/configuration/prompt bytes and authored semantic judgments remain unchanged; the unrun construction record was regenerated to identify the repaired controller.
+
+Follow-up consistency review found no unresolved local preparation finding. Model-evaluator calibration, information boundaries, versioned baseline artifacts and revised allocation remain explicit stage work; no model was dispatched. This is a local self-review, not an independent assessment.
+
+DD-VERDICT: PASS

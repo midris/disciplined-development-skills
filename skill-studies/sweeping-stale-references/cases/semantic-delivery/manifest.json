@@ -1,0 +1,238 @@
+{
+  "purpose": "Prepared semantic-drift case; verify identities before authorized dispatch.",
+  "authorization": "Local preparation authorized; no subject/evaluator dispatch, revised allocation or collection freeze approved.",
+  "preparation_base_revision": "718f06dc8c482ac8f64a75695f4b3e6a6b081a5b",
+  "configurations": {
+    "control": {
+      "config": "skill-studies/sweeping-stale-references/cases/semantic-delivery/control.json",
+      "fixture_entries": 10,
+      "files": [
+        {
+          "path": "skill-studies/sweeping-stale-references/cases/semantic-delivery/control.json",
+          "bytes": 1213,
+          "sha256": "2847a0eedbb110457ece2493d805e4105ac017d5afb500e85feb061bd85e6ee0",
+          "mode": "0o644"
+        },
+        {
+          "path": "skill-studies/sweeping-stale-references/cases/semantic-delivery/prompt-control.md",
+          "bytes": 469,
+          "sha256": "17438b8155af2ff3ba779ff39eee0426aa7d0783fec006ce6519dfebce18447f",
+          "mode": "0o644"
+        },
+        {
+          "path": "skill-studies/sweeping-stale-references/cases/semantic-delivery/fixture/.gitignore",
+          "bytes": 36,
+          "sha256": "7ab6574557548c2d1031511f15db14ace876b796b1471216aad74a0ab64aaee2",
+          "mode": "0o644"
+        },
+        {
+          "path": "skill-studies/sweeping-stale-references/cases/semantic-delivery/fixture/README.md",
+          "bytes": 670,
+          "sha256": "1a4b23b1f53af5b7aa42ac8e72f59282374435831bd35f542c23bd7dfdccb6e3",
+          "mode": "0o644"
+        },
+        {
+          "path": "skill-studies/sweeping-stale-references/cases/semantic-delivery/fixture/docs/download-helper.md",
+          "bytes": 293,
+          "sha256": "8d6d58a231c01678279d8e00ea0f03f9306c1b36a474b8cb4dd5967b657453bb",
+          "mode": "0o644"
+        },
+        {
+          "path": "skill-studies/sweeping-stale-references/cases/semantic-delivery/fixture/docs/operations.md",
+          "bytes": 416,
+          "sha256": "7d3c3810c532bdd87af795cf543171deeaff0595e4a13f7fdee39e8dfdef18d2",
+          "mode": "0o644"
+        },
+        {
+          "path": "skill-studies/sweeping-stale-references/cases/semantic-delivery/fixture/docs/troubleshooting.md",
+          "bytes": 327,
+          "sha256": "8e8a5cb48d7d3f3ca8e7212e9c29764f6e8f6cdaaf4f4d8d0762aaeaca906f1f",
+          "mode": "0o644"
+        },
+        {
+          "path": "skill-studies/sweeping-stale-references/cases/semantic-delivery/fixture/plans/completed/delivery-policy.md",
+          "bytes": 323,
+          "sha256": "ef7513eb13148ad5c6b215959ae917c6ef42a24050dc8df5ff64fe814dcfd376",
+          "mode": "0o644"
+        },
+        {
+          "path": "skill-studies/sweeping-stale-references/cases/semantic-delivery/fixture/src/delivery.py",
+          "bytes": 252,
+          "sha256": "554df6c0a7d0bf116cc593c4fdf3384e8645ab98c7d4e38780637b75577cda52",
+          "mode": "0o644"
+        },
+        {
+          "path": "skill-studies/sweeping-stale-references/cases/semantic-delivery/fixture/src/download.py",
+          "bytes": 246,
+          "sha256": "3a618d709d2be580ccb53f2f660822be9f90b091af41e3ce3b7aaed31e894eb0",
+          "mode": "0o644"
+        },
+        {
+          "path": "skill-studies/sweeping-stale-references/cases/semantic-delivery/fixture/tests/test_retry_behavior.py",
+          "bytes": 1485,
+          "sha256": "71160952f35e3a255d68cca629a0a66d79e3e4b4c30431786f6945a28ede54f3",
+          "mode": "0o644"
+        },
+        {
+          "path": "skill-studies/sweeping-stale-references/cases/semantic-delivery/task.md",
+          "bytes": 497,
+          "sha256": "6c9685054ae4f4dd6f32a76a18401366e4206b829466367640370554bf33f683",
+          "mode": "0o644"
+        }
+      ]
+    },
+    "original": {
+      "config": "skill-studies/sweeping-stale-references/cases/semantic-delivery/original.json",
+      "fixture_entries": 11,
+      "files": [
+        {
+          "path": "skill-studies/sweeping-stale-references/cases/semantic-delivery/original.json",
+          "bytes": 1342,
+          "sha256": "0ce2ad84f03a870a62f002ef547e2d75a64b8c8cf9d48362a8e1a35c0ed329a5",
+          "mode": "0o644"
+        },
+        {
+          "path": "skill-studies/sweeping-stale-references/cases/semantic-delivery/prompt-original.md",
+          "bytes": 595,
+          "sha256": "6695cbb23cfd7d8656a122b2e9ea4ba35fdea581f7a15780e146d84a0732b588",
+          "mode": "0o644"
+        },
+        {
+          "path": "skill-studies/sweeping-stale-references/cases/semantic-delivery/fixture/.gitignore",
+          "bytes": 36,
+          "sha256": "7ab6574557548c2d1031511f15db14ace876b796b1471216aad74a0ab64aaee2",
+          "mode": "0o644"
+        },
+        {
+          "path": "skill-studies/sweeping-stale-references/cases/semantic-delivery/fixture/README.md",
+          "bytes": 670,
+          "sha256": "1a4b23b1f53af5b7aa42ac8e72f59282374435831bd35f542c23bd7dfdccb6e3",
+          "mode": "0o644"
+        },
+        {
+          "path": "skill-studies/sweeping-stale-references/cases/semantic-delivery/fixture/docs/download-helper.md",
+          "bytes": 293,
+          "sha256": "8d6d58a231c01678279d8e00ea0f03f9306c1b36a474b8cb4dd5967b657453bb",
+          "mode": "0o644"
+        },
+        {
+          "path": "skill-studies/sweeping-stale-references/cases/semantic-delivery/fixture/docs/operations.md",
+          "bytes": 416,
+          "sha256": "7d3c3810c532bdd87af795cf543171deeaff0595e4a13f7fdee39e8dfdef18d2",
+          "mode": "0o644"
+        },
+        {
+          "path": "skill-studies/sweeping-stale-references/cases/semantic-delivery/fixture/docs/troubleshooting.md",
+          "bytes": 327,
+          "sha256": "8e8a5cb48d7d3f3ca8e7212e9c29764f6e8f6cdaaf4f4d8d0762aaeaca906f1f",
+          "mode": "0o644"
+        },
+        {
+          "path": "skill-studies/sweeping-stale-references/cases/semantic-delivery/fixture/plans/completed/delivery-policy.md",
+          "bytes": 323,
+          "sha256": "ef7513eb13148ad5c6b215959ae917c6ef42a24050dc8df5ff64fe814dcfd376",
+          "mode": "0o644"
+        },
+        {
+          "path": "skill-studies/sweeping-stale-references/cases/semantic-delivery/fixture/src/delivery.py",
+          "bytes": 252,
+          "sha256": "554df6c0a7d0bf116cc593c4fdf3384e8645ab98c7d4e38780637b75577cda52",
+          "mode": "0o644"
+        },
+        {
+          "path": "skill-studies/sweeping-stale-references/cases/semantic-delivery/fixture/src/download.py",
+          "bytes": 246,
+          "sha256": "3a618d709d2be580ccb53f2f660822be9f90b091af41e3ce3b7aaed31e894eb0",
+          "mode": "0o644"
+        },
+        {
+          "path": "skill-studies/sweeping-stale-references/cases/semantic-delivery/fixture/tests/test_retry_behavior.py",
+          "bytes": 1485,
+          "sha256": "71160952f35e3a255d68cca629a0a66d79e3e4b4c30431786f6945a28ede54f3",
+          "mode": "0o644"
+        },
+        {
+          "path": "skill-studies/sweeping-stale-references/cases/semantic-delivery/task.md",
+          "bytes": 497,
+          "sha256": "6c9685054ae4f4dd6f32a76a18401366e4206b829466367640370554bf33f683",
+          "mode": "0o644"
+        },
+        {
+          "path": "skill-studies/sweeping-stale-references/cases/skill-original/SKILL.md",
+          "bytes": 7689,
+          "sha256": "d6812c33cae026807bbb3ebe851d93b60b513dd87ea5efd98aea28f5c02f9157",
+          "mode": "0o644"
+        }
+      ]
+    }
+  },
+  "controller_only": [
+    {
+      "path": "skill-studies/sweeping-stale-references/cases/semantic-delivery/assessment-policy.txt",
+      "bytes": 5567,
+      "sha256": "625e91999ba68e18eda230b92b6da1e6f6ea51a42aa89f5cbce674e41a097837",
+      "mode": "0o644"
+    },
+    {
+      "path": "skill-studies/sweeping-stale-references/cases/semantic-delivery/assessment.md",
+      "bytes": 8705,
+      "sha256": "75c3ff4efb56aeeb3422324a928900a96b877b7a0ac9f05d13902bd07315c22c",
+      "mode": "0o644"
+    },
+    {
+      "path": "skill-studies/sweeping-stale-references/cases/semantic-delivery/expected.json",
+      "bytes": 3668,
+      "sha256": "91e9529a6ecd82c45e9c3a73eef294557afcbc6807a7fef7c496507731af84ec",
+      "mode": "0o644"
+    },
+    {
+      "path": "skill-studies/sweeping-stale-references/cases/semantic-delivery/preparation.json",
+      "bytes": 2173,
+      "sha256": "19a4e8641786d0845cc0605af53addbb46ce63f38335becc2e15eb57d4f79eb1",
+      "mode": "0o644"
+    },
+    {
+      "path": "skill-studies/sweeping-stale-references/cases/semantic-delivery/probe_behavior.py",
+      "bytes": 4719,
+      "sha256": "0f8a60b53f48e8fc5e195a60084b75057175ab46df3d2f2f1c0093538bc40cf3",
+      "mode": "0o644"
+    },
+    {
+      "path": "skill-studies/sweeping-stale-references/cases/semantic-delivery/qualification-variants.json",
+      "bytes": 9492,
+      "sha256": "a1733b3c4edf68a8bfcf2903f7e2d4427f361616f2552125643b2647ba8a49ce",
+      "mode": "0o644"
+    },
+    {
+      "path": "skill-studies/sweeping-stale-references/cases/semantic-delivery/qualification.json",
+      "bytes": 40567,
+      "sha256": "be2fa19a973ec56cf5cdbd98ff9575f7987436427255f907a5579ff69dfb473d",
+      "mode": "0o644"
+    },
+    {
+      "path": "skill-studies/sweeping-stale-references/cases/semantic-delivery/qualify_case.py",
+      "bytes": 7189,
+      "sha256": "cd6f72e97d99bece0e30af4e43f97b92f8098509110a6e420e8aa6ae7cb5f0a4",
+      "mode": "0o644"
+    },
+    {
+      "path": "skill-studies/sweeping-stale-references/cases/semantic-delivery/test_probe_behavior.py",
+      "bytes": 4714,
+      "sha256": "309ff619c05e348482e50195ce2a8f1848c350bec66ef2ffc89c04277fe7b268",
+      "mode": "0o644"
+    },
+    {
+      "path": "skill-studies/sweeping-stale-references/cases/semantic-delivery/test_qualification.py",
+      "bytes": 1596,
+      "sha256": "3a9d208cc2cb259bfda9af521636c9df16c0a54f839940c02356b86497d616fe",
+      "mode": "0o644"
+    }
+  ],
+  "original_snapshot": {
+    "path": "skill-studies/sweeping-stale-references/cases/skill-original/SKILL.md",
+    "bytes": 7689,
+    "sha256": "d6812c33cae026807bbb3ebe851d93b60b513dd87ea5efd98aea28f5c02f9157",
+    "mode": "0o644"
+  },
+  "policy_id": "SSR-assessment-2"
+}
