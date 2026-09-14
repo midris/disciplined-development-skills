@@ -69,6 +69,7 @@ See [installation instructions](README.md#install) for usage and overwrite behav
 ## Non-shipped skill-test runner
 
 The [fresh framework specification](plans/specs/2026-09-11-model-driven-skill-testing-framework.md) proposes the testing responsibilities; the [current plan](plans/2026-09-11-model-driven-skill-testing.md) owns execution order and decisions.
+These responsibilities normally live in the active development session: it dispatches fixed subject scenarios, inspects captured evidence and writes scores under fixed rules. A separately automated evaluator is optional, not an additional required layer.
 They retain checked-in skills and existing tooling as the foundation; the previous testing frameworks and pending workflows are abandoned.
 The new documents describe the direction for testing work, not an implemented runner redesign.
 The `skill-studies/` directory holds non-shipped protocols and development evidence; reserved material and verified backups use private stores outside the repository.

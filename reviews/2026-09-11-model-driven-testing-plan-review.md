@@ -423,3 +423,17 @@ Local checks re-derived all eleven final snapshots and committed/working patches
 Self-review checked the evidence/instruction boundary, functional/procedural distinctions, unsupported calibration claims and resumption path. No unresolved defect in the draft preparation; exact configs, information boundary, retention/authorization, shared format agreement and whole-study allocation remain next-stage work. The package is neither dispatch-ready nor an independent evaluator qualification. Hook suite: 263 passed, 3 skipped; whitespace and identity checks passed.
 
 DD-VERDICT: PASS
+
+## Correction: restore the already-intended active-session workflow
+
+The owner reaffirmed, rather than introduced, the intended workflow: the active Codex/Claude session runs fixed scenarios, waits for the deterministic harness to capture evidence, applies fixed interpretation rules and writes a fixed-format score record. A human can use the same rules. The existing spec already assigned interpretation/evaluation to the model and described layers as responsibilities, not separate agents.
+
+The implementation plan nevertheless required fresh evaluation contexts, prohibited direct-session baseline scoring as an unrecorded substitute, and blocked semantic collection on separate evaluator calibration. At `32eaa61`, the protocol said “routine orchestration is not a source of unrecorded substitute scores”; the plan required “fresh model contexts.” These operative instructions contradicted the stated workflow. That inconsistency was introduced by the agent, not caused by a missing owner decision. A responsibility had been turned into a mandatory extra process, and later checks reinforced that mistaken assumption.
+
+Corrected the spec’s default session loop and fixed rule/score-record requirements; swept the plan, protocol and project entry points to remove mandatory evaluator/calibration gates. Optional independent review and held-out evaluation remain available only when chosen for those claims. The old whole-campaign allocation and forecast are marked superseded; actual ceilings and spent calls remain unchanged, with no automatic transfers. The next action is the reusable rule/score formats and a concrete small run set, not a separate evaluator.
+
+SSR-assessment-3 records this workflow correction while preserving the owner’s functional/procedural priorities and criterion-level judgments from policy 2. Prior assessments and frozen case inputs retain their exact policy-2 identities. The separate-evaluator proposal/package is visibly superseded; packet payloads, reference key and evaluator input bytes remain unchanged, with previous controller-document identities retained in its manifest. Its proposed scoring interpretations are not promoted to owner decisions. No subject observation is relabelled or scored anew.
+
+Verification: current rule/score responsibilities, stage exits and resumption links were checked for consistency; historical evaluator requirements remain only under explicit supersession or optional-dispatch scope. Frozen case/example hashes and current controller-document identities verify. Local links/anchors and whitespace checks pass; hook suite: 263 passed, 3 skipped. No runner code, core skill, provider call or spending authorization changed.
+
+DD-VERDICT: PASS

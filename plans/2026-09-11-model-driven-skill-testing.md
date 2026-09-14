@@ -3,7 +3,7 @@
 > **For agentic workers:** Use `superpowers:executing-plans` for authorized work. This document alone owns the execution checklist.
 
 **Goal:** Reach an evidence-backed decision about improving one DD skill, then use the experience to refine the general testing approach.
-**Architecture:** Models interpret skills and assess outcomes; the existing runner and deterministic checks execute tasks and preserve independently inspectable evidence.
+**Architecture:** The active Codex/Claude session runs fixed scenarios, waits for the existing harness to capture evidence, applies versioned scoring rules and writes the fixed-format score record. A human can use the same rules. Separate evaluator calls and calibration are not required.
 **Tech stack:** Checked-in Markdown skills, the Python `skilltest` runner, files and Git.
 **Spec:** [General testing responsibilities](specs/2026-09-11-model-driven-skill-testing-framework.md).
 
@@ -22,7 +22,7 @@ Read installed workflow skills from the available catalog rather than relying on
 Read the [purpose and relationship map](../ARCHITECTURE.md#composition-boundaries) for orientation; distinguish independent use, explicit pairings and DD orchestration before deciding subject context.
 
 The study workspace is `skill-studies/sweeping-stale-references/`.
-Its only new narrative document is [protocol.md](../skill-studies/sweeping-stale-references/protocol.md): it holds concrete decisions, versions, commands, artifact links, run accounting and the final conclusion, without another task checklist.
+Its primary skill-specific narrative document is [protocol.md](../skill-studies/sweeping-stale-references/protocol.md): it holds concrete decisions, versions, commands, artifact links, run accounting and the final conclusion, without another task checklist.
 Fixtures, checkers, raw bundles and assessments are supporting artifacts linked from that record.
 This plan owns progress; the spec owns general rules; the protocol owns study-specific facts and decisions.
 On resumption, use recorded decisions and evidence to select the next incomplete action; do not repeat settled approvals or infer authorization from a checked box.
@@ -37,14 +37,14 @@ A broader archival reorganization is outside this study.
 These are ceilings, not a dispatch commitment. The owner requested minimal real-model runs to establish the process before broader testing; the initial Sol-low pair and its two-call extension are complete. Pre-baseline development is now closed at four subject calls; its remaining additional-development slot stays unused. A new facet alone cannot reopen that phase. A diagnostic exception requires a named readiness defect and separate owner approval; no automatic full campaign follows.
 Track active sessions from Stage 1, including preparation, review and model-run waits; exclude recorded periods awaiting owner input.
 Keep model latency inside the ceiling to bound actual study time and expose tooling costs. Budget for sequential execution initially, then replace estimates with pilot timings; do not assume all available calls must be used.
-Stage 1's allocation table must fit pilot, baseline, comparison, calibration and development within these separate pools before Stage 2 chooses cases and repetitions.
+The old phase table is superseded as an execution plan. Select only the calls needed for the next session test/comparison; active-session assessment consumes session effort, not a separately dispatched evaluator invocation. Unused evaluator/authoring pools are not automatically transferred.
 Protect the comparison allocation: evaluation repairs cannot consume subject/authoring capacity, and every retry uses the retry pool. No automatic transfers or extensions are allowed.
 At either limit, stop collection and close with the supported decision or uncertainty. Inspect which framework steps consumed effort and remove or combine steps that did not support the decision before proposing further work; do not silently extend the limit or weaken correctness criteria.
 
-Keep reserved cases, reference answers and revealing results in `../skill-study-private/sweeping-stale-references/`, with verified copies in `../skill-study-backups/sweeping-stale-references/`, outside this repository and its Git history.
+Only for an explicitly selected held-out transfer claim, keep reserved cases, reference answers and revealing results in `../skill-study-private/sweeping-stale-references/`, with verified copies in `../skill-study-backups/sweeping-stale-references/`, outside this repository and its Git history.
 Stage 1 records both absolute paths resolved from the canonical project checkout, not a worktree's working directory. These local copies protect against loss of a working copy, not loss of the host.
-Record their identities and storage references in an evaluator-only index; give the author only the development protocol and permitted evidence.
-A fresh author must use an isolated input workspace with filesystem/tool permissions that prevent reading either private copy or the evaluator's checkout; verify those restrictions before claiming unexposed transfer evidence.
+Record private storage identities for that optional claim; ordinary in-session assessment uses the retained evidence and known rules directly.
+For that held-out claim, an unexposed author must use an isolated input workspace with filesystem/tool permissions that prevent reading either private copy or the evaluator's checkout; verify those restrictions before claiming unexposed transfer evidence.
 A different directory or branch alone is insufficient. If isolation cannot be established within the budget, classify affected cases as development evidence and disclose the limit.
 
 ## Stage 1: agree on the skill and its contract
@@ -55,41 +55,39 @@ A different directory or branch alone is insufficient. If isolation cannot be es
 - [x] Derive intended behavior, exclusions, ownership and observable evidence from those sources. Review the contract and unresolved interpretations with the owner.
   Record the spec's required consumer check in the protocol: known output consumers, their dependencies and the consequences of inconsistent output; carry these into assessment severity.
   All nine skills have been read and their purpose/relationships recorded in the architecture map. The owner agreed with the broad purpose, clarified path-move reconciliation and code-to-documentation drift, directed independent evaluation, and accepted that single-file/no-sweep requires checking scope. Functional outcomes and procedural/mechanical effectiveness are scored separately; outcome failures are hard failures. Within the owner's discretion for this skill, the protocol treats purely procedural failures as visible, non-blocking defects. Limits are accepted as outer ceilings; execution qualification follows in Stage 3.
-- [x] Write the phase-by-role allocation table, with feasible case/repetition assumptions, evaluator batch composition, estimated preparation/run/review time, protected comparison capacity and repair reserves. Declare whether the affordable repetitions support a variability estimate or only descriptive observations; otherwise report variability as not estimable.
+- [x] Record the original phase-by-role allocation and assumptions. That historical campaign is superseded; select and re-estimate the next session run scope within the unchanged outer limits. Declare whether the affordable repetitions support a variability estimate or only descriptive observations; otherwise report variability as not estimable.
 - [x] Inspect the runner paths needed for this candidate. Distinguish code/document inspection from live qualification.
-- [x] Identify a feasible model-evaluator mechanism before Stage 2 selects model-assessed criteria.
-  Owner-approved read-only permissions are implemented for both providers. Actual local sandbox probes passed with no authentication/model calls; the protocol links retained evidence. The result now records permissions under schema 0.3; Claude read-only mode omits Write/Edit tools. Stage 3 must still qualify the selected model, assessment capture and input isolation before evaluator dispatch.
+- [x] Implement and probe read-only execution as an optional runner capability. This completed work does not require separate evaluators or calibration in the session workflow.
 - [x] Walk through the proposed contract, control context and feasible allocation with the owner; confirm the limits before designing tests.
 
 **Complete when:** the protocol identifies the exact original, agreed contract, feasible allocation, absolute storage paths and capabilities requiring pilot verification.
 The candidate and independent-use direction are settled; do not reopen them as prerequisites for the remaining walkthrough.
-Batch evaluator inputs across distinct cases, never across conditions of the same case in one evaluator context, and use fresh contexts for later batches. Conceal condition labels and identifying metadata in evaluator copies while preserving raw evidence separately; content may still reveal the condition, so record that residual limit and its effect on claims before collection.
-The evaluator pool need not cover every subject run with a separate call: allocate model judgments only where used or measured, and independently validate deterministic checks for the other properties.
+The active agent scores under the fixed rules by default. The earlier fresh-evaluator/batching requirement is superseded by the owner's reaffirmed session workflow; the general spec owns that rule.
 
 ## Stage 2: define representative tests and assessment
 
 - [x] Review the protocol's proposed facets and observation methods with the owner before choosing scenarios.
 - [x] After conceptual coverage is agreed, inspect prior scenarios for fit. Reuse/adapt a suitable scenario under the current contract; create a new one where no good fit exists. Do not inherit old scores or methodology.
   Inspected the six existing SSR prompts and their fixture shapes. Adapt ssr-02's reviewer-triggered config rename into an executable repository for the process pilot; the old supplied inventory, rubric and accepted results are not subject inputs or scoring authority.
-- [ ] Prepare cases covering reconciliation, preservation and accounting within Stage 1's allocation; one case may exercise multiple properties. Map each assessed property to the contract and evidence.
+- [ ] Prepare cases covering reconciliation, preservation and accounting for the selected run scope within the outer limits; one case may exercise multiple properties. Map each assessed property to the contract and evidence.
   Pilot 01 is complete. Pilot 02 has completed the new moved-guide pair: original repaired and committed all four consumers; control only README. Both preserved protected material. See its [report](../skill-studies/sweeping-stale-references/pilot-02-results.md). Core committed reconciliation takes priority; semantic drift is required in baseline design, while justified-local-change coverage is deferred. Discovery comparisons are diagnostic, not a requirement to outperform the control.
   The vendor-heavy synthetic `cases/pilot-03/` draft is preserved and undispatched. Its mechanical checks did not establish discovery adequacy.
   The approved replacement [Shiv case](../skill-studies/sweeping-stale-references/cases/discovery-shiv/assessment.md) is locally prepared: 50 project files excluding the runtime, four executable stale consumers, standalone original/control inputs, fixed outcome/accounting criteria, four CLI tests and fourteen controller tests. Real loader/copy and isolated-runtime checks require no providers. Source adaptations, qualification and file identities are retained in the case package. Its primary value is checking complete reconciliation across real consumers; discovery difficulty is unmeasured and does not gate collection. No provider calls are authorized.
-  The [semantic delivery case](../skill-studies/sweeping-stale-references/cases/semantic-delivery/assessment.md) is now locally prepared: nine project files, three stale current statements, historical/independent preservation, seven behavior tests, twelve controller tests and nine reconstructed reference variants. Both runner configurations copy correctly; semantic evaluator qualification remains open.
+  The [semantic delivery case](../skill-studies/sweeping-stale-references/cases/semantic-delivery/assessment.md) is now locally prepared: nine project files, three stale current statements, historical/independent preservation, seven behavior tests, twelve controller tests and nine reconstructed reference variants. Both runner configurations copy correctly; the active agent assesses documentation meaning using the fixed rules and evidence.
   Initial contribution cases present the trigger without directing the sweep or enumerating consumers; an explicit sweep request tests a separately identified execution question. Preserve clear task scope and permission to fix related files.
   Include at least one case with a plausible functional miss beyond the triggering reference, including latent consumers in config, CI or fixtures. This supplies an opportunity to observe scope expansion, not a requirement that the control fail.
 - [ ] Define source-supported expected outcomes, valid alternatives and failure/insufficient-evidence boundaries. Counting replacements alone does not establish correct triage or preservation.
   Subsequent SSR cases must map criteria to the [current assessment policy](../skill-studies/sweeping-stale-references/protocol.md#current-ssr-assessment-policy): committed functional completeness leads; detailed accounting remains secondary and non-blocking.
-  Pilot-specific setup, functional and procedural criteria are recorded in its assessment artifact. No independent evaluator rubric is frozen yet.
+  Pilot-specific setup, functional and procedural criteria are recorded in its assessment artifact. The fixed score-record format is not yet finalized.
   Map criteria to functional outcomes or procedure/mechanics, recording any overlap and the agreed failure consequence. Expose both dimensions in assessments; do not let format success offset an outcome failure or hide non-blocking procedural defects.
-- [ ] Designate development and reserved cases before calibration or pilot exposure. Keep reference answers out of subject inputs and model-evaluator inputs when testing evaluator accuracy.
-- [ ] Select deterministic checks for properties they fully establish, and model judgments for the remaining questions. Have the model assess known outcomes and compare its reasoning and verdicts with independently checked references.
+- [ ] Select active suite membership and keep scoring rules/reference examples out of subject inputs. Designate reserved cases only for an explicitly chosen held-out claim.
+- [ ] Map mechanical facts to deterministic checks and semantic questions to written rules applied by the active agent or human. Use worked examples only where needed to clarify those rules; no separate calibration campaign.
 - [ ] At the end of baseline design, agree with the owner on a versioned protocol template before freezing collection. Fix section names/order, required fields, optional sections with applicability rules, artifact links, and how decisions or amendments are recorded. Apply version 1 to SSR and use it for subsequent skills; later changes require an explicit template version rather than ad hoc structural drift.
 - [ ] At that checkpoint, agree on the companion case/criteria, run-index, manifest, assessment/comparison and layout/lifecycle contracts described in the spec. Check the runner's configuration/result interfaces and version any required changes; keep skill-specific expectations and semantic judgments outside structural conformance rules.
 - [ ] Reconcile actual time and the total remaining forecast, including tooling, against remaining authorized time before freezing collection. Apply the spec’s effort policy and present any forecast extension need at the owner walkthrough.
 
 **Complete when:** every selected criterion has an observable basis, the checks preserve valid alternatives, and coverage gaps and information boundaries are explicit.
-Follow the spec's proportional evaluation rule; do not add model calibration for a judgment the study never uses.
+Follow the spec’s session workflow; separate evaluator qualification is not a stage gate.
 Separate process qualification from suite construction: prepare one non-reserved pilot case and its required checks first, then exercise Stage 3 on that subset before expanding the suite. Keep unbuilt coverage and unchecked assessment work visible; a successful process pilot does not complete Stage 2 or establish a baseline.
 
 ## Stage 3: qualify and freeze execution
@@ -100,20 +98,20 @@ The checkboxes below describe the whole measured collection and stay open while 
 |---|---|---|
 | Configurations and identities | Exact inputs and commands for the two pilot conditions only. | Verified before both calls; identities and frozen-original bytes retained in the pilot run index. |
 | Authorization | Scope covering those exact two calls; no baseline, evaluator or extra pilot dispatch implied. | Owner requested dispatch after review of `2ca4701`, 2026-09-12; both authorized attempts complete, no further calls authorized by this pair. |
-| Check validation/calibration | Checks used on the pilot case; unused semantic evaluators remain unqualified. | Five constructed variants and both actual bundles inspected; traces support order/accounting judgments. No model evaluator used or qualified. |
+| Check validation and interpretation | Checks and direct evidence inspection used on the pilot case. | Five constructed variants and both actual bundles inspected; traces support order/accounting judgments. No model evaluator used or qualified. |
 | Execution qualification | Observed task feasibility, loading, evidence and control integrity for this setup; no reserved-case isolation claim. | Both completed; explicit original loading and comparable initial trees verified, no unintended guidance read observed. See pilot report for limits. |
 | Bundle inspection/retention | First-bundle retention decision and verified copies for both pilot attempts. | Complete: both bundles hash-verified in primary/backup stores; raw transcripts outside Git, index and assessment in checkout. |
 | Freeze measured collection | Pilot findings inform this later step; the pilot itself cannot close it. | Not started |
 
-Pilot 02 closes configurations, authorization, deterministic checks, observed execution and bundle retention **for this pair only**: manifest/CLI identities verified; both original trees match; full frozen skill read retained; original 4/4 committed repairs versus control 1/4; primary/backup inventories verified. See the [report and evidence links](../skill-studies/sweeping-stale-references/pilot-02-results.md). Eight observer tests and seven constructed variants qualified the case checks before collection. The whole-suite boxes below stay open: model-evaluator calibration, hidden-case isolation and measured-collection freeze are not established by either pilot.
+Pilot 02 closes configurations, authorization, deterministic checks, observed execution and bundle retention **for this pair only**: manifest/CLI identities verified; both original trees match; full frozen skill read retained; original 4/4 committed repairs versus control 1/4; primary/backup inventories verified. See the [report and evidence links](../skill-studies/sweeping-stale-references/pilot-02-results.md). Eight observer tests and seven constructed variants qualified the case checks before collection. The whole-suite boxes below stay open: fixed score-format readiness and the next measured collection remain open; hidden-case isolation matters only if that claim is selected.
 
 - [ ] Write exact configurations, input identities, provider/model/effort, commands, working directories, permissions, evidence checks and call allocation in the protocol before proposing dispatch.
-- [ ] Record authorization for the concrete pilot and evaluation calls; use existing authorization when it already covers them.
-- [ ] Verify deterministic checkers on known correct and incorrect artifacts. For model judgments actually used, declare reference distinctions, repeats and allowed disagreement before calibration; repair unresolved decision-changing errors or reduce the evaluated scope explicitly.
-  Include the current policy and case criteria in controller/evaluator inputs, record their exact identities with each assessment, and verify the protocol's contrasting functional/accounting examples before relying on a model evaluator. These instructions are not subject inputs; this qualification remains open.
+- [ ] Record authorization for the concrete subject calls and any separately selected evaluation calls; use existing authorization when it already covers them.
+- [ ] Verify deterministic checkers on known correct and incorrect artifacts. Confirm that the active agent can locate each required fact, apply the rules and write a structurally complete score record; use existing retained evidence for this format check rather than inventing another model-run gate.
+  Include the current policy and case criteria in assessment inputs and record exact identities. They are not subject inputs. Resolve genuine criterion ambiguity with the owner; do not repeatedly seek approval for settled scoring rules.
 - [ ] Pilot task feasibility, context isolation, skill availability, evidence capture and preservation. Keep infrastructure failures distinct from behavioral failures, and account for every attempt.
 - [ ] Inspect and measure the first complete pilot bundle before committing raw evidence; record the retention decision under the evidence rules below. Use measured latency to update the allocation within the existing ceiling. Consider bounded concurrent dispatch only if timing demonstrates a need and isolation, run ordering and preservation barriers can be maintained; record the mechanism before use.
-- [ ] Use pilot findings to freeze tasks, criteria, model/evaluator settings, repetitions, run order, retry/stopping rules and acceptance boundaries. Confirm that recorded authorization covers the baseline and later comparison allocation.
+- [ ] Use pilot findings to freeze tasks, criteria, subject settings, score format, repetitions, run order, retry/stopping rules and acceptance boundaries. Confirm that recorded authorization covers the baseline and later comparison allocation.
 
 **Complete when:** mechanical paths and the evaluation procedure pass their declared checks and the measured collection has concrete authorization within the whole-study ceiling.
 For every conditional safeguard, record its implementation or its evidence limitation and effect on the claim before collection.
@@ -121,13 +119,13 @@ For every conditional safeguard, record its implementation or its evidence limit
 ## Stage 4: establish the baseline
 
 - [ ] Run the original-skill and no-target-skill conditions under the frozen protocol, recording which companions and surrounding instructions remain in the control.
-- [ ] Assess raw evidence with the declared checks and fresh model contexts. Conceal condition labels using the mechanism established in Stage 3, or apply its recorded limitation.
-- [ ] Report per-case outcomes, evaluator accuracy, costs and observed variation; apply Stage 1's declared limit on variability estimation. Inspect evidence supporting passes as well as failures.
+- [ ] In the active session, inspect raw evidence and check results, apply the fixed rules, and write/index one versioned score record per assessed run. Record assessor context and inspect passes as well as failures; no fresh scoring context is required.
+- [ ] Report per-case scores, evidence limitations, costs and observed variation; apply Stage 1's declared limit on variability estimation. Inspect evidence supporting passes as well as failures.
 - [ ] Resolve defective tests or criteria through a versioned amendment applied consistently across affected conditions; preserve prior records and recollect only where necessary and authorized.
 - [ ] Present supported rewrite opportunities and agree on an objective, or proceed to closure retaining the original.
 
 **Complete when:** conclusions trace to retained evidence and distinguish observed success, attributed skill contribution, evaluator error and uncertainty.
-A successful no-skill control is useful evidence, not a reason to invent a failure.
+A successful no-skill control is useful evidence, not a reason to invent a failure. Original/control collection remains the SSR baseline proposal; routine later edit checks need only the conditions relevant to their question.
 
 ## Document tooling: after baseline collection
 
@@ -139,9 +137,9 @@ This work follows format agreement and baseline assessment; it is not a Stage 2/
 ## Stage 5: rewrite and compare
 
 - [ ] Re-read `writing-skills` and reconcile its evidence requirements with the agreed edit before authoring. Resolve a passing-control/RED conflict explicitly; preserve the intended behavioral contract.
-- [ ] Give a fresh author only permitted development inputs. Use bounded development checks and preserve each candidate version and the original.
+- [ ] Edit in the active work session using the contract, scored evidence and `writing-skills`. Use bounded checks and preserve each candidate version and the original. A separate unexposed author is required only for an explicitly selected held-out claim.
   Original conditions use `skill-studies/sweeping-stale-references/cases/skill-original/SKILL.md`, including later contemporaneous runs. Never point them at the mutable live skill; keep candidate sources distinct.
-- [ ] Fix the selected candidate before exposing reserved results to its author. Compare it with contemporaneous original-skill runs; include a current no-target control when claiming benefit over unguided behavior.
+- [ ] Run the relevant fixed scenarios after the edit and record/compare their scores. Use contemporaneous original runs for a version-comparison claim and a current no-target control for a contribution claim. Apply reserved-result restrictions only when that claim was selected.
 - [ ] Investigate material model/runtime drift before attributing improvement. If reserved results guide an edit, reclassify them as development evidence; renewed transfer claims require new reserved cases on both versions within remaining authorization.
 
 **Complete when:** the comparison answers the declared acceptance question or identifies exactly why it cannot. Report regressions and limitations alongside gains; do not hide them in aggregate scores.
@@ -168,10 +166,10 @@ Reserved bundles and revealing assessments stay entirely in the verified private
 
 ## Current next action
 
-Local review of the prepared [semantic delivery case](../skill-studies/sweeping-stale-references/cases/semantic-delivery/assessment.md) is complete, establishing the three core case foundations alongside Shiv and the moved guide. The concept was accepted, six earlier prompts inspected and a new fixture built; mechanical checks and reference reconstructions passed without model calls. Review the [calibration proposal](specs/2026-09-14-ssr-evaluator-calibration.md) and its eleven constructed document/Git records. Then settle its information boundary, exact evaluator configs/retention and the shared response format before proposing the two calls; positive/negative action-trace qualification remains separate open scope. Qualify the judgments actually used and revise baseline/comparison calls and repetitions across the three cases. Present the complete package and aggregate call/time forecasts before collection freeze and dispatch. The full three-case scenario projects 47 subject calls against the 40-call ceiling; revise allocation explicitly. Apply the protocol’s semantic-calibration fallback before collecting the baseline if evaluator qualification remains inconclusive. The previous eight-call/two-case arithmetic is pending revision, not approval for expanded runs. Pre-baseline development remains closed at four subject calls; no provider invocation, budget extension or skill rewrite is authorized.
-Pilot 01's external review led to a versioned assessment correction: that original run's broader-hit accounting is an unresolved interpretation, not an established defect or rewrite objective. Functional findings remain unchanged; do not reopen the owner-set priority or add calls to settle secondary accounting.
-Claude's review of `f36ffa0` returned PASS and closed pilot 01 review. Pilot 02 criteria and assessment identify relative-path reconciliation as an owner-clarified outcome; preserve that distinction in later cases.
-Evaluator permission feasibility is established through the implemented read-only modes and local sandbox probes; exact evaluator configuration and model-run qualification remain Stage 3 work.
-The first study evaluates sweeping-stale-references alone against the same task without skill guidance; the earlier DD-present control is superseded. Observed input integrity is documented for this pair; stronger read isolation remains unqualified.
-The owner selected Sol low for initial process checks (Terra medium is an alternative); the protocol keeps the five-repetition wording campaign conditional on reaching authoring, outside the initial pilot.
-The reset documents and abandonment notices are prepared; experimental stages remain incomplete.
+The owner reaffirmed the intended session workflow: run fixed scenarios, capture evidence, have the active agent apply fixed scoring rules, and write a fixed-format score record. The separate [evaluator-calibration proposal](specs/2026-09-14-ssr-evaluator-calibration.md) is superseded as a required workflow. Its constructed examples remain reference material, not a pending two-call gate.
+
+Next define the minimum reusable scenario/rule and completed-score formats against the existing runner interfaces. Apply them to SSR using retained evidence as a format example, clearly labelled as a new assessment/example rather than a new run. Then select the smallest useful authorized scenario run/comparison and record its exact inputs/configuration before dispatch. The three prepared core cases, original-skill snapshot and four pilot observations remain valid foundations; do not create another scenario or evaluator layer merely to advance the process.
+
+Preserve the owner's settled scoring policy: complete, correct, preserved and committed outcomes lead; pure SSR procedure defects are visible but non-blocking; uncertainty is not failure. Record current policy identity with each score. The rule format must explain evidence priority, criterion consequences and allowed alternatives; the score format must carry judgments and evidence in a stable structure.
+
+The old 47-call full-campaign forecast and evaluator allocations are historical planning scenarios, not the new session plan. Re-estimate only the work selected for execution within the unchanged outer authorization limits; no automatic pool transfer, extension, provider run or skill rewrite follows from the workflow correction. Document-generator/validator implementation remains after format agreement and baseline assessment unless the owner changes that sequence.

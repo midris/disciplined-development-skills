@@ -7,7 +7,7 @@ The [fresh testing plan](../2026-09-11-model-driven-skill-testing.md) owns execu
 ## Goal and starting point
 
 Build a reusable model-driven framework that understands a skill's purpose and behavior, derives representative tests, establishes measured baseline results, and supports evidence-led rewriting with Superpowers `writing-skills`.
-The organizing outcome is an evidence-backed decision about improving an existing DD skill; the framework serves that outcome.
+The organizing workflow is skill development inside a Codex or Claude work session: edit a skill, ask the active agent to run the agreed scenarios, inspect and score the evidence, and record the result. The framework serves that workflow.
 The model owns interpretation, test design, evaluation and recommendations.
 Simple deterministic tools execute bounded operations and preserve evidence so the model can make those judgments reliably.
 Reliability means traceable expectations, representative coverage, trustworthy execution evidence, sufficiently consistent evaluation and conclusions proportionate to the observations.
@@ -28,6 +28,27 @@ Specifically, verify context isolation and skill availability rather than assumi
 The framework's initial scope is to design and exercise the complete process on one owner-selected skill, then check transfer to a skill with different behavior before standardizing the procedure across the bundle.
 There is no requirement for equal test counts, identical fixtures or one universal quality metric across skills.
 
+## Default work-session workflow
+
+The active session is the assessor by default; a human can apply the same written rules.
+The owner reaffirmed this existing intent on 2026-09-14 after mandatory separate-evaluator steps had contradicted it.
+Responsibilities below are not a pipeline of separately dispatched agents.
+
+1. Read the selected suite, versioned scoring rules and fixed execution configuration; identify the skill version being tested.
+2. Run the authorized scenarios through the existing deterministic harness and wait for completion.
+3. Preserve and verify the evidence bundles; distinguish execution/setup errors from observed skill failures.
+4. Run applicable deterministic checks, inspect the actual outputs/files/traces, and apply the scoring rules in the active session.
+5. Write the fixed-format score record with criterion judgments, evidence references, consequences, uncertainty and provenance; report the result to the owner.
+6. After an authorized edit, repeat the relevant fixed scenarios and compare versioned records under the same rules, recording any changed conditions.
+
+No separate evaluator service, fresh scoring context, blind answer-key test or calibration campaign is a prerequisite to this loop.
+Worked examples help explain rules and settle actual ambiguities; they are not a mandatory exam for the active agent.
+Additional independent review or evaluator automation is optional when explicitly chosen for a concrete need; it must not silently become the normal workflow.
+Direct-session judgments are first-class assessments, labelled as such, not downgraded to development-only evidence because the same agent edited the skill.
+Record that shared context and bound claims accordingly; do not claim independent or blind validation.
+
+The runner owns predictable execution and evidence structure. The scoring contract owns what facts matter and their weight. The active agent or human owns interpretation. Deterministic generation/validation supports the record structure and mechanical checks, not semantic verdicts.
+
 ## Why this is a reset
 
 The owner clarified the sequence on 2026-09-11: the original request was to rewrite the DD skills; that comprehensive rewrite attempt was abandoned.
@@ -37,7 +58,7 @@ This history does not establish that every old test or tool failed.
 
 The conversation exposed repeated confusion between intended behavior, test validity and output judgment, including settled whole-document standards being reopened and constructed calibration examples being confused with measured results.
 The working diagnosis is that procedural expansion and repeated evaluation displaced progress toward a justified rewrite decision; this is an interpretation of the experience, not a measured attribution of cost to each cause.
-The proposed response is one bounded, written study through a skill decision, with source-grounded expectations, a fixed evaluation procedure, durable evidence and an explicit disposition when the effort limit is reached.
+The response is a documented session workflow with source-grounded scenarios, fixed scoring rules, durable evidence and bounded conclusions. A formal comparison study is available when needed; it is not the only way to test an edit.
 The first-study plan makes that response concrete and records candidate and spending decisions; it does not itself authorize experiments.
 
 ## Architecture: seven responsibilities
@@ -53,7 +74,7 @@ Keep one authoritative home for each decision and reference it from dependent ar
 | 4. Experiment plan | What will we run and compare? | Models, versions, surrounding guidance, permissions, repetitions, controls, run ordering, budget, stopping/retry rules and participant information boundaries. | A model, fixture or context change can change the experiment; record it instead of silently pooling results. |
 | 5. Execution evidence | What actually happened? | Exact supplied inputs, skill bytes, configuration, outputs, relevant files/traces, mechanical errors, duration and provenance. | Mechanical completion is not behavioral success; self-reported action is not execution evidence. |
 | 6. Assessment | What does each observation demonstrate? | Evaluator judgment, cited evidence, reader or operational consequence, uncertainty and resolved or unresolved disagreements. | Apply the agreed criteria without silently changing them to fit a result. |
-| 7. Comparison and decision | How effective is the skill, and is a rewrite better? | Baseline results, variation, comparisons, regressions, improvements, costs, limitations and a retain/adopt/investigate recommendation. | Conclusions are bounded by the tested tasks, models and context; aggregate success cannot conceal a consequential regression. |
+| 7. Comparison and decision | How effective is the skill, and is a rewrite better? | Versioned scores, baseline/comparison results when used, regressions, improvements, costs, limitations and a retain/adopt/investigate recommendation. | Conclusions are bounded by the tested tasks, models and context; aggregate success cannot conceal a consequential regression. |
 
 The skill is the implementation under test, initially the checked-in version and later a separately versioned rewrite.
 The behavioral contract remains stable during a comparison unless the owner explicitly chooses a behavior change.
@@ -110,8 +131,7 @@ A promise to execute an action requires an environment where the action can be p
 
 Output: a reasoned scenario set and coverage map.
 Exit condition: each selected scenario has a distinct purpose, sufficient inputs and a feasible evidence path.
-Designate development cases and reserved transfer cases before calibration or pilot use.
-The test designer may know both sets, but must not later act as a supposedly unexposed rewrite author in that same context.
+Ordinary development uses known scenarios and records that exposure. If a separate held-out transfer claim is explicitly selected, designate those cases before exposure and do not present an exposed author as unexposed.
 
 ### 3. Define and challenge the evaluation contract
 
@@ -131,24 +151,23 @@ These dimensions may overlap: a broken output contract that prevents a required 
 Tests and reports must expose each dimension at the criterion level; do not force equal weighting or combine them into a score that hides a hard failure.
 Use evidence-backed criterion judgments, with insufficient evidence distinct from failure; numerical summaries are optional and must retain the underlying judgments.
 Use deterministic validation only for genuine mechanical requirements with a known consumer or independently checkable result.
-The study protocol owns the current assessment policy, including owner clarifications and their effective identity. Before relying on a subsequent assessment, include the applicable policy and case criteria in its controller/evaluator inputs and record their exact revision/hash with the judgment; a conversation or review note alone is not an operational scoring instruction. Validate clarified boundaries with contrasting examples before using the affected evaluator. Preserve prior frozen inputs and assessments; version any reassessment instead of silently changing its rules or result.
+The study protocol owns the current assessment policy, including owner clarifications and their effective identity. Before relying on a subsequent assessment, include the applicable policy and case criteria in its controller/evaluator inputs and record their exact revision/hash with the judgment; a conversation or review note alone is not an operational scoring instruction. Use contrasting examples to resolve an unclear boundary before scoring affected evidence; this does not require separate model calls. Preserve prior frozen inputs and assessments; version any reassessment instead of silently changing its rules or result.
 
 Construct contrasting examples when a criterion is unclear, including different successful solutions and subtle consequential failures.
 Label who constructed them, what guidance they used and why they exist.
 They calibrate interpretation; they do not establish model performance or independently validate the contract that guided their construction.
 
-For properties fully established by deterministic checks, validate the checker against known correct and incorrect artifacts; no model-calibration apparatus is required for an unused model judgment.
-For model judgments the study uses or measures, establish source-supported reference outcomes and declare the distinctions, repeat count and allowed disagreement before calibration.
-Use fresh evaluation contexts without reference answers; assess reasons as well as verdicts and investigate decision-changing errors before relying on those judgments.
-Model agreement alone is not ground truth. Resolve disputed contract interpretations with the owner; repair evaluation errors or explicitly narrow the affected scope.
-For blinding and every other conditional safeguard, record the mechanism or the evidence limitation and its effect on the claim before collection; an evaluator cannot silently waive the rule.
+For mechanically checkable properties, validate the checker against known correct and incorrect artifacts.
+For semantic properties, the active agent or human inspects the evidence and applies the fixed rules, citing reasons and uncertainty.
+Disagreement can reveal an ambiguous rule, an evidence gap or a mistaken assessment; resolve the actual issue rather than automatically dispatching another model or rerunning the subject.
+If an independent evaluator or blind comparison is explicitly commissioned, define its inputs, acceptance checks and information boundaries for that optional use. Do not claim safeguards that were not established.
 
-Output: criteria and checks, with model-evaluation instructions and calibration evidence where used.
-Exit condition: the selected checks pass their declared validation or calibration criteria, and remaining limits are explicit.
+Output: versioned scoring rules usable by the active agent or a human, plus validated mechanical checks and useful worked examples.
+Exit condition: each judgment has a usable rule and evidence path, mechanical checks work as declared, and genuine ambiguities are resolved or explicitly unknown.
 
 ### 4. Pilot and freeze the experiment plan
 
-Prepare a small pilot to verify task validity, provider behavior, input isolation, evidence capture and evaluator usability before a larger baseline collection.
+Use a small pilot when necessary to verify task validity, provider behavior, input isolation, evidence capture and the ability to complete the score record. Reuse already established mechanics rather than repeating a pilot for every edit.
 Track time and invocations against the experiment plan. At work checkpoints, reconcile actual or explicitly estimated time, remaining work and forecast variance by category and in total, including tooling. Compare the total remaining forecast with remaining authorized time; distinguish updated estimates from carried-forward planning assumptions. Count review, storage and model waits once, preserving any unknown historical split. Time variance prompts scope and effort review, not failure scoring, automatic cuts or a phase gate. Preserve necessary work and evidence standards. An owner-set autonomous-work ceiling remains an authorization boundary: present a forecast extension need to the owner, and obtain approval before exceeding that ceiling. If work stops, report incomplete evidence as a limitation.
 Before provider dispatch, record exact input paths and identities, invocation/setup instructions, expected evidence locations and checks, and the authorized scope and budget for subject and evaluator calls.
 Map each case, condition and repetition to all its attempts and retained bundles so another agent can resume without duplicate runs or lost evidence.
@@ -158,7 +177,7 @@ Choose repetitions after considering pilot variability, the comparison question,
 Do not claim a universal reliability rate from an arbitrary sample count.
 Agree on the sample and stopping policy before the measured collection; label pilot evidence separately when the protocol changes.
 
-The main comparison conditions are no target skill, the original skill and, later, the rewritten skill.
+Choose conditions for the question: a regression check runs the edited skill against fixed expectations; a version comparison uses original and edited skills; an added no-target condition supports a skill-contribution question. No universal three-arm campaign is required.
 Keep model settings, tasks, permissions and necessary surrounding context comparable across conditions.
 Removing the target may still leave dependencies present; describe exactly what the control removes and what remains.
 For an independent skill, compare the skill alone with the same task without skill guidance; preserve the ordinary task, tools and necessary neutral setup.
@@ -176,8 +195,7 @@ If the contemporaneous original changes materially or a relevant setting changes
 
 Freeze the contract, scenarios, criteria, evaluator instructions, original skill bytes and execution settings for the baseline comparison.
 Record permitted variation, run ordering, retry rules and the exact information available to test authors, subjects, evaluators and rewrite authors.
-Keep reserved transfer cases out of calibration, pilot and rewrite development inputs, while keeping the intended contract visible to the rewrite author.
-The author starts in a fresh context with an explicit input set that excludes reserved prompts, outputs, case-level findings and revealing summaries.
+Only for an explicitly selected held-out transfer study, keep reserved cases out of authoring inputs and use an unexposed author context. The ordinary session may design tests, inspect results and edit the skill; its evidence is development/regression evidence, not held-out transfer validation.
 Keep reserved material outside the author's checkout and accessible Git history, and verify filesystem/tool restrictions; a separate branch or an instruction not to read is insufficient.
 If reserved cases are measured during the original baseline, their detailed results remain separate from the author's baseline report until the candidate version is fixed for final comparison.
 Record actual exposure; if separation cannot be maintained, label those cases as development evidence rather than claim held-out validation.
@@ -206,8 +224,7 @@ Exit condition: valid observations and unusable attempts are accounted for under
 
 ### 6. Assess observations and establish the baseline
 
-Apply the frozen evaluation contract to raw evidence, using fresh evaluation contexts and concealed condition labels where practical.
-Check important and ambiguous judgments with additional review, selected under a declared policy rather than only when the outcome is unwelcome.
+The active session applies the versioned scoring contract to the retained evidence and writes the assessment. A human uses the same rules and format. Additional review is optional for a named ambiguity or consequential judgment, not a prerequisite for reporting each run.
 Read evidence supporting passes as well as failures.
 State the task-relevant consequence and distinguish missing evidence from observed failure.
 Preserve disagreement and uncertainty until resolved with evidence or explicitly left unresolved.
@@ -238,7 +255,7 @@ Plan for those evidence requirements in the control and experiment design.
 For pure cleanup where controls already succeed and no failing case is observed, explicitly resolve how the authoring workflow applies before editing; do not manufacture a failure or call a passing control RED.
 This is a concrete authoring-stage decision, not a reason to discard useful baseline results or change desired behavior silently.
 
-Use development cases for iteration, then assess the selected rewrite against the frozen comparison suite and reserved transfer cases under comparable conditions.
+Use the fixed scenarios for in-session iteration and compare skill versions under recorded conditions. Include reserved transfer cases only when that separate claim has been selected and its access boundary is feasible.
 Record which cases influenced authoring and which remained unexposed.
 If the suite changes after a new failure is found, version it and apply the new expectations consistently to the original and rewrite.
 Do not select a favorable isolated run or conceal consequential regressions inside an average score.
@@ -250,17 +267,17 @@ Exit condition: the agreed acceptance question is answered sufficiently for the 
 
 ## Roles and review
 
-The model acting as test designer interprets sources, proposes contracts and scenarios, prepares criteria and makes supported recommendations.
-The model acting as subject receives the declared task and context, without privileged evaluator material accidentally added to its inputs.
-The model acting as evaluator reads the contract and evidence and owns its reasoned judgments.
-The rewrite author uses the contract and permitted development evidence to improve the skill through `writing-skills`.
-These are information boundaries and responsibilities; one orchestrating agent can coordinate them without giving every stage the same context.
+The active agent can design scenarios, edit the skill, dispatch subject runs, inspect their evidence, score them and explain the results in one work session.
+The subject is the model invocation under test and receives only its fixed task, skill and declared context.
+Scoring rules and reference facts belong to the assessing session, not the subject inputs.
+A human can replace the active agent as assessor without changing the rule or record format.
+A separately dispatched reviewer/evaluator is optional; when used, identify it and apply the relevant read-only and information-boundary requirements. Those dispatch restrictions do not prevent the active agent from writing score records or making authorized edits.
 
 The owner settles intended-behavior conflicts, approves experiment scope and budget, reviews consequential evaluation uncertainties and decides adoption.
 The owner does not need to perform routine scoring or repeatedly approve a settled rule.
 Before asking for a substantive decision, present the relevant complete context, the model's proposed judgment, its evidence and the precise unresolved choice.
 Distinguish review of a recommendation from an authorization to run tests or deploy a change.
-An accepted calibration example is not approval of the full evaluation contract.
+A worked example illustrates a rule; accepting it neither authorizes a run nor silently changes other rules.
 Record each settled decision in its authoritative artifact and maintain artifact links, progress and the next authorized action in the testing plan.
 These records must support resumption without conversation history; keep reserved-case details out of material passed to the rewrite author.
 
@@ -277,12 +294,20 @@ A suite is the explicitly selected set of cases under that protocol, not every c
 | `cases/<case>/task.md`, prompts and `fixture/` | Realistic subject task, condition-specific setup and supplied source material. A fixture can be documents or other task inputs; it need not be a software repository. |
 | `cases/<case>/control.json`, `original.json` | Existing runner configurations declaring every supplied regular file and execution settings. Candidate configuration is added when needed. |
 | `cases/<case>/assessment.md`, `expected.json`, `assessment-policy.txt` | Pre-run criteria, valid alternatives, known facts, uncertainty boundaries and the exact applicable policy. These are controller inputs, not completed-run judgments or subject guidance. |
-| `cases/<case>/check_*.py`, checker tests, `qualification.json` | Optional deterministic observations and evidence that the chosen checks work on known outcomes. Use model judgments where semantics require them; qualify model evaluators before relying on those judgments. |
+| `cases/<case>/check_*.py`, checker tests, `qualification.json` | Optional deterministic observations and evidence that the chosen checks work on known outcomes. The active agent or human applies the rules where semantics require judgment; no separate evaluator qualification gate. |
 | `cases/<case>/manifest.json`; source provenance where needed | Exact input and controller identities, including versions and hashes. |
 | `<phase>-results.md`, `<phase>-checks.json`, `<phase>-run-index.json` | Post-run judgments, observed facts and an index of every attempt, condition, repetition, policy identity, cost and retained evidence location. Existing pilot files use this pattern; future phase filenames are assigned when that phase is prepared. |
 
 Full run bundles and their verified backups stay in the external stores recorded by the protocol; Git holds permitted case materials, policies, manifests and reports. Reserved cases and revealing results stay outside the rewrite author's accessible checkout/history. Verify that access boundary before claiming reserved transfer evidence.
 Case files may be reused in a later authorized phase without relabeling prior pilot observations. Once assessed, preserve their identities; version changed cases or assessments explicitly. Redundant and rejected cases can remain as history without belonging to the active suite.
+
+### Fixed scoring rules and score records
+
+Settle the reusable formats before the next scored collection. The rules identify each criterion, required evidence, functional/procedural dimension, consequence or weight, acceptable alternatives and treatment of missing evidence. Known output consumers determine which format requirements are consequential.
+The score record must identify its schema version, assessment/run/case IDs, skill/configuration/criteria/policy versions or hashes, assessor and available session/model identity, evidence locations, per-criterion judgments with reasons and consequences, uncertainty and any superseded assessment.
+The active agent completes and records it in the session; a human can complete the same artifact.
+For SSR, retain `met`, `not met`, `insufficient evidence` per criterion and a separate functional summary. Any failed functional criterion makes that summary not met; otherwise any unknown functional criterion makes it insufficient evidence. Procedure remains separately visible under its agreed severity. A numerical presentation, if selected for a skill, must have a predeclared mapping and cannot mask functional failure.
+The run index links the completed score record to the runner's unchanged evidence bundle. Validate structure and identities deterministically where tooling exists; explicit checks suffice until the agreed generator/validator is built.
 
 ### Format decisions and document tooling
 
@@ -314,7 +339,7 @@ Use a contrasting second skill to test whether the framework generalizes to a di
 Use a minimal practical organization for the first candidate, then settle reusable artifact templates and add tools for recurring mechanical work actually encountered.
 This avoids building a large harness around untested assumptions about evaluation.
 
-Before the measured baseline collection, settle the model/context, budget, evaluator review policy, repetition/stopping policy, transfer-case handling and acceptable evidence gaps using the pilot findings.
+Before the next scored collection, settle the fixed rule/record formats, selected scenarios and skill versions, execution settings, authorized run count and handling of evidence gaps. Decide independent review or held-out transfer only if the question needs it.
 Before rewriting, settle the change objective, acceptance boundaries and any pure-cleanup conflict with the selected `writing-skills` version.
 These choices depend on the candidate and pilot; they are deliberately not replaced here with universal test counts or numerical acceptance thresholds.
 

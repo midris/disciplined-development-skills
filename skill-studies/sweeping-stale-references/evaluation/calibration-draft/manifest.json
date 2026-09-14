@@ -1,5 +1,5 @@
 {
-  "status": "draft identities, not dispatch authorization",
+  "status": "Superseded separate-evaluator proposal; historical constructed examples, no dispatch or calibration prerequisite.",
   "evaluator_shared": [
     "instructions.md",
     "criteria.md",
@@ -134,13 +134,13 @@
     },
     {
       "path": "skill-studies/sweeping-stale-references/evaluation/calibration-draft/README.md",
-      "sha256": "0c08d76f0813b190b6ee9652f6faeb2170819d6de719c113037f6c80da0f586d",
-      "bytes": 2913
+      "sha256": "6e57432d13e1b662aa61c612fc2db0b4771a44e14aaccd0d9531216d4020b0e0",
+      "bytes": 1550
     },
     {
       "path": "plans/specs/2026-09-14-ssr-evaluator-calibration.md",
-      "sha256": "0fe343824ea6b76fa088e98a2ef0b8ce0140f920ec61902e2495e50fb37f29ef",
-      "bytes": 7166
+      "sha256": "e15205374ddc2872f90fe224150fb3c8927b06ea18b25571d25202c67647728c",
+      "bytes": 7657
     }
   ],
   "checks": {
@@ -155,5 +155,23 @@
     "No model runs, no evaluator accuracy claim.",
     "No host read-boundary or actual evaluator setup qualification.",
     "No positive/negative action-order qualification."
-  ]
+  ],
+  "superseded_controller_records": [
+    {
+      "path": "skill-studies/sweeping-stale-references/evaluation/calibration-draft/reference-key.json",
+      "sha256": "260157525812e5dcb229b39a347bf001fb58c9676facd9238eeb8d5da6cbf1e7",
+      "bytes": 8559
+    },
+    {
+      "path": "skill-studies/sweeping-stale-references/evaluation/calibration-draft/README.md",
+      "sha256": "0c08d76f0813b190b6ee9652f6faeb2170819d6de719c113037f6c80da0f586d",
+      "bytes": 2913
+    },
+    {
+      "path": "plans/specs/2026-09-14-ssr-evaluator-calibration.md",
+      "sha256": "0fe343824ea6b76fa088e98a2ef0b8ce0140f920ec61902e2495e50fb37f29ef",
+      "bytes": 7166
+    }
+  ],
+  "workflow_authority": "plans/specs/2026-09-11-model-driven-skill-testing-framework.md#default-work-session-workflow"
 }

@@ -24,6 +24,7 @@ Claude Code-specific. See [Requirements](#requirements).
 ## Developing or evaluating these skills
 
 Start with the [fresh framework specification](plans/specs/2026-09-11-model-driven-skill-testing-framework.md) and [current testing plan](plans/2026-09-11-model-driven-skill-testing.md), including its instructions for resuming without conversation history.
+The active work session runs fixed scenarios, interprets the captured evidence using versioned rules, and records structured scores; deterministic tools support execution and record consistency.
 The checked-in skills and existing [runner](skill-validation/runner/README.md) are the foundation; the previous framework and layout are being reconsidered on their merits.
 Derive intended behavior from the complete selected skill and relevant dependencies, review the contract, then design tests, establish measured baselines and compare rewrites through Superpowers `writing-skills`.
 The model designs and judges tests; deterministic tools prepare runs and record evidence.

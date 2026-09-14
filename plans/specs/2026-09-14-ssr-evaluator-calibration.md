@@ -1,6 +1,7 @@
 # SSR evaluator calibration proposal
 
-Status: draft for owner review; no evaluator dispatch or baseline freeze authorized.
+Status: superseded as a required workflow, 2026-09-14. Retained historical proposal; its two-call sequence, acceptance gate and readiness checklist are not pending tasks.
+The owner reaffirmed the [active-session workflow](2026-09-11-model-driven-skill-testing-framework.md#default-work-session-workflow): the session runs scenarios, applies fixed rules and records scores itself. The constructed examples may illustrate rules; they do not require an evaluator calibration campaign. The remainder of this document preserves the prior proposal, not current execution authority.
 Governed by the [framework](2026-09-11-model-driven-skill-testing-framework.md), [active plan](../2026-09-11-model-driven-skill-testing.md) and [SSR policy](../../skill-studies/sweeping-stale-references/protocol.md#current-ssr-assessment-policy).
 
 ## Decision this calibration supports

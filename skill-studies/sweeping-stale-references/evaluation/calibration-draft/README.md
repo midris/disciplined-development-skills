@@ -1,25 +1,10 @@
-# SSR calibration draft
+# Retained scoring examples — separate-evaluator proposal superseded
 
-Status: owner-review package; unrun and not frozen for dispatch.
-The [proposal](../../../../plans/specs/2026-09-14-ssr-evaluator-calibration.md) owns the purpose, acceptance criteria, two-call sequence, information-boundary work and limits.
+Status: historical, unrun package; not a calibration or dispatch prerequisite.
+The owner reaffirmed the [active-session workflow](../../../../plans/specs/2026-09-11-model-driven-skill-testing-framework.md#default-work-session-workflow) on 2026-09-14. The active agent or a human applies fixed scoring rules and writes the score record; no separate evaluator is required.
 
-`packets/` contains eleven neutral constructed project/Git records. They reuse the semantic-delivery reference variants, with additional full-account, truthful-incomplete-account, split-commit and withheld-evidence constructions.
-`baseline.json` supplies the common starting project. Each packet contains the complete final project snapshot and runtime observations from byte-identical code; Git logs, patches and status were captured from actual disposable reconstructions.
-No action streams were constructed or inferred. These records do not establish observed model behavior.
+The eleven `packets/` records and shared baseline retain constructed document/Git examples. They are not subject observations. `reference-key.json` records their original proposed judgments and provenance; its truthful-incomplete-account/grouping interpretations were not separately accepted by the owner and must not silently become new requirements.
 
-`instructions.md`, `criteria.md`, `expected.json`, `policy.txt` and `task.md` are proposed evaluator inputs.
-`batch-A.json` and `batch-B.json` present the same eleven packets in different orders under different response IDs, for fresh contexts without feedback between calls.
-Each future runner configuration must copy only these shared inputs, its own batch list and the referenced packets.
-The runner's file-by-file fixture declarations can express this package; exact configs and dispatch commands follow owner review and information-boundary qualification.
+`instructions.md`, `criteria.md`, `expected.json`, `policy.txt`, the two batch lists and the [proposal](../../../../plans/specs/2026-09-14-ssr-evaluator-calibration.md) describe the superseded separate-evaluator design. Their imperative wording is historical, not a resumption checklist. Preserve these bytes and prior identities; use the [current SSR policy](../../protocol.md#current-ssr-assessment-policy) for new scores.
 
-**Controller only:** `reference-key.json` records provenance, construction recipes, proposed judgments and reasons. It must never be an evaluator fixture.
-`manifest.json` identifies the proposed evaluator allowlist and controller sources; it is not a dispatch authorization or proof of read isolation.
-The answer key is in the canonical checkout, so withholding it from the copied fixture alone does not stop host-file reads. The proposal leaves this boundary explicitly open.
-
-Reference judgments are orchestrator-authored from SSR-assessment-2 and the case criteria; they are not independent validation.
-The owner should particularly inspect the README-only repair with an account that truthfully admits the two unfinished edits: the proposed judgment is functional failure with useful accounting.
-Grouping is also separated from completeness: a single incomplete repair commit can meet grouping while failing F3; a complete repair in two commits can meet F3 while missing grouping.
-Neither distinction changes the frozen case or prior pilot scores; these are proposed calibration interpretations to review before use.
-
-The deliberately contrasted batch can make mistakes easier to spot than a standalone artifact. Passing it qualifies only these distinctions under this presentation; it does not establish broad evaluator reliability or positive/negative action-trace interpretation.
-No provider calls were made. Existing case fixtures, reference judgments and qualification records remain unchanged.
+`manifest.json` retains payload identities and the original proposed input grouping; its status marks the package superseded. The examples can help explain an actual ambiguity, but neither inspecting them nor passing a two-call exam is a gate to normal skill testing. No model invocation occurred in constructing this package.
