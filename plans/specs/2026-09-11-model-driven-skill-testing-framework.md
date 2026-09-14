@@ -307,6 +307,7 @@ Settle the reusable formats before the next scored collection. The rules identif
 The score record must identify its schema version, assessment/run/case IDs, skill/configuration/criteria/policy versions or hashes, assessor and available session/model identity, evidence locations, per-criterion judgments with reasons and consequences, uncertainty and any superseded assessment.
 The active agent completes and records it in the session; a human can complete the same artifact.
 For SSR, retain `met`, `not met`, `insufficient evidence` per criterion and a separate functional summary. Any failed functional criterion makes that summary not met; otherwise any unknown functional criterion makes it insufficient evidence. Procedure remains separately visible under its agreed severity. A numerical presentation, if selected for a skill, must have a predeclared mapping and cannot mask functional failure.
+The [draft score schema, template and retained-run example](../../skill-studies/formats/README.md) make this contract writable and checkable; draft version `1-draft` is not yet the agreed cross-skill format.
 The run index links the completed score record to the runner's unchanged evidence bundle. Validate structure and identities deterministically where tooling exists; explicit checks suffice until the agreed generator/validator is built.
 
 ### Format decisions and document tooling

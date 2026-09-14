@@ -1,0 +1,424 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Skill score record 1-draft \u2014 completed records",
+  "description": "Structure and functional rollup only; criterion completeness, evidence identity/reference resolution and semantic judgments require inspection.",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "schema_version",
+    "record_kind",
+    "assessment_id",
+    "assessed_at",
+    "study_id",
+    "case_id",
+    "run_id",
+    "condition",
+    "inputs",
+    "assessor",
+    "evidence",
+    "setup",
+    "criteria",
+    "functional_summary",
+    "procedural_summary",
+    "observations",
+    "uncertainty",
+    "supersedes",
+    "relationship_to_prior"
+  ],
+  "properties": {
+    "schema_version": {
+      "const": "1-draft"
+    },
+    "record_kind": {
+      "enum": [
+        "assessment",
+        "worked example"
+      ]
+    },
+    "assessment_id": {
+      "type": "string",
+      "minLength": 1
+    },
+    "assessed_at": {
+      "type": "string",
+      "minLength": 1
+    },
+    "study_id": {
+      "type": "string",
+      "minLength": 1
+    },
+    "case_id": {
+      "type": "string",
+      "minLength": 1
+    },
+    "run_id": {
+      "type": "string",
+      "minLength": 1
+    },
+    "condition": {
+      "type": "string",
+      "minLength": 1
+    },
+    "inputs": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "skill",
+        "configuration",
+        "criteria",
+        "policy"
+      ],
+      "properties": {
+        "skill": {
+          "anyOf": [
+            {
+              "$ref": "#/$defs/artifact"
+            },
+            {
+              "type": "null"
+            }
+          ]
+        },
+        "configuration": {
+          "$ref": "#/$defs/artifact"
+        },
+        "criteria": {
+          "type": "array",
+          "items": {
+            "$ref": "#/$defs/artifact"
+          },
+          "minItems": 1
+        },
+        "policy": {
+          "$ref": "#/$defs/artifact"
+        }
+      }
+    },
+    "assessor": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "name",
+        "method",
+        "model",
+        "session_id",
+        "context"
+      ],
+      "properties": {
+        "name": {
+          "type": "string",
+          "minLength": 1
+        },
+        "method": {
+          "enum": [
+            "active session",
+            "human",
+            "independent review"
+          ]
+        },
+        "model": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "session_id": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "context": {
+          "type": "string",
+          "minLength": 1
+        }
+      }
+    },
+    "evidence": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": [
+          "id",
+          "artifact",
+          "selector"
+        ],
+        "properties": {
+          "id": {
+            "type": "string",
+            "minLength": 1
+          },
+          "artifact": {
+            "$ref": "#/$defs/artifact"
+          },
+          "selector": {
+            "type": "string",
+            "minLength": 1
+          }
+        }
+      },
+      "minItems": 1
+    },
+    "setup": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "status",
+        "reason",
+        "evidence"
+      ],
+      "properties": {
+        "status": {
+          "enum": [
+            "valid",
+            "invalid",
+            "insufficient evidence"
+          ]
+        },
+        "reason": {
+          "type": "string",
+          "minLength": 1
+        },
+        "evidence": {
+          "type": "array",
+          "items": {
+            "type": "string",
+            "minLength": 1
+          },
+          "minItems": 1
+        }
+      }
+    },
+    "criteria": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": [
+          "id",
+          "dimension",
+          "judgment",
+          "reason",
+          "consequence",
+          "evidence"
+        ],
+        "properties": {
+          "id": {
+            "type": "string",
+            "minLength": 1
+          },
+          "dimension": {
+            "enum": [
+              "functional",
+              "procedural"
+            ]
+          },
+          "judgment": {
+            "enum": [
+              "met",
+              "not met",
+              "insufficient evidence"
+            ]
+          },
+          "reason": {
+            "type": "string",
+            "minLength": 1
+          },
+          "consequence": {
+            "type": "string",
+            "minLength": 1
+          },
+          "evidence": {
+            "type": "array",
+            "items": {
+              "type": "string",
+              "minLength": 1
+            },
+            "minItems": 1
+          }
+        }
+      },
+      "minItems": 1,
+      "contains": {
+        "type": "object",
+        "required": [
+          "dimension"
+        ],
+        "properties": {
+          "dimension": {
+            "const": "functional"
+          }
+        }
+      }
+    },
+    "functional_summary": {
+      "enum": [
+        "met",
+        "not met",
+        "insufficient evidence"
+      ]
+    },
+    "procedural_summary": {
+      "type": "string",
+      "minLength": 1
+    },
+    "observations": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": [
+          "dimension",
+          "description",
+          "consequence",
+          "evidence"
+        ],
+        "properties": {
+          "dimension": {
+            "enum": [
+              "functional",
+              "procedural",
+              "setup"
+            ]
+          },
+          "description": {
+            "type": "string",
+            "minLength": 1
+          },
+          "consequence": {
+            "type": "string",
+            "minLength": 1
+          },
+          "evidence": {
+            "type": "array",
+            "items": {
+              "type": "string",
+              "minLength": 1
+            },
+            "minItems": 1
+          }
+        }
+      },
+      "minItems": 0
+    },
+    "uncertainty": {
+      "type": "array",
+      "items": {
+        "type": "string",
+        "minLength": 1
+      },
+      "minItems": 0
+    },
+    "supersedes": {
+      "anyOf": [
+        {
+          "$ref": "#/$defs/artifact"
+        },
+        {
+          "type": "null"
+        }
+      ]
+    },
+    "relationship_to_prior": {
+      "type": "string",
+      "minLength": 1
+    }
+  },
+  "allOf": [
+    {
+      "if": {
+        "properties": {
+          "criteria": {
+            "contains": {
+              "type": "object",
+              "required": [
+                "dimension",
+                "judgment"
+              ],
+              "properties": {
+                "dimension": {
+                  "const": "functional"
+                },
+                "judgment": {
+                  "const": "not met"
+                }
+              }
+            }
+          }
+        }
+      },
+      "then": {
+        "properties": {
+          "functional_summary": {
+            "const": "not met"
+          }
+        }
+      },
+      "else": {
+        "if": {
+          "properties": {
+            "criteria": {
+              "contains": {
+                "type": "object",
+                "required": [
+                  "dimension",
+                  "judgment"
+                ],
+                "properties": {
+                  "dimension": {
+                    "const": "functional"
+                  },
+                  "judgment": {
+                    "const": "insufficient evidence"
+                  }
+                }
+              }
+            }
+          }
+        },
+        "then": {
+          "properties": {
+            "functional_summary": {
+              "const": "insufficient evidence"
+            }
+          }
+        },
+        "else": {
+          "properties": {
+            "functional_summary": {
+              "const": "met"
+            }
+          }
+        }
+      }
+    }
+  ],
+  "$defs": {
+    "artifact": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "path",
+        "sha256",
+        "version"
+      ],
+      "properties": {
+        "path": {
+          "type": "string",
+          "minLength": 1
+        },
+        "sha256": {
+          "type": "string",
+          "pattern": "^[0-9a-f]{64}$"
+        },
+        "version": {
+          "type": [
+            "string",
+            "null"
+          ]
+        }
+      }
+    }
+  }
+}

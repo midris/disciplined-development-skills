@@ -150,5 +150,6 @@
     "tools/inventory.py": "ffe5679bd0e57cb6f9374ef532289c7f25da591718e663f5f5d1bbf75648cb05",
     "tools/shiv-local.py": "dbf1c57b62c2d9f4798b35f21a3848c3d0395b93314aabc2f0a279e969131517",
     "tox.ini": "a439ff52735d0cfaad3b189c09e4093111754cf8c1f55eb260c1bee01d955caa"
-  }
+  },
+  "policy_id": "SSR-assessment-3"
 }

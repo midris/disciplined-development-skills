@@ -35,7 +35,7 @@ When committing this case, explicitly add the 19 pinned runtime source/license f
 ## Assessment
 
 Read this document, `expected.json` and the controller-only `assessment-policy.txt` before judging a run.
-`preparation.json` identifies the exact source revision and verbatim copy of `SSR-assessment-2`.
+`preparation.json` identifies the exact source revision and verbatim copy of `SSR-assessment-3`.
 Functional outcomes lead; procedure is reported separately, with no combined score.
 
 | Criterion | Evidence and consequence |
@@ -81,4 +81,4 @@ The working baseline arithmetic is two selected cases × original/control × two
 Codex `gpt-5.6-sol`, low, `workspace-write` remains the prepared subject configuration; baseline run order and exact commands must be frozen before authorization.
 Recheck executable identity and all input hashes before any authorized dispatch.
 No provider calls or capacity transfers follow from approval to design the baseline. The remaining additional-development slot stays unused.
-Broader coverage, evaluator qualification and population reliability remain open.
+Broader coverage and population reliability remain open. The active session applies the case criteria and policy directly; a separate evaluator is optional, not a collection or scoring prerequisite.

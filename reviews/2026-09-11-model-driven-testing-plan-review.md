@@ -437,3 +437,25 @@ SSR-assessment-3 records this workflow correction while preserving the owner’s
 Verification: current rule/score responsibilities, stage exits and resumption links were checked for consistency; historical evaluator requirements remain only under explicit supersession or optional-dispatch scope. Frozen case/example hashes and current controller-document identities verify. Local links/anchors and whitespace checks pass; hook suite: 263 passed, 3 skipped. No runner code, core skill, provider call or spending authorization changed.
 
 DD-VERDICT: PASS
+
+## Follow-up: current case inputs and writable score artifacts
+
+Claude's review of `952f83e` returned PASS on the corrected direction, with two P2 cleanup findings and one P3 missing deliverable. Both P2s were valid: the prior sweep wrongly treated current unrun controller inputs as frozen observation history. That left the separate-evaluator gate at the point where the next assessor would read it, despite the corrected spec.
+
+- Updated both unrun packages, discovery-shiv and semantic-delivery: policy-3 copies, assessment instructions, expected-policy identity, preparation provenance and manifests. Subject fixtures, prompts, configurations, checkers and the original-skill snapshot are unchanged. Semantic reconstruction was rerun against the revised controller inputs; its prior qualification is identified at `952f83e`. Shiv's existing qualification remains historical evidence for unchanged mechanics, explicitly scoped in the current manifest.
+- Added a verbatim copyable `assessment-policies/SSR-assessment-3.txt`, derived from the protocol's policy section. Observed pilot-01/02 inputs and assessments, the superseded evaluator proposal and its historical packets remain unchanged. Preparation records retain prior policy provenance rather than silently relabelling it.
+- Addressed the P3 with a draft completed-score schema, blank template, format instructions and a separately indexed policy-3 example from the retained pilot-02 original bundle. This is a new format example, not a new subject run or replacement historical score. All three functional criteria remain met; registered audit usefulness remains met with the same explicit minor non-blocking path-total defect. No new scoring interpretation or evaluator prerequisite was introduced.
+
+Verification: 191 current case-manifest hashes and 23 fresh semantic-qualification input hashes match; all four unrun configs load and exclude controller scoring inputs. Original configuration manifests and frozen skill records match the prior revision. The original pilot-02 primary and backup each match all 55 retained file hashes. Disposable replay confirms every link, preservation fact, all four committed repairs, a clean tree and correct export from both working directories. Score provenance, criterion coverage and evidence-ID references were checked directly.
+
+Format checks were written before the schema/example and first failed for the missing artifact; all 8 now pass, covering required provenance/evidence, invalid values, functional failure/uncertainty precedence, separate procedure and rejection of an incomplete template. Semantic controller tests: 12 passed; Shiv controller tests: 14 passed; hook suite: 263 passed, 3 skipped. Self-review checked the changed current-input class, preservation boundaries, three-state scoring and resumption links; no unresolved findings. The format remains `1-draft` for owner review, and broader rule/layout agreement and the later generator/validator remain open. No provider calls, skill edits, invocation allocation changes or authorization extensions.
+
+DD-VERDICT: PASS
+
+## Fresh-session handoff verification
+
+Added `skill-studies/sweeping-stale-references/HANDOFF.md` and routed to it from the active plan. It identifies authoritative documents, current artifacts, preserved observations, runner interfaces, settled decisions, superseded work and the exact next format task. The proposed first baseline batch is the semantic original/no-target pair; it remains unapproved for dispatch. The protocol explains carrying cumulative effort into a new session without requiring the old conversation log.
+
+Fresh verification: 8 score-format checks pass; 191 manifest and 23 current qualification hashes match; both unrun case pairs load with unchanged subject configuration identities. The original pilot-02 primary and backup match all 55 retained files each; disposable replay again confirms links, preservation, the complete committed repair and both export working directories. All 101 local Markdown link targets in the checked changed documents/handoff resolve. Hook suite passes (263 passed, 3 skipped). No paid model calls, old assessment mutations or core skill changes. The next session needs no scratch helper script; operational commands and identities are in the versioned format/case documents and manifests.
+
+DD-VERDICT: PASS

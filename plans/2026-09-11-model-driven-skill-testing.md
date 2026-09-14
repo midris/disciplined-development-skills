@@ -15,6 +15,8 @@ On 2026-09-12 the owner selected `sweeping-stale-references`, settled the contra
 
 ## Starting or resuming without conversation history
 
+Use the [fresh-session handoff](../skill-studies/sweeping-stale-references/HANDOFF.md) for the current reading route and evidence map; this plan remains the checklist authority.
+
 Read [CLAUDE.md](../CLAUDE.md), this plan and the spec; inspect the working tree and existing worktrees before editing.
 Preserve unrelated changes and identify original skill bytes by revision and hash.
 Use the [runner guide](../skill-validation/runner/README.md) for mechanics; its fixed worksheet and historical methodology links do not govern this study.
@@ -78,7 +80,7 @@ The active agent scores under the fixed rules by default. The earlier fresh-eval
   Include at least one case with a plausible functional miss beyond the triggering reference, including latent consumers in config, CI or fixtures. This supplies an opportunity to observe scope expansion, not a requirement that the control fail.
 - [ ] Define source-supported expected outcomes, valid alternatives and failure/insufficient-evidence boundaries. Counting replacements alone does not establish correct triage or preservation.
   Subsequent SSR cases must map criteria to the [current assessment policy](../skill-studies/sweeping-stale-references/protocol.md#current-ssr-assessment-policy): committed functional completeness leads; detailed accounting remains secondary and non-blocking.
-  Pilot-specific setup, functional and procedural criteria are recorded in its assessment artifact. The fixed score-record format is not yet finalized.
+  Pilot-specific setup, functional and procedural criteria are recorded in its assessment artifact. A [draft score schema, blank template and filled retained-run example](../skill-studies/formats/README.md) now exist; owner format agreement remains open.
   Map criteria to functional outcomes or procedure/mechanics, recording any overlap and the agreed failure consequence. Expose both dimensions in assessments; do not let format success offset an outcome failure or hide non-blocking procedural defects.
 - [ ] Select active suite membership and keep scoring rules/reference examples out of subject inputs. Designate reserved cases only for an explicitly chosen held-out claim.
 - [ ] Map mechanical facts to deterministic checks and semantic questions to written rules applied by the active agent or human. Use worked examples only where needed to clarify those rules; no separate calibration campaign.
@@ -168,8 +170,10 @@ Reserved bundles and revealing assessments stay entirely in the verified private
 
 The owner reaffirmed the intended session workflow: run fixed scenarios, capture evidence, have the active agent apply fixed scoring rules, and write a fixed-format score record. The separate [evaluator-calibration proposal](specs/2026-09-14-ssr-evaluator-calibration.md) is superseded as a required workflow. Its constructed examples remain reference material, not a pending two-call gate.
 
-Next define the minimum reusable scenario/rule and completed-score formats against the existing runner interfaces. Apply them to SSR using retained evidence as a format example, clearly labelled as a new assessment/example rather than a new run. Then select the smallest useful authorized scenario run/comparison and record its exact inputs/configuration before dispatch. The three prepared core cases, original-skill snapshot and four pilot observations remain valid foundations; do not create another scenario or evaluator layer merely to advance the process.
+A [draft completed-score format and retained pilot-02 example](../skill-studies/formats/README.md) now implement the score-record field contract. Review this concrete format and finish the minimum reusable scenario/rule format against existing runner interfaces. The example is separately indexed under policy 3; it is not a new run or replacement pilot assessment. Then select the smallest useful authorized scenario run/comparison and record its exact inputs/configuration before dispatch. The three prepared core cases, original-skill snapshot and four pilot observations remain valid foundations; do not create another scenario or evaluator layer merely to advance the process.
 
 Preserve the owner's settled scoring policy: complete, correct, preserved and committed outcomes lead; pure SSR procedure defects are visible but non-blocking; uncertainty is not failure. Record current policy identity with each score. The rule format must explain evidence priority, criterion consequences and allowed alternatives; the score format must carry judgments and evidence in a stable structure.
 
 The old 47-call full-campaign forecast and evaluator allocations are historical planning scenarios, not the new session plan. Re-estimate only the work selected for execution within the unchanged outer authorization limits; no automatic pool transfer, extension, provider run or skill rewrite follows from the workflow correction. Document-generator/validator implementation remains after format agreement and baseline assessment unless the owner changes that sequence.
+
+For the next baseline batch, the current recommendation is one semantic-delivery original/no-target pair with the prepared Sol-low settings, after format agreement and exact-command approval. This is a proposal, not dispatch authority or another pre-baseline pilot. Three cases with one pair each would total six fresh baseline calls if that full scope is selected; the old twelve-call proposal is not required.

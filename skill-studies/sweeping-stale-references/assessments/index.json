@@ -1,0 +1,22 @@
+{
+  "status": "Draft score-format examples; no new subject calls or replacement pilot assessments.",
+  "records": [
+    {
+      "assessment_id": "ssr-pilot-02-original-policy-3-example-20260914",
+      "run_id": "20260913T050847016Z-ssr-pilot-02-original-7ee12856-0a4f-4d0a-b489-1fddc8655ee8-uafjv_4i",
+      "record": {
+        "path": "skill-studies/sweeping-stale-references/assessments/pilot-02-original-policy-3-example.json",
+        "bytes": 7620,
+        "sha256": "5303dcdab4c14bbf64373f6a976f8e6797d7b8a3921ff914ab83ae5eaf56d991",
+        "mode": "0o644"
+      },
+      "retained_run_index": {
+        "path": "skill-studies/sweeping-stale-references/pilot-02-run-index.json",
+        "bytes": 43398,
+        "sha256": "0df65f4259cc5c3e7479559ecf488b83ad415322cf0d6f6b8df56db7480ea23c",
+        "mode": "0o644"
+      },
+      "supersedes": null
+    }
+  ]
+}

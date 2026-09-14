@@ -1,6 +1,6 @@
 # Semantic drift: notification delivery policy
 
-Status: locally prepared and mechanically qualified; exact baseline collection/evaluator configuration and dispatch remain pending.
+Status: locally prepared and mechanically qualified; exact baseline collection configuration and dispatch remain pending.
 This is a newly authored case. The six earlier SSR prompts do not supply its changed-behavior mechanism; see `preparation.json` for the inspected identities and reuse decision.
 
 ## Task and source facts
@@ -20,7 +20,7 @@ Declared-input parity is not proof of host-wide read isolation: inspect actual s
 
 ## Criteria
 
-Apply the exact `SSR-assessment-2` copy identified in preparation/manifest records. Use met, not met or insufficient evidence per criterion, with no combined score.
+Apply the exact `SSR-assessment-3` copy identified in preparation/manifest records. Use met, not met or insufficient evidence per criterion, with no combined score.
 
 | Criterion | Evidence and consequence |
 |---|---|
@@ -59,7 +59,7 @@ The child uses isolated imports and a bounded timeout, not a security sandbox. I
 All these documentation variants deliberately retain the same runtime behavior. Runtime success cannot decide their differing semantic outcomes.
 The complete committed variant has sparse accounting and succeeds functionally; the correct-uncommitted variant fails only committed completeness. Runtime mutations separately exercise rollback, removed tests, loss of early stopping and changing the independent helper.
 
-Local construction and review establish reference examples, not independent evaluator accuracy. Keep reference judgments and revealing variant identifiers out of future evaluator inputs when measuring calibration. Build neutral evidence packets, freeze evaluator instructions and qualify them on the policy's contrasts before relying on model judgments. The evaluator calibration package must also include the policy’s incomplete-repair/perfect-account contrast; these sparse-account variants alone do not qualify that distinction. Full evaluator calibration, condition-concealment mechanics and revised call allocation remain open; no provider call is made by qualification.
+The active agent or human reads the resulting documents together, compares their meaning with the settled behavior and preservation requirements, and records evidence-backed criterion judgments. The constructed variants clarify valid alternatives and common mistakes; they are not a separate evaluator qualification gate. If retained evidence cannot settle a criterion, record insufficient evidence and its reason. Local construction does not establish independent evaluator accuracy; no provider call is made by qualification.
 
 ## Reproduction and limits
 

@@ -901,14 +901,14 @@
   "controller_only": [
     {
       "path": "skill-studies/sweeping-stale-references/cases/discovery-shiv/assessment-policy.txt",
-      "bytes": 5567,
-      "sha256": "625e91999ba68e18eda230b92b6da1e6f6ea51a42aa89f5cbce674e41a097837",
+      "bytes": 6306,
+      "sha256": "5d057d11f678ae3fa63c48957446aded13ccc5dcb8babab2856d0232d49e08bb",
       "mode": "0o644"
     },
     {
       "path": "skill-studies/sweeping-stale-references/cases/discovery-shiv/assessment.md",
-      "bytes": 9294,
-      "sha256": "79305dc851fab99adc5f3ff5781cc988768874b44b75cf6de05ba69db242aa5a",
+      "bytes": 9411,
+      "sha256": "5957a54ae4309644bd40445ab68d1ee6affcf5f77cd0ff92e3797d1fcb6c322d",
       "mode": "0o644"
     },
     {
@@ -919,14 +919,14 @@
     },
     {
       "path": "skill-studies/sweeping-stale-references/cases/discovery-shiv/expected.json",
-      "bytes": 9807,
-      "sha256": "b7c65fcca6a7a9e01c3884972d24b348d0db4db219f1ea53d0485e2518c59d1a",
+      "bytes": 9842,
+      "sha256": "e8fd0949749b5ca69aefec2a5268038ed5d9749771d9c0f3c32e3f1918aa6a52",
       "mode": "0o644"
     },
     {
       "path": "skill-studies/sweeping-stale-references/cases/discovery-shiv/preparation.json",
-      "bytes": 1668,
-      "sha256": "1d5b5c56455280029f987ad5362f816aa958944c23f6798e0ba11f442276ef57",
+      "bytes": 2404,
+      "sha256": "ad29273d5ef1202b795a3dff109a903f085eb15609c3828450059593c7a71e79",
       "mode": "0o644"
     },
     {
@@ -955,5 +955,12 @@
     "mode": "0o644",
     "rule": "All original runs source this frozen snapshot; never substitute the live skill or overwrite it with a rewrite."
   },
-  "git_retention": "The fixture .gitignore ignores .runtime in subject baselines. Explicitly track its 19 declared source/license files in the study repository despite that ignore; exclude caches. Verify all manifest paths are tracked at commit."
+  "git_retention": "The fixture .gitignore ignores .runtime in subject baselines. Explicitly track its 19 declared source/license files in the study repository despite that ignore; exclude caches. Verify all manifest paths are tracked at commit.",
+  "policy_id": "SSR-assessment-3",
+  "controller_revision": {
+    "prior_revision": "952f83e8dc65eb657165d8712877866e96728351",
+    "reason": "Policy-3 workflow correction of unrun controller inputs; no model dispatch.",
+    "subject_bytes_changed": false,
+    "qualification_scope": "Existing qualification remains historical evidence for unchanged subject/checker mechanics; current controller policy is identified here and in preparation.json."
+  }
 }

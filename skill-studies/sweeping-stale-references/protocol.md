@@ -57,9 +57,13 @@ Owner accepted, 2026-09-12: interpret “single-file/no-sweep” as a justified 
 Owner clarification, 2026-09-12: score functional effectiveness and procedural/mechanical effectiveness separately. Outcome failures are hard failures; the consequence of procedural inconsistency depends on the skill.
 The owner initially permitted either procedural severity choice; the pilot walkthrough clarified the priority: the actual committed reconciliation matters, while a fully detailed commit message is nice to have.
 
+A copyable snapshot of the current policy is [SSR-assessment-3.txt](assessment-policies/SSR-assessment-3.txt). It is derived verbatim from the following section; refresh unrun controller copies when changing the policy, while preserving observed-run inputs.
+
+The [draft fixed score format](../formats/README.md) includes a policy-3 example from retained pilot-02 evidence, separately indexed without replacing the original assessment. Unrun Shiv and semantic-delivery controller packages now carry policy-3 copies; their subject inputs remain unchanged.
+
 ### Current SSR assessment policy
 
-Policy identity: **SSR-assessment-3**, 2026-09-14 workflow correction. The owner’s functional/procedural scoring decisions from SSR-assessment-2 remain unchanged; this version removes the unintended separate-evaluator/calibration prerequisite and makes active-session assessment the default. Frozen cases, worked examples and prior assessments retain their policy-2 copies and identities, including preparation-time calibration requirements that are superseded as workflow by this version. New assessments must identify policy 3 alongside the applicable versioned case criteria; do not overwrite historical scores or silently relabel old inputs.
+Policy identity: **SSR-assessment-3**, 2026-09-14 workflow correction. The owner’s functional/procedural scoring decisions from SSR-assessment-2 remain unchanged; this version removes the unintended separate-evaluator/calibration prerequisite and makes active-session assessment the default. Observed-run case inputs, historical worked examples and prior assessments retain their policy-2 copies and identities; their preparation-time calibration requirements are superseded as workflow. Current controller inputs for unrun cases use policy 3. New assessments must identify policy 3 alongside the applicable versioned case criteria; do not overwrite historical scores or silently relabel old inputs.
 Selected policy: assess each agreed criterion as met, not met or insufficient evidence, retaining the supporting evidence and consequence. Keep the two dimensions visible instead of combining them into a single score.
 Incomplete or incorrect reconciliation, including damage to material that should be preserved, is a hard functional failure.
 When the task requires committing the repair, verify that every required edit is committed; a correct but uncommitted working tree does not meet that task outcome. Separately assess whether the edits were grouped into one commit.
@@ -301,26 +305,26 @@ If the allocation cannot support a decision, close inconclusive or retain the or
 
 ### Time allocation and forecast
 
-The original planning targets were 240 minutes for contract/test preparation and 180 for qualification/calibration, followed by 180 baseline, 300 authoring/diagnostics, 240 comparison and 60 closure: **1,200 minutes total**. They were not separately metered. The original 220-minute booking includes mixed preparation, tooling investigation, qualification and review; its historical split is unknown. The subsequent 74 booked minutes cover case preparation, reviews, budget work, the superseded calibration proposal and correction/verification of the intended session workflow, for 294 minutes total. Reconcile that shared 420-minute envelope below without inventing phase-level actuals.
+The original planning targets were 240 minutes for contract/test preparation and 180 for qualification/calibration, followed by 180 baseline, 300 authoring/diagnostics, 240 comparison and 60 closure: **1,200 minutes total**. They were not separately metered. The original 220-minute booking includes mixed preparation, tooling investigation, qualification and review; its historical split is unknown. The subsequent 94 booked minutes cover case preparation, reviews, budget work, the superseded calibration proposal and correction/verification of the intended session workflow, fixed score artifacts and fresh-session handoff, for 314 minutes total. Reconcile that shared 420-minute envelope below without inventing phase-level actuals.
 
 | Work category | Original estimate (minutes) | Booked use | Estimate less use | Estimated remaining work / status |
 |---|---:|---:|---:|---|
-| Preparation + qualification (240 + 180) | 420 | 220 historical + 74 preparation/qualification | 126 | Old 210–300 forecast superseded; re-estimate the selected session scope. |
-| Baseline collection and assessment | 180 | 0 | 180 | Reforecast from frozen cases, evaluator configuration and measured latencies before dispatch; fit not yet established. |
+| Preparation + qualification (240 + 180) | 420 | 220 historical + 94 preparation/qualification | 106 | Old 210–300 forecast superseded; re-estimate the selected session scope. |
+| Baseline collection and assessment | 180 | 0 | 180 | Reforecast from frozen cases, subject settings, scoring inputs and measured latencies before dispatch; fit not yet established. |
 | Authoring and diagnostics | 300 | 0 | 300 | Objective-dependent; unstarted, no fit claim. |
 | Comparison | 240 | 0 | 240 | Reforecast after comparison design; preserve necessary comparison work. |
 | Closure | 60 | 0 | 60 | Unstarted; retain allowance. |
 | Document-tool implementation and qualification | Not in original estimate | 0 implementation | Not applicable | Preliminary 120-minute estimate after baseline assessment; refine with scoped design. This adds forecast effort, not authorized capacity. |
-| Original total / overall authorization ceiling | 1,200 | 294 | 906 | Remaining authorization; old campaign forecast below is superseded. |
+| Original total / overall authorization ceiling | 1,200 | 314 | 886 | Remaining authorization; old campaign forecast below is superseded. |
 
 Superseded aggregate planning scenario, retained for reconciliation rather than used as the current forecast: carry forward 180 + 300 + 240 + 60 = 780 minutes for baseline, authoring/diagnostics, comparison and closure, alongside the updated 210–300-minute preparation/qualification forecast. The later phases have not been re-estimated; this scenario assumes the full rewrite/comparison work proceeds.
 
-| Scope | Remaining forecast (minutes) | Projected whole-study total, including 294 booked | Forecast above 1,200-minute ceiling |
+| Scope | Remaining forecast (minutes) | Projected whole-study total, including 314 booked | Forecast above 1,200-minute ceiling |
 |---|---:|---:|---:|
-| Study excluding document-tool implementation | 990–1,080 | 1284–1374 | 84–174 |
-| Study including preliminary 120-minute tool estimate | 1,110–1,200 | 1404–1494 | 204–294 |
+| Study excluding document-tool implementation | 990–1,080 | 1304–1394 | 104–194 |
+| Study including preliminary 120-minute tool estimate | 1,110–1,200 | 1424–1514 | 224–314 |
 
-Remaining authorized time is **906 minutes**. The superseded full campaign exceeded that capacity; its evaluator/calibration work is no longer selected. Replace its remaining-work forecast with the actual session-format/run scope before claiming a fit or requesting an extension. No extension or transfer follows from this correction; do not weaken evidence standards to match an estimate.
+Remaining authorized time is **886 minutes**. The superseded full campaign exceeded that capacity; its evaluator/calibration work is no longer selected. Replace its remaining-work forecast with the actual session-format/run scope before claiming a fit or requesting an extension. No extension or transfer follows from this correction; do not weaken evidence standards to match an estimate.
 
 The old forward preparation estimate (60–90 minutes for cases, 60–90 for formats, 90–120 for evaluator setup/calibration) describes the superseded plan. Do not use its 210–300-minute total as the current forecast. The remaining session work is fixed rule/score formats, configuration/evidence verification, active-agent assessment and an explicitly selected run set; estimate that scope at the next checkpoint. Document-tool implementation remains separately proposed after format agreement and baseline assessment. Historical effort is not erased by removing an unnecessary workflow.
 
@@ -384,11 +388,11 @@ The orchestrator's preparation conversation and local tool calls consume active 
 Owner walkthrough: the contract, outer limits, pilot 01 findings and pilot 02 concept are settled. Pilot 02 results and the path-count explanation have been walked through with the owner; that checkpoint was committed and pushed. Shiv case preparation is complete. Three core situations are accepted and their case foundations are prepared; fixed rule/score formats, exact next-run configuration/allocation and provider dispatch remain pending.
 Independent use is settled; Stage 3 has observed the declared standalone setup for this pair; broader isolation claims remain unqualified; no separate evaluator qualification is required for active-session scoring.
 
-Accounting updated, 2026-09-14: **book 294 active minutes through session-workflow correction commit verification**, leaving **15 hours 6 minutes** under the accepted 20-hour ceiling. This replaces, rather than adds to, earlier bookings.
+Accounting updated, 2026-09-14: **book 314 active minutes through fresh-session handoff and commit checks**, leaving **14 hours 46 minutes** under the accepted 20-hour ceiling. This replaces, rather than adds to, earlier bookings.
 Source: the current task's local log at `/Users/simon/.codex/sessions/2026/09/11/rollout-2026-09-11T17-59-42-01a0927b-cef5-7db0-8a30-c76c5b1ae838.jsonl`; only boundary timestamps were extracted, not conversation contents.
-Reconstruction sums the union of 114 closed `task_complete` / `turn_aborted` intervals since Stage 1 began: **17,312.0 seconds (288.53 minutes)**, including model/tool waits inside turns and excluding inter-turn owner-wait.
-The current turn began at 2026-09-14 15:01:44 UTC and adds 73 seconds at the 2026-09-14 15:02:57 UTC checkpoint. Retain the original two-minute opening allowance and allow two minutes for completion; round 293.75 minutes up to 294. Closing allowance and rounding are estimates, not independently measured owner/Claude effort. Provider durations are already inside active-turn time and are not added again.
-At the next checkpoint, recompute cumulative closed-turn intervals plus the opening allowance and round up; do not add already counted turns or restore the superseded checkpoints. If the completed current turn exceeds the booking, correct the total before approving the remaining budget.
+Reconstruction sums the union of 119 closed `task_complete` / `turn_aborted` intervals since Stage 1 began: **18,375.0 seconds (306.25 minutes)**, including model/tool waits inside turns and excluding inter-turn owner-wait.
+The current turn began at 2026-09-14 16:41:22 UTC and adds 178 seconds at the 2026-09-14 16:44:20 UTC checkpoint. Retain the original two-minute opening allowance and allow two minutes for completion; round 313.22 minutes up to 314. Closing allowance and rounding are estimates, not independently measured owner/Claude effort. Provider durations are already inside active-turn time and are not added again.
+Within this session, recompute cumulative closed-turn intervals plus the opening allowance and round up; do not add already counted turns or restore superseded checkpoints. If the completed current turn exceeds the booking, correct the total before approving the remaining budget. On a fresh-session handoff, use the latest booked total as the opening balance, record new active intervals separately, and add them once. The prior session log is optional reconciliation evidence, not a dependency for continuation; retain its stated closing allowance as an estimate if no measured correction is available.
 
 Relationship-correction verification: all **21** source identities match, including all nine DD skills at the recorded revision; local links resolve and `git diff --check` passes.
 Hook suite: **263 passed, 3 skipped**. These documentation checks do not qualify provider execution or demonstrate skill effectiveness.

@@ -33,9 +33,20 @@
     "reused_mechanics": "Pilot 02 prompt/bootstrap structure only; independent original/control loading with frozen original skill."
   },
   "policy": {
-    "id": "SSR-assessment-2",
-    "copy_sha256": "625e91999ba68e18eda230b92b6da1e6f6ea51a42aa89f5cbce674e41a097837",
-    "matches_current_protocol": true
+    "id": "SSR-assessment-3",
+    "source_path": "skill-studies/sweeping-stale-references/assessment-policies/SSR-assessment-3.txt",
+    "copy_sha256": "5d057d11f678ae3fa63c48957446aded13ccc5dcb8babab2856d0232d49e08bb",
+    "extraction": "Verbatim copy of the Current SSR assessment policy section in protocol.md; links resolve from the protocol directory."
   },
-  "authorization": "Owner approved concept and local case preparation in this conversation; no subject/evaluator call or revised pool allocation approved."
+  "authorization": "Owner approved concept and local case preparation in this conversation; no subject/evaluator call or revised pool allocation approved.",
+  "workflow_correction": {
+    "prior_revision": "952f83e8dc65eb657165d8712877866e96728351",
+    "prior_policy": {
+      "id": "SSR-assessment-2",
+      "copy_sha256": "625e91999ba68e18eda230b92b6da1e6f6ea51a42aa89f5cbce674e41a097837",
+      "matches_current_protocol": true
+    },
+    "scope": "Current unrun controller inputs now use active-session assessment. Prior preparation and qualification remain recoverable at prior_revision. Subject/configuration/checker bytes unchanged.",
+    "subject_bytes_changed": false
+  }
 }

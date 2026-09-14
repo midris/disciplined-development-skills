@@ -169,26 +169,26 @@
   "controller_only": [
     {
       "path": "skill-studies/sweeping-stale-references/cases/semantic-delivery/assessment-policy.txt",
-      "bytes": 5567,
-      "sha256": "625e91999ba68e18eda230b92b6da1e6f6ea51a42aa89f5cbce674e41a097837",
+      "bytes": 6306,
+      "sha256": "5d057d11f678ae3fa63c48957446aded13ccc5dcb8babab2856d0232d49e08bb",
       "mode": "0o644"
     },
     {
       "path": "skill-studies/sweeping-stale-references/cases/semantic-delivery/assessment.md",
-      "bytes": 8705,
-      "sha256": "75c3ff4efb56aeeb3422324a928900a96b877b7a0ac9f05d13902bd07315c22c",
+      "bytes": 8545,
+      "sha256": "aa49b51677b385f708740184cf2ce2685f02affe647579abc0cd8fd433318b3e",
       "mode": "0o644"
     },
     {
       "path": "skill-studies/sweeping-stale-references/cases/semantic-delivery/expected.json",
       "bytes": 3668,
-      "sha256": "91e9529a6ecd82c45e9c3a73eef294557afcbc6807a7fef7c496507731af84ec",
+      "sha256": "4356845ee15fd50b4a1c7f8c64a2022bbba8917f3144c40caf6da3c4e11c7fd9",
       "mode": "0o644"
     },
     {
       "path": "skill-studies/sweeping-stale-references/cases/semantic-delivery/preparation.json",
-      "bytes": 2173,
-      "sha256": "19a4e8641786d0845cc0605af53addbb46ce63f38335becc2e15eb57d4f79eb1",
+      "bytes": 2903,
+      "sha256": "53d2e374642598a875fc88b3daf8f97ef02575baa8bd8363b8d8e2c83b2d217b",
       "mode": "0o644"
     },
     {
@@ -205,8 +205,8 @@
     },
     {
       "path": "skill-studies/sweeping-stale-references/cases/semantic-delivery/qualification.json",
-      "bytes": 40567,
-      "sha256": "be2fa19a973ec56cf5cdbd98ff9575f7987436427255f907a5579ff69dfb473d",
+      "bytes": 39551,
+      "sha256": "fabc4d6ba4db8b5135a10483df1e5087719fae8224e9c0f0c18ed7ba62f7302d",
       "mode": "0o644"
     },
     {
@@ -234,5 +234,10 @@
     "sha256": "d6812c33cae026807bbb3ebe851d93b60b513dd87ea5efd98aea28f5c02f9157",
     "mode": "0o644"
   },
-  "policy_id": "SSR-assessment-2"
+  "policy_id": "SSR-assessment-3",
+  "controller_revision": {
+    "prior_revision": "952f83e8dc65eb657165d8712877866e96728351",
+    "reason": "Policy-3 workflow correction of unrun controller inputs; no model dispatch.",
+    "subject_bytes_changed": false
+  }
 }

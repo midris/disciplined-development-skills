@@ -1,10 +1,10 @@
 {
   "scope": "Local runtime/input/constructed-reference qualification; model evaluator remains unqualified.",
-  "scratch": "/var/folders/55/6jqr25v5211fn00wych8b1jm0000gn/T/ssr-semantic-qualification-tlc_e36i",
+  "scratch": "/var/folders/55/6jqr25v5211fn00wych8b1jm0000gn/T/ssr-semantic-qualification-xc6wk3yv",
   "variants": [
     {
       "id": "pristine",
-      "fixture": "/var/folders/55/6jqr25v5211fn00wych8b1jm0000gn/T/ssr-semantic-qualification-tlc_e36i/pristine",
+      "fixture": "/var/folders/55/6jqr25v5211fn00wych8b1jm0000gn/T/ssr-semantic-qualification-xc6wk3yv/pristine",
       "runtime": {
         "status": "observed",
         "probes": {
@@ -46,8 +46,8 @@
         }
       },
       "subject_tests_exit": 0,
-      "baseline": "6ef70efb33ab78bc61916b4e0274846deab4cdee",
-      "head": "6ef70efb33ab78bc61916b4e0274846deab4cdee",
+      "baseline": "8f891c60dee196f41281ed003cd5a610cd0c27ff",
+      "head": "8f891c60dee196f41281ed003cd5a610cd0c27ff",
       "committed_paths": [],
       "uncommitted_paths": [],
       "reference_judgments": {
@@ -66,7 +66,7 @@
     },
     {
       "id": "readme_only",
-      "fixture": "/var/folders/55/6jqr25v5211fn00wych8b1jm0000gn/T/ssr-semantic-qualification-tlc_e36i/readme_only",
+      "fixture": "/var/folders/55/6jqr25v5211fn00wych8b1jm0000gn/T/ssr-semantic-qualification-xc6wk3yv/readme_only",
       "runtime": {
         "status": "observed",
         "probes": {
@@ -108,8 +108,8 @@
         }
       },
       "subject_tests_exit": 0,
-      "baseline": "6ef70efb33ab78bc61916b4e0274846deab4cdee",
-      "head": "689573574437ad2478758d67b297b7b0214c6862",
+      "baseline": "8f891c60dee196f41281ed003cd5a610cd0c27ff",
+      "head": "2e357983f13b4e96fc0e65d1c07843e9e2a1c8fa",
       "committed_paths": [
         "README.md"
       ],
@@ -130,7 +130,7 @@
     },
     {
       "id": "complete",
-      "fixture": "/var/folders/55/6jqr25v5211fn00wych8b1jm0000gn/T/ssr-semantic-qualification-tlc_e36i/complete",
+      "fixture": "/var/folders/55/6jqr25v5211fn00wych8b1jm0000gn/T/ssr-semantic-qualification-xc6wk3yv/complete",
       "runtime": {
         "status": "observed",
         "probes": {
@@ -172,8 +172,8 @@
         }
       },
       "subject_tests_exit": 0,
-      "baseline": "6ef70efb33ab78bc61916b4e0274846deab4cdee",
-      "head": "6ae23ae0cd71a5c6d2b60650e7493ea73efecd1c",
+      "baseline": "8f891c60dee196f41281ed003cd5a610cd0c27ff",
+      "head": "fd6835a4865bee166cd9273f167b996dc0e925e0",
       "committed_paths": [
         "README.md",
         "docs/operations.md",
@@ -196,7 +196,7 @@
     },
     {
       "id": "blanket_numbers",
-      "fixture": "/var/folders/55/6jqr25v5211fn00wych8b1jm0000gn/T/ssr-semantic-qualification-tlc_e36i/blanket_numbers",
+      "fixture": "/var/folders/55/6jqr25v5211fn00wych8b1jm0000gn/T/ssr-semantic-qualification-xc6wk3yv/blanket_numbers",
       "runtime": {
         "status": "observed",
         "probes": {
@@ -238,8 +238,8 @@
         }
       },
       "subject_tests_exit": 0,
-      "baseline": "6ef70efb33ab78bc61916b4e0274846deab4cdee",
-      "head": "505c89fa7de5dd62e2770a0727bd36df47467a88",
+      "baseline": "8f891c60dee196f41281ed003cd5a610cd0c27ff",
+      "head": "aef1c8590d736ff0502509294003f4c3f7d8d496",
       "committed_paths": [
         "README.md",
         "docs/download-helper.md",
@@ -264,7 +264,7 @@
     },
     {
       "id": "attempts_vs_retries",
-      "fixture": "/var/folders/55/6jqr25v5211fn00wych8b1jm0000gn/T/ssr-semantic-qualification-tlc_e36i/attempts_vs_retries",
+      "fixture": "/var/folders/55/6jqr25v5211fn00wych8b1jm0000gn/T/ssr-semantic-qualification-xc6wk3yv/attempts_vs_retries",
       "runtime": {
         "status": "observed",
         "probes": {
@@ -306,8 +306,8 @@
         }
       },
       "subject_tests_exit": 0,
-      "baseline": "6ef70efb33ab78bc61916b4e0274846deab4cdee",
-      "head": "47fa7b1d67348f283c16444290238e64089ec75a",
+      "baseline": "8f891c60dee196f41281ed003cd5a610cd0c27ff",
+      "head": "1f6f4387be8ade97e2631edc0b280d0cfe84e222",
       "committed_paths": [
         "README.md",
         "docs/operations.md",
@@ -330,7 +330,7 @@
     },
     {
       "id": "always_four",
-      "fixture": "/var/folders/55/6jqr25v5211fn00wych8b1jm0000gn/T/ssr-semantic-qualification-tlc_e36i/always_four",
+      "fixture": "/var/folders/55/6jqr25v5211fn00wych8b1jm0000gn/T/ssr-semantic-qualification-xc6wk3yv/always_four",
       "runtime": {
         "status": "observed",
         "probes": {
@@ -372,8 +372,8 @@
         }
       },
       "subject_tests_exit": 0,
-      "baseline": "6ef70efb33ab78bc61916b4e0274846deab4cdee",
-      "head": "f8f6a08afd80f514efb1afb0fdbba2cf14670704",
+      "baseline": "8f891c60dee196f41281ed003cd5a610cd0c27ff",
+      "head": "9210c746b7c44a08a55c9132e331f727413068f9",
       "committed_paths": [
         "README.md",
         "docs/operations.md",
@@ -396,7 +396,7 @@
     },
     {
       "id": "removed_limits",
-      "fixture": "/var/folders/55/6jqr25v5211fn00wych8b1jm0000gn/T/ssr-semantic-qualification-tlc_e36i/removed_limits",
+      "fixture": "/var/folders/55/6jqr25v5211fn00wych8b1jm0000gn/T/ssr-semantic-qualification-xc6wk3yv/removed_limits",
       "runtime": {
         "status": "observed",
         "probes": {
@@ -438,8 +438,8 @@
         }
       },
       "subject_tests_exit": 0,
-      "baseline": "6ef70efb33ab78bc61916b4e0274846deab4cdee",
-      "head": "a44f0f91c65111425c3b8bddee828400966a799c",
+      "baseline": "01e041d49642ecec381a9cb0e5724939a316927e",
+      "head": "a27cc4852e1fef5dcd7c7c19bfbcb58db178619d",
       "committed_paths": [
         "README.md",
         "docs/operations.md",
@@ -462,7 +462,7 @@
     },
     {
       "id": "equivalent_consolidation",
-      "fixture": "/var/folders/55/6jqr25v5211fn00wych8b1jm0000gn/T/ssr-semantic-qualification-tlc_e36i/equivalent_consolidation",
+      "fixture": "/var/folders/55/6jqr25v5211fn00wych8b1jm0000gn/T/ssr-semantic-qualification-xc6wk3yv/equivalent_consolidation",
       "runtime": {
         "status": "observed",
         "probes": {
@@ -504,8 +504,8 @@
         }
       },
       "subject_tests_exit": 0,
-      "baseline": "6ef70efb33ab78bc61916b4e0274846deab4cdee",
-      "head": "398dba055ed01f94743f4f4b721b3daedc8d9f73",
+      "baseline": "01e041d49642ecec381a9cb0e5724939a316927e",
+      "head": "5443c4c9689a2e3a3265faa4b2f607dbd5fb3fef",
       "committed_paths": [
         "README.md",
         "docs/operations.md",
@@ -528,7 +528,7 @@
     },
     {
       "id": "correct_uncommitted",
-      "fixture": "/var/folders/55/6jqr25v5211fn00wych8b1jm0000gn/T/ssr-semantic-qualification-tlc_e36i/correct_uncommitted",
+      "fixture": "/var/folders/55/6jqr25v5211fn00wych8b1jm0000gn/T/ssr-semantic-qualification-xc6wk3yv/correct_uncommitted",
       "runtime": {
         "status": "observed",
         "probes": {
@@ -570,8 +570,8 @@
         }
       },
       "subject_tests_exit": 0,
-      "baseline": "4b6bf26492284a410c0476c4589ead5371837292",
-      "head": "4b6bf26492284a410c0476c4589ead5371837292",
+      "baseline": "01e041d49642ecec381a9cb0e5724939a316927e",
+      "head": "01e041d49642ecec381a9cb0e5724939a316927e",
       "committed_paths": [],
       "uncommitted_paths": [
         "README.md",
@@ -607,16 +607,16 @@
     },
     "baseline_project_files": 9,
     "paths": {
-      "control": "/private/var/folders/55/6jqr25v5211fn00wych8b1jm0000gn/T/skilltest-runs/20260914T002917162Z-ssr-semantic-delivery-control-c443d3b2-972a-421d-a6d2-28d9f1695ea6-d0xusr7s/workspace/fixture",
-      "original": "/private/var/folders/55/6jqr25v5211fn00wych8b1jm0000gn/T/skilltest-runs/20260914T002917189Z-ssr-semantic-delivery-original-2f1d5370-f5f2-466c-82e7-afea0c4ac3ee-13pgp3hd/workspace/fixture"
+      "control": "/private/var/folders/55/6jqr25v5211fn00wych8b1jm0000gn/T/skilltest-runs/20260914T152935342Z-ssr-semantic-delivery-control-92cc0930-b738-4bb8-a43c-8db30b8f6524-_m4ug7vu/workspace/fixture",
+      "original": "/private/var/folders/55/6jqr25v5211fn00wych8b1jm0000gn/T/skilltest-runs/20260914T152935371Z-ssr-semantic-delivery-original-93b55fb9-f536-4554-b486-67f3e6fb87a2-am015eow/workspace/fixture"
     },
     "prompt_difference": "Only the original-skill read instruction."
   },
   "inputs": {
-    "assessment-policy.txt": "625e91999ba68e18eda230b92b6da1e6f6ea51a42aa89f5cbce674e41a097837",
-    "assessment.md": "75c3ff4efb56aeeb3422324a928900a96b877b7a0ac9f05d13902bd07315c22c",
+    "assessment-policy.txt": "5d057d11f678ae3fa63c48957446aded13ccc5dcb8babab2856d0232d49e08bb",
+    "assessment.md": "aa49b51677b385f708740184cf2ce2685f02affe647579abc0cd8fd433318b3e",
     "control.json": "2847a0eedbb110457ece2493d805e4105ac017d5afb500e85feb061bd85e6ee0",
-    "expected.json": "91e9529a6ecd82c45e9c3a73eef294557afcbc6807a7fef7c496507731af84ec",
+    "expected.json": "4356845ee15fd50b4a1c7f8c64a2022bbba8917f3144c40caf6da3c4e11c7fd9",
     "fixture/.gitignore": "7ab6574557548c2d1031511f15db14ace876b796b1471216aad74a0ab64aaee2",
     "fixture/README.md": "1a4b23b1f53af5b7aa42ac8e72f59282374435831bd35f542c23bd7dfdccb6e3",
     "fixture/docs/download-helper.md": "8d6d58a231c01678279d8e00ea0f03f9306c1b36a474b8cb4dd5967b657453bb",
@@ -627,7 +627,7 @@
     "fixture/src/download.py": "3a618d709d2be580ccb53f2f660822be9f90b091af41e3ce3b7aaed31e894eb0",
     "fixture/tests/test_retry_behavior.py": "71160952f35e3a255d68cca629a0a66d79e3e4b4c30431786f6945a28ede54f3",
     "original.json": "0ce2ad84f03a870a62f002ef547e2d75a64b8c8cf9d48362a8e1a35c0ed329a5",
-    "preparation.json": "19a4e8641786d0845cc0605af53addbb46ce63f38335becc2e15eb57d4f79eb1",
+    "preparation.json": "53d2e374642598a875fc88b3daf8f97ef02575baa8bd8363b8d8e2c83b2d217b",
     "probe_behavior.py": "0f8a60b53f48e8fc5e195a60084b75057175ab46df3d2f2f1c0093538bc40cf3",
     "prompt-control.md": "17438b8155af2ff3ba779ff39eee0426aa7d0783fec006ce6519dfebce18447f",
     "prompt-original.md": "6695cbb23cfd7d8656a122b2e9ea4ba35fdea581f7a15780e146d84a0732b588",
@@ -637,26 +637,10 @@
     "test_probe_behavior.py": "309ff619c05e348482e50195ce2a8f1848c350bec66ef2ffc89c04277fe7b268",
     "test_qualification.py": "3a9d208cc2cb259bfda9af521636c9df16c0a54f839940c02356b86497d616fe"
   },
-  "verification": {
-    "subject_tests": {
-      "command": "python3 -B -m unittest discover -s skill-studies/sweeping-stale-references/cases/semantic-delivery/fixture/tests",
-      "passed": 7,
-      "red": "Seven assertion failures against return-None stubs before implementation."
-    },
-    "controller_tests": {
-      "command": "python3 -B -m unittest discover -s skill-studies/sweeping-stale-references/cases/semantic-delivery -p 'test_*.py'",
-      "passed": 12,
-      "red": "Eight status assertion failures against a pending-observation stub before implementation.",
-      "review_regressions": "Before fixes, four valid-JSON subcases and two qualification tests failed; undecodable stdout separately raised UnicodeDecodeError. All pass after remediation."
-    },
-    "hook_suite": {
-      "command": "python3 -m pytest -q",
-      "cwd": "skills/disciplined-development/hooks",
-      "passed": 263,
-      "skipped": 3
-    },
-    "probe_cli": "Executed via python3 -I -B; observed expected delivery/download call counts and results.",
-    "semantic_review": "Orchestrator inspected all nine resulting document sets against the settled behavior, preservation meanings and retained Git changes. These are authored reference judgments, not independent model-evaluator accuracy.",
-    "review_scope": "Local self-review and reconstruction; no provider or independent evaluator invoked. Subject inputs and reference judgments unchanged."
+  "prior_qualification": {
+    "revision": "952f83e8dc65eb657165d8712877866e96728351",
+    "path": "skill-studies/sweeping-stale-references/cases/semantic-delivery/qualification.json",
+    "sha256": "be2fa19a973ec56cf5cdbd98ff9575f7987436427255f907a5579ff69dfb473d",
+    "note": "Earlier test-first and review history retained at this revision; this report reruns local reconstruction after workflow-only controller changes."
   }
 }
