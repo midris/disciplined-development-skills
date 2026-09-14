@@ -171,15 +171,17 @@ Pilot 01's cache-setting rename adds JSON/config representations but overlaps Sh
 
 | Accepted facet | Planned baseline coverage | Limit |
 |---|---|---|
-| Broaden beyond the trigger | Unstated current consumers in the prepared cases and planned semantic case. | Complete reconciliation leads; discovering more than the control is not required. |
+| Broaden beyond the trigger | Unstated current consumers in the three prepared cases. | Complete reconciliation leads; discovering more than the control is not required. |
 | Equivalent references and changed facts | Relative spellings in the moved-guide case; meaning-based documentation repair in the semantic case. | Inputs, runtime facts and semantic reference criteria are prepared; independent evaluator qualification remains open. |
 | Moved paths | Three links and an executable export consumer. | Owner-clarified outcome, not proof the original explicitly teaches path resolution. |
-| Triage and preservation | Historical records, independent interfaces, a same-name vendor link and semantic distinctions to define. | Preservation is judged by meaning and behavior, not byte identity alone. |
+| Triage and preservation | Historical records, independent interfaces, a same-name vendor link and the prepared semantic distinctions. | Preservation is judged by meaning and behavior, not byte identity alone. |
 | Complete and commit | Working consumers and all required edits in retained Git history. | One-commit grouping is assessed separately from functional completeness. |
 | Useful accounting | Each case's predefined scope under SSR-assessment-2. | Secondary procedural evidence; no aggregate score hiding outcome failures. |
 | Genuinely local change | Deferred. | No claim about a justified negative sweep or its required negative-form account. |
 
 Qualify model evaluation for semantic correctness/preservation, accepted alternatives, audit usefulness and trace interpretation before relying on it. Runtime/path tools and Git supply mechanical evidence; checker tests alone do not qualify the evaluator. Use contrasting examples from the current policy and batch across cases, never conditions of one case.
+
+**Semantic-delivery calibration fallback:** qualify its document judgments before freezing or collecting the three-case baseline. If calibration leaves decision-changing disagreement unresolved, pause freeze and subject dispatch, identify the evaluator/evidence defect, and present a bounded repair and its call allocation for owner approval. Controller inspection remains labelled development evidence; it cannot substitute for qualified baseline assessment, and the required semantic case cannot silently drop out. If qualification cannot be resolved within authorized work, report the intended three-core-situation baseline as inconclusive and retain the development evidence; an altered evaluation method or reduced claim requires an explicit owner decision before collection.
 
 Rework subject/evaluator allocation after the semantic design. Three cases × original/no-target × two repetitions would be 12 baseline subject calls, versus the previously budgeted eight; retaining all three plus one transfer case with two repetitions in final original/candidate comparison would be 16, versus 12. These are scope illustrations, not approved counts. Reconcile repetitions, diagnostic capacity, comparison coverage and evaluation batches within the owner-approved pools, or propose an explicit revision. Do not silently transfer capacity or treat the original two-case arithmetic as a reason to omit core coverage.
 
@@ -196,7 +198,7 @@ The [task](cases/semantic-delivery/task.md) names only the README defect, permit
 
 Seven public behavior tests establish delivery exhaustion/early success and the independent helper's limit. Twelve controller tests cover facts-only replay and qualification integrity: rollback, altered limits, continued sends after success, missing APIs, timeouts, malformed/incomplete output, optimized Python and inherited Git overrides. The probe does not score prose. The [qualification record](cases/semantic-delivery/qualification.json) retains nine reconstructed documentation variants and their runtime/Git facts: pristine, README-only, complete, blanket number replacement, attempts/retries confusion, always-four wording, removed explanations, equivalent consolidation and correct-but-uncommitted work. All nine retain passing code tests, demonstrating why semantic assessment must inspect the documents.
 
-The [expected meanings and accounting scope](cases/semantic-delivery/expected.json) permit equivalent wording and effective restructuring, with history/independent meaning preserved and all required repairs committed. Reference judgments are orchestrator-constructed and locally inspected; they are not model observations or independent evaluator qualification. Keep reference judgments out of future calibration packets. Model-evaluator qualification, neutral evidence packaging, versioned baseline formats and revised call allocation remain the next preparation work. No provider call, extra development pair or skill edit occurred during construction.
+The [expected meanings and accounting scope](cases/semantic-delivery/expected.json) permit equivalent wording and effective restructuring, with history/independent meaning preserved and all required repairs committed. Reference judgments are orchestrator-constructed and locally inspected; they are not model observations or independent evaluator qualification. Keep reference judgments out of future calibration packets. The [evaluator-calibration proposal](../../plans/specs/2026-09-14-ssr-evaluator-calibration.md) and [eleven-record draft package](evaluation/calibration-draft/README.md) now make document/Git/accounting contrasts reviewable. The proposed two fresh Sol-low read-only calls are unapproved; input read boundaries, exact configs and retention remain open. This package tests missing-trace uncertainty, not positive/negative action-order interpretation. Model-evaluator qualification, versioned baseline formats and revised call allocation remain preparation work. No provider call, extra development pair or skill edit occurred during construction.
 
 ## Two-run process pilot
 
@@ -269,6 +271,19 @@ The table retains the original two-development-case/one-transfer-case arithmetic
 | Retry reserve | 0 | 0 | 0 | 4 | Every repeated failed attempt draws here; preserve the original attempt. |
 | **Total ceiling** | **40** | **12** | **4** | **4** | **60**, including reserves; unused capacity need not be spent. |
 
+**Aggregate subject-call scenario for the three accepted core situations:** retain two repetitions, the full conditional wording diagnostic and one transfer case in comparison.
+
+| Subject pool comparison | Calls |
+|---|---:|
+| Accepted ceiling | 40 |
+| Spent in the two development pairs | 4 |
+| Remaining outer capacity | 36 |
+| Remaining forecast: 12 baseline + 15 diagnostic + 16 comparison | 43 |
+| Projected whole-study use: 4 + 43 | 47 |
+| Forecast above the subject ceiling | 7 |
+
+This is also eight more calls than the former 35-call remaining baseline/diagnostic/comparison schedule; the one unused development slot is not silently reassigned. The seven-call figure compares projected use with the outer ceiling, not an approved phase transfer. Evaluator, authoring and retry pools remain separate. The diagnostic campaign may stop under its existing rule, but do not count on that conditional saving to claim the full plan fits. Present this call shortfall alongside the aggregate time forecast at the baseline-design walkthrough; revise the allocation or request an explicit extension before dispatch without omitting agreed core coverage merely to fit the old table.
+
 Calibration batches use distinct constructed examples, without reference answers; baseline/comparison batches never juxtapose conditions of the same case.
 Model judgments used for baseline/comparison occur in the evaluator allocation; routine orchestration is not a source of unrecorded substitute scores.
 Pilot mechanics use direct evidence inspection. Wording diagnostics must be checkable with validated mechanical checks plus author inspection of every flagged match; any needed independent semantic evaluation must fit the evaluator reserve or trigger an allocation revision before dispatch.
@@ -286,26 +301,26 @@ If the allocation cannot support a decision, close inconclusive or retain the or
 
 ### Time allocation and forecast
 
-The original planning targets remain 240 minutes for contract/test preparation and 180 for qualification/calibration, followed by 180 baseline, 300 authoring/diagnostics, 240 comparison and 60 closure: **1,200 minutes total**. They were not separately metered. The original 220-minute booking includes mixed preparation, tooling investigation, qualification and review; its historical split is unknown. The subsequent 42 booked minutes cover preparation review, budget reconciliation, baseline case design and semantic-delivery construction/qualification/remediation and commit verification, for 262 minutes total. Reconcile that shared 420-minute envelope below without inventing phase-level actuals.
+The original planning targets remain 240 minutes for contract/test preparation and 180 for qualification/calibration, followed by 180 baseline, 300 authoring/diagnostics, 240 comparison and 60 closure: **1,200 minutes total**. They were not separately metered. The original 220-minute booking includes mixed preparation, tooling investigation, qualification and review; its historical split is unknown. The subsequent 59 booked minutes cover preparation review, budget reconciliation, baseline case design, semantic-delivery construction/qualification and evaluator-calibration design/packaging/commit verification, for 279 minutes total. Reconcile that shared 420-minute envelope below without inventing phase-level actuals.
 
 | Work category | Original estimate (minutes) | Booked use | Estimate less use | Estimated remaining work / status |
 |---|---:|---:|---:|---|
-| Preparation + qualification (240 + 180) | 420 | 220 historical + 42 preparation/qualification | 158 | 210–300; forecast variance of 52–142 minutes above the original estimate. |
+| Preparation + qualification (240 + 180) | 420 | 220 historical + 59 preparation/qualification | 141 | 210–300; forecast variance of 69–159 minutes above the original estimate. |
 | Baseline collection and assessment | 180 | 0 | 180 | Reforecast from frozen cases, evaluator configuration and measured latencies before dispatch; fit not yet established. |
 | Authoring and diagnostics | 300 | 0 | 300 | Objective-dependent; unstarted, no fit claim. |
 | Comparison | 240 | 0 | 240 | Reforecast after comparison design; preserve necessary comparison work. |
 | Closure | 60 | 0 | 60 | Unstarted; retain allowance. |
 | Document-tool implementation and qualification | Not in original estimate | 0 implementation | Not applicable | Preliminary 120-minute estimate after baseline assessment; refine with scoped design. This adds forecast effort, not authorized capacity. |
-| Original total / overall authorization ceiling | 1,200 | 262 | 938 | See aggregate forecast below. |
+| Original total / overall authorization ceiling | 1,200 | 279 | 921 | See aggregate forecast below. |
 
 Aggregate planning scenario: carry forward 180 + 300 + 240 + 60 = 780 minutes for baseline, authoring/diagnostics, comparison and closure, alongside the updated 210–300-minute preparation/qualification forecast. The later phases have not been re-estimated; this scenario assumes the full rewrite/comparison work proceeds.
 
-| Scope | Remaining forecast (minutes) | Projected whole-study total, including 262 booked | Forecast above 1,200-minute ceiling |
+| Scope | Remaining forecast (minutes) | Projected whole-study total, including 279 booked | Forecast above 1,200-minute ceiling |
 |---|---:|---:|---:|
-| Study excluding document-tool implementation | 990–1,080 | 1252–1342 | 52–142 |
-| Study including preliminary 120-minute tool estimate | 1,110–1,200 | 1372–1462 | 172–262 |
+| Study excluding document-tool implementation | 990–1,080 | 1269–1359 | 69–159 |
+| Study including preliminary 120-minute tool estimate | 1,110–1,200 | 1389–1479 | 189–279 |
 
-Remaining authorized time is **938 minutes**, below both scenario ranges. Present this potential extension need now and refine it at the baseline-design walkthrough using the selected cases, evaluator work and tool scope. No extension is approved by this forecast. Continue currently authorized design within the remaining ceiling; do not remove necessary qualification merely to make the arithmetic fit.
+Remaining authorized time is **921 minutes**, below both scenario ranges. Present this potential extension need now and refine it at the baseline-design walkthrough using the selected cases, evaluator work and tool scope. No extension is approved by this forecast. Continue currently authorized design within the remaining ceiling; do not remove necessary qualification merely to make the arithmetic fit.
 
 The forward preparation/qualification estimate is a controller planning estimate, not measured effort: 60–90 minutes for baseline case selection/design, 60–90 for six concise artifact contracts and their application, and 90–120 for evaluator setup, constructed references, two calibration calls and assessment. Those estimates total 210–300 minutes; calibration is still unqualified. They predate the three-situation coverage decision and remain an illustrative planning scenario, not a forecast validated for the expanded suite. The semantic case is now constructed; replace this scenario with an updated forecast when setting the three-case allocation, evaluator work and remaining format preparation. It is not a current fit claim. Format agreement is inside preparation; implementation and its own tests belong to the separate tooling estimate. The preliminary 120-minute estimate is neither a cap nor a promise of completion.
 
@@ -370,10 +385,10 @@ The orchestrator's preparation conversation and local tool calls consume active 
 Owner walkthrough: the contract, outer limits, pilot 01 findings and pilot 02 concept are settled. Pilot 02 results and the path-count explanation have been walked through with the owner; that checkpoint was committed and pushed. Shiv case preparation is complete. Three core situations are accepted and their case foundations are prepared; exact suite freeze, evaluator qualification, revised allocation and provider dispatch remain pending.
 Independent use is settled; Stage 3 has observed the declared standalone setup for this pair; broader isolation and model-evaluator qualification remain open.
 
-Accounting updated, 2026-09-13: **book 262 active minutes through semantic-delivery review, verification and commit preparation**, leaving **15 hours 38 minutes** under the accepted 20-hour ceiling. This replaces, rather than adds to, earlier bookings.
+Accounting updated, 2026-09-14: **book 279 active minutes through calibration proposal commit verification**, leaving **15 hours 21 minutes** under the accepted 20-hour ceiling. This replaces, rather than adds to, earlier bookings.
 Source: the current task's local log at `/Users/simon/.codex/sessions/2026/09/11/rollout-2026-09-11T17-59-42-01a0927b-cef5-7db0-8a30-c76c5b1ae838.jsonl`; only boundary timestamps were extracted, not conversation contents.
-Reconstruction sums the union of 107 closed `task_complete` / `turn_aborted` intervals since Stage 1 began: **15,418.0 seconds (256.97 minutes)**, including model/tool waits inside turns and excluding inter-turn owner-wait.
-The current turn began at 2026-09-14 00:31:31 UTC and adds 53 seconds at the 2026-09-14 00:32:24 UTC checkpoint. Retain the original two-minute opening allowance and allow two minutes for completion; round 261.85 minutes up to 262. Closing allowance and rounding are estimates, not independently measured owner/Claude effort. Provider durations are already inside active-turn time and are not added again.
+Reconstruction sums the union of 111 closed `task_complete` / `turn_aborted` intervals since Stage 1 began: **16,444.0 seconds (274.07 minutes)**, including model/tool waits inside turns and excluding inter-turn owner-wait.
+The current turn began at 2026-09-14 13:32:55 UTC and adds 40 seconds at the 2026-09-14 13:33:35 UTC checkpoint. Retain the original two-minute opening allowance and allow two minutes for completion; round 278.73 minutes up to 279. Closing allowance and rounding are estimates, not independently measured owner/Claude effort. Provider durations are already inside active-turn time and are not added again.
 At the next checkpoint, recompute cumulative closed-turn intervals plus the opening allowance and round up; do not add already counted turns or restore the superseded checkpoints. If the completed current turn exceeds the booking, correct the total before approving the remaining budget.
 
 Relationship-correction verification: all **21** source identities match, including all nine DD skills at the recorded revision; local links resolve and `git diff --check` passes.

@@ -1,0 +1,192 @@
+{
+  "visibility": "controller only; do not copy to evaluator fixtures",
+  "status": "proposed judgments for owner review, not independently qualified",
+  "construction": "All examples are orchestrator constructions using SSR-assessment-2 and the source variants. Git records are actual local commands on disposable reconstructions; no provider ran. Runtime is reused only because all source code remains byte-identical.",
+  "source_revision": "b22cf5dcfafe3c47ef35f57bc9e1a0b1a4070fd1",
+  "sources": {
+    "skill-studies/sweeping-stale-references/cases/semantic-delivery/qualification.json": "be2fa19a973ec56cf5cdbd98ff9575f7987436427255f907a5579ff69dfb473d",
+    "skill-studies/sweeping-stale-references/cases/semantic-delivery/qualification-variants.json": "a1733b3c4edf68a8bfcf2903f7e2d4427f361616f2552125643b2647ba8a49ce",
+    "skill-studies/sweeping-stale-references/cases/semantic-delivery/assessment.md": "75c3ff4efb56aeeb3422324a928900a96b877b7a0ac9f05d13902bd07315c22c",
+    "skill-studies/sweeping-stale-references/cases/semantic-delivery/assessment-policy.txt": "625e91999ba68e18eda230b92b6da1e6f6ea51a42aa89f5cbce674e41a097837",
+    "skill-studies/sweeping-stale-references/cases/semantic-delivery/expected.json": "91e9529a6ecd82c45e9c3a73eef294557afcbc6807a7fef7c496507731af84ec"
+  },
+  "scratch_reconstructions": "/var/folders/55/6jqr25v5211fn00wych8b1jm0000gn/T/ssr-evaluator-construction-kgethdn6",
+  "references": [
+    {
+      "packet": "packets/Q17.json",
+      "source_variant": "complete",
+      "construction_mode": "sparse",
+      "reference_judgments": {
+        "F1": "met",
+        "F2": "met",
+        "F3": "met",
+        "P1": "insufficient evidence",
+        "P2": "met",
+        "P3": "not met"
+      },
+      "functional_summary": "met",
+      "reason": "All three meanings repaired; early success and preserved context remain accurate. Sparse commit accounting does not change functional success.",
+      "commit_message_override": null
+    },
+    {
+      "packet": "packets/Q42.json",
+      "source_variant": "complete",
+      "construction_mode": "full",
+      "reference_judgments": {
+        "F1": "met",
+        "F2": "met",
+        "F3": "met",
+        "P1": "insufficient evidence",
+        "P2": "met",
+        "P3": "met"
+      },
+      "functional_summary": "met",
+      "reason": "All three meanings repaired; early success and preserved context remain accurate. Sparse commit accounting does not change functional success.",
+      "commit_message_override": "Repair delivery guidance\n\nReferences swept:\n- README.md:8 \u2014 update (1 block; repaired).\n- docs/operations.md:6 \u2014 update (1 block; repaired).\n- docs/troubleshooting.md:3-4 \u2014 update (1 block; repaired).\n- plans/completed/delivery-policy.md:4-5 \u2014 intentionally stale: historical former policy (1 block).\n- docs/download-helper.md:4 \u2014 false positive: separate download helper (1 block).\n\nInventory: 5 distinct reference blocks; 3 update, 1 intentionally stale, 1 false positive.\n"
+    },
+    {
+      "packet": "packets/Q08.json",
+      "source_variant": "readme_only",
+      "construction_mode": "partial",
+      "reference_judgments": {
+        "F1": "not met",
+        "F2": "met",
+        "F3": "not met",
+        "P1": "insufficient evidence",
+        "P2": "met",
+        "P3": "met"
+      },
+      "functional_summary": "not met",
+      "reason": "The operations and troubleshooting claims remain stale. The account truthfully names all five blocks and admits the two unresolved repairs: useful accounting succeeds, execution does not.",
+      "commit_message_override": "Repair delivery guidance\n\nReferences swept:\n- README.md:8 \u2014 update (1 block; repaired).\n- docs/operations.md:6 \u2014 update (1 block; still unresolved).\n- docs/troubleshooting.md:3-4 \u2014 update (1 block; still unresolved).\n- plans/completed/delivery-policy.md:4-5 \u2014 intentionally stale: historical former policy (1 block).\n- docs/download-helper.md:4 \u2014 false positive: separate download helper (1 block).\n\nInventory: 5 distinct reference blocks; 3 update, 1 intentionally stale, 1 false positive.\nOnly the README repair is complete; the two other current descriptions still need repair.\n"
+    },
+    {
+      "packet": "packets/Q63.json",
+      "source_variant": "blanket_numbers",
+      "construction_mode": "sparse",
+      "reference_judgments": {
+        "F1": "met",
+        "F2": "not met",
+        "F3": "met",
+        "P1": "insufficient evidence",
+        "P2": "met",
+        "P3": "not met"
+      },
+      "functional_summary": "not met",
+      "reason": "Current meanings repaired, but historical and independent helper documentation now state the wrong policies.",
+      "commit_message_override": null
+    },
+    {
+      "packet": "packets/Q29.json",
+      "source_variant": "attempts_vs_retries",
+      "construction_mode": "sparse",
+      "reference_judgments": {
+        "F1": "not met",
+        "F2": "met",
+        "F3": "not met",
+        "P1": "insufficient evidence",
+        "P2": "met",
+        "P3": "not met"
+      },
+      "functional_summary": "not met",
+      "reason": "Four retries means five attempts, contradicting the worker and the other repaired guidance.",
+      "commit_message_override": null
+    },
+    {
+      "packet": "packets/Q51.json",
+      "source_variant": "always_four",
+      "construction_mode": "sparse",
+      "reference_judgments": {
+        "F1": "not met",
+        "F2": "met",
+        "F3": "not met",
+        "P1": "insufficient evidence",
+        "P2": "met",
+        "P3": "not met"
+      },
+      "functional_summary": "not met",
+      "reason": "Exactly four conflicts with stopping on success, including the accurate following sentence.",
+      "commit_message_override": null
+    },
+    {
+      "packet": "packets/Q06.json",
+      "source_variant": "removed_limits",
+      "construction_mode": "sparse",
+      "reference_judgments": {
+        "F1": "not met",
+        "F2": "met",
+        "F3": "not met",
+        "P1": "insufficient evidence",
+        "P2": "met",
+        "P3": "not met"
+      },
+      "functional_summary": "not met",
+      "reason": "Removing every limit/exhaustion explanation leaves the reader without the needed information.",
+      "commit_message_override": null
+    },
+    {
+      "packet": "packets/Q34.json",
+      "source_variant": "equivalent_consolidation",
+      "construction_mode": "sparse",
+      "reference_judgments": {
+        "F1": "met",
+        "F2": "met",
+        "F3": "met",
+        "P1": "insufficient evidence",
+        "P2": "met",
+        "P3": "not met"
+      },
+      "functional_summary": "met",
+      "reason": "README gives a precise shared explanation; both guides link to its existing heading and retain operational handling.",
+      "commit_message_override": null
+    },
+    {
+      "packet": "packets/Q75.json",
+      "source_variant": "correct_uncommitted",
+      "construction_mode": "none",
+      "reference_judgments": {
+        "F1": "met",
+        "F2": "met",
+        "F3": "not met",
+        "P1": "insufficient evidence",
+        "P2": "not met",
+        "P3": "not met"
+      },
+      "functional_summary": "not met",
+      "reason": "Working documents are correct, but none of their required changes is committed.",
+      "commit_message_override": null
+    },
+    {
+      "packet": "packets/Q23.json",
+      "source_variant": "complete",
+      "construction_mode": "withheld",
+      "reference_judgments": {
+        "F1": "met",
+        "F2": "met",
+        "F3": "insufficient evidence",
+        "P1": "insufficient evidence",
+        "P2": "insufficient evidence",
+        "P3": "insufficient evidence"
+      },
+      "functional_summary": "insufficient evidence",
+      "reason": "Final documents/code are supplied and correct; Git and action evidence are withheld, so F3 and procedural judgments cannot be inferred.",
+      "commit_message_override": null
+    },
+    {
+      "packet": "packets/Q90.json",
+      "source_variant": "complete",
+      "construction_mode": "split",
+      "reference_judgments": {
+        "F1": "met",
+        "F2": "met",
+        "F3": "met",
+        "P1": "insufficient evidence",
+        "P2": "not met",
+        "P3": "not met"
+      },
+      "functional_summary": "met",
+      "reason": "All three meanings repaired; early success and preserved context remain accurate. Sparse commit accounting does not change functional success. All repairs exist in two commits: F3 met, grouping P2 not met.",
+      "commit_message_override": null
+    }
+  ]
+}

@@ -1,0 +1,49 @@
+{
+  "batch": "A",
+  "records": [
+    {
+      "response_id": "A01",
+      "evidence": "packets/Q29.json"
+    },
+    {
+      "response_id": "A02",
+      "evidence": "packets/Q17.json"
+    },
+    {
+      "response_id": "A03",
+      "evidence": "packets/Q63.json"
+    },
+    {
+      "response_id": "A04",
+      "evidence": "packets/Q23.json"
+    },
+    {
+      "response_id": "A05",
+      "evidence": "packets/Q34.json"
+    },
+    {
+      "response_id": "A06",
+      "evidence": "packets/Q08.json"
+    },
+    {
+      "response_id": "A07",
+      "evidence": "packets/Q90.json"
+    },
+    {
+      "response_id": "A08",
+      "evidence": "packets/Q51.json"
+    },
+    {
+      "response_id": "A09",
+      "evidence": "packets/Q42.json"
+    },
+    {
+      "response_id": "A10",
+      "evidence": "packets/Q06.json"
+    },
+    {
+      "response_id": "A11",
+      "evidence": "packets/Q75.json"
+    }
+  ]
+}

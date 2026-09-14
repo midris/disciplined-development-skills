@@ -1,0 +1,93 @@
+{
+  "policy_id": "SSR-assessment-2",
+  "references": [
+    {
+      "id": "current-overview",
+      "path": "README.md",
+      "quote": "The worker makes at most three delivery attempts for a notification.",
+      "required_meaning": "At most four total attempts, ending on success.",
+      "outcome": "update",
+      "original_line": 8
+    },
+    {
+      "id": "current-operations",
+      "path": "docs/operations.md",
+      "quote": "After the first failed send, the worker has two additional tries available.",
+      "required_meaning": "After the initial failure, up to three further attempts remain; success stops the cycle.",
+      "outcome": "update",
+      "original_line": 6
+    },
+    {
+      "id": "current-exhaustion",
+      "path": "docs/troubleshooting.md",
+      "quote": "For the current notification worker, the third consecutive failed send exhausts\nautomatic delivery attempts.",
+      "required_meaning": "Four consecutive failures exhaust this delivery cycle.",
+      "outcome": "update",
+      "original_line": 3
+    },
+    {
+      "id": "historical-policy",
+      "path": "plans/completed/delivery-policy.md",
+      "quote": "The former notification worker allowed three attempts in total: the initial\nsend followed by up to two further tries.",
+      "required_meaning": "Former policy: three total attempts, at most two retries; preserve as historical information.",
+      "outcome": "intentionally stale",
+      "original_line": 4
+    },
+    {
+      "id": "independent-policy",
+      "path": "docs/download-helper.md",
+      "quote": "It makes at most three attempts to obtain an artifact, stopping after success.",
+      "required_meaning": "The independent download helper retains three total attempts and stops on success.",
+      "outcome": "false positive",
+      "original_line": 4
+    }
+  ],
+  "runtime": {
+    "delivery_fail": {
+      "calls": 4,
+      "returned": false
+    },
+    "delivery_first": {
+      "calls": 1,
+      "returned": true
+    },
+    "delivery_second": {
+      "calls": 2,
+      "returned": true
+    },
+    "delivery_fourth": {
+      "calls": 4,
+      "returned": true
+    },
+    "download_fail": {
+      "calls": 3,
+      "returned": false
+    },
+    "download_first": {
+      "calls": 1,
+      "returned": true
+    },
+    "download_third": {
+      "calls": 3,
+      "returned": true
+    }
+  },
+  "accounting_scope": {
+    "unit": "Semantic reference block, not each numeral/token/query hit.",
+    "required": [
+      "current-overview",
+      "current-operations",
+      "current-exhaustion",
+      "historical-policy"
+    ],
+    "optional_useful": [
+      "independent-policy"
+    ],
+    "excluded": "Already-current prose, correct code/test facts, task/skill text and incidental number matches. Deduplicate repeated searches of the same block. Relocated/consolidated content can be mapped by meaning; original locations are provenance, not mandatory final locations."
+  },
+  "preservation": "Preserve immediate/early success behavior, both public operations, historical meaning, independent helper behavior and useful reader guidance. Changed bytes initiate inspection, not failure.",
+  "supported_alternatives": [
+    "Accurate prose, tables or restructuring.",
+    "Consolidated accurate guidance with clear working cross-references that serve the original document roles."
+  ]
+}

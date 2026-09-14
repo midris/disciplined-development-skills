@@ -399,3 +399,27 @@ Verification after fixes: seven subject tests and twelve controller tests pass; 
 Follow-up consistency review found no unresolved local preparation finding. Model-evaluator calibration, information boundaries, versioned baseline artifacts and revised allocation remain explicit stage work; no model was dispatched. This is a local self-review, not an independent assessment.
 
 DD-VERDICT: PASS
+
+## Response to external review of b22cf5d
+
+Verified both pending-design findings against the allocation and evaluation rules. The expanded subject scenario is 12 baseline + 15 conditional diagnostic + 16 comparison = 43 remaining, against 40 − 4 = 36 outer capacity: 47 projected total, seven over the ceiling. It is eight above the previously scheduled 35 remaining calls; the closed development slot remains unused without an approved transfer. The protocol now presents this aggregate beside its phase assumptions and routes call/time revision to the same walkthrough. No allocation increase is approved by the arithmetic.
+
+The semantic case has a planned assessment path, but no qualified model evaluator yet. Applied the existing readiness rule at the decision site: unresolved calibration pauses full baseline freeze and subject collection; bounded repair needs an explicit allocation/approval. Controller inspection stays development evidence, and the required case is not silently omitted. If qualification remains unresolved within authorized work, the intended full baseline is inconclusive; a different evaluation method or reduced claim requires an owner decision before collection. The plan links resumption to this branch.
+
+The reviewer’s search observation is best read as a triage distinction: no single literal substitution supplies the repair, while search can still locate the references. Semantic interpretation is the core outcome tested; a discovery advantage remains diagnostic. No fixture, criterion, qualification evidence or scoring-policy bytes changed.
+
+Both findings are addressed as planning instructions, not claims that allocation or evaluator qualification is complete. The initial hook invocation from the repository root produced four module-import errors; verification was rerun from the hook directory required by CLAUDE.md. Local arithmetic, links, frozen identities and whitespace checks passed; hook suite: 263 passed, 3 skipped. No model dispatch or budget extension occurred.
+
+DD-VERDICT: PASS
+
+## Evaluator-calibration proposal and local package review
+
+Prepared the [proposal](../plans/specs/2026-09-14-ssr-evaluator-calibration.md) and eleven neutral constructed document/Git records for owner review. Two fresh Sol-low read-only calls are proposed, repeating the examples in different orders without feedback; no call is authorized or performed. The second call is conditional on a valid first assessment without a material error. The draft requires correct criterion judgments with defensible evidence on both calls, not merely matching labels.
+
+The reference key distinguishes sparse/full accounting, a truthful account of incomplete work, preservation damage, attempts/retries confusion, always-four wording, removed versus consolidated guidance, uncommitted work, two-commit completeness and missing Git evidence. The truthful-incomplete-account and grouping/completeness readings are explicit proposed interpretations for owner review, not silent changes to frozen criteria or old scores. All P1 references remain insufficient evidence because action streams are absent; positive/negative action-order qualification is still open.
+
+Local checks re-derived all eleven final snapshots and committed/working patches against actual disposable Git repositories, verified unchanged runtime code against the qualified case, checked both complete batch permutations and source hashes, and verified reader-facing links. The allowlist covers 19 distinct evaluator files across both batches (18 per call); the answer key, construction identities and proposal remain controller-only. Neutral input omission is not host read isolation: read-boundary qualification or an explicitly accepted limitation remains required before dispatch. Criteria and policy retain their source identities; copied archival citations are provenance rather than requests for external retrieval.
+
+Self-review checked the evidence/instruction boundary, functional/procedural distinctions, unsupported calibration claims and resumption path. No unresolved defect in the draft preparation; exact configs, information boundary, retention/authorization, shared format agreement and whole-study allocation remain next-stage work. The package is neither dispatch-ready nor an independent evaluator qualification. Hook suite: 263 passed, 3 skipped; whitespace and identity checks passed.
+
+DD-VERDICT: PASS

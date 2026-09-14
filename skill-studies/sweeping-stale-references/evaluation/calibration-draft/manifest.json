@@ -1,0 +1,159 @@
+{
+  "status": "draft identities, not dispatch authorization",
+  "evaluator_shared": [
+    "instructions.md",
+    "criteria.md",
+    "expected.json",
+    "policy.txt",
+    "task.md",
+    "baseline.json"
+  ],
+  "evaluator_packets": [
+    "packets/Q06.json",
+    "packets/Q08.json",
+    "packets/Q17.json",
+    "packets/Q23.json",
+    "packets/Q29.json",
+    "packets/Q34.json",
+    "packets/Q42.json",
+    "packets/Q51.json",
+    "packets/Q63.json",
+    "packets/Q75.json",
+    "packets/Q90.json"
+  ],
+  "batch_specific": {
+    "A": [
+      "batch-A.json"
+    ],
+    "B": [
+      "batch-B.json"
+    ]
+  },
+  "evaluator_files": [
+    {
+      "path": "skill-studies/sweeping-stale-references/evaluation/calibration-draft/instructions.md",
+      "sha256": "9401532f09eee8c1b49241a4d86cbd89a3e9f019c1797390ec464959637459d5",
+      "bytes": 3580
+    },
+    {
+      "path": "skill-studies/sweeping-stale-references/evaluation/calibration-draft/criteria.md",
+      "sha256": "431da1ba5807ca623fa63af3fb8938f30bb7ffdc3011261ccfb3776b5a4013a6",
+      "bytes": 3054
+    },
+    {
+      "path": "skill-studies/sweeping-stale-references/evaluation/calibration-draft/expected.json",
+      "sha256": "64a5af1c3867888a4af3ff90344e563cff088f52d75800618b29e6bd1421255c",
+      "bytes": 3341
+    },
+    {
+      "path": "skill-studies/sweeping-stale-references/evaluation/calibration-draft/policy.txt",
+      "sha256": "625e91999ba68e18eda230b92b6da1e6f6ea51a42aa89f5cbce674e41a097837",
+      "bytes": 5567
+    },
+    {
+      "path": "skill-studies/sweeping-stale-references/evaluation/calibration-draft/task.md",
+      "sha256": "6c9685054ae4f4dd6f32a76a18401366e4206b829466367640370554bf33f683",
+      "bytes": 497
+    },
+    {
+      "path": "skill-studies/sweeping-stale-references/evaluation/calibration-draft/baseline.json",
+      "sha256": "e6e839e8bd5527e48f9621e6d0f1e883485a16a123e4038f561695ac54b0eee2",
+      "bytes": 4548
+    },
+    {
+      "path": "skill-studies/sweeping-stale-references/evaluation/calibration-draft/packets/Q06.json",
+      "sha256": "e20ab7b341c98f4be2ac5eaee85115ad3345dc4123b5c235c0dd1b1f9396e4a8",
+      "bytes": 7146
+    },
+    {
+      "path": "skill-studies/sweeping-stale-references/evaluation/calibration-draft/packets/Q08.json",
+      "sha256": "fc1a7a43cb38194990d8176526d0a62ef1189d7c1cbba48cb5b6eedbc7354d0c",
+      "bytes": 6974
+    },
+    {
+      "path": "skill-studies/sweeping-stale-references/evaluation/calibration-draft/packets/Q17.json",
+      "sha256": "6b42b38990ff81e74b797f93d359ad61b40057092762fa17b8b34f8501e5f1f6",
+      "bytes": 7511
+    },
+    {
+      "path": "skill-studies/sweeping-stale-references/evaluation/calibration-draft/packets/Q23.json",
+      "sha256": "6a1866c0421f31f5e812ae3629b7c0a526b95443a031c1f4810b7fabce2b366e",
+      "bytes": 5536
+    },
+    {
+      "path": "skill-studies/sweeping-stale-references/evaluation/calibration-draft/packets/Q29.json",
+      "sha256": "0a555231820dffa9dba992b1fa1e30515155cd6c0b01a1acc240eacffe6c164f",
+      "bytes": 7521
+    },
+    {
+      "path": "skill-studies/sweeping-stale-references/evaluation/calibration-draft/packets/Q34.json",
+      "sha256": "e353b2e56fc580ca74fe4f21451cc58806fa19c36452cdba19116b191244cf83",
+      "bytes": 7799
+    },
+    {
+      "path": "skill-studies/sweeping-stale-references/evaluation/calibration-draft/packets/Q42.json",
+      "sha256": "b28ee57c394a22d62964e40f3a75d593323c279945a60c28e43aa18ef1cd1bb1",
+      "bytes": 7995
+    },
+    {
+      "path": "skill-studies/sweeping-stale-references/evaluation/calibration-draft/packets/Q51.json",
+      "sha256": "6d70b0116bbe7281506bbd53846510f23dce783dce7ce4a4d36158870879b6d3",
+      "bytes": 7519
+    },
+    {
+      "path": "skill-studies/sweeping-stale-references/evaluation/calibration-draft/packets/Q63.json",
+      "sha256": "31fd7a770a58bcac21cbf5c3e81e0ab2004aacb29fde13c9b4cdd1262fe4a624",
+      "bytes": 8765
+    },
+    {
+      "path": "skill-studies/sweeping-stale-references/evaluation/calibration-draft/packets/Q75.json",
+      "sha256": "c6c7f06d20dd113737ccad314df13be82179edae2cfaf4ded3a7262796231e63",
+      "bytes": 7499
+    },
+    {
+      "path": "skill-studies/sweeping-stale-references/evaluation/calibration-draft/packets/Q90.json",
+      "sha256": "21f0279d342e570cb81c61fa066e54cb2962d11416e3bbfeffa9a7436bc20ed1",
+      "bytes": 7579
+    },
+    {
+      "path": "skill-studies/sweeping-stale-references/evaluation/calibration-draft/batch-A.json",
+      "sha256": "cd3dbba088de6ec062a736291c93bef992532be788ae3f709ee628c96fa063a6",
+      "bytes": 896
+    },
+    {
+      "path": "skill-studies/sweeping-stale-references/evaluation/calibration-draft/batch-B.json",
+      "sha256": "c7a284831f0201ee9fd35715e7b3a8d95c0677312c4d6c9f06d8b95992c912ad",
+      "bytes": 896
+    }
+  ],
+  "controller_only": [
+    {
+      "path": "skill-studies/sweeping-stale-references/evaluation/calibration-draft/reference-key.json",
+      "sha256": "260157525812e5dcb229b39a347bf001fb58c9676facd9238eeb8d5da6cbf1e7",
+      "bytes": 8559
+    },
+    {
+      "path": "skill-studies/sweeping-stale-references/evaluation/calibration-draft/README.md",
+      "sha256": "0c08d76f0813b190b6ee9652f6faeb2170819d6de719c113037f6c80da0f586d",
+      "bytes": 2913
+    },
+    {
+      "path": "plans/specs/2026-09-14-ssr-evaluator-calibration.md",
+      "sha256": "0fe343824ea6b76fa088e98a2ef0b8ce0140f920ec61902e2495e50fb37f29ef",
+      "bytes": 7166
+    }
+  ],
+  "checks": {
+    "records": 11,
+    "per_batch_records": 11,
+    "final_snapshots_match_local_git_worktrees": true,
+    "committed_and_working_patches_rederived": true,
+    "runtime_code_matches_qualified_case": true,
+    "source_hashes_verified": true
+  },
+  "limitations": [
+    "No model runs, no evaluator accuracy claim.",
+    "No host read-boundary or actual evaluator setup qualification.",
+    "No positive/negative action-order qualification."
+  ]
+}
