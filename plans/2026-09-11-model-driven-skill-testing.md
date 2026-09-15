@@ -43,10 +43,10 @@ The old phase table is superseded as an execution plan. Select only the calls ne
 Protect the comparison allocation: evaluation repairs cannot consume subject/authoring capacity, and every retry uses the retry pool. No automatic transfers or extensions are allowed.
 At either limit, stop collection and close with the supported decision or uncertainty. Inspect which framework steps consumed effort and remove or combine steps that did not support the decision before proposing further work; do not silently extend the limit or weaken correctness criteria.
 
-Only for an explicitly selected held-out transfer claim, keep reserved cases, reference answers and revealing results in `../skill-study-private/sweeping-stale-references/`, with verified copies in `../skill-study-backups/sweeping-stale-references/`, outside this repository and its Git history.
-Stage 1 records both absolute paths resolved from the canonical project checkout, not a worktree's working directory. These local copies protect against loss of a working copy, not loss of the host.
+Only for an explicitly selected held-out transfer claim, keep reserved cases, reference answers and revealing results in `../skill-study-private/sweeping-stale-references/`, outside this repository and its Git history.
+Record the absolute storage path resolved from the canonical project checkout and any ordinary backup arrangement; a second study-managed copy is not required.
 Record private storage identities for that optional claim; ordinary in-session assessment uses the retained evidence and known rules directly.
-For that held-out claim, an unexposed author must use an isolated input workspace with filesystem/tool permissions that prevent reading either private copy or the evaluator's checkout; verify those restrictions before claiming unexposed transfer evidence.
+For that held-out claim, an unexposed author must use an isolated input workspace with filesystem/tool permissions that prevent reading private evidence, any accessible backups or the evaluator's checkout; verify those restrictions before claiming unexposed transfer evidence.
 A different directory or branch alone is insufficient. If isolation cannot be established within the budget, classify affected cases as development evidence and disclose the limit.
 
 ## Stage 1: agree on the skill and its contract
@@ -156,14 +156,14 @@ This work follows format agreement and baseline assessment; it is not a Stage 2/
 
 ## Evidence and version control
 
-After every invocation stops writing, copy the entire bundle to durable study storage, verify file identities and index its original/preserved locations before the next dispatch.
-Keep reserved bundles in the private store; verify each backup against the primary's file/hash inventory before the next dispatch. Record successful verification and both absolute locations in the private index.
+After every invocation stops writing, retain one complete bundle in durable study storage, verify it against one inventory and record its location before the next dispatch.
+Use ordinary backup arrangements for recovery; a second study-managed copy and per-run backup verification are not required. Record the actual backup arrangement or its unverified status; existing historical copies stay in place.
 Preserve raw contents and historical absolute paths; the index resolves their new locations.
 Stop dispatch if preservation fails. Retain unsuccessful attempts; a runner completion status is not a behavioral pass.
-The run index accounts for case, condition, repetition, attempts, configuration identity, authorization and remaining call budget, so a later agent can resume without duplication.
+Keep the run index to attempt/case/condition identity, input-manifest and authorization references, call charge, bundle location/verification and the canonical score link. Read execution settings, status and timing from the runner artifacts; derive remaining capacity from distinct attempts and protocol ceilings.
 Preserve complete bundles, including inputs, workspace state, stdout/stderr, final output, logs and result metadata; use file inventories as the completeness check.
 Commit the reset and reviewed protocol before measured collection. Preserve the first pilot bundle outside Git, inspect its contents and byte size, and estimate whole-study storage before deciding what belongs in repository history; raw provider streams can be large and cannot be removed from history by an ordinary deletion.
-Record the retention decision before the first evidence commit and measured collection, following CLAUDE.md's never-commit rules for transcripts and scratch notes. At stage boundaries, commit reviewed development artifacts and a manifest of the complete retained evidence. Any raw evidence kept outside Git requires recorded absolute primary/backup paths and verified file/hash copies before the next dispatch; do not describe a manifest-only checkout as containing the raw evidence.
+Record the retention decision before the first evidence commit and measured collection, following CLAUDE.md's never-commit rules for transcripts and scratch notes. At stage boundaries, commit reviewed development artifacts and the evidence inventory/reference. Raw evidence outside Git requires a recorded absolute durable location and verified inventory before the next dispatch; do not describe a manifest-only checkout as containing the raw evidence.
 Reserved bundles and revealing assessments stay entirely in the verified private stores, never in public Git history. Do not add a tool unless a demonstrated mechanical need justifies its interface and focused tests.
 
 ## Current next action
@@ -173,6 +173,11 @@ The owner reaffirmed the intended session workflow: run fixed scenarios, capture
 A [draft format review set](../skill-studies/formats/README.md) now covers the score-record contract and the minimum companion formats against existing runner interfaces. The bounded format pass supplies concrete protocol/case templates, a filled semantic-delivery F1 card, manifest/index JSON templates and a comparison template, with field relationships and structural/readiness boundaries. Owner agreement remains pending; the Stage 2 agreement boxes stay open. Review these formats before proposing exact baseline inputs/commands/spending; apply the agreed version to SSR before collection freeze. The retained pilot-02 example is separately indexed under policy 3; it is not a new run or replacement pilot assessment. The three prepared core cases, original-skill snapshot and four pilot observations remain valid foundations; do not create another scenario or evaluator layer merely to advance the process.
 
 Preserve the owner's settled scoring policy: complete, correct, preserved and committed outcomes lead; pure SSR procedure defects are visible but non-blocking; uncertainty is not failure. Record current policy identity with each score. The rule format must explain evidence priority, criterion consequences and allowed alternatives; the score format must carry judgments and evidence in a stable structure.
+
+Walkthrough progress, 2026-09-15: the criterion card and completed score record are accepted, with concise entries, evidence citations and references to shared rules rather than repeated prose. Continue reviewing the remaining formats; this partial agreement does not complete the Stage 2 format checkpoint or authorize collection.
+The owner also accepted one durable bundle per actual run, a small index referencing runner metadata, one completeness inventory and ordinary backups instead of mandatory duplicate local copies. Apply these to future records; retain existing evidence and failed attempts. Final format migration and collection authorization remain open.
+
+Owner-supplied Claude review returned PASS with one P3 about the worked example's pinned live run index. Its citation now records a Git commit and path without changing score bytes; see the [review response](../reviews/2026-09-11-model-driven-testing-plan-review.md#claude-format-review-pinned-index-preservation). The owner directed one canonical accepted run record with Git providing history; duplicate snapshots and extensive amendment records are unnecessary. Remaining format agreement is still open; the review does not authorize provider calls.
 
 The old 47-call full-campaign forecast and evaluator allocations are historical planning scenarios, not the new session plan. Re-estimate only the work selected for execution within the unchanged outer authorization limits; no automatic pool transfer, extension, provider run or skill rewrite follows from the workflow correction. Document-generator/validator implementation remains after format agreement and baseline assessment unless the owner changes that sequence.
 

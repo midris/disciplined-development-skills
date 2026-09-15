@@ -24,8 +24,12 @@ Setup is separate: an invalid or uncertain setup cannot substantiate a skill-eff
 
 Before accepting a completed record, check it against the schema, then verify all paths/hashes, unique criterion and evidence IDs, evidence-reference resolution, and coverage against the identified criteria.
 Check that reasons support judgments and consequences follow the policy; the schema cannot do this judgment work.
-Index the record's path/hash with its run identity; reassessments identify any record they supersede while preserving the prior bytes.
+Keep one canonical accepted score per run; commit accepted records before replacing them and use Git to retrieve earlier versions.
+Index the record's path/hash with its run identity; a correction needs a concise reason, not a parallel archive of score files.
 The example has a [separate index](../sweeping-stale-references/assessments/index.json), so the original pilot's run index and policy-2 assessment remain unchanged.
+Its `retained_run_index` records `git_revision` alongside the path and hash.
+Resolve the unchanged score's historical run-index citation from that commit and path, then verify its SHA-256; later live-index edits do not change those Git bytes.
+This uses Git history without keeping a duplicate snapshot in the working tree.
 
 From the repository root, validate a completed record with the runner's existing environment:
 

@@ -481,3 +481,29 @@ Self-review only, with no additional model calls or independent-review claim.
 No findings.
 
 DD-VERDICT: PASS
+
+## Claude format review: pinned index preservation
+
+The owner supplied Claude's independent review: PASS, with one P3 concerning a pinned hash of the live pilot-02 run index.
+The owner subsequently directed one canonical accepted run record with Git providing history.
+The example index now identifies the pinned run index by full Git commit, repository path and SHA-256; the score and live pilot indexes remain unchanged.
+An earlier uncommitted duplicate snapshot was removed in favor of Git history.
+The format contract, instructions, spec and active plan now state that accepted records are committed before correction; separate historical files and extensive amendment ledgers are unnecessary.
+Git-backed preservation applies to committed repository artifacts; full raw bundles retain their existing external storage policy.
+
+Verification: the pinned bytes resolve through Git and match the recorded size/hash, including under a simulated future live-index amendment; the existing score bytes/hash remain unchanged.
+All 8 score-format checks pass; this documentation change introduces no runner code or model calls.
+Remaining format decisions and version-1 migration stay open.
+
+DD-VERDICT: PASS
+
+## Accepted retention simplification
+
+Applied the owner's accepted scope: one durable bundle and completeness inventory per actual run, a small index referencing runner metadata and one canonical score, and ordinary backups instead of mandatory duplicate local copies.
+Reconciled the active plan/spec, companion contract, index/protocol templates, SSR storage policy and handoff; historical pilot records and copies remain unchanged.
+Self-review checked failed attempts, unknown call charges, preservation failure, Git-backed citations and the distinction between durable storage and verified backup coverage.
+The current ordinary backup arrangement is explicitly unverified; no backup system was configured or evidence deleted.
+Verification: 8 format checks and 263 hook tests pass (3 skips); 118 local links/anchors resolve, the reduced index shape matches its contract, historical pilot indexes/score are unchanged and whitespace checks pass.
+This is a format/documentation change, with no new runtime tooling or model calls.
+
+DD-VERDICT: PASS

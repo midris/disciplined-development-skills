@@ -11,27 +11,31 @@
       "repetition": 1,
       "attempt_number": 1,
       "retry_of": null,
-      "manifest": {"path": "", "sha256": "", "version": "1-draft"},
-      "configuration": {"path": "", "sha256": "", "version": "0.2"},
-      "authorization": {"artifact": {"path": "", "sha256": "", "version": null}, "selector": ""},
-      "command": "",
-      "cwd": "",
-      "cli": {"path": "", "sha256": "", "version": ""},
-      "state": "prepared",
-      "run_id": null,
-      "result": null,
-      "retained_configuration": null,
-      "allocation": {"pool": "subject", "invocation_started": false, "charge": 0},
-      "evidence": {
-        "original_directory": null,
-        "primary_directory": null,
-        "backup_directory": null,
-        "inventory": null,
-        "verification": {"status": "pending", "evidence_or_reason": ""}
+      "manifest": {
+        "path": "",
+        "sha256": "",
+        "version": "1-draft"
       },
-      "metrics": {"duration_seconds": null, "reported_usage_cost": null},
-      "scores": [],
-      "limitations": []
+      "authorization": {
+        "artifact": {
+          "path": "",
+          "sha256": "",
+          "version": null
+        },
+        "selector": ""
+      },
+      "run_id": null,
+      "allocation": {
+        "pool": "subject",
+        "charge": 0
+      },
+      "limitations": [],
+      "bundle": {
+        "path": null,
+        "inventory": null,
+        "verified": false
+      },
+      "score": null
     }
   ]
 }

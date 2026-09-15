@@ -16,9 +16,11 @@ Repository paths resolve from the repository root; external evidence uses canoni
 Markdown links remain relative to their containing file as usual.
 A citation adds a `selector` naming a heading, JSON pointer, line or other precise location; a selector is not part of the file hash.
 Sources additionally record their repository revision or external provenance; hashes still identify the bytes used.
-When freezing a mutable authority such as the live protocol, retain its bytes at a versioned snapshot path and cite that path; later accounting or decision edits must not break the frozen identity.
+For repository evidence, keep one canonical file and preserve accepted versions in Git before replacing them.
+Record a full Git commit ID with a path/hash citation when it must resolve historical bytes; retrieve those bytes from that commit rather than requiring the current file to match an old hash.
 Do not embed a file's own hash or require reciprocal hashes: manifests identify inputs, indexes identify manifests/results/scores, and scores identify criteria/policy/evidence.
-Scores may cite an earlier immutable evidence index, as the pilot example does; a current index must not acquire a hash cycle with a score it indexes.
+Scores may cite an earlier immutable evidence index; a current index must not acquire a hash cycle with a score it indexes.
+The pilot example's original run-index citation resolves through `git_revision` in its [assessment index](../sweeping-stale-references/assessments/index.json), as described in the [score instructions](README.md#score-records).
 
 IDs are nonempty strings, unique within their owning collection.
 Case IDs are study-scoped; criterion IDs are case-scoped; attempt and assessment IDs are study-scoped; runner IDs retain their emitted values.
@@ -32,7 +34,7 @@ Copy [protocol.template.md](protocol.template.md); retain its named sections in 
 The active plan remains the only task checklist.
 The protocol carries study decisions and links to their evidence; case definitions carry case-specific rules; the manifest freezes their bytes for a selected scope.
 Policy snapshots derive from the protocol's assessment-policy section and must match it verbatim.
-Later protocol amendments do not alter frozen snapshots.
+Later protocol amendments preserve accepted policy bytes in Git; controller policy copies serve execution inputs, not a separate historical archive.
 
 Every section is required.
 For an inapplicable section or field, write `Not applicable — <reason>`; optional held-out and numerical-score material is explicitly conditional in the template.
@@ -45,6 +47,8 @@ At agreement, explicitly migrate the live SSR protocol to the agreed version and
 Copy [case-definition.template.md](case-definition.template.md).
 Its required sections are Identity and purpose, Inputs and setup, Rules and evidence, Criteria, and Limits and amendments, in that order.
 Repeat the criterion card for every criterion, preserving its field labels.
+Keep field values brief; where a rule is shared, cite its precise location in the case or policy instead of repeating it in every card.
+The fields make consequential distinctions inspectable; they do not require a separate essay or example for each entry.
 Setup is a separate validity check, never part of a skill's functional score.
 
 | Criterion field | Required content |
@@ -86,7 +90,7 @@ All displayed keys are required; repeat the condition/file entries as needed.
 | `fixtures` | Each entry has `source` identity and `target` relative path; reproduce the runner configuration's exact mapping. |
 | `target_skill` | Frozen source identity or `null` for an absent target; when present it must match a supplied fixture. |
 | `controller_only` | Array of remaining checkers, expected facts, qualification and source-provenance identities used for this case. Policy/criteria already appear in authorities. None may occur in subject inputs. |
-| `supersedes`, `amendment` | Prior manifest identity or `null`; reason/affected scope, or `null` for the first version. Preserve the prior manifest when replacing a frozen one. |
+| `supersedes`, `amendment` | Prior manifest citation or `null`; concise reason/affected scope, or `null` for the first version. Earlier accepted versions live in Git. |
 
 `sources.json` remains the broader inspected-source inventory; it is not proof of supplied inputs.
 The freeze manifest is the selected case's exact input inventory.
@@ -99,39 +103,35 @@ The existing SSR manifests remain under their current identities until explicit 
 
 Copy [run-index.template.json](run-index.template.json).
 The top-level fields identify format, index, study and phase, and contain an `attempts` array.
-An empty array records no attempts; template entries are placeholders, not scheduled calls.
-All displayed attempt fields are required, with the following stage-dependent values.
+Each actual attempt has one entry; no attempts means an empty array.
 
 | Fields | Meaning and checks |
 |---|---|
-| `attempt_id`, `case_id`, `condition`, `repetition`, `attempt_number`, `retry_of` | Stable logical identity; positive integer repetition/attempt, prior attempt ID or `null`. Unique tuple within phase; a retry never overwrites its earlier attempt. |
-| `manifest`, `configuration` | Frozen manifest and submitted config identities; condition must resolve in that manifest. |
-| `authorization` | Citation to recorded owner authority for this exact scope; present before invocation. A link cannot establish actual consent by itself. |
-| `command`, `cwd`, `cli` | Exact command, absolute working directory and executable path/version/hash; recorded before invocation. |
-| `state` | `prepared`, `stopped` or `preserved`; does not encode behavioral success. |
-| `run_id`, `result`, `retained_configuration` | `null` before allocation or if unavailable with explanation; otherwise emitted ID and retained file identities. Result version remains `0.3`. |
-| `allocation` | Pool `subject`, `evaluator`, `authoring` or `retry`; invocation started `true`, `false` or `null` if unresolved; charge `1`, `0` or `null` respectively. Every retry invocation charges retry, not subject. |
-| `evidence` | Original run directory, absolute primary/backup directories, and complete inventory identity; `null` locations until available. Verification status is `pending`, `verified` or `failed`, with evidence/reason. |
-| `metrics` | Duration from result; reported usage/cost with evidence citation, or `null` if unavailable. Unknown cost is never zero. |
-| `scores` | Zero or more assessment ID/identity pairs. Empty is valid for an unassessed or unusable attempt. Worked examples remain separately identified. |
-| `limitations` | Array explaining missing result, unresolved invocation state, preservation failure or assessment/attribution limits. |
+| `attempt_id`, `case_id`, `condition`, `repetition`, `attempt_number`, `retry_of` | Stable identity; positive repetition/attempt numbers, prior attempt ID or `null`. Distinct attempts remain separately accounted for. |
+| `manifest` | Frozen input manifest identity; condition resolves there. Use its configuration identity instead of repeating it. |
+| `authorization` | Citation to owner authority for this scope, recorded before invocation. The citation alone cannot establish actual consent. |
+| `run_id` | Emitted runner ID, or `null` if no run directory was allocated. |
+| `allocation` | Pool `subject`, `evaluator`, `authoring` or `retry`; charge `1` for an invocation, `0` when none occurred, or `null` if unresolved. Every retry invocation charges retry. |
+| `bundle` | Absolute durable `path`, one complete `inventory` identity, and boolean `verified`. Path/inventory may be `null` before preservation or when unavailable, with the reason in limitations. |
+| `score` | One canonical `{assessment_id, record}` entry, with `record` an artifact identity; `null` until assessed or for an unusable attempt. |
+| `limitations` | Reasons for missing evidence, unresolved invocation state, failed preservation or limits on assessment/attribution. |
 
-Each `scores` entry is `{assessment_id, record}`, with `record` an artifact identity.
-Non-null `result`, `retained_configuration` and evidence `inventory` values are artifact identities.
-`metrics.duration_seconds` is a nonnegative number or `null`; `reported_usage_cost` is `null` or `{reported, evidence}`, retaining the provider's reported object and a citation rather than inventing a cross-provider cost conversion.
-`evidence.verification.evidence_or_reason` is a nonempty string citing the comparison record/command outcome or explaining why verification is incomplete.
+Use the runner's fixed bundle layout to locate `result.json`, `config.json`, prompts and logs.
+Read settings, execution status, timestamps and duration from those artifacts; report unavailable cost as unavailable rather than zero.
+The result's `test.id` must match the manifest's configuration ID; it is distinct from the study's case and condition IDs.
+Record exact commands/cwd and CLI qualification in the execution scope, without duplicating them in every index entry.
+The index supplies study relationships the runner does not know; it is not a second copy of runner metadata.
 
-Record launch/configuration failures even when no runner ID or bundle exists.
-An unknown invocation charge blocks a claim of reconciled remaining capacity and further dispatch until resolved; it does not create retry authority.
-The protocol owns ceilings, current authorizations and cumulative active time; indexes own attempt charges, including legacy indexes linked by the protocol.
-Derive totals over unique attempts across those indexes, excluding worked examples and avoiding double-counting retries.
-Do not copy current remaining budgets into every attempt row.
-Read settings, mechanical status, timestamps and duration from the retained result rather than maintaining another authoritative copy.
-The result's `test.id` must equal the submitted configuration's `id`; that runner test ID is distinct from the study's case and condition IDs.
-The runner retains submitted config bytes; their hash must match the indexed submitted configuration, while prompt rendering is verified against its template and allocated paths.
-After writing stops, preserve the complete bundle and compare primary/backup inventories before the next dispatch.
-The inventory includes every retained file (including Git history) by relative path, bytes and hash, and records directories/symlinks without following links.
-Partial evidence remains indexed and limits the claim; it is never silently dropped.
+Retain one complete durable bundle per actual run, including unsuccessful attempts, and use one inventory to verify preservation after writing stops.
+The inventory includes all retained files (including Git history) by relative path, size and hash, plus directory/symlink entries without following links.
+Verify the retained bytes against that inventory before further dispatch; preservation failure stops progression.
+Ordinary backup arrangements handle recovery; no second study-managed copy or per-run backup-verification gate is required.
+The protocol records the actual backup arrangement or states that it is unverified; do not infer recoverability from a durable path alone.
+Existing historical copies stay in place; this rule does not authorize deletion.
+
+Record configuration/launch failures even when no bundle exists.
+Unknown invocation charge blocks a reconciled remaining-capacity claim and further dispatch until resolved; it grants no retry authority.
+The protocol owns ceilings and active time; derive invocation totals over distinct index entries, without counting a correction or worked example as another attempt.
 
 ## Scores, comparisons and lifecycle
 
@@ -150,8 +150,9 @@ Canonical locations remain `protocol.md`, `cases/<case>/assessment.md`, `expecte
 Templates live here; raw bundles stay in the protocol's external stores.
 The protocol's suite table explicitly distinguishes proposed, selected, deferred, historical and rejected cases; a directory's existence never selects it.
 Exposure is recorded separately as development or reserved; reserved requires the specifically authorized and verified boundary.
-Drafts may be edited; frozen inputs and recorded observations retain their identities.
-Revised frozen inputs receive a new manifest; reassessments receive new score IDs and a `supersedes` reference when they replace a prior judgment.
+Drafts may be edited; accepted inputs and records are committed before replacement.
+Update the canonical manifest or score for a correction, retaining its run identity and a concise reason; Git supplies prior versions, without requiring duplicate files or a separate amendment ledger.
+Distinct actual attempts remain separately accounted for; correcting a record is not another attempt.
 An illustrative example never silently supersedes a measured assessment.
 Superseded material remains discoverable for provenance, without authorizing its old workflow.
 

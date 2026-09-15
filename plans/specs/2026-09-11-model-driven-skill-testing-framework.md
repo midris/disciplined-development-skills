@@ -283,6 +283,11 @@ These records must support resumption without conversation history; keep reserve
 
 ## Working artifact organization
 
+Owner clarification, 2026-09-15: keep one canonical repository record for each formally accepted run and use Git for earlier versions.
+Commit accepted records before replacing them; cite a full commit ID and path when an assessment needs older file bytes.
+Preservation requirements below do not require duplicate historical files, snapshot directories or an extensive amendment ledger; a concise correction reason and Git history suffice.
+Distinct actual attempts still require accounting, and Git preserves only committed artifacts; full raw bundles remain in the existing external stores under the separately documented retention policy.
+
 The SSR study supplies the current working layout below. Reuse its ownership and information boundaries; universal case counts are not prescribed.
 Owner direction: settle a versioned protocol template at the end of baseline design, before freezing collection. Define stable section names/order, required fields, optional sections and their applicability, artifact links, and decision/amendment conventions. Apply the agreed version 1 to SSR and subsequent skills. Agree on the related artifact contracts below at the same checkpoint. A contrasting skill tests their generality; any needed structural change receives an explicit new version rather than silently changing the format.
 The active plan owns the checklist, this spec owns general requirements, and `skill-studies/<skill>/protocol.md` owns the skill-specific contract, coverage map, assessment policy, execution decisions and artifact index.
@@ -298,7 +303,10 @@ A suite is the explicitly selected set of cases under that protocol, not every c
 | `cases/<case>/manifest.json`; source provenance where needed | Exact input and controller identities, including versions and hashes. |
 | `<phase>-results.md`, `<phase>-checks.json`, `<phase>-run-index.json` | Post-run judgments, observed facts and an index of every attempt, condition, repetition, policy identity, cost and retained evidence location. Existing pilot files use this pattern; future phase filenames are assigned when that phase is prepared. |
 
-Full run bundles and their verified backups stay in the external stores recorded by the protocol; Git holds permitted case materials, policies, manifests and reports. Reserved cases and revealing results stay outside the rewrite author's accessible checkout/history. Verify that access boundary before claiming reserved transfer evidence.
+Retain one complete bundle per actual run in the durable external store recorded by the protocol, with one inventory verifying completeness; keep unsuccessful attempts too.
+The owner accepted a small index referencing the manifest, authorization, bundle and canonical assessment, with call accounting; derive execution metadata from runner artifacts rather than duplicating it.
+Ordinary backup arrangements provide recovery, without requiring a second study-managed copy or per-run backup verification. Record the actual arrangement or unverified status; existing historical evidence is not deleted by this simplification.
+Git holds permitted case materials, policies, manifests and reports. Reserved cases and revealing results stay outside the rewrite author's accessible checkout/history. Verify that access boundary before claiming reserved transfer evidence.
 Case files may be reused in a later authorized phase without relabeling prior pilot observations. Once assessed, preserve their identities; version changed cases or assessments explicitly. Redundant and rejected cases can remain as history without belonging to the active suite.
 
 ### Fixed scoring rules and score records

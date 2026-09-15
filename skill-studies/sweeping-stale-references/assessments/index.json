@@ -14,7 +14,8 @@
         "path": "skill-studies/sweeping-stale-references/pilot-02-run-index.json",
         "bytes": 43398,
         "sha256": "0df65f4259cc5c3e7479559ecf488b83ad415322cf0d6f6b8df56db7480ea23c",
-        "mode": "0o644"
+        "mode": "0o644",
+        "git_revision": "59c327e277cc3267be58eb05c0341d441995311f"
       },
       "supersedes": null
     }

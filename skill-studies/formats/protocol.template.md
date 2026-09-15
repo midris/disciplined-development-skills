@@ -45,8 +45,9 @@ Format agreement and collection-freeze decisions: <citations or explicitly pendi
 
 ## Storage and accounting
 
-Canonical checkout and absolute primary/backup paths: <paths>
-Retention/verification barrier and host-loss limitation: <text>
+Canonical checkout and absolute durable evidence location: <paths>
+One-bundle retention and completeness verification: <text>
+Ordinary backup arrangement and recovery limits: <text or explicitly unverified>
 All attempt indexes, including historical ones: <links>
 Pool ceilings, spent/remaining calls and active-time ceiling: <table derived from indexes>
 Active-time opening balance, new intervals/allowances, cumulative booking and remaining forecast: <text>
