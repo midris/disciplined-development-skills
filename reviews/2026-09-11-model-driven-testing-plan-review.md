@@ -459,3 +459,25 @@ Added `skill-studies/sweeping-stale-references/HANDOFF.md` and routed to it from
 Fresh verification: 8 score-format checks pass; 191 manifest and 23 current qualification hashes match; both unrun case pairs load with unchanged subject configuration identities. The original pilot-02 primary and backup match all 55 retained files each; disposable replay again confirms links, preservation, the complete committed repair and both export working directories. All 101 local Markdown link targets in the checked changed documents/handoff resolve. Hook suite passes (263 passed, 3 skipped). No paid model calls, old assessment mutations or core skill changes. The next session needs no scratch helper script; operational commands and identities are in the versioned format/case documents and manifests.
 
 DD-VERDICT: PASS
+
+## Bounded format pass for owner review
+
+The `1-draft` companion proposal now supplies protocol/case templates, a filled semantic-delivery F1 card, manifest/index JSON templates and a comparison template alongside the retained score format.
+Reviewed against the active plan, general spec, SSR policy and existing runner interfaces for consistency, executability, provenance durability and necessity.
+The review checked every artifact role, criterion field, condition applicability, setup/score separation, unknown evidence, partial attempts, retry accounting, frozen-source preservation and reassessment relationships.
+Clarified immutable protocol snapshots and acyclic hashes, precise score/index relationships, and the distinction between runner test IDs and study case/condition IDs.
+No runner/schema implementation or proposed baseline dispatch is part of this format pass; owner format agreement and explicit migration remain open.
+
+Removed the remaining calibration-pending limit from unrun semantic-delivery `expected.json` and refreshed its manifest identity.
+The manifest records the prior qualification's scope explicitly: fixed facts, semantic criteria, policy, subject bytes and retained observations are unchanged.
+Historical pilot records, score/example bytes and superseded workflows remain intact.
+
+Verification: 8 score contract checks, 12 semantic controller tests and 263 hook tests pass (3 hook skips).
+All 191 current case-manifest identities and 9 score source/evidence hashes match; evidence IDs resolve, all four prepared configs load and exclude controller scoring material, and policy copies match.
+The unchanged score schema accepts an in-memory functional-only control structure; this is a structural probe, not a newly saved control assessment.
+The final check resolves 116 local Markdown links/anchors in the changed/new documents; JSON parses and whitespace checks pass.
+Self-review only, with no additional model calls or independent-review claim.
+
+No findings.
+
+DD-VERDICT: PASS

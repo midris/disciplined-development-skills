@@ -1,7 +1,13 @@
-# Score records
+# Study formats
+
+The [companion format proposal](companion-formats.md) completes the `1-draft` review set: protocol, case/criterion definition, source/freeze manifest, attempt index, comparison and lifecycle relationships.
+Start there for the format walkthrough; use its linked blank templates and filled semantic-delivery criterion alongside the completed score example below.
+Owner agreement remains pending; no template is dispatch approval, and the integrated generator/validator remains later work.
+
+## Score records
 
 The [schema](score-record.schema.json), [blank template](score-record.template.json) and [filled SSR example](../sweeping-stale-references/assessments/pilot-02-original-policy-3-example.json) are draft version `1-draft` for format review before the next scored collection.
-They implement the [fixed scoring contract](../../plans/specs/2026-09-11-model-driven-skill-testing-framework.md#fixed-scoring-rules-and-score-records); the remaining protocol, case, index, manifest and lifecycle formats are not frozen by this draft.
+They implement the [fixed scoring contract](../../plans/specs/2026-09-11-model-driven-skill-testing-framework.md#fixed-scoring-rules-and-score-records); the companion proposal and this score format remain unfrozen.
 
 The active agent or human copies the template, reads the identified policy and case criteria, inspects the retained run, and completes one record.
 The blank template deliberately fails completed-record validation: replace empty fields, list every applicable criterion and supply evidence before recording a result.

@@ -181,8 +181,8 @@
     },
     {
       "path": "skill-studies/sweeping-stale-references/cases/semantic-delivery/expected.json",
-      "bytes": 3668,
-      "sha256": "4356845ee15fd50b4a1c7f8c64a2022bbba8917f3144c40caf6da3c4e11c7fd9",
+      "bytes": 3781,
+      "sha256": "1eccde02cbd1523e4d99a90359fae1d45b494c13a3d4691df83b0b0ab9a011fa",
       "mode": "0o644"
     },
     {
@@ -239,5 +239,10 @@
     "prior_revision": "952f83e8dc65eb657165d8712877866e96728351",
     "reason": "Policy-3 workflow correction of unrun controller inputs; no model dispatch.",
     "subject_bytes_changed": false
+  },
+  "format_pass_amendment": {
+    "prior_revision": "bab9403",
+    "reason": "Remove the remaining superseded calibration-pending limit from the unrun expected-facts document; fixed semantic criteria, policy and subject bytes are unchanged.",
+    "qualification_scope": "The retained qualification inputs identify the prior expected.json bytes at bab9403. Its runtime/reference observations remain applicable; this amendment changes only the workflow-limit sentence and does not relabel that qualification."
   }
 }

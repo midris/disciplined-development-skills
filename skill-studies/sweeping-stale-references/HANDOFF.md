@@ -12,7 +12,7 @@ Read these sources in order:
 1. [CLAUDE.md](../../CLAUDE.md), then the [DD doctrine](../../skills/disciplined-development/SKILL.md). Load relevant project and installed workflow skills normally. They guide the controller session, not the subject's supplied context.
 2. [Active plan](../../plans/2026-09-11-model-driven-skill-testing.md), especially Starting or resuming and Current next action; [general spec](../../plans/specs/2026-09-11-model-driven-skill-testing-framework.md), especially Default work-session workflow and Fixed scoring rules and score records.
 3. [SSR protocol](protocol.md): source-grounded contract, current assessment policy, core coverage, decisions, authorizations, storage and accounting. Read the [skill itself](../../skills/sweeping-stale-references/SKILL.md) and the [relationship map](../../ARCHITECTURE.md#composition-boundaries); independent SSR evaluation is settled.
-4. [Draft score-format instructions](../formats/README.md), including schema, blank template and filled pilot-02 example. Then inspect the selected case's `assessment.md`, `expected.json`, policy copy, configurations and manifest.
+4. [Draft format instructions](../formats/README.md), including the companion field contracts/templates, filled semantic-delivery criterion, score schema/template and filled pilot-02 example. Then inspect the selected case's `assessment.md`, `expected.json`, policy copy, configurations and manifest.
 5. [Runner guide](../../skill-validation/runner/README.md) and relevant implementation when verifying mechanics. Its historical worksheet methodology links do not govern this study.
 
 The [review record](../../reviews/2026-09-11-model-driven-testing-plan-review.md) preserves findings and decisions. Read the latest follow-up for current verification; earlier rounds are historical context, not another pending review campaign.
@@ -31,7 +31,7 @@ Functional/procedural severity, whole-artifact judgment, valid alternative wordi
 
 ## Next work and boundaries
 
-Follow the active plan's Current next action: finish one bounded format pass using the existing artifacts. Settle the reusable criterion definition and minimum protocol, manifest, index and score fields/relationships; show concrete changes for format agreement. Keep semantic content in the model's judgment and structural checks deterministic.
+The bounded format pass is prepared in the [companion proposal](../formats/companion-formats.md); follow the active plan's Current next action to review it with the owner. Concrete templates, a filled criterion and the retained score example are available; format agreement and applying the agreed version to SSR remain pending. Keep semantic content in the model's judgment and structural checks deterministic.
 
 The next-run recommendation is a **first baseline batch** of one semantic-delivery original and one no-target run, retaining the prepared Sol-low settings. This recommendation is not dispatch approval. Present exact inputs, commands and spending scope after format agreement. Do not create another pre-baseline pilot or evaluator-calibration gate. Complete further selected baseline cases in small batches only under the agreed scope.
 

@@ -94,6 +94,6 @@
   "measurement_limits": [
     "Small project; no difficult-discovery or population-reliability claim.",
     "Runtime checks cannot score documentation meaning.",
-    "Model-evaluator calibration remains open."
+    "Semantic judgments require active-session inspection under the fixed rules; local runtime qualification does not establish independent evaluator accuracy."
   ]
 }
