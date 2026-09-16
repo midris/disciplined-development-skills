@@ -3,5 +3,55 @@
   "index_id": "core-baseline-01",
   "study_id": "sweeping-stale-references",
   "batch_id": "core-baseline-01",
-  "attempts": []
+  "attempts": [
+    {
+      "attempt_id": "core-baseline-01-semantic-delivery-original-1-1",
+      "case_id": "semantic-delivery",
+      "condition": "original",
+      "repetition": 1,
+      "attempt_number": 1,
+      "retry_of": null,
+      "manifest": {
+        "path": "skill-studies/sweeping-stale-references/cases/semantic-delivery/manifest.json",
+        "sha256": "184aaa47b231899244aa0248d2ea60581e5671451f610ffcc1c714394acdd689",
+        "version": "1",
+        "git_revision": "88fa47be87108f5aba9a59d67f714b173b94c77a"
+      },
+      "authorization": {
+        "artifact": {
+          "path": "skill-studies/sweeping-stale-references/protocol.md",
+          "sha256": "12c5d602c67e883d8edd38a6f02bf58a8e6d69c8fd22214adfe56503ab3a7542",
+          "version": "1",
+          "git_revision": "4b5ca0cc7aa300962ceb81a031113b7fc1410225"
+        },
+        "selector": "Core baseline: core-baseline-01; approved twelve-execution scope, exact order and stopping rules"
+      },
+      "run_id": "20260916T184709670Z-ssr-semantic-delivery-original-e957d242-59da-4435-8e0b-61fde0dfa606-fg7h6i02",
+      "allocation": {
+        "pool": "subject",
+        "charge": 1
+      },
+      "bundle": {
+        "path": "/Users/simon/work/personal/skill-study-private/sweeping-stale-references/development/20260916T184709670Z-ssr-semantic-delivery-original-e957d242-59da-4435-8e0b-61fde0dfa606-fg7h6i02",
+        "inventory": {
+          "path": "/Users/simon/work/personal/skill-study-private/sweeping-stale-references/development/20260916T184709670Z-ssr-semantic-delivery-original-e957d242-59da-4435-8e0b-61fde0dfa606-fg7h6i02.inventory.json",
+          "sha256": "13105ca272fd38ae3464db9ad26d135591db179c727e08363a881212f8e40eb3",
+          "version": "1"
+        },
+        "verified": true
+      },
+      "result": {
+        "result_id": "core-baseline-01-semantic-delivery-original-1",
+        "record": {
+          "path": "skill-studies/sweeping-stale-references/results/20260916T184709670Z-ssr-semantic-delivery-original-e957d242-59da-4435-8e0b-61fde0dfa606-fg7h6i02.json",
+          "sha256": "69806918146ba442b192f587188810b23a7a1dedba16c0c6de7298782e75edff",
+          "version": "1",
+          "git_revision": "9270d5d639398baaa7338f0184a0278c67c92c76"
+        }
+      },
+      "limitations": [
+        "Setup evidence unresolved: full requested skill-read output absent from retained CLI events; excluded from valid-setup aggregates."
+      ]
+    }
+  ]
 }
