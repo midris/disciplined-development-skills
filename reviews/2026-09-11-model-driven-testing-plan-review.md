@@ -619,3 +619,12 @@ Checked failure/unknown/procedural-only outcomes, planned versus observed covera
 Verification: 9 execution-result tests pass; 280 affected local links resolve; historical schema/index hashes and original-example validation pass; pilot reports/indexes and policy body remain unchanged; whitespace clean. No model runs.
 
 DD-VERDICT: PASS
+
+## Version-1 migration review
+
+The owner accepted the reconciled layouts. Both unrun case definitions now use the complete criterion cards; their manifests deduplicate supplied sources and pin the committed version-1 authorities. Historical observed inputs, reports, indexes, worked example, subject/configuration bytes, checkers, expected facts and policy copies are unchanged.
+Reviewed the whole artifact chain against the spec: case criteria and supplied context → manifest → declared batch and every actual attempt → execution outcomes → aggregate coverage and decision. The proposed first batch has one execution per condition, descriptive interpretation, explicit failure/unknown/unusable handling and no automatic retry; its empty index makes no execution or authorization claim. A later consistency claim still requires agreed repetitions.
+The obsolete eight-call proposal was removed from the Shiv definition; the protocol owns collection scope. The former illustrative F1 card now links to the actual case definition instead of duplicating it. A mistaken draft citation to the original permission-qualification sources was replaced with the verified, unchanged pilot-02 runner tree.
+Verification: 9 format tests, 12 semantic controller tests and 14 Shiv controller tests pass. All 202 links affected by the input changes resolve. Both manifests resolve every cited repository identity at their full source commit; the config loader verifies exact source membership, original/control fixture parity and controller exclusion. Historical schema/index pins resolve; the live policy body equals its retained snapshot. No provider calls or new tooling implementation.
+
+DD-VERDICT: PASS
