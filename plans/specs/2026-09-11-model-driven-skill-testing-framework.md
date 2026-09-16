@@ -305,7 +305,7 @@ A suite is the explicitly selected set of cases under that protocol, not every c
 
 Retain one complete bundle per actual run in the durable external store recorded by the protocol, with one inventory verifying completeness; keep unsuccessful attempts too.
 The owner accepted a small index referencing the manifest, authorization, bundle and canonical assessment, with call accounting; derive execution metadata from runner artifacts rather than duplicating it.
-Ordinary backup arrangements provide recovery, without requiring a second study-managed copy or per-run backup verification. Record the actual arrangement or unverified status; existing historical evidence is not deleted by this simplification.
+Use ordinary backup arrangements when configured, without requiring a second study-managed copy or per-run backup verification. Record the actual arrangement, unverified coverage or explicitly accepted single-host retention; existing historical evidence is not deleted by this simplification.
 Git holds permitted case materials, policies, manifests and reports. Reserved cases and revealing results stay outside the rewrite author's accessible checkout/history. Verify that access boundary before claiming reserved transfer evidence.
 Case files may be reused in a later authorized phase without relabeling prior pilot observations. Once assessed, preserve their identities; version changed cases or assessments explicitly. Redundant and rejected cases can remain as history without belonging to the active suite.
 

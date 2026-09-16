@@ -6,6 +6,9 @@ Status: draft
 Plan: <link>
 General spec: <link>
 
+Keep current decisions, their authority and brief rationale in the relevant section.
+Use Git for earlier versions; no separate decision ledger is required.
+
 ## Sources and intended use
 
 Original source identity/revision and preserved snapshot: <identity/link>
@@ -57,9 +60,3 @@ Tooling estimate separately identified; scope-dependent estimates remain explici
 
 Score/index/comparison links and interpretation limits: <links/text or not yet collected>
 Rewrite/adoption decision: <owner citation or pending>
-
-## Decisions and amendments
-
-| ID/date | Decision and authority | Affected artifacts/scope | Supersedes | Rationale and evidence effect |
-|---|---|---|---|---|
-| <id/date> | <citation> | <links> | <id or none> | <text> |

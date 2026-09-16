@@ -309,13 +309,13 @@ The original planning targets were 240 minutes for contract/test preparation and
 
 | Work category | Original estimate (minutes) | Booked use | Estimate less use | Estimated remaining work / status |
 |---|---:|---:|---:|---|
-| Preparation + qualification (240 + 180) | 420 | 220 historical + 94 prior preparation/qualification + 12 format pass + 3 commit/push + 5 review response + 10 walkthrough + 2 commit/push | 74 | Draft format pass prepared for owner review; remaining migration/freeze effort depends on agreement. |
+| Preparation + qualification (240 + 180) | 420 | 220 historical + 94 prior preparation/qualification + 12 format pass + 3 commit/push + 5 review response + 10 walkthrough + 2 commit/push + 6 protocol review/commit | 68 | Draft format pass prepared for owner review; remaining migration/freeze effort depends on agreement. |
 | Baseline collection and assessment | 180 | 0 | 180 | Reforecast from frozen cases, subject settings, scoring inputs and measured latencies before dispatch; fit not yet established. |
 | Authoring and diagnostics | 300 | 0 | 300 | Objective-dependent; unstarted, no fit claim. |
 | Comparison | 240 | 0 | 240 | Reforecast after comparison design; preserve necessary comparison work. |
 | Closure | 60 | 0 | 60 | Unstarted; retain allowance. |
 | Document-tool implementation and qualification | Not in original estimate | 0 implementation | Not applicable | Preliminary 120-minute estimate after baseline assessment; refine with scoped design. This adds forecast effort, not authorized capacity. |
-| Original total / overall authorization ceiling | 1,200 | 346 | 854 | Remaining authorization; old campaign forecast below is superseded. |
+| Original total / overall authorization ceiling | 1,200 | 352 | 848 | Remaining authorization; old campaign forecast below is superseded. |
 
 Superseded aggregate planning scenario, retained for reconciliation rather than used as the current forecast: carry forward 180 + 300 + 240 + 60 = 780 minutes for baseline, authoring/diagnostics, comparison and closure, alongside the updated 210–300-minute preparation/qualification forecast. The later phases have not been re-estimated; this scenario assumes the full rewrite/comparison work proceeds.
 
@@ -324,7 +324,7 @@ Superseded aggregate planning scenario, retained for reconciliation rather than 
 | Study excluding document-tool implementation | 990–1,080 | 1304–1394 | 104–194 |
 | Study including preliminary 120-minute tool estimate | 1,110–1,200 | 1424–1514 | 224–314 |
 
-Remaining authorized time is **854 minutes**. The superseded full campaign exceeded that capacity; its evaluator/calibration work is no longer selected. Replace its remaining-work forecast with the actual agreed format-migration/run scope before claiming a fit or requesting an extension. No extension or transfer follows from this correction; do not weaken evidence standards to match an estimate.
+Remaining authorized time is **848 minutes**. The superseded full campaign exceeded that capacity; its evaluator/calibration work is no longer selected. Replace its remaining-work forecast with the actual agreed format-migration/run scope before claiming a fit or requesting an extension. No extension or transfer follows from this correction; do not weaken evidence standards to match an estimate.
 
 The old forward preparation estimate (60–90 minutes for cases, 60–90 for formats, 90–120 for evaluator setup/calibration) describes the superseded plan. Do not use its 210–300-minute total as the current forecast. The remaining session work is fixed rule/score formats, configuration/evidence verification, active-agent assessment and an explicitly selected run set; estimate that scope at the next checkpoint. Document-tool implementation remains separately proposed after format agreement and baseline assessment. Historical effort is not erased by removing an unnecessary workflow.
 
@@ -378,7 +378,12 @@ External raw development primary: `/Users/simon/work/personal/skill-study-privat
 These locations are resolved from the canonical checkout. The development primary and backup now contain the permission-probe bundles and all four complete pilot bundles indexed above; reserved-case access isolation remains unqualified.
 For any future explicitly selected held-out claim, an unexposed author receives only permitted copied evidence. The ordinary active-session workflow uses known cases and must not claim held-out validation.
 For future runs, retain one complete bundle in the existing development primary, verify it against one inventory and index it before further dispatch; include unsuccessful attempts.
-The owner accepted ordinary backups instead of a mandatory second study-managed copy. Ordinary backup coverage has not been verified in this session; the existing same-host copies do not establish host-loss recovery.
+The owner accepted removing the mandatory second study-managed copy; that decision did not establish an operating backup arrangement.
+Backup check, 2026-09-15: `tmutil destinationinfo` reports no destinations configured, while `tmutil isexcluded /Users/simon/work/personal/skill-study-private/` reports Included.
+The owner-supplied Claude review also found no common backup agents running or iCloud coverage for this location; this session independently verified the Time Machine results, not every possible backup mechanism.
+Treat raw evidence retention as single-host unless another arrangement is identified. Existing same-host copies do not establish host-loss recovery, and Git cannot recover external raw bundles.
+Owner decision, 2026-09-15: after the backup check and explicit host-loss explanation, the owner accepted single-host retention for this study, including possible loss of external raw bundles if the machine is lost or fails.
+No backup configuration is required by this accepted scope; verify local bundle preservation before further dispatch. This storage decision does not authorize model runs.
 Keep historical primary/backup copies unchanged. The small run index references runner metadata and one canonical assessment rather than duplicating settings/status/timing; Git supplies repository-record history.
 
 Accounting began at the first recorded clock checkpoint, **2026-09-12 04:22:19 UTC**, with a conservative **two-minute allowance** for the opening read before that checkpoint.
@@ -405,6 +410,8 @@ Use brief field values and precise references to shared rules to avoid duplicati
 Score-record decision, 2026-09-15: the owner accepted the completed score format presented in the walkthrough, including short per-criterion reasons, precise evidence references, assessor context, separate setup validity and functional/procedural summaries.
 Summaries synthesize the criterion judgments; evidence and rule references avoid repeating their source contents.
 This accepts the record structure, with remaining companion formats and version-1 migration still pending; it does not authorize runs or new scoring decisions.
+Protocol-layout decision, 2026-09-15: the owner accepted the simplified protocol template with seven sections and current decisions, authority and brief rationale placed beside their subjects; Git provides earlier versions, so no separate decision ledger is required.
+Apply that layout to this live protocol during version-1 migration, keeping its current decisions and evidence links.
 History decision, 2026-09-15: the owner directed one canonical repository record per accepted run, with earlier versions available through Git rather than an extensive parallel history.
 The worked example's pinned index therefore resolves by Git commit/path/hash; the temporary duplicate snapshot was removed before commit.
 Preserve accepted records in Git before correction, and keep only the current explanation on-page; this does not accept all remaining manifest/index fields or authorize collection.
@@ -420,6 +427,9 @@ Format-walkthrough booking, 2026-09-15 UTC: add **10 active minutes**, for **344
 Current-task boundary timestamps after the prior 19:51 UTC allowance total 442.4 active seconds at 20:30:58 UTC across 11 closed turns plus this active turn; the booking includes closeout allowance and excludes owner-wait.
 
 Retention-change commit/push booking, 2026-09-15 UTC: add **2 minutes** for the owner-requested commit/push and final checks from the 20:32:40 UTC checkpoint, including opening/closing allowance; total **346 active minutes**, **854 minutes (14 hours 14 minutes)** remaining.
+
+Protocol-review/commit booking, 2026-09-16 UTC: add **6 minutes**, for **352 active minutes total**, leaving **848 minutes (14 hours 8 minutes)**.
+Current-task boundary timestamps after the prior 20:34:40 UTC allowance total 215.8 active seconds at 01:33:19 UTC; the booking adds two minutes for final checks/commit/push and rounds up, excluding owner-wait.
 
 Relationship-correction verification: all **21** source identities match, including all nine DD skills at the recorded revision; local links resolve and `git diff --check` passes.
 Hook suite: **263 passed, 3 skipped**. These documentation checks do not qualify provider execution or demonstrate skill effectiveness.

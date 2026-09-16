@@ -31,6 +31,8 @@ Empty strings and `<...>` are unfinished template values, never readiness eviden
 ## Protocol
 
 Copy [protocol.template.md](protocol.template.md); retain its named sections in order.
+Its seven sections describe the current study agreement; place decisions, authority and brief rationale beside the subject they govern, with Git preserving earlier versions.
+Do not maintain a separate decisions/amendments ledger: it duplicates current section content and Git history.
 The active plan remains the only task checklist.
 The protocol carries study decisions and links to their evidence; case definitions carry case-specific rules; the manifest freezes their bytes for a selected scope.
 Policy snapshots derive from the protocol's assessment-policy section and must match it verbatim.
@@ -125,8 +127,8 @@ The index supplies study relationships the runner does not know; it is not a sec
 Retain one complete durable bundle per actual run, including unsuccessful attempts, and use one inventory to verify preservation after writing stops.
 The inventory includes all retained files (including Git history) by relative path, size and hash, plus directory/symlink entries without following links.
 Verify the retained bytes against that inventory before further dispatch; preservation failure stops progression.
-Ordinary backup arrangements handle recovery; no second study-managed copy or per-run backup-verification gate is required.
-The protocol records the actual backup arrangement or states that it is unverified; do not infer recoverability from a durable path alone.
+Use ordinary backup arrangements when configured; no second study-managed copy or per-run backup-verification gate is required.
+The protocol records the actual arrangement, unverified coverage or explicitly accepted single-host retention; do not infer recoverability from a durable path alone.
 Existing historical copies stay in place; this rule does not authorize deletion.
 
 Record configuration/launch failures even when no bundle exists.

@@ -507,3 +507,13 @@ Verification: 8 format checks and 263 hook tests pass (3 skips); 118 local links
 This is a format/documentation change, with no new runtime tooling or model calls.
 
 DD-VERDICT: PASS
+
+## Backup-state follow-up
+
+The owner supplied Claude's follow-up confirming the Git-backed citation and smaller index, with a P2 that ordinary backup coverage is not operating for the evidence location.
+Independently reproduced `tmutil destinationinfo` reporting no destinations and `tmutil isexcluded` reporting Included; Claude's broader agent/iCloud checks remain attributed to that review.
+Corrected the protocol and generic wording to distinguish verified local preservation from host-loss recovery.
+The owner then accepted single-host retention after the explicit host-loss explanation; the protocol records that decision without implying off-host recovery.
+No system configuration or evidence was changed. Whitespace verification passes; the backup-state finding is closed by the accepted scope.
+
+DD-VERDICT: PASS
