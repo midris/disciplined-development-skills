@@ -3,9 +3,9 @@
   "manifest_id": "ssr-discovery-shiv-1",
   "study_id": "sweeping-stale-references",
   "case_id": "discovery-shiv",
-  "status": "draft",
+  "status": "frozen",
   "created_at": "2026-09-16",
-  "source_revision": "fa55131f082888a62e97a79fcb859fc6e84df902",
+  "source_revision": "4b5ca0cc7aa300962ceb81a031113b7fc1410225",
   "authorities": {
     "spec": {
       "path": "plans/specs/2026-09-11-model-driven-skill-testing-framework.md",
@@ -14,12 +14,12 @@
     },
     "protocol": {
       "path": "skill-studies/sweeping-stale-references/protocol.md",
-      "sha256": "0088cbe858c2d3bbb97c8580548eecee5d67cdb188a619217690eff901f95a2f",
+      "sha256": "12c5d602c67e883d8edd38a6f02bf58a8e6d69c8fd22214adfe56503ab3a7542",
       "version": "1"
     },
     "format_contract": {
       "path": "skill-studies/formats/companion-formats.md",
-      "sha256": "dfb454b25627233ed9d197f0f50fd4efae9b08748a5e94819b8e0d1218fed2ed",
+      "sha256": "7ddc69847ca1a7e51a748030c66660fc716be60731509e5416b8bbbac591a460",
       "version": "1"
     },
     "execution_result_schema": {
