@@ -12,20 +12,19 @@
     "format_contract": {"path": "", "sha256": "", "version": "1-draft"},
     "score_schema": {"path": "", "sha256": "", "version": "1-draft"},
     "policy": {"path": "", "sha256": "", "version": null},
-    "criteria": [{"path": "", "sha256": "", "version": null}]
+    "criteria": [
+      {"path": "", "sha256": "", "version": null}
+    ]
   },
   "conditions": [
     {
       "id": "",
       "configuration": {"path": "", "sha256": "", "version": "0.2"},
-      "prompt": {"path": "", "sha256": "", "version": null},
-      "fixtures": [
-        {"source": {"path": "", "sha256": "", "version": null}, "target": ""}
-      ],
       "target_skill": null
     }
   ],
-  "controller_only": [],
-  "supersedes": null,
-  "amendment": null
+  "subject_sources": [
+    {"path": "", "sha256": "", "version": null}
+  ],
+  "controller_only": []
 }

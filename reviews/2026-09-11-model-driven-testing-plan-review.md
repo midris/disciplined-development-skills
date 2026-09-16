@@ -527,3 +527,13 @@ Verification: 14 incoming protocol links/anchors and outgoing targets resolve; a
 No model calls or new authorization. Self-review found no remaining issue in this bounded cleanup.
 
 DD-VERDICT: PASS
+
+## Manifest simplification
+
+Removed manifest history fields and repeated prompt/fixture mappings; configurations own mappings and a shared source inventory pins each file once.
+Target skill now references that inventory by path. Clarified that source_revision must contain the identified repository bytes, not merely name a preparation base.
+Self-review checked missing/extra sources, condition membership, controller-only exclusions and Git resolution; existing case manifests and subject inputs remain unchanged pending migration.
+Verification: real config loading yields 13 unique semantic-delivery sources (10 shared) and 73 Shiv sources (70 shared), with repository bytes matching Git and correct target-skill separation; 8 format checks and 263 hook tests pass (3 skips); whitespace clean.
+No new validator implementation or provider calls.
+
+DD-VERDICT: PASS

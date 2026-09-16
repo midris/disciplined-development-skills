@@ -16,6 +16,7 @@ The original is [sweeping-stale-references](../../skills/sweeping-stale-referenc
 Original-condition runs load the [frozen study snapshot](cases/skill-original/SKILL.md), not the live skill path. Preserve these bytes for contemporaneous original-versus-candidate comparisons; candidate edits must not replace this snapshot.
 [sources.json](sources.json) records inspected file paths, sizes and hashes, including all nine DD skills, installed authoring guidance and runner implementation.
 This inventory identifies the initial preparation sources at the recorded revision, including the runner before its permission extension; it is not the frozen manifest of inputs supplied to subjects.
+The owner directed simplifying the reusable manifest: derive prompt/fixture mappings from configurations, pin shared source files once and use Git for history. Apply the reviewed manifest format to case packages during version-1 migration; existing case identities remain intact meanwhile.
 The permission qualification index below identifies the updated runner sources.
 
 The skill combines a search-and-reconciliation technique with discipline against stopping after one cited defect.
@@ -370,8 +371,8 @@ Keep historical primary/backup copies unchanged. The small run index references 
 Keep one canonical repository record per accepted run and commit it before correction; Git retains earlier versions.
 Historical citations use commit/path/hash, including the worked example's run-index reference; no duplicate snapshots or extensive amendment ledger are required.
 
-**Current accounting (2026-09-16): 359 active minutes booked; 841 minutes (14 hours 1 minute) remain under the 1,200-minute ceiling.**
-This includes preparation, review and model/tool waits, excludes owner-wait, and retains prior conservative allowances; the current booking includes final verification and commit/push allowance through 02:32 UTC.
+**Current accounting (2026-09-16): 366 active minutes booked; 834 minutes (13 hours 54 minutes) remain under the 1,200-minute ceiling.**
+This includes preparation, review and model/tool waits, excludes owner-wait, and retains prior conservative allowances; the current booking includes final verification and commit/push allowance through 03:09 UTC.
 All booked effort to date supports preparation/qualification; its older internal category split was not measured.
 Update this paragraph in place from the latest booked total plus new active intervals counted once; Git retains prior checkpoints, and their source logs are optional reconciliation evidence.
 Dispatched calls are **4 subject, 0 evaluator, 0 authoring, 0 retry**; remaining outer capacity is **36 / 12 / 4 / 4**, with no additional dispatch authorized.

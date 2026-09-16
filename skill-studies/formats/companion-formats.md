@@ -86,18 +86,20 @@ All displayed keys are required; repeat the condition/file entries as needed.
 | Field | Type and relationship |
 |---|---|
 | `format_version`, `manifest_id`, `study_id`, `case_id` | Strings; format is `1-draft` until agreement. |
-| `status`, `created_at`, `source_revision` | Status `draft` or `frozen`; ISO date/time; preparation Git revision. Frozen does not mean authorized. |
+| `status`, `created_at`, `source_revision` | Status `draft` or `frozen`; ISO date/time; full Git commit containing the identified repository input bytes. A preparation base commit with different bytes is insufficient. Frozen does not mean authorized. |
 | `authorities` | Identities for `spec`, `protocol`, `format_contract`, `score_schema`, `policy`, plus nonempty `criteria` identity array. |
-| `conditions` | Nonempty list of unique condition IDs; each has configuration identity, prompt identity and fixture mappings. |
-| `fixtures` | Each entry has `source` identity and `target` relative path; reproduce the runner configuration's exact mapping. |
-| `target_skill` | Frozen source identity or `null` for an absent target; when present it must match a supplied fixture. |
+| `conditions` | Nonempty list of unique condition IDs; each has its configuration identity and `target_skill` source path. The configuration owns prompt/fixture paths and destination mappings. |
+| `subject_sources` | One deduplicated identity list covering exactly the union of prompt and fixture source files resolved from all condition configurations. Shared files appear once; configuration files themselves are identified in `conditions`. |
+| `target_skill` | Source path resolving to an entry in `subject_sources`, or `null` for an absent target. When present it must be a fixture supplied by that condition; do not repeat its identity. |
 | `controller_only` | Array of remaining checkers, expected facts, qualification and source-provenance identities used for this case. Policy/criteria already appear in authorities. None may occur in subject inputs. |
-| `supersedes`, `amendment` | Prior manifest citation or `null`; concise reason/affected scope, or `null` for the first version. Earlier accepted versions live in Git. |
 
 `sources.json` remains the broader inspected-source inventory; it is not proof of supplied inputs.
 The freeze manifest is the selected case's exact input inventory.
 Configuration `0.2` remains unchanged: prompt and fixture sources resolve from the configuration directory, and each fixture source is one regular file.
-Compare every mapping and byte identity with the real config loader before freezing.
+Derive prompt/fixture membership and mappings with the real config loader; verify the exact source set, hashes and target-skill membership before freezing.
+Reject missing or extra source entries and controller-only material appearing in subject inputs; these are structural checks, not proof against guidance embedded in other text.
+Resolve repository identities at `source_revision`; retained external files remain identified by absolute path/hash. Commit changed repository inputs before freezing their manifest, keeping the manifest out of its own input inventory.
+Use Git for manifest history and put a correction's brief explanation beside its governing decision; no `supersedes` or `amendment` fields are required.
 Original conditions always identify the preserved original snapshot; later candidates use separate sources.
 The existing SSR manifests remain under their current identities until explicit migration at format agreement.
 
