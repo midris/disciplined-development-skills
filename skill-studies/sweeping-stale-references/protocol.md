@@ -193,7 +193,7 @@ Working directory: `/Users/simon/work/personal/disciplined-development-skills`. 
 Input identities: [semantic delivery](cases/semantic-delivery/manifest.json), [moved guide](cases/moved-guide/manifest.json), [Shiv](cases/discovery-shiv/manifest.json). Reuse semantic delivery's existing frozen inputs; its earlier protocol pin is input/rule provenance, not this batch's authorization. Every new attempt cites the current batch authorization separately. The new moved-guide controller definition references the historical pilot's unchanged subject/configuration/checker files; its historical policy-2 package remains intact.
 The CLI still resolves to version 0.154.0 and the hash recorded above; the runner remains unchanged from the qualified pilot-02 tree. Recheck mutable identities before dispatch; the provider does not expose an immutable model revision.
 The runner emits unique bundles beneath `/private/tmp/ssr-core-baseline-01/skilltest-runs/`; preserve complete stopped bundles under the development primary using their emitted directory names and one inventory each. [core-baseline-01-run-index.json](core-baseline-01-run-index.json) records every actual attempt and its canonical result; an empty index before collection does not imply executions.
-Inspect/replay only disposable copies, using each case's fixed checker and semantic rules. Write execution results at `results/<run-id>.json` and the aggregate at `core-baseline-01-assessment.md`; the protocol owns subsequent decisions. The [partial assessment](core-baseline-01-assessment.md) records order 1: complete functional repair, but missing full skill-read output leaves setup attribution unresolved. Collection is paused before order 2 under the existing stop rule. Diagnose capture with retained evidence/offline checks before resuming; no retry or replacement is authorized. Do not silently change frozen input/capture settings or weaken setup requirements.
+Inspect/replay only disposable copies, using each case's fixed checker and semantic rules. Write execution results at `results/<run-id>.json` and the aggregate at `core-baseline-01-assessment.md`; the protocol owns subsequent decisions. The [partial assessment](core-baseline-01-assessment.md) records order 1: complete functional repair, but missing full skill-read output leaves setup attribution unresolved. Collection is paused before order 2 under the existing stop rule. The [offline diagnosis and capture proposal](capture-diagnosis.md) reproduce the CLI omission without model calls. Review the proposed session retention, then implement and verify the revised capture before resuming; no retry or replacement is authorized. Do not silently change frozen input/capture settings or weaken setup requirements.
 
 
 ## Storage and accounting
@@ -216,8 +216,8 @@ Keep historical primary/backup copies unchanged. The small run index references 
 Keep one canonical repository record per accepted run and commit it before correction; Git retains earlier versions.
 Historical citations use commit/path/hash, including the worked example's run-index reference; no duplicate snapshots or extensive amendment ledger are required.
 
-**Current accounting (2026-09-16): 471 active minutes booked; 729 minutes (12 hours 9 minutes) remain under the 1,200-minute ceiling.**
-This includes preparation, review and model/tool waits, excludes owner-wait, and retains prior conservative allowances; the current booking includes the intervening active review turns and this preparation/attempt/diagnosis session, with verification and closing allowance through 18:58 UTC.
+**Current accounting (2026-09-16): 485 active minutes booked; 715 minutes (11 hours 55 minutes) remain under the 1,200-minute ceiling.**
+This includes preparation, review and model/tool waits, excludes owner-wait, and retains prior conservative allowances; the current booking includes the intervening active status turns and offline capture diagnosis, with verification and closing allowance through 20:10 UTC.
 Preparation and collection/assessment effort are included in the combined active total; the internal category split was not separately timed.
 Update this paragraph in place from the latest booked total plus new active intervals counted once; Git retains prior checkpoints, and their source logs are optional reconciliation evidence.
 Dispatched calls are **7 subject, 0 evaluator, 0 authoring, 0 retry**; remaining outer capacity is **33 / 12 / 4 / 4**. Eleven core-baseline-01 subject calls remain authorized but paused; no replacement is authorized for its setup-unresolved attempt.
@@ -228,7 +228,7 @@ Remaining-work forecast, in active minutes, including model/tool waits, review a
 | Work | Estimate | Basis |
 |---|---:|---|
 | Document generator/validator | 120 | Existing preliminary implementation/qualification allowance; refine scope after baseline assessment. |
-| Evidence-capture diagnosis | 25 | Bounded offline investigation allowance; scope any changed collection mechanics before resumption. |
+| Capture repair and offline verification | 25 | Proposed session-retention change after owner review; no extra model call allowance. |
 | Remaining core collection/preservation | 195 | Eleven 15-minute timeout ceilings plus local preservation overhead, conditional on resolving the capture pause. |
 | Core batch assessment/review | 90 | Apply existing checks/rules to twelve observations and aggregate by case/condition. |
 | Any justified rewrite and contemporaneous comparison | 180 | Conditional planning allowance, not a rewrite approval or selected later call count. |
