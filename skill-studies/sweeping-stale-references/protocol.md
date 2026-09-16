@@ -61,7 +61,7 @@ The owner initially permitted either procedural severity choice; the pilot walkt
 ## Assessment policy
 
 The owner accepted the criterion boundaries, evidence-backed outcomes, separate setup/functional/procedural treatment and explicit assessor context.
-The [execution-result format](../formats/execution-result.template.json) records one execution; the [batch assessment](../formats/assessment.template.md) aggregates the declared repetitions under the [spec's assessment rules](../../plans/specs/2026-09-11-model-driven-skill-testing-framework.md#6-assess-observations-and-establish-the-baseline).
+In the retained policy text below, “fixed-format score record” means the [execution result](../formats/execution-result.template.json) for one execution; the [batch assessment](../formats/assessment.template.md) aggregates the declared repetitions under the [spec's assessment rules](../../plans/specs/2026-09-11-model-driven-skill-testing-framework.md#6-assess-observations-and-establish-the-baseline).
 No batch acceptance threshold or full baseline repetition count is selected yet. Use descriptive counts until the concrete scope/rule is agreed; no default 4/5 threshold follows from the format example.
 Input-format changes do not alter the following criterion policy. Historical references to preserving or separately identifying a correction are satisfied by committed Git versions and a concise reason, not duplicate history files.
 
@@ -157,8 +157,8 @@ Keep historical primary/backup copies unchanged. The small run index references 
 Keep one canonical repository record per accepted run and commit it before correction; Git retains earlier versions.
 Historical citations use commit/path/hash, including the worked example's run-index reference; no duplicate snapshots or extensive amendment ledger are required.
 
-**Current accounting (2026-09-16): 408 active minutes booked; 792 minutes (13 hours 12 minutes) remain under the 1,200-minute ceiling.**
-This includes preparation, review and model/tool waits, excludes owner-wait, and retains prior conservative allowances; the current booking includes final verification and commit/push allowance through 05:42 UTC.
+**Current accounting (2026-09-16): 413 active minutes booked; 787 minutes (13 hours 7 minutes) remain under the 1,200-minute ceiling.**
+This includes preparation, review and model/tool waits, excludes owner-wait, and retains prior conservative allowances; the current booking includes review-response verification allowance through 05:55 UTC.
 All booked effort to date supports preparation/qualification; its older internal category split was not measured.
 Update this paragraph in place from the latest booked total plus new active intervals counted once; Git retains prior checkpoints, and their source logs are optional reconciliation evidence.
 Dispatched calls are **4 subject, 0 evaluator, 0 authoring, 0 retry**; remaining outer capacity is **36 / 12 / 4 / 4**, with no additional dispatch authorized.
