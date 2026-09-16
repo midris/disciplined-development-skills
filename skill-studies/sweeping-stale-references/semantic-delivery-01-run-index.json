@@ -3,5 +3,100 @@
   "index_id": "semantic-delivery-01",
   "study_id": "sweeping-stale-references",
   "batch_id": "semantic-delivery-01",
-  "attempts": []
+  "attempts": [
+    {
+      "attempt_id": "semantic-delivery-01-original-1-1",
+      "case_id": "semantic-delivery",
+      "condition": "original",
+      "repetition": 1,
+      "attempt_number": 1,
+      "retry_of": null,
+      "manifest": {
+        "path": "skill-studies/sweeping-stale-references/cases/semantic-delivery/manifest.json",
+        "sha256": "184aaa47b231899244aa0248d2ea60581e5671451f610ffcc1c714394acdd689",
+        "version": "1",
+        "git_revision": "88fa47be87108f5aba9a59d67f714b173b94c77a"
+      },
+      "authorization": {
+        "artifact": {
+          "path": "skill-studies/sweeping-stale-references/protocol.md",
+          "sha256": "bfc611c94989b6fe436b4b825746f989f4671e5b350c1b6bbee51991386ac2fd",
+          "version": "1",
+          "git_revision": "784d5d52672a5554a5b5152bbaa190f08462abe3"
+        },
+        "selector": "First collection: semantic-delivery-01; owner authorization and exact commands"
+      },
+      "run_id": "20260916T065509138Z-ssr-semantic-delivery-original-d9863671-a7b7-4567-883a-423f2afa8d1d-b_hgjgpz",
+      "allocation": {
+        "pool": "subject",
+        "charge": 1
+      },
+      "bundle": {
+        "path": "/Users/simon/work/personal/skill-study-private/sweeping-stale-references/development/20260916T065509138Z-ssr-semantic-delivery-original-d9863671-a7b7-4567-883a-423f2afa8d1d-b_hgjgpz",
+        "inventory": {
+          "path": "/Users/simon/work/personal/skill-study-private/sweeping-stale-references/development/20260916T065509138Z-ssr-semantic-delivery-original-d9863671-a7b7-4567-883a-423f2afa8d1d-b_hgjgpz.inventory.json",
+          "sha256": "05665ece627cc4886d72518f09467ee356f08ecf5a1701ec2c3e8a79aec0c3fd",
+          "version": "1"
+        },
+        "verified": true
+      },
+      "result": {
+        "result_id": "semantic-delivery-01-original",
+        "record": {
+          "path": "skill-studies/sweeping-stale-references/results/20260916T065509138Z-ssr-semantic-delivery-original-d9863671-a7b7-4567-883a-423f2afa8d1d-b_hgjgpz.json",
+          "sha256": "ca34e49186e0a6048f2063be19fd438183caa7823c2882a8f69d5c2561f81af2",
+          "version": "1",
+          "git_revision": "9ec3748535acc3351de32f347cf4c937bcea633d"
+        }
+      },
+      "limitations": []
+    },
+    {
+      "attempt_id": "semantic-delivery-01-control-1-1",
+      "case_id": "semantic-delivery",
+      "condition": "control",
+      "repetition": 1,
+      "attempt_number": 1,
+      "retry_of": null,
+      "manifest": {
+        "path": "skill-studies/sweeping-stale-references/cases/semantic-delivery/manifest.json",
+        "sha256": "184aaa47b231899244aa0248d2ea60581e5671451f610ffcc1c714394acdd689",
+        "version": "1",
+        "git_revision": "88fa47be87108f5aba9a59d67f714b173b94c77a"
+      },
+      "authorization": {
+        "artifact": {
+          "path": "skill-studies/sweeping-stale-references/protocol.md",
+          "sha256": "bfc611c94989b6fe436b4b825746f989f4671e5b350c1b6bbee51991386ac2fd",
+          "version": "1",
+          "git_revision": "784d5d52672a5554a5b5152bbaa190f08462abe3"
+        },
+        "selector": "First collection: semantic-delivery-01; owner authorization and exact commands"
+      },
+      "run_id": "20260916T065737416Z-ssr-semantic-delivery-control-e26f87b4-4156-494c-8574-26b8da287849-9adtabwo",
+      "allocation": {
+        "pool": "subject",
+        "charge": 1
+      },
+      "bundle": {
+        "path": "/Users/simon/work/personal/skill-study-private/sweeping-stale-references/development/20260916T065737416Z-ssr-semantic-delivery-control-e26f87b4-4156-494c-8574-26b8da287849-9adtabwo",
+        "inventory": {
+          "path": "/Users/simon/work/personal/skill-study-private/sweeping-stale-references/development/20260916T065737416Z-ssr-semantic-delivery-control-e26f87b4-4156-494c-8574-26b8da287849-9adtabwo.inventory.json",
+          "sha256": "4175ad615123d2c88ba309242b9b8b0d0840a76e90898e6258d66be2f0d5f4a0",
+          "version": "1"
+        },
+        "verified": true
+      },
+      "result": {
+        "result_id": "semantic-delivery-01-control",
+        "record": {
+          "path": "skill-studies/sweeping-stale-references/results/20260916T065737416Z-ssr-semantic-delivery-control-e26f87b4-4156-494c-8574-26b8da287849-9adtabwo.json",
+          "sha256": "ea77aa6d0b843f85eccc5f590808a6050f081899aacd9e3d1fd55b4110493cea",
+          "version": "1",
+          "git_revision": "9ec3748535acc3351de32f347cf4c937bcea633d"
+        }
+      },
+      "limitations": []
+    }
+  ]
 }
