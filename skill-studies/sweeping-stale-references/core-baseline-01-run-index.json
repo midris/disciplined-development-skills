@@ -248,6 +248,349 @@
       "limitations": [
         "Invalid setup: subject Python 3.9.6 cannot parse the supplied Click runtime; excluded from valid-setup aggregates."
       ]
+    },
+    {
+      "attempt_id": "core-baseline-01-discovery-shiv-control-1-1",
+      "case_id": "discovery-shiv",
+      "condition": "control",
+      "repetition": 1,
+      "attempt_number": 1,
+      "retry_of": null,
+      "manifest": {
+        "path": "skill-studies/sweeping-stale-references/cases/discovery-shiv/manifest.json",
+        "sha256": "31378d2d7cbbf11051174e8f6d88303a680eaf94cd73cb213a52be5b7ed69b2e",
+        "version": "1",
+        "git_revision": "1247058074e09610ab5ff9bfdc9220147694930c"
+      },
+      "authorization": {
+        "artifact": {
+          "path": "skill-studies/sweeping-stale-references/protocol.md",
+          "sha256": "47a37a642e7b20e954617035340d9e742a780eeec90c80e8ae11655486f40b5d",
+          "version": "1",
+          "git_revision": "b16e4f24013d85dd5fb6f8bd70de037eaa9343af"
+        },
+        "selector": "Core baseline: core-baseline-01; capture-2 evidence and approved runtime-1 amendment for orders 6\u201312; fixed order and stopping rules"
+      },
+      "run_id": "20260916T211426933Z-ssr-discovery-shiv-control-b3dadb31-1aba-4780-a9fc-85907563b12e-ijmz6xm4",
+      "allocation": {
+        "pool": "subject",
+        "charge": 1
+      },
+      "bundle": {
+        "path": "/Users/simon/work/personal/skill-study-private/sweeping-stale-references/development/20260916T211426933Z-ssr-discovery-shiv-control-b3dadb31-1aba-4780-a9fc-85907563b12e-ijmz6xm4",
+        "inventory": {
+          "path": "/Users/simon/work/personal/skill-study-private/sweeping-stale-references/development/20260916T211426933Z-ssr-discovery-shiv-control-b3dadb31-1aba-4780-a9fc-85907563b12e-ijmz6xm4.inventory.json",
+          "sha256": "cf593f678b0c7b7c276e3d0d1c286066a1c1fd3665e4b916e4ec0398aaee6b9e",
+          "version": "1"
+        },
+        "verified": true
+      },
+      "result": {
+        "result_id": "core-baseline-01-discovery-shiv-control-1",
+        "record": {
+          "path": "skill-studies/sweeping-stale-references/results/20260916T211426933Z-ssr-discovery-shiv-control-b3dadb31-1aba-4780-a9fc-85907563b12e-ijmz6xm4.json",
+          "sha256": "334177145c00866cc09aa9a771bb595a0867aadc409ef96ab4413fbf37afb967",
+          "version": "1",
+          "git_revision": "f37607a07e9e2b18157ea8d5b79421b45d50b13a"
+        }
+      },
+      "limitations": [
+        "Runtime-1: explicit restricted PATH selecting Homebrew Python 3.14.7; orders 2\u20134 used the earlier runtime. Interpret aggregates by runtime stratum."
+      ]
+    },
+    {
+      "attempt_id": "core-baseline-01-semantic-delivery-control-2-1",
+      "case_id": "semantic-delivery",
+      "condition": "control",
+      "repetition": 2,
+      "attempt_number": 1,
+      "retry_of": null,
+      "manifest": {
+        "path": "skill-studies/sweeping-stale-references/cases/semantic-delivery/manifest.json",
+        "sha256": "184aaa47b231899244aa0248d2ea60581e5671451f610ffcc1c714394acdd689",
+        "version": "1",
+        "git_revision": "88fa47be87108f5aba9a59d67f714b173b94c77a"
+      },
+      "authorization": {
+        "artifact": {
+          "path": "skill-studies/sweeping-stale-references/protocol.md",
+          "sha256": "47a37a642e7b20e954617035340d9e742a780eeec90c80e8ae11655486f40b5d",
+          "version": "1",
+          "git_revision": "b16e4f24013d85dd5fb6f8bd70de037eaa9343af"
+        },
+        "selector": "Core baseline: core-baseline-01; capture-2 evidence and approved runtime-1 amendment for orders 6\u201312; fixed order and stopping rules"
+      },
+      "run_id": "20260916T211634145Z-ssr-semantic-delivery-control-c2aab754-bf96-4e4d-9857-48bf7d1134c3-2pmsvp21",
+      "allocation": {
+        "pool": "subject",
+        "charge": 1
+      },
+      "bundle": {
+        "path": "/Users/simon/work/personal/skill-study-private/sweeping-stale-references/development/20260916T211634145Z-ssr-semantic-delivery-control-c2aab754-bf96-4e4d-9857-48bf7d1134c3-2pmsvp21",
+        "inventory": {
+          "path": "/Users/simon/work/personal/skill-study-private/sweeping-stale-references/development/20260916T211634145Z-ssr-semantic-delivery-control-c2aab754-bf96-4e4d-9857-48bf7d1134c3-2pmsvp21.inventory.json",
+          "sha256": "45956290bef0d2fa5b58b6337e5df107a58b8ca6cb27c9d99358e652d8ad4faa",
+          "version": "1"
+        },
+        "verified": true
+      },
+      "result": {
+        "result_id": "core-baseline-01-semantic-delivery-control-2",
+        "record": {
+          "path": "skill-studies/sweeping-stale-references/results/20260916T211634145Z-ssr-semantic-delivery-control-c2aab754-bf96-4e4d-9857-48bf7d1134c3-2pmsvp21.json",
+          "sha256": "483b5bcf5ee5bef533cebb206cecb03f250bd0f451688261cad9d31b45b2a1d4",
+          "version": "1",
+          "git_revision": "f37607a07e9e2b18157ea8d5b79421b45d50b13a"
+        }
+      },
+      "limitations": [
+        "Runtime-1: explicit restricted PATH selecting Homebrew Python 3.14.7; orders 2\u20134 used the earlier runtime. Interpret aggregates by runtime stratum."
+      ]
+    },
+    {
+      "attempt_id": "core-baseline-01-semantic-delivery-original-2-1",
+      "case_id": "semantic-delivery",
+      "condition": "original",
+      "repetition": 2,
+      "attempt_number": 1,
+      "retry_of": null,
+      "manifest": {
+        "path": "skill-studies/sweeping-stale-references/cases/semantic-delivery/manifest.json",
+        "sha256": "184aaa47b231899244aa0248d2ea60581e5671451f610ffcc1c714394acdd689",
+        "version": "1",
+        "git_revision": "88fa47be87108f5aba9a59d67f714b173b94c77a"
+      },
+      "authorization": {
+        "artifact": {
+          "path": "skill-studies/sweeping-stale-references/protocol.md",
+          "sha256": "47a37a642e7b20e954617035340d9e742a780eeec90c80e8ae11655486f40b5d",
+          "version": "1",
+          "git_revision": "b16e4f24013d85dd5fb6f8bd70de037eaa9343af"
+        },
+        "selector": "Core baseline: core-baseline-01; capture-2 evidence and approved runtime-1 amendment for orders 6\u201312; fixed order and stopping rules"
+      },
+      "run_id": "20260916T212056768Z-ssr-semantic-delivery-original-70c5ee60-ccdf-4d90-9892-d6d48f377aed-x3y26xvg",
+      "allocation": {
+        "pool": "subject",
+        "charge": 1
+      },
+      "bundle": {
+        "path": "/Users/simon/work/personal/skill-study-private/sweeping-stale-references/development/20260916T212056768Z-ssr-semantic-delivery-original-70c5ee60-ccdf-4d90-9892-d6d48f377aed-x3y26xvg",
+        "inventory": {
+          "path": "/Users/simon/work/personal/skill-study-private/sweeping-stale-references/development/20260916T212056768Z-ssr-semantic-delivery-original-70c5ee60-ccdf-4d90-9892-d6d48f377aed-x3y26xvg.inventory.json",
+          "sha256": "1ea19a5c5ce6511e084166f1374462174669f39b6214c4ed2f951c70275ea707",
+          "version": "1"
+        },
+        "verified": true
+      },
+      "result": {
+        "result_id": "core-baseline-01-semantic-delivery-original-2",
+        "record": {
+          "path": "skill-studies/sweeping-stale-references/results/20260916T212056768Z-ssr-semantic-delivery-original-70c5ee60-ccdf-4d90-9892-d6d48f377aed-x3y26xvg.json",
+          "sha256": "c4ebd409e88f465d24ddb5de13c05357885803238b983953b340babbedf690ea",
+          "version": "1",
+          "git_revision": "f37607a07e9e2b18157ea8d5b79421b45d50b13a"
+        }
+      },
+      "limitations": [
+        "Runtime-1: explicit restricted PATH selecting Homebrew Python 3.14.7; orders 2\u20134 used the earlier runtime. Interpret aggregates by runtime stratum."
+      ]
+    },
+    {
+      "attempt_id": "core-baseline-01-moved-guide-control-2-1",
+      "case_id": "moved-guide",
+      "condition": "control",
+      "repetition": 2,
+      "attempt_number": 1,
+      "retry_of": null,
+      "manifest": {
+        "path": "skill-studies/sweeping-stale-references/cases/moved-guide/manifest.json",
+        "sha256": "4f78793708ec8ded5e1e4fe045d4d7fef524ce58af254dac076e0625223411b0",
+        "version": "1",
+        "git_revision": "1247058074e09610ab5ff9bfdc9220147694930c"
+      },
+      "authorization": {
+        "artifact": {
+          "path": "skill-studies/sweeping-stale-references/protocol.md",
+          "sha256": "47a37a642e7b20e954617035340d9e742a780eeec90c80e8ae11655486f40b5d",
+          "version": "1",
+          "git_revision": "b16e4f24013d85dd5fb6f8bd70de037eaa9343af"
+        },
+        "selector": "Core baseline: core-baseline-01; capture-2 evidence and approved runtime-1 amendment for orders 6\u201312; fixed order and stopping rules"
+      },
+      "run_id": "20260916T212335423Z-ssr-pilot-02-control-3b771a16-a2c4-4a5b-9004-f81c7e4eddab-ds6p3tlh",
+      "allocation": {
+        "pool": "subject",
+        "charge": 1
+      },
+      "bundle": {
+        "path": "/Users/simon/work/personal/skill-study-private/sweeping-stale-references/development/20260916T212335423Z-ssr-pilot-02-control-3b771a16-a2c4-4a5b-9004-f81c7e4eddab-ds6p3tlh",
+        "inventory": {
+          "path": "/Users/simon/work/personal/skill-study-private/sweeping-stale-references/development/20260916T212335423Z-ssr-pilot-02-control-3b771a16-a2c4-4a5b-9004-f81c7e4eddab-ds6p3tlh.inventory.json",
+          "sha256": "1d3009386e4cc9830e96b87131e657d97077649f171f78ff954ed77734e688cd",
+          "version": "1"
+        },
+        "verified": true
+      },
+      "result": {
+        "result_id": "core-baseline-01-moved-guide-control-2",
+        "record": {
+          "path": "skill-studies/sweeping-stale-references/results/20260916T212335423Z-ssr-pilot-02-control-3b771a16-a2c4-4a5b-9004-f81c7e4eddab-ds6p3tlh.json",
+          "sha256": "02660eb632d18f1f810287b5751c683edf1ae230eb752ad2c4402fba63340f48",
+          "version": "1",
+          "git_revision": "f37607a07e9e2b18157ea8d5b79421b45d50b13a"
+        }
+      },
+      "limitations": [
+        "Runtime-1: explicit restricted PATH selecting Homebrew Python 3.14.7; orders 2\u20134 used the earlier runtime. Interpret aggregates by runtime stratum."
+      ]
+    },
+    {
+      "attempt_id": "core-baseline-01-moved-guide-original-2-1",
+      "case_id": "moved-guide",
+      "condition": "original",
+      "repetition": 2,
+      "attempt_number": 1,
+      "retry_of": null,
+      "manifest": {
+        "path": "skill-studies/sweeping-stale-references/cases/moved-guide/manifest.json",
+        "sha256": "4f78793708ec8ded5e1e4fe045d4d7fef524ce58af254dac076e0625223411b0",
+        "version": "1",
+        "git_revision": "1247058074e09610ab5ff9bfdc9220147694930c"
+      },
+      "authorization": {
+        "artifact": {
+          "path": "skill-studies/sweeping-stale-references/protocol.md",
+          "sha256": "47a37a642e7b20e954617035340d9e742a780eeec90c80e8ae11655486f40b5d",
+          "version": "1",
+          "git_revision": "b16e4f24013d85dd5fb6f8bd70de037eaa9343af"
+        },
+        "selector": "Core baseline: core-baseline-01; capture-2 evidence and approved runtime-1 amendment for orders 6\u201312; fixed order and stopping rules"
+      },
+      "run_id": "20260916T212458466Z-ssr-pilot-02-original-61c309cf-8839-4a59-ae5d-598c15ebc2d8-js5_fmmw",
+      "allocation": {
+        "pool": "subject",
+        "charge": 1
+      },
+      "bundle": {
+        "path": "/Users/simon/work/personal/skill-study-private/sweeping-stale-references/development/20260916T212458466Z-ssr-pilot-02-original-61c309cf-8839-4a59-ae5d-598c15ebc2d8-js5_fmmw",
+        "inventory": {
+          "path": "/Users/simon/work/personal/skill-study-private/sweeping-stale-references/development/20260916T212458466Z-ssr-pilot-02-original-61c309cf-8839-4a59-ae5d-598c15ebc2d8-js5_fmmw.inventory.json",
+          "sha256": "8568351d3a6871045d7fa0dd9831cdf2bc916de25e0e8cf04b080f97a60c9c6b",
+          "version": "1"
+        },
+        "verified": true
+      },
+      "result": {
+        "result_id": "core-baseline-01-moved-guide-original-2",
+        "record": {
+          "path": "skill-studies/sweeping-stale-references/results/20260916T212458466Z-ssr-pilot-02-original-61c309cf-8839-4a59-ae5d-598c15ebc2d8-js5_fmmw.json",
+          "sha256": "83300b6ac0ad18ff783517f723c75e0b2e5756c80f4c12285b7a5417415d91ad",
+          "version": "1",
+          "git_revision": "f37607a07e9e2b18157ea8d5b79421b45d50b13a"
+        }
+      },
+      "limitations": [
+        "Runtime-1: explicit restricted PATH selecting Homebrew Python 3.14.7; orders 2\u20134 used the earlier runtime. Interpret aggregates by runtime stratum."
+      ]
+    },
+    {
+      "attempt_id": "core-baseline-01-discovery-shiv-control-2-1",
+      "case_id": "discovery-shiv",
+      "condition": "control",
+      "repetition": 2,
+      "attempt_number": 1,
+      "retry_of": null,
+      "manifest": {
+        "path": "skill-studies/sweeping-stale-references/cases/discovery-shiv/manifest.json",
+        "sha256": "31378d2d7cbbf11051174e8f6d88303a680eaf94cd73cb213a52be5b7ed69b2e",
+        "version": "1",
+        "git_revision": "1247058074e09610ab5ff9bfdc9220147694930c"
+      },
+      "authorization": {
+        "artifact": {
+          "path": "skill-studies/sweeping-stale-references/protocol.md",
+          "sha256": "47a37a642e7b20e954617035340d9e742a780eeec90c80e8ae11655486f40b5d",
+          "version": "1",
+          "git_revision": "b16e4f24013d85dd5fb6f8bd70de037eaa9343af"
+        },
+        "selector": "Core baseline: core-baseline-01; capture-2 evidence and approved runtime-1 amendment for orders 6\u201312; fixed order and stopping rules"
+      },
+      "run_id": "20260916T212735036Z-ssr-discovery-shiv-control-db99edf4-0944-4645-84c7-ece8cfaf847c-iw28zhnz",
+      "allocation": {
+        "pool": "subject",
+        "charge": 1
+      },
+      "bundle": {
+        "path": "/Users/simon/work/personal/skill-study-private/sweeping-stale-references/development/20260916T212735036Z-ssr-discovery-shiv-control-db99edf4-0944-4645-84c7-ece8cfaf847c-iw28zhnz",
+        "inventory": {
+          "path": "/Users/simon/work/personal/skill-study-private/sweeping-stale-references/development/20260916T212735036Z-ssr-discovery-shiv-control-db99edf4-0944-4645-84c7-ece8cfaf847c-iw28zhnz.inventory.json",
+          "sha256": "9e59d2f44f7d3b2285aedb187ed68a18ce3daa34cd390bedb610feaebb56e008",
+          "version": "1"
+        },
+        "verified": true
+      },
+      "result": {
+        "result_id": "core-baseline-01-discovery-shiv-control-2",
+        "record": {
+          "path": "skill-studies/sweeping-stale-references/results/20260916T212735036Z-ssr-discovery-shiv-control-db99edf4-0944-4645-84c7-ece8cfaf847c-iw28zhnz.json",
+          "sha256": "2c2b444511c8bfc8f686e4a4218de10e4b640aff3909adedac5fa3121da27f17",
+          "version": "1",
+          "git_revision": "f37607a07e9e2b18157ea8d5b79421b45d50b13a"
+        }
+      },
+      "limitations": [
+        "Runtime-1: explicit restricted PATH selecting Homebrew Python 3.14.7; orders 2\u20134 used the earlier runtime. Interpret aggregates by runtime stratum."
+      ]
+    },
+    {
+      "attempt_id": "core-baseline-01-discovery-shiv-original-2-1",
+      "case_id": "discovery-shiv",
+      "condition": "original",
+      "repetition": 2,
+      "attempt_number": 1,
+      "retry_of": null,
+      "manifest": {
+        "path": "skill-studies/sweeping-stale-references/cases/discovery-shiv/manifest.json",
+        "sha256": "31378d2d7cbbf11051174e8f6d88303a680eaf94cd73cb213a52be5b7ed69b2e",
+        "version": "1",
+        "git_revision": "1247058074e09610ab5ff9bfdc9220147694930c"
+      },
+      "authorization": {
+        "artifact": {
+          "path": "skill-studies/sweeping-stale-references/protocol.md",
+          "sha256": "47a37a642e7b20e954617035340d9e742a780eeec90c80e8ae11655486f40b5d",
+          "version": "1",
+          "git_revision": "b16e4f24013d85dd5fb6f8bd70de037eaa9343af"
+        },
+        "selector": "Core baseline: core-baseline-01; capture-2 evidence and approved runtime-1 amendment for orders 6\u201312; fixed order and stopping rules"
+      },
+      "run_id": "20260916T212924988Z-ssr-discovery-shiv-original-1cb8ac19-08e0-4462-81be-8adc8fa6452b-fhhj0y2r",
+      "allocation": {
+        "pool": "subject",
+        "charge": 1
+      },
+      "bundle": {
+        "path": "/Users/simon/work/personal/skill-study-private/sweeping-stale-references/development/20260916T212924988Z-ssr-discovery-shiv-original-1cb8ac19-08e0-4462-81be-8adc8fa6452b-fhhj0y2r",
+        "inventory": {
+          "path": "/Users/simon/work/personal/skill-study-private/sweeping-stale-references/development/20260916T212924988Z-ssr-discovery-shiv-original-1cb8ac19-08e0-4462-81be-8adc8fa6452b-fhhj0y2r.inventory.json",
+          "sha256": "fd26d460fc0c12a00eaf7fbdea5315593ea64a6ced31ae9ed58683e25d981887",
+          "version": "1"
+        },
+        "verified": true
+      },
+      "result": {
+        "result_id": "core-baseline-01-discovery-shiv-original-2",
+        "record": {
+          "path": "skill-studies/sweeping-stale-references/results/20260916T212924988Z-ssr-discovery-shiv-original-1cb8ac19-08e0-4462-81be-8adc8fa6452b-fhhj0y2r.json",
+          "sha256": "67094d99097fd4c2ce699210e4640608adae14da217ee91fbf50984d4c024c25",
+          "version": "1",
+          "git_revision": "f37607a07e9e2b18157ea8d5b79421b45d50b13a"
+        }
+      },
+      "limitations": [
+        "Runtime-1: explicit restricted PATH selecting Homebrew Python 3.14.7; orders 2\u20134 used the earlier runtime. Interpret aggregates by runtime stratum."
+      ]
     }
   ]
 }
