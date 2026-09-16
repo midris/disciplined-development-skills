@@ -2,9 +2,9 @@
 
 Format version: `1`
 Study ID: `sweeping-stale-references`
-Status: contract and version-1 formats accepted; unrun input layouts migrated; semantic-delivery-01 scope and commands authorized; collection pending.
+Status: contract and version-1 formats accepted; unrun input layouts migrated; semantic-delivery-01 collected and assessed; wider baseline incomplete; no further dispatch authorized.
 The [plan](../../plans/2026-09-11-model-driven-skill-testing.md) owns progress; the [spec](../../plans/specs/2026-09-11-model-driven-skill-testing-framework.md) owns the workflow.
-Four subject executions completed in two historical development pairs. No measured baseline or skill rewrite has been created; only the semantic-delivery-01 pair below is authorized.
+Six subject executions completed: four historical development executions and the two-execution semantic-delivery-01 baseline batch. Its first assessment is complete; the wider baseline and any skill rewrite remain incomplete. No further model calls are authorized.
 
 ## Sources and intended use
 
@@ -133,21 +133,21 @@ Control contribution claims require evidence that omitted guidance was not loade
 Pre-baseline development is closed at two pairs. Do not reopen it for a new facet; a named readiness defect requires a separately authorized diagnostic exception.
 ### First collection: semantic-delivery-01
 
-Status: authorized by the owner on 2026-09-16 in this session: “ok, let's do it. what model/effort will we be using for the runs?” The response confirmed the unchanged `gpt-5.6-sol` / low settings for both commands. This batch is the first baseline observation, not another process pilot or completion of the wider baseline.
+Status: completed; both authorized calls spent, no further dispatch authorized. The owner authorized this batch on 2026-09-16 in this session: “ok, let's do it. what model/effort will we be using for the runs?” The response confirmed the unchanged `gpt-5.6-sol` / low settings for both commands. This batch is the first baseline observation, not another process pilot or completion of the wider baseline.
 Question: does the frozen original achieve complete committed semantic reconciliation here, and how does the same task behave without SSR guidance?
 Scope: `semantic-delivery` only; `original` then `control`, one execution each, sequentially. This fixed order is convenient, not counterbalanced; one observation per condition cannot establish consistency or population reliability.
 Inputs: [version-1 manifest](cases/semantic-delivery/manifest.json), [case rules](cases/semantic-delivery/assessment.md) and their pinned authorities. Configurations below own Sol-low/workspace-write settings; original alone supplies the frozen skill.
 Acceptance: descriptive-only. Include every valid-setup execution, including functional failures and unknown criteria; show invalid/unassessed attempts and uncompleted conditions separately. No threshold, selective replacement or automatic retry.
 Stop after both attempts, or earlier for preservation failure, unresolved invocation charge, suspected contamination or an execution/setup error requiring inspection. A valid behavioral failure does not cancel the control. Further attempts require separate authorization.
-Authorized spending: at most **2 subject invocations**, zero evaluator/authoring/retry calls. Both invocations bring subject use to 6/40 and leave 34 subject calls for later selected work; they authorize no larger campaign.
+Authorized spending: at most **2 subject invocations**, zero evaluator/authoring/retry calls. Both invocations are spent; they authorize no larger campaign.
 
-Run each command separately from `/Users/simon/work/personal/disciplined-development-skills`, after approval and input/CLI identity verification:
+Commands used separately from `/Users/simon/work/personal/disciplined-development-skills`, after approval and input/CLI identity verification; recorded for reproducibility, with no re-execution authorized:
 
 ```sh
 TMPDIR=/private/tmp/ssr-semantic-delivery-01 skill-validation/runner/.venv/bin/skilltest run skill-studies/sweeping-stale-references/cases/semantic-delivery/original.json
 ```
 
-Preserve and verify the first bundle before executing the second command:
+The first bundle was preserved and verified before the second command:
 
 ```sh
 TMPDIR=/private/tmp/ssr-semantic-delivery-01 skill-validation/runner/.venv/bin/skilltest run skill-studies/sweeping-stale-references/cases/semantic-delivery/control.json
@@ -158,9 +158,9 @@ Local identity check: `/opt/homebrew/bin/codex` resolves to `/opt/homebrew/Caskr
 The runner retains its 900-second model timeout. The runner tree is byte-for-byte unchanged from the [pilot-02 tested revision](pilot-02-run-index.json), `c1ca9599abba6acc6a3ef884a9ac00a24e72e83c`; no runner change is required for these commands. Recheck mutable execution dependencies before dispatch.
 
 The runner emits each unique bundle path beneath `/private/tmp/ssr-semantic-delivery-01/skilltest-runs/`. After writes stop, preserve the complete directory at the development primary below using that emitted directory name, inventory and verify it, then record the actual attempt in [semantic-delivery-01-run-index.json](semantic-delivery-01-run-index.json).
-The index is empty until an attempt actually occurs; planned conditions belong here. Do not fabricate runner IDs or approval citations.
-After inspection/replay on disposable copies, write `results/<run-id>.json` for each assessable execution and `semantic-delivery-01-assessment.md` for batch coverage, counts, uncertainty and the observed condition comparison. No result or assessment exists yet.
-Before collection, commit the accepted protocol and frozen manifest, recording the owner's actual scope/command authorization in the index when attempts occur. A frozen input manifest alone is not consent.
+The index records the two actual attempts, their authorization, retained evidence and canonical execution results.
+The index resolves both execution results; [semantic-delivery-01-assessment.md](semantic-delivery-01-assessment.md) records coverage, counts, uncertainty and the observed condition comparison after disposable replay and evidence inspection.
+The index pins the committed authorization, frozen manifest and execution results; these completed commands do not authorize repeating the batch.
 
 
 ## Storage and accounting
@@ -183,24 +183,21 @@ Keep historical primary/backup copies unchanged. The small run index references 
 Keep one canonical repository record per accepted run and commit it before correction; Git retains earlier versions.
 Historical citations use commit/path/hash, including the worked example's run-index reference; no duplicate snapshots or extensive amendment ledger are required.
 
-**Current accounting (2026-09-16): 430 active minutes booked; 770 minutes (12 hours 50 minutes) remain under the 1,200-minute ceiling.**
-This includes preparation, review and model/tool waits, excludes owner-wait, and retains prior conservative allowances; the current booking includes format-migration verification and commit/push allowance through 06:42 UTC.
-All booked effort to date supports preparation/qualification; its older internal category split was not measured.
+**Current accounting (2026-09-16): 448 active minutes booked; 752 minutes (12 hours 32 minutes) remain under the 1,200-minute ceiling.**
+This includes preparation, review and model/tool waits, excludes owner-wait, and retains prior conservative allowances; the current booking includes collection/assessment verification and commit allowance through 07:10 UTC.
+Preparation and collection/assessment effort are included in the combined active total; the internal category split was not separately timed.
 Update this paragraph in place from the latest booked total plus new active intervals counted once; Git retains prior checkpoints, and their source logs are optional reconciliation evidence.
-Dispatched calls are **4 subject, 0 evaluator, 0 authoring, 0 retry**; remaining outer capacity is **36 / 12 / 4 / 4**, with only the two subject invocations specified above authorized.
+Dispatched calls are **6 subject, 0 evaluator, 0 authoring, 0 retry**; remaining outer capacity is **34 / 12 / 4 / 4**, with no further dispatch authorized.
 
 
 Remaining-work forecast, in active minutes, including model/tool waits, review and storage once:
 
 | Work | Estimate | Basis |
 |---|---:|---|
-| Final collection preparation/freeze | 20 | Exact commands and input migration are prepared; allow identity/preservation checks and recording approval. |
-| First pair: collection and preservation | 40 | Historical executions took about 38–77 seconds each; allow both 15-minute runner timeouts plus storage/inspection overhead. |
-| First pair: execution results and batch assessment | 45 | Planning estimate for applying six criteria, replay, aggregate coverage and review. |
 | Document generator/validator | 120 | Existing preliminary implementation/qualification allowance; refine scope after baseline assessment. |
 | Further baseline, any justified rewrite and contemporaneous comparison | 300 | Conditional planning allowance, not a selected suite, call count or rewrite approval; revise after the first assessment. |
 | Closure and review | 30 | Decision, limitations and study closeout. |
-| **Total** | **555** | Forecast, not additional authorization. |
+| **Total** | **450** | Forecast, not additional authorization. |
 
 Compare this total with the current remaining time above; it fits that ceiling with contingency, subject to revision when later scope is known. This is an estimate, not a guarantee of whole-study completion.
 Preserve later comparison capacity when selecting additional repetitions; no automatic pool transfers, retries or ceiling extensions are allowed.
@@ -210,12 +207,13 @@ Preserve later comparison capacity when selecting additional repetitions; no aut
 
 | Evidence | Interpretation |
 |---|---|
+| [Semantic-delivery-01 assessment](semantic-delivery-01-assessment.md) | First measured batch: original completes committed reconciliation; control leaves two current claims stale. One observation per condition; no consistency claim. |
 | [Pilot 01 report](pilot-results.md), [attempt index](pilot-run-index.json), [checks](pilot-checks.json) | Historical original/control development pair; assessment correction and limits belong in the report. |
 | [Pilot 02 report](pilot-02-results.md), [attempt index](pilot-02-run-index.json), [checks](pilot-02-checks.json) | Historical moved-guide pair; retained evidence supports the recorded outcomes, not a stable reliability estimate. |
 | [Policy-3 worked example](assessments/pilot-02-original-policy-3-example.json), [identity/schema index](assessments/index.json) | Unchanged illustrative assessment of retained evidence, not a new execution or replacement of the canonical policy-2 result. |
 
-No full baseline batch assessment, rewrite objective or adoption decision exists yet.
-Batch assessments will own aggregate counts, patterns, limitations and any version comparison; this section records the owner's resulting decisions by reference.
+The first batch is assessed; no broader baseline conclusion, rewrite objective or adoption decision exists yet.
+Batch assessments own aggregate counts, patterns, limitations and any version comparison; this section records the owner's resulting decisions by reference.
 After baseline assessment, agree the generator/validator's bounded CLI and effort before implementation. It is not a collection prerequisite.
 Before authoring, re-read the selected writing-skills guidance and reconcile it with the evidence-supported objective. A passing control is useful evidence; resolve any pure-cleanup/RED conflict without manufacturing failure or resuming the abandoned wording campaign.
 Compare the exact candidate with contemporaneous original executions under declared conditions; add a contemporaneous no-target condition only for a current contribution claim.

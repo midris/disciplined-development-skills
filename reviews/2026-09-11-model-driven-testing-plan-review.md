@@ -628,3 +628,11 @@ The obsolete eight-call proposal was removed from the Shiv definition; the proto
 Verification: 9 format tests, 12 semantic controller tests and 14 Shiv controller tests pass. All 202 links affected by the input changes resolve. Both manifests resolve every cited repository identity at their full source commit; the config loader verifies exact source membership, original/control fixture parity and controller exclusion. Historical schema/index pins resolve; the live policy body equals its retained snapshot. No provider calls or new tooling implementation.
 
 DD-VERDICT: PASS
+
+## Semantic-delivery-01 assessment review
+
+Reviewed the fixed scope, supplied inputs, complete retained evidence, criterion judgments and aggregate against the spec and policy 3. Exactly two authorized subject invocations completed with no retry; both setups are valid within the recorded isolation limits and both complete inventories verify. The frozen criterion/subject/policy bytes remain unchanged.
+Original completes and commits all three repairs; control commits README only, leaving two current claims stale. Control's search exposes related paths/context but omits the complete stale clauses, so the record does not infer knowingly ignored content. Control's F1/F3 failures share one omission and count as one failed functional execution. Original's P3 counting/grouping defect is non-blocking; control receives no undisclosed procedural penalties.
+All 11 aggregate rows match the two results; full planned coverage, zero unknowns and descriptive-only acceptance remain explicit. One execution per condition does not support a consistency claim. Both results pass schema/criterion/reference checks; authority/result Git pins and all direct evidence hashes resolve; 190 affected document links and policy/accounting checks pass. Nine format tests pass. No additional tooling, provider call or skill edit was introduced.
+
+DD-VERDICT: PASS

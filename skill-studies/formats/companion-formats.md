@@ -31,7 +31,7 @@ The protocol owns current study decisions, their authority and brief rationale; 
 Link case-specific rules, configuration settings, manifests, attempt indexes and assessments rather than recopying their contents.
 Omit unselected optional provisions, such as reserved-evidence boundaries or a graded numeric mapping; material limits on actual claims remain explicit.
 Use Git for earlier versions and place a correction's reason beside the current decision; no decision ledger is required.
-The live SSR protocol and the two unrun case definitions/manifests use this layout. Historical observed-case inputs retain their recorded formats.
+The live SSR protocol and the Shiv and semantic-delivery case definitions/manifests use this layout. Historical observed-case inputs retain their recorded formats.
 
 The protocol's policy section owns the study's assessment rules.
 Controller policy copies derive verbatim from its designated policy body; identify the copy outside that body to avoid self-reference.
