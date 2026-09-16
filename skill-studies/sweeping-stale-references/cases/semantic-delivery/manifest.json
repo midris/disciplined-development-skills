@@ -3,9 +3,9 @@
   "manifest_id": "ssr-semantic-delivery-1",
   "study_id": "sweeping-stale-references",
   "case_id": "semantic-delivery",
-  "status": "draft",
+  "status": "frozen",
   "created_at": "2026-09-16",
-  "source_revision": "fa55131f082888a62e97a79fcb859fc6e84df902",
+  "source_revision": "784d5d52672a5554a5b5152bbaa190f08462abe3",
   "authorities": {
     "spec": {
       "path": "plans/specs/2026-09-11-model-driven-skill-testing-framework.md",
@@ -14,7 +14,7 @@
     },
     "protocol": {
       "path": "skill-studies/sweeping-stale-references/protocol.md",
-      "sha256": "0088cbe858c2d3bbb97c8580548eecee5d67cdb188a619217690eff901f95a2f",
+      "sha256": "bfc611c94989b6fe436b4b825746f989f4671e5b350c1b6bbee51991386ac2fd",
       "version": "1"
     },
     "format_contract": {
@@ -35,7 +35,7 @@
     "criteria": [
       {
         "path": "skill-studies/sweeping-stale-references/cases/semantic-delivery/assessment.md",
-        "sha256": "1d4bbd07a0faab993e38c6e55e4d6fe09bfaf1532f95f97ff1a546097f3ee437",
+        "sha256": "c5d3d65a1f7b19cc63b8f73be598a5407c36c44f0a76e22dbe5bd16ce0f27bd1",
         "version": "1"
       }
     ]
