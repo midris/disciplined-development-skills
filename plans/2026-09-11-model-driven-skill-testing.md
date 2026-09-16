@@ -172,10 +172,11 @@ Reserved bundles and revealing assessments stay entirely in the verified private
 - [x] Record owner acceptance of the formats and publish version 1.
 - [x] Apply the accepted case/manifest layouts to both unrun cases, preserving subject inputs, policy and historical evidence.
 - [x] Verify criterion coverage, source membership, Git retrieval and schema behavior; prepare exact commands and a remaining-work forecast.
-- [ ] Obtain approval for the protocol's proposed `semantic-delivery-01` scope/commands, freeze accepted collection identities and collect only those authorized attempts.
+- [x] Obtain approval for the protocol's `semantic-delivery-01` scope/commands: original then control, Sol-low, one execution each, no retries.
+- [ ] Freeze accepted collection identities, collect only those two authorized attempts, preserve evidence and write execution results plus the batch assessment.
 
 The owner accepted the reconciled [format set](../skill-studies/formats/README.md), now version `1`. The protocol and both unrun case definitions/manifests use the accepted layouts; historical observed-case inputs and the `1-draft` worked example remain unchanged under their recorded identities.
-Present the [concrete semantic-delivery batch proposal](../skill-studies/sweeping-stale-references/protocol.md#proposed-first-collection-semantic-delivery-01) for scope/command approval. No further layout review, new scenario, evaluator layer or pre-baseline pilot is needed.
+Execute only the [authorized semantic-delivery batch](../skill-studies/sweeping-stale-references/protocol.md#first-collection-semantic-delivery-01). No further layout review, new scenario, evaluator layer or pre-baseline pilot is needed.
 Preserve SSR's agreed policy: complete/correct/preserved/committed outcomes lead; purely procedural defects are visible and non-blocking; insufficient evidence is not failure. Batch counts describe repetitions without relabelling execution failures or inventing an acceptance threshold.
-The current recommendation remains a first semantic-delivery original/control pair with the prepared Sol-low settings, presented with exact inputs, commands and spending scope. It is a proposal, not dispatch authority. Any larger baseline batch, repetitions and acceptance rule must be declared before its collection.
+The owner authorized the first semantic-delivery original/control pair with the prepared Sol-low settings and the exact protocol commands/spending scope. Any larger baseline batch, repetitions and acceptance rule must be declared before its collection.
 The protocol owns selected work, ceilings and accounting; old full-campaign tables are in Git, not a current run plan. The document generator/validator remains after baseline assessment, with CLI/scope agreement before implementation.

@@ -2,9 +2,9 @@
 
 Format version: `1`
 Study ID: `sweeping-stale-references`
-Status: contract and version-1 formats accepted; unrun input layouts migrated; next collection scope proposed, not authorized.
+Status: contract and version-1 formats accepted; unrun input layouts migrated; semantic-delivery-01 scope and commands authorized; collection pending.
 The [plan](../../plans/2026-09-11-model-driven-skill-testing.md) owns progress; the [spec](../../plans/specs/2026-09-11-model-driven-skill-testing-framework.md) owns the workflow.
-Four subject executions completed in two historical development pairs. No measured baseline or skill rewrite has been created; no further model calls are authorized.
+Four subject executions completed in two historical development pairs. No measured baseline or skill rewrite has been created; only the semantic-delivery-01 pair below is authorized.
 
 ## Sources and intended use
 
@@ -131,15 +131,15 @@ The existing runner uses config schema 0.2 and result schema 0.3. It prepares a 
 Control contribution claims require evidence that omitted guidance was not loaded. Record limits on observed isolation rather than claiming exhaustive host-wide exclusion.
 
 Pre-baseline development is closed at two pairs. Do not reopen it for a new facet; a named readiness defect requires a separately authorized diagnostic exception.
-### Proposed first collection: semantic-delivery-01
+### First collection: semantic-delivery-01
 
-Status: proposed; **no dispatch authorized**. This batch is the first baseline observation, not another process pilot or completion of the wider baseline.
+Status: authorized by the owner on 2026-09-16 in this session: “ok, let's do it. what model/effort will we be using for the runs?” The response confirmed the unchanged `gpt-5.6-sol` / low settings for both commands. This batch is the first baseline observation, not another process pilot or completion of the wider baseline.
 Question: does the frozen original achieve complete committed semantic reconciliation here, and how does the same task behave without SSR guidance?
 Scope: `semantic-delivery` only; `original` then `control`, one execution each, sequentially. This fixed order is convenient, not counterbalanced; one observation per condition cannot establish consistency or population reliability.
 Inputs: [version-1 manifest](cases/semantic-delivery/manifest.json), [case rules](cases/semantic-delivery/assessment.md) and their pinned authorities. Configurations below own Sol-low/workspace-write settings; original alone supplies the frozen skill.
 Acceptance: descriptive-only. Include every valid-setup execution, including functional failures and unknown criteria; show invalid/unassessed attempts and uncompleted conditions separately. No threshold, selective replacement or automatic retry.
 Stop after both attempts, or earlier for preservation failure, unresolved invocation charge, suspected contamination or an execution/setup error requiring inspection. A valid behavioral failure does not cancel the control. Further attempts require separate authorization.
-Proposed spending: at most **2 subject invocations**, zero evaluator/authoring/retry calls. Both invocations would bring subject use to 6/40 and leave 34 subject calls for later selected work; they authorize no larger campaign.
+Authorized spending: at most **2 subject invocations**, zero evaluator/authoring/retry calls. Both invocations bring subject use to 6/40 and leave 34 subject calls for later selected work; they authorize no larger campaign.
 
 Run each command separately from `/Users/simon/work/personal/disciplined-development-skills`, after approval and input/CLI identity verification:
 
@@ -187,7 +187,7 @@ Historical citations use commit/path/hash, including the worked example's run-in
 This includes preparation, review and model/tool waits, excludes owner-wait, and retains prior conservative allowances; the current booking includes format-migration verification and commit/push allowance through 06:42 UTC.
 All booked effort to date supports preparation/qualification; its older internal category split was not measured.
 Update this paragraph in place from the latest booked total plus new active intervals counted once; Git retains prior checkpoints, and their source logs are optional reconciliation evidence.
-Dispatched calls are **4 subject, 0 evaluator, 0 authoring, 0 retry**; remaining outer capacity is **36 / 12 / 4 / 4**, with no additional dispatch authorized.
+Dispatched calls are **4 subject, 0 evaluator, 0 authoring, 0 retry**; remaining outer capacity is **36 / 12 / 4 / 4**, with only the two subject invocations specified above authorized.
 
 
 Remaining-work forecast, in active minutes, including model/tool waits, review and storage once:

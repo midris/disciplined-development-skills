@@ -6,7 +6,7 @@ Format version: `1`
 Study ID: `sweeping-stale-references`
 Case ID: `semantic-delivery`
 Definition version: `1`
-Status: prepared; collection authorization pending.
+Status: prepared; collection scope and authorization belong to the protocol.
 Purpose: observe reconciliation of differently worded documentation after a settled behavior change.
 Coverage and development exposure: [protocol suite](../../protocol.md#proposed-baseline-case-selection); O1–O4, with no O5/local-change claim.
 This study-authored case uses earlier pilot bootstrap mechanics; [preparation](preparation.json) records the source inspection and reuse decision.
@@ -65,7 +65,7 @@ python3 -B skill-studies/sweeping-stale-references/cases/semantic-delivery/quali
 ```
 
 Reconstruction rejects optimized Python, which would disable its qualification assertions, and clears inherited Git overrides before operating on scratch repositories. It writes its report to a new temporary directory and prints the path; it never replaces frozen case records or invokes a provider.
-The manifest identifies preserved input bytes and controller artifacts. Existing original/control settings are Sol-low, workspace-write; they are prepared configurations, not approved commands to run models.
+The manifest identifies preserved input bytes and controller artifacts. Existing original/control settings are Sol-low, workspace-write; the protocol owns selection and authorization of execution commands.
 Retained preparation/qualification records describe their recorded input versions; the current manifest owns collection identities. Layout migration preserves subject inputs, expected facts, checkers and policy bytes.
 
 ## Criteria
