@@ -72,6 +72,9 @@ sys.stdout.buffer.write(base64.b64decode(settings["stdout"]))
 sys.stderr.buffer.write(base64.b64decode(settings["stderr"]))
 if Path(sys.argv[0]).name == "codex":
     Path(sys.argv[sys.argv.index("--output-last-message")+1]).write_bytes(base64.b64decode(settings["final"]))
+    sessions = Path(os.environ["CODEX_HOME"]) / "sessions"
+    sessions.mkdir()
+    (sessions / "rollout-dummy.jsonl").write_text(json.dumps({"type":"response_item","payload":{"type":"function_call_output","call_id":"dummy","output":"complete dummy tool output"}}))
 sys.exit(settings["exit_code"])
 """
     for name in ("codex", "claude"):

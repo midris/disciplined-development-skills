@@ -22,6 +22,7 @@ def boundaries(monkeypatch):
     runtime.environment = {"HOME": "/private/home", "CODEX_HOME": "/private/codex",
                            "TMPDIR": "/private/tmp", "PATH": "/stub/bin:/usr/bin:/bin:/usr/sbin:/sbin"}
     runtime.prefix = []
+    runtime.retain_session.return_value = None
     runtime.cleanup.return_value = None
     runtime.communicate.return_value = (b'{"event":"done"}\n', b"warning", False)
     process = Mock(returncode=0)
@@ -49,7 +50,6 @@ def test_codex_invokes_fixed_command_environment_and_deadline(tmp_path, boundari
         "--cd",
         str(request.workspace_dir / "fixture"),
         "exec",
-        "--ephemeral",
         "--skip-git-repo-check",
         "--json",
         "--color",

@@ -165,7 +165,14 @@ def test_missing_executable_blocks_before_auth_copy(tmp_path, setup_calls, monke
 def test_model_failure_removes_actual_private_runtime(tmp_path, setup_calls, outcome):
     # Break: cleaning setup failures but leaking private files on the model-stage path.
     failure = subprocess.TimeoutExpired("model", 900) if outcome == "timeout" else KeyboardInterrupt()
-    setup_calls.process.communicate.side_effect = [(b"", b""), failure, (b"partial", b"error")]
+    def communicate(input=None, timeout=None):
+        if input is not None:
+            profile = Path(setup_calls.popen.call_args.kwargs["env"]["CODEX_HOME"])
+            sessions = profile / "sessions"; sessions.mkdir()
+            (sessions / "rollout-partial.jsonl").write_bytes(b'{"type":"response_item"}\n')
+            raise failure
+        return (b"partial", b"error") if timeout == 5 else (b"", b"")
+    setup_calls.process.communicate.side_effect = communicate
     request = request_at(tmp_path / "case")
     if outcome == "interrupt":
         with pytest.raises(KeyboardInterrupt):
@@ -393,3 +400,45 @@ def test_group_check_reaps_before_probing_and_handles_disappearance(monkeypatch)
     monkeypatch.setattr(os, "killpg", disappeared)
     assert process_runtime._group_exists(process) is False
     assert events == ["reap", (987654, 0)]
+
+
+@pytest.mark.parametrize('failure', [None, 'nonzero', 'missing', 'ambiguous', 'symlink', 'copy'])
+def test_session_evidence_is_published_before_cleanup_or_runtime_is_retained(tmp_path, setup_calls, failure):
+    # Break: deleting full tool-response evidence, copying auth, or accepting an ambiguous/symlinked capture.
+    request = request_at(tmp_path / 'session-case')
+    captured = b'{"type":"response_item","payload":{"type":"function_call_output","call_id":"read","output":"complete early output"}}\n'
+    roots = []
+    def communicate(input=None, timeout=None):
+        if input is None:
+            return b'', b''
+        profile = Path(setup_calls.popen.call_args.kwargs['env']['CODEX_HOME'])
+        roots.append(profile.parent)
+        sessions = profile / 'sessions/2026/09/16'; sessions.mkdir(parents=True)
+        if failure != 'missing':
+            source = sessions / 'rollout-test.jsonl'
+            if failure == 'symlink':
+                source.symlink_to(profile / 'auth.json')
+            else:
+                source.write_bytes(captured)
+        if failure == 'ambiguous':
+            (sessions / 'rollout-other.jsonl').write_bytes(captured)
+        if failure == 'copy':
+            (request.workspace_dir.parent / 'provider-session.jsonl').mkdir()
+        if failure == 'nonzero':
+            setup_calls.process.returncode = 7
+        return b'{"partial":"late output"}\n', b''
+    setup_calls.process.communicate.side_effect = communicate
+    result = invoke_provider(request)
+    target = request.workspace_dir.parent / 'provider-session.jsonl'
+    if failure in (None, 'nonzero'):
+        assert target.is_file(), 'full session evidence must survive runtime cleanup'
+        assert target.read_bytes() == captured
+        assert not roots[0].exists()
+        assert result.capture_error is None and result.cleanup_error is None
+    else:
+        assert roots[0].exists(), 'capture failure must retain recovery evidence'
+        assert result.capture_error and result.cleanup_error
+        assert not target.is_file()
+    assert result.invocation_started
+    assert result.exit_code == (7 if failure == 'nonzero' else 0)
+    assert '--ephemeral' not in setup_calls.popen.call_args.args[0]

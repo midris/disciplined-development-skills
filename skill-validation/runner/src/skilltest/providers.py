@@ -37,6 +37,7 @@ class ProviderResult:
     stderr_bytes: bytes = b""
     preparation_error: str | None = None
     cleanup_error: str | None = None
+    capture_error: str | None = None
 
 
 def invoke_provider(request: ProviderRequest, *, log: Callable[[str], None] = lambda message: None) -> ProviderResult:
@@ -69,12 +70,16 @@ def invoke_provider(request: ProviderRequest, *, log: Callable[[str], None] = la
             except (OSError, ValueError) as error:
                 result = replace(result, launch_error=str(error))
             else:
+                result = ProviderResult(request.provider, True)
                 stdout, stderr, timed_out = runtime.communicate(process, request.prompt_bytes, PROVIDER_TIMEOUT_SECONDS)
                 result = ProviderResult(
                     request.provider, True, process.returncode, timed_out,
                     stdout_bytes=stdout, stderr_bytes=stderr,
                 )
     finally:
+        if request.provider == "codex" and result.invocation_started:
+            capture_error = runtime.retain_session(request.workspace_dir.parent / "provider-session.jsonl")
+            result = replace(result, capture_error=capture_error)
         cleanup_error = runtime.cleanup()
         if cleanup_error:
             try:
@@ -102,7 +107,7 @@ def _arguments(request: ProviderRequest, *, executable: str = "codex") -> list[s
             # No fixture Git exception or additional writable evidence root.
             policy = 'permissions.skilltest={extends=":read-only",network={enabled=false}}'
         return [
-            executable, "--cd", str(request.workspace_dir / "fixture"), "exec", "--ephemeral",
+            executable, "--cd", str(request.workspace_dir / "fixture"), "exec",
             "--skip-git-repo-check", "--json",
             "--color", "never", "--model", request.model, "-c",
             f'model_reasoning_effort="{request.effort}"',

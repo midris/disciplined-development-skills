@@ -4,7 +4,7 @@
   "additionalProperties": false,
   "required": ["schema_version", "run_id", "status", "started_at", "finished_at", "duration_seconds", "test", "execution", "artifacts", "infrastructure_error"],
   "properties": {
-    "schema_version": {"const": "0.3"},
+    "schema_version": {"const": "0.4"},
     "run_id": {"type": "string", "minLength": 1},
     "status": {"enum": ["COMPLETED", "INFRA_ERROR"]},
     "started_at": {"type": "string", "pattern": "^[0-9]{4}-[0-9]{2}-[0-9]{2}T[0-9]{2}:[0-9]{2}:[0-9]{2}\\.[0-9]{3}Z$"},
@@ -41,13 +41,14 @@
     "artifacts": {
       "type": "object",
       "additionalProperties": false,
-      "required": ["config", "prompt_template", "prompt", "stdout", "stderr", "final", "fixture", "evidence"],
+      "required": ["config", "prompt_template", "prompt", "stdout", "stderr", "final", "fixture", "evidence", "provider_session"],
       "properties": {
         "config": {"allOf": [{"$ref": "#/$defs/file_artifact"}, {"properties": {"path": {"const": "config.json"}}}]},
         "prompt_template": {"allOf": [{"$ref": "#/$defs/file_artifact"}, {"properties": {"path": {"const": "prompt-template.txt"}}}]},
         "prompt": {"allOf": [{"$ref": "#/$defs/file_artifact"}, {"properties": {"path": {"const": "prompt.txt"}}}]},
         "stdout": {"allOf": [{"$ref": "#/$defs/file_artifact"}, {"properties": {"path": {"const": "stdout.txt"}}}]},
         "stderr": {"allOf": [{"$ref": "#/$defs/file_artifact"}, {"properties": {"path": {"const": "stderr.txt"}}}]},
+        "provider_session": {"allOf": [{"$ref": "#/$defs/file_artifact"}, {"properties": {"path": {"const": "provider-session.jsonl"}}}]},
         "final": {"allOf": [{"$ref": "#/$defs/file_artifact"}, {"properties": {"path": {"const": "final.txt"}}}]},
         "fixture": {"allOf": [{"$ref": "#/$defs/directory_artifact"}, {"properties": {"path": {"const": "workspace/fixture"}}}]},
         "evidence": {"allOf": [{"$ref": "#/$defs/directory_artifact"}, {"properties": {"path": {"const": "workspace/evidence"}}}]}
@@ -115,7 +116,8 @@
         "execution": {"properties": {"invocation_started": {"const": true}, "timed_out": {"const": false}, "exit_code": {"const": 0}}},
         "infrastructure_error": {"type": "object", "properties": {"code": {"const": "PROVIDER_CLEANUP_FAILED"}}}
       }
-    }
+    },
+    {"properties": {"status": {"const": "INFRA_ERROR"}, "execution": {"properties": {"invocation_started": {"const": true}}}, "infrastructure_error": {"allOf": [{"$ref": "#/$defs/infrastructure_error"}, {"properties": {"code": {"const": "SESSION_CAPTURE_FAILED"}}}]}}}
   ],
   "$defs": {
     "file_artifact": {
@@ -169,7 +171,7 @@
       "additionalProperties": false,
       "required": ["code", "message"],
       "properties": {
-        "code": {"enum": ["PREPARATION_FAILED", "PROVIDER_LAUNCH_FAILED", "PROVIDER_TIMEOUT", "PROVIDER_EXIT_NONZERO", "ARTIFACT_WRITE_FAILED", "PROVIDER_CLEANUP_FAILED"]},
+        "code": {"enum": ["PREPARATION_FAILED", "PROVIDER_LAUNCH_FAILED", "PROVIDER_TIMEOUT", "PROVIDER_EXIT_NONZERO", "ARTIFACT_WRITE_FAILED", "PROVIDER_CLEANUP_FAILED", "SESSION_CAPTURE_FAILED"]},
         "message": {"type": "string"}
       }
     }

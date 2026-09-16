@@ -17,7 +17,7 @@ from skilltest.workspace import RunContext
 
 ERROR_CODES = {
     "PREPARATION_FAILED", "PROVIDER_LAUNCH_FAILED", "PROVIDER_TIMEOUT",
-    "PROVIDER_EXIT_NONZERO", "ARTIFACT_WRITE_FAILED", "PROVIDER_CLEANUP_FAILED",
+    "PROVIDER_EXIT_NONZERO", "ARTIFACT_WRITE_FAILED", "PROVIDER_CLEANUP_FAILED", "SESSION_CAPTURE_FAILED",
 }
 
 
@@ -29,7 +29,7 @@ def result_record(
     finished_at: str,
     duration_seconds: float,
 ) -> dict[str, Any]:
-    """Build the schema 0.3 record from retained artifacts without interpreting content."""
+    """Build the schema 0.4 record from retained artifacts without interpreting content."""
     if error is not None and error[0] not in ERROR_CODES:
         raise ValueError(f"unknown infrastructure error code: {error[0]}")
     execution_record = {
@@ -44,7 +44,7 @@ def result_record(
         "exit_code": provider_result.exit_code,
     }
     return {
-        "schema_version": "0.3",
+        "schema_version": "0.4",
         "run_id": context.run_id,
         "status": "COMPLETED" if error is None else "INFRA_ERROR",
         "started_at": context.started_at,
@@ -58,6 +58,7 @@ def result_record(
             "prompt": _file_artifact(context.prompt_path, context.run_dir),
             "stdout": _file_artifact(context.stdout_path, context.run_dir),
             "stderr": _file_artifact(context.stderr_path, context.run_dir),
+            "provider_session": _file_artifact(context.run_dir / "provider-session.jsonl", context.run_dir),
             "final": _file_artifact(context.final_output_path, context.run_dir),
             "fixture": _directory_artifact(context.fixture_dir, context.run_dir),
             "evidence": _directory_artifact(context.evidence_dir, context.run_dir),

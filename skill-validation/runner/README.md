@@ -204,7 +204,7 @@ Provider flags and environment variables are adapter-owned; `execution.permissio
 
 ### Codex
 
-Codex uses ephemeral noninteractive execution with JSON and last-message capture, the configured model/effort, and `workspace/fixture/` as both cwd and `--cd` root.
+Codex uses a fresh noninteractive session with JSON, session-rollout and last-message capture, the configured model/effort, and `workspace/fixture/` as both cwd and `--cd` root.
 It retains `--skip-git-repo-check` and selects the fixed `skilltest` permission profile through command-local configuration.
 In `workspace-write` mode, the profile extends `:workspace`, adds sibling `workspace/evidence/` as a workspace root, disables command network access, and explicitly keeps `.git`, `.codex` and `.agents` read-only under both roots.
 In that mode, one exact-path override makes only `workspace/fixture/.git/` writable so tasks can stage originals and create local commits.
@@ -311,7 +311,7 @@ The runner writes `final.txt` only when one unambiguous successful terminal resu
 Otherwise the final file is absent and `runner.log` records the extraction limitation.
 Malformed, missing or provider-reported error output does not fabricate a process error or a file-write failure.
 Mechanical completion and evidence validity remain distinct: inspect the raw trace before scoring or accepting the run.
-Codex continues to capture its final answer through its own last-message option.
+Codex also captures its final answer through its last-message option. Its JSON command events may omit prefixes present in the model-facing tool response; use the retained session response entries when needed, with call-ID, content and truncation checks. See the [verified capture diagnosis](../../skill-studies/sweeping-stale-references/capture-diagnosis.md).
 
 The adapter passed offline verification and the [scoped live qualification](../pilot/qualification/README.md#claude-qualification-checkpoint) on Claude Code `2.1.266`.
 Use the [Claude qualification checkpoint](../pilot/qualification/README.md#claude-qualification-checkpoint) before a real comparison, including native no-DD/A/B/composition catalogs, required reads/writes, shell/Git behavior and common-input drift.
@@ -319,12 +319,12 @@ The completed qualification adds actual companion loading, file search/write/edi
 
 ## Result
 
-`result.json` has exact schema version `"0.3"` and records the run identity, timestamps, duration, test id, mechanical invocation state, fixed artifacts, and an infrastructure error when one occurred.
+`result.json` has exact schema version `"0.4"` and records the run identity, timestamps, duration, test id, mechanical invocation state, fixed artifacts, and an infrastructure error when one occurred.
 `execution.permissions` is required and records `workspace-write` or `read-only`, including failures before provider launch; an omitted input field is recorded as its resolved `workspace-write` default.
-The result version changes because the machine-readable execution contract now requires this field.
-Historical `0.2` results remain unchanged and must be interpreted with their version and retained configuration; a missing mode is not evidence of either permission setting.
-Consumers validating new results must use the updated result schema; the worksheet reader continues to read the fields common to both versions.
-`status` is `COMPLETED` only for a mechanically completed invocation; otherwise it is `INFRA_ERROR` with one of `PREPARATION_FAILED`, `PROVIDER_LAUNCH_FAILED`, `PROVIDER_TIMEOUT`, `PROVIDER_EXIT_NONZERO`, `ARTIFACT_WRITE_FAILED`, or `PROVIDER_CLEANUP_FAILED`.
+Version 0.4 adds `artifacts.provider_session` for `provider-session.jsonl` and `SESSION_CAPTURE_FAILED`. Codex copies the single invocation-owned rollout before private-profile cleanup; no profile/auth files are copied. Claude records the session artifact as absent and retains its existing raw trace. Missing, ambiguous, empty, symlinked or uncopyable Codex session evidence is an explicit capture error; the private runtime is retained with a recovery path. A retained session may still contain truncated or incomplete tool output, so assess its actual contents.
+Historical `0.2` and `0.3` results remain unchanged and must be interpreted with their version and retained configuration; a missing mode is not evidence of either permission setting.
+Consumers validating new results must use the updated result schema; the worksheet reader continues to read the fields common to these versions.
+`status` is `COMPLETED` only for a mechanically completed invocation; otherwise it is `INFRA_ERROR` with one of `PREPARATION_FAILED`, `PROVIDER_LAUNCH_FAILED`, `PROVIDER_TIMEOUT`, `PROVIDER_EXIT_NONZERO`, `ARTIFACT_WRITE_FAILED`, `PROVIDER_CLEANUP_FAILED`, or `SESSION_CAPTURE_FAILED`.
 The cleanup code applies to either provider after an otherwise successful model call; earlier preparation/launch/timeout/provider errors stay primary, with cleanup failure logged additionally.
 Exit `0` means the run completed mechanically, exit `1` means an owned-run, provider, timeout, or artifact-persistence failure, and exit `2` means usage or configuration failed before a run directory was owned.
 
@@ -337,7 +337,7 @@ The runner never evaluates evidence or assigns a behavioral verdict.
 
 ```json
 {
-  "schema_version": "0.3",
+  "schema_version": "0.4",
   "run_id": "20260827T120000000Z-runner-smoke-<unique>",
   "status": "COMPLETED",
   "started_at": "2026-08-27T12:00:00.000Z",
@@ -361,6 +361,7 @@ The runner never evaluates evidence or assigns a behavioral verdict.
     "prompt": {"path": "prompt.txt", "exists": true, "bytes": 300, "sha256": "<64 lowercase hex characters>"},
     "stdout": {"path": "stdout.txt", "exists": true, "bytes": 40, "sha256": "<64 lowercase hex characters>"},
     "stderr": {"path": "stderr.txt", "exists": true, "bytes": 0, "sha256": "<64 lowercase hex characters>"},
+    "provider_session": {"path": "provider-session.jsonl", "exists": false, "bytes": null, "sha256": null},
     "final": {"path": "final.txt", "exists": true, "bytes": 40, "sha256": "<64 lowercase hex characters>"},
     "fixture": {
       "path": "workspace/fixture",

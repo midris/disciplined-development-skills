@@ -92,6 +92,8 @@ def _provider_error(result: ProviderResult) -> tuple[str, str] | None:
         return "PROVIDER_TIMEOUT", f"{result.executable} timed out"
     if result.exit_code != 0:
         return "PROVIDER_EXIT_NONZERO", f"{result.executable} exited with code {result.exit_code}"
+    if result.capture_error is not None:
+        return "SESSION_CAPTURE_FAILED", result.capture_error
     if result.cleanup_error is not None:
         return "PROVIDER_CLEANUP_FAILED", result.cleanup_error
     return None

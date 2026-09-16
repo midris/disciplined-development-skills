@@ -26,6 +26,7 @@ ERROR_CODES = (
     "PROVIDER_EXIT_NONZERO",
     "ARTIFACT_WRITE_FAILED",
     "PROVIDER_CLEANUP_FAILED",
+    "SESSION_CAPTURE_FAILED",
 )
 
 
@@ -39,7 +40,7 @@ def _directory(path: str) -> dict[str, Any]:
 
 def _completed_record() -> dict[str, Any]:
     return {
-        "schema_version": "0.3",
+        "schema_version": "0.4",
         "run_id": "20260828T120000000Z-result-case-unique",
         "status": "COMPLETED",
         "started_at": "2026-08-28T12:00:00.000Z",
@@ -64,6 +65,7 @@ def _completed_record() -> dict[str, Any]:
             "stdout": _file("stdout.txt"),
             "stderr": _file("stderr.txt"),
             "final": _file("final.txt"),
+            "provider_session": _file("provider-session.jsonl"),
             "fixture": _directory("workspace/fixture"),
             "evidence": _directory("workspace/evidence"),
         },
@@ -427,6 +429,7 @@ def test_result_record_uses_schema_02_paths_and_final_retained_fixture_state(
         "stdout": "stdout.txt",
         "stderr": "stderr.txt",
         "final": "final.txt",
+        "provider_session": "provider-session.jsonl",
         "fixture": "workspace/fixture",
         "evidence": "workspace/evidence",
     }
@@ -465,7 +468,7 @@ def test_result_records_permissions_in_versioned_execution(tmp_path, permissions
     result = results_module.result_record(context, config, ProviderResult('codex', not failed, exit_code=None if failed else 0),
                            ('PREPARATION_FAILED', 'stopped') if failed else None,
                            '2026-08-28T12:00:01.000Z', 1.0)
-    assert result['schema_version'] == '0.3'
+    assert result['schema_version'] == '0.4'
     assert result['execution']['permissions'] == permissions
     _validate(result)
 

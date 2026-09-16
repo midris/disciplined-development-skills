@@ -62,10 +62,17 @@ The owner initially permitted either procedural severity choice; the pilot walkt
 
 The owner accepted the criterion boundaries, evidence-backed outcomes, separate setup/functional/procedural treatment and explicit assessor context.
 In the retained policy text below, “fixed-format score record” means the [execution result](../formats/execution-result.template.json) for one execution; the [batch assessment](../formats/assessment.template.md) aggregates the declared repetitions under the [spec's assessment rules](../../plans/specs/2026-09-11-model-driven-skill-testing-framework.md#6-assess-observations-and-establish-the-baseline).
-No batch acceptance threshold or full baseline repetition count is selected yet. Use descriptive counts until the concrete scope/rule is agreed; no default 4/5 threshold follows from the format example.
+Core-baseline-01 fixes two executions per case/condition and descriptive counts; no universal acceptance threshold follows from the format example.
 Input-format changes do not alter the following criterion policy. Historical references to preserving or separately identifying a correction are satisfied by committed Git versions and a concise reason, not duplicate history files.
 
 The [policy-3 copy](assessment-policies/SSR-assessment-3.txt) derives verbatim from the following subsection. Existing assessed pilot inputs retain policy 2; the current Shiv, semantic-delivery and moved-guide controller definitions use policy 3.
+
+### Session evidence amendment: capture-2
+
+Owner-approved on 2026-09-16: “the code change is approved, please continue”, together with addressing the review findings. Applies prospectively to core-baseline-01 orders 2–12; order 1 retains its frozen assessment and remains excluded. The twelve-slot scope, remaining eleven calls, order, model/effort, task/skill bytes, criterion meanings and no-retry rule remain fixed.
+Codex session persistence replaces ephemeral execution in the fresh private profile. Before cleanup, the runner copies its single session to `provider-session.jsonl` in the existing bundle; result schema 0.4 identifies that artifact. Each resumed attempt cites this amendment at its frozen Git revision, which also identifies the revised runner. Earlier input-manifest pins still identify unchanged subject inputs and criterion policy; this explicit capture amendment governs the new evidence source.
+Admissible exposure evidence is either complete command output in `stdout.txt` or actual tool-response content in `provider-session.jsonl`. For the session source, verify its hash against the mechanical result/inventory, match session identity to stdout's thread ID and session cwd to this invocation's fixture, and connect each response's call ID to its read command. Inspect output content, ordering and truncation; whole-text equality to the frozen skill, or faithful reconstruction from retained ordered read/poll responses, must establish full exposure. An attempted command, model summary, input-file presence or filename listing alone is insufficient. Missing/truncated output that cannot establish the required content keeps setup `insufficient evidence` and stops further dispatch for inspection.
+Controller checks record `original_skill_read_evidence` with the source artifact, response line numbers and call IDs; `original_skill_read_trace_lines` in older checks remains historical stdout-only evidence. The old field is not a required field for new checks. The same admissible-source rule supports content exposure/search-order inspection for both conditions; target procedures remain inapplicable to control. Apply missing-evidence consequences only to what the evidence cannot establish.
 
 ### Current SSR assessment policy
 
@@ -191,9 +198,9 @@ Working directory: `/Users/simon/work/personal/disciplined-development-skills`. 
 | 12 | discovery-shiv | original | 2 | `skill-studies/sweeping-stale-references/cases/discovery-shiv/original.json` |
 
 Input identities: [semantic delivery](cases/semantic-delivery/manifest.json), [moved guide](cases/moved-guide/manifest.json), [Shiv](cases/discovery-shiv/manifest.json). Reuse semantic delivery's existing frozen inputs; its earlier protocol pin is input/rule provenance, not this batch's authorization. Every new attempt cites the current batch authorization separately. The new moved-guide controller definition references the historical pilot's unchanged subject/configuration/checker files; its historical policy-2 package remains intact.
-The CLI still resolves to version 0.154.0 and the hash recorded above; the runner remains unchanged from the qualified pilot-02 tree. Recheck mutable identities before dispatch; the provider does not expose an immutable model revision.
+The CLI still resolves to version 0.154.0 and the hash recorded above; capture-2 changes the runner to retain session evidence; the permissions and subject inputs remain those qualified for the cases. Recheck mutable identities before dispatch; the provider does not expose an immutable model revision.
 The runner emits unique bundles beneath `/private/tmp/ssr-core-baseline-01/skilltest-runs/`; preserve complete stopped bundles under the development primary using their emitted directory names and one inventory each. [core-baseline-01-run-index.json](core-baseline-01-run-index.json) records every actual attempt and its canonical result; an empty index before collection does not imply executions.
-Inspect/replay only disposable copies, using each case's fixed checker and semantic rules. Write execution results at `results/<run-id>.json` and the aggregate at `core-baseline-01-assessment.md`; the protocol owns subsequent decisions. The [partial assessment](core-baseline-01-assessment.md) records order 1: complete functional repair, but missing full skill-read output leaves setup attribution unresolved. Collection is paused before order 2 under the existing stop rule. The [offline diagnosis and capture proposal](capture-diagnosis.md) reproduce the CLI omission without model calls. Review the proposed session retention, then implement and verify the revised capture before resuming; no retry or replacement is authorized. Do not silently change frozen input/capture settings or weaken setup requirements.
+Inspect/replay only disposable copies, using each case's fixed checker and semantic rules. Write execution results at `results/<run-id>.json` and the aggregate at `core-baseline-01-assessment.md`; the protocol owns subsequent decisions. The [partial assessment](core-baseline-01-assessment.md) records order 1: complete functional repair, but missing full skill-read output leaves setup attribution unresolved. Collection is paused before order 2 under the existing stop rule. The [capture diagnosis](capture-diagnosis.md) reproduces the CLI omission without model calls. The owner approved session retention and the prospective [capture-2 amendment](#session-evidence-amendment-capture-2); offline verification passed, and committing this amendment freezes the authority for resumption. No retry or replacement is authorized. Do not silently change frozen input/capture settings or weaken setup requirements.
 
 
 ## Storage and accounting
@@ -228,12 +235,12 @@ Remaining-work forecast, in active minutes, including model/tool waits, review a
 | Work | Estimate | Basis |
 |---|---:|---|
 | Document generator/validator | 120 | Existing preliminary implementation/qualification allowance; refine scope after baseline assessment. |
-| Capture repair and offline verification | 25 | Proposed session-retention change after owner review; no extra model call allowance. |
+| Capture repair and offline verification | 0 | Completed under capture-2; no model calls. |
 | Remaining core collection/preservation | 195 | Eleven 15-minute timeout ceilings plus local preservation overhead, conditional on resolving the capture pause. |
 | Core batch assessment/review | 90 | Apply existing checks/rules to twelve observations and aggregate by case/condition. |
 | Any justified rewrite and contemporaneous comparison | 180 | Conditional planning allowance, not a rewrite approval or selected later call count. |
 | Closure and review | 30 | Decision, limitations and study closeout. |
-| **Total** | **640** | Forecast, not additional authorization. |
+| **Total** | **615** | Forecast, not additional authorization. |
 
 Compare this total with the current remaining time above; it fits that ceiling with contingency, subject to revision when later scope is known. This is an estimate, not a guarantee of whole-study completion.
 Preserve later comparison capacity when selecting additional repetitions; no automatic pool transfers, retries or ceiling extensions are allowed.

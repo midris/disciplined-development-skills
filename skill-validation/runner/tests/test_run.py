@@ -86,6 +86,7 @@ def test_rendered_request_and_raw_artifacts_are_preserved(build_config_case, pro
     assert {key: val["path"] for key, val in value["artifacts"].items()} == {
         "config": "config.json", "prompt_template": "prompt-template.txt", "prompt": "prompt.txt",
         "stdout": "stdout.txt", "stderr": "stderr.txt", "final": "final.txt",
+        "provider_session": "provider-session.jsonl",
         "fixture": "workspace/fixture", "evidence": "workspace/evidence",
     }
     assert (outcome.run_dir / "runner.log").read_text().splitlines()[-1].endswith("COMPLETED")
@@ -108,6 +109,7 @@ def test_preparation_failure_never_calls_provider(build_config_case, provider_ca
     (ProviderResult("codex", False, preparation_error="setup failed"), "PREPARATION_FAILED"),
     (ProviderResult("codex", False, launch_error="launch failed"), "PROVIDER_LAUNCH_FAILED"),
     (ProviderResult("codex", True, exit_code=0, cleanup_error="cleanup failed"), "PROVIDER_CLEANUP_FAILED"),
+    (ProviderResult("codex", True, exit_code=0, capture_error="session unavailable"), "SESSION_CAPTURE_FAILED"),
     (ProviderResult("codex", True, exit_code=7, cleanup_error="cleanup failed"), "PROVIDER_EXIT_NONZERO"),
 ])
 def test_provider_failure_classification_retains_actual_outcome(build_config_case, provider_call, result, expected):
