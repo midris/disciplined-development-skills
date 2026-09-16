@@ -2,9 +2,9 @@
 
 Format version: `1`
 Study ID: `sweeping-stale-references`
-Status: contract and version-1 formats accepted; unrun input layouts migrated; semantic-delivery-01 collected and assessed; wider baseline incomplete; no further dispatch authorized.
+Status: contract and version-1 formats accepted; unrun input layouts migrated; semantic-delivery-01 collected and assessed; wider baseline incomplete; only core-baseline-01 is authorized.
 The [plan](../../plans/2026-09-11-model-driven-skill-testing.md) owns progress; the [spec](../../plans/specs/2026-09-11-model-driven-skill-testing-framework.md) owns the workflow.
-Six subject executions completed: four historical development executions and the two-execution semantic-delivery-01 baseline batch. Its first assessment is complete; the wider baseline and any skill rewrite remain incomplete. No further model calls are authorized.
+Six subject executions completed: four historical development executions and the two-execution semantic-delivery-01 baseline batch. Its first assessment is complete; the wider baseline and any skill rewrite remain incomplete. Only the twelve core-baseline-01 subject invocations below are authorized.
 
 ## Sources and intended use
 
@@ -65,7 +65,7 @@ In the retained policy text below, “fixed-format score record” means the [ex
 No batch acceptance threshold or full baseline repetition count is selected yet. Use descriptive counts until the concrete scope/rule is agreed; no default 4/5 threshold follows from the format example.
 Input-format changes do not alter the following criterion policy. Historical references to preserving or separately identifying a correction are satisfied by committed Git versions and a concise reason, not duplicate history files.
 
-The [policy-3 copy](assessment-policies/SSR-assessment-3.txt) derives verbatim from the following subsection. Existing assessed pilot inputs retain policy 2; the unrun Shiv and semantic-delivery controller packages use policy 3.
+The [policy-3 copy](assessment-policies/SSR-assessment-3.txt) derives verbatim from the following subsection. Existing assessed pilot inputs retain policy 2; the current Shiv, semantic-delivery and moved-guide controller definitions use policy 3.
 
 ### Current SSR assessment policy
 
@@ -97,13 +97,13 @@ The completed pilot's frozen assessment, manifest and raw bundles retain their o
 
 ### Proposed baseline case selection
 
-The owner accepted CLI rename, moved-path reconciliation and changed-behavior documentation as the three core situations. Exact batch membership and repetitions remain to be frozen.
+The owner accepted CLI rename, moved-path reconciliation and changed-behavior documentation as the three core situations. Core-baseline-01 selects all three with two new executions per condition under the scope below.
 
 | Case | Membership / exposure | Coverage and limits | Rules and evidence |
 |---|---|---|---|
-| discovery-shiv | Proposed baseline; development | O1–O4: CLI consumers in README, script, Make and CI; triage, preservation and committed repair. Literal location diversity, not demonstrated hard discovery. | [Case](cases/discovery-shiv/assessment.md), [manifest](cases/discovery-shiv/manifest.json), [qualification](cases/discovery-shiv/qualification.json), [source provenance](cases/discovery-shiv/source-provenance.json). |
-| pilot-02 | Proposed baseline; historical development pair already observed | O1–O4: moved guide, relative links and executable export consumer; preservation and committed repair. Future baseline executions are distinct from the pilot. | [Case](cases/pilot-02/assessment.md), [manifest](cases/pilot-02/manifest.json), [qualification](cases/pilot-02/qualification.json). |
-| semantic-delivery | Proposed baseline; development | O1–O4: meaning-based descriptions of attempts/retries/stopping, preservation and committed repair. Passing runtime checks alone cannot establish correct prose. | [Case](cases/semantic-delivery/assessment.md), [manifest](cases/semantic-delivery/manifest.json), [qualification](cases/semantic-delivery/qualification.json). |
+| discovery-shiv | Selected for core-baseline-01; exposed development case | O1–O4: CLI consumers in README, script, Make and CI; triage, preservation and committed repair. Literal location diversity, not demonstrated hard discovery. | [Case](cases/discovery-shiv/assessment.md), [manifest](cases/discovery-shiv/manifest.json), [qualification](cases/discovery-shiv/qualification.json), [source provenance](cases/discovery-shiv/source-provenance.json). |
+| moved-guide | Selected for core-baseline-01; historical pilot-02 pair stays separate | O1–O4: moved guide, relative links and executable export consumer; preservation and committed repair. New measured executions are distinct from the pilot. | [Current case](cases/moved-guide/assessment.md), [manifest](cases/moved-guide/manifest.json), [historical qualification](cases/pilot-02/qualification.json). |
+| semantic-delivery | Measured semantic-delivery-01; selected for core-baseline-01 | O1–O4: meaning-based descriptions of attempts/retries/stopping, preservation and committed repair. Passing runtime checks alone cannot establish correct prose. | [Case](cases/semantic-delivery/assessment.md), [manifest](cases/semantic-delivery/manifest.json), [qualification](cases/semantic-delivery/qualification.json). |
 | pilot-01 | Historical development evidence | Process pilot; accounting-scope ambiguity remains uncertainty, not a confirmed skill defect. | [Report](pilot-results.md), [case](cases/pilot-01/assessment.md). |
 | pilot-03 | Rejected, undispatched | Replaced by Shiv preparation; not active suite work. | [Retained case](cases/pilot-03/assessment.md). |
 | Genuinely local change | Deferred; no selected case | O5 unmeasured: no claim about justified negative sweeps or the required negative-form account. | Contract above. |
@@ -133,7 +133,7 @@ Control contribution claims require evidence that omitted guidance was not loade
 Pre-baseline development is closed at two pairs. Do not reopen it for a new facet; a named readiness defect requires a separately authorized diagnostic exception.
 ### First collection: semantic-delivery-01
 
-Status: completed; both authorized calls spent, no further dispatch authorized. The owner authorized this batch on 2026-09-16 in this session: “ok, let's do it. what model/effort will we be using for the runs?” The response confirmed the unchanged `gpt-5.6-sol` / low settings for both commands. This batch is the first baseline observation, not another process pilot or completion of the wider baseline.
+Status: completed; both authorized calls spent, with no repeat of this batch authorized. The owner authorized this batch on 2026-09-16 in this session: “ok, let's do it. what model/effort will we be using for the runs?” The response confirmed the unchanged `gpt-5.6-sol` / low settings for both commands. This batch is the first baseline observation, not another process pilot or completion of the wider baseline.
 Question: does the frozen original achieve complete committed semantic reconciliation here, and how does the same task behave without SSR guidance?
 Scope: `semantic-delivery` only; `original` then `control`, one execution each, sequentially. This fixed order is convenient, not counterbalanced; one observation per condition cannot establish consistency or population reliability.
 Inputs: [version-1 manifest](cases/semantic-delivery/manifest.json), [case rules](cases/semantic-delivery/assessment.md) and their pinned authorities. Configurations below own Sol-low/workspace-write settings; original alone supplies the frozen skill.
@@ -163,6 +163,39 @@ The index resolves both execution results; [semantic-delivery-01-assessment.md](
 The index pins the committed authorization, frozen manifest and execution results; these completed commands do not authorize repeating the batch.
 
 
+### Core baseline: core-baseline-01
+
+Status: owner-approved on 2026-09-16 in this session: “ok, the next step is approved, please continue”, following the proposal of three prepared cases × original/control × two additional executions each (12 calls). This approval covers this batch only.
+Question: across semantic delivery, a moved guide and the Shiv rename, do the original and no-target conditions repeat complete committed reconciliation, and which failures recur?
+Scope: exactly the twelve executions below, sequentially. All use the existing Codex `gpt-5.6-sol` / low / workspace-write configurations. Original receives only the frozen SSR skill plus its loading instruction beyond the control inputs.
+Original/control order reverses in repetition 2 for every case; case order stays fixed. This balances condition order locally, not every temporal or model effect.
+Acceptance/inclusion: descriptive-only, with no threshold. Include all valid-setup executions regardless of outcome; retain unknowns in counts and reconcile invalid/uncompleted attempts separately. Earlier semantic-delivery-01 and historical pilots remain separately identified and outside this batch's denominator.
+Stopping/retries: preserve and verify each stopped attempt before the next dispatch. Stop for unresolved charge, preservation failure, suspected contamination or an infrastructure/setup error requiring inspection. Behavioral failure alone does not stop the remaining planned executions. No automatic retry, replacement, extra provider call or skill edit is authorized.
+Budget: at most 12 additional subject invocations; zero evaluator/authoring/retry calls. Full collection would leave 22 subject calls under the existing ceiling for later selected work. No larger campaign or pool transfer follows.
+
+Working directory: `/Users/simon/work/personal/disciplined-development-skills`. For each row, invoke `TMPDIR=/private/tmp/ssr-core-baseline-01 skill-validation/runner/.venv/bin/skilltest run CONFIG`, substituting only the exact CONFIG path shown below. The namespace is created before invocation. These commands use the same host initialization permission and unchanged workspace profile as semantic-delivery-01.
+
+| Order | Case | Condition | Repetition | CONFIG |
+|---:|---|---|---:|---|
+| 1 | semantic-delivery | original | 1 | `skill-studies/sweeping-stale-references/cases/semantic-delivery/original.json` |
+| 2 | semantic-delivery | control | 1 | `skill-studies/sweeping-stale-references/cases/semantic-delivery/control.json` |
+| 3 | moved-guide | original | 1 | `skill-studies/sweeping-stale-references/cases/pilot-02/original.json` |
+| 4 | moved-guide | control | 1 | `skill-studies/sweeping-stale-references/cases/pilot-02/control.json` |
+| 5 | discovery-shiv | original | 1 | `skill-studies/sweeping-stale-references/cases/discovery-shiv/original.json` |
+| 6 | discovery-shiv | control | 1 | `skill-studies/sweeping-stale-references/cases/discovery-shiv/control.json` |
+| 7 | semantic-delivery | control | 2 | `skill-studies/sweeping-stale-references/cases/semantic-delivery/control.json` |
+| 8 | semantic-delivery | original | 2 | `skill-studies/sweeping-stale-references/cases/semantic-delivery/original.json` |
+| 9 | moved-guide | control | 2 | `skill-studies/sweeping-stale-references/cases/pilot-02/control.json` |
+| 10 | moved-guide | original | 2 | `skill-studies/sweeping-stale-references/cases/pilot-02/original.json` |
+| 11 | discovery-shiv | control | 2 | `skill-studies/sweeping-stale-references/cases/discovery-shiv/control.json` |
+| 12 | discovery-shiv | original | 2 | `skill-studies/sweeping-stale-references/cases/discovery-shiv/original.json` |
+
+Input identities: [semantic delivery](cases/semantic-delivery/manifest.json), [moved guide](cases/moved-guide/manifest.json), [Shiv](cases/discovery-shiv/manifest.json). Reuse semantic delivery's existing frozen inputs; its earlier protocol pin is input/rule provenance, not this batch's authorization. Every new attempt cites the current batch authorization separately. The new moved-guide controller definition references the historical pilot's unchanged subject/configuration/checker files; its historical policy-2 package remains intact.
+The CLI still resolves to version 0.154.0 and the hash recorded above; the runner remains unchanged from the qualified pilot-02 tree. Recheck mutable identities before dispatch; the provider does not expose an immutable model revision.
+The runner emits unique bundles beneath `/private/tmp/ssr-core-baseline-01/skilltest-runs/`; preserve complete stopped bundles under the development primary using their emitted directory names and one inventory each. [core-baseline-01-run-index.json](core-baseline-01-run-index.json) records every actual attempt and its canonical result; an empty index before collection does not imply executions.
+Inspect/replay only disposable copies, using each case's fixed checker and semantic rules. Write execution results at `results/<run-id>.json` and the aggregate at `core-baseline-01-assessment.md`; the protocol owns subsequent decisions. No results for this batch exist yet.
+
+
 ## Storage and accounting
 
 Canonical project checkout: `/Users/simon/work/personal/disciplined-development-skills`.
@@ -187,7 +220,7 @@ Historical citations use commit/path/hash, including the worked example's run-in
 This includes preparation, review and model/tool waits, excludes owner-wait, and retains prior conservative allowances; the current booking includes collection/assessment verification and commit allowance through 07:10 UTC.
 Preparation and collection/assessment effort are included in the combined active total; the internal category split was not separately timed.
 Update this paragraph in place from the latest booked total plus new active intervals counted once; Git retains prior checkpoints, and their source logs are optional reconciliation evidence.
-Dispatched calls are **6 subject, 0 evaluator, 0 authoring, 0 retry**; remaining outer capacity is **34 / 12 / 4 / 4**, with no further dispatch authorized.
+Dispatched calls are **6 subject, 0 evaluator, 0 authoring, 0 retry**; remaining outer capacity is **34 / 12 / 4 / 4**, with only core-baseline-01's twelve additional subject calls authorized.
 
 
 Remaining-work forecast, in active minutes, including model/tool waits, review and storage once:
@@ -195,9 +228,12 @@ Remaining-work forecast, in active minutes, including model/tool waits, review a
 | Work | Estimate | Basis |
 |---|---:|---|
 | Document generator/validator | 120 | Existing preliminary implementation/qualification allowance; refine scope after baseline assessment. |
-| Further baseline, any justified rewrite and contemporaneous comparison | 300 | Conditional planning allowance, not a selected suite, call count or rewrite approval; revise after the first assessment. |
+| Core batch preparation/freeze | 25 | Verify reused inputs and migrate the moved-guide controller definition without changing subject bytes. |
+| Core batch collection/preservation | 210 | Twelve 15-minute timeout ceilings plus local preservation overhead; expected duration is lower based on prior observations. |
+| Core batch assessment/review | 90 | Apply existing checks/rules to twelve observations and aggregate by case/condition. |
+| Any justified rewrite and contemporaneous comparison | 180 | Conditional planning allowance, not a rewrite approval or selected later call count. |
 | Closure and review | 30 | Decision, limitations and study closeout. |
-| **Total** | **450** | Forecast, not additional authorization. |
+| **Total** | **655** | Forecast, not additional authorization. |
 
 Compare this total with the current remaining time above; it fits that ceiling with contingency, subject to revision when later scope is known. This is an estimate, not a guarantee of whole-study completion.
 Preserve later comparison capacity when selecting additional repetitions; no automatic pool transfers, retries or ceiling extensions are allowed.

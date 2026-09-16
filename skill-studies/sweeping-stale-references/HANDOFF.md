@@ -15,12 +15,12 @@ The active plan owns the checklist. This handoff routes to current authorities, 
 
 Six subject executions completed: four historical development executions plus the first two-execution baseline batch, [semantic-delivery-01](semantic-delivery-01-assessment.md). The wider baseline is incomplete; no skill rewrite exists.
 [The protocol](protocol.md#results-and-decision) links their reports, indexes and checks. Use existing evidence; do not recreate it or rescore settled judgments to continue preparation.
-CLI rename (Shiv), moved guide (pilot-02) and semantic delivery documentation remain the prepared core situations; further baseline membership/repetitions await scope selection.
+CLI rename (Shiv), moved guide (pilot-02) and semantic delivery documentation remain the prepared core situations; core-baseline-01 now selects all three cases with two new executions per condition.
 The frozen [original skill](cases/skill-original/SKILL.md) remains the source for original conditions. Candidate bytes must be separate.
 Policy 3 is current; observed pilot inputs retain policy 2 and unrun controller packages carry policy 3. Preserve their identities.
 
 The owner accepted the reconciled version-1 formats: per-execution outcomes/evidence, one aggregate batch assessment, and optional comparison within that assessment.
-The protocol and the Shiv and semantic-delivery case definitions/manifests use the accepted layouts. The semantic-delivery-01 pair is collected and assessed; no further calls are authorized; follow the plan's current checklist.
+The protocol and the Shiv and semantic-delivery case definitions/manifests use the accepted layouts. The semantic-delivery-01 pair is collected and assessed; only core-baseline-01's twelve additional subject calls are authorized; follow the plan's current checklist.
 The historical `1-draft` policy-3 example stays unchanged and is not a new execution or replacement assessment. Its index pins the original schema and historical evidence-index bytes through Git.
 Do not protect a draft representation from correction when it fails the spec, or turn a format walkthrough into another workflow-design exercise.
 
@@ -28,7 +28,7 @@ Do not protect a draft representation from correction when it fails the spec, or
 
 The protocol retains the [completed semantic-delivery-01 scope](protocol.md#first-collection-semantic-delivery-01): one original/control pair with prepared Sol-low settings, explicit ordering, no retries and descriptive-only interpretation. Both commands have completed and their authorization is spent; it is not another pre-baseline pilot.
 Any larger batch, repetitions, inclusion/retry policy and acceptance rule must be fixed before its collection; do not infer a universal 4/5 threshold.
-No further provider calls, retries, skill edits, pool transfers or extensions are authorized. The protocol owns current time/call accounting; add only new active time and exclude owner-wait.
+The owner approved [core-baseline-01](protocol.md#core-baseline-core-baseline-01): twelve additional subject calls, using existing Sol-low settings, the fixed protocol order and per-attempt preservation. No other provider calls, retries, skill edits, pool transfers or extensions are authorized. The protocol owns current time/call accounting; add only new active time and exclude owner-wait.
 The separate evaluator/calibration proposal, old campaigns and previous testing frameworks remain superseded. Do not resume their tasks. No reserved/independent claim is required for ordinary session assessment.
 The generator/validator remains later work after baseline assessment, with concrete CLI/scope agreement before implementation. The existing runner needs no identified new execution feature for the next batch.
 
