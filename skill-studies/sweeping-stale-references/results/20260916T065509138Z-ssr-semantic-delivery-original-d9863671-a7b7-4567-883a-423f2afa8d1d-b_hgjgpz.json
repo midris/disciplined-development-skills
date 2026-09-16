@@ -1,0 +1,192 @@
+{
+  "schema_version": "1",
+  "record_kind": "execution result",
+  "result_id": "semantic-delivery-01-original",
+  "assessed_at": "2026-09-16T07:02:24.083629+00:00",
+  "run_id": "20260916T065509138Z-ssr-semantic-delivery-original-d9863671-a7b7-4567-883a-423f2afa8d1d-b_hgjgpz",
+  "condition": "original",
+  "assessor": {
+    "name": "Codex active session",
+    "method": "active session",
+    "model": null,
+    "session_id": "01a0a0df-97d9-7630-a639-012c3046e6b5",
+    "context": "Same ongoing session with case construction, owner decisions, format preparation, prior pilot assessments and both current outputs available. Not independent or blind validation; the assessor model identity is not recorded by this workflow."
+  },
+  "manifest": {
+    "path": "skill-studies/sweeping-stale-references/cases/semantic-delivery/manifest.json",
+    "sha256": "184aaa47b231899244aa0248d2ea60581e5671451f610ffcc1c714394acdd689",
+    "version": "1",
+    "git_revision": "88fa47be87108f5aba9a59d67f714b173b94c77a"
+  },
+  "evidence": [
+    {
+      "id": "runner",
+      "artifact": {
+        "path": "/Users/simon/work/personal/skill-study-private/sweeping-stale-references/development/20260916T065509138Z-ssr-semantic-delivery-original-d9863671-a7b7-4567-883a-423f2afa8d1d-b_hgjgpz/result.json",
+        "sha256": "75d63319a9f2a9ba34463ae73898c9ddd49cf2dd99b98428eaa290da0ef8677f",
+        "version": "0.3"
+      },
+      "selector": "/execution, /status and /infrastructure_error"
+    },
+    {
+      "id": "inputs",
+      "artifact": {
+        "path": "/Users/simon/work/personal/skill-study-private/sweeping-stale-references/development/20260916T065509138Z-ssr-semantic-delivery-original-d9863671-a7b7-4567-883a-423f2afa8d1d-b_hgjgpz/runner.log",
+        "sha256": "3e25b798cc369f0e5a041d3a0494819c18a2f748ae773f551b6bbf5d8fa7d764",
+        "version": null
+      },
+      "selector": "Pre-launch input SHA-256 and provider arguments"
+    },
+    {
+      "id": "trace",
+      "artifact": {
+        "path": "/Users/simon/work/personal/skill-study-private/sweeping-stale-references/development/20260916T065509138Z-ssr-semantic-delivery-original-d9863671-a7b7-4567-883a-423f2afa8d1d-b_hgjgpz/stdout.txt",
+        "sha256": "aa55388d79f15a569edcbaf2ff8b0a0f123d3b5a815cb9e982d171bc86e7dd05",
+        "version": null
+      },
+      "selector": "JSONL lines 5, 8, 10–20: full skill read, baseline, all-document inspection, triage, sweep, edits, verification and repair commit."
+    },
+    {
+      "id": "checks",
+      "artifact": {
+        "path": "/Users/simon/work/personal/skill-study-private/sweeping-stale-references/development/20260916T065509138Z-ssr-semantic-delivery-original-d9863671-a7b7-4567-883a-423f2afa8d1d-b_hgjgpz.checks.json",
+        "sha256": "fc540bc6643ac718c9f36103aeda03a41b2aeb83ec875763db9460fc04ebfc49",
+        "version": "1"
+      },
+      "selector": "/input_checks, /git, /preserved_files and /runtime"
+    },
+    {
+      "id": "readme",
+      "artifact": {
+        "path": "/Users/simon/work/personal/skill-study-private/sweeping-stale-references/development/20260916T065509138Z-ssr-semantic-delivery-original-d9863671-a7b7-4567-883a-423f2afa8d1d-b_hgjgpz/workspace/fixture/README.md",
+        "sha256": "946a77884f4c5a8a451c3b0c10c3f80c96c60004b809eb44182869ef689fb80e",
+        "version": null
+      },
+      "selector": "Delivery limit, lines 8–10"
+    },
+    {
+      "id": "operations",
+      "artifact": {
+        "path": "/Users/simon/work/personal/skill-study-private/sweeping-stale-references/development/20260916T065509138Z-ssr-semantic-delivery-original-d9863671-a7b7-4567-883a-423f2afa8d1d-b_hgjgpz/workspace/fixture/docs/operations.md",
+        "sha256": "aa6bff4199252757a0e207da3e7443b939606abaf5e168073a0e3d74ca3c8042",
+        "version": null
+      },
+      "selector": "Current policy and early stopping, lines 6–10"
+    },
+    {
+      "id": "troubleshooting",
+      "artifact": {
+        "path": "/Users/simon/work/personal/skill-study-private/sweeping-stale-references/development/20260916T065509138Z-ssr-semantic-delivery-original-d9863671-a7b7-4567-883a-423f2afa8d1d-b_hgjgpz/workspace/fixture/docs/troubleshooting.md",
+        "sha256": "2436b0c68662c0128de007b48b5687e22cd43a86aa465029df6d71ca0c8a9dac",
+        "version": null
+      },
+      "selector": "Exhaustion and operator handling, lines 3–8"
+    }
+  ],
+  "setup": {
+    "status": "valid",
+    "reason": "Retained config/prompt and pre-launch fixture hashes match the frozen inputs; initial project trees are identical across conditions. Original read the complete frozen skill; control has no target-skill fixture. Reviewed command traces show no controller-policy or external skill loading. Both completed under the declared settings without infrastructure error. This supports the declared comparison, not exhaustive host-wide exclusion.",
+    "evidence": [
+      "runner",
+      "inputs",
+      "trace",
+      "checks"
+    ]
+  },
+  "criteria": [
+    {
+      "id": "F1",
+      "dimension": "functional",
+      "judgment": "met",
+      "reason": "README states one initial attempt plus up to three retries; operations allows up to three further tries; troubleshooting exhausts after the fourth failed send. Early stopping and useful operator guidance remain consistent across all three documents.",
+      "consequence": "Complete usable documentation reconciliation.",
+      "evidence": [
+        "readme",
+        "operations",
+        "troubleshooting",
+        "checks"
+      ]
+    },
+    {
+      "id": "F2",
+      "dimension": "functional",
+      "judgment": "met",
+      "reason": "The worker, independent helper, tests, historical record, helper documentation and .gitignore retain their supplied bytes. All seven controller runtime observations match the fixed expectations; unrelated operational guidance remains.",
+      "consequence": "Settled behavior and protected meaning preserved.",
+      "evidence": [
+        "checks",
+        "operations",
+        "troubleshooting"
+      ]
+    },
+    {
+      "id": "F3",
+      "dimension": "functional",
+      "judgment": "met",
+      "reason": "Repair commit 8d3726c0d77255b66ea4afe5ed11d7f8bdcf8189 contains all three required document changes after the neutral baseline; the tracked working tree is clean.",
+      "consequence": "All required repairs are committed.",
+      "evidence": [
+        "checks",
+        "trace"
+      ]
+    },
+    {
+      "id": "P1",
+      "dimension": "procedural",
+      "judgment": "met",
+      "reason": "The trace reads all project documents and code, identifies the three current claims versus historical/independent meaning, and performs a broad search before the first repair edit (lines 10–15).",
+      "consequence": "Search and triage support the complete reconciliation.",
+      "evidence": [
+        "trace"
+      ]
+    },
+    {
+      "id": "P2",
+      "dimension": "procedural",
+      "judgment": "met",
+      "reason": "There is one repair commit after the separate fixture-baseline commit.",
+      "consequence": "The complete repair is grouped as required.",
+      "evidence": [
+        "checks",
+        "trace"
+      ]
+    },
+    {
+      "id": "P3",
+      "dimension": "procedural",
+      "judgment": "not met",
+      "reason": "The commit gives useful explanations for all required blocks but reports 13 search matches, including excluded already-current/generic hits, and counts the one historical block as two matches. Its README entry also mixes update and false-positive outcomes. This does not follow the fixed semantic-block counting and same-path/outcome grouping rules.",
+      "consequence": "Non-blocking accounting defect; functional success remains met and no repeat execution is justified by this defect alone.",
+      "evidence": [
+        "trace",
+        "checks"
+      ]
+    }
+  ],
+  "functional_result": "met",
+  "procedural_summary": "P1 and P2 met; P3 not met. The reference account covers required meanings but its units/grouping do not follow the fixed accounting scope.",
+  "observations": [
+    {
+      "dimension": "setup",
+      "description": "The initial guidance-file search returned exit 1 because no AGENTS.md matched; the next command continued baseline setup. The full supplied skill text is retained at trace line 5.",
+      "consequence": "No observed missing-skill stop or setup invalidity; a nonmatching guidance probe is not contamination.",
+      "evidence": [
+        "trace",
+        "checks"
+      ]
+    },
+    {
+      "dimension": "procedural",
+      "description": "The P3 defect affects accounting counts/grouping rather than repair coverage; explanations of the historical and independent policies are present.",
+      "consequence": "Keep procedural and functional outcomes separate.",
+      "evidence": [
+        "trace"
+      ]
+    }
+  ],
+  "uncertainty": [
+    "One execution per condition; no consistency or population-reliability estimate.",
+    "Fixed original-then-control order is not counterbalanced; no immutable underlying model revision is exposed.",
+    "Trace review supports observed context integrity, not exhaustive exclusion of every possible host read."
+  ]
+}
