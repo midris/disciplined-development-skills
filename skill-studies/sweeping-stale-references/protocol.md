@@ -2,9 +2,9 @@
 
 Format version: `1`
 Study ID: `sweeping-stale-references`
-Status: contract and version-1 formats accepted; unrun input layouts migrated; semantic-delivery-01 collected and assessed; wider baseline incomplete; only core-baseline-01 is authorized.
+Status: contract and version-1 formats accepted; unrun input layouts migrated; semantic-delivery-01 collected and assessed; wider baseline incomplete; core-baseline-01 is paused for unresolved setup evidence.
 The [plan](../../plans/2026-09-11-model-driven-skill-testing.md) owns progress; the [spec](../../plans/specs/2026-09-11-model-driven-skill-testing-framework.md) owns the workflow.
-Six subject executions completed: four historical development executions and the two-execution semantic-delivery-01 baseline batch. Its first assessment is complete; the wider baseline and any skill rewrite remain incomplete. Only the twelve core-baseline-01 subject invocations below are authorized.
+Seven subject executions completed mechanically: four historical development executions, semantic-delivery-01’s two baseline executions and core-baseline-01’s first attempt. The latter has unresolved setup evidence; the wider baseline and any skill rewrite remain incomplete. Eleven approved core-baseline-01 calls remain unattempted, with dispatch paused under its stop rule.
 
 ## Sources and intended use
 
@@ -193,7 +193,7 @@ Working directory: `/Users/simon/work/personal/disciplined-development-skills`. 
 Input identities: [semantic delivery](cases/semantic-delivery/manifest.json), [moved guide](cases/moved-guide/manifest.json), [Shiv](cases/discovery-shiv/manifest.json). Reuse semantic delivery's existing frozen inputs; its earlier protocol pin is input/rule provenance, not this batch's authorization. Every new attempt cites the current batch authorization separately. The new moved-guide controller definition references the historical pilot's unchanged subject/configuration/checker files; its historical policy-2 package remains intact.
 The CLI still resolves to version 0.154.0 and the hash recorded above; the runner remains unchanged from the qualified pilot-02 tree. Recheck mutable identities before dispatch; the provider does not expose an immutable model revision.
 The runner emits unique bundles beneath `/private/tmp/ssr-core-baseline-01/skilltest-runs/`; preserve complete stopped bundles under the development primary using their emitted directory names and one inventory each. [core-baseline-01-run-index.json](core-baseline-01-run-index.json) records every actual attempt and its canonical result; an empty index before collection does not imply executions.
-Inspect/replay only disposable copies, using each case's fixed checker and semantic rules. Write execution results at `results/<run-id>.json` and the aggregate at `core-baseline-01-assessment.md`; the protocol owns subsequent decisions. No results for this batch exist yet.
+Inspect/replay only disposable copies, using each case's fixed checker and semantic rules. Write execution results at `results/<run-id>.json` and the aggregate at `core-baseline-01-assessment.md`; the protocol owns subsequent decisions. The [partial assessment](core-baseline-01-assessment.md) records order 1: complete functional repair, but missing full skill-read output leaves setup attribution unresolved. Collection is paused before order 2 under the existing stop rule. Diagnose capture with retained evidence/offline checks before resuming; no retry or replacement is authorized. Do not silently change frozen input/capture settings or weaken setup requirements.
 
 
 ## Storage and accounting
@@ -216,11 +216,11 @@ Keep historical primary/backup copies unchanged. The small run index references 
 Keep one canonical repository record per accepted run and commit it before correction; Git retains earlier versions.
 Historical citations use commit/path/hash, including the worked example's run-index reference; no duplicate snapshots or extensive amendment ledger are required.
 
-**Current accounting (2026-09-16): 448 active minutes booked; 752 minutes (12 hours 32 minutes) remain under the 1,200-minute ceiling.**
-This includes preparation, review and model/tool waits, excludes owner-wait, and retains prior conservative allowances; the current booking includes collection/assessment verification and commit allowance through 07:10 UTC.
+**Current accounting (2026-09-16): 471 active minutes booked; 729 minutes (12 hours 9 minutes) remain under the 1,200-minute ceiling.**
+This includes preparation, review and model/tool waits, excludes owner-wait, and retains prior conservative allowances; the current booking includes the intervening active review turns and this preparation/attempt/diagnosis session, with verification and closing allowance through 18:58 UTC.
 Preparation and collection/assessment effort are included in the combined active total; the internal category split was not separately timed.
 Update this paragraph in place from the latest booked total plus new active intervals counted once; Git retains prior checkpoints, and their source logs are optional reconciliation evidence.
-Dispatched calls are **6 subject, 0 evaluator, 0 authoring, 0 retry**; remaining outer capacity is **34 / 12 / 4 / 4**, with only core-baseline-01's twelve additional subject calls authorized.
+Dispatched calls are **7 subject, 0 evaluator, 0 authoring, 0 retry**; remaining outer capacity is **33 / 12 / 4 / 4**. Eleven core-baseline-01 subject calls remain authorized but paused; no replacement is authorized for its setup-unresolved attempt.
 
 
 Remaining-work forecast, in active minutes, including model/tool waits, review and storage once:
@@ -228,12 +228,12 @@ Remaining-work forecast, in active minutes, including model/tool waits, review a
 | Work | Estimate | Basis |
 |---|---:|---|
 | Document generator/validator | 120 | Existing preliminary implementation/qualification allowance; refine scope after baseline assessment. |
-| Core batch preparation/freeze | 25 | Verify reused inputs and migrate the moved-guide controller definition without changing subject bytes. |
-| Core batch collection/preservation | 210 | Twelve 15-minute timeout ceilings plus local preservation overhead; expected duration is lower based on prior observations. |
+| Evidence-capture diagnosis | 25 | Bounded offline investigation allowance; scope any changed collection mechanics before resumption. |
+| Remaining core collection/preservation | 195 | Eleven 15-minute timeout ceilings plus local preservation overhead, conditional on resolving the capture pause. |
 | Core batch assessment/review | 90 | Apply existing checks/rules to twelve observations and aggregate by case/condition. |
 | Any justified rewrite and contemporaneous comparison | 180 | Conditional planning allowance, not a rewrite approval or selected later call count. |
 | Closure and review | 30 | Decision, limitations and study closeout. |
-| **Total** | **655** | Forecast, not additional authorization. |
+| **Total** | **640** | Forecast, not additional authorization. |
 
 Compare this total with the current remaining time above; it fits that ceiling with contingency, subject to revision when later scope is known. This is an estimate, not a guarantee of whole-study completion.
 Preserve later comparison capacity when selecting additional repetitions; no automatic pool transfers, retries or ceiling extensions are allowed.
@@ -243,6 +243,7 @@ Preserve later comparison capacity when selecting additional repetitions; no aut
 
 | Evidence | Interpretation |
 |---|---|
+| [Core-baseline-01 partial assessment](core-baseline-01-assessment.md) | One attempt retained; setup evidence unresolved, no included aggregate observations. Eleven executions unattempted; dispatch paused. |
 | [Semantic-delivery-01 assessment](semantic-delivery-01-assessment.md) | First measured batch: original completes committed reconciliation; control leaves two current claims stale. One observation per condition; no consistency claim. |
 | [Pilot 01 report](pilot-results.md), [attempt index](pilot-run-index.json), [checks](pilot-checks.json) | Historical original/control development pair; assessment correction and limits belong in the report. |
 | [Pilot 02 report](pilot-02-results.md), [attempt index](pilot-02-run-index.json), [checks](pilot-02-checks.json) | Historical moved-guide pair; retained evidence supports the recorded outcomes, not a stable reliability estimate. |
