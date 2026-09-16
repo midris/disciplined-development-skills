@@ -52,6 +52,196 @@
       "limitations": [
         "Setup evidence unresolved: full requested skill-read output absent from retained CLI events; excluded from valid-setup aggregates."
       ]
+    },
+    {
+      "attempt_id": "core-baseline-01-semantic-delivery-control-1-1",
+      "case_id": "semantic-delivery",
+      "condition": "control",
+      "repetition": 1,
+      "attempt_number": 1,
+      "retry_of": null,
+      "manifest": {
+        "path": "skill-studies/sweeping-stale-references/cases/semantic-delivery/manifest.json",
+        "sha256": "184aaa47b231899244aa0248d2ea60581e5671451f610ffcc1c714394acdd689",
+        "version": "1",
+        "git_revision": "88fa47be87108f5aba9a59d67f714b173b94c77a"
+      },
+      "authorization": {
+        "artifact": {
+          "path": "skill-studies/sweeping-stale-references/protocol.md",
+          "sha256": "aee8695c0183f9262a1ee4d728af335fa1e8ba64df62c7d5156f3df23492c150",
+          "version": "1",
+          "git_revision": "07a0baa6a4cedb36209a156d9d53c7f6d2bdba28"
+        },
+        "selector": "Core baseline: core-baseline-01 and Session evidence amendment: capture-2; approved remaining orders 2\u201312, exact order and stopping rules"
+      },
+      "run_id": "20260916T204126678Z-ssr-semantic-delivery-control-0fe8996b-3cf2-48b8-920e-1672d2e0d8ac-vsj51ba0",
+      "allocation": {
+        "pool": "subject",
+        "charge": 1
+      },
+      "bundle": {
+        "path": "/Users/simon/work/personal/skill-study-private/sweeping-stale-references/development/20260916T204126678Z-ssr-semantic-delivery-control-0fe8996b-3cf2-48b8-920e-1672d2e0d8ac-vsj51ba0",
+        "inventory": {
+          "path": "/Users/simon/work/personal/skill-study-private/sweeping-stale-references/development/20260916T204126678Z-ssr-semantic-delivery-control-0fe8996b-3cf2-48b8-920e-1672d2e0d8ac-vsj51ba0.inventory.json",
+          "sha256": "faf91822f12e4f7cfe95b5e098fffc9a42ad5fdda8e43f16c3d151fc25ae0fdb",
+          "version": "1"
+        },
+        "verified": true
+      },
+      "result": {
+        "result_id": "core-baseline-01-semantic-delivery-control-1",
+        "record": {
+          "path": "skill-studies/sweeping-stale-references/results/20260916T204126678Z-ssr-semantic-delivery-control-0fe8996b-3cf2-48b8-920e-1672d2e0d8ac-vsj51ba0.json",
+          "sha256": "a34c4334e9f5e6b068fd653cedaaf6537fb8bc5e14e1967f2e4c406400940922",
+          "version": "1",
+          "git_revision": "65028bcb036886b65789db8b470bb4aebfad86e1"
+        }
+      },
+      "limitations": []
+    },
+    {
+      "attempt_id": "core-baseline-01-moved-guide-original-1-1",
+      "case_id": "moved-guide",
+      "condition": "original",
+      "repetition": 1,
+      "attempt_number": 1,
+      "retry_of": null,
+      "manifest": {
+        "path": "skill-studies/sweeping-stale-references/cases/moved-guide/manifest.json",
+        "sha256": "4f78793708ec8ded5e1e4fe045d4d7fef524ce58af254dac076e0625223411b0",
+        "version": "1",
+        "git_revision": "1247058074e09610ab5ff9bfdc9220147694930c"
+      },
+      "authorization": {
+        "artifact": {
+          "path": "skill-studies/sweeping-stale-references/protocol.md",
+          "sha256": "aee8695c0183f9262a1ee4d728af335fa1e8ba64df62c7d5156f3df23492c150",
+          "version": "1",
+          "git_revision": "07a0baa6a4cedb36209a156d9d53c7f6d2bdba28"
+        },
+        "selector": "Core baseline: core-baseline-01 and Session evidence amendment: capture-2; approved remaining orders 2\u201312, exact order and stopping rules"
+      },
+      "run_id": "20260916T204339538Z-ssr-pilot-02-original-5959208a-bb2d-44a8-b30a-8c3dd0e6cf04-biqxoglh",
+      "allocation": {
+        "pool": "subject",
+        "charge": 1
+      },
+      "bundle": {
+        "path": "/Users/simon/work/personal/skill-study-private/sweeping-stale-references/development/20260916T204339538Z-ssr-pilot-02-original-5959208a-bb2d-44a8-b30a-8c3dd0e6cf04-biqxoglh",
+        "inventory": {
+          "path": "/Users/simon/work/personal/skill-study-private/sweeping-stale-references/development/20260916T204339538Z-ssr-pilot-02-original-5959208a-bb2d-44a8-b30a-8c3dd0e6cf04-biqxoglh.inventory.json",
+          "sha256": "6eb6fa8daedd39243b599dd5ae1248f8b639c2682a0c9423debfd134ca20805f",
+          "version": "1"
+        },
+        "verified": true
+      },
+      "result": {
+        "result_id": "core-baseline-01-moved-guide-original-1",
+        "record": {
+          "path": "skill-studies/sweeping-stale-references/results/20260916T204339538Z-ssr-pilot-02-original-5959208a-bb2d-44a8-b30a-8c3dd0e6cf04-biqxoglh.json",
+          "sha256": "6bacec3e9334b5ddcba208e25b772d1f765a86f7ee5bb723c498b694ad60dd79",
+          "version": "1",
+          "git_revision": "65028bcb036886b65789db8b470bb4aebfad86e1"
+        }
+      },
+      "limitations": []
+    },
+    {
+      "attempt_id": "core-baseline-01-moved-guide-control-1-1",
+      "case_id": "moved-guide",
+      "condition": "control",
+      "repetition": 1,
+      "attempt_number": 1,
+      "retry_of": null,
+      "manifest": {
+        "path": "skill-studies/sweeping-stale-references/cases/moved-guide/manifest.json",
+        "sha256": "4f78793708ec8ded5e1e4fe045d4d7fef524ce58af254dac076e0625223411b0",
+        "version": "1",
+        "git_revision": "1247058074e09610ab5ff9bfdc9220147694930c"
+      },
+      "authorization": {
+        "artifact": {
+          "path": "skill-studies/sweeping-stale-references/protocol.md",
+          "sha256": "aee8695c0183f9262a1ee4d728af335fa1e8ba64df62c7d5156f3df23492c150",
+          "version": "1",
+          "git_revision": "07a0baa6a4cedb36209a156d9d53c7f6d2bdba28"
+        },
+        "selector": "Core baseline: core-baseline-01 and Session evidence amendment: capture-2; approved remaining orders 2\u201312, exact order and stopping rules"
+      },
+      "run_id": "20260916T204533001Z-ssr-pilot-02-control-0b830a5a-18dc-4cf6-a1b0-d05f6153edd8-xpj77dfi",
+      "allocation": {
+        "pool": "subject",
+        "charge": 1
+      },
+      "bundle": {
+        "path": "/Users/simon/work/personal/skill-study-private/sweeping-stale-references/development/20260916T204533001Z-ssr-pilot-02-control-0b830a5a-18dc-4cf6-a1b0-d05f6153edd8-xpj77dfi",
+        "inventory": {
+          "path": "/Users/simon/work/personal/skill-study-private/sweeping-stale-references/development/20260916T204533001Z-ssr-pilot-02-control-0b830a5a-18dc-4cf6-a1b0-d05f6153edd8-xpj77dfi.inventory.json",
+          "sha256": "ecfd1fa384f6806a3e545ab9bbe706484764ae94f9a119a14aa1642eae168130",
+          "version": "1"
+        },
+        "verified": true
+      },
+      "result": {
+        "result_id": "core-baseline-01-moved-guide-control-1",
+        "record": {
+          "path": "skill-studies/sweeping-stale-references/results/20260916T204533001Z-ssr-pilot-02-control-0b830a5a-18dc-4cf6-a1b0-d05f6153edd8-xpj77dfi.json",
+          "sha256": "90185700ee582095a9f4e0deac246610ebcf493a54dfc4057aa3231491916df7",
+          "version": "1",
+          "git_revision": "65028bcb036886b65789db8b470bb4aebfad86e1"
+        }
+      },
+      "limitations": []
+    },
+    {
+      "attempt_id": "core-baseline-01-discovery-shiv-original-1-1",
+      "case_id": "discovery-shiv",
+      "condition": "original",
+      "repetition": 1,
+      "attempt_number": 1,
+      "retry_of": null,
+      "manifest": {
+        "path": "skill-studies/sweeping-stale-references/cases/discovery-shiv/manifest.json",
+        "sha256": "31378d2d7cbbf11051174e8f6d88303a680eaf94cd73cb213a52be5b7ed69b2e",
+        "version": "1",
+        "git_revision": "1247058074e09610ab5ff9bfdc9220147694930c"
+      },
+      "authorization": {
+        "artifact": {
+          "path": "skill-studies/sweeping-stale-references/protocol.md",
+          "sha256": "aee8695c0183f9262a1ee4d728af335fa1e8ba64df62c7d5156f3df23492c150",
+          "version": "1",
+          "git_revision": "07a0baa6a4cedb36209a156d9d53c7f6d2bdba28"
+        },
+        "selector": "Core baseline: core-baseline-01 and Session evidence amendment: capture-2; approved remaining orders 2\u201312, exact order and stopping rules"
+      },
+      "run_id": "20260916T204716513Z-ssr-discovery-shiv-original-4ea35baa-b309-4e61-b7cc-7d7a0c61ae69-75y8tek9",
+      "allocation": {
+        "pool": "subject",
+        "charge": 1
+      },
+      "bundle": {
+        "path": "/Users/simon/work/personal/skill-study-private/sweeping-stale-references/development/20260916T204716513Z-ssr-discovery-shiv-original-4ea35baa-b309-4e61-b7cc-7d7a0c61ae69-75y8tek9",
+        "inventory": {
+          "path": "/Users/simon/work/personal/skill-study-private/sweeping-stale-references/development/20260916T204716513Z-ssr-discovery-shiv-original-4ea35baa-b309-4e61-b7cc-7d7a0c61ae69-75y8tek9.inventory.json",
+          "sha256": "cfcf48c367dea6a5b6f4456c9e18a2f0fffc6b272f9373feb98a2d5dffc61599",
+          "version": "1"
+        },
+        "verified": true
+      },
+      "result": {
+        "result_id": "core-baseline-01-discovery-shiv-original-1",
+        "record": {
+          "path": "skill-studies/sweeping-stale-references/results/20260916T204716513Z-ssr-discovery-shiv-original-4ea35baa-b309-4e61-b7cc-7d7a0c61ae69-75y8tek9.json",
+          "sha256": "0f5f39a8742536e65da541866250f5b3c409e46a22edb4a9ee1d566acfa4c1cd",
+          "version": "1",
+          "git_revision": "65028bcb036886b65789db8b470bb4aebfad86e1"
+        }
+      },
+      "limitations": [
+        "Invalid setup: subject Python 3.9.6 cannot parse the supplied Click runtime; excluded from valid-setup aggregates."
+      ]
     }
   ]
 }
