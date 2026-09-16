@@ -2,9 +2,9 @@
 
 Format version: `1`
 Study ID: `sweeping-stale-references`
-Status: contract and version-1 formats accepted; unrun input layouts migrated; semantic-delivery-01 collected and assessed; wider baseline incomplete; core-baseline-01 is paused before order 6 for a subject interpreter mismatch.
+Status: contract and version-1 formats accepted; selected core baseline collected and assessed, with two setup exclusions and explicit runtime strata. No skill rewrite is selected.
 The [plan](../../plans/2026-09-11-model-driven-skill-testing.md) owns progress; the [spec](../../plans/specs/2026-09-11-model-driven-skill-testing-framework.md) owns the workflow.
-Eleven subject executions completed mechanically: four historical development executions, two semantic-delivery-01 baseline executions and five core-baseline-01 attempts. The core batch has three valid observations and two setup exclusions; seven approved calls remain unattempted. Collection is paused under its stop rule; no skill rewrite exists.
+Eighteen subject executions completed mechanically: four historical development executions, two semantic-delivery-01 baseline executions and twelve core-baseline-01 attempts. The core batch has ten valid observations and two setup exclusions. Its authorization is spent; no skill rewrite exists.
 
 ## Sources and intended use
 
@@ -69,7 +69,7 @@ The [policy-3 copy](assessment-policies/SSR-assessment-3.txt) derives verbatim f
 
 ### Session evidence amendment: capture-2
 
-Owner-approved on 2026-09-16: “the code change is approved, please continue”, together with addressing the review findings. Applies prospectively to core-baseline-01 orders 2–12; order 1 retains its frozen assessment and remains excluded. The twelve-slot scope, remaining eleven calls, order, model/effort, task/skill bytes, criterion meanings and no-retry rule remain fixed.
+Owner-approved on 2026-09-16: “the code change is approved, please continue”, together with addressing the review findings. Applies prospectively to core-baseline-01 orders 2–12; order 1 retains its frozen assessment and remains excluded. The amendment preserved the twelve-slot scope, orders 2–12, model/effort, task/skill bytes, criterion meanings and no-retry rule.
 Codex session persistence replaces ephemeral execution in the fresh private profile. Before cleanup, the runner copies its single session to `provider-session.jsonl` in the existing bundle; result schema 0.4 identifies that artifact. Each resumed attempt cites this amendment at its frozen Git revision, which also identifies the revised runner. Earlier input-manifest pins still identify unchanged subject inputs and criterion policy; this explicit capture amendment governs the new evidence source.
 Admissible exposure evidence is either complete command output in `stdout.txt` or actual tool-response content in `provider-session.jsonl`. For the session source, verify its hash against the mechanical result/inventory, match session identity to stdout's thread ID and session cwd to this invocation's fixture, and connect each response's call ID to its read command. Inspect output content, ordering and truncation; whole-text equality to the frozen skill, or faithful reconstruction from retained ordered read/poll responses, must establish full exposure. An attempted command, model summary, input-file presence or filename listing alone is insufficient. Missing/truncated output that cannot establish the required content keeps setup `insufficient evidence` and stops further dispatch for inspection.
 Controller checks record `original_skill_read_evidence` with the source artifact, response line numbers and call IDs; `original_skill_read_trace_lines` in older checks remains historical stdout-only evidence. The old field is not a required field for new checks. The same admissible-source rule supports content exposure/search-order inspection for both conditions; target procedures remain inapplicable to control. Apply missing-evidence consequences only to what the evidence cannot establish.
@@ -133,7 +133,7 @@ DD and other instructions used by the controller session are not subject inputs.
 An explicit sweep request is a different execution-quality question and cannot establish that SSR caused scope expansion.
 
 The prepared original/control configurations retain Codex Sol-low with workspace-write. Configurations and manifests own exact settings and source identities; do not silently pool different models or changed rules.
-The existing runner uses config schema 0.2 and result schema 0.3. It prepares a fresh Git boundary, invokes once and captures mechanical completion plus evidence; it does not decide task success.
+The current runner uses config schema 0.2 and result schema 0.4; earlier bundles retain their emitted versions. It prepares a fresh Git boundary, invokes once and captures mechanical completion plus evidence; it does not decide task success.
 [Runner mechanics](../../skill-validation/runner/README.md) and [retained pilot reports](#results-and-decision) establish the available execution path. Recheck changed CLI/runtime/context assumptions before relying on them; directory separation alone does not prove read isolation.
 Control contribution claims require evidence that omitted guidance was not loaded. Record limits on observed isolation rather than claiming exhaustive host-wide exclusion.
 
@@ -198,14 +198,14 @@ Working directory: `/Users/simon/work/personal/disciplined-development-skills`. 
 | 12 | discovery-shiv | original | 2 | `skill-studies/sweeping-stale-references/cases/discovery-shiv/original.json` |
 
 Input identities: [semantic delivery](cases/semantic-delivery/manifest.json), [moved guide](cases/moved-guide/manifest.json), [Shiv](cases/discovery-shiv/manifest.json). Reuse semantic delivery's existing frozen inputs; its earlier protocol pin is input/rule provenance, not this batch's authorization. Every new attempt cites the current batch authorization separately. The new moved-guide controller definition references the historical pilot's unchanged subject/configuration/checker files; its historical policy-2 package remains intact.
-The CLI resolves to version 0.154.0 and the hash recorded above. Capture-2 governs session retention for orders 2–5; their index entries pin its protocol/runner revision. The interpreter correction below has not yet been applied to a subject execution. Recheck mutable identities before dispatch; the provider does not expose an immutable model revision.
+The CLI resolves to version 0.154.0 and the hash recorded above. Orders 2–5 pin capture-2; orders 6–12 pin capture-2 plus runtime-1. All twelve attempts are complete. Any later selected collection must recheck mutable identities; the provider does not expose an immutable model revision.
 The runner emits unique bundles beneath `/private/tmp/ssr-core-baseline-01/skilltest-runs/`; preserve complete stopped bundles under the development primary using emitted directory names and one inventory each. [core-baseline-01-run-index.json](core-baseline-01-run-index.json) records every actual attempt and canonical result.
-Inspect/replay only disposable copies using fixed case checkers and semantic rules. Execution results live at `results/<run-id>.json`; the [partial batch assessment](core-baseline-01-assessment.md) records the five attempted slots, exclusions and aggregates. Orders 1 and 5 remain excluded for different setup faults. Seven calls remain authorized but paused before order 6; no retry or replacement is authorized.
+Inspect/replay only disposable copies using fixed case checkers and semantic rules. Execution results live at `results/<run-id>.json`; the [batch assessment](core-baseline-01-assessment.md) records all twelve attempts, exclusions and aggregates. Orders 1 and 5 remain excluded for different setup faults. No retry, replacement or additional call is authorized by this completed scope.
 
 #### Runtime amendment: runtime-1
 
 The [runtime diagnosis](runtime-diagnosis.md) records the new fault: the subject shell selects Python 3.9.6, which cannot parse the supplied Shiv dependency. The narrow correction is implemented and verified offline: pass the prepared restricted PATH explicitly through `shell_environment_policy.set`, keeping other environment inheritance disabled. It selects the compatible host Python 3.14.7 and passes the actual CLI's scripted local tests and consumer checks with zero model calls.
-Owner approved continuation on 2026-09-16 after reviewing the concrete correction: “address any relevant findings, and the let's continue”. Freeze this runner/protocol identity and cite it separately for orders 6–12; preserve task/skill/criteria bytes, model/effort, order, seven-call allocation and no-retry rule. Keep the invalid Shiv attempt excluded rather than replacing it. The remaining seven executions may resume once the review corrections are verified and this authority is committed. Orders 2–4 retain their pre-correction runtime labels; aggregate both total descriptive counts and runtime-stratum counts, without claiming fixed-runtime replication across the change. The capture-error reporting correction preserves provider exit/timeout facts and adds no model call or scoring change.
+Owner approved continuation on 2026-09-16 after reviewing the concrete correction: “address any relevant findings, and the let's continue”. The committed runtime-1 authority governed only orders 6–12, preserving task/skill/criteria bytes, model/effort, order, allocation and no-retry rule. All seven completed with usable setup; the invalid Shiv attempt remains excluded and unreplaced. Orders 2–4 retain their pre-correction runtime labels; the assessment reports total descriptive counts and runtime-stratum counts without claiming fixed-runtime replication across the change. The capture-error reporting correction preserves provider exit/timeout facts and adds no model call or scoring change.
 
 
 
@@ -229,11 +229,10 @@ Keep historical primary/backup copies unchanged. The small run index references 
 Keep one canonical repository record per accepted run and commit it before correction; Git retains earlier versions.
 Historical citations use commit/path/hash, including the worked example's run-index reference; no duplicate snapshots or extensive amendment ledger are required.
 
-**Current accounting (2026-09-16): 525 active minutes booked; 675 minutes (11 hours 15 minutes) remain under the 1,200-minute ceiling.**
-This includes preparation, review and model/tool waits, excludes owner-wait, and retains prior conservative allowances. The current booking includes the brief active status turn at 20:24 UTC and work from 20:26 UTC, with verification and closing allowance through 21:05 UTC.
-Preparation and collection/assessment effort are included in the combined active total; the internal category split was not separately timed.
+**Current accounting (2026-09-16): 553 active minutes booked; 647 minutes (10 hours 47 minutes) remain under the 1,200-minute ceiling.**
+This includes preparation, review and model/tool waits, excludes owner-wait, and retains prior conservative allowances. The booking covers the active review/collection session beginning at 21:11:35 UTC, with verification and closing allowance through 21:37 UTC, plus a two-minute estimate for the preceding brief commit/push turn beyond the prior allowance. The historical internal category split was not separately timed.
 Update this paragraph in place from the latest booked total plus new active intervals counted once; Git retains prior checkpoints, and their source logs are optional reconciliation evidence.
-Dispatched calls are **11 subject, 0 evaluator, 0 authoring, 0 retry**; remaining outer capacity is **29 / 12 / 4 / 4**. Seven core-baseline-01 subject calls remain authorized but paused; neither excluded attempt has replacement authorization.
+Dispatched calls are **18 subject, 0 evaluator, 0 authoring, 0 retry**; remaining outer capacity is **22 / 12 / 4 / 4**. Core-baseline-01 has no unspent calls; neither excluded attempt has replacement authorization. Remaining capacity is a ceiling, not a selected next batch.
 
 
 Remaining-work forecast, in active minutes, including model/tool waits, review and storage once:
@@ -241,13 +240,11 @@ Remaining-work forecast, in active minutes, including model/tool waits, review a
 | Work | Estimate | Basis |
 |---|---:|---|
 | Document generator/validator | 120 | Existing preliminary implementation/qualification allowance; refine scope after baseline assessment. |
-| Remaining core collection/preservation | 125 | Seven 15-minute timeout ceilings plus local preservation overhead, conditional on accepting the verified runtime amendment. |
-| Core batch assessment/review | 60 | Five attempts assessed; complete seven remaining results and the aggregate by case/condition. |
 | Any justified rewrite and contemporaneous comparison | 180 | Conditional planning allowance, not a rewrite approval or selected later call count. |
 | Closure and review | 30 | Decision, limitations and study closeout. |
-| **Total** | **515** | Forecast, not additional authorization. |
+| **Total** | **330** | Forecast, not additional authorization. |
 
-Compare this total with the current remaining time above; it fits that ceiling with contingency, subject to revision when later scope is known. This is an estimate, not a guarantee of whole-study completion.
+The remaining collection/assessment allowance is retired because that work is complete; actual active effort is included in the booking above. The three remaining estimates are carried-forward planning allowances, not newly measured durations. Compare their 330-minute total with the current remaining time above; it fits with contingency, subject to revision when later scope is known. This is an estimate, not a guarantee of whole-study completion.
 Preserve later comparison capacity when selecting additional repetitions; no automatic pool transfers, retries or ceiling extensions are allowed.
 
 
@@ -255,13 +252,13 @@ Preserve later comparison capacity when selecting additional repetitions; no aut
 
 | Evidence | Interpretation |
 |---|---|
-| [Core-baseline-01 partial assessment](core-baseline-01-assessment.md) | Five attempts retained; three included, two setup exclusions. Seven executions unattempted; dispatch paused for the subject interpreter correction. |
+| [Core-baseline-01 assessment](core-baseline-01-assessment.md) | Selected three-case baseline complete: twelve attempts, ten included and two setup exclusions; descriptive outcomes and runtime differences remain explicit. |
 | [Semantic-delivery-01 assessment](semantic-delivery-01-assessment.md) | First measured batch: original completes committed reconciliation; control leaves two current claims stale. One observation per condition; no consistency claim. |
 | [Pilot 01 report](pilot-results.md), [attempt index](pilot-run-index.json), [checks](pilot-checks.json) | Historical original/control development pair; assessment correction and limits belong in the report. |
 | [Pilot 02 report](pilot-02-results.md), [attempt index](pilot-02-run-index.json), [checks](pilot-02-checks.json) | Historical moved-guide pair; retained evidence supports the recorded outcomes, not a stable reliability estimate. |
 | [Policy-3 worked example](assessments/pilot-02-original-policy-3-example.json), [identity/schema index](assessments/index.json) | Unchanged illustrative assessment of retained evidence, not a new execution or replacement of the canonical policy-2 result. |
 
-The first batch is assessed; no broader baseline conclusion, rewrite objective or adoption decision exists yet.
+The selected baseline is assessed. Its recommendation is ready for owner review; no rewrite objective or adoption decision is agreed yet.
 Batch assessments own aggregate counts, patterns, limitations and any version comparison; this section records the owner's resulting decisions by reference.
 After baseline assessment, agree the generator/validator's bounded CLI and effort before implementation. It is not a collection prerequisite.
 Before authoring, re-read the selected writing-skills guidance and reconcile it with the evidence-supported objective. A passing control is useful evidence; resolve any pure-cleanup/RED conflict without manufacturing failure or resuming the abandoned wording campaign.

@@ -13,25 +13,18 @@ The active plan owns the checklist. This handoff routes to current authorities, 
 
 ## Current state
 
-Eleven subject executions completed mechanically: four historical development executions, five core-baseline-01 attempts and the two-execution baseline batch [semantic-delivery-01](semantic-delivery-01-assessment.md). Core-baseline-01 has three valid observations, two excluded setup faults and seven unattempted slots. The wider baseline is incomplete; no skill rewrite exists.
-[The protocol](protocol.md#results-and-decision) links their reports, indexes and checks. Use existing evidence; do not recreate it or rescore settled judgments to continue preparation.
-CLI rename (Shiv), moved guide (pilot-02) and semantic delivery documentation remain the prepared core situations; core-baseline-01 now selects all three cases with two new executions per condition.
-The frozen [original skill](cases/skill-original/SKILL.md) remains the source for original conditions. Candidate bytes must be separate.
-Policy 3 is current; observed pilot inputs retain policy 2 and unrun controller packages carry policy 3. Preserve their identities.
+The selected core baseline is collected and assessed. [Core-baseline-01](core-baseline-01-assessment.md) records all twelve authorized attempts, ten valid observations and two setup exclusions, with results separated by runtime as well as combined. Earlier pilots and [semantic-delivery-01](semantic-delivery-01-assessment.md) remain separate evidence. The protocol owns current call/time accounting; no skill rewrite exists.
 
-The owner accepted the reconciled version-1 formats: per-execution outcomes/evidence, one aggregate batch assessment, and optional comparison within that assessment.
-The protocol and the Shiv and semantic-delivery case definitions/manifests use the accepted layouts. The semantic-delivery-01 pair is collected and assessed; core-baseline-01 is paused before order 6, with seven authorized calls unspent; follow the plan's current checklist.
-The historical `1-draft` policy-3 example stays unchanged and is not a new execution or replacement assessment. Its index pins the original schema and historical evidence-index bytes through Git.
-Do not protect a draft representation from correction when it fails the spec, or turn a format walkthrough into another workflow-design exercise.
+The owner accepted the reconciled version-1 formats: per-execution outcomes/evidence, one aggregate batch assessment and optional comparison within it. The protocol and current case/manifests use the accepted layouts. Historical inputs, policy-2 assessments and the `1-draft` worked example retain their recorded identities; do not rescore or migrate them to continue.
+The frozen [original skill](cases/skill-original/SKILL.md) remains the source for original conditions. Candidate bytes must be separate. Fixed criteria and policy 3 govern the core batch.
 
 ## Boundaries and next step
 
-The protocol retains the [completed semantic-delivery-01 scope](protocol.md#first-collection-semantic-delivery-01): one original/control pair with prepared Sol-low settings, explicit ordering, no retries and descriptive-only interpretation. Both commands have completed and their authorization is spent; it is not another pre-baseline pilot.
-Any larger batch, repetitions, inclusion/retry policy and acceptance rule must be fixed before its collection; do not infer a universal 4/5 threshold.
-The owner approved [core-baseline-01](protocol.md#core-baseline-core-baseline-01): twelve additional subject calls using existing Sol-low settings, fixed order and per-attempt preservation. The [partial assessment](core-baseline-01-assessment.md) records five attempts and their two setup exclusions. The [capture repair](capture-diagnosis.md) is implemented, committed and verified in actual subject executions; do not reopen that approval or the first attempt's exclusion.
-Current next step: the [Shiv runtime correction](runtime-diagnosis.md) is implemented and verified offline, and the owner approved continuation after the review. The subject shell selected incompatible Python 3.9.6; explicitly forwarding the existing restricted PATH selects compatible Python 3.14.7. Collection is paused before order 6. After verifying the review corrections, freeze the runtime-1 runner/protocol identity and resume only orders 6–12; no retry, replacement, skill edit, pool transfer or extension is authorized. Both excluded attempts remain charged. The protocol owns current time/call accounting; count new active time once and exclude owner-wait.
-The separate evaluator/calibration proposal, old campaigns and previous testing frameworks remain superseded. Do not resume their tasks. No reserved/independent claim is required for ordinary session assessment.
-The generator/validator remains later work after baseline assessment, with concrete CLI/scope agreement before implementation. The runner change retains session evidence; it is separate from document-tooling work.
+The [core-baseline scope](protocol.md#core-baseline-core-baseline-01) is spent: no retry, replacement, extension or skill edit is authorized. Capture-2 and runtime-1 were applied prospectively under recorded approval; both excluded attempts remain charged. The [runtime diagnosis](runtime-diagnosis.md) and [capture diagnosis](capture-diagnosis.md) explain the fixes; do not reopen those approvals or exclusions.
+
+Review the completed baseline with the owner, then agree the document generator/validator's bounded scope, CLI and implementation/qualification effort before coding. This is the next planned tool deliverable, separate from the completed runner repairs. The assessment identifies any supported skill-improvement opportunity; a rewrite objective and adoption decision remain unselected.
+Use existing artifacts and the [active plan](../../plans/2026-09-11-model-driven-skill-testing.md#current-next-action). No further format walkthrough, new scenario or evaluator/calibration prerequisite is needed. The active session applies fixed rules and labels its shared context honestly. Old campaigns, separate-evaluator proposals and previous testing frameworks remain superseded.
+Count new active time once and exclude owner-wait; the protocol owns the latest booking and remaining-work forecast.
 
 ## Evidence and verification
 
