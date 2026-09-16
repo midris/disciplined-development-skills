@@ -18,13 +18,13 @@ class ExecutionResultContract(unittest.TestCase):
         # Reuse retained evidence payload only as structural test data. The
         # synthetic manifest below is not a migrated or accepted assessment.
         cls.record = json.loads((ROOT.parent / 'sweeping-stale-references/assessments/pilot-02-original-policy-3-example.json').read_text())
-        cls.record.update(schema_version='2-draft', record_kind='execution result',
+        cls.record.update(schema_version='1', record_kind='execution result',
                           result_id=cls.record.pop('assessment_id'),
                           functional_result=cls.record.pop('functional_summary'))
         for field in ('inputs', 'study_id', 'case_id', 'supersedes', 'relationship_to_prior'):
             cls.record.pop(field)
         cls.record['manifest'] = {'path': 'test-only/manifest.json', 'sha256': 'a' * 64,
-                                  'version': '2-draft', 'git_revision': 'b' * 40}
+                                  'version': '1', 'git_revision': 'b' * 40}
 
     def rejects(self, value):
         self.assertTrue(list(self.validator.iter_errors(value)))

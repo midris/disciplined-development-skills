@@ -1,6 +1,6 @@
 # Study format contracts
 
-Format set: `2-draft`; final version-1 acceptance remains pending.
+Format set: `1`, accepted by the owner; collection authorization is separate.
 These contracts implement the [spec's artifact ownership and units](../../plans/specs/2026-09-11-model-driven-skill-testing-framework.md#architecture-seven-responsibilities).
 They define document representations, not another workflow or authorization gate.
 Only execution results currently have a JSON Schema; other formats are explicit reviewable contracts until the planned tooling exists.
@@ -31,7 +31,7 @@ The protocol owns current study decisions, their authority and brief rationale; 
 Link case-specific rules, configuration settings, manifests, attempt indexes and assessments rather than recopying their contents.
 Omit unselected optional provisions, such as reserved-evidence boundaries or a graded numeric mapping; material limits on actual claims remain explicit.
 Use Git for earlier versions and place a correction's reason beside the current decision; no decision ledger is required.
-The live SSR protocol uses this layout in draft form. Remaining input-format migration and final format acceptance do not follow automatically from the layout change.
+The live SSR protocol and the two unrun case definitions/manifests use this layout. Historical observed-case inputs retain their recorded formats.
 
 The protocol's policy section owns the study's assessment rules.
 Controller policy copies derive verbatim from its designated policy body; identify the copy outside that body to avoid self-reference.
@@ -59,7 +59,7 @@ Keep whole-artifact criteria; do not split them into replacement counts to make 
 Git proves committed state, traces can establish action order, and document meaning must be inspected against settled behavior.
 Missing traces limit the relevant claim without invalidating otherwise inspectable artifacts; self-reports do not replace direct evidence.
 `expected.json` remains the case-specific source of facts/scope/alternatives; no universal prose-matching schema is needed.
-The [filled semantic criterion](semantic-delivery-criterion-example.md) restates existing F1 without adding obligations or reassessing evidence.
+The [filled semantic criterion](../sweeping-stale-references/cases/semantic-delivery/assessment.md#f1-complete-useful-documentation) applies this layout to the existing F1 without adding obligations or reassessing evidence.
 
 ## Source and freeze manifest
 
@@ -67,7 +67,7 @@ Copy [manifest.template.json](manifest.template.json); all displayed keys are re
 
 | Field | Meaning |
 |---|---|
-| `format_version`, `manifest_id`, `study_id`, `case_id` | Format `2-draft` and stable identities. |
+| `format_version`, `manifest_id`, `study_id`, `case_id` | Format `1` and stable identities. |
 | `status`, `created_at`, `source_revision` | `draft` or `frozen`, ISO date/time, and full Git commit containing identified repository bytes. A preparation base with different bytes is insufficient; frozen is not authorized. |
 | `authorities` | Spec, protocol, format contract, execution-result schema, policy and nonempty criteria identity list. |
 | `conditions` | Unique IDs, each with configuration identity and target-skill source path or `null`. |
@@ -80,7 +80,7 @@ Reject missing/extra sources and controller-input overlap; this does not prove t
 Commit input changes before freezing the manifest and exclude the manifest from its own inventory.
 Original conditions use the preserved original snapshot; candidates use separate sources.
 `sources.json` is an inspected-source inventory, not proof of supplied inputs.
-Prepared case manifests have verified source commits; their remaining layout migration is explicit work before final freeze. Historical observed-case manifests retain their identities.
+Prepared unrun manifests use this format and identify committed input bytes. Historical observed-case manifests retain their identities.
 
 ## Execution and evidence index
 

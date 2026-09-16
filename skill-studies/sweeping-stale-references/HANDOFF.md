@@ -19,14 +19,14 @@ CLI rename (Shiv), moved guide (pilot-02) and semantic delivery documentation ar
 The frozen [original skill](cases/skill-original/SKILL.md) remains the source for original conditions. Candidate bytes must be separate.
 Policy 3 is current; observed pilot inputs retain policy 2 and unrun controller packages carry policy 3. Preserve their identities.
 
-The owner authorized reconciling the documents to the existing spec. The current set is `2-draft`: per-execution outcomes/evidence, one aggregate batch assessment, and optional comparison within that assessment.
-The live protocol now uses the seven agreed sections. Final format review, remaining input-format migration and version-1 collection freeze remain pending; follow the plan's current checklist.
+The owner accepted the reconciled version-1 formats: per-execution outcomes/evidence, one aggregate batch assessment, and optional comparison within that assessment.
+The protocol and both unrun case definitions/manifests use the accepted layouts. Exact collection scope/command approval remains pending; follow the plan's current checklist.
 The historical `1-draft` policy-3 example stays unchanged and is not a new execution or replacement assessment. Its index pins the original schema and historical evidence-index bytes through Git.
 Do not protect a draft representation from correction when it fails the spec, or turn a format walkthrough into another workflow-design exercise.
 
 ## Boundaries and next step
 
-The current recommendation is one semantic-delivery original/control pair with prepared Sol-low settings after format agreement and exact scope/command approval. It is neither authorized nor another pre-baseline pilot.
+The protocol contains the [concrete semantic-delivery-01 proposal](protocol.md#proposed-first-collection-semantic-delivery-01): one original/control pair with prepared Sol-low settings, explicit ordering, no retries and descriptive-only interpretation. Exact scope/command approval remains pending; it is not another pre-baseline pilot.
 Any larger batch, repetitions, inclusion/retry policy and acceptance rule must be fixed before its collection; do not infer a universal 4/5 threshold.
 No new provider calls, retries, skill edits, pool transfers or extensions are authorized. The protocol owns current time/call accounting; add only new active time and exclude owner-wait.
 The separate evaluator/calibration proposal, old campaigns and previous testing frameworks remain superseded. Do not resume their tasks. No reserved/independent claim is required for ordinary session assessment.

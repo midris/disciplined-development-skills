@@ -2,7 +2,7 @@
 
 ## Identity and purpose
 
-Format version: `2-draft`
+Format version: `1`
 Study ID: <id>
 Case ID: <id>
 Definition version: <version>

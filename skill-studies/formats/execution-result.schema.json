@@ -1,6 +1,6 @@
 {
   "$schema": "https://json-schema.org/draft/2020-12/schema",
-  "title": "Execution result 2-draft \u2014 completed records",
+  "title": "Execution result 1 \u2014 completed records",
   "description": "One model execution: criterion outcomes, evidence and functional result. Batch assessment aggregates these records.",
   "type": "object",
   "additionalProperties": false,
@@ -23,7 +23,7 @@
   ],
   "properties": {
     "schema_version": {
-      "const": "2-draft"
+      "const": "1"
     },
     "record_kind": {
       "enum": [

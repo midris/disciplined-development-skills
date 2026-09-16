@@ -1,6 +1,6 @@
 # <Batch question>: assessment
 
-Format version: `2-draft`
+Format version: `1`
 Assessment ID: <id>
 Study / batch: <IDs>
 Status: draft

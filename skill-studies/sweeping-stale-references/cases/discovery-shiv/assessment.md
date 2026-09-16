@@ -1,9 +1,13 @@
 # Discovery case: settled Shiv option rename
 
-Status: locally qualified; owner authorized baseline design, including consideration of this case. No model run is authorized or made.
-Prepared during development; baseline membership and collection settings are not frozen, and no discovery advantage is demonstrated.
+## Identity and purpose
 
-## Purpose and source
+Format version: `1`
+Study ID: `sweeping-stale-references`
+Case ID: `discovery-shiv`
+Definition version: `1`
+Status: prepared; suite membership and collection authorization belong to the protocol.
+Coverage and development exposure: [protocol suite](../../protocol.md#proposed-baseline-case-selection); O1–O4, with O5 deferred.
 
 Observe discovery separately from the decision to repair a discovered reference, using substantive project source rather than bulk dependency files.
 The owner approved the concept and this implementation base; packaging is only the scenario domain.
@@ -16,8 +20,9 @@ The resulting project has 50 files / 106,979 bytes, excluding 19 runtime files /
 This is meaningful source, tests and documentation, but size does not establish discovery difficulty: a subject may still inspect every consumer.
 All four required consumers contain the same retired literal, so this exercises location diversity, not a requirement for lexical variants. Prior familiarity with public Shiv source may reduce discovery cost; absence of an upstream-reference statement does not prove unfamiliarity. Neither limitation warrants adding consumers merely to make a control fail.
 
-## Task and conditions
+## Inputs and setup
 
+Task: [task.md](task.md); configurations: [original](original.json), [control](control.json); input identities: [manifest](manifest.json).
 `task.md` presents a settled rename from `--output-file` to `--destination` and one broken README command, permits project edits and requests a commit.
 It does not enumerate sibling consumers or direct a sweep.
 The unchanged `-o` alias is explicitly valid.
@@ -32,29 +37,17 @@ The neutral initial commit establishes the already-renamed project; subsequent r
 The runtime is nevertheless part of the declared, hash-identified input and must be retained with the case and each bundle.
 When committing this case, explicitly add the 19 pinned runtime source/license files despite the subject-facing ignore rule; never add generated caches.
 
-## Assessment
+Setup: verify declared inputs/settings, identical initial project trees, full original-skill read, control guidance integrity and usable traces.
+Record absent-guidance probes and explicit upstream/remembered-API statements, distinguishing supplied-source evidence from outside retrieval; neither alone proves contamination or pretraining exposure.
+Runtime/setup faults invalidate attribution, not skill behavior.
 
-Read this document, `expected.json` and the controller-only `assessment-policy.txt` before judging a run.
-`preparation.json` identifies the exact source revision and verbatim copy of `SSR-assessment-3`.
-Functional outcomes lead; procedure is reported separately, with no combined score.
+## Rules and evidence
 
-| Criterion | Evidence and consequence |
-|---|---|
-| Setup | Verify declared inputs/settings and identical initial project trees, full original-skill read, control guidance integrity and usable traces. Record absent-guidance probes and explicit upstream/remembered-API statements, distinguishing supplied-source evidence from outside retrieval; neither alone proves contamination or pretraining exposure. Runtime/setup failures invalidate attribution rather than count as skill failures. |
-| F1: Current consumers | All four commands produce the intended runnable greeting archive. The local script works from the project root and elsewhere. Missing/deleted consumers, no-op commands or wrong archives fail. `--destination`, its equals form, and `-o` are acceptable repairs. |
-| F2: Preservation | Preserve the settled CLI, short alias, greeting behavior, historical record, independent inventory tool and unrelated project behavior. Restoring the retired option to mask stale consumers fails. Byte differences require semantic inspection rather than automatic failure. |
-| F3: Committed repair | Required edits must be in retained Git history after the baseline; edits left only in the working tree fail even when replay succeeds. |
-| P1: Discovery and triage | For each consumer separately record when retained tool output exposed stale content, explicit repair/preservation decisions, and committed outcome. Filename-only listings are not content exposure. Missing/truncated output makes awareness uncertain. Record repository breadth and search-before-edit ordering without claiming access proves internal attention. Procedural deviations are non-blocking. |
-| P2: Commit grouping | One complete repair commit satisfies the original's grouping requirement. Multiple complete commits are a non-blocking procedural deviation; distinguish them from missing committed edits under F3. |
-| P3: Useful account | The nine literal occurrences across eight project paths in expected.json define scope: four updates, one historical occurrence and four false positives. The two deliberate negative assertions share one test file. Exclude task/skill/runtime and already-current or additional exploratory hits. Judge usefulness; missing detail is secondary and cannot fail a functional outcome or justify another run. |
-
-Review any upstream-restoring edit against the explicit settled task and inspect its stated rationale before attributing the result to SSR. A verified rollback remains an F2 functional failure; possible prior knowledge affects causal interpretation and does not excuse the failed outcome. Record task disobedience, observed search/triage behavior and any unresolved cause separately.
-
-Apply target-specific procedure to original only; do not impose undisclosed output requirements on control.
-Report met / not met / insufficient evidence per criterion, with trace and Git pointers.
-If both conditions encounter every consumer, report the repair-scope comparison and no observed discovery advantage; do not enlarge the case or hunt for a control failure.
-
-## Replay and qualification
+Apply [policy 3](assessment-policy.txt), pinned by the manifest, and [expected.json](expected.json) before judging an execution.
+Git establishes committed state; retained events establish observable order/exposure; inspect complete artifacts and semantic alternatives directly.
+Target-specific procedure applies only to original; report control procedure descriptively.
+Functional/procedural outcomes and batch interpretation follow the [protocol](../../protocol.md#assessment-policy).
+Review upstream-restoring edits against the settled task and their stated rationale: verified rollback fails F2; possible prior knowledge limits attribution without excusing it.
 
 Inspect subject-modified commands and diffs before executing them.
 Use a disposable copy of the complete subject fixture; never replay against retained raw evidence.
@@ -74,11 +67,102 @@ Exact payload or preservation mismatches are review signals under the whole-arti
 Missing commands, parser limits and timeouts require separating infrastructure limitations from demonstrated functional failure. A retired-option probe without an exit status records null, not false, for rejection.
 `qualification.json` retains known-correct/incorrect observations and actual loader/copy checks without providers; `manifest.json` pins their inputs.
 
-## Next decision
+Retained preparation/qualification records describe their recorded input versions; the current manifest owns collection identities. Layout migration preserves subject inputs, expected facts, checkers and policy bytes.
 
-The owner closed pre-baseline development at four subject calls and authorized baseline design on 2026-09-13. Consider this prepared case within the existing baseline allocation; do not dispatch the formerly proposed extra development pair.
-The working baseline arithmetic is two selected cases × original/control × two repetitions (eight subject calls), with the case set and evaluation settings still to be agreed.
-Codex `gpt-5.6-sol`, low, `workspace-write` remains the prepared subject configuration; baseline run order and exact commands must be frozen before authorization.
-Recheck executable identity and all input hashes before any authorized dispatch.
-No provider calls or capacity transfers follow from approval to design the baseline. The remaining additional-development slot stays unused.
-Broader coverage and population reliability remain open. The active session applies the case criteria and policy directly; a separate evaluator is optional, not a collection or scoring prerequisite.
+## Criteria
+
+### F1: Current consumers
+
+Basis: Settled task rename and SSR reconciliation purpose; usable consumers are the owner-clarified outcome.
+Coverage: [Protocol obligations](../../protocol.md#behavioral-contract-and-consumers) O1, O2.
+Dimension: functional
+Applies to: `original`, `control`
+Judgment unit: All four current commands and their runnable greeting archives.
+Required evidence: Inspect final commands and replay all expected.json required_consumers; run the script from project root and elsewhere, inspect archive payload/entry point and execute it.
+Met: Every required consumer builds the intended runnable greeting archive; the script works from both locations.
+Not met: A consumer is missing/deleted, does nothing, still fails or produces the wrong archive.
+Insufficient evidence: Parser limits, missing observations or infrastructure faults prevent establishing a consumer outcome after inspection.
+Alternatives: --destination, its equals form, -o and equivalent effective commands/structure; unsupported checker syntax needs manual inspection.
+Consequence: A violation is a hard functional failure; an unresolved evidence gap remains insufficient evidence.
+Overlap: Incomplete repair may also fail F3; report the shared cause.
+
+### F2: Preservation
+
+Basis: Task settled CLI plus SSR Procedure 2 triage and owner-clarified whole-artifact preservation.
+Coverage: [Protocol obligations](../../protocol.md#behavioral-contract-and-consumers) O2.
+Dimension: functional
+Applies to: `original`, `control`
+Judgment unit: Settled CLI/alias, greeting behavior, historical record, independent inventory tool and unrelated project behavior.
+Required evidence: Inspect all changes and expected.json preservation facts; use replay CLI/alias/retired-option and inventory observations.
+Met: All protected behavior and meaning remains effective.
+Not met: The retired option is restored to mask stale consumers, or protected behavior/meaning is damaged.
+Insufficient evidence: Unavailable or conflicting artifacts/runtime evidence prevents deciding preservation.
+Alternatives: Equivalent effective implementations and documentation; byte/payload differences require semantic inspection, not automatic failure.
+Consequence: A violation is a hard functional failure; an unresolved evidence gap remains insufficient evidence.
+Overlap: A harmful repair may also fail F1; possible prior upstream knowledge limits attribution, not the settled task outcome.
+
+### F3: Committed repair
+
+Basis: Explicit task commit request and SSR Procedure 3, with owner priority on the committed outcome.
+Coverage: [Protocol obligations](../../protocol.md#behavioral-contract-and-consumers) O3.
+Dimension: functional
+Applies to: `original`, `control`
+Judgment unit: All required repairs committed after the neutral baseline.
+Required evidence: Retained history, committed tree and final working diff, inspected against F1.
+Met: Every required repair is present in retained Git history.
+Not met: A required edit is incomplete/incorrect or left only in the working tree, even if replay succeeds.
+Insufficient evidence: Missing history/final state prevents establishing committed completeness.
+Alternatives: Any complete effective repair; grouping is assessed separately under P2.
+Consequence: A violation is a hard functional failure; an unresolved evidence gap remains insufficient evidence.
+Overlap: Shared incomplete repair may also fail F1; do not count the causes as independent failed executions.
+
+### P1: Discovery and triage
+
+Basis: SSR Procedure 1 search-before-edit and Procedure 2 classification.
+Coverage: [Protocol obligations](../../protocol.md#behavioral-contract-and-consumers) O1, O2.
+Dimension: procedural
+Applies to: `original`
+Judgment unit: For each consumer: observable content exposure, explicit triage and committed outcome, plus repository breadth and search/edit ordering.
+Required evidence: Retained tool output and edits; filename-only listings are not content exposure. Record explicit upstream/remembered-API claims separately.
+Met: Search precedes repair and current/historical/independent references receive appropriate triage.
+Not met: Usable events show search-after-edit or incorrect/omitted required triage.
+Insufficient evidence: Missing/truncated output prevents establishing exposure, sequence or triage; access does not prove internal attention.
+Alternatives: Any effective search tool/order consistent with the skill; both conditions discovering every consumer is a valid observation.
+Consequence: Report a non-blocking procedural defect or insufficient evidence; neither changes the functional outcome or justifies a repeat execution by itself.
+Overlap: Triage defects may also cause F1/F2 failures; discovery advantage is a diagnostic observation, not an extra criterion.
+
+### P2: Commit grouping
+
+Basis: SSR Procedure 3 one-commit requirement.
+Coverage: [Protocol obligations](../../protocol.md#behavioral-contract-and-consumers) O3.
+Dimension: procedural
+Applies to: `original`
+Judgment unit: Grouping of the complete reconciliation.
+Required evidence: Retained Git history and diffs after baseline.
+Met: One commit contains the complete repair.
+Not met: The repair is split across commits or no complete repair commit exists.
+Insufficient evidence: Missing Git evidence prevents deciding grouping.
+Alternatives: Any effective complete repair; splitting a complete committed repair affects procedure only.
+Consequence: Report a non-blocking procedural defect or insufficient evidence; neither changes the functional outcome or justifies a repeat execution by itself.
+Overlap: F3 owns completeness, independently of grouping.
+
+### P3: Useful account
+
+Basis: SSR Output artifact under the owner-set non-blocking policy and expected.json fixed scope.
+Coverage: [Protocol obligations](../../protocol.md#behavioral-contract-and-consumers) O4.
+Dimension: procedural
+Applies to: `original`
+Judgment unit: Nine literal occurrences across eight paths: four updates, one historical occurrence and four false positives.
+Required evidence: Commit body, traces and edits reconciled to expected.json literal_matches and accounting_scope.
+Met: References swept: usefully and accurately accounts for scoped outcomes, reasons, locations, counts and same-path/outcome grouping.
+Not met: Required accounting is missing, inaccurate or incorrectly grouped/counted.
+Insufficient evidence: Missing retained commit/trace evidence prevents assessment; an inspectable absent account is a defect.
+Alternatives: Concise accurate grouping; the two negative assertions share one test file. Exclude task/skill/runtime and already-current/additional exploratory hits.
+Consequence: Report a non-blocking procedural defect or insufficient evidence; neither changes the functional outcome or justifies a repeat execution by itself.
+Overlap: Account defects do not create or offset functional failures; shared triage causes may also affect P1.
+
+## Limits
+
+If both conditions encounter every consumer, report the repair-scope comparison and no observed discovery advantage; do not enlarge the case to force a control failure.
+Broader coverage and population reliability remain unestablished; public-source familiarity and local replay limits above bound attribution.
+The [protocol](../../protocol.md#execution-scope-and-authorization) alone owns proposed batch size, ordering, settings selection and authorization.

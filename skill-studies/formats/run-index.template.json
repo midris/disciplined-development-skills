@@ -1,5 +1,5 @@
 {
-  "format_version": "2-draft",
+  "format_version": "1",
   "index_id": "",
   "study_id": "",
   "attempts": [
@@ -13,7 +13,7 @@
       "manifest": {
         "path": "",
         "sha256": "",
-        "version": "2-draft"
+        "version": "1"
       },
       "authorization": {
         "artifact": {

@@ -1,5 +1,5 @@
 {
-  "schema_version": "2-draft",
+  "schema_version": "1",
   "record_kind": "execution result",
   "assessed_at": "",
   "run_id": "",
@@ -53,7 +53,7 @@
   "manifest": {
     "path": "",
     "sha256": "",
-    "version": "2-draft",
+    "version": "1",
     "git_revision": ""
   }
 }

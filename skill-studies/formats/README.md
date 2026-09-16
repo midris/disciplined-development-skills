@@ -1,7 +1,7 @@
 # Study formats
 
 The [field contracts](companion-formats.md) implement the [agreed spec](../../plans/specs/2026-09-11-model-driven-skill-testing-framework.md#working-artifact-organization).
-Current format set: `2-draft`; final version-1 acceptance and collection freeze remain pending.
+Current format set: `1`, accepted by the owner after the reconciled layout review. Collection scope and dispatch require their own recorded authority.
 
 | Artifact | Owns |
 |---|---|

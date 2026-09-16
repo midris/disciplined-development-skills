@@ -1,6 +1,6 @@
 # <Skill>: study protocol
 
-Format version: `2-draft`
+Format version: `1`
 Study ID: <id>
 Status: draft
 Plan: <link>
