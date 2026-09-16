@@ -64,6 +64,8 @@ def test_codex_invokes_fixed_command_environment_and_deadline(tmp_path, boundari
         "-c",
         'shell_environment_policy.inherit="none"',
         "-c",
+        'shell_environment_policy.set={PATH="/stub/bin:/usr/bin:/bin:/usr/sbin:/sbin"}',
+        "-c",
         'cli_auth_credentials_store="file"',
         "-c",
         'approval_policy="never"',
@@ -243,3 +245,16 @@ def test_claude_read_only_tools_match_permission_contract(tmp_path):
         assert argv[argv.index(flag)+1].split(',') == ['Read', 'Skill', 'Glob', 'Grep', 'Bash']
     # This is read access to evidence; the process-tree policy still denies writes.
     assert argv[argv.index('--add-dir')+1] == str(request.workspace_dir/'evidence')
+
+
+def test_codex_shells_receive_only_the_controlled_runtime_path(tmp_path, boundaries):
+    # Break: shell tools fall back to a different interpreter, or inherit private auth/environment.
+    runtime, _, popen = boundaries
+    runtime.environment['PATH'] = '/controlled tools/bin:/usr/bin:/bin'
+    invoke_provider(request_at(tmp_path))
+    argv = popen.call_args.args[0]
+    overrides = [tomllib.loads(argv[i + 1])['shell_environment_policy']
+                 for i, value in enumerate(argv[:-1])
+                 if value == '-c' and argv[i + 1].startswith('shell_environment_policy.')]
+    merged = {key: value for override in overrides for key, value in override.items()}
+    assert merged == {'inherit': 'none', 'set': {'PATH': runtime.environment['PATH']}}

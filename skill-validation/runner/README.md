@@ -239,12 +239,13 @@ The adapter fixes these additional controls:
 ```text
 --strict-config --ignore-user-config --ignore-rules
 -c shell_environment_policy.inherit="none"
+-c shell_environment_policy.set={PATH="<prepared runtime PATH>"}
 -c cli_auth_credentials_store="file"
 -c approval_policy="never"
 ```
 
 Each invocation creates private HOME, CODEX_HOME and TMPDIR directories outside its retained bundle, with private parents mode 0700.
-The child receives only these three variables and PATH: the resolved Codex executable's directory followed by `/usr/bin:/bin:/usr/sbin:/sbin`.
+The CLI child receives only these three variables and PATH: the resolved Codex executable's directory followed by `/usr/bin:/bin:/usr/sbin:/sbin`. Shell tools receive that restricted PATH explicitly while other environment inheritance stays disabled; otherwise tool shells may select a different interpreter. [The Shiv runtime diagnosis](../../skill-studies/sweeping-stale-references/runtime-diagnosis.md) records the observed mismatch and qualification.
 Resolve Codex through the invoking PATH before replacing the environment; use that same absolute executable for login-status preflight and the model call, recording the actual model argv in `runner.log`.
 `execution.executable` remains the provider label `codex`.
 

@@ -53,7 +53,10 @@ def invoke_provider(request: ProviderRequest, *, log: Callable[[str], None] = la
     try:
         try:
             runtime.prepare(request.workspace_dir / "fixture")
-            arguments = runtime.prefix + _arguments(request, executable=runtime.executable)
+            arguments = runtime.prefix + _arguments(
+                request, executable=runtime.executable,
+                shell_path=runtime.environment["PATH"] if request.provider == "codex" else None,
+            )
             log(f"provider arguments: {arguments!r}")
             log("provider invocation attempted")
         except PreparationError as error:
@@ -89,7 +92,7 @@ def invoke_provider(request: ProviderRequest, *, log: Callable[[str], None] = la
     return replace(result, cleanup_error=cleanup_error)
 
 
-def _arguments(request: ProviderRequest, *, executable: str = "codex") -> list[str]:
+def _arguments(request: ProviderRequest, *, executable: str = "codex", shell_path: str | None = None) -> list[str]:
     if request.permissions not in {"workspace-write", "read-only"}:
         raise ValueError(f"unsupported permissions: {request.permissions}")
     if request.provider == "codex":
@@ -113,6 +116,8 @@ def _arguments(request: ProviderRequest, *, executable: str = "codex") -> list[s
             f'model_reasoning_effort="{request.effort}"',
             "-c", 'default_permissions="skilltest"', "-c", policy,
             "--strict-config", "--ignore-user-config", "--ignore-rules", "-c", 'shell_environment_policy.inherit="none"',
+            # Forward only the prepared executable path; inherit=none also strips PATH.
+            *(["-c", f'shell_environment_policy.set={{PATH={json.dumps(shell_path)}}}'] if shell_path is not None else []),
             "-c", 'cli_auth_credentials_store="file"', "-c", 'approval_policy="never"',
             "--output-last-message", str(request.final_output_path), "-",
         ]

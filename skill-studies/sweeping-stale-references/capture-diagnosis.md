@@ -1,7 +1,7 @@
 # Codex command-output capture: diagnosis and repair
 
 Status: diagnosis complete; owner approved the code change and review corrections on 2026-09-16. Session retention is implemented and verified offline; capture-2 governs resumed collection.
-Affected collection: [core-baseline-01](protocol.md#core-baseline-core-baseline-01), paused after order 1. This investigation used zero model calls.
+Affected collection: [core-baseline-01](protocol.md#core-baseline-core-baseline-01). The capture gap stopped order 1; capture-2 enabled orders 2–5. Current collection status belongs to the protocol. This investigation used zero model calls.
 
 ## Finding and evidence
 
@@ -31,7 +31,7 @@ It contains the reproducer, both raw diagnostic streams and local request bodies
 1. Run Codex with session persistence in the existing fresh private profile. Keep each invocation isolated and never resume a subject session.
 2. Before private-profile cleanup, retain that invocation's session JSONL as `provider-session.jsonl` at the bundle root, alongside the existing stdout/stderr. Copy session evidence only; preserve it for unsuccessful attempts when available. Treat missing, ambiguous or uncopyable expected session evidence as an explicit capture error, retaining recovery information rather than claiming successful preservation.
 3. Expose the additional file's identity in a versioned runner result record. Include it in the existing complete bundle inventory and cite its tool-response entries when JSON command output is incomplete. A session file does not automatically prove adequate evidence: inspect actual content and truncation under the existing criteria.
-4. Verify capture before cleanup, error paths and unchanged isolation with offline tests. Record the revised runner/capture identity and exact invocation in the protocol before resuming the eleven approved executions. Keep the skill, task, criteria, model/effort, order, sample size and no-retry rule fixed.
+4. Verify capture before cleanup, error paths and unchanged isolation with offline tests. Record the revised runner/capture identity and exact invocation in the protocol before resuming affected collection. Keep the skill, task, criteria, model/effort, order, sample size and no-retry rule fixed.
 
 The owner approved this change to frozen collection mechanics. The prospective [capture-2 amendment](protocol.md#session-evidence-amendment-capture-2) explicitly admits session tool responses and fixes identity, read-command, content and truncation checks before resumption. It adds evidence retention to the existing runner, not the later document generator/validator or a new assessment stage. No CLI upgrade or subject prompt workaround is required.
 
@@ -42,4 +42,4 @@ The revised production adapter passed a credential-free localhost check: both sc
 ## Effect on the stopped attempt
 
 The bug explains how the observed omission can occur despite a complete model-facing read. It does not recover that particular invocation's tool response: it used ephemeral mode and its private profile was cleaned up.
-Keep its canonical result unchanged: observable functional repair met, setup evidence unresolved, excluded from valid-setup aggregates. Its charged call remains spent; no replacement is authorized. The eleven unattempted executions can resume after the approved capture change is verified and its authority frozen. Record the capture-mode difference explicitly when assessing the batch.
+Keep its canonical result unchanged: observable functional repair met, setup evidence unresolved, excluded from valid-setup aggregates. Its charged call remains spent; no replacement is authorized. Capture-2 was frozen before orders 2–5 resumed; those attempts retain complete session evidence. The later [interpreter fault](runtime-diagnosis.md) is a separate setup issue. The batch assessment records the capture-mode difference explicitly.
