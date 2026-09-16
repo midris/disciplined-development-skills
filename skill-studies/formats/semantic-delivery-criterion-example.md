@@ -1,13 +1,13 @@
 # Semantic-delivery: filled criterion card
 
-Format version: `1-draft`; status: worked format example, pending agreement.
+Format version: `2-draft`; status: worked format example, pending agreement.
 Study ID: `sweeping-stale-references`; case ID: `semantic-delivery`.
 The existing [assessment](../sweeping-stale-references/cases/semantic-delivery/assessment.md#criteria), [expected facts](../sweeping-stale-references/cases/semantic-delivery/expected.json) and [policy 3](../sweeping-stale-references/assessment-policies/SSR-assessment-3.txt) remain the authorities.
 This card restates F1 for format review; it adds no criterion and scores no run.
 
 ### F1: Complete, useful documentation
 
-Basis: Owner-clarified changed-behavior outcome in the [protocol contract](../sweeping-stale-references/protocol.md#behavioral-contract), applied to the ordinary [task](../sweeping-stale-references/cases/semantic-delivery/task.md).
+Basis: Owner-clarified changed-behavior outcome in the [protocol contract](../sweeping-stale-references/protocol.md#behavioral-contract-and-consumers), applied to the ordinary [task](../sweeping-stale-references/cases/semantic-delivery/task.md).
 Coverage: [Changed behavior and equivalent references](../sweeping-stale-references/protocol.md#proposed-baseline-case-selection).
 Dimension: functional
 Applies to: `original`, `control`

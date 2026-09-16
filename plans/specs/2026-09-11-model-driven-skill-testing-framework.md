@@ -38,8 +38,8 @@ Responsibilities below are not a pipeline of separately dispatched agents.
 2. Run the authorized scenarios through the existing deterministic harness and wait for completion.
 3. Preserve and verify the evidence bundles; distinguish execution/setup errors from observed skill failures.
 4. Run applicable deterministic checks, inspect the actual outputs/files/traces, and apply the scoring rules in the active session.
-5. Write the fixed-format score record with criterion judgments, evidence references, consequences, uncertainty and provenance; report the result to the owner.
-6. After an authorized edit, repeat the relevant fixed scenarios and compare versioned records under the same rules, recording any changed conditions.
+5. Record each execution’s criterion outcomes with reasons and evidence, then write the batch assessment with aggregate results, failure patterns and limitations; report it to the owner.
+6. After an authorized edit, repeat the relevant fixed scenarios and compare their aggregate assessments under the same rules, recording any changed conditions.
 
 No separate evaluator service, fresh scoring context, blind answer-key test or calibration campaign is a prerequisite to this loop.
 Worked examples help explain rules and settle actual ambiguities; they are not a mandatory exam for the active agent.
@@ -66,6 +66,12 @@ The first-study plan makes that response concrete and records candidate and spen
 Layers identify responsibility and information flow; they do not mandate seven files, seven agents or a new framework service.
 Keep one authoritative home for each decision and reference it from dependent artifacts.
 
+An **execution** is one model invocation; an **attempt** also includes a launch/preparation failure and is always accounted for.
+A **case** defines a task and criteria; a **batch** is the declared set of cases, conditions and repetitions being assessed.
+An **execution result** records criterion outcomes and evidence for one execution. A **batch assessment** summarizes those results across repetitions and conditions, including observed frequency, failure patterns and uncertainty.
+Use these units explicitly rather than the ambiguous word “run” in study instructions; the runner's existing command and emitted run_id remain unchanged.
+Mechanical runner completion is not criterion success; categorical criterion judgments do not imply a second, unregistered quality scale.
+
 | Layer | Question | Required contents | Boundary |
 |---|---|---|---|
 | 1. Behavioral contract | What is the skill trying to accomplish? | Intended user/task, useful outcomes, applicability, exclusions, consequential constraints, dependencies, ownership and observable success. | Describe intended behavior separately from the current implementation's wording or teaching technique. |
@@ -73,7 +79,7 @@ Keep one authoritative home for each decision and reference it from dependent ar
 | 3. Evaluation contract | How will evidence support a judgment? | Criteria mapped to the contract, evidence requirements, acceptable variation, consequential failure boundaries, uncertainty handling and evaluator instructions. | Criteria cannot introduce new skill obligations or make a constructed answer the only acceptable output. |
 | 4. Experiment plan | What will we run and compare? | Models, versions, surrounding guidance, permissions, repetitions, controls, run ordering, budget, stopping/retry rules and participant information boundaries. | A model, fixture or context change can change the experiment; record it instead of silently pooling results. |
 | 5. Execution evidence | What actually happened? | Exact supplied inputs, skill bytes, configuration, outputs, relevant files/traces, mechanical errors, duration and provenance. | Mechanical completion is not behavioral success; self-reported action is not execution evidence. |
-| 6. Assessment | What does each observation demonstrate? | Evaluator judgment, cited evidence, reader or operational consequence, uncertainty and resolved or unresolved disagreements. | Apply the agreed criteria without silently changing them to fit a result. |
+| 6. Assessment | What do the executions collectively demonstrate? | Detailed execution outcomes/evidence and batch aggregates, failure patterns, consequences, uncertainty and disagreements. | Apply the agreed criteria and declared inclusion/acceptance rules without changing them to fit results. |
 | 7. Comparison and decision | How effective is the skill, and is a rewrite better? | Versioned scores, baseline/comparison results when used, regressions, improvements, costs, limitations and a retain/adopt/investigate recommendation. | Conclusions are bounded by the tested tasks, models and context; aggregate success cannot conceal a consequential regression. |
 
 The skill is the implementation under test, initially the checked-in version and later a separately versioned rewrite.
@@ -143,7 +149,7 @@ For artifact quality, local differences initiate investigation; the complete art
 Specify acceptable variation, consequential failure and insufficient-evidence conditions.
 Distinguish behavioral failure, task-only deviation, quality differences and execution problems; define their effects explicitly rather than inheriting old labels or averaging unrelated dimensions.
 Owner clarification, 2026-09-12: assess functional effectiveness and procedural/mechanical effectiveness separately, with their relative importance determined by the skill.
-Functional effectiveness asks whether the skill achieves its intended useful outcomes; failure of an agreed outcome criterion is a hard failure and cannot be offset by procedural success.
+Functional effectiveness asks whether the skill achieves its intended useful outcomes; failure of an agreed outcome criterion makes that execution a functional failure and cannot be offset by procedural success. Batch acceptance is a separate declared rule; it never relabels individual failures.
 Procedural/mechanical effectiveness asks whether required actions, accounting and output contracts are performed reliably.
 Record procedural deviations even when the useful outcome succeeds; decide before collection which are hard failures and which are non-blocking defects, citing their consequence for that skill and its consumers.
 For example, inconsistent adversarial-review output can break downstream consumption, whereas missing sweeping-stale-references accounting can leave a correct reconciliation less auditable without making the reconciliation itself incorrect.
@@ -167,7 +173,7 @@ Exit condition: each judgment has a usable rule and evidence path, mechanical ch
 
 ### 4. Pilot and freeze the experiment plan
 
-Use a small pilot when necessary to verify task validity, provider behavior, input isolation, evidence capture and the ability to complete the score record. Reuse already established mechanics rather than repeating a pilot for every edit.
+Use a small pilot when necessary to verify task validity, provider behavior, input isolation, evidence capture and the ability to record execution outcomes and assess a batch. Reuse already established mechanics rather than repeating a pilot for every edit.
 Track time and invocations against the experiment plan. At work checkpoints, reconcile actual or explicitly estimated time, remaining work and forecast variance by category and in total, including tooling. Compare the total remaining forecast with remaining authorized time; distinguish updated estimates from carried-forward planning assumptions. Count review, storage and model waits once, preserving any unknown historical split. Time variance prompts scope and effort review, not failure scoring, automatic cuts or a phase gate. Preserve necessary work and evidence standards. An owner-set autonomous-work ceiling remains an authorization boundary: present a forecast extension need to the owner, and obtain approval before exceeding that ceiling. If work stops, report incomplete evidence as a limitation.
 Before provider dispatch, record exact input paths and identities, invocation/setup instructions, expected evidence locations and checks, and the authorized scope and budget for subject and evaluator calls.
 Map each case, condition and repetition to all its attempts and retained bundles so another agent can resume without duplicate runs or lost evidence.
@@ -233,7 +239,14 @@ If an assessment reveals a defective test or criterion, identify the affected ob
 Reassess all affected comparison conditions consistently when the evidence supports doing so; recollect only when changed inputs or missing evidence require it and the owner approves.
 Preserve the original record and label the revised analysis.
 
-Summarize per-test and per-condition results, important failure patterns, variability, coverage and context limitations.
+The batch assessment summarizes per-case/per-condition results, important failure patterns, variability, coverage and context limitations.
+Identify the declared batch scope and the accepted attempt-index version supplying its execution results.
+Count met, not met and insufficient evidence separately for each applicable criterion and for the execution-level functional outcome. Show unusable attempts and uncompleted repetitions separately, reconciling them to the planned scope.
+For a reported success fraction, use met / (met + not met + insufficient evidence) among the declared included executions with valid setup, showing unknowns explicitly. Never silently drop invalid, missing or unfavorable observations: explain coverage separately and apply the declared inclusion/retry rule consistently.
+A retry, reassessment or worked example must not silently replace a failed repetition or inflate the sample. Reassessments replace the interpretation of the same execution; worked examples are not measured executions.
+Do not sum overlapping criterion failures as independent failed executions or pool different cases/settings into a single success rate that conceals weaknesses.
+Record batch acceptance against the rule selected before collection, or report descriptive results without inventing a threshold. An agreed 4/5 rule can accept a batch containing one recorded failure; it does not make that execution pass. This illustration establishes no default threshold or claim of population reliability.
+Evidence pointers and concise reasons in the execution results support pattern investigation without copying model output into each summary. Inspect passes too; a repeated explanation of the criterion is not additional evidence.
 A successful control is useful evidence, even when it provides no failing case for new guidance.
 Passing with the original skill establishes observed success; a comparison is required to support a contribution claim.
 Cost, latency and skill size are supporting measures, not substitutes for effectiveness.
@@ -271,7 +284,7 @@ The active agent can design scenarios, edit the skill, dispatch subject runs, in
 The subject is the model invocation under test and receives only its fixed task, skill and declared context.
 Scoring rules and reference facts belong to the assessing session, not the subject inputs.
 A human can replace the active agent as assessor without changing the rule or record format.
-A separately dispatched reviewer/evaluator is optional; when used, identify it and apply the relevant read-only and information-boundary requirements. Those dispatch restrictions do not prevent the active agent from writing score records or making authorized edits.
+A separately dispatched reviewer/evaluator is optional; when used, identify it and apply the relevant read-only and information-boundary requirements. Those dispatch restrictions do not prevent the active agent from recording execution results and batch assessments or making authorized edits.
 
 The owner settles intended-behavior conflicts, approves experiment scope and budget, reviews consequential evaluation uncertainties and decides adoption.
 The owner does not need to perform routine scoring or repeatedly approve a settled rule.
@@ -283,7 +296,7 @@ These records must support resumption without conversation history; keep reserve
 
 ## Working artifact organization
 
-Owner clarification, 2026-09-15: keep one canonical repository record for each formally accepted run and use Git for earlier versions.
+Owner clarification, 2026-09-15: keep canonical accepted records and use Git for earlier versions. Each execution has one current result; each declared batch has one aggregate assessment, referencing those results.
 Commit accepted records before replacing them; cite a full commit ID and path when an assessment needs older file bytes.
 Preservation requirements below do not require duplicate historical files, snapshot directories or an extensive amendment ledger; a concise correction reason and Git history suffice.
 Distinct actual attempts still require accounting, and Git preserves only committed artifacts; full raw bundles remain in the existing external stores under the separately documented retention policy.
@@ -301,7 +314,8 @@ A suite is the explicitly selected set of cases under that protocol, not every c
 | `cases/<case>/assessment.md`, `expected.json`, `assessment-policy.txt` | Pre-run criteria, valid alternatives, known facts, uncertainty boundaries and the exact applicable policy. These are controller inputs, not completed-run judgments or subject guidance. |
 | `cases/<case>/check_*.py`, checker tests, `qualification.json` | Optional deterministic observations and evidence that the chosen checks work on known outcomes. The active agent or human applies the rules where semantics require judgment; no separate evaluator qualification gate. |
 | `cases/<case>/manifest.json`; source provenance where needed | Exact input and controller identities, including versions and hashes. |
-| `<phase>-results.md`, `<phase>-checks.json`, `<phase>-run-index.json` | Post-run judgments, observed facts and an index of every attempt, condition, repetition, policy identity, cost and retained evidence location. Existing pilot files use this pattern; future phase filenames are assigned when that phase is prepared. |
+| `<batch>-run-index.json` | Actual attempts, scope/authorization references, input manifests, call charge, retained bundles and execution-result links; runner metadata is referenced rather than copied. |
+| `results/<run-id>.json`; `<batch>-assessment.md` | Detailed execution outcomes/evidence and the aggregate batch assessment, including comparison when needed. Existing pilot reports/checks and historical `assessments/` examples retain their locations and identities. |
 
 Retain one complete bundle per actual run in the durable external store recorded by the protocol, with one inventory verifying completeness; keep unsuccessful attempts too.
 The owner accepted a small index referencing the manifest, authorization, bundle and canonical assessment, with call accounting; derive execution metadata from runner artifacts rather than duplicating it.
@@ -309,14 +323,16 @@ Use ordinary backup arrangements when configured, without requiring a second stu
 Git holds permitted case materials, policies, manifests and reports. Reserved cases and revealing results stay outside the rewrite author's accessible checkout/history. Verify that access boundary before claiming reserved transfer evidence.
 Case files may be reused in a later authorized phase without relabeling prior pilot observations. Once assessed, preserve their identities; version changed cases or assessments explicitly. Redundant and rejected cases can remain as history without belonging to the active suite.
 
-### Fixed scoring rules and score records
+### Execution results and batch assessments
 
-Settle the reusable formats before the next scored collection. The rules identify each criterion, required evidence, functional/procedural dimension, consequence or weight, acceptable alternatives and treatment of missing evidence. Known output consumers determine which format requirements are consequential.
-The score record must identify its schema version, assessment/run/case IDs, skill/configuration/criteria/policy versions or hashes, assessor and available session/model identity, evidence locations, per-criterion judgments with reasons and consequences, uncertainty and any superseded assessment.
-The active agent completes and records it in the session; a human can complete the same artifact.
-For SSR, retain `met`, `not met`, `insufficient evidence` per criterion and a separate functional summary. Any failed functional criterion makes that summary not met; otherwise any unknown functional criterion makes it insufficient evidence. Procedure remains separately visible under its agreed severity. A numerical presentation, if selected for a skill, must have a predeclared mapping and cannot mask functional failure.
-The [draft score schema, template and retained-run example](../../skill-studies/formats/README.md) make this contract writable and checkable; draft version `1-draft` is not yet the agreed cross-skill format.
-The run index links the completed score record to the runner's unchanged evidence bundle. Validate structure and identities deterministically where tooling exists; explicit checks suffice until the agreed generator/validator is built.
+Settle the reusable formats before the next assessed collection. Rules identify each criterion, evidence, dimension, consequence, valid alternatives and missing-evidence treatment; known consumers determine consequential format requirements.
+The active agent or human records one execution result with schema/result/run identity, condition, manifest reference, assessor context, evidence pointers, setup validity, criterion outcomes/reasons/consequences and uncertainty.
+Resolve study/case, skill/configuration and criteria/policy identities through the manifest instead of copying them into every result. A reassessment may identify changed rules, but must verify unchanged subject inputs against the actual attempt and explain the correction.
+For SSR, retain met / not met / insufficient evidence per criterion. Derive that execution's functional result: any functional failure gives not met, otherwise any functional unknown gives insufficient evidence, otherwise met. Procedure and setup remain separately visible.
+The [execution-result schema/template](../../skill-studies/formats/README.md#execution-results) implements this per-execution contract, not batch acceptance or graded quality. Optional graded scoring for another skill requires a declared mapping; observed success counts are not a new grading scale.
+The [batch-assessment template](../../skill-studies/formats/assessment.template.md) implements section 6's aggregate requirement and can compare those same results across conditions or batches. Do not require an additional comparison record.
+The protocol owns study decisions and authorizations, citing the relevant assessment. Input identity belongs in manifests, attempt/bundle identity in indexes, detailed outcomes in execution results, aggregates in batch assessments and costs in accounting.
+Schema validity alone cannot establish a complete assessment. Validate identities, criterion coverage and declared batch coverage as well; explicit checks suffice until the planned tooling exists.
 
 ### Format decisions and document tooling
 
@@ -328,9 +344,9 @@ Owner clarification: choose the best deterministic tool design from the agreed r
 | Contract to settle | Stable contents and relationships |
 |---|---|
 | Case and evaluation definition | Case/criterion identifiers, purpose and coverage references, subject inputs, functional/procedural classification, consequences, acceptable alternatives, evidence requirements and uncertainty. Skill-specific payload and judgment remain flexible. |
-| Execution and evidence index | Phase, case, condition, repetition and attempt identity; settings, authorization, allocation and evidence locations. Define the interface to runner configuration/result records; explicitly version any necessary changes and preserve historical record identities. |
+| Execution and evidence index | Batch, case, condition, repetition and attempt identity; authorization, call charge and references to configurations/manifests, results and evidence. Define the interface to runner configuration/result records; explicitly version any necessary changes and preserve historical record identities. |
 | Source and freeze manifest | Artifact identities, spec/template/policy versions, source revisions, hashes and the relationships between subject and controller inputs. |
-| Assessment and comparison record | Criterion judgments with evidence references, uncertainty, functional/procedural separation, comparison conditions and limitations; no universal numeric score or fixed acceptance threshold. |
+| Execution results and batch assessment | Detailed outcomes/evidence, aggregate counts and patterns, explicit coverage/denominators, uncertainty and optional comparisons of the same aggregates; no universal grade or fixed acceptance threshold. |
 | Layout and lifecycle | Canonical locations and artifact roles, active-suite membership, reserved/development boundaries, status meanings, and how frozen material is superseded or reassessed without overwriting history. |
 
 For SSR, build the document tool after baseline collection and assessment, with contracts agreed before collection. Its implementation is not a collection-freeze prerequisite: explicit structural and identity checks suffice in the meantime. Estimate implementation and its own qualification separately before starting; do not hide their effort in case preparation. Review scope and the overall authorization boundary if the forecast grows. Later studies may use the completed tool at preparation time.
@@ -338,6 +354,15 @@ Generation and validation should consume the same versioned structural definitio
 The validator reports file/field or line locations and specific failed rules, with human-readable output and a machine-readable form/exit status for automation. Unknown versions are reported as unsupported; do not silently reinterpret or migrate existing documents. Validation is read-only and generation must not overwrite existing work. Historical artifacts retain their declared versions and statuses; migration is an explicit, separate operation.
 Document validation does not establish semantic coverage, realistic scenarios, correct causal attribution, evaluator reliability or actual owner consent. It can check that required evidence/approval references are recorded, not substitute for judging their meaning. Models remain responsible for those judgments.
 Qualify the tool using generated valid drafts, representative complete documents and deliberately invalid examples, including missing requirements, unresolved references, wrong versions/hashes and inconsistent run counts. Agree on its concrete CLI, supported document representations and integration point with the existing runner before implementation; no provider dispatch or new testing service is implied.
+
+### Document conformance
+
+The spec governs the document set, not just its starting design. Format walkthroughs settle representations; they do not reopen the workflow or criterion policy.
+Before accepting a document change, trace its fields/sections to the responsibilities above, identify the authoritative home of each fact, and check the whole set for omissions, duplication and conflicting current instructions.
+In particular, follow one declared batch from case/configuration through manifest, attempts and execution results to aggregate assessment and decision; check failed, unknown, unusable and unfinished observations as well as passes. Use existing evidence or clearly labelled structural examples, without requiring new model calls.
+Schema tests establish structural rules only. Review whether the artifacts collectively answer the spec's questions; accepting one template does not establish that the complete set conforms.
+If the representation cannot express an existing requirement, correct the representation. Change the spec only for a genuine requirement clarification, with the reason at that rule; do not invent new workflow steps to accommodate a template.
+Keep this check within the existing review and plan. It requires no separate traceability ledger, review service or additional owner approval. Git preserves superseded instructions; current documents describe the selected work.
 
 ## Practical rollout and open design choices
 

@@ -537,3 +537,85 @@ Verification: real config loading yields 13 unique semantic-delivery sources (10
 No new validator implementation or provider calls.
 
 DD-VERDICT: PASS
+
+## Manifest retrieval and forecast follow-up
+
+Verified Claude's findings: the two unrun manifests named preparation bases that omit their case inputs, and the protocol referred to a removed time forecast as though it still existed.
+Replaced those manifest fields with `source_revision` at commits containing every identified repository input, including current controller bytes: Shiv at `bab94037f435fa375579caf8b6ee21d5c56413f3`, semantic-delivery at `59c327e277cc3267be58eb05c0341d441995311f`.
+Direct Git retrieval verifies all 83 and 25 unique repository identities respectively against their recorded sizes/hashes and working files; only the revision field changed in each manifest. External runtime identity and historical preparation records retain their original meaning.
+The protocol now requires preparing the remaining-time forecast for the walkthrough and links the spec's effort rule. Full format migration and collection authorization remain pending.
+Verification: 8 format tests and 263 hook tests pass (3 skips); whitespace clean. No input bytes, scoring decisions or model calls changed.
+
+## Whole-study design review against the agreed spec
+
+Scope: current plan/spec, live SSR protocol and handoff, every draft format, score schema/tests/example, prepared case definitions, runner result/worksheet interfaces, and repository architecture guidance. This reviews design conformance; it does not reassess pilot outputs or resume superseded workflows.
+The shared problem is blurred ownership and units: responsibilities became overlapping records, while aggregation and acceptance remained implicit. The spec itself also mixes per-execution terminology with general assessment language.
+Recommendations below remain proposals; neither formats nor scoring policies were changed in this review.
+
+- [P2] `skill-studies/formats/score-record.schema.json:14`: the implemented score contract describes one execution, while the required aggregate assessment has no concrete format.
+  Spec sections 3 and 6 require evidence-backed observations plus per-test/per-condition summaries and variability. The schema has one run_id and a categorical judgment, not a graded quality field. Direct validation accepts the retained example and rejects multiple run IDs, aggregate counts and a “mostly met” judgment. The assistant's previous claim that graded scoring was already implemented was inaccurate.
+  Define execution/attempt, test case, test batch and assessment once. Keep criterion outcome, concise explanation and evidence for each execution; aggregate repetitions in the batch assessment. Do not introduce a second qualitative scale unless a criterion actually needs one. Whole-artifact criteria and valid alternatives remain intact.
+- [P2] `skill-studies/formats/protocol.template.md:28`: “Rollup” does not distinguish within-execution failure from batch acceptance, and no format states the aggregation population.
+  The fixed SSR rule makes an execution fail functionally when an applicable functional criterion fails. It does not supply a batch acceptance threshold. Preserve the failure when reporting 4/5; any owner-accepted batch threshold is a separate, explicit rule, not a reclassification of that failure or a default 80% standard.
+  The protocol should own batch membership, repetitions, retry/stopping treatment and any acceptance rule. The assessment should derive counts per case/condition/criterion and expose unknown outcomes, invalid attempts and uncompleted scope. An infrastructure failure, worked example or reassessment must not silently become a new successful repetition. Counts need denominators, not new statistical machinery.
+- [P2] `skill-studies/formats/comparison.template.md:10`: the separate comparison report repeats evidence, identities, judgments, costs and decision fields already assigned elsewhere.
+  The spec's seven responsibilities explicitly do not mandate seven files. Use one batch assessment with execution details or references and the aggregate summary; an optional before/after view compares those same aggregates. Keep study/adoption decisions in the protocol. A separate comparison document should not be mandatory.
+- [P2] `skill-studies/sweeping-stale-references/protocol.md:260`: the current operating document still carries an executable-looking superseded campaign.
+  Historical calibration/transfer allocations and imperative five-sample diagnostic instructions coexist with the active-session workflow. Warnings prevent authorization, but readers must still disentangle incompatible procedures. Keep current scope, ceilings, evidence links and applicable authoring constraints; let Git preserve abandoned allocations and instructions. The retained 47-call scenario is a conditional illustration, not a forecast of selected work.
+  Also reconcile plan Stage 3's instruction to obtain authorization covering later comparison allocation with the spec's bounded dispatch rule: protect future capacity and forecast it, but require actual invocation authority for the scope being dispatched, not an unselected future campaign.
+- [P2] `skill-studies/formats/companion-formats.md:14`: the common citation contract requires historical Git resolution but its displayed identity shape omits the revision.
+  The score schema disallows extra artifact properties, so a citation cannot directly carry git_revision. The historical example works through its separately documented index; that exception is not a general citation format. Specify one resolvable reference representation and reuse identities from manifests/indexes rather than recopying them across every result and comparison. Preserve the example's existing bytes and resolution path.
+- [P2] `skill-studies/formats/case-definition.template.md:43`: Git-based history simplification remains inconsistently applied across the format set and spec.
+  Case and comparison templates still require superseded/amendment fields; the score requires supersedes and relationship_to_prior even for an ordinary initial assessment. Spec section “Fixed scoring rules and score records” also retains superseded-assessment wording beside its newer Git-history rule. Use current content and a concise correction reason when needed, with Git for earlier records. Keep worked-example provenance explicit; it is not ordinary change-history boilerplate.
+- [P3] `skill-studies/formats/companion-formats.md:42`: requiring “Not applicable” entries for optional features adds routine paperwork.
+  Keep the seven useful protocol sections, but omit unselected reserved-evidence/numeric-mapping blocks. Costs belong in accounting unless relevant to an effectiveness tradeoff. Repeated setup/attribution limits can be cited from the batch scope, with per-execution exceptions recorded locally. `ARCHITECTURE.md:75` also still speaks of verified backups generically; point it to actual protocol retention/recovery arrangements instead.
+
+Retain these parts of the design:
+
+| Area | Spec alignment and disposition |
+|---|---|
+| Behavioral contract and test construction | Existing SSR outcomes, consumer-based procedural severity, three prepared core situations, accepted alternatives and disclosed coverage gaps fit sections 1–3. No new case, criterion splitting or control-failure requirement is justified by this review. |
+| Evidence interpretation | Runtime/checker facts remain separate from semantic pass/fail decisions; final files, trace and Git evidence support different claims. Keep reasons and precise evidence pointers for passes and failures. |
+| Runner and input boundaries | Runner code executes once and reports mechanical COMPLETED/INFRA_ERROR, not skill success. Configurations own supplied mappings; manifests pin bytes; original skill stays frozen and controller rules remain outside subject inputs. No new execution feature is identified. |
+| Retention and attempt accounting | One complete durable bundle/inventory per actual attempt, small index, Git history and the accepted single-host risk match the current spec. No additional backup or isolation project is proposed. |
+| Tooling and progression | Generator/validator after baseline assessment, shared definitions, non-overwriting generation and read-only structural validation remain appropriate. Fix the document contracts first; do not add a service, evaluator gate or model campaign to resolve format issues. |
+
+Priority: agree the simplified responsibilities and batch-assessment contract, then reconcile the spec's ambiguous terminology and all affected templates/live docs together. Retain historical evidence; no further model runs, rewrite or tooling implementation is authorized.
+Verification: inspected actual runner result construction and schema behavior; 8 format tests and 263 hook tests pass (3 skips), and whitespace checks pass. The format tests confirm the present per-execution contract rather than aggregate completeness.
+
+DD-VERDICT: BLOCK
+
+## Document reconciliation to the agreed workflow
+
+The owner authorized correcting the documents, not redesigning the workflow. The findings above are addressed as one ownership/unit correction in draft format `2-draft`.
+The spec now defines execution/attempt/case/batch explicitly and distinguishes categorical execution outcomes, aggregate assessment and declared acceptance. Its Document conformance rule checks the whole artifact chain within existing review, without a new approval gate or traceability ledger.
+Execution results retain criterion outcomes, reasons, consequences, evidence and assessor context; a manifest supplies input identities. Batch assessment owns counts, coverage, patterns and optional comparison. Removed the mandatory comparison report and forward-format history fields. Common identities now support full Git revisions.
+The live protocol follows the seven agreed sections and shrank from 377 to 185 lines, retaining the same policy-3 body while removing superseded campaign tables and imperative diagnostic instructions. The plan/handoff and architecture wording now route to current artifact responsibilities and retention decisions.
+Historical pilot reports/indexes, case inputs and the policy-3 worked example remain unchanged. Its original schema and cited index resolve by recorded Git revision/path/hash; the removed `1-draft` schema is retained in Git, not a duplicate compatibility implementation. The two previously corrected unrun manifest revisions remain in this change set.
+
+Whole-set review followed scope → configurations/case rules → manifest → attempt/bundle/result → batch aggregate → protocol decision. Checked these structural examples without model execution or new performance claims:
+
+- Four met plus one not met stays 4/5; batch acceptance cannot relabel the failed execution.
+- Four met plus one unknown remains explicit as four met/zero not met/one unknown, not an unqualified 4/4 pass.
+- A shared F1/F3 failure contributes once to the execution's functional outcome; procedural failure alone does not change it.
+- Invalid/unassessed attempts and unfinished repetitions remain visible against planned scope. Retries follow the predeclared inclusion rule; a worked example or reassessment cannot inflate the sample.
+- Conditions with different inputs/rules remain identified; the optional comparison uses the same aggregates rather than another judgment layer.
+- Manifest/index/record references resolve directionally, with Git revisions for mutable accepted repository bytes; external raw evidence retains its separate recovery limitation.
+
+Verification: the new contract tests first rejected the new shape under the old schema, then all 9 passed under the revised schema. The unchanged historical example validates against its Git-pinned original schema; policy snapshot equality and historical-byte preservation checks pass. All 280 affected local links resolve; hook suite 263 passed, 3 skipped; whitespace checks pass.
+No runner execution feature, generator/validator CLI, provider call, skill edit, changed criterion meaning or acceptance threshold was introduced. Remaining selected input-format migration, final version-1 acceptance and collection authorization are explicitly pending; these are existing checkpoints, not unresolved findings in this reconciliation.
+
+DD-VERDICT: PASS
+
+## Post-reconciliation document review
+
+Reviewed the complete current format set, spec/plan, protocol/handoff, schema/tests, case boundaries and historical reference chain against the agreed workflow. No blocking finding: execution evidence, aggregate assessment, optional comparison and owner decisions have distinct homes; pending input migration and collection scope remain explicit.
+
+- [P3] `plans/2026-09-11-model-driven-skill-testing.md:163`: “canonical score link” retains the old name; the current index field is `result`. Use “execution-result link” for consistency.
+- [P3] `skill-studies/formats/companion-formats.md:132`: “phase attempt indexes” retains the old scope name; each current index belongs to one batch. Use “batch attempt indexes.”
+
+Both terminology findings are now resolved in their authoritative documents; the follow-up sweep found no remaining active instances. The changes do not alter the contract.
+Checked failure/unknown/procedural-only outcomes, planned versus observed coverage, invalid attempts, retries, reassessment/example exclusion, case/rule comparability and Git-backed retrieval. Existing explicit checks cover these responsibilities without another validator/service gate.
+Verification: 9 execution-result tests pass; 280 affected local links resolve; historical schema/index hashes and original-example validation pass; pilot reports/indexes and policy body remain unchanged; whitespace clean. No model runs.
+
+DD-VERDICT: PASS

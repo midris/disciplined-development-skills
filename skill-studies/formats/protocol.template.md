@@ -1,13 +1,13 @@
 # <Skill>: study protocol
 
-Format version: `1-draft`
+Format version: `2-draft`
 Study ID: <id>
 Status: draft
 Plan: <link>
 General spec: <link>
 
-Keep current decisions, their authority and brief rationale in the relevant section.
-Use Git for earlier versions; no separate decision ledger is required.
+Keep current decisions, authority and brief rationale beside their subject; Git supplies history.
+Omit optional numeric mapping and reserved-evidence provisions unless selected.
 
 ## Sources and intended use
 
@@ -25,9 +25,9 @@ Owner clarifications distinct from explicit skill promises: <citations>
 
 Policy ID and effective decision: <id/citation>
 Functional/procedural consequences, evidence priority, alternatives and uncertainty: <text>
-Rollup and overlap handling: <text>
-Numeric mapping: Not applicable unless selected before collection.
-Snapshot identity: <link outside the copied policy body>
+Within-execution functional outcome and overlap handling: <rule>
+Batch aggregation and acceptance: <spec aggregation rule plus any selected study threshold, or descriptive-only>
+Policy snapshot: <identity outside the copied policy body>
 
 ## Suite and evidence
 
@@ -35,29 +35,28 @@ Snapshot identity: <link outside the copied policy body>
 |---|---|---|---|---|
 | <case/link> | proposed | <IDs> | development | <text> |
 
-Evidence/checker methods and qualification links: <text>
+Evidence/checker methods and qualification: <links>
 Coverage gaps and rationale: <text>
-Reserved boundary: Not applicable unless a held-out claim is selected and verified.
 
 ## Execution scope and authorization
 
-Conditions, original/candidate identities and common context: <links>
-Configurations/manifests, model/effort/permissions, commands/cwd and CLI identities: <links>
-Run order, repetitions, stopping/retry rules and exact authorized scope: <text/citations>
-Format agreement and collection-freeze decisions: <citations or explicitly pending>
+Batch ID, cases, conditions and repetitions: <selected scope>
+Configurations/manifests: <links; these own source identities and settings>
+Commands/cwd, CLI identity and context limits: <text/citations>
+Run order, stopping/retry rules and inclusion of attempts in aggregates: <text>
+Owner authority for the actual scope being dispatched: <citation or pending>
+Format agreement and collection freeze: <citation or pending>
 
 ## Storage and accounting
 
 Canonical checkout and absolute durable evidence location: <paths>
-One-bundle retention and completeness verification: <text>
-Ordinary backup arrangement and recovery limits: <text or explicitly unverified>
-All attempt indexes, including historical ones: <links>
-Pool ceilings, spent/remaining calls and active-time ceiling: <table derived from indexes>
-Current cumulative active time, remaining capacity and accounting basis/allowance: <one entry updated in place; prior checkpoints in Git>
-Remaining forecast by selected work category: <estimate or explicit uncertainty>
-Tooling estimate separately identified; scope-dependent estimates remain explicit.
+Bundle retention, inventory verification and actual recovery arrangements: <text>
+Attempt indexes: <links>
+Pool ceilings and spent/remaining calls: <derived from indexes>
+Active-time ceiling, current total, remaining time and accounting basis/allowance: <one current entry>
+Remaining forecast by selected work category, including tooling: <estimates/uncertainties>
 
 ## Results and decision
 
-Score/index/comparison links and interpretation limits: <links/text or not yet collected>
-Rewrite/adoption decision: <owner citation or pending>
+Batch assessments: <links or not yet collected>
+Owner rewrite/adoption decision and evidence basis: <citation or pending; reference assessment conclusions>

@@ -1,51 +1,41 @@
 # Study formats
 
-The [companion format proposal](companion-formats.md) completes the `1-draft` review set: protocol, case/criterion definition, source/freeze manifest, attempt index, comparison and lifecycle relationships.
-Start there for the format walkthrough; use its linked blank templates and filled semantic-delivery criterion alongside the completed score example below.
-Owner agreement remains pending; no template is dispatch approval, and the integrated generator/validator remains later work.
+The [field contracts](companion-formats.md) implement the [agreed spec](../../plans/specs/2026-09-11-model-driven-skill-testing-framework.md#working-artifact-organization).
+Current format set: `2-draft`; final version-1 acceptance and collection freeze remain pending.
 
-## Score records
+| Artifact | Owns |
+|---|---|
+| [Protocol](protocol.template.md) | Study agreement, scope, policy, accounting and owner decisions. |
+| [Case definition](case-definition.template.md) | Criterion boundaries and evidence rules; see the [filled criterion](semantic-delivery-criterion-example.md). |
+| [Manifest](manifest.template.json) | Frozen input identities; configurations own mappings/settings. |
+| [Attempt index](run-index.template.json) | Each actual attempt, authorization, call charge, retained bundle and execution-result link. |
+| [Execution result](execution-result.template.json) | One execution's criterion outcomes, reasons, evidence and uncertainty. |
+| [Batch assessment](assessment.template.md) | Aggregates, failure patterns, limits and any comparison using those same results. |
 
-The [schema](score-record.schema.json), [blank template](score-record.template.json) and [filled SSR example](../sweeping-stale-references/assessments/pilot-02-original-policy-3-example.json) are draft version `1-draft` for format review before the next scored collection.
-They implement the [fixed scoring contract](../../plans/specs/2026-09-11-model-driven-skill-testing-framework.md#fixed-scoring-rules-and-score-records); the companion proposal and this score format remain unfrozen.
+These are distinct responsibilities, not separate assessment processes.
+A separate comparison report is unnecessary; study decisions remain in the protocol.
+Keep detailed outputs/traces in the retained bundles and cite them from execution results.
+The active agent or human inspects evidence supporting passes as well as failures; outcome labels do not replace evidence or reasoning.
 
-The active agent or human copies the template, reads the identified policy and case criteria, inspects the retained run, and completes one record.
-The blank template deliberately fails completed-record validation: replace empty fields, list every applicable criterion and supply evidence before recording a result.
-Use `null` for unavailable assessor model/session identity, an absent target skill in a control, or no superseded assessment; explain consequential limits in context or uncertainty.
-Paths are repository-relative or absolute for private evidence; hashes identify file bytes, and selectors identify JSON fields, trace lines or other precise locations within them.
-Evidence IDs must be unique, and criterion/setup/observation evidence lists refer to those IDs.
-Keep trace payloads in their retained bundle; cite them rather than copying full transcripts into Git.
+## Execution results
 
-Record functional and procedural judgments separately under the case's agreed consequences.
-The schema checks the three-state functional rollup, not semantic correctness or a skill's procedural severity.
-A `met` audit-usefulness criterion can coexist with an explicit secondary accuracy defect when the registered criterion and policy permit that distinction, as in the example; it must not be presented as flawless compliance.
-Control records describe observed procedure without imposing target instructions that were not supplied.
-Setup is separate: an invalid or uncertain setup cannot substantiate a skill-effectiveness claim, even when the final artifact can be inspected.
+Use the [schema](execution-result.schema.json) and blank template for new records.
+The schema validates one execution and its functional rollup, not batch acceptance, evidence correctness or causal attribution.
+`judgment` is `met`, `not met` or `insufficient evidence`; reasons explain the outcome, not a hidden graded score.
+Shared rules and input identities resolve through the manifest; record per-execution evidence and exceptions locally.
+An invalid setup limits the assessment even if a resulting artifact can be inspected.
+Before accepting a result, verify schema conformance, identities, unique IDs, applicable criterion coverage and evidence references.
+The [companion contract](companion-formats.md#execution-results-and-batch-assessment) defines aggregation and the separate batch assessment.
 
-Before accepting a completed record, check it against the schema, then verify all paths/hashes, unique criterion and evidence IDs, evidence-reference resolution, and coverage against the identified criteria.
-Check that reasons support judgments and consequences follow the policy; the schema cannot do this judgment work.
-Keep one canonical accepted score per run; commit accepted records before replacing them and use Git to retrieve earlier versions.
-Index the record's path/hash with its run identity; a correction needs a concise reason, not a parallel archive of score files.
-The example has a [separate index](../sweeping-stale-references/assessments/index.json), so the original pilot's run index and policy-2 assessment remain unchanged.
-Its `retained_run_index` records `git_revision` alongside the path and hash.
-Resolve the unchanged score's historical run-index citation from that commit and path, then verify its SHA-256; later live-index edits do not change those Git bytes.
-This uses Git history without keeping a duplicate snapshot in the working tree.
+Run `skill-validation/runner/.venv/bin/python -m unittest discover -s skill-studies/formats` from the repository root.
+For a completed result, load `execution-result.schema.json` with the runner environment's `jsonschema.Draft202012Validator` and validate the record.
+The blank template intentionally fails completed-record validation.
+No batch validator or generator is implemented; explicit contract checks suffice until the planned document tooling after baseline assessment.
 
-From the repository root, validate a completed record with the runner's existing environment:
+## Historical example
 
-```sh
-skill-validation/runner/.venv/bin/python - <<'PY'
-import json
-from pathlib import Path
-from jsonschema import Draft202012Validator
-schema = json.loads(Path('skill-studies/formats/score-record.schema.json').read_text())
-record = json.loads(Path('skill-studies/sweeping-stale-references/assessments/pilot-02-original-policy-3-example.json').read_text())
-Draft202012Validator.check_schema(schema)
-Draft202012Validator(schema).validate(record)
-print('Record structure and functional rollup conform; inspect identities and judgments separately.')
-PY
-```
-
-Run the format's contract checks with `skill-validation/runner/.venv/bin/python -m unittest discover -s skill-studies/formats`.
-These use the runner's existing `jsonschema` dependency and invoke no models.
-A template generator and integrated conformance CLI remain deferred until format agreement and baseline assessment, as the plan specifies.
+The [policy-3 pilot-02 example](../sweeping-stale-references/assessments/pilot-02-original-policy-3-example.json) remains byte-for-byte unchanged in format `1-draft`.
+It illustrates evidence and criterion reasoning from one retained execution, not batch reliability or a replacement pilot assessment.
+Its [index](../sweeping-stale-references/assessments/index.json) pins the original schema and the cited historical run index by full Git revision, path and SHA-256.
+Retrieve those bytes with `git show <git_revision>:<path>` and verify the hash before validation; do not apply the current schema to that historical record.
+The old schema lives in Git rather than a duplicate archive or compatibility branch in the current schema.

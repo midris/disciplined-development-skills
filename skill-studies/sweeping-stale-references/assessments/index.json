@@ -1,5 +1,5 @@
 {
-  "status": "Draft score-format examples; no new subject calls or replacement pilot assessments.",
+  "status": "Historical worked example; no new subject calls or replacement pilot assessments.",
   "records": [
     {
       "assessment_id": "ssr-pilot-02-original-policy-3-example-20260914",
@@ -17,7 +17,13 @@
         "mode": "0o644",
         "git_revision": "59c327e277cc3267be58eb05c0341d441995311f"
       },
-      "supersedes": null
+      "supersedes": null,
+      "schema": {
+        "path": "skill-studies/formats/score-record.schema.json",
+        "sha256": "59ab5b307a043c5e53d560ad1fe280dfc21f3df9b1c259fd8f9a8701c5a0fd93",
+        "version": "1-draft",
+        "git_revision": "6e06b4becd7beccb657c478042bacfc6e7d31285"
+      }
     }
   ]
 }

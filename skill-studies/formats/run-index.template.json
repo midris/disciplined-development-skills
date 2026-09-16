@@ -1,8 +1,7 @@
 {
-  "format_version": "1-draft",
+  "format_version": "2-draft",
   "index_id": "",
   "study_id": "",
-  "phase": "",
   "attempts": [
     {
       "attempt_id": "",
@@ -14,7 +13,7 @@
       "manifest": {
         "path": "",
         "sha256": "",
-        "version": "1-draft"
+        "version": "2-draft"
       },
       "authorization": {
         "artifact": {
@@ -35,7 +34,8 @@
         "inventory": null,
         "verified": false
       },
-      "score": null
+      "result": null
     }
-  ]
+  ],
+  "batch_id": ""
 }

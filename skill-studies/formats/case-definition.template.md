@@ -2,7 +2,7 @@
 
 ## Identity and purpose
 
-Format version: `1-draft`
+Format version: `2-draft`
 Study ID: <id>
 Case ID: <id>
 Definition version: <version>
@@ -18,7 +18,7 @@ Setup evidence and validity/uncertainty boundaries: <text>
 
 ## Rules and evidence
 
-Policy identity: <path/hash/version>
+Policy: <citation; exact bytes pinned by the manifest>
 Known facts, accounting scope and reference examples: <citations>
 Evidence precedence, mechanical commands and semantic inspection: <text>
 Shared alternatives and missing-evidence treatment: <text>
@@ -40,8 +40,6 @@ Alternatives: <valid variations or shared-rule citation>
 Consequence: <failure/uncertainty effect and consumer/policy basis>
 Overlap: <related criteria/shared cause or none>
 
-## Limits and amendments
+## Limits
 
 Known measurement/attribution limits: <text>
-Definition superseded: <identity or none>
-Amendment reason, affected conditions and evidence/recollection implications: <text or none>

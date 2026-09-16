@@ -1,53 +1,41 @@
 {
   "$schema": "https://json-schema.org/draft/2020-12/schema",
-  "title": "Skill score record 1-draft \u2014 completed records",
-  "description": "Structure and functional rollup only; criterion completeness, evidence identity/reference resolution and semantic judgments require inspection.",
+  "title": "Execution result 2-draft \u2014 completed records",
+  "description": "One model execution: criterion outcomes, evidence and functional result. Batch assessment aggregates these records.",
   "type": "object",
   "additionalProperties": false,
   "required": [
     "schema_version",
     "record_kind",
-    "assessment_id",
+    "result_id",
     "assessed_at",
-    "study_id",
-    "case_id",
     "run_id",
     "condition",
-    "inputs",
     "assessor",
     "evidence",
     "setup",
     "criteria",
-    "functional_summary",
+    "functional_result",
     "procedural_summary",
     "observations",
     "uncertainty",
-    "supersedes",
-    "relationship_to_prior"
+    "manifest"
   ],
   "properties": {
     "schema_version": {
-      "const": "1-draft"
+      "const": "2-draft"
     },
     "record_kind": {
       "enum": [
-        "assessment",
+        "execution result",
         "worked example"
       ]
     },
-    "assessment_id": {
+    "result_id": {
       "type": "string",
       "minLength": 1
     },
     "assessed_at": {
-      "type": "string",
-      "minLength": 1
-    },
-    "study_id": {
-      "type": "string",
-      "minLength": 1
-    },
-    "case_id": {
       "type": "string",
       "minLength": 1
     },
@@ -58,41 +46,6 @@
     "condition": {
       "type": "string",
       "minLength": 1
-    },
-    "inputs": {
-      "type": "object",
-      "additionalProperties": false,
-      "required": [
-        "skill",
-        "configuration",
-        "criteria",
-        "policy"
-      ],
-      "properties": {
-        "skill": {
-          "anyOf": [
-            {
-              "$ref": "#/$defs/artifact"
-            },
-            {
-              "type": "null"
-            }
-          ]
-        },
-        "configuration": {
-          "$ref": "#/$defs/artifact"
-        },
-        "criteria": {
-          "type": "array",
-          "items": {
-            "$ref": "#/$defs/artifact"
-          },
-          "minItems": 1
-        },
-        "policy": {
-          "$ref": "#/$defs/artifact"
-        }
-      }
     },
     "assessor": {
       "type": "object",
@@ -252,7 +205,7 @@
         }
       }
     },
-    "functional_summary": {
+    "functional_result": {
       "enum": [
         "met",
         "not met",
@@ -310,19 +263,8 @@
       },
       "minItems": 0
     },
-    "supersedes": {
-      "anyOf": [
-        {
-          "$ref": "#/$defs/artifact"
-        },
-        {
-          "type": "null"
-        }
-      ]
-    },
-    "relationship_to_prior": {
-      "type": "string",
-      "minLength": 1
+    "manifest": {
+      "$ref": "#/$defs/artifact"
     }
   },
   "allOf": [
@@ -350,7 +292,7 @@
       },
       "then": {
         "properties": {
-          "functional_summary": {
+          "functional_result": {
             "const": "not met"
           }
         }
@@ -379,14 +321,14 @@
         },
         "then": {
           "properties": {
-            "functional_summary": {
+            "functional_result": {
               "const": "insufficient evidence"
             }
           }
         },
         "else": {
           "properties": {
-            "functional_summary": {
+            "functional_result": {
               "const": "met"
             }
           }
@@ -417,6 +359,10 @@
             "string",
             "null"
           ]
+        },
+        "git_revision": {
+          "type": "string",
+          "pattern": "^[0-9a-f]{40}$"
         }
       }
     }

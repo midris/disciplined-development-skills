@@ -1,7 +1,7 @@
 {
   "purpose": "Locally prepared development case; verify identities before any owner-authorized dispatch.",
   "authorization": "Owner approved baseline design after closing pre-baseline development. Case selection, measured-collection freeze and provider dispatch remain pending; no transfer of the unused development slot.",
-  "preparation_base_revision": "ac971b0cf5017fd5a4d68e72fd9a25cb9388d198",
+  "source_revision": "bab94037f435fa375579caf8b6ee21d5c56413f3",
   "execution": {
     "provider": "codex",
     "model": "gpt-5.6-sol",

@@ -1,7 +1,7 @@
 {
   "purpose": "Prepared semantic-drift case; verify identities before authorized dispatch.",
   "authorization": "Local preparation authorized; no subject/evaluator dispatch, revised allocation or collection freeze approved.",
-  "preparation_base_revision": "718f06dc8c482ac8f64a75695f4b3e6a6b081a5b",
+  "source_revision": "59c327e277cc3267be58eb05c0341d441995311f",
   "configurations": {
     "control": {
       "config": "skill-studies/sweeping-stale-references/cases/semantic-delivery/control.json",

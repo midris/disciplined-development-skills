@@ -1,32 +1,9 @@
 {
-  "schema_version": "1-draft",
-  "record_kind": "assessment",
-  "assessment_id": "",
+  "schema_version": "2-draft",
+  "record_kind": "execution result",
   "assessed_at": "",
-  "study_id": "",
-  "case_id": "",
   "run_id": "",
   "condition": "",
-  "inputs": {
-    "skill": null,
-    "configuration": {
-      "path": "",
-      "sha256": "",
-      "version": null
-    },
-    "criteria": [
-      {
-        "path": "",
-        "sha256": "",
-        "version": null
-      }
-    ],
-    "policy": {
-      "path": "",
-      "sha256": "",
-      "version": null
-    }
-  },
   "assessor": {
     "name": "",
     "method": "active session",
@@ -68,10 +45,15 @@
       "evidence": []
     }
   ],
-  "functional_summary": "insufficient evidence",
   "procedural_summary": "",
   "observations": [],
   "uncertainty": [],
-  "supersedes": null,
-  "relationship_to_prior": ""
+  "result_id": "",
+  "functional_result": "insufficient evidence",
+  "manifest": {
+    "path": "",
+    "sha256": "",
+    "version": "2-draft",
+    "git_revision": ""
+  }
 }
