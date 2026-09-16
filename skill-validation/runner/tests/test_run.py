@@ -245,3 +245,22 @@ def test_read_only_mode_reaches_provider_and_preserves_assessment(build_config_c
     assert (outcome.run_dir / 'workspace/fixture/input.txt').read_bytes() == b'original'
     assert json.loads((outcome.run_dir / 'config.json').read_text())['execution']['permissions'] == 'read-only'
     assert record(outcome)['execution']['permissions'] == 'read-only'
+
+
+@pytest.mark.parametrize('timed_out, exit_code', [(False, 7), (True, -15), (True, None)])
+def test_capture_failure_reports_recovery_without_losing_provider_outcome(
+    build_config_case, provider_call, timed_out, exit_code
+):
+    # Break: a failed provider hides the retained private runtime behind its primary error.
+    recovery = 'private Codex runtime retained; manual recovery required: /private/owned-runtime'
+    provider_call.return_value = ProviderResult(
+        'codex', True, exit_code=exit_code, timed_out=timed_out,
+        capture_error='session capture failed: expected exactly one session rollout',
+        cleanup_error=recovery,
+    )
+    value = record(runner.run_once(build_config_case().config_path))
+    assert value['infrastructure_error']['code'] == 'SESSION_CAPTURE_FAILED'
+    assert recovery in value['infrastructure_error']['message']
+    assert value['execution']['exit_code'] == exit_code
+    assert value['execution']['timed_out'] is timed_out
+    assert value['artifacts']['provider_session']['exists'] is False

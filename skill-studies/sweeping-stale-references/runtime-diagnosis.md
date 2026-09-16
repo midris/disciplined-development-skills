@@ -1,6 +1,6 @@
 # Shiv subject runtime: diagnosis and correction
 
-Status: correction implemented and verified offline; approval to apply the changed runtime to frozen collection is pending.
+Status: correction implemented and verified offline; owner approved continuation on 2026-09-16 after review. The protocol owns the runtime-1 authority.
 Affected batch: [core-baseline-01](protocol.md#core-baseline-core-baseline-01), paused before order 6.
 The seven remaining subject calls are unspent; no retry or replacement is proposed.
 
@@ -41,9 +41,9 @@ The proposed-PATH diagnostics include complete successful tests and consumer obs
 
 The final production-adapter qualification (without a prototype PATH override) is retained separately at `/Users/simon/work/personal/skill-study-private/sweeping-stale-references/development/python-path-qualification-20260916/`; its sibling `.inventory.json` has SHA-256 `27b096f4e38675fa0f2c627287f51bd9f0f949598bfb8bd6973fcf3e9f605ec6` (10 files, 179,957 bytes). It includes the exact changed adapter source and resolved Python binary hash. All four tests and consumer checks pass through the actual argument builder.
 
-## Proposed resumption
+## Approved resumption
 
-Approve this explicit-PATH runtime amendment for orders 6–12, then freeze the revised runner/protocol identity before the next dispatch.
+The owner approved this explicit-PATH runtime amendment for orders 6–12. Freeze the revised runner/protocol identity before the next dispatch.
 Keep the existing order and seven-call allocation; retain orders 1 and 5 as excluded attempts and do not replace them.
-Record the runtime difference rather than pooling the invalid Shiv attempt with later valid observations.
+Orders 2–4 also retain the earlier runtime configuration. The index labels that limitation and the assessment distinguishes runtime strata; per-condition totals across strata are descriptive mixed-configuration counts. Do not treat repetition differences as a pure skill or stochastic effect. The invalid Shiv attempt remains excluded.
 No skill rewrite or document generator/validator work follows from this repair.

@@ -402,7 +402,7 @@ def test_group_check_reaps_before_probing_and_handles_disappearance(monkeypatch)
     assert events == ["reap", (987654, 0)]
 
 
-@pytest.mark.parametrize('failure', [None, 'nonzero', 'missing', 'ambiguous', 'symlink', 'copy'])
+@pytest.mark.parametrize('failure', [None, 'nonzero', 'missing', 'missing-nonzero', 'ambiguous', 'symlink', 'copy'])
 def test_session_evidence_is_published_before_cleanup_or_runtime_is_retained(tmp_path, setup_calls, failure):
     # Break: deleting full tool-response evidence, copying auth, or accepting an ambiguous/symlinked capture.
     request = request_at(tmp_path / 'session-case')
@@ -414,7 +414,7 @@ def test_session_evidence_is_published_before_cleanup_or_runtime_is_retained(tmp
         profile = Path(setup_calls.popen.call_args.kwargs['env']['CODEX_HOME'])
         roots.append(profile.parent)
         sessions = profile / 'sessions/2026/09/16'; sessions.mkdir(parents=True)
-        if failure != 'missing':
+        if failure not in ('missing', 'missing-nonzero'):
             source = sessions / 'rollout-test.jsonl'
             if failure == 'symlink':
                 source.symlink_to(profile / 'auth.json')
@@ -424,7 +424,7 @@ def test_session_evidence_is_published_before_cleanup_or_runtime_is_retained(tmp
             (sessions / 'rollout-other.jsonl').write_bytes(captured)
         if failure == 'copy':
             (request.workspace_dir.parent / 'provider-session.jsonl').mkdir()
-        if failure == 'nonzero':
+        if failure in ('nonzero', 'missing-nonzero'):
             setup_calls.process.returncode = 7
         return b'{"partial":"late output"}\n', b''
     setup_calls.process.communicate.side_effect = communicate
@@ -440,5 +440,5 @@ def test_session_evidence_is_published_before_cleanup_or_runtime_is_retained(tmp
         assert result.capture_error and result.cleanup_error
         assert not target.is_file()
     assert result.invocation_started
-    assert result.exit_code == (7 if failure == 'nonzero' else 0)
+    assert result.exit_code == (7 if failure in ('nonzero', 'missing-nonzero') else 0)
     assert '--ephemeral' not in setup_calls.popen.call_args.args[0]

@@ -98,7 +98,9 @@
           "git_revision": "65028bcb036886b65789db8b470bb4aebfad86e1"
         }
       },
-      "limitations": []
+      "limitations": [
+        "Pre-runtime-1 shell PATH: these executions used the earlier runner configuration, whose default python3 resolves to Apple Python 3.9.6. Orders 6\u201312 use explicit restricted PATH selecting Homebrew Python 3.14.7. Per-condition aggregates span these configurations; do not attribute a repetition difference solely to stochastic variation or skill behavior."
+      ]
     },
     {
       "attempt_id": "core-baseline-01-moved-guide-original-1-1",
@@ -145,7 +147,9 @@
           "git_revision": "65028bcb036886b65789db8b470bb4aebfad86e1"
         }
       },
-      "limitations": []
+      "limitations": [
+        "Pre-runtime-1 shell PATH: these executions used the earlier runner configuration, whose default python3 resolves to Apple Python 3.9.6. Orders 6\u201312 use explicit restricted PATH selecting Homebrew Python 3.14.7. Per-condition aggregates span these configurations; do not attribute a repetition difference solely to stochastic variation or skill behavior."
+      ]
     },
     {
       "attempt_id": "core-baseline-01-moved-guide-control-1-1",
@@ -192,7 +196,9 @@
           "git_revision": "65028bcb036886b65789db8b470bb4aebfad86e1"
         }
       },
-      "limitations": []
+      "limitations": [
+        "Pre-runtime-1 shell PATH: these executions used the earlier runner configuration, whose default python3 resolves to Apple Python 3.9.6. Orders 6\u201312 use explicit restricted PATH selecting Homebrew Python 3.14.7. Per-condition aggregates span these configurations; do not attribute a repetition difference solely to stochastic variation or skill behavior."
+      ]
     },
     {
       "attempt_id": "core-baseline-01-discovery-shiv-original-1-1",
