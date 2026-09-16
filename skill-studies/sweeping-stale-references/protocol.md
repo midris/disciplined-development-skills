@@ -8,6 +8,8 @@ Four subject observations are recorded across [pilot 01](pilot-results.md) and [
 
 **Operating model:** the active Codex/Claude session runs scenarios, waits for evidence, applies the versioned rules and writes fixed-format score records; a human can use the same rules. The owner reaffirmed this existing intent on 2026-09-14. Separate evaluator dispatch, calibration and concealed answer-key work are not prerequisites. The two-call calibration proposal and full-campaign allocations below are superseded as an execution plan. See the [general workflow](../../plans/specs/2026-09-11-model-driven-skill-testing-framework.md#default-work-session-workflow).
 
+The owner accepted the seven-section [protocol layout](../formats/protocol.template.md): current decisions and brief rationale belong beside their subjects, with Git retaining history. Full version-1 migration remains pending.
+
 ## Sources and intended use
 
 The original is [sweeping-stale-references](../../skills/sweeping-stale-references/SKILL.md) at repository revision `53a06ff4e2fcefb3c7706565bebe07d88e2782ea`, SHA-256 `d6812c33cae026807bbb3ebe851d93b60b513dd87ea5efd98aea28f5c02f9157`.
@@ -59,7 +61,10 @@ The owner initially permitted either procedural severity choice; the pilot walkt
 
 A copyable snapshot of the current policy is [SSR-assessment-3.txt](assessment-policies/SSR-assessment-3.txt). It is derived verbatim from the following section; refresh unrun controller copies when changing the policy, while preserving observed-run inputs.
 
-The [draft format review set](../formats/README.md) includes protocol/case/manifest/index/comparison templates, a filled semantic-delivery criterion and a policy-3 score example from retained pilot-02 evidence, separately indexed without replacing the original assessment. Format agreement and migration remain pending. Unrun Shiv and semantic-delivery controller packages carry policy-3 copies; their subject inputs remain unchanged.
+The owner accepted the [criterion card and completed score record](../formats/README.md): use brief entries, precise evidence citations and references to shared rules rather than repeated prose.
+Scores retain assessor context, separate setup validity and functional/procedural judgments; summaries synthesize those judgments.
+The policy-3 pilot-02 example is separately indexed without replacing its original assessment. Unrun Shiv and semantic-delivery controller packages carry policy-3 copies; their subject inputs remain unchanged.
+Remaining companion-format agreement and version-1 migration are pending; format acceptance does not authorize runs or change scoring decisions.
 
 ### Current SSR assessment policy
 
@@ -305,36 +310,12 @@ If the allocation cannot support a decision, close inconclusive or retain the or
 
 ### Time allocation and forecast
 
-The original planning targets were 240 minutes for contract/test preparation and 180 for qualification/calibration, followed by 180 baseline, 300 authoring/diagnostics, 240 comparison and 60 closure: **1,200 minutes total**. They were not separately metered. The original 220-minute booking includes mixed preparation, tooling investigation, qualification and review; its historical split is unknown. The subsequent 94 booked minutes cover case preparation, reviews, budget work, the superseded calibration proposal and correction/verification of the intended session workflow, fixed score artifacts and fresh-session handoff, for 314 minutes total. Reconcile that shared 420-minute envelope below without inventing phase-level actuals.
-
-| Work category | Original estimate (minutes) | Booked use | Estimate less use | Estimated remaining work / status |
-|---|---:|---:|---:|---|
-| Preparation + qualification (240 + 180) | 420 | 220 historical + 94 prior preparation/qualification + 12 format pass + 3 commit/push + 5 review response + 10 walkthrough + 2 commit/push + 6 protocol review/commit | 68 | Draft format pass prepared for owner review; remaining migration/freeze effort depends on agreement. |
-| Baseline collection and assessment | 180 | 0 | 180 | Reforecast from frozen cases, subject settings, scoring inputs and measured latencies before dispatch; fit not yet established. |
-| Authoring and diagnostics | 300 | 0 | 300 | Objective-dependent; unstarted, no fit claim. |
-| Comparison | 240 | 0 | 240 | Reforecast after comparison design; preserve necessary comparison work. |
-| Closure | 60 | 0 | 60 | Unstarted; retain allowance. |
-| Document-tool implementation and qualification | Not in original estimate | 0 implementation | Not applicable | Preliminary 120-minute estimate after baseline assessment; refine with scoped design. This adds forecast effort, not authorized capacity. |
-| Original total / overall authorization ceiling | 1,200 | 352 | 848 | Remaining authorization; old campaign forecast below is superseded. |
-
-Superseded aggregate planning scenario, retained for reconciliation rather than used as the current forecast: carry forward 180 + 300 + 240 + 60 = 780 minutes for baseline, authoring/diagnostics, comparison and closure, alongside the updated 210–300-minute preparation/qualification forecast. The later phases have not been re-estimated; this scenario assumes the full rewrite/comparison work proceeds.
-
-| Scope | Remaining forecast (minutes) | Projected whole-study total, including 314 booked | Forecast above 1,200-minute ceiling |
-|---|---:|---:|---:|
-| Study excluding document-tool implementation | 990–1,080 | 1304–1394 | 104–194 |
-| Study including preliminary 120-minute tool estimate | 1,110–1,200 | 1424–1514 | 224–314 |
-
-Remaining authorized time is **848 minutes**. The superseded full campaign exceeded that capacity; its evaluator/calibration work is no longer selected. Replace its remaining-work forecast with the actual agreed format-migration/run scope before claiming a fit or requesting an extension. No extension or transfer follows from this correction; do not weaken evidence standards to match an estimate.
-
-The old forward preparation estimate (60–90 minutes for cases, 60–90 for formats, 90–120 for evaluator setup/calibration) describes the superseded plan. Do not use its 210–300-minute total as the current forecast. The remaining session work is fixed rule/score formats, configuration/evidence verification, active-agent assessment and an explicitly selected run set; estimate that scope at the next checkpoint. Document-tool implementation remains separately proposed after format agreement and baseline assessment. Historical effort is not erased by removing an unnecessary workflow.
-
-At every active-work checkpoint, update this table with the cumulative accounting below: assign new time to its work category, preserve the mixed historical booking as such, and reconcile total use once. Include review, storage and model waits in the category they support. Revise remaining-work estimates when scope or observed effort changes. Unknown estimates remain explicit uncertainty. Compare aggregate remaining effort with remaining authorized time and update the extension forecast alongside the phase rows.
-
-**SSR application of the [effort policy](../../plans/specs/2026-09-11-model-driven-skill-testing-framework.md#4-pilot-and-freeze-the-experiment-plan):** timing variance prompts scope review, not a failure verdict or weaker qualification. The 20-hour autonomous-work ceiling remains unchanged; present forecast extension needs at the baseline-design walkthrough and obtain approval before exceeding it.
-
-Pilot 01 model durations were 47.936 and 59.891 seconds (107.827 seconds total). Pilot 02 took 37.782 and 76.784 seconds (114.566 seconds total). At the four-call mean, 60 similar calls would take about 56 minutes; this is illustrative, not a forecast for longer subjects/evaluators. The runner's 900-second timeout is not an expected duration.
-At that timeout for every call, latency alone would consume 15 hours, so the ceilings are not a promise that every call fits; substitute pilot measurements and stop under the agreed limit.
-Default to sequential dispatch; no concurrency tool is proposed now.
+The [current accounting](#storage-and-accounting) owns spent effort and remaining capacity; superseded campaign estimates are available in Git, not carried as current forecasts.
+Remaining work is format migration and collection preparation, authorized baseline collection/assessment, separately scoped document tooling, and any evidence-supported rewrite/comparison before closure.
+Re-estimate selected work by category before collection freeze; rewrite/comparison estimates depend on the eventual objective, so no whole-study fit is claimed yet.
+Document tooling retains a preliminary 120-minute implementation/qualification estimate, to be refined with its scope and CLI after baseline assessment; this is an estimate, not additional authorized capacity.
+Timing variance prompts scope review under the [effort policy](../../plans/specs/2026-09-11-model-driven-skill-testing-framework.md#4-pilot-and-freeze-the-experiment-plan), never weaker scoring or an automatic extension.
+Pilot latency evidence is in the two result reports; use it when forecasting the selected runs, with sequential dispatch as the default.
 
 ## Runner findings and pilot requirements
 
@@ -386,50 +367,11 @@ Owner decision, 2026-09-15: after the backup check and explicit host-loss explan
 No backup configuration is required by this accepted scope; verify local bundle preservation before further dispatch. This storage decision does not authorize model runs.
 Keep historical primary/backup copies unchanged. The small run index references runner metadata and one canonical assessment rather than duplicating settings/status/timing; Git supplies repository-record history.
 
-Accounting began at the first recorded clock checkpoint, **2026-09-12 04:22:19 UTC**, with a conservative **two-minute allowance** for the opening read before that checkpoint.
-This preparation consumes active study time toward the accepted ceiling; recorded owner-wait intervals are excluded.
-Dispatched study invocations so far: **4 subject, 0 evaluator, 0 authoring, 0 retry**. Remaining outer capacity is 36 / 12 / 4 / 4 respectively; no further call is authorized by either completed pair.
-The orchestrator's preparation conversation and local tool calls consume active time, not provider-invocation slots; model assessments or authoring work must be accounted under their declared roles.
+Keep one canonical repository record per accepted run and commit it before correction; Git retains earlier versions.
+Historical citations use commit/path/hash, including the worked example's run-index reference; no duplicate snapshots or extensive amendment ledger are required.
 
-Owner walkthrough: the contract, outer limits, pilot 01 findings and pilot 02 concept are settled. Pilot 02 results and the path-count explanation have been walked through with the owner; that checkpoint was committed and pushed. Shiv case preparation is complete. Three core situations are accepted and their case foundations are prepared; fixed rule/score formats, exact next-run configuration/allocation and provider dispatch remain pending.
-Independent use is settled; Stage 3 has observed the declared standalone setup for this pair; broader isolation claims remain unqualified; no separate evaluator qualification is required for active-session scoring.
-
-Prior handoff booking, 2026-09-14: **314 active minutes through fresh-session handoff and commit checks**, leaving **14 hours 46 minutes** at that checkpoint. The continuation booking below adds new active work once.
-Source: the current task's local log at `/Users/simon/.codex/sessions/2026/09/11/rollout-2026-09-11T17-59-42-01a0927b-cef5-7db0-8a30-c76c5b1ae838.jsonl`; only boundary timestamps were extracted, not conversation contents.
-Reconstruction sums the union of 119 closed `task_complete` / `turn_aborted` intervals since Stage 1 began: **18,375.0 seconds (306.25 minutes)**, including model/tool waits inside turns and excluding inter-turn owner-wait.
-The current turn began at 2026-09-14 16:41:22 UTC and adds 178 seconds at the 2026-09-14 16:44:20 UTC checkpoint. Retain the original two-minute opening allowance and allow two minutes for completion; round 313.22 minutes up to 314. Closing allowance and rounding are estimates, not independently measured owner/Claude effort. Provider durations are already inside active-turn time and are not added again.
-Within this session, recompute cumulative closed-turn intervals plus the opening allowance and round up; do not add already counted turns or restore superseded checkpoints. If the completed current turn exceeds the booking, correct the total before approving the remaining budget. On a fresh-session handoff, use the latest booked total as the opening balance, record new active intervals separately, and add them once. The prior session log is optional reconciliation evidence, not a dependency for continuation; retain its stated closing allowance as an estimate if no measured correction is available.
-
-Continuation booking, 2026-09-14: carry forward 314 minutes and book **12 minutes** for the bounded format pass, verification and closeout, for **326 active minutes total**, leaving **874 minutes (14 hours 34 minutes)**.
-The new task started at **17:03:23.585 UTC**, verified from boundary metadata in the current task's local log; the **17:11:14 UTC** clock checkpoint measures 7 minutes 50 seconds, with the remainder of the 12-minute booking reserved for review, documentation and handoff.
-This is an explicit closing allowance, not model latency added twice; correct the booking if the active turn exceeds **17:15:23.585 UTC**.
-Calls remain 4 / 0 / 0 / 0; no new model runs, retry, pool transfer, skill edit or extension occurred.
-The concrete formats are `1-draft`, pending owner review; migration to an agreed version precedes the exact baseline proposal.
-Criterion-card decision, 2026-09-15: the owner accepted the criterion format during the walkthrough and emphasized keeping it as simple as necessary.
-Use brief field values and precise references to shared rules to avoid duplicating policy across cards; the remaining formats and version-1 migration are still pending.
-Score-record decision, 2026-09-15: the owner accepted the completed score format presented in the walkthrough, including short per-criterion reasons, precise evidence references, assessor context, separate setup validity and functional/procedural summaries.
-Summaries synthesize the criterion judgments; evidence and rule references avoid repeating their source contents.
-This accepts the record structure, with remaining companion formats and version-1 migration still pending; it does not authorize runs or new scoring decisions.
-Protocol-layout decision, 2026-09-15: the owner accepted the simplified protocol template with seven sections and current decisions, authority and brief rationale placed beside their subjects; Git provides earlier versions, so no separate decision ledger is required.
-Apply that layout to this live protocol during version-1 migration, keeping its current decisions and evidence links.
-History decision, 2026-09-15: the owner directed one canonical repository record per accepted run, with earlier versions available through Git rather than an extensive parallel history.
-The worked example's pinned index therefore resolves by Git commit/path/hash; the temporary duplicate snapshot was removed before commit.
-Preserve accepted records in Git before correction, and keep only the current explanation on-page; this does not accept all remaining manifest/index fields or authorize collection.
-No whole-study forecast fit is claimed while the run/rewrite/comparison scope and later document-tool CLI remain unagreed.
-
-Commit/push booking, 2026-09-15 UTC: add a conservative **3 minutes** for fresh verification, accounting and the owner-requested commit/push, for **329 active minutes total**, leaving **871 minutes (14 hours 31 minutes)**.
-The first clock checkpoint was **01:36:48 UTC**; this booking includes the opening inspection and closing allowance, excludes the intervening owner-wait, and changes no invocation allocation.
-
-Review-response booking, 2026-09-15 UTC: add **5 minutes** for verifying the owner-supplied Claude finding, preserving the pinned run-index bytes, local checks and documentation, for **334 active minutes total**, leaving **866 minutes (14 hours 26 minutes)**.
-The first clock checkpoint was **19:47:09 UTC**; this conservative booking includes opening inspection and closeout through 19:51 UTC, excludes owner-wait, and spends no invocation slots.
-
-Format-walkthrough booking, 2026-09-15 UTC: add **10 active minutes**, for **344 minutes total**, leaving **856 minutes (14 hours 16 minutes)**.
-Current-task boundary timestamps after the prior 19:51 UTC allowance total 442.4 active seconds at 20:30:58 UTC across 11 closed turns plus this active turn; the booking includes closeout allowance and excludes owner-wait.
-
-Retention-change commit/push booking, 2026-09-15 UTC: add **2 minutes** for the owner-requested commit/push and final checks from the 20:32:40 UTC checkpoint, including opening/closing allowance; total **346 active minutes**, **854 minutes (14 hours 14 minutes)** remaining.
-
-Protocol-review/commit booking, 2026-09-16 UTC: add **6 minutes**, for **352 active minutes total**, leaving **848 minutes (14 hours 8 minutes)**.
-Current-task boundary timestamps after the prior 20:34:40 UTC allowance total 215.8 active seconds at 01:33:19 UTC; the booking adds two minutes for final checks/commit/push and rounds up, excluding owner-wait.
-
-Relationship-correction verification: all **21** source identities match, including all nine DD skills at the recorded revision; local links resolve and `git diff --check` passes.
-Hook suite: **263 passed, 3 skipped**. These documentation checks do not qualify provider execution or demonstrate skill effectiveness.
+**Current accounting (2026-09-16): 359 active minutes booked; 841 minutes (14 hours 1 minute) remain under the 1,200-minute ceiling.**
+This includes preparation, review and model/tool waits, excludes owner-wait, and retains prior conservative allowances; the current booking includes final verification and commit/push allowance through 02:32 UTC.
+All booked effort to date supports preparation/qualification; its older internal category split was not measured.
+Update this paragraph in place from the latest booked total plus new active intervals counted once; Git retains prior checkpoints, and their source logs are optional reconciliation evidence.
+Dispatched calls are **4 subject, 0 evaluator, 0 authoring, 0 retry**; remaining outer capacity is **36 / 12 / 4 / 4**, with no additional dispatch authorized.

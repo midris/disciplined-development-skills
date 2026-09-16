@@ -53,7 +53,8 @@ One-bundle retention and completeness verification: <text>
 Ordinary backup arrangement and recovery limits: <text or explicitly unverified>
 All attempt indexes, including historical ones: <links>
 Pool ceilings, spent/remaining calls and active-time ceiling: <table derived from indexes>
-Active-time opening balance, new intervals/allowances, cumulative booking and remaining forecast: <text>
+Current cumulative active time, remaining capacity and accounting basis/allowance: <one entry updated in place; prior checkpoints in Git>
+Remaining forecast by selected work category: <estimate or explicit uncertainty>
 Tooling estimate separately identified; scope-dependent estimates remain explicit.
 
 ## Results and decision

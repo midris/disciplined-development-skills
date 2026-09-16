@@ -517,3 +517,13 @@ The owner then accepted single-host retention after the explicit host-loss expla
 No system configuration or evidence was changed. Whitespace verification passes; the backup-state finding is closed by the accepted scope.
 
 DD-VERDICT: PASS
+
+## Live-protocol accounting cleanup
+
+Addressed the owner-supplied Claude P3: replaced the booking chronology with one current entry, removed obsolete time-forecast tables and moved accepted format decisions beside their subjects.
+The template now requires updating current accounting in place; Git retains prior checkpoints. Full seven-section migration remains pending.
+The live protocol shrank from 435 to 377 lines; scoring-policy bytes, pilot indexes and the worked score are unchanged.
+Verification: 14 incoming protocol links/anchors and outgoing targets resolve; accounting checks and 8 format tests pass; hook suite 263 passed, 3 skipped; whitespace clean.
+No model calls or new authorization. Self-review found no remaining issue in this bounded cleanup.
+
+DD-VERDICT: PASS
