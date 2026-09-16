@@ -6,7 +6,7 @@ Study / batch: `sweeping-stale-references` / `core-baseline-01`
 Status: paused before order 6 because the Shiv subject runtime is incompatible with its supplied dependency; batch incomplete.
 Scope and descriptive inclusion rules: [protocol](protocol.md#core-baseline-core-baseline-01) at Git `4b5ca0cc7aa300962ceb81a031113b7fc1410225`.
 Orders 2–5 additionally apply the prospective [capture-2 amendment](protocol.md#session-evidence-amendment-capture-2) at Git `07a0baa6a4cedb36209a156d9d53c7f6d2bdba28`.
-Attempt index: [core-baseline-01-run-index.json](core-baseline-01-run-index.json) at Git `80cdae31e70af1eddadb3d73f77752e26c02e5c7`, SHA-256 `0b2f9ad668dc72b4b8348588f5276147a439f780901a76a23e52bf1c48372bf0`.
+Attempt index: [core-baseline-01-run-index.json](core-baseline-01-run-index.json) at Git `b16e4f24013d85dd5fb6f8bd70de037eaa9343af`, SHA-256 `147e417223d193edb30874971cc68c56cba42e9863b458599e3b80c037041a22`.
 Assessor: Codex active session with owner decisions, construction history and prior assessments available; not independent or blind validation.
 
 ## Coverage and execution results
@@ -74,6 +74,10 @@ Counts below include valid-setup executions only. A zero denominator has no defi
 | discovery-shiv / control / F3 | 0 | 0 | 0 | No included execution |
 | discovery-shiv / control / functional outcome | 0 | 0 | 0 | No included execution |
 
+## Runtime strata
+
+Orders 2–4 are valid observations under the pre-runtime-1 shell PATH. Order 2 used Apple Python 3.9.6 for its tests; orders 3–4 used the same earlier runner configuration. Orders 6–12 will explicitly receive the restricted PATH selecting Homebrew Python 3.14.7. These remain distinct runtime strata even for non-Shiv cases: case/condition totals spanning them are descriptive mixed-configuration counts, not fixed-runtime replication. Report stratum-specific counts alongside totals; neither a repetition difference nor an original/control difference across strata establishes a skill effect. Orders 1 and 5 remain separately excluded.
+
 ## Patterns, limitations and next action
 
 The included moved-guide original repairs all four consumers and meets all three procedural criteria; its control repairs only README. The control's retained search exposed every stale consumer before the edit, so the observed difference is repair scope after exposure, not an established discovery advantage.
@@ -87,4 +91,4 @@ Preparation qualified the case under a compatible host interpreter but missed th
 
 Capture-2 retained complete skill responses for both resumed originals and usable action evidence for every resumed execution. The first attempt's older capture mode and the Shiv runtime fault remain explicit exclusions. Missing-guidance searches in the resumed controls/subjects found no additional guidance; the traces do not establish exhaustive host-wide isolation or an immutable model revision.
 Acceptance remains descriptive and incomplete, with seven executions unattempted. No rewrite objective or adoption decision is supported by this partial batch.
-Next: review the concrete runtime amendment, freeze it if approved, and resume orders 6–12 without retries or replacements. The document generator/validator remains later work after baseline assessment and separate scope agreement.
+Next: the owner accepted runtime-1 after review; resume orders 6–12 under its frozen authority without retries or replacements. The document generator/validator remains later work after baseline assessment and separate scope agreement.
