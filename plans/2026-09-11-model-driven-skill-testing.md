@@ -11,7 +11,7 @@
 Preparation and documentation work are authorized. Candidate selection, provider spending, a rewrite objective and adoption require the owner decisions identified below. Pre-baseline development is closed after two completed pairs. The owner authorized baseline design and then the collection scopes recorded below; no new skill authoring was needed: the owner-selected existing rewrite has now been compared under fixed rules.
 The spec governs how the study is designed. Neither document grants provider-run authorization.
 External reviews and responses are recorded in the [review record](../reviews/2026-09-11-model-driven-testing-plan-review.md). Claude passed the committed preparation at `314b72e`; public-source attribution limits and the development exit were then documented. Pre-baseline development is closed; current authority and progress are recorded below.
-On 2026-09-12 the owner selected `sweeping-stale-references`, settled the contract and accepted the outer ceilings while directing minimal initial real-model runs to establish the process. Stage 1 and conceptual coverage review are complete. Both historical pilot pairs, the first semantic-delivery baseline pair, the twelve-attempt core baseline and the twelve-execution comprehensive comparison are assessed. Current collection scope, progress and authority are recorded in Current next action and the study protocol.
+On 2026-09-12 the owner selected `sweeping-stale-references`, settled the contract and accepted the outer ceilings while directing minimal initial real-model runs to establish the process. Stage 1 and conceptual coverage review are complete. The first SSR study is closed with both historical pilot pairs, the semantic-delivery pair, the core baseline and the comprehensive comparison assessed. The owner deferred adoption until later experiments; current work is selecting the contrasting second skill.
 
 ## Starting or resuming without conversation history
 
@@ -159,11 +159,11 @@ The [comparison assessment](../skill-studies/sweeping-stale-references/comprehen
 
 ## Stage 6: decide and close
 
-- [ ] Recommend adoption, retention or an inconclusive result, citing the comparison and actual effort. Obtain the owner's adoption decision before rollout.
-- [ ] Record which framework steps helped the decision and which should be removed, combined or changed. Close the study explicitly, including any unperformed rewrite or exhausted limit.
+- [x] Record the evidence-backed recommendation and owner disposition. The owner deferred adoption while further studies proceed; no rollout follows.
+- [x] Record process lessons and limits in the protocol’s Results and decision section. Close SSR with adoption deferred, all selected collection complete, and unused capacity unspent.
 - [ ] Propose a contrasting second skill only after closure, using what the first study demonstrated. General templates and new tools require evidence of recurring need.
 
-**Complete when:** the decision, supporting evidence, limits and next recommendation are recorded. An inconclusive result does not automatically authorize another cycle.
+**Complete when:** the findings, owner disposition (including deferred adoption), limits and next recommendation are recorded. Closure or unused capacity does not automatically authorize another cycle.
 
 ## Evidence and version control
 
@@ -194,10 +194,12 @@ Reserved bundles and revealing assessments stay entirely in the verified private
 - [x] Owner approved `comprehensive-comparison-01` and its condition-applicability extension on 2026-09-17.
 - [x] Freeze version-2 controller applicability and comparison manifests; collection readiness passed. The invocation-authority commit is also the full runner revision for this batch; record its hash in each actual attempt.
 - [x] Collect and assess the twelve approved attempts in order, retaining each before the next dispatch, then write the aggregate comparison. No retry, replacement or skill edit occurred.
-- [ ] Present the completed comparison and recommendation to adopt the smaller candidate; obtain the owner’s retain/adopt/closure decision before rollout or further collection.
+- [x] Present the completed comparison and recommendation; record the owner’s decision to defer adoption and close the first study.
+- [ ] Select a contrasting second skill with the owner, then define its bounded contract, cases and collection proposal using the existing tools and formats.
 
 The owner accepted the reconciled [format set](../skill-studies/formats/README.md), now version `1`. The protocol and the Shiv and semantic-delivery case definitions/manifests use the accepted layouts; historical observed-case inputs and the `1-draft` worked example remain unchanged under their recorded identities.
 The [semantic-delivery batch](../skill-studies/sweeping-stale-references/protocol.md#first-collection-semantic-delivery-01) is complete; its results informed the approved core-baseline-01 scope. No further layout review, new scenario, evaluator layer or pre-baseline pilot is needed.
 Preserve SSR's agreed policy: complete/correct/preserved/committed outcomes lead; purely procedural defects are visible and non-blocking; insufficient evidence is not failure. Batch counts describe repetitions without relabelling execution failures or inventing an acceptance threshold.
 The owner-authorized first semantic-delivery original/control pair is collected and assessed under the prepared Sol-low settings; both calls are spent; core-baseline-01 is separately authorized, with all twelve calls spent and assessed; no remaining call is authorized by that batch. Any larger baseline batch, repetitions and acceptance rule must be declared before its collection.
-The protocol's [core-baseline-01 scope](../skill-studies/sweeping-stale-references/protocol.md#core-baseline-core-baseline-01) is complete, with no retries or skill edits. The protocol owns selected work, ceilings and accounting; old full-campaign tables are in Git, not a current run plan. The document generator/validator is implemented and qualified; the approved comprehensive comparison is complete, and the next decision is retention/adoption and closure based on its assessment. No further calls or skill edits are authorized.
+The protocol's [core-baseline-01 scope](../skill-studies/sweeping-stale-references/protocol.md#core-baseline-core-baseline-01) is complete, with no retries or skill edits. The protocol owns selected work, ceilings and accounting; old full-campaign tables are in Git, not a current run plan. The document generator/validator is implemented and qualified; the approved comprehensive comparison is complete, and SSR is closed with adoption deferred. Next is second-skill selection; no further calls or skill edits are authorized.
+The owner wants to complete the studies and experiments before finalizing adoption. A Claude subject pass and selected effort-level benchmarks are desired follow-ups, but their skill coverage, model/settings, repetition counts, budget and order remain to be proposed. This direction does not select an all-skills or all-models campaign, and the first study’s unused capacity does not transfer automatically.

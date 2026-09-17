@@ -276,7 +276,8 @@ If the suite changes after a new failure is found, version it and apply the new 
 Do not select a favorable isolated run or conceal consequential regressions inside an average score.
 
 Recommend retaining the original, adopting the rewrite, revising it further or gathering specifically missing evidence.
-The owner makes the adoption decision from that comparison.
+The owner makes the adoption decision from that comparison and may defer it while further studies proceed.
+A study can close with its findings, limitations and deferred adoption recorded; choosing a version is required before rollout, not before studying another skill.
 Output: an evidence-backed rewrite recommendation with preserved history and explicit limitations.
 Exit condition: the agreed acceptance question is answered sufficiently for the owner's decision, or the precise remaining uncertainty is documented.
 

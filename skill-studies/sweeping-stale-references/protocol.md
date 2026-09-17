@@ -2,7 +2,7 @@
 
 Format version: `1`
 Study ID: `sweeping-stale-references`
-Status: contract and version-1 formats accepted; baseline and comprehensive comparison collected and assessed. Owner retention/adoption and closure decision pending.
+Status: closed for the selected Sol-low study; all authorized collection and assessment complete. Owner deferred adoption while further studies proceed; no rollout or further collection is selected.
 The [plan](../../plans/2026-09-11-model-driven-skill-testing.md) owns progress; the [spec](../../plans/specs/2026-09-11-model-driven-skill-testing-framework.md) owns the workflow.
 The [core baseline](core-baseline-01-assessment.md) retains its two setup exclusions and runtime strata; the [comparison](comprehensive-comparison-01-assessment.md) records twelve valid executions of the original and preserved candidate. Both collection scopes are spent. Storage and accounting owns current totals.
 
@@ -211,7 +211,7 @@ Owner approved continuation on 2026-09-16 after reviewing the concrete correctio
 
 ### Comparison: comprehensive-comparison-01
 
-Status: complete. The owner approved these twelve executions on 2026-09-17 after reviewing the proposal. All twelve were collected and assessed without retries or replacements, under unchanged judgment boundaries and the approved candidate-applicability extension. The frozen invocation-authority revision identifies the full runner checkout used throughout collection. This scope has no unspent call; adoption remains undecided.
+Status: complete. The owner approved these twelve executions on 2026-09-17 after reviewing the proposal. All twelve were collected and assessed without retries or replacements, under unchanged judgment boundaries and the approved candidate-applicability extension. The frozen invocation-authority revision identifies the full runner checkout used throughout collection. This scope has no unspent call; adoption is deferred under Results and decision.
 Question: on the three existing development cases, does the comprehensive rewrite preserve complete committed reconciliation and protected behavior while making its audit account more accurate/useful than the contemporaneous original?
 Scope: exactly twelve sequential executions below: three cases × two versions × two repetitions. Each case has adjacent original/candidate pairs, with version order reversed for repetition 2. This balances first/second position within a case; it is not randomization or enough replication to estimate population reliability. Six calls would give only one observation per case/version; twelve permits a limited repeatability check while leaving ten subject calls unused. No no-target condition was included because this question compares versions; the earlier contribution baseline remains separate.
 Acceptance/inclusion: descriptive-only. Include all valid-setup executions regardless of outcome; retain unknown criteria and report invalid/unresolved setups and unattempted slots separately. No automatic retry or replacement. Compare per-case functional and procedural counts using the same rules and evidence requirements; do not pool the historical baseline into the new denominators or hide a functional regression in a higher aggregate count. A tie in criterion outcomes demonstrates no behavioral improvement; the assessment may separately identify a simplification benefit using the spec’s size measure. Any candidate functional regression requires explanation before an adoption recommendation; ambiguous or inconsistent differences remain inconclusive. The owner decides adoption after reviewing evidence, not from a new numerical threshold.
@@ -274,39 +274,54 @@ Keep historical primary/backup copies unchanged. The small run index references 
 Keep one canonical repository record per accepted run and commit it before correction; Git retains earlier versions.
 Historical citations use commit/path/hash, including the worked example's run-index reference; no duplicate snapshots or extensive amendment ledger are required.
 
-**Current accounting (2026-09-17): 684 active minutes booked; 516 minutes (8 hours 36 minutes) remain under the 1,200-minute ceiling.**
-This includes preparation, review and model/tool waits, excludes owner-wait, and retains prior conservative allowances. The latest booking adds two minutes for comparison-spec clarification, verification and publication, excluding owner-wait. The comparison session took 41 minutes, 139 minutes below its 180-minute allowance. Measured model wait was 16.1 minutes against 30 forecast; the other preparation/preservation/assessment/review categories were not separately timed. The historical internal category split was not separately timed.
+**Current accounting (2026-09-17): 688 active minutes booked; 512 minutes (8 hours 32 minutes) remain under the 1,200-minute ceiling.**
+This includes preparation, review and model/tool waits, excludes owner-wait, and retains prior conservative allowances. The closing booking adds four active minutes for findings, plan reconciliation, verification and publication, excluding owner-wait. The comparison session took 41 minutes, 139 minutes below its 180-minute allowance. Measured model wait was 16.1 minutes against 30 forecast; the other preparation/preservation/assessment/review categories were not separately timed. The historical internal category split was not separately timed.
 Update this paragraph in place from the latest booked total plus new active intervals counted once; Git retains prior checkpoints, and their source logs are optional reconciliation evidence.
 Dispatched calls are **30 subject, 0 evaluator, 0 authoring, 0 retry**; remaining outer capacity is **10 / 12 / 4 / 4**. Core-baseline-01 has no unspent calls; neither excluded attempt has replacement authorization. Remaining capacity is a ceiling, not a selected next batch.
 
 
-Remaining-work forecast, in active minutes, including model/tool waits, review and storage once:
+Remaining selected SSR work:
 
 | Work | Estimate | Basis |
 |---|---:|---|
-| Closure and review | 30 | Decision, limitations and study closeout. |
-| **Total** | **30** | Forecast, not additional authorization. |
+| **Total** | **0** | Selected study closed; no further work selected. |
 
-Baseline collection, document tooling and the authorized comparison are complete; their actual effort is included above. The remaining 30-minute closure forecast fits within the remaining time and is subject to the owner’s decision. Unused capacity does not select further work.
-Preserve later comparison capacity when selecting additional repetitions; no automatic pool transfers, retries or ceiling extensions are allowed.
+Closure is complete within its 30-minute allowance; no new collection or rollout follows. Future studies and model/effort experiments need their own scope and forecast; unused capacity is not automatically transferred.
 
 
 ## Results and decision
 
 | Evidence | Interpretation |
 |---|---|
-| [Comprehensive comparison](comprehensive-comparison-01-assessment.md) | Complete twelve-execution comparison: tested functional outcomes preserved by both versions; reporting differences are mixed. Including the measured size reduction, recommendation is to adopt the candidate, pending owner decision. |
+| [Comprehensive comparison](comprehensive-comparison-01-assessment.md) | Complete twelve-execution comparison: tested functional outcomes preserved by both versions; reporting differences are mixed. Including the measured size reduction, the advisory recommendation favors the candidate. Owner deferred adoption. |
 | [Core-baseline-01 assessment](core-baseline-01-assessment.md) | Selected three-case baseline complete: twelve attempts, ten included and two setup exclusions; descriptive outcomes and runtime differences remain explicit. |
 | [Semantic-delivery-01 assessment](semantic-delivery-01-assessment.md) | First measured batch: original completes committed reconciliation; control leaves two current claims stale. One observation per condition; no consistency claim. |
 | [Pilot 01 report](pilot-results.md), [attempt index](pilot-run-index.json), [checks](pilot-checks.json) | Historical original/control development pair; assessment correction and limits belong in the report. |
 | [Pilot 02 report](pilot-02-results.md), [attempt index](pilot-02-run-index.json), [checks](pilot-02-checks.json) | Historical moved-guide pair; retained evidence supports the recorded outcomes, not a stable reliability estimate. |
 | [Policy-3 worked example](assessments/pilot-02-original-policy-3-example.json), [identity/schema index](assessments/index.json) | Unchanged illustrative assessment of retained evidence, not a new execution or replacement of the canonical policy-2 result. |
 
-The selected baseline and approved comparison are assessed. The comparison recommendation is to adopt the smaller candidate; the owner’s adoption/retention and closure decision remains pending.
+Owner disposition: close the selected SSR study and defer adoption until later studies and experiments have informed finalization. Preserve both tested versions and their evidence; choosing a version is not a prerequisite for the second study. The assessment’s recommendation favors the smaller candidate, but it authorizes no rollout.
 Both assessments separate unresolved Shiv category attribution from clear counting errors. Fixed-rule P3 totals do not establish that every mismatch is a skill defect; no criterion amendment or reassessment is authorized.
 Batch assessments own aggregate counts, patterns, limitations and any version comparison; this section records the owner's resulting decisions by reference.
-The owner suggested the existing SSR rewrite on `docs/comprehensive-skill-cleanup` as a possible comparison candidate. Inspected source: `skills/sweeping-stale-references/SKILL.md` at Git `13599fb7d3127334b0d07bfe468767e586ec5f9c`, SHA-256 `15992341f7ab2fb1e4d8a775092199d7d4e6a9de1167895dbe5a805aeafbd38c`; the clean local worktree contains those bytes. It removes the aggregate-inventory worked example and adds semantic-search, old/new-search and rationale/reporting guidance. Treat this as a whole-version candidate, not an isolated accounting intervention. The owner approved this candidate and the twelve-execution comparison on 2026-09-17; adoption remains undecided. Reuse of these bytes does not resume the superseded comprehensive-rewrite workflow or import its tests/results as authority. Use the current fixed cases and a contemporaneous original condition for a relative-performance claim; assess candidate-only obligations and exposure limitations before claiming broader coverage.
+The owner suggested the existing SSR rewrite on `docs/comprehensive-skill-cleanup` as a possible comparison candidate. Inspected source: `skills/sweeping-stale-references/SKILL.md` at Git `13599fb7d3127334b0d07bfe468767e586ec5f9c`, SHA-256 `15992341f7ab2fb1e4d8a775092199d7d4e6a9de1167895dbe5a805aeafbd38c`; the clean local worktree contains those bytes. It removes the aggregate-inventory worked example and adds semantic-search, old/new-search and rationale/reporting guidance. Treat this as a whole-version candidate, not an isolated accounting intervention. The owner approved this candidate and the twelve-execution comparison on 2026-09-17; adoption is deferred. Reuse of these bytes does not resume the superseded comprehensive-rewrite workflow or import its tests/results as authority. Use the current fixed cases and a contemporaneous original condition for a relative-performance claim; assess candidate-only obligations and exposure limitations before claiming broader coverage.
 The owner approved the [tooling proposal](../../plans/specs/2026-09-16-study-document-tooling.md) in the current session on 2026-09-16, including the provisional 120-minute implementation / 60-minute verification allowance. Implementation and qualification are complete; the active plan records verification. No skill edit or model collection was included.
 Before authoring, re-read the selected writing-skills guidance and reconcile it with the evidence-supported objective. A passing control is useful evidence; resolve any pure-cleanup/RED conflict without manufacturing failure or resuming the abandoned wording campaign.
 Compare the exact candidate with contemporaneous original executions under declared conditions; add a contemporaneous no-target condition only for a current contribution claim.
-Retain, adopt, revise or close inconclusive according to supported evidence and the owner's decision; an aggregate improvement cannot conceal a consequential regression.
+Any later adoption decision must retain the comparison’s limitations; an aggregate improvement cannot conceal a consequential regression.
+
+
+### Findings and process lessons
+
+The first study exercised the complete session workflow on one skill and two versions. Its [core baseline](core-baseline-01-assessment.md) retains ten valid observations and two charged setup exclusions; its [comparison](comprehensive-comparison-01-assessment.md) has twelve valid executions. Both versions meet every tested functional criterion in both repetitions per case. Reporting differences are mixed, and the candidate is 21.9% shorter by the agreed word-count measure. Detailed counts and attribution belong in those assessments.
+
+All thirty subject calls used Sol-low. Small exposed cases, shared assessor context, unresolved accounting-unit/category interpretation and untested behavior limit the findings. They establish neither population reliability, held-out transfer, another model/effort’s performance nor generality to a second skill. No new rewrite was authored: the owner-selected existing candidate was tested exactly. The broader skill-testing journey remains open.
+
+- Keep fixed cases and criteria, explicit valid alternatives, per-execution evidence and one aggregate assessment. They expose failures and uncertainty without a separate comparison record or mandatory evaluator campaign.
+- Treat setup evidence as a prerequisite for inclusion. Missing full skill-read capture and the wrong Python runtime caused two exclusions; the capture/runtime repairs enabled the later twelve-execution comparison without replacements. Reuse the qualified path and check changed dependencies rather than repeating all qualification for every edit.
+- Keep outcome success separate from procedural conformance and from attribution. The Shiv label dispute and semantic counting-unit mismatches show that a frozen criterion can produce a reproducible outcome without establishing a skill defect. Resolve such ambiguity before a future experiment relies on it; do not silently rescore this one.
+- Use the accepted generator/validator for structure and identity checks, with semantic judgment in the active session. Keep one canonical repository record and one verified raw bundle per attempt; Git supplies record history, not recovery of external bundles. The accepted single-host evidence-loss risk remains.
+- Keep documents subordinate to the testing spec. The format work drifted into separate design problems, duplicated history and unnecessary evaluator/comparison layers; subsequent simplification restored the session workflow. Reuse these formats for the second skill and change them only for an observed representational gap.
+- Include simplification when interpreting a version comparison. The initial retain recommendation overlooked a measured size benefit already allowed by the spec. Word count is sufficient; smaller text does not excuse functional regression or prove token/cost savings.
+- Separate evidence completion from deployment. Closing with adoption deferred preserves the findings and permits the next study without forcing a winner or another collection cycle.
+
+The next learning question is whether the workflow works for a contrasting skill. Candidate selection and subsequent Claude/effort experiment planning belong in the active plan; none is an authorized SSR continuation.
