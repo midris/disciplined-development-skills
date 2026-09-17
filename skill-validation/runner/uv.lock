@@ -240,20 +240,20 @@ wheels = [
 name = "skilltest"
 version = "0.1.0"
 source = { editable = "." }
+dependencies = [
+    { name = "jsonschema" },
+]
 
 [package.dev-dependencies]
 dev = [
-    { name = "jsonschema" },
     { name = "pytest" },
 ]
 
 [package.metadata]
+requires-dist = [{ name = "jsonschema", specifier = ">=4,<5" }]
 
 [package.metadata.requires-dev]
-dev = [
-    { name = "jsonschema" },
-    { name = "pytest" },
-]
+dev = [{ name = "pytest" }]
 
 [[package]]
 name = "typing-extensions"

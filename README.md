@@ -75,7 +75,7 @@ Reserved tests and verified backups stay outside this repository and the author'
 [`skill-validation/runner/`](skill-validation/runner/) is also non-shipped: a
 small `skilltest run CONFIG` CLI for one retained, locally configured skill-test
 run. Its [operator guide](skill-validation/runner/README.md) covers setup,
-configuration, bundles, and the strict one-run boundary.
+configuration, bundles, and the strict one-run boundary. Its [document commands](skill-validation/runner/README.md#study-documents) generate and validate the current study records without model calls.
 
 ## How it fits together
 

@@ -3,7 +3,7 @@
 Format set: `1`, accepted by the owner; collection authorization is separate.
 These contracts implement the [spec's artifact ownership and units](../../plans/specs/2026-09-11-model-driven-skill-testing-framework.md#architecture-seven-responsibilities).
 They define document representations, not another workflow or authorization gate.
-Only execution results currently have a JSON Schema; other formats are explicit reviewable contracts until the planned tooling exists.
+The [document CLI](../../skill-validation/runner/README.md#study-documents) checks these contracts using shared templates and structural rules; execution results retain their checked-in JSON Schema. Its guide names supported Markdown representations and the remaining semantic review boundary.
 
 ## Representations and common identities
 
@@ -138,4 +138,4 @@ The protocol identifies suite membership and actual exposure; a case directory a
 Review the whole set against the [spec's conformance rule](../../plans/specs/2026-09-11-model-driven-skill-testing-framework.md#document-conformance).
 Check required sections/fields, IDs, references, versions/hashes, criterion coverage and allocation arithmetic; readiness additionally requires fixed scope, available evidence and authority for the actual dispatch.
 Do not equate schema validity with study completeness, semantic correctness or owner consent.
-Unknown versions are unsupported. The later generator/validator shares definitions, generates without overwriting and validates read-only; no new runtime tool is required by this reconciliation.
+Unknown versions are unsupported. The generator/validator shares definitions, generates without overwriting and validates read-only. Its mechanical checks support this conformance review; they do not replace interpretation or authorize collection.

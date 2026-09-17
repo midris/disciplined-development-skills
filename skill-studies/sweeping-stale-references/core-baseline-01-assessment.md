@@ -99,4 +99,4 @@ This is an exposed, small, descriptive baseline, with only one included semantic
 
 The declared descriptive-only scope is complete, not an adoption test. The useful reconciliation behavior is supported in these cases; a broad functional rewrite is not indicated by this batch. Investigate audit counting and the ambiguous category boundary separately before selecting an edit: reducing accounting burden would not itself resolve the Shiv interpretation. Any change needs an agreed objective and fixed comparison scope; no rewrite or additional execution follows automatically.
 
-Next: review these findings with the owner, then agree the planned document generator/validator's bounded CLI, scope and implementation/qualification effort before coding. Retain the original skill meanwhile. The protocol owns the resulting decisions and remaining capacity.
+Retain the original skill pending an evidence-supported rewrite objective or closure decision. The [protocol](protocol.md#results-and-decision) owns current decisions and remaining capacity; the active plan owns subsequent work.

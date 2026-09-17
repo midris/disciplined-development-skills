@@ -2,13 +2,13 @@
 name = "skilltest"
 version = "0.1.0"
 requires-python = ">=3.11"
+dependencies = ["jsonschema>=4,<5"]
 
 [project.scripts]
 skilltest = "skilltest.cli:main"
 
 [dependency-groups]
 dev = [
-    "jsonschema",
     "pytest",
 ]
 
@@ -22,3 +22,12 @@ build-backend = "hatchling.build"
 
 [tool.hatch.build.targets.wheel]
 packages = ["src/skilltest"]
+
+[tool.hatch.build.targets.wheel.force-include]
+"../../skill-studies/formats/protocol.template.md" = "skilltest/_formats/protocol.template.md"
+"../../skill-studies/formats/case-definition.template.md" = "skilltest/_formats/case-definition.template.md"
+"../../skill-studies/formats/assessment.template.md" = "skilltest/_formats/assessment.template.md"
+"../../skill-studies/formats/manifest.template.json" = "skilltest/_formats/manifest.template.json"
+"../../skill-studies/formats/run-index.template.json" = "skilltest/_formats/run-index.template.json"
+"../../skill-studies/formats/execution-result.template.json" = "skilltest/_formats/execution-result.template.json"
+"../../skill-studies/formats/execution-result.schema.json" = "skilltest/_formats/execution-result.schema.json"

@@ -30,7 +30,7 @@ The [companion contract](companion-formats.md#execution-results-and-batch-assess
 Run `skill-validation/runner/.venv/bin/python -m unittest discover -s skill-studies/formats` from the repository root.
 For a completed result, load `execution-result.schema.json` with the runner environment's `jsonschema.Draft202012Validator` and validate the record.
 The blank template intentionally fails completed-record validation.
-No batch validator or generator is implemented; explicit contract checks suffice until the planned document tooling after baseline assessment.
+The [document CLI](../../skill-validation/runner/README.md#study-documents) generates these six drafts and checks structures, identities, evidence, coverage and aggregate arithmetic. Use `skilltest docs check protocol.md --ready-for assessment --batch ID` for a selected batch; ordinary file checking does not certify the whole study. Supported Markdown representations and unsupported-version behavior are documented in that guide.
 
 ## Historical example
 

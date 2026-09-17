@@ -1,6 +1,6 @@
 # skilltest
 
-`skilltest` runs one supplied prompt through one configured local model CLI and retains mechanical evidence, or renders one fixed blank worksheet from retained inputs.
+`skilltest` runs one supplied prompt and retains mechanical evidence, generates study-document drafts, or checks document conformance. The historical worksheet command remains available separately.
 `run` is synchronous and stateless: each invocation owns a unique run directory.
 It does not understand or evaluate the prompt, fixtures, evidence, or provider response.
 
@@ -41,7 +41,38 @@ skilltest run CONFIG
 `CONFIG` is the path to one configuration JSON file.
 The final standard-output line is the owned absolute bundle path.
 
+## Study documents
+
+Use `docs` for the [current study formats](../../skill-studies/formats/README.md). It makes no provider call and does not score model output.
+
+```text
+skilltest docs new KIND --output PATH --format-version 1
+skilltest docs check PATH [--json]
+skilltest docs check PROTOCOL --ready-for collection [--batch ID] [--json]
+skilltest docs check PROTOCOL --ready-for assessment [--batch ID] [--json]
+```
+
+`KIND` is `protocol`, `case`, `manifest`, `index`, `result` or `assessment`. Generation copies the canonical version-1 draft, leaves it unfinished and refuses an existing output; its parent directory must exist.
+Checking reads a file and its declared references. Repository identities resolve at their full Git revision or the enclosing manifest's source revision; external evidence uses absolute paths/hashes. Run from the repository when checking a document stored outside it. Referenced configurations are materialized only in disposable scratch for the existing config loader; no checker, embedded command or provider is executed.
+
+Default checking reports structure, references and unresolved values. `complete` means no unresolved requirement among the requested mechanical checks; a default file check does not certify a batch. Stage checks require the protocol file and an unambiguous batch, follow its selected references and reconcile the declared scope. Collection checks also compare current dispatch inputs with their frozen bytes. A completed batch's input check does not grant authority to rerun it.
+
+Diagnostics provide file, field/line, rule, message and severity. `--json` returns these with artifact kind, structural validity, completeness and unsupported status. Exit `0` means the requested checks passed; `1` means invalid content or unresolved stage requirements; `2` means usage or unsupported version/representation. Drafts can pass structural checking while failing readiness. Evidence absence remains explicit and is not converted into a behavioral failure.
+
+Supported version-1 representations:
+
+- The canonical Markdown headings/criterion cards and JSON fields; local inline links and heading anchors. External URLs are not fetched and free prose remains subject to semantic review.
+- Scope in the existing `Order / Case / Condition / Repetition / CONFIG` table, or the existing explicit single-case, original-then-control, one-execution-each declaration. Stage checks support descriptive inclusion of all valid setups without retries; other inclusion or retry representations are reported unsupported.
+- Aggregate tables with separate met/not-met/insufficient-evidence columns, or labelled `M/N/U` columns. Runtime strata use explicit `NAME includes orders A–B` declarations and must partition valid executions. Coverage uses the existing seven-column table; an explicit no-gap statement suffices only when every planned execution has a valid result.
+- Current accounting uses the existing booked/remaining/ceiling paragraph, dispatched/remaining pool paragraph and `Work / Estimate / Basis` forecast table; outer ceilings may be linked from the plan. Only referenced attempt indexes contribute. Historical process/development-pilot indexes supply a labelled accounting-only projection, not version-1 format conformance or reassessment.
+
+Unsupported historical documents remain unchanged. Unsupported layouts cannot silently pass stage checks; a required representation change needs explicit format review. Generation and validation share the canonical templates and structural rules, with the execution-result schema reused. Wheels package those same resource bytes; `jsonschema` is a runtime dependency.
+
+`src/skilltest/documents/` owns this functionality separately from execution. Future collection still pins the full runner Git revision and checks relevant changes, including shared CLI wiring/dependencies. Structural checks do not establish semantic correctness, causal attribution or owner consent.
+
 ## Worksheet
+
+This command renders the historical methodology below; it is not an alternative current study assessment format. Existing CLI consumers/tests still exercise it, so retirement remains separate from adding `docs`.
 
 From the repository root, invoke:
 

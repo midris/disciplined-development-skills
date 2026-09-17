@@ -21,7 +21,11 @@ def main(arguments: Sequence[str] | None = None) -> int:
     worksheet.add_argument("scenario", metavar="SCENARIO")
     worksheet.add_argument("run_bundle", metavar="RUN_BUNDLE")
     worksheet.add_argument("--output", required=True, metavar="PATH")
+    from skilltest.documents import configure, run as run_documents
+    configure(commands.add_parser("docs"))
     parsed = parser.parse_args(arguments)
+    if parsed.command == "docs":
+        return run_documents(parsed)
 
     if parsed.command == "worksheet":
         try:

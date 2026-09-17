@@ -119,7 +119,7 @@ def test_run_command_has_one_bundle_per_external_invocation(
 
     help_output = invoke("--help")
     assert help_output.returncode == 0
-    assert "{run,worksheet}" in help_output.stdout
+    assert "{run,worksheet,docs}" in help_output.stdout
     assert "promote" not in help_output.stdout
     assert "clean" not in help_output.stdout
 

@@ -71,7 +71,7 @@ See [installation instructions](README.md#install) for usage and overwrite behav
 The [fresh framework specification](plans/specs/2026-09-11-model-driven-skill-testing-framework.md) proposes the testing responsibilities; the [current plan](plans/2026-09-11-model-driven-skill-testing.md) owns execution order and decisions.
 These responsibilities normally live in the active development session: it dispatches fixed subject scenarios, inspects captured evidence and writes scores under fixed rules. A separately automated evaluator is optional, not an additional required layer.
 They retain checked-in skills and existing tooling as the foundation; the previous testing frameworks and pending workflows are abandoned.
-The new documents describe the direction for testing work, not an implemented runner redesign.
+The testing spec governs the session workflow; deterministic runner and document tooling support its execution and record keeping.
 The `skill-studies/` directory holds non-shipped protocols and development evidence; raw evidence uses external stores with retention and actual recovery arrangements recorded in the study protocol.
 The [study plan](plans/2026-09-11-model-driven-skill-testing.md#limits-and-information-boundaries) specifies the storage boundary and requires canonical absolute paths in each protocol, including worktree executions.
 
@@ -81,6 +81,7 @@ tooling, not a fourth runtime layer or an installed consumer component.
 process, result record, and exit; outside callers compose independent runs.
 Its operator contract and bundle layout are in its
 [README](skill-validation/runner/README.md).
+`skilltest docs new/check` uses the separate `src/skilltest/documents/` module for draft generation and structural/identity/batch checks, sharing canonical version-1 resources with the format guide. It neither invokes providers nor supplies semantic judgments. Collection identifies the full runner revision, including shared CLI and dependency changes.
 Codex and Claude adapters share prepared-input checks and owned-process lifecycle mechanics; each owns its authentication and launch controls.
 Both accept the runner's `execution.permissions` choice: the existing writable default or enforced read-only access for model actions, with controller-owned output capture.
 The [runner guide](skill-validation/runner/README.md#providers) defines the provider-specific boundaries and qualification checks; read-only does not mean all tools or skills are disabled.
