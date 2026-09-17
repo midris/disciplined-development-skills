@@ -5,13 +5,15 @@
 Format version: `1`
 Study ID: `sweeping-stale-references`
 Case ID: `moved-guide`
-Definition version: `1`
+Definition version: `2`
 Status: prepared; collection scope and authorization belong to the protocol.
 Purpose: reconcile references to one moved guide across different relative-path contexts and an executable consumer, while preserving history and an independent same-name guide.
 Coverage/exposure: [protocol suite](../../protocol.md#proposed-baseline-case-selection), O1–O4; an exposed development case, with no held-out or O5 claim.
 This is the same subject scenario as historical [pilot-02](../pilot-02/assessment.md), using its subject/configuration/checker bytes by reference. This controller definition adopts the accepted layout and current policy 3 without changing criterion meanings or relabelling pilot observations.
 
 ## Inputs and setup
+
+Comparison applicability (version 2): `candidate` receives the exact [comprehensive snapshot](../skill-candidate-comprehensive/SKILL.md) through [its configuration](candidate-comprehensive.json), with the same task, prompt and setup as `original`, including full skill-read evidence. Apply every original criterion and its existing boundaries to candidate. Original/control descriptions below continue to describe that earlier pair; candidate has guidance as original does. This adds a condition without changing judgment units, thresholds or outcomes in historical records.
 
 Task: [pilot-02/task.md](../pilot-02/task.md); configs: [original](../pilot-02/original.json), [control](../pilot-02/control.json); current controller identities: [manifest](manifest.json).
 The guide already moved from docs/setup.md to docs/reference/setup.md. The task flags one README link, permits project edits and requires a commit; other consumers remain discoverable through ordinary project files.
@@ -35,7 +37,7 @@ The retained [qualification](../pilot-02/qualification.json) covers complete, RE
 Basis: Owner-clarified functional relative-path outcome applied to the settled moved-guide task; SSR broad reconciliation purpose.
 Coverage: [Protocol obligations](../../protocol.md#behavioral-contract-and-consumers) O1, O2.
 Dimension: functional
-Applies to: `original`, `control`
+Applies to: `original`, `control`, `candidate`
 Judgment unit: Three Markdown consumers and the export script, each reaching the intended moved service guide.
 Required evidence: Inspect README, docs/index.md and docs/tutorials/quickstart.md; resolve links relative to their containing file. Run check_paths.py and the inspected export script on a disposable copy from the project root and another directory; compare exported content to the service guide.
 Met: All three current links resolve to docs/reference/setup.md and exporting the guide emits its intended content from both working directories.
@@ -50,7 +52,7 @@ Overlap: Incomplete repair may also fail F3; count the shared cause once at exec
 Basis: Settled task move and SSR Procedure 2 triage under the owner-clarified whole-artifact policy.
 Coverage: [Protocol obligations](../../protocol.md#behavioral-contract-and-consumers) O2.
 Dimension: functional
-Applies to: `original`, `control`
+Applies to: `original`, `control`, `candidate`
 Judgment unit: Service guide content, historical location record and independent vendor guide/link, with the settled move intact.
 Required evidence: Inspect all final files/diffs and expected.json protected paths; verify the vendor link still reaches its own guide and the old path was not restored or duplicated to hide breakage.
 Met: Service instructions and historical meaning remain useful, the independent vendor guide/link works, and the settled move remains intact.
@@ -65,7 +67,7 @@ Overlap: A wrong consumer destination can also fail F1; record shared causes.
 Basis: Explicit task commit request and SSR Procedure 3; owner priority on complete committed outcome.
 Coverage: [Protocol obligations](../../protocol.md#behavioral-contract-and-consumers) O3.
 Dimension: functional
-Applies to: `original`, `control`
+Applies to: `original`, `control`, `candidate`
 Judgment unit: All required consumer repairs committed after the neutral fixture baseline.
 Required evidence: Inspect retained Git history, committed tree and final working diff against F1.
 Met: All required edits appear in committed history.
@@ -80,7 +82,7 @@ Overlap: Incomplete repair may also fail F1; commit grouping alone belongs to P2
 Basis: SSR Procedures 1 and 2.
 Coverage: [Protocol obligations](../../protocol.md#behavioral-contract-and-consumers) O1, O2.
 Dimension: procedural
-Applies to: `original`
+Applies to: `original`, `candidate`
 Judgment unit: Observable repository search, search/edit order and reasons for repair/preservation.
 Required evidence: Retained ordered tool events, content exposure and explicit triage; final correctness alone does not establish the procedure.
 Met: Search precedes reconciliation and current, historical and independent references receive appropriate triage.
@@ -95,7 +97,7 @@ Overlap: A triage defect may also cause F1/F2 failures; assess that outcome sepa
 Basis: SSR Procedure 3 one-commit requirement.
 Coverage: [Protocol obligations](../../protocol.md#behavioral-contract-and-consumers) O3.
 Dimension: procedural
-Applies to: `original`
+Applies to: `original`, `candidate`
 Judgment unit: Grouping of the complete repair after the separate setup commit.
 Required evidence: Retained commit history and diffs.
 Met: One repair commit contains all required changes.
@@ -110,7 +112,7 @@ Overlap: F3 owns committed completeness, separately from grouping.
 Basis: SSR Output artifact and the fixed moved-document accounting scope, with owner-set non-blocking severity.
 Coverage: [Protocol obligations](../../protocol.md#behavioral-contract-and-consumers) O4.
 Dimension: procedural
-Applies to: `original`
+Applies to: `original`, `candidate`
 Judgment unit: Four current moved-guide references plus the historical reference in expected.json.
 Required evidence: Commit body, searches and final changes reconciled to scoped references, reasons, locations, grouping and counts.
 Met: References swept: usefully and accurately explains the repair and deliberate preservation for the five scoped references, with same-path/outcome grouping.

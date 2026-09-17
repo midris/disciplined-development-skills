@@ -5,13 +5,15 @@
 Format version: `1`
 Study ID: `sweeping-stale-references`
 Case ID: `semantic-delivery`
-Definition version: `1`
+Definition version: `2`
 Status: prepared; collection scope and authorization belong to the protocol.
 Purpose: observe reconciliation of differently worded documentation after a settled behavior change.
 Coverage and development exposure: [protocol suite](../../protocol.md#proposed-baseline-case-selection); O1–O4, with no O5/local-change claim.
 This study-authored case uses earlier pilot bootstrap mechanics; [preparation](preparation.json) records the source inspection and reuse decision.
 
 ## Inputs and setup
+
+Comparison applicability (version 2): `candidate` receives the exact [comprehensive snapshot](../skill-candidate-comprehensive/SKILL.md) through [its configuration](candidate-comprehensive.json), with the same task, prompt and setup as `original`, including full skill-read evidence. Apply every original criterion and its existing boundaries to candidate. Original/control descriptions below continue to describe that earlier pair; candidate has guidance as original does. This adds a condition without changing judgment units, thresholds or outcomes in historical records.
 
 Task: [task.md](task.md); configurations: [original](original.json), [control](control.json); input identities: [manifest](manifest.json).
 The task states that the delivery worker now permits one initial attempt plus up to three retries, stopping on success, and flags one contradictory README claim.
@@ -75,7 +77,7 @@ Retained preparation/qualification records describe their recorded input version
 Basis: Owner-clarified changed-behavior outcome, applied to the [task](task.md).
 Coverage: [Protocol obligations](../../protocol.md#behavioral-contract-and-consumers) O1, O2.
 Dimension: functional
-Applies to: `original`, `control`
+Applies to: `original`, `control`, `candidate`
 Judgment unit: Current delivery documentation as a whole, serving overview, operations and troubleshooting readers.
 Required evidence: Inspect all final documents against task/code behavior and expected.json current reference IDs, following moved content. Runtime observations support behavior, not prose correctness.
 Met: All current descriptions agree on at most four total sends, up to three retries after initial failure, exhaustion after four consecutive failures, and immediate stopping on success; useful explanations remain.
@@ -90,7 +92,7 @@ Overlap: Incomplete repair can also fail F3; identify the shared cause, not two 
 Basis: Task constraints and SSR Procedure 2 triage, under the owner-clarified whole-artifact policy.
 Coverage: [Protocol obligations](../../protocol.md#behavioral-contract-and-consumers) O2.
 Dimension: functional
-Applies to: `original`, `control`
+Applies to: `original`, `control`, `candidate`
 Judgment unit: Worker/helper behavior, historical meaning and unrelated operational guidance.
 Required evidence: Inspect code, final documents and changes; compare disposable runtime observations with expected.json. Byte differences initiate semantic inspection.
 Met: The worker retains settled behavior, the independent helper retains its three-attempt limit, and historical meaning and unrelated useful guidance are preserved.
@@ -105,7 +107,7 @@ Overlap: A harmful documentation change may also fail F1; report the shared caus
 Basis: Explicit task commit request and SSR Procedure 3, with owner clarification that complete committed outcome leads.
 Coverage: [Protocol obligations](../../protocol.md#behavioral-contract-and-consumers) O3.
 Dimension: functional
-Applies to: `original`, `control`
+Applies to: `original`, `control`, `candidate`
 Judgment unit: All required repairs in Git history after the neutral baseline.
 Required evidence: Inspect retained Git history, committed tree and final working diff against F1; do not infer completeness from a message or file count.
 Met: All required repairs, including consolidated explanations and their references, are committed.
@@ -120,7 +122,7 @@ Overlap: Incomplete repair can also fail F1; grouping alone belongs to P2.
 Basis: SSR Procedure 1 search-before-edit and Procedure 2 classification.
 Coverage: [Protocol obligations](../../protocol.md#behavioral-contract-and-consumers) O1, O2.
 Dimension: procedural
-Applies to: `original`
+Applies to: `original`, `candidate`
 Judgment unit: Observed search/edit sequence and handling of current, historical and independent meanings.
 Required evidence: Retained tool events exposing content, searches, edits and explicit decisions; inspect what was actually read and decided.
 Met: Search precedes reconciliation and relevant meanings receive appropriate repair/preservation triage.
@@ -135,7 +137,7 @@ Overlap: A triage defect may also cause F1/F2 failure; that functional consequen
 Basis: SSR Procedure 3 requires one reconciliation commit.
 Coverage: [Protocol obligations](../../protocol.md#behavioral-contract-and-consumers) O3.
 Dimension: procedural
-Applies to: `original`
+Applies to: `original`, `candidate`
 Judgment unit: Commit grouping of the complete repair.
 Required evidence: Retained Git history and diffs after baseline.
 Met: One commit contains the complete repair.
@@ -150,7 +152,7 @@ Overlap: F3 owns committed completeness; a fully committed repair split across c
 Basis: SSR Output artifact, with owner-set non-blocking severity and the fixed expected.json accounting scope.
 Coverage: [Protocol obligations](../../protocol.md#behavioral-contract-and-consumers) O4.
 Dimension: procedural
-Applies to: `original`
+Applies to: `original`, `candidate`
 Judgment unit: Semantic reference blocks specified by expected.json accounting_scope.
 Required evidence: Commit body, trace and final documents reconciled to required block IDs, locations, outcomes, grouping and counts.
 Met: The account accurately explains updates/preservation for required blocks using References swept: and useful locations, same-path/outcome grouping and counts.

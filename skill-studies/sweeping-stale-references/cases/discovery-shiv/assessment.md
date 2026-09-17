@@ -5,7 +5,7 @@
 Format version: `1`
 Study ID: `sweeping-stale-references`
 Case ID: `discovery-shiv`
-Definition version: `1`
+Definition version: `2`
 Status: prepared; suite membership and collection authorization belong to the protocol.
 Coverage and development exposure: [protocol suite](../../protocol.md#proposed-baseline-case-selection); O1–O4, with O5 deferred.
 
@@ -21,6 +21,8 @@ This is meaningful source, tests and documentation, but size does not establish 
 All four required consumers contain the same retired literal, so this exercises location diversity, not a requirement for lexical variants. Prior familiarity with public Shiv source may reduce discovery cost; absence of an upstream-reference statement does not prove unfamiliarity. Neither limitation warrants adding consumers merely to make a control fail.
 
 ## Inputs and setup
+
+Comparison applicability (version 2): `candidate` receives the exact [comprehensive snapshot](../skill-candidate-comprehensive/SKILL.md) through [its configuration](candidate-comprehensive.json), with the same task, prompt and setup as `original`, including full skill-read evidence. Apply every original criterion and its existing boundaries to candidate. Original/control descriptions below continue to describe that earlier pair; candidate has guidance as original does. This adds a condition without changing judgment units, thresholds or outcomes in historical records.
 
 Task: [task.md](task.md); configurations: [original](original.json), [control](control.json); input identities: [manifest](manifest.json).
 `task.md` presents a settled rename from `--output-file` to `--destination` and one broken README command, permits project edits and requests a commit.
@@ -76,7 +78,7 @@ Retained preparation/qualification records describe their recorded input version
 Basis: Settled task rename and SSR reconciliation purpose; usable consumers are the owner-clarified outcome.
 Coverage: [Protocol obligations](../../protocol.md#behavioral-contract-and-consumers) O1, O2.
 Dimension: functional
-Applies to: `original`, `control`
+Applies to: `original`, `control`, `candidate`
 Judgment unit: All four current commands and their runnable greeting archives.
 Required evidence: Inspect final commands and replay all expected.json required_consumers; run the script from project root and elsewhere, inspect archive payload/entry point and execute it.
 Met: Every required consumer builds the intended runnable greeting archive; the script works from both locations.
@@ -91,7 +93,7 @@ Overlap: Incomplete repair may also fail F3; report the shared cause.
 Basis: Task settled CLI plus SSR Procedure 2 triage and owner-clarified whole-artifact preservation.
 Coverage: [Protocol obligations](../../protocol.md#behavioral-contract-and-consumers) O2.
 Dimension: functional
-Applies to: `original`, `control`
+Applies to: `original`, `control`, `candidate`
 Judgment unit: Settled CLI/alias, greeting behavior, historical record, independent inventory tool and unrelated project behavior.
 Required evidence: Inspect all changes and expected.json preservation facts; use replay CLI/alias/retired-option and inventory observations.
 Met: All protected behavior and meaning remains effective.
@@ -106,7 +108,7 @@ Overlap: A harmful repair may also fail F1; possible prior upstream knowledge li
 Basis: Explicit task commit request and SSR Procedure 3, with owner priority on the committed outcome.
 Coverage: [Protocol obligations](../../protocol.md#behavioral-contract-and-consumers) O3.
 Dimension: functional
-Applies to: `original`, `control`
+Applies to: `original`, `control`, `candidate`
 Judgment unit: All required repairs committed after the neutral baseline.
 Required evidence: Retained history, committed tree and final working diff, inspected against F1.
 Met: Every required repair is present in retained Git history.
@@ -121,7 +123,7 @@ Overlap: Shared incomplete repair may also fail F1; do not count the causes as i
 Basis: SSR Procedure 1 search-before-edit and Procedure 2 classification.
 Coverage: [Protocol obligations](../../protocol.md#behavioral-contract-and-consumers) O1, O2.
 Dimension: procedural
-Applies to: `original`
+Applies to: `original`, `candidate`
 Judgment unit: For each consumer: observable content exposure, explicit triage and committed outcome, plus repository breadth and search/edit ordering.
 Required evidence: Retained tool output and edits; filename-only listings are not content exposure. Record explicit upstream/remembered-API claims separately.
 Met: Search precedes repair and current/historical/independent references receive appropriate triage.
@@ -136,7 +138,7 @@ Overlap: Triage defects may also cause F1/F2 failures; discovery advantage is a 
 Basis: SSR Procedure 3 one-commit requirement.
 Coverage: [Protocol obligations](../../protocol.md#behavioral-contract-and-consumers) O3.
 Dimension: procedural
-Applies to: `original`
+Applies to: `original`, `candidate`
 Judgment unit: Grouping of the complete reconciliation.
 Required evidence: Retained Git history and diffs after baseline.
 Met: One commit contains the complete repair.
@@ -151,7 +153,7 @@ Overlap: F3 owns completeness, independently of grouping.
 Basis: SSR Output artifact under the owner-set non-blocking policy and expected.json fixed scope.
 Coverage: [Protocol obligations](../../protocol.md#behavioral-contract-and-consumers) O4.
 Dimension: procedural
-Applies to: `original`
+Applies to: `original`, `candidate`
 Judgment unit: Nine literal occurrences across eight paths: four updates, one historical occurrence and four false positives.
 Required evidence: Commit body, traces and edits reconciled to expected.json literal_matches and accounting_scope.
 Met: References swept: usefully and accurately accounts for scoped outcomes, reasons, locations, counts and same-path/outcome grouping.

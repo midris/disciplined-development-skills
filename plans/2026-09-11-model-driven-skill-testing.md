@@ -116,7 +116,7 @@ For every conditional safeguard, record its implementation or its evidence limit
 - [x] Complete one batch assessment with per-case/condition/criterion aggregates, evidence limitations, failure patterns and observed variation. Reconcile planned repetitions and all attempts, apply the declared inclusion/retry/acceptance rules, and cite accounting where relevant. Inspect evidence supporting passes as well as failures; apply the declared limit on reliability claims.
 - [x] Resolve defective tests or criteria through a versioned amendment applied consistently across affected conditions; preserve prior records and recollect only where necessary and authorized.
   Capture-2 and runtime-1 address observed infrastructure faults prospectively; both affected attempts remain charged and excluded, with no replacements. Criteria and subject inputs did not change.
-- [ ] Present supported rewrite opportunities and agree on an objective, or proceed to closure retaining the original.
+- [x] Present supported rewrite opportunities and agree on an objective: owner approved the existing comprehensive candidate for complete-repair preservation and reporting accuracy on 2026-09-17.
   The batch assessment's interpretation correction distinguishes clear counting errors from the unresolved Shiv negative-assertion category boundary. Resolve that skill/criterion attribution before treating it as a rewrite target; the recorded fixed-rule judgments remain unchanged.
 
 **Complete when:** conclusions trace to retained evidence and distinguish observed success, attributed skill contribution, evaluator error and uncertainty.
@@ -147,8 +147,8 @@ Absent or unreadable files, invalid UTF-8/JSON, unsupported versions/layouts and
 
 ## Stage 5: rewrite and compare
 
-- [ ] Re-read `writing-skills` and reconcile its evidence requirements with the agreed edit before authoring. Resolve a passing-control/RED conflict explicitly; preserve the intended behavioral contract.
-- [ ] Edit in the active work session using the contract, scored evidence and `writing-skills`. Use bounded checks and preserve each candidate version and the original. A separate unexposed author is required only for an explicitly selected held-out claim.
+- [x] Resolve the authoring step: reuse the owner-selected existing candidate exactly; no new authoring, wording loop or manufactured RED test is required. Any later edit must re-read `writing-skills` and reconcile its evidence requirements.
+- [x] Preserve the selected candidate and original separately. The approved candidate is the exact committed comprehensive rewrite; no held-out or unexposed-author claim is selected.
   Original conditions use `skill-studies/sweeping-stale-references/cases/skill-original/SKILL.md`, including later contemporaneous runs. Never point them at the mutable live skill; keep candidate sources distinct.
 - [ ] Run the relevant fixed scenarios after the edit and record execution results and compare aggregate assessments. Use contemporaneous original runs for a version-comparison claim and a current no-target control for a contribution claim. Apply reserved-result restrictions only when that claim was selected.
 - [ ] Investigate material model/runtime drift before attributing improvement. If reserved results guide an edit, reclassify them as development evidence; renewed transfer claims require new reserved cases on both versions within remaining authorization.
@@ -189,7 +189,9 @@ Reserved bundles and revealing assessments stay entirely in the verified private
 - [x] Agree the reviewed generator/validator scope, CLI and provisional 120-minute implementation / 60-minute verification allowance. Owner approved proceeding on 2026-09-16.
 - [x] Complete and qualify the document-tooling implementation steps above, without new model executions or skill edits.
 - [x] Inspect and preserve the owner-suggested existing SSR rewrite, prepare matching candidate configurations and present the protocol’s twelve-execution comparison proposal. Preparation includes offline input-parity checks; no subject calls.
-- [ ] Review/approve `comprehensive-comparison-01`, including the condition-applicability extension, then freeze its inputs/manifests and full runner/authorization identities before collection. The proposed objective is complete-repair preservation and reporting accuracy; reuse does not require new skill authoring or resume the superseded workflow.
+- [x] Owner approved `comprehensive-comparison-01` and its condition-applicability extension on 2026-09-17.
+- [ ] Freeze version-2 controller applicability, comparison manifests and full runner/authorization identities; verify collection readiness.
+- [ ] Collect and assess the twelve approved attempts in order, retaining each before the next dispatch, then write the aggregate comparison. Stop at the protocol boundaries; no retry or new skill edit is authorized.
 
 The owner accepted the reconciled [format set](../skill-studies/formats/README.md), now version `1`. The protocol and the Shiv and semantic-delivery case definitions/manifests use the accepted layouts; historical observed-case inputs and the `1-draft` worked example remain unchanged under their recorded identities.
 The [semantic-delivery batch](../skill-studies/sweeping-stale-references/protocol.md#first-collection-semantic-delivery-01) is complete; its results informed the approved core-baseline-01 scope. No further layout review, new scenario, evaluator layer or pre-baseline pilot is needed.
