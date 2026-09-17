@@ -250,6 +250,8 @@ Evidence pointers and concise reasons in the execution results support pattern i
 A successful control is useful evidence, even when it provides no failing case for new guidance.
 Passing with the original skill establishes observed success; a comparison is required to support a contribution claim.
 Cost, latency and skill size are supporting measures, not substitutes for effectiveness.
+Use whitespace-delimited word count (`wc -w`) over the complete supplied skill text, including frontmatter and Markdown, to compare skill size; exact token counts are unnecessary for this comparison.
+A smaller skill with preserved observed effectiveness is a simplification benefit; report behavioral uncertainty and regressions alongside it, without a word-count target.
 
 Output: a measured baseline with inspectable assessments and appropriately bounded conclusions.
 Exit condition: the owner can see what works, what fails, what remains uncertain and what evidence could justify rewriting.

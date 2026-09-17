@@ -194,7 +194,7 @@ Reserved bundles and revealing assessments stay entirely in the verified private
 - [x] Owner approved `comprehensive-comparison-01` and its condition-applicability extension on 2026-09-17.
 - [x] Freeze version-2 controller applicability and comparison manifests; collection readiness passed. The invocation-authority commit is also the full runner revision for this batch; record its hash in each actual attempt.
 - [x] Collect and assess the twelve approved attempts in order, retaining each before the next dispatch, then write the aggregate comparison. No retry, replacement or skill edit occurred.
-- [ ] Present the completed comparison and recommendation to retain the original; obtain the owner’s retain/adopt/closure decision before rollout or further collection.
+- [ ] Present the completed comparison and recommendation to adopt the smaller candidate; obtain the owner’s retain/adopt/closure decision before rollout or further collection.
 
 The owner accepted the reconciled [format set](../skill-studies/formats/README.md), now version `1`. The protocol and the Shiv and semantic-delivery case definitions/manifests use the accepted layouts; historical observed-case inputs and the `1-draft` worked example remain unchanged under their recorded identities.
 The [semantic-delivery batch](../skill-studies/sweeping-stale-references/protocol.md#first-collection-semantic-delivery-01) is complete; its results informed the approved core-baseline-01 scope. No further layout review, new scenario, evaluator layer or pre-baseline pilot is needed.
