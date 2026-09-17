@@ -17,6 +17,7 @@ The selected core baseline is collected and assessed. [Core-baseline-01](core-ba
 
 The owner accepted the reconciled version-1 formats: per-execution outcomes/evidence, one aggregate batch assessment and optional comparison within it. The protocol and current case/manifests use the accepted layouts. Historical inputs, policy-2 assessments and the `1-draft` worked example retain their recorded identities; do not rescore or migrate them to continue.
 The frozen [original skill](cases/skill-original/SKILL.md) remains the source for original conditions. Candidate bytes must be separate. Fixed criteria and policy 3 govern the core batch.
+The batch assessment records an unresolved Shiv category boundary: its P3 count measures the frozen rule, not three established skill defects. Read that interpretation correction before proposing a rewrite; no criterion amendment or reassessment is approved.
 
 ## Boundaries and next step
 
