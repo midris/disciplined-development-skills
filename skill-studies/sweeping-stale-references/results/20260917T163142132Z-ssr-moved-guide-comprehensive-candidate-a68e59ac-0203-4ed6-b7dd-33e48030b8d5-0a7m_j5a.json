@@ -1,0 +1,205 @@
+{
+  "schema_version": "1",
+  "record_kind": "execution result",
+  "result_id": "comprehensive-comparison-01-moved-guide-candidate-1",
+  "assessed_at": "2026-09-17T16:33:38.505562+00:00",
+  "run_id": "20260917T163142132Z-ssr-moved-guide-comprehensive-candidate-a68e59ac-0203-4ed6-b7dd-33e48030b8d5-0a7m_j5a",
+  "condition": "candidate",
+  "assessor": {
+    "name": "Codex active session",
+    "method": "active session",
+    "model": null,
+    "session_id": "01a0a0df-97d9-7630-a639-012c3046e6b5",
+    "context": "Same ongoing work session with owner decisions, construction history, fixed criteria and prior assessments available. Not independent or blind validation; assessor model identity not recorded by this workflow."
+  },
+  "manifest": {
+    "path": "skill-studies/sweeping-stale-references/cases/moved-guide/comparison-manifest.json",
+    "sha256": "483682d016c48d24b222f19443519dfcb50d9386ab9265c727695c8f3471393c",
+    "version": "1",
+    "git_revision": "d899a817108330c4dcba4007f3383294a87d2f9a"
+  },
+  "evidence": [
+    {
+      "id": "runner",
+      "artifact": {
+        "path": "/Users/simon/work/personal/skill-study-private/sweeping-stale-references/development/20260917T163142132Z-ssr-moved-guide-comprehensive-candidate-a68e59ac-0203-4ed6-b7dd-33e48030b8d5-0a7m_j5a/result.json",
+        "sha256": "4500ca7939a8d7ca217d57661c8671eaa94a04d22187dbbbccb307e86759e527",
+        "version": "0.4"
+      },
+      "selector": "Execution, status, artifact identities and infrastructure error."
+    },
+    {
+      "id": "inputs",
+      "artifact": {
+        "path": "/Users/simon/work/personal/skill-study-private/sweeping-stale-references/development/20260917T163142132Z-ssr-moved-guide-comprehensive-candidate-a68e59ac-0203-4ed6-b7dd-33e48030b8d5-0a7m_j5a/runner.log",
+        "sha256": "672a6724e8b146ce7c7ce7ebb77bdc293904baf16b143594ee90780bee857ee5",
+        "version": null
+      },
+      "selector": "Private invocation arguments, pre-launch input hashes and capture/cleanup."
+    },
+    {
+      "id": "trace",
+      "artifact": {
+        "path": "/Users/simon/work/personal/skill-study-private/sweeping-stale-references/development/20260917T163142132Z-ssr-moved-guide-comprehensive-candidate-a68e59ac-0203-4ed6-b7dd-33e48030b8d5-0a7m_j5a/stdout.txt",
+        "sha256": "8e3d255b5a906c9d0a9020f72c3c70365112022c0fe856ba35d7750765875c17",
+        "version": null
+      },
+      "selector": "Ordered command/agent events, interpreted with complete session tool responses."
+    },
+    {
+      "id": "session",
+      "artifact": {
+        "path": "/Users/simon/work/personal/skill-study-private/sweeping-stale-references/development/20260917T163142132Z-ssr-moved-guide-comprehensive-candidate-a68e59ac-0203-4ed6-b7dd-33e48030b8d5-0a7m_j5a/provider-session.jsonl",
+        "sha256": "b94493c311ae1994b29599a63196bc6de4f6837181178b391e584828d9c8c31c",
+        "version": null
+      },
+      "selector": "Skill read 16; baseline 25; task 32; content/search 41; patch 48; verification 57; commit 64."
+    },
+    {
+      "id": "checks",
+      "artifact": {
+        "path": "/Users/simon/work/personal/skill-study-private/sweeping-stale-references/development/20260917T163142132Z-ssr-moved-guide-comprehensive-candidate-a68e59ac-0203-4ed6-b7dd-33e48030b8d5-0a7m_j5a.checks.json",
+        "sha256": "5662867e84b1457ea293f8a6b1434de1460c11d4834edf33e6f065ffdd66ac51",
+        "version": null
+      },
+      "selector": "Input checks, Git history/commit messages, changed paths, preserved project bytes and independent runtime observations."
+    },
+    {
+      "id": "file-5",
+      "artifact": {
+        "path": "/Users/simon/work/personal/skill-study-private/sweeping-stale-references/development/20260917T163142132Z-ssr-moved-guide-comprehensive-candidate-a68e59ac-0203-4ed6-b7dd-33e48030b8d5-0a7m_j5a/workspace/fixture/README.md",
+        "sha256": "9e97a73685d83fddaddac027c2e1f38fa225d087f5f3a32ff8da1f9937aaf2b5",
+        "version": null
+      },
+      "selector": "Complete changed artifact; inspect against fixed case criteria and preserved input bytes."
+    },
+    {
+      "id": "file-6",
+      "artifact": {
+        "path": "/Users/simon/work/personal/skill-study-private/sweeping-stale-references/development/20260917T163142132Z-ssr-moved-guide-comprehensive-candidate-a68e59ac-0203-4ed6-b7dd-33e48030b8d5-0a7m_j5a/workspace/fixture/docs/index.md",
+        "sha256": "96144ff7b607b53498e91dee88d5e34f254459c04a29da7afeb3bebfc71e22b6",
+        "version": null
+      },
+      "selector": "Complete changed artifact; inspect against fixed case criteria and preserved input bytes."
+    },
+    {
+      "id": "file-7",
+      "artifact": {
+        "path": "/Users/simon/work/personal/skill-study-private/sweeping-stale-references/development/20260917T163142132Z-ssr-moved-guide-comprehensive-candidate-a68e59ac-0203-4ed6-b7dd-33e48030b8d5-0a7m_j5a/workspace/fixture/docs/tutorials/quickstart.md",
+        "sha256": "c61c0daedb88e2462da72311fa3fc547be7632cf571a5a2e5d50d32448ff992f",
+        "version": null
+      },
+      "selector": "Complete changed artifact; inspect against fixed case criteria and preserved input bytes."
+    },
+    {
+      "id": "file-8",
+      "artifact": {
+        "path": "/Users/simon/work/personal/skill-study-private/sweeping-stale-references/development/20260917T163142132Z-ssr-moved-guide-comprehensive-candidate-a68e59ac-0203-4ed6-b7dd-33e48030b8d5-0a7m_j5a/workspace/fixture/scripts/export-guide.sh",
+        "sha256": "afd80dc1ebc98978102750682bac98af191e12ad272aaf1ce98dbbdb03dab7ac",
+        "version": null
+      },
+      "selector": "Complete changed artifact; inspect against fixed case criteria and preserved input bytes."
+    }
+  ],
+  "setup": {
+    "status": "valid",
+    "reason": "Complete frozen candidate skill exposed before baseline/task; inputs and session identity match, with no observed outside guidance. Capture-2 and runtime-1 apply to both versions; the frozen protocol/runner revision is identified by this attempt’s authorization in the index. Configuration, prompt, pre-launch fixtures and neutral project baseline match fixed inputs. Session hash, invocation cwd and stdout thread identity match.",
+    "evidence": [
+      "runner",
+      "inputs",
+      "session",
+      "checks"
+    ]
+  },
+  "criteria": [
+    {
+      "id": "F1",
+      "dimension": "functional",
+      "judgment": "met",
+      "reason": "All three Markdown links resolve to the moved service guide; the inspected export script emits exact guide content from root and another directory.",
+      "consequence": "Functional outcome satisfied.",
+      "evidence": [
+        "checks",
+        "session",
+        "file-5",
+        "file-6",
+        "file-7",
+        "file-8"
+      ]
+    },
+    {
+      "id": "F2",
+      "dimension": "functional",
+      "judgment": "met",
+      "reason": "Only four consumer references change. The service guide, historical plan and independent vendor guide/link remain byte-identical and useful; the old service path is absent.",
+      "consequence": "Functional outcome satisfied.",
+      "evidence": [
+        "checks",
+        "session",
+        "file-5",
+        "file-6",
+        "file-7",
+        "file-8"
+      ]
+    },
+    {
+      "id": "F3",
+      "dimension": "functional",
+      "judgment": "met",
+      "reason": "All four required repairs are committed at 34fa6ae and the final working tree is clean.",
+      "consequence": "Functional outcome satisfied.",
+      "evidence": [
+        "checks",
+        "session",
+        "file-5",
+        "file-6",
+        "file-7",
+        "file-8"
+      ]
+    },
+    {
+      "id": "P1",
+      "dimension": "procedural",
+      "judgment": "met",
+      "reason": "The pre-edit search and full file reads expose all current consumers and protected meanings; the trace and account explicitly distinguish update/history/vendor outcomes.",
+      "consequence": "Procedure satisfied.",
+      "evidence": [
+        "checks",
+        "session",
+        "trace"
+      ]
+    },
+    {
+      "id": "P2",
+      "dimension": "procedural",
+      "judgment": "met",
+      "reason": "One repair commit contains the full reconciliation.",
+      "consequence": "Procedure satisfied.",
+      "evidence": [
+        "checks",
+        "session",
+        "trace"
+      ]
+    },
+    {
+      "id": "P3",
+      "dimension": "procedural",
+      "judgment": "met",
+      "reason": "References swept accurately lists all five scoped references with locations, one count each and correct outcomes; optional vendor entry is also accurate.",
+      "consequence": "Procedure satisfied.",
+      "evidence": [
+        "checks",
+        "session",
+        "trace"
+      ]
+    }
+  ],
+  "functional_result": "met",
+  "procedural_summary": "Search/triage, grouping and account all satisfied.",
+  "observations": [],
+  "uncertainty": [
+    "This is one execution under the declared case/model/context; aggregate conclusions belong to the batch assessment.",
+    "Session content establishes observable exposure/actions, not internal attention or exhaustive host-wide isolation.",
+    "No immutable model revision or independent/held-out validation is claimed."
+  ]
+}
