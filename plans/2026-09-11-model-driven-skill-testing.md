@@ -190,7 +190,7 @@ Reserved bundles and revealing assessments stay entirely in the verified private
 - [x] Complete and qualify the document-tooling implementation steps above, without new model executions or skill edits.
 - [x] Inspect and preserve the owner-suggested existing SSR rewrite, prepare matching candidate configurations and present the protocol’s twelve-execution comparison proposal. Preparation includes offline input-parity checks; no subject calls.
 - [x] Owner approved `comprehensive-comparison-01` and its condition-applicability extension on 2026-09-17.
-- [ ] Freeze version-2 controller applicability, comparison manifests and full runner/authorization identities; verify collection readiness.
+- [x] Freeze version-2 controller applicability and comparison manifests; collection readiness passed. The invocation-authority commit is also the full runner revision for this batch; record its hash in each actual attempt.
 - [ ] Collect and assess the twelve approved attempts in order, retaining each before the next dispatch, then write the aggregate comparison. Stop at the protocol boundaries; no retry or new skill edit is authorized.
 
 The owner accepted the reconciled [format set](../skill-studies/formats/README.md), now version `1`. The protocol and the Shiv and semantic-delivery case definitions/manifests use the accepted layouts; historical observed-case inputs and the `1-draft` worked example remain unchanged under their recorded identities.
