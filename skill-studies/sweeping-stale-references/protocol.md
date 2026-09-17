@@ -229,8 +229,8 @@ Keep historical primary/backup copies unchanged. The small run index references 
 Keep one canonical repository record per accepted run and commit it before correction; Git retains earlier versions.
 Historical citations use commit/path/hash, including the worked example's run-index reference; no duplicate snapshots or extensive amendment ledger are required.
 
-**Current accounting (2026-09-16): 622 active minutes booked; 578 minutes (9 hours 38 minutes) remain under the 1,200-minute ceiling.**
-This includes preparation, review and model/tool waits, excludes owner-wait, and retains prior conservative allowances. The latest booking covers verification, commit and push allowance from 03:07:25 through 03:10:25 UTC on September 17. The historical internal category split was not separately timed.
+**Current accounting (2026-09-16): 629 active minutes booked; 571 minutes (9 hours 31 minutes) remain under the 1,200-minute ceiling.**
+This includes preparation, review and model/tool waits, excludes owner-wait, and retains prior conservative allowances. The latest booking covers verification, commit/push, the next-step evidence walkthrough and closing allowance from 03:47:47 through 03:51:47 UTC on September 17. The historical internal category split was not separately timed.
 Update this paragraph in place from the latest booked total plus new active intervals counted once; Git retains prior checkpoints, and their source logs are optional reconciliation evidence.
 Dispatched calls are **18 subject, 0 evaluator, 0 authoring, 0 retry**; remaining outer capacity is **22 / 12 / 4 / 4**. Core-baseline-01 has no unspent calls; neither excluded attempt has replacement authorization. Remaining capacity is a ceiling, not a selected next batch.
 
@@ -243,7 +243,7 @@ Remaining-work forecast, in active minutes, including model/tool waits, review a
 | Closure and review | 30 | Decision, limitations and study closeout. |
 | **Total** | **210** | Forecast, not additional authorization. |
 
-Collection/assessment and document tooling are complete; their actual active effort is included in the booking above. Rewrite/comparison and closure retain their conditional planning allowances. The 210-minute total fits within the remaining 578 minutes, subject to revision when later scope is known. This is an estimate, not a guarantee of whole-study completion.
+Collection/assessment and document tooling are complete; their actual active effort is included in the booking above. Rewrite/comparison and closure retain their conditional planning allowances. The 210-minute total fits within the remaining 571 minutes, subject to revision when later scope is known. This is an estimate, not a guarantee of whole-study completion.
 Preserve later comparison capacity when selecting additional repetitions; no automatic pool transfers, retries or ceiling extensions are allowed.
 
 

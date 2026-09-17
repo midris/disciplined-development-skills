@@ -949,3 +949,45 @@ def test_wrong_json_types_report_diagnostics_without_tracebacks(document_study, 
     write("case/manifest.json", manifest)
     assert main(["docs", "check", str(root / "case/manifest.json"), "--json"]) == 1
     assert json.loads(capsys.readouterr().out)["diagnostics"]
+
+
+@pytest.mark.process_smoke
+@pytest.mark.parametrize(
+    "reference_path",
+    [
+        ("result", "record"),
+        ("bundle", "inventory"),
+        ("authorization", "artifact"),
+    ],
+    ids=["result-record", "bundle-inventory", "authorization"],
+)
+def test_assessment_readiness_checks_current_index_references(document_study, capsys, reference_path):
+    root, write, _, _ = document_study
+    current = json.loads((root / "example-run-index.json").read_text())
+    current["attempts"][1][reference_path[0]][reference_path[1]]["sha256"] = "0" * 64
+    write("example-run-index.json", current)
+    # Keep the assessment's frozen index valid: readiness must check both identities.
+    assert main(["docs", "check", str(root / "example-assessment.md"), "--json"]) == 0
+    capsys.readouterr()
+    assert main(["docs", "check", str(root / "example-run-index.json"), "--json"]) == 1
+    standalone = json.loads(capsys.readouterr().out)
+    assert any(
+        d["rule"] == "reference" and "hash mismatch" in d["message"] for d in standalone["diagnostics"]
+    )
+    assert (
+        main(
+            [
+                "docs",
+                "check",
+                str(root / "protocol.md"),
+                "--ready-for",
+                "assessment",
+                "--batch",
+                "example",
+                "--json",
+            ]
+        )
+        == 1
+    )
+    readiness = json.loads(capsys.readouterr().out)
+    assert any(d["rule"] == "reference" and "hash mismatch" in d["message"] for d in readiness["diagnostics"])

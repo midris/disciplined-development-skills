@@ -727,6 +727,8 @@ def readiness(raw, path, ctx, stage, batch):
                 current_path = current_paths.pop()
                 current = ctx.document(regular_bytes(current_path), current_path, "index")
                 if current is not None:
+                    # The assessment's frozen index does not validate current references.
+                    index(current, current_path, ctx)
                     fields = [
                         "attempt_id",
                         "case_id",
