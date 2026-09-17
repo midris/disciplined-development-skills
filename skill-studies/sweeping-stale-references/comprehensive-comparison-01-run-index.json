@@ -1,0 +1,596 @@
+{
+  "format_version": "1",
+  "index_id": "ssr-comprehensive-comparison-01",
+  "study_id": "sweeping-stale-references",
+  "batch_id": "comprehensive-comparison-01",
+  "attempts": [
+    {
+      "attempt_id": "comprehensive-comparison-01-semantic-delivery-original-1-1",
+      "case_id": "semantic-delivery",
+      "condition": "original",
+      "repetition": 1,
+      "attempt_number": 1,
+      "retry_of": null,
+      "manifest": {
+        "path": "skill-studies/sweeping-stale-references/cases/semantic-delivery/comparison-manifest.json",
+        "sha256": "c5e74d1e30353ff4e51bce359bf365d2d4d3158d0e7b70a1418b9f6a00040afa",
+        "version": "1",
+        "git_revision": "d899a817108330c4dcba4007f3383294a87d2f9a"
+      },
+      "authorization": {
+        "artifact": {
+          "path": "skill-studies/sweeping-stale-references/protocol.md",
+          "sha256": "8aaf366f406f099784c67a5253442ce1ae4e3c7f8fab2f950d7bbbf37e8a2995",
+          "version": "1",
+          "git_revision": "d899a817108330c4dcba4007f3383294a87d2f9a"
+        },
+        "selector": "Comparison: comprehensive-comparison-01; approved twelve rows, exact candidate, fixed rules; this authorization Git revision is the full runner revision"
+      },
+      "run_id": "20260917T162436802Z-ssr-semantic-delivery-original-8e4265f9-e53e-4d8d-8a1d-707d1c35f633-ssrdwyku",
+      "allocation": {
+        "pool": "subject",
+        "charge": 1
+      },
+      "bundle": {
+        "path": "/Users/simon/work/personal/skill-study-private/sweeping-stale-references/development/20260917T162436802Z-ssr-semantic-delivery-original-8e4265f9-e53e-4d8d-8a1d-707d1c35f633-ssrdwyku",
+        "inventory": {
+          "path": "/Users/simon/work/personal/skill-study-private/sweeping-stale-references/development/20260917T162436802Z-ssr-semantic-delivery-original-8e4265f9-e53e-4d8d-8a1d-707d1c35f633-ssrdwyku.inventory.json",
+          "sha256": "521ad1ede52aa0f3f340826cefe5c139848df7ba1b2a1fc1362129e2535b61b3",
+          "version": "1"
+        },
+        "verified": true
+      },
+      "result": {
+        "result_id": "comprehensive-comparison-01-semantic-delivery-original-1",
+        "record": {
+          "path": "skill-studies/sweeping-stale-references/results/20260917T162436802Z-ssr-semantic-delivery-original-8e4265f9-e53e-4d8d-8a1d-707d1c35f633-ssrdwyku.json",
+          "sha256": "6253675cbf0c6dadcfc4eead08b24106e3126fc97bbf3df44868e64e33131c42",
+          "version": "1",
+          "git_revision": "0c4cca36c1c2a5202fc0cc77046ad10613489704"
+        }
+      },
+      "limitations": [
+        "Small exposed development comparison; no immutable model revision or held-out claim."
+      ]
+    },
+    {
+      "attempt_id": "comprehensive-comparison-01-semantic-delivery-candidate-1-1",
+      "case_id": "semantic-delivery",
+      "condition": "candidate",
+      "repetition": 1,
+      "attempt_number": 1,
+      "retry_of": null,
+      "manifest": {
+        "path": "skill-studies/sweeping-stale-references/cases/semantic-delivery/comparison-manifest.json",
+        "sha256": "c5e74d1e30353ff4e51bce359bf365d2d4d3158d0e7b70a1418b9f6a00040afa",
+        "version": "1",
+        "git_revision": "d899a817108330c4dcba4007f3383294a87d2f9a"
+      },
+      "authorization": {
+        "artifact": {
+          "path": "skill-studies/sweeping-stale-references/protocol.md",
+          "sha256": "8aaf366f406f099784c67a5253442ce1ae4e3c7f8fab2f950d7bbbf37e8a2995",
+          "version": "1",
+          "git_revision": "d899a817108330c4dcba4007f3383294a87d2f9a"
+        },
+        "selector": "Comparison: comprehensive-comparison-01; approved twelve rows, exact candidate, fixed rules; this authorization Git revision is the full runner revision"
+      },
+      "run_id": "20260917T162924761Z-ssr-semantic-delivery-comprehensive-candidate-014050fc-2725-470b-8d0b-8de0caef4e9d-_i_ncr2x",
+      "allocation": {
+        "pool": "subject",
+        "charge": 1
+      },
+      "bundle": {
+        "path": "/Users/simon/work/personal/skill-study-private/sweeping-stale-references/development/20260917T162924761Z-ssr-semantic-delivery-comprehensive-candidate-014050fc-2725-470b-8d0b-8de0caef4e9d-_i_ncr2x",
+        "inventory": {
+          "path": "/Users/simon/work/personal/skill-study-private/sweeping-stale-references/development/20260917T162924761Z-ssr-semantic-delivery-comprehensive-candidate-014050fc-2725-470b-8d0b-8de0caef4e9d-_i_ncr2x.inventory.json",
+          "sha256": "6dda5948ebbe20f0476100bc6bba06385c33945a03e510f63c7efd725bef5c6a",
+          "version": "1"
+        },
+        "verified": true
+      },
+      "result": {
+        "result_id": "comprehensive-comparison-01-semantic-delivery-candidate-1",
+        "record": {
+          "path": "skill-studies/sweeping-stale-references/results/20260917T162924761Z-ssr-semantic-delivery-comprehensive-candidate-014050fc-2725-470b-8d0b-8de0caef4e9d-_i_ncr2x.json",
+          "sha256": "ef1ec11aa7af6601f9dccfbb070e7567a8c3b803a05b6a6c928db03ef6e6ba1e",
+          "version": "1",
+          "git_revision": "0c4cca36c1c2a5202fc0cc77046ad10613489704"
+        }
+      },
+      "limitations": [
+        "Small exposed development comparison; no immutable model revision or held-out claim."
+      ]
+    },
+    {
+      "attempt_id": "comprehensive-comparison-01-moved-guide-candidate-1-1",
+      "case_id": "moved-guide",
+      "condition": "candidate",
+      "repetition": 1,
+      "attempt_number": 1,
+      "retry_of": null,
+      "manifest": {
+        "path": "skill-studies/sweeping-stale-references/cases/moved-guide/comparison-manifest.json",
+        "sha256": "483682d016c48d24b222f19443519dfcb50d9386ab9265c727695c8f3471393c",
+        "version": "1",
+        "git_revision": "d899a817108330c4dcba4007f3383294a87d2f9a"
+      },
+      "authorization": {
+        "artifact": {
+          "path": "skill-studies/sweeping-stale-references/protocol.md",
+          "sha256": "8aaf366f406f099784c67a5253442ce1ae4e3c7f8fab2f950d7bbbf37e8a2995",
+          "version": "1",
+          "git_revision": "d899a817108330c4dcba4007f3383294a87d2f9a"
+        },
+        "selector": "Comparison: comprehensive-comparison-01; approved twelve rows, exact candidate, fixed rules; this authorization Git revision is the full runner revision"
+      },
+      "run_id": "20260917T163142132Z-ssr-moved-guide-comprehensive-candidate-a68e59ac-0203-4ed6-b7dd-33e48030b8d5-0a7m_j5a",
+      "allocation": {
+        "pool": "subject",
+        "charge": 1
+      },
+      "bundle": {
+        "path": "/Users/simon/work/personal/skill-study-private/sweeping-stale-references/development/20260917T163142132Z-ssr-moved-guide-comprehensive-candidate-a68e59ac-0203-4ed6-b7dd-33e48030b8d5-0a7m_j5a",
+        "inventory": {
+          "path": "/Users/simon/work/personal/skill-study-private/sweeping-stale-references/development/20260917T163142132Z-ssr-moved-guide-comprehensive-candidate-a68e59ac-0203-4ed6-b7dd-33e48030b8d5-0a7m_j5a.inventory.json",
+          "sha256": "dda23042b131d35ac38a0cfe20b2dac68ef007ad69f583b0e6f699296b116b0f",
+          "version": "1"
+        },
+        "verified": true
+      },
+      "result": {
+        "result_id": "comprehensive-comparison-01-moved-guide-candidate-1",
+        "record": {
+          "path": "skill-studies/sweeping-stale-references/results/20260917T163142132Z-ssr-moved-guide-comprehensive-candidate-a68e59ac-0203-4ed6-b7dd-33e48030b8d5-0a7m_j5a.json",
+          "sha256": "e73ea9af35f7e6c28e770bf08444afb3ba0163787f1a5a87c5c101f28f453bd6",
+          "version": "1",
+          "git_revision": "0c4cca36c1c2a5202fc0cc77046ad10613489704"
+        }
+      },
+      "limitations": [
+        "Small exposed development comparison; no immutable model revision or held-out claim."
+      ]
+    },
+    {
+      "attempt_id": "comprehensive-comparison-01-moved-guide-original-1-1",
+      "case_id": "moved-guide",
+      "condition": "original",
+      "repetition": 1,
+      "attempt_number": 1,
+      "retry_of": null,
+      "manifest": {
+        "path": "skill-studies/sweeping-stale-references/cases/moved-guide/comparison-manifest.json",
+        "sha256": "483682d016c48d24b222f19443519dfcb50d9386ab9265c727695c8f3471393c",
+        "version": "1",
+        "git_revision": "d899a817108330c4dcba4007f3383294a87d2f9a"
+      },
+      "authorization": {
+        "artifact": {
+          "path": "skill-studies/sweeping-stale-references/protocol.md",
+          "sha256": "8aaf366f406f099784c67a5253442ce1ae4e3c7f8fab2f950d7bbbf37e8a2995",
+          "version": "1",
+          "git_revision": "d899a817108330c4dcba4007f3383294a87d2f9a"
+        },
+        "selector": "Comparison: comprehensive-comparison-01; approved twelve rows, exact candidate, fixed rules; this authorization Git revision is the full runner revision"
+      },
+      "run_id": "20260917T163341814Z-ssr-pilot-02-original-0fe1bae3-1b9c-4b11-8f50-31cf724351a1-6mxsukp3",
+      "allocation": {
+        "pool": "subject",
+        "charge": 1
+      },
+      "bundle": {
+        "path": "/Users/simon/work/personal/skill-study-private/sweeping-stale-references/development/20260917T163341814Z-ssr-pilot-02-original-0fe1bae3-1b9c-4b11-8f50-31cf724351a1-6mxsukp3",
+        "inventory": {
+          "path": "/Users/simon/work/personal/skill-study-private/sweeping-stale-references/development/20260917T163341814Z-ssr-pilot-02-original-0fe1bae3-1b9c-4b11-8f50-31cf724351a1-6mxsukp3.inventory.json",
+          "sha256": "eb0ea175449523459f798d52c4b7a93d6ee06f39666acbf27ab1e3b1f15175f2",
+          "version": "1"
+        },
+        "verified": true
+      },
+      "result": {
+        "result_id": "comprehensive-comparison-01-moved-guide-original-1",
+        "record": {
+          "path": "skill-studies/sweeping-stale-references/results/20260917T163341814Z-ssr-pilot-02-original-0fe1bae3-1b9c-4b11-8f50-31cf724351a1-6mxsukp3.json",
+          "sha256": "ab4e80e51f6cc484881890db6c07cb0984dabc2ded152fd6d38f86d6f93086f7",
+          "version": "1",
+          "git_revision": "0c4cca36c1c2a5202fc0cc77046ad10613489704"
+        }
+      },
+      "limitations": [
+        "Small exposed development comparison; no immutable model revision or held-out claim."
+      ]
+    },
+    {
+      "attempt_id": "comprehensive-comparison-01-discovery-shiv-original-1-1",
+      "case_id": "discovery-shiv",
+      "condition": "original",
+      "repetition": 1,
+      "attempt_number": 1,
+      "retry_of": null,
+      "manifest": {
+        "path": "skill-studies/sweeping-stale-references/cases/discovery-shiv/comparison-manifest.json",
+        "sha256": "a531f84981ed9b98725494a369cccfc644083cce8037c3fe716eedc42d83ecf0",
+        "version": "1",
+        "git_revision": "d899a817108330c4dcba4007f3383294a87d2f9a"
+      },
+      "authorization": {
+        "artifact": {
+          "path": "skill-studies/sweeping-stale-references/protocol.md",
+          "sha256": "8aaf366f406f099784c67a5253442ce1ae4e3c7f8fab2f950d7bbbf37e8a2995",
+          "version": "1",
+          "git_revision": "d899a817108330c4dcba4007f3383294a87d2f9a"
+        },
+        "selector": "Comparison: comprehensive-comparison-01; approved twelve rows, exact candidate, fixed rules; this authorization Git revision is the full runner revision"
+      },
+      "run_id": "20260917T163553986Z-ssr-discovery-shiv-original-845b1a96-4422-4c01-a875-4e8943d07b27-buu2i7zv",
+      "allocation": {
+        "pool": "subject",
+        "charge": 1
+      },
+      "bundle": {
+        "path": "/Users/simon/work/personal/skill-study-private/sweeping-stale-references/development/20260917T163553986Z-ssr-discovery-shiv-original-845b1a96-4422-4c01-a875-4e8943d07b27-buu2i7zv",
+        "inventory": {
+          "path": "/Users/simon/work/personal/skill-study-private/sweeping-stale-references/development/20260917T163553986Z-ssr-discovery-shiv-original-845b1a96-4422-4c01-a875-4e8943d07b27-buu2i7zv.inventory.json",
+          "sha256": "180df664c262921d3199a47bbdf7bda222c0ef161065cf36229b33421ff4cbd8",
+          "version": "1"
+        },
+        "verified": true
+      },
+      "result": {
+        "result_id": "comprehensive-comparison-01-discovery-shiv-original-1",
+        "record": {
+          "path": "skill-studies/sweeping-stale-references/results/20260917T163553986Z-ssr-discovery-shiv-original-845b1a96-4422-4c01-a875-4e8943d07b27-buu2i7zv.json",
+          "sha256": "995b2bd836fcaeb78e077c0c5ea486559ec71823c0ddb45e89c96372061a6fc0",
+          "version": "1",
+          "git_revision": "0c4cca36c1c2a5202fc0cc77046ad10613489704"
+        }
+      },
+      "limitations": [
+        "Small exposed development comparison; no immutable model revision or held-out claim."
+      ]
+    },
+    {
+      "attempt_id": "comprehensive-comparison-01-discovery-shiv-candidate-1-1",
+      "case_id": "discovery-shiv",
+      "condition": "candidate",
+      "repetition": 1,
+      "attempt_number": 1,
+      "retry_of": null,
+      "manifest": {
+        "path": "skill-studies/sweeping-stale-references/cases/discovery-shiv/comparison-manifest.json",
+        "sha256": "a531f84981ed9b98725494a369cccfc644083cce8037c3fe716eedc42d83ecf0",
+        "version": "1",
+        "git_revision": "d899a817108330c4dcba4007f3383294a87d2f9a"
+      },
+      "authorization": {
+        "artifact": {
+          "path": "skill-studies/sweeping-stale-references/protocol.md",
+          "sha256": "8aaf366f406f099784c67a5253442ce1ae4e3c7f8fab2f950d7bbbf37e8a2995",
+          "version": "1",
+          "git_revision": "d899a817108330c4dcba4007f3383294a87d2f9a"
+        },
+        "selector": "Comparison: comprehensive-comparison-01; approved twelve rows, exact candidate, fixed rules; this authorization Git revision is the full runner revision"
+      },
+      "run_id": "20260917T163831230Z-ssr-discovery-shiv-comprehensive-candidate-cf8c2ac8-0eb9-4e87-bbf1-62e03a65f625-o54dueia",
+      "allocation": {
+        "pool": "subject",
+        "charge": 1
+      },
+      "bundle": {
+        "path": "/Users/simon/work/personal/skill-study-private/sweeping-stale-references/development/20260917T163831230Z-ssr-discovery-shiv-comprehensive-candidate-cf8c2ac8-0eb9-4e87-bbf1-62e03a65f625-o54dueia",
+        "inventory": {
+          "path": "/Users/simon/work/personal/skill-study-private/sweeping-stale-references/development/20260917T163831230Z-ssr-discovery-shiv-comprehensive-candidate-cf8c2ac8-0eb9-4e87-bbf1-62e03a65f625-o54dueia.inventory.json",
+          "sha256": "ee6fedf11a0084da6065799d50e1b74151d798ae3eaca62a4059d851af206b42",
+          "version": "1"
+        },
+        "verified": true
+      },
+      "result": {
+        "result_id": "comprehensive-comparison-01-discovery-shiv-candidate-1",
+        "record": {
+          "path": "skill-studies/sweeping-stale-references/results/20260917T163831230Z-ssr-discovery-shiv-comprehensive-candidate-cf8c2ac8-0eb9-4e87-bbf1-62e03a65f625-o54dueia.json",
+          "sha256": "30e5d179b738a7025e8bfc1b46e1750721e7ed31c32a09824ab5f655eecec1e7",
+          "version": "1",
+          "git_revision": "0c4cca36c1c2a5202fc0cc77046ad10613489704"
+        }
+      },
+      "limitations": [
+        "Small exposed development comparison; no immutable model revision or held-out claim."
+      ]
+    },
+    {
+      "attempt_id": "comprehensive-comparison-01-semantic-delivery-candidate-2-1",
+      "case_id": "semantic-delivery",
+      "condition": "candidate",
+      "repetition": 2,
+      "attempt_number": 1,
+      "retry_of": null,
+      "manifest": {
+        "path": "skill-studies/sweeping-stale-references/cases/semantic-delivery/comparison-manifest.json",
+        "sha256": "c5e74d1e30353ff4e51bce359bf365d2d4d3158d0e7b70a1418b9f6a00040afa",
+        "version": "1",
+        "git_revision": "d899a817108330c4dcba4007f3383294a87d2f9a"
+      },
+      "authorization": {
+        "artifact": {
+          "path": "skill-studies/sweeping-stale-references/protocol.md",
+          "sha256": "8aaf366f406f099784c67a5253442ce1ae4e3c7f8fab2f950d7bbbf37e8a2995",
+          "version": "1",
+          "git_revision": "d899a817108330c4dcba4007f3383294a87d2f9a"
+        },
+        "selector": "Comparison: comprehensive-comparison-01; approved twelve rows, exact candidate, fixed rules; this authorization Git revision is the full runner revision"
+      },
+      "run_id": "20260917T164236995Z-ssr-semantic-delivery-comprehensive-candidate-58196f4c-b03e-407c-9c19-85c5e3caec50-n5hzofzq",
+      "allocation": {
+        "pool": "subject",
+        "charge": 1
+      },
+      "bundle": {
+        "path": "/Users/simon/work/personal/skill-study-private/sweeping-stale-references/development/20260917T164236995Z-ssr-semantic-delivery-comprehensive-candidate-58196f4c-b03e-407c-9c19-85c5e3caec50-n5hzofzq",
+        "inventory": {
+          "path": "/Users/simon/work/personal/skill-study-private/sweeping-stale-references/development/20260917T164236995Z-ssr-semantic-delivery-comprehensive-candidate-58196f4c-b03e-407c-9c19-85c5e3caec50-n5hzofzq.inventory.json",
+          "sha256": "9008feafb15fdaf465a8d5caf806c954b0243fe9cf375e999f451c31b6d2d651",
+          "version": "1"
+        },
+        "verified": true
+      },
+      "result": {
+        "result_id": "comprehensive-comparison-01-semantic-delivery-candidate-2",
+        "record": {
+          "path": "skill-studies/sweeping-stale-references/results/20260917T164236995Z-ssr-semantic-delivery-comprehensive-candidate-58196f4c-b03e-407c-9c19-85c5e3caec50-n5hzofzq.json",
+          "sha256": "7acae2c09ada2f82cfac14dbf70b2ffcbd4d77364def5e1431ab58334f4e5549",
+          "version": "1",
+          "git_revision": "0c4cca36c1c2a5202fc0cc77046ad10613489704"
+        }
+      },
+      "limitations": [
+        "Small exposed development comparison; no immutable model revision or held-out claim."
+      ]
+    },
+    {
+      "attempt_id": "comprehensive-comparison-01-semantic-delivery-original-2-1",
+      "case_id": "semantic-delivery",
+      "condition": "original",
+      "repetition": 2,
+      "attempt_number": 1,
+      "retry_of": null,
+      "manifest": {
+        "path": "skill-studies/sweeping-stale-references/cases/semantic-delivery/comparison-manifest.json",
+        "sha256": "c5e74d1e30353ff4e51bce359bf365d2d4d3158d0e7b70a1418b9f6a00040afa",
+        "version": "1",
+        "git_revision": "d899a817108330c4dcba4007f3383294a87d2f9a"
+      },
+      "authorization": {
+        "artifact": {
+          "path": "skill-studies/sweeping-stale-references/protocol.md",
+          "sha256": "8aaf366f406f099784c67a5253442ce1ae4e3c7f8fab2f950d7bbbf37e8a2995",
+          "version": "1",
+          "git_revision": "d899a817108330c4dcba4007f3383294a87d2f9a"
+        },
+        "selector": "Comparison: comprehensive-comparison-01; approved twelve rows, exact candidate, fixed rules; this authorization Git revision is the full runner revision"
+      },
+      "run_id": "20260917T164456936Z-ssr-semantic-delivery-original-f0aa1146-9f9c-43a5-8f5b-8df44b0d4510-s02lrppw",
+      "allocation": {
+        "pool": "subject",
+        "charge": 1
+      },
+      "bundle": {
+        "path": "/Users/simon/work/personal/skill-study-private/sweeping-stale-references/development/20260917T164456936Z-ssr-semantic-delivery-original-f0aa1146-9f9c-43a5-8f5b-8df44b0d4510-s02lrppw",
+        "inventory": {
+          "path": "/Users/simon/work/personal/skill-study-private/sweeping-stale-references/development/20260917T164456936Z-ssr-semantic-delivery-original-f0aa1146-9f9c-43a5-8f5b-8df44b0d4510-s02lrppw.inventory.json",
+          "sha256": "351f9f81fa284eadf2634c3ccd4314ffebddd64c08e1d445eb39b0adadd6f37f",
+          "version": "1"
+        },
+        "verified": true
+      },
+      "result": {
+        "result_id": "comprehensive-comparison-01-semantic-delivery-original-2",
+        "record": {
+          "path": "skill-studies/sweeping-stale-references/results/20260917T164456936Z-ssr-semantic-delivery-original-f0aa1146-9f9c-43a5-8f5b-8df44b0d4510-s02lrppw.json",
+          "sha256": "ff46b5c82850324c99cdcbdcc8046477fcdaf77a90b864101006ff5524ad13fb",
+          "version": "1",
+          "git_revision": "0c4cca36c1c2a5202fc0cc77046ad10613489704"
+        }
+      },
+      "limitations": [
+        "Small exposed development comparison; no immutable model revision or held-out claim."
+      ]
+    },
+    {
+      "attempt_id": "comprehensive-comparison-01-moved-guide-original-2-1",
+      "case_id": "moved-guide",
+      "condition": "original",
+      "repetition": 2,
+      "attempt_number": 1,
+      "retry_of": null,
+      "manifest": {
+        "path": "skill-studies/sweeping-stale-references/cases/moved-guide/comparison-manifest.json",
+        "sha256": "483682d016c48d24b222f19443519dfcb50d9386ab9265c727695c8f3471393c",
+        "version": "1",
+        "git_revision": "d899a817108330c4dcba4007f3383294a87d2f9a"
+      },
+      "authorization": {
+        "artifact": {
+          "path": "skill-studies/sweeping-stale-references/protocol.md",
+          "sha256": "8aaf366f406f099784c67a5253442ce1ae4e3c7f8fab2f950d7bbbf37e8a2995",
+          "version": "1",
+          "git_revision": "d899a817108330c4dcba4007f3383294a87d2f9a"
+        },
+        "selector": "Comparison: comprehensive-comparison-01; approved twelve rows, exact candidate, fixed rules; this authorization Git revision is the full runner revision"
+      },
+      "run_id": "20260917T164653898Z-ssr-pilot-02-original-917de95b-f9c9-4686-a5cd-9af01302b801-ripc69be",
+      "allocation": {
+        "pool": "subject",
+        "charge": 1
+      },
+      "bundle": {
+        "path": "/Users/simon/work/personal/skill-study-private/sweeping-stale-references/development/20260917T164653898Z-ssr-pilot-02-original-917de95b-f9c9-4686-a5cd-9af01302b801-ripc69be",
+        "inventory": {
+          "path": "/Users/simon/work/personal/skill-study-private/sweeping-stale-references/development/20260917T164653898Z-ssr-pilot-02-original-917de95b-f9c9-4686-a5cd-9af01302b801-ripc69be.inventory.json",
+          "sha256": "455225329cff397e3fe886f9af8b07eb51cf9d244fb53a27af52e045c01a0026",
+          "version": "1"
+        },
+        "verified": true
+      },
+      "result": {
+        "result_id": "comprehensive-comparison-01-moved-guide-original-2",
+        "record": {
+          "path": "skill-studies/sweeping-stale-references/results/20260917T164653898Z-ssr-pilot-02-original-917de95b-f9c9-4686-a5cd-9af01302b801-ripc69be.json",
+          "sha256": "dc4494c820f46307f21c44a49f226c4d6fe6c0e7442493915b593ac29f44a6dd",
+          "version": "1",
+          "git_revision": "0c4cca36c1c2a5202fc0cc77046ad10613489704"
+        }
+      },
+      "limitations": [
+        "Small exposed development comparison; no immutable model revision or held-out claim."
+      ]
+    },
+    {
+      "attempt_id": "comprehensive-comparison-01-moved-guide-candidate-2-1",
+      "case_id": "moved-guide",
+      "condition": "candidate",
+      "repetition": 2,
+      "attempt_number": 1,
+      "retry_of": null,
+      "manifest": {
+        "path": "skill-studies/sweeping-stale-references/cases/moved-guide/comparison-manifest.json",
+        "sha256": "483682d016c48d24b222f19443519dfcb50d9386ab9265c727695c8f3471393c",
+        "version": "1",
+        "git_revision": "d899a817108330c4dcba4007f3383294a87d2f9a"
+      },
+      "authorization": {
+        "artifact": {
+          "path": "skill-studies/sweeping-stale-references/protocol.md",
+          "sha256": "8aaf366f406f099784c67a5253442ce1ae4e3c7f8fab2f950d7bbbf37e8a2995",
+          "version": "1",
+          "git_revision": "d899a817108330c4dcba4007f3383294a87d2f9a"
+        },
+        "selector": "Comparison: comprehensive-comparison-01; approved twelve rows, exact candidate, fixed rules; this authorization Git revision is the full runner revision"
+      },
+      "run_id": "20260917T164909609Z-ssr-moved-guide-comprehensive-candidate-02b239cd-8f34-4af3-afa5-369263491396-9t42zg7h",
+      "allocation": {
+        "pool": "subject",
+        "charge": 1
+      },
+      "bundle": {
+        "path": "/Users/simon/work/personal/skill-study-private/sweeping-stale-references/development/20260917T164909609Z-ssr-moved-guide-comprehensive-candidate-02b239cd-8f34-4af3-afa5-369263491396-9t42zg7h",
+        "inventory": {
+          "path": "/Users/simon/work/personal/skill-study-private/sweeping-stale-references/development/20260917T164909609Z-ssr-moved-guide-comprehensive-candidate-02b239cd-8f34-4af3-afa5-369263491396-9t42zg7h.inventory.json",
+          "sha256": "62c7e2b9ec277ef6f705f0e6c0b8caca2b299c17c4b9c99ce9e4d0511e84c827",
+          "version": "1"
+        },
+        "verified": true
+      },
+      "result": {
+        "result_id": "comprehensive-comparison-01-moved-guide-candidate-2",
+        "record": {
+          "path": "skill-studies/sweeping-stale-references/results/20260917T164909609Z-ssr-moved-guide-comprehensive-candidate-02b239cd-8f34-4af3-afa5-369263491396-9t42zg7h.json",
+          "sha256": "d4746cf305db6dfdd114a5672722f28ae709bf99676031da07ecaf34da50ba71",
+          "version": "1",
+          "git_revision": "0c4cca36c1c2a5202fc0cc77046ad10613489704"
+        }
+      },
+      "limitations": [
+        "Small exposed development comparison; no immutable model revision or held-out claim."
+      ]
+    },
+    {
+      "attempt_id": "comprehensive-comparison-01-discovery-shiv-candidate-2-1",
+      "case_id": "discovery-shiv",
+      "condition": "candidate",
+      "repetition": 2,
+      "attempt_number": 1,
+      "retry_of": null,
+      "manifest": {
+        "path": "skill-studies/sweeping-stale-references/cases/discovery-shiv/comparison-manifest.json",
+        "sha256": "a531f84981ed9b98725494a369cccfc644083cce8037c3fe716eedc42d83ecf0",
+        "version": "1",
+        "git_revision": "d899a817108330c4dcba4007f3383294a87d2f9a"
+      },
+      "authorization": {
+        "artifact": {
+          "path": "skill-studies/sweeping-stale-references/protocol.md",
+          "sha256": "8aaf366f406f099784c67a5253442ce1ae4e3c7f8fab2f950d7bbbf37e8a2995",
+          "version": "1",
+          "git_revision": "d899a817108330c4dcba4007f3383294a87d2f9a"
+        },
+        "selector": "Comparison: comprehensive-comparison-01; approved twelve rows, exact candidate, fixed rules; this authorization Git revision is the full runner revision"
+      },
+      "run_id": "20260917T165117986Z-ssr-discovery-shiv-comprehensive-candidate-7d14a61d-ffe3-4ff3-b883-06fa7a4c6617-bybcuevx",
+      "allocation": {
+        "pool": "subject",
+        "charge": 1
+      },
+      "bundle": {
+        "path": "/Users/simon/work/personal/skill-study-private/sweeping-stale-references/development/20260917T165117986Z-ssr-discovery-shiv-comprehensive-candidate-7d14a61d-ffe3-4ff3-b883-06fa7a4c6617-bybcuevx",
+        "inventory": {
+          "path": "/Users/simon/work/personal/skill-study-private/sweeping-stale-references/development/20260917T165117986Z-ssr-discovery-shiv-comprehensive-candidate-7d14a61d-ffe3-4ff3-b883-06fa7a4c6617-bybcuevx.inventory.json",
+          "sha256": "128dd2ae6be81e146e46a2fd56121e253143cb16b5a6b4cf8bed40320ce7b502",
+          "version": "1"
+        },
+        "verified": true
+      },
+      "result": {
+        "result_id": "comprehensive-comparison-01-discovery-shiv-candidate-2",
+        "record": {
+          "path": "skill-studies/sweeping-stale-references/results/20260917T165117986Z-ssr-discovery-shiv-comprehensive-candidate-7d14a61d-ffe3-4ff3-b883-06fa7a4c6617-bybcuevx.json",
+          "sha256": "ea9f17c1d7d969f02220211a57ba5edf36f3f366ae8cbc63028ec0ec1a68365e",
+          "version": "1",
+          "git_revision": "0c4cca36c1c2a5202fc0cc77046ad10613489704"
+        }
+      },
+      "limitations": [
+        "Small exposed development comparison; no immutable model revision or held-out claim."
+      ]
+    },
+    {
+      "attempt_id": "comprehensive-comparison-01-discovery-shiv-original-2-1",
+      "case_id": "discovery-shiv",
+      "condition": "original",
+      "repetition": 2,
+      "attempt_number": 1,
+      "retry_of": null,
+      "manifest": {
+        "path": "skill-studies/sweeping-stale-references/cases/discovery-shiv/comparison-manifest.json",
+        "sha256": "a531f84981ed9b98725494a369cccfc644083cce8037c3fe716eedc42d83ecf0",
+        "version": "1",
+        "git_revision": "d899a817108330c4dcba4007f3383294a87d2f9a"
+      },
+      "authorization": {
+        "artifact": {
+          "path": "skill-studies/sweeping-stale-references/protocol.md",
+          "sha256": "8aaf366f406f099784c67a5253442ce1ae4e3c7f8fab2f950d7bbbf37e8a2995",
+          "version": "1",
+          "git_revision": "d899a817108330c4dcba4007f3383294a87d2f9a"
+        },
+        "selector": "Comparison: comprehensive-comparison-01; approved twelve rows, exact candidate, fixed rules; this authorization Git revision is the full runner revision"
+      },
+      "run_id": "20260917T165344343Z-ssr-discovery-shiv-original-ca3f84aa-238c-4f2c-8ae6-f3730ea5e1b3-p10_lvgf",
+      "allocation": {
+        "pool": "subject",
+        "charge": 1
+      },
+      "bundle": {
+        "path": "/Users/simon/work/personal/skill-study-private/sweeping-stale-references/development/20260917T165344343Z-ssr-discovery-shiv-original-ca3f84aa-238c-4f2c-8ae6-f3730ea5e1b3-p10_lvgf",
+        "inventory": {
+          "path": "/Users/simon/work/personal/skill-study-private/sweeping-stale-references/development/20260917T165344343Z-ssr-discovery-shiv-original-ca3f84aa-238c-4f2c-8ae6-f3730ea5e1b3-p10_lvgf.inventory.json",
+          "sha256": "431c5da466463e2bfd937cd49bd8d5629e4822ee767bd230e1d8ac28ac493f64",
+          "version": "1"
+        },
+        "verified": true
+      },
+      "result": {
+        "result_id": "comprehensive-comparison-01-discovery-shiv-original-2",
+        "record": {
+          "path": "skill-studies/sweeping-stale-references/results/20260917T165344343Z-ssr-discovery-shiv-original-ca3f84aa-238c-4f2c-8ae6-f3730ea5e1b3-p10_lvgf.json",
+          "sha256": "7eca9c89686759d0213d7929722fcbdf5b85e47c5d39871c230f45f7349f1d93",
+          "version": "1",
+          "git_revision": "0c4cca36c1c2a5202fc0cc77046ad10613489704"
+        }
+      },
+      "limitations": [
+        "Small exposed development comparison; no immutable model revision or held-out claim."
+      ]
+    }
+  ]
+}
