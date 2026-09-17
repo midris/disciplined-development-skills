@@ -209,6 +209,50 @@ Owner approved continuation on 2026-09-16 after reviewing the concrete correctio
 
 
 
+### Proposed comparison: comprehensive-comparison-01
+
+Status: proposal prepared at the owner's request; no collection authorization. Candidate bytes/configurations are prepared for review; comparison manifests and case-condition applicability are not yet frozen.
+Question: on the three existing development cases, does the comprehensive rewrite preserve complete committed reconciliation and protected behavior while making its audit account more accurate/useful than the contemporaneous original?
+Scope: exactly twelve sequential executions below: three cases × two versions × two repetitions. Each case has adjacent original/candidate pairs, with version order reversed for repetition 2. This balances first/second position within a case; it is not randomization or enough replication to estimate population reliability. Six calls would give only one observation per case/version; twelve permits a limited repeatability check while leaving ten subject calls unused. No no-target condition is proposed because this question compares versions; the earlier contribution baseline remains separate.
+Acceptance/inclusion: descriptive-only. Include all valid-setup executions regardless of outcome; retain unknown criteria and report invalid/unresolved setups and unattempted slots separately. No automatic retry or replacement. Compare per-case functional and procedural counts using the same rules and evidence requirements; do not pool the historical baseline into the new denominators or hide a functional regression in a higher aggregate count. A tie is no demonstrated improvement. Any candidate functional regression requires explanation before an adoption recommendation; ambiguous or inconsistent differences remain inconclusive. The owner decides adoption after reviewing evidence, not from a new numerical threshold.
+Stop: preserve and inventory each stopped bundle before the next dispatch; stop for unresolved invocation charge, failed preservation, suspected contamination or a setup/infrastructure defect requiring inspection. A valid behavioral failure does not cancel the remaining rows. Stop at the declared twelve attempts or the study's outer ceiling; no extra calls or replacements follow automatically.
+Budget: proposed maximum **12 subject invocations**, zero evaluator/authoring/retry calls. Completion would bring study subject spending to **30/40**, leaving **10 subject**, **12 evaluator**, **4 authoring**, **4 retry** capacity. No pool transfer or model call is authorized by preparing this proposal.
+
+Versions and settings: original uses the preserved [original](cases/skill-original/SKILL.md); candidate uses the exact [comprehensive snapshot](cases/skill-candidate-comprehensive/SKILL.md) identified in Results and decision. The candidate changes several instructions, so any difference concerns the whole version. Both use provider `codex`, model `gpt-5.6-sol`, effort `low`, `workspace-write`, the same case task/prompt/project and the same skill target path/full-read instruction. Original configuration IDs remain unchanged; candidate IDs identify only the new configuration. Offline loader/copy checks confirm that the skill file is the only differing supplied file per pair.
+
+Working directory: `/Users/simon/work/personal/disciplined-development-skills`. After authorization and freeze, create `/private/tmp/ssr-comprehensive-comparison-01` and execute each row separately using:
+
+```sh
+TMPDIR=/private/tmp/ssr-comprehensive-comparison-01 skill-validation/runner/.venv/bin/skilltest run CONFIG
+```
+
+Replace `CONFIG` only with its exact table value. Retain the 900-second model timeout and the qualified capture-2/runtime-1 execution path, including the restricted PATH selecting Homebrew Python. The command uses host permission for app-server initialization while the subject remains under the configured workspace profile.
+
+| Order | Case | Condition | Repetition | CONFIG |
+|---:|---|---|---:|---|
+| 1 | semantic-delivery | original | 1 | `skill-studies/sweeping-stale-references/cases/semantic-delivery/original.json` |
+| 2 | semantic-delivery | candidate | 1 | `skill-studies/sweeping-stale-references/cases/semantic-delivery/candidate-comprehensive.json` |
+| 3 | moved-guide | candidate | 1 | `skill-studies/sweeping-stale-references/cases/moved-guide/candidate-comprehensive.json` |
+| 4 | moved-guide | original | 1 | `skill-studies/sweeping-stale-references/cases/pilot-02/original.json` |
+| 5 | discovery-shiv | original | 1 | `skill-studies/sweeping-stale-references/cases/discovery-shiv/original.json` |
+| 6 | discovery-shiv | candidate | 1 | `skill-studies/sweeping-stale-references/cases/discovery-shiv/candidate-comprehensive.json` |
+| 7 | semantic-delivery | candidate | 2 | `skill-studies/sweeping-stale-references/cases/semantic-delivery/candidate-comprehensive.json` |
+| 8 | semantic-delivery | original | 2 | `skill-studies/sweeping-stale-references/cases/semantic-delivery/original.json` |
+| 9 | moved-guide | original | 2 | `skill-studies/sweeping-stale-references/cases/pilot-02/original.json` |
+| 10 | moved-guide | candidate | 2 | `skill-studies/sweeping-stale-references/cases/moved-guide/candidate-comprehensive.json` |
+| 11 | discovery-shiv | candidate | 2 | `skill-studies/sweeping-stale-references/cases/discovery-shiv/candidate-comprehensive.json` |
+| 12 | discovery-shiv | original | 2 | `skill-studies/sweeping-stale-references/cases/discovery-shiv/original.json` |
+
+Assessment rules: [semantic delivery](cases/semantic-delivery/assessment.md), [moved guide](cases/moved-guide/assessment.md), [Shiv](cases/discovery-shiv/assessment.md), policy 3 and existing checkers remain the basis. Proposed applicability amendment only: add `candidate` wherever the same case currently applies a criterion to `original`; use identical setup, judgment units, met/not-met/insufficient-evidence boundaries and consequences for both versions. Version the controller definitions and comparison manifests before dispatch, preserving historical Git identities and original/control records. Do not change a criterion to accommodate candidate output. This applicability extension is part of the proposal for review, not an already-frozen scoring input.
+
+Coverage and attribution: the cases exercise complete repair, preservation, search/triage and reporting. Semantic delivery can expose irrelevant inventory entries; moved-guide can expose redundant path totals. They do not separately establish the rewrite's new old/new-search collision handling, preservation of a distinct rationale/tradeoff, read-only proposal honesty, or local-change negative form. Observe new instructions when relevant but do not add criteria or scenarios mid-batch. Native discovery, composition and transfer remain outside the claim. These are exposed development cases; the rewrite's prior authoring exposure is not independently established, and no unexposed-author or held-out claim is made.
+The disputed Shiv negative-assertion classification remains scored under the frozen rule for both versions and separately qualified in the interpretation. A category-label difference alone cannot establish that the candidate fixes a demonstrated skill defect. Likewise, report semantic block/line-count disagreements separately from unambiguous arithmetic errors; P3 remains non-blocking and never changes a functional outcome.
+
+Runtime and effort: local inspection found Codex CLI 0.154.0 at the previously recorded path/hash and Homebrew Python 3.14.7. From runtime-1 Git `b16e4f24013d85dd5fb6f8bd70de037eaa9343af` to current Git `2fc9a3a77a063c77b55562fe04a9e59bcc294148`, runner source changes are the document module and shared CLI wiring; packaging adds the jsonschema runtime dependency. The 367-test offline suite includes existing execution/sandbox tests and passed on that tree. This is not a new live provider qualification. Freeze the full actual runner revision and recheck mutable dependencies before dispatch; requested model names expose no immutable model revision.
+The three retained runtime-1 original executions took 71.297, 79.792 and 80.521 seconds (core orders 8, 10 and 12). Repeating those case durations four times gives about 15.4 minutes for twelve executions; candidate latency is unmeasured. Budget 30 minutes of model wait within a **180-active-minute remaining comparison allowance**: 30 for freeze/runtime/input verification, 30 for model waits, 60 for preservation and per-execution assessment, and 60 for aggregation/review/contingency. Longer waits reduce that allowance; report forecast overruns and respect the outer time ceiling. This is a time/call estimate, not a dollar quote: retained records do not establish the account's billed cost. The Storage and accounting forecast includes this comparison once, plus closure.
+
+Retention and freeze: use the existing external development primary and accepted single-host recovery risk. Retain every actual bundle and inventory, including failures; create `comprehensive-comparison-01-run-index.json` only when recording actual attempts, execution results under `results/`, and one `comprehensive-comparison-01-assessment.md` with per-case/criterion version counts, coverage, patterns, costs and limitations. No separate comparison report is needed. Before the first authorized call, commit reviewed candidate/configuration/controller inputs, pin full retrievable revisions/hashes in new comparison manifests, pin the approved protocol separately as invocation authority, and pass protocol-rooted collection readiness. Current preparation is not a readiness claim.
+
 ## Storage and accounting
 
 Canonical project checkout: `/Users/simon/work/personal/disciplined-development-skills`.
@@ -229,8 +273,8 @@ Keep historical primary/backup copies unchanged. The small run index references 
 Keep one canonical repository record per accepted run and commit it before correction; Git retains earlier versions.
 Historical citations use commit/path/hash, including the worked example's run-index reference; no duplicate snapshots or extensive amendment ledger are required.
 
-**Current accounting (2026-09-16): 629 active minutes booked; 571 minutes (9 hours 31 minutes) remain under the 1,200-minute ceiling.**
-This includes preparation, review and model/tool waits, excludes owner-wait, and retains prior conservative allowances. The latest booking covers verification, commit/push, the next-step evidence walkthrough and closing allowance from 03:47:47 through 03:51:47 UTC on September 17. The historical internal category split was not separately timed.
+**Current accounting (2026-09-17): 637 active minutes booked; 563 minutes (9 hours 23 minutes) remain under the 1,200-minute ceiling.**
+This includes preparation, review and model/tool waits, excludes owner-wait, and retains prior conservative allowances. The latest booking extends the prior closing allowance with verification, commit and push through 04:02:56 UTC on September 17; overlapping time before 04:00:56 is counted only once. The historical internal category split was not separately timed.
 Update this paragraph in place from the latest booked total plus new active intervals counted once; Git retains prior checkpoints, and their source logs are optional reconciliation evidence.
 Dispatched calls are **18 subject, 0 evaluator, 0 authoring, 0 retry**; remaining outer capacity is **22 / 12 / 4 / 4**. Core-baseline-01 has no unspent calls; neither excluded attempt has replacement authorization. Remaining capacity is a ceiling, not a selected next batch.
 
@@ -239,11 +283,11 @@ Remaining-work forecast, in active minutes, including model/tool waits, review a
 
 | Work | Estimate | Basis |
 |---|---:|---|
-| Any justified rewrite and contemporaneous comparison | 180 | Conditional planning allowance, not a rewrite approval or selected later call count. |
+| Proposed comprehensive comparison | 180 | Freeze/verification, 12 proposed subject calls, preservation/assessment and review; scope above remains unapproved. |
 | Closure and review | 30 | Decision, limitations and study closeout. |
 | **Total** | **210** | Forecast, not additional authorization. |
 
-Collection/assessment and document tooling are complete; their actual active effort is included in the booking above. Rewrite/comparison and closure retain their conditional planning allowances. The 210-minute total fits within the remaining 571 minutes, subject to revision when later scope is known. This is an estimate, not a guarantee of whole-study completion.
+Collection/assessment and document tooling are complete; their actual active effort is included in the booking above. The proposed comprehensive comparison and closure retain their conditional planning allowances. The 210-minute total fits within the remaining 563 minutes, subject to revision when later scope is known. This is an estimate, not a guarantee of whole-study completion.
 Preserve later comparison capacity when selecting additional repetitions; no automatic pool transfers, retries or ceiling extensions are allowed.
 
 
@@ -260,6 +304,7 @@ Preserve later comparison capacity when selecting additional repetitions; no aut
 The selected baseline is assessed. Its recommendation is ready for owner review; no rewrite objective or adoption decision is agreed yet.
 The assessment's review correction identifies unresolved Shiv category attribution alongside clear counting errors; its fixed-rule P3 total does not establish three subject defects. Resolve that distinction before selecting an edit objective.
 Batch assessments own aggregate counts, patterns, limitations and any version comparison; this section records the owner's resulting decisions by reference.
+The owner suggested the existing SSR rewrite on `docs/comprehensive-skill-cleanup` as a possible comparison candidate. Inspected source: `skills/sweeping-stale-references/SKILL.md` at Git `13599fb7d3127334b0d07bfe468767e586ec5f9c`, SHA-256 `15992341f7ab2fb1e4d8a775092199d7d4e6a9de1167895dbe5a805aeafbd38c`; the clean local worktree contains those bytes. It removes the aggregate-inventory worked example and adds semantic-search, old/new-search and rationale/reporting guidance. Treat this as a whole-version candidate, not an isolated accounting intervention. Candidate selection and comparison scope remain proposed; no adoption or new execution is authorized. Reuse of these bytes does not resume the superseded comprehensive-rewrite workflow or import its tests/results as authority. Use the current fixed cases and a contemporaneous original condition for a relative-performance claim; assess candidate-only obligations and exposure limitations before claiming broader coverage.
 The owner approved the [tooling proposal](../../plans/specs/2026-09-16-study-document-tooling.md) in the current session on 2026-09-16, including the provisional 120-minute implementation / 60-minute verification allowance. Implementation and qualification are complete; the active plan records verification. No skill edit or model collection was included.
 Before authoring, re-read the selected writing-skills guidance and reconcile it with the evidence-supported objective. A passing control is useful evidence; resolve any pure-cleanup/RED conflict without manufacturing failure or resuming the abandoned wording campaign.
 Compare the exact candidate with contemporaneous original executions under declared conditions; add a contemporaneous no-target condition only for a current contribution claim.
