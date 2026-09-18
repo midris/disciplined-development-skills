@@ -124,7 +124,7 @@ Offline checks: all four configurations loaded and copied the exact declared fil
 Setup/evidence checks during collection: verify supplied hashes and the intended condition; in original, retained tool-response content must establish complete CW text exposure before editing. Match any `provider-session.jsonl` used as evidence to the stdout thread ID and fixture cwd, and verify its inventory hash; a filename or claimed read alone is insufficient. Inspect retained guidance for contamination and final `report.md` for artifact quality. Unexpected/missing exposure or unusable capture is a setup issue requiring inspection, not a failed CW criterion. Drafting/comparison and local/global review remain unscored observations under policy 4. Keep the complete raw trace, even when it does not establish those steps.
 Evidence/index: [attempt index](contribution-baseline-01-run-index.json) records all eight actual attempts, their authority/manifest pins, charges, verified complete bundles and canonical execution results. All eight have valid setup. The [batch assessment](contribution-baseline-01-assessment.md) reconciles all results; no provider calls remain authorized by this batch.
 
-## Comparison: comprehensive-comparison-01
+### Comparison: comprehensive-comparison-01
 
 Status: owner-approved eight-attempt comparison; no provider calls started. The owner directed proceeding with the existing comprehensive rewrite and explicitly prohibited changing coverage based on that rewrite.
 The two cases, source documents, tasks, prompts, qualification examples and CW-assessment-4 remain the baseline. Candidate inspection must not feed new scenarios or scoring requirements into this comparison.
@@ -139,7 +139,7 @@ This is a whole-version development comparison with the same active-session asse
 
 Scope: eight sequential attempts, two cases × original/candidate-comprehensive × two repetitions. Original configurations are reused exactly. Candidate configurations differ only in test ID and the supplied skill source; the mounted path, prompt, source/task bytes and execution settings match.
 Use `codex`, `gpt-5.6-sol`, low effort, workspace-write and the existing 900-second timeout. Fresh original runs control for current execution conditions; the previous original/control baseline remains separate and unchanged. No new no-skill control is needed for this version-comparison question.
-Include all valid setups regardless of outcome; report setup exclusions and unattempted slots separately. No automatic retries or replacements. Stop for uncertain charges, input/runtime drift, contamination, setup defects or preservation failures; a valid behavioral failure alone does not stop the schedule.
+Include all valid-setup executions regardless of outcome; report setup exclusions and unattempted slots separately. No automatic retry or replacement. Stop for uncertain charges, input/runtime drift, contamination, setup defects or preservation failures; a valid behavioral failure alone does not stop the schedule.
 
 | Order | Case | Condition | Repetition | CONFIG |
 |---:|---|---|---:|---|
@@ -175,7 +175,7 @@ Last closed accounting: **810 active minutes booked; 390 minutes remain under th
 |---|---:|---|
 | Remaining approved collection or assessment | 0 | All eight attempts and the aggregate assessment are complete; final reporting is included in the booked allowance above. |
 | Proposed fixed-suite comparison | 70 | Freeze/check 10, collection/preservation 25, assessment/review/report 35; dispatch follows input freeze and readiness. |
-| **Total proposed** | **70** | No new skill authoring or adoption. |
+| **Total** | **70** | No new skill authoring or adoption. |
 
 ## Results and decision
 
