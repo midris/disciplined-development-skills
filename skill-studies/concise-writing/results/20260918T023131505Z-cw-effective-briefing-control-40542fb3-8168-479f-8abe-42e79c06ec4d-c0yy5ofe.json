@@ -1,0 +1,131 @@
+{
+  "schema_version": "1",
+  "record_kind": "execution result",
+  "result_id": "contribution-baseline-01-effective-briefing-control-2",
+  "assessed_at": "2026-09-18T02:32:56.424524+00:00",
+  "run_id": "20260918T023131505Z-cw-effective-briefing-control-40542fb3-8168-479f-8abe-42e79c06ec4d-c0yy5ofe",
+  "condition": "control",
+  "assessor": {
+    "name": "Codex active session",
+    "method": "active session",
+    "model": null,
+    "session_id": "01a0b24b-13bf-7981-b0e8-a9b7111bd9f5",
+    "context": "Fresh continuation with owner decisions, constructed cases/examples, selected skill, fixed criteria and prior work available. Active-session assessment, neither independent nor blind validation."
+  },
+  "manifest": {
+    "path": "skill-studies/concise-writing/cases/effective-briefing/manifest.json",
+    "sha256": "28c01218d30b4ec9260c2c500d641a8a6a99cfde22a50680c553a46245316dda",
+    "version": "1",
+    "git_revision": "d68e54f4db53931829cf692c33ec7ad95fc191ed"
+  },
+  "evidence": [
+    {
+      "id": "runner",
+      "artifact": {
+        "path": "/Users/simon/work/personal/skill-study-private/concise-writing/development/20260918T023131505Z-cw-effective-briefing-control-40542fb3-8168-479f-8abe-42e79c06ec4d-c0yy5ofe/result.json",
+        "sha256": "1c57384371df31b921e52fbb8edfd33f6cd1542b2fe835da53596fe576d781c7",
+        "version": "0.4"
+      },
+      "selector": "Complete execution metadata and final artifact inventory."
+    },
+    {
+      "id": "inputs",
+      "artifact": {
+        "path": "/Users/simon/work/personal/skill-study-private/concise-writing/development/20260918T023131505Z-cw-effective-briefing-control-40542fb3-8168-479f-8abe-42e79c06ec4d-c0yy5ofe/runner.log",
+        "sha256": "4709d4f2770eb0656dbc57022ac221a5af4f337fb8584276fc4b51b0f7e55680",
+        "version": null
+      },
+      "selector": "Pre-launch hashes, exact invocation arguments and capture/cleanup completion."
+    },
+    {
+      "id": "trace",
+      "artifact": {
+        "path": "/Users/simon/work/personal/skill-study-private/concise-writing/development/20260918T023131505Z-cw-effective-briefing-control-40542fb3-8168-479f-8abe-42e79c06ec4d-c0yy5ofe/stdout.txt",
+        "sha256": "256887eb192e535ee37d5fe886a45f2e11fdf44db43c4f189b1fa7bb0cf8515d",
+        "version": null
+      },
+      "selector": "Thread identity and complete ordered command events."
+    },
+    {
+      "id": "session",
+      "artifact": {
+        "path": "/Users/simon/work/personal/skill-study-private/concise-writing/development/20260918T023131505Z-cw-effective-briefing-control-40542fb3-8168-479f-8abe-42e79c06ec4d-c0yy5ofe/provider-session.jsonl",
+        "sha256": "79d8a2b3d4eb903a47dcc88f35ad94dd4ddce91751f4dcb6e6543be612ddcdcb",
+        "version": null
+      },
+      "selector": "Session metadata, supplied guidance and complete tool responses; see criterion reasons for action sequence."
+    },
+    {
+      "id": "document",
+      "artifact": {
+        "path": "/Users/simon/work/personal/skill-study-private/concise-writing/development/20260918T023131505Z-cw-effective-briefing-control-40542fb3-8168-479f-8abe-42e79c06ec4d-c0yy5ofe/workspace/fixture/report.md",
+        "sha256": "b5f72e3999213ce4d1e4329048395b1c9b895e2df652a47db2037dc95209eb0f",
+        "version": null
+      },
+      "selector": "Complete delivered document, compared with source and criteria frozen in the manifest."
+    }
+  ],
+  "setup": {
+    "status": "valid",
+    "reason": "Frozen configuration, prompt and pre-launch source hashes match; baseline source and TASK bytes verified. Retained session matches stdout thread ID and fixture cwd, and identifies CLI 0.154.0. Complete inventory verifies capture. Guidance contains native system skills and the intended target condition, without DD or controller criteria. No CW target file or target instruction supplied.",
+    "evidence": [
+      "runner",
+      "inputs",
+      "trace",
+      "session"
+    ]
+  },
+  "criteria": [
+    {
+      "id": "F1",
+      "dimension": "functional",
+      "judgment": "not met",
+      "reason": "The source permits the six participating teams to continue and leaves the four invitations as Thursday’s decision. The edit mentions the six only as past evidence, omits their ongoing permission, and recommends approval of four invitations if checks pass. This changes substantive permission and stance in an editing task, despite retaining the approval gate, opt-in boundary, metrics, exact timeout condition and follow-up.",
+      "consequence": "Functional failure; overlapping defects count once per execution.",
+      "evidence": [
+        "document",
+        "session"
+      ]
+    },
+    {
+      "id": "F2",
+      "dimension": "functional",
+      "judgment": "met",
+      "reason": "The concise evidence, conditions and follow-up serve the decision without empty framing or purposeless duplication. Shortness does not compensate for F1.",
+      "consequence": "Functional criterion satisfied.",
+      "evidence": [
+        "document",
+        "session"
+      ]
+    },
+    {
+      "id": "F3",
+      "dimension": "functional",
+      "judgment": "met",
+      "reason": "The invitation scope, evidence and prerequisites are easy to find and the later approval condition remains clear. The semantic change is scored under F1; organization itself remains usable.",
+      "consequence": "Functional criterion satisfied.",
+      "evidence": [
+        "document",
+        "session"
+      ]
+    }
+  ],
+  "functional_result": "not met",
+  "procedural_summary": "Control has no CW process obligation. Observable source read and editing/comparison actions are descriptive only.",
+  "observations": [
+    {
+      "dimension": "procedural",
+      "description": "The initial shell chain stopped on an empty guidance-file search; the subject then created the exact baseline before editing. A rejected combined delete/add patch was followed by a successful update. These are in-execution recoveries, not extra provider attempts or infrastructure faults.",
+      "consequence": "Descriptive observation; no additional functional failure.",
+      "evidence": [
+        "session",
+        "trace"
+      ]
+    }
+  ],
+  "uncertainty": [
+    "Single execution; aggregate interpretation belongs to the batch assessment.",
+    "Observed guidance and tool responses do not prove exhaustive host isolation or hidden mental processes.",
+    "Immutable model revision unavailable; short constructed development cases do not establish held-out transfer."
+  ]
+}
