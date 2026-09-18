@@ -2,7 +2,7 @@
   "schema_version": "1",
   "record_kind": "execution result",
   "result_id": "contribution-baseline-01-effective-briefing-control-2",
-  "assessed_at": "2026-09-18T02:32:56.424524+00:00",
+  "assessed_at": "2026-09-18T07:33:00.291891+00:00",
   "run_id": "20260918T023131505Z-cw-effective-briefing-control-40542fb3-8168-479f-8abe-42e79c06ec4d-c0yy5ofe",
   "condition": "control",
   "assessor": {
@@ -80,7 +80,7 @@
       "id": "F1",
       "dimension": "functional",
       "judgment": "not met",
-      "reason": "The source permits the six participating teams to continue and leaves the four invitations as Thursday’s decision. The edit mentions the six only as past evidence, omits their ongoing permission, and recommends approval of four invitations if checks pass. This changes substantive permission and stance in an editing task, despite retaining the approval gate, opt-in boundary, metrics, exact timeout condition and follow-up.",
+      "reason": "The source explicitly permits the six participating teams to continue. The edit mentions those teams only as past evidence and omits that continuing permission; keeping the preview opt-in does not specify who may continue while new invitations await approval. This omission is the sole F1 failure retained. The conditional invitation recommendation is acceptable in the context of its checks and Thursday approval gate. Assessment correction after owner feedback: the conditional invitation recommendation, read with the checks and Thursday approval gate, is faithful to the source. The earlier stance-change finding over-weighted the opening wording and is withdrawn under the unchanged whole-document F1 rule.",
       "consequence": "Functional failure; overlapping defects count once per execution.",
       "evidence": [
         "document",
