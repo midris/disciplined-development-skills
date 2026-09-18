@@ -1,11 +1,11 @@
 {
   "format_version": "1",
-  "manifest_id": "cw-effective-briefing-assessment-3",
+  "manifest_id": "cw-effective-briefing-assessment-4",
   "study_id": "concise-writing",
   "case_id": "effective-briefing",
   "status": "frozen",
-  "created_at": "2026-09-18T08:05:00.745532+00:00",
-  "source_revision": "2718243098a20d98c552427ccd1f09d5fd02dec3",
+  "created_at": "2026-09-18T08:37:02.284823+00:00",
+  "source_revision": "04b143b30df2cfcd5d73c23f032355edb6f8062f",
   "authorities": {
     "spec": {
       "path": "plans/specs/2026-09-11-model-driven-skill-testing-framework.md",
@@ -14,12 +14,12 @@
     },
     "protocol": {
       "path": "skill-studies/concise-writing/protocol.md",
-      "sha256": "69f04a4a07fd93dd67aaa36239a5080eaa1574cb5b457483ad8fd0218bfef7b6",
+      "sha256": "e4e1693efb79cd928bd6a8b25b1c9ef6c0e059aec5f3ded61483fe61211112ca",
       "version": "1"
     },
     "format_contract": {
       "path": "skill-studies/formats/companion-formats.md",
-      "sha256": "e8214053f32a25c7042cffe8ada0c3054c7f7204df061bec2b6652e4e6cd728a",
+      "sha256": "a02e0b4596c255491194f457f6e350aea858e960f439becc939ca2e8c5898ef8",
       "version": "1"
     },
     "execution_result_schema": {
@@ -29,14 +29,14 @@
     },
     "policy": {
       "path": "skill-studies/concise-writing/assessment-policy.txt",
-      "sha256": "44d94d73f0ba9287068bb237078c1435e2c5b173ea918d116526a6a79facc91e",
-      "version": "CW-assessment-3"
+      "sha256": "0adb7f61edea118c7ec2361dddfa7dd1c0fe4745d4431178d8d557097cfa2454",
+      "version": "CW-assessment-4"
     },
     "criteria": [
       {
         "path": "skill-studies/concise-writing/cases/effective-briefing/assessment.md",
-        "sha256": "b84e8d675328c1be24e7765616dd5e060b521fda9a893bdf06e0c2ace00546b5",
-        "version": "3"
+        "sha256": "f44d2da807628e5dfc019428d3dfa062d11a28569ddd0d0458b144a80427dca1",
+        "version": "4"
       }
     ]
   },
@@ -87,5 +87,21 @@
       "version": null
     }
   ],
-  "controller_only": []
+  "controller_only": [
+    {
+      "path": "skill-studies/concise-writing/qualification.md",
+      "sha256": "0f742f34de22f61d89350fa3dbc8b5a3ac3881a94a45e14b082a9ce5ef7e81ee",
+      "version": null
+    },
+    {
+      "path": "skill-studies/concise-writing/cases/effective-briefing/examples/effective.md",
+      "sha256": "b8c6898c40a98477a93f2834b332d0c76a5822738ac7ff489e93551c8c1fc77e",
+      "version": null
+    },
+    {
+      "path": "skill-studies/concise-writing/cases/effective-briefing/examples/over-trimmed.md",
+      "sha256": "217922dc2c507c4398c6f605f7b664e5321096d74958e0cab3eed07e2d1acaea",
+      "version": null
+    }
+  ]
 }
