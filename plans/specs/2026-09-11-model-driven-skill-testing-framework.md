@@ -141,6 +141,16 @@ Ordinary development uses known scenarios and records that exposure. If a separa
 
 ### 3. Define and challenge the evaluation contract
 
+Developing the evaluation contract is collaborative design: back-and-forth with the owner to settle useful outcomes, acceptable variation and failure boundaries is expected, especially for judgment-heavy skills.
+That discussion is not itself a process defect or evidence that the eventual assessments are unreliable.
+Distinguish negotiating what should be measured from applying an agreed rule incorrectly or repeatedly reopening a settled decision.
+
+Once agreed, treat the criteria as a durable contract and apply them consistently across baseline and candidate executions.
+Do not renegotiate them for each output or let a candidate rewrite redefine the baseline against which it is compared.
+Revisit them only for an identified ambiguity or defect, an owner-approved change in intended behavior, or an explicit coverage expansion; record the reason and version the change.
+An expansion adds a separately declared comparison scope, with the relevant original and candidate conditions judged consistently; it does not silently replace the earlier baseline.
+The reassessment rules below govern corrections to existing evidence.
+
 Develop criteria alongside scenarios so tasks can actually reveal the promised behavior.
 Map every criterion to an agreed obligation and every important obligation to a test or explicit coverage limitation.
 Define the unit of judgment appropriate to the skill: a complete artifact, an observable action sequence, a decision with evidence, or another task-relevant outcome.

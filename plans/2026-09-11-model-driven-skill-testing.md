@@ -213,6 +213,8 @@ Reserved bundles and revealing assessments stay entirely in the verified private
 - [x] Obtain approval for all eight comparison calls and the necessary subject-ceiling increase from 40 to 46.
 - [x] Freeze comparison identities and condition-applicability metadata without changing scenarios or policy 4.
 - [x] Collect, preserve and assess the eight attempts under the frozen rules; compare fresh original/candidate results and report regressions, useful differences and limitations. No automatic retry, new scenario or adoption.
+- [x] Clarify collaborative criteria development versus consistent application in the spec, following the owner's correction. Complete the [cross-study retrospective](../reviews/2026-09-18-skill-testing-retrospective.md), preserving the fixed CW baseline and separating established findings from proposed process improvements.
+- [ ] Select the next bounded learning question with the owner. The retrospective recommends exercising evidence-led authoring; this does not authorize another skill edit or provider batch.
 
 The owner accepted the reconciled [format set](../skill-studies/formats/README.md), now version `1`. The protocol and the Shiv and semantic-delivery case definitions/manifests use the accepted layouts; historical observed-case inputs and the `1-draft` worked example remain unchanged under their recorded identities.
 The [semantic-delivery batch](../skill-studies/sweeping-stale-references/protocol.md#first-collection-semantic-delivery-01) is complete; its results informed the approved core-baseline-01 scope. No further layout review, new scenario, evaluator layer or pre-baseline pilot is needed.
