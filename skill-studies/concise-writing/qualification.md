@@ -1,6 +1,6 @@
 # CW criterion examples
 
-Status: case design owner-accepted; constructed examples checked in the active session. Input freeze and collection approval remain outstanding. No subject executions.
+Status: case design owner-accepted; constructed examples checked in the active session. Collection is approved; committed input freeze remains outstanding. No subject executions.
 Authority: [protocol](protocol.md), [recommendation case](cases/agent-recommendation/assessment.md) and [briefing case](cases/effective-briefing/assessment.md).
 
 The active agent constructed these fictional sources and edits using the complete preserved skill, accepted owner clarifications and the case rules, then inspected each complete document against its source. The same session authored and judged them with all guidance available. This is a worked boundary check, not independent validation, blind assessment or evidence of skill performance. All examples are controller-only. Git preserves revisions; no separate execution-result records are created for examples.

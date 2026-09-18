@@ -14,7 +14,7 @@
     },
     "protocol": {
       "path": "skill-studies/concise-writing/protocol.md",
-      "sha256": "d1ae8d818f5c279b988157c61a42d4339fe70f1174801831f943595f593a86e9",
+      "sha256": "99d66c41b749306f22c164dca57d662ab734f36cad134fbee391f3d15ba89616",
       "version": "1"
     },
     "format_contract": {
@@ -35,7 +35,7 @@
     "criteria": [
       {
         "path": "skill-studies/concise-writing/cases/effective-briefing/assessment.md",
-        "sha256": "37eded3c97f6a6df7dc1e26732fbd35cf78646aab8314e41dee2e277cab4bb9f",
+        "sha256": "5cd57763e7b3e4a0b586ff2fc83f0b66693750925d7038a01e1277fcd70d7218",
         "version": "1"
       }
     ]
@@ -90,7 +90,7 @@
   "controller_only": [
     {
       "path": "skill-studies/concise-writing/qualification.md",
-      "sha256": "c5a6662c041bfa7c1bd63e8838cb1f4b3caa3ad6b294683c1b85edca8aca7481",
+      "sha256": "0399f041c42b42ed8a64d8efe062a9c2bcd8f0be026c1b48edcbd069b4c80b95",
       "version": null
     },
     {

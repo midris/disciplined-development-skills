@@ -14,7 +14,7 @@
     },
     "protocol": {
       "path": "skill-studies/concise-writing/protocol.md",
-      "sha256": "d1ae8d818f5c279b988157c61a42d4339fe70f1174801831f943595f593a86e9",
+      "sha256": "99d66c41b749306f22c164dca57d662ab734f36cad134fbee391f3d15ba89616",
       "version": "1"
     },
     "format_contract": {
@@ -35,7 +35,7 @@
     "criteria": [
       {
         "path": "skill-studies/concise-writing/cases/agent-recommendation/assessment.md",
-        "sha256": "1e1422e5b7c40016066c52343bacedf619fe0e27a65046dcb3d9ce6607932ea9",
+        "sha256": "38466f69152ce6c74d1e2b5987a4b0d6e932d3ebc585368eac888297586be2c6",
         "version": "1"
       }
     ]
@@ -90,7 +90,7 @@
   "controller_only": [
     {
       "path": "skill-studies/concise-writing/qualification.md",
-      "sha256": "c5a6662c041bfa7c1bd63e8838cb1f4b3caa3ad6b294683c1b85edca8aca7481",
+      "sha256": "0399f041c42b42ed8a64d8efe062a9c2bcd8f0be026c1b48edcbd069b4c80b95",
       "version": null
     },
     {
