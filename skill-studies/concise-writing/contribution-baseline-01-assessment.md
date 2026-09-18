@@ -3,9 +3,9 @@
 Format version: `1`
 Assessment ID: `contribution-baseline-01`
 Study / batch: `concise-writing` / `contribution-baseline-01`
-Status: policy-3 report retained while policy-4 review and record reconciliation are in progress; no new executions.
-Scope and acceptance rules: [protocol](protocol.md#contribution-baseline-contribution-baseline-01) at Git `2718243098a20d98c552427ccd1f09d5fd02dec3`.
-Attempt index: [contribution-baseline-01-run-index.json](contribution-baseline-01-run-index.json) at Git `5341c158b8208c17f2967bfe3c93425878cdcd91`, SHA-256 `80f5f8bc1d71bf373130b89d997fd09f18e2f155084574750103f0f7afbee6ed`.
+Status: complete policy-4 reassessment of the same eight executions; all three quality criteria met, length reported separately.
+Scope and acceptance rules: [protocol](protocol.md#contribution-baseline-contribution-baseline-01) at Git `04b143b30df2cfcd5d73c23f032355edb6f8062f`.
+Attempt index: [contribution-baseline-01-run-index.json](contribution-baseline-01-run-index.json) at Git `5bcb2958021a840a3c330fe7a4f43b9fa3e79423`, SHA-256 `97f41234b99140029e4e99bb840a00a96de42971b4e588b906d8e4b9c8b02303`.
 Assessor: Codex active session with construction history, prior judgments and owner feedback available. This is neither independent nor blind validation.
 The owner changed the scoring contract after seeing outputs; these are retrospective judgments under the revised rule, not a newly collected or prospectively scored sample.
 
@@ -86,7 +86,18 @@ These reductions are preferred length outcomes, not evidence for F1–F3. Same-l
 ## Comparison and interpretation
 
 Original and control each pass 2/2 on Recommendation and 2/2 on Briefing, with zero unknowns.
-These cases show no observed CW advantage under the three quality criteria. The passing controls remain useful results; the study does not require a failing control.
+The pass counts show equal threshold outcomes, not identical quality. Both conditions produce usable edits; these small observations do not establish an overall or reliable CW advantage. The study does not require a failing control.
+Qualitative comparison, separate from pass/fail and length:
+
+| Pair | Effectiveness and reading experience |
+|---|---|
+| Recommendation, repetition 1: orders 1 / 2 | Both support the same pilot decision and safeguards. Order 1 gives a more continuous read from request through support to action. Order 2 separates recommendation, evidence and mechanism and provides numbered safeguards, making those steps easier to scan independently but adding transitions for a reader reading straight through. Its opening request, rationale and closing confirmation do not by themselves establish harmful padding. |
+| Recommendation, repetition 2: orders 6 / 5 | Order 6 gathers request, staffing and both result branches at the start, so the decision reader encounters the operating consequences together. Order 5 gives the stop condition a separate heading and groups untested risks as a list, which aids targeted lookup. Both improve the source’s fragmented reading path; their differences remain visible despite equal passing judgments. |
+| Briefing, repetition 1: orders 4 / 3 | Both put the conditional recommendation first, connect bounded evidence to approval checks, and close with later review. Order 3 separates follow-up with a heading; order 4 joins it to the approval consequence. Neither layout demonstrates a consequential quality advantage for the stated decision reader. |
+| Briefing, repetition 2: orders 7 / 8 | Order 7 brings readiness/approval immediately after the recommendation; order 8 leads with evidence before the checks. The first favors checking action prerequisites, the second reading the supporting argument first. Both remain clear and preserve the same decision boundaries. |
+
+These are active-session reading judgments, not measured reader timings or numerical quality grades. Future authorized rewrite comparisons should report supported gains and regressions at this level alongside pass counts and length. Policy 4 is the frozen rule for those comparisons unless the owner explicitly amends it; this does not authorize a new comparison.
+
 The corrected results do not support the previously suggested continuing-permissions rewrite target.
 No candidate was tested, and no skill rewrite or adoption decision follows from this batch.
 
@@ -96,4 +107,4 @@ The same informed session authored and reassessed the cases after owner feedback
 Long documents, other audiences and genres, plan/spec composition, native discovery and conditional uncertainty handling remain unestablished.
 Existing runner/formats supported the reassessment without new repository tooling or model calls.
 
-Verification limitation: the current assessment-stage CLI derives expected aggregate criterion IDs from collection manifests, so it still expects the historical P1 process rows. Individual manifests, results and the index validate. Direct verification against the result-pinned policy-3 criteria checks all 16 aggregate rows, coverage, rollups, identities, evidence hashes and separate length observations. The generic aggregate-checker correction remains outside this scoring-only change; its false missing-P1 diagnostics are documented, not represented as a passing readiness check.
+Verification: the corrected assessment-stage CLI validates this batch using each result’s pinned criteria, while checking that reassessment preserves the actual subject inputs. Both the report and protocol readiness now pass without the former missing-P1 diagnostics. Direct checks also verify all 16 aggregate rows, evidence hashes, word counts and policy-copy equality.
