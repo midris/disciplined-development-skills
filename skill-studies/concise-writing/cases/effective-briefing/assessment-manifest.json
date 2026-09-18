@@ -46,8 +46,7 @@
       "configuration": {
         "path": "skill-studies/concise-writing/cases/effective-briefing/original.json",
         "sha256": "1fed57bacbc7c47f8d3d4cbd44ee876b309e7aead1921a726303924f663d0835",
-        "version": "0.2",
-        "git_revision": "c19e408549bbafe76005f5cfc0b08f24d7c2bfc4"
+        "version": "0.2"
       },
       "target_skill": "skill-studies/concise-writing/cases/skill-original/SKILL.md"
     },
@@ -56,8 +55,7 @@
       "configuration": {
         "path": "skill-studies/concise-writing/cases/effective-briefing/control.json",
         "sha256": "f98099a1576b3e6da85982bfc73d32e592f52800a7384b5231fd12cbbe845d9a",
-        "version": "0.2",
-        "git_revision": "c19e408549bbafe76005f5cfc0b08f24d7c2bfc4"
+        "version": "0.2"
       },
       "target_skill": null
     }
@@ -66,32 +64,27 @@
     {
       "path": "skill-studies/concise-writing/cases/effective-briefing/fixture/report.md",
       "sha256": "93c23afd44aab52dfcd2bca53f3db0020a41f650d46d4c59a09595539dc72491",
-      "version": null,
-      "git_revision": "c19e408549bbafe76005f5cfc0b08f24d7c2bfc4"
+      "version": null
     },
     {
       "path": "skill-studies/concise-writing/cases/effective-briefing/task.md",
       "sha256": "fbf576b5f00e154e6ee4618285d96980b1858de992e5390a1e83cf9b03cb1796",
-      "version": null,
-      "git_revision": "c19e408549bbafe76005f5cfc0b08f24d7c2bfc4"
+      "version": null
     },
     {
       "path": "skill-studies/concise-writing/prompt-original.md",
       "sha256": "ec75556bc64e9de7ef0ca76ef50fe2db02021e90c8a855901b6e08a854f4d81e",
-      "version": null,
-      "git_revision": "c19e408549bbafe76005f5cfc0b08f24d7c2bfc4"
+      "version": null
     },
     {
       "path": "skill-studies/concise-writing/prompt-control.md",
       "sha256": "833ee4acdfe9f3e3592ed900a7d6f9212d93bc223c8ccccaee69cb53b4738eaa",
-      "version": null,
-      "git_revision": "c19e408549bbafe76005f5cfc0b08f24d7c2bfc4"
+      "version": null
     },
     {
       "path": "skill-studies/concise-writing/cases/skill-original/SKILL.md",
       "sha256": "4d12a2eb475c6b2ef57e2300c8c07af3f59c1e07b2b82695a3b7669eee1d6d72",
-      "version": null,
-      "git_revision": "c19e408549bbafe76005f5cfc0b08f24d7c2bfc4"
+      "version": null
     }
   ],
   "controller_only": []

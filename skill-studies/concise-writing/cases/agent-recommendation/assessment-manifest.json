@@ -46,8 +46,7 @@
       "configuration": {
         "path": "skill-studies/concise-writing/cases/agent-recommendation/original.json",
         "sha256": "3d50b33ed37f3822395259eac8c609573a0d2a3425fd4c9d29a8685a21b9f17f",
-        "version": "0.2",
-        "git_revision": "c19e408549bbafe76005f5cfc0b08f24d7c2bfc4"
+        "version": "0.2"
       },
       "target_skill": "skill-studies/concise-writing/cases/skill-original/SKILL.md"
     },
@@ -56,8 +55,7 @@
       "configuration": {
         "path": "skill-studies/concise-writing/cases/agent-recommendation/control.json",
         "sha256": "3e7c6a33eaa3851f5b3766ec1769a2200fbfbcab3ba8ed55f9d06d0fb9f0c84a",
-        "version": "0.2",
-        "git_revision": "c19e408549bbafe76005f5cfc0b08f24d7c2bfc4"
+        "version": "0.2"
       },
       "target_skill": null
     }
@@ -66,32 +64,27 @@
     {
       "path": "skill-studies/concise-writing/cases/agent-recommendation/fixture/report.md",
       "sha256": "e9a992c7e4c14dfd5afc10cc637349f39c2030e98ed0311441675900bc3e93e9",
-      "version": null,
-      "git_revision": "c19e408549bbafe76005f5cfc0b08f24d7c2bfc4"
+      "version": null
     },
     {
       "path": "skill-studies/concise-writing/cases/agent-recommendation/task.md",
       "sha256": "607cbe0562a19ea092fe76ec96f13bfbe033b2e1095baef2ca38be621c0baf82",
-      "version": null,
-      "git_revision": "c19e408549bbafe76005f5cfc0b08f24d7c2bfc4"
+      "version": null
     },
     {
       "path": "skill-studies/concise-writing/prompt-original.md",
       "sha256": "ec75556bc64e9de7ef0ca76ef50fe2db02021e90c8a855901b6e08a854f4d81e",
-      "version": null,
-      "git_revision": "c19e408549bbafe76005f5cfc0b08f24d7c2bfc4"
+      "version": null
     },
     {
       "path": "skill-studies/concise-writing/prompt-control.md",
       "sha256": "833ee4acdfe9f3e3592ed900a7d6f9212d93bc223c8ccccaee69cb53b4738eaa",
-      "version": null,
-      "git_revision": "c19e408549bbafe76005f5cfc0b08f24d7c2bfc4"
+      "version": null
     },
     {
       "path": "skill-studies/concise-writing/cases/skill-original/SKILL.md",
       "sha256": "4d12a2eb475c6b2ef57e2300c8c07af3f59c1e07b2b82695a3b7669eee1d6d72",
-      "version": null,
-      "git_revision": "c19e408549bbafe76005f5cfc0b08f24d7c2bfc4"
+      "version": null
     }
   ],
   "controller_only": []
