@@ -1,0 +1,130 @@
+{
+  "schema_version": "1",
+  "record_kind": "execution result",
+  "result_id": "comprehensive-comparison-01-agent-recommendation-original-2",
+  "assessed_at": "2026-09-18T20:29:14.212712+00:00",
+  "run_id": "20260918T202739534Z-cw-agent-recommendation-original-b4b02b7f-0a5d-48ba-a611-b8f27723336b-x8_nkog_",
+  "condition": "original",
+  "assessor": {
+    "name": "Codex active session",
+    "method": "active session",
+    "model": null,
+    "session_id": "01a0b24b-13bf-7981-b0e8-a9b7111bd9f5",
+    "context": "Fixed-case comparison of the preserved original and owner-selected existing comprehensive candidate; policy 4 frozen before these executions. Owner decisions, source cases, qualification examples and prior results available. Active-session assessment, neither independent nor blind validation."
+  },
+  "manifest": {
+    "path": "skill-studies/concise-writing/cases/agent-recommendation/comparison-manifest.json",
+    "sha256": "a51ba1ec459a13b76f09fb26bbe65c6f63c93ada441ee93ec04977206c338495",
+    "version": "1",
+    "git_revision": "d5da87c016bcf5aa2cf21bcd3e92df80b45eeb94"
+  },
+  "evidence": [
+    {
+      "id": "runner",
+      "artifact": {
+        "path": "/Users/simon/work/personal/skill-study-private/concise-writing/development/20260918T202739534Z-cw-agent-recommendation-original-b4b02b7f-0a5d-48ba-a611-b8f27723336b-x8_nkog_/result.json",
+        "sha256": "9e30ce846974d679c40ab9b4468505f67fff61c0ab344bcbdecbdf21e3d7b011",
+        "version": "0.4"
+      },
+      "selector": "Complete execution metadata and final artifact inventory."
+    },
+    {
+      "id": "inputs",
+      "artifact": {
+        "path": "/Users/simon/work/personal/skill-study-private/concise-writing/development/20260918T202739534Z-cw-agent-recommendation-original-b4b02b7f-0a5d-48ba-a611-b8f27723336b-x8_nkog_/runner.log",
+        "sha256": "15c100ca361d69a869292c4638c4d842b2092cebb41625d66a0eb419a2683bb6",
+        "version": null
+      },
+      "selector": "Pre-launch hashes, exact invocation arguments and capture/cleanup completion."
+    },
+    {
+      "id": "trace",
+      "artifact": {
+        "path": "/Users/simon/work/personal/skill-study-private/concise-writing/development/20260918T202739534Z-cw-agent-recommendation-original-b4b02b7f-0a5d-48ba-a611-b8f27723336b-x8_nkog_/stdout.txt",
+        "sha256": "a4105b488da376f97933e2e818017553ead2b2ac546160646877ad5a714e3d6d",
+        "version": null
+      },
+      "selector": "Thread identity and complete ordered command events."
+    },
+    {
+      "id": "session",
+      "artifact": {
+        "path": "/Users/simon/work/personal/skill-study-private/concise-writing/development/20260918T202739534Z-cw-agent-recommendation-original-b4b02b7f-0a5d-48ba-a611-b8f27723336b-x8_nkog_/provider-session.jsonl",
+        "sha256": "95aa02e3f411e4118d2175a169414c3fb976e4f276434cfeafbfca38b2c72bcc",
+        "version": null
+      },
+      "selector": "Session metadata, supplied guidance and complete tool responses; see criterion reasons for action sequence."
+    },
+    {
+      "id": "document",
+      "artifact": {
+        "path": "/Users/simon/work/personal/skill-study-private/concise-writing/development/20260918T202739534Z-cw-agent-recommendation-original-b4b02b7f-0a5d-48ba-a611-b8f27723336b-x8_nkog_/workspace/fixture/report.md",
+        "sha256": "ebc3d6982af0e2f99387e6e10b4a0fe24456006a38b588c17f9232add227bb1d",
+        "version": null
+      },
+      "selector": "Complete delivered document, compared with source and criteria frozen in the manifest."
+    }
+  ],
+  "setup": {
+    "status": "valid",
+    "reason": "Frozen configuration, prompt and pre-launch source hashes match; baseline source and TASK bytes verified. Retained session matches stdout thread ID and fixture cwd, and identifies CLI 0.154.0. Complete inventory verifies capture. Guidance contains native system skills and the intended target condition, without DD or controller criteria. Complete CW text appears in a tool response before editing.",
+    "evidence": [
+      "runner",
+      "inputs",
+      "trace",
+      "session"
+    ]
+  },
+  "criteria": [
+    {
+      "id": "F1",
+      "dimension": "functional",
+      "judgment": "met",
+      "reason": "The full document retains the bounded pilot, staffing and timing, successful matching exports and injected failures, undeployed production contrast, untested conditions, retry mechanism, mismatch evidence and separate success-path release approval. No source condition is contradicted.",
+      "consequence": "Functional criterion satisfied.",
+      "evidence": [
+        "document",
+        "session"
+      ]
+    },
+    {
+      "id": "F2",
+      "dimension": "functional",
+      "judgment": "met",
+      "reason": "Approval and the successful-result boundary are prominent, with the mismatch action separately findable. The nearby staging-only evidence and untested production/cross-region conditions provide the reason for limited exposure in context; absence of a separate because-clause does not remove the decision rationale.",
+      "consequence": "Functional criterion satisfied.",
+      "evidence": [
+        "document",
+        "session"
+      ]
+    },
+    {
+      "id": "F3",
+      "dimension": "functional",
+      "judgment": "met",
+      "reason": "The decision, evidence bullets and mechanism, and distinct mismatch procedure produce a clear short memo. It removes empty communication advice and duplicated explanations without leaving disconnected actions or excessive restatement.",
+      "consequence": "Functional criterion satisfied.",
+      "evidence": [
+        "document",
+        "session"
+      ]
+    }
+  ],
+  "functional_result": "met",
+  "procedural_summary": "Process is unscored under CW-assessment-4. Traces establish setup and complete skill exposure; final artifact determines F1–F3.",
+  "observations": [
+    {
+      "dimension": "functional",
+      "description": "Complete Markdown word count: source 625; output 213; signed change -412; shorter; no longer-output flag.",
+      "consequence": "Length is an unscored preference/flag, not an additional pass/fail factor.",
+      "evidence": [
+        "document"
+      ]
+    }
+  ],
+  "uncertainty": [
+    "Single execution; aggregate interpretation belongs to the batch assessment.",
+    "Observed guidance and tool responses do not prove exhaustive host isolation or hidden mental processes.",
+    "Immutable model revision unavailable; short constructed development cases do not establish held-out transfer."
+  ]
+}
