@@ -48,6 +48,7 @@ Use `docs` for the [current study formats](../../skill-studies/formats/README.md
 ```text
 skilltest docs new KIND --output PATH --format-version 1
 skilltest docs check PATH [--json]
+skilltest docs check PROTOCOL --ready-for preparation --batch ID [--json]
 skilltest docs check PROTOCOL --ready-for collection [--batch ID] [--json]
 skilltest docs check PROTOCOL --ready-for assessment [--batch ID] [--json]
 ```
@@ -67,6 +68,41 @@ Supported version-1 representations:
 - Current accounting uses the existing booked/remaining/ceiling paragraph, dispatched/remaining pool paragraph and `Work / Estimate / Basis` forecast table; outer ceilings may be linked from the plan. Only referenced attempt indexes contribute. Historical process/development-pilot indexes supply a labelled accounting-only projection, not version-1 format conformance or reassessment.
 
 Unsupported historical documents remain unchanged. Unsupported layouts cannot silently pass stage checks; a required representation change needs explicit format review. Generation and validation share the canonical templates and structural rules, with the execution-result schema reused. Wheels package those same resource bytes; `jsonschema` is a runtime dependency.
+
+### Mechanical study operations
+
+```text
+skilltest docs manifest MANIFEST --output DRAFT [--compare ORIGINAL CANDIDATE --allow-difference TARGET ...]
+skilltest docs manifest MANIFEST --output FROZEN --revision FULL_COMMIT [--compare ORIGINAL CANDIDATE --allow-difference TARGET ...]
+skilltest docs retain PROTOCOL BUNDLE --batch ID --order N --index INDEX --store DIRECTORY --revision FULL_COMMIT
+skilltest docs tables PROTOCOL --batch ID --index INDEX --output FRAGMENT [--source-target TARGET --output-evidence ID]
+```
+
+Use `manifest` with the existing manifest template: supply IDs, dates, authority/controller paths, versions and condition configurations; hashes, source revision and the subject-source list are derived.
+The draft checks current files, exact configured sources, criterion applicability and controller separation.
+Paired checking compares execution settings and mounted bytes; declare differing target paths explicitly (`@prompt` means the prompt).
+`preparation` checks the selected protocol scope and working manifests before freezing; complete draft cases are allowed, future index/report links are not required, and hashes are recomputed without writing the inputs.
+It does not claim collection readiness or authorization.
+Commit reviewed inputs, generate frozen manifests against that full commit, review and explicitly replace the committed draft at its declared path, then commit manifests and run collection readiness.
+A freeze rejects working inputs that differ from the selected revision; neither command commits anything.
+All generated files require an existing parent directory and a new output path.
+
+Wait for the runner to exit before `retain`.
+It selects one initial attempt from the committed protocol, verifies the frozen configuration, accepts terminal runner result version 0.4, and derives the subject charge from `invocation_started` even after failure.
+The store must be outside the repository and disjoint from the source.
+The command copies hidden files, directories and symlinks without following links, verifies modes/bytes/hashes/targets and source stability, then registers the verified inventory in the index.
+It refuses duplicates, unknown charges, unresolved cleanup and existing destinations.
+An exclusive index lock serializes cooperating registrations; interrupted operations can leave a lock or staging directory requiring inspection.
+A publication/index-write failure can leave an unregistered bundle, which is reported and never silently adopted or overwritten.
+The source remains intact; this verifies a retained copy, not a separate backup or OS-level proof against arbitrary writers.
+
+Use `tables` after recording judgments, or to inspect partial coverage.
+It validates identities and emits coverage, execution status, criterion counts and recorded functional outcomes, retaining unattempted/unassessed slots and excluded setups explicitly.
+It refuses changed scopes, malformed records and incompatible scoring policies within an aggregate group.
+Optional length measurement requires both the mounted source target and evidence ID; it counts complete UTF-8 files with `wc -w` and reports shorter/same/longer, with longer flagged rather than failed.
+The output is a table fragment for the assessment, not a completed assessment or acceptance decision; links are relative to the fragment's location, so generate it beside the intended report.
+Mechanical operations return `1` on invalid or unsupported input and `2` on argument errors.
+Tools never assign judgments, retry, dispatch providers or mutate Git.
 
 `src/skilltest/documents/` owns this functionality separately from execution. Future collection still pins the full runner Git revision and checks relevant changes, including shared CLI wiring/dependencies. Structural checks do not establish semantic correctness, causal attribution or owner consent.
 

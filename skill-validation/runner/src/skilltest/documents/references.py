@@ -94,12 +94,15 @@ class Context:
             self.error(owner or self.path, loc, "reference", str(error))
             return None
 
-    def document(self, raw, path, expected, declared_version=None):
+    def document(self, raw, path, expected, declared_version=None, allow_draft=False):
         from . import Report, structural
 
         local = Report()
         try:
-            kind, value = structural(raw.decode("utf-8"), path, local)
+            text = raw.decode("utf-8")
+            if allow_draft:
+                text = re.sub(r"^Status: draft$", "Status: prepared", text, count=1, flags=re.M)
+            kind, value = structural(text, path, local)
             if kind != expected:
                 local.add(path, "$", "artifact-kind", f"Expected {expected}, got {kind}")
             actual_version = (
@@ -120,12 +123,12 @@ class Context:
         self.report.unsupported |= local.unsupported
         return value if local.structurally_valid and local.complete and not local.unsupported else None
 
-    def manifest(self, value, path):
-        key = (str(path), value.get("source_revision"), str(value))
+    def manifest(self, value, path, working=False):
+        key = (str(path), value.get("source_revision"), str(value), working)
         if key in self.manifests:
             return self.manifests[key]
-        revision = value["source_revision"]
-        if value["status"] != "frozen":
+        revision = None if working else value["source_revision"]
+        if not working and value["status"] != "frozen":
             self.error(
                 path,
                 "status",
@@ -239,7 +242,7 @@ class Context:
             raw = self.identity(ident, revision, path, "authorities.criteria")
             if raw is None:
                 continue
-            text = self.document(raw, ident["path"], "case", ident.get("version"))
+            text = self.document(raw, ident["path"], "case", ident.get("version"), allow_draft=working)
             if text is None:
                 continue
             for name, want in [

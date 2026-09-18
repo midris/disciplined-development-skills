@@ -186,6 +186,11 @@ def check(path, ready_for=None, batch=None):
     report = Report()
     try:
         raw = path.read_text(encoding="utf-8")
+        if ready_for == "preparation":
+            from .manifest_tools import preparation
+
+            preparation(path, raw, report, batch)
+            return report
         report.kind, value = structural(raw, path, report)
         if ready_for and report.kind != "protocol":
             report.add(
@@ -225,25 +230,32 @@ def check(path, ready_for=None, batch=None):
             except (OSError, ValueError, KeyError, TypeError, AttributeError) as error:
                 report.add(path, "$", "reference", str(error))
         return report
-    except (OSError, UnicodeError, ValueError, RecursionError) as error:
+    except (OSError, UnicodeError, ValueError, RecursionError, KeyError, TypeError, AttributeError) as error:
         report.add(path, "$", "invalid-document", str(error))
         return report
 
 
 def configure(parser):
     commands = parser.add_subparsers(dest="docs_command", required=True)
+    from .operations import configure as configure_operations
+
+    configure_operations(commands)
     new = commands.add_parser("new")
     new.add_argument("kind", choices=TEMPLATES)
     new.add_argument("--output", required=True)
     new.add_argument("--format-version", default="1")
     check_parser = commands.add_parser("check")
     check_parser.add_argument("path")
-    check_parser.add_argument("--ready-for", choices=["collection", "assessment"])
+    check_parser.add_argument("--ready-for", choices=["preparation", "collection", "assessment"])
     check_parser.add_argument("--batch")
     check_parser.add_argument("--json", action="store_true")
 
 
 def run(args):
+    if args.docs_command in {"retain", "tables", "manifest"}:
+        from .operations import run as run_operation
+
+        return run_operation(args)
     if args.docs_command == "new":
         if args.format_version != "1":
             print("Unsupported format version; supported: 1")

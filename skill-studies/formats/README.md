@@ -32,6 +32,10 @@ For a completed result, load `execution-result.schema.json` with the runner envi
 The blank template intentionally fails completed-record validation.
 The [document CLI](../../skill-validation/runner/README.md#study-documents) generates these six drafts and checks structures, identities, evidence, coverage and aggregate arithmetic. Use `skilltest docs check protocol.md --ready-for assessment --batch ID` for a selected batch; ordinary file checking does not certify the whole study. Supported Markdown representations and unsupported-version behavior are documented in that guide.
 
+Use `docs manifest` to prepare/freeze the existing identities, `docs retain` to preserve and register a stopped attempt, and `docs tables` to derive tables from recorded judgments.
+Run `docs check PROTOCOL --ready-for preparation --batch ID` before committing inputs, then use collection readiness after freezing.
+These operations use the existing formats; see the [command guide](../../skill-validation/runner/README.md#mechanical-study-operations) for arguments and failure handling.
+
 ## Historical example
 
 The [policy-3 pilot-02 example](../sweeping-stale-references/assessments/pilot-02-original-policy-3-example.json) remains byte-for-byte unchanged in format `1-draft`.

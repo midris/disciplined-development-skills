@@ -368,6 +368,17 @@ The validator reports file/field or line locations and specific failed rules, wi
 Document validation does not establish semantic coverage, realistic scenarios, correct causal attribution, evaluator reliability or actual owner consent. It can check that required evidence/approval references are recorded, not substitute for judging their meaning. Models remain responsible for those judgments.
 Qualify the tool using generated valid drafts, representative complete documents and deliberately invalid examples, including missing requirements, unresolved references, wrong versions/hashes and inconsistent run counts. Agree on its concrete CLI, supported document representations and integration point with the existing runner before implementation; no provider dispatch or new testing service is implied.
 
+### Reusable mechanics and preparation
+
+Use the existing [document commands](../../skill-validation/runner/README.md#mechanical-study-operations) for repeated copying, inventories, hashes, scope checks and aggregate arithmetic.
+The model owns criteria, evidence interpretation, reasons and decisions; tools derive mechanical facts from those declared inputs.
+Check working scope, criterion applicability, controller separation and declared paired differences before the input commit; then freeze in dependency order and check collection readiness.
+Preserve each stopped attempt through the verified retention/registration command and generate assessment tables from recorded judgments.
+Keep unknowns and excluded/unattempted slots visible; shorter output alone is not a judgment.
+Reuse qualified runtime mechanics and recheck relevant changes rather than repeating the full qualification campaign by default.
+Keep progress in the plan, decisions/accounting in the protocol and conclusions in the assessment; handoffs should point to those homes and exceptional unresolved constraints.
+These improvements address repeated bookkeeping and stale status duplication observed in SSR/CW; they add no evaluation or approval layer.
+
 ### Document conformance
 
 The spec governs the document set, not just its starting design. Format walkthroughs settle representations; they do not reopen the workflow or criterion policy.
