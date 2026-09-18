@@ -6,7 +6,7 @@ Format version: `1`
 Study ID: `concise-writing`
 Case ID: `effective-briefing`
 Definition version: `1`
-Status: draft; prepared for owner review, not frozen or authorized for collection.
+Status: draft; case design owner-accepted; input freeze and collection approval pending.
 Purpose and realistic failure opportunity: Test whether CW preserves an already-effective briefing, including useful explanation and reinforcement, rather than damaging it through unnecessary compression.
 Protocol coverage and membership/exposure: [suite](../../protocol.md#suite-and-evidence), proposed development case B, O1–O4; O5 only when explicit uncertainty is observable. Author and assessor share construction history; no held-out or independent-validation claim.
 
@@ -40,7 +40,7 @@ The [effective alternative](examples/effective.md) changes wording and presentat
 
 ### F1: Preserve meaning and useful framing
 
-Basis: [skill](../skill-original/SKILL.md), core test and When NOT to cut; task preservation requirement; owner clarification in the protocol.
+Basis: [skill](../skill-original/SKILL.md), core test and When NOT to cut; owner-approved preservation requirement in the protocol. The ordinary editing task does not repeat this skill guidance.
 Coverage: O1; contextual expectations above.
 Dimension: functional
 Applies to: `original`, `control`
@@ -70,7 +70,7 @@ Overlap: harmful cutting fails F1 even when the remaining prose meets F2; removi
 
 ### F3: Support clear reading and the intended decision
 
-Basis: skill overview’s rich, easy-to-read, complete document; owner’s explicit readability and restructuring clarification; task’s decision purpose.
+Basis: skill’s easy-to-read goal and treatment of structure; owner-resolved target to improve difficult organization in the protocol; task’s decision purpose. No specific order or restructuring procedure is attributed to the original.
 Coverage: O3; contextual expectations above.
 Dimension: functional
 Applies to: `original`, `control`
