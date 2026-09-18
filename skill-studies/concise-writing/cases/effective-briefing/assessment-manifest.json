@@ -1,0 +1,98 @@
+{
+  "format_version": "1",
+  "manifest_id": "cw-effective-briefing-assessment-2",
+  "study_id": "concise-writing",
+  "case_id": "effective-briefing",
+  "status": "frozen",
+  "created_at": "2026-09-18T07:44:53.471457+00:00",
+  "source_revision": "d9e822717fb5efeeebbb6b06e3b8cb6fe68e9dbc",
+  "authorities": {
+    "spec": {
+      "path": "plans/specs/2026-09-11-model-driven-skill-testing-framework.md",
+      "sha256": "872a8c3dc48c6b5e8e5e24d10e9976053a200872a33391943e36ea968b093768",
+      "version": null
+    },
+    "protocol": {
+      "path": "skill-studies/concise-writing/protocol.md",
+      "sha256": "f4e570cadef8a961699c912f9b76ab0d7460779a41c3733b759dbc9a8f957e36",
+      "version": "1"
+    },
+    "format_contract": {
+      "path": "skill-studies/formats/companion-formats.md",
+      "sha256": "e8214053f32a25c7042cffe8ada0c3054c7f7204df061bec2b6652e4e6cd728a",
+      "version": "1"
+    },
+    "execution_result_schema": {
+      "path": "skill-studies/formats/execution-result.schema.json",
+      "sha256": "0abc6cdd04c2c90495736dd9b0020bbee8ed4772babe46e8e8eb637ebd03f358",
+      "version": "1"
+    },
+    "policy": {
+      "path": "skill-studies/concise-writing/assessment-policy.txt",
+      "sha256": "1b32b46130c8a1cba84125b2ee25c2203505c5f8138f9e4feb6c2ceca4a9190a",
+      "version": "CW-assessment-2"
+    },
+    "criteria": [
+      {
+        "path": "skill-studies/concise-writing/cases/effective-briefing/assessment.md",
+        "sha256": "7d6a5d50240c1859e49f3c954c7c1d52054695028dae2b406d0bb6f1a41da46c",
+        "version": "2"
+      }
+    ]
+  },
+  "conditions": [
+    {
+      "id": "original",
+      "configuration": {
+        "path": "skill-studies/concise-writing/cases/effective-briefing/original.json",
+        "sha256": "1fed57bacbc7c47f8d3d4cbd44ee876b309e7aead1921a726303924f663d0835",
+        "version": "0.2",
+        "git_revision": "c19e408549bbafe76005f5cfc0b08f24d7c2bfc4"
+      },
+      "target_skill": "skill-studies/concise-writing/cases/skill-original/SKILL.md"
+    },
+    {
+      "id": "control",
+      "configuration": {
+        "path": "skill-studies/concise-writing/cases/effective-briefing/control.json",
+        "sha256": "f98099a1576b3e6da85982bfc73d32e592f52800a7384b5231fd12cbbe845d9a",
+        "version": "0.2",
+        "git_revision": "c19e408549bbafe76005f5cfc0b08f24d7c2bfc4"
+      },
+      "target_skill": null
+    }
+  ],
+  "subject_sources": [
+    {
+      "path": "skill-studies/concise-writing/cases/effective-briefing/fixture/report.md",
+      "sha256": "93c23afd44aab52dfcd2bca53f3db0020a41f650d46d4c59a09595539dc72491",
+      "version": null,
+      "git_revision": "c19e408549bbafe76005f5cfc0b08f24d7c2bfc4"
+    },
+    {
+      "path": "skill-studies/concise-writing/cases/effective-briefing/task.md",
+      "sha256": "fbf576b5f00e154e6ee4618285d96980b1858de992e5390a1e83cf9b03cb1796",
+      "version": null,
+      "git_revision": "c19e408549bbafe76005f5cfc0b08f24d7c2bfc4"
+    },
+    {
+      "path": "skill-studies/concise-writing/prompt-original.md",
+      "sha256": "ec75556bc64e9de7ef0ca76ef50fe2db02021e90c8a855901b6e08a854f4d81e",
+      "version": null,
+      "git_revision": "c19e408549bbafe76005f5cfc0b08f24d7c2bfc4"
+    },
+    {
+      "path": "skill-studies/concise-writing/prompt-control.md",
+      "sha256": "833ee4acdfe9f3e3592ed900a7d6f9212d93bc223c8ccccaee69cb53b4738eaa",
+      "version": null,
+      "git_revision": "c19e408549bbafe76005f5cfc0b08f24d7c2bfc4"
+    },
+    {
+      "path": "skill-studies/concise-writing/cases/skill-original/SKILL.md",
+      "sha256": "4d12a2eb475c6b2ef57e2300c8c07af3f59c1e07b2b82695a3b7669eee1d6d72",
+      "version": null,
+      "git_revision": "c19e408549bbafe76005f5cfc0b08f24d7c2bfc4"
+    }
+  ],
+  "controller_only": []
+}
