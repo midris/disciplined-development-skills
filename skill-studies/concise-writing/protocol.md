@@ -41,22 +41,47 @@ Edited-document word counts, if reported, are descriptive only: no reduction tar
 
 ## Suite and evidence
 
-Conceptual facets only; no fixtures selected or constructed yet. One case may cover several facets.
+Proposed coverage maps to the skill’s named patterns below. These are contextual evidence targets, not eleven independent tests or fixed instructions to delete/retain particular sentences. The unit of judgment remains the complete document under O1–O3; improving layout and readability must also be assessed. Expected effects and valid alternatives must be justified by the eventual source, audience and task before collection.
+
+| Skill pattern / category | Proposed coverage and discriminating evidence |
+|---|---|
+| Meta-framing | A: remove narration that contributes nothing, while preserving a genuinely orienting introduction. |
+| Say-it-twice | A: consolidate adjacent restatement with no added purpose; contrast with useful reinforcement in the same document. |
+| Cross-section duplication | A: reconcile a repeated explanation across separated sections, with no distinct reader need for two copies. A sentence-only cleanup must leave an identifiable whole-document defect. |
+| Over-sectioning | A: improve fragmented headings/lead-ins and reading order; permit multiple effective layouts. |
+| Unrequested elaboration | A: distinguish unrequested advice/speculation from supplied facts and useful explanation; do not introduce unsupported elaboration or remove decision-relevant information. |
+| Emphasis/hedge inflation | A: reduce empty emphasis and inflated qualifiers without weakening real uncertainty or important warnings. |
+| Closing recaps / navigation | B: retain their useful function in a well-organized briefing, including a recap if its length and use justify one. Not every source needs a recap. |
+| Deliberate repetition | A and B: preserve reinforcement where a key point is useful in two reading contexts; do not demand identical wording or placement. |
+| Orienting context | A and B: preserve the connections a reader needs to follow the argument or sequence. |
+| Rationale | A and B: preserve supplied reasons and trade-offs; no requirement to invent a new decision rationale. |
+| Spec/plan completeness | Deferred with plan/spec composition; not silently covered by ordinary prose editing. |
+
+Two candidate case designs combine the existing facets. They are proposals, not prepared fixtures or qualified criteria.
 
 | Case ID / definition | Membership | Covered obligations | Exposure | Limits |
 |---|---|---|---|---|
-| Unselected: verbose agent output with local and cross-section padding | proposed facet | O1–O4 | development | Identify avoidable burden in context; do not treat repeated wording or ideas as defects by themselves. |
-| Unselected: hard-to-follow organization and layout | proposed facet | O1–O4 | development | Source-supported reading difficulty must improve; allow different effective structures and preserve helpful explanation. May share a case with verbose agent output. |
-| Unselected: qualifications, rationale and useful repetition | proposed facet | O1–O5 where uncertainty exists | development | Include meaningful explanatory prose and reinforcement of important points; judge their contribution to the whole document, not mere survival of facts. |
-| Unselected: already-concise text | proposed facet | O1–O4 | development | No required cut percentage; unnecessary edits may be harmful. |
+| A: verbose, poorly organized agent recommendation | recommended design | O1–O4; O5 only where observable | development | Reader needs the recommendation, reasons, caveats and next action. Include both purposeless restatement and useful reinforcement, plus separated duplication and a real structural difficulty. Cover other cut patterns only where they fit naturally. |
+| B: already-effective agent briefing | recommended design | O1–O4; O5 only where observable | development | Useful context, explanation and repetition must not be damaged by unnecessary compression. Faithful unchanged or lightly edited output can pass; source choice must substantiate its effectiveness. |
 
-Evidence will retain the complete supplied text, delivered edit and available drafting/comparison trace; the harness may capture intermediate states without requiring the subject to produce separate draft and final files. Deterministic tools may supply file/diff/word-count facts; semantic preservation and usefulness require case rules and evidence-backed judgment. No checker or reference answer is yet qualified.
-Coverage excludes the compositions and discovery behavior listed above. No held-out claim is selected. Agree the facets before choosing source documents or inspecting historical scenarios.
+Before freezing cases, identify source passages or semantic units, explain their contribution or avoidable burden, and record acceptable transformations and the consequence of a miss. Predeclare semantic expectations, not exact phrases or a preferred layout. Local instances supply evidence for document-level judgments; their counts are not an extra score. Actual coverage may be narrower than the proposed map if combining every pattern would make A artificial; disclose that rather than manufacture eleven isolated traps.
+
+Qualify the case rules against constructed whole-document variants before collection: at least two faithful effective edits with different organization/wording; a local-only cleanup that leaves global duplication; an over-trim that loses useful framing, rationale or emphasis; and a fact-preserving edit that leaves A hard to follow. B must allow its already-effective source and reject a shorter version that harms comprehension. Combine variants where they test the same boundary. These are controller examples, not model observations or a new calibration campaign. Agree the conceptual coverage first, then choose sources and develop/qualify their contextual rules together; exact expected effects cannot be fixed without a document’s context.
+
+Evidence will retain the complete supplied text, delivered edit and available drafting/comparison trace; no separate draft/final files are required of the subject. Deterministic tools may supply file/diff/word-count facts; semantic judgments remain with the active session. No source document, criterion card, checker or qualification variant has yet been prepared or validated. Composition, discovery and held-out claims remain outside this proposal.
 
 ## Execution scope and authorization
 
 Owner selected CW on 2026-09-17: “let’s go with CW”. This authorizes study preparation, not subject calls, skill edits or adoption.
-No batch, configurations, manifests, commands, run order or repetitions are selected. Propose original/no-target conditions for a contribution baseline after the contract and cases are agreed; a version comparison is a later separately scoped question.
+No batch, configurations, manifests, commands, run order or repetitions are approved. For a contribution baseline, propose original/no-target conditions with two executions per case/condition, descriptive-only and no automatic replacement. Facets do not each require a separate case. The existing plan’s forty-subject-call ceiling has ten unspent calls; this comparison of designs does not allocate them to CW.
+
+| Candidate design | Subject calls | Position against the existing ten-call headroom | Coverage trade-off |
+|---|---:|---|---|
+| Two cases A/B × two conditions × two repetitions | 8 | 2 left if separately authorized | Recommended starting scope: combine editing difficulties in A and test restraint in B; limited replication and contexts. |
+| Three cases × two conditions × two repetitions | 12 | Exceeds headroom by 2 | Separates some editing difficulties into another context; requires a ceiling/allocation decision before dispatch. |
+| Four cases × two conditions × two repetitions | 16 | Exceeds headroom by 6 | One case per former facet is not required and still would not establish population reliability. |
+
+An eight-call baseline would bring total subject use to 38/40. A later matching eight-call original/candidate comparison would bring it to 46/40; Claude or other effort experiments also need explicit capacity and scope. Do not spend the baseline allocation while implying those later experiments already fit. Any actual setup/qualification call would also be charged and included in the proposal; none is currently selected.
 Sol-low remains the suggested initial setting for continuity with process development; no CW model/effort is frozen. Desired Claude and effort-level follow-ups belong in the active plan and have no dispatch scope yet.
 Reuse the accepted version-1 formats and existing runner/document tools. Verify changed runtime/input assumptions and evidence requirements before proposing collection; no wholesale requalification or new tooling is selected.
 
@@ -64,9 +89,20 @@ Reuse the accepted version-1 formats and existing runner/document tools. Verify 
 
 Canonical checkout: `/Users/simon/work/personal/disciplined-development-skills`.
 No raw bundles or attempt indexes exist. A durable absolute evidence location and recovery decision must be recorded before collection; SSR’s accepted single-host risk is not silently extended to CW.
-Calls spent: zero. No CW call/time ceiling is accepted and no unused SSR allocation transfers automatically.
-Current preparation booking: 10 active minutes for source inspection, original preservation, contract drafting, ambiguity review, owner clarification, verification and publication, excluding owner-wait. Before case construction, propose the preparation/collection forecast within a separate CW scope. No whole-study fit or repetition budget is claimed.
+CW calls spent: zero. No CW allocation or new ceiling is accepted; unused SSR capacity is not automatically authorized for CW. For conservative planning against the existing envelope, reconcile the closed SSR totals with all CW preparation rather than resetting the budget. The closed SSR protocol records 688 active minutes. Together with the 15 CW minutes below, conservative combined use is 703/1,200 minutes, leaving 497; that is planning headroom, not a newly approved CW allocation.
+Current CW preparation booking: 15 active minutes for source inspection, original preservation, contract drafting, owner clarification, review response and verification, excluding owner-wait. The following provisional forecast accompanies the recommended eight-call design; estimates are not measured timings or spending authorization.
+
+| Work | Estimate | Basis |
+|---|---:|---|
+| Source selection, two cases and criterion cards | 60 | New semantic tasks under the accepted contract; reuse current formats. |
+| Constructed variants and setup/evidence checks | 30 | Qualify contextual boundaries and changed inputs without provider calls. |
+| Eight subject calls: model waits | 20 | Planning allowance informed by SSR comparison’s 16.1 minutes for twelve calls; CW duration is unmeasured. |
+| Preservation, assessment and aggregate report | 45 | Eight bundles and semantic judgments; shared tools already exist. |
+| Review and closeout | 15 | Findings, corrections and deferred-adoption disposition. |
+| **Total** | **170** | Provisional proposed-baseline forecast only; revisit before freeze if source complexity changes. |
+
+The proposed 170 minutes fit within the conservative 497-minute headroom, leaving 327 if that forecast holds. This forecast excludes a skill rewrite, version comparison, Claude pass and effort benchmarks because none is selected. Their allocation and forecast must be presented when proposed, not hidden in the baseline remainder.
 
 ## Results and decision
 
-No observations or batch assessments. CW’s intended outcomes and process-only policy are settled. Next: make the conceptual facets concrete in a small case proposal, with audience, purpose, acceptable alternatives and observable failure boundaries. Skill adoption remains deferred under the owner’s broader direction.
+No observations or batch assessments. CW’s intended outcomes and process-only policy are settled. Next: review the two-case design and capacity proposal, then select source documents and qualify contextual criteria and acceptable alternatives before collection. Skill adoption remains deferred under the owner’s broader direction.
