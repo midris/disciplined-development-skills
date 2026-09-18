@@ -3,7 +3,7 @@
 Format version: `1`
 Assessment ID: `contribution-baseline-01`
 Study / batch: `concise-writing` / `contribution-baseline-01`
-Status: complete whole-document reassessment under CW-assessment-2; same eight executions, no new calls.
+Status: prior policy-2 report pending policy-3 record reconciliation; existing pass outcomes and measured lengths remain unchanged.
 Scope and acceptance rules: [protocol](protocol.md#contribution-baseline-contribution-baseline-01) at Git `d9e822717fb5efeeebbb6b06e3b8cb6fe68e9dbc`.
 Attempt index: [contribution-baseline-01-run-index.json](contribution-baseline-01-run-index.json) at Git `a2594b5767078e2560f5316641b3f572dc2c5f63`, SHA-256 `0f3115fe28ea7b3cd1eda20555e836a94474faa944b5fdea5ebdaa5043d0cbc9`.
 Assessor: Codex active session with construction history, prior judgments and owner feedback available. This is neither independent nor blind validation.

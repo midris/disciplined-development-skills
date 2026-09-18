@@ -5,28 +5,35 @@
 Format version: `1`
 Study ID: `concise-writing`
 Case ID: `effective-briefing`
-Definition version: `2`
+Definition version: `3`
 Status: owner-approved whole-document reassessment of contribution-baseline-01; no new collection.
-Purpose and realistic failure opportunity: Shorten an already-effective briefing while retaining its correctness and usefulness.
-Protocol coverage and membership/exposure: [suite](../../protocol.md#suite-and-evidence), selected development case; O1–O3 assessed through F1–F4, O4–O5 process unscored. Author and assessor share construction history; no held-out or independent-validation claim.
+Purpose and realistic failure opportunity: Edit an already-effective briefing while retaining correctness and usefulness; prefer shorter text without requiring unnecessary cuts.
+Protocol coverage and membership/exposure: [suite](../../protocol.md#suite-and-evidence), selected development case; O1–O3 assessed through F1–F3; length reported separately, O4–O5 process unscored. Author and assessor share construction history; no held-out or independent-validation claim.
 
 ## Inputs and setup
 
 Subject inputs: [task](task.md), complete [source document](fixture/report.md), and, for original only, the [preserved CW skill](../skill-original/SKILL.md).
 The [original configuration](original.json), [control configuration](control.json) and [collection manifest](manifest.json) retain the actual supplied context.
-Definition 2 and policy 2 are controller-only reassessment rules, never supplied to the subjects.
+Definition 3 and policy 3 are controller-only reassessment rules, never supplied to the subjects.
 Both sources are fictional study material; subjects edit prose and do not execute the actions it describes.
 Setup validity requires evidence of the intended source bytes, skill condition, matched surrounding context, output path and captured final workspace.
 Resolve capture/setup uncertainty separately; with valid setup assess the saved report, including an unchanged or partially edited report, under every factor.
 
 ## Rules and evidence
 
-Policy: [CW-assessment-2 controller copy](../../assessment-policy.txt), derived verbatim from the [protocol policy body](../../protocol.md#current-cw-assessment-policy).
+Policy: [CW-assessment-3 controller copy](../../assessment-policy.txt), derived verbatim from the [protocol policy body](../../protocol.md#current-cw-assessment-policy).
 Inspect the complete source and complete saved output before assigning any judgment. The source is factual authority.
 The reader needs to decide on Thursday whether to invite four additional teams to an opt-in search preview, using limited evidence and readiness checks, while keeping any default change or wider rollout subject to a later decision. Compare how the complete source and edit support that decision, the current preview context, conditional invitations and follow-up. Read an opening recommendation together with its conditions and approval gate. Consolidation or implicit continuity is not automatically a loss: establish what the whole document now leads the reader to understand or do.
 A local difference is evidence to investigate, never an independent score. Justify each factor from the document’s overall meaning and use; identify an actual reader consequence before declaring a loss.
 Historical examples and qualification judgments belong to policy 1 and are not answer keys for this reassessment.
 Reliable evidence of an absent or empty delivered document fails F1–F3; reduced word count alone cannot produce a pass. Missing capture is not proof of absence.
+
+### Length observation (unscored)
+
+Use wc -w on the complete source and delivered Markdown files. Report both counts and the signed difference.
+Shorter is preferred; unchanged is acceptable; longer is visibly flagged for consideration in context, without an automatic failure.
+Additional words may improve explanation or usability. Assess those effects under F1–F3; length is neither a substitute for those judgments nor a fourth criterion.
+If length cannot be measured, report it as unavailable without inventing a count or changing an otherwise supported functional result.
 
 ## Criteria
 
@@ -75,24 +82,9 @@ Alternatives: faithful paraphrase, consolidation, relocation, useful repetition 
 Consequence: Readability is required for an overall pass.
 Overlap: a shared defect may affect multiple factors but counts as one failed execution; do not infer another factor’s failure automatically.
 
-### F4: Output is shorter than the original
-
-Basis: [skill](../skill-original/SKILL.md) and owner’s [assessment policy](../../protocol.md#assessment-policy); no new subject instruction.
-Coverage: Owner’s explicit shorter-output requirement; O2’s concision purpose.
-Dimension: functional
-Applies to: `original`, `control`
-Judgment unit: complete delivered document compared with the complete source.
-Required evidence: wc -w on the complete source and saved output using the same command.
-Met: Output word count is strictly less than source word count.
-Not met: Output word count is equal to or greater than source word count.
-Insufficient evidence: available source/output evidence cannot settle this factor; identify the unresolved question rather than forcing a pass or failure.
-Alternatives: faithful paraphrase, consolidation, relocation, useful repetition and any effective layout; no sentence-matching or preferred answer.
-Consequence: Shorter length is required, but cannot compensate for any other failed factor.
-Overlap: a shared defect may affect multiple factors but counts as one failed execution; do not infer another factor’s failure automatically.
-
 ## Limits
 
-All four factors must be met. Process is unscored; no P1 criterion applies.
+All three functional factors must be met. Length is reported separately. Process is unscored; no P1 criterion applies.
 The owner selected this rule after seeing the existing outputs. It is a transparent reassessment, not a prospectively frozen evaluation or independent confirmation.
 Two short constructed software updates cannot establish performance on long documents, other audiences, discovery or plan/spec composition.
 Per-case/condition counts describe the observed repetitions, not population reliability or an adoption decision.
