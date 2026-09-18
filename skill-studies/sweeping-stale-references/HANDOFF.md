@@ -24,9 +24,10 @@ The batch assessment records an unresolved Shiv category boundary: its P3 count 
 The [core-baseline scope](protocol.md#core-baseline-core-baseline-01) is spent: no retry, replacement, extension or skill edit is authorized. Capture-2 and runtime-1 were applied prospectively under recorded approval; both excluded attempts remain charged. The [runtime diagnosis](runtime-diagnosis.md) and [capture diagnosis](capture-diagnosis.md) explain the fixes; do not reopen those approvals or exclusions.
 
 The approved `comprehensive-comparison-01` scope is spent; its [index](comprehensive-comparison-01-run-index.json) and assessment contain the completed comparison. SSR remains closed with adoption deferred.
-The owner-selected second study, CW, has also completed its approved [contribution baseline](../concise-writing/contribution-baseline-01-assessment.md).
+The owner-selected second study, CW, completed collection of its approved [contribution baseline](../concise-writing/contribution-baseline-01-assessment.md).
+Its policy-1 assessment now awaits whole-document reassessment under the owner’s revised [scoring direction](../concise-writing/protocol.md#assessment-policy): correctness, comparative effectiveness, readability and shorter length. Correctness/effectiveness are hard gates; editing process is unscored. All four factors are required for a pass. The active plan records the reassessment work.
 All eight attempts have verified complete external bundles and canonical results; no retry, replacement or setup exclusion occurred.
-Both conditions pass agent-recommendation twice. After correcting the conditional-recommendation judgment, effective-briefing passes are original 1/2 and control 0/2; the remaining failures concern existing-team permission. The assessment records the correction and limited contribution conclusion.
+Policy-1 outcome totals are historical pending reassessment; do not carry forward sentence-omission failures without evaluating the complete document’s correctness and effectiveness.
 The [CW protocol](../concise-writing/protocol.md) owns current accounting and disposition; its [index](../concise-writing/contribution-baseline-01-run-index.json) pins inputs, authority and results.
 No collection call remains authorized, and no skill rewrite or adoption is approved.
 Use existing tooling and accepted formats for any subsequently selected work; do not reopen these completed collections as a prerequisite.

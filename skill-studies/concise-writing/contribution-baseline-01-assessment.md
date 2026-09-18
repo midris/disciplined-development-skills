@@ -3,7 +3,7 @@
 Format version: `1`
 Assessment ID: `contribution-baseline-01`
 Study / batch: `concise-writing` / `contribution-baseline-01`
-Status: eight approved attempts collected and assessed; descriptive comparison complete.
+Status: policy-1 assessment; superseded as the current conclusion by the owner’s revised whole-document scoring direction. Reassessment of the same eight retained attempts is pending; see the [protocol](protocol.md#assessment-policy).
 Scope and acceptance rules: [protocol](protocol.md#contribution-baseline-contribution-baseline-01) at Git `d68e54f4db53931829cf692c33ec7ad95fc191ed`.
 Attempt index: [contribution-baseline-01-run-index.json](contribution-baseline-01-run-index.json) at Git `4c34ed7849da09ace4231f447dc90698b30c48e8`, SHA-256 `9c3c77894911c7cc695793cd7e4bdf556aec5bbb7c7a629199a15fe7e159f9d2`.
 Assessor: Codex active session, continuing with owner decisions, skill, constructed cases/examples and prior work available.

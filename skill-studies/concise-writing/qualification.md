@@ -1,5 +1,7 @@
 # CW criterion examples
 
+Historical policy-1 qualification only. The current [policy](protocol.md#assessment-policy) requires four whole-document factors, including shorter output; these examples are not current scoring authority. Original collection manifests retain the historical bytes.
+
 Status: case design owner-accepted; constructed examples checked in the active session. Collection is approved; committed input freeze remains outstanding. No subject executions.
 Authority: [protocol](protocol.md), [recommendation case](cases/agent-recommendation/assessment.md) and [briefing case](cases/effective-briefing/assessment.md).
 

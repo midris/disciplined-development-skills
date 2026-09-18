@@ -2,7 +2,7 @@
 
 Format version: `1`
 Study ID: `concise-writing`
-Status: contribution-baseline-01 complete; all eight attempts preserved and assessed. Adoption remains deferred; no further collection or skill edit is authorized.
+Status: collection complete; eight attempts retained. Whole-document reassessment pending under the owner’s revised scoring direction. Adoption remains deferred; no further collection or skill edit is authorized.
 Plan: [active plan](../../plans/2026-09-11-model-driven-skill-testing.md#current-next-action)
 General spec: [testing framework](../../plans/specs/2026-09-11-model-driven-skill-testing-framework.md)
 
@@ -32,16 +32,23 @@ Owner decisions: select CW, govern concision by document effectiveness as clarif
 
 ## Assessment policy
 
-Policy direction: owner-accepted; case-specific criteria and policy snapshot frozen by the linked manifests.
-Policy identity: **CW-assessment-1**. The shared [controller policy copy](assessment-policy.txt) derives verbatim from the body of the following subsection, excluding its heading. The protocol remains authoritative; the copy is a fixed assessment input, not an independently edited policy. This follows the accepted format and keeps routine accounting/status edits out of the policy hash. Before freeze and each dispatch, verify body/copy equality; changes to scoring rules require a prospective policy amendment, not a metadata refresh.
+Owner clarification, 2026-09-18: require all four factors and emphasize correctness and comparative effectiveness.
+This replaces the earlier absence-of-padding criterion, scored process criterion and descriptive-only treatment of length.
+Reassess the same eight retained outputs under this revised contract; no new model calls, subject-input changes or skill edit are authorized.
+Original collection manifests retain the actual frozen collection context; separate reassessment manifests preserve those subject-input identities and identify the new rules.
+Git preserves prior policy and result versions. Historical qualification examples illustrate policy 1 and are not current scoring authority.
+
+Policy identity: **CW-assessment-2**. The [controller policy copy](assessment-policy.txt) derives verbatim from the following subsection body, excluding its heading.
+The protocol owns the policy; verify body/copy equality when freezing assessment inputs.
 
 ### Current CW assessment policy
 
-Proposed functional criteria cover O1–O3, with source-supported case boundaries. Judge whether the complete document is concise and maintains its effectiveness, not whether it achieves maximum compression. Loss or distortion of meaning, useful emphasis or framing fails the applicable functional criterion even if every isolated fact survives. Local differences prompt investigation; they are not independent deductions for extra words or repeated points. Different effective phrasings, structures and lengths may meet the same criteria. Assess ease of consumption from the complete document and its intended use, not counts of headings, bullets, paragraphs or repeated phrases. Preserving facts while leaving the identified reading or layout difficulty unresolved does not satisfy O3; cutting text cannot compensate for that failure.
-Owner-approved policy: judge the delivered document on its merits. Record O4–O5 process observations separately; a process-only defect is visible and non-blocking when the artifact outcome succeeds. If an omission also harms the document, judge that actual outcome defect under O1–O3, without counting two failed executions. Missing process evidence remains insufficient evidence, not proof of a skipped step. Consistently good documents are acceptable even when the prescribed process is not consistently followed.
-Allow different faithful edits and justified preservation. Use insufficient evidence separately from observed failure. The active session applies fixed criterion cards and labels its shared context; no separate evaluator qualification is proposed.
-Use the spec’s per-case/condition aggregation, counting met, not met and insufficient evidence among valid setups and reporting excluded attempts separately. Assess consistency by case across the declared repetitions, keeping individual defects visible. Initial results are proposed as descriptive-only; the owner’s emphasis on consistency does not establish a sample size, numerical acceptance threshold or population reliability claim. No word-count target is selected.
-Edited-document word counts, if reported, are descriptive only: no reduction target, repetition quota, brevity bonus or shorter-output tie-breaker. A longer effective edit can pass while a shorter damaging edit fails. This is distinct from comparing the size of skill instructions while checking preserved behavior.
+Assess the complete delivered document against the complete source for its intended reader and purpose. Score exactly four functional factors: F1, the entire output remains correct; F2, it is at least as effective as the original; F3, it is readable and easy to understand; F4, it is shorter than the original. All four are required for an overall pass.
+Correctness and comparative effectiveness are the primary gates. If either fails, concision has been achieved at the expense of a usable, faithful document and the execution fails regardless of readability or length reduction. Do not average scores or reward greater compression to offset any failed factor.
+Evaluate meaning, evidence, qualifications, reasoning and the reader’s ability to decide and act across the whole document. A changed, absent or repeated sentence is a reason to inspect context, not an independent deduction. Explain any loss of correctness or effectiveness in terms of what the complete edit communicates or enables compared with the complete source. Accept equivalent wording, relocated information, consolidated framing and useful repetition. Do not impose a preferred layout, sentence checklist or separate absence-of-padding score.
+Judge readability from the complete document’s organization and connections for its intended reader. Measure shorter length with the same wc -w command on the complete source and delivered Markdown files, including headings and list markers; F4 requires output words < source words. No minimum percentage reduction or extra credit for greater reduction applies. An unchanged or longer document fails F4 even if F1–F3 pass. This is an owner-selected outcome requirement, not a claim that the original skill guarantees shortening every already-effective source.
+Editing process is unscored. Traces may establish setup or explain observations, but process compliance cannot add or remove an outcome pass. Missing process evidence does not establish a skipped step. Score the saved document, not an unsaved edit or completion claim. Resolve missing capture as setup uncertainty; do not infer an empty document from missing evidence.
+Record each factor as met, not met or insufficient evidence. Any failed factor gives an overall failure; otherwise any unknown gives insufficient evidence; otherwise all four met gives a pass. Aggregate counts by case, condition and factor across all valid setups, with exclusions separate. These small development samples are descriptive; no population reliability threshold, independent evaluation or causal contribution claim follows from the counts.
 
 ## Suite and evidence
 
@@ -61,18 +68,19 @@ Selected coverage maps to the skill’s named patterns below. These are contextu
 | Rationale | A and B: preserve supplied reasons and trade-offs; no requirement to invent a new decision rationale. |
 | Spec/plan completeness | Deferred with plan/spec composition; not silently covered by ordinary prose editing. |
 
-Two accepted cases combine the existing facets. Both use newly constructed fictional prose, not observed agent outputs. Their criterion cards include source-specific expectations and share the accepted whole-document policy; the [worked examples](qualification.md) document active-session boundary checks, not independent validation or model observations.
+Two accepted cases combine the existing facets. Both use newly constructed fictional prose, not observed agent outputs. Their current criterion cards apply the four whole-document factors. The [worked examples](qualification.md) are historical policy-1 boundary checks, not current scoring authority, independent validation or model observations.
 
 | Case ID / definition | Membership | Covered obligations | Exposure | Limits |
 |---|---|---|---|---|
 | A: [agent-recommendation](cases/agent-recommendation/assessment.md) | selected | O1–O4; O5 only where observable | development | Reader needs the recommendation, reasons, caveats and next action. Include both purposeless restatement and useful reinforcement, plus separated duplication and a real structural difficulty. Cover other cut patterns only where they fit naturally. |
-| B: [effective-briefing](cases/effective-briefing/assessment.md) | selected | O1–O4; O5 only where observable | development | Useful context, explanation and repetition must not be damaged by unnecessary compression. Faithful unchanged or lightly edited output can pass; source choice must substantiate its effectiveness. |
+| B: [effective-briefing](cases/effective-briefing/assessment.md) | selected | O1–O4; O5 only where observable | development | Useful context, explanation and repetition must not be damaged by unnecessary compression. A shorter edit must retain the source’s effectiveness; unchanged output now fails F4. |
 
-The case cards identify source passages, their contribution or avoidable burden, acceptable transformations and consequences without prescribing exact phrases or layout.
-The [qualification record](qualification.md) checks two differently organized faithful recommendation edits, local-only cleanup leaving global duplication, harmful over-trimming, and an already-effective briefing that may pass unchanged.
-These are constructed controller examples, not model observations or independent validation.
-
-Retained evidence includes the complete supplied text, delivered edit and available drafting/comparison trace; no separate draft/final files are required of the subject. Deterministic tools may supply file/diff/word-count facts; semantic judgments remain with the active session. Source documents, tasks, four criterion cards per case and eight constructed document judgments are accepted for collection, with saved-file boundary examples distinguishing unchanged/partial output, absent output and incomplete capture. The cards cover F1–F3 and non-blocking P1; O5 remains a conditional observation, with its coverage limit explicit. An ambiguous passage could broaden observation opportunities but would not establish unresolved model uncertainty. This initial batch prioritizes artifact quality; defer a targeted uncertainty case until that procedural coverage is needed. No new checker is needed. Configurations, frozen manifests, exact commands and offline setup/evidence checks are recorded below. The manifests pin the full input revision and have frozen status. Composition, discovery and held-out claims remain outside this batch.
+The case cards describe each reader’s decision and purpose, without independently scoring source passages.
+Retained evidence includes complete source and output files and available execution traces.
+The current cards score F1–F4; O4–O5 remain unscored process context.
+The historical [qualification record](qualification.md) predates the owner’s requirement that the output be shorter and does not qualify policy 2.
+The revised policy is applied by the active session to the same saved evidence; no new deterministic checker or evaluator call is needed.
+Configurations and collection manifests below preserve the actual supplied inputs. Composition, discovery and held-out claims remain outside this batch.
 
 ## Execution scope and authorization
 
@@ -112,7 +120,7 @@ Replace `CONFIG` only with the row’s value. The namespace has been created and
 Inputs: [recommendation manifest](cases/agent-recommendation/manifest.json) and [briefing manifest](cases/effective-briefing/manifest.json) freeze all 34 identities at full input commit `c19e408549bbafe76005f5cfc0b08f24d7c2bfc4`. Git retrieval and every hash passed; collection readiness passed for contribution-baseline-01. Policy/body equality and all four offline configuration/workspace checks passed again. The frozen manifests were committed before dispatch. Actual attempt records pin the invocation-authority protocol and full runner revision. The frozen protocol records approval and pre-freeze state; this live protocol owns current accounting. Policy and criteria bytes remain unchanged by status updates. Frozen case cards and qualification retain their preparation-state wording as identified inputs; this live protocol owns current status.
 Runtime checked during preparation: full runner revision `e3c3a5c47a4ae3939ae9e7f7fdce667b3fe16166`; its runner tree is unchanged from SSR’s qualified `d899a817108330c4dcba4007f3383294a87d2f9a`. Codex CLI 0.154.0 resolves to `/opt/homebrew/Caskroom/codex/0.154.0/bin/codex`, SHA-256 `4f85982624b3898c8991cb80c0981b2aa71070e3537046c9a95950318a95afcc`; host Python is 3.14.7. Recheck these identities before collection and record the full approved runner revision; requested model names do not expose an immutable model revision.
 Offline checks: all four configurations loaded and copied the exact declared files; paired common bytes/settings matched; prompt differences were limited to the CW instruction. Disposable Git baselines preserved each original document and exposed a subsequent edit in `git diff`. Generated provider arguments retain private-profile configuration flags, disabled tool network and the restricted PATH. No provider invocation was made. These checks reuse the [SSR execution qualification](../sweeping-stale-references/protocol.md#comparison-comprehensive-comparison-01) for the unchanged runtime; they do not prove new CW model behavior or exhaustive host read isolation.
-Setup/evidence checks during collection: verify supplied hashes and the intended condition; in original, retained tool-response content must establish complete CW text exposure before editing. Match any `provider-session.jsonl` used as evidence to the stdout thread ID and fixture cwd, and verify its inventory hash; a filename or claimed read alone is insufficient. Inspect retained guidance for contamination and final `report.md` for artifact quality. Unexpected/missing exposure or unusable capture is a setup issue requiring inspection, not a failed CW criterion. P1 still separately records observable drafting/comparison and local/global review, with missing process evidence unknown. Keep the complete raw trace, even when it does not establish those steps.
+Setup/evidence checks during collection: verify supplied hashes and the intended condition; in original, retained tool-response content must establish complete CW text exposure before editing. Match any `provider-session.jsonl` used as evidence to the stdout thread ID and fixture cwd, and verify its inventory hash; a filename or claimed read alone is insufficient. Inspect retained guidance for contamination and final `report.md` for artifact quality. Unexpected/missing exposure or unusable capture is a setup issue requiring inspection, not a failed CW criterion. Drafting/comparison and local/global review remain unscored observations under policy 2. Keep the complete raw trace, even when it does not establish those steps.
 Evidence/index: [attempt index](contribution-baseline-01-run-index.json) records all eight actual attempts, their authority/manifest pins, charges, verified complete bundles and canonical execution results. All eight have valid setup. The [batch assessment](contribution-baseline-01-assessment.md) reconciles all results; no provider calls remain authorized by this batch.
 
 ## Storage and accounting
@@ -132,15 +140,7 @@ Current combined accounting: **773 active minutes booked; 427 minutes remain und
 
 ## Results and decision
 
-The [contribution-baseline-01 assessment](contribution-baseline-01-assessment.md) records eight valid setups and complete coverage, with no retries, replacements or exclusions.
-For agent-recommendation, original and control each pass 2/2 functional outcomes.
-For effective-briefing, original passes 1/2 and control 0/2; three edits omit the six existing teams’ permission to continue.
-After owner feedback, the conditional recommendation is accepted in the context of each complete document’s checks and Thursday approval gate.
-The assessment corrects the earlier stance-change finding under the unchanged whole-document rule; Git preserves earlier judgments.
-All outputs meet contextual concision and readability; all four original executions meet the observable process criterion.
-Preservation defects remain functional failures despite those successes.
-
-Recommendation is tied; briefing has one additional successful original execution. This small descriptive difference does not establish a reliable or causal CW advantage.
-The framework supported prose assessment with the existing runner and formats, without a separate evaluator or new repository tooling.
-A possible future rewrite target is preserving continuing permissions in already-effective prose; any rewrite/comparison needs separate scope, budget and approval.
-The approved collection is spent, skill bytes are unchanged and the owner’s adoption deferral remains in force.
+Whole-document reassessment of the eight retained attempts under CW-assessment-2 is in progress.
+The [batch assessment](contribution-baseline-01-assessment.md) will report all four required factors for every output.
+Prior policy-1 counts are historical; no current contribution or rewrite conclusion should be drawn from them.
+Collection is closed, skill bytes are unchanged and adoption remains deferred.
