@@ -1,11 +1,11 @@
 {
   "format_version": "1",
-  "manifest_id": "cw-effective-briefing-assessment-2",
+  "manifest_id": "cw-effective-briefing-assessment-3",
   "study_id": "concise-writing",
   "case_id": "effective-briefing",
   "status": "frozen",
-  "created_at": "2026-09-18T07:44:53.471457+00:00",
-  "source_revision": "d9e822717fb5efeeebbb6b06e3b8cb6fe68e9dbc",
+  "created_at": "2026-09-18T08:05:00.745532+00:00",
+  "source_revision": "2718243098a20d98c552427ccd1f09d5fd02dec3",
   "authorities": {
     "spec": {
       "path": "plans/specs/2026-09-11-model-driven-skill-testing-framework.md",
@@ -14,7 +14,7 @@
     },
     "protocol": {
       "path": "skill-studies/concise-writing/protocol.md",
-      "sha256": "f4e570cadef8a961699c912f9b76ab0d7460779a41c3733b759dbc9a8f957e36",
+      "sha256": "69f04a4a07fd93dd67aaa36239a5080eaa1574cb5b457483ad8fd0218bfef7b6",
       "version": "1"
     },
     "format_contract": {
@@ -29,14 +29,14 @@
     },
     "policy": {
       "path": "skill-studies/concise-writing/assessment-policy.txt",
-      "sha256": "1b32b46130c8a1cba84125b2ee25c2203505c5f8138f9e4feb6c2ceca4a9190a",
-      "version": "CW-assessment-2"
+      "sha256": "44d94d73f0ba9287068bb237078c1435e2c5b173ea918d116526a6a79facc91e",
+      "version": "CW-assessment-3"
     },
     "criteria": [
       {
         "path": "skill-studies/concise-writing/cases/effective-briefing/assessment.md",
-        "sha256": "7d6a5d50240c1859e49f3c954c7c1d52054695028dae2b406d0bb6f1a41da46c",
-        "version": "2"
+        "sha256": "b84e8d675328c1be24e7765616dd5e060b521fda9a893bdf06e0c2ace00546b5",
+        "version": "3"
       }
     ]
   },
