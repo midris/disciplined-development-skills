@@ -2,7 +2,7 @@
   "schema_version": "1",
   "record_kind": "execution result",
   "result_id": "contribution-baseline-01-effective-briefing-original-1",
-  "assessed_at": "2026-09-18T08:05:40.328983+00:00",
+  "assessed_at": "2026-09-18T08:37:54.801851+00:00",
   "run_id": "20260918T022425145Z-cw-effective-briefing-original-15aee229-607f-4851-8a82-cf8f0aca68f0-xzio0i_c",
   "condition": "original",
   "assessor": {
@@ -10,13 +10,13 @@
     "method": "active session",
     "model": null,
     "session_id": "01a0b24b-13bf-7981-b0e8-a9b7111bd9f5",
-    "context": "Owner-directed whole-document reassessment under CW-assessment-3 after review of the earlier judgments. Active session has construction history, prior results and owner feedback; neither blind, independent nor prospectively fixed assessment. Same eight executions, no new calls."
+    "context": "Active-session policy-4 reassessment of all eight retained complete outputs against their complete sources, after owner-approved review clarified consumption burden under F3 while preserving the F2 source comparison. Construction history, prior judgments and external review are available; this is retrospective, not blind or independent evaluation. No new subject calls."
   },
   "manifest": {
     "path": "skill-studies/concise-writing/cases/effective-briefing/assessment-manifest.json",
-    "sha256": "353e6e309c33b685b13e9f1ba1588d6c27029e123e85f02e4b9203e21bc67e5b",
+    "sha256": "ee6bd63bb60807f10c7d0effb7452d100d7f4ffd7b9a2555e62c5a98cee63d92",
     "version": "1",
-    "git_revision": "e3d9378c1a7ec82b25a47dd78e7c96a34ddea66e"
+    "git_revision": "c392b81ea2237c8cd67072527ea639ab684629e4"
   },
   "evidence": [
     {
@@ -62,7 +62,7 @@
         "sha256": "cc9dfa0e0d045a5afbfebdb59ebe4ffec1cd17915536c3acd1f4f407f3866622",
         "version": null
       },
-      "selector": "Complete saved output, read against the complete source under policy 3; wc -w measures both full Markdown files."
+      "selector": "Complete saved output, read against the complete source under policy 4; wc -w measures both full Markdown files."
     },
     {
       "id": "source",
@@ -112,7 +112,7 @@
       "id": "F3",
       "dimension": "functional",
       "judgment": "met",
-      "reason": "The short recommendation, grouped evidence and named approval checks support straightforward reading. The final paragraphs clearly connect approval, optional enabling and seven-day review.",
+      "reason": "The conditional recommendation is supported by grouped evidence and named checks, followed by the approval consequence and later review. Scope reminders clarify the difference between invitations and rollout. The complete briefing is easy to consume without the reader having to reconcile scattered or competing instructions.",
       "consequence": "Required whole-document factor satisfied.",
       "evidence": [
         "source",
@@ -121,11 +121,11 @@
     }
   ],
   "functional_result": "met",
-  "procedural_summary": "Editing process is unscored under CW-assessment-3. Preserved execution traces remain available as setup and action evidence; no process criterion contributes to the outcome.",
+  "procedural_summary": "Editing process is unscored under CW-assessment-4. Preserved execution traces remain available as setup and action evidence; no process criterion contributes to the outcome.",
   "observations": [
     {
       "dimension": "functional",
-      "description": "Correctness, comparative effectiveness and readability retain their whole-document judgments; policy 3 moves length out of pass/fail scoring. Earlier briefing sentence-omission findings are withdrawn: contextual continuity and conditional approval do not demonstrate a whole-document correctness or effectiveness loss. Historical judgments remain in Git; actual source, output, run and collection-manifest identities are unchanged.",
+      "description": "Policy-4 whole-document review retains the F1\u2013F3 passing judgments after explicitly assessing unnecessary consumption burden. Length remains separate. Original inputs, saved output, execution and raw evidence are unchanged; prior rule versions and judgments remain in Git.",
       "consequence": "One revised canonical assessment of the same execution, not an additional observation.",
       "evidence": [
         "source",
