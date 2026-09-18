@@ -2,7 +2,7 @@
 
 Format version: `1`
 Study ID: `concise-writing`
-Status: collection and policy-4 reassessment complete; self-review complete. All eight outputs pass F1–F3 and are shorter. Adoption remains deferred; no further collection or skill edit is authorized.
+Status: collection and policy-4 reassessment complete; self-review complete. All eight outputs pass F1–F3 and are shorter. The owner selected a fixed-suite comparison with the existing comprehensive candidate; all eight comparison runs and the necessary budget extension are authorized. Adoption remains deferred.
 Plan: [active plan](../../plans/2026-09-11-model-driven-skill-testing.md#current-next-action)
 General spec: [testing framework](../../plans/specs/2026-09-11-model-driven-skill-testing-framework.md)
 
@@ -124,6 +124,43 @@ Offline checks: all four configurations loaded and copied the exact declared fil
 Setup/evidence checks during collection: verify supplied hashes and the intended condition; in original, retained tool-response content must establish complete CW text exposure before editing. Match any `provider-session.jsonl` used as evidence to the stdout thread ID and fixture cwd, and verify its inventory hash; a filename or claimed read alone is insufficient. Inspect retained guidance for contamination and final `report.md` for artifact quality. Unexpected/missing exposure or unusable capture is a setup issue requiring inspection, not a failed CW criterion. Drafting/comparison and local/global review remain unscored observations under policy 4. Keep the complete raw trace, even when it does not establish those steps.
 Evidence/index: [attempt index](contribution-baseline-01-run-index.json) records all eight actual attempts, their authority/manifest pins, charges, verified complete bundles and canonical execution results. All eight have valid setup. The [batch assessment](contribution-baseline-01-assessment.md) reconciles all results; no provider calls remain authorized by this batch.
 
+## Comparison: comprehensive-comparison-01
+
+Status: owner-approved eight-attempt comparison; no provider calls started. The owner directed proceeding with the existing comprehensive rewrite and explicitly prohibited changing coverage based on that rewrite.
+The two cases, source documents, tasks, prompts, qualification examples and CW-assessment-4 remain the baseline. Candidate inspection must not feed new scenarios or scoring requirements into this comparison.
+
+Candidate: [exact comprehensive snapshot](cases/skill-candidate-comprehensive/SKILL.md), from `docs/comprehensive-skill-cleanup` at Git `13599fb7d3127334b0d07bfe468767e586ec5f9c`, path `skills/concise-writing/SKILL.md`, SHA-256 `f763b43e88c56d6fdc2a96457bc2415cba60b75a1e7cb59cd1b0ebaa3fb199ba`.
+Its complete supplied text is 665 words versus the original's 860 (195 fewer, 22.7%). This measures instruction size, not output quality.
+Use this whole existing version unchanged; no new authoring or deployment is selected. Reading `writing-skills` informs verification, but its failing-control authoring loop does not justify manufacturing a failure or changing this fixed suite. This comparison exercises testing an existing edit; it does not exercise fresh evidence-led authoring.
+
+Question: on the same two ordinary prose-editing tasks, does this candidate preserve correctness, effectiveness and readability, and what useful differences appear relative to fresh original-skill executions?
+Apply F1–F3 unchanged to both versions, with length separate and evidence-backed comparative observations as policy 4 requires. Threshold ties do not prove equal quality; shorter skill or output text does not automatically win.
+This is a whole-version development comparison with the same active-session assessor, not blinded or independent validation. Candidate scope changes outside these cases remain untested; they neither expand coverage nor alter judgments here.
+
+Scope: eight sequential attempts, two cases × original/candidate-comprehensive × two repetitions. Original configurations are reused exactly. Candidate configurations differ only in test ID and the supplied skill source; the mounted path, prompt, source/task bytes and execution settings match.
+Use `codex`, `gpt-5.6-sol`, low effort, workspace-write and the existing 900-second timeout. Fresh original runs control for current execution conditions; the previous original/control baseline remains separate and unchanged. No new no-skill control is needed for this version-comparison question.
+Include all valid setups regardless of outcome; report setup exclusions and unattempted slots separately. No automatic retries or replacements. Stop for uncertain charges, input/runtime drift, contamination, setup defects or preservation failures; a valid behavioral failure alone does not stop the schedule.
+
+| Order | Case | Condition | Repetition | CONFIG |
+|---:|---|---|---:|---|
+| 1 | agent-recommendation | original | 1 | `skill-studies/concise-writing/cases/agent-recommendation/original.json` |
+| 2 | agent-recommendation | candidate-comprehensive | 1 | `skill-studies/concise-writing/cases/agent-recommendation/candidate-comprehensive.json` |
+| 3 | effective-briefing | candidate-comprehensive | 1 | `skill-studies/concise-writing/cases/effective-briefing/candidate-comprehensive.json` |
+| 4 | effective-briefing | original | 1 | `skill-studies/concise-writing/cases/effective-briefing/original.json` |
+| 5 | agent-recommendation | candidate-comprehensive | 2 | `skill-studies/concise-writing/cases/agent-recommendation/candidate-comprehensive.json` |
+| 6 | agent-recommendation | original | 2 | `skill-studies/concise-writing/cases/agent-recommendation/original.json` |
+| 7 | effective-briefing | original | 2 | `skill-studies/concise-writing/cases/effective-briefing/original.json` |
+| 8 | effective-briefing | candidate-comprehensive | 2 | `skill-studies/concise-writing/cases/effective-briefing/candidate-comprehensive.json` |
+
+Command per row, from the repository root after approval and input freeze: `TMPDIR=/private/tmp/cw-comprehensive-comparison-01 skill-validation/runner/.venv/bin/skilltest run CONFIG`, substituting that row's CONFIG. Create the scratch parent before the first invocation.
+Retain each complete stopped bundle in the existing canonical CW evidence directory with its unique run name and verified sibling inventory before starting the next row. Use the existing single-host arrangement and exposure/setup checks for both skill-bearing conditions. Record actual CLI/runtime identity on every attempt; investigate drift before attributing differences.
+
+Approved budget: eight subject invocations, zero evaluator/authoring/retry invocations. Combined subject spending would rise from 38 to 46, with the accepted subject ceiling raised from 40 to 46 (total call ceiling 60 to 66); other call ceilings and the 1,200-minute active-work ceiling remain unchanged. On 2026-09-18, in reply to the explicit eight-run and ceiling-increase question, the owner confirmed: “I approved all the necessary runs to complete this step”. This authorizes all eight rows and the necessary increase; no further confirmation is required.
+Before dispatch, extend only criterion condition-applicability metadata to `candidate-comprehensive` with no change to rule text, and freeze comparison manifests at one committed input revision. Existing collection/reassessment manifests and results remain untouched. Validate collection readiness and exact paired input parity before the first call.
+Inputs: [recommendation comparison manifest](cases/agent-recommendation/comparison-manifest.json) and [briefing comparison manifest](cases/effective-briefing/comparison-manifest.json) will pin the approved inputs before dispatch.
+Offline preparation verified exact candidate provenance and paired prompt/source/task/settings parity; baseline source, task, prompt, policy and example bytes are unchanged. Criterion definition 5 changes applicability/status metadata only; F1–F3 text remains policy 4.
+Estimated remaining work: 10 active minutes to freeze/check, 25 to collect and preserve, 35 to assess/review/report (70 total), within remaining time. Eight attempts at the baseline's observed total of roughly eight runner minutes leave allowance for evidence handling; no extra repetitions are implied.
+
 ## Storage and accounting
 
 Canonical checkout: `/Users/simon/work/personal/disciplined-development-skills`.
@@ -131,13 +168,14 @@ Approved durable raw evidence directory: `/Users/simon/work/personal/skill-study
 Owner-accepted recovery decision for CW: single-host retention, as used for SSR, with one verified canonical raw bundle per attempt. The current `tmutil destinationinfo` check reports no destinations configured; `tmutil isexcluded` reports the parent private store is Included. No other working backup arrangement has been established. Machine loss or disk failure could therefore destroy CW raw evidence; Git holds case inputs and assessments but cannot recover those external bundles. Creating the directory and passing a local copy check do not establish host-loss recovery. The owner explicitly accepted this CW risk together with the eight-execution scope above.
 
 Combined accounting sources: closed SSR [pilot 01](../sweeping-stale-references/pilot-run-index.json), [pilot 02](../sweeping-stale-references/pilot-02-run-index.json), [semantic delivery](../sweeping-stale-references/semantic-delivery-01-run-index.json), [core baseline](../sweeping-stale-references/core-baseline-01-run-index.json), [comparison](../sweeping-stale-references/comprehensive-comparison-01-run-index.json), and the CW index above. Historical pilot links contribute accounting only; they are not reclassified or reassessed.
-Dispatched calls are **38 subject, 0 evaluator, 0 authoring, 0 retry**; remaining outer capacity is **2 / 12 / 4 / 4** against the [active plan](../../plans/2026-09-11-model-driven-skill-testing.md#limits-and-information-boundaries). CW spent all eight approved calls; no further invocation or pool transfer is authorized. Runner durations total 494.936 seconds across the eight attempts, including setup and capture.
-Current combined accounting: **810 active minutes booked; 390 minutes remain under the 1,200-minute ceiling**. This includes the initial 773 minutes plus 37 minutes of follow-up explanations, policy reconciliation, validator repair and review: active task intervals since 07:09 UTC through 08:40 UTC, rounded up, plus two minutes for final verification/commit/push/report. Between-turn owner wait is excluded. Runner durations remain included in prior collection time, not added again.
+Dispatched calls are **38 subject, 0 evaluator, 0 authoring, 0 retry**; remaining outer capacity is **8 / 12 / 4 / 4** against the [active plan](../../plans/2026-09-11-model-driven-skill-testing.md#limits-and-information-boundaries). CW spent its eight baseline calls; the eight comparison calls above are now authorized. No other invocation or pool transfer is authorized. Runner durations total 494.936 seconds across the eight attempts, including setup and capture.
+Last closed accounting: **810 active minutes booked; 390 minutes remain under the 1,200-minute ceiling**. This includes the initial 773 minutes plus 37 minutes of follow-up explanations, policy reconciliation, validator repair and review: active task intervals since 07:09 UTC through 08:40 UTC, rounded up, plus two minutes for final verification/commit/push/report. Between-turn owner wait is excluded. Runner durations remain included in prior collection time, not added again.
 
 | Work | Estimate | Basis |
 |---|---:|---|
 | Remaining approved collection or assessment | 0 | All eight attempts and the aggregate assessment are complete; final reporting is included in the booked allowance above. |
-| **Total** | **0** | No additional collection, rewrite or adoption work is selected. |
+| Proposed fixed-suite comparison | 70 | Freeze/check 10, collection/preservation 25, assessment/review/report 35; dispatch follows input freeze and readiness. |
+| **Total proposed** | **70** | No new skill authoring or adoption. |
 
 ## Results and decision
 
@@ -146,6 +184,6 @@ Original and control each pass 2/2 on Recommendation and 2/2 on Briefing, with n
 Whole-document review withdraws the earlier briefing failures: the conditional recommendation, approval gate and continuing-preview context do not demonstrate a loss of correctness or effectiveness.
 All outputs are readable and shorter; none has a longer-output flag. Length is reported separately and does not determine pass/fail. Process is unscored; Git preserves earlier judgments and original collection identities.
 Pass counts are tied; the assessment reports qualitative differences in reading sequence and safeguard lookup separately. These small, constructed cases do not establish an overall CW advantage. The corrected findings do not support the earlier continuing-permissions rewrite suggestion.
-Collection is closed, skill bytes are unchanged and adoption remains deferred. No additional calls or skill edit are authorized.
+Baseline collection is closed and adoption remains deferred. The live skill is unchanged; the separate existing candidate is prepared for the comparison above, authorized for eight attempts.
 
 Review: the [policy-4 resolution and self-review](../../reviews/2026-09-18-cw-policy4-review.md) records the external findings, additional validator defect and verification. No blocking findings remain.

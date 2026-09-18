@@ -5,16 +5,16 @@
 Format version: `1`
 Study ID: `concise-writing`
 Case ID: `agent-recommendation`
-Definition version: `4`
-Status: owner-approved whole-document reassessment of contribution-baseline-01; no new collection.
+Definition version: `5`
+Status: policy-4 rules unchanged; definition 5 extends condition applicability to the owner-approved comprehensive comparison.
 Purpose and realistic failure opportunity: Improve a padded, fragmented recommendation without sacrificing its correctness or effectiveness.
 Protocol coverage and membership/exposure: [suite](../../protocol.md#suite-and-evidence), selected development case; O1–O3 assessed through F1–F3; length reported separately, O4–O5 process unscored. Author and assessor share construction history; no held-out or independent-validation claim.
 
 ## Inputs and setup
 
-Subject inputs: [task](task.md), complete [source document](fixture/report.md), and, for original only, the [preserved CW skill](../skill-original/SKILL.md).
+Subject inputs: [task](task.md), complete [source document](fixture/report.md), and, for skill-bearing conditions, the [preserved original](../skill-original/SKILL.md) or [comprehensive candidate](../skill-candidate-comprehensive/SKILL.md).
 The [original configuration](original.json), [control configuration](control.json) and [collection manifest](manifest.json) retain the actual supplied context.
-Definition 4 and policy 4 are controller-only reassessment rules, never supplied to the subjects.
+These case criteria and policy 4 are controller-only rules, never supplied to the subjects.
 Both sources are fictional study material; subjects edit prose and do not execute the actions it describes.
 Setup validity requires evidence of the intended source bytes, skill condition, matched surrounding context, output path and captured final workspace.
 Resolve capture/setup uncertainty separately; with valid setup assess the saved report, including an unchanged or partially edited report, under every factor.
@@ -42,7 +42,7 @@ If length cannot be measured, report it as unavailable without inventing a count
 Basis: [skill](../skill-original/SKILL.md) and owner’s [assessment policy](../../protocol.md#assessment-policy); no new subject instruction.
 Coverage: O1; source fidelity and meaningful qualifications.
 Dimension: functional
-Applies to: `original`, `control`
+Applies to: `original`, `control`, `candidate-comprehensive`
 Judgment unit: complete delivered document compared with the complete source.
 Required evidence: Complete source and delivered document, including relationships between sections.
 Met: The edit as a whole is faithful to the source’s facts, reasoning, uncertainty, conditions and scope.
@@ -57,7 +57,7 @@ Overlap: a shared defect may affect multiple factors but counts as one failed ex
 Basis: [skill](../skill-original/SKILL.md) and owner’s [assessment policy](../../protocol.md#assessment-policy); no new subject instruction.
 Coverage: O1–O3; owner’s explicit comparative-effectiveness requirement.
 Dimension: functional
-Applies to: `original`, `control`
+Applies to: `original`, `control`, `candidate-comprehensive`
 Judgment unit: complete delivered document compared with the complete source.
 Required evidence: Complete source/output comparison for the stated reader and purpose.
 Met: The edit supports the reader’s understanding, decision and next actions at least as effectively as the source; useful explanation, emphasis and orientation still do their jobs.
@@ -72,7 +72,7 @@ Overlap: a shared defect may affect multiple factors but counts as one failed ex
 Basis: [skill](../skill-original/SKILL.md) and owner’s [assessment policy](../../protocol.md#assessment-policy); no new subject instruction.
 Coverage: O3; readability and coherent organization.
 Dimension: functional
-Applies to: `original`, `control`
+Applies to: `original`, `control`, `candidate-comprehensive`
 Judgment unit: complete delivered document compared with the complete source.
 Required evidence: Complete delivered document read for its intended audience and purpose, with concrete evidence of ease or unnecessary consumption burden.
 Met: The complete document is easy to consume: the reader can readily follow the reasoning and connect the decision, evidence, limits and actions without unnecessary effort from padding, purposeless restatement or digression. Useful reinforcement remains acceptable.
@@ -85,6 +85,6 @@ Overlap: a shared defect may affect multiple factors but counts as one failed ex
 ## Limits
 
 All three functional factors must be met. Length is reported separately. Process is unscored; no P1 criterion applies.
-The owner selected this rule after seeing the existing outputs. It is a transparent reassessment, not a prospectively frozen evaluation or independent confirmation.
+The owner selected this rule after seeing the existing outputs. The baseline is a transparent reassessment, not independent confirmation. Policy 4 is frozen prospectively for the comprehensive comparison.
 Two short constructed software updates cannot establish performance on long documents, other audiences, discovery or plan/spec composition.
 Per-case/condition counts describe the observed repetitions, not population reliability or an adoption decision.

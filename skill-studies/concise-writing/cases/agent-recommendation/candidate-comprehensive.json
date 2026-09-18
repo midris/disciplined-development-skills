@@ -1,0 +1,25 @@
+{
+  "schema_version": "0.2",
+  "id": "cw-agent-recommendation-candidate-comprehensive",
+  "prompt": "../../prompt-original.md",
+  "fixtures": [
+    {
+      "source": "fixture/report.md",
+      "target": "report.md"
+    },
+    {
+      "source": "task.md",
+      "target": "TASK.md"
+    },
+    {
+      "source": "../skill-candidate-comprehensive/SKILL.md",
+      "target": ".agents/skills/concise-writing/SKILL.md"
+    }
+  ],
+  "execution": {
+    "provider": "codex",
+    "model": "gpt-5.6-sol",
+    "effort": "low",
+    "permissions": "workspace-write"
+  }
+}
