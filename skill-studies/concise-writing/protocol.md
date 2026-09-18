@@ -2,7 +2,7 @@
 
 Format version: `1`
 Study ID: `concise-writing`
-Status: collection complete; policy-3 record reconciliation in progress. Eight prior passing whole-document judgments and shorter outputs remain unchanged. Adoption remains deferred; no further collection or skill edit is authorized.
+Status: collection and policy-3 record reconciliation complete. Eight outputs pass F1–F3; all are shorter, with no longer-output flags. Adoption remains deferred; no further collection or skill edit is authorized.
 Plan: [active plan](../../plans/2026-09-11-model-driven-skill-testing.md#current-next-action)
 General spec: [testing framework](../../plans/specs/2026-09-11-model-driven-skill-testing-framework.md)
 
@@ -131,7 +131,7 @@ Owner-accepted recovery decision for CW: single-host retention, as used for SSR,
 
 Combined accounting sources: closed SSR [pilot 01](../sweeping-stale-references/pilot-run-index.json), [pilot 02](../sweeping-stale-references/pilot-02-run-index.json), [semantic delivery](../sweeping-stale-references/semantic-delivery-01-run-index.json), [core baseline](../sweeping-stale-references/core-baseline-01-run-index.json), [comparison](../sweeping-stale-references/comprehensive-comparison-01-run-index.json), and the CW index above. Historical pilot links contribute accounting only; they are not reclassified or reassessed.
 Dispatched calls are **38 subject, 0 evaluator, 0 authoring, 0 retry**; remaining outer capacity is **2 / 12 / 4 / 4** against the [active plan](../../plans/2026-09-11-model-driven-skill-testing.md#limits-and-information-boundaries). CW spent all eight approved calls; no further invocation or pool transfer is authorized. Runner durations total 494.936 seconds across the eight attempts, including setup and capture.
-Current combined accounting: **792 active minutes booked; 408 minutes remain under the 1,200-minute ceiling**. This includes the previously booked 773 minutes plus 19 minutes for follow-up explanations, scoring corrections and whole-document reassessment: active task intervals since 07:09 UTC through 07:50 UTC, rounded up, plus two minutes for final verification/commit/report. Between-turn owner wait is excluded. Runner durations remain included in prior collection time, not added again.
+Current combined accounting: **796 active minutes booked; 404 minutes remain under the 1,200-minute ceiling**. This includes the initial 773 minutes plus 23 minutes for follow-up explanations, scoring corrections and policy reconciliation: active task intervals since 07:09 UTC through 08:07 UTC, rounded up, plus one minute for final verification/commit/report. Between-turn owner wait is excluded. Runner durations remain included in prior collection time, not added again.
 
 | Work | Estimate | Basis |
 |---|---:|---|
@@ -143,6 +143,6 @@ Current combined accounting: **792 active minutes booked; 408 minutes remain und
 The [batch assessment](contribution-baseline-01-assessment.md) records eight valid setups and all three required factors met in every output under CW-assessment-3.
 Original and control each pass 2/2 on Recommendation and 2/2 on Briefing, with no unknowns, retries, replacements or exclusions.
 Whole-document review withdraws the earlier briefing failures: the conditional recommendation, approval gate and continuing-preview context do not demonstrate a loss of correctness or effectiveness.
-All outputs are readable and shorter. Process is unscored; Git preserves earlier judgments and original collection identities.
+All outputs are readable and shorter; none has a longer-output flag. Length is reported separately and does not determine pass/fail. Process is unscored; Git preserves earlier judgments and original collection identities.
 No CW advantage is observed in these small, constructed cases. The corrected findings do not support the earlier continuing-permissions rewrite suggestion.
 Collection is closed, skill bytes are unchanged and adoption remains deferred. No additional calls or skill edit are authorized.
