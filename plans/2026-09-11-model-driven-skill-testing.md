@@ -211,7 +211,7 @@ Reserved bundles and revealing assessments stay entirely in the verified private
 
 - [x] Prepare the owner-selected existing CW comprehensive candidate for comparison on the fixed baseline. Preserve its exact bytes and matching configurations; do not derive coverage, examples or scoring from the rewrite. The [comparison proposal](../skill-studies/concise-writing/protocol.md#comparison-comprehensive-comparison-01) owns scope, order and budget.
 - [x] Obtain approval for all eight comparison calls and the necessary subject-ceiling increase from 40 to 46.
-- [ ] Freeze comparison identities and condition-applicability metadata without changing scenarios or policy 4.
+- [x] Freeze comparison identities and condition-applicability metadata without changing scenarios or policy 4.
 - [ ] Collect, preserve and assess the eight attempts under the frozen rules; compare fresh original/candidate results and report regressions, useful differences and limitations. No automatic retry, new scenario or adoption.
 
 The owner accepted the reconciled [format set](../skill-studies/formats/README.md), now version `1`. The protocol and the Shiv and semantic-delivery case definitions/manifests use the accepted layouts; historical observed-case inputs and the `1-draft` worked example remain unchanged under their recorded identities.

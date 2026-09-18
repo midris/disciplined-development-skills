@@ -1,0 +1,131 @@
+{
+  "format_version": "1",
+  "manifest_id": "cw-agent-recommendation-comparison-1",
+  "study_id": "concise-writing",
+  "case_id": "agent-recommendation",
+  "status": "frozen",
+  "created_at": "2026-09-18T20:18:10.739683+00:00",
+  "source_revision": "8eac215c81415f47b07ee3f8e4a8fd984bdca63c",
+  "authorities": {
+    "spec": {
+      "path": "plans/specs/2026-09-11-model-driven-skill-testing-framework.md",
+      "sha256": "872a8c3dc48c6b5e8e5e24d10e9976053a200872a33391943e36ea968b093768",
+      "version": null
+    },
+    "protocol": {
+      "path": "skill-studies/concise-writing/protocol.md",
+      "sha256": "837e3778800d27766ecb4e58b58f70e86328fb35440a81628909f01cf8d1bc86",
+      "version": "1"
+    },
+    "format_contract": {
+      "path": "skill-studies/formats/companion-formats.md",
+      "sha256": "a02e0b4596c255491194f457f6e350aea858e960f439becc939ca2e8c5898ef8",
+      "version": "1"
+    },
+    "execution_result_schema": {
+      "path": "skill-studies/formats/execution-result.schema.json",
+      "sha256": "0abc6cdd04c2c90495736dd9b0020bbee8ed4772babe46e8e8eb637ebd03f358",
+      "version": "1"
+    },
+    "policy": {
+      "path": "skill-studies/concise-writing/assessment-policy.txt",
+      "sha256": "0adb7f61edea118c7ec2361dddfa7dd1c0fe4745d4431178d8d557097cfa2454",
+      "version": "CW-assessment-4"
+    },
+    "criteria": [
+      {
+        "path": "skill-studies/concise-writing/cases/agent-recommendation/assessment.md",
+        "sha256": "79f46d1de25a6e3b9e32762903a9a36396176ac5853abfd67171ec9e8959a5ea",
+        "version": "5"
+      }
+    ]
+  },
+  "conditions": [
+    {
+      "id": "original",
+      "configuration": {
+        "path": "skill-studies/concise-writing/cases/agent-recommendation/original.json",
+        "sha256": "3d50b33ed37f3822395259eac8c609573a0d2a3425fd4c9d29a8685a21b9f17f",
+        "version": "0.2"
+      },
+      "target_skill": "skill-studies/concise-writing/cases/skill-original/SKILL.md"
+    },
+    {
+      "id": "control",
+      "configuration": {
+        "path": "skill-studies/concise-writing/cases/agent-recommendation/control.json",
+        "sha256": "3e7c6a33eaa3851f5b3766ec1769a2200fbfbcab3ba8ed55f9d06d0fb9f0c84a",
+        "version": "0.2"
+      },
+      "target_skill": null
+    },
+    {
+      "id": "candidate-comprehensive",
+      "configuration": {
+        "path": "skill-studies/concise-writing/cases/agent-recommendation/candidate-comprehensive.json",
+        "sha256": "60a1dcc2448c93a2331793c8cc429abbf084d2f6ee27efddaefc63b979b20443",
+        "version": "0.2"
+      },
+      "target_skill": "skill-studies/concise-writing/cases/skill-candidate-comprehensive/SKILL.md"
+    }
+  ],
+  "subject_sources": [
+    {
+      "path": "skill-studies/concise-writing/cases/agent-recommendation/fixture/report.md",
+      "sha256": "e9a992c7e4c14dfd5afc10cc637349f39c2030e98ed0311441675900bc3e93e9",
+      "version": null
+    },
+    {
+      "path": "skill-studies/concise-writing/cases/agent-recommendation/task.md",
+      "sha256": "607cbe0562a19ea092fe76ec96f13bfbe033b2e1095baef2ca38be621c0baf82",
+      "version": null
+    },
+    {
+      "path": "skill-studies/concise-writing/prompt-original.md",
+      "sha256": "ec75556bc64e9de7ef0ca76ef50fe2db02021e90c8a855901b6e08a854f4d81e",
+      "version": null
+    },
+    {
+      "path": "skill-studies/concise-writing/prompt-control.md",
+      "sha256": "833ee4acdfe9f3e3592ed900a7d6f9212d93bc223c8ccccaee69cb53b4738eaa",
+      "version": null
+    },
+    {
+      "path": "skill-studies/concise-writing/cases/skill-original/SKILL.md",
+      "sha256": "4d12a2eb475c6b2ef57e2300c8c07af3f59c1e07b2b82695a3b7669eee1d6d72",
+      "version": null
+    },
+    {
+      "path": "skill-studies/concise-writing/cases/skill-candidate-comprehensive/SKILL.md",
+      "sha256": "f763b43e88c56d6fdc2a96457bc2415cba60b75a1e7cb59cd1b0ebaa3fb199ba",
+      "version": null
+    }
+  ],
+  "controller_only": [
+    {
+      "path": "skill-studies/concise-writing/qualification.md",
+      "sha256": "0f742f34de22f61d89350fa3dbc8b5a3ac3881a94a45e14b082a9ce5ef7e81ee",
+      "version": null
+    },
+    {
+      "path": "skill-studies/concise-writing/cases/agent-recommendation/examples/effective-alternative.md",
+      "sha256": "05287ea95ecc6c304de87bf9a1d16372d836b9f1e2f0f08c73bd82551a46c485",
+      "version": null
+    },
+    {
+      "path": "skill-studies/concise-writing/cases/agent-recommendation/examples/effective.md",
+      "sha256": "ab10852688992ee0a12011c47b10a7b4e8652bb95073fd1c45c0d39ac6ceb332",
+      "version": null
+    },
+    {
+      "path": "skill-studies/concise-writing/cases/agent-recommendation/examples/local-only.md",
+      "sha256": "e8c41b14e6c8c64a35a843b10e440920f7c8df561262181dbd51f52fe8e5d193",
+      "version": null
+    },
+    {
+      "path": "skill-studies/concise-writing/cases/agent-recommendation/examples/over-trimmed.md",
+      "sha256": "c93154990f69a82f59414de52672124211bd855f4fdec4a02c8d516594dd601e",
+      "version": null
+    }
+  ]
+}
