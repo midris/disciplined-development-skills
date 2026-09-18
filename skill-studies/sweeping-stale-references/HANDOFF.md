@@ -25,9 +25,11 @@ The [core-baseline scope](protocol.md#core-baseline-core-baseline-01) is spent: 
 
 The approved `comprehensive-comparison-01` scope is spent; its [index](comprehensive-comparison-01-run-index.json) and assessment contain the completed comparison. SSR remains closed with adoption deferred.
 The owner-selected second study, CW, completed collection of its approved [contribution baseline](../concise-writing/contribution-baseline-01-assessment.md).
-Its policy-1 assessment now awaits whole-document reassessment under the owner’s revised [scoring direction](../concise-writing/protocol.md#assessment-policy): correctness, comparative effectiveness, readability and shorter length. Correctness/effectiveness are hard gates; editing process is unscored. All four factors are required for a pass. The active plan records the reassessment work.
-All eight attempts have verified complete external bundles and canonical results; no retry, replacement or setup exclusion occurred.
-Policy-1 outcome totals are historical pending reassessment; do not carry forward sentence-omission failures without evaluating the complete document’s correctness and effectiveness.
+The [policy-2 reassessment](../concise-writing/contribution-baseline-01-assessment.md) is complete: correctness, comparative effectiveness, readability and shorter length are all required; correctness/effectiveness lead and process is unscored.
+Both conditions pass 2/2 on each case. No CW advantage is observed in these small constructed cases.
+All eight attempts retain verified external bundles; new assessment manifests preserve exact subject-input identities. No retry, replacement or setup exclusion occurred.
+The batch assessment records a CLI limitation: aggregate coverage still uses collection-time criteria. Direct verification against result-pinned policy-2 criteria passes; do not claim assessment-stage CLI readiness passes.
+Whole-document review withdrew the earlier briefing omission failures; prior judgments remain in Git and do not support a rewrite target.
 The [CW protocol](../concise-writing/protocol.md) owns current accounting and disposition; its [index](../concise-writing/contribution-baseline-01-run-index.json) pins inputs, authority and results.
 No collection call remains authorized, and no skill rewrite or adoption is approved.
 Use existing tooling and accepted formats for any subsequently selected work; do not reopen these completed collections as a prerequisite.

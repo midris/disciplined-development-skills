@@ -2,7 +2,7 @@
 
 Format version: `1`
 Study ID: `concise-writing`
-Status: collection complete; eight attempts retained. Whole-document reassessment pending under the owner’s revised scoring direction. Adoption remains deferred; no further collection or skill edit is authorized.
+Status: collection and whole-document reassessment complete; eight valid attempts, all four factors met in each. Adoption remains deferred; no further collection or skill edit is authorized.
 Plan: [active plan](../../plans/2026-09-11-model-driven-skill-testing.md#current-next-action)
 General spec: [testing framework](../../plans/specs/2026-09-11-model-driven-skill-testing-framework.md)
 
@@ -35,7 +35,7 @@ Owner decisions: select CW, govern concision by document effectiveness as clarif
 Owner clarification, 2026-09-18: require all four factors and emphasize correctness and comparative effectiveness.
 This replaces the earlier absence-of-padding criterion, scored process criterion and descriptive-only treatment of length.
 Reassess the same eight retained outputs under this revised contract; no new model calls, subject-input changes or skill edit are authorized.
-Original collection manifests retain the actual frozen collection context; separate reassessment manifests preserve those subject-input identities and identify the new rules.
+Original collection manifests retain the actual frozen collection context; the [recommendation](cases/agent-recommendation/assessment-manifest.json) and [briefing](cases/effective-briefing/assessment-manifest.json) reassessment manifests preserve those exact subject-input identities and identify the new rules.
 Git preserves prior policy and result versions. Historical qualification examples illustrate policy 1 and are not current scoring authority.
 
 Policy identity: **CW-assessment-2**. The [controller policy copy](assessment-policy.txt) derives verbatim from the following subsection body, excluding its heading.
@@ -117,7 +117,7 @@ Replace `CONFIG` only with the row’s value. The namespace has been created and
 | 7 | effective-briefing | original | 2 | `skill-studies/concise-writing/cases/effective-briefing/original.json` |
 | 8 | effective-briefing | control | 2 | `skill-studies/concise-writing/cases/effective-briefing/control.json` |
 
-Inputs: [recommendation manifest](cases/agent-recommendation/manifest.json) and [briefing manifest](cases/effective-briefing/manifest.json) freeze all 34 identities at full input commit `c19e408549bbafe76005f5cfc0b08f24d7c2bfc4`. Git retrieval and every hash passed; collection readiness passed for contribution-baseline-01. Policy/body equality and all four offline configuration/workspace checks passed again. The frozen manifests were committed before dispatch. Actual attempt records pin the invocation-authority protocol and full runner revision. The frozen protocol records approval and pre-freeze state; this live protocol owns current accounting. Policy and criteria bytes remain unchanged by status updates. Frozen case cards and qualification retain their preparation-state wording as identified inputs; this live protocol owns current status.
+Inputs: [recommendation manifest](cases/agent-recommendation/manifest.json) and [briefing manifest](cases/effective-briefing/manifest.json) freeze all 34 identities at full input commit `c19e408549bbafe76005f5cfc0b08f24d7c2bfc4`. Git retrieval and every hash passed; collection readiness passed for contribution-baseline-01. Policy/body equality and all four offline configuration/workspace checks passed again. The frozen manifests were committed before dispatch. Actual attempt records pin the invocation-authority protocol and full runner revision. The frozen protocol records approval and pre-freeze state; this live protocol owns current accounting. The original manifest revisions preserve policy-1 collection inputs. Current policy-2 case cards and the historical qualification label do not relabel what subjects received.
 Runtime checked during preparation: full runner revision `e3c3a5c47a4ae3939ae9e7f7fdce667b3fe16166`; its runner tree is unchanged from SSR’s qualified `d899a817108330c4dcba4007f3383294a87d2f9a`. Codex CLI 0.154.0 resolves to `/opt/homebrew/Caskroom/codex/0.154.0/bin/codex`, SHA-256 `4f85982624b3898c8991cb80c0981b2aa71070e3537046c9a95950318a95afcc`; host Python is 3.14.7. Recheck these identities before collection and record the full approved runner revision; requested model names do not expose an immutable model revision.
 Offline checks: all four configurations loaded and copied the exact declared files; paired common bytes/settings matched; prompt differences were limited to the CW instruction. Disposable Git baselines preserved each original document and exposed a subsequent edit in `git diff`. Generated provider arguments retain private-profile configuration flags, disabled tool network and the restricted PATH. No provider invocation was made. These checks reuse the [SSR execution qualification](../sweeping-stale-references/protocol.md#comparison-comprehensive-comparison-01) for the unchanged runtime; they do not prove new CW model behavior or exhaustive host read isolation.
 Setup/evidence checks during collection: verify supplied hashes and the intended condition; in original, retained tool-response content must establish complete CW text exposure before editing. Match any `provider-session.jsonl` used as evidence to the stdout thread ID and fixture cwd, and verify its inventory hash; a filename or claimed read alone is insufficient. Inspect retained guidance for contamination and final `report.md` for artifact quality. Unexpected/missing exposure or unusable capture is a setup issue requiring inspection, not a failed CW criterion. Drafting/comparison and local/global review remain unscored observations under policy 2. Keep the complete raw trace, even when it does not establish those steps.
@@ -131,7 +131,7 @@ Owner-accepted recovery decision for CW: single-host retention, as used for SSR,
 
 Combined accounting sources: closed SSR [pilot 01](../sweeping-stale-references/pilot-run-index.json), [pilot 02](../sweeping-stale-references/pilot-02-run-index.json), [semantic delivery](../sweeping-stale-references/semantic-delivery-01-run-index.json), [core baseline](../sweeping-stale-references/core-baseline-01-run-index.json), [comparison](../sweeping-stale-references/comprehensive-comparison-01-run-index.json), and the CW index above. Historical pilot links contribute accounting only; they are not reclassified or reassessed.
 Dispatched calls are **38 subject, 0 evaluator, 0 authoring, 0 retry**; remaining outer capacity is **2 / 12 / 4 / 4** against the [active plan](../../plans/2026-09-11-model-driven-skill-testing.md#limits-and-information-boundaries). CW spent all eight approved calls; no further invocation or pool transfer is authorized. Runner durations total 494.936 seconds across the eight attempts, including setup and capture.
-Current combined accounting: **773 active minutes booked; 427 minutes remain under the 1,200-minute ceiling**. This combines closed SSR’s 688 minutes, 60 minutes of prior CW preparation/review/handoff and 25 minutes for this continuation: 24 active minutes from the 2026-09-18 02:14:20 UTC task start through 02:38 UTC, rounded up, plus one minute allowed for the final commit/report. This includes input freeze, model waits, preservation, assessment and closeout verification; no between-turn owner wait is included. Runner durations are included in this total, not added again.
+Current combined accounting: **792 active minutes booked; 408 minutes remain under the 1,200-minute ceiling**. This includes the previously booked 773 minutes plus 19 minutes for follow-up explanations, scoring corrections and whole-document reassessment: active task intervals since 07:09 UTC through 07:50 UTC, rounded up, plus two minutes for final verification/commit/report. Between-turn owner wait is excluded. Runner durations remain included in prior collection time, not added again.
 
 | Work | Estimate | Basis |
 |---|---:|---|
@@ -140,7 +140,9 @@ Current combined accounting: **773 active minutes booked; 427 minutes remain und
 
 ## Results and decision
 
-Whole-document reassessment of the eight retained attempts under CW-assessment-2 is in progress.
-The [batch assessment](contribution-baseline-01-assessment.md) will report all four required factors for every output.
-Prior policy-1 counts are historical; no current contribution or rewrite conclusion should be drawn from them.
-Collection is closed, skill bytes are unchanged and adoption remains deferred.
+The [batch assessment](contribution-baseline-01-assessment.md) records eight valid setups and all four required factors met in every output under CW-assessment-2.
+Original and control each pass 2/2 on Recommendation and 2/2 on Briefing, with no unknowns, retries, replacements or exclusions.
+Whole-document review withdraws the earlier briefing failures: the conditional recommendation, approval gate and continuing-preview context do not demonstrate a loss of correctness or effectiveness.
+All outputs are readable and shorter. Process is unscored; Git preserves earlier judgments and original collection identities.
+No CW advantage is observed in these small, constructed cases. The corrected findings do not support the earlier continuing-permissions rewrite suggestion.
+Collection is closed, skill bytes are unchanged and adoption remains deferred. No additional calls or skill edit are authorized.
