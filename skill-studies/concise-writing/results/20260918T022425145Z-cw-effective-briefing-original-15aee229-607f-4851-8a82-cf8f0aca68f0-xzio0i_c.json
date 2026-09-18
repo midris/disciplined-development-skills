@@ -14,9 +14,9 @@
   },
   "manifest": {
     "path": "skill-studies/concise-writing/cases/effective-briefing/assessment-manifest.json",
-    "sha256": "98fc1d254ff3819c0dca60584baf00494624a99dc0ff6cbc2e4e0a7c9b2b463f",
+    "sha256": "15af6973f04781324b36fd51024c768825ac0b3b4df6915c58d814d2649df1f1",
     "version": "1",
-    "git_revision": "0b765dca7496b69ccef8e19a5514b227826c57f9"
+    "git_revision": "ca751689ebb9e095c77c0bcb88dcba167e7f2fb9"
   },
   "evidence": [
     {

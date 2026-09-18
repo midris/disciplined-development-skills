@@ -14,9 +14,9 @@
   },
   "manifest": {
     "path": "skill-studies/concise-writing/cases/agent-recommendation/assessment-manifest.json",
-    "sha256": "bb9a5e89a64b03bd235da0b73a4cd7d5147f6b1980212e69881005b27adc717d",
+    "sha256": "7c761188986cc87169519712be331bfd39ff8c3521324e5368a785b9f53a0f68",
     "version": "1",
-    "git_revision": "0b765dca7496b69ccef8e19a5514b227826c57f9"
+    "git_revision": "ca751689ebb9e095c77c0bcb88dcba167e7f2fb9"
   },
   "evidence": [
     {
