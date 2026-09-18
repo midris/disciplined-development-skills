@@ -44,9 +44,9 @@
         "result_id": "contribution-baseline-01-agent-recommendation-original-1",
         "record": {
           "path": "skill-studies/concise-writing/results/20260918T021815333Z-cw-agent-recommendation-original-766a67ff-ff83-4ea0-91ad-de114a6d15e6-t7l9kcgr.json",
-          "sha256": "992cf06498382bafeb4dcdd19eb46ba83dc3e0da0551bf2d9e5396cb6c34cf37",
+          "sha256": "b844996f14debddfcfb7a9dd22c315c9d4b45cd4e4395ab8e4c6cfd5283e9afd",
           "version": "1",
-          "git_revision": "96fd1de1aaf0749f3986069105b005b9ede35c6e"
+          "git_revision": "a15707cc3e894ea1d24016697ed535c9b9bd738f"
         }
       },
       "limitations": [
@@ -93,9 +93,9 @@
         "result_id": "contribution-baseline-01-agent-recommendation-control-1",
         "record": {
           "path": "skill-studies/concise-writing/results/20260918T022032109Z-cw-agent-recommendation-control-471483ac-4bbe-4ac1-a64b-38e6adba5b9c-r7gjiu0e.json",
-          "sha256": "657fde204e6f13de85770632ac5609107c9d3489b9d067c6f0114e09944c4700",
+          "sha256": "6caa732904eb8b7d117f5708c2ed71776db50a1b244d21905acc155b6c73e572",
           "version": "1",
-          "git_revision": "96fd1de1aaf0749f3986069105b005b9ede35c6e"
+          "git_revision": "a15707cc3e894ea1d24016697ed535c9b9bd738f"
         }
       },
       "limitations": [
@@ -142,9 +142,9 @@
         "result_id": "contribution-baseline-01-effective-briefing-control-1",
         "record": {
           "path": "skill-studies/concise-writing/results/20260918T022308199Z-cw-effective-briefing-control-fb4c90d8-710e-4ddc-8724-4bcd9fa2f62f-93ryhtqf.json",
-          "sha256": "5d44604f456c8f7aa6f78463979346d6bdf204ce1f99311a7e991aca44f2b269",
+          "sha256": "e2337fcc6c3b29554b3d0204fb33c1212738e4d6b44a94fff6ed20bddf62b072",
           "version": "1",
-          "git_revision": "96fd1de1aaf0749f3986069105b005b9ede35c6e"
+          "git_revision": "a15707cc3e894ea1d24016697ed535c9b9bd738f"
         }
       },
       "limitations": [
@@ -191,9 +191,9 @@
         "result_id": "contribution-baseline-01-effective-briefing-original-1",
         "record": {
           "path": "skill-studies/concise-writing/results/20260918T022425145Z-cw-effective-briefing-original-15aee229-607f-4851-8a82-cf8f0aca68f0-xzio0i_c.json",
-          "sha256": "ce9243c4c8a43c7b7b846b46cec042da468aecf09434eb910da028d2ea8a49bd",
+          "sha256": "426b75a14e1a78ae223db3b0cb31f5b09aa3398395ebbe45c9683368f71ac7a0",
           "version": "1",
-          "git_revision": "96fd1de1aaf0749f3986069105b005b9ede35c6e"
+          "git_revision": "a15707cc3e894ea1d24016697ed535c9b9bd738f"
         }
       },
       "limitations": [
@@ -240,9 +240,9 @@
         "result_id": "contribution-baseline-01-agent-recommendation-control-2",
         "record": {
           "path": "skill-studies/concise-writing/results/20260918T022544885Z-cw-agent-recommendation-control-122d29ec-540b-4558-af42-e3423324c291-8e4z4zfz.json",
-          "sha256": "10c2a35f0d2dd5ca609b4331c8bd9fa584f3db7b55e5cc639f98f51b9aea57ca",
+          "sha256": "6ef904bb33c3db72b92215e7e6b133b8367b69b2b25e965ac6e37a2eee9c0b2a",
           "version": "1",
-          "git_revision": "96fd1de1aaf0749f3986069105b005b9ede35c6e"
+          "git_revision": "a15707cc3e894ea1d24016697ed535c9b9bd738f"
         }
       },
       "limitations": [
@@ -289,9 +289,9 @@
         "result_id": "contribution-baseline-01-agent-recommendation-original-2",
         "record": {
           "path": "skill-studies/concise-writing/results/20260918T022752628Z-cw-agent-recommendation-original-cb45c075-8219-4ae1-ab1a-3514ad06d022-77xm_oea.json",
-          "sha256": "c6c613eca0d8da889695424b001e4481dd8b108033ec3b89227d867817834083",
+          "sha256": "5b81447a62a3c7547283870c89fa82b825021d98c669975628744d921ae461eb",
           "version": "1",
-          "git_revision": "96fd1de1aaf0749f3986069105b005b9ede35c6e"
+          "git_revision": "a15707cc3e894ea1d24016697ed535c9b9bd738f"
         }
       },
       "limitations": [
@@ -338,9 +338,9 @@
         "result_id": "contribution-baseline-01-effective-briefing-original-2",
         "record": {
           "path": "skill-studies/concise-writing/results/20260918T022938090Z-cw-effective-briefing-original-e439ed52-f986-4c15-a81c-fd4bf52a09e5-ii_rdnel.json",
-          "sha256": "5877af3539faa5bc95180f7b87f11e1a9a26cfcd6e6f22dc77588de5382723c9",
+          "sha256": "13a6036d1d6d4d8902fe9946332bfa25ccdd31ff3184cea1a028d04e534b641b",
           "version": "1",
-          "git_revision": "96fd1de1aaf0749f3986069105b005b9ede35c6e"
+          "git_revision": "a15707cc3e894ea1d24016697ed535c9b9bd738f"
         }
       },
       "limitations": [
@@ -387,9 +387,9 @@
         "result_id": "contribution-baseline-01-effective-briefing-control-2",
         "record": {
           "path": "skill-studies/concise-writing/results/20260918T023131505Z-cw-effective-briefing-control-40542fb3-8168-479f-8abe-42e79c06ec4d-c0yy5ofe.json",
-          "sha256": "2e3a82cea33d84e1d50bc813c7758c3c0c21f94f5476c5f2b00b0572d192b8fa",
+          "sha256": "a8b99391d7fcbc102ede4009cccd0a634ca6c8c5c0b784a87f6be4e4b940dd74",
           "version": "1",
-          "git_revision": "96fd1de1aaf0749f3986069105b005b9ede35c6e"
+          "git_revision": "a15707cc3e894ea1d24016697ed535c9b9bd738f"
         }
       },
       "limitations": [
