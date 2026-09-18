@@ -134,11 +134,13 @@ Current combined accounting: **773 active minutes booked; 427 minutes remain und
 
 The [contribution-baseline-01 assessment](contribution-baseline-01-assessment.md) records eight valid setups and complete coverage, with no retries, replacements or exclusions.
 For agent-recommendation, original and control each pass 2/2 functional outcomes.
-For effective-briefing, each passes 0/2: all four edits add an invitation endorsement to the source’s open decision, and three also omit the six existing teams’ permission to continue.
+For effective-briefing, original passes 1/2 and control 0/2; three edits omit the six existing teams’ permission to continue.
+After owner feedback, the conditional recommendation is accepted in the context of each complete document’s checks and Thursday approval gate.
+The assessment corrects the earlier stance-change finding under the unchanged whole-document rule; Git preserves earlier judgments.
 All outputs meet contextual concision and readability; all four original executions meet the observable process criterion.
 Preservation defects remain functional failures despite those successes.
 
-No CW contribution advantage was observed on these cases; this is a limited descriptive tie, not proof of equivalence or general ineffectiveness.
+Recommendation is tied; briefing has one additional successful original execution. This small descriptive difference does not establish a reliable or causal CW advantage.
 The framework supported prose assessment with the existing runner and formats, without a separate evaluator or new repository tooling.
-A possible future rewrite target is preserving decision stance and continuing permissions in already-effective prose; any rewrite/comparison needs separate scope, budget and approval.
+A possible future rewrite target is preserving continuing permissions in already-effective prose; any rewrite/comparison needs separate scope, budget and approval.
 The approved collection is spent, skill bytes are unchanged and the owner’s adoption deferral remains in force.

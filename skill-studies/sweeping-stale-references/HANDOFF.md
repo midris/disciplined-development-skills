@@ -26,7 +26,7 @@ The [core-baseline scope](protocol.md#core-baseline-core-baseline-01) is spent: 
 The approved `comprehensive-comparison-01` scope is spent; its [index](comprehensive-comparison-01-run-index.json) and assessment contain the completed comparison. SSR remains closed with adoption deferred.
 The owner-selected second study, CW, has also completed its approved [contribution baseline](../concise-writing/contribution-baseline-01-assessment.md).
 All eight attempts have verified complete external bundles and canonical results; no retry, replacement or setup exclusion occurred.
-Both conditions pass agent-recommendation twice and fail effective-briefing preservation twice; the assessment explains the semantic judgments and limited contribution conclusion.
+Both conditions pass agent-recommendation twice. After correcting the conditional-recommendation judgment, effective-briefing passes are original 1/2 and control 0/2; the remaining failures concern existing-team permission. The assessment records the correction and limited contribution conclusion.
 The [CW protocol](../concise-writing/protocol.md) owns current accounting and disposition; its [index](../concise-writing/contribution-baseline-01-run-index.json) pins inputs, authority and results.
 No collection call remains authorized, and no skill rewrite or adoption is approved.
 Use existing tooling and accepted formats for any subsequently selected work; do not reopen these completed collections as a prerequisite.
