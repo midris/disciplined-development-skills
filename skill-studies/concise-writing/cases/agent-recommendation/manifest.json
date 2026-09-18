@@ -3,9 +3,9 @@
   "manifest_id": "cw-agent-recommendation-1",
   "study_id": "concise-writing",
   "case_id": "agent-recommendation",
-  "status": "draft",
+  "status": "frozen",
   "created_at": "2026-09-17",
-  "source_revision": "",
+  "source_revision": "c19e408549bbafe76005f5cfc0b08f24d7c2bfc4",
   "authorities": {
     "spec": {
       "path": "plans/specs/2026-09-11-model-driven-skill-testing-framework.md",
