@@ -112,7 +112,7 @@ Keep historical copies. The actual backup/recovery arrangement belongs in the pr
 Complete [execution-result.template.json](execution-result.template.json) under its [schema](execution-result.schema.json) for each assessable execution.
 The result identifies `result_id`, `run_id`, `condition`, a manifest, assessor context, direct evidence, setup validity, applicable criterion outcomes and uncertainty.
 The manifest resolves case/study, subject inputs and assessment rules; do not repeat those identities.
-For reassessment, a newly identified manifest may change rules while preserving the actual subject-input identities; explain the correction and verify those inputs against the attempt's frozen manifest. Never relabel the supplied subject context.
+For reassessment, a newly identified manifest may change rules while preserving the actual subject-input identities; explain the correction and verify those inputs against the attempt's frozen manifest. Never relabel the supplied subject context. Aggregate criterion coverage follows the result-pinned assessment rules; collection definitions do not add superseded criteria to a reassessed group. Groups without recorded attempts use the protocol’s declared definitions.
 
 Record each applicable criterion exactly once, with dimension, `judgment`, concise `reason`, actual `consequence` and evidence IDs.
 `judgment` is categorical, not a quality grade. Keep relevant secondary defects and descriptive control procedure in `observations`/`procedural_summary`.

@@ -991,3 +991,141 @@ def test_assessment_readiness_checks_current_index_references(document_study, ca
     )
     readiness = json.loads(capsys.readouterr().out)
     assert any(d["rule"] == "reference" and "hash mismatch" in d["message"] for d in readiness["diagnostics"])
+
+
+@pytest.fixture
+def reassessed_document_study(document_study):
+    """Same attempts/inputs as document_study, with F1 replaced by F2 at reassessment."""
+    import re
+
+    root, write, commit, ident = document_study
+    write("case/reassessment.md", (root / "case/assessment.md").read_text().replace("F1", "F2"))
+    rules_rev = commit()
+    manifest = json.loads((root / "case/manifest.json").read_text())
+    manifest["manifest_id"] = "reassessment"
+    manifest["authorities"]["criteria"] = [ident("case/reassessment.md", rules_rev)]
+    write("case/reassessment-manifest.json", manifest)
+    manifest_rev = commit()
+    for n in (1, 2):
+        result = json.loads((root / f"results/{n}.json").read_text())
+        result["manifest"] = ident("case/reassessment-manifest.json", manifest_rev)
+        result["criteria"][0]["id"] = "F2"
+        write(f"results/{n}.json", result)
+    results_rev = commit()
+    index = json.loads((root / "example-run-index.json").read_text())
+    for n, attempt in enumerate(index["attempts"], 1):
+        attempt["result"]["record"] = ident(f"results/{n}.json", results_rev)
+    write("example-run-index.json", index)
+    index_rev = commit()
+    report = (root / "example-assessment.md").read_text().replace(" / F1 |", " / F2 |")
+    report = re.sub(r"(Attempt index: .*?Git `)[0-9a-f]{40}", lambda m: m[1] + index_rev, report)
+    report = re.sub(
+        r"(SHA-256 `)[0-9a-f]{64}",
+        lambda m: m[1] + ident("example-run-index.json")["sha256"],
+        report,
+    )
+    write("example-assessment.md", report)
+    return root, write, commit, ident
+
+
+@pytest.mark.process_smoke
+@pytest.mark.parametrize("readiness", [False, True])
+def test_aggregate_uses_result_rules_after_reassessment(reassessed_document_study, capsys, readiness):
+    root, _, _, _ = reassessed_document_study
+    target = "protocol.md" if readiness else "example-assessment.md"
+    args = ["--ready-for", "assessment", "--batch", "example"] if readiness else []
+    code = main(["docs", "check", str(root / target), *args, "--json"])
+    report = json.loads(capsys.readouterr().out)
+    assert code == 0, report["diagnostics"]
+    assert report["complete"] is True
+
+
+@pytest.mark.process_smoke
+@pytest.mark.parametrize("mutation,rule", [("old-criterion", "criterion-coverage"), ("wrong-count", "aggregate")])
+def test_reassessment_aggregate_still_rejects_wrong_rows(reassessed_document_study, capsys, mutation, rule):
+    root, write, _, _ = reassessed_document_study
+    text = (root / "example-assessment.md").read_text()
+    if mutation == "old-criterion":
+        text = text.replace(" / F2 |", " / F1 |")
+    else:
+        text = text.replace("| 1 | 1 | 0 |", "| 2 | 0 | 0 |", 1)
+    write("example-assessment.md", text)
+    assert main(["docs", "check", str(root / "example-assessment.md"), "--json"]) == 1
+    assert any(d["rule"] == rule for d in json.loads(capsys.readouterr().out)["diagnostics"])
+
+
+@pytest.mark.process_smoke
+def test_reassessment_still_rejects_changed_subject_identity(reassessed_document_study, capsys):
+    root, write, commit, ident = reassessed_document_study
+    manifest = json.loads((root / "case/reassessment-manifest.json").read_text())
+    # Version metadata is part of the supplied identity even when bytes match.
+    manifest["subject_sources"][0]["version"] = "changed"
+    write("case/reassessment-manifest.json", manifest)
+    mrev = commit()
+    result = json.loads((root / "results/1.json").read_text())
+    result["manifest"] = ident("case/reassessment-manifest.json", mrev)
+    write("results/1.json", result)
+    rrev = commit()
+    index = json.loads((root / "example-run-index.json").read_text())
+    index["attempts"][0]["result"]["record"] = ident("results/1.json", rrev)
+    write("example-run-index.json", index)
+    assert main(["docs", "check", str(root / "example-run-index.json"), "--json"]) == 1
+    assert any(d["rule"] == "subject-identity" for d in json.loads(capsys.readouterr().out)["diagnostics"])
+
+
+@pytest.mark.process_smoke
+@pytest.mark.parametrize("mutation", ["missing-criterion", "mixed-rules"])
+def test_reassessment_incomplete_criterion_coverage_reports_error_not_crash(
+    reassessed_document_study, capsys, mutation
+):
+    import re
+
+    root, write, commit, ident = reassessed_document_study
+    result = json.loads((root / "results/1.json").read_text())
+    if mutation == "missing-criterion":
+        result["criteria"][0]["id"] = "absent"
+    else:
+        # One repetition is still scored against collection F1, the other against F2.
+        index = json.loads((root / "example-run-index.json").read_text())
+        result["manifest"] = index["attempts"][0]["manifest"]
+        result["criteria"][0]["id"] = "F1"
+    write("results/1.json", result)
+    rrev = commit()
+    index = json.loads((root / "example-run-index.json").read_text())
+    index["attempts"][0]["result"]["record"] = ident("results/1.json", rrev)
+    write("example-run-index.json", index)
+    irev = commit()
+    text = (root / "example-assessment.md").read_text()
+    text = re.sub(r"(Attempt index: .*?Git `)[0-9a-f]{40}", lambda m: m[1] + irev, text)
+    text = re.sub(r"(SHA-256 `)[0-9a-f]{64}", lambda m: m[1] + ident("example-run-index.json")["sha256"], text)
+    write("example-assessment.md", text)
+    assert main(["docs", "check", str(root / "example-assessment.md"), "--json"]) == 1
+    assert any(d["rule"] in {"criterion-coverage", "aggregate"} for d in json.loads(capsys.readouterr().out)["diagnostics"])
+
+
+@pytest.mark.process_smoke
+def test_unattempted_group_retains_protocol_criterion_coverage(document_study, capsys):
+    import re
+
+    root, write, commit, ident = document_study
+    index = json.loads((root / "example-run-index.json").read_text())
+    index["attempts"] = []
+    write("example-run-index.json", index)
+    irev = commit()
+    report = (root / "example-assessment.md").read_text()
+    report = re.sub(r"(Attempt index: .*?Git `)[0-9a-f]{40}", lambda m: m[1] + irev, report)
+    report = re.sub(r"(SHA-256 `)[0-9a-f]{64}", lambda m: m[1] + ident("example-run-index.json")["sha256"], report)
+    report = report.replace("| 2 | 2 | 2 | 0 | 0 | 0 |", "| 2 | 0 | 0 | 0 | 0 | 2 |")
+    report = report.replace("| 1 | 1 | 0 | result-1, result-2 |", "| 0 | 0 | 0 | none |")
+    write("example-assessment.md", report)
+    protocol = (root / "protocol.md").read_text().replace(
+        "**2 subject, 0 evaluator, 0 authoring, 0 retry**; remaining outer capacity is **2 / 2 / 1 / 1**",
+        "**0 subject, 0 evaluator, 0 authoring, 0 retry**; remaining outer capacity is **4 / 2 / 1 / 1**",
+    )
+    write("protocol.md", protocol)
+    args = ["docs", "check", str(root / "protocol.md"), "--ready-for", "assessment", "--batch", "example", "--json"]
+    assert main(args) == 0
+    assert not any(d["rule"] == "criterion-coverage" for d in json.loads(capsys.readouterr().out)["diagnostics"])
+    write("example-assessment.md", report.replace("| example / original / F1 | 0 | 0 | 0 | none |\n", ""))
+    assert main(args) == 1
+    assert any(d["rule"] == "criterion-coverage" for d in json.loads(capsys.readouterr().out)["diagnostics"])

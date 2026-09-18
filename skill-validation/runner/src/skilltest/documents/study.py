@@ -50,6 +50,7 @@ def index(value, path, ctx):
         loc = f"attempts[{n - 1}]"
         record = None
         manifest = None
+        assessment_manifest = None
         configs = {}
         if a["retry_of"] is not None:
             previous = prior.get(a["retry_of"])
@@ -195,6 +196,7 @@ def index(value, path, ctx):
                 )
                 if record is not None:
                     rm = ctx.result(record, a["result"]["record"]["path"])
+                    assessment_manifest = rm
                     if record["record_kind"] != "execution result":
                         ctx.error(
                             path,
@@ -234,7 +236,9 @@ def index(value, path, ctx):
                     if record["result_id"] in seen_results:
                         ctx.error(path, loc, "duplicate-id", "Duplicate execution result")
                     seen_results.add(record["result_id"])
-        records.append((a, record, manifest))
+        # Collection identity checks above use the actual supplied inputs;
+        # aggregate criteria belong to the rule set pinned by the result.
+        records.append((a, record, assessment_manifest or manifest))
     return records
 
 
@@ -390,13 +394,18 @@ def assessment(raw, path, ctx, planned=None, definitions=None):
         number = order.get((a["case_id"], a["condition"], a["repetition"]))
         case, condition = a["case_id"], a["condition"]
         if m:
-            _, cards, _ = ctx.manifest(m, a["manifest"]["path"])
+            rule_path = r["manifest"]["path"] if r else a["manifest"]["path"]
+            _, cards, _ = ctx.manifest(m, rule_path)
             expected_rows.update((case, condition, cid) for cid, (_, cs) in cards.items() if condition in cs)
             expected_rows.add((case, condition, "functional outcome"))
         if r and r["setup"]["status"] == "valid":
             valid.append((number, a, r))
     if definitions:
         for case, condition in groups:
+            # Protocol collection definitions fill only wholly unrepresented
+            # groups; they must not reintroduce superseded reassessment rules.
+            if (case, condition, "functional outcome") in expected_rows:
+                continue
             if case not in definitions:
                 continue
             m = definitions[case]
@@ -494,13 +503,19 @@ def assessment(raw, path, ctx, planned=None, definitions=None):
             )
 
         def counts(numbers=None):
-            c = Counter(
-                r["functional_result"]
-                if key[2] == "functional outcome"
-                else next(x["judgment"] for x in r["criteria"] if x["id"] == key[2])
-                for n, a, r in selected
-                if numbers is None or n in numbers
-            )
+            c = Counter()
+            for n, _, r in selected:
+                if numbers is not None and n not in numbers:
+                    continue
+                if key[2] == "functional outcome":
+                    judgment = r["functional_result"]
+                else:
+                    judgment = next(
+                        (x["judgment"] for x in r["criteria"] if x["id"] == key[2]), None
+                    )
+                    if judgment is None:
+                        raise ValueError(f"Result {r['result_id']} has no criterion {key[2]}")
+                c[judgment] += 1
             return [c[x] for x in ["met", "not met", "insufficient evidence"]]
 
         try:
@@ -533,7 +548,7 @@ def assessment(raw, path, ctx, planned=None, definitions=None):
                             "aggregate",
                             f"{label}: expected {counts(numbers)}",
                         )
-        except (ValueError, StopIteration) as error:
+        except ValueError as error:
             ctx.error(path, line, "aggregate", str(error))
     if seen != expected_rows:
         ctx.error(

@@ -5,7 +5,7 @@
 Format version: `1`
 Study ID: `concise-writing`
 Case ID: `agent-recommendation`
-Definition version: `3`
+Definition version: `4`
 Status: owner-approved whole-document reassessment of contribution-baseline-01; no new collection.
 Purpose and realistic failure opportunity: Improve a padded, fragmented recommendation without sacrificing its correctness or effectiveness.
 Protocol coverage and membership/exposure: [suite](../../protocol.md#suite-and-evidence), selected development case; O1–O3 assessed through F1–F3; length reported separately, O4–O5 process unscored. Author and assessor share construction history; no held-out or independent-validation claim.
@@ -14,18 +14,18 @@ Protocol coverage and membership/exposure: [suite](../../protocol.md#suite-and-e
 
 Subject inputs: [task](task.md), complete [source document](fixture/report.md), and, for original only, the [preserved CW skill](../skill-original/SKILL.md).
 The [original configuration](original.json), [control configuration](control.json) and [collection manifest](manifest.json) retain the actual supplied context.
-Definition 3 and policy 3 are controller-only reassessment rules, never supplied to the subjects.
+Definition 4 and policy 4 are controller-only reassessment rules, never supplied to the subjects.
 Both sources are fictional study material; subjects edit prose and do not execute the actions it describes.
 Setup validity requires evidence of the intended source bytes, skill condition, matched surrounding context, output path and captured final workspace.
 Resolve capture/setup uncertainty separately; with valid setup assess the saved report, including an unchanged or partially edited report, under every factor.
 
 ## Rules and evidence
 
-Policy: [CW-assessment-3 controller copy](../../assessment-policy.txt), derived verbatim from the [protocol policy body](../../protocol.md#current-cw-assessment-policy).
+Policy: [CW-assessment-4 controller copy](../../assessment-policy.txt), derived verbatim from the [protocol policy body](../../protocol.md#current-cw-assessment-policy).
 Inspect the complete source and complete saved output before assigning any judgment. The source is factual authority.
 The reader needs to decide whether to approve a limited Cedar export pilot and understand the supporting evidence, remaining uncertainty, execution arrangements and response to its results. Compare whether the complete edit enables that decision and safe execution as effectively as the source. The source’s repeated mechanism explanations, generic communication digression and dispersed instructions create a realistic opportunity to shorten and improve reading. They are context, not separate deletion requirements.
 A local difference is evidence to investigate, never an independent score. Justify each factor from the document’s overall meaning and use; identify an actual reader consequence before declaring a loss.
-Historical examples and qualification judgments belong to policy 1 and are not answer keys for this reassessment.
+The [qualification examples](../../qualification.md) demonstrate policy-4 boundaries without prescribing an answer; their earlier judgments remain in Git.
 Reliable evidence of an absent or empty delivered document fails F1–F3; reduced word count alone cannot produce a pass. Missing capture is not proof of absence.
 
 ### Length observation (unscored)
@@ -74,9 +74,9 @@ Coverage: O3; readability and coherent organization.
 Dimension: functional
 Applies to: `original`, `control`
 Judgment unit: complete delivered document compared with the complete source.
-Required evidence: Complete delivered document read in its intended context.
-Met: The reader can readily follow the reasoning and connect the decision, evidence, limits and actions.
-Not met: The complete document presents a concrete comprehension obstacle, such as unclear connections or instructions whose sequence is difficult to follow.
+Required evidence: Complete delivered document read for its intended audience and purpose, with concrete evidence of ease or unnecessary consumption burden.
+Met: The complete document is easy to consume: the reader can readily follow the reasoning and connect the decision, evidence, limits and actions without unnecessary effort from padding, purposeless restatement or digression. Useful reinforcement remains acceptable.
+Not met: The complete document is unnecessarily difficult or laborious to consume because of unclear connections, scattered instructions, residual padding, purposeless restatement or digression. Identify the actual reader burden; being possible to follow is not sufficient, and word/section/repetition counts alone cannot establish failure.
 Insufficient evidence: available source/output evidence cannot settle this factor; identify the unresolved question rather than forcing a pass or failure.
 Alternatives: faithful paraphrase, consolidation, relocation, useful repetition and any effective layout; no sentence-matching or preferred answer.
 Consequence: Readability is required for an overall pass.
