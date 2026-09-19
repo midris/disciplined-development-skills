@@ -79,9 +79,10 @@ Two SSR document-conformance findings were reproduced and corrected: closing bal
 SSR’s runner-schema statement now explicitly describes collection-time versions.
 No frozen input, result, criterion or live skill changed.
 
-The next recommended question is whether a targeted SSR edit can prevent the demonstrated inconsistent audit totals while preserving complete reconciliation.
+A possible authoring question is whether a targeted SSR edit can prevent the demonstrated inconsistent audit totals while preserving complete reconciliation.
+The subsequent coverage review below takes priority over selecting that edit.
 The comparison contains unambiguous counting errors; the disputed Shiv classification and semantic-block conventions are separate uncertainties and must not be treated as established defects.
-Use the existing three-case suite and agreed rules, with arithmetic consistency interpreted from the full account.
+Retain the existing three-case suite and agreed rules as regression evidence, with arithmetic consistency interpreted from the full account; settle the proposed coverage expansion below before authoring.
 Choose the smallest intervention after reviewing those errors: reduce redundant accounting or derive required totals mechanically if a helper is warranted.
 A subject-facing helper would be part of the tested candidate, distinct from the controller’s existing evidence tools.
 This is a proposed objective, not approved authoring or collection; the subject allocation is exhausted.
@@ -90,3 +91,39 @@ It would test the missing evidence-to-edit step without manufacturing a failure 
 Verification after corrections: all five version-1 batches pass assessment readiness; runner unit tests pass 315 and offline process smokes pass 110; hooks pass 263 with three existing skips; formats pass nine and installer tests pass 14.
 The first process-smoke invocation encountered the outer sandbox’s nested `sandbox-exec` restriction; the documented host-permission run passed without disabling the child policy or using real providers.
 The final active-session review found no remaining issues in these corrections.
+
+## Coverage review before authoring — 2026-09-19
+
+Owner requested reconsidering coverage using historical validation and the comprehensive rewrite worktree before tailoring a skill to an observed miss.
+The current studies adequately exercised the process and their declared narrow questions; their coverage is not yet a general rewrite acceptance suite.
+All three SSR tasks start with a reviewer flagging a README defect after the underlying change is settled.
+They vary the changed fact (CLI option, guide path, behavior), but not the initiating situation.
+CW covers two short software decision updates, both editing tasks; combining many padding patterns in one constructed document does not establish breadth of use.
+
+| Coverage question | Current evidence | Proposed treatment before the relevant edit |
+|---|---|---|
+| SSR: complete related repairs after one reported defect | Three executable cases with literal, path and semantic changes; preservation and committed outcomes | Retain all three unchanged as regression coverage. |
+| SSR: ordinary initiating change | Not measured by the current suite; historical SSR-01 supplies a rename with causal comments | Add one executable initiating-change case with real consumers and rationale, without naming all affected files or prescribing a sweep. |
+| SSR: genuinely local change | Explicitly deferred; historical SSR-05 supplies a completed negative search | Add one real searchable repository case where the agent must establish locality and avoid unrelated edits; do not supply the answer as a completed inventory. |
+| SSR: accounting at scale | Current cases are small; archived grouping case has 126 matches in ten path/outcome groups | If accounting is the edit objective, adapt the grouped-inventory case as a focused diagnostic. It tests accounting, not discovery; retain complete-repair cases alongside it. |
+| CW: writing as well as editing | Archived cache-eviction record contains observed drafting outputs from six facts; current cases only edit | Before a general CW rewrite, add a drafting task from fixed facts in a fresh domain, preserving audience needs without instructing padding. |
+| CW: consequential procedural prose and document scale | Historical runbook/navigation examples differ from current short decision updates | Before broad CW adoption, select a complete operational document where ordering, exceptions and useful navigation matter; use whole-document policy 4 rather than inherited sentence rules. |
+
+Sources inspected: the [archived SSR record](../skill-validation/archive/skill-records/sweeping-stale-references.md), [archived CW captured example](../skill-validation/archive/skill-records/concise-writing.md#appendix--captured-run-cache-eviction-build-domain), and historical scenario prompts [SSR-01](../skill-validation/scenarios/sweeping-stale-references/ssr-01/prompt.md), [SSR-03](../skill-validation/scenarios/sweeping-stale-references/ssr-03/prompt.md), [SSR-05](../skill-validation/scenarios/sweeping-stale-references/ssr-05/prompt.md), [SSR-06](../skill-validation/scenarios/sweeping-stale-references/ssr-06/prompt.md) and [SSR-07](../skill-validation/scenarios/sweeping-stale-references/ssr-07/prompt.md), with their fixtures.
+The comprehensive worktree at commit `13599fb7d3127334b0d07bfe468767e586ec5f9c` supplied `skill-validation/sweeping-stale-references.md` and `skill-validation/concise-writing.md`, including candidate-era coverage and the cutover-runbook example.
+Those records supply candidate situations and limitations, not current requirements or transferable pass counts.
+Their read-only prompts often supply inventories or request proposed artifacts; they cannot establish actual searching, editing and committing.
+Some expectations belong to changed candidate contracts, including intended-new-form searches and CW authoring co-selection; do not silently import them into the original contract.
+
+Historical provenance varies.
+The [adversarial-review record](../skill-validation/archive/skill-records/adversarial-review.md) names meeting-pipeline PR 25’s pre-fix tree `66e7179` and reports that synthetic snippets exposed contracts that made the original bugs trivial.
+The [review-loop record](../skill-validation/archive/skill-records/adversarial-review-loop.md) records six reactive rounds in meeting-pipeline PR-2 and the EventLog fixture `b0f4511`.
+These are promising real-incident sources for later studies; this review inspected the records, not those external repository trees or their original transcripts.
+The SSR inventory examples should not be described as independently verified production incidents.
+
+Recommendation: agree the two missing SSR situations first, and include the scale diagnostic if accounting remains the proposed objective.
+Recover an intact historical task/tree where available; otherwise label the adaptation as reconstructed.
+Freeze any accepted additions and establish original-skill observations before editing; include a no-target control only if the new question includes skill contribution.
+Then choose the edit from the combined evidence and compare versions on the declared suite.
+Keep the completed baseline and its scores unchanged; new cases form an explicit expansion, not a replacement or candidate-derived baseline.
+No new case, subject invocation or skill edit is authorized by this review.
