@@ -76,7 +76,7 @@ def test_rendered_request_and_raw_artifacts_are_preserved(build_config_case, pro
     assert value["status"] == "COMPLETED" and value["infrastructure_error"] is None
     assert value["execution"] == {
         "provider": provider, "model": "gpt-5.6-sol", "effort": "low", "executable": provider,
-        "permissions": "workspace-write",
+        "permissions": "workspace-write", "cleanup_error": None,
         "timeout_seconds": 900, "invocation_started": True, "timed_out": False, "exit_code": 0,
     }
     for kind, name, content in [("fixture", "input.txt", b"changed"), ("evidence", "note.txt", b"evidence")]:

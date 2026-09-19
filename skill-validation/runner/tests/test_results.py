@@ -468,7 +468,7 @@ def test_result_records_permissions_in_versioned_execution(tmp_path, permissions
     result = results_module.result_record(context, config, ProviderResult('codex', not failed, exit_code=None if failed else 0),
                            ('PREPARATION_FAILED', 'stopped') if failed else None,
                            '2026-08-28T12:00:01.000Z', 1.0)
-    assert result['schema_version'] == '0.4'
+    assert result['schema_version'] == '0.5'
     assert result['execution']['permissions'] == permissions
     _validate(result)
 
@@ -482,3 +482,15 @@ def test_result_schema_requires_valid_permissions(permissions):
     else:
         record['execution'].pop('permissions', None)
     _reject(record)
+
+
+def test_result_persists_cleanup_even_when_primary_error_masks_it(tmp_path):
+    from skilltest.runner import _provider_error
+    context = _context(tmp_path)
+    provider = ProviderResult('codex', True, exit_code=-9, timed_out=True,
+                              cleanup_error='owned group did not exit')
+    value = results_module.result_record(context, _config(context), provider,
+                                         _provider_error(provider), '2026-09-18T00:00:00.000Z', 1.0)
+    assert value['schema_version'] == '0.5'
+    assert value['execution']['cleanup_error'] == 'owned group did not exit'
+    _validate(value)

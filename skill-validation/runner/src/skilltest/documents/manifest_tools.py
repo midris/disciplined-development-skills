@@ -50,6 +50,10 @@ def prepare(value, path, ctx, revision=None, compare=None, allowed=()):
             )
             sources[resolved] = refresh(dict(path=resolved, version=None))
         cfg = load_config(cp)
+        if compare and any(f.target.as_posix() == "@prompt" for f in cfg.fixtures):
+            raise ValueError(
+                "Paired checking reserves @prompt for the prompt; rename that fixture target"
+            )
         configs[condition["id"]] = cfg
         mounts[condition["id"]] = {
             "@prompt": regular_bytes(cfg.prompt),

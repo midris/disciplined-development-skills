@@ -30,3 +30,13 @@ Initial implementation/verification estimate: 150 active minutes within the rema
 
 Implementation is kept together because the commands share validation/publication helpers and CLI wiring; splitting those foundations into separately incomplete command commits would weaken reviewability.
 Verification and resolved review findings: [tooling review](../../reviews/2026-09-18-study-mechanical-tools-review.md).
+
+## Review correction: recorded capture and cleanup
+
+Retention validates the runner schema and its recorded file/directory artifacts before certifying a copy, respecting artifacts recorded absent after a failed run.
+Result version 0.5 records cleanup failure independently because version 0.4's primary timeout/exit error can hide it.
+The retention command accepts 0.5 and completed 0.4 bundles; failed 0.4 bundles require manual inspection/preservation, with existing historical records unchanged.
+This versioned producer correction supplies a fact the approved retention contract needs; it does not change study scoring or authorize subject runs.
+Paired checking reserves `@prompt` so a fixture cannot shadow the prompt; generated links and all document consumers decode URL paths consistently.
+
+Follow-up verification: [review and corrections](../../reviews/2026-09-18-study-tools-followup-review.md).

@@ -3,6 +3,7 @@
 from collections import Counter
 from pathlib import Path
 import re
+from urllib.parse import unquote
 
 from .formats import field, headings, lines_outside_fences, parse_json
 from .references import canonical, regular_bytes
@@ -32,10 +33,16 @@ def tables(raw):
             i += 1
 
 
+def link_parts(destination):
+    """Split URL syntax before decoding literal filename characters."""
+    target, _, anchor = destination.strip("<>").partition("#")
+    return unquote(target), unquote(anchor)
+
+
 def linked_files(raw, path):
     for n, line in lines_outside_fences(raw):
         for _, target in LINK.findall(line):
-            target = target.strip("<>").split("#", 1)[0]
+            target = link_parts(target)[0]
             if target and "://" not in target and not target.startswith("mailto:"):
                 yield n, (Path(path).parent / target).resolve()
 
@@ -101,7 +108,7 @@ def index(value, path, ctx):
                 ctx.inventory(a["bundle"], path)
                 base = Path(a["bundle"]["path"])
                 mechanical = parse_json(regular_bytes(base / "result.json"))
-                if mechanical.get("schema_version") not in {"0.2", "0.3", "0.4"}:
+                if mechanical.get("schema_version") not in {"0.2", "0.3", "0.4", "0.5"}:
                     ctx.error(
                         path,
                         loc,
@@ -329,7 +336,7 @@ def assessment(raw, path, ctx, planned=None, definitions=None):
             "unsupported",
         )
         return
-    index_path = (Path(path).parent / links[0][1]).resolve()
+    index_path = (Path(path).parent / link_parts(links[0][1])[0]).resolve()
     try:
         rel = index_path.relative_to(ctx.root).as_posix()
     except ValueError:
@@ -356,7 +363,7 @@ def assessment(raw, path, ctx, planned=None, definitions=None):
     sr = re.search(r"Git `([0-9a-f]{40})`", citation)
     pinned_scope = None
     if len(sl) == 1 and sr:
-        sp = (Path(path).parent / sl[0][1].split("#")[0]).resolve().relative_to(ctx.root).as_posix()
+        sp = (Path(path).parent / link_parts(sl[0][1])[0]).resolve().relative_to(ctx.root).as_posix()
         original = ctx.git_at(ctx.root, "show", f"{sr[1]}:{sp}").decode()
         selected_scope = batch_sections(original).get(value["batch_id"])
         if selected_scope is not None:
@@ -487,7 +494,7 @@ def assessment(raw, path, ctx, planned=None, definitions=None):
         if evidence_links:
             allowed = {(ctx.root / a["result"]["record"]["path"]).resolve() for _, a, _ in selected}
             named = {
-                (Path(path).parent / destination.split("#")[0]).resolve() for _, destination in evidence_links
+                (Path(path).parent / link_parts(destination)[0]).resolve() for _, destination in evidence_links
             }
         else:
             allowed = {r["result_id"] for _, _, r in selected}
@@ -773,14 +780,12 @@ def readiness(raw, path, ctx, stage, batch):
 
 def check_links(raw, path, ctx):
     """Check local inline links and anchors; external URLs are not fetched."""
-    from urllib.parse import unquote
-
     for n, line in lines_outside_fences(raw):
         line = re.sub(r"`[^`]*`", "", line)
         for _, destination in LINK.findall(line):
             if "://" in destination or destination.startswith("mailto:"):
                 continue
-            target, _, anchor = unquote(destination.strip("<>")).partition("#")
+            target, anchor = link_parts(destination)
             resolved = (Path(path).parent / target).resolve() if target else Path(path)
             if not resolved.exists():
                 ctx.error(path, n, "link", f"Missing local target: {destination}")
@@ -954,7 +959,7 @@ def accounting(raw, path, ctx):
         for label, destination in LINK.findall(raw):
             if label.lower() not in {"plan", "active plan"}:
                 continue
-            target = (Path(path).parent / destination.split("#")[0]).resolve()
+            target = (Path(path).parent / link_parts(destination)[0]).resolve()
             if target.is_file():
                 limits = re.search(limit_pattern, target.read_text(encoding="utf-8"))
             if limits:

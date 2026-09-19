@@ -31,3 +31,5 @@ packages = ["src/skilltest"]
 "../../skill-studies/formats/run-index.template.json" = "skilltest/_formats/run-index.template.json"
 "../../skill-studies/formats/execution-result.template.json" = "skilltest/_formats/execution-result.template.json"
 "../../skill-studies/formats/execution-result.schema.json" = "skilltest/_formats/execution-result.schema.json"
+
+"result.schema.json" = "skilltest/_result.schema.json"

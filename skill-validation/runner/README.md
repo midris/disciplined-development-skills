@@ -80,7 +80,7 @@ skilltest docs tables PROTOCOL --batch ID --index INDEX --output FRAGMENT [--sou
 
 Use `manifest` with the existing manifest template: supply IDs, dates, authority/controller paths, versions and condition configurations; hashes, source revision and the subject-source list are derived.
 The draft checks current files, exact configured sources, criterion applicability and controller separation.
-Paired checking compares execution settings and mounted bytes; declare differing target paths explicitly (`@prompt` means the prompt).
+Paired checking compares execution settings and mounted bytes; declare differing target paths explicitly (`@prompt` means the prompt and is reserved as a target name during paired checking).
 `preparation` checks the selected protocol scope and working manifests before freezing; complete draft cases are allowed, future index/report links are not required, and hashes are recomputed without writing the inputs.
 It does not claim collection readiness or authorization.
 Commit reviewed inputs, generate frozen manifests against that full commit, review and explicitly replace the committed draft at its declared path, then commit manifests and run collection readiness.
@@ -88,10 +88,13 @@ A freeze rejects working inputs that differ from the selected revision; neither 
 All generated files require an existing parent directory and a new output path.
 
 Wait for the runner to exit before `retain`.
-It selects one initial attempt from the committed protocol, verifies the frozen configuration, accepts terminal runner result version 0.4, and derives the subject charge from `invocation_started` even after failure.
+It selects one initial attempt from the committed protocol, verifies the frozen configuration, accepts terminal runner result version 0.5 (or a completed 0.4 result), and derives the subject charge from `invocation_started` even after failure.
 The store must be outside the repository and disjoint from the source.
-The command copies hidden files, directories and symlinks without following links, verifies modes/bytes/hashes/targets and source stability, then registers the verified inventory in the index.
+The command first checks the runner schema and recorded file/directory capture against the current bundle, including legitimately absent artifacts.
+It then copies hidden files, directories and symlinks without following links, verifies modes/bytes/hashes/targets and source stability, and registers the verified inventory.
+Declared file artifacts must be regular files; an arbitrary bundle symlink is preserved as a link.
 It refuses duplicates, unknown charges, unresolved cleanup and existing destinations.
+Failed 0.4 records cannot prove cleanup independently of their primary error and require manual inspection/preservation; they are not silently upgraded or automatically registered.
 An exclusive index lock serializes cooperating registrations; interrupted operations can leave a lock or staging directory requiring inspection.
 A publication/index-write failure can leave an unregistered bundle, which is reported and never silently adopted or overwritten.
 The source remains intact; this verifies a retained copy, not a separate backup or OS-level proof against arbitrary writers.
@@ -387,13 +390,15 @@ The completed qualification adds actual companion loading, file search/write/edi
 
 ## Result
 
-`result.json` has exact schema version `"0.4"` and records the run identity, timestamps, duration, test id, mechanical invocation state, fixed artifacts, and an infrastructure error when one occurred.
+`result.json` now has schema version `"0.5"` and records the run identity, timestamps, duration, test id, mechanical invocation state, fixed artifacts, and an infrastructure error when one occurred.
 `execution.permissions` is required and records `workspace-write` or `read-only`, including failures before provider launch; an omitted input field is recorded as its resolved `workspace-write` default.
+Version 0.5 adds required `execution.cleanup_error` (null or a nonempty error string), independently of the primary infrastructure error; a timeout or nonzero exit must not hide an unresolved provider group.
+The schema continues to validate historical 0.4 records without this field; their missing field is not proof of successful cleanup after failure.
 Version 0.4 adds `artifacts.provider_session` for `provider-session.jsonl` and `SESSION_CAPTURE_FAILED`. Codex copies the single invocation-owned rollout before private-profile cleanup; no profile/auth files are copied. Claude records the session artifact as absent and retains its existing raw trace. Missing, ambiguous, empty, symlinked or uncopyable Codex session evidence is an explicit capture error; the private runtime is retained with a recovery path. `SESSION_CAPTURE_FAILED` takes precedence over a concurrent provider nonzero exit or timeout, and its JSON error message includes the recovery notice/path; `execution.exit_code` and `execution.timed_out` retain the actual provider outcome. A retained session may still contain truncated or incomplete tool output, so assess its actual contents.
 Historical `0.2` and `0.3` results remain unchanged and must be interpreted with their version and retained configuration; a missing mode is not evidence of either permission setting.
 Consumers validating new results must use the updated result schema; the worksheet reader continues to read the fields common to these versions.
 `status` is `COMPLETED` only for a mechanically completed invocation; otherwise it is `INFRA_ERROR` with one of `PREPARATION_FAILED`, `PROVIDER_LAUNCH_FAILED`, `PROVIDER_TIMEOUT`, `PROVIDER_EXIT_NONZERO`, `ARTIFACT_WRITE_FAILED`, `PROVIDER_CLEANUP_FAILED`, or `SESSION_CAPTURE_FAILED`.
-The cleanup code applies to either provider after an otherwise successful model call; earlier preparation/launch/timeout/provider errors stay primary, with cleanup failure logged additionally.
+The cleanup code applies to either provider after an otherwise successful model call; earlier preparation/launch/timeout/provider errors stay primary, with cleanup failure logged and recorded independently.
 Exit `0` means the run completed mechanically, exit `1` means an owned-run, provider, timeout, or artifact-persistence failure, and exit `2` means usage or configuration failed before a run directory was owned.
 
 The `fixture` and `evidence` artifact records are recursive, lexicographically path-sorted inventories of retained filesystem entries.
@@ -405,7 +410,7 @@ The runner never evaluates evidence or assigns a behavioral verdict.
 
 ```json
 {
-  "schema_version": "0.4",
+  "schema_version": "0.5",
   "run_id": "20260827T120000000Z-runner-smoke-<unique>",
   "status": "COMPLETED",
   "started_at": "2026-08-27T12:00:00.000Z",
@@ -421,6 +426,7 @@ The runner never evaluates evidence or assigns a behavioral verdict.
     "timeout_seconds": 900,
     "invocation_started": true,
     "timed_out": false,
+    "cleanup_error": null,
     "exit_code": 0
   },
   "artifacts": {

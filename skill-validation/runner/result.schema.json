@@ -3,8 +3,19 @@
   "type": "object",
   "additionalProperties": false,
   "required": ["schema_version", "run_id", "status", "started_at", "finished_at", "duration_seconds", "test", "execution", "artifacts", "infrastructure_error"],
+  "allOf": [
+    {
+      "if": {"properties": {"schema_version": {"const": "0.5"}}},
+      "then": {"properties": {"execution": {"required": ["cleanup_error"]}}},
+      "else": {"properties": {"execution": {"not": {"required": ["cleanup_error"]}}}}
+    },
+    {
+      "if": {"properties": {"status": {"const": "COMPLETED"}}},
+      "then": {"properties": {"execution": {"properties": {"cleanup_error": {"type": "null"}}}}}
+    }
+  ],
   "properties": {
-    "schema_version": {"const": "0.4"},
+    "schema_version": {"enum": ["0.4", "0.5"]},
     "run_id": {"type": "string", "minLength": 1},
     "status": {"enum": ["COMPLETED", "INFRA_ERROR"]},
     "started_at": {"type": "string", "pattern": "^[0-9]{4}-[0-9]{2}-[0-9]{2}T[0-9]{2}:[0-9]{2}:[0-9]{2}\\.[0-9]{3}Z$"},
@@ -31,7 +42,8 @@
         "timeout_seconds": {"const": 900},
         "invocation_started": {"type": "boolean"},
         "timed_out": {"type": "boolean"},
-        "exit_code": {"type": ["integer", "null"]}
+        "exit_code": {"type": ["integer", "null"]},
+        "cleanup_error": {"type": ["string", "null"], "minLength": 1}
       },
       "oneOf": [
         {"properties": {"provider": {"const": "codex"}, "executable": {"const": "codex"}}},

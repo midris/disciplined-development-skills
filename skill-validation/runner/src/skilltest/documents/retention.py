@@ -8,6 +8,7 @@ from datetime import datetime
 from pathlib import Path
 
 from . import Report
+from .capture import verify_capture
 from .formats import field, parse_json
 from .operations import (
     committed,
@@ -87,21 +88,16 @@ def retain(args):
         )
     before = inventory(source)
     mechanical = parse_json(regular_bytes(source / "result.json"))
+    verify_capture(mechanical, before)
     invoked = mechanical.get("execution", {}).get("invocation_started")
     error = mechanical.get("infrastructure_error")
-    if (
-        mechanical.get("schema_version") != "0.4"
-        or mechanical.get("status") not in {"COMPLETED", "INFRA_ERROR"}
-        or not mechanical.get("finished_at")
-        or type(invoked) is not bool
-    ):
-        raise ValueError(
-            "Require a terminal version-0.4 result with a known invocation charge"
-        )
     datetime.fromisoformat(mechanical["finished_at"])
-    if error and (
-        error.get("code") == "PROVIDER_CLEANUP_FAILED"
-        or "cleanup" in error.get("message", "").lower()
+    if mechanical["schema_version"] == "0.4" and mechanical["status"] != "COMPLETED":
+        raise ValueError(
+            "Legacy failed result cannot establish cleanup status; retain for manual inspection"
+        )
+    if mechanical["execution"].get("cleanup_error") is not None or (
+        error and error["code"] == "PROVIDER_CLEANUP_FAILED"
     ):
         raise ValueError(
             "Unresolved provider cleanup; wait for the runner and inspect it"

@@ -25,12 +25,27 @@ def retention_case(document_study):
     root, write, commit, ident = document_study
     source = root.parent / "run-new"
     shutil.copytree(root.parent / "bundle-1", source)
-    value = json.loads((source / "result.json").read_text())
-    value.update(
-        run_id="run-new",
-        status="COMPLETED",
-        finished_at="2026-09-18T00:00:00Z",
-        infrastructure_error=None,
+    # Use the actual producer shape; the shared document fixture predates retention.
+    from dataclasses import fields, replace
+    from test_results import _context
+    from skilltest.config import load_config
+    from skilltest.providers import ProviderResult
+    from skilltest.results import result_record
+
+    ctx = _context(root.parent)
+    paths = {
+        f.name: source / getattr(ctx, f.name).relative_to(ctx.run_dir)
+        for f in fields(ctx)
+        if isinstance(getattr(ctx, f.name), Path)
+    }
+    ctx = replace(ctx, **paths, run_id=source.name)
+    value = result_record(
+        ctx,
+        load_config(root / "case/original.json"),
+        ProviderResult("codex", True, exit_code=0),
+        None,
+        "2026-09-18T00:00:00.000Z",
+        1.0,
     )
     (source / "result.json").write_text(json.dumps(value))
     (source / ".hidden").write_bytes(b"evidence\x00")
@@ -143,6 +158,7 @@ def test_retain_keeps_failed_runs_and_derives_charge(retention_case, invoked):
         },
     )
     r["execution"]["invocation_started"] = invoked
+    r["execution"]["exit_code"] = 1 if invoked else None
     p.write_text(json.dumps(r))
     assert invoke(args) == 0
     assert json.loads(index.read_text())["attempts"][0]["allocation"]["charge"] == int(
@@ -531,3 +547,180 @@ def test_retain_preserves_read_only_bundle_directory(retention_case):
         dest = store / source.name
         if dest.exists():
             dest.chmod(0o755)
+
+
+def test_generated_tables_validate_with_encoded_result_paths(document_study):
+    from skilltest.documents import Report
+    from skilltest.documents.references import Context
+    from skilltest.documents.study import assessment, check_links
+
+    root, write, commit, ident = document_study
+    value = json.loads((root / "example-run-index.json").read_text())
+    record = json.loads((root / "results/1.json").read_text())
+    name = "results/result #1.json"
+    write(name, record)
+    revision = commit()
+    value["attempts"][0]["result"]["record"] = ident(name, revision)
+    write("example-run-index.json", value)
+    revision = commit()
+    out = root / "tables.md"
+    assert (
+        invoke(
+            [
+                "tables",
+                root / "protocol.md",
+                "--batch",
+                "example",
+                "--index",
+                root / "example-run-index.json",
+                "--output",
+                out,
+            ]
+        )
+        == 0
+    )
+    generated = out.read_text()
+    ctx = Context(out, Report())
+    check_links(generated, out, ctx)
+    assert ctx.report.structurally_valid, ctx.report.diagnostics
+    # The generated aggregate must be consumable by the assessment validator.
+    report_path = root / "example-assessment.md"
+    report = report_path.read_text()
+    import re
+
+    index_identity = ident("example-run-index.json", revision)
+    report = re.sub(
+        r"(?m)^Attempt index:.*$",
+        f"Attempt index: [index](example-run-index.json), Git `{revision}`, SHA-256 `{index_identity['sha256']}`",
+        report,
+    )
+    report = (
+        report.split("## Coverage and execution results")[0]
+        + "## Coverage and execution results\n\n"
+        + generated
+    )
+    ctx = Context(report_path, Report())
+    assessment(report, report_path, ctx)
+    assert ctx.report.structurally_valid, ctx.report.diagnostics
+
+
+def test_paired_prompt_check_cannot_be_shadowed_by_fixture_target(document_study):
+    root, write, _, _ = document_study
+    m = json.loads((root / "case/manifest.json").read_text())
+    original = json.loads((root / "case/original.json").read_text())
+    original["fixtures"][0]["target"] = "@prompt"
+    write("case/original.json", original)
+    candidate = {**original, "prompt": "candidate-prompt.md"}
+    write("case/candidate-prompt.md", "A different task")
+    write("case/candidate.json", candidate)
+    m["conditions"].append(
+        {
+            **m["conditions"][0],
+            "id": "candidate",
+            "configuration": {
+                **m["conditions"][0]["configuration"],
+                "path": "case/candidate.json",
+            },
+        }
+    )
+    write(
+        "case/assessment.md",
+        (root / "case/assessment.md")
+        .read_text()
+        .replace("`original`", "`original`, `candidate`"),
+    )
+    write("case/manifest.json", m)
+    out = root / "out.json"
+    assert (
+        invoke(
+            [
+                "manifest",
+                root / "case/manifest.json",
+                "--output",
+                out,
+                "--compare",
+                "original",
+                "candidate",
+            ]
+        )
+        != 0
+    )
+    assert not out.exists()
+
+
+@pytest.mark.parametrize(
+    "change", ["missing-final", "changed-final", "missing-artifacts", "nested-change"]
+)
+def test_retain_checks_runner_capture_before_copy(retention_case, change):
+    _, source, _, index, args = retention_case
+    if change == "missing-final":
+        (source / "final.txt").unlink()
+    elif change == "changed-final":
+        (source / "final.txt").write_text("modified after capture")
+    elif change == "missing-artifacts":
+        p = source / "result.json"
+        r = json.loads(p.read_text())
+        r.pop("artifacts")
+        p.write_text(json.dumps(r))
+    else:
+        from skilltest.results import _directory_artifact
+
+        folder = source / "workspace/fixture"
+        folder.mkdir(parents=True)
+        f = folder / "nested.txt"
+        f.write_text("captured")
+        p = source / "result.json"
+        r = json.loads(p.read_text())
+        r["artifacts"]["fixture"] = _directory_artifact(folder, source)
+        p.write_text(json.dumps(r))
+        f.write_text("changed")
+    assert invoke(args) != 0
+    assert not index.exists()
+
+
+@pytest.mark.parametrize(
+    "code", ["PROVIDER_TIMEOUT", "PROVIDER_EXIT_NONZERO", "PREPARATION_FAILED"]
+)
+def test_retain_rejects_cleanup_failure_independent_of_primary_error(
+    retention_case, code
+):
+    _, source, _, index, args = retention_case
+    p = source / "result.json"
+    r = json.loads(p.read_text())
+    r.update(
+        status="INFRA_ERROR",
+        infrastructure_error={"code": code, "message": "primary failure"},
+    )
+    r["execution"].update(
+        cleanup_error="owned provider group remains",
+        timed_out=code == "PROVIDER_TIMEOUT",
+        invocation_started=code != "PREPARATION_FAILED",
+        exit_code=None if code == "PREPARATION_FAILED" else -9,
+    )
+    p.write_text(json.dumps(r))
+    assert invoke(args) != 0
+    assert not index.exists()
+
+
+@pytest.mark.parametrize(
+    "state", ["legacy-complete", "legacy-failed", "missing-cleanup"]
+)
+def test_retention_cleanup_version_boundary(retention_case, state, capsys):
+    _, source, _, index, args = retention_case
+    p = source / "result.json"
+    r = json.loads(p.read_text())
+    r["execution"].pop("cleanup_error")
+    if state.startswith("legacy"):
+        r["schema_version"] = "0.4"
+    if state == "legacy-failed":
+        r.update(
+            status="INFRA_ERROR",
+            infrastructure_error={"code": "PROVIDER_TIMEOUT", "message": "timeout"},
+        )
+        r["execution"].update(timed_out=True, exit_code=-9)
+    p.write_text(json.dumps(r))
+    code = invoke(args)
+    assert (code == 0) == (state == "legacy-complete")
+    assert index.exists() == (state == "legacy-complete")
+    if state == "legacy-failed":
+        assert "cannot establish cleanup status" in capsys.readouterr().out

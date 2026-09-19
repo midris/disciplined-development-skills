@@ -3,6 +3,8 @@
 Scope: [active plan](../plans/2026-09-11-model-driven-skill-testing.md), [tool contract](../plans/specs/2026-09-18-study-mechanical-tools.md), governing framework, document schemas/validators, runner metadata producer, tests and operating guidance.
 Review method: active-session adversarial self-review, including consistency, executability and durability; no independent reviewer or subject invocation.
 
+Follow-up: the [owner-requested review](2026-09-18-study-tools-followup-review.md) found and resolved four additional boundary defects after this initial review.
+
 ## Findings resolved
 
 - Input-boundary handling: malformed preparation manifests and non-object runner metadata could escape as tracebacks. The CLI now reports failure; preparation accepts fully specified draft cases while frozen checks retain their existing requirements.
