@@ -1,0 +1,57 @@
+{
+  "schema_version": "0.2",
+  "id": "ssr-initiating-change-control",
+  "prompt": "prompt-control.md",
+  "fixtures": [
+    {
+      "source": "fixture/.gitignore",
+      "target": ".gitignore"
+    },
+    {
+      "source": "fixture/README.md",
+      "target": "README.md"
+    },
+    {
+      "source": "fixture/archive/rollout-2024.md",
+      "target": "archive/rollout-2024.md"
+    },
+    {
+      "source": "fixture/config/defaults.json",
+      "target": "config/defaults.json"
+    },
+    {
+      "source": "fixture/docs/session-policy.md",
+      "target": "docs/session-policy.md"
+    },
+    {
+      "source": "fixture/scripts/show-session.py",
+      "target": "scripts/show-session.py"
+    },
+    {
+      "source": "fixture/src/session.py",
+      "target": "src/session.py"
+    },
+    {
+      "source": "fixture/tests/test_session.py",
+      "target": "tests/test_session.py"
+    },
+    {
+      "source": "fixture/vendor/partner/README.md",
+      "target": "vendor/partner/README.md"
+    },
+    {
+      "source": "fixture/vendor/partner/example.json",
+      "target": "vendor/partner/example.json"
+    },
+    {
+      "source": "task.md",
+      "target": "TASK.md"
+    }
+  ],
+  "execution": {
+    "provider": "codex",
+    "model": "gpt-5.6-sol",
+    "effort": "low",
+    "permissions": "workspace-write"
+  }
+}

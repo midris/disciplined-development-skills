@@ -1,0 +1,142 @@
+{
+  "format_version": "1",
+  "manifest_id": "ssr-local-change-1",
+  "study_id": "sweeping-stale-references",
+  "case_id": "local-change",
+  "status": "draft",
+  "created_at": "2026-09-19",
+  "source_revision": "",
+  "authorities": {
+    "spec": {
+      "path": "plans/specs/2026-09-11-model-driven-skill-testing-framework.md",
+      "sha256": "256f22c0813969c2507b03a78c70ab41812886db95c7d300715ec20c63d6ad02",
+      "version": null
+    },
+    "protocol": {
+      "path": "skill-studies/sweeping-stale-references/protocol.md",
+      "sha256": "835456c57a1fb49b4670a8611198108d7c712cce5384f98ab2c9c47faa0da290",
+      "version": "1"
+    },
+    "format_contract": {
+      "path": "skill-studies/formats/companion-formats.md",
+      "sha256": "a02e0b4596c255491194f457f6e350aea858e960f439becc939ca2e8c5898ef8",
+      "version": "1"
+    },
+    "execution_result_schema": {
+      "path": "skill-studies/formats/execution-result.schema.json",
+      "sha256": "0abc6cdd04c2c90495736dd9b0020bbee8ed4772babe46e8e8eb637ebd03f358",
+      "version": "1"
+    },
+    "policy": {
+      "path": "skill-studies/sweeping-stale-references/cases/local-change/assessment-policy.txt",
+      "sha256": "5d057d11f678ae3fa63c48957446aded13ccc5dcb8babab2856d0232d49e08bb",
+      "version": "SSR-assessment-3"
+    },
+    "criteria": [
+      {
+        "path": "skill-studies/sweeping-stale-references/cases/local-change/assessment.md",
+        "sha256": "ef81072ec4f91d2ec98ce00c93c37dc7d083e1eb7c92e52b64fefab699e51dc0",
+        "version": "1"
+      }
+    ]
+  },
+  "conditions": [
+    {
+      "id": "original",
+      "configuration": {
+        "path": "skill-studies/sweeping-stale-references/cases/local-change/original.json",
+        "sha256": "8e543a81ff19f6425f4e231238c319d37e4804e3184b3a68354214f3e6d03371",
+        "version": "0.2"
+      },
+      "target_skill": "skill-studies/sweeping-stale-references/cases/skill-original/SKILL.md"
+    },
+    {
+      "id": "control",
+      "configuration": {
+        "path": "skill-studies/sweeping-stale-references/cases/local-change/control.json",
+        "sha256": "a15c841f383164dc827b6f836d067f15bf9d123e78e6cfbb8487b40796f055a5",
+        "version": "0.2"
+      },
+      "target_skill": null
+    }
+  ],
+  "subject_sources": [
+    {
+      "path": "skill-studies/sweeping-stale-references/cases/local-change/fixture/.gitignore",
+      "sha256": "f6b4553712a7e85344204a512f685b41ab572796d6293e7e0b5737a525e0d456",
+      "version": null
+    },
+    {
+      "path": "skill-studies/sweeping-stale-references/cases/local-change/fixture/README.md",
+      "sha256": "e0864145d14cbb34906a8013552375f51cd6229e11cab1b86c9f49f93712999b",
+      "version": null
+    },
+    {
+      "path": "skill-studies/sweeping-stale-references/cases/local-change/fixture/archive/2024-membership.md",
+      "sha256": "42ab9ea6404eb9d9efea77a768e6e9b3abbee5331ccd541cfb6e55960d702d47",
+      "version": null
+    },
+    {
+      "path": "skill-studies/sweeping-stale-references/cases/local-change/fixture/config/account.json",
+      "sha256": "8bfd24d96962f4ed647f95009a87cf8f08ecd0f4b152c88e05b44b064560ed85",
+      "version": null
+    },
+    {
+      "path": "skill-studies/sweeping-stale-references/cases/local-change/fixture/docs/billing.md",
+      "sha256": "8649eba204ece9d490b9506718b805e0cee69dfaad9e975d5232e87a5fa5b028",
+      "version": null
+    },
+    {
+      "path": "skill-studies/sweeping-stale-references/cases/local-change/fixture/docs/glossary.md",
+      "sha256": "8330f2c33fb2c6020088abba05b8f7e2eb741b543da73b9e5e89dcaea852a6ec",
+      "version": null
+    },
+    {
+      "path": "skill-studies/sweeping-stale-references/cases/local-change/fixture/docs/shipping.md",
+      "sha256": "8e7974b71367741874b70676bbb7105d0c501d02bb2aa6b0743456265f64dea0",
+      "version": null
+    },
+    {
+      "path": "skill-studies/sweeping-stale-references/cases/local-change/prompt-control.md",
+      "sha256": "17438b8155af2ff3ba779ff39eee0426aa7d0783fec006ce6519dfebce18447f",
+      "version": null
+    },
+    {
+      "path": "skill-studies/sweeping-stale-references/cases/local-change/prompt-original.md",
+      "sha256": "6695cbb23cfd7d8656a122b2e9ea4ba35fdea581f7a15780e146d84a0732b588",
+      "version": null
+    },
+    {
+      "path": "skill-studies/sweeping-stale-references/cases/local-change/task.md",
+      "sha256": "088ebc09534a24ec492db6779fd05f6ffe77e87c157f8f45f04b0b18209347ad",
+      "version": null
+    },
+    {
+      "path": "skill-studies/sweeping-stale-references/cases/skill-original/SKILL.md",
+      "sha256": "d6812c33cae026807bbb3ebe851d93b60b513dd87ea5efd98aea28f5c02f9157",
+      "version": null
+    }
+  ],
+  "controller_only": [
+    {
+      "path": "skill-studies/sweeping-stale-references/cases/local-change/expected.md",
+      "sha256": "c9000020e418a56c56c96886a7863333a53e955464f22d30fd666ca43edcf26d",
+      "version": null
+    },
+    {
+      "path": "skill-studies/sweeping-stale-references/coverage-expansion.md",
+      "sha256": "2291bb86492ebcba15f2524b525c585da8a2cc355cda7eb86e8671f53514043a",
+      "version": null
+    },
+    {
+      "path": "skill-studies/sweeping-stale-references/expansion-qualification.md",
+      "sha256": "a126a60df076d300c3d01730d537531292137d53d64139f0483ff266f89f0a14",
+      "version": null
+    },
+    {
+      "path": "skill-studies/sweeping-stale-references/test_expansion_fixtures.py",
+      "sha256": "718a0a9c846a7ce14fb0e4c12d84a2b3ac02a70c13434aad1fdfcb94613b7525",
+      "version": null
+    }
+  ]
+}

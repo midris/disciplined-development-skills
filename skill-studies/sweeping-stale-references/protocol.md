@@ -123,6 +123,16 @@ Equivalent repairs and document restructuring remain valid under the case rules.
 Use existing constructed correct/incorrect variants to check mechanical observations and clarify real ambiguities. They are not measured model performance or a separate evaluator exam.
 Native skill discovery, composition, specialized search difficulty, reserved transfer and population reliability remain outside the selected claim. No additional case or control failure is required merely to advance collection.
 
+### Proposed coverage expansion (2026-09-19)
+
+The owner selected SSR for the next preparation step and requested fleshing out the necessary scenarios before editing the skill.
+The [coverage proposal](coverage-expansion.md) adds an ordinary initiating change and a genuinely local correction to the existing three executable situations, plus a separate large-sweep accounting diagnostic.
+[Offline qualification](expansion-qualification.md) and the new case cards describe concrete tasks, source-grounded rules, alternatives and boundaries; all are exposed reconstructed development cases.
+Preparation is authorized; new case definitions are draft, no additional subject allocation is approved, and no skill authoring or adoption follows.
+The completed baseline and comparison remain unchanged. The old local-change deferral describes their collected scope; the proposed new case does not retroactively fill that gap.
+The proposed eight-call original/control expansion and the diagnostic-only record limitation are stated in the coverage proposal for owner review.
+Current combined accounting remains in the CW protocol as linked below; CW scenario expansion is deferred while SSR is selected.
+
 ## Execution scope and authorization
 
 Follow the [ordinary active-session workflow](../../plans/specs/2026-09-11-model-driven-skill-testing-framework.md#default-work-session-workflow).

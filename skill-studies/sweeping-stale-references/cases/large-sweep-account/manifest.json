@@ -1,0 +1,98 @@
+{
+  "format_version": "1",
+  "manifest_id": "ssr-large-sweep-account-1",
+  "study_id": "sweeping-stale-references",
+  "case_id": "large-sweep-account",
+  "status": "draft",
+  "created_at": "2026-09-19",
+  "source_revision": "",
+  "authorities": {
+    "spec": {
+      "path": "plans/specs/2026-09-11-model-driven-skill-testing-framework.md",
+      "sha256": "256f22c0813969c2507b03a78c70ab41812886db95c7d300715ec20c63d6ad02",
+      "version": null
+    },
+    "protocol": {
+      "path": "skill-studies/sweeping-stale-references/protocol.md",
+      "sha256": "835456c57a1fb49b4670a8611198108d7c712cce5384f98ab2c9c47faa0da290",
+      "version": "1"
+    },
+    "format_contract": {
+      "path": "skill-studies/formats/companion-formats.md",
+      "sha256": "a02e0b4596c255491194f457f6e350aea858e960f439becc939ca2e8c5898ef8",
+      "version": "1"
+    },
+    "execution_result_schema": {
+      "path": "skill-studies/formats/execution-result.schema.json",
+      "sha256": "0abc6cdd04c2c90495736dd9b0020bbee8ed4772babe46e8e8eb637ebd03f358",
+      "version": "1"
+    },
+    "policy": {
+      "path": "skill-studies/sweeping-stale-references/cases/large-sweep-account/assessment-policy.txt",
+      "sha256": "5d057d11f678ae3fa63c48957446aded13ccc5dcb8babab2856d0232d49e08bb",
+      "version": "SSR-assessment-3"
+    },
+    "criteria": [
+      {
+        "path": "skill-studies/sweeping-stale-references/cases/large-sweep-account/assessment.md",
+        "sha256": "98dc7a3f02567c8aeb9176d8a63ef033dacf09a554a51b8d0ef766efd1eae306",
+        "version": "1"
+      }
+    ]
+  },
+  "conditions": [
+    {
+      "id": "original",
+      "configuration": {
+        "path": "skill-studies/sweeping-stale-references/cases/large-sweep-account/original.json",
+        "sha256": "0ea5d7d945a899f6bec21f7e4498c8b786e39583a72edb812158ebf36b67ebcd",
+        "version": "0.2"
+      },
+      "target_skill": "skill-studies/sweeping-stale-references/cases/skill-original/SKILL.md"
+    }
+  ],
+  "subject_sources": [
+    {
+      "path": "skill-studies/sweeping-stale-references/cases/large-sweep-account/fixture/inventory.md",
+      "sha256": "b566e44540f768e6138a42b4651f43ba64937464b248f3db2f7073a10cae6df1",
+      "version": null
+    },
+    {
+      "path": "skill-studies/sweeping-stale-references/cases/large-sweep-account/prompt-original.md",
+      "sha256": "2f738adcdca13d815e723ffb3dfa413fd0bebf32f9b6aef15462cb319d45c2e8",
+      "version": null
+    },
+    {
+      "path": "skill-studies/sweeping-stale-references/cases/large-sweep-account/task.md",
+      "sha256": "525d39ced36acfd15d3656dd59701c5e4d5d75918ed1f2a657593e290f614170",
+      "version": null
+    },
+    {
+      "path": "skill-studies/sweeping-stale-references/cases/skill-original/SKILL.md",
+      "sha256": "d6812c33cae026807bbb3ebe851d93b60b513dd87ea5efd98aea28f5c02f9157",
+      "version": null
+    }
+  ],
+  "controller_only": [
+    {
+      "path": "skill-studies/sweeping-stale-references/cases/large-sweep-account/expected.md",
+      "sha256": "b10a7fa41a8368c8630175dbb2b33a71d735a1fe4622dcc56f330e8902e4e58e",
+      "version": null
+    },
+    {
+      "path": "skill-studies/sweeping-stale-references/coverage-expansion.md",
+      "sha256": "2291bb86492ebcba15f2524b525c585da8a2cc355cda7eb86e8671f53514043a",
+      "version": null
+    },
+    {
+      "path": "skill-studies/sweeping-stale-references/expansion-qualification.md",
+      "sha256": "a126a60df076d300c3d01730d537531292137d53d64139f0483ff266f89f0a14",
+      "version": null
+    },
+    {
+      "path": "skill-studies/sweeping-stale-references/test_expansion_fixtures.py",
+      "sha256": "718a0a9c846a7ce14fb0e4c12d84a2b3ac02a70c13434aad1fdfcb94613b7525",
+      "version": null
+    }
+  ]
+}
