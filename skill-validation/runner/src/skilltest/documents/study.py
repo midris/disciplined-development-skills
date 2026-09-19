@@ -816,7 +816,12 @@ def check_links(raw, path, ctx):
 
 def accounting(raw, path, ctx):
     """Check the explicit current-total paragraph, forecast table and call pools."""
-    match = re.search(r"(\d+) active minutes booked; (\d+) minutes[^\n]*?([\d,]+)-minute ceiling", raw)
+    # Do not match a suffix such as "007" inside "1,007".
+    number = r"(?<![\d,])((?:\d{1,3}(?:,\d{3})+|\d+))(?![\d,])"
+    match = re.search(
+        number + r" active minutes booked; " + number
+        + r" minutes[^\n]*?" + number + r"-minute ceiling", raw,
+    )
     remaining = None
     if match:
         spent, remaining, ceiling = [int(x.replace(",", "")) for x in match.groups()]

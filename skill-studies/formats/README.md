@@ -1,7 +1,7 @@
 # Study formats
 
 The [field contracts](companion-formats.md) implement the [agreed spec](../../plans/specs/2026-09-11-model-driven-skill-testing-framework.md#working-artifact-organization).
-Current format set: `1`, accepted by the owner after the reconciled layout review. Collection scope and dispatch require their own recorded authority.
+Current format set: `1`, with accepted result and assessment version `2` for unmeasured functional outcomes. Collection scope and dispatch require their own recorded authority.
 
 | Artifact | Owns |
 |---|---|
@@ -19,7 +19,7 @@ The active agent or human inspects evidence supporting passes as well as failure
 
 ## Execution results
 
-Use the [schema](execution-result.schema.json) and blank template for new records.
+Use the [version-1 schema](execution-result.schema.json) and blank template for functional assessments, or the [version-2 schema](execution-result-v2.schema.json) and [template](execution-result-v2.template.json) when recording unmeasured functional outcomes.
 The schema validates one execution and its functional rollup, not batch acceptance, evidence correctness or causal attribution.
 `judgment` is `met`, `not met` or `insufficient evidence`; reasons explain the outcome, not a hidden graded score.
 Shared rules and input identities resolve through the manifest; record per-execution evidence and exceptions locally.
@@ -28,7 +28,7 @@ Before accepting a result, verify schema conformance, identities, unique IDs, ap
 The [companion contract](companion-formats.md#execution-results-and-batch-assessment) defines aggregation and the separate batch assessment.
 
 Run `skill-validation/runner/.venv/bin/python -m unittest discover -s skill-studies/formats` from the repository root.
-For a completed result, load `execution-result.schema.json` with the runner environment's `jsonschema.Draft202012Validator` and validate the record.
+For a completed result, load the schema selected by its version and pinned manifest with the runner environment's `jsonschema.Draft202012Validator` and validate the record.
 The blank template intentionally fails completed-record validation.
 The [document CLI](../../skill-validation/runner/README.md#study-documents) generates these six drafts and checks structures, identities, evidence, coverage and aggregate arithmetic. Use `skilltest docs check protocol.md --ready-for assessment --batch ID` for a selected batch; ordinary file checking does not certify the whole study. Supported Markdown representations and unsupported-version behavior are documented in that guide.
 

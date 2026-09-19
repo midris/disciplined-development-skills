@@ -1129,3 +1129,21 @@ def test_unattempted_group_retains_protocol_criterion_coverage(document_study, c
     write("example-assessment.md", report.replace("| example / original / F1 | 0 | 0 | 0 | none |\n", ""))
     assert main(args) == 1
     assert any(d["rule"] == "criterion-coverage" for d in json.loads(capsys.readouterr().out)["diagnostics"])
+
+
+@pytest.mark.process_smoke
+@pytest.mark.parametrize('booked,remaining,ceiling,expected', [
+    ('1,007', '193', '1,200', 0),
+    ('193', '1,007', '1,200', 0),
+    ('1007', '193', '1200', 0),
+    ('1,008', '193', '1,200', 1),
+    ('1,00,7', '193', '1,200', 2),
+])
+def test_accounting_reads_entire_comma_formatted_totals(document_study, capsys, booked, remaining, ceiling, expected):
+    root, *_ = document_study
+    path = root / 'protocol.md'
+    path.write_text(path.read_text().replace(
+        '10 active minutes booked; 90 minutes remain under the 100-minute ceiling',
+        f'{booked} active minutes booked; {remaining} minutes remain under the {ceiling}-minute ceiling',
+    ))
+    assert main(['docs', 'check', str(path), '--ready-for', 'assessment', '--json']) == expected
