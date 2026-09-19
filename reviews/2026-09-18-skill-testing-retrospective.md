@@ -18,8 +18,10 @@ We should reduce misapplication and repeated reopening, not suppress owner parti
 
 The records distinguish three different findings: a model completed the useful task, a skill contributed to that success, and a rewrite improved the result.
 Passing controls and tied quality outcomes remained valid observations.
-The CW candidate preserves tested quality with a 22.7% smaller instruction, a bounded simplification benefit allowed by the spec; it does not demonstrate better output quality, and it produces longer outputs than the original in all four pairs.
-Neither finding by itself decides adoption.
+The CW candidate passes the fixed quality thresholds with a 22.7% smaller instruction, but also changes the contract: uncertainty flagging is dropped, the explicit repetition exception is narrowed, and applicability is extended.
+The [comparison assessment](../skill-studies/concise-writing/comprehensive-comparison-01-assessment.md#candidate-contract-changes) records those deltas; instruction-size reduction does not establish behavior-preserving cleanup.
+The candidate does not demonstrate better output quality and produces longer outputs than the original in all four pairs.
+Adoption remains a separate owner decision.
 
 ## Keep and improve
 
