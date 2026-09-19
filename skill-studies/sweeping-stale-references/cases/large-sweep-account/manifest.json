@@ -9,23 +9,23 @@
   "authorities": {
     "spec": {
       "path": "plans/specs/2026-09-11-model-driven-skill-testing-framework.md",
-      "sha256": "256f22c0813969c2507b03a78c70ab41812886db95c7d300715ec20c63d6ad02",
+      "sha256": "85b9a2c6cf199596dd9741801333093df20064668ae2c677b7fb6f38bc4b0f40",
       "version": null
     },
     "protocol": {
       "path": "skill-studies/sweeping-stale-references/protocol.md",
-      "sha256": "835456c57a1fb49b4670a8611198108d7c712cce5384f98ab2c9c47faa0da290",
+      "sha256": "8566bb4373c304078a86bc3574165f1d68bf18ecb278c0bbab3135efa757b10c",
       "version": "1"
     },
     "format_contract": {
       "path": "skill-studies/formats/companion-formats.md",
-      "sha256": "a02e0b4596c255491194f457f6e350aea858e960f439becc939ca2e8c5898ef8",
+      "sha256": "9baeb9ebb6c7824398c3979274692f07cd2f05332bb5887bc061da9fa0b69c06",
       "version": "1"
     },
     "execution_result_schema": {
-      "path": "skill-studies/formats/execution-result.schema.json",
-      "sha256": "0abc6cdd04c2c90495736dd9b0020bbee8ed4772babe46e8e8eb637ebd03f358",
-      "version": "1"
+      "path": "skill-studies/formats/execution-result-v2.schema.json",
+      "sha256": "81902ed03e807804404c0d6ba7a0092a1c311c9eef45ee88c89708ce50d7c2c2",
+      "version": "2"
     },
     "policy": {
       "path": "skill-studies/sweeping-stale-references/cases/large-sweep-account/assessment-policy.txt",
@@ -76,17 +76,17 @@
   "controller_only": [
     {
       "path": "skill-studies/sweeping-stale-references/cases/large-sweep-account/expected.md",
-      "sha256": "b10a7fa41a8368c8630175dbb2b33a71d735a1fe4622dcc56f330e8902e4e58e",
+      "sha256": "3239111581e4c06e44a57d964d6a03ddca2a8dcaf6381b3302b92ad9798e8142",
       "version": null
     },
     {
       "path": "skill-studies/sweeping-stale-references/coverage-expansion.md",
-      "sha256": "2291bb86492ebcba15f2524b525c585da8a2cc355cda7eb86e8671f53514043a",
+      "sha256": "e9da33edb0ee48918eed56cac5f29a4398e3a13d9b30c9992850b608c060502c",
       "version": null
     },
     {
       "path": "skill-studies/sweeping-stale-references/expansion-qualification.md",
-      "sha256": "a126a60df076d300c3d01730d537531292137d53d64139f0483ff266f89f0a14",
+      "sha256": "ca9a0c8e001f78467826e9cc8ac58631feeca8a7dd7610c44ba37363213a4431",
       "version": null
     },
     {

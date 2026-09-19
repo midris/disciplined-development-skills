@@ -283,6 +283,15 @@ class Context:
         if manifest is None:
             return None
         conditions, cards, configs = self.manifest(manifest, value["manifest"]["path"])
+        schema_raw = self.identity(
+            manifest["authorities"]["execution_result_schema"],
+            manifest["source_revision"], path, "execution_result_schema",
+        )
+        if schema_raw is not None:
+            pinned_version = parse_json(schema_raw).get("properties", {}).get("schema_version", {}).get("const")
+            if pinned_version != value["schema_version"]:
+                self.error(path, "schema_version", "result-schema-version",
+                           "Result version differs from the pinned execution-result schema")
         condition = value["condition"]
         if condition not in conditions:
             self.error(path, "condition", "condition", "Condition not declared in manifest")

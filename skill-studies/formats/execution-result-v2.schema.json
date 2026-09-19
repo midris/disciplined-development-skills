@@ -1,0 +1,390 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Execution result 2 \u2014 completed records",
+  "description": "One model execution: criterion outcomes, evidence and functional result. Batch assessment aggregates these records.",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "schema_version",
+    "record_kind",
+    "result_id",
+    "assessed_at",
+    "run_id",
+    "condition",
+    "assessor",
+    "evidence",
+    "setup",
+    "criteria",
+    "functional_result",
+    "procedural_summary",
+    "observations",
+    "uncertainty",
+    "manifest"
+  ],
+  "properties": {
+    "schema_version": {
+      "const": "2"
+    },
+    "record_kind": {
+      "enum": [
+        "execution result",
+        "worked example"
+      ]
+    },
+    "result_id": {
+      "type": "string",
+      "minLength": 1
+    },
+    "assessed_at": {
+      "type": "string",
+      "minLength": 1
+    },
+    "run_id": {
+      "type": "string",
+      "minLength": 1
+    },
+    "condition": {
+      "type": "string",
+      "minLength": 1
+    },
+    "assessor": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "name",
+        "method",
+        "model",
+        "session_id",
+        "context"
+      ],
+      "properties": {
+        "name": {
+          "type": "string",
+          "minLength": 1
+        },
+        "method": {
+          "enum": [
+            "active session",
+            "human",
+            "independent review"
+          ]
+        },
+        "model": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "session_id": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "context": {
+          "type": "string",
+          "minLength": 1
+        }
+      }
+    },
+    "evidence": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": [
+          "id",
+          "artifact",
+          "selector"
+        ],
+        "properties": {
+          "id": {
+            "type": "string",
+            "minLength": 1
+          },
+          "artifact": {
+            "$ref": "#/$defs/artifact"
+          },
+          "selector": {
+            "type": "string",
+            "minLength": 1
+          }
+        }
+      },
+      "minItems": 1
+    },
+    "setup": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "status",
+        "reason",
+        "evidence"
+      ],
+      "properties": {
+        "status": {
+          "enum": [
+            "valid",
+            "invalid",
+            "insufficient evidence"
+          ]
+        },
+        "reason": {
+          "type": "string",
+          "minLength": 1
+        },
+        "evidence": {
+          "type": "array",
+          "items": {
+            "type": "string",
+            "minLength": 1
+          },
+          "minItems": 1
+        }
+      }
+    },
+    "criteria": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": [
+          "id",
+          "dimension",
+          "judgment",
+          "reason",
+          "consequence",
+          "evidence"
+        ],
+        "properties": {
+          "id": {
+            "type": "string",
+            "minLength": 1
+          },
+          "dimension": {
+            "enum": [
+              "functional",
+              "procedural"
+            ]
+          },
+          "judgment": {
+            "enum": [
+              "met",
+              "not met",
+              "insufficient evidence"
+            ]
+          },
+          "reason": {
+            "type": "string",
+            "minLength": 1
+          },
+          "consequence": {
+            "type": "string",
+            "minLength": 1
+          },
+          "evidence": {
+            "type": "array",
+            "items": {
+              "type": "string",
+              "minLength": 1
+            },
+            "minItems": 1
+          }
+        }
+      },
+      "minItems": 1
+    },
+    "functional_result": {
+      "enum": [
+        "met",
+        "not met",
+        "insufficient evidence",
+        "not measured"
+      ]
+    },
+    "procedural_summary": {
+      "type": "string",
+      "minLength": 1
+    },
+    "observations": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": [
+          "dimension",
+          "description",
+          "consequence",
+          "evidence"
+        ],
+        "properties": {
+          "dimension": {
+            "enum": [
+              "functional",
+              "procedural",
+              "setup"
+            ]
+          },
+          "description": {
+            "type": "string",
+            "minLength": 1
+          },
+          "consequence": {
+            "type": "string",
+            "minLength": 1
+          },
+          "evidence": {
+            "type": "array",
+            "items": {
+              "type": "string",
+              "minLength": 1
+            },
+            "minItems": 1
+          }
+        }
+      },
+      "minItems": 0
+    },
+    "uncertainty": {
+      "type": "array",
+      "items": {
+        "type": "string",
+        "minLength": 1
+      },
+      "minItems": 0
+    },
+    "manifest": {
+      "$ref": "#/$defs/artifact"
+    }
+  },
+  "allOf": [
+    {
+      "if": {
+        "properties": {
+          "criteria": {
+            "contains": {
+              "type": "object",
+              "required": [
+                "dimension"
+              ],
+              "properties": {
+                "dimension": {
+                  "const": "functional"
+                }
+              }
+            }
+          }
+        }
+      },
+      "then": {
+        "allOf": [
+          {
+            "if": {
+              "properties": {
+                "criteria": {
+                  "contains": {
+                    "type": "object",
+                    "required": [
+                      "dimension",
+                      "judgment"
+                    ],
+                    "properties": {
+                      "dimension": {
+                        "const": "functional"
+                      },
+                      "judgment": {
+                        "const": "not met"
+                      }
+                    }
+                  }
+                }
+              }
+            },
+            "then": {
+              "properties": {
+                "functional_result": {
+                  "const": "not met"
+                }
+              }
+            },
+            "else": {
+              "if": {
+                "properties": {
+                  "criteria": {
+                    "contains": {
+                      "type": "object",
+                      "required": [
+                        "dimension",
+                        "judgment"
+                      ],
+                      "properties": {
+                        "dimension": {
+                          "const": "functional"
+                        },
+                        "judgment": {
+                          "const": "insufficient evidence"
+                        }
+                      }
+                    }
+                  }
+                }
+              },
+              "then": {
+                "properties": {
+                  "functional_result": {
+                    "const": "insufficient evidence"
+                  }
+                }
+              },
+              "else": {
+                "properties": {
+                  "functional_result": {
+                    "const": "met"
+                  }
+                }
+              }
+            }
+          }
+        ]
+      },
+      "else": {
+        "properties": {
+          "functional_result": {
+            "const": "not measured"
+          }
+        }
+      }
+    }
+  ],
+  "$defs": {
+    "artifact": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "path",
+        "sha256",
+        "version"
+      ],
+      "properties": {
+        "path": {
+          "type": "string",
+          "minLength": 1
+        },
+        "sha256": {
+          "type": "string",
+          "pattern": "^[0-9a-f]{64}$"
+        },
+        "version": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "git_revision": {
+          "type": "string",
+          "pattern": "^[0-9a-f]{40}$"
+        }
+      }
+    }
+  }
+}

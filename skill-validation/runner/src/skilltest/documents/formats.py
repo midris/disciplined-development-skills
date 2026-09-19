@@ -1,4 +1,4 @@
-"""Shared version-1 templates and structural rules; no execution imports."""
+"""Shared versioned templates and structural rules; no execution imports."""
 
 from copy import deepcopy
 from functools import lru_cache
@@ -31,8 +31,17 @@ def resource(name):
     )
 
 
-def template(kind):
-    return resource(TEMPLATES[kind])
+def supported_versions(kind):
+    return {"1", "2"} if kind in {"result", "assessment"} else {"1"}
+
+
+def template(kind, version="1"):
+    if version not in supported_versions(kind):
+        raise ValueError(f"Unsupported {kind} version {version}")
+    name = TEMPLATES[kind]
+    if version == "2":
+        name = name.replace(".template", "-v2.template")
+    return resource(name)
 
 
 def parse_json(raw):
@@ -129,9 +138,9 @@ def _shape(value, key=""):
 
 
 @lru_cache(maxsize=None)
-def schema(kind, draft=False):
+def schema(kind, draft=False, version="1"):
     if kind == "result":
-        value = parse_json(resource("execution-result.schema.json"))
+        value = parse_json(resource("execution-result-v2.schema.json" if version == "2" else "execution-result.schema.json"))
     else:
         value = _shape(parse_json(template(kind)))
         if kind == "index":
@@ -168,7 +177,7 @@ def schema(kind, draft=False):
 
 def json_errors(value, kind, draft=False):
     return sorted(
-        Draft202012Validator(schema(kind, draft)).iter_errors(value),
+        Draft202012Validator(schema(kind, draft, value.get("schema_version", "1") if kind == "result" else "1")).iter_errors(value),
         key=lambda e: str(list(e.path)),
     )
 
@@ -208,8 +217,6 @@ def kind_of(raw):
         if not isinstance(value, dict):
             raise ValueError("document must be an object")
         version = value.get("schema_version", value.get("format_version"))
-        if version is not None and version != "1":
-            return "unknown", value, version
         for key, kind in [
             ("manifest_id", "manifest"),
             ("index_id", "index"),
@@ -221,6 +228,8 @@ def kind_of(raw):
                     value,
                     value.get("schema_version" if kind == "result" else "format_version"),
                 )
+        if version not in {"1", "2"}:
+            return "result", value, version
         raise ValueError("unrecognised JSON artifact kind")
     if "Study / batch:" in raw or "Assessment ID:" in raw:
         kind = "assessment"

@@ -33,3 +33,6 @@ packages = ["src/skilltest"]
 "../../skill-studies/formats/execution-result.schema.json" = "skilltest/_formats/execution-result.schema.json"
 
 "result.schema.json" = "skilltest/_result.schema.json"
+"../../skill-studies/formats/execution-result-v2.schema.json" = "skilltest/_formats/execution-result-v2.schema.json"
+"../../skill-studies/formats/execution-result-v2.template.json" = "skilltest/_formats/execution-result-v2.template.json"
+"../../skill-studies/formats/assessment-v2.template.md" = "skilltest/_formats/assessment-v2.template.md"

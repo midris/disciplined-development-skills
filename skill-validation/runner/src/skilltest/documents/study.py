@@ -453,6 +453,15 @@ def assessment(raw, path, ctx, planned=None, definitions=None):
         )
         return
     _, header, rows = aggregate_tables[0]
+    unmeasured_column = header[1:] == ["Met", "Not met", "Insufficient evidence", "Not measured", "Evidence"]
+    if field(raw, "Format version") == "2" and not unmeasured_column:
+        ctx.error(path, "Aggregate results", "aggregate-version", "Assessment version 2 requires explicit counts including Not measured")
+    if header[1:4] == ["Met", "Not met", "Insufficient evidence"] and not unmeasured_column and header[4:] != ["Evidence"]:
+        ctx.error(path, "Aggregate results", "aggregate", "Unexpected aggregate columns")
+    if unmeasured_column and field(raw, "Format version") != "2":
+        ctx.error(path, "Aggregate results", "aggregate-version", "Not measured requires assessment version 2")
+    if any(r["functional_result"] == "not measured" for _, _, r in valid) and not unmeasured_column:
+        ctx.error(path, "Aggregate results", "aggregate-unmeasured", "Use version-2 explicit counts with Not measured; legacy/stratified counts cannot omit it")
     if header[1:4] != ["Met", "Not met", "Insufficient evidence"]:
         strata = [
             label[:-6] for label in header[1:-1] if label.endswith(" M/N/U") and label != "Combined M/N/U"
@@ -523,11 +532,11 @@ def assessment(raw, path, ctx, planned=None, definitions=None):
                     if judgment is None:
                         raise ValueError(f"Result {r['result_id']} has no criterion {key[2]}")
                 c[judgment] += 1
-            return [c[x] for x in ["met", "not met", "insufficient evidence"]]
+            return [c[x] for x in ["met", "not met", "insufficient evidence"] + (["not measured"] if unmeasured_column else [])]
 
         try:
             if header[1:4] == ["Met", "Not met", "Insufficient evidence"]:
-                if list(map(int, row[1:4])) != counts():
+                if list(map(int, row[1:5] if unmeasured_column else row[1:4])) != counts():
                     ctx.error(path, line, "aggregate", f"Expected {counts()}")
             else:
                 for i, label in enumerate(header[1:-1], 1):
@@ -735,7 +744,7 @@ def readiness(raw, path, ctx, stage, batch):
                 "batch-identity",
                 "Assessment does not identify the selected protocol batch",
             )
-        if field(text, "Format version") == "1":
+        if field(text, "Format version") in {"1", "2"}:
             assessed = assessment(text, target, ctx, planned, by_case)
             current_paths = {p for _, p in linked_files(body, path) if p.name.endswith("run-index.json")}
             if len(current_paths) != 1:

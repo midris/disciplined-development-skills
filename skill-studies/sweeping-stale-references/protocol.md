@@ -130,7 +130,7 @@ The [coverage proposal](coverage-expansion.md) adds an ordinary initiating chang
 [Offline qualification](expansion-qualification.md) and the new case cards describe concrete tasks, source-grounded rules, alternatives and boundaries; all are exposed reconstructed development cases.
 Preparation is authorized; new case definitions are draft, no additional subject allocation is approved, and no skill authoring or adoption follows.
 The completed baseline and comparison remain unchanged. The old local-change deferral describes their collected scope; the proposed new case does not retroactively fill that gap.
-The proposed eight-call original/control expansion and the diagnostic-only record limitation are stated in the coverage proposal for owner review.
+The proposed eight-call original/control expansion and the resolved diagnostic-only record representation are stated in the coverage proposal for owner review.
 Current combined accounting remains in the CW protocol as linked below; CW scenario expansion is deferred while SSR is selected.
 
 ## Execution scope and authorization

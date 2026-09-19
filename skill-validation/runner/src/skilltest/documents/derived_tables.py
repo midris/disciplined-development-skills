@@ -75,6 +75,8 @@ def generate(args):
     defs_ctx = Context(path, Report())
     defs = definitions(body, path, defs_ctx)
     pairs = list(dict.fromkeys(p[:2] for p in planned))
+    has_unmeasured = any(r and r["functional_result"] == "not measured" for _, r, _ in records)
+    outcomes = ["met", "not met", "insufficient evidence"] + (["not measured"] if has_unmeasured else [])
     coverage, aggregates, executions, lengths = [], [], [], []
     for pair in pairs:
         group = [
@@ -140,7 +142,7 @@ def generate(args):
             aggregates.append(
                 [
                     " / ".join((*pair, cid)),
-                    *[counts[k] for k in ["met", "not met", "insufficient evidence"]],
+                    *[counts[k] for k in outcomes],
                     evidence,
                 ]
             )
@@ -259,10 +261,13 @@ def generate(args):
             "Met",
             "Not met",
             "Insufficient evidence",
+            *(["Not measured"] if has_unmeasured else []),
             "Evidence",
         ],
         aggregates,
     )
+    if has_unmeasured:
+        content += "\n\nUse assessment format 2. Not measured is separate from functional met/not met/insufficient evidence and excluded from functional success denominators. No functional success rate exists when all outcomes are not measured. Coverage above retains excluded and unassessed attempts.\n"
     if args.source_target:
         content += "\n\nWhole-file UTF-8 word counts (`wc -w`); flags do not determine pass/fail.\n\n"
         content += table(

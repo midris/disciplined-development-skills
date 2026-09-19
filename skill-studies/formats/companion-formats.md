@@ -1,6 +1,6 @@
 # Study format contracts
 
-Format set: `1`, accepted by the owner; collection authorization is separate.
+Format set: `1`, with owner-approved result and assessment version `2` for unmeasured functional outcomes; collection authorization is separate.
 These contracts implement the [spec's artifact ownership and units](../../plans/specs/2026-09-11-model-driven-skill-testing-framework.md#architecture-seven-responsibilities).
 They define document representations, not another workflow or authorization gate.
 The [document CLI](../../skill-validation/runner/README.md#study-documents) checks these contracts using shared templates and structural rules; execution results retain their checked-in JSON Schema. Its guide names supported Markdown representations and the remaining semantic review boundary.
@@ -116,11 +116,18 @@ For reassessment, a newly identified manifest may change rules while preserving 
 
 Record each applicable criterion exactly once, with dimension, `judgment`, concise `reason`, actual `consequence` and evidence IDs.
 `judgment` is categorical, not a quality grade. Keep relevant secondary defects and descriptive control procedure in `observations`/`procedural_summary`.
-Derive `functional_result` within this execution: any functional failure gives `not met`, otherwise any unknown gives `insufficient evidence`, otherwise `met`.
+Version 1 requires at least one functional criterion.
+[Execution-result version 2](execution-result-v2.schema.json) also supports procedural-only diagnostics: set `functional_result` to `not measured` exactly when no functional criterion applies.
+With functional criteria, derive `functional_result` as before: any functional failure gives `not met`, otherwise any functional unknown gives `insufficient evidence`, otherwise `met`.
+Criterion judgments remain met / not met / insufficient evidence; missing applicable judgments are invalid, not unmeasured.
 Procedural severity and setup validity remain separate. The schema enforces this rollup; criterion completeness, reference resolution and semantic correctness still need inspection.
 Keep one canonical result per assessed execution. Historical `1-draft` scores and their worked example remain valid under their pinned historical schema; do not silently migrate them.
 
-Copy [assessment.template.md](assessment.template.md) for the full declared test batch.
+Copy [assessment.template.md](assessment.template.md) for the full declared test batch, or [assessment version 2](assessment-v2.template.md) when including unmeasured functional outcomes.
+Version 2 requires explicit Met / Not met / Insufficient evidence / Not measured counts, including zero in the last column for criterion rows.
+Only valid setups enter these counts. Keep invalid, unresolved, unassessed and unattempted coverage separate.
+Exclude not measured from functional success denominators; an all-unmeasured group has no functional success rate or overall pass.
+Runtime-stratified unmeasured aggregates are unsupported; use the explicit version-2 layout.
 It owns the aggregate assessment required by [spec section 6](../../plans/specs/2026-09-11-model-driven-skill-testing-framework.md#6-assess-observations-and-establish-the-baseline): coverage, counts by case/condition/criterion, recurring failures, uncertainty and acceptance under the declared rule.
 Identify its accepted attempt-index version and reconcile every planned repetition and actual attempt, including unknown, invalid, unfinished and retried observations.
 Follow the spec's denominator and inclusion rules; never select favorable repetitions, count a worked example/reassessment as another execution, or average overlapping criteria into independent successes/failures.

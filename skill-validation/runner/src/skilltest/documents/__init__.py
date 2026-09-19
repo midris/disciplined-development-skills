@@ -6,7 +6,7 @@ from pathlib import Path
 import json
 import re
 
-from .formats import TEMPLATES, blanks, field, headings, json_errors, kind_of, template
+from .formats import TEMPLATES, blanks, field, headings, json_errors, kind_of, template, supported_versions
 
 
 @dataclass
@@ -43,12 +43,12 @@ class Report:
 
 def structural(raw, path, report):
     kind, value, version = kind_of(raw)
-    if version != "1":
+    if version not in supported_versions(kind):
         report.add(
             path,
             "version",
             "unsupported-version",
-            f"Unsupported format version {version!r}; supported: 1",
+            f"Unsupported {kind} version {version!r}; supported: {sorted(supported_versions(kind))}",
             "unsupported",
         )
         return kind, value
@@ -257,11 +257,11 @@ def run(args):
 
         return run_operation(args)
     if args.docs_command == "new":
-        if args.format_version != "1":
-            print("Unsupported format version; supported: 1")
+        if args.format_version not in supported_versions(args.kind):
+            print(f"Unsupported {args.kind} version; supported: {sorted(supported_versions(args.kind))}")
             return 2
         try:
-            content = template(args.kind)
+            content = template(args.kind, args.format_version)
             with Path(args.output).open("x", encoding="utf-8") as output:
                 output.write(content)
         except OSError as error:

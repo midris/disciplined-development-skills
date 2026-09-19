@@ -47,3 +47,6 @@ These are worked boundaries, not scored executions; no subject was run or inferr
 All three manifests passed the existing working-manifest generator, including original/control parity checks for the executable cases. All five configurations were materialized with the actual runner workspace API; supplied bytes and rendered fixture paths matched. No provider was invoked.
 The unchanged hook suite passed 263 tests with three existing environment skips; file-link checks and git diff --check passed.
 Draft manifests intentionally have no frozen source revision; collection readiness and owner spending authority are still required before dispatch.
+
+The version-2 reporting extension is offline-qualified separately: procedural-only results require not measured, mixed aggregates preserve separate counts, and excluded/missing attempts never inflate success.
+The large-sweep diagnostic draft now selects that schema; the two executable cases retain version 1.

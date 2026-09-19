@@ -54,9 +54,9 @@ It does not establish model success, independent scoring reliability or adequate
 No constructed example is recorded as a measured model failure.
 
 The diagnostic has only procedural P3, with no functional outcome measured.
-The current version-1 execution-result schema mechanically rolls a set with no functional criteria to `met`; that must not be presented as successful repair.
-Before selecting measured diagnostic collection, explicitly settle its record representation (including a not-measured functional outcome) and qualify that narrow change; no schema change is part of this preparation.
-This limitation does not block the two ordinary executable additions or require a new general evaluation layer.
+Version 1 requires a functional criterion and cannot represent this completed diagnostic.
+The [version-2 reporting extension](../../plans/specs/2026-09-19-unmeasured-functional-results.md) represents it as `functional_result: "not measured"`, with explicit aggregate counts and no functional success rate.
+The diagnostic draft manifest selects that schema. This resolves the representation limit without changing policy 3 or pooling accounting evidence with repair outcomes.
 
 ## Proposed next collection
 

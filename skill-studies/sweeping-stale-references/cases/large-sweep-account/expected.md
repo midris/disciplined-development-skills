@@ -9,3 +9,5 @@ No redundant grand total is required; every supplied subtotal or total must reco
 This diagnostic scores P3 only, as non-blocking procedural evidence under policy 3; it has no functional success rate and is never pooled with the executable cases. No-target execution is not proposed because the selected question is compliance with SSR’s explicit accounting contract, not added repair contribution. Future version comparison uses the same supplied inventory and report task.
 
 Boundary examples: all traceable groups with no grand total can meet P3; correct 126 total with an omitted group cannot; correct counts with a fabricated “tests passed” verification claim cannot; mixed dispositions in one path entry cannot. More than eleven rows is acceptable when the breakdown remains accurate.
+
+Record this diagnostic using execution-result version 2 and `functional_result: "not measured"`; use assessment version 2 for its aggregate counts.

@@ -36,6 +36,14 @@ Use `docs manifest` to prepare/freeze the existing identities, `docs retain` to 
 Run `docs check PROTOCOL --ready-for preparation --batch ID` before committing inputs, then use collection readiness after freezing.
 These operations use the existing formats; see the [command guide](../../skill-validation/runner/README.md#mechanical-study-operations) for arguments and failure handling.
 
+## Procedural-only diagnostics
+
+Use `docs new result --format-version 2` and `docs new assessment --format-version 2` (each with `--output PATH`) for procedural-only evidence.
+Version 2 adds `functional_result: "not measured"` and an explicit aggregate column; it does not add a criterion judgment or change functional scoring.
+Validate version-2 records against `execution-result-v2.schema.json`.
+Version-1 templates, schemas and existing records remain unchanged.
+See the [companion contract](companion-formats.md#execution-results-and-batch-assessment) for inclusion and denominator rules.
+
 ## Historical example
 
 The [policy-3 pilot-02 example](../sweeping-stale-references/assessments/pilot-02-original-policy-3-example.json) remains byte-for-byte unchanged in format `1-draft`.

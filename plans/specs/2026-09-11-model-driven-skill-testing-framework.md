@@ -251,7 +251,10 @@ Preserve the original record and label the revised analysis.
 
 The batch assessment summarizes per-case/per-condition results, important failure patterns, variability, coverage and context limitations.
 Identify the declared batch scope and the accepted attempt-index version supplying its execution results.
-Count met, not met and insufficient evidence separately for each applicable criterion and for the execution-level functional outcome. Show unusable attempts and uncompleted repetitions separately, reconciling them to the planned scope.
+Count met, not met and insufficient evidence separately for each applicable criterion and for the execution-level functional outcome.
+For procedural-only diagnostics, execution-result version 2 records the functional outcome as not measured; assessment version 2 shows that count explicitly.
+Not measured is excluded from functional success denominators, and an all-unmeasured group has no functional success rate or overall pass.
+It is never a substitute for missing applicable judgments. Show unusable attempts and uncompleted repetitions separately, reconciling them to the planned scope.
 For a reported success fraction, use met / (met + not met + insufficient evidence) among the declared included executions with valid setup, showing unknowns explicitly. Never silently drop invalid, missing or unfavorable observations: explain coverage separately and apply the declared inclusion/retry rule consistently.
 A retry, reassessment or worked example must not silently replace a failed repetition or inflate the sample. Reassessments replace the interpretation of the same execution; worked examples are not measured executions.
 Do not sum overlapping criterion failures as independent failed executions or pool different cases/settings into a single success rate that conceals weaknesses.
@@ -341,7 +344,7 @@ Case files may be reused in a later authorized phase without relabeling prior pi
 Settle the reusable formats before the next assessed collection. Rules identify each criterion, evidence, dimension, consequence, valid alternatives and missing-evidence treatment; known consumers determine consequential format requirements.
 The active agent or human records one execution result with schema/result/run identity, condition, manifest reference, assessor context, evidence pointers, setup validity, criterion outcomes/reasons/consequences and uncertainty.
 Resolve study/case, skill/configuration and criteria/policy identities through the manifest instead of copying them into every result. A reassessment may identify changed rules, but must verify unchanged subject inputs against the actual attempt and explain the correction.
-For SSR, retain met / not met / insufficient evidence per criterion. Derive that execution's functional result: any functional failure gives not met, otherwise any functional unknown gives insufficient evidence, otherwise met. Procedure and setup remain separately visible.
+For SSR, retain met / not met / insufficient evidence per criterion. Derive that execution's functional result: any functional failure gives not met, otherwise any functional unknown gives insufficient evidence, otherwise met. If no functional criterion applies, use version 2 and not measured instead; version 1 requires a functional criterion. Procedure and setup remain separately visible.
 The [execution-result schema/template](../../skill-studies/formats/README.md#execution-results) implements this per-execution contract, not batch acceptance or graded quality. Optional graded scoring for another skill requires a declared mapping; observed success counts are not a new grading scale.
 The [batch-assessment template](../../skill-studies/formats/assessment.template.md) implements section 6's aggregate requirement and can compare those same results across conditions or batches. Do not require an additional comparison record.
 The protocol owns study decisions and authorizations, citing the relevant assessment. Input identity belongs in manifests, attempt/bundle identity in indexes, detailed outcomes in execution results, aggregates in batch assessments and costs in accounting.

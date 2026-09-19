@@ -53,7 +53,12 @@ skilltest docs check PROTOCOL --ready-for collection [--batch ID] [--json]
 skilltest docs check PROTOCOL --ready-for assessment [--batch ID] [--json]
 ```
 
-`KIND` is `protocol`, `case`, `manifest`, `index`, `result` or `assessment`. Generation copies the canonical version-1 draft, leaves it unfinished and refuses an existing output; its parent directory must exist.
+`KIND` is `protocol`, `case`, `manifest`, `index`, `result` or `assessment`. Generation defaults to the canonical version-1 draft; `result` and `assessment` additionally accept `--format-version 2`. Generation leaves the draft unfinished and refuses an existing output; its parent directory must exist.
+
+Procedural-only execution results use version 2 and `functional_result: "not measured"`.
+`docs tables` emits a Not measured column when present and requires the version-2 assessment layout; it counts only valid setups and keeps unassessed/missing coverage separate.
+Exclude not measured from functional success denominators; an all-unmeasured group has no functional success rate.
+
 Checking reads a file and its declared references. Repository identities resolve at their full Git revision or the enclosing manifest's source revision; external evidence uses absolute paths/hashes. Run from the repository when checking a document stored outside it. Referenced configurations are materialized only in disposable scratch for the existing config loader; no checker, embedded command or provider is executed.
 
 Default checking reports structure, references and unresolved values. `complete` means no unresolved requirement among the requested mechanical checks; a default file check does not certify a batch. Stage checks require the protocol file and an unambiguous batch, follow its selected references and reconcile the declared scope. Assessment readiness validates references from both the current attempt index and the assessment's frozen index, including execution results and bundle inventories. Aggregate criteria come from each execution result’s pinned assessment manifest; collection manifests still establish the supplied inputs, which reassessment must preserve. Protocol case definitions provide coverage for groups with no recorded attempts. Collection checks also compare current dispatch inputs with their frozen bytes. A completed batch's input check does not grant authority to rerun it.
