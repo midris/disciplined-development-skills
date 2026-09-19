@@ -4,7 +4,7 @@ Format version: `1`
 Study ID: `sweeping-stale-references`
 Status: closed for the selected Sol-low study; all authorized collection and assessment complete. Owner deferred adoption while further studies proceed; no rollout or further collection is selected.
 The [plan](../../plans/2026-09-11-model-driven-skill-testing.md) owns progress; the [spec](../../plans/specs/2026-09-11-model-driven-skill-testing-framework.md) owns the workflow.
-The [core baseline](core-baseline-01-assessment.md) retains its two setup exclusions and runtime strata; the [comparison](comprehensive-comparison-01-assessment.md) records twelve valid executions of the original and preserved candidate. Both collection scopes are spent. Storage and accounting owns current totals.
+The [core baseline](core-baseline-01-assessment.md) retains its two setup exclusions and runtime strata; the [comparison](comprehensive-comparison-01-assessment.md) records twelve valid executions of the original and preserved candidate. Both collection scopes are spent. Storage and accounting retains the SSR closing checkpoint and links the current combined totals.
 
 ## Sources and intended use
 
@@ -133,7 +133,7 @@ DD and other instructions used by the controller session are not subject inputs.
 An explicit sweep request is a different execution-quality question and cannot establish that SSR caused scope expansion.
 
 The prepared original/control configurations retain Codex Sol-low with workspace-write. Configurations and manifests own exact settings and source identities; do not silently pool different models or changed rules.
-The current runner uses config schema 0.2 and result schema 0.4; earlier bundles retain their emitted versions. It prepares a fresh Git boundary, invokes once and captures mechanical completion plus evidence; it does not decide task success.
+SSR collection used config schema 0.2 and result schema 0.4; retained bundles keep their emitted versions. The current runner contract is documented in the runner guide below. It prepares a fresh Git boundary, invokes once and captures mechanical completion plus evidence; it does not decide task success.
 [Runner mechanics](../../skill-validation/runner/README.md) and [retained pilot reports](#results-and-decision) establish the available execution path. Recheck changed CLI/runtime/context assumptions before relying on them; directory separation alone does not prove read isolation.
 Control contribution claims require evidence that omitted guidance was not loaded. Record limits on observed isolation rather than claiming exhaustive host-wide exclusion.
 
@@ -162,7 +162,7 @@ TMPDIR=/private/tmp/ssr-semantic-delivery-01 skill-validation/runner/.venv/bin/s
 
 The namespaced temporary directory has been created. The commands require host permission for app-server initialization under the [runner's existing execution procedure](../../skill-validation/runner/README.md#run); subject permissions remain the configured workspace profile.
 Local identity check: `/opt/homebrew/bin/codex` resolves to `/opt/homebrew/Caskroom/codex/0.154.0/bin/codex`, version `codex-cli 0.154.0`, SHA-256 `4f85982624b3898c8991cb80c0981b2aa71070e3537046c9a95950318a95afcc`, matching the prepared CLI. The requested model name does not expose an immutable model revision.
-The runner retains its 900-second model timeout. The runner tree is byte-for-byte unchanged from the [pilot-02 tested revision](pilot-02-run-index.json), `c1ca9599abba6acc6a3ef884a9ac00a24e72e83c`; no runner change is required for these commands. Recheck mutable execution dependencies before dispatch.
+At collection, the runner retained its 900-second model timeout. Its tree was byte-for-byte unchanged from the pilot-02 tested revision `c1ca9599abba6acc6a3ef884a9ac00a24e72e83c` (historical provenance is in [Results and decision](#results-and-decision)); no runner change was required for these commands. Recheck mutable execution dependencies before any future authorized dispatch.
 
 The runner emits each unique bundle path beneath `/private/tmp/ssr-semantic-delivery-01/skilltest-runs/`. After writes stop, preserve the complete directory at the development primary below using that emitted directory name, inventory and verify it, then record the actual attempt in [semantic-delivery-01-run-index.json](semantic-delivery-01-run-index.json).
 The index records the two actual attempts, their authorization, retained evidence and canonical execution results.
@@ -274,9 +274,9 @@ Keep historical primary/backup copies unchanged. The small run index references 
 Keep one canonical repository record per accepted run and commit it before correction; Git retains earlier versions.
 Historical citations use commit/path/hash, including the worked example's run-index reference; no duplicate snapshots or extensive amendment ledger are required.
 
-**Current accounting (2026-09-17): 688 active minutes booked; 512 minutes (8 hours 32 minutes) remain under the 1,200-minute ceiling.**
+**SSR closing accounting (2026-09-17): 688 active minutes booked; 512 minutes (8 hours 32 minutes) remain under the 1,200-minute ceiling.**
 This includes preparation, review and model/tool waits, excludes owner-wait, and retains prior conservative allowances. The closing booking adds four active minutes for findings, plan reconciliation, verification and publication, excluding owner-wait. The comparison session took 41 minutes, 139 minutes below its 180-minute allowance. Measured model wait was 16.1 minutes against 30 forecast; the other preparation/preservation/assessment/review categories were not separately timed. The historical internal category split was not separately timed.
-Update this paragraph in place from the latest booked total plus new active intervals counted once; Git retains prior checkpoints, and their source logs are optional reconciliation evidence.
+This closed-study checkpoint uses its then-approved ceilings: 40 subject, 12 evaluator, 4 authoring and 4 retry invocations. Preserve it as historical accounting; the [CW protocol](../concise-writing/protocol.md#storage-and-accounting) owns subsequent combined spending and the later ceiling increase. This avoids comparing SSR’s closing balance with a later study’s allocation.
 Dispatched calls are **30 subject, 0 evaluator, 0 authoring, 0 retry**; remaining outer capacity is **10 / 12 / 4 / 4**. Core-baseline-01 has no unspent calls; neither excluded attempt has replacement authorization. Remaining capacity is a ceiling, not a selected next batch.
 
 

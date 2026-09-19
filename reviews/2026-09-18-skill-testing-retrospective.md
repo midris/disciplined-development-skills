@@ -70,3 +70,23 @@ Their order is a recommendation to discuss, not an ordering mandated by the spec
 
 The selected CW study is complete. More CW scenarios are not needed to close it.
 Broader skill coverage, composition and discovery remain limits on adoption claims; investigate them only when the next selected question requires them, under a separately declared scope that preserves the existing baseline.
+
+## Cross-study stocktake
+
+The subsequent active-session review revisited the governing spec, both studies’ coverage and assessments, tooling boundaries and review resolutions.
+It did not independently re-score all 46 subject executions.
+Two SSR document-conformance findings were reproduced and corrected: closing balances now declare their historical ceilings instead of inheriting CW’s later increase, and first-collection provenance no longer introduces a second attempt-index link into that batch’s scope.
+SSR’s runner-schema statement now explicitly describes collection-time versions.
+No frozen input, result, criterion or live skill changed.
+
+The next recommended question is whether a targeted SSR edit can prevent the demonstrated inconsistent audit totals while preserving complete reconciliation.
+The comparison contains unambiguous counting errors; the disputed Shiv classification and semantic-block conventions are separate uncertainties and must not be treated as established defects.
+Use the existing three-case suite and agreed rules, with arithmetic consistency interpreted from the full account.
+Choose the smallest intervention after reviewing those errors: reduce redundant accounting or derive required totals mechanically if a helper is warranted.
+A subject-facing helper would be part of the tested candidate, distinct from the controller’s existing evidence tools.
+This is a proposed objective, not approved authoring or collection; the subject allocation is exhausted.
+It would test the missing evidence-to-edit step without manufacturing a failure or changing the baseline.
+
+Verification after corrections: all five version-1 batches pass assessment readiness; runner unit tests pass 315 and offline process smokes pass 110; hooks pass 263 with three existing skips; formats pass nine and installer tests pass 14.
+The first process-smoke invocation encountered the outer sandbox’s nested `sandbox-exec` restriction; the documented host-permission run passed without disabling the child policy or using real providers.
+The final active-session review found no remaining issues in these corrections.
