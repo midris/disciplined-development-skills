@@ -254,6 +254,7 @@ Identify the declared batch scope and the accepted attempt-index version supplyi
 Count met, not met and insufficient evidence separately for each applicable criterion and for the execution-level functional outcome.
 For procedural-only diagnostics, execution-result version 2 records the functional outcome as not measured; assessment version 2 shows that count explicitly.
 Not measured is excluded from functional success denominators, and an all-unmeasured group has no functional success rate or overall pass.
+A procedural-only diagnostic supplies no evidence of functional success or failure; counting it in that denominator would distort the measured outcome.
 It is never a substitute for missing applicable judgments. Show unusable attempts and uncompleted repetitions separately, reconciling them to the planned scope.
 For a reported success fraction, use met / (met + not met + insufficient evidence) among the declared included executions with valid setup, showing unknowns explicitly. Never silently drop invalid, missing or unfavorable observations: explain coverage separately and apply the declared inclusion/retry rule consistently.
 A retry, reassessment or worked example must not silently replace a failed repetition or inflate the sample. Reassessments replace the interpretation of the same execution; worked examples are not measured executions.

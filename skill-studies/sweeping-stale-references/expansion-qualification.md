@@ -19,7 +19,7 @@ The controller suite exercises:
 - The runnable initial service, including script invocation from outside its directory.
 - A complete disposable reference rename with unchanged behavior, direct new-key invocation, preserved vendor/history bytes and a clean committed Git tree.
 - A code-only rename that breaks the unchanged CLI consumer, demonstrating a useful incomplete-repair boundary.
-- Fourteen declared reference occurrences across nine files, separating occurrences from lines.
+- Fourteen declared reference occurrences or twelve unique matching lines across nine files; both units are acceptable when clear and internally consistent.
 - A single local correction with valid supplied file links and preserved near-match material.
 - The diagnostic's inclusive line ranges, 126 matches, ten paths and eleven path/outcome groups.
 - Configured input existence, unique targets, absence of controller facts and original/control differences confined to guidance.

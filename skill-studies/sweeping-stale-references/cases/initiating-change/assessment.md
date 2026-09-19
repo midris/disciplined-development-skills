@@ -110,7 +110,7 @@ Basis: Current [original skill](../skill-original/SKILL.md), [protocol contract]
 Coverage: O4
 Dimension: procedural
 Applies to: `original`
-Judgment unit: Declared reference occurrences, deduplicated across searches
+Judgment unit: Complete account using a clear, consistent occurrence or matching-line unit, deduplicated across searches
 Required evidence: Commit body, expected.md, final changes and observed search scope.
 Met: References swept: traces the required references with accurate locations, outcomes, same-path/outcome grouping and counts.
 Not met: Required account is absent, misleading or inconsistent with its declared reference scope.

@@ -1,6 +1,6 @@
 # SSR coverage expansion
 
-Status: drafted and qualified offline after the owner selected SSR on 2026-09-19; cases and judgments await owner review, with no provider allocation or skill edit authorized.
+Status: drafted and qualified offline after the active session selected SSR under the owner’s instruction to pick one skill; cases and judgments await owner review, with no provider allocation or skill edit authorized.
 The [protocol](protocol.md) remains the contract/decision authority and the [plan](../../plans/2026-09-11-model-driven-skill-testing.md) owns progress.
 This expands the range of situations before selecting an edit; no case is designed around comprehensive-candidate wording or a desired failure.
 
@@ -13,7 +13,7 @@ This expands the range of situations before selecting an edit; no case is design
 | A reviewer finds prose contradicted by changed behavior | Existing semantic-delivery | Meaning-based reconciliation that passing runtime tests cannot establish | Retain unchanged |
 | The agent initiates the change | [initiating-change](cases/initiating-change/assessment.md) | Rename implementation and consumers, preserve behavior and causal explanation without a reviewer listing defects | Proposed executable addition |
 | The requested change is genuinely local | [local-change](cases/local-change/assessment.md) | Establish locality by searching; correct one heading while preserving related but correct material | Proposed executable addition |
-| A completed sweep has many matches and mixed outcomes in one file | [large-sweep-account](cases/large-sweep-account/assessment.md) | Accurate grouping, traceable occurrences and truthful verification under a normal brevity preference | Optional procedural diagnostic, separate from functional suite |
+| A completed sweep has many matches and mixed outcomes in one file | [large-sweep-account](cases/large-sweep-account/assessment.md) | Accurate grouping, traceable references and truthful verification | Optional procedural diagnostic, separate from functional suite |
 
 The proposed functional suite is five cases, not six: the accounting diagnostic cannot demonstrate actual searching, repair or committed completeness.
 This covers the current O1–O5 contract across ordinary change, review-triggered repair and justified locality, with literal/path/semantic references, preserved history/independent uses, explanation and commit evidence.
@@ -32,7 +32,7 @@ Related current terminology and shipping prose remain available for triage. Broa
 Assess the complete correction and preservation separately from the prescribed negative-form account.
 
 The diagnostic deliberately supplies settled outcomes. It varies path/outcome grouping by giving docs/cache.md both updates and unrelated HTTP matches.
-It requires neither a discovery claim nor invented execution evidence. Its reporting preference is soft; necessary audit content can exceed it.
+It requires neither a discovery claim nor invented execution evidence. Its reporting preference is soft; necessary audit content can exceed it. Eleven grouped entries fit comfortably within 72 lines, so this case does not test behavior under brevity pressure.
 There is no obligation to restate a grand total when the grouped entries are already accurate.
 
 All additions are labelled reconstructed synthetic cases.
@@ -44,7 +44,7 @@ None is a held-out test: this session designed the fixtures and reference soluti
 
 Both executable cases retain F1 complete useful change, F2 preservation and F3 committed completeness, with P1 search/triage, P2 commit grouping and P3 account assessed separately for the guided condition.
 Control receives no undisclosed SSR formatting requirement.
-The initiating case counts declared old-fact occurrences, including two occurrences on one script line; repeated queries are deduplicated.
+The initiating case accepts a clear, consistent count of old-fact occurrences or unique matching lines; repeated queries are deduplicated.
 The local case assesses the justified negative account rather than pretending every broad search hit needs changing.
 Each card fixes its accounting scope and includes acceptable alternatives and boundary examples before collection.
 The unchanged policy-3 bytes are copied to each case. Draft manifests distinguish supplied inputs from controller facts.
@@ -68,6 +68,9 @@ Reserve no authoring call or future comparison by implication.
 
 Choose an edit only after the combined evidence is reviewed.
 A later general SSR version comparison should retain all five executable cases with contemporaneous originals and an explicitly selected repetition budget; it need not repeat no-target controls unless making a new contribution claim.
-Include the separate scale diagnostic only if accounting is selected and its reporting representation has been settled.
+If accounting is selected, propose two additional original-guided diagnostic calls, with the same task and two repetitions at the prior Sol-low settings; no control or automatic retry is included.
+This gives a concrete choice: eight additional subject calls for the executable additions (ceiling 54), or ten including the diagnostic (ceiling 56). Neither scope is authorized yet.
+Two diagnostic repetitions permit a limited consistency check, not a reliability estimate. The version-2 representation is ready.
+If the diagnostic is dropped, reassess the reporting extension with it: it currently has no other selected consumer, so do not retain it solely for hypothetical future use.
 No current-skill discovery, DD orchestration, hostile-repository, repository-scale, provider-transfer or statistically reliable success-rate claim is selected.
 Those remain explicit limits, not automatic extra cases required before any useful edit.

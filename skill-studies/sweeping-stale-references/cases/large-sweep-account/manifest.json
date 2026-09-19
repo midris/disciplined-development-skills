@@ -9,12 +9,12 @@
   "authorities": {
     "spec": {
       "path": "plans/specs/2026-09-11-model-driven-skill-testing-framework.md",
-      "sha256": "85b9a2c6cf199596dd9741801333093df20064668ae2c677b7fb6f38bc4b0f40",
+      "sha256": "254e4eb47f5032ab45d5c43879e0534bb15511f3103554751c8cf3d4c387cf41",
       "version": null
     },
     "protocol": {
       "path": "skill-studies/sweeping-stale-references/protocol.md",
-      "sha256": "8566bb4373c304078a86bc3574165f1d68bf18ecb278c0bbab3135efa757b10c",
+      "sha256": "8f223893389f0dd31e412a8696523e73ed4a6d647459db043bfe0af9e37e1acc",
       "version": "1"
     },
     "format_contract": {
@@ -35,7 +35,7 @@
     "criteria": [
       {
         "path": "skill-studies/sweeping-stale-references/cases/large-sweep-account/assessment.md",
-        "sha256": "98dc7a3f02567c8aeb9176d8a63ef033dacf09a554a51b8d0ef766efd1eae306",
+        "sha256": "2c694feb8068fdd5459c25452e9bbc5d22dba24cb8c698b5ff8736cb1c1ccd1b",
         "version": "1"
       }
     ]
@@ -81,17 +81,17 @@
     },
     {
       "path": "skill-studies/sweeping-stale-references/coverage-expansion.md",
-      "sha256": "e9da33edb0ee48918eed56cac5f29a4398e3a13d9b30c9992850b608c060502c",
+      "sha256": "d21e560ef0e1bd97164ff9d8bd99e88157546d2ee61f093ba8dfd67b3ab63f74",
       "version": null
     },
     {
       "path": "skill-studies/sweeping-stale-references/expansion-qualification.md",
-      "sha256": "ca9a0c8e001f78467826e9cc8ac58631feeca8a7dd7610c44ba37363213a4431",
+      "sha256": "1f166f84bdb8c792be770a41cccf3340585a06a558b16e26163bc444f75b9214",
       "version": null
     },
     {
       "path": "skill-studies/sweeping-stale-references/test_expansion_fixtures.py",
-      "sha256": "718a0a9c846a7ce14fb0e4c12d84a2b3ac02a70c13434aad1fdfcb94613b7525",
+      "sha256": "ed5b962883e76be91a6b1c3d66e2b03ecc25b9509cd68c9ffe638c62696011a8",
       "version": null
     }
   ]

@@ -7,7 +7,7 @@ Study ID: `sweeping-stale-references`
 Case ID: `large-sweep-account`
 Definition version: `1`
 Status: prepared for owner review; not accepted, frozen or authorized for collection.
-Purpose: Observe traceable grouping and arithmetic under a normal brevity preference, given settled search results.
+Purpose: Observe traceable grouping and arithmetic given settled search results.
 Coverage and exposure: O4 only; no search/repair coverage; exposed development evidence proposed in [coverage expansion](../../coverage-expansion.md).
 
 ## Inputs and setup

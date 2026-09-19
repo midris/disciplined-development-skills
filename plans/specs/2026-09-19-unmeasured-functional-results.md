@@ -27,3 +27,5 @@ Verification: full offline runner suite passed 445 tests; hook suite passed 263 
 The first full runner run had a process-cleanup assertion failure outside the changed code; the full rerun passed.
 Review also closed aggregate-column omission and result/schema-version mismatch paths with regression tests.
 Existing version-1 schema/template bytes and measured records are unchanged.
+
+Authorization: after discussing the reporting proposal, the owner instructed “go review your proposal, address any issues, then make the changes” before implementation. This authorized the reporting extension, not diagnostic collection.

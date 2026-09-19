@@ -66,6 +66,18 @@ class ExpansionFixtures(unittest.TestCase):
         counts={p:n for p,n in counts.items() if n}
         self.assertEqual(counts,{'src/session.py':2,'config/defaults.json':1,'scripts/show-session.py':2,'README.md':1,'docs/session-policy.md':2,'tests/test_session.py':2,'archive/rollout-2024.md':2,'vendor/partner/example.json':1,'vendor/partner/README.md':1})
         self.assertEqual(sum(counts.values()),14)
+        line_counts = {
+            p.relative_to(root).as_posix(): sum(
+                bool(re.search(r'token_ttl_minutes|token TTL', line))
+                for line in p.read_text().splitlines()
+            ) for p in root.rglob('*') if p.is_file()
+        }
+        line_counts = {p: n for p, n in line_counts.items() if n}
+        expected_lines = dict(counts)
+        expected_lines['scripts/show-session.py'] = 1
+        expected_lines['archive/rollout-2024.md'] = 1
+        self.assertEqual(line_counts, expected_lines)
+        self.assertEqual(sum(line_counts.values()), 12)
 
     def test_local_correction_has_one_target_and_no_broken_supplied_link(self):
         root=CASES/'local-change/fixture'
