@@ -1,6 +1,6 @@
 # SSR coverage expansion
 
-Status: drafted and qualified offline after the active session selected SSR under the owner’s instruction to pick one skill; cases and judgments await owner review, with no provider allocation or skill edit authorized.
+Status: accepted for coverage-baseline-01 on 2026-09-21; ten subject calls authorized in the protocol, including the diagnostic. Skill editing remains unauthorized.
 The [protocol](protocol.md) remains the contract/decision authority and the [plan](../../plans/2026-09-11-model-driven-skill-testing.md) owns progress.
 This expands the range of situations before selecting an edit; no case is designed around comprehensive-candidate wording or a desired failure.
 
@@ -63,13 +63,13 @@ The collection can support an evidence-backed choice of a bounded improvement, i
 After the owner accepts these two executable additions, propose eight baseline calls: two cases × original/control × two repetitions at the prior Sol-low settings, subject to checking current runtime identities.
 Alternate original/control order across cases and reverse it on repetition two. Preserve every attempt, with no automatic retries or replacements.
 The question is whether original-guided and unguided behavior on the new situations exposes a useful weakness; passing controls remain valid evidence.
-The 46-call subject allocation is exhausted, so this proposal requires eight additional subject calls; it is not an automatic transfer from another pool.
+The 46-call subject allocation is exhausted, so this proposal requires eight additional subject calls; the ten-call scope including the diagnostic is now funded by the explicit ceiling increase, not a pool transfer.
 Reserve no authoring call or future comparison by implication.
 
 Choose an edit only after the combined evidence is reviewed.
 A later general SSR version comparison should retain all five executable cases with contemporaneous originals and an explicitly selected repetition budget; it need not repeat no-target controls unless making a new contribution claim.
 If accounting is selected, propose two additional original-guided diagnostic calls, with the same task and two repetitions at the prior Sol-low settings; no control or automatic retry is included.
-This gives a concrete choice: eight additional subject calls for the executable additions (ceiling 54), or ten including the diagnostic (ceiling 56). Neither scope is authorized yet.
+This gives a concrete choice: eight additional subject calls for the executable additions (ceiling 54), or ten including the diagnostic (ceiling 56). The owner selected the ten-call scope on 2026-09-21; the protocol owns its authorization.
 Two diagnostic repetitions permit a limited consistency check, not a reliability estimate. The version-2 representation is ready.
 If the diagnostic is dropped, reassess the reporting extension with it: it currently has no other selected consumer, so do not retain it solely for hypothetical future use.
 No current-skill discovery, DD orchestration, hostile-repository, repository-scale, provider-transfer or statistically reliable success-rate claim is selected.

@@ -14,7 +14,7 @@
     },
     "protocol": {
       "path": "skill-studies/sweeping-stale-references/protocol.md",
-      "sha256": "53236febd5900cefcbba61189e1d029417ad444ce1557c07019020de2a7d3296",
+      "sha256": "23a07eb9d06cafcd84004944a707c9eec68814ca1ba139ded2551e2b0c6dbd70",
       "version": "1"
     },
     "format_contract": {
@@ -35,7 +35,7 @@
     "criteria": [
       {
         "path": "skill-studies/sweeping-stale-references/cases/initiating-change/assessment.md",
-        "sha256": "fc01532f0155682c35e3618c4eef229743b344b5cf0d68cfa1521a47cc1c35e6",
+        "sha256": "65ae85f2e0da6229898c00158c77895698f7479ee32fe77035b1020fdff00eaa",
         "version": "1"
       }
     ]
@@ -140,7 +140,7 @@
     },
     {
       "path": "skill-studies/sweeping-stale-references/coverage-expansion.md",
-      "sha256": "d7842a6860039ea89b490212142d36f6cfa7d84e511fbeb8263f23581f4374f9",
+      "sha256": "f31f6f63f510f7c87bd7024c3499a670e7d46f549abbd9075d7ce6d7628574b2",
       "version": null
     },
     {

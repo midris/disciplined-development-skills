@@ -9,8 +9,8 @@ This is navigation, not a duplicate progress or decision record.
 4. Follow the [formats](../formats/README.md) and [runner command guide](../../skill-validation/runner/README.md#study-documents) for mechanics; the historical worksheet is not current study authority.
 5. The [retrospective](../../reviews/2026-09-18-skill-testing-retrospective.md) identifies remaining discovery questions. The plan owns which one is selected next.
 
-Both prior comparisons are complete with adoption deferred; their approved calls are spent. Current SSR coverage preparation is active, with three prepared additions and funding still pending.
-No further subject calls or live skill edits are authorized.
+Both prior comparisons are complete with adoption deferred; their approved calls are spent. Current SSR coverage-baseline-01 is authorized for ten calls; use its index to determine actual remaining attempts.
+Only the ten declared coverage-baseline-01 calls are newly authorized; no retries or live skill edits.
 Preserve settled scenarios, criteria and historical identities; do not derive a baseline from a candidate or rescore old records to continue.
 SSR's [core assessment](core-baseline-01-assessment.md) records an unresolved Shiv category boundary: its P3 counts are not three established skill defects and do not independently justify a rewrite.
 Controller criteria, manifests and revealing evidence remain outside subject context; raw evidence stays in the protocol's external stores.

@@ -2,8 +2,8 @@
 
 Format version: `1`
 Study ID: `sweeping-stale-references`
-Status: coverage preparation active; prior Sol-low baseline and comparison batches complete. Adoption remains deferred; new collection and skill editing are not authorized.
-Current question and pending decision: is the expanded suite sufficient to establish a baseline for ordinary changes, reviewer-triggered repairs and justified locality? Pending decision: accept the coverage limits and fund the proposed eight executable calls, optionally two diagnostic calls.
+Status: coverage-baseline-01 authorized for ten subject attempts; previous batches complete. Adoption and skill editing remain unauthorized.
+Current question and pending decision: is the expanded suite sufficient to establish a baseline for ordinary changes, reviewer-triggered repairs and justified locality? Owner accepted the limits and funded eight executable calls plus two diagnostic calls; collect and assess the declared batch.
 The [plan](../../plans/2026-09-11-model-driven-skill-testing.md) owns progress; the [spec](../../plans/specs/2026-09-11-model-driven-skill-testing-framework.md) owns the workflow.
 The [core baseline](core-baseline-01-assessment.md) retains its two setup exclusions and runtime strata; the [comparison](comprehensive-comparison-01-assessment.md) records twelve valid executions of the original and preserved candidate. Both collection scopes are spent. Storage and accounting retains the SSR closing checkpoint and links the current combined totals.
 
@@ -131,16 +131,16 @@ Native skill discovery, composition, specialized search difficulty, reserved tra
 The owner asked the active session to pick one of the two skills and flesh out its scenarios before editing; the session selected SSR.
 The [coverage proposal](coverage-expansion.md) adds an ordinary initiating change and a genuinely local correction to the existing three executable situations, plus a separate large-sweep accounting diagnostic.
 [Offline qualification](expansion-qualification.md) and the new case cards describe concrete tasks, source-grounded rules, alternatives and boundaries; all are exposed reconstructed development cases.
-Preparation is authorized; new case definitions are draft, no additional subject allocation is approved, and no skill authoring or adoption follows.
+The owner accepted the three additions for coverage-baseline-01; freeze their reviewed inputs before the ten authorized calls. No skill authoring or adoption follows.
 The completed baseline and comparison remain unchanged. The new local-change case does not retroactively fill the collected scope’s gap.
-The [baseline question and design rationale](coverage-expansion.md#baseline-question-and-design-rationale) explain the eight original/control calls, optional two-call diagnostic, remaining uncertainty and triggers for further testing. Spending authority remains pending.
+The [baseline question and design rationale](coverage-expansion.md#baseline-question-and-design-rationale) explain the eight original/control calls, optional two-call diagnostic, remaining uncertainty and triggers for further testing. The ten-call spending authority is recorded below.
 Current combined accounting remains in the CW protocol as linked below; CW scenario expansion is deferred while SSR is selected.
 
 ### Facet coverage audit (2026-09-21)
 
 This is the suite-level review required by [spec section 2](../../plans/specs/2026-09-11-model-driven-skill-testing-framework.md#2-select-representative-tests).
 Design adequacy describes the available task and evidence path, not model success. Collected evidence links to the completed [baseline](core-baseline-01-assessment.md) and [comparison](comprehensive-comparison-01-assessment.md); prepared additions have none.
-The three existing core cases have measured evidence. Initiating-change, local-change and large-sweep-account are prepared additions, not collected evidence; the owner endorsed their rationale, but no new call allocation is authorized.
+The three existing core cases have measured evidence. Initiating-change, local-change and large-sweep-account are prepared additions, not collected evidence; the owner endorsed their rationale, but the ten-call expansion is authorized below.
 Case definitions and qualification are linked in the inventory above.
 
 | Facet / basis | Design adequacy | Cases and mechanism | Collected evidence | Gap / disposition |
@@ -180,6 +180,32 @@ SSR collection used config schema 0.2 and result schema 0.4; retained bundles ke
 Control contribution claims require evidence that omitted guidance was not loaded. Record limits on observed isolation rather than claiming exhaustive host-wide exclusion.
 
 Pre-baseline development is closed at two pairs. Do not reopen it for a new facet; a named readiness defect requires a separately authorized diagnostic exception.
+### Coverage baseline: coverage-baseline-01
+
+Status: authorized for collection on 2026-09-21. The owner replied “ok, let's do it” to the explicit proposal to accept coverage limits and fund ten additional subject calls, raising the outer subject ceiling from 46 to 56.
+Question and coverage limits: [baseline design rationale](coverage-expansion.md#baseline-question-and-design-rationale) and the facet audit above. The two new executable cases and the separate accounting diagnostic are accepted for this batch; no skill edit or adoption is authorized.
+Scope: exactly ten sequential attempts below using frozen Sol-low/workspace-write configurations. Original/control order reverses across cases and repetitions; the diagnostic has original only and no functional-success claim.
+Inclusion: descriptive-only. Include all valid-setup executions, with functional failures and unknowns visible. Exclude invalid/unresolved setups from outcomes and account for every slot. No pooled functional rate across cases or diagnostic; diagnostic uses result/assessment version 2 and not measured.
+Stop for failed preservation, uncertain charge, unresolved process cleanup, suspected contamination or an infrastructure/setup defect requiring inspection. A valid behavioral failure alone does not stop collection. No automatic retry, replacement, pool transfer or extra invocation.
+Budget: at most ten additional subject invocations, zero evaluator/authoring/retry calls. Active-work forecast is 90 minutes (15 preparation/freeze, 30 model waits and retention, 35 evidence inspection/scoring, 10 review/reporting), within the 162 minutes remaining at approval. Track elapsed active effort including waits; the time ceiling remains 1,200 minutes.
+Inputs: [initiating-change manifest](cases/initiating-change/manifest.json), [local-change manifest](cases/local-change/manifest.json), [diagnostic manifest](cases/large-sweep-account/manifest.json); [initiating card](cases/initiating-change/assessment.md), [local card](cases/local-change/assessment.md), [diagnostic card](cases/large-sweep-account/assessment.md). Their source revision pins the full runner checkout; invocation authority is the subsequent committed frozen-manifest revision.
+Runtime: `/opt/homebrew/bin/codex`, `codex-cli 0.154.0`, SHA-256 `4f85982624b3898c8991cb80c0981b2aa71070e3537046c9a95950318a95afcc`, rechecked 2026-09-21. Execution changes since the prior collection are terminal-result 0.5 capture/cleanup metadata and document operations; the current offline suite passed 450 tests. Existing restricted PATH, private profile and full-session capture remain in use. Inspect every actual trace for full original skill loading, control integrity and unexpected outside guidance; this is not exhaustive host read isolation.
+Commands run from `/Users/simon/work/personal/disciplined-development-skills`: `TMPDIR=/private/tmp/ssr-coverage-baseline-01 skill-validation/runner/.venv/bin/skilltest run CONFIG`, once per row after collection readiness. Host permission initializes the app server; subjects retain workspace-write.
+Retain stopped bundles with `docs retain`, using this batch/order, committed invocation authority, [attempt index](coverage-baseline-01-run-index.json) and the existing external development primary. Assess in the active session under SSR policy 3; inspect/replay disposable copies only. The [batch assessment](coverage-baseline-01-assessment.md) will hold outcomes and coverage, not a new scoring policy.
+
+| Order | Case | Condition | Repetition | CONFIG |
+|---:|---|---|---:|---|
+| 1 | initiating-change | original | 1 | `skill-studies/sweeping-stale-references/cases/initiating-change/original.json` |
+| 2 | initiating-change | control | 1 | `skill-studies/sweeping-stale-references/cases/initiating-change/control.json` |
+| 3 | local-change | control | 1 | `skill-studies/sweeping-stale-references/cases/local-change/control.json` |
+| 4 | local-change | original | 1 | `skill-studies/sweeping-stale-references/cases/local-change/original.json` |
+| 5 | initiating-change | control | 2 | `skill-studies/sweeping-stale-references/cases/initiating-change/control.json` |
+| 6 | initiating-change | original | 2 | `skill-studies/sweeping-stale-references/cases/initiating-change/original.json` |
+| 7 | local-change | original | 2 | `skill-studies/sweeping-stale-references/cases/local-change/original.json` |
+| 8 | local-change | control | 2 | `skill-studies/sweeping-stale-references/cases/local-change/control.json` |
+| 9 | large-sweep-account | original | 1 | `skill-studies/sweeping-stale-references/cases/large-sweep-account/original.json` |
+| 10 | large-sweep-account | original | 2 | `skill-studies/sweeping-stale-references/cases/large-sweep-account/original.json` |
+
 ### First collection: semantic-delivery-01
 
 Status: completed; both authorized calls spent, with no repeat of this batch authorized. The owner authorized this batch on 2026-09-16 in this session: “ok, let's do it. what model/effort will we be using for the runs?” The response confirmed the unchanged `gpt-5.6-sol` / low settings for both commands. This batch is the first baseline observation, not another process pilot or completion of the wider baseline.
@@ -366,4 +392,4 @@ All thirty subject calls used Sol-low. Small exposed cases, shared assessor cont
 - Include simplification when interpreting a version comparison. The initial retain recommendation overlooked a measured size benefit already allowed by the spec. Word count is sufficient; smaller text does not excuse functional regression or prove token/cost savings.
 - Separate evidence completion from deployment. Closing with adoption deferred preserves the findings and permits the next study without forcing a winner or another collection cycle.
 
-The contrasting-skill CW study subsequently exercised the workflow; its records and current combined accounting are linked above. Current SSR work is the coverage preparation described at the start of this protocol; collection remains subject to a new funded scope.
+The contrasting-skill CW study subsequently exercised the workflow; its records and current combined accounting are linked above. Current SSR work is the coverage preparation described at the start of this protocol; coverage-baseline-01 is the current funded scope.

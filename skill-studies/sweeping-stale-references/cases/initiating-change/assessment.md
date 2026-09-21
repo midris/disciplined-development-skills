@@ -6,7 +6,7 @@ Format version: `1`
 Study ID: `sweeping-stale-references`
 Case ID: `initiating-change`
 Definition version: `1`
-Status: prepared for owner review; not accepted, frozen or authorized for collection.
+Status: accepted for coverage-baseline-01; collection authority and input freeze belong to the protocol.
 Purpose and realistic failure opportunity: Observe complete reconciliation while making the initiating change, preserving causal explanation and unrelated meanings.
 Scenario mechanism: This case tests propagation of an agent-initiated rename. The task names the setting and concept but not their consumers; the fixture spreads them across executable and explanatory artifacts and includes history/vendor references to preserve. Final artifacts and runtime checks expose incomplete propagation or damage; ordered tool events and Git history separately expose skipped search, grouping or accounting. This is ordinary change work, contrasting with the existing reviewer-triggered repairs.
 Protocol coverage and membership/exposure: O1–O4; ordinary initiating change; exposed development evidence proposed in [coverage expansion](../../coverage-expansion.md).

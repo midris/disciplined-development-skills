@@ -35,7 +35,7 @@ A broader archival reorganization is outside this study.
 
 ## Limits and information boundaries
 
-**Accepted outer limits (subject ceiling increased from 40 to 46 for the owner-approved CW comparison on 2026-09-18): 46 subject, 12 evaluator, 4 authoring and 4 retry invocations (66 total), plus 20 hours of active study work.**
+**Accepted outer limits (subject ceiling increased from 46 to 56 for the owner-approved SSR expansion on 2026-09-21): 56 subject, 12 evaluator, 4 authoring and 4 retry invocations (76 total), plus 20 hours of active study work.**
 These are ceilings, not a dispatch commitment. The owner requested minimal real-model runs to establish the process before broader testing; the initial Sol-low pair and its two-call extension are complete. Pre-baseline development is now closed at four subject calls; its remaining additional-development slot stays unused. A new facet alone cannot reopen that phase. A diagnostic exception requires a named readiness defect and separate owner approval; no automatic full campaign follows.
 Track active sessions from Stage 1, including preparation, review and model-run waits; exclude recorded periods awaiting owner input.
 Keep model latency inside the ceiling to bound actual study time and expose tooling costs. Budget for sequential execution initially, then replace estimates with pilot timings; do not assume all available calls must be used.
@@ -228,7 +228,8 @@ Reserved bundles and revealing assessments stay entirely in the verified private
 - [x] Add the owner-approved suite coverage exit condition and audit SSR against it; record the facet map, measured/prepared distinction and bounded sufficiency judgment in the protocol.
 - [x] Apply the owner-approved protocol cleanup: current status, single case inventory/facet map, evidence versus design coverage, case mechanisms and baseline design rationale; update reusable template guidance within existing sections.
 - [x] Address round-7 review: correct resumption navigation, align prepared document labels with templates, and add local rationale for the new coverage/documentation requirements.
-- [ ] Review and accept the SSR additions and select a funded collection scope before freezing or dispatch. No new subject calls or skill authoring are authorized.
+- [x] Owner accepted the documented coverage limits and authorized ten SSR expansion subject calls on 2026-09-21 (“ok, let’s do it” following the explicit ten-call / ceiling-56 proposal). No skill edit is authorized.
+- [ ] Freeze, collect and assess `coverage-baseline-01`: eight original/control executions for initiating-change/local-change plus two original accounting diagnostics; preserve every attempt and update coverage from actual evidence.
 
 The owner accepted the reconciled [format set](../skill-studies/formats/README.md), version `1` with result and assessment version `2` for unmeasured functional outcomes. The protocol and the Shiv and semantic-delivery case definitions/manifests use the accepted layouts; historical observed-case inputs and the `1-draft` worked example remain unchanged under their recorded identities.
 The [semantic-delivery batch](../skill-studies/sweeping-stale-references/protocol.md#first-collection-semantic-delivery-01) is complete; its results informed the approved core-baseline-01 scope. No additional layout review, scenario or process pilot was needed to complete that historical scope. Current coverage additions are tracked above; no separate evaluator layer is required.
