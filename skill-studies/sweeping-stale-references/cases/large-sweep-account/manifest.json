@@ -3,9 +3,9 @@
   "manifest_id": "ssr-large-sweep-account-1",
   "study_id": "sweeping-stale-references",
   "case_id": "large-sweep-account",
-  "status": "draft",
+  "status": "frozen",
   "created_at": "2026-09-19",
-  "source_revision": "",
+  "source_revision": "6c0976a56147e8f773b1e6c74c7a7357bf92287f",
   "authorities": {
     "spec": {
       "path": "plans/specs/2026-09-11-model-driven-skill-testing-framework.md",
