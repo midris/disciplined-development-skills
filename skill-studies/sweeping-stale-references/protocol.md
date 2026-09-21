@@ -3,7 +3,7 @@
 Format version: `1`
 Study ID: `sweeping-stale-references`
 Status: coverage preparation active; prior Sol-low baseline and comparison batches complete. Adoption remains deferred; new collection and skill editing are not authorized.
-Current question: is the expanded suite sufficient to establish a baseline for ordinary changes, reviewer-triggered repairs and justified locality? Pending decision: accept the coverage limits and fund the proposed eight executable calls, optionally two diagnostic calls.
+Current question and pending decision: is the expanded suite sufficient to establish a baseline for ordinary changes, reviewer-triggered repairs and justified locality? Pending decision: accept the coverage limits and fund the proposed eight executable calls, optionally two diagnostic calls.
 The [plan](../../plans/2026-09-11-model-driven-skill-testing.md) owns progress; the [spec](../../plans/specs/2026-09-11-model-driven-skill-testing-framework.md) owns the workflow.
 The [core baseline](core-baseline-01-assessment.md) retains its two setup exclusions and runtime strata; the [comparison](comprehensive-comparison-01-assessment.md) records twelve valid executions of the original and preserved candidate. Both collection scopes are spent. Storage and accounting retains the SSR closing checkpoint and links the current combined totals.
 

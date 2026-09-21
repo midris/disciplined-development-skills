@@ -127,6 +127,7 @@ Test discovery separately from behavior after an explicit load when both matter.
 
 For each scenario, state what it tests, why that situation is representative, what failure it could expose, what context is necessary and what evidence must be observable.
 Explain how concrete task or fixture features distinguish a plausible inadequate approach from a successful outcome; cite the criteria and valid alternatives rather than duplicating them.
+This checks that a scenario can reveal the behavior it claims to test; naming an obligation alone does not establish a useful test.
 Choose the smallest initial set that spans distinct consequential behaviors and boundaries. Prioritize the skill’s core useful outcomes and the evaluation needed to establish them before expanding edge coverage. Distinguish an obligation from a diagnostic comparison of how the skill contributed; do not require an advantage on every observed mechanism. Deferred coverage remains part of the contract where applicable and must be reconsidered when a proposed rewrite depends on it.
 Record coverage gaps and why overlapping cases remain; do not use case count as a proxy for completeness.
 Agree on conceptual facets and how to observe them before selecting fixtures. Where the owner permits historical reuse, then inspect earlier scenarios for fit, adapt a suitable one or create a new one for an uncovered need.
@@ -141,8 +142,11 @@ Exit condition: each selected scenario has a distinct purpose, sufficient inputs
 Review the suite against every agreed behavioral facet, including applicability boundaries and consequential exceptions.
 Identify which facets are exercised, partially exercised or untested, with supporting cases and reasons for gaps.
 State whether that coverage is sufficient for the study’s intended conclusion and which claims remain unsupported.
+Individually sound cases can still omit an important behavior; this suite-level judgment prevents case count or broad obligation labels from standing in for adequate coverage.
 Separate design adequacy from collected evidence; a prepared scenario is not a measured result. Give each gap a disposition and the decision or behavior change that would require revisiting it.
+This prevents planned coverage from being reported as demonstrated behavior and keeps accepted gaps visible when the study or proposed edit changes.
 Before collection, state the baseline question, why the proposed conditions and repetitions address it, remaining uncertainty and what findings would justify additional testing.
+This gives collection a defined purpose and makes follow-up testing respond to evidence rather than an arbitrary case count or desired failure.
 Ordinary development uses known scenarios and records that exposure. If a separate held-out transfer claim is explicitly selected, designate those cases before exposure and do not present an exposed author as unexposed.
 
 ### 3. Define and challenge the evaluation contract
@@ -329,6 +333,7 @@ Owner direction: settle a versioned protocol template at the end of baseline des
 The active plan owns the checklist, this spec owns general requirements, and `skill-studies/<skill>/protocol.md` owns the skill-specific contract, coverage map, assessment policy, execution decisions and artifact index.
 A suite is the explicitly selected set of cases under that protocol, not every case directory or historical run present on disk.
 The protocol opens with current study status and pending decisions, distinguishes completed batches from active preparation, and maintains one case inventory and one facet coverage map. Proposals reference that map instead of maintaining another. Tasks and progress remain in the plan.
+A fresh session must be able to identify the current decision without reconstructing chronology; one authoritative map prevents competing coverage and status statements from drifting.
 
 | Artifact, relative to a study directory | Purpose |
 |---|---|

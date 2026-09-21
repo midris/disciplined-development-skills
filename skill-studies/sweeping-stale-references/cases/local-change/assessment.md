@@ -7,10 +7,9 @@ Study ID: `sweeping-stale-references`
 Case ID: `local-change`
 Definition version: `1`
 Status: prepared for owner review; not accepted, frozen or authorized for collection.
-Purpose: Observe scope checking and restraint when one correction genuinely needs no sibling edits.
-Coverage and exposure: O1–O3 and O5; local-change boundary; exposed development evidence proposed in [coverage expansion](../../coverage-expansion.md).
-
-Scenario mechanism and distinct purpose: This case tests a justified local outcome after checking scope. One glossary heading needs correction while related membership and shipping references remain valid. Inspect the final heading, preserved meanings and links, search-before-edit evidence and committed negative-form account. The near-matches distinguish justified restraint from blanket normalization; a one-file diff alone cannot establish that scope was checked.
+Purpose and realistic failure opportunity: Observe scope checking and restraint when one correction genuinely needs no sibling edits.
+Scenario mechanism: This case tests a justified local outcome after checking scope. One glossary heading needs correction while related membership and shipping references remain valid. Inspect the final heading, preserved meanings and links, search-before-edit evidence and committed negative-form account. The near-matches distinguish justified restraint from blanket normalization; a one-file diff alone cannot establish that scope was checked.
+Protocol coverage and membership/exposure: O1–O3 and O5; local-change boundary; exposed development evidence proposed in [coverage expansion](../../coverage-expansion.md).
 
 ## Inputs and setup
 

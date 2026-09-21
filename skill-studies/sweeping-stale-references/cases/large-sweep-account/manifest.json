@@ -9,12 +9,12 @@
   "authorities": {
     "spec": {
       "path": "plans/specs/2026-09-11-model-driven-skill-testing-framework.md",
-      "sha256": "6b9317d5eb55153a1696bbaf4b53a40a723ffd6677d5ad77c40ba5865826104d",
+      "sha256": "3ef6a6def5201983aec2a6345ed962c7fede6ef12474c8876269f60528403083",
       "version": null
     },
     "protocol": {
       "path": "skill-studies/sweeping-stale-references/protocol.md",
-      "sha256": "78a3fdc4c8bd720922c522043e7de785c38e2dc6939b176f33ff5874c8591d33",
+      "sha256": "53236febd5900cefcbba61189e1d029417ad444ce1557c07019020de2a7d3296",
       "version": "1"
     },
     "format_contract": {
@@ -35,7 +35,7 @@
     "criteria": [
       {
         "path": "skill-studies/sweeping-stale-references/cases/large-sweep-account/assessment.md",
-        "sha256": "b61cbe73790eef3d525d93199f76b03aaa5430258dca6d341a1dfb3574f9a724",
+        "sha256": "12d3ec6c66e6c985b0f932e2e9374b6acf40652b61c5d506c2caf649834e6f53",
         "version": "1"
       }
     ]

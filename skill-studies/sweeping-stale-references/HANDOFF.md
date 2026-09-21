@@ -5,11 +5,11 @@ This is navigation, not a duplicate progress or decision record.
 
 1. Read [CLAUDE.md](../../CLAUDE.md) and the [DD doctrine](../../skills/disciplined-development/SKILL.md).
 2. Resume from the [active plan's Current next action](../../plans/2026-09-11-model-driven-skill-testing.md#current-next-action) and [framework spec](../../plans/specs/2026-09-11-model-driven-skill-testing-framework.md).
-3. Use the [CW protocol](../concise-writing/protocol.md) for current accounting and decisions, and its linked baseline/comparison assessments for conclusions. Use the [SSR protocol](protocol.md) for that closed study's decisions and evidence.
+3. Use the [SSR protocol](protocol.md) for current coverage preparation, the facet map and pending collection decision. Use [CW accounting](../concise-writing/protocol.md#storage-and-accounting) only for current combined spending; each completed study’s assessments retain its conclusions.
 4. Follow the [formats](../formats/README.md) and [runner command guide](../../skill-validation/runner/README.md#study-documents) for mechanics; the historical worksheet is not current study authority.
 5. The [retrospective](../../reviews/2026-09-18-skill-testing-retrospective.md) identifies remaining discovery questions. The plan owns which one is selected next.
 
-Both selected comparisons are closed with adoption deferred; their approved calls are spent.
+Both prior comparisons are complete with adoption deferred; their approved calls are spent. Current SSR coverage preparation is active, with three prepared additions and funding still pending.
 No further subject calls or live skill edits are authorized.
 Preserve settled scenarios, criteria and historical identities; do not derive a baseline from a candidate or rescore old records to continue.
 SSR's [core assessment](core-baseline-01-assessment.md) records an unresolved Shiv category boundary: its P3 counts are not three established skill defects and do not independently justify a rewrite.

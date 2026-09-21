@@ -23,8 +23,8 @@ Use the [runner guide](../skill-validation/runner/README.md) for mechanics; its 
 Read installed workflow skills from the available catalog rather than relying on a previous installation path.
 Read the [purpose and relationship map](../ARCHITECTURE.md#composition-boundaries) for orientation; distinguish independent use, explicit pairings and DD orchestration before deciding subject context.
 
-The current study workspace is `skill-studies/concise-writing/`; SSR is closed in `skill-studies/sweeping-stale-references/`.
-Each study’s protocol holds its concrete decisions, versions, commands, artifact links, accounting and conclusion, without another task checklist. Resume from the [CW protocol](../skill-studies/concise-writing/protocol.md); use SSR records only for cited precedent and combined accounting.
+The current preparation workspace is `skill-studies/sweeping-stale-references/`; its previous baseline/comparison batches and the CW batches are complete.
+Each study’s protocol holds its concrete decisions, versions, commands, artifact links, accounting and conclusion, without another task checklist. Resume from the [SSR protocol](../skill-studies/sweeping-stale-references/protocol.md) for coverage preparation and the pending collection decision. The [CW accounting section](../skill-studies/concise-writing/protocol.md#storage-and-accounting) owns current combined spending, not current SSR scope.
 Fixtures, checkers, raw bundles and assessments are supporting artifacts linked from that record.
 This plan owns progress; the spec owns general rules; the protocol owns study-specific facts and decisions.
 On resumption, use recorded decisions and evidence to select the next incomplete action; do not repeat settled approvals or infer authorization from a checked box.
@@ -227,6 +227,7 @@ Reserved bundles and revealing assessments stay entirely in the verified private
 - [x] Complete the owner-requested follow-up self-review; reconcile stale format/tooling status and fix comma-formatted accounting totals without changing scoring or frozen records. See the [review record](../reviews/2026-09-19-ssr-reporting-self-review.md).
 - [x] Add the owner-approved suite coverage exit condition and audit SSR against it; record the facet map, measured/prepared distinction and bounded sufficiency judgment in the protocol.
 - [x] Apply the owner-approved protocol cleanup: current status, single case inventory/facet map, evidence versus design coverage, case mechanisms and baseline design rationale; update reusable template guidance within existing sections.
+- [x] Address round-7 review: correct resumption navigation, align prepared document labels with templates, and add local rationale for the new coverage/documentation requirements.
 - [ ] Review and accept the SSR additions and select a funded collection scope before freezing or dispatch. No new subject calls or skill authoring are authorized.
 
 The owner accepted the reconciled [format set](../skill-studies/formats/README.md), version `1` with result and assessment version `2` for unmeasured functional outcomes. The protocol and the Shiv and semantic-delivery case definitions/manifests use the accepted layouts; historical observed-case inputs and the `1-draft` worked example remain unchanged under their recorded identities.
