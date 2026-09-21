@@ -1,46 +1,95 @@
-# <Batch question>: assessment
+# SSR expanded baseline: partial assessment
 
 Format version: `2`
-Assessment ID: <id>
-Study / batch: <IDs>
-Status: draft
-Scope and acceptance rules: <protocol citation at full Git revision>
-Attempt index: <path/hash/git_revision>
-Assessor and relevant session context: <identity/context>
+Assessment ID: ssr-coverage-baseline-01
+Study / batch: sweeping-stale-references / coverage-baseline-01
+Status: stopped after two attempts; partial assessment complete; eight slots unrun
+Scope and acceptance rules: [protocol](protocol.md) at Git `2c65cdc778b1ca9a00eb95fa09876d71515427a6`, batch coverage-baseline-01; frozen SSR policy 3 and case manifests.
+Attempt index: [coverage-baseline-01-run-index.json](coverage-baseline-01-run-index.json) at Git `f6afe01557c7ad63cf2eeddfca0362c40ccca373`, SHA-256 `8684a1f0746ad4c29fbba22ab593989ab6dcd3a7f8e331adef38d396d9f599d5`.
+Assessor and relevant session context: Codex active session with study history and owner decisions available; not independent or blind assessment. No immutable assessor model identity recorded.
 
 ## Coverage and execution results
 
-Selected cases, conditions and repetitions: <scope citation; describe departures only>
-All execution-result records resolve through the attempt index; cite its accepted Git version.
-Uncompleted repetitions, unusable attempts and unresolved evidence: <IDs/reasons, or none>
-Retry treatment and included attempt IDs: <apply the declared scope rule; no silent replacement>
-Setup or input differences affecting interpretation: <exceptions to the declared scope, or none>
+Ten slots were planned: two original/control repetitions on each executable case and two original-only accounting diagnostics.
+Orders 1–2 completed and were retained with verified inventories; orders 3–10 were not dispatched after the control exposed outside-study material.
+No retry or replacement occurred. All actual attempts are included in coverage; only the valid original enters outcome counts.
+All execution-result records resolve through the pinned attempt index.
+
+| Case / condition | Planned | Attempted | Included | Invalid setup | Setup unresolved | Unattempted |
+| --- | --- | --- | --- | --- | --- | --- |
+| initiating-change / original | 2 | 1 | 1 | 0 | 0 | 1 |
+| initiating-change / control | 2 | 1 | 0 | 1 | 0 | 1 |
+| local-change / control | 2 | 0 | 0 | 0 | 0 | 2 |
+| local-change / original | 2 | 0 | 0 | 0 | 0 | 2 |
+| large-sweep-account / original | 2 | 0 | 0 | 0 | 0 | 2 |
+
+| Order | Case | Condition | Repetition | Setup / coverage | Recorded outcome | Evidence |
+| --- | --- | --- | --- | --- | --- | --- |
+| 1 | initiating-change | original | 1 | valid | met | [coverage-baseline-01-initiating-change-original-1](results/20260921T210825089Z-ssr-initiating-change-original-ae5bac03-eb81-47f6-919b-b55ea5701e8e-_8ia6w1p.json) |
+| 2 | initiating-change | control | 1 | invalid (excluded) | met | [coverage-baseline-01-initiating-change-control-1](results/20260921T211212148Z-ssr-initiating-change-control-b967dd0f-1583-4251-a066-0bc9d98fdd55-wnoe38hl.json) |
+| 3 | local-change | control | 1 | unattempted | not assessed | none |
+| 4 | local-change | original | 1 | unattempted | not assessed | none |
+| 5 | initiating-change | control | 2 | unattempted | not assessed | none |
+| 6 | initiating-change | original | 2 | unattempted | not assessed | none |
+| 7 | local-change | original | 2 | unattempted | not assessed | none |
+| 8 | local-change | control | 2 | unattempted | not assessed | none |
+| 9 | large-sweep-account | original | 1 | unattempted | not assessed | none |
+| 10 | large-sweep-account | original | 2 | unattempted | not assessed | none |
 
 ## Aggregate results
 
-One row per case, condition and applicable criterion; include a functional-outcome row per case/condition derived from each execution's functional result.
-Only declared included executions with valid setup enter the outcome counts.
-Account for every planned repetition and every actual attempt in the coverage section; an excluded or missing result is not a pass.
-
 | Case / condition / criterion | Met | Not met | Insufficient evidence | Not measured | Evidence |
-|---|---:|---:|---:|---:|---|
-| <IDs; or functional outcome> | <count> | <count> | <count> | <count> | <execution-result IDs> |
+| --- | --- | --- | --- | --- | --- |
+| initiating-change / original / F1 | 1 | 0 | 0 | 0 | [coverage-baseline-01-initiating-change-original-1](results/20260921T210825089Z-ssr-initiating-change-original-ae5bac03-eb81-47f6-919b-b55ea5701e8e-_8ia6w1p.json) |
+| initiating-change / original / F2 | 1 | 0 | 0 | 0 | [coverage-baseline-01-initiating-change-original-1](results/20260921T210825089Z-ssr-initiating-change-original-ae5bac03-eb81-47f6-919b-b55ea5701e8e-_8ia6w1p.json) |
+| initiating-change / original / F3 | 1 | 0 | 0 | 0 | [coverage-baseline-01-initiating-change-original-1](results/20260921T210825089Z-ssr-initiating-change-original-ae5bac03-eb81-47f6-919b-b55ea5701e8e-_8ia6w1p.json) |
+| initiating-change / original / P1 | 1 | 0 | 0 | 0 | [coverage-baseline-01-initiating-change-original-1](results/20260921T210825089Z-ssr-initiating-change-original-ae5bac03-eb81-47f6-919b-b55ea5701e8e-_8ia6w1p.json) |
+| initiating-change / original / P2 | 1 | 0 | 0 | 0 | [coverage-baseline-01-initiating-change-original-1](results/20260921T210825089Z-ssr-initiating-change-original-ae5bac03-eb81-47f6-919b-b55ea5701e8e-_8ia6w1p.json) |
+| initiating-change / original / P3 | 0 | 1 | 0 | 0 | [coverage-baseline-01-initiating-change-original-1](results/20260921T210825089Z-ssr-initiating-change-original-ae5bac03-eb81-47f6-919b-b55ea5701e8e-_8ia6w1p.json) |
+| initiating-change / original / functional outcome | 1 | 0 | 0 | 0 | [coverage-baseline-01-initiating-change-original-1](results/20260921T210825089Z-ssr-initiating-change-original-ae5bac03-eb81-47f6-919b-b55ea5701e8e-_8ia6w1p.json) |
+| initiating-change / control / F1 | 0 | 0 | 0 | 0 | none |
+| initiating-change / control / F2 | 0 | 0 | 0 | 0 | none |
+| initiating-change / control / F3 | 0 | 0 | 0 | 0 | none |
+| initiating-change / control / functional outcome | 0 | 0 | 0 | 0 | none |
+| local-change / control / F1 | 0 | 0 | 0 | 0 | none |
+| local-change / control / F2 | 0 | 0 | 0 | 0 | none |
+| local-change / control / F3 | 0 | 0 | 0 | 0 | none |
+| local-change / control / functional outcome | 0 | 0 | 0 | 0 | none |
+| local-change / original / F1 | 0 | 0 | 0 | 0 | none |
+| local-change / original / F2 | 0 | 0 | 0 | 0 | none |
+| local-change / original / F3 | 0 | 0 | 0 | 0 | none |
+| local-change / original / P1 | 0 | 0 | 0 | 0 | none |
+| local-change / original / P2 | 0 | 0 | 0 | 0 | none |
+| local-change / original / P3 | 0 | 0 | 0 | 0 | none |
+| local-change / original / functional outcome | 0 | 0 | 0 | 0 | none |
+| large-sweep-account / original / P3 | 0 | 0 | 0 | 0 | none |
+| large-sweep-account / original / functional outcome | 0 | 0 | 0 | 0 | none |
 
-Not measured applies only to functional-outcome rows with no applicable functional criteria. Show it explicitly; no functional pass or success rate exists for an all-unmeasured group. Criterion rows have zero in that column.
+Only valid setups enter the table. Zero rows mean no included observations, not failure or success.
+The diagnostic remains unrun: its functional result would be not measured, but no unexecuted slot is counted as an observed not-measured outcome.
+The table generator selected three outcome columns because both available records are version 1; the version-2 assessment adds the required zero Not measured column without changing counts.
 
-When reporting a success fraction, use met / (met + not met + insufficient evidence) and show the unknown and not-measured counts separately; exclude not measured from this denominator; do not present met / known outcomes as complete coverage.
-Do not combine criteria into an average: the same incomplete repair may fail more than one criterion.
+The one valid original meets F1–F3 and P1–P2; P3 is not met.
+Its complete sweep account correctly identifies paths, locations and dispositions, but the supplied total says 13 occurrences/9 updates while its entries sum to 14 occurrences/10 updates.
+That is an internal arithmetic defect under its stated unit; the criterion accepts either consistent occurrence or matching-line counts.
+The defect affects the audit account and does not invalidate the committed repair.
 
-Recurring failures and consequential differences: <pattern, affected result IDs, evidence pointers and uncertainty about cause>
-Acceptance under the declared rule: <judgment and supporting counts, pending, or descriptive-only if no threshold was selected>
-Coverage, variability and attribution limits: <text; distinguish observed frequency from population reliability>
-Supported conclusion or recommendation: <text linked to these results; owner decision belongs in the protocol>
+Independent probes on disposable copies of both delivered projects pass: three unit tests, default/custom expiry calculations, rejection of zero/negative durations, and script execution from the project and an external directory.
+Complete diffs preserve the partner constraint, accepted refresh trade-off, archive and vendor meanings; both correct repairs are committed after exact neutral baselines.
+The control's individual functional judgments are therefore met, but its invalid setup excludes those judgments from comparison aggregates.
 
-## Comparison, when applicable
+## Collection stop and interpretation
 
-Omit this section for a standalone batch assessment.
-Compare this assessment with <accepted assessment citation>, or compare conditions already shown above.
-Use their aggregate results; do not repeat individual judgments.
-Record relevant setup/rule differences, gains and regressions, and the evidence-supported recommendation.
-Include resource differences only when they affect the decision, citing accounting rather than maintaining another cost table.
-The protocol owns the owner's rewrite/adoption decision and authorization.
+Control result `coverage-baseline-01-initiating-change-control-1` cites the full delivered provider response at line 62 of its retained `provider-session.jsonl`.
+The preceding command changes directory to `/tmp` to test the script, then runs a broad search without returning to the fixture.
+The actual response contains controller scratch matches (`round5.py` and a prior Claude review transcript) and the preceding original run's completion report.
+This is observed exposure, not an inference from filesystem accessibility or merely an unattempted command.
+It occurs after the task patch and before final verification/commit; the record does not claim it caused the repair or that every matched byte reached the model.
+The private runtime profile and restricted PATH did not enforce a read boundary around study material.
+The declared contamination stop applies; no further subject was dispatched.
+
+Acceptance is descriptive-only. This partial batch provides one successful initiating-change original observation and one genuine reporting inconsistency, with no valid control comparison or repetition evidence.
+It does not establish the full expanded baseline, local-change behavior, isolated diagnostic performance, a skill contribution, or readiness for a rewrite.
+Earlier frozen observations and assessments are unchanged; this incident is not evidence that their traces contained the same exposure.
+The [protocol checkpoint](protocol.md#coverage-baseline-coverage-baseline-01) owns recovery: qualify a read boundary with an offline reproduction before resuming the remaining slots, record any runtime change, and retain the excluded attempt without automatic replacement.
+Current spending and revised effort forecast are in [combined accounting](../concise-writing/protocol.md#storage-and-accounting).

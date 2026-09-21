@@ -5,12 +5,12 @@ This is navigation, not a duplicate progress or decision record.
 
 1. Read [CLAUDE.md](../../CLAUDE.md) and the [DD doctrine](../../skills/disciplined-development/SKILL.md).
 2. Resume from the [active plan's Current next action](../../plans/2026-09-11-model-driven-skill-testing.md#current-next-action) and [framework spec](../../plans/specs/2026-09-11-model-driven-skill-testing-framework.md).
-3. Use the [SSR protocol](protocol.md) for current coverage preparation, the facet map and pending collection decision. Use [CW accounting](../concise-writing/protocol.md#storage-and-accounting) only for current combined spending; each completed study’s assessments retain its conclusions.
+3. Use the [SSR protocol](protocol.md) for the partial expansion assessment, facet map and isolation-related collection stop. Use [CW accounting](../concise-writing/protocol.md#storage-and-accounting) only for current combined spending; each completed study’s assessments retain its conclusions.
 4. Follow the [formats](../formats/README.md) and [runner command guide](../../skill-validation/runner/README.md#study-documents) for mechanics; the historical worksheet is not current study authority.
 5. The [retrospective](../../reviews/2026-09-18-skill-testing-retrospective.md) identifies remaining discovery questions. The plan owns which one is selected next.
 
-Both prior comparisons are complete with adoption deferred; their approved calls are spent. Current SSR coverage-baseline-01 is authorized for ten calls; use its index to determine actual remaining attempts.
-Only the ten declared coverage-baseline-01 calls are newly authorized; no retries or live skill edits.
+Both prior comparisons are complete with adoption deferred; their approved calls are spent. Current SSR coverage-baseline-01 stopped after two of ten calls; use its index and protocol for the excluded control and eight unrun slots.
+Do not resume the unchanged runtime: qualify and record the information-boundary correction first. No retries or live skill edits.
 Preserve settled scenarios, criteria and historical identities; do not derive a baseline from a candidate or rescore old records to continue.
 SSR's [core assessment](core-baseline-01-assessment.md) records an unresolved Shiv category boundary: its P3 counts are not three established skill defects and do not independently justify a rewrite.
 Controller criteria, manifests and revealing evidence remain outside subject context; raw evidence stays in the protocol's external stores.

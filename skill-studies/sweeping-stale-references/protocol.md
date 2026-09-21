@@ -2,8 +2,8 @@
 
 Format version: `1`
 Study ID: `sweeping-stale-references`
-Status: coverage-baseline-01 authorized for ten subject attempts; previous batches complete. Adoption and skill editing remain unauthorized.
-Current question and pending decision: is the expanded suite sufficient to establish a baseline for ordinary changes, reviewer-triggered repairs and justified locality? Owner accepted the limits and funded eight executable calls plus two diagnostic calls; collect and assess the declared batch.
+Status: coverage-baseline-01 stopped after two of ten attempts because the control received outside-study text; eight slots remain unrun. Previous batches are complete. Adoption and skill editing remain unauthorized.
+Current question and pending decision: is the expanded suite sufficient to establish a baseline for ordinary changes, reviewer-triggered repairs and justified locality? Owner accepted the limits and funded eight executable calls plus two diagnostic calls. Resolve the observed information-boundary failure before resuming the remaining slots; no automatic replacement of the excluded control.
 The [plan](../../plans/2026-09-11-model-driven-skill-testing.md) owns progress; the [spec](../../plans/specs/2026-09-11-model-driven-skill-testing-framework.md) owns the workflow.
 The [core baseline](core-baseline-01-assessment.md) retains its two setup exclusions and runtime strata; the [comparison](comprehensive-comparison-01-assessment.md) records twelve valid executions of the original and preserved candidate. Both collection scopes are spent. Storage and accounting retains the SSR closing checkpoint and links the current combined totals.
 
@@ -114,9 +114,9 @@ This inventory distinguishes the three collected core cases from the prepared ad
 | semantic-delivery | Measured semantic-delivery-01; selected for core-baseline-01 | O1–O4: meaning-based descriptions of attempts/retries/stopping, preservation and committed repair. Passing runtime checks alone cannot establish correct prose. | [Case](cases/semantic-delivery/assessment.md), [manifest](cases/semantic-delivery/manifest.json), [qualification](cases/semantic-delivery/qualification.json). |
 | pilot-01 | Historical development evidence | Process pilot; accounting-scope ambiguity remains uncertainty, not a confirmed skill defect. | [Report](pilot-results.md), [case](cases/pilot-01/assessment.md). |
 | pilot-03 | Rejected, undispatched | Replaced by Shiv preparation; not active suite work. | [Retained case](cases/pilot-03/assessment.md). |
-| initiating-change | Prepared addition; not collected | Ordinary initiating rename; code/config/script/prose consistency and preservation | [Case](cases/initiating-change/assessment.md), [manifest](cases/initiating-change/manifest.json), [qualification](expansion-qualification.md). |
-| local-change | Prepared addition; not collected | Justified single-file correction, near-match preservation and O5 negative account | [Case](cases/local-change/assessment.md), [manifest](cases/local-change/manifest.json), [qualification](expansion-qualification.md). |
-| large-sweep-account | Optional prepared diagnostic; not collected | P3 grouping/counts and truthful verification; no functional outcome measured | [Case](cases/large-sweep-account/assessment.md), [manifest](cases/large-sweep-account/manifest.json), [qualification](expansion-qualification.md). |
+| initiating-change | Partially collected: one valid original, one excluded control | Ordinary initiating rename; code/config/script/prose consistency and preservation | [Case](cases/initiating-change/assessment.md), [manifest](cases/initiating-change/manifest.json), [qualification](expansion-qualification.md). |
+| local-change | Accepted addition; unrun after collection stop | Justified single-file correction, near-match preservation and O5 negative account | [Case](cases/local-change/assessment.md), [manifest](cases/local-change/manifest.json), [qualification](expansion-qualification.md). |
+| large-sweep-account | Accepted diagnostic; unrun after collection stop | P3 grouping/counts and truthful verification; no functional outcome measured | [Case](cases/large-sweep-account/assessment.md), [manifest](cases/large-sweep-account/manifest.json), [qualification](expansion-qualification.md). |
 
 The cases exercise broadening beyond the trigger, complete reconciliation, preservation and useful accounting; facets may share a case.
 Both pilot controls encountered all current consumers before making a narrow repair, so those observations support repair-scope comparison, not a discovery advantage.
@@ -131,7 +131,7 @@ Native skill discovery, composition, specialized search difficulty, reserved tra
 The owner asked the active session to pick one of the two skills and flesh out its scenarios before editing; the session selected SSR.
 The [coverage proposal](coverage-expansion.md) adds an ordinary initiating change and a genuinely local correction to the existing three executable situations, plus a separate large-sweep accounting diagnostic.
 [Offline qualification](expansion-qualification.md) and the new case cards describe concrete tasks, source-grounded rules, alternatives and boundaries; all are exposed reconstructed development cases.
-The owner accepted the three additions for coverage-baseline-01; freeze their reviewed inputs before the ten authorized calls. No skill authoring or adoption follows.
+The owner accepted and froze the three additions for coverage-baseline-01; its partial assessment and collection stop are recorded below. No skill authoring or adoption follows.
 The completed baseline and comparison remain unchanged. The new local-change case does not retroactively fill the collected scope’s gap.
 The [baseline question and design rationale](coverage-expansion.md#baseline-question-and-design-rationale) explain the eight original/control calls, optional two-call diagnostic, remaining uncertainty and triggers for further testing. The ten-call spending authority is recorded below.
 Current combined accounting remains in the CW protocol as linked below; CW scenario expansion is deferred while SSR is selected.
@@ -139,20 +139,20 @@ Current combined accounting remains in the CW protocol as linked below; CW scena
 ### Facet coverage audit (2026-09-21)
 
 This is the suite-level review required by [spec section 2](../../plans/specs/2026-09-11-model-driven-skill-testing-framework.md#2-select-representative-tests).
-Design adequacy describes the available task and evidence path, not model success. Collected evidence links to the completed [baseline](core-baseline-01-assessment.md) and [comparison](comprehensive-comparison-01-assessment.md); prepared additions have none.
-The three existing core cases have measured evidence. Initiating-change, local-change and large-sweep-account are prepared additions, not collected evidence; the owner endorsed their rationale, but the ten-call expansion is authorized below.
+Design adequacy describes the available task and evidence path, not model success. Collected evidence links to the completed [baseline](core-baseline-01-assessment.md), [comparison](comprehensive-comparison-01-assessment.md) and [partial expansion](coverage-baseline-01-assessment.md).
+The three existing core cases have measured evidence. Initiating-change now has one valid original observation and an excluded control; local-change and large-sweep-account remain unrun after the collection stop.
 Case definitions and qualification are linked in the inventory above.
 
 | Facet / basis | Design adequacy | Cases and mechanism | Collected evidence | Gap / disposition |
 |---|---|---|---|---|
 | O1: reviewer-triggered broadening beyond one citation | Covered | discovery-shiv, moved-guide, semantic-delivery each flag one README defect while other current consumers remain; inspect complete repair and searches | Baseline + comparison | Measured; overlap is deliberate: literal CLI, relative paths and semantic prose require different reconciliation |
-| O1: initiating an ordinary change | Covered | initiating-change requests a rename without listing consumers; implementation, script, config, tests and prose must agree | None | Prepared only; existing reviewer-triggered results do not establish this behavior; collect the prepared addition before claiming this evidence. |
-| O1: search before editing | Covered | All five executable cases permit search/edit ordering to be inspected in retained tool events, separately from final correctness | Baseline + comparison; additions unrun | Measured in existing cases; prepared in additions; missing traces remain unknown |
-| O1: literal, variant and meaning-based references | Covered | Shiv has repeated literal commands; moved-guide has relative-path contexts; semantic-delivery expresses one fact using different wording; initiating-change mixes identifier and concept | Literal CLI, paths and semantic prose measured in baseline/comparison; initiating identifier/concept rename not collected | Path/semantic outcomes are owner-clarified; no claim that every search technique or alias form is tested |
-| O1: breadth across file types | Covered | Shiv includes script, nested Make and hidden CI consumers; initiating-change includes code, config and tests; prose cases cover docs | Script/Make/CI/docs measured in baseline/comparison; initiating code/config/test rename not collected | Concrete consumers establish breadth opportunities, not difficult discovery or repository-scale search |
-| O2: update / false positive / intentionally stale | Covered | Existing cases and initiating-change preserve historical and independent meanings while updating real consumers; local-change preserves near-matches | Baseline + comparison; additions unrun | Inspect semantic outcomes and triage reasons; supplied context resolves intended dispositions, so ambiguous ownership/conflicting instructions remain untested |
-| O3: complete committed repair | Covered | All executable tasks request a commit; F1/F2 inspect useful outcome and preservation, F3 inspects committed state, P2 checks one reconciliation commit | Baseline + comparison; additions unrun | Functional completeness and procedural grouping stay separate; no hostile/concurrent repository claim |
-| O4: locations, counts and same-path/outcome grouping | Covered | Executable commit accounts map to references; large-sweep-account supplies 126 matches and one mixed-outcome path | Baseline + comparison; diagnostic unrun | Existing measured accounting plus prepared isolated diagnostic; consistent line/occurrence units accepted where ambiguous |
+| O1: initiating an ordinary change | Covered | initiating-change requests a rename without listing consumers; implementation, script, config, tests and prose must agree | One valid original in partial expansion; control excluded | Initial positive observation only; repetition and valid control comparison remain incomplete. |
+| O1: search before editing | Covered | All five executable cases permit search/edit ordering to be inspected in retained tool events, separately from final correctness | Baseline + comparison; one initiating original observed, local unrun | Measured in existing cases; prepared in additions; missing traces remain unknown |
+| O1: literal, variant and meaning-based references | Covered | Shiv has repeated literal commands; moved-guide has relative-path contexts; semantic-delivery expresses one fact using different wording; initiating-change mixes identifier and concept | Literal CLI, paths and semantic prose measured in baseline/comparison; one initiating identifier/concept rename observed | Path/semantic outcomes are owner-clarified; no claim that every search technique or alias form is tested |
+| O1: breadth across file types | Covered | Shiv includes script, nested Make and hidden CI consumers; initiating-change includes code, config and tests; prose cases cover docs | Script/Make/CI/docs measured in baseline/comparison; one initiating code/config/test rename observed | Concrete consumers establish breadth opportunities, not difficult discovery or repository-scale search |
+| O2: update / false positive / intentionally stale | Covered | Existing cases and initiating-change preserve historical and independent meanings while updating real consumers; local-change preserves near-matches | Baseline + comparison; one initiating original observed, local unrun | Inspect semantic outcomes and triage reasons; supplied context resolves intended dispositions, so ambiguous ownership/conflicting instructions remain untested |
+| O3: complete committed repair | Covered | All executable tasks request a commit; F1/F2 inspect useful outcome and preservation, F3 inspects committed state, P2 checks one reconciliation commit | Baseline + comparison; one initiating original observed, local unrun | Functional completeness and procedural grouping stay separate; no hostile/concurrent repository claim |
+| O4: locations, counts and same-path/outcome grouping | Covered | Executable commit accounts map to references; large-sweep-account supplies 126 matches and one mixed-outcome path | Baseline + comparison; one initiating original accounting defect; diagnostic unrun | Existing measured accounting plus prepared isolated diagnostic; consistent line/occurrence units accepted where ambiguous |
 | O4: References swept placement relative to narrative and Verification | Partial | Commit bodies and diagnostic REPORT.md expose placement; diagnostic task requests References swept followed by Verification | Not isolated | Protocol names placement, but case pass/fail rules focus on traceability and do not isolate every ordering error; do not claim comprehensive formatting conformance; revisit before an edit changes this behavior. |
 | O4: preserve necessary audit detail beyond normal length preference | Gap | Eleven diagnostic groups fit within the supplied 72-line preference | None | Removing the former pressure claim was correct; add a pressure case before judging changes to this exception; revisit before an edit changes this behavior. |
 | O5: justified single-file/no-sweep negative account | Partial | local-change has one real correction plus valid near-matches; search evidence supports locality and P3 checks the negative form | None | Prepared only; a genuinely no-change task is not separately tested, so no general no-op handling claim; revisit before an edit changes this behavior. |
@@ -182,7 +182,7 @@ Control contribution claims require evidence that omitted guidance was not loade
 Pre-baseline development is closed at two pairs. Do not reopen it for a new facet; a named readiness defect requires a separately authorized diagnostic exception.
 ### Coverage baseline: coverage-baseline-01
 
-Status: authorized for collection on 2026-09-21. The owner replied “ok, let's do it” to the explicit proposal to accept coverage limits and fund ten additional subject calls, raising the outer subject ceiling from 46 to 56.
+Status: stopped after order 2; orders 3–10 unrun. Originally authorized on 2026-09-21. The owner replied “ok, let's do it” to the explicit proposal to accept coverage limits and fund ten additional subject calls, raising the outer subject ceiling from 46 to 56.
 Question and coverage limits: [baseline design rationale](coverage-expansion.md#baseline-question-and-design-rationale) and the facet audit above. The two new executable cases and the separate accounting diagnostic are accepted for this batch; no skill edit or adoption is authorized.
 Scope: exactly ten sequential attempts below using frozen Sol-low/workspace-write configurations. Original/control order reverses across cases and repetitions; the diagnostic has original only and no functional-success claim.
 Inclusion: descriptive-only. Include all valid-setup executions, with functional failures and unknowns visible. Exclude invalid/unresolved setups from outcomes and account for every slot. No pooled functional rate across cases or diagnostic; diagnostic uses result/assessment version 2 and not measured.
@@ -205,6 +205,19 @@ Retain stopped bundles with `docs retain`, using this batch/order, committed inv
 | 8 | local-change | control | 2 | `skill-studies/sweeping-stale-references/cases/local-change/control.json` |
 | 9 | large-sweep-account | original | 1 | `skill-studies/sweeping-stale-references/cases/large-sweep-account/original.json` |
 | 10 | large-sweep-account | original | 2 | `skill-studies/sweeping-stale-references/cases/large-sweep-account/original.json` |
+
+
+Collection checkpoint, 2026-09-21: both attempts completed mechanically and were retained with verified inventories before stopping; two subject calls are charged, none retried.
+The [partial assessment](coverage-baseline-01-assessment.md) records one valid original (F1–F3/P1/P2 met, P3 arithmetic defect) and an invalid control (correct inspectable repair, excluded from aggregates).
+The control changed directory to `/tmp` for a script check and then searched that directory; its actual delivered tool response includes controller scratch matches and the preceding original run's completion report.
+The private profile and restricted PATH did not prevent filesystem read contamination; the run namespace under `/private/tmp` is not a read boundary.
+Do not run orders 3–10 under this unchanged setup or replace order 2 automatically. The [checkpoint review](../../reviews/2026-09-21-ssr-expansion-checkpoint.md) records the open isolation finding and completed verification.
+
+Recovery recommendation: qualify a filesystem read boundary that hides controller material and other run bundles while keeping the fixture, required tools and a clean per-attempt external working directory usable.
+Use a deterministic reproduction of the observed `cd`-then-search sequence, including `/tmp` and `/private/tmp` aliases and sibling bundles, before any subject call.
+A prompt-only request to stay in the fixture would leave the observed failure reachable and would change subject guidance; it is not a qualified isolation fix.
+Record any runtime amendment and apply it consistently to remaining conditions; preserve the original two attempts and report the runtime change rather than silently pooling them.
+The eight unrun slots retain their budget allocation, but collection is stopped until that amendment is qualified and the stop is resolved explicitly; any replacement remains a separate decision.
 
 ### First collection: semantic-delivery-01
 
@@ -344,8 +357,12 @@ Historical citations use commit/path/hash, including the worked example's run-in
 
 **SSR closing accounting (2026-09-17): 688 active minutes booked; 512 minutes (8 hours 32 minutes) remain under the 1,200-minute ceiling.**
 This includes preparation, review and model/tool waits, excludes owner-wait, and retains prior conservative allowances. The closing booking adds four active minutes for findings, plan reconciliation, verification and publication, excluding owner-wait. The comparison session took 41 minutes, 139 minutes below its 180-minute allowance. Measured model wait was 16.1 minutes against 30 forecast; the other preparation/preservation/assessment/review categories were not separately timed. The historical internal category split was not separately timed.
-This closed-study checkpoint uses its then-approved ceilings: 40 subject, 12 evaluator, 4 authoring and 4 retry invocations. Preserve it as historical accounting; the [CW protocol](../concise-writing/protocol.md#storage-and-accounting) owns subsequent combined spending and the later ceiling increase. This avoids comparing SSR’s closing balance with a later study’s allocation.
-Dispatched calls are **30 subject, 0 evaluator, 0 authoring, 0 retry**; remaining outer capacity is **10 / 12 / 4 / 4**. Core-baseline-01 has no unspent calls; neither excluded attempt has replacement authorization. Remaining capacity is a ceiling, not a selected next batch.
+This closed-study checkpoint uses its then-approved ceilings: a 40-call subject ceiling (with evaluator/authoring/retry ceilings 12/4/4). Preserve it as historical accounting; the [CW protocol](../concise-writing/protocol.md#storage-and-accounting) owns subsequent combined spending and the later ceiling increase. This avoids comparing SSR’s closing balance with a later study’s allocation.
+At that closing checkpoint, 30 subject calls had been dispatched and capacity was 10 / 12 / 4 / 4. Core-baseline-01 has no unspent calls; neither excluded attempt has replacement authorization. Remaining capacity is a ceiling, not a selected next batch.
+
+
+Current combined invocation accounting also includes the CW [baseline](../concise-writing/contribution-baseline-01-run-index.json) and [comparison](../concise-writing/comprehensive-comparison-01-run-index.json), plus the expansion index above.
+Dispatched calls are **48 subject, 0 evaluator, 0 authoring, 0 retry**; remaining outer capacity is **8 / 12 / 4 / 4** against the [active plan](../../plans/2026-09-11-model-driven-skill-testing.md#limits-and-information-boundaries). The CW protocol owns current combined time and forecast; the eight unrun expansion slots are stopped, not spent.
 
 
 Historical SSR closing forecast (2026-09-17):
@@ -361,6 +378,7 @@ Closure is complete within its 30-minute allowance; no new collection or rollout
 
 | Evidence | Interpretation |
 |---|---|
+| [Partial expansion](coverage-baseline-01-assessment.md) | One valid initiating original; control excluded for outside-study exposure. Eight slots unrun; isolation correction required before resumption. |
 | [Comprehensive comparison](comprehensive-comparison-01-assessment.md) | Complete twelve-execution comparison: tested functional outcomes preserved by both versions; reporting differences are mixed. Including the measured size reduction, the advisory recommendation favors the candidate. Owner deferred adoption. |
 | [Core-baseline-01 assessment](core-baseline-01-assessment.md) | Selected three-case baseline complete: twelve attempts, ten included and two setup exclusions; descriptive outcomes and runtime differences remain explicit. |
 | [Semantic-delivery-01 assessment](semantic-delivery-01-assessment.md) | First measured batch: original completes committed reconciliation; control leaves two current claims stale. One observation per condition; no consistency claim. |
@@ -392,4 +410,4 @@ All thirty subject calls used Sol-low. Small exposed cases, shared assessor cont
 - Include simplification when interpreting a version comparison. The initial retain recommendation overlooked a measured size benefit already allowed by the spec. Word count is sufficient; smaller text does not excuse functional regression or prove token/cost savings.
 - Separate evidence completion from deployment. Closing with adoption deferred preserves the findings and permits the next study without forcing a winner or another collection cycle.
 
-The contrasting-skill CW study subsequently exercised the workflow; its records and current combined accounting are linked above. Current SSR work is the coverage preparation described at the start of this protocol; coverage-baseline-01 is the current funded scope.
+The contrasting-skill CW study subsequently exercised the workflow; its records and current combined accounting are linked above. Current SSR work is the stopped partial coverage-baseline-01 collection described at the start of this protocol.
