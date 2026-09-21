@@ -4,22 +4,11 @@ Status: drafted and qualified offline after the active session selected SSR unde
 The [protocol](protocol.md) remains the contract/decision authority and the [plan](../../plans/2026-09-11-model-driven-skill-testing.md) owns progress.
 This expands the range of situations before selecting an edit; no case is designed around comprehensive-candidate wording or a desired failure.
 
-## Coverage and membership
+## Scope and authoritative coverage
 
-| Situation | Case | Distinct evidence | Role |
-|---|---|---|---|
-| A reviewer finds a missed CLI consumer | Existing discovery-shiv | Complete repair of runnable script, build and documentation consumers; preserved independent meanings | Retain unchanged |
-| A reviewer finds a broken moved-guide link | Existing moved-guide | Relative links and executable export consumer | Retain unchanged |
-| A reviewer finds prose contradicted by changed behavior | Existing semantic-delivery | Meaning-based reconciliation that passing runtime tests cannot establish | Retain unchanged |
-| The agent initiates the change | [initiating-change](cases/initiating-change/assessment.md) | Rename implementation and consumers, preserve behavior and causal explanation without a reviewer listing defects | Proposed executable addition |
-| The requested change is genuinely local | [local-change](cases/local-change/assessment.md) | Establish locality by searching; correct one heading while preserving related but correct material | Proposed executable addition |
-| A completed sweep has many matches and mixed outcomes in one file | [large-sweep-account](cases/large-sweep-account/assessment.md) | Accurate grouping, traceable references and truthful verification | Optional procedural diagnostic, separate from functional suite |
-
-The proposed functional suite is five cases, not six: the accounting diagnostic cannot demonstrate actual searching, repair or committed completeness.
-The design exercises the core O1–O5 behaviors across ordinary change, review-triggered repair and justified locality, but does not cover every facet of those obligations.
-The authoritative [facet audit and sufficiency judgment](protocol.md#facet-coverage-audit-2026-09-21) separates measured/prepared evidence, partial coverage and untested exceptions.
-Coverage means observable opportunities under these tasks, not a guaranteed failure or proof of population reliability.
-The existing three cases remain the frozen baseline; new observations receive a separate batch rather than changing historical denominators or scores.
+The protocol owns the [case inventory](protocol.md#proposed-baseline-case-selection) and [facet map and coverage judgment](protocol.md#facet-coverage-audit-2026-09-21).
+The proposal adds initiating-change and local-change to the three collected executable cases, plus an optional accounting-only diagnostic.
+Prepared opportunities do not change historical denominators or establish observed coverage.
 
 ## Design and realistic limits
 
@@ -58,6 +47,16 @@ The diagnostic has only procedural P3, with no functional outcome measured.
 Version 1 requires a functional criterion and cannot represent this completed diagnostic.
 The [version-2 reporting extension](../../plans/specs/2026-09-19-unmeasured-functional-results.md) represents it as `functional_result: "not measured"`, with explicit aggregate counts and no functional success rate.
 The diagnostic draft manifest selects that schema. This resolves the representation limit without changing policy 3 or pooling accounting evidence with repair outcomes.
+
+## Baseline question and design rationale
+
+Can the original skill support complete committed reconciliation and preservation during an ordinary initiating change, and a justified local correction after checking scope? How does performance differ without SSR guidance, and does the supplied-inventory diagnostic expose accounting errors independently of repair?
+Original/control conditions isolate supplied SSR guidance in the two executable cases. Two repetitions per condition provide a limited consistency check; they do not estimate population reliability or prove contribution from a tie.
+Two original-guided diagnostic repetitions test compliance with its accounting contract, not an advantage over a control.
+Evaluate whole projects/reports using the agreed rules; valid alternatives remain valid and procedural defects remain separate from functional failure.
+A consequential uncovered failure mode, inadequate distinguishing evidence or an edit touching a deferred facet warrants a specifically scoped additional test. A passing control or a desire for a larger sample alone does not justify changing the cases to induce failure.
+Model/runtime changes, invalid setups and inconsistent repetitions limit conclusions; inspect their causes before proposing further collection, with no automatic replacement or retry.
+The collection can support an evidence-backed choice of a bounded improvement, including retaining the original if no useful change is established. It does not authorize authoring or establish broad skill reliability.
 
 ## Proposed next collection
 

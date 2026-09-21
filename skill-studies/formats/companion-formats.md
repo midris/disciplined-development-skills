@@ -28,6 +28,9 @@ Runner IDs retain their emitted values. Empty strings and `<...>` are unfinished
 
 Copy [protocol.template.md](protocol.template.md), retaining its seven sections in order.
 The protocol owns current study decisions, their authority and brief rationale; the active plan alone owns progress/checklists.
+Maintain one case inventory and facet map, separating covered/partial/gap design adequacy from collected evidence. Give gaps a disposition or revisit trigger and conclude whether coverage supports the baseline question.
+Record why conditions and repetitions answer that question, remaining uncertainty and findings that would warrant more testing; this rationale is not collection authorization.
+Templates prompt for these existing semantic responsibilities within version-1 sections; they add no parser-enforced fields or scoring rules. Historical records need no migration.
 Link case-specific rules, configuration settings, manifests, attempt indexes and assessments rather than recopying their contents.
 Omit unselected optional provisions, such as reserved-evidence boundaries or a graded numeric mapping; material limits on actual claims remain explicit.
 Use Git for earlier versions and place a correction's reason beside the current decision; no decision ledger is required.
@@ -41,6 +44,7 @@ Keep observed-run policy bytes unchanged. A general batch interpretation rule ma
 
 Copy [case-definition.template.md](case-definition.template.md): Identity and purpose, Inputs and setup, Rules and evidence, Criteria, Limits.
 Repeat the brief criterion card for each criterion; cite shared rules instead of repeating explanations.
+Case purpose and mechanism explain the tested behavior, representative situation, concrete failure opportunity and observable distinction; reference the criterion boundaries and alternatives below.
 
 | Field | Required content |
 |---|---|

@@ -7,7 +7,8 @@ Study ID: <id>
 Case ID: <id>
 Definition version: <version>
 Status: draft
-Purpose and realistic failure opportunity: <text>
+Purpose and realistic failure opportunity: <behavior tested, why it matters and representative situation>
+Scenario mechanism: <task/fixture feature exposing a plausible inadequate approach; observable distinction from success; cite criteria and valid alternatives below>
 Protocol coverage and membership/exposure: <citations>
 
 ## Inputs and setup

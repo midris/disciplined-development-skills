@@ -3,6 +3,7 @@
 Format version: `1`
 Study ID: <id>
 Status: draft
+Current question and pending decision: <completed evidence versus current preparation; authority still needed>
 Plan: <link>
 General spec: <link>
 
@@ -36,7 +37,14 @@ Policy snapshot: <identity outside the copied policy body>
 | <case/link> | proposed | <IDs> | development | <text> |
 
 Evidence/checker methods and qualification: <links>
-Coverage gaps and rationale: <text>
+
+| Facet / basis | Design adequacy | Cases and mechanism | Collected evidence | Gap / disposition |
+|---|---|---|---|---|
+| <behavior, boundary or exception> | <covered / partial / gap> | <case links and distinguishing evidence> | <assessment links or not collected> | <reason, next decision or revisit trigger> |
+
+Coverage judgment: <sufficient for which conclusion; unsupported claims and consequential gaps>
+Baseline question and design rationale: <what proposed conditions/repetitions establish, remaining uncertainty and findings warranting further tests>
+Keep historical batch status explicit; proposals reference this inventory and facet map. Tasks remain in the plan.
 
 ## Execution scope and authorization
 

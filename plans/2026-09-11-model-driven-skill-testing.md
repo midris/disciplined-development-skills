@@ -226,6 +226,7 @@ Reserved bundles and revealing assessments stay entirely in the verified private
 - [x] Address round-5 review: accept consistent line/occurrence units, bound the diagnostic claim and call proposal, and state the not-measured rationale at the rule.
 - [x] Complete the owner-requested follow-up self-review; reconcile stale format/tooling status and fix comma-formatted accounting totals without changing scoring or frozen records. See the [review record](../reviews/2026-09-19-ssr-reporting-self-review.md).
 - [x] Add the owner-approved suite coverage exit condition and audit SSR against it; record the facet map, measured/prepared distinction and bounded sufficiency judgment in the protocol.
+- [x] Apply the owner-approved protocol cleanup: current status, single case inventory/facet map, evidence versus design coverage, case mechanisms and baseline design rationale; update reusable template guidance within existing sections.
 - [ ] Review and accept the SSR additions and select a funded collection scope before freezing or dispatch. No new subject calls or skill authoring are authorized.
 
 The owner accepted the reconciled [format set](../skill-studies/formats/README.md), version `1` with result and assessment version `2` for unmeasured functional outcomes. The protocol and the Shiv and semantic-delivery case definitions/manifests use the accepted layouts; historical observed-case inputs and the `1-draft` worked example remain unchanged under their recorded identities.
