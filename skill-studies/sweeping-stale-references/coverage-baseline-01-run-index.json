@@ -3,5 +3,104 @@
   "index_id": "ssr-coverage-baseline-01",
   "study_id": "sweeping-stale-references",
   "batch_id": "coverage-baseline-01",
-  "attempts": []
+  "attempts": [
+    {
+      "attempt_id": "coverage-baseline-01-initiating-change-original-1-1",
+      "case_id": "initiating-change",
+      "condition": "original",
+      "repetition": 1,
+      "attempt_number": 1,
+      "retry_of": null,
+      "manifest": {
+        "path": "skill-studies/sweeping-stale-references/cases/initiating-change/manifest.json",
+        "sha256": "62e7d60cd41154f5fe4f6401f2bb68ae0bf13d85a4cb734570610b15c8988493",
+        "version": "1",
+        "git_revision": "2c65cdc778b1ca9a00eb95fa09876d71515427a6"
+      },
+      "authorization": {
+        "artifact": {
+          "path": "skill-studies/sweeping-stale-references/protocol.md",
+          "sha256": "23a07eb9d06cafcd84004944a707c9eec68814ca1ba139ded2551e2b0c6dbd70",
+          "version": "1",
+          "git_revision": "2c65cdc778b1ca9a00eb95fa09876d71515427a6"
+        },
+        "selector": "Batch: coverage-baseline-01; order 1"
+      },
+      "run_id": "20260921T210825089Z-ssr-initiating-change-original-ae5bac03-eb81-47f6-919b-b55ea5701e8e-_8ia6w1p",
+      "allocation": {
+        "pool": "subject",
+        "charge": 1
+      },
+      "limitations": [
+        "Completed and assessed; valid setup, P3 arithmetic defect."
+      ],
+      "bundle": {
+        "path": "/Users/simon/work/personal/skill-study-private/sweeping-stale-references/development/20260921T210825089Z-ssr-initiating-change-original-ae5bac03-eb81-47f6-919b-b55ea5701e8e-_8ia6w1p",
+        "inventory": {
+          "path": "/Users/simon/work/personal/skill-study-private/sweeping-stale-references/development/20260921T210825089Z-ssr-initiating-change-original-ae5bac03-eb81-47f6-919b-b55ea5701e8e-_8ia6w1p.inventory.json",
+          "sha256": "4c057ee358fa9380f49c4cd7bd5bc2fa482ef3dd97baba8d07c86b25ec910909",
+          "version": "1"
+        },
+        "verified": true
+      },
+      "result": {
+        "result_id": "coverage-baseline-01-initiating-change-original-1",
+        "record": {
+          "path": "skill-studies/sweeping-stale-references/results/20260921T210825089Z-ssr-initiating-change-original-ae5bac03-eb81-47f6-919b-b55ea5701e8e-_8ia6w1p.json",
+          "sha256": "ac372f8ff5f4dc05c26dfd658429a09bb5b5e74fed7a13903683816050879f4d",
+          "version": "1",
+          "git_revision": "874935b610998442b250f3bfe01072e86fcbbb6a"
+        }
+      }
+    },
+    {
+      "attempt_id": "coverage-baseline-01-initiating-change-control-1-1",
+      "case_id": "initiating-change",
+      "condition": "control",
+      "repetition": 1,
+      "attempt_number": 1,
+      "retry_of": null,
+      "manifest": {
+        "path": "skill-studies/sweeping-stale-references/cases/initiating-change/manifest.json",
+        "sha256": "62e7d60cd41154f5fe4f6401f2bb68ae0bf13d85a4cb734570610b15c8988493",
+        "version": "1",
+        "git_revision": "2c65cdc778b1ca9a00eb95fa09876d71515427a6"
+      },
+      "authorization": {
+        "artifact": {
+          "path": "skill-studies/sweeping-stale-references/protocol.md",
+          "sha256": "23a07eb9d06cafcd84004944a707c9eec68814ca1ba139ded2551e2b0c6dbd70",
+          "version": "1",
+          "git_revision": "2c65cdc778b1ca9a00eb95fa09876d71515427a6"
+        },
+        "selector": "Batch: coverage-baseline-01; order 2"
+      },
+      "run_id": "20260921T211212148Z-ssr-initiating-change-control-b967dd0f-1583-4251-a066-0bc9d98fdd55-wnoe38hl",
+      "allocation": {
+        "pool": "subject",
+        "charge": 1
+      },
+      "limitations": [
+        "Completed and assessed; invalid setup: outside-study text delivered; excluded from aggregates; collection stopped."
+      ],
+      "bundle": {
+        "path": "/Users/simon/work/personal/skill-study-private/sweeping-stale-references/development/20260921T211212148Z-ssr-initiating-change-control-b967dd0f-1583-4251-a066-0bc9d98fdd55-wnoe38hl",
+        "inventory": {
+          "path": "/Users/simon/work/personal/skill-study-private/sweeping-stale-references/development/20260921T211212148Z-ssr-initiating-change-control-b967dd0f-1583-4251-a066-0bc9d98fdd55-wnoe38hl.inventory.json",
+          "sha256": "976eb7fd0ae924931e912ebb49bb90be7b22a7741d689964dad7d9d3755f2937",
+          "version": "1"
+        },
+        "verified": true
+      },
+      "result": {
+        "result_id": "coverage-baseline-01-initiating-change-control-1",
+        "record": {
+          "path": "skill-studies/sweeping-stale-references/results/20260921T211212148Z-ssr-initiating-change-control-b967dd0f-1583-4251-a066-0bc9d98fdd55-wnoe38hl.json",
+          "sha256": "53bf257c325ffe60bb8c232cafe545d598f809f775e9dd1d1109badc7c2efac6",
+          "version": "1",
+          "git_revision": "874935b610998442b250f3bfe01072e86fcbbb6a"
+        }
+      }
+    }
+  ]
 }
