@@ -137,6 +137,9 @@ A promise to execute an action requires an environment where the action can be p
 
 Output: a reasoned scenario set and coverage map.
 Exit condition: each selected scenario has a distinct purpose, sufficient inputs and a feasible evidence path.
+Review the suite against every agreed behavioral facet, including applicability boundaries and consequential exceptions.
+Identify which facets are exercised, partially exercised or untested, with supporting cases and reasons for gaps.
+State whether that coverage is sufficient for the study’s intended conclusion and which claims remain unsupported.
 Ordinary development uses known scenarios and records that exposure. If a separate held-out transfer claim is explicitly selected, designate those cases before exposure and do not present an exposed author as unexposed.
 
 ### 3. Define and challenge the evaluation contract

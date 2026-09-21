@@ -10,6 +10,8 @@ Status: prepared for owner review; not accepted, frozen or authorized for collec
 Purpose: Observe complete reconciliation while making the initiating change, preserving causal explanation and unrelated meanings.
 Coverage and exposure: O1–O4; ordinary initiating change; exposed development evidence proposed in [coverage expansion](../../coverage-expansion.md).
 
+Scenario mechanism and distinct purpose: This case tests propagation of an agent-initiated rename. The task names the setting and concept but not their consumers; the fixture spreads them across executable and explanatory artifacts and includes history/vendor references to preserve. Final artifacts and runtime checks expose incomplete propagation or damage; ordered tool events and Git history separately expose skipped search, grouping or accounting. This is ordinary change work, contrasting with the existing reviewer-triggered repairs.
+
 ## Inputs and setup
 
 Subject task: [task.md](task.md). Configuration: [original](original.json), [control](control.json); working identities: [manifest](manifest.json).

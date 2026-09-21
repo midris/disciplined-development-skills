@@ -10,6 +10,8 @@ Status: prepared for owner review; not accepted, frozen or authorized for collec
 Purpose: Observe traceable grouping and arithmetic given settled search results.
 Coverage and exposure: O4 only; no search/repair coverage; exposed development evidence proposed in [coverage expansion](../../coverage-expansion.md).
 
+Scenario mechanism and distinct purpose: This case isolates accounting accuracy after discovery and triage are settled. The supplied inventory has 126 matches, ten paths and eleven path/outcome groups, including two outcomes in one file. Comparing REPORT.md with that inventory exposes missing groups, mixed dispositions, inconsistent counts and invented verification. It does not test actual search, repair, commit execution or brevity pressure.
+
 ## Inputs and setup
 
 Subject task: [task.md](task.md). Configuration: [original](original.json); working identities: [manifest](manifest.json).

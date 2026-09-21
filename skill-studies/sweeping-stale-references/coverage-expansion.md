@@ -16,7 +16,8 @@ This expands the range of situations before selecting an edit; no case is design
 | A completed sweep has many matches and mixed outcomes in one file | [large-sweep-account](cases/large-sweep-account/assessment.md) | Accurate grouping, traceable references and truthful verification | Optional procedural diagnostic, separate from functional suite |
 
 The proposed functional suite is five cases, not six: the accounting diagnostic cannot demonstrate actual searching, repair or committed completeness.
-This covers the current O1–O5 contract across ordinary change, review-triggered repair and justified locality, with literal/path/semantic references, preserved history/independent uses, explanation and commit evidence.
+The design exercises the core O1–O5 behaviors across ordinary change, review-triggered repair and justified locality, but does not cover every facet of those obligations.
+The authoritative [facet audit and sufficiency judgment](protocol.md#facet-coverage-audit-2026-09-21) separates measured/prepared evidence, partial coverage and untested exceptions.
 Coverage means observable opportunities under these tasks, not a guaranteed failure or proof of population reliability.
 The existing three cases remain the frozen baseline; new observations receive a separate batch rather than changing historical denominators or scores.
 

@@ -133,6 +133,35 @@ The completed baseline and comparison remain unchanged. The old local-change def
 The proposed eight-call original/control expansion, optional two-call diagnostic and resolved diagnostic-only record representation are stated in the coverage proposal for owner review.
 Current combined accounting remains in the CW protocol as linked below; CW scenario expansion is deferred while SSR is selected.
 
+### Facet coverage audit (2026-09-21)
+
+This is the suite-level review required by [spec section 2](../../plans/specs/2026-09-11-model-driven-skill-testing-framework.md#2-select-representative-tests).
+“Exercised” means a concrete task and evidence path exist, not that the skill passes or that reliability is established.
+The three existing core cases have measured evidence. Initiating-change, local-change and large-sweep-account are prepared additions, not collected evidence; the owner endorsed their rationale, but no new call allocation is authorized.
+Case links and qualification are in the suite tables above and the [coverage proposal](coverage-expansion.md).
+
+| Agreed facet / basis | Coverage in the expanded design | Cases and observable mechanism | Evidence status / gap rationale |
+|---|---|---|---|
+| O1: reviewer-triggered broadening beyond one citation | Exercised | discovery-shiv, moved-guide, semantic-delivery each flag one README defect while other current consumers remain; inspect complete repair and searches | Measured; overlap is deliberate: literal CLI, relative paths and semantic prose require different reconciliation |
+| O1: initiating an ordinary change | Exercised | initiating-change requests a rename without listing consumers; implementation, script, config, tests and prose must agree | Prepared only; existing reviewer-triggered results do not establish this behavior |
+| O1: search before editing | Exercised | All five executable cases permit search/edit ordering to be inspected in retained tool events, separately from final correctness | Measured in existing cases; prepared in additions; missing traces remain unknown |
+| O1: literal, variant and meaning-based references | Exercised | Shiv has repeated literal commands; moved-guide has relative-path contexts; semantic-delivery expresses one fact using different wording; initiating-change mixes identifier and concept | Path/semantic outcomes are owner-clarified; no claim that every search technique or alias form is tested |
+| O1: breadth across file types | Exercised | Shiv includes script, nested Make and hidden CI consumers; initiating-change includes code, config and tests; prose cases cover docs | Concrete consumers establish breadth opportunities, not difficult discovery or repository-scale search |
+| O2: update / false positive / intentionally stale | Exercised | Existing cases and initiating-change preserve historical and independent meanings while updating real consumers; local-change preserves near-matches | Inspect semantic outcomes and triage reasons; supplied context resolves intended dispositions, so ambiguous ownership/conflicting instructions remain untested |
+| O3: complete committed repair | Exercised | All executable tasks request a commit; F1/F2 inspect useful outcome and preservation, F3 inspects committed state, P2 checks one reconciliation commit | Functional completeness and procedural grouping stay separate; no hostile/concurrent repository claim |
+| O4: locations, counts and same-path/outcome grouping | Exercised | Executable commit accounts map to references; large-sweep-account supplies 126 matches and one mixed-outcome path | Existing measured accounting plus prepared isolated diagnostic; consistent line/occurrence units accepted where ambiguous |
+| O4: References swept placement relative to narrative and Verification | Partially exercised | Commit bodies and diagnostic REPORT.md expose placement; diagnostic task requests References swept followed by Verification | Protocol names placement, but case pass/fail rules focus on traceability and do not isolate every ordering error; do not claim comprehensive formatting conformance |
+| O4: preserve necessary audit detail beyond normal length preference | Untested | Eleven diagnostic groups fit within the supplied 72-line preference | Removing the former pressure claim was correct; add a pressure case before judging changes to this exception |
+| O5: justified single-file/no-sweep negative account | Exercised for single-file; partial overall | local-change has one real correction plus valid near-matches; search evidence supports locality and P3 checks the negative form | Prepared only; a genuinely no-change task is not separately tested, so no general no-op handling claim |
+| Applicability: explicit load versus autonomous skill discovery | Exercised after explicit load; discovery untested | Original-guided prompts require a full read; controls omit SSR | Selected question is behavior/contribution after loading, not whether the model selects the skill unaided |
+| Composition, difficult search, conflicting information and transfer | Untested extensions | No DD orchestration, required companion interaction, hostile repository or held-out case is supplied | SSR is independently evaluated; these contexts are outside the selected question and must be reconsidered if an edit depends on them |
+
+**Coverage judgment:** the expanded design is sufficient to establish a broader development baseline for explicit-load SSR on small, inspectable tasks: ordinary changes, reviewer-triggered repairs and justified locality, plus isolated accounting if selected.
+It does not establish that every facet of SSR is tested, that the additions work before collection, or that a general rewrite is ready for adoption.
+The current measured evidence is narrower: reviewer-triggered repair and accounting only; ordinary-change and local-negative behavior remain unmeasured.
+Do not add scenarios merely to achieve an all-green map. Before authoring, check the chosen edit against this map: an edit to pressure handling, exact output ordering, no-op behavior, discovery or composition requires targeted evidence or an explicitly narrower conclusion.
+A later general comparison must use the same accepted expanded cases for original and candidate; existing measurements are not retroactively expanded.
+
 ## Execution scope and authorization
 
 Follow the [ordinary active-session workflow](../../plans/specs/2026-09-11-model-driven-skill-testing-framework.md#default-work-session-workflow).
