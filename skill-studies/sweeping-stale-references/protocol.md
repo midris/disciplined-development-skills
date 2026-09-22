@@ -2,7 +2,7 @@
 
 Format version: `1`
 Study ID: `sweeping-stale-references`
-Status: coverage-baseline-01 paused after two of ten attempts; the excluded control remains charged. The input-isolation-1 correction is qualified; eight slots remain unrun. Previous batches are complete. Adoption and skill editing remain unauthorized.
+Status: coverage-baseline-01 resuming the remaining eight authorized attempts after round-10 review; the excluded control remains charged. The input-isolation-1 correction is qualified; eight slots remain unrun. Previous batches are complete. Adoption and skill editing remain unauthorized.
 Current question and pending decision: is the expanded suite sufficient to establish a baseline for ordinary changes, reviewer-triggered repairs and justified locality? Owner accepted the limits and funded eight executable calls plus two diagnostic calls. Use the committed input-isolation-1 runtime amendment when resuming the remaining slots; no automatic replacement of the excluded control.
 The [plan](../../plans/2026-09-11-model-driven-skill-testing.md) owns progress; the [spec](../../plans/specs/2026-09-11-model-driven-skill-testing-framework.md) owns the workflow.
 The [core baseline](core-baseline-01-assessment.md) retains its two setup exclusions and runtime strata; the [comparison](comprehensive-comparison-01-assessment.md) records twelve valid executions of the original and preserved candidate. Both collection scopes are spent. Storage and accounting retains the SSR closing checkpoint and links the current combined totals.
@@ -182,12 +182,12 @@ Control contribution claims require evidence that omitted guidance was not loade
 Pre-baseline development is closed at two pairs. Do not reopen it for a new facet; a named readiness defect requires a separately authorized diagnostic exception.
 ### Coverage baseline: coverage-baseline-01
 
-Status: stopped after order 2; orders 3–10 unrun. Originally authorized on 2026-09-21. The owner replied “ok, let's do it” to the explicit proposal to accept coverage limits and fund ten additional subject calls, raising the outer subject ceiling from 46 to 56.
+Status: orders 1–2 retained; orders 3–10 authorized to resume under input-isolation-1. Originally authorized on 2026-09-21. The owner replied “ok, let's do it” to the explicit proposal to accept coverage limits and fund ten additional subject calls, raising the outer subject ceiling from 46 to 56.
 Question and coverage limits: [baseline design rationale](coverage-expansion.md#baseline-question-and-design-rationale) and the facet audit above. The two new executable cases and the separate accounting diagnostic are accepted for this batch; no skill edit or adoption is authorized.
 Scope: exactly ten sequential attempts below using frozen Sol-low/workspace-write configurations. Original/control order reverses across cases and repetitions; the diagnostic has original only and no functional-success claim.
 Inclusion: descriptive-only. Include all valid-setup executions, with functional failures and unknowns visible. Exclude invalid/unresolved setups from outcomes and account for every slot. No pooled functional rate across cases or diagnostic; diagnostic uses result/assessment version 2 and not measured.
 Stop for failed preservation, uncertain charge, unresolved process cleanup, suspected contamination or an infrastructure/setup defect requiring inspection. A valid behavioral failure alone does not stop collection. No automatic retry, replacement, pool transfer or extra invocation.
-Budget: at most ten additional subject invocations, zero evaluator/authoring/retry calls. Active-work forecast is 90 minutes (15 preparation/freeze, 30 model waits and retention, 35 evidence inspection/scoring, 10 review/reporting), within the 162 minutes remaining at approval. Track elapsed active effort including waits; the time ceiling remains 1,200 minutes.
+Budget: at most ten additional subject invocations, zero evaluator/authoring/retry calls. Active-work forecast is 90 minutes (15 preparation/freeze, 30 model waits and retention, 35 evidence inspection/scoring, 10 review/reporting), within the 162 minutes remaining at approval. Track elapsed active effort including waits. After round-10 review the owner clarified that the 1,200-minute budget is a guideline; the ten-call scope and 56-call subject ceiling remain unchanged.
 Inputs: [initiating-change manifest](cases/initiating-change/manifest.json), [local-change manifest](cases/local-change/manifest.json), [diagnostic manifest](cases/large-sweep-account/manifest.json); [initiating card](cases/initiating-change/assessment.md), [local card](cases/local-change/assessment.md), [diagnostic card](cases/large-sweep-account/assessment.md). Their source revision pins the full runner checkout; invocation authority is the subsequent committed frozen-manifest revision.
 Runtime: `/opt/homebrew/bin/codex`, `codex-cli 0.154.0`, SHA-256 `4f85982624b3898c8991cb80c0981b2aa71070e3537046c9a95950318a95afcc`, rechecked 2026-09-21. Execution changes since the prior collection are terminal-result 0.5 capture/cleanup metadata and document operations; the current offline suite passed 450 tests. Existing restricted PATH, private profile and full-session capture remain in use. Inspect every actual trace for full original skill loading, control integrity and unexpected outside guidance; this is not exhaustive host read isolation.
 Historical commands for orders 1–2 ran from `/Users/simon/work/personal/disciplined-development-skills`: `TMPDIR=/private/tmp/ssr-coverage-baseline-01 skill-validation/runner/.venv/bin/skilltest run CONFIG`, once per row after collection readiness. Host permission initializes the app server; subjects retain workspace-write.
@@ -228,7 +228,7 @@ The remaining commands use `TMPDIR=/private/var/folders/55/6jqr25v5211fn00wych8b
 Create and verify that namespace before invocation; `/private/tmp/ssr-coverage-baseline-01` is historical and is rejected by the corrected Codex boundary.
 The first amended observation must be inspected and retained before the next order, as required by the existing stop rule.
 This amendment does not authorize replacing order 2 or adding a model qualification call.
-Collection remains paused for this implementation checkpoint; resume only from the committed, verified amendment and within the recorded remaining effort allocation.
+After round-10 review passed, the owner requested “ok, please proceed”. Resume orders 3–10 from the committed amendment; time remains tracked against the planning guideline so process cost remains visible.
 
 ### First collection: semantic-delivery-01
 
@@ -373,7 +373,7 @@ At that closing checkpoint, 30 subject calls had been dispatched and capacity wa
 
 
 Current combined invocation accounting also includes the CW [baseline](../concise-writing/contribution-baseline-01-run-index.json) and [comparison](../concise-writing/comprehensive-comparison-01-run-index.json), plus the expansion index above.
-Dispatched calls are **48 subject, 0 evaluator, 0 authoring, 0 retry**; remaining outer capacity is **8 / 12 / 4 / 4** against the [active plan](../../plans/2026-09-11-model-driven-skill-testing.md#limits-and-information-boundaries). The CW protocol owns current combined time and forecast; the eight unrun expansion slots are stopped, not spent.
+Dispatched calls are **48 subject, 0 evaluator, 0 authoring, 0 retry**; remaining outer capacity is **8 / 12 / 4 / 4** against the [active plan](../../plans/2026-09-11-model-driven-skill-testing.md#limits-and-information-boundaries). The CW protocol owns current combined time and forecast; the eight remaining expansion slots are authorized, not yet spent.
 
 
 Historical SSR closing forecast (2026-09-17):
@@ -421,4 +421,4 @@ All thirty subject calls used Sol-low. Small exposed cases, shared assessor cont
 - Include simplification when interpreting a version comparison. The initial retain recommendation overlooked a measured size benefit already allowed by the spec. Word count is sufficient; smaller text does not excuse functional regression or prove token/cost savings.
 - Separate evidence completion from deployment. Closing with adoption deferred preserves the findings and permits the next study without forcing a winner or another collection cycle.
 
-The contrasting-skill CW study subsequently exercised the workflow; its records and current combined accounting are linked above. Current SSR work is the stopped partial coverage-baseline-01 collection described at the start of this protocol.
+The contrasting-skill CW study subsequently exercised the workflow; its records and current combined accounting are linked above. Current SSR work is resumption of coverage-baseline-01 described at the start of this protocol.
