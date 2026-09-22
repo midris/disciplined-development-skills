@@ -221,7 +221,7 @@ Codex uses root-read denial, explicit fixture/evidence/private-scratch grants an
 Claude uses its existing whole-process wrapper with explicit input/runtime/authentication reads, covering native file tools as well as Bash.
 The previous private-profile and ambient-guidance controls remain; they were not a general filesystem boundary.
 
-Apply this runtime only to orders 3–10; keep the frozen subject inputs, policies, model/effort, order, call ceiling and existing two results unchanged.
+Order 3 used this runtime; orders 4–10 also use the shell amendment below. Apply the isolation boundary only to orders 3–10; keep the frozen subject inputs, policies, model/effort, order, call ceiling and existing two results unchanged.
 Use the committed runner revision containing this amendment as the invocation authority in retention records, while preserving each manifest's original input pin.
 Report the amended orders as a separate runtime stratum rather than silently pooling them with orders 1–2.
 The remaining commands use `TMPDIR=/private/var/folders/55/6jqr25v5211fn00wych8b1jm0000gn/T/ssr-coverage-isolation-01 skill-validation/runner/.venv/bin/skilltest run CONFIG`, substituting only the matching table entry.
@@ -229,6 +229,18 @@ Create and verify that namespace before invocation; `/private/tmp/ssr-coverage-b
 The first amended observation must be inspected and retained before the next order, as required by the existing stop rule.
 This amendment does not authorize replacing order 2 or adding a model qualification call.
 After round-10 review passed, the owner requested “ok, please proceed”. Resume orders 3–10 from the committed amendment; time remains tracked against the planning guideline so process cost remains visible.
+
+#### Runtime amendment: private-shell-1
+
+Order 3 completed correctly but its shell first encountered denied user Git configuration and a failed zsh heredoc; it recovered using explicit Git configuration and Python `-c`.
+The full trace shows denied access, not outside guidance, and complete task/Git evidence remains inspectable. Include it as valid with runtime friction, separately identified from later observations.
+No replacement is authorized. Collection paused for inspection after retention.
+The cause was omitted shell HOME and zsh's independent TMPPREFIX default, not a failed read boundary.
+The runner now explicitly sets shell HOME to its already-granted private scratch and TMPPREFIX to that directory's `zsh` prefix; no read/write grant expands.
+Installed-policy tests reproduce the old Git failure and verify Git commits and heredocs in both login and non-login shells after correction. Existing two-provider isolation probes remain green.
+The [resumption review](../../reviews/2026-09-21-ssr-resumption.md) records qualification and limits.
+Use the committed revision containing this correction as invocation authority for orders 4–10, retaining frozen inputs and the same schedule, model and criteria.
+This is necessary setup repair within the approved resumption, not another subject qualification or retry call.
 
 ### First collection: semantic-delivery-01
 
