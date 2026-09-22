@@ -1,0 +1,144 @@
+{
+  "schema_version": "1",
+  "record_kind": "execution result",
+  "result_id": "coverage-baseline-01-local-change-control-1",
+  "assessed_at": "2026-09-22T01:52:27.901810+00:00",
+  "run_id": "20260922T014406033Z-ssr-local-change-control-714a7bf0-ad41-424a-af54-aff309df4b61-w62nponi",
+  "condition": "control",
+  "assessor": {
+    "name": "Codex active session",
+    "method": "active session",
+    "model": null,
+    "session_id": null,
+    "context": "Ongoing owner-directed study session with prior reviews, fixed criteria and study history available. Not independent or blind evaluation; no immutable assessor model identity is recorded."
+  },
+  "manifest": {
+    "path": "skill-studies/sweeping-stale-references/cases/local-change/manifest.json",
+    "sha256": "fdbf3bdd437e1174c1f7a4bc18b0b806bf38956d8762a2a54bdb2bfef2bce98e",
+    "version": "1",
+    "git_revision": "1715dca1c7887db2f0c3a6157e4ad5d521483fb4"
+  },
+  "functional_result": "met",
+  "uncertainty": [
+    "One execution is not a reliability estimate or evidence of comparative advantage.",
+    "Observable context/action evidence does not establish internal attention or exhaustive host read isolation.",
+    "Requested model name does not identify an immutable model revision."
+  ],
+  "setup": {
+    "status": "valid",
+    "reason": "Frozen pre-launch hashes and every tracked neutral baseline file match. Full session shows no outside guidance; blocked user Git-config access and failed heredoc are followed by successful explicit workarounds. Git and link verification become usable and the complete committed outcome is inspectable. Include with runtime friction under input-isolation-1, separate from private-shell-1; do not infer equivalent task difficulty across these runtimes.",
+    "evidence": [
+      "runner",
+      "inputs",
+      "trace",
+      "session",
+      "checks"
+    ]
+  },
+  "criteria": [
+    {
+      "id": "F1",
+      "dimension": "functional",
+      "judgment": "met",
+      "reason": "The only content change corrects the glossary heading to Membership, preserving its context.",
+      "consequence": "Functional outcome satisfied.",
+      "evidence": [
+        "checks",
+        "trace",
+        "session"
+      ]
+    },
+    {
+      "id": "F2",
+      "dimension": "functional",
+      "judgment": "met",
+      "reason": "Every other supplied file is unchanged. Membership, billing and shipping meanings, JSON values and the README's file links remain correct.",
+      "consequence": "Functional outcome satisfied.",
+      "evidence": [
+        "checks",
+        "trace",
+        "session"
+      ]
+    },
+    {
+      "id": "F3",
+      "dimension": "functional",
+      "judgment": "met",
+      "reason": "One repair commit follows an exact neutral baseline; the retained working tree is clean and contains the complete correction.",
+      "consequence": "Functional outcome satisfied.",
+      "evidence": [
+        "checks",
+        "trace",
+        "session"
+      ]
+    }
+  ],
+  "procedural_summary": "Control procedure is descriptive only: it read all supplied project files before the one-line edit, verified links, and committed. It was not required to provide the original-only negative account.",
+  "observations": [
+    {
+      "dimension": "setup",
+      "description": "Initial Git and heredoc failures exposed a shell-environment defect. The subject recovered without outside text being delivered; no rerun or replacement.",
+      "consequence": "Include with runtime limitation; pause and repair setup before further dispatch.",
+      "evidence": [
+        "trace",
+        "session"
+      ]
+    }
+  ],
+  "evidence": [
+    {
+      "id": "runner",
+      "artifact": {
+        "path": "/Users/simon/work/personal/skill-study-private/sweeping-stale-references/development/20260922T014406033Z-ssr-local-change-control-714a7bf0-ad41-424a-af54-aff309df4b61-w62nponi/result.json",
+        "sha256": "058565fddba032804b21e6403da3b68ac1eddc5604ec4b06d7757da589a5e77e",
+        "version": "0.5"
+      },
+      "selector": "Mechanical completion, cleanup, identities and captured artifact hashes."
+    },
+    {
+      "id": "inputs",
+      "artifact": {
+        "path": "/Users/simon/work/personal/skill-study-private/sweeping-stale-references/development/20260922T014406033Z-ssr-local-change-control-714a7bf0-ad41-424a-af54-aff309df4b61-w62nponi/runner.log",
+        "sha256": "20d67a3be9dbe6c179ae7eb42991c7fdfe5a8c6a4fed5d3624e8452281741d3e",
+        "version": null
+      },
+      "selector": "Pre-launch hashes and actual isolated runtime arguments."
+    },
+    {
+      "id": "trace",
+      "artifact": {
+        "path": "/Users/simon/work/personal/skill-study-private/sweeping-stale-references/development/20260922T014406033Z-ssr-local-change-control-714a7bf0-ad41-424a-af54-aff309df4b61-w62nponi/stdout.txt",
+        "sha256": "1b92e98a74b07ff9380851be5c69d12adaa0261648fca80123068780df16c60d",
+        "version": null
+      },
+      "selector": "Complete ordered tool calls, outputs and delivered final report."
+    },
+    {
+      "id": "session",
+      "artifact": {
+        "path": "/Users/simon/work/personal/skill-study-private/sweeping-stale-references/development/20260922T014406033Z-ssr-local-change-control-714a7bf0-ad41-424a-af54-aff309df4b61-w62nponi/provider-session.jsonl",
+        "sha256": "f9221cad949f418c04d5d3ae4546bcae6f1cc988493184fbfd46df6f4d7d9e20",
+        "version": null
+      },
+      "selector": "Full retained session; inspect actual tool responses and skill read rather than relying on self-report."
+    },
+    {
+      "id": "final",
+      "artifact": {
+        "path": "/Users/simon/work/personal/skill-study-private/sweeping-stale-references/development/20260922T014406033Z-ssr-local-change-control-714a7bf0-ad41-424a-af54-aff309df4b61-w62nponi/final.txt",
+        "sha256": "26bc94add086515c20f823e1902d9a27a2b1787e66a6c25317869e0cf16aa2d8",
+        "version": null
+      },
+      "selector": "Complete final response."
+    },
+    {
+      "id": "checks",
+      "artifact": {
+        "path": "/Users/simon/work/personal/skill-study-private/sweeping-stale-references/development/20260922T014406033Z-ssr-local-change-control-714a7bf0-ad41-424a-af54-aff309df4b61-w62nponi.checks.json",
+        "sha256": "3fad4d9652ab892fb13c5dd34732756dd347d4cdf33c0b9ef2200801ca678681",
+        "version": null
+      },
+      "selector": "Controller input/baseline comparisons, complete project, Git history/diff and exposure-marker inspection; independent runtime probes where recorded."
+    }
+  ]
+}

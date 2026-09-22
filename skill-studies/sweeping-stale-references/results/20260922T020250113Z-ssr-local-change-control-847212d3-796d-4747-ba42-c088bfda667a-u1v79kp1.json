@@ -1,0 +1,144 @@
+{
+  "schema_version": "1",
+  "record_kind": "execution result",
+  "result_id": "coverage-baseline-01-local-change-control-2",
+  "assessed_at": "2026-09-22T02:04:47.456836+00:00",
+  "run_id": "20260922T020250113Z-ssr-local-change-control-847212d3-796d-4747-ba42-c088bfda667a-u1v79kp1",
+  "condition": "control",
+  "assessor": {
+    "name": "Codex active session",
+    "method": "active session",
+    "model": null,
+    "session_id": null,
+    "context": "Ongoing owner-directed study session with prior reviews, fixed criteria and study history available. Not independent or blind evaluation; no immutable assessor model identity is recorded."
+  },
+  "manifest": {
+    "path": "skill-studies/sweeping-stale-references/cases/local-change/manifest.json",
+    "sha256": "fdbf3bdd437e1174c1f7a4bc18b0b806bf38956d8762a2a54bdb2bfef2bce98e",
+    "version": "1",
+    "git_revision": "780e8ae1e8491a4bba30b39c7ab80bafcf397d14"
+  },
+  "functional_result": "met",
+  "uncertainty": [
+    "One execution is not a reliability estimate or evidence of comparative advantage.",
+    "Observable context/action evidence does not establish internal attention or exhaustive host read isolation.",
+    "Requested model name does not identify an immutable model revision."
+  ],
+  "setup": {
+    "status": "valid",
+    "reason": "Frozen pre-launch hashes and exact neutral baseline match. Full control session shows its attempted parent-directory AGENTS search was denied; it then inspected only the fixture and completed normally. No outside guidance was delivered or targeted exposure marker found under private-shell-1.",
+    "evidence": [
+      "runner",
+      "inputs",
+      "trace",
+      "session",
+      "checks"
+    ]
+  },
+  "criteria": [
+    {
+      "id": "F1",
+      "dimension": "functional",
+      "judgment": "met",
+      "reason": "The only content change corrects the glossary heading to Membership, preserving its context.",
+      "consequence": "Functional outcome satisfied.",
+      "evidence": [
+        "checks",
+        "trace",
+        "session"
+      ]
+    },
+    {
+      "id": "F2",
+      "dimension": "functional",
+      "judgment": "met",
+      "reason": "Every other supplied file is unchanged. Membership, billing and shipping meanings, JSON values and the README's file links remain correct.",
+      "consequence": "Functional outcome satisfied.",
+      "evidence": [
+        "checks",
+        "trace",
+        "session"
+      ]
+    },
+    {
+      "id": "F3",
+      "dimension": "functional",
+      "judgment": "met",
+      "reason": "One repair commit follows an exact neutral baseline; the retained working tree is clean and contains the complete correction.",
+      "consequence": "Functional outcome satisfied.",
+      "evidence": [
+        "checks",
+        "trace",
+        "session"
+      ]
+    }
+  ],
+  "procedural_summary": "Control procedure is descriptive only: it read all supplied project files, corrected one line, verified the diff and glossary link, and committed. No original-only negative account was required.",
+  "observations": [
+    {
+      "dimension": "setup",
+      "description": "The parent-directory find command was denied; the subject reran discovery within the supplied fixture.",
+      "consequence": "Expected boundary enforcement; no observed contamination or task blockage.",
+      "evidence": [
+        "trace",
+        "session"
+      ]
+    }
+  ],
+  "evidence": [
+    {
+      "id": "runner",
+      "artifact": {
+        "path": "/Users/simon/work/personal/skill-study-private/sweeping-stale-references/development/20260922T020250113Z-ssr-local-change-control-847212d3-796d-4747-ba42-c088bfda667a-u1v79kp1/result.json",
+        "sha256": "ba655a98a4c8611e63599a085caafeaa33392b6179809ac046a8ee0abebccebd",
+        "version": "0.5"
+      },
+      "selector": "Mechanical completion, cleanup, identities and captured artifact hashes."
+    },
+    {
+      "id": "inputs",
+      "artifact": {
+        "path": "/Users/simon/work/personal/skill-study-private/sweeping-stale-references/development/20260922T020250113Z-ssr-local-change-control-847212d3-796d-4747-ba42-c088bfda667a-u1v79kp1/runner.log",
+        "sha256": "9d319e86c91b70bf9d221bcb0ffaa6bd87f6102e7464e711fdb87d8ca895897b",
+        "version": null
+      },
+      "selector": "Pre-launch hashes and actual isolated runtime arguments."
+    },
+    {
+      "id": "trace",
+      "artifact": {
+        "path": "/Users/simon/work/personal/skill-study-private/sweeping-stale-references/development/20260922T020250113Z-ssr-local-change-control-847212d3-796d-4747-ba42-c088bfda667a-u1v79kp1/stdout.txt",
+        "sha256": "c6045bfff96615f8038a8ec0b81ba727ea3710d87c09186ccf1e8a499df104bd",
+        "version": null
+      },
+      "selector": "Complete ordered tool calls, outputs and delivered final report."
+    },
+    {
+      "id": "session",
+      "artifact": {
+        "path": "/Users/simon/work/personal/skill-study-private/sweeping-stale-references/development/20260922T020250113Z-ssr-local-change-control-847212d3-796d-4747-ba42-c088bfda667a-u1v79kp1/provider-session.jsonl",
+        "sha256": "c148953eba42df5f8160354ddc0d6ef76418d45adbd006008c2882fd253247d5",
+        "version": null
+      },
+      "selector": "Full retained session; inspect actual tool responses and skill read rather than relying on self-report."
+    },
+    {
+      "id": "final",
+      "artifact": {
+        "path": "/Users/simon/work/personal/skill-study-private/sweeping-stale-references/development/20260922T020250113Z-ssr-local-change-control-847212d3-796d-4747-ba42-c088bfda667a-u1v79kp1/final.txt",
+        "sha256": "8cf1c3f950fc54723339b28ed90794fe73cec54a3c78bbbfd8dab68de862965a",
+        "version": null
+      },
+      "selector": "Complete final response."
+    },
+    {
+      "id": "checks",
+      "artifact": {
+        "path": "/Users/simon/work/personal/skill-study-private/sweeping-stale-references/development/20260922T020250113Z-ssr-local-change-control-847212d3-796d-4747-ba42-c088bfda667a-u1v79kp1.checks.json",
+        "sha256": "15e8358774c24abcd3f19767fc4370be2c0a4e8f49f0beef797182cff01dbb9c",
+        "version": null
+      },
+      "selector": "Controller input/baseline comparisons, complete project, Git history/diff and exposure-marker inspection; independent runtime probes where recorded."
+    }
+  ]
+}

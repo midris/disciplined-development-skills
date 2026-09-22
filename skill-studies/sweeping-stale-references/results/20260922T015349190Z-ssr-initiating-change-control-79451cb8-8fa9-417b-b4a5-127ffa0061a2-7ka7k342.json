@@ -1,0 +1,134 @@
+{
+  "schema_version": "1",
+  "record_kind": "execution result",
+  "result_id": "coverage-baseline-01-initiating-change-control-2",
+  "assessed_at": "2026-09-22T01:56:45.193371+00:00",
+  "run_id": "20260922T015349190Z-ssr-initiating-change-control-79451cb8-8fa9-417b-b4a5-127ffa0061a2-7ka7k342",
+  "condition": "control",
+  "assessor": {
+    "name": "Codex active session",
+    "method": "active session",
+    "model": null,
+    "session_id": null,
+    "context": "Ongoing owner-directed study session with prior reviews, fixed criteria and study history available. Not independent or blind evaluation; no immutable assessor model identity is recorded."
+  },
+  "manifest": {
+    "path": "skill-studies/sweeping-stale-references/cases/initiating-change/manifest.json",
+    "sha256": "62e7d60cd41154f5fe4f6401f2bb68ae0bf13d85a4cb734570610b15c8988493",
+    "version": "1",
+    "git_revision": "780e8ae1e8491a4bba30b39c7ab80bafcf397d14"
+  },
+  "functional_result": "met",
+  "uncertainty": [
+    "One execution is not a reliability estimate or evidence of comparative advantage.",
+    "Observable context/action evidence does not establish internal attention or exhaustive host read isolation.",
+    "Requested model name does not identify an immutable model revision."
+  ],
+  "setup": {
+    "status": "valid",
+    "reason": "Frozen prompt/configuration and pre-launch hashes match; every tracked neutral baseline file matches its source. Full control session shows only declared project inputs, successful tools and no outside study guidance under private-shell-1. Targeted exposure markers are absent.",
+    "evidence": [
+      "runner",
+      "inputs",
+      "trace",
+      "session",
+      "checks"
+    ]
+  },
+  "criteria": [
+    {
+      "id": "F1",
+      "dimension": "functional",
+      "judgment": "met",
+      "reason": "Code, defaults, CLI, tests and current explanations consistently use session_ttl_minutes/session TTL. Independent replay passes all three unit tests, default/custom expiry probes, and CLI execution from the project and an external directory.",
+      "consequence": "Functional outcome satisfied.",
+      "evidence": [
+        "checks",
+        "trace",
+        "session"
+      ]
+    },
+    {
+      "id": "F2",
+      "dimension": "functional",
+      "judgment": "met",
+      "reason": "Partner-imposed limit and accepted refresh cost remain intact; values, units and rejection of zero/negative durations are preserved. Archive and vendor files are byte-unchanged.",
+      "consequence": "Functional outcome satisfied.",
+      "evidence": [
+        "checks",
+        "trace",
+        "session"
+      ]
+    },
+    {
+      "id": "F3",
+      "dimension": "functional",
+      "judgment": "met",
+      "reason": "The complete repair is in one commit following an exact neutral baseline; the final working tree is clean.",
+      "consequence": "Functional outcome satisfied.",
+      "evidence": [
+        "checks",
+        "trace",
+        "session"
+      ]
+    }
+  ],
+  "procedural_summary": "Control procedure is descriptive: it searched literal and concept variants before editing, preserved archive/vendor matches, and committed the repair. It was not required to supply SSR accounting.",
+  "observations": [],
+  "evidence": [
+    {
+      "id": "runner",
+      "artifact": {
+        "path": "/Users/simon/work/personal/skill-study-private/sweeping-stale-references/development/20260922T015349190Z-ssr-initiating-change-control-79451cb8-8fa9-417b-b4a5-127ffa0061a2-7ka7k342/result.json",
+        "sha256": "731d6bbc8f91dc78f76c4c42389f7a9e1bfc04dfad503650f5a690d167dcbf55",
+        "version": "0.5"
+      },
+      "selector": "Mechanical completion, cleanup, identities and captured artifact hashes."
+    },
+    {
+      "id": "inputs",
+      "artifact": {
+        "path": "/Users/simon/work/personal/skill-study-private/sweeping-stale-references/development/20260922T015349190Z-ssr-initiating-change-control-79451cb8-8fa9-417b-b4a5-127ffa0061a2-7ka7k342/runner.log",
+        "sha256": "744c5aab207cd66183ba523f12f950de2a92636799b249ea193033a4eba5144e",
+        "version": null
+      },
+      "selector": "Pre-launch hashes and actual isolated runtime arguments."
+    },
+    {
+      "id": "trace",
+      "artifact": {
+        "path": "/Users/simon/work/personal/skill-study-private/sweeping-stale-references/development/20260922T015349190Z-ssr-initiating-change-control-79451cb8-8fa9-417b-b4a5-127ffa0061a2-7ka7k342/stdout.txt",
+        "sha256": "a3a2606c9f588c64de3cd65df065d81df6e0dca431e11d34e7caf8d3b988c0ae",
+        "version": null
+      },
+      "selector": "Complete ordered tool calls, outputs and delivered final report."
+    },
+    {
+      "id": "session",
+      "artifact": {
+        "path": "/Users/simon/work/personal/skill-study-private/sweeping-stale-references/development/20260922T015349190Z-ssr-initiating-change-control-79451cb8-8fa9-417b-b4a5-127ffa0061a2-7ka7k342/provider-session.jsonl",
+        "sha256": "bcf1db732a3c531574efa5593d8c257108f5db8d809d723896684515aeae18ee",
+        "version": null
+      },
+      "selector": "Full retained session; inspect actual tool responses and skill read rather than relying on self-report."
+    },
+    {
+      "id": "final",
+      "artifact": {
+        "path": "/Users/simon/work/personal/skill-study-private/sweeping-stale-references/development/20260922T015349190Z-ssr-initiating-change-control-79451cb8-8fa9-417b-b4a5-127ffa0061a2-7ka7k342/final.txt",
+        "sha256": "fb705a4d703d2ca72279864818058bd540eca8950b5ffb458a6957ce94032d79",
+        "version": null
+      },
+      "selector": "Complete final response."
+    },
+    {
+      "id": "checks",
+      "artifact": {
+        "path": "/Users/simon/work/personal/skill-study-private/sweeping-stale-references/development/20260922T015349190Z-ssr-initiating-change-control-79451cb8-8fa9-417b-b4a5-127ffa0061a2-7ka7k342.checks.json",
+        "sha256": "dc7fb4088b09b001654c595ab8f42acc4b8ca66dfab92ce682c17c030f96a63a",
+        "version": null
+      },
+      "selector": "Controller input/baseline comparisons, complete project, Git history/diff and exposure-marker inspection; independent runtime probes where recorded."
+    }
+  ]
+}

@@ -1,0 +1,110 @@
+{
+  "schema_version": "2",
+  "record_kind": "execution result",
+  "result_id": "coverage-baseline-01-large-sweep-account-original-1",
+  "assessed_at": "2026-09-22T02:06:45.231621+00:00",
+  "run_id": "20260922T020446278Z-ssr-large-sweep-account-original-6617d9de-206b-4e4c-b4b0-be8391645517-zq4yl2iz",
+  "condition": "original",
+  "assessor": {
+    "name": "Codex active session",
+    "method": "active session",
+    "model": null,
+    "session_id": null,
+    "context": "Ongoing owner-directed study session with prior reviews, fixed criteria and study history available. Not independent or blind evaluation; no immutable assessor model identity is recorded."
+  },
+  "manifest": {
+    "path": "skill-studies/sweeping-stale-references/cases/large-sweep-account/manifest.json",
+    "sha256": "c29415c3fc56f965b3b79121fb401ae07fdb70b06c7359bf57ac17ec50df690e",
+    "version": "1",
+    "git_revision": "780e8ae1e8491a4bba30b39c7ab80bafcf397d14"
+  },
+  "functional_result": "not measured",
+  "uncertainty": [
+    "One execution is not a reliability estimate or evidence of comparative advantage.",
+    "Observable context/action evidence does not establish internal attention or exhaustive host read isolation.",
+    "Requested model name does not identify an immutable model revision."
+  ],
+  "setup": {
+    "status": "valid",
+    "reason": "Frozen input and prompt hashes match; the complete skill appears in the actual tool response at session line 16 before report creation. Inventory, task and skill remain byte-unchanged. Complete trace shows only supplied inputs and report work, with no outside guidance observed; the report is retained and inspectable. No Git commit is required by this diagnostic.",
+    "evidence": [
+      "runner",
+      "inputs",
+      "trace",
+      "session",
+      "checks"
+    ]
+  },
+  "criteria": [
+    {
+      "id": "P3",
+      "dimension": "procedural",
+      "judgment": "met",
+      "reason": "REPORT.md preserves all eleven path/outcome groups, every inclusive location range and count, and the two separate dispositions in docs/cache.md. Its 80 updates, 40 historical and 6 false positives reconcile to 126 across ten unique paths. Verification attributes these facts to the supplied inventory and claims no performed project repairs or tests; the observed report readback is not project verification.",
+      "consequence": "Procedure satisfied.",
+      "evidence": [
+        "checks",
+        "trace",
+        "session"
+      ]
+    }
+  ],
+  "procedural_summary": "Traceable grouping, internally consistent arithmetic and truthful project-verification scope all met. Functional outcome is not measured by this accounting-only diagnostic.",
+  "observations": [],
+  "evidence": [
+    {
+      "id": "runner",
+      "artifact": {
+        "path": "/Users/simon/work/personal/skill-study-private/sweeping-stale-references/development/20260922T020446278Z-ssr-large-sweep-account-original-6617d9de-206b-4e4c-b4b0-be8391645517-zq4yl2iz/result.json",
+        "sha256": "2ed0cc96584a3c0089ebb790fedf53fe22c65bc3122d97d253c287872b7280b1",
+        "version": "0.5"
+      },
+      "selector": "Mechanical completion, cleanup, identities and captured artifact hashes."
+    },
+    {
+      "id": "inputs",
+      "artifact": {
+        "path": "/Users/simon/work/personal/skill-study-private/sweeping-stale-references/development/20260922T020446278Z-ssr-large-sweep-account-original-6617d9de-206b-4e4c-b4b0-be8391645517-zq4yl2iz/runner.log",
+        "sha256": "602a992d0bed3989b07d428b348fdf98708621991595778bac5aecd268d89d95",
+        "version": null
+      },
+      "selector": "Pre-launch hashes and actual isolated runtime arguments."
+    },
+    {
+      "id": "trace",
+      "artifact": {
+        "path": "/Users/simon/work/personal/skill-study-private/sweeping-stale-references/development/20260922T020446278Z-ssr-large-sweep-account-original-6617d9de-206b-4e4c-b4b0-be8391645517-zq4yl2iz/stdout.txt",
+        "sha256": "6960b7f7fc0a927e6517153d9c6306ef2062272d6e9c2fd6fa6e792e2cf3de04",
+        "version": null
+      },
+      "selector": "Complete ordered tool calls, outputs and delivered final report."
+    },
+    {
+      "id": "session",
+      "artifact": {
+        "path": "/Users/simon/work/personal/skill-study-private/sweeping-stale-references/development/20260922T020446278Z-ssr-large-sweep-account-original-6617d9de-206b-4e4c-b4b0-be8391645517-zq4yl2iz/provider-session.jsonl",
+        "sha256": "f8683a31a7650f73beab1dccc6540c0d550692ad0d28ce631fd34c81884bf3e5",
+        "version": null
+      },
+      "selector": "Full retained session; inspect actual tool responses and skill read rather than relying on self-report."
+    },
+    {
+      "id": "final",
+      "artifact": {
+        "path": "/Users/simon/work/personal/skill-study-private/sweeping-stale-references/development/20260922T020446278Z-ssr-large-sweep-account-original-6617d9de-206b-4e4c-b4b0-be8391645517-zq4yl2iz/final.txt",
+        "sha256": "ce60082f0dbd02d34b62dd5163732ec752e43821c4fd55f7ca8689f86f5a6deb",
+        "version": null
+      },
+      "selector": "Complete final response."
+    },
+    {
+      "id": "checks",
+      "artifact": {
+        "path": "/Users/simon/work/personal/skill-study-private/sweeping-stale-references/development/20260922T020446278Z-ssr-large-sweep-account-original-6617d9de-206b-4e4c-b4b0-be8391645517-zq4yl2iz.checks.json",
+        "sha256": "890e4646e59117e8243c37045b1ca0ca145b6ef87b81f901684431aaa66fa70d",
+        "version": null
+      },
+      "selector": "Controller input/baseline comparisons, complete project, Git history/diff and exposure-marker inspection; independent runtime probes where recorded."
+    }
+  ]
+}
