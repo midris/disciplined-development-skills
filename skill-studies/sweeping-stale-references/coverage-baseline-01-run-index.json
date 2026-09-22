@@ -47,9 +47,9 @@
         "result_id": "coverage-baseline-01-initiating-change-original-1",
         "record": {
           "path": "skill-studies/sweeping-stale-references/results/20260921T210825089Z-ssr-initiating-change-original-ae5bac03-eb81-47f6-919b-b55ea5701e8e-_8ia6w1p.json",
-          "sha256": "ac372f8ff5f4dc05c26dfd658429a09bb5b5e74fed7a13903683816050879f4d",
+          "sha256": "9ebbb1342f4bb0b8be52a8c481388d184ba0bc56f6620e8e8a4c67b4b94eae02",
           "version": "1",
-          "git_revision": "874935b610998442b250f3bfe01072e86fcbbb6a"
+          "git_revision": "6d9e71b0019b48c1b20685bcfb2c77eb9bf2728d"
         }
       }
     },
