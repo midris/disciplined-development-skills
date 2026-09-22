@@ -1,5 +1,7 @@
 # SSR expansion checkpoint review
 
+Follow-up: [input-isolation-1 qualification and review](2026-09-21-runner-input-isolation.md) resolves the runtime finding for future attempts. The verdict below records the original stopped checkpoint; the excluded attempt remains excluded.
+
 Scope: owner-authorized ten-call expansion from `ab220cf`, frozen inputs, two retained attempts, result records, partial assessment, accounting and resumption instructions.
 Method: active-session review against the framework spec, current plan, frozen SSR policy 3, case criteria and full retained output/trace/artifact evidence; not independent review.
 

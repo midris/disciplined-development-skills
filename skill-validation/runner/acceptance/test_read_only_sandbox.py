@@ -24,7 +24,7 @@ def test_read_only_sandbox_denies_mutations_and_returns_output(provider, monkeyp
         pytest.skip('set SKILLTEST_SANDBOX_EVIDENCE_DIR on macOS for retained qualification')
     executable = shutil.which(provider)
     assert executable, f'{provider} must be installed'
-    root = Path(tempfile.mkdtemp(prefix=f'{provider}-read-only-', dir=destination)).resolve()
+    root = Path(tempfile.mkdtemp(prefix=f'{provider}-read-only-', dir=tempfile.gettempdir())).resolve()
     fixture, evidence = root/'workspace/fixture', root/'workspace/evidence'
     for path in (fixture, evidence, root/'home', root/'profile', root/'tmp'):
         path.mkdir(parents=True)
@@ -39,7 +39,7 @@ def test_read_only_sandbox_denies_mutations_and_returns_output(provider, monkeyp
     request = ProviderRequest(fixture.parent, b'unused', root/'final.txt', provider,
                               'gpt-5.6-sol' if provider == 'codex' else 'sonnet', 'low',
                               permissions='read-only')
-    argv = _arguments(request, executable=executable)
+    argv = _arguments(request, executable=executable, scratch_dir=root/"tmp", shell_path=env["PATH"])
     (root/'provider-arguments.json').write_text(json.dumps(argv, indent=2)+'\n')
     runtime = None
     if provider == 'codex':
@@ -62,12 +62,12 @@ def test_read_only_sandbox_denies_mutations_and_returns_output(provider, monkeyp
         command = runtime.prefix.copy()
         env = runtime.environment | {'PYTHONDONTWRITEBYTECODE': '1'}
         (root/'policy.sb').write_bytes(Path(runtime.prefix[2]).read_bytes())
-    probe = root/'probe.py'
+    probe = fixture/'probe.py'
     probe.write_text(r'''
 import errno, json, subprocess, sys
 from pathlib import Path
 fixture, evidence, outside = map(Path, sys.argv[1:4])
-for path in [fixture/'input.txt', evidence/'trace.txt', outside]:
+for path in [fixture/'input.txt', evidence/'trace.txt']:
     assert path.read_text() == 'original\n'
 denied = []
 def must_deny(label, action):
@@ -78,6 +78,7 @@ def must_deny(label, action):
         denied.append(label)
     else:
         raise AssertionError('write permitted: ' + label)
+must_deny('outside read', lambda: outside.read_text())
 for path in [fixture/'input.txt', evidence/'trace.txt', outside, fixture/'alias']:
     must_deny(str(path)+' overwrite', lambda p=path: p.write_text('changed'))
     must_deny(str(path)+' delete', lambda p=path: p.unlink())
@@ -96,9 +97,8 @@ for args in [('add','input.txt'), ('config','test.write','forbidden')]:
     denied.append('git ' + args[0])
 print(json.dumps({'status':'PASS', 'denied':denied, 'assessment':'read evidence successfully'}))
 ''')
-    command.extend([sys.executable, str(probe), str(fixture), str(evidence), str(root/'outside.txt')])
-    if runtime:
-        command.append(runtime.environment['TMPDIR'])
+    command.extend([str(Path(shutil.which("python3")).resolve()), str(probe), str(fixture), str(evidence), str(root/'outside.txt')])
+    command.append(env['TMPDIR'])
     (root/'sandbox-command.json').write_text(json.dumps(command, indent=2)+'\n')
     try:
         result = subprocess.run(command, cwd=fixture, env=env, capture_output=True, text=True, timeout=60)
@@ -114,4 +114,5 @@ print(json.dumps({'status':'PASS', 'denied':denied, 'assessment':'read evidence 
     finally:
         if runtime:
             assert runtime.cleanup() is None
-    print(f'Retained read-only qualification: {root}')
+    shutil.copytree(root, Path(destination)/root.name, symlinks=True)
+    print(f'Retained read-only qualification: {Path(destination)/root.name}')

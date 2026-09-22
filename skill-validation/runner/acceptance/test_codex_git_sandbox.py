@@ -25,7 +25,7 @@ def test_fixture_git_commit_preserves_protected_paths_and_network():
         pytest.skip("this installed sandbox qualification targets macOS")
     executable = shutil.which("codex")
     assert executable, "Codex must be installed"
-    root = Path(tempfile.mkdtemp(prefix="codex-git-", dir=destination)).resolve()
+    root = Path(tempfile.mkdtemp(prefix="codex-git-", dir=tempfile.gettempdir())).resolve()
     fixture, evidence = root / "workspace/fixture", root / "workspace/evidence"
     for path in (fixture, evidence, root / "home", root / "profile", root / "tmp"):
         path.mkdir(parents=True)
@@ -51,7 +51,7 @@ def test_fixture_git_commit_preserves_protected_paths_and_network():
     subprocess.run(["/usr/bin/git", "init", "--quiet", "--template=", str(fixture)],
                    env=environment, check=True, capture_output=True, timeout=30)
     request = ProviderRequest(fixture.parent, b"unused", root / "final.txt", "codex", "gpt-5.6-sol", "medium")
-    arguments = _arguments(request, executable=executable)
+    arguments = _arguments(request, executable=executable, scratch_dir=root/"tmp", shell_path=environment["PATH"])
     overrides = [arguments[i+1] for i, arg in enumerate(arguments) if arg == "-c"]
     config = tomllib.loads("\n".join(overrides))
     (root / "provider-arguments.json").write_text(json.dumps(arguments, indent=2) + "\n")
@@ -113,7 +113,7 @@ finally:
     (evidence / "operations.json").write_text(json.dumps(operations, indent=2) + "\n")
 '''
     (root / "probe.py").write_text(inner)
-    command.extend(["--", sys.executable, str(root / "probe.py"), str(evidence)])
+    command.extend(["--", str(Path(shutil.which("python3")).resolve()), "-c", inner, str(evidence)])
     (root / "sandbox-command.json").write_text(json.dumps(command, indent=2) + "\n")
     result = subprocess.run(command, cwd=fixture, env=environment, capture_output=True, text=True, timeout=60)
     (root / "stdout.txt").write_text(result.stdout)
@@ -127,4 +127,5 @@ finally:
     assert all(path.read_text() == "protected\n" for path in protected)
     assert (evidence / "probe.txt").read_text() == "evidence write\n"
     assert not (root / "profile/auth.json").exists()
-    print(f"Retained sandbox qualification: {root}")
+    shutil.copytree(root, Path(destination)/root.name, symlinks=True)
+    print(f"Retained sandbox qualification: {Path(destination)/root.name}")

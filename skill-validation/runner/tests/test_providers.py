@@ -20,7 +20,7 @@ def boundaries(monkeypatch):
     runtime = Mock(spec=providers.CodexRuntime)
     runtime.executable = "/stub/bin/codex"
     runtime.environment = {"HOME": "/private/home", "CODEX_HOME": "/private/codex",
-                           "TMPDIR": "/private/tmp", "PATH": "/stub/bin:/usr/bin:/bin:/usr/sbin:/sbin"}
+                           "TMPDIR": "/private/runtime/tmp", "PATH": "/stub/bin:/usr/bin:/bin:/usr/sbin:/sbin"}
     runtime.prefix = []
     runtime.retain_session.return_value = None
     runtime.cleanup.return_value = None
@@ -64,7 +64,7 @@ def test_codex_invokes_fixed_command_environment_and_deadline(tmp_path, boundari
         "-c",
         'shell_environment_policy.inherit="none"',
         "-c",
-        'shell_environment_policy.set={PATH="/stub/bin:/usr/bin:/bin:/usr/sbin:/sbin"}',
+        'shell_environment_policy.set={PATH="/stub/bin:/usr/bin:/bin:/usr/sbin:/sbin",TMPDIR="/private/runtime/tmp"}',
         "-c",
         'cli_auth_credentials_store="file"',
         "-c",
@@ -199,9 +199,14 @@ def test_codex_grants_only_fixture_git_with_workspace_protections(tmp_path, work
     assert "--sandbox" not in arguments
     assert config["default_permissions"] == "skilltest"
     assert config["permissions"] == {"skilltest": {
-        "extends": ":workspace",
         "filesystem": {
+            ":root": "deny", ":minimal": "read", "/opt/homebrew": "read",
+            ":slash_tmp": "deny",
+            "/tmp/**": "deny", "/private/tmp/**": "deny",
+            "/var/tmp/**": "deny", "/private/var/tmp/**": "deny",
             ":workspace_roots": {".git": "read", ".codex": "read", ".agents": "read"},
+            str(workspace / "fixture"): "write",
+            str(workspace / "evidence"): "write",
             str(workspace / "fixture/.git"): "write",
         },
         "workspace_roots": {str(workspace / "evidence"): True},
@@ -220,9 +225,12 @@ def test_codex_read_only_launch_has_no_workspace_write_grants(tmp_path):
     argv = providers._arguments(request)
     config = tomllib.loads('\n'.join(argv[i+1] for i, a in enumerate(argv) if a == '-c'))
     policy = config['permissions']['skilltest']
-    assert policy['extends'] == ':read-only'
+    assert 'extends' not in policy
     assert policy['network']['enabled'] is False
-    assert 'filesystem' not in policy
+    assert policy['filesystem'][str(request.workspace_dir/'fixture')] == 'read'
+    assert policy['filesystem'][str(request.workspace_dir/'evidence')] == 'read'
+    assert 'write' not in policy['filesystem'].values()
+    assert policy['filesystem'][':root'] == 'deny'
     assert 'workspace_roots' not in policy
     assert 'approval_policy="never"' in argv
 
@@ -257,4 +265,19 @@ def test_codex_shells_receive_only_the_controlled_runtime_path(tmp_path, boundar
                  for i, value in enumerate(argv[:-1])
                  if value == '-c' and argv[i + 1].startswith('shell_environment_policy.')]
     merged = {key: value for override in overrides for key, value in override.items()}
-    assert merged == {'inherit': 'none', 'set': {'PATH': runtime.environment['PATH']}}
+    assert merged == {'inherit': 'none', 'set': {'PATH': runtime.environment['PATH'], 'TMPDIR': runtime.environment['TMPDIR']}}
+
+@pytest.mark.parametrize('location', ['/tmp/case', '/private/tmp/case', '/var/tmp/case', '/private/var/tmp/case'])
+@pytest.mark.parametrize('target', ['workspace', 'scratch'])
+def test_codex_rejects_shared_temp_roots_before_invocation(tmp_path, location, target):
+    # Explicit deny patterns also deny declared inputs there; fail before spending a call.
+    from pathlib import Path
+    from dataclasses import replace
+    request = request_at(tmp_path)
+    scratch = tmp_path / 'private-scratch'
+    if target == 'workspace':
+        request = replace(request, workspace_dir=Path(location))
+    else:
+        scratch = Path(location)
+    with pytest.raises(PreparationError, match='outside shared temporary'):
+        providers._arguments(request, scratch_dir=scratch)

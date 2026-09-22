@@ -56,6 +56,7 @@ def invoke_provider(request: ProviderRequest, *, log: Callable[[str], None] = la
             arguments = runtime.prefix + _arguments(
                 request, executable=runtime.executable,
                 shell_path=runtime.environment["PATH"] if request.provider == "codex" else None,
+                scratch_dir=Path(runtime.environment["TMPDIR"]) if request.provider == "codex" else None,
             )
             log(f"provider arguments: {arguments!r}")
             log("provider invocation attempted")
@@ -92,23 +93,43 @@ def invoke_provider(request: ProviderRequest, *, log: Callable[[str], None] = la
     return replace(result, cleanup_error=cleanup_error)
 
 
-def _arguments(request: ProviderRequest, *, executable: str = "codex", shell_path: str | None = None) -> list[str]:
+def _arguments(request: ProviderRequest, *, executable: str = "codex", shell_path: str | None = None, scratch_dir: Path | None = None) -> list[str]:
     if request.permissions not in {"workspace-write", "read-only"}:
         raise ValueError(f"unsupported permissions: {request.permissions}")
     if request.provider == "codex":
-        # Explicitly retain protected directories: on qualified Codex 0.154.0,
-        # extending :workspace alone does not preserve its dynamic exclusions.
-        # Encode paths inside one TOML table: dotted CLI keys split periods in paths.
+        # 0.154.0's :minimal process defaults reopen shared temp trees. Deny
+        # globs override those defaults, so declared roots must live elsewhere.
+        for path in [request.workspace_dir / "fixture", request.workspace_dir / "evidence",
+                     *([scratch_dir] if scratch_dir is not None else [])]:
+            if any(path.resolve().is_relative_to(Path(root).resolve())
+                   for root in ("/tmp", "/private/tmp", "/var/tmp", "/private/var/tmp")):
+                raise PreparationError("Codex inputs and scratch must be outside shared temporary directories")
+        # Deny inherited host reads, then grant declared inputs and runtime tools.
+        # Temporary ancestors contain other runs; only this invocation's scratch
+        # is reopened. Explicit protections retain the qualified 0.154.0 behavior.
+        filesystem = [
+            '":root"="deny"', '":minimal"="read"',
+            '"/opt/homebrew"="read"',
+            '":slash_tmp"="deny"',
+            '"/tmp/**"="deny"', '"/private/tmp/**"="deny"',
+            '"/var/tmp/**"="deny"', '"/private/var/tmp/**"="deny"',
+            '":workspace_roots"={".git"="read",".codex"="read",".agents"="read"}',
+        ]
+        write = request.permissions == "workspace-write"
+        evidence = json.dumps(str(request.workspace_dir / "evidence"))
+        access = json.dumps("write" if write else "read")
+        filesystem += [f'{json.dumps(str(request.workspace_dir / "fixture"))}={access}',
+                       f'{evidence}={access}']
+        if write:
+            filesystem.append(f'{json.dumps(str(request.workspace_dir / "fixture/.git"))}="write"')
+        if scratch_dir is not None:
+            filesystem.append(f'{json.dumps(str(scratch_dir))}="write"')
         policy = (
-            'permissions.skilltest={extends=":workspace",'
-            'filesystem={":workspace_roots"={".git"="read",".codex"="read",".agents"="read"},'
-            f'{json.dumps(str(request.workspace_dir / "fixture/.git"))}="write"}},'
-            f'workspace_roots={{{json.dumps(str(request.workspace_dir / "evidence"))}=true}},'
-            'network={enabled=false}}'
+            'permissions.skilltest={'
+            f'filesystem={{{",".join(filesystem)}}},'
+            + (f'workspace_roots={{{evidence}=true}},' if write else '')
+            + 'network={enabled=false}}'
         )
-        if request.permissions == "read-only":
-            # No fixture Git exception or additional writable evidence root.
-            policy = 'permissions.skilltest={extends=":read-only",network={enabled=false}}'
         return [
             executable, "--cd", str(request.workspace_dir / "fixture"), "exec",
             "--skip-git-repo-check", "--json",
@@ -117,7 +138,8 @@ def _arguments(request: ProviderRequest, *, executable: str = "codex", shell_pat
             "-c", 'default_permissions="skilltest"', "-c", policy,
             "--strict-config", "--ignore-user-config", "--ignore-rules", "-c", 'shell_environment_policy.inherit="none"',
             # Forward only the prepared executable path; inherit=none also strips PATH.
-            *(["-c", f'shell_environment_policy.set={{PATH={json.dumps(shell_path)}}}'] if shell_path is not None else []),
+            *(["-c", f'shell_environment_policy.set={{PATH={json.dumps(shell_path)}'
+                        + (f',TMPDIR={json.dumps(str(scratch_dir))}' if scratch_dir is not None else '') + '}'] if shell_path is not None else []),
             "-c", 'cli_auth_credentials_store="file"', "-c", 'approval_policy="never"',
             "--output-last-message", str(request.final_output_path), "-",
         ]

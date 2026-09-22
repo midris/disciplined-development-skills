@@ -1,0 +1,48 @@
+{
+  "status": "Seven installed-policy checks passed; zero model calls. Claude real subscription preflight passed separately; no authentication payload retained.",
+  "primary": "/Users/simon/work/personal/skill-study-private/sweeping-stale-references/development/input-isolation-01",
+  "inventory": "/Users/simon/work/personal/skill-study-private/sweeping-stale-references/development/input-isolation-01.inventory.json",
+  "inventory_sha256": "9a6a7699fd08d867ba398eff6e6d62e983cf7921ce512e13425dc4cae5ce1a88",
+  "red_runs": [
+    "codex-input-isolation-_nbgyxxy",
+    "codex-input-isolation-k1itx00c",
+    "claude-input-isolation-scphky0t",
+    "claude-input-isolation-480habsh"
+  ],
+  "passing_runs": [
+    "codex-input-isolation-3nanm_7l",
+    "claude-input-isolation-mi372zev",
+    "codex-input-isolation-11_sdaln",
+    "claude-input-isolation-4_7giqps",
+    "codex-read-only-z__oe8zu",
+    "claude-read-only-584_f_fg",
+    "codex-git-phmwmwfr"
+  ],
+  "providers": {
+    "codex": "0.154.0",
+    "claude": "2.1.278"
+  },
+  "sources": [
+    {
+      "path": "skill-validation/runner/src/skilltest/providers.py",
+      "sha256": "f6d4247a0e3f357d3d6e654eb9c18a356779ea1b59e374294b87854167804a75"
+    },
+    {
+      "path": "skill-validation/runner/src/skilltest/claude_runtime.py",
+      "sha256": "1ef2f76ffcfb298cbca7ed163787246e922596016e3c2dd2f348006825cb6cc0"
+    },
+    {
+      "path": "skill-validation/runner/acceptance/test_input_isolation.py",
+      "sha256": "c400a36a46181fa6290f6ac9d164a56059bdb3366732ab9f51639e06106f7888"
+    },
+    {
+      "path": "skill-validation/runner/acceptance/test_read_only_sandbox.py",
+      "sha256": "b66b7bffc400b0f63e94991cacaae5df9a1f7db3cb6bc07ba8ecad4df7ca3d8a"
+    },
+    {
+      "path": "skill-validation/runner/acceptance/test_codex_git_sandbox.py",
+      "sha256": "b3bb2dec9e666a3ab63485a0f0a209e6ded40a24e3a1b9611648bf74700ec043"
+    }
+  ],
+  "limits": "Local process enforcement checks, not a new model/tool round trip. Same-host retention, no new backup claim."
+}

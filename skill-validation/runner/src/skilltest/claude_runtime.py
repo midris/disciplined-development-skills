@@ -76,16 +76,37 @@ class ClaudeRuntime(ProcessRuntime):
             "CLAUDE_CODE_DEBUG_LOGS_DIR": str(self.root / "tmp/debug"),
         }
         policy = self.root / "policy.sb"
+        # Whole-process enforcement also covers native Read/Glob/Grep tools.
+        # Runtime binaries/libraries are the only broad read exceptions; host
+        # project files, controller records and sibling runs remain unreadable.
+        read_trees = [
+            fixture.resolve(), (fixture.parent / "evidence").resolve(), self.root / "tmp",
+            Path("/System"), Path("/usr"), Path("/bin"), Path("/sbin"),
+            Path("/opt/homebrew"), Path("/Library/Apple"), Path("/Library/Developer"),
+            Path("/private/etc"), Path("/dev"),
+            Path("/Applications/Xcode.app"),
+        ]
+        read_files = [
+            Path("/Library/Preferences/com.apple.dt.Xcode.plist"),
+            Path("/"),  # dyld opens the root directory during process startup.
+            Path(self.executable), Path(self.executable).resolve(),
+            home / ".claude.json", home / ".claude/.credentials.json",
+            home / "Library/Keychains/login.keychain-db",
+            home / ".CFUserTextEncoding",
+            Path(f"/private/var/db/mds/messages/{os.getuid()}/se_SecurityMessages"),
+        ]
+        write_trees = [self.root / "tmp"]
+        if self.permissions == "workspace-write":
+            write_trees += [fixture.resolve(), (fixture.parent / "evidence").resolve()]
         policy.write_text(
-            '(version 1)\n(allow default)\n'
-            + (
-                # Enforce on the whole process tree, including Bash and file tools.
-                # Only private CLI scratch and /dev/null remain writable; neither
-                # contains supplied evidence or the runner's authoritative bundle.
-                '(deny file-write*)\n'
-                + f'(allow file-write* (subpath {json.dumps(str(self.root / "tmp"))}) (literal "/dev/null"))\n'
-                if self.permissions == "read-only" else ''
-            )
+            '(version 1)\n(allow default)\n(deny file-read*)\n(deny file-write*)\n'
+            # Metadata supports path traversal/tool startup without file contents
+            # or directory enumeration (both require file-read-data).
+            + '(allow file-read-metadata)\n'
+            + ''.join(f'(allow file-read* (subpath {json.dumps(str(path))}))\n' for path in read_trees)
+            + ''.join(f'(allow file-read* (literal {json.dumps(str(path))}))\n' for path in read_files)
+            + ''.join(f'(allow file-write* (subpath {json.dumps(str(path))}))\n' for path in write_trees)
+            + '(allow file-write* (literal "/dev/null"))\n'
             + f'(deny file-write* (subpath {json.dumps(str(home))}))\n'
             + ''.join(f'(deny file-read* (subpath {json.dumps(str(home / ".claude" / name))}))\n' for name in HOST_INPUTS)
         )

@@ -159,7 +159,7 @@ execution with `failed to initialize in-process app-server client: Operation not
 permitted`. This is a controller-host restriction, not scenario behavior or provider
 output. Use this process:
 
-1. Create the command's namespaced `TMPDIR` before presenting or invoking it; a
+1. Create the command's namespaced `TMPDIR` beneath the per-user temporary root (outside `/tmp` and `/var/tmp`) before presenting or invoking it; a
    nonexistent temporary directory may cause the runtime to fall back to the shared
    system temporary root.
 2. Present the exact provider, model, effort, and `skilltest run` command, and state
@@ -281,46 +281,46 @@ Provider flags and environment variables are adapter-owned; `execution.permissio
 
 Codex uses a fresh noninteractive session with JSON, session-rollout and last-message capture, the configured model/effort, and `workspace/fixture/` as both cwd and `--cd` root.
 It retains `--skip-git-repo-check` and selects the fixed `skilltest` permission profile through command-local configuration.
-In `workspace-write` mode, the profile extends `:workspace`, adds sibling `workspace/evidence/` as a workspace root, disables command network access, and explicitly keeps `.git`, `.codex` and `.agents` read-only under both roots.
-In that mode, one exact-path override makes only `workspace/fixture/.git/` writable so tasks can stage originals and create local commits.
-In `read-only` mode, the profile extends `:read-only`, keeps command network access disabled, and supplies neither the Git write exception nor the additional writable evidence root.
-Approval remains disabled; no global configuration or fallback to broader access is used.
-The exact emitted profile is recorded in `runner.log` with the other provider arguments.
+The profile denies root reads and explicitly grants the fixture, sibling evidence and one invocation-owned scratch directory.
+Required platform/runtime paths and `/opt/homebrew` remain readable for system tools; these are trusted installation roots, not places to store study material.
+In `workspace-write` mode, fixture and evidence are writable, with `.git`, `.codex` and `.agents` protected under both workspace roots; only the fixture's `.git` receives a write exception for staging and local commits.
+In `read-only` mode, fixture and evidence are readable and private scratch remains writable.
+Both modes disable command network access and approvals; the exact emitted configuration is recorded in `runner.log`.
+No inherited workspace or temporary-directory template is used.
 
-Codex 0.154.0 sandbox qualification found that a custom profile extending `:workspace` alone did not retain the built-in profile’s protected-directory exclusions; the explicit read-only entries preserve those boundaries.
-Use a CLI supporting these permission-profile fields; unsupported syntax must fail, not silently fall back to the old Git-blocking sandbox.
-The [installed sandbox check](acceptance/test_codex_git_sandbox.py) passes the adapter’s emitted configuration to `codex sandbox` and verifies staging, original-source comparison, linked-document changes, a root commit, evidence writes, protected-path write denials and network-bind denial.
-It uses a fresh empty profile without authentication or model calls and retains every allocated fixture and command result beneath an existing caller-selected directory:
+Codex 0.154.0's `:minimal` macOS process defaults reopen `/tmp` and `/var/tmp` despite ordinary path denies.
+Explicit deny globs block files beneath those trees and their `/private` aliases; preparation rejects fixture, evidence or scratch paths there, because the deny also applies to declared inputs.
+Use an existing namespaced directory beneath macOS's per-user temporary root (`getconf DARWIN_USER_TEMP_DIR`) for the controller's `TMPDIR`.
+The runner creates a separate private scratch directory per invocation and passes its path to subject shells.
+An external-directory check can use that scratch; literal shared-temp reads/writes are intentionally unavailable.
+Unsupported profile syntax fails without a broader-access fallback.
 
-```sh
-SKILLTEST_SANDBOX_EVIDENCE_DIR=/absolute/retained/scratch .venv/bin/python -m pytest acceptance/test_codex_git_sandbox.py -q -s
-```
-
-On macOS the check may need host permission to launch the inner sandbox.
-Its profile qualification does not establish model behavior, native discovery or exhaustive filesystem isolation; inspect the first approved observation under changed conditions before continuing its batch.
-The [read-only checks](acceptance/test_read_only_sandbox.py) exercise each adapter's actual policy with local commands, without authentication or model calls.
-They verify evidence reads, overwrite/delete/rename/create denials, Git mutation denials, paths outside the workspace, and symlink escape denial; Claude also checks its private scratch allowance.
-Run them with an existing retained scratch directory:
+Run the installed-policy qualification before collection after a CLI or boundary change:
 
 ```sh
-SKILLTEST_SANDBOX_EVIDENCE_DIR=/absolute/retained/scratch .venv/bin/python -m pytest acceptance/test_read_only_sandbox.py -q -s
+SKILLTEST_SANDBOX_EVIDENCE_DIR=/absolute/retained/scratch .venv/bin/python -m pytest acceptance/test_input_isolation.py acceptance/test_read_only_sandbox.py acceptance/test_codex_git_sandbox.py -q -s
 ```
 
-These checks may require host permission to launch the inner sandbox.
-They qualify filesystem enforcement, not the installed provider's full model/tool round trip; the first authorized model pilot must verify the chosen mode and final-output capture.
+The existing destination stores successful qualification copies; probes execute under the per-user temporary root, outside shared `/tmp`.
+These macOS checks may require host permission to launch the inner sandbox; they make no model calls and use surrogate credentials/homes.
+The [shared isolation check](acceptance/test_input_isolation.py) tests both providers and both permission modes against controller, sibling-run, home, shared-temp and symlink reads/writes, while preserving Python, Git and private scratch use.
+The [read-only checks](acceptance/test_read_only_sandbox.py) additionally exercise overwrite/delete/rename/create and Git mutation denials, including scratch symlink escape.
+The [Codex Git check](acceptance/test_codex_git_sandbox.py) verifies source comparison, a root commit, evidence writes, protected-path write denials and network-bind denial using the adapter's emitted configuration.
+These qualify the tested filesystem boundaries, not model behavior, native discovery or exhaustive host isolation.
+Inspect the first authorized observation under changed conditions before continuing the batch.
 
 The adapter fixes these additional controls:
 
 ```text
 --strict-config --ignore-user-config --ignore-rules
 -c shell_environment_policy.inherit="none"
--c shell_environment_policy.set={PATH="<prepared runtime PATH>"}
+-c shell_environment_policy.set={PATH="<prepared runtime PATH>",TMPDIR="<private scratch>"}
 -c cli_auth_credentials_store="file"
 -c approval_policy="never"
 ```
 
 Each invocation creates private HOME, CODEX_HOME and TMPDIR directories outside its retained bundle, with private parents mode 0700.
-The CLI child receives only these three variables and PATH: the resolved Codex executable's directory followed by `/usr/bin:/bin:/usr/sbin:/sbin`. Shell tools receive that restricted PATH explicitly while other environment inheritance stays disabled; otherwise tool shells may select a different interpreter. [The Shiv runtime diagnosis](../../skill-studies/sweeping-stale-references/runtime-diagnosis.md) records the observed mismatch and qualification.
+The CLI child receives only these three variables and PATH: the resolved Codex executable's directory followed by `/usr/bin:/bin:/usr/sbin:/sbin`. Shell tools receive that restricted PATH and private TMPDIR explicitly while other environment inheritance stays disabled; otherwise tool shells may select a different interpreter. [The Shiv runtime diagnosis](../../skill-studies/sweeping-stale-references/runtime-diagnosis.md) records the observed mismatch and qualification.
 Resolve Codex through the invoking PATH before replacing the environment; use that same absolute executable for login-status preflight and the model call, recording the actual model argv in `runner.log`.
 `execution.executable` remains the provider label `codex`.
 
@@ -359,18 +359,23 @@ In `read-only` mode, the list is Read, Skill, Glob, Grep and Bash; dedicated Wri
 Both modes use `--permission-mode dontAsk --permission-prompts none`; permission bypass is not used.
 The sibling evidence directory remains available for reading; `--add-dir` does not override the process sandbox.
 
-The controlled Claude runtime requires macOS `sandbox-exec` and an existing claude.ai subscription login.
+The controlled Claude runtime requires macOS `sandbox-exec` and an existing claude.ai subscription login using the standard `~/Library/Keychains/login.keychain-db` or supported file cache.
 It retains normal HOME/USER for authentication and launches with an explicit operational PATH, fresh private temporary directories and the accepted memory/history/telemetry controls.
 It does not inherit API keys, profile overrides, shell-startup environment variables or the old simple-system-prompt/bundled-skill suppression baseline.
-The child policy denies writes beneath HOME and reads beneath the recorded user instruction, settings, skill, command, plugin, agent and project-history paths in `~/.claude/`.
-In `read-only` mode it additionally denies filesystem writes across the process tree, including file tools and Bash descendants, except private runtime `tmp/` and `/dev/null`.
-That scratch allowance supports CLI bookkeeping and contains no supplied evidence; symlinks from it do not grant writes to external targets.
-The controller creates the fixture Git boundary before model launch and captures output outside that policy.
-The emitted sandbox policy is retained in `runner.log`, since the runtime policy file is removed during cleanup.
-Read permissions and model-network connectivity are unchanged; this mode does not establish hidden-input isolation.
-Runtime and fixture directories must be outside HOME; use an existing temporary root such as `/private/tmp` for the controller's TMPDIR.
+The whole-process Seatbelt policy denies file reads and writes by default, then grants declared fixture/evidence reads, private scratch and required system/runtime reads.
+This covers native Read/Glob/Grep and Bash descendants alike.
+The implementation lists the runtime exceptions: system tools/libraries, Homebrew, Xcode, exact Claude executable paths, subscription-state files and the login keychain, plus exact macOS authentication metadata.
+Filesystem metadata is readable for path traversal; contents of arbitrary home, controller and sibling-run files are not.
+Selected ambient instruction/settings/skill/history paths remain explicitly denied.
+In `workspace-write` mode only fixture, evidence, private scratch and `/dev/null` are writable; in `read-only` mode only scratch and `/dev/null` are writable.
+HOME writes remain denied in both modes.
+Scratch contains no supplied evidence, and symlinks do not extend its grants to external targets.
+The controller creates the fixture Git boundary before launch and captures output outside that policy.
+The emitted policy is retained in `runner.log`, since cleanup removes the runtime policy file.
+Model-network connectivity remains available; this is study-input isolation, not a hostile-agent or network-exfiltration guarantee.
+Runtime and fixture directories must be outside HOME.
 Preparation rejects ambient instruction/configuration/skill entries in fixture ancestry.
-This is scoped contamination control, not exhaustive filesystem isolation.
+The shared installed-policy tests above exercise the boundary; repeat affected controls when CLI/runtime assumptions change.
 
 Authentication preflight runs that same resolved Claude executable under the same child policy.
 Status is inspected only in bounded memory, never logged or retained; no credentials are extracted or copied, no new login/logout occurs, and existing sessions are not manipulated.
@@ -389,7 +394,7 @@ Malformed, missing or provider-reported error output does not fabricate a proces
 Mechanical completion and evidence validity remain distinct: inspect the raw trace before scoring or accepting the run.
 Codex also captures its final answer through its last-message option. Its JSON command events may omit prefixes present in the model-facing tool response; use the retained session response entries when needed, with call-ID, content and truncation checks. See the [verified capture diagnosis](../../skill-studies/sweeping-stale-references/capture-diagnosis.md).
 
-The adapter passed offline verification and the [scoped live qualification](../pilot/qualification/README.md#claude-qualification-checkpoint) on Claude Code `2.1.266`.
+The earlier adapter passed offline verification and the [scoped live qualification](../pilot/qualification/README.md#claude-qualification-checkpoint) on Claude Code `2.1.266`.
 Use the [Claude qualification checkpoint](../pilot/qualification/README.md#claude-qualification-checkpoint) before a real comparison, including native no-DD/A/B/composition catalogs, required reads/writes, shell/Git behavior and common-input drift.
 The completed qualification adds actual companion loading, file search/write/edit and shell/Git operations to the earlier Read/Skill feasibility evidence; repeat only affected controls when that setup changes.
 

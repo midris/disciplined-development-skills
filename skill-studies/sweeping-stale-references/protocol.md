@@ -2,8 +2,8 @@
 
 Format version: `1`
 Study ID: `sweeping-stale-references`
-Status: coverage-baseline-01 stopped after two of ten attempts because the control received outside-study text; eight slots remain unrun. Previous batches are complete. Adoption and skill editing remain unauthorized.
-Current question and pending decision: is the expanded suite sufficient to establish a baseline for ordinary changes, reviewer-triggered repairs and justified locality? Owner accepted the limits and funded eight executable calls plus two diagnostic calls. Resolve the observed information-boundary failure before resuming the remaining slots; no automatic replacement of the excluded control.
+Status: coverage-baseline-01 paused after two of ten attempts; the excluded control remains charged. The input-isolation-1 correction is qualified; eight slots remain unrun. Previous batches are complete. Adoption and skill editing remain unauthorized.
+Current question and pending decision: is the expanded suite sufficient to establish a baseline for ordinary changes, reviewer-triggered repairs and justified locality? Owner accepted the limits and funded eight executable calls plus two diagnostic calls. Use the committed input-isolation-1 runtime amendment when resuming the remaining slots; no automatic replacement of the excluded control.
 The [plan](../../plans/2026-09-11-model-driven-skill-testing.md) owns progress; the [spec](../../plans/specs/2026-09-11-model-driven-skill-testing-framework.md) owns the workflow.
 The [core baseline](core-baseline-01-assessment.md) retains its two setup exclusions and runtime strata; the [comparison](comprehensive-comparison-01-assessment.md) records twelve valid executions of the original and preserved candidate. Both collection scopes are spent. Storage and accounting retains the SSR closing checkpoint and links the current combined totals.
 
@@ -14,7 +14,7 @@ Original-condition runs load the [frozen study snapshot](cases/skill-original/SK
 [sources.json](sources.json) records inspected file paths, sizes and hashes, including all nine DD skills, installed authoring guidance and runner implementation.
 This inventory identifies the initial preparation sources at the recorded revision, including the runner before its permission extension; it is not the frozen manifest of inputs supplied to subjects.
 The owner directed simplifying the reusable manifest: derive prompt/fixture mappings from configurations, pin shared source files once and use Git for history. Prepared unrun manifests use version 1 and pin source commits containing their identified bytes. Historical observed inputs retain their recorded identities.
-The [permission qualification index](permissions-qualification.json) identifies the updated runner sources.
+The [historical permission qualification](permissions-qualification.json) identifies the initial read-only extension; [input-isolation qualification](input-isolation-qualification.json) identifies the current correction.
 
 The skill combines a search-and-reconciliation technique with discipline against stopping after one cited defect.
 Its intended user is a development agent changing a fact shared across project files or responding to a reviewer who found one stale reference.
@@ -190,7 +190,7 @@ Stop for failed preservation, uncertain charge, unresolved process cleanup, susp
 Budget: at most ten additional subject invocations, zero evaluator/authoring/retry calls. Active-work forecast is 90 minutes (15 preparation/freeze, 30 model waits and retention, 35 evidence inspection/scoring, 10 review/reporting), within the 162 minutes remaining at approval. Track elapsed active effort including waits; the time ceiling remains 1,200 minutes.
 Inputs: [initiating-change manifest](cases/initiating-change/manifest.json), [local-change manifest](cases/local-change/manifest.json), [diagnostic manifest](cases/large-sweep-account/manifest.json); [initiating card](cases/initiating-change/assessment.md), [local card](cases/local-change/assessment.md), [diagnostic card](cases/large-sweep-account/assessment.md). Their source revision pins the full runner checkout; invocation authority is the subsequent committed frozen-manifest revision.
 Runtime: `/opt/homebrew/bin/codex`, `codex-cli 0.154.0`, SHA-256 `4f85982624b3898c8991cb80c0981b2aa71070e3537046c9a95950318a95afcc`, rechecked 2026-09-21. Execution changes since the prior collection are terminal-result 0.5 capture/cleanup metadata and document operations; the current offline suite passed 450 tests. Existing restricted PATH, private profile and full-session capture remain in use. Inspect every actual trace for full original skill loading, control integrity and unexpected outside guidance; this is not exhaustive host read isolation.
-Commands run from `/Users/simon/work/personal/disciplined-development-skills`: `TMPDIR=/private/tmp/ssr-coverage-baseline-01 skill-validation/runner/.venv/bin/skilltest run CONFIG`, once per row after collection readiness. Host permission initializes the app server; subjects retain workspace-write.
+Historical commands for orders 1–2 ran from `/Users/simon/work/personal/disciplined-development-skills`: `TMPDIR=/private/tmp/ssr-coverage-baseline-01 skill-validation/runner/.venv/bin/skilltest run CONFIG`, once per row after collection readiness. Host permission initializes the app server; subjects retain workspace-write.
 Retain stopped bundles with `docs retain`, using this batch/order, committed invocation authority, [attempt index](coverage-baseline-01-run-index.json) and the existing external development primary. Assess in the active session under SSR policy 3; inspect/replay disposable copies only. The [batch assessment](coverage-baseline-01-assessment.md) will hold outcomes and coverage, not a new scoring policy.
 
 | Order | Case | Condition | Repetition | CONFIG |
@@ -211,13 +211,24 @@ Collection checkpoint, 2026-09-21: both attempts completed mechanically and were
 The [partial assessment](coverage-baseline-01-assessment.md) records one valid original (F1–F3/P1/P2 met, P3 arithmetic defect) and an invalid control (correct inspectable repair, excluded from aggregates).
 The control changed directory to `/tmp` for a script check and then searched that directory; its actual delivered tool response includes controller scratch matches and the preceding original run's completion report.
 The private profile and restricted PATH did not prevent filesystem read contamination; the run namespace under `/private/tmp` is not a read boundary.
-Do not run orders 3–10 under this unchanged setup or replace order 2 automatically. The [checkpoint review](../../reviews/2026-09-21-ssr-expansion-checkpoint.md) records the open isolation finding and completed verification.
+Do not run orders 3–10 under that unchanged setup or replace order 2 automatically. The [checkpoint review](../../reviews/2026-09-21-ssr-expansion-checkpoint.md) records the open isolation finding and completed verification.
 
-Recovery recommendation: qualify a filesystem read boundary that hides controller material and other run bundles while keeping the fixture, required tools and a clean per-attempt external working directory usable.
-Use a deterministic reproduction of the observed `cd`-then-search sequence, including `/tmp` and `/private/tmp` aliases and sibling bundles, before any subject call.
-A prompt-only request to stay in the fixture would leave the observed failure reachable and would change subject guidance; it is not a qualified isolation fix.
-Record any runtime amendment and apply it consistently to remaining conditions; preserve the original two attempts and report the runtime change rather than silently pooling them.
-The eight unrun slots retain their budget allocation, but collection is stopped until that amendment is qualified and the stop is resolved explicitly; any replacement remains a separate decision.
+#### Runtime amendment: input-isolation-1
+
+The owner approved correcting filesystem read isolation for both providers on 2026-09-21: “let's make these changes”.
+The [qualification and review](../../reviews/2026-09-21-runner-input-isolation.md) records the implementation, installed-policy checks and remaining limits.
+Codex uses root-read denial, explicit fixture/evidence/private-scratch grants and shared-temp deny globs, retaining its command-network and protected-directory controls.
+Claude uses its existing whole-process wrapper with explicit input/runtime/authentication reads, covering native file tools as well as Bash.
+The previous private-profile and ambient-guidance controls remain; they were not a general filesystem boundary.
+
+Apply this runtime only to orders 3–10; keep the frozen subject inputs, policies, model/effort, order, call ceiling and existing two results unchanged.
+Use the committed runner revision containing this amendment as the invocation authority in retention records, while preserving each manifest's original input pin.
+Report the amended orders as a separate runtime stratum rather than silently pooling them with orders 1–2.
+The remaining commands use `TMPDIR=/private/var/folders/55/6jqr25v5211fn00wych8b1jm0000gn/T/ssr-coverage-isolation-01 skill-validation/runner/.venv/bin/skilltest run CONFIG`, substituting only the matching table entry.
+Create and verify that namespace before invocation; `/private/tmp/ssr-coverage-baseline-01` is historical and is rejected by the corrected Codex boundary.
+The first amended observation must be inspected and retained before the next order, as required by the existing stop rule.
+This amendment does not authorize replacing order 2 or adding a model qualification call.
+Collection remains paused for this implementation checkpoint; resume only from the committed, verified amendment and within the recorded remaining effort allocation.
 
 ### First collection: semantic-delivery-01
 
@@ -378,7 +389,7 @@ Closure is complete within its 30-minute allowance; no new collection or rollout
 
 | Evidence | Interpretation |
 |---|---|
-| [Partial expansion](coverage-baseline-01-assessment.md) | One valid initiating original; control excluded for outside-study exposure. Eight slots unrun; isolation correction required before resumption. |
+| [Partial expansion](coverage-baseline-01-assessment.md) | One valid initiating original; control excluded for outside-study exposure. Eight slots unrun; qualified input-isolation-1 amendment governs resumption. |
 | [Comprehensive comparison](comprehensive-comparison-01-assessment.md) | Complete twelve-execution comparison: tested functional outcomes preserved by both versions; reporting differences are mixed. Including the measured size reduction, the advisory recommendation favors the candidate. Owner deferred adoption. |
 | [Core-baseline-01 assessment](core-baseline-01-assessment.md) | Selected three-case baseline complete: twelve attempts, ten included and two setup exclusions; descriptive outcomes and runtime differences remain explicit. |
 | [Semantic-delivery-01 assessment](semantic-delivery-01-assessment.md) | First measured batch: original completes committed reconciliation; control leaves two current claims stale. One observation per condition; no consistency claim. |
