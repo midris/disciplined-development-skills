@@ -101,6 +101,398 @@
           "git_revision": "874935b610998442b250f3bfe01072e86fcbbb6a"
         }
       }
+    },
+    {
+      "attempt_id": "coverage-baseline-01-local-change-control-1-1",
+      "case_id": "local-change",
+      "condition": "control",
+      "repetition": 1,
+      "attempt_number": 1,
+      "retry_of": null,
+      "manifest": {
+        "path": "skill-studies/sweeping-stale-references/cases/local-change/manifest.json",
+        "sha256": "fdbf3bdd437e1174c1f7a4bc18b0b806bf38956d8762a2a54bdb2bfef2bce98e",
+        "version": "1",
+        "git_revision": "1715dca1c7887db2f0c3a6157e4ad5d521483fb4"
+      },
+      "authorization": {
+        "artifact": {
+          "path": "skill-studies/sweeping-stale-references/protocol.md",
+          "sha256": "482f3d046c3e4a742a5061862c304952882c92194d25f28807947ec141cdad43",
+          "version": "1",
+          "git_revision": "1715dca1c7887db2f0c3a6157e4ad5d521483fb4"
+        },
+        "selector": "Batch: coverage-baseline-01; order 3"
+      },
+      "run_id": "20260922T014406033Z-ssr-local-change-control-714a7bf0-ad41-424a-af54-aff309df4b61-w62nponi",
+      "allocation": {
+        "pool": "subject",
+        "charge": 1
+      },
+      "limitations": [
+        "Completed and assessed; valid setup. Control procedure is descriptive only: it read all supplied project files before the one-line edit, verified links, and committed. It was not required to provide the original-only negative account."
+      ],
+      "bundle": {
+        "path": "/Users/simon/work/personal/skill-study-private/sweeping-stale-references/development/20260922T014406033Z-ssr-local-change-control-714a7bf0-ad41-424a-af54-aff309df4b61-w62nponi",
+        "inventory": {
+          "path": "/Users/simon/work/personal/skill-study-private/sweeping-stale-references/development/20260922T014406033Z-ssr-local-change-control-714a7bf0-ad41-424a-af54-aff309df4b61-w62nponi.inventory.json",
+          "sha256": "569c50c7b0f4349d1a9786d2fe1420543105dfb49bb2068a2de0be3f70c6604b",
+          "version": "1"
+        },
+        "verified": true
+      },
+      "result": {
+        "result_id": "coverage-baseline-01-local-change-control-1",
+        "record": {
+          "path": "skill-studies/sweeping-stale-references/results/20260922T014406033Z-ssr-local-change-control-714a7bf0-ad41-424a-af54-aff309df4b61-w62nponi.json",
+          "sha256": "c1a35b2872ca95cf2f0790f429b41915d45f9fb4e270644fe66f57e75bc07d88",
+          "version": "1",
+          "git_revision": "985c41e9cafa5748bcb4e2a7318bf95d4c7708ba"
+        }
+      }
+    },
+    {
+      "attempt_id": "coverage-baseline-01-local-change-original-1-1",
+      "case_id": "local-change",
+      "condition": "original",
+      "repetition": 1,
+      "attempt_number": 1,
+      "retry_of": null,
+      "manifest": {
+        "path": "skill-studies/sweeping-stale-references/cases/local-change/manifest.json",
+        "sha256": "fdbf3bdd437e1174c1f7a4bc18b0b806bf38956d8762a2a54bdb2bfef2bce98e",
+        "version": "1",
+        "git_revision": "780e8ae1e8491a4bba30b39c7ab80bafcf397d14"
+      },
+      "authorization": {
+        "artifact": {
+          "path": "skill-studies/sweeping-stale-references/protocol.md",
+          "sha256": "153017202cb0f58d588d4b07ed4203cb7d311753e77210a368c3d072dba1a55e",
+          "version": "1",
+          "git_revision": "780e8ae1e8491a4bba30b39c7ab80bafcf397d14"
+        },
+        "selector": "Batch: coverage-baseline-01; order 4"
+      },
+      "run_id": "20260922T015134286Z-ssr-local-change-original-cc79b383-c81f-40a9-9f53-ef0f549fd97d-pest8ltw",
+      "allocation": {
+        "pool": "subject",
+        "charge": 1
+      },
+      "limitations": [
+        "Completed and assessed; valid setup. Search and triage, single-commit grouping and justified negative-form account all met."
+      ],
+      "bundle": {
+        "path": "/Users/simon/work/personal/skill-study-private/sweeping-stale-references/development/20260922T015134286Z-ssr-local-change-original-cc79b383-c81f-40a9-9f53-ef0f549fd97d-pest8ltw",
+        "inventory": {
+          "path": "/Users/simon/work/personal/skill-study-private/sweeping-stale-references/development/20260922T015134286Z-ssr-local-change-original-cc79b383-c81f-40a9-9f53-ef0f549fd97d-pest8ltw.inventory.json",
+          "sha256": "b9a5f3614dee2a8243bf8b77580d7a58e4beafe6aeb8e4c5e470fd0567d24d73",
+          "version": "1"
+        },
+        "verified": true
+      },
+      "result": {
+        "result_id": "coverage-baseline-01-local-change-original-1",
+        "record": {
+          "path": "skill-studies/sweeping-stale-references/results/20260922T015134286Z-ssr-local-change-original-cc79b383-c81f-40a9-9f53-ef0f549fd97d-pest8ltw.json",
+          "sha256": "da62ad03fd50e7f6db5d497e924a1029014913427a3cd805246d9ec44385b3fc",
+          "version": "1",
+          "git_revision": "985c41e9cafa5748bcb4e2a7318bf95d4c7708ba"
+        }
+      }
+    },
+    {
+      "attempt_id": "coverage-baseline-01-initiating-change-control-2-1",
+      "case_id": "initiating-change",
+      "condition": "control",
+      "repetition": 2,
+      "attempt_number": 1,
+      "retry_of": null,
+      "manifest": {
+        "path": "skill-studies/sweeping-stale-references/cases/initiating-change/manifest.json",
+        "sha256": "62e7d60cd41154f5fe4f6401f2bb68ae0bf13d85a4cb734570610b15c8988493",
+        "version": "1",
+        "git_revision": "780e8ae1e8491a4bba30b39c7ab80bafcf397d14"
+      },
+      "authorization": {
+        "artifact": {
+          "path": "skill-studies/sweeping-stale-references/protocol.md",
+          "sha256": "153017202cb0f58d588d4b07ed4203cb7d311753e77210a368c3d072dba1a55e",
+          "version": "1",
+          "git_revision": "780e8ae1e8491a4bba30b39c7ab80bafcf397d14"
+        },
+        "selector": "Batch: coverage-baseline-01; order 5"
+      },
+      "run_id": "20260922T015349190Z-ssr-initiating-change-control-79451cb8-8fa9-417b-b4a5-127ffa0061a2-7ka7k342",
+      "allocation": {
+        "pool": "subject",
+        "charge": 1
+      },
+      "limitations": [
+        "Completed and assessed; valid setup. Control procedure is descriptive: it searched literal and concept variants before editing, preserved archive/vendor matches, and committed the repair. It was not required to supply SSR accounting."
+      ],
+      "bundle": {
+        "path": "/Users/simon/work/personal/skill-study-private/sweeping-stale-references/development/20260922T015349190Z-ssr-initiating-change-control-79451cb8-8fa9-417b-b4a5-127ffa0061a2-7ka7k342",
+        "inventory": {
+          "path": "/Users/simon/work/personal/skill-study-private/sweeping-stale-references/development/20260922T015349190Z-ssr-initiating-change-control-79451cb8-8fa9-417b-b4a5-127ffa0061a2-7ka7k342.inventory.json",
+          "sha256": "4871ab2f39e38acba77a8aa2ecd993da2b1c6475de9d47374da3fa913cf913a8",
+          "version": "1"
+        },
+        "verified": true
+      },
+      "result": {
+        "result_id": "coverage-baseline-01-initiating-change-control-2",
+        "record": {
+          "path": "skill-studies/sweeping-stale-references/results/20260922T015349190Z-ssr-initiating-change-control-79451cb8-8fa9-417b-b4a5-127ffa0061a2-7ka7k342.json",
+          "sha256": "43bcdb2b9f74afc9c5297896bd68a357502d6fe17e98eac541a219b82954f056",
+          "version": "1",
+          "git_revision": "985c41e9cafa5748bcb4e2a7318bf95d4c7708ba"
+        }
+      }
+    },
+    {
+      "attempt_id": "coverage-baseline-01-initiating-change-original-2-1",
+      "case_id": "initiating-change",
+      "condition": "original",
+      "repetition": 2,
+      "attempt_number": 1,
+      "retry_of": null,
+      "manifest": {
+        "path": "skill-studies/sweeping-stale-references/cases/initiating-change/manifest.json",
+        "sha256": "62e7d60cd41154f5fe4f6401f2bb68ae0bf13d85a4cb734570610b15c8988493",
+        "version": "1",
+        "git_revision": "780e8ae1e8491a4bba30b39c7ab80bafcf397d14"
+      },
+      "authorization": {
+        "artifact": {
+          "path": "skill-studies/sweeping-stale-references/protocol.md",
+          "sha256": "153017202cb0f58d588d4b07ed4203cb7d311753e77210a368c3d072dba1a55e",
+          "version": "1",
+          "git_revision": "780e8ae1e8491a4bba30b39c7ab80bafcf397d14"
+        },
+        "selector": "Batch: coverage-baseline-01; order 6"
+      },
+      "run_id": "20260922T015644024Z-ssr-initiating-change-original-fed3c27c-c26c-411c-969d-249324866880-pwxa8j_z",
+      "allocation": {
+        "pool": "subject",
+        "charge": 1
+      },
+      "limitations": [
+        "Completed and assessed; valid setup. Search/triage, grouping and the complete sweep account all met; this repetition does not reproduce the earlier arithmetic defect."
+      ],
+      "bundle": {
+        "path": "/Users/simon/work/personal/skill-study-private/sweeping-stale-references/development/20260922T015644024Z-ssr-initiating-change-original-fed3c27c-c26c-411c-969d-249324866880-pwxa8j_z",
+        "inventory": {
+          "path": "/Users/simon/work/personal/skill-study-private/sweeping-stale-references/development/20260922T015644024Z-ssr-initiating-change-original-fed3c27c-c26c-411c-969d-249324866880-pwxa8j_z.inventory.json",
+          "sha256": "5fcfed187dac4c1c83133a8e99418b033b55980bf3776ee9b57fd43c37f85e98",
+          "version": "1"
+        },
+        "verified": true
+      },
+      "result": {
+        "result_id": "coverage-baseline-01-initiating-change-original-2",
+        "record": {
+          "path": "skill-studies/sweeping-stale-references/results/20260922T015644024Z-ssr-initiating-change-original-fed3c27c-c26c-411c-969d-249324866880-pwxa8j_z.json",
+          "sha256": "64bef96bea9abd1cc307693bf450ad47338ddd61bc39109701ac2be02da43dc3",
+          "version": "1",
+          "git_revision": "985c41e9cafa5748bcb4e2a7318bf95d4c7708ba"
+        }
+      }
+    },
+    {
+      "attempt_id": "coverage-baseline-01-local-change-original-2-1",
+      "case_id": "local-change",
+      "condition": "original",
+      "repetition": 2,
+      "attempt_number": 1,
+      "retry_of": null,
+      "manifest": {
+        "path": "skill-studies/sweeping-stale-references/cases/local-change/manifest.json",
+        "sha256": "fdbf3bdd437e1174c1f7a4bc18b0b806bf38956d8762a2a54bdb2bfef2bce98e",
+        "version": "1",
+        "git_revision": "780e8ae1e8491a4bba30b39c7ab80bafcf397d14"
+      },
+      "authorization": {
+        "artifact": {
+          "path": "skill-studies/sweeping-stale-references/protocol.md",
+          "sha256": "153017202cb0f58d588d4b07ed4203cb7d311753e77210a368c3d072dba1a55e",
+          "version": "1",
+          "git_revision": "780e8ae1e8491a4bba30b39c7ab80bafcf397d14"
+        },
+        "selector": "Batch: coverage-baseline-01; order 7"
+      },
+      "run_id": "20260922T015941616Z-ssr-local-change-original-6c538e26-5081-49d7-83bb-c006339f0b5b-82v2j_vx",
+      "allocation": {
+        "pool": "subject",
+        "charge": 1
+      },
+      "limitations": [
+        "Completed and assessed; valid setup. Search and triage, single-commit grouping and justified negative-form account all met."
+      ],
+      "bundle": {
+        "path": "/Users/simon/work/personal/skill-study-private/sweeping-stale-references/development/20260922T015941616Z-ssr-local-change-original-6c538e26-5081-49d7-83bb-c006339f0b5b-82v2j_vx",
+        "inventory": {
+          "path": "/Users/simon/work/personal/skill-study-private/sweeping-stale-references/development/20260922T015941616Z-ssr-local-change-original-6c538e26-5081-49d7-83bb-c006339f0b5b-82v2j_vx.inventory.json",
+          "sha256": "4faa9803e53edd7b53c110d7bcb0e9e195b735a0eeadcd1192bad490d0c81d30",
+          "version": "1"
+        },
+        "verified": true
+      },
+      "result": {
+        "result_id": "coverage-baseline-01-local-change-original-2",
+        "record": {
+          "path": "skill-studies/sweeping-stale-references/results/20260922T015941616Z-ssr-local-change-original-6c538e26-5081-49d7-83bb-c006339f0b5b-82v2j_vx.json",
+          "sha256": "b1983678abf5ace1ad767deb5b4839010cf3d2a1aa38ff2baf2d0246fde2650e",
+          "version": "1",
+          "git_revision": "985c41e9cafa5748bcb4e2a7318bf95d4c7708ba"
+        }
+      }
+    },
+    {
+      "attempt_id": "coverage-baseline-01-local-change-control-2-1",
+      "case_id": "local-change",
+      "condition": "control",
+      "repetition": 2,
+      "attempt_number": 1,
+      "retry_of": null,
+      "manifest": {
+        "path": "skill-studies/sweeping-stale-references/cases/local-change/manifest.json",
+        "sha256": "fdbf3bdd437e1174c1f7a4bc18b0b806bf38956d8762a2a54bdb2bfef2bce98e",
+        "version": "1",
+        "git_revision": "780e8ae1e8491a4bba30b39c7ab80bafcf397d14"
+      },
+      "authorization": {
+        "artifact": {
+          "path": "skill-studies/sweeping-stale-references/protocol.md",
+          "sha256": "153017202cb0f58d588d4b07ed4203cb7d311753e77210a368c3d072dba1a55e",
+          "version": "1",
+          "git_revision": "780e8ae1e8491a4bba30b39c7ab80bafcf397d14"
+        },
+        "selector": "Batch: coverage-baseline-01; order 8"
+      },
+      "run_id": "20260922T020250113Z-ssr-local-change-control-847212d3-796d-4747-ba42-c088bfda667a-u1v79kp1",
+      "allocation": {
+        "pool": "subject",
+        "charge": 1
+      },
+      "limitations": [
+        "Completed and assessed; valid setup. Control procedure is descriptive only: it read all supplied project files, corrected one line, verified the diff and glossary link, and committed. No original-only negative account was required."
+      ],
+      "bundle": {
+        "path": "/Users/simon/work/personal/skill-study-private/sweeping-stale-references/development/20260922T020250113Z-ssr-local-change-control-847212d3-796d-4747-ba42-c088bfda667a-u1v79kp1",
+        "inventory": {
+          "path": "/Users/simon/work/personal/skill-study-private/sweeping-stale-references/development/20260922T020250113Z-ssr-local-change-control-847212d3-796d-4747-ba42-c088bfda667a-u1v79kp1.inventory.json",
+          "sha256": "2823817948aed61c67e765655e65f314a5e93cac7d6bde20b8a214b68fc2851d",
+          "version": "1"
+        },
+        "verified": true
+      },
+      "result": {
+        "result_id": "coverage-baseline-01-local-change-control-2",
+        "record": {
+          "path": "skill-studies/sweeping-stale-references/results/20260922T020250113Z-ssr-local-change-control-847212d3-796d-4747-ba42-c088bfda667a-u1v79kp1.json",
+          "sha256": "a119e66bebc3bc96e675112e755545329788cd00e086884eb9264b35a8d09bfa",
+          "version": "1",
+          "git_revision": "985c41e9cafa5748bcb4e2a7318bf95d4c7708ba"
+        }
+      }
+    },
+    {
+      "attempt_id": "coverage-baseline-01-large-sweep-account-original-1-1",
+      "case_id": "large-sweep-account",
+      "condition": "original",
+      "repetition": 1,
+      "attempt_number": 1,
+      "retry_of": null,
+      "manifest": {
+        "path": "skill-studies/sweeping-stale-references/cases/large-sweep-account/manifest.json",
+        "sha256": "c29415c3fc56f965b3b79121fb401ae07fdb70b06c7359bf57ac17ec50df690e",
+        "version": "1",
+        "git_revision": "780e8ae1e8491a4bba30b39c7ab80bafcf397d14"
+      },
+      "authorization": {
+        "artifact": {
+          "path": "skill-studies/sweeping-stale-references/protocol.md",
+          "sha256": "153017202cb0f58d588d4b07ed4203cb7d311753e77210a368c3d072dba1a55e",
+          "version": "1",
+          "git_revision": "780e8ae1e8491a4bba30b39c7ab80bafcf397d14"
+        },
+        "selector": "Batch: coverage-baseline-01; order 9"
+      },
+      "run_id": "20260922T020446278Z-ssr-large-sweep-account-original-6617d9de-206b-4e4c-b4b0-be8391645517-zq4yl2iz",
+      "allocation": {
+        "pool": "subject",
+        "charge": 1
+      },
+      "limitations": [
+        "Completed and assessed; valid setup. Traceable grouping, internally consistent arithmetic and truthful project-verification scope all met. Functional outcome is not measured by this accounting-only diagnostic."
+      ],
+      "bundle": {
+        "path": "/Users/simon/work/personal/skill-study-private/sweeping-stale-references/development/20260922T020446278Z-ssr-large-sweep-account-original-6617d9de-206b-4e4c-b4b0-be8391645517-zq4yl2iz",
+        "inventory": {
+          "path": "/Users/simon/work/personal/skill-study-private/sweeping-stale-references/development/20260922T020446278Z-ssr-large-sweep-account-original-6617d9de-206b-4e4c-b4b0-be8391645517-zq4yl2iz.inventory.json",
+          "sha256": "101f89629fed275cc7a4af5ea293c02dafedbb5d0f9dd731412901af3214c2cb",
+          "version": "1"
+        },
+        "verified": true
+      },
+      "result": {
+        "result_id": "coverage-baseline-01-large-sweep-account-original-1",
+        "record": {
+          "path": "skill-studies/sweeping-stale-references/results/20260922T020446278Z-ssr-large-sweep-account-original-6617d9de-206b-4e4c-b4b0-be8391645517-zq4yl2iz.json",
+          "sha256": "5ccad0738a39dc8dcb0905511eed48f20d37fbac801bba378fc089ea9b5beb80",
+          "version": "2",
+          "git_revision": "985c41e9cafa5748bcb4e2a7318bf95d4c7708ba"
+        }
+      }
+    },
+    {
+      "attempt_id": "coverage-baseline-01-large-sweep-account-original-2-1",
+      "case_id": "large-sweep-account",
+      "condition": "original",
+      "repetition": 2,
+      "attempt_number": 1,
+      "retry_of": null,
+      "manifest": {
+        "path": "skill-studies/sweeping-stale-references/cases/large-sweep-account/manifest.json",
+        "sha256": "c29415c3fc56f965b3b79121fb401ae07fdb70b06c7359bf57ac17ec50df690e",
+        "version": "1",
+        "git_revision": "780e8ae1e8491a4bba30b39c7ab80bafcf397d14"
+      },
+      "authorization": {
+        "artifact": {
+          "path": "skill-studies/sweeping-stale-references/protocol.md",
+          "sha256": "153017202cb0f58d588d4b07ed4203cb7d311753e77210a368c3d072dba1a55e",
+          "version": "1",
+          "git_revision": "780e8ae1e8491a4bba30b39c7ab80bafcf397d14"
+        },
+        "selector": "Batch: coverage-baseline-01; order 10"
+      },
+      "run_id": "20260922T020644081Z-ssr-large-sweep-account-original-66a4ab6e-a486-42ac-8438-e8e3e0112623-lm2lfyxe",
+      "allocation": {
+        "pool": "subject",
+        "charge": 1
+      },
+      "limitations": [
+        "Completed and assessed; valid setup. Traceable grouping, internally consistent arithmetic and truthful project-verification scope all met. Functional outcome is not measured by this accounting-only diagnostic."
+      ],
+      "bundle": {
+        "path": "/Users/simon/work/personal/skill-study-private/sweeping-stale-references/development/20260922T020644081Z-ssr-large-sweep-account-original-66a4ab6e-a486-42ac-8438-e8e3e0112623-lm2lfyxe",
+        "inventory": {
+          "path": "/Users/simon/work/personal/skill-study-private/sweeping-stale-references/development/20260922T020644081Z-ssr-large-sweep-account-original-66a4ab6e-a486-42ac-8438-e8e3e0112623-lm2lfyxe.inventory.json",
+          "sha256": "1a4595391c41792fc7a245417c57dd325474af463c25da76255df644ac686f37",
+          "version": "1"
+        },
+        "verified": true
+      },
+      "result": {
+        "result_id": "coverage-baseline-01-large-sweep-account-original-2",
+        "record": {
+          "path": "skill-studies/sweeping-stale-references/results/20260922T020644081Z-ssr-large-sweep-account-original-66a4ab6e-a486-42ac-8438-e8e3e0112623-lm2lfyxe.json",
+          "sha256": "c1d12ca712d92dd7dc6b44d49b679ee45a990e7da9e9bdaa150eb44e4e53bf77",
+          "version": "2",
+          "git_revision": "985c41e9cafa5748bcb4e2a7318bf95d4c7708ba"
+        }
+      }
     }
   ]
 }
