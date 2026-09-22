@@ -49,3 +49,5 @@ Supported conclusion: original achieves complete committed semantic reconciliati
 
 The observed difference is repair completeness after a realistic single-reference trigger. Preservation ties; original's accounting defect remains visible separately.
 Recommendation: retain the current skill while reviewing this first observation and selecting any further baseline scope. Do not rewrite solely for P3 or rerun to obtain a cleaner account. Further collection or a rewrite requires its own declared scope and authorization in the protocol.
+
+Historical isolation check: the [round-9 trace audit](../../reviews/2026-09-21-round9-review.md#historical-trace-audit) found no targeted exposure markers in the 46 earlier attempts. It records seven stdout-only capture limits and does not establish exhaustive isolation; existing setup judgments and scores are unchanged.

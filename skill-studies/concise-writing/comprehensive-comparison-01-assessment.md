@@ -106,3 +106,5 @@ Limits remain the same two short constructed software updates, two repetitions p
 Reusing the existing candidate deliberately leaves fresh evidence-led skill authoring untested. All eight authorized calls are spent; no additional scenario, retry, provider pass or live skill edit follows automatically.
 
 Verification: all eight execution-result records and the complete attempt index pass document checks. Source/configuration identities, inventories, policy-copy equality, all 16 aggregate rows and word counts are checked directly; final assessment readiness and self-review are recorded in the protocol.
+
+Historical isolation check: the [round-9 trace audit](../../reviews/2026-09-21-round9-review.md#historical-trace-audit) found no targeted exposure markers in the 46 earlier attempts. It records seven stdout-only capture limits and does not establish exhaustive isolation; existing setup judgments and scores are unchanged.

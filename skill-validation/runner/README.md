@@ -13,11 +13,14 @@ Run from `skill-validation/runner/`:
 .venv/bin/python -m pytest -q -m 'not process_smoke'
 .venv/bin/python -m pytest -q -m process_smoke
 .venv/bin/python -m pytest -q
+# Equivalent full suite through uv:
+uv run pytest -q
 ```
 
 The first command runs unit tests; the second runs local process smoke tests; the last runs both.
 Neither group invokes an installed Codex/Claude CLI or needs real credentials or network access.
 Claude process smokes require macOS and exercise the real `sandbox-exec` policy against surrogate homes.
+Sandbox probes resolve Python from `/opt/homebrew/bin:/usr/bin:/bin`, independently of caller PATH, so uv or another home-installed test interpreter does not require wider production reads.
 When an outer sandbox denies `sandbox-exec`, run this offline suite with host permission; do not disable the policy to make it pass.
 
 - Unit tests mock the external boundary of the component under test: provider outcomes for runner persistence, runtime/process outcomes for adapter orchestration, and process/selector/clock operations for lifecycle logic.

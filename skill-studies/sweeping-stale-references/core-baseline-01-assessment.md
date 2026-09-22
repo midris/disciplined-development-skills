@@ -100,3 +100,5 @@ This is an exposed, small, descriptive baseline, with only one included semantic
 The declared descriptive-only scope is complete, not an adoption test. The useful reconciliation behavior is supported in these cases; a broad functional rewrite is not indicated by this batch. Investigate audit counting and the ambiguous category boundary separately before selecting an edit: reducing accounting burden would not itself resolve the Shiv interpretation. Any change needs an agreed objective and fixed comparison scope; no rewrite or additional execution follows automatically.
 
 Retain the original skill pending an evidence-supported rewrite objective or closure decision. The [protocol](protocol.md#results-and-decision) owns current decisions and remaining capacity; the active plan owns subsequent work.
+
+Historical isolation check: the [round-9 trace audit](../../reviews/2026-09-21-round9-review.md#historical-trace-audit) found no targeted exposure markers in the 46 earlier attempts. It records seven stdout-only capture limits and does not establish exhaustive isolation; existing setup judgments and scores are unchanged.

@@ -108,3 +108,5 @@ Long documents, other audiences and genres, plan/spec composition, native discov
 Existing runner/formats supported the reassessment without new repository tooling or model calls.
 
 Verification: the corrected assessment-stage CLI validates this batch using each result’s pinned criteria, while checking that reassessment preserves the actual subject inputs. Both the report and protocol readiness now pass without the former missing-P1 diagnostics. Direct checks also verify all 16 aggregate rows, evidence hashes, word counts and policy-copy equality.
+
+Historical isolation check: the [round-9 trace audit](../../reviews/2026-09-21-round9-review.md#historical-trace-audit) found no targeted exposure markers in the 46 earlier attempts. It records seven stdout-only capture limits and does not establish exhaustive isolation; existing setup judgments and scores are unchanged.

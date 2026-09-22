@@ -165,7 +165,7 @@ def test_claude_child_policy_denies_surrogate_semantic_reads_and_home_writes(tmp
             ' else: raise AssertionError("policy did not deny access")\n'
             'print("DENIED_BOTH")\n'
         )
-        process = subprocess.Popen([*runtime.prefix, str(Path(shutil.which("python3")).resolve()), '-c', probe, str(secret), str(home/'negative-write')],
+        process = subprocess.Popen([*runtime.prefix, str(Path(shutil.which("python3", path="/opt/homebrew/bin:/usr/bin:/bin")).resolve()), '-c', probe, str(secret), str(home/'negative-write')],
             cwd=fixture, env=runtime.environment, stdin=subprocess.DEVNULL,
             stdout=subprocess.PIPE, stderr=subprocess.PIPE, start_new_session=True)
         stdout, stderr, timed_out = runtime.communicate(process, None, 10)

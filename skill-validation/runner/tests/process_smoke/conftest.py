@@ -87,7 +87,7 @@ sys.exit(settings["exit_code"])
 """
     for name in ("codex", "claude"):
         executable = bin_dir / name
-        executable.write_text(script.replace("PYTHON_EXECUTABLE", str(Path(shutil.which("python3")).resolve()), 1))
+        executable.write_text(script.replace("PYTHON_EXECUTABLE", str(Path(shutil.which("python3", path="/opt/homebrew/bin:/usr/bin:/bin")).resolve()), 1))
         executable.chmod(0o700)
     monkeypatch.setenv("PATH", str(bin_dir) + os.pathsep + os.environ["PATH"])
     (private_test_profile / "auth.json").write_text('{"tokens":{"access_token":"dummy-test-only"}}')

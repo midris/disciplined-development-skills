@@ -101,7 +101,7 @@ else:
   else:raise AssertionError('read-only write permitted')
 print(json.dumps({'status':'PASS','denied_reads':denied,'mode':mode}))
 '''
-    command += [str(Path(shutil.which('python3')).resolve()),'-c',probe,str(fixture),str(evidence),str(root),mode,str(shared),str(var_shared)]
+    command += [str(Path(shutil.which('python3', path='/opt/homebrew/bin:/usr/bin:/bin')).resolve()),'-c',probe,str(fixture),str(evidence),str(root),mode,str(shared),str(var_shared)]
     (root/'command.json').write_text(json.dumps(command,indent=2)+'\n')
     try:
         p=subprocess.run(command,cwd=fixture,env=env,capture_output=True,text=True,timeout=60)

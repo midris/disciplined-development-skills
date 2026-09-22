@@ -5,7 +5,7 @@ Assessment ID: ssr-coverage-baseline-01
 Study / batch: sweeping-stale-references / coverage-baseline-01
 Status: stopped after two attempts; partial assessment complete; eight slots unrun
 Scope and acceptance rules: [protocol](protocol.md) at Git `2c65cdc778b1ca9a00eb95fa09876d71515427a6`, batch coverage-baseline-01; frozen SSR policy 3 and case manifests.
-Attempt index: [coverage-baseline-01-run-index.json](coverage-baseline-01-run-index.json) at Git `f6afe01557c7ad63cf2eeddfca0362c40ccca373`, SHA-256 `8684a1f0746ad4c29fbba22ab593989ab6dcd3a7f8e331adef38d396d9f599d5`.
+Attempt index: [coverage-baseline-01-run-index.json](coverage-baseline-01-run-index.json) at Git `83a581dd3b1c32e17986d55e1273df1139a5f1b6`, SHA-256 `6855aafaef0cd9c2e802ee589b859a3b03ebe781280482beee7cb39255da6f35`.
 Assessor and relevant session context: Codex active session with study history and owner decisions available; not independent or blind assessment. No immutable assessor model identity recorded.
 
 ## Coverage and execution results
@@ -90,6 +90,8 @@ The declared contamination stop applies; no further subject was dispatched.
 
 Acceptance is descriptive-only. This partial batch provides one successful initiating-change original observation and one genuine reporting inconsistency, with no valid control comparison or repetition evidence.
 It does not establish the full expanded baseline, local-change behavior, isolated diagnostic performance, a skill contribution, or readiness for a rewrite.
-Earlier frozen observations and assessments are unchanged; this incident is not evidence that their traces contained the same exposure.
-The [protocol checkpoint](protocol.md#coverage-baseline-coverage-baseline-01) owns recovery: qualify a read boundary with an offline reproduction before resuming the remaining slots, record any runtime change, and retain the excluded attempt without automatic replacement.
+The targeted historical trace audit below found no corresponding markers in earlier retained traces; its capture and search limits apply.
+The [protocol checkpoint](protocol.md#coverage-baseline-coverage-baseline-01) owns recovery: the qualified input-isolation-1 amendment governs remaining slots; retain the excluded attempt without automatic replacement.
 Current spending and revised effort forecast are in [combined accounting](../concise-writing/protocol.md#storage-and-accounting).
+
+Historical isolation check: the [round-9 trace audit](../../reviews/2026-09-21-round9-review.md#historical-trace-audit) found no targeted exposure markers in the 46 earlier attempts. It records seven stdout-only capture limits and does not establish exhaustive isolation; existing setup judgments and scores are unchanged.

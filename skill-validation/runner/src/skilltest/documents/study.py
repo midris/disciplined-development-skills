@@ -407,6 +407,7 @@ def assessment(raw, path, ctx, planned=None, definitions=None):
             expected_rows.add((case, condition, "functional outcome"))
         if r and r["setup"]["status"] == "valid":
             valid.append((number, a, r))
+    unresolved_groups = set()
     if definitions:
         for case, condition in groups:
             # Protocol collection definitions fill only wholly unrepresented
@@ -420,6 +421,7 @@ def assessment(raw, path, ctx, planned=None, definitions=None):
             expected_rows.update((case, condition, cid) for cid, (_, cs) in cards.items() if condition in cs)
             expected_rows.add((case, condition, "functional outcome"))
     elif groups - {key[:2] for key in expected_rows}:
+        unresolved_groups = groups - {key[:2] for key in expected_rows}
         ctx.error(
             path,
             "Aggregate results",
@@ -494,6 +496,10 @@ def assessment(raw, path, ctx, planned=None, definitions=None):
         if key in seen:
             ctx.error(path, line, "duplicate-id", "Duplicate aggregate row")
         seen.add(key)
+        # Missing protocol definitions are unsupported, not evidence that a
+        # declared but unattempted group contains unexpected criteria.
+        if len(key) == 3 and key[:2] in unresolved_groups:
+            continue
         if len(key) != 3 or key not in expected_rows:
             ctx.error(path, line, "criterion-coverage", f"Unexpected aggregate row: {key}")
             continue
@@ -566,7 +572,7 @@ def assessment(raw, path, ctx, planned=None, definitions=None):
                         )
         except ValueError as error:
             ctx.error(path, line, "aggregate", str(error))
-    if seen != expected_rows:
+    if expected_rows - seen:
         ctx.error(
             path,
             "Aggregate results",

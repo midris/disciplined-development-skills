@@ -1126,6 +1126,10 @@ def test_unattempted_group_retains_protocol_criterion_coverage(document_study, c
     args = ["docs", "check", str(root / "protocol.md"), "--ready-for", "assessment", "--batch", "example", "--json"]
     assert main(args) == 0
     assert not any(d["rule"] == "criterion-coverage" for d in json.loads(capsys.readouterr().out)["diagnostics"])
+    assert main(["docs", "check", str(root / "example-assessment.md"), "--json"]) != 0
+    diagnostics = json.loads(capsys.readouterr().out)["diagnostics"]
+    assert any(d["rule"] == "unsupported-coverage" for d in diagnostics)
+    assert not any(d["rule"] == "criterion-coverage" for d in diagnostics)
     write("example-assessment.md", report.replace("| example / original / F1 | 0 | 0 | 0 | none |\n", ""))
     assert main(args) == 1
     assert any(d["rule"] == "criterion-coverage" for d in json.loads(capsys.readouterr().out)["diagnostics"])

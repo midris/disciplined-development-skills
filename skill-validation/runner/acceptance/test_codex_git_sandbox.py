@@ -113,7 +113,7 @@ finally:
     (evidence / "operations.json").write_text(json.dumps(operations, indent=2) + "\n")
 '''
     (root / "probe.py").write_text(inner)
-    command.extend(["--", str(Path(shutil.which("python3")).resolve()), "-c", inner, str(evidence)])
+    command.extend(["--", str(Path(shutil.which("python3", path="/opt/homebrew/bin:/usr/bin:/bin")).resolve()), "-c", inner, str(evidence)])
     (root / "sandbox-command.json").write_text(json.dumps(command, indent=2) + "\n")
     result = subprocess.run(command, cwd=fixture, env=environment, capture_output=True, text=True, timeout=60)
     (root / "stdout.txt").write_text(result.stdout)

@@ -97,7 +97,7 @@ for args in [('add','input.txt'), ('config','test.write','forbidden')]:
     denied.append('git ' + args[0])
 print(json.dumps({'status':'PASS', 'denied':denied, 'assessment':'read evidence successfully'}))
 ''')
-    command.extend([str(Path(shutil.which("python3")).resolve()), str(probe), str(fixture), str(evidence), str(root/'outside.txt')])
+    command.extend([str(Path(shutil.which("python3", path="/opt/homebrew/bin:/usr/bin:/bin")).resolve()), str(probe), str(fixture), str(evidence), str(root/'outside.txt')])
     command.append(env['TMPDIR'])
     (root/'sandbox-command.json').write_text(json.dumps(command, indent=2)+'\n')
     try:
