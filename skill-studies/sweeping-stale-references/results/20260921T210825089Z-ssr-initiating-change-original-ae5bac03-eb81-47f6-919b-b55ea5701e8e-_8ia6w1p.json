@@ -53,7 +53,7 @@
         "sha256": "71d73b6145bdec3d733faf088e476146b804a453fd7616fab70e742000085ee7",
         "version": null
       },
-      "selector": "Full delivered tool responses; control contamination is response line 62, preceding command/event line 61."
+      "selector": "Full original-condition session: skill and task reads, tool responses, verification and commit; final assistant report at line 62."
     },
     {
       "id": "final",
