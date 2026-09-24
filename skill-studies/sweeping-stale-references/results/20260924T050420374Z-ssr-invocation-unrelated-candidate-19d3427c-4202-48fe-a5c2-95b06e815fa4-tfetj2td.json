@@ -1,0 +1,98 @@
+{
+  "schema_version": "2",
+  "record_kind": "execution result",
+  "assessed_at": "2026-09-24T05:05:24.275091+00:00",
+  "run_id": "20260924T050420374Z-ssr-invocation-unrelated-candidate-19d3427c-4202-48fe-a5c2-95b06e815fa4-tfetj2td",
+  "condition": "candidate",
+  "assessor": {
+    "name": "Codex active session",
+    "method": "active session",
+    "model": null,
+    "session_id": null,
+    "context": "Same active session prepared and inspected the study; not independent or blind."
+  },
+  "evidence": [
+    {
+      "id": "runner",
+      "artifact": {
+        "path": "/Users/simon/work/personal/skill-study-private/sweeping-stale-references/development/20260924T050420374Z-ssr-invocation-unrelated-candidate-19d3427c-4202-48fe-a5c2-95b06e815fa4-tfetj2td/result.json",
+        "sha256": "44ecc42f8e46d783ce7e67713162a6b3b52403a9d25a1808cb9b4587fc8c9a4f",
+        "version": null
+      },
+      "selector": "Mechanical completion, supplied identities and cleanup."
+    },
+    {
+      "id": "trace",
+      "artifact": {
+        "path": "/Users/simon/work/personal/skill-study-private/sweeping-stale-references/development/20260924T050420374Z-ssr-invocation-unrelated-candidate-19d3427c-4202-48fe-a5c2-95b06e815fa4-tfetj2td/provider-session.jsonl",
+        "sha256": "686be5cb92f8bcc9563372a2a9a9e88c6d282112da02e0b4fddd4f33d93f787f",
+        "version": null
+      },
+      "selector": "Complete ordered model-visible context, calls and outputs."
+    },
+    {
+      "id": "final",
+      "artifact": {
+        "path": "/Users/simon/work/personal/skill-study-private/sweeping-stale-references/development/20260924T050420374Z-ssr-invocation-unrelated-candidate-19d3427c-4202-48fe-a5c2-95b06e815fa4-tfetj2td/final.txt",
+        "sha256": "4cb9f6dc4d82e41ce63ef9cb421c037088c2f932c674594a07816669383a7b76",
+        "version": null
+      },
+      "selector": "Final delivered response."
+    },
+    {
+      "id": "checks",
+      "artifact": {
+        "path": "/Users/simon/work/personal/skill-study-private/sweeping-stale-references/development/20260924T050420374Z-ssr-invocation-unrelated-candidate-19d3427c-4202-48fe-a5c2-95b06e815fa4-tfetj2td.checks.json",
+        "sha256": "dceaa1fd6cef50d692885290c3c743d7cb511e077d3a3b224454cb4434016eac",
+        "version": null
+      },
+      "selector": "Disposable-copy Git history/diff, project artifacts, ordered trace projection and independent replay."
+    }
+  ],
+  "setup": {
+    "status": "valid",
+    "reason": "Actual native catalog at trace line 3 exposes candidate SSR at the supplied path alongside five built-in skills; complete task and action capture is available. The prompt does not request SSR, and setup/input identities are valid.",
+    "evidence": [
+      "runner",
+      "trace",
+      "checks"
+    ]
+  },
+  "criteria": [
+    {
+      "id": "D1",
+      "dimension": "procedural",
+      "judgment": "met",
+      "reason": "Complete trace shows only task and relevant code/config reads (lines 13\u201323); no SSR selection, loading, sweep or account. The final explanation at line 26 does not apply SSR.",
+      "consequence": "Report separately from functional outcome; affects comparison interpretation.",
+      "evidence": [
+        "trace",
+        "checks"
+      ]
+    }
+  ],
+  "procedural_summary": "Appropriate non-use in an obviously unrelated explanation task; D1 alone is assessed.",
+  "observations": [
+    {
+      "dimension": "procedural",
+      "description": "The answer correctly explains 30 \u00d7 60 + 100 = 1900. All twelve supplied files are byte-identical, with no extra project file or task commit. These observations are outside SSR functional counts.",
+      "consequence": "Descriptive task evidence only; functional outcome is not measured.",
+      "evidence": [
+        "trace",
+        "final",
+        "checks"
+      ]
+    }
+  ],
+  "uncertainty": [
+    "One distant sanity task does not establish near-boundary over-trigger resistance."
+  ],
+  "result_id": "comprehensive-comparison-02-invocation-unrelated-candidate-1",
+  "functional_result": "not measured",
+  "manifest": {
+    "path": "skill-studies/sweeping-stale-references/cases/invocation-unrelated/comparison-02-manifest.json",
+    "sha256": "4fff9d0fe7a8f739f82aa2ed52ffe1e6733be5f5c247d29aacef55abfd4c6aa6",
+    "version": "1",
+    "git_revision": "37ab0390b04630335d15f6d246b2b042f0e07f51"
+  }
+}
