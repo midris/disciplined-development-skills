@@ -1,0 +1,147 @@
+{
+  "format_version": "1",
+  "manifest_id": "ssr-local-change-claude-comparison-01",
+  "study_id": "sweeping-stale-references",
+  "case_id": "local-change",
+  "status": "draft",
+  "created_at": "2026-09-24",
+  "source_revision": "",
+  "authorities": {
+    "spec": {
+      "path": "plans/specs/2026-09-11-model-driven-skill-testing-framework.md",
+      "sha256": "3ef6a6def5201983aec2a6345ed962c7fede6ef12474c8876269f60528403083",
+      "version": null
+    },
+    "protocol": {
+      "path": "skill-studies/sweeping-stale-references/protocol.md",
+      "sha256": "56dbb7935deb5d2bf081611d2987c4ee580d04e52c62343452a2afac5708242f",
+      "version": "1"
+    },
+    "format_contract": {
+      "path": "skill-studies/formats/companion-formats.md",
+      "sha256": "e9956447d56e22f4ffc8681dfee887a9093c845c54be625098d45fecacd48781",
+      "version": "1"
+    },
+    "execution_result_schema": {
+      "path": "skill-studies/formats/execution-result-v2.schema.json",
+      "sha256": "81902ed03e807804404c0d6ba7a0092a1c311c9eef45ee88c89708ce50d7c2c2",
+      "version": "2"
+    },
+    "policy": {
+      "path": "skill-studies/sweeping-stale-references/assessment-policies/SSR-assessment-3.txt",
+      "sha256": "5d057d11f678ae3fa63c48957446aded13ccc5dcb8babab2856d0232d49e08bb",
+      "version": "SSR-assessment-3"
+    },
+    "criteria": [
+      {
+        "path": "skill-studies/sweeping-stale-references/cases/local-change/claude-comparison-assessment.md",
+        "sha256": "98dc38b0ff57d518d7ae6f6c0f722add6481a2af50b3b03116126f00bcfe9d4a",
+        "version": "3"
+      }
+    ]
+  },
+  "conditions": [
+    {
+      "id": "original",
+      "configuration": {
+        "path": "skill-studies/sweeping-stale-references/cases/local-change/claude-comparison-original.json",
+        "sha256": "3c24033e5cc6eced6fef445a0dcc735ea42cb22c39bda44b11839472872b0940",
+        "version": "0.2"
+      },
+      "target_skill": "skill-studies/sweeping-stale-references/cases/skill-original/SKILL.md"
+    },
+    {
+      "id": "candidate",
+      "configuration": {
+        "path": "skill-studies/sweeping-stale-references/cases/local-change/claude-comparison-candidate.json",
+        "sha256": "bcc8cac6e3aec2bd852bbe048fc276f9648293917c7e047a9ef7f4fc8851f49c",
+        "version": "0.2"
+      },
+      "target_skill": "skill-studies/sweeping-stale-references/cases/skill-candidate-comprehensive/SKILL.md"
+    }
+  ],
+  "subject_sources": [
+    {
+      "path": "skill-studies/sweeping-stale-references/cases/local-change/claude-comparison-candidate-prompt.md",
+      "sha256": "2ab1012e470f5ad978d8f758c974e31b8a6276831cf1eee2527011322deb26b1",
+      "version": null
+    },
+    {
+      "path": "skill-studies/sweeping-stale-references/cases/local-change/claude-comparison-original-prompt.md",
+      "sha256": "2ab1012e470f5ad978d8f758c974e31b8a6276831cf1eee2527011322deb26b1",
+      "version": null
+    },
+    {
+      "path": "skill-studies/sweeping-stale-references/cases/local-change/claude-comparison.gitignore",
+      "sha256": "25b48a27d48b2bb74e9953545e5d264de141bbc35fed11a9895033aaec4a3837",
+      "version": null
+    },
+    {
+      "path": "skill-studies/sweeping-stale-references/cases/local-change/fixture/README.md",
+      "sha256": "e0864145d14cbb34906a8013552375f51cd6229e11cab1b86c9f49f93712999b",
+      "version": null
+    },
+    {
+      "path": "skill-studies/sweeping-stale-references/cases/local-change/fixture/archive/2024-membership.md",
+      "sha256": "42ab9ea6404eb9d9efea77a768e6e9b3abbee5331ccd541cfb6e55960d702d47",
+      "version": null
+    },
+    {
+      "path": "skill-studies/sweeping-stale-references/cases/local-change/fixture/config/account.json",
+      "sha256": "8bfd24d96962f4ed647f95009a87cf8f08ecd0f4b152c88e05b44b064560ed85",
+      "version": null
+    },
+    {
+      "path": "skill-studies/sweeping-stale-references/cases/local-change/fixture/docs/billing.md",
+      "sha256": "8649eba204ece9d490b9506718b805e0cee69dfaad9e975d5232e87a5fa5b028",
+      "version": null
+    },
+    {
+      "path": "skill-studies/sweeping-stale-references/cases/local-change/fixture/docs/glossary.md",
+      "sha256": "8330f2c33fb2c6020088abba05b8f7e2eb741b543da73b9e5e89dcaea852a6ec",
+      "version": null
+    },
+    {
+      "path": "skill-studies/sweeping-stale-references/cases/local-change/fixture/docs/shipping.md",
+      "sha256": "8e7974b71367741874b70676bbb7105d0c501d02bb2aa6b0743456265f64dea0",
+      "version": null
+    },
+    {
+      "path": "skill-studies/sweeping-stale-references/cases/local-change/task.md",
+      "sha256": "088ebc09534a24ec492db6779fd05f6ffe77e87c157f8f45f04b0b18209347ad",
+      "version": null
+    },
+    {
+      "path": "skill-studies/sweeping-stale-references/cases/skill-candidate-comprehensive/SKILL.md",
+      "sha256": "15992341f7ab2fb1e4d8a775092199d7d4e6a9de1167895dbe5a805aeafbd38c",
+      "version": null
+    },
+    {
+      "path": "skill-studies/sweeping-stale-references/cases/skill-original/SKILL.md",
+      "sha256": "d6812c33cae026807bbb3ebe851d93b60b513dd87ea5efd98aea28f5c02f9157",
+      "version": null
+    }
+  ],
+  "controller_only": [
+    {
+      "path": "skill-studies/sweeping-stale-references/cases/local-change/expected.md",
+      "sha256": "c9000020e418a56c56c96886a7863333a53e955464f22d30fd666ca43edcf26d",
+      "version": null
+    },
+    {
+      "path": "skill-studies/sweeping-stale-references/coverage-expansion.md",
+      "sha256": "f31f6f63f510f7c87bd7024c3499a670e7d46f549abbd9075d7ce6d7628574b2",
+      "version": null
+    },
+    {
+      "path": "skill-studies/sweeping-stale-references/expansion-qualification.md",
+      "sha256": "1f166f84bdb8c792be770a41cccf3340585a06a558b16e26163bc444f75b9214",
+      "version": null
+    },
+    {
+      "path": "skill-studies/sweeping-stale-references/test_expansion_fixtures.py",
+      "sha256": "ed5b962883e76be91a6b1c3d66e2b03ecc25b9509cd68c9ffe638c62696011a8",
+      "version": null
+    }
+  ]
+}

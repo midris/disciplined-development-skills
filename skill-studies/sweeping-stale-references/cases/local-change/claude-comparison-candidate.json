@@ -1,0 +1,49 @@
+{
+  "schema_version": "0.2",
+  "id": "ssr-claude-local-change-candidate",
+  "prompt": "claude-comparison-candidate-prompt.md",
+  "fixtures": [
+    {
+      "source": "claude-comparison.gitignore",
+      "target": ".gitignore"
+    },
+    {
+      "source": "fixture/README.md",
+      "target": "README.md"
+    },
+    {
+      "source": "fixture/archive/2024-membership.md",
+      "target": "archive/2024-membership.md"
+    },
+    {
+      "source": "fixture/config/account.json",
+      "target": "config/account.json"
+    },
+    {
+      "source": "fixture/docs/billing.md",
+      "target": "docs/billing.md"
+    },
+    {
+      "source": "fixture/docs/glossary.md",
+      "target": "docs/glossary.md"
+    },
+    {
+      "source": "fixture/docs/shipping.md",
+      "target": "docs/shipping.md"
+    },
+    {
+      "source": "task.md",
+      "target": "TASK.md"
+    },
+    {
+      "source": "../skill-candidate-comprehensive/SKILL.md",
+      "target": ".claude/skills/sweeping-stale-references/SKILL.md"
+    }
+  ],
+  "execution": {
+    "provider": "claude",
+    "model": "claude-sonnet-5",
+    "effort": "low",
+    "permissions": "workspace-write"
+  }
+}

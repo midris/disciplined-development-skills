@@ -1,0 +1,57 @@
+{
+  "schema_version": "0.2",
+  "id": "ssr-claude-moved-guide-candidate",
+  "prompt": "claude-comparison-candidate-prompt.md",
+  "fixtures": [
+    {
+      "source": "claude-comparison.gitignore",
+      "target": ".gitignore"
+    },
+    {
+      "source": "../pilot-02/fixture/README.md",
+      "target": "README.md"
+    },
+    {
+      "source": "../pilot-02/fixture/docs/index.md",
+      "target": "docs/index.md"
+    },
+    {
+      "source": "../pilot-02/fixture/docs/reference/setup.md",
+      "target": "docs/reference/setup.md"
+    },
+    {
+      "source": "../pilot-02/fixture/docs/tutorials/quickstart.md",
+      "target": "docs/tutorials/quickstart.md"
+    },
+    {
+      "source": "../pilot-02/fixture/plans/completed/docs-layout.md",
+      "target": "plans/completed/docs-layout.md"
+    },
+    {
+      "source": "../pilot-02/fixture/scripts/export-guide.sh",
+      "target": "scripts/export-guide.sh"
+    },
+    {
+      "source": "../pilot-02/fixture/vendor/widget/README.md",
+      "target": "vendor/widget/README.md"
+    },
+    {
+      "source": "../pilot-02/fixture/vendor/widget/setup.md",
+      "target": "vendor/widget/setup.md"
+    },
+    {
+      "source": "../pilot-02/task.md",
+      "target": "TASK.md"
+    },
+    {
+      "source": "../skill-candidate-comprehensive/SKILL.md",
+      "target": ".claude/skills/sweeping-stale-references/SKILL.md"
+    }
+  ],
+  "execution": {
+    "provider": "claude",
+    "model": "claude-sonnet-5",
+    "effort": "low",
+    "permissions": "workspace-write"
+  }
+}

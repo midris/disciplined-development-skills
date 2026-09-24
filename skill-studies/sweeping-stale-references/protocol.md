@@ -2,8 +2,8 @@
 
 Format version: `1`
 Study ID: `sweeping-stale-references`
-Status: comprehensive-comparison-02 complete: all 34 attempts retained and assessed with valid setup; no retries or replacements. Adoption and skill editing remain unauthorized.
-Current action: review the [completed Claude smoke assessment](claude-smoke-01-assessment.md), including its native invocation miss; no further collection is selected. Comprehensive-comparison-02 is complete; its candidate-contract/adoption decision remains deferred. All 92 subject calls are spent; no automatic retry or additional collection is authorized.
+Status: comprehensive-comparison-02 complete: all 34 attempts retained and assessed with valid setup; no retries or replacements. Adoption and skill editing remain unauthorized; the owner accepts the rewrite’s changed local reporting as intentional.
+Current action: freeze, run and assess the owner-authorized 34-call Claude comparison of original and comprehensive rewrite SSR. Comprehensive-comparison-02 is complete; its candidate-contract/adoption decision remains deferred. The prior 92 subject calls are spent; 34 new comparison calls are authorized, with no automatic retry.
 The [plan](../../plans/2026-09-11-model-driven-skill-testing.md) owns progress; the [spec](../../plans/specs/2026-09-11-model-driven-skill-testing-framework.md) owns the workflow.
 The [core baseline](core-baseline-01-assessment.md) retains its two setup exclusions and runtime strata; the [comparison](comprehensive-comparison-01-assessment.md) records twelve valid executions of the original and preserved candidate. Both collection scopes are spent. Storage and accounting retains the SSR closing checkpoint and links the current combined totals.
 
@@ -186,6 +186,61 @@ SSR collection used config schema 0.2 and result schema 0.4; retained bundles ke
 Control contribution claims require evidence that omitted guidance was not loaded. Record limits on observed isolation rather than claiming exhaustive host-wide exclusion.
 
 Pre-baseline development is closed at two pairs. Do not reopen it for a new facet; a named readiness defect requires a separately authorized diagnostic exception.
+### Comparison: claude-comparison-01
+
+Status: owner-authorized preparation and collection, 2026-09-24. Owner request: “run an equivalent of a full codex run with Claude”, with multiple discovery runs and both baseline and rewrite SSR.
+Scope: mirror comprehensive-comparison-02: 34 sequential calls; original/candidate each run twice on five ordinary cases, one pressure case and two positive native cases, then once on unrelated non-use sanity.
+Purpose: compare both skill versions on Claude and repeat native discovery observations after the smoke miss. Do not pool the two smoke calls or historical Codex results into this batch.
+Inclusion: descriptive-only; Include all valid-setup executions regardless of outcome. Keep invalid setup, unknown evidence and unattempted slots explicit. No automatic retry or replacement.
+Budget: 34 additional subject calls, zero evaluator/authoring/retry calls; combined subject ceiling rises from 92 to 126. Active-work guideline: 120 minutes including collection waits and assessment; CW owns combined accounting.
+Runtime: Claude Code 2.1.280, binary SHA-256 `387a5c5dcdbb815085edf0baf79591f9d8894efe922bceaf3d75b1b08055229d`, `claude-sonnet-5`, low effort, workspace-write, 900-second per-attempt limit. Pin corrected runner including private TMPPREFIX at invocation authority.
+Preflight: rerun installed actual-CLI and filesystem isolation checks in both modes, verify input parity and supplied skill identities, and pass collection readiness before dispatch. Existing Shiv compatibility passed under this runtime's prepared Python; no fixture/runtime dependencies change here.
+Native context: SSR is the sole supplied project skill, alongside Claude bundled skills; retain each production init catalog and complete tool trace. Scripted qualification establishes description/body delivery; production captures catalog names and body-load events, not complete initial request payloads.
+Provider adaptations: only Claude model/provider selection, .claude/skills mount/read paths and matching ignore entries; original/candidate receive identical task/project bytes.
+Assessment: fixed functional and invocation criteria and SSR policy 3. Owner clarification accepts the rewrite's changed local reporting contract; local-change definition v3 keeps original's n/a rule and accepts candidate's accurate positive inventory when unrelated matches exist elsewhere. Historical scores remain unchanged, but the old reporting difference no longer blocks adoption. Other observed accounting boundaries remain visible and do not independently establish skill defects.
+Stop for unknown charge, preservation failure, changed runtime identity, suspected contamination, missing required capture or unresolved setup/cleanup fault; a valid behavioral or invocation failure alone does not stop the batch.
+Commands: run `skill-validation/runner/.venv/bin/skilltest run CONFIG` once per row; retain and inspect terminal evidence before continuing. Assess in the active session using disposable copies. No skill authoring or adoption is selected by this collection.
+Inputs: [discovery-shiv manifest](cases/discovery-shiv/claude-comparison-manifest.json), [moved-guide manifest](cases/moved-guide/claude-comparison-manifest.json), [semantic-delivery manifest](cases/semantic-delivery/claude-comparison-manifest.json), [initiating-change manifest](cases/initiating-change/claude-comparison-manifest.json), [local-change manifest](cases/local-change/claude-comparison-manifest.json), [pressure-repair manifest](cases/pressure-repair/claude-comparison-manifest.json), [invocation-change manifest](cases/invocation-change/claude-comparison-manifest.json), [invocation-review manifest](cases/invocation-review/claude-comparison-manifest.json), [invocation-unrelated manifest](cases/invocation-unrelated/claude-comparison-manifest.json).
+
+Attempt index: [claude-comparison-01-run-index.json](claude-comparison-01-run-index.json).
+
+| Order | Case | Condition | Repetition | CONFIG |
+|---:|---|---|---:|---|
+| 1 | discovery-shiv | original | 1 | `skill-studies/sweeping-stale-references/cases/discovery-shiv/claude-comparison-original.json` |
+| 2 | discovery-shiv | candidate | 1 | `skill-studies/sweeping-stale-references/cases/discovery-shiv/claude-comparison-candidate.json` |
+| 3 | discovery-shiv | candidate | 2 | `skill-studies/sweeping-stale-references/cases/discovery-shiv/claude-comparison-candidate.json` |
+| 4 | discovery-shiv | original | 2 | `skill-studies/sweeping-stale-references/cases/discovery-shiv/claude-comparison-original.json` |
+| 5 | moved-guide | original | 1 | `skill-studies/sweeping-stale-references/cases/moved-guide/claude-comparison-original.json` |
+| 6 | moved-guide | candidate | 1 | `skill-studies/sweeping-stale-references/cases/moved-guide/claude-comparison-candidate.json` |
+| 7 | moved-guide | candidate | 2 | `skill-studies/sweeping-stale-references/cases/moved-guide/claude-comparison-candidate.json` |
+| 8 | moved-guide | original | 2 | `skill-studies/sweeping-stale-references/cases/moved-guide/claude-comparison-original.json` |
+| 9 | semantic-delivery | original | 1 | `skill-studies/sweeping-stale-references/cases/semantic-delivery/claude-comparison-original.json` |
+| 10 | semantic-delivery | candidate | 1 | `skill-studies/sweeping-stale-references/cases/semantic-delivery/claude-comparison-candidate.json` |
+| 11 | semantic-delivery | candidate | 2 | `skill-studies/sweeping-stale-references/cases/semantic-delivery/claude-comparison-candidate.json` |
+| 12 | semantic-delivery | original | 2 | `skill-studies/sweeping-stale-references/cases/semantic-delivery/claude-comparison-original.json` |
+| 13 | initiating-change | original | 1 | `skill-studies/sweeping-stale-references/cases/initiating-change/claude-comparison-original.json` |
+| 14 | initiating-change | candidate | 1 | `skill-studies/sweeping-stale-references/cases/initiating-change/claude-comparison-candidate.json` |
+| 15 | initiating-change | candidate | 2 | `skill-studies/sweeping-stale-references/cases/initiating-change/claude-comparison-candidate.json` |
+| 16 | initiating-change | original | 2 | `skill-studies/sweeping-stale-references/cases/initiating-change/claude-comparison-original.json` |
+| 17 | local-change | original | 1 | `skill-studies/sweeping-stale-references/cases/local-change/claude-comparison-original.json` |
+| 18 | local-change | candidate | 1 | `skill-studies/sweeping-stale-references/cases/local-change/claude-comparison-candidate.json` |
+| 19 | local-change | candidate | 2 | `skill-studies/sweeping-stale-references/cases/local-change/claude-comparison-candidate.json` |
+| 20 | local-change | original | 2 | `skill-studies/sweeping-stale-references/cases/local-change/claude-comparison-original.json` |
+| 21 | pressure-repair | original | 1 | `skill-studies/sweeping-stale-references/cases/pressure-repair/claude-comparison-original.json` |
+| 22 | pressure-repair | candidate | 1 | `skill-studies/sweeping-stale-references/cases/pressure-repair/claude-comparison-candidate.json` |
+| 23 | pressure-repair | candidate | 2 | `skill-studies/sweeping-stale-references/cases/pressure-repair/claude-comparison-candidate.json` |
+| 24 | pressure-repair | original | 2 | `skill-studies/sweeping-stale-references/cases/pressure-repair/claude-comparison-original.json` |
+| 25 | invocation-change | original | 1 | `skill-studies/sweeping-stale-references/cases/invocation-change/claude-comparison-original.json` |
+| 26 | invocation-change | candidate | 1 | `skill-studies/sweeping-stale-references/cases/invocation-change/claude-comparison-candidate.json` |
+| 27 | invocation-change | candidate | 2 | `skill-studies/sweeping-stale-references/cases/invocation-change/claude-comparison-candidate.json` |
+| 28 | invocation-change | original | 2 | `skill-studies/sweeping-stale-references/cases/invocation-change/claude-comparison-original.json` |
+| 29 | invocation-review | original | 1 | `skill-studies/sweeping-stale-references/cases/invocation-review/claude-comparison-original.json` |
+| 30 | invocation-review | candidate | 1 | `skill-studies/sweeping-stale-references/cases/invocation-review/claude-comparison-candidate.json` |
+| 31 | invocation-review | candidate | 2 | `skill-studies/sweeping-stale-references/cases/invocation-review/claude-comparison-candidate.json` |
+| 32 | invocation-review | original | 2 | `skill-studies/sweeping-stale-references/cases/invocation-review/claude-comparison-original.json` |
+| 33 | invocation-unrelated | original | 1 | `skill-studies/sweeping-stale-references/cases/invocation-unrelated/claude-comparison-original.json` |
+| 34 | invocation-unrelated | candidate | 1 | `skill-studies/sweeping-stale-references/cases/invocation-unrelated/claude-comparison-candidate.json` |
+
 ### Smoke: claude-smoke-01
 
 Status: complete; both authorized calls retained and assessed. Owner instruction on 2026-09-24: “apply the runner fixes and run the smoke tests”, accepting the two-smoke scope recorded in [qualification](claude-smoke-qualification.md).
@@ -475,7 +530,7 @@ At that closing checkpoint, 30 subject calls had been dispatched and capacity wa
 
 
 Current combined invocation accounting also includes the CW [baseline](../concise-writing/contribution-baseline-01-run-index.json) and [comparison](../concise-writing/comprehensive-comparison-01-run-index.json), plus the expansion and comprehensive-comparison-02 indexes above.
-Dispatched calls are **92 subject, 0 evaluator, 0 authoring, 0 retry**; remaining outer capacity is **0 / 12 / 4 / 4** against the [active plan](../../plans/2026-09-11-model-driven-skill-testing.md#limits-and-information-boundaries). The CW protocol owns current combined time and forecast; all ten expansion and 34 comparison slots are spent; both Claude smoke calls are spent.
+Dispatched calls are **92 subject, 0 evaluator, 0 authoring, 0 retry**; remaining outer capacity is **34 / 12 / 4 / 4** against the [active plan](../../plans/2026-09-11-model-driven-skill-testing.md#limits-and-information-boundaries). The CW protocol owns current combined time and forecast; all ten expansion and 34 comparison slots are spent; both Claude smoke calls are spent.
 
 
 Historical SSR closing forecast (2026-09-17):

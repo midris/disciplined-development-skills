@@ -1,0 +1,297 @@
+{
+  "schema_version": "0.2",
+  "id": "ssr-claude-discovery-shiv-candidate",
+  "prompt": "claude-comparison-candidate-prompt.md",
+  "fixtures": [
+    {
+      "source": "fixture/.github/workflows/offline-example.yml",
+      "target": ".github/workflows/offline-example.yml"
+    },
+    {
+      "source": "fixture/.github/workflows/tox.yml",
+      "target": ".github/workflows/tox.yml"
+    },
+    {
+      "source": "claude-comparison.gitignore",
+      "target": ".gitignore"
+    },
+    {
+      "source": "fixture/.readthedocs.yml",
+      "target": ".readthedocs.yml"
+    },
+    {
+      "source": "fixture/.runtime/click/__init__.py",
+      "target": ".runtime/click/__init__.py"
+    },
+    {
+      "source": "fixture/.runtime/click/_compat.py",
+      "target": ".runtime/click/_compat.py"
+    },
+    {
+      "source": "fixture/.runtime/click/_termui_impl.py",
+      "target": ".runtime/click/_termui_impl.py"
+    },
+    {
+      "source": "fixture/.runtime/click/_textwrap.py",
+      "target": ".runtime/click/_textwrap.py"
+    },
+    {
+      "source": "fixture/.runtime/click/_utils.py",
+      "target": ".runtime/click/_utils.py"
+    },
+    {
+      "source": "fixture/.runtime/click/_winconsole.py",
+      "target": ".runtime/click/_winconsole.py"
+    },
+    {
+      "source": "fixture/.runtime/click/core.py",
+      "target": ".runtime/click/core.py"
+    },
+    {
+      "source": "fixture/.runtime/click/decorators.py",
+      "target": ".runtime/click/decorators.py"
+    },
+    {
+      "source": "fixture/.runtime/click/exceptions.py",
+      "target": ".runtime/click/exceptions.py"
+    },
+    {
+      "source": "fixture/.runtime/click/formatting.py",
+      "target": ".runtime/click/formatting.py"
+    },
+    {
+      "source": "fixture/.runtime/click/globals.py",
+      "target": ".runtime/click/globals.py"
+    },
+    {
+      "source": "fixture/.runtime/click/parser.py",
+      "target": ".runtime/click/parser.py"
+    },
+    {
+      "source": "fixture/.runtime/click/py.typed",
+      "target": ".runtime/click/py.typed"
+    },
+    {
+      "source": "fixture/.runtime/click/shell_completion.py",
+      "target": ".runtime/click/shell_completion.py"
+    },
+    {
+      "source": "fixture/.runtime/click/termui.py",
+      "target": ".runtime/click/termui.py"
+    },
+    {
+      "source": "fixture/.runtime/click/testing.py",
+      "target": ".runtime/click/testing.py"
+    },
+    {
+      "source": "fixture/.runtime/click/types.py",
+      "target": ".runtime/click/types.py"
+    },
+    {
+      "source": "fixture/.runtime/click/utils.py",
+      "target": ".runtime/click/utils.py"
+    },
+    {
+      "source": "fixture/.runtime/licenses/click/LICENSE.txt",
+      "target": ".runtime/licenses/click/LICENSE.txt"
+    },
+    {
+      "source": "fixture/CONTRIBUTING.md",
+      "target": "CONTRIBUTING.md"
+    },
+    {
+      "source": "fixture/LICENSE",
+      "target": "LICENSE"
+    },
+    {
+      "source": "fixture/MANIFEST.in",
+      "target": "MANIFEST.in"
+    },
+    {
+      "source": "fixture/Makefile",
+      "target": "Makefile"
+    },
+    {
+      "source": "fixture/NOTICE",
+      "target": "NOTICE"
+    },
+    {
+      "source": "fixture/README.md",
+      "target": "README.md"
+    },
+    {
+      "source": "fixture/build-support/release/example.mk",
+      "target": "build-support/release/example.mk"
+    },
+    {
+      "source": "fixture/docs/api.rst",
+      "target": "docs/api.rst"
+    },
+    {
+      "source": "fixture/docs/cli-reference.rst",
+      "target": "docs/cli-reference.rst"
+    },
+    {
+      "source": "fixture/docs/conf.py",
+      "target": "docs/conf.py"
+    },
+    {
+      "source": "fixture/docs/django.rst",
+      "target": "docs/django.rst"
+    },
+    {
+      "source": "fixture/docs/history/output-option.md",
+      "target": "docs/history/output-option.md"
+    },
+    {
+      "source": "fixture/docs/history.rst",
+      "target": "docs/history.rst"
+    },
+    {
+      "source": "fixture/docs/index.rst",
+      "target": "docs/index.rst"
+    },
+    {
+      "source": "fixture/docs/local-development.md",
+      "target": "docs/local-development.md"
+    },
+    {
+      "source": "fixture/docs/requirements.txt",
+      "target": "docs/requirements.txt"
+    },
+    {
+      "source": "fixture/examples/greeting/greeting.py",
+      "target": "examples/greeting/greeting.py"
+    },
+    {
+      "source": "fixture/logo.png",
+      "target": "logo.png"
+    },
+    {
+      "source": "fixture/pyproject.toml",
+      "target": "pyproject.toml"
+    },
+    {
+      "source": "fixture/scripts/build-example.sh",
+      "target": "scripts/build-example.sh"
+    },
+    {
+      "source": "fixture/setup.cfg",
+      "target": "setup.cfg"
+    },
+    {
+      "source": "fixture/src/shiv/__init__.py",
+      "target": "src/shiv/__init__.py"
+    },
+    {
+      "source": "fixture/src/shiv/__main__.py",
+      "target": "src/shiv/__main__.py"
+    },
+    {
+      "source": "fixture/src/shiv/__version__.py",
+      "target": "src/shiv/__version__.py"
+    },
+    {
+      "source": "fixture/src/shiv/bootstrap/__init__.py",
+      "target": "src/shiv/bootstrap/__init__.py"
+    },
+    {
+      "source": "fixture/src/shiv/bootstrap/environment.py",
+      "target": "src/shiv/bootstrap/environment.py"
+    },
+    {
+      "source": "fixture/src/shiv/bootstrap/filelock.py",
+      "target": "src/shiv/bootstrap/filelock.py"
+    },
+    {
+      "source": "fixture/src/shiv/bootstrap/interpreter.py",
+      "target": "src/shiv/bootstrap/interpreter.py"
+    },
+    {
+      "source": "fixture/src/shiv/builder.py",
+      "target": "src/shiv/builder.py"
+    },
+    {
+      "source": "fixture/src/shiv/cli.py",
+      "target": "src/shiv/cli.py"
+    },
+    {
+      "source": "fixture/src/shiv/constants.py",
+      "target": "src/shiv/constants.py"
+    },
+    {
+      "source": "fixture/src/shiv/info.py",
+      "target": "src/shiv/info.py"
+    },
+    {
+      "source": "fixture/src/shiv/pip.py",
+      "target": "src/shiv/pip.py"
+    },
+    {
+      "source": "fixture/test/conftest.py",
+      "target": "test/conftest.py"
+    },
+    {
+      "source": "fixture/test/package/hello/__init__.py",
+      "target": "test/package/hello/__init__.py"
+    },
+    {
+      "source": "fixture/test/package/hello/script.sh",
+      "target": "test/package/hello/script.sh"
+    },
+    {
+      "source": "fixture/test/package/setup.py",
+      "target": "test/package/setup.py"
+    },
+    {
+      "source": "fixture/test/test.zip",
+      "target": "test/test.zip"
+    },
+    {
+      "source": "fixture/test/test_bootstrap.py",
+      "target": "test/test_bootstrap.py"
+    },
+    {
+      "source": "fixture/test/test_builder.py",
+      "target": "test/test_builder.py"
+    },
+    {
+      "source": "fixture/test/test_cli.py",
+      "target": "test/test_cli.py"
+    },
+    {
+      "source": "fixture/test/test_pip.py",
+      "target": "test/test_pip.py"
+    },
+    {
+      "source": "fixture/tests_local/test_offline.py",
+      "target": "tests_local/test_offline.py"
+    },
+    {
+      "source": "fixture/tools/inventory.py",
+      "target": "tools/inventory.py"
+    },
+    {
+      "source": "fixture/tools/shiv-local.py",
+      "target": "tools/shiv-local.py"
+    },
+    {
+      "source": "fixture/tox.ini",
+      "target": "tox.ini"
+    },
+    {
+      "source": "task.md",
+      "target": "TASK.md"
+    },
+    {
+      "source": "../skill-candidate-comprehensive/SKILL.md",
+      "target": ".claude/skills/sweeping-stale-references/SKILL.md"
+    }
+  ],
+  "execution": {
+    "provider": "claude",
+    "model": "claude-sonnet-5",
+    "effort": "low",
+    "permissions": "workspace-write"
+  }
+}

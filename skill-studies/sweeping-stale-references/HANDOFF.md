@@ -12,7 +12,7 @@ This is navigation, not a duplicate progress or decision record.
 SSR comprehensive-comparison-02 and the two Claude smokes are complete; all 92 subject calls are spent.
 The [Claude assessment](claude-smoke-01-assessment.md) records a successful explicit-load repair and a native invocation miss with incomplete repair.
 Runtime fixes pass both-mode qualification, including a post-smoke heredoc scratch correction; the live evidence retains its earlier pinned runtime.
-No additional collection, retry or skill edit is selected. Candidate adoption remains deferred.
+Resume the owner-authorized 34-call Claude original/rewrite comparison from the protocol opening. No retry or skill edit is selected. The owner accepts the rewrite’s changed local reporting; historical scores stay fixed and adoption remains deferred.
 Preserve settled scenarios, criteria and historical identities; do not derive a baseline from a candidate or rescore old records to continue.
 SSR's [core assessment](core-baseline-01-assessment.md) records an unresolved Shiv category boundary: its P3 counts are not three established skill defects and do not independently justify a rewrite.
 Controller criteria, manifests and revealing evidence remain outside subject context; raw evidence stays in the protocol's external stores.

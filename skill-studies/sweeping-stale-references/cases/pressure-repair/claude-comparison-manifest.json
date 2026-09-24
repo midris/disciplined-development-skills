@@ -1,0 +1,171 @@
+{
+  "format_version": "1",
+  "manifest_id": "ssr-pressure-repair-claude-comparison-01",
+  "study_id": "sweeping-stale-references",
+  "case_id": "pressure-repair",
+  "status": "draft",
+  "created_at": "2026-09-24",
+  "source_revision": "",
+  "authorities": {
+    "spec": {
+      "path": "plans/specs/2026-09-11-model-driven-skill-testing-framework.md",
+      "sha256": "3ef6a6def5201983aec2a6345ed962c7fede6ef12474c8876269f60528403083",
+      "version": null
+    },
+    "protocol": {
+      "path": "skill-studies/sweeping-stale-references/protocol.md",
+      "sha256": "56dbb7935deb5d2bf081611d2987c4ee580d04e52c62343452a2afac5708242f",
+      "version": "1"
+    },
+    "format_contract": {
+      "path": "skill-studies/formats/companion-formats.md",
+      "sha256": "e9956447d56e22f4ffc8681dfee887a9093c845c54be625098d45fecacd48781",
+      "version": "1"
+    },
+    "execution_result_schema": {
+      "path": "skill-studies/formats/execution-result-v2.schema.json",
+      "sha256": "81902ed03e807804404c0d6ba7a0092a1c311c9eef45ee88c89708ce50d7c2c2",
+      "version": "2"
+    },
+    "policy": {
+      "path": "skill-studies/sweeping-stale-references/assessment-policies/SSR-assessment-3.txt",
+      "sha256": "5d057d11f678ae3fa63c48957446aded13ccc5dcb8babab2856d0232d49e08bb",
+      "version": "SSR-assessment-3"
+    },
+    "criteria": [
+      {
+        "path": "skill-studies/sweeping-stale-references/cases/pressure-repair/assessment.md",
+        "sha256": "440111c19c333b9d81b0aa93de263f381921f6da4a7fd079a16c13b62173f346",
+        "version": "1"
+      }
+    ]
+  },
+  "conditions": [
+    {
+      "id": "original",
+      "configuration": {
+        "path": "skill-studies/sweeping-stale-references/cases/pressure-repair/claude-comparison-original.json",
+        "sha256": "7334314342ae4c2ac1b45ad8697ecb2511ee0c69a1eda5b420345440d350d1cc",
+        "version": "0.2"
+      },
+      "target_skill": "skill-studies/sweeping-stale-references/cases/skill-original/SKILL.md"
+    },
+    {
+      "id": "candidate",
+      "configuration": {
+        "path": "skill-studies/sweeping-stale-references/cases/pressure-repair/claude-comparison-candidate.json",
+        "sha256": "2210cd1a47b50428bccf187bd98614970079b21e5daa5df12df399b88f83cdd2",
+        "version": "0.2"
+      },
+      "target_skill": "skill-studies/sweeping-stale-references/cases/skill-candidate-comprehensive/SKILL.md"
+    },
+    {
+      "id": "control",
+      "configuration": {
+        "path": "skill-studies/sweeping-stale-references/cases/pressure-repair/control.json",
+        "sha256": "3e315d8beabdadfa2d12c7f602d1d267be7f60aff5b93ed6c59e71e89d881c2a",
+        "version": "0.2"
+      },
+      "target_skill": null
+    }
+  ],
+  "subject_sources": [
+    {
+      "path": "skill-studies/sweeping-stale-references/cases/pressure-repair/claude-comparison-candidate-prompt.md",
+      "sha256": "2ab1012e470f5ad978d8f758c974e31b8a6276831cf1eee2527011322deb26b1",
+      "version": null
+    },
+    {
+      "path": "skill-studies/sweeping-stale-references/cases/pressure-repair/claude-comparison-original-prompt.md",
+      "sha256": "2ab1012e470f5ad978d8f758c974e31b8a6276831cf1eee2527011322deb26b1",
+      "version": null
+    },
+    {
+      "path": "skill-studies/sweeping-stale-references/cases/pressure-repair/claude-comparison.gitignore",
+      "sha256": "b9dd267653838ba8fedb6a23b6173254b930948d36492c5c5fdac0219e733f8b",
+      "version": null
+    },
+    {
+      "path": "skill-studies/sweeping-stale-references/cases/pressure-repair/prompt-control.md",
+      "sha256": "17438b8155af2ff3ba779ff39eee0426aa7d0783fec006ce6519dfebce18447f",
+      "version": null
+    },
+    {
+      "path": "skill-studies/sweeping-stale-references/cases/pressure-repair/task.md",
+      "sha256": "dcdfdbe795b034f87d6274200923a940603f0f96d4c728a8e773fcffbcad5e4f",
+      "version": null
+    },
+    {
+      "path": "skill-studies/sweeping-stale-references/cases/semantic-delivery/fixture/.gitignore",
+      "sha256": "7ab6574557548c2d1031511f15db14ace876b796b1471216aad74a0ab64aaee2",
+      "version": null
+    },
+    {
+      "path": "skill-studies/sweeping-stale-references/cases/semantic-delivery/fixture/README.md",
+      "sha256": "1a4b23b1f53af5b7aa42ac8e72f59282374435831bd35f542c23bd7dfdccb6e3",
+      "version": null
+    },
+    {
+      "path": "skill-studies/sweeping-stale-references/cases/semantic-delivery/fixture/docs/download-helper.md",
+      "sha256": "8d6d58a231c01678279d8e00ea0f03f9306c1b36a474b8cb4dd5967b657453bb",
+      "version": null
+    },
+    {
+      "path": "skill-studies/sweeping-stale-references/cases/semantic-delivery/fixture/docs/operations.md",
+      "sha256": "7d3c3810c532bdd87af795cf543171deeaff0595e4a13f7fdee39e8dfdef18d2",
+      "version": null
+    },
+    {
+      "path": "skill-studies/sweeping-stale-references/cases/semantic-delivery/fixture/docs/troubleshooting.md",
+      "sha256": "8e8a5cb48d7d3f3ca8e7212e9c29764f6e8f6cdaaf4f4d8d0762aaeaca906f1f",
+      "version": null
+    },
+    {
+      "path": "skill-studies/sweeping-stale-references/cases/semantic-delivery/fixture/plans/completed/delivery-policy.md",
+      "sha256": "ef7513eb13148ad5c6b215959ae917c6ef42a24050dc8df5ff64fe814dcfd376",
+      "version": null
+    },
+    {
+      "path": "skill-studies/sweeping-stale-references/cases/semantic-delivery/fixture/src/delivery.py",
+      "sha256": "554df6c0a7d0bf116cc593c4fdf3384e8645ab98c7d4e38780637b75577cda52",
+      "version": null
+    },
+    {
+      "path": "skill-studies/sweeping-stale-references/cases/semantic-delivery/fixture/src/download.py",
+      "sha256": "3a618d709d2be580ccb53f2f660822be9f90b091af41e3ce3b7aaed31e894eb0",
+      "version": null
+    },
+    {
+      "path": "skill-studies/sweeping-stale-references/cases/semantic-delivery/fixture/tests/test_retry_behavior.py",
+      "sha256": "71160952f35e3a255d68cca629a0a66d79e3e4b4c30431786f6945a28ede54f3",
+      "version": null
+    },
+    {
+      "path": "skill-studies/sweeping-stale-references/cases/skill-candidate-comprehensive/SKILL.md",
+      "sha256": "15992341f7ab2fb1e4d8a775092199d7d4e6a9de1167895dbe5a805aeafbd38c",
+      "version": null
+    },
+    {
+      "path": "skill-studies/sweeping-stale-references/cases/skill-original/SKILL.md",
+      "sha256": "d6812c33cae026807bbb3ebe851d93b60b513dd87ea5efd98aea28f5c02f9157",
+      "version": null
+    }
+  ],
+  "controller_only": [
+    {
+      "path": "skill-studies/sweeping-stale-references/cases/semantic-delivery/assessment.md",
+      "sha256": "9b6e97fcd3fef077d2ea5f8368c716f5fb67bb73fe5262534c36cfb8568db2a7",
+      "version": null
+    },
+    {
+      "path": "skill-studies/sweeping-stale-references/cases/semantic-delivery/expected.json",
+      "sha256": "1eccde02cbd1523e4d99a90359fae1d45b494c13a3d4691df83b0b0ab9a011fa",
+      "version": null
+    },
+    {
+      "path": "skill-studies/sweeping-stale-references/invocation-pressure-preparation.md",
+      "sha256": "a5d040831da992f09c4a0b9165339ea02601e8fa8f515948a62089982ec1efca",
+      "version": null
+    }
+  ]
+}
