@@ -435,6 +435,594 @@
         },
         "verified": true
       },
+      "result": {
+        "result_id": "comprehensive-comparison-02-semantic-delivery-original-1",
+        "record": {
+          "path": "skill-studies/sweeping-stale-references/results/20260924T041924735Z-ssr-semantic-delivery-original-1e817f98-1148-4b75-bcac-6351b5bf099a-71k5qeu6.json",
+          "sha256": "fface01333faff27126ca8a973f510bb3b9d2142b9a06812ea322f05498a92b2",
+          "version": "2",
+          "git_revision": "afe0417c4367c76a6cda18cb97183b90d26147f8"
+        }
+      }
+    },
+    {
+      "attempt_id": "comprehensive-comparison-02-semantic-delivery-candidate-1-1",
+      "case_id": "semantic-delivery",
+      "condition": "candidate",
+      "repetition": 1,
+      "attempt_number": 1,
+      "retry_of": null,
+      "manifest": {
+        "path": "skill-studies/sweeping-stale-references/cases/semantic-delivery/comparison-02-manifest.json",
+        "sha256": "a7a452e08f1475c07aaa1adb334ebb4e40d1df0600a29fcf3c017720cdfc4cfa",
+        "version": "1",
+        "git_revision": "37ab0390b04630335d15f6d246b2b042f0e07f51"
+      },
+      "authorization": {
+        "artifact": {
+          "path": "skill-studies/sweeping-stale-references/protocol.md",
+          "sha256": "afca878c025d83acbe482842b1b3706d040c2c55b281579cb5d8eed5d0de9a14",
+          "version": "1",
+          "git_revision": "37ab0390b04630335d15f6d246b2b042f0e07f51"
+        },
+        "selector": "Batch: comprehensive-comparison-02; order 10"
+      },
+      "run_id": "20260924T042048762Z-ssr-semantic-delivery-comprehensive-candidate-20eabab3-0d49-436c-8246-b9260bceefc5-sj06l8vw",
+      "allocation": {
+        "pool": "subject",
+        "charge": 1
+      },
+      "limitations": [
+        "Runner status: COMPLETED; assessment pending."
+      ],
+      "bundle": {
+        "path": "/Users/simon/work/personal/skill-study-private/sweeping-stale-references/development/20260924T042048762Z-ssr-semantic-delivery-comprehensive-candidate-20eabab3-0d49-436c-8246-b9260bceefc5-sj06l8vw",
+        "inventory": {
+          "path": "/Users/simon/work/personal/skill-study-private/sweeping-stale-references/development/20260924T042048762Z-ssr-semantic-delivery-comprehensive-candidate-20eabab3-0d49-436c-8246-b9260bceefc5-sj06l8vw.inventory.json",
+          "sha256": "8d596c1eaeca21abe467f2f5e9ad9c862ab2e3939ec5aa02c0a10d06c08d4d2b",
+          "version": "1"
+        },
+        "verified": true
+      },
+      "result": {
+        "result_id": "comprehensive-comparison-02-semantic-delivery-candidate-1",
+        "record": {
+          "path": "skill-studies/sweeping-stale-references/results/20260924T042048762Z-ssr-semantic-delivery-comprehensive-candidate-20eabab3-0d49-436c-8246-b9260bceefc5-sj06l8vw.json",
+          "sha256": "76fcc749a7fee907f0d1628c5abbe8e906950ac20fadb67cdfe1300ee85bff57",
+          "version": "2",
+          "git_revision": "afe0417c4367c76a6cda18cb97183b90d26147f8"
+        }
+      }
+    },
+    {
+      "attempt_id": "comprehensive-comparison-02-semantic-delivery-candidate-2-1",
+      "case_id": "semantic-delivery",
+      "condition": "candidate",
+      "repetition": 2,
+      "attempt_number": 1,
+      "retry_of": null,
+      "manifest": {
+        "path": "skill-studies/sweeping-stale-references/cases/semantic-delivery/comparison-02-manifest.json",
+        "sha256": "a7a452e08f1475c07aaa1adb334ebb4e40d1df0600a29fcf3c017720cdfc4cfa",
+        "version": "1",
+        "git_revision": "37ab0390b04630335d15f6d246b2b042f0e07f51"
+      },
+      "authorization": {
+        "artifact": {
+          "path": "skill-studies/sweeping-stale-references/protocol.md",
+          "sha256": "afca878c025d83acbe482842b1b3706d040c2c55b281579cb5d8eed5d0de9a14",
+          "version": "1",
+          "git_revision": "37ab0390b04630335d15f6d246b2b042f0e07f51"
+        },
+        "selector": "Batch: comprehensive-comparison-02; order 11"
+      },
+      "run_id": "20260924T042228071Z-ssr-semantic-delivery-comprehensive-candidate-c3e2e7b7-e4ad-44bd-a50b-aeb7cc09a0fb-4qrw6aes",
+      "allocation": {
+        "pool": "subject",
+        "charge": 1
+      },
+      "limitations": [
+        "Runner status: COMPLETED; assessment pending."
+      ],
+      "bundle": {
+        "path": "/Users/simon/work/personal/skill-study-private/sweeping-stale-references/development/20260924T042228071Z-ssr-semantic-delivery-comprehensive-candidate-c3e2e7b7-e4ad-44bd-a50b-aeb7cc09a0fb-4qrw6aes",
+        "inventory": {
+          "path": "/Users/simon/work/personal/skill-study-private/sweeping-stale-references/development/20260924T042228071Z-ssr-semantic-delivery-comprehensive-candidate-c3e2e7b7-e4ad-44bd-a50b-aeb7cc09a0fb-4qrw6aes.inventory.json",
+          "sha256": "da86e94bcc833375b05c76f49d0842a0fa85a9b1215a0dbbdfd6f238be5e3402",
+          "version": "1"
+        },
+        "verified": true
+      },
+      "result": {
+        "result_id": "comprehensive-comparison-02-semantic-delivery-candidate-2",
+        "record": {
+          "path": "skill-studies/sweeping-stale-references/results/20260924T042228071Z-ssr-semantic-delivery-comprehensive-candidate-c3e2e7b7-e4ad-44bd-a50b-aeb7cc09a0fb-4qrw6aes.json",
+          "sha256": "54e95d6a972834db875c9cba443cf0bb6c6cc52ef605ee72d2e180f037e8012b",
+          "version": "2",
+          "git_revision": "afe0417c4367c76a6cda18cb97183b90d26147f8"
+        }
+      }
+    },
+    {
+      "attempt_id": "comprehensive-comparison-02-semantic-delivery-original-2-1",
+      "case_id": "semantic-delivery",
+      "condition": "original",
+      "repetition": 2,
+      "attempt_number": 1,
+      "retry_of": null,
+      "manifest": {
+        "path": "skill-studies/sweeping-stale-references/cases/semantic-delivery/comparison-02-manifest.json",
+        "sha256": "a7a452e08f1475c07aaa1adb334ebb4e40d1df0600a29fcf3c017720cdfc4cfa",
+        "version": "1",
+        "git_revision": "37ab0390b04630335d15f6d246b2b042f0e07f51"
+      },
+      "authorization": {
+        "artifact": {
+          "path": "skill-studies/sweeping-stale-references/protocol.md",
+          "sha256": "afca878c025d83acbe482842b1b3706d040c2c55b281579cb5d8eed5d0de9a14",
+          "version": "1",
+          "git_revision": "37ab0390b04630335d15f6d246b2b042f0e07f51"
+        },
+        "selector": "Batch: comprehensive-comparison-02; order 12"
+      },
+      "run_id": "20260924T042423324Z-ssr-semantic-delivery-original-2aadb51e-7e07-4dec-9417-50533bbeb3f0-2phw18gf",
+      "allocation": {
+        "pool": "subject",
+        "charge": 1
+      },
+      "limitations": [
+        "Runner status: COMPLETED; assessment pending."
+      ],
+      "bundle": {
+        "path": "/Users/simon/work/personal/skill-study-private/sweeping-stale-references/development/20260924T042423324Z-ssr-semantic-delivery-original-2aadb51e-7e07-4dec-9417-50533bbeb3f0-2phw18gf",
+        "inventory": {
+          "path": "/Users/simon/work/personal/skill-study-private/sweeping-stale-references/development/20260924T042423324Z-ssr-semantic-delivery-original-2aadb51e-7e07-4dec-9417-50533bbeb3f0-2phw18gf.inventory.json",
+          "sha256": "8028e8f91a1219ee345ce58fd4c216f7fe1dee27120f46b09160e019c799dad8",
+          "version": "1"
+        },
+        "verified": true
+      },
+      "result": {
+        "result_id": "comprehensive-comparison-02-semantic-delivery-original-2",
+        "record": {
+          "path": "skill-studies/sweeping-stale-references/results/20260924T042423324Z-ssr-semantic-delivery-original-2aadb51e-7e07-4dec-9417-50533bbeb3f0-2phw18gf.json",
+          "sha256": "97a957b3fe08a9a54402a550f5acc9c338343363f350190db7735709621c5d60",
+          "version": "2",
+          "git_revision": "afe0417c4367c76a6cda18cb97183b90d26147f8"
+        }
+      }
+    },
+    {
+      "attempt_id": "comprehensive-comparison-02-initiating-change-original-1-1",
+      "case_id": "initiating-change",
+      "condition": "original",
+      "repetition": 1,
+      "attempt_number": 1,
+      "retry_of": null,
+      "manifest": {
+        "path": "skill-studies/sweeping-stale-references/cases/initiating-change/comparison-02-manifest.json",
+        "sha256": "98d270f56b4feacb9109746908e9c7aed59aa6eafbf541113e8b93d4d3066b21",
+        "version": "1",
+        "git_revision": "37ab0390b04630335d15f6d246b2b042f0e07f51"
+      },
+      "authorization": {
+        "artifact": {
+          "path": "skill-studies/sweeping-stale-references/protocol.md",
+          "sha256": "afca878c025d83acbe482842b1b3706d040c2c55b281579cb5d8eed5d0de9a14",
+          "version": "1",
+          "git_revision": "37ab0390b04630335d15f6d246b2b042f0e07f51"
+        },
+        "selector": "Batch: comprehensive-comparison-02; order 13"
+      },
+      "run_id": "20260924T042627932Z-ssr-initiating-change-original-e4859281-0597-494c-8d9f-0dbd3bd925c2-fq2i7hd4",
+      "allocation": {
+        "pool": "subject",
+        "charge": 1
+      },
+      "limitations": [
+        "Runner status: COMPLETED; assessment pending."
+      ],
+      "bundle": {
+        "path": "/Users/simon/work/personal/skill-study-private/sweeping-stale-references/development/20260924T042627932Z-ssr-initiating-change-original-e4859281-0597-494c-8d9f-0dbd3bd925c2-fq2i7hd4",
+        "inventory": {
+          "path": "/Users/simon/work/personal/skill-study-private/sweeping-stale-references/development/20260924T042627932Z-ssr-initiating-change-original-e4859281-0597-494c-8d9f-0dbd3bd925c2-fq2i7hd4.inventory.json",
+          "sha256": "e9b82c04d6ac13d32738e4f8272138e382f4b13d44f4e190131dad13e484bf18",
+          "version": "1"
+        },
+        "verified": true
+      },
+      "result": {
+        "result_id": "comprehensive-comparison-02-initiating-change-original-1",
+        "record": {
+          "path": "skill-studies/sweeping-stale-references/results/20260924T042627932Z-ssr-initiating-change-original-e4859281-0597-494c-8d9f-0dbd3bd925c2-fq2i7hd4.json",
+          "sha256": "fa7c218656251674810e536f0a6c41af62f3db13aa2a7467151ceab9016e8cc3",
+          "version": "2",
+          "git_revision": "111704bd8d0d8dba2e79d7b29020ab333e6d355a"
+        }
+      }
+    },
+    {
+      "attempt_id": "comprehensive-comparison-02-initiating-change-candidate-1-1",
+      "case_id": "initiating-change",
+      "condition": "candidate",
+      "repetition": 1,
+      "attempt_number": 1,
+      "retry_of": null,
+      "manifest": {
+        "path": "skill-studies/sweeping-stale-references/cases/initiating-change/comparison-02-manifest.json",
+        "sha256": "98d270f56b4feacb9109746908e9c7aed59aa6eafbf541113e8b93d4d3066b21",
+        "version": "1",
+        "git_revision": "37ab0390b04630335d15f6d246b2b042f0e07f51"
+      },
+      "authorization": {
+        "artifact": {
+          "path": "skill-studies/sweeping-stale-references/protocol.md",
+          "sha256": "afca878c025d83acbe482842b1b3706d040c2c55b281579cb5d8eed5d0de9a14",
+          "version": "1",
+          "git_revision": "37ab0390b04630335d15f6d246b2b042f0e07f51"
+        },
+        "selector": "Batch: comprehensive-comparison-02; order 14"
+      },
+      "run_id": "20260924T042805204Z-ssr-initiating-change-original-comprehensive-candidate-f9cfa244-d841-4ce2-a0b2-ee67bdf2d406-hv153rrk",
+      "allocation": {
+        "pool": "subject",
+        "charge": 1
+      },
+      "limitations": [
+        "Runner status: COMPLETED; assessment pending."
+      ],
+      "bundle": {
+        "path": "/Users/simon/work/personal/skill-study-private/sweeping-stale-references/development/20260924T042805204Z-ssr-initiating-change-original-comprehensive-candidate-f9cfa244-d841-4ce2-a0b2-ee67bdf2d406-hv153rrk",
+        "inventory": {
+          "path": "/Users/simon/work/personal/skill-study-private/sweeping-stale-references/development/20260924T042805204Z-ssr-initiating-change-original-comprehensive-candidate-f9cfa244-d841-4ce2-a0b2-ee67bdf2d406-hv153rrk.inventory.json",
+          "sha256": "9fe59535520278a9c3c2f79dfe5543c365f4e936cf8200b3780b656daa8d88e8",
+          "version": "1"
+        },
+        "verified": true
+      },
+      "result": {
+        "result_id": "comprehensive-comparison-02-initiating-change-candidate-1",
+        "record": {
+          "path": "skill-studies/sweeping-stale-references/results/20260924T042805204Z-ssr-initiating-change-original-comprehensive-candidate-f9cfa244-d841-4ce2-a0b2-ee67bdf2d406-hv153rrk.json",
+          "sha256": "3e8fa0099bf1443b457571b98b34770a6008361da8efd7320a50f575a7a27086",
+          "version": "2",
+          "git_revision": "111704bd8d0d8dba2e79d7b29020ab333e6d355a"
+        }
+      }
+    },
+    {
+      "attempt_id": "comprehensive-comparison-02-initiating-change-candidate-2-1",
+      "case_id": "initiating-change",
+      "condition": "candidate",
+      "repetition": 2,
+      "attempt_number": 1,
+      "retry_of": null,
+      "manifest": {
+        "path": "skill-studies/sweeping-stale-references/cases/initiating-change/comparison-02-manifest.json",
+        "sha256": "98d270f56b4feacb9109746908e9c7aed59aa6eafbf541113e8b93d4d3066b21",
+        "version": "1",
+        "git_revision": "37ab0390b04630335d15f6d246b2b042f0e07f51"
+      },
+      "authorization": {
+        "artifact": {
+          "path": "skill-studies/sweeping-stale-references/protocol.md",
+          "sha256": "afca878c025d83acbe482842b1b3706d040c2c55b281579cb5d8eed5d0de9a14",
+          "version": "1",
+          "git_revision": "37ab0390b04630335d15f6d246b2b042f0e07f51"
+        },
+        "selector": "Batch: comprehensive-comparison-02; order 15"
+      },
+      "run_id": "20260924T043003799Z-ssr-initiating-change-original-comprehensive-candidate-fd6b8297-a46c-45b7-a664-023bc4634135-6bqrs43t",
+      "allocation": {
+        "pool": "subject",
+        "charge": 1
+      },
+      "limitations": [
+        "Runner status: COMPLETED; assessment pending."
+      ],
+      "bundle": {
+        "path": "/Users/simon/work/personal/skill-study-private/sweeping-stale-references/development/20260924T043003799Z-ssr-initiating-change-original-comprehensive-candidate-fd6b8297-a46c-45b7-a664-023bc4634135-6bqrs43t",
+        "inventory": {
+          "path": "/Users/simon/work/personal/skill-study-private/sweeping-stale-references/development/20260924T043003799Z-ssr-initiating-change-original-comprehensive-candidate-fd6b8297-a46c-45b7-a664-023bc4634135-6bqrs43t.inventory.json",
+          "sha256": "b07844f6186e5a2f2cc45752e800b2dabb09981aa87c2a2c90fd96dcc17aa195",
+          "version": "1"
+        },
+        "verified": true
+      },
+      "result": {
+        "result_id": "comprehensive-comparison-02-initiating-change-candidate-2",
+        "record": {
+          "path": "skill-studies/sweeping-stale-references/results/20260924T043003799Z-ssr-initiating-change-original-comprehensive-candidate-fd6b8297-a46c-45b7-a664-023bc4634135-6bqrs43t.json",
+          "sha256": "5fe3f9e4fe0aacbf51cace618acab917eaa8650f6ff83b907be8613532c3f0c5",
+          "version": "2",
+          "git_revision": "111704bd8d0d8dba2e79d7b29020ab333e6d355a"
+        }
+      }
+    },
+    {
+      "attempt_id": "comprehensive-comparison-02-initiating-change-original-2-1",
+      "case_id": "initiating-change",
+      "condition": "original",
+      "repetition": 2,
+      "attempt_number": 1,
+      "retry_of": null,
+      "manifest": {
+        "path": "skill-studies/sweeping-stale-references/cases/initiating-change/comparison-02-manifest.json",
+        "sha256": "98d270f56b4feacb9109746908e9c7aed59aa6eafbf541113e8b93d4d3066b21",
+        "version": "1",
+        "git_revision": "37ab0390b04630335d15f6d246b2b042f0e07f51"
+      },
+      "authorization": {
+        "artifact": {
+          "path": "skill-studies/sweeping-stale-references/protocol.md",
+          "sha256": "afca878c025d83acbe482842b1b3706d040c2c55b281579cb5d8eed5d0de9a14",
+          "version": "1",
+          "git_revision": "37ab0390b04630335d15f6d246b2b042f0e07f51"
+        },
+        "selector": "Batch: comprehensive-comparison-02; order 16"
+      },
+      "run_id": "20260924T043149505Z-ssr-initiating-change-original-ed041147-839c-4df9-a709-db17023dac66-zh_cg53o",
+      "allocation": {
+        "pool": "subject",
+        "charge": 1
+      },
+      "limitations": [
+        "Runner status: COMPLETED; assessment pending."
+      ],
+      "bundle": {
+        "path": "/Users/simon/work/personal/skill-study-private/sweeping-stale-references/development/20260924T043149505Z-ssr-initiating-change-original-ed041147-839c-4df9-a709-db17023dac66-zh_cg53o",
+        "inventory": {
+          "path": "/Users/simon/work/personal/skill-study-private/sweeping-stale-references/development/20260924T043149505Z-ssr-initiating-change-original-ed041147-839c-4df9-a709-db17023dac66-zh_cg53o.inventory.json",
+          "sha256": "4c59bb8632c45a5a363fb5aaff99b7fdcad45b39dbcecaeac6806aeb93c55d72",
+          "version": "1"
+        },
+        "verified": true
+      },
+      "result": {
+        "result_id": "comprehensive-comparison-02-initiating-change-original-2",
+        "record": {
+          "path": "skill-studies/sweeping-stale-references/results/20260924T043149505Z-ssr-initiating-change-original-ed041147-839c-4df9-a709-db17023dac66-zh_cg53o.json",
+          "sha256": "9eaec8ae340f24eac9e2c4fec78c46c4f8d1deaf03c02a1dcf740b85e0b07684",
+          "version": "2",
+          "git_revision": "111704bd8d0d8dba2e79d7b29020ab333e6d355a"
+        }
+      }
+    },
+    {
+      "attempt_id": "comprehensive-comparison-02-local-change-original-1-1",
+      "case_id": "local-change",
+      "condition": "original",
+      "repetition": 1,
+      "attempt_number": 1,
+      "retry_of": null,
+      "manifest": {
+        "path": "skill-studies/sweeping-stale-references/cases/local-change/comparison-02-manifest.json",
+        "sha256": "3973e3b20050c2654abd63cb823871b7212d713c41d6ea02c8313084e9ad8869",
+        "version": "1",
+        "git_revision": "37ab0390b04630335d15f6d246b2b042f0e07f51"
+      },
+      "authorization": {
+        "artifact": {
+          "path": "skill-studies/sweeping-stale-references/protocol.md",
+          "sha256": "afca878c025d83acbe482842b1b3706d040c2c55b281579cb5d8eed5d0de9a14",
+          "version": "1",
+          "git_revision": "37ab0390b04630335d15f6d246b2b042f0e07f51"
+        },
+        "selector": "Batch: comprehensive-comparison-02; order 17"
+      },
+      "run_id": "20260924T043336233Z-ssr-local-change-original-69c69135-5e7a-434a-801b-19f4b8fa54f9-41otnkqk",
+      "allocation": {
+        "pool": "subject",
+        "charge": 1
+      },
+      "limitations": [
+        "Runner status: COMPLETED; assessment pending."
+      ],
+      "bundle": {
+        "path": "/Users/simon/work/personal/skill-study-private/sweeping-stale-references/development/20260924T043336233Z-ssr-local-change-original-69c69135-5e7a-434a-801b-19f4b8fa54f9-41otnkqk",
+        "inventory": {
+          "path": "/Users/simon/work/personal/skill-study-private/sweeping-stale-references/development/20260924T043336233Z-ssr-local-change-original-69c69135-5e7a-434a-801b-19f4b8fa54f9-41otnkqk.inventory.json",
+          "sha256": "a8e2ddc9d7739802da110390d085d44fad891218843e5fbb5cc12020ecd68e63",
+          "version": "1"
+        },
+        "verified": true
+      },
+      "result": {
+        "result_id": "comprehensive-comparison-02-local-change-original-1",
+        "record": {
+          "path": "skill-studies/sweeping-stale-references/results/20260924T043336233Z-ssr-local-change-original-69c69135-5e7a-434a-801b-19f4b8fa54f9-41otnkqk.json",
+          "sha256": "3a0fdd95ad4ec81c2c1a6f16d5fd1ad5e7adecd24d3940e1b23f6874de0c022e",
+          "version": "2",
+          "git_revision": "fdd9d72fbcd4032a5d22fe1f0dc956dcbf6c577a"
+        }
+      }
+    },
+    {
+      "attempt_id": "comprehensive-comparison-02-local-change-candidate-1-1",
+      "case_id": "local-change",
+      "condition": "candidate",
+      "repetition": 1,
+      "attempt_number": 1,
+      "retry_of": null,
+      "manifest": {
+        "path": "skill-studies/sweeping-stale-references/cases/local-change/comparison-02-manifest.json",
+        "sha256": "3973e3b20050c2654abd63cb823871b7212d713c41d6ea02c8313084e9ad8869",
+        "version": "1",
+        "git_revision": "37ab0390b04630335d15f6d246b2b042f0e07f51"
+      },
+      "authorization": {
+        "artifact": {
+          "path": "skill-studies/sweeping-stale-references/protocol.md",
+          "sha256": "afca878c025d83acbe482842b1b3706d040c2c55b281579cb5d8eed5d0de9a14",
+          "version": "1",
+          "git_revision": "37ab0390b04630335d15f6d246b2b042f0e07f51"
+        },
+        "selector": "Batch: comprehensive-comparison-02; order 18"
+      },
+      "run_id": "20260924T043521612Z-ssr-local-change-original-comprehensive-candidate-a798a702-586d-41a7-87ea-25cc3748a782-epeenjf8",
+      "allocation": {
+        "pool": "subject",
+        "charge": 1
+      },
+      "limitations": [
+        "Runner status: COMPLETED; assessment pending."
+      ],
+      "bundle": {
+        "path": "/Users/simon/work/personal/skill-study-private/sweeping-stale-references/development/20260924T043521612Z-ssr-local-change-original-comprehensive-candidate-a798a702-586d-41a7-87ea-25cc3748a782-epeenjf8",
+        "inventory": {
+          "path": "/Users/simon/work/personal/skill-study-private/sweeping-stale-references/development/20260924T043521612Z-ssr-local-change-original-comprehensive-candidate-a798a702-586d-41a7-87ea-25cc3748a782-epeenjf8.inventory.json",
+          "sha256": "6a0ff87c8beac0b556c8e9e5532443e99946c64a3553cbe8c2f53ebdbfdd65bc",
+          "version": "1"
+        },
+        "verified": true
+      },
+      "result": {
+        "result_id": "comprehensive-comparison-02-local-change-candidate-1",
+        "record": {
+          "path": "skill-studies/sweeping-stale-references/results/20260924T043521612Z-ssr-local-change-original-comprehensive-candidate-a798a702-586d-41a7-87ea-25cc3748a782-epeenjf8.json",
+          "sha256": "9a26474a47a4d554558ad5be5df7a59de4e00dccc6f2b8eb4043fc9fa6765906",
+          "version": "2",
+          "git_revision": "fdd9d72fbcd4032a5d22fe1f0dc956dcbf6c577a"
+        }
+      }
+    },
+    {
+      "attempt_id": "comprehensive-comparison-02-local-change-candidate-2-1",
+      "case_id": "local-change",
+      "condition": "candidate",
+      "repetition": 2,
+      "attempt_number": 1,
+      "retry_of": null,
+      "manifest": {
+        "path": "skill-studies/sweeping-stale-references/cases/local-change/comparison-02-manifest.json",
+        "sha256": "3973e3b20050c2654abd63cb823871b7212d713c41d6ea02c8313084e9ad8869",
+        "version": "1",
+        "git_revision": "37ab0390b04630335d15f6d246b2b042f0e07f51"
+      },
+      "authorization": {
+        "artifact": {
+          "path": "skill-studies/sweeping-stale-references/protocol.md",
+          "sha256": "afca878c025d83acbe482842b1b3706d040c2c55b281579cb5d8eed5d0de9a14",
+          "version": "1",
+          "git_revision": "37ab0390b04630335d15f6d246b2b042f0e07f51"
+        },
+        "selector": "Batch: comprehensive-comparison-02; order 19"
+      },
+      "run_id": "20260924T043723312Z-ssr-local-change-original-comprehensive-candidate-ad07fc59-44ac-4a45-b8af-44e36ad87887-027fgg7c",
+      "allocation": {
+        "pool": "subject",
+        "charge": 1
+      },
+      "limitations": [
+        "Runner status: COMPLETED; assessment pending."
+      ],
+      "bundle": {
+        "path": "/Users/simon/work/personal/skill-study-private/sweeping-stale-references/development/20260924T043723312Z-ssr-local-change-original-comprehensive-candidate-ad07fc59-44ac-4a45-b8af-44e36ad87887-027fgg7c",
+        "inventory": {
+          "path": "/Users/simon/work/personal/skill-study-private/sweeping-stale-references/development/20260924T043723312Z-ssr-local-change-original-comprehensive-candidate-ad07fc59-44ac-4a45-b8af-44e36ad87887-027fgg7c.inventory.json",
+          "sha256": "40b881e6bba6175c11b08128d347ae40a469e49696358502338e6a4ebc111344",
+          "version": "1"
+        },
+        "verified": true
+      },
+      "result": {
+        "result_id": "comprehensive-comparison-02-local-change-candidate-2",
+        "record": {
+          "path": "skill-studies/sweeping-stale-references/results/20260924T043723312Z-ssr-local-change-original-comprehensive-candidate-ad07fc59-44ac-4a45-b8af-44e36ad87887-027fgg7c.json",
+          "sha256": "9a58cf21c788ecab98e60796b1dc2cb70176e16421f02495b3f9b60bb0c19aa2",
+          "version": "2",
+          "git_revision": "fdd9d72fbcd4032a5d22fe1f0dc956dcbf6c577a"
+        }
+      }
+    },
+    {
+      "attempt_id": "comprehensive-comparison-02-local-change-original-2-1",
+      "case_id": "local-change",
+      "condition": "original",
+      "repetition": 2,
+      "attempt_number": 1,
+      "retry_of": null,
+      "manifest": {
+        "path": "skill-studies/sweeping-stale-references/cases/local-change/comparison-02-manifest.json",
+        "sha256": "3973e3b20050c2654abd63cb823871b7212d713c41d6ea02c8313084e9ad8869",
+        "version": "1",
+        "git_revision": "37ab0390b04630335d15f6d246b2b042f0e07f51"
+      },
+      "authorization": {
+        "artifact": {
+          "path": "skill-studies/sweeping-stale-references/protocol.md",
+          "sha256": "afca878c025d83acbe482842b1b3706d040c2c55b281579cb5d8eed5d0de9a14",
+          "version": "1",
+          "git_revision": "37ab0390b04630335d15f6d246b2b042f0e07f51"
+        },
+        "selector": "Batch: comprehensive-comparison-02; order 20"
+      },
+      "run_id": "20260924T043905836Z-ssr-local-change-original-96602a08-b7d7-4338-a940-ccf6d9969d92-xh10jv9k",
+      "allocation": {
+        "pool": "subject",
+        "charge": 1
+      },
+      "limitations": [
+        "Runner status: COMPLETED; assessment pending."
+      ],
+      "bundle": {
+        "path": "/Users/simon/work/personal/skill-study-private/sweeping-stale-references/development/20260924T043905836Z-ssr-local-change-original-96602a08-b7d7-4338-a940-ccf6d9969d92-xh10jv9k",
+        "inventory": {
+          "path": "/Users/simon/work/personal/skill-study-private/sweeping-stale-references/development/20260924T043905836Z-ssr-local-change-original-96602a08-b7d7-4338-a940-ccf6d9969d92-xh10jv9k.inventory.json",
+          "sha256": "42e74ce5639f65823c3760c2f3ac49fbfcb55dd433434941f35be14a6b6aec08",
+          "version": "1"
+        },
+        "verified": true
+      },
+      "result": {
+        "result_id": "comprehensive-comparison-02-local-change-original-2",
+        "record": {
+          "path": "skill-studies/sweeping-stale-references/results/20260924T043905836Z-ssr-local-change-original-96602a08-b7d7-4338-a940-ccf6d9969d92-xh10jv9k.json",
+          "sha256": "d21aa5bde64dec1de827343d1737a541fb69de21422109f209d866cfcb69f699",
+          "version": "2",
+          "git_revision": "fdd9d72fbcd4032a5d22fe1f0dc956dcbf6c577a"
+        }
+      }
+    },
+    {
+      "attempt_id": "comprehensive-comparison-02-pressure-repair-original-1-1",
+      "case_id": "pressure-repair",
+      "condition": "original",
+      "repetition": 1,
+      "attempt_number": 1,
+      "retry_of": null,
+      "manifest": {
+        "path": "skill-studies/sweeping-stale-references/cases/pressure-repair/comparison-02-manifest.json",
+        "sha256": "6b7e67225f1ca9f63366e19ec4dd2fa7d6dbbd1cc608a69e9879b9cf5cffd743",
+        "version": "1",
+        "git_revision": "37ab0390b04630335d15f6d246b2b042f0e07f51"
+      },
+      "authorization": {
+        "artifact": {
+          "path": "skill-studies/sweeping-stale-references/protocol.md",
+          "sha256": "afca878c025d83acbe482842b1b3706d040c2c55b281579cb5d8eed5d0de9a14",
+          "version": "1",
+          "git_revision": "37ab0390b04630335d15f6d246b2b042f0e07f51"
+        },
+        "selector": "Batch: comprehensive-comparison-02; order 21"
+      },
+      "run_id": "20260924T044016886Z-ssr-pressure-repair-original-1542a14d-629d-4e22-abc7-d6de1a6e73dd-mwt17p_8",
+      "allocation": {
+        "pool": "subject",
+        "charge": 1
+      },
+      "limitations": [
+        "Runner status: COMPLETED; assessment pending."
+      ],
+      "bundle": {
+        "path": "/Users/simon/work/personal/skill-study-private/sweeping-stale-references/development/20260924T044016886Z-ssr-pressure-repair-original-1542a14d-629d-4e22-abc7-d6de1a6e73dd-mwt17p_8",
+        "inventory": {
+          "path": "/Users/simon/work/personal/skill-study-private/sweeping-stale-references/development/20260924T044016886Z-ssr-pressure-repair-original-1542a14d-629d-4e22-abc7-d6de1a6e73dd-mwt17p_8.inventory.json",
+          "sha256": "4e53e9f18c79c6f3af279970599b588ad318d3bfe6e0a72b18efaa282f716169",
+          "version": "1"
+        },
+        "verified": true
+      },
       "result": null
     }
   ]
