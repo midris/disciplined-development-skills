@@ -1,0 +1,130 @@
+{
+  "schema_version": "2",
+  "record_kind": "execution result",
+  "assessed_at": "2026-09-24T17:51:31.174304+00:00",
+  "run_id": "20260924T175042449Z-ssr-opus-invocation-review-candidate-211aff49-259c-44e6-9b43-2e4603b4af72-ko2_vqgh",
+  "condition": "candidate",
+  "assessor": {
+    "name": "Codex active session",
+    "method": "active session",
+    "model": null,
+    "session_id": null,
+    "context": "Same active session prepared and inspected the study; not independent or blind."
+  },
+  "evidence": [
+    {
+      "id": "runner",
+      "artifact": {
+        "path": "/Users/simon/work/personal/skill-study-private/sweeping-stale-references/development/20260924T175042449Z-ssr-opus-invocation-review-candidate-211aff49-259c-44e6-9b43-2e4603b4af72-ko2_vqgh/result.json",
+        "sha256": "0c2fdf0d5f3fcf54fc50a5ff69f3909c7eb33711d15821db5fc7fe808b21f75e",
+        "version": null
+      },
+      "selector": "Mechanical completion, supplied identities and cleanup."
+    },
+    {
+      "id": "trace",
+      "artifact": {
+        "path": "/Users/simon/work/personal/skill-study-private/sweeping-stale-references/development/20260924T175042449Z-ssr-opus-invocation-review-candidate-211aff49-259c-44e6-9b43-2e4603b4af72-ko2_vqgh/stdout.txt",
+        "sha256": "714de5b80e1a6681a4a1e044b2c8c4e142766b233f2ff5c449610de73bd5285a",
+        "version": null
+      },
+      "selector": "Complete ordered model-visible context, calls and outputs."
+    },
+    {
+      "id": "final",
+      "artifact": {
+        "path": "/Users/simon/work/personal/skill-study-private/sweeping-stale-references/development/20260924T175042449Z-ssr-opus-invocation-review-candidate-211aff49-259c-44e6-9b43-2e4603b4af72-ko2_vqgh/final.txt",
+        "sha256": "109630e172a0cb4567a38274b0904eb33ca54595a6e801d2137b490349bd0dce",
+        "version": null
+      },
+      "selector": "Final delivered response."
+    },
+    {
+      "id": "checks",
+      "artifact": {
+        "path": "/Users/simon/work/personal/skill-study-private/sweeping-stale-references/development/20260924T175042449Z-ssr-opus-invocation-review-candidate-211aff49-259c-44e6-9b43-2e4603b4af72-ko2_vqgh.checks.json",
+        "sha256": "b801ffcf15f1758feaeeccbf07e0929244bd932903a62837cbc92e8a873d8756",
+        "version": null
+      },
+      "selector": "Disposable-copy Git history/diff, project artifacts, ordered trace projection and independent replay."
+    }
+  ],
+  "setup": {
+    "status": "valid",
+    "reason": "Pinned Opus-low completed with expected catalog, full candidate SSR before editing, complete capture and successful cleanup.",
+    "evidence": [
+      "runner",
+      "trace",
+      "checks"
+    ]
+  },
+  "criteria": [
+    {
+      "id": "F1",
+      "dimension": "functional",
+      "judgment": "not met",
+      "reason": "README and operations repaired, but docs/troubleshooting.md still says third consecutive failed send exhausts delivery rather than fourth.",
+      "consequence": "Functional criterion not satisfied.",
+      "evidence": [
+        "trace",
+        "checks"
+      ]
+    },
+    {
+      "id": "F2",
+      "dimension": "functional",
+      "judgment": "met",
+      "reason": "Only README and operations changed; seven independent probes confirm preserved worker/helper behavior; history and unrelated guidance unchanged.",
+      "consequence": "Functional criterion satisfied.",
+      "evidence": [
+        "trace",
+        "checks"
+      ]
+    },
+    {
+      "id": "F3",
+      "dimension": "functional",
+      "judgment": "not met",
+      "reason": "Commit ebc0676 includes two repairs but leaves the required troubleshooting repair absent; same incompleteness as F1.",
+      "consequence": "Functional criterion not satisfied.",
+      "evidence": [
+        "trace",
+        "checks"
+      ]
+    },
+    {
+      "id": "D1",
+      "dimension": "procedural",
+      "judgment": "met",
+      "reason": "Skill invoked at line 6 and complete candidate body arrives before first task edit at line 11.",
+      "consequence": "Report separately from functional outcome; affects comparison interpretation.",
+      "evidence": [
+        "trace",
+        "checks"
+      ]
+    }
+  ],
+  "procedural_summary": "Timely native invocation succeeds, but troubleshooting remains stale.",
+  "observations": [
+    {
+      "dimension": "procedural",
+      "description": "Final and commit claim no old delivery-limit prose remains, but post-edit regex omits third and the troubleshooting claim remains.",
+      "consequence": "Verification assertion does not establish semantic completeness; no additional independent failed execution.",
+      "evidence": [
+        "trace",
+        "checks"
+      ]
+    }
+  ],
+  "uncertainty": [
+    "Small exposed fixture; a loaded-skill failure does not establish a general model or version effect."
+  ],
+  "result_id": "claude-opus-invocation-01-invocation-review-candidate-1",
+  "functional_result": "not met",
+  "manifest": {
+    "path": "skill-studies/sweeping-stale-references/cases/invocation-review/opus-invocation-manifest.json",
+    "sha256": "7a92055dbaf80782608d7d379666e3e3e7453f4b8bb39f76191ba646a109db81",
+    "version": "1",
+    "git_revision": "85c3fd707e9ce8e01f8006883a8e2e1cd63b011a"
+  }
+}

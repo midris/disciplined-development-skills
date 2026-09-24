@@ -1,0 +1,130 @@
+{
+  "schema_version": "2",
+  "record_kind": "execution result",
+  "assessed_at": "2026-09-24T17:47:39.164638+00:00",
+  "run_id": "20260924T174649673Z-ssr-opus-invocation-change-original-6b7841ac-d3b4-409f-ba70-346e090bd0f9-yc7ln4ib",
+  "condition": "original",
+  "assessor": {
+    "name": "Codex active session",
+    "method": "active session",
+    "model": null,
+    "session_id": null,
+    "context": "Same active session prepared and inspected the study; not independent or blind."
+  },
+  "evidence": [
+    {
+      "id": "runner",
+      "artifact": {
+        "path": "/Users/simon/work/personal/skill-study-private/sweeping-stale-references/development/20260924T174649673Z-ssr-opus-invocation-change-original-6b7841ac-d3b4-409f-ba70-346e090bd0f9-yc7ln4ib/result.json",
+        "sha256": "484fea8ac012080306f8db93f96b2264cab5e34309fbecd3e20b45d1d0df3ffb",
+        "version": null
+      },
+      "selector": "Mechanical completion, supplied identities and cleanup."
+    },
+    {
+      "id": "trace",
+      "artifact": {
+        "path": "/Users/simon/work/personal/skill-study-private/sweeping-stale-references/development/20260924T174649673Z-ssr-opus-invocation-change-original-6b7841ac-d3b4-409f-ba70-346e090bd0f9-yc7ln4ib/stdout.txt",
+        "sha256": "edefc856b59985af17ccfe2831ea7db0086c2da2447a8ddbdc300fdf30f0dd15",
+        "version": null
+      },
+      "selector": "Complete ordered model-visible context, calls and outputs."
+    },
+    {
+      "id": "final",
+      "artifact": {
+        "path": "/Users/simon/work/personal/skill-study-private/sweeping-stale-references/development/20260924T174649673Z-ssr-opus-invocation-change-original-6b7841ac-d3b4-409f-ba70-346e090bd0f9-yc7ln4ib/final.txt",
+        "sha256": "ef5096c705aadec62f8358929ad78ddf2f263760a9c9fa5b86bd5d2fbc22a60d",
+        "version": null
+      },
+      "selector": "Final delivered response."
+    },
+    {
+      "id": "checks",
+      "artifact": {
+        "path": "/Users/simon/work/personal/skill-study-private/sweeping-stale-references/development/20260924T174649673Z-ssr-opus-invocation-change-original-6b7841ac-d3b4-409f-ba70-346e090bd0f9-yc7ln4ib.checks.json",
+        "sha256": "e1ade79a086050318cc2079d927a72cc0b00bcee30cce541046f5d6b76210fd7",
+        "version": null
+      },
+      "selector": "Disposable-copy Git history/diff, project artifacts, ordered trace projection and independent replay."
+    }
+  ],
+  "setup": {
+    "status": "valid",
+    "reason": "Pinned Opus-low run completed with full native catalog, complete capture and clean cleanup; full original SSR delivered before editing.",
+    "evidence": [
+      "runner",
+      "trace",
+      "checks"
+    ]
+  },
+  "criteria": [
+    {
+      "id": "F1",
+      "dimension": "functional",
+      "judgment": "met",
+      "reason": "All six current consumer paths updated to session_ttl_minutes/session TTL; independent replay confirms default/custom/script behavior.",
+      "consequence": "Functional criterion satisfied.",
+      "evidence": [
+        "trace",
+        "checks"
+      ]
+    },
+    {
+      "id": "F2",
+      "dimension": "functional",
+      "judgment": "met",
+      "reason": "Values, minute conversion, nonpositive rejection and partner rationale preserved; archive and independent vendor unchanged.",
+      "consequence": "Functional criterion satisfied.",
+      "evidence": [
+        "trace",
+        "checks"
+      ]
+    },
+    {
+      "id": "F3",
+      "dimension": "functional",
+      "judgment": "met",
+      "reason": "One complete rename commit after neutral baseline; working tree clean.",
+      "consequence": "Functional criterion satisfied.",
+      "evidence": [
+        "trace",
+        "checks"
+      ]
+    },
+    {
+      "id": "D1",
+      "dimension": "procedural",
+      "judgment": "met",
+      "reason": "Skill called at trace line 6; complete original body delivered before first edit at line 11.",
+      "consequence": "Report separately from functional outcome; affects comparison interpretation.",
+      "evidence": [
+        "trace",
+        "checks"
+      ]
+    }
+  ],
+  "procedural_summary": "Timely native selection and complete committed rename.",
+  "observations": [
+    {
+      "dimension": "procedural",
+      "description": "Commit inventory mixes occurrence and matching-line units (script two, archive one) and claims a post-edit old-name search not present in the trace.",
+      "consequence": "Outside this invocation-only procedural criterion; recorded without changing D1 or functional scores.",
+      "evidence": [
+        "trace",
+        "checks"
+      ]
+    }
+  ],
+  "uncertainty": [
+    "Small exposed development case; no population reliability inference."
+  ],
+  "result_id": "claude-opus-invocation-01-invocation-change-original-1",
+  "functional_result": "met",
+  "manifest": {
+    "path": "skill-studies/sweeping-stale-references/cases/invocation-change/opus-invocation-manifest.json",
+    "sha256": "9acb7610934f9cc161c6112c7cc6cd862b8196dcecb22e4928773ea9929b51a3",
+    "version": "1",
+    "git_revision": "85c3fd707e9ce8e01f8006883a8e2e1cd63b011a"
+  }
+}
