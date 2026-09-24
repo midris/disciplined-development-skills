@@ -9,7 +9,7 @@ This is navigation, not a duplicate progress or decision record.
 4. Follow the [formats](../formats/README.md) and [runner command guide](../../skill-validation/runner/README.md#study-documents) for mechanics; the historical worksheet is not current study authority.
 5. The [retrospective](../../reviews/2026-09-18-skill-testing-retrospective.md) identifies remaining discovery questions. The plan owns which one is selected next.
 
-SSR comprehensive-comparison-02 is complete with all 34 attempts retained and assessed; all 90 subject calls are spent. Resume at the protocol opening and active checklist for the pending candidate-contract/adoption decision, with the completed assessment as evidence.
+SSR comprehensive-comparison-02 is complete with all 34 attempts retained and assessed; all 90 subject calls are spent. Resume at the protocol opening and active checklist for the selected minimal Claude qualification follow-up; its startup blocker is recorded in [the preflight report](claude-smoke-qualification.md). Candidate adoption remains deferred.
 Future collection needs its own scope and allocation and must use the qualified isolation/private-shell runtime; historical shared-temp commands are rejected. No retries or live skill edits follow automatically.
 Preserve settled scenarios, criteria and historical identities; do not derive a baseline from a candidate or rescore old records to continue.
 SSR's [core assessment](core-baseline-01-assessment.md) records an unresolved Shiv category boundary: its P3 counts are not three established skill defects and do not independently justify a rewrite.

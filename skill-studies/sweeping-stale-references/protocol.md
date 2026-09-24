@@ -3,7 +3,7 @@
 Format version: `1`
 Study ID: `sweeping-stale-references`
 Status: comprehensive-comparison-02 complete: all 34 attempts retained and assessed with valid setup; no retries or replacements. Adoption and skill editing remain unauthorized.
-Current action: review the completed [comparison assessment](comprehensive-comparison-02-assessment.md) and decide whether to retain the original or authorize a targeted candidate clarification. All 90 subject calls are spent; no further collection is authorized.
+Current action: resolve the [minimal Claude qualification startup blocker](claude-smoke-qualification.md) before live smoke collection. Comprehensive-comparison-02 is complete; its candidate-contract/adoption decision remains deferred. The existing 90 subject calls are spent; no new model call was made during this preflight.
 The [plan](../../plans/2026-09-11-model-driven-skill-testing.md) owns progress; the [spec](../../plans/specs/2026-09-11-model-driven-skill-testing-framework.md) owns the workflow.
 The [core baseline](core-baseline-01-assessment.md) retains its two setup exclusions and runtime strata; the [comparison](comprehensive-comparison-01-assessment.md) records twelve valid executions of the original and preserved candidate. Both collection scopes are spent. Storage and accounting retains the SSR closing checkpoint and links the current combined totals.
 

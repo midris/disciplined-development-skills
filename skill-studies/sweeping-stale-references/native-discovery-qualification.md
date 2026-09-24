@@ -43,6 +43,6 @@ The installed Claude CLI reports `2.1.280`; the website describes evolving behav
 Current SSR drafts place skills under `.agents/skills`, so they are Codex configurations and must not be relabeled Claude runs.
 A Claude comparison requires `.claude/skills` materialization, model/effort selection, native catalog and Skill-event capture qualification, plus its own allocation.
 Before any Claude subject pass, add and pass an installed-policy assertion of Python and Git resolution through the actual Bash shell invocation.
-This remains unimplemented: the Codex login-shell test covers Codex only, and the shared isolation probe invokes Python by absolute path.
+This remains unqualified: the Codex login-shell test covers Codex only, and the shared isolation probe invokes Python by absolute path. The [minimal Claude preflight](claude-smoke-qualification.md) passes both isolation modes but stalls before the scripted CLI reaches Bash or Skill; zero model calls were made.
 The completed comparison is Codex-only; Claude subject collection is blocked until its own shell check passes.
 Claude documentation checking does not authorize or qualify additional Claude model runs.
