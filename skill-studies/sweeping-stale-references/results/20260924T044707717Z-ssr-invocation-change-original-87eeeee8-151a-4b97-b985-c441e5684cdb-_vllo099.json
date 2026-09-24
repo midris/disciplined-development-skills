@@ -1,0 +1,118 @@
+{
+  "schema_version": "2",
+  "record_kind": "execution result",
+  "assessed_at": "2026-09-24T04:49:16.582555+00:00",
+  "run_id": "20260924T044707717Z-ssr-invocation-change-original-87eeeee8-151a-4b97-b985-c441e5684cdb-_vllo099",
+  "condition": "original",
+  "assessor": {
+    "name": "Codex active session",
+    "method": "active session",
+    "model": null,
+    "session_id": null,
+    "context": "Same active session prepared and inspected the study; not independent or blind."
+  },
+  "evidence": [
+    {
+      "id": "runner",
+      "artifact": {
+        "path": "/Users/simon/work/personal/skill-study-private/sweeping-stale-references/development/20260924T044707717Z-ssr-invocation-change-original-87eeeee8-151a-4b97-b985-c441e5684cdb-_vllo099/result.json",
+        "sha256": "618786d16cdf4bde3d41e05154c92cd92b4bce729007d0f278eb11856ee513ee",
+        "version": null
+      },
+      "selector": "Mechanical completion, supplied identities and cleanup."
+    },
+    {
+      "id": "trace",
+      "artifact": {
+        "path": "/Users/simon/work/personal/skill-study-private/sweeping-stale-references/development/20260924T044707717Z-ssr-invocation-change-original-87eeeee8-151a-4b97-b985-c441e5684cdb-_vllo099/provider-session.jsonl",
+        "sha256": "90b42e74e14a9ab483f0bc757fdda4dd150b0f7f6f66c4edd35459bc595f845d",
+        "version": null
+      },
+      "selector": "Complete ordered model-visible context, calls and outputs."
+    },
+    {
+      "id": "final",
+      "artifact": {
+        "path": "/Users/simon/work/personal/skill-study-private/sweeping-stale-references/development/20260924T044707717Z-ssr-invocation-change-original-87eeeee8-151a-4b97-b985-c441e5684cdb-_vllo099/final.txt",
+        "sha256": "2f7634cfdca3368483ae08473252f9a27913b1c3fdffb6065ef62063611095dd",
+        "version": null
+      },
+      "selector": "Final delivered response."
+    },
+    {
+      "id": "checks",
+      "artifact": {
+        "path": "/Users/simon/work/personal/skill-study-private/sweeping-stale-references/development/20260924T044707717Z-ssr-invocation-change-original-87eeeee8-151a-4b97-b985-c441e5684cdb-_vllo099.checks.json",
+        "sha256": "cf1b45bdc142cf71102a35fcc8e4e5ad40b7c1e752af02a593c9b3a64bb05de9",
+        "version": null
+      },
+      "selector": "Disposable-copy Git history/diff, project artifacts, ordered trace projection and independent replay."
+    }
+  ],
+  "setup": {
+    "status": "valid",
+    "reason": "Native catalog at trace line 3 exposes the sole project SSR plus five built-ins at the supplied path. Prompt line 9 has no SSR/read request. Complete tool capture establishes task, selection and repair order; pinned inputs and runtime are valid.",
+    "evidence": [
+      "runner",
+      "trace",
+      "checks"
+    ]
+  },
+  "criteria": [
+    {
+      "id": "F1",
+      "dimension": "functional",
+      "judgment": "met",
+      "reason": "The new session_ttl_minutes interface works in source, defaults, script, tests and current explanations. Independent replay gives default expiry 1900 and custom expiry 820, with correct script output from two directories.",
+      "consequence": "Functional criterion satisfied.",
+      "evidence": [
+        "trace",
+        "checks"
+      ]
+    },
+    {
+      "id": "F2",
+      "dimension": "functional",
+      "judgment": "met",
+      "reason": "Values and units, rejection of zero/negative duration, partner-imposed limit and refresh trade-off are preserved. Historical archive and independent vendor files remain unchanged.",
+      "consequence": "Functional criterion satisfied.",
+      "evidence": [
+        "trace",
+        "checks"
+      ]
+    },
+    {
+      "id": "F3",
+      "dimension": "functional",
+      "judgment": "met",
+      "reason": "Commit a4373b1 contains every required rename and terminology update; final working tree is clean.",
+      "consequence": "Functional criterion satisfied.",
+      "evidence": [
+        "trace",
+        "checks"
+      ]
+    },
+    {
+      "id": "D1",
+      "dimension": "procedural",
+      "judgment": "met",
+      "reason": "After task delivery at line 16, the model selected SSR at line 21 and received its complete body at line 25, before first reconciliation edit at line 54.",
+      "consequence": "Report separately from functional outcome; affects comparison interpretation.",
+      "evidence": [
+        "trace",
+        "checks"
+      ]
+    }
+  ],
+  "procedural_summary": "Natural invocation met; task functional success is assessed independently. P1\u2013P3 are not criteria for this stratum.",
+  "observations": [],
+  "uncertainty": [],
+  "result_id": "comprehensive-comparison-02-invocation-change-original-1",
+  "functional_result": "met",
+  "manifest": {
+    "path": "skill-studies/sweeping-stale-references/cases/invocation-change/comparison-02-manifest.json",
+    "sha256": "bfe21a4507cc59a3b12a7ce9836c2bc1af1133813f118e5fa61725e0dba19df0",
+    "version": "1",
+    "git_revision": "37ab0390b04630335d15f6d246b2b042f0e07f51"
+  }
+}

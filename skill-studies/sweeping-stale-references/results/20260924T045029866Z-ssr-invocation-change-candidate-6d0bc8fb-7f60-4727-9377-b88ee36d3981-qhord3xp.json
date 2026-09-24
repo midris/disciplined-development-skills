@@ -1,0 +1,128 @@
+{
+  "schema_version": "2",
+  "record_kind": "execution result",
+  "assessed_at": "2026-09-24T04:52:24.110767+00:00",
+  "run_id": "20260924T045029866Z-ssr-invocation-change-candidate-6d0bc8fb-7f60-4727-9377-b88ee36d3981-qhord3xp",
+  "condition": "candidate",
+  "assessor": {
+    "name": "Codex active session",
+    "method": "active session",
+    "model": null,
+    "session_id": null,
+    "context": "Same active session prepared and inspected the study; not independent or blind."
+  },
+  "evidence": [
+    {
+      "id": "runner",
+      "artifact": {
+        "path": "/Users/simon/work/personal/skill-study-private/sweeping-stale-references/development/20260924T045029866Z-ssr-invocation-change-candidate-6d0bc8fb-7f60-4727-9377-b88ee36d3981-qhord3xp/result.json",
+        "sha256": "27c261c386fde07003e58cb7869cb6c7dac04f5f8c856490d1ed09bfa7c08022",
+        "version": null
+      },
+      "selector": "Mechanical completion, supplied identities and cleanup."
+    },
+    {
+      "id": "trace",
+      "artifact": {
+        "path": "/Users/simon/work/personal/skill-study-private/sweeping-stale-references/development/20260924T045029866Z-ssr-invocation-change-candidate-6d0bc8fb-7f60-4727-9377-b88ee36d3981-qhord3xp/provider-session.jsonl",
+        "sha256": "16b02812044803e476e8000082c76436919347ebd599f251d0de5cc449ab6288",
+        "version": null
+      },
+      "selector": "Complete ordered model-visible context, calls and outputs."
+    },
+    {
+      "id": "final",
+      "artifact": {
+        "path": "/Users/simon/work/personal/skill-study-private/sweeping-stale-references/development/20260924T045029866Z-ssr-invocation-change-candidate-6d0bc8fb-7f60-4727-9377-b88ee36d3981-qhord3xp/final.txt",
+        "sha256": "7a167f0de3217400bc46ae252573a80ed62907550d6b3042a744aa2981503f9c",
+        "version": null
+      },
+      "selector": "Final delivered response."
+    },
+    {
+      "id": "checks",
+      "artifact": {
+        "path": "/Users/simon/work/personal/skill-study-private/sweeping-stale-references/development/20260924T045029866Z-ssr-invocation-change-candidate-6d0bc8fb-7f60-4727-9377-b88ee36d3981-qhord3xp.checks.json",
+        "sha256": "dbe66c0cdf2aefa76f6f545bcb0d36d6a8a9cc4520911d57bf84a1f47ff6082b",
+        "version": null
+      },
+      "selector": "Disposable-copy Git history/diff, project artifacts, ordered trace projection and independent replay."
+    }
+  ],
+  "setup": {
+    "status": "valid",
+    "reason": "Native catalog at trace line 3 exposes the sole project SSR plus five built-ins at the supplied path. Prompt line 9 has no SSR/read request. Complete tool capture establishes task, selection and repair order; pinned inputs and runtime are valid. Parent-directory guidance probes yielded no content; the explicit find was denied and the later rg returned no paths.",
+    "evidence": [
+      "runner",
+      "trace",
+      "checks"
+    ]
+  },
+  "criteria": [
+    {
+      "id": "F1",
+      "dimension": "functional",
+      "judgment": "met",
+      "reason": "The new session_ttl_minutes interface works in source, defaults, script, tests and current explanations. Independent replay gives default expiry 1900 and custom expiry 820, with correct script output from two directories.",
+      "consequence": "Functional criterion satisfied.",
+      "evidence": [
+        "trace",
+        "checks"
+      ]
+    },
+    {
+      "id": "F2",
+      "dimension": "functional",
+      "judgment": "met",
+      "reason": "Values and units, rejection of zero/negative duration, partner-imposed limit and refresh trade-off are preserved. Historical archive and independent vendor files remain unchanged.",
+      "consequence": "Functional criterion satisfied.",
+      "evidence": [
+        "trace",
+        "checks"
+      ]
+    },
+    {
+      "id": "F3",
+      "dimension": "functional",
+      "judgment": "met",
+      "reason": "Commit 5f012f1 contains every required rename and terminology update; final working tree is clean.",
+      "consequence": "Functional criterion satisfied.",
+      "evidence": [
+        "trace",
+        "checks"
+      ]
+    },
+    {
+      "id": "D1",
+      "dimension": "procedural",
+      "judgment": "met",
+      "reason": "Native SSR availability is established in the catalog. Task output line 16 precedes the complete candidate-body response at line 25; the first reconciliation edit is line 47. No task-level read instruction was supplied.",
+      "consequence": "Report separately from functional outcome; affects comparison interpretation.",
+      "evidence": [
+        "trace",
+        "checks"
+      ]
+    }
+  ],
+  "procedural_summary": "Natural invocation met; task functional success is assessed independently. P1\u2013P3 are not criteria for this stratum.",
+  "observations": [
+    {
+      "dimension": "setup",
+      "description": "Outside guidance search was denied or empty; no additional project guidance reached the subject.",
+      "consequence": "Recorded separately from functional outcome.",
+      "evidence": [
+        "trace",
+        "checks"
+      ]
+    }
+  ],
+  "uncertainty": [],
+  "result_id": "comprehensive-comparison-02-invocation-change-candidate-2",
+  "functional_result": "met",
+  "manifest": {
+    "path": "skill-studies/sweeping-stale-references/cases/invocation-change/comparison-02-manifest.json",
+    "sha256": "bfe21a4507cc59a3b12a7ce9836c2bc1af1133813f118e5fa61725e0dba19df0",
+    "version": "1",
+    "git_revision": "37ab0390b04630335d15f6d246b2b042f0e07f51"
+  }
+}
