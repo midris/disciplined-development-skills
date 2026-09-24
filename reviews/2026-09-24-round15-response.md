@@ -9,14 +9,14 @@ The local-change card receives editorial version 4 with correct Claude batch/con
 The preparation record now describes completed historical preparation and links future collection requirements instead of presenting old pre-dispatch commands as pending work.
 
 All three runner follow-ups have unchecked plan entries with written deferral reasons:
-- Round 14's missing offline regression: exact assertion is not present in the supplied round-15 text or located review records. Requested the original finding; track as unresolved rather than inventing the requirement.
-- Git warning: independently confirmed denied optional global-ignore lookup at `/Users/simon/.config/git/ignore` in Opus order 1. The reviewer reports 40/44 new runs; that count was not independently repeated here. Diagnose and test a private configuration remedy without granting host access; successful task commits remain valid.
+- Round 14's missing offline regression: the owner subsequently supplied the original finding. Deleting either TMPPREFIX or ZDOTDIR leaves the default suite green; only the opt-in actual-CLI check detects it (reviewer-reported mutation checks). Inspection confirms the cited setup test has no assertions for these settings. The plan now names the exact offline regression; implementation remains deferred.
+- Git warning: independently confirmed denied optional global-ignore lookup at `/Users/simon/.config/git/ignore` in Opus order 1. The reviewer reports 40/44 new runs; that count was not independently repeated here. Round 14 proposes overriding core.excludesFile through GIT_CONFIG_COUNT; test that private configuration remedy without granting host access; successful task commits remain valid.
 - final.txt extraction: successful result followed by background cleanup needs an offline regression/fix; raw stdout already contains the complete answer, so no model rerun is necessary.
 
 The already-current/new-encoding triage ambiguity is logged as an investigation question, preserving accepted historical scores. A shared spelling is not enough to decide whether a match is independent or already-current; inspect its meaning before choosing a disposition.
 
 Verification: ten batch readiness checks pass; editorial card structure/completeness passes; frozen criterion identities remain valid. Criterion text is byte-identical before/after the editorial correction. Local links and whitespace pass. Hook suite result is recorded in the commit verification.
 
-Self-review: no blocking documentation findings remain. The unspecified round-14 test remains an explicitly unresolved follow-up, not a claimed runner fix.
+Self-review: no blocking documentation findings remain. All three runner follow-ups are now specified; none is claimed fixed by this documentation response.
 
 DD-VERDICT: PASS
