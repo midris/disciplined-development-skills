@@ -452,7 +452,7 @@ At that closing checkpoint, 30 subject calls had been dispatched and capacity wa
 
 
 Current combined invocation accounting also includes the CW [baseline](../concise-writing/contribution-baseline-01-run-index.json) and [comparison](../concise-writing/comprehensive-comparison-01-run-index.json), plus the expansion index above.
-Dispatched calls are **56 subject, 0 evaluator, 0 authoring, 0 retry**; remaining outer capacity is **34 / 12 / 4 / 4** against the [active plan](../../plans/2026-09-11-model-driven-skill-testing.md#limits-and-information-boundaries). The CW protocol owns current combined time and forecast; all ten expansion slots are spent; only the separate 34-call comprehensive-comparison-02 scope authorizes further dispatch.
+Dispatched calls are **65 subject, 0 evaluator, 0 authoring, 0 retry**; remaining outer capacity is **25 / 12 / 4 / 4** against the [active plan](../../plans/2026-09-11-model-driven-skill-testing.md#limits-and-information-boundaries). The CW protocol owns current combined time and forecast; all ten expansion slots are spent; only the separate 34-call comprehensive-comparison-02 scope authorizes further dispatch.
 
 
 Historical SSR closing forecast (2026-09-17):
