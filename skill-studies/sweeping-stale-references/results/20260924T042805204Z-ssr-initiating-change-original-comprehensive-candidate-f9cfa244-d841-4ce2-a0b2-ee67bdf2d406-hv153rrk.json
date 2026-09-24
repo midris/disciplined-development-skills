@@ -1,0 +1,150 @@
+{
+  "schema_version": "2",
+  "record_kind": "execution result",
+  "assessed_at": "2026-09-24T04:30:17.947741+00:00",
+  "run_id": "20260924T042805204Z-ssr-initiating-change-original-comprehensive-candidate-f9cfa244-d841-4ce2-a0b2-ee67bdf2d406-hv153rrk",
+  "condition": "candidate",
+  "assessor": {
+    "name": "Codex active session",
+    "method": "active session",
+    "model": null,
+    "session_id": null,
+    "context": "Same active session prepared and inspected the study; not independent or blind."
+  },
+  "evidence": [
+    {
+      "id": "runner",
+      "artifact": {
+        "path": "/Users/simon/work/personal/skill-study-private/sweeping-stale-references/development/20260924T042805204Z-ssr-initiating-change-original-comprehensive-candidate-f9cfa244-d841-4ce2-a0b2-ee67bdf2d406-hv153rrk/result.json",
+        "sha256": "40ca15a9548775f6b1c7d20111a96efa4be32c4da517c24c30c4ced04da6e02b",
+        "version": null
+      },
+      "selector": "Mechanical completion, supplied identities and cleanup."
+    },
+    {
+      "id": "trace",
+      "artifact": {
+        "path": "/Users/simon/work/personal/skill-study-private/sweeping-stale-references/development/20260924T042805204Z-ssr-initiating-change-original-comprehensive-candidate-f9cfa244-d841-4ce2-a0b2-ee67bdf2d406-hv153rrk/provider-session.jsonl",
+        "sha256": "31970f3b9ccc3b8855f8e45ff54e0e6a3cd753b745cded291a42f106feaf12de",
+        "version": null
+      },
+      "selector": "Complete ordered model-visible context, calls and outputs."
+    },
+    {
+      "id": "final",
+      "artifact": {
+        "path": "/Users/simon/work/personal/skill-study-private/sweeping-stale-references/development/20260924T042805204Z-ssr-initiating-change-original-comprehensive-candidate-f9cfa244-d841-4ce2-a0b2-ee67bdf2d406-hv153rrk/final.txt",
+        "sha256": "f55be5858ae1a47d62359901cfbd6d8d97139c2d5e29562b4c6f776cc0f62eb5",
+        "version": null
+      },
+      "selector": "Final delivered response."
+    },
+    {
+      "id": "checks",
+      "artifact": {
+        "path": "/Users/simon/work/personal/skill-study-private/sweeping-stale-references/development/20260924T042805204Z-ssr-initiating-change-original-comprehensive-candidate-f9cfa244-d841-4ce2-a0b2-ee67bdf2d406-hv153rrk.checks.json",
+        "sha256": "c114d8ad4df705ecdac5c24bb3b52ffc6777451a91dcb4bc1bacb0cca48a35fa",
+        "version": null
+      },
+      "selector": "Disposable-copy Git history/diff, project artifacts, ordered trace projection and independent replay."
+    }
+  ],
+  "setup": {
+    "status": "valid",
+    "reason": "Full candidate body before repair and usable isolated tools. A script probe from the ungranted parent directory hit Python cwd/import denial; the subject recovered from docs/ and independent disposable replay verifies true outside-directory behavior. No input exposure or policy change occurred.",
+    "evidence": [
+      "runner",
+      "trace",
+      "checks"
+    ]
+  },
+  "criteria": [
+    {
+      "id": "F1",
+      "dimension": "functional",
+      "judgment": "met",
+      "reason": "The new session_ttl_minutes interface works in source, defaults, script, tests and current explanations. Independent replay gives default expiry 1900 and custom expiry 820, with correct script output from two directories.",
+      "consequence": "Functional criterion satisfied.",
+      "evidence": [
+        "trace",
+        "checks"
+      ]
+    },
+    {
+      "id": "F2",
+      "dimension": "functional",
+      "judgment": "met",
+      "reason": "Values and units, rejection of zero/negative duration, partner-imposed limit and refresh trade-off are preserved. Historical archive and independent vendor files remain unchanged.",
+      "consequence": "Functional criterion satisfied.",
+      "evidence": [
+        "trace",
+        "checks"
+      ]
+    },
+    {
+      "id": "F3",
+      "dimension": "functional",
+      "judgment": "met",
+      "reason": "Commit aaaab9b contains every required rename and terminology update; final working tree is clean.",
+      "consequence": "Functional criterion satisfied.",
+      "evidence": [
+        "trace",
+        "checks"
+      ]
+    },
+    {
+      "id": "P1",
+      "dimension": "procedural",
+      "judgment": "met",
+      "reason": "Broad identifier/concept/variant search and complete file inspection precede edits; current, historical and independent matches receive justified triage.",
+      "consequence": "Report separately from functional outcome; affects comparison interpretation.",
+      "evidence": [
+        "trace",
+        "checks"
+      ]
+    },
+    {
+      "id": "P2",
+      "dimension": "procedural",
+      "judgment": "met",
+      "reason": "One complete repair commit follows the neutral baseline.",
+      "consequence": "Report separately from functional outcome; affects comparison interpretation.",
+      "evidence": [
+        "trace",
+        "checks"
+      ]
+    },
+    {
+      "id": "P3",
+      "dimension": "procedural",
+      "judgment": "met",
+      "reason": "The account consistently uses occurrences: ten updates, two historical and two independent references, totaling fourteen across nine paths, with precise grouped locations. The additional TASK.md entry is excluded by fixed scope and does not change required counts.",
+      "consequence": "Report separately from functional outcome; affects comparison interpretation.",
+      "evidence": [
+        "trace",
+        "checks"
+      ]
+    }
+  ],
+  "procedural_summary": "All fixed functional and procedural criteria met.",
+  "observations": [
+    {
+      "dimension": "setup",
+      "description": "The parent-directory script probe was denied by isolation; rerunning from docs/ succeeded. Independent replay from outside the copied checkout also succeeds.",
+      "consequence": "Recorded separately from functional outcome.",
+      "evidence": [
+        "trace",
+        "checks"
+      ]
+    }
+  ],
+  "uncertainty": [],
+  "result_id": "comprehensive-comparison-02-initiating-change-candidate-1",
+  "functional_result": "met",
+  "manifest": {
+    "path": "skill-studies/sweeping-stale-references/cases/initiating-change/comparison-02-manifest.json",
+    "sha256": "98d270f56b4feacb9109746908e9c7aed59aa6eafbf541113e8b93d4d3066b21",
+    "version": "1",
+    "git_revision": "37ab0390b04630335d15f6d246b2b042f0e07f51"
+  }
+}
