@@ -11,7 +11,7 @@ This is navigation, not a duplicate progress or decision record.
 
 The [full Claude comparison](claude-comparison-01-assessment.md) is complete: 34 valid attempts on original and rewrite, including repeated native discovery checks.
 The [ten-call Opus-low invocation comparison](claude-opus-invocation-01-assessment.md) is also complete; all 136 combined subject calls are spent.
-Next action: owner review of findings and a decision on adoption or a targeted follow-up; no further collection or skill edit is selected.
+Next action: select a focused investigation from the [testing/process stocktake](protocol.md#testing-and-authoring-readiness-check-2026-09-24). Selected coverage is complete with explicit limits; no further collection or skill edit is selected.
 The owner accepts the rewrite’s changed local reporting; historical scores stay fixed and adoption remains deferred.
 Preserve settled scenarios, criteria and historical identities; do not derive a baseline from a candidate or rescore old records to continue.
 SSR's [core assessment](core-baseline-01-assessment.md) records an unresolved Shiv category boundary: its P3 counts are not three established skill defects and do not independently justify a rewrite.

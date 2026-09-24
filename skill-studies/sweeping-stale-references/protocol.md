@@ -3,7 +3,7 @@
 Format version: `1`
 Study ID: `sweeping-stale-references`
 Status: comprehensive-comparison-02, Claude smoke, claude-comparison-01 and claude-opus-invocation-01 complete; all authorized attempts retained and assessed. Adoption and skill editing remain unauthorized; the owner accepts the rewrite’s changed local reporting as intentional.
-Current action: owner review of the completed [Opus-low invocation comparison](claude-opus-invocation-01-assessment.md), then a decision on adoption or a targeted follow-up. All 136 combined subject calls are spent; no further collection or skill edit is selected.
+Current action: select a focused investigation of the logged invocation and reconciliation failures after the [testing/process stocktake](#testing-and-authoring-readiness-check-2026-09-24); no additional broad coverage campaign is required first. All 136 combined subject calls are spent; no further collection or skill edit is selected.
 The [plan](../../plans/2026-09-11-model-driven-skill-testing.md) owns progress; the [spec](../../plans/specs/2026-09-11-model-driven-skill-testing-framework.md) owns the workflow.
 The [core baseline](core-baseline-01-assessment.md) retains its two setup exclusions and runtime strata; the [comparison](comprehensive-comparison-01-assessment.md) records twelve valid executions of the original and preserved candidate. Both collection scopes are spent. Storage and accounting retains the SSR closing checkpoint and links the current combined totals.
 
@@ -106,7 +106,7 @@ The completed pilot's frozen assessment, manifest and raw bundles retain their o
 
 ### Proposed baseline case selection
 
-This inventory distinguishes collected cases from the invocation/pressure drafts. The heading is retained for existing links; the original three-case scope is complete. All cases are exposed development evidence.
+This inventory records collected development cases; invocation and pressure designs have now been executed. The heading is retained for existing links; the original three-case scope is complete. All cases are exposed development evidence.
 
 | Case | Membership / exposure | Coverage and limits | Rules and evidence |
 |---|---|---|---|
@@ -118,10 +118,10 @@ This inventory distinguishes collected cases from the invocation/pressure drafts
 | initiating-change | Measured: two valid originals, one valid control and one excluded control | Ordinary initiating rename; code/config/script/prose consistency and preservation | [Case](cases/initiating-change/assessment.md), [manifest](cases/initiating-change/manifest.json), [qualification](expansion-qualification.md). |
 | local-change | Measured: two valid repetitions per condition | Justified single-file correction, near-match preservation and O5 negative account | [Case](cases/local-change/assessment.md), [manifest](cases/local-change/manifest.json), [qualification](expansion-qualification.md). |
 | large-sweep-account | Measured: two valid original-only reports | P3 grouping/counts and truthful verification; no functional outcome measured | [Case](cases/large-sweep-account/assessment.md), [manifest](cases/large-sweep-account/manifest.json), [qualification](expansion-qualification.md). |
-| invocation-change | Draft; no observations | Natural selection before an initiating rename | [Case](cases/invocation-change/assessment.md), [preparation](invocation-pressure-preparation.md). |
-| invocation-review | Draft; no observations | Natural selection before repairing one reviewer-flagged claim | [Case](cases/invocation-review/assessment.md), [preparation](invocation-pressure-preparation.md). |
-| invocation-unrelated | Draft; no observations | No deliberate selection for an unchanged-code explanation | [Case](cases/invocation-unrelated/assessment.md), [preparation](invocation-pressure-preparation.md). |
-| pressure-repair | Draft; no observations | Complete repair despite handoff, prior-effort and green-test incentives | [Case](cases/pressure-repair/assessment.md), [preparation](invocation-pressure-preparation.md). |
+| invocation-change | Measured: Codex, Sonnet and Opus original/rewrite comparisons | Natural selection before an initiating rename | [Case](cases/invocation-change/assessment.md), [preparation](invocation-pressure-preparation.md). |
+| invocation-review | Measured: Codex, Sonnet and Opus original/rewrite comparisons | Natural selection before repairing one reviewer-flagged claim | [Case](cases/invocation-review/assessment.md), [preparation](invocation-pressure-preparation.md). |
+| invocation-unrelated | Measured: Codex, Sonnet and Opus original/rewrite comparisons | No deliberate selection for an unchanged-code explanation | [Case](cases/invocation-unrelated/assessment.md), [preparation](invocation-pressure-preparation.md). |
+| pressure-repair | Measured: Codex and Sonnet original/rewrite comparisons | Complete repair despite handoff, prior-effort and green-test incentives | [Case](cases/pressure-repair/assessment.md), [preparation](invocation-pressure-preparation.md). |
 
 The cases exercise broadening beyond the trigger, complete reconciliation, preservation and useful accounting; facets may share a case.
 Both pilot controls encountered all current consumers before making a narrow repair, so those observations support repair-scope comparison, not a discovery advantage.
@@ -129,7 +129,7 @@ Shiv's public-source familiarity may affect either condition; project size and l
 Inspect any upstream-restoring edit against the settled task before attributing its cause; familiarity does not excuse an incorrect outcome.
 Equivalent repairs and document restructuring remain valid under the case rules. Checkers report observable facts; the active agent inspects meaning, preserved behavior, trace and Git evidence.
 Use existing constructed correct/incorrect variants to check mechanical observations and clarify real ambiguities. They are not measured model performance or a separate evaluator exam.
-Automatic selection is measured in the completed comprehensive-comparison-02 native cases. Composition, specialized search difficulty, reserved transfer and population reliability remain outside the claim. No control failure is required merely to justify a comparison.
+Automatic selection is measured in the completed Codex, Sonnet and Opus native cases. Composition, specialized search difficulty, reserved transfer and population reliability remain outside the claim. No control failure is required merely to justify a comparison.
 
 ### Proposed coverage expansion (2026-09-19)
 
@@ -144,7 +144,8 @@ Current combined accounting remains in the CW protocol as linked below; CW scena
 ### Facet coverage audit (2026-09-21)
 
 This is the suite-level review required by [spec section 2](../../plans/specs/2026-09-11-model-driven-skill-testing-framework.md#2-select-representative-tests).
-Design adequacy describes the available task and evidence path, not model success. Collected evidence links to the completed [baseline](core-baseline-01-assessment.md), [comparison](comprehensive-comparison-01-assessment.md) and [completed expansion](coverage-baseline-01-assessment.md).
+Updated 2026-09-24 after the Codex, Sonnet and Opus comparisons. The heading retains its original date for existing links.
+Design adequacy describes the available task and evidence path, not model success. Evidence includes the [baseline](core-baseline-01-assessment.md), [first comparison](comprehensive-comparison-01-assessment.md), [expansion](coverage-baseline-01-assessment.md), [Codex comparison 02](comprehensive-comparison-02-assessment.md), [Sonnet comparison](claude-comparison-01-assessment.md) and [Opus invocation comparison](claude-opus-invocation-01-assessment.md).
 All five executable cases now have measured evidence. Initiating-change retains two valid originals and one valid control, with one excluded control; local-change has two valid repetitions per condition, and large-sweep-account has two valid procedural-only reports.
 Case definitions and qualification are linked in the inventory above.
 
@@ -159,17 +160,44 @@ Case definitions and qualification are linked in the inventory above.
 | O3: complete committed repair | Covered | All executable tasks request a commit; F1/F2 inspect useful outcome and preservation, F3 inspects committed state, P2 checks one reconciliation commit | Baseline + comparison; initiating and local behavior measured in expansion | Functional completeness and procedural grouping stay separate; no hostile/concurrent repository claim |
 | O4: locations, counts and same-path/outcome grouping | Covered | Executable commit accounts map to references; large-sweep-account supplies 126 matches and one mixed-outcome path | Baseline + comparison; one initiating original accounting defect; both diagnostic reports met P3 | Real-task accounting and isolated diagnostic measured separately; consistent line/occurrence units accepted where ambiguous |
 | O4: References swept placement relative to narrative and Verification | Partial | Commit bodies and diagnostic REPORT.md expose placement; diagnostic task requests References swept followed by Verification | Not isolated | Protocol names placement, but case pass/fail rules focus on traceability and do not isolate every ordering error; do not claim comprehensive formatting conformance; revisit before an edit changes this behavior. |
-| O4: preserve necessary audit detail beyond normal length preference | Gap | Eleven diagnostic groups fit within the supplied 72-line preference | None | Removing the former pressure claim was correct; add a pressure case before judging changes to this exception; revisit before an edit changes this behavior. |
-| O5: justified single-file/no-sweep negative account | Partial | local-change has one real correction plus valid near-matches; search evidence supports locality and P3 checks the negative form | Expansion: both guided local attempts meet P3; comparison 02 originals meet P3 and candidates omit the negative form | Local correction measured; a genuinely no-change task is not separately tested, so no general no-op handling claim; revisit before an edit changes this behavior. |
-| Applicability: explicit load versus autonomous skill discovery | Covered in bounded native context | invocation-change/review omit explicit loading; invocation-unrelated asks for an unchanged-code explanation | Comparison 02: all eight positive D1 observations met; both sanity non-use observations met | SSR plus five built-ins on Codex 0.156.0; no full-bundle, near-boundary negative or reliability claim. |
-| Discipline under competing incentives | Covered descriptively | pressure-repair adds handoff urgency, prior effort and green-test confidence to semantic-delivery | Comparison 02: all four pressure repairs complete, as are ordinary semantic repairs | Small matched ordinary/pressure observations; no causal pressure-effect or population claim. |
+| O4: preserve necessary audit detail beyond normal length preference | Gap, deferred | Existing diagnostic fits the supplied preference and does not force this exception | None | No brevity score or new brevity scenario selected: maintaining brevity is not SSR’s job. Revisit only if an edit changes whether necessary audit evidence survives a competing output constraint. |
+| O5: justified single-file/no-sweep negative account | Partial | local-change supplies one real correction plus near-matches; criterion v3 distinguishes accepted original/rewrite reporting | Local repair measured on Codex and Sonnet; Codex candidate positive accounts are owner-accepted; Sonnet candidate n/a accounts violate its own positive-inventory rule | Functional locality covered; genuine applicable no-change sweep remains untested. The unrelated explanation is non-applicable and cannot substitute. Revisit if changing no-op handling. |
+| Applicability: explicit load versus autonomous skill discovery | Covered in bounded native context | Two positive trigger cases and one distant non-use sanity case; catalog and full-body timing inspected | Codex: original/rewrite 4/4 positive loads each; Sonnet: 2/4 and 3/4; Opus: 2/4 and 4/4. Both non-use checks pass per model | Known invocation failures, not missing positive-trigger coverage. Catalog is SSR plus built-ins; full-bundle competition and realistic near-boundary false positives remain untested. Investigate misses without claiming population reliability. |
+| Discipline under competing incentives | Covered descriptively | pressure-repair combines urgency, sunk effort and green-test confidence with semantic repair | Codex: 2/2 functional per version; Sonnet: original 1/2, rewrite 2/2; ordinary semantic tasks all pass in these batches | Existing failure available for investigation. No pressure no-target control collected; add it if claiming contribution or authoring pressure-specific guidance under writing-skills. No need to repeat this on every model. |
 | Composition, difficult search, conflicting information and transfer | Gap | No DD orchestration, required companion interaction, hostile repository or held-out case is supplied | None | SSR is independently evaluated; these contexts are outside the selected question and must be reconsidered if an edit depends on them |
+| Rewrite-specific extensions | Partial | Initiating-change exercises attached rationale; candidate runs expose old/new searches and post-edit checks | Rationale preservation is measured; post-edit checking has recorded deviations. Large read-only account diagnostic tested original only | No collision/partial-migration case, dedicated candidate read-only proposal check or complete independent scoring of all added search/reporting requirements. Add only the targeted checks needed for an edit or a full-conformance claim; do not silently extend shared historical criteria. |
 
-**Coverage judgment:** the expanded design is sufficient to establish a broader development baseline for explicit-load SSR on small, inspectable tasks: ordinary changes, reviewer-triggered repairs and justified locality, plus isolated accounting.
-It does not establish that every facet of SSR is tested or that a general rewrite is ready for adoption.
-The collected expansion supports ordinary-change and local-negative behavior on the supplied tasks; it shows no functional advantage over valid controls and retains one non-blocking accounting defect.
-Do not add scenarios merely to achieve an all-green map. Before authoring, check the chosen edit against this map: an edit to pressure handling, exact output ordering, no-op behavior, discovery or composition requires targeted evidence or an explicitly narrower conclusion.
-Comprehensive-comparison-02 uses the same accepted expanded executable cases for original and candidate, with the selected pressure/native additions; earlier measurements are not retroactively expanded.
+**Coverage judgment:** the selected development suite and recorded process are sufficient to start investigating the observed invocation and reconciliation failures.
+Ordinary application, initiating changes, reviewer-triggered repair, preservation, committed outcomes, locality, accounting and combined pressure have been exercised; discovery is now separately measured across Codex and two Claude models.
+Coverage does not mean all behavior passes: Claude has both missed loads and incomplete repairs, including one after timely loading.
+No additional broad baseline, independent evaluator campaign or held-out study is a prerequisite to the next focused investigation.
+Claims about every instruction, full-bundle use, realistic over-triggering and production reliability remain unsupported under the dispositions above.
+
+### Testing and authoring readiness check (2026-09-24)
+
+The owner asked to log the Claude findings and check remaining testing/process work before fixes.
+The canonical [Sonnet](claude-comparison-01-assessment.md) and [Opus](claude-opus-invocation-01-assessment.md) assessments already preserve results and immutable evidence references; this stocktake changes neither scores nor frozen inputs.
+Track two separate observed issues: native selection misses, and incomplete semantic reconciliation despite timely loading.
+Successful tasks without a load are not invocation passes; loaded failures are not discovery failures.
+
+[Spec sections 2, 4 and 7](../../plans/specs/2026-09-11-model-driven-skill-testing-framework.md) require representative bounded coverage, conditions suited to the question and an evidence-led authoring objective.
+The installed Superpowers writing-skills 6.4.1 guidance and its testing-skills-with-subagents reference were re-read for this check.
+Their RED–GREEN–REFACTOR requirements inform future authoring; the owner-selected existing rewrite was compared unchanged, so that historical comparison is not an unperformed new-authoring cycle.
+The original's real-codebase authoring is owner-reported and its scenarios were not saved; do not invent or reconstruct a claimed historical RED record.
+
+Before an improvement is authored, classify the observed failure and agree the specific objective and applicable acceptance rules.
+For behavior-shaping wording, writing-skills calls for a no-guidance control and at least five fresh-context samples per variant, followed by full relevant application/pressure scenarios; those counts do not retroactively invalidate the declared two-repetition descriptive comparisons.
+For a discovery-description change, retain natural availability and score timely loading; removing SSR necessarily makes it unavailable, so a no-target run cannot establish description effectiveness. Record that scope-specific adaptation before testing rather than forcing an irrelevant control.
+For a claim that SSR prevents incomplete repairs or pressure shortcuts, use a contemporaneous no-target condition; a run where SSR was available but not selected is not a randomized no-guidance arm.
+Retain observed statements and actions from existing traces, without inventing private rationalizations; do not add a generic prohibition table unless the diagnosis supports it.
+Retest the affected fixed cases after an edit and check the map for any newly relevant gap. Pure cleanup with passing controls requires the explicit workflow reconciliation described by the spec; do not manufacture RED.
+
+Process follow-up: Sonnet order 4 exposed a missing convenience final.txt after background cleanup events; the complete final response remains in stdout and is already cited.
+A focused offline extractor regression/fix remains useful before relying on convenience files alone; no new model calls or reassessment are required for that issue, and it does not block the retained findings.
+Complete evidence retention, fixed scores, assessments and accounting exist for every authorized attempt; the current ten batch readiness checks pass.
+The known accounting-category ambiguities remain disclosed and must be resolved prospectively if a proposed edit depends on them.
+No additional scenarios, model calls, skill edits or deployment are selected by this stocktake.
+The next decision is a focused investigation objective; adoption stays deferred.
 
 ## Execution scope and authorization
 
