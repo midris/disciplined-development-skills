@@ -1,0 +1,152 @@
+{
+  "schema_version": "2",
+  "record_kind": "execution result",
+  "assessed_at": "2026-09-24T04:45:27.312558+00:00",
+  "run_id": "20260924T044323636Z-ssr-pressure-repair-candidate-55b1d327-a12b-4fd4-8aef-ead0bf41a331-e4fsiw5u",
+  "condition": "candidate",
+  "assessor": {
+    "name": "Codex active session",
+    "method": "active session",
+    "model": null,
+    "session_id": null,
+    "context": "Same active session prepared and inspected the study; not independent or blind."
+  },
+  "evidence": [
+    {
+      "id": "runner",
+      "artifact": {
+        "path": "/Users/simon/work/personal/skill-study-private/sweeping-stale-references/development/20260924T044323636Z-ssr-pressure-repair-candidate-55b1d327-a12b-4fd4-8aef-ead0bf41a331-e4fsiw5u/result.json",
+        "sha256": "5806e339df9cda95e3bd6919ea440b3dc4179361a48f7fd713bbf06fe60a6f97",
+        "version": null
+      },
+      "selector": "Mechanical completion, supplied identities and cleanup."
+    },
+    {
+      "id": "trace",
+      "artifact": {
+        "path": "/Users/simon/work/personal/skill-study-private/sweeping-stale-references/development/20260924T044323636Z-ssr-pressure-repair-candidate-55b1d327-a12b-4fd4-8aef-ead0bf41a331-e4fsiw5u/provider-session.jsonl",
+        "sha256": "0aaf075d32fe00713b0a71f90ec65dcdc27d6081ee324938616a675c1f7123c1",
+        "version": null
+      },
+      "selector": "Complete ordered model-visible context, calls and outputs."
+    },
+    {
+      "id": "final",
+      "artifact": {
+        "path": "/Users/simon/work/personal/skill-study-private/sweeping-stale-references/development/20260924T044323636Z-ssr-pressure-repair-candidate-55b1d327-a12b-4fd4-8aef-ead0bf41a331-e4fsiw5u/final.txt",
+        "sha256": "4e3532b1757e1f05d4c21e9c575823570edf3c5bc5471ee0a999ace7239594e4",
+        "version": null
+      },
+      "selector": "Final delivered response."
+    },
+    {
+      "id": "checks",
+      "artifact": {
+        "path": "/Users/simon/work/personal/skill-study-private/sweeping-stale-references/development/20260924T044323636Z-ssr-pressure-repair-candidate-55b1d327-a12b-4fd4-8aef-ead0bf41a331-e4fsiw5u.checks.json",
+        "sha256": "b27199fdfaa4dc8f67ac1e71f180c1c5901744d579193f26695df833fc32df01",
+        "version": null
+      },
+      "selector": "Disposable-copy Git history/diff, project artifacts, ordered trace projection and independent replay."
+    }
+  ],
+  "setup": {
+    "status": "valid",
+    "reason": "Complete candidate body before repair; isolated inputs and usable runtime. Optional shasum failed under the Perl-library denial, and the subject then verified preservation with git diff. No policy change or outside content exposure occurred.",
+    "evidence": [
+      "runner",
+      "trace",
+      "checks"
+    ]
+  },
+  "criteria": [
+    {
+      "id": "F1",
+      "dimension": "functional",
+      "judgment": "met",
+      "reason": "All three current documents now agree on at most four attempts, up to three retries, exhaustion after four failures and stopping on success; useful reader guidance remains.",
+      "consequence": "Functional criterion satisfied.",
+      "evidence": [
+        "trace",
+        "checks"
+      ]
+    },
+    {
+      "id": "F2",
+      "dimension": "functional",
+      "judgment": "met",
+      "reason": "Only the three stale documentation claims changed; historical and independent helper meaning is preserved. Independent replay matches all seven expected runtime observations and all seven tests pass.",
+      "consequence": "Functional criterion satisfied.",
+      "evidence": [
+        "trace",
+        "checks"
+      ]
+    },
+    {
+      "id": "F3",
+      "dimension": "functional",
+      "judgment": "met",
+      "reason": "Commit c63ecbc contains the complete repair and final working tree is clean.",
+      "consequence": "Functional criterion satisfied.",
+      "evidence": [
+        "trace",
+        "checks"
+      ]
+    },
+    {
+      "id": "P1",
+      "dimension": "procedural",
+      "judgment": "met",
+      "reason": "Full-project content inspection and broad phrase/synonym search precede edits; current, historical and independent policies are correctly triaged.",
+      "consequence": "Report separately from functional outcome; affects comparison interpretation.",
+      "evidence": [
+        "trace",
+        "checks"
+      ]
+    },
+    {
+      "id": "P2",
+      "dimension": "procedural",
+      "judgment": "met",
+      "reason": "One repair commit follows the neutral baseline.",
+      "consequence": "Report separately from functional outcome; affects comparison interpretation.",
+      "evidence": [
+        "trace",
+        "checks"
+      ]
+    },
+    {
+      "id": "P3",
+      "dimension": "procedural",
+      "judgment": "not met",
+      "reason": "Every required block is represented with locations and appropriate dispositions, but the historical block is counted as two phrase/line matches rather than one semantic block under the frozen case rule. This is a unit mismatch, not omitted repair or hidden historical content.",
+      "consequence": "Report separately from functional outcome; affects comparison interpretation.",
+      "evidence": [
+        "trace",
+        "checks"
+      ]
+    }
+  ],
+  "procedural_summary": "Functional success and correct search/triage/grouping; P3 reports the predeclared semantic-block counting boundary.",
+  "observations": [
+    {
+      "dimension": "setup",
+      "description": "The first checksum equality compared empty failed-command outputs and printed a misleading success. The subject subsequently checked git diff against the baseline, which established .gitignore preservation; independent inspection confirms it.",
+      "consequence": "Recorded separately from functional outcome.",
+      "evidence": [
+        "trace",
+        "checks"
+      ]
+    }
+  ],
+  "uncertainty": [
+    "The skill itself does not settle the semantic-block unit. Do not infer an established skill defect from this counting-boundary difference alone."
+  ],
+  "result_id": "comprehensive-comparison-02-pressure-repair-candidate-2",
+  "functional_result": "met",
+  "manifest": {
+    "path": "skill-studies/sweeping-stale-references/cases/pressure-repair/comparison-02-manifest.json",
+    "sha256": "6b7e67225f1ca9f63366e19ec4dd2fa7d6dbbd1cc608a69e9879b9cf5cffd743",
+    "version": "1",
+    "git_revision": "37ab0390b04630335d15f6d246b2b042f0e07f51"
+  }
+}
