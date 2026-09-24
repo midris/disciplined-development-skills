@@ -10,7 +10,7 @@ No provider calls, skill rewrites or historical result/manifest changes were mad
 - P2, negative invocation: the unchanged-code explanation is now explicitly a non-use sanity check. D1 is its sole criterion; version-2 functional outcome is `not measured`. Arithmetic and preservation are descriptive observations outside SSR functional counts. A pass cannot establish realistic near-boundary over-trigger resistance. An independent-helper edit was not substituted because the skill's local-change triage makes non-applicability less clear than the review suggestion implies.
 
 The two positive invocation tasks and pressure variant remain unchanged.
-Native discovery qualification and new collection allocation remain pending.
+At this correction checkpoint, native discovery qualification and new collection allocation were pending; current status belongs to the protocol opening and plan checklist.
 The quoted preparation authorization is in this conversation; the budget-guideline and proceed decisions were present in the recovered session.
 
 ## Retained-index recovery
@@ -18,7 +18,9 @@ The quoted preparation authorization is in this conversation; the budget-guideli
 The final readiness check found three raw `.git/index` mismatches in expanded-baseline orders 4, 6 and 7.
 Original execution-directory copies matched the existing inventory hashes exactly, and read-only `git ls-files --stage` comparisons showed identical staged entries between altered and original indexes.
 The altered files were preserved before restoring the exact original bytes; no inventory pin was changed.
-The cause of the mutation is not established here; future inspection must use disposable copies, including for Git commands that may refresh index metadata.
+The subsequent Claude review identified its round-11 inspection as the cause: it ran `git status` directly in exactly these three retained bundles and reproduced index rewriting on a disposable copy.
+This attribution is reviewer-reported; the exact-byte restoration was independently verified here.
+Future inspection must use disposable copies, including for Git commands that may refresh index metadata.
 Recovery details and red/green sandbox evidence are retained at `/Users/simon/work/personal/skill-study-private/sweeping-stale-references/development/review-corrections-20260923/`.
 The sibling inventory SHA-256 is `0781a38d87abcbe0632e192a85a542b831a1b1a381952f148a513c6966ac0a06`.
 

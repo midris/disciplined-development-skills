@@ -1,6 +1,6 @@
 # SSR invocation and pressure preparation
 
-Status: draft suite for owner review; preparation authorized on 2026-09-23, no provider calls or skill edits authorized.
+Status: suite and comparison proposal prepared for owner acceptance; no provider calls or skill edits authorized.
 The [protocol](protocol.md) owns coverage and decisions; the [active plan](../../plans/2026-09-11-model-driven-skill-testing.md) owns progress.
 
 ## Questions and proposed cases
@@ -113,7 +113,8 @@ Reference outcomes use the existing fixture qualification and semantic-delivery 
 The unrelated expected answer is 1900 seconds, with no authored project change or commit.
 The pressure comparison must retain the same project/task bytes across conditions; only target skill bytes and the explicit-read instruction differ for the optional control.
 
-Manifests, exact repetitions/order, runtime qualification, proposed call allocation and a comparison acceptance rule follow owner review of this suite.
+The comparison proposal defines repetitions/order, allocation and acceptance rules; Codex catalog/capture qualification is complete with scripted transport.
+Owner suite/allocation acceptance, manifest freeze and collection preflight remain pending.
 Do not describe these drafts as collection-ready or spend the exhausted prior allocation.
 Before collection, pin shared source fixtures, task/prompts, skill versions, these cards and policy identities; preserve prior manifests/results unchanged.
 Use the qualified private-shell/read-isolation setup; fresh provider/version checks must not silently replace historical execution identities.
@@ -147,7 +148,7 @@ Copied references to undefined P2 judgments were removed from both discovery car
 The second self-review checked each worked outcome against the cards, traced applicable criteria across all four cases, rechecked task/configuration parity and controller separation, and checked that historical evidence and pending discovery qualification remain unchanged.
 No remaining P0/P1/P2/P3 findings were identified in the revised preparation.
 All nine configurations rematerialized successfully; four cards remained structurally valid drafts; expansion fixtures 7, semantic qualification/probe tests 12 and formats 9 passed again.
-This review does not establish native discovery behavior; runtime qualification remains a pre-collection requirement.
+That scoring review did not qualify native discovery; the subsequent scripted qualification establishes catalog/capture mechanics, while model selection remains unmeasured.
 
 ## External review correction — 2026-09-23
 

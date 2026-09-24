@@ -2,8 +2,8 @@
 
 Format version: `1`
 Study ID: `sweeping-stale-references`
-Status: invocation/pressure preparation active; coverage-baseline-01 and previous batches complete. New provider calls, adoption and skill editing remain unauthorized.
-Current question and pending decision: review the drafted invocation checks and pressure variant before preparing a comparison with the existing comprehensive rewrite. The owner authorized preparation and suite review on 2026-09-23; the [preparation record](invocation-pressure-preparation.md) owns the proposed cases, evidence rules and qualification limits. Collected evidence remains explicit-load behavior; new collection needs its own scope and allocation.
+Status: comparison proposal prepared; suite acceptance and call allocation pending. Coverage-baseline-01 and previous batches are complete; new provider calls, adoption and skill editing remain unauthorized.
+Current question and pending decision: accept or revise the suite and [34-call comparison proposal](comparison-proposal.md), which would raise the subject ceiling from 56 to 90. The [preparation record](invocation-pressure-preparation.md) owns case designs and evidence rules. [Codex native catalog/capture qualification](native-discovery-qualification.md) passed with a scripted endpoint on CLI 0.156.0; automatic model selection remains unmeasured. After acceptance, freeze the inputs and invocation authority and complete the declared preflight before collection.
 The [plan](../../plans/2026-09-11-model-driven-skill-testing.md) owns progress; the [spec](../../plans/specs/2026-09-11-model-driven-skill-testing-framework.md) owns the workflow.
 The [core baseline](core-baseline-01-assessment.md) retains its two setup exclusions and runtime strata; the [comparison](comprehensive-comparison-01-assessment.md) records twelve valid executions of the original and preserved candidate. Both collection scopes are spent. Storage and accounting retains the SSR closing checkpoint and links the current combined totals.
 
@@ -22,7 +22,7 @@ The skill has its own trigger and procedure; it does not require DD or a named S
 DD invokes it at Gate 4, but that incoming invocation is not a dependency of the skill.
 The [purpose and relationship map](../../ARCHITECTURE.md#composition-boundaries) records this distinction across all nine skills.
 The completed first study measures independent application after explicit loading; it did not test native discovery or DD orchestration.
-Native invocation is now in preparation; DD orchestration remains outside the proposed independent-use scope.
+Native invocation scenarios and comparison scope are prepared; DD orchestration remains outside the proposed independent-use scope.
 [Disciplined research](../../skills/disciplined-research/SKILL.md) owns grounding the changed fact; [writing explicit rationale](../../skills/writing-explicit-rationale/SKILL.md) owns why it changed.
 These ownership boundaries do not require loading either sibling into the subject context.
 The task must supply a settled desired outcome and sufficient project context, rather than score this skill for inventing the desired change or resolving an unspecified business rule. The implementation may already be changed in a repair case or may be the requested work in an initiating-change case.
@@ -161,7 +161,7 @@ Case definitions and qualification are linked in the inventory above.
 | O4: References swept placement relative to narrative and Verification | Partial | Commit bodies and diagnostic REPORT.md expose placement; diagnostic task requests References swept followed by Verification | Not isolated | Protocol names placement, but case pass/fail rules focus on traceability and do not isolate every ordering error; do not claim comprehensive formatting conformance; revisit before an edit changes this behavior. |
 | O4: preserve necessary audit detail beyond normal length preference | Gap | Eleven diagnostic groups fit within the supplied 72-line preference | None | Removing the former pressure claim was correct; add a pressure case before judging changes to this exception; revisit before an edit changes this behavior. |
 | O5: justified single-file/no-sweep negative account | Partial | local-change has one real correction plus valid near-matches; search evidence supports locality and P3 checks the negative form | Expansion: both guided local attempts meet P3 | Local correction measured; a genuinely no-change task is not separately tested, so no general no-op handling claim; revisit before an edit changes this behavior. |
-| Applicability: explicit load versus autonomous skill discovery | Draft addition | invocation-change/review omit explicit loading; invocation-unrelated asks for an unchanged-code explanation | Only explicit-load evidence collected | Preparation active; native availability/capture remains unqualified. |
+| Applicability: explicit load versus autonomous skill discovery | Draft addition | invocation-change/review omit explicit loading; invocation-unrelated asks for an unchanged-code explanation | Only explicit-load evidence collected | Codex 0.156.0 catalog/capture qualified with scripted transport; automatic selection unmeasured; suite/allocation acceptance pending. |
 | Discipline under competing incentives | Draft addition | pressure-repair adds handoff urgency, prior effort and green-test confidence to semantic-delivery | Ordinary repairs measured; no deliberate pressure observations | Preserve outcome rules; causal pressure claims require matched contemporaneous conditions. |
 | Composition, difficult search, conflicting information and transfer | Gap | No DD orchestration, required companion interaction, hostile repository or held-out case is supplied | None | SSR is independently evaluated; these contexts are outside the selected question and must be reconsidered if an edit depends on them |
 
@@ -448,6 +448,3 @@ All thirty subject calls used Sol-low. Small exposed cases, shared assessor cont
 The contrasting-skill CW study subsequently exercised the workflow; its records and current combined accounting are linked above. SSR expansion is complete; invocation/pressure preparation is active as described at the start of this protocol.
 
 The prepared unrelated invocation case is D1-only sanity evidence, with functional outcome `not measured`; it does not establish near-boundary over-trigger resistance.
-
-Next proposed scope: [34-call comparison](comparison-proposal.md), pending allocation acceptance.
-[Codex scripted discovery qualification and Claude documentation cross-check](native-discovery-qualification.md) separate verified transport mechanics from unmeasured automatic selection.
