@@ -113,11 +113,9 @@ Reference outcomes use the existing fixture qualification and semantic-delivery 
 The unrelated expected answer is 1900 seconds, with no authored project change or commit.
 The pressure comparison must retain the same project/task bytes across conditions; only target skill bytes and the explicit-read instruction differ for the optional control.
 
-The comparison proposal defines repetitions/order, allocation and acceptance rules; Codex catalog/capture qualification is complete with scripted transport.
-Owner acceptance, manifest freeze, collection preflight and the 34-call comparison are complete; the protocol and assessment record their evidence.
-Do not dispatch until manifest freeze and collection readiness pass; the new allocation does not reopen historical slots.
-Before collection, pin shared source fixtures, task/prompts, skill versions, these cards and policy identities; preserve prior manifests/results unchanged.
-Use the qualified private-shell/read-isolation setup; fresh provider/version checks must not silently replace historical execution identities.
+The [comparison proposal](comparison-proposal.md) records the historical allocation and order; the completed assessments are indexed in the [protocol results](protocol.md#results-and-decision).
+For any future collection, the runner guide and protocol govern a new input freeze, readiness check and runtime qualification; this historical preparation record supplies no dispatch authority.
+Current status and the next decision live at the protocol opening.
 
 ## Offline verification and review — 2026-09-23
 

@@ -5,15 +5,16 @@
 Format version: `1`
 Study ID: `sweeping-stale-references`
 Case ID: `local-change`
-Definition version: `3`
-Status: accepted for comprehensive-comparison-02; collection authority and input freeze belong to the protocol.
+Definition version: `4`
+Status: editorial correction of the claude-comparison-01 controller card; collected runs retain frozen definition v3 through their manifests.
+Revision scope: correct batch/configuration references and describe the v3 P3 change accurately; no criterion wording, expected outcome or historical score changes.
 Purpose and realistic failure opportunity: Observe scope checking and restraint when one correction genuinely needs no sibling edits.
-Scenario mechanism: This case tests a justified local outcome after checking scope. One glossary heading needs correction while related membership and shipping references remain valid. Inspect the final heading, preserved meanings and links, search-before-edit evidence and committed negative-form account. The near-matches distinguish justified restraint from blanket normalization; a one-file diff alone cannot establish that scope was checked.
+Scenario mechanism: This case tests a justified local outcome after checking scope. One glossary heading needs correction while related membership and shipping references remain valid. Inspect the final heading, preserved meanings and links, search-before-edit evidence and committed account appropriate to the selected skill version. The near-matches distinguish justified restraint from blanket normalization; a one-file diff alone cannot establish that scope was checked.
 Protocol coverage and membership/exposure: O1–O3 and O5; local-change boundary; exposed development evidence proposed in [coverage expansion](../../coverage-expansion.md).
 
 ## Inputs and setup
 
-Subject task: [task.md](task.md). Configuration: [original](original.json), [candidate](candidate-comprehensive.json); working identities: [manifest](comparison-02-manifest.json).
+Subject task: [task.md](task.md). Configuration: [original](claude-comparison-original.json), [candidate](claude-comparison-candidate.json); collected identities: [manifest](claude-comparison-manifest.json).
 Original and candidate receive identical project/task bytes and the full-read instruction, differing only in the supplied skill. Both first commit the supplied project as fixture baseline; that setup commit is excluded from task grouping.
 Current model/effort defaults are preparation settings only; collection must declare runtime identities, scope and budget before invocation.
 Only configured inputs reach subjects. This card, policy and expected facts are controller-only.
@@ -23,7 +24,7 @@ Verify actual inputs, usable tools/runtime, retained output and complete skill-r
 
 Apply the unchanged [SSR policy 3](assessment-policy.txt) and [case-specific reference facts and boundary examples](expected.md).
 Read complete delivered artifacts, diffs and available traces. Mechanical observations support human/model judgments; neither successful tests nor a self-report proves complete reconciliation.
-Inspect the committed tree as well as the final workspace. F1–F3 and P1–P3 apply to original and candidate with unchanged meanings.
+Inspect the committed tree as well as the final workspace. F1–F3 and P1–P2 retain their earlier meanings. P3 uses the version-specific reporting rule introduced in v3 and printed below; it differs from the earlier shared negative-form requirement.
 Counting units, relevant scope and acceptable variants are fixed in expected.md; do not inherit semantic-block or disputed-label conventions from other cases.
 No fixed wording or file-change count substitutes for semantic preservation. A directly observed missing required artifact is failure; inability to inspect the artifact is insufficient evidence.
 Offline qualification and commands are recorded in [qualification](../../expansion-qualification.md).

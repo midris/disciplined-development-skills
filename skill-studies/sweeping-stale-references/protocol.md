@@ -178,6 +178,8 @@ Claims about every instruction, full-bundle use, realistic over-triggering and p
 The owner asked to log the Claude findings and check remaining testing/process work before fixes.
 The canonical [Sonnet](claude-comparison-01-assessment.md) and [Opus](claude-opus-invocation-01-assessment.md) assessments already preserve results and immutable evidence references; this stocktake changes neither scores nor frozen inputs.
 Track two separate observed issues: native selection misses, and incomplete semantic reconciliation despite timely loading.
+Also investigate the rewrite’s triage vocabulary: it requires searching and accounting for new encodings, but supplies no explicit disposition for a genuine reference that already uses the intended new encoding.
+Determine whether those matches are genuinely unrelated or already-current references before calling them false positives; do not retroactively change accepted local scores or infer that every Membership match shares the same meaning.
 Successful tasks without a load are not invocation passes; loaded failures are not discovery failures.
 
 [Spec sections 2, 4 and 7](../../plans/specs/2026-09-11-model-driven-skill-testing-framework.md) require representative bounded coverage, conditions suited to the question and an evidence-led authoring objective.
@@ -197,7 +199,7 @@ A focused offline extractor regression/fix remains useful before relying on conv
 Complete evidence retention, fixed scores, assessments and accounting exist for every authorized attempt; the current ten batch readiness checks pass.
 The known accounting-category ambiguities remain disclosed and must be resolved prospectively if a proposed edit depends on them.
 No additional scenarios, model calls, skill edits or deployment are selected by this stocktake.
-The next decision is a focused investigation objective; adoption stays deferred.
+The protocol opening owns the current decision; the active plan tracks deferred runner work.
 
 ## Execution scope and authorization
 
@@ -602,6 +604,9 @@ Closure is complete within its 30-minute allowance; no new collection or rollout
 
 | Evidence | Interpretation |
 |---|---|
+| [Claude smoke](claude-smoke-01-assessment.md) | Original only: explicit-load Shiv repair succeeds; native reviewer-triggered load is missed and repair incomplete. Runtime/capture viability and model behavior remain separate. |
+| [Sonnet comparison](claude-comparison-01-assessment.md) | Ordinary functional outcomes 10/10 per version; pressure original 1/2 versus rewrite 2/2; positive loads 2/4 versus 3/4; positive native task outcomes 3/4 each. Non-use sanity passes for both. |
+| [Opus invocation comparison](claude-opus-invocation-01-assessment.md) | Positive loads original 2/4 versus rewrite 4/4; task outcomes 4/4 versus 3/4. Both original reviewer repairs succeed without loading; one loaded rewrite repair is incomplete. Non-use sanity passes for both. |
 | [Expanded comprehensive comparison](comprehensive-comparison-02-assessment.md) | All 34 valid observations included: functional outcomes tied, timely native selection and unrelated non-use met; the candidate retains a size benefit but changes the accepted local negative-account behavior. See the assessment for separate strata and reporting boundaries. |
 | [Completed expansion](coverage-baseline-01-assessment.md) | Nine included observations: all seven executable outcomes met, both accounting diagnostics met P3; one original initiating P3 defect. One control excluded. Runtime strata and accepted coverage gaps remain explicit. |
 | [Comprehensive comparison](comprehensive-comparison-01-assessment.md) | Complete twelve-execution comparison: tested functional outcomes preserved by both versions; reporting differences are mixed. Including the measured size reduction, the advisory recommendation favors the candidate. Owner deferred adoption. |
@@ -613,7 +618,7 @@ Closure is complete within its 30-minute allowance; no new collection or rollout
 
 Closure review: [evidence, scoring and verification](../../reviews/2026-09-24-ssr-comparison-02.md).
 
-Current disposition (2026-09-24): the approved expanded comparison is complete; adoption remains deferred. Its recommendation is to retain the original pending an explicit decision about the candidate’s local `n/a` contract difference. No targeted skill change or follow-up collection has been authorized.
+For the current disposition and next decision, use the opening Status and Current action lines. The local reporting difference is an accepted contract change, not an outstanding adoption prerequisite.
 
 Owner disposition for the earlier comparison (2026-09-17): close the selected SSR study and defer adoption until later studies and experiments have informed finalization. Preserve both tested versions and their evidence; choosing a version is not a prerequisite for the second study. The assessment’s recommendation favors the smaller candidate, but it authorizes no rollout.
 Both assessments separate unresolved Shiv category attribution from clear counting errors. Fixed-rule P3 totals do not establish that every mismatch is a skill defect; no criterion amendment or reassessment is authorized.
@@ -639,6 +644,6 @@ All thirty subject calls used Sol-low. Small exposed cases, shared assessor cont
 - Include simplification when interpreting a version comparison. The initial retain recommendation overlooked a measured size benefit already allowed by the spec. Word count is sufficient; smaller text does not excuse functional regression or prove token/cost savings.
 - Separate evidence completion from deployment. Closing with adoption deferred preserves the findings and permits the next study without forcing a winner or another collection cycle.
 
-The contrasting-skill CW study subsequently exercised the workflow; its records and current combined accounting are linked above. SSR expansion, comprehensive-comparison-02, claude-comparison-01 and claude-opus-invocation-01 are complete; the pending owner decision is described at the start of this protocol.
+For current state and next action, return to the protocol opening; for combined spending, use the linked CW accounting record.
 
 The measured unrelated invocation case is D1-only sanity evidence, with functional outcome `not measured`; it does not establish near-boundary over-trigger resistance.
