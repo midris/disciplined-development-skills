@@ -2,8 +2,8 @@
 
 Format version: `1`
 Study ID: `sweeping-stale-references`
-Status: coverage-baseline-01 complete: ten attempts, nine included and one excluded/charged. Previous batches are complete. Adoption and skill editing remain unauthorized.
-Current question and pending decision: which bounded, evidence-led improvement should be investigated next? The expanded baseline now measures ordinary changes, reviewer-triggered repairs, justified locality and isolated accounting. Preserve accepted gaps and runtime strata; future authoring/comparison needs its own scope and call allocation.
+Status: invocation/pressure preparation active; coverage-baseline-01 and previous batches complete. New provider calls, adoption and skill editing remain unauthorized.
+Current question and pending decision: review the drafted invocation checks and pressure variant before preparing a comparison with the existing comprehensive rewrite. The owner authorized preparation and suite review on 2026-09-23; the [preparation record](invocation-pressure-preparation.md) owns the proposed cases, evidence rules and qualification limits. Collected evidence remains explicit-load behavior; new collection needs its own scope and allocation.
 The [plan](../../plans/2026-09-11-model-driven-skill-testing.md) owns progress; the [spec](../../plans/specs/2026-09-11-model-driven-skill-testing-framework.md) owns the workflow.
 The [core baseline](core-baseline-01-assessment.md) retains its two setup exclusions and runtime strata; the [comparison](comprehensive-comparison-01-assessment.md) records twelve valid executions of the original and preserved candidate. Both collection scopes are spent. Storage and accounting retains the SSR closing checkpoint and links the current combined totals.
 
@@ -21,7 +21,8 @@ Its intended user is a development agent changing a fact shared across project f
 The skill has its own trigger and procedure; it does not require DD or a named Superpowers base to perform a sweep.
 DD invokes it at Gate 4, but that incoming invocation is not a dependency of the skill.
 The [purpose and relationship map](../../ARCHITECTURE.md#composition-boundaries) records this distinction across all nine skills.
-The first study measures independent application to a change and reconciliation commit; native discovery and DD orchestration are outside its claim.
+The completed first study measures independent application after explicit loading; it did not test native discovery or DD orchestration.
+Native invocation is now in preparation; DD orchestration remains outside the proposed independent-use scope.
 [Disciplined research](../../skills/disciplined-research/SKILL.md) owns grounding the changed fact; [writing explicit rationale](../../skills/writing-explicit-rationale/SKILL.md) owns why it changed.
 These ownership boundaries do not require loading either sibling into the subject context.
 The task must supply a settled desired outcome and sufficient project context, rather than score this skill for inventing the desired change or resolving an unspecified business rule. The implementation may already be changed in a repair case or may be the requested work in an initiating-change case.
@@ -105,7 +106,7 @@ The completed pilot's frozen assessment, manifest and raw bundles retain their o
 
 ### Proposed baseline case selection
 
-This inventory distinguishes the three collected core cases from the prepared additions. The heading is retained for existing links; the original three-case scope is complete. All cases are exposed development evidence.
+This inventory distinguishes collected cases from the invocation/pressure drafts. The heading is retained for existing links; the original three-case scope is complete. All cases are exposed development evidence.
 
 | Case | Membership / exposure | Coverage and limits | Rules and evidence |
 |---|---|---|---|
@@ -117,6 +118,10 @@ This inventory distinguishes the three collected core cases from the prepared ad
 | initiating-change | Measured: two valid originals, one valid control and one excluded control | Ordinary initiating rename; code/config/script/prose consistency and preservation | [Case](cases/initiating-change/assessment.md), [manifest](cases/initiating-change/manifest.json), [qualification](expansion-qualification.md). |
 | local-change | Measured: two valid repetitions per condition | Justified single-file correction, near-match preservation and O5 negative account | [Case](cases/local-change/assessment.md), [manifest](cases/local-change/manifest.json), [qualification](expansion-qualification.md). |
 | large-sweep-account | Measured: two valid original-only reports | P3 grouping/counts and truthful verification; no functional outcome measured | [Case](cases/large-sweep-account/assessment.md), [manifest](cases/large-sweep-account/manifest.json), [qualification](expansion-qualification.md). |
+| invocation-change | Draft; no observations | Natural selection before an initiating rename | [Case](cases/invocation-change/assessment.md), [preparation](invocation-pressure-preparation.md). |
+| invocation-review | Draft; no observations | Natural selection before repairing one reviewer-flagged claim | [Case](cases/invocation-review/assessment.md), [preparation](invocation-pressure-preparation.md). |
+| invocation-unrelated | Draft; no observations | No deliberate selection for an unchanged-code explanation | [Case](cases/invocation-unrelated/assessment.md), [preparation](invocation-pressure-preparation.md). |
+| pressure-repair | Draft; no observations | Complete repair despite handoff, prior-effort and green-test incentives | [Case](cases/pressure-repair/assessment.md), [preparation](invocation-pressure-preparation.md). |
 
 The cases exercise broadening beyond the trigger, complete reconciliation, preservation and useful accounting; facets may share a case.
 Both pilot controls encountered all current consumers before making a narrow repair, so those observations support repair-scope comparison, not a discovery advantage.
@@ -124,7 +129,7 @@ Shiv's public-source familiarity may affect either condition; project size and l
 Inspect any upstream-restoring edit against the settled task before attributing its cause; familiarity does not excuse an incorrect outcome.
 Equivalent repairs and document restructuring remain valid under the case rules. Checkers report observable facts; the active agent inspects meaning, preserved behavior, trace and Git evidence.
 Use existing constructed correct/incorrect variants to check mechanical observations and clarify real ambiguities. They are not measured model performance or a separate evaluator exam.
-Native skill discovery, composition, specialized search difficulty, reserved transfer and population reliability remain outside the selected claim. No additional case or control failure is required merely to advance collection.
+Native discovery remains outside collected claims and is now in preparation. Composition, specialized search difficulty, reserved transfer and population reliability remain outside the proposed claim. No control failure is required merely to justify a comparison.
 
 ### Proposed coverage expansion (2026-09-19)
 
@@ -156,7 +161,8 @@ Case definitions and qualification are linked in the inventory above.
 | O4: References swept placement relative to narrative and Verification | Partial | Commit bodies and diagnostic REPORT.md expose placement; diagnostic task requests References swept followed by Verification | Not isolated | Protocol names placement, but case pass/fail rules focus on traceability and do not isolate every ordering error; do not claim comprehensive formatting conformance; revisit before an edit changes this behavior. |
 | O4: preserve necessary audit detail beyond normal length preference | Gap | Eleven diagnostic groups fit within the supplied 72-line preference | None | Removing the former pressure claim was correct; add a pressure case before judging changes to this exception; revisit before an edit changes this behavior. |
 | O5: justified single-file/no-sweep negative account | Partial | local-change has one real correction plus valid near-matches; search evidence supports locality and P3 checks the negative form | Expansion: both guided local attempts meet P3 | Local correction measured; a genuinely no-change task is not separately tested, so no general no-op handling claim; revisit before an edit changes this behavior. |
-| Applicability: explicit load versus autonomous skill discovery | Partial | Original-guided prompts require a full read; controls omit SSR | Baseline + comparison after explicit load | Selected question is behavior/contribution after loading, not whether the model selects the skill unaided |
+| Applicability: explicit load versus autonomous skill discovery | Draft addition | invocation-change/review omit explicit loading; invocation-unrelated asks for an unchanged-code explanation | Only explicit-load evidence collected | Preparation active; native availability/capture remains unqualified. |
+| Discipline under competing incentives | Draft addition | pressure-repair adds handoff urgency, prior effort and green-test confidence to semantic-delivery | Ordinary repairs measured; no deliberate pressure observations | Preserve outcome rules; causal pressure claims require matched contemporaneous conditions. |
 | Composition, difficult search, conflicting information and transfer | Gap | No DD orchestration, required companion interaction, hostile repository or held-out case is supplied | None | SSR is independently evaluated; these contexts are outside the selected question and must be reconsidered if an edit depends on them |
 
 **Coverage judgment:** the expanded design is sufficient to establish a broader development baseline for explicit-load SSR on small, inspectable tasks: ordinary changes, reviewer-triggered repairs and justified locality, plus isolated accounting.
@@ -435,4 +441,4 @@ All thirty subject calls used Sol-low. Small exposed cases, shared assessor cont
 - Include simplification when interpreting a version comparison. The initial retain recommendation overlooked a measured size benefit already allowed by the spec. Word count is sufficient; smaller text does not excuse functional regression or prove token/cost savings.
 - Separate evidence completion from deployment. Closing with adoption deferred preserves the findings and permits the next study without forcing a winner or another collection cycle.
 
-The contrasting-skill CW study subsequently exercised the workflow; its records and current combined accounting are linked above. SSR expansion is complete; the next bounded improvement question is pending as described at the start of this protocol.
+The contrasting-skill CW study subsequently exercised the workflow; its records and current combined accounting are linked above. SSR expansion is complete; invocation/pressure preparation is active as described at the start of this protocol.

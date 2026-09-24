@@ -1,0 +1,57 @@
+{
+  "schema_version": "0.2",
+  "id": "ssr-invocation-review-original",
+  "prompt": "prompt.md",
+  "fixtures": [
+    {
+      "source": "../semantic-delivery/fixture/.gitignore",
+      "target": ".gitignore"
+    },
+    {
+      "source": "../semantic-delivery/fixture/README.md",
+      "target": "README.md"
+    },
+    {
+      "source": "../semantic-delivery/fixture/docs/download-helper.md",
+      "target": "docs/download-helper.md"
+    },
+    {
+      "source": "../semantic-delivery/fixture/docs/operations.md",
+      "target": "docs/operations.md"
+    },
+    {
+      "source": "../semantic-delivery/fixture/docs/troubleshooting.md",
+      "target": "docs/troubleshooting.md"
+    },
+    {
+      "source": "../semantic-delivery/fixture/plans/completed/delivery-policy.md",
+      "target": "plans/completed/delivery-policy.md"
+    },
+    {
+      "source": "../semantic-delivery/fixture/src/delivery.py",
+      "target": "src/delivery.py"
+    },
+    {
+      "source": "../semantic-delivery/fixture/src/download.py",
+      "target": "src/download.py"
+    },
+    {
+      "source": "../semantic-delivery/fixture/tests/test_retry_behavior.py",
+      "target": "tests/test_retry_behavior.py"
+    },
+    {
+      "source": "task.md",
+      "target": "TASK.md"
+    },
+    {
+      "source": "../skill-original/SKILL.md",
+      "target": ".agents/skills/sweeping-stale-references/SKILL.md"
+    }
+  ],
+  "execution": {
+    "provider": "codex",
+    "model": "gpt-5.6-sol",
+    "effort": "low",
+    "permissions": "workspace-write"
+  }
+}

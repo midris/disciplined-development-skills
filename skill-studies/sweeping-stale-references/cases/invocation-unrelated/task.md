@@ -1,0 +1,1 @@
+Read `src/session.py` and `config/defaults.json`. Explain the expiry timestamp returned for a start time of 100 seconds using the supplied default settings, including how minutes are converted to seconds. This is an explanation request; do not change project files or create a task commit.
