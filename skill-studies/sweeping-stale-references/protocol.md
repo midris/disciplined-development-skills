@@ -3,7 +3,7 @@
 Format version: `1`
 Study ID: `sweeping-stale-references`
 Status: comprehensive-comparison-02, Claude smoke and claude-comparison-01 complete; all authorized attempts retained and assessed. Adoption and skill editing remain unauthorized; the owner accepts the rewrite’s changed local reporting as intentional.
-Current action: owner review of the completed [34-call Claude comparison](claude-comparison-01-assessment.md), then a decision on adoption or a targeted follow-up. All 126 combined subject calls are spent; no further collection or skill edit is selected.
+Current action: run and assess the owner-requested ten-call Opus-low invocation comparison below. Prior 126 subject calls are spent; ten additional calls are selected, with no retries or skill edits.
 The [plan](../../plans/2026-09-11-model-driven-skill-testing.md) owns progress; the [spec](../../plans/specs/2026-09-11-model-driven-skill-testing-framework.md) owns the workflow.
 The [core baseline](core-baseline-01-assessment.md) retains its two setup exclusions and runtime strata; the [comparison](comprehensive-comparison-01-assessment.md) records twelve valid executions of the original and preserved candidate. Both collection scopes are spent. Storage and accounting retains the SSR closing checkpoint and links the current combined totals.
 
@@ -186,6 +186,34 @@ SSR collection used config schema 0.2 and result schema 0.4; retained bundles ke
 Control contribution claims require evidence that omitted guidance was not loaded. Record limits on observed isolation rather than claiming exhaustive host-wide exclusion.
 
 Pre-baseline development is closed at two pairs. Do not reopen it for a new facet; a named readiness defect requires a separately authorized diagnostic exception.
+### Comparison: claude-opus-invocation-01
+
+Status: owner-authorized, 2026-09-24. Owner request: repeat invocation tests using Opus at low effort to investigate whether the observed misses also occur on that model.
+Scope: ten sequential calls; original/candidate each run twice on invocation-change and invocation-review, then once on invocation-unrelated. Same tasks, fixtures, prompts, skill bodies and criteria as claude-comparison-01; only configuration IDs and model change.
+Purpose: descriptive model comparison with the immediately preceding Sonnet batch; keep model strata separate and do not infer a population rate or a description defect from small counts.
+Inclusion: descriptive-only; Include all valid-setup executions regardless of outcome. Keep invalid setup, unknown evidence and unattempted slots explicit. No automatic retry or replacement.
+Budget: ten additional subject calls, zero evaluator/authoring/retry calls; combined subject ceiling rises from 126 to 136. Active-work guideline: 40 minutes including waits, retention and assessment; CW owns combined accounting.
+Runtime: Claude Code 2.1.280, binary SHA-256 `387a5c5dcdbb815085edf0baf79591f9d8894efe922bceaf3d75b1b08055229d`, `claude-opus-5-5`, low effort, workspace-write, 900-second per-attempt limit. Explicit model pin follows [official model configuration](https://code.claude.com/docs/en/model-config); inspect production init and model-use events for fallback or mismatch.
+Preflight: verify unchanged CLI/runner identity and original/candidate parity; reuse the same-day installed-policy/isolation qualification retained in claude-comparison-01 because only the requested model changes. Pass collection readiness before dispatch. Unexpected model/context, unknown charge, missing required capture, retention or cleanup fault stops collection for inspection.
+Native context: SSR is the sole supplied project skill alongside Claude bundled skills. Retain production catalogs and full ordered tool traces; scripted qualification establishes description/body delivery, not model selection. No skill name or explicit load instruction is added to task prompts.
+Assessment: unchanged F1/F2/F3 and D1 criteria for positive cases; unrelated D1-only non-use remains outside functional counts. Full skill body must arrive before first task reconciliation edit for positive D1. Functional correctness is inspected separately with disposable-copy replay. No skill authoring or adoption selected.
+Commands: run `skill-validation/runner/.venv/bin/skilltest run CONFIG` once per scheduled row; retain and inspect terminal evidence before proceeding.
+Inputs: [change manifest](cases/invocation-change/opus-invocation-manifest.json), [review manifest](cases/invocation-review/opus-invocation-manifest.json), [unrelated manifest](cases/invocation-unrelated/opus-invocation-manifest.json).
+Attempt index: [claude-opus-invocation-01-run-index.json](claude-opus-invocation-01-run-index.json).
+
+| Order | Case | Condition | Repetition | CONFIG |
+|---:|---|---|---:|---|
+| 1 | invocation-change | original | 1 | `skill-studies/sweeping-stale-references/cases/invocation-change/opus-invocation-original.json` |
+| 2 | invocation-change | candidate | 1 | `skill-studies/sweeping-stale-references/cases/invocation-change/opus-invocation-candidate.json` |
+| 3 | invocation-change | candidate | 2 | `skill-studies/sweeping-stale-references/cases/invocation-change/opus-invocation-candidate.json` |
+| 4 | invocation-change | original | 2 | `skill-studies/sweeping-stale-references/cases/invocation-change/opus-invocation-original.json` |
+| 5 | invocation-review | original | 1 | `skill-studies/sweeping-stale-references/cases/invocation-review/opus-invocation-original.json` |
+| 6 | invocation-review | candidate | 1 | `skill-studies/sweeping-stale-references/cases/invocation-review/opus-invocation-candidate.json` |
+| 7 | invocation-review | candidate | 2 | `skill-studies/sweeping-stale-references/cases/invocation-review/opus-invocation-candidate.json` |
+| 8 | invocation-review | original | 2 | `skill-studies/sweeping-stale-references/cases/invocation-review/opus-invocation-original.json` |
+| 9 | invocation-unrelated | original | 1 | `skill-studies/sweeping-stale-references/cases/invocation-unrelated/opus-invocation-original.json` |
+| 10 | invocation-unrelated | candidate | 1 | `skill-studies/sweeping-stale-references/cases/invocation-unrelated/opus-invocation-candidate.json` |
+
 ### Comparison: claude-comparison-01
 
 Status: complete; all 34 attempts retained and assessed with valid setup, no retries or replacements. See [assessment](claude-comparison-01-assessment.md). Owner request: “run an equivalent of a full codex run with Claude”, with multiple discovery runs and both baseline and rewrite SSR.
@@ -530,7 +558,7 @@ At that closing checkpoint, 30 subject calls had been dispatched and capacity wa
 
 
 Current combined invocation accounting also includes the CW [baseline](../concise-writing/contribution-baseline-01-run-index.json) and [comparison](../concise-writing/comprehensive-comparison-01-run-index.json), plus the expansion, comprehensive-comparison-02, Claude smoke and claude-comparison-01 indexes above.
-Dispatched calls are **126 subject, 0 evaluator, 0 authoring, 0 retry**; remaining outer capacity is **0 / 12 / 4 / 4** against the [active plan](../../plans/2026-09-11-model-driven-skill-testing.md#limits-and-information-boundaries). The CW protocol owns current combined time and forecast; all ten expansion slots, both 34-call comparison batches and both Claude smoke calls are spent.
+Dispatched calls are **126 subject, 0 evaluator, 0 authoring, 0 retry**; remaining outer capacity is **10 / 12 / 4 / 4** against the [active plan](../../plans/2026-09-11-model-driven-skill-testing.md#limits-and-information-boundaries). The CW protocol owns current combined time and forecast; all ten expansion slots, both 34-call comparison batches and both Claude smoke calls are spent.
 
 
 Historical SSR closing forecast (2026-09-17):
