@@ -839,13 +839,27 @@ def accounting(raw, path, ctx):
                 "Booked plus remaining time differs from ceiling",
             )
     else:
-        ctx.error(
-            path,
-            "Storage and accounting",
-            "unsupported-accounting",
-            "No recognised current time-total paragraph",
-            "unsupported",
+        guideline = re.search(
+            number + r" active minutes booked; " + number
+            + r" minutes (above|below) the (?:historical )?" + number
+            + r"-minute planning guideline", raw,
         )
+        if guideline:
+            spent, difference, direction, limit = guideline.groups()
+            spent, difference, limit = [int(x.replace(",", "")) for x in (spent, difference, limit)]
+            expected = limit + difference if direction == "above" else limit - difference
+            if spent != expected:
+                ctx.error(path, "Storage and accounting", "accounting",
+                          "Booked time and stated difference do not reconcile to planning guideline")
+            # A planning guideline does not impose a remaining-time spending cap.
+        else:
+            ctx.error(
+                path,
+                "Storage and accounting",
+                "unsupported-accounting",
+                "No recognised current time-total paragraph",
+                "unsupported",
+            )
     forecasts = [t for t in tables(raw) if t[1] == ["Work", "Estimate", "Basis"]]
     if len(forecasts) != 1:
         ctx.error(

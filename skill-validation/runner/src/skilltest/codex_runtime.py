@@ -4,6 +4,7 @@ from __future__ import annotations
 import json
 import os
 import shutil
+import shlex
 import stat
 import subprocess
 import tempfile
@@ -85,6 +86,11 @@ class CodexRuntime(ProcessRuntime):
             "TMPDIR": str(self.root / "tmp"),
             "PATH": f"{Path(self.executable).parent}:/usr/bin:/bin:/usr/sbin:/sbin",
         }
+        # macOS /etc/zprofile reorders PATH in login shells. Restore the prepared
+        # tool order afterward, without exposing any ambient user startup files.
+        (self.root / "tmp/.zprofile").write_text(
+            "export PATH=" + shlex.quote(self.environment["PATH"]) + "\n", encoding="utf-8",
+        )
         # Open without following the final symlink; never copy settings or instructions.
         try:
             descriptor = os.open(source_profile / "auth.json", os.O_RDONLY | os.O_NOFOLLOW | os.O_NONBLOCK)

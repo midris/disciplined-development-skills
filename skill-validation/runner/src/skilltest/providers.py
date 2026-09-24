@@ -140,7 +140,7 @@ def _arguments(request: ProviderRequest, *, executable: str = "codex", shell_pat
             # Keep shell bookkeeping inside the already granted private scratch.
             # zsh invents the real HOME when unset and ignores TMPDIR for heredocs.
             *(["-c", f'shell_environment_policy.set={{PATH={json.dumps(shell_path)}'
-                        + (f',TMPDIR={json.dumps(str(scratch_dir))},HOME={json.dumps(str(scratch_dir))},TMPPREFIX={json.dumps(str(scratch_dir / "zsh"))}' if scratch_dir is not None else '') + '}'] if shell_path is not None else []),
+                        + (f',TMPDIR={json.dumps(str(scratch_dir))},HOME={json.dumps(str(scratch_dir))},ZDOTDIR={json.dumps(str(scratch_dir))},TMPPREFIX={json.dumps(str(scratch_dir / "zsh"))}' if scratch_dir is not None else '') + '}'] if shell_path is not None else []),
             "-c", 'cli_auth_credentials_store="file"', "-c", 'approval_policy="never"',
             "--output-last-message", str(request.final_output_path), "-",
         ]

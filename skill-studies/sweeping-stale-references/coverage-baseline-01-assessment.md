@@ -91,9 +91,14 @@ These results establish successful accounting on this supplied inventory, not se
 
 | Orders | Runtime / invocation authority | Observed result and limitation |
 |---|---|---|
-| 1–2 | Pre-isolation, `2c65cdc778b1ca9a00eb95fa09876d71515427a6` | One valid original; control excluded for delivered outside text |
-| 3 | input-isolation-1, `1715dca1c7887db2f0c3a6157e4ad5d521483fb4` | Correct local control recovered from blocked user Git config and zsh heredoc; included with runtime friction |
-| 4–10 | input-isolation-1 plus private-shell-1, `780e8ae1e8491a4bba30b39c7ab80bafcf397d14` | Seven valid observations; required operations available; no outside study material observed |
+| 1–2 | Pre-isolation, `2c65cdc778b1ca9a00eb95fa09876d71515427a6` | One valid original; control excluded for delivered outside text; pre-isolation startup behavior |
+| 3 | input-isolation-1, `1715dca1c7887db2f0c3a6157e4ad5d521483fb4` | Correct local control recovered from blocked user Git config and zsh heredoc; included with runtime friction; isolated login-shell default resolves Apple Python 3.9.6 / system Git |
+| 4–10 | input-isolation-1 plus private-shell-1, `780e8ae1e8491a4bba30b39c7ab80bafcf397d14` | Seven valid observations; required operations available; no outside study material observed; isolated login-shell default resolves Apple Python 3.9.6 / system Git |
+
+The interpreter labels for orders 3–10 are a retrospective reconstruction of their policy under the installed login shell, not a recorded version probe from each subject command.
+The earlier runtime-1 Homebrew guarantee does not survive isolation; these cases did not exercise Shiv, whose Click dependency requires a newer interpreter.
+Retained artifacts and scores remain unchanged; do not treat orders 1–10 as fixed-interpreter repetitions or use them to qualify a future Shiv run.
+See the [login-shell correction](runtime-diagnosis.md#isolated-login-shell-correction-2026-09-23).
 
 The shell repair explicitly forwards HOME and TMPPREFIX to already-granted private scratch; no filesystem grant expands.
 The [resumption review](../../reviews/2026-09-21-ssr-resumption.md) records the offline regression and qualification evidence.

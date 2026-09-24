@@ -14,3 +14,6 @@ Future collection needs its own scope and allocation and must use the qualified 
 Preserve settled scenarios, criteria and historical identities; do not derive a baseline from a candidate or rescore old records to continue.
 SSR's [core assessment](core-baseline-01-assessment.md) records an unresolved Shiv category boundary: its P3 counts are not three established skill defects and do not independently justify a rewrite.
 Controller criteria, manifests and revealing evidence remain outside subject context; raw evidence stays in the protocol's external stores.
+
+The [external-review resolution](../../reviews/2026-09-23-ssr-runtime-and-preparation.md) records the prospective login-shell correction, planning-guideline readiness support, and unrelated-case downgrade to procedural sanity evidence.
+Run the installed login-shell qualification before future collection; prior isolation alone does not guarantee Homebrew Python.

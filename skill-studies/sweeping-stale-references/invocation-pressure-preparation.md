@@ -9,10 +9,10 @@ The [protocol](protocol.md) owns coverage and decisions; the [active plan](../..
 |---|---|---|
 | [invocation-change](cases/invocation-change/assessment.md) | Does an ordinary setting rename trigger SSR before editing? Reuses initiating-change project/task bytes with no explicit skill-read instruction. | original, candidate |
 | [invocation-review](cases/invocation-review/assessment.md) | Does one reviewer-reported stale claim trigger SSR before editing? Reuses semantic-delivery project/task bytes with no explicit skill-read instruction. | original, candidate |
-| [invocation-unrelated](cases/invocation-unrelated/assessment.md) | Does the agent leave SSR unused when explaining unchanged code? Uses the session fixture and asks for the expiry calculation, without edits. | original, candidate |
+| [invocation-unrelated](cases/invocation-unrelated/assessment.md) | Sanity check only: does the agent leave SSR unused when explaining unchanged code? Uses the session fixture and asks for the expiry calculation, without edits. | original, candidate |
 | [pressure-repair](cases/pressure-repair/assessment.md) | Does loaded SSR still guide complete repair when a quick README-only fix is attractive? Reuses semantic-delivery with an added handoff-pressure paragraph. | original, candidate; control available for a separately selected contribution question |
 
-These are two positive selection checks, one negative boundary, and one application variant, not four new repository fixtures.
+These are two positive selection checks, one unrelated non-use sanity check, and one application variant, not four new repository fixtures.
 The five existing executable cases remain the ordinary-behavior suite; large-sweep-account remains a targeted reporting diagnostic.
 Invocation is tested with the real skill body available, not a fabricated catalog or a prompt that announces SSR.
 The original and preserved comprehensive candidate currently have identical trigger descriptions; comparison tests selection plus timely loading, not a claimed description improvement.
@@ -51,6 +51,10 @@ Missing action capture or genuinely ambiguous observed use remains insufficient 
 This separates a correct applicability decision from reading cost, which is not an SSR functional obligation.
 The task is a read-only explanation, not a local edit: the existing local-change case remains applicable SSR behavior.
 
+The unrelated case scores only D1; use result version 2, functional outcome `not measured`, and exclude it from functional denominators.
+Its arithmetic and preservation observations are descriptive only.
+It can detect gross catalog-driven over-triggering, but passing this distant task does not establish a sharp non-applicability boundary.
+
 D1 is a new procedural criterion for this declared discovery scope, not an amendment to historical F/P scores.
 Report task outcomes and invocation outcomes separately; task success cannot hide a selection failure.
 For each discovery case, report met / missed / late / incomplete-loading / unnecessary-application / insufficient-evidence observations as applicable, retaining the canonical criterion judgment and its reason.
@@ -68,7 +72,7 @@ These are constructed interpretation examples, not model observations; each assu
 | Positive: retained capture is truncated and cannot establish what reached the model | insufficient evidence | An evidence gap is not an observed partial load. |
 | Positive: full body read only after first edit | not met | Late invocation, even if repair succeeds. |
 | Positive: no read in a complete action trace | not met | Missed invocation, even if repair succeeds. |
-| Negative: no SSR body read and no selection/application in a complete trace | met | Appropriate non-use; F1/F2 judge task quality separately. |
+| Negative: no SSR body read and no selection/application in a complete trace | met | Appropriate non-use; task quality is descriptive, outside SSR functional counts. |
 | Negative: reads SSR, rejects its applicability, then explains the code | met | Exploratory loading followed by correct selection decision; record the read. |
 | Negative: body read with no claim of applicability or sweep/accounting action in a complete trace | met | A read alone is not evidence of applying SSR. |
 | Negative: states SSR applies or performs its reconciliation/accounting procedure | not met | Unnecessary selection/application, regardless of final answer quality. |
@@ -144,3 +148,11 @@ The second self-review checked each worked outcome against the cards, traced app
 No remaining P0/P1/P2/P3 findings were identified in the revised preparation.
 All nine configurations rematerialized successfully; four cards remained structurally valid drafts; expansion fixtures 7, semantic qualification/probe tests 12 and formats 9 passed again.
 This review does not establish native discovery behavior; runtime qualification remains a pre-collection requirement.
+
+## External review correction — 2026-09-23
+
+The unrelated case is now explicitly a procedural sanity check, with its former F1/F2 removed from SSR functional counts.
+Its unchanged-code task is far from either trigger clause; the suite does not claim realistic near-boundary over-trigger coverage.
+A proposed independent-helper edit needs a defensible non-application boundary because both skill versions include local-change triage; it is not silently substituted as a negative case.
+The positive cases and pressure design remain unchanged.
+The [runtime diagnosis](runtime-diagnosis.md) records the additional login-shell correction required before future collection.

@@ -248,6 +248,10 @@ The [resumption review](../../reviews/2026-09-21-ssr-resumption.md) records qual
 Use the committed revision containing this correction as invocation authority for orders 4–10, retaining frozen inputs and the same schedule, model and criteria.
 This is necessary setup repair within the approved resumption, not another subject qualification or retry call.
 
+Post-collection runtime correction: the [login-shell diagnosis](runtime-diagnosis.md#isolated-login-shell-correction-2026-09-23) shows that orders 3–10 no longer inherited runtime-1’s Homebrew selection guarantee.
+The assessment discloses this reconstructed interpreter difference; historical results remain unchanged.
+Future collection requires the installed login-shell qualification, not only host Python or a non-login shell check.
+
 Collection close, 2026-09-21: all ten slots completed, preserved and assessed. Orders 3–10 used the declared amended runtime strata; the eight resumed observations are valid. The [completed assessment](coverage-baseline-01-assessment.md) owns counts, runtime limitations, coverage judgment and next-step recommendation. No criterion, case input, skill version, historical score or call allocation changed.
 
 ### First collection: semantic-delivery-01
@@ -442,3 +446,5 @@ All thirty subject calls used Sol-low. Small exposed cases, shared assessor cont
 - Separate evidence completion from deployment. Closing with adoption deferred preserves the findings and permits the next study without forcing a winner or another collection cycle.
 
 The contrasting-skill CW study subsequently exercised the workflow; its records and current combined accounting are linked above. SSR expansion is complete; invocation/pressure preparation is active as described at the start of this protocol.
+
+The prepared unrelated invocation case is D1-only sanity evidence, with functional outcome `not measured`; it does not establish near-boundary over-trigger resistance.

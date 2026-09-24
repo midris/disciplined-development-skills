@@ -64,7 +64,7 @@ def test_codex_invokes_fixed_command_environment_and_deadline(tmp_path, boundari
         "-c",
         'shell_environment_policy.inherit="none"',
         "-c",
-        'shell_environment_policy.set={PATH="/stub/bin:/usr/bin:/bin:/usr/sbin:/sbin",TMPDIR="/private/runtime/tmp",HOME="/private/runtime/tmp",TMPPREFIX="/private/runtime/tmp/zsh"}',
+        'shell_environment_policy.set={PATH="/stub/bin:/usr/bin:/bin:/usr/sbin:/sbin",TMPDIR="/private/runtime/tmp",HOME="/private/runtime/tmp",ZDOTDIR="/private/runtime/tmp",TMPPREFIX="/private/runtime/tmp/zsh"}',
         "-c",
         'cli_auth_credentials_store="file"',
         "-c",
@@ -265,7 +265,7 @@ def test_codex_shells_receive_only_the_controlled_runtime_path(tmp_path, boundar
                  for i, value in enumerate(argv[:-1])
                  if value == '-c' and argv[i + 1].startswith('shell_environment_policy.')]
     merged = {key: value for override in overrides for key, value in override.items()}
-    assert merged == {'inherit': 'none', 'set': {'PATH': runtime.environment['PATH'], 'TMPDIR': runtime.environment['TMPDIR'], 'HOME': runtime.environment['TMPDIR'], 'TMPPREFIX': runtime.environment['TMPDIR'] + '/zsh'}}
+    assert merged == {'inherit': 'none', 'set': {'PATH': runtime.environment['PATH'], 'TMPDIR': runtime.environment['TMPDIR'], 'HOME': runtime.environment['TMPDIR'], 'ZDOTDIR': runtime.environment['TMPDIR'], 'TMPPREFIX': runtime.environment['TMPDIR'] + '/zsh'}}
 
 @pytest.mark.parametrize('location', ['/tmp/case', '/private/tmp/case', '/var/tmp/case', '/private/var/tmp/case'])
 @pytest.mark.parametrize('target', ['workspace', 'scratch'])

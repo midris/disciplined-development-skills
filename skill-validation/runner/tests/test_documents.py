@@ -1151,3 +1151,22 @@ def test_accounting_reads_entire_comma_formatted_totals(document_study, capsys, 
         f'{booked} active minutes booked; {remaining} minutes remain under the {ceiling}-minute ceiling',
     ))
     assert main(['docs', 'check', str(path), '--ready-for', 'assessment', '--json']) == expected
+
+
+@pytest.mark.process_smoke
+@pytest.mark.parametrize('booked,amount,direction,expected', [
+    ('1,221', '21', 'above', 0),
+    ('1,179', '21', 'below', 0),
+    ('1,200', '0', 'above', 0),
+    ('1,222', '21', 'above', 1),
+    ('1,178', '21', 'below', 1),
+])
+def test_accounting_planning_guideline(document_study, capsys, booked, amount, direction, expected):
+    # Fixture forecast remains nonzero: a guideline is not a spending ceiling.
+    root, *_ = document_study
+    path = root / 'protocol.md'
+    path.write_text(path.read_text().replace(
+        '10 active minutes booked; 90 minutes remain under the 100-minute ceiling',
+        f'{booked} active minutes booked; {amount} minutes {direction} the historical 1,200-minute planning guideline',
+    ))
+    assert main(['docs', 'check', str(path), '--ready-for', 'assessment', '--json']) == expected

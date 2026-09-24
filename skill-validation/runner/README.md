@@ -73,7 +73,7 @@ Supported version-1 representations:
 - The canonical Markdown headings/criterion cards and JSON fields; local inline links and heading anchors. External URLs are not fetched and free prose remains subject to semantic review.
 - Scope in the existing `Order / Case / Condition / Repetition / CONFIG` table, or the existing explicit single-case, original-then-control, one-execution-each declaration. Stage checks support descriptive inclusion of all valid setups without retries; other inclusion or retry representations are reported unsupported.
 - Aggregate tables with separate met/not-met/insufficient-evidence columns, or labelled `M/N/U` columns. Runtime strata use explicit `NAME includes orders A–B` declarations and must partition valid executions. Coverage uses the existing seven-column table; an explicit no-gap statement suffices only when every planned execution has a valid result.
-- Current accounting accepts plain integers or correctly comma-grouped booked, remaining and ceiling totals in the existing paragraph, dispatched/remaining pool paragraph and `Work / Estimate / Basis` forecast table; outer ceilings may be linked from the plan. Only referenced attempt indexes contribute. Historical process/development-pilot indexes supply a labelled accounting-only projection, not version-1 format conformance or reassessment.
+- Current accounting accepts plain integers or correctly comma-grouped booked, remaining and ceiling totals in the existing paragraph, dispatched/remaining pool paragraph and `Work / Estimate / Basis` forecast table; outer ceilings may be linked from the plan. Time totals also accept `N active minutes booked; D minutes above|below the historical L-minute planning guideline`; the difference must reconcile, but the guideline does not cap the forecast. Hard-ceiling paragraphs retain their forecast limit, and call ceilings remain enforced. Only referenced attempt indexes contribute. Historical process/development-pilot indexes supply a labelled accounting-only projection, not version-1 format conformance or reassessment.
 
 Unsupported historical documents remain unchanged. Unsupported layouts cannot silently pass stage checks; a required representation change needs explicit format review. Generation and validation share the canonical templates and structural rules, with the execution-result schema reused. Wheels package those same resource bytes; `jsonschema` is a runtime dependency.
 
@@ -301,13 +301,14 @@ Unsupported profile syntax fails without a broader-access fallback.
 Run the installed-policy qualification before collection after a CLI or boundary change:
 
 ```sh
-SKILLTEST_SANDBOX_EVIDENCE_DIR=/absolute/retained/scratch .venv/bin/python -m pytest acceptance/test_input_isolation.py acceptance/test_read_only_sandbox.py acceptance/test_codex_git_sandbox.py -q -s
+SKILLTEST_SANDBOX_EVIDENCE_DIR=/absolute/retained/scratch .venv/bin/python -m pytest acceptance/test_input_isolation.py acceptance/test_read_only_sandbox.py acceptance/test_codex_git_sandbox.py acceptance/test_codex_login_shell.py -q -s
 ```
 
 The existing destination stores successful qualification copies; probes execute under the per-user temporary root, outside shared `/tmp`.
 These macOS checks may require host permission to launch the inner sandbox; they make no model calls and use surrogate credentials/homes.
 The [shared isolation check](acceptance/test_input_isolation.py) tests both providers and both permission modes against controller, sibling-run, home, shared-temp and symlink reads/writes, while preserving Python, Git and private scratch use.
 The [read-only checks](acceptance/test_read_only_sandbox.py) additionally exercise overwrite/delete/rename/create and Git mutation denials, including scratch symlink escape.
+The [login-shell check](acceptance/test_codex_login_shell.py) uses real runtime preparation and emitted policy in both modes, executes `/bin/zsh -lc`, and asserts Python and Git resolution plus Python compatibility (3.11+).
 The [Codex Git check](acceptance/test_codex_git_sandbox.py) verifies source comparison, a root commit, evidence writes, protected-path write denials and network-bind denial using the adapter's emitted configuration.
 These qualify the tested filesystem boundaries, not model behavior, native discovery or exhaustive host isolation.
 Inspect the first authorized observation under changed conditions before continuing the batch.
@@ -317,13 +318,13 @@ The adapter fixes these additional controls:
 ```text
 --strict-config --ignore-user-config --ignore-rules
 -c shell_environment_policy.inherit="none"
--c shell_environment_policy.set={PATH="<prepared runtime PATH>",TMPDIR="<private scratch>",HOME="<private scratch>",TMPPREFIX="<private scratch>/zsh"}
+-c shell_environment_policy.set={PATH="<prepared runtime PATH>",TMPDIR="<private scratch>",HOME="<private scratch>",ZDOTDIR="<private scratch>",TMPPREFIX="<private scratch>/zsh"}
 -c cli_auth_credentials_store="file"
 -c approval_policy="never"
 ```
 
 Each invocation creates private HOME, CODEX_HOME and TMPDIR directories outside its retained bundle, with private parents mode 0700.
-The CLI child receives only these three variables and PATH: the resolved Codex executable's directory followed by `/usr/bin:/bin:/usr/sbin:/sbin`. Shell tools receive that restricted PATH, private TMPDIR, HOME pointing to the same private scratch, and TMPPREFIX pointing to its `zsh` prefix while other environment inheritance stays disabled. This prevents zsh from inferring the real user home and from creating heredoc files under denied `/tmp`. The explicit PATH prevents environment stripping from selecting a different interpreter; a login profile may still reorder it. [The Shiv runtime diagnosis](../../skill-studies/sweeping-stale-references/runtime-diagnosis.md) records the observed mismatch and qualification.
+The CLI child receives only these three variables and PATH: the resolved Codex executable's directory followed by `/usr/bin:/bin:/usr/sbin:/sbin`. Shell tools receive that restricted PATH, private TMPDIR, HOME pointing to the same private scratch, and TMPPREFIX pointing to its `zsh` prefix while other environment inheritance stays disabled. This prevents zsh from inferring the real user home and from creating heredoc files under denied `/tmp`. The explicit PATH prevents environment stripping from selecting a different interpreter; a runner-owned `.zprofile` in private scratch restores that order after the system login profile. Explicit ZDOTDIR selects only that scratch for user startup files. [The Shiv runtime diagnosis](../../skill-studies/sweeping-stale-references/runtime-diagnosis.md) records the observed mismatch and qualification.
 Resolve Codex through the invoking PATH before replacing the environment; use that same absolute executable for login-status preflight and the model call, recording the actual model argv in `runner.log`.
 `execution.executable` remains the provider label `codex`.
 
