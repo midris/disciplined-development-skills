@@ -1,6 +1,6 @@
 # SSR invocation and pressure preparation
 
-Status: suite accepted for comprehensive-comparison-02; the protocol owns the 34-call authority. No skill edits authorized.
+Status: accepted suite tested in comprehensive-comparison-02; see the [assessment](comprehensive-comparison-02-assessment.md). This record preserves design and scoring rules; the protocol owns decisions. No skill edits authorized.
 The [protocol](protocol.md) owns coverage and decisions; the [active plan](../../plans/2026-09-11-model-driven-skill-testing.md) owns progress.
 
 ## Questions and proposed cases
@@ -114,7 +114,7 @@ The unrelated expected answer is 1900 seconds, with no authored project change o
 The pressure comparison must retain the same project/task bytes across conditions; only target skill bytes and the explicit-read instruction differ for the optional control.
 
 The comparison proposal defines repetitions/order, allocation and acceptance rules; Codex catalog/capture qualification is complete with scripted transport.
-Owner suite/allocation acceptance is recorded; manifest freeze and collection preflight precede dispatch.
+Owner acceptance, manifest freeze, collection preflight and the 34-call comparison are complete; the protocol and assessment record their evidence.
 Do not dispatch until manifest freeze and collection readiness pass; the new allocation does not reopen historical slots.
 Before collection, pin shared source fixtures, task/prompts, skill versions, these cards and policy identities; preserve prior manifests/results unchanged.
 Use the qualified private-shell/read-isolation setup; fresh provider/version checks must not silently replace historical execution identities.
@@ -148,7 +148,7 @@ Copied references to undefined P2 judgments were removed from both discovery car
 The second self-review checked each worked outcome against the cards, traced applicable criteria across all four cases, rechecked task/configuration parity and controller separation, and checked that historical evidence and pending discovery qualification remain unchanged.
 No remaining P0/P1/P2/P3 findings were identified in the revised preparation.
 All nine configurations rematerialized successfully; four cards remained structurally valid drafts; expansion fixtures 7, semantic qualification/probe tests 12 and formats 9 passed again.
-That scoring review did not qualify native discovery; the subsequent scripted qualification establishes catalog/capture mechanics, while model selection remains unmeasured.
+That scoring review did not qualify native discovery; the subsequent scripted qualification establishes catalog/capture mechanics, while model selection is measured only by the subsequent comparison linked at the top of this record.
 
 ## External review correction — 2026-09-23
 
@@ -158,7 +158,7 @@ A proposed independent-helper edit needs a defensible non-application boundary b
 The positive cases and pressure design remain unchanged.
 The [runtime diagnosis](runtime-diagnosis.md) records the additional login-shell correction required before future collection.
 
-## Proposed collection
+## Executed collection
 
 The [comparison proposal](comparison-proposal.md) specifies 34 calls, conditions, repetitions, order and reporting rules under the accepted allocation.
 The native catalog includes five built-in skills alongside the sole project skill; preserve that context rather than claiming a singleton catalog.

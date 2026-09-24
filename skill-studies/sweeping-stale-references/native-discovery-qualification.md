@@ -1,6 +1,6 @@
 # SSR native discovery qualification
 
-Status: Codex catalog delivery and skill-read capture qualified with a scripted local endpoint; model selection remains unmeasured.
+Status: scripted Codex catalog/capture qualification complete. Subsequent production-model selection is measured separately in the [comparison assessment](comprehensive-comparison-02-assessment.md); this record preserves the zero-model mechanism check.
 Date: 2026-09-23 America/New_York (retained timestamps are 2026-09-24 UTC).
 Runner revision: `7cec98a`; installed Codex CLI: `0.156.0`, binary SHA-256 `6b42db4d33fd53516162bd76a0e2d07e0567287c44e036d4e4c06cb555a432f9`.
 This runtime must not be silently pooled with historical Codex 0.154.0 observations.
@@ -44,5 +44,5 @@ Current SSR drafts place skills under `.agents/skills`, so they are Codex config
 A Claude comparison requires `.claude/skills` materialization, model/effort selection, native catalog and Skill-event capture qualification, plus its own allocation.
 Before any Claude subject pass, add and pass an installed-policy assertion of Python and Git resolution through the actual Bash shell invocation.
 This remains unimplemented: the Codex login-shell test covers Codex only, and the shared isolation probe invokes Python by absolute path.
-Deferral is limited to the proposed Codex-only comparison; Claude subject collection is blocked until its own shell check passes.
+The completed comparison is Codex-only; Claude subject collection is blocked until its own shell check passes.
 Claude documentation checking does not authorize or qualify additional Claude model runs.

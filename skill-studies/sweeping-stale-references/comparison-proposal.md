@@ -1,7 +1,7 @@
 # SSR comprehensive rewrite comparison proposal
 
-Status: owner-approved 34-call scope; the protocol’s comprehensive-comparison-02 section owns dispatch authority.
-The prior 56 calls are spent; the subject ceiling is now 90.
+Status: completed owner-approved 34-call scope; see the [assessment](comprehensive-comparison-02-assessment.md). The protocol owns current decisions; this document preserves the executed design.
+All 90 subject calls are spent, including the 34 calls specified here.
 The original and existing comprehensive rewrite are the only selected conditions; this is comparative effectiveness and invocation testing, not a new no-skill contribution study.
 The [preparation](invocation-pressure-preparation.md) owns the case designs and the [qualification](native-discovery-qualification.md) owns native-runtime evidence and its limits.
 

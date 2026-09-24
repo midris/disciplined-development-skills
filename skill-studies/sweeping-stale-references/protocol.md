@@ -2,8 +2,8 @@
 
 Format version: `1`
 Study ID: `sweeping-stale-references`
-Status: comprehensive-comparison-02 approved for 34 calls; inputs are frozen and preflight passed; collection is authorized in the declared order. Previous batches are complete; adoption and skill editing remain unauthorized.
-Current action: execute the accepted [comparison scope](comparison-proposal.md) under the committed batch authority below, preserving each bundle and assessing fixed criteria. Subject ceiling is 90; prior 56 calls are spent. Codex scripted catalog/capture qualification passed; automatic model selection is measured in the declared native cases.
+Status: comprehensive-comparison-02 complete: all 34 attempts retained and assessed with valid setup; no retries or replacements. Adoption and skill editing remain unauthorized.
+Current action: review the completed [comparison assessment](comprehensive-comparison-02-assessment.md) and decide whether to retain the original or authorize a targeted candidate clarification. All 90 subject calls are spent; no further collection is authorized.
 The [plan](../../plans/2026-09-11-model-driven-skill-testing.md) owns progress; the [spec](../../plans/specs/2026-09-11-model-driven-skill-testing-framework.md) owns the workflow.
 The [core baseline](core-baseline-01-assessment.md) retains its two setup exclusions and runtime strata; the [comparison](comprehensive-comparison-01-assessment.md) records twelve valid executions of the original and preserved candidate. Both collection scopes are spent. Storage and accounting retains the SSR closing checkpoint and links the current combined totals.
 
@@ -22,7 +22,7 @@ The skill has its own trigger and procedure; it does not require DD or a named S
 DD invokes it at Gate 4, but that incoming invocation is not a dependency of the skill.
 The [purpose and relationship map](../../ARCHITECTURE.md#composition-boundaries) records this distinction across all nine skills.
 The completed first study measures independent application after explicit loading; it did not test native discovery or DD orchestration.
-Native invocation scenarios and comparison scope are prepared; DD orchestration remains outside the proposed independent-use scope.
+Native selection and timely loading are now measured in comprehensive-comparison-02; DD orchestration remains outside this independent-use scope.
 [Disciplined research](../../skills/disciplined-research/SKILL.md) owns grounding the changed fact; [writing explicit rationale](../../skills/writing-explicit-rationale/SKILL.md) owns why it changed.
 These ownership boundaries do not require loading either sibling into the subject context.
 The task must supply a settled desired outcome and sufficient project context, rather than score this skill for inventing the desired change or resolving an unspecified business rule. The implementation may already be changed in a repair case or may be the requested work in an initiating-change case.
@@ -129,7 +129,7 @@ Shiv's public-source familiarity may affect either condition; project size and l
 Inspect any upstream-restoring edit against the settled task before attributing its cause; familiarity does not excuse an incorrect outcome.
 Equivalent repairs and document restructuring remain valid under the case rules. Checkers report observable facts; the active agent inspects meaning, preserved behavior, trace and Git evidence.
 Use existing constructed correct/incorrect variants to check mechanical observations and clarify real ambiguities. They are not measured model performance or a separate evaluator exam.
-Automatic skill selection remains unmeasured; the prepared native-invocation comparison is authorized under comprehensive-comparison-02. Composition, specialized search difficulty, reserved transfer and population reliability remain outside the proposed claim. No control failure is required merely to justify a comparison.
+Automatic selection is measured in the completed comprehensive-comparison-02 native cases. Composition, specialized search difficulty, reserved transfer and population reliability remain outside the claim. No control failure is required merely to justify a comparison.
 
 ### Proposed coverage expansion (2026-09-19)
 
@@ -160,16 +160,16 @@ Case definitions and qualification are linked in the inventory above.
 | O4: locations, counts and same-path/outcome grouping | Covered | Executable commit accounts map to references; large-sweep-account supplies 126 matches and one mixed-outcome path | Baseline + comparison; one initiating original accounting defect; both diagnostic reports met P3 | Real-task accounting and isolated diagnostic measured separately; consistent line/occurrence units accepted where ambiguous |
 | O4: References swept placement relative to narrative and Verification | Partial | Commit bodies and diagnostic REPORT.md expose placement; diagnostic task requests References swept followed by Verification | Not isolated | Protocol names placement, but case pass/fail rules focus on traceability and do not isolate every ordering error; do not claim comprehensive formatting conformance; revisit before an edit changes this behavior. |
 | O4: preserve necessary audit detail beyond normal length preference | Gap | Eleven diagnostic groups fit within the supplied 72-line preference | None | Removing the former pressure claim was correct; add a pressure case before judging changes to this exception; revisit before an edit changes this behavior. |
-| O5: justified single-file/no-sweep negative account | Partial | local-change has one real correction plus valid near-matches; search evidence supports locality and P3 checks the negative form | Expansion: both guided local attempts meet P3 | Local correction measured; a genuinely no-change task is not separately tested, so no general no-op handling claim; revisit before an edit changes this behavior. |
-| Applicability: explicit load versus autonomous skill discovery | Draft addition | invocation-change/review omit explicit loading; invocation-unrelated asks for an unchanged-code explanation | Only explicit-load evidence collected | Codex 0.156.0 catalog/capture qualified with scripted transport; automatic selection unmeasured; comparison accepted; collection pending. |
-| Discipline under competing incentives | Draft addition | pressure-repair adds handoff urgency, prior effort and green-test confidence to semantic-delivery | Ordinary repairs measured; no deliberate pressure observations | Preserve outcome rules; causal pressure claims require matched contemporaneous conditions. |
+| O5: justified single-file/no-sweep negative account | Partial | local-change has one real correction plus valid near-matches; search evidence supports locality and P3 checks the negative form | Expansion: both guided local attempts meet P3; comparison 02 originals meet P3 and candidates omit the negative form | Local correction measured; a genuinely no-change task is not separately tested, so no general no-op handling claim; revisit before an edit changes this behavior. |
+| Applicability: explicit load versus autonomous skill discovery | Covered in bounded native context | invocation-change/review omit explicit loading; invocation-unrelated asks for an unchanged-code explanation | Comparison 02: all eight positive D1 observations met; both sanity non-use observations met | SSR plus five built-ins on Codex 0.156.0; no full-bundle, near-boundary negative or reliability claim. |
+| Discipline under competing incentives | Covered descriptively | pressure-repair adds handoff urgency, prior effort and green-test confidence to semantic-delivery | Comparison 02: all four pressure repairs complete, as are ordinary semantic repairs | Small matched ordinary/pressure observations; no causal pressure-effect or population claim. |
 | Composition, difficult search, conflicting information and transfer | Gap | No DD orchestration, required companion interaction, hostile repository or held-out case is supplied | None | SSR is independently evaluated; these contexts are outside the selected question and must be reconsidered if an edit depends on them |
 
 **Coverage judgment:** the expanded design is sufficient to establish a broader development baseline for explicit-load SSR on small, inspectable tasks: ordinary changes, reviewer-triggered repairs and justified locality, plus isolated accounting.
 It does not establish that every facet of SSR is tested or that a general rewrite is ready for adoption.
 The collected expansion supports ordinary-change and local-negative behavior on the supplied tasks; it shows no functional advantage over valid controls and retains one non-blocking accounting defect.
 Do not add scenarios merely to achieve an all-green map. Before authoring, check the chosen edit against this map: an edit to pressure handling, exact output ordering, no-op behavior, discovery or composition requires targeted evidence or an explicitly narrower conclusion.
-A later general comparison must use the same accepted expanded cases for original and candidate; existing measurements are not retroactively expanded.
+Comprehensive-comparison-02 uses the same accepted expanded executable cases for original and candidate, with the selected pressure/native additions; earlier measurements are not retroactively expanded.
 
 ## Execution scope and authorization
 
@@ -188,7 +188,7 @@ Control contribution claims require evidence that omitted guidance was not loade
 Pre-baseline development is closed at two pairs. Do not reopen it for a new facet; a named readiness defect requires a separately authorized diagnostic exception.
 ### Comparison: comprehensive-comparison-02
 
-Status: owner-approved in this session: “approved, let's do it”, accepting the proposed 34-call scope and subject ceiling of 90. Freeze and preflight passed before the first dispatch.
+Status: complete; all 34 authorized attempts retained and assessed with valid setup, no retries or replacements. Owner approval: “approved, let's do it”, accepting the 34-call scope and subject ceiling of 90. Freeze and preflight passed before the first dispatch.
 Scope: 34 sequential attempts across original/candidate: five ordinary cases, one pressure case and two positive native cases with two repetitions each; one native sanity case with one repetition each.
 Purpose, strata and acceptance: [accepted comparison scope](comparison-proposal.md); cases remain exposed development scenarios, active-session assessment is not blind.
 Inclusion: descriptive-only; Include all valid-setup executions regardless of outcome, retaining unknown judgments and invalid/unresolved/unattempted slots separately. No automatic retry or replacement. Keep ordinary, pressure, positive invocation and non-use sanity results separate; use result/assessment version 2 and exclude not-measured outcomes from functional counts.
@@ -203,6 +203,7 @@ Preserve each terminal bundle with `docs retain` against this committed scope be
 Inputs: [discovery-shiv manifest](cases/discovery-shiv/comparison-02-manifest.json), [moved-guide manifest](cases/moved-guide/comparison-02-manifest.json), [semantic-delivery manifest](cases/semantic-delivery/comparison-02-manifest.json), [initiating-change manifest](cases/initiating-change/comparison-02-manifest.json), [local-change manifest](cases/local-change/comparison-02-manifest.json), [pressure-repair manifest](cases/pressure-repair/comparison-02-manifest.json), [invocation-change manifest](cases/invocation-change/comparison-02-manifest.json), [invocation-review manifest](cases/invocation-review/comparison-02-manifest.json), [invocation-unrelated manifest](cases/invocation-unrelated/comparison-02-manifest.json).
 
 Attempt index: [comprehensive-comparison-02-run-index.json](comprehensive-comparison-02-run-index.json).
+Assessment: [completed comparison](comprehensive-comparison-02-assessment.md).
 
 | Order | Case | Condition | Repetition | CONFIG |
 |---:|---|---|---:|---|
@@ -451,8 +452,8 @@ This closed-study checkpoint uses its then-approved ceilings: a 40-call subject 
 At that closing checkpoint, 30 subject calls had been dispatched and capacity was 10 / 12 / 4 / 4. Core-baseline-01 has no unspent calls; neither excluded attempt has replacement authorization. Remaining capacity is a ceiling, not a selected next batch.
 
 
-Current combined invocation accounting also includes the CW [baseline](../concise-writing/contribution-baseline-01-run-index.json) and [comparison](../concise-writing/comprehensive-comparison-01-run-index.json), plus the expansion index above.
-Dispatched calls are **77 subject, 0 evaluator, 0 authoring, 0 retry**; remaining outer capacity is **13 / 12 / 4 / 4** against the [active plan](../../plans/2026-09-11-model-driven-skill-testing.md#limits-and-information-boundaries). The CW protocol owns current combined time and forecast; all ten expansion slots are spent; only the separate 34-call comprehensive-comparison-02 scope authorizes further dispatch.
+Current combined invocation accounting also includes the CW [baseline](../concise-writing/contribution-baseline-01-run-index.json) and [comparison](../concise-writing/comprehensive-comparison-01-run-index.json), plus the expansion and comprehensive-comparison-02 indexes above.
+Dispatched calls are **90 subject, 0 evaluator, 0 authoring, 0 retry**; remaining outer capacity is **0 / 12 / 4 / 4** against the [active plan](../../plans/2026-09-11-model-driven-skill-testing.md#limits-and-information-boundaries). The CW protocol owns current combined time and forecast; all ten expansion and 34 comparison slots are spent; no further dispatch is authorized.
 
 
 Historical SSR closing forecast (2026-09-17):
@@ -468,6 +469,7 @@ Closure is complete within its 30-minute allowance; no new collection or rollout
 
 | Evidence | Interpretation |
 |---|---|
+| [Expanded comprehensive comparison](comprehensive-comparison-02-assessment.md) | All 34 valid observations included: functional outcomes tied, timely native selection and unrelated non-use met; the candidate retains a size benefit but changes the accepted local negative-account behavior. See the assessment for separate strata and reporting boundaries. |
 | [Completed expansion](coverage-baseline-01-assessment.md) | Nine included observations: all seven executable outcomes met, both accounting diagnostics met P3; one original initiating P3 defect. One control excluded. Runtime strata and accepted coverage gaps remain explicit. |
 | [Comprehensive comparison](comprehensive-comparison-01-assessment.md) | Complete twelve-execution comparison: tested functional outcomes preserved by both versions; reporting differences are mixed. Including the measured size reduction, the advisory recommendation favors the candidate. Owner deferred adoption. |
 | [Core-baseline-01 assessment](core-baseline-01-assessment.md) | Selected three-case baseline complete: twelve attempts, ten included and two setup exclusions; descriptive outcomes and runtime differences remain explicit. |
@@ -476,7 +478,11 @@ Closure is complete within its 30-minute allowance; no new collection or rollout
 | [Pilot 02 report](pilot-02-results.md), [attempt index](pilot-02-run-index.json), [checks](pilot-02-checks.json) | Historical moved-guide pair; retained evidence supports the recorded outcomes, not a stable reliability estimate. |
 | [Policy-3 worked example](assessments/pilot-02-original-policy-3-example.json), [identity/schema index](assessments/index.json) | Unchanged illustrative assessment of retained evidence, not a new execution or replacement of the canonical policy-2 result. |
 
-Owner disposition for the completed comparison (2026-09-17): close the selected SSR study and defer adoption until later studies and experiments have informed finalization. Preserve both tested versions and their evidence; choosing a version is not a prerequisite for the second study. The assessment’s recommendation favors the smaller candidate, but it authorizes no rollout.
+Closure review: [evidence, scoring and verification](../../reviews/2026-09-24-ssr-comparison-02.md).
+
+Current disposition (2026-09-24): the approved expanded comparison is complete; adoption remains deferred. Its recommendation is to retain the original pending an explicit decision about the candidate’s local `n/a` contract difference. No targeted skill change or follow-up collection has been authorized.
+
+Owner disposition for the earlier comparison (2026-09-17): close the selected SSR study and defer adoption until later studies and experiments have informed finalization. Preserve both tested versions and their evidence; choosing a version is not a prerequisite for the second study. The assessment’s recommendation favors the smaller candidate, but it authorizes no rollout.
 Both assessments separate unresolved Shiv category attribution from clear counting errors. Fixed-rule P3 totals do not establish that every mismatch is a skill defect; no criterion amendment or reassessment is authorized.
 Batch assessments own aggregate counts, patterns, limitations and any version comparison; this section records the owner's resulting decisions by reference.
 The owner suggested the existing SSR rewrite on `docs/comprehensive-skill-cleanup` as a possible comparison candidate. Inspected source: `skills/sweeping-stale-references/SKILL.md` at Git `13599fb7d3127334b0d07bfe468767e586ec5f9c`, SHA-256 `15992341f7ab2fb1e4d8a775092199d7d4e6a9de1167895dbe5a805aeafbd38c`; the clean local worktree contains those bytes. It removes the aggregate-inventory worked example and adds semantic-search, old/new-search and rationale/reporting guidance. Treat this as a whole-version candidate, not an isolated accounting intervention. The owner approved this candidate and the twelve-execution comparison on 2026-09-17; adoption is deferred. Reuse of these bytes does not resume the superseded comprehensive-rewrite workflow or import its tests/results as authority. Use the current fixed cases and a contemporaneous original condition for a relative-performance claim; assess candidate-only obligations and exposure limitations before claiming broader coverage.
@@ -500,6 +506,6 @@ All thirty subject calls used Sol-low. Small exposed cases, shared assessor cont
 - Include simplification when interpreting a version comparison. The initial retain recommendation overlooked a measured size benefit already allowed by the spec. Word count is sufficient; smaller text does not excuse functional regression or prove token/cost savings.
 - Separate evidence completion from deployment. Closing with adoption deferred preserves the findings and permits the next study without forcing a winner or another collection cycle.
 
-The contrasting-skill CW study subsequently exercised the workflow; its records and current combined accounting are linked above. SSR expansion and comparison preparation are complete; the approved comparison is ready for collection as described at the start of this protocol.
+The contrasting-skill CW study subsequently exercised the workflow; its records and current combined accounting are linked above. SSR expansion and comprehensive-comparison-02 are complete; the pending owner decision is described at the start of this protocol.
 
-The prepared unrelated invocation case is D1-only sanity evidence, with functional outcome `not measured`; it does not establish near-boundary over-trigger resistance.
+The measured unrelated invocation case is D1-only sanity evidence, with functional outcome `not measured`; it does not establish near-boundary over-trigger resistance.
