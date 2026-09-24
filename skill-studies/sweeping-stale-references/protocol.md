@@ -129,7 +129,7 @@ Shiv's public-source familiarity may affect either condition; project size and l
 Inspect any upstream-restoring edit against the settled task before attributing its cause; familiarity does not excuse an incorrect outcome.
 Equivalent repairs and document restructuring remain valid under the case rules. Checkers report observable facts; the active agent inspects meaning, preserved behavior, trace and Git evidence.
 Use existing constructed correct/incorrect variants to check mechanical observations and clarify real ambiguities. They are not measured model performance or a separate evaluator exam.
-Native discovery remains outside collected claims and is now in preparation. Composition, specialized search difficulty, reserved transfer and population reliability remain outside the proposed claim. No control failure is required merely to justify a comparison.
+Automatic skill selection remains unmeasured; the prepared native-invocation comparison awaits suite and allocation acceptance. Composition, specialized search difficulty, reserved transfer and population reliability remain outside the proposed claim. No control failure is required merely to justify a comparison.
 
 ### Proposed coverage expansion (2026-09-19)
 
@@ -445,6 +445,6 @@ All thirty subject calls used Sol-low. Small exposed cases, shared assessor cont
 - Include simplification when interpreting a version comparison. The initial retain recommendation overlooked a measured size benefit already allowed by the spec. Word count is sufficient; smaller text does not excuse functional regression or prove token/cost savings.
 - Separate evidence completion from deployment. Closing with adoption deferred preserves the findings and permits the next study without forcing a winner or another collection cycle.
 
-The contrasting-skill CW study subsequently exercised the workflow; its records and current combined accounting are linked above. SSR expansion is complete; invocation/pressure preparation is active as described at the start of this protocol.
+The contrasting-skill CW study subsequently exercised the workflow; its records and current combined accounting are linked above. SSR expansion and comparison preparation are complete; suite and allocation acceptance are pending as described at the start of this protocol.
 
 The prepared unrelated invocation case is D1-only sanity evidence, with functional outcome `not measured`; it does not establish near-boundary over-trigger resistance.
