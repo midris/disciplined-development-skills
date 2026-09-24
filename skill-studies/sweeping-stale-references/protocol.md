@@ -3,7 +3,7 @@
 Format version: `1`
 Study ID: `sweeping-stale-references`
 Status: comprehensive-comparison-02 complete: all 34 attempts retained and assessed with valid setup; no retries or replacements. Adoption and skill editing remain unauthorized.
-Current action: freeze and collect the authorized two-call Claude smoke batch after the passing runtime qualifications. Comprehensive-comparison-02 is complete; its candidate-contract/adoption decision remains deferred. The prior 90 subject calls are spent; two additional smoke calls are authorized, with no automatic retry.
+Current action: review the [completed Claude smoke assessment](claude-smoke-01-assessment.md), including its native invocation miss; no further collection is selected. Comprehensive-comparison-02 is complete; its candidate-contract/adoption decision remains deferred. All 92 subject calls are spent; no automatic retry or additional collection is authorized.
 The [plan](../../plans/2026-09-11-model-driven-skill-testing.md) owns progress; the [spec](../../plans/specs/2026-09-11-model-driven-skill-testing-framework.md) owns the workflow.
 The [core baseline](core-baseline-01-assessment.md) retains its two setup exclusions and runtime strata; the [comparison](comprehensive-comparison-01-assessment.md) records twelve valid executions of the original and preserved candidate. Both collection scopes are spent. Storage and accounting retains the SSR closing checkpoint and links the current combined totals.
 
@@ -188,7 +188,7 @@ Control contribution claims require evidence that omitted guidance was not loade
 Pre-baseline development is closed at two pairs. Do not reopen it for a new facet; a named readiness defect requires a separately authorized diagnostic exception.
 ### Smoke: claude-smoke-01
 
-Status: authorized preparation and collection. Owner instruction on 2026-09-24: “apply the runner fixes and run the smoke tests”, accepting the two-smoke scope recorded in [qualification](claude-smoke-qualification.md).
+Status: complete; both authorized calls retained and assessed. Owner instruction on 2026-09-24: “apply the runner fixes and run the smoke tests”, accepting the two-smoke scope recorded in [qualification](claude-smoke-qualification.md).
 Scope: two sequential attempts, preserved original only, one repetition per case. Explicit-load Shiv first; native reviewer-triggered semantic delivery second.
 Purpose: validate the Claude testing path with executable repair, skill delivery, native selection, commits and retained capture. These exposed cases do not establish repeatability or a Claude/Codex comparison.
 Inclusion: descriptive-only; Include all valid-setup executions regardless of outcome. Keep setup failures, insufficient evidence and behavioral failures distinct. No automatic retry or replacement.
@@ -201,6 +201,7 @@ Stop for unknown charge, changed CLI identity, preservation failure, contaminati
 Commands: run `skill-validation/runner/.venv/bin/skilltest run CONFIG` once per row, sequentially; retain each terminal attempt before the next. No real authentication is copied into qualification mocks.
 Inputs: [Shiv manifest](cases/discovery-shiv/claude-smoke-manifest.json), [native-review manifest](cases/invocation-review/claude-smoke-manifest.json).
 Attempt index: [claude-smoke-01-run-index.json](claude-smoke-01-run-index.json).
+Assessment: [completed smoke](claude-smoke-01-assessment.md).
 
 | Order | Case | Condition | Repetition | CONFIG |
 |---:|---|---|---:|---|
@@ -474,7 +475,7 @@ At that closing checkpoint, 30 subject calls had been dispatched and capacity wa
 
 
 Current combined invocation accounting also includes the CW [baseline](../concise-writing/contribution-baseline-01-run-index.json) and [comparison](../concise-writing/comprehensive-comparison-01-run-index.json), plus the expansion and comprehensive-comparison-02 indexes above.
-Dispatched calls are **90 subject, 0 evaluator, 0 authoring, 0 retry**; remaining outer capacity is **2 / 12 / 4 / 4** against the [active plan](../../plans/2026-09-11-model-driven-skill-testing.md#limits-and-information-boundaries). The CW protocol owns current combined time and forecast; all ten expansion and 34 comparison slots are spent; two Claude smoke calls are authorized.
+Dispatched calls are **92 subject, 0 evaluator, 0 authoring, 0 retry**; remaining outer capacity is **0 / 12 / 4 / 4** against the [active plan](../../plans/2026-09-11-model-driven-skill-testing.md#limits-and-information-boundaries). The CW protocol owns current combined time and forecast; all ten expansion and 34 comparison slots are spent; both Claude smoke calls are spent.
 
 
 Historical SSR closing forecast (2026-09-17):

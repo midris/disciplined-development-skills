@@ -39,7 +39,7 @@ def test_actual_claude_startup_shell_and_skill_delivery(mode, monkeypatch):
     captured = []
     body = '# Qualification probe\n\nReport the marker QUALIFIED_BODY_7391.\n'
     description = 'Use when asked to run the qualification probe.'
-    probe = 'command -v python3; python3 --version; command -v git; git --version'
+    probe = "command -v python3; python3 --version; command -v git; git --version\ncat <<'EOF'\nHEREDOC_QUALIFIED\nEOF"
 
     class Handler(BaseHTTPRequestHandler):
         def log_message(self, *args):
@@ -159,6 +159,7 @@ def test_actual_claude_startup_shell_and_skill_delivery(mode, monkeypatch):
             assert not timed_out, 'Claude startup did not reach the scripted endpoint/tools'
             assert process.returncode == 0, err
             events = [json.loads(line) for line in out.splitlines()]
+            assert not any(isinstance(event.get('tool_use_result'), str) and event['tool_use_result'].startswith('Error:') for event in events), out
             shell = next(event['tool_use_result'] for event in events
                          if event.get('type') == 'user' and isinstance(event.get('tool_use_result'), dict)
                          and 'stdout' in event['tool_use_result'])
@@ -166,6 +167,7 @@ def test_actual_claude_startup_shell_and_skill_delivery(mode, monkeypatch):
             assert lines[0] == python, shell
             assert lines[2] == shutil.which('git', path=runtime.environment['PATH']), shell
             assert tuple(map(int, lines[1].split()[1].split('.')[:2])) >= (3, 11)
+            assert lines[4:] == ['HEREDOC_QUALIFIED'], shell
             assert not shell['stderr']
             assert len(captured) == 3
             assert any(description in s for s in strings(captured[0]))

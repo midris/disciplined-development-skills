@@ -44,5 +44,5 @@ Current SSR drafts place skills under `.agents/skills`, so they are Codex config
 A Claude comparison requires `.claude/skills` materialization, model/effort selection, native catalog and Skill-event capture qualification, plus its own allocation.
 Before any Claude subject pass, add and pass an installed-policy assertion of Python and Git resolution through the actual Bash shell invocation.
 The new actual-Claude-CLI test now covers both permission modes, including startup, Bash Python/Git resolution and description/body delivery. The [Claude diagnosis](claude-smoke-qualification.md#follow-up-diagnosis) isolates system timezone-read and login-shell PATH defects; disposable corrective controls reach Bash and deliver the complete SSR body through Skill, with zero model calls. Both production fixes, actual-CLI regressions and shared filesystem isolation checks pass.
-The completed comparison is Codex-only; the separate Claude smoke collection is now authorized after its shell qualification.
+The completed comparison is Codex-only; the separate [Claude smoke assessment](claude-smoke-01-assessment.md) records one native invocation miss despite available SSR; no additional collection is selected.
 Claude documentation checking does not authorize or qualify additional Claude model runs.

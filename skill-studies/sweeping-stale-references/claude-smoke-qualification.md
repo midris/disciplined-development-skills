@@ -1,7 +1,6 @@
 # Minimal Claude testing qualification
 
-Status: production runtime fixes and both-mode installed-CLI/isolation checks pass; two owner-authorized live smokes await frozen-input collection.
-Claude model testing is not yet validated.
+Status: runtime qualification and the two live smokes are complete; the testing path works, with a native invocation failure recorded separately in the [assessment](claude-smoke-01-assessment.md).
 Date: 2026-09-24 America/New_York.
 Owner direction: “once the codex runs are done, let's do some minimal tests to validate that Claude testing works”.
 The Codex comparison is complete.
@@ -13,7 +12,7 @@ The active session selected a small path: existing filesystem-isolation checks, 
 The selected live checks are explicit-load discovery-shiv and native invocation-review, with `claude-sonnet-5`/low; see the [authorized batch](protocol.md#smoke-claude-smoke-01).
 No candidate comparison, repeatability claim, extra provider, automatic retry or skill edit is selected.
 The owner authorized the runner fixes and both live smokes on 2026-09-24.
-The prior 90 calls remain spent; the subject ceiling is now 92. Configuration and manifest freeze precedes collection.
+Both authorized calls are now spent, bringing the total to 92/92. Configurations and manifests were frozen before collection.
 
 The current plan requires an installed-policy Python/Git check through Claude’s actual Bash tool before a Claude subject pass.
 An absolute-Python isolation probe or a shell command guessed from binary strings cannot close that gate.
@@ -89,9 +88,9 @@ The earlier evidence store remains unchanged.
 The production runtime now includes both corrections.
 The new actual-CLI regression first failed on startup timeout, then failed on Apple Python after only the timezone correction, and passes with both corrections in workspace-write and read-only modes.
 Both filesystem isolation probes also pass (four checks total); all four Shiv offline runtime tests pass under the corrected installed policy and private login shell.
-Next: freeze the two live smoke configurations and run the authorized rows.
-Production authentication, model selection and live task results remain untested; diagnostic success does not close those gates.
-No production runner code, live skill or frozen case changed during diagnosis.
+The two live smokes now establish subscription execution and actual `claude-sonnet-5` response capture; see their separate assessment for the success and invocation/functional failure.
+Both recovered a zsh heredoc scratch denial. The subsequent production `TMPPREFIX` correction has an actual-CLI red/green regression in both permission modes, with no further model calls.
+The earlier diagnosis changed no production code. The subsequent corrections change the runner only; live skills and historical frozen cases remain unchanged.
 
 ## Documentation and evidence review
 
@@ -100,4 +99,20 @@ That initial review left the cause unresolved.
 The follow-up distinguishes isolated diagnostic controls from the subsequent production fixes and regression qualification.
 All seven existing batch readiness checks pass; 229 local links in the affected documents resolve; whitespace is clean.
 The required hook suite passes: 263 tests, three existing skips.
-The runner changes are limited to system timezone reads and private login-shell PATH restoration. Live skills and historical frozen inputs remain unchanged.
+The runner changes are limited to system timezone reads, private login-shell PATH restoration and private zsh heredoc scratch. Live skills and historical frozen inputs remain unchanged.
+
+## Final qualification evidence
+
+Startup/PATH red-green, isolation and Shiv preflight evidence: `/Users/simon/work/personal/skill-study-private/sweeping-stale-references/development/claude-runtime-qualified-20260924/`; sibling inventory SHA-256 `9c773851f10b334bd1a45e00e31e5b05435b282d35abeb301d0f96c609af271b`, 68 regular files.
+Heredoc red-green and renewed isolation evidence: `/Users/simon/work/personal/skill-study-private/sweeping-stale-references/development/claude-heredoc-qualified-20260924/`; sibling inventory SHA-256 `e34e3d586ac8280e85c4e2a6dc75357a676182cd0ed135176ca26701bbfe859a`, 60 regular files.
+Final suites: runner 463 passed; hooks 263 passed, three existing skips; actual Claude CLI plus isolation four passed; Shiv preflight four passed.
+The first runner-suite invocation under the enclosing agent sandbox had six dummy-Claude authentication/setup failures; running with the required host permission passed, without changing tests or production authentication.
+No additional live qualification call was used after the two smokes.
+
+## Closing review
+
+Self-review checked runtime changes against the diagnosed failures, native versus explicit invocation evidence, both permission modes, raw-bundle immutability, recovered errors, input adaptations and separate procedural/functional judgments.
+The accounting sweep found a missing new-index link in the CW ledger; adding that link reconciles the two new charges without changing historical results.
+All 217 retained smoke-bundle regular-file hashes match their inventories.
+The production CLI identity remains unchanged.
+The native miss is retained as a valid behavioral observation, not retried or relabeled as an infrastructure exclusion.

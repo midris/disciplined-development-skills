@@ -366,6 +366,7 @@ The sibling evidence directory remains available for reading; `--add-dir` does n
 The controlled Claude runtime requires macOS `sandbox-exec` and an existing claude.ai subscription login using the standard `~/Library/Keychains/login.keychain-db` or supported file cache.
 It retains normal HOME/USER for authentication and launches with an explicit operational PATH, fresh private temporary directories and the accepted memory/history/telemetry controls.
 It does not inherit API keys, profile overrides, shell-startup environment variables or the old simple-system-prompt/bundled-skill suppression baseline.
+A private `TMPPREFIX` keeps zsh heredoc files inside allowed scratch.
 A private `ZDOTDIR` and `.zprofile` restore the prepared PATH after macOS login-zsh startup reorders it, without reading user startup files.
 The whole-process Seatbelt policy denies file reads and writes by default, then grants declared fixture/evidence reads, private scratch and required system/runtime reads.
 This covers native Read/Glob/Grep and Bash descendants alike.
@@ -381,7 +382,7 @@ Model-network connectivity remains available; this is study-input isolation, not
 Runtime and fixture directories must be outside HOME.
 Preparation rejects ambient instruction/configuration/skill entries in fixture ancestry.
 The shared installed-policy tests above exercise the boundary; repeat affected controls when CLI/runtime assumptions change.
-`SKILLTEST_SANDBOX_EVIDENCE_DIR=/absolute/new/evidence .venv/bin/python -m pytest -q acceptance/test_claude_cli.py` additionally tests the actual installed CLI in both permission modes: startup, Bash Python/Git selection, description delivery before Skill invocation and full body delivery afterward.
+`SKILLTEST_SANDBOX_EVIDENCE_DIR=/absolute/new/evidence .venv/bin/python -m pytest -q acceptance/test_claude_cli.py` additionally tests the actual installed CLI in both permission modes: startup, Bash Python/Git selection and heredocs, description delivery before Skill invocation and full body delivery afterward.
 It uses surrogate authentication and a scripted localhost endpoint with external networking denied; it spends zero model calls and does not qualify production authentication or model selection.
 
 Authentication preflight runs that same resolved Claude executable under the same child policy.

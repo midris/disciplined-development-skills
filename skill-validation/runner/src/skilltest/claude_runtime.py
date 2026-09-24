@@ -76,6 +76,8 @@ class ClaudeRuntime(ProcessRuntime):
             "TMPDIR": str(self.root / "tmp"), "CLAUDE_CODE_TMPDIR": str(self.root / "tmp"),
             "CLAUDE_CODE_DEBUG_LOGS_DIR": str(self.root / "tmp/debug"),
             "ZDOTDIR": str(self.root / "tmp"),
+            # zsh heredocs use TMPPREFIX rather than TMPDIR.
+            "TMPPREFIX": str(self.root / "tmp/zsh"),
         }
         # Claude's Bash tool uses login zsh on macOS; /etc/zprofile reorders PATH.
         # Restore only our prepared tool order without reading user startup files.
