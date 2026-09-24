@@ -2,8 +2,8 @@
 
 Format version: `1`
 Study ID: `sweeping-stale-references`
-Status: comprehensive-comparison-02 complete: all 34 attempts retained and assessed with valid setup; no retries or replacements. Adoption and skill editing remain unauthorized; the owner accepts the rewrite’s changed local reporting as intentional.
-Current action: freeze, run and assess the owner-authorized 34-call Claude comparison of original and comprehensive rewrite SSR. Comprehensive-comparison-02 is complete; its candidate-contract/adoption decision remains deferred. The prior 92 subject calls are spent; 34 new comparison calls are authorized, with no automatic retry.
+Status: comprehensive-comparison-02, Claude smoke and claude-comparison-01 complete; all authorized attempts retained and assessed. Adoption and skill editing remain unauthorized; the owner accepts the rewrite’s changed local reporting as intentional.
+Current action: owner review of the completed [34-call Claude comparison](claude-comparison-01-assessment.md), then a decision on adoption or a targeted follow-up. All 126 combined subject calls are spent; no further collection or skill edit is selected.
 The [plan](../../plans/2026-09-11-model-driven-skill-testing.md) owns progress; the [spec](../../plans/specs/2026-09-11-model-driven-skill-testing-framework.md) owns the workflow.
 The [core baseline](core-baseline-01-assessment.md) retains its two setup exclusions and runtime strata; the [comparison](comprehensive-comparison-01-assessment.md) records twelve valid executions of the original and preserved candidate. Both collection scopes are spent. Storage and accounting retains the SSR closing checkpoint and links the current combined totals.
 
@@ -22,7 +22,7 @@ The skill has its own trigger and procedure; it does not require DD or a named S
 DD invokes it at Gate 4, but that incoming invocation is not a dependency of the skill.
 The [purpose and relationship map](../../ARCHITECTURE.md#composition-boundaries) records this distinction across all nine skills.
 The completed first study measures independent application after explicit loading; it did not test native discovery or DD orchestration.
-Native selection and timely loading are now measured in comprehensive-comparison-02; DD orchestration remains outside this independent-use scope.
+Native selection and timely loading are now measured in comprehensive-comparison-02 and claude-comparison-01; DD orchestration remains outside this independent-use scope.
 [Disciplined research](../../skills/disciplined-research/SKILL.md) owns grounding the changed fact; [writing explicit rationale](../../skills/writing-explicit-rationale/SKILL.md) owns why it changed.
 These ownership boundaries do not require loading either sibling into the subject context.
 The task must supply a settled desired outcome and sufficient project context, rather than score this skill for inventing the desired change or resolving an unspecified business rule. The implementation may already be changed in a repair case or may be the requested work in an initiating-change case.
@@ -188,7 +188,7 @@ Control contribution claims require evidence that omitted guidance was not loade
 Pre-baseline development is closed at two pairs. Do not reopen it for a new facet; a named readiness defect requires a separately authorized diagnostic exception.
 ### Comparison: claude-comparison-01
 
-Status: owner-authorized preparation and collection, 2026-09-24. Owner request: “run an equivalent of a full codex run with Claude”, with multiple discovery runs and both baseline and rewrite SSR.
+Status: complete; all 34 attempts retained and assessed with valid setup, no retries or replacements. See [assessment](claude-comparison-01-assessment.md). Owner request: “run an equivalent of a full codex run with Claude”, with multiple discovery runs and both baseline and rewrite SSR.
 Scope: mirror comprehensive-comparison-02: 34 sequential calls; original/candidate each run twice on five ordinary cases, one pressure case and two positive native cases, then once on unrelated non-use sanity.
 Purpose: compare both skill versions on Claude and repeat native discovery observations after the smoke miss. Do not pool the two smoke calls or historical Codex results into this batch.
 Inclusion: descriptive-only; Include all valid-setup executions regardless of outcome. Keep invalid setup, unknown evidence and unattempted slots explicit. No automatic retry or replacement.
@@ -529,8 +529,8 @@ This closed-study checkpoint uses its then-approved ceilings: a 40-call subject 
 At that closing checkpoint, 30 subject calls had been dispatched and capacity was 10 / 12 / 4 / 4. Core-baseline-01 has no unspent calls; neither excluded attempt has replacement authorization. Remaining capacity is a ceiling, not a selected next batch.
 
 
-Current combined invocation accounting also includes the CW [baseline](../concise-writing/contribution-baseline-01-run-index.json) and [comparison](../concise-writing/comprehensive-comparison-01-run-index.json), plus the expansion and comprehensive-comparison-02 indexes above.
-Dispatched calls are **92 subject, 0 evaluator, 0 authoring, 0 retry**; remaining outer capacity is **34 / 12 / 4 / 4** against the [active plan](../../plans/2026-09-11-model-driven-skill-testing.md#limits-and-information-boundaries). The CW protocol owns current combined time and forecast; all ten expansion and 34 comparison slots are spent; both Claude smoke calls are spent.
+Current combined invocation accounting also includes the CW [baseline](../concise-writing/contribution-baseline-01-run-index.json) and [comparison](../concise-writing/comprehensive-comparison-01-run-index.json), plus the expansion, comprehensive-comparison-02, Claude smoke and claude-comparison-01 indexes above.
+Dispatched calls are **126 subject, 0 evaluator, 0 authoring, 0 retry**; remaining outer capacity is **0 / 12 / 4 / 4** against the [active plan](../../plans/2026-09-11-model-driven-skill-testing.md#limits-and-information-boundaries). The CW protocol owns current combined time and forecast; all ten expansion slots, both 34-call comparison batches and both Claude smoke calls are spent.
 
 
 Historical SSR closing forecast (2026-09-17):
@@ -583,6 +583,6 @@ All thirty subject calls used Sol-low. Small exposed cases, shared assessor cont
 - Include simplification when interpreting a version comparison. The initial retain recommendation overlooked a measured size benefit already allowed by the spec. Word count is sufficient; smaller text does not excuse functional regression or prove token/cost savings.
 - Separate evidence completion from deployment. Closing with adoption deferred preserves the findings and permits the next study without forcing a winner or another collection cycle.
 
-The contrasting-skill CW study subsequently exercised the workflow; its records and current combined accounting are linked above. SSR expansion and comprehensive-comparison-02 are complete; the pending owner decision is described at the start of this protocol.
+The contrasting-skill CW study subsequently exercised the workflow; its records and current combined accounting are linked above. SSR expansion, comprehensive-comparison-02 and claude-comparison-01 are complete; the pending owner decision is described at the start of this protocol.
 
 The measured unrelated invocation case is D1-only sanity evidence, with functional outcome `not measured`; it does not establish near-boundary over-trigger resistance.

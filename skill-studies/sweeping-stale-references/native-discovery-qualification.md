@@ -1,6 +1,6 @@
 # SSR native discovery qualification
 
-Status: scripted Codex catalog/capture qualification complete. Subsequent production-model selection is measured separately in the [comparison assessment](comprehensive-comparison-02-assessment.md); this record preserves the zero-model mechanism check.
+Status: scripted catalog/capture qualification complete. Production-model selection is measured separately in the [Codex comparison](comprehensive-comparison-02-assessment.md) and [Claude comparison](claude-comparison-01-assessment.md); this record preserves the mechanism checks.
 Date: 2026-09-23 America/New_York (retained timestamps are 2026-09-24 UTC).
 Runner revision: `7cec98a`; installed Codex CLI: `0.156.0`, binary SHA-256 `6b42db4d33fd53516162bd76a0e2d07e0567287c44e036d4e4c06cb555a432f9`.
 This runtime must not be silently pooled with historical Codex 0.154.0 observations.
@@ -40,9 +40,9 @@ Our adapter uses project settings, enables/allows Skill and does not disable ski
 See [Claude CLI reference](https://code.claude.com/docs/en/cli-reference).
 
 The installed Claude CLI reports `2.1.280`; the website describes evolving behavior and is not installed-runtime evidence.
-Current SSR drafts place skills under `.agents/skills`, so they are Codex configurations and must not be relabeled Claude runs.
-A Claude comparison requires `.claude/skills` materialization, model/effort selection, native catalog and Skill-event capture qualification, plus its own allocation.
-Before any Claude subject pass, add and pass an installed-policy assertion of Python and Git resolution through the actual Bash shell invocation.
+Codex configurations use `.agents/skills`; the separately frozen Claude configurations use `.claude/skills` and their own model/settings, capture qualification and allocation.
+Before future Claude collection, pass the installed-policy Python/Git resolution assertion through the actual Bash shell invocation.
 The new actual-Claude-CLI test now covers both permission modes, including startup, Bash Python/Git resolution and description/body delivery. The [Claude diagnosis](claude-smoke-qualification.md#follow-up-diagnosis) isolates system timezone-read and login-shell PATH defects; disposable corrective controls reach Bash and deliver the complete SSR body through Skill, with zero model calls. Both production fixes, actual-CLI regressions and shared filesystem isolation checks pass.
-The completed comparison is Codex-only; the separate [Claude smoke assessment](claude-smoke-01-assessment.md) records one native invocation miss despite available SSR; no additional collection is selected.
+The [Claude smoke assessment](claude-smoke-01-assessment.md) records one native invocation miss despite available SSR.
+The subsequent [34-call Claude comparison](claude-comparison-01-assessment.md) records repeated original/rewrite selection, the retained preflight and its limits; no additional collection is selected.
 Claude documentation checking does not authorize or qualify additional Claude model runs.
