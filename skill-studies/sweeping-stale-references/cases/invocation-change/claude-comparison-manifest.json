@@ -3,9 +3,9 @@
   "manifest_id": "ssr-invocation-change-claude-comparison-01",
   "study_id": "sweeping-stale-references",
   "case_id": "invocation-change",
-  "status": "draft",
+  "status": "frozen",
   "created_at": "2026-09-24",
-  "source_revision": "",
+  "source_revision": "189ea38a6d3ecd648cbdcf161b6664d10ae61d08",
   "authorities": {
     "spec": {
       "path": "plans/specs/2026-09-11-model-driven-skill-testing-framework.md",
