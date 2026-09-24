@@ -3,5 +3,1604 @@
   "index_id": "ssr-claude-comparison-01",
   "study_id": "sweeping-stale-references",
   "batch_id": "claude-comparison-01",
-  "attempts": []
+  "attempts": [
+    {
+      "attempt_id": "claude-comparison-01-discovery-shiv-original-1-1",
+      "case_id": "discovery-shiv",
+      "condition": "original",
+      "repetition": 1,
+      "attempt_number": 1,
+      "retry_of": null,
+      "manifest": {
+        "path": "skill-studies/sweeping-stale-references/cases/discovery-shiv/claude-comparison-manifest.json",
+        "sha256": "fd3e256a016024ce90b20a93d1774d9bdf25528af6d40ceb5f9f5963d0839385",
+        "version": "1",
+        "git_revision": "d342d2f939898ef4073691fb92414e9eff55dbff"
+      },
+      "authorization": {
+        "artifact": {
+          "path": "skill-studies/sweeping-stale-references/protocol.md",
+          "sha256": "56dbb7935deb5d2bf081611d2987c4ee580d04e52c62343452a2afac5708242f",
+          "version": "1",
+          "git_revision": "d342d2f939898ef4073691fb92414e9eff55dbff"
+        },
+        "selector": "Batch: claude-comparison-01; order 1"
+      },
+      "run_id": "20260924T125705654Z-ssr-claude-discovery-shiv-original-a856c4af-4631-4a17-92c1-e8333fce7e25-v_8hnoc8",
+      "allocation": {
+        "pool": "subject",
+        "charge": 1
+      },
+      "limitations": [],
+      "bundle": {
+        "path": "/Users/simon/work/personal/skill-study-private/sweeping-stale-references/development/20260924T125705654Z-ssr-claude-discovery-shiv-original-a856c4af-4631-4a17-92c1-e8333fce7e25-v_8hnoc8",
+        "inventory": {
+          "path": "/Users/simon/work/personal/skill-study-private/sweeping-stale-references/development/20260924T125705654Z-ssr-claude-discovery-shiv-original-a856c4af-4631-4a17-92c1-e8333fce7e25-v_8hnoc8.inventory.json",
+          "sha256": "7e789ea386b31a2842e2479426f5b376f6c35f95e398747622958289c252fa33",
+          "version": "1"
+        },
+        "verified": true
+      },
+      "result": {
+        "result_id": "claude-comparison-01-discovery-shiv-original-1",
+        "record": {
+          "path": "skill-studies/sweeping-stale-references/results/20260924T125705654Z-ssr-claude-discovery-shiv-original-a856c4af-4631-4a17-92c1-e8333fce7e25-v_8hnoc8.json",
+          "sha256": "644d4feb3c71deadc9fb26be2b195e78ce8348b120b741e2bf26d17977f79f45",
+          "version": "2",
+          "git_revision": "26c869f9490cc7f94833fd3c1b83d910df79fa94"
+        }
+      }
+    },
+    {
+      "attempt_id": "claude-comparison-01-discovery-shiv-candidate-1-1",
+      "case_id": "discovery-shiv",
+      "condition": "candidate",
+      "repetition": 1,
+      "attempt_number": 1,
+      "retry_of": null,
+      "manifest": {
+        "path": "skill-studies/sweeping-stale-references/cases/discovery-shiv/claude-comparison-manifest.json",
+        "sha256": "fd3e256a016024ce90b20a93d1774d9bdf25528af6d40ceb5f9f5963d0839385",
+        "version": "1",
+        "git_revision": "d342d2f939898ef4073691fb92414e9eff55dbff"
+      },
+      "authorization": {
+        "artifact": {
+          "path": "skill-studies/sweeping-stale-references/protocol.md",
+          "sha256": "56dbb7935deb5d2bf081611d2987c4ee580d04e52c62343452a2afac5708242f",
+          "version": "1",
+          "git_revision": "d342d2f939898ef4073691fb92414e9eff55dbff"
+        },
+        "selector": "Batch: claude-comparison-01; order 2"
+      },
+      "run_id": "20260924T125917440Z-ssr-claude-discovery-shiv-candidate-48d250bd-be11-499f-b0be-65d64c2d782e-yhsyg626",
+      "allocation": {
+        "pool": "subject",
+        "charge": 1
+      },
+      "limitations": [],
+      "bundle": {
+        "path": "/Users/simon/work/personal/skill-study-private/sweeping-stale-references/development/20260924T125917440Z-ssr-claude-discovery-shiv-candidate-48d250bd-be11-499f-b0be-65d64c2d782e-yhsyg626",
+        "inventory": {
+          "path": "/Users/simon/work/personal/skill-study-private/sweeping-stale-references/development/20260924T125917440Z-ssr-claude-discovery-shiv-candidate-48d250bd-be11-499f-b0be-65d64c2d782e-yhsyg626.inventory.json",
+          "sha256": "2c0ba7a24d9443b2c55e6c0d2cc331a5fd5a89c75e7e1dbd5404767a68b6c45e",
+          "version": "1"
+        },
+        "verified": true
+      },
+      "result": {
+        "result_id": "claude-comparison-01-discovery-shiv-candidate-1",
+        "record": {
+          "path": "skill-studies/sweeping-stale-references/results/20260924T125917440Z-ssr-claude-discovery-shiv-candidate-48d250bd-be11-499f-b0be-65d64c2d782e-yhsyg626.json",
+          "sha256": "e879e7ea65fc88489bb9bffa017aa90f39ee57114f6677fac05db8841cd5a863",
+          "version": "2",
+          "git_revision": "26c869f9490cc7f94833fd3c1b83d910df79fa94"
+        }
+      }
+    },
+    {
+      "attempt_id": "claude-comparison-01-discovery-shiv-candidate-2-1",
+      "case_id": "discovery-shiv",
+      "condition": "candidate",
+      "repetition": 2,
+      "attempt_number": 1,
+      "retry_of": null,
+      "manifest": {
+        "path": "skill-studies/sweeping-stale-references/cases/discovery-shiv/claude-comparison-manifest.json",
+        "sha256": "fd3e256a016024ce90b20a93d1774d9bdf25528af6d40ceb5f9f5963d0839385",
+        "version": "1",
+        "git_revision": "d342d2f939898ef4073691fb92414e9eff55dbff"
+      },
+      "authorization": {
+        "artifact": {
+          "path": "skill-studies/sweeping-stale-references/protocol.md",
+          "sha256": "56dbb7935deb5d2bf081611d2987c4ee580d04e52c62343452a2afac5708242f",
+          "version": "1",
+          "git_revision": "d342d2f939898ef4073691fb92414e9eff55dbff"
+        },
+        "selector": "Batch: claude-comparison-01; order 3"
+      },
+      "run_id": "20260924T130121790Z-ssr-claude-discovery-shiv-candidate-729da20f-23fc-4b46-8428-3aa6404ac72e-dhhsp5kp",
+      "allocation": {
+        "pool": "subject",
+        "charge": 1
+      },
+      "limitations": [],
+      "bundle": {
+        "path": "/Users/simon/work/personal/skill-study-private/sweeping-stale-references/development/20260924T130121790Z-ssr-claude-discovery-shiv-candidate-729da20f-23fc-4b46-8428-3aa6404ac72e-dhhsp5kp",
+        "inventory": {
+          "path": "/Users/simon/work/personal/skill-study-private/sweeping-stale-references/development/20260924T130121790Z-ssr-claude-discovery-shiv-candidate-729da20f-23fc-4b46-8428-3aa6404ac72e-dhhsp5kp.inventory.json",
+          "sha256": "6ea0c89cda6c3be8fff10d4df4a1fc4d974c08a7b528f874c2c2273741e61cc3",
+          "version": "1"
+        },
+        "verified": true
+      },
+      "result": {
+        "result_id": "claude-comparison-01-discovery-shiv-candidate-2",
+        "record": {
+          "path": "skill-studies/sweeping-stale-references/results/20260924T130121790Z-ssr-claude-discovery-shiv-candidate-729da20f-23fc-4b46-8428-3aa6404ac72e-dhhsp5kp.json",
+          "sha256": "6aec971fe44d202d15c42ef2a3fc974daa375fab32d48871c57c693152f2e88f",
+          "version": "2",
+          "git_revision": "26c869f9490cc7f94833fd3c1b83d910df79fa94"
+        }
+      }
+    },
+    {
+      "attempt_id": "claude-comparison-01-discovery-shiv-original-2-1",
+      "case_id": "discovery-shiv",
+      "condition": "original",
+      "repetition": 2,
+      "attempt_number": 1,
+      "retry_of": null,
+      "manifest": {
+        "path": "skill-studies/sweeping-stale-references/cases/discovery-shiv/claude-comparison-manifest.json",
+        "sha256": "fd3e256a016024ce90b20a93d1774d9bdf25528af6d40ceb5f9f5963d0839385",
+        "version": "1",
+        "git_revision": "d342d2f939898ef4073691fb92414e9eff55dbff"
+      },
+      "authorization": {
+        "artifact": {
+          "path": "skill-studies/sweeping-stale-references/protocol.md",
+          "sha256": "56dbb7935deb5d2bf081611d2987c4ee580d04e52c62343452a2afac5708242f",
+          "version": "1",
+          "git_revision": "d342d2f939898ef4073691fb92414e9eff55dbff"
+        },
+        "selector": "Batch: claude-comparison-01; order 4"
+      },
+      "run_id": "20260924T130253427Z-ssr-claude-discovery-shiv-original-ec82dafe-f10f-4ca5-96f8-f1f37249e0f2-jydy9zc2",
+      "allocation": {
+        "pool": "subject",
+        "charge": 1
+      },
+      "limitations": [],
+      "bundle": {
+        "path": "/Users/simon/work/personal/skill-study-private/sweeping-stale-references/development/20260924T130253427Z-ssr-claude-discovery-shiv-original-ec82dafe-f10f-4ca5-96f8-f1f37249e0f2-jydy9zc2",
+        "inventory": {
+          "path": "/Users/simon/work/personal/skill-study-private/sweeping-stale-references/development/20260924T130253427Z-ssr-claude-discovery-shiv-original-ec82dafe-f10f-4ca5-96f8-f1f37249e0f2-jydy9zc2.inventory.json",
+          "sha256": "36d8895fe45e04a922880440d12561ac2f41553ea5a2adc97b21559b37dd095d",
+          "version": "1"
+        },
+        "verified": true
+      },
+      "result": {
+        "result_id": "claude-comparison-01-discovery-shiv-original-2",
+        "record": {
+          "path": "skill-studies/sweeping-stale-references/results/20260924T130253427Z-ssr-claude-discovery-shiv-original-ec82dafe-f10f-4ca5-96f8-f1f37249e0f2-jydy9zc2.json",
+          "sha256": "afe9fb432c87a1621bff1ee03386ecf0dcdbb3f1e5f1faed8f7d881c61a4ad93",
+          "version": "2",
+          "git_revision": "26c869f9490cc7f94833fd3c1b83d910df79fa94"
+        }
+      }
+    },
+    {
+      "attempt_id": "claude-comparison-01-moved-guide-original-1-1",
+      "case_id": "moved-guide",
+      "condition": "original",
+      "repetition": 1,
+      "attempt_number": 1,
+      "retry_of": null,
+      "manifest": {
+        "path": "skill-studies/sweeping-stale-references/cases/moved-guide/claude-comparison-manifest.json",
+        "sha256": "78cf8d96fa4a108795bec67699cca9f9c3c1a8e93d18c297a13ca1d68e130098",
+        "version": "1",
+        "git_revision": "d342d2f939898ef4073691fb92414e9eff55dbff"
+      },
+      "authorization": {
+        "artifact": {
+          "path": "skill-studies/sweeping-stale-references/protocol.md",
+          "sha256": "56dbb7935deb5d2bf081611d2987c4ee580d04e52c62343452a2afac5708242f",
+          "version": "1",
+          "git_revision": "d342d2f939898ef4073691fb92414e9eff55dbff"
+        },
+        "selector": "Batch: claude-comparison-01; order 5"
+      },
+      "run_id": "20260924T130825053Z-ssr-claude-moved-guide-original-9e68502b-05d0-4250-a9c4-705aa58e4d2c-5l5ag9xr",
+      "allocation": {
+        "pool": "subject",
+        "charge": 1
+      },
+      "limitations": [],
+      "bundle": {
+        "path": "/Users/simon/work/personal/skill-study-private/sweeping-stale-references/development/20260924T130825053Z-ssr-claude-moved-guide-original-9e68502b-05d0-4250-a9c4-705aa58e4d2c-5l5ag9xr",
+        "inventory": {
+          "path": "/Users/simon/work/personal/skill-study-private/sweeping-stale-references/development/20260924T130825053Z-ssr-claude-moved-guide-original-9e68502b-05d0-4250-a9c4-705aa58e4d2c-5l5ag9xr.inventory.json",
+          "sha256": "a01181a4f96a16d3a99e2a9fc931bf4e43f979f69a18e2515cfb933db986a07c",
+          "version": "1"
+        },
+        "verified": true
+      },
+      "result": {
+        "result_id": "claude-comparison-01-moved-guide-original-1",
+        "record": {
+          "path": "skill-studies/sweeping-stale-references/results/20260924T130825053Z-ssr-claude-moved-guide-original-9e68502b-05d0-4250-a9c4-705aa58e4d2c-5l5ag9xr.json",
+          "sha256": "0e78f921d6b0cdb95611f778050f1ca98a99b7ef6970ff7cf26a10b4ed2eaee1",
+          "version": "2",
+          "git_revision": "26c869f9490cc7f94833fd3c1b83d910df79fa94"
+        }
+      }
+    },
+    {
+      "attempt_id": "claude-comparison-01-moved-guide-candidate-1-1",
+      "case_id": "moved-guide",
+      "condition": "candidate",
+      "repetition": 1,
+      "attempt_number": 1,
+      "retry_of": null,
+      "manifest": {
+        "path": "skill-studies/sweeping-stale-references/cases/moved-guide/claude-comparison-manifest.json",
+        "sha256": "78cf8d96fa4a108795bec67699cca9f9c3c1a8e93d18c297a13ca1d68e130098",
+        "version": "1",
+        "git_revision": "d342d2f939898ef4073691fb92414e9eff55dbff"
+      },
+      "authorization": {
+        "artifact": {
+          "path": "skill-studies/sweeping-stale-references/protocol.md",
+          "sha256": "56dbb7935deb5d2bf081611d2987c4ee580d04e52c62343452a2afac5708242f",
+          "version": "1",
+          "git_revision": "d342d2f939898ef4073691fb92414e9eff55dbff"
+        },
+        "selector": "Batch: claude-comparison-01; order 6"
+      },
+      "run_id": "20260924T131007329Z-ssr-claude-moved-guide-candidate-ad1a640e-0c42-48cc-948c-15ad98aed1fd-7iuyiyvy",
+      "allocation": {
+        "pool": "subject",
+        "charge": 1
+      },
+      "limitations": [],
+      "bundle": {
+        "path": "/Users/simon/work/personal/skill-study-private/sweeping-stale-references/development/20260924T131007329Z-ssr-claude-moved-guide-candidate-ad1a640e-0c42-48cc-948c-15ad98aed1fd-7iuyiyvy",
+        "inventory": {
+          "path": "/Users/simon/work/personal/skill-study-private/sweeping-stale-references/development/20260924T131007329Z-ssr-claude-moved-guide-candidate-ad1a640e-0c42-48cc-948c-15ad98aed1fd-7iuyiyvy.inventory.json",
+          "sha256": "42d4b3ad4cd283e449725894dbe78e05933b3bf0d490a604cc96d363bae2f3ea",
+          "version": "1"
+        },
+        "verified": true
+      },
+      "result": {
+        "result_id": "claude-comparison-01-moved-guide-candidate-1",
+        "record": {
+          "path": "skill-studies/sweeping-stale-references/results/20260924T131007329Z-ssr-claude-moved-guide-candidate-ad1a640e-0c42-48cc-948c-15ad98aed1fd-7iuyiyvy.json",
+          "sha256": "f80e71d8a9bf309f40afb86943b4aac79c517691aabce12ea08aac3098e2567b",
+          "version": "2",
+          "git_revision": "26c869f9490cc7f94833fd3c1b83d910df79fa94"
+        }
+      }
+    },
+    {
+      "attempt_id": "claude-comparison-01-moved-guide-candidate-2-1",
+      "case_id": "moved-guide",
+      "condition": "candidate",
+      "repetition": 2,
+      "attempt_number": 1,
+      "retry_of": null,
+      "manifest": {
+        "path": "skill-studies/sweeping-stale-references/cases/moved-guide/claude-comparison-manifest.json",
+        "sha256": "78cf8d96fa4a108795bec67699cca9f9c3c1a8e93d18c297a13ca1d68e130098",
+        "version": "1",
+        "git_revision": "d342d2f939898ef4073691fb92414e9eff55dbff"
+      },
+      "authorization": {
+        "artifact": {
+          "path": "skill-studies/sweeping-stale-references/protocol.md",
+          "sha256": "56dbb7935deb5d2bf081611d2987c4ee580d04e52c62343452a2afac5708242f",
+          "version": "1",
+          "git_revision": "d342d2f939898ef4073691fb92414e9eff55dbff"
+        },
+        "selector": "Batch: claude-comparison-01; order 7"
+      },
+      "run_id": "20260924T131123976Z-ssr-claude-moved-guide-candidate-6904326c-5a40-4754-9ecd-4a6efd3d3f2c-pai_9lz4",
+      "allocation": {
+        "pool": "subject",
+        "charge": 1
+      },
+      "limitations": [],
+      "bundle": {
+        "path": "/Users/simon/work/personal/skill-study-private/sweeping-stale-references/development/20260924T131123976Z-ssr-claude-moved-guide-candidate-6904326c-5a40-4754-9ecd-4a6efd3d3f2c-pai_9lz4",
+        "inventory": {
+          "path": "/Users/simon/work/personal/skill-study-private/sweeping-stale-references/development/20260924T131123976Z-ssr-claude-moved-guide-candidate-6904326c-5a40-4754-9ecd-4a6efd3d3f2c-pai_9lz4.inventory.json",
+          "sha256": "5132669ba966d1a3d128c2344473f9639e9e10b527303c1756c90c0a04e74e5b",
+          "version": "1"
+        },
+        "verified": true
+      },
+      "result": {
+        "result_id": "claude-comparison-01-moved-guide-candidate-2",
+        "record": {
+          "path": "skill-studies/sweeping-stale-references/results/20260924T131123976Z-ssr-claude-moved-guide-candidate-6904326c-5a40-4754-9ecd-4a6efd3d3f2c-pai_9lz4.json",
+          "sha256": "e68a70ec6975a0253ed8132789034041c695cad8ec29433bd9d7cb5914312b0c",
+          "version": "2",
+          "git_revision": "26c869f9490cc7f94833fd3c1b83d910df79fa94"
+        }
+      }
+    },
+    {
+      "attempt_id": "claude-comparison-01-moved-guide-original-2-1",
+      "case_id": "moved-guide",
+      "condition": "original",
+      "repetition": 2,
+      "attempt_number": 1,
+      "retry_of": null,
+      "manifest": {
+        "path": "skill-studies/sweeping-stale-references/cases/moved-guide/claude-comparison-manifest.json",
+        "sha256": "78cf8d96fa4a108795bec67699cca9f9c3c1a8e93d18c297a13ca1d68e130098",
+        "version": "1",
+        "git_revision": "d342d2f939898ef4073691fb92414e9eff55dbff"
+      },
+      "authorization": {
+        "artifact": {
+          "path": "skill-studies/sweeping-stale-references/protocol.md",
+          "sha256": "56dbb7935deb5d2bf081611d2987c4ee580d04e52c62343452a2afac5708242f",
+          "version": "1",
+          "git_revision": "d342d2f939898ef4073691fb92414e9eff55dbff"
+        },
+        "selector": "Batch: claude-comparison-01; order 8"
+      },
+      "run_id": "20260924T131305379Z-ssr-claude-moved-guide-original-da482227-13e6-49d3-84ec-6201fdb96819-pmj9t40d",
+      "allocation": {
+        "pool": "subject",
+        "charge": 1
+      },
+      "limitations": [],
+      "bundle": {
+        "path": "/Users/simon/work/personal/skill-study-private/sweeping-stale-references/development/20260924T131305379Z-ssr-claude-moved-guide-original-da482227-13e6-49d3-84ec-6201fdb96819-pmj9t40d",
+        "inventory": {
+          "path": "/Users/simon/work/personal/skill-study-private/sweeping-stale-references/development/20260924T131305379Z-ssr-claude-moved-guide-original-da482227-13e6-49d3-84ec-6201fdb96819-pmj9t40d.inventory.json",
+          "sha256": "c8d6ec363d5b6277f85b2d46a3ca6d959bb6b49d5440b9c591cb7796c64629c0",
+          "version": "1"
+        },
+        "verified": true
+      },
+      "result": {
+        "result_id": "claude-comparison-01-moved-guide-original-2",
+        "record": {
+          "path": "skill-studies/sweeping-stale-references/results/20260924T131305379Z-ssr-claude-moved-guide-original-da482227-13e6-49d3-84ec-6201fdb96819-pmj9t40d.json",
+          "sha256": "9bd8fdf11a586599774b44d688656258f700f9b15115479b19d3bc5df709e1cc",
+          "version": "2",
+          "git_revision": "26c869f9490cc7f94833fd3c1b83d910df79fa94"
+        }
+      }
+    },
+    {
+      "attempt_id": "claude-comparison-01-semantic-delivery-original-1-1",
+      "case_id": "semantic-delivery",
+      "condition": "original",
+      "repetition": 1,
+      "attempt_number": 1,
+      "retry_of": null,
+      "manifest": {
+        "path": "skill-studies/sweeping-stale-references/cases/semantic-delivery/claude-comparison-manifest.json",
+        "sha256": "db4bb5fe50b832a41c926ae518092d70bc5d25531edb3c31f584e33627bcda85",
+        "version": "1",
+        "git_revision": "d342d2f939898ef4073691fb92414e9eff55dbff"
+      },
+      "authorization": {
+        "artifact": {
+          "path": "skill-studies/sweeping-stale-references/protocol.md",
+          "sha256": "56dbb7935deb5d2bf081611d2987c4ee580d04e52c62343452a2afac5708242f",
+          "version": "1",
+          "git_revision": "d342d2f939898ef4073691fb92414e9eff55dbff"
+        },
+        "selector": "Batch: claude-comparison-01; order 9"
+      },
+      "run_id": "20260924T131442185Z-ssr-claude-semantic-delivery-original-c0b34315-e915-4a3e-a425-a266de6c2830-3xxc5mrh",
+      "allocation": {
+        "pool": "subject",
+        "charge": 1
+      },
+      "limitations": [],
+      "bundle": {
+        "path": "/Users/simon/work/personal/skill-study-private/sweeping-stale-references/development/20260924T131442185Z-ssr-claude-semantic-delivery-original-c0b34315-e915-4a3e-a425-a266de6c2830-3xxc5mrh",
+        "inventory": {
+          "path": "/Users/simon/work/personal/skill-study-private/sweeping-stale-references/development/20260924T131442185Z-ssr-claude-semantic-delivery-original-c0b34315-e915-4a3e-a425-a266de6c2830-3xxc5mrh.inventory.json",
+          "sha256": "844b15043663f91d9af42f944f01ce7e9719330460b56c50026d617a60c20677",
+          "version": "1"
+        },
+        "verified": true
+      },
+      "result": {
+        "result_id": "claude-comparison-01-semantic-delivery-original-1",
+        "record": {
+          "path": "skill-studies/sweeping-stale-references/results/20260924T131442185Z-ssr-claude-semantic-delivery-original-c0b34315-e915-4a3e-a425-a266de6c2830-3xxc5mrh.json",
+          "sha256": "4a2edd9acd9a4918597ae69a27ef348affb6f3ab14861a2abe941e9ffdde2bba",
+          "version": "2",
+          "git_revision": "26c869f9490cc7f94833fd3c1b83d910df79fa94"
+        }
+      }
+    },
+    {
+      "attempt_id": "claude-comparison-01-semantic-delivery-candidate-1-1",
+      "case_id": "semantic-delivery",
+      "condition": "candidate",
+      "repetition": 1,
+      "attempt_number": 1,
+      "retry_of": null,
+      "manifest": {
+        "path": "skill-studies/sweeping-stale-references/cases/semantic-delivery/claude-comparison-manifest.json",
+        "sha256": "db4bb5fe50b832a41c926ae518092d70bc5d25531edb3c31f584e33627bcda85",
+        "version": "1",
+        "git_revision": "d342d2f939898ef4073691fb92414e9eff55dbff"
+      },
+      "authorization": {
+        "artifact": {
+          "path": "skill-studies/sweeping-stale-references/protocol.md",
+          "sha256": "56dbb7935deb5d2bf081611d2987c4ee580d04e52c62343452a2afac5708242f",
+          "version": "1",
+          "git_revision": "d342d2f939898ef4073691fb92414e9eff55dbff"
+        },
+        "selector": "Batch: claude-comparison-01; order 10"
+      },
+      "run_id": "20260924T131625954Z-ssr-claude-semantic-delivery-candidate-36061d20-21cd-4a45-bf30-4ef1b1c60f27-zr092v76",
+      "allocation": {
+        "pool": "subject",
+        "charge": 1
+      },
+      "limitations": [],
+      "bundle": {
+        "path": "/Users/simon/work/personal/skill-study-private/sweeping-stale-references/development/20260924T131625954Z-ssr-claude-semantic-delivery-candidate-36061d20-21cd-4a45-bf30-4ef1b1c60f27-zr092v76",
+        "inventory": {
+          "path": "/Users/simon/work/personal/skill-study-private/sweeping-stale-references/development/20260924T131625954Z-ssr-claude-semantic-delivery-candidate-36061d20-21cd-4a45-bf30-4ef1b1c60f27-zr092v76.inventory.json",
+          "sha256": "99b27adbee5f43e092f8857492dd7f6c57b467ed426ccf040a893ae87c235e7b",
+          "version": "1"
+        },
+        "verified": true
+      },
+      "result": {
+        "result_id": "claude-comparison-01-semantic-delivery-candidate-1",
+        "record": {
+          "path": "skill-studies/sweeping-stale-references/results/20260924T131625954Z-ssr-claude-semantic-delivery-candidate-36061d20-21cd-4a45-bf30-4ef1b1c60f27-zr092v76.json",
+          "sha256": "d6e7ca412627813c5c6fd2225d3508b1cc0331117c578a8107e58b9fb317cf96",
+          "version": "2",
+          "git_revision": "26c869f9490cc7f94833fd3c1b83d910df79fa94"
+        }
+      }
+    },
+    {
+      "attempt_id": "claude-comparison-01-semantic-delivery-candidate-2-1",
+      "case_id": "semantic-delivery",
+      "condition": "candidate",
+      "repetition": 2,
+      "attempt_number": 1,
+      "retry_of": null,
+      "manifest": {
+        "path": "skill-studies/sweeping-stale-references/cases/semantic-delivery/claude-comparison-manifest.json",
+        "sha256": "db4bb5fe50b832a41c926ae518092d70bc5d25531edb3c31f584e33627bcda85",
+        "version": "1",
+        "git_revision": "d342d2f939898ef4073691fb92414e9eff55dbff"
+      },
+      "authorization": {
+        "artifact": {
+          "path": "skill-studies/sweeping-stale-references/protocol.md",
+          "sha256": "56dbb7935deb5d2bf081611d2987c4ee580d04e52c62343452a2afac5708242f",
+          "version": "1",
+          "git_revision": "d342d2f939898ef4073691fb92414e9eff55dbff"
+        },
+        "selector": "Batch: claude-comparison-01; order 11"
+      },
+      "run_id": "20260924T131816376Z-ssr-claude-semantic-delivery-candidate-9c0ea3ea-12fc-4727-969e-f6da628de2ef-zmj40bv2",
+      "allocation": {
+        "pool": "subject",
+        "charge": 1
+      },
+      "limitations": [],
+      "bundle": {
+        "path": "/Users/simon/work/personal/skill-study-private/sweeping-stale-references/development/20260924T131816376Z-ssr-claude-semantic-delivery-candidate-9c0ea3ea-12fc-4727-969e-f6da628de2ef-zmj40bv2",
+        "inventory": {
+          "path": "/Users/simon/work/personal/skill-study-private/sweeping-stale-references/development/20260924T131816376Z-ssr-claude-semantic-delivery-candidate-9c0ea3ea-12fc-4727-969e-f6da628de2ef-zmj40bv2.inventory.json",
+          "sha256": "9894023e691f8a1652a0f777ed188f0064c3a68980d242b591588a7e5a57c01a",
+          "version": "1"
+        },
+        "verified": true
+      },
+      "result": {
+        "result_id": "claude-comparison-01-semantic-delivery-candidate-2",
+        "record": {
+          "path": "skill-studies/sweeping-stale-references/results/20260924T131816376Z-ssr-claude-semantic-delivery-candidate-9c0ea3ea-12fc-4727-969e-f6da628de2ef-zmj40bv2.json",
+          "sha256": "b25c1f0d6e512e1b7195856995d10b2c174cb0f9bf992f92636c8d305540b0fd",
+          "version": "2",
+          "git_revision": "26c869f9490cc7f94833fd3c1b83d910df79fa94"
+        }
+      }
+    },
+    {
+      "attempt_id": "claude-comparison-01-semantic-delivery-original-2-1",
+      "case_id": "semantic-delivery",
+      "condition": "original",
+      "repetition": 2,
+      "attempt_number": 1,
+      "retry_of": null,
+      "manifest": {
+        "path": "skill-studies/sweeping-stale-references/cases/semantic-delivery/claude-comparison-manifest.json",
+        "sha256": "db4bb5fe50b832a41c926ae518092d70bc5d25531edb3c31f584e33627bcda85",
+        "version": "1",
+        "git_revision": "d342d2f939898ef4073691fb92414e9eff55dbff"
+      },
+      "authorization": {
+        "artifact": {
+          "path": "skill-studies/sweeping-stale-references/protocol.md",
+          "sha256": "56dbb7935deb5d2bf081611d2987c4ee580d04e52c62343452a2afac5708242f",
+          "version": "1",
+          "git_revision": "d342d2f939898ef4073691fb92414e9eff55dbff"
+        },
+        "selector": "Batch: claude-comparison-01; order 12"
+      },
+      "run_id": "20260924T131950745Z-ssr-claude-semantic-delivery-original-d883518c-2b83-4f35-969f-a486c33f7ed6-2q7s0t18",
+      "allocation": {
+        "pool": "subject",
+        "charge": 1
+      },
+      "limitations": [],
+      "bundle": {
+        "path": "/Users/simon/work/personal/skill-study-private/sweeping-stale-references/development/20260924T131950745Z-ssr-claude-semantic-delivery-original-d883518c-2b83-4f35-969f-a486c33f7ed6-2q7s0t18",
+        "inventory": {
+          "path": "/Users/simon/work/personal/skill-study-private/sweeping-stale-references/development/20260924T131950745Z-ssr-claude-semantic-delivery-original-d883518c-2b83-4f35-969f-a486c33f7ed6-2q7s0t18.inventory.json",
+          "sha256": "d18c82ab17ec4d9164870610e023f80b7149d0ad17be5dac111212de125d3f4d",
+          "version": "1"
+        },
+        "verified": true
+      },
+      "result": {
+        "result_id": "claude-comparison-01-semantic-delivery-original-2",
+        "record": {
+          "path": "skill-studies/sweeping-stale-references/results/20260924T131950745Z-ssr-claude-semantic-delivery-original-d883518c-2b83-4f35-969f-a486c33f7ed6-2q7s0t18.json",
+          "sha256": "8e445248ef6e5968931e5687687ae49c222da24cb492e9c222dc0a4637cdd17a",
+          "version": "2",
+          "git_revision": "26c869f9490cc7f94833fd3c1b83d910df79fa94"
+        }
+      }
+    },
+    {
+      "attempt_id": "claude-comparison-01-initiating-change-original-1-1",
+      "case_id": "initiating-change",
+      "condition": "original",
+      "repetition": 1,
+      "attempt_number": 1,
+      "retry_of": null,
+      "manifest": {
+        "path": "skill-studies/sweeping-stale-references/cases/initiating-change/claude-comparison-manifest.json",
+        "sha256": "0ea180b5e959ec7d9ade3716c1175fc1663aa5d83fb5879185d9273056535bfb",
+        "version": "1",
+        "git_revision": "d342d2f939898ef4073691fb92414e9eff55dbff"
+      },
+      "authorization": {
+        "artifact": {
+          "path": "skill-studies/sweeping-stale-references/protocol.md",
+          "sha256": "56dbb7935deb5d2bf081611d2987c4ee580d04e52c62343452a2afac5708242f",
+          "version": "1",
+          "git_revision": "d342d2f939898ef4073691fb92414e9eff55dbff"
+        },
+        "selector": "Batch: claude-comparison-01; order 13"
+      },
+      "run_id": "20260924T132110866Z-ssr-claude-initiating-change-original-283e3fad-cc20-4854-8cd9-6fc24515975e-jk39qpp4",
+      "allocation": {
+        "pool": "subject",
+        "charge": 1
+      },
+      "limitations": [],
+      "bundle": {
+        "path": "/Users/simon/work/personal/skill-study-private/sweeping-stale-references/development/20260924T132110866Z-ssr-claude-initiating-change-original-283e3fad-cc20-4854-8cd9-6fc24515975e-jk39qpp4",
+        "inventory": {
+          "path": "/Users/simon/work/personal/skill-study-private/sweeping-stale-references/development/20260924T132110866Z-ssr-claude-initiating-change-original-283e3fad-cc20-4854-8cd9-6fc24515975e-jk39qpp4.inventory.json",
+          "sha256": "397c1db49f2bd2b674b633ccfbf32ec7df360ecc3dd937a6cf3cb437269bc48b",
+          "version": "1"
+        },
+        "verified": true
+      },
+      "result": {
+        "result_id": "claude-comparison-01-initiating-change-original-1",
+        "record": {
+          "path": "skill-studies/sweeping-stale-references/results/20260924T132110866Z-ssr-claude-initiating-change-original-283e3fad-cc20-4854-8cd9-6fc24515975e-jk39qpp4.json",
+          "sha256": "b8add3873bad75c4caa3c28601ef3b8fac49fe7ab3fc3da7415a6619b7a92120",
+          "version": "2",
+          "git_revision": "26c869f9490cc7f94833fd3c1b83d910df79fa94"
+        }
+      }
+    },
+    {
+      "attempt_id": "claude-comparison-01-initiating-change-candidate-1-1",
+      "case_id": "initiating-change",
+      "condition": "candidate",
+      "repetition": 1,
+      "attempt_number": 1,
+      "retry_of": null,
+      "manifest": {
+        "path": "skill-studies/sweeping-stale-references/cases/initiating-change/claude-comparison-manifest.json",
+        "sha256": "0ea180b5e959ec7d9ade3716c1175fc1663aa5d83fb5879185d9273056535bfb",
+        "version": "1",
+        "git_revision": "d342d2f939898ef4073691fb92414e9eff55dbff"
+      },
+      "authorization": {
+        "artifact": {
+          "path": "skill-studies/sweeping-stale-references/protocol.md",
+          "sha256": "56dbb7935deb5d2bf081611d2987c4ee580d04e52c62343452a2afac5708242f",
+          "version": "1",
+          "git_revision": "d342d2f939898ef4073691fb92414e9eff55dbff"
+        },
+        "selector": "Batch: claude-comparison-01; order 14"
+      },
+      "run_id": "20260924T132220661Z-ssr-claude-initiating-change-candidate-dd6678b6-e0ae-4c41-a210-0cc35ed64ac8-21hc9vtb",
+      "allocation": {
+        "pool": "subject",
+        "charge": 1
+      },
+      "limitations": [],
+      "bundle": {
+        "path": "/Users/simon/work/personal/skill-study-private/sweeping-stale-references/development/20260924T132220661Z-ssr-claude-initiating-change-candidate-dd6678b6-e0ae-4c41-a210-0cc35ed64ac8-21hc9vtb",
+        "inventory": {
+          "path": "/Users/simon/work/personal/skill-study-private/sweeping-stale-references/development/20260924T132220661Z-ssr-claude-initiating-change-candidate-dd6678b6-e0ae-4c41-a210-0cc35ed64ac8-21hc9vtb.inventory.json",
+          "sha256": "5cd708f4cceee24f39b2fdae44ca8cbe44534ce86ecb5bfb5fd9563ae6361c0a",
+          "version": "1"
+        },
+        "verified": true
+      },
+      "result": {
+        "result_id": "claude-comparison-01-initiating-change-candidate-1",
+        "record": {
+          "path": "skill-studies/sweeping-stale-references/results/20260924T132220661Z-ssr-claude-initiating-change-candidate-dd6678b6-e0ae-4c41-a210-0cc35ed64ac8-21hc9vtb.json",
+          "sha256": "81f5476ef748a4d29e65264b96db15e82b8492a01f57336ff8f406ccd36a7655",
+          "version": "2",
+          "git_revision": "26c869f9490cc7f94833fd3c1b83d910df79fa94"
+        }
+      }
+    },
+    {
+      "attempt_id": "claude-comparison-01-initiating-change-candidate-2-1",
+      "case_id": "initiating-change",
+      "condition": "candidate",
+      "repetition": 2,
+      "attempt_number": 1,
+      "retry_of": null,
+      "manifest": {
+        "path": "skill-studies/sweeping-stale-references/cases/initiating-change/claude-comparison-manifest.json",
+        "sha256": "0ea180b5e959ec7d9ade3716c1175fc1663aa5d83fb5879185d9273056535bfb",
+        "version": "1",
+        "git_revision": "d342d2f939898ef4073691fb92414e9eff55dbff"
+      },
+      "authorization": {
+        "artifact": {
+          "path": "skill-studies/sweeping-stale-references/protocol.md",
+          "sha256": "56dbb7935deb5d2bf081611d2987c4ee580d04e52c62343452a2afac5708242f",
+          "version": "1",
+          "git_revision": "d342d2f939898ef4073691fb92414e9eff55dbff"
+        },
+        "selector": "Batch: claude-comparison-01; order 15"
+      },
+      "run_id": "20260924T132409380Z-ssr-claude-initiating-change-candidate-a3ead901-307d-4dc8-aa45-2314858d90d4-3r9c3ksz",
+      "allocation": {
+        "pool": "subject",
+        "charge": 1
+      },
+      "limitations": [],
+      "bundle": {
+        "path": "/Users/simon/work/personal/skill-study-private/sweeping-stale-references/development/20260924T132409380Z-ssr-claude-initiating-change-candidate-a3ead901-307d-4dc8-aa45-2314858d90d4-3r9c3ksz",
+        "inventory": {
+          "path": "/Users/simon/work/personal/skill-study-private/sweeping-stale-references/development/20260924T132409380Z-ssr-claude-initiating-change-candidate-a3ead901-307d-4dc8-aa45-2314858d90d4-3r9c3ksz.inventory.json",
+          "sha256": "5d1cac5178fac6a551dbb97833919f96cefcae36ae0b13cfd5ed724981959643",
+          "version": "1"
+        },
+        "verified": true
+      },
+      "result": {
+        "result_id": "claude-comparison-01-initiating-change-candidate-2",
+        "record": {
+          "path": "skill-studies/sweeping-stale-references/results/20260924T132409380Z-ssr-claude-initiating-change-candidate-a3ead901-307d-4dc8-aa45-2314858d90d4-3r9c3ksz.json",
+          "sha256": "45b6242848fc80dcfe0cf503cc6165217794abcb473bb8d218a9c3535cec9d02",
+          "version": "2",
+          "git_revision": "26c869f9490cc7f94833fd3c1b83d910df79fa94"
+        }
+      }
+    },
+    {
+      "attempt_id": "claude-comparison-01-initiating-change-original-2-1",
+      "case_id": "initiating-change",
+      "condition": "original",
+      "repetition": 2,
+      "attempt_number": 1,
+      "retry_of": null,
+      "manifest": {
+        "path": "skill-studies/sweeping-stale-references/cases/initiating-change/claude-comparison-manifest.json",
+        "sha256": "0ea180b5e959ec7d9ade3716c1175fc1663aa5d83fb5879185d9273056535bfb",
+        "version": "1",
+        "git_revision": "d342d2f939898ef4073691fb92414e9eff55dbff"
+      },
+      "authorization": {
+        "artifact": {
+          "path": "skill-studies/sweeping-stale-references/protocol.md",
+          "sha256": "56dbb7935deb5d2bf081611d2987c4ee580d04e52c62343452a2afac5708242f",
+          "version": "1",
+          "git_revision": "d342d2f939898ef4073691fb92414e9eff55dbff"
+        },
+        "selector": "Batch: claude-comparison-01; order 16"
+      },
+      "run_id": "20260924T132558897Z-ssr-claude-initiating-change-original-80980796-8892-4f27-ae0c-f350f2dcd164-qki2t_t6",
+      "allocation": {
+        "pool": "subject",
+        "charge": 1
+      },
+      "limitations": [],
+      "bundle": {
+        "path": "/Users/simon/work/personal/skill-study-private/sweeping-stale-references/development/20260924T132558897Z-ssr-claude-initiating-change-original-80980796-8892-4f27-ae0c-f350f2dcd164-qki2t_t6",
+        "inventory": {
+          "path": "/Users/simon/work/personal/skill-study-private/sweeping-stale-references/development/20260924T132558897Z-ssr-claude-initiating-change-original-80980796-8892-4f27-ae0c-f350f2dcd164-qki2t_t6.inventory.json",
+          "sha256": "a18913c32f87f020c63a4ad151f75a71ec19152ff4b831ae846a83b8f38594c0",
+          "version": "1"
+        },
+        "verified": true
+      },
+      "result": {
+        "result_id": "claude-comparison-01-initiating-change-original-2",
+        "record": {
+          "path": "skill-studies/sweeping-stale-references/results/20260924T132558897Z-ssr-claude-initiating-change-original-80980796-8892-4f27-ae0c-f350f2dcd164-qki2t_t6.json",
+          "sha256": "26fc9de03178df7276e411a3bb54caf3e4da3e89c7b4445c001e1f2cce8d65b9",
+          "version": "2",
+          "git_revision": "26c869f9490cc7f94833fd3c1b83d910df79fa94"
+        }
+      }
+    },
+    {
+      "attempt_id": "claude-comparison-01-local-change-original-1-1",
+      "case_id": "local-change",
+      "condition": "original",
+      "repetition": 1,
+      "attempt_number": 1,
+      "retry_of": null,
+      "manifest": {
+        "path": "skill-studies/sweeping-stale-references/cases/local-change/claude-comparison-manifest.json",
+        "sha256": "146bcee0a3c2e03d5ccd93f064aa51782f9d918e998e83664e7425e76ddc264e",
+        "version": "1",
+        "git_revision": "d342d2f939898ef4073691fb92414e9eff55dbff"
+      },
+      "authorization": {
+        "artifact": {
+          "path": "skill-studies/sweeping-stale-references/protocol.md",
+          "sha256": "56dbb7935deb5d2bf081611d2987c4ee580d04e52c62343452a2afac5708242f",
+          "version": "1",
+          "git_revision": "d342d2f939898ef4073691fb92414e9eff55dbff"
+        },
+        "selector": "Batch: claude-comparison-01; order 17"
+      },
+      "run_id": "20260924T132829178Z-ssr-claude-local-change-original-8f43b0dc-092b-49f4-adbd-f0b6811fd979-q5vcdbto",
+      "allocation": {
+        "pool": "subject",
+        "charge": 1
+      },
+      "limitations": [],
+      "bundle": {
+        "path": "/Users/simon/work/personal/skill-study-private/sweeping-stale-references/development/20260924T132829178Z-ssr-claude-local-change-original-8f43b0dc-092b-49f4-adbd-f0b6811fd979-q5vcdbto",
+        "inventory": {
+          "path": "/Users/simon/work/personal/skill-study-private/sweeping-stale-references/development/20260924T132829178Z-ssr-claude-local-change-original-8f43b0dc-092b-49f4-adbd-f0b6811fd979-q5vcdbto.inventory.json",
+          "sha256": "aa132b95eb9c5a3bce2662c41b74004c653d8e470317df10f0b520299d0a6e93",
+          "version": "1"
+        },
+        "verified": true
+      },
+      "result": {
+        "result_id": "claude-comparison-01-local-change-original-1",
+        "record": {
+          "path": "skill-studies/sweeping-stale-references/results/20260924T132829178Z-ssr-claude-local-change-original-8f43b0dc-092b-49f4-adbd-f0b6811fd979-q5vcdbto.json",
+          "sha256": "0434c987bdb33076a78ced9642836dbba28f56ee975a7ac3a11cce985a202eef",
+          "version": "2",
+          "git_revision": "26c869f9490cc7f94833fd3c1b83d910df79fa94"
+        }
+      }
+    },
+    {
+      "attempt_id": "claude-comparison-01-local-change-candidate-1-1",
+      "case_id": "local-change",
+      "condition": "candidate",
+      "repetition": 1,
+      "attempt_number": 1,
+      "retry_of": null,
+      "manifest": {
+        "path": "skill-studies/sweeping-stale-references/cases/local-change/claude-comparison-manifest.json",
+        "sha256": "146bcee0a3c2e03d5ccd93f064aa51782f9d918e998e83664e7425e76ddc264e",
+        "version": "1",
+        "git_revision": "d342d2f939898ef4073691fb92414e9eff55dbff"
+      },
+      "authorization": {
+        "artifact": {
+          "path": "skill-studies/sweeping-stale-references/protocol.md",
+          "sha256": "56dbb7935deb5d2bf081611d2987c4ee580d04e52c62343452a2afac5708242f",
+          "version": "1",
+          "git_revision": "d342d2f939898ef4073691fb92414e9eff55dbff"
+        },
+        "selector": "Batch: claude-comparison-01; order 18"
+      },
+      "run_id": "20260924T132947642Z-ssr-claude-local-change-candidate-13d7c81f-eef3-4019-8a60-c0a674fd32ff-abtps64i",
+      "allocation": {
+        "pool": "subject",
+        "charge": 1
+      },
+      "limitations": [],
+      "bundle": {
+        "path": "/Users/simon/work/personal/skill-study-private/sweeping-stale-references/development/20260924T132947642Z-ssr-claude-local-change-candidate-13d7c81f-eef3-4019-8a60-c0a674fd32ff-abtps64i",
+        "inventory": {
+          "path": "/Users/simon/work/personal/skill-study-private/sweeping-stale-references/development/20260924T132947642Z-ssr-claude-local-change-candidate-13d7c81f-eef3-4019-8a60-c0a674fd32ff-abtps64i.inventory.json",
+          "sha256": "6fd2a53c03d40da8597ad6cb763fbccc4fe7a862ce996f05a986b7bc00c8b3a7",
+          "version": "1"
+        },
+        "verified": true
+      },
+      "result": {
+        "result_id": "claude-comparison-01-local-change-candidate-1",
+        "record": {
+          "path": "skill-studies/sweeping-stale-references/results/20260924T132947642Z-ssr-claude-local-change-candidate-13d7c81f-eef3-4019-8a60-c0a674fd32ff-abtps64i.json",
+          "sha256": "f372f130c167ed424ff7eeee84a62c6de6d1de542985de998b1a5b5d5a3250ab",
+          "version": "2",
+          "git_revision": "26c869f9490cc7f94833fd3c1b83d910df79fa94"
+        }
+      }
+    },
+    {
+      "attempt_id": "claude-comparison-01-local-change-candidate-2-1",
+      "case_id": "local-change",
+      "condition": "candidate",
+      "repetition": 2,
+      "attempt_number": 1,
+      "retry_of": null,
+      "manifest": {
+        "path": "skill-studies/sweeping-stale-references/cases/local-change/claude-comparison-manifest.json",
+        "sha256": "146bcee0a3c2e03d5ccd93f064aa51782f9d918e998e83664e7425e76ddc264e",
+        "version": "1",
+        "git_revision": "d342d2f939898ef4073691fb92414e9eff55dbff"
+      },
+      "authorization": {
+        "artifact": {
+          "path": "skill-studies/sweeping-stale-references/protocol.md",
+          "sha256": "56dbb7935deb5d2bf081611d2987c4ee580d04e52c62343452a2afac5708242f",
+          "version": "1",
+          "git_revision": "d342d2f939898ef4073691fb92414e9eff55dbff"
+        },
+        "selector": "Batch: claude-comparison-01; order 19"
+      },
+      "run_id": "20260924T133055891Z-ssr-claude-local-change-candidate-5cbb3317-4ef0-4b1e-9254-25f00ae353b3-h95bt_6m",
+      "allocation": {
+        "pool": "subject",
+        "charge": 1
+      },
+      "limitations": [],
+      "bundle": {
+        "path": "/Users/simon/work/personal/skill-study-private/sweeping-stale-references/development/20260924T133055891Z-ssr-claude-local-change-candidate-5cbb3317-4ef0-4b1e-9254-25f00ae353b3-h95bt_6m",
+        "inventory": {
+          "path": "/Users/simon/work/personal/skill-study-private/sweeping-stale-references/development/20260924T133055891Z-ssr-claude-local-change-candidate-5cbb3317-4ef0-4b1e-9254-25f00ae353b3-h95bt_6m.inventory.json",
+          "sha256": "60ef25a1997e0435504cf01d6cd20729c79dc53c7d52e5d0be55c25a58a72db9",
+          "version": "1"
+        },
+        "verified": true
+      },
+      "result": {
+        "result_id": "claude-comparison-01-local-change-candidate-2",
+        "record": {
+          "path": "skill-studies/sweeping-stale-references/results/20260924T133055891Z-ssr-claude-local-change-candidate-5cbb3317-4ef0-4b1e-9254-25f00ae353b3-h95bt_6m.json",
+          "sha256": "b8238afd10b893e688039c65fdc13b9aae682ac8a433fb4e3dde7e1d71168cba",
+          "version": "2",
+          "git_revision": "26c869f9490cc7f94833fd3c1b83d910df79fa94"
+        }
+      }
+    },
+    {
+      "attempt_id": "claude-comparison-01-local-change-original-2-1",
+      "case_id": "local-change",
+      "condition": "original",
+      "repetition": 2,
+      "attempt_number": 1,
+      "retry_of": null,
+      "manifest": {
+        "path": "skill-studies/sweeping-stale-references/cases/local-change/claude-comparison-manifest.json",
+        "sha256": "146bcee0a3c2e03d5ccd93f064aa51782f9d918e998e83664e7425e76ddc264e",
+        "version": "1",
+        "git_revision": "d342d2f939898ef4073691fb92414e9eff55dbff"
+      },
+      "authorization": {
+        "artifact": {
+          "path": "skill-studies/sweeping-stale-references/protocol.md",
+          "sha256": "56dbb7935deb5d2bf081611d2987c4ee580d04e52c62343452a2afac5708242f",
+          "version": "1",
+          "git_revision": "d342d2f939898ef4073691fb92414e9eff55dbff"
+        },
+        "selector": "Batch: claude-comparison-01; order 20"
+      },
+      "run_id": "20260924T133207679Z-ssr-claude-local-change-original-72465f0f-4a20-4d06-8ce8-c748e0d6147b-52yizl6m",
+      "allocation": {
+        "pool": "subject",
+        "charge": 1
+      },
+      "limitations": [],
+      "bundle": {
+        "path": "/Users/simon/work/personal/skill-study-private/sweeping-stale-references/development/20260924T133207679Z-ssr-claude-local-change-original-72465f0f-4a20-4d06-8ce8-c748e0d6147b-52yizl6m",
+        "inventory": {
+          "path": "/Users/simon/work/personal/skill-study-private/sweeping-stale-references/development/20260924T133207679Z-ssr-claude-local-change-original-72465f0f-4a20-4d06-8ce8-c748e0d6147b-52yizl6m.inventory.json",
+          "sha256": "20601589a2ebaeb7abc7c72073fdde9f69bcbbd0aec8f1c53e8bf30244df7897",
+          "version": "1"
+        },
+        "verified": true
+      },
+      "result": {
+        "result_id": "claude-comparison-01-local-change-original-2",
+        "record": {
+          "path": "skill-studies/sweeping-stale-references/results/20260924T133207679Z-ssr-claude-local-change-original-72465f0f-4a20-4d06-8ce8-c748e0d6147b-52yizl6m.json",
+          "sha256": "b7076f5106ed3e5ea3af5ea1fdbad1c9e800a417683031b508796f674e1a6c1c",
+          "version": "2",
+          "git_revision": "26c869f9490cc7f94833fd3c1b83d910df79fa94"
+        }
+      }
+    },
+    {
+      "attempt_id": "claude-comparison-01-pressure-repair-original-1-1",
+      "case_id": "pressure-repair",
+      "condition": "original",
+      "repetition": 1,
+      "attempt_number": 1,
+      "retry_of": null,
+      "manifest": {
+        "path": "skill-studies/sweeping-stale-references/cases/pressure-repair/claude-comparison-manifest.json",
+        "sha256": "330835a0a6974bbe8fb6be4a18c66d5fc59e5e6d689ad7a589e774783b31b06f",
+        "version": "1",
+        "git_revision": "d342d2f939898ef4073691fb92414e9eff55dbff"
+      },
+      "authorization": {
+        "artifact": {
+          "path": "skill-studies/sweeping-stale-references/protocol.md",
+          "sha256": "56dbb7935deb5d2bf081611d2987c4ee580d04e52c62343452a2afac5708242f",
+          "version": "1",
+          "git_revision": "d342d2f939898ef4073691fb92414e9eff55dbff"
+        },
+        "selector": "Batch: claude-comparison-01; order 21"
+      },
+      "run_id": "20260924T133320880Z-ssr-claude-pressure-repair-original-12eee9c9-3ce0-40b5-a9fa-a3fb4e2e86ab-8rd_a98d",
+      "allocation": {
+        "pool": "subject",
+        "charge": 1
+      },
+      "limitations": [],
+      "bundle": {
+        "path": "/Users/simon/work/personal/skill-study-private/sweeping-stale-references/development/20260924T133320880Z-ssr-claude-pressure-repair-original-12eee9c9-3ce0-40b5-a9fa-a3fb4e2e86ab-8rd_a98d",
+        "inventory": {
+          "path": "/Users/simon/work/personal/skill-study-private/sweeping-stale-references/development/20260924T133320880Z-ssr-claude-pressure-repair-original-12eee9c9-3ce0-40b5-a9fa-a3fb4e2e86ab-8rd_a98d.inventory.json",
+          "sha256": "e45c63898f582b76fefaeb7cd45f8ca68afc1d8dd4ee64dad81424defe4e5477",
+          "version": "1"
+        },
+        "verified": true
+      },
+      "result": {
+        "result_id": "claude-comparison-01-pressure-repair-original-1",
+        "record": {
+          "path": "skill-studies/sweeping-stale-references/results/20260924T133320880Z-ssr-claude-pressure-repair-original-12eee9c9-3ce0-40b5-a9fa-a3fb4e2e86ab-8rd_a98d.json",
+          "sha256": "432f4523ef2c11dd1c3c949ef961c9feed4c885ecfcb6ce0da2e116bc576850a",
+          "version": "2",
+          "git_revision": "26c869f9490cc7f94833fd3c1b83d910df79fa94"
+        }
+      }
+    },
+    {
+      "attempt_id": "claude-comparison-01-pressure-repair-candidate-1-1",
+      "case_id": "pressure-repair",
+      "condition": "candidate",
+      "repetition": 1,
+      "attempt_number": 1,
+      "retry_of": null,
+      "manifest": {
+        "path": "skill-studies/sweeping-stale-references/cases/pressure-repair/claude-comparison-manifest.json",
+        "sha256": "330835a0a6974bbe8fb6be4a18c66d5fc59e5e6d689ad7a589e774783b31b06f",
+        "version": "1",
+        "git_revision": "d342d2f939898ef4073691fb92414e9eff55dbff"
+      },
+      "authorization": {
+        "artifact": {
+          "path": "skill-studies/sweeping-stale-references/protocol.md",
+          "sha256": "56dbb7935deb5d2bf081611d2987c4ee580d04e52c62343452a2afac5708242f",
+          "version": "1",
+          "git_revision": "d342d2f939898ef4073691fb92414e9eff55dbff"
+        },
+        "selector": "Batch: claude-comparison-01; order 22"
+      },
+      "run_id": "20260924T133433493Z-ssr-claude-pressure-repair-candidate-5e313227-539e-41e4-a048-17634d9a5ed8-mq5d3oew",
+      "allocation": {
+        "pool": "subject",
+        "charge": 1
+      },
+      "limitations": [],
+      "bundle": {
+        "path": "/Users/simon/work/personal/skill-study-private/sweeping-stale-references/development/20260924T133433493Z-ssr-claude-pressure-repair-candidate-5e313227-539e-41e4-a048-17634d9a5ed8-mq5d3oew",
+        "inventory": {
+          "path": "/Users/simon/work/personal/skill-study-private/sweeping-stale-references/development/20260924T133433493Z-ssr-claude-pressure-repair-candidate-5e313227-539e-41e4-a048-17634d9a5ed8-mq5d3oew.inventory.json",
+          "sha256": "9e5f9893a008ca8c4b4b9a20d02c27c9086d6028b335175dfffd203fe1c671aa",
+          "version": "1"
+        },
+        "verified": true
+      },
+      "result": {
+        "result_id": "claude-comparison-01-pressure-repair-candidate-1",
+        "record": {
+          "path": "skill-studies/sweeping-stale-references/results/20260924T133433493Z-ssr-claude-pressure-repair-candidate-5e313227-539e-41e4-a048-17634d9a5ed8-mq5d3oew.json",
+          "sha256": "1454cc68074385623c0b723be57ca35c37ef3ffd4a29a2559e686f14c3716e88",
+          "version": "2",
+          "git_revision": "26c869f9490cc7f94833fd3c1b83d910df79fa94"
+        }
+      }
+    },
+    {
+      "attempt_id": "claude-comparison-01-pressure-repair-candidate-2-1",
+      "case_id": "pressure-repair",
+      "condition": "candidate",
+      "repetition": 2,
+      "attempt_number": 1,
+      "retry_of": null,
+      "manifest": {
+        "path": "skill-studies/sweeping-stale-references/cases/pressure-repair/claude-comparison-manifest.json",
+        "sha256": "330835a0a6974bbe8fb6be4a18c66d5fc59e5e6d689ad7a589e774783b31b06f",
+        "version": "1",
+        "git_revision": "d342d2f939898ef4073691fb92414e9eff55dbff"
+      },
+      "authorization": {
+        "artifact": {
+          "path": "skill-studies/sweeping-stale-references/protocol.md",
+          "sha256": "56dbb7935deb5d2bf081611d2987c4ee580d04e52c62343452a2afac5708242f",
+          "version": "1",
+          "git_revision": "d342d2f939898ef4073691fb92414e9eff55dbff"
+        },
+        "selector": "Batch: claude-comparison-01; order 23"
+      },
+      "run_id": "20260924T133551760Z-ssr-claude-pressure-repair-candidate-7178316e-75ef-4fcb-8367-84e44d4c0756-y0ck6_0p",
+      "allocation": {
+        "pool": "subject",
+        "charge": 1
+      },
+      "limitations": [],
+      "bundle": {
+        "path": "/Users/simon/work/personal/skill-study-private/sweeping-stale-references/development/20260924T133551760Z-ssr-claude-pressure-repair-candidate-7178316e-75ef-4fcb-8367-84e44d4c0756-y0ck6_0p",
+        "inventory": {
+          "path": "/Users/simon/work/personal/skill-study-private/sweeping-stale-references/development/20260924T133551760Z-ssr-claude-pressure-repair-candidate-7178316e-75ef-4fcb-8367-84e44d4c0756-y0ck6_0p.inventory.json",
+          "sha256": "1a0dc11a277e5e1616360a92c090d05e7f10480e0559339e84a3d618cb0a7913",
+          "version": "1"
+        },
+        "verified": true
+      },
+      "result": {
+        "result_id": "claude-comparison-01-pressure-repair-candidate-2",
+        "record": {
+          "path": "skill-studies/sweeping-stale-references/results/20260924T133551760Z-ssr-claude-pressure-repair-candidate-7178316e-75ef-4fcb-8367-84e44d4c0756-y0ck6_0p.json",
+          "sha256": "7de312a05fa719031f34a1c6abbc3ee48e442f568ca711f2c2d9b261ce2d8e22",
+          "version": "2",
+          "git_revision": "26c869f9490cc7f94833fd3c1b83d910df79fa94"
+        }
+      }
+    },
+    {
+      "attempt_id": "claude-comparison-01-pressure-repair-original-2-1",
+      "case_id": "pressure-repair",
+      "condition": "original",
+      "repetition": 2,
+      "attempt_number": 1,
+      "retry_of": null,
+      "manifest": {
+        "path": "skill-studies/sweeping-stale-references/cases/pressure-repair/claude-comparison-manifest.json",
+        "sha256": "330835a0a6974bbe8fb6be4a18c66d5fc59e5e6d689ad7a589e774783b31b06f",
+        "version": "1",
+        "git_revision": "d342d2f939898ef4073691fb92414e9eff55dbff"
+      },
+      "authorization": {
+        "artifact": {
+          "path": "skill-studies/sweeping-stale-references/protocol.md",
+          "sha256": "56dbb7935deb5d2bf081611d2987c4ee580d04e52c62343452a2afac5708242f",
+          "version": "1",
+          "git_revision": "d342d2f939898ef4073691fb92414e9eff55dbff"
+        },
+        "selector": "Batch: claude-comparison-01; order 24"
+      },
+      "run_id": "20260924T133659523Z-ssr-claude-pressure-repair-original-c3e782e6-ea4e-489d-ba25-e33d1dcd5bcd-8xmhiu4q",
+      "allocation": {
+        "pool": "subject",
+        "charge": 1
+      },
+      "limitations": [],
+      "bundle": {
+        "path": "/Users/simon/work/personal/skill-study-private/sweeping-stale-references/development/20260924T133659523Z-ssr-claude-pressure-repair-original-c3e782e6-ea4e-489d-ba25-e33d1dcd5bcd-8xmhiu4q",
+        "inventory": {
+          "path": "/Users/simon/work/personal/skill-study-private/sweeping-stale-references/development/20260924T133659523Z-ssr-claude-pressure-repair-original-c3e782e6-ea4e-489d-ba25-e33d1dcd5bcd-8xmhiu4q.inventory.json",
+          "sha256": "b1f084f5514efabc31f4fa6cf62713ad896d892e8ceadbf01a4152a25c7a61a3",
+          "version": "1"
+        },
+        "verified": true
+      },
+      "result": {
+        "result_id": "claude-comparison-01-pressure-repair-original-2",
+        "record": {
+          "path": "skill-studies/sweeping-stale-references/results/20260924T133659523Z-ssr-claude-pressure-repair-original-c3e782e6-ea4e-489d-ba25-e33d1dcd5bcd-8xmhiu4q.json",
+          "sha256": "78baafe57a37379e9a2a500803cd9de833324169107a72d9379c41ff2e1971b4",
+          "version": "2",
+          "git_revision": "26c869f9490cc7f94833fd3c1b83d910df79fa94"
+        }
+      }
+    },
+    {
+      "attempt_id": "claude-comparison-01-invocation-change-original-1-1",
+      "case_id": "invocation-change",
+      "condition": "original",
+      "repetition": 1,
+      "attempt_number": 1,
+      "retry_of": null,
+      "manifest": {
+        "path": "skill-studies/sweeping-stale-references/cases/invocation-change/claude-comparison-manifest.json",
+        "sha256": "69993b68fa484de179c09d8732149e07b798297c2135232e19b08e0a145c2f80",
+        "version": "1",
+        "git_revision": "d342d2f939898ef4073691fb92414e9eff55dbff"
+      },
+      "authorization": {
+        "artifact": {
+          "path": "skill-studies/sweeping-stale-references/protocol.md",
+          "sha256": "56dbb7935deb5d2bf081611d2987c4ee580d04e52c62343452a2afac5708242f",
+          "version": "1",
+          "git_revision": "d342d2f939898ef4073691fb92414e9eff55dbff"
+        },
+        "selector": "Batch: claude-comparison-01; order 25"
+      },
+      "run_id": "20260924T133831119Z-ssr-claude-invocation-change-original-e463e177-ad81-40d3-8d88-b4d3c794407b-npa34ppq",
+      "allocation": {
+        "pool": "subject",
+        "charge": 1
+      },
+      "limitations": [],
+      "bundle": {
+        "path": "/Users/simon/work/personal/skill-study-private/sweeping-stale-references/development/20260924T133831119Z-ssr-claude-invocation-change-original-e463e177-ad81-40d3-8d88-b4d3c794407b-npa34ppq",
+        "inventory": {
+          "path": "/Users/simon/work/personal/skill-study-private/sweeping-stale-references/development/20260924T133831119Z-ssr-claude-invocation-change-original-e463e177-ad81-40d3-8d88-b4d3c794407b-npa34ppq.inventory.json",
+          "sha256": "e88b5cbe576baa2cd7ac1ca9e0857e917127c924c6976497b210c9063df9a87e",
+          "version": "1"
+        },
+        "verified": true
+      },
+      "result": {
+        "result_id": "claude-comparison-01-invocation-change-original-1",
+        "record": {
+          "path": "skill-studies/sweeping-stale-references/results/20260924T133831119Z-ssr-claude-invocation-change-original-e463e177-ad81-40d3-8d88-b4d3c794407b-npa34ppq.json",
+          "sha256": "cfcdcb667e82263def4cb0a0c2080660367a6df7369fa41b3e0b4faebfe32591",
+          "version": "2",
+          "git_revision": "26c869f9490cc7f94833fd3c1b83d910df79fa94"
+        }
+      }
+    },
+    {
+      "attempt_id": "claude-comparison-01-invocation-change-candidate-1-1",
+      "case_id": "invocation-change",
+      "condition": "candidate",
+      "repetition": 1,
+      "attempt_number": 1,
+      "retry_of": null,
+      "manifest": {
+        "path": "skill-studies/sweeping-stale-references/cases/invocation-change/claude-comparison-manifest.json",
+        "sha256": "69993b68fa484de179c09d8732149e07b798297c2135232e19b08e0a145c2f80",
+        "version": "1",
+        "git_revision": "d342d2f939898ef4073691fb92414e9eff55dbff"
+      },
+      "authorization": {
+        "artifact": {
+          "path": "skill-studies/sweeping-stale-references/protocol.md",
+          "sha256": "56dbb7935deb5d2bf081611d2987c4ee580d04e52c62343452a2afac5708242f",
+          "version": "1",
+          "git_revision": "d342d2f939898ef4073691fb92414e9eff55dbff"
+        },
+        "selector": "Batch: claude-comparison-01; order 26"
+      },
+      "run_id": "20260924T134035489Z-ssr-claude-invocation-change-candidate-d0cbad78-112a-4d18-977c-870f5c9ca688-98a6v3aq",
+      "allocation": {
+        "pool": "subject",
+        "charge": 1
+      },
+      "limitations": [],
+      "bundle": {
+        "path": "/Users/simon/work/personal/skill-study-private/sweeping-stale-references/development/20260924T134035489Z-ssr-claude-invocation-change-candidate-d0cbad78-112a-4d18-977c-870f5c9ca688-98a6v3aq",
+        "inventory": {
+          "path": "/Users/simon/work/personal/skill-study-private/sweeping-stale-references/development/20260924T134035489Z-ssr-claude-invocation-change-candidate-d0cbad78-112a-4d18-977c-870f5c9ca688-98a6v3aq.inventory.json",
+          "sha256": "f8d60390daf2fe1850f46cb1f0be8f7c50d1fb5c846b17a34311b5d576a8d8f9",
+          "version": "1"
+        },
+        "verified": true
+      },
+      "result": {
+        "result_id": "claude-comparison-01-invocation-change-candidate-1",
+        "record": {
+          "path": "skill-studies/sweeping-stale-references/results/20260924T134035489Z-ssr-claude-invocation-change-candidate-d0cbad78-112a-4d18-977c-870f5c9ca688-98a6v3aq.json",
+          "sha256": "8908127d433f40e421de7c9112035decee5720bc8f41e3ed1710b74020b22a83",
+          "version": "2",
+          "git_revision": "26c869f9490cc7f94833fd3c1b83d910df79fa94"
+        }
+      }
+    },
+    {
+      "attempt_id": "claude-comparison-01-invocation-change-candidate-2-1",
+      "case_id": "invocation-change",
+      "condition": "candidate",
+      "repetition": 2,
+      "attempt_number": 1,
+      "retry_of": null,
+      "manifest": {
+        "path": "skill-studies/sweeping-stale-references/cases/invocation-change/claude-comparison-manifest.json",
+        "sha256": "69993b68fa484de179c09d8732149e07b798297c2135232e19b08e0a145c2f80",
+        "version": "1",
+        "git_revision": "d342d2f939898ef4073691fb92414e9eff55dbff"
+      },
+      "authorization": {
+        "artifact": {
+          "path": "skill-studies/sweeping-stale-references/protocol.md",
+          "sha256": "56dbb7935deb5d2bf081611d2987c4ee580d04e52c62343452a2afac5708242f",
+          "version": "1",
+          "git_revision": "d342d2f939898ef4073691fb92414e9eff55dbff"
+        },
+        "selector": "Batch: claude-comparison-01; order 27"
+      },
+      "run_id": "20260924T134202251Z-ssr-claude-invocation-change-candidate-d88c6057-7664-42b7-a026-522097eb3eee-pv3ve0wr",
+      "allocation": {
+        "pool": "subject",
+        "charge": 1
+      },
+      "limitations": [],
+      "bundle": {
+        "path": "/Users/simon/work/personal/skill-study-private/sweeping-stale-references/development/20260924T134202251Z-ssr-claude-invocation-change-candidate-d88c6057-7664-42b7-a026-522097eb3eee-pv3ve0wr",
+        "inventory": {
+          "path": "/Users/simon/work/personal/skill-study-private/sweeping-stale-references/development/20260924T134202251Z-ssr-claude-invocation-change-candidate-d88c6057-7664-42b7-a026-522097eb3eee-pv3ve0wr.inventory.json",
+          "sha256": "5e3c533e472469ec40446dc8822d72d8367743b1168949ec5bcc6df7a49a1577",
+          "version": "1"
+        },
+        "verified": true
+      },
+      "result": {
+        "result_id": "claude-comparison-01-invocation-change-candidate-2",
+        "record": {
+          "path": "skill-studies/sweeping-stale-references/results/20260924T134202251Z-ssr-claude-invocation-change-candidate-d88c6057-7664-42b7-a026-522097eb3eee-pv3ve0wr.json",
+          "sha256": "fd8ab6e522f8db6bf13df51b834869f102e8de6a0034eabd0cc8597277ef7d71",
+          "version": "2",
+          "git_revision": "26c869f9490cc7f94833fd3c1b83d910df79fa94"
+        }
+      }
+    },
+    {
+      "attempt_id": "claude-comparison-01-invocation-change-original-2-1",
+      "case_id": "invocation-change",
+      "condition": "original",
+      "repetition": 2,
+      "attempt_number": 1,
+      "retry_of": null,
+      "manifest": {
+        "path": "skill-studies/sweeping-stale-references/cases/invocation-change/claude-comparison-manifest.json",
+        "sha256": "69993b68fa484de179c09d8732149e07b798297c2135232e19b08e0a145c2f80",
+        "version": "1",
+        "git_revision": "d342d2f939898ef4073691fb92414e9eff55dbff"
+      },
+      "authorization": {
+        "artifact": {
+          "path": "skill-studies/sweeping-stale-references/protocol.md",
+          "sha256": "56dbb7935deb5d2bf081611d2987c4ee580d04e52c62343452a2afac5708242f",
+          "version": "1",
+          "git_revision": "d342d2f939898ef4073691fb92414e9eff55dbff"
+        },
+        "selector": "Batch: claude-comparison-01; order 28"
+      },
+      "run_id": "20260924T134428417Z-ssr-claude-invocation-change-original-690cd256-f89e-49a8-824b-c3a543a8077f-gwfkki7f",
+      "allocation": {
+        "pool": "subject",
+        "charge": 1
+      },
+      "limitations": [],
+      "bundle": {
+        "path": "/Users/simon/work/personal/skill-study-private/sweeping-stale-references/development/20260924T134428417Z-ssr-claude-invocation-change-original-690cd256-f89e-49a8-824b-c3a543a8077f-gwfkki7f",
+        "inventory": {
+          "path": "/Users/simon/work/personal/skill-study-private/sweeping-stale-references/development/20260924T134428417Z-ssr-claude-invocation-change-original-690cd256-f89e-49a8-824b-c3a543a8077f-gwfkki7f.inventory.json",
+          "sha256": "635c6f30a08430d2a9842a46acab0618c0c262794c7462905d0d12864fc7cdec",
+          "version": "1"
+        },
+        "verified": true
+      },
+      "result": {
+        "result_id": "claude-comparison-01-invocation-change-original-2",
+        "record": {
+          "path": "skill-studies/sweeping-stale-references/results/20260924T134428417Z-ssr-claude-invocation-change-original-690cd256-f89e-49a8-824b-c3a543a8077f-gwfkki7f.json",
+          "sha256": "6e0dbef4f8e24b60afd37e63e6731235b8193d30507d9ff767fbc3163b4d2c44",
+          "version": "2",
+          "git_revision": "26c869f9490cc7f94833fd3c1b83d910df79fa94"
+        }
+      }
+    },
+    {
+      "attempt_id": "claude-comparison-01-invocation-review-original-1-1",
+      "case_id": "invocation-review",
+      "condition": "original",
+      "repetition": 1,
+      "attempt_number": 1,
+      "retry_of": null,
+      "manifest": {
+        "path": "skill-studies/sweeping-stale-references/cases/invocation-review/claude-comparison-manifest.json",
+        "sha256": "d396e4fcab7497c16b152178f074942eed8f485bc73e37e7ccb8286d24a98718",
+        "version": "1",
+        "git_revision": "d342d2f939898ef4073691fb92414e9eff55dbff"
+      },
+      "authorization": {
+        "artifact": {
+          "path": "skill-studies/sweeping-stale-references/protocol.md",
+          "sha256": "56dbb7935deb5d2bf081611d2987c4ee580d04e52c62343452a2afac5708242f",
+          "version": "1",
+          "git_revision": "d342d2f939898ef4073691fb92414e9eff55dbff"
+        },
+        "selector": "Batch: claude-comparison-01; order 29"
+      },
+      "run_id": "20260924T134610796Z-ssr-claude-invocation-review-original-0ca26d56-2c1c-4a45-83d6-9b704260b0cc-ua2s3gxr",
+      "allocation": {
+        "pool": "subject",
+        "charge": 1
+      },
+      "limitations": [],
+      "bundle": {
+        "path": "/Users/simon/work/personal/skill-study-private/sweeping-stale-references/development/20260924T134610796Z-ssr-claude-invocation-review-original-0ca26d56-2c1c-4a45-83d6-9b704260b0cc-ua2s3gxr",
+        "inventory": {
+          "path": "/Users/simon/work/personal/skill-study-private/sweeping-stale-references/development/20260924T134610796Z-ssr-claude-invocation-review-original-0ca26d56-2c1c-4a45-83d6-9b704260b0cc-ua2s3gxr.inventory.json",
+          "sha256": "547d9599aab44c7c76237a1b3a5e6223140b7eb6fb8a89821ab002d46274240b",
+          "version": "1"
+        },
+        "verified": true
+      },
+      "result": {
+        "result_id": "claude-comparison-01-invocation-review-original-1",
+        "record": {
+          "path": "skill-studies/sweeping-stale-references/results/20260924T134610796Z-ssr-claude-invocation-review-original-0ca26d56-2c1c-4a45-83d6-9b704260b0cc-ua2s3gxr.json",
+          "sha256": "cdb8c622b379b71776624848053dc8e9c0b73dc67f542c78f616da63a50063a3",
+          "version": "2",
+          "git_revision": "26c869f9490cc7f94833fd3c1b83d910df79fa94"
+        }
+      }
+    },
+    {
+      "attempt_id": "claude-comparison-01-invocation-review-candidate-1-1",
+      "case_id": "invocation-review",
+      "condition": "candidate",
+      "repetition": 1,
+      "attempt_number": 1,
+      "retry_of": null,
+      "manifest": {
+        "path": "skill-studies/sweeping-stale-references/cases/invocation-review/claude-comparison-manifest.json",
+        "sha256": "d396e4fcab7497c16b152178f074942eed8f485bc73e37e7ccb8286d24a98718",
+        "version": "1",
+        "git_revision": "d342d2f939898ef4073691fb92414e9eff55dbff"
+      },
+      "authorization": {
+        "artifact": {
+          "path": "skill-studies/sweeping-stale-references/protocol.md",
+          "sha256": "56dbb7935deb5d2bf081611d2987c4ee580d04e52c62343452a2afac5708242f",
+          "version": "1",
+          "git_revision": "d342d2f939898ef4073691fb92414e9eff55dbff"
+        },
+        "selector": "Batch: claude-comparison-01; order 30"
+      },
+      "run_id": "20260924T134729044Z-ssr-claude-invocation-review-candidate-972ff721-9d00-4aed-9e4d-74c21c5d43ea-5uf6ezx5",
+      "allocation": {
+        "pool": "subject",
+        "charge": 1
+      },
+      "limitations": [],
+      "bundle": {
+        "path": "/Users/simon/work/personal/skill-study-private/sweeping-stale-references/development/20260924T134729044Z-ssr-claude-invocation-review-candidate-972ff721-9d00-4aed-9e4d-74c21c5d43ea-5uf6ezx5",
+        "inventory": {
+          "path": "/Users/simon/work/personal/skill-study-private/sweeping-stale-references/development/20260924T134729044Z-ssr-claude-invocation-review-candidate-972ff721-9d00-4aed-9e4d-74c21c5d43ea-5uf6ezx5.inventory.json",
+          "sha256": "05ef2ff513d8102d35229827df65985dca01415833816772fba6876acc3dca33",
+          "version": "1"
+        },
+        "verified": true
+      },
+      "result": {
+        "result_id": "claude-comparison-01-invocation-review-candidate-1",
+        "record": {
+          "path": "skill-studies/sweeping-stale-references/results/20260924T134729044Z-ssr-claude-invocation-review-candidate-972ff721-9d00-4aed-9e4d-74c21c5d43ea-5uf6ezx5.json",
+          "sha256": "163170afb58f554aa42796e9ffc33af2f6e52d1abb45fd1c0f15b230260e3d3b",
+          "version": "2",
+          "git_revision": "26c869f9490cc7f94833fd3c1b83d910df79fa94"
+        }
+      }
+    },
+    {
+      "attempt_id": "claude-comparison-01-invocation-review-candidate-2-1",
+      "case_id": "invocation-review",
+      "condition": "candidate",
+      "repetition": 2,
+      "attempt_number": 1,
+      "retry_of": null,
+      "manifest": {
+        "path": "skill-studies/sweeping-stale-references/cases/invocation-review/claude-comparison-manifest.json",
+        "sha256": "d396e4fcab7497c16b152178f074942eed8f485bc73e37e7ccb8286d24a98718",
+        "version": "1",
+        "git_revision": "d342d2f939898ef4073691fb92414e9eff55dbff"
+      },
+      "authorization": {
+        "artifact": {
+          "path": "skill-studies/sweeping-stale-references/protocol.md",
+          "sha256": "56dbb7935deb5d2bf081611d2987c4ee580d04e52c62343452a2afac5708242f",
+          "version": "1",
+          "git_revision": "d342d2f939898ef4073691fb92414e9eff55dbff"
+        },
+        "selector": "Batch: claude-comparison-01; order 31"
+      },
+      "run_id": "20260924T134924662Z-ssr-claude-invocation-review-candidate-8ac5b188-26da-4110-a1eb-df336a6ae119-8pnkb3_9",
+      "allocation": {
+        "pool": "subject",
+        "charge": 1
+      },
+      "limitations": [],
+      "bundle": {
+        "path": "/Users/simon/work/personal/skill-study-private/sweeping-stale-references/development/20260924T134924662Z-ssr-claude-invocation-review-candidate-8ac5b188-26da-4110-a1eb-df336a6ae119-8pnkb3_9",
+        "inventory": {
+          "path": "/Users/simon/work/personal/skill-study-private/sweeping-stale-references/development/20260924T134924662Z-ssr-claude-invocation-review-candidate-8ac5b188-26da-4110-a1eb-df336a6ae119-8pnkb3_9.inventory.json",
+          "sha256": "5d0a2c97585f9f0d5ebae4e9ced1a55cef83a5f1d271bed11840b303ea65a788",
+          "version": "1"
+        },
+        "verified": true
+      },
+      "result": {
+        "result_id": "claude-comparison-01-invocation-review-candidate-2",
+        "record": {
+          "path": "skill-studies/sweeping-stale-references/results/20260924T134924662Z-ssr-claude-invocation-review-candidate-8ac5b188-26da-4110-a1eb-df336a6ae119-8pnkb3_9.json",
+          "sha256": "583f604b62075cc5aa34fed9bef3c759bc6ee6555b2bab1b5f8316584113e8fc",
+          "version": "2",
+          "git_revision": "26c869f9490cc7f94833fd3c1b83d910df79fa94"
+        }
+      }
+    },
+    {
+      "attempt_id": "claude-comparison-01-invocation-review-original-2-1",
+      "case_id": "invocation-review",
+      "condition": "original",
+      "repetition": 2,
+      "attempt_number": 1,
+      "retry_of": null,
+      "manifest": {
+        "path": "skill-studies/sweeping-stale-references/cases/invocation-review/claude-comparison-manifest.json",
+        "sha256": "d396e4fcab7497c16b152178f074942eed8f485bc73e37e7ccb8286d24a98718",
+        "version": "1",
+        "git_revision": "d342d2f939898ef4073691fb92414e9eff55dbff"
+      },
+      "authorization": {
+        "artifact": {
+          "path": "skill-studies/sweeping-stale-references/protocol.md",
+          "sha256": "56dbb7935deb5d2bf081611d2987c4ee580d04e52c62343452a2afac5708242f",
+          "version": "1",
+          "git_revision": "d342d2f939898ef4073691fb92414e9eff55dbff"
+        },
+        "selector": "Batch: claude-comparison-01; order 32"
+      },
+      "run_id": "20260924T135119914Z-ssr-claude-invocation-review-original-995d65a6-98b3-4757-ac73-801876d51cd5-h3vi2xxf",
+      "allocation": {
+        "pool": "subject",
+        "charge": 1
+      },
+      "limitations": [],
+      "bundle": {
+        "path": "/Users/simon/work/personal/skill-study-private/sweeping-stale-references/development/20260924T135119914Z-ssr-claude-invocation-review-original-995d65a6-98b3-4757-ac73-801876d51cd5-h3vi2xxf",
+        "inventory": {
+          "path": "/Users/simon/work/personal/skill-study-private/sweeping-stale-references/development/20260924T135119914Z-ssr-claude-invocation-review-original-995d65a6-98b3-4757-ac73-801876d51cd5-h3vi2xxf.inventory.json",
+          "sha256": "474332437cd5bfb5a8b3ba24fa7c1c0708a89803049fb73f1f76fa06ee619adc",
+          "version": "1"
+        },
+        "verified": true
+      },
+      "result": {
+        "result_id": "claude-comparison-01-invocation-review-original-2",
+        "record": {
+          "path": "skill-studies/sweeping-stale-references/results/20260924T135119914Z-ssr-claude-invocation-review-original-995d65a6-98b3-4757-ac73-801876d51cd5-h3vi2xxf.json",
+          "sha256": "86fb5f6b2fc06fd4b9cc44fe6a311aada797ca96a504daf86a3221a5d9b29644",
+          "version": "2",
+          "git_revision": "26c869f9490cc7f94833fd3c1b83d910df79fa94"
+        }
+      }
+    },
+    {
+      "attempt_id": "claude-comparison-01-invocation-unrelated-original-1-1",
+      "case_id": "invocation-unrelated",
+      "condition": "original",
+      "repetition": 1,
+      "attempt_number": 1,
+      "retry_of": null,
+      "manifest": {
+        "path": "skill-studies/sweeping-stale-references/cases/invocation-unrelated/claude-comparison-manifest.json",
+        "sha256": "b373d25a81895f8354a0efea9c08f1b6a45acc9df30705607bb487008ce7924e",
+        "version": "1",
+        "git_revision": "d342d2f939898ef4073691fb92414e9eff55dbff"
+      },
+      "authorization": {
+        "artifact": {
+          "path": "skill-studies/sweeping-stale-references/protocol.md",
+          "sha256": "56dbb7935deb5d2bf081611d2987c4ee580d04e52c62343452a2afac5708242f",
+          "version": "1",
+          "git_revision": "d342d2f939898ef4073691fb92414e9eff55dbff"
+        },
+        "selector": "Batch: claude-comparison-01; order 33"
+      },
+      "run_id": "20260924T135308792Z-ssr-claude-invocation-unrelated-original-dada1139-eb2b-41f4-b5a3-30a48ce4dfa1-kuy3oml6",
+      "allocation": {
+        "pool": "subject",
+        "charge": 1
+      },
+      "limitations": [],
+      "bundle": {
+        "path": "/Users/simon/work/personal/skill-study-private/sweeping-stale-references/development/20260924T135308792Z-ssr-claude-invocation-unrelated-original-dada1139-eb2b-41f4-b5a3-30a48ce4dfa1-kuy3oml6",
+        "inventory": {
+          "path": "/Users/simon/work/personal/skill-study-private/sweeping-stale-references/development/20260924T135308792Z-ssr-claude-invocation-unrelated-original-dada1139-eb2b-41f4-b5a3-30a48ce4dfa1-kuy3oml6.inventory.json",
+          "sha256": "c53ad0f9d264528f5fc732bafa12bb68531c303e8bfbe1f97bac82b04ccdc5a1",
+          "version": "1"
+        },
+        "verified": true
+      },
+      "result": {
+        "result_id": "claude-comparison-01-invocation-unrelated-original-1",
+        "record": {
+          "path": "skill-studies/sweeping-stale-references/results/20260924T135308792Z-ssr-claude-invocation-unrelated-original-dada1139-eb2b-41f4-b5a3-30a48ce4dfa1-kuy3oml6.json",
+          "sha256": "16e41c7ded7d88f93cb4f94e8fd8b319a8f213d279a655e71fe3f54171ab00d4",
+          "version": "2",
+          "git_revision": "26c869f9490cc7f94833fd3c1b83d910df79fa94"
+        }
+      }
+    },
+    {
+      "attempt_id": "claude-comparison-01-invocation-unrelated-candidate-1-1",
+      "case_id": "invocation-unrelated",
+      "condition": "candidate",
+      "repetition": 1,
+      "attempt_number": 1,
+      "retry_of": null,
+      "manifest": {
+        "path": "skill-studies/sweeping-stale-references/cases/invocation-unrelated/claude-comparison-manifest.json",
+        "sha256": "b373d25a81895f8354a0efea9c08f1b6a45acc9df30705607bb487008ce7924e",
+        "version": "1",
+        "git_revision": "d342d2f939898ef4073691fb92414e9eff55dbff"
+      },
+      "authorization": {
+        "artifact": {
+          "path": "skill-studies/sweeping-stale-references/protocol.md",
+          "sha256": "56dbb7935deb5d2bf081611d2987c4ee580d04e52c62343452a2afac5708242f",
+          "version": "1",
+          "git_revision": "d342d2f939898ef4073691fb92414e9eff55dbff"
+        },
+        "selector": "Batch: claude-comparison-01; order 34"
+      },
+      "run_id": "20260924T135354627Z-ssr-claude-invocation-unrelated-candidate-21ac7503-971c-4662-8410-a58722520efa-2okhpf1o",
+      "allocation": {
+        "pool": "subject",
+        "charge": 1
+      },
+      "limitations": [],
+      "bundle": {
+        "path": "/Users/simon/work/personal/skill-study-private/sweeping-stale-references/development/20260924T135354627Z-ssr-claude-invocation-unrelated-candidate-21ac7503-971c-4662-8410-a58722520efa-2okhpf1o",
+        "inventory": {
+          "path": "/Users/simon/work/personal/skill-study-private/sweeping-stale-references/development/20260924T135354627Z-ssr-claude-invocation-unrelated-candidate-21ac7503-971c-4662-8410-a58722520efa-2okhpf1o.inventory.json",
+          "sha256": "8ee88ae9f4d116c08b6989ead69e4fb268da6fc658a0023ff7d5cbd36d2e8544",
+          "version": "1"
+        },
+        "verified": true
+      },
+      "result": {
+        "result_id": "claude-comparison-01-invocation-unrelated-candidate-1",
+        "record": {
+          "path": "skill-studies/sweeping-stale-references/results/20260924T135354627Z-ssr-claude-invocation-unrelated-candidate-21ac7503-971c-4662-8410-a58722520efa-2okhpf1o.json",
+          "sha256": "4c2c2a60c37b546f79a924edacb796bae2fad7bb61f191b3ad7f2425c7d7e567",
+          "version": "2",
+          "git_revision": "26c869f9490cc7f94833fd3c1b83d910df79fa94"
+        }
+      }
+    }
+  ]
 }
