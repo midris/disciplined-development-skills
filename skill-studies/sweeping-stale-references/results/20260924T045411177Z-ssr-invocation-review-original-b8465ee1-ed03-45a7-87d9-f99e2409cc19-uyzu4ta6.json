@@ -1,0 +1,118 @@
+{
+  "schema_version": "2",
+  "record_kind": "execution result",
+  "assessed_at": "2026-09-24T04:57:30.206319+00:00",
+  "run_id": "20260924T045411177Z-ssr-invocation-review-original-b8465ee1-ed03-45a7-87d9-f99e2409cc19-uyzu4ta6",
+  "condition": "original",
+  "assessor": {
+    "name": "Codex active session",
+    "method": "active session",
+    "model": null,
+    "session_id": null,
+    "context": "Same active session prepared and inspected the study; not independent or blind."
+  },
+  "evidence": [
+    {
+      "id": "runner",
+      "artifact": {
+        "path": "/Users/simon/work/personal/skill-study-private/sweeping-stale-references/development/20260924T045411177Z-ssr-invocation-review-original-b8465ee1-ed03-45a7-87d9-f99e2409cc19-uyzu4ta6/result.json",
+        "sha256": "5c45d25ee6acb5ed3ff470b63db0fe6ee45e3b4b0ff6dac1c5be9c0b9221380e",
+        "version": null
+      },
+      "selector": "Mechanical completion, supplied identities and cleanup."
+    },
+    {
+      "id": "trace",
+      "artifact": {
+        "path": "/Users/simon/work/personal/skill-study-private/sweeping-stale-references/development/20260924T045411177Z-ssr-invocation-review-original-b8465ee1-ed03-45a7-87d9-f99e2409cc19-uyzu4ta6/provider-session.jsonl",
+        "sha256": "b3d612d653867e18e49f0d79f3678d7d3e9fce82a99f071c2810e3ed22d5fe77",
+        "version": null
+      },
+      "selector": "Complete ordered model-visible context, calls and outputs."
+    },
+    {
+      "id": "final",
+      "artifact": {
+        "path": "/Users/simon/work/personal/skill-study-private/sweeping-stale-references/development/20260924T045411177Z-ssr-invocation-review-original-b8465ee1-ed03-45a7-87d9-f99e2409cc19-uyzu4ta6/final.txt",
+        "sha256": "1507689db6d67a4a6211c0930add165505f7082fe29d4582de06c337661dbed0",
+        "version": null
+      },
+      "selector": "Final delivered response."
+    },
+    {
+      "id": "checks",
+      "artifact": {
+        "path": "/Users/simon/work/personal/skill-study-private/sweeping-stale-references/development/20260924T045411177Z-ssr-invocation-review-original-b8465ee1-ed03-45a7-87d9-f99e2409cc19-uyzu4ta6.checks.json",
+        "sha256": "12283bc6242b5e3b624970146b4e4b958b60a33dc65471ad2708d1fbb6ca105e",
+        "version": null
+      },
+      "selector": "Disposable-copy Git history/diff, project artifacts, ordered trace projection and independent replay."
+    }
+  ],
+  "setup": {
+    "status": "valid",
+    "reason": "Native catalog at trace line 3 exposes the sole project SSR plus five built-ins at the supplied path. Prompt line 9 has no SSR/read request. Complete tool capture establishes task, selection and repair order; pinned inputs and runtime are valid.",
+    "evidence": [
+      "runner",
+      "trace",
+      "checks"
+    ]
+  },
+  "criteria": [
+    {
+      "id": "F1",
+      "dimension": "functional",
+      "judgment": "met",
+      "reason": "All three current documents now agree on at most four attempts, up to three retries, exhaustion after four failures and stopping on success; useful reader guidance remains.",
+      "consequence": "Functional criterion satisfied.",
+      "evidence": [
+        "trace",
+        "checks"
+      ]
+    },
+    {
+      "id": "F2",
+      "dimension": "functional",
+      "judgment": "met",
+      "reason": "Only the three stale documentation claims changed; historical and independent helper meaning is preserved. Independent replay matches all seven expected runtime observations and all seven tests pass.",
+      "consequence": "Functional criterion satisfied.",
+      "evidence": [
+        "trace",
+        "checks"
+      ]
+    },
+    {
+      "id": "F3",
+      "dimension": "functional",
+      "judgment": "met",
+      "reason": "Commit bc1b816 contains the complete three-document repair and final working tree is clean.",
+      "consequence": "Functional criterion satisfied.",
+      "evidence": [
+        "trace",
+        "checks"
+      ]
+    },
+    {
+      "id": "D1",
+      "dimension": "procedural",
+      "judgment": "met",
+      "reason": "After task delivery at trace line 16, the model received the complete SSR body at line 25, before the first reconciliation edit at line 47. The native catalog exposes the supplied original; no prompt names SSR.",
+      "consequence": "Report separately from functional outcome; affects comparison interpretation.",
+      "evidence": [
+        "trace",
+        "checks"
+      ]
+    }
+  ],
+  "procedural_summary": "Natural invocation met; task functional success is assessed independently. P1\u2013P3 are not criteria for this stratum.",
+  "observations": [],
+  "uncertainty": [],
+  "result_id": "comprehensive-comparison-02-invocation-review-original-1",
+  "functional_result": "met",
+  "manifest": {
+    "path": "skill-studies/sweeping-stale-references/cases/invocation-review/comparison-02-manifest.json",
+    "sha256": "8f3dd22def235aadd50104dd33968d522993fbc7735fdcdd91c62f0e91952ba6",
+    "version": "1",
+    "git_revision": "37ab0390b04630335d15f6d246b2b042f0e07f51"
+  }
+}
