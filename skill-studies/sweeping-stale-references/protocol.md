@@ -2,7 +2,7 @@
 
 Format version: `1`
 Study ID: `sweeping-stale-references`
-Status: comprehensive-comparison-02 approved for 34 calls; inputs are being frozen and preflight completed before dispatch. Previous batches are complete; adoption and skill editing remain unauthorized.
+Status: comprehensive-comparison-02 approved for 34 calls; inputs are frozen and preflight passed; collection is authorized in the declared order. Previous batches are complete; adoption and skill editing remain unauthorized.
 Current action: execute the accepted [comparison scope](comparison-proposal.md) under the committed batch authority below, preserving each bundle and assessing fixed criteria. Subject ceiling is 90; prior 56 calls are spent. Codex scripted catalog/capture qualification passed; automatic model selection is measured in the declared native cases.
 The [plan](../../plans/2026-09-11-model-driven-skill-testing.md) owns progress; the [spec](../../plans/specs/2026-09-11-model-driven-skill-testing-framework.md) owns the workflow.
 The [core baseline](core-baseline-01-assessment.md) retains its two setup exclusions and runtime strata; the [comparison](comprehensive-comparison-01-assessment.md) records twelve valid executions of the original and preserved candidate. Both collection scopes are spent. Storage and accounting retains the SSR closing checkpoint and links the current combined totals.
@@ -188,7 +188,7 @@ Control contribution claims require evidence that omitted guidance was not loade
 Pre-baseline development is closed at two pairs. Do not reopen it for a new facet; a named readiness defect requires a separately authorized diagnostic exception.
 ### Comparison: comprehensive-comparison-02
 
-Status: owner-approved in this session: “approved, let's do it”, accepting the proposed 34-call scope and subject ceiling of 90. Freeze and preflight precede the first dispatch.
+Status: owner-approved in this session: “approved, let's do it”, accepting the proposed 34-call scope and subject ceiling of 90. Freeze and preflight passed before the first dispatch.
 Scope: 34 sequential attempts across original/candidate: five ordinary cases, one pressure case and two positive native cases with two repetitions each; one native sanity case with one repetition each.
 Purpose, strata and acceptance: [accepted comparison scope](comparison-proposal.md); cases remain exposed development scenarios, active-session assessment is not blind.
 Inclusion: descriptive-only; Include all valid-setup executions regardless of outcome, retaining unknown judgments and invalid/unresolved/unattempted slots separately. No automatic retry or replacement. Keep ordinary, pressure, positive invocation and non-use sanity results separate; use result/assessment version 2 and exclude not-measured outcomes from functional counts.
@@ -500,6 +500,6 @@ All thirty subject calls used Sol-low. Small exposed cases, shared assessor cont
 - Include simplification when interpreting a version comparison. The initial retain recommendation overlooked a measured size benefit already allowed by the spec. Word count is sufficient; smaller text does not excuse functional regression or prove token/cost savings.
 - Separate evidence completion from deployment. Closing with adoption deferred preserves the findings and permits the next study without forcing a winner or another collection cycle.
 
-The contrasting-skill CW study subsequently exercised the workflow; its records and current combined accounting are linked above. SSR expansion and comparison preparation are complete; the approved comparison is being frozen and preflighted as described at the start of this protocol.
+The contrasting-skill CW study subsequently exercised the workflow; its records and current combined accounting are linked above. SSR expansion and comparison preparation are complete; the approved comparison is ready for collection as described at the start of this protocol.
 
 The prepared unrelated invocation case is D1-only sanity evidence, with functional outcome `not measured`; it does not establish near-boundary over-trigger resistance.

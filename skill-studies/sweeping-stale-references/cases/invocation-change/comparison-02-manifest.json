@@ -3,9 +3,9 @@
   "manifest_id": "ssr-invocation-change-comparison-02",
   "study_id": "sweeping-stale-references",
   "case_id": "invocation-change",
-  "status": "draft",
+  "status": "frozen",
   "created_at": "2026-09-23",
-  "source_revision": "",
+  "source_revision": "19d434d57cc6a4f696fa091eece39f3c4f18c8b4",
   "authorities": {
     "spec": {
       "path": "plans/specs/2026-09-11-model-driven-skill-testing-framework.md",
@@ -14,7 +14,7 @@
     },
     "protocol": {
       "path": "skill-studies/sweeping-stale-references/protocol.md",
-      "sha256": "1a51a7bd9ebdbedc8a7129d0eb651f544715e138ab9e82c7cdcf9bee03b470f6",
+      "sha256": "70db86b3ded84fe8d7202f81527e1a7297aad51a29a4a1ec1d7bb7c83296c0c5",
       "version": "1"
     },
     "format_contract": {
