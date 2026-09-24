@@ -1,0 +1,97 @@
+{
+  "schema_version": "2",
+  "record_kind": "execution result",
+  "assessed_at": "2026-09-24T13:56:57.471446+00:00",
+  "run_id": "20260924T135354627Z-ssr-claude-invocation-unrelated-candidate-21ac7503-971c-4662-8410-a58722520efa-2okhpf1o",
+  "condition": "candidate",
+  "assessor": {
+    "name": "Codex active session",
+    "method": "active session",
+    "model": null,
+    "session_id": null,
+    "context": "Same active session prepared and inspected the study; not independent or blind."
+  },
+  "evidence": [
+    {
+      "id": "runner",
+      "artifact": {
+        "path": "/Users/simon/work/personal/skill-study-private/sweeping-stale-references/development/20260924T135354627Z-ssr-claude-invocation-unrelated-candidate-21ac7503-971c-4662-8410-a58722520efa-2okhpf1o/result.json",
+        "sha256": "16466854df9e63e56a710b0eef27f431c446b3d8deafbc6bf0b0539111805247",
+        "version": null
+      },
+      "selector": "Mechanical completion, supplied identities and cleanup."
+    },
+    {
+      "id": "trace",
+      "artifact": {
+        "path": "/Users/simon/work/personal/skill-study-private/sweeping-stale-references/development/20260924T135354627Z-ssr-claude-invocation-unrelated-candidate-21ac7503-971c-4662-8410-a58722520efa-2okhpf1o/stdout.txt",
+        "sha256": "ef8875ca4239b79ed545420efa339a9f8a04d076206dcde1c9cb00df29b3d6a9",
+        "version": null
+      },
+      "selector": "Complete ordered model-visible context, calls and outputs."
+    },
+    {
+      "id": "final",
+      "artifact": {
+        "path": "/Users/simon/work/personal/skill-study-private/sweeping-stale-references/development/20260924T135354627Z-ssr-claude-invocation-unrelated-candidate-21ac7503-971c-4662-8410-a58722520efa-2okhpf1o/final.txt",
+        "sha256": "088d4e54368b7a6e57908db1a880d0e2b8f020031db583af0ff00bb3ab8f1fbd",
+        "version": null
+      },
+      "selector": "Final delivered response."
+    },
+    {
+      "id": "checks",
+      "artifact": {
+        "path": "/Users/simon/work/personal/skill-study-private/sweeping-stale-references/development/20260924T135354627Z-ssr-claude-invocation-unrelated-candidate-21ac7503-971c-4662-8410-a58722520efa-2okhpf1o.checks.json",
+        "sha256": "6adf51a737107c4373b8b25079435035030f001d8c1fe99b5bb99eccdef602fd",
+        "version": null
+      },
+      "selector": "Disposable-copy Git history/diff, project artifacts, ordered trace projection and independent replay."
+    }
+  ],
+  "setup": {
+    "status": "valid",
+    "reason": "Pinned native availability, catalog, model/settings, complete capture and cleanup verified. SSR not loaded, consistent with this unrelated task.",
+    "evidence": [
+      "runner",
+      "trace",
+      "checks"
+    ]
+  },
+  "criteria": [
+    {
+      "id": "D1",
+      "dimension": "procedural",
+      "judgment": "met",
+      "reason": "Complete trace shows only task/source/config reads and arithmetic explanation, without SSR selection or sweep workflow.",
+      "consequence": "Report separately from functional outcome; affects comparison interpretation.",
+      "evidence": [
+        "trace",
+        "checks"
+      ]
+    }
+  ],
+  "procedural_summary": "Appropriate non-use: no SSR selection or sweep/accounting workflow.",
+  "observations": [
+    {
+      "dimension": "functional",
+      "description": "Correctly computes 100 + 30*60 = 1900; no edits or commits observed.",
+      "consequence": "Descriptive only; excluded from SSR functional counts.",
+      "evidence": [
+        "trace",
+        "checks"
+      ]
+    }
+  ],
+  "uncertainty": [
+    "Obviously unrelated sanity check; does not measure realistic development over-triggering."
+  ],
+  "result_id": "claude-comparison-01-invocation-unrelated-candidate-1",
+  "functional_result": "not measured",
+  "manifest": {
+    "path": "skill-studies/sweeping-stale-references/cases/invocation-unrelated/claude-comparison-manifest.json",
+    "sha256": "b373d25a81895f8354a0efea9c08f1b6a45acc9df30705607bb487008ce7924e",
+    "version": "1",
+    "git_revision": "d342d2f939898ef4073691fb92414e9eff55dbff"
+  }
+}

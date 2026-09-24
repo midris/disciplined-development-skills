@@ -1,0 +1,152 @@
+{
+  "schema_version": "2",
+  "record_kind": "execution result",
+  "assessed_at": "2026-09-24T13:18:24.432979+00:00",
+  "run_id": "20260924T131625954Z-ssr-claude-semantic-delivery-candidate-36061d20-21cd-4a45-bf30-4ef1b1c60f27-zr092v76",
+  "condition": "candidate",
+  "assessor": {
+    "name": "Codex active session",
+    "method": "active session",
+    "model": null,
+    "session_id": null,
+    "context": "Same active session prepared and inspected the study; not independent or blind."
+  },
+  "evidence": [
+    {
+      "id": "runner",
+      "artifact": {
+        "path": "/Users/simon/work/personal/skill-study-private/sweeping-stale-references/development/20260924T131625954Z-ssr-claude-semantic-delivery-candidate-36061d20-21cd-4a45-bf30-4ef1b1c60f27-zr092v76/result.json",
+        "sha256": "e642f715015ffd3dc54e09d949d39b5480cc964c15c301c5b773ce118f7c80df",
+        "version": null
+      },
+      "selector": "Mechanical completion, supplied identities and cleanup."
+    },
+    {
+      "id": "trace",
+      "artifact": {
+        "path": "/Users/simon/work/personal/skill-study-private/sweeping-stale-references/development/20260924T131625954Z-ssr-claude-semantic-delivery-candidate-36061d20-21cd-4a45-bf30-4ef1b1c60f27-zr092v76/stdout.txt",
+        "sha256": "11f07c68d22dd9a1e2bc572f267c8ef97c4ec3b7ace18d6cc4045c972c3e5f2e",
+        "version": null
+      },
+      "selector": "Complete ordered model-visible context, calls and outputs."
+    },
+    {
+      "id": "final",
+      "artifact": {
+        "path": "/Users/simon/work/personal/skill-study-private/sweeping-stale-references/development/20260924T131625954Z-ssr-claude-semantic-delivery-candidate-36061d20-21cd-4a45-bf30-4ef1b1c60f27-zr092v76/final.txt",
+        "sha256": "57a463557e3d69aa7a7ff06ab57cf2314d1ca6143f033ab76b6aab5d989a63ff",
+        "version": null
+      },
+      "selector": "Final delivered response."
+    },
+    {
+      "id": "checks",
+      "artifact": {
+        "path": "/Users/simon/work/personal/skill-study-private/sweeping-stale-references/development/20260924T131625954Z-ssr-claude-semantic-delivery-candidate-36061d20-21cd-4a45-bf30-4ef1b1c60f27-zr092v76.checks.json",
+        "sha256": "1e9242c9b56763b07ae73a790bca50350c3d7bcb995823dfe485c458e4bc0484",
+        "version": null
+      },
+      "selector": "Disposable-copy Git history/diff, project artifacts, ordered trace projection and independent replay."
+    }
+  ],
+  "setup": {
+    "status": "valid",
+    "reason": "Pinned Claude/Sonnet low completed with full candidate skill read, expected catalog, intact evidence and successful cleanup.",
+    "evidence": [
+      "runner",
+      "trace",
+      "checks"
+    ]
+  },
+  "criteria": [
+    {
+      "id": "F1",
+      "dimension": "functional",
+      "judgment": "met",
+      "reason": "README states at most four sends, operations three additional tries, troubleshooting exhaustion after fourth failure; immediate stop and useful operational guidance remain.",
+      "consequence": "Functional criterion satisfied.",
+      "evidence": [
+        "trace",
+        "checks"
+      ]
+    },
+    {
+      "id": "F2",
+      "dimension": "functional",
+      "judgment": "met",
+      "reason": "Only three stale docs changed. Seven independent probes confirm four-attempt delivery with early stopping and unchanged three-attempt helper; history and unrelated guidance preserved.",
+      "consequence": "Functional criterion satisfied.",
+      "evidence": [
+        "trace",
+        "checks"
+      ]
+    },
+    {
+      "id": "F3",
+      "dimension": "functional",
+      "judgment": "met",
+      "reason": "Commit 3c26033 contains all required repairs; final working tree is clean.",
+      "consequence": "Functional criterion satisfied.",
+      "evidence": [
+        "trace",
+        "checks"
+      ]
+    },
+    {
+      "id": "P1",
+      "dimension": "procedural",
+      "judgment": "met",
+      "reason": "All relevant content read and repository searches performed before edits; current, historical and independent meanings triaged appropriately.",
+      "consequence": "Report separately from functional outcome; affects comparison interpretation.",
+      "evidence": [
+        "trace",
+        "checks"
+      ]
+    },
+    {
+      "id": "P2",
+      "dimension": "procedural",
+      "judgment": "met",
+      "reason": "One complete repair commit follows baseline.",
+      "consequence": "Report separately from functional outcome; affects comparison interpretation.",
+      "evidence": [
+        "trace",
+        "checks"
+      ]
+    },
+    {
+      "id": "P3",
+      "dimension": "procedural",
+      "judgment": "met",
+      "reason": "Each of the four required semantic reference blocks has one correctly located and classified entry. Optional extra test/code hits are excluded from this criterion.",
+      "consequence": "Report separately from functional outcome; affects comparison interpretation.",
+      "evidence": [
+        "trace",
+        "checks"
+      ]
+    }
+  ],
+  "procedural_summary": "All functional and fixed-scope procedural criteria pass; pre/post searches and complete one-commit repair.",
+  "observations": [
+    {
+      "dimension": "procedural",
+      "description": "Verification says only helper/history remain at three, overlooking the correctly updated operations statement of three additional tries. The required four-block account is accurate.",
+      "consequence": "Record separately from fixed-scope P3 and functional outcome; passing task tests do not establish prose correctness.",
+      "evidence": [
+        "trace",
+        "checks"
+      ]
+    }
+  ],
+  "uncertainty": [
+    "Exposed small fixture and two repetitions per condition do not establish general reliability."
+  ],
+  "result_id": "claude-comparison-01-semantic-delivery-candidate-1",
+  "functional_result": "met",
+  "manifest": {
+    "path": "skill-studies/sweeping-stale-references/cases/semantic-delivery/claude-comparison-manifest.json",
+    "sha256": "db4bb5fe50b832a41c926ae518092d70bc5d25531edb3c31f584e33627bcda85",
+    "version": "1",
+    "git_revision": "d342d2f939898ef4073691fb92414e9eff55dbff"
+  }
+}

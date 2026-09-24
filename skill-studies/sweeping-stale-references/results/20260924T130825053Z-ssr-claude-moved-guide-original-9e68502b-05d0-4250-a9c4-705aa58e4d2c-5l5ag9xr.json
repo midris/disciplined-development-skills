@@ -1,0 +1,152 @@
+{
+  "schema_version": "2",
+  "record_kind": "execution result",
+  "assessed_at": "2026-09-24T13:10:27.301622+00:00",
+  "run_id": "20260924T130825053Z-ssr-claude-moved-guide-original-9e68502b-05d0-4250-a9c4-705aa58e4d2c-5l5ag9xr",
+  "condition": "original",
+  "assessor": {
+    "name": "Codex active session",
+    "method": "active session",
+    "model": null,
+    "session_id": null,
+    "context": "Same active session prepared and inspected the study; not independent or blind."
+  },
+  "evidence": [
+    {
+      "id": "runner",
+      "artifact": {
+        "path": "/Users/simon/work/personal/skill-study-private/sweeping-stale-references/development/20260924T130825053Z-ssr-claude-moved-guide-original-9e68502b-05d0-4250-a9c4-705aa58e4d2c-5l5ag9xr/result.json",
+        "sha256": "ba1cb575800f459ed88c5968111496dc6d088ac72f715a3d218798b31f3456b8",
+        "version": null
+      },
+      "selector": "Mechanical completion, supplied identities and cleanup."
+    },
+    {
+      "id": "trace",
+      "artifact": {
+        "path": "/Users/simon/work/personal/skill-study-private/sweeping-stale-references/development/20260924T130825053Z-ssr-claude-moved-guide-original-9e68502b-05d0-4250-a9c4-705aa58e4d2c-5l5ag9xr/stdout.txt",
+        "sha256": "ce776f762bda54cb972ea41a9403e38d0a19b1e3409a7c329c02a2a305b85f2e",
+        "version": null
+      },
+      "selector": "Complete ordered model-visible context, calls and outputs."
+    },
+    {
+      "id": "final",
+      "artifact": {
+        "path": "/Users/simon/work/personal/skill-study-private/sweeping-stale-references/development/20260924T130825053Z-ssr-claude-moved-guide-original-9e68502b-05d0-4250-a9c4-705aa58e4d2c-5l5ag9xr/final.txt",
+        "sha256": "bc0f5d747a6b97de0315011b6a01aae197e4f6c14ba2917afd74a3a93d080317",
+        "version": null
+      },
+      "selector": "Final delivered response."
+    },
+    {
+      "id": "checks",
+      "artifact": {
+        "path": "/Users/simon/work/personal/skill-study-private/sweeping-stale-references/development/20260924T130825053Z-ssr-claude-moved-guide-original-9e68502b-05d0-4250-a9c4-705aa58e4d2c-5l5ag9xr.checks.json",
+        "sha256": "bffe729fb5bf9ba3e88e5116dc600def4716635704a2058cf171229bea0c1ace",
+        "version": null
+      },
+      "selector": "Disposable-copy Git history/diff, project artifacts, ordered trace projection and independent replay."
+    }
+  ],
+  "setup": {
+    "status": "valid",
+    "reason": "Pinned Claude/Sonnet low runtime completed with full original skill body in trace, expected catalog, intact evidence and successful cleanup.",
+    "evidence": [
+      "runner",
+      "trace",
+      "checks"
+    ]
+  },
+  "criteria": [
+    {
+      "id": "F1",
+      "dimension": "functional",
+      "judgment": "met",
+      "reason": "All three links resolve to the moved service guide; export output equals its contents from root and outside the checkout.",
+      "consequence": "Functional criterion satisfied.",
+      "evidence": [
+        "trace",
+        "checks"
+      ]
+    },
+    {
+      "id": "F2",
+      "dimension": "functional",
+      "judgment": "met",
+      "reason": "Service guide, historical record and vendor guide/link remain unchanged and useful; old path is not restored.",
+      "consequence": "Functional criterion satisfied.",
+      "evidence": [
+        "trace",
+        "checks"
+      ]
+    },
+    {
+      "id": "F3",
+      "dimension": "functional",
+      "judgment": "met",
+      "reason": "Commit 3666898 contains all four required repairs; final working tree is clean.",
+      "consequence": "Functional criterion satisfied.",
+      "evidence": [
+        "trace",
+        "checks"
+      ]
+    },
+    {
+      "id": "P1",
+      "dimension": "procedural",
+      "judgment": "met",
+      "reason": "Repository-wide search and direct reads preceded edits; historical and independent references were correctly preserved.",
+      "consequence": "Report separately from functional outcome; affects comparison interpretation.",
+      "evidence": [
+        "trace",
+        "checks"
+      ]
+    },
+    {
+      "id": "P2",
+      "dimension": "procedural",
+      "judgment": "met",
+      "reason": "One repair commit follows the neutral baseline.",
+      "consequence": "Report separately from functional outcome; affects comparison interpretation.",
+      "evidence": [
+        "trace",
+        "checks"
+      ]
+    },
+    {
+      "id": "P3",
+      "dimension": "procedural",
+      "judgment": "met",
+      "reason": "The five scoped references have correct locations, counts and dispositions. Task/vendor extras are outside the fixed scope.",
+      "consequence": "Report separately from functional outcome; affects comparison interpretation.",
+      "evidence": [
+        "trace",
+        "checks"
+      ]
+    }
+  ],
+  "procedural_summary": "Repository search before edits, correct triage, complete repair in one commit, and useful five-reference account.",
+  "observations": [
+    {
+      "dimension": "procedural",
+      "description": "Verification prose says basename setup.md search returns only three preserved matches after editing, although renamed paths still contain that basename. The five required accounting entries themselves are accurate.",
+      "consequence": "Report inaccurate verification wording separately from the fixed account criterion and functional repair.",
+      "evidence": [
+        "trace",
+        "checks"
+      ]
+    }
+  ],
+  "uncertainty": [
+    "Small exposed development fixture; no population reliability claim."
+  ],
+  "result_id": "claude-comparison-01-moved-guide-original-1",
+  "functional_result": "met",
+  "manifest": {
+    "path": "skill-studies/sweeping-stale-references/cases/moved-guide/claude-comparison-manifest.json",
+    "sha256": "78cf8d96fa4a108795bec67699cca9f9c3c1a8e93d18c297a13ca1d68e130098",
+    "version": "1",
+    "git_revision": "d342d2f939898ef4073691fb92414e9eff55dbff"
+  }
+}

@@ -1,0 +1,142 @@
+{
+  "schema_version": "2",
+  "record_kind": "execution result",
+  "assessed_at": "2026-09-24T13:32:11.427128+00:00",
+  "run_id": "20260924T133055891Z-ssr-claude-local-change-candidate-5cbb3317-4ef0-4b1e-9254-25f00ae353b3-h95bt_6m",
+  "condition": "candidate",
+  "assessor": {
+    "name": "Codex active session",
+    "method": "active session",
+    "model": null,
+    "session_id": null,
+    "context": "Same active session prepared and inspected the study; not independent or blind."
+  },
+  "evidence": [
+    {
+      "id": "runner",
+      "artifact": {
+        "path": "/Users/simon/work/personal/skill-study-private/sweeping-stale-references/development/20260924T133055891Z-ssr-claude-local-change-candidate-5cbb3317-4ef0-4b1e-9254-25f00ae353b3-h95bt_6m/result.json",
+        "sha256": "a7b6339ea5fb03fa79f9ec418407073dcc10d8ff22fd532a2e977805e4181477",
+        "version": null
+      },
+      "selector": "Mechanical completion, supplied identities and cleanup."
+    },
+    {
+      "id": "trace",
+      "artifact": {
+        "path": "/Users/simon/work/personal/skill-study-private/sweeping-stale-references/development/20260924T133055891Z-ssr-claude-local-change-candidate-5cbb3317-4ef0-4b1e-9254-25f00ae353b3-h95bt_6m/stdout.txt",
+        "sha256": "36804f878d03da130b1cea033d7c69a3656eeab12c2a283f371299d1c1027069",
+        "version": null
+      },
+      "selector": "Complete ordered model-visible context, calls and outputs."
+    },
+    {
+      "id": "final",
+      "artifact": {
+        "path": "/Users/simon/work/personal/skill-study-private/sweeping-stale-references/development/20260924T133055891Z-ssr-claude-local-change-candidate-5cbb3317-4ef0-4b1e-9254-25f00ae353b3-h95bt_6m/final.txt",
+        "sha256": "c28eac8ea99bf7e7ae65597dd7953451f909dd7914be96afc5abf9d313267ad2",
+        "version": null
+      },
+      "selector": "Final delivered response."
+    },
+    {
+      "id": "checks",
+      "artifact": {
+        "path": "/Users/simon/work/personal/skill-study-private/sweeping-stale-references/development/20260924T133055891Z-ssr-claude-local-change-candidate-5cbb3317-4ef0-4b1e-9254-25f00ae353b3-h95bt_6m.checks.json",
+        "sha256": "27b7c50c83dd0a2f07cdf20e5b9b16d3b4d25aeaa5d47f5d930504a0adf373e4",
+        "version": null
+      },
+      "selector": "Disposable-copy Git history/diff, project artifacts, ordered trace projection and independent replay."
+    }
+  ],
+  "setup": {
+    "status": "valid",
+    "reason": "Pinned Claude/Sonnet low completed with full candidate skill body, expected catalog, usable capture and successful cleanup.",
+    "evidence": [
+      "runner",
+      "trace",
+      "checks"
+    ]
+  },
+  "criteria": [
+    {
+      "id": "F1",
+      "dimension": "functional",
+      "judgment": "met",
+      "reason": "Glossary heading corrected to Membership and remains useful in context.",
+      "consequence": "Functional criterion satisfied.",
+      "evidence": [
+        "trace",
+        "checks"
+      ]
+    },
+    {
+      "id": "F2",
+      "dimension": "functional",
+      "judgment": "met",
+      "reason": "Only heading changed; membership, billing, shipping, archive and JSON retain original meaning/values. README links to existing files without heading anchors.",
+      "consequence": "Functional criterion satisfied.",
+      "evidence": [
+        "trace",
+        "checks"
+      ]
+    },
+    {
+      "id": "F3",
+      "dimension": "functional",
+      "judgment": "met",
+      "reason": "Commit c6feba9 contains the sole heading correction; clean working tree.",
+      "consequence": "Functional criterion satisfied.",
+      "evidence": [
+        "trace",
+        "checks"
+      ]
+    },
+    {
+      "id": "P1",
+      "dimension": "procedural",
+      "judgment": "met",
+      "reason": "Full relevant file reads and variant/anchor searches precede edit and establish locality.",
+      "consequence": "Report separately from functional outcome; affects comparison interpretation.",
+      "evidence": [
+        "trace",
+        "checks"
+      ]
+    },
+    {
+      "id": "P2",
+      "dimension": "procedural",
+      "judgment": "met",
+      "reason": "One task commit after neutral baseline.",
+      "consequence": "Report separately from functional outcome; affects comparison interpretation.",
+      "evidence": [
+        "trace",
+        "checks"
+      ]
+    },
+    {
+      "id": "P3",
+      "dimension": "procedural",
+      "judgment": "not met",
+      "reason": "Candidate emitted n/a despite searches finding unrelated mutable-tree matches in archive/billing/config. Its accepted version-specific rule requires a positive inventory when such matches exist; this is the reverse of the previously accepted positive-inventory difference.",
+      "consequence": "Report separately from functional outcome; affects comparison interpretation.",
+      "evidence": [
+        "trace",
+        "checks"
+      ]
+    }
+  ],
+  "procedural_summary": "Functional local repair, scope check and grouping pass. Candidate falls back to original-style n/a despite unrelated matches, instead of its declared positive inventory.",
+  "observations": [],
+  "uncertainty": [
+    "Small exposed fixture."
+  ],
+  "result_id": "claude-comparison-01-local-change-candidate-2",
+  "functional_result": "met",
+  "manifest": {
+    "path": "skill-studies/sweeping-stale-references/cases/local-change/claude-comparison-manifest.json",
+    "sha256": "146bcee0a3c2e03d5ccd93f064aa51782f9d918e998e83664e7425e76ddc264e",
+    "version": "1",
+    "git_revision": "d342d2f939898ef4073691fb92414e9eff55dbff"
+  }
+}
