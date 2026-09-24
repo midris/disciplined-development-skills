@@ -10,8 +10,8 @@ This is navigation, not a duplicate progress or decision record.
 5. The [retrospective](../../reviews/2026-09-18-skill-testing-retrospective.md) identifies remaining discovery questions. The plan owns which one is selected next.
 
 The [full Claude comparison](claude-comparison-01-assessment.md) is complete: 34 valid attempts on original and rewrite, including repeated native discovery checks.
-The prior 126 combined subject calls are spent; the owner selected the [ten-call Opus-low invocation comparison](protocol.md#comparison-claude-opus-invocation-01).
-Run the fixed original/rewrite native cases under the declared model and order; no retry or skill edit is selected.
+The [ten-call Opus-low invocation comparison](claude-opus-invocation-01-assessment.md) is also complete; all 136 combined subject calls are spent.
+Next action: owner review of findings and a decision on adoption or a targeted follow-up; no further collection or skill edit is selected.
 The owner accepts the rewrite’s changed local reporting; historical scores stay fixed and adoption remains deferred.
 Preserve settled scenarios, criteria and historical identities; do not derive a baseline from a candidate or rescore old records to continue.
 SSR's [core assessment](core-baseline-01-assessment.md) records an unresolved Shiv category boundary: its P3 counts are not three established skill defects and do not independently justify a rewrite.
@@ -20,5 +20,5 @@ Controller criteria, manifests and revealing evidence remain outside subject con
 The [external-review resolution](../../reviews/2026-09-23-ssr-runtime-and-preparation.md) records the prospective login-shell correction, planning-guideline readiness support, and unrelated-case downgrade to procedural sanity evidence.
 Run the installed login-shell qualification before future collection; prior isolation alone does not guarantee Homebrew Python.
 
-Completed scope: [Codex comparison](comprehensive-comparison-02-assessment.md), [two Claude smokes](claude-smoke-01-assessment.md) and [Claude comparison](claude-comparison-01-assessment.md); the additional Opus invocation scope is declared in the protocol; no retries or skill edits are authorized.
+Completed scope: [Codex comparison](comprehensive-comparison-02-assessment.md), [two Claude smokes](claude-smoke-01-assessment.md) and [Claude comparison](claude-comparison-01-assessment.md); the [Opus invocation comparison](claude-opus-invocation-01-assessment.md) is also complete; no retries or skill edits are authorized.
 [Codex scripted discovery qualification and Claude documentation cross-check](native-discovery-qualification.md) separate scripted transport qualification from the subsequent model observations linked in that record.
