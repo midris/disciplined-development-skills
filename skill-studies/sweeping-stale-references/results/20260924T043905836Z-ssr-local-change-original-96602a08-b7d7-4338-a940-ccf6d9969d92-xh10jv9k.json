@@ -1,0 +1,140 @@
+{
+  "schema_version": "2",
+  "record_kind": "execution result",
+  "assessed_at": "2026-09-24T04:40:20.269248+00:00",
+  "run_id": "20260924T043905836Z-ssr-local-change-original-96602a08-b7d7-4338-a940-ccf6d9969d92-xh10jv9k",
+  "condition": "original",
+  "assessor": {
+    "name": "Codex active session",
+    "method": "active session",
+    "model": null,
+    "session_id": null,
+    "context": "Same active session prepared and inspected the study; not independent or blind."
+  },
+  "evidence": [
+    {
+      "id": "runner",
+      "artifact": {
+        "path": "/Users/simon/work/personal/skill-study-private/sweeping-stale-references/development/20260924T043905836Z-ssr-local-change-original-96602a08-b7d7-4338-a940-ccf6d9969d92-xh10jv9k/result.json",
+        "sha256": "b5367988ce11b5212d480e1b5fd7da200150559850ee1cf80422b04ba4d8f0b8",
+        "version": null
+      },
+      "selector": "Mechanical completion, supplied identities and cleanup."
+    },
+    {
+      "id": "trace",
+      "artifact": {
+        "path": "/Users/simon/work/personal/skill-study-private/sweeping-stale-references/development/20260924T043905836Z-ssr-local-change-original-96602a08-b7d7-4338-a940-ccf6d9969d92-xh10jv9k/provider-session.jsonl",
+        "sha256": "c4c197186ff859c56ef5ae1b993deb17fb6043dfd7fc86f6a8ebd6368a39a4b2",
+        "version": null
+      },
+      "selector": "Complete ordered model-visible context, calls and outputs."
+    },
+    {
+      "id": "final",
+      "artifact": {
+        "path": "/Users/simon/work/personal/skill-study-private/sweeping-stale-references/development/20260924T043905836Z-ssr-local-change-original-96602a08-b7d7-4338-a940-ccf6d9969d92-xh10jv9k/final.txt",
+        "sha256": "29717ba95547d750a27fa6b8162f044cec7b4e270bd3d9e879e93f514899f6ce",
+        "version": null
+      },
+      "selector": "Final delivered response."
+    },
+    {
+      "id": "checks",
+      "artifact": {
+        "path": "/Users/simon/work/personal/skill-study-private/sweeping-stale-references/development/20260924T043905836Z-ssr-local-change-original-96602a08-b7d7-4338-a940-ccf6d9969d92-xh10jv9k.checks.json",
+        "sha256": "9133efbddfa0ad0c1d958fb7f3bc125a4e9f229c8b2a6d8fbee1004062d49b77",
+        "version": null
+      },
+      "selector": "Disposable-copy Git history/diff, project artifacts, ordered trace projection and independent replay."
+    }
+  ],
+  "setup": {
+    "status": "valid",
+    "reason": "Complete original body received before repair; configured inputs, usable isolated trace and retained Git evidence establish valid setup.",
+    "evidence": [
+      "runner",
+      "trace",
+      "checks"
+    ]
+  },
+  "criteria": [
+    {
+      "id": "F1",
+      "dimension": "functional",
+      "judgment": "met",
+      "reason": "The sole malformed glossary heading is corrected to Membership, with its useful definition intact.",
+      "consequence": "Functional criterion satisfied.",
+      "evidence": [
+        "trace",
+        "checks"
+      ]
+    },
+    {
+      "id": "F2",
+      "dimension": "functional",
+      "judgment": "met",
+      "reason": "Only the heading changed; membership, billing, shipping, historical and JSON meanings remain unchanged. README links still reach the unchanged file paths.",
+      "consequence": "Functional criterion satisfied.",
+      "evidence": [
+        "trace",
+        "checks"
+      ]
+    },
+    {
+      "id": "F3",
+      "dimension": "functional",
+      "judgment": "met",
+      "reason": "Commit f865473 contains the correction and final working tree is clean.",
+      "consequence": "Functional criterion satisfied.",
+      "evidence": [
+        "trace",
+        "checks"
+      ]
+    },
+    {
+      "id": "P1",
+      "dimension": "procedural",
+      "judgment": "met",
+      "reason": "Broad membership/spacing variants and full-file inspection precede editing and establish the local scope; unrelated shipping and existing membership statements remain intact.",
+      "consequence": "Report separately from functional outcome; affects comparison interpretation.",
+      "evidence": [
+        "trace",
+        "checks"
+      ]
+    },
+    {
+      "id": "P2",
+      "dimension": "procedural",
+      "judgment": "met",
+      "reason": "One correction commit follows the neutral baseline.",
+      "consequence": "Report separately from functional outcome; affects comparison interpretation.",
+      "evidence": [
+        "trace",
+        "checks"
+      ]
+    },
+    {
+      "id": "P3",
+      "dimension": "procedural",
+      "judgment": "met",
+      "reason": "The commit includes the required References swept: n/a line with an accurate local-change reason.",
+      "consequence": "Report separately from functional outcome; affects comparison interpretation.",
+      "evidence": [
+        "trace",
+        "checks"
+      ]
+    }
+  ],
+  "procedural_summary": "All fixed functional and procedural criteria met; justified restraint rather than an unexamined one-file fix.",
+  "observations": [],
+  "uncertainty": [],
+  "result_id": "comprehensive-comparison-02-local-change-original-2",
+  "functional_result": "met",
+  "manifest": {
+    "path": "skill-studies/sweeping-stale-references/cases/local-change/comparison-02-manifest.json",
+    "sha256": "3973e3b20050c2654abd63cb823871b7212d713c41d6ea02c8313084e9ad8869",
+    "version": "1",
+    "git_revision": "37ab0390b04630335d15f6d246b2b042f0e07f51"
+  }
+}
