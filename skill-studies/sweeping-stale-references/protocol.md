@@ -448,3 +448,6 @@ All thirty subject calls used Sol-low. Small exposed cases, shared assessor cont
 The contrasting-skill CW study subsequently exercised the workflow; its records and current combined accounting are linked above. SSR expansion is complete; invocation/pressure preparation is active as described at the start of this protocol.
 
 The prepared unrelated invocation case is D1-only sanity evidence, with functional outcome `not measured`; it does not establish near-boundary over-trigger resistance.
+
+Next proposed scope: [34-call comparison](comparison-proposal.md), pending allocation acceptance.
+[Codex scripted discovery qualification and Claude documentation cross-check](native-discovery-qualification.md) separate verified transport mechanics from unmeasured automatic selection.

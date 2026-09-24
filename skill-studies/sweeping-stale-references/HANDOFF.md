@@ -17,3 +17,6 @@ Controller criteria, manifests and revealing evidence remain outside subject con
 
 The [external-review resolution](../../reviews/2026-09-23-ssr-runtime-and-preparation.md) records the prospective login-shell correction, planning-guideline readiness support, and unrelated-case downgrade to procedural sanity evidence.
 Run the installed login-shell qualification before future collection; prior isolation alone does not guarantee Homebrew Python.
+
+Next proposed scope: [34-call comparison](comparison-proposal.md), pending allocation acceptance.
+[Codex scripted discovery qualification and Claude documentation cross-check](native-discovery-qualification.md) separate verified transport mechanics from unmeasured automatic selection.

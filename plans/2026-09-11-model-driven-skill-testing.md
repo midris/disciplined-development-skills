@@ -252,3 +252,6 @@ SSR external-review follow-up (2026-09-23): the installed login-shell regression
 Readiness now recognizes the owner-selected planning-guideline accounting form, while retaining hard call limits.
 The unrelated invocation draft is procedural sanity evidence only, outside functional counts; positive invocation and pressure tasks are unchanged.
 Future collection still requires native discovery qualification, suite acceptance and a new call allocation.
+
+SSR continuation: corrections pushed at `7cec98a`; [native catalog/capture qualification](../skill-studies/sweeping-stale-references/native-discovery-qualification.md) passed using a scripted endpoint with zero model calls.
+The [34-call comparison proposal](../skill-studies/sweeping-stale-references/comparison-proposal.md) is ready for allocation review; Claude documentation was cross-checked, but no Claude collection is included.

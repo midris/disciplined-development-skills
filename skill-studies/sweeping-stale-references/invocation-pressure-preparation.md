@@ -26,8 +26,8 @@ Retain the delivered catalog/instruction content or equivalent provider evidence
 A file copied into `.agents/skills/` alone does not establish discovery availability.
 Do not put the catalog into TASK.md or prompt.md to compensate for a missing runtime mechanism: that would change what this test measures.
 
-The current runner uses a private profile, project cwd and `--strict-config --ignore-user-config --ignore-rules`; its [guide](../../skill-validation/runner/README.md#codex) explicitly does not qualify native discovery.
-Offline materialization can verify path/bytes, not catalog delivery.
+The current runner uses a private profile, project cwd and `--strict-config --ignore-user-config --ignore-rules`; its [guide](../../skill-validation/runner/README.md#codex) distinguishes runtime mechanics from model selection.
+Offline materialization verifies path/bytes; the later [scripted qualification](native-discovery-qualification.md) verifies native catalog delivery and full-read capture on Codex 0.156.0 without model inference.
 Qualify the actual launch settings and captured catalog before a discovery batch; if the runtime needs a change, identify and review that bounded change rather than widening reads or leaking controller guidance.
 No runtime modification or model qualification call is included in this preparation.
 The normal supplied skill-use policy is part of the execution context and must be retained alongside the catalog; do not add a new blanket instruction to force SSR selection.
@@ -134,7 +134,7 @@ No provider was invoked and no live skill, frozen case or result was changed.
 Self-review against the spec, authoring guidance, protocol and runner found two setup/interpretation issues, corrected before presenting the drafts: commit setup could introduce an unwanted trigger in the negative case, and runtime body injection could masquerade as agent selection.
 The negative prompt now requests no commit, positive prompts expose the task before baseline setup, and the availability gate rejects runtime-forced body exposure.
 Review also separated deliberate loading from incidental catalog/bulk-read exposure and retained the historical reporting ambiguity instead of treating it as a pressure-induced defect.
-The remaining execution qualification is explicit: native catalog delivery under the runner's actual launch settings has not been demonstrated.
+At this preparation checkpoint native catalog delivery had not been demonstrated; the subsequent scripted qualification above closes that mechanism check, not model selection.
 My design judgment is that these additions are sufficient for the selected independent-use comparison alongside the existing ordinary suite, once that setup gate is qualified; no broader discovery or reliability claim follows.
 
 ## Follow-up review and resolution — 2026-09-23
@@ -156,3 +156,8 @@ Its unchanged-code task is far from either trigger clause; the suite does not cl
 A proposed independent-helper edit needs a defensible non-application boundary because both skill versions include local-change triage; it is not silently substituted as a negative case.
 The positive cases and pressure design remain unchanged.
 The [runtime diagnosis](runtime-diagnosis.md) records the additional login-shell correction required before future collection.
+
+## Proposed collection
+
+The [comparison proposal](comparison-proposal.md) specifies 34 calls, conditions, repetitions, order and reporting rules for owner allocation review.
+The native catalog includes five built-in skills alongside the sole project skill; preserve that context rather than claiming a singleton catalog.
