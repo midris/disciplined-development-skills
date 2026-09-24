@@ -366,9 +366,10 @@ The sibling evidence directory remains available for reading; `--add-dir` does n
 The controlled Claude runtime requires macOS `sandbox-exec` and an existing claude.ai subscription login using the standard `~/Library/Keychains/login.keychain-db` or supported file cache.
 It retains normal HOME/USER for authentication and launches with an explicit operational PATH, fresh private temporary directories and the accepted memory/history/telemetry controls.
 It does not inherit API keys, profile overrides, shell-startup environment variables or the old simple-system-prompt/bundled-skill suppression baseline.
+A private `ZDOTDIR` and `.zprofile` restore the prepared PATH after macOS login-zsh startup reorders it, without reading user startup files.
 The whole-process Seatbelt policy denies file reads and writes by default, then grants declared fixture/evidence reads, private scratch and required system/runtime reads.
 This covers native Read/Glob/Grep and Bash descendants alike.
-The implementation lists the runtime exceptions: system tools/libraries, Homebrew, Xcode, exact Claude executable paths, subscription-state files and the login keychain, plus exact macOS authentication metadata.
+The implementation lists the runtime exceptions: system tools/libraries (including macOS timezone data required by native ICU startup), Homebrew, Xcode, exact Claude executable paths, subscription-state files and the login keychain, plus exact macOS authentication metadata.
 Filesystem metadata is readable for path traversal; contents of arbitrary home, controller and sibling-run files are not.
 Selected ambient instruction/settings/skill/history paths remain explicitly denied.
 In `workspace-write` mode only fixture, evidence, private scratch and `/dev/null` are writable; in `read-only` mode only scratch and `/dev/null` are writable.
@@ -380,6 +381,8 @@ Model-network connectivity remains available; this is study-input isolation, not
 Runtime and fixture directories must be outside HOME.
 Preparation rejects ambient instruction/configuration/skill entries in fixture ancestry.
 The shared installed-policy tests above exercise the boundary; repeat affected controls when CLI/runtime assumptions change.
+`SKILLTEST_SANDBOX_EVIDENCE_DIR=/absolute/new/evidence .venv/bin/python -m pytest -q acceptance/test_claude_cli.py` additionally tests the actual installed CLI in both permission modes: startup, Bash Python/Git selection, description delivery before Skill invocation and full body delivery afterward.
+It uses surrogate authentication and a scripted localhost endpoint with external networking denied; it spends zero model calls and does not qualify production authentication or model selection.
 
 Authentication preflight runs that same resolved Claude executable under the same child policy.
 Status is inspected only in bounded memory, never logged or retained; no credentials are extracted or copied, no new login/logout occurs, and existing sessions are not manipulated.

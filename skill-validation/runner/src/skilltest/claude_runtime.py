@@ -3,6 +3,7 @@ from __future__ import annotations
 
 import json
 import os
+import shlex
 import shutil
 import subprocess
 import sys
@@ -74,7 +75,13 @@ class ClaudeRuntime(ProcessRuntime):
             "PATH": f"{Path(self.executable).parent}:/usr/bin:/bin:/usr/sbin:/sbin",
             "TMPDIR": str(self.root / "tmp"), "CLAUDE_CODE_TMPDIR": str(self.root / "tmp"),
             "CLAUDE_CODE_DEBUG_LOGS_DIR": str(self.root / "tmp/debug"),
+            "ZDOTDIR": str(self.root / "tmp"),
         }
+        # Claude's Bash tool uses login zsh on macOS; /etc/zprofile reorders PATH.
+        # Restore only our prepared tool order without reading user startup files.
+        (self.root / "tmp/.zprofile").write_text(
+            "export PATH=" + shlex.quote(self.environment["PATH"]) + "\n", encoding="utf-8",
+        )
         policy = self.root / "policy.sb"
         # Whole-process enforcement also covers native Read/Glob/Grep tools.
         # Runtime binaries/libraries are the only broad read exceptions; host
@@ -84,6 +91,8 @@ class ClaudeRuntime(ProcessRuntime):
             Path("/System"), Path("/usr"), Path("/bin"), Path("/sbin"),
             Path("/opt/homebrew"), Path("/Library/Apple"), Path("/Library/Developer"),
             Path("/private/etc"), Path("/dev"),
+            # ICU timezone initialization in the native CLI requires these data.
+            Path("/private/var/db/timezone"),
             Path("/Applications/Xcode.app"),
         ]
         read_files = [

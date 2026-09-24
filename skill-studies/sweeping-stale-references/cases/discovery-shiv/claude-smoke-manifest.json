@@ -1,0 +1,486 @@
+{
+  "format_version": "1",
+  "manifest_id": "ssr-discovery-shiv-claude-smoke-01",
+  "study_id": "sweeping-stale-references",
+  "case_id": "discovery-shiv",
+  "status": "draft",
+  "created_at": "2026-09-24",
+  "source_revision": "",
+  "authorities": {
+    "spec": {
+      "path": "plans/specs/2026-09-11-model-driven-skill-testing-framework.md",
+      "sha256": "3ef6a6def5201983aec2a6345ed962c7fede6ef12474c8876269f60528403083",
+      "version": null
+    },
+    "protocol": {
+      "path": "skill-studies/sweeping-stale-references/protocol.md",
+      "sha256": "79c638416c5781d268b5560749febfab5822f7d7a8afbc76c5a567ff80cc8f4a",
+      "version": "1"
+    },
+    "format_contract": {
+      "path": "skill-studies/formats/companion-formats.md",
+      "sha256": "e9956447d56e22f4ffc8681dfee887a9093c845c54be625098d45fecacd48781",
+      "version": "1"
+    },
+    "execution_result_schema": {
+      "path": "skill-studies/formats/execution-result-v2.schema.json",
+      "sha256": "81902ed03e807804404c0d6ba7a0092a1c311c9eef45ee88c89708ce50d7c2c2",
+      "version": "2"
+    },
+    "policy": {
+      "path": "skill-studies/sweeping-stale-references/assessment-policies/SSR-assessment-3.txt",
+      "sha256": "5d057d11f678ae3fa63c48957446aded13ccc5dcb8babab2856d0232d49e08bb",
+      "version": "SSR-assessment-3"
+    },
+    "criteria": [
+      {
+        "path": "skill-studies/sweeping-stale-references/cases/discovery-shiv/assessment.md",
+        "sha256": "cb1d6e5b5003dae298f5127430bd1f9166b5ca168228bbd2fa569c84d4e6f8be",
+        "version": "2"
+      }
+    ]
+  },
+  "conditions": [
+    {
+      "id": "original",
+      "configuration": {
+        "path": "skill-studies/sweeping-stale-references/cases/discovery-shiv/claude-smoke.json",
+        "sha256": "4fc2e8f077ca196035abae69c1f7bd4bc2c562644133da55c30fe0b04fffe7ba",
+        "version": "0.2"
+      },
+      "target_skill": "skill-studies/sweeping-stale-references/cases/skill-original/SKILL.md"
+    },
+    {
+      "id": "control",
+      "configuration": {
+        "path": "skill-studies/sweeping-stale-references/cases/discovery-shiv/control.json",
+        "sha256": "d94cd47ac17f291cc6fc304774870150ae3ae451e71327c6c879532fa5f8676d",
+        "version": "0.2"
+      },
+      "target_skill": null
+    },
+    {
+      "id": "candidate",
+      "configuration": {
+        "path": "skill-studies/sweeping-stale-references/cases/discovery-shiv/candidate-comprehensive.json",
+        "sha256": "441e8a917b66662316854f289616d2562f3d45c0d56831b382cebc009e14e6e6",
+        "version": "0.2"
+      },
+      "target_skill": "skill-studies/sweeping-stale-references/cases/skill-candidate-comprehensive/SKILL.md"
+    }
+  ],
+  "subject_sources": [
+    {
+      "path": "skill-studies/sweeping-stale-references/cases/discovery-shiv/claude-smoke.gitignore",
+      "sha256": "5640b2f3bcca600878e861ef047ea2a11d0fa1abf0a590aaff4828d15d6b0463",
+      "version": null
+    },
+    {
+      "path": "skill-studies/sweeping-stale-references/cases/discovery-shiv/fixture/.github/workflows/offline-example.yml",
+      "sha256": "abcd9b2a168675c0c8b2003ba99ad5758a6d81ade19824a79f50a7d984df4fe4",
+      "version": null
+    },
+    {
+      "path": "skill-studies/sweeping-stale-references/cases/discovery-shiv/fixture/.github/workflows/tox.yml",
+      "sha256": "c9134958aaae897e137be339ae1ecbd9afa888d3fac44e66a40d36e12e0313e5",
+      "version": null
+    },
+    {
+      "path": "skill-studies/sweeping-stale-references/cases/discovery-shiv/fixture/.gitignore",
+      "sha256": "e9542eec883f95fb0a64d2a9deca8bbcde5af2bf7a7ec0bd855a10f391471585",
+      "version": null
+    },
+    {
+      "path": "skill-studies/sweeping-stale-references/cases/discovery-shiv/fixture/.readthedocs.yml",
+      "sha256": "b007b647aa6c66dde072127135990a0d4a1eebda8e3253f5289cebdc524e33ac",
+      "version": null
+    },
+    {
+      "path": "skill-studies/sweeping-stale-references/cases/discovery-shiv/fixture/.runtime/click/__init__.py",
+      "sha256": "1487767d7092241df27960fe7b6b8e37e9818456b661cf4cbd71a61eef0e5c6d",
+      "version": null
+    },
+    {
+      "path": "skill-studies/sweeping-stale-references/cases/discovery-shiv/fixture/.runtime/click/_compat.py",
+      "sha256": "80f36d5d0f6af86e908a5d9bf8c0b90ac1ec186710e2ee98496cbdfed966ba17",
+      "version": null
+    },
+    {
+      "path": "skill-studies/sweeping-stale-references/cases/discovery-shiv/fixture/.runtime/click/_termui_impl.py",
+      "sha256": "086760db801e5e28de192cdbbb467bc7773869a6a15458d506911b6e3850e4ae",
+      "version": null
+    },
+    {
+      "path": "skill-studies/sweeping-stale-references/cases/discovery-shiv/fixture/.runtime/click/_textwrap.py",
+      "sha256": "ed9d0ded59a7fbae933524d4c29e8e5c96dc5174666044fd87d736b9c0fca104",
+      "version": null
+    },
+    {
+      "path": "skill-studies/sweeping-stale-references/cases/discovery-shiv/fixture/.runtime/click/_utils.py",
+      "sha256": "782642b7026db180f941892435627c318ffc001223cbc31cce030cc95637dab4",
+      "version": null
+    },
+    {
+      "path": "skill-studies/sweeping-stale-references/cases/discovery-shiv/fixture/.runtime/click/_winconsole.py",
+      "sha256": "292c5f35b3256116ba18e26e08b82c8363dbddd56480934fa8b24f69ef8f6b5d",
+      "version": null
+    },
+    {
+      "path": "skill-studies/sweeping-stale-references/cases/discovery-shiv/fixture/.runtime/click/core.py",
+      "sha256": "ad9cfbea284d4c5578636b31a771fe9bddc6c4bd9a703e4faacd08a1b12f9ae9",
+      "version": null
+    },
+    {
+      "path": "skill-studies/sweeping-stale-references/cases/discovery-shiv/fixture/.runtime/click/decorators.py",
+      "sha256": "f5ed4d76ee2384601c3fa44674d3c0c005adb8ff6112ce044e9d6ede52a61f5a",
+      "version": null
+    },
+    {
+      "path": "skill-studies/sweeping-stale-references/cases/discovery-shiv/fixture/.runtime/click/exceptions.py",
+      "sha256": "1ef498df81b86ae8ff6d8451f3e4fc094f09c2aff5f8e72c454e1ecdfa337849",
+      "version": null
+    },
+    {
+      "path": "skill-studies/sweeping-stale-references/cases/discovery-shiv/fixture/.runtime/click/formatting.py",
+      "sha256": "f125b628692f8dfcfd43535b7a88cc1ee64137471f9d0243b389aa0cfea85e6b",
+      "version": null
+    },
+    {
+      "path": "skill-studies/sweeping-stale-references/cases/discovery-shiv/fixture/.runtime/click/globals.py",
+      "sha256": "80cf8d87a0383341c1fd2824685e4ce2770618c0c773f7e51d7bbdfe88781845",
+      "version": null
+    },
+    {
+      "path": "skill-studies/sweeping-stale-references/cases/discovery-shiv/fixture/.runtime/click/parser.py",
+      "sha256": "a09f9f53fde6bf1ba022e36d1da0804d9e7a9601261d18208c9892a84818ae30",
+      "version": null
+    },
+    {
+      "path": "skill-studies/sweeping-stale-references/cases/discovery-shiv/fixture/.runtime/click/py.typed",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "version": null
+    },
+    {
+      "path": "skill-studies/sweeping-stale-references/cases/discovery-shiv/fixture/.runtime/click/shell_completion.py",
+      "sha256": "e6d186639a55de6019d7bc53db73a7b8aad6ab3132c8b56dac9df49e95318e45",
+      "version": null
+    },
+    {
+      "path": "skill-studies/sweeping-stale-references/cases/discovery-shiv/fixture/.runtime/click/termui.py",
+      "sha256": "567f5e866ad097ddb3dbfe91e1b5593ac1d423a8fc2eb4fcbb44733595290af6",
+      "version": null
+    },
+    {
+      "path": "skill-studies/sweeping-stale-references/cases/discovery-shiv/fixture/.runtime/click/testing.py",
+      "sha256": "4bd23ea6ca409491f746f6495834282576fe3349eb0042735dc533ad55ec4f7e",
+      "version": null
+    },
+    {
+      "path": "skill-studies/sweeping-stale-references/cases/discovery-shiv/fixture/.runtime/click/types.py",
+      "sha256": "f46e0307e9c18fea2603f5d6b18c1b4371fd064a47f36c098fe93120f49c2a60",
+      "version": null
+    },
+    {
+      "path": "skill-studies/sweeping-stale-references/cases/discovery-shiv/fixture/.runtime/click/utils.py",
+      "sha256": "5f0ac3c4ecd4fffae71e7fabbc9989703ede71bca950a31e0c94118cdd85f8e0",
+      "version": null
+    },
+    {
+      "path": "skill-studies/sweeping-stale-references/cases/discovery-shiv/fixture/.runtime/licenses/click/LICENSE.txt",
+      "sha256": "9a8ad106a394e853bfe21f42f4e72d592819a22805d991b5f3275029292b658d",
+      "version": null
+    },
+    {
+      "path": "skill-studies/sweeping-stale-references/cases/discovery-shiv/fixture/CONTRIBUTING.md",
+      "sha256": "d0758cdef5279083fdde0329e9e404ea59feae22297f7cf90073cbf4b348c086",
+      "version": null
+    },
+    {
+      "path": "skill-studies/sweeping-stale-references/cases/discovery-shiv/fixture/LICENSE",
+      "sha256": "ade0fc62f14848627283169c38316c38def3a314ba76f31df66fb7fe0922dc99",
+      "version": null
+    },
+    {
+      "path": "skill-studies/sweeping-stale-references/cases/discovery-shiv/fixture/MANIFEST.in",
+      "sha256": "c95531f69859851f909ab781c4554425e9106c4ab719975a1f60c6a7fb0e52ec",
+      "version": null
+    },
+    {
+      "path": "skill-studies/sweeping-stale-references/cases/discovery-shiv/fixture/Makefile",
+      "sha256": "1dee80dc979d272a6fdac6aaa4d3c336646a41eb96d6add448640837e4f8ade3",
+      "version": null
+    },
+    {
+      "path": "skill-studies/sweeping-stale-references/cases/discovery-shiv/fixture/NOTICE",
+      "sha256": "d4291847bbf81e16e02ace396847a02010e99d69fae69d82f4ba6e45bca43d35",
+      "version": null
+    },
+    {
+      "path": "skill-studies/sweeping-stale-references/cases/discovery-shiv/fixture/README.md",
+      "sha256": "d2c3e86ea8071cdd66ffc84ce69556634c9c1bad1cf92b489e69893f94c1d1b8",
+      "version": null
+    },
+    {
+      "path": "skill-studies/sweeping-stale-references/cases/discovery-shiv/fixture/build-support/release/example.mk",
+      "sha256": "86ac526d9ace11f8b57f687405a624f444883daca264fdd0233bde3c9495478f",
+      "version": null
+    },
+    {
+      "path": "skill-studies/sweeping-stale-references/cases/discovery-shiv/fixture/docs/api.rst",
+      "sha256": "036167d0f5966793b803ff046f766a1791c73055c22e01a06f5b53524aeed14d",
+      "version": null
+    },
+    {
+      "path": "skill-studies/sweeping-stale-references/cases/discovery-shiv/fixture/docs/cli-reference.rst",
+      "sha256": "02e63e0d50cab6430a20b606f8e3cf5e0462eca27d479c709220d345c691a727",
+      "version": null
+    },
+    {
+      "path": "skill-studies/sweeping-stale-references/cases/discovery-shiv/fixture/docs/conf.py",
+      "sha256": "b0898d831aa506a256e5341307224623697840f60dbae6d1726323f9634acc47",
+      "version": null
+    },
+    {
+      "path": "skill-studies/sweeping-stale-references/cases/discovery-shiv/fixture/docs/django.rst",
+      "sha256": "799dfd7e4953a0f433bd7db601bcdf6722bf80bebe655bf221f34ada3d130acc",
+      "version": null
+    },
+    {
+      "path": "skill-studies/sweeping-stale-references/cases/discovery-shiv/fixture/docs/history.rst",
+      "sha256": "266f3d9ee1931a24220fc3dcefd528ee8ec50db06e4a9b756e2ccc5b65cb0416",
+      "version": null
+    },
+    {
+      "path": "skill-studies/sweeping-stale-references/cases/discovery-shiv/fixture/docs/history/output-option.md",
+      "sha256": "180cd8de06e37447361817e4a8f8b63f88b3284052bd3343f9658990fc8ba2dd",
+      "version": null
+    },
+    {
+      "path": "skill-studies/sweeping-stale-references/cases/discovery-shiv/fixture/docs/index.rst",
+      "sha256": "601d3a6474aeea208ebf93942693218d194b68523d5a073da9ee3abc6d0dc246",
+      "version": null
+    },
+    {
+      "path": "skill-studies/sweeping-stale-references/cases/discovery-shiv/fixture/docs/local-development.md",
+      "sha256": "855a1fe24ac49a15bf3f0ea91b53275d3cdb9e840a0c467551b4a31e223c4597",
+      "version": null
+    },
+    {
+      "path": "skill-studies/sweeping-stale-references/cases/discovery-shiv/fixture/docs/requirements.txt",
+      "sha256": "246ffce391aac05c672f3147e1700e0873a7bf9803edfca9f117b5ac481428a0",
+      "version": null
+    },
+    {
+      "path": "skill-studies/sweeping-stale-references/cases/discovery-shiv/fixture/examples/greeting/greeting.py",
+      "sha256": "3528bce06a8a9e5688db6ae66fb855d6ff3801719febdae807cf5382dba4bbab",
+      "version": null
+    },
+    {
+      "path": "skill-studies/sweeping-stale-references/cases/discovery-shiv/fixture/logo.png",
+      "sha256": "88c1586d81e59d542ce713ea86af61056a19017e327ef56beccdc0cda5f3bd42",
+      "version": null
+    },
+    {
+      "path": "skill-studies/sweeping-stale-references/cases/discovery-shiv/fixture/pyproject.toml",
+      "sha256": "af994ae6dd72855f580e9d00e47ea090a2dd1ed59aab9717031b5ab8b0d1f360",
+      "version": null
+    },
+    {
+      "path": "skill-studies/sweeping-stale-references/cases/discovery-shiv/fixture/scripts/build-example.sh",
+      "sha256": "6010392d5ea945fe222a7bb92198add78080c8d0d6e729e568a94fe2f5578246",
+      "version": null
+    },
+    {
+      "path": "skill-studies/sweeping-stale-references/cases/discovery-shiv/fixture/setup.cfg",
+      "sha256": "06de07a65a140ccad8c53ba50b67904b888783708e5af66b46b74e17408b8f2d",
+      "version": null
+    },
+    {
+      "path": "skill-studies/sweeping-stale-references/cases/discovery-shiv/fixture/src/shiv/__init__.py",
+      "sha256": "5f71229de526a25004a276666d8329d66f4b65b3a9a2993aac8ab67d18f59ea6",
+      "version": null
+    },
+    {
+      "path": "skill-studies/sweeping-stale-references/cases/discovery-shiv/fixture/src/shiv/__main__.py",
+      "sha256": "b580391f6327b070c168dd948a316367ff92e5e6f6a20066404c1de761723aac",
+      "version": null
+    },
+    {
+      "path": "skill-studies/sweeping-stale-references/cases/discovery-shiv/fixture/src/shiv/__version__.py",
+      "sha256": "2c6550c83b1689f7400a8eeacedc1bf115961ddb3513bb90f99a83f12023cb0e",
+      "version": null
+    },
+    {
+      "path": "skill-studies/sweeping-stale-references/cases/discovery-shiv/fixture/src/shiv/bootstrap/__init__.py",
+      "sha256": "2aad2a71f8de656e583665b9e7f3e9cf66e4d4b0092a29bcfa1f6670fc740ed8",
+      "version": null
+    },
+    {
+      "path": "skill-studies/sweeping-stale-references/cases/discovery-shiv/fixture/src/shiv/bootstrap/environment.py",
+      "sha256": "6e6044c53889f81523b4e7f78e3d38cf24f6784748491e89b323b8400d507a05",
+      "version": null
+    },
+    {
+      "path": "skill-studies/sweeping-stale-references/cases/discovery-shiv/fixture/src/shiv/bootstrap/filelock.py",
+      "sha256": "b72de8da60c7f373cf13a76583897e0a5e51a69a75b629fd00d5ca55bc64bb9d",
+      "version": null
+    },
+    {
+      "path": "skill-studies/sweeping-stale-references/cases/discovery-shiv/fixture/src/shiv/bootstrap/interpreter.py",
+      "sha256": "1bcaf5d4e0afd7ab50066901316b10d1746bf1ae003b3b62ed2d8fdda5444e02",
+      "version": null
+    },
+    {
+      "path": "skill-studies/sweeping-stale-references/cases/discovery-shiv/fixture/src/shiv/builder.py",
+      "sha256": "e497fdc4b9b4093e05e4ffcbe8ff9a3e6a5f3912b7f33a9c3aaa3926dad623be",
+      "version": null
+    },
+    {
+      "path": "skill-studies/sweeping-stale-references/cases/discovery-shiv/fixture/src/shiv/cli.py",
+      "sha256": "71304522859c6769f398ee445a18f664aec47ee1ca5108ccea4af885f11157ff",
+      "version": null
+    },
+    {
+      "path": "skill-studies/sweeping-stale-references/cases/discovery-shiv/fixture/src/shiv/constants.py",
+      "sha256": "9684ca65ec3e47fd9e5bef97430f5fa0549ef979fd28e6b5a3883d40838a570e",
+      "version": null
+    },
+    {
+      "path": "skill-studies/sweeping-stale-references/cases/discovery-shiv/fixture/src/shiv/info.py",
+      "sha256": "d1515db4f3e9dceae06b8a6584c271ceaf535783cd05cc4c2b0f8bf024987723",
+      "version": null
+    },
+    {
+      "path": "skill-studies/sweeping-stale-references/cases/discovery-shiv/fixture/src/shiv/pip.py",
+      "sha256": "46c6e4dd95e855d9359993bbbc8993789ec557a4e4605c3e7ac0cd2b2cbb07bd",
+      "version": null
+    },
+    {
+      "path": "skill-studies/sweeping-stale-references/cases/discovery-shiv/fixture/test/conftest.py",
+      "sha256": "859bfefefa2d40b28fa26a132cf03ad7278c092e8ba6f6e4c476d116b929f70b",
+      "version": null
+    },
+    {
+      "path": "skill-studies/sweeping-stale-references/cases/discovery-shiv/fixture/test/package/hello/__init__.py",
+      "sha256": "1e8d5b8a6839487a4211229f69b76a5f901515dcad7f111a4bdd5b30d9e96020",
+      "version": null
+    },
+    {
+      "path": "skill-studies/sweeping-stale-references/cases/discovery-shiv/fixture/test/package/hello/script.sh",
+      "sha256": "e0f99a6f14e11b85ef604445e24e11d7193a3f0a8fed3d1964880088017f9b1a",
+      "version": null
+    },
+    {
+      "path": "skill-studies/sweeping-stale-references/cases/discovery-shiv/fixture/test/package/setup.py",
+      "sha256": "2e27bfca1ad8526d1524d8d47a8f605f887879d44a54699cfeae88377899eabe",
+      "version": null
+    },
+    {
+      "path": "skill-studies/sweeping-stale-references/cases/discovery-shiv/fixture/test/test.zip",
+      "sha256": "bc13cd033733495bef6b26eaf91723a68e1e2b7ae5f10f8f3f51e93de16a2a85",
+      "version": null
+    },
+    {
+      "path": "skill-studies/sweeping-stale-references/cases/discovery-shiv/fixture/test/test_bootstrap.py",
+      "sha256": "68bf6ec5e406cf89e9ac086e5bee51c8cdcee9c1415df1a78c08cfcf04bf1da7",
+      "version": null
+    },
+    {
+      "path": "skill-studies/sweeping-stale-references/cases/discovery-shiv/fixture/test/test_builder.py",
+      "sha256": "da9bd4d61625a748e73a0ad6be795f0dd6381e90fc3f255d0023aaf9444f5fb8",
+      "version": null
+    },
+    {
+      "path": "skill-studies/sweeping-stale-references/cases/discovery-shiv/fixture/test/test_cli.py",
+      "sha256": "fc774be230dec2b86a7417534b63819e94abee106cc9a8a3197ec52e589086d4",
+      "version": null
+    },
+    {
+      "path": "skill-studies/sweeping-stale-references/cases/discovery-shiv/fixture/test/test_pip.py",
+      "sha256": "ce08b0360dfb8ba3b181a5926b06708743ef06bca612e8405a856b9df74da98d",
+      "version": null
+    },
+    {
+      "path": "skill-studies/sweeping-stale-references/cases/discovery-shiv/fixture/tests_local/test_offline.py",
+      "sha256": "50ed9a0297dd4b12f307088b9af07edc3f2118679983e4c4c6793b253532b2fe",
+      "version": null
+    },
+    {
+      "path": "skill-studies/sweeping-stale-references/cases/discovery-shiv/fixture/tools/inventory.py",
+      "sha256": "ffe5679bd0e57cb6f9374ef532289c7f25da591718e663f5f5d1bbf75648cb05",
+      "version": null
+    },
+    {
+      "path": "skill-studies/sweeping-stale-references/cases/discovery-shiv/fixture/tools/shiv-local.py",
+      "sha256": "dbf1c57b62c2d9f4798b35f21a3848c3d0395b93314aabc2f0a279e969131517",
+      "version": null
+    },
+    {
+      "path": "skill-studies/sweeping-stale-references/cases/discovery-shiv/fixture/tox.ini",
+      "sha256": "a439ff52735d0cfaad3b189c09e4093111754cf8c1f55eb260c1bee01d955caa",
+      "version": null
+    },
+    {
+      "path": "skill-studies/sweeping-stale-references/cases/discovery-shiv/prompt-claude.md",
+      "sha256": "2ab1012e470f5ad978d8f758c974e31b8a6276831cf1eee2527011322deb26b1",
+      "version": null
+    },
+    {
+      "path": "skill-studies/sweeping-stale-references/cases/discovery-shiv/prompt-control.md",
+      "sha256": "17438b8155af2ff3ba779ff39eee0426aa7d0783fec006ce6519dfebce18447f",
+      "version": null
+    },
+    {
+      "path": "skill-studies/sweeping-stale-references/cases/discovery-shiv/prompt-original.md",
+      "sha256": "6695cbb23cfd7d8656a122b2e9ea4ba35fdea581f7a15780e146d84a0732b588",
+      "version": null
+    },
+    {
+      "path": "skill-studies/sweeping-stale-references/cases/discovery-shiv/task.md",
+      "sha256": "3bde5fcae36c79fd49315fc569d73a7573d4c438583ccc6f3df0b8cdca788feb",
+      "version": null
+    },
+    {
+      "path": "skill-studies/sweeping-stale-references/cases/skill-candidate-comprehensive/SKILL.md",
+      "sha256": "15992341f7ab2fb1e4d8a775092199d7d4e6a9de1167895dbe5a805aeafbd38c",
+      "version": null
+    },
+    {
+      "path": "skill-studies/sweeping-stale-references/cases/skill-original/SKILL.md",
+      "sha256": "d6812c33cae026807bbb3ebe851d93b60b513dd87ea5efd98aea28f5c02f9157",
+      "version": null
+    }
+  ],
+  "controller_only": [
+    {
+      "path": "skill-studies/sweeping-stale-references/cases/discovery-shiv/check_consumers.py",
+      "sha256": "6321209f5fe8503c2d4d716a200a4808f57d6cd0ecd8324c459392a6f5f44cee",
+      "version": null
+    },
+    {
+      "path": "skill-studies/sweeping-stale-references/cases/discovery-shiv/expected.json",
+      "sha256": "e8fd0949749b5ca69aefec2a5268038ed5d9749771d9c0f3c32e3f1918aa6a52",
+      "version": null
+    },
+    {
+      "path": "skill-studies/sweeping-stale-references/cases/discovery-shiv/preparation.json",
+      "sha256": "ad29273d5ef1202b795a3dff109a903f085eb15609c3828450059593c7a71e79",
+      "version": null
+    },
+    {
+      "path": "skill-studies/sweeping-stale-references/cases/discovery-shiv/qualification.json",
+      "sha256": "68ad58447213977eab041c4342223ed4993ac4e3def5b9f1b0cfdcd9359670cd",
+      "version": null
+    },
+    {
+      "path": "skill-studies/sweeping-stale-references/cases/discovery-shiv/source-provenance.json",
+      "sha256": "02980cf582c48e83ce5f34452b4575f17ff84b5aa97a67baedb4c8d5f0ea3b6d",
+      "version": null
+    },
+    {
+      "path": "skill-studies/sweeping-stale-references/cases/discovery-shiv/test_check_consumers.py",
+      "sha256": "76973500c28bf5a01db741078352185c1c62c20109ae699e928886a297ec3af3",
+      "version": null
+    }
+  ]
+}
