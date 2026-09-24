@@ -1,8 +1,8 @@
 # SSR comprehensive rewrite comparison proposal
 
-Status: proposed allocation for owner decision; no model calls authorized by this document.
-Existing subject allocation is exhausted at 56 calls.
-The original and existing comprehensive rewrite are the only proposed conditions; this is comparative effectiveness and invocation testing, not a new no-skill contribution study.
+Status: owner-approved 34-call scope; the protocol’s comprehensive-comparison-02 section owns dispatch authority.
+The prior 56 calls are spent; the subject ceiling is now 90.
+The original and existing comprehensive rewrite are the only selected conditions; this is comparative effectiveness and invocation testing, not a new no-skill contribution study.
 The [preparation](invocation-pressure-preparation.md) owns the case designs and the [qualification](native-discovery-qualification.md) owns native-runtime evidence and its limits.
 
 ## Scope and allocation
@@ -18,11 +18,11 @@ The [preparation](invocation-pressure-preparation.md) owns the case designs and 
 Two repetitions retain the earlier comparison's modest variability check; the obviously unrelated sanity task gets one per condition because it supports a narrow claim.
 Large-sweep-account remains an optional reporting diagnostic and is not repeated here; its baseline already isolates accounting, which is not the selected new question.
 No controls, retries, replacements, evaluator calls or authoring calls are allocated.
-Approval would raise the combined subject ceiling from 56 to 90 for this batch only.
-Proposed runtime: Codex 0.156.0, gpt-5.6-sol, low effort, workspace-write, 900-second per-attempt timeout; pin the executable and final runner revision at freeze.
-Proposed time guideline: 180 active minutes (25 freeze/preflight, 65 model wait, 65 retention/assessment, 25 review/reporting); actual time is reported, not treated as additional call authority.
+Approval raises the combined subject ceiling from 56 to 90 for this batch only.
+Selected runtime: Codex 0.156.0, gpt-5.6-sol, low effort, workspace-write, 900-second per-attempt timeout; pin the executable and final runner revision at freeze.
+Time guideline: 180 active minutes (25 freeze/preflight, 65 model wait, 65 retention/assessment, 25 review/reporting); actual time is reported, not treated as additional call authority.
 
-## Fixed proposed order
+## Fixed order
 
 Execute sequentially in the listed case order: discovery-shiv, moved-guide, semantic-delivery, initiating-change, local-change, pressure-repair, invocation-change, invocation-review.
 For each case run original repetition 1, candidate repetition 1, candidate repetition 2, original repetition 2.
@@ -45,7 +45,7 @@ No numerical adoption threshold substitutes for owner judgment.
 
 ## Before dispatch
 
-After allocation acceptance, materialize and byte-check all conditions, verify the candidate against the comprehensive worktree, freeze manifests/configurations/cards/policies and commit invocation authority.
+Before dispatch, materialize and byte-check all conditions, verify the candidate against the comprehensive worktree, freeze manifests/configurations/cards/policies and commit invocation authority.
 Run collection readiness and installed-policy preflight for the pinned CLI, including the login-shell check and Shiv fixture compatibility.
 Retain catalogs on actual production sessions; scripted qualification alone cannot establish model selection.
 The Claude documentation cross-check informs a possible later provider comparison; it adds no Claude calls to this proposal.

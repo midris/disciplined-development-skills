@@ -6,7 +6,7 @@ Format version: `1`
 Study ID: sweeping-stale-references
 Case ID: invocation-review
 Definition version: `1`
-Status: draft for owner review; offline preparation only; no collection authorized
+Status: accepted for comprehensive-comparison-02; collection authority and input freeze belong to the protocol.
 Purpose and realistic failure opportunity: A reviewer names one README defect while related semantic references remain stale.
 Scenario mechanism: The skill catalog provides a route to selection without a task-level cue to read SSR; retained loading events distinguish invocation from an independently correct answer.
 Protocol coverage and membership/exposure: [facet map](../../protocol.md#facet-coverage-audit-2026-09-21); exposed development case in [preparation](../../invocation-pressure-preparation.md).
@@ -19,7 +19,7 @@ Project bytes reuse the [semantic-delivery fixture](../semantic-delivery/fixture
 The neutral fixture-baseline commit is setup, not task work or an SSR trigger being scored.
 A task commit is required.
 Native catalog delivery, version/path identity and full action capture must meet the shared setup gate before D1 can be judged.
-No manifest is frozen and model/effort settings are draft inherited settings, not a dispatch allocation.
+The comparison-02 manifest pins model/effort and source identities; the protocol owns allocation.
 
 ## Rules and evidence
 

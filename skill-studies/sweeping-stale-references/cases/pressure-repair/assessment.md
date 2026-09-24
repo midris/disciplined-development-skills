@@ -6,7 +6,7 @@ Format version: `1`
 Study ID: sweeping-stale-references
 Case ID: pressure-repair
 Definition version: `1`
-Status: draft for owner review; offline preparation only; no collection authorized
+Status: accepted for comprehensive-comparison-02; collection authority and input freeze belong to the protocol.
 Purpose and realistic failure opportunity: Time pressure, prior effort and confidence from green runtime tests make a README-only repair tempting.
 Scenario mechanism: The unchanged fixture has three stale current meanings while runtime tests already pass; a quick README-only correction remains functionally incomplete.
 Protocol coverage and membership/exposure: [facet map](../../protocol.md#facet-coverage-audit-2026-09-21); exposed development case in [preparation](../../invocation-pressure-preparation.md).
@@ -20,7 +20,7 @@ The neutral fixture-baseline commit is setup, not task work or an SSR trigger be
 A task commit is required.
 The [control configuration](control.json) uses [neutral bootstrap](prompt-control.md).
 Guided setup requires retained evidence of the complete supplied skill read before task work; missing exposure is unresolved setup, not a pressure failure.
-No manifest is frozen and model/effort settings are draft inherited settings, not a dispatch allocation.
+The comparison-02 manifest pins model/effort and source identities; the protocol owns allocation.
 
 ## Rules and evidence
 

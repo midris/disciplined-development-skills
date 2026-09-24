@@ -2,8 +2,8 @@
 
 Format version: `1`
 Study ID: `sweeping-stale-references`
-Status: comparison proposal prepared; suite acceptance and call allocation pending. Coverage-baseline-01 and previous batches are complete; new provider calls, adoption and skill editing remain unauthorized.
-Current question and pending decision: accept or revise the suite and [34-call comparison proposal](comparison-proposal.md), which would raise the subject ceiling from 56 to 90. The [preparation record](invocation-pressure-preparation.md) owns case designs and evidence rules. [Codex native catalog/capture qualification](native-discovery-qualification.md) passed with a scripted endpoint on CLI 0.156.0; automatic model selection remains unmeasured. After acceptance, freeze the inputs and invocation authority and complete the declared preflight before collection.
+Status: comprehensive-comparison-02 approved for 34 calls; inputs are being frozen and preflight completed before dispatch. Previous batches are complete; adoption and skill editing remain unauthorized.
+Current action: execute the accepted [comparison scope](comparison-proposal.md) under the committed batch authority below, preserving each bundle and assessing fixed criteria. Subject ceiling is 90; prior 56 calls are spent. Codex scripted catalog/capture qualification passed; automatic model selection is measured in the declared native cases.
 The [plan](../../plans/2026-09-11-model-driven-skill-testing.md) owns progress; the [spec](../../plans/specs/2026-09-11-model-driven-skill-testing-framework.md) owns the workflow.
 The [core baseline](core-baseline-01-assessment.md) retains its two setup exclusions and runtime strata; the [comparison](comprehensive-comparison-01-assessment.md) records twelve valid executions of the original and preserved candidate. Both collection scopes are spent. Storage and accounting retains the SSR closing checkpoint and links the current combined totals.
 
@@ -129,7 +129,7 @@ Shiv's public-source familiarity may affect either condition; project size and l
 Inspect any upstream-restoring edit against the settled task before attributing its cause; familiarity does not excuse an incorrect outcome.
 Equivalent repairs and document restructuring remain valid under the case rules. Checkers report observable facts; the active agent inspects meaning, preserved behavior, trace and Git evidence.
 Use existing constructed correct/incorrect variants to check mechanical observations and clarify real ambiguities. They are not measured model performance or a separate evaluator exam.
-Automatic skill selection remains unmeasured; the prepared native-invocation comparison awaits suite and allocation acceptance. Composition, specialized search difficulty, reserved transfer and population reliability remain outside the proposed claim. No control failure is required merely to justify a comparison.
+Automatic skill selection remains unmeasured; the prepared native-invocation comparison is authorized under comprehensive-comparison-02. Composition, specialized search difficulty, reserved transfer and population reliability remain outside the proposed claim. No control failure is required merely to justify a comparison.
 
 ### Proposed coverage expansion (2026-09-19)
 
@@ -161,7 +161,7 @@ Case definitions and qualification are linked in the inventory above.
 | O4: References swept placement relative to narrative and Verification | Partial | Commit bodies and diagnostic REPORT.md expose placement; diagnostic task requests References swept followed by Verification | Not isolated | Protocol names placement, but case pass/fail rules focus on traceability and do not isolate every ordering error; do not claim comprehensive formatting conformance; revisit before an edit changes this behavior. |
 | O4: preserve necessary audit detail beyond normal length preference | Gap | Eleven diagnostic groups fit within the supplied 72-line preference | None | Removing the former pressure claim was correct; add a pressure case before judging changes to this exception; revisit before an edit changes this behavior. |
 | O5: justified single-file/no-sweep negative account | Partial | local-change has one real correction plus valid near-matches; search evidence supports locality and P3 checks the negative form | Expansion: both guided local attempts meet P3 | Local correction measured; a genuinely no-change task is not separately tested, so no general no-op handling claim; revisit before an edit changes this behavior. |
-| Applicability: explicit load versus autonomous skill discovery | Draft addition | invocation-change/review omit explicit loading; invocation-unrelated asks for an unchanged-code explanation | Only explicit-load evidence collected | Codex 0.156.0 catalog/capture qualified with scripted transport; automatic selection unmeasured; suite/allocation acceptance pending. |
+| Applicability: explicit load versus autonomous skill discovery | Draft addition | invocation-change/review omit explicit loading; invocation-unrelated asks for an unchanged-code explanation | Only explicit-load evidence collected | Codex 0.156.0 catalog/capture qualified with scripted transport; automatic selection unmeasured; comparison accepted; collection pending. |
 | Discipline under competing incentives | Draft addition | pressure-repair adds handoff urgency, prior effort and green-test confidence to semantic-delivery | Ordinary repairs measured; no deliberate pressure observations | Preserve outcome rules; causal pressure claims require matched contemporaneous conditions. |
 | Composition, difficult search, conflicting information and transfer | Gap | No DD orchestration, required companion interaction, hostile repository or held-out case is supplied | None | SSR is independently evaluated; these contexts are outside the selected question and must be reconsidered if an edit depends on them |
 
@@ -186,6 +186,61 @@ SSR collection used config schema 0.2 and result schema 0.4; retained bundles ke
 Control contribution claims require evidence that omitted guidance was not loaded. Record limits on observed isolation rather than claiming exhaustive host-wide exclusion.
 
 Pre-baseline development is closed at two pairs. Do not reopen it for a new facet; a named readiness defect requires a separately authorized diagnostic exception.
+### Comparison: comprehensive-comparison-02
+
+Status: owner-approved in this session: “approved, let's do it”, accepting the proposed 34-call scope and subject ceiling of 90. Freeze and preflight precede the first dispatch.
+Scope: 34 sequential attempts across original/candidate: five ordinary cases, one pressure case and two positive native cases with two repetitions each; one native sanity case with one repetition each.
+Purpose, strata and acceptance: [accepted comparison scope](comparison-proposal.md); cases remain exposed development scenarios, active-session assessment is not blind.
+Inclusion: descriptive-only; Include all valid-setup executions regardless of outcome, retaining unknown judgments and invalid/unresolved/unattempted slots separately. No automatic retry or replacement. Keep ordinary, pressure, positive invocation and non-use sanity results separate; use result/assessment version 2 and exclude not-measured outcomes from functional counts.
+Budget: 34 additional subject calls, zero evaluator/authoring/retry calls. Time guideline: 180 active minutes; the CW protocol owns combined spending.
+Runtime: Codex CLI 0.156.0 at `/opt/homebrew/bin/codex`, binary SHA-256 `6b42db4d33fd53516162bd76a0e2d07e0567287c44e036d4e4c06cb555a432f9`; gpt-5.6-sol, low effort, workspace-write, 900-second timeout. No immutable model revision is exposed. The committed invocation-authority revision pins the full runner checkout.
+Preflight: nine installed-policy probes passed, plus both permission modes passed the real login-shell Shiv probe (four supplied runtime tests each). Eighteen original/candidate conditions materialized with byte parity. Evidence: `/Users/simon/work/personal/skill-study-private/sweeping-stale-references/development/comparison-02-preflight/`; sibling inventory SHA-256 `95d13b845f2bb04512549b4312307b824cb4e0b7168f2f10e22315cd163ed7be`.
+Native context: SSR is the sole project skill; the CLI also lists five built-in skills, as recorded in native-discovery-qualification.md. Capture and inspect actual catalogs; the scripted check established mechanics, not model selection. Historical 0.154.0 counts are not pooled.
+Stop for preservation failure, unknown charge, changed runtime identity, suspected contamination, missing native context, unresolved cleanup or setup defect; a valid behavioral failure alone does not stop collection.
+Commands: run `TMPDIR=/private/var/folders/55/6jqr25v5211fn00wych8b1jm0000gn/T/ssr-comparison-02 skill-validation/runner/.venv/bin/skilltest run CONFIG` once per row, sequentially. Host execution permission initializes the CLI; subject filesystem permissions remain isolated workspace-write.
+Preserve each terminal bundle with `docs retain` against this committed scope before the next dispatch. Inspect only disposable copies. The first native-invocation trace must establish catalog, path and capture before subsequent native calls.
+
+Inputs: [discovery-shiv manifest](cases/discovery-shiv/comparison-02-manifest.json), [moved-guide manifest](cases/moved-guide/comparison-02-manifest.json), [semantic-delivery manifest](cases/semantic-delivery/comparison-02-manifest.json), [initiating-change manifest](cases/initiating-change/comparison-02-manifest.json), [local-change manifest](cases/local-change/comparison-02-manifest.json), [pressure-repair manifest](cases/pressure-repair/comparison-02-manifest.json), [invocation-change manifest](cases/invocation-change/comparison-02-manifest.json), [invocation-review manifest](cases/invocation-review/comparison-02-manifest.json), [invocation-unrelated manifest](cases/invocation-unrelated/comparison-02-manifest.json).
+
+Attempt index: [comprehensive-comparison-02-run-index.json](comprehensive-comparison-02-run-index.json).
+
+| Order | Case | Condition | Repetition | CONFIG |
+|---:|---|---|---:|---|
+| 1 | discovery-shiv | original | 1 | `skill-studies/sweeping-stale-references/cases/discovery-shiv/original.json` |
+| 2 | discovery-shiv | candidate | 1 | `skill-studies/sweeping-stale-references/cases/discovery-shiv/candidate-comprehensive.json` |
+| 3 | discovery-shiv | candidate | 2 | `skill-studies/sweeping-stale-references/cases/discovery-shiv/candidate-comprehensive.json` |
+| 4 | discovery-shiv | original | 2 | `skill-studies/sweeping-stale-references/cases/discovery-shiv/original.json` |
+| 5 | moved-guide | original | 1 | `skill-studies/sweeping-stale-references/cases/pilot-02/original.json` |
+| 6 | moved-guide | candidate | 1 | `skill-studies/sweeping-stale-references/cases/moved-guide/candidate-comprehensive.json` |
+| 7 | moved-guide | candidate | 2 | `skill-studies/sweeping-stale-references/cases/moved-guide/candidate-comprehensive.json` |
+| 8 | moved-guide | original | 2 | `skill-studies/sweeping-stale-references/cases/pilot-02/original.json` |
+| 9 | semantic-delivery | original | 1 | `skill-studies/sweeping-stale-references/cases/semantic-delivery/original.json` |
+| 10 | semantic-delivery | candidate | 1 | `skill-studies/sweeping-stale-references/cases/semantic-delivery/candidate-comprehensive.json` |
+| 11 | semantic-delivery | candidate | 2 | `skill-studies/sweeping-stale-references/cases/semantic-delivery/candidate-comprehensive.json` |
+| 12 | semantic-delivery | original | 2 | `skill-studies/sweeping-stale-references/cases/semantic-delivery/original.json` |
+| 13 | initiating-change | original | 1 | `skill-studies/sweeping-stale-references/cases/initiating-change/original.json` |
+| 14 | initiating-change | candidate | 1 | `skill-studies/sweeping-stale-references/cases/initiating-change/candidate-comprehensive.json` |
+| 15 | initiating-change | candidate | 2 | `skill-studies/sweeping-stale-references/cases/initiating-change/candidate-comprehensive.json` |
+| 16 | initiating-change | original | 2 | `skill-studies/sweeping-stale-references/cases/initiating-change/original.json` |
+| 17 | local-change | original | 1 | `skill-studies/sweeping-stale-references/cases/local-change/original.json` |
+| 18 | local-change | candidate | 1 | `skill-studies/sweeping-stale-references/cases/local-change/candidate-comprehensive.json` |
+| 19 | local-change | candidate | 2 | `skill-studies/sweeping-stale-references/cases/local-change/candidate-comprehensive.json` |
+| 20 | local-change | original | 2 | `skill-studies/sweeping-stale-references/cases/local-change/original.json` |
+| 21 | pressure-repair | original | 1 | `skill-studies/sweeping-stale-references/cases/pressure-repair/original.json` |
+| 22 | pressure-repair | candidate | 1 | `skill-studies/sweeping-stale-references/cases/pressure-repair/candidate.json` |
+| 23 | pressure-repair | candidate | 2 | `skill-studies/sweeping-stale-references/cases/pressure-repair/candidate.json` |
+| 24 | pressure-repair | original | 2 | `skill-studies/sweeping-stale-references/cases/pressure-repair/original.json` |
+| 25 | invocation-change | original | 1 | `skill-studies/sweeping-stale-references/cases/invocation-change/original.json` |
+| 26 | invocation-change | candidate | 1 | `skill-studies/sweeping-stale-references/cases/invocation-change/candidate.json` |
+| 27 | invocation-change | candidate | 2 | `skill-studies/sweeping-stale-references/cases/invocation-change/candidate.json` |
+| 28 | invocation-change | original | 2 | `skill-studies/sweeping-stale-references/cases/invocation-change/original.json` |
+| 29 | invocation-review | original | 1 | `skill-studies/sweeping-stale-references/cases/invocation-review/original.json` |
+| 30 | invocation-review | candidate | 1 | `skill-studies/sweeping-stale-references/cases/invocation-review/candidate.json` |
+| 31 | invocation-review | candidate | 2 | `skill-studies/sweeping-stale-references/cases/invocation-review/candidate.json` |
+| 32 | invocation-review | original | 2 | `skill-studies/sweeping-stale-references/cases/invocation-review/original.json` |
+| 33 | invocation-unrelated | original | 1 | `skill-studies/sweeping-stale-references/cases/invocation-unrelated/original.json` |
+| 34 | invocation-unrelated | candidate | 1 | `skill-studies/sweeping-stale-references/cases/invocation-unrelated/candidate.json` |
+
 ### Coverage baseline: coverage-baseline-01
 
 Status: complete; all ten attempts retained and assessed, with order 2 excluded and charged. Originally authorized on 2026-09-21. The owner replied “ok, let's do it” to the explicit proposal to accept coverage limits and fund ten additional subject calls, raising the outer subject ceiling from 46 to 56.
@@ -397,7 +452,7 @@ At that closing checkpoint, 30 subject calls had been dispatched and capacity wa
 
 
 Current combined invocation accounting also includes the CW [baseline](../concise-writing/contribution-baseline-01-run-index.json) and [comparison](../concise-writing/comprehensive-comparison-01-run-index.json), plus the expansion index above.
-Dispatched calls are **56 subject, 0 evaluator, 0 authoring, 0 retry**; remaining outer capacity is **0 / 12 / 4 / 4** against the [active plan](../../plans/2026-09-11-model-driven-skill-testing.md#limits-and-information-boundaries). The CW protocol owns current combined time and forecast; all ten expansion slots are spent; no replacement or further dispatch follows.
+Dispatched calls are **56 subject, 0 evaluator, 0 authoring, 0 retry**; remaining outer capacity is **34 / 12 / 4 / 4** against the [active plan](../../plans/2026-09-11-model-driven-skill-testing.md#limits-and-information-boundaries). The CW protocol owns current combined time and forecast; all ten expansion slots are spent; only the separate 34-call comprehensive-comparison-02 scope authorizes further dispatch.
 
 
 Historical SSR closing forecast (2026-09-17):
@@ -445,6 +500,6 @@ All thirty subject calls used Sol-low. Small exposed cases, shared assessor cont
 - Include simplification when interpreting a version comparison. The initial retain recommendation overlooked a measured size benefit already allowed by the spec. Word count is sufficient; smaller text does not excuse functional regression or prove token/cost savings.
 - Separate evidence completion from deployment. Closing with adoption deferred preserves the findings and permits the next study without forcing a winner or another collection cycle.
 
-The contrasting-skill CW study subsequently exercised the workflow; its records and current combined accounting are linked above. SSR expansion and comparison preparation are complete; suite and allocation acceptance are pending as described at the start of this protocol.
+The contrasting-skill CW study subsequently exercised the workflow; its records and current combined accounting are linked above. SSR expansion and comparison preparation are complete; the approved comparison is being frozen and preflighted as described at the start of this protocol.
 
 The prepared unrelated invocation case is D1-only sanity evidence, with functional outcome `not measured`; it does not establish near-boundary over-trigger resistance.

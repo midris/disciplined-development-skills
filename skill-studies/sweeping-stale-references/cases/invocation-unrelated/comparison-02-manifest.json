@@ -1,0 +1,152 @@
+{
+  "format_version": "1",
+  "manifest_id": "ssr-invocation-unrelated-comparison-02",
+  "study_id": "sweeping-stale-references",
+  "case_id": "invocation-unrelated",
+  "status": "draft",
+  "created_at": "2026-09-23",
+  "source_revision": "",
+  "authorities": {
+    "spec": {
+      "path": "plans/specs/2026-09-11-model-driven-skill-testing-framework.md",
+      "sha256": "3ef6a6def5201983aec2a6345ed962c7fede6ef12474c8876269f60528403083",
+      "version": null
+    },
+    "protocol": {
+      "path": "skill-studies/sweeping-stale-references/protocol.md",
+      "sha256": "1a51a7bd9ebdbedc8a7129d0eb651f544715e138ab9e82c7cdcf9bee03b470f6",
+      "version": "1"
+    },
+    "format_contract": {
+      "path": "skill-studies/formats/companion-formats.md",
+      "sha256": "e9956447d56e22f4ffc8681dfee887a9093c845c54be625098d45fecacd48781",
+      "version": "1"
+    },
+    "execution_result_schema": {
+      "path": "skill-studies/formats/execution-result-v2.schema.json",
+      "sha256": "81902ed03e807804404c0d6ba7a0092a1c311c9eef45ee88c89708ce50d7c2c2",
+      "version": "2"
+    },
+    "policy": {
+      "path": "skill-studies/sweeping-stale-references/assessment-policies/SSR-assessment-3.txt",
+      "sha256": "5d057d11f678ae3fa63c48957446aded13ccc5dcb8babab2856d0232d49e08bb",
+      "version": "SSR-assessment-3"
+    },
+    "criteria": [
+      {
+        "path": "skill-studies/sweeping-stale-references/cases/invocation-unrelated/assessment.md",
+        "sha256": "b4895f0a6874ab56b3f1537ce8085f06defcb74e6424b8b2b068398d4a5edd65",
+        "version": "2"
+      }
+    ]
+  },
+  "conditions": [
+    {
+      "id": "original",
+      "configuration": {
+        "path": "skill-studies/sweeping-stale-references/cases/invocation-unrelated/original.json",
+        "sha256": "8aff72c6c79d5044a542913fa200ae67ca2d3b19433a2bac1f5e17a3149d7b30",
+        "version": "0.2"
+      },
+      "target_skill": "skill-studies/sweeping-stale-references/cases/skill-original/SKILL.md"
+    },
+    {
+      "id": "candidate",
+      "configuration": {
+        "path": "skill-studies/sweeping-stale-references/cases/invocation-unrelated/candidate.json",
+        "sha256": "1b8859a17b21d9d35d9f89550fa4bcfc83ee60f44fd3628c50d09743b32ac966",
+        "version": "0.2"
+      },
+      "target_skill": "skill-studies/sweeping-stale-references/cases/skill-candidate-comprehensive/SKILL.md"
+    }
+  ],
+  "subject_sources": [
+    {
+      "path": "skill-studies/sweeping-stale-references/cases/initiating-change/fixture/.gitignore",
+      "sha256": "f6b4553712a7e85344204a512f685b41ab572796d6293e7e0b5737a525e0d456",
+      "version": null
+    },
+    {
+      "path": "skill-studies/sweeping-stale-references/cases/initiating-change/fixture/README.md",
+      "sha256": "e1973f3af6490a611eb92059576e03d7bcfb726298d220f83e57369af6410c78",
+      "version": null
+    },
+    {
+      "path": "skill-studies/sweeping-stale-references/cases/initiating-change/fixture/archive/rollout-2024.md",
+      "sha256": "a2354de6353bc947ef4914633f37ac7c5d19833734f505358d77483558fca264",
+      "version": null
+    },
+    {
+      "path": "skill-studies/sweeping-stale-references/cases/initiating-change/fixture/config/defaults.json",
+      "sha256": "39173e527c02bb8051ec44867f13777a70bd956a47a94a9a041eea2b12da9828",
+      "version": null
+    },
+    {
+      "path": "skill-studies/sweeping-stale-references/cases/initiating-change/fixture/docs/session-policy.md",
+      "sha256": "6d5fe8c33e0fef06a6734d4aca5d40f29e26ca6c1f7b64b4fb93708e7e2efa76",
+      "version": null
+    },
+    {
+      "path": "skill-studies/sweeping-stale-references/cases/initiating-change/fixture/scripts/show-session.py",
+      "sha256": "815923fcce071b2f077fc76b972d193e8ee88611b9f1418f64cd9d9f36a4f331",
+      "version": null
+    },
+    {
+      "path": "skill-studies/sweeping-stale-references/cases/initiating-change/fixture/src/session.py",
+      "sha256": "26b396a47f08e7312600c59e759c570e3e8e9888207e238e4755b8018cfae248",
+      "version": null
+    },
+    {
+      "path": "skill-studies/sweeping-stale-references/cases/initiating-change/fixture/tests/test_session.py",
+      "sha256": "d092547b68039f16d231e5b11297c277f21cf91623b5db2cd1301730f35ea10b",
+      "version": null
+    },
+    {
+      "path": "skill-studies/sweeping-stale-references/cases/initiating-change/fixture/vendor/partner/README.md",
+      "sha256": "45940528ad7f26ca62ed012f4b9d5c7c3f99a4e761f418b033e2267810d83197",
+      "version": null
+    },
+    {
+      "path": "skill-studies/sweeping-stale-references/cases/initiating-change/fixture/vendor/partner/example.json",
+      "sha256": "33fbf6018f8b275d3c286f93903484ed67bbe83d291d698a88f7316bfe85ff24",
+      "version": null
+    },
+    {
+      "path": "skill-studies/sweeping-stale-references/cases/invocation-unrelated/prompt.md",
+      "sha256": "45d5cf63913783881609bbb63d214566981888dbc2eaa63a3a11d7608c4fc1ee",
+      "version": null
+    },
+    {
+      "path": "skill-studies/sweeping-stale-references/cases/invocation-unrelated/task.md",
+      "sha256": "5908ead635cc09109290d58d20e67678cf1102e7afd74ff25e41e4607a3c611e",
+      "version": null
+    },
+    {
+      "path": "skill-studies/sweeping-stale-references/cases/skill-candidate-comprehensive/SKILL.md",
+      "sha256": "15992341f7ab2fb1e4d8a775092199d7d4e6a9de1167895dbe5a805aeafbd38c",
+      "version": null
+    },
+    {
+      "path": "skill-studies/sweeping-stale-references/cases/skill-original/SKILL.md",
+      "sha256": "d6812c33cae026807bbb3ebe851d93b60b513dd87ea5efd98aea28f5c02f9157",
+      "version": null
+    }
+  ],
+  "controller_only": [
+    {
+      "path": "skill-studies/sweeping-stale-references/cases/initiating-change/assessment.md",
+      "sha256": "65ae85f2e0da6229898c00158c77895698f7479ee32fe77035b1020fdff00eaa",
+      "version": null
+    },
+    {
+      "path": "skill-studies/sweeping-stale-references/cases/initiating-change/expected.md",
+      "sha256": "be770c6e7a05bd72e9704a4ed3e385efe72be0f1cc89e7b96c584fa0e6d64331",
+      "version": null
+    },
+    {
+      "path": "skill-studies/sweeping-stale-references/invocation-pressure-preparation.md",
+      "sha256": "5238286f148b31f99f2b4a1af63f6277b8762f1bd89549bd23d296f6456c42b1",
+      "version": null
+    }
+  ]
+}

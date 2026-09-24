@@ -1,6 +1,6 @@
 # SSR invocation and pressure preparation
 
-Status: suite and comparison proposal prepared for owner acceptance; no provider calls or skill edits authorized.
+Status: suite accepted for comprehensive-comparison-02; the protocol owns the 34-call authority. No skill edits authorized.
 The [protocol](protocol.md) owns coverage and decisions; the [active plan](../../plans/2026-09-11-model-driven-skill-testing.md) owns progress.
 
 ## Questions and proposed cases
@@ -114,8 +114,8 @@ The unrelated expected answer is 1900 seconds, with no authored project change o
 The pressure comparison must retain the same project/task bytes across conditions; only target skill bytes and the explicit-read instruction differ for the optional control.
 
 The comparison proposal defines repetitions/order, allocation and acceptance rules; Codex catalog/capture qualification is complete with scripted transport.
-Owner suite/allocation acceptance, manifest freeze and collection preflight remain pending.
-Do not describe these drafts as collection-ready or spend the exhausted prior allocation.
+Owner suite/allocation acceptance is recorded; manifest freeze and collection preflight precede dispatch.
+Do not dispatch until manifest freeze and collection readiness pass; the new allocation does not reopen historical slots.
 Before collection, pin shared source fixtures, task/prompts, skill versions, these cards and policy identities; preserve prior manifests/results unchanged.
 Use the qualified private-shell/read-isolation setup; fresh provider/version checks must not silently replace historical execution identities.
 
@@ -160,5 +160,5 @@ The [runtime diagnosis](runtime-diagnosis.md) records the additional login-shell
 
 ## Proposed collection
 
-The [comparison proposal](comparison-proposal.md) specifies 34 calls, conditions, repetitions, order and reporting rules for owner allocation review.
+The [comparison proposal](comparison-proposal.md) specifies 34 calls, conditions, repetitions, order and reporting rules under the accepted allocation.
 The native catalog includes five built-in skills alongside the sole project skill; preserve that context rather than claiming a singleton catalog.

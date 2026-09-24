@@ -6,7 +6,7 @@ Format version: `1`
 Study ID: sweeping-stale-references
 Case ID: invocation-unrelated
 Definition version: `2`
-Status: draft for owner review; offline preparation only; no collection authorized
+Status: accepted for comprehensive-comparison-02; collection authority and input freeze belong to the protocol.
 Purpose and realistic failure opportunity: Sanity check for gross over-triggering: the agent might apply the sole available skill simply because it appears in the catalog.
 This task is far from both trigger clauses and is not a realistic near-boundary false-positive test.
 Scenario mechanism: The skill catalog provides a route to selection without a task-level cue to read SSR; retained loading events distinguish invocation from an independently correct answer.
@@ -20,7 +20,7 @@ Project bytes reuse the [initiating-change fixture](../initiating-change/fixture
 No subject baseline commit is requested; this avoids introducing a development action into a non-development task.
 A task commit is not requested; preserve the supplied tree.
 Native catalog delivery, version/path identity and full action capture must meet the shared setup gate before D1 can be judged.
-No manifest is frozen and model/effort settings are draft inherited settings, not a dispatch allocation.
+The comparison-02 manifest pins model/effort and source identities; the protocol owns allocation.
 
 ## Rules and evidence
 

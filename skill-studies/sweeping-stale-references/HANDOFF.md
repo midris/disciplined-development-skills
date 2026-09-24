@@ -9,7 +9,7 @@ This is navigation, not a duplicate progress or decision record.
 4. Follow the [formats](../formats/README.md) and [runner command guide](../../skill-validation/runner/README.md#study-documents) for mechanics; the historical worksheet is not current study authority.
 5. The [retrospective](../../reviews/2026-09-18-skill-testing-retrospective.md) identifies remaining discovery questions. The plan owns which one is selected next.
 
-Both prior comparisons and the SSR expanded baseline are complete; all 56 subject calls are spent. The current owner decision is suite acceptance and the proposed 34-call allocation (ceiling 56 to 90). Follow the protocol opening and active checklist for completed qualification and remaining freeze/preflight work.
+Both prior comparisons and the SSR expanded baseline are complete; all 56 subject calls are spent. The owner accepted the suite and 34-call allocation (ceiling 90); complete freeze/preflight, then execute the declared comparison. Follow the protocol opening and active checklist for completed qualification and remaining freeze/preflight work.
 Future collection needs its own scope and allocation and must use the qualified isolation/private-shell runtime; historical shared-temp commands are rejected. No retries or live skill edits follow automatically.
 Preserve settled scenarios, criteria and historical identities; do not derive a baseline from a candidate or rescore old records to continue.
 SSR's [core assessment](core-baseline-01-assessment.md) records an unresolved Shiv category boundary: its P3 counts are not three established skill defects and do not independently justify a rewrite.
@@ -18,5 +18,5 @@ Controller criteria, manifests and revealing evidence remain outside subject con
 The [external-review resolution](../../reviews/2026-09-23-ssr-runtime-and-preparation.md) records the prospective login-shell correction, planning-guideline readiness support, and unrelated-case downgrade to procedural sanity evidence.
 Run the installed login-shell qualification before future collection; prior isolation alone does not guarantee Homebrew Python.
 
-Next proposed scope: [34-call comparison](comparison-proposal.md), pending suite and allocation acceptance.
+Authorized scope: [34-call comparison](comparison-proposal.md); no retries or additional cases.
 [Codex scripted discovery qualification and Claude documentation cross-check](native-discovery-qualification.md) separate verified transport mechanics from unmeasured automatic selection.
