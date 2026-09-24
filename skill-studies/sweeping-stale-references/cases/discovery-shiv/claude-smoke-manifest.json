@@ -3,9 +3,9 @@
   "manifest_id": "ssr-discovery-shiv-claude-smoke-01",
   "study_id": "sweeping-stale-references",
   "case_id": "discovery-shiv",
-  "status": "draft",
+  "status": "frozen",
   "created_at": "2026-09-24",
-  "source_revision": "",
+  "source_revision": "266565dc8b254609000c83304e83c9490d19f534",
   "authorities": {
     "spec": {
       "path": "plans/specs/2026-09-11-model-driven-skill-testing-framework.md",
@@ -14,7 +14,7 @@
     },
     "protocol": {
       "path": "skill-studies/sweeping-stale-references/protocol.md",
-      "sha256": "79c638416c5781d268b5560749febfab5822f7d7a8afbc76c5a567ff80cc8f4a",
+      "sha256": "cec1eea690c24be288aa6fe8b429a52667b20a2be91261af4f239798d7e1330f",
       "version": "1"
     },
     "format_contract": {
