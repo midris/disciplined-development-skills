@@ -3,5 +3,476 @@
   "index_id": "ssr-claude-opus-invocation-01",
   "study_id": "sweeping-stale-references",
   "batch_id": "claude-opus-invocation-01",
-  "attempts": []
+  "attempts": [
+    {
+      "attempt_id": "claude-opus-invocation-01-invocation-change-original-1-1",
+      "case_id": "invocation-change",
+      "condition": "original",
+      "repetition": 1,
+      "attempt_number": 1,
+      "retry_of": null,
+      "manifest": {
+        "path": "skill-studies/sweeping-stale-references/cases/invocation-change/opus-invocation-manifest.json",
+        "sha256": "9acb7610934f9cc161c6112c7cc6cd862b8196dcecb22e4928773ea9929b51a3",
+        "version": "1",
+        "git_revision": "85c3fd707e9ce8e01f8006883a8e2e1cd63b011a"
+      },
+      "authorization": {
+        "artifact": {
+          "path": "skill-studies/sweeping-stale-references/protocol.md",
+          "sha256": "956d55f7abac76cc0e29aed59bda202245b415ec05002b2d0b12e7a89b03a399",
+          "version": "1",
+          "git_revision": "85c3fd707e9ce8e01f8006883a8e2e1cd63b011a"
+        },
+        "selector": "Batch: claude-opus-invocation-01; order 1"
+      },
+      "run_id": "20260924T174649673Z-ssr-opus-invocation-change-original-6b7841ac-d3b4-409f-ba70-346e090bd0f9-yc7ln4ib",
+      "allocation": {
+        "pool": "subject",
+        "charge": 1
+      },
+      "limitations": [],
+      "bundle": {
+        "path": "/Users/simon/work/personal/skill-study-private/sweeping-stale-references/development/20260924T174649673Z-ssr-opus-invocation-change-original-6b7841ac-d3b4-409f-ba70-346e090bd0f9-yc7ln4ib",
+        "inventory": {
+          "path": "/Users/simon/work/personal/skill-study-private/sweeping-stale-references/development/20260924T174649673Z-ssr-opus-invocation-change-original-6b7841ac-d3b4-409f-ba70-346e090bd0f9-yc7ln4ib.inventory.json",
+          "sha256": "e3eb8051d884516ff92b8e06266a4304803ff3288f4050b25dbaaf47dba86083",
+          "version": "1"
+        },
+        "verified": true
+      },
+      "result": {
+        "result_id": "claude-opus-invocation-01-invocation-change-original-1",
+        "record": {
+          "path": "skill-studies/sweeping-stale-references/results/20260924T174649673Z-ssr-opus-invocation-change-original-6b7841ac-d3b4-409f-ba70-346e090bd0f9-yc7ln4ib.json",
+          "sha256": "d54fcde1f5b1b1d9a0a86579d470c42989425001a10dfd56f14873f527556ff3",
+          "version": "2",
+          "git_revision": "43ee494489f63a5ff4c999082905ff7401899cb1"
+        }
+      }
+    },
+    {
+      "attempt_id": "claude-opus-invocation-01-invocation-change-candidate-1-1",
+      "case_id": "invocation-change",
+      "condition": "candidate",
+      "repetition": 1,
+      "attempt_number": 1,
+      "retry_of": null,
+      "manifest": {
+        "path": "skill-studies/sweeping-stale-references/cases/invocation-change/opus-invocation-manifest.json",
+        "sha256": "9acb7610934f9cc161c6112c7cc6cd862b8196dcecb22e4928773ea9929b51a3",
+        "version": "1",
+        "git_revision": "85c3fd707e9ce8e01f8006883a8e2e1cd63b011a"
+      },
+      "authorization": {
+        "artifact": {
+          "path": "skill-studies/sweeping-stale-references/protocol.md",
+          "sha256": "956d55f7abac76cc0e29aed59bda202245b415ec05002b2d0b12e7a89b03a399",
+          "version": "1",
+          "git_revision": "85c3fd707e9ce8e01f8006883a8e2e1cd63b011a"
+        },
+        "selector": "Batch: claude-opus-invocation-01; order 2"
+      },
+      "run_id": "20260924T174739323Z-ssr-opus-invocation-change-candidate-ccf6243c-5549-405c-9961-63b6a7cf2902-zvf_n58h",
+      "allocation": {
+        "pool": "subject",
+        "charge": 1
+      },
+      "limitations": [],
+      "bundle": {
+        "path": "/Users/simon/work/personal/skill-study-private/sweeping-stale-references/development/20260924T174739323Z-ssr-opus-invocation-change-candidate-ccf6243c-5549-405c-9961-63b6a7cf2902-zvf_n58h",
+        "inventory": {
+          "path": "/Users/simon/work/personal/skill-study-private/sweeping-stale-references/development/20260924T174739323Z-ssr-opus-invocation-change-candidate-ccf6243c-5549-405c-9961-63b6a7cf2902-zvf_n58h.inventory.json",
+          "sha256": "6e3ad6c70393a89389b7c7939df8f8ca791a305c22e1d0f9ae1aab99452c5e11",
+          "version": "1"
+        },
+        "verified": true
+      },
+      "result": {
+        "result_id": "claude-opus-invocation-01-invocation-change-candidate-1",
+        "record": {
+          "path": "skill-studies/sweeping-stale-references/results/20260924T174739323Z-ssr-opus-invocation-change-candidate-ccf6243c-5549-405c-9961-63b6a7cf2902-zvf_n58h.json",
+          "sha256": "2ffedcf59f6c110c506ee84fb60ff20266e62d82efc04b8f126e428e54b60451",
+          "version": "2",
+          "git_revision": "43ee494489f63a5ff4c999082905ff7401899cb1"
+        }
+      }
+    },
+    {
+      "attempt_id": "claude-opus-invocation-01-invocation-change-candidate-2-1",
+      "case_id": "invocation-change",
+      "condition": "candidate",
+      "repetition": 2,
+      "attempt_number": 1,
+      "retry_of": null,
+      "manifest": {
+        "path": "skill-studies/sweeping-stale-references/cases/invocation-change/opus-invocation-manifest.json",
+        "sha256": "9acb7610934f9cc161c6112c7cc6cd862b8196dcecb22e4928773ea9929b51a3",
+        "version": "1",
+        "git_revision": "85c3fd707e9ce8e01f8006883a8e2e1cd63b011a"
+      },
+      "authorization": {
+        "artifact": {
+          "path": "skill-studies/sweeping-stale-references/protocol.md",
+          "sha256": "956d55f7abac76cc0e29aed59bda202245b415ec05002b2d0b12e7a89b03a399",
+          "version": "1",
+          "git_revision": "85c3fd707e9ce8e01f8006883a8e2e1cd63b011a"
+        },
+        "selector": "Batch: claude-opus-invocation-01; order 3"
+      },
+      "run_id": "20260924T174818033Z-ssr-opus-invocation-change-candidate-4f6d9de7-5b19-4c9a-b36a-9ea0fd6d2a71-52k5pqnj",
+      "allocation": {
+        "pool": "subject",
+        "charge": 1
+      },
+      "limitations": [],
+      "bundle": {
+        "path": "/Users/simon/work/personal/skill-study-private/sweeping-stale-references/development/20260924T174818033Z-ssr-opus-invocation-change-candidate-4f6d9de7-5b19-4c9a-b36a-9ea0fd6d2a71-52k5pqnj",
+        "inventory": {
+          "path": "/Users/simon/work/personal/skill-study-private/sweeping-stale-references/development/20260924T174818033Z-ssr-opus-invocation-change-candidate-4f6d9de7-5b19-4c9a-b36a-9ea0fd6d2a71-52k5pqnj.inventory.json",
+          "sha256": "4a0f3361a91cae36b37ac050d1c6451efd685029e1970072dd0f82c3a64dd93b",
+          "version": "1"
+        },
+        "verified": true
+      },
+      "result": {
+        "result_id": "claude-opus-invocation-01-invocation-change-candidate-2",
+        "record": {
+          "path": "skill-studies/sweeping-stale-references/results/20260924T174818033Z-ssr-opus-invocation-change-candidate-4f6d9de7-5b19-4c9a-b36a-9ea0fd6d2a71-52k5pqnj.json",
+          "sha256": "3ce86f189a5ce0757d2ed967541ec434dc219ac374622b750fee5cc14e7aaac5",
+          "version": "2",
+          "git_revision": "43ee494489f63a5ff4c999082905ff7401899cb1"
+        }
+      }
+    },
+    {
+      "attempt_id": "claude-opus-invocation-01-invocation-change-original-2-1",
+      "case_id": "invocation-change",
+      "condition": "original",
+      "repetition": 2,
+      "attempt_number": 1,
+      "retry_of": null,
+      "manifest": {
+        "path": "skill-studies/sweeping-stale-references/cases/invocation-change/opus-invocation-manifest.json",
+        "sha256": "9acb7610934f9cc161c6112c7cc6cd862b8196dcecb22e4928773ea9929b51a3",
+        "version": "1",
+        "git_revision": "85c3fd707e9ce8e01f8006883a8e2e1cd63b011a"
+      },
+      "authorization": {
+        "artifact": {
+          "path": "skill-studies/sweeping-stale-references/protocol.md",
+          "sha256": "956d55f7abac76cc0e29aed59bda202245b415ec05002b2d0b12e7a89b03a399",
+          "version": "1",
+          "git_revision": "85c3fd707e9ce8e01f8006883a8e2e1cd63b011a"
+        },
+        "selector": "Batch: claude-opus-invocation-01; order 4"
+      },
+      "run_id": "20260924T174910601Z-ssr-opus-invocation-change-original-d070415a-c4db-40eb-b3a8-0058be5b42c4-v18e2mi4",
+      "allocation": {
+        "pool": "subject",
+        "charge": 1
+      },
+      "limitations": [],
+      "bundle": {
+        "path": "/Users/simon/work/personal/skill-study-private/sweeping-stale-references/development/20260924T174910601Z-ssr-opus-invocation-change-original-d070415a-c4db-40eb-b3a8-0058be5b42c4-v18e2mi4",
+        "inventory": {
+          "path": "/Users/simon/work/personal/skill-study-private/sweeping-stale-references/development/20260924T174910601Z-ssr-opus-invocation-change-original-d070415a-c4db-40eb-b3a8-0058be5b42c4-v18e2mi4.inventory.json",
+          "sha256": "5ef8b0b9ed4a63ba82bed6e07187d744b45d9b6ceccf6ebee95d2dd7e5839802",
+          "version": "1"
+        },
+        "verified": true
+      },
+      "result": {
+        "result_id": "claude-opus-invocation-01-invocation-change-original-2",
+        "record": {
+          "path": "skill-studies/sweeping-stale-references/results/20260924T174910601Z-ssr-opus-invocation-change-original-d070415a-c4db-40eb-b3a8-0058be5b42c4-v18e2mi4.json",
+          "sha256": "4bfcb1762606bfe00689d4b0fe11b4d1af325550a15a35c5896dceec5fbbaebf",
+          "version": "2",
+          "git_revision": "43ee494489f63a5ff4c999082905ff7401899cb1"
+        }
+      }
+    },
+    {
+      "attempt_id": "claude-opus-invocation-01-invocation-review-original-1-1",
+      "case_id": "invocation-review",
+      "condition": "original",
+      "repetition": 1,
+      "attempt_number": 1,
+      "retry_of": null,
+      "manifest": {
+        "path": "skill-studies/sweeping-stale-references/cases/invocation-review/opus-invocation-manifest.json",
+        "sha256": "7a92055dbaf80782608d7d379666e3e3e7453f4b8bb39f76191ba646a109db81",
+        "version": "1",
+        "git_revision": "85c3fd707e9ce8e01f8006883a8e2e1cd63b011a"
+      },
+      "authorization": {
+        "artifact": {
+          "path": "skill-studies/sweeping-stale-references/protocol.md",
+          "sha256": "956d55f7abac76cc0e29aed59bda202245b415ec05002b2d0b12e7a89b03a399",
+          "version": "1",
+          "git_revision": "85c3fd707e9ce8e01f8006883a8e2e1cd63b011a"
+        },
+        "selector": "Batch: claude-opus-invocation-01; order 5"
+      },
+      "run_id": "20260924T174953518Z-ssr-opus-invocation-review-original-c17dff56-8c57-42ea-b6ee-eb7b92f25b7c-gij89gku",
+      "allocation": {
+        "pool": "subject",
+        "charge": 1
+      },
+      "limitations": [],
+      "bundle": {
+        "path": "/Users/simon/work/personal/skill-study-private/sweeping-stale-references/development/20260924T174953518Z-ssr-opus-invocation-review-original-c17dff56-8c57-42ea-b6ee-eb7b92f25b7c-gij89gku",
+        "inventory": {
+          "path": "/Users/simon/work/personal/skill-study-private/sweeping-stale-references/development/20260924T174953518Z-ssr-opus-invocation-review-original-c17dff56-8c57-42ea-b6ee-eb7b92f25b7c-gij89gku.inventory.json",
+          "sha256": "ae270cf0e68022fe894cfc0f0107f98368bf3d856874fb7ec6a97afb9d86c271",
+          "version": "1"
+        },
+        "verified": true
+      },
+      "result": {
+        "result_id": "claude-opus-invocation-01-invocation-review-original-1",
+        "record": {
+          "path": "skill-studies/sweeping-stale-references/results/20260924T174953518Z-ssr-opus-invocation-review-original-c17dff56-8c57-42ea-b6ee-eb7b92f25b7c-gij89gku.json",
+          "sha256": "2b22fe11bea83c405589f725ced4cf1f4dcd8d4bdd3a180c4b846dcb5afbc058",
+          "version": "2",
+          "git_revision": "43ee494489f63a5ff4c999082905ff7401899cb1"
+        }
+      }
+    },
+    {
+      "attempt_id": "claude-opus-invocation-01-invocation-review-candidate-1-1",
+      "case_id": "invocation-review",
+      "condition": "candidate",
+      "repetition": 1,
+      "attempt_number": 1,
+      "retry_of": null,
+      "manifest": {
+        "path": "skill-studies/sweeping-stale-references/cases/invocation-review/opus-invocation-manifest.json",
+        "sha256": "7a92055dbaf80782608d7d379666e3e3e7453f4b8bb39f76191ba646a109db81",
+        "version": "1",
+        "git_revision": "85c3fd707e9ce8e01f8006883a8e2e1cd63b011a"
+      },
+      "authorization": {
+        "artifact": {
+          "path": "skill-studies/sweeping-stale-references/protocol.md",
+          "sha256": "956d55f7abac76cc0e29aed59bda202245b415ec05002b2d0b12e7a89b03a399",
+          "version": "1",
+          "git_revision": "85c3fd707e9ce8e01f8006883a8e2e1cd63b011a"
+        },
+        "selector": "Batch: claude-opus-invocation-01; order 6"
+      },
+      "run_id": "20260924T175042449Z-ssr-opus-invocation-review-candidate-211aff49-259c-44e6-9b43-2e4603b4af72-ko2_vqgh",
+      "allocation": {
+        "pool": "subject",
+        "charge": 1
+      },
+      "limitations": [],
+      "bundle": {
+        "path": "/Users/simon/work/personal/skill-study-private/sweeping-stale-references/development/20260924T175042449Z-ssr-opus-invocation-review-candidate-211aff49-259c-44e6-9b43-2e4603b4af72-ko2_vqgh",
+        "inventory": {
+          "path": "/Users/simon/work/personal/skill-study-private/sweeping-stale-references/development/20260924T175042449Z-ssr-opus-invocation-review-candidate-211aff49-259c-44e6-9b43-2e4603b4af72-ko2_vqgh.inventory.json",
+          "sha256": "aeac25c489a99bef3f47d78bb981cba9809cfbc90451f5145a61bdf04cc55cb0",
+          "version": "1"
+        },
+        "verified": true
+      },
+      "result": {
+        "result_id": "claude-opus-invocation-01-invocation-review-candidate-1",
+        "record": {
+          "path": "skill-studies/sweeping-stale-references/results/20260924T175042449Z-ssr-opus-invocation-review-candidate-211aff49-259c-44e6-9b43-2e4603b4af72-ko2_vqgh.json",
+          "sha256": "70a2a0189c037cb695268f1a6179be3173c4d1f03611c3affdb46131fe499ed0",
+          "version": "2",
+          "git_revision": "43ee494489f63a5ff4c999082905ff7401899cb1"
+        }
+      }
+    },
+    {
+      "attempt_id": "claude-opus-invocation-01-invocation-review-candidate-2-1",
+      "case_id": "invocation-review",
+      "condition": "candidate",
+      "repetition": 2,
+      "attempt_number": 1,
+      "retry_of": null,
+      "manifest": {
+        "path": "skill-studies/sweeping-stale-references/cases/invocation-review/opus-invocation-manifest.json",
+        "sha256": "7a92055dbaf80782608d7d379666e3e3e7453f4b8bb39f76191ba646a109db81",
+        "version": "1",
+        "git_revision": "85c3fd707e9ce8e01f8006883a8e2e1cd63b011a"
+      },
+      "authorization": {
+        "artifact": {
+          "path": "skill-studies/sweeping-stale-references/protocol.md",
+          "sha256": "956d55f7abac76cc0e29aed59bda202245b415ec05002b2d0b12e7a89b03a399",
+          "version": "1",
+          "git_revision": "85c3fd707e9ce8e01f8006883a8e2e1cd63b011a"
+        },
+        "selector": "Batch: claude-opus-invocation-01; order 7"
+      },
+      "run_id": "20260924T175131339Z-ssr-opus-invocation-review-candidate-a889907e-020a-493e-b1f4-ce9566e39e40-00qoqqwf",
+      "allocation": {
+        "pool": "subject",
+        "charge": 1
+      },
+      "limitations": [],
+      "bundle": {
+        "path": "/Users/simon/work/personal/skill-study-private/sweeping-stale-references/development/20260924T175131339Z-ssr-opus-invocation-review-candidate-a889907e-020a-493e-b1f4-ce9566e39e40-00qoqqwf",
+        "inventory": {
+          "path": "/Users/simon/work/personal/skill-study-private/sweeping-stale-references/development/20260924T175131339Z-ssr-opus-invocation-review-candidate-a889907e-020a-493e-b1f4-ce9566e39e40-00qoqqwf.inventory.json",
+          "sha256": "69977b10b04113c64ce24bc79b069e39d9f3cfa417cfe902ee425b5ca81aea56",
+          "version": "1"
+        },
+        "verified": true
+      },
+      "result": {
+        "result_id": "claude-opus-invocation-01-invocation-review-candidate-2",
+        "record": {
+          "path": "skill-studies/sweeping-stale-references/results/20260924T175131339Z-ssr-opus-invocation-review-candidate-a889907e-020a-493e-b1f4-ce9566e39e40-00qoqqwf.json",
+          "sha256": "29861e7a15a36884941bec88840274848f856f57ccc996e594ea88c9a223a2a4",
+          "version": "2",
+          "git_revision": "43ee494489f63a5ff4c999082905ff7401899cb1"
+        }
+      }
+    },
+    {
+      "attempt_id": "claude-opus-invocation-01-invocation-review-original-2-1",
+      "case_id": "invocation-review",
+      "condition": "original",
+      "repetition": 2,
+      "attempt_number": 1,
+      "retry_of": null,
+      "manifest": {
+        "path": "skill-studies/sweeping-stale-references/cases/invocation-review/opus-invocation-manifest.json",
+        "sha256": "7a92055dbaf80782608d7d379666e3e3e7453f4b8bb39f76191ba646a109db81",
+        "version": "1",
+        "git_revision": "85c3fd707e9ce8e01f8006883a8e2e1cd63b011a"
+      },
+      "authorization": {
+        "artifact": {
+          "path": "skill-studies/sweeping-stale-references/protocol.md",
+          "sha256": "956d55f7abac76cc0e29aed59bda202245b415ec05002b2d0b12e7a89b03a399",
+          "version": "1",
+          "git_revision": "85c3fd707e9ce8e01f8006883a8e2e1cd63b011a"
+        },
+        "selector": "Batch: claude-opus-invocation-01; order 8"
+      },
+      "run_id": "20260924T175221372Z-ssr-opus-invocation-review-original-4a40e359-bc72-4ffd-a817-a8d44ec67527-2b8boa16",
+      "allocation": {
+        "pool": "subject",
+        "charge": 1
+      },
+      "limitations": [],
+      "bundle": {
+        "path": "/Users/simon/work/personal/skill-study-private/sweeping-stale-references/development/20260924T175221372Z-ssr-opus-invocation-review-original-4a40e359-bc72-4ffd-a817-a8d44ec67527-2b8boa16",
+        "inventory": {
+          "path": "/Users/simon/work/personal/skill-study-private/sweeping-stale-references/development/20260924T175221372Z-ssr-opus-invocation-review-original-4a40e359-bc72-4ffd-a817-a8d44ec67527-2b8boa16.inventory.json",
+          "sha256": "0c125cb86fa3e7993b0540278cfb0ae8f78a7dcb6d77e1fc86a12059fb4ec4ec",
+          "version": "1"
+        },
+        "verified": true
+      },
+      "result": {
+        "result_id": "claude-opus-invocation-01-invocation-review-original-2",
+        "record": {
+          "path": "skill-studies/sweeping-stale-references/results/20260924T175221372Z-ssr-opus-invocation-review-original-4a40e359-bc72-4ffd-a817-a8d44ec67527-2b8boa16.json",
+          "sha256": "bb6303aecde4ea47bbd8861918fdc4ee9e5eb56c5cdf55a6d224d532b0dbdd8e",
+          "version": "2",
+          "git_revision": "43ee494489f63a5ff4c999082905ff7401899cb1"
+        }
+      }
+    },
+    {
+      "attempt_id": "claude-opus-invocation-01-invocation-unrelated-original-1-1",
+      "case_id": "invocation-unrelated",
+      "condition": "original",
+      "repetition": 1,
+      "attempt_number": 1,
+      "retry_of": null,
+      "manifest": {
+        "path": "skill-studies/sweeping-stale-references/cases/invocation-unrelated/opus-invocation-manifest.json",
+        "sha256": "d9832bbd6cf73aa15a6e986e792060b7e81655cf6b26a417ef34109aae558070",
+        "version": "1",
+        "git_revision": "85c3fd707e9ce8e01f8006883a8e2e1cd63b011a"
+      },
+      "authorization": {
+        "artifact": {
+          "path": "skill-studies/sweeping-stale-references/protocol.md",
+          "sha256": "956d55f7abac76cc0e29aed59bda202245b415ec05002b2d0b12e7a89b03a399",
+          "version": "1",
+          "git_revision": "85c3fd707e9ce8e01f8006883a8e2e1cd63b011a"
+        },
+        "selector": "Batch: claude-opus-invocation-01; order 9"
+      },
+      "run_id": "20260924T175302229Z-ssr-opus-invocation-unrelated-original-f933766f-4b70-46ae-afb6-f061ab3f86e6-w_wdycch",
+      "allocation": {
+        "pool": "subject",
+        "charge": 1
+      },
+      "limitations": [],
+      "bundle": {
+        "path": "/Users/simon/work/personal/skill-study-private/sweeping-stale-references/development/20260924T175302229Z-ssr-opus-invocation-unrelated-original-f933766f-4b70-46ae-afb6-f061ab3f86e6-w_wdycch",
+        "inventory": {
+          "path": "/Users/simon/work/personal/skill-study-private/sweeping-stale-references/development/20260924T175302229Z-ssr-opus-invocation-unrelated-original-f933766f-4b70-46ae-afb6-f061ab3f86e6-w_wdycch.inventory.json",
+          "sha256": "084395b88df44e8bba397879db4cee1e5c915b21b858bf4287859a55dd902a6e",
+          "version": "1"
+        },
+        "verified": true
+      },
+      "result": {
+        "result_id": "claude-opus-invocation-01-invocation-unrelated-original-1",
+        "record": {
+          "path": "skill-studies/sweeping-stale-references/results/20260924T175302229Z-ssr-opus-invocation-unrelated-original-f933766f-4b70-46ae-afb6-f061ab3f86e6-w_wdycch.json",
+          "sha256": "fc65c16c5838a19f4957386051dd23e293a24e753b236ca9f51dfe2e04315d2d",
+          "version": "2",
+          "git_revision": "43ee494489f63a5ff4c999082905ff7401899cb1"
+        }
+      }
+    },
+    {
+      "attempt_id": "claude-opus-invocation-01-invocation-unrelated-candidate-1-1",
+      "case_id": "invocation-unrelated",
+      "condition": "candidate",
+      "repetition": 1,
+      "attempt_number": 1,
+      "retry_of": null,
+      "manifest": {
+        "path": "skill-studies/sweeping-stale-references/cases/invocation-unrelated/opus-invocation-manifest.json",
+        "sha256": "d9832bbd6cf73aa15a6e986e792060b7e81655cf6b26a417ef34109aae558070",
+        "version": "1",
+        "git_revision": "85c3fd707e9ce8e01f8006883a8e2e1cd63b011a"
+      },
+      "authorization": {
+        "artifact": {
+          "path": "skill-studies/sweeping-stale-references/protocol.md",
+          "sha256": "956d55f7abac76cc0e29aed59bda202245b415ec05002b2d0b12e7a89b03a399",
+          "version": "1",
+          "git_revision": "85c3fd707e9ce8e01f8006883a8e2e1cd63b011a"
+        },
+        "selector": "Batch: claude-opus-invocation-01; order 10"
+      },
+      "run_id": "20260924T175326875Z-ssr-opus-invocation-unrelated-candidate-1ac847a9-6167-4720-91f8-cab3c678d656-iwux2lgf",
+      "allocation": {
+        "pool": "subject",
+        "charge": 1
+      },
+      "limitations": [],
+      "bundle": {
+        "path": "/Users/simon/work/personal/skill-study-private/sweeping-stale-references/development/20260924T175326875Z-ssr-opus-invocation-unrelated-candidate-1ac847a9-6167-4720-91f8-cab3c678d656-iwux2lgf",
+        "inventory": {
+          "path": "/Users/simon/work/personal/skill-study-private/sweeping-stale-references/development/20260924T175326875Z-ssr-opus-invocation-unrelated-candidate-1ac847a9-6167-4720-91f8-cab3c678d656-iwux2lgf.inventory.json",
+          "sha256": "3b60acf61d04fb8fb0fd0d1b5dbb638ff482a478657473af110afadda8cb8c15",
+          "version": "1"
+        },
+        "verified": true
+      },
+      "result": {
+        "result_id": "claude-opus-invocation-01-invocation-unrelated-candidate-1",
+        "record": {
+          "path": "skill-studies/sweeping-stale-references/results/20260924T175326875Z-ssr-opus-invocation-unrelated-candidate-1ac847a9-6167-4720-91f8-cab3c678d656-iwux2lgf.json",
+          "sha256": "198d29874cf450335f6ca23592afcadfeb84cc9e94de39a2ecc4608bd4414d55",
+          "version": "2",
+          "git_revision": "43ee494489f63a5ff4c999082905ff7401899cb1"
+        }
+      }
+    }
+  ]
 }
