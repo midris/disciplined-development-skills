@@ -39,7 +39,7 @@ def test_actual_claude_startup_shell_and_skill_delivery(mode, monkeypatch):
     captured = []
     body = '# Qualification probe\n\nReport the marker QUALIFIED_BODY_7391.\n'
     description = 'Use when asked to run the qualification probe.'
-    probe = "command -v python3; python3 --version; command -v git; git --version\ncat <<'EOF'\nHEREDOC_QUALIFIED\nEOF\ngit ls-files --others --exclude-standard >/dev/null"
+    probe = "command -v python3; python3 --version; command -v git; git --version\ncat <<'EOF'\nHEREDOC_QUALIFIED\nEOF\ngit ls-files --others --exclude-standard >/dev/null\ngit check-attr --all -- probe.txt >/dev/null"
 
     class Handler(BaseHTTPRequestHandler):
         def log_message(self, *args):
@@ -104,6 +104,9 @@ def test_actual_claude_startup_shell_and_skill_delivery(mode, monkeypatch):
         (root/'workspace/evidence').mkdir()
         home = root/'home'
         home.mkdir()
+        (home/'.config/git').mkdir(parents=True)
+        (home/'.config/git/ignore').write_text('host-hidden.txt\n')
+        (home/'.config/git/attributes').write_text('*.txt host-marker\n')
         (home/'.claude.json').write_text('{"hasCompletedOnboarding":true,"userID":"surrogate"}')
         skill = fixture/'.claude/skills/qualification-probe/SKILL.md'
         skill.parent.mkdir(parents=True)

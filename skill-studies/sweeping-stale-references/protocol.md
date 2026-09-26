@@ -199,7 +199,7 @@ The [runner correction](../../reviews/2026-09-24-claude-runner-followups.md) now
 Complete evidence retention, fixed scores, assessments and accounting exist for every authorized attempt; the current ten batch readiness checks pass.
 The known accounting-category ambiguities remain disclosed and must be resolved prospectively if a proposed edit depends on them.
 No additional scenarios, model calls, skill edits or deployment are selected by this stocktake.
-The protocol opening owns the current decision; the active plan tracks runner follow-ups.
+The protocol opening owns the current decision; the active plan records the completed runner follow-ups.
 
 ## Execution scope and authorization
 

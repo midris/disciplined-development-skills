@@ -4,7 +4,7 @@ The three runner follow-ups from reviews 14 and 15 are implemented with zero mod
 SSR skill bodies, fixed scores and retained evidence are unchanged.
 
 - Default offline tests check private `TMPPREFIX`, `ZDOTDIR` and the generated PATH-restoring login profile in both permission modes. Temporarily removing each environment setting separately produced two failing tests; the source was restored afterward.
-- Claude's process environment now sets `core.excludesFile=/dev/null` through `GIT_CONFIG_COUNT`. The offline Git regression failed before the fix because a surrogate host ignore file hid a subject path; it passes afterward and still honors project `.gitignore`. No sandbox read grant changes.
+- Claude's process environment now sets `core.excludesFile=/dev/null` and `core.attributesFile=/dev/null` through `GIT_CONFIG_COUNT`. The offline Git regression failed before the fix because a surrogate host ignore file hid a subject path; it passes afterward and still honors project `.gitignore`. No sandbox read grant changes.
 - Final-answer extraction permits the three observed trailing system subtypes: `background_tasks_changed`, `task_updated` and `task_notification`. The bundle-level regression failed before the correction and passes afterward. Later assistant output, unknown trailing events, multiple results, malformed traces and unsuccessful results still prevent extraction. Raw stdout remains intact.
 
 Read-only replay of retained Sonnet comparison order 4 extracts its 988-byte answer and leaves the stdout SHA-256 unchanged.
@@ -12,10 +12,14 @@ No convenience file was added to that historical bundle and no observations were
 
 Verification:
 
-- Runner default suite: 471 passed. An initial run inside the outer sandbox produced six nested sandbox authentication-startup failures; the unchanged suite passed outside that outer sandbox.
+- Runner default suite: 472 passed. An initial run inside the outer sandbox produced six nested sandbox authentication-startup failures; the unchanged suite passed outside that outer sandbox.
 - Hook suite: 263 passed, 3 environment skips.
-- Actual Claude CLI and shared Claude isolation probes: 4 passed, 2 non-Claude probes deselected. Both permission modes pass; the scripted localhost endpoint uses no model inference. The shell probe now performs a Git ignore lookup and requires empty stderr, alongside Python/Git resolution and heredoc checks.
-- Focused runtime and bundle regression suite: 52 passed.
+- Actual Claude CLI and shared Claude isolation probes: 4 passed, 2 non-Claude probes deselected. Both permission modes pass; the scripted localhost endpoint uses no model inference. The shell probe seeds host ignore and attributes files before preparation, exercises both lookups, and requires exact stdout and empty stderr, alongside Python/Git resolution and heredoc checks.
+- Focused runtime suite: 22 passed.
+
+The 2026-09-26 external review exposed that the earlier installed ignore probe had no host ignore file, so its pass did not establish warning suppression. The strengthened probe fails in both modes with only the ignore override removed. Before the attributes correction, both modes also failed on the attributes warning, and the offline check-attr test showed host attributes affecting subject paths. With both overrides present, all four installed CLI/isolation checks pass. Claude routes these Git warnings into captured stdout, which the exact-output assertion rejects.
+
+The overrides also supersede repository-local values of the two configuration keys; project ignore and attribute files remain active. The offline test docstrings describe observable Git behavior, not enforcement of host-read isolation.
 
 The installed checks qualify the affected runtime controls, not production model behavior or authentication.
 Future model collection must still follow the study's pinned-runtime preflight requirements.

@@ -164,7 +164,7 @@ def test_private_login_profile_and_heredoc_environment(setup, mode):
 
 
 def test_git_ignores_host_exclusions_but_keeps_project_rules(tmp_path, setup, monkeypatch):
-    """Host ignore defaults must not hide subject files or require host reads."""
+    """Host ignore defaults must not hide subject files; project patterns still apply."""
     import subprocess
     home = tmp_path / 'host'
     (home / '.config/git').mkdir(parents=True)
@@ -186,6 +186,35 @@ def test_git_ignores_host_exclusions_but_keeps_project_rules(tmp_path, setup, mo
                                     env=env, text=True, capture_output=True)
             assert result.returncode == 0
             assert result.stdout.splitlines() == ['project-hidden.txt']
+            assert result.stderr == ''
+    finally:
+        runtime.cleanup()
+
+
+def test_git_ignores_host_attributes_but_keeps_project_attributes(tmp_path, setup, monkeypatch):
+    """Host attributes must not change subject paths; project attributes still apply."""
+    import subprocess
+    home = tmp_path / 'host'
+    (home / '.config/git').mkdir(parents=True)
+    (home / '.config/git/attributes').write_text('*.txt host-marker\n')
+    monkeypatch.setenv('HOME', str(home))
+    runtime = setup.type(lambda _: None)
+    try:
+        runtime.prepare(setup.workspace / 'fixture')
+        # Setup mocks process creation; exercise real Git against the prepared environment.
+        with monkeypatch.context() as real:
+            real.setattr(subprocess, 'Popen', REAL_POPEN)
+            git = real_which('git')
+            fixture = setup.workspace / 'fixture'
+            env = runtime.environment
+            subprocess.run([git, 'init', '--quiet', str(fixture)], env=env, check=True)
+            (fixture / '.gitattributes').write_text('*.txt project-marker\n')
+            result = subprocess.run([git, '-C', str(fixture), 'check-attr',
+                                     'host-marker', 'project-marker', '--', 'sample.txt'],
+                                    env=env, text=True, capture_output=True)
+            assert result.returncode == 0
+            assert result.stdout.splitlines() == [
+                'sample.txt: host-marker: unspecified', 'sample.txt: project-marker: set']
             assert result.stderr == ''
     finally:
         runtime.cleanup()

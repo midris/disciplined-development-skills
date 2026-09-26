@@ -382,14 +382,16 @@ Model-network connectivity remains available; this is study-input isolation, not
 Runtime and fixture directories must be outside HOME.
 Preparation rejects ambient instruction/configuration/skill entries in fixture ancestry.
 The shared installed-policy tests above exercise the boundary; repeat affected controls when CLI/runtime assumptions change.
-`SKILLTEST_SANDBOX_EVIDENCE_DIR=/absolute/new/evidence .venv/bin/python -m pytest -q acceptance/test_claude_cli.py` additionally tests the actual installed CLI in both permission modes: startup, Bash Python/Git selection, heredocs and warning-free Git ignore lookup, description delivery before Skill invocation and full body delivery afterward.
+`SKILLTEST_SANDBOX_EVIDENCE_DIR=/absolute/new/evidence .venv/bin/python -m pytest -q acceptance/test_claude_cli.py` additionally tests the actual installed CLI in both permission modes: startup, Bash Python/Git selection, heredocs and warning-free Git ignore and attribute lookups, description delivery before Skill invocation and full body delivery afterward.
 It uses surrogate authentication and a scripted localhost endpoint with external networking denied; it spends zero model calls and does not qualify production authentication or model selection.
 
 Authentication preflight runs that same resolved Claude executable under the same child policy.
 Status is inspected only in bounded memory, never logged or retained; no credentials are extracted or copied, no new login/logout occurs, and existing sessions are not manipulated.
 Authentication/control failures stop preparation rather than falling back to an uncontrolled launch.
 Git setup uses no templates, and inherited system/global Git settings are disabled both during setup and in the Claude environment.
-A process-local `core.excludesFile=/dev/null` override also disables Git’s default host ignore-file lookup while retaining repository ignore rules; authentication keeps the real HOME without granting reads to that ignore file.
+Process-local `core.excludesFile=/dev/null` and `core.attributesFile=/dev/null` overrides disable Git’s default host ignore and attribute lookups.
+These overrides take priority over repository-local values for those two configuration keys; `.gitignore`, `.git/info/exclude`, `.gitattributes` and `.git/info/attributes` still apply.
+Authentication keeps the real HOME without granting reads to the host ignore or attributes files.
 A fixture needing commits must provide its own test identity.
 
 Prepared-input hashes, model argv, setup/model time limits and owned-process cleanup use the same mechanics as Codex.
