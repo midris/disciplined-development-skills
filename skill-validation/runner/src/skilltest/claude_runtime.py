@@ -18,6 +18,9 @@ CLAUDE_ENV = {
     "DISABLE_AUTOUPDATER": "1", "DISABLE_TELEMETRY": "1", "DISABLE_ERROR_REPORTING": "1",
     "CLAUDE_CODE_MAX_RETRIES": "0", "CLAUDE_CODE_SKIP_PROMPT_HISTORY": "1",
     "GIT_CONFIG_NOSYSTEM": "1", "GIT_CONFIG_GLOBAL": os.devnull,
+    # Real HOME is required for authentication, not for global ignore rules.
+    "GIT_CONFIG_COUNT": "1", "GIT_CONFIG_KEY_0": "core.excludesFile",
+    "GIT_CONFIG_VALUE_0": os.devnull,
 }
 HOST_INPUTS = (
     "CLAUDE.md", "settings.json", "settings.local.json", "skills", "commands",

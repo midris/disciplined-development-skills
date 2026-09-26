@@ -4,6 +4,8 @@ import os
 from pathlib import Path
 from types import SimpleNamespace
 from unittest.mock import Mock
+from subprocess import Popen as REAL_POPEN
+from shutil import which as real_which
 
 import pytest
 
@@ -142,3 +144,48 @@ def test_home_containment_is_rejected_before_authentication(setup, monkeypatch, 
         setup.popen.assert_not_called()
     finally:
         assert runtime.cleanup() is None
+
+
+@pytest.mark.parametrize('mode', ['workspace-write', 'read-only'])
+def test_private_login_profile_and_heredoc_environment(setup, mode):
+    """Removing either setting lets zsh use host startup files or shared scratch."""
+    runtime = setup.type(lambda _: None, permissions=mode)
+    try:
+        runtime.prepare(setup.workspace / 'fixture')
+        env = runtime.environment
+        assert env['ZDOTDIR'] == str(runtime.root / 'tmp')
+        assert env['TMPPREFIX'] == str(runtime.root / 'tmp/zsh')
+        profile = Path(env['ZDOTDIR']) / '.zprofile'
+        assert profile.is_file()
+        import shlex
+        assert shlex.split(profile.read_text()) == ['export', 'PATH=' + env['PATH']]
+    finally:
+        runtime.cleanup()
+
+
+def test_git_ignores_host_exclusions_but_keeps_project_rules(tmp_path, setup, monkeypatch):
+    """Host ignore defaults must not hide subject files or require host reads."""
+    import subprocess
+    home = tmp_path / 'host'
+    (home / '.config/git').mkdir(parents=True)
+    (home / '.config/git/ignore').write_text('host-hidden.txt\n')
+    monkeypatch.setenv('HOME', str(home))
+    runtime = setup.type(lambda _: None)
+    try:
+        runtime.prepare(setup.workspace / 'fixture')
+        # Setup mocks process creation; use real Git only for this offline behavior check.
+        with monkeypatch.context() as real:
+            real.setattr(subprocess, 'Popen', REAL_POPEN)
+            git = real_which('git')
+            fixture = setup.workspace / 'fixture'
+            env = runtime.environment
+            subprocess.run([git, 'init', '--quiet', str(fixture)], env=env, check=True)
+            (fixture / '.gitignore').write_text('project-hidden.txt\n')
+            result = subprocess.run([git, '-C', str(fixture), 'check-ignore', '--stdin'],
+                                    input='host-hidden.txt\nproject-hidden.txt\n',
+                                    env=env, text=True, capture_output=True)
+            assert result.returncode == 0
+            assert result.stdout.splitlines() == ['project-hidden.txt']
+            assert result.stderr == ''
+    finally:
+        runtime.cleanup()

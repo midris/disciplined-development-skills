@@ -196,6 +196,11 @@ def test_result_publication_failure_removes_partial_file(build_config_case, prov
     (b"", None),
     (b'{"type":"result","subtype":"error_during_execution","is_error":true,"result":"error"}\n', None),
     (b'{"type":"result","subtype":"success","is_error":false,"result":"one"}\n{"type":"result","subtype":"success","is_error":false,"result":"two"}\n', None),
+    (b'{"type":"result","subtype":"success","is_error":false,"result":"answer"}\n{"type":"system","subtype":"background_tasks_changed","tasks":[]}\n{"type":"system","subtype":"task_updated","patch":{"status":"killed"}}\n{"type":"system","subtype":"task_notification","status":"stopped"}\n', b"answer"),
+    (b'{"type":"result","subtype":"success","is_error":false,"result":"answer"}\n{"type":"assistant","message":{"content":[]}}\n', None),
+    (b'{"type":"result","subtype":"success","is_error":false,"result":"answer"}\n{"type":"system","subtype":"init"}\n', None),
+    (b'{"type":"result","subtype":"success","is_error":false,"result":"answer"}\n{"type":"system","subtype":[]}\n', None),
+    (b'{"type":"result","subtype":"success","is_error":false,"result":"answer"}\n{"type":"system","subtype":{}}\n', None),
 ])
 def test_claude_trace_is_retained_and_only_unambiguous_final_is_extracted(build_config_case, provider_call, stdout, final):
     provider_call.return_value = ProviderResult("claude", True, exit_code=0, stdout_bytes=stdout)

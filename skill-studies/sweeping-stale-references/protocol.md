@@ -195,11 +195,11 @@ Retain observed statements and actions from existing traces, without inventing p
 Retest the affected fixed cases after an edit and check the map for any newly relevant gap. Pure cleanup with passing controls requires the explicit workflow reconciliation described by the spec; do not manufacture RED.
 
 Process follow-up: Sonnet order 4 exposed a missing convenience final.txt after background cleanup events; the complete final response remains in stdout and is already cited.
-A focused offline extractor regression/fix remains useful before relying on convenience files alone; no new model calls or reassessment are required for that issue, and it does not block the retained findings.
+The [runner correction](../../reviews/2026-09-24-claude-runner-followups.md) now extracts that answer in a read-only replay and covers ambiguous results offline; the retained bundle is unchanged, with no new model calls or reassessment.
 Complete evidence retention, fixed scores, assessments and accounting exist for every authorized attempt; the current ten batch readiness checks pass.
 The known accounting-category ambiguities remain disclosed and must be resolved prospectively if a proposed edit depends on them.
 No additional scenarios, model calls, skill edits or deployment are selected by this stocktake.
-The protocol opening owns the current decision; the active plan tracks deferred runner work.
+The protocol opening owns the current decision; the active plan tracks runner follow-ups.
 
 ## Execution scope and authorization
 

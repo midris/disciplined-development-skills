@@ -382,13 +382,14 @@ Model-network connectivity remains available; this is study-input isolation, not
 Runtime and fixture directories must be outside HOME.
 Preparation rejects ambient instruction/configuration/skill entries in fixture ancestry.
 The shared installed-policy tests above exercise the boundary; repeat affected controls when CLI/runtime assumptions change.
-`SKILLTEST_SANDBOX_EVIDENCE_DIR=/absolute/new/evidence .venv/bin/python -m pytest -q acceptance/test_claude_cli.py` additionally tests the actual installed CLI in both permission modes: startup, Bash Python/Git selection and heredocs, description delivery before Skill invocation and full body delivery afterward.
+`SKILLTEST_SANDBOX_EVIDENCE_DIR=/absolute/new/evidence .venv/bin/python -m pytest -q acceptance/test_claude_cli.py` additionally tests the actual installed CLI in both permission modes: startup, Bash Python/Git selection, heredocs and warning-free Git ignore lookup, description delivery before Skill invocation and full body delivery afterward.
 It uses surrogate authentication and a scripted localhost endpoint with external networking denied; it spends zero model calls and does not qualify production authentication or model selection.
 
 Authentication preflight runs that same resolved Claude executable under the same child policy.
 Status is inspected only in bounded memory, never logged or retained; no credentials are extracted or copied, no new login/logout occurs, and existing sessions are not manipulated.
 Authentication/control failures stop preparation rather than falling back to an uncontrolled launch.
 Git setup uses no templates, and inherited system/global Git settings are disabled both during setup and in the Claude environment.
+A process-local `core.excludesFile=/dev/null` override also disables Git’s default host ignore-file lookup while retaining repository ignore rules; authentication keeps the real HOME without granting reads to that ignore file.
 A fixture needing commits must provide its own test identity.
 
 Prepared-input hashes, model argv, setup/model time limits and owned-process cleanup use the same mechanics as Codex.
@@ -396,7 +397,9 @@ Unresolved processes retain their runtime path for manual handling; never remove
 The Claude runtime contains no copied credentials.
 
 `stdout.txt` retains the complete raw Claude trace and `stderr.txt` retains stderr.
-The runner writes `final.txt` only when one unambiguous successful terminal result supplies a text answer; an explicit empty successful answer is retained as an empty file.
+The runner writes `final.txt` only when one unambiguous successful result supplies a text answer; trailing system events are allowed only for `background_tasks_changed`, `task_updated` and `task_notification`.
+Later assistant output, unknown trailing events or multiple results prevent extraction; raw output is always retained.
+An explicit empty successful answer is retained as an empty file.
 Otherwise the final file is absent and `runner.log` records the extraction limitation.
 Malformed, missing or provider-reported error output does not fabricate a process error or a file-write failure.
 Mechanical completion and evidence validity remain distinct: inspect the raw trace before scoring or accepting the run.
