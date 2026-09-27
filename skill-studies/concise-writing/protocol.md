@@ -9,7 +9,7 @@ The owner-requested [preparation review and remediation](../../reviews/2026-09-2
 On 2026-09-27, the owner replied “approved, please continue” to the 104-call proposal: 72 ordinary calls followed by 32 native calls, raising the combined subject ceiling from 136 to 240.
 This authorizes both stages, runtime qualification, committed input/schedule freeze and collection after readiness, with zero automatic retries; it does not authorize a skill edit or adoption.
 The [preparation package](preparation/README.md) and [allocation forecast](testing-audit.md#proposed-sequence-and-allocation-forecast) define the approved scope.
-Current work: collect and assess the four approved batches in schedule order; expanded spending is 36/104.
+Current work: the [ordinary Codex assessment](codex-expanded-01-assessment.md) is complete; collect ordinary Claude next, then both native batches; expanded spending is 36/104.
 Both runtimes are qualified, all 16 manifests pin input revision `96b6e383da39ea807a6ad49d4513cfc1d6f4cd33`, and all four batches pass collection readiness.
 The manifest/authority commit must be recorded on each attempt before its dispatch.
 Establish and assess both providers' baselines before selecting CW edits; the existing rewrite remains an unchanged comparison condition.
@@ -228,6 +228,7 @@ The comparison preserves tested quality without demonstrating an overall output-
 
 ### Expanded collection: codex-expanded-01
 
+Results: [completed ordinary Codex assessment](codex-expanded-01-assessment.md), based on the [current attempt index](codex-expanded-01-run-index.json).
 Scope: 36 sequential attempts; codex, four ordinary tasks × three conditions × three repetitions.
 Authority: included in the owner-approved 104-call allocation recorded at the top of this protocol.
 Include all valid-setup executions regardless of outcome; report invalid/unresolved setup and unattempted slots separately.
@@ -490,9 +491,17 @@ The revised remaining forecast is:
 | Claude ordinary collection and assessment | 90 | 36 calls with preservation and assessment; update against observed Claude pace. |
 | Native collection and assessment | 80 | 32 calls, retained load-timing evidence and case-specific assessment. |
 | Final cross-provider review and reconciliation | 10 | Verify reports, accounting, coverage and next decision. |
-| **Remaining** | **180** | 68 approved calls remain; no fresh rewrite is included. |
+| **Total** | **180** | 68 approved calls remain; no fresh rewrite is included. |
 
 ## Results and decision
+
+Expanded ordinary Codex: [assessment and evidence](codex-expanded-01-assessment.md) records 36 valid attempts under CW-expanded-1.
+For A/B/C/E respectively, control passes 3/3, 2/3, 1/3 and 3/3; original passes 3/3, 3/3, 3/3 and 2/3; comprehensive passes 3/3 on all four.
+Every output meets F3; the four failed executions lose a responsibility, diagnostic rationale or contact-recording action.
+These small exposed-case counts do not establish a reliable ranking; Claude and native collection remain open under the approved schedule.
+The collection review corrected two B outcomes using the existing whole-document policy-4 precedent; no rules or calls changed.
+
+Historical baseline:
 
 The [batch assessment](contribution-baseline-01-assessment.md) records eight valid setups and all three required factors met in every output under CW-assessment-4.
 Original and control each pass 2/2 on Recommendation and 2/2 on Briefing, with no unknowns, retries, replacements or exclusions.
