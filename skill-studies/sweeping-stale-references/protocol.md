@@ -2,8 +2,8 @@
 
 Format version: `1`
 Study ID: `sweeping-stale-references`
-Status: comprehensive-comparison-02, Claude smoke, claude-comparison-01 and claude-opus-invocation-01 complete; all authorized attempts retained and assessed. Adoption and skill editing remain unauthorized; the owner accepts the rewrite’s changed local reporting as intentional.
-Current action: select a focused investigation of the logged invocation and reconciliation failures after the [testing/process stocktake](#testing-and-authoring-readiness-check-2026-09-24); no additional broad coverage campaign is required first. All 136 combined subject calls are spent; no further collection or skill edit is selected.
+Status: all authorized comparison batches are complete; the owner selected the comprehensive rewrite as the development base and accepts its changed local reporting. The original and tested rewrite snapshots remain preserved; no new skill version is adopted.
+Current action: follow the [CW protocol’s current action](../concise-writing/protocol.md) for the owner-selected first end-to-end study. Preserve the unvalidated SSR draft and its pending 15-call proposal; no SSR collection is scheduled. All 136 combined subject calls are spent.
 The [plan](../../plans/2026-09-11-model-driven-skill-testing.md) owns progress; the [spec](../../plans/specs/2026-09-11-model-driven-skill-testing-framework.md) owns the workflow.
 The [core baseline](core-baseline-01-assessment.md) retains its two setup exclusions and runtime strata; the [comparison](comprehensive-comparison-01-assessment.md) records twelve valid executions of the original and preserved candidate. Both collection scopes are spent. Storage and accounting retains the SSR closing checkpoint and links the current combined totals.
 
@@ -139,7 +139,7 @@ The [coverage proposal](coverage-expansion.md) adds an ordinary initiating chang
 The owner accepted and froze the three additions for coverage-baseline-01; its completed assessment and runtime amendments are recorded below. No skill authoring or adoption follows.
 The completed baseline and comparison remain unchanged. The new local-change case does not retroactively fill the collected scope’s gap.
 The [baseline question and design rationale](coverage-expansion.md#baseline-question-and-design-rationale) explain the eight original/control calls, optional two-call diagnostic, remaining uncertainty and triggers for further testing. The ten-call spending authority is recorded below.
-Current combined accounting remains in the CW protocol as linked below; CW scenario expansion is deferred while SSR is selected.
+Current combined accounting remains in the CW protocol as linked below; the opening current-action line identifies study priority.
 
 ### Facet coverage audit (2026-09-21)
 

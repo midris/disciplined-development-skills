@@ -3,6 +3,7 @@
 Format version: `1`
 Study ID: `concise-writing`
 Status: baseline and fixed-suite comprehensive comparison complete. Both versions pass 2/2 on each comparison case under policy 4; all eight comparison outputs are shorter than their sources. No overall quality advantage established. Adoption remains deferred; all approved calls are spent.
+Current action: CW is the first end-to-end testing/rewrite study, followed by SSR. The [testing audit](testing-audit.md) identifies coverage gaps and a staged Codex/Claude comparison of the unchanged original and existing rewrite before any fresh rewrite. Next, complete the proposed case inputs and review suite adequacy and the bounded allocation. Establish and assess baselines on both Codex and Claude before selecting any CW edits; the existing rewrite remains a frozen comparison condition. No additional subject calls or live skill edit are authorized.
 Plan: [active plan](../../plans/2026-09-11-model-driven-skill-testing.md#current-next-action)
 General spec: [testing framework](../../plans/specs/2026-09-11-model-driven-skill-testing-framework.md)
 
@@ -11,8 +12,8 @@ General spec: [testing framework](../../plans/specs/2026-09-11-model-driven-skil
 Original: [checked-in skill](../../skills/concise-writing/SKILL.md), preserved as [study original](cases/skill-original/SKILL.md), from Git `99b3302f047a9b000ff804292d8746dd8bf43e42`, SHA-256 `4d12a2eb475c6b2ef57e2300c8c07af3f59c1e07b2b82695a3b7669eee1d6d72`. Complete supplied text: 860 words by `wc -w`.
 Read the complete skill and its [composition map](../../ARCHITECTURE.md#composition-boundaries); relevant rationale and plan-writing companions were inspected for scope. The original snapshot matches its source bytes; it is not a new skill version.
 
-Owner’s intended use: turn existing agent output that is verbose or voluminous into concise, clear, effective material that is easier for the owner to consume. The selected scope is ordinary prose editing. This contrasts with SSR’s repository repairs and tests semantic assessment through the same session workflow.
-Use standalone prose editing first. Exclude skill/reference authoring as the skill does; defer plan/spec composition, generation of new decision rationale, externally referenced anchor changes, discovery and orchestration. These cases add dependencies without being needed to test the core editing behavior. Existing rationale in supplied prose must still survive.
+Owner’s intended use: turn existing agent output that is verbose or voluminous into concise, clear, effective material that is easier for the owner to consume. The completed batches cover ordinary prose editing. This contrasts with SSR’s repository repairs and tests semantic assessment through the same session workflow.
+The completed batches used standalone prose editing and excluded skill/reference authoring, plan/spec composition, generation of new decision rationale, externally referenced anchor changes, discovery and orchestration. Those cases were not needed to test the selected core editing behavior. The owner-selected end-to-end study and skill-editing use are prospective scope extensions; they do not broaden the claims of the completed batches. Existing rationale in supplied prose must still survive.
 Old CW frameworks, fixtures, rubrics and results remain superseded and were not used to define this contract. Historical reuse, if later selected, requires revalidation under the current spec.
 
 ## Behavioral contract and consumers
@@ -63,18 +64,39 @@ Selected coverage maps to the skill’s named patterns below. These are contextu
 | Over-sectioning | A: improve fragmented headings/lead-ins and reading order; permit multiple effective layouts. |
 | Unrequested elaboration | A: distinguish unrequested advice/speculation from supplied facts and useful explanation; do not introduce unsupported elaboration or remove decision-relevant information. |
 | Emphasis/hedge inflation | A: reduce empty emphasis and inflated qualifiers without weakening real uncertainty or important warnings. |
-| Closing recaps / navigation | B: preserve the useful decision recap or an equivalent orienting function. Long-document navigation is outside these short cases; no recap is mandatory in every edit. |
+| Closing recaps / navigation | Partial: B exercises a short decision recap, not long-document lookup. Proposed C adds separate entry points and useful repeated warnings; no recap is mandatory in every edit. |
 | Deliberate repetition | A and B: preserve reinforcement where a key point is useful in two reading contexts; do not demand identical wording or placement. |
 | Orienting context | A and B: preserve the connections a reader needs to follow the argument or sequence. |
 | Rationale | A and B: preserve supplied reasons and trade-offs; no requirement to invent a new decision rationale. |
-| Spec/plan completeness | Deferred with plan/spec composition; not silently covered by ordinary prose editing. |
+| Spec/plan completeness | Untested; defer full plan/spec composition while preserving the supplied requirements in proposed C/E/F. Revisit before claiming the lean-plan-writing interaction or changing that pairing. |
+| Draft and local/global comparison (O4) | Unscored historically. Prospectively record observed draft/comparison actions separately from F1–F3; absent trace evidence is unknown, not noncompliance. No particular diff tool or extra file is mandatory. |
+| Uncertainty handling (O5) | No qualifying observed uncertainty established. Proposed C includes an underexplained repeated warning; score keep-and-flag only if uncertainty is expressed, and never infer it from task difficulty. Report no opportunity when the editor resolves the ambiguity. |
+| Pressure and restraint | B exercises restraint without explicit deadline/sunk-effort pressure. Proposed C adds a realistic handoff deadline and prior line-level cleanup; it must not command removal of useful content or require a percentage cut. |
+| Native invocation and new prose | Untested: all historical skill runs explicitly load CW. Proposed N1/N2 test natural tightening and prose generation; N3 tests an adjacent non-prose change. Separate load timing, task quality and negative applicability. |
+| Claude and current runtime | Untested on Claude; historical Codex CLI 0.154.0 results remain separate. Repeat A/B and new C on both qualified runtimes with contemporaneous conditions. |
+| Skill additions and whole-skill overlap | Outside original applicability and historical coverage. Proposed E tests the owner's explicit extension with writing-skills fixed across conditions. Preserve useful reinforcement at distinct decision/output points. |
+| Skill compression and downstream use | Untested. Proposed F requires an observed-effective source and fresh downstream comparisons for emitted edits; textual equivalence alone cannot establish preserved agent behavior. |
+| Response-only/detailed-response boundary | Untested. Defer a separate response-only stratum; the rewrite changes this trigger boundary, so resolve intended applicability and test it before adopting that description. |
+| Anchor changes and full orchestration | Untested. Defer SSR anchor repair and DD orchestration because they add separate skills and attribution questions; revisit before changing those relationships. |
 
 Two accepted cases combine the existing facets. Both use newly constructed fictional prose, not observed agent outputs. Their current criterion cards apply three whole-document factors and record length separately. The [worked examples](qualification.md) demonstrate current pass/fail boundaries; they are neither independent validation nor model observations.
 
 | Case ID / definition | Membership | Covered obligations | Exposure | Limits |
 |---|---|---|---|---|
-| A: [agent-recommendation](cases/agent-recommendation/assessment.md) | selected | O1–O4; O5 only where observable | development | Reader needs the recommendation, reasons, caveats and next action. Include both purposeless restatement and useful reinforcement, plus separated duplication and a real structural difficulty. Cover other cut patterns only where they fit naturally. |
-| B: [effective-briefing](cases/effective-briefing/assessment.md) | selected | O1–O4; O5 only where observable | development | Useful context, explanation and repetition must not be damaged by unnecessary compression. An edit must retain the source’s effectiveness; unchanged length is acceptable and increased length is flagged. |
+| A: [agent-recommendation](cases/agent-recommendation/assessment.md) | completed; retain | O1–O3 assessed; O4/O5 unscored | development | Reader needs the recommendation, reasons, caveats and next action. Include both purposeless restatement and useful reinforcement, plus separated duplication and a real structural difficulty. Cover other cut patterns only where they fit naturally. |
+| B: [effective-briefing](cases/effective-briefing/assessment.md) | completed; retain | O1–O3 assessed; O4/O5 unscored | development | Useful context, explanation and repetition must not be damaged by unnecessary compression. An edit must retain the source’s effectiveness; unchanged length is acceptable and increased length is flagged. |
+
+Proposed additions below have no collected observations or frozen case definitions.
+The [audit](testing-audit.md#proposed-sequence-and-allocation-forecast) gives their sequence, evidence requirements and allocation forecast.
+
+| Proposed case | Distinct failure opportunity | Required evidence / boundary |
+| --- | --- | --- |
+| C: long operational handoff | A prior local cleanup still leaves scattered duplication; a deadline encourages deleting a warning repeated where different readers enter the procedure. | Whole-document F1–F3, lookups/action branches, conditional uncertainty observation, and process traces. Keep operational requirements and rationale; no mandatory reduction. |
+| N1: natural tightening | Reuse A without naming CW or directing a skill read; the model may edit successfully while skipping discovery. | Catalog/description delivery and full-body load timing, with A's outcome assessed separately. |
+| N2: produce a durable update | Turn factual notes into a reader-facing update without saying tighten/concise; the model may miss the writing trigger. | Frozen source-supported content and reader purpose, native load before prose production; no hidden style instruction in the task. |
+| N3: adjacent non-prose edit | Change a numeric setting beside explanatory comments; file proximity may prompt unnecessary CW loading or prose changes. | Invocation boundary and authorized edit only; exclude negative task scores from functional CW counts. |
+| E: integrate a skill addition | A new instruction overlaps existing guidance but adds a real missing behavior; blanket deduplication can erase useful point-of-use reinforcement. | Whole source/addition/output review plus downstream tasks, with writing-skills constant. This is explicit composition, not original native applicability. |
+| F: compress an effective skill | A shorter instruction retains apparent meaning while weakening a condition, exception or operational example. | Establish source behavior first; retain and exercise every emitted variant on fixed fresh downstream tasks. No successful-source claim for the unvalidated SSR draft. |
 
 The case cards describe each reader’s decision and purpose, without independently scoring source passages.
 Retained evidence includes complete source and output files and available execution traces.
@@ -160,7 +182,7 @@ The freeze extended criterion condition-applicability metadata to `candidate-com
 Inputs: [recommendation comparison manifest](cases/agent-recommendation/comparison-manifest.json) and [briefing comparison manifest](cases/effective-briefing/comparison-manifest.json) pin the approved inputs at full Git revision `8eac215c81415f47b07ee3f8e4a8fd984bdca63c`. Collection readiness passed before dispatch.
 Offline preparation verified exact candidate provenance and paired prompt/source/task/settings parity; baseline source, task, prompt, policy and example bytes are unchanged. Codex CLI 0.154.0 and its executable hash match baseline; runner execution code is unchanged. The invocation-authority commit is the full runner revision. Criterion definition 5 changes applicability/status metadata only; F1–F3 text remains policy 4.
 Evidence/index: [comparison attempt index](comprehensive-comparison-01-run-index.json) records all eight charged attempts, verified bundles and pinned results. The [comparison assessment](comprehensive-comparison-01-assessment.md) reports 2/2 passes per case/version, qualitative tradeoffs and length separately. The candidate produced longer outputs than the original in all four pairs, but every output is shorter than its source, so no longer-output flags apply.
-The comparison preserves tested quality without demonstrating an overall output-quality gain. The candidate passes the tested scope but combines behavior changes with cleanup: the [assessment](comprehensive-comparison-01-assessment.md#candidate-contract-changes) records O5 reporting removal, a narrower repetition exception, stricter explicitness and wider applicability. No revised target contract is accepted; retain the live original under the owner's deferred adoption decision. No new scenario, model pass, authoring or adoption is selected.
+The comparison preserves tested quality without demonstrating an overall output-quality gain. The candidate passes the tested scope but combines behavior changes with cleanup: the [assessment](comprehensive-comparison-01-assessment.md#candidate-contract-changes) records O5 reporting removal, a narrower repetition exception, stricter explicitness and wider applicability. No revised target contract is accepted; retain the live original under the owner's deferred adoption decision. That completed comparison authorized no further scenario, model pass, authoring or adoption; see the opening for current preparation.
 
 
 ## Storage and accounting
@@ -173,7 +195,7 @@ Combined accounting sources: closed SSR [pilot 01](../sweeping-stale-references/
 Dispatched calls are **136 subject, 0 evaluator, 0 authoring, 0 retry**; remaining outer capacity is **0 / 12 / 4 / 4** against the [active plan](../../plans/2026-09-11-model-driven-skill-testing.md#limits-and-information-boundaries). Both eight-call CW batches are spent. The owner authorized ten SSR expansion calls under ceiling 56; all ten are spent, including the excluded control, with no replacement or pool transfer. Comparison runner durations total 508.067 seconds; baseline durations remain 494.936 seconds, including setup and capture.
 Owner clarification after round-10 review: “the budget is just a guideline”. The 1,200-minute figure below remains the planning baseline, not a collection stop; invocation ceilings and the authorized SSR scope is unchanged. Retain elapsed effort and forecast variance to expose process cost.
 
-Current combined accounting: **1,562 active minutes booked; 362 minutes above the historical 1,200-minute planning guideline**.
+Current combined accounting: **1,618 active minutes booked; 418 minutes above the historical 1,200-minute planning guideline**.
 These are rounded effort estimates, not stopwatch measurements or a separately timed category breakdown.
 Between-turn owner wait is excluded; runner durations are included once.
 
@@ -216,7 +238,12 @@ Between-turn owner wait is excluded; runner durations are included once.
 | Claude runner follow-ups | 20 |
 | Runner review and malformed-event fix | 5 |
 | Git defaults review, regression fixes and verification | 15 |
-| **Total** | **1,562** |
+| Rewrite trace diagnosis and focused proposal | 20 |
+| Diagnosis review and accounting-boundary clarification | 3 |
+| SSR candidate drafting, concision and contract review | 8 |
+| Whole-skill duplication check and CW scope preparation | 5 |
+| CW coverage/process audit, evidence verification and study sequencing | 20 |
+| **Total** | **1,618** |
 
 SSR expansion is complete. The prior 55-minute remaining forecast closed at 50 estimated minutes, including the additional shell correction; all ten subject calls are spent.
 The combined batch/recovery effort is 135 estimated minutes (45 initial checkpoint, 40 isolation correction, 50 resumption), 45 above the original 90-minute allowance. Separate round-9 review effort remains in the combined ledger above.
@@ -225,15 +252,19 @@ Time is a guideline; the numeric balance is a planning comparison, not authority
 
 The completed comprehensive-comparison-02 used 80 estimated active minutes against its 180-minute planning allowance (100 below forecast).
 Its runner durations total 2,350.294 seconds (39.17 minutes), already included in that estimate; the other work categories were not separately timed.
-The Codex comparison closed at 90/90 combined subject calls and the two Claude smokes at 92/92. The subsequent 34-call Claude comparison is complete, bringing prior spending to 126. All ten subsequent Opus invocation calls are complete, bringing current spending to 136/136; no further calls are selected.
+The Codex comparison closed at 90/90 combined subject calls and the two Claude smokes at 92/92. The subsequent 34-call Claude comparison is complete, bringing prior spending to 126. All ten subsequent Opus invocation calls are complete, bringing spending to 136/136; no further calls are authorized.
 The Claude comparison used 90 estimated active minutes against its 120-minute guideline, 30 below forecast; its 2,165.515 seconds of runner duration (36.09 minutes) are included, not added again.
 
 The Opus comparison used 20 estimated active minutes against its 40-minute guideline, 20 below forecast; its 174.840 seconds of runner duration (2.91 minutes) are included once.
 
+Selected-work forecast, in active minutes; 60 is the midpoint of the 45–75-minute preparation range.
+Conditional collection estimates and the unestimated composition/rewrite stages are in the [audit forecast](testing-audit.md#proposed-sequence-and-allocation-forecast), excluded from this selected-work subtotal rather than treated as zero effort.
+Preparation is selected; later collection requires additional spending authority.
+
 | Work | Estimate | Basis |
-|---|---:|---|
-| Remaining selected work | 0 | Opus comparison complete; next work awaits owner decision. |
-| **Total** | **0** | No additional collection or authoring selected. |
+| --- | ---: | --- |
+| CW case preparation and review | 60 | Audit forecast; fixture/criteria preparation only. |
+| **Total** | **60** | Selected preparation, not the full end-to-end campaign. |
 
 ## Results and decision
 

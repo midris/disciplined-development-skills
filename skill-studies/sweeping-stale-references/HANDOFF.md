@@ -5,7 +5,7 @@ This is navigation, not a duplicate progress or decision record.
 
 1. Read [CLAUDE.md](../../CLAUDE.md) and the [DD doctrine](../../skills/disciplined-development/SKILL.md).
 2. Resume from the [active plan's Current next action](../../plans/2026-09-11-model-driven-skill-testing.md#current-next-action) and [framework spec](../../plans/specs/2026-09-11-model-driven-skill-testing-framework.md).
-3. Use the [SSR protocol](protocol.md) for the completed expanded baseline, measured facet map and declared runtime strata. Use [CW accounting](../concise-writing/protocol.md#storage-and-accounting) only for current combined spending; each completed study’s assessments retain its conclusions.
+3. Use the [SSR protocol](protocol.md) for the completed expanded baseline, measured facet map and declared runtime strata. Use the [CW protocol](../concise-writing/protocol.md) for its current action and combined accounting; each completed study’s assessments retain its conclusions.
 4. Follow the [formats](../formats/README.md) and [runner command guide](../../skill-validation/runner/README.md#study-documents) for mechanics; the historical worksheet is not current study authority.
 5. The [retrospective](../../reviews/2026-09-18-skill-testing-retrospective.md) identifies remaining discovery questions. The plan owns which one is selected next.
 
