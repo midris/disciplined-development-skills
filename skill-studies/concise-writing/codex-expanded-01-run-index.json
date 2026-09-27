@@ -620,7 +620,7 @@
         "charge": 1
       },
       "limitations": [
-        "Runner status: COMPLETED; assessment pending."
+        "Active-session assessment; no independent, blind or held-out claim."
       ],
       "bundle": {
         "path": "/Users/simon/work/personal/skill-study-private/concise-writing/development/20260927T223142059Z-cw-prep-codex-agent-recommendation-original-50c73b21-705b-41e8-b4cc-21aaf8a05960-maehze92",
@@ -631,7 +631,15 @@
         },
         "verified": true
       },
-      "result": null
+      "result": {
+        "result_id": "codex-expanded-01-agent-recommendation-original-2",
+        "record": {
+          "path": "skill-studies/concise-writing/results/20260927T223142059Z-cw-prep-codex-agent-recommendation-original-50c73b21-705b-41e8-b4cc-21aaf8a05960-maehze92.json",
+          "sha256": "6657c376caac383c9ce5c3d4c80e9a2a73ca6308ccc218f0d140baadd640ecb0",
+          "version": "2",
+          "git_revision": "b7a286a833bf012059eab50979fe9d88cec5ba69"
+        }
+      }
     },
     {
       "attempt_id": "codex-expanded-01-agent-recommendation-candidate-comprehensive-2-1",
@@ -661,7 +669,7 @@
         "charge": 1
       },
       "limitations": [
-        "Runner status: COMPLETED; assessment pending."
+        "Active-session assessment; no independent, blind or held-out claim."
       ],
       "bundle": {
         "path": "/Users/simon/work/personal/skill-study-private/concise-writing/development/20260927T223252773Z-cw-prep-codex-agent-recommendation-candidate-88a7bb69-81b2-4cd2-b66f-28619b56d8ad-x9ycjqbn",
@@ -672,7 +680,15 @@
         },
         "verified": true
       },
-      "result": null
+      "result": {
+        "result_id": "codex-expanded-01-agent-recommendation-candidate-comprehensive-2",
+        "record": {
+          "path": "skill-studies/concise-writing/results/20260927T223252773Z-cw-prep-codex-agent-recommendation-candidate-88a7bb69-81b2-4cd2-b66f-28619b56d8ad-x9ycjqbn.json",
+          "sha256": "fb3ef50c16a5f7362d9b96da8a75206dd9ba95dc53302e3d3c21d983ca6aae6c",
+          "version": "2",
+          "git_revision": "b7a286a833bf012059eab50979fe9d88cec5ba69"
+        }
+      }
     },
     {
       "attempt_id": "codex-expanded-01-agent-recommendation-control-2-1",
@@ -702,7 +718,7 @@
         "charge": 1
       },
       "limitations": [
-        "Runner status: COMPLETED; assessment pending."
+        "Active-session assessment; no independent, blind or held-out claim."
       ],
       "bundle": {
         "path": "/Users/simon/work/personal/skill-study-private/concise-writing/development/20260927T223424120Z-cw-prep-codex-agent-recommendation-control-1680d932-5ed0-44aa-9a80-75f425c65c86-8xqtxmwz",
@@ -713,7 +729,15 @@
         },
         "verified": true
       },
-      "result": null
+      "result": {
+        "result_id": "codex-expanded-01-agent-recommendation-control-2",
+        "record": {
+          "path": "skill-studies/concise-writing/results/20260927T223424120Z-cw-prep-codex-agent-recommendation-control-1680d932-5ed0-44aa-9a80-75f425c65c86-8xqtxmwz.json",
+          "sha256": "da67981afc940d716b9773ae1a9fb269e03860541a98653d6558bc787800d68a",
+          "version": "2",
+          "git_revision": "b7a286a833bf012059eab50979fe9d88cec5ba69"
+        }
+      }
     },
     {
       "attempt_id": "codex-expanded-01-effective-briefing-candidate-comprehensive-2-1",
@@ -743,7 +767,7 @@
         "charge": 1
       },
       "limitations": [
-        "Runner status: COMPLETED; assessment pending."
+        "Active-session assessment; no independent, blind or held-out claim."
       ],
       "bundle": {
         "path": "/Users/simon/work/personal/skill-study-private/concise-writing/development/20260927T223554885Z-cw-prep-codex-effective-briefing-candidate-7c5f2f96-0d70-4e1f-bbe6-ae0eeb56deeb-ac3ytr3q",
@@ -754,7 +778,15 @@
         },
         "verified": true
       },
-      "result": null
+      "result": {
+        "result_id": "codex-expanded-01-effective-briefing-candidate-comprehensive-2",
+        "record": {
+          "path": "skill-studies/concise-writing/results/20260927T223554885Z-cw-prep-codex-effective-briefing-candidate-7c5f2f96-0d70-4e1f-bbe6-ae0eeb56deeb-ac3ytr3q.json",
+          "sha256": "fb5f0892e2bca186c0ca0065cfd2f18800b45bdb004ff92d864b19bdda1b92ad",
+          "version": "2",
+          "git_revision": "b7a286a833bf012059eab50979fe9d88cec5ba69"
+        }
+      }
     },
     {
       "attempt_id": "codex-expanded-01-effective-briefing-control-2-1",
@@ -784,7 +816,7 @@
         "charge": 1
       },
       "limitations": [
-        "Runner status: COMPLETED; assessment pending."
+        "Active-session assessment; no independent, blind or held-out claim."
       ],
       "bundle": {
         "path": "/Users/simon/work/personal/skill-study-private/concise-writing/development/20260927T223703001Z-cw-prep-codex-effective-briefing-control-544f695d-1c95-4451-9941-1a644408e45b-xc3kp5ps",
@@ -795,7 +827,15 @@
         },
         "verified": true
       },
-      "result": null
+      "result": {
+        "result_id": "codex-expanded-01-effective-briefing-control-2",
+        "record": {
+          "path": "skill-studies/concise-writing/results/20260927T223703001Z-cw-prep-codex-effective-briefing-control-544f695d-1c95-4451-9941-1a644408e45b-xc3kp5ps.json",
+          "sha256": "83d6e0e3cfe91894e31ebb7078948fc0c8ac782495678810d6712e3e829515a9",
+          "version": "2",
+          "git_revision": "b7a286a833bf012059eab50979fe9d88cec5ba69"
+        }
+      }
     },
     {
       "attempt_id": "codex-expanded-01-effective-briefing-original-2-1",
@@ -825,7 +865,7 @@
         "charge": 1
       },
       "limitations": [
-        "Runner status: COMPLETED; assessment pending."
+        "Active-session assessment; no independent, blind or held-out claim."
       ],
       "bundle": {
         "path": "/Users/simon/work/personal/skill-study-private/concise-writing/development/20260927T223813606Z-cw-prep-codex-effective-briefing-original-d6f0580b-9634-4571-9564-691e4923d767-kpztyiq_",
@@ -836,7 +876,15 @@
         },
         "verified": true
       },
-      "result": null
+      "result": {
+        "result_id": "codex-expanded-01-effective-briefing-original-2",
+        "record": {
+          "path": "skill-studies/concise-writing/results/20260927T223813606Z-cw-prep-codex-effective-briefing-original-d6f0580b-9634-4571-9564-691e4923d767-kpztyiq_.json",
+          "sha256": "50147bc24d859b449040fbd7611b55879fbda3f70524f27866a5b4c562b59f99",
+          "version": "2",
+          "git_revision": "b7a286a833bf012059eab50979fe9d88cec5ba69"
+        }
+      }
     },
     {
       "attempt_id": "codex-expanded-01-long-handoff-control-2-1",
@@ -866,7 +914,7 @@
         "charge": 1
       },
       "limitations": [
-        "Runner status: COMPLETED; assessment pending."
+        "Active-session assessment; no independent, blind or held-out claim."
       ],
       "bundle": {
         "path": "/Users/simon/work/personal/skill-study-private/concise-writing/development/20260927T223955763Z-cw-prep-codex-long-handoff-control-a7e6eb61-3816-4ca9-93cd-6518a50c4c77-fw4xw3h3",
@@ -877,7 +925,15 @@
         },
         "verified": true
       },
-      "result": null
+      "result": {
+        "result_id": "codex-expanded-01-long-handoff-control-2",
+        "record": {
+          "path": "skill-studies/concise-writing/results/20260927T223955763Z-cw-prep-codex-long-handoff-control-a7e6eb61-3816-4ca9-93cd-6518a50c4c77-fw4xw3h3.json",
+          "sha256": "5805e822af39551303e8adbbdaf023351d39fe435d5a49597e21bb601f7c3238",
+          "version": "2",
+          "git_revision": "b7a286a833bf012059eab50979fe9d88cec5ba69"
+        }
+      }
     },
     {
       "attempt_id": "codex-expanded-01-long-handoff-original-2-1",
@@ -907,7 +963,7 @@
         "charge": 1
       },
       "limitations": [
-        "Runner status: COMPLETED; assessment pending."
+        "Active-session assessment; no independent, blind or held-out claim."
       ],
       "bundle": {
         "path": "/Users/simon/work/personal/skill-study-private/concise-writing/development/20260927T224146834Z-cw-prep-codex-long-handoff-original-9e0a2fc7-d3f5-4229-a74a-df8e1bea1b47-r7ndp75x",
@@ -918,7 +974,15 @@
         },
         "verified": true
       },
-      "result": null
+      "result": {
+        "result_id": "codex-expanded-01-long-handoff-original-2",
+        "record": {
+          "path": "skill-studies/concise-writing/results/20260927T224146834Z-cw-prep-codex-long-handoff-original-9e0a2fc7-d3f5-4229-a74a-df8e1bea1b47-r7ndp75x.json",
+          "sha256": "55faf8545fd0e805a9ce97e4cba693751cf48f53d627d95a9df097887957406c",
+          "version": "2",
+          "git_revision": "b7a286a833bf012059eab50979fe9d88cec5ba69"
+        }
+      }
     },
     {
       "attempt_id": "codex-expanded-01-long-handoff-candidate-comprehensive-2-1",
@@ -948,7 +1012,7 @@
         "charge": 1
       },
       "limitations": [
-        "Runner status: COMPLETED; assessment pending."
+        "Active-session assessment; no independent, blind or held-out claim."
       ],
       "bundle": {
         "path": "/Users/simon/work/personal/skill-study-private/concise-writing/development/20260927T224339843Z-cw-prep-codex-long-handoff-candidate-e95ccd63-9277-4007-af02-dda017ee9b06-wz403hhe",
@@ -959,7 +1023,15 @@
         },
         "verified": true
       },
-      "result": null
+      "result": {
+        "result_id": "codex-expanded-01-long-handoff-candidate-comprehensive-2",
+        "record": {
+          "path": "skill-studies/concise-writing/results/20260927T224339843Z-cw-prep-codex-long-handoff-candidate-e95ccd63-9277-4007-af02-dda017ee9b06-wz403hhe.json",
+          "sha256": "44f92303ff535aef872feade36676fd610b8c29228c09e71b553c5a3c4b3c203",
+          "version": "2",
+          "git_revision": "b7a286a833bf012059eab50979fe9d88cec5ba69"
+        }
+      }
     },
     {
       "attempt_id": "codex-expanded-01-document-addition-original-2-1",
@@ -989,7 +1061,7 @@
         "charge": 1
       },
       "limitations": [
-        "Runner status: COMPLETED; assessment pending."
+        "Active-session assessment; no independent, blind or held-out claim."
       ],
       "bundle": {
         "path": "/Users/simon/work/personal/skill-study-private/concise-writing/development/20260927T224539499Z-cw-prep-codex-document-addition-original-44e5340b-72d7-4ba4-b7c1-8a127b94b1ed-1ninx8gb",
@@ -1000,7 +1072,15 @@
         },
         "verified": true
       },
-      "result": null
+      "result": {
+        "result_id": "codex-expanded-01-document-addition-original-2",
+        "record": {
+          "path": "skill-studies/concise-writing/results/20260927T224539499Z-cw-prep-codex-document-addition-original-44e5340b-72d7-4ba4-b7c1-8a127b94b1ed-1ninx8gb.json",
+          "sha256": "6e38e880fec19e0d4cca6782660d09f1916742ea98c85df7dd59313caa429a80",
+          "version": "2",
+          "git_revision": "b7a286a833bf012059eab50979fe9d88cec5ba69"
+        }
+      }
     },
     {
       "attempt_id": "codex-expanded-01-document-addition-candidate-comprehensive-2-1",
@@ -1030,7 +1110,7 @@
         "charge": 1
       },
       "limitations": [
-        "Runner status: COMPLETED; assessment pending."
+        "Active-session assessment; no independent, blind or held-out claim."
       ],
       "bundle": {
         "path": "/Users/simon/work/personal/skill-study-private/concise-writing/development/20260927T224709842Z-cw-prep-codex-document-addition-candidate-6869980c-9800-4e54-adb7-fa3c65f5b486-mkuekb0u",
@@ -1041,7 +1121,15 @@
         },
         "verified": true
       },
-      "result": null
+      "result": {
+        "result_id": "codex-expanded-01-document-addition-candidate-comprehensive-2",
+        "record": {
+          "path": "skill-studies/concise-writing/results/20260927T224709842Z-cw-prep-codex-document-addition-candidate-6869980c-9800-4e54-adb7-fa3c65f5b486-mkuekb0u.json",
+          "sha256": "4b844a1877c347bcd6bc6ba895f642d192ec8b267ea3409fdeb0993b5823f988",
+          "version": "2",
+          "git_revision": "b7a286a833bf012059eab50979fe9d88cec5ba69"
+        }
+      }
     },
     {
       "attempt_id": "codex-expanded-01-document-addition-control-2-1",
@@ -1071,7 +1159,7 @@
         "charge": 1
       },
       "limitations": [
-        "Runner status: COMPLETED; assessment pending."
+        "Active-session assessment; no independent, blind or held-out claim."
       ],
       "bundle": {
         "path": "/Users/simon/work/personal/skill-study-private/concise-writing/development/20260927T224833884Z-cw-prep-codex-document-addition-control-2c5e679c-57f8-4dac-a611-22756d37aef0-r00pgzkh",
@@ -1082,7 +1170,15 @@
         },
         "verified": true
       },
-      "result": null
+      "result": {
+        "result_id": "codex-expanded-01-document-addition-control-2",
+        "record": {
+          "path": "skill-studies/concise-writing/results/20260927T224833884Z-cw-prep-codex-document-addition-control-2c5e679c-57f8-4dac-a611-22756d37aef0-r00pgzkh.json",
+          "sha256": "c4c49551cbf8d7181c896ad200c37278023ca233e53339b677fce86b0bee1f2a",
+          "version": "2",
+          "git_revision": "b7a286a833bf012059eab50979fe9d88cec5ba69"
+        }
+      }
     }
   ]
 }
