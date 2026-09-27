@@ -1,0 +1,161 @@
+{
+  "schema_version": "2",
+  "record_kind": "execution result",
+  "assessed_at": "2026-09-27T23:26:21.388899+00:00",
+  "run_id": "20260927T232516711Z-cw-prep-claude-agent-recommendation-control-3862747c-475a-412c-b38a-57179ea138eb-vshn2eum",
+  "condition": "control",
+  "assessor": {
+    "name": "Codex active session",
+    "method": "active session",
+    "model": null,
+    "session_id": null,
+    "context": "Same session that prepared and reviewed these development cases. No independent, blinded or held-out claim."
+  },
+  "evidence": [
+    {
+      "id": "output",
+      "artifact": {
+        "path": "/Users/simon/work/personal/skill-study-private/concise-writing/development/20260927T232516711Z-cw-prep-claude-agent-recommendation-control-3862747c-475a-412c-b38a-57179ea138eb-vshn2eum/workspace/fixture/report.md",
+        "sha256": "8f9221fb79fdf8677d66e5aedb4959d8b824c703a15d5a88ae87a58546e768b6",
+        "version": null
+      },
+      "selector": "Complete artifact"
+    },
+    {
+      "id": "trace",
+      "artifact": {
+        "path": "/Users/simon/work/personal/skill-study-private/concise-writing/development/20260927T232516711Z-cw-prep-claude-agent-recommendation-control-3862747c-475a-412c-b38a-57179ea138eb-vshn2eum/stdout.txt",
+        "sha256": "99981b1e0f789be015b7d8387b9fde290f0087f61c0c6e125a5026b62dbd033c",
+        "version": null
+      },
+      "selector": "Complete artifact"
+    },
+    {
+      "id": "mechanical",
+      "artifact": {
+        "path": "/Users/simon/work/personal/skill-study-private/concise-writing/development/20260927T232516711Z-cw-prep-claude-agent-recommendation-control-3862747c-475a-412c-b38a-57179ea138eb-vshn2eum/result.json",
+        "sha256": "1e753be8b94d9f0484dafb3ef16b53ccd55d895968c7fc67a367d93a556e4bbc",
+        "version": null
+      },
+      "selector": "Complete artifact"
+    },
+    {
+      "id": "log",
+      "artifact": {
+        "path": "/Users/simon/work/personal/skill-study-private/concise-writing/development/20260927T232516711Z-cw-prep-claude-agent-recommendation-control-3862747c-475a-412c-b38a-57179ea138eb-vshn2eum/runner.log",
+        "sha256": "4a557cf161f06a0d129936e986030c35400dcf39a68b116b7e25b14f2c9e690d",
+        "version": null
+      },
+      "selector": "Complete artifact"
+    },
+    {
+      "id": "final",
+      "artifact": {
+        "path": "/Users/simon/work/personal/skill-study-private/concise-writing/development/20260927T232516711Z-cw-prep-claude-agent-recommendation-control-3862747c-475a-412c-b38a-57179ea138eb-vshn2eum/final.txt",
+        "sha256": "7a9d75be9c418133e4a57e17a7f2160d05b8c7a1a311aef6a2749515b9c4ffbe",
+        "version": null
+      },
+      "selector": "Complete artifact"
+    },
+    {
+      "id": "source-0",
+      "artifact": {
+        "path": "skill-studies/concise-writing/cases/agent-recommendation/fixture/report.md",
+        "sha256": "e9a992c7e4c14dfd5afc10cc637349f39c2030e98ed0311441675900bc3e93e9",
+        "version": null,
+        "git_revision": "96b6e383da39ea807a6ad49d4513cfc1d6f4cd33"
+      },
+      "selector": "Complete frozen source"
+    },
+    {
+      "id": "source-1",
+      "artifact": {
+        "path": "skill-studies/concise-writing/cases/agent-recommendation/task.md",
+        "sha256": "607cbe0562a19ea092fe76ec96f13bfbe033b2e1095baef2ca38be621c0baf82",
+        "version": null,
+        "git_revision": "96b6e383da39ea807a6ad49d4513cfc1d6f4cd33"
+      },
+      "selector": "Complete frozen source"
+    },
+    {
+      "id": "source-4",
+      "artifact": {
+        "path": "skill-studies/concise-writing/preparation/claude-original-prompt.md",
+        "sha256": "c72703762cfa9b2be16c09550e27b534fd378c68150004b8d039cbcc499df6bd",
+        "version": null,
+        "git_revision": "96b6e383da39ea807a6ad49d4513cfc1d6f4cd33"
+      },
+      "selector": "Complete frozen source"
+    }
+  ],
+  "setup": {
+    "status": "valid",
+    "reason": "Completed on Claude Code 2.1.283; init and assistant messages identify claude-sonnet-5. Retained runner settings request low effort. No supplied CW in the 16-built-in catalog. Source and task read, report saved, raw trace and final retained with empty stderr.",
+    "evidence": [
+      "mechanical",
+      "trace",
+      "log"
+    ]
+  },
+  "criteria": [
+    {
+      "id": "F1",
+      "dimension": "functional",
+      "judgment": "met",
+      "reason": "Complete output preserves staging counts, failure mechanism, current production status, untested scale/outage limits, and the conditional staffed ten-account pilot with named responsibilities and retention/investigation safeguards.",
+      "consequence": "Required for the corresponding functional or invocation outcome; reported separately.",
+      "evidence": [
+        "output",
+        "source-0",
+        "source-1",
+        "source-4"
+      ]
+    },
+    {
+      "id": "F2",
+      "dimension": "functional",
+      "judgment": "met",
+      "reason": "Manager can distinguish staging evidence from approval, decide the Tuesday pilot, and enforce mismatch stop and separate release decision without reconstructing lost information.",
+      "consequence": "Required for the corresponding functional or invocation outcome; reported separately.",
+      "evidence": [
+        "output",
+        "source-0",
+        "source-1",
+        "source-4"
+      ]
+    },
+    {
+      "id": "F3",
+      "dimension": "functional",
+      "judgment": "met",
+      "reason": "Status, mechanism, evidence and recommendation are easy to find; redundant explanations and generic communication digression are removed without excessive density.",
+      "consequence": "Required for the corresponding functional or invocation outcome; reported separately.",
+      "evidence": [
+        "output",
+        "source-0",
+        "source-1",
+        "source-4"
+      ]
+    }
+  ],
+  "procedural_summary": "No CW supplied; source and task read before Write. Process unscored.",
+  "observations": [
+    {
+      "dimension": "functional",
+      "description": "Source 625 words; output 231, change -394, shorter. Decision request remains a closing section; complete safeguards occur in the recommendation.",
+      "consequence": "Descriptive comparison; no separate score or automatic length-based preference.",
+      "evidence": [
+        "output"
+      ]
+    }
+  ],
+  "uncertainty": [],
+  "result_id": "claude-expanded-01-agent-recommendation-control-1",
+  "functional_result": "met",
+  "manifest": {
+    "path": "skill-studies/concise-writing/preparation/manifests/claude-agent-recommendation-manifest.json",
+    "sha256": "bb4603685f0c9366bd1a4862e5f0255be4ba72130b01695febea5d46632898ea",
+    "version": "1",
+    "git_revision": "4dc370648a6a915546035847b2823a4bc5d57325"
+  }
+}

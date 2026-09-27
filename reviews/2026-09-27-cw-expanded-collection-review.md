@@ -1,7 +1,7 @@
 # CW expanded collection review
 
 Authority and current progress belong to the [CW protocol](../skill-studies/concise-writing/protocol.md).
-This review covers the 36-attempt ordinary Codex batch against the frozen CW-expanded-1 policy and case contracts.
+This review covers the ordinary Codex batch and ordinary Claude checkpoints against the frozen CW-expanded-1 policy and case contracts.
 The active session is the assessor; no independent or blind review is claimed.
 
 ## Findings and resolution
@@ -35,5 +35,23 @@ Final results by A/B/C/E: original 3/3, 3/3, 3/3, 2/3; candidate 3/3 throughout;
 These small exposed samples do not establish reliability, cross-provider performance or automatic invocation.
 The batch assessment records quality differences alongside counts and length.
 No findings remain after the consistency correction and re-review.
+
+## Claude first-rotation checkpoint
+
+Re-read all twelve complete outputs against the frozen cases and policy, including the existing B precedent and C token-rule boundary.
+Original passes all four cases; candidate misses E's recording action, and control misses C's readability factor.
+E candidate 12 confirms a named contact exists without requiring its recording; original 11 explicitly requires a recorded contact and passes.
+This is the same practical distinction used for Codex original 36, not a condition-specific standard.
+C control 8 preserves every operational fact and action but retains a detached duplicate mechanism section between stop conditions and Rollback.
+The repeated explanation adds no new condition or point-of-use safeguard and interrupts the incoming shift's operational reading sequence; F3 fails while F1/F2 pass.
+C original 9 and candidate 7 remove that detached repetition while preserving useful warnings at deployment and rollback entry points.
+A candidate 3 retains more qualification and closing framing than its counterparts, but those passages serve evidence interpretation and action lookup rather than the detached repeated mechanics in C.
+C original 9 keeps the underexplained token-retention rule; no missing uncertainty flag is scored.
+
+All twelve inventories, complete result records and 23 protected task/note/skill copies verify read-only.
+Production init and assistant messages agree on Claude Code 2.1.283 and Sonnet 5; low effort is confirmed in the requested runner settings, not independently acknowledged in the visible init event.
+Every skill-bearing attempt delivered the whole body before its first text edit; sixteen built-in skills were also present, with CW absent in controls.
+There were no setup faults, retries, missing final responses or stderr warnings.
+Assessment structure, evidence and limits were challenged; no new review findings remain.
 
 DD-VERDICT: PASS
