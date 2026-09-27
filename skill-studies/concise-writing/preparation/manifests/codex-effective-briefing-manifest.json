@@ -3,9 +3,9 @@
   "manifest_id": "cw-codex-effective-briefing-expanded-1",
   "study_id": "concise-writing",
   "case_id": "effective-briefing",
-  "status": "draft",
+  "status": "frozen",
   "created_at": "2026-09-27T21:59:46.822545+00:00",
-  "source_revision": "",
+  "source_revision": "96b6e383da39ea807a6ad49d4513cfc1d6f4cd33",
   "authorities": {
     "spec": {
       "path": "plans/specs/2026-09-11-model-driven-skill-testing-framework.md",

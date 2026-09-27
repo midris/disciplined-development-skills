@@ -258,7 +258,7 @@ Reserved bundles and revealing assessments stay entirely in the verified private
 - [x] Review the complete preparation changes and address findings before collection, as requested by the owner; see the [review record](../reviews/2026-09-27-cw-suite-preparation-review.md).
 - [x] Address the external suite review: add a read-only N4 output comparison command, remove duplication labels from C/N2 and clean up retired scope links; see the [follow-up review](../reviews/2026-09-27-cw-suite-preparation-review.md#external-review-of-cfa2f48-and-68d0cfc).
 - [x] Obtain approval for the bounded 104-call CW allocation and subject-ceiling increase to 240; authority is recorded at the top of the [CW protocol](../skill-studies/concise-writing/protocol.md).
-- [ ] Qualify current runtimes, freeze the ordered schedule and exact approved inputs, and pass collection readiness before dispatch.
+- [x] Qualify current runtimes, freeze the ordered schedule and exact approved inputs, and pass collection readiness before dispatch; all four CW batches passed, with evidence linked from the protocol.
   The owner requested three repetitions per condition on both providers for A/B/C, including Claude coverage of the existing cases: 54 ordinary calls in the [updated forecast](../skill-studies/concise-writing/testing-audit.md#proposed-sequence-and-allocation-forecast).
   Ordinary document-addition E proposes another 18 calls; native cases N1–N4 are a separate 32-call proposal.
   The owner removed tailored skill-editing/compression experiments and their downstream allocations from the active scope.
