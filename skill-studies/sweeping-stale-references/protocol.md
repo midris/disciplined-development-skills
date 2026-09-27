@@ -3,7 +3,7 @@
 Format version: `1`
 Study ID: `sweeping-stale-references`
 Status: all authorized comparison batches are complete; the owner selected the comprehensive rewrite as the development base and accepts its changed local reporting. The original and tested rewrite snapshots remain preserved; no new skill version is adopted.
-Current action: follow the [CW protocol’s current action](../concise-writing/protocol.md) for the owner-selected first end-to-end study. Preserve the unvalidated SSR draft and its pending 15-call proposal; no SSR collection is scheduled. All 136 combined subject calls are spent.
+Current action: follow the [CW protocol’s current action](../concise-writing/protocol.md) for the owner-selected first end-to-end study. Preserve the unvalidated SSR draft and its revised, unapproved +15-call proposal. The owner deferred its baseline interpretation decision until SSR resumes; no SSR collection is scheduled. All 136 combined subject calls are spent.
 The [plan](../../plans/2026-09-11-model-driven-skill-testing.md) owns progress; the [spec](../../plans/specs/2026-09-11-model-driven-skill-testing-framework.md) owns the workflow.
 The [core baseline](core-baseline-01-assessment.md) retains its two setup exclusions and runtime strata; the [comparison](comprehensive-comparison-01-assessment.md) records twelve valid executions of the original and preserved candidate. Both collection scopes are spent. Storage and accounting retains the SSR closing checkpoint and links the current combined totals.
 

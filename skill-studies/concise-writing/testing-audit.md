@@ -74,15 +74,40 @@ Do not impose the candidate's stricter explicitness rule on the control or origi
 Before adoption, settle these deltas against observed consequences and intended use.
 A detailed-response discovery probe would require version-specific expectations; it is not a shared negative case.
 
+## Case F source and qualification
+
+Use the preserved [original SSR skill](../sweeping-stale-references/cases/skill-original/SKILL.md), SHA-256 `d6812c33cae026807bbb3ebe851d93b60b513dd87ea5efd98aea28f5c02f9157`, as the compression input.
+This is the original, not the comprehensive rewrite or unvalidated draft; using its fixed bytes as a CW test fixture does not resume SSR authoring or select it as SSR's development base.
+
+For F, “observed-effective” means valid explicit-load setup and all functional factors met in both repetitions of each of the five ordinary SSR cases on both Codex and Claude: discovery-shiv, moved-guide, semantic-delivery, initiating-change and local-change.
+The [Codex comparison](../sweeping-stale-references/comprehensive-comparison-02-assessment.md) and [Claude comparison](../sweeping-stale-references/claude-comparison-01-assessment.md) already satisfy that historical bar for the original: 10/10 per provider, 20/20 total.
+The audit follow-up verified those 20 result hashes and their setup/functional judgments, plus the source hash.
+This is a scoped functional qualification, not a claim that the source is universally effective: its Claude pressure failure, native misses and procedural accounting defects remain visible.
+
+Before interpreting compression outcomes on the newly pinned runtimes, refresh the unchanged source on the same five ordinary tasks, two repetitions per provider: 20 downstream subject calls, requiring their own allocation.
+Require valid setup, complete exposure and F1–F3 met in all 20 to retain this source's qualification for that comparison.
+If this bar fails or evidence is missing, keep the CW prose/discovery baseline results, pause F and resolve the source or scope explicitly; do not silently replace it or block all ordinary CW diagnosis on an unavailable fixture.
+Do not claim skill-compression coverage until F is complete.
+
+Freeze downstream task/criterion identities before any compression and test every emitted variant against the same task set on both providers with contemporaneous unchanged-source results.
+Carry procedural observations separately; text review must preserve the source's trigger, exceptions, output contract and useful reinforcement even where those properties were imperfectly followed historically.
+Include the known pressure case as a separate comparison rather than hiding its failure or requiring the original to become universally successful before ordinary preservation can be studied.
+A pressure regression limits the recommendation; ordinary passes cannot license adopting the compressed SSR skill.
+Pin exact repetitions, emitted-variant counts, pressure slots and the total downstream allocation before F dispatch; the initial 60-call forecast does not fund these calls.
+Native discovery of the compressed SSR output remains outside F's explicit-load preservation claim and would need its own evidence before deployment.
+
+This source avoids testing CW on its own text: that would expose even the no-CW editing condition to the complete CW instructions and weaken the intended control.
+Writing-skills remains fixed across editor conditions; downstream subjects receive only their frozen SSR task/context and assigned source or compressed SSR version, not CW or writing-skills.
+
 ## Proposed sequence and allocation forecast
 
 The following is a design forecast, not a frozen dispatch table or an approved ceiling increase.
 The protocol's proposed cases must acquire complete fixtures, criterion cards, examples where boundaries are unclear, configurations and manifests before collection readiness.
 
-1. **Close coverage design.** Keep A/B, add C for long-document navigation and compression pressure, and prepare the separate native cases N1–N3. Define the two skill-editing cases E/F and their downstream consumers before calling the whole suite adequate.
+1. **Close coverage design.** Keep A/B, add C for long-document navigation and compression pressure, and prepare the separate native cases N1–N3. Define the two skill-editing cases E/F and their downstream consumers before calling the whole suite adequate; F uses the named original SSR source and qualification above.
 2. **Compare ordinary editing across providers.** A/B/C × no-CW/original/existing rewrite × Codex/Claude × two repetitions: **36 subject calls**. All conditions use identical source/task/context except CW delivery. Read all outputs under fixed F1–F3 rules, report process separately, and compare quality before length.
 3. **Measure native selection.** N1/N2/N3 × original/rewrite × Codex/Claude × two repetitions: **24 subject calls**. N1 reuses A's natural tightening task; N2 covers producing prose without a tightening request; N3 is a nearby non-prose edit. Keep native and explicit-load strata separate. Negative task success is not functional CW evidence.
-4. **Validate skill-editing composition.** Run E/F with writing-skills held constant and no-CW/original/rewrite varied. Preserve each emitted skill; compare downstream task behavior using the source and each edited version in fresh contexts on both providers. Fix repetitions and a separate bounded allocation after qualifying the source skill and downstream cases; do not select only the best edit for downstream testing.
+4. **Validate skill-editing composition.** Run E/F with writing-skills held constant and no-CW/original/rewrite varied. Preserve each emitted skill; compare downstream task behavior using the source and each edited version in fresh contexts on both providers. For F, use the named source and qualification above; freeze downstream repetitions and a separate bounded allocation before dispatch. Do not select only the best edit for downstream testing.
 5. **Diagnose, then author only if needed.** Select the existing version if it meets the agreed use. Otherwise choose a specific observed failure and run the writing-skills control/wording experiment, then the relevant fixed suite on both providers. If controls show no failure, resolve whether a pure-cleanup experiment is worthwhile rather than manufacturing RED.
 6. **Compress after effectiveness.** Freeze an effective CW version, attempt deletions/consolidation separately from behavioral additions, and compare fresh runs on the same relevant cases. Repeat downstream checks when skill-editing behavior changes. Recommend adoption only with regressions, uncertainty and deliberate limitations visible.
 
@@ -113,7 +138,7 @@ No full lifecycle success, live-skill change or adoption is claimed by this audi
 ## Audit verification
 
 All ten existing batch assessment-readiness checks pass after the documentation changes, including both CW batches.
-The combined effort ledger sums to 1,618 minutes; policy 4 remains byte-equivalent to its controller copy.
+At audit close, the effort ledger summed to 1,618 minutes; the protocol owns subsequent accounting. Policy 4 remains byte-equivalent to its controller copy.
 All 281 local link paths in the six audit-touched documents resolve; whitespace checks pass.
 The required hook suite reports 263 passed and 3 skipped.
 Self-review corrected a stale SSR-priority sentence and kept the required numeric forecast table while separating conditional campaign estimates.

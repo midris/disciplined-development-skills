@@ -75,7 +75,7 @@ Selected coverage maps to the skill’s named patterns below. These are contextu
 | Native invocation and new prose | Untested: all historical skill runs explicitly load CW. Proposed N1/N2 test natural tightening and prose generation; N3 tests an adjacent non-prose change. Separate load timing, task quality and negative applicability. |
 | Claude and current runtime | Untested on Claude; historical Codex CLI 0.154.0 results remain separate. Repeat A/B and new C on both qualified runtimes with contemporaneous conditions. |
 | Skill additions and whole-skill overlap | Outside original applicability and historical coverage. Proposed E tests the owner's explicit extension with writing-skills fixed across conditions. Preserve useful reinforcement at distinct decision/output points. |
-| Skill compression and downstream use | Untested. Proposed F requires an observed-effective source and fresh downstream comparisons for emitted edits; textual equivalence alone cannot establish preserved agent behavior. |
+| Skill compression and downstream use | Untested. Proposed F uses the preserved original SSR skill under the [source qualification](testing-audit.md#case-f-source-and-qualification): ordinary explicit-load outcomes, refreshed across providers before comparison. Known pressure/procedural limits remain separate; textual equivalence alone cannot establish preserved agent behavior. |
 | Response-only/detailed-response boundary | Untested. Defer a separate response-only stratum; the rewrite changes this trigger boundary, so resolve intended applicability and test it before adopting that description. |
 | Anchor changes and full orchestration | Untested. Defer SSR anchor repair and DD orchestration because they add separate skills and attribution questions; revisit before changing those relationships. |
 
@@ -96,7 +96,7 @@ The [audit](testing-audit.md#proposed-sequence-and-allocation-forecast) gives th
 | N2: produce a durable update | Turn factual notes into a reader-facing update without saying tighten/concise; the model may miss the writing trigger. | Frozen source-supported content and reader purpose, native load before prose production; no hidden style instruction in the task. |
 | N3: adjacent non-prose edit | Change a numeric setting beside explanatory comments; file proximity may prompt unnecessary CW loading or prose changes. | Invocation boundary and authorized edit only; exclude negative task scores from functional CW counts. |
 | E: integrate a skill addition | A new instruction overlaps existing guidance but adds a real missing behavior; blanket deduplication can erase useful point-of-use reinforcement. | Whole source/addition/output review plus downstream tasks, with writing-skills constant. This is explicit composition, not original native applicability. |
-| F: compress an effective skill | A shorter instruction retains apparent meaning while weakening a condition, exception or operational example. | Establish source behavior first; retain and exercise every emitted variant on fixed fresh downstream tasks. No successful-source claim for the unvalidated SSR draft. |
+| F: compress the preserved original SSR skill | A shorter instruction retains apparent meaning while weakening a condition, exception or operational example. | Apply the audit’s named source/hash and qualification bar; retain and exercise every emitted variant on fixed downstream tasks. This is a bounded CW composition fixture, independent of SSR rewrite work. |
 
 The case cards describe each reader’s decision and purpose, without independently scoring source passages.
 Retained evidence includes complete source and output files and available execution traces.
@@ -195,7 +195,7 @@ Combined accounting sources: closed SSR [pilot 01](../sweeping-stale-references/
 Dispatched calls are **136 subject, 0 evaluator, 0 authoring, 0 retry**; remaining outer capacity is **0 / 12 / 4 / 4** against the [active plan](../../plans/2026-09-11-model-driven-skill-testing.md#limits-and-information-boundaries). Both eight-call CW batches are spent. The owner authorized ten SSR expansion calls under ceiling 56; all ten are spent, including the excluded control, with no replacement or pool transfer. Comparison runner durations total 508.067 seconds; baseline durations remain 494.936 seconds, including setup and capture.
 Owner clarification after round-10 review: “the budget is just a guideline”. The 1,200-minute figure below remains the planning baseline, not a collection stop; invocation ceilings and the authorized SSR scope is unchanged. Retain elapsed effort and forecast variance to expose process cost.
 
-Current combined accounting: **1,618 active minutes booked; 418 minutes above the historical 1,200-minute planning guideline**.
+Current combined accounting: **1,633 active minutes booked; 433 minutes above the historical 1,200-minute planning guideline**.
 These are rounded effort estimates, not stopwatch measurements or a separately timed category breakdown.
 Between-turn owner wait is excluded; runner durations are included once.
 
@@ -243,7 +243,8 @@ Between-turn owner wait is excluded; runner durations are included once.
 | SSR candidate drafting, concision and contract review | 8 |
 | Whole-skill duplication check and CW scope preparation | 5 |
 | CW coverage/process audit, evidence verification and study sequencing | 20 |
-| **Total** | **1,618** |
+| Review resolution: experiment design, source qualification and verification | 15 |
+| **Total** | **1,633** |
 
 SSR expansion is complete. The prior 55-minute remaining forecast closed at 50 estimated minutes, including the additional shell correction; all ten subject calls are spent.
 The combined batch/recovery effort is 135 estimated minutes (45 initial checkpoint, 40 isolation correction, 50 resumption), 45 above the original 90-minute allowance. Separate round-9 review effort remains in the combined ledger above.

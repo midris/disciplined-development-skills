@@ -36,7 +36,7 @@ The original explicitly protects useful repetition and requires local and whole-
 Prepare two focused editing cases before deciding whether CW needs new wording:
 
 1. Integrate an addition into an existing skill whose other sections partly cover it. Judge whether the editor notices overlap, gives each instruction a useful home, and retains reinforcement at a distinct decision or output point.
-2. Compress a skill with observed success on a fixed task suite. Judge both the edited text and fresh agents' behavior using the source and compressed versions on the same tasks.
+2. Compress the preserved original SSR skill under the [named source and qualification bar](testing-audit.md#case-f-source-and-qualification). Judge both the edited text and fresh agents' behavior using the source and compressed versions on the same tasks; retain its known pressure and procedural limitations.
 
 Include a real opportunity to over-trim: a repeated condition, exception or output example that has a distinct operational purpose.
 Do not require a preferred wording, exactly one occurrence of each meaning, or a target percentage reduction.

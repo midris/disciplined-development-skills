@@ -61,21 +61,34 @@ The traces do not expose complete initial production requests or establish a cau
 A description experiment remains possible later, but a new description is not yet justified as the remedy for these observed misses.
 Do not insert “load this skill” into native task prompts and call that automatic invocation improvement.
 
-## Recommended allocation: first stage only
+## Proposed allocation: owner decision required
 
-Request **15 additional subject calls**, raising the spent/authorized ceiling from 136 to at most 151 if approved.
+The previous no-SSR-first stop rule is withdrawn: passing controls cannot establish that the loaded rewrite has nothing to fix.
+The observed failure occurred with the rewrite loaded; Opus native runs 5 and 8 repaired the task without loading it.
+Those native runs are not matched explicit no-SSR controls, and two successes do not establish that future controls will pass or that guidance causes the failure.
+They do establish why control success must remain informative rather than suppressing the rewrite comparison.
+
+**Owner decision on timing:** “Defer this decision until SSR resumes.”
+At that point, decide whether to treat the loaded-rewrite failure as the diagnostic starting point and compare all three arms, or require reproduction with the unchanged rewrite before testing a candidate.
+Recommend all three arms with no behavioral early stop: it can distinguish a candidate improvement from a problem introduced by the selected base.
+This explicitly differs from writing-skills 6.4.1's rule, “If the control doesn't exhibit the failure, there is nothing to fix — stop, don't author the guidance.”
+The [framework's authoring section](../../plans/specs/2026-09-11-model-driven-skill-testing-framework.md#7-rewrite-compare-and-decide) requires resolving workflow applicability; the owner must accept this interpretation before input freeze or dispatch.
+The prior permission to draft does not settle that decision or authorize calls.
+
+If accepted, request **15 additional subject calls**, adding 15 to the ceiling in force at approval.
+Do not carry forward an absolute ceiling based on the pre-CW total.
 Use the existing semantic-delivery fixture/task with Claude Opus 5.5 low effort: it is the explicit-load counterpart of the failed native repair.
-Use five fresh contexts each for no SSR, the unchanged tested rewrite, and the contextual-reconciliation candidate.
+Use five fresh contexts each for no SSR, the unchanged tested rewrite, and a context-only reconciliation candidate.
 Only the full-load instruction and skill availability differ in the no-SSR arm; keep task, fixture, permissions and common setup identical.
 Both skill arms explicitly load the complete body, isolating execution from discovery.
-Do not include the original baseline in this experiment: the question is whether the proposed change improves the selected rewrite.
+The original historical skill is outside this question; the unchanged rewrite is the version being diagnosed.
 
-Run the five no-SSR controls first, before freezing or dispatching a candidate.
-The owner's explicit draft request changes the authoring order; it does not satisfy writing-skills' no-guidance validation requirement.
-If none exhibits incomplete reconciliation, stop at five calls and report that the new control does not supply the required RED; do not manufacture a failure or dispatch the remaining ten automatically.
-If the control exposes the target failure, freeze the accepted candidate and run five unchanged-rewrite and five revised-rewrite trials, alternating their order across repetitions.
-Retain every attempt; no retries or replacements are allocated.
-Setup problems stop dispatch for diagnosis rather than consuming an undeclared replacement pool.
+Freeze all three arms and rotate their order across the five repetitions before collecting any of them.
+Run all 15 approved slots unless setup, preservation, charge or runtime/input problems require a stop.
+No-success or all-success outcomes are retained; no retries or replacements are allocated.
+A successful no-SSR arm with a weaker unchanged rewrite is evidence against assuming that the selected base helps, not a reason to stop before observing that arm.
+If all arms succeed, report no reproduced functional gap and no demonstrated benefit from the additions.
+A weaker candidate does not justify adding more guidance automatically; inspect regression and consider retaining, simplifying or abandoning the selected base.
 
 Keep existing F1–F3 complete-repair, preservation and committed-outcome criteria.
 Record context reading, comparison of claims and verification timing as declared procedural observations, not extra functional successes or failures.
@@ -92,3 +105,15 @@ Later work is conditional and unallocated: a five-per-arm accounting comparison 
 Reconsider the existing facet map for affected ordinary cases at that point; a micro-test does not replace full relevant application/pressure testing.
 Invocation testing remains a separate native-availability experiment with timely loading as its primary measure.
 No extra scenario suite, authoring model, evaluator model or broad comparison is requested now.
+This proposal remains parked behind CW; the owner explicitly deferred the baseline interpretation decision until SSR resumes, so it is not dispatch-ready.
+
+## Parked draft review follow-ups
+
+Keep the committed combined draft unchanged while CW baselines take priority.
+Its 1,026 words versus the frozen rewrite's 923 measure draft size, not effectiveness or a compression target.
+Before accepting a context-only candidate, resolve these two bounded wording concerns and review the complete skill again:
+
+- The unconditional complete-claim/code-block read can impose work for every match in a large mechanical rename. Test a condition based on prose claims or a snippet lacking enough context for triage; retain ordinary rename regression coverage to expose cost or skipped consumers. The three-document experiment alone cannot establish acceptable large-sweep cost.
+- The search-context exclusion does not clearly state the matching-heading boundary. Make explicit that an old/new-form match in a heading still needs triage, while adjacent context is not an extra inventory entry merely because a search displays it. This is a clarification proposal, not a measured defect or authority to exclude genuine matches.
+
+These are tracked candidate-review tasks, not silent changes to the tested or drafted bytes.
