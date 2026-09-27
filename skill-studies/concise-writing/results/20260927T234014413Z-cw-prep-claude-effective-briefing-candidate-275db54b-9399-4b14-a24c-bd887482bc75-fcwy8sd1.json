@@ -1,0 +1,161 @@
+{
+  "schema_version": "2",
+  "record_kind": "execution result",
+  "assessed_at": "2026-09-27T23:41:00.429542+00:00",
+  "run_id": "20260927T234014413Z-cw-prep-claude-effective-briefing-candidate-275db54b-9399-4b14-a24c-bd887482bc75-fcwy8sd1",
+  "condition": "candidate-comprehensive",
+  "assessor": {
+    "name": "Codex active session",
+    "method": "active session",
+    "model": null,
+    "session_id": null,
+    "context": "Same session that prepared and reviewed these development cases. No independent, blinded or held-out claim."
+  },
+  "evidence": [
+    {
+      "id": "output",
+      "artifact": {
+        "path": "/Users/simon/work/personal/skill-study-private/concise-writing/development/20260927T234014413Z-cw-prep-claude-effective-briefing-candidate-275db54b-9399-4b14-a24c-bd887482bc75-fcwy8sd1/workspace/fixture/report.md",
+        "sha256": "12bc1791c68daa994b169a3c1ac070c182585fd618dccfe27628d09bdd32defb",
+        "version": null
+      },
+      "selector": "Complete artifact"
+    },
+    {
+      "id": "trace",
+      "artifact": {
+        "path": "/Users/simon/work/personal/skill-study-private/concise-writing/development/20260927T234014413Z-cw-prep-claude-effective-briefing-candidate-275db54b-9399-4b14-a24c-bd887482bc75-fcwy8sd1/stdout.txt",
+        "sha256": "046406226ede1cf15ea61d63d1fed506fca5a5573cfb3430c76142162f54cf85",
+        "version": null
+      },
+      "selector": "Complete artifact"
+    },
+    {
+      "id": "mechanical",
+      "artifact": {
+        "path": "/Users/simon/work/personal/skill-study-private/concise-writing/development/20260927T234014413Z-cw-prep-claude-effective-briefing-candidate-275db54b-9399-4b14-a24c-bd887482bc75-fcwy8sd1/result.json",
+        "sha256": "0087362c9306f00b6cd50863a48875f86514d9306734968058971e0f327b9239",
+        "version": null
+      },
+      "selector": "Complete artifact"
+    },
+    {
+      "id": "log",
+      "artifact": {
+        "path": "/Users/simon/work/personal/skill-study-private/concise-writing/development/20260927T234014413Z-cw-prep-claude-effective-briefing-candidate-275db54b-9399-4b14-a24c-bd887482bc75-fcwy8sd1/runner.log",
+        "sha256": "6ff269f00c2864d5e53c097b779b159d9907ac635d01e8d0a2f060e0d1daf924",
+        "version": null
+      },
+      "selector": "Complete artifact"
+    },
+    {
+      "id": "final",
+      "artifact": {
+        "path": "/Users/simon/work/personal/skill-study-private/concise-writing/development/20260927T234014413Z-cw-prep-claude-effective-briefing-candidate-275db54b-9399-4b14-a24c-bd887482bc75-fcwy8sd1/final.txt",
+        "sha256": "3a20692c122d4bf29acd2aa0ce9c897fc84440e87e2a4c1abc73e8014a92654b",
+        "version": null
+      },
+      "selector": "Complete artifact"
+    },
+    {
+      "id": "source-0",
+      "artifact": {
+        "path": "skill-studies/concise-writing/cases/effective-briefing/fixture/report.md",
+        "sha256": "93c23afd44aab52dfcd2bca53f3db0020a41f650d46d4c59a09595539dc72491",
+        "version": null,
+        "git_revision": "96b6e383da39ea807a6ad49d4513cfc1d6f4cd33"
+      },
+      "selector": "Complete frozen source"
+    },
+    {
+      "id": "source-1",
+      "artifact": {
+        "path": "skill-studies/concise-writing/cases/effective-briefing/task.md",
+        "sha256": "fbf576b5f00e154e6ee4618285d96980b1858de992e5390a1e83cf9b03cb1796",
+        "version": null,
+        "git_revision": "96b6e383da39ea807a6ad49d4513cfc1d6f4cd33"
+      },
+      "selector": "Complete frozen source"
+    },
+    {
+      "id": "source-4",
+      "artifact": {
+        "path": "skill-studies/concise-writing/preparation/claude-original-prompt.md",
+        "sha256": "c72703762cfa9b2be16c09550e27b534fd378c68150004b8d039cbcc499df6bd",
+        "version": null,
+        "git_revision": "96b6e383da39ea807a6ad49d4513cfc1d6f4cd33"
+      },
+      "selector": "Complete frozen source"
+    }
+  ],
+  "setup": {
+    "status": "valid",
+    "reason": "Completed with retained raw trace, saved artifact and final response. Actual provider model/CLI and skill delivery were inspected against the frozen condition; requested low effort is recorded in runner settings. Protected input and inventory verification is recorded at checkpoint.",
+    "evidence": [
+      "mechanical",
+      "trace",
+      "log"
+    ]
+  },
+  "criteria": [
+    {
+      "id": "F1",
+      "dimension": "functional",
+      "judgment": "met",
+      "reason": "All measured facts, uncertainty, scale rationale, continuation, invitation prerequisites and sender, opt-in default, strict timeout boundary and separate expansion decision remain in the whole document.",
+      "consequence": "Required for the corresponding functional or invocation outcome; reported separately.",
+      "evidence": [
+        "output",
+        "source-0",
+        "source-1",
+        "source-4"
+      ]
+    },
+    {
+      "id": "F2",
+      "dimension": "functional",
+      "judgment": "met",
+      "reason": "Opening states the pending Thursday scope and prerequisite section retains approval/postpone actions; removing the closing recap does not make those decisions harder to find in this short briefing.",
+      "consequence": "Required for the corresponding functional or invocation outcome; reported separately.",
+      "evidence": [
+        "output",
+        "source-0",
+        "source-1",
+        "source-4"
+      ]
+    },
+    {
+      "id": "F3",
+      "dimension": "functional",
+      "judgment": "met",
+      "reason": "Four focused sections and compact paragraphs remain easy to consume; removes repeated default/large-scale explanations and final recap without breaking the sequence.",
+      "consequence": "Required for the corresponding functional or invocation outcome; reported separately.",
+      "evidence": [
+        "output",
+        "source-0",
+        "source-1",
+        "source-4"
+      ]
+    }
+  ],
+  "procedural_summary": "Candidate full body delivered at stdout 11 before Edit 25; source read. Process unscored.",
+  "observations": [
+    {
+      "dimension": "functional",
+      "description": "Source 279 words; output 235, change -44, shorter. Keeps the successful-week warning but removes the final recap, unlike candidate 5; both preserve the decision functions.",
+      "consequence": "Descriptive comparison; no separate score or automatic length-based preference.",
+      "evidence": [
+        "output"
+      ]
+    }
+  ],
+  "uncertainty": [],
+  "result_id": "claude-expanded-01-effective-briefing-candidate-comprehensive-2",
+  "functional_result": "met",
+  "manifest": {
+    "path": "skill-studies/concise-writing/preparation/manifests/claude-effective-briefing-manifest.json",
+    "sha256": "a36d38f0f0033c391fc824a40945a4159e6e4ee7ef491622779445a867339748",
+    "version": "1",
+    "git_revision": "4dc370648a6a915546035847b2823a4bc5d57325"
+  }
+}

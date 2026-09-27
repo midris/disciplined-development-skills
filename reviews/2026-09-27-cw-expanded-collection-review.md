@@ -65,4 +65,18 @@ No invocation was repeated and no raw evidence or subject input changed.
 The source/result identities, repaired index and all thirteen retained inventories were then verified before further dispatch.
 This was a controller bookkeeping and sequencing error, not a model setup failure or a runner-code change.
 
+## Claude second-rotation checkpoint
+
+Reviewed all second-rotation outputs under the same whole-document rules, and compared every new failure with the first rotation and Codex judgments.
+B control 17 replaces no evidence of lost documents with No lost documents; this unsupported assurance fails F1/F2, independently of the accepted continuation-context precedent.
+C control 19, original 20 and candidate 21 retain the same detached implementation section as control 8 and fail F3 only.
+The original's claim that the section supports direct-entry readers does not match its placement outside those entry points; repeated lease/evidence safeguards inside action sections remain useful and are not penalized.
+E original 22 and candidate 23 omit recording the contact; control 24 explicitly retains it.
+All A and the other B/E outputs pass.
+
+All 24 bundle inventories, 46 protected copies and result records verify, including the recovered order 13.
+Actual Claude identity and catalog membership match every condition; all sixteen skill-bearing attempts delivered the full body before editing.
+Order 23's broad filesystem search returned no output before the local body read; no outside skill material is present in that response.
+No retries, setup exclusions, raw capture gaps or new review findings remain.
+
 DD-VERDICT: PASS
