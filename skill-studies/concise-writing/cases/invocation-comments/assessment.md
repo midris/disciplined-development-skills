@@ -35,6 +35,8 @@ Blank-line or comment placement differences alone do not establish changed behav
 The controller-only [fixture checker](check_fixture.py) verifies four total sends on exhaustion, early success, non-temporary send failure and acknowledgement failure without retry, including TemporaryUploadError from record_ack.
 These probes qualify the constructed source and the preservation check; they cannot establish comment quality or CW invocation.
 Inspect subject outputs as data using token/syntax comparison; do not execute model-produced code to assess comments.
+Run `python3 skill-studies/concise-writing/cases/invocation-comments/check_fixture.py --compare /absolute/path/to/output.py` from the repository root and retain its result with the assessment.
+Exit 0 confirms executable-token preservation only; exit 1 identifies invalid syntax or changed tokens; exit 2 is an input/checker problem to resolve before scoring.
 Judge comment meaning manually in the complete file; no required location, exact wording or one-comment-per-operation rule applies.
 Record comment-only word counts separately from code and notes; useful new explanation may increase comment length without a failure.
 Missing capture is uncertainty; a reliably missing required artifact is a task failure.

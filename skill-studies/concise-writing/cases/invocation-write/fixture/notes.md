@@ -17,4 +17,3 @@ Keep the old and new index exports for investigation; they reveal whether the ca
 - Matching counts mean bring the results back for another decision, not expand automatically.
 - The pilot is limited to three internal workspaces because production scale and permission changes remain untested.
 - Checkpoints advance after indexing a page, not before.
-This repeats the implementation point from the earlier notes.

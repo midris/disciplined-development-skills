@@ -18,11 +18,10 @@ Adding supported information can justify growth, so E has prospective criteria w
 [N2](../cases/invocation-write/assessment.md) writes a durable update from notes; its prospective generation criteria are separate from policy-4 editing outcomes.
 [N3](../cases/invocation-nonprose/assessment.md) changes one numeric setting beside explanatory comments and measures invocation only.
 [N4](../cases/invocation-comments/assessment.md) tests positive code-comment selection and quality around a retry/acknowledgement boundary, with executable code preserved.
-The owner removed tailored skill-editing/compression experiments from this suite: supervised skill authoring remains with writing-skills, and the general integration behavior is tested through E.
-No SSR source, authoring-context snapshot, emitted skill or downstream SSR run is needed for these cases.
+General integration behavior is tested through E; supervised skill authoring remains with writing-skills.
 
 Only each configuration's enumerated fixtures and rendered prompt enter the subject workspace.
-Cards, policy explanations, boundary checks, the comment-fixture checker, inventories, prior results and this file remain controller-only.
+Cards, policy explanations, boundary checks, the comment-fixture checker and its tests, inventories, prior results and this file remain controller-only.
 Control, original and comprehensive conditions within a case/provider receive identical task/source bytes; only CW delivery differs.
 The two provider catalogs use their native `.agents/skills` and `.claude/skills` locations.
 Model IDs in these drafts identify the planned Sol/Sonnet targets, not verified current availability; confirm exact model, effort, CLI and runtime identities before freeze.
@@ -48,7 +47,6 @@ C's underexplained lease-token requirement offers a possible observation, not a 
 ## Allocation and review boundary
 
 The [audit](../testing-audit.md#proposed-sequence-and-allocation-forecast) owns the staged allocation forecast.
-Replacing the skill-specific experiments with ordinary E removes their source-qualification, editor-variant and downstream-call allocations.
 E proposes three conditions × two providers × three repetitions: 18 calls, with no downstream calls.
 A/B/C/E would total 72 ordinary calls; adding the 32 proposed native calls gives 104 before any fresh CW rewrite.
 The protocol owns scenario acceptance and dispatch authority; this allocation is not a spending authorization.
@@ -72,6 +70,9 @@ N4's controller-only [fixture checker](../cases/invocation-comments/check_fixtur
 The probes rejected three deliberately changed sources: a three-attempt limit, retrying every send exception, and moving acknowledgement recording into the retry block.
 A comment-only edit preserved the executable token sequence; each executable mutation and an added docstring changed it, and invalid syntax was rejected.
 Run `python3 skill-studies/concise-writing/cases/invocation-comments/check_fixture.py` from the repository root to reproduce these checks; the script executes only the constructed source and its local mutations.
+For an assessment, add `--compare /absolute/path/to/output.py` to parse the output and compare its executable tokens without executing it or running the fixture behavior probes.
+Exit 0 means token preservation, 1 means invalid output syntax or changed tokens, and 2 means unreadable input or an invalid source fixture; comment quality and invocation still require assessment.
+Run `python3 skill-studies/concise-writing/cases/invocation-comments/test_check_fixture.py` for the offline command regression tests.
 These are controller checks of a constructed fixture, not model observations or a proof of comment quality.
 The hook suite passed with 263 tests and three environment skips.
 Same-session self-review checked code-comment applicability, comment meaning versus code preservation, token/syntax boundaries, remaining scope limitations and allocation arithmetic.

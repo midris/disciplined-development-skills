@@ -37,3 +37,25 @@ The cards still need the authorized allocation, qualified current runtime/model 
 CLI version readouts were inspected, but no installed-provider qualification session or model inference was started.
 
 DD-VERDICT: PASS
+
+## External review of cfa2f48 and 68d0cfc
+
+Claude returned PASS with three P3 findings; all three were verified against the working files and addressed before collection.
+
+| Finding | Resolution |
+| --- | --- |
+| N4 token comparison had no output-file command; the comment-only self-test could pass without changing its source. | Added `--compare OUTPUT`, which reads/parses/tokenizes only, and a non-identity assertion for the comment replacement. CLI regressions cover comment-only acceptance, changed code, added docstrings, invalid syntax, missing input, non-execution and drifted replacement targets. |
+| C and N2 announced their own repeated material. | Removed the two self-labels while retaining the repeated facts. E's clarification about overlapping requirements remains. These draft inputs have no collected results to invalidate. |
+| Retired case-F sections survived only to support old links; E's historical meaning could be confused with current E. | Removed the empty audit sections and README removal notes, redirected plan links to the historical review, and qualified historical E/F as skill-addition/compression proposals. |
+
+All seven command tests failed against the prior checker, then passed after implementation; the standalone fixture qualification also passes.
+Follow-up self-review found that omitting the final newline falsely failed token preservation.
+An eighth test reproduced that defect before normalizing statement-ending tokens; all eight now pass.
+No subject output is executed by comparison mode; successful token preservation does not establish comment quality or invocation.
+All 40 offline configuration/workspace checks, six draft cards, both historical CW batch readiness checks, local links/anchors and whitespace checks pass.
+The hook suite passes with 263 tests and three environment skips.
+The ledger reconciles to 1,770 estimated minutes; the proposed allocation remains 104 calls and no further subject calls are authorized or spent.
+No live skills, historical case inputs/results, runner code or retained evidence changed; C/N2 edits affect only uncollected draft fixtures.
+Same-session re-review found no remaining actionable findings.
+
+DD-VERDICT: PASS

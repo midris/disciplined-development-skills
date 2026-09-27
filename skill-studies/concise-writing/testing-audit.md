@@ -76,17 +76,6 @@ Do not impose the candidate's stricter explicitness rule on the control or origi
 Before adoption, settle these deltas against observed consequences and intended use.
 A detailed-response discovery probe would require version-specific expectations; it is not a shared negative case.
 
-## Case F source and qualification
-
-Withdrawn from active scope by the owner's suite review.
-The earlier proposal identified the original SSR and verified its historical ordinary-task outcomes, but no fresh qualification or compression call ran.
-That preparation is not a prerequisite for the CW baseline or for ordinary document editing.
-
-### Case F call forecast
-
-The previous F alternatives and skill-addition allocation are withdrawn; they supply no spending authority and are excluded from the active forecast below.
-No skill-editing draft or downstream SSR configuration remains in the active configuration index.
-
 ## Proposed sequence and allocation forecast
 
 The following is a design forecast, not a frozen dispatch table or an approved ceiling increase.

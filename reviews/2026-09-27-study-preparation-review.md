@@ -1,6 +1,7 @@
 # Study preparation review: 3177865
 
 The owner supplied Claude's review of the CW audit and parked SSR proposal.
+E/F in this historical preparation denote the skill-addition/compression proposals; current E denotes document addition.
 This record tracks disposition; current work and accounting remain in the [CW protocol](../skill-studies/concise-writing/protocol.md), and SSR decisions remain in its [protocol](../skill-studies/sweeping-stale-references/protocol.md).
 
 | Finding | Disposition |
@@ -30,7 +31,7 @@ Self-review found no additional issue in the corrections; the explicitly deferre
 
 The reviewer verified the prior resolutions and raised two further findings.
 The F estimate now includes editor calls, all emitted variants, both downstream providers, source refresh and pressure slots: 63–324 calls, with a 102-call cross-provider diagnostic planning default.
-The [audit forecast](../skill-studies/concise-writing/testing-audit.md#case-f-call-forecast) states repetition limits, the cheaper option's missing editor-provider coverage and the separate, still-unapproved allocation.
+The audit forecast at commit c3f4d77 recorded repetition limits, the cheaper option's missing editor-provider coverage and the separate, unapproved allocation.
 This resolves the missing scale before suite review without selecting a dispatch schedule.
 Removed the inaccurate assertion that the review response had made no commits or pushes; the no-model-call/no-skill-edit statement remains accurate.
 

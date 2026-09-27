@@ -83,7 +83,6 @@ A green dashboard must not be used as permission to release an unresolved write 
 The new exporter only moves its saved cursor after the destination acknowledges a complete batch.
 If acknowledgement has not arrived, the cursor remains in its prior position, allowing the same batch to be retried when its status is known.
 The old exporter moves the cursor ahead before acknowledgement, and an interrupted upload can then cause missing rows in a later export.
-This is another description of the implementation difference discussed earlier.
 
 ## Rollback
 

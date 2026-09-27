@@ -232,7 +232,7 @@ Combined accounting sources: closed SSR [pilot 01](../sweeping-stale-references/
 Dispatched calls are **136 subject, 0 evaluator, 0 authoring, 0 retry**; remaining outer capacity is **0 / 12 / 4 / 4** against the [active plan](../../plans/2026-09-11-model-driven-skill-testing.md#limits-and-information-boundaries). Both eight-call CW batches are spent. The owner authorized ten SSR expansion calls under ceiling 56; all ten are spent, including the excluded control, with no replacement or pool transfer. Comparison runner durations total 508.067 seconds; baseline durations remain 494.936 seconds, including setup and capture.
 Owner clarification after round-10 review: “the budget is just a guideline”. The 1,200-minute figure below remains the planning baseline, not a collection stop; invocation ceilings and the authorized SSR scope is unchanged. Retain elapsed effort and forecast variance to expose process cost.
 
-Current combined accounting: **1,755 active minutes booked; 555 minutes above the historical 1,200-minute planning guideline**.
+Current combined accounting: **1,770 active minutes booked; 570 minutes above the historical 1,200-minute planning guideline**.
 These are rounded effort estimates, not stopwatch measurements or a separately timed category breakdown.
 Between-turn owner wait is excluded; runner durations are included once.
 
@@ -289,7 +289,8 @@ Between-turn owner wait is excluded; runner durations are included once.
 | Replace skill-specific tests with ordinary document integration and verify scope | 15 |
 | Positive code-comment case, configurations and offline verification | 15 |
 | Full preparation review, scoring/status remediation and re-verification | 25 |
-| **Total** | **1,755** |
+| External suite review: comparison CLI, fixture cues and scope cleanup | 15 |
+| **Total** | **1,770** |
 
 SSR expansion is complete. The prior 55-minute remaining forecast closed at 50 estimated minutes, including the additional shell correction; all ten subject calls are spent.
 The combined batch/recovery effort is 135 estimated minutes (45 initial checkpoint, 40 isolation correction, 50 resumption), 45 above the original 90-minute allowance. Separate round-9 review effort remains in the combined ledger above.
