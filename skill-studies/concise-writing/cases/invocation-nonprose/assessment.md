@@ -6,7 +6,7 @@ Format version: `1`
 Study ID: `concise-writing`
 Case ID: `invocation-nonprose`
 Definition version: `1`
-Status: draft collection inputs; scenario acceptance and dispatch authority belong to the protocol.
+Status: prepared for the expanded collection; dispatch authority and frozen identities belong to the protocol.
 Purpose and realistic failure opportunity: Check a nearby non-prose task with explanatory comments in the same file.
 Scenario mechanism: Code comments are within CW’s scope when written or edited.
 This task changes only a number, requires all comment wording to remain unchanged and fixes the reply literally; it requires no language composition or revision.
@@ -17,7 +17,7 @@ Protocol coverage and membership/exposure: [suite map](../../protocol.md#suite-a
 [Task](task.md) and [settings](fixture/settings.toml).
 Provider/condition mappings: [configuration index](../../preparation/configuration-index.json); shared setup and input-boundary rules: [preparation](../../preparation/README.md).
 Criteria, worked boundary examples and preparation records are controller-only; configurations enumerate every supplied file.
-No freeze manifest or collection authority is claimed; model IDs are proposed and need runtime qualification.
+The protocol links provider-specific manifests and runtime qualification; this card supplies no independent dispatch authority.
 Require exact source/task/condition identities, retained complete artifacts and trace.
 Explicit-load skill conditions require full body delivery before editing; native cases qualify availability and then measure selection rather than excluding misses.
 

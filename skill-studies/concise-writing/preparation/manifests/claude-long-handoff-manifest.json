@@ -1,0 +1,111 @@
+{
+  "format_version": "1",
+  "manifest_id": "cw-claude-long-handoff-expanded-1",
+  "study_id": "concise-writing",
+  "case_id": "long-handoff",
+  "status": "draft",
+  "created_at": "2026-09-27T21:59:46.824606+00:00",
+  "source_revision": "",
+  "authorities": {
+    "spec": {
+      "path": "plans/specs/2026-09-11-model-driven-skill-testing-framework.md",
+      "sha256": "3ef6a6def5201983aec2a6345ed962c7fede6ef12474c8876269f60528403083",
+      "version": null
+    },
+    "protocol": {
+      "path": "skill-studies/concise-writing/protocol.md",
+      "sha256": "174560166090a026f46dfeec6066dc08fd05099f704fa7261c7daff679961c7a",
+      "version": "1"
+    },
+    "format_contract": {
+      "path": "skill-studies/formats/companion-formats.md",
+      "sha256": "e9956447d56e22f4ffc8681dfee887a9093c845c54be625098d45fecacd48781",
+      "version": "1"
+    },
+    "execution_result_schema": {
+      "path": "skill-studies/formats/execution-result-v2.schema.json",
+      "sha256": "81902ed03e807804404c0d6ba7a0092a1c311c9eef45ee88c89708ce50d7c2c2",
+      "version": "2"
+    },
+    "policy": {
+      "path": "skill-studies/concise-writing/preparation/assessment-policy.txt",
+      "sha256": "9f8125d86d72a368cc12bdbc4c64cc1d7ee188f604fc13130dcd9f8313981c33",
+      "version": "CW-expanded-1"
+    },
+    "criteria": [
+      {
+        "path": "skill-studies/concise-writing/cases/long-handoff/assessment.md",
+        "sha256": "d697aa042e01a4ca048b02b24681ef98f4799fd1765c55492b243306a14a5231",
+        "version": "1"
+      }
+    ]
+  },
+  "conditions": [
+    {
+      "id": "control",
+      "configuration": {
+        "path": "skill-studies/concise-writing/preparation/configs/claude-long-handoff-control.json",
+        "sha256": "a4f13686cc8ef3d63c4d048d90e3789f6736ec7e8923cf9ad6ab6de972f17fe8",
+        "version": "0.2"
+      },
+      "target_skill": null
+    },
+    {
+      "id": "original",
+      "configuration": {
+        "path": "skill-studies/concise-writing/preparation/configs/claude-long-handoff-original.json",
+        "sha256": "66ff88969572adf0809cc69e6c4ac51bab243a51580f7e524a5d2980ae2c96e0",
+        "version": "0.2"
+      },
+      "target_skill": "skill-studies/concise-writing/cases/skill-original/SKILL.md"
+    },
+    {
+      "id": "candidate-comprehensive",
+      "configuration": {
+        "path": "skill-studies/concise-writing/preparation/configs/claude-long-handoff-candidate.json",
+        "sha256": "76fc1c4158249cad7a7ba01b5f6cb2c8f840f94315aab234f9c1de9c8127d8a8",
+        "version": "0.2"
+      },
+      "target_skill": "skill-studies/concise-writing/cases/skill-candidate-comprehensive/SKILL.md"
+    }
+  ],
+  "subject_sources": [
+    {
+      "path": "skill-studies/concise-writing/cases/long-handoff/fixture/report.md",
+      "sha256": "0eb0946286d2a4b1708f14bcff5795cd1effdfa64af612a6cb9a89d2fac84737",
+      "version": null
+    },
+    {
+      "path": "skill-studies/concise-writing/cases/long-handoff/task.md",
+      "sha256": "8be0f67fe6b62ca0a1d5f3af9ac2ffea79eef0d0615f0979853079653b8feab8",
+      "version": null
+    },
+    {
+      "path": "skill-studies/concise-writing/cases/skill-candidate-comprehensive/SKILL.md",
+      "sha256": "f763b43e88c56d6fdc2a96457bc2415cba60b75a1e7cb59cd1b0ebaa3fb199ba",
+      "version": null
+    },
+    {
+      "path": "skill-studies/concise-writing/cases/skill-original/SKILL.md",
+      "sha256": "4d12a2eb475c6b2ef57e2300c8c07af3f59c1e07b2b82695a3b7669eee1d6d72",
+      "version": null
+    },
+    {
+      "path": "skill-studies/concise-writing/preparation/claude-original-prompt.md",
+      "sha256": "c72703762cfa9b2be16c09550e27b534fd378c68150004b8d039cbcc499df6bd",
+      "version": null
+    },
+    {
+      "path": "skill-studies/concise-writing/prompt-control.md",
+      "sha256": "833ee4acdfe9f3e3592ed900a7d6f9212d93bc223c8ccccaee69cb53b4738eaa",
+      "version": null
+    }
+  ],
+  "controller_only": [
+    {
+      "path": "skill-studies/concise-writing/preparation/boundary-checks.md",
+      "sha256": "8cb4f77f78134698748d41b6e5708dfe3e12797ab4abc6148653c244373fcc6a",
+      "version": null
+    }
+  ]
+}

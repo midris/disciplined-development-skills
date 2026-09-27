@@ -1,0 +1,97 @@
+{
+  "format_version": "1",
+  "manifest_id": "cw-claude-invocation-write-expanded-1",
+  "study_id": "concise-writing",
+  "case_id": "invocation-write",
+  "status": "draft",
+  "created_at": "2026-09-27T21:59:46.826760+00:00",
+  "source_revision": "",
+  "authorities": {
+    "spec": {
+      "path": "plans/specs/2026-09-11-model-driven-skill-testing-framework.md",
+      "sha256": "3ef6a6def5201983aec2a6345ed962c7fede6ef12474c8876269f60528403083",
+      "version": null
+    },
+    "protocol": {
+      "path": "skill-studies/concise-writing/protocol.md",
+      "sha256": "174560166090a026f46dfeec6066dc08fd05099f704fa7261c7daff679961c7a",
+      "version": "1"
+    },
+    "format_contract": {
+      "path": "skill-studies/formats/companion-formats.md",
+      "sha256": "e9956447d56e22f4ffc8681dfee887a9093c845c54be625098d45fecacd48781",
+      "version": "1"
+    },
+    "execution_result_schema": {
+      "path": "skill-studies/formats/execution-result-v2.schema.json",
+      "sha256": "81902ed03e807804404c0d6ba7a0092a1c311c9eef45ee88c89708ce50d7c2c2",
+      "version": "2"
+    },
+    "policy": {
+      "path": "skill-studies/concise-writing/preparation/assessment-policy.txt",
+      "sha256": "9f8125d86d72a368cc12bdbc4c64cc1d7ee188f604fc13130dcd9f8313981c33",
+      "version": "CW-expanded-1"
+    },
+    "criteria": [
+      {
+        "path": "skill-studies/concise-writing/cases/invocation-write/assessment.md",
+        "sha256": "85601cedeb934a113b4a631fd278ede95608fa23714c19a059570c2c91660793",
+        "version": "1"
+      }
+    ]
+  },
+  "conditions": [
+    {
+      "id": "original",
+      "configuration": {
+        "path": "skill-studies/concise-writing/preparation/configs/claude-invocation-write-original.json",
+        "sha256": "7d680cef2c4891964ab2066764bcfac60863facfc8f3bfa15b82bd0422c55dc1",
+        "version": "0.2"
+      },
+      "target_skill": "skill-studies/concise-writing/cases/skill-original/SKILL.md"
+    },
+    {
+      "id": "candidate-comprehensive",
+      "configuration": {
+        "path": "skill-studies/concise-writing/preparation/configs/claude-invocation-write-candidate.json",
+        "sha256": "48f49d4a86b15af29b51956e932f9a0f80a35fff9d083e8f4e1d806d036be9f8",
+        "version": "0.2"
+      },
+      "target_skill": "skill-studies/concise-writing/cases/skill-candidate-comprehensive/SKILL.md"
+    }
+  ],
+  "subject_sources": [
+    {
+      "path": "skill-studies/concise-writing/cases/invocation-write/fixture/notes.md",
+      "sha256": "687328b186b130469d63398579e81d72b88866e0f7ba4e48b9dfbb4774581442",
+      "version": null
+    },
+    {
+      "path": "skill-studies/concise-writing/cases/invocation-write/task.md",
+      "sha256": "2e0ce51601ecd5e3a12168a3f0640b9ee49151fa3810cc59da0e4abcda85220f",
+      "version": null
+    },
+    {
+      "path": "skill-studies/concise-writing/cases/skill-candidate-comprehensive/SKILL.md",
+      "sha256": "f763b43e88c56d6fdc2a96457bc2415cba60b75a1e7cb59cd1b0ebaa3fb199ba",
+      "version": null
+    },
+    {
+      "path": "skill-studies/concise-writing/cases/skill-original/SKILL.md",
+      "sha256": "4d12a2eb475c6b2ef57e2300c8c07af3f59c1e07b2b82695a3b7669eee1d6d72",
+      "version": null
+    },
+    {
+      "path": "skill-studies/concise-writing/preparation/native-prompt.md",
+      "sha256": "7265a3997ee554a5f4238462b8427549e4be6b3b94283daa6d7a3c96d85105a2",
+      "version": null
+    }
+  ],
+  "controller_only": [
+    {
+      "path": "skill-studies/concise-writing/preparation/boundary-checks.md",
+      "sha256": "8cb4f77f78134698748d41b6e5708dfe3e12797ab4abc6148653c244373fcc6a",
+      "version": null
+    }
+  ]
+}

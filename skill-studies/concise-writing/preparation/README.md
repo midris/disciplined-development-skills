@@ -1,4 +1,4 @@
-# CW draft suite preparation
+# CW expanded suite preparation
 
 Current status and authority live in the [protocol](../protocol.md).
 This package defines reviewable inputs and assessment rules; it is not a collection freeze or permission to spend calls.
@@ -24,7 +24,7 @@ Only each configuration's enumerated fixtures and rendered prompt enter the subj
 Cards, policy explanations, boundary checks, the comment-fixture checker and its tests, inventories, prior results and this file remain controller-only.
 Control, original and comprehensive conditions within a case/provider receive identical task/source bytes; only CW delivery differs.
 The two provider catalogs use their native `.agents/skills` and `.claude/skills` locations.
-Model IDs in these drafts identify the planned Sol/Sonnet targets, not verified current availability; confirm exact model, effort, CLI and runtime identities before freeze.
+Model IDs identify the selected Sol/Sonnet targets; the runtime record distinguishes qualified CLI identities from production-model availability, checked on each provider’s first scheduled attempt.
 Keep historical runtime results separate from new observations.
 [CW-expanded-1](../protocol.md#expanded-suite-assessment-policy) specifies which case rules govern editing, additions, generation, comments and negative selection; freeze that mapping with the cards.
 
@@ -47,15 +47,17 @@ C's underexplained lease-token requirement offers a possible observation, not a 
 ## Allocation and review boundary
 
 The [audit](../testing-audit.md#proposed-sequence-and-allocation-forecast) owns the staged allocation forecast.
-E proposes three conditions × two providers × three repetitions: 18 calls, with no downstream calls.
-A/B/C/E would total 72 ordinary calls; adding the 32 proposed native calls gives 104 before any fresh CW rewrite.
+E uses three conditions × two providers × three repetitions: 18 calls, with no downstream calls.
+A/B/C/E total 72 ordinary calls; adding the 32 native calls gives 104 before any fresh CW rewrite.
 The protocol owns scenario acceptance and dispatch authority; this allocation is not a spending authorization.
 
-The cards and [controller examples](boundary-checks.md) support an adequacy review, not a claim that constructed cases have produced model failures.
+The cards and [controller examples](boundary-checks.md) support assessment consistency, not a claim that constructed cases have produced model failures.
 Response-only/detailed-response applicability, anchor repair and full orchestration retain the protocol's explicit deferrals.
 O5 remains conditional and no corpus-wide or held-out coverage claim follows from these constructed development cases.
 
-Before collection, authorize the stage allocation, pin available runtime/model identities, qualify discovery and shell/Python/Git/heredoc isolation, freeze the exact ordered schedule and input/assessment manifests, and pass collection readiness.
+The protocol owns allocation approval and dispatch progress.
+[Runtime qualification](runtime-qualification.md) records the tested identities and the production-model check required on the first scheduled attempt; the [schedule](schedule.json) fixes ordering.
+Collection requires committed input/assessment manifests and passing readiness.
 Recheck source bytes, controller-policy equality and provider/condition parity at that freeze.
 No model observations have been collected from this preparation.
 
@@ -64,7 +66,7 @@ No model observations have been collected from this preparation.
 
 Offline preparation passed for all 40 active configurations: exact copied bytes, task/source parity across providers and conditions, exact CW snapshots, no CW in controls and no skill-read request in native prompts.
 The configuration index matches the files on disk exactly; withdrawn composition inputs are absent.
-All six new case cards are structurally valid and deliberately unfinished, both historical CW batches pass assessment readiness, and policy-4 body/copy equality remains intact.
+All six new case cards are structurally valid and prepared for the expanded collection, both historical CW batches pass assessment readiness, and policy-4 body/copy equality remains intact.
 Local links and anchors in the preparation records resolve; accounting reconciles to the protocol total.
 N4's controller-only [fixture checker](../cases/invocation-comments/check_fixture.py) passed six behavior probes: immediate success, success on the fourth attempt, exhausted temporary errors, non-temporary send failure, and temporary/non-temporary acknowledgement failures without resending.
 The probes rejected three deliberately changed sources: a three-attempt limit, retrying every send exception, and moving acknowledgement recording into the retry block.
@@ -77,5 +79,5 @@ These are controller checks of a constructed fixture, not model observations or 
 The hook suite passed with 263 tests and three environment skips.
 Same-session self-review checked code-comment applicability, comment meaning versus code preservation, token/syntax boundaries, remaining scope limitations and allocation arithmetic.
 These checks establish prepared inputs and consistent records, not collection readiness.
-No model inference, provider-session qualification or collection was run; CLI version readouts alone do not qualify a runtime.
+These preparation checks used no model inference; subsequent provider-session qualification is recorded separately in the linked runtime record.
 No live skill, frozen historical input, result score or retained evidence bundle changed.

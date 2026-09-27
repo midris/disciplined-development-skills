@@ -1,0 +1,111 @@
+{
+  "format_version": "1",
+  "manifest_id": "cw-codex-agent-recommendation-expanded-1",
+  "study_id": "concise-writing",
+  "case_id": "agent-recommendation",
+  "status": "draft",
+  "created_at": "2026-09-27T21:59:46.822037+00:00",
+  "source_revision": "",
+  "authorities": {
+    "spec": {
+      "path": "plans/specs/2026-09-11-model-driven-skill-testing-framework.md",
+      "sha256": "3ef6a6def5201983aec2a6345ed962c7fede6ef12474c8876269f60528403083",
+      "version": null
+    },
+    "protocol": {
+      "path": "skill-studies/concise-writing/protocol.md",
+      "sha256": "174560166090a026f46dfeec6066dc08fd05099f704fa7261c7daff679961c7a",
+      "version": "1"
+    },
+    "format_contract": {
+      "path": "skill-studies/formats/companion-formats.md",
+      "sha256": "e9956447d56e22f4ffc8681dfee887a9093c845c54be625098d45fecacd48781",
+      "version": "1"
+    },
+    "execution_result_schema": {
+      "path": "skill-studies/formats/execution-result-v2.schema.json",
+      "sha256": "81902ed03e807804404c0d6ba7a0092a1c311c9eef45ee88c89708ce50d7c2c2",
+      "version": "2"
+    },
+    "policy": {
+      "path": "skill-studies/concise-writing/preparation/assessment-policy.txt",
+      "sha256": "9f8125d86d72a368cc12bdbc4c64cc1d7ee188f604fc13130dcd9f8313981c33",
+      "version": "CW-expanded-1"
+    },
+    "criteria": [
+      {
+        "path": "skill-studies/concise-writing/cases/agent-recommendation/assessment.md",
+        "sha256": "79f46d1de25a6e3b9e32762903a9a36396176ac5853abfd67171ec9e8959a5ea",
+        "version": "5"
+      }
+    ]
+  },
+  "conditions": [
+    {
+      "id": "control",
+      "configuration": {
+        "path": "skill-studies/concise-writing/preparation/configs/codex-agent-recommendation-control.json",
+        "sha256": "a2c79de59fc38a0bd97c741d11a77e0a43d35d195a89e00a197dcd1f433f2dcf",
+        "version": "0.2"
+      },
+      "target_skill": null
+    },
+    {
+      "id": "original",
+      "configuration": {
+        "path": "skill-studies/concise-writing/preparation/configs/codex-agent-recommendation-original.json",
+        "sha256": "3c5555de7956e2f85ac707390a6e3e3c6269e9d3066eba9b7892f3bfb60c3fba",
+        "version": "0.2"
+      },
+      "target_skill": "skill-studies/concise-writing/cases/skill-original/SKILL.md"
+    },
+    {
+      "id": "candidate-comprehensive",
+      "configuration": {
+        "path": "skill-studies/concise-writing/preparation/configs/codex-agent-recommendation-candidate.json",
+        "sha256": "2f46d36f7667aa4a62f59e70bebedd811c76a517afd7d0fd4541552605e01b1d",
+        "version": "0.2"
+      },
+      "target_skill": "skill-studies/concise-writing/cases/skill-candidate-comprehensive/SKILL.md"
+    }
+  ],
+  "subject_sources": [
+    {
+      "path": "skill-studies/concise-writing/cases/agent-recommendation/fixture/report.md",
+      "sha256": "e9a992c7e4c14dfd5afc10cc637349f39c2030e98ed0311441675900bc3e93e9",
+      "version": null
+    },
+    {
+      "path": "skill-studies/concise-writing/cases/agent-recommendation/task.md",
+      "sha256": "607cbe0562a19ea092fe76ec96f13bfbe033b2e1095baef2ca38be621c0baf82",
+      "version": null
+    },
+    {
+      "path": "skill-studies/concise-writing/cases/skill-candidate-comprehensive/SKILL.md",
+      "sha256": "f763b43e88c56d6fdc2a96457bc2415cba60b75a1e7cb59cd1b0ebaa3fb199ba",
+      "version": null
+    },
+    {
+      "path": "skill-studies/concise-writing/cases/skill-original/SKILL.md",
+      "sha256": "4d12a2eb475c6b2ef57e2300c8c07af3f59c1e07b2b82695a3b7669eee1d6d72",
+      "version": null
+    },
+    {
+      "path": "skill-studies/concise-writing/prompt-control.md",
+      "sha256": "833ee4acdfe9f3e3592ed900a7d6f9212d93bc223c8ccccaee69cb53b4738eaa",
+      "version": null
+    },
+    {
+      "path": "skill-studies/concise-writing/prompt-original.md",
+      "sha256": "ec75556bc64e9de7ef0ca76ef50fe2db02021e90c8a855901b6e08a854f4d81e",
+      "version": null
+    }
+  ],
+  "controller_only": [
+    {
+      "path": "skill-studies/concise-writing/preparation/boundary-checks.md",
+      "sha256": "8cb4f77f78134698748d41b6e5708dfe3e12797ab4abc6148653c244373fcc6a",
+      "version": null
+    }
+  ]
+}

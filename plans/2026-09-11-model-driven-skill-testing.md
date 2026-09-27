@@ -35,7 +35,7 @@ A broader archival reorganization is outside this study.
 
 ## Limits and information boundaries
 
-**Accepted outer limits (subject ceiling increased from 126 to 136 for the owner-requested Opus invocation comparison): 136 subject, 12 evaluator, 4 authoring and 4 retry invocations (156 total), with a 20-hour active-work planning guideline.**
+**Accepted outer limits (subject ceiling increased from 136 to 240 for the owner-approved CW cross-provider comparison): 240 subject, 12 evaluator, 4 authoring and 4 retry invocations (260 total), with a 20-hour active-work planning guideline.**
 The invocation limits are ceilings, not a dispatch commitment. Owner clarification after round-10 review: “the budget is just a guideline”; this relaxes the active-time limit, not the authorized call count. The subsequent “ok, please proceed” resumes the eight remaining expansion attempts. The owner requested minimal real-model runs to establish the process before broader testing; the initial Sol-low pair and its two-call extension are complete. Pre-baseline development is now closed at four subject calls; its remaining additional-development slot stays unused. A new facet alone cannot reopen that phase. A diagnostic exception requires a named readiness defect and separate owner approval; no automatic full campaign follows.
 Track active sessions from Stage 1, including preparation, review and model-run waits; exclude recorded periods awaiting owner input.
 Keep model latency inside reported active effort to bound actual study time and expose tooling costs. Budget for sequential execution initially, then replace estimates with pilot timings; do not assume all available calls must be used.
@@ -257,7 +257,8 @@ Reserved bundles and revealing assessments stay entirely in the verified private
 - [x] Complete the owner’s scenario walkthrough: retain A/B, accept C, revised E and N1–N4, and remove the tailored skill-editing experiments. O5 remains conditional; response-only applicability remains deferred.
 - [x] Review the complete preparation changes and address findings before collection, as requested by the owner; see the [review record](../reviews/2026-09-27-cw-suite-preparation-review.md).
 - [x] Address the external suite review: add a read-only N4 output comparison command, remove duplication labels from C/N2 and clean up retired scope links; see the [follow-up review](../reviews/2026-09-27-cw-suite-preparation-review.md#external-review-of-cfa2f48-and-68d0cfc).
-- [ ] Present the bounded cross-provider allocation, obtain the required subject-ceiling extension, then freeze and qualify approved inputs.
+- [x] Obtain approval for the bounded 104-call CW allocation and subject-ceiling increase to 240; authority is recorded at the top of the [CW protocol](../skill-studies/concise-writing/protocol.md).
+- [ ] Qualify current runtimes, freeze the ordered schedule and exact approved inputs, and pass collection readiness before dispatch.
   The owner requested three repetitions per condition on both providers for A/B/C, including Claude coverage of the existing cases: 54 ordinary calls in the [updated forecast](../skill-studies/concise-writing/testing-audit.md#proposed-sequence-and-allocation-forecast).
   Ordinary document-addition E proposes another 18 calls; native cases N1–N4 are a separate 32-call proposal.
   The owner removed tailored skill-editing/compression experiments and their downstream allocations from the active scope.

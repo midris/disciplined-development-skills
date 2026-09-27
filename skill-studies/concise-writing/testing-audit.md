@@ -3,7 +3,7 @@
 Audit date: 2026-09-27.
 The [protocol](protocol.md) owns current status, the facet map and case inventory; the [active plan](../../plans/2026-09-11-model-driven-skill-testing.md#current-next-action) owns execution tasks.
 This audit applies the [current testing spec](../../plans/specs/2026-09-11-model-driven-skill-testing-framework.md) and installed Superpowers writing-skills 6.4.1 to the retained CW study.
-It records preparation, not authorization to exceed the spent 136-call subject ceiling.
+The protocol owns current allocation approval and spending; this audit records coverage and allocation rationale.
 
 ## Conclusion
 
@@ -78,8 +78,8 @@ A detailed-response discovery probe would require version-specific expectations;
 
 ## Proposed sequence and allocation forecast
 
-The following is a design forecast, not a frozen dispatch table or an approved ceiling increase.
-The [preparation package](preparation/README.md) supplies draft fixtures, criterion cards, boundary checks and provider configurations.
+The following explains the allocation design; the protocol owns approval and exact dispatch tables.
+The [preparation package](preparation/README.md) supplies fixtures, criterion cards, boundary checks and provider configurations.
 The protocol owns scenario acceptance; call authorization, runtime qualification, an exact schedule and frozen manifests remain prerequisites to collection readiness.
 
 1. **Use the reviewed coverage design.** Retain A/B, add C for long-document navigation and pressure, E for document additions, and N1–N4 for native selection including code comments. The protocol records acceptance and deliberate limits; collected effectiveness remains unestablished.
@@ -90,10 +90,10 @@ The protocol owns scenario acceptance; call authorization, runtime qualification
 6. **Compress after effectiveness.** Freeze an effective CW version, attempt deletions/consolidation separately from behavioral additions, and compare fresh runs on the same relevant cases. Repeat the relevant document and invocation checks when CW behavior changes. Recommend adoption only with regressions, uncertainty and deliberate limitations visible.
 
 The owner requested Claude coverage for the existing A/B cases as well as C, and three repetitions on each provider for this ordinary comparison.
-E uses the same three-repetition proposal and adds 18 ordinary calls.
-Steps 2 and 3 would total **104 diagnostic calls**: 52 per provider, requiring a subject ceiling of 240 if the full proposed scope is approved for dispatch.
-This includes N4’s eight proposed native comment-editing calls; new collection remains subject to call authorization, runtime qualification and freeze.
-Native cases retain their proposed two repetitions; the skill-specific E/F allocations have been withdrawn.
+E uses the same three-repetition design and adds 18 ordinary calls.
+Steps 2 and 3 total **104 diagnostic calls**: 52 per provider; approval and subject capacity are recorded in the protocol.
+This includes N4’s eight native comment-editing calls; collection remains subject to runtime qualification and freeze.
+Native cases use two repetitions.
 They are not the cost of the whole end-to-end cycle; any fresh rewrite needs its own bounded allocation.
 Keeping the ordinary comparison decision separate allows an early stop for a contract or fixture defect before spending on discovery.
 Three ordinary repetitions and two native repetitions offer limited variability checks, not reliability estimates or the five-sample wording test.

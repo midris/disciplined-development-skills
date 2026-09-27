@@ -2,12 +2,14 @@
 
 Format version: `1`
 Study ID: `concise-writing`
-Status: baseline and fixed-suite comprehensive comparison complete. Both versions pass 2/2 on each comparison case under policy 4; all eight comparison outputs are shorter than their sources. No overall quality advantage established. Adoption remains deferred; all approved calls are spent.
+Status: baseline and fixed-suite comprehensive comparison complete. Both versions pass 2/2 on each comparison case under policy 4; all eight comparison outputs are shorter than their sources. No overall quality advantage established. Adoption remains deferred; historical calls are spent and the expanded 104-call collection is now authorized.
 Current action: CW remains the first end-to-end study, followed by SSR.
 The owner accepted the scenario designs C, N1–N4 and revised E during the walkthrough, retained A/B, and removed tailored skill-editing/compression tests.
-The owner-requested [preparation review and remediation](../../reviews/2026-09-27-cw-suite-preparation-review.md) are complete; no new collection is authorized.
+The owner-requested [preparation review and remediation](../../reviews/2026-09-27-cw-suite-preparation-review.md) are complete.
+On 2026-09-27, the owner replied “approved, please continue” to the 104-call proposal: 72 ordinary calls followed by 32 native calls, raising the combined subject ceiling from 136 to 240.
+This authorizes both stages, runtime qualification, committed input/schedule freeze and collection after readiness, with zero automatic retries; it does not authorize a skill edit or adoption.
 The [preparation package](preparation/README.md) and [allocation forecast](testing-audit.md#proposed-sequence-and-allocation-forecast) define the uncollected scope.
-The pending steps are the bounded call-allocation decision, runtime qualification, an exact schedule, committed input/assessment freeze and collection readiness.
+Current work: qualify both current runtimes, freeze the exact schedule and input/assessment manifests, then pass collection readiness before dispatch.
 Establish and assess both providers' baselines before selecting CW edits; the existing rewrite remains an unchanged comparison condition.
 Plan: [active plan](../../plans/2026-09-11-model-driven-skill-testing.md#current-next-action)
 General spec: [testing framework](../../plans/specs/2026-09-11-model-driven-skill-testing-framework.md)
@@ -39,7 +41,7 @@ Owner clarification: concision must maintain document effectiveness. Repetition 
 
 Consumers: the owner needs agent output that is easier to consume without loss of meaning or usefulness; the editor/reviewer uses the source-to-draft comparison to check losses. No exact output schema or downstream program consumer was identified in the inspected CW, DD, adversarial-review, rationale and plan-writing skills, architecture/README, example guidance, command directory and hook references. DD and review guidance invoke CW but do not prescribe a parser for its edited prose. This inspection does not establish that no external consumer exists. Any real case-specific interface or link dependency must be stated explicitly; do not invent layout-preservation rules for ordinary prose.
 Owner decisions: select CW, govern concision by document effectiveness as clarified above, and judge the work on its own merits. Process-only defects do not overturn a successful artifact outcome. Historical case boundaries and completed collection scopes are approved and frozen by their linked manifests.
-Scenario acceptance and current dispatch authority are recorded only at the top of this protocol; new collection inputs remain unfrozen.
+Scenario acceptance and current dispatch authority are recorded only at the top of this protocol; the expanded batches below identify the new collection inputs.
 
 ## Assessment policy
 
@@ -64,7 +66,7 @@ For comparisons, report evidence-backed differences in effectiveness and readabi
 
 ## Suite and evidence
 
-Selected coverage maps to the skill’s named patterns below. These are contextual evidence targets, not eleven independent tests or fixed instructions to delete/retain particular sentences. The unit of judgment remains the complete document under O1–O3; improving layout and readability must also be assessed. The linked case cards ground expected effects and valid alternatives in their source, audience and task; A/B are owner-accepted and frozen by their linked manifests; new cards are drafts.
+Selected coverage maps to the skill’s named patterns below. These are contextual evidence targets, not eleven independent tests or fixed instructions to delete/retain particular sentences. The unit of judgment remains the complete document under O1–O3; improving layout and readability must also be assessed. The linked case cards ground expected effects and valid alternatives in their source, audience and task; A/B are owner-accepted and frozen by their historical manifests; expanded collection inputs use the provider-specific manifests below.
 
 | Skill pattern / category | Selected coverage and discriminating evidence |
 |---|---|
@@ -96,7 +98,7 @@ Two accepted cases combine the existing facets. Both use newly constructed ficti
 | A: [agent-recommendation](cases/agent-recommendation/assessment.md) | completed; retain | O1–O3 assessed; O4/O5 unscored | development | Reader needs the recommendation, reasons, caveats and next action. Include both purposeless restatement and useful reinforcement, plus separated duplication and a real structural difficulty. Cover other cut patterns only where they fit naturally. |
 | B: [effective-briefing](cases/effective-briefing/assessment.md) | completed; retain | O1–O3 assessed; O4/O5 unscored | development | Useful context, explanation and repetition must not be damaged by unnecessary compression. An edit must retain the source’s effectiveness; unchanged length is acceptable and increased length is flagged. |
 
-The additions below have [draft inputs, criteria and configurations](preparation/README.md), but no collected observations or frozen collection inputs.
+The additions below have [prepared inputs, criteria and configurations](preparation/README.md), but no collected observations; provider-specific collection manifests below identify their freeze.
 The [audit](testing-audit.md#proposed-sequence-and-allocation-forecast) gives their sequence, evidence requirements and allocation forecast.
 
 | Prepared case | Distinct failure opportunity | Required evidence / boundary |
@@ -119,7 +121,7 @@ Historical configurations and collection manifests below preserve the actual sup
 
 ## Expanded-suite assessment policy
 
-Prospective policy identity: **CW-expanded-1**, draft for the new collection only.
+Policy identity: **CW-expanded-1**, selected for the expanded collection; its [controller copy](preparation/assessment-policy.txt) also includes unchanged CW-assessment-4.
 It makes the case-specific rules explicit without changing CW-assessment-4, its controller copy, historical cards or retained scores.
 Freeze this section and the exact case-card revisions together before any new assessment.
 
@@ -222,6 +224,166 @@ Evidence/index: [comparison attempt index](comprehensive-comparison-01-run-index
 The comparison preserves tested quality without demonstrating an overall output-quality gain. The candidate passes the tested scope but combines behavior changes with cleanup: the [assessment](comprehensive-comparison-01-assessment.md#candidate-contract-changes) records O5 reporting removal, a narrower repetition exception, stricter explicitness and wider applicability. No revised target contract is accepted; retain the live original under the owner's deferred adoption decision. That completed comparison authorized no further scenario, model pass, authoring or adoption; see the opening for current preparation.
 
 
+### Expanded collection: codex-expanded-01
+
+Scope: 36 sequential attempts; codex, four ordinary tasks × three conditions × three repetitions.
+Authority: included in the owner-approved 104-call allocation recorded at the top of this protocol.
+Include all valid-setup executions regardless of outcome; report invalid/unresolved setup and unattempted slots separately.
+No automatic retry or replacement.
+Use CW-expanded-1 and the linked case cards; selection and task quality remain separate, with N3 functional CW outcomes unmeasured.
+Stop for uncertain charges, contamination, input/runtime drift, unusable setup or preservation failure; a valid behavioral miss remains an observation.
+Runtime and evidence controls: [expanded qualification](preparation/runtime-qualification.md).
+Inputs: [codex-agent-recommendation-manifest](preparation/manifests/codex-agent-recommendation-manifest.json), [codex-effective-briefing-manifest](preparation/manifests/codex-effective-briefing-manifest.json), [codex-long-handoff-manifest](preparation/manifests/codex-long-handoff-manifest.json), [codex-document-addition-manifest](preparation/manifests/codex-document-addition-manifest.json).
+
+| Order | Case | Condition | Repetition | CONFIG |
+| ---: | --- | --- | ---: | --- |
+| 1 | agent-recommendation | control | 1 | `skill-studies/concise-writing/preparation/configs/codex-agent-recommendation-control.json` |
+| 2 | agent-recommendation | original | 1 | `skill-studies/concise-writing/preparation/configs/codex-agent-recommendation-original.json` |
+| 3 | agent-recommendation | candidate-comprehensive | 1 | `skill-studies/concise-writing/preparation/configs/codex-agent-recommendation-candidate.json` |
+| 4 | effective-briefing | original | 1 | `skill-studies/concise-writing/preparation/configs/codex-effective-briefing-original.json` |
+| 5 | effective-briefing | candidate-comprehensive | 1 | `skill-studies/concise-writing/preparation/configs/codex-effective-briefing-candidate.json` |
+| 6 | effective-briefing | control | 1 | `skill-studies/concise-writing/preparation/configs/codex-effective-briefing-control.json` |
+| 7 | long-handoff | candidate-comprehensive | 1 | `skill-studies/concise-writing/preparation/configs/codex-long-handoff-candidate.json` |
+| 8 | long-handoff | control | 1 | `skill-studies/concise-writing/preparation/configs/codex-long-handoff-control.json` |
+| 9 | long-handoff | original | 1 | `skill-studies/concise-writing/preparation/configs/codex-long-handoff-original.json` |
+| 10 | document-addition | control | 1 | `skill-studies/concise-writing/preparation/configs/codex-document-addition-control.json` |
+| 11 | document-addition | original | 1 | `skill-studies/concise-writing/preparation/configs/codex-document-addition-original.json` |
+| 12 | document-addition | candidate-comprehensive | 1 | `skill-studies/concise-writing/preparation/configs/codex-document-addition-candidate.json` |
+| 13 | agent-recommendation | original | 2 | `skill-studies/concise-writing/preparation/configs/codex-agent-recommendation-original.json` |
+| 14 | agent-recommendation | candidate-comprehensive | 2 | `skill-studies/concise-writing/preparation/configs/codex-agent-recommendation-candidate.json` |
+| 15 | agent-recommendation | control | 2 | `skill-studies/concise-writing/preparation/configs/codex-agent-recommendation-control.json` |
+| 16 | effective-briefing | candidate-comprehensive | 2 | `skill-studies/concise-writing/preparation/configs/codex-effective-briefing-candidate.json` |
+| 17 | effective-briefing | control | 2 | `skill-studies/concise-writing/preparation/configs/codex-effective-briefing-control.json` |
+| 18 | effective-briefing | original | 2 | `skill-studies/concise-writing/preparation/configs/codex-effective-briefing-original.json` |
+| 19 | long-handoff | control | 2 | `skill-studies/concise-writing/preparation/configs/codex-long-handoff-control.json` |
+| 20 | long-handoff | original | 2 | `skill-studies/concise-writing/preparation/configs/codex-long-handoff-original.json` |
+| 21 | long-handoff | candidate-comprehensive | 2 | `skill-studies/concise-writing/preparation/configs/codex-long-handoff-candidate.json` |
+| 22 | document-addition | original | 2 | `skill-studies/concise-writing/preparation/configs/codex-document-addition-original.json` |
+| 23 | document-addition | candidate-comprehensive | 2 | `skill-studies/concise-writing/preparation/configs/codex-document-addition-candidate.json` |
+| 24 | document-addition | control | 2 | `skill-studies/concise-writing/preparation/configs/codex-document-addition-control.json` |
+| 25 | agent-recommendation | candidate-comprehensive | 3 | `skill-studies/concise-writing/preparation/configs/codex-agent-recommendation-candidate.json` |
+| 26 | agent-recommendation | control | 3 | `skill-studies/concise-writing/preparation/configs/codex-agent-recommendation-control.json` |
+| 27 | agent-recommendation | original | 3 | `skill-studies/concise-writing/preparation/configs/codex-agent-recommendation-original.json` |
+| 28 | effective-briefing | control | 3 | `skill-studies/concise-writing/preparation/configs/codex-effective-briefing-control.json` |
+| 29 | effective-briefing | original | 3 | `skill-studies/concise-writing/preparation/configs/codex-effective-briefing-original.json` |
+| 30 | effective-briefing | candidate-comprehensive | 3 | `skill-studies/concise-writing/preparation/configs/codex-effective-briefing-candidate.json` |
+| 31 | long-handoff | original | 3 | `skill-studies/concise-writing/preparation/configs/codex-long-handoff-original.json` |
+| 32 | long-handoff | candidate-comprehensive | 3 | `skill-studies/concise-writing/preparation/configs/codex-long-handoff-candidate.json` |
+| 33 | long-handoff | control | 3 | `skill-studies/concise-writing/preparation/configs/codex-long-handoff-control.json` |
+| 34 | document-addition | candidate-comprehensive | 3 | `skill-studies/concise-writing/preparation/configs/codex-document-addition-candidate.json` |
+| 35 | document-addition | control | 3 | `skill-studies/concise-writing/preparation/configs/codex-document-addition-control.json` |
+| 36 | document-addition | original | 3 | `skill-studies/concise-writing/preparation/configs/codex-document-addition-original.json` |
+
+### Expanded collection: claude-expanded-01
+
+Scope: 36 sequential attempts; claude, four ordinary tasks × three conditions × three repetitions.
+Authority: included in the owner-approved 104-call allocation recorded at the top of this protocol.
+Include all valid-setup executions regardless of outcome; report invalid/unresolved setup and unattempted slots separately.
+No automatic retry or replacement.
+Use CW-expanded-1 and the linked case cards; selection and task quality remain separate, with N3 functional CW outcomes unmeasured.
+Stop for uncertain charges, contamination, input/runtime drift, unusable setup or preservation failure; a valid behavioral miss remains an observation.
+Runtime and evidence controls: [expanded qualification](preparation/runtime-qualification.md).
+Inputs: [claude-agent-recommendation-manifest](preparation/manifests/claude-agent-recommendation-manifest.json), [claude-effective-briefing-manifest](preparation/manifests/claude-effective-briefing-manifest.json), [claude-long-handoff-manifest](preparation/manifests/claude-long-handoff-manifest.json), [claude-document-addition-manifest](preparation/manifests/claude-document-addition-manifest.json).
+
+| Order | Case | Condition | Repetition | CONFIG |
+| ---: | --- | --- | ---: | --- |
+| 1 | agent-recommendation | control | 1 | `skill-studies/concise-writing/preparation/configs/claude-agent-recommendation-control.json` |
+| 2 | agent-recommendation | original | 1 | `skill-studies/concise-writing/preparation/configs/claude-agent-recommendation-original.json` |
+| 3 | agent-recommendation | candidate-comprehensive | 1 | `skill-studies/concise-writing/preparation/configs/claude-agent-recommendation-candidate.json` |
+| 4 | effective-briefing | original | 1 | `skill-studies/concise-writing/preparation/configs/claude-effective-briefing-original.json` |
+| 5 | effective-briefing | candidate-comprehensive | 1 | `skill-studies/concise-writing/preparation/configs/claude-effective-briefing-candidate.json` |
+| 6 | effective-briefing | control | 1 | `skill-studies/concise-writing/preparation/configs/claude-effective-briefing-control.json` |
+| 7 | long-handoff | candidate-comprehensive | 1 | `skill-studies/concise-writing/preparation/configs/claude-long-handoff-candidate.json` |
+| 8 | long-handoff | control | 1 | `skill-studies/concise-writing/preparation/configs/claude-long-handoff-control.json` |
+| 9 | long-handoff | original | 1 | `skill-studies/concise-writing/preparation/configs/claude-long-handoff-original.json` |
+| 10 | document-addition | control | 1 | `skill-studies/concise-writing/preparation/configs/claude-document-addition-control.json` |
+| 11 | document-addition | original | 1 | `skill-studies/concise-writing/preparation/configs/claude-document-addition-original.json` |
+| 12 | document-addition | candidate-comprehensive | 1 | `skill-studies/concise-writing/preparation/configs/claude-document-addition-candidate.json` |
+| 13 | agent-recommendation | original | 2 | `skill-studies/concise-writing/preparation/configs/claude-agent-recommendation-original.json` |
+| 14 | agent-recommendation | candidate-comprehensive | 2 | `skill-studies/concise-writing/preparation/configs/claude-agent-recommendation-candidate.json` |
+| 15 | agent-recommendation | control | 2 | `skill-studies/concise-writing/preparation/configs/claude-agent-recommendation-control.json` |
+| 16 | effective-briefing | candidate-comprehensive | 2 | `skill-studies/concise-writing/preparation/configs/claude-effective-briefing-candidate.json` |
+| 17 | effective-briefing | control | 2 | `skill-studies/concise-writing/preparation/configs/claude-effective-briefing-control.json` |
+| 18 | effective-briefing | original | 2 | `skill-studies/concise-writing/preparation/configs/claude-effective-briefing-original.json` |
+| 19 | long-handoff | control | 2 | `skill-studies/concise-writing/preparation/configs/claude-long-handoff-control.json` |
+| 20 | long-handoff | original | 2 | `skill-studies/concise-writing/preparation/configs/claude-long-handoff-original.json` |
+| 21 | long-handoff | candidate-comprehensive | 2 | `skill-studies/concise-writing/preparation/configs/claude-long-handoff-candidate.json` |
+| 22 | document-addition | original | 2 | `skill-studies/concise-writing/preparation/configs/claude-document-addition-original.json` |
+| 23 | document-addition | candidate-comprehensive | 2 | `skill-studies/concise-writing/preparation/configs/claude-document-addition-candidate.json` |
+| 24 | document-addition | control | 2 | `skill-studies/concise-writing/preparation/configs/claude-document-addition-control.json` |
+| 25 | agent-recommendation | candidate-comprehensive | 3 | `skill-studies/concise-writing/preparation/configs/claude-agent-recommendation-candidate.json` |
+| 26 | agent-recommendation | control | 3 | `skill-studies/concise-writing/preparation/configs/claude-agent-recommendation-control.json` |
+| 27 | agent-recommendation | original | 3 | `skill-studies/concise-writing/preparation/configs/claude-agent-recommendation-original.json` |
+| 28 | effective-briefing | control | 3 | `skill-studies/concise-writing/preparation/configs/claude-effective-briefing-control.json` |
+| 29 | effective-briefing | original | 3 | `skill-studies/concise-writing/preparation/configs/claude-effective-briefing-original.json` |
+| 30 | effective-briefing | candidate-comprehensive | 3 | `skill-studies/concise-writing/preparation/configs/claude-effective-briefing-candidate.json` |
+| 31 | long-handoff | original | 3 | `skill-studies/concise-writing/preparation/configs/claude-long-handoff-original.json` |
+| 32 | long-handoff | candidate-comprehensive | 3 | `skill-studies/concise-writing/preparation/configs/claude-long-handoff-candidate.json` |
+| 33 | long-handoff | control | 3 | `skill-studies/concise-writing/preparation/configs/claude-long-handoff-control.json` |
+| 34 | document-addition | candidate-comprehensive | 3 | `skill-studies/concise-writing/preparation/configs/claude-document-addition-candidate.json` |
+| 35 | document-addition | control | 3 | `skill-studies/concise-writing/preparation/configs/claude-document-addition-control.json` |
+| 36 | document-addition | original | 3 | `skill-studies/concise-writing/preparation/configs/claude-document-addition-original.json` |
+
+### Expanded collection: codex-invocation-01
+
+Scope: 16 sequential attempts; codex, four native tasks × two conditions × two repetitions.
+Authority: included in the owner-approved 104-call allocation recorded at the top of this protocol.
+Include all valid-setup executions regardless of outcome; report invalid/unresolved setup and unattempted slots separately.
+No automatic retry or replacement.
+Use CW-expanded-1 and the linked case cards; selection and task quality remain separate, with N3 functional CW outcomes unmeasured.
+Stop for uncertain charges, contamination, input/runtime drift, unusable setup or preservation failure; a valid behavioral miss remains an observation.
+Runtime and evidence controls: [expanded qualification](preparation/runtime-qualification.md).
+Inputs: [codex-invocation-tighten-manifest](preparation/manifests/codex-invocation-tighten-manifest.json), [codex-invocation-write-manifest](preparation/manifests/codex-invocation-write-manifest.json), [codex-invocation-nonprose-manifest](preparation/manifests/codex-invocation-nonprose-manifest.json), [codex-invocation-comments-manifest](preparation/manifests/codex-invocation-comments-manifest.json).
+
+| Order | Case | Condition | Repetition | CONFIG |
+| ---: | --- | --- | ---: | --- |
+| 1 | invocation-tighten | original | 1 | `skill-studies/concise-writing/preparation/configs/codex-invocation-tighten-original.json` |
+| 2 | invocation-tighten | candidate-comprehensive | 1 | `skill-studies/concise-writing/preparation/configs/codex-invocation-tighten-candidate.json` |
+| 3 | invocation-write | candidate-comprehensive | 1 | `skill-studies/concise-writing/preparation/configs/codex-invocation-write-candidate.json` |
+| 4 | invocation-write | original | 1 | `skill-studies/concise-writing/preparation/configs/codex-invocation-write-original.json` |
+| 5 | invocation-nonprose | original | 1 | `skill-studies/concise-writing/preparation/configs/codex-invocation-nonprose-original.json` |
+| 6 | invocation-nonprose | candidate-comprehensive | 1 | `skill-studies/concise-writing/preparation/configs/codex-invocation-nonprose-candidate.json` |
+| 7 | invocation-comments | candidate-comprehensive | 1 | `skill-studies/concise-writing/preparation/configs/codex-invocation-comments-candidate.json` |
+| 8 | invocation-comments | original | 1 | `skill-studies/concise-writing/preparation/configs/codex-invocation-comments-original.json` |
+| 9 | invocation-tighten | candidate-comprehensive | 2 | `skill-studies/concise-writing/preparation/configs/codex-invocation-tighten-candidate.json` |
+| 10 | invocation-tighten | original | 2 | `skill-studies/concise-writing/preparation/configs/codex-invocation-tighten-original.json` |
+| 11 | invocation-write | original | 2 | `skill-studies/concise-writing/preparation/configs/codex-invocation-write-original.json` |
+| 12 | invocation-write | candidate-comprehensive | 2 | `skill-studies/concise-writing/preparation/configs/codex-invocation-write-candidate.json` |
+| 13 | invocation-nonprose | candidate-comprehensive | 2 | `skill-studies/concise-writing/preparation/configs/codex-invocation-nonprose-candidate.json` |
+| 14 | invocation-nonprose | original | 2 | `skill-studies/concise-writing/preparation/configs/codex-invocation-nonprose-original.json` |
+| 15 | invocation-comments | original | 2 | `skill-studies/concise-writing/preparation/configs/codex-invocation-comments-original.json` |
+| 16 | invocation-comments | candidate-comprehensive | 2 | `skill-studies/concise-writing/preparation/configs/codex-invocation-comments-candidate.json` |
+
+### Expanded collection: claude-invocation-01
+
+Scope: 16 sequential attempts; claude, four native tasks × two conditions × two repetitions.
+Authority: included in the owner-approved 104-call allocation recorded at the top of this protocol.
+Include all valid-setup executions regardless of outcome; report invalid/unresolved setup and unattempted slots separately.
+No automatic retry or replacement.
+Use CW-expanded-1 and the linked case cards; selection and task quality remain separate, with N3 functional CW outcomes unmeasured.
+Stop for uncertain charges, contamination, input/runtime drift, unusable setup or preservation failure; a valid behavioral miss remains an observation.
+Runtime and evidence controls: [expanded qualification](preparation/runtime-qualification.md).
+Inputs: [claude-invocation-tighten-manifest](preparation/manifests/claude-invocation-tighten-manifest.json), [claude-invocation-write-manifest](preparation/manifests/claude-invocation-write-manifest.json), [claude-invocation-nonprose-manifest](preparation/manifests/claude-invocation-nonprose-manifest.json), [claude-invocation-comments-manifest](preparation/manifests/claude-invocation-comments-manifest.json).
+
+| Order | Case | Condition | Repetition | CONFIG |
+| ---: | --- | --- | ---: | --- |
+| 1 | invocation-tighten | original | 1 | `skill-studies/concise-writing/preparation/configs/claude-invocation-tighten-original.json` |
+| 2 | invocation-tighten | candidate-comprehensive | 1 | `skill-studies/concise-writing/preparation/configs/claude-invocation-tighten-candidate.json` |
+| 3 | invocation-write | candidate-comprehensive | 1 | `skill-studies/concise-writing/preparation/configs/claude-invocation-write-candidate.json` |
+| 4 | invocation-write | original | 1 | `skill-studies/concise-writing/preparation/configs/claude-invocation-write-original.json` |
+| 5 | invocation-nonprose | original | 1 | `skill-studies/concise-writing/preparation/configs/claude-invocation-nonprose-original.json` |
+| 6 | invocation-nonprose | candidate-comprehensive | 1 | `skill-studies/concise-writing/preparation/configs/claude-invocation-nonprose-candidate.json` |
+| 7 | invocation-comments | candidate-comprehensive | 1 | `skill-studies/concise-writing/preparation/configs/claude-invocation-comments-candidate.json` |
+| 8 | invocation-comments | original | 1 | `skill-studies/concise-writing/preparation/configs/claude-invocation-comments-original.json` |
+| 9 | invocation-tighten | candidate-comprehensive | 2 | `skill-studies/concise-writing/preparation/configs/claude-invocation-tighten-candidate.json` |
+| 10 | invocation-tighten | original | 2 | `skill-studies/concise-writing/preparation/configs/claude-invocation-tighten-original.json` |
+| 11 | invocation-write | original | 2 | `skill-studies/concise-writing/preparation/configs/claude-invocation-write-original.json` |
+| 12 | invocation-write | candidate-comprehensive | 2 | `skill-studies/concise-writing/preparation/configs/claude-invocation-write-candidate.json` |
+| 13 | invocation-nonprose | candidate-comprehensive | 2 | `skill-studies/concise-writing/preparation/configs/claude-invocation-nonprose-candidate.json` |
+| 14 | invocation-nonprose | original | 2 | `skill-studies/concise-writing/preparation/configs/claude-invocation-nonprose-original.json` |
+| 15 | invocation-comments | original | 2 | `skill-studies/concise-writing/preparation/configs/claude-invocation-comments-original.json` |
+| 16 | invocation-comments | candidate-comprehensive | 2 | `skill-studies/concise-writing/preparation/configs/claude-invocation-comments-candidate.json` |
+
 ## Storage and accounting
 
 Canonical checkout: `/Users/simon/work/personal/disciplined-development-skills`.
@@ -229,10 +391,10 @@ Approved durable raw evidence directory: `/Users/simon/work/personal/skill-study
 Owner-accepted recovery decision for CW: single-host retention, as used for SSR, with one verified canonical raw bundle per attempt. The current `tmutil destinationinfo` check reports no destinations configured; `tmutil isexcluded` reports the parent private store is Included. No other working backup arrangement has been established. Machine loss or disk failure could therefore destroy CW raw evidence; Git holds case inputs and assessments but cannot recover those external bundles. Creating the directory and passing a local copy check do not establish host-loss recovery. The owner explicitly accepted this CW risk together with the eight-execution scope above.
 
 Combined accounting sources: closed SSR [pilot 01](../sweeping-stale-references/pilot-run-index.json), [pilot 02](../sweeping-stale-references/pilot-02-run-index.json), [semantic delivery](../sweeping-stale-references/semantic-delivery-01-run-index.json), [core baseline](../sweeping-stale-references/core-baseline-01-run-index.json), [comparison](../sweeping-stale-references/comprehensive-comparison-01-run-index.json), the SSR [completed expansion](../sweeping-stale-references/coverage-baseline-01-run-index.json), the SSR [completed comparison](../sweeping-stale-references/comprehensive-comparison-02-run-index.json), the SSR [Claude smoke](../sweeping-stale-references/claude-smoke-01-run-index.json), the SSR [Claude comparison](../sweeping-stale-references/claude-comparison-01-run-index.json), the SSR [Opus invocation comparison](../sweeping-stale-references/claude-opus-invocation-01-run-index.json), and both CW indexes above. Historical pilot links contribute accounting only; they are not reclassified or reassessed.
-Dispatched calls are **136 subject, 0 evaluator, 0 authoring, 0 retry**; remaining outer capacity is **0 / 12 / 4 / 4** against the [active plan](../../plans/2026-09-11-model-driven-skill-testing.md#limits-and-information-boundaries). Both eight-call CW batches are spent. The owner authorized ten SSR expansion calls under ceiling 56; all ten are spent, including the excluded control, with no replacement or pool transfer. Comparison runner durations total 508.067 seconds; baseline durations remain 494.936 seconds, including setup and capture.
+Dispatched calls are **136 subject, 0 evaluator, 0 authoring, 0 retry**; remaining outer capacity is **104 / 12 / 4 / 4** against the [active plan](../../plans/2026-09-11-model-driven-skill-testing.md#limits-and-information-boundaries). Both eight-call CW batches are spent. The owner authorized ten SSR expansion calls under ceiling 56; all ten are spent, including the excluded control, with no replacement or pool transfer. Comparison runner durations total 508.067 seconds; baseline durations remain 494.936 seconds, including setup and capture.
 Owner clarification after round-10 review: “the budget is just a guideline”. The 1,200-minute figure below remains the planning baseline, not a collection stop; invocation ceilings and the authorized SSR scope is unchanged. Retain elapsed effort and forecast variance to expose process cost.
 
-Current combined accounting: **1,770 active minutes booked; 570 minutes above the historical 1,200-minute planning guideline**.
+Current combined accounting: **1,795 active minutes booked; 595 minutes above the historical 1,200-minute planning guideline**.
 These are rounded effort estimates, not stopwatch measurements or a separately timed category breakdown.
 Between-turn owner wait is excluded; runner durations are included once.
 
@@ -290,7 +452,8 @@ Between-turn owner wait is excluded; runner durations are included once.
 | Positive code-comment case, configurations and offline verification | 15 |
 | Full preparation review, scoring/status remediation and re-verification | 25 |
 | External suite review: comparison CLI, fixture cues and scope cleanup | 15 |
-| **Total** | **1,770** |
+| Expanded allocation, runtime qualification and collection freeze | 25 |
+| **Total** | **1,795** |
 
 SSR expansion is complete. The prior 55-minute remaining forecast closed at 50 estimated minutes, including the additional shell correction; all ten subject calls are spent.
 The combined batch/recovery effort is 135 estimated minutes (45 initial checkpoint, 40 isolation correction, 50 resumption), 45 above the original 90-minute allowance. Separate round-9 review effort remains in the combined ledger above.
@@ -299,21 +462,21 @@ Time is a guideline; the numeric balance is a planning comparison, not authority
 
 The completed comprehensive-comparison-02 used 80 estimated active minutes against its 180-minute planning allowance (100 below forecast).
 Its runner durations total 2,350.294 seconds (39.17 minutes), already included in that estimate; the other work categories were not separately timed.
-The Codex comparison closed at 90/90 combined subject calls and the two Claude smokes at 92/92. The subsequent 34-call Claude comparison is complete, bringing prior spending to 126. All ten subsequent Opus invocation calls are complete, bringing spending to 136/136; no further calls are authorized.
+The Codex comparison closed at 90/90 combined subject calls and the two Claude smokes at 92/92. The subsequent 34-call Claude comparison is complete, bringing prior spending to 126. All ten subsequent Opus invocation calls are complete, bringing historical spending to 136; the current CW authorization is recorded at the top of this protocol.
 The Claude comparison used 90 estimated active minutes against its 120-minute guideline, 30 below forecast; its 2,165.515 seconds of runner duration (36.09 minutes) are included, not added again.
 
 The Opus comparison used 20 estimated active minutes against its 40-minute guideline, 20 below forecast; its 174.840 seconds of runner duration (2.91 minutes) are included once.
 
 Initial fixture preparation used 55 estimated active minutes against its 60-minute midpoint forecast; subsequent owner-directed scope refinements are itemized above.
 The [preparation package](preparation/README.md) records inputs and validation; current acceptance and pending decisions are at the top of this protocol.
-The [revised allocation](testing-audit.md#proposed-sequence-and-allocation-forecast) excludes withdrawn skill-specific experiments and includes proposed ordinary document addition E.
-Collection remains separate from selected preparation.
+The [allocation rationale](testing-audit.md#proposed-sequence-and-allocation-forecast) explains the 104-call scope; the approved schedules above govern dispatch.
 Any fresh rewrite still needs an estimate after baseline diagnosis.
 
 | Work | Estimate | Basis |
 | --- | ---: | --- |
-| Remaining selected fixture preparation | 0 | Preparation and requested review are complete; call allocation, runtime qualification, schedule, freeze and collection remain subsequent stages. |
-| **Total** | **0** | No further collection or rewrite selected by this preparation. |
+| Ordinary collection and assessment | 300 | Midpoint of 240–360 active minutes for 72 calls, preservation and assessment. |
+| Native collection and assessment | 100 | Midpoint of 80–120 active minutes for 32 calls and invocation assessment. |
+| **Total** | **400** | Estimated active minutes for the approved 104-call scope; any fresh rewrite remains a separate decision. |
 
 ## Results and decision
 

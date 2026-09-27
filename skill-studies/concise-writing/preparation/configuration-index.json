@@ -1,5 +1,5 @@
 {
-  "status": "draft; no collection authority or frozen runtime",
+  "status": "prepared; authority and committed manifests belong to the protocol",
   "configurations": [
     {
       "case": "agent-recommendation",

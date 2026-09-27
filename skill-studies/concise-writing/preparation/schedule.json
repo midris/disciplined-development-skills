@@ -1,0 +1,947 @@
+{
+  "status": "approved order; manifests require committed freeze",
+  "stages": [
+    "codex-expanded-01",
+    "claude-expanded-01",
+    "codex-invocation-01",
+    "claude-invocation-01"
+  ],
+  "attempts": [
+    {
+      "batch": "codex-expanded-01",
+      "order": 1,
+      "provider": "codex",
+      "case": "agent-recommendation",
+      "condition": "control",
+      "repetition": 1,
+      "config": "skill-studies/concise-writing/preparation/configs/codex-agent-recommendation-control.json"
+    },
+    {
+      "batch": "codex-expanded-01",
+      "order": 2,
+      "provider": "codex",
+      "case": "agent-recommendation",
+      "condition": "original",
+      "repetition": 1,
+      "config": "skill-studies/concise-writing/preparation/configs/codex-agent-recommendation-original.json"
+    },
+    {
+      "batch": "codex-expanded-01",
+      "order": 3,
+      "provider": "codex",
+      "case": "agent-recommendation",
+      "condition": "candidate-comprehensive",
+      "repetition": 1,
+      "config": "skill-studies/concise-writing/preparation/configs/codex-agent-recommendation-candidate.json"
+    },
+    {
+      "batch": "codex-expanded-01",
+      "order": 4,
+      "provider": "codex",
+      "case": "effective-briefing",
+      "condition": "original",
+      "repetition": 1,
+      "config": "skill-studies/concise-writing/preparation/configs/codex-effective-briefing-original.json"
+    },
+    {
+      "batch": "codex-expanded-01",
+      "order": 5,
+      "provider": "codex",
+      "case": "effective-briefing",
+      "condition": "candidate-comprehensive",
+      "repetition": 1,
+      "config": "skill-studies/concise-writing/preparation/configs/codex-effective-briefing-candidate.json"
+    },
+    {
+      "batch": "codex-expanded-01",
+      "order": 6,
+      "provider": "codex",
+      "case": "effective-briefing",
+      "condition": "control",
+      "repetition": 1,
+      "config": "skill-studies/concise-writing/preparation/configs/codex-effective-briefing-control.json"
+    },
+    {
+      "batch": "codex-expanded-01",
+      "order": 7,
+      "provider": "codex",
+      "case": "long-handoff",
+      "condition": "candidate-comprehensive",
+      "repetition": 1,
+      "config": "skill-studies/concise-writing/preparation/configs/codex-long-handoff-candidate.json"
+    },
+    {
+      "batch": "codex-expanded-01",
+      "order": 8,
+      "provider": "codex",
+      "case": "long-handoff",
+      "condition": "control",
+      "repetition": 1,
+      "config": "skill-studies/concise-writing/preparation/configs/codex-long-handoff-control.json"
+    },
+    {
+      "batch": "codex-expanded-01",
+      "order": 9,
+      "provider": "codex",
+      "case": "long-handoff",
+      "condition": "original",
+      "repetition": 1,
+      "config": "skill-studies/concise-writing/preparation/configs/codex-long-handoff-original.json"
+    },
+    {
+      "batch": "codex-expanded-01",
+      "order": 10,
+      "provider": "codex",
+      "case": "document-addition",
+      "condition": "control",
+      "repetition": 1,
+      "config": "skill-studies/concise-writing/preparation/configs/codex-document-addition-control.json"
+    },
+    {
+      "batch": "codex-expanded-01",
+      "order": 11,
+      "provider": "codex",
+      "case": "document-addition",
+      "condition": "original",
+      "repetition": 1,
+      "config": "skill-studies/concise-writing/preparation/configs/codex-document-addition-original.json"
+    },
+    {
+      "batch": "codex-expanded-01",
+      "order": 12,
+      "provider": "codex",
+      "case": "document-addition",
+      "condition": "candidate-comprehensive",
+      "repetition": 1,
+      "config": "skill-studies/concise-writing/preparation/configs/codex-document-addition-candidate.json"
+    },
+    {
+      "batch": "codex-expanded-01",
+      "order": 13,
+      "provider": "codex",
+      "case": "agent-recommendation",
+      "condition": "original",
+      "repetition": 2,
+      "config": "skill-studies/concise-writing/preparation/configs/codex-agent-recommendation-original.json"
+    },
+    {
+      "batch": "codex-expanded-01",
+      "order": 14,
+      "provider": "codex",
+      "case": "agent-recommendation",
+      "condition": "candidate-comprehensive",
+      "repetition": 2,
+      "config": "skill-studies/concise-writing/preparation/configs/codex-agent-recommendation-candidate.json"
+    },
+    {
+      "batch": "codex-expanded-01",
+      "order": 15,
+      "provider": "codex",
+      "case": "agent-recommendation",
+      "condition": "control",
+      "repetition": 2,
+      "config": "skill-studies/concise-writing/preparation/configs/codex-agent-recommendation-control.json"
+    },
+    {
+      "batch": "codex-expanded-01",
+      "order": 16,
+      "provider": "codex",
+      "case": "effective-briefing",
+      "condition": "candidate-comprehensive",
+      "repetition": 2,
+      "config": "skill-studies/concise-writing/preparation/configs/codex-effective-briefing-candidate.json"
+    },
+    {
+      "batch": "codex-expanded-01",
+      "order": 17,
+      "provider": "codex",
+      "case": "effective-briefing",
+      "condition": "control",
+      "repetition": 2,
+      "config": "skill-studies/concise-writing/preparation/configs/codex-effective-briefing-control.json"
+    },
+    {
+      "batch": "codex-expanded-01",
+      "order": 18,
+      "provider": "codex",
+      "case": "effective-briefing",
+      "condition": "original",
+      "repetition": 2,
+      "config": "skill-studies/concise-writing/preparation/configs/codex-effective-briefing-original.json"
+    },
+    {
+      "batch": "codex-expanded-01",
+      "order": 19,
+      "provider": "codex",
+      "case": "long-handoff",
+      "condition": "control",
+      "repetition": 2,
+      "config": "skill-studies/concise-writing/preparation/configs/codex-long-handoff-control.json"
+    },
+    {
+      "batch": "codex-expanded-01",
+      "order": 20,
+      "provider": "codex",
+      "case": "long-handoff",
+      "condition": "original",
+      "repetition": 2,
+      "config": "skill-studies/concise-writing/preparation/configs/codex-long-handoff-original.json"
+    },
+    {
+      "batch": "codex-expanded-01",
+      "order": 21,
+      "provider": "codex",
+      "case": "long-handoff",
+      "condition": "candidate-comprehensive",
+      "repetition": 2,
+      "config": "skill-studies/concise-writing/preparation/configs/codex-long-handoff-candidate.json"
+    },
+    {
+      "batch": "codex-expanded-01",
+      "order": 22,
+      "provider": "codex",
+      "case": "document-addition",
+      "condition": "original",
+      "repetition": 2,
+      "config": "skill-studies/concise-writing/preparation/configs/codex-document-addition-original.json"
+    },
+    {
+      "batch": "codex-expanded-01",
+      "order": 23,
+      "provider": "codex",
+      "case": "document-addition",
+      "condition": "candidate-comprehensive",
+      "repetition": 2,
+      "config": "skill-studies/concise-writing/preparation/configs/codex-document-addition-candidate.json"
+    },
+    {
+      "batch": "codex-expanded-01",
+      "order": 24,
+      "provider": "codex",
+      "case": "document-addition",
+      "condition": "control",
+      "repetition": 2,
+      "config": "skill-studies/concise-writing/preparation/configs/codex-document-addition-control.json"
+    },
+    {
+      "batch": "codex-expanded-01",
+      "order": 25,
+      "provider": "codex",
+      "case": "agent-recommendation",
+      "condition": "candidate-comprehensive",
+      "repetition": 3,
+      "config": "skill-studies/concise-writing/preparation/configs/codex-agent-recommendation-candidate.json"
+    },
+    {
+      "batch": "codex-expanded-01",
+      "order": 26,
+      "provider": "codex",
+      "case": "agent-recommendation",
+      "condition": "control",
+      "repetition": 3,
+      "config": "skill-studies/concise-writing/preparation/configs/codex-agent-recommendation-control.json"
+    },
+    {
+      "batch": "codex-expanded-01",
+      "order": 27,
+      "provider": "codex",
+      "case": "agent-recommendation",
+      "condition": "original",
+      "repetition": 3,
+      "config": "skill-studies/concise-writing/preparation/configs/codex-agent-recommendation-original.json"
+    },
+    {
+      "batch": "codex-expanded-01",
+      "order": 28,
+      "provider": "codex",
+      "case": "effective-briefing",
+      "condition": "control",
+      "repetition": 3,
+      "config": "skill-studies/concise-writing/preparation/configs/codex-effective-briefing-control.json"
+    },
+    {
+      "batch": "codex-expanded-01",
+      "order": 29,
+      "provider": "codex",
+      "case": "effective-briefing",
+      "condition": "original",
+      "repetition": 3,
+      "config": "skill-studies/concise-writing/preparation/configs/codex-effective-briefing-original.json"
+    },
+    {
+      "batch": "codex-expanded-01",
+      "order": 30,
+      "provider": "codex",
+      "case": "effective-briefing",
+      "condition": "candidate-comprehensive",
+      "repetition": 3,
+      "config": "skill-studies/concise-writing/preparation/configs/codex-effective-briefing-candidate.json"
+    },
+    {
+      "batch": "codex-expanded-01",
+      "order": 31,
+      "provider": "codex",
+      "case": "long-handoff",
+      "condition": "original",
+      "repetition": 3,
+      "config": "skill-studies/concise-writing/preparation/configs/codex-long-handoff-original.json"
+    },
+    {
+      "batch": "codex-expanded-01",
+      "order": 32,
+      "provider": "codex",
+      "case": "long-handoff",
+      "condition": "candidate-comprehensive",
+      "repetition": 3,
+      "config": "skill-studies/concise-writing/preparation/configs/codex-long-handoff-candidate.json"
+    },
+    {
+      "batch": "codex-expanded-01",
+      "order": 33,
+      "provider": "codex",
+      "case": "long-handoff",
+      "condition": "control",
+      "repetition": 3,
+      "config": "skill-studies/concise-writing/preparation/configs/codex-long-handoff-control.json"
+    },
+    {
+      "batch": "codex-expanded-01",
+      "order": 34,
+      "provider": "codex",
+      "case": "document-addition",
+      "condition": "candidate-comprehensive",
+      "repetition": 3,
+      "config": "skill-studies/concise-writing/preparation/configs/codex-document-addition-candidate.json"
+    },
+    {
+      "batch": "codex-expanded-01",
+      "order": 35,
+      "provider": "codex",
+      "case": "document-addition",
+      "condition": "control",
+      "repetition": 3,
+      "config": "skill-studies/concise-writing/preparation/configs/codex-document-addition-control.json"
+    },
+    {
+      "batch": "codex-expanded-01",
+      "order": 36,
+      "provider": "codex",
+      "case": "document-addition",
+      "condition": "original",
+      "repetition": 3,
+      "config": "skill-studies/concise-writing/preparation/configs/codex-document-addition-original.json"
+    },
+    {
+      "batch": "claude-expanded-01",
+      "order": 1,
+      "provider": "claude",
+      "case": "agent-recommendation",
+      "condition": "control",
+      "repetition": 1,
+      "config": "skill-studies/concise-writing/preparation/configs/claude-agent-recommendation-control.json"
+    },
+    {
+      "batch": "claude-expanded-01",
+      "order": 2,
+      "provider": "claude",
+      "case": "agent-recommendation",
+      "condition": "original",
+      "repetition": 1,
+      "config": "skill-studies/concise-writing/preparation/configs/claude-agent-recommendation-original.json"
+    },
+    {
+      "batch": "claude-expanded-01",
+      "order": 3,
+      "provider": "claude",
+      "case": "agent-recommendation",
+      "condition": "candidate-comprehensive",
+      "repetition": 1,
+      "config": "skill-studies/concise-writing/preparation/configs/claude-agent-recommendation-candidate.json"
+    },
+    {
+      "batch": "claude-expanded-01",
+      "order": 4,
+      "provider": "claude",
+      "case": "effective-briefing",
+      "condition": "original",
+      "repetition": 1,
+      "config": "skill-studies/concise-writing/preparation/configs/claude-effective-briefing-original.json"
+    },
+    {
+      "batch": "claude-expanded-01",
+      "order": 5,
+      "provider": "claude",
+      "case": "effective-briefing",
+      "condition": "candidate-comprehensive",
+      "repetition": 1,
+      "config": "skill-studies/concise-writing/preparation/configs/claude-effective-briefing-candidate.json"
+    },
+    {
+      "batch": "claude-expanded-01",
+      "order": 6,
+      "provider": "claude",
+      "case": "effective-briefing",
+      "condition": "control",
+      "repetition": 1,
+      "config": "skill-studies/concise-writing/preparation/configs/claude-effective-briefing-control.json"
+    },
+    {
+      "batch": "claude-expanded-01",
+      "order": 7,
+      "provider": "claude",
+      "case": "long-handoff",
+      "condition": "candidate-comprehensive",
+      "repetition": 1,
+      "config": "skill-studies/concise-writing/preparation/configs/claude-long-handoff-candidate.json"
+    },
+    {
+      "batch": "claude-expanded-01",
+      "order": 8,
+      "provider": "claude",
+      "case": "long-handoff",
+      "condition": "control",
+      "repetition": 1,
+      "config": "skill-studies/concise-writing/preparation/configs/claude-long-handoff-control.json"
+    },
+    {
+      "batch": "claude-expanded-01",
+      "order": 9,
+      "provider": "claude",
+      "case": "long-handoff",
+      "condition": "original",
+      "repetition": 1,
+      "config": "skill-studies/concise-writing/preparation/configs/claude-long-handoff-original.json"
+    },
+    {
+      "batch": "claude-expanded-01",
+      "order": 10,
+      "provider": "claude",
+      "case": "document-addition",
+      "condition": "control",
+      "repetition": 1,
+      "config": "skill-studies/concise-writing/preparation/configs/claude-document-addition-control.json"
+    },
+    {
+      "batch": "claude-expanded-01",
+      "order": 11,
+      "provider": "claude",
+      "case": "document-addition",
+      "condition": "original",
+      "repetition": 1,
+      "config": "skill-studies/concise-writing/preparation/configs/claude-document-addition-original.json"
+    },
+    {
+      "batch": "claude-expanded-01",
+      "order": 12,
+      "provider": "claude",
+      "case": "document-addition",
+      "condition": "candidate-comprehensive",
+      "repetition": 1,
+      "config": "skill-studies/concise-writing/preparation/configs/claude-document-addition-candidate.json"
+    },
+    {
+      "batch": "claude-expanded-01",
+      "order": 13,
+      "provider": "claude",
+      "case": "agent-recommendation",
+      "condition": "original",
+      "repetition": 2,
+      "config": "skill-studies/concise-writing/preparation/configs/claude-agent-recommendation-original.json"
+    },
+    {
+      "batch": "claude-expanded-01",
+      "order": 14,
+      "provider": "claude",
+      "case": "agent-recommendation",
+      "condition": "candidate-comprehensive",
+      "repetition": 2,
+      "config": "skill-studies/concise-writing/preparation/configs/claude-agent-recommendation-candidate.json"
+    },
+    {
+      "batch": "claude-expanded-01",
+      "order": 15,
+      "provider": "claude",
+      "case": "agent-recommendation",
+      "condition": "control",
+      "repetition": 2,
+      "config": "skill-studies/concise-writing/preparation/configs/claude-agent-recommendation-control.json"
+    },
+    {
+      "batch": "claude-expanded-01",
+      "order": 16,
+      "provider": "claude",
+      "case": "effective-briefing",
+      "condition": "candidate-comprehensive",
+      "repetition": 2,
+      "config": "skill-studies/concise-writing/preparation/configs/claude-effective-briefing-candidate.json"
+    },
+    {
+      "batch": "claude-expanded-01",
+      "order": 17,
+      "provider": "claude",
+      "case": "effective-briefing",
+      "condition": "control",
+      "repetition": 2,
+      "config": "skill-studies/concise-writing/preparation/configs/claude-effective-briefing-control.json"
+    },
+    {
+      "batch": "claude-expanded-01",
+      "order": 18,
+      "provider": "claude",
+      "case": "effective-briefing",
+      "condition": "original",
+      "repetition": 2,
+      "config": "skill-studies/concise-writing/preparation/configs/claude-effective-briefing-original.json"
+    },
+    {
+      "batch": "claude-expanded-01",
+      "order": 19,
+      "provider": "claude",
+      "case": "long-handoff",
+      "condition": "control",
+      "repetition": 2,
+      "config": "skill-studies/concise-writing/preparation/configs/claude-long-handoff-control.json"
+    },
+    {
+      "batch": "claude-expanded-01",
+      "order": 20,
+      "provider": "claude",
+      "case": "long-handoff",
+      "condition": "original",
+      "repetition": 2,
+      "config": "skill-studies/concise-writing/preparation/configs/claude-long-handoff-original.json"
+    },
+    {
+      "batch": "claude-expanded-01",
+      "order": 21,
+      "provider": "claude",
+      "case": "long-handoff",
+      "condition": "candidate-comprehensive",
+      "repetition": 2,
+      "config": "skill-studies/concise-writing/preparation/configs/claude-long-handoff-candidate.json"
+    },
+    {
+      "batch": "claude-expanded-01",
+      "order": 22,
+      "provider": "claude",
+      "case": "document-addition",
+      "condition": "original",
+      "repetition": 2,
+      "config": "skill-studies/concise-writing/preparation/configs/claude-document-addition-original.json"
+    },
+    {
+      "batch": "claude-expanded-01",
+      "order": 23,
+      "provider": "claude",
+      "case": "document-addition",
+      "condition": "candidate-comprehensive",
+      "repetition": 2,
+      "config": "skill-studies/concise-writing/preparation/configs/claude-document-addition-candidate.json"
+    },
+    {
+      "batch": "claude-expanded-01",
+      "order": 24,
+      "provider": "claude",
+      "case": "document-addition",
+      "condition": "control",
+      "repetition": 2,
+      "config": "skill-studies/concise-writing/preparation/configs/claude-document-addition-control.json"
+    },
+    {
+      "batch": "claude-expanded-01",
+      "order": 25,
+      "provider": "claude",
+      "case": "agent-recommendation",
+      "condition": "candidate-comprehensive",
+      "repetition": 3,
+      "config": "skill-studies/concise-writing/preparation/configs/claude-agent-recommendation-candidate.json"
+    },
+    {
+      "batch": "claude-expanded-01",
+      "order": 26,
+      "provider": "claude",
+      "case": "agent-recommendation",
+      "condition": "control",
+      "repetition": 3,
+      "config": "skill-studies/concise-writing/preparation/configs/claude-agent-recommendation-control.json"
+    },
+    {
+      "batch": "claude-expanded-01",
+      "order": 27,
+      "provider": "claude",
+      "case": "agent-recommendation",
+      "condition": "original",
+      "repetition": 3,
+      "config": "skill-studies/concise-writing/preparation/configs/claude-agent-recommendation-original.json"
+    },
+    {
+      "batch": "claude-expanded-01",
+      "order": 28,
+      "provider": "claude",
+      "case": "effective-briefing",
+      "condition": "control",
+      "repetition": 3,
+      "config": "skill-studies/concise-writing/preparation/configs/claude-effective-briefing-control.json"
+    },
+    {
+      "batch": "claude-expanded-01",
+      "order": 29,
+      "provider": "claude",
+      "case": "effective-briefing",
+      "condition": "original",
+      "repetition": 3,
+      "config": "skill-studies/concise-writing/preparation/configs/claude-effective-briefing-original.json"
+    },
+    {
+      "batch": "claude-expanded-01",
+      "order": 30,
+      "provider": "claude",
+      "case": "effective-briefing",
+      "condition": "candidate-comprehensive",
+      "repetition": 3,
+      "config": "skill-studies/concise-writing/preparation/configs/claude-effective-briefing-candidate.json"
+    },
+    {
+      "batch": "claude-expanded-01",
+      "order": 31,
+      "provider": "claude",
+      "case": "long-handoff",
+      "condition": "original",
+      "repetition": 3,
+      "config": "skill-studies/concise-writing/preparation/configs/claude-long-handoff-original.json"
+    },
+    {
+      "batch": "claude-expanded-01",
+      "order": 32,
+      "provider": "claude",
+      "case": "long-handoff",
+      "condition": "candidate-comprehensive",
+      "repetition": 3,
+      "config": "skill-studies/concise-writing/preparation/configs/claude-long-handoff-candidate.json"
+    },
+    {
+      "batch": "claude-expanded-01",
+      "order": 33,
+      "provider": "claude",
+      "case": "long-handoff",
+      "condition": "control",
+      "repetition": 3,
+      "config": "skill-studies/concise-writing/preparation/configs/claude-long-handoff-control.json"
+    },
+    {
+      "batch": "claude-expanded-01",
+      "order": 34,
+      "provider": "claude",
+      "case": "document-addition",
+      "condition": "candidate-comprehensive",
+      "repetition": 3,
+      "config": "skill-studies/concise-writing/preparation/configs/claude-document-addition-candidate.json"
+    },
+    {
+      "batch": "claude-expanded-01",
+      "order": 35,
+      "provider": "claude",
+      "case": "document-addition",
+      "condition": "control",
+      "repetition": 3,
+      "config": "skill-studies/concise-writing/preparation/configs/claude-document-addition-control.json"
+    },
+    {
+      "batch": "claude-expanded-01",
+      "order": 36,
+      "provider": "claude",
+      "case": "document-addition",
+      "condition": "original",
+      "repetition": 3,
+      "config": "skill-studies/concise-writing/preparation/configs/claude-document-addition-original.json"
+    },
+    {
+      "batch": "codex-invocation-01",
+      "order": 1,
+      "provider": "codex",
+      "case": "invocation-tighten",
+      "condition": "original",
+      "repetition": 1,
+      "config": "skill-studies/concise-writing/preparation/configs/codex-invocation-tighten-original.json"
+    },
+    {
+      "batch": "codex-invocation-01",
+      "order": 2,
+      "provider": "codex",
+      "case": "invocation-tighten",
+      "condition": "candidate-comprehensive",
+      "repetition": 1,
+      "config": "skill-studies/concise-writing/preparation/configs/codex-invocation-tighten-candidate.json"
+    },
+    {
+      "batch": "codex-invocation-01",
+      "order": 3,
+      "provider": "codex",
+      "case": "invocation-write",
+      "condition": "candidate-comprehensive",
+      "repetition": 1,
+      "config": "skill-studies/concise-writing/preparation/configs/codex-invocation-write-candidate.json"
+    },
+    {
+      "batch": "codex-invocation-01",
+      "order": 4,
+      "provider": "codex",
+      "case": "invocation-write",
+      "condition": "original",
+      "repetition": 1,
+      "config": "skill-studies/concise-writing/preparation/configs/codex-invocation-write-original.json"
+    },
+    {
+      "batch": "codex-invocation-01",
+      "order": 5,
+      "provider": "codex",
+      "case": "invocation-nonprose",
+      "condition": "original",
+      "repetition": 1,
+      "config": "skill-studies/concise-writing/preparation/configs/codex-invocation-nonprose-original.json"
+    },
+    {
+      "batch": "codex-invocation-01",
+      "order": 6,
+      "provider": "codex",
+      "case": "invocation-nonprose",
+      "condition": "candidate-comprehensive",
+      "repetition": 1,
+      "config": "skill-studies/concise-writing/preparation/configs/codex-invocation-nonprose-candidate.json"
+    },
+    {
+      "batch": "codex-invocation-01",
+      "order": 7,
+      "provider": "codex",
+      "case": "invocation-comments",
+      "condition": "candidate-comprehensive",
+      "repetition": 1,
+      "config": "skill-studies/concise-writing/preparation/configs/codex-invocation-comments-candidate.json"
+    },
+    {
+      "batch": "codex-invocation-01",
+      "order": 8,
+      "provider": "codex",
+      "case": "invocation-comments",
+      "condition": "original",
+      "repetition": 1,
+      "config": "skill-studies/concise-writing/preparation/configs/codex-invocation-comments-original.json"
+    },
+    {
+      "batch": "codex-invocation-01",
+      "order": 9,
+      "provider": "codex",
+      "case": "invocation-tighten",
+      "condition": "candidate-comprehensive",
+      "repetition": 2,
+      "config": "skill-studies/concise-writing/preparation/configs/codex-invocation-tighten-candidate.json"
+    },
+    {
+      "batch": "codex-invocation-01",
+      "order": 10,
+      "provider": "codex",
+      "case": "invocation-tighten",
+      "condition": "original",
+      "repetition": 2,
+      "config": "skill-studies/concise-writing/preparation/configs/codex-invocation-tighten-original.json"
+    },
+    {
+      "batch": "codex-invocation-01",
+      "order": 11,
+      "provider": "codex",
+      "case": "invocation-write",
+      "condition": "original",
+      "repetition": 2,
+      "config": "skill-studies/concise-writing/preparation/configs/codex-invocation-write-original.json"
+    },
+    {
+      "batch": "codex-invocation-01",
+      "order": 12,
+      "provider": "codex",
+      "case": "invocation-write",
+      "condition": "candidate-comprehensive",
+      "repetition": 2,
+      "config": "skill-studies/concise-writing/preparation/configs/codex-invocation-write-candidate.json"
+    },
+    {
+      "batch": "codex-invocation-01",
+      "order": 13,
+      "provider": "codex",
+      "case": "invocation-nonprose",
+      "condition": "candidate-comprehensive",
+      "repetition": 2,
+      "config": "skill-studies/concise-writing/preparation/configs/codex-invocation-nonprose-candidate.json"
+    },
+    {
+      "batch": "codex-invocation-01",
+      "order": 14,
+      "provider": "codex",
+      "case": "invocation-nonprose",
+      "condition": "original",
+      "repetition": 2,
+      "config": "skill-studies/concise-writing/preparation/configs/codex-invocation-nonprose-original.json"
+    },
+    {
+      "batch": "codex-invocation-01",
+      "order": 15,
+      "provider": "codex",
+      "case": "invocation-comments",
+      "condition": "original",
+      "repetition": 2,
+      "config": "skill-studies/concise-writing/preparation/configs/codex-invocation-comments-original.json"
+    },
+    {
+      "batch": "codex-invocation-01",
+      "order": 16,
+      "provider": "codex",
+      "case": "invocation-comments",
+      "condition": "candidate-comprehensive",
+      "repetition": 2,
+      "config": "skill-studies/concise-writing/preparation/configs/codex-invocation-comments-candidate.json"
+    },
+    {
+      "batch": "claude-invocation-01",
+      "order": 1,
+      "provider": "claude",
+      "case": "invocation-tighten",
+      "condition": "original",
+      "repetition": 1,
+      "config": "skill-studies/concise-writing/preparation/configs/claude-invocation-tighten-original.json"
+    },
+    {
+      "batch": "claude-invocation-01",
+      "order": 2,
+      "provider": "claude",
+      "case": "invocation-tighten",
+      "condition": "candidate-comprehensive",
+      "repetition": 1,
+      "config": "skill-studies/concise-writing/preparation/configs/claude-invocation-tighten-candidate.json"
+    },
+    {
+      "batch": "claude-invocation-01",
+      "order": 3,
+      "provider": "claude",
+      "case": "invocation-write",
+      "condition": "candidate-comprehensive",
+      "repetition": 1,
+      "config": "skill-studies/concise-writing/preparation/configs/claude-invocation-write-candidate.json"
+    },
+    {
+      "batch": "claude-invocation-01",
+      "order": 4,
+      "provider": "claude",
+      "case": "invocation-write",
+      "condition": "original",
+      "repetition": 1,
+      "config": "skill-studies/concise-writing/preparation/configs/claude-invocation-write-original.json"
+    },
+    {
+      "batch": "claude-invocation-01",
+      "order": 5,
+      "provider": "claude",
+      "case": "invocation-nonprose",
+      "condition": "original",
+      "repetition": 1,
+      "config": "skill-studies/concise-writing/preparation/configs/claude-invocation-nonprose-original.json"
+    },
+    {
+      "batch": "claude-invocation-01",
+      "order": 6,
+      "provider": "claude",
+      "case": "invocation-nonprose",
+      "condition": "candidate-comprehensive",
+      "repetition": 1,
+      "config": "skill-studies/concise-writing/preparation/configs/claude-invocation-nonprose-candidate.json"
+    },
+    {
+      "batch": "claude-invocation-01",
+      "order": 7,
+      "provider": "claude",
+      "case": "invocation-comments",
+      "condition": "candidate-comprehensive",
+      "repetition": 1,
+      "config": "skill-studies/concise-writing/preparation/configs/claude-invocation-comments-candidate.json"
+    },
+    {
+      "batch": "claude-invocation-01",
+      "order": 8,
+      "provider": "claude",
+      "case": "invocation-comments",
+      "condition": "original",
+      "repetition": 1,
+      "config": "skill-studies/concise-writing/preparation/configs/claude-invocation-comments-original.json"
+    },
+    {
+      "batch": "claude-invocation-01",
+      "order": 9,
+      "provider": "claude",
+      "case": "invocation-tighten",
+      "condition": "candidate-comprehensive",
+      "repetition": 2,
+      "config": "skill-studies/concise-writing/preparation/configs/claude-invocation-tighten-candidate.json"
+    },
+    {
+      "batch": "claude-invocation-01",
+      "order": 10,
+      "provider": "claude",
+      "case": "invocation-tighten",
+      "condition": "original",
+      "repetition": 2,
+      "config": "skill-studies/concise-writing/preparation/configs/claude-invocation-tighten-original.json"
+    },
+    {
+      "batch": "claude-invocation-01",
+      "order": 11,
+      "provider": "claude",
+      "case": "invocation-write",
+      "condition": "original",
+      "repetition": 2,
+      "config": "skill-studies/concise-writing/preparation/configs/claude-invocation-write-original.json"
+    },
+    {
+      "batch": "claude-invocation-01",
+      "order": 12,
+      "provider": "claude",
+      "case": "invocation-write",
+      "condition": "candidate-comprehensive",
+      "repetition": 2,
+      "config": "skill-studies/concise-writing/preparation/configs/claude-invocation-write-candidate.json"
+    },
+    {
+      "batch": "claude-invocation-01",
+      "order": 13,
+      "provider": "claude",
+      "case": "invocation-nonprose",
+      "condition": "candidate-comprehensive",
+      "repetition": 2,
+      "config": "skill-studies/concise-writing/preparation/configs/claude-invocation-nonprose-candidate.json"
+    },
+    {
+      "batch": "claude-invocation-01",
+      "order": 14,
+      "provider": "claude",
+      "case": "invocation-nonprose",
+      "condition": "original",
+      "repetition": 2,
+      "config": "skill-studies/concise-writing/preparation/configs/claude-invocation-nonprose-original.json"
+    },
+    {
+      "batch": "claude-invocation-01",
+      "order": 15,
+      "provider": "claude",
+      "case": "invocation-comments",
+      "condition": "original",
+      "repetition": 2,
+      "config": "skill-studies/concise-writing/preparation/configs/claude-invocation-comments-original.json"
+    },
+    {
+      "batch": "claude-invocation-01",
+      "order": 16,
+      "provider": "claude",
+      "case": "invocation-comments",
+      "condition": "candidate-comprehensive",
+      "repetition": 2,
+      "config": "skill-studies/concise-writing/preparation/configs/claude-invocation-comments-candidate.json"
+    }
+  ]
+}
