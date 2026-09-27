@@ -1,0 +1,156 @@
+{
+  "schema_version": "2",
+  "record_kind": "execution result",
+  "assessed_at": "2026-09-27T23:08:26.750051+00:00",
+  "run_id": "20260927T230543328Z-cw-prep-codex-long-handoff-control-61090723-42e8-427d-90ab-c129f02aef72-tql64t5_",
+  "condition": "control",
+  "assessor": {
+    "name": "Codex active session",
+    "method": "active session",
+    "model": null,
+    "session_id": null,
+    "context": "Same session that prepared and reviewed these development cases. No independent, blinded or held-out claim."
+  },
+  "evidence": [
+    {
+      "id": "output",
+      "artifact": {
+        "path": "/Users/simon/work/personal/skill-study-private/concise-writing/development/20260927T230543328Z-cw-prep-codex-long-handoff-control-61090723-42e8-427d-90ab-c129f02aef72-tql64t5_/workspace/fixture/report.md",
+        "sha256": "bd26749a80e2500dc35067a90edcbdb9263fc485d42077d11d94eb8c34c226f4",
+        "version": null
+      },
+      "selector": "Complete artifact"
+    },
+    {
+      "id": "trace",
+      "artifact": {
+        "path": "/Users/simon/work/personal/skill-study-private/concise-writing/development/20260927T230543328Z-cw-prep-codex-long-handoff-control-61090723-42e8-427d-90ab-c129f02aef72-tql64t5_/provider-session.jsonl",
+        "sha256": "e11b5321f296246a3729118651146c409de4159c029e5eeb866672035f199fe5",
+        "version": null
+      },
+      "selector": "Complete artifact"
+    },
+    {
+      "id": "mechanical",
+      "artifact": {
+        "path": "/Users/simon/work/personal/skill-study-private/concise-writing/development/20260927T230543328Z-cw-prep-codex-long-handoff-control-61090723-42e8-427d-90ab-c129f02aef72-tql64t5_/result.json",
+        "sha256": "26711c824204cd99156031a77f1ebce2b3fec56426d73767f09a9ddab15c613e",
+        "version": null
+      },
+      "selector": "Complete artifact"
+    },
+    {
+      "id": "log",
+      "artifact": {
+        "path": "/Users/simon/work/personal/skill-study-private/concise-writing/development/20260927T230543328Z-cw-prep-codex-long-handoff-control-61090723-42e8-427d-90ab-c129f02aef72-tql64t5_/runner.log",
+        "sha256": "7a9fb7cfc947ed7e46dc5d7b28d4e94071f5f6672f381dfbbe623b910b15989f",
+        "version": null
+      },
+      "selector": "Complete artifact"
+    },
+    {
+      "id": "final",
+      "artifact": {
+        "path": "/Users/simon/work/personal/skill-study-private/concise-writing/development/20260927T230543328Z-cw-prep-codex-long-handoff-control-61090723-42e8-427d-90ab-c129f02aef72-tql64t5_/final.txt",
+        "sha256": "743fce29c16b79e0ffed8fd7e55380d10534561642186d7f904a3de222c3277a",
+        "version": null
+      },
+      "selector": "Complete artifact"
+    },
+    {
+      "id": "source-0",
+      "artifact": {
+        "path": "skill-studies/concise-writing/cases/long-handoff/fixture/report.md",
+        "sha256": "0eb0946286d2a4b1708f14bcff5795cd1effdfa64af612a6cb9a89d2fac84737",
+        "version": null,
+        "git_revision": "96b6e383da39ea807a6ad49d4513cfc1d6f4cd33"
+      },
+      "selector": "Complete frozen source"
+    },
+    {
+      "id": "source-1",
+      "artifact": {
+        "path": "skill-studies/concise-writing/cases/long-handoff/task.md",
+        "sha256": "8be0f67fe6b62ca0a1d5f3af9ac2ffea79eef0d0615f0979853079653b8feab8",
+        "version": null,
+        "git_revision": "96b6e383da39ea807a6ad49d4513cfc1d6f4cd33"
+      },
+      "selector": "Complete frozen source"
+    }
+  ],
+  "setup": {
+    "status": "valid",
+    "reason": "The control catalog has only the five built-ins and no CW body exposure. Matching Sol-low context, complete source/output and unchanged task retained.",
+    "evidence": [
+      "mechanical",
+      "trace",
+      "log"
+    ]
+  },
+  "criteria": [
+    {
+      "id": "F1",
+      "dimension": "functional",
+      "judgment": "met",
+      "reason": "The complete report preserves the staging and pilot boundaries, exact stop/window thresholds, unresolved acknowledgement/lease conditions, evidence-release gates, recovery/restart and handoff rules. Unlike the other controls, Deployment retains the diagnostic purpose of the saved snapshot and comparison files; consolidating that explanation does not remove it from the artifact.",
+      "consequence": "Required for the corresponding functional or invocation outcome; reported separately.",
+      "evidence": [
+        "output",
+        "source-0",
+        "source-1"
+      ]
+    },
+    {
+      "id": "F2",
+      "dimension": "functional",
+      "judgment": "met",
+      "reason": "Deployment and Rollback both retain locally actionable lease, retention, reconciliation and escalation safeguards. Rollback's numbered recovery steps are usable on direct entry. Diagnostic rationale appears in Deployment only, but the rollback procedure neither loses a condition nor requires reconstructing an absent action; the whole-document criterion does not require repeating every explanatory sentence.",
+      "consequence": "Required for the corresponding functional or invocation outcome; reported separately.",
+      "evidence": [
+        "output",
+        "source-0",
+        "source-1"
+      ]
+    },
+    {
+      "id": "F3",
+      "dimension": "functional",
+      "judgment": "met",
+      "reason": "Decision framing, evidence bullets, ordered deployment/recovery actions and a closing recap make the report easy to navigate. Harmful duplicate mechanics are removed while useful operational warnings remain, and headings/bullets do not impose unnecessary consumption burden.",
+      "consequence": "Required for the corresponding functional or invocation outcome; reported separately.",
+      "evidence": [
+        "output",
+        "source-0",
+        "source-1"
+      ]
+    }
+  ],
+  "procedural_summary": "No-CW control. Full source read, baseline commit and complete saved diff inspection visible. Invalid combined patch corrected within the invocation. No O5 opportunity established by inspected visible messages.",
+  "observations": [
+    {
+      "dimension": "functional",
+      "description": "Source 1207 words, output 851, change -356; shorter. This control preserves the diagnostic rationale that the first two controls removed, so the control result is 1/3 on C, versus 3/3 for each skill.",
+      "consequence": "Descriptive comparison; no separate score or automatic length-based preference.",
+      "evidence": [
+        "output"
+      ]
+    },
+    {
+      "dimension": "functional",
+      "description": "Skill outputs retain diagnostic explanation at both operational entry points, whereas this control consolidates it in Deployment. That qualitative difference does not automatically fail the otherwise usable rollback procedure.",
+      "consequence": "Descriptive comparison; no separate score or automatic length-based preference.",
+      "evidence": [
+        "output"
+      ]
+    }
+  ],
+  "uncertainty": [],
+  "result_id": "codex-expanded-01-long-handoff-control-3",
+  "functional_result": "met",
+  "manifest": {
+    "path": "skill-studies/concise-writing/preparation/manifests/codex-long-handoff-manifest.json",
+    "sha256": "7ac4d07132b1dd42bb74bee3d7e9cb91ae7bf98276675c7c84deed700fc2be6a",
+    "version": "1",
+    "git_revision": "4dc370648a6a915546035847b2823a4bc5d57325"
+  }
+}

@@ -1,7 +1,7 @@
 {
   "schema_version": "2",
   "record_kind": "execution result",
-  "assessed_at": "2026-09-27T22:37:06.827897+00:00",
+  "assessed_at": "2026-09-27T23:16:34.920885+00:00",
   "run_id": "20260927T223554885Z-cw-prep-codex-effective-briefing-candidate-7c5f2f96-0d70-4e1f-bbe6-ae0eeb56deeb-ac3ytr3q",
   "condition": "candidate-comprehensive",
   "assessor": {
@@ -9,7 +9,7 @@
     "method": "active session",
     "model": null,
     "session_id": null,
-    "context": "Same session that prepared and reviewed these development cases. No independent, blinded or held-out claim."
+    "context": "Same session that prepared and reviewed these development cases. No independent, blinded or held-out claim. Batch-close review checked all B outputs against the established policy-4 continuing-preview precedent; earlier sentence-omission judgments and dependent comparisons are superseded without changing the frozen policy."
   },
   "evidence": [
     {
@@ -129,7 +129,7 @@
   "observations": [
     {
       "dimension": "functional",
-      "description": "Source 279 words, output 221, change -58; shorter. The second candidate explicitly preserves both responsibilities/permissions omitted by the first control.",
+      "description": "Source 279 words, output 221, change -58; shorter. This candidate states continuation explicitly and retains Nia as sender. The first control lacks the sender; its less explicit continuation framing is not independently failed.",
       "consequence": "Descriptive comparison; no separate score or automatic length-based preference.",
       "evidence": [
         "output"

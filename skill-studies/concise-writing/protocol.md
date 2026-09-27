@@ -9,7 +9,7 @@ The owner-requested [preparation review and remediation](../../reviews/2026-09-2
 On 2026-09-27, the owner replied “approved, please continue” to the 104-call proposal: 72 ordinary calls followed by 32 native calls, raising the combined subject ceiling from 136 to 240.
 This authorizes both stages, runtime qualification, committed input/schedule freeze and collection after readiness, with zero automatic retries; it does not authorize a skill edit or adoption.
 The [preparation package](preparation/README.md) and [allocation forecast](testing-audit.md#proposed-sequence-and-allocation-forecast) define the approved scope.
-Current work: collect and assess the four approved batches in schedule order; expanded spending is 24/104.
+Current work: collect and assess the four approved batches in schedule order; expanded spending is 36/104.
 Both runtimes are qualified, all 16 manifests pin input revision `96b6e383da39ea807a6ad49d4513cfc1d6f4cd33`, and all four batches pass collection readiness.
 The manifest/authority commit must be recorded on each attempt before its dispatch.
 Establish and assess both providers' baselines before selecting CW edits; the existing rewrite remains an unchanged comparison condition.
@@ -395,13 +395,13 @@ Approved durable raw evidence directory: `/Users/simon/work/personal/skill-study
 Owner-accepted recovery decision for CW: single-host retention, as used for SSR, with one verified canonical raw bundle per attempt. The current `tmutil destinationinfo` check reports no destinations configured; `tmutil isexcluded` reports the parent private store is Included. No other working backup arrangement has been established. Machine loss or disk failure could therefore destroy CW raw evidence; Git holds case inputs and assessments but cannot recover those external bundles. Creating the directory and passing a local copy check do not establish host-loss recovery. The owner explicitly accepted this CW risk together with the eight-execution scope above.
 
 Combined accounting sources: closed SSR [pilot 01](../sweeping-stale-references/pilot-run-index.json), [pilot 02](../sweeping-stale-references/pilot-02-run-index.json), [semantic delivery](../sweeping-stale-references/semantic-delivery-01-run-index.json), [core baseline](../sweeping-stale-references/core-baseline-01-run-index.json), [comparison](../sweeping-stale-references/comprehensive-comparison-01-run-index.json), the SSR [completed expansion](../sweeping-stale-references/coverage-baseline-01-run-index.json), the SSR [completed comparison](../sweeping-stale-references/comprehensive-comparison-02-run-index.json), the SSR [Claude smoke](../sweeping-stale-references/claude-smoke-01-run-index.json), the SSR [Claude comparison](../sweeping-stale-references/claude-comparison-01-run-index.json), the SSR [Opus invocation comparison](../sweeping-stale-references/claude-opus-invocation-01-run-index.json), and both CW indexes above. Historical pilot links contribute accounting only; they are not reclassified or reassessed.
-Dispatched calls are **160 subject, 0 evaluator, 0 authoring, 0 retry**; remaining outer capacity is **80 / 12 / 4 / 4** against the [active plan](../../plans/2026-09-11-model-driven-skill-testing.md#limits-and-information-boundaries). Both eight-call CW batches are spent. The owner authorized ten SSR expansion calls under ceiling 56; all ten are spent, including the excluded control, with no replacement or pool transfer. Comparison runner durations total 508.067 seconds; baseline durations remain 494.936 seconds, including setup and capture.
+Dispatched calls are **172 subject, 0 evaluator, 0 authoring, 0 retry**; remaining outer capacity is **68 / 12 / 4 / 4** against the [active plan](../../plans/2026-09-11-model-driven-skill-testing.md#limits-and-information-boundaries). Both eight-call CW batches are spent. The owner authorized ten SSR expansion calls under ceiling 56; all ten are spent, including the excluded control, with no replacement or pool transfer. Comparison runner durations total 508.067 seconds; baseline durations remain 494.936 seconds, including setup and capture.
 Owner clarification after round-10 review: “the budget is just a guideline”. The 1,200-minute figure below remains the planning baseline, not a collection stop; invocation ceilings and the authorized SSR scope is unchanged. Retain elapsed effort and forecast variance to expose process cost.
 
-Current combined accounting: **1,845 active minutes booked; 645 minutes above the historical 1,200-minute planning guideline**.
+Current combined accounting: **1,875 active minutes booked; 675 minutes above the historical 1,200-minute planning guideline**.
 These are rounded effort estimates, not stopwatch measurements or a separately timed category breakdown.
 Between-turn owner wait is excluded; runner durations are included once.
-At the second expanded checkpoint, 80 approved calls remain; forecast roughly 210 further active minutes for collection, assessment and verification using the observed collection and assessment pace.
+After the ordinary Codex batch, 68 approved calls remain; forecast roughly 180 further active minutes for collection, assessment and verification using the observed collection and assessment pace.
 This is an updated effort estimate, not an additional invocation authorization or a reliability claim.
 
 | Work | Estimated active minutes |
@@ -461,7 +461,8 @@ This is an updated effort estimate, not an additional invocation authorization o
 | Expanded allocation, runtime qualification and collection freeze | 25 |
 | CW expanded collection: first Codex rotation and assessment checkpoint | 30 |
 | CW expanded collection: second Codex rotation and assessment checkpoint | 20 |
-| **Total** | **1,845** |
+| CW expanded collection: final Codex rotation, verification and batch assessment | 30 |
+| **Total** | **1,875** |
 
 SSR expansion is complete. The prior 55-minute remaining forecast closed at 50 estimated minutes, including the additional shell correction; all ten subject calls are spent.
 The combined batch/recovery effort is 135 estimated minutes (45 initial checkpoint, 40 isolation correction, 50 resumption), 45 above the original 90-minute allowance. Separate round-9 review effort remains in the combined ledger above.
@@ -480,11 +481,16 @@ The [preparation package](preparation/README.md) records inputs and validation; 
 The [allocation rationale](testing-audit.md#proposed-sequence-and-allocation-forecast) explains the 104-call scope; the approved schedules above govern dispatch.
 Any fresh rewrite still needs an estimate after baseline diagnosis.
 
+The initial approved-scope forecast was 400 active minutes: 300 ordinary and 100 native.
+Ordinary Codex collection and assessment used 80 estimated minutes, including 2,417.307 seconds of runner duration once.
+The revised remaining forecast is:
+
 | Work | Estimate | Basis |
 | --- | ---: | --- |
-| Ordinary collection and assessment | 300 | Midpoint of 240–360 active minutes for 72 calls, preservation and assessment. |
-| Native collection and assessment | 100 | Midpoint of 80–120 active minutes for 32 calls and invocation assessment. |
-| **Total** | **400** | Estimated active minutes for the approved 104-call scope; any fresh rewrite remains a separate decision. |
+| Claude ordinary collection and assessment | 90 | 36 calls with preservation and assessment; update against observed Claude pace. |
+| Native collection and assessment | 80 | 32 calls, retained load-timing evidence and case-specific assessment. |
+| Final cross-provider review and reconciliation | 10 | Verify reports, accounting, coverage and next decision. |
+| **Remaining** | **180** | 68 approved calls remain; no fresh rewrite is included. |
 
 ## Results and decision
 

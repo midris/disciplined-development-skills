@@ -1,8 +1,8 @@
 {
   "schema_version": "2",
   "record_kind": "execution result",
-  "assessed_at": "2026-09-27T23:16:34.921051+00:00",
-  "run_id": "20260927T223703001Z-cw-prep-codex-effective-briefing-control-544f695d-1c95-4451-9941-1a644408e45b-xc3kp5ps",
+  "assessed_at": "2026-09-27T23:16:34.921486+00:00",
+  "run_id": "20260927T225521488Z-cw-prep-codex-effective-briefing-control-b3fe3d3d-7219-49f9-9a8d-2311f6ed83b5-a41pbdff",
   "condition": "control",
   "assessor": {
     "name": "Codex active session",
@@ -15,8 +15,8 @@
     {
       "id": "output",
       "artifact": {
-        "path": "/Users/simon/work/personal/skill-study-private/concise-writing/development/20260927T223703001Z-cw-prep-codex-effective-briefing-control-544f695d-1c95-4451-9941-1a644408e45b-xc3kp5ps/workspace/fixture/report.md",
-        "sha256": "a303d2dad205fb23e36aca714234f30025ef2a9510813f61758b6306138952e5",
+        "path": "/Users/simon/work/personal/skill-study-private/concise-writing/development/20260927T225521488Z-cw-prep-codex-effective-briefing-control-b3fe3d3d-7219-49f9-9a8d-2311f6ed83b5-a41pbdff/workspace/fixture/report.md",
+        "sha256": "948f3e745833399f3a1e0682664e615f3892e96e8fde194af7413119a9f02d94",
         "version": null
       },
       "selector": "Complete artifact"
@@ -24,8 +24,8 @@
     {
       "id": "trace",
       "artifact": {
-        "path": "/Users/simon/work/personal/skill-study-private/concise-writing/development/20260927T223703001Z-cw-prep-codex-effective-briefing-control-544f695d-1c95-4451-9941-1a644408e45b-xc3kp5ps/provider-session.jsonl",
-        "sha256": "47c8fc69483c499b707a5eeee5ed40242fadeadd407de252ded840e993e1ca45",
+        "path": "/Users/simon/work/personal/skill-study-private/concise-writing/development/20260927T225521488Z-cw-prep-codex-effective-briefing-control-b3fe3d3d-7219-49f9-9a8d-2311f6ed83b5-a41pbdff/provider-session.jsonl",
+        "sha256": "55f674df37c9f4c21f3b05d379bb53b29be7525e917235264aac60e6150d5598",
         "version": null
       },
       "selector": "Complete artifact"
@@ -33,8 +33,8 @@
     {
       "id": "mechanical",
       "artifact": {
-        "path": "/Users/simon/work/personal/skill-study-private/concise-writing/development/20260927T223703001Z-cw-prep-codex-effective-briefing-control-544f695d-1c95-4451-9941-1a644408e45b-xc3kp5ps/result.json",
-        "sha256": "3d80956976831072c3a6721e6dfb14686dbc403da459d305100e99f62ad08c33",
+        "path": "/Users/simon/work/personal/skill-study-private/concise-writing/development/20260927T225521488Z-cw-prep-codex-effective-briefing-control-b3fe3d3d-7219-49f9-9a8d-2311f6ed83b5-a41pbdff/result.json",
+        "sha256": "bf3b62b52eb97e3d65424679b4068d96e5682670e7b5d437435a559216c84a57",
         "version": null
       },
       "selector": "Complete artifact"
@@ -42,8 +42,8 @@
     {
       "id": "log",
       "artifact": {
-        "path": "/Users/simon/work/personal/skill-study-private/concise-writing/development/20260927T223703001Z-cw-prep-codex-effective-briefing-control-544f695d-1c95-4451-9941-1a644408e45b-xc3kp5ps/runner.log",
-        "sha256": "5fba9616fa62a0e39266477a49c55910af1869d2b2e77753733f0ae84ed709f9",
+        "path": "/Users/simon/work/personal/skill-study-private/concise-writing/development/20260927T225521488Z-cw-prep-codex-effective-briefing-control-b3fe3d3d-7219-49f9-9a8d-2311f6ed83b5-a41pbdff/runner.log",
+        "sha256": "ba6a11e5ebb24e0600f62e5abcdba63b1be11fc06e434c3af07e9cb14f50d96d",
         "version": null
       },
       "selector": "Complete artifact"
@@ -51,8 +51,8 @@
     {
       "id": "final",
       "artifact": {
-        "path": "/Users/simon/work/personal/skill-study-private/concise-writing/development/20260927T223703001Z-cw-prep-codex-effective-briefing-control-544f695d-1c95-4451-9941-1a644408e45b-xc3kp5ps/final.txt",
-        "sha256": "0c9efcad33ccaf9f90b8085611daaecda1d084dcf167939b2a12f086bfc84a66",
+        "path": "/Users/simon/work/personal/skill-study-private/concise-writing/development/20260927T225521488Z-cw-prep-codex-effective-briefing-control-b3fe3d3d-7219-49f9-9a8d-2311f6ed83b5-a41pbdff/final.txt",
+        "sha256": "74948a725fb3ed65b9465da2d3b5616d154c02064e72210294458c6ce2e8129e",
         "version": null
       },
       "selector": "Complete artifact"
@@ -80,7 +80,7 @@
   ],
   "setup": {
     "status": "valid",
-    "reason": "The control catalog has five built-ins and no CW body exposure. Matching Sol-low context, complete source/output and unchanged task retained.",
+    "reason": "Only the five built-in skills appear in the control catalog; no CW body delivered. Sol-low context matches and complete source/output retained; task unchanged.",
     "evidence": [
       "mechanical",
       "trace",
@@ -125,11 +125,11 @@
       ]
     }
   ],
-  "procedural_summary": "No-CW control. Complete source reading, baseline commit and full saved diff inspection are visible. Unlike the first control, this output retains Nia as invitation sender. No expressed unresolved framing uncertainty.",
+  "procedural_summary": "No-CW control. Complete source reading, baseline commit and full saved diff inspection visible. Invalid combined patch corrected within the invocation. No O5 opportunity established by inspected visible messages.",
   "observations": [
     {
       "dimension": "functional",
-      "description": "Source 279 words, output 206, change -73; shorter. Batch-close review corrects the earlier sentence-omission failure under unchanged policy 4.",
+      "description": "Source 279 words, output 247, change -32; shorter. Batch-close review corrects the earlier sentence-omission failure under unchanged policy 4.",
       "consequence": "The same execution is reassessed; no new call or changed scoring rule.",
       "evidence": [
         "output"
@@ -137,7 +137,7 @@
     }
   ],
   "uncertainty": [],
-  "result_id": "codex-expanded-01-effective-briefing-control-2",
+  "result_id": "codex-expanded-01-effective-briefing-control-3",
   "functional_result": "met",
   "manifest": {
     "path": "skill-studies/concise-writing/preparation/manifests/codex-effective-briefing-manifest.json",

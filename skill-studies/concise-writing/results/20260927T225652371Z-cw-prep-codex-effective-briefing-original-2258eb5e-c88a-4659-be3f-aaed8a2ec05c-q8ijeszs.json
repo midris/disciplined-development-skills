@@ -1,8 +1,8 @@
 {
   "schema_version": "2",
   "record_kind": "execution result",
-  "assessed_at": "2026-09-27T23:16:34.921316+00:00",
-  "run_id": "20260927T223813606Z-cw-prep-codex-effective-briefing-original-d6f0580b-9634-4571-9564-691e4923d767-kpztyiq_",
+  "assessed_at": "2026-09-27T23:16:34.921633+00:00",
+  "run_id": "20260927T225652371Z-cw-prep-codex-effective-briefing-original-2258eb5e-c88a-4659-be3f-aaed8a2ec05c-q8ijeszs",
   "condition": "original",
   "assessor": {
     "name": "Codex active session",
@@ -15,8 +15,8 @@
     {
       "id": "output",
       "artifact": {
-        "path": "/Users/simon/work/personal/skill-study-private/concise-writing/development/20260927T223813606Z-cw-prep-codex-effective-briefing-original-d6f0580b-9634-4571-9564-691e4923d767-kpztyiq_/workspace/fixture/report.md",
-        "sha256": "1d1613c9e609685fe243a542515441eb7f5b3bb8bb2cb76c8cf7dbb8bf936f5d",
+        "path": "/Users/simon/work/personal/skill-study-private/concise-writing/development/20260927T225652371Z-cw-prep-codex-effective-briefing-original-2258eb5e-c88a-4659-be3f-aaed8a2ec05c-q8ijeszs/workspace/fixture/report.md",
+        "sha256": "761bfb1037b0b7fe004f5a1181e79a588851b7299e64996b4c047cfd425837b6",
         "version": null
       },
       "selector": "Complete artifact"
@@ -24,8 +24,8 @@
     {
       "id": "trace",
       "artifact": {
-        "path": "/Users/simon/work/personal/skill-study-private/concise-writing/development/20260927T223813606Z-cw-prep-codex-effective-briefing-original-d6f0580b-9634-4571-9564-691e4923d767-kpztyiq_/provider-session.jsonl",
-        "sha256": "660ac600f849ec38c55398627b349af3a9e6969e0228e5b815b24511c7897792",
+        "path": "/Users/simon/work/personal/skill-study-private/concise-writing/development/20260927T225652371Z-cw-prep-codex-effective-briefing-original-2258eb5e-c88a-4659-be3f-aaed8a2ec05c-q8ijeszs/provider-session.jsonl",
+        "sha256": "42b4267cffde3fefa651498919d8714eb613b6901c5d04eba1203fbfc33262d0",
         "version": null
       },
       "selector": "Complete artifact"
@@ -33,8 +33,8 @@
     {
       "id": "mechanical",
       "artifact": {
-        "path": "/Users/simon/work/personal/skill-study-private/concise-writing/development/20260927T223813606Z-cw-prep-codex-effective-briefing-original-d6f0580b-9634-4571-9564-691e4923d767-kpztyiq_/result.json",
-        "sha256": "3116153691ef34f578e6fb6ba75d37037f596a50a58efaf7adae28572d04c8ea",
+        "path": "/Users/simon/work/personal/skill-study-private/concise-writing/development/20260927T225652371Z-cw-prep-codex-effective-briefing-original-2258eb5e-c88a-4659-be3f-aaed8a2ec05c-q8ijeszs/result.json",
+        "sha256": "9105c5c08835ec11df8290f8c51b15ff0cfa09a7a3be1a004ab63b01c0dbda3a",
         "version": null
       },
       "selector": "Complete artifact"
@@ -42,8 +42,8 @@
     {
       "id": "log",
       "artifact": {
-        "path": "/Users/simon/work/personal/skill-study-private/concise-writing/development/20260927T223813606Z-cw-prep-codex-effective-briefing-original-d6f0580b-9634-4571-9564-691e4923d767-kpztyiq_/runner.log",
-        "sha256": "257fddf75a798566d59c05c37935431a44d392d3bf754d088ad0c47abb356cae",
+        "path": "/Users/simon/work/personal/skill-study-private/concise-writing/development/20260927T225652371Z-cw-prep-codex-effective-briefing-original-2258eb5e-c88a-4659-be3f-aaed8a2ec05c-q8ijeszs/runner.log",
+        "sha256": "dd82b846c13bdd9b85ec7ec49cea313f5b1b5c435d01b6bfee671aae0de85d98",
         "version": null
       },
       "selector": "Complete artifact"
@@ -51,8 +51,8 @@
     {
       "id": "final",
       "artifact": {
-        "path": "/Users/simon/work/personal/skill-study-private/concise-writing/development/20260927T223813606Z-cw-prep-codex-effective-briefing-original-d6f0580b-9634-4571-9564-691e4923d767-kpztyiq_/final.txt",
-        "sha256": "e7ce1717c74dc3c881cb1bb5e623e5e73e77fc6aacf0f1a83c007c318ae93d53",
+        "path": "/Users/simon/work/personal/skill-study-private/concise-writing/development/20260927T225652371Z-cw-prep-codex-effective-briefing-original-2258eb5e-c88a-4659-be3f-aaed8a2ec05c-q8ijeszs/final.txt",
+        "sha256": "e1cd1ce151f3ab4c91a988eabd6d20b107ecba95b8af2d83ba8f58f6a9023e65",
         "version": null
       },
       "selector": "Complete artifact"
@@ -80,7 +80,7 @@
   ],
   "setup": {
     "status": "valid",
-    "reason": "Original skill body delivered at line 16 before editing; matching Sol-low context and complete evidence retained. TASK.md unchanged.",
+    "reason": "Full original body delivered at line 16 before editing; Sol-low context and frozen inputs match. Complete output retained; task unchanged.",
     "evidence": [
       "mechanical",
       "trace",
@@ -92,7 +92,7 @@
       "id": "F1",
       "dimension": "functional",
       "judgment": "met",
-      "reason": "The complete report preserves six-team continuation, the four-team Thursday invitation decision, numerical evidence and limits, Nia's consent/switch-back and sender roles, Omar's timeout check with strict threshold and 24-hour scope, approval before sending, opt-in activation and separate later expansion/default decisions.",
+      "reason": "The complete briefing preserves existing-team continuation and four-team opt-in scope, all evidence and limitations, named readiness checks and invitation sender, strict timeout threshold/24-hour interval, approval and seven-day review. Thursday timing is established by the title and opening decision context; invitation versus default-setting and separate later expansion remain clear.",
       "consequence": "Required for the corresponding functional or invocation outcome; reported separately.",
       "evidence": [
         "output",
@@ -104,7 +104,7 @@
       "id": "F2",
       "dimension": "functional",
       "judgment": "met",
-      "reason": "Opening scope and evidence limits support the manager's decision. Named checks and invitation ownership make the next actions clear; current participants' permission and the invitation-versus-default distinction remain accessible.",
+      "reason": "The manager sees both existing and proposed scope, then actionable checks and ownership before supporting evidence. The rearrangement preserves the evidence limits and practical approval/review workflow without making the reader reconstruct missing conditions.",
       "consequence": "Required for the corresponding functional or invocation outcome; reported separately.",
       "evidence": [
         "output",
@@ -116,7 +116,7 @@
       "id": "F3",
       "dimension": "functional",
       "judgment": "met",
-      "reason": "Evidence and checks are concise bullets under clear headings, followed by the approval and review sequence. The result is easy to consume without the original's final recap, whose decision framing is already available at the opening.",
+      "reason": "Decision, approval conditions, evidence and follow-up are compact and coherent. The removed final recap is not needed because the opening and headings preserve orientation; qualifications remain easy to find.",
       "consequence": "Required for the corresponding functional or invocation outcome; reported separately.",
       "evidence": [
         "output",
@@ -125,11 +125,11 @@
       ]
     }
   ],
-  "procedural_summary": "Full skill/source reads, baseline commit and saved diff inspection visible. The subject revises its timeout wording after comparison. Invalid combined patch corrected within the invocation. No expressed unresolved framing uncertainty.",
+  "procedural_summary": "Complete body/source reads, baseline commit and full saved diff inspection visible. No O5 opportunity established by inspected visible messages.",
   "observations": [
     {
       "dimension": "functional",
-      "description": "Source 279 words, output 226, change -53; shorter. Both skill versions and the second control pass this repetition. The first control fails for missing invitation ownership, not for omitting a standalone continuation sentence.",
+      "description": "Source 279 words, output 226, change -53; shorter. All three original briefing outputs pass. Explicit continuation wording is a framing difference, not a mandatory sentence requirement.",
       "consequence": "Descriptive comparison; no separate score or automatic length-based preference.",
       "evidence": [
         "output"
@@ -137,7 +137,7 @@
     }
   ],
   "uncertainty": [],
-  "result_id": "codex-expanded-01-effective-briefing-original-2",
+  "result_id": "codex-expanded-01-effective-briefing-original-3",
   "functional_result": "met",
   "manifest": {
     "path": "skill-studies/concise-writing/preparation/manifests/codex-effective-briefing-manifest.json",

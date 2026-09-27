@@ -1,39 +1,39 @@
-# CW expanded collection checkpoint review
+# CW expanded collection review
 
 Authority and current progress belong to the [CW protocol](../skill-studies/concise-writing/protocol.md).
-This dated checkpoint reviews the first twelve Codex attempts against the frozen CW-expanded-1 policy and case contracts.
+This review covers the 36-attempt ordinary Codex batch against the frozen CW-expanded-1 policy and case contracts.
 The active session is the assessor; no independent or blind review is claimed.
 
-All twelve invocations completed and were retained through the verified retention command before the next dispatch.
-Requested and captured model context agree on `gpt-5.6-sol`, low effort.
-All eight explicit-load attempts delivered the complete assigned body before editing; all four controls exposed only the five built-in skills.
-The first rotation meets F1–F3 for both skill versions on A/B/C/E and for controls on A/E.
-B's control drops the invitation sender and existing-team continuation permission; C's control drops the diagnostic rationale for preserved evidence.
-Each failed control is one failed execution even though the defect affects both F1 and F2; readability remains met.
-The review challenged these judgments against equivalent wording and whole-document context rather than treating absent sentences as automatic failures.
-In B, the skill-bearing outputs preserve current-team permission through either explicit continuation or present-tense opt-in scope, whereas the control mentions six teams only as historical usage.
-In C, both skill-bearing outputs explain the evidence's diagnostic use, while no section of the control retains it.
-The addition outputs all preserve the expanded workflow; growth is descriptive and carries no shortening penalty.
+## Findings and resolution
 
-Reviewed structural validity, complete evidence citations, condition identities, protected input bytes, source/output counts and the non-overlapping charge ledger.
-Result files are committed before their Git identities are registered in the attempt index.
-Raw retained bundles were inspected as files only; no Git command was run inside them.
-Corrected live preparation/allocation wording that still implied no collection or a merely proposed allocation; frozen case inputs and historical records remain unchanged.
-No skill, runner or scoring-contract edit is included.
+A batch-close consistency check found a P2 assessment error: the initial B judgments treated the missing standalone current-team continuation sentence as a failure.
+That contradicts the established [policy-4 resolution](2026-09-18-cw-policy4-review.md) and the same case's retained whole-document precedents.
+Read as a whole, keeping the existing preview opt-in while inviting additional teams preserves continuing participation; no practical loss follows merely from omitting that sentence.
+Re-read all nine new B outputs and corrected the entire class: orders 17 and 28 now meet F1–F3; order 6 still fails F1/F2 only because Nia's invitation-sending responsibility is missing.
+Seven result records change judgments, reasons or dependent comparison observations; their previous committed versions remain in Git.
+This is reassessment of the same executions under unchanged rules, not a policy amendment or replacement sample.
+The earlier checkpoint review claims about lost continuation permission are superseded by this resolution.
 
-The remaining repetitions, Claude observations and native-selection results are still required before a cross-model conclusion.
-No findings remain at this checkpoint.
+Challenged the remaining failures for the same literal-versus-meaning error.
+C controls 8 and 19 remove the diagnostic purpose of preserved evidence from the whole artifact; the third control retains it in Deployment and passes despite not repeating it in Rollback.
+E original 36 removes the required recording action, retaining only confirmation that a named contact exists; unlike continuing-preview context, no other passage establishes a completed contact record.
+A reader can satisfy that edit without doing the newly required recording, so F1/F2 fail while F3 remains met.
+All other E outputs retain recording; all E growth is descriptive, with no shortening penalty.
 
-## Second rotation checkpoint
+## Verification and limits
 
-Reviewed orders 13–24 under the same frozen contracts; no subject-facing input or scoring change was made.
-Both skill conditions meet all factors on all four cases in this rotation.
-Controls again meet all factors on A/E and lose consequential information on B/C.
-B's second control retains Nia as sender but omits current-team permission; C's second control again omits diagnostic evidence rationale.
-The review accepted equivalent wording and useful navigation, including C's deployment reference to its opening start conditions.
-All 24 inventories were recomputed read-only, result records validated, and Codex session/thread/cwd/CLI identities matched.
-Protected task, notes and skill files were compared with their supplied configuration sources.
-These checks do not establish cross-provider outcomes or native selection; those stages remain scheduled.
-No findings remain at this checkpoint.
+All 36 invocations completed and were retained before subsequent dispatch, with no retries, exclusions or unresolved setups.
+Requested and captured context agree on `gpt-5.6-sol`, low effort and Codex CLI 0.157.1.
+All 24 explicit-load attempts delivered the complete assigned body before editing; all twelve controls exposed only the five built-in skills.
+Recomputed every retained inventory read-only, validated all result records, checked 69 protected task/note/skill copies and matched every Codex session to its stdout thread and fixture directory.
+No Git command was run inside retained bundles.
+Visible-message inspection establishes no keep-and-flag opportunity; silence is not evidence about hidden uncertainty.
+Results are committed before their final identities are registered in the attempt index; changed earlier judgments are explicitly re-pinned.
+No historical result, skill, runner, frozen input or scoring contract changed.
+
+Final results by A/B/C/E: original 3/3, 3/3, 3/3, 2/3; candidate 3/3 throughout; control 3/3, 2/3, 1/3, 3/3.
+These small exposed samples do not establish reliability, cross-provider performance or automatic invocation.
+The batch assessment records quality differences alongside counts and length.
+No findings remain after the consistency correction and re-review.
 
 DD-VERDICT: PASS
