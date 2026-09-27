@@ -54,4 +54,15 @@ Every skill-bearing attempt delivered the whole body before its first text edit;
 There were no setup faults, retries, missing final responses or stderr warnings.
 Assessment structure, evidence and limits were challenged; no new review findings remain.
 
+## Index registration recovery
+
+The controller wrote flat artifact identities into the first twelve Claude result slots instead of the required result_id/record wrapper.
+The validator rejected them, but the controller incorrectly continued its multi-command orchestration, committed that invalid index in 171ff6d and dispatched order 13.
+That commit's claimed index validation was false; the successful validation is the corrective check recorded here.
+The model completed once; retention stopped before copying because the existing index was invalid.
+Corrected all twelve wrappers, added an index-structure pre-dispatch assertion to the local collection helper, and ran the retention-only command on order 13's existing bundle.
+No invocation was repeated and no raw evidence or subject input changed.
+The source/result identities, repaired index and all thirteen retained inventories were then verified before further dispatch.
+This was a controller bookkeeping and sequencing error, not a model setup failure or a runner-code change.
+
 DD-VERDICT: PASS
