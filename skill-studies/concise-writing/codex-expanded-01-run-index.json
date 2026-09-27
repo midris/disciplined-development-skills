@@ -591,6 +591,498 @@
           "git_revision": "8a3ecdd7537d72a92ca59731938e0889f1b7d2f2"
         }
       }
+    },
+    {
+      "attempt_id": "codex-expanded-01-agent-recommendation-original-2-1",
+      "case_id": "agent-recommendation",
+      "condition": "original",
+      "repetition": 2,
+      "attempt_number": 1,
+      "retry_of": null,
+      "manifest": {
+        "path": "skill-studies/concise-writing/preparation/manifests/codex-agent-recommendation-manifest.json",
+        "sha256": "2e8d8ac2924c3e916544aea3a1ed94b7da65fc2789e98b89b39cad7e0a74b930",
+        "version": "1",
+        "git_revision": "4dc370648a6a915546035847b2823a4bc5d57325"
+      },
+      "authorization": {
+        "artifact": {
+          "path": "skill-studies/concise-writing/protocol.md",
+          "sha256": "2e154c0faf2cf5068b8bb565d867afbcd7b38f06e5738e6cc98975955b9eb04a",
+          "version": "1",
+          "git_revision": "4dc370648a6a915546035847b2823a4bc5d57325"
+        },
+        "selector": "Batch: codex-expanded-01; order 13"
+      },
+      "run_id": "20260927T223142059Z-cw-prep-codex-agent-recommendation-original-50c73b21-705b-41e8-b4cc-21aaf8a05960-maehze92",
+      "allocation": {
+        "pool": "subject",
+        "charge": 1
+      },
+      "limitations": [
+        "Runner status: COMPLETED; assessment pending."
+      ],
+      "bundle": {
+        "path": "/Users/simon/work/personal/skill-study-private/concise-writing/development/20260927T223142059Z-cw-prep-codex-agent-recommendation-original-50c73b21-705b-41e8-b4cc-21aaf8a05960-maehze92",
+        "inventory": {
+          "path": "/Users/simon/work/personal/skill-study-private/concise-writing/development/20260927T223142059Z-cw-prep-codex-agent-recommendation-original-50c73b21-705b-41e8-b4cc-21aaf8a05960-maehze92.inventory.json",
+          "sha256": "e6622394f20c3c9ad85316fe47ecbc460244288644552f53b9af9f32dd0f7d77",
+          "version": "1"
+        },
+        "verified": true
+      },
+      "result": null
+    },
+    {
+      "attempt_id": "codex-expanded-01-agent-recommendation-candidate-comprehensive-2-1",
+      "case_id": "agent-recommendation",
+      "condition": "candidate-comprehensive",
+      "repetition": 2,
+      "attempt_number": 1,
+      "retry_of": null,
+      "manifest": {
+        "path": "skill-studies/concise-writing/preparation/manifests/codex-agent-recommendation-manifest.json",
+        "sha256": "2e8d8ac2924c3e916544aea3a1ed94b7da65fc2789e98b89b39cad7e0a74b930",
+        "version": "1",
+        "git_revision": "4dc370648a6a915546035847b2823a4bc5d57325"
+      },
+      "authorization": {
+        "artifact": {
+          "path": "skill-studies/concise-writing/protocol.md",
+          "sha256": "2e154c0faf2cf5068b8bb565d867afbcd7b38f06e5738e6cc98975955b9eb04a",
+          "version": "1",
+          "git_revision": "4dc370648a6a915546035847b2823a4bc5d57325"
+        },
+        "selector": "Batch: codex-expanded-01; order 14"
+      },
+      "run_id": "20260927T223252773Z-cw-prep-codex-agent-recommendation-candidate-88a7bb69-81b2-4cd2-b66f-28619b56d8ad-x9ycjqbn",
+      "allocation": {
+        "pool": "subject",
+        "charge": 1
+      },
+      "limitations": [
+        "Runner status: COMPLETED; assessment pending."
+      ],
+      "bundle": {
+        "path": "/Users/simon/work/personal/skill-study-private/concise-writing/development/20260927T223252773Z-cw-prep-codex-agent-recommendation-candidate-88a7bb69-81b2-4cd2-b66f-28619b56d8ad-x9ycjqbn",
+        "inventory": {
+          "path": "/Users/simon/work/personal/skill-study-private/concise-writing/development/20260927T223252773Z-cw-prep-codex-agent-recommendation-candidate-88a7bb69-81b2-4cd2-b66f-28619b56d8ad-x9ycjqbn.inventory.json",
+          "sha256": "063b640d44cd3467bba17af0f7fdebd3a43d6fa66b40758d430325bba11c7fc1",
+          "version": "1"
+        },
+        "verified": true
+      },
+      "result": null
+    },
+    {
+      "attempt_id": "codex-expanded-01-agent-recommendation-control-2-1",
+      "case_id": "agent-recommendation",
+      "condition": "control",
+      "repetition": 2,
+      "attempt_number": 1,
+      "retry_of": null,
+      "manifest": {
+        "path": "skill-studies/concise-writing/preparation/manifests/codex-agent-recommendation-manifest.json",
+        "sha256": "2e8d8ac2924c3e916544aea3a1ed94b7da65fc2789e98b89b39cad7e0a74b930",
+        "version": "1",
+        "git_revision": "4dc370648a6a915546035847b2823a4bc5d57325"
+      },
+      "authorization": {
+        "artifact": {
+          "path": "skill-studies/concise-writing/protocol.md",
+          "sha256": "2e154c0faf2cf5068b8bb565d867afbcd7b38f06e5738e6cc98975955b9eb04a",
+          "version": "1",
+          "git_revision": "4dc370648a6a915546035847b2823a4bc5d57325"
+        },
+        "selector": "Batch: codex-expanded-01; order 15"
+      },
+      "run_id": "20260927T223424120Z-cw-prep-codex-agent-recommendation-control-1680d932-5ed0-44aa-9a80-75f425c65c86-8xqtxmwz",
+      "allocation": {
+        "pool": "subject",
+        "charge": 1
+      },
+      "limitations": [
+        "Runner status: COMPLETED; assessment pending."
+      ],
+      "bundle": {
+        "path": "/Users/simon/work/personal/skill-study-private/concise-writing/development/20260927T223424120Z-cw-prep-codex-agent-recommendation-control-1680d932-5ed0-44aa-9a80-75f425c65c86-8xqtxmwz",
+        "inventory": {
+          "path": "/Users/simon/work/personal/skill-study-private/concise-writing/development/20260927T223424120Z-cw-prep-codex-agent-recommendation-control-1680d932-5ed0-44aa-9a80-75f425c65c86-8xqtxmwz.inventory.json",
+          "sha256": "fce9df3d3f58315bdfa19ac01636a2a415e8b7cf7ec2f26fba52138c4a9ddc9c",
+          "version": "1"
+        },
+        "verified": true
+      },
+      "result": null
+    },
+    {
+      "attempt_id": "codex-expanded-01-effective-briefing-candidate-comprehensive-2-1",
+      "case_id": "effective-briefing",
+      "condition": "candidate-comprehensive",
+      "repetition": 2,
+      "attempt_number": 1,
+      "retry_of": null,
+      "manifest": {
+        "path": "skill-studies/concise-writing/preparation/manifests/codex-effective-briefing-manifest.json",
+        "sha256": "7e0cb4aec2bc552ee710d845c0b18681130eec608bc3e66855dcab06306288b9",
+        "version": "1",
+        "git_revision": "4dc370648a6a915546035847b2823a4bc5d57325"
+      },
+      "authorization": {
+        "artifact": {
+          "path": "skill-studies/concise-writing/protocol.md",
+          "sha256": "2e154c0faf2cf5068b8bb565d867afbcd7b38f06e5738e6cc98975955b9eb04a",
+          "version": "1",
+          "git_revision": "4dc370648a6a915546035847b2823a4bc5d57325"
+        },
+        "selector": "Batch: codex-expanded-01; order 16"
+      },
+      "run_id": "20260927T223554885Z-cw-prep-codex-effective-briefing-candidate-7c5f2f96-0d70-4e1f-bbe6-ae0eeb56deeb-ac3ytr3q",
+      "allocation": {
+        "pool": "subject",
+        "charge": 1
+      },
+      "limitations": [
+        "Runner status: COMPLETED; assessment pending."
+      ],
+      "bundle": {
+        "path": "/Users/simon/work/personal/skill-study-private/concise-writing/development/20260927T223554885Z-cw-prep-codex-effective-briefing-candidate-7c5f2f96-0d70-4e1f-bbe6-ae0eeb56deeb-ac3ytr3q",
+        "inventory": {
+          "path": "/Users/simon/work/personal/skill-study-private/concise-writing/development/20260927T223554885Z-cw-prep-codex-effective-briefing-candidate-7c5f2f96-0d70-4e1f-bbe6-ae0eeb56deeb-ac3ytr3q.inventory.json",
+          "sha256": "e6f76259aa4f8006bfa4c45b501a55557ede0007faa7fe5622b9a834fa1a3b67",
+          "version": "1"
+        },
+        "verified": true
+      },
+      "result": null
+    },
+    {
+      "attempt_id": "codex-expanded-01-effective-briefing-control-2-1",
+      "case_id": "effective-briefing",
+      "condition": "control",
+      "repetition": 2,
+      "attempt_number": 1,
+      "retry_of": null,
+      "manifest": {
+        "path": "skill-studies/concise-writing/preparation/manifests/codex-effective-briefing-manifest.json",
+        "sha256": "7e0cb4aec2bc552ee710d845c0b18681130eec608bc3e66855dcab06306288b9",
+        "version": "1",
+        "git_revision": "4dc370648a6a915546035847b2823a4bc5d57325"
+      },
+      "authorization": {
+        "artifact": {
+          "path": "skill-studies/concise-writing/protocol.md",
+          "sha256": "2e154c0faf2cf5068b8bb565d867afbcd7b38f06e5738e6cc98975955b9eb04a",
+          "version": "1",
+          "git_revision": "4dc370648a6a915546035847b2823a4bc5d57325"
+        },
+        "selector": "Batch: codex-expanded-01; order 17"
+      },
+      "run_id": "20260927T223703001Z-cw-prep-codex-effective-briefing-control-544f695d-1c95-4451-9941-1a644408e45b-xc3kp5ps",
+      "allocation": {
+        "pool": "subject",
+        "charge": 1
+      },
+      "limitations": [
+        "Runner status: COMPLETED; assessment pending."
+      ],
+      "bundle": {
+        "path": "/Users/simon/work/personal/skill-study-private/concise-writing/development/20260927T223703001Z-cw-prep-codex-effective-briefing-control-544f695d-1c95-4451-9941-1a644408e45b-xc3kp5ps",
+        "inventory": {
+          "path": "/Users/simon/work/personal/skill-study-private/concise-writing/development/20260927T223703001Z-cw-prep-codex-effective-briefing-control-544f695d-1c95-4451-9941-1a644408e45b-xc3kp5ps.inventory.json",
+          "sha256": "63bd8db7335d8f770191677fc136a26620d5c4c08f8d188d1b3d685da76c828c",
+          "version": "1"
+        },
+        "verified": true
+      },
+      "result": null
+    },
+    {
+      "attempt_id": "codex-expanded-01-effective-briefing-original-2-1",
+      "case_id": "effective-briefing",
+      "condition": "original",
+      "repetition": 2,
+      "attempt_number": 1,
+      "retry_of": null,
+      "manifest": {
+        "path": "skill-studies/concise-writing/preparation/manifests/codex-effective-briefing-manifest.json",
+        "sha256": "7e0cb4aec2bc552ee710d845c0b18681130eec608bc3e66855dcab06306288b9",
+        "version": "1",
+        "git_revision": "4dc370648a6a915546035847b2823a4bc5d57325"
+      },
+      "authorization": {
+        "artifact": {
+          "path": "skill-studies/concise-writing/protocol.md",
+          "sha256": "2e154c0faf2cf5068b8bb565d867afbcd7b38f06e5738e6cc98975955b9eb04a",
+          "version": "1",
+          "git_revision": "4dc370648a6a915546035847b2823a4bc5d57325"
+        },
+        "selector": "Batch: codex-expanded-01; order 18"
+      },
+      "run_id": "20260927T223813606Z-cw-prep-codex-effective-briefing-original-d6f0580b-9634-4571-9564-691e4923d767-kpztyiq_",
+      "allocation": {
+        "pool": "subject",
+        "charge": 1
+      },
+      "limitations": [
+        "Runner status: COMPLETED; assessment pending."
+      ],
+      "bundle": {
+        "path": "/Users/simon/work/personal/skill-study-private/concise-writing/development/20260927T223813606Z-cw-prep-codex-effective-briefing-original-d6f0580b-9634-4571-9564-691e4923d767-kpztyiq_",
+        "inventory": {
+          "path": "/Users/simon/work/personal/skill-study-private/concise-writing/development/20260927T223813606Z-cw-prep-codex-effective-briefing-original-d6f0580b-9634-4571-9564-691e4923d767-kpztyiq_.inventory.json",
+          "sha256": "a2adee8c7008a2d4993e9146ef2ad7c1fd13ae68593dfbf31b2b518f66ba22f0",
+          "version": "1"
+        },
+        "verified": true
+      },
+      "result": null
+    },
+    {
+      "attempt_id": "codex-expanded-01-long-handoff-control-2-1",
+      "case_id": "long-handoff",
+      "condition": "control",
+      "repetition": 2,
+      "attempt_number": 1,
+      "retry_of": null,
+      "manifest": {
+        "path": "skill-studies/concise-writing/preparation/manifests/codex-long-handoff-manifest.json",
+        "sha256": "7ac4d07132b1dd42bb74bee3d7e9cb91ae7bf98276675c7c84deed700fc2be6a",
+        "version": "1",
+        "git_revision": "4dc370648a6a915546035847b2823a4bc5d57325"
+      },
+      "authorization": {
+        "artifact": {
+          "path": "skill-studies/concise-writing/protocol.md",
+          "sha256": "2e154c0faf2cf5068b8bb565d867afbcd7b38f06e5738e6cc98975955b9eb04a",
+          "version": "1",
+          "git_revision": "4dc370648a6a915546035847b2823a4bc5d57325"
+        },
+        "selector": "Batch: codex-expanded-01; order 19"
+      },
+      "run_id": "20260927T223955763Z-cw-prep-codex-long-handoff-control-a7e6eb61-3816-4ca9-93cd-6518a50c4c77-fw4xw3h3",
+      "allocation": {
+        "pool": "subject",
+        "charge": 1
+      },
+      "limitations": [
+        "Runner status: COMPLETED; assessment pending."
+      ],
+      "bundle": {
+        "path": "/Users/simon/work/personal/skill-study-private/concise-writing/development/20260927T223955763Z-cw-prep-codex-long-handoff-control-a7e6eb61-3816-4ca9-93cd-6518a50c4c77-fw4xw3h3",
+        "inventory": {
+          "path": "/Users/simon/work/personal/skill-study-private/concise-writing/development/20260927T223955763Z-cw-prep-codex-long-handoff-control-a7e6eb61-3816-4ca9-93cd-6518a50c4c77-fw4xw3h3.inventory.json",
+          "sha256": "4331f72cdc643d6b929b6aa5591a5474c8acfee1b523a56c85951b1418e1cab8",
+          "version": "1"
+        },
+        "verified": true
+      },
+      "result": null
+    },
+    {
+      "attempt_id": "codex-expanded-01-long-handoff-original-2-1",
+      "case_id": "long-handoff",
+      "condition": "original",
+      "repetition": 2,
+      "attempt_number": 1,
+      "retry_of": null,
+      "manifest": {
+        "path": "skill-studies/concise-writing/preparation/manifests/codex-long-handoff-manifest.json",
+        "sha256": "7ac4d07132b1dd42bb74bee3d7e9cb91ae7bf98276675c7c84deed700fc2be6a",
+        "version": "1",
+        "git_revision": "4dc370648a6a915546035847b2823a4bc5d57325"
+      },
+      "authorization": {
+        "artifact": {
+          "path": "skill-studies/concise-writing/protocol.md",
+          "sha256": "2e154c0faf2cf5068b8bb565d867afbcd7b38f06e5738e6cc98975955b9eb04a",
+          "version": "1",
+          "git_revision": "4dc370648a6a915546035847b2823a4bc5d57325"
+        },
+        "selector": "Batch: codex-expanded-01; order 20"
+      },
+      "run_id": "20260927T224146834Z-cw-prep-codex-long-handoff-original-9e0a2fc7-d3f5-4229-a74a-df8e1bea1b47-r7ndp75x",
+      "allocation": {
+        "pool": "subject",
+        "charge": 1
+      },
+      "limitations": [
+        "Runner status: COMPLETED; assessment pending."
+      ],
+      "bundle": {
+        "path": "/Users/simon/work/personal/skill-study-private/concise-writing/development/20260927T224146834Z-cw-prep-codex-long-handoff-original-9e0a2fc7-d3f5-4229-a74a-df8e1bea1b47-r7ndp75x",
+        "inventory": {
+          "path": "/Users/simon/work/personal/skill-study-private/concise-writing/development/20260927T224146834Z-cw-prep-codex-long-handoff-original-9e0a2fc7-d3f5-4229-a74a-df8e1bea1b47-r7ndp75x.inventory.json",
+          "sha256": "867e65d03c927065faa17b816896eefccb0576c6671f79726c738a6cccae7850",
+          "version": "1"
+        },
+        "verified": true
+      },
+      "result": null
+    },
+    {
+      "attempt_id": "codex-expanded-01-long-handoff-candidate-comprehensive-2-1",
+      "case_id": "long-handoff",
+      "condition": "candidate-comprehensive",
+      "repetition": 2,
+      "attempt_number": 1,
+      "retry_of": null,
+      "manifest": {
+        "path": "skill-studies/concise-writing/preparation/manifests/codex-long-handoff-manifest.json",
+        "sha256": "7ac4d07132b1dd42bb74bee3d7e9cb91ae7bf98276675c7c84deed700fc2be6a",
+        "version": "1",
+        "git_revision": "4dc370648a6a915546035847b2823a4bc5d57325"
+      },
+      "authorization": {
+        "artifact": {
+          "path": "skill-studies/concise-writing/protocol.md",
+          "sha256": "2e154c0faf2cf5068b8bb565d867afbcd7b38f06e5738e6cc98975955b9eb04a",
+          "version": "1",
+          "git_revision": "4dc370648a6a915546035847b2823a4bc5d57325"
+        },
+        "selector": "Batch: codex-expanded-01; order 21"
+      },
+      "run_id": "20260927T224339843Z-cw-prep-codex-long-handoff-candidate-e95ccd63-9277-4007-af02-dda017ee9b06-wz403hhe",
+      "allocation": {
+        "pool": "subject",
+        "charge": 1
+      },
+      "limitations": [
+        "Runner status: COMPLETED; assessment pending."
+      ],
+      "bundle": {
+        "path": "/Users/simon/work/personal/skill-study-private/concise-writing/development/20260927T224339843Z-cw-prep-codex-long-handoff-candidate-e95ccd63-9277-4007-af02-dda017ee9b06-wz403hhe",
+        "inventory": {
+          "path": "/Users/simon/work/personal/skill-study-private/concise-writing/development/20260927T224339843Z-cw-prep-codex-long-handoff-candidate-e95ccd63-9277-4007-af02-dda017ee9b06-wz403hhe.inventory.json",
+          "sha256": "b72ad1ce7728fb63e104b35cfa5e088b5900afd5ce90a4723922b79ef705dd88",
+          "version": "1"
+        },
+        "verified": true
+      },
+      "result": null
+    },
+    {
+      "attempt_id": "codex-expanded-01-document-addition-original-2-1",
+      "case_id": "document-addition",
+      "condition": "original",
+      "repetition": 2,
+      "attempt_number": 1,
+      "retry_of": null,
+      "manifest": {
+        "path": "skill-studies/concise-writing/preparation/manifests/codex-document-addition-manifest.json",
+        "sha256": "db94dd300f3f8c5e4086c9217f88d16e6592a286d968cbc23198375c99d26ca2",
+        "version": "1",
+        "git_revision": "4dc370648a6a915546035847b2823a4bc5d57325"
+      },
+      "authorization": {
+        "artifact": {
+          "path": "skill-studies/concise-writing/protocol.md",
+          "sha256": "2e154c0faf2cf5068b8bb565d867afbcd7b38f06e5738e6cc98975955b9eb04a",
+          "version": "1",
+          "git_revision": "4dc370648a6a915546035847b2823a4bc5d57325"
+        },
+        "selector": "Batch: codex-expanded-01; order 22"
+      },
+      "run_id": "20260927T224539499Z-cw-prep-codex-document-addition-original-44e5340b-72d7-4ba4-b7c1-8a127b94b1ed-1ninx8gb",
+      "allocation": {
+        "pool": "subject",
+        "charge": 1
+      },
+      "limitations": [
+        "Runner status: COMPLETED; assessment pending."
+      ],
+      "bundle": {
+        "path": "/Users/simon/work/personal/skill-study-private/concise-writing/development/20260927T224539499Z-cw-prep-codex-document-addition-original-44e5340b-72d7-4ba4-b7c1-8a127b94b1ed-1ninx8gb",
+        "inventory": {
+          "path": "/Users/simon/work/personal/skill-study-private/concise-writing/development/20260927T224539499Z-cw-prep-codex-document-addition-original-44e5340b-72d7-4ba4-b7c1-8a127b94b1ed-1ninx8gb.inventory.json",
+          "sha256": "85981160474c582b4affdd0131b81d46cfb9b67cf1a75a10339a62b097d943bc",
+          "version": "1"
+        },
+        "verified": true
+      },
+      "result": null
+    },
+    {
+      "attempt_id": "codex-expanded-01-document-addition-candidate-comprehensive-2-1",
+      "case_id": "document-addition",
+      "condition": "candidate-comprehensive",
+      "repetition": 2,
+      "attempt_number": 1,
+      "retry_of": null,
+      "manifest": {
+        "path": "skill-studies/concise-writing/preparation/manifests/codex-document-addition-manifest.json",
+        "sha256": "db94dd300f3f8c5e4086c9217f88d16e6592a286d968cbc23198375c99d26ca2",
+        "version": "1",
+        "git_revision": "4dc370648a6a915546035847b2823a4bc5d57325"
+      },
+      "authorization": {
+        "artifact": {
+          "path": "skill-studies/concise-writing/protocol.md",
+          "sha256": "2e154c0faf2cf5068b8bb565d867afbcd7b38f06e5738e6cc98975955b9eb04a",
+          "version": "1",
+          "git_revision": "4dc370648a6a915546035847b2823a4bc5d57325"
+        },
+        "selector": "Batch: codex-expanded-01; order 23"
+      },
+      "run_id": "20260927T224709842Z-cw-prep-codex-document-addition-candidate-6869980c-9800-4e54-adb7-fa3c65f5b486-mkuekb0u",
+      "allocation": {
+        "pool": "subject",
+        "charge": 1
+      },
+      "limitations": [
+        "Runner status: COMPLETED; assessment pending."
+      ],
+      "bundle": {
+        "path": "/Users/simon/work/personal/skill-study-private/concise-writing/development/20260927T224709842Z-cw-prep-codex-document-addition-candidate-6869980c-9800-4e54-adb7-fa3c65f5b486-mkuekb0u",
+        "inventory": {
+          "path": "/Users/simon/work/personal/skill-study-private/concise-writing/development/20260927T224709842Z-cw-prep-codex-document-addition-candidate-6869980c-9800-4e54-adb7-fa3c65f5b486-mkuekb0u.inventory.json",
+          "sha256": "95ee4e07d6cc0666b66e4f7a2c47c02bfda4dcb5856a20aa0e68d7c1b93428be",
+          "version": "1"
+        },
+        "verified": true
+      },
+      "result": null
+    },
+    {
+      "attempt_id": "codex-expanded-01-document-addition-control-2-1",
+      "case_id": "document-addition",
+      "condition": "control",
+      "repetition": 2,
+      "attempt_number": 1,
+      "retry_of": null,
+      "manifest": {
+        "path": "skill-studies/concise-writing/preparation/manifests/codex-document-addition-manifest.json",
+        "sha256": "db94dd300f3f8c5e4086c9217f88d16e6592a286d968cbc23198375c99d26ca2",
+        "version": "1",
+        "git_revision": "4dc370648a6a915546035847b2823a4bc5d57325"
+      },
+      "authorization": {
+        "artifact": {
+          "path": "skill-studies/concise-writing/protocol.md",
+          "sha256": "2e154c0faf2cf5068b8bb565d867afbcd7b38f06e5738e6cc98975955b9eb04a",
+          "version": "1",
+          "git_revision": "4dc370648a6a915546035847b2823a4bc5d57325"
+        },
+        "selector": "Batch: codex-expanded-01; order 24"
+      },
+      "run_id": "20260927T224833884Z-cw-prep-codex-document-addition-control-2c5e679c-57f8-4dac-a611-22756d37aef0-r00pgzkh",
+      "allocation": {
+        "pool": "subject",
+        "charge": 1
+      },
+      "limitations": [
+        "Runner status: COMPLETED; assessment pending."
+      ],
+      "bundle": {
+        "path": "/Users/simon/work/personal/skill-study-private/concise-writing/development/20260927T224833884Z-cw-prep-codex-document-addition-control-2c5e679c-57f8-4dac-a611-22756d37aef0-r00pgzkh",
+        "inventory": {
+          "path": "/Users/simon/work/personal/skill-study-private/concise-writing/development/20260927T224833884Z-cw-prep-codex-document-addition-control-2c5e679c-57f8-4dac-a611-22756d37aef0-r00pgzkh.inventory.json",
+          "sha256": "ad3fea60c239c2b5560495ae4f0817bfb45241b458ea8ed465283d2bbf8b2909",
+          "version": "1"
+        },
+        "verified": true
+      },
+      "result": null
     }
   ]
 }

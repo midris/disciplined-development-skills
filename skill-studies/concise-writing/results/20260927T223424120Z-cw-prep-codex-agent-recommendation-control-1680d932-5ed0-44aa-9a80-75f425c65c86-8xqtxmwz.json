@@ -1,0 +1,148 @@
+{
+  "schema_version": "2",
+  "record_kind": "execution result",
+  "assessed_at": "2026-09-27T22:35:58.136136+00:00",
+  "run_id": "20260927T223424120Z-cw-prep-codex-agent-recommendation-control-1680d932-5ed0-44aa-9a80-75f425c65c86-8xqtxmwz",
+  "condition": "control",
+  "assessor": {
+    "name": "Codex active session",
+    "method": "active session",
+    "model": null,
+    "session_id": null,
+    "context": "Same session that prepared and reviewed these development cases. No independent, blinded or held-out claim."
+  },
+  "evidence": [
+    {
+      "id": "output",
+      "artifact": {
+        "path": "/Users/simon/work/personal/skill-study-private/concise-writing/development/20260927T223424120Z-cw-prep-codex-agent-recommendation-control-1680d932-5ed0-44aa-9a80-75f425c65c86-8xqtxmwz/workspace/fixture/report.md",
+        "sha256": "2c442d292cbff1a2f91d095ea5401c5e71ee1bbdea4aa9a765598cee702a4bca",
+        "version": null
+      },
+      "selector": "Complete artifact"
+    },
+    {
+      "id": "trace",
+      "artifact": {
+        "path": "/Users/simon/work/personal/skill-study-private/concise-writing/development/20260927T223424120Z-cw-prep-codex-agent-recommendation-control-1680d932-5ed0-44aa-9a80-75f425c65c86-8xqtxmwz/provider-session.jsonl",
+        "sha256": "b9687234de71b93888ee7023d4816b05553cb45d3e20fd14eaccc30646f7fd03",
+        "version": null
+      },
+      "selector": "Complete artifact"
+    },
+    {
+      "id": "mechanical",
+      "artifact": {
+        "path": "/Users/simon/work/personal/skill-study-private/concise-writing/development/20260927T223424120Z-cw-prep-codex-agent-recommendation-control-1680d932-5ed0-44aa-9a80-75f425c65c86-8xqtxmwz/result.json",
+        "sha256": "47bdeaca31f6c062df7b1cbc8e8bfb2ec078ecc9d2ea920f079881b2ff14695b",
+        "version": null
+      },
+      "selector": "Complete artifact"
+    },
+    {
+      "id": "log",
+      "artifact": {
+        "path": "/Users/simon/work/personal/skill-study-private/concise-writing/development/20260927T223424120Z-cw-prep-codex-agent-recommendation-control-1680d932-5ed0-44aa-9a80-75f425c65c86-8xqtxmwz/runner.log",
+        "sha256": "801d31fd0d1cc5114566ffbc490a5e5b8776ce24aca0194e6a6711fc59ea6a5b",
+        "version": null
+      },
+      "selector": "Complete artifact"
+    },
+    {
+      "id": "final",
+      "artifact": {
+        "path": "/Users/simon/work/personal/skill-study-private/concise-writing/development/20260927T223424120Z-cw-prep-codex-agent-recommendation-control-1680d932-5ed0-44aa-9a80-75f425c65c86-8xqtxmwz/final.txt",
+        "sha256": "4fc605366befdaea8f419f68dda7e218357122138e98276bcb0ade5d3d0eadc5",
+        "version": null
+      },
+      "selector": "Complete artifact"
+    },
+    {
+      "id": "source-0",
+      "artifact": {
+        "path": "skill-studies/concise-writing/cases/agent-recommendation/fixture/report.md",
+        "sha256": "e9a992c7e4c14dfd5afc10cc637349f39c2030e98ed0311441675900bc3e93e9",
+        "version": null,
+        "git_revision": "96b6e383da39ea807a6ad49d4513cfc1d6f4cd33"
+      },
+      "selector": "Complete frozen source"
+    },
+    {
+      "id": "source-1",
+      "artifact": {
+        "path": "skill-studies/concise-writing/cases/agent-recommendation/task.md",
+        "sha256": "607cbe0562a19ea092fe76ec96f13bfbe033b2e1095baef2ca38be621c0baf82",
+        "version": null,
+        "git_revision": "96b6e383da39ea807a6ad49d4513cfc1d6f4cd33"
+      },
+      "selector": "Complete frozen source"
+    }
+  ],
+  "setup": {
+    "status": "valid",
+    "reason": "No CW in the initial five-built-in catalog or delivered trace. Sol-low identity matches; complete report/source and unchanged task retained.",
+    "evidence": [
+      "mechanical",
+      "trace",
+      "log"
+    ]
+  },
+  "criteria": [
+    {
+      "id": "F1",
+      "dimension": "functional",
+      "judgment": "met",
+      "reason": "The full report preserves actual staging checks, injected failures, old/new cursor behavior, undeployed production status, staffed window, pilot duration/scope/operators, untested risks and both pilot outcomes. Retaining both files for investigation and determining source-selection versus upload loss preserves the evidence rationale.",
+      "consequence": "Required for the corresponding functional or invocation outcome; reported separately.",
+      "evidence": [
+        "output",
+        "source-0",
+        "source-1"
+      ]
+    },
+    {
+      "id": "F2",
+      "dimension": "functional",
+      "judgment": "met",
+      "reason": "The manager can identify the limited approval request and its evidence limits, then follow explicit mismatch safeguards and the separate-release decision after matching counts. The nearby recommendation and remaining-risk sections preserve the rationale for limited exposure in whole-document context.",
+      "consequence": "Required for the corresponding functional or invocation outcome; reported separately.",
+      "evidence": [
+        "output",
+        "source-0",
+        "source-1"
+      ]
+    },
+    {
+      "id": "F3",
+      "dimension": "functional",
+      "judgment": "met",
+      "reason": "The decision-first structure and numbered safeguards are readable, and repeated mechanics and generic communication padding are removed. The brief recommendation repeats release framing for orientation, without making the document unnecessarily laborious.",
+      "consequence": "Required for the corresponding functional or invocation outcome; reported separately.",
+      "evidence": [
+        "output",
+        "source-0",
+        "source-1"
+      ]
+    }
+  ],
+  "procedural_summary": "No-CW control. Complete source reading and baseline commit precede editing; full saved diff inspected. Invalid combined patch corrected within this invocation. No expressed unresolved framing uncertainty.",
+  "observations": [
+    {
+      "dimension": "functional",
+      "description": "Source 625 words, output 252, change -373; shorter. Both control repetitions on A pass, so this case has not yet shown an incremental CW contribution.",
+      "consequence": "Descriptive comparison; no separate score or automatic length-based preference.",
+      "evidence": [
+        "output"
+      ]
+    }
+  ],
+  "uncertainty": [],
+  "result_id": "codex-expanded-01-agent-recommendation-control-2",
+  "functional_result": "met",
+  "manifest": {
+    "path": "skill-studies/concise-writing/preparation/manifests/codex-agent-recommendation-manifest.json",
+    "sha256": "2e8d8ac2924c3e916544aea3a1ed94b7da65fc2789e98b89b39cad7e0a74b930",
+    "version": "1",
+    "git_revision": "4dc370648a6a915546035847b2823a4bc5d57325"
+  }
+}

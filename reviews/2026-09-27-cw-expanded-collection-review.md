@@ -24,4 +24,16 @@ No skill, runner or scoring-contract edit is included.
 The remaining repetitions, Claude observations and native-selection results are still required before a cross-model conclusion.
 No findings remain at this checkpoint.
 
+## Second rotation checkpoint
+
+Reviewed orders 13–24 under the same frozen contracts; no subject-facing input or scoring change was made.
+Both skill conditions meet all factors on all four cases in this rotation.
+Controls again meet all factors on A/E and lose consequential information on B/C.
+B's second control retains Nia as sender but omits current-team permission; C's second control again omits diagnostic evidence rationale.
+The review accepted equivalent wording and useful navigation, including C's deployment reference to its opening start conditions.
+All 24 inventories were recomputed read-only, result records validated, and Codex session/thread/cwd/CLI identities matched.
+Protected task, notes and skill files were compared with their supplied configuration sources.
+These checks do not establish cross-provider outcomes or native selection; those stages remain scheduled.
+No findings remain at this checkpoint.
+
 DD-VERDICT: PASS

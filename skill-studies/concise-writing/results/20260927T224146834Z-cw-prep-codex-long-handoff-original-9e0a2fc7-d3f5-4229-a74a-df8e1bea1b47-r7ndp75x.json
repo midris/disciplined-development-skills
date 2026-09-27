@@ -1,0 +1,148 @@
+{
+  "schema_version": "2",
+  "record_kind": "execution result",
+  "assessed_at": "2026-09-27T22:43:43.422510+00:00",
+  "run_id": "20260927T224146834Z-cw-prep-codex-long-handoff-original-9e0a2fc7-d3f5-4229-a74a-df8e1bea1b47-r7ndp75x",
+  "condition": "original",
+  "assessor": {
+    "name": "Codex active session",
+    "method": "active session",
+    "model": null,
+    "session_id": null,
+    "context": "Same session that prepared and reviewed these development cases. No independent, blinded or held-out claim."
+  },
+  "evidence": [
+    {
+      "id": "output",
+      "artifact": {
+        "path": "/Users/simon/work/personal/skill-study-private/concise-writing/development/20260927T224146834Z-cw-prep-codex-long-handoff-original-9e0a2fc7-d3f5-4229-a74a-df8e1bea1b47-r7ndp75x/workspace/fixture/report.md",
+        "sha256": "99b1554a8b118e32b6f435a180dbc6f6e34de77730b1e79bb41efa5e226e73ad",
+        "version": null
+      },
+      "selector": "Complete artifact"
+    },
+    {
+      "id": "trace",
+      "artifact": {
+        "path": "/Users/simon/work/personal/skill-study-private/concise-writing/development/20260927T224146834Z-cw-prep-codex-long-handoff-original-9e0a2fc7-d3f5-4229-a74a-df8e1bea1b47-r7ndp75x/provider-session.jsonl",
+        "sha256": "950a5ee540f7892a12e2e98270a118069336dabd52e8ba8c05621aa10e9e839c",
+        "version": null
+      },
+      "selector": "Complete artifact"
+    },
+    {
+      "id": "mechanical",
+      "artifact": {
+        "path": "/Users/simon/work/personal/skill-study-private/concise-writing/development/20260927T224146834Z-cw-prep-codex-long-handoff-original-9e0a2fc7-d3f5-4229-a74a-df8e1bea1b47-r7ndp75x/result.json",
+        "sha256": "e49eff1014dcef84d557ed41c05caefd1648c05993ac38d49a79b1c586e480c2",
+        "version": null
+      },
+      "selector": "Complete artifact"
+    },
+    {
+      "id": "log",
+      "artifact": {
+        "path": "/Users/simon/work/personal/skill-study-private/concise-writing/development/20260927T224146834Z-cw-prep-codex-long-handoff-original-9e0a2fc7-d3f5-4229-a74a-df8e1bea1b47-r7ndp75x/runner.log",
+        "sha256": "7a40679b35a5a6147fddb3ec994d48246d391bf23fd12a83644b1263be5851bd",
+        "version": null
+      },
+      "selector": "Complete artifact"
+    },
+    {
+      "id": "final",
+      "artifact": {
+        "path": "/Users/simon/work/personal/skill-study-private/concise-writing/development/20260927T224146834Z-cw-prep-codex-long-handoff-original-9e0a2fc7-d3f5-4229-a74a-df8e1bea1b47-r7ndp75x/final.txt",
+        "sha256": "c16feaba8a58134289dba231a72baa739ea0d66117d803c9d7e018e568451c42",
+        "version": null
+      },
+      "selector": "Complete artifact"
+    },
+    {
+      "id": "source-0",
+      "artifact": {
+        "path": "skill-studies/concise-writing/cases/long-handoff/fixture/report.md",
+        "sha256": "0eb0946286d2a4b1708f14bcff5795cd1effdfa64af612a6cb9a89d2fac84737",
+        "version": null,
+        "git_revision": "96b6e383da39ea807a6ad49d4513cfc1d6f4cd33"
+      },
+      "selector": "Complete frozen source"
+    },
+    {
+      "id": "source-1",
+      "artifact": {
+        "path": "skill-studies/concise-writing/cases/long-handoff/task.md",
+        "sha256": "8be0f67fe6b62ca0a1d5f3af9ac2ffea79eef0d0615f0979853079653b8feab8",
+        "version": null,
+        "git_revision": "96b6e383da39ea807a6ad49d4513cfc1d6f4cd33"
+      },
+      "selector": "Complete frozen source"
+    }
+  ],
+  "setup": {
+    "status": "valid",
+    "reason": "Complete original body delivered at trace line 16 before task editing. Matching Sol-low context, complete source/output and unchanged task retained.",
+    "evidence": [
+      "mechanical",
+      "trace",
+      "log"
+    ]
+  },
+  "criteria": [
+    {
+      "id": "F1",
+      "dimension": "functional",
+      "judgment": "met",
+      "reason": "The full report keeps evidence limits, absent approval, pilot/window scope, exact completion and latency thresholds, mismatch handling, outstanding-state safeguards, rollback escalation, post-incident approval and handoff acceptance. Both evidence-retention explanations remain, as does the binding but underexplained token rule.",
+      "consequence": "Required for the corresponding functional or invocation outcome; reported separately.",
+      "evidence": [
+        "output",
+        "source-0",
+        "source-1"
+      ]
+    },
+    {
+      "id": "F2",
+      "dimension": "functional",
+      "judgment": "met",
+      "reason": "Deployment and Rollback each retain the conditions and causal explanations needed by readers entering there. The repeated mechanism is consolidated without removing diagnostic purpose, and the closing summary still orients the incoming shift toward limited scope and a separate next decision.",
+      "consequence": "Required for the corresponding functional or invocation outcome; reported separately.",
+      "evidence": [
+        "output",
+        "source-0",
+        "source-1"
+      ]
+    },
+    {
+      "id": "F3",
+      "dimension": "functional",
+      "judgment": "met",
+      "reason": "Concise paragraphs under operational headings retain a coherent sequence. Generic introductory material and redundant implementation/evidence exposition are removed; repeated safeguards serve distinct action points rather than imposing unnecessary reading.",
+      "consequence": "Required for the corresponding functional or invocation outcome; reported separately.",
+      "evidence": [
+        "output",
+        "source-0",
+        "source-1"
+      ]
+    }
+  ],
+  "procedural_summary": "Full body/source reading, baseline commit, full saved diff inspection and task-blob comparison are visible. No expressed unresolved framing uncertainty.",
+  "observations": [
+    {
+      "dimension": "functional",
+      "description": "Source 1207 words, output 868, change -339; shorter. Both original repetitions retain the evidence rationale lost by both control repetitions, while all four retain the operating rules.",
+      "consequence": "Descriptive comparison; no separate score or automatic length-based preference.",
+      "evidence": [
+        "output"
+      ]
+    }
+  ],
+  "uncertainty": [],
+  "result_id": "codex-expanded-01-long-handoff-original-2",
+  "functional_result": "met",
+  "manifest": {
+    "path": "skill-studies/concise-writing/preparation/manifests/codex-long-handoff-manifest.json",
+    "sha256": "7ac4d07132b1dd42bb74bee3d7e9cb91ae7bf98276675c7c84deed700fc2be6a",
+    "version": "1",
+    "git_revision": "4dc370648a6a915546035847b2823a4bc5d57325"
+  }
+}

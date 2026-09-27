@@ -1,0 +1,161 @@
+{
+  "schema_version": "2",
+  "record_kind": "execution result",
+  "assessed_at": "2026-09-27T22:48:37.680898+00:00",
+  "run_id": "20260927T224709842Z-cw-prep-codex-document-addition-candidate-6869980c-9800-4e54-adb7-fa3c65f5b486-mkuekb0u",
+  "condition": "candidate-comprehensive",
+  "assessor": {
+    "name": "Codex active session",
+    "method": "active session",
+    "model": null,
+    "session_id": null,
+    "context": "Same session that prepared and reviewed these development cases. No independent, blinded or held-out claim."
+  },
+  "evidence": [
+    {
+      "id": "output",
+      "artifact": {
+        "path": "/Users/simon/work/personal/skill-study-private/concise-writing/development/20260927T224709842Z-cw-prep-codex-document-addition-candidate-6869980c-9800-4e54-adb7-fa3c65f5b486-mkuekb0u/workspace/fixture/report.md",
+        "sha256": "fa414933a41f6025fc1b736323a78f102711c316735bab0cadd13f0f7d35ff55",
+        "version": null
+      },
+      "selector": "Complete artifact"
+    },
+    {
+      "id": "trace",
+      "artifact": {
+        "path": "/Users/simon/work/personal/skill-study-private/concise-writing/development/20260927T224709842Z-cw-prep-codex-document-addition-candidate-6869980c-9800-4e54-adb7-fa3c65f5b486-mkuekb0u/provider-session.jsonl",
+        "sha256": "a52e9acff085ee0543cc7ea7260fc841940351b1a19a71fd6316f9d18e363776",
+        "version": null
+      },
+      "selector": "Complete artifact"
+    },
+    {
+      "id": "mechanical",
+      "artifact": {
+        "path": "/Users/simon/work/personal/skill-study-private/concise-writing/development/20260927T224709842Z-cw-prep-codex-document-addition-candidate-6869980c-9800-4e54-adb7-fa3c65f5b486-mkuekb0u/result.json",
+        "sha256": "76055c57dca1b516f6de558cc22e3ac66b3d0a02eeefef111e448646be1af332",
+        "version": null
+      },
+      "selector": "Complete artifact"
+    },
+    {
+      "id": "log",
+      "artifact": {
+        "path": "/Users/simon/work/personal/skill-study-private/concise-writing/development/20260927T224709842Z-cw-prep-codex-document-addition-candidate-6869980c-9800-4e54-adb7-fa3c65f5b486-mkuekb0u/runner.log",
+        "sha256": "9132955df1cc0df4b02daa1fd783327324b22cbdd5e54a6eda07472ae4b6a21f",
+        "version": null
+      },
+      "selector": "Complete artifact"
+    },
+    {
+      "id": "final",
+      "artifact": {
+        "path": "/Users/simon/work/personal/skill-study-private/concise-writing/development/20260927T224709842Z-cw-prep-codex-document-addition-candidate-6869980c-9800-4e54-adb7-fa3c65f5b486-mkuekb0u/final.txt",
+        "sha256": "37137b623cd2831d5ca3ea911866b651fe0ab87edf08721245c368ade0e018ee",
+        "version": null
+      },
+      "selector": "Complete artifact"
+    },
+    {
+      "id": "source-0",
+      "artifact": {
+        "path": "skill-studies/concise-writing/cases/document-addition/new-notes.md",
+        "sha256": "8ff2f1ece29e88f352aefe87506c1afcf7e3174849dd978d20ec7065e8da3b74",
+        "version": null,
+        "git_revision": "96b6e383da39ea807a6ad49d4513cfc1d6f4cd33"
+      },
+      "selector": "Complete frozen source"
+    },
+    {
+      "id": "source-1",
+      "artifact": {
+        "path": "skill-studies/concise-writing/cases/document-addition/task.md",
+        "sha256": "d625196b6cf438dfe556238803851c5b86ae7f2eb07acaa31ddceb5c6e9b8db0",
+        "version": null,
+        "git_revision": "96b6e383da39ea807a6ad49d4513cfc1d6f4cd33"
+      },
+      "selector": "Complete frozen source"
+    },
+    {
+      "id": "source-2",
+      "artifact": {
+        "path": "skill-studies/concise-writing/cases/effective-briefing/fixture/report.md",
+        "sha256": "93c23afd44aab52dfcd2bca53f3db0020a41f650d46d4c59a09595539dc72491",
+        "version": null,
+        "git_revision": "96b6e383da39ea807a6ad49d4513cfc1d6f4cd33"
+      },
+      "selector": "Complete frozen source"
+    }
+  ],
+  "setup": {
+    "status": "valid",
+    "reason": "Full candidate body delivered at trace line 15 before editing; matching Sol-low context and frozen inputs. Complete output and unchanged protected task/notes retained.",
+    "evidence": [
+      "mechanical",
+      "trace",
+      "log"
+    ]
+  },
+  "criteria": [
+    {
+      "id": "F1",
+      "dimension": "functional",
+      "judgment": "met",
+      "reason": "All existing briefing facts, permission/scope, ownership and approval conditions remain. The additions correctly require a named fallback contact, affected-team pause on a potentially incorrect report, restricted query/result retention, precautionary status, other-team continuation unless broader trouble, Omar investigation and Nia resumption approval, and incident outcomes in the seven-day review.",
+      "consequence": "Required for the corresponding functional or invocation outcome; reported separately.",
+      "evidence": [
+        "output",
+        "source-0",
+        "source-1",
+        "source-2"
+      ]
+    },
+    {
+      "id": "F2",
+      "dimension": "functional",
+      "judgment": "met",
+      "reason": "The new prerequisite sits with existing checks, the incident section explicitly states its trigger and scope, and the later review includes the new evidence. Existing explanations remain effective, and the whole document supplies a single coherent invitation/incident/review workflow.",
+      "consequence": "Required for the corresponding functional or invocation outcome; reported separately.",
+      "evidence": [
+        "output",
+        "source-0",
+        "source-1",
+        "source-2"
+      ]
+    },
+    {
+      "id": "F3",
+      "dimension": "functional",
+      "judgment": "met",
+      "reason": "Clear headings and a compact incident paragraph keep the expanded report easy to consume. Retaining the brief Thursday recap provides orientation without obscuring the full checklist above.",
+      "consequence": "Required for the corresponding functional or invocation outcome; reported separately.",
+      "evidence": [
+        "output",
+        "source-0",
+        "source-1",
+        "source-2"
+      ]
+    }
+  ],
+  "procedural_summary": "Full body and source/notes reads, baseline commit, full saved diff and report reread are visible. No expressed unresolved framing uncertainty.",
+  "observations": [
+    {
+      "dimension": "functional",
+      "description": "Source report 279 words, new notes 166, output 373; growth +94, with no shortening preference. The explicit report-trigger sentence makes the incident condition more direct than in the candidate's first output, while both meet the criteria.",
+      "consequence": "Descriptive comparison; no separate score or automatic length-based preference.",
+      "evidence": [
+        "output"
+      ]
+    }
+  ],
+  "uncertainty": [],
+  "result_id": "codex-expanded-01-document-addition-candidate-comprehensive-2",
+  "functional_result": "met",
+  "manifest": {
+    "path": "skill-studies/concise-writing/preparation/manifests/codex-document-addition-manifest.json",
+    "sha256": "db94dd300f3f8c5e4086c9217f88d16e6592a286d968cbc23198375c99d26ca2",
+    "version": "1",
+    "git_revision": "4dc370648a6a915546035847b2823a4bc5d57325"
+  }
+}
