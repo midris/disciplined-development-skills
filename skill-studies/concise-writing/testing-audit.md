@@ -92,7 +92,7 @@ Do not claim skill-compression coverage until F is complete.
 Freeze downstream task/criterion identities before any compression and test every emitted variant against the same task set on both providers with contemporaneous unchanged-source results.
 Carry procedural observations separately; text review must preserve the source's trigger, exceptions, output contract and useful reinforcement even where those properties were imperfectly followed historically.
 Include the known pressure case as a separate comparison rather than hiding its failure or requiring the original to become universally successful before ordinary preservation can be studied.
-A pressure regression limits the recommendation; ordinary passes cannot license adopting the compressed SSR skill.
+Pressure failures flag follow-up questions; these small samples alone do not establish a compression regression, and ordinary passes cannot license adopting the compressed SSR skill.
 Pin exact repetitions, emitted-variant counts, pressure slots and the total downstream allocation before F dispatch; the initial 60-call forecast does not fund these calls.
 Native discovery of the compressed SSR output remains outside F's explicit-load preservation claim and would need its own evidence before deployment.
 
@@ -115,6 +115,8 @@ Use **102 calls as the planning default for suite review**, subject to the owner
 The 63-call option omits one provider's editing behavior; the 324-call option adds repeated edits and downstream observations at substantially greater cost.
 The default has only one edit per condition/provider and one downstream observation per variant/task/provider, so it is a diagnostic comparison, not a reliability estimate or writing-skills' five-sample wording experiment.
 Keep the source's two repetitions and each variant's one repetition visible; do not pool denominators or infer a reliable advantage from that imbalance.
+The default’s 12 variant pressure runs are exploratory only: with the source historically passing 1/2 on Claude, a single variant failure cannot distinguish compression harm from existing variability.
+Use their artifacts and traces to identify failure mechanisms for a separately scoped follow-up; neither a lone failure nor a lone success establishes changed pressure reliability.
 These are maximum scheduled counts assuming usable outputs, with no retries or replacements; retain invalid/missing edits and report their unrun downstream slots rather than reallocating them.
 F's default plus the initial 60-call prose/discovery forecast is **162 new calls**, excluding case E and any fresh rewrite; neither allocation is approved and this is not a full-cycle total.
 

@@ -37,3 +37,10 @@ Removed the inaccurate assertion that the review response had made no commits or
 Follow-up verification: all three call totals recompute exactly; both CW batches pass assessment readiness; 112 local link paths resolve; the effort ledger sums to 1,638 minutes.
 The hook suite reports 263 passed and 3 skipped; whitespace checks pass.
 Self-review found no additional issue; no model calls or skill changes were made.
+
+
+## External review of c3f4d77
+
+Claude returned PASS with one optional P3 about the default's single pressure observation per variant/provider.
+The audit now labels those 12 variant pressure runs exploratory only and prohibits interpreting an isolated failure as a compression regression against the variable source.
+The 102-call planning default and approval boundaries are unchanged.
