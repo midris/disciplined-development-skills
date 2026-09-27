@@ -1,0 +1,29 @@
+{
+  "schema_version": "0.2",
+  "id": "cw-prep-claude-document-addition-original",
+  "prompt": "../claude-original-prompt.md",
+  "fixtures": [
+    {
+      "source": "../../cases/effective-briefing/fixture/report.md",
+      "target": "report.md"
+    },
+    {
+      "source": "../../cases/document-addition/task.md",
+      "target": "TASK.md"
+    },
+    {
+      "source": "../../cases/skill-original/SKILL.md",
+      "target": ".claude/skills/concise-writing/SKILL.md"
+    },
+    {
+      "source": "../../cases/document-addition/new-notes.md",
+      "target": "NEW-NOTES.md"
+    }
+  ],
+  "execution": {
+    "provider": "claude",
+    "model": "claude-sonnet-5",
+    "effort": "low",
+    "permissions": "workspace-write"
+  }
+}

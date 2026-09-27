@@ -1,0 +1,245 @@
+{
+  "status": "draft; no collection authority or frozen runtime",
+  "configurations": [
+    {
+      "case": "agent-recommendation",
+      "provider": "codex",
+      "condition": "control",
+      "config": "configs/codex-agent-recommendation-control.json"
+    },
+    {
+      "case": "agent-recommendation",
+      "provider": "codex",
+      "condition": "original",
+      "config": "configs/codex-agent-recommendation-original.json"
+    },
+    {
+      "case": "agent-recommendation",
+      "provider": "codex",
+      "condition": "candidate-comprehensive",
+      "config": "configs/codex-agent-recommendation-candidate.json"
+    },
+    {
+      "case": "agent-recommendation",
+      "provider": "claude",
+      "condition": "control",
+      "config": "configs/claude-agent-recommendation-control.json"
+    },
+    {
+      "case": "agent-recommendation",
+      "provider": "claude",
+      "condition": "original",
+      "config": "configs/claude-agent-recommendation-original.json"
+    },
+    {
+      "case": "agent-recommendation",
+      "provider": "claude",
+      "condition": "candidate-comprehensive",
+      "config": "configs/claude-agent-recommendation-candidate.json"
+    },
+    {
+      "case": "effective-briefing",
+      "provider": "codex",
+      "condition": "control",
+      "config": "configs/codex-effective-briefing-control.json"
+    },
+    {
+      "case": "effective-briefing",
+      "provider": "codex",
+      "condition": "original",
+      "config": "configs/codex-effective-briefing-original.json"
+    },
+    {
+      "case": "effective-briefing",
+      "provider": "codex",
+      "condition": "candidate-comprehensive",
+      "config": "configs/codex-effective-briefing-candidate.json"
+    },
+    {
+      "case": "effective-briefing",
+      "provider": "claude",
+      "condition": "control",
+      "config": "configs/claude-effective-briefing-control.json"
+    },
+    {
+      "case": "effective-briefing",
+      "provider": "claude",
+      "condition": "original",
+      "config": "configs/claude-effective-briefing-original.json"
+    },
+    {
+      "case": "effective-briefing",
+      "provider": "claude",
+      "condition": "candidate-comprehensive",
+      "config": "configs/claude-effective-briefing-candidate.json"
+    },
+    {
+      "case": "long-handoff",
+      "provider": "codex",
+      "condition": "control",
+      "config": "configs/codex-long-handoff-control.json"
+    },
+    {
+      "case": "long-handoff",
+      "provider": "codex",
+      "condition": "original",
+      "config": "configs/codex-long-handoff-original.json"
+    },
+    {
+      "case": "long-handoff",
+      "provider": "codex",
+      "condition": "candidate-comprehensive",
+      "config": "configs/codex-long-handoff-candidate.json"
+    },
+    {
+      "case": "long-handoff",
+      "provider": "claude",
+      "condition": "control",
+      "config": "configs/claude-long-handoff-control.json"
+    },
+    {
+      "case": "long-handoff",
+      "provider": "claude",
+      "condition": "original",
+      "config": "configs/claude-long-handoff-original.json"
+    },
+    {
+      "case": "long-handoff",
+      "provider": "claude",
+      "condition": "candidate-comprehensive",
+      "config": "configs/claude-long-handoff-candidate.json"
+    },
+    {
+      "case": "invocation-tighten",
+      "provider": "codex",
+      "condition": "original",
+      "config": "configs/codex-invocation-tighten-original.json"
+    },
+    {
+      "case": "invocation-tighten",
+      "provider": "codex",
+      "condition": "candidate-comprehensive",
+      "config": "configs/codex-invocation-tighten-candidate.json"
+    },
+    {
+      "case": "invocation-tighten",
+      "provider": "claude",
+      "condition": "original",
+      "config": "configs/claude-invocation-tighten-original.json"
+    },
+    {
+      "case": "invocation-tighten",
+      "provider": "claude",
+      "condition": "candidate-comprehensive",
+      "config": "configs/claude-invocation-tighten-candidate.json"
+    },
+    {
+      "case": "invocation-write",
+      "provider": "codex",
+      "condition": "original",
+      "config": "configs/codex-invocation-write-original.json"
+    },
+    {
+      "case": "invocation-write",
+      "provider": "codex",
+      "condition": "candidate-comprehensive",
+      "config": "configs/codex-invocation-write-candidate.json"
+    },
+    {
+      "case": "invocation-write",
+      "provider": "claude",
+      "condition": "original",
+      "config": "configs/claude-invocation-write-original.json"
+    },
+    {
+      "case": "invocation-write",
+      "provider": "claude",
+      "condition": "candidate-comprehensive",
+      "config": "configs/claude-invocation-write-candidate.json"
+    },
+    {
+      "case": "invocation-nonprose",
+      "provider": "codex",
+      "condition": "original",
+      "config": "configs/codex-invocation-nonprose-original.json"
+    },
+    {
+      "case": "invocation-nonprose",
+      "provider": "codex",
+      "condition": "candidate-comprehensive",
+      "config": "configs/codex-invocation-nonprose-candidate.json"
+    },
+    {
+      "case": "invocation-nonprose",
+      "provider": "claude",
+      "condition": "original",
+      "config": "configs/claude-invocation-nonprose-original.json"
+    },
+    {
+      "case": "invocation-nonprose",
+      "provider": "claude",
+      "condition": "candidate-comprehensive",
+      "config": "configs/claude-invocation-nonprose-candidate.json"
+    },
+    {
+      "case": "document-addition",
+      "provider": "codex",
+      "condition": "control",
+      "config": "configs/codex-document-addition-control.json"
+    },
+    {
+      "case": "document-addition",
+      "provider": "codex",
+      "condition": "original",
+      "config": "configs/codex-document-addition-original.json"
+    },
+    {
+      "case": "document-addition",
+      "provider": "codex",
+      "condition": "candidate-comprehensive",
+      "config": "configs/codex-document-addition-candidate.json"
+    },
+    {
+      "case": "document-addition",
+      "provider": "claude",
+      "condition": "control",
+      "config": "configs/claude-document-addition-control.json"
+    },
+    {
+      "case": "document-addition",
+      "provider": "claude",
+      "condition": "original",
+      "config": "configs/claude-document-addition-original.json"
+    },
+    {
+      "case": "document-addition",
+      "provider": "claude",
+      "condition": "candidate-comprehensive",
+      "config": "configs/claude-document-addition-candidate.json"
+    },
+    {
+      "case": "invocation-comments",
+      "provider": "codex",
+      "condition": "original",
+      "config": "configs/codex-invocation-comments-original.json"
+    },
+    {
+      "case": "invocation-comments",
+      "provider": "codex",
+      "condition": "candidate-comprehensive",
+      "config": "configs/codex-invocation-comments-candidate.json"
+    },
+    {
+      "case": "invocation-comments",
+      "provider": "claude",
+      "condition": "original",
+      "config": "configs/claude-invocation-comments-original.json"
+    },
+    {
+      "case": "invocation-comments",
+      "provider": "claude",
+      "condition": "candidate-comprehensive",
+      "config": "configs/claude-invocation-comments-candidate.json"
+    }
+  ]
+}

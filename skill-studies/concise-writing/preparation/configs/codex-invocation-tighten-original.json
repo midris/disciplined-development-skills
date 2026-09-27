@@ -1,0 +1,25 @@
+{
+  "schema_version": "0.2",
+  "id": "cw-prep-codex-invocation-tighten-original",
+  "prompt": "../native-prompt.md",
+  "fixtures": [
+    {
+      "source": "../../cases/agent-recommendation/fixture/report.md",
+      "target": "report.md"
+    },
+    {
+      "source": "../../cases/agent-recommendation/task.md",
+      "target": "TASK.md"
+    },
+    {
+      "source": "../../cases/skill-original/SKILL.md",
+      "target": ".agents/skills/concise-writing/SKILL.md"
+    }
+  ],
+  "execution": {
+    "provider": "codex",
+    "model": "gpt-5.6-sol",
+    "effort": "low",
+    "permissions": "workspace-write"
+  }
+}

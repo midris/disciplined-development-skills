@@ -1,0 +1,29 @@
+{
+  "schema_version": "0.2",
+  "id": "cw-prep-codex-invocation-comments-candidate",
+  "prompt": "../native-prompt.md",
+  "fixtures": [
+    {
+      "source": "../../cases/invocation-comments/task.md",
+      "target": "TASK.md"
+    },
+    {
+      "source": "../../cases/invocation-comments/fixture/uploader.py",
+      "target": "uploader.py"
+    },
+    {
+      "source": "../../cases/invocation-comments/fixture/MAINTAINER-NOTES.md",
+      "target": "MAINTAINER-NOTES.md"
+    },
+    {
+      "source": "../../cases/skill-candidate-comprehensive/SKILL.md",
+      "target": ".agents/skills/concise-writing/SKILL.md"
+    }
+  ],
+  "execution": {
+    "provider": "codex",
+    "model": "gpt-5.6-sol",
+    "effort": "low",
+    "permissions": "workspace-write"
+  }
+}

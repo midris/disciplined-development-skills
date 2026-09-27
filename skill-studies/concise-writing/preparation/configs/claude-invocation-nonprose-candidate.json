@@ -1,0 +1,25 @@
+{
+  "schema_version": "0.2",
+  "id": "cw-prep-claude-invocation-nonprose-candidate",
+  "prompt": "../native-prompt.md",
+  "fixtures": [
+    {
+      "source": "../../cases/invocation-nonprose/fixture/settings.toml",
+      "target": "settings.toml"
+    },
+    {
+      "source": "../../cases/invocation-nonprose/task.md",
+      "target": "TASK.md"
+    },
+    {
+      "source": "../../cases/skill-candidate-comprehensive/SKILL.md",
+      "target": ".claude/skills/concise-writing/SKILL.md"
+    }
+  ],
+  "execution": {
+    "provider": "claude",
+    "model": "claude-sonnet-5",
+    "effort": "low",
+    "permissions": "workspace-write"
+  }
+}

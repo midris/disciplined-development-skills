@@ -1,0 +1,21 @@
+{
+  "schema_version": "0.2",
+  "id": "cw-prep-claude-effective-briefing-control",
+  "prompt": "../../prompt-control.md",
+  "fixtures": [
+    {
+      "source": "../../cases/effective-briefing/fixture/report.md",
+      "target": "report.md"
+    },
+    {
+      "source": "../../cases/effective-briefing/task.md",
+      "target": "TASK.md"
+    }
+  ],
+  "execution": {
+    "provider": "claude",
+    "model": "claude-sonnet-5",
+    "effort": "low",
+    "permissions": "workspace-write"
+  }
+}

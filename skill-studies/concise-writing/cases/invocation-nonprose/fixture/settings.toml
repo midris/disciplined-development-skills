@@ -1,0 +1,8 @@
+# Aster exporter worker settings.
+# Keep worker_count within the leased capacity; extra workers can replay a batch.
+worker_count = 4
+lease_capacity = 8
+
+# Keep the lease until every in-flight acknowledgement is settled.
+# A green worker health check does not settle an acknowledgement.
+ack_timeout_seconds = 90

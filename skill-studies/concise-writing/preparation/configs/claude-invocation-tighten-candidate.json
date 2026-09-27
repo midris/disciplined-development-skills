@@ -1,0 +1,25 @@
+{
+  "schema_version": "0.2",
+  "id": "cw-prep-claude-invocation-tighten-candidate",
+  "prompt": "../native-prompt.md",
+  "fixtures": [
+    {
+      "source": "../../cases/agent-recommendation/fixture/report.md",
+      "target": "report.md"
+    },
+    {
+      "source": "../../cases/agent-recommendation/task.md",
+      "target": "TASK.md"
+    },
+    {
+      "source": "../../cases/skill-candidate-comprehensive/SKILL.md",
+      "target": ".claude/skills/concise-writing/SKILL.md"
+    }
+  ],
+  "execution": {
+    "provider": "claude",
+    "model": "claude-sonnet-5",
+    "effort": "low",
+    "permissions": "workspace-write"
+  }
+}

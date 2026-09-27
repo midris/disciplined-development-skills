@@ -1,0 +1,29 @@
+{
+  "schema_version": "0.2",
+  "id": "cw-prep-claude-invocation-comments-candidate",
+  "prompt": "../native-prompt.md",
+  "fixtures": [
+    {
+      "source": "../../cases/invocation-comments/task.md",
+      "target": "TASK.md"
+    },
+    {
+      "source": "../../cases/invocation-comments/fixture/uploader.py",
+      "target": "uploader.py"
+    },
+    {
+      "source": "../../cases/invocation-comments/fixture/MAINTAINER-NOTES.md",
+      "target": "MAINTAINER-NOTES.md"
+    },
+    {
+      "source": "../../cases/skill-candidate-comprehensive/SKILL.md",
+      "target": ".claude/skills/concise-writing/SKILL.md"
+    }
+  ],
+  "execution": {
+    "provider": "claude",
+    "model": "claude-sonnet-5",
+    "effort": "low",
+    "permissions": "workspace-write"
+  }
+}

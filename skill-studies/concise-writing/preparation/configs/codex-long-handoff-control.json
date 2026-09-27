@@ -1,0 +1,21 @@
+{
+  "schema_version": "0.2",
+  "id": "cw-prep-codex-long-handoff-control",
+  "prompt": "../../prompt-control.md",
+  "fixtures": [
+    {
+      "source": "../../cases/long-handoff/fixture/report.md",
+      "target": "report.md"
+    },
+    {
+      "source": "../../cases/long-handoff/task.md",
+      "target": "TASK.md"
+    }
+  ],
+  "execution": {
+    "provider": "codex",
+    "model": "gpt-5.6-sol",
+    "effort": "low",
+    "permissions": "workspace-write"
+  }
+}

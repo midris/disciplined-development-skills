@@ -31,20 +31,15 @@ The owner subsequently selected evaluation of the existing comprehensive rewrite
 Do not choose a development base from these limited results alone.
 The original explicitly protects useful repetition and requires local and whole-artifact review; the candidate's stricter source-explicitness rule and narrower repetition exception remain comparison questions.
 
-## Proposed next scope
+## Owner scope decision
 
-Prepare two focused editing cases before deciding whether CW needs new wording:
+The owner removed tailored skill-editing and skill-compression tests during suite review.
+Skill edits are nuanced, supervised and performed with writing-skills; that specialized workflow is not needed to test CW's general document-editing behavior.
+The active suite instead includes [ordinary document addition E](cases/document-addition/assessment.md), which integrates partially overlapping new requirements into an existing briefing.
+A/B/C already test revision/compression, and N2 tests new-document generation; none directly covered additions to an existing document.
 
-1. Integrate an addition into an existing skill whose other sections partly cover it. Judge whether the editor notices overlap, gives each instruction a useful home, and retains reinforcement at a distinct decision or output point.
-2. Compress the preserved original SSR skill under the [named source and qualification bar](testing-audit.md#case-f-source-and-qualification). Judge both the edited text and fresh agents' behavior using the source and compressed versions on the same tasks; retain its known pressure and procedural limitations.
-
-Include a real opportunity to over-trim: a repeated condition, exception or output example that has a distinct operational purpose.
-Do not require a preferred wording, exactly one occurrence of each meaning, or a target percentage reduction.
-Preserve triggers, conditions, exceptions, ordering, required outputs, rationale and useful examples; wording and placement may change.
-Text review checks the contract; downstream execution checks whether agents still follow it.
-A shorter file and a reviewer saying it is equivalent do not establish preserved effectiveness.
-
-Writing-skills continues to own authoring and behavioral validation; CW supports editing and compression rather than declaring its own changes validated.
-Establish the intended skill behavior first, preserve that version, then test reductions separately from functional additions.
-The current SSR draft is useful for the integration case but is not yet a proven successful source for a compression-preserves-effectiveness claim.
-Case preparation must specify controls, repeated fresh-context observations and a bounded call allocation before collection is requested.
+The earlier E/F fixtures, composition configurations, authoring-context snapshots and downstream allocations were removed before collection.
+This removes a test specialization, not code comments or skill text from the owner's intended writing use.
+No claim about autonomous skill authoring or preservation of agent behavior follows from the ordinary CW suite.
+Writing-skills continues to govern later skill authoring and validation when that work resumes.
+The parked SSR diagnosis and draft remain unchanged.

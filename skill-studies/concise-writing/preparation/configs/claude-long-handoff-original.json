@@ -1,0 +1,25 @@
+{
+  "schema_version": "0.2",
+  "id": "cw-prep-claude-long-handoff-original",
+  "prompt": "../claude-original-prompt.md",
+  "fixtures": [
+    {
+      "source": "../../cases/long-handoff/fixture/report.md",
+      "target": "report.md"
+    },
+    {
+      "source": "../../cases/long-handoff/task.md",
+      "target": "TASK.md"
+    },
+    {
+      "source": "../../cases/skill-original/SKILL.md",
+      "target": ".claude/skills/concise-writing/SKILL.md"
+    }
+  ],
+  "execution": {
+    "provider": "claude",
+    "model": "claude-sonnet-5",
+    "effort": "low",
+    "permissions": "workspace-write"
+  }
+}
