@@ -252,6 +252,7 @@ Reserved bundles and revealing assessments stay entirely in the verified private
 - [x] Check SSR additions against the whole skill and record the owner’s effectiveness-first, compression-second direction in [CW skill-editing preparation](../skill-studies/concise-writing/skill-editing-preparation.md).
 - [x] Audit CW against the current spec, writing-skills and SSR process refinements; verify retained evidence and reconcile the facet map. See the [CW testing audit](../skill-studies/concise-writing/testing-audit.md).
 - [x] Resolve the CW compression-source design gap: name the preserved original SSR and a scoped cross-model effectiveness bar in the [audit](../skill-studies/concise-writing/testing-audit.md#case-f-source-and-qualification); collection qualification remains unrun.
+- [x] Estimate F’s full call range, including every emitted variant and pressure slots; record the [cross-provider planning default and alternatives](../skill-studies/concise-writing/testing-audit.md#case-f-call-forecast) for the suite/allocation review. No allocation is approved.
 - [ ] Complete proposed CW case inputs and criteria, including skill-editing consumers; review whole-suite adequacy and contract deltas before freeze.
 - [ ] Present the bounded cross-provider allocation, obtain the required subject-ceiling extension, then freeze and qualify approved inputs.
 - [ ] Compare the unchanged original and existing CW rewrite on Codex and Claude, with contemporaneous no-CW controls where contribution is at issue and native invocation assessed separately.

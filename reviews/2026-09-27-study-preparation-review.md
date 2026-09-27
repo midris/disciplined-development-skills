@@ -22,5 +22,18 @@ The design correction does not depend on that prediction: a passing control cann
 Verification: all ten existing batches pass assessment readiness; 283 local link paths resolve; the ledger sums to 1,633 minutes; CW policy/copy equality holds.
 The hook suite reports 263 passed and 3 skipped; whitespace checks pass.
 Live skills, the parked SSR draft and the selected original source are byte-identical to HEAD.
-No model calls, skill edits, commits or pushes were made for this review response.
+No model calls or skill edits were made for this review response.
 Self-review found no additional issue in the corrections; the explicitly deferred SSR decision and draft concerns remain outstanding before SSR dispatch.
+
+
+## Follow-up review of f6e8fcf
+
+The reviewer verified the prior resolutions and raised two further findings.
+The F estimate now includes editor calls, all emitted variants, both downstream providers, source refresh and pressure slots: 63–324 calls, with a 102-call cross-provider diagnostic planning default.
+The [audit forecast](../skill-studies/concise-writing/testing-audit.md#case-f-call-forecast) states repetition limits, the cheaper option's missing editor-provider coverage and the separate, still-unapproved allocation.
+This resolves the missing scale before suite review without selecting a dispatch schedule.
+Removed the inaccurate assertion that the review response had made no commits or pushes; the no-model-call/no-skill-edit statement remains accurate.
+
+Follow-up verification: all three call totals recompute exactly; both CW batches pass assessment readiness; 112 local link paths resolve; the effort ledger sums to 1,638 minutes.
+The hook suite reports 263 passed and 3 skipped; whitespace checks pass.
+Self-review found no additional issue; no model calls or skill changes were made.

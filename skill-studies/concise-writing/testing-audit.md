@@ -99,6 +99,25 @@ Native discovery of the compressed SSR output remains outside F's explicit-load 
 This source avoids testing CW on its own text: that would expose even the no-CW editing condition to the complete CW instructions and weaken the intended control.
 Writing-skills remains fixed across editor conditions; downstream subjects receive only their frozen SSR task/context and assigned source or compressed SSR version, not CW or writing-skills.
 
+### Case F call forecast
+
+F ranges from **63 to 324 additional subject calls** under the alternatives below, including pressure tests omitted from the review's 53–272 estimates.
+Each editor call emits one variant; every variant gets all five ordinary tasks and the pressure task on both downstream providers.
+All options include 20 unchanged-source qualification calls and four unchanged-source pressure calls (two per provider); these source observations are shared comparators, not repeated for every variant.
+
+| Option | Editor providers × repetitions × 3 CW conditions | Editor calls / variants | Downstream repetitions per task/provider/variant | Variant downstream calls | Source calls | Total |
+| --- | --- | ---: | ---: | ---: | ---: | ---: |
+| Narrow diagnostic | One × one × three | 3 | 1 | 3 × 6 × 2 = 36 | 24 | **63** |
+| Cross-provider diagnostic | Both × one × three | 6 | 1 | 6 × 6 × 2 = 72 | 24 | **102** |
+| Repeated comparison | Both × two × three | 12 | 2 | 12 × 6 × 2 × 2 = 288 | 24 | **324** |
+
+Use **102 calls as the planning default for suite review**, subject to the owner's allocation decision: it covers both editing and downstream providers without immediately multiplying repetitions.
+The 63-call option omits one provider's editing behavior; the 324-call option adds repeated edits and downstream observations at substantially greater cost.
+The default has only one edit per condition/provider and one downstream observation per variant/task/provider, so it is a diagnostic comparison, not a reliability estimate or writing-skills' five-sample wording experiment.
+Keep the source's two repetitions and each variant's one repetition visible; do not pool denominators or infer a reliable advantage from that imbalance.
+These are maximum scheduled counts assuming usable outputs, with no retries or replacements; retain invalid/missing edits and report their unrun downstream slots rather than reallocating them.
+F's default plus the initial 60-call prose/discovery forecast is **162 new calls**, excluding case E and any fresh rewrite; neither allocation is approved and this is not a full-cycle total.
+
 ## Proposed sequence and allocation forecast
 
 The following is a design forecast, not a frozen dispatch table or an approved ceiling increase.

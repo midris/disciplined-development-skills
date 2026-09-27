@@ -195,7 +195,7 @@ Combined accounting sources: closed SSR [pilot 01](../sweeping-stale-references/
 Dispatched calls are **136 subject, 0 evaluator, 0 authoring, 0 retry**; remaining outer capacity is **0 / 12 / 4 / 4** against the [active plan](../../plans/2026-09-11-model-driven-skill-testing.md#limits-and-information-boundaries). Both eight-call CW batches are spent. The owner authorized ten SSR expansion calls under ceiling 56; all ten are spent, including the excluded control, with no replacement or pool transfer. Comparison runner durations total 508.067 seconds; baseline durations remain 494.936 seconds, including setup and capture.
 Owner clarification after round-10 review: “the budget is just a guideline”. The 1,200-minute figure below remains the planning baseline, not a collection stop; invocation ceilings and the authorized SSR scope is unchanged. Retain elapsed effort and forecast variance to expose process cost.
 
-Current combined accounting: **1,633 active minutes booked; 433 minutes above the historical 1,200-minute planning guideline**.
+Current combined accounting: **1,638 active minutes booked; 438 minutes above the historical 1,200-minute planning guideline**.
 These are rounded effort estimates, not stopwatch measurements or a separately timed category breakdown.
 Between-turn owner wait is excluded; runner durations are included once.
 
@@ -244,7 +244,8 @@ Between-turn owner wait is excluded; runner durations are included once.
 | Whole-skill duplication check and CW scope preparation | 5 |
 | CW coverage/process audit, evidence verification and study sequencing | 20 |
 | Review resolution: experiment design, source qualification and verification | 15 |
-| **Total** | **1,633** |
+| F allocation forecast and follow-up review correction | 5 |
+| **Total** | **1,638** |
 
 SSR expansion is complete. The prior 55-minute remaining forecast closed at 50 estimated minutes, including the additional shell correction; all ten subject calls are spent.
 The combined batch/recovery effort is 135 estimated minutes (45 initial checkpoint, 40 isolation correction, 50 resumption), 45 above the original 90-minute allowance. Separate round-9 review effort remains in the combined ledger above.
@@ -259,7 +260,7 @@ The Claude comparison used 90 estimated active minutes against its 120-minute gu
 The Opus comparison used 20 estimated active minutes against its 40-minute guideline, 20 below forecast; its 174.840 seconds of runner duration (2.91 minutes) are included once.
 
 Selected-work forecast, in active minutes; 60 is the midpoint of the 45–75-minute preparation range.
-Conditional collection estimates and the unestimated composition/rewrite stages are in the [audit forecast](testing-audit.md#proposed-sequence-and-allocation-forecast), excluded from this selected-work subtotal rather than treated as zero effort.
+Conditional collection estimates, including the [F call range and planning default](testing-audit.md#case-f-call-forecast), are in the audit; case E and any fresh rewrite still need estimates. These stages are excluded from this selected-work subtotal rather than treated as zero effort.
 Preparation is selected; later collection requires additional spending authority.
 
 | Work | Estimate | Basis |
