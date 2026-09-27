@@ -260,7 +260,7 @@ Reserved bundles and revealing assessments stay entirely in the verified private
 - [x] Obtain approval for the bounded 104-call CW allocation and subject-ceiling increase to 240; authority is recorded at the top of the [CW protocol](../skill-studies/concise-writing/protocol.md).
 - [x] Qualify current runtimes, freeze the ordered schedule and exact approved inputs, and pass collection readiness before dispatch; all four CW batches passed, with evidence linked from the protocol.
   The owner requested three repetitions per condition on both providers for A/B/C, including Claude coverage of the existing cases: 54 ordinary calls in the [updated forecast](../skill-studies/concise-writing/testing-audit.md#proposed-sequence-and-allocation-forecast).
-  Ordinary document-addition E proposes another 18 calls; native cases N1–N4 are a separate 32-call proposal.
+  Ordinary document-addition E contributes another 18 calls; native cases N1–N4 form the subsequent 32-call stage.
   The owner removed tailored skill-editing/compression experiments and their downstream allocations from the active scope.
 - [ ] Compare the unchanged original and existing CW rewrite on Codex and Claude, with contemporaneous no-CW controls where contribution is at issue and native invocation assessed separately.
 - [ ] Review and accept coverage, completed cross-model baseline results and retained evidence before selecting a CW editing base or drafting changes; resolve or explicitly accept remaining gaps.

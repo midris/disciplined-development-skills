@@ -59,7 +59,7 @@ The protocol owns allocation approval and dispatch progress.
 [Runtime qualification](runtime-qualification.md) records the tested identities and the production-model check required on the first scheduled attempt; the [schedule](schedule.json) fixes ordering.
 Collection requires committed input/assessment manifests and passing readiness.
 Recheck source bytes, controller-policy equality and provider/condition parity at that freeze.
-No model observations have been collected from this preparation.
+Collection progress and results are recorded in the protocol and its attempt indexes.
 
 
 ## Preparation verification

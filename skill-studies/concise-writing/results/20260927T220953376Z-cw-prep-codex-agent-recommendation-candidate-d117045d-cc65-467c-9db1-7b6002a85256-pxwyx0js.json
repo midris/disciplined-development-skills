@@ -1,0 +1,156 @@
+{
+  "schema_version": "2",
+  "record_kind": "execution result",
+  "assessed_at": "2026-09-27T22:11:48.844188+00:00",
+  "run_id": "20260927T220953376Z-cw-prep-codex-agent-recommendation-candidate-d117045d-cc65-467c-9db1-7b6002a85256-pxwyx0js",
+  "condition": "candidate-comprehensive",
+  "assessor": {
+    "name": "Codex active session",
+    "method": "active session",
+    "model": null,
+    "session_id": null,
+    "context": "Same session that prepared and reviewed these development cases. No independent, blinded or held-out claim."
+  },
+  "evidence": [
+    {
+      "id": "output",
+      "artifact": {
+        "path": "/Users/simon/work/personal/skill-study-private/concise-writing/development/20260927T220953376Z-cw-prep-codex-agent-recommendation-candidate-d117045d-cc65-467c-9db1-7b6002a85256-pxwyx0js/workspace/fixture/report.md",
+        "sha256": "109897355ed3022b99f7278818025dd937797f021ead602acf0674723db22065",
+        "version": null
+      },
+      "selector": "Complete artifact"
+    },
+    {
+      "id": "trace",
+      "artifact": {
+        "path": "/Users/simon/work/personal/skill-study-private/concise-writing/development/20260927T220953376Z-cw-prep-codex-agent-recommendation-candidate-d117045d-cc65-467c-9db1-7b6002a85256-pxwyx0js/provider-session.jsonl",
+        "sha256": "d62858ca72891ff2021b323c1507e20b2cf8bc7001c6e1595e40209d50e1c5c6",
+        "version": null
+      },
+      "selector": "Complete artifact"
+    },
+    {
+      "id": "mechanical",
+      "artifact": {
+        "path": "/Users/simon/work/personal/skill-study-private/concise-writing/development/20260927T220953376Z-cw-prep-codex-agent-recommendation-candidate-d117045d-cc65-467c-9db1-7b6002a85256-pxwyx0js/result.json",
+        "sha256": "aa89f3d96d751dab393586e35cfef525cf6288b60a29d293725f703b69ac7db0",
+        "version": null
+      },
+      "selector": "Complete artifact"
+    },
+    {
+      "id": "log",
+      "artifact": {
+        "path": "/Users/simon/work/personal/skill-study-private/concise-writing/development/20260927T220953376Z-cw-prep-codex-agent-recommendation-candidate-d117045d-cc65-467c-9db1-7b6002a85256-pxwyx0js/runner.log",
+        "sha256": "bb41de1010e5a0e92d47c88dedb75a4014f38bbc846ce0afc8d76e492a733faa",
+        "version": null
+      },
+      "selector": "Complete artifact"
+    },
+    {
+      "id": "final",
+      "artifact": {
+        "path": "/Users/simon/work/personal/skill-study-private/concise-writing/development/20260927T220953376Z-cw-prep-codex-agent-recommendation-candidate-d117045d-cc65-467c-9db1-7b6002a85256-pxwyx0js/final.txt",
+        "sha256": "9d9848ad22ea67ba9a57819f74a293f9e903f04a050d6a47d5826d8f4ec1a43c",
+        "version": null
+      },
+      "selector": "Complete artifact"
+    },
+    {
+      "id": "source-0",
+      "artifact": {
+        "path": "skill-studies/concise-writing/cases/agent-recommendation/fixture/report.md",
+        "sha256": "e9a992c7e4c14dfd5afc10cc637349f39c2030e98ed0311441675900bc3e93e9",
+        "version": null,
+        "git_revision": "96b6e383da39ea807a6ad49d4513cfc1d6f4cd33"
+      },
+      "selector": "Complete frozen source"
+    },
+    {
+      "id": "source-1",
+      "artifact": {
+        "path": "skill-studies/concise-writing/cases/agent-recommendation/task.md",
+        "sha256": "607cbe0562a19ea092fe76ec96f13bfbe033b2e1095baef2ca38be621c0baf82",
+        "version": null,
+        "git_revision": "96b6e383da39ea807a6ad49d4513cfc1d6f4cd33"
+      },
+      "selector": "Complete frozen source"
+    }
+  ],
+  "setup": {
+    "status": "valid",
+    "reason": "The complete comprehensive CW body appears at session line 16 before baseline setup and report edits. Retained context reports gpt-5.6-sol/low; the frozen source/task identities, unchanged TASK.md and complete report establish valid setup.",
+    "evidence": [
+      "mechanical",
+      "trace",
+      "log"
+    ]
+  },
+  "criteria": [
+    {
+      "id": "F1",
+      "dimension": "functional",
+      "judgment": "met",
+      "reason": "The report preserves the approval-only pilot request, ten accounts, Tuesday 10:00–11:00 and 30-minute duration, unchanged deployment state, all staging evidence and cursor mechanism, untested production/cross-region limits, Maya/Leo roles, mismatch stop and retaining both files until investigation, and the later release decision.",
+      "consequence": "Required for the corresponding functional or invocation outcome; reported separately.",
+      "evidence": [
+        "output",
+        "source-0",
+        "source-1"
+      ]
+    },
+    {
+      "id": "F2",
+      "dimension": "functional",
+      "judgment": "met",
+      "reason": "Decision requested leads with scope and approval; why-a-pilot connects both evidence and limits to controlled exposure. The stop-criteria section makes the mismatch response and evidence-retention duration explicit, followed by the separate matching-count outcome.",
+      "consequence": "Required for the corresponding functional or invocation outcome; reported separately.",
+      "evidence": [
+        "output",
+        "source-0",
+        "source-1"
+      ]
+    },
+    {
+      "id": "F3",
+      "dimension": "functional",
+      "judgment": "met",
+      "reason": "Three coherent sections replace fragmented source headings and disconnected repetition. Short paragraphs connect test evidence, mechanism and limits; two mismatch bullets make the critical actions easy to find without unnecessary narration.",
+      "consequence": "Required for the corresponding functional or invocation outcome; reported separately.",
+      "evidence": [
+        "output",
+        "source-0",
+        "source-1"
+      ]
+    }
+  ],
+  "procedural_summary": "Complete explicit skill loading preceded editing, with a baseline commit and full Git diff after the edit. One invalid delete/add patch was rejected before a valid update; this is within-call tool recovery, not a retry invocation. No expressed unresolved framing uncertainty.",
+  "observations": [
+    {
+      "dimension": "functional",
+      "description": "Whole-document word counts: source 625, output 244, change -381; shorter. Length is unscored.",
+      "consequence": "Descriptive comparison; no separate score or automatic length-based preference.",
+      "evidence": [
+        "output"
+      ]
+    },
+    {
+      "dimension": "functional",
+      "description": "Compared with the first original output, this version explicitly retains the files until investigation, while repeating Maya’s role at the request and execution points. Both satisfy the same complete-artifact criteria; this observation does not establish a reliable version advantage.",
+      "consequence": "Descriptive comparison; no separate score or automatic length-based preference.",
+      "evidence": [
+        "output"
+      ]
+    }
+  ],
+  "uncertainty": [],
+  "result_id": "codex-expanded-01-agent-recommendation-candidate-comprehensive-1",
+  "functional_result": "met",
+  "manifest": {
+    "path": "skill-studies/concise-writing/preparation/manifests/codex-agent-recommendation-manifest.json",
+    "sha256": "2e8d8ac2924c3e916544aea3a1ed94b7da65fc2789e98b89b39cad7e0a74b930",
+    "version": "1",
+    "git_revision": "4dc370648a6a915546035847b2823a4bc5d57325"
+  }
+}

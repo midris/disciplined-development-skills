@@ -1,0 +1,156 @@
+{
+  "schema_version": "2",
+  "record_kind": "execution result",
+  "assessed_at": "2026-09-27T22:18:07.287717+00:00",
+  "run_id": "20260927T221546457Z-cw-prep-codex-effective-briefing-control-b468f952-55e3-4243-90a8-4dbb3222fb1c-0bpjuf2l",
+  "condition": "control",
+  "assessor": {
+    "name": "Codex active session",
+    "method": "active session",
+    "model": null,
+    "session_id": null,
+    "context": "Same session that prepared and reviewed these development cases. No independent, blinded or held-out claim."
+  },
+  "evidence": [
+    {
+      "id": "output",
+      "artifact": {
+        "path": "/Users/simon/work/personal/skill-study-private/concise-writing/development/20260927T221546457Z-cw-prep-codex-effective-briefing-control-b468f952-55e3-4243-90a8-4dbb3222fb1c-0bpjuf2l/workspace/fixture/report.md",
+        "sha256": "d872feda936d2477c0149c78422fcef789a50693574fce125d0b40e2a0f3a932",
+        "version": null
+      },
+      "selector": "Complete artifact"
+    },
+    {
+      "id": "trace",
+      "artifact": {
+        "path": "/Users/simon/work/personal/skill-study-private/concise-writing/development/20260927T221546457Z-cw-prep-codex-effective-briefing-control-b468f952-55e3-4243-90a8-4dbb3222fb1c-0bpjuf2l/provider-session.jsonl",
+        "sha256": "6ee40aadacf93f15e2b60690b83a72fb8d003b6ea213b6f864f166f237f4425a",
+        "version": null
+      },
+      "selector": "Complete artifact"
+    },
+    {
+      "id": "mechanical",
+      "artifact": {
+        "path": "/Users/simon/work/personal/skill-study-private/concise-writing/development/20260927T221546457Z-cw-prep-codex-effective-briefing-control-b468f952-55e3-4243-90a8-4dbb3222fb1c-0bpjuf2l/result.json",
+        "sha256": "f2c54180ab387fe9527c561f5b076767654b1465bb7754f6cf38a230d4225e43",
+        "version": null
+      },
+      "selector": "Complete artifact"
+    },
+    {
+      "id": "log",
+      "artifact": {
+        "path": "/Users/simon/work/personal/skill-study-private/concise-writing/development/20260927T221546457Z-cw-prep-codex-effective-briefing-control-b468f952-55e3-4243-90a8-4dbb3222fb1c-0bpjuf2l/runner.log",
+        "sha256": "cc4ed6e3607a76858a13141ee0e6040d19eedb7cf2ecaa6158c88f129635cd48",
+        "version": null
+      },
+      "selector": "Complete artifact"
+    },
+    {
+      "id": "final",
+      "artifact": {
+        "path": "/Users/simon/work/personal/skill-study-private/concise-writing/development/20260927T221546457Z-cw-prep-codex-effective-briefing-control-b468f952-55e3-4243-90a8-4dbb3222fb1c-0bpjuf2l/final.txt",
+        "sha256": "f989bb5b16c95be36b2ff04ae483b4f0ea709e11f9671fadab8e72bcab6b897f",
+        "version": null
+      },
+      "selector": "Complete artifact"
+    },
+    {
+      "id": "source-0",
+      "artifact": {
+        "path": "skill-studies/concise-writing/cases/effective-briefing/fixture/report.md",
+        "sha256": "93c23afd44aab52dfcd2bca53f3db0020a41f650d46d4c59a09595539dc72491",
+        "version": null,
+        "git_revision": "96b6e383da39ea807a6ad49d4513cfc1d6f4cd33"
+      },
+      "selector": "Complete frozen source"
+    },
+    {
+      "id": "source-1",
+      "artifact": {
+        "path": "skill-studies/concise-writing/cases/effective-briefing/task.md",
+        "sha256": "fbf576b5f00e154e6ee4618285d96980b1858de992e5390a1e83cf9b03cb1796",
+        "version": null,
+        "git_revision": "96b6e383da39ea807a6ad49d4513cfc1d6f4cd33"
+      },
+      "selector": "Complete frozen source"
+    }
+  ],
+  "setup": {
+    "status": "valid",
+    "reason": "This no-CW control has only the five built-in skills in its initial catalog, no CW body exposure, and matching gpt-5.6-sol/low context. Frozen source/task identities and the complete retained report establish valid setup; TASK.md remains unchanged.",
+    "evidence": [
+      "mechanical",
+      "trace",
+      "log"
+    ]
+  },
+  "criteria": [
+    {
+      "id": "F1",
+      "dimension": "functional",
+      "judgment": "not met",
+      "reason": "The complete output loses the source’s statement that the six existing teams may continue using the preview and the assignment to Nia to send approved invitations. It retains the numerical evidence and rollout gates, but these omissions remove current-use permission and a named next-step responsibility from the manager’s briefing.",
+      "consequence": "Required source information is missing, so the functional outcome fails regardless of shortening.",
+      "evidence": [
+        "output",
+        "source-0",
+        "source-1"
+      ]
+    },
+    {
+      "id": "F2",
+      "dimension": "functional",
+      "judgment": "not met",
+      "reason": "After the checks and approval, the output explains defaults but never says who sends the invitations; Nia is assigned only consent/switch-back checks. The source answered that operational next-step question directly. Its express continuation permission for existing teams is also unavailable, making the briefing less useful for managing current and newly invited teams.",
+      "consequence": "The manager must reconstruct responsibilities and existing-team scope that the source supplied; this is the same omission underlying F1, not a second failed execution.",
+      "evidence": [
+        "output",
+        "source-0",
+        "source-1"
+      ]
+    },
+    {
+      "id": "F3",
+      "dimension": "functional",
+      "judgment": "met",
+      "reason": "The decision, evidence bullets, approval checks and follow-up are easy to navigate. The missing responsibilities and permission affect correctness/usefulness, but the remaining material is coherently organized and not burdened by purposeless repetition.",
+      "consequence": "Required for the corresponding functional or invocation outcome; reported separately.",
+      "evidence": [
+        "output",
+        "source-0",
+        "source-1"
+      ]
+    }
+  ],
+  "procedural_summary": "No-CW control. The trace shows a baseline commit, full source reading, report edit and diff inspection; no expressed unresolved framing uncertainty. These visible comparison steps did not preserve all consequential source information.",
+  "observations": [
+    {
+      "dimension": "functional",
+      "description": "Whole-document word counts: source 279, output 242, change -37; shorter. Length is unscored.",
+      "consequence": "Descriptive comparison; no separate score or automatic length-based preference.",
+      "evidence": [
+        "output"
+      ]
+    },
+    {
+      "dimension": "functional",
+      "description": "Both skill-bearing first-repetition outputs keep the invitation sender: original says Nia can send invitations and rewrite likewise names Nia after checks and approval. The control does not. One repetition does not establish a reliable CW effect.",
+      "consequence": "Descriptive comparison; no separate score or automatic length-based preference.",
+      "evidence": [
+        "output"
+      ]
+    }
+  ],
+  "uncertainty": [],
+  "result_id": "codex-expanded-01-effective-briefing-control-1",
+  "functional_result": "not met",
+  "manifest": {
+    "path": "skill-studies/concise-writing/preparation/manifests/codex-effective-briefing-manifest.json",
+    "sha256": "7e0cb4aec2bc552ee710d845c0b18681130eec608bc3e66855dcab06306288b9",
+    "version": "1",
+    "git_revision": "4dc370648a6a915546035847b2823a4bc5d57325"
+  }
+}
