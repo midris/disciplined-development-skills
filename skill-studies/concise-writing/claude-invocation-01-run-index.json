@@ -395,6 +395,334 @@
           "git_revision": "07e013fc65f88c9b96d17c9bf183fc28c424477e"
         }
       }
+    },
+    {
+      "attempt_id": "claude-invocation-01-invocation-tighten-candidate-comprehensive-2-1",
+      "case_id": "invocation-tighten",
+      "condition": "candidate-comprehensive",
+      "repetition": 2,
+      "attempt_number": 1,
+      "retry_of": null,
+      "manifest": {
+        "path": "skill-studies/concise-writing/preparation/manifests/claude-invocation-tighten-manifest.json",
+        "sha256": "d94df0fba3fb5a81f92df1c893b94756e3396be64767cee3b7326376fa384fab",
+        "version": "1",
+        "git_revision": "4dc370648a6a915546035847b2823a4bc5d57325"
+      },
+      "authorization": {
+        "artifact": {
+          "path": "skill-studies/concise-writing/protocol.md",
+          "sha256": "2e154c0faf2cf5068b8bb565d867afbcd7b38f06e5738e6cc98975955b9eb04a",
+          "version": "1",
+          "git_revision": "4dc370648a6a915546035847b2823a4bc5d57325"
+        },
+        "selector": "Batch: claude-invocation-01; order 9"
+      },
+      "run_id": "20260928T003953195Z-cw-prep-claude-invocation-tighten-candidate-68222965-8844-4b1d-8813-fff677d4a9f2-46ivubal",
+      "allocation": {
+        "pool": "subject",
+        "charge": 1
+      },
+      "limitations": [
+        "Runner status: COMPLETED; assessment pending."
+      ],
+      "bundle": {
+        "path": "/Users/simon/work/personal/skill-study-private/concise-writing/development/20260928T003953195Z-cw-prep-claude-invocation-tighten-candidate-68222965-8844-4b1d-8813-fff677d4a9f2-46ivubal",
+        "inventory": {
+          "path": "/Users/simon/work/personal/skill-study-private/concise-writing/development/20260928T003953195Z-cw-prep-claude-invocation-tighten-candidate-68222965-8844-4b1d-8813-fff677d4a9f2-46ivubal.inventory.json",
+          "sha256": "036b47843e31b76d095d03d185e06c8e49cd8459333f5b2dd304ba8a77535a1c",
+          "version": "1"
+        },
+        "verified": true
+      },
+      "result": null
+    },
+    {
+      "attempt_id": "claude-invocation-01-invocation-tighten-original-2-1",
+      "case_id": "invocation-tighten",
+      "condition": "original",
+      "repetition": 2,
+      "attempt_number": 1,
+      "retry_of": null,
+      "manifest": {
+        "path": "skill-studies/concise-writing/preparation/manifests/claude-invocation-tighten-manifest.json",
+        "sha256": "d94df0fba3fb5a81f92df1c893b94756e3396be64767cee3b7326376fa384fab",
+        "version": "1",
+        "git_revision": "4dc370648a6a915546035847b2823a4bc5d57325"
+      },
+      "authorization": {
+        "artifact": {
+          "path": "skill-studies/concise-writing/protocol.md",
+          "sha256": "2e154c0faf2cf5068b8bb565d867afbcd7b38f06e5738e6cc98975955b9eb04a",
+          "version": "1",
+          "git_revision": "4dc370648a6a915546035847b2823a4bc5d57325"
+        },
+        "selector": "Batch: claude-invocation-01; order 10"
+      },
+      "run_id": "20260928T004040908Z-cw-prep-claude-invocation-tighten-original-10f1c113-0795-4200-bf87-425da92ad108-z2g8f440",
+      "allocation": {
+        "pool": "subject",
+        "charge": 1
+      },
+      "limitations": [
+        "Runner status: COMPLETED; assessment pending."
+      ],
+      "bundle": {
+        "path": "/Users/simon/work/personal/skill-study-private/concise-writing/development/20260928T004040908Z-cw-prep-claude-invocation-tighten-original-10f1c113-0795-4200-bf87-425da92ad108-z2g8f440",
+        "inventory": {
+          "path": "/Users/simon/work/personal/skill-study-private/concise-writing/development/20260928T004040908Z-cw-prep-claude-invocation-tighten-original-10f1c113-0795-4200-bf87-425da92ad108-z2g8f440.inventory.json",
+          "sha256": "35c8215e5e13097bf45f70a1d4c7344b2ccdf14eba0a4aac8f1a6d222e3843a9",
+          "version": "1"
+        },
+        "verified": true
+      },
+      "result": null
+    },
+    {
+      "attempt_id": "claude-invocation-01-invocation-write-original-2-1",
+      "case_id": "invocation-write",
+      "condition": "original",
+      "repetition": 2,
+      "attempt_number": 1,
+      "retry_of": null,
+      "manifest": {
+        "path": "skill-studies/concise-writing/preparation/manifests/claude-invocation-write-manifest.json",
+        "sha256": "a63d1e6ae57a3e685e5064db027a08aa525fee1af7b3a6b9e2cf37eb06f25382",
+        "version": "1",
+        "git_revision": "4dc370648a6a915546035847b2823a4bc5d57325"
+      },
+      "authorization": {
+        "artifact": {
+          "path": "skill-studies/concise-writing/protocol.md",
+          "sha256": "2e154c0faf2cf5068b8bb565d867afbcd7b38f06e5738e6cc98975955b9eb04a",
+          "version": "1",
+          "git_revision": "4dc370648a6a915546035847b2823a4bc5d57325"
+        },
+        "selector": "Batch: claude-invocation-01; order 11"
+      },
+      "run_id": "20260928T004131890Z-cw-prep-claude-invocation-write-original-de255f51-6db4-4e91-931a-dff4a60edaaf-gej75j87",
+      "allocation": {
+        "pool": "subject",
+        "charge": 1
+      },
+      "limitations": [
+        "Runner status: COMPLETED; assessment pending."
+      ],
+      "bundle": {
+        "path": "/Users/simon/work/personal/skill-study-private/concise-writing/development/20260928T004131890Z-cw-prep-claude-invocation-write-original-de255f51-6db4-4e91-931a-dff4a60edaaf-gej75j87",
+        "inventory": {
+          "path": "/Users/simon/work/personal/skill-study-private/concise-writing/development/20260928T004131890Z-cw-prep-claude-invocation-write-original-de255f51-6db4-4e91-931a-dff4a60edaaf-gej75j87.inventory.json",
+          "sha256": "4a8bbca8fd694e01b5c510c85e177e4a4710e3a070165a770c2664bf87340077",
+          "version": "1"
+        },
+        "verified": true
+      },
+      "result": null
+    },
+    {
+      "attempt_id": "claude-invocation-01-invocation-write-candidate-comprehensive-2-1",
+      "case_id": "invocation-write",
+      "condition": "candidate-comprehensive",
+      "repetition": 2,
+      "attempt_number": 1,
+      "retry_of": null,
+      "manifest": {
+        "path": "skill-studies/concise-writing/preparation/manifests/claude-invocation-write-manifest.json",
+        "sha256": "a63d1e6ae57a3e685e5064db027a08aa525fee1af7b3a6b9e2cf37eb06f25382",
+        "version": "1",
+        "git_revision": "4dc370648a6a915546035847b2823a4bc5d57325"
+      },
+      "authorization": {
+        "artifact": {
+          "path": "skill-studies/concise-writing/protocol.md",
+          "sha256": "2e154c0faf2cf5068b8bb565d867afbcd7b38f06e5738e6cc98975955b9eb04a",
+          "version": "1",
+          "git_revision": "4dc370648a6a915546035847b2823a4bc5d57325"
+        },
+        "selector": "Batch: claude-invocation-01; order 12"
+      },
+      "run_id": "20260928T004235821Z-cw-prep-claude-invocation-write-candidate-0749f7ad-94fa-47a3-bd82-58c3023ce4bc-msef1l34",
+      "allocation": {
+        "pool": "subject",
+        "charge": 1
+      },
+      "limitations": [
+        "Runner status: COMPLETED; assessment pending."
+      ],
+      "bundle": {
+        "path": "/Users/simon/work/personal/skill-study-private/concise-writing/development/20260928T004235821Z-cw-prep-claude-invocation-write-candidate-0749f7ad-94fa-47a3-bd82-58c3023ce4bc-msef1l34",
+        "inventory": {
+          "path": "/Users/simon/work/personal/skill-study-private/concise-writing/development/20260928T004235821Z-cw-prep-claude-invocation-write-candidate-0749f7ad-94fa-47a3-bd82-58c3023ce4bc-msef1l34.inventory.json",
+          "sha256": "2eb3a149976041b7081fddacbc116fb50b2eab231b67832ae6266bd81d1d4f56",
+          "version": "1"
+        },
+        "verified": true
+      },
+      "result": null
+    },
+    {
+      "attempt_id": "claude-invocation-01-invocation-nonprose-candidate-comprehensive-2-1",
+      "case_id": "invocation-nonprose",
+      "condition": "candidate-comprehensive",
+      "repetition": 2,
+      "attempt_number": 1,
+      "retry_of": null,
+      "manifest": {
+        "path": "skill-studies/concise-writing/preparation/manifests/claude-invocation-nonprose-manifest.json",
+        "sha256": "8d41e37909018bac933c81ad8ad3e5afce8d29e240c3601bf7bf7c8ab8f814c9",
+        "version": "1",
+        "git_revision": "4dc370648a6a915546035847b2823a4bc5d57325"
+      },
+      "authorization": {
+        "artifact": {
+          "path": "skill-studies/concise-writing/protocol.md",
+          "sha256": "2e154c0faf2cf5068b8bb565d867afbcd7b38f06e5738e6cc98975955b9eb04a",
+          "version": "1",
+          "git_revision": "4dc370648a6a915546035847b2823a4bc5d57325"
+        },
+        "selector": "Batch: claude-invocation-01; order 13"
+      },
+      "run_id": "20260928T004338885Z-cw-prep-claude-invocation-nonprose-candidate-ec528382-3adb-4c83-9bc6-82e8fec1e023-h_2j58p9",
+      "allocation": {
+        "pool": "subject",
+        "charge": 1
+      },
+      "limitations": [
+        "Runner status: COMPLETED; assessment pending."
+      ],
+      "bundle": {
+        "path": "/Users/simon/work/personal/skill-study-private/concise-writing/development/20260928T004338885Z-cw-prep-claude-invocation-nonprose-candidate-ec528382-3adb-4c83-9bc6-82e8fec1e023-h_2j58p9",
+        "inventory": {
+          "path": "/Users/simon/work/personal/skill-study-private/concise-writing/development/20260928T004338885Z-cw-prep-claude-invocation-nonprose-candidate-ec528382-3adb-4c83-9bc6-82e8fec1e023-h_2j58p9.inventory.json",
+          "sha256": "6c266e65523b1bc66cea15f159d60ccec7e68774fcf6b3e6d848024f9cab6cc6",
+          "version": "1"
+        },
+        "verified": true
+      },
+      "result": null
+    },
+    {
+      "attempt_id": "claude-invocation-01-invocation-nonprose-original-2-1",
+      "case_id": "invocation-nonprose",
+      "condition": "original",
+      "repetition": 2,
+      "attempt_number": 1,
+      "retry_of": null,
+      "manifest": {
+        "path": "skill-studies/concise-writing/preparation/manifests/claude-invocation-nonprose-manifest.json",
+        "sha256": "8d41e37909018bac933c81ad8ad3e5afce8d29e240c3601bf7bf7c8ab8f814c9",
+        "version": "1",
+        "git_revision": "4dc370648a6a915546035847b2823a4bc5d57325"
+      },
+      "authorization": {
+        "artifact": {
+          "path": "skill-studies/concise-writing/protocol.md",
+          "sha256": "2e154c0faf2cf5068b8bb565d867afbcd7b38f06e5738e6cc98975955b9eb04a",
+          "version": "1",
+          "git_revision": "4dc370648a6a915546035847b2823a4bc5d57325"
+        },
+        "selector": "Batch: claude-invocation-01; order 14"
+      },
+      "run_id": "20260928T004419542Z-cw-prep-claude-invocation-nonprose-original-542fd7c8-3c93-430f-a977-1862f5d176d5-6im_8e0t",
+      "allocation": {
+        "pool": "subject",
+        "charge": 1
+      },
+      "limitations": [
+        "Runner status: COMPLETED; assessment pending."
+      ],
+      "bundle": {
+        "path": "/Users/simon/work/personal/skill-study-private/concise-writing/development/20260928T004419542Z-cw-prep-claude-invocation-nonprose-original-542fd7c8-3c93-430f-a977-1862f5d176d5-6im_8e0t",
+        "inventory": {
+          "path": "/Users/simon/work/personal/skill-study-private/concise-writing/development/20260928T004419542Z-cw-prep-claude-invocation-nonprose-original-542fd7c8-3c93-430f-a977-1862f5d176d5-6im_8e0t.inventory.json",
+          "sha256": "26c7bfd723a3f4908ced57a57e8e9c8c88978a0bdea242c3cbd832e4015147e6",
+          "version": "1"
+        },
+        "verified": true
+      },
+      "result": null
+    },
+    {
+      "attempt_id": "claude-invocation-01-invocation-comments-original-2-1",
+      "case_id": "invocation-comments",
+      "condition": "original",
+      "repetition": 2,
+      "attempt_number": 1,
+      "retry_of": null,
+      "manifest": {
+        "path": "skill-studies/concise-writing/preparation/manifests/claude-invocation-comments-manifest.json",
+        "sha256": "5d40c8659d48e6b5401703ff90611343a4d97da3503c42a67404e75b37b69386",
+        "version": "1",
+        "git_revision": "4dc370648a6a915546035847b2823a4bc5d57325"
+      },
+      "authorization": {
+        "artifact": {
+          "path": "skill-studies/concise-writing/protocol.md",
+          "sha256": "2e154c0faf2cf5068b8bb565d867afbcd7b38f06e5738e6cc98975955b9eb04a",
+          "version": "1",
+          "git_revision": "4dc370648a6a915546035847b2823a4bc5d57325"
+        },
+        "selector": "Batch: claude-invocation-01; order 15"
+      },
+      "run_id": "20260928T004454866Z-cw-prep-claude-invocation-comments-original-b43b15a2-cbf5-4c67-8fc5-355898f9380a-jn6k4p5x",
+      "allocation": {
+        "pool": "subject",
+        "charge": 1
+      },
+      "limitations": [
+        "Runner status: COMPLETED; assessment pending."
+      ],
+      "bundle": {
+        "path": "/Users/simon/work/personal/skill-study-private/concise-writing/development/20260928T004454866Z-cw-prep-claude-invocation-comments-original-b43b15a2-cbf5-4c67-8fc5-355898f9380a-jn6k4p5x",
+        "inventory": {
+          "path": "/Users/simon/work/personal/skill-study-private/concise-writing/development/20260928T004454866Z-cw-prep-claude-invocation-comments-original-b43b15a2-cbf5-4c67-8fc5-355898f9380a-jn6k4p5x.inventory.json",
+          "sha256": "615ff2be3794d6e5549c0cb2841d63b32cc2a17a6f62b5123b7e72540e45f285",
+          "version": "1"
+        },
+        "verified": true
+      },
+      "result": null
+    },
+    {
+      "attempt_id": "claude-invocation-01-invocation-comments-candidate-comprehensive-2-1",
+      "case_id": "invocation-comments",
+      "condition": "candidate-comprehensive",
+      "repetition": 2,
+      "attempt_number": 1,
+      "retry_of": null,
+      "manifest": {
+        "path": "skill-studies/concise-writing/preparation/manifests/claude-invocation-comments-manifest.json",
+        "sha256": "5d40c8659d48e6b5401703ff90611343a4d97da3503c42a67404e75b37b69386",
+        "version": "1",
+        "git_revision": "4dc370648a6a915546035847b2823a4bc5d57325"
+      },
+      "authorization": {
+        "artifact": {
+          "path": "skill-studies/concise-writing/protocol.md",
+          "sha256": "2e154c0faf2cf5068b8bb565d867afbcd7b38f06e5738e6cc98975955b9eb04a",
+          "version": "1",
+          "git_revision": "4dc370648a6a915546035847b2823a4bc5d57325"
+        },
+        "selector": "Batch: claude-invocation-01; order 16"
+      },
+      "run_id": "20260928T004533905Z-cw-prep-claude-invocation-comments-candidate-f208ade3-c4f1-4eea-bbf6-ef8f9ce8398b-lr0ftv9o",
+      "allocation": {
+        "pool": "subject",
+        "charge": 1
+      },
+      "limitations": [
+        "Runner status: COMPLETED; assessment pending."
+      ],
+      "bundle": {
+        "path": "/Users/simon/work/personal/skill-study-private/concise-writing/development/20260928T004533905Z-cw-prep-claude-invocation-comments-candidate-f208ade3-c4f1-4eea-bbf6-ef8f9ce8398b-lr0ftv9o",
+        "inventory": {
+          "path": "/Users/simon/work/personal/skill-study-private/concise-writing/development/20260928T004533905Z-cw-prep-claude-invocation-comments-candidate-f208ade3-c4f1-4eea-bbf6-ef8f9ce8398b-lr0ftv9o.inventory.json",
+          "sha256": "1c44549bdddb4e5a3c9d9bfd234b159e2b6ef300f367eba98cef966f4ea860fc",
+          "version": "1"
+        },
+        "verified": true
+      },
+      "result": null
     }
   ]
 }

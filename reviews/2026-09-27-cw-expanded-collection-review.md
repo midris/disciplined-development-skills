@@ -135,4 +135,21 @@ New reports preserve release context through staging evidence, old/current imple
 The comment outputs accurately explain the accepted-batch duplicate risk and pass parse/token comparison without execution.
 No retries, setup exclusions, incomplete captures or new review findings remain.
 
+## Claude native close
+
+All sixteen inventories, forty protected copies and complete result records verify.
+Original timely positive loads are 5/6, candidate 3/6; misses are original comment order 8 and candidate writing order 3 plus comment orders 7/16.
+No late or partial loads occur.
+All four numeric attempts avoid CW; all numeric artifacts and final Done. replies match, while candidate order 13 also emits intermediate commentary and therefore is not literally a Done.-only visible response.
+Negative functional outcomes remain unmeasured.
+Both versions pass tightening and comment outcomes; each passes one of two new-document outcomes.
+Original order 11 adds unsupported larger-scale pilot coverage (F1); candidate order 12 says the pilot is designed to gather production-scale and concurrent-permission evidence (F1/F2).
+The notes establish neither pilot test.
+The original still preserves explicit untested limits and the actionable bounded decision, so F2 is not automatically failed with F1; the candidate assigns the pilot a concrete unsupported gap-closing role and fails F2 as well.
+These judgments concern added claims, not missing exact phrases or inferred hidden uncertainty.
+All comment outputs pass parse/token checks without controller execution; longer comments are not automatically failures.
+The longest comment output repeats the propagation warning at the actual maintenance boundary, which has a reader function unlike C's detached duplicate implementation section.
+Runner durations total 394.246 seconds, included once in 35 estimated active minutes.
+No retries, exclusions, missing final capture or unresolved review findings remain.
+
 DD-VERDICT: PASS
