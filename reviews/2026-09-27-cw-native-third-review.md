@@ -49,4 +49,32 @@ All sixteen supplement setups are valid; no repeated calls, exclusions or new sc
 The required hook suite passes: 263 passed, 3 environment skips.
 No checkpoint findings remain.
 
+## Final review
+
+The active session reviewed the complete study record against the governing spec, active plan, unchanged source contracts and collection rules.
+This is an author self-review, not an independent reviewer: the available delegation tool does not expose the verified read-only boundary required by CLAUDE.md.
+No new runner code or skill wording was introduced.
+The review covered authority, all forty provider/case/condition cells, input parity, model identities, selection timing, pass and failure evidence, negative-task denominator exclusion, semantic fidelity, inventories and current-state consumers.
+All forty cells contain exactly three observations, totaling 120; the sixteen supplements are separately identified rather than substituted for earlier runs.
+The original 104 result records, four indexes and four assessments are byte-identical to the completed collection commit.
+
+The combined summary reproduces the structured outcomes: Codex positive selection/function 9/9 per version; negative selection 3/3 original and 1/3 rewrite.
+Claude positive selection is 6/9 original and 5/9 rewrite; functional outcomes are 7/9 and 8/9, with each case shown separately.
+N2 original repetition 3 was checked in whole-document context: the staging-only qualification limits scale, but does not justify its broader interruption-correctness claim.
+Its concrete action gates still support F2, consistent with judging each factor independently.
+No reliability threshold, independent evaluation, body-versus-description attribution or adoption claim follows.
+
+Final readiness initially rejected removal of the required Work/Estimate/Basis forecast table.
+Restoring a zero-remaining-work table preserves the completed scope and satisfies the accepted document format; no parser, rule or model call changed.
+The status sweep also changed completed dispatch instructions at the opening into descriptions of the actual setup.
+
+Verification passes: sixteen study-batch assessment-readiness checks, six expanded reports and 120 committed result pins, and 1,170 local link paths in 21 changed Markdown files.
+All 120 bundle inventories match; 258 protected-input comparisons pass (218 initial plus 40 supplemental).
+All frozen subject inputs, scoring cards, live/frozen skills and runner files are unchanged.
+The effort ledger reconciles to 2,080 minutes: 2,040 at the prior close plus 40 supplemental minutes, with model waits included once.
+Combined subject spending is 256/256; no remaining subject call is authorized.
+Whitespace and the required hook suite pass; the three hook skips are environment-dependent.
+The protocol owns current decisions, the plan marks the supplement complete, and historical batch reports retain their original denominators.
+No findings remain.
+
 DD-VERDICT: PASS

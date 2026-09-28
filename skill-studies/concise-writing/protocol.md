@@ -2,22 +2,23 @@
 
 Format version: `1`
 Study ID: `concise-writing`
-Status: the initial 104-call comparison is complete; all sixteen owner-approved native third repetitions are retained and scored; batch reports are in preparation. Skill edits and adoption remain deferred.
+Status: all 120 expanded CW calls are retained and assessed, with three repetitions per selected scenario/condition/provider. Coverage acceptance, editing-base selection and adoption remain owner decisions.
 Current action: CW remains the first end-to-end study, followed by SSR.
 The owner accepted the scenario designs C, N1–N4 and revised E during the walkthrough, retained A/B, and removed tailored skill-editing/compression tests.
 The owner-requested [preparation review and remediation](../../reviews/2026-09-27-cw-suite-preparation-review.md) are complete.
 On 2026-09-27, the owner replied “approved, please continue” to the 104-call proposal: 72 ordinary calls followed by 32 native calls, raising the combined subject ceiling from 136 to 240.
 This authorizes both stages, runtime qualification, committed input/schedule freeze and collection after readiness, with zero automatic retries; it does not authorize a skill edit or adoption.
 The [preparation package](preparation/README.md) and [allocation forecast](testing-audit.md#proposed-sequence-and-allocation-forecast) define the approved scope.
-Current work: pin the supplemental results, publish the combined three-repetition assessment and verify the records; supplemental spending is 16/16.
+Current decision: review the complete cross-provider baselines and accept or revise the stated coverage limits before selecting an editing base. Supplemental spending is 16/16; no further subject calls are authorized.
 The owner clarified that three repetitions are the minimum and authorized the sixteen missing calls: “yeah, go ahead and make those. 2 is definitely not enough. I am pretty sure 3 is what we decided as a our minimum”.
 This raises combined subject capacity from 240 to 256 and the expanded CW scope from 104 to 120 calls.
 Three repetitions now apply to every selected CW scenario/condition/provider; this is a diagnostic minimum, not a reliability threshold or a replacement for the later fresh-wording authoring requirements.
-The existing sixteen-attempt native indexes and assessments remain immutable batch records; the two eight-call supplements identify repetition 3 and will support an explicitly labeled three-repetition summary.
-Use the same qualified CLI binaries, models, low effort, inputs, skills and CW-expanded-1 rules; verify identities before dispatch and stop for drift rather than substituting a model.
-Alternate the second rotation's condition order in the third; an odd number of repetitions cannot fully balance two-condition order.
+The sixteen-attempt native indexes and assessments remain immutable batch records; the two eight-call supplements identify repetition 3 and support the combined summary below.
+The supplement used the same qualified CLI binaries, models, low effort, inputs, skills and CW-expanded-1 rules, with identity checks before dispatch.
+The third repetition reversed the second rotation's condition order; an odd number cannot fully balance two-condition order.
 No automatic retries, replacements, new skill edits or adoption are authorized.
-Both runtimes are qualified, all 16 manifests pin input revision `96b6e383da39ea807a6ad49d4513cfc1d6f4cd33`, and all four batches pass collection readiness.
+The initial sixteen manifests pin input revision `96b6e383da39ea807a6ad49d4513cfc1d6f4cd33`; eight supplemental manifests pin `b167a70bd26a03543407d9bae208d78b13432f2b`.
+Both runtimes passed qualification and all six expanded batches passed readiness before dispatch.
 Every attempt records the committed manifest, invocation authority and runner revision.
 Establish and assess both providers' baselines before selecting CW edits; the existing rewrite remains an unchanged comparison condition.
 Plan: [active plan](../../plans/2026-09-11-model-driven-skill-testing.md#current-next-action)
@@ -93,10 +94,10 @@ Selected coverage maps to the skill’s named patterns below. These are contextu
 | Draft and local/global comparison (O4) | Unscored; retained traces record observed draft/comparison actions separately from F1–F3; absent trace evidence is unknown, not noncompliance. No particular diff tool or extra file is mandatory. |
 | Uncertainty handling (O5) | No qualifying observed uncertainty established. C includes an underexplained repeated warning, but difficulty or silence cannot establish an O5 opportunity. Keep-and-flag effectiveness remains unmeasured. |
 | Pressure and restraint | B exercises restraint; collected C adds a handoff deadline and prior line-level cleanup. Codex skill outputs preserve rationale lost by two controls; most Claude outputs preserve facts but retain unnecessary repetition. No percentage-cut requirement applies. |
-| Native invocation and new prose | Collected N1/N2/N4: timely positive loads are 6/6 per version on Codex, 5/6 original and 3/6 rewrite on Claude. N3 has one Codex rewrite over-trigger; every other negative avoids loading. Task outcomes are separate; see native assessments. |
-| Claude and current runtime | Collected 52 calls per provider on qualified Codex 0.157.1/Sol-low and Claude 2.1.283/Sonnet-low. Historical runtimes remain separate; all 104 setups are valid and retained. |
+| Native invocation and new prose | Three-repetition N1/N2/N4: timely positive loads are 9/9 per version on Codex, 6/9 original and 5/9 rewrite on Claude. N3 has two Codex rewrite over-triggers in three attempts; every other negative avoids loading. Task outcomes are separate; see the combined native table below. |
+| Claude and current runtime | Collected 60 calls per provider on qualified Codex 0.157.1/Sol-low and Claude 2.1.283/Sonnet-low. Historical runtimes remain separate; all 120 setups are valid and retained. |
 | Adding to an existing document | Collected E tests complete integration against source plus new notes. Contact recording is lost in one original output per provider and all three Claude rewrite outputs; every control retains it. A/B/C revise without supplied additions; N2 creates a new document. |
-| Code-comment writing/editing | Collected N4: all eight comment artifacts meet F1–F3 and executable-token/syntax checks. Codex loads 4/4; Claude original loads 1/2 and rewrite 0/2. N3 tests the separate comments-untouched selection boundary. |
+| Code-comment writing/editing | Collected N4: all twelve comment artifacts meet F1–F3 and executable-token/syntax checks. Codex loads 3/3 per version; Claude original loads 1/3 and rewrite 0/3. N3 tests the separate comments-untouched selection boundary. |
 | Response-only/detailed-response boundary | Untested. Defer a separate response-only stratum; the rewrite changes this trigger boundary, so resolve intended applicability and test it before adopting that description. |
 | Anchor changes and full orchestration | Untested. Defer SSR anchor repair and DD orchestration because they add separate skills and attribution questions; revisit before changing those relationships. |
 
@@ -401,6 +402,8 @@ Inputs: [claude-invocation-tighten-manifest](preparation/manifests/claude-invoca
 
 ### Native third repetition: codex-invocation-02
 
+Completed evidence: [codex-invocation-02 assessment](codex-invocation-02-assessment.md) and [attempt index](codex-invocation-02-run-index.json).
+
 Scope: eight sequential attempts; codex, four unchanged native cases × two skill versions × one added repetition.
 Authority: owner-approved sixteen-call supplement and minimum-three clarification at the protocol opening.
 Use CW-expanded-1 and the unchanged native cards, separating D1 from F1–F3; N3 functional outcomes remain unmeasured.
@@ -423,6 +426,8 @@ Inputs: [codex-invocation-tighten-third-manifest](preparation/manifests/codex-in
 | 8 | invocation-comments | original | 3 | `skill-studies/concise-writing/preparation/configs/codex-invocation-comments-original.json` |
 
 ### Native third repetition: claude-invocation-02
+
+Completed evidence: [claude-invocation-02 assessment](claude-invocation-02-assessment.md) and [attempt index](claude-invocation-02-run-index.json).
 
 Scope: eight sequential attempts; claude, four unchanged native cases × two skill versions × one added repetition.
 Authority: owner-approved sixteen-call supplement and minimum-three clarification at the protocol opening.
@@ -467,11 +472,11 @@ Combined accounting sources: closed SSR [pilot 01](../sweeping-stale-references/
 Dispatched calls are **256 subject, 0 evaluator, 0 authoring, 0 retry**; remaining outer capacity is **0 / 12 / 4 / 4** against the [active plan](../../plans/2026-09-11-model-driven-skill-testing.md#limits-and-information-boundaries). Both eight-call CW batches are spent. The owner authorized ten SSR expansion calls under ceiling 56; all ten are spent, including the excluded control, with no replacement or pool transfer. Comparison runner durations total 508.067 seconds; baseline durations remain 494.936 seconds, including setup and capture.
 Owner clarification after round-10 review: “the budget is just a guideline”. The 1,200-minute figure below remains the planning baseline, not a collection stop; invocation ceilings and the authorized SSR scope is unchanged. Retain elapsed effort and forecast variance to expose process cost.
 
-Current combined accounting: **2,075 active minutes booked; 875 minutes above the historical 1,200-minute planning guideline**.
+Current combined accounting: **2,080 active minutes booked; 880 minutes above the historical 1,200-minute planning guideline**.
 These are rounded effort estimates, not stopwatch measurements or a separately timed category breakdown.
 Between-turn owner wait is excluded; runner durations are included once.
-The initial 104 calls are spent; sixteen native third repetitions are authorized.
-The supplemental forecast is 40 active minutes including preparation, collection, assessment and review; model waits are included once.
+The initial 104 calls and sixteen native third repetitions are spent; combined subject accounting is 256/256.
+The supplemental work used 40 estimated active minutes against its 40-minute forecast; model waits are included once.
 
 | Work | Estimated active minutes |
 | --- | ---: |
@@ -542,7 +547,8 @@ The supplemental forecast is 40 active minutes including preparation, collection
 | Native third-repetition preparation, qualification and freeze | 10 |
 | Native Codex third-repetition collection and assessment | 15 |
 | Native Claude third-repetition collection and assessment | 10 |
-| **Total** | **2,075** |
+| Native third-repetition final verification, review and publication | 5 |
+| **Total** | **2,080** |
 
 SSR expansion is complete. The prior 55-minute remaining forecast closed at 50 estimated minutes, including the additional shell correction; all ten subject calls are spent.
 The combined batch/recovery effort is 135 estimated minutes (45 initial checkpoint, 40 isolation correction, 50 resumption), 45 above the original 90-minute allowance. Separate round-9 review effort remains in the combined ledger above.
@@ -558,7 +564,7 @@ The Opus comparison used 20 estimated active minutes against its 40-minute guide
 
 Initial fixture preparation used 55 estimated active minutes against its 60-minute midpoint forecast; subsequent owner-directed scope refinements are itemized above.
 The [preparation package](preparation/README.md) records inputs and validation; current acceptance and pending decisions are at the top of this protocol.
-The [allocation rationale](testing-audit.md#proposed-sequence-and-allocation-forecast) explains the 104-call scope; the approved schedules above govern dispatch.
+The [allocation rationale](testing-audit.md#proposed-sequence-and-allocation-forecast) explains the 120-call scope; both approved schedules are complete.
 Any fresh rewrite still needs an estimate after baseline diagnosis.
 
 The initial approved-scope forecast was 400 active minutes: 300 ordinary and 100 native.
@@ -567,17 +573,23 @@ Ordinary Claude collection, registration recovery and assessment used 80 estimat
 Native Codex and Claude collection/assessment each used 35 estimated minutes, including 748.348 and 394.246 seconds of runner duration respectively.
 Collection/assessment totaled 230 estimated minutes, 170 below the initial 400-minute forecast; runtime qualification/freeze and final review/publication are separately booked as 25 and 15 minutes.
 All 4,964.922 seconds of runner duration are included once, not added to those estimates.
-The remaining authorized-work forecast is:
+The authorized collection and assessment are complete; remaining effort for this scope is zero.
 
 | Work | Estimate | Basis |
 | --- | ---: | --- |
-| Final verification and review | 5 | Evidence and three-repetition reconciliation. |
-| **Total** | **5** | Collection and scoring are booked; final record verification remains. |
+| Remaining authorized collection and assessment | 0 | All 120 attempts and final review are complete. |
+| **Total** | **0** | New work requires its own estimate and authority. |
+
+The supplemental runner durations are 336.559 seconds for Codex and 171.913 seconds for Claude, included once in the 15- and 10-minute collection/assessment estimates.
+Preparation and final review/publication account for the other 15 supplemental minutes.
+A later diagnosis or rewrite needs its own bounded estimate and any new model-call authorization.
 
 ## Results and decision
 
-The initial 104-call scope is complete, with no unattempted slots, retries, setup exclusions or unresolved judgments.
-The owner-required third native repetitions must complete before accepting the combined baseline; the findings below retain their original denominators until the supplement is assessed.
+The full 120-call scope is complete, with no unattempted slots, retries, setup exclusions or unresolved judgments.
+Ordinary and native cases now each have three repetitions per selected condition/provider.
+The native summary combines each original two-repetition batch with its separately frozen third repetition on the same qualified runtime and unchanged inputs; it does not rewrite historical batch scores.
+These later observations were not interleaved with the initial repetitions, and the models expose no immutable backend revision.
 The existing rewrite is not uniformly stronger: it passes all ordinary Codex attempts, but loses required contact recording in every Claude E attempt and misses more Claude positive native loads in these samples.
 Both versions show Claude weaknesses in whole-document cleanup and unsupported new-report claims.
 The next owner decision is whether these baselines and explicit coverage limits are sufficient, then which observed failure to target and which version to use as the editing base.
@@ -585,14 +597,37 @@ A focused investigation should separate invocation misses from output fidelity a
 Response-only applicability, full orchestration, plan/spec generation and conditional O5 remain outside demonstrated effectiveness.
 SSR stays parked until CW's cycle is settled.
 
-Expanded native Claude: [assessment and evidence](claude-invocation-01-assessment.md) records timely positive loads of 5/6 original and 3/6 rewrite, with functional outcomes 5/6 each.
-Both versions avoid CW on both numeric attempts; these outcomes are unmeasured functionally.
-The two new-report failures occur after loading and add unsupported pilot-validation claims.
-All comment artifacts pass even when the model misses loading.
+### Combined native results: three repetitions
 
-Expanded native Codex: [assessment and evidence](codex-invocation-01-assessment.md) records 12/12 timely positive loads and functional passes.
-Original avoids loading in 2/2 numeric-only attempts; candidate in 1/2.
-All four numeric outputs are correct, but their functional CW outcomes are unmeasured.
+D1 means timely loading for N1/N2/N4 and appropriate non-loading for N3.
+N3 task correctness is descriptive and supplies no functional CW outcome.
+
+| Provider / case | Original D1 | Rewrite D1 | Original functional | Rewrite functional |
+| --- | --- | --- | --- | --- |
+| Codex N1: tightening | 3/3 | 3/3 | 3/3 | 3/3 |
+| Codex N2: new update | 3/3 | 3/3 | 3/3 | 3/3 |
+| Codex N3: numeric only | 3/3 | 1/3 | Not measured | Not measured |
+| Codex N4: code comments | 3/3 | 3/3 | 3/3 | 3/3 |
+| Claude N1: tightening | 3/3 | 3/3 | 3/3 | 3/3 |
+| Claude N2: new update | 2/3 | 2/3 | 1/3 | 2/3 |
+| Claude N3: numeric only | 3/3 | 3/3 | Not measured | Not measured |
+| Claude N4: code comments | 1/3 | 0/3 | 3/3 | 3/3 |
+
+Codex loads and passes all positive tasks: 9/9 per version.
+Its rewrite loads prematurely in two of three numeric-only tasks; the original avoids loading in all three.
+All six Codex numeric edits are correct, independently of selection.
+Evidence: [first two repetitions](codex-invocation-01-assessment.md) and [third repetition](codex-invocation-02-assessment.md).
+
+Claude timely positive loads total 6/9 original and 5/9 rewrite; functional outcomes total 7/9 and 8/9 respectively.
+Both versions avoid CW on all three numeric attempts.
+The new-report failures add unsupported claims: two after loading in the initial batch, and one without loading in the third original run.
+All six comment artifacts pass despite five missed loads.
+Extra status messages violate the numeric task's Done-only response in the earlier rewrite repetition 2 and both repetition-3 runs; final.txt alone would hide those unscored task-compliance observations.
+Evidence: [first two repetitions](claude-invocation-01-assessment.md) and [third repetition](claude-invocation-02-assessment.md).
+
+These small samples reveal repeated failure modes, not population reliability or a causal description/body effect; the descriptions differ between versions.
+
+### Ordinary comparisons and historical evidence
 
 Expanded ordinary Claude: [assessment and evidence](claude-expanded-01-assessment.md) records 36 valid attempts.
 For A/B/C/E respectively, control passes 3/3, 2/3, 0/3 and 3/3; original passes 3/3, 3/3, 1/3 and 2/3; comprehensive passes 3/3, 3/3, 1/3 and 0/3.
