@@ -19,6 +19,10 @@ Existing qualified native description/body transport remains applicable to uncha
 Retained preflight: `/Users/simon/work/personal/skill-study-private/concise-writing/development/native-third-preflight-20260927/`.
 Its sibling inventory covers 97 entries, SHA-256 `ccc1258415394d6dcc09f5ed71aa11c80d0b22bbb6a69e3e52638549dc0e79f8`; recomputation matches.
 
-Status: runtime and schedule preparation verified; commit input authority, then freeze manifests and pass both collection-readiness checks before dispatch.
-No supplemental model calls dispatched.
+Eight new manifests pin the committed input revision b167a70; all supplied source/configuration bytes, criteria and policy match their previous manifests.
+Both new batches pass collection readiness.
+The first readiness check rejected a semantically equivalent inclusion sentence; using the checker-recognized include-all-valid-setup/no-retry form resolves it without changing policy or subject inputs.
+The preparation review checks sixteen unique provider/case/version cells, repetition 3, unchanged runtime and score semantics, separate invocation/function outcomes and the 256-call ceiling.
+No findings remain; no supplemental calls have yet been dispatched.
 
+DD-VERDICT: PASS

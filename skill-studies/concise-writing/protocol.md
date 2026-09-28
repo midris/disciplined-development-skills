@@ -2,14 +2,14 @@
 
 Format version: `1`
 Study ID: `concise-writing`
-Status: the initial 104-call comparison is complete; sixteen owner-approved native third repetitions are being prepared. Skill edits and adoption remain deferred.
+Status: the initial 104-call comparison is complete; sixteen owner-approved native third repetitions are frozen and ready for collection. Skill edits and adoption remain deferred.
 Current action: CW remains the first end-to-end study, followed by SSR.
 The owner accepted the scenario designs C, N1–N4 and revised E during the walkthrough, retained A/B, and removed tailored skill-editing/compression tests.
 The owner-requested [preparation review and remediation](../../reviews/2026-09-27-cw-suite-preparation-review.md) are complete.
 On 2026-09-27, the owner replied “approved, please continue” to the 104-call proposal: 72 ordinary calls followed by 32 native calls, raising the combined subject ceiling from 136 to 240.
 This authorizes both stages, runtime qualification, committed input/schedule freeze and collection after readiness, with zero automatic retries; it does not authorize a skill edit or adoption.
 The [preparation package](preparation/README.md) and [allocation forecast](testing-audit.md#proposed-sequence-and-allocation-forecast) define the approved scope.
-Current work: freeze and collect the [native third-repetition schedule](preparation/native-third-schedule.json), then reassess each native scenario with three observations per provider/version; supplemental spending is 0/16.
+Current work: collect the [native third-repetition schedule](preparation/native-third-schedule.json), then reassess each native scenario with three observations per provider/version; supplemental spending is 0/16.
 The owner clarified that three repetitions are the minimum and authorized the sixteen missing calls: “yeah, go ahead and make those. 2 is definitely not enough. I am pretty sure 3 is what we decided as a our minimum”.
 This raises combined subject capacity from 240 to 256 and the expanded CW scope from 104 to 120 calls.
 Three repetitions now apply to every selected CW scenario/condition/provider; this is a diagnostic minimum, not a reliability threshold or a replacement for the later fresh-wording authoring requirements.
@@ -404,7 +404,8 @@ Inputs: [claude-invocation-tighten-manifest](preparation/manifests/claude-invoca
 Scope: eight sequential attempts; codex, four unchanged native cases × two skill versions × one added repetition.
 Authority: owner-approved sixteen-call supplement and minimum-three clarification at the protocol opening.
 Use CW-expanded-1 and the unchanged native cards, separating D1 from F1–F3; N3 functional outcomes remain unmeasured.
-Include every valid behavioral outcome; no retries or favorable replacements.
+Include all valid-setup executions regardless of outcome; report invalid/unresolved setup and unattempted slots separately.
+No automatic retry or replacement.
 Recheck runtime identities and the declared login-shell gates; retain and verify each stopped bundle before the next dispatch.
 Stop on uncertain charges, preservation failures, contamination, setup defects or input/runtime drift.
 [Runtime qualification](preparation/runtime-qualification.md) supplies the unchanged execution boundary; supplemental checks and assessment are recorded in the [review](../../reviews/2026-09-27-cw-native-third-review.md).
@@ -426,7 +427,8 @@ Inputs: [codex-invocation-tighten-third-manifest](preparation/manifests/codex-in
 Scope: eight sequential attempts; claude, four unchanged native cases × two skill versions × one added repetition.
 Authority: owner-approved sixteen-call supplement and minimum-three clarification at the protocol opening.
 Use CW-expanded-1 and the unchanged native cards, separating D1 from F1–F3; N3 functional outcomes remain unmeasured.
-Include every valid behavioral outcome; no retries or favorable replacements.
+Include all valid-setup executions regardless of outcome; report invalid/unresolved setup and unattempted slots separately.
+No automatic retry or replacement.
 Recheck runtime identities and the declared login-shell gates; retain and verify each stopped bundle before the next dispatch.
 Stop on uncertain charges, preservation failures, contamination, setup defects or input/runtime drift.
 [Runtime qualification](preparation/runtime-qualification.md) supplies the unchanged execution boundary; supplemental checks and assessment are recorded in the [review](../../reviews/2026-09-27-cw-native-third-review.md).
@@ -461,7 +463,7 @@ Combined accounting sources: closed SSR [pilot 01](../sweeping-stale-references/
 Dispatched calls are **240 subject, 0 evaluator, 0 authoring, 0 retry**; remaining outer capacity is **16 / 12 / 4 / 4** against the [active plan](../../plans/2026-09-11-model-driven-skill-testing.md#limits-and-information-boundaries). Both eight-call CW batches are spent. The owner authorized ten SSR expansion calls under ceiling 56; all ten are spent, including the excluded control, with no replacement or pool transfer. Comparison runner durations total 508.067 seconds; baseline durations remain 494.936 seconds, including setup and capture.
 Owner clarification after round-10 review: “the budget is just a guideline”. The 1,200-minute figure below remains the planning baseline, not a collection stop; invocation ceilings and the authorized SSR scope is unchanged. Retain elapsed effort and forecast variance to expose process cost.
 
-Current combined accounting: **2,040 active minutes booked; 840 minutes above the historical 1,200-minute planning guideline**.
+Current combined accounting: **2,050 active minutes booked; 850 minutes above the historical 1,200-minute planning guideline**.
 These are rounded effort estimates, not stopwatch measurements or a separately timed category breakdown.
 Between-turn owner wait is excluded; runner durations are included once.
 The initial 104 calls are spent; sixteen native third repetitions are authorized.
@@ -533,7 +535,8 @@ The supplemental forecast is 40 active minutes including preparation, collection
 | CW native collection: first Claude rotation and checkpoint | 15 |
 | CW native collection: second Claude rotation, verification and assessment | 20 |
 | CW final cross-provider review, accounting reconciliation and publication | 15 |
-| **Total** | **2,040** |
+| Native third-repetition preparation, qualification and freeze | 10 |
+| **Total** | **2,050** |
 
 SSR expansion is complete. The prior 55-minute remaining forecast closed at 50 estimated minutes, including the additional shell correction; all ten subject calls are spent.
 The combined batch/recovery effort is 135 estimated minutes (45 initial checkpoint, 40 isolation correction, 50 resumption), 45 above the original 90-minute allowance. Separate round-9 review effort remains in the combined ledger above.
@@ -562,9 +565,9 @@ The remaining authorized-work forecast is:
 
 | Work | Estimate | Basis |
 | --- | ---: | --- |
-| Native third repetitions and assessment | 30 | Sixteen calls across the unchanged qualified providers. |
-| Freeze, verification and final review | 10 | Committed authority, evidence and three-repetition reconciliation. |
-| **Total** | **40** | Sixteen approved calls; no new skill authoring. |
+| Native third repetitions and assessment | 25 | Sixteen calls across the unchanged qualified providers. |
+| Final verification and review | 5 | Evidence and three-repetition reconciliation. |
+| **Total** | **30** | Sixteen approved calls; ten preparation minutes already booked. |
 
 ## Results and decision
 
