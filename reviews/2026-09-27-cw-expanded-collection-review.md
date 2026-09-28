@@ -152,4 +152,34 @@ The longest comment output repeats the propagation warning at the actual mainten
 Runner durations total 394.246 seconds, included once in 35 estimated active minutes.
 No retries, exclusions, missing final capture or unresolved review findings remain.
 
+## Final accounting review finding and resolution
+
+The all-batch readiness sweep found SSR's old 136-call accounting paragraph still labeled current and implicitly borrowing the now-240-call plan ceiling.
+This made historical SSR readiness fail allocation reconciliation even though its retained calls were unchanged.
+The class is a closed-study ledger inheriting a later study's live limit.
+The SSR record now explicitly names the historical 136-call ceiling and closing checkpoint, and links CW for all subsequent current accounting.
+This preserves its fixed evidence projection without duplicating a changing current balance or changing the runner.
+The other protocol already owns the live 240-call balance; both accounting sections were checked for the same class.
+
+## Final cross-provider review and verification
+
+Reviewed the complete selected scope against the active plan and frozen whole-document rules, including failures, successful controls, native timing, negative non-measurement and conditional process limits.
+All 104 attempts are charged exactly once: 36 ordinary plus 16 native per provider; combined subject spending is 240/240.
+All four expanded inventories were recomputed: 104 bundles and 218 protected input comparisons pass.
+All four reports and 104 committed result pins verify; all fourteen historical/current batch assessment-readiness checks pass after the accounting correction.
+All 1,053 local link paths in eighteen changed Markdown documents resolve, with heading anchors also checked by the document checker.
+The effort ledger sums to 2,040 estimated active minutes, 840 above the planning guideline; runner durations are included once.
+The hook suite passes 263 tests with three environment skips.
+Frozen subject inputs, scoring cards, skill snapshots, live skills and runner code remain unchanged from invocation authority.
+
+The protocol facet map and result sections now reflect actual collection, with partial/unmeasured and deliberately deferred facets explicit.
+The plan marks collection/comparison complete but leaves coverage acceptance, editing-base selection, fresh authoring and adoption open.
+Completed report dispositions link to the protocol instead of issuing stale dispatch instructions.
+The audit distinguishes its historical baseline inspection from the completed expanded evidence.
+The closed SSR ledger has explicit historical limits rather than inheriting a later live allocation.
+No independent or held-out review, causal skill effect, population reliability or full end-to-end authoring/adoption success is claimed.
+No further model calls are authorized by the completed allocation.
+
+No findings remain after the accounting class correction and re-review.
+
 DD-VERDICT: PASS

@@ -245,6 +245,5 @@ Whole-file UTF-8 word counts (`wc -w`); flags do not determine pass/fail.
 
 ## Disposition
 
-Complete the approved native Codex and Claude batches before selecting CW edits.
-The immediate diagnostic leads are distinguishing useful reinforcement from detached repetition and preserving concrete added actions during integration.
-Adoption remains deferred; these results do not authorize a skill change or additional calls.
+This ordinary batch is complete; the [protocol opening](protocol.md) owns current work and owner decisions.
+Keep provider, runtime and native/explicit-load strata separate; adoption remains deferred.

@@ -225,7 +225,5 @@ Whole-file UTF-8 word counts (`wc -w`); flags do not determine pass/fail.
 
 ## Disposition
 
-This closes only the ordinary Codex batch.
-Continue the approved ordinary Claude batch and then both native batches before choosing CW edits.
-Keep these results separate from historical CLI/model strata and report provider differences without pooling.
-Adoption remains deferred.
+This ordinary batch is complete; the [protocol opening](protocol.md) owns current work and owner decisions.
+Keep provider, runtime and native/explicit-load strata separate; adoption remains deferred.

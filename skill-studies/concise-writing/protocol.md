@@ -2,16 +2,16 @@
 
 Format version: `1`
 Study ID: `concise-writing`
-Status: historical comparisons and both expanded ordinary batches are complete. The approved native batches remain in collection scope; adoption and skill edits remain deferred. Results below distinguish providers, cases and skill conditions.
+Status: all 104 approved expanded calls are complete and assessed across Codex and Claude. Coverage acceptance, editing-base selection, skill edits and adoption remain owner decisions. Results below separate providers, cases, invocation and functional outcomes.
 Current action: CW remains the first end-to-end study, followed by SSR.
 The owner accepted the scenario designs C, N1–N4 and revised E during the walkthrough, retained A/B, and removed tailored skill-editing/compression tests.
 The owner-requested [preparation review and remediation](../../reviews/2026-09-27-cw-suite-preparation-review.md) are complete.
 On 2026-09-27, the owner replied “approved, please continue” to the 104-call proposal: 72 ordinary calls followed by 32 native calls, raising the combined subject ceiling from 136 to 240.
 This authorizes both stages, runtime qualification, committed input/schedule freeze and collection after readiness, with zero automatic retries; it does not authorize a skill edit or adoption.
 The [preparation package](preparation/README.md) and [allocation forecast](testing-audit.md#proposed-sequence-and-allocation-forecast) define the approved scope.
-Current work: ordinary [Codex](codex-expanded-01-assessment.md) and [Claude](claude-expanded-01-assessment.md) are assessed; native [Codex](codex-invocation-01-assessment.md) is assessed; collect native Claude next; expanded spending is 104/104.
+Current work: review the completed [ordinary Codex](codex-expanded-01-assessment.md), [ordinary Claude](claude-expanded-01-assessment.md), [native Codex](codex-invocation-01-assessment.md) and [native Claude](claude-invocation-01-assessment.md) evidence and accept or revise the remaining coverage limits before selecting edits; expanded spending is 104/104.
 Both runtimes are qualified, all 16 manifests pin input revision `96b6e383da39ea807a6ad49d4513cfc1d6f4cd33`, and all four batches pass collection readiness.
-The manifest/authority commit must be recorded on each attempt before its dispatch.
+Every attempt records the committed manifest, invocation authority and runner revision.
 Establish and assess both providers' baselines before selecting CW edits; the existing rewrite remains an unchanged comparison condition.
 Plan: [active plan](../../plans/2026-09-11-model-driven-skill-testing.md#current-next-action)
 General spec: [testing framework](../../plans/specs/2026-09-11-model-driven-skill-testing-framework.md)
@@ -21,8 +21,8 @@ General spec: [testing framework](../../plans/specs/2026-09-11-model-driven-skil
 Original: [checked-in skill](../../skills/concise-writing/SKILL.md), preserved as [study original](cases/skill-original/SKILL.md), from Git `99b3302f047a9b000ff804292d8746dd8bf43e42`, SHA-256 `4d12a2eb475c6b2ef57e2300c8c07af3f59c1e07b2b82695a3b7669eee1d6d72`. Complete supplied text: 860 words by `wc -w`.
 Read the complete skill and its [composition map](../../ARCHITECTURE.md#composition-boundaries); relevant rationale and plan-writing companions were inspected for scope. The original snapshot matches its source bytes; it is not a new skill version.
 
-Owner’s intended use: turn existing agent output that is verbose or voluminous into concise, clear, effective material that is easier for the owner to consume. The completed batches cover ordinary prose editing. This contrasts with SSR’s repository repairs and tests semantic assessment through the same session workflow.
-The completed batches used standalone prose editing and excluded skill/reference authoring, plan/spec composition, generation of new decision rationale, externally referenced anchor changes, discovery and orchestration. Those cases were not needed to test the selected core editing behavior. The owner-selected end-to-end study adds prospective document and invocation coverage; it does not broaden the claims of the completed batches.
+Owner’s intended use: turn existing agent output that is verbose or voluminous into concise, clear, effective material that is easier for the owner to consume. The expanded batches cover ordinary editing, document additions, new updates, code comments and native selection. This contrasts with SSR’s repository repairs and tests semantic assessment through the same session workflow.
+Historical batches covered standalone prose editing only. Expanded results add the selected document and invocation cases; they do not validate skill/reference authoring, plan/spec composition, new decision-rationale generation, anchor changes or full orchestration.
 Tailored skill-editing tests were removed during suite review; those edits remain supervised and paired with writing-skills. Existing rationale in supplied prose must still survive.
 Old CW frameworks, fixtures, rubrics and results remain superseded and were not used to define this contract. Historical reuse, if later selected, requires revalidation under the current spec.
 
@@ -78,32 +78,32 @@ Selected coverage maps to the skill’s named patterns below. These are contextu
 | Over-sectioning | A: improve fragmented headings/lead-ins and reading order; permit multiple effective layouts. |
 | Unrequested elaboration | A: distinguish unrequested advice/speculation from supplied facts and useful explanation; do not introduce unsupported elaboration or remove decision-relevant information. |
 | Emphasis/hedge inflation | A: reduce empty emphasis and inflated qualifiers without weakening real uncertainty or important warnings. |
-| Closing recaps / navigation | Partial: B exercises a short decision recap, not long-document lookup. Proposed C adds separate entry points and useful repeated warnings; no recap is mandatory in every edit. |
+| Closing recaps / navigation | B covers a short decision recap; collected C covers separate operational entry points and useful warnings. Seven Claude C outputs retain a detached duplicate mechanism section and fail F3; useful repeated safeguards are accepted. |
 | Deliberate repetition | A and B: preserve reinforcement where a key point is useful in two reading contexts; do not demand identical wording or placement. |
 | Orienting context | A and B: preserve the connections a reader needs to follow the argument or sequence. |
 | Rationale | A and B: preserve supplied reasons and trade-offs; no requirement to invent a new decision rationale. |
-| Spec/plan completeness | Untested; defer full plan/spec composition while preserving the supplied requirements in proposed C/E. Revisit before claiming the lean-plan-writing interaction or changing that pairing. |
-| Draft and local/global comparison (O4) | Unscored historically. Prospectively record observed draft/comparison actions separately from F1–F3; absent trace evidence is unknown, not noncompliance. No particular diff tool or extra file is mandatory. |
-| Uncertainty handling (O5) | No qualifying observed uncertainty established. Proposed C includes an underexplained repeated warning; record keep-and-flag only if uncertainty is expressed, and never infer it from task difficulty. Report no opportunity when the editor resolves the ambiguity. |
-| Pressure and restraint | B exercises restraint without explicit deadline/sunk-effort pressure. Proposed C adds a realistic handoff deadline and prior line-level cleanup; it must not command removal of useful content or require a percentage cut. |
-| Native invocation and new prose | Untested: all historical skill runs explicitly load CW. Proposed N1/N2 test natural tightening and prose generation; N3 tests an adjacent numeric-only change and N4 positive comment editing. Separate load timing, task quality and negative applicability. |
-| Claude and current runtime | Untested on Claude; historical Codex CLI 0.154.0 results remain separate. Repeat A/B and new C on both qualified runtimes with contemporaneous conditions. |
-| Adding to an existing document | Draft E integrates new requirements into B’s existing briefing, with partial overlap and a new conditional workflow. Assess the complete updated document against both inputs. A/B/C revise without supplied additions; N2 creates a new document. |
-| Code-comment writing/editing | Draft N4 tests native selection and useful comments around a retry/acknowledgement boundary while executable code is preserved. N3 supplies the negative counterpart with comments left untouched. These cases have no collected observations yet. |
+| Spec/plan completeness | Untested; defer full plan/spec composition. Collected C/E exercise supplied requirements, not the full composition workflow. Revisit before claiming the lean-plan-writing interaction or changing that pairing. |
+| Draft and local/global comparison (O4) | Unscored; retained traces record observed draft/comparison actions separately from F1–F3; absent trace evidence is unknown, not noncompliance. No particular diff tool or extra file is mandatory. |
+| Uncertainty handling (O5) | No qualifying observed uncertainty established. C includes an underexplained repeated warning, but difficulty or silence cannot establish an O5 opportunity. Keep-and-flag effectiveness remains unmeasured. |
+| Pressure and restraint | B exercises restraint; collected C adds a handoff deadline and prior line-level cleanup. Codex skill outputs preserve rationale lost by two controls; most Claude outputs preserve facts but retain unnecessary repetition. No percentage-cut requirement applies. |
+| Native invocation and new prose | Collected N1/N2/N4: timely positive loads are 6/6 per version on Codex, 5/6 original and 3/6 rewrite on Claude. N3 has one Codex rewrite over-trigger; every other negative avoids loading. Task outcomes are separate; see native assessments. |
+| Claude and current runtime | Collected 52 calls per provider on qualified Codex 0.157.1/Sol-low and Claude 2.1.283/Sonnet-low. Historical runtimes remain separate; all 104 setups are valid and retained. |
+| Adding to an existing document | Collected E tests complete integration against source plus new notes. Contact recording is lost in one original output per provider and all three Claude rewrite outputs; every control retains it. A/B/C revise without supplied additions; N2 creates a new document. |
+| Code-comment writing/editing | Collected N4: all eight comment artifacts meet F1–F3 and executable-token/syntax checks. Codex loads 4/4; Claude original loads 1/2 and rewrite 0/2. N3 tests the separate comments-untouched selection boundary. |
 | Response-only/detailed-response boundary | Untested. Defer a separate response-only stratum; the rewrite changes this trigger boundary, so resolve intended applicability and test it before adopting that description. |
 | Anchor changes and full orchestration | Untested. Defer SSR anchor repair and DD orchestration because they add separate skills and attribution questions; revisit before changing those relationships. |
 
-Two accepted cases combine the existing facets. Both use newly constructed fictional prose, not observed agent outputs. Their current criterion cards apply three whole-document factors and record length separately. The [worked examples](qualification.md) demonstrate current pass/fail boundaries; they are neither independent validation nor model observations.
+A/B and the six expanded cases use constructed development fixtures, not retained real-world agent outputs. Their current criterion cards apply three whole-document factors and record length separately. The [worked examples](qualification.md) demonstrate current pass/fail boundaries; they are neither independent validation nor model observations.
 
 | Case ID / definition | Membership | Covered obligations | Exposure | Limits |
 |---|---|---|---|---|
 | A: [agent-recommendation](cases/agent-recommendation/assessment.md) | completed; retain | O1–O3 assessed; O4/O5 unscored | development | Reader needs the recommendation, reasons, caveats and next action. Include both purposeless restatement and useful reinforcement, plus separated duplication and a real structural difficulty. Cover other cut patterns only where they fit naturally. |
 | B: [effective-briefing](cases/effective-briefing/assessment.md) | completed; retain | O1–O3 assessed; O4/O5 unscored | development | Useful context, explanation and repetition must not be damaged by unnecessary compression. An edit must retain the source’s effectiveness; unchanged length is acceptable and increased length is flagged. |
 
-The additions below have [prepared inputs, criteria and configurations](preparation/README.md), but no collected observations; provider-specific collection manifests below identify their freeze.
+The additions below have completed observations linked in Results; [inputs, criteria and configurations](preparation/README.md) and provider-specific manifests identify the collection freeze.
 The [audit](testing-audit.md#proposed-sequence-and-allocation-forecast) gives their sequence, evidence requirements and allocation forecast.
 
-| Prepared case | Distinct failure opportunity | Required evidence / boundary |
+| Expanded case | Distinct failure opportunity | Required evidence / boundary |
 | --- | --- | --- |
 | C: [long operational handoff](cases/long-handoff/assessment.md) | A prior local cleanup still leaves scattered duplication; a deadline encourages deleting a warning repeated where different readers enter the procedure. | Whole-document F1–F3, lookups/action branches, conditional uncertainty observation, and process traces. Keep operational requirements and rationale; no mandatory reduction. |
 | N1: [natural tightening](cases/invocation-tighten/assessment.md) | Reuse A without naming CW or directing a skill read; the model may edit successfully while skipping discovery. | Catalog/description delivery and full-body load timing, with A's outcome assessed separately. |
@@ -362,6 +362,8 @@ Inputs: [codex-invocation-tighten-manifest](preparation/manifests/codex-invocati
 
 ### Expanded collection: claude-invocation-01
 
+Results: [completed native Claude assessment](claude-invocation-01-assessment.md), based on the [current attempt index](claude-invocation-01-run-index.json).
+
 Scope: 16 sequential attempts; claude, four native tasks × two conditions × two repetitions.
 Authority: included in the owner-approved 104-call allocation recorded at the top of this protocol.
 Include all valid-setup executions regardless of outcome; report invalid/unresolved setup and unattempted slots separately.
@@ -408,11 +410,11 @@ Combined accounting sources: closed SSR [pilot 01](../sweeping-stale-references/
 Dispatched calls are **240 subject, 0 evaluator, 0 authoring, 0 retry**; remaining outer capacity is **0 / 12 / 4 / 4** against the [active plan](../../plans/2026-09-11-model-driven-skill-testing.md#limits-and-information-boundaries). Both eight-call CW batches are spent. The owner authorized ten SSR expansion calls under ceiling 56; all ten are spent, including the excluded control, with no replacement or pool transfer. Comparison runner durations total 508.067 seconds; baseline durations remain 494.936 seconds, including setup and capture.
 Owner clarification after round-10 review: “the budget is just a guideline”. The 1,200-minute figure below remains the planning baseline, not a collection stop; invocation ceilings and the authorized SSR scope is unchanged. Retain elapsed effort and forecast variance to expose process cost.
 
-Current combined accounting: **2,025 active minutes booked; 825 minutes above the historical 1,200-minute planning guideline**.
+Current combined accounting: **2,040 active minutes booked; 840 minutes above the historical 1,200-minute planning guideline**.
 These are rounded effort estimates, not stopwatch measurements or a separately timed category breakdown.
 Between-turn owner wait is excluded; runner durations are included once.
-All 104 approved calls are spent; forecast roughly 15 further active minutes for final cross-provider review and reconciliation.
-This is an updated effort estimate, not an additional invocation authorization or a reliability claim.
+All 104 approved calls are spent and the collection review is complete.
+No further collection or rewrite is authorized; any next experiment needs its own scope and estimate.
 
 | Work | Estimated active minutes |
 | --- | ---: |
@@ -479,7 +481,8 @@ This is an updated effort estimate, not an additional invocation authorization o
 | CW native collection: second Codex rotation, verification and assessment | 20 |
 | CW native collection: first Claude rotation and checkpoint | 15 |
 | CW native collection: second Claude rotation, verification and assessment | 20 |
-| **Total** | **2,025** |
+| CW final cross-provider review, accounting reconciliation and publication | 15 |
+| **Total** | **2,040** |
 
 SSR expansion is complete. The prior 55-minute remaining forecast closed at 50 estimated minutes, including the additional shell correction; all ten subject calls are spent.
 The combined batch/recovery effort is 135 estimated minutes (45 initial checkpoint, 40 isolation correction, 50 resumption), 45 above the original 90-minute allowance. Separate round-9 review effort remains in the combined ledger above.
@@ -501,14 +504,29 @@ Any fresh rewrite still needs an estimate after baseline diagnosis.
 The initial approved-scope forecast was 400 active minutes: 300 ordinary and 100 native.
 Ordinary Codex collection and assessment used 80 estimated minutes, including 2,417.307 seconds of runner duration once.
 Ordinary Claude collection, registration recovery and assessment used 80 estimated minutes, including 1,405.021 seconds of runner duration once.
-The revised remaining forecast is:
+Native Codex and Claude collection/assessment each used 35 estimated minutes, including 748.348 and 394.246 seconds of runner duration respectively.
+Collection/assessment totaled 230 estimated minutes, 170 below the initial 400-minute forecast; runtime qualification/freeze and final review/publication are separately booked as 25 and 15 minutes.
+All 4,964.922 seconds of runner duration are included once, not added to those estimates.
+The remaining authorized-work forecast is:
 
 | Work | Estimate | Basis |
 | --- | ---: | --- |
-| Final cross-provider review and reconciliation | 15 | Verify reports, accounting, coverage and next decision. |
-| **Total** | **15** | No approved calls remain; no fresh rewrite is included. |
+| **Total** | **0** | Collection and review complete; next scope awaits owner decision. |
 
 ## Results and decision
+
+The selected baseline scope is complete, with no unattempted slots, retries, setup exclusions or unresolved judgments.
+The existing rewrite is not uniformly stronger: it passes all ordinary Codex attempts, but loses required contact recording in every Claude E attempt and misses more Claude positive native loads in these samples.
+Both versions show Claude weaknesses in whole-document cleanup and unsupported new-report claims.
+The next owner decision is whether these baselines and explicit coverage limits are sufficient, then which observed failure to target and which version to use as the editing base.
+A focused investigation should separate invocation misses from output fidelity and whole-document cleanup; this is a diagnosis recommendation, not an approved rewrite or new-call allocation.
+Response-only applicability, full orchestration, plan/spec generation and conditional O5 remain outside demonstrated effectiveness.
+SSR stays parked until CW's cycle is settled.
+
+Expanded native Claude: [assessment and evidence](claude-invocation-01-assessment.md) records timely positive loads of 5/6 original and 3/6 rewrite, with functional outcomes 5/6 each.
+Both versions avoid CW on both numeric attempts; these outcomes are unmeasured functionally.
+The two new-report failures occur after loading and add unsupported pilot-validation claims.
+All comment artifacts pass even when the model misses loading.
 
 Expanded native Codex: [assessment and evidence](codex-invocation-01-assessment.md) records 12/12 timely positive loads and functional passes.
 Original avoids loading in 2/2 numeric-only attempts; candidate in 1/2.
@@ -523,7 +541,7 @@ One controller index error delayed retention only and was recovered without repe
 Expanded ordinary Codex: [assessment and evidence](codex-expanded-01-assessment.md) records 36 valid attempts under CW-expanded-1.
 For A/B/C/E respectively, control passes 3/3, 2/3, 1/3 and 3/3; original passes 3/3, 3/3, 3/3 and 2/3; comprehensive passes 3/3 on all four.
 Every output meets F3; the four failed executions lose a responsibility, diagnostic rationale or contact-recording action.
-These small exposed-case counts do not establish a reliable ranking; native collection remains open under the approved schedule.
+These small exposed-case counts do not establish a reliable ranking; native outcomes are reported separately above.
 The collection review corrected two B outcomes using the existing whole-document policy-4 precedent; no rules or calls changed.
 
 Historical baseline:

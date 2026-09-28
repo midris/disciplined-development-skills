@@ -587,8 +587,11 @@ This closed-study checkpoint uses its then-approved ceilings: a 40-call subject 
 At that closing checkpoint, 30 subject calls had been dispatched and capacity was 10 / 12 / 4 / 4. Core-baseline-01 has no unspent calls; neither excluded attempt has replacement authorization. Remaining capacity is a ceiling, not a selected next batch.
 
 
-Current combined invocation accounting also includes the CW [baseline](../concise-writing/contribution-baseline-01-run-index.json) and [comparison](../concise-writing/comprehensive-comparison-01-run-index.json), plus the expansion, comprehensive-comparison-02, Claude smoke, claude-comparison-01 and claude-opus-invocation-01 indexes above.
-Dispatched calls are **136 subject, 0 evaluator, 0 authoring, 0 retry**; remaining outer capacity is **0 / 12 / 4 / 4** against the [active plan](../../plans/2026-09-11-model-driven-skill-testing.md#limits-and-information-boundaries). The CW protocol owns current combined time and forecast; all ten expansion slots, both 34-call comparison batches and both Claude smoke calls and all ten Opus invocation calls are spent.
+SSR collection-close invocation accounting includes the CW [baseline](../concise-writing/contribution-baseline-01-run-index.json) and [comparison](../concise-writing/comprehensive-comparison-01-run-index.json), plus the expansion, comprehensive-comparison-02, Claude smoke, claude-comparison-01 and claude-opus-invocation-01 indexes above.
+This closed checkpoint uses its then-approved ceilings: 136 subject, 12 evaluator, 4 authoring and 4 retry invocations.
+Dispatched calls are **136 subject, 0 evaluator, 0 authoring, 0 retry**; remaining outer capacity is **0 / 12 / 4 / 4** at that checkpoint.
+The [CW accounting](../concise-writing/protocol.md#storage-and-accounting) owns subsequent combined spending, current ceilings, time and forecast; this historical balance does not authorize further calls.
+All ten expansion slots, both 34-call comparison batches, both Claude smoke calls and all ten Opus invocation calls are spent.
 
 
 Historical SSR closing forecast (2026-09-17):

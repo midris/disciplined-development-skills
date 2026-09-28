@@ -21,14 +21,14 @@ No SSR wording was changed during this check.
 
 ## What CW evidence establishes
 
-The existing [comparison](comprehensive-comparison-01-assessment.md#comparison-and-interpretation) covers two ordinary-prose cases, with two repetitions per version.
+The historical [comparison](comprehensive-comparison-01-assessment.md#comparison-and-interpretation) covers two ordinary-prose cases, with two repetitions per version.
 Both versions passed; the earlier no-skill controls also passed.
 The rewrite produced longer outputs in all four matched pairs without an established quality advantage.
 These observations do not demonstrate that CW preserves agent behavior when editing instructions.
 The live original excludes skill/reference authoring, while the comprehensive candidate defers that activity to writing-skills; that interaction was not tested.
 
 The owner subsequently selected evaluation of the existing comprehensive rewrite before deciding whether a fresh rewrite is necessary.
-Do not choose a development base from these limited results alone.
+The [protocol](protocol.md) now links the expanded cross-provider results and owns the pending coverage/editing-base decision.
 The original explicitly protects useful repetition and requires local and whole-artifact review; the candidate's stricter source-explicitness rule and narrower repetition exception remain comparison questions.
 
 ## Owner scope decision
