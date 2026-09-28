@@ -125,4 +125,14 @@ All four comment outputs pass independent parse/token comparisons; no subject co
 Captured patch, shell-variable and cache-cleanup errors recover within their original calls and leave complete artifacts.
 No retries, exclusions, evidence gaps or new review findings remain.
 
+## Claude native first-rotation checkpoint
+
+Eight inventories, twenty protected input copies and all complete result records verify.
+Both versions load for tightening; original loads for new writing, candidate does not; neither loads for comments.
+All six positive artifacts meet F1–F3, independently of their D1 results.
+Both numeric tasks avoid loading and pass exact-byte/reply observations, with functional CW outcomes unmeasured.
+New reports preserve release context through staging evidence, old/current implementation and pilot-only recommendation; a standalone deployment sentence is not required for correct understanding.
+The comment outputs accurately explain the accepted-batch duplicate risk and pass parse/token comparison without execution.
+No retries, setup exclusions, incomplete captures or new review findings remain.
+
 DD-VERDICT: PASS
