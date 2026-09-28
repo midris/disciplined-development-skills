@@ -43,7 +43,15 @@
         },
         "verified": true
       },
-      "result": null
+      "result": {
+        "result_id": "claude-invocation-01-invocation-tighten-original-1",
+        "record": {
+          "path": "skill-studies/concise-writing/results/20260928T003336313Z-cw-prep-claude-invocation-tighten-original-32fc23ce-aa22-4255-b071-c21dab8cd2d0-qdhlv2fr.json",
+          "sha256": "e653b33863622d1a555f743f525e80840d7e052d57a9e10a075220ce49d50ef3",
+          "version": "2",
+          "git_revision": "07e013fc65f88c9b96d17c9bf183fc28c424477e"
+        }
+      }
     },
     {
       "attempt_id": "claude-invocation-01-invocation-tighten-candidate-comprehensive-1-1",
@@ -84,7 +92,15 @@
         },
         "verified": true
       },
-      "result": null
+      "result": {
+        "result_id": "claude-invocation-01-invocation-tighten-candidate-comprehensive-1",
+        "record": {
+          "path": "skill-studies/concise-writing/results/20260928T003428969Z-cw-prep-claude-invocation-tighten-candidate-a3093b65-5789-4ac6-a88b-330a154b07a7-xd4ie3wd.json",
+          "sha256": "ef225d48a564fb0ddc47ebb0e6c7756ab903f88b9f9e1611920e238eb1238596",
+          "version": "2",
+          "git_revision": "07e013fc65f88c9b96d17c9bf183fc28c424477e"
+        }
+      }
     },
     {
       "attempt_id": "claude-invocation-01-invocation-write-candidate-comprehensive-1-1",
@@ -125,7 +141,15 @@
         },
         "verified": true
       },
-      "result": null
+      "result": {
+        "result_id": "claude-invocation-01-invocation-write-candidate-comprehensive-1",
+        "record": {
+          "path": "skill-studies/concise-writing/results/20260928T003514166Z-cw-prep-claude-invocation-write-candidate-b01d670f-33f1-4d2e-b53e-d2ffd31c4656-n7hvowgr.json",
+          "sha256": "54d5ca34ec4a09001b275f94e26a9f01c9ccaade73f2b0b41770db97e6b00d12",
+          "version": "2",
+          "git_revision": "07e013fc65f88c9b96d17c9bf183fc28c424477e"
+        }
+      }
     },
     {
       "attempt_id": "claude-invocation-01-invocation-write-original-1-1",
@@ -166,7 +190,15 @@
         },
         "verified": true
       },
-      "result": null
+      "result": {
+        "result_id": "claude-invocation-01-invocation-write-original-1",
+        "record": {
+          "path": "skill-studies/concise-writing/results/20260928T003602085Z-cw-prep-claude-invocation-write-original-ef30b974-328f-4848-aa9d-01640220aadf-cjk05yd7.json",
+          "sha256": "e50c08d4b81ee6f9a52c38142c2e489f6cdff82bb6b07a0e54308f93f9008460",
+          "version": "2",
+          "git_revision": "07e013fc65f88c9b96d17c9bf183fc28c424477e"
+        }
+      }
     },
     {
       "attempt_id": "claude-invocation-01-invocation-nonprose-original-1-1",
@@ -207,7 +239,15 @@
         },
         "verified": true
       },
-      "result": null
+      "result": {
+        "result_id": "claude-invocation-01-invocation-nonprose-original-1",
+        "record": {
+          "path": "skill-studies/concise-writing/results/20260928T003649743Z-cw-prep-claude-invocation-nonprose-original-9cc5e4dd-5326-4fb8-9933-e6bd6c0f4a9f-vjbnmpzr.json",
+          "sha256": "10c26b64cb07f54d56da320d218d333c3026a23d4d1ef2c3e219259d81c625c1",
+          "version": "2",
+          "git_revision": "07e013fc65f88c9b96d17c9bf183fc28c424477e"
+        }
+      }
     },
     {
       "attempt_id": "claude-invocation-01-invocation-nonprose-candidate-comprehensive-1-1",
@@ -248,7 +288,15 @@
         },
         "verified": true
       },
-      "result": null
+      "result": {
+        "result_id": "claude-invocation-01-invocation-nonprose-candidate-comprehensive-1",
+        "record": {
+          "path": "skill-studies/concise-writing/results/20260928T003720967Z-cw-prep-claude-invocation-nonprose-candidate-92cf93c1-77d0-4924-980f-e690a006383f-31wbw09n.json",
+          "sha256": "533b66e82a20e884888f4c8c275e0f570a4063f8ef414825a2e3f0044bf97efd",
+          "version": "2",
+          "git_revision": "07e013fc65f88c9b96d17c9bf183fc28c424477e"
+        }
+      }
     },
     {
       "attempt_id": "claude-invocation-01-invocation-comments-candidate-comprehensive-1-1",
@@ -289,7 +337,15 @@
         },
         "verified": true
       },
-      "result": null
+      "result": {
+        "result_id": "claude-invocation-01-invocation-comments-candidate-comprehensive-1",
+        "record": {
+          "path": "skill-studies/concise-writing/results/20260928T003755284Z-cw-prep-claude-invocation-comments-candidate-e7dfca39-087c-4d4c-9814-cdca0fba56f5-9tfc8hom.json",
+          "sha256": "f4b05cda032c8234078be27e4db5cce02e2e2d15141f730864064965955437c5",
+          "version": "2",
+          "git_revision": "07e013fc65f88c9b96d17c9bf183fc28c424477e"
+        }
+      }
     },
     {
       "attempt_id": "claude-invocation-01-invocation-comments-original-1-1",
@@ -330,7 +386,15 @@
         },
         "verified": true
       },
-      "result": null
+      "result": {
+        "result_id": "claude-invocation-01-invocation-comments-original-1",
+        "record": {
+          "path": "skill-studies/concise-writing/results/20260928T003834062Z-cw-prep-claude-invocation-comments-original-6b912906-2db6-40ee-a705-df6003bab479-798pvftl.json",
+          "sha256": "e107c1193727d791b46363e1777c35717b77971d6e405303292b816dd2b4a405",
+          "version": "2",
+          "git_revision": "07e013fc65f88c9b96d17c9bf183fc28c424477e"
+        }
+      }
     }
   ]
 }
