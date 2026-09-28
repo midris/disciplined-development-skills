@@ -9,7 +9,7 @@ The owner-requested [preparation review and remediation](../../reviews/2026-09-2
 On 2026-09-27, the owner replied “approved, please continue” to the 104-call proposal: 72 ordinary calls followed by 32 native calls, raising the combined subject ceiling from 136 to 240.
 This authorizes both stages, runtime qualification, committed input/schedule freeze and collection after readiness, with zero automatic retries; it does not authorize a skill edit or adoption.
 The [preparation package](preparation/README.md) and [allocation forecast](testing-audit.md#proposed-sequence-and-allocation-forecast) define the approved scope.
-Current work: ordinary [Codex](codex-expanded-01-assessment.md) and [Claude](claude-expanded-01-assessment.md) are assessed; collect native Codex next, then native Claude; expanded spending is 88/104.
+Current work: ordinary [Codex](codex-expanded-01-assessment.md) and [Claude](claude-expanded-01-assessment.md) are assessed; native [Codex](codex-invocation-01-assessment.md) is assessed; collect native Claude next; expanded spending is 88/104.
 Both runtimes are qualified, all 16 manifests pin input revision `96b6e383da39ea807a6ad49d4513cfc1d6f4cd33`, and all four batches pass collection readiness.
 The manifest/authority commit must be recorded on each attempt before its dispatch.
 Establish and assess both providers' baselines before selecting CW edits; the existing rewrite remains an unchanged comparison condition.
@@ -330,6 +330,8 @@ Inputs: [claude-agent-recommendation-manifest](preparation/manifests/claude-agen
 
 ### Expanded collection: codex-invocation-01
 
+Results: [completed native Codex assessment](codex-invocation-01-assessment.md), based on the [current attempt index](codex-invocation-01-run-index.json).
+
 Scope: 16 sequential attempts; codex, four native tasks × two conditions × two repetitions.
 Authority: included in the owner-approved 104-call allocation recorded at the top of this protocol.
 Include all valid-setup executions regardless of outcome; report invalid/unresolved setup and unattempted slots separately.
@@ -504,6 +506,10 @@ The revised remaining forecast is:
 | **Total** | **50** | 16 approved calls remain; no fresh rewrite is included. |
 
 ## Results and decision
+
+Expanded native Codex: [assessment and evidence](codex-invocation-01-assessment.md) records 12/12 timely positive loads and functional passes.
+Original avoids loading in 2/2 numeric-only attempts; candidate in 1/2.
+All four numeric outputs are correct, but their functional CW outcomes are unmeasured.
 
 Expanded ordinary Claude: [assessment and evidence](claude-expanded-01-assessment.md) records 36 valid attempts.
 For A/B/C/E respectively, control passes 3/3, 2/3, 0/3 and 3/3; original passes 3/3, 3/3, 1/3 and 2/3; comprehensive passes 3/3, 3/3, 1/3 and 0/3.
