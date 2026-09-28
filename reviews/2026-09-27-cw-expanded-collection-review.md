@@ -115,4 +115,14 @@ Two tightening attempts recover from rejected duplicate-target patches within th
 These captured subject-tool errors leave complete successful artifacts, not infrastructure faults, setup exclusions or new model invocations.
 No new review findings remain.
 
+## Codex native close
+
+All sixteen inventories, forty protected copies and complete result records verify.
+All twelve positive text/comment attempts load the full body before editing and meet F1–F3.
+Original avoids CW on both numeric tasks; candidate avoids it once and over-triggers once, with all four numeric artifacts/replies exact and functional CW outcomes unmeasured.
+Order 15's successful-send premise and order 16's accepted-batch premise connect the no-resend boundary to completed delivery; literal duplicate-upload wording is unnecessary in this code context.
+All four comment outputs pass independent parse/token comparisons; no subject code was executed by the controller.
+Captured patch, shell-variable and cache-cleanup errors recover within their original calls and leave complete artifacts.
+No retries, exclusions, evidence gaps or new review findings remain.
+
 DD-VERDICT: PASS
