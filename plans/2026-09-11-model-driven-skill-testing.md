@@ -263,6 +263,7 @@ Reserved bundles and revealing assessments stay entirely in the verified private
   Ordinary document-addition E contributes another 18 calls; native cases N1–N4 form the subsequent 32-call stage.
   The owner removed tailored skill-editing/compression experiments and their downstream allocations from the active scope.
 - [ ] Compare the unchanged original and existing CW rewrite on Codex and Claude, with contemporaneous no-CW controls where contribution is at issue and native invocation assessed separately.
+  Ordinary comparisons are assessed; native collection remains open. Results, evidence and current dispatch status are linked from the [CW protocol](../skill-studies/concise-writing/protocol.md).
 - [ ] Review and accept coverage, completed cross-model baseline results and retained evidence before selecting a CW editing base or drafting changes; resolve or explicitly accept remaining gaps.
 - [ ] Assess the selected document and invocation coverage; select a fresh CW rewrite objective only if evidence warrants it, then test additions before compression and present an adoption decision.
 - [ ] When SSR resumes, revisit the loaded-failure baseline decision in the [revised proposal](../skill-studies/sweeping-stale-references/rewrite-diagnosis.md#proposed-allocation-owner-decision-required). The owner explicitly deferred this decision until then; the withdrawn no-SSR-success stop rule does not authorize dispatch.

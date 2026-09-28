@@ -2,14 +2,14 @@
 
 Format version: `1`
 Study ID: `concise-writing`
-Status: baseline and fixed-suite comprehensive comparison complete. Both versions pass 2/2 on each comparison case under policy 4; all eight comparison outputs are shorter than their sources. No overall quality advantage established. Adoption remains deferred; historical calls are spent and the expanded 104-call collection is now authorized.
+Status: historical comparisons and both expanded ordinary batches are complete. The approved native batches remain in collection scope; adoption and skill edits remain deferred. Results below distinguish providers, cases and skill conditions.
 Current action: CW remains the first end-to-end study, followed by SSR.
 The owner accepted the scenario designs C, N1–N4 and revised E during the walkthrough, retained A/B, and removed tailored skill-editing/compression tests.
 The owner-requested [preparation review and remediation](../../reviews/2026-09-27-cw-suite-preparation-review.md) are complete.
 On 2026-09-27, the owner replied “approved, please continue” to the 104-call proposal: 72 ordinary calls followed by 32 native calls, raising the combined subject ceiling from 136 to 240.
 This authorizes both stages, runtime qualification, committed input/schedule freeze and collection after readiness, with zero automatic retries; it does not authorize a skill edit or adoption.
 The [preparation package](preparation/README.md) and [allocation forecast](testing-audit.md#proposed-sequence-and-allocation-forecast) define the approved scope.
-Current work: the [ordinary Codex assessment](codex-expanded-01-assessment.md) is complete; collect ordinary Claude next, then both native batches; expanded spending is 72/104.
+Current work: ordinary [Codex](codex-expanded-01-assessment.md) and [Claude](claude-expanded-01-assessment.md) are assessed; collect native Codex next, then native Claude; expanded spending is 72/104.
 Both runtimes are qualified, all 16 manifests pin input revision `96b6e383da39ea807a6ad49d4513cfc1d6f4cd33`, and all four batches pass collection readiness.
 The manifest/authority commit must be recorded on each attempt before its dispatch.
 Establish and assess both providers' baselines before selecting CW edits; the existing rewrite remains an unchanged comparison condition.
@@ -279,6 +279,7 @@ Inputs: [codex-agent-recommendation-manifest](preparation/manifests/codex-agent-
 
 ### Expanded collection: claude-expanded-01
 
+Results: [completed ordinary Claude assessment](claude-expanded-01-assessment.md), based on the [current attempt index](claude-expanded-01-run-index.json).
 Scope: 36 sequential attempts; claude, four ordinary tasks × three conditions × three repetitions.
 Authority: included in the owner-approved 104-call allocation recorded at the top of this protocol.
 Include all valid-setup executions regardless of outcome; report invalid/unresolved setup and unattempted slots separately.
@@ -500,10 +501,16 @@ The revised remaining forecast is:
 
 ## Results and decision
 
+Expanded ordinary Claude: [assessment and evidence](claude-expanded-01-assessment.md) records 36 valid attempts.
+For A/B/C/E respectively, control passes 3/3, 2/3, 0/3 and 3/3; original passes 3/3, 3/3, 1/3 and 2/3; comprehensive passes 3/3, 3/3, 1/3 and 0/3.
+The concrete failures are one evidence overstatement, seven readability misses from detached repeated mechanics, and four lost contact-recording actions.
+All 24 explicit-load attempts delivered the full body before editing; this is not native-invocation evidence.
+One controller index error delayed retention only and was recovered without repeating a call; the assessment links its review record.
+
 Expanded ordinary Codex: [assessment and evidence](codex-expanded-01-assessment.md) records 36 valid attempts under CW-expanded-1.
 For A/B/C/E respectively, control passes 3/3, 2/3, 1/3 and 3/3; original passes 3/3, 3/3, 3/3 and 2/3; comprehensive passes 3/3 on all four.
 Every output meets F3; the four failed executions lose a responsibility, diagnostic rationale or contact-recording action.
-These small exposed-case counts do not establish a reliable ranking; Claude and native collection remain open under the approved schedule.
+These small exposed-case counts do not establish a reliable ranking; native collection remains open under the approved schedule.
 The collection review corrected two B outcomes using the existing whole-document policy-4 precedent; no rules or calls changed.
 
 Historical baseline:
