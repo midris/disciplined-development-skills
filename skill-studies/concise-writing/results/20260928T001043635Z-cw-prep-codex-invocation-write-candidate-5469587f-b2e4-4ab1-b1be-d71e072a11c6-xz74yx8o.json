@@ -1,0 +1,171 @@
+{
+  "schema_version": "2",
+  "record_kind": "execution result",
+  "assessed_at": "2026-09-28T00:11:47.284253+00:00",
+  "run_id": "20260928T001043635Z-cw-prep-codex-invocation-write-candidate-5469587f-b2e4-4ab1-b1be-d71e072a11c6-xz74yx8o",
+  "condition": "candidate-comprehensive",
+  "assessor": {
+    "name": "Codex active session",
+    "method": "active session",
+    "model": null,
+    "session_id": null,
+    "context": "Same session that prepared and reviewed these development cases. No independent, blinded or held-out claim."
+  },
+  "evidence": [
+    {
+      "id": "output",
+      "artifact": {
+        "path": "/Users/simon/work/personal/skill-study-private/concise-writing/development/20260928T001043635Z-cw-prep-codex-invocation-write-candidate-5469587f-b2e4-4ab1-b1be-d71e072a11c6-xz74yx8o/workspace/fixture/report.md",
+        "sha256": "90de27a80c43695537e686f0bf63fa24d3ea7fcd501625677c066ce3ea895f7d",
+        "version": null
+      },
+      "selector": "Complete artifact"
+    },
+    {
+      "id": "trace",
+      "artifact": {
+        "path": "/Users/simon/work/personal/skill-study-private/concise-writing/development/20260928T001043635Z-cw-prep-codex-invocation-write-candidate-5469587f-b2e4-4ab1-b1be-d71e072a11c6-xz74yx8o/provider-session.jsonl",
+        "sha256": "2ce6998094f77bc1ae2daa7b409c016bddbdf8faa01b0514bdd257a279d9bfab",
+        "version": null
+      },
+      "selector": "Complete artifact"
+    },
+    {
+      "id": "mechanical",
+      "artifact": {
+        "path": "/Users/simon/work/personal/skill-study-private/concise-writing/development/20260928T001043635Z-cw-prep-codex-invocation-write-candidate-5469587f-b2e4-4ab1-b1be-d71e072a11c6-xz74yx8o/result.json",
+        "sha256": "812321823658cf3dca806de8d7c1ee991568f9434c15f9cb52961088676cfa9f",
+        "version": null
+      },
+      "selector": "Complete artifact"
+    },
+    {
+      "id": "log",
+      "artifact": {
+        "path": "/Users/simon/work/personal/skill-study-private/concise-writing/development/20260928T001043635Z-cw-prep-codex-invocation-write-candidate-5469587f-b2e4-4ab1-b1be-d71e072a11c6-xz74yx8o/runner.log",
+        "sha256": "942812f0797cedff99bf52f114042771fba88955b5eec4f80a452f2e002f84f5",
+        "version": null
+      },
+      "selector": "Complete artifact"
+    },
+    {
+      "id": "final",
+      "artifact": {
+        "path": "/Users/simon/work/personal/skill-study-private/concise-writing/development/20260928T001043635Z-cw-prep-codex-invocation-write-candidate-5469587f-b2e4-4ab1-b1be-d71e072a11c6-xz74yx8o/final.txt",
+        "sha256": "2284f4a11fc1a025a44d6c21dfc1ad7f7d345dc31abdfeeeead83eab6b941ee7",
+        "version": null
+      },
+      "selector": "Complete artifact"
+    },
+    {
+      "id": "source-0",
+      "artifact": {
+        "path": "skill-studies/concise-writing/cases/invocation-write/fixture/notes.md",
+        "sha256": "687328b186b130469d63398579e81d72b88866e0f7ba4e48b9dfbb4774581442",
+        "version": null,
+        "git_revision": "96b6e383da39ea807a6ad49d4513cfc1d6f4cd33"
+      },
+      "selector": "Complete frozen source"
+    },
+    {
+      "id": "source-1",
+      "artifact": {
+        "path": "skill-studies/concise-writing/cases/invocation-write/task.md",
+        "sha256": "2e0ce51601ecd5e3a12168a3f0640b9ee49151fa3810cc59da0e4abcda85220f",
+        "version": null,
+        "git_revision": "96b6e383da39ea807a6ad49d4513cfc1d6f4cd33"
+      },
+      "selector": "Complete frozen source"
+    },
+    {
+      "id": "source-4",
+      "artifact": {
+        "path": "skill-studies/concise-writing/preparation/native-prompt.md",
+        "sha256": "7265a3997ee554a5f4238462b8427549e4be6b3b94283daa6d7a3c96d85105a2",
+        "version": null,
+        "git_revision": "96b6e383da39ea807a6ad49d4513cfc1d6f4cd33"
+      },
+      "selector": "Complete frozen source"
+    }
+  ],
+  "setup": {
+    "status": "valid",
+    "reason": "Completed with the expected model/CLI and frozen skill available in the native catalog. Complete raw trace and output retained. No task-level skill read request; invocation and functional outcome are assessed separately. Inventory and protected-input checks recorded at checkpoint.",
+    "evidence": [
+      "mechanical",
+      "trace",
+      "log"
+    ]
+  },
+  "criteria": [
+    {
+      "id": "D1",
+      "dimension": "procedural",
+      "judgment": "met",
+      "reason": "Complete candidate body delivered at provider-session 25 before report creation at 31, with no explicit task-level load request.",
+      "consequence": "Required for the corresponding functional or invocation outcome; reported separately.",
+      "evidence": [
+        "trace"
+      ]
+    },
+    {
+      "id": "F1",
+      "dimension": "functional",
+      "judgment": "met",
+      "reason": "Report preserves staging counts and recovery evidence, old/new checkpoint mechanism, untested scale/permission limits, deployed status, three-workspace scope, staffing/approval, mismatch retention rationale and separate follow-up decision.",
+      "consequence": "Required for the corresponding functional or invocation outcome; reported separately.",
+      "evidence": [
+        "output",
+        "source-0",
+        "source-1",
+        "source-4"
+      ]
+    },
+    {
+      "id": "F2",
+      "dimension": "functional",
+      "judgment": "met",
+      "reason": "Manager can decide the bounded pilot and identify each owner, availability prerequisite and match/mismatch next step without consulting raw notes.",
+      "consequence": "Required for the corresponding functional or invocation outcome; reported separately.",
+      "evidence": [
+        "output",
+        "source-0",
+        "source-1",
+        "source-4"
+      ]
+    },
+    {
+      "id": "F3",
+      "dimension": "functional",
+      "judgment": "met",
+      "reason": "Recommendation, evidence, limits and owner actions form a coherent decision report; repeated approval reminders serve action lookup rather than duplicating the notes mechanically.",
+      "consequence": "Required for the corresponding functional or invocation outcome; reported separately.",
+      "evidence": [
+        "output",
+        "source-0",
+        "source-1",
+        "source-4"
+      ]
+    }
+  ],
+  "procedural_summary": "Native candidate selection before new report; full source notes read and saved output checked. Process unscored.",
+  "observations": [
+    {
+      "dimension": "functional",
+      "description": "Source notes 199 words; output 247 words; notes/report lengths are descriptive for generation, with no shortening preference. Timely load and task success measured separately.",
+      "consequence": "Descriptive comparison; no separate score or automatic length-based preference.",
+      "evidence": [
+        "output"
+      ]
+    }
+  ],
+  "uncertainty": [],
+  "result_id": "codex-invocation-01-invocation-write-candidate-comprehensive-1",
+  "functional_result": "met",
+  "manifest": {
+    "path": "skill-studies/concise-writing/preparation/manifests/codex-invocation-write-manifest.json",
+    "sha256": "d5161b110999c1de57aa4dad0eba462c0234fb5b8a10df6cb9e29a0174b52dee",
+    "version": "1",
+    "git_revision": "4dc370648a6a915546035847b2823a4bc5d57325"
+  }
+}

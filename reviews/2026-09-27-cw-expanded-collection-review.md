@@ -100,4 +100,19 @@ Runner durations total 1,405.021 seconds and are included once in the booked eff
 The samples expose specific failures but do not establish reliability or an overall model/skill ranking; native selection is still a separate authorized stage.
 No new review findings remain.
 
+## Codex native first-rotation checkpoint
+
+All eight native setups are valid and retained; the first six positive text/comment observations across conditions load the complete assigned body before first editing and meet F1–F3.
+Original numeric-only order 5 avoids loading; candidate order 6 reads the entire skill before reading TASK.md and fails the negative D1 criterion.
+Both numeric outputs have exactly the requested number change and literal reply, which are unscored task observations with functional CW outcome not measured.
+The pre-task candidate read is observed selection, not automatic body injection; the qualified native catalog alone does not count as a load.
+N4 original wording connects already-accepted remote delivery to keeping acknowledgement outside retry handling; it need not literally say duplicate upload to convey the rationale in code context.
+Both comment outputs pass the controller-only syntax/executable-token comparison without executing subject code.
+Their increased comment length supplies the previously missing maintenance rationale rather than failing a shortening preference.
+
+Rechecked eight inventories, twenty protected copies and complete result records.
+Two tightening attempts recover from rejected duplicate-target patches within the same invocation; one comment attempt substitutes python3 for an unavailable python alias, and another recovers from a denied parent-directory search.
+These captured subject-tool errors leave complete successful artifacts, not infrastructure faults, setup exclusions or new model invocations.
+No new review findings remain.
+
 DD-VERDICT: PASS

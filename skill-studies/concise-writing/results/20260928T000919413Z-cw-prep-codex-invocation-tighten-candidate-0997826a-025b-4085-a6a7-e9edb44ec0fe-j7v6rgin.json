@@ -1,0 +1,171 @@
+{
+  "schema_version": "2",
+  "record_kind": "execution result",
+  "assessed_at": "2026-09-28T00:10:40.324212+00:00",
+  "run_id": "20260928T000919413Z-cw-prep-codex-invocation-tighten-candidate-0997826a-025b-4085-a6a7-e9edb44ec0fe-j7v6rgin",
+  "condition": "candidate-comprehensive",
+  "assessor": {
+    "name": "Codex active session",
+    "method": "active session",
+    "model": null,
+    "session_id": null,
+    "context": "Same session that prepared and reviewed these development cases. No independent, blinded or held-out claim."
+  },
+  "evidence": [
+    {
+      "id": "output",
+      "artifact": {
+        "path": "/Users/simon/work/personal/skill-study-private/concise-writing/development/20260928T000919413Z-cw-prep-codex-invocation-tighten-candidate-0997826a-025b-4085-a6a7-e9edb44ec0fe-j7v6rgin/workspace/fixture/report.md",
+        "sha256": "bbba36f831e2b5449a9f49190ce3290ccf3bbed818e93292492fd9380e2a4f08",
+        "version": null
+      },
+      "selector": "Complete artifact"
+    },
+    {
+      "id": "trace",
+      "artifact": {
+        "path": "/Users/simon/work/personal/skill-study-private/concise-writing/development/20260928T000919413Z-cw-prep-codex-invocation-tighten-candidate-0997826a-025b-4085-a6a7-e9edb44ec0fe-j7v6rgin/provider-session.jsonl",
+        "sha256": "65f57da35f1aa7291582e461cb61600b96c0a599790141ec8ff8b2cd77429f48",
+        "version": null
+      },
+      "selector": "Complete artifact"
+    },
+    {
+      "id": "mechanical",
+      "artifact": {
+        "path": "/Users/simon/work/personal/skill-study-private/concise-writing/development/20260928T000919413Z-cw-prep-codex-invocation-tighten-candidate-0997826a-025b-4085-a6a7-e9edb44ec0fe-j7v6rgin/result.json",
+        "sha256": "b7f96bd07d04257036e94faa1fe60cb5ded5935517aeb229913c07162c2f1340",
+        "version": null
+      },
+      "selector": "Complete artifact"
+    },
+    {
+      "id": "log",
+      "artifact": {
+        "path": "/Users/simon/work/personal/skill-study-private/concise-writing/development/20260928T000919413Z-cw-prep-codex-invocation-tighten-candidate-0997826a-025b-4085-a6a7-e9edb44ec0fe-j7v6rgin/runner.log",
+        "sha256": "73c868533a381cdaea94919342c940dcc0c62cbf033fe1b23b46f72c00b97259",
+        "version": null
+      },
+      "selector": "Complete artifact"
+    },
+    {
+      "id": "final",
+      "artifact": {
+        "path": "/Users/simon/work/personal/skill-study-private/concise-writing/development/20260928T000919413Z-cw-prep-codex-invocation-tighten-candidate-0997826a-025b-4085-a6a7-e9edb44ec0fe-j7v6rgin/final.txt",
+        "sha256": "aa3d823b3d3485aa394896956c3bee41ce97a86b49c4ed226d6ccd2f93f5c187",
+        "version": null
+      },
+      "selector": "Complete artifact"
+    },
+    {
+      "id": "source-0",
+      "artifact": {
+        "path": "skill-studies/concise-writing/cases/agent-recommendation/fixture/report.md",
+        "sha256": "e9a992c7e4c14dfd5afc10cc637349f39c2030e98ed0311441675900bc3e93e9",
+        "version": null,
+        "git_revision": "96b6e383da39ea807a6ad49d4513cfc1d6f4cd33"
+      },
+      "selector": "Complete frozen source"
+    },
+    {
+      "id": "source-1",
+      "artifact": {
+        "path": "skill-studies/concise-writing/cases/agent-recommendation/task.md",
+        "sha256": "607cbe0562a19ea092fe76ec96f13bfbe033b2e1095baef2ca38be621c0baf82",
+        "version": null,
+        "git_revision": "96b6e383da39ea807a6ad49d4513cfc1d6f4cd33"
+      },
+      "selector": "Complete frozen source"
+    },
+    {
+      "id": "source-4",
+      "artifact": {
+        "path": "skill-studies/concise-writing/preparation/native-prompt.md",
+        "sha256": "7265a3997ee554a5f4238462b8427549e4be6b3b94283daa6d7a3c96d85105a2",
+        "version": null,
+        "git_revision": "96b6e383da39ea807a6ad49d4513cfc1d6f4cd33"
+      },
+      "selector": "Complete frozen source"
+    }
+  ],
+  "setup": {
+    "status": "valid",
+    "reason": "Completed with the expected model/CLI and frozen skill available in the native catalog. Complete raw trace and output retained. No task-level skill read request; invocation and functional outcome are assessed separately. Inventory and protected-input checks recorded at checkpoint.",
+    "evidence": [
+      "mechanical",
+      "trace",
+      "log"
+    ]
+  },
+  "criteria": [
+    {
+      "id": "D1",
+      "dimension": "procedural",
+      "judgment": "met",
+      "reason": "Full candidate body at provider-session 41 before attempted edit 45 and successful edit 51; discovered without a task-level load instruction.",
+      "consequence": "Required for the corresponding functional or invocation outcome; reported separately.",
+      "evidence": [
+        "trace"
+      ]
+    },
+    {
+      "id": "F1",
+      "dimension": "functional",
+      "judgment": "met",
+      "reason": "Preserves all staging evidence and limits, cursor behavior, undeployed production status, bounded staffed pilot, owners, retention rationale and separate release decision.",
+      "consequence": "Required for the corresponding functional or invocation outcome; reported separately.",
+      "evidence": [
+        "output",
+        "source-0",
+        "source-1",
+        "source-4"
+      ]
+    },
+    {
+      "id": "F2",
+      "dimension": "functional",
+      "judgment": "met",
+      "reason": "Decision-first structure and explicit pilot outcome branches preserve the manager approval and operational safeguards.",
+      "consequence": "Required for the corresponding functional or invocation outcome; reported separately.",
+      "evidence": [
+        "output",
+        "source-0",
+        "source-1",
+        "source-4"
+      ]
+    },
+    {
+      "id": "F3",
+      "dimension": "functional",
+      "judgment": "met",
+      "reason": "Clear sections consolidate filler and duplicate mechanics; evidence limitation also explains limited exposure and final request is easy to find.",
+      "consequence": "Required for the corresponding functional or invocation outcome; reported separately.",
+      "evidence": [
+        "output",
+        "source-0",
+        "source-1",
+        "source-4"
+      ]
+    }
+  ],
+  "procedural_summary": "Rejected delete/add patch recovered with an update in the same invocation; captured stderr is a subject tool error, not infrastructure failure. Git diff and task preservation checked; process unscored.",
+  "observations": [
+    {
+      "dimension": "functional",
+      "description": "Source 625 words; output 254, change -371, shorter. Native selection and functional success both met independently.",
+      "consequence": "Descriptive comparison; no separate score or automatic length-based preference.",
+      "evidence": [
+        "output"
+      ]
+    }
+  ],
+  "uncertainty": [],
+  "result_id": "codex-invocation-01-invocation-tighten-candidate-comprehensive-1",
+  "functional_result": "met",
+  "manifest": {
+    "path": "skill-studies/concise-writing/preparation/manifests/codex-invocation-tighten-manifest.json",
+    "sha256": "ec6e126f1f03da4bd7636f7637bf73ce5fa71ebd58e99243bed236dc0568293e",
+    "version": "1",
+    "git_revision": "4dc370648a6a915546035847b2823a4bc5d57325"
+  }
+}
