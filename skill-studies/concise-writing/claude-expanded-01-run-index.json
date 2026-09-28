@@ -1219,7 +1219,15 @@
         },
         "verified": true
       },
-      "result": null
+      "result": {
+        "result_id": "claude-expanded-01-agent-recommendation-candidate-comprehensive-3",
+        "record": {
+          "path": "skill-studies/concise-writing/results/20260927T234925771Z-cw-prep-claude-agent-recommendation-candidate-9a62225d-7e41-4646-87b4-42c2add63785-id60_hi4.json",
+          "sha256": "7ead330cca410af811e44795865a72299019c5a648753bfc61550b7a8b1dfe0a",
+          "version": "2",
+          "git_revision": "74129aa4d5cefdac965cb69da50b12fbb9618b0e"
+        }
+      }
     },
     {
       "attempt_id": "claude-expanded-01-agent-recommendation-control-3-1",
@@ -1260,7 +1268,15 @@
         },
         "verified": true
       },
-      "result": null
+      "result": {
+        "result_id": "claude-expanded-01-agent-recommendation-control-3",
+        "record": {
+          "path": "skill-studies/concise-writing/results/20260927T235027059Z-cw-prep-claude-agent-recommendation-control-0785b901-ce9d-4b44-b4c1-7884679f1a75-4d2ja7gj.json",
+          "sha256": "ecf10ad09319aae955cb9e8790ffbd19ee444c8cc6fc48f924093846d35b3608",
+          "version": "2",
+          "git_revision": "74129aa4d5cefdac965cb69da50b12fbb9618b0e"
+        }
+      }
     },
     {
       "attempt_id": "claude-expanded-01-agent-recommendation-original-3-1",
@@ -1301,7 +1317,15 @@
         },
         "verified": true
       },
-      "result": null
+      "result": {
+        "result_id": "claude-expanded-01-agent-recommendation-original-3",
+        "record": {
+          "path": "skill-studies/concise-writing/results/20260927T235127685Z-cw-prep-claude-agent-recommendation-original-ef25cc8f-7b1f-4723-b1ac-c0fc1437948c-nia_qd8o.json",
+          "sha256": "5b3dd55e3d8e2158aa0f2ca4ca17760f8031b0cbcaa84f6da61feb52faa956ec",
+          "version": "2",
+          "git_revision": "74129aa4d5cefdac965cb69da50b12fbb9618b0e"
+        }
+      }
     },
     {
       "attempt_id": "claude-expanded-01-effective-briefing-control-3-1",
@@ -1342,7 +1366,15 @@
         },
         "verified": true
       },
-      "result": null
+      "result": {
+        "result_id": "claude-expanded-01-effective-briefing-control-3",
+        "record": {
+          "path": "skill-studies/concise-writing/results/20260927T235258922Z-cw-prep-claude-effective-briefing-control-a3edf427-962c-4430-804b-0d226d11ef51-ay5y_ol4.json",
+          "sha256": "ed9b20186b2a22d64b55975776f5cc137b01d796e1d290c9159ceb692b8e0057",
+          "version": "2",
+          "git_revision": "74129aa4d5cefdac965cb69da50b12fbb9618b0e"
+        }
+      }
     },
     {
       "attempt_id": "claude-expanded-01-effective-briefing-original-3-1",
@@ -1383,7 +1415,15 @@
         },
         "verified": true
       },
-      "result": null
+      "result": {
+        "result_id": "claude-expanded-01-effective-briefing-original-3",
+        "record": {
+          "path": "skill-studies/concise-writing/results/20260927T235339008Z-cw-prep-claude-effective-briefing-original-c8cf878e-d86b-40f7-bde2-3ab20fea0e09-e_185pm2.json",
+          "sha256": "8436cfe86c08f63137f55ef7933b7b69eeb2e4e61e24fdd1e0f4027bb50e7b12",
+          "version": "2",
+          "git_revision": "74129aa4d5cefdac965cb69da50b12fbb9618b0e"
+        }
+      }
     },
     {
       "attempt_id": "claude-expanded-01-effective-briefing-candidate-comprehensive-3-1",
@@ -1424,7 +1464,15 @@
         },
         "verified": true
       },
-      "result": null
+      "result": {
+        "result_id": "claude-expanded-01-effective-briefing-candidate-comprehensive-3",
+        "record": {
+          "path": "skill-studies/concise-writing/results/20260927T235428599Z-cw-prep-claude-effective-briefing-candidate-606f4cef-e791-4f15-9c58-0887fa43fe5d-ge2fjpht.json",
+          "sha256": "77e23291815ce836df26f572f1746cabd10086d3a43532628c6be49849b94461",
+          "version": "2",
+          "git_revision": "74129aa4d5cefdac965cb69da50b12fbb9618b0e"
+        }
+      }
     },
     {
       "attempt_id": "claude-expanded-01-long-handoff-original-3-1",
@@ -1465,7 +1513,15 @@
         },
         "verified": true
       },
-      "result": null
+      "result": {
+        "result_id": "claude-expanded-01-long-handoff-original-3",
+        "record": {
+          "path": "skill-studies/concise-writing/results/20260927T235524302Z-cw-prep-claude-long-handoff-original-a492fb07-2460-456c-9fe3-454b1032abbb-k31d7x20.json",
+          "sha256": "67d254267fd435bd2d00869e816c31a79b3405f9311632d5be800871f7e0e913",
+          "version": "2",
+          "git_revision": "74129aa4d5cefdac965cb69da50b12fbb9618b0e"
+        }
+      }
     },
     {
       "attempt_id": "claude-expanded-01-long-handoff-candidate-comprehensive-3-1",
@@ -1506,7 +1562,15 @@
         },
         "verified": true
       },
-      "result": null
+      "result": {
+        "result_id": "claude-expanded-01-long-handoff-candidate-comprehensive-3",
+        "record": {
+          "path": "skill-studies/concise-writing/results/20260927T235647626Z-cw-prep-claude-long-handoff-candidate-9b7206b3-fad8-4f85-a87d-070dfc8cbbf8-9irxp_hd.json",
+          "sha256": "647c0cc357de080646d40f135b94ef50c1cbf1af7e9dae009e66ed1116f7edc1",
+          "version": "2",
+          "git_revision": "74129aa4d5cefdac965cb69da50b12fbb9618b0e"
+        }
+      }
     },
     {
       "attempt_id": "claude-expanded-01-long-handoff-control-3-1",
@@ -1547,7 +1611,15 @@
         },
         "verified": true
       },
-      "result": null
+      "result": {
+        "result_id": "claude-expanded-01-long-handoff-control-3",
+        "record": {
+          "path": "skill-studies/concise-writing/results/20260927T235807625Z-cw-prep-claude-long-handoff-control-da260843-6ccf-41c3-84c0-724966b37bf9-9osf_7jq.json",
+          "sha256": "854eabbbd561c0cf66c09149509eb66edf1877e046e21258c16bbe766bfb0ebd",
+          "version": "2",
+          "git_revision": "74129aa4d5cefdac965cb69da50b12fbb9618b0e"
+        }
+      }
     },
     {
       "attempt_id": "claude-expanded-01-document-addition-candidate-comprehensive-3-1",
@@ -1588,7 +1660,15 @@
         },
         "verified": true
       },
-      "result": null
+      "result": {
+        "result_id": "claude-expanded-01-document-addition-candidate-comprehensive-3",
+        "record": {
+          "path": "skill-studies/concise-writing/results/20260928T000002667Z-cw-prep-claude-document-addition-candidate-889895ac-7de3-467a-984b-a005d729cd9a-aeynz_7d.json",
+          "sha256": "4142ad162393bf03d795cb2bdb6e3a29ee743344061ba66f33b8807417fab7d2",
+          "version": "2",
+          "git_revision": "74129aa4d5cefdac965cb69da50b12fbb9618b0e"
+        }
+      }
     },
     {
       "attempt_id": "claude-expanded-01-document-addition-control-3-1",
@@ -1629,7 +1709,15 @@
         },
         "verified": true
       },
-      "result": null
+      "result": {
+        "result_id": "claude-expanded-01-document-addition-control-3",
+        "record": {
+          "path": "skill-studies/concise-writing/results/20260928T000158301Z-cw-prep-claude-document-addition-control-8f4ae2c6-f5f5-4bd4-b5f8-145c0c67ad45-tpbhqfoj.json",
+          "sha256": "68b6a1218134afe85a8a18cbafe2834178dc6ddc9723c6fdafe395bd4ae2e835",
+          "version": "2",
+          "git_revision": "74129aa4d5cefdac965cb69da50b12fbb9618b0e"
+        }
+      }
     },
     {
       "attempt_id": "claude-expanded-01-document-addition-original-3-1",
@@ -1670,7 +1758,15 @@
         },
         "verified": true
       },
-      "result": null
+      "result": {
+        "result_id": "claude-expanded-01-document-addition-original-3",
+        "record": {
+          "path": "skill-studies/concise-writing/results/20260928T000259922Z-cw-prep-claude-document-addition-original-155aeae7-8300-4714-ae6f-b71c236ccf06-d5av1xak.json",
+          "sha256": "04b16cc5badef617f25bb1a9b8b8c74720ca0d8130374a98174d50436ca2f582",
+          "version": "2",
+          "git_revision": "74129aa4d5cefdac965cb69da50b12fbb9618b0e"
+        }
+      }
     }
   ]
 }
