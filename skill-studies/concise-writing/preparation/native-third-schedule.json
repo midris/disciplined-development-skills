@@ -1,0 +1,153 @@
+{
+  "status": "owner-approved third repetition; freeze before dispatch",
+  "stages": [
+    "codex-invocation-02",
+    "claude-invocation-02"
+  ],
+  "attempts": [
+    {
+      "batch": "codex-invocation-02",
+      "order": 1,
+      "provider": "codex",
+      "case": "invocation-tighten",
+      "condition": "original",
+      "repetition": 3,
+      "config": "skill-studies/concise-writing/preparation/configs/codex-invocation-tighten-original.json"
+    },
+    {
+      "batch": "codex-invocation-02",
+      "order": 2,
+      "provider": "codex",
+      "case": "invocation-tighten",
+      "condition": "candidate-comprehensive",
+      "repetition": 3,
+      "config": "skill-studies/concise-writing/preparation/configs/codex-invocation-tighten-candidate.json"
+    },
+    {
+      "batch": "codex-invocation-02",
+      "order": 3,
+      "provider": "codex",
+      "case": "invocation-write",
+      "condition": "candidate-comprehensive",
+      "repetition": 3,
+      "config": "skill-studies/concise-writing/preparation/configs/codex-invocation-write-candidate.json"
+    },
+    {
+      "batch": "codex-invocation-02",
+      "order": 4,
+      "provider": "codex",
+      "case": "invocation-write",
+      "condition": "original",
+      "repetition": 3,
+      "config": "skill-studies/concise-writing/preparation/configs/codex-invocation-write-original.json"
+    },
+    {
+      "batch": "codex-invocation-02",
+      "order": 5,
+      "provider": "codex",
+      "case": "invocation-nonprose",
+      "condition": "original",
+      "repetition": 3,
+      "config": "skill-studies/concise-writing/preparation/configs/codex-invocation-nonprose-original.json"
+    },
+    {
+      "batch": "codex-invocation-02",
+      "order": 6,
+      "provider": "codex",
+      "case": "invocation-nonprose",
+      "condition": "candidate-comprehensive",
+      "repetition": 3,
+      "config": "skill-studies/concise-writing/preparation/configs/codex-invocation-nonprose-candidate.json"
+    },
+    {
+      "batch": "codex-invocation-02",
+      "order": 7,
+      "provider": "codex",
+      "case": "invocation-comments",
+      "condition": "candidate-comprehensive",
+      "repetition": 3,
+      "config": "skill-studies/concise-writing/preparation/configs/codex-invocation-comments-candidate.json"
+    },
+    {
+      "batch": "codex-invocation-02",
+      "order": 8,
+      "provider": "codex",
+      "case": "invocation-comments",
+      "condition": "original",
+      "repetition": 3,
+      "config": "skill-studies/concise-writing/preparation/configs/codex-invocation-comments-original.json"
+    },
+    {
+      "batch": "claude-invocation-02",
+      "order": 1,
+      "provider": "claude",
+      "case": "invocation-tighten",
+      "condition": "original",
+      "repetition": 3,
+      "config": "skill-studies/concise-writing/preparation/configs/claude-invocation-tighten-original.json"
+    },
+    {
+      "batch": "claude-invocation-02",
+      "order": 2,
+      "provider": "claude",
+      "case": "invocation-tighten",
+      "condition": "candidate-comprehensive",
+      "repetition": 3,
+      "config": "skill-studies/concise-writing/preparation/configs/claude-invocation-tighten-candidate.json"
+    },
+    {
+      "batch": "claude-invocation-02",
+      "order": 3,
+      "provider": "claude",
+      "case": "invocation-write",
+      "condition": "candidate-comprehensive",
+      "repetition": 3,
+      "config": "skill-studies/concise-writing/preparation/configs/claude-invocation-write-candidate.json"
+    },
+    {
+      "batch": "claude-invocation-02",
+      "order": 4,
+      "provider": "claude",
+      "case": "invocation-write",
+      "condition": "original",
+      "repetition": 3,
+      "config": "skill-studies/concise-writing/preparation/configs/claude-invocation-write-original.json"
+    },
+    {
+      "batch": "claude-invocation-02",
+      "order": 5,
+      "provider": "claude",
+      "case": "invocation-nonprose",
+      "condition": "original",
+      "repetition": 3,
+      "config": "skill-studies/concise-writing/preparation/configs/claude-invocation-nonprose-original.json"
+    },
+    {
+      "batch": "claude-invocation-02",
+      "order": 6,
+      "provider": "claude",
+      "case": "invocation-nonprose",
+      "condition": "candidate-comprehensive",
+      "repetition": 3,
+      "config": "skill-studies/concise-writing/preparation/configs/claude-invocation-nonprose-candidate.json"
+    },
+    {
+      "batch": "claude-invocation-02",
+      "order": 7,
+      "provider": "claude",
+      "case": "invocation-comments",
+      "condition": "candidate-comprehensive",
+      "repetition": 3,
+      "config": "skill-studies/concise-writing/preparation/configs/claude-invocation-comments-candidate.json"
+    },
+    {
+      "batch": "claude-invocation-02",
+      "order": 8,
+      "provider": "claude",
+      "case": "invocation-comments",
+      "condition": "original",
+      "repetition": 3,
+      "config": "skill-studies/concise-writing/preparation/configs/claude-invocation-comments-original.json"
+    }
+  ]
+}

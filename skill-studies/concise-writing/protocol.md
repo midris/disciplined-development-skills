@@ -2,14 +2,21 @@
 
 Format version: `1`
 Study ID: `concise-writing`
-Status: all 104 approved expanded calls are complete and assessed across Codex and Claude. Coverage acceptance, editing-base selection, skill edits and adoption remain owner decisions. Results below separate providers, cases, invocation and functional outcomes.
+Status: the initial 104-call comparison is complete; sixteen owner-approved native third repetitions are being prepared. Skill edits and adoption remain deferred.
 Current action: CW remains the first end-to-end study, followed by SSR.
 The owner accepted the scenario designs C, N1–N4 and revised E during the walkthrough, retained A/B, and removed tailored skill-editing/compression tests.
 The owner-requested [preparation review and remediation](../../reviews/2026-09-27-cw-suite-preparation-review.md) are complete.
 On 2026-09-27, the owner replied “approved, please continue” to the 104-call proposal: 72 ordinary calls followed by 32 native calls, raising the combined subject ceiling from 136 to 240.
 This authorizes both stages, runtime qualification, committed input/schedule freeze and collection after readiness, with zero automatic retries; it does not authorize a skill edit or adoption.
 The [preparation package](preparation/README.md) and [allocation forecast](testing-audit.md#proposed-sequence-and-allocation-forecast) define the approved scope.
-Current work: review the completed [ordinary Codex](codex-expanded-01-assessment.md), [ordinary Claude](claude-expanded-01-assessment.md), [native Codex](codex-invocation-01-assessment.md) and [native Claude](claude-invocation-01-assessment.md) evidence and accept or revise the remaining coverage limits before selecting edits; expanded spending is 104/104.
+Current work: freeze and collect the [native third-repetition schedule](preparation/native-third-schedule.json), then reassess each native scenario with three observations per provider/version; supplemental spending is 0/16.
+The owner clarified that three repetitions are the minimum and authorized the sixteen missing calls: “yeah, go ahead and make those. 2 is definitely not enough. I am pretty sure 3 is what we decided as a our minimum”.
+This raises combined subject capacity from 240 to 256 and the expanded CW scope from 104 to 120 calls.
+Three repetitions now apply to every selected CW scenario/condition/provider; this is a diagnostic minimum, not a reliability threshold or a replacement for the later fresh-wording authoring requirements.
+The existing sixteen-attempt native indexes and assessments remain immutable batch records; the two eight-call supplements identify repetition 3 and will support an explicitly labeled three-repetition summary.
+Use the same qualified CLI binaries, models, low effort, inputs, skills and CW-expanded-1 rules; verify identities before dispatch and stop for drift rather than substituting a model.
+Alternate the second rotation's condition order in the third; an odd number of repetitions cannot fully balance two-condition order.
+No automatic retries, replacements, new skill edits or adoption are authorized.
 Both runtimes are qualified, all 16 manifests pin input revision `96b6e383da39ea807a6ad49d4513cfc1d6f4cd33`, and all four batches pass collection readiness.
 Every attempt records the committed manifest, invocation authority and runner revision.
 Establish and assess both providers' baselines before selecting CW edits; the existing rewrite remains an unchanged comparison condition.
@@ -392,6 +399,50 @@ Inputs: [claude-invocation-tighten-manifest](preparation/manifests/claude-invoca
 | 15 | invocation-comments | original | 2 | `skill-studies/concise-writing/preparation/configs/claude-invocation-comments-original.json` |
 | 16 | invocation-comments | candidate-comprehensive | 2 | `skill-studies/concise-writing/preparation/configs/claude-invocation-comments-candidate.json` |
 
+### Native third repetition: codex-invocation-02
+
+Scope: eight sequential attempts; codex, four unchanged native cases × two skill versions × one added repetition.
+Authority: owner-approved sixteen-call supplement and minimum-three clarification at the protocol opening.
+Use CW-expanded-1 and the unchanged native cards, separating D1 from F1–F3; N3 functional outcomes remain unmeasured.
+Include every valid behavioral outcome; no retries or favorable replacements.
+Recheck runtime identities and the declared login-shell gates; retain and verify each stopped bundle before the next dispatch.
+Stop on uncertain charges, preservation failures, contamination, setup defects or input/runtime drift.
+[Runtime qualification](preparation/runtime-qualification.md) supplies the unchanged execution boundary; supplemental checks and assessment are recorded in the [review](../../reviews/2026-09-27-cw-native-third-review.md).
+Inputs: [codex-invocation-tighten-third-manifest](preparation/manifests/codex-invocation-tighten-third-manifest.json), [codex-invocation-write-third-manifest](preparation/manifests/codex-invocation-write-third-manifest.json), [codex-invocation-nonprose-third-manifest](preparation/manifests/codex-invocation-nonprose-third-manifest.json), [codex-invocation-comments-third-manifest](preparation/manifests/codex-invocation-comments-third-manifest.json).
+
+| Order | Case | Condition | Repetition | CONFIG |
+| ---: | --- | --- | ---: | --- |
+| 1 | invocation-tighten | original | 3 | `skill-studies/concise-writing/preparation/configs/codex-invocation-tighten-original.json` |
+| 2 | invocation-tighten | candidate-comprehensive | 3 | `skill-studies/concise-writing/preparation/configs/codex-invocation-tighten-candidate.json` |
+| 3 | invocation-write | candidate-comprehensive | 3 | `skill-studies/concise-writing/preparation/configs/codex-invocation-write-candidate.json` |
+| 4 | invocation-write | original | 3 | `skill-studies/concise-writing/preparation/configs/codex-invocation-write-original.json` |
+| 5 | invocation-nonprose | original | 3 | `skill-studies/concise-writing/preparation/configs/codex-invocation-nonprose-original.json` |
+| 6 | invocation-nonprose | candidate-comprehensive | 3 | `skill-studies/concise-writing/preparation/configs/codex-invocation-nonprose-candidate.json` |
+| 7 | invocation-comments | candidate-comprehensive | 3 | `skill-studies/concise-writing/preparation/configs/codex-invocation-comments-candidate.json` |
+| 8 | invocation-comments | original | 3 | `skill-studies/concise-writing/preparation/configs/codex-invocation-comments-original.json` |
+
+### Native third repetition: claude-invocation-02
+
+Scope: eight sequential attempts; claude, four unchanged native cases × two skill versions × one added repetition.
+Authority: owner-approved sixteen-call supplement and minimum-three clarification at the protocol opening.
+Use CW-expanded-1 and the unchanged native cards, separating D1 from F1–F3; N3 functional outcomes remain unmeasured.
+Include every valid behavioral outcome; no retries or favorable replacements.
+Recheck runtime identities and the declared login-shell gates; retain and verify each stopped bundle before the next dispatch.
+Stop on uncertain charges, preservation failures, contamination, setup defects or input/runtime drift.
+[Runtime qualification](preparation/runtime-qualification.md) supplies the unchanged execution boundary; supplemental checks and assessment are recorded in the [review](../../reviews/2026-09-27-cw-native-third-review.md).
+Inputs: [claude-invocation-tighten-third-manifest](preparation/manifests/claude-invocation-tighten-third-manifest.json), [claude-invocation-write-third-manifest](preparation/manifests/claude-invocation-write-third-manifest.json), [claude-invocation-nonprose-third-manifest](preparation/manifests/claude-invocation-nonprose-third-manifest.json), [claude-invocation-comments-third-manifest](preparation/manifests/claude-invocation-comments-third-manifest.json).
+
+| Order | Case | Condition | Repetition | CONFIG |
+| ---: | --- | --- | ---: | --- |
+| 1 | invocation-tighten | original | 3 | `skill-studies/concise-writing/preparation/configs/claude-invocation-tighten-original.json` |
+| 2 | invocation-tighten | candidate-comprehensive | 3 | `skill-studies/concise-writing/preparation/configs/claude-invocation-tighten-candidate.json` |
+| 3 | invocation-write | candidate-comprehensive | 3 | `skill-studies/concise-writing/preparation/configs/claude-invocation-write-candidate.json` |
+| 4 | invocation-write | original | 3 | `skill-studies/concise-writing/preparation/configs/claude-invocation-write-original.json` |
+| 5 | invocation-nonprose | original | 3 | `skill-studies/concise-writing/preparation/configs/claude-invocation-nonprose-original.json` |
+| 6 | invocation-nonprose | candidate-comprehensive | 3 | `skill-studies/concise-writing/preparation/configs/claude-invocation-nonprose-candidate.json` |
+| 7 | invocation-comments | candidate-comprehensive | 3 | `skill-studies/concise-writing/preparation/configs/claude-invocation-comments-candidate.json` |
+| 8 | invocation-comments | original | 3 | `skill-studies/concise-writing/preparation/configs/claude-invocation-comments-original.json` |
+
 ## Storage and accounting
 
 Expanded collection accounting: [claude-invocation-01 attempt index](claude-invocation-01-run-index.json).
@@ -407,14 +458,14 @@ Approved durable raw evidence directory: `/Users/simon/work/personal/skill-study
 Owner-accepted recovery decision for CW: single-host retention, as used for SSR, with one verified canonical raw bundle per attempt. The current `tmutil destinationinfo` check reports no destinations configured; `tmutil isexcluded` reports the parent private store is Included. No other working backup arrangement has been established. Machine loss or disk failure could therefore destroy CW raw evidence; Git holds case inputs and assessments but cannot recover those external bundles. Creating the directory and passing a local copy check do not establish host-loss recovery. The owner explicitly accepted this CW risk together with the eight-execution scope above.
 
 Combined accounting sources: closed SSR [pilot 01](../sweeping-stale-references/pilot-run-index.json), [pilot 02](../sweeping-stale-references/pilot-02-run-index.json), [semantic delivery](../sweeping-stale-references/semantic-delivery-01-run-index.json), [core baseline](../sweeping-stale-references/core-baseline-01-run-index.json), [comparison](../sweeping-stale-references/comprehensive-comparison-01-run-index.json), the SSR [completed expansion](../sweeping-stale-references/coverage-baseline-01-run-index.json), the SSR [completed comparison](../sweeping-stale-references/comprehensive-comparison-02-run-index.json), the SSR [Claude smoke](../sweeping-stale-references/claude-smoke-01-run-index.json), the SSR [Claude comparison](../sweeping-stale-references/claude-comparison-01-run-index.json), the SSR [Opus invocation comparison](../sweeping-stale-references/claude-opus-invocation-01-run-index.json), and both CW indexes above. Historical pilot links contribute accounting only; they are not reclassified or reassessed.
-Dispatched calls are **240 subject, 0 evaluator, 0 authoring, 0 retry**; remaining outer capacity is **0 / 12 / 4 / 4** against the [active plan](../../plans/2026-09-11-model-driven-skill-testing.md#limits-and-information-boundaries). Both eight-call CW batches are spent. The owner authorized ten SSR expansion calls under ceiling 56; all ten are spent, including the excluded control, with no replacement or pool transfer. Comparison runner durations total 508.067 seconds; baseline durations remain 494.936 seconds, including setup and capture.
+Dispatched calls are **240 subject, 0 evaluator, 0 authoring, 0 retry**; remaining outer capacity is **16 / 12 / 4 / 4** against the [active plan](../../plans/2026-09-11-model-driven-skill-testing.md#limits-and-information-boundaries). Both eight-call CW batches are spent. The owner authorized ten SSR expansion calls under ceiling 56; all ten are spent, including the excluded control, with no replacement or pool transfer. Comparison runner durations total 508.067 seconds; baseline durations remain 494.936 seconds, including setup and capture.
 Owner clarification after round-10 review: “the budget is just a guideline”. The 1,200-minute figure below remains the planning baseline, not a collection stop; invocation ceilings and the authorized SSR scope is unchanged. Retain elapsed effort and forecast variance to expose process cost.
 
 Current combined accounting: **2,040 active minutes booked; 840 minutes above the historical 1,200-minute planning guideline**.
 These are rounded effort estimates, not stopwatch measurements or a separately timed category breakdown.
 Between-turn owner wait is excluded; runner durations are included once.
-All 104 approved calls are spent and the collection review is complete.
-No further collection or rewrite is authorized; any next experiment needs its own scope and estimate.
+The initial 104 calls are spent; sixteen native third repetitions are authorized.
+The supplemental forecast is 40 active minutes including preparation, collection, assessment and review; model waits are included once.
 
 | Work | Estimated active minutes |
 | --- | ---: |
@@ -511,11 +562,14 @@ The remaining authorized-work forecast is:
 
 | Work | Estimate | Basis |
 | --- | ---: | --- |
-| **Total** | **0** | Collection and review complete; next scope awaits owner decision. |
+| Native third repetitions and assessment | 30 | Sixteen calls across the unchanged qualified providers. |
+| Freeze, verification and final review | 10 | Committed authority, evidence and three-repetition reconciliation. |
+| **Total** | **40** | Sixteen approved calls; no new skill authoring. |
 
 ## Results and decision
 
-The selected baseline scope is complete, with no unattempted slots, retries, setup exclusions or unresolved judgments.
+The initial 104-call scope is complete, with no unattempted slots, retries, setup exclusions or unresolved judgments.
+The owner-required third native repetitions must complete before accepting the combined baseline; the findings below retain their original denominators until the supplement is assessed.
 The existing rewrite is not uniformly stronger: it passes all ordinary Codex attempts, but loses required contact recording in every Claude E attempt and misses more Claude positive native loads in these samples.
 Both versions show Claude weaknesses in whole-document cleanup and unsupported new-report claims.
 The next owner decision is whether these baselines and explicit coverage limits are sufficient, then which observed failure to target and which version to use as the editing base.

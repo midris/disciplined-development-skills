@@ -7,7 +7,8 @@ The protocol owns current allocation approval and spending; this audit records c
 
 ## Conclusion
 
-The expanded collection is now assessed; see the [protocol results](protocol.md#results-and-decision) for current evidence and the pending coverage decision.
+The initial expanded collection is assessed; the owner requires a third native repetition before baseline acceptance.
+See the [protocol results](protocol.md#results-and-decision) for current evidence and the pending coverage decision.
 The historical audit below explains why that scope was selected; it does not supersede the completed assessments.
 
 Keep both existing cases and their results, but do not treat them as sufficient coverage for the owner's expanded use.
@@ -96,10 +97,11 @@ The owner requested Claude coverage for the existing A/B cases as well as C, and
 E uses the same three-repetition design and adds 18 ordinary calls.
 Steps 2 and 3 total **104 diagnostic calls**: 52 per provider; approval and subject capacity are recorded in the protocol.
 This includes N4’s eight native comment-editing calls; the protocol links their qualification, frozen inputs and completed evidence.
-Native cases use two repetitions.
+The initial native allocation used two repetitions; the owner has corrected the minimum to three and approved sixteen additional calls.
+The original 104-call design below remains the historical allocation rationale; the protocol owns the supplemental schedule and current ceiling.
 They are not the cost of the whole end-to-end cycle; any fresh rewrite needs its own bounded allocation.
 Keeping the ordinary comparison decision separate allows an early stop for a contract or fixture defect before spending on discovery.
-Three ordinary repetitions and two native repetitions offer limited variability checks, not reliability estimates or the five-sample wording test.
+Three repetitions per scenario/condition/provider offer limited variability checks, not reliability estimates or the five-sample wording test.
 The configurations request Codex `gpt-5.6-sol` and Claude `claude-sonnet-5`, both at low effort.
 Qualified runtime identities and observed production models are recorded in the protocol and assessments.
 Opus and effort sweeps are not part of this initial comparison.
@@ -118,7 +120,7 @@ Do not forecast a later rewrite as zero effort; its scope depends on observed fa
 
 ## Adequacy boundary
 
-The completed expanded suite supplies the selected cross-provider baselines and invocation evidence without a case per padding pattern.
+The initial suite supplies cross-provider evidence, but baseline acceptance waits for the owner-required native third repetitions.
 The walkthrough accepted scenario designs; the owner must now review observed outcomes and accept or revise the remaining coverage limits before edits.
 Tailored skill authoring/compression is outside the owner-selected scope, not a hidden gate on ordinary CW adoption.
 Response-only detailed explanations, full DD orchestration, plan/spec generation and anchor-changing SSR composition remain outside the first allocation; revisit the relevant gap before adopting a change that depends on it.

@@ -38,7 +38,8 @@ Classify missed, partial and late loads separately from timely loads.
 A qualified native miss is an observation, not a setup exclusion or retry opportunity.
 For N3, inspect the complete trace for any CW load; correct numeric editing cannot substitute for appropriate non-selection.
 Report invocation and artifact outcomes separately, with N2 generation and N4 comment editing outside the ordinary editing denominator and N3 functional CW outcomes unmeasured.
-Two repetitions per condition/provider are descriptive, not an invocation reliability estimate.
+The owner requires at least three repetitions per selected CW condition/provider; the separately frozen native third-repetition supplement completes that minimum.
+These counts remain descriptive, not an invocation reliability estimate.
 
 O4 drafting/comparison remains unscored process context.
 Record O5 keep-and-flag behavior only when uncertainty is actually expressed; silence does not establish uncertainty or a skipped step.
