@@ -88,17 +88,17 @@ The protocol owns scenario acceptance; call authorization, runtime qualification
 
 1. **Use the reviewed coverage design.** Retain A/B, add C for long-document navigation and pressure, E for document additions, and N1–N4 for native selection including code comments. The protocol records acceptance and deliberate limits; the completed assessments distinguish successful coverage from observed effectiveness failures.
 2. **Compare ordinary editing across providers.** A/B/C/E × no-CW/original/existing rewrite × Codex/Claude × three repetitions: **72 subject calls**. All conditions use identical source/task/context except CW delivery. Read outputs under [CW-expanded-1](protocol.md#expanded-suite-assessment-policy), using policy 4 for A/B/C and the prospective addition criteria for E; report process separately and compare quality before length.
-3. **Measure native selection.** N1/N2/N3/N4 × original/rewrite × Codex/Claude × two repetitions: **32 subject calls**. N1 reuses A's natural tightening task; N2 covers producing prose without a tightening request; N3 is a numeric-only edit with comments untouched; N4 writes useful code comments without changing executable code. Keep native and explicit-load strata separate. Negative task success is not functional CW evidence.
+3. **Measure native selection.** N1/N2/N3/N4 × original/rewrite × Codex/Claude × three repetitions: **48 subject calls**. N1 reuses A's natural tightening task; N2 covers producing prose without a tightening request; N3 is a numeric-only edit with comments untouched; N4 writes useful code comments without changing executable code. Keep native and explicit-load strata separate. Negative task success is not functional CW evidence.
 4. **Assess additions as document editing.** E reuses B's briefing but adds supplied requirements that overlap existing material. Judge the complete source, new notes and output for fidelity, useful integration and readability; word-count growth is not a failure. No writing-skills composition or downstream agent testing is required for this case.
 5. **Diagnose, then author only if needed.** Select the existing version if it meets the agreed use. Otherwise choose a specific observed failure and run the writing-skills control/wording experiment, then the relevant fixed suite on both providers. If controls show no failure, resolve whether a pure-cleanup experiment is worthwhile rather than manufacturing RED.
 6. **Compress after effectiveness.** Freeze an effective CW version, attempt deletions/consolidation separately from behavioral additions, and compare fresh runs on the same relevant cases. Repeat the relevant document and invocation checks when CW behavior changes. Recommend adoption only with regressions, uncertainty and deliberate limitations visible.
 
 The owner requested Claude coverage for the existing A/B cases as well as C, and three repetitions on each provider for this ordinary comparison.
 E uses the same three-repetition design and adds 18 ordinary calls.
-Steps 2 and 3 total **104 diagnostic calls**: 52 per provider; approval and subject capacity are recorded in the protocol.
-This includes N4’s eight native comment-editing calls; the protocol links their qualification, frozen inputs and completed evidence.
-The initial native allocation used two repetitions; the owner has corrected the minimum to three and approved sixteen additional calls.
-The original 104-call design below remains the historical allocation rationale; the protocol owns the supplemental schedule and current ceiling.
+Steps 2 and 3 total **120 diagnostic calls**: 60 per provider; approval and subject capacity are recorded in the protocol.
+This includes N4’s twelve native comment-editing calls; the protocol links their qualification, frozen inputs and completed evidence.
+The owner requires three repetitions as the minimum for each selected scenario/condition/provider.
+The first two native repetitions remain in their completed batches; the separate sixteen-call supplement supplies repetition 3 without rewriting those records.
 They are not the cost of the whole end-to-end cycle; any fresh rewrite needs its own bounded allocation.
 Keeping the ordinary comparison decision separate allows an early stop for a contract or fixture defect before spending on discovery.
 Three repetitions per scenario/condition/provider offer limited variability checks, not reliability estimates or the five-sample wording test.
@@ -107,7 +107,7 @@ Qualified runtime identities and observed production models are recorded in the 
 Opus and effort sweeps are not part of this initial comparison.
 
 Within each provider, rotate the three explicit-load conditions across all three repetitions so each condition occupies each position once for every case; stagger the starting condition across cases.
-Alternate original/rewrite order for native runs.
+Alternate original/rewrite order for native runs; three repetitions leave an unavoidable one-run order imbalance.
 Freeze the exact schedule before collection, retain every started call, and allow no automatic retries.
 Stop for uncertain charges, failed preservation, contamination, unusable setup or runtime/input drift.
 Valid behavioral failures remain observations and do not justify reruns; a newly discovered criterion defect pauses scoring for explicit versioned resolution.

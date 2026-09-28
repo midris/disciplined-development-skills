@@ -23,6 +23,30 @@ Eight new manifests pin the committed input revision b167a70; all supplied sourc
 Both new batches pass collection readiness.
 The first readiness check rejected a semantically equivalent inclusion sentence; using the checker-recognized include-all-valid-setup/no-retry form resolves it without changing policy or subject inputs.
 The preparation review checks sixteen unique provider/case/version cells, repetition 3, unchanged runtime and score semantics, separate invocation/function outcomes and the 256-call ceiling.
-No findings remain; no supplemental calls have yet been dispatched.
+No preparation findings remain.
+
+## Codex checkpoint
+
+All eight scheduled third repetitions are retained and scored under unchanged cards.
+Eight inventories and twenty protected-input comparisons match; all outputs have complete structured results.
+All six positive loads precede writing and all six artifacts meet F1–F3.
+The rewrite again loads before reading the numeric-only task (order 6); the original does not load.
+Both numeric edits are exact, and both comment outputs pass parse/token comparison with 40 comment words versus 20 initially.
+Within-call patch and Python-alias recoveries are retained, not excluded or retried.
+The protocol, audit and preparation overview now distinguish the initial 104 calls from the 120-call combined allocation.
+No checkpoint findings remain.
+
+## Claude checkpoint
+
+All eight scheduled calls are retained and scored; eight inventories and twenty protected-input comparisons match.
+N1 original/rewrite and N2 rewrite load before writing; N2 original and both N4 runs miss loading entirely.
+Both N3 runs avoid loading and make exact numeric edits, but both add a status message before their final Done.; this is an unscored task-compliance observation.
+All artifacts except N2 original meet F1–F3.
+That report generalizes sixty staging jobs and two recoveries into reliability at staging scale and correct interruption handling; F1 fails under the existing source-fidelity criterion.
+Its explicit scope, approval, staffing and outcome gates remain usable, so F2 is not failed automatically.
+Both comment outputs pass parse/token comparison; useful comments do not erase their invocation misses.
+All sixteen supplement setups are valid; no repeated calls, exclusions or new scoring rules.
+The required hook suite passes: 263 passed, 3 environment skips.
+No checkpoint findings remain.
 
 DD-VERDICT: PASS

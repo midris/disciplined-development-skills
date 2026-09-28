@@ -49,7 +49,8 @@ C's underexplained lease-token requirement offers a possible observation, not a 
 
 The [audit](../testing-audit.md#proposed-sequence-and-allocation-forecast) owns the staged allocation forecast.
 E uses three conditions × two providers × three repetitions: 18 calls, with no downstream calls.
-A/B/C/E total 72 ordinary calls; adding the 32 native calls gives 104 before any fresh CW rewrite.
+A/B/C/E total 72 ordinary calls; adding the 48 native calls gives 120 before any fresh CW rewrite.
+The original schedule retains the first 104 calls; the separate [third-repetition schedule](native-third-schedule.json) adds sixteen native calls to meet the owner’s minimum.
 The protocol owns scenario acceptance and dispatch authority; this allocation is not a spending authorization.
 
 The cards and [controller examples](boundary-checks.md) support assessment consistency, not a claim that constructed cases have produced model failures.
