@@ -1,0 +1,161 @@
+{
+  "schema_version": "2",
+  "record_kind": "execution result",
+  "assessed_at": "2026-09-27T23:53:34.929425+00:00",
+  "run_id": "20260927T235258922Z-cw-prep-claude-effective-briefing-control-a3edf427-962c-4430-804b-0d226d11ef51-ay5y_ol4",
+  "condition": "control",
+  "assessor": {
+    "name": "Codex active session",
+    "method": "active session",
+    "model": null,
+    "session_id": null,
+    "context": "Same session that prepared and reviewed these development cases. No independent, blinded or held-out claim."
+  },
+  "evidence": [
+    {
+      "id": "output",
+      "artifact": {
+        "path": "/Users/simon/work/personal/skill-study-private/concise-writing/development/20260927T235258922Z-cw-prep-claude-effective-briefing-control-a3edf427-962c-4430-804b-0d226d11ef51-ay5y_ol4/workspace/fixture/report.md",
+        "sha256": "26580529f90276e8cba78dc4f402a57edcc0b6a0c3e2d2dae51ed9f8f8c006d9",
+        "version": null
+      },
+      "selector": "Complete artifact"
+    },
+    {
+      "id": "trace",
+      "artifact": {
+        "path": "/Users/simon/work/personal/skill-study-private/concise-writing/development/20260927T235258922Z-cw-prep-claude-effective-briefing-control-a3edf427-962c-4430-804b-0d226d11ef51-ay5y_ol4/stdout.txt",
+        "sha256": "ad7d18104b7f19dfad7dcffb094a164be0a3be74f0f666fa4d27e00109af2f75",
+        "version": null
+      },
+      "selector": "Complete artifact"
+    },
+    {
+      "id": "mechanical",
+      "artifact": {
+        "path": "/Users/simon/work/personal/skill-study-private/concise-writing/development/20260927T235258922Z-cw-prep-claude-effective-briefing-control-a3edf427-962c-4430-804b-0d226d11ef51-ay5y_ol4/result.json",
+        "sha256": "2a53d4d745e9ec61f441ce0f26c401862c673a8c0d5d3cd0ed8e39ebcf3e1ccc",
+        "version": null
+      },
+      "selector": "Complete artifact"
+    },
+    {
+      "id": "log",
+      "artifact": {
+        "path": "/Users/simon/work/personal/skill-study-private/concise-writing/development/20260927T235258922Z-cw-prep-claude-effective-briefing-control-a3edf427-962c-4430-804b-0d226d11ef51-ay5y_ol4/runner.log",
+        "sha256": "acc34375d0787eb1af3acef8d8b67a7feb1ca8e62d00a6b170748a28bd19ebd7",
+        "version": null
+      },
+      "selector": "Complete artifact"
+    },
+    {
+      "id": "final",
+      "artifact": {
+        "path": "/Users/simon/work/personal/skill-study-private/concise-writing/development/20260927T235258922Z-cw-prep-claude-effective-briefing-control-a3edf427-962c-4430-804b-0d226d11ef51-ay5y_ol4/final.txt",
+        "sha256": "3ed64cb7ed4132e700ca72f8dafe163bd7422e76effbb1b02023fdc87dce6004",
+        "version": null
+      },
+      "selector": "Complete artifact"
+    },
+    {
+      "id": "source-0",
+      "artifact": {
+        "path": "skill-studies/concise-writing/cases/effective-briefing/fixture/report.md",
+        "sha256": "93c23afd44aab52dfcd2bca53f3db0020a41f650d46d4c59a09595539dc72491",
+        "version": null,
+        "git_revision": "96b6e383da39ea807a6ad49d4513cfc1d6f4cd33"
+      },
+      "selector": "Complete frozen source"
+    },
+    {
+      "id": "source-1",
+      "artifact": {
+        "path": "skill-studies/concise-writing/cases/effective-briefing/task.md",
+        "sha256": "fbf576b5f00e154e6ee4618285d96980b1858de992e5390a1e83cf9b03cb1796",
+        "version": null,
+        "git_revision": "96b6e383da39ea807a6ad49d4513cfc1d6f4cd33"
+      },
+      "selector": "Complete frozen source"
+    },
+    {
+      "id": "source-4",
+      "artifact": {
+        "path": "skill-studies/concise-writing/preparation/claude-original-prompt.md",
+        "sha256": "c72703762cfa9b2be16c09550e27b534fd378c68150004b8d039cbcc499df6bd",
+        "version": null,
+        "git_revision": "96b6e383da39ea807a6ad49d4513cfc1d6f4cd33"
+      },
+      "selector": "Complete frozen source"
+    }
+  ],
+  "setup": {
+    "status": "valid",
+    "reason": "Completed with retained raw trace, saved artifact and final response. Actual provider model/CLI and skill delivery were inspected against the frozen condition; requested low effort is recorded in runner settings. Protected input and inventory verification is recorded at checkpoint.",
+    "evidence": [
+      "mechanical",
+      "trace",
+      "log"
+    ]
+  },
+  "criteria": [
+    {
+      "id": "F1",
+      "dimension": "functional",
+      "judgment": "met",
+      "reason": "Preserves measured counts, qualified absence of reported loss, support uncertainty, scale limits, named checks/sender, opt-in status and separate expansion decision. Default stays off the table is scoped by the Thursday decision, not a permanent ban.",
+      "consequence": "Required for the corresponding functional or invocation outcome; reported separately.",
+      "evidence": [
+        "output",
+        "source-0",
+        "source-1",
+        "source-4"
+      ]
+    },
+    {
+      "id": "F2",
+      "dimension": "functional",
+      "judgment": "met",
+      "reason": "Conditional recommendation and explicit Thursday approval gate retain the manager decision; current-team use and four more teams preserve continuation context under policy 4.",
+      "consequence": "Required for the corresponding functional or invocation outcome; reported separately.",
+      "evidence": [
+        "output",
+        "source-0",
+        "source-1",
+        "source-4"
+      ]
+    },
+    {
+      "id": "F3",
+      "dimension": "functional",
+      "judgment": "met",
+      "reason": "Decision/recommendation, evidence bullets and numbered prerequisites are clear; deleting the closing recap does not impair this short briefing.",
+      "consequence": "Required for the corresponding functional or invocation outcome; reported separately.",
+      "evidence": [
+        "output",
+        "source-0",
+        "source-1",
+        "source-4"
+      ]
+    }
+  ],
+  "procedural_summary": "No CW supplied; source read before Write at stdout 14. Process unscored.",
+  "observations": [
+    {
+      "dimension": "functional",
+      "description": "Source 279 words; output 211, change -68, shorter. No reports of lost documents retains an evidence qualification, unlike control 17 categorical No lost documents.",
+      "consequence": "Descriptive comparison; no separate score or automatic length-based preference.",
+      "evidence": [
+        "output"
+      ]
+    }
+  ],
+  "uncertainty": [],
+  "result_id": "claude-expanded-01-effective-briefing-control-3",
+  "functional_result": "met",
+  "manifest": {
+    "path": "skill-studies/concise-writing/preparation/manifests/claude-effective-briefing-manifest.json",
+    "sha256": "a36d38f0f0033c391fc824a40945a4159e6e4ee7ef491622779445a867339748",
+    "version": "1",
+    "git_revision": "4dc370648a6a915546035847b2823a4bc5d57325"
+  }
+}

@@ -79,4 +79,25 @@ Actual Claude identity and catalog membership match every condition; all sixteen
 Order 23's broad filesystem search returned no output before the local body read; no outside skill material is present in that response.
 No retries, setup exclusions, raw capture gaps or new review findings remain.
 
+## Claude ordinary close
+
+All 36 complete artifacts and the class of each failure were reviewed under the unchanged rules.
+A passes 3/3 in every condition; B passes 3/3 for both skills and 2/3 for controls.
+C passes 1/3 for each skill and 0/3 for controls; every C output preserves F1/F2, while the seven failures retain the detached duplicate mechanism section and fail F3.
+E passes 3/3 for controls, 2/3 for original and 0/3 for candidate; the four failures remove contact recording, with F3 still met.
+Original E 11/36 require a recorded contact and pass; original 22 and candidates 12/23/34 merely require one to exist and fail.
+This same distinction was used for Codex original 36, and preserves equivalent wording rather than requiring an exact sentence.
+The B overstatement is distinct from the accepted continuation-context precedent.
+The C rule does not require one occurrence per fact: repeated safeguards inside operational entry points remain useful, while the detached explanation adds no condition or entry-point function.
+No shortening threshold, preferred layout or process-compliance score was introduced.
+
+Recomputed all 36 inventories and checked 69 protected input copies, actual model/CLI/catalog identities, complete result records and every skill delivery before first text editing.
+All 24 skill-bearing attempts delivered the complete assigned body; twelve controls exposed no CW.
+All final responses are retained; stderr is empty throughout.
+Order 32 additionally committed its edit; this is an unscored process observation, not a missing saved artifact or setup exclusion.
+The one controller registration error was repaired through retention only, with no repeated model call.
+Runner durations total 1,405.021 seconds and are included once in the booked effort.
+The samples expose specific failures but do not establish reliability or an overall model/skill ranking; native selection is still a separate authorized stage.
+No new review findings remain.
+
 DD-VERDICT: PASS
