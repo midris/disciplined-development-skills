@@ -1,4 +1,4 @@
-"""Tests for in-tree wiring files — no skip guard, always runs in this repo.
+"""Tests for in-tree wiring files — always run in this repo, skip in consumers.
 
 Parses both ``examples/settings.hooks.json`` (the consumer reference config)
 and the repo's own ``.claude/settings.json`` (the self-wiring used while
@@ -7,8 +7,9 @@ event key nor any hook command referencing ``inject_plan_state``.
 
 Unlike ``test_settings_wiring.py`` (which walks up to a ``.claude`` ancestor
 and skips in this standalone bundle repo), this test pins the two files by
-path relative to the repo root — both are always present, so there is no skip
-guard and this always provides a real red/green gate.
+path relative to the repo root. The skip guard keys on the bundle's installer,
+which always exists here, so this stays a real red/green gate in this repo
+while installed copies (no ``examples/`` above them) skip cleanly.
 
 Task 2 of 2026-06-23-consolidate-plan-reminder.md.
 """
@@ -18,11 +19,18 @@ from __future__ import annotations
 import json
 from pathlib import Path
 
+import pytest
+
 # Anchor to the repo root (four parents above this file:
 # hooks/tests/ → hooks/ → disciplined-development/ → skills/ → repo root).
 _REPO_ROOT = Path(__file__).resolve().parents[4]
 _EXAMPLES_SETTINGS = _REPO_ROOT / "examples" / "settings.hooks.json"
 _REPO_SETTINGS = _REPO_ROOT / ".claude" / "settings.json"
+
+pytestmark = pytest.mark.skipif(
+    not (_REPO_ROOT / "install-skills.sh").exists(),
+    reason="not the bundle repo — examples wiring is a bundle-side check",
+)
 
 
 def _all_commands(settings_path: Path) -> list[str]:

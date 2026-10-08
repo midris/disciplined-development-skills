@@ -141,7 +141,7 @@ Shared installation directories (`.claude` or `.agents`, `skills`, and Claude's 
 Copies are independent snapshots: source edits, pulls and branch switches only reach consumers when you rerun the installer.
 Commit the copies or gitignore the installed paths according to your project's policy.
 Keep consumer records outside the replaced skill directories.
-The installer copies whole folders, so use a source checkout containing the files you want to distribute.
+The installer copies whole folders except Python caches (`__pycache__`, `.pytest_cache`), so use a source checkout containing the files you want to distribute.
 There is no ownership receipt, backup or automatic removal of skill names or commands absent from the current source.
 
 ## Wire the hooks

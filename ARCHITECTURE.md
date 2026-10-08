@@ -60,7 +60,7 @@ The review tools record outcomes and reset review cadence on a clean pass; the p
 
 ## Installation boundary
 
-`install-skills.sh` replaces shipped skill directories with whole-folder copies under `.claude/skills/` or `.agents/skills/`.
+`install-skills.sh` replaces shipped skill directories with whole-folder copies, minus Python caches, under `.claude/skills/` or `.agents/skills/`.
 The default Claude installation also replaces shipped command templates under `.claude/commands/`.
 Source checkout changes reach consumers only through explicit reinstallation.
 Other consumer files, including `.claude/.dd-state/` history, remain outside the replacement boundary.

@@ -61,6 +61,23 @@ def test_copies_complete_skills_commands_permissions_and_empty_directories(tmp_p
     assert command.read_text() == 'command v1'
 
 
+def test_skips_python_caches_left_by_source_test_runs(tmp_path):
+    clone, target = _make_clone(tmp_path)
+    src = clone / 'skills/alpha'
+    caches = ['__pycache__/mod.cpython-314.pyc', 'hooks/__pycache__/x.pyc',
+              'hooks/.pytest_cache/v/cache/nodeids']
+    for name in caches:
+        (src / name).parent.mkdir(parents=True, exist_ok=True)
+        (src / name).write_text('cache')
+    (src / 'hooks/hook.py').write_text('print()\n')
+    _ok(clone, target)
+    dest = target / '.claude/skills/alpha'
+    assert (dest / 'hooks/hook.py').read_text() == 'print()\n'
+    for name in ('__pycache__', 'hooks/__pycache__', 'hooks/.pytest_cache'):
+        assert not (dest / name).exists()
+    assert all((src / name).exists() for name in caches)
+
+
 def test_replaces_whole_skill_and_command_but_preserves_consumer_history(tmp_path):
     clone, target = _make_clone(tmp_path)
     skill = target / '.claude/skills/alpha'

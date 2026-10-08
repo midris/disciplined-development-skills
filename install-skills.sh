@@ -42,6 +42,8 @@ for skill_md in "$CLONE"/skills/*/SKILL.md; do
   # No trailing slash: rm removes an existing link, never its target.
   rm -rf "$dest"
   cp -RPp "$src" "$dest"
+  # Source test runs leave Python caches; they are not part of the skill.
+  find "$dest" \( -name __pycache__ -o -name .pytest_cache \) -prune -exec rm -rf {} +
   echo "copied: $dest"
 done
 
