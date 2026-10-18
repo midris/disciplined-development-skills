@@ -3,5 +3,1734 @@
   "index_id": "concise-writing-codex-ordinary-iteration-01",
   "study_id": "concise-writing",
   "batch_id": "codex-ordinary-iteration-01",
-  "attempts": []
+  "attempts": [
+    {
+      "attempt_id": "codex-ordinary-iteration-01-agent-recommendation-control-1-1",
+      "case_id": "agent-recommendation",
+      "condition": "control",
+      "repetition": 1,
+      "attempt_number": 1,
+      "retry_of": null,
+      "manifest": {
+        "path": "skill-studies/concise-writing/runs/baseline-iteration-suite-01/preparation/manifests/codex-agent-recommendation-manifest.json",
+        "sha256": "0dd897c8fda9ad196d67cd8159568e5f549f630b84865c0751384ac473190e77",
+        "version": "1",
+        "git_revision": "e6011b491061395a905574c0dd4643846c625428"
+      },
+      "authorization": {
+        "artifact": {
+          "path": "skill-studies/concise-writing/protocol.md",
+          "sha256": "d2588bca6dcb20358d55d4a3b4e5bce667f115691084692115cb809a83cb6e79",
+          "version": "1",
+          "git_revision": "e6011b491061395a905574c0dd4643846c625428"
+        },
+        "selector": "Batch: codex-ordinary-iteration-01; order 1"
+      },
+      "run_id": "20261018T163332960Z-cw-suite-codex-agent-recommendation-control-807003c3-fdaf-4767-8a08-6ea68eac3d2a-_glxocsg",
+      "allocation": {
+        "pool": "subject",
+        "charge": 1
+      },
+      "limitations": [
+        "Exposed development case assessed by the Codex controller; cross-model review is supplemental. No causal or reliability inference from native counts."
+      ],
+      "bundle": {
+        "path": "/Users/simon/work/personal/skill-study-private/concise-writing/baseline-suite-20261018/subjects/20261018T163332960Z-cw-suite-codex-agent-recommendation-control-807003c3-fdaf-4767-8a08-6ea68eac3d2a-_glxocsg",
+        "inventory": {
+          "path": "/Users/simon/work/personal/skill-study-private/concise-writing/baseline-suite-20261018/subjects/20261018T163332960Z-cw-suite-codex-agent-recommendation-control-807003c3-fdaf-4767-8a08-6ea68eac3d2a-_glxocsg.inventory.json",
+          "sha256": "5e04001d483c7de4f6550964ce2af19c0738934ad51dafefa767f7805c0645e6",
+          "version": "1"
+        },
+        "verified": true
+      },
+      "result": {
+        "result_id": "codex-ordinary-iteration-01-agent-recommendation-control-1-1-assessment",
+        "record": {
+          "path": "skill-studies/concise-writing/runs/baseline-iteration-suite-01/results/20261018T163332960Z-cw-suite-codex-agent-recommendation-control-807003c3-fdaf-4767-8a08-6ea68eac3d2a-_glxocsg.json",
+          "sha256": "399f11d01c80176c544b1a99d634f8169f4d5e9a83701717dcd1ec7a83b073b3",
+          "version": "2"
+        }
+      }
+    },
+    {
+      "attempt_id": "codex-ordinary-iteration-01-agent-recommendation-original-1-1",
+      "case_id": "agent-recommendation",
+      "condition": "original",
+      "repetition": 1,
+      "attempt_number": 1,
+      "retry_of": null,
+      "manifest": {
+        "path": "skill-studies/concise-writing/runs/baseline-iteration-suite-01/preparation/manifests/codex-agent-recommendation-manifest.json",
+        "sha256": "0dd897c8fda9ad196d67cd8159568e5f549f630b84865c0751384ac473190e77",
+        "version": "1",
+        "git_revision": "e6011b491061395a905574c0dd4643846c625428"
+      },
+      "authorization": {
+        "artifact": {
+          "path": "skill-studies/concise-writing/protocol.md",
+          "sha256": "d2588bca6dcb20358d55d4a3b4e5bce667f115691084692115cb809a83cb6e79",
+          "version": "1",
+          "git_revision": "e6011b491061395a905574c0dd4643846c625428"
+        },
+        "selector": "Batch: codex-ordinary-iteration-01; order 2"
+      },
+      "run_id": "20261018T163426022Z-cw-suite-codex-agent-recommendation-original-80bed02a-0a5d-4547-84f4-01a5d03ad340-bwxx__5o",
+      "allocation": {
+        "pool": "subject",
+        "charge": 1
+      },
+      "limitations": [
+        "Exposed development case assessed by the Codex controller; cross-model review is supplemental. No causal or reliability inference from native counts."
+      ],
+      "bundle": {
+        "path": "/Users/simon/work/personal/skill-study-private/concise-writing/baseline-suite-20261018/subjects/20261018T163426022Z-cw-suite-codex-agent-recommendation-original-80bed02a-0a5d-4547-84f4-01a5d03ad340-bwxx__5o",
+        "inventory": {
+          "path": "/Users/simon/work/personal/skill-study-private/concise-writing/baseline-suite-20261018/subjects/20261018T163426022Z-cw-suite-codex-agent-recommendation-original-80bed02a-0a5d-4547-84f4-01a5d03ad340-bwxx__5o.inventory.json",
+          "sha256": "844c3e995319b71c9d29afbe1e85712e89be7c25c64a9dee1d47556d1fc3b87e",
+          "version": "1"
+        },
+        "verified": true
+      },
+      "result": {
+        "result_id": "codex-ordinary-iteration-01-agent-recommendation-original-1-1-assessment",
+        "record": {
+          "path": "skill-studies/concise-writing/runs/baseline-iteration-suite-01/results/20261018T163426022Z-cw-suite-codex-agent-recommendation-original-80bed02a-0a5d-4547-84f4-01a5d03ad340-bwxx__5o.json",
+          "sha256": "4d20a525b0ed9656448e974d087181e634a7198317f489c6494cd500e84a9e89",
+          "version": "2"
+        }
+      }
+    },
+    {
+      "attempt_id": "codex-ordinary-iteration-01-agent-recommendation-candidate-targeted-1-1",
+      "case_id": "agent-recommendation",
+      "condition": "candidate-targeted",
+      "repetition": 1,
+      "attempt_number": 1,
+      "retry_of": null,
+      "manifest": {
+        "path": "skill-studies/concise-writing/runs/baseline-iteration-suite-01/preparation/manifests/codex-agent-recommendation-manifest.json",
+        "sha256": "0dd897c8fda9ad196d67cd8159568e5f549f630b84865c0751384ac473190e77",
+        "version": "1",
+        "git_revision": "e6011b491061395a905574c0dd4643846c625428"
+      },
+      "authorization": {
+        "artifact": {
+          "path": "skill-studies/concise-writing/protocol.md",
+          "sha256": "d2588bca6dcb20358d55d4a3b4e5bce667f115691084692115cb809a83cb6e79",
+          "version": "1",
+          "git_revision": "e6011b491061395a905574c0dd4643846c625428"
+        },
+        "selector": "Batch: codex-ordinary-iteration-01; order 3"
+      },
+      "run_id": "20261018T163528329Z-cw-suite-codex-agent-recommendation-candidate-targeted-ca997521-057a-4962-8919-8b912614d5ea-_sga5u3y",
+      "allocation": {
+        "pool": "subject",
+        "charge": 1
+      },
+      "limitations": [
+        "Exposed development case assessed by the Codex controller; cross-model review is supplemental. No causal or reliability inference from native counts."
+      ],
+      "bundle": {
+        "path": "/Users/simon/work/personal/skill-study-private/concise-writing/baseline-suite-20261018/subjects/20261018T163528329Z-cw-suite-codex-agent-recommendation-candidate-targeted-ca997521-057a-4962-8919-8b912614d5ea-_sga5u3y",
+        "inventory": {
+          "path": "/Users/simon/work/personal/skill-study-private/concise-writing/baseline-suite-20261018/subjects/20261018T163528329Z-cw-suite-codex-agent-recommendation-candidate-targeted-ca997521-057a-4962-8919-8b912614d5ea-_sga5u3y.inventory.json",
+          "sha256": "d59ce8ae58cae9d66f75dc22e34450633a62720f2d9dd66099f735fc05111678",
+          "version": "1"
+        },
+        "verified": true
+      },
+      "result": {
+        "result_id": "codex-ordinary-iteration-01-agent-recommendation-candidate-targeted-1-1-assessment",
+        "record": {
+          "path": "skill-studies/concise-writing/runs/baseline-iteration-suite-01/results/20261018T163528329Z-cw-suite-codex-agent-recommendation-candidate-targeted-ca997521-057a-4962-8919-8b912614d5ea-_sga5u3y.json",
+          "sha256": "0d44c46ed3c5096c954939783fa2ea956f2e5ff1c4c36b3acd5b1621f61b3de7",
+          "version": "2"
+        }
+      }
+    },
+    {
+      "attempt_id": "codex-ordinary-iteration-01-agent-recommendation-candidate-fuller-1-1",
+      "case_id": "agent-recommendation",
+      "condition": "candidate-fuller",
+      "repetition": 1,
+      "attempt_number": 1,
+      "retry_of": null,
+      "manifest": {
+        "path": "skill-studies/concise-writing/runs/baseline-iteration-suite-01/preparation/manifests/codex-agent-recommendation-manifest.json",
+        "sha256": "0dd897c8fda9ad196d67cd8159568e5f549f630b84865c0751384ac473190e77",
+        "version": "1",
+        "git_revision": "e6011b491061395a905574c0dd4643846c625428"
+      },
+      "authorization": {
+        "artifact": {
+          "path": "skill-studies/concise-writing/protocol.md",
+          "sha256": "d2588bca6dcb20358d55d4a3b4e5bce667f115691084692115cb809a83cb6e79",
+          "version": "1",
+          "git_revision": "e6011b491061395a905574c0dd4643846c625428"
+        },
+        "selector": "Batch: codex-ordinary-iteration-01; order 4"
+      },
+      "run_id": "20261018T163611129Z-cw-suite-codex-agent-recommendation-candidate-fuller-95a6b0cb-78ee-43f8-9085-af2a35479733-x84oau61",
+      "allocation": {
+        "pool": "subject",
+        "charge": 1
+      },
+      "limitations": [
+        "Exposed development case assessed by the Codex controller; cross-model review is supplemental. No causal or reliability inference from native counts."
+      ],
+      "bundle": {
+        "path": "/Users/simon/work/personal/skill-study-private/concise-writing/baseline-suite-20261018/subjects/20261018T163611129Z-cw-suite-codex-agent-recommendation-candidate-fuller-95a6b0cb-78ee-43f8-9085-af2a35479733-x84oau61",
+        "inventory": {
+          "path": "/Users/simon/work/personal/skill-study-private/concise-writing/baseline-suite-20261018/subjects/20261018T163611129Z-cw-suite-codex-agent-recommendation-candidate-fuller-95a6b0cb-78ee-43f8-9085-af2a35479733-x84oau61.inventory.json",
+          "sha256": "9b3dbbbe41e5b41edf8b41c050007dbf685d0ec7364cedb9f889b552f22b6160",
+          "version": "1"
+        },
+        "verified": true
+      },
+      "result": {
+        "result_id": "codex-ordinary-iteration-01-agent-recommendation-candidate-fuller-1-1-assessment",
+        "record": {
+          "path": "skill-studies/concise-writing/runs/baseline-iteration-suite-01/results/20261018T163611129Z-cw-suite-codex-agent-recommendation-candidate-fuller-95a6b0cb-78ee-43f8-9085-af2a35479733-x84oau61.json",
+          "sha256": "d7794f8ff9b24b7a23eccd9421686b70e0ef74cedc1076f04cf7df513e95d858",
+          "version": "2"
+        }
+      }
+    },
+    {
+      "attempt_id": "codex-ordinary-iteration-01-agent-recommendation-original-2-1",
+      "case_id": "agent-recommendation",
+      "condition": "original",
+      "repetition": 2,
+      "attempt_number": 1,
+      "retry_of": null,
+      "manifest": {
+        "path": "skill-studies/concise-writing/runs/baseline-iteration-suite-01/preparation/manifests/codex-agent-recommendation-manifest.json",
+        "sha256": "0dd897c8fda9ad196d67cd8159568e5f549f630b84865c0751384ac473190e77",
+        "version": "1",
+        "git_revision": "e6011b491061395a905574c0dd4643846c625428"
+      },
+      "authorization": {
+        "artifact": {
+          "path": "skill-studies/concise-writing/protocol.md",
+          "sha256": "d2588bca6dcb20358d55d4a3b4e5bce667f115691084692115cb809a83cb6e79",
+          "version": "1",
+          "git_revision": "e6011b491061395a905574c0dd4643846c625428"
+        },
+        "selector": "Batch: codex-ordinary-iteration-01; order 5"
+      },
+      "run_id": "20261018T163648790Z-cw-suite-codex-agent-recommendation-original-78d44923-aa6c-4420-9bfd-070379ac30c2-lxfe4yux",
+      "allocation": {
+        "pool": "subject",
+        "charge": 1
+      },
+      "limitations": [
+        "Exposed development case assessed by the Codex controller; cross-model review is supplemental. No causal or reliability inference from native counts."
+      ],
+      "bundle": {
+        "path": "/Users/simon/work/personal/skill-study-private/concise-writing/baseline-suite-20261018/subjects/20261018T163648790Z-cw-suite-codex-agent-recommendation-original-78d44923-aa6c-4420-9bfd-070379ac30c2-lxfe4yux",
+        "inventory": {
+          "path": "/Users/simon/work/personal/skill-study-private/concise-writing/baseline-suite-20261018/subjects/20261018T163648790Z-cw-suite-codex-agent-recommendation-original-78d44923-aa6c-4420-9bfd-070379ac30c2-lxfe4yux.inventory.json",
+          "sha256": "ba08322a5a37bd26597f378bdaa23db3f3fc07b67e528726a72e1356006241fd",
+          "version": "1"
+        },
+        "verified": true
+      },
+      "result": {
+        "result_id": "codex-ordinary-iteration-01-agent-recommendation-original-2-1-assessment",
+        "record": {
+          "path": "skill-studies/concise-writing/runs/baseline-iteration-suite-01/results/20261018T163648790Z-cw-suite-codex-agent-recommendation-original-78d44923-aa6c-4420-9bfd-070379ac30c2-lxfe4yux.json",
+          "sha256": "df18ccf8c5358923547b1f1bf5f16c0c5fe7b6aa1bafd0441ae7ffe8221aadc2",
+          "version": "2"
+        }
+      }
+    },
+    {
+      "attempt_id": "codex-ordinary-iteration-01-agent-recommendation-candidate-targeted-2-1",
+      "case_id": "agent-recommendation",
+      "condition": "candidate-targeted",
+      "repetition": 2,
+      "attempt_number": 1,
+      "retry_of": null,
+      "manifest": {
+        "path": "skill-studies/concise-writing/runs/baseline-iteration-suite-01/preparation/manifests/codex-agent-recommendation-manifest.json",
+        "sha256": "0dd897c8fda9ad196d67cd8159568e5f549f630b84865c0751384ac473190e77",
+        "version": "1",
+        "git_revision": "e6011b491061395a905574c0dd4643846c625428"
+      },
+      "authorization": {
+        "artifact": {
+          "path": "skill-studies/concise-writing/protocol.md",
+          "sha256": "d2588bca6dcb20358d55d4a3b4e5bce667f115691084692115cb809a83cb6e79",
+          "version": "1",
+          "git_revision": "e6011b491061395a905574c0dd4643846c625428"
+        },
+        "selector": "Batch: codex-ordinary-iteration-01; order 6"
+      },
+      "run_id": "20261018T163728325Z-cw-suite-codex-agent-recommendation-candidate-targeted-aea01fda-4ef4-42c0-8144-dab7b82b32c2-3s54ight",
+      "allocation": {
+        "pool": "subject",
+        "charge": 1
+      },
+      "limitations": [
+        "Exposed development case assessed by the Codex controller; cross-model review is supplemental. No causal or reliability inference from native counts."
+      ],
+      "bundle": {
+        "path": "/Users/simon/work/personal/skill-study-private/concise-writing/baseline-suite-20261018/subjects/20261018T163728325Z-cw-suite-codex-agent-recommendation-candidate-targeted-aea01fda-4ef4-42c0-8144-dab7b82b32c2-3s54ight",
+        "inventory": {
+          "path": "/Users/simon/work/personal/skill-study-private/concise-writing/baseline-suite-20261018/subjects/20261018T163728325Z-cw-suite-codex-agent-recommendation-candidate-targeted-aea01fda-4ef4-42c0-8144-dab7b82b32c2-3s54ight.inventory.json",
+          "sha256": "ebdb143b9f560c4fb974a4eb3ddf54b55795a7b8a4df933686be9047748fc1ed",
+          "version": "1"
+        },
+        "verified": true
+      },
+      "result": {
+        "result_id": "codex-ordinary-iteration-01-agent-recommendation-candidate-targeted-2-1-assessment",
+        "record": {
+          "path": "skill-studies/concise-writing/runs/baseline-iteration-suite-01/results/20261018T163728325Z-cw-suite-codex-agent-recommendation-candidate-targeted-aea01fda-4ef4-42c0-8144-dab7b82b32c2-3s54ight.json",
+          "sha256": "d0e6b5d3c5054ea3c5ef33a9348be830a9d66591b0a48add5f20175bf52a624c",
+          "version": "2"
+        }
+      }
+    },
+    {
+      "attempt_id": "codex-ordinary-iteration-01-agent-recommendation-candidate-fuller-2-1",
+      "case_id": "agent-recommendation",
+      "condition": "candidate-fuller",
+      "repetition": 2,
+      "attempt_number": 1,
+      "retry_of": null,
+      "manifest": {
+        "path": "skill-studies/concise-writing/runs/baseline-iteration-suite-01/preparation/manifests/codex-agent-recommendation-manifest.json",
+        "sha256": "0dd897c8fda9ad196d67cd8159568e5f549f630b84865c0751384ac473190e77",
+        "version": "1",
+        "git_revision": "e6011b491061395a905574c0dd4643846c625428"
+      },
+      "authorization": {
+        "artifact": {
+          "path": "skill-studies/concise-writing/protocol.md",
+          "sha256": "d2588bca6dcb20358d55d4a3b4e5bce667f115691084692115cb809a83cb6e79",
+          "version": "1",
+          "git_revision": "e6011b491061395a905574c0dd4643846c625428"
+        },
+        "selector": "Batch: codex-ordinary-iteration-01; order 7"
+      },
+      "run_id": "20261018T163807986Z-cw-suite-codex-agent-recommendation-candidate-fuller-ae0309f5-31ce-496b-bcc3-212d72e237f2-bcnhsi0m",
+      "allocation": {
+        "pool": "subject",
+        "charge": 1
+      },
+      "limitations": [
+        "Exposed development case assessed by the Codex controller; cross-model review is supplemental. No causal or reliability inference from native counts."
+      ],
+      "bundle": {
+        "path": "/Users/simon/work/personal/skill-study-private/concise-writing/baseline-suite-20261018/subjects/20261018T163807986Z-cw-suite-codex-agent-recommendation-candidate-fuller-ae0309f5-31ce-496b-bcc3-212d72e237f2-bcnhsi0m",
+        "inventory": {
+          "path": "/Users/simon/work/personal/skill-study-private/concise-writing/baseline-suite-20261018/subjects/20261018T163807986Z-cw-suite-codex-agent-recommendation-candidate-fuller-ae0309f5-31ce-496b-bcc3-212d72e237f2-bcnhsi0m.inventory.json",
+          "sha256": "232962839272d9e6a49fcfea42374a29a7cad2d9d59780d3d33407bd07e28175",
+          "version": "1"
+        },
+        "verified": true
+      },
+      "result": {
+        "result_id": "codex-ordinary-iteration-01-agent-recommendation-candidate-fuller-2-1-assessment",
+        "record": {
+          "path": "skill-studies/concise-writing/runs/baseline-iteration-suite-01/results/20261018T163807986Z-cw-suite-codex-agent-recommendation-candidate-fuller-ae0309f5-31ce-496b-bcc3-212d72e237f2-bcnhsi0m.json",
+          "sha256": "4be0fef20208990eefd465b75fa9eacb6482d20bc34cda8c65f39646b1d22a0e",
+          "version": "2"
+        }
+      }
+    },
+    {
+      "attempt_id": "codex-ordinary-iteration-01-agent-recommendation-control-2-1",
+      "case_id": "agent-recommendation",
+      "condition": "control",
+      "repetition": 2,
+      "attempt_number": 1,
+      "retry_of": null,
+      "manifest": {
+        "path": "skill-studies/concise-writing/runs/baseline-iteration-suite-01/preparation/manifests/codex-agent-recommendation-manifest.json",
+        "sha256": "0dd897c8fda9ad196d67cd8159568e5f549f630b84865c0751384ac473190e77",
+        "version": "1",
+        "git_revision": "e6011b491061395a905574c0dd4643846c625428"
+      },
+      "authorization": {
+        "artifact": {
+          "path": "skill-studies/concise-writing/protocol.md",
+          "sha256": "d2588bca6dcb20358d55d4a3b4e5bce667f115691084692115cb809a83cb6e79",
+          "version": "1",
+          "git_revision": "e6011b491061395a905574c0dd4643846c625428"
+        },
+        "selector": "Batch: codex-ordinary-iteration-01; order 8"
+      },
+      "run_id": "20261018T163848522Z-cw-suite-codex-agent-recommendation-control-28615740-751e-4465-a8b6-b7e2c956c85c-ibreq8xx",
+      "allocation": {
+        "pool": "subject",
+        "charge": 1
+      },
+      "limitations": [
+        "Exposed development case assessed by the Codex controller; cross-model review is supplemental. No causal or reliability inference from native counts."
+      ],
+      "bundle": {
+        "path": "/Users/simon/work/personal/skill-study-private/concise-writing/baseline-suite-20261018/subjects/20261018T163848522Z-cw-suite-codex-agent-recommendation-control-28615740-751e-4465-a8b6-b7e2c956c85c-ibreq8xx",
+        "inventory": {
+          "path": "/Users/simon/work/personal/skill-study-private/concise-writing/baseline-suite-20261018/subjects/20261018T163848522Z-cw-suite-codex-agent-recommendation-control-28615740-751e-4465-a8b6-b7e2c956c85c-ibreq8xx.inventory.json",
+          "sha256": "1ed560cdf0d79960a5d4545fd7fa954b2dce37e4699a5b5d1b48c8dc4a9d4eec",
+          "version": "1"
+        },
+        "verified": true
+      },
+      "result": {
+        "result_id": "codex-ordinary-iteration-01-agent-recommendation-control-2-1-assessment",
+        "record": {
+          "path": "skill-studies/concise-writing/runs/baseline-iteration-suite-01/results/20261018T163848522Z-cw-suite-codex-agent-recommendation-control-28615740-751e-4465-a8b6-b7e2c956c85c-ibreq8xx.json",
+          "sha256": "6d48bbed5c0f4e05331c8570d127f5c79a48c55a57e4382dfbfa48e9c4efb62e",
+          "version": "2"
+        }
+      }
+    },
+    {
+      "attempt_id": "codex-ordinary-iteration-01-agent-recommendation-candidate-targeted-3-1",
+      "case_id": "agent-recommendation",
+      "condition": "candidate-targeted",
+      "repetition": 3,
+      "attempt_number": 1,
+      "retry_of": null,
+      "manifest": {
+        "path": "skill-studies/concise-writing/runs/baseline-iteration-suite-01/preparation/manifests/codex-agent-recommendation-manifest.json",
+        "sha256": "0dd897c8fda9ad196d67cd8159568e5f549f630b84865c0751384ac473190e77",
+        "version": "1",
+        "git_revision": "e6011b491061395a905574c0dd4643846c625428"
+      },
+      "authorization": {
+        "artifact": {
+          "path": "skill-studies/concise-writing/protocol.md",
+          "sha256": "d2588bca6dcb20358d55d4a3b4e5bce667f115691084692115cb809a83cb6e79",
+          "version": "1",
+          "git_revision": "e6011b491061395a905574c0dd4643846c625428"
+        },
+        "selector": "Batch: codex-ordinary-iteration-01; order 9"
+      },
+      "run_id": "20261018T163919129Z-cw-suite-codex-agent-recommendation-candidate-targeted-961233ed-dea7-467b-ba18-592fc39069ce-6o6737ty",
+      "allocation": {
+        "pool": "subject",
+        "charge": 1
+      },
+      "limitations": [
+        "Exposed development case assessed by the Codex controller; cross-model review is supplemental. No causal or reliability inference from native counts."
+      ],
+      "bundle": {
+        "path": "/Users/simon/work/personal/skill-study-private/concise-writing/baseline-suite-20261018/subjects/20261018T163919129Z-cw-suite-codex-agent-recommendation-candidate-targeted-961233ed-dea7-467b-ba18-592fc39069ce-6o6737ty",
+        "inventory": {
+          "path": "/Users/simon/work/personal/skill-study-private/concise-writing/baseline-suite-20261018/subjects/20261018T163919129Z-cw-suite-codex-agent-recommendation-candidate-targeted-961233ed-dea7-467b-ba18-592fc39069ce-6o6737ty.inventory.json",
+          "sha256": "6c7c506a8d92f6578402dc3799aeb887d8678d6b12a9bc7abe495c1bdd2569ca",
+          "version": "1"
+        },
+        "verified": true
+      },
+      "result": {
+        "result_id": "codex-ordinary-iteration-01-agent-recommendation-candidate-targeted-3-1-assessment",
+        "record": {
+          "path": "skill-studies/concise-writing/runs/baseline-iteration-suite-01/results/20261018T163919129Z-cw-suite-codex-agent-recommendation-candidate-targeted-961233ed-dea7-467b-ba18-592fc39069ce-6o6737ty.json",
+          "sha256": "379122623998cd40f07a49ecfc733030181a9f33425d11f791f38e9adfdb954a",
+          "version": "2"
+        }
+      }
+    },
+    {
+      "attempt_id": "codex-ordinary-iteration-01-agent-recommendation-candidate-fuller-3-1",
+      "case_id": "agent-recommendation",
+      "condition": "candidate-fuller",
+      "repetition": 3,
+      "attempt_number": 1,
+      "retry_of": null,
+      "manifest": {
+        "path": "skill-studies/concise-writing/runs/baseline-iteration-suite-01/preparation/manifests/codex-agent-recommendation-manifest.json",
+        "sha256": "0dd897c8fda9ad196d67cd8159568e5f549f630b84865c0751384ac473190e77",
+        "version": "1",
+        "git_revision": "e6011b491061395a905574c0dd4643846c625428"
+      },
+      "authorization": {
+        "artifact": {
+          "path": "skill-studies/concise-writing/protocol.md",
+          "sha256": "d2588bca6dcb20358d55d4a3b4e5bce667f115691084692115cb809a83cb6e79",
+          "version": "1",
+          "git_revision": "e6011b491061395a905574c0dd4643846c625428"
+        },
+        "selector": "Batch: codex-ordinary-iteration-01; order 10"
+      },
+      "run_id": "20261018T163957463Z-cw-suite-codex-agent-recommendation-candidate-fuller-23959f90-6949-436c-bd87-3baa14825200-g2yhjg56",
+      "allocation": {
+        "pool": "subject",
+        "charge": 1
+      },
+      "limitations": [
+        "Exposed development case assessed by the Codex controller; cross-model review is supplemental. No causal or reliability inference from native counts."
+      ],
+      "bundle": {
+        "path": "/Users/simon/work/personal/skill-study-private/concise-writing/baseline-suite-20261018/subjects/20261018T163957463Z-cw-suite-codex-agent-recommendation-candidate-fuller-23959f90-6949-436c-bd87-3baa14825200-g2yhjg56",
+        "inventory": {
+          "path": "/Users/simon/work/personal/skill-study-private/concise-writing/baseline-suite-20261018/subjects/20261018T163957463Z-cw-suite-codex-agent-recommendation-candidate-fuller-23959f90-6949-436c-bd87-3baa14825200-g2yhjg56.inventory.json",
+          "sha256": "aa55fc552a9423672aa6446eec9196c813b0bbb482a5807730d164d62fbab3a3",
+          "version": "1"
+        },
+        "verified": true
+      },
+      "result": {
+        "result_id": "codex-ordinary-iteration-01-agent-recommendation-candidate-fuller-3-1-assessment",
+        "record": {
+          "path": "skill-studies/concise-writing/runs/baseline-iteration-suite-01/results/20261018T163957463Z-cw-suite-codex-agent-recommendation-candidate-fuller-23959f90-6949-436c-bd87-3baa14825200-g2yhjg56.json",
+          "sha256": "1e96db515f73a64971e0ea43b2a032dc6a73039f4a4e86e1385ee548af96bcea",
+          "version": "2"
+        }
+      }
+    },
+    {
+      "attempt_id": "codex-ordinary-iteration-01-agent-recommendation-control-3-1",
+      "case_id": "agent-recommendation",
+      "condition": "control",
+      "repetition": 3,
+      "attempt_number": 1,
+      "retry_of": null,
+      "manifest": {
+        "path": "skill-studies/concise-writing/runs/baseline-iteration-suite-01/preparation/manifests/codex-agent-recommendation-manifest.json",
+        "sha256": "0dd897c8fda9ad196d67cd8159568e5f549f630b84865c0751384ac473190e77",
+        "version": "1",
+        "git_revision": "e6011b491061395a905574c0dd4643846c625428"
+      },
+      "authorization": {
+        "artifact": {
+          "path": "skill-studies/concise-writing/protocol.md",
+          "sha256": "d2588bca6dcb20358d55d4a3b4e5bce667f115691084692115cb809a83cb6e79",
+          "version": "1",
+          "git_revision": "e6011b491061395a905574c0dd4643846c625428"
+        },
+        "selector": "Batch: codex-ordinary-iteration-01; order 11"
+      },
+      "run_id": "20261018T164029409Z-cw-suite-codex-agent-recommendation-control-99d110c9-6662-4760-adb2-8c64200c01bf-ml_t3ckm",
+      "allocation": {
+        "pool": "subject",
+        "charge": 1
+      },
+      "limitations": [
+        "Exposed development case assessed by the Codex controller; cross-model review is supplemental. No causal or reliability inference from native counts."
+      ],
+      "bundle": {
+        "path": "/Users/simon/work/personal/skill-study-private/concise-writing/baseline-suite-20261018/subjects/20261018T164029409Z-cw-suite-codex-agent-recommendation-control-99d110c9-6662-4760-adb2-8c64200c01bf-ml_t3ckm",
+        "inventory": {
+          "path": "/Users/simon/work/personal/skill-study-private/concise-writing/baseline-suite-20261018/subjects/20261018T164029409Z-cw-suite-codex-agent-recommendation-control-99d110c9-6662-4760-adb2-8c64200c01bf-ml_t3ckm.inventory.json",
+          "sha256": "b87e7cab511be5341931ca948c4dbf1d0559d5aeb0d005d931d4b764b18273c2",
+          "version": "1"
+        },
+        "verified": true
+      },
+      "result": {
+        "result_id": "codex-ordinary-iteration-01-agent-recommendation-control-3-1-assessment",
+        "record": {
+          "path": "skill-studies/concise-writing/runs/baseline-iteration-suite-01/results/20261018T164029409Z-cw-suite-codex-agent-recommendation-control-99d110c9-6662-4760-adb2-8c64200c01bf-ml_t3ckm.json",
+          "sha256": "f27e67fb1e2ff102cb35fb12c143707c0267723ab773925c5a3a17f95afdbe3d",
+          "version": "2"
+        }
+      }
+    },
+    {
+      "attempt_id": "codex-ordinary-iteration-01-agent-recommendation-original-3-1",
+      "case_id": "agent-recommendation",
+      "condition": "original",
+      "repetition": 3,
+      "attempt_number": 1,
+      "retry_of": null,
+      "manifest": {
+        "path": "skill-studies/concise-writing/runs/baseline-iteration-suite-01/preparation/manifests/codex-agent-recommendation-manifest.json",
+        "sha256": "0dd897c8fda9ad196d67cd8159568e5f549f630b84865c0751384ac473190e77",
+        "version": "1",
+        "git_revision": "e6011b491061395a905574c0dd4643846c625428"
+      },
+      "authorization": {
+        "artifact": {
+          "path": "skill-studies/concise-writing/protocol.md",
+          "sha256": "d2588bca6dcb20358d55d4a3b4e5bce667f115691084692115cb809a83cb6e79",
+          "version": "1",
+          "git_revision": "e6011b491061395a905574c0dd4643846c625428"
+        },
+        "selector": "Batch: codex-ordinary-iteration-01; order 12"
+      },
+      "run_id": "20261018T164107612Z-cw-suite-codex-agent-recommendation-original-c7ae56cd-0e70-4ecf-b907-c192552d5b68-pdo3phcc",
+      "allocation": {
+        "pool": "subject",
+        "charge": 1
+      },
+      "limitations": [
+        "Exposed development case assessed by the Codex controller; cross-model review is supplemental. No causal or reliability inference from native counts."
+      ],
+      "bundle": {
+        "path": "/Users/simon/work/personal/skill-study-private/concise-writing/baseline-suite-20261018/subjects/20261018T164107612Z-cw-suite-codex-agent-recommendation-original-c7ae56cd-0e70-4ecf-b907-c192552d5b68-pdo3phcc",
+        "inventory": {
+          "path": "/Users/simon/work/personal/skill-study-private/concise-writing/baseline-suite-20261018/subjects/20261018T164107612Z-cw-suite-codex-agent-recommendation-original-c7ae56cd-0e70-4ecf-b907-c192552d5b68-pdo3phcc.inventory.json",
+          "sha256": "1b40741e0dca53725a780a4ee37de37b81bec9b2a995d94bdd51fb98a36c2cc7",
+          "version": "1"
+        },
+        "verified": true
+      },
+      "result": {
+        "result_id": "codex-ordinary-iteration-01-agent-recommendation-original-3-1-assessment",
+        "record": {
+          "path": "skill-studies/concise-writing/runs/baseline-iteration-suite-01/results/20261018T164107612Z-cw-suite-codex-agent-recommendation-original-c7ae56cd-0e70-4ecf-b907-c192552d5b68-pdo3phcc.json",
+          "sha256": "8771f33b3ddb38466cf06007981dd2bc599c767c23f63cc6cf22e8e633b3dca0",
+          "version": "2"
+        }
+      }
+    },
+    {
+      "attempt_id": "codex-ordinary-iteration-01-effective-briefing-original-1-1",
+      "case_id": "effective-briefing",
+      "condition": "original",
+      "repetition": 1,
+      "attempt_number": 1,
+      "retry_of": null,
+      "manifest": {
+        "path": "skill-studies/concise-writing/runs/baseline-iteration-suite-01/preparation/manifests/codex-effective-briefing-manifest.json",
+        "sha256": "a221c8b6f5f1d3595e127cf8261fa87388e95c38d45fc508b561be6c87aa9cd7",
+        "version": "1",
+        "git_revision": "e6011b491061395a905574c0dd4643846c625428"
+      },
+      "authorization": {
+        "artifact": {
+          "path": "skill-studies/concise-writing/protocol.md",
+          "sha256": "d2588bca6dcb20358d55d4a3b4e5bce667f115691084692115cb809a83cb6e79",
+          "version": "1",
+          "git_revision": "e6011b491061395a905574c0dd4643846c625428"
+        },
+        "selector": "Batch: codex-ordinary-iteration-01; order 13"
+      },
+      "run_id": "20261018T164141817Z-cw-suite-codex-effective-briefing-original-a5fb5afb-f288-47eb-af27-5f8fa0bbebfa-_e4opi7o",
+      "allocation": {
+        "pool": "subject",
+        "charge": 1
+      },
+      "limitations": [
+        "Exposed development case assessed by the Codex controller; cross-model review is supplemental. No causal or reliability inference from native counts."
+      ],
+      "bundle": {
+        "path": "/Users/simon/work/personal/skill-study-private/concise-writing/baseline-suite-20261018/subjects/20261018T164141817Z-cw-suite-codex-effective-briefing-original-a5fb5afb-f288-47eb-af27-5f8fa0bbebfa-_e4opi7o",
+        "inventory": {
+          "path": "/Users/simon/work/personal/skill-study-private/concise-writing/baseline-suite-20261018/subjects/20261018T164141817Z-cw-suite-codex-effective-briefing-original-a5fb5afb-f288-47eb-af27-5f8fa0bbebfa-_e4opi7o.inventory.json",
+          "sha256": "bf48b50153cc2c4385d1dff1827d0cf5d3aeed3bb00771262518ab506817f103",
+          "version": "1"
+        },
+        "verified": true
+      },
+      "result": {
+        "result_id": "codex-ordinary-iteration-01-effective-briefing-original-1-1-assessment",
+        "record": {
+          "path": "skill-studies/concise-writing/runs/baseline-iteration-suite-01/results/20261018T164141817Z-cw-suite-codex-effective-briefing-original-a5fb5afb-f288-47eb-af27-5f8fa0bbebfa-_e4opi7o.json",
+          "sha256": "3d6462ddc4c4664c037a39a8747d6a21d1c3acc3bb9abe61372313db8972a29b",
+          "version": "2"
+        }
+      }
+    },
+    {
+      "attempt_id": "codex-ordinary-iteration-01-effective-briefing-candidate-targeted-1-1",
+      "case_id": "effective-briefing",
+      "condition": "candidate-targeted",
+      "repetition": 1,
+      "attempt_number": 1,
+      "retry_of": null,
+      "manifest": {
+        "path": "skill-studies/concise-writing/runs/baseline-iteration-suite-01/preparation/manifests/codex-effective-briefing-manifest.json",
+        "sha256": "a221c8b6f5f1d3595e127cf8261fa87388e95c38d45fc508b561be6c87aa9cd7",
+        "version": "1",
+        "git_revision": "e6011b491061395a905574c0dd4643846c625428"
+      },
+      "authorization": {
+        "artifact": {
+          "path": "skill-studies/concise-writing/protocol.md",
+          "sha256": "d2588bca6dcb20358d55d4a3b4e5bce667f115691084692115cb809a83cb6e79",
+          "version": "1",
+          "git_revision": "e6011b491061395a905574c0dd4643846c625428"
+        },
+        "selector": "Batch: codex-ordinary-iteration-01; order 14"
+      },
+      "run_id": "20261018T164223507Z-cw-suite-codex-effective-briefing-candidate-targeted-435e7fe3-de23-4810-8406-1020e5702ce1-mk6vhky2",
+      "allocation": {
+        "pool": "subject",
+        "charge": 1
+      },
+      "limitations": [
+        "Exposed development case assessed by the Codex controller; cross-model review is supplemental. No causal or reliability inference from native counts."
+      ],
+      "bundle": {
+        "path": "/Users/simon/work/personal/skill-study-private/concise-writing/baseline-suite-20261018/subjects/20261018T164223507Z-cw-suite-codex-effective-briefing-candidate-targeted-435e7fe3-de23-4810-8406-1020e5702ce1-mk6vhky2",
+        "inventory": {
+          "path": "/Users/simon/work/personal/skill-study-private/concise-writing/baseline-suite-20261018/subjects/20261018T164223507Z-cw-suite-codex-effective-briefing-candidate-targeted-435e7fe3-de23-4810-8406-1020e5702ce1-mk6vhky2.inventory.json",
+          "sha256": "7ca3f264c00edaa7fa0497b873f26928daa07502fc98760bb31a85d8e6a858cc",
+          "version": "1"
+        },
+        "verified": true
+      },
+      "result": {
+        "result_id": "codex-ordinary-iteration-01-effective-briefing-candidate-targeted-1-1-assessment",
+        "record": {
+          "path": "skill-studies/concise-writing/runs/baseline-iteration-suite-01/results/20261018T164223507Z-cw-suite-codex-effective-briefing-candidate-targeted-435e7fe3-de23-4810-8406-1020e5702ce1-mk6vhky2.json",
+          "sha256": "27bcb15bf452e6491801b8f53d6a3427b60d6e6ac514082c9668d6e0b20d952c",
+          "version": "2"
+        }
+      }
+    },
+    {
+      "attempt_id": "codex-ordinary-iteration-01-effective-briefing-candidate-fuller-1-1",
+      "case_id": "effective-briefing",
+      "condition": "candidate-fuller",
+      "repetition": 1,
+      "attempt_number": 1,
+      "retry_of": null,
+      "manifest": {
+        "path": "skill-studies/concise-writing/runs/baseline-iteration-suite-01/preparation/manifests/codex-effective-briefing-manifest.json",
+        "sha256": "a221c8b6f5f1d3595e127cf8261fa87388e95c38d45fc508b561be6c87aa9cd7",
+        "version": "1",
+        "git_revision": "e6011b491061395a905574c0dd4643846c625428"
+      },
+      "authorization": {
+        "artifact": {
+          "path": "skill-studies/concise-writing/protocol.md",
+          "sha256": "d2588bca6dcb20358d55d4a3b4e5bce667f115691084692115cb809a83cb6e79",
+          "version": "1",
+          "git_revision": "e6011b491061395a905574c0dd4643846c625428"
+        },
+        "selector": "Batch: codex-ordinary-iteration-01; order 15"
+      },
+      "run_id": "20261018T164259687Z-cw-suite-codex-effective-briefing-candidate-fuller-f99ca748-7054-466f-a818-868e9bbf3cc7-tf_fw1ik",
+      "allocation": {
+        "pool": "subject",
+        "charge": 1
+      },
+      "limitations": [
+        "Exposed development case assessed by the Codex controller; cross-model review is supplemental. No causal or reliability inference from native counts."
+      ],
+      "bundle": {
+        "path": "/Users/simon/work/personal/skill-study-private/concise-writing/baseline-suite-20261018/subjects/20261018T164259687Z-cw-suite-codex-effective-briefing-candidate-fuller-f99ca748-7054-466f-a818-868e9bbf3cc7-tf_fw1ik",
+        "inventory": {
+          "path": "/Users/simon/work/personal/skill-study-private/concise-writing/baseline-suite-20261018/subjects/20261018T164259687Z-cw-suite-codex-effective-briefing-candidate-fuller-f99ca748-7054-466f-a818-868e9bbf3cc7-tf_fw1ik.inventory.json",
+          "sha256": "2fbfb9f9f525802114910c6ab5a115abf4306a0dacb321c3cabfa7e9f16eceaf",
+          "version": "1"
+        },
+        "verified": true
+      },
+      "result": {
+        "result_id": "codex-ordinary-iteration-01-effective-briefing-candidate-fuller-1-1-assessment",
+        "record": {
+          "path": "skill-studies/concise-writing/runs/baseline-iteration-suite-01/results/20261018T164259687Z-cw-suite-codex-effective-briefing-candidate-fuller-f99ca748-7054-466f-a818-868e9bbf3cc7-tf_fw1ik.json",
+          "sha256": "268a3e3fd5955293d5cd4c7cb0205badf16703831044ac718ac356f570290d2d",
+          "version": "2"
+        }
+      }
+    },
+    {
+      "attempt_id": "codex-ordinary-iteration-01-effective-briefing-control-1-1",
+      "case_id": "effective-briefing",
+      "condition": "control",
+      "repetition": 1,
+      "attempt_number": 1,
+      "retry_of": null,
+      "manifest": {
+        "path": "skill-studies/concise-writing/runs/baseline-iteration-suite-01/preparation/manifests/codex-effective-briefing-manifest.json",
+        "sha256": "a221c8b6f5f1d3595e127cf8261fa87388e95c38d45fc508b561be6c87aa9cd7",
+        "version": "1",
+        "git_revision": "e6011b491061395a905574c0dd4643846c625428"
+      },
+      "authorization": {
+        "artifact": {
+          "path": "skill-studies/concise-writing/protocol.md",
+          "sha256": "d2588bca6dcb20358d55d4a3b4e5bce667f115691084692115cb809a83cb6e79",
+          "version": "1",
+          "git_revision": "e6011b491061395a905574c0dd4643846c625428"
+        },
+        "selector": "Batch: codex-ordinary-iteration-01; order 16"
+      },
+      "run_id": "20261018T164341373Z-cw-suite-codex-effective-briefing-control-0a8065c0-1f33-4a96-95c2-26aeb944c0ab-hm2ds_bb",
+      "allocation": {
+        "pool": "subject",
+        "charge": 1
+      },
+      "limitations": [
+        "Exposed development case assessed by the Codex controller; cross-model review is supplemental. No causal or reliability inference from native counts."
+      ],
+      "bundle": {
+        "path": "/Users/simon/work/personal/skill-study-private/concise-writing/baseline-suite-20261018/subjects/20261018T164341373Z-cw-suite-codex-effective-briefing-control-0a8065c0-1f33-4a96-95c2-26aeb944c0ab-hm2ds_bb",
+        "inventory": {
+          "path": "/Users/simon/work/personal/skill-study-private/concise-writing/baseline-suite-20261018/subjects/20261018T164341373Z-cw-suite-codex-effective-briefing-control-0a8065c0-1f33-4a96-95c2-26aeb944c0ab-hm2ds_bb.inventory.json",
+          "sha256": "d9abd7fab8ec20c040e921f84c42b6e369f48469630e0e00b5c42705b5e1a3eb",
+          "version": "1"
+        },
+        "verified": true
+      },
+      "result": {
+        "result_id": "codex-ordinary-iteration-01-effective-briefing-control-1-1-assessment",
+        "record": {
+          "path": "skill-studies/concise-writing/runs/baseline-iteration-suite-01/results/20261018T164341373Z-cw-suite-codex-effective-briefing-control-0a8065c0-1f33-4a96-95c2-26aeb944c0ab-hm2ds_bb.json",
+          "sha256": "c15e31a94f79d4a4df7440c2c1c4abb6f2b3a3654dfaa5ed255f3f43be23ed2a",
+          "version": "2"
+        }
+      }
+    },
+    {
+      "attempt_id": "codex-ordinary-iteration-01-effective-briefing-candidate-targeted-2-1",
+      "case_id": "effective-briefing",
+      "condition": "candidate-targeted",
+      "repetition": 2,
+      "attempt_number": 1,
+      "retry_of": null,
+      "manifest": {
+        "path": "skill-studies/concise-writing/runs/baseline-iteration-suite-01/preparation/manifests/codex-effective-briefing-manifest.json",
+        "sha256": "a221c8b6f5f1d3595e127cf8261fa87388e95c38d45fc508b561be6c87aa9cd7",
+        "version": "1",
+        "git_revision": "e6011b491061395a905574c0dd4643846c625428"
+      },
+      "authorization": {
+        "artifact": {
+          "path": "skill-studies/concise-writing/protocol.md",
+          "sha256": "d2588bca6dcb20358d55d4a3b4e5bce667f115691084692115cb809a83cb6e79",
+          "version": "1",
+          "git_revision": "e6011b491061395a905574c0dd4643846c625428"
+        },
+        "selector": "Batch: codex-ordinary-iteration-01; order 17"
+      },
+      "run_id": "20261018T164409757Z-cw-suite-codex-effective-briefing-candidate-targeted-4107c58f-8a2d-46f4-ab48-4946e372de24-amz6fyc7",
+      "allocation": {
+        "pool": "subject",
+        "charge": 1
+      },
+      "limitations": [
+        "Exposed development case assessed by the Codex controller; cross-model review is supplemental. No causal or reliability inference from native counts."
+      ],
+      "bundle": {
+        "path": "/Users/simon/work/personal/skill-study-private/concise-writing/baseline-suite-20261018/subjects/20261018T164409757Z-cw-suite-codex-effective-briefing-candidate-targeted-4107c58f-8a2d-46f4-ab48-4946e372de24-amz6fyc7",
+        "inventory": {
+          "path": "/Users/simon/work/personal/skill-study-private/concise-writing/baseline-suite-20261018/subjects/20261018T164409757Z-cw-suite-codex-effective-briefing-candidate-targeted-4107c58f-8a2d-46f4-ab48-4946e372de24-amz6fyc7.inventory.json",
+          "sha256": "9c140f94838bf8f22501df8ac02f4bbb49dfa492af7056dbf9666bd73b97456d",
+          "version": "1"
+        },
+        "verified": true
+      },
+      "result": {
+        "result_id": "codex-ordinary-iteration-01-effective-briefing-candidate-targeted-2-1-assessment",
+        "record": {
+          "path": "skill-studies/concise-writing/runs/baseline-iteration-suite-01/results/20261018T164409757Z-cw-suite-codex-effective-briefing-candidate-targeted-4107c58f-8a2d-46f4-ab48-4946e372de24-amz6fyc7.json",
+          "sha256": "232b5c29b84d8bb9dfd4939981bf5192a48d253f7bec3812b1251d9ee7f68024",
+          "version": "2"
+        }
+      }
+    },
+    {
+      "attempt_id": "codex-ordinary-iteration-01-effective-briefing-candidate-fuller-2-1",
+      "case_id": "effective-briefing",
+      "condition": "candidate-fuller",
+      "repetition": 2,
+      "attempt_number": 1,
+      "retry_of": null,
+      "manifest": {
+        "path": "skill-studies/concise-writing/runs/baseline-iteration-suite-01/preparation/manifests/codex-effective-briefing-manifest.json",
+        "sha256": "a221c8b6f5f1d3595e127cf8261fa87388e95c38d45fc508b561be6c87aa9cd7",
+        "version": "1",
+        "git_revision": "e6011b491061395a905574c0dd4643846c625428"
+      },
+      "authorization": {
+        "artifact": {
+          "path": "skill-studies/concise-writing/protocol.md",
+          "sha256": "d2588bca6dcb20358d55d4a3b4e5bce667f115691084692115cb809a83cb6e79",
+          "version": "1",
+          "git_revision": "e6011b491061395a905574c0dd4643846c625428"
+        },
+        "selector": "Batch: codex-ordinary-iteration-01; order 18"
+      },
+      "run_id": "20261018T164445815Z-cw-suite-codex-effective-briefing-candidate-fuller-200924ea-8f7b-47ff-bbe7-54dba2aa3dac-tyf5jkj9",
+      "allocation": {
+        "pool": "subject",
+        "charge": 1
+      },
+      "limitations": [
+        "Exposed development case assessed by the Codex controller; cross-model review is supplemental. No causal or reliability inference from native counts."
+      ],
+      "bundle": {
+        "path": "/Users/simon/work/personal/skill-study-private/concise-writing/baseline-suite-20261018/subjects/20261018T164445815Z-cw-suite-codex-effective-briefing-candidate-fuller-200924ea-8f7b-47ff-bbe7-54dba2aa3dac-tyf5jkj9",
+        "inventory": {
+          "path": "/Users/simon/work/personal/skill-study-private/concise-writing/baseline-suite-20261018/subjects/20261018T164445815Z-cw-suite-codex-effective-briefing-candidate-fuller-200924ea-8f7b-47ff-bbe7-54dba2aa3dac-tyf5jkj9.inventory.json",
+          "sha256": "60ac631e5ff53bd7954f3ce30dea185057db14c1fa79f1c3e1b744b5f046fdde",
+          "version": "1"
+        },
+        "verified": true
+      },
+      "result": {
+        "result_id": "codex-ordinary-iteration-01-effective-briefing-candidate-fuller-2-1-assessment",
+        "record": {
+          "path": "skill-studies/concise-writing/runs/baseline-iteration-suite-01/results/20261018T164445815Z-cw-suite-codex-effective-briefing-candidate-fuller-200924ea-8f7b-47ff-bbe7-54dba2aa3dac-tyf5jkj9.json",
+          "sha256": "9a44174f14695af8a2e776fddc03fb4f5722214d35c03f08ab2fa3018982c520",
+          "version": "2"
+        }
+      }
+    },
+    {
+      "attempt_id": "codex-ordinary-iteration-01-effective-briefing-control-2-1",
+      "case_id": "effective-briefing",
+      "condition": "control",
+      "repetition": 2,
+      "attempt_number": 1,
+      "retry_of": null,
+      "manifest": {
+        "path": "skill-studies/concise-writing/runs/baseline-iteration-suite-01/preparation/manifests/codex-effective-briefing-manifest.json",
+        "sha256": "a221c8b6f5f1d3595e127cf8261fa87388e95c38d45fc508b561be6c87aa9cd7",
+        "version": "1",
+        "git_revision": "e6011b491061395a905574c0dd4643846c625428"
+      },
+      "authorization": {
+        "artifact": {
+          "path": "skill-studies/concise-writing/protocol.md",
+          "sha256": "d2588bca6dcb20358d55d4a3b4e5bce667f115691084692115cb809a83cb6e79",
+          "version": "1",
+          "git_revision": "e6011b491061395a905574c0dd4643846c625428"
+        },
+        "selector": "Batch: codex-ordinary-iteration-01; order 19"
+      },
+      "run_id": "20261018T164520140Z-cw-suite-codex-effective-briefing-control-af9447e0-a02e-4da8-9886-11657ca1226e-immsestx",
+      "allocation": {
+        "pool": "subject",
+        "charge": 1
+      },
+      "limitations": [
+        "Exposed development case assessed by the Codex controller; cross-model review is supplemental. No causal or reliability inference from native counts."
+      ],
+      "bundle": {
+        "path": "/Users/simon/work/personal/skill-study-private/concise-writing/baseline-suite-20261018/subjects/20261018T164520140Z-cw-suite-codex-effective-briefing-control-af9447e0-a02e-4da8-9886-11657ca1226e-immsestx",
+        "inventory": {
+          "path": "/Users/simon/work/personal/skill-study-private/concise-writing/baseline-suite-20261018/subjects/20261018T164520140Z-cw-suite-codex-effective-briefing-control-af9447e0-a02e-4da8-9886-11657ca1226e-immsestx.inventory.json",
+          "sha256": "2b8f5acc966a491ddf029b6c27a11184f04889fe7bc0e622f8541b1066405f07",
+          "version": "1"
+        },
+        "verified": true
+      },
+      "result": {
+        "result_id": "codex-ordinary-iteration-01-effective-briefing-control-2-1-assessment",
+        "record": {
+          "path": "skill-studies/concise-writing/runs/baseline-iteration-suite-01/results/20261018T164520140Z-cw-suite-codex-effective-briefing-control-af9447e0-a02e-4da8-9886-11657ca1226e-immsestx.json",
+          "sha256": "2afc704178cba60b8693147c5f0ce82bd370ef91e3243348358d747d726390c9",
+          "version": "2"
+        }
+      }
+    },
+    {
+      "attempt_id": "codex-ordinary-iteration-01-effective-briefing-original-2-1",
+      "case_id": "effective-briefing",
+      "condition": "original",
+      "repetition": 2,
+      "attempt_number": 1,
+      "retry_of": null,
+      "manifest": {
+        "path": "skill-studies/concise-writing/runs/baseline-iteration-suite-01/preparation/manifests/codex-effective-briefing-manifest.json",
+        "sha256": "a221c8b6f5f1d3595e127cf8261fa87388e95c38d45fc508b561be6c87aa9cd7",
+        "version": "1",
+        "git_revision": "e6011b491061395a905574c0dd4643846c625428"
+      },
+      "authorization": {
+        "artifact": {
+          "path": "skill-studies/concise-writing/protocol.md",
+          "sha256": "d2588bca6dcb20358d55d4a3b4e5bce667f115691084692115cb809a83cb6e79",
+          "version": "1",
+          "git_revision": "e6011b491061395a905574c0dd4643846c625428"
+        },
+        "selector": "Batch: codex-ordinary-iteration-01; order 20"
+      },
+      "run_id": "20261018T164546675Z-cw-suite-codex-effective-briefing-original-46d60faf-28be-47e5-9a25-dfe5fde2b27a-lwohx54k",
+      "allocation": {
+        "pool": "subject",
+        "charge": 1
+      },
+      "limitations": [
+        "Exposed development case assessed by the Codex controller; cross-model review is supplemental. No causal or reliability inference from native counts."
+      ],
+      "bundle": {
+        "path": "/Users/simon/work/personal/skill-study-private/concise-writing/baseline-suite-20261018/subjects/20261018T164546675Z-cw-suite-codex-effective-briefing-original-46d60faf-28be-47e5-9a25-dfe5fde2b27a-lwohx54k",
+        "inventory": {
+          "path": "/Users/simon/work/personal/skill-study-private/concise-writing/baseline-suite-20261018/subjects/20261018T164546675Z-cw-suite-codex-effective-briefing-original-46d60faf-28be-47e5-9a25-dfe5fde2b27a-lwohx54k.inventory.json",
+          "sha256": "e2eae80f656ff3fcb4acf53891035fcf0e090320871076b8ea4f47fbde75f5c3",
+          "version": "1"
+        },
+        "verified": true
+      },
+      "result": {
+        "result_id": "codex-ordinary-iteration-01-effective-briefing-original-2-1-assessment",
+        "record": {
+          "path": "skill-studies/concise-writing/runs/baseline-iteration-suite-01/results/20261018T164546675Z-cw-suite-codex-effective-briefing-original-46d60faf-28be-47e5-9a25-dfe5fde2b27a-lwohx54k.json",
+          "sha256": "54e436c4c4cc2920ec8651a4aca4f563b033bfc60c9a4a1333ec7a78b95fad12",
+          "version": "2"
+        }
+      }
+    },
+    {
+      "attempt_id": "codex-ordinary-iteration-01-effective-briefing-candidate-fuller-3-1",
+      "case_id": "effective-briefing",
+      "condition": "candidate-fuller",
+      "repetition": 3,
+      "attempt_number": 1,
+      "retry_of": null,
+      "manifest": {
+        "path": "skill-studies/concise-writing/runs/baseline-iteration-suite-01/preparation/manifests/codex-effective-briefing-manifest.json",
+        "sha256": "a221c8b6f5f1d3595e127cf8261fa87388e95c38d45fc508b561be6c87aa9cd7",
+        "version": "1",
+        "git_revision": "e6011b491061395a905574c0dd4643846c625428"
+      },
+      "authorization": {
+        "artifact": {
+          "path": "skill-studies/concise-writing/protocol.md",
+          "sha256": "d2588bca6dcb20358d55d4a3b4e5bce667f115691084692115cb809a83cb6e79",
+          "version": "1",
+          "git_revision": "e6011b491061395a905574c0dd4643846c625428"
+        },
+        "selector": "Batch: codex-ordinary-iteration-01; order 21"
+      },
+      "run_id": "20261018T164626570Z-cw-suite-codex-effective-briefing-candidate-fuller-bcfe0112-f7ad-4860-b92e-5e5863e53004-wkukokoe",
+      "allocation": {
+        "pool": "subject",
+        "charge": 1
+      },
+      "limitations": [
+        "Exposed development case assessed by the Codex controller; cross-model review is supplemental. No causal or reliability inference from native counts."
+      ],
+      "bundle": {
+        "path": "/Users/simon/work/personal/skill-study-private/concise-writing/baseline-suite-20261018/subjects/20261018T164626570Z-cw-suite-codex-effective-briefing-candidate-fuller-bcfe0112-f7ad-4860-b92e-5e5863e53004-wkukokoe",
+        "inventory": {
+          "path": "/Users/simon/work/personal/skill-study-private/concise-writing/baseline-suite-20261018/subjects/20261018T164626570Z-cw-suite-codex-effective-briefing-candidate-fuller-bcfe0112-f7ad-4860-b92e-5e5863e53004-wkukokoe.inventory.json",
+          "sha256": "7eff5a5d5225c771663de8818dce20c00678d66cbadd451f492e0321dd320df1",
+          "version": "1"
+        },
+        "verified": true
+      },
+      "result": {
+        "result_id": "codex-ordinary-iteration-01-effective-briefing-candidate-fuller-3-1-assessment",
+        "record": {
+          "path": "skill-studies/concise-writing/runs/baseline-iteration-suite-01/results/20261018T164626570Z-cw-suite-codex-effective-briefing-candidate-fuller-bcfe0112-f7ad-4860-b92e-5e5863e53004-wkukokoe.json",
+          "sha256": "4ca5c9854a40610cda0f71a5e93793e2970c8da0e238cd79d15ee33732bff65d",
+          "version": "2"
+        }
+      }
+    },
+    {
+      "attempt_id": "codex-ordinary-iteration-01-effective-briefing-control-3-1",
+      "case_id": "effective-briefing",
+      "condition": "control",
+      "repetition": 3,
+      "attempt_number": 1,
+      "retry_of": null,
+      "manifest": {
+        "path": "skill-studies/concise-writing/runs/baseline-iteration-suite-01/preparation/manifests/codex-effective-briefing-manifest.json",
+        "sha256": "a221c8b6f5f1d3595e127cf8261fa87388e95c38d45fc508b561be6c87aa9cd7",
+        "version": "1",
+        "git_revision": "e6011b491061395a905574c0dd4643846c625428"
+      },
+      "authorization": {
+        "artifact": {
+          "path": "skill-studies/concise-writing/protocol.md",
+          "sha256": "d2588bca6dcb20358d55d4a3b4e5bce667f115691084692115cb809a83cb6e79",
+          "version": "1",
+          "git_revision": "e6011b491061395a905574c0dd4643846c625428"
+        },
+        "selector": "Batch: codex-ordinary-iteration-01; order 22"
+      },
+      "run_id": "20261018T164700511Z-cw-suite-codex-effective-briefing-control-3ca3cec1-43f9-47f9-bfc4-3902c72eb965-vyv42v2w",
+      "allocation": {
+        "pool": "subject",
+        "charge": 1
+      },
+      "limitations": [
+        "Exposed development case assessed by the Codex controller; cross-model review is supplemental. No causal or reliability inference from native counts."
+      ],
+      "bundle": {
+        "path": "/Users/simon/work/personal/skill-study-private/concise-writing/baseline-suite-20261018/subjects/20261018T164700511Z-cw-suite-codex-effective-briefing-control-3ca3cec1-43f9-47f9-bfc4-3902c72eb965-vyv42v2w",
+        "inventory": {
+          "path": "/Users/simon/work/personal/skill-study-private/concise-writing/baseline-suite-20261018/subjects/20261018T164700511Z-cw-suite-codex-effective-briefing-control-3ca3cec1-43f9-47f9-bfc4-3902c72eb965-vyv42v2w.inventory.json",
+          "sha256": "c5abee082379f3adaad4953db7bea8cb27e43992d7d05a965a0aae100122cbe5",
+          "version": "1"
+        },
+        "verified": true
+      },
+      "result": {
+        "result_id": "codex-ordinary-iteration-01-effective-briefing-control-3-1-assessment",
+        "record": {
+          "path": "skill-studies/concise-writing/runs/baseline-iteration-suite-01/results/20261018T164700511Z-cw-suite-codex-effective-briefing-control-3ca3cec1-43f9-47f9-bfc4-3902c72eb965-vyv42v2w.json",
+          "sha256": "b9f7b9501b2c40fd40cc11742f430c5539972ab30f643ef7ebb8347f927e9563",
+          "version": "2"
+        }
+      }
+    },
+    {
+      "attempt_id": "codex-ordinary-iteration-01-effective-briefing-original-3-1",
+      "case_id": "effective-briefing",
+      "condition": "original",
+      "repetition": 3,
+      "attempt_number": 1,
+      "retry_of": null,
+      "manifest": {
+        "path": "skill-studies/concise-writing/runs/baseline-iteration-suite-01/preparation/manifests/codex-effective-briefing-manifest.json",
+        "sha256": "a221c8b6f5f1d3595e127cf8261fa87388e95c38d45fc508b561be6c87aa9cd7",
+        "version": "1",
+        "git_revision": "e6011b491061395a905574c0dd4643846c625428"
+      },
+      "authorization": {
+        "artifact": {
+          "path": "skill-studies/concise-writing/protocol.md",
+          "sha256": "d2588bca6dcb20358d55d4a3b4e5bce667f115691084692115cb809a83cb6e79",
+          "version": "1",
+          "git_revision": "e6011b491061395a905574c0dd4643846c625428"
+        },
+        "selector": "Batch: codex-ordinary-iteration-01; order 23"
+      },
+      "run_id": "20261018T164735655Z-cw-suite-codex-effective-briefing-original-41bc1922-c952-4110-a399-d0d903f72f03-56qe2rci",
+      "allocation": {
+        "pool": "subject",
+        "charge": 1
+      },
+      "limitations": [
+        "Exposed development case assessed by the Codex controller; cross-model review is supplemental. No causal or reliability inference from native counts."
+      ],
+      "bundle": {
+        "path": "/Users/simon/work/personal/skill-study-private/concise-writing/baseline-suite-20261018/subjects/20261018T164735655Z-cw-suite-codex-effective-briefing-original-41bc1922-c952-4110-a399-d0d903f72f03-56qe2rci",
+        "inventory": {
+          "path": "/Users/simon/work/personal/skill-study-private/concise-writing/baseline-suite-20261018/subjects/20261018T164735655Z-cw-suite-codex-effective-briefing-original-41bc1922-c952-4110-a399-d0d903f72f03-56qe2rci.inventory.json",
+          "sha256": "1ad24f27780fc47abd458e2a7738d0805fd016e04477fe1bdeed00ec057b280f",
+          "version": "1"
+        },
+        "verified": true
+      },
+      "result": {
+        "result_id": "codex-ordinary-iteration-01-effective-briefing-original-3-1-assessment",
+        "record": {
+          "path": "skill-studies/concise-writing/runs/baseline-iteration-suite-01/results/20261018T164735655Z-cw-suite-codex-effective-briefing-original-41bc1922-c952-4110-a399-d0d903f72f03-56qe2rci.json",
+          "sha256": "2cf6306a5185ac1db10564d9864f1c298a562fc1dc803d8737f4f5909ea96cd1",
+          "version": "2"
+        }
+      }
+    },
+    {
+      "attempt_id": "codex-ordinary-iteration-01-effective-briefing-candidate-targeted-3-1",
+      "case_id": "effective-briefing",
+      "condition": "candidate-targeted",
+      "repetition": 3,
+      "attempt_number": 1,
+      "retry_of": null,
+      "manifest": {
+        "path": "skill-studies/concise-writing/runs/baseline-iteration-suite-01/preparation/manifests/codex-effective-briefing-manifest.json",
+        "sha256": "a221c8b6f5f1d3595e127cf8261fa87388e95c38d45fc508b561be6c87aa9cd7",
+        "version": "1",
+        "git_revision": "e6011b491061395a905574c0dd4643846c625428"
+      },
+      "authorization": {
+        "artifact": {
+          "path": "skill-studies/concise-writing/protocol.md",
+          "sha256": "d2588bca6dcb20358d55d4a3b4e5bce667f115691084692115cb809a83cb6e79",
+          "version": "1",
+          "git_revision": "e6011b491061395a905574c0dd4643846c625428"
+        },
+        "selector": "Batch: codex-ordinary-iteration-01; order 24"
+      },
+      "run_id": "20261018T164806123Z-cw-suite-codex-effective-briefing-candidate-targeted-e3f481a8-0c46-4cbc-8b5b-84af4edf1fa5-t9tl0dgi",
+      "allocation": {
+        "pool": "subject",
+        "charge": 1
+      },
+      "limitations": [
+        "Exposed development case assessed by the Codex controller; cross-model review is supplemental. No causal or reliability inference from native counts."
+      ],
+      "bundle": {
+        "path": "/Users/simon/work/personal/skill-study-private/concise-writing/baseline-suite-20261018/subjects/20261018T164806123Z-cw-suite-codex-effective-briefing-candidate-targeted-e3f481a8-0c46-4cbc-8b5b-84af4edf1fa5-t9tl0dgi",
+        "inventory": {
+          "path": "/Users/simon/work/personal/skill-study-private/concise-writing/baseline-suite-20261018/subjects/20261018T164806123Z-cw-suite-codex-effective-briefing-candidate-targeted-e3f481a8-0c46-4cbc-8b5b-84af4edf1fa5-t9tl0dgi.inventory.json",
+          "sha256": "9b692e9f8cb3198087af90f59fa979bbfa751567d2e1e7f5605f6672994035f8",
+          "version": "1"
+        },
+        "verified": true
+      },
+      "result": {
+        "result_id": "codex-ordinary-iteration-01-effective-briefing-candidate-targeted-3-1-assessment",
+        "record": {
+          "path": "skill-studies/concise-writing/runs/baseline-iteration-suite-01/results/20261018T164806123Z-cw-suite-codex-effective-briefing-candidate-targeted-e3f481a8-0c46-4cbc-8b5b-84af4edf1fa5-t9tl0dgi.json",
+          "sha256": "281072884d589817e96ee8e4d2648c73872b5dd990a1fa7481c206730056e27a",
+          "version": "2"
+        }
+      }
+    },
+    {
+      "attempt_id": "codex-ordinary-iteration-01-long-handoff-candidate-targeted-1-1",
+      "case_id": "long-handoff",
+      "condition": "candidate-targeted",
+      "repetition": 1,
+      "attempt_number": 1,
+      "retry_of": null,
+      "manifest": {
+        "path": "skill-studies/concise-writing/runs/baseline-iteration-suite-01/preparation/manifests/codex-long-handoff-manifest.json",
+        "sha256": "35cd09ec0a59fdd280e05343631594f4572a5d265c4ad7e7fd34e7b69813cc47",
+        "version": "1",
+        "git_revision": "e6011b491061395a905574c0dd4643846c625428"
+      },
+      "authorization": {
+        "artifact": {
+          "path": "skill-studies/concise-writing/protocol.md",
+          "sha256": "d2588bca6dcb20358d55d4a3b4e5bce667f115691084692115cb809a83cb6e79",
+          "version": "1",
+          "git_revision": "e6011b491061395a905574c0dd4643846c625428"
+        },
+        "selector": "Batch: codex-ordinary-iteration-01; order 25"
+      },
+      "run_id": "20261018T164851066Z-cw-suite-codex-long-handoff-candidate-targeted-9788119f-d66a-49b5-b9b4-b119e2b0ff91-2bst2qua",
+      "allocation": {
+        "pool": "subject",
+        "charge": 1
+      },
+      "limitations": [
+        "Exposed development case assessed by the Codex controller; cross-model review is supplemental. No causal or reliability inference from native counts."
+      ],
+      "bundle": {
+        "path": "/Users/simon/work/personal/skill-study-private/concise-writing/baseline-suite-20261018/subjects/20261018T164851066Z-cw-suite-codex-long-handoff-candidate-targeted-9788119f-d66a-49b5-b9b4-b119e2b0ff91-2bst2qua",
+        "inventory": {
+          "path": "/Users/simon/work/personal/skill-study-private/concise-writing/baseline-suite-20261018/subjects/20261018T164851066Z-cw-suite-codex-long-handoff-candidate-targeted-9788119f-d66a-49b5-b9b4-b119e2b0ff91-2bst2qua.inventory.json",
+          "sha256": "708a09304b430de19bb7371c0bc93238aa30cd4d747507576552e358b1f7cc3b",
+          "version": "1"
+        },
+        "verified": true
+      },
+      "result": {
+        "result_id": "codex-ordinary-iteration-01-long-handoff-candidate-targeted-1-1-assessment",
+        "record": {
+          "path": "skill-studies/concise-writing/runs/baseline-iteration-suite-01/results/20261018T164851066Z-cw-suite-codex-long-handoff-candidate-targeted-9788119f-d66a-49b5-b9b4-b119e2b0ff91-2bst2qua.json",
+          "sha256": "09da48b91f87578a31fd06beec14a5b8f87e231c81c71e8a15a9d005946c4133",
+          "version": "2"
+        }
+      }
+    },
+    {
+      "attempt_id": "codex-ordinary-iteration-01-long-handoff-candidate-fuller-1-1",
+      "case_id": "long-handoff",
+      "condition": "candidate-fuller",
+      "repetition": 1,
+      "attempt_number": 1,
+      "retry_of": null,
+      "manifest": {
+        "path": "skill-studies/concise-writing/runs/baseline-iteration-suite-01/preparation/manifests/codex-long-handoff-manifest.json",
+        "sha256": "35cd09ec0a59fdd280e05343631594f4572a5d265c4ad7e7fd34e7b69813cc47",
+        "version": "1",
+        "git_revision": "e6011b491061395a905574c0dd4643846c625428"
+      },
+      "authorization": {
+        "artifact": {
+          "path": "skill-studies/concise-writing/protocol.md",
+          "sha256": "d2588bca6dcb20358d55d4a3b4e5bce667f115691084692115cb809a83cb6e79",
+          "version": "1",
+          "git_revision": "e6011b491061395a905574c0dd4643846c625428"
+        },
+        "selector": "Batch: codex-ordinary-iteration-01; order 26"
+      },
+      "run_id": "20261018T164955350Z-cw-suite-codex-long-handoff-candidate-fuller-a2d5c4f9-ad2e-420f-8826-0026195dacc2-iakgyzp9",
+      "allocation": {
+        "pool": "subject",
+        "charge": 1
+      },
+      "limitations": [
+        "Exposed development case assessed by the Codex controller; cross-model review is supplemental. No causal or reliability inference from native counts."
+      ],
+      "bundle": {
+        "path": "/Users/simon/work/personal/skill-study-private/concise-writing/baseline-suite-20261018/subjects/20261018T164955350Z-cw-suite-codex-long-handoff-candidate-fuller-a2d5c4f9-ad2e-420f-8826-0026195dacc2-iakgyzp9",
+        "inventory": {
+          "path": "/Users/simon/work/personal/skill-study-private/concise-writing/baseline-suite-20261018/subjects/20261018T164955350Z-cw-suite-codex-long-handoff-candidate-fuller-a2d5c4f9-ad2e-420f-8826-0026195dacc2-iakgyzp9.inventory.json",
+          "sha256": "c85ec8c2f795e55abc40793d76464b5061f204787dd77a65cc2b4a5103b68564",
+          "version": "1"
+        },
+        "verified": true
+      },
+      "result": {
+        "result_id": "codex-ordinary-iteration-01-long-handoff-candidate-fuller-1-1-assessment",
+        "record": {
+          "path": "skill-studies/concise-writing/runs/baseline-iteration-suite-01/results/20261018T164955350Z-cw-suite-codex-long-handoff-candidate-fuller-a2d5c4f9-ad2e-420f-8826-0026195dacc2-iakgyzp9.json",
+          "sha256": "7ef3f200faf7f0cb7fd0940b78d828774b021685cd9884d58188bd8fe63314b4",
+          "version": "2"
+        }
+      }
+    },
+    {
+      "attempt_id": "codex-ordinary-iteration-01-long-handoff-control-1-1",
+      "case_id": "long-handoff",
+      "condition": "control",
+      "repetition": 1,
+      "attempt_number": 1,
+      "retry_of": null,
+      "manifest": {
+        "path": "skill-studies/concise-writing/runs/baseline-iteration-suite-01/preparation/manifests/codex-long-handoff-manifest.json",
+        "sha256": "35cd09ec0a59fdd280e05343631594f4572a5d265c4ad7e7fd34e7b69813cc47",
+        "version": "1",
+        "git_revision": "e6011b491061395a905574c0dd4643846c625428"
+      },
+      "authorization": {
+        "artifact": {
+          "path": "skill-studies/concise-writing/protocol.md",
+          "sha256": "d2588bca6dcb20358d55d4a3b4e5bce667f115691084692115cb809a83cb6e79",
+          "version": "1",
+          "git_revision": "e6011b491061395a905574c0dd4643846c625428"
+        },
+        "selector": "Batch: codex-ordinary-iteration-01; order 27"
+      },
+      "run_id": "20261018T165104135Z-cw-suite-codex-long-handoff-control-67fedf4e-e66d-4140-9abd-f700f9f70cf8-ung8wj8o",
+      "allocation": {
+        "pool": "subject",
+        "charge": 1
+      },
+      "limitations": [
+        "Exposed development case assessed by the Codex controller; cross-model review is supplemental. No causal or reliability inference from native counts."
+      ],
+      "bundle": {
+        "path": "/Users/simon/work/personal/skill-study-private/concise-writing/baseline-suite-20261018/subjects/20261018T165104135Z-cw-suite-codex-long-handoff-control-67fedf4e-e66d-4140-9abd-f700f9f70cf8-ung8wj8o",
+        "inventory": {
+          "path": "/Users/simon/work/personal/skill-study-private/concise-writing/baseline-suite-20261018/subjects/20261018T165104135Z-cw-suite-codex-long-handoff-control-67fedf4e-e66d-4140-9abd-f700f9f70cf8-ung8wj8o.inventory.json",
+          "sha256": "d353dd29b4b38837b66dff95e5d0dff0325624840955f888390f8ce9fae7287e",
+          "version": "1"
+        },
+        "verified": true
+      },
+      "result": {
+        "result_id": "codex-ordinary-iteration-01-long-handoff-control-1-1-assessment",
+        "record": {
+          "path": "skill-studies/concise-writing/runs/baseline-iteration-suite-01/results/20261018T165104135Z-cw-suite-codex-long-handoff-control-67fedf4e-e66d-4140-9abd-f700f9f70cf8-ung8wj8o.json",
+          "sha256": "064b5305d23230e93e27ab8980027d1d9e2d87e3d8c25c6184a6e62290521ab6",
+          "version": "2"
+        }
+      }
+    },
+    {
+      "attempt_id": "codex-ordinary-iteration-01-long-handoff-original-1-1",
+      "case_id": "long-handoff",
+      "condition": "original",
+      "repetition": 1,
+      "attempt_number": 1,
+      "retry_of": null,
+      "manifest": {
+        "path": "skill-studies/concise-writing/runs/baseline-iteration-suite-01/preparation/manifests/codex-long-handoff-manifest.json",
+        "sha256": "35cd09ec0a59fdd280e05343631594f4572a5d265c4ad7e7fd34e7b69813cc47",
+        "version": "1",
+        "git_revision": "e6011b491061395a905574c0dd4643846c625428"
+      },
+      "authorization": {
+        "artifact": {
+          "path": "skill-studies/concise-writing/protocol.md",
+          "sha256": "d2588bca6dcb20358d55d4a3b4e5bce667f115691084692115cb809a83cb6e79",
+          "version": "1",
+          "git_revision": "e6011b491061395a905574c0dd4643846c625428"
+        },
+        "selector": "Batch: codex-ordinary-iteration-01; order 28"
+      },
+      "run_id": "20261018T165156363Z-cw-suite-codex-long-handoff-original-159452a7-4205-4ebb-8e7e-55e62d893d45-s_ra2gs2",
+      "allocation": {
+        "pool": "subject",
+        "charge": 1
+      },
+      "limitations": [
+        "Exposed development case assessed by the Codex controller; cross-model review is supplemental. No causal or reliability inference from native counts."
+      ],
+      "bundle": {
+        "path": "/Users/simon/work/personal/skill-study-private/concise-writing/baseline-suite-20261018/subjects/20261018T165156363Z-cw-suite-codex-long-handoff-original-159452a7-4205-4ebb-8e7e-55e62d893d45-s_ra2gs2",
+        "inventory": {
+          "path": "/Users/simon/work/personal/skill-study-private/concise-writing/baseline-suite-20261018/subjects/20261018T165156363Z-cw-suite-codex-long-handoff-original-159452a7-4205-4ebb-8e7e-55e62d893d45-s_ra2gs2.inventory.json",
+          "sha256": "63a4a380d3f4ab988d96712ba584da95791ce40c892c16e580f783c6cf0d9128",
+          "version": "1"
+        },
+        "verified": true
+      },
+      "result": {
+        "result_id": "codex-ordinary-iteration-01-long-handoff-original-1-1-assessment",
+        "record": {
+          "path": "skill-studies/concise-writing/runs/baseline-iteration-suite-01/results/20261018T165156363Z-cw-suite-codex-long-handoff-original-159452a7-4205-4ebb-8e7e-55e62d893d45-s_ra2gs2.json",
+          "sha256": "6d05c2351ca4c21b5c2bb89b04bd502f709b5c23163187cc1144ddd084ea0242",
+          "version": "2"
+        }
+      }
+    },
+    {
+      "attempt_id": "codex-ordinary-iteration-01-long-handoff-candidate-fuller-2-1",
+      "case_id": "long-handoff",
+      "condition": "candidate-fuller",
+      "repetition": 2,
+      "attempt_number": 1,
+      "retry_of": null,
+      "manifest": {
+        "path": "skill-studies/concise-writing/runs/baseline-iteration-suite-01/preparation/manifests/codex-long-handoff-manifest.json",
+        "sha256": "35cd09ec0a59fdd280e05343631594f4572a5d265c4ad7e7fd34e7b69813cc47",
+        "version": "1",
+        "git_revision": "e6011b491061395a905574c0dd4643846c625428"
+      },
+      "authorization": {
+        "artifact": {
+          "path": "skill-studies/concise-writing/protocol.md",
+          "sha256": "d2588bca6dcb20358d55d4a3b4e5bce667f115691084692115cb809a83cb6e79",
+          "version": "1",
+          "git_revision": "e6011b491061395a905574c0dd4643846c625428"
+        },
+        "selector": "Batch: codex-ordinary-iteration-01; order 29"
+      },
+      "run_id": "20261018T165251028Z-cw-suite-codex-long-handoff-candidate-fuller-fa21522a-7b3b-44eb-89c8-d0327f4d205a-a_oxgdfq",
+      "allocation": {
+        "pool": "subject",
+        "charge": 1
+      },
+      "limitations": [
+        "Exposed development case assessed by the Codex controller; cross-model review is supplemental. No causal or reliability inference from native counts."
+      ],
+      "bundle": {
+        "path": "/Users/simon/work/personal/skill-study-private/concise-writing/baseline-suite-20261018/subjects/20261018T165251028Z-cw-suite-codex-long-handoff-candidate-fuller-fa21522a-7b3b-44eb-89c8-d0327f4d205a-a_oxgdfq",
+        "inventory": {
+          "path": "/Users/simon/work/personal/skill-study-private/concise-writing/baseline-suite-20261018/subjects/20261018T165251028Z-cw-suite-codex-long-handoff-candidate-fuller-fa21522a-7b3b-44eb-89c8-d0327f4d205a-a_oxgdfq.inventory.json",
+          "sha256": "e9c07635b744447f4d3f355c5a36cd75c0edc9ac0427276392b160e1e6f1bfd2",
+          "version": "1"
+        },
+        "verified": true
+      },
+      "result": {
+        "result_id": "codex-ordinary-iteration-01-long-handoff-candidate-fuller-2-1-assessment",
+        "record": {
+          "path": "skill-studies/concise-writing/runs/baseline-iteration-suite-01/results/20261018T165251028Z-cw-suite-codex-long-handoff-candidate-fuller-fa21522a-7b3b-44eb-89c8-d0327f4d205a-a_oxgdfq.json",
+          "sha256": "a638d502789e420e295a7537857c438c84cfc88d9c66026adcb4de765a9be416",
+          "version": "2"
+        }
+      }
+    },
+    {
+      "attempt_id": "codex-ordinary-iteration-01-long-handoff-control-2-1",
+      "case_id": "long-handoff",
+      "condition": "control",
+      "repetition": 2,
+      "attempt_number": 1,
+      "retry_of": null,
+      "manifest": {
+        "path": "skill-studies/concise-writing/runs/baseline-iteration-suite-01/preparation/manifests/codex-long-handoff-manifest.json",
+        "sha256": "35cd09ec0a59fdd280e05343631594f4572a5d265c4ad7e7fd34e7b69813cc47",
+        "version": "1",
+        "git_revision": "e6011b491061395a905574c0dd4643846c625428"
+      },
+      "authorization": {
+        "artifact": {
+          "path": "skill-studies/concise-writing/protocol.md",
+          "sha256": "d2588bca6dcb20358d55d4a3b4e5bce667f115691084692115cb809a83cb6e79",
+          "version": "1",
+          "git_revision": "e6011b491061395a905574c0dd4643846c625428"
+        },
+        "selector": "Batch: codex-ordinary-iteration-01; order 30"
+      },
+      "run_id": "20261018T165349043Z-cw-suite-codex-long-handoff-control-925e7691-07e5-4679-9506-9df46bcad1a7-2coijqb9",
+      "allocation": {
+        "pool": "subject",
+        "charge": 1
+      },
+      "limitations": [
+        "Exposed development case assessed by the Codex controller; cross-model review is supplemental. No causal or reliability inference from native counts."
+      ],
+      "bundle": {
+        "path": "/Users/simon/work/personal/skill-study-private/concise-writing/baseline-suite-20261018/subjects/20261018T165349043Z-cw-suite-codex-long-handoff-control-925e7691-07e5-4679-9506-9df46bcad1a7-2coijqb9",
+        "inventory": {
+          "path": "/Users/simon/work/personal/skill-study-private/concise-writing/baseline-suite-20261018/subjects/20261018T165349043Z-cw-suite-codex-long-handoff-control-925e7691-07e5-4679-9506-9df46bcad1a7-2coijqb9.inventory.json",
+          "sha256": "ea2b777ca55894a2d45b8ae199e5b47ea157902c96a1dec68d2cfed77a15e2f7",
+          "version": "1"
+        },
+        "verified": true
+      },
+      "result": {
+        "result_id": "codex-ordinary-iteration-01-long-handoff-control-2-1-assessment",
+        "record": {
+          "path": "skill-studies/concise-writing/runs/baseline-iteration-suite-01/results/20261018T165349043Z-cw-suite-codex-long-handoff-control-925e7691-07e5-4679-9506-9df46bcad1a7-2coijqb9.json",
+          "sha256": "1658b3157cda85425e5fa3d0974d9154b792d0670a64eb0025af403d29706ec8",
+          "version": "2"
+        }
+      }
+    },
+    {
+      "attempt_id": "codex-ordinary-iteration-01-long-handoff-original-2-1",
+      "case_id": "long-handoff",
+      "condition": "original",
+      "repetition": 2,
+      "attempt_number": 1,
+      "retry_of": null,
+      "manifest": {
+        "path": "skill-studies/concise-writing/runs/baseline-iteration-suite-01/preparation/manifests/codex-long-handoff-manifest.json",
+        "sha256": "35cd09ec0a59fdd280e05343631594f4572a5d265c4ad7e7fd34e7b69813cc47",
+        "version": "1",
+        "git_revision": "e6011b491061395a905574c0dd4643846c625428"
+      },
+      "authorization": {
+        "artifact": {
+          "path": "skill-studies/concise-writing/protocol.md",
+          "sha256": "d2588bca6dcb20358d55d4a3b4e5bce667f115691084692115cb809a83cb6e79",
+          "version": "1",
+          "git_revision": "e6011b491061395a905574c0dd4643846c625428"
+        },
+        "selector": "Batch: codex-ordinary-iteration-01; order 31"
+      },
+      "run_id": "20261018T165507834Z-cw-suite-codex-long-handoff-original-25973727-0e86-4482-8ca0-c880d97cc697-azax1cym",
+      "allocation": {
+        "pool": "subject",
+        "charge": 1
+      },
+      "limitations": [
+        "Exposed development case assessed by the Codex controller; cross-model review is supplemental. No causal or reliability inference from native counts."
+      ],
+      "bundle": {
+        "path": "/Users/simon/work/personal/skill-study-private/concise-writing/baseline-suite-20261018/subjects/20261018T165507834Z-cw-suite-codex-long-handoff-original-25973727-0e86-4482-8ca0-c880d97cc697-azax1cym",
+        "inventory": {
+          "path": "/Users/simon/work/personal/skill-study-private/concise-writing/baseline-suite-20261018/subjects/20261018T165507834Z-cw-suite-codex-long-handoff-original-25973727-0e86-4482-8ca0-c880d97cc697-azax1cym.inventory.json",
+          "sha256": "2d081f5d135db660ea93e4f5d08068ef565477a0a9e620c011c04a34a5cd38cc",
+          "version": "1"
+        },
+        "verified": true
+      },
+      "result": {
+        "result_id": "codex-ordinary-iteration-01-long-handoff-original-2-1-assessment",
+        "record": {
+          "path": "skill-studies/concise-writing/runs/baseline-iteration-suite-01/results/20261018T165507834Z-cw-suite-codex-long-handoff-original-25973727-0e86-4482-8ca0-c880d97cc697-azax1cym.json",
+          "sha256": "3792d117d6c57290430ae3d0cea99ffc8fa7a3cf8d07432bee3b787cc0c01343",
+          "version": "2"
+        }
+      }
+    },
+    {
+      "attempt_id": "codex-ordinary-iteration-01-long-handoff-candidate-targeted-2-1",
+      "case_id": "long-handoff",
+      "condition": "candidate-targeted",
+      "repetition": 2,
+      "attempt_number": 1,
+      "retry_of": null,
+      "manifest": {
+        "path": "skill-studies/concise-writing/runs/baseline-iteration-suite-01/preparation/manifests/codex-long-handoff-manifest.json",
+        "sha256": "35cd09ec0a59fdd280e05343631594f4572a5d265c4ad7e7fd34e7b69813cc47",
+        "version": "1",
+        "git_revision": "e6011b491061395a905574c0dd4643846c625428"
+      },
+      "authorization": {
+        "artifact": {
+          "path": "skill-studies/concise-writing/protocol.md",
+          "sha256": "d2588bca6dcb20358d55d4a3b4e5bce667f115691084692115cb809a83cb6e79",
+          "version": "1",
+          "git_revision": "e6011b491061395a905574c0dd4643846c625428"
+        },
+        "selector": "Batch: codex-ordinary-iteration-01; order 32"
+      },
+      "run_id": "20261018T165559880Z-cw-suite-codex-long-handoff-candidate-targeted-4ebfc16d-905c-41d7-998b-ccdbf8488a58-fv_q4hrh",
+      "allocation": {
+        "pool": "subject",
+        "charge": 1
+      },
+      "limitations": [
+        "Exposed development case assessed by the Codex controller; cross-model review is supplemental. No causal or reliability inference from native counts."
+      ],
+      "bundle": {
+        "path": "/Users/simon/work/personal/skill-study-private/concise-writing/baseline-suite-20261018/subjects/20261018T165559880Z-cw-suite-codex-long-handoff-candidate-targeted-4ebfc16d-905c-41d7-998b-ccdbf8488a58-fv_q4hrh",
+        "inventory": {
+          "path": "/Users/simon/work/personal/skill-study-private/concise-writing/baseline-suite-20261018/subjects/20261018T165559880Z-cw-suite-codex-long-handoff-candidate-targeted-4ebfc16d-905c-41d7-998b-ccdbf8488a58-fv_q4hrh.inventory.json",
+          "sha256": "78f5bded51ab615f57a06e29ffe0fca2e25c57ac13e695be8d114c8d3c5a8b99",
+          "version": "1"
+        },
+        "verified": true
+      },
+      "result": {
+        "result_id": "codex-ordinary-iteration-01-long-handoff-candidate-targeted-2-1-assessment",
+        "record": {
+          "path": "skill-studies/concise-writing/runs/baseline-iteration-suite-01/results/20261018T165559880Z-cw-suite-codex-long-handoff-candidate-targeted-4ebfc16d-905c-41d7-998b-ccdbf8488a58-fv_q4hrh.json",
+          "sha256": "d17bc78859d902b0ccc35f3afc5f51b877ecce98920c666c5ad64c5bd4267952",
+          "version": "2"
+        }
+      }
+    },
+    {
+      "attempt_id": "codex-ordinary-iteration-01-long-handoff-control-3-1",
+      "case_id": "long-handoff",
+      "condition": "control",
+      "repetition": 3,
+      "attempt_number": 1,
+      "retry_of": null,
+      "manifest": {
+        "path": "skill-studies/concise-writing/runs/baseline-iteration-suite-01/preparation/manifests/codex-long-handoff-manifest.json",
+        "sha256": "35cd09ec0a59fdd280e05343631594f4572a5d265c4ad7e7fd34e7b69813cc47",
+        "version": "1",
+        "git_revision": "e6011b491061395a905574c0dd4643846c625428"
+      },
+      "authorization": {
+        "artifact": {
+          "path": "skill-studies/concise-writing/protocol.md",
+          "sha256": "d2588bca6dcb20358d55d4a3b4e5bce667f115691084692115cb809a83cb6e79",
+          "version": "1",
+          "git_revision": "e6011b491061395a905574c0dd4643846c625428"
+        },
+        "selector": "Batch: codex-ordinary-iteration-01; order 33"
+      },
+      "run_id": "20261018T165704507Z-cw-suite-codex-long-handoff-control-34bcb591-3432-4e38-887d-1dc0982611c4-ve_9uhip",
+      "allocation": {
+        "pool": "subject",
+        "charge": 1
+      },
+      "limitations": [
+        "Exposed development case assessed by the Codex controller; cross-model review is supplemental. No causal or reliability inference from native counts."
+      ],
+      "bundle": {
+        "path": "/Users/simon/work/personal/skill-study-private/concise-writing/baseline-suite-20261018/subjects/20261018T165704507Z-cw-suite-codex-long-handoff-control-34bcb591-3432-4e38-887d-1dc0982611c4-ve_9uhip",
+        "inventory": {
+          "path": "/Users/simon/work/personal/skill-study-private/concise-writing/baseline-suite-20261018/subjects/20261018T165704507Z-cw-suite-codex-long-handoff-control-34bcb591-3432-4e38-887d-1dc0982611c4-ve_9uhip.inventory.json",
+          "sha256": "db3d8f7416a463477b5924a4ae0ae771741dd8891498e21f4ac7433c0ddbfa35",
+          "version": "1"
+        },
+        "verified": true
+      },
+      "result": {
+        "result_id": "codex-ordinary-iteration-01-long-handoff-control-3-1-assessment",
+        "record": {
+          "path": "skill-studies/concise-writing/runs/baseline-iteration-suite-01/results/20261018T165704507Z-cw-suite-codex-long-handoff-control-34bcb591-3432-4e38-887d-1dc0982611c4-ve_9uhip.json",
+          "sha256": "9e3526c08b8698dcf4849581e2ce967c6ee6307c713e4895bc53882c839458a3",
+          "version": "2"
+        }
+      }
+    },
+    {
+      "attempt_id": "codex-ordinary-iteration-01-long-handoff-original-3-1",
+      "case_id": "long-handoff",
+      "condition": "original",
+      "repetition": 3,
+      "attempt_number": 1,
+      "retry_of": null,
+      "manifest": {
+        "path": "skill-studies/concise-writing/runs/baseline-iteration-suite-01/preparation/manifests/codex-long-handoff-manifest.json",
+        "sha256": "35cd09ec0a59fdd280e05343631594f4572a5d265c4ad7e7fd34e7b69813cc47",
+        "version": "1",
+        "git_revision": "e6011b491061395a905574c0dd4643846c625428"
+      },
+      "authorization": {
+        "artifact": {
+          "path": "skill-studies/concise-writing/protocol.md",
+          "sha256": "d2588bca6dcb20358d55d4a3b4e5bce667f115691084692115cb809a83cb6e79",
+          "version": "1",
+          "git_revision": "e6011b491061395a905574c0dd4643846c625428"
+        },
+        "selector": "Batch: codex-ordinary-iteration-01; order 34"
+      },
+      "run_id": "20261018T165754401Z-cw-suite-codex-long-handoff-original-a5f316a5-20d3-4197-981a-69e7b5ca3baa-wafs66vv",
+      "allocation": {
+        "pool": "subject",
+        "charge": 1
+      },
+      "limitations": [
+        "Exposed development case assessed by the Codex controller; cross-model review is supplemental. No causal or reliability inference from native counts."
+      ],
+      "bundle": {
+        "path": "/Users/simon/work/personal/skill-study-private/concise-writing/baseline-suite-20261018/subjects/20261018T165754401Z-cw-suite-codex-long-handoff-original-a5f316a5-20d3-4197-981a-69e7b5ca3baa-wafs66vv",
+        "inventory": {
+          "path": "/Users/simon/work/personal/skill-study-private/concise-writing/baseline-suite-20261018/subjects/20261018T165754401Z-cw-suite-codex-long-handoff-original-a5f316a5-20d3-4197-981a-69e7b5ca3baa-wafs66vv.inventory.json",
+          "sha256": "0e9d4bdc8f49c11160b1b0b06d3e622bfa6257d8560f0462b77f3339f44b4001",
+          "version": "1"
+        },
+        "verified": true
+      },
+      "result": {
+        "result_id": "codex-ordinary-iteration-01-long-handoff-original-3-1-assessment",
+        "record": {
+          "path": "skill-studies/concise-writing/runs/baseline-iteration-suite-01/results/20261018T165754401Z-cw-suite-codex-long-handoff-original-a5f316a5-20d3-4197-981a-69e7b5ca3baa-wafs66vv.json",
+          "sha256": "f859948a8c365e12ac885a5a726b8e88528e9edf41c27539616ad2bb2d83fdfa",
+          "version": "2"
+        }
+      }
+    },
+    {
+      "attempt_id": "codex-ordinary-iteration-01-long-handoff-candidate-targeted-3-1",
+      "case_id": "long-handoff",
+      "condition": "candidate-targeted",
+      "repetition": 3,
+      "attempt_number": 1,
+      "retry_of": null,
+      "manifest": {
+        "path": "skill-studies/concise-writing/runs/baseline-iteration-suite-01/preparation/manifests/codex-long-handoff-manifest.json",
+        "sha256": "35cd09ec0a59fdd280e05343631594f4572a5d265c4ad7e7fd34e7b69813cc47",
+        "version": "1",
+        "git_revision": "e6011b491061395a905574c0dd4643846c625428"
+      },
+      "authorization": {
+        "artifact": {
+          "path": "skill-studies/concise-writing/protocol.md",
+          "sha256": "d2588bca6dcb20358d55d4a3b4e5bce667f115691084692115cb809a83cb6e79",
+          "version": "1",
+          "git_revision": "e6011b491061395a905574c0dd4643846c625428"
+        },
+        "selector": "Batch: codex-ordinary-iteration-01; order 35"
+      },
+      "run_id": "20261018T165851325Z-cw-suite-codex-long-handoff-candidate-targeted-f7e48d3b-eb6c-4830-97bf-540e0ce1ab86-p2fw66_f",
+      "allocation": {
+        "pool": "subject",
+        "charge": 1
+      },
+      "limitations": [
+        "Exposed development case assessed by the Codex controller; cross-model review is supplemental. No causal or reliability inference from native counts."
+      ],
+      "bundle": {
+        "path": "/Users/simon/work/personal/skill-study-private/concise-writing/baseline-suite-20261018/subjects/20261018T165851325Z-cw-suite-codex-long-handoff-candidate-targeted-f7e48d3b-eb6c-4830-97bf-540e0ce1ab86-p2fw66_f",
+        "inventory": {
+          "path": "/Users/simon/work/personal/skill-study-private/concise-writing/baseline-suite-20261018/subjects/20261018T165851325Z-cw-suite-codex-long-handoff-candidate-targeted-f7e48d3b-eb6c-4830-97bf-540e0ce1ab86-p2fw66_f.inventory.json",
+          "sha256": "ed4c9bd15c72c51125f540bc4b51286ab1b48edbc8eedbe2d2d7daf65af7386e",
+          "version": "1"
+        },
+        "verified": true
+      },
+      "result": {
+        "result_id": "codex-ordinary-iteration-01-long-handoff-candidate-targeted-3-1-assessment",
+        "record": {
+          "path": "skill-studies/concise-writing/runs/baseline-iteration-suite-01/results/20261018T165851325Z-cw-suite-codex-long-handoff-candidate-targeted-f7e48d3b-eb6c-4830-97bf-540e0ce1ab86-p2fw66_f.json",
+          "sha256": "f6d084628987883639eb494f40252e27af0391a3aee05b0cce995f3d049b7696",
+          "version": "2"
+        }
+      }
+    },
+    {
+      "attempt_id": "codex-ordinary-iteration-01-long-handoff-candidate-fuller-3-1",
+      "case_id": "long-handoff",
+      "condition": "candidate-fuller",
+      "repetition": 3,
+      "attempt_number": 1,
+      "retry_of": null,
+      "manifest": {
+        "path": "skill-studies/concise-writing/runs/baseline-iteration-suite-01/preparation/manifests/codex-long-handoff-manifest.json",
+        "sha256": "35cd09ec0a59fdd280e05343631594f4572a5d265c4ad7e7fd34e7b69813cc47",
+        "version": "1",
+        "git_revision": "e6011b491061395a905574c0dd4643846c625428"
+      },
+      "authorization": {
+        "artifact": {
+          "path": "skill-studies/concise-writing/protocol.md",
+          "sha256": "d2588bca6dcb20358d55d4a3b4e5bce667f115691084692115cb809a83cb6e79",
+          "version": "1",
+          "git_revision": "e6011b491061395a905574c0dd4643846c625428"
+        },
+        "selector": "Batch: codex-ordinary-iteration-01; order 36"
+      },
+      "run_id": "20261018T165958236Z-cw-suite-codex-long-handoff-candidate-fuller-ad3fb87d-2010-44ba-941b-14fb3c1850dc-70c316l7",
+      "allocation": {
+        "pool": "subject",
+        "charge": 1
+      },
+      "limitations": [
+        "Exposed development case assessed by the Codex controller; cross-model review is supplemental. No causal or reliability inference from native counts."
+      ],
+      "bundle": {
+        "path": "/Users/simon/work/personal/skill-study-private/concise-writing/baseline-suite-20261018/subjects/20261018T165958236Z-cw-suite-codex-long-handoff-candidate-fuller-ad3fb87d-2010-44ba-941b-14fb3c1850dc-70c316l7",
+        "inventory": {
+          "path": "/Users/simon/work/personal/skill-study-private/concise-writing/baseline-suite-20261018/subjects/20261018T165958236Z-cw-suite-codex-long-handoff-candidate-fuller-ad3fb87d-2010-44ba-941b-14fb3c1850dc-70c316l7.inventory.json",
+          "sha256": "3027d7a7bddc11f7d1b7ceb5cc0f69e3acdcfa97c69d0f526170a1c1edc62756",
+          "version": "1"
+        },
+        "verified": true
+      },
+      "result": {
+        "result_id": "codex-ordinary-iteration-01-long-handoff-candidate-fuller-3-1-assessment",
+        "record": {
+          "path": "skill-studies/concise-writing/runs/baseline-iteration-suite-01/results/20261018T165958236Z-cw-suite-codex-long-handoff-candidate-fuller-ad3fb87d-2010-44ba-941b-14fb3c1850dc-70c316l7.json",
+          "sha256": "fbaafcc0b26a8eec4fbea86c85d6ef4e4a2f89f99f20d0efde83709fa27a177f",
+          "version": "2"
+        }
+      }
+    }
+  ]
 }

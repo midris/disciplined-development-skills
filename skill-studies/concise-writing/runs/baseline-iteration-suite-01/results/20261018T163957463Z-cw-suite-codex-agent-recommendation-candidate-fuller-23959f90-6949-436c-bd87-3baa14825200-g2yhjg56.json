@@ -1,0 +1,160 @@
+{
+  "schema_version": "2",
+  "record_kind": "execution result",
+  "result_id": "codex-ordinary-iteration-01-agent-recommendation-candidate-fuller-3-1-assessment",
+  "assessed_at": "2026-10-18T17:01:36.717033+00:00",
+  "run_id": "20261018T163957463Z-cw-suite-codex-agent-recommendation-candidate-fuller-23959f90-6949-436c-bd87-3baa14825200-g2yhjg56",
+  "condition": "candidate-fuller",
+  "assessor": {
+    "name": "Codex active session",
+    "method": "active session",
+    "model": null,
+    "session_id": null,
+    "context": "Same Codex controller authored/reviewed exposed development variants and directly judged complete outputs; no blind, held-out or independent assessor claim. Separate Opus review supplements this."
+  },
+  "manifest": {
+    "path": "skill-studies/concise-writing/runs/baseline-iteration-suite-01/preparation/manifests/codex-agent-recommendation-manifest.json",
+    "sha256": "0dd897c8fda9ad196d67cd8159568e5f549f630b84865c0751384ac473190e77",
+    "version": "1",
+    "git_revision": "e6011b491061395a905574c0dd4643846c625428"
+  },
+  "evidence": [
+    {
+      "id": "output",
+      "artifact": {
+        "path": "/Users/simon/work/personal/skill-study-private/concise-writing/baseline-suite-20261018/subjects/20261018T163957463Z-cw-suite-codex-agent-recommendation-candidate-fuller-23959f90-6949-436c-bd87-3baa14825200-g2yhjg56/workspace/fixture/report.md",
+        "sha256": "45b6879d78fccad04d4b973607470f7f77857cdf2c658c7924d8c756aaf73fbb",
+        "version": null
+      },
+      "selector": "Complete artifact"
+    },
+    {
+      "id": "trace",
+      "artifact": {
+        "path": "/Users/simon/work/personal/skill-study-private/concise-writing/baseline-suite-20261018/subjects/20261018T163957463Z-cw-suite-codex-agent-recommendation-candidate-fuller-23959f90-6949-436c-bd87-3baa14825200-g2yhjg56/provider-session.jsonl",
+        "sha256": "b568d6bf20885fc6c170d1ea1a1a76fc31f074813647feba6bb84ef7a50de554",
+        "version": null
+      },
+      "selector": "Complete artifact"
+    },
+    {
+      "id": "mechanical",
+      "artifact": {
+        "path": "/Users/simon/work/personal/skill-study-private/concise-writing/baseline-suite-20261018/subjects/20261018T163957463Z-cw-suite-codex-agent-recommendation-candidate-fuller-23959f90-6949-436c-bd87-3baa14825200-g2yhjg56/result.json",
+        "sha256": "fdc4595fc73991f7619223f36b1f84be0cbc7fcd97b8e748a2c7bf642978731c",
+        "version": null
+      },
+      "selector": "Complete artifact"
+    },
+    {
+      "id": "log",
+      "artifact": {
+        "path": "/Users/simon/work/personal/skill-study-private/concise-writing/baseline-suite-20261018/subjects/20261018T163957463Z-cw-suite-codex-agent-recommendation-candidate-fuller-23959f90-6949-436c-bd87-3baa14825200-g2yhjg56/runner.log",
+        "sha256": "821d76d2f10de046bf8f8043404c516147c44cce08c71604fa90d9d6b64b87f0",
+        "version": null
+      },
+      "selector": "Complete artifact"
+    },
+    {
+      "id": "final",
+      "artifact": {
+        "path": "/Users/simon/work/personal/skill-study-private/concise-writing/baseline-suite-20261018/subjects/20261018T163957463Z-cw-suite-codex-agent-recommendation-candidate-fuller-23959f90-6949-436c-bd87-3baa14825200-g2yhjg56/final.txt",
+        "sha256": "82db5136c62d288a90e57e401f5827de007b539e8c11732f958263d788744235",
+        "version": null
+      },
+      "selector": "Complete artifact"
+    },
+    {
+      "id": "source-0",
+      "artifact": {
+        "path": "skill-studies/concise-writing/cases/agent-recommendation/fixture/report.md",
+        "sha256": "e9a992c7e4c14dfd5afc10cc637349f39c2030e98ed0311441675900bc3e93e9",
+        "version": null,
+        "git_revision": "a27782b26f8014b67e72ecf817f7e08392fd62c5"
+      },
+      "selector": "Complete frozen report.md"
+    },
+    {
+      "id": "source-1",
+      "artifact": {
+        "path": "skill-studies/concise-writing/cases/agent-recommendation/task.md",
+        "sha256": "607cbe0562a19ea092fe76ec96f13bfbe033b2e1095baef2ca38be621c0baf82",
+        "version": null,
+        "git_revision": "a27782b26f8014b67e72ecf817f7e08392fd62c5"
+      },
+      "selector": "Complete frozen TASK.md"
+    }
+  ],
+  "setup": {
+    "status": "valid",
+    "reason": "Fixed provider/model/CLI and retained inventory verified. Complete assigned body in tool output 16 before first task edit 33. Protected input bytes unchanged.",
+    "evidence": [
+      "mechanical",
+      "trace",
+      "log"
+    ]
+  },
+  "criteria": [
+    {
+      "id": "F1",
+      "dimension": "functional",
+      "judgment": "met",
+      "reason": "The whole fuller update preserves pilot scope, Tuesday window and duration, Maya/Leo roles, all staging results, present production version, new/old cursor behavior and production/cross-region evidence limits. The mechanism heading is bounded by the explicit evidence limits, not a guarantee across untested failures. Both result branches remain accurate.",
+      "consequence": "Required whole-artifact functional factor; length cannot offset failure.",
+      "evidence": [
+        "output",
+        "source-0",
+        "source-1"
+      ]
+    },
+    {
+      "id": "F2",
+      "dimension": "functional",
+      "judgment": "met",
+      "reason": "The manager can authorize only the limited pilot and understands why broader release is not supported. The stop section retains both comparison files until investigation and explains source-selection-versus-upload diagnosis; matching counts still require a separate release decision.",
+      "consequence": "Required whole-artifact functional factor; length cannot offset failure.",
+      "evidence": [
+        "output",
+        "source-0",
+        "source-1"
+      ]
+    },
+    {
+      "id": "F3",
+      "dimension": "functional",
+      "judgment": "met",
+      "reason": "Recommendation, evidence/limits, mechanism and stop condition are clear and connected. Repeated scope qualification remains useful rather than a substantial reading burden, and source padding is removed.",
+      "consequence": "Required whole-artifact functional factor; length cannot offset failure.",
+      "evidence": [
+        "output",
+        "source-0",
+        "source-1"
+      ]
+    }
+  ],
+  "functional_result": "met",
+  "procedural_summary": "Fixed provider/model/CLI and retained inventory verified. Complete assigned body in tool output 16 before first task edit 33. Protected input bytes unchanged. O4/O5 remain unscored; native D1 is distinct from functional outcome.",
+  "observations": [
+    {
+      "dimension": "functional",
+      "description": "Complete output 237 wc-w words; supplied report.md: 625 words, TASK.md: 51 words. Counts describe length, not semantic success; comment-only counts are reported separately for N4.",
+      "consequence": "Descriptive counts only.",
+      "evidence": [
+        "output",
+        "source-0",
+        "source-1"
+      ]
+    },
+    {
+      "dimension": "functional",
+      "description": "Passing fuller repetition3. The mechanism heading is somewhat emphatic but does not overcome the adjacent explicit untested-condition limits when read as a whole.",
+      "consequence": "Qualitative comparison is separate from threshold counts.",
+      "evidence": [
+        "output",
+        "source-0",
+        "source-1"
+      ]
+    }
+  ],
+  "uncertainty": []
+}

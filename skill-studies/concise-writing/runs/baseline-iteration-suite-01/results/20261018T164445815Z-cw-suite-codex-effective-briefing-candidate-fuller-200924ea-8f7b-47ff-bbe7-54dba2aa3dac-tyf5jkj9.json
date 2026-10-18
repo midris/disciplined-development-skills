@@ -1,0 +1,160 @@
+{
+  "schema_version": "2",
+  "record_kind": "execution result",
+  "result_id": "codex-ordinary-iteration-01-effective-briefing-candidate-fuller-2-1-assessment",
+  "assessed_at": "2026-10-18T17:01:36.717033+00:00",
+  "run_id": "20261018T164445815Z-cw-suite-codex-effective-briefing-candidate-fuller-200924ea-8f7b-47ff-bbe7-54dba2aa3dac-tyf5jkj9",
+  "condition": "candidate-fuller",
+  "assessor": {
+    "name": "Codex active session",
+    "method": "active session",
+    "model": null,
+    "session_id": null,
+    "context": "Same Codex controller authored/reviewed exposed development variants and directly judged complete outputs; no blind, held-out or independent assessor claim. Separate Opus review supplements this."
+  },
+  "manifest": {
+    "path": "skill-studies/concise-writing/runs/baseline-iteration-suite-01/preparation/manifests/codex-effective-briefing-manifest.json",
+    "sha256": "a221c8b6f5f1d3595e127cf8261fa87388e95c38d45fc508b561be6c87aa9cd7",
+    "version": "1",
+    "git_revision": "e6011b491061395a905574c0dd4643846c625428"
+  },
+  "evidence": [
+    {
+      "id": "output",
+      "artifact": {
+        "path": "/Users/simon/work/personal/skill-study-private/concise-writing/baseline-suite-20261018/subjects/20261018T164445815Z-cw-suite-codex-effective-briefing-candidate-fuller-200924ea-8f7b-47ff-bbe7-54dba2aa3dac-tyf5jkj9/workspace/fixture/report.md",
+        "sha256": "516f3180d95a5e35abdc168bdb5d22c9ad734d5c6d9b18073f7d18a93baefea7",
+        "version": null
+      },
+      "selector": "Complete artifact"
+    },
+    {
+      "id": "trace",
+      "artifact": {
+        "path": "/Users/simon/work/personal/skill-study-private/concise-writing/baseline-suite-20261018/subjects/20261018T164445815Z-cw-suite-codex-effective-briefing-candidate-fuller-200924ea-8f7b-47ff-bbe7-54dba2aa3dac-tyf5jkj9/provider-session.jsonl",
+        "sha256": "ab5a1a9359f9293f791f4dbfe7361556db008d7360bca340104ff35bf0539387",
+        "version": null
+      },
+      "selector": "Complete artifact"
+    },
+    {
+      "id": "mechanical",
+      "artifact": {
+        "path": "/Users/simon/work/personal/skill-study-private/concise-writing/baseline-suite-20261018/subjects/20261018T164445815Z-cw-suite-codex-effective-briefing-candidate-fuller-200924ea-8f7b-47ff-bbe7-54dba2aa3dac-tyf5jkj9/result.json",
+        "sha256": "8f0f1d4a6d903ec5a95ad2cf3cb93109bef0c6c4d4022621354b61e4f867309f",
+        "version": null
+      },
+      "selector": "Complete artifact"
+    },
+    {
+      "id": "log",
+      "artifact": {
+        "path": "/Users/simon/work/personal/skill-study-private/concise-writing/baseline-suite-20261018/subjects/20261018T164445815Z-cw-suite-codex-effective-briefing-candidate-fuller-200924ea-8f7b-47ff-bbe7-54dba2aa3dac-tyf5jkj9/runner.log",
+        "sha256": "43d2764c50f4417daf3cd794188661339fcfd190ac3e42ee2d78fbff46dc9b8d",
+        "version": null
+      },
+      "selector": "Complete artifact"
+    },
+    {
+      "id": "final",
+      "artifact": {
+        "path": "/Users/simon/work/personal/skill-study-private/concise-writing/baseline-suite-20261018/subjects/20261018T164445815Z-cw-suite-codex-effective-briefing-candidate-fuller-200924ea-8f7b-47ff-bbe7-54dba2aa3dac-tyf5jkj9/final.txt",
+        "sha256": "31dac637198a220f82ad5ce96b2713ed60dda60fe0676f706a2d8d2e736fc92c",
+        "version": null
+      },
+      "selector": "Complete artifact"
+    },
+    {
+      "id": "source-0",
+      "artifact": {
+        "path": "skill-studies/concise-writing/cases/effective-briefing/fixture/report.md",
+        "sha256": "93c23afd44aab52dfcd2bca53f3db0020a41f650d46d4c59a09595539dc72491",
+        "version": null,
+        "git_revision": "a27782b26f8014b67e72ecf817f7e08392fd62c5"
+      },
+      "selector": "Complete frozen report.md"
+    },
+    {
+      "id": "source-1",
+      "artifact": {
+        "path": "skill-studies/concise-writing/cases/effective-briefing/task.md",
+        "sha256": "fbf576b5f00e154e6ee4618285d96980b1858de992e5390a1e83cf9b03cb1796",
+        "version": null,
+        "git_revision": "a27782b26f8014b67e72ecf817f7e08392fd62c5"
+      },
+      "selector": "Complete frozen TASK.md"
+    }
+  ],
+  "setup": {
+    "status": "valid",
+    "reason": "Fixed provider/model/CLI and retained inventory verified. Complete assigned body in tool output 16 before first task edit 33. Protected input bytes unchanged.",
+    "evidence": [
+      "mechanical",
+      "trace",
+      "log"
+    ]
+  },
+  "criteria": [
+    {
+      "id": "F1",
+      "dimension": "functional",
+      "judgment": "met",
+      "reason": "The fuller briefing retains numerical evidence, limits, strict timeout threshold/window, roles and conditional invitation/opt-in/default/review decisions. \u201cWe found no lost documents\u201d reports what was found; it does not assert that no loss could have occurred. The support-correctness caveat remains explicit.",
+      "consequence": "Required whole-artifact functional factor; length cannot offset failure.",
+      "evidence": [
+        "output",
+        "source-0",
+        "source-1"
+      ]
+    },
+    {
+      "id": "F2",
+      "dimension": "functional",
+      "judgment": "met",
+      "reason": "Six teams can continue while four new invitations require consent/return readiness, timeout clearance and Thursday approval. Failure postpones invitations for investigation before reconsideration, and seven-day success does not authorize expansion or change the default.",
+      "consequence": "Required whole-artifact functional factor; length cannot offset failure.",
+      "evidence": [
+        "output",
+        "source-0",
+        "source-1"
+      ]
+    },
+    {
+      "id": "F3",
+      "dimension": "functional",
+      "judgment": "met",
+      "reason": "A clear opening followed by evidence and approval conditions preserves coherent source organization while trimming wording. Related limits and practical gates remain near their evidence/actions.",
+      "consequence": "Required whole-artifact functional factor; length cannot offset failure.",
+      "evidence": [
+        "output",
+        "source-0",
+        "source-1"
+      ]
+    }
+  ],
+  "functional_result": "met",
+  "procedural_summary": "Fixed provider/model/CLI and retained inventory verified. Complete assigned body in tool output 16 before first task edit 33. Protected input bytes unchanged. O4/O5 remain unscored; native D1 is distinct from functional outcome.",
+  "observations": [
+    {
+      "dimension": "functional",
+      "description": "Complete output 219 wc-w words; supplied report.md: 279 words, TASK.md: 43 words. Counts describe length, not semantic success; comment-only counts are reported separately for N4.",
+      "consequence": "Descriptive counts only.",
+      "evidence": [
+        "output",
+        "source-0",
+        "source-1"
+      ]
+    },
+    {
+      "dimension": "functional",
+      "description": "Passing fuller B2. \u201cFound no lost documents\u201d is less explicit than \u201cno evidence of lost documents\u201d but remains an epistemic finding in context, not a zero-loss guarantee.",
+      "consequence": "Qualitative comparison is separate from threshold counts.",
+      "evidence": [
+        "output",
+        "source-0",
+        "source-1"
+      ]
+    }
+  ],
+  "uncertainty": []
+}
