@@ -1,20 +1,23 @@
 # CW baseline iteration: development drafts
 
 The [protocol](../../protocol.md) owns current action and authority; the [design](../../../../plans/specs/2026-10-17-cw-baseline-iteration.md) records the owner’s method decision and proposed comparison.
-These body drafts start from the preserved original, use the full completed evidence and retain every original rationalization row.
-Neither is adopted or installed; the protocol links completed comparison evidence and owns the next decision.
+The two tested body drafts and the revised targeted variant start from the preserved original and retain every original rationalization row.
+None is adopted or installed; the protocol links completed comparison evidence and owns the next decision.
 
 ## Drafts
 
 - [Targeted edit](targeted/SKILL.md), with its [diff](targeted.diff): strengthen the existing global pass, unrequested-elaboration rule and final source comparison.
 - [Fuller rewrite](fuller/SKILL.md), with its [diff](fuller.diff): organize the same responsibilities around understanding the reader, arranging the material, trimming and verifying.
+- [Revised targeted draft](targeted-examples/SKILL.md), with its [diff against tested targeted](targeted-examples.diff): remove the four added preservation-check sentences and copy Fuller's complete two-example section. This 971-word variant is untested; targeted remains 955 words and fuller 1,084.
 
-Both descriptions remain byte-identical to the baseline, so a body comparison does not also change native discovery.
+All three body drafts retain the baseline description; the revised body changes body guidance only.
+The separate [discovery proposal](discovery/proposal.md) compares that description with a [targeted edit](discovery/description-targeted.txt) and a [full rewrite](discovery/description-rewrite.txt), holding the revised body fixed.
+Both description candidates are untested, and their proposed allocations need owner approval.
 The fuller draft retains all six named padding patterns, draft-first comparison, the over-trimming guard, the uncertainty flag, useful reinforcement and companion boundaries.
 It keeps the original LRU example with a fidelity correction alongside the constructed access-form example, without adopting the comprehensive candidate’s changed contract.
-The targeted draft keeps the original example and overall structure.
+The tested targeted draft keeps the original example and overall structure.
 The owner requested both examples: one illustrates compression of a technical explanation, the other preservation of an action and its constraints.
-The additional example and structure change are part of the fuller intervention, so a whole-version result would not isolate either one’s effect.
+In the completed comparison, the additional example and structure change were part of the fuller intervention, so those results do not isolate either one’s effect.
 
 ## How the complete evidence informs the changes
 
@@ -26,16 +29,21 @@ The additional example and structure change are part of the fuller intervention,
 | [Claude native 01](../../runs/suite-2026-09-27/claude-invocation-01-assessment.md) and [02](../../runs/suite-2026-09-27/claude-invocation-02-assessment.md) | Unsupported claims in new writing, positive selection misses and correct comments produced without loading; do not attribute unloaded failures or successes to a skill body. |
 | [All cross-model reviews](../../runs/cross-model-evaluation-01/assessment.md) and their raw-report audit pointers | Shared observations with different severity judgments, controls’ useful restructuring, original’s fidelity strengths, comprehensive’s explanatory strengths and its additional repetition. |
 
-The [E reassessment](../../runs/contact-reassessment-01/README.md) withdraws the recording-specific failures and edit recommendation; both draft bodies remain unchanged. The protocol owns completed coverage and the next execution step.
+The [E reassessment](../../runs/contact-reassessment-01/README.md) withdraws the recording-specific failures and edit recommendation; the two tested bodies remain unchanged.
+The [completed full-suite comparison](../../runs/baseline-iteration-suite-01/evaluation/assessment.md) found no consistent advantage of either over original; the revised targeted variant is a new hypothesis, not a tested simplification.
 These draft hypotheses concern better preservation and organization, not proof that any particular old sentence caused a failure.
 No new rationalization is invented from an evaluator’s defense of an output; the six retained rows preserve the original real-world lessons.
 The drafts strengthen existing homes instead of prescribing a mandatory output checklist or format; the design explicitly records the limitation of testing two prose forms rather than a structural omission guard.
 The recipe encourages reader-useful organization without prescribing one template or requiring every source distinction to be repeated literally.
 
-## Next comparison
+## Validation boundary
 
-The owner wants both drafts tested against the full eight-case suite.
-The [staged comparison proposal](comparison-proposal.md) recommends E first, with batch-level evaluation and any coherent revision before freezing the complete suite.
-It distinguishes the immediate 40-subject/two-evaluator diagnostic from full-suite costs, reuse of unchanged E observations and further iterations.
-The protocol owns current spending and decisions; the owner-approved remaining-suite allocation is recorded there.
-After establishing effective behavior, freeze the selected candidate and test compression separately.
+The completed eight-case comparison covers the preserved original, targeted and fuller bytes, not the revised targeted variant.
+Removing the extra reminders leaves the original keep-information/framing principle and draft-first/source-diff instruction in place; the evidence/uncertainty rule also remains.
+The access-form example illustrates the preservation principle without another instruction checklist.
+Both examples remove narration and repetition, but the LRU example illustrates a technical condition while the access example shows an actor, action, recipient and deadline.
+This is a bounded overlap for teaching two applications, not evidence that two examples are more effective.
+Whole-skill review and static checks confirm the exact edit scope, unchanged descriptions/rationalizations, faithful example transfer and byte-identical baseline frontmatter.
+The bundled quick_validate script could not run because PyYAML is unavailable; no dependency was installed, and unchanged frontmatter was verified directly instead.
+Behavioral effectiveness remains unvalidated; a new allocation, frozen inputs and relevant regression tests are required before relying on this variant or adopting it.
+The owner requests authorize body/description drafting, test planning and static review only; they do not authorize model calls or applying it to the live skill.

@@ -2,8 +2,8 @@
 
 Format version: `1`
 Study ID: `concise-writing`
-Status: original/targeted/fuller full-suite collection and all fourteen usable Opus reviews are complete, with disagreements preserved in the [reconciliation](runs/baseline-iteration-suite-01/evaluation/assessment.md). The live skill remains unchanged and adoption is deferred.
-Current action: review whether the quality differences warrant a body change or favor retaining the shorter original, then decide whether to investigate discovery separately. No new model calls, draft edits, compression or adoption are authorized; the original authentication failure and its approved replacement remain separately retained and charged.
+Status: the tested original/targeted/fuller comparison and fourteen usable Opus reviews are complete; the owner-requested [revised targeted draft](drafts/baseline-iteration/targeted-examples/SKILL.md) and two [description candidates](drafts/baseline-iteration/discovery/proposal.md) are prepared but untested. The live skill remains unchanged and adoption is deferred.
+Current action: review the revised body, targeted/rewritten descriptions and the proposed focused-then-regression allocation; settle prospective scoring boundaries before freezing inputs; keep the completed comparison disagreements visible in the [reconciliation](runs/baseline-iteration-suite-01/evaluation/assessment.md). The owner authorized the revised body and discovery preparation, then approved replacing the targeted description with the agreed reader-facing-text wording; the three-arm test allocation remains proposed, with no new model calls or adoption authorized. The original authentication failure and its approved replacement remain separately retained and charged.
 The approved [core/runs directory layout](../../plans/specs/2026-10-18-study-directory-layout.md) is implemented and verified for both studies; [navigation](README.md) separates core guidance from collected evidence.
 On 2026-10-18 the owner replied “ok, let’s do it” to the concrete remaining allocation of 144 subject calls plus fourteen evaluator calls. This accepts unchanged targeted/fuller bodies, fresh original/control comparisons, three repetitions per selected condition/provider and reuse of the separate completed E stratum while input/runtime qualification holds.
 The authorized sequence is 72 ordinary A/B/C subjects, then 72 native N1–N4 subjects, plus six ordinary and eight native Opus 5.5 medium reviews.
@@ -800,7 +800,7 @@ The remaining-suite reviews use the [fourteen-packet package](runs/baseline-iter
 Dispatched calls are **440 subject, 28 evaluator, 0 authoring, 2 retry**; remaining outer capacity is **0 / 0 / 4 / 2** against the [active plan](../../plans/2026-09-11-model-driven-skill-testing.md#limits-and-information-boundaries). Both eight-call CW batches are spent. The owner authorized ten SSR expansion calls under ceiling 56; all ten are spent, including the excluded control, with no replacement or pool transfer. Comparison runner durations total 508.067 seconds; baseline durations remain 494.936 seconds, including setup and capture.
 Owner clarification after round-10 review: “the budget is just a guideline”. The 1,200-minute figure below remains the planning baseline, not a collection stop; invocation ceilings and the authorized SSR scope is unchanged. Retain elapsed effort and forecast variance to expose process cost.
 
-Current combined accounting: **2,680 active minutes booked; 1,480 minutes above the historical 1,200-minute planning guideline**.
+Current combined accounting: **2,710 active minutes booked; 1,510 minutes above the historical 1,200-minute planning guideline**.
 These are rounded effort estimates, not stopwatch measurements or a separately timed category breakdown.
 Between-turn owner wait is excluded; runner durations are included once.
 The initial 104 calls and sixteen native third repetitions are spent; combined subject accounting is 440/440, with 0 approved remaining-suite calls available and no E calls remaining.
@@ -896,7 +896,11 @@ The supplemental work used 40 estimated active minutes against its 40-minute for
 | Refreshed sign-in verification, bounded recovery preparation and eight offline guard checks | 5 |
 | Approved replacement, eleven remaining Opus reviews and manual audits | 45 |
 | Remaining-suite comparison, status reconciliation, final verification and publication | 10 |
-| **Total** | **2,680** |
+| Owner-requested targeted example variant, whole-skill review and static verification | 10 |
+| Targeted/rewritten discovery descriptions, staged allocation and consistency review | 10 |
+| Owner-selected targeted description replacement and consistency verification | 5 |
+| Preparation publication, final verification and commit/push | 5 |
+| **Total** | **2,710** |
 
 SSR expansion is complete. The prior 55-minute remaining forecast closed at 50 estimated minutes, including the additional shell correction; all ten subject calls are spent.
 The combined batch/recovery effort is 135 estimated minutes (45 initial checkpoint, 40 isolation correction, 50 resumption), 45 above the original 90-minute allowance. Separate round-9 review effort remains in the combined ledger above.

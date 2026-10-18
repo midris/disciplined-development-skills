@@ -1,0 +1,1 @@
+Use when composing, editing, or revising reader-facing text, including requests to tighten, trim, streamline, or shorten it. Includes docs, READMEs, plans, specs, design notes, commit bodies, and code comments. Excludes skill/reference authoring and tasks with no text to compose or revise, such as changes limited to executable code or numeric values.

@@ -1,0 +1,23 @@
+--- targeted/SKILL.md
++++ targeted-examples/SKILL.md
+@@ -52 +52,3 @@
+-## Before / after
++## Examples
++
++### Compressing an explanation
+@@ -58,0 +61,10 @@
++
++### Preserving an action and its constraints
++
++> **Before:** This section explains staging access.
++> Engineers must submit the Access form to Platform Operations two days before deployment.
++> The deadline is two days before.
++>
++> **After:** For staging access, engineers must submit the Access form to Platform Operations two days before deployment.
++
++This constructed illustration removes narration and repetition while retaining the actor, action, recipient and deadline; it is not an observed test result.
+@@ -73,4 +84,0 @@
+-When integrating supplied additions, compare the result with both the existing text and the new material.
+-Check required actions, specified owners and governing conditions.
+-Equivalent wording is valid when it still entails what the source requires; a related state is not enough.
+-Check the other direction too: every claim in the result needs support in the supplied material, with its qualifications intact.

@@ -46,23 +46,47 @@ The fuller draft organizes the same responsibilities into understand, organize, 
 Neither draft adopts the comprehensive version’s detailed-response exemption, removal of the uncertainty flag, broadened authoring scope or all-source-distinctions-explicit rule.
 Fable’s all-pass judgments and the active assessor’s failures remain separate; the C readability threshold is disputed, so section retention alone is not an automatic failure or a reason to demand maximal cutting.
 
-## Validation design
+## Owner-selected targeted example variant
 
-The owner requires both drafts to receive full-suite testing.
-The [comparison proposal](../../skill-studies/concise-writing/drafts/baseline-iteration/comparison-proposal.md) separates a first E diagnostic from the final fixed-version suite, with explicit call and effort forecasts.
+After the completed full-suite comparison, the owner requested removing the targeted draft's added preservation check and adding Fuller's access-form worked example.
+Prepare [targeted-examples](../../skill-studies/concise-writing/drafts/baseline-iteration/targeted-examples/SKILL.md) from the tested targeted body; preserve both tested candidate files and all completed scores.
+Remove the four sentences added after the original draft-first/source-diff instruction, including the reverse claim-support check.
+Retain the original preservation principle and source-diff instruction, the expanded global pass, evidence/uncertainty guidance, corrected LRU example, unchanged description and all six rationalizations.
+Copy Fuller's complete two-example section: the technical explanation teaches compression, while the access-form example illustrates retaining an action, actor, recipient and deadline.
+The second example already exists in the tested Fuller body, but this combination is a new, untested variant.
+The completed comparison found no consistent targeted/full-body advantage, and the owner-resolved contact finding no longer supports the extra preservation reminders.
+Those observations support trying the simpler instruction set; they do not establish that the reminders are unnecessary or that the added example improves behavior.
+This authorizes drafting and static consistency review only; any behavioral validation needs a new bounded allocation before dispatch.
 
-Review both drafts against the complete original and all prior findings before freezing a comparison.
-Start a bounded fresh-context comparison of unchanged original, targeted, fuller and no-CW where contribution is relevant; retain five or more samples per wording variant for the selected authoring question.
-Use the agreed cases and criteria, report actual omissions and unsupported claims alongside categorical judgments, and keep historical/model strata separate.
-Then recheck the relevant full-suite behavior on both providers before selecting an effective candidate.
-A description experiment must keep the selected body fixed and test positive loading and appropriate non-loading separately from output quality.
-The current Claude subject comparator is Sonnet 5 at low effort; the owner has not requested changing that model.
-Runtime identities must be qualified and frozen anew; restore or select a supported Python runtime before shell-dependent subject work.
-The [proposal](../../skill-studies/concise-writing/drafts/baseline-iteration/comparison-proposal.md) names Codex as active assessor, fixes the post-E transition rules and costs prospective native review partitions.
-Exact input bytes, ordered slots, CLI/model settings and readiness evidence must be frozen before dispatch.
+## Owner-selected discovery comparison
 
-Future Claude output evaluation uses owner-requested Opus 5.5 at medium or high effort.
-The E diagnostic qualified `claude-opus-5-5` at medium through the read-only transport.
-Any high-effort scope must be chosen before seeing its verdicts; requalify changed runtime assumptions before another dispatch.
-Have Opus judge all compared arms under the same declared settings before prior-score exposure; do not compare new Opus verdicts only with old Fable verdicts.
-Dispatch authority is recorded only in the protocol; this design supplies no extra calls or automatic revision rounds.
+The owner accepted preparing body and discovery validation separately, then requested both a targeted description edit and a full description rewrite.
+Compare the existing description, the targeted description and the rewritten description with the same revised targeted-examples body and skill name.
+Description candidates change only selection cues: reader-facing text includes code comments; a task with no text to compose or revise does not require CW.
+The owner-selected targeted edit names composing, editing and revising reader-facing text, keeps the familiar text types and adds streamline alongside tightening synonyms.
+Its exclusion applies to tasks with no text to compose or revise, including changes limited to executable code or numeric values; it does not exclude coding tasks that also require comments or documentation.
+The rewrite starts from task intent and gives document additions and source comments as examples.
+Both retain the skill/reference-authoring exclusion and add no workflow or answer-key instruction.
+These are candidate descriptions, not observed discovery improvements, and any apparent description effect remains scoped to the fixed body and test catalog.
+The [body/discovery proposal](../../skill-studies/concise-writing/drafts/baseline-iteration/discovery/proposal.md) owns candidate text locations, the proposed test matrix, scoring prerequisites and call forecasts.
+Preparation is authorized; new model calls, runtime changes and adoption still require the protocol's allocation decision.
+
+## Completed comparison and continuing validation requirements
+
+The owner-required full comparison of original, targeted and fuller is complete; its [executed proposal](../../skill-studies/concise-writing/drafts/baseline-iteration/comparison-proposal.md) records the E-first design and full-suite allocation.
+The [reconciliation](../../skill-studies/concise-writing/runs/baseline-iteration-suite-01/evaluation/assessment.md) retains the evidence, disputed judgments and adoption limits.
+Those observations validate only the tested bytes, not the owner-selected example variant or new descriptions.
+
+The new [body/discovery proposal](../../skill-studies/concise-writing/drafts/baseline-iteration/discovery/proposal.md) separates explicit-load body contribution from native selection, provides focused and remaining coverage, and fixes prospective transition rules for review before collection.
+Review the complete new body and descriptions against original obligations and all retained findings before freezing another comparison.
+Resolve or bound consequential assessment disagreements prospectively; do not turn source-wording preferences into mandatory output text or claim a preservation gap from the withdrawn contact findings.
+Keep no-CW controls, compare relevant behavior on both providers, and report historical/model strata separately.
+A description experiment must hold the body fixed and distinguish correct loading from successful artifacts.
+
+Claude subjects remain Sonnet 5 low unless separately changed; evaluator preference does not change the subject model.
+Future Claude output evaluation uses owner-requested Opus 5.5 at medium or high effort; the proposed next stage uses the previously qualified medium setting.
+Codex remains the active assessor, making the Opus review cross-family relative to it.
+Declare settings before verdicts and requalify affected runtime assumptions, including shell Python, before dispatch.
+Exact input bytes, ordered slots, CLI/model settings, criteria and readiness evidence must be frozen before new calls.
+Have Opus judge all compared arms under the same declared settings before prior-score exposure; do not compare new verdicts only with historical Fable verdicts.
+Dispatch authority is recorded only in the protocol; this design supplies no extra calls or automatic revision/retry authority.
