@@ -1,6 +1,7 @@
-# Remaining-suite Opus review: partial checkpoint
+# Remaining-suite Opus review: initial checkpoint
 
 The [protocol](../../../protocol.md) owns current action and authority.
+This records the pre-resumption checkpoint; the later [owner-approved recovery](resumption.json) preserves its failed attempt and authorizes one replacement.
 All 144subjects are complete and directly assessed; this cross-model review checkpoint is incomplete and cannot support adoption or compression.
 The [frozen inputs](inputs.json) and [ledger](evaluator-run-index.json) retain all planned groups and actual invocations.
 The separate E reviews and owner-resolved contact interpretation remain in their [reassessment](../../contact-reassessment-01/README.md).

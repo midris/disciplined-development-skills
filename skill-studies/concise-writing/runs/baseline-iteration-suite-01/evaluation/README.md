@@ -1,7 +1,7 @@
 # Remaining-suite Opus output review
 
 The [protocol](../../../protocol.md) owns current authority and spending.
-[Inputs](inputs.json) freeze fourteen case/provider packets containing all 144remaining-suite outputs; E retains its two separately completed reviews.
+[Inputs](inputs.json) freeze fourteen case/provider packets containing all 144 remaining-suite outputs; E retains its two separately completed reviews.
 The [ledger](evaluator-run-index.json) records every attempted evaluator session and charge.
 
 Use claude-opus-5-5 at requested medium effort through the pinned Claude Code 2.1.301, with read-only native Read/Glob/Grep, no shell and disabled skills/slash commands.
@@ -17,8 +17,17 @@ Skill bodies and runtime captures are excluded from quality review; native selec
 The [prompt](prompt.md) requires complete file delivery and emitted first-pass judgments before reading prior-assessment.md, followed by an evidence-based comparison preserving disagreements.
 Audit actual full Read returns, model/tool identities, protected bytes and retained inventories for each stopped call, then manually inspect every output judgment and comparison before advancing.
 The exact private controller and support-script hashes are recorded in inputs.json.
-It exclusively claims each group, requires all 144subject records and blocks advance until the stopped review is audited.
+It exclusively claims each group, requires all 144 subject records and blocks advance until the stopped review is audited.
 An unusable review remains charged; no automatic retry, packet split, fallback model or capacity transfer is authorized.
 
 Raw review bundles and copied packets stay in the authorized private store under baseline-suite-20261018.
 Published audit files identify retained first-pass/final text and trace ordering; the final reconciliation preserves active scores, evaluator judgments and any unresolved differences separately.
+
+## Authorized authentication recovery
+
+The owner refreshed sign-in and explicitly approved one replacement of the unusable Codex handoff review.
+The [resumption record](resumption.json) pins the failed identity, exact unchanged base inputs, one replacement and eleven untouched primary groups.
+Eight offline checks cover exact failed-record recognition, stopping on other pending/unusable records, replacement consent, repeat rejection and fixed continuation order.
+The original failure audit and primary charge remain unchanged.
+The replacement receives a unique attempt name, retry_of and retry-pool charge; dispatch_order distinguishes actual invocation order from original group order.
+No other failed attempt is waived and no further replacement is authorized.

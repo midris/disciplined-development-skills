@@ -1,0 +1,131 @@
+{
+  "prepared_at": "2026-10-18T20:08:20.729837+00:00",
+  "authority": "Owner: login was successful; Approve one replacement review (2026-10-18).",
+  "base_inputs": {
+    "path": "skill-studies/concise-writing/runs/baseline-iteration-suite-01/evaluation/inputs.json",
+    "sha256": "f3ea963bb7c9e8bbbb8039de4dc5c9c87a6a331eddf1a828482840a91f37960a",
+    "git_revision": "28aec776531075bee49b6aa7296af89f5dd623cf"
+  },
+  "failed_attempt": {
+    "configuration": "codex-long-handoff",
+    "run_id": "20261018T182703850Z-cw-suite-opus-codex-long-handoff-bf363d7c-4b4c-476c-8bf2-5c0001755231-4_7rwl_8",
+    "status": "INFRA_ERROR",
+    "allocation_pool": "evaluator",
+    "charge": 1,
+    "audit_status": "unusable: expired OAuth token; no judgments; retained and charged, no retry",
+    "config_sha256": "b20b7c43b95f28f9c51fd62042716811daf646820de4c3588e53aa5b0beb154c",
+    "inventory": {
+      "path": "/Users/simon/work/personal/skill-study-private/concise-writing/baseline-suite-20261018/reviews/20261018T182703850Z-cw-suite-opus-codex-long-handoff-bf363d7c-4b4c-476c-8bf2-5c0001755231-4_7rwl_8.inventory.json",
+      "sha256": "1ab394440e65c86efd392c1071cd1aa24e2b37a647528316565b0f08f0e4573f",
+      "version": "1"
+    }
+  },
+  "failure_audit": {
+    "path": "skill-studies/concise-writing/runs/baseline-iteration-suite-01/evaluation/codex-long-handoff-audit.json",
+    "sha256": "77d54832f502d90a99cb3a74a3c15342725dc3bfa454ebb9e322741406ee02d7"
+  },
+  "replacement_approved": true,
+  "sequence": [
+    "codex-long-handoff-replacement-1",
+    "claude-agent-recommendation",
+    "claude-effective-briefing",
+    "claude-long-handoff",
+    "codex-invocation-tighten",
+    "codex-invocation-write",
+    "codex-invocation-nonprose",
+    "codex-invocation-comments",
+    "claude-invocation-tighten",
+    "claude-invocation-write",
+    "claude-invocation-nonprose",
+    "claude-invocation-comments"
+  ],
+  "attempts": {
+    "codex-long-handoff-replacement-1": {
+      "group": "codex-long-handoff",
+      "pool": "retry",
+      "retry_of": "20261018T182703850Z-cw-suite-opus-codex-long-handoff-bf363d7c-4b4c-476c-8bf2-5c0001755231-4_7rwl_8",
+      "ledger_order": 15
+    },
+    "claude-agent-recommendation": {
+      "group": "claude-agent-recommendation",
+      "pool": "evaluator",
+      "retry_of": null,
+      "ledger_order": 4
+    },
+    "claude-effective-briefing": {
+      "group": "claude-effective-briefing",
+      "pool": "evaluator",
+      "retry_of": null,
+      "ledger_order": 5
+    },
+    "claude-long-handoff": {
+      "group": "claude-long-handoff",
+      "pool": "evaluator",
+      "retry_of": null,
+      "ledger_order": 6
+    },
+    "codex-invocation-tighten": {
+      "group": "codex-invocation-tighten",
+      "pool": "evaluator",
+      "retry_of": null,
+      "ledger_order": 7
+    },
+    "codex-invocation-write": {
+      "group": "codex-invocation-write",
+      "pool": "evaluator",
+      "retry_of": null,
+      "ledger_order": 8
+    },
+    "codex-invocation-nonprose": {
+      "group": "codex-invocation-nonprose",
+      "pool": "evaluator",
+      "retry_of": null,
+      "ledger_order": 9
+    },
+    "codex-invocation-comments": {
+      "group": "codex-invocation-comments",
+      "pool": "evaluator",
+      "retry_of": null,
+      "ledger_order": 10
+    },
+    "claude-invocation-tighten": {
+      "group": "claude-invocation-tighten",
+      "pool": "evaluator",
+      "retry_of": null,
+      "ledger_order": 11
+    },
+    "claude-invocation-write": {
+      "group": "claude-invocation-write",
+      "pool": "evaluator",
+      "retry_of": null,
+      "ledger_order": 12
+    },
+    "claude-invocation-nonprose": {
+      "group": "claude-invocation-nonprose",
+      "pool": "evaluator",
+      "retry_of": null,
+      "ledger_order": 13
+    },
+    "claude-invocation-comments": {
+      "group": "claude-invocation-comments",
+      "pool": "evaluator",
+      "retry_of": null,
+      "ledger_order": 14
+    }
+  },
+  "qualification": "User refreshed sign-in; unrestricted auth status is loggedIn=true/claude.ai; all four pinned binaries match. Actual service acceptance is checked by the first approved resumed invocation, with no extra model probe.",
+  "controller": {
+    "path": "/Users/simon/work/personal/skill-study-private/concise-writing/baseline-suite-20261018/controllers/collect-review-resumed.py",
+    "sha256": "12ae10484f51f722bc9017ea3ef7f6bc2a89fdfdf1fd35bafa32910a5f6a2b95"
+  },
+  "support": [
+    {
+      "path": "/Users/simon/work/personal/skill-study-private/concise-writing/baseline-suite-20261018/controllers/resumption_rules.py",
+      "sha256": "6fa4b0a433363d860819beb3053392cf52c77334f5e57639028061145ca507c2"
+    },
+    {
+      "path": "/Users/simon/work/personal/skill-study-private/concise-writing/baseline-suite-20261018/controllers/test_resumption_rules.py",
+      "sha256": "59f0854cfd773e3dcfbc7c5ea4975d5f043321e25cb4069be013575bcbf4c4f9"
+    }
+  ]
+}
