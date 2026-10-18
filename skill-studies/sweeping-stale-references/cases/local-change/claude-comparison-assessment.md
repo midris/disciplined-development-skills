@@ -10,7 +10,7 @@ Status: editorial correction of the claude-comparison-01 controller card; collec
 Revision scope: correct batch/configuration references and describe the v3 P3 change accurately; no criterion wording, expected outcome or historical score changes.
 Purpose and realistic failure opportunity: Observe scope checking and restraint when one correction genuinely needs no sibling edits.
 Scenario mechanism: This case tests a justified local outcome after checking scope. One glossary heading needs correction while related membership and shipping references remain valid. Inspect the final heading, preserved meanings and links, search-before-edit evidence and committed account appropriate to the selected skill version. The near-matches distinguish justified restraint from blanket normalization; a one-file diff alone cannot establish that scope was checked.
-Protocol coverage and membership/exposure: O1–O3 and O5; local-change boundary; exposed development evidence proposed in [coverage expansion](../../coverage-expansion.md).
+Protocol coverage and membership/exposure: O1–O3 and O5; local-change boundary; exposed development evidence proposed in [coverage expansion](../../runs/coverage-baseline-01/coverage-expansion.md).
 
 ## Inputs and setup
 
@@ -27,7 +27,7 @@ Read complete delivered artifacts, diffs and available traces. Mechanical observ
 Inspect the committed tree as well as the final workspace. F1–F3 and P1–P2 retain their earlier meanings. P3 uses the version-specific reporting rule introduced in v3 and printed below; it differs from the earlier shared negative-form requirement.
 Counting units, relevant scope and acceptable variants are fixed in expected.md; do not inherit semantic-block or disputed-label conventions from other cases.
 No fixed wording or file-change count substitutes for semantic preservation. A directly observed missing required artifact is failure; inability to inspect the artifact is insufficient evidence.
-Offline qualification and commands are recorded in [qualification](../../expansion-qualification.md).
+Offline qualification and commands are recorded in [qualification](../../runs/coverage-baseline-01/expansion-qualification.md).
 
 ## Criteria
 

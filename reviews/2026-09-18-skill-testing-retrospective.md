@@ -1,7 +1,7 @@
 # Skill-testing process retrospective: SSR and CW
 
 Status: completed active-session retrospective; recommendations for the next experiment, not new collection or authoring authorization.
-Basis: [framework spec](../plans/specs/2026-09-11-model-driven-skill-testing-framework.md), [active plan](../plans/2026-09-11-model-driven-skill-testing.md), [SSR process lessons](../skill-studies/sweeping-stale-references/protocol.md#findings-and-process-lessons), [CW baseline](../skill-studies/concise-writing/contribution-baseline-01-assessment.md), [CW comparison](../skill-studies/concise-writing/comprehensive-comparison-01-assessment.md) and their linked evidence/reviews.
+Basis: [framework spec](../plans/specs/2026-09-11-model-driven-skill-testing-framework.md), [active plan](../plans/2026-09-11-model-driven-skill-testing.md), [SSR process lessons](../skill-studies/sweeping-stale-references/protocol.md#findings-and-process-lessons), [CW baseline](../skill-studies/concise-writing/runs/contribution-baseline-01/contribution-baseline-01-assessment.md), [CW comparison](../skill-studies/concise-writing/runs/comprehensive-comparison-01/comprehensive-comparison-01-assessment.md) and their linked evidence/reviews.
 
 ## What these studies established
 
@@ -19,7 +19,7 @@ We should reduce misapplication and repeated reopening, not suppress owner parti
 The records distinguish three different findings: a model completed the useful task, a skill contributed to that success, and a rewrite improved the result.
 Passing controls and tied quality outcomes remained valid observations.
 The CW candidate passes the fixed quality thresholds with a 22.7% smaller instruction, but also changes the contract: uncertainty flagging is dropped, the explicit repetition exception is narrowed, and applicability is extended.
-The [comparison assessment](../skill-studies/concise-writing/comprehensive-comparison-01-assessment.md#candidate-contract-changes) records those deltas; instruction-size reduction does not establish behavior-preserving cleanup.
+The [comparison assessment](../skill-studies/concise-writing/runs/comprehensive-comparison-01/comprehensive-comparison-01-assessment.md#candidate-contract-changes) records those deltas; instruction-size reduction does not establish behavior-preserving cleanup.
 The candidate does not demonstrate better output quality and produces longer outputs than the original in all four pairs.
 Adoption remains a separate owner decision.
 

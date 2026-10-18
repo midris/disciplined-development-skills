@@ -1,7 +1,7 @@
 # CW cross-model evaluation procedure and execution review
 
 The [protocol](../skill-studies/concise-writing/protocol.md) owns completion, decisions and accounting.
-The [method](../skill-studies/concise-writing/evaluation/README.md), [assessment](../skill-studies/concise-writing/evaluation/assessment.md) and [ledger](../skill-studies/concise-writing/evaluation/evaluator-run-index.json) preserve supplemental judgments and provenance.
+The [method](../skill-studies/concise-writing/runs/cross-model-evaluation-01/README.md), [assessment](../skill-studies/concise-writing/runs/cross-model-evaluation-01/assessment.md) and [ledger](../skill-studies/concise-writing/runs/cross-model-evaluation-01/evaluator-run-index.json) preserve supplemental judgments and provenance.
 This is the controller’s self-review, not an additional independent code-review invocation or an adoption verdict.
 
 ## Scope and boundaries

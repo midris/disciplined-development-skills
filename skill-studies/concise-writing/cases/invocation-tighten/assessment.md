@@ -14,7 +14,7 @@ Protocol coverage and membership/exposure: [suite map](../../protocol.md#suite-a
 ## Inputs and setup
 
 Exact [A task](../agent-recommendation/task.md) and [A source](../agent-recommendation/fixture/report.md); no duplicate task/source copy.
-Provider/condition mappings: [configuration index](../../preparation/configuration-index.json); shared setup and input-boundary rules: [preparation](../../preparation/README.md).
+Provider/condition mappings: [configuration index](../../runs/suite-2026-09-27/preparation/configuration-index.json); shared setup and input-boundary rules: [preparation](../../runs/suite-2026-09-27/preparation/README.md).
 Criteria, worked boundary examples and preparation records are controller-only; configurations enumerate every supplied file.
 The protocol links provider-specific manifests and runtime qualification; this card supplies no independent dispatch authority.
 Require exact source/task/condition identities, retained complete artifacts and trace.
@@ -24,7 +24,7 @@ Explicit-load skill conditions require full body delivery before editing; native
 
 The controller applies [CW-expanded-1](../../protocol.md#expanded-suite-assessment-policy) with this case card; historical policy-4 scores remain unchanged.
 
-Apply [policy 4](../../assessment-policy.txt) and A’s whole-document purpose. [Native evidence rules](../../preparation/README.md#native-evidence) govern D1. No no-CW condition: absence cannot measure discovery.
+Apply [policy 4](../../assessment-policy.txt) and A’s whole-document purpose. [Native evidence rules](../../runs/suite-2026-09-27/preparation/README.md#native-evidence) govern D1. No no-CW condition: absence cannot measure discovery.
 Judge the saved artifact, not a completion claim.
 Missing capture is uncertainty; reliable evidence of a missing required artifact is a task failure.
 Use complete input and output context.

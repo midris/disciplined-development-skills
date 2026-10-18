@@ -9,7 +9,7 @@ Definition version: `1`
 Status: accepted for coverage-baseline-01; collection authority and input freeze belong to the protocol.
 Purpose and realistic failure opportunity: Observe complete reconciliation while making the initiating change, preserving causal explanation and unrelated meanings.
 Scenario mechanism: This case tests propagation of an agent-initiated rename. The task names the setting and concept but not their consumers; the fixture spreads them across executable and explanatory artifacts and includes history/vendor references to preserve. Final artifacts and runtime checks expose incomplete propagation or damage; ordered tool events and Git history separately expose skipped search, grouping or accounting. This is ordinary change work, contrasting with the existing reviewer-triggered repairs.
-Protocol coverage and membership/exposure: O1–O4; ordinary initiating change; exposed development evidence proposed in [coverage expansion](../../coverage-expansion.md).
+Protocol coverage and membership/exposure: O1–O4; ordinary initiating change; exposed development evidence proposed in [coverage expansion](../../runs/coverage-baseline-01/coverage-expansion.md).
 
 ## Inputs and setup
 
@@ -26,7 +26,7 @@ Read complete delivered artifacts, diffs and available traces. Mechanical observ
 Inspect the committed tree as well as the final workspace. F1–F3 apply to both conditions; P1–P3 apply to original only, while control procedure remains descriptive.
 Counting units, relevant scope and acceptable variants are fixed in expected.md; do not inherit semantic-block or disputed-label conventions from other cases.
 No fixed wording or file-change count substitutes for semantic preservation. A directly observed missing required artifact is failure; inability to inspect the artifact is insufficient evidence.
-Offline qualification and commands are recorded in [qualification](../../expansion-qualification.md).
+Offline qualification and commands are recorded in [qualification](../../runs/coverage-baseline-01/expansion-qualification.md).
 
 ## Criteria
 

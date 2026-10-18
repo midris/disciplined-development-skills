@@ -4,7 +4,7 @@ Date: 2026-09-24 America/New_York.
 Scope: the owner-approved comprehensive-comparison-02 input freeze, preflight, 34 attempts, fixed-rule assessments, evidence/index pins and current-state reconciliation.
 Authority: `37ab0390b04630335d15f6d246b2b042f0e07f51`; final index: `9265287fdc571723459b6ebf6d2fafb126cb5ec4`.
 This is active-session self-review, not independent evaluation or a new provider call.
-The [assessment](../skill-studies/sweeping-stale-references/comprehensive-comparison-02-assessment.md) owns the results and recommendation; the [protocol](../skill-studies/sweeping-stale-references/protocol.md) owns decisions.
+The [assessment](../skill-studies/sweeping-stale-references/runs/comprehensive-comparison-02/comprehensive-comparison-02-assessment.md) owns the results and recommendation; the [protocol](../skill-studies/sweeping-stale-references/protocol.md) owns decisions.
 
 ## Evidence and judgment review
 

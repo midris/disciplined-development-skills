@@ -9,7 +9,7 @@ Definition version: `2`
 Status: accepted for comprehensive-comparison-02; collection authority and input freeze belong to the protocol.
 Purpose and realistic failure opportunity: Observe scope checking and restraint when one correction genuinely needs no sibling edits.
 Scenario mechanism: This case tests a justified local outcome after checking scope. One glossary heading needs correction while related membership and shipping references remain valid. Inspect the final heading, preserved meanings and links, search-before-edit evidence and committed negative-form account. The near-matches distinguish justified restraint from blanket normalization; a one-file diff alone cannot establish that scope was checked.
-Protocol coverage and membership/exposure: O1–O3 and O5; local-change boundary; exposed development evidence proposed in [coverage expansion](../../coverage-expansion.md).
+Protocol coverage and membership/exposure: O1–O3 and O5; local-change boundary; exposed development evidence proposed in [coverage expansion](../../runs/coverage-baseline-01/coverage-expansion.md).
 
 ## Inputs and setup
 
@@ -26,7 +26,7 @@ Read complete delivered artifacts, diffs and available traces. Mechanical observ
 Inspect the committed tree as well as the final workspace. F1–F3 and P1–P3 apply to original and candidate with unchanged meanings.
 Counting units, relevant scope and acceptable variants are fixed in expected.md; do not inherit semantic-block or disputed-label conventions from other cases.
 No fixed wording or file-change count substitutes for semantic preservation. A directly observed missing required artifact is failure; inability to inspect the artifact is insufficient evidence.
-Offline qualification and commands are recorded in [qualification](../../expansion-qualification.md).
+Offline qualification and commands are recorded in [qualification](../../runs/coverage-baseline-01/expansion-qualification.md).
 
 ## Criteria
 

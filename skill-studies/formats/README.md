@@ -46,8 +46,8 @@ See the [companion contract](companion-formats.md#execution-results-and-batch-as
 
 ## Historical example
 
-The [policy-3 pilot-02 example](../sweeping-stale-references/assessments/pilot-02-original-policy-3-example.json) remains byte-for-byte unchanged in format `1-draft`.
+The [policy-3 pilot-02 example](../sweeping-stale-references/runs/historical-assessment-examples/pilot-02-original-policy-3-example.json) remains byte-for-byte unchanged in format `1-draft`.
 It illustrates evidence and criterion reasoning from one retained execution, not batch reliability or a replacement pilot assessment.
-Its [index](../sweeping-stale-references/assessments/index.json) pins the original schema and the cited historical run index by full Git revision, path and SHA-256.
+Its [index](../sweeping-stale-references/runs/historical-assessment-examples/index.json) pins the original schema and the cited historical run index by full Git revision, path and SHA-256.
 Retrieve those bytes with `git show <git_revision>:<path>` and verify the hash before validation; do not apply the current schema to that historical record.
 The old schema lives in Git rather than a duplicate archive or compatibility branch in the current schema.

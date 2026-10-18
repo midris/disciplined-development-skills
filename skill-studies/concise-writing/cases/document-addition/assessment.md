@@ -15,7 +15,7 @@ Protocol coverage and membership/exposure: [suite map](../../protocol.md#suite-a
 
 [Task](task.md), [new requirements](new-notes.md) and the unchanged [B source](../effective-briefing/fixture/report.md), mounted as report.md.
 This reuses the already-effective document as a starting point; B itself and its historical inputs remain unchanged.
-Provider/condition mappings: [configuration index](../../preparation/configuration-index.json); shared setup and input-boundary rules: [preparation](../../preparation/README.md).
+Provider/condition mappings: [configuration index](../../runs/suite-2026-09-27/preparation/configuration-index.json); shared setup and input-boundary rules: [preparation](../../runs/suite-2026-09-27/preparation/README.md).
 Criteria, worked boundary examples and preparation records are controller-only; configurations enumerate every supplied file.
 The protocol links provider-specific manifests and runtime qualification; this card supplies no independent dispatch authority.
 Require exact source/task/condition identities, retained complete artifacts and trace.
@@ -32,7 +32,7 @@ These are contextual anchors, not independent sentence scores or a preferred lay
 Useful reinforcement and clear cross-references are valid; appending a section is not automatically wrong if the resulting document works coherently.
 Record full input/output word counts, distinguishing the original report from the new notes; adding required information can justify growth, so no shorter-output preference or minimum reduction applies.
 Missing capture is uncertainty; a reliably missing required report is a task failure.
-See [controller boundary checks](../../preparation/boundary-checks.md).
+See [controller boundary checks](../../runs/suite-2026-09-27/preparation/boundary-checks.md).
 
 ## Criteria
 

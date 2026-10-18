@@ -1,6 +1,6 @@
 # Separate study guidance from collected evidence
 
-Status: owner approved both CW and SSR; implementation is tracked in the active study plan.
+Status: implemented and verified for both studies; [migration review and inventory](../../reviews/2026-10-18-study-directory-layout.md) record preservation and checks.
 Authority: the owner answered “Approve both CW and SSR” to the complete core/runs layout proposal and its 60–90-minute estimate; no model tests were authorized.
 The owner requested separating core study documents from assessment runs and results after the CW reassessment.
 This design covers the current CW and SSR directories, not the superseded frameworks under skill-validation.

@@ -1,0 +1,85 @@
+{
+  "schema_version": "0.2",
+  "id": "cw-eval-claude-agent-recommendation",
+  "prompt": "../prompt.md",
+  "fixtures": [
+    {
+      "source": "../../../../../../skill-study-private/concise-writing/cross-model-evaluation-rest-20261017/claude-agent-recommendation/EVALUATION-INDEX.json",
+      "target": "EVALUATION-INDEX.json"
+    },
+    {
+      "source": "../../../../../../skill-study-private/concise-writing/cross-model-evaluation-rest-20261017/claude-agent-recommendation/MECHANICAL-CHECKS.json",
+      "target": "MECHANICAL-CHECKS.json"
+    },
+    {
+      "source": "../../../../../../skill-study-private/concise-writing/cross-model-evaluation-rest-20261017/claude-agent-recommendation/WORD-COUNTS.json",
+      "target": "WORD-COUNTS.json"
+    },
+    {
+      "source": "../../../../../../skill-study-private/concise-writing/cross-model-evaluation-rest-20261017/claude-agent-recommendation/cases/agent-recommendation/criteria.md",
+      "target": "cases/agent-recommendation/criteria.md"
+    },
+    {
+      "source": "../../../../../../skill-study-private/concise-writing/cross-model-evaluation-rest-20261017/claude-agent-recommendation/cases/agent-recommendation/report.md",
+      "target": "cases/agent-recommendation/report.md"
+    },
+    {
+      "source": "../../../../../../skill-study-private/concise-writing/cross-model-evaluation-rest-20261017/claude-agent-recommendation/cases/agent-recommendation/task.md",
+      "target": "cases/agent-recommendation/task.md"
+    },
+    {
+      "source": "../../../../../../skill-study-private/concise-writing/cross-model-evaluation-rest-20261017/claude-agent-recommendation/expanded-policy.txt",
+      "target": "expanded-policy.txt"
+    },
+    {
+      "source": "../../../../../../skill-study-private/concise-writing/cross-model-evaluation-rest-20261017/claude-agent-recommendation/outputs/20260927T232516711Z-cw-prep-claude-agent-recommendation-control-3862747c-475a-412c-b38a-57179ea138eb-vshn2eum/report.md",
+      "target": "outputs/20260927T232516711Z-cw-prep-claude-agent-recommendation-control-3862747c-475a-412c-b38a-57179ea138eb-vshn2eum/report.md"
+    },
+    {
+      "source": "../../../../../../skill-study-private/concise-writing/cross-model-evaluation-rest-20261017/claude-agent-recommendation/outputs/20260927T232620692Z-cw-prep-claude-agent-recommendation-original-f0d0588d-23bf-43a5-8d39-6b494b23c8c7-nkdexxjl/report.md",
+      "target": "outputs/20260927T232620692Z-cw-prep-claude-agent-recommendation-original-f0d0588d-23bf-43a5-8d39-6b494b23c8c7-nkdexxjl/report.md"
+    },
+    {
+      "source": "../../../../../../skill-study-private/concise-writing/cross-model-evaluation-rest-20261017/claude-agent-recommendation/outputs/20260927T232717372Z-cw-prep-claude-agent-recommendation-candidate-fc8fa465-ce47-47a7-96d6-d3bf53f017ac-gph06_tw/report.md",
+      "target": "outputs/20260927T232717372Z-cw-prep-claude-agent-recommendation-candidate-fc8fa465-ce47-47a7-96d6-d3bf53f017ac-gph06_tw/report.md"
+    },
+    {
+      "source": "../../../../../../skill-study-private/concise-writing/cross-model-evaluation-rest-20261017/claude-agent-recommendation/outputs/20260927T233706058Z-cw-prep-claude-agent-recommendation-original-bb01f15c-c876-49da-8b8f-b4c9124f7c5a-h9e46_yz/report.md",
+      "target": "outputs/20260927T233706058Z-cw-prep-claude-agent-recommendation-original-bb01f15c-c876-49da-8b8f-b4c9124f7c5a-h9e46_yz/report.md"
+    },
+    {
+      "source": "../../../../../../skill-study-private/concise-writing/cross-model-evaluation-rest-20261017/claude-agent-recommendation/outputs/20260927T233852427Z-cw-prep-claude-agent-recommendation-candidate-6cc8fda0-7b02-4fd6-a235-c1fd7e471d8b-u0i240ec/report.md",
+      "target": "outputs/20260927T233852427Z-cw-prep-claude-agent-recommendation-candidate-6cc8fda0-7b02-4fd6-a235-c1fd7e471d8b-u0i240ec/report.md"
+    },
+    {
+      "source": "../../../../../../skill-study-private/concise-writing/cross-model-evaluation-rest-20261017/claude-agent-recommendation/outputs/20260927T233932890Z-cw-prep-claude-agent-recommendation-control-c65c1314-0751-4f69-b5d2-f806fc318e8f-udv7cgas/report.md",
+      "target": "outputs/20260927T233932890Z-cw-prep-claude-agent-recommendation-control-c65c1314-0751-4f69-b5d2-f806fc318e8f-udv7cgas/report.md"
+    },
+    {
+      "source": "../../../../../../skill-study-private/concise-writing/cross-model-evaluation-rest-20261017/claude-agent-recommendation/outputs/20260927T234925771Z-cw-prep-claude-agent-recommendation-candidate-9a62225d-7e41-4646-87b4-42c2add63785-id60_hi4/report.md",
+      "target": "outputs/20260927T234925771Z-cw-prep-claude-agent-recommendation-candidate-9a62225d-7e41-4646-87b4-42c2add63785-id60_hi4/report.md"
+    },
+    {
+      "source": "../../../../../../skill-study-private/concise-writing/cross-model-evaluation-rest-20261017/claude-agent-recommendation/outputs/20260927T235027059Z-cw-prep-claude-agent-recommendation-control-0785b901-ce9d-4b44-b4c1-7884679f1a75-4d2ja7gj/report.md",
+      "target": "outputs/20260927T235027059Z-cw-prep-claude-agent-recommendation-control-0785b901-ce9d-4b44-b4c1-7884679f1a75-4d2ja7gj/report.md"
+    },
+    {
+      "source": "../../../../../../skill-study-private/concise-writing/cross-model-evaluation-rest-20261017/claude-agent-recommendation/outputs/20260927T235127685Z-cw-prep-claude-agent-recommendation-original-ef25cc8f-7b1f-4723-b1ac-c0fc1437948c-nia_qd8o/report.md",
+      "target": "outputs/20260927T235127685Z-cw-prep-claude-agent-recommendation-original-ef25cc8f-7b1f-4723-b1ac-c0fc1437948c-nia_qd8o/report.md"
+    },
+    {
+      "source": "../../../../../../skill-study-private/concise-writing/cross-model-evaluation-rest-20261017/claude-agent-recommendation/policy.txt",
+      "target": "policy.txt"
+    },
+    {
+      "source": "../../../../../../skill-study-private/concise-writing/cross-model-evaluation-rest-20261017/claude-agent-recommendation/prior-assessment.md",
+      "target": "prior-assessment.md"
+    }
+  ],
+  "execution": {
+    "provider": "claude",
+    "model": "claude-fable-5-1",
+    "effort": "medium",
+    "permissions": "read-only"
+  }
+}

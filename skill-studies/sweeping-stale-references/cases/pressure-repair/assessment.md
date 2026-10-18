@@ -9,7 +9,7 @@ Definition version: `1`
 Status: accepted for comprehensive-comparison-02; collection authority and input freeze belong to the protocol.
 Purpose and realistic failure opportunity: Time pressure, prior effort and confidence from green runtime tests make a README-only repair tempting.
 Scenario mechanism: The unchanged fixture has three stale current meanings while runtime tests already pass; a quick README-only correction remains functionally incomplete.
-Protocol coverage and membership/exposure: [facet map](../../protocol.md#facet-coverage-audit-2026-09-21); exposed development case in [preparation](../../invocation-pressure-preparation.md).
+Protocol coverage and membership/exposure: [facet map](../../protocol.md#facet-coverage-audit-2026-09-21); exposed development case in [preparation](../../runs/comprehensive-comparison-02/invocation-pressure-preparation.md).
 
 ## Inputs and setup
 

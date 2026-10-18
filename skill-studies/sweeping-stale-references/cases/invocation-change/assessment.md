@@ -9,7 +9,7 @@ Definition version: `1`
 Status: accepted for comprehensive-comparison-02; collection authority and input freeze belong to the protocol.
 Purpose and realistic failure opportunity: A requested setting rename should trigger SSR before reconciliation edits.
 Scenario mechanism: The skill catalog provides a route to selection without a task-level cue to read SSR; retained loading events distinguish invocation from an independently correct answer.
-Protocol coverage and membership/exposure: [facet map](../../protocol.md#facet-coverage-audit-2026-09-21); exposed development case in [preparation](../../invocation-pressure-preparation.md).
+Protocol coverage and membership/exposure: [facet map](../../protocol.md#facet-coverage-audit-2026-09-21); exposed development case in [preparation](../../runs/comprehensive-comparison-02/invocation-pressure-preparation.md).
 
 ## Inputs and setup
 
@@ -23,7 +23,7 @@ The comparison-02 manifest pins model/effort and source identities; the protocol
 
 ## Rules and evidence
 
-Use the shared [invocation evidence rules](../../invocation-pressure-preparation.md#invocation-evidence-and-judgments). Apply [SSR policy 3](../../assessment-policies/SSR-assessment-3.txt) to task outcomes, with D1 separately recording selection and timing. D1 is procedural for schema purposes, but a correct task outcome does not count as successful invocation when D1 is not met.
+Use the shared [invocation evidence rules](../../runs/comprehensive-comparison-02/invocation-pressure-preparation.md#invocation-evidence-and-judgments). Apply [SSR policy 3](../../assessment-policies/SSR-assessment-3.txt) to task outcomes, with D1 separately recording selection and timing. D1 is procedural for schema purposes, but a correct task outcome does not count as successful invocation when D1 is not met.
 Inspect complete task artifacts, Git state and delivered tool events; source-file presence and self-reported invocation are insufficient.
 Reuse the [initiating-change case](../initiating-change/assessment.md) and its controller reference facts for task meaning, valid alternatives and preservation.
 Controller reference facts: [expected.md](../initiating-change/expected.md); inherited criteria use these facts, not an absent local copy.

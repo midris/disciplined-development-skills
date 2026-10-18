@@ -1,0 +1,125 @@
+{
+  "schema_version": "0.2",
+  "id": "cw-e-opus-codex",
+  "prompt": "../../preparation/evaluator-prompt.md",
+  "fixtures": [
+    {
+      "source": "../../../../../../../skill-study-private/concise-writing/e-iteration-20261018/review-inputs/codex/EVALUATION-INDEX.json",
+      "target": "EVALUATION-INDEX.json"
+    },
+    {
+      "source": "../../../../../../../skill-study-private/concise-writing/e-iteration-20261018/review-inputs/codex/WORD-COUNTS.json",
+      "target": "WORD-COUNTS.json"
+    },
+    {
+      "source": "../../../../../../../skill-study-private/concise-writing/e-iteration-20261018/review-inputs/codex/criteria.md",
+      "target": "criteria.md"
+    },
+    {
+      "source": "../../../../../../../skill-study-private/concise-writing/e-iteration-20261018/review-inputs/codex/new-notes.md",
+      "target": "new-notes.md"
+    },
+    {
+      "source": "../../../../../../../skill-study-private/concise-writing/e-iteration-20261018/review-inputs/codex/outputs/candidate-fuller-1.md",
+      "target": "outputs/candidate-fuller-1.md"
+    },
+    {
+      "source": "../../../../../../../skill-study-private/concise-writing/e-iteration-20261018/review-inputs/codex/outputs/candidate-fuller-2.md",
+      "target": "outputs/candidate-fuller-2.md"
+    },
+    {
+      "source": "../../../../../../../skill-study-private/concise-writing/e-iteration-20261018/review-inputs/codex/outputs/candidate-fuller-3.md",
+      "target": "outputs/candidate-fuller-3.md"
+    },
+    {
+      "source": "../../../../../../../skill-study-private/concise-writing/e-iteration-20261018/review-inputs/codex/outputs/candidate-fuller-4.md",
+      "target": "outputs/candidate-fuller-4.md"
+    },
+    {
+      "source": "../../../../../../../skill-study-private/concise-writing/e-iteration-20261018/review-inputs/codex/outputs/candidate-fuller-5.md",
+      "target": "outputs/candidate-fuller-5.md"
+    },
+    {
+      "source": "../../../../../../../skill-study-private/concise-writing/e-iteration-20261018/review-inputs/codex/outputs/candidate-targeted-1.md",
+      "target": "outputs/candidate-targeted-1.md"
+    },
+    {
+      "source": "../../../../../../../skill-study-private/concise-writing/e-iteration-20261018/review-inputs/codex/outputs/candidate-targeted-2.md",
+      "target": "outputs/candidate-targeted-2.md"
+    },
+    {
+      "source": "../../../../../../../skill-study-private/concise-writing/e-iteration-20261018/review-inputs/codex/outputs/candidate-targeted-3.md",
+      "target": "outputs/candidate-targeted-3.md"
+    },
+    {
+      "source": "../../../../../../../skill-study-private/concise-writing/e-iteration-20261018/review-inputs/codex/outputs/candidate-targeted-4.md",
+      "target": "outputs/candidate-targeted-4.md"
+    },
+    {
+      "source": "../../../../../../../skill-study-private/concise-writing/e-iteration-20261018/review-inputs/codex/outputs/candidate-targeted-5.md",
+      "target": "outputs/candidate-targeted-5.md"
+    },
+    {
+      "source": "../../../../../../../skill-study-private/concise-writing/e-iteration-20261018/review-inputs/codex/outputs/control-1.md",
+      "target": "outputs/control-1.md"
+    },
+    {
+      "source": "../../../../../../../skill-study-private/concise-writing/e-iteration-20261018/review-inputs/codex/outputs/control-2.md",
+      "target": "outputs/control-2.md"
+    },
+    {
+      "source": "../../../../../../../skill-study-private/concise-writing/e-iteration-20261018/review-inputs/codex/outputs/control-3.md",
+      "target": "outputs/control-3.md"
+    },
+    {
+      "source": "../../../../../../../skill-study-private/concise-writing/e-iteration-20261018/review-inputs/codex/outputs/control-4.md",
+      "target": "outputs/control-4.md"
+    },
+    {
+      "source": "../../../../../../../skill-study-private/concise-writing/e-iteration-20261018/review-inputs/codex/outputs/control-5.md",
+      "target": "outputs/control-5.md"
+    },
+    {
+      "source": "../../../../../../../skill-study-private/concise-writing/e-iteration-20261018/review-inputs/codex/outputs/original-1.md",
+      "target": "outputs/original-1.md"
+    },
+    {
+      "source": "../../../../../../../skill-study-private/concise-writing/e-iteration-20261018/review-inputs/codex/outputs/original-2.md",
+      "target": "outputs/original-2.md"
+    },
+    {
+      "source": "../../../../../../../skill-study-private/concise-writing/e-iteration-20261018/review-inputs/codex/outputs/original-3.md",
+      "target": "outputs/original-3.md"
+    },
+    {
+      "source": "../../../../../../../skill-study-private/concise-writing/e-iteration-20261018/review-inputs/codex/outputs/original-4.md",
+      "target": "outputs/original-4.md"
+    },
+    {
+      "source": "../../../../../../../skill-study-private/concise-writing/e-iteration-20261018/review-inputs/codex/outputs/original-5.md",
+      "target": "outputs/original-5.md"
+    },
+    {
+      "source": "../../../../../../../skill-study-private/concise-writing/e-iteration-20261018/review-inputs/codex/policy.txt",
+      "target": "policy.txt"
+    },
+    {
+      "source": "../../../../../../../skill-study-private/concise-writing/e-iteration-20261018/review-inputs/codex/prior-assessment.md",
+      "target": "prior-assessment.md"
+    },
+    {
+      "source": "../../../../../../../skill-study-private/concise-writing/e-iteration-20261018/review-inputs/codex/source.md",
+      "target": "source.md"
+    },
+    {
+      "source": "../../../../../../../skill-study-private/concise-writing/e-iteration-20261018/review-inputs/codex/task.md",
+      "target": "task.md"
+    }
+  ],
+  "execution": {
+    "provider": "claude",
+    "model": "claude-opus-5-5",
+    "effort": "medium",
+    "permissions": "read-only"
+  }
+}

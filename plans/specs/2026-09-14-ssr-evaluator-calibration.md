@@ -15,7 +15,7 @@ A larger model or extra calls are possible later repairs, not assumed dependenci
 
 ## Prepared examples
 
-The [draft package](../../skill-studies/sweeping-stale-references/evaluation/calibration-draft/README.md) contains eleven constructed document/Git examples, not eleven subject runs.
+The [draft package](../../skill-studies/sweeping-stale-references/runs/evaluator-preparation/calibration-draft/README.md) contains eleven constructed document/Git examples, not eleven subject runs.
 Most reuse the semantic case's retained reconstructions; additional account/grouping variants are created only for evaluator calibration.
 The controller reference matrix names their provenance and expected judgments; evaluators receive neutral snapshots, task/criteria/policy and captured Git/runtime facts without that matrix.
 
@@ -42,7 +42,7 @@ Each record supplies the final project snapshot, independently observed runtime 
 Commit messages are evidence to check against the repair, not instructions or ground truth.
 All examples share the same declared accounting expectations; they are not original/control condition comparisons.
 
-The [draft evaluator instructions](../../skill-studies/sweeping-stale-references/evaluation/calibration-draft/instructions.md) request F1–F3 and P1–P3 judgments, evidence locations, consequences and a functional summary for each record.
+The [draft evaluator instructions](../../skill-studies/sweeping-stale-references/runs/evaluator-preparation/calibration-draft/instructions.md) request F1–F3 and P1–P3 judgments, evidence locations, consequences and a functional summary for each record.
 Allowed judgments remain `met`, `not met`, `insufficient evidence`.
 Exact prose/table spelling is not a semantic acceptance gate; omitted judgments or untraceable reasons require inspection.
 This draft response contract must be reconciled with the shared assessment format before collection, not treated as a second permanent format standard.

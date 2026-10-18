@@ -3,20 +3,21 @@
 Format version: `1`
 Study ID: `concise-writing`
 Status: baseline collection and cross-model review are complete; the owner selected the original CW as the development base and authorized preparation of effectiveness-first edits. Adoption remains deferred.
-Current action: review the requested [core/runs directory layout](../../plans/specs/2026-10-18-study-directory-layout.md) before migrating files; no new model calls are queued.
+Current action: owner decision on the remaining full-suite allocation for the unchanged targeted/fuller drafts; no new model calls are queued.
+The approved [core/runs directory layout](../../plans/specs/2026-10-18-study-directory-layout.md) is implemented and verified for both studies; [navigation](README.md) separates core guidance from collected evidence.
 The reassessment is committed/pushed at `3ba9169ee0de0db44e4014c31fbccb3abc921a94`. Next tests are A/B/C, then N1–N4 for the unchanged new drafts; E is complete and the remaining allocation is not yet authorized.
 Under owner-authorized CW-E-contact-interpretation-1, thirteen prior E failures become passes; explicit recording remains a precision observation rather than a demonstrated functional gap.
 The original result records and Fable/Opus judgments remain historical evidence; the versioned reassessment index owns the superseding E judgments.
-Both E attempt indexes identify complete committed result records; the [Codex assessment](codex-e-iteration-01-assessment.md) and [Claude batch assessment](claude-e-iteration-01-assessment.md) summarize them.
+Both E attempt indexes identify complete committed result records; the [Codex assessment](runs/baseline-iteration-e-01/codex-e-iteration-01-assessment.md) and [Claude batch assessment](runs/baseline-iteration-e-01/claude-e-iteration-01-assessment.md) summarize them.
 The amended Claude controller applies prospectively from its second attempt, with byte-identical subject inputs and criteria.
 The collector used the wrong inventory version field; conforming wrappers are published separately, with original wrappers and every raw byte retained. No model call is repeated or excluded for this metadata correction.
 Both provider scopes pass collection readiness with frozen input revision `2936749c332f083e49f603eaed15b65d92158568`; all forty completed attempts are recorded in the two E indexes.
-The combined draft/proposal review is resolved and preparation commit `c8b8c3b` is pushed; [runtime qualification](drafts/baseline-iteration/testing/runtime-qualification.md) passes twelve zero-model controls.
+The combined draft/proposal review is resolved and preparation commit `c8b8c3b` is pushed; [runtime qualification](runs/baseline-iteration-e-01/preparation/runtime-qualification.md) passes twelve zero-model controls.
 On 2026-10-18 the owner authorized the first-stage 40 subject and two evaluator calls: “do a consistency pass over the skills rewrites, commit and push any changes, then start the testing”.
 The subsequent external-review request was resolved before dispatch; the [combined review](../../reviews/2026-10-18-cw-draft-consistency-review.md) records dispositions and final verification.
 The active assessor is this Codex controller; the separate Opus 5.5 medium reviewer is cross-family relative to it.
 Combined ceilings are 296 subject and 14 evaluator; no automatic retry, additional revision round or full-suite call allocation follows.
-The [evaluation record](evaluation/README.md) owns method and evidence: all 136 CW outputs were reviewed through Fable 5.1 at medium effort, in twelve primary sessions plus one owner-approved correction from the retry pool.
+The [evaluation record](runs/cross-model-evaluation-01/README.md) owns method and evidence: all 136 CW outputs were reviewed through Fable 5.1 at medium effort, in twelve primary sessions plus one owner-approved correction from the retry pool.
 The incomplete original Codex E review remains retained; the correction closes its missing-input gap without new subject runs.
 SSR evaluation remains deferred until its rewrite.
 The [baseline iteration design](../../plans/specs/2026-10-17-cw-baseline-iteration.md) records the owner’s effectiveness-before-compression direction, retention of original rationalizations and use of all completed CW evidence.
@@ -29,7 +30,7 @@ The owner accepted the scenario designs C, N1–N4 and revised E during the walk
 The owner-requested [preparation review and remediation](../../reviews/2026-09-27-cw-suite-preparation-review.md) are complete.
 On 2026-09-27, the owner replied “approved, please continue” to the 104-call proposal: 72 ordinary calls followed by 32 native calls, raising the combined subject ceiling from 136 to 240.
 This authorizes both stages, runtime qualification, committed input/schedule freeze and collection after readiness, with zero automatic retries; it does not authorize a skill edit or adoption.
-The [preparation package](preparation/README.md) and [allocation forecast](testing-audit.md#proposed-sequence-and-allocation-forecast) define the approved scope.
+The [preparation package](runs/suite-2026-09-27/preparation/README.md) and [allocation forecast](testing-audit.md#proposed-sequence-and-allocation-forecast) define the approved scope.
 Supplemental subject spending is 16/16; that completed supplement authorizes no further calls.
 The owner clarified that three repetitions are the minimum and authorized the sixteen missing calls: “yeah, go ahead and make those. 2 is definitely not enough. I am pretty sure 3 is what we decided as a our minimum”.
 This raises combined subject capacity from 240 to 256 and the expanded CW scope from 104 to 120 calls.
@@ -130,7 +131,7 @@ A/B and the six expanded cases use constructed development fixtures, not retaine
 | A: [agent-recommendation](cases/agent-recommendation/assessment.md) | completed; retain | O1–O3 assessed; O4/O5 unscored | development | Reader needs the recommendation, reasons, caveats and next action. Include both purposeless restatement and useful reinforcement, plus separated duplication and a real structural difficulty. Cover other cut patterns only where they fit naturally. |
 | B: [effective-briefing](cases/effective-briefing/assessment.md) | completed; retain | O1–O3 assessed; O4/O5 unscored | development | Useful context, explanation and repetition must not be damaged by unnecessary compression. An edit must retain the source’s effectiveness; unchanged length is acceptable and increased length is flagged. |
 
-The additions below have completed observations linked in Results; [inputs, criteria and configurations](preparation/README.md) and provider-specific manifests identify the collection freeze.
+The additions below have completed observations linked in Results; [inputs, criteria and configurations](runs/suite-2026-09-27/preparation/README.md) and provider-specific manifests identify the collection freeze.
 The [audit](testing-audit.md#proposed-sequence-and-allocation-forecast) gives their sequence, evidence requirements and allocation forecast.
 
 | Expanded case | Distinct failure opportunity | Required evidence / boundary |
@@ -153,7 +154,7 @@ Historical configurations and collection manifests below preserve the actual sup
 
 ## Expanded-suite assessment policy
 
-Policy identity: **CW-expanded-1**, selected for the expanded collection; its [controller copy](preparation/assessment-policy.txt) also includes unchanged CW-assessment-4.
+Policy identity: **CW-expanded-1**, selected for the expanded collection; its [controller copy](runs/suite-2026-09-27/preparation/assessment-policy.txt) also includes unchanged CW-assessment-4.
 It makes the case-specific rules explicit without changing CW-assessment-4, its controller copy, historical cards or retained scores.
 Freeze this section and the exact case-card revisions together before any new assessment.
 
@@ -215,7 +216,7 @@ Inputs: [recommendation manifest](cases/agent-recommendation/manifest.json) and 
 Runtime checked during preparation: full runner revision `e3c3a5c47a4ae3939ae9e7f7fdce667b3fe16166`; its runner tree is unchanged from SSR’s qualified `d899a817108330c4dcba4007f3383294a87d2f9a`. Codex CLI 0.154.0 resolves to `/opt/homebrew/Caskroom/codex/0.154.0/bin/codex`, SHA-256 `4f85982624b3898c8991cb80c0981b2aa71070e3537046c9a95950318a95afcc`; host Python is 3.14.7. Recheck these identities before collection and record the full approved runner revision; requested model names do not expose an immutable model revision.
 Offline checks: all four configurations loaded and copied the exact declared files; paired common bytes/settings matched; prompt differences were limited to the CW instruction. Disposable Git baselines preserved each original document and exposed a subsequent edit in `git diff`. Generated provider arguments retain private-profile configuration flags, disabled tool network and the restricted PATH. No provider invocation was made. These checks reuse the [SSR execution qualification](../sweeping-stale-references/protocol.md#comparison-comprehensive-comparison-01) for the unchanged runtime; they do not prove new CW model behavior or exhaustive host read isolation.
 Setup/evidence checks during collection: verify supplied hashes and the intended condition; in original, retained tool-response content must establish complete CW text exposure before editing. Match any `provider-session.jsonl` used as evidence to the stdout thread ID and fixture cwd, and verify its inventory hash; a filename or claimed read alone is insufficient. Inspect retained guidance for contamination and final `report.md` for artifact quality. Unexpected/missing exposure or unusable capture is a setup issue requiring inspection, not a failed CW criterion. Drafting/comparison and local/global review remain unscored observations under policy 4. Keep the complete raw trace, even when it does not establish those steps.
-Evidence/index: [attempt index](contribution-baseline-01-run-index.json) records all eight actual attempts, their authority/manifest pins, charges, verified complete bundles and canonical execution results. All eight have valid setup. The [batch assessment](contribution-baseline-01-assessment.md) reconciles all results; no provider calls remain authorized by this batch.
+Evidence/index: [attempt index](runs/contribution-baseline-01/contribution-baseline-01-run-index.json) records all eight actual attempts, their authority/manifest pins, charges, verified complete bundles and canonical execution results. All eight have valid setup. The [batch assessment](runs/contribution-baseline-01/contribution-baseline-01-assessment.md) reconciles all results; no provider calls remain authorized by this batch.
 
 ### Comparison: comprehensive-comparison-01
 
@@ -252,21 +253,21 @@ Approved budget: eight subject invocations, zero evaluator/authoring/retry invoc
 The freeze extended criterion condition-applicability metadata to `candidate-comprehensive` without changing rule text. Existing collection/reassessment manifests and results remain untouched. Collection readiness and paired input parity passed before the first call.
 Inputs: [recommendation comparison manifest](cases/agent-recommendation/comparison-manifest.json) and [briefing comparison manifest](cases/effective-briefing/comparison-manifest.json) pin the approved inputs at full Git revision `8eac215c81415f47b07ee3f8e4a8fd984bdca63c`. Collection readiness passed before dispatch.
 Offline preparation verified exact candidate provenance and paired prompt/source/task/settings parity; baseline source, task, prompt, policy and example bytes are unchanged. Codex CLI 0.154.0 and its executable hash match baseline; runner execution code is unchanged. The invocation-authority commit is the full runner revision. Criterion definition 5 changes applicability/status metadata only; F1–F3 text remains policy 4.
-Evidence/index: [comparison attempt index](comprehensive-comparison-01-run-index.json) records all eight charged attempts, verified bundles and pinned results. The [comparison assessment](comprehensive-comparison-01-assessment.md) reports 2/2 passes per case/version, qualitative tradeoffs and length separately. The candidate produced longer outputs than the original in all four pairs, but every output is shorter than its source, so no longer-output flags apply.
-The comparison preserves tested quality without demonstrating an overall output-quality gain. The candidate passes the tested scope but combines behavior changes with cleanup: the [assessment](comprehensive-comparison-01-assessment.md#candidate-contract-changes) records O5 reporting removal, a narrower repetition exception, stricter explicitness and wider applicability. No revised target contract is accepted; retain the live original under the owner's deferred adoption decision. That completed comparison authorized no further scenario, model pass, authoring or adoption; see the opening for current preparation.
+Evidence/index: [comparison attempt index](runs/comprehensive-comparison-01/comprehensive-comparison-01-run-index.json) records all eight charged attempts, verified bundles and pinned results. The [comparison assessment](runs/comprehensive-comparison-01/comprehensive-comparison-01-assessment.md) reports 2/2 passes per case/version, qualitative tradeoffs and length separately. The candidate produced longer outputs than the original in all four pairs, but every output is shorter than its source, so no longer-output flags apply.
+The comparison preserves tested quality without demonstrating an overall output-quality gain. The candidate passes the tested scope but combines behavior changes with cleanup: the [assessment](runs/comprehensive-comparison-01/comprehensive-comparison-01-assessment.md#candidate-contract-changes) records O5 reporting removal, a narrower repetition exception, stricter explicitness and wider applicability. No revised target contract is accepted; retain the live original under the owner's deferred adoption decision. That completed comparison authorized no further scenario, model pass, authoring or adoption; see the opening for current preparation.
 
 
 ### Expanded collection: codex-expanded-01
 
-Results: [completed ordinary Codex assessment](codex-expanded-01-assessment.md), based on the [current attempt index](codex-expanded-01-run-index.json).
+Results: [completed ordinary Codex assessment](runs/suite-2026-09-27/codex-expanded-01-assessment.md), based on the [current attempt index](runs/suite-2026-09-27/codex-expanded-01-run-index.json).
 Scope: 36 sequential attempts; codex, four ordinary tasks × three conditions × three repetitions.
 Authority: included in the owner-approved 104-call allocation recorded at the top of this protocol.
 Include all valid-setup executions regardless of outcome; report invalid/unresolved setup and unattempted slots separately.
 No automatic retry or replacement.
 Use CW-expanded-1 and the linked case cards; selection and task quality remain separate, with N3 functional CW outcomes unmeasured.
 Stop for uncertain charges, contamination, input/runtime drift, unusable setup or preservation failure; a valid behavioral miss remains an observation.
-Runtime and evidence controls: [expanded qualification](preparation/runtime-qualification.md).
-Inputs: [codex-agent-recommendation-manifest](preparation/manifests/codex-agent-recommendation-manifest.json), [codex-effective-briefing-manifest](preparation/manifests/codex-effective-briefing-manifest.json), [codex-long-handoff-manifest](preparation/manifests/codex-long-handoff-manifest.json), [codex-document-addition-manifest](preparation/manifests/codex-document-addition-manifest.json).
+Runtime and evidence controls: [expanded qualification](runs/suite-2026-09-27/preparation/runtime-qualification.md).
+Inputs: [codex-agent-recommendation-manifest](runs/suite-2026-09-27/preparation/manifests/codex-agent-recommendation-manifest.json), [codex-effective-briefing-manifest](runs/suite-2026-09-27/preparation/manifests/codex-effective-briefing-manifest.json), [codex-long-handoff-manifest](runs/suite-2026-09-27/preparation/manifests/codex-long-handoff-manifest.json), [codex-document-addition-manifest](runs/suite-2026-09-27/preparation/manifests/codex-document-addition-manifest.json).
 
 | Order | Case | Condition | Repetition | CONFIG |
 | ---: | --- | --- | ---: | --- |
@@ -309,15 +310,15 @@ Inputs: [codex-agent-recommendation-manifest](preparation/manifests/codex-agent-
 
 ### Expanded collection: claude-expanded-01
 
-Results: [completed ordinary Claude assessment](claude-expanded-01-assessment.md), based on the [current attempt index](claude-expanded-01-run-index.json).
+Results: [completed ordinary Claude assessment](runs/suite-2026-09-27/claude-expanded-01-assessment.md), based on the [current attempt index](runs/suite-2026-09-27/claude-expanded-01-run-index.json).
 Scope: 36 sequential attempts; claude, four ordinary tasks × three conditions × three repetitions.
 Authority: included in the owner-approved 104-call allocation recorded at the top of this protocol.
 Include all valid-setup executions regardless of outcome; report invalid/unresolved setup and unattempted slots separately.
 No automatic retry or replacement.
 Use CW-expanded-1 and the linked case cards; selection and task quality remain separate, with N3 functional CW outcomes unmeasured.
 Stop for uncertain charges, contamination, input/runtime drift, unusable setup or preservation failure; a valid behavioral miss remains an observation.
-Runtime and evidence controls: [expanded qualification](preparation/runtime-qualification.md).
-Inputs: [claude-agent-recommendation-manifest](preparation/manifests/claude-agent-recommendation-manifest.json), [claude-effective-briefing-manifest](preparation/manifests/claude-effective-briefing-manifest.json), [claude-long-handoff-manifest](preparation/manifests/claude-long-handoff-manifest.json), [claude-document-addition-manifest](preparation/manifests/claude-document-addition-manifest.json).
+Runtime and evidence controls: [expanded qualification](runs/suite-2026-09-27/preparation/runtime-qualification.md).
+Inputs: [claude-agent-recommendation-manifest](runs/suite-2026-09-27/preparation/manifests/claude-agent-recommendation-manifest.json), [claude-effective-briefing-manifest](runs/suite-2026-09-27/preparation/manifests/claude-effective-briefing-manifest.json), [claude-long-handoff-manifest](runs/suite-2026-09-27/preparation/manifests/claude-long-handoff-manifest.json), [claude-document-addition-manifest](runs/suite-2026-09-27/preparation/manifests/claude-document-addition-manifest.json).
 
 | Order | Case | Condition | Repetition | CONFIG |
 | ---: | --- | --- | ---: | --- |
@@ -360,7 +361,7 @@ Inputs: [claude-agent-recommendation-manifest](preparation/manifests/claude-agen
 
 ### Expanded collection: codex-invocation-01
 
-Results: [completed native Codex assessment](codex-invocation-01-assessment.md), based on the [current attempt index](codex-invocation-01-run-index.json).
+Results: [completed native Codex assessment](runs/suite-2026-09-27/codex-invocation-01-assessment.md), based on the [current attempt index](runs/suite-2026-09-27/codex-invocation-01-run-index.json).
 
 Scope: 16 sequential attempts; codex, four native tasks × two conditions × two repetitions.
 Authority: included in the owner-approved 104-call allocation recorded at the top of this protocol.
@@ -368,8 +369,8 @@ Include all valid-setup executions regardless of outcome; report invalid/unresol
 No automatic retry or replacement.
 Use CW-expanded-1 and the linked case cards; selection and task quality remain separate, with N3 functional CW outcomes unmeasured.
 Stop for uncertain charges, contamination, input/runtime drift, unusable setup or preservation failure; a valid behavioral miss remains an observation.
-Runtime and evidence controls: [expanded qualification](preparation/runtime-qualification.md).
-Inputs: [codex-invocation-tighten-manifest](preparation/manifests/codex-invocation-tighten-manifest.json), [codex-invocation-write-manifest](preparation/manifests/codex-invocation-write-manifest.json), [codex-invocation-nonprose-manifest](preparation/manifests/codex-invocation-nonprose-manifest.json), [codex-invocation-comments-manifest](preparation/manifests/codex-invocation-comments-manifest.json).
+Runtime and evidence controls: [expanded qualification](runs/suite-2026-09-27/preparation/runtime-qualification.md).
+Inputs: [codex-invocation-tighten-manifest](runs/suite-2026-09-27/preparation/manifests/codex-invocation-tighten-manifest.json), [codex-invocation-write-manifest](runs/suite-2026-09-27/preparation/manifests/codex-invocation-write-manifest.json), [codex-invocation-nonprose-manifest](runs/suite-2026-09-27/preparation/manifests/codex-invocation-nonprose-manifest.json), [codex-invocation-comments-manifest](runs/suite-2026-09-27/preparation/manifests/codex-invocation-comments-manifest.json).
 
 | Order | Case | Condition | Repetition | CONFIG |
 | ---: | --- | --- | ---: | --- |
@@ -392,7 +393,7 @@ Inputs: [codex-invocation-tighten-manifest](preparation/manifests/codex-invocati
 
 ### Expanded collection: claude-invocation-01
 
-Results: [completed native Claude assessment](claude-invocation-01-assessment.md), based on the [current attempt index](claude-invocation-01-run-index.json).
+Results: [completed native Claude assessment](runs/suite-2026-09-27/claude-invocation-01-assessment.md), based on the [current attempt index](runs/suite-2026-09-27/claude-invocation-01-run-index.json).
 
 Scope: 16 sequential attempts; claude, four native tasks × two conditions × two repetitions.
 Authority: included in the owner-approved 104-call allocation recorded at the top of this protocol.
@@ -400,8 +401,8 @@ Include all valid-setup executions regardless of outcome; report invalid/unresol
 No automatic retry or replacement.
 Use CW-expanded-1 and the linked case cards; selection and task quality remain separate, with N3 functional CW outcomes unmeasured.
 Stop for uncertain charges, contamination, input/runtime drift, unusable setup or preservation failure; a valid behavioral miss remains an observation.
-Runtime and evidence controls: [expanded qualification](preparation/runtime-qualification.md).
-Inputs: [claude-invocation-tighten-manifest](preparation/manifests/claude-invocation-tighten-manifest.json), [claude-invocation-write-manifest](preparation/manifests/claude-invocation-write-manifest.json), [claude-invocation-nonprose-manifest](preparation/manifests/claude-invocation-nonprose-manifest.json), [claude-invocation-comments-manifest](preparation/manifests/claude-invocation-comments-manifest.json).
+Runtime and evidence controls: [expanded qualification](runs/suite-2026-09-27/preparation/runtime-qualification.md).
+Inputs: [claude-invocation-tighten-manifest](runs/suite-2026-09-27/preparation/manifests/claude-invocation-tighten-manifest.json), [claude-invocation-write-manifest](runs/suite-2026-09-27/preparation/manifests/claude-invocation-write-manifest.json), [claude-invocation-nonprose-manifest](runs/suite-2026-09-27/preparation/manifests/claude-invocation-nonprose-manifest.json), [claude-invocation-comments-manifest](runs/suite-2026-09-27/preparation/manifests/claude-invocation-comments-manifest.json).
 
 | Order | Case | Condition | Repetition | CONFIG |
 | ---: | --- | --- | ---: | --- |
@@ -424,7 +425,7 @@ Inputs: [claude-invocation-tighten-manifest](preparation/manifests/claude-invoca
 
 ### Native third repetition: codex-invocation-02
 
-Completed evidence: [codex-invocation-02 assessment](codex-invocation-02-assessment.md) and [attempt index](codex-invocation-02-run-index.json).
+Completed evidence: [codex-invocation-02 assessment](runs/suite-2026-09-27/codex-invocation-02-assessment.md) and [attempt index](runs/suite-2026-09-27/codex-invocation-02-run-index.json).
 
 Scope: eight sequential attempts; codex, four unchanged native cases × two skill versions × one added repetition.
 Authority: owner-approved sixteen-call supplement and minimum-three clarification at the protocol opening.
@@ -433,8 +434,8 @@ Include all valid-setup executions regardless of outcome; report invalid/unresol
 No automatic retry or replacement.
 Recheck runtime identities and the declared login-shell gates; retain and verify each stopped bundle before the next dispatch.
 Stop on uncertain charges, preservation failures, contamination, setup defects or input/runtime drift.
-[Runtime qualification](preparation/runtime-qualification.md) supplies the unchanged execution boundary; supplemental checks and assessment are recorded in the [review](../../reviews/2026-09-27-cw-native-third-review.md).
-Inputs: [codex-invocation-tighten-third-manifest](preparation/manifests/codex-invocation-tighten-third-manifest.json), [codex-invocation-write-third-manifest](preparation/manifests/codex-invocation-write-third-manifest.json), [codex-invocation-nonprose-third-manifest](preparation/manifests/codex-invocation-nonprose-third-manifest.json), [codex-invocation-comments-third-manifest](preparation/manifests/codex-invocation-comments-third-manifest.json).
+[Runtime qualification](runs/suite-2026-09-27/preparation/runtime-qualification.md) supplies the unchanged execution boundary; supplemental checks and assessment are recorded in the [review](../../reviews/2026-09-27-cw-native-third-review.md).
+Inputs: [codex-invocation-tighten-third-manifest](runs/suite-2026-09-27/preparation/manifests/codex-invocation-tighten-third-manifest.json), [codex-invocation-write-third-manifest](runs/suite-2026-09-27/preparation/manifests/codex-invocation-write-third-manifest.json), [codex-invocation-nonprose-third-manifest](runs/suite-2026-09-27/preparation/manifests/codex-invocation-nonprose-third-manifest.json), [codex-invocation-comments-third-manifest](runs/suite-2026-09-27/preparation/manifests/codex-invocation-comments-third-manifest.json).
 
 | Order | Case | Condition | Repetition | CONFIG |
 | ---: | --- | --- | ---: | --- |
@@ -449,7 +450,7 @@ Inputs: [codex-invocation-tighten-third-manifest](preparation/manifests/codex-in
 
 ### Native third repetition: claude-invocation-02
 
-Completed evidence: [claude-invocation-02 assessment](claude-invocation-02-assessment.md) and [attempt index](claude-invocation-02-run-index.json).
+Completed evidence: [claude-invocation-02 assessment](runs/suite-2026-09-27/claude-invocation-02-assessment.md) and [attempt index](runs/suite-2026-09-27/claude-invocation-02-run-index.json).
 
 Scope: eight sequential attempts; claude, four unchanged native cases × two skill versions × one added repetition.
 Authority: owner-approved sixteen-call supplement and minimum-three clarification at the protocol opening.
@@ -458,8 +459,8 @@ Include all valid-setup executions regardless of outcome; report invalid/unresol
 No automatic retry or replacement.
 Recheck runtime identities and the declared login-shell gates; retain and verify each stopped bundle before the next dispatch.
 Stop on uncertain charges, preservation failures, contamination, setup defects or input/runtime drift.
-[Runtime qualification](preparation/runtime-qualification.md) supplies the unchanged execution boundary; supplemental checks and assessment are recorded in the [review](../../reviews/2026-09-27-cw-native-third-review.md).
-Inputs: [claude-invocation-tighten-third-manifest](preparation/manifests/claude-invocation-tighten-third-manifest.json), [claude-invocation-write-third-manifest](preparation/manifests/claude-invocation-write-third-manifest.json), [claude-invocation-nonprose-third-manifest](preparation/manifests/claude-invocation-nonprose-third-manifest.json), [claude-invocation-comments-third-manifest](preparation/manifests/claude-invocation-comments-third-manifest.json).
+[Runtime qualification](runs/suite-2026-09-27/preparation/runtime-qualification.md) supplies the unchanged execution boundary; supplemental checks and assessment are recorded in the [review](../../reviews/2026-09-27-cw-native-third-review.md).
+Inputs: [claude-invocation-tighten-third-manifest](runs/suite-2026-09-27/preparation/manifests/claude-invocation-tighten-third-manifest.json), [claude-invocation-write-third-manifest](runs/suite-2026-09-27/preparation/manifests/claude-invocation-write-third-manifest.json), [claude-invocation-nonprose-third-manifest](runs/suite-2026-09-27/preparation/manifests/claude-invocation-nonprose-third-manifest.json), [claude-invocation-comments-third-manifest](runs/suite-2026-09-27/preparation/manifests/claude-invocation-comments-third-manifest.json).
 
 | Order | Case | Condition | Repetition | CONFIG |
 | ---: | --- | --- | ---: | --- |
@@ -475,16 +476,16 @@ Inputs: [claude-invocation-tighten-third-manifest](preparation/manifests/claude-
 ### E diagnostic: codex-e-iteration-01
 
 Scope: 20 sequential attempts; document-addition × four conditions × five repetitions on codex.
-Results: [codex E assessment](codex-e-iteration-01-assessment.md).
-Attempts: [Codex E iteration index](codex-e-iteration-01-run-index.json).
+Results: [codex E assessment](runs/baseline-iteration-e-01/codex-e-iteration-01-assessment.md).
+Attempts: [Codex E iteration index](runs/baseline-iteration-e-01/codex-e-iteration-01-run-index.json).
 Authority: first-stage forty-subject allocation at the protocol opening; no replacement or automatic retry.
-Inputs: [codex E iteration manifest](drafts/baseline-iteration/testing/codex-manifest.json).
-Criteria: [E applicability extension](drafts/baseline-iteration/testing/assessment.md), definition 2; unchanged F1–F3 under CW-expanded-1.
-Runtime: [qualified current stratum](drafts/baseline-iteration/testing/runtime-qualification.md); CLI identity and private scratch toolchain differ from historical batches.
+Inputs: [codex E iteration manifest](runs/baseline-iteration-e-01/preparation/codex-manifest.json).
+Criteria: [E applicability extension](runs/baseline-iteration-e-01/preparation/assessment.md), definition 2; unchanged F1–F3 under CW-expanded-1.
+Runtime: [qualified current stratum](runs/baseline-iteration-e-01/preparation/runtime-qualification.md); CLI identity and private scratch toolchain differ from historical batches.
 Include all valid-setup executions regardless of outcome; report invalid/unresolved setup and unattempted slots separately.
 No automatic retry or replacement.
 Stop for infrastructure failure, uncertain charge, drift, contamination or failed retention; a behavioral miss alone does not stop collection.
-The [global schedule](drafts/baseline-iteration/testing/schedule.json) runs Codex's twenty attempts then Claude's twenty; register and verify each bundle before the next dispatch.
+The [global schedule](runs/baseline-iteration-e-01/preparation/schedule.json) runs Codex's twenty attempts then Claude's twenty; register and verify each bundle before the next dispatch.
 Evidence goes to the existing owner-accepted single-host private store under `e-iteration-20261018`; no host-loss recovery claim.
 
 | Order | Case | Condition | Repetition | CONFIG |
@@ -514,16 +515,16 @@ Evidence goes to the existing owner-accepted single-host private store under `e-
 ### E diagnostic: claude-e-iteration-01
 
 Scope: 20 sequential attempts; document-addition × four conditions × five repetitions on claude.
-Results: [claude E assessment](claude-e-iteration-01-assessment.md).
-Attempts: [Claude E iteration index](claude-e-iteration-01-run-index.json).
+Results: [claude E assessment](runs/baseline-iteration-e-01/claude-e-iteration-01-assessment.md).
+Attempts: [Claude E iteration index](runs/baseline-iteration-e-01/claude-e-iteration-01-run-index.json).
 Authority: first-stage forty-subject allocation at the protocol opening; no replacement or automatic retry.
-Inputs: [claude E iteration manifest](drafts/baseline-iteration/testing/claude-manifest.json).
-Criteria: [E applicability extension](drafts/baseline-iteration/testing/assessment.md), definition 2; unchanged F1–F3 under CW-expanded-1.
-Runtime: [qualified current stratum](drafts/baseline-iteration/testing/runtime-qualification.md); CLI identity and private scratch toolchain differ from historical batches.
+Inputs: [claude E iteration manifest](runs/baseline-iteration-e-01/preparation/claude-manifest.json).
+Criteria: [E applicability extension](runs/baseline-iteration-e-01/preparation/assessment.md), definition 2; unchanged F1–F3 under CW-expanded-1.
+Runtime: [qualified current stratum](runs/baseline-iteration-e-01/preparation/runtime-qualification.md); CLI identity and private scratch toolchain differ from historical batches.
 Include all valid-setup executions regardless of outcome; report invalid/unresolved setup and unattempted slots separately.
 No automatic retry or replacement.
 Stop for infrastructure failure, uncertain charge, drift, contamination or failed retention; a behavioral miss alone does not stop collection.
-The [global schedule](drafts/baseline-iteration/testing/schedule.json) runs Codex's twenty attempts then Claude's twenty; register and verify each bundle before the next dispatch.
+The [global schedule](runs/baseline-iteration-e-01/preparation/schedule.json) runs Codex's twenty attempts then Claude's twenty; register and verify each bundle before the next dispatch.
 Evidence goes to the existing owner-accepted single-host private store under `e-iteration-20261018`; no host-loss recovery claim.
 
 | Order | Case | Condition | Repetition | CONFIG |
@@ -552,30 +553,30 @@ Evidence goes to the existing owner-accepted single-host private store under `e-
 
 ## Storage and accounting
 
-Supplemental evaluator accounting: [evaluator ledger](evaluation/evaluator-run-index.json); these calls do not add subject repetitions.
+Supplemental evaluator accounting: [evaluator ledger](runs/cross-model-evaluation-01/evaluator-run-index.json); these calls do not add subject repetitions.
 
-Expanded collection accounting: [claude-invocation-02 attempt index](claude-invocation-02-run-index.json).
+Expanded collection accounting: [claude-invocation-02 attempt index](runs/suite-2026-09-27/claude-invocation-02-run-index.json).
 
-Expanded collection accounting: [codex-invocation-02 attempt index](codex-invocation-02-run-index.json).
+Expanded collection accounting: [codex-invocation-02 attempt index](runs/suite-2026-09-27/codex-invocation-02-run-index.json).
 
-Expanded collection accounting: [claude-invocation-01 attempt index](claude-invocation-01-run-index.json).
+Expanded collection accounting: [claude-invocation-01 attempt index](runs/suite-2026-09-27/claude-invocation-01-run-index.json).
 
-Expanded collection accounting: [codex-invocation-01 attempt index](codex-invocation-01-run-index.json).
+Expanded collection accounting: [codex-invocation-01 attempt index](runs/suite-2026-09-27/codex-invocation-01-run-index.json).
 
-Expanded collection accounting: [claude-expanded-01 attempt index](claude-expanded-01-run-index.json).
+Expanded collection accounting: [claude-expanded-01 attempt index](runs/suite-2026-09-27/claude-expanded-01-run-index.json).
 
-Expanded collection accounting: [codex-expanded-01 attempt index](codex-expanded-01-run-index.json).
+Expanded collection accounting: [codex-expanded-01 attempt index](runs/suite-2026-09-27/codex-expanded-01-run-index.json).
 
 Canonical checkout: `/Users/simon/work/personal/disciplined-development-skills`.
 Approved durable raw evidence directory: `/Users/simon/work/personal/skill-study-private/concise-writing/development/`, created and verified with a disposable local copy/hash-inventory probe. All sixteen CW bundles (eight baseline, eight comparison) are stored there with verified version-1 inventories. After the runner stops writing, copy its complete emitted bundle from `/private/tmp/cw-contribution-baseline-01/skilltest-runs/` under the same unique directory name, without overwriting an existing destination. Preserve all files, including hidden/Git files and the provider session; compare the complete source/destination inventory (paths, types, modes, sizes and hashes or symlink targets), write one sibling `.inventory.json` using the existing version-1 inventory shape, and verify it before recording preservation or dispatching again. Unexpected entries or copy/cleanup errors require inspection. Keep failed attempts too; scratch cleanup is not evidence preservation.
 Owner-accepted recovery decision for CW: single-host retention, as used for SSR, with one verified canonical raw bundle per attempt. The current `tmutil destinationinfo` check reports no destinations configured; `tmutil isexcluded` reports the parent private store is Included. No other working backup arrangement has been established. Machine loss or disk failure could therefore destroy CW raw evidence; Git holds case inputs and assessments but cannot recover those external bundles. Creating the directory and passing a local copy check do not establish host-loss recovery. The owner explicitly accepted this CW risk together with the eight-execution scope above.
 
-Combined accounting sources: closed SSR [pilot 01](../sweeping-stale-references/pilot-run-index.json), [pilot 02](../sweeping-stale-references/pilot-02-run-index.json), [semantic delivery](../sweeping-stale-references/semantic-delivery-01-run-index.json), [core baseline](../sweeping-stale-references/core-baseline-01-run-index.json), [comparison](../sweeping-stale-references/comprehensive-comparison-01-run-index.json), the SSR [completed expansion](../sweeping-stale-references/coverage-baseline-01-run-index.json), the SSR [completed comparison](../sweeping-stale-references/comprehensive-comparison-02-run-index.json), the SSR [Claude smoke](../sweeping-stale-references/claude-smoke-01-run-index.json), the SSR [Claude comparison](../sweeping-stale-references/claude-comparison-01-run-index.json), the SSR [Opus invocation comparison](../sweeping-stale-references/claude-opus-invocation-01-run-index.json), and both CW indexes above. Historical pilot links contribute accounting only; they are not reclassified or reassessed.
-The new E reviews use the [fixed review package](drafts/baseline-iteration/testing/evaluation/README.md) and [supplemental Opus accounting](drafts/baseline-iteration/testing/evaluation/evaluator-run-index.json).
+Combined accounting sources: closed SSR [pilot 01](../sweeping-stale-references/runs/pilot-01/pilot-run-index.json), [pilot 02](../sweeping-stale-references/runs/pilot-02/pilot-02-run-index.json), [semantic delivery](../sweeping-stale-references/runs/semantic-delivery-01/semantic-delivery-01-run-index.json), [core baseline](../sweeping-stale-references/runs/core-baseline-01/core-baseline-01-run-index.json), [comparison](../sweeping-stale-references/runs/comprehensive-comparison-01/comprehensive-comparison-01-run-index.json), the SSR [completed expansion](../sweeping-stale-references/runs/coverage-baseline-01/coverage-baseline-01-run-index.json), the SSR [completed comparison](../sweeping-stale-references/runs/comprehensive-comparison-02/comprehensive-comparison-02-run-index.json), the SSR [Claude smoke](../sweeping-stale-references/runs/claude-smoke-01/claude-smoke-01-run-index.json), the SSR [Claude comparison](../sweeping-stale-references/runs/claude-comparison-01/claude-comparison-01-run-index.json), the SSR [Opus invocation comparison](../sweeping-stale-references/runs/claude-opus-invocation-01/claude-opus-invocation-01-run-index.json), and both CW indexes above. Historical pilot links contribute accounting only; they are not reclassified or reassessed.
+The new E reviews use the [fixed review package](runs/baseline-iteration-e-01/evaluation/README.md) and [supplemental Opus accounting](runs/baseline-iteration-e-01/evaluation/evaluator-run-index.json).
 Dispatched calls are **296 subject, 14 evaluator, 0 authoring, 1 retry**; remaining outer capacity is **0 / 0 / 4 / 3** against the [active plan](../../plans/2026-09-11-model-driven-skill-testing.md#limits-and-information-boundaries). Both eight-call CW batches are spent. The owner authorized ten SSR expansion calls under ceiling 56; all ten are spent, including the excluded control, with no replacement or pool transfer. Comparison runner durations total 508.067 seconds; baseline durations remain 494.936 seconds, including setup and capture.
 Owner clarification after round-10 review: “the budget is just a guideline”. The 1,200-minute figure below remains the planning baseline, not a collection stop; invocation ceilings and the authorized SSR scope is unchanged. Retain elapsed effort and forecast variance to expose process cost.
 
-Current combined accounting: **2,355 active minutes booked; 1,155 minutes above the historical 1,200-minute planning guideline**.
+Current combined accounting: **2,415 active minutes booked; 1,215 minutes above the historical 1,200-minute planning guideline**.
 These are rounded effort estimates, not stopwatch measurements or a separately timed category breakdown.
 Between-turn owner wait is excluded; runner durations are included once.
 The initial 104 calls and sixteen native third repetitions are spent; combined subject accounting is 296/296, with 0 E calls remaining.
@@ -660,7 +661,8 @@ The supplemental work used 40 estimated active minutes against its 40-minute for
 | E Opus packet preparation, review, reconciliation and final verification | 40 |
 | Owner-authorized E contact reassessment, scope reconciliation and verification | 20 |
 | Study-layout inventory and core/runs migration proposal | 15 |
-| **Total** | **2,355** |
+| Approved study-directory migration, integrity checks and review | 60 |
+| **Total** | **2,415** |
 
 SSR expansion is complete. The prior 55-minute remaining forecast closed at 50 estimated minutes, including the additional shell correction; all ten subject calls are spent.
 The combined batch/recovery effort is 135 estimated minutes (45 initial checkpoint, 40 isolation correction, 50 resumption), 45 above the original 90-minute allowance. Separate round-9 review effort remains in the combined ledger above.
@@ -675,7 +677,7 @@ The Claude comparison used 90 estimated active minutes against its 120-minute gu
 The Opus comparison used 20 estimated active minutes against its 40-minute guideline, 20 below forecast; its 174.840 seconds of runner duration (2.91 minutes) are included once.
 
 Initial fixture preparation used 55 estimated active minutes against its 60-minute midpoint forecast; subsequent owner-directed scope refinements are itemized above.
-The [preparation package](preparation/README.md) records inputs and validation; current acceptance and pending decisions are at the top of this protocol.
+The [preparation package](runs/suite-2026-09-27/preparation/README.md) records inputs and validation; current acceptance and pending decisions are at the top of this protocol.
 The [allocation rationale](testing-audit.md#proposed-sequence-and-allocation-forecast) explains the 120-call scope; both approved schedules are complete.
 Any fresh rewrite still needs an estimate after baseline diagnosis.
 
@@ -709,13 +711,13 @@ A later diagnosis or rewrite needs its own bounded estimate and any new model-ca
 ### Baseline-derived E diagnostic
 
 All forty subjects and both Opus reviews are complete.
-The table below uses [CW-E-contact-interpretation-1 and the superseding result index](reassessment-contact-01/README.md); original active scores and [Opus judgments](drafts/baseline-iteration/testing/evaluation/assessment.md) remain historical evidence.
+The table below uses [CW-E-contact-interpretation-1 and the superseding result index](runs/contact-reassessment-01/README.md); original active scores and [Opus judgments](runs/baseline-iteration-e-01/evaluation/assessment.md) remain historical evidence.
 No model was rerun for this owner-authorized interpretation correction.
 
 | Provider | No CW | Original | Targeted | Fuller | Evidence |
 | --- | ---: | ---: | ---: | ---: | --- |
-| Codex Sol low | 5/5 | 5/5 | 5/5 | 5/5 | [Assessment](codex-e-iteration-01-assessment.md) |
-| Claude Sonnet low | 5/5 | 5/5 | 5/5 | 5/5 | [Assessment](claude-e-iteration-01-assessment.md) |
+| Codex Sol low | 5/5 | 5/5 | 5/5 | 5/5 | [Assessment](runs/baseline-iteration-e-01/codex-e-iteration-01-assessment.md) |
+| Claude Sonnet low | 5/5 | 5/5 | 5/5 | 5/5 | [Assessment](runs/baseline-iteration-e-01/claude-e-iteration-01-assessment.md) |
 
 Eight new-diagnostic failures were based solely on confirm-versus-record; all eight become passes after complete-output reassessment.
 The same interpretation corrects five earlier expanded E results; all 58 E observations now pass in their separate strata.
@@ -730,7 +732,7 @@ These are new runtime strata, not pooled historical counts; the live skill remai
 ### Completed baseline and earlier comparisons
 
 The full 120-subject-call scope is complete, with no unattempted slots, subject retries, setup exclusions or unresolved canonical judgments.
-The supplemental [cross-model assessment](evaluation/assessment.md) preserves different judgments and qualitative comparisons; its original incomplete review and approved correction are accounted separately.
+The supplemental [cross-model assessment](runs/cross-model-evaluation-01/assessment.md) preserves different judgments and qualitative comparisons; its original incomplete review and approved correction are accounted separately.
 Ordinary and native cases now each have three repetitions per selected condition/provider.
 The native summary combines each original two-repetition batch with its separately frozen third repetition on the same qualified runtime and unchanged inputs; it does not rewrite historical batch scores.
 These later observations were not interleaved with the initial repetitions, and the models expose no immutable backend revision.
@@ -760,27 +762,27 @@ N3 task correctness is descriptive and supplies no functional CW outcome.
 Codex loads and passes all positive tasks: 9/9 per version.
 Its rewrite loads prematurely in two of three numeric-only tasks; the original avoids loading in all three.
 All six Codex numeric edits are correct, independently of selection.
-Evidence: [first two repetitions](codex-invocation-01-assessment.md) and [third repetition](codex-invocation-02-assessment.md).
+Evidence: [first two repetitions](runs/suite-2026-09-27/codex-invocation-01-assessment.md) and [third repetition](runs/suite-2026-09-27/codex-invocation-02-assessment.md).
 
 Claude timely positive loads total 6/9 original and 5/9 rewrite; functional outcomes total 7/9 and 8/9 respectively.
 Both versions avoid CW on all three numeric attempts.
 The new-report failures add unsupported claims: two after loading in the initial batch, and one without loading in the third original run.
 All six comment artifacts pass despite five missed loads.
 Extra status messages violate the numeric task's Done-only response in the earlier rewrite repetition 2 and both repetition-3 runs; final.txt alone would hide those unscored task-compliance observations.
-Evidence: [first two repetitions](claude-invocation-01-assessment.md) and [third repetition](claude-invocation-02-assessment.md).
+Evidence: [first two repetitions](runs/suite-2026-09-27/claude-invocation-01-assessment.md) and [third repetition](runs/suite-2026-09-27/claude-invocation-02-assessment.md).
 
 These small samples reveal repeated failure modes, not population reliability or a causal description/body effect; the descriptions differ between versions.
 
 ### Ordinary comparisons and historical evidence
 
-Expanded ordinary Claude: [assessment and evidence](claude-expanded-01-assessment.md) records 36 valid attempts.
+Expanded ordinary Claude: [assessment and evidence](runs/suite-2026-09-27/claude-expanded-01-assessment.md) records 36 valid attempts.
 With the E reassessment applied, A/B/C/E control passes are 3/3, 2/3, 0/3 and 3/3; original and comprehensive each pass 3/3, 3/3, 1/3 and 3/3.
 The remaining active failures are one control evidence overstatement and seven readability misses from detached repeated mechanics.
 The historical aggregate retains the four superseded E failures; current E result mappings and corrected counts belong to the reassessment.
 All 24 explicit-load attempts delivered the full body before editing; this is not native-invocation evidence.
 One controller index error delayed retention only and was recovered without repeating a call; the assessment links its review record.
 
-Expanded ordinary Codex: [assessment and evidence](codex-expanded-01-assessment.md) records 36 valid attempts under CW-expanded-1.
+Expanded ordinary Codex: [assessment and evidence](runs/suite-2026-09-27/codex-expanded-01-assessment.md) records 36 valid attempts under CW-expanded-1.
 With the E reassessment applied, A/B/C/E control passes are 3/3, 2/3, 1/3 and 3/3; original and comprehensive each pass 3/3 on all four.
 Every output meets F3; three remaining failed control executions lose a responsibility or diagnostic rationale.
 The historical aggregate retains one superseded original E failure; current E result mappings and corrected counts belong to the reassessment.
@@ -789,7 +791,7 @@ The collection review corrected two B outcomes using the existing whole-document
 
 Historical baseline:
 
-The [batch assessment](contribution-baseline-01-assessment.md) records eight valid setups and all three required factors met in every output under CW-assessment-4.
+The [batch assessment](runs/contribution-baseline-01/contribution-baseline-01-assessment.md) records eight valid setups and all three required factors met in every output under CW-assessment-4.
 Original and control each pass 2/2 on Recommendation and 2/2 on Briefing, with no unknowns, retries, replacements or exclusions.
 Whole-document review withdraws the earlier briefing failures: the conditional recommendation, approval gate and continuing-preview context do not demonstrate a loss of correctness or effectiveness.
 All outputs are readable and shorter; none has a longer-output flag. Length is reported separately and does not determine pass/fail. Process is unscored; Git preserves earlier judgments and original collection identities.

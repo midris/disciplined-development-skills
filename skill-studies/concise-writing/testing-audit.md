@@ -83,7 +83,7 @@ A detailed-response discovery probe would require version-specific expectations;
 ## Proposed sequence and allocation forecast
 
 The following explains the allocation design; the protocol owns approval and exact dispatch tables.
-The [preparation package](preparation/README.md) supplies fixtures, criterion cards, boundary checks and provider configurations.
+The [preparation package](runs/suite-2026-09-27/preparation/README.md) supplies fixtures, criterion cards, boundary checks and provider configurations.
 The protocol owns scenario acceptance; call authorization, runtime qualification, an exact schedule and frozen manifests remain prerequisites to collection readiness.
 
 1. **Use the reviewed coverage design.** Retain A/B, add C for long-document navigation and pressure, E for document additions, and N1–N4 for native selection including code comments. The protocol records acceptance and deliberate limits; the completed assessments distinguish successful coverage from observed effectiveness failures.

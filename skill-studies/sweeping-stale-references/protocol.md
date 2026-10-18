@@ -5,7 +5,7 @@ Study ID: `sweeping-stale-references`
 Status: all authorized comparison batches are complete; the owner selected the comprehensive rewrite as the development base and accepts its changed local reporting. The original and tested rewrite snapshots remain preserved; no new skill version is adopted.
 Current action: follow the [CW protocol’s current action](../concise-writing/protocol.md) for the owner-selected first end-to-end study. Preserve the unvalidated SSR draft and its revised, unapproved +15-call proposal. The owner deferred its baseline interpretation decision until SSR resumes; no SSR collection is scheduled. All 136 combined subject calls are spent.
 The [plan](../../plans/2026-09-11-model-driven-skill-testing.md) owns progress; the [spec](../../plans/specs/2026-09-11-model-driven-skill-testing-framework.md) owns the workflow.
-The [core baseline](core-baseline-01-assessment.md) retains its two setup exclusions and runtime strata; the [comparison](comprehensive-comparison-01-assessment.md) records twelve valid executions of the original and preserved candidate. Both collection scopes are spent. Storage and accounting retains the SSR closing checkpoint and links the current combined totals.
+The [core baseline](runs/core-baseline-01/core-baseline-01-assessment.md) retains its two setup exclusions and runtime strata; the [comparison](runs/comprehensive-comparison-01/comprehensive-comparison-01-assessment.md) records twelve valid executions of the original and preserved candidate. Both collection scopes are spent. Storage and accounting retains the SSR closing checkpoint and links the current combined totals.
 
 ## Sources and intended use
 
@@ -14,7 +14,7 @@ Original-condition runs load the [frozen study snapshot](cases/skill-original/SK
 [sources.json](sources.json) records inspected file paths, sizes and hashes, including all nine DD skills, installed authoring guidance and runner implementation.
 This inventory identifies the initial preparation sources at the recorded revision, including the runner before its permission extension; it is not the frozen manifest of inputs supplied to subjects.
 The owner directed simplifying the reusable manifest: derive prompt/fixture mappings from configurations, pin shared source files once and use Git for history. Prepared unrun manifests use version 1 and pin source commits containing their identified bytes. Historical observed inputs retain their recorded identities.
-The [historical permission qualification](permissions-qualification.json) identifies the initial read-only extension; [input-isolation qualification](input-isolation-qualification.json) identifies the current correction.
+The [historical permission qualification](runs/coverage-baseline-01/permissions-qualification.json) identifies the initial read-only extension; [input-isolation qualification](runs/coverage-baseline-01/input-isolation-qualification.json) identifies the current correction.
 
 The skill combines a search-and-reconciliation technique with discipline against stopping after one cited defect.
 Its intended user is a development agent changing a fact shared across project files or responding to a reviewer who found one stale reference.
@@ -93,7 +93,7 @@ Complete reconciliation with correct preservation but missing `References swept:
 Where a procedural deviation also causes a functional failure, record that consequence and apply the functional hard-failure rule.
 A procedural regression remains relevant to the later adoption decision even when non-blocking; agree on the rewrite's acceptance boundaries before authoring rather than treating this policy as automatic adoption approval.
 Apply the useful-outcome criteria to both conditions; target-specific compliance describes the original condition and must not penalize the unguided control for undisclosed instructions.
-Count and location conventions must be fixed with the eventual checkers, including repeated searches of the same location, so duplicate search hits cannot inflate claimed coverage. State which query results require accounting, including already-current references found during exploration, before assigning a defect for omitted entries. Pilot 01 surfaced competing readings of that scope; its [assessment correction](pilot-results.md#assessment-correction-2-2026-09-12) does not establish a skill defect or authorize a rewrite objective.
+Count and location conventions must be fixed with the eventual checkers, including repeated searches of the same location, so duplicate search hits cannot inflate claimed coverage. State which query results require accounting, including already-current references found during exploration, before assigning a defect for omitted entries. Pilot 01 surfaced competing readings of that scope; its [assessment correction](runs/pilot-01/pilot-results.md#assessment-correction-2-2026-09-12) does not establish a skill defect or authorize a rewrite objective.
 Missing action traces yield insufficient evidence for order/completeness claims, not an invented behavioral failure or pass.
 Historical commits, PR descriptions and chat logs are not rewrite targets; vendor/archive files still require triage under the skill's stated distinctions.
 
@@ -113,15 +113,15 @@ This inventory records collected development cases; invocation and pressure desi
 | discovery-shiv | Selected for core-baseline-01; exposed development case | O1–O4: CLI consumers in README, script, Make and CI; triage, preservation and committed repair. Literal location diversity, not demonstrated hard discovery. | [Case](cases/discovery-shiv/assessment.md), [manifest](cases/discovery-shiv/manifest.json), [qualification](cases/discovery-shiv/qualification.json), [source provenance](cases/discovery-shiv/source-provenance.json). |
 | moved-guide | Selected for core-baseline-01; historical pilot-02 pair stays separate | O1–O4: moved guide, relative links and executable export consumer; preservation and committed repair. New measured executions are distinct from the pilot. | [Current case](cases/moved-guide/assessment.md), [manifest](cases/moved-guide/manifest.json), [historical qualification](cases/pilot-02/qualification.json). |
 | semantic-delivery | Measured semantic-delivery-01; selected for core-baseline-01 | O1–O4: meaning-based descriptions of attempts/retries/stopping, preservation and committed repair. Passing runtime checks alone cannot establish correct prose. | [Case](cases/semantic-delivery/assessment.md), [manifest](cases/semantic-delivery/manifest.json), [qualification](cases/semantic-delivery/qualification.json). |
-| pilot-01 | Historical development evidence | Process pilot; accounting-scope ambiguity remains uncertainty, not a confirmed skill defect. | [Report](pilot-results.md), [case](cases/pilot-01/assessment.md). |
+| pilot-01 | Historical development evidence | Process pilot; accounting-scope ambiguity remains uncertainty, not a confirmed skill defect. | [Report](runs/pilot-01/pilot-results.md), [case](cases/pilot-01/assessment.md). |
 | pilot-03 | Rejected, undispatched | Replaced by Shiv preparation; not active suite work. | [Retained case](cases/pilot-03/assessment.md). |
-| initiating-change | Measured: two valid originals, one valid control and one excluded control | Ordinary initiating rename; code/config/script/prose consistency and preservation | [Case](cases/initiating-change/assessment.md), [manifest](cases/initiating-change/manifest.json), [qualification](expansion-qualification.md). |
-| local-change | Measured: two valid repetitions per condition | Justified single-file correction, near-match preservation and O5 negative account | [Case](cases/local-change/assessment.md), [manifest](cases/local-change/manifest.json), [qualification](expansion-qualification.md). |
-| large-sweep-account | Measured: two valid original-only reports | P3 grouping/counts and truthful verification; no functional outcome measured | [Case](cases/large-sweep-account/assessment.md), [manifest](cases/large-sweep-account/manifest.json), [qualification](expansion-qualification.md). |
-| invocation-change | Measured: Codex, Sonnet and Opus original/rewrite comparisons | Natural selection before an initiating rename | [Case](cases/invocation-change/assessment.md), [preparation](invocation-pressure-preparation.md). |
-| invocation-review | Measured: Codex, Sonnet and Opus original/rewrite comparisons | Natural selection before repairing one reviewer-flagged claim | [Case](cases/invocation-review/assessment.md), [preparation](invocation-pressure-preparation.md). |
-| invocation-unrelated | Measured: Codex, Sonnet and Opus original/rewrite comparisons | No deliberate selection for an unchanged-code explanation | [Case](cases/invocation-unrelated/assessment.md), [preparation](invocation-pressure-preparation.md). |
-| pressure-repair | Measured: Codex and Sonnet original/rewrite comparisons | Complete repair despite handoff, prior-effort and green-test incentives | [Case](cases/pressure-repair/assessment.md), [preparation](invocation-pressure-preparation.md). |
+| initiating-change | Measured: two valid originals, one valid control and one excluded control | Ordinary initiating rename; code/config/script/prose consistency and preservation | [Case](cases/initiating-change/assessment.md), [manifest](cases/initiating-change/manifest.json), [qualification](runs/coverage-baseline-01/expansion-qualification.md). |
+| local-change | Measured: two valid repetitions per condition | Justified single-file correction, near-match preservation and O5 negative account | [Case](cases/local-change/assessment.md), [manifest](cases/local-change/manifest.json), [qualification](runs/coverage-baseline-01/expansion-qualification.md). |
+| large-sweep-account | Measured: two valid original-only reports | P3 grouping/counts and truthful verification; no functional outcome measured | [Case](cases/large-sweep-account/assessment.md), [manifest](cases/large-sweep-account/manifest.json), [qualification](runs/coverage-baseline-01/expansion-qualification.md). |
+| invocation-change | Measured: Codex, Sonnet and Opus original/rewrite comparisons | Natural selection before an initiating rename | [Case](cases/invocation-change/assessment.md), [preparation](runs/comprehensive-comparison-02/invocation-pressure-preparation.md). |
+| invocation-review | Measured: Codex, Sonnet and Opus original/rewrite comparisons | Natural selection before repairing one reviewer-flagged claim | [Case](cases/invocation-review/assessment.md), [preparation](runs/comprehensive-comparison-02/invocation-pressure-preparation.md). |
+| invocation-unrelated | Measured: Codex, Sonnet and Opus original/rewrite comparisons | No deliberate selection for an unchanged-code explanation | [Case](cases/invocation-unrelated/assessment.md), [preparation](runs/comprehensive-comparison-02/invocation-pressure-preparation.md). |
+| pressure-repair | Measured: Codex and Sonnet original/rewrite comparisons | Complete repair despite handoff, prior-effort and green-test incentives | [Case](cases/pressure-repair/assessment.md), [preparation](runs/comprehensive-comparison-02/invocation-pressure-preparation.md). |
 
 The cases exercise broadening beyond the trigger, complete reconciliation, preservation and useful accounting; facets may share a case.
 Both pilot controls encountered all current consumers before making a narrow repair, so those observations support repair-scope comparison, not a discovery advantage.
@@ -134,18 +134,18 @@ Automatic selection is measured in the completed Codex, Sonnet and Opus native c
 ### Proposed coverage expansion (2026-09-19)
 
 The owner asked the active session to pick one of the two skills and flesh out its scenarios before editing; the session selected SSR.
-The [coverage proposal](coverage-expansion.md) adds an ordinary initiating change and a genuinely local correction to the existing three executable situations, plus a separate large-sweep accounting diagnostic.
-[Offline qualification](expansion-qualification.md) and the new case cards describe concrete tasks, source-grounded rules, alternatives and boundaries; all are exposed reconstructed development cases.
+The [coverage proposal](runs/coverage-baseline-01/coverage-expansion.md) adds an ordinary initiating change and a genuinely local correction to the existing three executable situations, plus a separate large-sweep accounting diagnostic.
+[Offline qualification](runs/coverage-baseline-01/expansion-qualification.md) and the new case cards describe concrete tasks, source-grounded rules, alternatives and boundaries; all are exposed reconstructed development cases.
 The owner accepted and froze the three additions for coverage-baseline-01; its completed assessment and runtime amendments are recorded below. No skill authoring or adoption follows.
 The completed baseline and comparison remain unchanged. The new local-change case does not retroactively fill the collected scope’s gap.
-The [baseline question and design rationale](coverage-expansion.md#baseline-question-and-design-rationale) explain the eight original/control calls, optional two-call diagnostic, remaining uncertainty and triggers for further testing. The ten-call spending authority is recorded below.
+The [baseline question and design rationale](runs/coverage-baseline-01/coverage-expansion.md#baseline-question-and-design-rationale) explain the eight original/control calls, optional two-call diagnostic, remaining uncertainty and triggers for further testing. The ten-call spending authority is recorded below.
 Current combined accounting remains in the CW protocol as linked below; the opening current-action line identifies study priority.
 
 ### Facet coverage audit (2026-09-21)
 
 This is the suite-level review required by [spec section 2](../../plans/specs/2026-09-11-model-driven-skill-testing-framework.md#2-select-representative-tests).
 Updated 2026-09-24 after the Codex, Sonnet and Opus comparisons. The heading retains its original date for existing links.
-Design adequacy describes the available task and evidence path, not model success. Evidence includes the [baseline](core-baseline-01-assessment.md), [first comparison](comprehensive-comparison-01-assessment.md), [expansion](coverage-baseline-01-assessment.md), [Codex comparison 02](comprehensive-comparison-02-assessment.md), [Sonnet comparison](claude-comparison-01-assessment.md) and [Opus invocation comparison](claude-opus-invocation-01-assessment.md).
+Design adequacy describes the available task and evidence path, not model success. Evidence includes the [baseline](runs/core-baseline-01/core-baseline-01-assessment.md), [first comparison](runs/comprehensive-comparison-01/comprehensive-comparison-01-assessment.md), [expansion](runs/coverage-baseline-01/coverage-baseline-01-assessment.md), [Codex comparison 02](runs/comprehensive-comparison-02/comprehensive-comparison-02-assessment.md), [Sonnet comparison](runs/claude-comparison-01/claude-comparison-01-assessment.md) and [Opus invocation comparison](runs/claude-opus-invocation-01/claude-opus-invocation-01-assessment.md).
 All five executable cases now have measured evidence. Initiating-change retains two valid originals and one valid control, with one excluded control; local-change has two valid repetitions per condition, and large-sweep-account has two valid procedural-only reports.
 Case definitions and qualification are linked in the inventory above.
 
@@ -176,7 +176,7 @@ Claims about every instruction, full-bundle use, realistic over-triggering and p
 ### Testing and authoring readiness check (2026-09-24)
 
 The owner asked to log the Claude findings and check remaining testing/process work before fixes.
-The canonical [Sonnet](claude-comparison-01-assessment.md) and [Opus](claude-opus-invocation-01-assessment.md) assessments already preserve results and immutable evidence references; this stocktake changes neither scores nor frozen inputs.
+The canonical [Sonnet](runs/claude-comparison-01/claude-comparison-01-assessment.md) and [Opus](runs/claude-opus-invocation-01/claude-opus-invocation-01-assessment.md) assessments already preserve results and immutable evidence references; this stocktake changes neither scores nor frozen inputs.
 Track two separate observed issues: native selection misses, and incomplete semantic reconciliation despite timely loading.
 Also investigate the rewrite’s triage vocabulary: it requires searching and accounting for new encodings, but supplies no explicit disposition for a genuine reference that already uses the intended new encoding.
 Determine whether those matches are genuinely unrelated or already-current references before calling them false positives; do not retroactively change accepted local scores or infer that every Membership match shares the same meaning.
@@ -204,7 +204,7 @@ The protocol opening owns the current decision; the active plan records the comp
 ## Execution scope and authorization
 
 Follow the [ordinary active-session workflow](../../plans/specs/2026-09-11-model-driven-skill-testing-framework.md#default-work-session-workflow).
-No separate evaluator or calibration campaign is required. Optional read-only evaluator capability is documented in [permission qualification](permissions-qualification.json); it is not a pending dispatch.
+No separate evaluator or calibration campaign is required. Optional read-only evaluator capability is documented in [permission qualification](runs/coverage-baseline-01/permissions-qualification.json); it is not a pending dispatch.
 Original and control receive the same task, project and neutral setup; original alone receives the frozen SSR skill and its read instruction. An eventual candidate substitutes only separately identified target bytes.
 Supply a realistic requested change or triggering defect and permission to fix related files, without enumerating consumers or teaching the target's sweep procedure in the control.
 DD and other instructions used by the controller session are not subject inputs. Assessment policies, expected facts and checkers remain controller-only.
@@ -218,7 +218,7 @@ Control contribution claims require evidence that omitted guidance was not loade
 Pre-baseline development is closed at two pairs. Do not reopen it for a new facet; a named readiness defect requires a separately authorized diagnostic exception.
 ### Comparison: claude-opus-invocation-01
 
-Status: complete; all ten attempts retained and assessed with valid setup, no retries or replacements. See [assessment](claude-opus-invocation-01-assessment.md). Owner request: repeat invocation tests using Opus at low effort to investigate whether the observed misses also occur on that model.
+Status: complete; all ten attempts retained and assessed with valid setup, no retries or replacements. See [assessment](runs/claude-opus-invocation-01/claude-opus-invocation-01-assessment.md). Owner request: repeat invocation tests using Opus at low effort to investigate whether the observed misses also occur on that model.
 Scope: ten sequential calls; original/candidate each run twice on invocation-change and invocation-review, then once on invocation-unrelated. Same tasks, fixtures, prompts, skill bodies and criteria as claude-comparison-01; only configuration IDs and model change.
 Purpose: descriptive model comparison with the immediately preceding Sonnet batch; keep model strata separate and do not infer a population rate or a description defect from small counts.
 Inclusion: descriptive-only; Include all valid-setup executions regardless of outcome. Keep invalid setup, unknown evidence and unattempted slots explicit. No automatic retry or replacement.
@@ -229,7 +229,7 @@ Native context: SSR is the sole supplied project skill alongside Claude bundled 
 Assessment: unchanged F1/F2/F3 and D1 criteria for positive cases; unrelated D1-only non-use remains outside functional counts. Full skill body must arrive before first task reconciliation edit for positive D1. Functional correctness is inspected separately with disposable-copy replay. No skill authoring or adoption selected.
 Commands: run `skill-validation/runner/.venv/bin/skilltest run CONFIG` once per scheduled row; retain and inspect terminal evidence before proceeding.
 Inputs: [change manifest](cases/invocation-change/opus-invocation-manifest.json), [review manifest](cases/invocation-review/opus-invocation-manifest.json), [unrelated manifest](cases/invocation-unrelated/opus-invocation-manifest.json).
-Attempt index: [claude-opus-invocation-01-run-index.json](claude-opus-invocation-01-run-index.json).
+Attempt index: [claude-opus-invocation-01-run-index.json](runs/claude-opus-invocation-01/claude-opus-invocation-01-run-index.json).
 
 | Order | Case | Condition | Repetition | CONFIG |
 |---:|---|---|---:|---|
@@ -246,7 +246,7 @@ Attempt index: [claude-opus-invocation-01-run-index.json](claude-opus-invocation
 
 ### Comparison: claude-comparison-01
 
-Status: complete; all 34 attempts retained and assessed with valid setup, no retries or replacements. See [assessment](claude-comparison-01-assessment.md). Owner request: “run an equivalent of a full codex run with Claude”, with multiple discovery runs and both baseline and rewrite SSR.
+Status: complete; all 34 attempts retained and assessed with valid setup, no retries or replacements. See [assessment](runs/claude-comparison-01/claude-comparison-01-assessment.md). Owner request: “run an equivalent of a full codex run with Claude”, with multiple discovery runs and both baseline and rewrite SSR.
 Scope: mirror comprehensive-comparison-02: 34 sequential calls; original/candidate each run twice on five ordinary cases, one pressure case and two positive native cases, then once on unrelated non-use sanity.
 Purpose: compare both skill versions on Claude and repeat native discovery observations after the smoke miss. Do not pool the two smoke calls or historical Codex results into this batch.
 Inclusion: descriptive-only; Include all valid-setup executions regardless of outcome. Keep invalid setup, unknown evidence and unattempted slots explicit. No automatic retry or replacement.
@@ -260,7 +260,7 @@ Stop for unknown charge, preservation failure, changed runtime identity, suspect
 Commands: run `skill-validation/runner/.venv/bin/skilltest run CONFIG` once per row; retain and inspect terminal evidence before continuing. Assess in the active session using disposable copies. No skill authoring or adoption is selected by this collection.
 Inputs: [discovery-shiv manifest](cases/discovery-shiv/claude-comparison-manifest.json), [moved-guide manifest](cases/moved-guide/claude-comparison-manifest.json), [semantic-delivery manifest](cases/semantic-delivery/claude-comparison-manifest.json), [initiating-change manifest](cases/initiating-change/claude-comparison-manifest.json), [local-change manifest](cases/local-change/claude-comparison-manifest.json), [pressure-repair manifest](cases/pressure-repair/claude-comparison-manifest.json), [invocation-change manifest](cases/invocation-change/claude-comparison-manifest.json), [invocation-review manifest](cases/invocation-review/claude-comparison-manifest.json), [invocation-unrelated manifest](cases/invocation-unrelated/claude-comparison-manifest.json).
 
-Attempt index: [claude-comparison-01-run-index.json](claude-comparison-01-run-index.json).
+Attempt index: [claude-comparison-01-run-index.json](runs/claude-comparison-01/claude-comparison-01-run-index.json).
 
 | Order | Case | Condition | Repetition | CONFIG |
 |---:|---|---|---:|---|
@@ -301,7 +301,7 @@ Attempt index: [claude-comparison-01-run-index.json](claude-comparison-01-run-in
 
 ### Smoke: claude-smoke-01
 
-Status: complete; both authorized calls retained and assessed. Owner instruction on 2026-09-24: “apply the runner fixes and run the smoke tests”, accepting the two-smoke scope recorded in [qualification](claude-smoke-qualification.md).
+Status: complete; both authorized calls retained and assessed. Owner instruction on 2026-09-24: “apply the runner fixes and run the smoke tests”, accepting the two-smoke scope recorded in [qualification](runs/claude-smoke-01/claude-smoke-qualification.md).
 Scope: two sequential attempts, preserved original only, one repetition per case. Explicit-load Shiv first; native reviewer-triggered semantic delivery second.
 Purpose: validate the Claude testing path with executable repair, skill delivery, native selection, commits and retained capture. These exposed cases do not establish repeatability or a Claude/Codex comparison.
 Inclusion: descriptive-only; Include all valid-setup executions regardless of outcome. Keep setup failures, insufficient evidence and behavioral failures distinct. No automatic retry or replacement.
@@ -313,8 +313,8 @@ Assessment: apply existing Shiv F1–F3/P1–P3 and invocation-review F1–F3/D1
 Stop for unknown charge, changed CLI identity, preservation failure, contamination, missing required capture, unresolved cleanup or setup defect. A valid behavioral failure is retained and does not alone stop collection.
 Commands: run `skill-validation/runner/.venv/bin/skilltest run CONFIG` once per row, sequentially; retain each terminal attempt before the next. No real authentication is copied into qualification mocks.
 Inputs: [Shiv manifest](cases/discovery-shiv/claude-smoke-manifest.json), [native-review manifest](cases/invocation-review/claude-smoke-manifest.json).
-Attempt index: [claude-smoke-01-run-index.json](claude-smoke-01-run-index.json).
-Assessment: [completed smoke](claude-smoke-01-assessment.md).
+Attempt index: [claude-smoke-01-run-index.json](runs/claude-smoke-01/claude-smoke-01-run-index.json).
+Assessment: [completed smoke](runs/claude-smoke-01/claude-smoke-01-assessment.md).
 
 | Order | Case | Condition | Repetition | CONFIG |
 |---:|---|---|---:|---|
@@ -325,7 +325,7 @@ Assessment: [completed smoke](claude-smoke-01-assessment.md).
 
 Status: complete; all 34 authorized attempts retained and assessed with valid setup, no retries or replacements. Owner approval: “approved, let's do it”, accepting the 34-call scope and subject ceiling of 90. Freeze and preflight passed before the first dispatch.
 Scope: 34 sequential attempts across original/candidate: five ordinary cases, one pressure case and two positive native cases with two repetitions each; one native sanity case with one repetition each.
-Purpose, strata and acceptance: [accepted comparison scope](comparison-proposal.md); cases remain exposed development scenarios, active-session assessment is not blind.
+Purpose, strata and acceptance: [accepted comparison scope](runs/comprehensive-comparison-02/comparison-proposal.md); cases remain exposed development scenarios, active-session assessment is not blind.
 Inclusion: descriptive-only; Include all valid-setup executions regardless of outcome, retaining unknown judgments and invalid/unresolved/unattempted slots separately. No automatic retry or replacement. Keep ordinary, pressure, positive invocation and non-use sanity results separate; use result/assessment version 2 and exclude not-measured outcomes from functional counts.
 Budget: 34 additional subject calls, zero evaluator/authoring/retry calls. Time guideline: 180 active minutes; the CW protocol owns combined spending.
 Runtime: Codex CLI 0.156.0 at `/opt/homebrew/bin/codex`, binary SHA-256 `6b42db4d33fd53516162bd76a0e2d07e0567287c44e036d4e4c06cb555a432f9`; gpt-5.6-sol, low effort, workspace-write, 900-second timeout. No immutable model revision is exposed. The committed invocation-authority revision pins the full runner checkout.
@@ -337,8 +337,8 @@ Preserve each terminal bundle with `docs retain` against this committed scope be
 
 Inputs: [discovery-shiv manifest](cases/discovery-shiv/comparison-02-manifest.json), [moved-guide manifest](cases/moved-guide/comparison-02-manifest.json), [semantic-delivery manifest](cases/semantic-delivery/comparison-02-manifest.json), [initiating-change manifest](cases/initiating-change/comparison-02-manifest.json), [local-change manifest](cases/local-change/comparison-02-manifest.json), [pressure-repair manifest](cases/pressure-repair/comparison-02-manifest.json), [invocation-change manifest](cases/invocation-change/comparison-02-manifest.json), [invocation-review manifest](cases/invocation-review/comparison-02-manifest.json), [invocation-unrelated manifest](cases/invocation-unrelated/comparison-02-manifest.json).
 
-Attempt index: [comprehensive-comparison-02-run-index.json](comprehensive-comparison-02-run-index.json).
-Assessment: [completed comparison](comprehensive-comparison-02-assessment.md).
+Attempt index: [comprehensive-comparison-02-run-index.json](runs/comprehensive-comparison-02/comprehensive-comparison-02-run-index.json).
+Assessment: [completed comparison](runs/comprehensive-comparison-02/comprehensive-comparison-02-assessment.md).
 
 | Order | Case | Condition | Repetition | CONFIG |
 |---:|---|---|---:|---|
@@ -380,7 +380,7 @@ Assessment: [completed comparison](comprehensive-comparison-02-assessment.md).
 ### Coverage baseline: coverage-baseline-01
 
 Status: complete; all ten attempts retained and assessed, with order 2 excluded and charged. Originally authorized on 2026-09-21. The owner replied “ok, let's do it” to the explicit proposal to accept coverage limits and fund ten additional subject calls, raising the outer subject ceiling from 46 to 56.
-Question and coverage limits: [baseline design rationale](coverage-expansion.md#baseline-question-and-design-rationale) and the facet audit above. The two new executable cases and the separate accounting diagnostic are accepted for this batch; no skill edit or adoption is authorized.
+Question and coverage limits: [baseline design rationale](runs/coverage-baseline-01/coverage-expansion.md#baseline-question-and-design-rationale) and the facet audit above. The two new executable cases and the separate accounting diagnostic are accepted for this batch; no skill edit or adoption is authorized.
 Scope: exactly ten sequential attempts below using frozen Sol-low/workspace-write configurations. Original/control order reverses across cases and repetitions; the diagnostic has original only and no functional-success claim.
 Inclusion: descriptive-only. Include all valid-setup executions, with functional failures and unknowns visible. Exclude invalid/unresolved setups from outcomes and account for every slot. No pooled functional rate across cases or diagnostic; diagnostic uses result/assessment version 2 and not measured.
 Stop for failed preservation, uncertain charge, unresolved process cleanup, suspected contamination or an infrastructure/setup defect requiring inspection. A valid behavioral failure alone does not stop collection. No automatic retry, replacement, pool transfer or extra invocation.
@@ -388,7 +388,7 @@ Budget: at most ten additional subject invocations, zero evaluator/authoring/ret
 Inputs: [initiating-change manifest](cases/initiating-change/manifest.json), [local-change manifest](cases/local-change/manifest.json), [diagnostic manifest](cases/large-sweep-account/manifest.json); [initiating card](cases/initiating-change/assessment.md), [local card](cases/local-change/assessment.md), [diagnostic card](cases/large-sweep-account/assessment.md). Their source revision pins the full runner checkout; invocation authority is the subsequent committed frozen-manifest revision.
 Runtime: `/opt/homebrew/bin/codex`, `codex-cli 0.154.0`, SHA-256 `4f85982624b3898c8991cb80c0981b2aa71070e3537046c9a95950318a95afcc`, rechecked 2026-09-21. Execution changes since the prior collection are terminal-result 0.5 capture/cleanup metadata and document operations; the current offline suite passed 450 tests. Existing restricted PATH, private profile and full-session capture remain in use. Inspect every actual trace for full original skill loading, control integrity and unexpected outside guidance; this is not exhaustive host read isolation.
 Historical commands for orders 1–2 ran from `/Users/simon/work/personal/disciplined-development-skills`: `TMPDIR=/private/tmp/ssr-coverage-baseline-01 skill-validation/runner/.venv/bin/skilltest run CONFIG`, once per row after collection readiness. Host permission initializes the app server; subjects retain workspace-write.
-Retain stopped bundles with `docs retain`, using this batch/order, committed invocation authority, [attempt index](coverage-baseline-01-run-index.json) and the existing external development primary. Assess in the active session under SSR policy 3; inspect/replay disposable copies only. The [batch assessment](coverage-baseline-01-assessment.md) holds outcomes and coverage, not a new scoring policy.
+Retain stopped bundles with `docs retain`, using this batch/order, committed invocation authority, [attempt index](runs/coverage-baseline-01/coverage-baseline-01-run-index.json) and the existing external development primary. Assess in the active session under SSR policy 3; inspect/replay disposable copies only. The [batch assessment](runs/coverage-baseline-01/coverage-baseline-01-assessment.md) holds outcomes and coverage, not a new scoring policy.
 
 | Order | Case | Condition | Repetition | CONFIG |
 |---:|---|---|---:|---|
@@ -405,7 +405,7 @@ Retain stopped bundles with `docs retain`, using this batch/order, committed inv
 
 
 Collection checkpoint, 2026-09-21: both attempts completed mechanically and were retained with verified inventories before stopping; two subject calls are charged, none retried.
-The initial checkpoint, preserved in the [completed assessment](coverage-baseline-01-assessment.md), recorded one valid original (F1–F3/P1/P2 met, P3 arithmetic defect) and an invalid control (correct inspectable repair, excluded from aggregates).
+The initial checkpoint, preserved in the [completed assessment](runs/coverage-baseline-01/coverage-baseline-01-assessment.md), recorded one valid original (F1–F3/P1/P2 met, P3 arithmetic defect) and an invalid control (correct inspectable repair, excluded from aggregates).
 The control changed directory to `/tmp` for a script check and then searched that directory; its actual delivered tool response includes controller scratch matches and the preceding original run's completion report.
 The private profile and restricted PATH did not prevent filesystem read contamination; the run namespace under `/private/tmp` is not a read boundary.
 Do not run orders 3–10 under that unchanged setup or replace order 2 automatically. The [checkpoint review](../../reviews/2026-09-21-ssr-expansion-checkpoint.md) records the open isolation finding and completed verification.
@@ -439,11 +439,11 @@ The [resumption review](../../reviews/2026-09-21-ssr-resumption.md) records qual
 Use the committed revision containing this correction as invocation authority for orders 4–10, retaining frozen inputs and the same schedule, model and criteria.
 This is necessary setup repair within the approved resumption, not another subject qualification or retry call.
 
-Post-collection runtime correction: the [login-shell diagnosis](runtime-diagnosis.md#isolated-login-shell-correction-2026-09-23) shows that orders 3–10 no longer inherited runtime-1’s Homebrew selection guarantee.
+Post-collection runtime correction: the [login-shell diagnosis](runs/claude-smoke-01/runtime-diagnosis.md#isolated-login-shell-correction-2026-09-23) shows that orders 3–10 no longer inherited runtime-1’s Homebrew selection guarantee.
 The assessment discloses this reconstructed interpreter difference; historical results remain unchanged.
 Future collection requires the installed login-shell qualification, not only host Python or a non-login shell check.
 
-Collection close, 2026-09-21: all ten slots completed, preserved and assessed. Orders 3–10 used the declared amended runtime strata; the eight resumed observations are valid. The [completed assessment](coverage-baseline-01-assessment.md) owns counts, runtime limitations, coverage judgment and next-step recommendation. No criterion, case input, skill version, historical score or call allocation changed.
+Collection close, 2026-09-21: all ten slots completed, preserved and assessed. Orders 3–10 used the declared amended runtime strata; the eight resumed observations are valid. The [completed assessment](runs/coverage-baseline-01/coverage-baseline-01-assessment.md) owns counts, runtime limitations, coverage judgment and next-step recommendation. No criterion, case input, skill version, historical score or call allocation changed.
 
 ### First collection: semantic-delivery-01
 
@@ -471,9 +471,9 @@ The namespaced temporary directory has been created. The commands require host p
 Local identity check: `/opt/homebrew/bin/codex` resolves to `/opt/homebrew/Caskroom/codex/0.154.0/bin/codex`, version `codex-cli 0.154.0`, SHA-256 `4f85982624b3898c8991cb80c0981b2aa71070e3537046c9a95950318a95afcc`, matching the prepared CLI. The requested model name does not expose an immutable model revision.
 At collection, the runner retained its 900-second model timeout. Its tree was byte-for-byte unchanged from the pilot-02 tested revision `c1ca9599abba6acc6a3ef884a9ac00a24e72e83c` (historical provenance is in [Results and decision](#results-and-decision)); no runner change was required for these commands. Recheck mutable execution dependencies before any future authorized dispatch.
 
-The runner emits each unique bundle path beneath `/private/tmp/ssr-semantic-delivery-01/skilltest-runs/`. After writes stop, preserve the complete directory at the development primary below using that emitted directory name, inventory and verify it, then record the actual attempt in [semantic-delivery-01-run-index.json](semantic-delivery-01-run-index.json).
+The runner emits each unique bundle path beneath `/private/tmp/ssr-semantic-delivery-01/skilltest-runs/`. After writes stop, preserve the complete directory at the development primary below using that emitted directory name, inventory and verify it, then record the actual attempt in [semantic-delivery-01-run-index.json](runs/semantic-delivery-01/semantic-delivery-01-run-index.json).
 The index records the two actual attempts, their authorization, retained evidence and canonical execution results.
-The index resolves both execution results; [semantic-delivery-01-assessment.md](semantic-delivery-01-assessment.md) records coverage, counts, uncertainty and the observed condition comparison after disposable replay and evidence inspection.
+The index resolves both execution results; [semantic-delivery-01-assessment.md](runs/semantic-delivery-01/semantic-delivery-01-assessment.md) records coverage, counts, uncertainty and the observed condition comparison after disposable replay and evidence inspection.
 The index pins the committed authorization, frozen manifest and execution results; these completed commands do not authorize repeating the batch.
 
 
@@ -506,12 +506,12 @@ Working directory: `/Users/simon/work/personal/disciplined-development-skills`. 
 
 Input identities: [semantic delivery](cases/semantic-delivery/manifest.json), [moved guide](cases/moved-guide/manifest.json), [Shiv](cases/discovery-shiv/manifest.json). Reuse semantic delivery's existing frozen inputs; its earlier protocol pin is input/rule provenance, not this batch's authorization. Every new attempt cites the current batch authorization separately. The new moved-guide controller definition references the historical pilot's unchanged subject/configuration/checker files; its historical policy-2 package remains intact.
 The CLI resolves to version 0.154.0 and the hash recorded above. Orders 2–5 pin capture-2; orders 6–12 pin capture-2 plus runtime-1. All twelve attempts are complete. Any later selected collection must recheck mutable identities; the provider does not expose an immutable model revision.
-The runner emits unique bundles beneath `/private/tmp/ssr-core-baseline-01/skilltest-runs/`; preserve complete stopped bundles under the development primary using emitted directory names and one inventory each. [core-baseline-01-run-index.json](core-baseline-01-run-index.json) records every actual attempt and canonical result.
-Inspect/replay only disposable copies using fixed case checkers and semantic rules. Execution results live at `results/<run-id>.json`; the [batch assessment](core-baseline-01-assessment.md) records all twelve attempts, exclusions and aggregates. Orders 1 and 5 remain excluded for different setup faults. No retry, replacement or additional call is authorized by this completed scope.
+The runner emits unique bundles beneath `/private/tmp/ssr-core-baseline-01/skilltest-runs/`; preserve complete stopped bundles under the development primary using emitted directory names and one inventory each. [core-baseline-01-run-index.json](runs/core-baseline-01/core-baseline-01-run-index.json) records every actual attempt and canonical result.
+Inspect/replay only disposable copies using fixed case checkers and semantic rules. Execution results live at `results/<run-id>.json`; the [batch assessment](runs/core-baseline-01/core-baseline-01-assessment.md) records all twelve attempts, exclusions and aggregates. Orders 1 and 5 remain excluded for different setup faults. No retry, replacement or additional call is authorized by this completed scope.
 
 #### Runtime amendment: runtime-1
 
-The [runtime diagnosis](runtime-diagnosis.md) records the new fault: the subject shell selects Python 3.9.6, which cannot parse the supplied Shiv dependency. The narrow correction is implemented and verified offline: pass the prepared restricted PATH explicitly through `shell_environment_policy.set`, keeping other environment inheritance disabled. It selects the compatible host Python 3.14.7 and passes the actual CLI's scripted local tests and consumer checks with zero model calls.
+The [runtime diagnosis](runs/claude-smoke-01/runtime-diagnosis.md) records the new fault: the subject shell selects Python 3.9.6, which cannot parse the supplied Shiv dependency. The narrow correction is implemented and verified offline: pass the prepared restricted PATH explicitly through `shell_environment_policy.set`, keeping other environment inheritance disabled. It selects the compatible host Python 3.14.7 and passes the actual CLI's scripted local tests and consumer checks with zero model calls.
 Owner approved continuation on 2026-09-16 after reviewing the concrete correction: “address any relevant findings, and the let's continue”. The committed runtime-1 authority governed only orders 6–12, preserving task/skill/criteria bytes, model/effort, order, allocation and no-retry rule. All seven completed with usable setup; the invalid Shiv attempt remains excluded and unreplaced. Orders 2–4 retain their pre-correction runtime labels; the assessment reports total descriptive counts and runtime-stratum counts without claiming fixed-runtime replication across the change. The capture-error reporting correction preserves provider exit/timeout facts and adds no model call or scoring change.
 
 
@@ -559,7 +559,7 @@ The [original triage rule](cases/skill-original/SKILL.md#procedure) and [candida
 Runtime: all twelve rows used full runner revision `d899a817108330c4dcba4007f3383294a87d2f9a` with capture-2/runtime-1. Codex CLI 0.154.0 at `/opt/homebrew/Caskroom/codex/0.154.0/bin/codex`, SHA-256 `4f85982624b3898c8991cb80c0981b2aa71070e3537046c9a95950318a95afcc`, and Homebrew Python 3.14.7 were checked before and after collection. No runtime amendment was needed. Requested model names expose no immutable model revision.
 The approved planning allowance was **180 active minutes**: 30 for freeze/runtime/input verification, 30 for model waits, 60 for preservation and per-execution assessment, and 60 for aggregation/review/contingency. Actual comparison effort and forecast variance belong to Storage and accounting; the assessment records measured runner duration and evidence size. Billed dollar cost is not established. Only closure remains forecast.
 
-Evidence: [attempt index](comprehensive-comparison-01-run-index.json) and [batch assessment](comprehensive-comparison-01-assessment.md). The index pins every manifest, invocation authority and canonical result; the assessment pins the accepted index revision. Reviewed inputs and applicability were committed and collection readiness passed before dispatch. Each complete raw bundle was retained and verified against its inventory before the next invocation, using the existing development primary and accepted single-host recovery risk. The assessment owns counts, patterns, costs and the recommendation; no separate comparison record is needed.
+Evidence: [attempt index](runs/comprehensive-comparison-01/comprehensive-comparison-01-run-index.json) and [batch assessment](runs/comprehensive-comparison-01/comprehensive-comparison-01-assessment.md). The index pins every manifest, invocation authority and canonical result; the assessment pins the accepted index revision. Reviewed inputs and applicability were committed and collection readiness passed before dispatch. Each complete raw bundle was retained and verified against its inventory before the next invocation, using the existing development primary and accepted single-host recovery risk. The assessment owns counts, patterns, costs and the recommendation; no separate comparison record is needed.
 
 ## Storage and accounting
 
@@ -587,7 +587,7 @@ This closed-study checkpoint uses its then-approved ceilings: a 40-call subject 
 At that closing checkpoint, 30 subject calls had been dispatched and capacity was 10 / 12 / 4 / 4. Core-baseline-01 has no unspent calls; neither excluded attempt has replacement authorization. Remaining capacity is a ceiling, not a selected next batch.
 
 
-SSR collection-close invocation accounting includes the CW [baseline](../concise-writing/contribution-baseline-01-run-index.json) and [comparison](../concise-writing/comprehensive-comparison-01-run-index.json), plus the expansion, comprehensive-comparison-02, Claude smoke, claude-comparison-01 and claude-opus-invocation-01 indexes above.
+SSR collection-close invocation accounting includes the CW [baseline](../concise-writing/runs/contribution-baseline-01/contribution-baseline-01-run-index.json) and [comparison](../concise-writing/runs/comprehensive-comparison-01/comprehensive-comparison-01-run-index.json), plus the expansion, comprehensive-comparison-02, Claude smoke, claude-comparison-01 and claude-opus-invocation-01 indexes above.
 This closed checkpoint uses its then-approved ceilings: 136 subject, 12 evaluator, 4 authoring and 4 retry invocations.
 Dispatched calls are **136 subject, 0 evaluator, 0 authoring, 0 retry**; remaining outer capacity is **0 / 12 / 4 / 4** at that checkpoint.
 The [CW accounting](../concise-writing/protocol.md#storage-and-accounting) owns subsequent combined spending, current ceilings, time and forecast; this historical balance does not authorize further calls.
@@ -607,17 +607,17 @@ Closure is complete within its 30-minute allowance; no new collection or rollout
 
 | Evidence | Interpretation |
 |---|---|
-| [Claude smoke](claude-smoke-01-assessment.md) | Original only: explicit-load Shiv repair succeeds; native reviewer-triggered load is missed and repair incomplete. Runtime/capture viability and model behavior remain separate. |
-| [Sonnet comparison](claude-comparison-01-assessment.md) | Ordinary functional outcomes 10/10 per version; pressure original 1/2 versus rewrite 2/2; positive loads 2/4 versus 3/4; positive native task outcomes 3/4 each. Non-use sanity passes for both. |
-| [Opus invocation comparison](claude-opus-invocation-01-assessment.md) | Positive loads original 2/4 versus rewrite 4/4; task outcomes 4/4 versus 3/4. Both original reviewer repairs succeed without loading; one loaded rewrite repair is incomplete. Non-use sanity passes for both. |
-| [Expanded comprehensive comparison](comprehensive-comparison-02-assessment.md) | All 34 valid observations included: functional outcomes tied, timely native selection and unrelated non-use met; the candidate retains a size benefit but changes the accepted local negative-account behavior. See the assessment for separate strata and reporting boundaries. |
-| [Completed expansion](coverage-baseline-01-assessment.md) | Nine included observations: all seven executable outcomes met, both accounting diagnostics met P3; one original initiating P3 defect. One control excluded. Runtime strata and accepted coverage gaps remain explicit. |
-| [Comprehensive comparison](comprehensive-comparison-01-assessment.md) | Complete twelve-execution comparison: tested functional outcomes preserved by both versions; reporting differences are mixed. Including the measured size reduction, the advisory recommendation favors the candidate. Owner deferred adoption. |
-| [Core-baseline-01 assessment](core-baseline-01-assessment.md) | Selected three-case baseline complete: twelve attempts, ten included and two setup exclusions; descriptive outcomes and runtime differences remain explicit. |
-| [Semantic-delivery-01 assessment](semantic-delivery-01-assessment.md) | First measured batch: original completes committed reconciliation; control leaves two current claims stale. One observation per condition; no consistency claim. |
-| [Pilot 01 report](pilot-results.md), [attempt index](pilot-run-index.json), [checks](pilot-checks.json) | Historical original/control development pair; assessment correction and limits belong in the report. |
-| [Pilot 02 report](pilot-02-results.md), [attempt index](pilot-02-run-index.json), [checks](pilot-02-checks.json) | Historical moved-guide pair; retained evidence supports the recorded outcomes, not a stable reliability estimate. |
-| [Policy-3 worked example](assessments/pilot-02-original-policy-3-example.json), [identity/schema index](assessments/index.json) | Unchanged illustrative assessment of retained evidence, not a new execution or replacement of the canonical policy-2 result. |
+| [Claude smoke](runs/claude-smoke-01/claude-smoke-01-assessment.md) | Original only: explicit-load Shiv repair succeeds; native reviewer-triggered load is missed and repair incomplete. Runtime/capture viability and model behavior remain separate. |
+| [Sonnet comparison](runs/claude-comparison-01/claude-comparison-01-assessment.md) | Ordinary functional outcomes 10/10 per version; pressure original 1/2 versus rewrite 2/2; positive loads 2/4 versus 3/4; positive native task outcomes 3/4 each. Non-use sanity passes for both. |
+| [Opus invocation comparison](runs/claude-opus-invocation-01/claude-opus-invocation-01-assessment.md) | Positive loads original 2/4 versus rewrite 4/4; task outcomes 4/4 versus 3/4. Both original reviewer repairs succeed without loading; one loaded rewrite repair is incomplete. Non-use sanity passes for both. |
+| [Expanded comprehensive comparison](runs/comprehensive-comparison-02/comprehensive-comparison-02-assessment.md) | All 34 valid observations included: functional outcomes tied, timely native selection and unrelated non-use met; the candidate retains a size benefit but changes the accepted local negative-account behavior. See the assessment for separate strata and reporting boundaries. |
+| [Completed expansion](runs/coverage-baseline-01/coverage-baseline-01-assessment.md) | Nine included observations: all seven executable outcomes met, both accounting diagnostics met P3; one original initiating P3 defect. One control excluded. Runtime strata and accepted coverage gaps remain explicit. |
+| [Comprehensive comparison](runs/comprehensive-comparison-01/comprehensive-comparison-01-assessment.md) | Complete twelve-execution comparison: tested functional outcomes preserved by both versions; reporting differences are mixed. Including the measured size reduction, the advisory recommendation favors the candidate. Owner deferred adoption. |
+| [Core-baseline-01 assessment](runs/core-baseline-01/core-baseline-01-assessment.md) | Selected three-case baseline complete: twelve attempts, ten included and two setup exclusions; descriptive outcomes and runtime differences remain explicit. |
+| [Semantic-delivery-01 assessment](runs/semantic-delivery-01/semantic-delivery-01-assessment.md) | First measured batch: original completes committed reconciliation; control leaves two current claims stale. One observation per condition; no consistency claim. |
+| [Pilot 01 report](runs/pilot-01/pilot-results.md), [attempt index](runs/pilot-01/pilot-run-index.json), [checks](runs/pilot-01/pilot-checks.json) | Historical original/control development pair; assessment correction and limits belong in the report. |
+| [Pilot 02 report](runs/pilot-02/pilot-02-results.md), [attempt index](runs/pilot-02/pilot-02-run-index.json), [checks](runs/pilot-02/pilot-02-checks.json) | Historical moved-guide pair; retained evidence supports the recorded outcomes, not a stable reliability estimate. |
+| [Policy-3 worked example](runs/historical-assessment-examples/pilot-02-original-policy-3-example.json), [identity/schema index](runs/historical-assessment-examples/index.json) | Unchanged illustrative assessment of retained evidence, not a new execution or replacement of the canonical policy-2 result. |
 
 Closure review: [evidence, scoring and verification](../../reviews/2026-09-24-ssr-comparison-02.md).
 
@@ -635,7 +635,7 @@ Any later adoption decision must retain the comparison’s limitations; an aggre
 
 ### Findings and process lessons
 
-The first study exercised the complete session workflow on one skill and two versions. Its [core baseline](core-baseline-01-assessment.md) retains ten valid observations and two charged setup exclusions; its [comparison](comprehensive-comparison-01-assessment.md) has twelve valid executions. Both versions meet every tested functional criterion in both repetitions per case. Reporting differences are mixed, and the candidate is 21.9% shorter by the agreed word-count measure. Detailed counts and attribution belong in those assessments.
+The first study exercised the complete session workflow on one skill and two versions. Its [core baseline](runs/core-baseline-01/core-baseline-01-assessment.md) retains ten valid observations and two charged setup exclusions; its [comparison](runs/comprehensive-comparison-01/comprehensive-comparison-01-assessment.md) has twelve valid executions. Both versions meet every tested functional criterion in both repetitions per case. Reporting differences are mixed, and the candidate is 21.9% shorter by the agreed word-count measure. Detailed counts and attribution belong in those assessments.
 
 All thirty subject calls used Sol-low. Small exposed cases, shared assessor context, unresolved accounting-unit/category interpretation and untested behavior limit the findings. They establish neither population reliability, held-out transfer, another model/effort’s performance nor generality to a second skill. No new rewrite was authored: the owner-selected existing candidate was tested exactly. The broader skill-testing journey remains open.
 

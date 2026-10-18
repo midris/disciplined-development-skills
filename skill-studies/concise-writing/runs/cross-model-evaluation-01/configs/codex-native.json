@@ -1,0 +1,185 @@
+{
+  "schema_version": "0.2",
+  "id": "cw-eval-codex-native",
+  "prompt": "../native-prompt.md",
+  "fixtures": [
+    {
+      "source": "../../../../../../skill-study-private/concise-writing/cross-model-evaluation-rest-20261017/codex-native/EVALUATION-INDEX.json",
+      "target": "EVALUATION-INDEX.json"
+    },
+    {
+      "source": "../../../../../../skill-study-private/concise-writing/cross-model-evaluation-rest-20261017/codex-native/MECHANICAL-CHECKS.json",
+      "target": "MECHANICAL-CHECKS.json"
+    },
+    {
+      "source": "../../../../../../skill-study-private/concise-writing/cross-model-evaluation-rest-20261017/codex-native/WORD-COUNTS.json",
+      "target": "WORD-COUNTS.json"
+    },
+    {
+      "source": "../../../../../../skill-study-private/concise-writing/cross-model-evaluation-rest-20261017/codex-native/cases/invocation-comments/MAINTAINER-NOTES.md",
+      "target": "cases/invocation-comments/MAINTAINER-NOTES.md"
+    },
+    {
+      "source": "../../../../../../skill-study-private/concise-writing/cross-model-evaluation-rest-20261017/codex-native/cases/invocation-comments/criteria.md",
+      "target": "cases/invocation-comments/criteria.md"
+    },
+    {
+      "source": "../../../../../../skill-study-private/concise-writing/cross-model-evaluation-rest-20261017/codex-native/cases/invocation-comments/task.md",
+      "target": "cases/invocation-comments/task.md"
+    },
+    {
+      "source": "../../../../../../skill-study-private/concise-writing/cross-model-evaluation-rest-20261017/codex-native/cases/invocation-comments/uploader.py",
+      "target": "cases/invocation-comments/uploader.py"
+    },
+    {
+      "source": "../../../../../../skill-study-private/concise-writing/cross-model-evaluation-rest-20261017/codex-native/cases/invocation-nonprose/criteria.md",
+      "target": "cases/invocation-nonprose/criteria.md"
+    },
+    {
+      "source": "../../../../../../skill-study-private/concise-writing/cross-model-evaluation-rest-20261017/codex-native/cases/invocation-nonprose/settings.toml",
+      "target": "cases/invocation-nonprose/settings.toml"
+    },
+    {
+      "source": "../../../../../../skill-study-private/concise-writing/cross-model-evaluation-rest-20261017/codex-native/cases/invocation-nonprose/task.md",
+      "target": "cases/invocation-nonprose/task.md"
+    },
+    {
+      "source": "../../../../../../skill-study-private/concise-writing/cross-model-evaluation-rest-20261017/codex-native/cases/invocation-tighten/criteria.md",
+      "target": "cases/invocation-tighten/criteria.md"
+    },
+    {
+      "source": "../../../../../../skill-study-private/concise-writing/cross-model-evaluation-rest-20261017/codex-native/cases/invocation-tighten/report.md",
+      "target": "cases/invocation-tighten/report.md"
+    },
+    {
+      "source": "../../../../../../skill-study-private/concise-writing/cross-model-evaluation-rest-20261017/codex-native/cases/invocation-tighten/task.md",
+      "target": "cases/invocation-tighten/task.md"
+    },
+    {
+      "source": "../../../../../../skill-study-private/concise-writing/cross-model-evaluation-rest-20261017/codex-native/cases/invocation-write/criteria.md",
+      "target": "cases/invocation-write/criteria.md"
+    },
+    {
+      "source": "../../../../../../skill-study-private/concise-writing/cross-model-evaluation-rest-20261017/codex-native/cases/invocation-write/notes.md",
+      "target": "cases/invocation-write/notes.md"
+    },
+    {
+      "source": "../../../../../../skill-study-private/concise-writing/cross-model-evaluation-rest-20261017/codex-native/cases/invocation-write/task.md",
+      "target": "cases/invocation-write/task.md"
+    },
+    {
+      "source": "../../../../../../skill-study-private/concise-writing/cross-model-evaluation-rest-20261017/codex-native/expanded-policy.txt",
+      "target": "expanded-policy.txt"
+    },
+    {
+      "source": "../../../../../../skill-study-private/concise-writing/cross-model-evaluation-rest-20261017/codex-native/outputs/20260928T000714703Z-cw-prep-codex-invocation-tighten-original-a36d3f60-050d-4e71-9743-405e763443c3-0jknpesu/report.md",
+      "target": "outputs/20260928T000714703Z-cw-prep-codex-invocation-tighten-original-a36d3f60-050d-4e71-9743-405e763443c3-0jknpesu/report.md"
+    },
+    {
+      "source": "../../../../../../skill-study-private/concise-writing/cross-model-evaluation-rest-20261017/codex-native/outputs/20260928T000919413Z-cw-prep-codex-invocation-tighten-candidate-0997826a-025b-4085-a6a7-e9edb44ec0fe-j7v6rgin/report.md",
+      "target": "outputs/20260928T000919413Z-cw-prep-codex-invocation-tighten-candidate-0997826a-025b-4085-a6a7-e9edb44ec0fe-j7v6rgin/report.md"
+    },
+    {
+      "source": "../../../../../../skill-study-private/concise-writing/cross-model-evaluation-rest-20261017/codex-native/outputs/20260928T001043635Z-cw-prep-codex-invocation-write-candidate-5469587f-b2e4-4ab1-b1be-d71e072a11c6-xz74yx8o/report.md",
+      "target": "outputs/20260928T001043635Z-cw-prep-codex-invocation-write-candidate-5469587f-b2e4-4ab1-b1be-d71e072a11c6-xz74yx8o/report.md"
+    },
+    {
+      "source": "../../../../../../skill-study-private/concise-writing/cross-model-evaluation-rest-20261017/codex-native/outputs/20260928T001150965Z-cw-prep-codex-invocation-write-original-f210cc75-3aa0-4495-a479-c81f7b91eb8d-gb44qr_3/report.md",
+      "target": "outputs/20260928T001150965Z-cw-prep-codex-invocation-write-original-f210cc75-3aa0-4495-a479-c81f7b91eb8d-gb44qr_3/report.md"
+    },
+    {
+      "source": "../../../../../../skill-study-private/concise-writing/cross-model-evaluation-rest-20261017/codex-native/outputs/20260928T001302672Z-cw-prep-codex-invocation-nonprose-original-5b6c8f02-1ec9-4edc-8621-55b0dc863a60-jfz2rpuu/settings.toml",
+      "target": "outputs/20260928T001302672Z-cw-prep-codex-invocation-nonprose-original-5b6c8f02-1ec9-4edc-8621-55b0dc863a60-jfz2rpuu/settings.toml"
+    },
+    {
+      "source": "../../../../../../skill-study-private/concise-writing/cross-model-evaluation-rest-20261017/codex-native/outputs/20260928T001353442Z-cw-prep-codex-invocation-nonprose-candidate-4325f069-78cf-42a4-b941-02edb545e3b0-vxx6v5m4/settings.toml",
+      "target": "outputs/20260928T001353442Z-cw-prep-codex-invocation-nonprose-candidate-4325f069-78cf-42a4-b941-02edb545e3b0-vxx6v5m4/settings.toml"
+    },
+    {
+      "source": "../../../../../../skill-study-private/concise-writing/cross-model-evaluation-rest-20261017/codex-native/outputs/20260928T001506239Z-cw-prep-codex-invocation-comments-candidate-f6535e8d-dc71-4c1d-b0e2-885279fcba05-c6tcnht6/uploader.py",
+      "target": "outputs/20260928T001506239Z-cw-prep-codex-invocation-comments-candidate-f6535e8d-dc71-4c1d-b0e2-885279fcba05-c6tcnht6/uploader.py"
+    },
+    {
+      "source": "../../../../../../skill-study-private/concise-writing/cross-model-evaluation-rest-20261017/codex-native/outputs/20260928T001626384Z-cw-prep-codex-invocation-comments-original-510bd97c-c20e-4071-9d99-68b2d55d0e48-y5r0ib05/uploader.py",
+      "target": "outputs/20260928T001626384Z-cw-prep-codex-invocation-comments-original-510bd97c-c20e-4071-9d99-68b2d55d0e48-y5r0ib05/uploader.py"
+    },
+    {
+      "source": "../../../../../../skill-study-private/concise-writing/cross-model-evaluation-rest-20261017/codex-native/outputs/20260928T001853585Z-cw-prep-codex-invocation-tighten-candidate-478035f4-ef58-4139-8113-238e4c705f27-ld97fg79/report.md",
+      "target": "outputs/20260928T001853585Z-cw-prep-codex-invocation-tighten-candidate-478035f4-ef58-4139-8113-238e4c705f27-ld97fg79/report.md"
+    },
+    {
+      "source": "../../../../../../skill-study-private/concise-writing/cross-model-evaluation-rest-20261017/codex-native/outputs/20260928T002016583Z-cw-prep-codex-invocation-tighten-original-1dc9fe36-52e6-4ca3-84e5-bce0141944c0-w63p16vj/report.md",
+      "target": "outputs/20260928T002016583Z-cw-prep-codex-invocation-tighten-original-1dc9fe36-52e6-4ca3-84e5-bce0141944c0-w63p16vj/report.md"
+    },
+    {
+      "source": "../../../../../../skill-study-private/concise-writing/cross-model-evaluation-rest-20261017/codex-native/outputs/20260928T002514707Z-cw-prep-codex-invocation-write-original-85e25a1a-e7f8-4568-845c-0164de9135e5-gvty2x69/report.md",
+      "target": "outputs/20260928T002514707Z-cw-prep-codex-invocation-write-original-85e25a1a-e7f8-4568-845c-0164de9135e5-gvty2x69/report.md"
+    },
+    {
+      "source": "../../../../../../skill-study-private/concise-writing/cross-model-evaluation-rest-20261017/codex-native/outputs/20260928T002616621Z-cw-prep-codex-invocation-write-candidate-3f28527e-9a49-4cc7-94c5-b1abbe19c6cf-0kkely4l/report.md",
+      "target": "outputs/20260928T002616621Z-cw-prep-codex-invocation-write-candidate-3f28527e-9a49-4cc7-94c5-b1abbe19c6cf-0kkely4l/report.md"
+    },
+    {
+      "source": "../../../../../../skill-study-private/concise-writing/cross-model-evaluation-rest-20261017/codex-native/outputs/20260928T002717009Z-cw-prep-codex-invocation-nonprose-candidate-d3fc04a6-248b-43e0-ab21-9f4a2c686bd5-54plbx8s/settings.toml",
+      "target": "outputs/20260928T002717009Z-cw-prep-codex-invocation-nonprose-candidate-d3fc04a6-248b-43e0-ab21-9f4a2c686bd5-54plbx8s/settings.toml"
+    },
+    {
+      "source": "../../../../../../skill-study-private/concise-writing/cross-model-evaluation-rest-20261017/codex-native/outputs/20260928T002758617Z-cw-prep-codex-invocation-nonprose-original-b8ce70c7-7d4b-423c-9c0b-99d76611e8ed-pzvsjo5b/settings.toml",
+      "target": "outputs/20260928T002758617Z-cw-prep-codex-invocation-nonprose-original-b8ce70c7-7d4b-423c-9c0b-99d76611e8ed-pzvsjo5b/settings.toml"
+    },
+    {
+      "source": "../../../../../../skill-study-private/concise-writing/cross-model-evaluation-rest-20261017/codex-native/outputs/20260928T002849686Z-cw-prep-codex-invocation-comments-original-d0bcc9ca-cdb0-47a6-8b00-bebee6b9af3c-9e7koxx_/uploader.py",
+      "target": "outputs/20260928T002849686Z-cw-prep-codex-invocation-comments-original-d0bcc9ca-cdb0-47a6-8b00-bebee6b9af3c-9e7koxx_/uploader.py"
+    },
+    {
+      "source": "../../../../../../skill-study-private/concise-writing/cross-model-evaluation-rest-20261017/codex-native/outputs/20260928T003013128Z-cw-prep-codex-invocation-comments-candidate-04ec0025-0e52-457e-bcaf-d0aa276479ce-zddhbmy4/uploader.py",
+      "target": "outputs/20260928T003013128Z-cw-prep-codex-invocation-comments-candidate-04ec0025-0e52-457e-bcaf-d0aa276479ce-zddhbmy4/uploader.py"
+    },
+    {
+      "source": "../../../../../../skill-study-private/concise-writing/cross-model-evaluation-rest-20261017/codex-native/outputs/20260928T010512713Z-cw-prep-codex-invocation-tighten-original-5aeb6022-93f2-49a8-91a2-ca68c1b01f00-41qhmjnl/report.md",
+      "target": "outputs/20260928T010512713Z-cw-prep-codex-invocation-tighten-original-5aeb6022-93f2-49a8-91a2-ca68c1b01f00-41qhmjnl/report.md"
+    },
+    {
+      "source": "../../../../../../skill-study-private/concise-writing/cross-model-evaluation-rest-20261017/codex-native/outputs/20260928T010710131Z-cw-prep-codex-invocation-tighten-candidate-427d8ad1-da61-42b9-bb7d-7736d3e8b8c1-7iriblkh/report.md",
+      "target": "outputs/20260928T010710131Z-cw-prep-codex-invocation-tighten-candidate-427d8ad1-da61-42b9-bb7d-7736d3e8b8c1-7iriblkh/report.md"
+    },
+    {
+      "source": "../../../../../../skill-study-private/concise-writing/cross-model-evaluation-rest-20261017/codex-native/outputs/20260928T010816231Z-cw-prep-codex-invocation-write-candidate-e432c1f5-9884-44b6-a92f-359ee0ccab67-s1bi64x2/report.md",
+      "target": "outputs/20260928T010816231Z-cw-prep-codex-invocation-write-candidate-e432c1f5-9884-44b6-a92f-359ee0ccab67-s1bi64x2/report.md"
+    },
+    {
+      "source": "../../../../../../skill-study-private/concise-writing/cross-model-evaluation-rest-20261017/codex-native/outputs/20260928T010915718Z-cw-prep-codex-invocation-write-original-2310bcbb-59b5-40d3-a637-3778a2566f83-ouqcj1su/report.md",
+      "target": "outputs/20260928T010915718Z-cw-prep-codex-invocation-write-original-2310bcbb-59b5-40d3-a637-3778a2566f83-ouqcj1su/report.md"
+    },
+    {
+      "source": "../../../../../../skill-study-private/concise-writing/cross-model-evaluation-rest-20261017/codex-native/outputs/20260928T011041652Z-cw-prep-codex-invocation-nonprose-original-90a766f4-2925-4270-a165-d1868b615b6f-_ea6x0j9/settings.toml",
+      "target": "outputs/20260928T011041652Z-cw-prep-codex-invocation-nonprose-original-90a766f4-2925-4270-a165-d1868b615b6f-_ea6x0j9/settings.toml"
+    },
+    {
+      "source": "../../../../../../skill-study-private/concise-writing/cross-model-evaluation-rest-20261017/codex-native/outputs/20260928T011131799Z-cw-prep-codex-invocation-nonprose-candidate-315ca3ea-f86a-4b21-83bc-0d2840e157f2-af547uvm/settings.toml",
+      "target": "outputs/20260928T011131799Z-cw-prep-codex-invocation-nonprose-candidate-315ca3ea-f86a-4b21-83bc-0d2840e157f2-af547uvm/settings.toml"
+    },
+    {
+      "source": "../../../../../../skill-study-private/concise-writing/cross-model-evaluation-rest-20261017/codex-native/outputs/20260928T011220266Z-cw-prep-codex-invocation-comments-candidate-6ac92187-3fb7-475a-bac9-4a016b00c553-kbr5u2zo/uploader.py",
+      "target": "outputs/20260928T011220266Z-cw-prep-codex-invocation-comments-candidate-6ac92187-3fb7-475a-bac9-4a016b00c553-kbr5u2zo/uploader.py"
+    },
+    {
+      "source": "../../../../../../skill-study-private/concise-writing/cross-model-evaluation-rest-20261017/codex-native/outputs/20260928T011658064Z-cw-prep-codex-invocation-comments-original-7a86e37c-26e8-4954-aa04-0da33a3ab97b-rv8o3197/uploader.py",
+      "target": "outputs/20260928T011658064Z-cw-prep-codex-invocation-comments-original-7a86e37c-26e8-4954-aa04-0da33a3ab97b-rv8o3197/uploader.py"
+    },
+    {
+      "source": "../../../../../../skill-study-private/concise-writing/cross-model-evaluation-rest-20261017/codex-native/policy.txt",
+      "target": "policy.txt"
+    },
+    {
+      "source": "../../../../../../skill-study-private/concise-writing/cross-model-evaluation-rest-20261017/codex-native/prior-assessment.md",
+      "target": "prior-assessment.md"
+    }
+  ],
+  "execution": {
+    "provider": "claude",
+    "model": "claude-fable-5-1",
+    "effort": "medium",
+    "permissions": "read-only"
+  }
+}

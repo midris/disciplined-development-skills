@@ -26,7 +26,7 @@ A preferences-only grant did not fix authentication, and no whole `~/.claude` di
 Authentication output remained in memory; no credentials were copied or retained.
 Git may print a denied shared xcrun-cache warning but still succeeds; shared-cache writes remain blocked.
 
-[Qualification index](../skill-studies/sweeping-stale-references/input-isolation-qualification.json) identifies the exact source hashes, four initial failing probes, seven passing probes and the verified external inventory (438 entries).
+[Qualification index](../skill-studies/sweeping-stale-references/runs/coverage-baseline-01/input-isolation-qualification.json) identifies the exact source hashes, four initial failing probes, seven passing probes and the verified external inventory (438 entries).
 Raw evidence uses the existing same-host study store; this does not establish a new backup arrangement.
 These are local enforcement and authentication checks, not another model/tool round trip or exhaustive host isolation proof.
 Runtime installation roots and exact authentication files remain deliberate read exceptions; Claude's model-network access remains available.

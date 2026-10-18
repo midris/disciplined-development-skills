@@ -1,7 +1,7 @@
 # CW contact reassessment: consistency review
 
 Scope: the owner-authorized reassessment of confirm-versus-record in E, all affected historical/new results, current protocol/design/plan pointers and full-suite completion claims.
-The [policy and report](../skill-studies/concise-writing/reassessment-contact-01/README.md) own the revised interpretation and outcome mappings.
+The [policy and report](../skill-studies/concise-writing/runs/contact-reassessment-01/README.md) own the revised interpretation and outcome mappings.
 This is a Codex controller self-review, not a new model output evaluation.
 
 The policy was written before replacement judgments and applies the same meaning-based boundary to all versions/providers, including the previously tested comprehensive version.
@@ -13,7 +13,7 @@ Every new result passes the actual document consumer; original result records, a
 The class sweep covered active E score summaries, coverage-map claims, the design's failure rationale, edit recommendations, scenario completion and authority.
 Current protocol counts use the reassessment; frozen aggregate reports and cross-model reviews have explicit notices directing readers to it.
 Historical readiness checks still verify the historical pinned batches, not a fictional rerun or independently validated new score set.
-The separate [verification](../skill-studies/concise-writing/reassessment-contact-01/verification.json) checks the new mapping/counts, all thirteen affected inventories/captures and unchanged source/result identities.
+The separate [verification](../skill-studies/concise-writing/runs/contact-reassessment-01/verification.json) checks the new mapping/counts, all thirteen affected inventories/captures and unchanged source/result identities.
 The claimed draft advantage and recording-specific structural recommendation are withdrawn.
 The original/comprehensive suite is complete on both providers; the new drafts have only E, with seven cases still untested.
 Remaining unsupported-claim, readability and selection findings are identified as historical, with evaluator disputes and loaded/unloaded cases disclosed.

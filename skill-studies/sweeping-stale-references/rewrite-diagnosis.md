@@ -11,7 +11,7 @@ Any accepted edits must go in a separate candidate, preserving that snapshot and
 Inspected public text, tool calls and results in twelve retained bundles: Sonnet orders 18, 19, 25, 26, 29–32 and Opus orders 5–8.
 Every file listed in those bundles' inventories matched its recorded hash; the inventory hashes also matched the indexes.
 No Git commands were run in retained bundles and no evidence was modified.
-Line references below refer to each bundle's `stdout.txt`, resolved through the [Sonnet index](claude-comparison-01-run-index.json) or [Opus index](claude-opus-invocation-01-run-index.json).
+Line references below refer to each bundle's `stdout.txt`, resolved through the [Sonnet index](runs/claude-comparison-01/claude-comparison-01-run-index.json) or [Opus index](runs/claude-opus-invocation-01/claude-opus-invocation-01-run-index.json).
 These are exposed development cases, inspected by the same active session; no independent, blind or held-out claim follows.
 No new model calls were made.
 
@@ -24,8 +24,8 @@ No new model calls were made.
 | Sonnet misses can also misinterpret read claims | Sonnet 29, line 41 says troubleshooting has no specific count; Sonnet 31, lines 13–16 reads the docs but calls their old policy current. Both omit SSR. | Reading context is necessary for the observed Opus gap but does not guarantee correct interpretation. Compare each complete claim with the settled fact. |
 | Successful native runs explicitly select SSR | Sonnet 26, lines 8–15; Sonnet 30, line 36; Sonnet 32, lines 26–27; Opus 7, lines 5–6. | The catalog/tool path works in these cases. Successes do not identify why other calls skipped it. |
 
-The [Sonnet assessment](claude-comparison-01-assessment.md#findings-and-interpretation) also records an original pressure failure after reading the relevant documents and a rewrite success that claimed a post-edit search it had not performed.
-The [Opus assessment](claude-opus-invocation-01-assessment.md#findings-and-interpretation) records the successful paired run's search occurring after its commit claimed it had run.
+The [Sonnet assessment](runs/claude-comparison-01/claude-comparison-01-assessment.md#findings-and-interpretation) also records an original pressure failure after reading the relevant documents and a rewrite success that claimed a post-edit search it had not performed.
+The [Opus assessment](runs/claude-opus-invocation-01/claude-opus-invocation-01-assessment.md#findings-and-interpretation) records the successful paired run's search occurring after its commit claimed it had run.
 Retain these as separate semantic-interpretation and verification-timing observations, not additional independent functional failures.
 
 ## Draft edits for review

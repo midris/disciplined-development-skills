@@ -4,7 +4,7 @@ Scope: the 34-call `claude-comparison-01`, its fixed inputs, scored results, ret
 Review: active-session self-review; not independent or blind.
 
 The comparison is complete with 34 valid setups and no retry or replacement calls.
-The [assessment](../skill-studies/sweeping-stale-references/claude-comparison-01-assessment.md) separates functional outcomes, timely native invocation and procedural accounting.
+The [assessment](../skill-studies/sweeping-stale-references/runs/claude-comparison-01/claude-comparison-01-assessment.md) separates functional outcomes, timely native invocation and procedural accounting.
 No skill or runner source changed during collection.
 
 ## Corrections during closing review

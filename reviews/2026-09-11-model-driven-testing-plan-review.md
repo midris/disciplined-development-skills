@@ -179,7 +179,7 @@ Read isolation, exact evaluator configuration and an authorized model/tool round
 Validation: new configuration/propagation/capture tests failed before implementation, then passed; runner unit suite **273 passed**, local dummy-provider process suite **12 passed**, hook suite **263 passed, 3 skipped**.
 Installed local probes passed for both read-only policies and the existing Codex writable Git policy, including actual mutation denials and Claude scratch symlink escape denial.
 No authentication or model calls occurred; initial nested-sandbox failures were preserved before host-permitted probes succeeded.
-The [qualification index](../skill-studies/sweeping-stale-references/permissions-qualification.json) records source/CLI identities and verified same-host primary/backup evidence copies.
+The [qualification index](../skill-studies/sweeping-stale-references/runs/coverage-baseline-01/permissions-qualification.json) records source/CLI identities and verified same-host primary/backup evidence copies.
 This is implementation verification, not a new external PASS or study-effectiveness result.
 
 ## Response to external review of dd5880c
@@ -233,7 +233,7 @@ The owner continuation requests dispatch of the reviewed pair. Execution evidenc
 
 ## Pilot execution checkpoint, 2026-09-12
 
-Both authorized Sol-low subject calls completed; [the pilot report](../skill-studies/sweeping-stale-references/pilot-results.md) links retained evidence and separate functional/procedural observations.
+Both authorized Sol-low subject calls completed; [the pilot report](../skill-studies/sweeping-stale-references/runs/pilot-01/pilot-results.md) links retained evidence and separate functional/procedural observations.
 The original repaired all seven current consumers; the control found the siblings but repaired only the README.
 The original's nine-entry account omitted six broader-search matches, a non-blocking procedural defect under the pre-run criteria.
 Both complete raw bundles have verified primary and backup copies outside Git. No additional model call, skill edit or measured-baseline claim follows from this checkpoint.
@@ -259,7 +259,7 @@ The review confirms that accounting scope is explicit before collection and the 
 
 ## Pilot 02 execution checkpoint, 2026-09-13
 
-The owner approved the exact control/original Sol-low pair after the preparation PASS. Both calls completed; the [assessment](../skill-studies/sweeping-stale-references/pilot-02-results.md) records 4/4 committed repairs for original versus 1/4 for control, with preservation met in both. No independent post-run model review is claimed; owner review of the bundles is next.
+The owner approved the exact control/original Sol-low pair after the preparation PASS. Both calls completed; the [assessment](../skill-studies/sweeping-stale-references/runs/pilot-02/pilot-02-results.md) records 4/4 committed repairs for original versus 1/4 for control, with preservation met in both. No independent post-run model review is claimed; owner review of the bundles is next.
 Controller inspection verified identical initial trees, complete original-skill loading, ordered traces, committed diffs and replay from two working directories. Full source/primary/backup inventories and frozen input hashes were reverified after inspection. The six-versus-seven-path summary error is a minor procedural defect with no functional consequence. No scoring-policy amendment or extra run is warranted by it.
 A controller-package omission was corrected by copying and verifying the checker's existing pristine-fixture dependency; frozen inputs and checks were unchanged. Active plan/protocol status and allocation now reflect four subject calls, no evaluator/authoring/retry calls and no unspent dispatch authorization. Local document links, JSON parsing and `git diff --check` pass; hook suite: 263 passed, 3 skipped.
 
@@ -304,7 +304,7 @@ Scope: current framework/plan/protocol, both assessed pilot pairs and retained e
 These are distinct reference-integrity, uncertainty-representation and status-routing issues. Fix the full classes in the new, undispatched checker; do not rewrite frozen historical instruments or retrospectively alter prior judgments.
 
 Resolution and re-review: both P2s and the status-routing P3 are closed. The checker verifies every declared pristine SHA-256 before any command or output deletion, and its preservation loop uses that fixed inventory. Missing directory, missing/changed historical reference and timed-out retired-option probes were observed failing before the fixes; the final 14-test checker suite passes. The inventory matches all 69 supplied fixture files; subject inputs and the original/control difference are unchanged. Selection-time language is distinguished from current qualified state in both routing documents.
-The new [pilot-wide verification record](../skill-studies/sweeping-stale-references/pilot-review-2026-09-13.json) retains fresh checks of all four primary/backup bundle inventories, matching baseline trees, complete retained Git histories and disposable runtime replays. Both prior original runs still contain all required committed edits; both controls contain only README. Assessment and policy identities verify. No prior outcome, accounting ambiguity or severity rule changed.
+The new [pilot-wide verification record](../skill-studies/sweeping-stale-references/runs/pilot-02/pilot-review-2026-09-13.json) retains fresh checks of all four primary/backup bundle inventories, matching baseline trees, complete retained Git histories and disposable runtime replays. Both prior original runs still contain all required committed edits; both controls contain only README. Assessment and policy identities verify. No prior outcome, accounting ambiguity or severity rule changed.
 Final local checks: four CLI tests, fourteen checker tests, 285 runner unit tests, twelve dummy-provider process smokes, and 263 hook tests with three existing skips. The initial combined runner invocation had six Claude process failures because the outer sandbox denied nested sandbox-exec; a minimal invocation reproduced that restriction. All process smokes passed with host execution, with no model calls. No runner code change or new sandbox qualification claim follows.
 All remaining limits are explicit: actual Shiv subject behavior and discovery difficulty are unobserved; the full upstream/hosted-CI suite, reserved-case isolation and model-evaluator reliability remain unqualified. Prior assessed artifacts and rejected pilot-03 content remain intentionally unchanged. No remaining blocking finding in this controller re-review; this is not an independent evaluator review. The owner authorized committing and pushing the reviewed preparation, not further subject dispatch.
 

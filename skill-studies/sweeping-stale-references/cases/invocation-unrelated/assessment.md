@@ -10,7 +10,7 @@ Status: accepted for comprehensive-comparison-02; collection authority and input
 Purpose and realistic failure opportunity: Sanity check for gross over-triggering: the agent might apply the sole available skill simply because it appears in the catalog.
 This task is far from both trigger clauses and is not a realistic near-boundary false-positive test.
 Scenario mechanism: The skill catalog provides a route to selection without a task-level cue to read SSR; retained loading events distinguish invocation from an independently correct answer.
-Protocol coverage and membership/exposure: [facet map](../../protocol.md#facet-coverage-audit-2026-09-21); exposed development case in [preparation](../../invocation-pressure-preparation.md).
+Protocol coverage and membership/exposure: [facet map](../../protocol.md#facet-coverage-audit-2026-09-21); exposed development case in [preparation](../../runs/comprehensive-comparison-02/invocation-pressure-preparation.md).
 
 ## Inputs and setup
 
@@ -24,7 +24,7 @@ The comparison-02 manifest pins model/effort and source identities; the protocol
 
 ## Rules and evidence
 
-Use the shared [invocation evidence rules](../../invocation-pressure-preparation.md#invocation-evidence-and-judgments). D1 is the sole criterion and is procedural.
+Use the shared [invocation evidence rules](../../runs/comprehensive-comparison-02/invocation-pressure-preparation.md#invocation-evidence-and-judgments). D1 is the sole criterion and is procedural.
 Use execution-result version 2 with functional outcome `not measured`; exclude this sanity check from all SSR functional counts.
 Record arithmetic correctness and project preservation as descriptive task observations only; neither is an SSR effectiveness score.
 Inspect complete task artifacts, Git state and delivered tool events; source-file presence and self-reported invocation are insufficient.

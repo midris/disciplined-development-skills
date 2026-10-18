@@ -1,6 +1,6 @@
 # CW draft and comparison consistency review
 
-Historical assessment/review record: the later [owner-authorized contact reassessment](../skill-studies/concise-writing/reassessment-contact-01/README.md) supersedes the contact-only failure interpretation and related edit recommendation. Prior judgments and reviewer text below remain preserved.
+Historical assessment/review record: the later [owner-authorized contact reassessment](../skill-studies/concise-writing/runs/contact-reassessment-01/README.md) supersedes the contact-only failure interpretation and related edit recommendation. Prior judgments and reviewer text below remain preserved.
 
 Scope: controller self-review of the complete baseline-derived draft package against the framework, active plan, CW contract, eight-case coverage, completed subject/cross-model evidence, unchanged original/comprehensive snapshots and installed writing-skills.
 This is the Codex author's review, not an independent model evaluation or evidence that the drafts work.
@@ -65,7 +65,7 @@ No unresolved blocking findings in the preparation design; that review did not c
 ## Collection-close review
 
 The approved forty-subject/two-evaluator stage is complete, with every subject retained and scored and both Opus reviews audited.
-The [reconciliation](../skill-studies/concise-writing/drafts/baseline-iteration/testing/evaluation/assessment.md) preserves both the same-model severity disagreement and concrete quality differences below the pass threshold.
+The [reconciliation](../skill-studies/concise-writing/runs/baseline-iteration-e-01/evaluation/assessment.md) preserves both the same-model severity disagreement and concrete quality differences below the pass threshold.
 The controller retains the fixed source-grounded judgments without changing criteria, selecting a favorable evaluator verdict or claiming unanimous confirmation.
 Neither draft is adopted or automatically frozen: both still omit the recording action once on Claude, and the next owner decision precedes any revision or full-suite allocation.
 
@@ -74,7 +74,7 @@ Completed collection/review state now points to the protocol; frozen manifests, 
 The future 208-subject/eighteen-evaluator forecast is explicitly only the completed diagnostic plus a fresh full suite; any fresh five-repetition wording qualification would be additional, separately estimated and authorized.
 This closes a prospective cost ambiguity without changing the completed allocation.
 
-[Final verification](../skill-studies/concise-writing/drafts/baseline-iteration/testing/evaluation/verification.json) confirms forty subject and two evaluator inventories/captures, 110 protected subject files, all 28 protected files in each review packet, and complete delivery of 27 required files before each first-pass assessment and prior read.
+[Final verification](../skill-studies/concise-writing/runs/baseline-iteration-e-01/evaluation/verification.json) confirms forty subject and two evaluator inventories/captures, 110 protected subject files, all 28 protected files in each review packet, and complete delivery of 27 required files before each first-pass assessment and prior read.
 Both first-pass texts are retained separately from the unchanged raw bundles, with unique identities and hashes in the audits.
 Both providers' exact CLI/model traces and evaluator tool catalogs match the qualified settings.
 The live/original skill, both draft bodies since `c8b8c3b`, descriptions, all six rationalizations and exact Python-generated diffs remain unchanged.

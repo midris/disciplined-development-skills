@@ -20,7 +20,7 @@ Its preserved snapshot and results remain development evidence; omitting a fifth
 ### First diagnostic: document addition E
 
 E integrates new requirements into an existing briefing.
-The original design selected it for then-scored baseline/comprehensive omissions and successful controls; the [contact reassessment](../../reassessment-contact-01/README.md) withdraws that failure interpretation.
+The original design selected it for then-scored baseline/comprehensive omissions and successful controls; the [contact reassessment](../../runs/contact-reassessment-01/README.md) withdraws that failure interpretation.
 It remains a useful document-integration regression case, but is no longer RED for this wording distinction.
 Assess the whole report against the unchanged source and all new notes, including incident branches and evidence limits; do not reduce success to the contact-recording phrase.
 

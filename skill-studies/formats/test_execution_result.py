@@ -17,7 +17,7 @@ class ExecutionResultContract(unittest.TestCase):
         cls.validator = Draft202012Validator(cls.schema)
         # Reuse retained evidence payload only as structural test data. The
         # synthetic manifest below is not a migrated or accepted assessment.
-        cls.record = json.loads((ROOT.parent / 'sweeping-stale-references/assessments/pilot-02-original-policy-3-example.json').read_text())
+        cls.record = json.loads((ROOT.parent / 'sweeping-stale-references/runs/historical-assessment-examples/pilot-02-original-policy-3-example.json').read_text())
         cls.record.update(schema_version='1', record_kind='execution result',
                           result_id=cls.record.pop('assessment_id'),
                           functional_result=cls.record.pop('functional_summary'))

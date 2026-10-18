@@ -14,7 +14,7 @@ Protocol coverage and membership/exposure: [suite map](../../protocol.md#suite-a
 ## Inputs and setup
 
 [Task](task.md) and factual [notes](fixture/notes.md); report.md does not exist initially.
-Provider/condition mappings: [configuration index](../../preparation/configuration-index.json); shared setup and input-boundary rules: [preparation](../../preparation/README.md).
+Provider/condition mappings: [configuration index](../../runs/suite-2026-09-27/preparation/configuration-index.json); shared setup and input-boundary rules: [preparation](../../runs/suite-2026-09-27/preparation/README.md).
 Criteria, worked boundary examples and preparation records are controller-only; configurations enumerate every supplied file.
 The protocol links provider-specific manifests and runtime qualification; this card supplies no independent dispatch authority.
 Require exact source/task/condition identities, retained complete artifacts and trace.
@@ -24,7 +24,7 @@ Explicit-load skill conditions require full body delivery before editing; native
 
 The controller applies [CW-expanded-1](../../protocol.md#expanded-suite-assessment-policy) with this case card; historical policy-4 scores remain unchanged.
 
-This is prose generation, not a policy-4 editing reassessment: use the prospective contextual F1–F3 below. The manager needs the three-workspace pilot request, staging evidence and limits, checkpoint mechanism, named staffing/time, approval, mismatch evidence and separate expansion decision. No unsupported readiness claim is allowed. Source-to-output length is descriptive because notes and report serve different reading roles. Apply [native evidence](../../preparation/README.md#native-evidence).
+This is prose generation, not a policy-4 editing reassessment: use the prospective contextual F1–F3 below. The manager needs the three-workspace pilot request, staging evidence and limits, checkpoint mechanism, named staffing/time, approval, mismatch evidence and separate expansion decision. No unsupported readiness claim is allowed. Source-to-output length is descriptive because notes and report serve different reading roles. Apply [native evidence](../../runs/suite-2026-09-27/preparation/README.md#native-evidence).
 Judge the saved artifact, not a completion claim.
 Missing capture is uncertainty; reliable evidence of a missing required artifact is a task failure.
 Use complete input and output context.

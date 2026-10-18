@@ -35,7 +35,7 @@ No experiment allocation follows from this authoring-method approval.
 | Routine A/B passes, historical controls pass, N4 quality passes even without loading | Preserve these behaviors and the code-context judgment; do not add instructions merely to force a measured advantage | Core test, keep rules and composition |
 | Claude positive loads are missed; comprehensive also over-triggers on Codex numeric tasks | Hold the original description fixed during body comparison; investigate wording separately against positive and negative native cases | Later discovery experiment |
 
-The [contact reassessment](../../skill-studies/concise-writing/reassessment-contact-01/README.md) corrects the E diagnosis without changing either draft; other observed failures remain regression targets, not proof of a new-body defect.
+The [contact reassessment](../../skill-studies/concise-writing/runs/contact-reassessment-01/README.md) corrects the E diagnosis without changing either draft; other observed failures remain regression targets, not proof of a new-body defect.
 The original already requires preservation, a global pass and a diff; appending another generic checklist would repeat those rules without changing their application.
 The targeted draft strengthens those existing locations.
 Writing-skills’ form table recommends a REQUIRED template slot for an omitted element in an existing template.

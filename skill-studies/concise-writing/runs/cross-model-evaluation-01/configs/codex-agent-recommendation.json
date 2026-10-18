@@ -1,0 +1,85 @@
+{
+  "schema_version": "0.2",
+  "id": "cw-eval-codex-agent-recommendation",
+  "prompt": "../prompt.md",
+  "fixtures": [
+    {
+      "source": "../../../../../../skill-study-private/concise-writing/cross-model-evaluation-rest-20261017/codex-agent-recommendation/EVALUATION-INDEX.json",
+      "target": "EVALUATION-INDEX.json"
+    },
+    {
+      "source": "../../../../../../skill-study-private/concise-writing/cross-model-evaluation-rest-20261017/codex-agent-recommendation/MECHANICAL-CHECKS.json",
+      "target": "MECHANICAL-CHECKS.json"
+    },
+    {
+      "source": "../../../../../../skill-study-private/concise-writing/cross-model-evaluation-rest-20261017/codex-agent-recommendation/WORD-COUNTS.json",
+      "target": "WORD-COUNTS.json"
+    },
+    {
+      "source": "../../../../../../skill-study-private/concise-writing/cross-model-evaluation-rest-20261017/codex-agent-recommendation/cases/agent-recommendation/criteria.md",
+      "target": "cases/agent-recommendation/criteria.md"
+    },
+    {
+      "source": "../../../../../../skill-study-private/concise-writing/cross-model-evaluation-rest-20261017/codex-agent-recommendation/cases/agent-recommendation/report.md",
+      "target": "cases/agent-recommendation/report.md"
+    },
+    {
+      "source": "../../../../../../skill-study-private/concise-writing/cross-model-evaluation-rest-20261017/codex-agent-recommendation/cases/agent-recommendation/task.md",
+      "target": "cases/agent-recommendation/task.md"
+    },
+    {
+      "source": "../../../../../../skill-study-private/concise-writing/cross-model-evaluation-rest-20261017/codex-agent-recommendation/expanded-policy.txt",
+      "target": "expanded-policy.txt"
+    },
+    {
+      "source": "../../../../../../skill-study-private/concise-writing/cross-model-evaluation-rest-20261017/codex-agent-recommendation/outputs/20260927T220336270Z-cw-prep-codex-agent-recommendation-control-f21c4bc8-b1d7-4eef-8bee-f3dcdddde219-b46na0at/report.md",
+      "target": "outputs/20260927T220336270Z-cw-prep-codex-agent-recommendation-control-f21c4bc8-b1d7-4eef-8bee-f3dcdddde219-b46na0at/report.md"
+    },
+    {
+      "source": "../../../../../../skill-study-private/concise-writing/cross-model-evaluation-rest-20261017/codex-agent-recommendation/outputs/20260927T220645779Z-cw-prep-codex-agent-recommendation-original-fac12bea-a253-4d4c-b2b4-5e07db1c69b8-phim9093/report.md",
+      "target": "outputs/20260927T220645779Z-cw-prep-codex-agent-recommendation-original-fac12bea-a253-4d4c-b2b4-5e07db1c69b8-phim9093/report.md"
+    },
+    {
+      "source": "../../../../../../skill-study-private/concise-writing/cross-model-evaluation-rest-20261017/codex-agent-recommendation/outputs/20260927T220953376Z-cw-prep-codex-agent-recommendation-candidate-d117045d-cc65-467c-9db1-7b6002a85256-pxwyx0js/report.md",
+      "target": "outputs/20260927T220953376Z-cw-prep-codex-agent-recommendation-candidate-d117045d-cc65-467c-9db1-7b6002a85256-pxwyx0js/report.md"
+    },
+    {
+      "source": "../../../../../../skill-study-private/concise-writing/cross-model-evaluation-rest-20261017/codex-agent-recommendation/outputs/20260927T223142059Z-cw-prep-codex-agent-recommendation-original-50c73b21-705b-41e8-b4cc-21aaf8a05960-maehze92/report.md",
+      "target": "outputs/20260927T223142059Z-cw-prep-codex-agent-recommendation-original-50c73b21-705b-41e8-b4cc-21aaf8a05960-maehze92/report.md"
+    },
+    {
+      "source": "../../../../../../skill-study-private/concise-writing/cross-model-evaluation-rest-20261017/codex-agent-recommendation/outputs/20260927T223252773Z-cw-prep-codex-agent-recommendation-candidate-88a7bb69-81b2-4cd2-b66f-28619b56d8ad-x9ycjqbn/report.md",
+      "target": "outputs/20260927T223252773Z-cw-prep-codex-agent-recommendation-candidate-88a7bb69-81b2-4cd2-b66f-28619b56d8ad-x9ycjqbn/report.md"
+    },
+    {
+      "source": "../../../../../../skill-study-private/concise-writing/cross-model-evaluation-rest-20261017/codex-agent-recommendation/outputs/20260927T223424120Z-cw-prep-codex-agent-recommendation-control-1680d932-5ed0-44aa-9a80-75f425c65c86-8xqtxmwz/report.md",
+      "target": "outputs/20260927T223424120Z-cw-prep-codex-agent-recommendation-control-1680d932-5ed0-44aa-9a80-75f425c65c86-8xqtxmwz/report.md"
+    },
+    {
+      "source": "../../../../../../skill-study-private/concise-writing/cross-model-evaluation-rest-20261017/codex-agent-recommendation/outputs/20260927T225120770Z-cw-prep-codex-agent-recommendation-candidate-bfdce625-280f-41d2-919f-cf7858c336dd-7o998gy3/report.md",
+      "target": "outputs/20260927T225120770Z-cw-prep-codex-agent-recommendation-candidate-bfdce625-280f-41d2-919f-cf7858c336dd-7o998gy3/report.md"
+    },
+    {
+      "source": "../../../../../../skill-study-private/concise-writing/cross-model-evaluation-rest-20261017/codex-agent-recommendation/outputs/20260927T225239761Z-cw-prep-codex-agent-recommendation-control-48f1999f-93a4-421d-b64a-92fb0f47eb7d-exf3fcq5/report.md",
+      "target": "outputs/20260927T225239761Z-cw-prep-codex-agent-recommendation-control-48f1999f-93a4-421d-b64a-92fb0f47eb7d-exf3fcq5/report.md"
+    },
+    {
+      "source": "../../../../../../skill-study-private/concise-writing/cross-model-evaluation-rest-20261017/codex-agent-recommendation/outputs/20260927T225353868Z-cw-prep-codex-agent-recommendation-original-3143f3d0-1521-4116-8439-2015aee6a012-i_w0hzpk/report.md",
+      "target": "outputs/20260927T225353868Z-cw-prep-codex-agent-recommendation-original-3143f3d0-1521-4116-8439-2015aee6a012-i_w0hzpk/report.md"
+    },
+    {
+      "source": "../../../../../../skill-study-private/concise-writing/cross-model-evaluation-rest-20261017/codex-agent-recommendation/policy.txt",
+      "target": "policy.txt"
+    },
+    {
+      "source": "../../../../../../skill-study-private/concise-writing/cross-model-evaluation-rest-20261017/codex-agent-recommendation/prior-assessment.md",
+      "target": "prior-assessment.md"
+    }
+  ],
+  "execution": {
+    "provider": "claude",
+    "model": "claude-fable-5-1",
+    "effort": "medium",
+    "permissions": "read-only"
+  }
+}

@@ -11,10 +11,10 @@ This is navigation, not a duplicate progress or decision record.
 
 Read the [protocol opening](protocol.md) for current status, owner decisions and next action; its [results index](protocol.md#results-and-decision) links all batch assessments.
 Preserve settled scenarios, criteria and historical identities; do not derive a baseline from a candidate or rescore old records to continue.
-SSR's [core assessment](core-baseline-01-assessment.md) records an unresolved Shiv category boundary: its P3 counts are not three established skill defects and do not independently justify a rewrite.
+SSR's [core assessment](runs/core-baseline-01/core-baseline-01-assessment.md) records an unresolved Shiv category boundary: its P3 counts are not three established skill defects and do not independently justify a rewrite.
 Controller criteria, manifests and revealing evidence remain outside subject context; raw evidence stays in the protocol's external stores.
 
 The [external-review resolution](../../reviews/2026-09-23-ssr-runtime-and-preparation.md) records the prospective login-shell correction, planning-guideline readiness support, and unrelated-case downgrade to procedural sanity evidence.
 Run the installed login-shell qualification before future collection; prior isolation alone does not guarantee Homebrew Python.
 
-[Codex scripted discovery qualification and Claude documentation cross-check](native-discovery-qualification.md) separate scripted transport qualification from the subsequent model observations linked in that record.
+[Codex scripted discovery qualification and Claude documentation cross-check](runs/comprehensive-comparison-02/native-discovery-qualification.md) separate scripted transport qualification from the subsequent model observations linked in that record.

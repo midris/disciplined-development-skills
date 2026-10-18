@@ -14,7 +14,7 @@ Protocol coverage and membership/exposure: [suite map](../../protocol.md#suite-a
 ## Inputs and setup
 
 [Task](task.md), [source](fixture/uploader.py) and authoritative [maintenance notes](fixture/MAINTAINER-NOTES.md).
-Provider/condition mappings: [configuration index](../../preparation/configuration-index.json); shared setup and input-boundary rules: [preparation](../../preparation/README.md).
+Provider/condition mappings: [configuration index](../../runs/suite-2026-09-27/preparation/configuration-index.json); shared setup and input-boundary rules: [preparation](../../runs/suite-2026-09-27/preparation/README.md).
 Criteria, worked boundary examples and preparation records are controller-only; configurations enumerate every supplied file.
 The protocol links provider-specific manifests and runtime qualification; this card supplies no independent dispatch authority.
 Require exact source/task/condition identities, retained complete artifacts and trace.
@@ -26,7 +26,7 @@ The controller applies [CW-expanded-1](../../protocol.md#expanded-suite-assessme
 
 This is code-comment editing with supplied rationale, not a historical policy-4 editing reassessment.
 Assess the complete resulting comments in code context against the source and maintenance notes, using prospective F1–F3 below.
-Apply [native evidence](../../preparation/README.md#native-evidence): only availability is arranged, never an explicit CW read request.
+Apply [native evidence](../../runs/suite-2026-09-27/preparation/README.md#native-evidence): only availability is arranged, never an explicit CW read request.
 The full body must arrive before the first task comment edit; reading code/notes and the neutral baseline commit may precede loading.
 Keep invocation and comment-quality outcomes separate, including missed/partial/late loads and insufficient capture.
 
@@ -40,7 +40,7 @@ Exit 0 confirms executable-token preservation only; exit 1 identifies invalid sy
 Judge comment meaning manually in the complete file; no required location, exact wording or one-comment-per-operation rule applies.
 Record comment-only word counts separately from code and notes; useful new explanation may increase comment length without a failure.
 Missing capture is uncertainty; a reliably missing required artifact is a task failure.
-See [boundary checks](../../preparation/boundary-checks.md).
+See [boundary checks](../../runs/suite-2026-09-27/preparation/boundary-checks.md).
 
 ## Criteria
 
