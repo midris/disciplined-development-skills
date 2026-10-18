@@ -1,0 +1,85 @@
+{
+  "schema_version": "0.2",
+  "id": "cw-eval-claude-long-handoff",
+  "prompt": "../prompt.md",
+  "fixtures": [
+    {
+      "source": "../../../../../skill-study-private/concise-writing/cross-model-evaluation-rest-20261017/claude-long-handoff/EVALUATION-INDEX.json",
+      "target": "EVALUATION-INDEX.json"
+    },
+    {
+      "source": "../../../../../skill-study-private/concise-writing/cross-model-evaluation-rest-20261017/claude-long-handoff/MECHANICAL-CHECKS.json",
+      "target": "MECHANICAL-CHECKS.json"
+    },
+    {
+      "source": "../../../../../skill-study-private/concise-writing/cross-model-evaluation-rest-20261017/claude-long-handoff/WORD-COUNTS.json",
+      "target": "WORD-COUNTS.json"
+    },
+    {
+      "source": "../../../../../skill-study-private/concise-writing/cross-model-evaluation-rest-20261017/claude-long-handoff/cases/long-handoff/criteria.md",
+      "target": "cases/long-handoff/criteria.md"
+    },
+    {
+      "source": "../../../../../skill-study-private/concise-writing/cross-model-evaluation-rest-20261017/claude-long-handoff/cases/long-handoff/report.md",
+      "target": "cases/long-handoff/report.md"
+    },
+    {
+      "source": "../../../../../skill-study-private/concise-writing/cross-model-evaluation-rest-20261017/claude-long-handoff/cases/long-handoff/task.md",
+      "target": "cases/long-handoff/task.md"
+    },
+    {
+      "source": "../../../../../skill-study-private/concise-writing/cross-model-evaluation-rest-20261017/claude-long-handoff/expanded-policy.txt",
+      "target": "expanded-policy.txt"
+    },
+    {
+      "source": "../../../../../skill-study-private/concise-writing/cross-model-evaluation-rest-20261017/claude-long-handoff/outputs/20260927T233013729Z-cw-prep-claude-long-handoff-candidate-b63815e4-323f-4aaa-ac90-3ea89df4af15-9q_pk0ns/report.md",
+      "target": "outputs/20260927T233013729Z-cw-prep-claude-long-handoff-candidate-b63815e4-323f-4aaa-ac90-3ea89df4af15-9q_pk0ns/report.md"
+    },
+    {
+      "source": "../../../../../skill-study-private/concise-writing/cross-model-evaluation-rest-20261017/claude-long-handoff/outputs/20260927T233128227Z-cw-prep-claude-long-handoff-control-e5154dc9-1c3f-42b7-85f2-6d89bf64fdcf-vlfolm74/report.md",
+      "target": "outputs/20260927T233128227Z-cw-prep-claude-long-handoff-control-e5154dc9-1c3f-42b7-85f2-6d89bf64fdcf-vlfolm74/report.md"
+    },
+    {
+      "source": "../../../../../skill-study-private/concise-writing/cross-model-evaluation-rest-20261017/claude-long-handoff/outputs/20260927T233234778Z-cw-prep-claude-long-handoff-original-404c8490-fc07-4b5b-8cf9-af74189ab044-w8wfynca/report.md",
+      "target": "outputs/20260927T233234778Z-cw-prep-claude-long-handoff-original-404c8490-fc07-4b5b-8cf9-af74189ab044-w8wfynca/report.md"
+    },
+    {
+      "source": "../../../../../skill-study-private/concise-writing/cross-model-evaluation-rest-20261017/claude-long-handoff/outputs/20260927T234225382Z-cw-prep-claude-long-handoff-control-c512361c-f51b-44c0-bd6d-6a36a51bcf7b-cpgo8067/report.md",
+      "target": "outputs/20260927T234225382Z-cw-prep-claude-long-handoff-control-c512361c-f51b-44c0-bd6d-6a36a51bcf7b-cpgo8067/report.md"
+    },
+    {
+      "source": "../../../../../skill-study-private/concise-writing/cross-model-evaluation-rest-20261017/claude-long-handoff/outputs/20260927T234325394Z-cw-prep-claude-long-handoff-original-de7be08f-aa76-4c2f-aa56-d03f3a7ad759-yeow0gln/report.md",
+      "target": "outputs/20260927T234325394Z-cw-prep-claude-long-handoff-original-de7be08f-aa76-4c2f-aa56-d03f3a7ad759-yeow0gln/report.md"
+    },
+    {
+      "source": "../../../../../skill-study-private/concise-writing/cross-model-evaluation-rest-20261017/claude-long-handoff/outputs/20260927T234440271Z-cw-prep-claude-long-handoff-candidate-dcd2f405-7937-4447-bb51-cf991f705155-mf8wp2io/report.md",
+      "target": "outputs/20260927T234440271Z-cw-prep-claude-long-handoff-candidate-dcd2f405-7937-4447-bb51-cf991f705155-mf8wp2io/report.md"
+    },
+    {
+      "source": "../../../../../skill-study-private/concise-writing/cross-model-evaluation-rest-20261017/claude-long-handoff/outputs/20260927T235524302Z-cw-prep-claude-long-handoff-original-a492fb07-2460-456c-9fe3-454b1032abbb-k31d7x20/report.md",
+      "target": "outputs/20260927T235524302Z-cw-prep-claude-long-handoff-original-a492fb07-2460-456c-9fe3-454b1032abbb-k31d7x20/report.md"
+    },
+    {
+      "source": "../../../../../skill-study-private/concise-writing/cross-model-evaluation-rest-20261017/claude-long-handoff/outputs/20260927T235647626Z-cw-prep-claude-long-handoff-candidate-9b7206b3-fad8-4f85-a87d-070dfc8cbbf8-9irxp_hd/report.md",
+      "target": "outputs/20260927T235647626Z-cw-prep-claude-long-handoff-candidate-9b7206b3-fad8-4f85-a87d-070dfc8cbbf8-9irxp_hd/report.md"
+    },
+    {
+      "source": "../../../../../skill-study-private/concise-writing/cross-model-evaluation-rest-20261017/claude-long-handoff/outputs/20260927T235807625Z-cw-prep-claude-long-handoff-control-da260843-6ccf-41c3-84c0-724966b37bf9-9osf_7jq/report.md",
+      "target": "outputs/20260927T235807625Z-cw-prep-claude-long-handoff-control-da260843-6ccf-41c3-84c0-724966b37bf9-9osf_7jq/report.md"
+    },
+    {
+      "source": "../../../../../skill-study-private/concise-writing/cross-model-evaluation-rest-20261017/claude-long-handoff/policy.txt",
+      "target": "policy.txt"
+    },
+    {
+      "source": "../../../../../skill-study-private/concise-writing/cross-model-evaluation-rest-20261017/claude-long-handoff/prior-assessment.md",
+      "target": "prior-assessment.md"
+    }
+  ],
+  "execution": {
+    "provider": "claude",
+    "model": "claude-fable-5-1",
+    "effort": "medium",
+    "permissions": "read-only"
+  }
+}

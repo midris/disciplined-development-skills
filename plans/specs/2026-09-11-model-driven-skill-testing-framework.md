@@ -42,7 +42,7 @@ Responsibilities below are not a pipeline of separately dispatched agents.
 6. Before recommending a development base or adoption, obtain a cross-model review of the completed outputs under the fixed criteria, as described below.
 7. After an authorized edit, repeat the relevant fixed scenarios and compare their aggregate assessments under the same rules, recording any changed conditions.
 
-No separate evaluator service, fresh scoring context, blind answer-key test or calibration campaign is a prerequisite to this loop.
+No separate evaluator service, blind answer-key test or calibration campaign is a prerequisite to active-session scoring; the decision-boundary review below uses a fresh context.
 Worked examples help explain rules and settle actual ambiguities; they are not a mandatory exam for the active agent.
 The owner added cross-model output review at baseline/comparison decision boundaries on 2026-10-17; it supplements the active assessor rather than adding an evaluator call to every subject run.
 Further evaluator automation or calibration remains optional.
@@ -188,7 +188,7 @@ They calibrate interpretation; they do not establish model performance or indepe
 For mechanically checkable properties, validate the checker against known correct and incorrect artifacts.
 For semantic properties, the active agent or human inspects the evidence and applies the fixed rules, citing reasons and uncertainty.
 Disagreement can reveal an ambiguous rule, an evidence gap or a mistaken assessment; resolve the actual issue rather than automatically dispatching another model or rerunning the subject.
-If an independent evaluator or blind comparison is explicitly commissioned, define its inputs, acceptance checks and information boundaries for that optional use. Do not claim safeguards that were not established.
+Define inputs, acceptance checks and information boundaries for the required cross-model output review and any separately commissioned blind comparison. Do not claim safeguards that were not established.
 
 Output: versioned scoring rules usable by the active agent or a human, plus validated mechanical checks and useful worked examples.
 Exit condition: each judgment has a usable rule and evidence path, mechanical checks work as declared, and genuine ambiguities are resolved or explicitly unknown.

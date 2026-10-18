@@ -8,7 +8,11 @@ This record preserves supplemental judgments; original subject observations, sco
 
 On 2026-10-17 the owner requested adding cross-model output evaluation to the procedure and evaluating completed tests through a controller-started Claude session.
 The owner identified the manual evaluator as Fable at medium effort and confirmed that equivalent effectiveness should favor the shorter SKILL.md, rather than shorter generated documents.
-First reproduce the nine-output Codex long-handoff review; the retrospective extent beyond CW is awaiting the owner's scope answer.
+The owner selected CW only, including its 120 expanded and 16 historical outputs; SSR evaluation is deferred until its rewrite.
+The [schedule](schedule.json) fixes twelve evaluator sessions covering all 136 outputs, with historical runtime strata kept separate.
+Start with the nine-output Codex long-handoff review to compare the controller-started evaluation with the owner's manual one.
+Use at most two concurrent evaluator sessions after this first transport/coverage check; the active controller retains and verifies every result and stops dispatch on a fault.
+The [remaining-input manifest](retrospective-inputs.json) pins the other eleven packets before their dispatch.
 Use the existing twelve-invocation evaluator ceiling, with zero automatic retry or subject-call transfer.
 The manual Claude review was supplied by the owner, outside controller-dispatched accounting; model/effort are owner-reported, not trace-verified.
 Do not count that review as an additional subject repetition or a controller evaluator invocation.
@@ -51,3 +55,6 @@ Durable copies and inventories are recorded in the evaluator input manifest befo
 
 The isolated tool surface differs from the owner's ordinary interactive Claude session, so a result is a reproduction under declared conditions, not an exact session replica.
 This evaluation adds a different model's judgment, not a reader study or a statistical reliability estimate.
+
+The twelve evaluator sessions are one diagnostic judgment per declared group, not three evaluator repetitions or an estimate of judge reliability.
+The owner’s three-repetition minimum applies to the subject observations; this review includes all those repetitions without recollecting them.

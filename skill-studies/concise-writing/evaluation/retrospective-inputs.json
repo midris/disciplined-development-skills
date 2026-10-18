@@ -1,0 +1,1040 @@
+{
+  "store": "/Users/simon/work/personal/skill-study-private/concise-writing/cross-model-evaluation-rest-20261017",
+  "inventory": {
+    "path": "/Users/simon/work/personal/skill-study-private/concise-writing/cross-model-evaluation-rest-20261017.inventory.json",
+    "sha256": "78b63af3f32df5f312029d66c574d61400ea9d6a2d01bdb20f545ec6f99607ce"
+  },
+  "groups": [
+    {
+      "configuration": "codex-agent-recommendation",
+      "files": [
+        {
+          "path": "/Users/simon/work/personal/skill-study-private/concise-writing/cross-model-evaluation-rest-20261017/codex-agent-recommendation/EVALUATION-INDEX.json",
+          "sha256": "70c3e816fa598bbcb58c03107eb1d2727b5073c156599e7dfb428eee0ef2a53c"
+        },
+        {
+          "path": "/Users/simon/work/personal/skill-study-private/concise-writing/cross-model-evaluation-rest-20261017/codex-agent-recommendation/MECHANICAL-CHECKS.json",
+          "sha256": "ca3d163bab055381827226140568f3bef7eaac187cebd76878e0b63e9e442356"
+        },
+        {
+          "path": "/Users/simon/work/personal/skill-study-private/concise-writing/cross-model-evaluation-rest-20261017/codex-agent-recommendation/WORD-COUNTS.json",
+          "sha256": "51487b62a491ffba3e201b8cfdbb1efd32ad58cf00d36ee39e2df743cc16a87e"
+        },
+        {
+          "path": "/Users/simon/work/personal/skill-study-private/concise-writing/cross-model-evaluation-rest-20261017/codex-agent-recommendation/cases/agent-recommendation/criteria.md",
+          "sha256": "79f46d1de25a6e3b9e32762903a9a36396176ac5853abfd67171ec9e8959a5ea"
+        },
+        {
+          "path": "/Users/simon/work/personal/skill-study-private/concise-writing/cross-model-evaluation-rest-20261017/codex-agent-recommendation/cases/agent-recommendation/report.md",
+          "sha256": "e9a992c7e4c14dfd5afc10cc637349f39c2030e98ed0311441675900bc3e93e9"
+        },
+        {
+          "path": "/Users/simon/work/personal/skill-study-private/concise-writing/cross-model-evaluation-rest-20261017/codex-agent-recommendation/cases/agent-recommendation/task.md",
+          "sha256": "607cbe0562a19ea092fe76ec96f13bfbe033b2e1095baef2ca38be621c0baf82"
+        },
+        {
+          "path": "/Users/simon/work/personal/skill-study-private/concise-writing/cross-model-evaluation-rest-20261017/codex-agent-recommendation/expanded-policy.txt",
+          "sha256": "9f8125d86d72a368cc12bdbc4c64cc1d7ee188f604fc13130dcd9f8313981c33"
+        },
+        {
+          "path": "/Users/simon/work/personal/skill-study-private/concise-writing/cross-model-evaluation-rest-20261017/codex-agent-recommendation/outputs/20260927T220336270Z-cw-prep-codex-agent-recommendation-control-f21c4bc8-b1d7-4eef-8bee-f3dcdddde219-b46na0at/report.md",
+          "sha256": "d1c8e088b3f2dbec618827a2666d512f7aa6e049626b1ab1c7fed6c264eff822"
+        },
+        {
+          "path": "/Users/simon/work/personal/skill-study-private/concise-writing/cross-model-evaluation-rest-20261017/codex-agent-recommendation/outputs/20260927T220645779Z-cw-prep-codex-agent-recommendation-original-fac12bea-a253-4d4c-b2b4-5e07db1c69b8-phim9093/report.md",
+          "sha256": "7ddc436fae45a2db126d1a8e0c763e50c229eab1a4e29e6bec5fc2b39343882a"
+        },
+        {
+          "path": "/Users/simon/work/personal/skill-study-private/concise-writing/cross-model-evaluation-rest-20261017/codex-agent-recommendation/outputs/20260927T220953376Z-cw-prep-codex-agent-recommendation-candidate-d117045d-cc65-467c-9db1-7b6002a85256-pxwyx0js/report.md",
+          "sha256": "109897355ed3022b99f7278818025dd937797f021ead602acf0674723db22065"
+        },
+        {
+          "path": "/Users/simon/work/personal/skill-study-private/concise-writing/cross-model-evaluation-rest-20261017/codex-agent-recommendation/outputs/20260927T223142059Z-cw-prep-codex-agent-recommendation-original-50c73b21-705b-41e8-b4cc-21aaf8a05960-maehze92/report.md",
+          "sha256": "f2907f162e776fb9d9543aed323ef240dc0a60fae9191677b888bd34080fa57d"
+        },
+        {
+          "path": "/Users/simon/work/personal/skill-study-private/concise-writing/cross-model-evaluation-rest-20261017/codex-agent-recommendation/outputs/20260927T223252773Z-cw-prep-codex-agent-recommendation-candidate-88a7bb69-81b2-4cd2-b66f-28619b56d8ad-x9ycjqbn/report.md",
+          "sha256": "679908edeaeabf68c7964c69ce6eaba9c83fc0812f7143c61fdee0d54cbcbfd4"
+        },
+        {
+          "path": "/Users/simon/work/personal/skill-study-private/concise-writing/cross-model-evaluation-rest-20261017/codex-agent-recommendation/outputs/20260927T223424120Z-cw-prep-codex-agent-recommendation-control-1680d932-5ed0-44aa-9a80-75f425c65c86-8xqtxmwz/report.md",
+          "sha256": "2c442d292cbff1a2f91d095ea5401c5e71ee1bbdea4aa9a765598cee702a4bca"
+        },
+        {
+          "path": "/Users/simon/work/personal/skill-study-private/concise-writing/cross-model-evaluation-rest-20261017/codex-agent-recommendation/outputs/20260927T225120770Z-cw-prep-codex-agent-recommendation-candidate-bfdce625-280f-41d2-919f-cf7858c336dd-7o998gy3/report.md",
+          "sha256": "8b89a79bb73129e47d99056dc9fb651503f5967e46e447666d53ae9053482aed"
+        },
+        {
+          "path": "/Users/simon/work/personal/skill-study-private/concise-writing/cross-model-evaluation-rest-20261017/codex-agent-recommendation/outputs/20260927T225239761Z-cw-prep-codex-agent-recommendation-control-48f1999f-93a4-421d-b64a-92fb0f47eb7d-exf3fcq5/report.md",
+          "sha256": "908a2ea5b06b8652b9405afd8842ecce2cd5ab6defc9144f9fcbc4e7e9fc73b4"
+        },
+        {
+          "path": "/Users/simon/work/personal/skill-study-private/concise-writing/cross-model-evaluation-rest-20261017/codex-agent-recommendation/outputs/20260927T225353868Z-cw-prep-codex-agent-recommendation-original-3143f3d0-1521-4116-8439-2015aee6a012-i_w0hzpk/report.md",
+          "sha256": "5cf06e3a8698630c6a70f435ba0e44b83f340369b08cd67bb56ae0bfafc9068c"
+        },
+        {
+          "path": "/Users/simon/work/personal/skill-study-private/concise-writing/cross-model-evaluation-rest-20261017/codex-agent-recommendation/policy.txt",
+          "sha256": "0adb7f61edea118c7ec2361dddfa7dd1c0fe4745d4431178d8d557097cfa2454"
+        },
+        {
+          "path": "/Users/simon/work/personal/skill-study-private/concise-writing/cross-model-evaluation-rest-20261017/codex-agent-recommendation/prior-assessment.md",
+          "sha256": "da7228017ab6c1d1e70fa85feb88ab3ef3b185a3d201ee07640c01ebf693eee0"
+        }
+      ]
+    },
+    {
+      "configuration": "codex-effective-briefing",
+      "files": [
+        {
+          "path": "/Users/simon/work/personal/skill-study-private/concise-writing/cross-model-evaluation-rest-20261017/codex-effective-briefing/EVALUATION-INDEX.json",
+          "sha256": "35a0b62f12bcfa8bf113faecbe8e90a75558643827d819181c29995c3d3acd24"
+        },
+        {
+          "path": "/Users/simon/work/personal/skill-study-private/concise-writing/cross-model-evaluation-rest-20261017/codex-effective-briefing/MECHANICAL-CHECKS.json",
+          "sha256": "ca3d163bab055381827226140568f3bef7eaac187cebd76878e0b63e9e442356"
+        },
+        {
+          "path": "/Users/simon/work/personal/skill-study-private/concise-writing/cross-model-evaluation-rest-20261017/codex-effective-briefing/WORD-COUNTS.json",
+          "sha256": "ecffe8dafc51e501f72b3a0296072f57a210230d91f07af1dca31f7012e46d00"
+        },
+        {
+          "path": "/Users/simon/work/personal/skill-study-private/concise-writing/cross-model-evaluation-rest-20261017/codex-effective-briefing/cases/effective-briefing/criteria.md",
+          "sha256": "ea888a8a0f6b19b6b42f55e163a3ef9dafeb9fb05a512801092eb0db0323c56c"
+        },
+        {
+          "path": "/Users/simon/work/personal/skill-study-private/concise-writing/cross-model-evaluation-rest-20261017/codex-effective-briefing/cases/effective-briefing/report.md",
+          "sha256": "93c23afd44aab52dfcd2bca53f3db0020a41f650d46d4c59a09595539dc72491"
+        },
+        {
+          "path": "/Users/simon/work/personal/skill-study-private/concise-writing/cross-model-evaluation-rest-20261017/codex-effective-briefing/cases/effective-briefing/task.md",
+          "sha256": "fbf576b5f00e154e6ee4618285d96980b1858de992e5390a1e83cf9b03cb1796"
+        },
+        {
+          "path": "/Users/simon/work/personal/skill-study-private/concise-writing/cross-model-evaluation-rest-20261017/codex-effective-briefing/expanded-policy.txt",
+          "sha256": "9f8125d86d72a368cc12bdbc4c64cc1d7ee188f604fc13130dcd9f8313981c33"
+        },
+        {
+          "path": "/Users/simon/work/personal/skill-study-private/concise-writing/cross-model-evaluation-rest-20261017/codex-effective-briefing/outputs/20260927T221147677Z-cw-prep-codex-effective-briefing-original-ddd1804d-9836-4ac9-9fb8-1a7f4f9ecf20-6_814fr3/report.md",
+          "sha256": "6e8fd6af94d91fce95c9577a0b86eba7dc5d213308f7dfdc68430b2f47a38473"
+        },
+        {
+          "path": "/Users/simon/work/personal/skill-study-private/concise-writing/cross-model-evaluation-rest-20261017/codex-effective-briefing/outputs/20260927T221404667Z-cw-prep-codex-effective-briefing-candidate-597facfe-a8f2-48e1-aaa6-bdcb40015f64-won50wvj/report.md",
+          "sha256": "05837772291f8996818df998d04ad9cce62a6140d2a33cd31ecf26f85fd9d407"
+        },
+        {
+          "path": "/Users/simon/work/personal/skill-study-private/concise-writing/cross-model-evaluation-rest-20261017/codex-effective-briefing/outputs/20260927T221546457Z-cw-prep-codex-effective-briefing-control-b468f952-55e3-4243-90a8-4dbb3222fb1c-0bpjuf2l/report.md",
+          "sha256": "d872feda936d2477c0149c78422fcef789a50693574fce125d0b40e2a0f3a932"
+        },
+        {
+          "path": "/Users/simon/work/personal/skill-study-private/concise-writing/cross-model-evaluation-rest-20261017/codex-effective-briefing/outputs/20260927T223554885Z-cw-prep-codex-effective-briefing-candidate-7c5f2f96-0d70-4e1f-bbe6-ae0eeb56deeb-ac3ytr3q/report.md",
+          "sha256": "6b71268e8601eb2f1f634fe42926ccef911a98fd353969f7194f13a620ec7995"
+        },
+        {
+          "path": "/Users/simon/work/personal/skill-study-private/concise-writing/cross-model-evaluation-rest-20261017/codex-effective-briefing/outputs/20260927T223703001Z-cw-prep-codex-effective-briefing-control-544f695d-1c95-4451-9941-1a644408e45b-xc3kp5ps/report.md",
+          "sha256": "a303d2dad205fb23e36aca714234f30025ef2a9510813f61758b6306138952e5"
+        },
+        {
+          "path": "/Users/simon/work/personal/skill-study-private/concise-writing/cross-model-evaluation-rest-20261017/codex-effective-briefing/outputs/20260927T223813606Z-cw-prep-codex-effective-briefing-original-d6f0580b-9634-4571-9564-691e4923d767-kpztyiq_/report.md",
+          "sha256": "1d1613c9e609685fe243a542515441eb7f5b3bb8bb2cb76c8cf7dbb8bf936f5d"
+        },
+        {
+          "path": "/Users/simon/work/personal/skill-study-private/concise-writing/cross-model-evaluation-rest-20261017/codex-effective-briefing/outputs/20260927T225521488Z-cw-prep-codex-effective-briefing-control-b3fe3d3d-7219-49f9-9a8d-2311f6ed83b5-a41pbdff/report.md",
+          "sha256": "948f3e745833399f3a1e0682664e615f3892e96e8fde194af7413119a9f02d94"
+        },
+        {
+          "path": "/Users/simon/work/personal/skill-study-private/concise-writing/cross-model-evaluation-rest-20261017/codex-effective-briefing/outputs/20260927T225652371Z-cw-prep-codex-effective-briefing-original-2258eb5e-c88a-4659-be3f-aaed8a2ec05c-q8ijeszs/report.md",
+          "sha256": "761bfb1037b0b7fe004f5a1181e79a588851b7299e64996b4c047cfd425837b6"
+        },
+        {
+          "path": "/Users/simon/work/personal/skill-study-private/concise-writing/cross-model-evaluation-rest-20261017/codex-effective-briefing/outputs/20260927T225815015Z-cw-prep-codex-effective-briefing-candidate-52f8fc42-95a3-4ee1-a648-ea9e312408eb-i9thgfwy/report.md",
+          "sha256": "f70970a8104461e41b34c631c68074f9cb8902514954190a452c2d8455583a97"
+        },
+        {
+          "path": "/Users/simon/work/personal/skill-study-private/concise-writing/cross-model-evaluation-rest-20261017/codex-effective-briefing/policy.txt",
+          "sha256": "0adb7f61edea118c7ec2361dddfa7dd1c0fe4745d4431178d8d557097cfa2454"
+        },
+        {
+          "path": "/Users/simon/work/personal/skill-study-private/concise-writing/cross-model-evaluation-rest-20261017/codex-effective-briefing/prior-assessment.md",
+          "sha256": "da7228017ab6c1d1e70fa85feb88ab3ef3b185a3d201ee07640c01ebf693eee0"
+        }
+      ]
+    },
+    {
+      "configuration": "codex-document-addition",
+      "files": [
+        {
+          "path": "/Users/simon/work/personal/skill-study-private/concise-writing/cross-model-evaluation-rest-20261017/codex-document-addition/EVALUATION-INDEX.json",
+          "sha256": "30c99914a356caa180fb4dd535bc4a907d291c4d4662da1fac3fe1da5d9b6d27"
+        },
+        {
+          "path": "/Users/simon/work/personal/skill-study-private/concise-writing/cross-model-evaluation-rest-20261017/codex-document-addition/MECHANICAL-CHECKS.json",
+          "sha256": "ca3d163bab055381827226140568f3bef7eaac187cebd76878e0b63e9e442356"
+        },
+        {
+          "path": "/Users/simon/work/personal/skill-study-private/concise-writing/cross-model-evaluation-rest-20261017/codex-document-addition/WORD-COUNTS.json",
+          "sha256": "4f4f5d2c88f0a9ebd4d2518fe820e1a6a9b05b2dee47c1912f7d7b8ad86708a9"
+        },
+        {
+          "path": "/Users/simon/work/personal/skill-study-private/concise-writing/cross-model-evaluation-rest-20261017/codex-document-addition/cases/document-addition/criteria.md",
+          "sha256": "f5186f445693aa14e91a1c50eb999cbbb305cbf295159f2b83a21053230c7029"
+        },
+        {
+          "path": "/Users/simon/work/personal/skill-study-private/concise-writing/cross-model-evaluation-rest-20261017/codex-document-addition/cases/document-addition/task.md",
+          "sha256": "d625196b6cf438dfe556238803851c5b86ae7f2eb07acaa31ddceb5c6e9b8db0"
+        },
+        {
+          "path": "/Users/simon/work/personal/skill-study-private/concise-writing/cross-model-evaluation-rest-20261017/codex-document-addition/expanded-policy.txt",
+          "sha256": "9f8125d86d72a368cc12bdbc4c64cc1d7ee188f604fc13130dcd9f8313981c33"
+        },
+        {
+          "path": "/Users/simon/work/personal/skill-study-private/concise-writing/cross-model-evaluation-rest-20261017/codex-document-addition/outputs/20260927T222634155Z-cw-prep-codex-document-addition-control-5efb35c5-3ea7-4971-8da1-ad97ab8916d1-s8rtkxsk/report.md",
+          "sha256": "808fd02c567f414fcd757492e72a0085e0dc1864075e2bd6c2cf7ffab18d381e"
+        },
+        {
+          "path": "/Users/simon/work/personal/skill-study-private/concise-writing/cross-model-evaluation-rest-20261017/codex-document-addition/outputs/20260927T222741404Z-cw-prep-codex-document-addition-original-539e3505-9ad9-4f2e-8d61-e3e0c428bd99-2uzulnl0/report.md",
+          "sha256": "ba9089b6a685e43e02d89c7cc9ed87c43a28229aeb0cc66b72a3e4bf7d018c8f"
+        },
+        {
+          "path": "/Users/simon/work/personal/skill-study-private/concise-writing/cross-model-evaluation-rest-20261017/codex-document-addition/outputs/20260927T222846758Z-cw-prep-codex-document-addition-candidate-57b39a12-52cb-4c52-bd0e-df75a2611397-lpzfaho7/report.md",
+          "sha256": "c8fe7502a3dbc513a3cdf15a742ffb834f6143af6f6a51c579009c3302ba0548"
+        },
+        {
+          "path": "/Users/simon/work/personal/skill-study-private/concise-writing/cross-model-evaluation-rest-20261017/codex-document-addition/outputs/20260927T224539499Z-cw-prep-codex-document-addition-original-44e5340b-72d7-4ba4-b7c1-8a127b94b1ed-1ninx8gb/report.md",
+          "sha256": "e54a3b3aef95fbf4e1ca88cff167dc27b031bb356e98ba20c9ac62a0e64f77bc"
+        },
+        {
+          "path": "/Users/simon/work/personal/skill-study-private/concise-writing/cross-model-evaluation-rest-20261017/codex-document-addition/outputs/20260927T224709842Z-cw-prep-codex-document-addition-candidate-6869980c-9800-4e54-adb7-fa3c65f5b486-mkuekb0u/report.md",
+          "sha256": "fa414933a41f6025fc1b736323a78f102711c316735bab0cadd13f0f7d35ff55"
+        },
+        {
+          "path": "/Users/simon/work/personal/skill-study-private/concise-writing/cross-model-evaluation-rest-20261017/codex-document-addition/outputs/20260927T224833884Z-cw-prep-codex-document-addition-control-2c5e679c-57f8-4dac-a611-22756d37aef0-r00pgzkh/report.md",
+          "sha256": "c751ed5da04a9603b8d8e659200bac152058d2eab33944f20e0d65f6f17bc183"
+        },
+        {
+          "path": "/Users/simon/work/personal/skill-study-private/concise-writing/cross-model-evaluation-rest-20261017/codex-document-addition/outputs/20260927T230823767Z-cw-prep-codex-document-addition-candidate-5a2f328d-3daa-4749-813c-e5193698573a-0xwq0l0b/report.md",
+          "sha256": "ac15d986f8fe55cee8662ee8102976da43838811a0440b3948f4bcc018ce97cc"
+        },
+        {
+          "path": "/Users/simon/work/personal/skill-study-private/concise-writing/cross-model-evaluation-rest-20261017/codex-document-addition/outputs/20260927T231004385Z-cw-prep-codex-document-addition-control-113c49a6-e2c1-4463-9833-79f319b913e9-cg1snaev/report.md",
+          "sha256": "22bb7029afb21ce61f1c60d48607abd332935f8b36905d9323db31006dcfc5fd"
+        },
+        {
+          "path": "/Users/simon/work/personal/skill-study-private/concise-writing/cross-model-evaluation-rest-20261017/codex-document-addition/outputs/20260927T231148702Z-cw-prep-codex-document-addition-original-0db83c3f-9c86-4031-a969-34da647bbc75-9ksee025/report.md",
+          "sha256": "6bc292d9b294c960bcfc6cad1fcc0538945d94ae9ba745e2ef28f6bf96a7fe12"
+        },
+        {
+          "path": "/Users/simon/work/personal/skill-study-private/concise-writing/cross-model-evaluation-rest-20261017/codex-document-addition/policy.txt",
+          "sha256": "0adb7f61edea118c7ec2361dddfa7dd1c0fe4745d4431178d8d557097cfa2454"
+        },
+        {
+          "path": "/Users/simon/work/personal/skill-study-private/concise-writing/cross-model-evaluation-rest-20261017/codex-document-addition/prior-assessment.md",
+          "sha256": "da7228017ab6c1d1e70fa85feb88ab3ef3b185a3d201ee07640c01ebf693eee0"
+        }
+      ]
+    },
+    {
+      "configuration": "claude-agent-recommendation",
+      "files": [
+        {
+          "path": "/Users/simon/work/personal/skill-study-private/concise-writing/cross-model-evaluation-rest-20261017/claude-agent-recommendation/EVALUATION-INDEX.json",
+          "sha256": "72bb4a928f8bd00b2e93b8fb3c0378bc85eee91db4886497b4e90e1df451e209"
+        },
+        {
+          "path": "/Users/simon/work/personal/skill-study-private/concise-writing/cross-model-evaluation-rest-20261017/claude-agent-recommendation/MECHANICAL-CHECKS.json",
+          "sha256": "ca3d163bab055381827226140568f3bef7eaac187cebd76878e0b63e9e442356"
+        },
+        {
+          "path": "/Users/simon/work/personal/skill-study-private/concise-writing/cross-model-evaluation-rest-20261017/claude-agent-recommendation/WORD-COUNTS.json",
+          "sha256": "0cff732493543c285e531eb66aaae49d547d83ba36b935b93c4ab6ab51ae361f"
+        },
+        {
+          "path": "/Users/simon/work/personal/skill-study-private/concise-writing/cross-model-evaluation-rest-20261017/claude-agent-recommendation/cases/agent-recommendation/criteria.md",
+          "sha256": "79f46d1de25a6e3b9e32762903a9a36396176ac5853abfd67171ec9e8959a5ea"
+        },
+        {
+          "path": "/Users/simon/work/personal/skill-study-private/concise-writing/cross-model-evaluation-rest-20261017/claude-agent-recommendation/cases/agent-recommendation/report.md",
+          "sha256": "e9a992c7e4c14dfd5afc10cc637349f39c2030e98ed0311441675900bc3e93e9"
+        },
+        {
+          "path": "/Users/simon/work/personal/skill-study-private/concise-writing/cross-model-evaluation-rest-20261017/claude-agent-recommendation/cases/agent-recommendation/task.md",
+          "sha256": "607cbe0562a19ea092fe76ec96f13bfbe033b2e1095baef2ca38be621c0baf82"
+        },
+        {
+          "path": "/Users/simon/work/personal/skill-study-private/concise-writing/cross-model-evaluation-rest-20261017/claude-agent-recommendation/expanded-policy.txt",
+          "sha256": "9f8125d86d72a368cc12bdbc4c64cc1d7ee188f604fc13130dcd9f8313981c33"
+        },
+        {
+          "path": "/Users/simon/work/personal/skill-study-private/concise-writing/cross-model-evaluation-rest-20261017/claude-agent-recommendation/outputs/20260927T232516711Z-cw-prep-claude-agent-recommendation-control-3862747c-475a-412c-b38a-57179ea138eb-vshn2eum/report.md",
+          "sha256": "8f9221fb79fdf8677d66e5aedb4959d8b824c703a15d5a88ae87a58546e768b6"
+        },
+        {
+          "path": "/Users/simon/work/personal/skill-study-private/concise-writing/cross-model-evaluation-rest-20261017/claude-agent-recommendation/outputs/20260927T232620692Z-cw-prep-claude-agent-recommendation-original-f0d0588d-23bf-43a5-8d39-6b494b23c8c7-nkdexxjl/report.md",
+          "sha256": "8d4d5174cf6d5b6b22506745ce3a861d4c86adeabf4c20a67b7626c5e841aef6"
+        },
+        {
+          "path": "/Users/simon/work/personal/skill-study-private/concise-writing/cross-model-evaluation-rest-20261017/claude-agent-recommendation/outputs/20260927T232717372Z-cw-prep-claude-agent-recommendation-candidate-fc8fa465-ce47-47a7-96d6-d3bf53f017ac-gph06_tw/report.md",
+          "sha256": "0d7a75113403f6f0eb18cbd3c374f81de8145ae0a1e1e5c53b3433a5572a86cc"
+        },
+        {
+          "path": "/Users/simon/work/personal/skill-study-private/concise-writing/cross-model-evaluation-rest-20261017/claude-agent-recommendation/outputs/20260927T233706058Z-cw-prep-claude-agent-recommendation-original-bb01f15c-c876-49da-8b8f-b4c9124f7c5a-h9e46_yz/report.md",
+          "sha256": "5f833e879785113d84abdaea46b4cad6cda5ac0c318722f9c35a015ab7d50a1c"
+        },
+        {
+          "path": "/Users/simon/work/personal/skill-study-private/concise-writing/cross-model-evaluation-rest-20261017/claude-agent-recommendation/outputs/20260927T233852427Z-cw-prep-claude-agent-recommendation-candidate-6cc8fda0-7b02-4fd6-a235-c1fd7e471d8b-u0i240ec/report.md",
+          "sha256": "0495ed8c932c8f5a8611083bdc2be621fbdff75fd94cd8aa66bcca47f63d339e"
+        },
+        {
+          "path": "/Users/simon/work/personal/skill-study-private/concise-writing/cross-model-evaluation-rest-20261017/claude-agent-recommendation/outputs/20260927T233932890Z-cw-prep-claude-agent-recommendation-control-c65c1314-0751-4f69-b5d2-f806fc318e8f-udv7cgas/report.md",
+          "sha256": "8446babd3a36b4f933f589ca092ea76b386accb12722efe4aee2a8ce8fc172e7"
+        },
+        {
+          "path": "/Users/simon/work/personal/skill-study-private/concise-writing/cross-model-evaluation-rest-20261017/claude-agent-recommendation/outputs/20260927T234925771Z-cw-prep-claude-agent-recommendation-candidate-9a62225d-7e41-4646-87b4-42c2add63785-id60_hi4/report.md",
+          "sha256": "f103cdb4870c9e47857bcbf7616f004721a4c5abcae427b53e4496140c9672a8"
+        },
+        {
+          "path": "/Users/simon/work/personal/skill-study-private/concise-writing/cross-model-evaluation-rest-20261017/claude-agent-recommendation/outputs/20260927T235027059Z-cw-prep-claude-agent-recommendation-control-0785b901-ce9d-4b44-b4c1-7884679f1a75-4d2ja7gj/report.md",
+          "sha256": "57e592ec106eecf033739318536fdfa9735ef66cbc306f0c391336e9863761ef"
+        },
+        {
+          "path": "/Users/simon/work/personal/skill-study-private/concise-writing/cross-model-evaluation-rest-20261017/claude-agent-recommendation/outputs/20260927T235127685Z-cw-prep-claude-agent-recommendation-original-ef25cc8f-7b1f-4723-b1ac-c0fc1437948c-nia_qd8o/report.md",
+          "sha256": "3efcb26c4c7ab444e771bb140eac2bc9bb2a70961ce6a326c9edccc72432119c"
+        },
+        {
+          "path": "/Users/simon/work/personal/skill-study-private/concise-writing/cross-model-evaluation-rest-20261017/claude-agent-recommendation/policy.txt",
+          "sha256": "0adb7f61edea118c7ec2361dddfa7dd1c0fe4745d4431178d8d557097cfa2454"
+        },
+        {
+          "path": "/Users/simon/work/personal/skill-study-private/concise-writing/cross-model-evaluation-rest-20261017/claude-agent-recommendation/prior-assessment.md",
+          "sha256": "fd656b8095f2e222b14ae8ec6a6eb2e7137a0cc8bf82e04e5a2be17bc56437bf"
+        }
+      ]
+    },
+    {
+      "configuration": "claude-effective-briefing",
+      "files": [
+        {
+          "path": "/Users/simon/work/personal/skill-study-private/concise-writing/cross-model-evaluation-rest-20261017/claude-effective-briefing/EVALUATION-INDEX.json",
+          "sha256": "2c7635483877ba0e3aa02cf8c6dce1d4a217c8c0a80f97cf80dd31488b6004a0"
+        },
+        {
+          "path": "/Users/simon/work/personal/skill-study-private/concise-writing/cross-model-evaluation-rest-20261017/claude-effective-briefing/MECHANICAL-CHECKS.json",
+          "sha256": "ca3d163bab055381827226140568f3bef7eaac187cebd76878e0b63e9e442356"
+        },
+        {
+          "path": "/Users/simon/work/personal/skill-study-private/concise-writing/cross-model-evaluation-rest-20261017/claude-effective-briefing/WORD-COUNTS.json",
+          "sha256": "a7e88e77f93589f863aef879f80b44502de94dcc7251e73bae4843b4f9cd8b95"
+        },
+        {
+          "path": "/Users/simon/work/personal/skill-study-private/concise-writing/cross-model-evaluation-rest-20261017/claude-effective-briefing/cases/effective-briefing/criteria.md",
+          "sha256": "ea888a8a0f6b19b6b42f55e163a3ef9dafeb9fb05a512801092eb0db0323c56c"
+        },
+        {
+          "path": "/Users/simon/work/personal/skill-study-private/concise-writing/cross-model-evaluation-rest-20261017/claude-effective-briefing/cases/effective-briefing/report.md",
+          "sha256": "93c23afd44aab52dfcd2bca53f3db0020a41f650d46d4c59a09595539dc72491"
+        },
+        {
+          "path": "/Users/simon/work/personal/skill-study-private/concise-writing/cross-model-evaluation-rest-20261017/claude-effective-briefing/cases/effective-briefing/task.md",
+          "sha256": "fbf576b5f00e154e6ee4618285d96980b1858de992e5390a1e83cf9b03cb1796"
+        },
+        {
+          "path": "/Users/simon/work/personal/skill-study-private/concise-writing/cross-model-evaluation-rest-20261017/claude-effective-briefing/expanded-policy.txt",
+          "sha256": "9f8125d86d72a368cc12bdbc4c64cc1d7ee188f604fc13130dcd9f8313981c33"
+        },
+        {
+          "path": "/Users/simon/work/personal/skill-study-private/concise-writing/cross-model-evaluation-rest-20261017/claude-effective-briefing/outputs/20260927T232811072Z-cw-prep-claude-effective-briefing-original-e1051552-eaa3-4d28-b9d8-d00b38f12bd4-mrdmy1zb/report.md",
+          "sha256": "f2c16863039c35c87393ecf06c47729a20f968d09c7b85e5765810e49ec7558e"
+        },
+        {
+          "path": "/Users/simon/work/personal/skill-study-private/concise-writing/cross-model-evaluation-rest-20261017/claude-effective-briefing/outputs/20260927T232855589Z-cw-prep-claude-effective-briefing-candidate-4154bb41-9cef-43d7-afc7-64978c89b639-cuqsxl7a/report.md",
+          "sha256": "3801a4966e28797786082023d21204fbe345a58f029a7e24b9f9f7c3780b5e0e"
+        },
+        {
+          "path": "/Users/simon/work/personal/skill-study-private/concise-writing/cross-model-evaluation-rest-20261017/claude-effective-briefing/outputs/20260927T232939160Z-cw-prep-claude-effective-briefing-control-4cc9c429-f7bb-4eab-a48f-4d48fb5d5b86-wfi0ghpy/report.md",
+          "sha256": "6672c7f37c45767e5ff9c27f7bddabb0db114544a4f6e9f66742e0d784006a55"
+        },
+        {
+          "path": "/Users/simon/work/personal/skill-study-private/concise-writing/cross-model-evaluation-rest-20261017/claude-effective-briefing/outputs/20260927T234014413Z-cw-prep-claude-effective-briefing-candidate-275db54b-9399-4b14-a24c-bd887482bc75-fcwy8sd1/report.md",
+          "sha256": "12bc1791c68daa994b169a3c1ac070c182585fd618dccfe27628d09bdd32defb"
+        },
+        {
+          "path": "/Users/simon/work/personal/skill-study-private/concise-writing/cross-model-evaluation-rest-20261017/claude-effective-briefing/outputs/20260927T234103893Z-cw-prep-claude-effective-briefing-control-f9b9dfb8-67c9-4538-be2b-b28cef2e837e-zykk2zqc/report.md",
+          "sha256": "f5ca73be4f22b3963eaf7a1f0471135a2d9c35dd8f2cfa9d8dafae5c4b7fef48"
+        },
+        {
+          "path": "/Users/simon/work/personal/skill-study-private/concise-writing/cross-model-evaluation-rest-20261017/claude-effective-briefing/outputs/20260927T234142843Z-cw-prep-claude-effective-briefing-original-1289adc6-2475-4db4-ad33-897589d0d3a9-u2regs9k/report.md",
+          "sha256": "a0bcf3e2f828975447704ac06f12bae0ea473ba8b727df73ec5ed9c01b38d2b3"
+        },
+        {
+          "path": "/Users/simon/work/personal/skill-study-private/concise-writing/cross-model-evaluation-rest-20261017/claude-effective-briefing/outputs/20260927T235258922Z-cw-prep-claude-effective-briefing-control-a3edf427-962c-4430-804b-0d226d11ef51-ay5y_ol4/report.md",
+          "sha256": "26580529f90276e8cba78dc4f402a57edcc0b6a0c3e2d2dae51ed9f8f8c006d9"
+        },
+        {
+          "path": "/Users/simon/work/personal/skill-study-private/concise-writing/cross-model-evaluation-rest-20261017/claude-effective-briefing/outputs/20260927T235339008Z-cw-prep-claude-effective-briefing-original-c8cf878e-d86b-40f7-bde2-3ab20fea0e09-e_185pm2/report.md",
+          "sha256": "f2c16863039c35c87393ecf06c47729a20f968d09c7b85e5765810e49ec7558e"
+        },
+        {
+          "path": "/Users/simon/work/personal/skill-study-private/concise-writing/cross-model-evaluation-rest-20261017/claude-effective-briefing/outputs/20260927T235428599Z-cw-prep-claude-effective-briefing-candidate-606f4cef-e791-4f15-9c58-0887fa43fe5d-ge2fjpht/report.md",
+          "sha256": "f1c32ba94a4d5a0cbc8d875246fc47aa58281f3be15a12137f53ce622e8fef27"
+        },
+        {
+          "path": "/Users/simon/work/personal/skill-study-private/concise-writing/cross-model-evaluation-rest-20261017/claude-effective-briefing/policy.txt",
+          "sha256": "0adb7f61edea118c7ec2361dddfa7dd1c0fe4745d4431178d8d557097cfa2454"
+        },
+        {
+          "path": "/Users/simon/work/personal/skill-study-private/concise-writing/cross-model-evaluation-rest-20261017/claude-effective-briefing/prior-assessment.md",
+          "sha256": "fd656b8095f2e222b14ae8ec6a6eb2e7137a0cc8bf82e04e5a2be17bc56437bf"
+        }
+      ]
+    },
+    {
+      "configuration": "claude-long-handoff",
+      "files": [
+        {
+          "path": "/Users/simon/work/personal/skill-study-private/concise-writing/cross-model-evaluation-rest-20261017/claude-long-handoff/EVALUATION-INDEX.json",
+          "sha256": "a29d1daa14bd9e288847600cc88b175f0f41cb93c531fe9d93a2de30da172dcf"
+        },
+        {
+          "path": "/Users/simon/work/personal/skill-study-private/concise-writing/cross-model-evaluation-rest-20261017/claude-long-handoff/MECHANICAL-CHECKS.json",
+          "sha256": "ca3d163bab055381827226140568f3bef7eaac187cebd76878e0b63e9e442356"
+        },
+        {
+          "path": "/Users/simon/work/personal/skill-study-private/concise-writing/cross-model-evaluation-rest-20261017/claude-long-handoff/WORD-COUNTS.json",
+          "sha256": "4a45ee010c286f0ad3f5dbe2588671f616439845402ce14b2706ae79d198e9cc"
+        },
+        {
+          "path": "/Users/simon/work/personal/skill-study-private/concise-writing/cross-model-evaluation-rest-20261017/claude-long-handoff/cases/long-handoff/criteria.md",
+          "sha256": "d697aa042e01a4ca048b02b24681ef98f4799fd1765c55492b243306a14a5231"
+        },
+        {
+          "path": "/Users/simon/work/personal/skill-study-private/concise-writing/cross-model-evaluation-rest-20261017/claude-long-handoff/cases/long-handoff/report.md",
+          "sha256": "0eb0946286d2a4b1708f14bcff5795cd1effdfa64af612a6cb9a89d2fac84737"
+        },
+        {
+          "path": "/Users/simon/work/personal/skill-study-private/concise-writing/cross-model-evaluation-rest-20261017/claude-long-handoff/cases/long-handoff/task.md",
+          "sha256": "8be0f67fe6b62ca0a1d5f3af9ac2ffea79eef0d0615f0979853079653b8feab8"
+        },
+        {
+          "path": "/Users/simon/work/personal/skill-study-private/concise-writing/cross-model-evaluation-rest-20261017/claude-long-handoff/expanded-policy.txt",
+          "sha256": "9f8125d86d72a368cc12bdbc4c64cc1d7ee188f604fc13130dcd9f8313981c33"
+        },
+        {
+          "path": "/Users/simon/work/personal/skill-study-private/concise-writing/cross-model-evaluation-rest-20261017/claude-long-handoff/outputs/20260927T233013729Z-cw-prep-claude-long-handoff-candidate-b63815e4-323f-4aaa-ac90-3ea89df4af15-9q_pk0ns/report.md",
+          "sha256": "698fe2653aef32b549c1d5947bc71d260b7065a426674cb26f48c624eed9e86e"
+        },
+        {
+          "path": "/Users/simon/work/personal/skill-study-private/concise-writing/cross-model-evaluation-rest-20261017/claude-long-handoff/outputs/20260927T233128227Z-cw-prep-claude-long-handoff-control-e5154dc9-1c3f-42b7-85f2-6d89bf64fdcf-vlfolm74/report.md",
+          "sha256": "3a231e63f3b78482a7322c9688e40e1be4300b746699a8c5efd4a5c82d1e23e7"
+        },
+        {
+          "path": "/Users/simon/work/personal/skill-study-private/concise-writing/cross-model-evaluation-rest-20261017/claude-long-handoff/outputs/20260927T233234778Z-cw-prep-claude-long-handoff-original-404c8490-fc07-4b5b-8cf9-af74189ab044-w8wfynca/report.md",
+          "sha256": "d66a83e892addbe3da0514b2041d4719dc37636e14bf8ec93734cd54fcf87358"
+        },
+        {
+          "path": "/Users/simon/work/personal/skill-study-private/concise-writing/cross-model-evaluation-rest-20261017/claude-long-handoff/outputs/20260927T234225382Z-cw-prep-claude-long-handoff-control-c512361c-f51b-44c0-bd6d-6a36a51bcf7b-cpgo8067/report.md",
+          "sha256": "b9fa7a336505f659e4bca032cf3bd39bdb29236262fdc1dd4c8dc5b9b47fe936"
+        },
+        {
+          "path": "/Users/simon/work/personal/skill-study-private/concise-writing/cross-model-evaluation-rest-20261017/claude-long-handoff/outputs/20260927T234325394Z-cw-prep-claude-long-handoff-original-de7be08f-aa76-4c2f-aa56-d03f3a7ad759-yeow0gln/report.md",
+          "sha256": "5331e394a08e280bc048f85384c504f0f2b23504b1b55a8301fc5dd92c646ab1"
+        },
+        {
+          "path": "/Users/simon/work/personal/skill-study-private/concise-writing/cross-model-evaluation-rest-20261017/claude-long-handoff/outputs/20260927T234440271Z-cw-prep-claude-long-handoff-candidate-dcd2f405-7937-4447-bb51-cf991f705155-mf8wp2io/report.md",
+          "sha256": "5460df83bb3e7cb5ab874f7163ea1622c43af701746fb9562b1d2cd92c631da3"
+        },
+        {
+          "path": "/Users/simon/work/personal/skill-study-private/concise-writing/cross-model-evaluation-rest-20261017/claude-long-handoff/outputs/20260927T235524302Z-cw-prep-claude-long-handoff-original-a492fb07-2460-456c-9fe3-454b1032abbb-k31d7x20/report.md",
+          "sha256": "db79b6a634187a233f179b277821598886e1b162a4291b8e429ad71eb62b861a"
+        },
+        {
+          "path": "/Users/simon/work/personal/skill-study-private/concise-writing/cross-model-evaluation-rest-20261017/claude-long-handoff/outputs/20260927T235647626Z-cw-prep-claude-long-handoff-candidate-9b7206b3-fad8-4f85-a87d-070dfc8cbbf8-9irxp_hd/report.md",
+          "sha256": "6fcab2e8221b4437c46f83ecbe2242582199f10fbd895ee583075209f33ce7d4"
+        },
+        {
+          "path": "/Users/simon/work/personal/skill-study-private/concise-writing/cross-model-evaluation-rest-20261017/claude-long-handoff/outputs/20260927T235807625Z-cw-prep-claude-long-handoff-control-da260843-6ccf-41c3-84c0-724966b37bf9-9osf_7jq/report.md",
+          "sha256": "6a413170282a00cfde381e74c62a1583e8e674161d47979f9e22564eb6f632b1"
+        },
+        {
+          "path": "/Users/simon/work/personal/skill-study-private/concise-writing/cross-model-evaluation-rest-20261017/claude-long-handoff/policy.txt",
+          "sha256": "0adb7f61edea118c7ec2361dddfa7dd1c0fe4745d4431178d8d557097cfa2454"
+        },
+        {
+          "path": "/Users/simon/work/personal/skill-study-private/concise-writing/cross-model-evaluation-rest-20261017/claude-long-handoff/prior-assessment.md",
+          "sha256": "fd656b8095f2e222b14ae8ec6a6eb2e7137a0cc8bf82e04e5a2be17bc56437bf"
+        }
+      ]
+    },
+    {
+      "configuration": "claude-document-addition",
+      "files": [
+        {
+          "path": "/Users/simon/work/personal/skill-study-private/concise-writing/cross-model-evaluation-rest-20261017/claude-document-addition/EVALUATION-INDEX.json",
+          "sha256": "a9d3921e0cba65b9f1f32afa1a47e602162b1c05059316d963936b0aa9214179"
+        },
+        {
+          "path": "/Users/simon/work/personal/skill-study-private/concise-writing/cross-model-evaluation-rest-20261017/claude-document-addition/MECHANICAL-CHECKS.json",
+          "sha256": "ca3d163bab055381827226140568f3bef7eaac187cebd76878e0b63e9e442356"
+        },
+        {
+          "path": "/Users/simon/work/personal/skill-study-private/concise-writing/cross-model-evaluation-rest-20261017/claude-document-addition/WORD-COUNTS.json",
+          "sha256": "959954dbba18d18bc9f2321960668c2ff84bf30a54568867dc3dd1953a3412a3"
+        },
+        {
+          "path": "/Users/simon/work/personal/skill-study-private/concise-writing/cross-model-evaluation-rest-20261017/claude-document-addition/cases/document-addition/criteria.md",
+          "sha256": "f5186f445693aa14e91a1c50eb999cbbb305cbf295159f2b83a21053230c7029"
+        },
+        {
+          "path": "/Users/simon/work/personal/skill-study-private/concise-writing/cross-model-evaluation-rest-20261017/claude-document-addition/cases/document-addition/task.md",
+          "sha256": "d625196b6cf438dfe556238803851c5b86ae7f2eb07acaa31ddceb5c6e9b8db0"
+        },
+        {
+          "path": "/Users/simon/work/personal/skill-study-private/concise-writing/cross-model-evaluation-rest-20261017/claude-document-addition/expanded-policy.txt",
+          "sha256": "9f8125d86d72a368cc12bdbc4c64cc1d7ee188f604fc13130dcd9f8313981c33"
+        },
+        {
+          "path": "/Users/simon/work/personal/skill-study-private/concise-writing/cross-model-evaluation-rest-20261017/claude-document-addition/outputs/20260927T233359250Z-cw-prep-claude-document-addition-control-ff953ded-c651-4c7a-9fe7-34231334a271-4t_kh8h9/report.md",
+          "sha256": "1eff166bf42aec19f2abeb09a0a47b8b7bd8fd63188dcc6d05da1a5635b0616b"
+        },
+        {
+          "path": "/Users/simon/work/personal/skill-study-private/concise-writing/cross-model-evaluation-rest-20261017/claude-document-addition/outputs/20260927T233434036Z-cw-prep-claude-document-addition-original-9a02a565-59c6-445c-9fec-fc7f88f5a74e-enriz93f/report.md",
+          "sha256": "61b510d07bf7114685e2dd9d6cd9be979e3c035195d41181d7899291a7cb584f"
+        },
+        {
+          "path": "/Users/simon/work/personal/skill-study-private/concise-writing/cross-model-evaluation-rest-20261017/claude-document-addition/outputs/20260927T233517695Z-cw-prep-claude-document-addition-candidate-ffab1f05-7a13-4769-a889-e5873f583d96-owxizber/report.md",
+          "sha256": "194d0e8c65f2ef3078831f1125bec5eb8dca939c5ab25d749ff5aff5f158e933"
+        },
+        {
+          "path": "/Users/simon/work/personal/skill-study-private/concise-writing/cross-model-evaluation-rest-20261017/claude-document-addition/outputs/20260927T234544851Z-cw-prep-claude-document-addition-original-8d35cd81-ef51-4d41-85a6-24f433c2e520-_x67trt9/report.md",
+          "sha256": "ac8177cd9f9a58e9293591a48d62d1dff83806e466cc15eb3225f152669e3064"
+        },
+        {
+          "path": "/Users/simon/work/personal/skill-study-private/concise-writing/cross-model-evaluation-rest-20261017/claude-document-addition/outputs/20260927T234630932Z-cw-prep-claude-document-addition-candidate-3381b108-ae89-40c6-8f63-e50334b084ac-0ux33zuh/report.md",
+          "sha256": "26e6f329a8115784eaa217cee561e14fb0b864f2c1bf300f9f751243355deeeb"
+        },
+        {
+          "path": "/Users/simon/work/personal/skill-study-private/concise-writing/cross-model-evaluation-rest-20261017/claude-document-addition/outputs/20260927T234746469Z-cw-prep-claude-document-addition-control-eafbb28b-4a00-404b-8b17-8ff0d03e5269-9rtjbgu6/report.md",
+          "sha256": "1fb375752e1dd67d8ccfcd0eaa430fd6a518c041bbe37ae623cc06153b8ef912"
+        },
+        {
+          "path": "/Users/simon/work/personal/skill-study-private/concise-writing/cross-model-evaluation-rest-20261017/claude-document-addition/outputs/20260928T000002667Z-cw-prep-claude-document-addition-candidate-889895ac-7de3-467a-984b-a005d729cd9a-aeynz_7d/report.md",
+          "sha256": "00639b98ee3e7bed03a35fa70c65f4ceba1d8da79bae083315ee9241614d2ee6"
+        },
+        {
+          "path": "/Users/simon/work/personal/skill-study-private/concise-writing/cross-model-evaluation-rest-20261017/claude-document-addition/outputs/20260928T000158301Z-cw-prep-claude-document-addition-control-8f4ae2c6-f5f5-4bd4-b5f8-145c0c67ad45-tpbhqfoj/report.md",
+          "sha256": "40b181b70a91e88586d5708a7f2c25027876e4b88749290edb7e0d776a98dcb7"
+        },
+        {
+          "path": "/Users/simon/work/personal/skill-study-private/concise-writing/cross-model-evaluation-rest-20261017/claude-document-addition/outputs/20260928T000259922Z-cw-prep-claude-document-addition-original-155aeae7-8300-4714-ae6f-b71c236ccf06-d5av1xak/report.md",
+          "sha256": "094302be5e42b28f432119be8a63dc3a5ca34e5bb770b94196b85a418ebe2b80"
+        },
+        {
+          "path": "/Users/simon/work/personal/skill-study-private/concise-writing/cross-model-evaluation-rest-20261017/claude-document-addition/policy.txt",
+          "sha256": "0adb7f61edea118c7ec2361dddfa7dd1c0fe4745d4431178d8d557097cfa2454"
+        },
+        {
+          "path": "/Users/simon/work/personal/skill-study-private/concise-writing/cross-model-evaluation-rest-20261017/claude-document-addition/prior-assessment.md",
+          "sha256": "fd656b8095f2e222b14ae8ec6a6eb2e7137a0cc8bf82e04e5a2be17bc56437bf"
+        }
+      ]
+    },
+    {
+      "configuration": "codex-native",
+      "files": [
+        {
+          "path": "/Users/simon/work/personal/skill-study-private/concise-writing/cross-model-evaluation-rest-20261017/codex-native/EVALUATION-INDEX.json",
+          "sha256": "03ef41980d64d7052a6e568b173b31b21b787c17a7e8f6470861c7ac121a29f0"
+        },
+        {
+          "path": "/Users/simon/work/personal/skill-study-private/concise-writing/cross-model-evaluation-rest-20261017/codex-native/MECHANICAL-CHECKS.json",
+          "sha256": "1fe0b3b883045fd7eed6a869c51def11089ab1c0f01acff979ca48f59fbc6820"
+        },
+        {
+          "path": "/Users/simon/work/personal/skill-study-private/concise-writing/cross-model-evaluation-rest-20261017/codex-native/WORD-COUNTS.json",
+          "sha256": "40fcdc3f58ef992346b9d0480a82de25cbeb74392bb31ae92501060f9d57b7b0"
+        },
+        {
+          "path": "/Users/simon/work/personal/skill-study-private/concise-writing/cross-model-evaluation-rest-20261017/codex-native/cases/invocation-comments/MAINTAINER-NOTES.md",
+          "sha256": "59175ed2990a8b65636507ce2116321e70c60b1c0a2eea288d01e075252fc847"
+        },
+        {
+          "path": "/Users/simon/work/personal/skill-study-private/concise-writing/cross-model-evaluation-rest-20261017/codex-native/cases/invocation-comments/criteria.md",
+          "sha256": "4d29abbae9a8cd8cc7bfef605ed3d89cdb15ff161e4618feb839f975074b2bd4"
+        },
+        {
+          "path": "/Users/simon/work/personal/skill-study-private/concise-writing/cross-model-evaluation-rest-20261017/codex-native/cases/invocation-comments/task.md",
+          "sha256": "6a771f7383d14f7d77b02c862155da0b10af1e83cc72333512c5a83fde9523b5"
+        },
+        {
+          "path": "/Users/simon/work/personal/skill-study-private/concise-writing/cross-model-evaluation-rest-20261017/codex-native/cases/invocation-comments/uploader.py",
+          "sha256": "2587771c1d7fee7e2ca72dbb1ff1a2594fff69775a72fff1929f437cce8ec2f1"
+        },
+        {
+          "path": "/Users/simon/work/personal/skill-study-private/concise-writing/cross-model-evaluation-rest-20261017/codex-native/cases/invocation-nonprose/criteria.md",
+          "sha256": "ba4fc8b1986a3ff6e735af28f159b2bb426969be4ec8c3c153c76cf2f084e3b8"
+        },
+        {
+          "path": "/Users/simon/work/personal/skill-study-private/concise-writing/cross-model-evaluation-rest-20261017/codex-native/cases/invocation-nonprose/settings.toml",
+          "sha256": "38f8a9ddd2d83dc10d2f3681c0e56663d2fa9907c16e105bcc4d7f3fb387158c"
+        },
+        {
+          "path": "/Users/simon/work/personal/skill-study-private/concise-writing/cross-model-evaluation-rest-20261017/codex-native/cases/invocation-nonprose/task.md",
+          "sha256": "8c960258723b03e87cfdae2fbfbd576c4ff4299206f02c87dcd50e9026c80733"
+        },
+        {
+          "path": "/Users/simon/work/personal/skill-study-private/concise-writing/cross-model-evaluation-rest-20261017/codex-native/cases/invocation-tighten/criteria.md",
+          "sha256": "4eb3c2a4d13f8a6f70deab102ddcfd6d975f1ea1af55137735fdcae940877f2b"
+        },
+        {
+          "path": "/Users/simon/work/personal/skill-study-private/concise-writing/cross-model-evaluation-rest-20261017/codex-native/cases/invocation-tighten/report.md",
+          "sha256": "e9a992c7e4c14dfd5afc10cc637349f39c2030e98ed0311441675900bc3e93e9"
+        },
+        {
+          "path": "/Users/simon/work/personal/skill-study-private/concise-writing/cross-model-evaluation-rest-20261017/codex-native/cases/invocation-tighten/task.md",
+          "sha256": "607cbe0562a19ea092fe76ec96f13bfbe033b2e1095baef2ca38be621c0baf82"
+        },
+        {
+          "path": "/Users/simon/work/personal/skill-study-private/concise-writing/cross-model-evaluation-rest-20261017/codex-native/cases/invocation-write/criteria.md",
+          "sha256": "85601cedeb934a113b4a631fd278ede95608fa23714c19a059570c2c91660793"
+        },
+        {
+          "path": "/Users/simon/work/personal/skill-study-private/concise-writing/cross-model-evaluation-rest-20261017/codex-native/cases/invocation-write/notes.md",
+          "sha256": "687328b186b130469d63398579e81d72b88866e0f7ba4e48b9dfbb4774581442"
+        },
+        {
+          "path": "/Users/simon/work/personal/skill-study-private/concise-writing/cross-model-evaluation-rest-20261017/codex-native/cases/invocation-write/task.md",
+          "sha256": "2e0ce51601ecd5e3a12168a3f0640b9ee49151fa3810cc59da0e4abcda85220f"
+        },
+        {
+          "path": "/Users/simon/work/personal/skill-study-private/concise-writing/cross-model-evaluation-rest-20261017/codex-native/expanded-policy.txt",
+          "sha256": "9f8125d86d72a368cc12bdbc4c64cc1d7ee188f604fc13130dcd9f8313981c33"
+        },
+        {
+          "path": "/Users/simon/work/personal/skill-study-private/concise-writing/cross-model-evaluation-rest-20261017/codex-native/outputs/20260928T000714703Z-cw-prep-codex-invocation-tighten-original-a36d3f60-050d-4e71-9743-405e763443c3-0jknpesu/report.md",
+          "sha256": "adec631b2b8a1bcedc2694f04a4442024e16aa84616af80ef3c326035ea4b0ad"
+        },
+        {
+          "path": "/Users/simon/work/personal/skill-study-private/concise-writing/cross-model-evaluation-rest-20261017/codex-native/outputs/20260928T000919413Z-cw-prep-codex-invocation-tighten-candidate-0997826a-025b-4085-a6a7-e9edb44ec0fe-j7v6rgin/report.md",
+          "sha256": "bbba36f831e2b5449a9f49190ce3290ccf3bbed818e93292492fd9380e2a4f08"
+        },
+        {
+          "path": "/Users/simon/work/personal/skill-study-private/concise-writing/cross-model-evaluation-rest-20261017/codex-native/outputs/20260928T001043635Z-cw-prep-codex-invocation-write-candidate-5469587f-b2e4-4ab1-b1be-d71e072a11c6-xz74yx8o/report.md",
+          "sha256": "90de27a80c43695537e686f0bf63fa24d3ea7fcd501625677c066ce3ea895f7d"
+        },
+        {
+          "path": "/Users/simon/work/personal/skill-study-private/concise-writing/cross-model-evaluation-rest-20261017/codex-native/outputs/20260928T001150965Z-cw-prep-codex-invocation-write-original-f210cc75-3aa0-4495-a479-c81f7b91eb8d-gb44qr_3/report.md",
+          "sha256": "f033236c77e5895061384e01eeda78dafc49bff132bfdeff784582aff07fe573"
+        },
+        {
+          "path": "/Users/simon/work/personal/skill-study-private/concise-writing/cross-model-evaluation-rest-20261017/codex-native/outputs/20260928T001302672Z-cw-prep-codex-invocation-nonprose-original-5b6c8f02-1ec9-4edc-8621-55b0dc863a60-jfz2rpuu/settings.toml",
+          "sha256": "9cdef29c80346b6a4d90eb85a6612160a702925e9635c1b0b537b67afe3dd071"
+        },
+        {
+          "path": "/Users/simon/work/personal/skill-study-private/concise-writing/cross-model-evaluation-rest-20261017/codex-native/outputs/20260928T001353442Z-cw-prep-codex-invocation-nonprose-candidate-4325f069-78cf-42a4-b941-02edb545e3b0-vxx6v5m4/settings.toml",
+          "sha256": "9cdef29c80346b6a4d90eb85a6612160a702925e9635c1b0b537b67afe3dd071"
+        },
+        {
+          "path": "/Users/simon/work/personal/skill-study-private/concise-writing/cross-model-evaluation-rest-20261017/codex-native/outputs/20260928T001506239Z-cw-prep-codex-invocation-comments-candidate-f6535e8d-dc71-4c1d-b0e2-885279fcba05-c6tcnht6/uploader.py",
+          "sha256": "c9d2a6903df35dd86790cb32fb316c52d4425e58caf6dda11a8ffd092017c5bc"
+        },
+        {
+          "path": "/Users/simon/work/personal/skill-study-private/concise-writing/cross-model-evaluation-rest-20261017/codex-native/outputs/20260928T001626384Z-cw-prep-codex-invocation-comments-original-510bd97c-c20e-4071-9d99-68b2d55d0e48-y5r0ib05/uploader.py",
+          "sha256": "903af9c5699f2b04bc576f27b3b9e3f6ed0523a47da338dac5cf3bd2f7c7655e"
+        },
+        {
+          "path": "/Users/simon/work/personal/skill-study-private/concise-writing/cross-model-evaluation-rest-20261017/codex-native/outputs/20260928T001853585Z-cw-prep-codex-invocation-tighten-candidate-478035f4-ef58-4139-8113-238e4c705f27-ld97fg79/report.md",
+          "sha256": "680ed20255a22fd16a2c39ba33fb288189c54e13957170b7de702a559a392001"
+        },
+        {
+          "path": "/Users/simon/work/personal/skill-study-private/concise-writing/cross-model-evaluation-rest-20261017/codex-native/outputs/20260928T002016583Z-cw-prep-codex-invocation-tighten-original-1dc9fe36-52e6-4ca3-84e5-bce0141944c0-w63p16vj/report.md",
+          "sha256": "8851845bd5dbc9395fe0f0484f8b47aa0b4ee42283d76868f89294eee8edc0b9"
+        },
+        {
+          "path": "/Users/simon/work/personal/skill-study-private/concise-writing/cross-model-evaluation-rest-20261017/codex-native/outputs/20260928T002514707Z-cw-prep-codex-invocation-write-original-85e25a1a-e7f8-4568-845c-0164de9135e5-gvty2x69/report.md",
+          "sha256": "11f54a62b8e05969c8449b60565f1255f92464a2673e5108ee717f68823eb93a"
+        },
+        {
+          "path": "/Users/simon/work/personal/skill-study-private/concise-writing/cross-model-evaluation-rest-20261017/codex-native/outputs/20260928T002616621Z-cw-prep-codex-invocation-write-candidate-3f28527e-9a49-4cc7-94c5-b1abbe19c6cf-0kkely4l/report.md",
+          "sha256": "e39eb2883e29dee8a40fd00efa0c646d63141031e2cdd997e806acbdd8c0972f"
+        },
+        {
+          "path": "/Users/simon/work/personal/skill-study-private/concise-writing/cross-model-evaluation-rest-20261017/codex-native/outputs/20260928T002717009Z-cw-prep-codex-invocation-nonprose-candidate-d3fc04a6-248b-43e0-ab21-9f4a2c686bd5-54plbx8s/settings.toml",
+          "sha256": "9cdef29c80346b6a4d90eb85a6612160a702925e9635c1b0b537b67afe3dd071"
+        },
+        {
+          "path": "/Users/simon/work/personal/skill-study-private/concise-writing/cross-model-evaluation-rest-20261017/codex-native/outputs/20260928T002758617Z-cw-prep-codex-invocation-nonprose-original-b8ce70c7-7d4b-423c-9c0b-99d76611e8ed-pzvsjo5b/settings.toml",
+          "sha256": "9cdef29c80346b6a4d90eb85a6612160a702925e9635c1b0b537b67afe3dd071"
+        },
+        {
+          "path": "/Users/simon/work/personal/skill-study-private/concise-writing/cross-model-evaluation-rest-20261017/codex-native/outputs/20260928T002849686Z-cw-prep-codex-invocation-comments-original-d0bcc9ca-cdb0-47a6-8b00-bebee6b9af3c-9e7koxx_/uploader.py",
+          "sha256": "bbad7def47d1b6bec9b6082d6a1208eeee0dbc38717f8f5989ca423cdac3ffed"
+        },
+        {
+          "path": "/Users/simon/work/personal/skill-study-private/concise-writing/cross-model-evaluation-rest-20261017/codex-native/outputs/20260928T003013128Z-cw-prep-codex-invocation-comments-candidate-04ec0025-0e52-457e-bcaf-d0aa276479ce-zddhbmy4/uploader.py",
+          "sha256": "ee1a70db3a74879fc02d41fe11fd1cd1265de5266a7b4eac13be36a0d15f4ef6"
+        },
+        {
+          "path": "/Users/simon/work/personal/skill-study-private/concise-writing/cross-model-evaluation-rest-20261017/codex-native/outputs/20260928T010512713Z-cw-prep-codex-invocation-tighten-original-5aeb6022-93f2-49a8-91a2-ca68c1b01f00-41qhmjnl/report.md",
+          "sha256": "3cc9a07cb4dd04975b1a60c80de0995af753aa8d1855563571ea9c7334bba49d"
+        },
+        {
+          "path": "/Users/simon/work/personal/skill-study-private/concise-writing/cross-model-evaluation-rest-20261017/codex-native/outputs/20260928T010710131Z-cw-prep-codex-invocation-tighten-candidate-427d8ad1-da61-42b9-bb7d-7736d3e8b8c1-7iriblkh/report.md",
+          "sha256": "1eae3bb8c74d12f0819587dadd2858bf50d09e32a54987c7e8d4f12c9c568f53"
+        },
+        {
+          "path": "/Users/simon/work/personal/skill-study-private/concise-writing/cross-model-evaluation-rest-20261017/codex-native/outputs/20260928T010816231Z-cw-prep-codex-invocation-write-candidate-e432c1f5-9884-44b6-a92f-359ee0ccab67-s1bi64x2/report.md",
+          "sha256": "3acca08ea897acd809e73ccf02b21ed87496b115abcc3cd0cd3da6504196f929"
+        },
+        {
+          "path": "/Users/simon/work/personal/skill-study-private/concise-writing/cross-model-evaluation-rest-20261017/codex-native/outputs/20260928T010915718Z-cw-prep-codex-invocation-write-original-2310bcbb-59b5-40d3-a637-3778a2566f83-ouqcj1su/report.md",
+          "sha256": "f023a7a3acfa6752444e192558f9a86981993d456e2b59828938ca006976a799"
+        },
+        {
+          "path": "/Users/simon/work/personal/skill-study-private/concise-writing/cross-model-evaluation-rest-20261017/codex-native/outputs/20260928T011041652Z-cw-prep-codex-invocation-nonprose-original-90a766f4-2925-4270-a165-d1868b615b6f-_ea6x0j9/settings.toml",
+          "sha256": "9cdef29c80346b6a4d90eb85a6612160a702925e9635c1b0b537b67afe3dd071"
+        },
+        {
+          "path": "/Users/simon/work/personal/skill-study-private/concise-writing/cross-model-evaluation-rest-20261017/codex-native/outputs/20260928T011131799Z-cw-prep-codex-invocation-nonprose-candidate-315ca3ea-f86a-4b21-83bc-0d2840e157f2-af547uvm/settings.toml",
+          "sha256": "9cdef29c80346b6a4d90eb85a6612160a702925e9635c1b0b537b67afe3dd071"
+        },
+        {
+          "path": "/Users/simon/work/personal/skill-study-private/concise-writing/cross-model-evaluation-rest-20261017/codex-native/outputs/20260928T011220266Z-cw-prep-codex-invocation-comments-candidate-6ac92187-3fb7-475a-bac9-4a016b00c553-kbr5u2zo/uploader.py",
+          "sha256": "cde57f74c74a3627e80d7db9ebcf2de849226f6b7455387d3cfa8dddc538efe5"
+        },
+        {
+          "path": "/Users/simon/work/personal/skill-study-private/concise-writing/cross-model-evaluation-rest-20261017/codex-native/outputs/20260928T011658064Z-cw-prep-codex-invocation-comments-original-7a86e37c-26e8-4954-aa04-0da33a3ab97b-rv8o3197/uploader.py",
+          "sha256": "ac3511b9ce52f42998212a6f8c236aac70d75af045cc8d7f037f3797ff8a73dc"
+        },
+        {
+          "path": "/Users/simon/work/personal/skill-study-private/concise-writing/cross-model-evaluation-rest-20261017/codex-native/policy.txt",
+          "sha256": "0adb7f61edea118c7ec2361dddfa7dd1c0fe4745d4431178d8d557097cfa2454"
+        },
+        {
+          "path": "/Users/simon/work/personal/skill-study-private/concise-writing/cross-model-evaluation-rest-20261017/codex-native/prior-assessment.md",
+          "sha256": "e4f61086f5d0df2e1c6592545e138b74fe702b9e5976c06f3a51b2ad2ab50ae6"
+        }
+      ]
+    },
+    {
+      "configuration": "claude-native",
+      "files": [
+        {
+          "path": "/Users/simon/work/personal/skill-study-private/concise-writing/cross-model-evaluation-rest-20261017/claude-native/EVALUATION-INDEX.json",
+          "sha256": "d92aadb2c8dc14a8597833b3e0f7879baa815bdb8f3a669fb4be82c0d637c38f"
+        },
+        {
+          "path": "/Users/simon/work/personal/skill-study-private/concise-writing/cross-model-evaluation-rest-20261017/claude-native/MECHANICAL-CHECKS.json",
+          "sha256": "8e06270b38784274198ead28d058c5bc553ab6e3d872556ddb4facf41158a62a"
+        },
+        {
+          "path": "/Users/simon/work/personal/skill-study-private/concise-writing/cross-model-evaluation-rest-20261017/claude-native/WORD-COUNTS.json",
+          "sha256": "2591a598bd040ba2de617dfbc2b58a5388fc598778c2bbafd1bb60a8838399f4"
+        },
+        {
+          "path": "/Users/simon/work/personal/skill-study-private/concise-writing/cross-model-evaluation-rest-20261017/claude-native/cases/invocation-comments/MAINTAINER-NOTES.md",
+          "sha256": "59175ed2990a8b65636507ce2116321e70c60b1c0a2eea288d01e075252fc847"
+        },
+        {
+          "path": "/Users/simon/work/personal/skill-study-private/concise-writing/cross-model-evaluation-rest-20261017/claude-native/cases/invocation-comments/criteria.md",
+          "sha256": "4d29abbae9a8cd8cc7bfef605ed3d89cdb15ff161e4618feb839f975074b2bd4"
+        },
+        {
+          "path": "/Users/simon/work/personal/skill-study-private/concise-writing/cross-model-evaluation-rest-20261017/claude-native/cases/invocation-comments/task.md",
+          "sha256": "6a771f7383d14f7d77b02c862155da0b10af1e83cc72333512c5a83fde9523b5"
+        },
+        {
+          "path": "/Users/simon/work/personal/skill-study-private/concise-writing/cross-model-evaluation-rest-20261017/claude-native/cases/invocation-comments/uploader.py",
+          "sha256": "2587771c1d7fee7e2ca72dbb1ff1a2594fff69775a72fff1929f437cce8ec2f1"
+        },
+        {
+          "path": "/Users/simon/work/personal/skill-study-private/concise-writing/cross-model-evaluation-rest-20261017/claude-native/cases/invocation-nonprose/criteria.md",
+          "sha256": "ba4fc8b1986a3ff6e735af28f159b2bb426969be4ec8c3c153c76cf2f084e3b8"
+        },
+        {
+          "path": "/Users/simon/work/personal/skill-study-private/concise-writing/cross-model-evaluation-rest-20261017/claude-native/cases/invocation-nonprose/settings.toml",
+          "sha256": "38f8a9ddd2d83dc10d2f3681c0e56663d2fa9907c16e105bcc4d7f3fb387158c"
+        },
+        {
+          "path": "/Users/simon/work/personal/skill-study-private/concise-writing/cross-model-evaluation-rest-20261017/claude-native/cases/invocation-nonprose/task.md",
+          "sha256": "8c960258723b03e87cfdae2fbfbd576c4ff4299206f02c87dcd50e9026c80733"
+        },
+        {
+          "path": "/Users/simon/work/personal/skill-study-private/concise-writing/cross-model-evaluation-rest-20261017/claude-native/cases/invocation-tighten/criteria.md",
+          "sha256": "4eb3c2a4d13f8a6f70deab102ddcfd6d975f1ea1af55137735fdcae940877f2b"
+        },
+        {
+          "path": "/Users/simon/work/personal/skill-study-private/concise-writing/cross-model-evaluation-rest-20261017/claude-native/cases/invocation-tighten/report.md",
+          "sha256": "e9a992c7e4c14dfd5afc10cc637349f39c2030e98ed0311441675900bc3e93e9"
+        },
+        {
+          "path": "/Users/simon/work/personal/skill-study-private/concise-writing/cross-model-evaluation-rest-20261017/claude-native/cases/invocation-tighten/task.md",
+          "sha256": "607cbe0562a19ea092fe76ec96f13bfbe033b2e1095baef2ca38be621c0baf82"
+        },
+        {
+          "path": "/Users/simon/work/personal/skill-study-private/concise-writing/cross-model-evaluation-rest-20261017/claude-native/cases/invocation-write/criteria.md",
+          "sha256": "85601cedeb934a113b4a631fd278ede95608fa23714c19a059570c2c91660793"
+        },
+        {
+          "path": "/Users/simon/work/personal/skill-study-private/concise-writing/cross-model-evaluation-rest-20261017/claude-native/cases/invocation-write/notes.md",
+          "sha256": "687328b186b130469d63398579e81d72b88866e0f7ba4e48b9dfbb4774581442"
+        },
+        {
+          "path": "/Users/simon/work/personal/skill-study-private/concise-writing/cross-model-evaluation-rest-20261017/claude-native/cases/invocation-write/task.md",
+          "sha256": "2e0ce51601ecd5e3a12168a3f0640b9ee49151fa3810cc59da0e4abcda85220f"
+        },
+        {
+          "path": "/Users/simon/work/personal/skill-study-private/concise-writing/cross-model-evaluation-rest-20261017/claude-native/expanded-policy.txt",
+          "sha256": "9f8125d86d72a368cc12bdbc4c64cc1d7ee188f604fc13130dcd9f8313981c33"
+        },
+        {
+          "path": "/Users/simon/work/personal/skill-study-private/concise-writing/cross-model-evaluation-rest-20261017/claude-native/outputs/20260928T003336313Z-cw-prep-claude-invocation-tighten-original-32fc23ce-aa22-4255-b071-c21dab8cd2d0-qdhlv2fr/report.md",
+          "sha256": "45751c7ed6cd9b895910e90ac7135c8799d909d7b3cff407b83ff744f94a128b"
+        },
+        {
+          "path": "/Users/simon/work/personal/skill-study-private/concise-writing/cross-model-evaluation-rest-20261017/claude-native/outputs/20260928T003428969Z-cw-prep-claude-invocation-tighten-candidate-a3093b65-5789-4ac6-a88b-330a154b07a7-xd4ie3wd/report.md",
+          "sha256": "5af4f03b6db90ba75b862ff0fa927e6eb650b5d3ddfb4a29f6f29a3de9071b43"
+        },
+        {
+          "path": "/Users/simon/work/personal/skill-study-private/concise-writing/cross-model-evaluation-rest-20261017/claude-native/outputs/20260928T003514166Z-cw-prep-claude-invocation-write-candidate-b01d670f-33f1-4d2e-b53e-d2ffd31c4656-n7hvowgr/report.md",
+          "sha256": "311fc9c8c3c611b1e14522c2ac141a94a39730e25d1d04638d91dfc8a24abc21"
+        },
+        {
+          "path": "/Users/simon/work/personal/skill-study-private/concise-writing/cross-model-evaluation-rest-20261017/claude-native/outputs/20260928T003602085Z-cw-prep-claude-invocation-write-original-ef30b974-328f-4848-aa9d-01640220aadf-cjk05yd7/report.md",
+          "sha256": "8c47cdccba71127d20196d1fe1fcd75506159c88db4712342fac35d6b5842e88"
+        },
+        {
+          "path": "/Users/simon/work/personal/skill-study-private/concise-writing/cross-model-evaluation-rest-20261017/claude-native/outputs/20260928T003649743Z-cw-prep-claude-invocation-nonprose-original-9cc5e4dd-5326-4fb8-9933-e6bd6c0f4a9f-vjbnmpzr/settings.toml",
+          "sha256": "9cdef29c80346b6a4d90eb85a6612160a702925e9635c1b0b537b67afe3dd071"
+        },
+        {
+          "path": "/Users/simon/work/personal/skill-study-private/concise-writing/cross-model-evaluation-rest-20261017/claude-native/outputs/20260928T003720967Z-cw-prep-claude-invocation-nonprose-candidate-92cf93c1-77d0-4924-980f-e690a006383f-31wbw09n/settings.toml",
+          "sha256": "9cdef29c80346b6a4d90eb85a6612160a702925e9635c1b0b537b67afe3dd071"
+        },
+        {
+          "path": "/Users/simon/work/personal/skill-study-private/concise-writing/cross-model-evaluation-rest-20261017/claude-native/outputs/20260928T003755284Z-cw-prep-claude-invocation-comments-candidate-e7dfca39-087c-4d4c-9814-cdca0fba56f5-9tfc8hom/uploader.py",
+          "sha256": "7f6f96be4e4ce425f73249fdf176ac82c5f2f3caec7a298b805ae93328fb58bb"
+        },
+        {
+          "path": "/Users/simon/work/personal/skill-study-private/concise-writing/cross-model-evaluation-rest-20261017/claude-native/outputs/20260928T003834062Z-cw-prep-claude-invocation-comments-original-6b912906-2db6-40ee-a705-df6003bab479-798pvftl/uploader.py",
+          "sha256": "1fb93267784c00b8ceee694f9cfe6c5a39d75847ff0a9ecb6a7da0571730aec8"
+        },
+        {
+          "path": "/Users/simon/work/personal/skill-study-private/concise-writing/cross-model-evaluation-rest-20261017/claude-native/outputs/20260928T003953195Z-cw-prep-claude-invocation-tighten-candidate-68222965-8844-4b1d-8813-fff677d4a9f2-46ivubal/report.md",
+          "sha256": "84606f96216341a75f8cd4831995662fd2c182b0b81f764972b75f7077e10447"
+        },
+        {
+          "path": "/Users/simon/work/personal/skill-study-private/concise-writing/cross-model-evaluation-rest-20261017/claude-native/outputs/20260928T004040908Z-cw-prep-claude-invocation-tighten-original-10f1c113-0795-4200-bf87-425da92ad108-z2g8f440/report.md",
+          "sha256": "aa5946701356c59990d0764d54123d26c36536a90b207f70d268fba9e08530db"
+        },
+        {
+          "path": "/Users/simon/work/personal/skill-study-private/concise-writing/cross-model-evaluation-rest-20261017/claude-native/outputs/20260928T004131890Z-cw-prep-claude-invocation-write-original-de255f51-6db4-4e91-931a-dff4a60edaaf-gej75j87/report.md",
+          "sha256": "2a490e54a788fa5a821c9204e4b8731dad5d117bae7f1020b8858d3f925a2bc2"
+        },
+        {
+          "path": "/Users/simon/work/personal/skill-study-private/concise-writing/cross-model-evaluation-rest-20261017/claude-native/outputs/20260928T004235821Z-cw-prep-claude-invocation-write-candidate-0749f7ad-94fa-47a3-bd82-58c3023ce4bc-msef1l34/report.md",
+          "sha256": "5ecf31a296b5343e9b4528a9e8ba2288c820d602a20833bc6eeca237246ee901"
+        },
+        {
+          "path": "/Users/simon/work/personal/skill-study-private/concise-writing/cross-model-evaluation-rest-20261017/claude-native/outputs/20260928T004338885Z-cw-prep-claude-invocation-nonprose-candidate-ec528382-3adb-4c83-9bc6-82e8fec1e023-h_2j58p9/settings.toml",
+          "sha256": "9cdef29c80346b6a4d90eb85a6612160a702925e9635c1b0b537b67afe3dd071"
+        },
+        {
+          "path": "/Users/simon/work/personal/skill-study-private/concise-writing/cross-model-evaluation-rest-20261017/claude-native/outputs/20260928T004419542Z-cw-prep-claude-invocation-nonprose-original-542fd7c8-3c93-430f-a977-1862f5d176d5-6im_8e0t/settings.toml",
+          "sha256": "9cdef29c80346b6a4d90eb85a6612160a702925e9635c1b0b537b67afe3dd071"
+        },
+        {
+          "path": "/Users/simon/work/personal/skill-study-private/concise-writing/cross-model-evaluation-rest-20261017/claude-native/outputs/20260928T004454866Z-cw-prep-claude-invocation-comments-original-b43b15a2-cbf5-4c67-8fc5-355898f9380a-jn6k4p5x/uploader.py",
+          "sha256": "f3ef1454c83f4279dc2c3fc2e6cd40cbacf8a839c623f06e365630fe80aa949d"
+        },
+        {
+          "path": "/Users/simon/work/personal/skill-study-private/concise-writing/cross-model-evaluation-rest-20261017/claude-native/outputs/20260928T004533905Z-cw-prep-claude-invocation-comments-candidate-f208ade3-c4f1-4eea-bbf6-ef8f9ce8398b-lr0ftv9o/uploader.py",
+          "sha256": "c6079341ee94af514bb4ad11c7915d0ec73661b386faacfed685f8d09502d6ac"
+        },
+        {
+          "path": "/Users/simon/work/personal/skill-study-private/concise-writing/cross-model-evaluation-rest-20261017/claude-native/outputs/20260928T011757062Z-cw-prep-claude-invocation-tighten-original-8872c4a0-80fa-4521-86ff-1ef185c98e11-6h0dva0a/report.md",
+          "sha256": "f0bbcf740dd52979983d079cee09b41be7292793bd9ed8b7db90ee686774d7eb"
+        },
+        {
+          "path": "/Users/simon/work/personal/skill-study-private/concise-writing/cross-model-evaluation-rest-20261017/claude-native/outputs/20260928T011843805Z-cw-prep-claude-invocation-tighten-candidate-a7611382-b798-468b-bfff-dda335a5e3a7-ym6suo4n/report.md",
+          "sha256": "d591b61b87a2410e56059a0c7cb215f5b6c07f32464876bfdebeb9070dd9a28b"
+        },
+        {
+          "path": "/Users/simon/work/personal/skill-study-private/concise-writing/cross-model-evaluation-rest-20261017/claude-native/outputs/20260928T011938667Z-cw-prep-claude-invocation-write-candidate-ee32f2ff-47b7-42b5-b2a2-c9ac8ba4f87f-kyfcwulb/report.md",
+          "sha256": "1ad52a50a389829766d71b73ec38f009f1e241b975186e008b5b49fc1e2aee75"
+        },
+        {
+          "path": "/Users/simon/work/personal/skill-study-private/concise-writing/cross-model-evaluation-rest-20261017/claude-native/outputs/20260928T012104354Z-cw-prep-claude-invocation-write-original-10ea5c1c-6ed8-4eeb-960b-5ad34ef8ad2e-gx77xlvv/report.md",
+          "sha256": "83eb05c1a3444853ab3168079bce0a230c0a00e735849dbd4b0619707984db89"
+        },
+        {
+          "path": "/Users/simon/work/personal/skill-study-private/concise-writing/cross-model-evaluation-rest-20261017/claude-native/outputs/20260928T012208212Z-cw-prep-claude-invocation-nonprose-original-18f874de-b271-48a5-b5f8-498cc980b76e-xst9nmcl/settings.toml",
+          "sha256": "9cdef29c80346b6a4d90eb85a6612160a702925e9635c1b0b537b67afe3dd071"
+        },
+        {
+          "path": "/Users/simon/work/personal/skill-study-private/concise-writing/cross-model-evaluation-rest-20261017/claude-native/outputs/20260928T012250115Z-cw-prep-claude-invocation-nonprose-candidate-b9785bfc-6cb1-4f49-8627-9de82448c578-9jlkxuxv/settings.toml",
+          "sha256": "9cdef29c80346b6a4d90eb85a6612160a702925e9635c1b0b537b67afe3dd071"
+        },
+        {
+          "path": "/Users/simon/work/personal/skill-study-private/concise-writing/cross-model-evaluation-rest-20261017/claude-native/outputs/20260928T012323047Z-cw-prep-claude-invocation-comments-candidate-cc071aac-9539-49ac-af3f-7733fcd50ff6-7iv4bfn1/uploader.py",
+          "sha256": "3f64deca3c46fd6d03f1924057e34d33196b075d1670e91a15db7382987636e6"
+        },
+        {
+          "path": "/Users/simon/work/personal/skill-study-private/concise-writing/cross-model-evaluation-rest-20261017/claude-native/outputs/20260928T012410542Z-cw-prep-claude-invocation-comments-original-3a64ec2e-67eb-44bd-a437-4ad03ded0655-tgrdbc2n/uploader.py",
+          "sha256": "fc25c8c87a0dff50bbf45c7f754fd04572f0c2b308980b76cde230da6ac013bd"
+        },
+        {
+          "path": "/Users/simon/work/personal/skill-study-private/concise-writing/cross-model-evaluation-rest-20261017/claude-native/policy.txt",
+          "sha256": "0adb7f61edea118c7ec2361dddfa7dd1c0fe4745d4431178d8d557097cfa2454"
+        },
+        {
+          "path": "/Users/simon/work/personal/skill-study-private/concise-writing/cross-model-evaluation-rest-20261017/claude-native/prior-assessment.md",
+          "sha256": "eb9d9f75340347fa0a5e42114e7e85acefe4da23cd419b0ed053f99497779b1d"
+        }
+      ]
+    },
+    {
+      "configuration": "historical-agent-recommendation",
+      "files": [
+        {
+          "path": "/Users/simon/work/personal/skill-study-private/concise-writing/cross-model-evaluation-rest-20261017/historical-agent-recommendation/EVALUATION-INDEX.json",
+          "sha256": "4c6fe68f993fbe21ab490282dabc64e5c1d4617f0d5fdfafdcdb8b771f30249f"
+        },
+        {
+          "path": "/Users/simon/work/personal/skill-study-private/concise-writing/cross-model-evaluation-rest-20261017/historical-agent-recommendation/MECHANICAL-CHECKS.json",
+          "sha256": "ca3d163bab055381827226140568f3bef7eaac187cebd76878e0b63e9e442356"
+        },
+        {
+          "path": "/Users/simon/work/personal/skill-study-private/concise-writing/cross-model-evaluation-rest-20261017/historical-agent-recommendation/WORD-COUNTS.json",
+          "sha256": "5548bc890b6aeeb57a4fa47508a0a5fa6da6fd2c012ebcf1c4898d876abd536d"
+        },
+        {
+          "path": "/Users/simon/work/personal/skill-study-private/concise-writing/cross-model-evaluation-rest-20261017/historical-agent-recommendation/cases/agent-recommendation/criteria.md",
+          "sha256": "79f46d1de25a6e3b9e32762903a9a36396176ac5853abfd67171ec9e8959a5ea"
+        },
+        {
+          "path": "/Users/simon/work/personal/skill-study-private/concise-writing/cross-model-evaluation-rest-20261017/historical-agent-recommendation/cases/agent-recommendation/report.md",
+          "sha256": "e9a992c7e4c14dfd5afc10cc637349f39c2030e98ed0311441675900bc3e93e9"
+        },
+        {
+          "path": "/Users/simon/work/personal/skill-study-private/concise-writing/cross-model-evaluation-rest-20261017/historical-agent-recommendation/cases/agent-recommendation/task.md",
+          "sha256": "607cbe0562a19ea092fe76ec96f13bfbe033b2e1095baef2ca38be621c0baf82"
+        },
+        {
+          "path": "/Users/simon/work/personal/skill-study-private/concise-writing/cross-model-evaluation-rest-20261017/historical-agent-recommendation/expanded-policy.txt",
+          "sha256": "9f8125d86d72a368cc12bdbc4c64cc1d7ee188f604fc13130dcd9f8313981c33"
+        },
+        {
+          "path": "/Users/simon/work/personal/skill-study-private/concise-writing/cross-model-evaluation-rest-20261017/historical-agent-recommendation/outputs/20260918T021815333Z-cw-agent-recommendation-original-766a67ff-ff83-4ea0-91ad-de114a6d15e6-t7l9kcgr/report.md",
+          "sha256": "fe5b5d8462441004494597481df2103ce2c6d70d8d69aaa8c9350ae8ee1e22a3"
+        },
+        {
+          "path": "/Users/simon/work/personal/skill-study-private/concise-writing/cross-model-evaluation-rest-20261017/historical-agent-recommendation/outputs/20260918T022032109Z-cw-agent-recommendation-control-471483ac-4bbe-4ac1-a64b-38e6adba5b9c-r7gjiu0e/report.md",
+          "sha256": "9497597815b16fa989fc6c56212b19bf5131a435ac688f25fea2dc269e62f98f"
+        },
+        {
+          "path": "/Users/simon/work/personal/skill-study-private/concise-writing/cross-model-evaluation-rest-20261017/historical-agent-recommendation/outputs/20260918T022544885Z-cw-agent-recommendation-control-122d29ec-540b-4558-af42-e3423324c291-8e4z4zfz/report.md",
+          "sha256": "fd6c72003762a5b6f88ba4960a5ed21165e2e8a22a971028a7fb1bc7d8e5d961"
+        },
+        {
+          "path": "/Users/simon/work/personal/skill-study-private/concise-writing/cross-model-evaluation-rest-20261017/historical-agent-recommendation/outputs/20260918T022752628Z-cw-agent-recommendation-original-cb45c075-8219-4ae1-ab1a-3514ad06d022-77xm_oea/report.md",
+          "sha256": "372a62abd3c1290a0a52dc23db00b4fddf8bd80ecbf2cbacf5c7877c24d2adad"
+        },
+        {
+          "path": "/Users/simon/work/personal/skill-study-private/concise-writing/cross-model-evaluation-rest-20261017/historical-agent-recommendation/outputs/20260918T201942773Z-cw-agent-recommendation-original-824b61cf-ede6-4a1d-a43c-bbd0aa2b79cb-plql5fqx/report.md",
+          "sha256": "b5dff3da8726a0f979f43ffd13aaedb6b8f8fa1732d2498d49b67740694b21f8"
+        },
+        {
+          "path": "/Users/simon/work/personal/skill-study-private/concise-writing/cross-model-evaluation-rest-20261017/historical-agent-recommendation/outputs/20260918T202103899Z-cw-agent-recommendation-candidate-comprehensive-74e7978d-77b1-40b4-bb5a-e360ed9f2ec4-g8uwiexe/report.md",
+          "sha256": "3c7115941f997c01673f4a15a89975cd6bd8d2993f8cee669b5466a14eb7a0f9"
+        },
+        {
+          "path": "/Users/simon/work/personal/skill-study-private/concise-writing/cross-model-evaluation-rest-20261017/historical-agent-recommendation/outputs/20260918T202610818Z-cw-agent-recommendation-candidate-comprehensive-7b3a0c9d-75eb-43ec-a3fb-77a6abdf5b53-ffaixt32/report.md",
+          "sha256": "053f04b32ba9020d0520e5c0f180c2c302db100fd8041f4a29420017974b94e0"
+        },
+        {
+          "path": "/Users/simon/work/personal/skill-study-private/concise-writing/cross-model-evaluation-rest-20261017/historical-agent-recommendation/outputs/20260918T202739534Z-cw-agent-recommendation-original-b4b02b7f-0a5d-48ba-a611-b8f27723336b-x8_nkog_/report.md",
+          "sha256": "ebc3d6982af0e2f99387e6e10b4a0fe24456006a38b588c17f9232add227bb1d"
+        },
+        {
+          "path": "/Users/simon/work/personal/skill-study-private/concise-writing/cross-model-evaluation-rest-20261017/historical-agent-recommendation/policy.txt",
+          "sha256": "0adb7f61edea118c7ec2361dddfa7dd1c0fe4745d4431178d8d557097cfa2454"
+        },
+        {
+          "path": "/Users/simon/work/personal/skill-study-private/concise-writing/cross-model-evaluation-rest-20261017/historical-agent-recommendation/prior-assessment.md",
+          "sha256": "55687c2d297eb027fc0f0a08693e80ee0c6e3f78a28efed1798723e4475c9612"
+        }
+      ]
+    },
+    {
+      "configuration": "historical-effective-briefing",
+      "files": [
+        {
+          "path": "/Users/simon/work/personal/skill-study-private/concise-writing/cross-model-evaluation-rest-20261017/historical-effective-briefing/EVALUATION-INDEX.json",
+          "sha256": "4f1371b1060d5d5729fcaad240973c8b4fd77657f0fb028bf4d387ccddbab454"
+        },
+        {
+          "path": "/Users/simon/work/personal/skill-study-private/concise-writing/cross-model-evaluation-rest-20261017/historical-effective-briefing/MECHANICAL-CHECKS.json",
+          "sha256": "ca3d163bab055381827226140568f3bef7eaac187cebd76878e0b63e9e442356"
+        },
+        {
+          "path": "/Users/simon/work/personal/skill-study-private/concise-writing/cross-model-evaluation-rest-20261017/historical-effective-briefing/WORD-COUNTS.json",
+          "sha256": "f64c43bc026a9556db4bc1c6e47f7d2dea8f1ae33e2d27266ddb4b7c49703a84"
+        },
+        {
+          "path": "/Users/simon/work/personal/skill-study-private/concise-writing/cross-model-evaluation-rest-20261017/historical-effective-briefing/cases/effective-briefing/criteria.md",
+          "sha256": "ea888a8a0f6b19b6b42f55e163a3ef9dafeb9fb05a512801092eb0db0323c56c"
+        },
+        {
+          "path": "/Users/simon/work/personal/skill-study-private/concise-writing/cross-model-evaluation-rest-20261017/historical-effective-briefing/cases/effective-briefing/report.md",
+          "sha256": "93c23afd44aab52dfcd2bca53f3db0020a41f650d46d4c59a09595539dc72491"
+        },
+        {
+          "path": "/Users/simon/work/personal/skill-study-private/concise-writing/cross-model-evaluation-rest-20261017/historical-effective-briefing/cases/effective-briefing/task.md",
+          "sha256": "fbf576b5f00e154e6ee4618285d96980b1858de992e5390a1e83cf9b03cb1796"
+        },
+        {
+          "path": "/Users/simon/work/personal/skill-study-private/concise-writing/cross-model-evaluation-rest-20261017/historical-effective-briefing/expanded-policy.txt",
+          "sha256": "9f8125d86d72a368cc12bdbc4c64cc1d7ee188f604fc13130dcd9f8313981c33"
+        },
+        {
+          "path": "/Users/simon/work/personal/skill-study-private/concise-writing/cross-model-evaluation-rest-20261017/historical-effective-briefing/outputs/20260918T022308199Z-cw-effective-briefing-control-fb4c90d8-710e-4ddc-8724-4bcd9fa2f62f-93ryhtqf/report.md",
+          "sha256": "c1104a79ea1502b48cbf8dc2aa740549471e17b15fd8048d08954a61898eb483"
+        },
+        {
+          "path": "/Users/simon/work/personal/skill-study-private/concise-writing/cross-model-evaluation-rest-20261017/historical-effective-briefing/outputs/20260918T022425145Z-cw-effective-briefing-original-15aee229-607f-4851-8a82-cf8f0aca68f0-xzio0i_c/report.md",
+          "sha256": "cc9dfa0e0d045a5afbfebdb59ebe4ffec1cd17915536c3acd1f4f407f3866622"
+        },
+        {
+          "path": "/Users/simon/work/personal/skill-study-private/concise-writing/cross-model-evaluation-rest-20261017/historical-effective-briefing/outputs/20260918T022938090Z-cw-effective-briefing-original-e439ed52-f986-4c15-a81c-fd4bf52a09e5-ii_rdnel/report.md",
+          "sha256": "10470053ccf6738bcfa23037142c6d440245a2a22b64cf939b3316711d042be0"
+        },
+        {
+          "path": "/Users/simon/work/personal/skill-study-private/concise-writing/cross-model-evaluation-rest-20261017/historical-effective-briefing/outputs/20260918T023131505Z-cw-effective-briefing-control-40542fb3-8168-479f-8abe-42e79c06ec4d-c0yy5ofe/report.md",
+          "sha256": "b5f72e3999213ce4d1e4329048395b1c9b895e2df652a47db2037dc95209eb0f"
+        },
+        {
+          "path": "/Users/simon/work/personal/skill-study-private/concise-writing/cross-model-evaluation-rest-20261017/historical-effective-briefing/outputs/20260918T202248957Z-cw-effective-briefing-candidate-comprehensive-b770db17-bd79-4729-9d4b-7a2f857039b2-ch2zfzfr/report.md",
+          "sha256": "4ba91bb0e31dafe70b4d90e890318b27af84503893497474fbe37fcc7041085c"
+        },
+        {
+          "path": "/Users/simon/work/personal/skill-study-private/concise-writing/cross-model-evaluation-rest-20261017/historical-effective-briefing/outputs/20260918T202458250Z-cw-effective-briefing-original-d8465f78-0ff5-4aab-a491-bd82ce4f613b-hn26b08a/report.md",
+          "sha256": "2a2752a32fb7248ab37d4d6c47a6d284e1a930d95c1bfc79596e5e65bb8e16ba"
+        },
+        {
+          "path": "/Users/simon/work/personal/skill-study-private/concise-writing/cross-model-evaluation-rest-20261017/historical-effective-briefing/outputs/20260918T202913040Z-cw-effective-briefing-original-50436db3-93e7-4766-95d3-89f095d5ad18-2xxg96ji/report.md",
+          "sha256": "0a8f13685b1accc5cf4896737b5621845c1726b866ebd4a5960b4642df85e771"
+        },
+        {
+          "path": "/Users/simon/work/personal/skill-study-private/concise-writing/cross-model-evaluation-rest-20261017/historical-effective-briefing/outputs/20260918T203053069Z-cw-effective-briefing-candidate-comprehensive-c1b45a8b-8a74-41c5-b8d9-ff5a5e5781f5-atwhx6qr/report.md",
+          "sha256": "a997d5d8a5ed43fcc593510da074c96ac486e8a61588b0ff697c439c75b0a4d9"
+        },
+        {
+          "path": "/Users/simon/work/personal/skill-study-private/concise-writing/cross-model-evaluation-rest-20261017/historical-effective-briefing/policy.txt",
+          "sha256": "0adb7f61edea118c7ec2361dddfa7dd1c0fe4745d4431178d8d557097cfa2454"
+        },
+        {
+          "path": "/Users/simon/work/personal/skill-study-private/concise-writing/cross-model-evaluation-rest-20261017/historical-effective-briefing/prior-assessment.md",
+          "sha256": "55687c2d297eb027fc0f0a08693e80ee0c6e3f78a28efed1798723e4475c9612"
+        }
+      ]
+    }
+  ]
+}

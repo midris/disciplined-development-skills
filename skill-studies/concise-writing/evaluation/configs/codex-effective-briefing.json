@@ -1,0 +1,85 @@
+{
+  "schema_version": "0.2",
+  "id": "cw-eval-codex-effective-briefing",
+  "prompt": "../prompt.md",
+  "fixtures": [
+    {
+      "source": "../../../../../skill-study-private/concise-writing/cross-model-evaluation-rest-20261017/codex-effective-briefing/EVALUATION-INDEX.json",
+      "target": "EVALUATION-INDEX.json"
+    },
+    {
+      "source": "../../../../../skill-study-private/concise-writing/cross-model-evaluation-rest-20261017/codex-effective-briefing/MECHANICAL-CHECKS.json",
+      "target": "MECHANICAL-CHECKS.json"
+    },
+    {
+      "source": "../../../../../skill-study-private/concise-writing/cross-model-evaluation-rest-20261017/codex-effective-briefing/WORD-COUNTS.json",
+      "target": "WORD-COUNTS.json"
+    },
+    {
+      "source": "../../../../../skill-study-private/concise-writing/cross-model-evaluation-rest-20261017/codex-effective-briefing/cases/effective-briefing/criteria.md",
+      "target": "cases/effective-briefing/criteria.md"
+    },
+    {
+      "source": "../../../../../skill-study-private/concise-writing/cross-model-evaluation-rest-20261017/codex-effective-briefing/cases/effective-briefing/report.md",
+      "target": "cases/effective-briefing/report.md"
+    },
+    {
+      "source": "../../../../../skill-study-private/concise-writing/cross-model-evaluation-rest-20261017/codex-effective-briefing/cases/effective-briefing/task.md",
+      "target": "cases/effective-briefing/task.md"
+    },
+    {
+      "source": "../../../../../skill-study-private/concise-writing/cross-model-evaluation-rest-20261017/codex-effective-briefing/expanded-policy.txt",
+      "target": "expanded-policy.txt"
+    },
+    {
+      "source": "../../../../../skill-study-private/concise-writing/cross-model-evaluation-rest-20261017/codex-effective-briefing/outputs/20260927T221147677Z-cw-prep-codex-effective-briefing-original-ddd1804d-9836-4ac9-9fb8-1a7f4f9ecf20-6_814fr3/report.md",
+      "target": "outputs/20260927T221147677Z-cw-prep-codex-effective-briefing-original-ddd1804d-9836-4ac9-9fb8-1a7f4f9ecf20-6_814fr3/report.md"
+    },
+    {
+      "source": "../../../../../skill-study-private/concise-writing/cross-model-evaluation-rest-20261017/codex-effective-briefing/outputs/20260927T221404667Z-cw-prep-codex-effective-briefing-candidate-597facfe-a8f2-48e1-aaa6-bdcb40015f64-won50wvj/report.md",
+      "target": "outputs/20260927T221404667Z-cw-prep-codex-effective-briefing-candidate-597facfe-a8f2-48e1-aaa6-bdcb40015f64-won50wvj/report.md"
+    },
+    {
+      "source": "../../../../../skill-study-private/concise-writing/cross-model-evaluation-rest-20261017/codex-effective-briefing/outputs/20260927T221546457Z-cw-prep-codex-effective-briefing-control-b468f952-55e3-4243-90a8-4dbb3222fb1c-0bpjuf2l/report.md",
+      "target": "outputs/20260927T221546457Z-cw-prep-codex-effective-briefing-control-b468f952-55e3-4243-90a8-4dbb3222fb1c-0bpjuf2l/report.md"
+    },
+    {
+      "source": "../../../../../skill-study-private/concise-writing/cross-model-evaluation-rest-20261017/codex-effective-briefing/outputs/20260927T223554885Z-cw-prep-codex-effective-briefing-candidate-7c5f2f96-0d70-4e1f-bbe6-ae0eeb56deeb-ac3ytr3q/report.md",
+      "target": "outputs/20260927T223554885Z-cw-prep-codex-effective-briefing-candidate-7c5f2f96-0d70-4e1f-bbe6-ae0eeb56deeb-ac3ytr3q/report.md"
+    },
+    {
+      "source": "../../../../../skill-study-private/concise-writing/cross-model-evaluation-rest-20261017/codex-effective-briefing/outputs/20260927T223703001Z-cw-prep-codex-effective-briefing-control-544f695d-1c95-4451-9941-1a644408e45b-xc3kp5ps/report.md",
+      "target": "outputs/20260927T223703001Z-cw-prep-codex-effective-briefing-control-544f695d-1c95-4451-9941-1a644408e45b-xc3kp5ps/report.md"
+    },
+    {
+      "source": "../../../../../skill-study-private/concise-writing/cross-model-evaluation-rest-20261017/codex-effective-briefing/outputs/20260927T223813606Z-cw-prep-codex-effective-briefing-original-d6f0580b-9634-4571-9564-691e4923d767-kpztyiq_/report.md",
+      "target": "outputs/20260927T223813606Z-cw-prep-codex-effective-briefing-original-d6f0580b-9634-4571-9564-691e4923d767-kpztyiq_/report.md"
+    },
+    {
+      "source": "../../../../../skill-study-private/concise-writing/cross-model-evaluation-rest-20261017/codex-effective-briefing/outputs/20260927T225521488Z-cw-prep-codex-effective-briefing-control-b3fe3d3d-7219-49f9-9a8d-2311f6ed83b5-a41pbdff/report.md",
+      "target": "outputs/20260927T225521488Z-cw-prep-codex-effective-briefing-control-b3fe3d3d-7219-49f9-9a8d-2311f6ed83b5-a41pbdff/report.md"
+    },
+    {
+      "source": "../../../../../skill-study-private/concise-writing/cross-model-evaluation-rest-20261017/codex-effective-briefing/outputs/20260927T225652371Z-cw-prep-codex-effective-briefing-original-2258eb5e-c88a-4659-be3f-aaed8a2ec05c-q8ijeszs/report.md",
+      "target": "outputs/20260927T225652371Z-cw-prep-codex-effective-briefing-original-2258eb5e-c88a-4659-be3f-aaed8a2ec05c-q8ijeszs/report.md"
+    },
+    {
+      "source": "../../../../../skill-study-private/concise-writing/cross-model-evaluation-rest-20261017/codex-effective-briefing/outputs/20260927T225815015Z-cw-prep-codex-effective-briefing-candidate-52f8fc42-95a3-4ee1-a648-ea9e312408eb-i9thgfwy/report.md",
+      "target": "outputs/20260927T225815015Z-cw-prep-codex-effective-briefing-candidate-52f8fc42-95a3-4ee1-a648-ea9e312408eb-i9thgfwy/report.md"
+    },
+    {
+      "source": "../../../../../skill-study-private/concise-writing/cross-model-evaluation-rest-20261017/codex-effective-briefing/policy.txt",
+      "target": "policy.txt"
+    },
+    {
+      "source": "../../../../../skill-study-private/concise-writing/cross-model-evaluation-rest-20261017/codex-effective-briefing/prior-assessment.md",
+      "target": "prior-assessment.md"
+    }
+  ],
+  "execution": {
+    "provider": "claude",
+    "model": "claude-fable-5-1",
+    "effort": "medium",
+    "permissions": "read-only"
+  }
+}

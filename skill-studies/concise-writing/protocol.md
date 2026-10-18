@@ -4,7 +4,7 @@ Format version: `1`
 Study ID: `concise-writing`
 Status: all 120 expanded CW calls are retained and assessed, with three repetitions per selected scenario/condition/provider. Coverage acceptance, editing-base selection and adoption remain owner decisions.
 Current action: add the owner-requested cross-model output review and reproduce the manual long-handoff evaluation through a qualified Fable-medium session.
-The [evaluation record](evaluation/README.md) owns its method and evidence; broader retrospective scope beyond CW awaits the owner’s answer.
+The [evaluation record](evaluation/README.md) owns its method and evidence; the owner selected all 136 CW outputs for twelve evaluator sessions and deferred SSR until its rewrite.
 The owner’s adoption tie-break is shorter SKILL.md when effectiveness and consequential output quality are equivalent; tied pass counts alone do not establish equivalence.
 The owner accepted the scenario designs C, N1–N4 and revised E during the walkthrough, retained A/B, and removed tailored skill-editing/compression tests.
 The owner-requested [preparation review and remediation](../../reviews/2026-09-27-cw-suite-preparation-review.md) are complete.
@@ -580,8 +580,8 @@ Subject collection and active-session assessment are complete; the owner subsequ
 
 | Work | Estimate | Basis |
 | --- | ---: | --- |
-| Initial cross-model long-handoff review and comparison | 15 | One Fable-medium evaluator invocation after read-only qualification. |
-| **Total** | **15** | Broader retrospective scope is selected separately; subject collection remains complete. |
+| CW cross-model retrospective, comparison and review | 90 | Twelve Fable-medium sessions over 136 outputs; model waits included once, at most two concurrent after the pilot. |
+| **Total** | **90** | Includes the first handoff review; no subject calls or SSR review. |
 
 The supplemental runner durations are 336.559 seconds for Codex and 171.913 seconds for Claude, included once in the 15- and 10-minute collection/assessment estimates.
 Preparation and final review/publication account for the other 15 supplemental minutes.

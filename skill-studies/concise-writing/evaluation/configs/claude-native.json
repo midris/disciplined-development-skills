@@ -1,0 +1,185 @@
+{
+  "schema_version": "0.2",
+  "id": "cw-eval-claude-native",
+  "prompt": "../native-prompt.md",
+  "fixtures": [
+    {
+      "source": "../../../../../skill-study-private/concise-writing/cross-model-evaluation-rest-20261017/claude-native/EVALUATION-INDEX.json",
+      "target": "EVALUATION-INDEX.json"
+    },
+    {
+      "source": "../../../../../skill-study-private/concise-writing/cross-model-evaluation-rest-20261017/claude-native/MECHANICAL-CHECKS.json",
+      "target": "MECHANICAL-CHECKS.json"
+    },
+    {
+      "source": "../../../../../skill-study-private/concise-writing/cross-model-evaluation-rest-20261017/claude-native/WORD-COUNTS.json",
+      "target": "WORD-COUNTS.json"
+    },
+    {
+      "source": "../../../../../skill-study-private/concise-writing/cross-model-evaluation-rest-20261017/claude-native/cases/invocation-comments/MAINTAINER-NOTES.md",
+      "target": "cases/invocation-comments/MAINTAINER-NOTES.md"
+    },
+    {
+      "source": "../../../../../skill-study-private/concise-writing/cross-model-evaluation-rest-20261017/claude-native/cases/invocation-comments/criteria.md",
+      "target": "cases/invocation-comments/criteria.md"
+    },
+    {
+      "source": "../../../../../skill-study-private/concise-writing/cross-model-evaluation-rest-20261017/claude-native/cases/invocation-comments/task.md",
+      "target": "cases/invocation-comments/task.md"
+    },
+    {
+      "source": "../../../../../skill-study-private/concise-writing/cross-model-evaluation-rest-20261017/claude-native/cases/invocation-comments/uploader.py",
+      "target": "cases/invocation-comments/uploader.py"
+    },
+    {
+      "source": "../../../../../skill-study-private/concise-writing/cross-model-evaluation-rest-20261017/claude-native/cases/invocation-nonprose/criteria.md",
+      "target": "cases/invocation-nonprose/criteria.md"
+    },
+    {
+      "source": "../../../../../skill-study-private/concise-writing/cross-model-evaluation-rest-20261017/claude-native/cases/invocation-nonprose/settings.toml",
+      "target": "cases/invocation-nonprose/settings.toml"
+    },
+    {
+      "source": "../../../../../skill-study-private/concise-writing/cross-model-evaluation-rest-20261017/claude-native/cases/invocation-nonprose/task.md",
+      "target": "cases/invocation-nonprose/task.md"
+    },
+    {
+      "source": "../../../../../skill-study-private/concise-writing/cross-model-evaluation-rest-20261017/claude-native/cases/invocation-tighten/criteria.md",
+      "target": "cases/invocation-tighten/criteria.md"
+    },
+    {
+      "source": "../../../../../skill-study-private/concise-writing/cross-model-evaluation-rest-20261017/claude-native/cases/invocation-tighten/report.md",
+      "target": "cases/invocation-tighten/report.md"
+    },
+    {
+      "source": "../../../../../skill-study-private/concise-writing/cross-model-evaluation-rest-20261017/claude-native/cases/invocation-tighten/task.md",
+      "target": "cases/invocation-tighten/task.md"
+    },
+    {
+      "source": "../../../../../skill-study-private/concise-writing/cross-model-evaluation-rest-20261017/claude-native/cases/invocation-write/criteria.md",
+      "target": "cases/invocation-write/criteria.md"
+    },
+    {
+      "source": "../../../../../skill-study-private/concise-writing/cross-model-evaluation-rest-20261017/claude-native/cases/invocation-write/notes.md",
+      "target": "cases/invocation-write/notes.md"
+    },
+    {
+      "source": "../../../../../skill-study-private/concise-writing/cross-model-evaluation-rest-20261017/claude-native/cases/invocation-write/task.md",
+      "target": "cases/invocation-write/task.md"
+    },
+    {
+      "source": "../../../../../skill-study-private/concise-writing/cross-model-evaluation-rest-20261017/claude-native/expanded-policy.txt",
+      "target": "expanded-policy.txt"
+    },
+    {
+      "source": "../../../../../skill-study-private/concise-writing/cross-model-evaluation-rest-20261017/claude-native/outputs/20260928T003336313Z-cw-prep-claude-invocation-tighten-original-32fc23ce-aa22-4255-b071-c21dab8cd2d0-qdhlv2fr/report.md",
+      "target": "outputs/20260928T003336313Z-cw-prep-claude-invocation-tighten-original-32fc23ce-aa22-4255-b071-c21dab8cd2d0-qdhlv2fr/report.md"
+    },
+    {
+      "source": "../../../../../skill-study-private/concise-writing/cross-model-evaluation-rest-20261017/claude-native/outputs/20260928T003428969Z-cw-prep-claude-invocation-tighten-candidate-a3093b65-5789-4ac6-a88b-330a154b07a7-xd4ie3wd/report.md",
+      "target": "outputs/20260928T003428969Z-cw-prep-claude-invocation-tighten-candidate-a3093b65-5789-4ac6-a88b-330a154b07a7-xd4ie3wd/report.md"
+    },
+    {
+      "source": "../../../../../skill-study-private/concise-writing/cross-model-evaluation-rest-20261017/claude-native/outputs/20260928T003514166Z-cw-prep-claude-invocation-write-candidate-b01d670f-33f1-4d2e-b53e-d2ffd31c4656-n7hvowgr/report.md",
+      "target": "outputs/20260928T003514166Z-cw-prep-claude-invocation-write-candidate-b01d670f-33f1-4d2e-b53e-d2ffd31c4656-n7hvowgr/report.md"
+    },
+    {
+      "source": "../../../../../skill-study-private/concise-writing/cross-model-evaluation-rest-20261017/claude-native/outputs/20260928T003602085Z-cw-prep-claude-invocation-write-original-ef30b974-328f-4848-aa9d-01640220aadf-cjk05yd7/report.md",
+      "target": "outputs/20260928T003602085Z-cw-prep-claude-invocation-write-original-ef30b974-328f-4848-aa9d-01640220aadf-cjk05yd7/report.md"
+    },
+    {
+      "source": "../../../../../skill-study-private/concise-writing/cross-model-evaluation-rest-20261017/claude-native/outputs/20260928T003649743Z-cw-prep-claude-invocation-nonprose-original-9cc5e4dd-5326-4fb8-9933-e6bd6c0f4a9f-vjbnmpzr/settings.toml",
+      "target": "outputs/20260928T003649743Z-cw-prep-claude-invocation-nonprose-original-9cc5e4dd-5326-4fb8-9933-e6bd6c0f4a9f-vjbnmpzr/settings.toml"
+    },
+    {
+      "source": "../../../../../skill-study-private/concise-writing/cross-model-evaluation-rest-20261017/claude-native/outputs/20260928T003720967Z-cw-prep-claude-invocation-nonprose-candidate-92cf93c1-77d0-4924-980f-e690a006383f-31wbw09n/settings.toml",
+      "target": "outputs/20260928T003720967Z-cw-prep-claude-invocation-nonprose-candidate-92cf93c1-77d0-4924-980f-e690a006383f-31wbw09n/settings.toml"
+    },
+    {
+      "source": "../../../../../skill-study-private/concise-writing/cross-model-evaluation-rest-20261017/claude-native/outputs/20260928T003755284Z-cw-prep-claude-invocation-comments-candidate-e7dfca39-087c-4d4c-9814-cdca0fba56f5-9tfc8hom/uploader.py",
+      "target": "outputs/20260928T003755284Z-cw-prep-claude-invocation-comments-candidate-e7dfca39-087c-4d4c-9814-cdca0fba56f5-9tfc8hom/uploader.py"
+    },
+    {
+      "source": "../../../../../skill-study-private/concise-writing/cross-model-evaluation-rest-20261017/claude-native/outputs/20260928T003834062Z-cw-prep-claude-invocation-comments-original-6b912906-2db6-40ee-a705-df6003bab479-798pvftl/uploader.py",
+      "target": "outputs/20260928T003834062Z-cw-prep-claude-invocation-comments-original-6b912906-2db6-40ee-a705-df6003bab479-798pvftl/uploader.py"
+    },
+    {
+      "source": "../../../../../skill-study-private/concise-writing/cross-model-evaluation-rest-20261017/claude-native/outputs/20260928T003953195Z-cw-prep-claude-invocation-tighten-candidate-68222965-8844-4b1d-8813-fff677d4a9f2-46ivubal/report.md",
+      "target": "outputs/20260928T003953195Z-cw-prep-claude-invocation-tighten-candidate-68222965-8844-4b1d-8813-fff677d4a9f2-46ivubal/report.md"
+    },
+    {
+      "source": "../../../../../skill-study-private/concise-writing/cross-model-evaluation-rest-20261017/claude-native/outputs/20260928T004040908Z-cw-prep-claude-invocation-tighten-original-10f1c113-0795-4200-bf87-425da92ad108-z2g8f440/report.md",
+      "target": "outputs/20260928T004040908Z-cw-prep-claude-invocation-tighten-original-10f1c113-0795-4200-bf87-425da92ad108-z2g8f440/report.md"
+    },
+    {
+      "source": "../../../../../skill-study-private/concise-writing/cross-model-evaluation-rest-20261017/claude-native/outputs/20260928T004131890Z-cw-prep-claude-invocation-write-original-de255f51-6db4-4e91-931a-dff4a60edaaf-gej75j87/report.md",
+      "target": "outputs/20260928T004131890Z-cw-prep-claude-invocation-write-original-de255f51-6db4-4e91-931a-dff4a60edaaf-gej75j87/report.md"
+    },
+    {
+      "source": "../../../../../skill-study-private/concise-writing/cross-model-evaluation-rest-20261017/claude-native/outputs/20260928T004235821Z-cw-prep-claude-invocation-write-candidate-0749f7ad-94fa-47a3-bd82-58c3023ce4bc-msef1l34/report.md",
+      "target": "outputs/20260928T004235821Z-cw-prep-claude-invocation-write-candidate-0749f7ad-94fa-47a3-bd82-58c3023ce4bc-msef1l34/report.md"
+    },
+    {
+      "source": "../../../../../skill-study-private/concise-writing/cross-model-evaluation-rest-20261017/claude-native/outputs/20260928T004338885Z-cw-prep-claude-invocation-nonprose-candidate-ec528382-3adb-4c83-9bc6-82e8fec1e023-h_2j58p9/settings.toml",
+      "target": "outputs/20260928T004338885Z-cw-prep-claude-invocation-nonprose-candidate-ec528382-3adb-4c83-9bc6-82e8fec1e023-h_2j58p9/settings.toml"
+    },
+    {
+      "source": "../../../../../skill-study-private/concise-writing/cross-model-evaluation-rest-20261017/claude-native/outputs/20260928T004419542Z-cw-prep-claude-invocation-nonprose-original-542fd7c8-3c93-430f-a977-1862f5d176d5-6im_8e0t/settings.toml",
+      "target": "outputs/20260928T004419542Z-cw-prep-claude-invocation-nonprose-original-542fd7c8-3c93-430f-a977-1862f5d176d5-6im_8e0t/settings.toml"
+    },
+    {
+      "source": "../../../../../skill-study-private/concise-writing/cross-model-evaluation-rest-20261017/claude-native/outputs/20260928T004454866Z-cw-prep-claude-invocation-comments-original-b43b15a2-cbf5-4c67-8fc5-355898f9380a-jn6k4p5x/uploader.py",
+      "target": "outputs/20260928T004454866Z-cw-prep-claude-invocation-comments-original-b43b15a2-cbf5-4c67-8fc5-355898f9380a-jn6k4p5x/uploader.py"
+    },
+    {
+      "source": "../../../../../skill-study-private/concise-writing/cross-model-evaluation-rest-20261017/claude-native/outputs/20260928T004533905Z-cw-prep-claude-invocation-comments-candidate-f208ade3-c4f1-4eea-bbf6-ef8f9ce8398b-lr0ftv9o/uploader.py",
+      "target": "outputs/20260928T004533905Z-cw-prep-claude-invocation-comments-candidate-f208ade3-c4f1-4eea-bbf6-ef8f9ce8398b-lr0ftv9o/uploader.py"
+    },
+    {
+      "source": "../../../../../skill-study-private/concise-writing/cross-model-evaluation-rest-20261017/claude-native/outputs/20260928T011757062Z-cw-prep-claude-invocation-tighten-original-8872c4a0-80fa-4521-86ff-1ef185c98e11-6h0dva0a/report.md",
+      "target": "outputs/20260928T011757062Z-cw-prep-claude-invocation-tighten-original-8872c4a0-80fa-4521-86ff-1ef185c98e11-6h0dva0a/report.md"
+    },
+    {
+      "source": "../../../../../skill-study-private/concise-writing/cross-model-evaluation-rest-20261017/claude-native/outputs/20260928T011843805Z-cw-prep-claude-invocation-tighten-candidate-a7611382-b798-468b-bfff-dda335a5e3a7-ym6suo4n/report.md",
+      "target": "outputs/20260928T011843805Z-cw-prep-claude-invocation-tighten-candidate-a7611382-b798-468b-bfff-dda335a5e3a7-ym6suo4n/report.md"
+    },
+    {
+      "source": "../../../../../skill-study-private/concise-writing/cross-model-evaluation-rest-20261017/claude-native/outputs/20260928T011938667Z-cw-prep-claude-invocation-write-candidate-ee32f2ff-47b7-42b5-b2a2-c9ac8ba4f87f-kyfcwulb/report.md",
+      "target": "outputs/20260928T011938667Z-cw-prep-claude-invocation-write-candidate-ee32f2ff-47b7-42b5-b2a2-c9ac8ba4f87f-kyfcwulb/report.md"
+    },
+    {
+      "source": "../../../../../skill-study-private/concise-writing/cross-model-evaluation-rest-20261017/claude-native/outputs/20260928T012104354Z-cw-prep-claude-invocation-write-original-10ea5c1c-6ed8-4eeb-960b-5ad34ef8ad2e-gx77xlvv/report.md",
+      "target": "outputs/20260928T012104354Z-cw-prep-claude-invocation-write-original-10ea5c1c-6ed8-4eeb-960b-5ad34ef8ad2e-gx77xlvv/report.md"
+    },
+    {
+      "source": "../../../../../skill-study-private/concise-writing/cross-model-evaluation-rest-20261017/claude-native/outputs/20260928T012208212Z-cw-prep-claude-invocation-nonprose-original-18f874de-b271-48a5-b5f8-498cc980b76e-xst9nmcl/settings.toml",
+      "target": "outputs/20260928T012208212Z-cw-prep-claude-invocation-nonprose-original-18f874de-b271-48a5-b5f8-498cc980b76e-xst9nmcl/settings.toml"
+    },
+    {
+      "source": "../../../../../skill-study-private/concise-writing/cross-model-evaluation-rest-20261017/claude-native/outputs/20260928T012250115Z-cw-prep-claude-invocation-nonprose-candidate-b9785bfc-6cb1-4f49-8627-9de82448c578-9jlkxuxv/settings.toml",
+      "target": "outputs/20260928T012250115Z-cw-prep-claude-invocation-nonprose-candidate-b9785bfc-6cb1-4f49-8627-9de82448c578-9jlkxuxv/settings.toml"
+    },
+    {
+      "source": "../../../../../skill-study-private/concise-writing/cross-model-evaluation-rest-20261017/claude-native/outputs/20260928T012323047Z-cw-prep-claude-invocation-comments-candidate-cc071aac-9539-49ac-af3f-7733fcd50ff6-7iv4bfn1/uploader.py",
+      "target": "outputs/20260928T012323047Z-cw-prep-claude-invocation-comments-candidate-cc071aac-9539-49ac-af3f-7733fcd50ff6-7iv4bfn1/uploader.py"
+    },
+    {
+      "source": "../../../../../skill-study-private/concise-writing/cross-model-evaluation-rest-20261017/claude-native/outputs/20260928T012410542Z-cw-prep-claude-invocation-comments-original-3a64ec2e-67eb-44bd-a437-4ad03ded0655-tgrdbc2n/uploader.py",
+      "target": "outputs/20260928T012410542Z-cw-prep-claude-invocation-comments-original-3a64ec2e-67eb-44bd-a437-4ad03ded0655-tgrdbc2n/uploader.py"
+    },
+    {
+      "source": "../../../../../skill-study-private/concise-writing/cross-model-evaluation-rest-20261017/claude-native/policy.txt",
+      "target": "policy.txt"
+    },
+    {
+      "source": "../../../../../skill-study-private/concise-writing/cross-model-evaluation-rest-20261017/claude-native/prior-assessment.md",
+      "target": "prior-assessment.md"
+    }
+  ],
+  "execution": {
+    "provider": "claude",
+    "model": "claude-fable-5-1",
+    "effort": "medium",
+    "permissions": "read-only"
+  }
+}

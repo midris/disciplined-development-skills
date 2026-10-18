@@ -1,0 +1,81 @@
+{
+  "schema_version": "0.2",
+  "id": "cw-eval-codex-document-addition",
+  "prompt": "../prompt.md",
+  "fixtures": [
+    {
+      "source": "../../../../../skill-study-private/concise-writing/cross-model-evaluation-rest-20261017/codex-document-addition/EVALUATION-INDEX.json",
+      "target": "EVALUATION-INDEX.json"
+    },
+    {
+      "source": "../../../../../skill-study-private/concise-writing/cross-model-evaluation-rest-20261017/codex-document-addition/MECHANICAL-CHECKS.json",
+      "target": "MECHANICAL-CHECKS.json"
+    },
+    {
+      "source": "../../../../../skill-study-private/concise-writing/cross-model-evaluation-rest-20261017/codex-document-addition/WORD-COUNTS.json",
+      "target": "WORD-COUNTS.json"
+    },
+    {
+      "source": "../../../../../skill-study-private/concise-writing/cross-model-evaluation-rest-20261017/codex-document-addition/cases/document-addition/criteria.md",
+      "target": "cases/document-addition/criteria.md"
+    },
+    {
+      "source": "../../../../../skill-study-private/concise-writing/cross-model-evaluation-rest-20261017/codex-document-addition/cases/document-addition/task.md",
+      "target": "cases/document-addition/task.md"
+    },
+    {
+      "source": "../../../../../skill-study-private/concise-writing/cross-model-evaluation-rest-20261017/codex-document-addition/expanded-policy.txt",
+      "target": "expanded-policy.txt"
+    },
+    {
+      "source": "../../../../../skill-study-private/concise-writing/cross-model-evaluation-rest-20261017/codex-document-addition/outputs/20260927T222634155Z-cw-prep-codex-document-addition-control-5efb35c5-3ea7-4971-8da1-ad97ab8916d1-s8rtkxsk/report.md",
+      "target": "outputs/20260927T222634155Z-cw-prep-codex-document-addition-control-5efb35c5-3ea7-4971-8da1-ad97ab8916d1-s8rtkxsk/report.md"
+    },
+    {
+      "source": "../../../../../skill-study-private/concise-writing/cross-model-evaluation-rest-20261017/codex-document-addition/outputs/20260927T222741404Z-cw-prep-codex-document-addition-original-539e3505-9ad9-4f2e-8d61-e3e0c428bd99-2uzulnl0/report.md",
+      "target": "outputs/20260927T222741404Z-cw-prep-codex-document-addition-original-539e3505-9ad9-4f2e-8d61-e3e0c428bd99-2uzulnl0/report.md"
+    },
+    {
+      "source": "../../../../../skill-study-private/concise-writing/cross-model-evaluation-rest-20261017/codex-document-addition/outputs/20260927T222846758Z-cw-prep-codex-document-addition-candidate-57b39a12-52cb-4c52-bd0e-df75a2611397-lpzfaho7/report.md",
+      "target": "outputs/20260927T222846758Z-cw-prep-codex-document-addition-candidate-57b39a12-52cb-4c52-bd0e-df75a2611397-lpzfaho7/report.md"
+    },
+    {
+      "source": "../../../../../skill-study-private/concise-writing/cross-model-evaluation-rest-20261017/codex-document-addition/outputs/20260927T224539499Z-cw-prep-codex-document-addition-original-44e5340b-72d7-4ba4-b7c1-8a127b94b1ed-1ninx8gb/report.md",
+      "target": "outputs/20260927T224539499Z-cw-prep-codex-document-addition-original-44e5340b-72d7-4ba4-b7c1-8a127b94b1ed-1ninx8gb/report.md"
+    },
+    {
+      "source": "../../../../../skill-study-private/concise-writing/cross-model-evaluation-rest-20261017/codex-document-addition/outputs/20260927T224709842Z-cw-prep-codex-document-addition-candidate-6869980c-9800-4e54-adb7-fa3c65f5b486-mkuekb0u/report.md",
+      "target": "outputs/20260927T224709842Z-cw-prep-codex-document-addition-candidate-6869980c-9800-4e54-adb7-fa3c65f5b486-mkuekb0u/report.md"
+    },
+    {
+      "source": "../../../../../skill-study-private/concise-writing/cross-model-evaluation-rest-20261017/codex-document-addition/outputs/20260927T224833884Z-cw-prep-codex-document-addition-control-2c5e679c-57f8-4dac-a611-22756d37aef0-r00pgzkh/report.md",
+      "target": "outputs/20260927T224833884Z-cw-prep-codex-document-addition-control-2c5e679c-57f8-4dac-a611-22756d37aef0-r00pgzkh/report.md"
+    },
+    {
+      "source": "../../../../../skill-study-private/concise-writing/cross-model-evaluation-rest-20261017/codex-document-addition/outputs/20260927T230823767Z-cw-prep-codex-document-addition-candidate-5a2f328d-3daa-4749-813c-e5193698573a-0xwq0l0b/report.md",
+      "target": "outputs/20260927T230823767Z-cw-prep-codex-document-addition-candidate-5a2f328d-3daa-4749-813c-e5193698573a-0xwq0l0b/report.md"
+    },
+    {
+      "source": "../../../../../skill-study-private/concise-writing/cross-model-evaluation-rest-20261017/codex-document-addition/outputs/20260927T231004385Z-cw-prep-codex-document-addition-control-113c49a6-e2c1-4463-9833-79f319b913e9-cg1snaev/report.md",
+      "target": "outputs/20260927T231004385Z-cw-prep-codex-document-addition-control-113c49a6-e2c1-4463-9833-79f319b913e9-cg1snaev/report.md"
+    },
+    {
+      "source": "../../../../../skill-study-private/concise-writing/cross-model-evaluation-rest-20261017/codex-document-addition/outputs/20260927T231148702Z-cw-prep-codex-document-addition-original-0db83c3f-9c86-4031-a969-34da647bbc75-9ksee025/report.md",
+      "target": "outputs/20260927T231148702Z-cw-prep-codex-document-addition-original-0db83c3f-9c86-4031-a969-34da647bbc75-9ksee025/report.md"
+    },
+    {
+      "source": "../../../../../skill-study-private/concise-writing/cross-model-evaluation-rest-20261017/codex-document-addition/policy.txt",
+      "target": "policy.txt"
+    },
+    {
+      "source": "../../../../../skill-study-private/concise-writing/cross-model-evaluation-rest-20261017/codex-document-addition/prior-assessment.md",
+      "target": "prior-assessment.md"
+    }
+  ],
+  "execution": {
+    "provider": "claude",
+    "model": "claude-fable-5-1",
+    "effort": "medium",
+    "permissions": "read-only"
+  }
+}
