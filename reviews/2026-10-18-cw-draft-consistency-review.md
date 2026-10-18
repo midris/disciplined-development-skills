@@ -34,6 +34,17 @@ The draft invariant check reports 955 words targeted and 1,084 fuller versus the
 Behavioral effectiveness remains unvalidated until the approved comparison completes.
 Runtime qualification is a subsequent gate: supported Python shell resolution and the exact Opus model/read-only transport must pass before paid dispatch, with no fallback or widened host reads.
 
+## Collection-preparation follow-up
+
+The controller rechecked eight E configurations against their historical task/source/prompt counterparts, forty scheduled slots and five repetitions per condition/provider.
+A prospective definition-2 card extends applicability only; normalized F1–F3 text is identical to definition 1.
+Both provider scopes pass preparation readiness; collection readiness still requires committed frozen manifests.
+The bounded controller adapter selects existing Homebrew Python/Git through links in each runtime’s already allowed private scratch; real login-shell checks and protected-input/mutation/network controls pass, without changing the production runner or grants.
+Twelve final zero-model checks pass; an evidence-directory collision prevented one Opus diagnostic from starting in a combined command, and it passed separately with both records retained.
+The sequential collector claims each slot exclusively, checks frozen identities, retains/verifies each stopped bundle, registers charges/unassessed attempts and requires controller clearance before the next slot.
+Pre-allocation failures are recorded as zero-charge attempts; an interrupted publication/retention stops dispatch for manual reconciliation rather than starting a replacement.
+No new subject/evaluator call has yet been dispatched by this preparation.
+
 ## Second pass
 
 Re-read the corrected drafts, design, proposal, protocol authority/accounting, plan and affected evidence-summary pointers after the class sweep.

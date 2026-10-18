@@ -3,7 +3,8 @@
 Format version: `1`
 Study ID: `concise-writing`
 Status: baseline collection and cross-model review are complete; the owner selected the original CW as the development base and authorized preparation of effectiveness-first edits. Adoption remains deferred.
-Current action: resolve the combined review findings on the [staged comparison](drafts/baseline-iteration/comparison-proposal.md), commit/push the preparation, then qualify/freeze and collect E.
+Current action: freeze the qualified E inputs and pass collection readiness, then collect the approved forty subjects and two Opus reviews under the [staged comparison](drafts/baseline-iteration/comparison-proposal.md).
+The combined draft/proposal review is resolved and preparation commit `c8b8c3b` is pushed; [runtime qualification](drafts/baseline-iteration/testing/runtime-qualification.md) passes twelve zero-model controls.
 On 2026-10-18 the owner authorized the first-stage 40 subject and two evaluator calls: “do a consistency pass over the skills rewrites, commit and push any changes, then start the testing”.
 The subsequent external-review request requires remediation before dispatch.
 The active assessor is this Codex controller; the separate Opus 5.5 medium reviewer is cross-family relative to it.
@@ -463,6 +464,82 @@ Inputs: [claude-invocation-tighten-third-manifest](preparation/manifests/claude-
 | 7 | invocation-comments | candidate-comprehensive | 3 | `skill-studies/concise-writing/preparation/configs/claude-invocation-comments-candidate.json` |
 | 8 | invocation-comments | original | 3 | `skill-studies/concise-writing/preparation/configs/claude-invocation-comments-original.json` |
 
+### E diagnostic: codex-e-iteration-01
+
+Scope: 20 sequential attempts; document-addition × four conditions × five repetitions on codex.
+Attempts: [Codex E iteration index](codex-e-iteration-01-run-index.json).
+Authority: first-stage forty-subject allocation at the protocol opening; no replacement or automatic retry.
+Inputs: [codex E iteration manifest](drafts/baseline-iteration/testing/codex-manifest.json).
+Criteria: [E applicability extension](drafts/baseline-iteration/testing/assessment.md), definition 2; unchanged F1–F3 under CW-expanded-1.
+Runtime: [qualified current stratum](drafts/baseline-iteration/testing/runtime-qualification.md); CLI identity and private scratch toolchain differ from historical batches.
+Include all valid-setup executions regardless of outcome; report invalid/unresolved setup and unattempted slots separately.
+No automatic retry or replacement.
+Stop for infrastructure failure, uncertain charge, drift, contamination or failed retention; a behavioral miss alone does not stop collection.
+The [global schedule](drafts/baseline-iteration/testing/schedule.json) runs Codex's twenty attempts then Claude's twenty; register and verify each bundle before the next dispatch.
+Evidence goes to the existing owner-accepted single-host private store under `e-iteration-20261018`; no host-loss recovery claim.
+
+| Order | Case | Condition | Repetition | CONFIG |
+| ---: | --- | --- | ---: | --- |
+| 1 | document-addition | control | 1 | `skill-studies/concise-writing/drafts/baseline-iteration/testing/configs/codex-control.json` |
+| 2 | document-addition | original | 1 | `skill-studies/concise-writing/drafts/baseline-iteration/testing/configs/codex-original.json` |
+| 3 | document-addition | candidate-targeted | 1 | `skill-studies/concise-writing/drafts/baseline-iteration/testing/configs/codex-candidate-targeted.json` |
+| 4 | document-addition | candidate-fuller | 1 | `skill-studies/concise-writing/drafts/baseline-iteration/testing/configs/codex-candidate-fuller.json` |
+| 5 | document-addition | original | 2 | `skill-studies/concise-writing/drafts/baseline-iteration/testing/configs/codex-original.json` |
+| 6 | document-addition | candidate-targeted | 2 | `skill-studies/concise-writing/drafts/baseline-iteration/testing/configs/codex-candidate-targeted.json` |
+| 7 | document-addition | candidate-fuller | 2 | `skill-studies/concise-writing/drafts/baseline-iteration/testing/configs/codex-candidate-fuller.json` |
+| 8 | document-addition | control | 2 | `skill-studies/concise-writing/drafts/baseline-iteration/testing/configs/codex-control.json` |
+| 9 | document-addition | candidate-targeted | 3 | `skill-studies/concise-writing/drafts/baseline-iteration/testing/configs/codex-candidate-targeted.json` |
+| 10 | document-addition | candidate-fuller | 3 | `skill-studies/concise-writing/drafts/baseline-iteration/testing/configs/codex-candidate-fuller.json` |
+| 11 | document-addition | control | 3 | `skill-studies/concise-writing/drafts/baseline-iteration/testing/configs/codex-control.json` |
+| 12 | document-addition | original | 3 | `skill-studies/concise-writing/drafts/baseline-iteration/testing/configs/codex-original.json` |
+| 13 | document-addition | candidate-fuller | 4 | `skill-studies/concise-writing/drafts/baseline-iteration/testing/configs/codex-candidate-fuller.json` |
+| 14 | document-addition | control | 4 | `skill-studies/concise-writing/drafts/baseline-iteration/testing/configs/codex-control.json` |
+| 15 | document-addition | original | 4 | `skill-studies/concise-writing/drafts/baseline-iteration/testing/configs/codex-original.json` |
+| 16 | document-addition | candidate-targeted | 4 | `skill-studies/concise-writing/drafts/baseline-iteration/testing/configs/codex-candidate-targeted.json` |
+| 17 | document-addition | control | 5 | `skill-studies/concise-writing/drafts/baseline-iteration/testing/configs/codex-control.json` |
+| 18 | document-addition | original | 5 | `skill-studies/concise-writing/drafts/baseline-iteration/testing/configs/codex-original.json` |
+| 19 | document-addition | candidate-targeted | 5 | `skill-studies/concise-writing/drafts/baseline-iteration/testing/configs/codex-candidate-targeted.json` |
+| 20 | document-addition | candidate-fuller | 5 | `skill-studies/concise-writing/drafts/baseline-iteration/testing/configs/codex-candidate-fuller.json` |
+
+
+### E diagnostic: claude-e-iteration-01
+
+Scope: 20 sequential attempts; document-addition × four conditions × five repetitions on claude.
+Attempts: [Claude E iteration index](claude-e-iteration-01-run-index.json).
+Authority: first-stage forty-subject allocation at the protocol opening; no replacement or automatic retry.
+Inputs: [claude E iteration manifest](drafts/baseline-iteration/testing/claude-manifest.json).
+Criteria: [E applicability extension](drafts/baseline-iteration/testing/assessment.md), definition 2; unchanged F1–F3 under CW-expanded-1.
+Runtime: [qualified current stratum](drafts/baseline-iteration/testing/runtime-qualification.md); CLI identity and private scratch toolchain differ from historical batches.
+Include all valid-setup executions regardless of outcome; report invalid/unresolved setup and unattempted slots separately.
+No automatic retry or replacement.
+Stop for infrastructure failure, uncertain charge, drift, contamination or failed retention; a behavioral miss alone does not stop collection.
+The [global schedule](drafts/baseline-iteration/testing/schedule.json) runs Codex's twenty attempts then Claude's twenty; register and verify each bundle before the next dispatch.
+Evidence goes to the existing owner-accepted single-host private store under `e-iteration-20261018`; no host-loss recovery claim.
+
+| Order | Case | Condition | Repetition | CONFIG |
+| ---: | --- | --- | ---: | --- |
+| 1 | document-addition | candidate-targeted | 1 | `skill-studies/concise-writing/drafts/baseline-iteration/testing/configs/claude-candidate-targeted.json` |
+| 2 | document-addition | candidate-fuller | 1 | `skill-studies/concise-writing/drafts/baseline-iteration/testing/configs/claude-candidate-fuller.json` |
+| 3 | document-addition | control | 1 | `skill-studies/concise-writing/drafts/baseline-iteration/testing/configs/claude-control.json` |
+| 4 | document-addition | original | 1 | `skill-studies/concise-writing/drafts/baseline-iteration/testing/configs/claude-original.json` |
+| 5 | document-addition | candidate-fuller | 2 | `skill-studies/concise-writing/drafts/baseline-iteration/testing/configs/claude-candidate-fuller.json` |
+| 6 | document-addition | control | 2 | `skill-studies/concise-writing/drafts/baseline-iteration/testing/configs/claude-control.json` |
+| 7 | document-addition | original | 2 | `skill-studies/concise-writing/drafts/baseline-iteration/testing/configs/claude-original.json` |
+| 8 | document-addition | candidate-targeted | 2 | `skill-studies/concise-writing/drafts/baseline-iteration/testing/configs/claude-candidate-targeted.json` |
+| 9 | document-addition | control | 3 | `skill-studies/concise-writing/drafts/baseline-iteration/testing/configs/claude-control.json` |
+| 10 | document-addition | original | 3 | `skill-studies/concise-writing/drafts/baseline-iteration/testing/configs/claude-original.json` |
+| 11 | document-addition | candidate-targeted | 3 | `skill-studies/concise-writing/drafts/baseline-iteration/testing/configs/claude-candidate-targeted.json` |
+| 12 | document-addition | candidate-fuller | 3 | `skill-studies/concise-writing/drafts/baseline-iteration/testing/configs/claude-candidate-fuller.json` |
+| 13 | document-addition | original | 4 | `skill-studies/concise-writing/drafts/baseline-iteration/testing/configs/claude-original.json` |
+| 14 | document-addition | candidate-targeted | 4 | `skill-studies/concise-writing/drafts/baseline-iteration/testing/configs/claude-candidate-targeted.json` |
+| 15 | document-addition | candidate-fuller | 4 | `skill-studies/concise-writing/drafts/baseline-iteration/testing/configs/claude-candidate-fuller.json` |
+| 16 | document-addition | control | 4 | `skill-studies/concise-writing/drafts/baseline-iteration/testing/configs/claude-control.json` |
+| 17 | document-addition | candidate-targeted | 5 | `skill-studies/concise-writing/drafts/baseline-iteration/testing/configs/claude-candidate-targeted.json` |
+| 18 | document-addition | candidate-fuller | 5 | `skill-studies/concise-writing/drafts/baseline-iteration/testing/configs/claude-candidate-fuller.json` |
+| 19 | document-addition | control | 5 | `skill-studies/concise-writing/drafts/baseline-iteration/testing/configs/claude-control.json` |
+| 20 | document-addition | original | 5 | `skill-studies/concise-writing/drafts/baseline-iteration/testing/configs/claude-original.json` |
+
+
 ## Storage and accounting
 
 Supplemental evaluator accounting: [evaluator ledger](evaluation/evaluator-run-index.json); these calls do not add subject repetitions.
@@ -487,7 +564,7 @@ Combined accounting sources: closed SSR [pilot 01](../sweeping-stale-references/
 Dispatched calls are **256 subject, 12 evaluator, 0 authoring, 1 retry**; remaining outer capacity is **40 / 2 / 4 / 3** against the [active plan](../../plans/2026-09-11-model-driven-skill-testing.md#limits-and-information-boundaries). Both eight-call CW batches are spent. The owner authorized ten SSR expansion calls under ceiling 56; all ten are spent, including the excluded control, with no replacement or pool transfer. Comparison runner durations total 508.067 seconds; baseline durations remain 494.936 seconds, including setup and capture.
 Owner clarification after round-10 review: “the budget is just a guideline”. The 1,200-minute figure below remains the planning baseline, not a collection stop; invocation ceilings and the authorized SSR scope is unchanged. Retain elapsed effort and forecast variance to expose process cost.
 
-Current combined accounting: **2,205 active minutes booked; 1,005 minutes above the historical 1,200-minute planning guideline**.
+Current combined accounting: **2,240 active minutes booked; 1,040 minutes above the historical 1,200-minute planning guideline**.
 These are rounded effort estimates, not stopwatch measurements or a separately timed category breakdown.
 Between-turn owner wait is excluded; runner durations are included once.
 The initial 104 calls and sixteen native third repetitions are spent; combined subject accounting is 256/296, with forty E calls allocated but not dispatched.
@@ -567,7 +644,8 @@ The supplemental work used 40 estimated active minutes against its 40-minute for
 | CW output evaluation collection, packet correction, comparisons and review | 50 |
 | CW baseline-derived diagnosis, two draft variants and preparation review | 20 |
 | CW combined proposal review, decision rules and draft fidelity corrections | 30 |
-| **Total** | **2,205** |
+| E runtime diagnosis, supported toolchain qualification and fixed input preparation | 35 |
+| **Total** | **2,240** |
 
 SSR expansion is complete. The prior 55-minute remaining forecast closed at 50 estimated minutes, including the additional shell correction; all ten subject calls are spent.
 The combined batch/recovery effort is 135 estimated minutes (45 initial checkpoint, 40 isolation correction, 50 resumption), 45 above the original 90-minute allowance. Separate round-9 review effort remains in the combined ledger above.
@@ -596,8 +674,8 @@ Subject collection and active-session assessment are complete; the owner subsequ
 
 | Work | Estimate | Basis |
 | --- | ---: | --- |
-| Approved E comparison: qualification, freeze, collection, scoring and Opus review | 180 | First-stage 40 subject and two evaluator calls only; no full-suite or automatic revision allowance. |
-| **Total** | **180** | Upper planning estimate for the approved E stage; later collection/revision needs a separate allocation. |
+| Approved E comparison: remaining freeze, collection, scoring and Opus review | 145 | First-stage 40 subject and two evaluator calls only; no full-suite or automatic revision allowance. |
+| **Total** | **145** | Remaining from the 180-minute first-stage upper estimate after 35 preparation minutes; later collection/revision needs a separate allocation. |
 
 The retrospective used 50 estimated active minutes against its 90-minute forecast, including overlapping waits once.
 All thirteen evaluator runner durations sum to 3,243.481 seconds (54.06 minutes); concurrent durations are not added again to booked controller effort.
