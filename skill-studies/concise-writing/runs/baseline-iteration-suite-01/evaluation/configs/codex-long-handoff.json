@@ -1,0 +1,93 @@
+{
+  "schema_version": "0.2",
+  "id": "cw-suite-opus-codex-long-handoff",
+  "prompt": "../prompt.md",
+  "fixtures": [
+    {
+      "source": "../../../../../../../skill-study-private/concise-writing/baseline-suite-20261018/review-inputs/codex-long-handoff/EVALUATION-INDEX.json",
+      "target": "EVALUATION-INDEX.json"
+    },
+    {
+      "source": "../../../../../../../skill-study-private/concise-writing/baseline-suite-20261018/review-inputs/codex-long-handoff/MECHANICAL-CHECKS.json",
+      "target": "MECHANICAL-CHECKS.json"
+    },
+    {
+      "source": "../../../../../../../skill-study-private/concise-writing/baseline-suite-20261018/review-inputs/codex-long-handoff/WORD-COUNTS.json",
+      "target": "WORD-COUNTS.json"
+    },
+    {
+      "source": "../../../../../../../skill-study-private/concise-writing/baseline-suite-20261018/review-inputs/codex-long-handoff/criteria.md",
+      "target": "criteria.md"
+    },
+    {
+      "source": "../../../../../../../skill-study-private/concise-writing/baseline-suite-20261018/review-inputs/codex-long-handoff/outputs/candidate-fuller-1.md",
+      "target": "outputs/candidate-fuller-1.md"
+    },
+    {
+      "source": "../../../../../../../skill-study-private/concise-writing/baseline-suite-20261018/review-inputs/codex-long-handoff/outputs/candidate-fuller-2.md",
+      "target": "outputs/candidate-fuller-2.md"
+    },
+    {
+      "source": "../../../../../../../skill-study-private/concise-writing/baseline-suite-20261018/review-inputs/codex-long-handoff/outputs/candidate-fuller-3.md",
+      "target": "outputs/candidate-fuller-3.md"
+    },
+    {
+      "source": "../../../../../../../skill-study-private/concise-writing/baseline-suite-20261018/review-inputs/codex-long-handoff/outputs/candidate-targeted-1.md",
+      "target": "outputs/candidate-targeted-1.md"
+    },
+    {
+      "source": "../../../../../../../skill-study-private/concise-writing/baseline-suite-20261018/review-inputs/codex-long-handoff/outputs/candidate-targeted-2.md",
+      "target": "outputs/candidate-targeted-2.md"
+    },
+    {
+      "source": "../../../../../../../skill-study-private/concise-writing/baseline-suite-20261018/review-inputs/codex-long-handoff/outputs/candidate-targeted-3.md",
+      "target": "outputs/candidate-targeted-3.md"
+    },
+    {
+      "source": "../../../../../../../skill-study-private/concise-writing/baseline-suite-20261018/review-inputs/codex-long-handoff/outputs/control-1.md",
+      "target": "outputs/control-1.md"
+    },
+    {
+      "source": "../../../../../../../skill-study-private/concise-writing/baseline-suite-20261018/review-inputs/codex-long-handoff/outputs/control-2.md",
+      "target": "outputs/control-2.md"
+    },
+    {
+      "source": "../../../../../../../skill-study-private/concise-writing/baseline-suite-20261018/review-inputs/codex-long-handoff/outputs/control-3.md",
+      "target": "outputs/control-3.md"
+    },
+    {
+      "source": "../../../../../../../skill-study-private/concise-writing/baseline-suite-20261018/review-inputs/codex-long-handoff/outputs/original-1.md",
+      "target": "outputs/original-1.md"
+    },
+    {
+      "source": "../../../../../../../skill-study-private/concise-writing/baseline-suite-20261018/review-inputs/codex-long-handoff/outputs/original-2.md",
+      "target": "outputs/original-2.md"
+    },
+    {
+      "source": "../../../../../../../skill-study-private/concise-writing/baseline-suite-20261018/review-inputs/codex-long-handoff/outputs/original-3.md",
+      "target": "outputs/original-3.md"
+    },
+    {
+      "source": "../../../../../../../skill-study-private/concise-writing/baseline-suite-20261018/review-inputs/codex-long-handoff/policy.txt",
+      "target": "policy.txt"
+    },
+    {
+      "source": "../../../../../../../skill-study-private/concise-writing/baseline-suite-20261018/review-inputs/codex-long-handoff/prior-assessment.md",
+      "target": "prior-assessment.md"
+    },
+    {
+      "source": "../../../../../../../skill-study-private/concise-writing/baseline-suite-20261018/review-inputs/codex-long-handoff/sources/TASK.md",
+      "target": "sources/TASK.md"
+    },
+    {
+      "source": "../../../../../../../skill-study-private/concise-writing/baseline-suite-20261018/review-inputs/codex-long-handoff/sources/report.md",
+      "target": "sources/report.md"
+    }
+  ],
+  "execution": {
+    "provider": "claude",
+    "model": "claude-opus-5-5",
+    "effort": "medium",
+    "permissions": "read-only"
+  }
+}

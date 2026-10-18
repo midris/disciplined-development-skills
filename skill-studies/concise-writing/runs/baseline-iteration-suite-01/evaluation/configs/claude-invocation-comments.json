@@ -1,0 +1,85 @@
+{
+  "schema_version": "0.2",
+  "id": "cw-suite-opus-claude-invocation-comments",
+  "prompt": "../prompt.md",
+  "fixtures": [
+    {
+      "source": "../../../../../../../skill-study-private/concise-writing/baseline-suite-20261018/review-inputs/claude-invocation-comments/EVALUATION-INDEX.json",
+      "target": "EVALUATION-INDEX.json"
+    },
+    {
+      "source": "../../../../../../../skill-study-private/concise-writing/baseline-suite-20261018/review-inputs/claude-invocation-comments/MECHANICAL-CHECKS.json",
+      "target": "MECHANICAL-CHECKS.json"
+    },
+    {
+      "source": "../../../../../../../skill-study-private/concise-writing/baseline-suite-20261018/review-inputs/claude-invocation-comments/WORD-COUNTS.json",
+      "target": "WORD-COUNTS.json"
+    },
+    {
+      "source": "../../../../../../../skill-study-private/concise-writing/baseline-suite-20261018/review-inputs/claude-invocation-comments/criteria.md",
+      "target": "criteria.md"
+    },
+    {
+      "source": "../../../../../../../skill-study-private/concise-writing/baseline-suite-20261018/review-inputs/claude-invocation-comments/outputs/candidate-fuller-1.py",
+      "target": "outputs/candidate-fuller-1.py"
+    },
+    {
+      "source": "../../../../../../../skill-study-private/concise-writing/baseline-suite-20261018/review-inputs/claude-invocation-comments/outputs/candidate-fuller-2.py",
+      "target": "outputs/candidate-fuller-2.py"
+    },
+    {
+      "source": "../../../../../../../skill-study-private/concise-writing/baseline-suite-20261018/review-inputs/claude-invocation-comments/outputs/candidate-fuller-3.py",
+      "target": "outputs/candidate-fuller-3.py"
+    },
+    {
+      "source": "../../../../../../../skill-study-private/concise-writing/baseline-suite-20261018/review-inputs/claude-invocation-comments/outputs/candidate-targeted-1.py",
+      "target": "outputs/candidate-targeted-1.py"
+    },
+    {
+      "source": "../../../../../../../skill-study-private/concise-writing/baseline-suite-20261018/review-inputs/claude-invocation-comments/outputs/candidate-targeted-2.py",
+      "target": "outputs/candidate-targeted-2.py"
+    },
+    {
+      "source": "../../../../../../../skill-study-private/concise-writing/baseline-suite-20261018/review-inputs/claude-invocation-comments/outputs/candidate-targeted-3.py",
+      "target": "outputs/candidate-targeted-3.py"
+    },
+    {
+      "source": "../../../../../../../skill-study-private/concise-writing/baseline-suite-20261018/review-inputs/claude-invocation-comments/outputs/original-1.py",
+      "target": "outputs/original-1.py"
+    },
+    {
+      "source": "../../../../../../../skill-study-private/concise-writing/baseline-suite-20261018/review-inputs/claude-invocation-comments/outputs/original-2.py",
+      "target": "outputs/original-2.py"
+    },
+    {
+      "source": "../../../../../../../skill-study-private/concise-writing/baseline-suite-20261018/review-inputs/claude-invocation-comments/outputs/original-3.py",
+      "target": "outputs/original-3.py"
+    },
+    {
+      "source": "../../../../../../../skill-study-private/concise-writing/baseline-suite-20261018/review-inputs/claude-invocation-comments/policy.txt",
+      "target": "policy.txt"
+    },
+    {
+      "source": "../../../../../../../skill-study-private/concise-writing/baseline-suite-20261018/review-inputs/claude-invocation-comments/prior-assessment.md",
+      "target": "prior-assessment.md"
+    },
+    {
+      "source": "../../../../../../../skill-study-private/concise-writing/baseline-suite-20261018/review-inputs/claude-invocation-comments/sources/MAINTAINER-NOTES.md",
+      "target": "sources/MAINTAINER-NOTES.md"
+    },
+    {
+      "source": "../../../../../../../skill-study-private/concise-writing/baseline-suite-20261018/review-inputs/claude-invocation-comments/sources/TASK.md",
+      "target": "sources/TASK.md"
+    },
+    {
+      "source": "../../../../../../../skill-study-private/concise-writing/baseline-suite-20261018/review-inputs/claude-invocation-comments/sources/uploader.py",
+      "target": "sources/uploader.py"
+    }
+  ],
+  "execution": {
+    "provider": "claude",
+    "model": "claude-opus-5-5",
+    "effort": "medium",
+    "permissions": "read-only"
+  }
+}

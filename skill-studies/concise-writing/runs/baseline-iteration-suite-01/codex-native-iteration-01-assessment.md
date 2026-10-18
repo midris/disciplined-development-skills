@@ -130,3 +130,14 @@ The length table above counts the whole Python file separately from these commen
 These unblinded development observations do not isolate description effects, establish invocation reliability or prove incremental skill contribution without native controls.
 Descriptions are byte-identical and bodies are unseen before selection, so version differences cannot be credited to description wording.
 Claude native collection and fourteen grouped Opus output reviews remain authorized and pending; draft bodies stay unchanged.
+
+## Comment-only lengths
+
+Counts use wc -w over extracted # comment text, excluding # markers; code and notes are not included.
+The source has20comment words. Useful supplied rationale can justify growth.
+
+| Condition | Comment-word range |
+| --- | ---: |
+| original | 31–44 |
+| candidate-targeted | 35–48 |
+| candidate-fuller | 31–47 |

@@ -1,0 +1,93 @@
+{
+  "schema_version": "0.2",
+  "id": "cw-suite-opus-claude-effective-briefing",
+  "prompt": "../prompt.md",
+  "fixtures": [
+    {
+      "source": "../../../../../../../skill-study-private/concise-writing/baseline-suite-20261018/review-inputs/claude-effective-briefing/EVALUATION-INDEX.json",
+      "target": "EVALUATION-INDEX.json"
+    },
+    {
+      "source": "../../../../../../../skill-study-private/concise-writing/baseline-suite-20261018/review-inputs/claude-effective-briefing/MECHANICAL-CHECKS.json",
+      "target": "MECHANICAL-CHECKS.json"
+    },
+    {
+      "source": "../../../../../../../skill-study-private/concise-writing/baseline-suite-20261018/review-inputs/claude-effective-briefing/WORD-COUNTS.json",
+      "target": "WORD-COUNTS.json"
+    },
+    {
+      "source": "../../../../../../../skill-study-private/concise-writing/baseline-suite-20261018/review-inputs/claude-effective-briefing/criteria.md",
+      "target": "criteria.md"
+    },
+    {
+      "source": "../../../../../../../skill-study-private/concise-writing/baseline-suite-20261018/review-inputs/claude-effective-briefing/outputs/candidate-fuller-1.md",
+      "target": "outputs/candidate-fuller-1.md"
+    },
+    {
+      "source": "../../../../../../../skill-study-private/concise-writing/baseline-suite-20261018/review-inputs/claude-effective-briefing/outputs/candidate-fuller-2.md",
+      "target": "outputs/candidate-fuller-2.md"
+    },
+    {
+      "source": "../../../../../../../skill-study-private/concise-writing/baseline-suite-20261018/review-inputs/claude-effective-briefing/outputs/candidate-fuller-3.md",
+      "target": "outputs/candidate-fuller-3.md"
+    },
+    {
+      "source": "../../../../../../../skill-study-private/concise-writing/baseline-suite-20261018/review-inputs/claude-effective-briefing/outputs/candidate-targeted-1.md",
+      "target": "outputs/candidate-targeted-1.md"
+    },
+    {
+      "source": "../../../../../../../skill-study-private/concise-writing/baseline-suite-20261018/review-inputs/claude-effective-briefing/outputs/candidate-targeted-2.md",
+      "target": "outputs/candidate-targeted-2.md"
+    },
+    {
+      "source": "../../../../../../../skill-study-private/concise-writing/baseline-suite-20261018/review-inputs/claude-effective-briefing/outputs/candidate-targeted-3.md",
+      "target": "outputs/candidate-targeted-3.md"
+    },
+    {
+      "source": "../../../../../../../skill-study-private/concise-writing/baseline-suite-20261018/review-inputs/claude-effective-briefing/outputs/control-1.md",
+      "target": "outputs/control-1.md"
+    },
+    {
+      "source": "../../../../../../../skill-study-private/concise-writing/baseline-suite-20261018/review-inputs/claude-effective-briefing/outputs/control-2.md",
+      "target": "outputs/control-2.md"
+    },
+    {
+      "source": "../../../../../../../skill-study-private/concise-writing/baseline-suite-20261018/review-inputs/claude-effective-briefing/outputs/control-3.md",
+      "target": "outputs/control-3.md"
+    },
+    {
+      "source": "../../../../../../../skill-study-private/concise-writing/baseline-suite-20261018/review-inputs/claude-effective-briefing/outputs/original-1.md",
+      "target": "outputs/original-1.md"
+    },
+    {
+      "source": "../../../../../../../skill-study-private/concise-writing/baseline-suite-20261018/review-inputs/claude-effective-briefing/outputs/original-2.md",
+      "target": "outputs/original-2.md"
+    },
+    {
+      "source": "../../../../../../../skill-study-private/concise-writing/baseline-suite-20261018/review-inputs/claude-effective-briefing/outputs/original-3.md",
+      "target": "outputs/original-3.md"
+    },
+    {
+      "source": "../../../../../../../skill-study-private/concise-writing/baseline-suite-20261018/review-inputs/claude-effective-briefing/policy.txt",
+      "target": "policy.txt"
+    },
+    {
+      "source": "../../../../../../../skill-study-private/concise-writing/baseline-suite-20261018/review-inputs/claude-effective-briefing/prior-assessment.md",
+      "target": "prior-assessment.md"
+    },
+    {
+      "source": "../../../../../../../skill-study-private/concise-writing/baseline-suite-20261018/review-inputs/claude-effective-briefing/sources/TASK.md",
+      "target": "sources/TASK.md"
+    },
+    {
+      "source": "../../../../../../../skill-study-private/concise-writing/baseline-suite-20261018/review-inputs/claude-effective-briefing/sources/report.md",
+      "target": "sources/report.md"
+    }
+  ],
+  "execution": {
+    "provider": "claude",
+    "model": "claude-opus-5-5",
+    "effort": "medium",
+    "permissions": "read-only"
+  }
+}

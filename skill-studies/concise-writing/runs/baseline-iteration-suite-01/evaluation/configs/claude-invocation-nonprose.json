@@ -1,0 +1,117 @@
+{
+  "schema_version": "0.2",
+  "id": "cw-suite-opus-claude-invocation-nonprose",
+  "prompt": "../prompt.md",
+  "fixtures": [
+    {
+      "source": "../../../../../../../skill-study-private/concise-writing/baseline-suite-20261018/review-inputs/claude-invocation-nonprose/EVALUATION-INDEX.json",
+      "target": "EVALUATION-INDEX.json"
+    },
+    {
+      "source": "../../../../../../../skill-study-private/concise-writing/baseline-suite-20261018/review-inputs/claude-invocation-nonprose/MECHANICAL-CHECKS.json",
+      "target": "MECHANICAL-CHECKS.json"
+    },
+    {
+      "source": "../../../../../../../skill-study-private/concise-writing/baseline-suite-20261018/review-inputs/claude-invocation-nonprose/WORD-COUNTS.json",
+      "target": "WORD-COUNTS.json"
+    },
+    {
+      "source": "../../../../../../../skill-study-private/concise-writing/baseline-suite-20261018/review-inputs/claude-invocation-nonprose/criteria.md",
+      "target": "criteria.md"
+    },
+    {
+      "source": "../../../../../../../skill-study-private/concise-writing/baseline-suite-20261018/review-inputs/claude-invocation-nonprose/outputs/candidate-fuller-1.toml",
+      "target": "outputs/candidate-fuller-1.toml"
+    },
+    {
+      "source": "../../../../../../../skill-study-private/concise-writing/baseline-suite-20261018/review-inputs/claude-invocation-nonprose/outputs/candidate-fuller-1.toml.assistant-messages.md",
+      "target": "outputs/candidate-fuller-1.toml.assistant-messages.md"
+    },
+    {
+      "source": "../../../../../../../skill-study-private/concise-writing/baseline-suite-20261018/review-inputs/claude-invocation-nonprose/outputs/candidate-fuller-2.toml",
+      "target": "outputs/candidate-fuller-2.toml"
+    },
+    {
+      "source": "../../../../../../../skill-study-private/concise-writing/baseline-suite-20261018/review-inputs/claude-invocation-nonprose/outputs/candidate-fuller-2.toml.assistant-messages.md",
+      "target": "outputs/candidate-fuller-2.toml.assistant-messages.md"
+    },
+    {
+      "source": "../../../../../../../skill-study-private/concise-writing/baseline-suite-20261018/review-inputs/claude-invocation-nonprose/outputs/candidate-fuller-3.toml",
+      "target": "outputs/candidate-fuller-3.toml"
+    },
+    {
+      "source": "../../../../../../../skill-study-private/concise-writing/baseline-suite-20261018/review-inputs/claude-invocation-nonprose/outputs/candidate-fuller-3.toml.assistant-messages.md",
+      "target": "outputs/candidate-fuller-3.toml.assistant-messages.md"
+    },
+    {
+      "source": "../../../../../../../skill-study-private/concise-writing/baseline-suite-20261018/review-inputs/claude-invocation-nonprose/outputs/candidate-targeted-1.toml",
+      "target": "outputs/candidate-targeted-1.toml"
+    },
+    {
+      "source": "../../../../../../../skill-study-private/concise-writing/baseline-suite-20261018/review-inputs/claude-invocation-nonprose/outputs/candidate-targeted-1.toml.assistant-messages.md",
+      "target": "outputs/candidate-targeted-1.toml.assistant-messages.md"
+    },
+    {
+      "source": "../../../../../../../skill-study-private/concise-writing/baseline-suite-20261018/review-inputs/claude-invocation-nonprose/outputs/candidate-targeted-2.toml",
+      "target": "outputs/candidate-targeted-2.toml"
+    },
+    {
+      "source": "../../../../../../../skill-study-private/concise-writing/baseline-suite-20261018/review-inputs/claude-invocation-nonprose/outputs/candidate-targeted-2.toml.assistant-messages.md",
+      "target": "outputs/candidate-targeted-2.toml.assistant-messages.md"
+    },
+    {
+      "source": "../../../../../../../skill-study-private/concise-writing/baseline-suite-20261018/review-inputs/claude-invocation-nonprose/outputs/candidate-targeted-3.toml",
+      "target": "outputs/candidate-targeted-3.toml"
+    },
+    {
+      "source": "../../../../../../../skill-study-private/concise-writing/baseline-suite-20261018/review-inputs/claude-invocation-nonprose/outputs/candidate-targeted-3.toml.assistant-messages.md",
+      "target": "outputs/candidate-targeted-3.toml.assistant-messages.md"
+    },
+    {
+      "source": "../../../../../../../skill-study-private/concise-writing/baseline-suite-20261018/review-inputs/claude-invocation-nonprose/outputs/original-1.toml",
+      "target": "outputs/original-1.toml"
+    },
+    {
+      "source": "../../../../../../../skill-study-private/concise-writing/baseline-suite-20261018/review-inputs/claude-invocation-nonprose/outputs/original-1.toml.assistant-messages.md",
+      "target": "outputs/original-1.toml.assistant-messages.md"
+    },
+    {
+      "source": "../../../../../../../skill-study-private/concise-writing/baseline-suite-20261018/review-inputs/claude-invocation-nonprose/outputs/original-2.toml",
+      "target": "outputs/original-2.toml"
+    },
+    {
+      "source": "../../../../../../../skill-study-private/concise-writing/baseline-suite-20261018/review-inputs/claude-invocation-nonprose/outputs/original-2.toml.assistant-messages.md",
+      "target": "outputs/original-2.toml.assistant-messages.md"
+    },
+    {
+      "source": "../../../../../../../skill-study-private/concise-writing/baseline-suite-20261018/review-inputs/claude-invocation-nonprose/outputs/original-3.toml",
+      "target": "outputs/original-3.toml"
+    },
+    {
+      "source": "../../../../../../../skill-study-private/concise-writing/baseline-suite-20261018/review-inputs/claude-invocation-nonprose/outputs/original-3.toml.assistant-messages.md",
+      "target": "outputs/original-3.toml.assistant-messages.md"
+    },
+    {
+      "source": "../../../../../../../skill-study-private/concise-writing/baseline-suite-20261018/review-inputs/claude-invocation-nonprose/policy.txt",
+      "target": "policy.txt"
+    },
+    {
+      "source": "../../../../../../../skill-study-private/concise-writing/baseline-suite-20261018/review-inputs/claude-invocation-nonprose/prior-assessment.md",
+      "target": "prior-assessment.md"
+    },
+    {
+      "source": "../../../../../../../skill-study-private/concise-writing/baseline-suite-20261018/review-inputs/claude-invocation-nonprose/sources/TASK.md",
+      "target": "sources/TASK.md"
+    },
+    {
+      "source": "../../../../../../../skill-study-private/concise-writing/baseline-suite-20261018/review-inputs/claude-invocation-nonprose/sources/settings.toml",
+      "target": "sources/settings.toml"
+    }
+  ],
+  "execution": {
+    "provider": "claude",
+    "model": "claude-opus-5-5",
+    "effort": "medium",
+    "permissions": "read-only"
+  }
+}

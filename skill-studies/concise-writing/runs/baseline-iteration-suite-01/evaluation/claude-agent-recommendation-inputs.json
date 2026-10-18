@@ -1,0 +1,221 @@
+{
+  "name": "claude-agent-recommendation",
+  "subject_provider": "claude",
+  "case": "agent-recommendation",
+  "configuration": "skill-studies/concise-writing/runs/baseline-iteration-suite-01/evaluation/configs/claude-agent-recommendation.json",
+  "configuration_sha256": "2348d70e14844d21c5e34716a83af6a15d0bd5847682938f8fa3e593bbe8241c",
+  "packet": "/Users/simon/work/personal/skill-study-private/concise-writing/baseline-suite-20261018/review-inputs/claude-agent-recommendation",
+  "outputs": 12,
+  "input_files": [
+    {
+      "path": "/Users/simon/work/personal/skill-study-private/concise-writing/baseline-suite-20261018/review-inputs/claude-agent-recommendation/EVALUATION-INDEX.json",
+      "target": "EVALUATION-INDEX.json",
+      "sha256": "f8d0f90b3861a6b42a29dfd503f80dc6738820fe2a5c0b05ed51bb2256073a94"
+    },
+    {
+      "path": "/Users/simon/work/personal/skill-study-private/concise-writing/baseline-suite-20261018/review-inputs/claude-agent-recommendation/MECHANICAL-CHECKS.json",
+      "target": "MECHANICAL-CHECKS.json",
+      "sha256": "ca3d163bab055381827226140568f3bef7eaac187cebd76878e0b63e9e442356"
+    },
+    {
+      "path": "/Users/simon/work/personal/skill-study-private/concise-writing/baseline-suite-20261018/review-inputs/claude-agent-recommendation/WORD-COUNTS.json",
+      "target": "WORD-COUNTS.json",
+      "sha256": "56d96cf19a424d2d9e4937e967cb65651df58e4dfac8107fa35d0c5136c949f9"
+    },
+    {
+      "path": "/Users/simon/work/personal/skill-study-private/concise-writing/baseline-suite-20261018/review-inputs/claude-agent-recommendation/criteria.md",
+      "target": "criteria.md",
+      "sha256": "f9497af025dc6c19f82aa62554a0e60d24096d76cf3b0022af01d46413da995e"
+    },
+    {
+      "path": "/Users/simon/work/personal/skill-study-private/concise-writing/baseline-suite-20261018/review-inputs/claude-agent-recommendation/outputs/candidate-fuller-1.md",
+      "target": "outputs/candidate-fuller-1.md",
+      "sha256": "08e0c5d2c759eb4c0372c4ec123f7ec82d2c885f31e24a9975b2fa05df3338f4"
+    },
+    {
+      "path": "/Users/simon/work/personal/skill-study-private/concise-writing/baseline-suite-20261018/review-inputs/claude-agent-recommendation/outputs/candidate-fuller-2.md",
+      "target": "outputs/candidate-fuller-2.md",
+      "sha256": "4a278a94ebfb7dab633a45d1559bf05f9140ef9b4b803977ce55b647b93a6e80"
+    },
+    {
+      "path": "/Users/simon/work/personal/skill-study-private/concise-writing/baseline-suite-20261018/review-inputs/claude-agent-recommendation/outputs/candidate-fuller-3.md",
+      "target": "outputs/candidate-fuller-3.md",
+      "sha256": "59af9ad9ee5e90231544d47f99d7170012772ae08538136374f398bd18279618"
+    },
+    {
+      "path": "/Users/simon/work/personal/skill-study-private/concise-writing/baseline-suite-20261018/review-inputs/claude-agent-recommendation/outputs/candidate-targeted-1.md",
+      "target": "outputs/candidate-targeted-1.md",
+      "sha256": "76fc85fed333d8dc32f1b10d3f1cb7d2b98fb350e64f830a5cfd51968e14e378"
+    },
+    {
+      "path": "/Users/simon/work/personal/skill-study-private/concise-writing/baseline-suite-20261018/review-inputs/claude-agent-recommendation/outputs/candidate-targeted-2.md",
+      "target": "outputs/candidate-targeted-2.md",
+      "sha256": "3eb13e2b0a9ba176d812022357c73d09c8e14310dd8e712b7614efc56b0b476f"
+    },
+    {
+      "path": "/Users/simon/work/personal/skill-study-private/concise-writing/baseline-suite-20261018/review-inputs/claude-agent-recommendation/outputs/candidate-targeted-3.md",
+      "target": "outputs/candidate-targeted-3.md",
+      "sha256": "3800b07280c951e8f781ec8da1b342a5358d89a3a2e905a4656180d53001b72e"
+    },
+    {
+      "path": "/Users/simon/work/personal/skill-study-private/concise-writing/baseline-suite-20261018/review-inputs/claude-agent-recommendation/outputs/control-1.md",
+      "target": "outputs/control-1.md",
+      "sha256": "240b998cb702d29b121ac5b3f37780990f5894df5b21e22ac487a68e6734b3bc"
+    },
+    {
+      "path": "/Users/simon/work/personal/skill-study-private/concise-writing/baseline-suite-20261018/review-inputs/claude-agent-recommendation/outputs/control-2.md",
+      "target": "outputs/control-2.md",
+      "sha256": "9ccfc720ada997392f5e81412b4787f521d74ba76ac2341e50d62751b049b470"
+    },
+    {
+      "path": "/Users/simon/work/personal/skill-study-private/concise-writing/baseline-suite-20261018/review-inputs/claude-agent-recommendation/outputs/control-3.md",
+      "target": "outputs/control-3.md",
+      "sha256": "cfbbf6a7df57e28b83f50e6a6eb9a37ceaa60587cf61ebccb6c1ee5bd37f3e90"
+    },
+    {
+      "path": "/Users/simon/work/personal/skill-study-private/concise-writing/baseline-suite-20261018/review-inputs/claude-agent-recommendation/outputs/original-1.md",
+      "target": "outputs/original-1.md",
+      "sha256": "728296040a52b843a9ce7eecb33685bdab7e9fc0656460c7e35e81cbf70a4694"
+    },
+    {
+      "path": "/Users/simon/work/personal/skill-study-private/concise-writing/baseline-suite-20261018/review-inputs/claude-agent-recommendation/outputs/original-2.md",
+      "target": "outputs/original-2.md",
+      "sha256": "92b28fb421b7bb1d97b026bc4316f3898ee58972d70b2732b68acef7d5cbbf11"
+    },
+    {
+      "path": "/Users/simon/work/personal/skill-study-private/concise-writing/baseline-suite-20261018/review-inputs/claude-agent-recommendation/outputs/original-3.md",
+      "target": "outputs/original-3.md",
+      "sha256": "a9d10167f6aa64a0011a9975050549e44c7f2d065c0008e342dc070a5ab5a428"
+    },
+    {
+      "path": "/Users/simon/work/personal/skill-study-private/concise-writing/baseline-suite-20261018/review-inputs/claude-agent-recommendation/policy.txt",
+      "target": "policy.txt",
+      "sha256": "9f8125d86d72a368cc12bdbc4c64cc1d7ee188f604fc13130dcd9f8313981c33"
+    },
+    {
+      "path": "/Users/simon/work/personal/skill-study-private/concise-writing/baseline-suite-20261018/review-inputs/claude-agent-recommendation/prior-assessment.md",
+      "target": "prior-assessment.md",
+      "sha256": "d9f4167048410d761c39c06c3bed54c17f83e27a119945d37eefea20eb97b9fb"
+    },
+    {
+      "path": "/Users/simon/work/personal/skill-study-private/concise-writing/baseline-suite-20261018/review-inputs/claude-agent-recommendation/sources/TASK.md",
+      "target": "sources/TASK.md",
+      "sha256": "607cbe0562a19ea092fe76ec96f13bfbe033b2e1095baef2ca38be621c0baf82"
+    },
+    {
+      "path": "/Users/simon/work/personal/skill-study-private/concise-writing/baseline-suite-20261018/review-inputs/claude-agent-recommendation/sources/report.md",
+      "target": "sources/report.md",
+      "sha256": "e9a992c7e4c14dfd5afc10cc637349f39c2030e98ed0311441675900bc3e93e9"
+    }
+  ],
+  "source_audit": [
+    {
+      "run_id": "20261018T170234716Z-cw-suite-claude-agent-recommendation-candidate-targeted-b2c93c2c-1f0c-4153-aea8-6ccbafdbaa35-fz3scwk4",
+      "declared_non_skill_sources": [
+        "sources/report.md",
+        "sources/TASK.md"
+      ],
+      "source_hashes_match": true,
+      "output_sha256": "76fc85fed333d8dc32f1b10d3f1cb7d2b98fb350e64f830a5cfd51968e14e378"
+    },
+    {
+      "run_id": "20261018T170853473Z-cw-suite-claude-agent-recommendation-candidate-fuller-fb7d7805-0d65-443b-b53c-51a55b8ae586-n0vsuhra",
+      "declared_non_skill_sources": [
+        "sources/report.md",
+        "sources/TASK.md"
+      ],
+      "source_hashes_match": true,
+      "output_sha256": "08e0c5d2c759eb4c0372c4ec123f7ec82d2c885f31e24a9975b2fa05df3338f4"
+    },
+    {
+      "run_id": "20261018T170922279Z-cw-suite-claude-agent-recommendation-control-78c1dbef-8db0-46f6-8ed3-00b808ba27d3-mwxcm_6h",
+      "declared_non_skill_sources": [
+        "sources/report.md",
+        "sources/TASK.md"
+      ],
+      "source_hashes_match": true,
+      "output_sha256": "240b998cb702d29b121ac5b3f37780990f5894df5b21e22ac487a68e6734b3bc"
+    },
+    {
+      "run_id": "20261018T170950262Z-cw-suite-claude-agent-recommendation-original-d3077d2e-da39-4487-9d5f-57b790e556eb-iz0mxf7u",
+      "declared_non_skill_sources": [
+        "sources/report.md",
+        "sources/TASK.md"
+      ],
+      "source_hashes_match": true,
+      "output_sha256": "728296040a52b843a9ce7eecb33685bdab7e9fc0656460c7e35e81cbf70a4694"
+    },
+    {
+      "run_id": "20261018T171023800Z-cw-suite-claude-agent-recommendation-candidate-fuller-8f010012-73f1-4ec4-a5c8-a6adaf78730d-1mlzkko4",
+      "declared_non_skill_sources": [
+        "sources/report.md",
+        "sources/TASK.md"
+      ],
+      "source_hashes_match": true,
+      "output_sha256": "4a278a94ebfb7dab633a45d1559bf05f9140ef9b4b803977ce55b647b93a6e80"
+    },
+    {
+      "run_id": "20261018T171050827Z-cw-suite-claude-agent-recommendation-control-77572985-09a3-40cc-b7e8-541dc1c37483-14sncics",
+      "declared_non_skill_sources": [
+        "sources/report.md",
+        "sources/TASK.md"
+      ],
+      "source_hashes_match": true,
+      "output_sha256": "9ccfc720ada997392f5e81412b4787f521d74ba76ac2341e50d62751b049b470"
+    },
+    {
+      "run_id": "20261018T171123930Z-cw-suite-claude-agent-recommendation-original-c4b5d3cb-efdb-40fe-bea8-434bb96557d7-u_s1su0m",
+      "declared_non_skill_sources": [
+        "sources/report.md",
+        "sources/TASK.md"
+      ],
+      "source_hashes_match": true,
+      "output_sha256": "92b28fb421b7bb1d97b026bc4316f3898ee58972d70b2732b68acef7d5cbbf11"
+    },
+    {
+      "run_id": "20261018T171139503Z-cw-suite-claude-agent-recommendation-candidate-targeted-94d0de42-b178-46a2-8f79-1557fa2e55df-s8wu1e6e",
+      "declared_non_skill_sources": [
+        "sources/report.md",
+        "sources/TASK.md"
+      ],
+      "source_hashes_match": true,
+      "output_sha256": "3eb13e2b0a9ba176d812022357c73d09c8e14310dd8e712b7614efc56b0b476f"
+    },
+    {
+      "run_id": "20261018T171208915Z-cw-suite-claude-agent-recommendation-control-1bbc97d0-fb85-434e-a283-3debf77de42e-9q55rlub",
+      "declared_non_skill_sources": [
+        "sources/report.md",
+        "sources/TASK.md"
+      ],
+      "source_hashes_match": true,
+      "output_sha256": "cfbbf6a7df57e28b83f50e6a6eb9a37ceaa60587cf61ebccb6c1ee5bd37f3e90"
+    },
+    {
+      "run_id": "20261018T171234657Z-cw-suite-claude-agent-recommendation-original-dda59c49-246c-4ddd-866f-c69a95c27fca-55yqlemj",
+      "declared_non_skill_sources": [
+        "sources/report.md",
+        "sources/TASK.md"
+      ],
+      "source_hashes_match": true,
+      "output_sha256": "a9d10167f6aa64a0011a9975050549e44c7f2d065c0008e342dc070a5ab5a428"
+    },
+    {
+      "run_id": "20261018T171258899Z-cw-suite-claude-agent-recommendation-candidate-targeted-fd6164e3-99b3-48bb-aaa4-600632f73fef-du4j6iot",
+      "declared_non_skill_sources": [
+        "sources/report.md",
+        "sources/TASK.md"
+      ],
+      "source_hashes_match": true,
+      "output_sha256": "3800b07280c951e8f781ec8da1b342a5358d89a3a2e905a4656180d53001b72e"
+    },
+    {
+      "run_id": "20261018T171328373Z-cw-suite-claude-agent-recommendation-candidate-fuller-69c7c473-73c6-43f3-b4ae-dff6512d604b-csb8f3g5",
+      "declared_non_skill_sources": [
+        "sources/report.md",
+        "sources/TASK.md"
+      ],
+      "source_hashes_match": true,
+      "output_sha256": "59af9ad9ee5e90231544d47f99d7170012772ae08538136374f398bd18279618"
+    }
+  ]
+}

@@ -1,0 +1,179 @@
+{
+  "name": "codex-invocation-write",
+  "subject_provider": "codex",
+  "case": "invocation-write",
+  "configuration": "skill-studies/concise-writing/runs/baseline-iteration-suite-01/evaluation/configs/codex-invocation-write.json",
+  "configuration_sha256": "bf9d2a90c2f45725f48bab43f12e862c502bf346d46053b931d53f0a48fab9f3",
+  "packet": "/Users/simon/work/personal/skill-study-private/concise-writing/baseline-suite-20261018/review-inputs/codex-invocation-write",
+  "outputs": 9,
+  "input_files": [
+    {
+      "path": "/Users/simon/work/personal/skill-study-private/concise-writing/baseline-suite-20261018/review-inputs/codex-invocation-write/EVALUATION-INDEX.json",
+      "target": "EVALUATION-INDEX.json",
+      "sha256": "ef84623a721000d078e2d8e4058c7195b0cbf4310aeaf2422c1dee2c5c88533b"
+    },
+    {
+      "path": "/Users/simon/work/personal/skill-study-private/concise-writing/baseline-suite-20261018/review-inputs/codex-invocation-write/MECHANICAL-CHECKS.json",
+      "target": "MECHANICAL-CHECKS.json",
+      "sha256": "ca3d163bab055381827226140568f3bef7eaac187cebd76878e0b63e9e442356"
+    },
+    {
+      "path": "/Users/simon/work/personal/skill-study-private/concise-writing/baseline-suite-20261018/review-inputs/codex-invocation-write/WORD-COUNTS.json",
+      "target": "WORD-COUNTS.json",
+      "sha256": "e501fec2399c825f071690a0ab3080476efffadcfa1049e601b8f7f5d60ad701"
+    },
+    {
+      "path": "/Users/simon/work/personal/skill-study-private/concise-writing/baseline-suite-20261018/review-inputs/codex-invocation-write/criteria.md",
+      "target": "criteria.md",
+      "sha256": "b928f6adcba85e4bbff065453f967386271fbb1d3923429b96d80cfe5b7dd679"
+    },
+    {
+      "path": "/Users/simon/work/personal/skill-study-private/concise-writing/baseline-suite-20261018/review-inputs/codex-invocation-write/outputs/candidate-fuller-1.md",
+      "target": "outputs/candidate-fuller-1.md",
+      "sha256": "3ce26d84aeb2038d5fa94d06979d328c0236dc5439e6e9caad6cddcf6f11b231"
+    },
+    {
+      "path": "/Users/simon/work/personal/skill-study-private/concise-writing/baseline-suite-20261018/review-inputs/codex-invocation-write/outputs/candidate-fuller-2.md",
+      "target": "outputs/candidate-fuller-2.md",
+      "sha256": "1e327e4342b7110d208fd50c25150b2d392208b48bf5544af8f03f01a6212799"
+    },
+    {
+      "path": "/Users/simon/work/personal/skill-study-private/concise-writing/baseline-suite-20261018/review-inputs/codex-invocation-write/outputs/candidate-fuller-3.md",
+      "target": "outputs/candidate-fuller-3.md",
+      "sha256": "dfcc3f72da1c49475c090c8e3b946bc733ee9b8f674d1e9c14fcd29e45e56875"
+    },
+    {
+      "path": "/Users/simon/work/personal/skill-study-private/concise-writing/baseline-suite-20261018/review-inputs/codex-invocation-write/outputs/candidate-targeted-1.md",
+      "target": "outputs/candidate-targeted-1.md",
+      "sha256": "fb077475dadf358389e28457e6107e022807d0ee4508dbf87bb74276f7e23247"
+    },
+    {
+      "path": "/Users/simon/work/personal/skill-study-private/concise-writing/baseline-suite-20261018/review-inputs/codex-invocation-write/outputs/candidate-targeted-2.md",
+      "target": "outputs/candidate-targeted-2.md",
+      "sha256": "9e26ebfa907b2a2e5179b60f1e1b18192ad432fed229ad409a93103ac55d3958"
+    },
+    {
+      "path": "/Users/simon/work/personal/skill-study-private/concise-writing/baseline-suite-20261018/review-inputs/codex-invocation-write/outputs/candidate-targeted-3.md",
+      "target": "outputs/candidate-targeted-3.md",
+      "sha256": "590fcc16bd974ca2badf256b19e1c2f6f9f2a0857690670ba1be805aac3c8a9d"
+    },
+    {
+      "path": "/Users/simon/work/personal/skill-study-private/concise-writing/baseline-suite-20261018/review-inputs/codex-invocation-write/outputs/original-1.md",
+      "target": "outputs/original-1.md",
+      "sha256": "2a320c95c63d35e1bf38d34fdfbd4c05e550e368642f246aee5e13058304dd6c"
+    },
+    {
+      "path": "/Users/simon/work/personal/skill-study-private/concise-writing/baseline-suite-20261018/review-inputs/codex-invocation-write/outputs/original-2.md",
+      "target": "outputs/original-2.md",
+      "sha256": "5897141ed3113e7b4fb38760aa55f483bd85ca17ddfc5066ef2735804922e8ec"
+    },
+    {
+      "path": "/Users/simon/work/personal/skill-study-private/concise-writing/baseline-suite-20261018/review-inputs/codex-invocation-write/outputs/original-3.md",
+      "target": "outputs/original-3.md",
+      "sha256": "95cddc784285711256b2b5460569a0437308efcffae9117bdc3b78648da82715"
+    },
+    {
+      "path": "/Users/simon/work/personal/skill-study-private/concise-writing/baseline-suite-20261018/review-inputs/codex-invocation-write/policy.txt",
+      "target": "policy.txt",
+      "sha256": "9f8125d86d72a368cc12bdbc4c64cc1d7ee188f604fc13130dcd9f8313981c33"
+    },
+    {
+      "path": "/Users/simon/work/personal/skill-study-private/concise-writing/baseline-suite-20261018/review-inputs/codex-invocation-write/prior-assessment.md",
+      "target": "prior-assessment.md",
+      "sha256": "302c40fc941032a8654494ba90c962a07a0b5a90cd8f756bd2210b684ec17e45"
+    },
+    {
+      "path": "/Users/simon/work/personal/skill-study-private/concise-writing/baseline-suite-20261018/review-inputs/codex-invocation-write/sources/TASK.md",
+      "target": "sources/TASK.md",
+      "sha256": "2e0ce51601ecd5e3a12168a3f0640b9ee49151fa3810cc59da0e4abcda85220f"
+    },
+    {
+      "path": "/Users/simon/work/personal/skill-study-private/concise-writing/baseline-suite-20261018/review-inputs/codex-invocation-write/sources/notes.md",
+      "target": "sources/notes.md",
+      "sha256": "687328b186b130469d63398579e81d72b88866e0f7ba4e48b9dfbb4774581442"
+    }
+  ],
+  "source_audit": [
+    {
+      "run_id": "20261018T174317160Z-cw-suite-codex-invocation-write-candidate-targeted-023a78ac-bac1-42ef-bbc8-28adfbe1acfc-0m1ynhcb",
+      "declared_non_skill_sources": [
+        "sources/notes.md",
+        "sources/TASK.md"
+      ],
+      "source_hashes_match": true,
+      "output_sha256": "fb077475dadf358389e28457e6107e022807d0ee4508dbf87bb74276f7e23247"
+    },
+    {
+      "run_id": "20261018T174348606Z-cw-suite-codex-invocation-write-candidate-fuller-33bb4e15-2165-4478-a314-dfbe9ec0ccf9-ouleseu_",
+      "declared_non_skill_sources": [
+        "sources/notes.md",
+        "sources/TASK.md"
+      ],
+      "source_hashes_match": true,
+      "output_sha256": "3ce26d84aeb2038d5fa94d06979d328c0236dc5439e6e9caad6cddcf6f11b231"
+    },
+    {
+      "run_id": "20261018T174423458Z-cw-suite-codex-invocation-write-original-4dac21ab-dc66-4d9e-bc2c-de4fda95fa85-01jlwrxo",
+      "declared_non_skill_sources": [
+        "sources/notes.md",
+        "sources/TASK.md"
+      ],
+      "source_hashes_match": true,
+      "output_sha256": "2a320c95c63d35e1bf38d34fdfbd4c05e550e368642f246aee5e13058304dd6c"
+    },
+    {
+      "run_id": "20261018T174505500Z-cw-suite-codex-invocation-write-candidate-fuller-22a65f87-4597-4038-a7ac-e3d9ff4cd41b-h5obzoj1",
+      "declared_non_skill_sources": [
+        "sources/notes.md",
+        "sources/TASK.md"
+      ],
+      "source_hashes_match": true,
+      "output_sha256": "1e327e4342b7110d208fd50c25150b2d392208b48bf5544af8f03f01a6212799"
+    },
+    {
+      "run_id": "20261018T174532434Z-cw-suite-codex-invocation-write-original-1071425b-cdb7-4953-95a6-5158464f1e90-_yopzdhc",
+      "declared_non_skill_sources": [
+        "sources/notes.md",
+        "sources/TASK.md"
+      ],
+      "source_hashes_match": true,
+      "output_sha256": "5897141ed3113e7b4fb38760aa55f483bd85ca17ddfc5066ef2735804922e8ec"
+    },
+    {
+      "run_id": "20261018T174608599Z-cw-suite-codex-invocation-write-candidate-targeted-8d7b7657-57c3-4476-ac24-21686ab426ae-x98dsct1",
+      "declared_non_skill_sources": [
+        "sources/notes.md",
+        "sources/TASK.md"
+      ],
+      "source_hashes_match": true,
+      "output_sha256": "9e26ebfa907b2a2e5179b60f1e1b18192ad432fed229ad409a93103ac55d3958"
+    },
+    {
+      "run_id": "20261018T174649206Z-cw-suite-codex-invocation-write-original-2f334c30-6ec9-4dea-8e55-f57ca8d7d865-ytklmoau",
+      "declared_non_skill_sources": [
+        "sources/notes.md",
+        "sources/TASK.md"
+      ],
+      "source_hashes_match": true,
+      "output_sha256": "95cddc784285711256b2b5460569a0437308efcffae9117bdc3b78648da82715"
+    },
+    {
+      "run_id": "20261018T174723657Z-cw-suite-codex-invocation-write-candidate-targeted-758296ed-3e51-44bc-986a-b8123c5f3270-kyj_0bhc",
+      "declared_non_skill_sources": [
+        "sources/notes.md",
+        "sources/TASK.md"
+      ],
+      "source_hashes_match": true,
+      "output_sha256": "590fcc16bd974ca2badf256b19e1c2f6f9f2a0857690670ba1be805aac3c8a9d"
+    },
+    {
+      "run_id": "20261018T174808802Z-cw-suite-codex-invocation-write-candidate-fuller-b74aa5e4-aee4-4eb1-a654-a2f2018a8074-r0_npw2g",
+      "declared_non_skill_sources": [
+        "sources/notes.md",
+        "sources/TASK.md"
+      ],
+      "source_hashes_match": true,
+      "output_sha256": "dfcc3f72da1c49475c090c8e3b946bc733ee9b8f674d1e9c14fcd29e45e56875"
+    }
+  ]
+}

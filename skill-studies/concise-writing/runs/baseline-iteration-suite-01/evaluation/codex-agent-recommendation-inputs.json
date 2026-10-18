@@ -1,0 +1,221 @@
+{
+  "name": "codex-agent-recommendation",
+  "subject_provider": "codex",
+  "case": "agent-recommendation",
+  "configuration": "skill-studies/concise-writing/runs/baseline-iteration-suite-01/evaluation/configs/codex-agent-recommendation.json",
+  "configuration_sha256": "9b0f6c16cc3de4607053ed5c86afeea1d97ec18d1b383c9e0f5382189f6757c6",
+  "packet": "/Users/simon/work/personal/skill-study-private/concise-writing/baseline-suite-20261018/review-inputs/codex-agent-recommendation",
+  "outputs": 12,
+  "input_files": [
+    {
+      "path": "/Users/simon/work/personal/skill-study-private/concise-writing/baseline-suite-20261018/review-inputs/codex-agent-recommendation/EVALUATION-INDEX.json",
+      "target": "EVALUATION-INDEX.json",
+      "sha256": "1dfc050836bc0330253eeb986e70ba471d8c8ab7e71bccdc09d824515e221794"
+    },
+    {
+      "path": "/Users/simon/work/personal/skill-study-private/concise-writing/baseline-suite-20261018/review-inputs/codex-agent-recommendation/MECHANICAL-CHECKS.json",
+      "target": "MECHANICAL-CHECKS.json",
+      "sha256": "ca3d163bab055381827226140568f3bef7eaac187cebd76878e0b63e9e442356"
+    },
+    {
+      "path": "/Users/simon/work/personal/skill-study-private/concise-writing/baseline-suite-20261018/review-inputs/codex-agent-recommendation/WORD-COUNTS.json",
+      "target": "WORD-COUNTS.json",
+      "sha256": "ccc535258016a8c90ce006067acef248ee169c5516580d91673b4491457996af"
+    },
+    {
+      "path": "/Users/simon/work/personal/skill-study-private/concise-writing/baseline-suite-20261018/review-inputs/codex-agent-recommendation/criteria.md",
+      "target": "criteria.md",
+      "sha256": "f9497af025dc6c19f82aa62554a0e60d24096d76cf3b0022af01d46413da995e"
+    },
+    {
+      "path": "/Users/simon/work/personal/skill-study-private/concise-writing/baseline-suite-20261018/review-inputs/codex-agent-recommendation/outputs/candidate-fuller-1.md",
+      "target": "outputs/candidate-fuller-1.md",
+      "sha256": "61c56e66aab0fd65a66c5a9ef82b697cdcd69bf2ae44ee28ed9345cee4ba76a7"
+    },
+    {
+      "path": "/Users/simon/work/personal/skill-study-private/concise-writing/baseline-suite-20261018/review-inputs/codex-agent-recommendation/outputs/candidate-fuller-2.md",
+      "target": "outputs/candidate-fuller-2.md",
+      "sha256": "9160bc862424300ee8fef62d7153bdd15b8da3c6a19c4d17d59540778f9be3b5"
+    },
+    {
+      "path": "/Users/simon/work/personal/skill-study-private/concise-writing/baseline-suite-20261018/review-inputs/codex-agent-recommendation/outputs/candidate-fuller-3.md",
+      "target": "outputs/candidate-fuller-3.md",
+      "sha256": "45b6879d78fccad04d4b973607470f7f77857cdf2c658c7924d8c756aaf73fbb"
+    },
+    {
+      "path": "/Users/simon/work/personal/skill-study-private/concise-writing/baseline-suite-20261018/review-inputs/codex-agent-recommendation/outputs/candidate-targeted-1.md",
+      "target": "outputs/candidate-targeted-1.md",
+      "sha256": "5fe2e2245cfe0a3650a0905fca7b1da6eb2e751f2ea48ec13f7bb4bfc956251c"
+    },
+    {
+      "path": "/Users/simon/work/personal/skill-study-private/concise-writing/baseline-suite-20261018/review-inputs/codex-agent-recommendation/outputs/candidate-targeted-2.md",
+      "target": "outputs/candidate-targeted-2.md",
+      "sha256": "01d99a04451012800480d4f751543d8f2830081e8778bc147c168887a456ab7b"
+    },
+    {
+      "path": "/Users/simon/work/personal/skill-study-private/concise-writing/baseline-suite-20261018/review-inputs/codex-agent-recommendation/outputs/candidate-targeted-3.md",
+      "target": "outputs/candidate-targeted-3.md",
+      "sha256": "29c96e31b66cc927737ea2fedd0c4613ea95e595d4a6cf2f11120b285369caa8"
+    },
+    {
+      "path": "/Users/simon/work/personal/skill-study-private/concise-writing/baseline-suite-20261018/review-inputs/codex-agent-recommendation/outputs/control-1.md",
+      "target": "outputs/control-1.md",
+      "sha256": "2ff22bb23cfd9c963eafd0e31d8a70589c57793214e625fb992c28289b3b4476"
+    },
+    {
+      "path": "/Users/simon/work/personal/skill-study-private/concise-writing/baseline-suite-20261018/review-inputs/codex-agent-recommendation/outputs/control-2.md",
+      "target": "outputs/control-2.md",
+      "sha256": "b9cfb278b694f3c2b312b6b2ff381236ef63b77780f0f9ca5af8191ea010d9e4"
+    },
+    {
+      "path": "/Users/simon/work/personal/skill-study-private/concise-writing/baseline-suite-20261018/review-inputs/codex-agent-recommendation/outputs/control-3.md",
+      "target": "outputs/control-3.md",
+      "sha256": "3dd9dd3c6aea1ff729ceb7de50dee941fee9f3594380dc78f85c22d152fdbe56"
+    },
+    {
+      "path": "/Users/simon/work/personal/skill-study-private/concise-writing/baseline-suite-20261018/review-inputs/codex-agent-recommendation/outputs/original-1.md",
+      "target": "outputs/original-1.md",
+      "sha256": "cb649d60ad721399944779e80d40d381843770e843102e40f321ab47095fbc3d"
+    },
+    {
+      "path": "/Users/simon/work/personal/skill-study-private/concise-writing/baseline-suite-20261018/review-inputs/codex-agent-recommendation/outputs/original-2.md",
+      "target": "outputs/original-2.md",
+      "sha256": "a485ac03166ad1812f32bb4a2e922b8fc5d67c292f50ad35fba4160d5a85c6f0"
+    },
+    {
+      "path": "/Users/simon/work/personal/skill-study-private/concise-writing/baseline-suite-20261018/review-inputs/codex-agent-recommendation/outputs/original-3.md",
+      "target": "outputs/original-3.md",
+      "sha256": "868082b26218558b4380e81fb22342dd0a1a525e50bf7788353adbb24fadd3e0"
+    },
+    {
+      "path": "/Users/simon/work/personal/skill-study-private/concise-writing/baseline-suite-20261018/review-inputs/codex-agent-recommendation/policy.txt",
+      "target": "policy.txt",
+      "sha256": "9f8125d86d72a368cc12bdbc4c64cc1d7ee188f604fc13130dcd9f8313981c33"
+    },
+    {
+      "path": "/Users/simon/work/personal/skill-study-private/concise-writing/baseline-suite-20261018/review-inputs/codex-agent-recommendation/prior-assessment.md",
+      "target": "prior-assessment.md",
+      "sha256": "d4da3ed8c5230f436cff2e33e30dc629caf700e5e41407056e85bbc7becc6de6"
+    },
+    {
+      "path": "/Users/simon/work/personal/skill-study-private/concise-writing/baseline-suite-20261018/review-inputs/codex-agent-recommendation/sources/TASK.md",
+      "target": "sources/TASK.md",
+      "sha256": "607cbe0562a19ea092fe76ec96f13bfbe033b2e1095baef2ca38be621c0baf82"
+    },
+    {
+      "path": "/Users/simon/work/personal/skill-study-private/concise-writing/baseline-suite-20261018/review-inputs/codex-agent-recommendation/sources/report.md",
+      "target": "sources/report.md",
+      "sha256": "e9a992c7e4c14dfd5afc10cc637349f39c2030e98ed0311441675900bc3e93e9"
+    }
+  ],
+  "source_audit": [
+    {
+      "run_id": "20261018T163332960Z-cw-suite-codex-agent-recommendation-control-807003c3-fdaf-4767-8a08-6ea68eac3d2a-_glxocsg",
+      "declared_non_skill_sources": [
+        "sources/report.md",
+        "sources/TASK.md"
+      ],
+      "source_hashes_match": true,
+      "output_sha256": "2ff22bb23cfd9c963eafd0e31d8a70589c57793214e625fb992c28289b3b4476"
+    },
+    {
+      "run_id": "20261018T163426022Z-cw-suite-codex-agent-recommendation-original-80bed02a-0a5d-4547-84f4-01a5d03ad340-bwxx__5o",
+      "declared_non_skill_sources": [
+        "sources/report.md",
+        "sources/TASK.md"
+      ],
+      "source_hashes_match": true,
+      "output_sha256": "cb649d60ad721399944779e80d40d381843770e843102e40f321ab47095fbc3d"
+    },
+    {
+      "run_id": "20261018T163528329Z-cw-suite-codex-agent-recommendation-candidate-targeted-ca997521-057a-4962-8919-8b912614d5ea-_sga5u3y",
+      "declared_non_skill_sources": [
+        "sources/report.md",
+        "sources/TASK.md"
+      ],
+      "source_hashes_match": true,
+      "output_sha256": "5fe2e2245cfe0a3650a0905fca7b1da6eb2e751f2ea48ec13f7bb4bfc956251c"
+    },
+    {
+      "run_id": "20261018T163611129Z-cw-suite-codex-agent-recommendation-candidate-fuller-95a6b0cb-78ee-43f8-9085-af2a35479733-x84oau61",
+      "declared_non_skill_sources": [
+        "sources/report.md",
+        "sources/TASK.md"
+      ],
+      "source_hashes_match": true,
+      "output_sha256": "61c56e66aab0fd65a66c5a9ef82b697cdcd69bf2ae44ee28ed9345cee4ba76a7"
+    },
+    {
+      "run_id": "20261018T163648790Z-cw-suite-codex-agent-recommendation-original-78d44923-aa6c-4420-9bfd-070379ac30c2-lxfe4yux",
+      "declared_non_skill_sources": [
+        "sources/report.md",
+        "sources/TASK.md"
+      ],
+      "source_hashes_match": true,
+      "output_sha256": "a485ac03166ad1812f32bb4a2e922b8fc5d67c292f50ad35fba4160d5a85c6f0"
+    },
+    {
+      "run_id": "20261018T163728325Z-cw-suite-codex-agent-recommendation-candidate-targeted-aea01fda-4ef4-42c0-8144-dab7b82b32c2-3s54ight",
+      "declared_non_skill_sources": [
+        "sources/report.md",
+        "sources/TASK.md"
+      ],
+      "source_hashes_match": true,
+      "output_sha256": "01d99a04451012800480d4f751543d8f2830081e8778bc147c168887a456ab7b"
+    },
+    {
+      "run_id": "20261018T163807986Z-cw-suite-codex-agent-recommendation-candidate-fuller-ae0309f5-31ce-496b-bcc3-212d72e237f2-bcnhsi0m",
+      "declared_non_skill_sources": [
+        "sources/report.md",
+        "sources/TASK.md"
+      ],
+      "source_hashes_match": true,
+      "output_sha256": "9160bc862424300ee8fef62d7153bdd15b8da3c6a19c4d17d59540778f9be3b5"
+    },
+    {
+      "run_id": "20261018T163848522Z-cw-suite-codex-agent-recommendation-control-28615740-751e-4465-a8b6-b7e2c956c85c-ibreq8xx",
+      "declared_non_skill_sources": [
+        "sources/report.md",
+        "sources/TASK.md"
+      ],
+      "source_hashes_match": true,
+      "output_sha256": "b9cfb278b694f3c2b312b6b2ff381236ef63b77780f0f9ca5af8191ea010d9e4"
+    },
+    {
+      "run_id": "20261018T163919129Z-cw-suite-codex-agent-recommendation-candidate-targeted-961233ed-dea7-467b-ba18-592fc39069ce-6o6737ty",
+      "declared_non_skill_sources": [
+        "sources/report.md",
+        "sources/TASK.md"
+      ],
+      "source_hashes_match": true,
+      "output_sha256": "29c96e31b66cc927737ea2fedd0c4613ea95e595d4a6cf2f11120b285369caa8"
+    },
+    {
+      "run_id": "20261018T163957463Z-cw-suite-codex-agent-recommendation-candidate-fuller-23959f90-6949-436c-bd87-3baa14825200-g2yhjg56",
+      "declared_non_skill_sources": [
+        "sources/report.md",
+        "sources/TASK.md"
+      ],
+      "source_hashes_match": true,
+      "output_sha256": "45b6879d78fccad04d4b973607470f7f77857cdf2c658c7924d8c756aaf73fbb"
+    },
+    {
+      "run_id": "20261018T164029409Z-cw-suite-codex-agent-recommendation-control-99d110c9-6662-4760-adb2-8c64200c01bf-ml_t3ckm",
+      "declared_non_skill_sources": [
+        "sources/report.md",
+        "sources/TASK.md"
+      ],
+      "source_hashes_match": true,
+      "output_sha256": "3dd9dd3c6aea1ff729ceb7de50dee941fee9f3594380dc78f85c22d152fdbe56"
+    },
+    {
+      "run_id": "20261018T164107612Z-cw-suite-codex-agent-recommendation-original-c7ae56cd-0e70-4ecf-b907-c192552d5b68-pdo3phcc",
+      "declared_non_skill_sources": [
+        "sources/report.md",
+        "sources/TASK.md"
+      ],
+      "source_hashes_match": true,
+      "output_sha256": "868082b26218558b4380e81fb22342dd0a1a525e50bf7788353adbb24fadd3e0"
+    }
+  ]
+}

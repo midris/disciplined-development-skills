@@ -1,0 +1,193 @@
+{
+  "name": "claude-invocation-comments",
+  "subject_provider": "claude",
+  "case": "invocation-comments",
+  "configuration": "skill-studies/concise-writing/runs/baseline-iteration-suite-01/evaluation/configs/claude-invocation-comments.json",
+  "configuration_sha256": "449acd491a1606030d90cf1cdbf0a5d829da559ad5239d353b767abafa977f89",
+  "packet": "/Users/simon/work/personal/skill-study-private/concise-writing/baseline-suite-20261018/review-inputs/claude-invocation-comments",
+  "outputs": 9,
+  "input_files": [
+    {
+      "path": "/Users/simon/work/personal/skill-study-private/concise-writing/baseline-suite-20261018/review-inputs/claude-invocation-comments/EVALUATION-INDEX.json",
+      "target": "EVALUATION-INDEX.json",
+      "sha256": "698c9af5577672903ba9cd2501584012ba1f369e334bfbb911acddbcd62d4d74"
+    },
+    {
+      "path": "/Users/simon/work/personal/skill-study-private/concise-writing/baseline-suite-20261018/review-inputs/claude-invocation-comments/MECHANICAL-CHECKS.json",
+      "target": "MECHANICAL-CHECKS.json",
+      "sha256": "e7aa2eeb88f89c851179e4400bf23afc216cd2cf366415936394688551b86b18"
+    },
+    {
+      "path": "/Users/simon/work/personal/skill-study-private/concise-writing/baseline-suite-20261018/review-inputs/claude-invocation-comments/WORD-COUNTS.json",
+      "target": "WORD-COUNTS.json",
+      "sha256": "9f34f47aa0d1ca78a21e32430c21ee35a68502b7b472746e1f2cc4d019b446b1"
+    },
+    {
+      "path": "/Users/simon/work/personal/skill-study-private/concise-writing/baseline-suite-20261018/review-inputs/claude-invocation-comments/criteria.md",
+      "target": "criteria.md",
+      "sha256": "23c065a1de50c665d5c4eeb9ef89474fe3c4379aacf4722d8f17044b7c19d992"
+    },
+    {
+      "path": "/Users/simon/work/personal/skill-study-private/concise-writing/baseline-suite-20261018/review-inputs/claude-invocation-comments/outputs/candidate-fuller-1.py",
+      "target": "outputs/candidate-fuller-1.py",
+      "sha256": "10b4f83bbaaeb057f8b068f58d0f8ee7c6a332837b205d2a7976e5af56bf1b4c"
+    },
+    {
+      "path": "/Users/simon/work/personal/skill-study-private/concise-writing/baseline-suite-20261018/review-inputs/claude-invocation-comments/outputs/candidate-fuller-2.py",
+      "target": "outputs/candidate-fuller-2.py",
+      "sha256": "10506cf16a99fac040ddd92a0cd28de2d16bff21960bd3fe022eaa647c9168ce"
+    },
+    {
+      "path": "/Users/simon/work/personal/skill-study-private/concise-writing/baseline-suite-20261018/review-inputs/claude-invocation-comments/outputs/candidate-fuller-3.py",
+      "target": "outputs/candidate-fuller-3.py",
+      "sha256": "d9a9bd07b4b15d4b2ab1100a0c3682e7ee50e906958b2042a73295c4272922e7"
+    },
+    {
+      "path": "/Users/simon/work/personal/skill-study-private/concise-writing/baseline-suite-20261018/review-inputs/claude-invocation-comments/outputs/candidate-targeted-1.py",
+      "target": "outputs/candidate-targeted-1.py",
+      "sha256": "515e2f650145394e3ffc6288c69ef3e944e8d437d8c5aa26efa19c8bf5db29bc"
+    },
+    {
+      "path": "/Users/simon/work/personal/skill-study-private/concise-writing/baseline-suite-20261018/review-inputs/claude-invocation-comments/outputs/candidate-targeted-2.py",
+      "target": "outputs/candidate-targeted-2.py",
+      "sha256": "c84e9be535b810c9c0f989a801e4881b1c14df49aafc29d5a8882df3f73fb2da"
+    },
+    {
+      "path": "/Users/simon/work/personal/skill-study-private/concise-writing/baseline-suite-20261018/review-inputs/claude-invocation-comments/outputs/candidate-targeted-3.py",
+      "target": "outputs/candidate-targeted-3.py",
+      "sha256": "8d1c88ec76d317d828f559b642e258389af8428ca6ea2fa34594e7a68f41bfa7"
+    },
+    {
+      "path": "/Users/simon/work/personal/skill-study-private/concise-writing/baseline-suite-20261018/review-inputs/claude-invocation-comments/outputs/original-1.py",
+      "target": "outputs/original-1.py",
+      "sha256": "cc89fb1685b69ad9a11883ddaa54d44c81b73007946adfdb73d963111cf806df"
+    },
+    {
+      "path": "/Users/simon/work/personal/skill-study-private/concise-writing/baseline-suite-20261018/review-inputs/claude-invocation-comments/outputs/original-2.py",
+      "target": "outputs/original-2.py",
+      "sha256": "c7533e6b98455a37937f3151a45e3daac2a7e53dded7bc8b898d1e4397f2a3e5"
+    },
+    {
+      "path": "/Users/simon/work/personal/skill-study-private/concise-writing/baseline-suite-20261018/review-inputs/claude-invocation-comments/outputs/original-3.py",
+      "target": "outputs/original-3.py",
+      "sha256": "7cc864d4e39f6e1bf63493db36fc8245b2a9186ba84a6b1b72902005d389de2a"
+    },
+    {
+      "path": "/Users/simon/work/personal/skill-study-private/concise-writing/baseline-suite-20261018/review-inputs/claude-invocation-comments/policy.txt",
+      "target": "policy.txt",
+      "sha256": "9f8125d86d72a368cc12bdbc4c64cc1d7ee188f604fc13130dcd9f8313981c33"
+    },
+    {
+      "path": "/Users/simon/work/personal/skill-study-private/concise-writing/baseline-suite-20261018/review-inputs/claude-invocation-comments/prior-assessment.md",
+      "target": "prior-assessment.md",
+      "sha256": "f11b4e034562e4eac54e847b667741e67aa58e86c2bf4c14c74a0111dc006494"
+    },
+    {
+      "path": "/Users/simon/work/personal/skill-study-private/concise-writing/baseline-suite-20261018/review-inputs/claude-invocation-comments/sources/MAINTAINER-NOTES.md",
+      "target": "sources/MAINTAINER-NOTES.md",
+      "sha256": "59175ed2990a8b65636507ce2116321e70c60b1c0a2eea288d01e075252fc847"
+    },
+    {
+      "path": "/Users/simon/work/personal/skill-study-private/concise-writing/baseline-suite-20261018/review-inputs/claude-invocation-comments/sources/TASK.md",
+      "target": "sources/TASK.md",
+      "sha256": "6a771f7383d14f7d77b02c862155da0b10af1e83cc72333512c5a83fde9523b5"
+    },
+    {
+      "path": "/Users/simon/work/personal/skill-study-private/concise-writing/baseline-suite-20261018/review-inputs/claude-invocation-comments/sources/uploader.py",
+      "target": "sources/uploader.py",
+      "sha256": "2587771c1d7fee7e2ca72dbb1ff1a2594fff69775a72fff1929f437cce8ec2f1"
+    }
+  ],
+  "source_audit": [
+    {
+      "run_id": "20261018T181216180Z-cw-suite-claude-invocation-comments-candidate-fuller-bd66a28d-7f21-4c73-8391-60057601da00-0gw0b40a",
+      "declared_non_skill_sources": [
+        "sources/TASK.md",
+        "sources/uploader.py",
+        "sources/MAINTAINER-NOTES.md"
+      ],
+      "source_hashes_match": true,
+      "output_sha256": "10b4f83bbaaeb057f8b068f58d0f8ee7c6a332837b205d2a7976e5af56bf1b4c"
+    },
+    {
+      "run_id": "20261018T181250819Z-cw-suite-claude-invocation-comments-original-4e2bfd89-7b40-4997-95fc-8a866ba33dcb-8ndvrgc_",
+      "declared_non_skill_sources": [
+        "sources/TASK.md",
+        "sources/uploader.py",
+        "sources/MAINTAINER-NOTES.md"
+      ],
+      "source_hashes_match": true,
+      "output_sha256": "cc89fb1685b69ad9a11883ddaa54d44c81b73007946adfdb73d963111cf806df"
+    },
+    {
+      "run_id": "20261018T181325237Z-cw-suite-claude-invocation-comments-candidate-targeted-cc92f762-73f9-406e-b11b-de46632340fb-csmi01gf",
+      "declared_non_skill_sources": [
+        "sources/TASK.md",
+        "sources/uploader.py",
+        "sources/MAINTAINER-NOTES.md"
+      ],
+      "source_hashes_match": true,
+      "output_sha256": "515e2f650145394e3ffc6288c69ef3e944e8d437d8c5aa26efa19c8bf5db29bc"
+    },
+    {
+      "run_id": "20261018T181359671Z-cw-suite-claude-invocation-comments-original-9071ad6d-1a76-4362-852f-e7a283eb9216-b2raj7rp",
+      "declared_non_skill_sources": [
+        "sources/TASK.md",
+        "sources/uploader.py",
+        "sources/MAINTAINER-NOTES.md"
+      ],
+      "source_hashes_match": true,
+      "output_sha256": "c7533e6b98455a37937f3151a45e3daac2a7e53dded7bc8b898d1e4397f2a3e5"
+    },
+    {
+      "run_id": "20261018T181423559Z-cw-suite-claude-invocation-comments-candidate-targeted-9e0b3232-f58a-406b-a8fe-ae04591cb2c7-a62ebadj",
+      "declared_non_skill_sources": [
+        "sources/TASK.md",
+        "sources/uploader.py",
+        "sources/MAINTAINER-NOTES.md"
+      ],
+      "source_hashes_match": true,
+      "output_sha256": "c84e9be535b810c9c0f989a801e4881b1c14df49aafc29d5a8882df3f73fb2da"
+    },
+    {
+      "run_id": "20261018T181451874Z-cw-suite-claude-invocation-comments-candidate-fuller-d4b1db73-f1ae-4bf1-be62-5e0dfb92f5db-rcoll7ld",
+      "declared_non_skill_sources": [
+        "sources/TASK.md",
+        "sources/uploader.py",
+        "sources/MAINTAINER-NOTES.md"
+      ],
+      "source_hashes_match": true,
+      "output_sha256": "10506cf16a99fac040ddd92a0cd28de2d16bff21960bd3fe022eaa647c9168ce"
+    },
+    {
+      "run_id": "20261018T181518659Z-cw-suite-claude-invocation-comments-candidate-targeted-2d01db50-6f2d-4fc6-80a3-051551d0f607-4u42kp00",
+      "declared_non_skill_sources": [
+        "sources/TASK.md",
+        "sources/uploader.py",
+        "sources/MAINTAINER-NOTES.md"
+      ],
+      "source_hashes_match": true,
+      "output_sha256": "8d1c88ec76d317d828f559b642e258389af8428ca6ea2fa34594e7a68f41bfa7"
+    },
+    {
+      "run_id": "20261018T181548827Z-cw-suite-claude-invocation-comments-candidate-fuller-0f413acc-0b11-4c53-8234-a9d2213f99db-_4tpp6dh",
+      "declared_non_skill_sources": [
+        "sources/TASK.md",
+        "sources/uploader.py",
+        "sources/MAINTAINER-NOTES.md"
+      ],
+      "source_hashes_match": true,
+      "output_sha256": "d9a9bd07b4b15d4b2ab1100a0c3682e7ee50e906958b2042a73295c4272922e7"
+    },
+    {
+      "run_id": "20261018T181624012Z-cw-suite-claude-invocation-comments-original-bdfca37e-f1cd-4764-bef0-95a764d0f1e8-mkmi9j2t",
+      "declared_non_skill_sources": [
+        "sources/TASK.md",
+        "sources/uploader.py",
+        "sources/MAINTAINER-NOTES.md"
+      ],
+      "source_hashes_match": true,
+      "output_sha256": "7cc864d4e39f6e1bf63493db36fc8245b2a9186ba84a6b1b72902005d389de2a"
+    }
+  ]
+}

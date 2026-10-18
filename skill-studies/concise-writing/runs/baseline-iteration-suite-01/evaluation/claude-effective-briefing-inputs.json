@@ -1,0 +1,221 @@
+{
+  "name": "claude-effective-briefing",
+  "subject_provider": "claude",
+  "case": "effective-briefing",
+  "configuration": "skill-studies/concise-writing/runs/baseline-iteration-suite-01/evaluation/configs/claude-effective-briefing.json",
+  "configuration_sha256": "c2276cb6e9eb87955ef73a3df35a5d6ca51e346453e9a7b066267a04930815f6",
+  "packet": "/Users/simon/work/personal/skill-study-private/concise-writing/baseline-suite-20261018/review-inputs/claude-effective-briefing",
+  "outputs": 12,
+  "input_files": [
+    {
+      "path": "/Users/simon/work/personal/skill-study-private/concise-writing/baseline-suite-20261018/review-inputs/claude-effective-briefing/EVALUATION-INDEX.json",
+      "target": "EVALUATION-INDEX.json",
+      "sha256": "2cb85ea85e97f0d43f50a09ef7f90c4b71763cef90187b7861a59f258cd1bd67"
+    },
+    {
+      "path": "/Users/simon/work/personal/skill-study-private/concise-writing/baseline-suite-20261018/review-inputs/claude-effective-briefing/MECHANICAL-CHECKS.json",
+      "target": "MECHANICAL-CHECKS.json",
+      "sha256": "ca3d163bab055381827226140568f3bef7eaac187cebd76878e0b63e9e442356"
+    },
+    {
+      "path": "/Users/simon/work/personal/skill-study-private/concise-writing/baseline-suite-20261018/review-inputs/claude-effective-briefing/WORD-COUNTS.json",
+      "target": "WORD-COUNTS.json",
+      "sha256": "07a4e6c176d32db768cda5a23a35e656b61c7e61eda72b39bcdf59af7422f5a7"
+    },
+    {
+      "path": "/Users/simon/work/personal/skill-study-private/concise-writing/baseline-suite-20261018/review-inputs/claude-effective-briefing/criteria.md",
+      "target": "criteria.md",
+      "sha256": "c362db71d9f56a8430376630933ee5feda6a60b27fce230706e3de3aa0eb9541"
+    },
+    {
+      "path": "/Users/simon/work/personal/skill-study-private/concise-writing/baseline-suite-20261018/review-inputs/claude-effective-briefing/outputs/candidate-fuller-1.md",
+      "target": "outputs/candidate-fuller-1.md",
+      "sha256": "6c44ea1af6e8dca415f558ed263682c592e04a87bc123a0ab637e7e42de8fd31"
+    },
+    {
+      "path": "/Users/simon/work/personal/skill-study-private/concise-writing/baseline-suite-20261018/review-inputs/claude-effective-briefing/outputs/candidate-fuller-2.md",
+      "target": "outputs/candidate-fuller-2.md",
+      "sha256": "e3a3a521345ea035a50b9c56db0ac18941a7acf5f56b9da4b18c67405685a72e"
+    },
+    {
+      "path": "/Users/simon/work/personal/skill-study-private/concise-writing/baseline-suite-20261018/review-inputs/claude-effective-briefing/outputs/candidate-fuller-3.md",
+      "target": "outputs/candidate-fuller-3.md",
+      "sha256": "abc6d297c1cf6e8a4989498e9c86c730bb736aa7e3915f88bd468e4871daaad5"
+    },
+    {
+      "path": "/Users/simon/work/personal/skill-study-private/concise-writing/baseline-suite-20261018/review-inputs/claude-effective-briefing/outputs/candidate-targeted-1.md",
+      "target": "outputs/candidate-targeted-1.md",
+      "sha256": "f2c16863039c35c87393ecf06c47729a20f968d09c7b85e5765810e49ec7558e"
+    },
+    {
+      "path": "/Users/simon/work/personal/skill-study-private/concise-writing/baseline-suite-20261018/review-inputs/claude-effective-briefing/outputs/candidate-targeted-2.md",
+      "target": "outputs/candidate-targeted-2.md",
+      "sha256": "0aa3b59aba882476f5ca371fa17c7d8b6069eea60bc04abfa3f2c66a5488a9c5"
+    },
+    {
+      "path": "/Users/simon/work/personal/skill-study-private/concise-writing/baseline-suite-20261018/review-inputs/claude-effective-briefing/outputs/candidate-targeted-3.md",
+      "target": "outputs/candidate-targeted-3.md",
+      "sha256": "10fdd37574d4f02b89f66e32c14435c9d052d02006c2c9fa9e29d2e1785fec1e"
+    },
+    {
+      "path": "/Users/simon/work/personal/skill-study-private/concise-writing/baseline-suite-20261018/review-inputs/claude-effective-briefing/outputs/control-1.md",
+      "target": "outputs/control-1.md",
+      "sha256": "4c0c8ffad8927bc726bb4c288f256a5d701dd90c557de3cebe0d6f4f2eb9293c"
+    },
+    {
+      "path": "/Users/simon/work/personal/skill-study-private/concise-writing/baseline-suite-20261018/review-inputs/claude-effective-briefing/outputs/control-2.md",
+      "target": "outputs/control-2.md",
+      "sha256": "e9cccf29e39f6ec23183d200d4835953c24bfabc6f6d6aa146a23dec87c6ea20"
+    },
+    {
+      "path": "/Users/simon/work/personal/skill-study-private/concise-writing/baseline-suite-20261018/review-inputs/claude-effective-briefing/outputs/control-3.md",
+      "target": "outputs/control-3.md",
+      "sha256": "5ee4d949ce8fe0e5b3c60338cbb3fd9f42bdfa79ee11167699648e9fa0370095"
+    },
+    {
+      "path": "/Users/simon/work/personal/skill-study-private/concise-writing/baseline-suite-20261018/review-inputs/claude-effective-briefing/outputs/original-1.md",
+      "target": "outputs/original-1.md",
+      "sha256": "0aa3b59aba882476f5ca371fa17c7d8b6069eea60bc04abfa3f2c66a5488a9c5"
+    },
+    {
+      "path": "/Users/simon/work/personal/skill-study-private/concise-writing/baseline-suite-20261018/review-inputs/claude-effective-briefing/outputs/original-2.md",
+      "target": "outputs/original-2.md",
+      "sha256": "73f62c1e9f5be1ade758d1d8d0ebdb167af27a16d3b5ef17188f1f20532f9909"
+    },
+    {
+      "path": "/Users/simon/work/personal/skill-study-private/concise-writing/baseline-suite-20261018/review-inputs/claude-effective-briefing/outputs/original-3.md",
+      "target": "outputs/original-3.md",
+      "sha256": "74a8f5051f72f14caf844bee49aa144b8ac64b7c7dadef315e62bc8aa5d631ef"
+    },
+    {
+      "path": "/Users/simon/work/personal/skill-study-private/concise-writing/baseline-suite-20261018/review-inputs/claude-effective-briefing/policy.txt",
+      "target": "policy.txt",
+      "sha256": "9f8125d86d72a368cc12bdbc4c64cc1d7ee188f604fc13130dcd9f8313981c33"
+    },
+    {
+      "path": "/Users/simon/work/personal/skill-study-private/concise-writing/baseline-suite-20261018/review-inputs/claude-effective-briefing/prior-assessment.md",
+      "target": "prior-assessment.md",
+      "sha256": "81a7bb02f53940a714f76ddf739a24e22393542b61a44679d5da50059db4cee6"
+    },
+    {
+      "path": "/Users/simon/work/personal/skill-study-private/concise-writing/baseline-suite-20261018/review-inputs/claude-effective-briefing/sources/TASK.md",
+      "target": "sources/TASK.md",
+      "sha256": "fbf576b5f00e154e6ee4618285d96980b1858de992e5390a1e83cf9b03cb1796"
+    },
+    {
+      "path": "/Users/simon/work/personal/skill-study-private/concise-writing/baseline-suite-20261018/review-inputs/claude-effective-briefing/sources/report.md",
+      "target": "sources/report.md",
+      "sha256": "93c23afd44aab52dfcd2bca53f3db0020a41f650d46d4c59a09595539dc72491"
+    }
+  ],
+  "source_audit": [
+    {
+      "run_id": "20261018T171356825Z-cw-suite-claude-effective-briefing-candidate-fuller-a3b31e39-a8e7-4c55-9ba1-4d38167e7822-qvshq55r",
+      "declared_non_skill_sources": [
+        "sources/report.md",
+        "sources/TASK.md"
+      ],
+      "source_hashes_match": true,
+      "output_sha256": "6c44ea1af6e8dca415f558ed263682c592e04a87bc123a0ab637e7e42de8fd31"
+    },
+    {
+      "run_id": "20261018T171432706Z-cw-suite-claude-effective-briefing-control-143d1b6e-b974-48a0-a460-64d8ed1edbf1-qtjxqdxe",
+      "declared_non_skill_sources": [
+        "sources/report.md",
+        "sources/TASK.md"
+      ],
+      "source_hashes_match": true,
+      "output_sha256": "4c0c8ffad8927bc726bb4c288f256a5d701dd90c557de3cebe0d6f4f2eb9293c"
+    },
+    {
+      "run_id": "20261018T171459523Z-cw-suite-claude-effective-briefing-original-f8ba0612-a3b1-4389-9743-0bc9ac981f43-ssn2nujn",
+      "declared_non_skill_sources": [
+        "sources/report.md",
+        "sources/TASK.md"
+      ],
+      "source_hashes_match": true,
+      "output_sha256": "0aa3b59aba882476f5ca371fa17c7d8b6069eea60bc04abfa3f2c66a5488a9c5"
+    },
+    {
+      "run_id": "20261018T171539506Z-cw-suite-claude-effective-briefing-candidate-targeted-68a103d1-0f82-4c88-9db4-d0a7f5ffa9a6-a85jy3o1",
+      "declared_non_skill_sources": [
+        "sources/report.md",
+        "sources/TASK.md"
+      ],
+      "source_hashes_match": true,
+      "output_sha256": "f2c16863039c35c87393ecf06c47729a20f968d09c7b85e5765810e49ec7558e"
+    },
+    {
+      "run_id": "20261018T171614011Z-cw-suite-claude-effective-briefing-control-512ee18c-8556-4648-929e-b238058d5265-nn6f29j4",
+      "declared_non_skill_sources": [
+        "sources/report.md",
+        "sources/TASK.md"
+      ],
+      "source_hashes_match": true,
+      "output_sha256": "e9cccf29e39f6ec23183d200d4835953c24bfabc6f6d6aa146a23dec87c6ea20"
+    },
+    {
+      "run_id": "20261018T171629052Z-cw-suite-claude-effective-briefing-original-09f3e858-60d5-4074-afd0-e54ae9879860-7rmofbwv",
+      "declared_non_skill_sources": [
+        "sources/report.md",
+        "sources/TASK.md"
+      ],
+      "source_hashes_match": true,
+      "output_sha256": "73f62c1e9f5be1ade758d1d8d0ebdb167af27a16d3b5ef17188f1f20532f9909"
+    },
+    {
+      "run_id": "20261018T171656633Z-cw-suite-claude-effective-briefing-candidate-targeted-357cd245-3f17-4ca1-ac6a-3175c4ba2eba-g1jjexwn",
+      "declared_non_skill_sources": [
+        "sources/report.md",
+        "sources/TASK.md"
+      ],
+      "source_hashes_match": true,
+      "output_sha256": "0aa3b59aba882476f5ca371fa17c7d8b6069eea60bc04abfa3f2c66a5488a9c5"
+    },
+    {
+      "run_id": "20261018T171732937Z-cw-suite-claude-effective-briefing-candidate-fuller-2104d2fa-ab2f-4f64-85aa-64bb20619d43-f7ez2yk0",
+      "declared_non_skill_sources": [
+        "sources/report.md",
+        "sources/TASK.md"
+      ],
+      "source_hashes_match": true,
+      "output_sha256": "e3a3a521345ea035a50b9c56db0ac18941a7acf5f56b9da4b18c67405685a72e"
+    },
+    {
+      "run_id": "20261018T171800579Z-cw-suite-claude-effective-briefing-original-e6459b6a-316c-4345-9ba6-8477232caa1e-f3tqxken",
+      "declared_non_skill_sources": [
+        "sources/report.md",
+        "sources/TASK.md"
+      ],
+      "source_hashes_match": true,
+      "output_sha256": "74a8f5051f72f14caf844bee49aa144b8ac64b7c7dadef315e62bc8aa5d631ef"
+    },
+    {
+      "run_id": "20261018T171840613Z-cw-suite-claude-effective-briefing-candidate-targeted-5db0b9f8-d678-4f5d-b01d-f5e44598753c-vz71rbvc",
+      "declared_non_skill_sources": [
+        "sources/report.md",
+        "sources/TASK.md"
+      ],
+      "source_hashes_match": true,
+      "output_sha256": "10fdd37574d4f02b89f66e32c14435c9d052d02006c2c9fa9e29d2e1785fec1e"
+    },
+    {
+      "run_id": "20261018T171907615Z-cw-suite-claude-effective-briefing-candidate-fuller-b1f6b88d-024e-4895-9613-b59696196d23-89wmy1x5",
+      "declared_non_skill_sources": [
+        "sources/report.md",
+        "sources/TASK.md"
+      ],
+      "source_hashes_match": true,
+      "output_sha256": "abc6d297c1cf6e8a4989498e9c86c730bb736aa7e3915f88bd468e4871daaad5"
+    },
+    {
+      "run_id": "20261018T171940669Z-cw-suite-claude-effective-briefing-control-65727629-c657-4fdd-9381-0a32a14e2821-aa8g6aj4",
+      "declared_non_skill_sources": [
+        "sources/report.md",
+        "sources/TASK.md"
+      ],
+      "source_hashes_match": true,
+      "output_sha256": "5ee4d949ce8fe0e5b3c60338cbb3fd9f42bdfa79ee11167699648e9fa0370095"
+    }
+  ]
+}
