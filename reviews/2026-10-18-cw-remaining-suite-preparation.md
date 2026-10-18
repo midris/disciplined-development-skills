@@ -28,5 +28,14 @@ Each review must emit first-pass judgments after full required-file reads and be
 Read-only enforcement, exact Opus identity, protected bytes and complete output capture remain required, with no automatic retries or packet splitting.
 No skill edits, SSR spending or adoption is authorized by this collection.
 
+## Retained-trace inspection amendment
+
+Claude global slot 37 wrote the declared file using a Write path argument with a trailing newline.
+The inspector’s exact suffix test missed that edit and stopped advancement, while the completed subject and raw capture remained intact.
+Terminal-newline recognition now has six focused cases; removing it fails exactly the observed case.
+Replaying the existing trace confirms full body delivery before editing and all original setup identities, without a repeated call.
+Later slots receive prospective controller metadata pins; subject inputs, policy and runtime remain unchanged.
+The completed Codex results were committed before qualifying their Git references and publishing the pinned aggregate index, preserving retrieval dependency order.
+
 No unresolved blocking preparation findings.
 DD-VERDICT: PASS

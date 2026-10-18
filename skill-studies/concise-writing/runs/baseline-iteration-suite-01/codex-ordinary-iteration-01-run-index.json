@@ -48,7 +48,8 @@
         "record": {
           "path": "skill-studies/concise-writing/runs/baseline-iteration-suite-01/results/20261018T163332960Z-cw-suite-codex-agent-recommendation-control-807003c3-fdaf-4767-8a08-6ea68eac3d2a-_glxocsg.json",
           "sha256": "399f11d01c80176c544b1a99d634f8169f4d5e9a83701717dcd1ec7a83b073b3",
-          "version": "2"
+          "version": "2",
+          "git_revision": "24c80fe8faa76cb08e837ba68d96133c80fcb865"
         }
       }
     },
@@ -96,7 +97,8 @@
         "record": {
           "path": "skill-studies/concise-writing/runs/baseline-iteration-suite-01/results/20261018T163426022Z-cw-suite-codex-agent-recommendation-original-80bed02a-0a5d-4547-84f4-01a5d03ad340-bwxx__5o.json",
           "sha256": "4d20a525b0ed9656448e974d087181e634a7198317f489c6494cd500e84a9e89",
-          "version": "2"
+          "version": "2",
+          "git_revision": "24c80fe8faa76cb08e837ba68d96133c80fcb865"
         }
       }
     },
@@ -144,7 +146,8 @@
         "record": {
           "path": "skill-studies/concise-writing/runs/baseline-iteration-suite-01/results/20261018T163528329Z-cw-suite-codex-agent-recommendation-candidate-targeted-ca997521-057a-4962-8919-8b912614d5ea-_sga5u3y.json",
           "sha256": "0d44c46ed3c5096c954939783fa2ea956f2e5ff1c4c36b3acd5b1621f61b3de7",
-          "version": "2"
+          "version": "2",
+          "git_revision": "24c80fe8faa76cb08e837ba68d96133c80fcb865"
         }
       }
     },
@@ -192,7 +195,8 @@
         "record": {
           "path": "skill-studies/concise-writing/runs/baseline-iteration-suite-01/results/20261018T163611129Z-cw-suite-codex-agent-recommendation-candidate-fuller-95a6b0cb-78ee-43f8-9085-af2a35479733-x84oau61.json",
           "sha256": "d7794f8ff9b24b7a23eccd9421686b70e0ef74cedc1076f04cf7df513e95d858",
-          "version": "2"
+          "version": "2",
+          "git_revision": "24c80fe8faa76cb08e837ba68d96133c80fcb865"
         }
       }
     },
@@ -240,7 +244,8 @@
         "record": {
           "path": "skill-studies/concise-writing/runs/baseline-iteration-suite-01/results/20261018T163648790Z-cw-suite-codex-agent-recommendation-original-78d44923-aa6c-4420-9bfd-070379ac30c2-lxfe4yux.json",
           "sha256": "df18ccf8c5358923547b1f1bf5f16c0c5fe7b6aa1bafd0441ae7ffe8221aadc2",
-          "version": "2"
+          "version": "2",
+          "git_revision": "24c80fe8faa76cb08e837ba68d96133c80fcb865"
         }
       }
     },
@@ -288,7 +293,8 @@
         "record": {
           "path": "skill-studies/concise-writing/runs/baseline-iteration-suite-01/results/20261018T163728325Z-cw-suite-codex-agent-recommendation-candidate-targeted-aea01fda-4ef4-42c0-8144-dab7b82b32c2-3s54ight.json",
           "sha256": "d0e6b5d3c5054ea3c5ef33a9348be830a9d66591b0a48add5f20175bf52a624c",
-          "version": "2"
+          "version": "2",
+          "git_revision": "24c80fe8faa76cb08e837ba68d96133c80fcb865"
         }
       }
     },
@@ -336,7 +342,8 @@
         "record": {
           "path": "skill-studies/concise-writing/runs/baseline-iteration-suite-01/results/20261018T163807986Z-cw-suite-codex-agent-recommendation-candidate-fuller-ae0309f5-31ce-496b-bcc3-212d72e237f2-bcnhsi0m.json",
           "sha256": "4be0fef20208990eefd465b75fa9eacb6482d20bc34cda8c65f39646b1d22a0e",
-          "version": "2"
+          "version": "2",
+          "git_revision": "24c80fe8faa76cb08e837ba68d96133c80fcb865"
         }
       }
     },
@@ -384,7 +391,8 @@
         "record": {
           "path": "skill-studies/concise-writing/runs/baseline-iteration-suite-01/results/20261018T163848522Z-cw-suite-codex-agent-recommendation-control-28615740-751e-4465-a8b6-b7e2c956c85c-ibreq8xx.json",
           "sha256": "6d48bbed5c0f4e05331c8570d127f5c79a48c55a57e4382dfbfa48e9c4efb62e",
-          "version": "2"
+          "version": "2",
+          "git_revision": "24c80fe8faa76cb08e837ba68d96133c80fcb865"
         }
       }
     },
@@ -432,7 +440,8 @@
         "record": {
           "path": "skill-studies/concise-writing/runs/baseline-iteration-suite-01/results/20261018T163919129Z-cw-suite-codex-agent-recommendation-candidate-targeted-961233ed-dea7-467b-ba18-592fc39069ce-6o6737ty.json",
           "sha256": "379122623998cd40f07a49ecfc733030181a9f33425d11f791f38e9adfdb954a",
-          "version": "2"
+          "version": "2",
+          "git_revision": "24c80fe8faa76cb08e837ba68d96133c80fcb865"
         }
       }
     },
@@ -480,7 +489,8 @@
         "record": {
           "path": "skill-studies/concise-writing/runs/baseline-iteration-suite-01/results/20261018T163957463Z-cw-suite-codex-agent-recommendation-candidate-fuller-23959f90-6949-436c-bd87-3baa14825200-g2yhjg56.json",
           "sha256": "1e96db515f73a64971e0ea43b2a032dc6a73039f4a4e86e1385ee548af96bcea",
-          "version": "2"
+          "version": "2",
+          "git_revision": "24c80fe8faa76cb08e837ba68d96133c80fcb865"
         }
       }
     },
@@ -528,7 +538,8 @@
         "record": {
           "path": "skill-studies/concise-writing/runs/baseline-iteration-suite-01/results/20261018T164029409Z-cw-suite-codex-agent-recommendation-control-99d110c9-6662-4760-adb2-8c64200c01bf-ml_t3ckm.json",
           "sha256": "f27e67fb1e2ff102cb35fb12c143707c0267723ab773925c5a3a17f95afdbe3d",
-          "version": "2"
+          "version": "2",
+          "git_revision": "24c80fe8faa76cb08e837ba68d96133c80fcb865"
         }
       }
     },
@@ -576,7 +587,8 @@
         "record": {
           "path": "skill-studies/concise-writing/runs/baseline-iteration-suite-01/results/20261018T164107612Z-cw-suite-codex-agent-recommendation-original-c7ae56cd-0e70-4ecf-b907-c192552d5b68-pdo3phcc.json",
           "sha256": "8771f33b3ddb38466cf06007981dd2bc599c767c23f63cc6cf22e8e633b3dca0",
-          "version": "2"
+          "version": "2",
+          "git_revision": "24c80fe8faa76cb08e837ba68d96133c80fcb865"
         }
       }
     },
@@ -624,7 +636,8 @@
         "record": {
           "path": "skill-studies/concise-writing/runs/baseline-iteration-suite-01/results/20261018T164141817Z-cw-suite-codex-effective-briefing-original-a5fb5afb-f288-47eb-af27-5f8fa0bbebfa-_e4opi7o.json",
           "sha256": "3d6462ddc4c4664c037a39a8747d6a21d1c3acc3bb9abe61372313db8972a29b",
-          "version": "2"
+          "version": "2",
+          "git_revision": "24c80fe8faa76cb08e837ba68d96133c80fcb865"
         }
       }
     },
@@ -672,7 +685,8 @@
         "record": {
           "path": "skill-studies/concise-writing/runs/baseline-iteration-suite-01/results/20261018T164223507Z-cw-suite-codex-effective-briefing-candidate-targeted-435e7fe3-de23-4810-8406-1020e5702ce1-mk6vhky2.json",
           "sha256": "27bcb15bf452e6491801b8f53d6a3427b60d6e6ac514082c9668d6e0b20d952c",
-          "version": "2"
+          "version": "2",
+          "git_revision": "24c80fe8faa76cb08e837ba68d96133c80fcb865"
         }
       }
     },
@@ -720,7 +734,8 @@
         "record": {
           "path": "skill-studies/concise-writing/runs/baseline-iteration-suite-01/results/20261018T164259687Z-cw-suite-codex-effective-briefing-candidate-fuller-f99ca748-7054-466f-a818-868e9bbf3cc7-tf_fw1ik.json",
           "sha256": "268a3e3fd5955293d5cd4c7cb0205badf16703831044ac718ac356f570290d2d",
-          "version": "2"
+          "version": "2",
+          "git_revision": "24c80fe8faa76cb08e837ba68d96133c80fcb865"
         }
       }
     },
@@ -768,7 +783,8 @@
         "record": {
           "path": "skill-studies/concise-writing/runs/baseline-iteration-suite-01/results/20261018T164341373Z-cw-suite-codex-effective-briefing-control-0a8065c0-1f33-4a96-95c2-26aeb944c0ab-hm2ds_bb.json",
           "sha256": "c15e31a94f79d4a4df7440c2c1c4abb6f2b3a3654dfaa5ed255f3f43be23ed2a",
-          "version": "2"
+          "version": "2",
+          "git_revision": "24c80fe8faa76cb08e837ba68d96133c80fcb865"
         }
       }
     },
@@ -816,7 +832,8 @@
         "record": {
           "path": "skill-studies/concise-writing/runs/baseline-iteration-suite-01/results/20261018T164409757Z-cw-suite-codex-effective-briefing-candidate-targeted-4107c58f-8a2d-46f4-ab48-4946e372de24-amz6fyc7.json",
           "sha256": "232b5c29b84d8bb9dfd4939981bf5192a48d253f7bec3812b1251d9ee7f68024",
-          "version": "2"
+          "version": "2",
+          "git_revision": "24c80fe8faa76cb08e837ba68d96133c80fcb865"
         }
       }
     },
@@ -864,7 +881,8 @@
         "record": {
           "path": "skill-studies/concise-writing/runs/baseline-iteration-suite-01/results/20261018T164445815Z-cw-suite-codex-effective-briefing-candidate-fuller-200924ea-8f7b-47ff-bbe7-54dba2aa3dac-tyf5jkj9.json",
           "sha256": "9a44174f14695af8a2e776fddc03fb4f5722214d35c03f08ab2fa3018982c520",
-          "version": "2"
+          "version": "2",
+          "git_revision": "24c80fe8faa76cb08e837ba68d96133c80fcb865"
         }
       }
     },
@@ -912,7 +930,8 @@
         "record": {
           "path": "skill-studies/concise-writing/runs/baseline-iteration-suite-01/results/20261018T164520140Z-cw-suite-codex-effective-briefing-control-af9447e0-a02e-4da8-9886-11657ca1226e-immsestx.json",
           "sha256": "2afc704178cba60b8693147c5f0ce82bd370ef91e3243348358d747d726390c9",
-          "version": "2"
+          "version": "2",
+          "git_revision": "24c80fe8faa76cb08e837ba68d96133c80fcb865"
         }
       }
     },
@@ -960,7 +979,8 @@
         "record": {
           "path": "skill-studies/concise-writing/runs/baseline-iteration-suite-01/results/20261018T164546675Z-cw-suite-codex-effective-briefing-original-46d60faf-28be-47e5-9a25-dfe5fde2b27a-lwohx54k.json",
           "sha256": "54e436c4c4cc2920ec8651a4aca4f563b033bfc60c9a4a1333ec7a78b95fad12",
-          "version": "2"
+          "version": "2",
+          "git_revision": "24c80fe8faa76cb08e837ba68d96133c80fcb865"
         }
       }
     },
@@ -1008,7 +1028,8 @@
         "record": {
           "path": "skill-studies/concise-writing/runs/baseline-iteration-suite-01/results/20261018T164626570Z-cw-suite-codex-effective-briefing-candidate-fuller-bcfe0112-f7ad-4860-b92e-5e5863e53004-wkukokoe.json",
           "sha256": "4ca5c9854a40610cda0f71a5e93793e2970c8da0e238cd79d15ee33732bff65d",
-          "version": "2"
+          "version": "2",
+          "git_revision": "24c80fe8faa76cb08e837ba68d96133c80fcb865"
         }
       }
     },
@@ -1056,7 +1077,8 @@
         "record": {
           "path": "skill-studies/concise-writing/runs/baseline-iteration-suite-01/results/20261018T164700511Z-cw-suite-codex-effective-briefing-control-3ca3cec1-43f9-47f9-bfc4-3902c72eb965-vyv42v2w.json",
           "sha256": "b9f7b9501b2c40fd40cc11742f430c5539972ab30f643ef7ebb8347f927e9563",
-          "version": "2"
+          "version": "2",
+          "git_revision": "24c80fe8faa76cb08e837ba68d96133c80fcb865"
         }
       }
     },
@@ -1104,7 +1126,8 @@
         "record": {
           "path": "skill-studies/concise-writing/runs/baseline-iteration-suite-01/results/20261018T164735655Z-cw-suite-codex-effective-briefing-original-41bc1922-c952-4110-a399-d0d903f72f03-56qe2rci.json",
           "sha256": "2cf6306a5185ac1db10564d9864f1c298a562fc1dc803d8737f4f5909ea96cd1",
-          "version": "2"
+          "version": "2",
+          "git_revision": "24c80fe8faa76cb08e837ba68d96133c80fcb865"
         }
       }
     },
@@ -1152,7 +1175,8 @@
         "record": {
           "path": "skill-studies/concise-writing/runs/baseline-iteration-suite-01/results/20261018T164806123Z-cw-suite-codex-effective-briefing-candidate-targeted-e3f481a8-0c46-4cbc-8b5b-84af4edf1fa5-t9tl0dgi.json",
           "sha256": "281072884d589817e96ee8e4d2648c73872b5dd990a1fa7481c206730056e27a",
-          "version": "2"
+          "version": "2",
+          "git_revision": "24c80fe8faa76cb08e837ba68d96133c80fcb865"
         }
       }
     },
@@ -1200,7 +1224,8 @@
         "record": {
           "path": "skill-studies/concise-writing/runs/baseline-iteration-suite-01/results/20261018T164851066Z-cw-suite-codex-long-handoff-candidate-targeted-9788119f-d66a-49b5-b9b4-b119e2b0ff91-2bst2qua.json",
           "sha256": "09da48b91f87578a31fd06beec14a5b8f87e231c81c71e8a15a9d005946c4133",
-          "version": "2"
+          "version": "2",
+          "git_revision": "24c80fe8faa76cb08e837ba68d96133c80fcb865"
         }
       }
     },
@@ -1248,7 +1273,8 @@
         "record": {
           "path": "skill-studies/concise-writing/runs/baseline-iteration-suite-01/results/20261018T164955350Z-cw-suite-codex-long-handoff-candidate-fuller-a2d5c4f9-ad2e-420f-8826-0026195dacc2-iakgyzp9.json",
           "sha256": "7ef3f200faf7f0cb7fd0940b78d828774b021685cd9884d58188bd8fe63314b4",
-          "version": "2"
+          "version": "2",
+          "git_revision": "24c80fe8faa76cb08e837ba68d96133c80fcb865"
         }
       }
     },
@@ -1296,7 +1322,8 @@
         "record": {
           "path": "skill-studies/concise-writing/runs/baseline-iteration-suite-01/results/20261018T165104135Z-cw-suite-codex-long-handoff-control-67fedf4e-e66d-4140-9abd-f700f9f70cf8-ung8wj8o.json",
           "sha256": "064b5305d23230e93e27ab8980027d1d9e2d87e3d8c25c6184a6e62290521ab6",
-          "version": "2"
+          "version": "2",
+          "git_revision": "24c80fe8faa76cb08e837ba68d96133c80fcb865"
         }
       }
     },
@@ -1344,7 +1371,8 @@
         "record": {
           "path": "skill-studies/concise-writing/runs/baseline-iteration-suite-01/results/20261018T165156363Z-cw-suite-codex-long-handoff-original-159452a7-4205-4ebb-8e7e-55e62d893d45-s_ra2gs2.json",
           "sha256": "6d05c2351ca4c21b5c2bb89b04bd502f709b5c23163187cc1144ddd084ea0242",
-          "version": "2"
+          "version": "2",
+          "git_revision": "24c80fe8faa76cb08e837ba68d96133c80fcb865"
         }
       }
     },
@@ -1392,7 +1420,8 @@
         "record": {
           "path": "skill-studies/concise-writing/runs/baseline-iteration-suite-01/results/20261018T165251028Z-cw-suite-codex-long-handoff-candidate-fuller-fa21522a-7b3b-44eb-89c8-d0327f4d205a-a_oxgdfq.json",
           "sha256": "a638d502789e420e295a7537857c438c84cfc88d9c66026adcb4de765a9be416",
-          "version": "2"
+          "version": "2",
+          "git_revision": "24c80fe8faa76cb08e837ba68d96133c80fcb865"
         }
       }
     },
@@ -1440,7 +1469,8 @@
         "record": {
           "path": "skill-studies/concise-writing/runs/baseline-iteration-suite-01/results/20261018T165349043Z-cw-suite-codex-long-handoff-control-925e7691-07e5-4679-9506-9df46bcad1a7-2coijqb9.json",
           "sha256": "1658b3157cda85425e5fa3d0974d9154b792d0670a64eb0025af403d29706ec8",
-          "version": "2"
+          "version": "2",
+          "git_revision": "24c80fe8faa76cb08e837ba68d96133c80fcb865"
         }
       }
     },
@@ -1488,7 +1518,8 @@
         "record": {
           "path": "skill-studies/concise-writing/runs/baseline-iteration-suite-01/results/20261018T165507834Z-cw-suite-codex-long-handoff-original-25973727-0e86-4482-8ca0-c880d97cc697-azax1cym.json",
           "sha256": "3792d117d6c57290430ae3d0cea99ffc8fa7a3cf8d07432bee3b787cc0c01343",
-          "version": "2"
+          "version": "2",
+          "git_revision": "24c80fe8faa76cb08e837ba68d96133c80fcb865"
         }
       }
     },
@@ -1536,7 +1567,8 @@
         "record": {
           "path": "skill-studies/concise-writing/runs/baseline-iteration-suite-01/results/20261018T165559880Z-cw-suite-codex-long-handoff-candidate-targeted-4ebfc16d-905c-41d7-998b-ccdbf8488a58-fv_q4hrh.json",
           "sha256": "d17bc78859d902b0ccc35f3afc5f51b877ecce98920c666c5ad64c5bd4267952",
-          "version": "2"
+          "version": "2",
+          "git_revision": "24c80fe8faa76cb08e837ba68d96133c80fcb865"
         }
       }
     },
@@ -1584,7 +1616,8 @@
         "record": {
           "path": "skill-studies/concise-writing/runs/baseline-iteration-suite-01/results/20261018T165704507Z-cw-suite-codex-long-handoff-control-34bcb591-3432-4e38-887d-1dc0982611c4-ve_9uhip.json",
           "sha256": "9e3526c08b8698dcf4849581e2ce967c6ee6307c713e4895bc53882c839458a3",
-          "version": "2"
+          "version": "2",
+          "git_revision": "24c80fe8faa76cb08e837ba68d96133c80fcb865"
         }
       }
     },
@@ -1632,7 +1665,8 @@
         "record": {
           "path": "skill-studies/concise-writing/runs/baseline-iteration-suite-01/results/20261018T165754401Z-cw-suite-codex-long-handoff-original-a5f316a5-20d3-4197-981a-69e7b5ca3baa-wafs66vv.json",
           "sha256": "f859948a8c365e12ac885a5a726b8e88528e9edf41c27539616ad2bb2d83fdfa",
-          "version": "2"
+          "version": "2",
+          "git_revision": "24c80fe8faa76cb08e837ba68d96133c80fcb865"
         }
       }
     },
@@ -1680,7 +1714,8 @@
         "record": {
           "path": "skill-studies/concise-writing/runs/baseline-iteration-suite-01/results/20261018T165851325Z-cw-suite-codex-long-handoff-candidate-targeted-f7e48d3b-eb6c-4830-97bf-540e0ce1ab86-p2fw66_f.json",
           "sha256": "f6d084628987883639eb494f40252e27af0391a3aee05b0cce995f3d049b7696",
-          "version": "2"
+          "version": "2",
+          "git_revision": "24c80fe8faa76cb08e837ba68d96133c80fcb865"
         }
       }
     },
@@ -1728,7 +1763,8 @@
         "record": {
           "path": "skill-studies/concise-writing/runs/baseline-iteration-suite-01/results/20261018T165958236Z-cw-suite-codex-long-handoff-candidate-fuller-ad3fb87d-2010-44ba-941b-14fb3c1850dc-70c316l7.json",
           "sha256": "fbaafcc0b26a8eec4fbea86c85d6ef4e4a2f89f99f20d0efde83709fa27a177f",
-          "version": "2"
+          "version": "2",
+          "git_revision": "24c80fe8faa76cb08e837ba68d96133c80fcb865"
         }
       }
     }

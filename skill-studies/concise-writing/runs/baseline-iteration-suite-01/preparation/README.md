@@ -47,3 +47,12 @@ The evaluator sees complete task/source/notes and saved outputs, the fixed appli
 It emits first-pass judgments before reading the active assessment; record every disagreement without majority voting.
 Freeze each copied packet and its read-only configuration before its funded call; the existing twelve/twenty-output qualifications bound these smaller packets.
 A failed review remains charged and stops the affected decision; no automatic split or replacement is authorized.
+
+## Inspection amendment after global slot 37
+
+The first Claude ordinary subject completed and retained its output, but the inspector did not recognize its Write path argument ending in a newline.
+The CLI had normalized that argument and written the declared report.md.
+Only target-path recognition changes: strip a terminal CR/LF when inspecting the captured argument, while keeping every raw evidence byte intact.
+Six path cases pass; removing the normalization makes exactly the retained-newline case fail.
+Replay of the existing trace verifies complete assigned CW delivery before editing, the requested runtime/model and protected inputs, with no repeated call or setup exclusion.
+The first Claude attempt retains its original controller/manifest identity; later slots use prospectively repinned inspection metadata with unchanged task, source, prompt, skill, schedule, policy, model, shell and permissions.

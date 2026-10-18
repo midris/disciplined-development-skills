@@ -3,9 +3,9 @@
   "manifest_id": "cw-claude-invocation-nonprose-iteration-01",
   "study_id": "concise-writing",
   "case_id": "invocation-nonprose",
-  "status": "frozen",
+  "status": "draft",
   "created_at": "2026-10-18T00:00:00Z",
-  "source_revision": "a27782b26f8014b67e72ecf817f7e08392fd62c5",
+  "source_revision": "",
   "authorities": {
     "spec": {
       "path": "plans/specs/2026-09-11-model-driven-skill-testing-framework.md",
@@ -14,7 +14,7 @@
     },
     "protocol": {
       "path": "skill-studies/concise-writing/protocol.md",
-      "sha256": "ae47cb6ec194a3a9c56b164e35c18222d5e3acc31cb61b057163042fb10ed899",
+      "sha256": "96a410d017db8736754b0a943a8f1fdffd3733a7f700d1ce670612f79c9000e4",
       "version": "1"
     },
     "format_contract": {
@@ -124,7 +124,7 @@
     },
     {
       "path": "skill-studies/concise-writing/runs/baseline-iteration-suite-01/preparation/README.md",
-      "sha256": "d1f0870e010fc655fa2b8bd7d38fb7d69b3f39fa14c17e45c28faf8a0ead68a5",
+      "sha256": "6285b1cce2b2e5547e734ca32fd49c75f0b210063b89909c5e594f2a832784e9",
       "version": null
     },
     {
@@ -134,7 +134,12 @@
     },
     {
       "path": "skill-studies/concise-writing/runs/baseline-iteration-suite-01/preparation/inspect_one.py",
-      "sha256": "d55b441e3c0fcf352ee0974419300cc94d938b87a50e9c96bb6f0d648f3aa604",
+      "sha256": "e5dd2f74f5c86491127b8c536b8989159d73f9f6807b7f2a954a07c7006a64bf",
+      "version": null
+    },
+    {
+      "path": "skill-studies/concise-writing/runs/baseline-iteration-suite-01/preparation/trace_paths.py",
+      "sha256": "050a6d29ca6dd59f018651bd8d328b94a2a74b47363ea029df7b6f0978087c79",
       "version": null
     }
   ]

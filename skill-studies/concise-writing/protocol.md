@@ -556,6 +556,7 @@ Evidence goes to the existing owner-accepted single-host private store under `e-
 
 ### Remaining-suite comparison: codex-ordinary-iteration-01
 
+
 Batch: codex-ordinary-iteration-01
 Scope: 36 sequential attempts; three repetitions per condition/case.
 Authority: approved 144-subject remaining-suite allocation recorded at the protocol opening; no automatic retries or draft edits.
@@ -788,13 +789,13 @@ Owner-accepted recovery decision for CW: single-host retention, as used for SSR,
 
 Combined accounting sources: closed SSR [pilot 01](../sweeping-stale-references/runs/pilot-01/pilot-run-index.json), [pilot 02](../sweeping-stale-references/runs/pilot-02/pilot-02-run-index.json), [semantic delivery](../sweeping-stale-references/runs/semantic-delivery-01/semantic-delivery-01-run-index.json), [core baseline](../sweeping-stale-references/runs/core-baseline-01/core-baseline-01-run-index.json), [comparison](../sweeping-stale-references/runs/comprehensive-comparison-01/comprehensive-comparison-01-run-index.json), the SSR [completed expansion](../sweeping-stale-references/runs/coverage-baseline-01/coverage-baseline-01-run-index.json), the SSR [completed comparison](../sweeping-stale-references/runs/comprehensive-comparison-02/comprehensive-comparison-02-run-index.json), the SSR [Claude smoke](../sweeping-stale-references/runs/claude-smoke-01/claude-smoke-01-run-index.json), the SSR [Claude comparison](../sweeping-stale-references/runs/claude-comparison-01/claude-comparison-01-run-index.json), the SSR [Opus invocation comparison](../sweeping-stale-references/runs/claude-opus-invocation-01/claude-opus-invocation-01-run-index.json), and both CW indexes above. Historical pilot links contribute accounting only; they are not reclassified or reassessed.
 The new E reviews use the [fixed review package](runs/baseline-iteration-e-01/evaluation/README.md) and [supplemental Opus accounting](runs/baseline-iteration-e-01/evaluation/evaluator-run-index.json).
-Dispatched calls are **332 subject, 14 evaluator, 0 authoring, 1 retry**; remaining outer capacity is **108 / 14 / 4 / 3** against the [active plan](../../plans/2026-09-11-model-driven-skill-testing.md#limits-and-information-boundaries). Both eight-call CW batches are spent. The owner authorized ten SSR expansion calls under ceiling 56; all ten are spent, including the excluded control, with no replacement or pool transfer. Comparison runner durations total 508.067 seconds; baseline durations remain 494.936 seconds, including setup and capture.
+Dispatched calls are **333 subject, 14 evaluator, 0 authoring, 1 retry**; remaining outer capacity is **107 / 14 / 4 / 3** against the [active plan](../../plans/2026-09-11-model-driven-skill-testing.md#limits-and-information-boundaries). Both eight-call CW batches are spent. The owner authorized ten SSR expansion calls under ceiling 56; all ten are spent, including the excluded control, with no replacement or pool transfer. Comparison runner durations total 508.067 seconds; baseline durations remain 494.936 seconds, including setup and capture.
 Owner clarification after round-10 review: “the budget is just a guideline”. The 1,200-minute figure below remains the planning baseline, not a collection stop; invocation ceilings and the authorized SSR scope is unchanged. Retain elapsed effort and forecast variance to expose process cost.
 
-Current combined accounting: **2,475 active minutes booked; 1,275 minutes above the historical 1,200-minute planning guideline**.
+Current combined accounting: **2,480 active minutes booked; 1,280 minutes above the historical 1,200-minute planning guideline**.
 These are rounded effort estimates, not stopwatch measurements or a separately timed category breakdown.
 Between-turn owner wait is excluded; runner durations are included once.
-The initial 104 calls and sixteen native third repetitions are spent; combined subject accounting is 332/440, with 108 approved remaining-suite calls available and no E calls remaining.
+The initial 104 calls and sixteen native third repetitions are spent; combined subject accounting is 333/440, with 107 approved remaining-suite calls available and no E calls remaining.
 The supplemental work used 40 estimated active minutes against its 40-minute forecast; model waits are included once.
 
 | Work | Estimated active minutes |
@@ -879,7 +880,8 @@ The supplemental work used 40 estimated active minutes against its 40-minute for
 | Approved study-directory migration, integrity checks and review | 60 |
 | Remaining-suite authorization, input preparation and runtime qualification | 30 |
 | Codex remaining-suite ordinary collection, retention and direct assessment | 30 |
-| **Total** | **2,475** |
+| Claude trace-path inspection diagnosis and zero-model regression verification | 5 |
+| **Total** | **2,480** |
 
 SSR expansion is complete. The prior 55-minute remaining forecast closed at 50 estimated minutes, including the additional shell correction; all ten subject calls are spent.
 The combined batch/recovery effort is 135 estimated minutes (45 initial checkpoint, 40 isolation correction, 50 resumption), 45 above the original 90-minute allowance. Separate round-9 review effort remains in the combined ledger above.
@@ -908,8 +910,8 @@ Subject collection and active-session assessment are complete; the owner subsequ
 
 | Work | Estimate | Basis |
 | --- | ---: | --- |
-| Remaining-suite collection, assessment and fourteen reviews | 405 | Midpoint of 330–480 remaining minutes after 30 preparation and 30 Codex ordinary minutes booked; approved total forecast remains 390–540. |
-| **Total** | **405** | Completed E subjects/reviews are reused separately and add no new charge. |
+| Remaining-suite collection, assessment and fourteen reviews | 400 | Midpoint of 325–475 remaining minutes after 65 booked preparation/Codex/inspection minutes; approved total forecast remains 390–540. |
+| **Total** | **400** | Completed E subjects/reviews are reused separately and add no new charge. |
 
 The E stage used 115 estimated active minutes against the 180-minute upper forecast, 65 below it: 35 preparation, 40 subject collection/assessment and 40 evaluator preparation/reconciliation.
 The two evaluator durations total 420.696 seconds (7.01 minutes), included once in those estimates.

@@ -1,6 +1,7 @@
 from pathlib import Path
 import json,sys,re,hashlib
 from skilltest.config import load_config
+from trace_paths import is_target_path
 from skilltest.documents.retention import inventory
 root=Path.cwd();store=Path('/Users/simon/work/personal/skill-study-private/concise-writing/baseline-suite-20261018');n=int(sys.argv[1]);p=store/'receipts'/f'{n:03}.json';receipt=json.loads(p.read_text());slot=receipt['slot'];bundle=Path(receipt['bundle']);cfg=load_config(root/slot['config'])
 from skilltest.documents import Report
@@ -34,7 +35,7 @@ else:
  events=[json.loads(l) for l in (bundle/'stdout.txt').read_text().splitlines() if l.strip()]
  init=next(e for e in events if e.get('type')=='system' and e.get('subtype')=='init');assert init['model']=='claude-sonnet-5' and init['claude_code_version']=='2.1.301'
  models={e.get('message',{}).get('model') for e in events if e.get('type')=='assistant' and e.get('message',{}).get('model')};assert models=={'claude-sonnet-5'},models
- edits=[i for i,e in enumerate(events) for c in e.get('message',{}).get('content',[]) if isinstance(c,dict) and c.get('type')=='tool_use' and c.get('name') in ['Write','Edit'] and str(c.get('input',{}).get('file_path','')).endswith(('report.md','settings.toml','uploader.py'))]
+ edits=[i for i,e in enumerate(events) for c in e.get('message',{}).get('content',[]) if isinstance(c,dict) and c.get('type')=='tool_use' and c.get('name') in ['Write','Edit'] and is_target_path(c.get('input',{}).get('file_path',''))]
  assert edits,'task edit shape needs manual inspection'
  outputs=[(i,'\n'.join(strings(e.get('message',{}).get('content',[])))) for i,e in enumerate(events) if e.get('type')=='user']
  guidance=json.dumps(init)
