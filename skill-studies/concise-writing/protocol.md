@@ -676,6 +676,7 @@ Runtime: unchanged qualified CLI/model/toolchain from E, rechecked before dispat
 Include all valid-setup executions regardless of outcome; descriptive per-factor outcomes, not a population reliability threshold. No automatic retry; disclose exclusions, uncertainty and unattempted slots.
 Stop for infrastructure/capture/retention failure, unexpected guidance, drift or uncertain charge; register every attempt before the next dispatch.
 Record: [attempt index](runs/baseline-iteration-suite-01/codex-native-iteration-01-run-index.json).
+Results: [Codex native assessment](runs/baseline-iteration-suite-01/codex-native-iteration-01-assessment.md).
 Global ordering: all 72 ordinary attempts precede all 72 native attempts; the [schedule](runs/baseline-iteration-suite-01/preparation/schedule.json) fixes provider/case/condition order.
 
 | Order | Case | Condition | Repetition | CONFIG |
