@@ -612,6 +612,8 @@ Global ordering: all 72 ordinary attempts precede all 72 native attempts; the [s
 
 ### Remaining-suite comparison: claude-ordinary-iteration-01
 
+Results: [Claude ordinary assessment](runs/baseline-iteration-suite-01/claude-ordinary-iteration-01-assessment.md).
+
 Batch: claude-ordinary-iteration-01
 Scope: 36 sequential attempts; three repetitions per condition/case.
 Authority: approved 144-subject remaining-suite allocation recorded at the protocol opening; no automatic retries or draft edits.
