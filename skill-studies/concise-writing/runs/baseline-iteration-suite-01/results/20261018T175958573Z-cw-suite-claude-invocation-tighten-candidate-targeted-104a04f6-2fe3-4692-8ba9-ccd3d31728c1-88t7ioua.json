@@ -1,0 +1,171 @@
+{
+  "schema_version": "2",
+  "record_kind": "execution result",
+  "result_id": "claude-native-iteration-01-invocation-tighten-candidate-targeted-1-1-assessment",
+  "assessed_at": "2026-10-18T18:17:30.911543+00:00",
+  "run_id": "20261018T175958573Z-cw-suite-claude-invocation-tighten-candidate-targeted-104a04f6-2fe3-4692-8ba9-ccd3d31728c1-88t7ioua",
+  "condition": "candidate-targeted",
+  "assessor": {
+    "name": "Codex active session",
+    "method": "active session",
+    "model": null,
+    "session_id": null,
+    "context": "Same Codex controller authored/reviewed exposed development variants and directly judged complete outputs; no blind, held-out or independent assessor claim. Separate Opus review supplements this."
+  },
+  "manifest": {
+    "path": "skill-studies/concise-writing/runs/baseline-iteration-suite-01/preparation/manifests/claude-invocation-tighten-manifest.json",
+    "sha256": "059ee86bf335893597cc0f092df99e2825903cb5b1b54c28bf68abdcdbf7677b",
+    "version": "1",
+    "git_revision": "0524ec5aa23288841bc6972516a4c14bca24678d"
+  },
+  "evidence": [
+    {
+      "id": "output",
+      "artifact": {
+        "path": "/Users/simon/work/personal/skill-study-private/concise-writing/baseline-suite-20261018/subjects/20261018T175958573Z-cw-suite-claude-invocation-tighten-candidate-targeted-104a04f6-2fe3-4692-8ba9-ccd3d31728c1-88t7ioua/workspace/fixture/report.md",
+        "sha256": "a11eb736af8e2fc2e08b2ab4f98fe94127cf420458da77b05711ac1f6fc96007",
+        "version": null
+      },
+      "selector": "Complete artifact"
+    },
+    {
+      "id": "trace",
+      "artifact": {
+        "path": "/Users/simon/work/personal/skill-study-private/concise-writing/baseline-suite-20261018/subjects/20261018T175958573Z-cw-suite-claude-invocation-tighten-candidate-targeted-104a04f6-2fe3-4692-8ba9-ccd3d31728c1-88t7ioua/stdout.txt",
+        "sha256": "b5689bc84fd9ebe16182170cd5800ddd4fc92c0bc3f0e96b28eaed605f721e89",
+        "version": null
+      },
+      "selector": "Complete artifact"
+    },
+    {
+      "id": "mechanical",
+      "artifact": {
+        "path": "/Users/simon/work/personal/skill-study-private/concise-writing/baseline-suite-20261018/subjects/20261018T175958573Z-cw-suite-claude-invocation-tighten-candidate-targeted-104a04f6-2fe3-4692-8ba9-ccd3d31728c1-88t7ioua/result.json",
+        "sha256": "1ae3574be226cd2c345305d3325389ba8bb0ce2abf6f865efdc2372067d81283",
+        "version": null
+      },
+      "selector": "Complete artifact"
+    },
+    {
+      "id": "log",
+      "artifact": {
+        "path": "/Users/simon/work/personal/skill-study-private/concise-writing/baseline-suite-20261018/subjects/20261018T175958573Z-cw-suite-claude-invocation-tighten-candidate-targeted-104a04f6-2fe3-4692-8ba9-ccd3d31728c1-88t7ioua/runner.log",
+        "sha256": "d2b5f5a5eb4402df9c45dfa32b96645b1e72eb2fb883a40f32a3df3b5d5dd38a",
+        "version": null
+      },
+      "selector": "Complete artifact"
+    },
+    {
+      "id": "final",
+      "artifact": {
+        "path": "/Users/simon/work/personal/skill-study-private/concise-writing/baseline-suite-20261018/subjects/20261018T175958573Z-cw-suite-claude-invocation-tighten-candidate-targeted-104a04f6-2fe3-4692-8ba9-ccd3d31728c1-88t7ioua/final.txt",
+        "sha256": "608b51ebdea366a3e48750af793a2ae3c25f34736d20f904139c03aa9c9635c7",
+        "version": null
+      },
+      "selector": "Complete artifact"
+    },
+    {
+      "id": "source-0",
+      "artifact": {
+        "path": "skill-studies/concise-writing/cases/agent-recommendation/fixture/report.md",
+        "sha256": "e9a992c7e4c14dfd5afc10cc637349f39c2030e98ed0311441675900bc3e93e9",
+        "version": null,
+        "git_revision": "6ad549b50af54d9766d05b47ebf5cbc1ea3cddbb"
+      },
+      "selector": "Complete frozen report.md"
+    },
+    {
+      "id": "source-1",
+      "artifact": {
+        "path": "skill-studies/concise-writing/cases/agent-recommendation/task.md",
+        "sha256": "607cbe0562a19ea092fe76ec96f13bfbe033b2e1095baef2ca38be621c0baf82",
+        "version": null,
+        "git_revision": "6ad549b50af54d9766d05b47ebf5cbc1ea3cddbb"
+      },
+      "selector": "Complete frozen TASK.md"
+    }
+  ],
+  "setup": {
+    "status": "valid",
+    "reason": "Fixed provider/model/CLI and retained inventory verified. Native skill available; complete assigned body before first edit: True. Protected input bytes unchanged.",
+    "evidence": [
+      "mechanical",
+      "trace",
+      "log"
+    ]
+  },
+  "criteria": [
+    {
+      "id": "F1",
+      "dimension": "functional",
+      "judgment": "met",
+      "reason": "The full targeted edit preserves matching exports, injected failure outcomes, cursor semantics and production status, staging/scale/outage qualifications and all bounded pilot details and outcome branches. No unsupported outcome or new decision criterion appears.",
+      "consequence": "Required whole-artifact functional factor; length cannot offset failure.",
+      "evidence": [
+        "output",
+        "source-0",
+        "source-1"
+      ]
+    },
+    {
+      "id": "F2",
+      "dimension": "functional",
+      "judgment": "met",
+      "reason": "Approval scope and rationale, staff/window/duration, stop and both retained export files with their diagnostic purpose remain connected in the recommendation. A matched pilot still returns for a distinct release decision, so decision and execution needs are preserved.",
+      "consequence": "Required whole-artifact functional factor; length cannot offset failure.",
+      "evidence": [
+        "output",
+        "source-0",
+        "source-1"
+      ]
+    },
+    {
+      "id": "F3",
+      "dimension": "functional",
+      "judgment": "met",
+      "reason": "The five-section update removes duplicated cursor explanation and empty communication/meta framing. Staging limitations repeat across evidence, qualifications and recommendation, but support their local reading roles; no consequential whole-document detour is demonstrated.",
+      "consequence": "Required whole-artifact functional factor; length cannot offset failure.",
+      "evidence": [
+        "output",
+        "source-0",
+        "source-1"
+      ]
+    },
+    {
+      "id": "D1",
+      "dimension": "procedural",
+      "judgment": "met",
+      "reason": "Native Skill supplies the complete body at event13 before report editing, following only baseline and task reads. Catalog availability is verified and the body was not pre-supplied or explicitly requested by the task.",
+      "consequence": "Selection is reported separately from artifact quality.",
+      "evidence": [
+        "trace",
+        "log"
+      ]
+    }
+  ],
+  "functional_result": "met",
+  "procedural_summary": "Fixed provider/model/CLI and retained inventory verified. Native skill available; complete assigned body before first edit: True. Protected input bytes unchanged. O4/O5 remain unscored; native D1 is distinct from functional outcome.",
+  "observations": [
+    {
+      "dimension": "functional",
+      "description": "Complete output 297 wc-w words; supplied report.md: 625 words, TASK.md: 51 words. Counts describe length, not semantic success; comment-only counts are reported separately for N4.",
+      "consequence": "Descriptive counts only.",
+      "evidence": [
+        "output",
+        "source-0",
+        "source-1"
+      ]
+    },
+    {
+      "dimension": "functional",
+      "description": "Passing targeted native tightening with more residual sectioning and repeated staging qualification than original110, while preserving explicit investigation rationale. Treat this as a comparative quality observation, not a word-count failure.",
+      "consequence": "Qualitative comparison is separate from threshold counts.",
+      "evidence": [
+        "output",
+        "source-0",
+        "source-1"
+      ]
+    }
+  ],
+  "uncertainty": []
+}

@@ -1,0 +1,144 @@
+{
+  "schema_version": "2",
+  "record_kind": "execution result",
+  "result_id": "claude-native-iteration-01-invocation-nonprose-original-2-1-assessment",
+  "assessed_at": "2026-10-18T18:17:30.911543+00:00",
+  "run_id": "20261018T181024391Z-cw-suite-claude-invocation-nonprose-original-d231b95a-cc0b-4fc0-82c9-066393a9d906-l1v6m03m",
+  "condition": "original",
+  "assessor": {
+    "name": "Codex active session",
+    "method": "active session",
+    "model": null,
+    "session_id": null,
+    "context": "Same Codex controller authored/reviewed exposed development variants and directly judged complete outputs; no blind, held-out or independent assessor claim. Separate Opus review supplements this."
+  },
+  "manifest": {
+    "path": "skill-studies/concise-writing/runs/baseline-iteration-suite-01/preparation/manifests/claude-invocation-nonprose-manifest.json",
+    "sha256": "b0f1ac7b05bf923b1c81dc872279e7a1af6ee26b85faea113809fbefddee5e4a",
+    "version": "1",
+    "git_revision": "0524ec5aa23288841bc6972516a4c14bca24678d"
+  },
+  "evidence": [
+    {
+      "id": "output",
+      "artifact": {
+        "path": "/Users/simon/work/personal/skill-study-private/concise-writing/baseline-suite-20261018/subjects/20261018T181024391Z-cw-suite-claude-invocation-nonprose-original-d231b95a-cc0b-4fc0-82c9-066393a9d906-l1v6m03m/workspace/fixture/settings.toml",
+        "sha256": "9cdef29c80346b6a4d90eb85a6612160a702925e9635c1b0b537b67afe3dd071",
+        "version": null
+      },
+      "selector": "Complete artifact"
+    },
+    {
+      "id": "trace",
+      "artifact": {
+        "path": "/Users/simon/work/personal/skill-study-private/concise-writing/baseline-suite-20261018/subjects/20261018T181024391Z-cw-suite-claude-invocation-nonprose-original-d231b95a-cc0b-4fc0-82c9-066393a9d906-l1v6m03m/stdout.txt",
+        "sha256": "25ddf64414568f92460227d6cdbf6145bc2dc4709029e0c376142152f3e0fe1c",
+        "version": null
+      },
+      "selector": "Complete artifact"
+    },
+    {
+      "id": "mechanical",
+      "artifact": {
+        "path": "/Users/simon/work/personal/skill-study-private/concise-writing/baseline-suite-20261018/subjects/20261018T181024391Z-cw-suite-claude-invocation-nonprose-original-d231b95a-cc0b-4fc0-82c9-066393a9d906-l1v6m03m/result.json",
+        "sha256": "9444b8c5676f792f6e21dc195569987279f28ba25c91b1d78aaba598e1cdb9a9",
+        "version": null
+      },
+      "selector": "Complete artifact"
+    },
+    {
+      "id": "log",
+      "artifact": {
+        "path": "/Users/simon/work/personal/skill-study-private/concise-writing/baseline-suite-20261018/subjects/20261018T181024391Z-cw-suite-claude-invocation-nonprose-original-d231b95a-cc0b-4fc0-82c9-066393a9d906-l1v6m03m/runner.log",
+        "sha256": "fb6b8b82450ae9b5d34be4c666821be4f1c292f1aa4b2ed070eb00d543c4ff48",
+        "version": null
+      },
+      "selector": "Complete artifact"
+    },
+    {
+      "id": "final",
+      "artifact": {
+        "path": "/Users/simon/work/personal/skill-study-private/concise-writing/baseline-suite-20261018/subjects/20261018T181024391Z-cw-suite-claude-invocation-nonprose-original-d231b95a-cc0b-4fc0-82c9-066393a9d906-l1v6m03m/final.txt",
+        "sha256": "ed251864987c367e9641fbdc89c1d83e9bf0fa2e3eecef8f301c79f619bfac81",
+        "version": null
+      },
+      "selector": "Complete artifact"
+    },
+    {
+      "id": "source-0",
+      "artifact": {
+        "path": "skill-studies/concise-writing/cases/invocation-nonprose/fixture/settings.toml",
+        "sha256": "38f8a9ddd2d83dc10d2f3681c0e56663d2fa9907c16e105bcc4d7f3fb387158c",
+        "version": null,
+        "git_revision": "6ad549b50af54d9766d05b47ebf5cbc1ea3cddbb"
+      },
+      "selector": "Complete frozen settings.toml"
+    },
+    {
+      "id": "source-1",
+      "artifact": {
+        "path": "skill-studies/concise-writing/cases/invocation-nonprose/task.md",
+        "sha256": "8c960258723b03e87cfdae2fbfbd576c4ff4299206f02c87dcd50e9026c80733",
+        "version": null,
+        "git_revision": "6ad549b50af54d9766d05b47ebf5cbc1ea3cddbb"
+      },
+      "selector": "Complete frozen TASK.md"
+    },
+    {
+      "id": "task-mechanical",
+      "artifact": {
+        "path": "/Users/simon/work/personal/skill-study-private/concise-writing/baseline-suite-20261018/mechanical/131.json",
+        "sha256": "e33e8c049065cfec40a33b457c9aeceb96cc40e29200925a34195f0df83b07eb",
+        "version": null
+      },
+      "selector": "Complete saved parse/token or numeric/reply observation; no subject code execution"
+    }
+  ],
+  "setup": {
+    "status": "valid",
+    "reason": "Fixed provider/model/CLI and retained inventory verified. Native skill available; complete assigned body before first edit: False. Protected input bytes unchanged.",
+    "evidence": [
+      "mechanical",
+      "trace",
+      "log"
+    ]
+  },
+  "criteria": [
+    {
+      "id": "D1",
+      "dimension": "procedural",
+      "judgment": "met",
+      "reason": "The qualified native catalog contains CW, but the complete ordered trace shows only neutral baseline commands, task/settings reads and the requested numeric edit. There is no Skill or skill-file read and no partial or late CW body: the subject correctly avoids loading on the numeric-only task.",
+      "consequence": "Selection is reported separately from artifact quality.",
+      "evidence": [
+        "trace",
+        "log"
+      ]
+    }
+  ],
+  "functional_result": "not measured",
+  "procedural_summary": "Fixed provider/model/CLI and retained inventory verified. Native skill available; complete assigned body before first edit: False. Protected input bytes unchanged. O4/O5 remain unscored; native D1 is distinct from functional outcome.",
+  "observations": [
+    {
+      "dimension": "procedural",
+      "description": "Length not applicable to numeric-only task.",
+      "consequence": "Descriptive counts only.",
+      "evidence": [
+        "output",
+        "source-0",
+        "source-1"
+      ]
+    },
+    {
+      "dimension": "procedural",
+      "description": "CW functional effectiveness is not measured. Exactly worker_count4\u21926 changes. Additional assistant status text accompanies final Done., a separate Done-only task deviation. Task/settings are read before the unchanged baseline commit, but no task edit precedes it; supplied bytes and intended baseline stay intact.",
+      "consequence": "Qualitative comparison is separate from threshold counts.",
+      "evidence": [
+        "output",
+        "source-0",
+        "source-1"
+      ]
+    }
+  ],
+  "uncertainty": []
+}

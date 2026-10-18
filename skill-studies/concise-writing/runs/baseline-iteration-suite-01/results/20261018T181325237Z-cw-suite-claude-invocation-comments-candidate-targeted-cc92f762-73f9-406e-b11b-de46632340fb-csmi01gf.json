@@ -1,0 +1,195 @@
+{
+  "schema_version": "2",
+  "record_kind": "execution result",
+  "result_id": "claude-native-iteration-01-invocation-comments-candidate-targeted-1-1-assessment",
+  "assessed_at": "2026-10-18T18:17:30.911543+00:00",
+  "run_id": "20261018T181325237Z-cw-suite-claude-invocation-comments-candidate-targeted-cc92f762-73f9-406e-b11b-de46632340fb-csmi01gf",
+  "condition": "candidate-targeted",
+  "assessor": {
+    "name": "Codex active session",
+    "method": "active session",
+    "model": null,
+    "session_id": null,
+    "context": "Same Codex controller authored/reviewed exposed development variants and directly judged complete outputs; no blind, held-out or independent assessor claim. Separate Opus review supplements this."
+  },
+  "manifest": {
+    "path": "skill-studies/concise-writing/runs/baseline-iteration-suite-01/preparation/manifests/claude-invocation-comments-manifest.json",
+    "sha256": "6b46e1672bbd77cc14487f2da54ecc3c9888126f858ba85c0fb8d3302936b57c",
+    "version": "1",
+    "git_revision": "0524ec5aa23288841bc6972516a4c14bca24678d"
+  },
+  "evidence": [
+    {
+      "id": "output",
+      "artifact": {
+        "path": "/Users/simon/work/personal/skill-study-private/concise-writing/baseline-suite-20261018/subjects/20261018T181325237Z-cw-suite-claude-invocation-comments-candidate-targeted-cc92f762-73f9-406e-b11b-de46632340fb-csmi01gf/workspace/fixture/uploader.py",
+        "sha256": "515e2f650145394e3ffc6288c69ef3e944e8d437d8c5aa26efa19c8bf5db29bc",
+        "version": null
+      },
+      "selector": "Complete artifact"
+    },
+    {
+      "id": "trace",
+      "artifact": {
+        "path": "/Users/simon/work/personal/skill-study-private/concise-writing/baseline-suite-20261018/subjects/20261018T181325237Z-cw-suite-claude-invocation-comments-candidate-targeted-cc92f762-73f9-406e-b11b-de46632340fb-csmi01gf/stdout.txt",
+        "sha256": "89468a15c4157977a61f7253db43cf1424598b0e568877c019f7b9379a6c07ab",
+        "version": null
+      },
+      "selector": "Complete artifact"
+    },
+    {
+      "id": "mechanical",
+      "artifact": {
+        "path": "/Users/simon/work/personal/skill-study-private/concise-writing/baseline-suite-20261018/subjects/20261018T181325237Z-cw-suite-claude-invocation-comments-candidate-targeted-cc92f762-73f9-406e-b11b-de46632340fb-csmi01gf/result.json",
+        "sha256": "0615a21570a096b62f097a650eced726a163bfc1e506bac5af38a93f8ab6fc9e",
+        "version": null
+      },
+      "selector": "Complete artifact"
+    },
+    {
+      "id": "log",
+      "artifact": {
+        "path": "/Users/simon/work/personal/skill-study-private/concise-writing/baseline-suite-20261018/subjects/20261018T181325237Z-cw-suite-claude-invocation-comments-candidate-targeted-cc92f762-73f9-406e-b11b-de46632340fb-csmi01gf/runner.log",
+        "sha256": "445d59b4902a8216fd7751a0438811bd10a1dfa44f65d4580132f1b8d87851fd",
+        "version": null
+      },
+      "selector": "Complete artifact"
+    },
+    {
+      "id": "final",
+      "artifact": {
+        "path": "/Users/simon/work/personal/skill-study-private/concise-writing/baseline-suite-20261018/subjects/20261018T181325237Z-cw-suite-claude-invocation-comments-candidate-targeted-cc92f762-73f9-406e-b11b-de46632340fb-csmi01gf/final.txt",
+        "sha256": "e9bba21bbecea551a9ee4552677ce54c7c4b306d9118c8807ff162d35a0310c6",
+        "version": null
+      },
+      "selector": "Complete artifact"
+    },
+    {
+      "id": "source-0",
+      "artifact": {
+        "path": "skill-studies/concise-writing/cases/invocation-comments/task.md",
+        "sha256": "6a771f7383d14f7d77b02c862155da0b10af1e83cc72333512c5a83fde9523b5",
+        "version": null,
+        "git_revision": "6ad549b50af54d9766d05b47ebf5cbc1ea3cddbb"
+      },
+      "selector": "Complete frozen TASK.md"
+    },
+    {
+      "id": "source-1",
+      "artifact": {
+        "path": "skill-studies/concise-writing/cases/invocation-comments/fixture/uploader.py",
+        "sha256": "2587771c1d7fee7e2ca72dbb1ff1a2594fff69775a72fff1929f437cce8ec2f1",
+        "version": null,
+        "git_revision": "6ad549b50af54d9766d05b47ebf5cbc1ea3cddbb"
+      },
+      "selector": "Complete frozen uploader.py"
+    },
+    {
+      "id": "source-2",
+      "artifact": {
+        "path": "skill-studies/concise-writing/cases/invocation-comments/fixture/MAINTAINER-NOTES.md",
+        "sha256": "59175ed2990a8b65636507ce2116321e70c60b1c0a2eea288d01e075252fc847",
+        "version": null,
+        "git_revision": "6ad549b50af54d9766d05b47ebf5cbc1ea3cddbb"
+      },
+      "selector": "Complete frozen MAINTAINER-NOTES.md"
+    },
+    {
+      "id": "task-mechanical",
+      "artifact": {
+        "path": "/Users/simon/work/personal/skill-study-private/concise-writing/baseline-suite-20261018/mechanical/138.json",
+        "sha256": "51cd05c2d5f23b3a8e345e65b7c65754d31b9d2c0e57a67fa38056c3e942bfec",
+        "version": null
+      },
+      "selector": "Complete saved parse/token or numeric/reply observation; no subject code execution"
+    }
+  ],
+  "setup": {
+    "status": "valid",
+    "reason": "Fixed provider/model/CLI and retained inventory verified. Native skill available; complete assigned body before first edit: False. Protected input bytes unchanged.",
+    "evidence": [
+      "mechanical",
+      "trace",
+      "log"
+    ]
+  },
+  "criteria": [
+    {
+      "id": "F1",
+      "dimension": "functional",
+      "judgment": "met",
+      "reason": "In full code context the comments correctly state four total sends, temporary-send-only retries, immediate propagation of other send errors and propagation after the final temporary failure. Acknowledgement errors, including TemporaryUploadError, remain outside retry handling. The parser/token check confirms executable code is unchanged.",
+      "consequence": "Required whole-artifact functional factor; length cannot offset failure.",
+      "evidence": [
+        "output",
+        "source-0",
+        "source-1",
+        "source-2"
+      ]
+    },
+    {
+      "id": "F2",
+      "dimension": "functional",
+      "judgment": "met",
+      "reason": "The maintainer can see the attempt limit and understand that accepted-batch acknowledgement must not be wrapped into send retries, because that risks duplicate delivery. The separate notes are not needed to recover the maintenance rationale.",
+      "consequence": "Required whole-artifact functional factor; length cannot offset failure.",
+      "evidence": [
+        "output",
+        "source-0",
+        "source-1",
+        "source-2"
+      ]
+    },
+    {
+      "id": "F3",
+      "dimension": "functional",
+      "judgment": "met",
+      "reason": "Comment blocks explain distinct attempt/error and acknowledgement boundaries at the relevant code. They are fuller than concise alternatives, but explicit final-attempt and accepted-batch explanations remain readable and serve maintenance rather than purposeless restatement.",
+      "consequence": "Required whole-artifact functional factor; length cannot offset failure.",
+      "evidence": [
+        "output",
+        "source-0",
+        "source-1",
+        "source-2"
+      ]
+    },
+    {
+      "id": "D1",
+      "dimension": "procedural",
+      "judgment": "not met",
+      "reason": "CW is available in the native catalog and not pre-supplied, but the complete ordered trace only establishes baseline, reads task/notes/code and edits comments. There is no Skill, skill-file or partial/late body read: native selection is missed.",
+      "consequence": "Selection is reported separately from artifact quality.",
+      "evidence": [
+        "trace",
+        "log"
+      ]
+    }
+  ],
+  "functional_result": "met",
+  "procedural_summary": "Fixed provider/model/CLI and retained inventory verified. Native skill available; complete assigned body before first edit: False. Protected input bytes unchanged. O4/O5 remain unscored; native D1 is distinct from functional outcome.",
+  "observations": [
+    {
+      "dimension": "functional",
+      "description": "Complete output 119 wc-w words; supplied TASK.md: 47 words, uploader.py: 48 words, MAINTAINER-NOTES.md: 136 words. Counts describe length, not semantic success; comment-only counts are reported separately for N4.",
+      "consequence": "Descriptive counts only.",
+      "evidence": [
+        "output",
+        "source-0",
+        "source-1",
+        "source-2"
+      ]
+    },
+    {
+      "dimension": "functional",
+      "description": "Unloaded N4 output passes artifact quality and parse/token preservation. Source comments20words grow to83words to include supplied maintenance distinctions; growth and line-count alone do not fail F3. The explanation could be tighter, a qualitative comparison for Opus, without attributing this output to a body that was never loaded.",
+      "consequence": "Qualitative comparison is separate from threshold counts.",
+      "evidence": [
+        "output",
+        "source-0",
+        "source-1",
+        "source-2"
+      ]
+    }
+  ],
+  "uncertainty": []
+}
