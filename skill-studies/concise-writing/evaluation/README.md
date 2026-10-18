@@ -44,7 +44,9 @@ Every attempted invocation consumes one evaluator slot even if incomplete; stop 
 Five existing zero-model checks produced three passes and two failures on the new CLI.
 The shared isolation checks in both modes and the read-only mutation-denial check pass.
 Both actual-CLI shell/Skill probes fail: Bash selects /usr/bin/python3 3.9.6 instead of prepared Homebrew Python and emits xcrun cache-denial messages.
-This is a shell-dependent runner regression, not a semantic evaluation result; no shell-dependent subject pass is authorized by this evaluation.
+The host no longer has /opt/homebrew/bin/python3, so even explicit Homebrew-first lookup selects Apple Python.
+This establishes a missing runtime prerequisite, not a new CLI shell regression; restore and qualify Python 3.11+ before shell-dependent subject work.
+No shell-dependent subject pass is authorized by this evaluation.
 Evidence: /private/tmp/cw-evaluation-preflight-20261017/.
 
 A separate actual-CLI scripted native-Read test passes under the same read-only OS policy, with no inference.

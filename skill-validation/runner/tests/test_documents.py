@@ -1170,3 +1170,46 @@ def test_accounting_planning_guideline(document_study, capsys, booked, amount, d
         f'{booked} active minutes booked; {amount} minutes {direction} the historical 1,200-minute planning guideline',
     ))
     assert main(['docs', 'check', str(path), '--ready-for', 'assessment', '--json']) == expected
+
+
+@pytest.mark.process_smoke
+@pytest.mark.parametrize('mutation,rule', [
+    (None, None), ('boolean-charge', 'allocation-total'),
+    ('wrong-role', 'allocation-total'), ('missing-id', 'allocation-total'),
+    ('duplicate', 'duplicate-id'), ('version', 'unsupported-version'),
+    ('shape', 'allocation-total'), ('mixed-format', 'allocation-total'),
+])
+def test_supplemental_evaluator_ledger_accounting(document_study, capsys, mutation, rule):
+    # document_study seeds the two subject calls and the 2-call evaluator ceiling.
+    root, write, _, _ = document_study
+    ledger = {'evaluator_ledger_version': '1', 'runs': [
+        {'run_id': 'eval-1', 'role': 'evaluator', 'charge': 1},
+    ]}
+    if mutation == 'boolean-charge':
+        ledger['runs'][0]['charge'] = True
+    elif mutation == 'wrong-role':
+        ledger['runs'][0]['role'] = 'subject'
+    elif mutation == 'missing-id':
+        del ledger['runs'][0]['run_id']
+    elif mutation == 'duplicate':
+        original = json.loads((root/'example-run-index.json').read_text())
+        ledger['runs'][0]['run_id'] = original['attempts'][0]['run_id']
+    elif mutation == 'version':
+        ledger['evaluator_ledger_version'] = '2'
+    elif mutation == 'shape':
+        ledger['runs'] = None
+    elif mutation == 'mixed-format':
+        ledger['format_version'] = '1'
+        ledger['attempts'] = [{'run_id': 'shadow-eval', 'allocation': {'pool': 'evaluator', 'charge': 1}}]
+    write('evaluator-run-index.json', ledger)
+    p = root/'protocol.md'
+    p.write_text(p.read_text().replace('**2 subject, 0 evaluator', '**2 subject, 1 evaluator')
+                 .replace('**2 / 2 / 1 / 1**', '**2 / 1 / 1 / 1**')
+                 + '\n[Evaluator accounting](evaluator-run-index.json)\n')
+    result = main(['docs', 'check', str(p), '--ready-for', 'assessment', '--json'])
+    report = json.loads(capsys.readouterr().out)
+    if mutation is None:
+        assert result == 0, report
+    else:
+        assert result != 0
+        assert any(d['rule'] == rule for d in report['diagnostics']), report

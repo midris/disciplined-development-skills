@@ -920,7 +920,33 @@ def accounting(raw, path, ctx):
     targets = {p for _, p in linked_files(raw, path) if p.name.endswith("run-index.json")}
     for target in sorted(targets):
         value = parse_json(regular_bytes(target))
-        if value.get("format_version") == "1":
+        if "evaluator_ledger_version" in value:
+            if "format_version" in value:
+                ctx.error(target, "version", "allocation-total", "Do not mix evaluator and subject index formats")
+                continue
+            if value["evaluator_ledger_version"] != "1":
+                ctx.error(target, "version", "unsupported-version",
+                          "Unsupported supplemental evaluator ledger version", "unsupported")
+                continue
+            runs = value.get("runs")
+            if not isinstance(runs, list):
+                ctx.error(target, "runs", "allocation-total", "Evaluator runs must be a list")
+                continue
+            for run in runs:
+                if (not isinstance(run, dict)
+                    or not isinstance(run.get("run_id"), str) or not run["run_id"].strip()
+                    or run.get("role") != "evaluator"
+                    or type(run.get("charge")) is not int or run["charge"] not in {0, 1}):
+                    ctx.error(target, "runs", "allocation-total",
+                              "Require a run ID, evaluator role and integer charge 0 or 1")
+                    continue
+                identity = run["run_id"]
+                if identity in seen:
+                    ctx.error(target, "runs", "duplicate-id",
+                              "Attempt counted in multiple accounting indexes")
+                seen.add(identity)
+                actual["evaluator"] += run["charge"]
+        elif value.get("format_version") == "1":
             for a in value["attempts"]:
                 identity = a["run_id"] or a["attempt_id"]
                 if identity in seen:

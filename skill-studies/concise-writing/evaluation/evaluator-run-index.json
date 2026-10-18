@@ -1,0 +1,57 @@
+{
+  "purpose": "supplemental CW output evaluation",
+  "runs": [
+    {
+      "order": 1,
+      "configuration": "codex-long-handoff",
+      "role": "evaluator",
+      "charge": 1,
+      "authority_revision": "89875e77d0c7f8b308969ba22e3412268d90831d",
+      "config_sha256": "d3bae884287a2fa66deaab38d1792f6d50282b1947bc8b54959a365100e0ca05",
+      "prompt_sha256": "2ba64485329fb7f034587f96ebec939b9b3d0a103b577c0cf478166235a33002",
+      "bundle": "/Users/simon/work/personal/skill-study-private/concise-writing/evaluation-runs-20261017/20261018T022906201Z-cw-eval-codex-long-handoff-8b8a78e0-ca8b-4f12-9be4-484125f70d74-v0xcs5jf",
+      "inventory": {
+        "path": "/Users/simon/work/personal/skill-study-private/concise-writing/evaluation-runs-20261017/20261018T022906201Z-cw-eval-codex-long-handoff-8b8a78e0-ca8b-4f12-9be4-484125f70d74-v0xcs5jf.inventory.json",
+        "sha256": "c76e79b2a2fc4cf892e470d80f6fcabdf7f66c4c7d6649a70e8423f8a061bfc8"
+      },
+      "status": "COMPLETED",
+      "duration_seconds": 209.156,
+      "run_id": "20261018T022906201Z-cw-eval-codex-long-handoff-8b8a78e0-ca8b-4f12-9be4-484125f70d74-v0xcs5jf"
+    },
+    {
+      "order": 2,
+      "configuration": "codex-agent-recommendation",
+      "role": "evaluator",
+      "charge": 1,
+      "authority_revision": "8c5a0ced3ebe596c12134219692a4bb39c630839",
+      "config_sha256": "6ba669ecde2269b057e281ef92e75a45c31c44629a931eaa204910b245641600",
+      "prompt_sha256": "2ba64485329fb7f034587f96ebec939b9b3d0a103b577c0cf478166235a33002",
+      "bundle": "/Users/simon/work/personal/skill-study-private/concise-writing/evaluation-runs-20261017/20261018T023256899Z-cw-eval-codex-agent-recommendation-2a34acbc-6d0d-4b74-afb8-5de7c5ca2984-f1jatimy",
+      "inventory": {
+        "path": "/Users/simon/work/personal/skill-study-private/concise-writing/evaluation-runs-20261017/20261018T023256899Z-cw-eval-codex-agent-recommendation-2a34acbc-6d0d-4b74-afb8-5de7c5ca2984-f1jatimy.inventory.json",
+        "sha256": "2d8ec3db08497f7f9bbebdfc82b44f39b46c7d841aea6d0ae5800696748b2f90"
+      },
+      "status": "COMPLETED",
+      "duration_seconds": 200.357,
+      "run_id": "20261018T023256899Z-cw-eval-codex-agent-recommendation-2a34acbc-6d0d-4b74-afb8-5de7c5ca2984-f1jatimy"
+    },
+    {
+      "order": 3,
+      "configuration": "codex-effective-briefing",
+      "role": "evaluator",
+      "charge": 1,
+      "authority_revision": "8c5a0ced3ebe596c12134219692a4bb39c630839",
+      "config_sha256": "de9074877c08312750b3cb4f8e79ec3f727518c9851fb18ecda5dc844b2c0178",
+      "prompt_sha256": "2ba64485329fb7f034587f96ebec939b9b3d0a103b577c0cf478166235a33002",
+      "bundle": "/Users/simon/work/personal/skill-study-private/concise-writing/evaluation-runs-20261017/20261018T023257951Z-cw-eval-codex-effective-briefing-78c34524-2088-4480-ac72-ebb8acd30103-witgswny",
+      "inventory": {
+        "path": "/Users/simon/work/personal/skill-study-private/concise-writing/evaluation-runs-20261017/20261018T023257951Z-cw-eval-codex-effective-briefing-78c34524-2088-4480-ac72-ebb8acd30103-witgswny.inventory.json",
+        "sha256": "b5382db58b0fcaea3fa32766d55b0e8b0916c40cf12d54deb8c96d1d0ab8a281"
+      },
+      "status": "COMPLETED",
+      "duration_seconds": 237.061,
+      "run_id": "20261018T023257951Z-cw-eval-codex-effective-briefing-78c34524-2088-4480-ac72-ebb8acd30103-witgswny"
+    }
+  ],
+  "evaluator_ledger_version": "1"
+}

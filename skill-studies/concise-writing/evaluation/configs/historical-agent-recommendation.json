@@ -1,7 +1,7 @@
 {
   "schema_version": "0.2",
   "id": "cw-eval-historical-agent-recommendation",
-  "prompt": "../prompt.md",
+  "prompt": "../historical-prompt.md",
   "fixtures": [
     {
       "source": "../../../../../skill-study-private/concise-writing/cross-model-evaluation-rest-20261017/historical-agent-recommendation/EVALUATION-INDEX.json",

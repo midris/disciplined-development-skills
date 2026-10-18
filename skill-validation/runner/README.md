@@ -478,3 +478,11 @@ The runner never evaluates evidence or assigns a behavioral verdict.
 ```
 
 The angle-bracket digest values illustrate the required shape and are not literal valid results.
+
+### Supplemental evaluator accounting
+
+For owner-selected cross-model reviews, link a ledger ending in `run-index.json` from the study protocol.
+Use `evaluator_ledger_version: "1"` with `runs`; each row has a nonempty `run_id`, `role: "evaluator"` and integer `charge` 0 or 1.
+Readiness reconciles those charges with subject indexes and remaining evaluator capacity, rejecting duplicate IDs, malformed rows and unknown ledger versions.
+This ledger records review calls without converting reviews into subject executions or overwriting existing semantic scores.
+The [field contract](../../skill-studies/formats/companion-formats.md#supplemental-evaluator-accounting) defines its accounting projection; the study retains full prompts, evidence identities and raw reviews independently.

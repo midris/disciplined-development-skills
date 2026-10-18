@@ -150,3 +150,12 @@ Review the whole set against the [spec's conformance rule](../../plans/specs/202
 Check required sections/fields, IDs, references, versions/hashes, criterion coverage and allocation arithmetic; readiness additionally requires fixed scope, available evidence and authority for the actual dispatch.
 Do not equate schema validity with study completeness, semantic correctness or owner consent.
 Unknown versions are unsupported. The generator/validator shares definitions, generates without overwriting and validates read-only. Its mechanical checks support this conformance review; they do not replace interpretation or authorize collection.
+
+## Supplemental evaluator accounting
+
+A supplemental evaluator ledger uses `evaluator_ledger_version: "1"` and a `runs` list, under a filename ending in `run-index.json` linked from the protocol.
+Each row requires a nonempty `run_id`, `role: "evaluator"` and integer `charge` of 0 or 1; booleans are invalid.
+The protocol accounting check includes these charges, rejects duplicate IDs across all linked indexes, and rejects unknown ledger versions or malformed rows.
+The ledger may also record configuration, authority, copied-input identities, retained bundle/inventory and execution status.
+This is a charge projection for supplementary reviews, not a subject execution-result format or evidence that evaluator judgments are correct.
+Retain and verify raw reviews and input identities separately; do not manufacture subject scores to register an evaluator call.

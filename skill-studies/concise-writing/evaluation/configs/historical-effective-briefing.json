@@ -1,7 +1,7 @@
 {
   "schema_version": "0.2",
   "id": "cw-eval-historical-effective-briefing",
-  "prompt": "../prompt.md",
+  "prompt": "../historical-prompt.md",
   "fixtures": [
     {
       "source": "../../../../../skill-study-private/concise-writing/cross-model-evaluation-rest-20261017/historical-effective-briefing/EVALUATION-INDEX.json",
