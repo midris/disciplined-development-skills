@@ -3,9 +3,9 @@
   "manifest_id": "cw-claude-e-iteration-1",
   "study_id": "concise-writing",
   "case_id": "document-addition",
-  "status": "draft",
+  "status": "frozen",
   "created_at": "2026-10-18T05:03:08.639985+00:00",
-  "source_revision": "",
+  "source_revision": "2936749c332f083e49f603eaed15b65d92158568",
   "authorities": {
     "spec": {
       "path": "plans/specs/2026-09-11-model-driven-skill-testing-framework.md",
@@ -148,7 +148,7 @@
     },
     {
       "path": "skill-studies/concise-writing/drafts/baseline-iteration/testing/collect_one.py",
-      "sha256": "ac123aca3648fc9987de08b371d5318484c363d101608ee5f2fa6382528acde8",
+      "sha256": "8b1ad3d91c40634079effc3d04a031e497e2fffa410c25f18311970d820a1ebd",
       "version": null
     }
   ]

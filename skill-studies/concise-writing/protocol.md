@@ -3,7 +3,8 @@
 Format version: `1`
 Study ID: `concise-writing`
 Status: baseline collection and cross-model review are complete; the owner selected the original CW as the development base and authorized preparation of effectiveness-first edits. Adoption remains deferred.
-Current action: freeze the qualified E inputs and pass collection readiness, then collect the approved forty subjects and two Opus reviews under the [staged comparison](drafts/baseline-iteration/comparison-proposal.md).
+Current action: collect the approved forty E subjects, apply the fixed criteria in this Codex session and obtain two Opus reviews under the [staged comparison](drafts/baseline-iteration/comparison-proposal.md).
+Both provider scopes pass collection readiness with frozen input revision `2936749c332f083e49f603eaed15b65d92158568`; no real-model call has yet been dispatched in this stage.
 The combined draft/proposal review is resolved and preparation commit `c8b8c3b` is pushed; [runtime qualification](drafts/baseline-iteration/testing/runtime-qualification.md) passes twelve zero-model controls.
 On 2026-10-18 the owner authorized the first-stage 40 subject and two evaluator calls: “do a consistency pass over the skills rewrites, commit and push any changes, then start the testing”.
 The subsequent external-review request requires remediation before dispatch.
