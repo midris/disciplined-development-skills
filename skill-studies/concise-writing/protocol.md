@@ -3,7 +3,7 @@
 Format version: `1`
 Study ID: `concise-writing`
 Status: baseline collection and cross-model review are complete; the owner selected the original CW as the development base and authorized preparation of effectiveness-first edits. Adoption remains deferred.
-Current action: collect Claude’s matching ordinary A/B/C runs, then both providers’ native N1–N4 runs and the fourteen grouped Opus reviews. Codex’s 36 ordinary subjects are complete and directly assessed; Opus judgments remain pending. Initial input revision `a27782b26f8014b67e72ecf817f7e08392fd62c5` remains pinned by completed subjects; prospective controller revision `6ad549b50af54d9766d05b47ebf5cbc1ea3cddbb` applies after Claude global slot 37, with unchanged subject inputs and runtime. No draft edits or automatic retries.
+Current action: collect both providers’ native N1–N4 runs, then complete the fourteen grouped Opus reviews. All 72 ordinary A/B/C subjects are complete, retained and directly assessed; Opus judgments remain pending. Initial input revision `a27782b26f8014b67e72ecf817f7e08392fd62c5` remains pinned by completed subjects; prospective controller revision `6ad549b50af54d9766d05b47ebf5cbc1ea3cddbb` applies after Claude global slot 37, with unchanged subject inputs and runtime. No draft edits or automatic retries.
 The approved [core/runs directory layout](../../plans/specs/2026-10-18-study-directory-layout.md) is implemented and verified for both studies; [navigation](README.md) separates core guidance from collected evidence.
 On 2026-10-18 the owner replied “ok, let’s do it” to the concrete remaining allocation of 144 subject calls plus fourteen evaluator calls. This accepts unchanged targeted/fuller bodies, fresh original/control comparisons, three repetitions per selected condition/provider and reuse of the separate completed E stratum while input/runtime qualification holds.
 The authorized sequence is 72 ordinary A/B/C subjects, then 72 native N1–N4 subjects, plus six ordinary and eight native Opus 5.5 medium reviews.
@@ -791,13 +791,13 @@ Owner-accepted recovery decision for CW: single-host retention, as used for SSR,
 
 Combined accounting sources: closed SSR [pilot 01](../sweeping-stale-references/runs/pilot-01/pilot-run-index.json), [pilot 02](../sweeping-stale-references/runs/pilot-02/pilot-02-run-index.json), [semantic delivery](../sweeping-stale-references/runs/semantic-delivery-01/semantic-delivery-01-run-index.json), [core baseline](../sweeping-stale-references/runs/core-baseline-01/core-baseline-01-run-index.json), [comparison](../sweeping-stale-references/runs/comprehensive-comparison-01/comprehensive-comparison-01-run-index.json), the SSR [completed expansion](../sweeping-stale-references/runs/coverage-baseline-01/coverage-baseline-01-run-index.json), the SSR [completed comparison](../sweeping-stale-references/runs/comprehensive-comparison-02/comprehensive-comparison-02-run-index.json), the SSR [Claude smoke](../sweeping-stale-references/runs/claude-smoke-01/claude-smoke-01-run-index.json), the SSR [Claude comparison](../sweeping-stale-references/runs/claude-comparison-01/claude-comparison-01-run-index.json), the SSR [Opus invocation comparison](../sweeping-stale-references/runs/claude-opus-invocation-01/claude-opus-invocation-01-run-index.json), and both CW indexes above. Historical pilot links contribute accounting only; they are not reclassified or reassessed.
 The new E reviews use the [fixed review package](runs/baseline-iteration-e-01/evaluation/README.md) and [supplemental Opus accounting](runs/baseline-iteration-e-01/evaluation/evaluator-run-index.json).
-Dispatched calls are **333 subject, 14 evaluator, 0 authoring, 1 retry**; remaining outer capacity is **107 / 14 / 4 / 3** against the [active plan](../../plans/2026-09-11-model-driven-skill-testing.md#limits-and-information-boundaries). Both eight-call CW batches are spent. The owner authorized ten SSR expansion calls under ceiling 56; all ten are spent, including the excluded control, with no replacement or pool transfer. Comparison runner durations total 508.067 seconds; baseline durations remain 494.936 seconds, including setup and capture.
+Dispatched calls are **368 subject, 14 evaluator, 0 authoring, 1 retry**; remaining outer capacity is **72 / 14 / 4 / 3** against the [active plan](../../plans/2026-09-11-model-driven-skill-testing.md#limits-and-information-boundaries). Both eight-call CW batches are spent. The owner authorized ten SSR expansion calls under ceiling 56; all ten are spent, including the excluded control, with no replacement or pool transfer. Comparison runner durations total 508.067 seconds; baseline durations remain 494.936 seconds, including setup and capture.
 Owner clarification after round-10 review: “the budget is just a guideline”. The 1,200-minute figure below remains the planning baseline, not a collection stop; invocation ceilings and the authorized SSR scope is unchanged. Retain elapsed effort and forecast variance to expose process cost.
 
-Current combined accounting: **2,480 active minutes booked; 1,280 minutes above the historical 1,200-minute planning guideline**.
+Current combined accounting: **2,510 active minutes booked; 1,310 minutes above the historical 1,200-minute planning guideline**.
 These are rounded effort estimates, not stopwatch measurements or a separately timed category breakdown.
 Between-turn owner wait is excluded; runner durations are included once.
-The initial 104 calls and sixteen native third repetitions are spent; combined subject accounting is 333/440, with 107 approved remaining-suite calls available and no E calls remaining.
+The initial 104 calls and sixteen native third repetitions are spent; combined subject accounting is 368/440, with 72 approved remaining-suite calls available and no E calls remaining.
 The supplemental work used 40 estimated active minutes against its 40-minute forecast; model waits are included once.
 
 | Work | Estimated active minutes |
@@ -883,7 +883,8 @@ The supplemental work used 40 estimated active minutes against its 40-minute for
 | Remaining-suite authorization, input preparation and runtime qualification | 30 |
 | Codex remaining-suite ordinary collection, retention and direct assessment | 30 |
 | Claude trace-path inspection diagnosis and zero-model regression verification | 5 |
-| **Total** | **2,480** |
+| Claude remaining-suite ordinary collection, retention and direct assessment | 30 |
+| **Total** | **2,510** |
 
 SSR expansion is complete. The prior 55-minute remaining forecast closed at 50 estimated minutes, including the additional shell correction; all ten subject calls are spent.
 The combined batch/recovery effort is 135 estimated minutes (45 initial checkpoint, 40 isolation correction, 50 resumption), 45 above the original 90-minute allowance. Separate round-9 review effort remains in the combined ledger above.
@@ -912,8 +913,8 @@ Subject collection and active-session assessment are complete; the owner subsequ
 
 | Work | Estimate | Basis |
 | --- | ---: | --- |
-| Remaining-suite collection, assessment and fourteen reviews | 400 | Midpoint of 325–475 remaining minutes after 65 booked preparation/Codex/inspection minutes; approved total forecast remains 390–540. |
-| **Total** | **400** | Completed E subjects/reviews are reused separately and add no new charge. |
+| Remaining-suite native collection, assessment and fourteen reviews | 370 | Midpoint of 295–445 remaining minutes after 95 booked preparation/ordinary/inspection minutes; approved total forecast remains 390–540. |
+| **Total** | **370** | Completed E subjects/reviews are reused separately and add no new charge. |
 
 The E stage used 115 estimated active minutes against the 180-minute upper forecast, 65 below it: 35 preparation, 40 subject collection/assessment and 40 evaluator preparation/reconciliation.
 The two evaluator durations total 420.696 seconds (7.01 minutes), included once in those estimates.
@@ -945,7 +946,7 @@ The same interpretation corrects five earlier expanded E results; all 58 E obser
 The earlier claimed draft advantage and recording-specific structural-intervention recommendation are withdrawn.
 Both Opus sessions saw the wording difference; the Claude-output session already treated it as non-blocking, while the Codex-output session used the superseded stricter interpretation.
 Neither review is rewritten or claimed to have applied the later clarification.
-No consequential E regression remains that warrants a body edit; recommend keeping both drafts unchanged for the remaining seven scenarios, under the owner-approved remaining-suite allocation; runtime qualification and frozen inputs precede collection.
+No consequential E regression remained that warranted a body edit; E supported testing both unchanged drafts against the remaining suite, and the owner approved that allocation. Current collection progress and decisions belong to the opening.
 Full-suite completion is not established by E alone; the unchanged live original remains the adoption base.
 The inventory-wrapper correction changes no raw output, task, criterion or model call and excludes no result.
 These are new runtime strata, not pooled historical counts; the live skill remains unchanged.

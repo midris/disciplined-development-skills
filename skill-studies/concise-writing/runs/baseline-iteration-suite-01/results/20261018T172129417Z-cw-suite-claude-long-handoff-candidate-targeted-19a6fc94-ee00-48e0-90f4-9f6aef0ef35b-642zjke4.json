@@ -1,0 +1,160 @@
+{
+  "schema_version": "2",
+  "record_kind": "execution result",
+  "result_id": "claude-ordinary-iteration-01-long-handoff-candidate-targeted-1-1-assessment",
+  "assessed_at": "2026-10-18T17:30:08.558866+00:00",
+  "run_id": "20261018T172129417Z-cw-suite-claude-long-handoff-candidate-targeted-19a6fc94-ee00-48e0-90f4-9f6aef0ef35b-642zjke4",
+  "condition": "candidate-targeted",
+  "assessor": {
+    "name": "Codex active session",
+    "method": "active session",
+    "model": null,
+    "session_id": null,
+    "context": "Same Codex controller authored/reviewed exposed development variants and directly judged complete outputs; no blind, held-out or independent assessor claim. Separate Opus review supplements this."
+  },
+  "manifest": {
+    "path": "skill-studies/concise-writing/runs/baseline-iteration-suite-01/preparation/manifests/claude-long-handoff-manifest.json",
+    "sha256": "6de87c31803a976fcf38305c3705249132ff9d2ef5f3e58f748e053b41b71886",
+    "version": "1",
+    "git_revision": "6a89f2f76a3a03508fb05d6ce435af98ed35ea42"
+  },
+  "evidence": [
+    {
+      "id": "output",
+      "artifact": {
+        "path": "/Users/simon/work/personal/skill-study-private/concise-writing/baseline-suite-20261018/subjects/20261018T172129417Z-cw-suite-claude-long-handoff-candidate-targeted-19a6fc94-ee00-48e0-90f4-9f6aef0ef35b-642zjke4/workspace/fixture/report.md",
+        "sha256": "75bad20251c4aa2b4c4083fcc4157c9d0a1bde975284df8f318ca8e793dd3402",
+        "version": null
+      },
+      "selector": "Complete artifact"
+    },
+    {
+      "id": "trace",
+      "artifact": {
+        "path": "/Users/simon/work/personal/skill-study-private/concise-writing/baseline-suite-20261018/subjects/20261018T172129417Z-cw-suite-claude-long-handoff-candidate-targeted-19a6fc94-ee00-48e0-90f4-9f6aef0ef35b-642zjke4/stdout.txt",
+        "sha256": "4d63cfea9e77a370f3c299653ff2a024e092cf66cb173b3a8e8937ba9c40d2d5",
+        "version": null
+      },
+      "selector": "Complete artifact"
+    },
+    {
+      "id": "mechanical",
+      "artifact": {
+        "path": "/Users/simon/work/personal/skill-study-private/concise-writing/baseline-suite-20261018/subjects/20261018T172129417Z-cw-suite-claude-long-handoff-candidate-targeted-19a6fc94-ee00-48e0-90f4-9f6aef0ef35b-642zjke4/result.json",
+        "sha256": "88ea2c8d88ca94752e6830c7fdc12ae345568dd9e9451132be5e9f00270729bf",
+        "version": null
+      },
+      "selector": "Complete artifact"
+    },
+    {
+      "id": "log",
+      "artifact": {
+        "path": "/Users/simon/work/personal/skill-study-private/concise-writing/baseline-suite-20261018/subjects/20261018T172129417Z-cw-suite-claude-long-handoff-candidate-targeted-19a6fc94-ee00-48e0-90f4-9f6aef0ef35b-642zjke4/runner.log",
+        "sha256": "2028591743efa4c85a67fc9f946863e065abccf179075786d94d348ba6b49266",
+        "version": null
+      },
+      "selector": "Complete artifact"
+    },
+    {
+      "id": "final",
+      "artifact": {
+        "path": "/Users/simon/work/personal/skill-study-private/concise-writing/baseline-suite-20261018/subjects/20261018T172129417Z-cw-suite-claude-long-handoff-candidate-targeted-19a6fc94-ee00-48e0-90f4-9f6aef0ef35b-642zjke4/final.txt",
+        "sha256": "da5e377bba5f824e99a79b183c492feba8c266a3aa3e24edb6ec86bbe103771a",
+        "version": null
+      },
+      "selector": "Complete artifact"
+    },
+    {
+      "id": "source-0",
+      "artifact": {
+        "path": "skill-studies/concise-writing/cases/long-handoff/fixture/report.md",
+        "sha256": "0eb0946286d2a4b1708f14bcff5795cd1effdfa64af612a6cb9a89d2fac84737",
+        "version": null,
+        "git_revision": "6ad549b50af54d9766d05b47ebf5cbc1ea3cddbb"
+      },
+      "selector": "Complete frozen report.md"
+    },
+    {
+      "id": "source-1",
+      "artifact": {
+        "path": "skill-studies/concise-writing/cases/long-handoff/task.md",
+        "sha256": "8be0f67fe6b62ca0a1d5f3af9ac2ffea79eef0d0615f0979853079653b8feab8",
+        "version": null,
+        "git_revision": "6ad549b50af54d9766d05b47ebf5cbc1ea3cddbb"
+      },
+      "selector": "Complete frozen TASK.md"
+    }
+  ],
+  "setup": {
+    "status": "valid",
+    "reason": "Fixed provider/model/CLI and retained inventory verified. Complete assigned body in tool output 11 before first task edit 29. Protected input bytes unchanged.",
+    "evidence": [
+      "mechanical",
+      "trace",
+      "log"
+    ]
+  },
+  "criteria": [
+    {
+      "id": "F1",
+      "dimension": "functional",
+      "judgment": "met",
+      "reason": "Targeted C1 preserves the evidence limits, pilot approval/staff/window/accounts, file/lease/token state, exact timing/latency/reset/mismatch boundaries and all rollback/handoff/next-decision constraints. It retains token retention until acceptance and invents no rationale.",
+      "consequence": "Required whole-artifact functional factor; length cannot offset failure.",
+      "evidence": [
+        "output",
+        "source-0",
+        "source-1"
+      ]
+    },
+    {
+      "id": "F2",
+      "dimension": "functional",
+      "judgment": "met",
+      "reason": "Deployment/rollback remain independently usable with local prerequisites and state/evidence safeguards. Unknown acknowledgement escalates; package rollback cannot settle recovery or authorize restart; incoming acceptance and separate release decisions remain clear.",
+      "consequence": "Required whole-artifact functional factor; length cannot offset failure.",
+      "evidence": [
+        "output",
+        "source-0",
+        "source-1"
+      ]
+    },
+    {
+      "id": "F3",
+      "dimension": "functional",
+      "judgment": "met",
+      "reason": "The detached mechanism reminder and empty introduction are removed while point-of-use lease/file/health warnings remain. The full operating sequence is coherent rather than requiring a duplicate background detour.",
+      "consequence": "Required whole-artifact functional factor; length cannot offset failure.",
+      "evidence": [
+        "output",
+        "source-0",
+        "source-1"
+      ]
+    }
+  ],
+  "functional_result": "met",
+  "procedural_summary": "Fixed provider/model/CLI and retained inventory verified. Complete assigned body in tool output 11 before first task edit 29. Protected input bytes unchanged. O4/O5 remain unscored; native D1 is distinct from functional outcome.",
+  "observations": [
+    {
+      "dimension": "functional",
+      "description": "Complete output 1036 wc-w words; supplied report.md: 1207 words, TASK.md: 68 words. Counts describe length, not semantic success; comment-only counts are reported separately for N4.",
+      "consequence": "Descriptive counts only.",
+      "evidence": [
+        "output",
+        "source-0",
+        "source-1"
+      ]
+    },
+    {
+      "dimension": "functional",
+      "description": "Passing targeted C1. It drops the source\u2019s explicit statement that the separate token-retention rationale is unexplained, while retaining the rule and inventing no why. The case does not require an uncertainty flag; record this transparency difference and the prior cross-model disagreement without silently promoting unscored process to a failure.",
+      "consequence": "Qualitative comparison is separate from threshold counts.",
+      "evidence": [
+        "output",
+        "source-0",
+        "source-1"
+      ]
+    }
+  ],
+  "uncertainty": []
+}

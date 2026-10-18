@@ -1,0 +1,160 @@
+{
+  "schema_version": "2",
+  "record_kind": "execution result",
+  "result_id": "claude-ordinary-iteration-01-long-handoff-control-1-1-assessment",
+  "assessed_at": "2026-10-18T17:30:08.558866+00:00",
+  "run_id": "20261018T172012924Z-cw-suite-claude-long-handoff-control-d7fa11e7-e6a0-4c6d-90ec-6b67c1499538-hi7w0kaj",
+  "condition": "control",
+  "assessor": {
+    "name": "Codex active session",
+    "method": "active session",
+    "model": null,
+    "session_id": null,
+    "context": "Same Codex controller authored/reviewed exposed development variants and directly judged complete outputs; no blind, held-out or independent assessor claim. Separate Opus review supplements this."
+  },
+  "manifest": {
+    "path": "skill-studies/concise-writing/runs/baseline-iteration-suite-01/preparation/manifests/claude-long-handoff-manifest.json",
+    "sha256": "6de87c31803a976fcf38305c3705249132ff9d2ef5f3e58f748e053b41b71886",
+    "version": "1",
+    "git_revision": "6a89f2f76a3a03508fb05d6ce435af98ed35ea42"
+  },
+  "evidence": [
+    {
+      "id": "output",
+      "artifact": {
+        "path": "/Users/simon/work/personal/skill-study-private/concise-writing/baseline-suite-20261018/subjects/20261018T172012924Z-cw-suite-claude-long-handoff-control-d7fa11e7-e6a0-4c6d-90ec-6b67c1499538-hi7w0kaj/workspace/fixture/report.md",
+        "sha256": "179c73f2de5a042f5a6ad7022e5c8264ebc44a9b1e57d5a9d901d5774d47b0c9",
+        "version": null
+      },
+      "selector": "Complete artifact"
+    },
+    {
+      "id": "trace",
+      "artifact": {
+        "path": "/Users/simon/work/personal/skill-study-private/concise-writing/baseline-suite-20261018/subjects/20261018T172012924Z-cw-suite-claude-long-handoff-control-d7fa11e7-e6a0-4c6d-90ec-6b67c1499538-hi7w0kaj/stdout.txt",
+        "sha256": "199240796711c2ab549d0b8ddd098aa4d7d457fa10e3f05460d5b5ada9ddb706",
+        "version": null
+      },
+      "selector": "Complete artifact"
+    },
+    {
+      "id": "mechanical",
+      "artifact": {
+        "path": "/Users/simon/work/personal/skill-study-private/concise-writing/baseline-suite-20261018/subjects/20261018T172012924Z-cw-suite-claude-long-handoff-control-d7fa11e7-e6a0-4c6d-90ec-6b67c1499538-hi7w0kaj/result.json",
+        "sha256": "e108e5c285a93f1a9ea0c8004a0e855098c6e524a08364ca7ea3fda33af3444d",
+        "version": null
+      },
+      "selector": "Complete artifact"
+    },
+    {
+      "id": "log",
+      "artifact": {
+        "path": "/Users/simon/work/personal/skill-study-private/concise-writing/baseline-suite-20261018/subjects/20261018T172012924Z-cw-suite-claude-long-handoff-control-d7fa11e7-e6a0-4c6d-90ec-6b67c1499538-hi7w0kaj/runner.log",
+        "sha256": "c21ae194c60dff614ee4dead3ae7f067f37a217c512d0db21882b1cf2e8a4b2a",
+        "version": null
+      },
+      "selector": "Complete artifact"
+    },
+    {
+      "id": "final",
+      "artifact": {
+        "path": "/Users/simon/work/personal/skill-study-private/concise-writing/baseline-suite-20261018/subjects/20261018T172012924Z-cw-suite-claude-long-handoff-control-d7fa11e7-e6a0-4c6d-90ec-6b67c1499538-hi7w0kaj/final.txt",
+        "sha256": "3021b4e04dfdd910f75b0fd672bf6415eacd73ed68c57ff5cde0ddefdaf80f56",
+        "version": null
+      },
+      "selector": "Complete artifact"
+    },
+    {
+      "id": "source-0",
+      "artifact": {
+        "path": "skill-studies/concise-writing/cases/long-handoff/fixture/report.md",
+        "sha256": "0eb0946286d2a4b1708f14bcff5795cd1effdfa64af612a6cb9a89d2fac84737",
+        "version": null,
+        "git_revision": "6ad549b50af54d9766d05b47ebf5cbc1ea3cddbb"
+      },
+      "selector": "Complete frozen report.md"
+    },
+    {
+      "id": "source-1",
+      "artifact": {
+        "path": "skill-studies/concise-writing/cases/long-handoff/task.md",
+        "sha256": "8be0f67fe6b62ca0a1d5f3af9ac2ffea79eef0d0615f0979853079653b8feab8",
+        "version": null,
+        "git_revision": "6ad549b50af54d9766d05b47ebf5cbc1ea3cddbb"
+      },
+      "selector": "Complete frozen TASK.md"
+    }
+  ],
+  "setup": {
+    "status": "valid",
+    "reason": "Fixed provider/model/CLI and retained inventory verified. No CW catalog/body exposure. Protected input bytes unchanged.",
+    "evidence": [
+      "mechanical",
+      "trace",
+      "log"
+    ]
+  },
+  "criteria": [
+    {
+      "id": "F1",
+      "dimension": "functional",
+      "judgment": "met",
+      "reason": "Control C1 preserves versions/evidence limits, pilot approval/scope/staff/window/duration, files/lease/token state and rationale limits, exact timing/latency/consecutive/reset/mismatch rules, rollback reconciliation/escalation/new approval and handoff acceptance. No consequential false operational claim is introduced.",
+      "consequence": "Required whole-artifact functional factor; length cannot offset failure.",
+      "evidence": [
+        "output",
+        "source-0",
+        "source-1"
+      ]
+    },
+    {
+      "id": "F2",
+      "dimension": "functional",
+      "judgment": "met",
+      "reason": "Deployment and rollback retain local approval/staffing, unresolved-state/health and evidence safeguards. Operators can still reconcile with the destination, escalate unknown status and complete explicit handoff without treating green checks or package rollback as authorization.",
+      "consequence": "Required whole-artifact functional factor; length cannot offset failure.",
+      "evidence": [
+        "output",
+        "source-0",
+        "source-1"
+      ]
+    },
+    {
+      "id": "F3",
+      "dimension": "functional",
+      "judgment": "not met",
+      "reason": "The whole handoff remains unnecessarily laborious because it gives the full old/new cursor mechanism in Current position and again in a detached implementation reminder between Monitoring and Rollback. That second account adds no new evidence or action context: direct-entry responders skip it, while operators reading the operating sequence traverse an already explained mechanism before reaching the next action section. Local sentence cleanup leaves that global reading detour, distinct from useful lease/file warnings at each operational entry point.",
+      "consequence": "Required whole-artifact functional factor; length cannot offset failure.",
+      "evidence": [
+        "output",
+        "source-0",
+        "source-1"
+      ]
+    }
+  ],
+  "functional_result": "not met",
+  "procedural_summary": "Fixed provider/model/CLI and retained inventory verified. No CW catalog/body exposure. Protected input bytes unchanged. O4/O5 remain unscored; native D1 is distinct from functional outcome.",
+  "observations": [
+    {
+      "dimension": "functional",
+      "description": "Complete output 1159 wc-w words; supplied report.md: 1207 words, TASK.md: 68 words. Counts describe length, not semantic success; comment-only counts are reported separately for N4.",
+      "consequence": "Descriptive counts only.",
+      "evidence": [
+        "output",
+        "source-0",
+        "source-1"
+      ]
+    },
+    {
+      "dimension": "functional",
+      "description": "Control C1 repeats the historical detached-mechanism readability class. The output is tighter than the source and preserves utility, but those facts alone do not satisfy the fixed F3 consumption-burden criterion. Prior Fable disagreement on this severity is retained for the new independent review.",
+      "consequence": "Qualitative comparison is separate from threshold counts.",
+      "evidence": [
+        "output",
+        "source-0",
+        "source-1"
+      ]
+    }
+  ],
+  "uncertainty": []
+}

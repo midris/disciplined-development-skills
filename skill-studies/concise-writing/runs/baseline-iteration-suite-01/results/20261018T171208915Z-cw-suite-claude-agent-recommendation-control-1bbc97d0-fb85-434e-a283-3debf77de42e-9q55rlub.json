@@ -1,0 +1,160 @@
+{
+  "schema_version": "2",
+  "record_kind": "execution result",
+  "result_id": "claude-ordinary-iteration-01-agent-recommendation-control-3-1-assessment",
+  "assessed_at": "2026-10-18T17:30:08.558866+00:00",
+  "run_id": "20261018T171208915Z-cw-suite-claude-agent-recommendation-control-1bbc97d0-fb85-434e-a283-3debf77de42e-9q55rlub",
+  "condition": "control",
+  "assessor": {
+    "name": "Codex active session",
+    "method": "active session",
+    "model": null,
+    "session_id": null,
+    "context": "Same Codex controller authored/reviewed exposed development variants and directly judged complete outputs; no blind, held-out or independent assessor claim. Separate Opus review supplements this."
+  },
+  "manifest": {
+    "path": "skill-studies/concise-writing/runs/baseline-iteration-suite-01/preparation/manifests/claude-agent-recommendation-manifest.json",
+    "sha256": "a653bf4dfce20734af25315396158434186b7b94b1e79b6961dd4420357e238a",
+    "version": "1",
+    "git_revision": "6a89f2f76a3a03508fb05d6ce435af98ed35ea42"
+  },
+  "evidence": [
+    {
+      "id": "output",
+      "artifact": {
+        "path": "/Users/simon/work/personal/skill-study-private/concise-writing/baseline-suite-20261018/subjects/20261018T171208915Z-cw-suite-claude-agent-recommendation-control-1bbc97d0-fb85-434e-a283-3debf77de42e-9q55rlub/workspace/fixture/report.md",
+        "sha256": "cfbbf6a7df57e28b83f50e6a6eb9a37ceaa60587cf61ebccb6c1ee5bd37f3e90",
+        "version": null
+      },
+      "selector": "Complete artifact"
+    },
+    {
+      "id": "trace",
+      "artifact": {
+        "path": "/Users/simon/work/personal/skill-study-private/concise-writing/baseline-suite-20261018/subjects/20261018T171208915Z-cw-suite-claude-agent-recommendation-control-1bbc97d0-fb85-434e-a283-3debf77de42e-9q55rlub/stdout.txt",
+        "sha256": "2688a62a9a8535618e1ff54654f914f7bc40ac24e400bae35ea667c90f0a4999",
+        "version": null
+      },
+      "selector": "Complete artifact"
+    },
+    {
+      "id": "mechanical",
+      "artifact": {
+        "path": "/Users/simon/work/personal/skill-study-private/concise-writing/baseline-suite-20261018/subjects/20261018T171208915Z-cw-suite-claude-agent-recommendation-control-1bbc97d0-fb85-434e-a283-3debf77de42e-9q55rlub/result.json",
+        "sha256": "31b735c775f7a4bda5ee300dfc85a4c88342905811851af6729307d3b36c0cfb",
+        "version": null
+      },
+      "selector": "Complete artifact"
+    },
+    {
+      "id": "log",
+      "artifact": {
+        "path": "/Users/simon/work/personal/skill-study-private/concise-writing/baseline-suite-20261018/subjects/20261018T171208915Z-cw-suite-claude-agent-recommendation-control-1bbc97d0-fb85-434e-a283-3debf77de42e-9q55rlub/runner.log",
+        "sha256": "5c2bfcb6443280710ac573461e9432ffb55122565a910130645fd7718c92289a",
+        "version": null
+      },
+      "selector": "Complete artifact"
+    },
+    {
+      "id": "final",
+      "artifact": {
+        "path": "/Users/simon/work/personal/skill-study-private/concise-writing/baseline-suite-20261018/subjects/20261018T171208915Z-cw-suite-claude-agent-recommendation-control-1bbc97d0-fb85-434e-a283-3debf77de42e-9q55rlub/final.txt",
+        "sha256": "0a504609ff0fb1506be95391894e402f57e40a3f2c2dc1682f884e47a636158b",
+        "version": null
+      },
+      "selector": "Complete artifact"
+    },
+    {
+      "id": "source-0",
+      "artifact": {
+        "path": "skill-studies/concise-writing/cases/agent-recommendation/fixture/report.md",
+        "sha256": "e9a992c7e4c14dfd5afc10cc637349f39c2030e98ed0311441675900bc3e93e9",
+        "version": null,
+        "git_revision": "6ad549b50af54d9766d05b47ebf5cbc1ea3cddbb"
+      },
+      "selector": "Complete frozen report.md"
+    },
+    {
+      "id": "source-1",
+      "artifact": {
+        "path": "skill-studies/concise-writing/cases/agent-recommendation/task.md",
+        "sha256": "607cbe0562a19ea092fe76ec96f13bfbe033b2e1095baef2ca38be621c0baf82",
+        "version": null,
+        "git_revision": "6ad549b50af54d9766d05b47ebf5cbc1ea3cddbb"
+      },
+      "selector": "Complete frozen TASK.md"
+    }
+  ],
+  "setup": {
+    "status": "valid",
+    "reason": "Fixed provider/model/CLI and retained inventory verified. No CW catalog/body exposure. Protected input bytes unchanged.",
+    "evidence": [
+      "mechanical",
+      "trace",
+      "log"
+    ]
+  },
+  "criteria": [
+    {
+      "id": "F1",
+      "dimension": "functional",
+      "judgment": "not met",
+      "reason": "The control says to run the pilot \u201cto test the untested conditions above (production-sized data, cross-region failure behavior).\u201d The source recommends limited exposure because those conditions remain untested, but never specifies production-sized data or cross-region failure testing within this pilot. The edit adds a materially broader validation purpose that could make the manager expect unsupported coverage. Supplied staging facts and operating constraints otherwise remain intact.",
+      "consequence": "Required whole-artifact functional factor; length cannot offset failure.",
+      "evidence": [
+        "output",
+        "source-0",
+        "source-1"
+      ]
+    },
+    {
+      "id": "F2",
+      "dimension": "functional",
+      "judgment": "not met",
+      "reason": "The manager is asked to approve a pilot on a materially stronger testing premise than the source supplies: validation of production-sized behavior and cross-region failures. Even though staffing, stop/retain and separate-release gates survive, that invented purpose changes the expected benefit/evidence used for the approval decision. This is the same defect as F1 affecting a second dimension, not a second failed execution.",
+      "consequence": "Required whole-artifact functional factor; length cannot offset failure.",
+      "evidence": [
+        "output",
+        "source-0",
+        "source-1"
+      ]
+    },
+    {
+      "id": "F3",
+      "dimension": "functional",
+      "judgment": "met",
+      "reason": "Status, mechanism, bounded evidence, recommendation and logistics are clear and concise. The issue is unsupported substance, not readability.",
+      "consequence": "Required whole-artifact functional factor; length cannot offset failure.",
+      "evidence": [
+        "output",
+        "source-0",
+        "source-1"
+      ]
+    }
+  ],
+  "functional_result": "not met",
+  "procedural_summary": "Fixed provider/model/CLI and retained inventory verified. No CW catalog/body exposure. Protected input bytes unchanged. O4/O5 remain unscored; native D1 is distinct from functional outcome.",
+  "observations": [
+    {
+      "dimension": "functional",
+      "description": "Complete output 257 wc-w words; supplied report.md: 625 words, TASK.md: 51 words. Counts describe length, not semantic success; comment-only counts are reported separately for N4.",
+      "consequence": "Descriptive counts only.",
+      "evidence": [
+        "output",
+        "source-0",
+        "source-1"
+      ]
+    },
+    {
+      "dimension": "functional",
+      "description": "Control A3 repeats the unsupported pilot-validation-purpose class seen in control A2, now explicitly including cross-region behavior. No CW body was exposed.",
+      "consequence": "Qualitative comparison is separate from threshold counts.",
+      "evidence": [
+        "output",
+        "source-0",
+        "source-1"
+      ]
+    }
+  ],
+  "uncertainty": []
+}

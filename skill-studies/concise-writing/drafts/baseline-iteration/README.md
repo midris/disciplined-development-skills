@@ -26,7 +26,7 @@ The additional example and structure change are part of the fuller intervention,
 | [Claude native 01](../../runs/suite-2026-09-27/claude-invocation-01-assessment.md) and [02](../../runs/suite-2026-09-27/claude-invocation-02-assessment.md) | Unsupported claims in new writing, positive selection misses and correct comments produced without loading; do not attribute unloaded failures or successes to a skill body. |
 | [All cross-model reviews](../../runs/cross-model-evaluation-01/assessment.md) and their raw-report audit pointers | Shared observations with different severity judgments, controls’ useful restructuring, original’s fidelity strengths, comprehensive’s explanatory strengths and its additional repetition. |
 
-The [E reassessment](../../runs/contact-reassessment-01/README.md) withdraws the recording-specific failures and edit recommendation; both draft bodies remain unchanged, and the remaining seven scenarios are untested on them.
+The [E reassessment](../../runs/contact-reassessment-01/README.md) withdraws the recording-specific failures and edit recommendation; both draft bodies remain unchanged. The protocol owns completed coverage and the next execution step.
 These draft hypotheses concern better preservation and organization, not proof that any particular old sentence caused a failure.
 No new rationalization is invented from an evaluator’s defense of an output; the six retained rows preserve the original real-world lessons.
 The drafts strengthen existing homes instead of prescribing a mandatory output checklist or format; the design explicitly records the limitation of testing two prose forms rather than a structural omission guard.

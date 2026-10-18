@@ -32,7 +32,7 @@
         "charge": 1
       },
       "limitations": [
-        "Retained; active-session assessment pending. No blind, held-out or independent assessor claim."
+        "Exposed development case assessed by the Codex controller; cross-model review is supplemental. No causal or reliability inference from native counts."
       ],
       "bundle": {
         "path": "/Users/simon/work/personal/skill-study-private/concise-writing/baseline-suite-20261018/subjects/20261018T170234716Z-cw-suite-claude-agent-recommendation-candidate-targeted-b2c93c2c-1f0c-4153-aea8-6ccbafdbaa35-fz3scwk4",
@@ -43,7 +43,1694 @@
         },
         "verified": true
       },
-      "result": null
+      "result": {
+        "result_id": "claude-ordinary-iteration-01-agent-recommendation-candidate-targeted-1-1-assessment",
+        "record": {
+          "path": "skill-studies/concise-writing/runs/baseline-iteration-suite-01/results/20261018T170234716Z-cw-suite-claude-agent-recommendation-candidate-targeted-b2c93c2c-1f0c-4153-aea8-6ccbafdbaa35-fz3scwk4.json",
+          "sha256": "e2ccb873763d0a66bbbf11f10c4c25640be102a3c7dbdac30e04d8a63aee7fff",
+          "version": "2"
+        }
+      }
+    },
+    {
+      "attempt_id": "claude-ordinary-iteration-01-agent-recommendation-candidate-fuller-1-1",
+      "case_id": "agent-recommendation",
+      "condition": "candidate-fuller",
+      "repetition": 1,
+      "attempt_number": 1,
+      "retry_of": null,
+      "manifest": {
+        "path": "skill-studies/concise-writing/runs/baseline-iteration-suite-01/preparation/manifests/claude-agent-recommendation-manifest.json",
+        "sha256": "a653bf4dfce20734af25315396158434186b7b94b1e79b6961dd4420357e238a",
+        "version": "1",
+        "git_revision": "6a89f2f76a3a03508fb05d6ce435af98ed35ea42"
+      },
+      "authorization": {
+        "artifact": {
+          "path": "skill-studies/concise-writing/protocol.md",
+          "sha256": "16cd331c975d076a94a8956a0f24edb9167f5407c9f529586aa54932d5b3750e",
+          "version": "1",
+          "git_revision": "6a89f2f76a3a03508fb05d6ce435af98ed35ea42"
+        },
+        "selector": "Batch: claude-ordinary-iteration-01; order 2"
+      },
+      "run_id": "20261018T170853473Z-cw-suite-claude-agent-recommendation-candidate-fuller-fb7d7805-0d65-443b-b53c-51a55b8ae586-n0vsuhra",
+      "allocation": {
+        "pool": "subject",
+        "charge": 1
+      },
+      "limitations": [
+        "Exposed development case assessed by the Codex controller; cross-model review is supplemental. No causal or reliability inference from native counts."
+      ],
+      "bundle": {
+        "path": "/Users/simon/work/personal/skill-study-private/concise-writing/baseline-suite-20261018/subjects/20261018T170853473Z-cw-suite-claude-agent-recommendation-candidate-fuller-fb7d7805-0d65-443b-b53c-51a55b8ae586-n0vsuhra",
+        "inventory": {
+          "path": "/Users/simon/work/personal/skill-study-private/concise-writing/baseline-suite-20261018/subjects/20261018T170853473Z-cw-suite-claude-agent-recommendation-candidate-fuller-fb7d7805-0d65-443b-b53c-51a55b8ae586-n0vsuhra.inventory.json",
+          "sha256": "ecc444042cab40f5e49a7a4506e93880d4206eeeb9cea1f338c711d6a6876c3f",
+          "version": "1"
+        },
+        "verified": true
+      },
+      "result": {
+        "result_id": "claude-ordinary-iteration-01-agent-recommendation-candidate-fuller-1-1-assessment",
+        "record": {
+          "path": "skill-studies/concise-writing/runs/baseline-iteration-suite-01/results/20261018T170853473Z-cw-suite-claude-agent-recommendation-candidate-fuller-fb7d7805-0d65-443b-b53c-51a55b8ae586-n0vsuhra.json",
+          "sha256": "248017d1d067267323a004bc161f153379317a044c9f3a6098470fcf14570cc3",
+          "version": "2"
+        }
+      }
+    },
+    {
+      "attempt_id": "claude-ordinary-iteration-01-agent-recommendation-control-1-1",
+      "case_id": "agent-recommendation",
+      "condition": "control",
+      "repetition": 1,
+      "attempt_number": 1,
+      "retry_of": null,
+      "manifest": {
+        "path": "skill-studies/concise-writing/runs/baseline-iteration-suite-01/preparation/manifests/claude-agent-recommendation-manifest.json",
+        "sha256": "a653bf4dfce20734af25315396158434186b7b94b1e79b6961dd4420357e238a",
+        "version": "1",
+        "git_revision": "6a89f2f76a3a03508fb05d6ce435af98ed35ea42"
+      },
+      "authorization": {
+        "artifact": {
+          "path": "skill-studies/concise-writing/protocol.md",
+          "sha256": "16cd331c975d076a94a8956a0f24edb9167f5407c9f529586aa54932d5b3750e",
+          "version": "1",
+          "git_revision": "6a89f2f76a3a03508fb05d6ce435af98ed35ea42"
+        },
+        "selector": "Batch: claude-ordinary-iteration-01; order 3"
+      },
+      "run_id": "20261018T170922279Z-cw-suite-claude-agent-recommendation-control-78c1dbef-8db0-46f6-8ed3-00b808ba27d3-mwxcm_6h",
+      "allocation": {
+        "pool": "subject",
+        "charge": 1
+      },
+      "limitations": [
+        "Exposed development case assessed by the Codex controller; cross-model review is supplemental. No causal or reliability inference from native counts."
+      ],
+      "bundle": {
+        "path": "/Users/simon/work/personal/skill-study-private/concise-writing/baseline-suite-20261018/subjects/20261018T170922279Z-cw-suite-claude-agent-recommendation-control-78c1dbef-8db0-46f6-8ed3-00b808ba27d3-mwxcm_6h",
+        "inventory": {
+          "path": "/Users/simon/work/personal/skill-study-private/concise-writing/baseline-suite-20261018/subjects/20261018T170922279Z-cw-suite-claude-agent-recommendation-control-78c1dbef-8db0-46f6-8ed3-00b808ba27d3-mwxcm_6h.inventory.json",
+          "sha256": "896a67452c45283cf62e3bb1ee60e00cddf040b11624e0a67638fb3b590792a2",
+          "version": "1"
+        },
+        "verified": true
+      },
+      "result": {
+        "result_id": "claude-ordinary-iteration-01-agent-recommendation-control-1-1-assessment",
+        "record": {
+          "path": "skill-studies/concise-writing/runs/baseline-iteration-suite-01/results/20261018T170922279Z-cw-suite-claude-agent-recommendation-control-78c1dbef-8db0-46f6-8ed3-00b808ba27d3-mwxcm_6h.json",
+          "sha256": "7469214908476d25298ff157041a1e10cca44cbbbc8d8b9a27d743d725685274",
+          "version": "2"
+        }
+      }
+    },
+    {
+      "attempt_id": "claude-ordinary-iteration-01-agent-recommendation-original-1-1",
+      "case_id": "agent-recommendation",
+      "condition": "original",
+      "repetition": 1,
+      "attempt_number": 1,
+      "retry_of": null,
+      "manifest": {
+        "path": "skill-studies/concise-writing/runs/baseline-iteration-suite-01/preparation/manifests/claude-agent-recommendation-manifest.json",
+        "sha256": "a653bf4dfce20734af25315396158434186b7b94b1e79b6961dd4420357e238a",
+        "version": "1",
+        "git_revision": "6a89f2f76a3a03508fb05d6ce435af98ed35ea42"
+      },
+      "authorization": {
+        "artifact": {
+          "path": "skill-studies/concise-writing/protocol.md",
+          "sha256": "16cd331c975d076a94a8956a0f24edb9167f5407c9f529586aa54932d5b3750e",
+          "version": "1",
+          "git_revision": "6a89f2f76a3a03508fb05d6ce435af98ed35ea42"
+        },
+        "selector": "Batch: claude-ordinary-iteration-01; order 4"
+      },
+      "run_id": "20261018T170950262Z-cw-suite-claude-agent-recommendation-original-d3077d2e-da39-4487-9d5f-57b790e556eb-iz0mxf7u",
+      "allocation": {
+        "pool": "subject",
+        "charge": 1
+      },
+      "limitations": [
+        "Exposed development case assessed by the Codex controller; cross-model review is supplemental. No causal or reliability inference from native counts."
+      ],
+      "bundle": {
+        "path": "/Users/simon/work/personal/skill-study-private/concise-writing/baseline-suite-20261018/subjects/20261018T170950262Z-cw-suite-claude-agent-recommendation-original-d3077d2e-da39-4487-9d5f-57b790e556eb-iz0mxf7u",
+        "inventory": {
+          "path": "/Users/simon/work/personal/skill-study-private/concise-writing/baseline-suite-20261018/subjects/20261018T170950262Z-cw-suite-claude-agent-recommendation-original-d3077d2e-da39-4487-9d5f-57b790e556eb-iz0mxf7u.inventory.json",
+          "sha256": "30a690dc22e7532c77019ebb530801a140db537dbd9cad759a51659230e9c8ec",
+          "version": "1"
+        },
+        "verified": true
+      },
+      "result": {
+        "result_id": "claude-ordinary-iteration-01-agent-recommendation-original-1-1-assessment",
+        "record": {
+          "path": "skill-studies/concise-writing/runs/baseline-iteration-suite-01/results/20261018T170950262Z-cw-suite-claude-agent-recommendation-original-d3077d2e-da39-4487-9d5f-57b790e556eb-iz0mxf7u.json",
+          "sha256": "4d6d259fcb2ba4686c9b755ce1cce073dfe408724d189567d09c6e4f4ab47798",
+          "version": "2"
+        }
+      }
+    },
+    {
+      "attempt_id": "claude-ordinary-iteration-01-agent-recommendation-candidate-fuller-2-1",
+      "case_id": "agent-recommendation",
+      "condition": "candidate-fuller",
+      "repetition": 2,
+      "attempt_number": 1,
+      "retry_of": null,
+      "manifest": {
+        "path": "skill-studies/concise-writing/runs/baseline-iteration-suite-01/preparation/manifests/claude-agent-recommendation-manifest.json",
+        "sha256": "a653bf4dfce20734af25315396158434186b7b94b1e79b6961dd4420357e238a",
+        "version": "1",
+        "git_revision": "6a89f2f76a3a03508fb05d6ce435af98ed35ea42"
+      },
+      "authorization": {
+        "artifact": {
+          "path": "skill-studies/concise-writing/protocol.md",
+          "sha256": "16cd331c975d076a94a8956a0f24edb9167f5407c9f529586aa54932d5b3750e",
+          "version": "1",
+          "git_revision": "6a89f2f76a3a03508fb05d6ce435af98ed35ea42"
+        },
+        "selector": "Batch: claude-ordinary-iteration-01; order 5"
+      },
+      "run_id": "20261018T171023800Z-cw-suite-claude-agent-recommendation-candidate-fuller-8f010012-73f1-4ec4-a5c8-a6adaf78730d-1mlzkko4",
+      "allocation": {
+        "pool": "subject",
+        "charge": 1
+      },
+      "limitations": [
+        "Exposed development case assessed by the Codex controller; cross-model review is supplemental. No causal or reliability inference from native counts."
+      ],
+      "bundle": {
+        "path": "/Users/simon/work/personal/skill-study-private/concise-writing/baseline-suite-20261018/subjects/20261018T171023800Z-cw-suite-claude-agent-recommendation-candidate-fuller-8f010012-73f1-4ec4-a5c8-a6adaf78730d-1mlzkko4",
+        "inventory": {
+          "path": "/Users/simon/work/personal/skill-study-private/concise-writing/baseline-suite-20261018/subjects/20261018T171023800Z-cw-suite-claude-agent-recommendation-candidate-fuller-8f010012-73f1-4ec4-a5c8-a6adaf78730d-1mlzkko4.inventory.json",
+          "sha256": "393b7d00152fbd523f0e79ed4dafddb5a9f9e4ea287f7b8cb3a0e622752b016b",
+          "version": "1"
+        },
+        "verified": true
+      },
+      "result": {
+        "result_id": "claude-ordinary-iteration-01-agent-recommendation-candidate-fuller-2-1-assessment",
+        "record": {
+          "path": "skill-studies/concise-writing/runs/baseline-iteration-suite-01/results/20261018T171023800Z-cw-suite-claude-agent-recommendation-candidate-fuller-8f010012-73f1-4ec4-a5c8-a6adaf78730d-1mlzkko4.json",
+          "sha256": "f74d0384889aa2a31df2eb783141afd129ddc685fa988decb64298d97f01a9d0",
+          "version": "2"
+        }
+      }
+    },
+    {
+      "attempt_id": "claude-ordinary-iteration-01-agent-recommendation-control-2-1",
+      "case_id": "agent-recommendation",
+      "condition": "control",
+      "repetition": 2,
+      "attempt_number": 1,
+      "retry_of": null,
+      "manifest": {
+        "path": "skill-studies/concise-writing/runs/baseline-iteration-suite-01/preparation/manifests/claude-agent-recommendation-manifest.json",
+        "sha256": "a653bf4dfce20734af25315396158434186b7b94b1e79b6961dd4420357e238a",
+        "version": "1",
+        "git_revision": "6a89f2f76a3a03508fb05d6ce435af98ed35ea42"
+      },
+      "authorization": {
+        "artifact": {
+          "path": "skill-studies/concise-writing/protocol.md",
+          "sha256": "16cd331c975d076a94a8956a0f24edb9167f5407c9f529586aa54932d5b3750e",
+          "version": "1",
+          "git_revision": "6a89f2f76a3a03508fb05d6ce435af98ed35ea42"
+        },
+        "selector": "Batch: claude-ordinary-iteration-01; order 6"
+      },
+      "run_id": "20261018T171050827Z-cw-suite-claude-agent-recommendation-control-77572985-09a3-40cc-b7e8-541dc1c37483-14sncics",
+      "allocation": {
+        "pool": "subject",
+        "charge": 1
+      },
+      "limitations": [
+        "Exposed development case assessed by the Codex controller; cross-model review is supplemental. No causal or reliability inference from native counts."
+      ],
+      "bundle": {
+        "path": "/Users/simon/work/personal/skill-study-private/concise-writing/baseline-suite-20261018/subjects/20261018T171050827Z-cw-suite-claude-agent-recommendation-control-77572985-09a3-40cc-b7e8-541dc1c37483-14sncics",
+        "inventory": {
+          "path": "/Users/simon/work/personal/skill-study-private/concise-writing/baseline-suite-20261018/subjects/20261018T171050827Z-cw-suite-claude-agent-recommendation-control-77572985-09a3-40cc-b7e8-541dc1c37483-14sncics.inventory.json",
+          "sha256": "9a9c095382fd1e8361ba1445416c431eea03b1b2df617b3c92125f55296acb50",
+          "version": "1"
+        },
+        "verified": true
+      },
+      "result": {
+        "result_id": "claude-ordinary-iteration-01-agent-recommendation-control-2-1-assessment",
+        "record": {
+          "path": "skill-studies/concise-writing/runs/baseline-iteration-suite-01/results/20261018T171050827Z-cw-suite-claude-agent-recommendation-control-77572985-09a3-40cc-b7e8-541dc1c37483-14sncics.json",
+          "sha256": "be8c7cf5f23072092cb85360f286e43dc7733e011e4a11ae720ab8e0f5ac67d3",
+          "version": "2"
+        }
+      }
+    },
+    {
+      "attempt_id": "claude-ordinary-iteration-01-agent-recommendation-original-2-1",
+      "case_id": "agent-recommendation",
+      "condition": "original",
+      "repetition": 2,
+      "attempt_number": 1,
+      "retry_of": null,
+      "manifest": {
+        "path": "skill-studies/concise-writing/runs/baseline-iteration-suite-01/preparation/manifests/claude-agent-recommendation-manifest.json",
+        "sha256": "a653bf4dfce20734af25315396158434186b7b94b1e79b6961dd4420357e238a",
+        "version": "1",
+        "git_revision": "6a89f2f76a3a03508fb05d6ce435af98ed35ea42"
+      },
+      "authorization": {
+        "artifact": {
+          "path": "skill-studies/concise-writing/protocol.md",
+          "sha256": "16cd331c975d076a94a8956a0f24edb9167f5407c9f529586aa54932d5b3750e",
+          "version": "1",
+          "git_revision": "6a89f2f76a3a03508fb05d6ce435af98ed35ea42"
+        },
+        "selector": "Batch: claude-ordinary-iteration-01; order 7"
+      },
+      "run_id": "20261018T171123930Z-cw-suite-claude-agent-recommendation-original-c4b5d3cb-efdb-40fe-bea8-434bb96557d7-u_s1su0m",
+      "allocation": {
+        "pool": "subject",
+        "charge": 1
+      },
+      "limitations": [
+        "Exposed development case assessed by the Codex controller; cross-model review is supplemental. No causal or reliability inference from native counts."
+      ],
+      "bundle": {
+        "path": "/Users/simon/work/personal/skill-study-private/concise-writing/baseline-suite-20261018/subjects/20261018T171123930Z-cw-suite-claude-agent-recommendation-original-c4b5d3cb-efdb-40fe-bea8-434bb96557d7-u_s1su0m",
+        "inventory": {
+          "path": "/Users/simon/work/personal/skill-study-private/concise-writing/baseline-suite-20261018/subjects/20261018T171123930Z-cw-suite-claude-agent-recommendation-original-c4b5d3cb-efdb-40fe-bea8-434bb96557d7-u_s1su0m.inventory.json",
+          "sha256": "8726b600fd727768213ac5ec3d67ab7f1311ab73dc335eb92e97923da8055ea3",
+          "version": "1"
+        },
+        "verified": true
+      },
+      "result": {
+        "result_id": "claude-ordinary-iteration-01-agent-recommendation-original-2-1-assessment",
+        "record": {
+          "path": "skill-studies/concise-writing/runs/baseline-iteration-suite-01/results/20261018T171123930Z-cw-suite-claude-agent-recommendation-original-c4b5d3cb-efdb-40fe-bea8-434bb96557d7-u_s1su0m.json",
+          "sha256": "c680ed2734348caca3016350fb0e65e57e85df783bb930bb03ef25aaa191be29",
+          "version": "2"
+        }
+      }
+    },
+    {
+      "attempt_id": "claude-ordinary-iteration-01-agent-recommendation-candidate-targeted-2-1",
+      "case_id": "agent-recommendation",
+      "condition": "candidate-targeted",
+      "repetition": 2,
+      "attempt_number": 1,
+      "retry_of": null,
+      "manifest": {
+        "path": "skill-studies/concise-writing/runs/baseline-iteration-suite-01/preparation/manifests/claude-agent-recommendation-manifest.json",
+        "sha256": "a653bf4dfce20734af25315396158434186b7b94b1e79b6961dd4420357e238a",
+        "version": "1",
+        "git_revision": "6a89f2f76a3a03508fb05d6ce435af98ed35ea42"
+      },
+      "authorization": {
+        "artifact": {
+          "path": "skill-studies/concise-writing/protocol.md",
+          "sha256": "16cd331c975d076a94a8956a0f24edb9167f5407c9f529586aa54932d5b3750e",
+          "version": "1",
+          "git_revision": "6a89f2f76a3a03508fb05d6ce435af98ed35ea42"
+        },
+        "selector": "Batch: claude-ordinary-iteration-01; order 8"
+      },
+      "run_id": "20261018T171139503Z-cw-suite-claude-agent-recommendation-candidate-targeted-94d0de42-b178-46a2-8f79-1557fa2e55df-s8wu1e6e",
+      "allocation": {
+        "pool": "subject",
+        "charge": 1
+      },
+      "limitations": [
+        "Exposed development case assessed by the Codex controller; cross-model review is supplemental. No causal or reliability inference from native counts."
+      ],
+      "bundle": {
+        "path": "/Users/simon/work/personal/skill-study-private/concise-writing/baseline-suite-20261018/subjects/20261018T171139503Z-cw-suite-claude-agent-recommendation-candidate-targeted-94d0de42-b178-46a2-8f79-1557fa2e55df-s8wu1e6e",
+        "inventory": {
+          "path": "/Users/simon/work/personal/skill-study-private/concise-writing/baseline-suite-20261018/subjects/20261018T171139503Z-cw-suite-claude-agent-recommendation-candidate-targeted-94d0de42-b178-46a2-8f79-1557fa2e55df-s8wu1e6e.inventory.json",
+          "sha256": "8861938370ef1655171058a0e1c54f8ccfc1d867e30ee7312303df979fd07e4d",
+          "version": "1"
+        },
+        "verified": true
+      },
+      "result": {
+        "result_id": "claude-ordinary-iteration-01-agent-recommendation-candidate-targeted-2-1-assessment",
+        "record": {
+          "path": "skill-studies/concise-writing/runs/baseline-iteration-suite-01/results/20261018T171139503Z-cw-suite-claude-agent-recommendation-candidate-targeted-94d0de42-b178-46a2-8f79-1557fa2e55df-s8wu1e6e.json",
+          "sha256": "95379cfa79c608a1855925ecbded5b2b40519665faadd16af550d86533c8edec",
+          "version": "2"
+        }
+      }
+    },
+    {
+      "attempt_id": "claude-ordinary-iteration-01-agent-recommendation-control-3-1",
+      "case_id": "agent-recommendation",
+      "condition": "control",
+      "repetition": 3,
+      "attempt_number": 1,
+      "retry_of": null,
+      "manifest": {
+        "path": "skill-studies/concise-writing/runs/baseline-iteration-suite-01/preparation/manifests/claude-agent-recommendation-manifest.json",
+        "sha256": "a653bf4dfce20734af25315396158434186b7b94b1e79b6961dd4420357e238a",
+        "version": "1",
+        "git_revision": "6a89f2f76a3a03508fb05d6ce435af98ed35ea42"
+      },
+      "authorization": {
+        "artifact": {
+          "path": "skill-studies/concise-writing/protocol.md",
+          "sha256": "16cd331c975d076a94a8956a0f24edb9167f5407c9f529586aa54932d5b3750e",
+          "version": "1",
+          "git_revision": "6a89f2f76a3a03508fb05d6ce435af98ed35ea42"
+        },
+        "selector": "Batch: claude-ordinary-iteration-01; order 9"
+      },
+      "run_id": "20261018T171208915Z-cw-suite-claude-agent-recommendation-control-1bbc97d0-fb85-434e-a283-3debf77de42e-9q55rlub",
+      "allocation": {
+        "pool": "subject",
+        "charge": 1
+      },
+      "limitations": [
+        "Exposed development case assessed by the Codex controller; cross-model review is supplemental. No causal or reliability inference from native counts."
+      ],
+      "bundle": {
+        "path": "/Users/simon/work/personal/skill-study-private/concise-writing/baseline-suite-20261018/subjects/20261018T171208915Z-cw-suite-claude-agent-recommendation-control-1bbc97d0-fb85-434e-a283-3debf77de42e-9q55rlub",
+        "inventory": {
+          "path": "/Users/simon/work/personal/skill-study-private/concise-writing/baseline-suite-20261018/subjects/20261018T171208915Z-cw-suite-claude-agent-recommendation-control-1bbc97d0-fb85-434e-a283-3debf77de42e-9q55rlub.inventory.json",
+          "sha256": "9771598cf3a7c4ce974713386e6c824fc194fe8c0d04403b803074260719c03a",
+          "version": "1"
+        },
+        "verified": true
+      },
+      "result": {
+        "result_id": "claude-ordinary-iteration-01-agent-recommendation-control-3-1-assessment",
+        "record": {
+          "path": "skill-studies/concise-writing/runs/baseline-iteration-suite-01/results/20261018T171208915Z-cw-suite-claude-agent-recommendation-control-1bbc97d0-fb85-434e-a283-3debf77de42e-9q55rlub.json",
+          "sha256": "e3d8ef284c040f5ef0eda840d6d329de63c6ad33ada548676665a516528a59a3",
+          "version": "2"
+        }
+      }
+    },
+    {
+      "attempt_id": "claude-ordinary-iteration-01-agent-recommendation-original-3-1",
+      "case_id": "agent-recommendation",
+      "condition": "original",
+      "repetition": 3,
+      "attempt_number": 1,
+      "retry_of": null,
+      "manifest": {
+        "path": "skill-studies/concise-writing/runs/baseline-iteration-suite-01/preparation/manifests/claude-agent-recommendation-manifest.json",
+        "sha256": "a653bf4dfce20734af25315396158434186b7b94b1e79b6961dd4420357e238a",
+        "version": "1",
+        "git_revision": "6a89f2f76a3a03508fb05d6ce435af98ed35ea42"
+      },
+      "authorization": {
+        "artifact": {
+          "path": "skill-studies/concise-writing/protocol.md",
+          "sha256": "16cd331c975d076a94a8956a0f24edb9167f5407c9f529586aa54932d5b3750e",
+          "version": "1",
+          "git_revision": "6a89f2f76a3a03508fb05d6ce435af98ed35ea42"
+        },
+        "selector": "Batch: claude-ordinary-iteration-01; order 10"
+      },
+      "run_id": "20261018T171234657Z-cw-suite-claude-agent-recommendation-original-dda59c49-246c-4ddd-866f-c69a95c27fca-55yqlemj",
+      "allocation": {
+        "pool": "subject",
+        "charge": 1
+      },
+      "limitations": [
+        "Exposed development case assessed by the Codex controller; cross-model review is supplemental. No causal or reliability inference from native counts."
+      ],
+      "bundle": {
+        "path": "/Users/simon/work/personal/skill-study-private/concise-writing/baseline-suite-20261018/subjects/20261018T171234657Z-cw-suite-claude-agent-recommendation-original-dda59c49-246c-4ddd-866f-c69a95c27fca-55yqlemj",
+        "inventory": {
+          "path": "/Users/simon/work/personal/skill-study-private/concise-writing/baseline-suite-20261018/subjects/20261018T171234657Z-cw-suite-claude-agent-recommendation-original-dda59c49-246c-4ddd-866f-c69a95c27fca-55yqlemj.inventory.json",
+          "sha256": "ca5117e6cbcc14b14cfcf89f80531359f16bd49ebb0cf8659785b4db80cf56e1",
+          "version": "1"
+        },
+        "verified": true
+      },
+      "result": {
+        "result_id": "claude-ordinary-iteration-01-agent-recommendation-original-3-1-assessment",
+        "record": {
+          "path": "skill-studies/concise-writing/runs/baseline-iteration-suite-01/results/20261018T171234657Z-cw-suite-claude-agent-recommendation-original-dda59c49-246c-4ddd-866f-c69a95c27fca-55yqlemj.json",
+          "sha256": "f35cc01b192c2cad99a7ed28e46dc6aa9bedfe82316d622bdaa241669bc64659",
+          "version": "2"
+        }
+      }
+    },
+    {
+      "attempt_id": "claude-ordinary-iteration-01-agent-recommendation-candidate-targeted-3-1",
+      "case_id": "agent-recommendation",
+      "condition": "candidate-targeted",
+      "repetition": 3,
+      "attempt_number": 1,
+      "retry_of": null,
+      "manifest": {
+        "path": "skill-studies/concise-writing/runs/baseline-iteration-suite-01/preparation/manifests/claude-agent-recommendation-manifest.json",
+        "sha256": "a653bf4dfce20734af25315396158434186b7b94b1e79b6961dd4420357e238a",
+        "version": "1",
+        "git_revision": "6a89f2f76a3a03508fb05d6ce435af98ed35ea42"
+      },
+      "authorization": {
+        "artifact": {
+          "path": "skill-studies/concise-writing/protocol.md",
+          "sha256": "16cd331c975d076a94a8956a0f24edb9167f5407c9f529586aa54932d5b3750e",
+          "version": "1",
+          "git_revision": "6a89f2f76a3a03508fb05d6ce435af98ed35ea42"
+        },
+        "selector": "Batch: claude-ordinary-iteration-01; order 11"
+      },
+      "run_id": "20261018T171258899Z-cw-suite-claude-agent-recommendation-candidate-targeted-fd6164e3-99b3-48bb-aaa4-600632f73fef-du4j6iot",
+      "allocation": {
+        "pool": "subject",
+        "charge": 1
+      },
+      "limitations": [
+        "Exposed development case assessed by the Codex controller; cross-model review is supplemental. No causal or reliability inference from native counts."
+      ],
+      "bundle": {
+        "path": "/Users/simon/work/personal/skill-study-private/concise-writing/baseline-suite-20261018/subjects/20261018T171258899Z-cw-suite-claude-agent-recommendation-candidate-targeted-fd6164e3-99b3-48bb-aaa4-600632f73fef-du4j6iot",
+        "inventory": {
+          "path": "/Users/simon/work/personal/skill-study-private/concise-writing/baseline-suite-20261018/subjects/20261018T171258899Z-cw-suite-claude-agent-recommendation-candidate-targeted-fd6164e3-99b3-48bb-aaa4-600632f73fef-du4j6iot.inventory.json",
+          "sha256": "68d73271337777949dc05bee54b026b648cffb8cdc6e3b3e4012741a3010ef3a",
+          "version": "1"
+        },
+        "verified": true
+      },
+      "result": {
+        "result_id": "claude-ordinary-iteration-01-agent-recommendation-candidate-targeted-3-1-assessment",
+        "record": {
+          "path": "skill-studies/concise-writing/runs/baseline-iteration-suite-01/results/20261018T171258899Z-cw-suite-claude-agent-recommendation-candidate-targeted-fd6164e3-99b3-48bb-aaa4-600632f73fef-du4j6iot.json",
+          "sha256": "f3e243063ffc6190fd10f4fe87438c5b3078023d4f0eed6a1b1caba0f41c392d",
+          "version": "2"
+        }
+      }
+    },
+    {
+      "attempt_id": "claude-ordinary-iteration-01-agent-recommendation-candidate-fuller-3-1",
+      "case_id": "agent-recommendation",
+      "condition": "candidate-fuller",
+      "repetition": 3,
+      "attempt_number": 1,
+      "retry_of": null,
+      "manifest": {
+        "path": "skill-studies/concise-writing/runs/baseline-iteration-suite-01/preparation/manifests/claude-agent-recommendation-manifest.json",
+        "sha256": "a653bf4dfce20734af25315396158434186b7b94b1e79b6961dd4420357e238a",
+        "version": "1",
+        "git_revision": "6a89f2f76a3a03508fb05d6ce435af98ed35ea42"
+      },
+      "authorization": {
+        "artifact": {
+          "path": "skill-studies/concise-writing/protocol.md",
+          "sha256": "16cd331c975d076a94a8956a0f24edb9167f5407c9f529586aa54932d5b3750e",
+          "version": "1",
+          "git_revision": "6a89f2f76a3a03508fb05d6ce435af98ed35ea42"
+        },
+        "selector": "Batch: claude-ordinary-iteration-01; order 12"
+      },
+      "run_id": "20261018T171328373Z-cw-suite-claude-agent-recommendation-candidate-fuller-69c7c473-73c6-43f3-b4ae-dff6512d604b-csb8f3g5",
+      "allocation": {
+        "pool": "subject",
+        "charge": 1
+      },
+      "limitations": [
+        "Exposed development case assessed by the Codex controller; cross-model review is supplemental. No causal or reliability inference from native counts."
+      ],
+      "bundle": {
+        "path": "/Users/simon/work/personal/skill-study-private/concise-writing/baseline-suite-20261018/subjects/20261018T171328373Z-cw-suite-claude-agent-recommendation-candidate-fuller-69c7c473-73c6-43f3-b4ae-dff6512d604b-csb8f3g5",
+        "inventory": {
+          "path": "/Users/simon/work/personal/skill-study-private/concise-writing/baseline-suite-20261018/subjects/20261018T171328373Z-cw-suite-claude-agent-recommendation-candidate-fuller-69c7c473-73c6-43f3-b4ae-dff6512d604b-csb8f3g5.inventory.json",
+          "sha256": "f106caeddc1a859b6d976b930103f0d5293b05f2f98a840eb8b6c47825a2a6d9",
+          "version": "1"
+        },
+        "verified": true
+      },
+      "result": {
+        "result_id": "claude-ordinary-iteration-01-agent-recommendation-candidate-fuller-3-1-assessment",
+        "record": {
+          "path": "skill-studies/concise-writing/runs/baseline-iteration-suite-01/results/20261018T171328373Z-cw-suite-claude-agent-recommendation-candidate-fuller-69c7c473-73c6-43f3-b4ae-dff6512d604b-csb8f3g5.json",
+          "sha256": "1727df41df23510640bed4320d355a709b6c5a8c87009451e6ceb9eb94dd7c40",
+          "version": "2"
+        }
+      }
+    },
+    {
+      "attempt_id": "claude-ordinary-iteration-01-effective-briefing-candidate-fuller-1-1",
+      "case_id": "effective-briefing",
+      "condition": "candidate-fuller",
+      "repetition": 1,
+      "attempt_number": 1,
+      "retry_of": null,
+      "manifest": {
+        "path": "skill-studies/concise-writing/runs/baseline-iteration-suite-01/preparation/manifests/claude-effective-briefing-manifest.json",
+        "sha256": "26fe25dbc396cef5f7f8015ed874ebc3200a7a981378bd0bb86d45f026e765e8",
+        "version": "1",
+        "git_revision": "6a89f2f76a3a03508fb05d6ce435af98ed35ea42"
+      },
+      "authorization": {
+        "artifact": {
+          "path": "skill-studies/concise-writing/protocol.md",
+          "sha256": "16cd331c975d076a94a8956a0f24edb9167f5407c9f529586aa54932d5b3750e",
+          "version": "1",
+          "git_revision": "6a89f2f76a3a03508fb05d6ce435af98ed35ea42"
+        },
+        "selector": "Batch: claude-ordinary-iteration-01; order 13"
+      },
+      "run_id": "20261018T171356825Z-cw-suite-claude-effective-briefing-candidate-fuller-a3b31e39-a8e7-4c55-9ba1-4d38167e7822-qvshq55r",
+      "allocation": {
+        "pool": "subject",
+        "charge": 1
+      },
+      "limitations": [
+        "Exposed development case assessed by the Codex controller; cross-model review is supplemental. No causal or reliability inference from native counts."
+      ],
+      "bundle": {
+        "path": "/Users/simon/work/personal/skill-study-private/concise-writing/baseline-suite-20261018/subjects/20261018T171356825Z-cw-suite-claude-effective-briefing-candidate-fuller-a3b31e39-a8e7-4c55-9ba1-4d38167e7822-qvshq55r",
+        "inventory": {
+          "path": "/Users/simon/work/personal/skill-study-private/concise-writing/baseline-suite-20261018/subjects/20261018T171356825Z-cw-suite-claude-effective-briefing-candidate-fuller-a3b31e39-a8e7-4c55-9ba1-4d38167e7822-qvshq55r.inventory.json",
+          "sha256": "29ffdf9c648429f5b51b0b5908c13115510cf2f08c7a14f374c3650fc2387eaa",
+          "version": "1"
+        },
+        "verified": true
+      },
+      "result": {
+        "result_id": "claude-ordinary-iteration-01-effective-briefing-candidate-fuller-1-1-assessment",
+        "record": {
+          "path": "skill-studies/concise-writing/runs/baseline-iteration-suite-01/results/20261018T171356825Z-cw-suite-claude-effective-briefing-candidate-fuller-a3b31e39-a8e7-4c55-9ba1-4d38167e7822-qvshq55r.json",
+          "sha256": "7a6e2061cb1b7f0dd35076b52711e9c7d21f12a18e3f308f802a423d5f526c0d",
+          "version": "2"
+        }
+      }
+    },
+    {
+      "attempt_id": "claude-ordinary-iteration-01-effective-briefing-control-1-1",
+      "case_id": "effective-briefing",
+      "condition": "control",
+      "repetition": 1,
+      "attempt_number": 1,
+      "retry_of": null,
+      "manifest": {
+        "path": "skill-studies/concise-writing/runs/baseline-iteration-suite-01/preparation/manifests/claude-effective-briefing-manifest.json",
+        "sha256": "26fe25dbc396cef5f7f8015ed874ebc3200a7a981378bd0bb86d45f026e765e8",
+        "version": "1",
+        "git_revision": "6a89f2f76a3a03508fb05d6ce435af98ed35ea42"
+      },
+      "authorization": {
+        "artifact": {
+          "path": "skill-studies/concise-writing/protocol.md",
+          "sha256": "16cd331c975d076a94a8956a0f24edb9167f5407c9f529586aa54932d5b3750e",
+          "version": "1",
+          "git_revision": "6a89f2f76a3a03508fb05d6ce435af98ed35ea42"
+        },
+        "selector": "Batch: claude-ordinary-iteration-01; order 14"
+      },
+      "run_id": "20261018T171432706Z-cw-suite-claude-effective-briefing-control-143d1b6e-b974-48a0-a460-64d8ed1edbf1-qtjxqdxe",
+      "allocation": {
+        "pool": "subject",
+        "charge": 1
+      },
+      "limitations": [
+        "Exposed development case assessed by the Codex controller; cross-model review is supplemental. No causal or reliability inference from native counts."
+      ],
+      "bundle": {
+        "path": "/Users/simon/work/personal/skill-study-private/concise-writing/baseline-suite-20261018/subjects/20261018T171432706Z-cw-suite-claude-effective-briefing-control-143d1b6e-b974-48a0-a460-64d8ed1edbf1-qtjxqdxe",
+        "inventory": {
+          "path": "/Users/simon/work/personal/skill-study-private/concise-writing/baseline-suite-20261018/subjects/20261018T171432706Z-cw-suite-claude-effective-briefing-control-143d1b6e-b974-48a0-a460-64d8ed1edbf1-qtjxqdxe.inventory.json",
+          "sha256": "c687324abf68165c73ed4a905a3900c4bf35f010810bc5692601e11d71b92075",
+          "version": "1"
+        },
+        "verified": true
+      },
+      "result": {
+        "result_id": "claude-ordinary-iteration-01-effective-briefing-control-1-1-assessment",
+        "record": {
+          "path": "skill-studies/concise-writing/runs/baseline-iteration-suite-01/results/20261018T171432706Z-cw-suite-claude-effective-briefing-control-143d1b6e-b974-48a0-a460-64d8ed1edbf1-qtjxqdxe.json",
+          "sha256": "12dced07383c84b84cda90e6b88d0a1cd07c7899a0c5f86e217b33bae4e0dbf3",
+          "version": "2"
+        }
+      }
+    },
+    {
+      "attempt_id": "claude-ordinary-iteration-01-effective-briefing-original-1-1",
+      "case_id": "effective-briefing",
+      "condition": "original",
+      "repetition": 1,
+      "attempt_number": 1,
+      "retry_of": null,
+      "manifest": {
+        "path": "skill-studies/concise-writing/runs/baseline-iteration-suite-01/preparation/manifests/claude-effective-briefing-manifest.json",
+        "sha256": "26fe25dbc396cef5f7f8015ed874ebc3200a7a981378bd0bb86d45f026e765e8",
+        "version": "1",
+        "git_revision": "6a89f2f76a3a03508fb05d6ce435af98ed35ea42"
+      },
+      "authorization": {
+        "artifact": {
+          "path": "skill-studies/concise-writing/protocol.md",
+          "sha256": "16cd331c975d076a94a8956a0f24edb9167f5407c9f529586aa54932d5b3750e",
+          "version": "1",
+          "git_revision": "6a89f2f76a3a03508fb05d6ce435af98ed35ea42"
+        },
+        "selector": "Batch: claude-ordinary-iteration-01; order 15"
+      },
+      "run_id": "20261018T171459523Z-cw-suite-claude-effective-briefing-original-f8ba0612-a3b1-4389-9743-0bc9ac981f43-ssn2nujn",
+      "allocation": {
+        "pool": "subject",
+        "charge": 1
+      },
+      "limitations": [
+        "Exposed development case assessed by the Codex controller; cross-model review is supplemental. No causal or reliability inference from native counts."
+      ],
+      "bundle": {
+        "path": "/Users/simon/work/personal/skill-study-private/concise-writing/baseline-suite-20261018/subjects/20261018T171459523Z-cw-suite-claude-effective-briefing-original-f8ba0612-a3b1-4389-9743-0bc9ac981f43-ssn2nujn",
+        "inventory": {
+          "path": "/Users/simon/work/personal/skill-study-private/concise-writing/baseline-suite-20261018/subjects/20261018T171459523Z-cw-suite-claude-effective-briefing-original-f8ba0612-a3b1-4389-9743-0bc9ac981f43-ssn2nujn.inventory.json",
+          "sha256": "a72cfec7132f9e679266cc044e6d4b65d95bd3fb370f128697d9562890a4fda4",
+          "version": "1"
+        },
+        "verified": true
+      },
+      "result": {
+        "result_id": "claude-ordinary-iteration-01-effective-briefing-original-1-1-assessment",
+        "record": {
+          "path": "skill-studies/concise-writing/runs/baseline-iteration-suite-01/results/20261018T171459523Z-cw-suite-claude-effective-briefing-original-f8ba0612-a3b1-4389-9743-0bc9ac981f43-ssn2nujn.json",
+          "sha256": "f2a210fc3f10b6076ee6551fdc56af5e7ccbb6727e6f88e1ba7245795c6ca179",
+          "version": "2"
+        }
+      }
+    },
+    {
+      "attempt_id": "claude-ordinary-iteration-01-effective-briefing-candidate-targeted-1-1",
+      "case_id": "effective-briefing",
+      "condition": "candidate-targeted",
+      "repetition": 1,
+      "attempt_number": 1,
+      "retry_of": null,
+      "manifest": {
+        "path": "skill-studies/concise-writing/runs/baseline-iteration-suite-01/preparation/manifests/claude-effective-briefing-manifest.json",
+        "sha256": "26fe25dbc396cef5f7f8015ed874ebc3200a7a981378bd0bb86d45f026e765e8",
+        "version": "1",
+        "git_revision": "6a89f2f76a3a03508fb05d6ce435af98ed35ea42"
+      },
+      "authorization": {
+        "artifact": {
+          "path": "skill-studies/concise-writing/protocol.md",
+          "sha256": "16cd331c975d076a94a8956a0f24edb9167f5407c9f529586aa54932d5b3750e",
+          "version": "1",
+          "git_revision": "6a89f2f76a3a03508fb05d6ce435af98ed35ea42"
+        },
+        "selector": "Batch: claude-ordinary-iteration-01; order 16"
+      },
+      "run_id": "20261018T171539506Z-cw-suite-claude-effective-briefing-candidate-targeted-68a103d1-0f82-4c88-9db4-d0a7f5ffa9a6-a85jy3o1",
+      "allocation": {
+        "pool": "subject",
+        "charge": 1
+      },
+      "limitations": [
+        "Exposed development case assessed by the Codex controller; cross-model review is supplemental. No causal or reliability inference from native counts."
+      ],
+      "bundle": {
+        "path": "/Users/simon/work/personal/skill-study-private/concise-writing/baseline-suite-20261018/subjects/20261018T171539506Z-cw-suite-claude-effective-briefing-candidate-targeted-68a103d1-0f82-4c88-9db4-d0a7f5ffa9a6-a85jy3o1",
+        "inventory": {
+          "path": "/Users/simon/work/personal/skill-study-private/concise-writing/baseline-suite-20261018/subjects/20261018T171539506Z-cw-suite-claude-effective-briefing-candidate-targeted-68a103d1-0f82-4c88-9db4-d0a7f5ffa9a6-a85jy3o1.inventory.json",
+          "sha256": "e92aa1a9883236f238583e3d40e547407dbeb8a6eb1aa6b1c74d5ba06517bc82",
+          "version": "1"
+        },
+        "verified": true
+      },
+      "result": {
+        "result_id": "claude-ordinary-iteration-01-effective-briefing-candidate-targeted-1-1-assessment",
+        "record": {
+          "path": "skill-studies/concise-writing/runs/baseline-iteration-suite-01/results/20261018T171539506Z-cw-suite-claude-effective-briefing-candidate-targeted-68a103d1-0f82-4c88-9db4-d0a7f5ffa9a6-a85jy3o1.json",
+          "sha256": "423e352d5a27575b3330562ebe3fcd655d53211e97187d1bab80741eb235f4b0",
+          "version": "2"
+        }
+      }
+    },
+    {
+      "attempt_id": "claude-ordinary-iteration-01-effective-briefing-control-2-1",
+      "case_id": "effective-briefing",
+      "condition": "control",
+      "repetition": 2,
+      "attempt_number": 1,
+      "retry_of": null,
+      "manifest": {
+        "path": "skill-studies/concise-writing/runs/baseline-iteration-suite-01/preparation/manifests/claude-effective-briefing-manifest.json",
+        "sha256": "26fe25dbc396cef5f7f8015ed874ebc3200a7a981378bd0bb86d45f026e765e8",
+        "version": "1",
+        "git_revision": "6a89f2f76a3a03508fb05d6ce435af98ed35ea42"
+      },
+      "authorization": {
+        "artifact": {
+          "path": "skill-studies/concise-writing/protocol.md",
+          "sha256": "16cd331c975d076a94a8956a0f24edb9167f5407c9f529586aa54932d5b3750e",
+          "version": "1",
+          "git_revision": "6a89f2f76a3a03508fb05d6ce435af98ed35ea42"
+        },
+        "selector": "Batch: claude-ordinary-iteration-01; order 17"
+      },
+      "run_id": "20261018T171614011Z-cw-suite-claude-effective-briefing-control-512ee18c-8556-4648-929e-b238058d5265-nn6f29j4",
+      "allocation": {
+        "pool": "subject",
+        "charge": 1
+      },
+      "limitations": [
+        "Exposed development case assessed by the Codex controller; cross-model review is supplemental. No causal or reliability inference from native counts."
+      ],
+      "bundle": {
+        "path": "/Users/simon/work/personal/skill-study-private/concise-writing/baseline-suite-20261018/subjects/20261018T171614011Z-cw-suite-claude-effective-briefing-control-512ee18c-8556-4648-929e-b238058d5265-nn6f29j4",
+        "inventory": {
+          "path": "/Users/simon/work/personal/skill-study-private/concise-writing/baseline-suite-20261018/subjects/20261018T171614011Z-cw-suite-claude-effective-briefing-control-512ee18c-8556-4648-929e-b238058d5265-nn6f29j4.inventory.json",
+          "sha256": "05cd23490bd7597bc19f5fc1fd90ad9af2ecade9b13df09eb6f0ae81656b9514",
+          "version": "1"
+        },
+        "verified": true
+      },
+      "result": {
+        "result_id": "claude-ordinary-iteration-01-effective-briefing-control-2-1-assessment",
+        "record": {
+          "path": "skill-studies/concise-writing/runs/baseline-iteration-suite-01/results/20261018T171614011Z-cw-suite-claude-effective-briefing-control-512ee18c-8556-4648-929e-b238058d5265-nn6f29j4.json",
+          "sha256": "cb723cfe36b93c12568cdf71f40d0757f71dd08878685b60b5ecca938164bbd4",
+          "version": "2"
+        }
+      }
+    },
+    {
+      "attempt_id": "claude-ordinary-iteration-01-effective-briefing-original-2-1",
+      "case_id": "effective-briefing",
+      "condition": "original",
+      "repetition": 2,
+      "attempt_number": 1,
+      "retry_of": null,
+      "manifest": {
+        "path": "skill-studies/concise-writing/runs/baseline-iteration-suite-01/preparation/manifests/claude-effective-briefing-manifest.json",
+        "sha256": "26fe25dbc396cef5f7f8015ed874ebc3200a7a981378bd0bb86d45f026e765e8",
+        "version": "1",
+        "git_revision": "6a89f2f76a3a03508fb05d6ce435af98ed35ea42"
+      },
+      "authorization": {
+        "artifact": {
+          "path": "skill-studies/concise-writing/protocol.md",
+          "sha256": "16cd331c975d076a94a8956a0f24edb9167f5407c9f529586aa54932d5b3750e",
+          "version": "1",
+          "git_revision": "6a89f2f76a3a03508fb05d6ce435af98ed35ea42"
+        },
+        "selector": "Batch: claude-ordinary-iteration-01; order 18"
+      },
+      "run_id": "20261018T171629052Z-cw-suite-claude-effective-briefing-original-09f3e858-60d5-4074-afd0-e54ae9879860-7rmofbwv",
+      "allocation": {
+        "pool": "subject",
+        "charge": 1
+      },
+      "limitations": [
+        "Exposed development case assessed by the Codex controller; cross-model review is supplemental. No causal or reliability inference from native counts."
+      ],
+      "bundle": {
+        "path": "/Users/simon/work/personal/skill-study-private/concise-writing/baseline-suite-20261018/subjects/20261018T171629052Z-cw-suite-claude-effective-briefing-original-09f3e858-60d5-4074-afd0-e54ae9879860-7rmofbwv",
+        "inventory": {
+          "path": "/Users/simon/work/personal/skill-study-private/concise-writing/baseline-suite-20261018/subjects/20261018T171629052Z-cw-suite-claude-effective-briefing-original-09f3e858-60d5-4074-afd0-e54ae9879860-7rmofbwv.inventory.json",
+          "sha256": "c10d7da106c3ae616c6673000a57f5ad8da37b304ca2d2b46db4e494af0995b6",
+          "version": "1"
+        },
+        "verified": true
+      },
+      "result": {
+        "result_id": "claude-ordinary-iteration-01-effective-briefing-original-2-1-assessment",
+        "record": {
+          "path": "skill-studies/concise-writing/runs/baseline-iteration-suite-01/results/20261018T171629052Z-cw-suite-claude-effective-briefing-original-09f3e858-60d5-4074-afd0-e54ae9879860-7rmofbwv.json",
+          "sha256": "c4bd0b082a8e0328fe803d7aeae54c98442fd4621de8f7bd3af3489a6e96fa78",
+          "version": "2"
+        }
+      }
+    },
+    {
+      "attempt_id": "claude-ordinary-iteration-01-effective-briefing-candidate-targeted-2-1",
+      "case_id": "effective-briefing",
+      "condition": "candidate-targeted",
+      "repetition": 2,
+      "attempt_number": 1,
+      "retry_of": null,
+      "manifest": {
+        "path": "skill-studies/concise-writing/runs/baseline-iteration-suite-01/preparation/manifests/claude-effective-briefing-manifest.json",
+        "sha256": "26fe25dbc396cef5f7f8015ed874ebc3200a7a981378bd0bb86d45f026e765e8",
+        "version": "1",
+        "git_revision": "6a89f2f76a3a03508fb05d6ce435af98ed35ea42"
+      },
+      "authorization": {
+        "artifact": {
+          "path": "skill-studies/concise-writing/protocol.md",
+          "sha256": "16cd331c975d076a94a8956a0f24edb9167f5407c9f529586aa54932d5b3750e",
+          "version": "1",
+          "git_revision": "6a89f2f76a3a03508fb05d6ce435af98ed35ea42"
+        },
+        "selector": "Batch: claude-ordinary-iteration-01; order 19"
+      },
+      "run_id": "20261018T171656633Z-cw-suite-claude-effective-briefing-candidate-targeted-357cd245-3f17-4ca1-ac6a-3175c4ba2eba-g1jjexwn",
+      "allocation": {
+        "pool": "subject",
+        "charge": 1
+      },
+      "limitations": [
+        "Exposed development case assessed by the Codex controller; cross-model review is supplemental. No causal or reliability inference from native counts."
+      ],
+      "bundle": {
+        "path": "/Users/simon/work/personal/skill-study-private/concise-writing/baseline-suite-20261018/subjects/20261018T171656633Z-cw-suite-claude-effective-briefing-candidate-targeted-357cd245-3f17-4ca1-ac6a-3175c4ba2eba-g1jjexwn",
+        "inventory": {
+          "path": "/Users/simon/work/personal/skill-study-private/concise-writing/baseline-suite-20261018/subjects/20261018T171656633Z-cw-suite-claude-effective-briefing-candidate-targeted-357cd245-3f17-4ca1-ac6a-3175c4ba2eba-g1jjexwn.inventory.json",
+          "sha256": "17abb56f7e61b39cbcc434221e74e35b9c22721b096f7d2c653b53495836330c",
+          "version": "1"
+        },
+        "verified": true
+      },
+      "result": {
+        "result_id": "claude-ordinary-iteration-01-effective-briefing-candidate-targeted-2-1-assessment",
+        "record": {
+          "path": "skill-studies/concise-writing/runs/baseline-iteration-suite-01/results/20261018T171656633Z-cw-suite-claude-effective-briefing-candidate-targeted-357cd245-3f17-4ca1-ac6a-3175c4ba2eba-g1jjexwn.json",
+          "sha256": "8662f0be99246b4cef9778f1e0c36b0c785276ec570a04a9a26f26039110a35a",
+          "version": "2"
+        }
+      }
+    },
+    {
+      "attempt_id": "claude-ordinary-iteration-01-effective-briefing-candidate-fuller-2-1",
+      "case_id": "effective-briefing",
+      "condition": "candidate-fuller",
+      "repetition": 2,
+      "attempt_number": 1,
+      "retry_of": null,
+      "manifest": {
+        "path": "skill-studies/concise-writing/runs/baseline-iteration-suite-01/preparation/manifests/claude-effective-briefing-manifest.json",
+        "sha256": "26fe25dbc396cef5f7f8015ed874ebc3200a7a981378bd0bb86d45f026e765e8",
+        "version": "1",
+        "git_revision": "6a89f2f76a3a03508fb05d6ce435af98ed35ea42"
+      },
+      "authorization": {
+        "artifact": {
+          "path": "skill-studies/concise-writing/protocol.md",
+          "sha256": "16cd331c975d076a94a8956a0f24edb9167f5407c9f529586aa54932d5b3750e",
+          "version": "1",
+          "git_revision": "6a89f2f76a3a03508fb05d6ce435af98ed35ea42"
+        },
+        "selector": "Batch: claude-ordinary-iteration-01; order 20"
+      },
+      "run_id": "20261018T171732937Z-cw-suite-claude-effective-briefing-candidate-fuller-2104d2fa-ab2f-4f64-85aa-64bb20619d43-f7ez2yk0",
+      "allocation": {
+        "pool": "subject",
+        "charge": 1
+      },
+      "limitations": [
+        "Exposed development case assessed by the Codex controller; cross-model review is supplemental. No causal or reliability inference from native counts."
+      ],
+      "bundle": {
+        "path": "/Users/simon/work/personal/skill-study-private/concise-writing/baseline-suite-20261018/subjects/20261018T171732937Z-cw-suite-claude-effective-briefing-candidate-fuller-2104d2fa-ab2f-4f64-85aa-64bb20619d43-f7ez2yk0",
+        "inventory": {
+          "path": "/Users/simon/work/personal/skill-study-private/concise-writing/baseline-suite-20261018/subjects/20261018T171732937Z-cw-suite-claude-effective-briefing-candidate-fuller-2104d2fa-ab2f-4f64-85aa-64bb20619d43-f7ez2yk0.inventory.json",
+          "sha256": "1a13931269276065d80984e072ced7f4c2c83112f33236868433e32a1282cec0",
+          "version": "1"
+        },
+        "verified": true
+      },
+      "result": {
+        "result_id": "claude-ordinary-iteration-01-effective-briefing-candidate-fuller-2-1-assessment",
+        "record": {
+          "path": "skill-studies/concise-writing/runs/baseline-iteration-suite-01/results/20261018T171732937Z-cw-suite-claude-effective-briefing-candidate-fuller-2104d2fa-ab2f-4f64-85aa-64bb20619d43-f7ez2yk0.json",
+          "sha256": "ec663cc5ec86c03e6e76b41bc92b2627d5af5197d040982e6ab2756451e85a70",
+          "version": "2"
+        }
+      }
+    },
+    {
+      "attempt_id": "claude-ordinary-iteration-01-effective-briefing-original-3-1",
+      "case_id": "effective-briefing",
+      "condition": "original",
+      "repetition": 3,
+      "attempt_number": 1,
+      "retry_of": null,
+      "manifest": {
+        "path": "skill-studies/concise-writing/runs/baseline-iteration-suite-01/preparation/manifests/claude-effective-briefing-manifest.json",
+        "sha256": "26fe25dbc396cef5f7f8015ed874ebc3200a7a981378bd0bb86d45f026e765e8",
+        "version": "1",
+        "git_revision": "6a89f2f76a3a03508fb05d6ce435af98ed35ea42"
+      },
+      "authorization": {
+        "artifact": {
+          "path": "skill-studies/concise-writing/protocol.md",
+          "sha256": "16cd331c975d076a94a8956a0f24edb9167f5407c9f529586aa54932d5b3750e",
+          "version": "1",
+          "git_revision": "6a89f2f76a3a03508fb05d6ce435af98ed35ea42"
+        },
+        "selector": "Batch: claude-ordinary-iteration-01; order 21"
+      },
+      "run_id": "20261018T171800579Z-cw-suite-claude-effective-briefing-original-e6459b6a-316c-4345-9ba6-8477232caa1e-f3tqxken",
+      "allocation": {
+        "pool": "subject",
+        "charge": 1
+      },
+      "limitations": [
+        "Exposed development case assessed by the Codex controller; cross-model review is supplemental. No causal or reliability inference from native counts."
+      ],
+      "bundle": {
+        "path": "/Users/simon/work/personal/skill-study-private/concise-writing/baseline-suite-20261018/subjects/20261018T171800579Z-cw-suite-claude-effective-briefing-original-e6459b6a-316c-4345-9ba6-8477232caa1e-f3tqxken",
+        "inventory": {
+          "path": "/Users/simon/work/personal/skill-study-private/concise-writing/baseline-suite-20261018/subjects/20261018T171800579Z-cw-suite-claude-effective-briefing-original-e6459b6a-316c-4345-9ba6-8477232caa1e-f3tqxken.inventory.json",
+          "sha256": "77a914e1c99cfc8ac0fa02445cda086cdcab57e96f948fca2a9697a9236e3cba",
+          "version": "1"
+        },
+        "verified": true
+      },
+      "result": {
+        "result_id": "claude-ordinary-iteration-01-effective-briefing-original-3-1-assessment",
+        "record": {
+          "path": "skill-studies/concise-writing/runs/baseline-iteration-suite-01/results/20261018T171800579Z-cw-suite-claude-effective-briefing-original-e6459b6a-316c-4345-9ba6-8477232caa1e-f3tqxken.json",
+          "sha256": "334b37c867f0ab7893fb62bcdbf81e6fd487d2532de9352dc65721a0cefa2d71",
+          "version": "2"
+        }
+      }
+    },
+    {
+      "attempt_id": "claude-ordinary-iteration-01-effective-briefing-candidate-targeted-3-1",
+      "case_id": "effective-briefing",
+      "condition": "candidate-targeted",
+      "repetition": 3,
+      "attempt_number": 1,
+      "retry_of": null,
+      "manifest": {
+        "path": "skill-studies/concise-writing/runs/baseline-iteration-suite-01/preparation/manifests/claude-effective-briefing-manifest.json",
+        "sha256": "26fe25dbc396cef5f7f8015ed874ebc3200a7a981378bd0bb86d45f026e765e8",
+        "version": "1",
+        "git_revision": "6a89f2f76a3a03508fb05d6ce435af98ed35ea42"
+      },
+      "authorization": {
+        "artifact": {
+          "path": "skill-studies/concise-writing/protocol.md",
+          "sha256": "16cd331c975d076a94a8956a0f24edb9167f5407c9f529586aa54932d5b3750e",
+          "version": "1",
+          "git_revision": "6a89f2f76a3a03508fb05d6ce435af98ed35ea42"
+        },
+        "selector": "Batch: claude-ordinary-iteration-01; order 22"
+      },
+      "run_id": "20261018T171840613Z-cw-suite-claude-effective-briefing-candidate-targeted-5db0b9f8-d678-4f5d-b01d-f5e44598753c-vz71rbvc",
+      "allocation": {
+        "pool": "subject",
+        "charge": 1
+      },
+      "limitations": [
+        "Exposed development case assessed by the Codex controller; cross-model review is supplemental. No causal or reliability inference from native counts."
+      ],
+      "bundle": {
+        "path": "/Users/simon/work/personal/skill-study-private/concise-writing/baseline-suite-20261018/subjects/20261018T171840613Z-cw-suite-claude-effective-briefing-candidate-targeted-5db0b9f8-d678-4f5d-b01d-f5e44598753c-vz71rbvc",
+        "inventory": {
+          "path": "/Users/simon/work/personal/skill-study-private/concise-writing/baseline-suite-20261018/subjects/20261018T171840613Z-cw-suite-claude-effective-briefing-candidate-targeted-5db0b9f8-d678-4f5d-b01d-f5e44598753c-vz71rbvc.inventory.json",
+          "sha256": "ce9f16e4152b78aa11918f9a70134525b3a8a4cc6d1b62e5baf638f53bfb3330",
+          "version": "1"
+        },
+        "verified": true
+      },
+      "result": {
+        "result_id": "claude-ordinary-iteration-01-effective-briefing-candidate-targeted-3-1-assessment",
+        "record": {
+          "path": "skill-studies/concise-writing/runs/baseline-iteration-suite-01/results/20261018T171840613Z-cw-suite-claude-effective-briefing-candidate-targeted-5db0b9f8-d678-4f5d-b01d-f5e44598753c-vz71rbvc.json",
+          "sha256": "b9e29e1caf48598fe0ac4b3b3da3bf0105ff41f957bc40f162b1a7e8a216f169",
+          "version": "2"
+        }
+      }
+    },
+    {
+      "attempt_id": "claude-ordinary-iteration-01-effective-briefing-candidate-fuller-3-1",
+      "case_id": "effective-briefing",
+      "condition": "candidate-fuller",
+      "repetition": 3,
+      "attempt_number": 1,
+      "retry_of": null,
+      "manifest": {
+        "path": "skill-studies/concise-writing/runs/baseline-iteration-suite-01/preparation/manifests/claude-effective-briefing-manifest.json",
+        "sha256": "26fe25dbc396cef5f7f8015ed874ebc3200a7a981378bd0bb86d45f026e765e8",
+        "version": "1",
+        "git_revision": "6a89f2f76a3a03508fb05d6ce435af98ed35ea42"
+      },
+      "authorization": {
+        "artifact": {
+          "path": "skill-studies/concise-writing/protocol.md",
+          "sha256": "16cd331c975d076a94a8956a0f24edb9167f5407c9f529586aa54932d5b3750e",
+          "version": "1",
+          "git_revision": "6a89f2f76a3a03508fb05d6ce435af98ed35ea42"
+        },
+        "selector": "Batch: claude-ordinary-iteration-01; order 23"
+      },
+      "run_id": "20261018T171907615Z-cw-suite-claude-effective-briefing-candidate-fuller-b1f6b88d-024e-4895-9613-b59696196d23-89wmy1x5",
+      "allocation": {
+        "pool": "subject",
+        "charge": 1
+      },
+      "limitations": [
+        "Exposed development case assessed by the Codex controller; cross-model review is supplemental. No causal or reliability inference from native counts."
+      ],
+      "bundle": {
+        "path": "/Users/simon/work/personal/skill-study-private/concise-writing/baseline-suite-20261018/subjects/20261018T171907615Z-cw-suite-claude-effective-briefing-candidate-fuller-b1f6b88d-024e-4895-9613-b59696196d23-89wmy1x5",
+        "inventory": {
+          "path": "/Users/simon/work/personal/skill-study-private/concise-writing/baseline-suite-20261018/subjects/20261018T171907615Z-cw-suite-claude-effective-briefing-candidate-fuller-b1f6b88d-024e-4895-9613-b59696196d23-89wmy1x5.inventory.json",
+          "sha256": "3ec228cc20e9ccb0de6c969ae91849e7fb0ef7f77fdbb4aac5d3343d9a347ef6",
+          "version": "1"
+        },
+        "verified": true
+      },
+      "result": {
+        "result_id": "claude-ordinary-iteration-01-effective-briefing-candidate-fuller-3-1-assessment",
+        "record": {
+          "path": "skill-studies/concise-writing/runs/baseline-iteration-suite-01/results/20261018T171907615Z-cw-suite-claude-effective-briefing-candidate-fuller-b1f6b88d-024e-4895-9613-b59696196d23-89wmy1x5.json",
+          "sha256": "bbf59943b9ad8a81048dd5a54c61f40690ecfe314e0e27631a8dfdf3e3329b24",
+          "version": "2"
+        }
+      }
+    },
+    {
+      "attempt_id": "claude-ordinary-iteration-01-effective-briefing-control-3-1",
+      "case_id": "effective-briefing",
+      "condition": "control",
+      "repetition": 3,
+      "attempt_number": 1,
+      "retry_of": null,
+      "manifest": {
+        "path": "skill-studies/concise-writing/runs/baseline-iteration-suite-01/preparation/manifests/claude-effective-briefing-manifest.json",
+        "sha256": "26fe25dbc396cef5f7f8015ed874ebc3200a7a981378bd0bb86d45f026e765e8",
+        "version": "1",
+        "git_revision": "6a89f2f76a3a03508fb05d6ce435af98ed35ea42"
+      },
+      "authorization": {
+        "artifact": {
+          "path": "skill-studies/concise-writing/protocol.md",
+          "sha256": "16cd331c975d076a94a8956a0f24edb9167f5407c9f529586aa54932d5b3750e",
+          "version": "1",
+          "git_revision": "6a89f2f76a3a03508fb05d6ce435af98ed35ea42"
+        },
+        "selector": "Batch: claude-ordinary-iteration-01; order 24"
+      },
+      "run_id": "20261018T171940669Z-cw-suite-claude-effective-briefing-control-65727629-c657-4fdd-9381-0a32a14e2821-aa8g6aj4",
+      "allocation": {
+        "pool": "subject",
+        "charge": 1
+      },
+      "limitations": [
+        "Exposed development case assessed by the Codex controller; cross-model review is supplemental. No causal or reliability inference from native counts."
+      ],
+      "bundle": {
+        "path": "/Users/simon/work/personal/skill-study-private/concise-writing/baseline-suite-20261018/subjects/20261018T171940669Z-cw-suite-claude-effective-briefing-control-65727629-c657-4fdd-9381-0a32a14e2821-aa8g6aj4",
+        "inventory": {
+          "path": "/Users/simon/work/personal/skill-study-private/concise-writing/baseline-suite-20261018/subjects/20261018T171940669Z-cw-suite-claude-effective-briefing-control-65727629-c657-4fdd-9381-0a32a14e2821-aa8g6aj4.inventory.json",
+          "sha256": "32d98891297e6a9e2eb527e4632c252cabb5dca4c27933a0507f06c2f483aa74",
+          "version": "1"
+        },
+        "verified": true
+      },
+      "result": {
+        "result_id": "claude-ordinary-iteration-01-effective-briefing-control-3-1-assessment",
+        "record": {
+          "path": "skill-studies/concise-writing/runs/baseline-iteration-suite-01/results/20261018T171940669Z-cw-suite-claude-effective-briefing-control-65727629-c657-4fdd-9381-0a32a14e2821-aa8g6aj4.json",
+          "sha256": "72af3ac39e6fa5c9956be64a8089c533bf286917fb8fa2e6dceb0400e095af8f",
+          "version": "2"
+        }
+      }
+    },
+    {
+      "attempt_id": "claude-ordinary-iteration-01-long-handoff-control-1-1",
+      "case_id": "long-handoff",
+      "condition": "control",
+      "repetition": 1,
+      "attempt_number": 1,
+      "retry_of": null,
+      "manifest": {
+        "path": "skill-studies/concise-writing/runs/baseline-iteration-suite-01/preparation/manifests/claude-long-handoff-manifest.json",
+        "sha256": "6de87c31803a976fcf38305c3705249132ff9d2ef5f3e58f748e053b41b71886",
+        "version": "1",
+        "git_revision": "6a89f2f76a3a03508fb05d6ce435af98ed35ea42"
+      },
+      "authorization": {
+        "artifact": {
+          "path": "skill-studies/concise-writing/protocol.md",
+          "sha256": "16cd331c975d076a94a8956a0f24edb9167f5407c9f529586aa54932d5b3750e",
+          "version": "1",
+          "git_revision": "6a89f2f76a3a03508fb05d6ce435af98ed35ea42"
+        },
+        "selector": "Batch: claude-ordinary-iteration-01; order 25"
+      },
+      "run_id": "20261018T172012924Z-cw-suite-claude-long-handoff-control-d7fa11e7-e6a0-4c6d-90ec-6b67c1499538-hi7w0kaj",
+      "allocation": {
+        "pool": "subject",
+        "charge": 1
+      },
+      "limitations": [
+        "Exposed development case assessed by the Codex controller; cross-model review is supplemental. No causal or reliability inference from native counts."
+      ],
+      "bundle": {
+        "path": "/Users/simon/work/personal/skill-study-private/concise-writing/baseline-suite-20261018/subjects/20261018T172012924Z-cw-suite-claude-long-handoff-control-d7fa11e7-e6a0-4c6d-90ec-6b67c1499538-hi7w0kaj",
+        "inventory": {
+          "path": "/Users/simon/work/personal/skill-study-private/concise-writing/baseline-suite-20261018/subjects/20261018T172012924Z-cw-suite-claude-long-handoff-control-d7fa11e7-e6a0-4c6d-90ec-6b67c1499538-hi7w0kaj.inventory.json",
+          "sha256": "add751ec4dda9f147a5063cb06cd43c6a55d08d41b073a487a191e4159456c50",
+          "version": "1"
+        },
+        "verified": true
+      },
+      "result": {
+        "result_id": "claude-ordinary-iteration-01-long-handoff-control-1-1-assessment",
+        "record": {
+          "path": "skill-studies/concise-writing/runs/baseline-iteration-suite-01/results/20261018T172012924Z-cw-suite-claude-long-handoff-control-d7fa11e7-e6a0-4c6d-90ec-6b67c1499538-hi7w0kaj.json",
+          "sha256": "74b3d98ec87b19db6f5a11da466d1d0d70d494c4b1b1234a913186060c8bd3a4",
+          "version": "2"
+        }
+      }
+    },
+    {
+      "attempt_id": "claude-ordinary-iteration-01-long-handoff-original-1-1",
+      "case_id": "long-handoff",
+      "condition": "original",
+      "repetition": 1,
+      "attempt_number": 1,
+      "retry_of": null,
+      "manifest": {
+        "path": "skill-studies/concise-writing/runs/baseline-iteration-suite-01/preparation/manifests/claude-long-handoff-manifest.json",
+        "sha256": "6de87c31803a976fcf38305c3705249132ff9d2ef5f3e58f748e053b41b71886",
+        "version": "1",
+        "git_revision": "6a89f2f76a3a03508fb05d6ce435af98ed35ea42"
+      },
+      "authorization": {
+        "artifact": {
+          "path": "skill-studies/concise-writing/protocol.md",
+          "sha256": "16cd331c975d076a94a8956a0f24edb9167f5407c9f529586aa54932d5b3750e",
+          "version": "1",
+          "git_revision": "6a89f2f76a3a03508fb05d6ce435af98ed35ea42"
+        },
+        "selector": "Batch: claude-ordinary-iteration-01; order 26"
+      },
+      "run_id": "20261018T172055104Z-cw-suite-claude-long-handoff-original-dacc68e3-f50d-400d-a456-f88090690699-9n_fsxmq",
+      "allocation": {
+        "pool": "subject",
+        "charge": 1
+      },
+      "limitations": [
+        "Exposed development case assessed by the Codex controller; cross-model review is supplemental. No causal or reliability inference from native counts."
+      ],
+      "bundle": {
+        "path": "/Users/simon/work/personal/skill-study-private/concise-writing/baseline-suite-20261018/subjects/20261018T172055104Z-cw-suite-claude-long-handoff-original-dacc68e3-f50d-400d-a456-f88090690699-9n_fsxmq",
+        "inventory": {
+          "path": "/Users/simon/work/personal/skill-study-private/concise-writing/baseline-suite-20261018/subjects/20261018T172055104Z-cw-suite-claude-long-handoff-original-dacc68e3-f50d-400d-a456-f88090690699-9n_fsxmq.inventory.json",
+          "sha256": "a7fdd3aff6f7d3408a80c1de61324cfd0678fa6427f1b8ff3d266b2d170994b5",
+          "version": "1"
+        },
+        "verified": true
+      },
+      "result": {
+        "result_id": "claude-ordinary-iteration-01-long-handoff-original-1-1-assessment",
+        "record": {
+          "path": "skill-studies/concise-writing/runs/baseline-iteration-suite-01/results/20261018T172055104Z-cw-suite-claude-long-handoff-original-dacc68e3-f50d-400d-a456-f88090690699-9n_fsxmq.json",
+          "sha256": "68563aed8b10b31eb2036ef4c5c043aab752842d22ff530033dd00842893bd21",
+          "version": "2"
+        }
+      }
+    },
+    {
+      "attempt_id": "claude-ordinary-iteration-01-long-handoff-candidate-targeted-1-1",
+      "case_id": "long-handoff",
+      "condition": "candidate-targeted",
+      "repetition": 1,
+      "attempt_number": 1,
+      "retry_of": null,
+      "manifest": {
+        "path": "skill-studies/concise-writing/runs/baseline-iteration-suite-01/preparation/manifests/claude-long-handoff-manifest.json",
+        "sha256": "6de87c31803a976fcf38305c3705249132ff9d2ef5f3e58f748e053b41b71886",
+        "version": "1",
+        "git_revision": "6a89f2f76a3a03508fb05d6ce435af98ed35ea42"
+      },
+      "authorization": {
+        "artifact": {
+          "path": "skill-studies/concise-writing/protocol.md",
+          "sha256": "16cd331c975d076a94a8956a0f24edb9167f5407c9f529586aa54932d5b3750e",
+          "version": "1",
+          "git_revision": "6a89f2f76a3a03508fb05d6ce435af98ed35ea42"
+        },
+        "selector": "Batch: claude-ordinary-iteration-01; order 27"
+      },
+      "run_id": "20261018T172129417Z-cw-suite-claude-long-handoff-candidate-targeted-19a6fc94-ee00-48e0-90f4-9f6aef0ef35b-642zjke4",
+      "allocation": {
+        "pool": "subject",
+        "charge": 1
+      },
+      "limitations": [
+        "Exposed development case assessed by the Codex controller; cross-model review is supplemental. No causal or reliability inference from native counts."
+      ],
+      "bundle": {
+        "path": "/Users/simon/work/personal/skill-study-private/concise-writing/baseline-suite-20261018/subjects/20261018T172129417Z-cw-suite-claude-long-handoff-candidate-targeted-19a6fc94-ee00-48e0-90f4-9f6aef0ef35b-642zjke4",
+        "inventory": {
+          "path": "/Users/simon/work/personal/skill-study-private/concise-writing/baseline-suite-20261018/subjects/20261018T172129417Z-cw-suite-claude-long-handoff-candidate-targeted-19a6fc94-ee00-48e0-90f4-9f6aef0ef35b-642zjke4.inventory.json",
+          "sha256": "47801a2aa2225a33145a75d01780637602d538d15620008a6de4322046b12c91",
+          "version": "1"
+        },
+        "verified": true
+      },
+      "result": {
+        "result_id": "claude-ordinary-iteration-01-long-handoff-candidate-targeted-1-1-assessment",
+        "record": {
+          "path": "skill-studies/concise-writing/runs/baseline-iteration-suite-01/results/20261018T172129417Z-cw-suite-claude-long-handoff-candidate-targeted-19a6fc94-ee00-48e0-90f4-9f6aef0ef35b-642zjke4.json",
+          "sha256": "49eb2b03838f3e4c450eee2ca152ccd0f2570e0558cf4d25096d99f1c049421f",
+          "version": "2"
+        }
+      }
+    },
+    {
+      "attempt_id": "claude-ordinary-iteration-01-long-handoff-candidate-fuller-1-1",
+      "case_id": "long-handoff",
+      "condition": "candidate-fuller",
+      "repetition": 1,
+      "attempt_number": 1,
+      "retry_of": null,
+      "manifest": {
+        "path": "skill-studies/concise-writing/runs/baseline-iteration-suite-01/preparation/manifests/claude-long-handoff-manifest.json",
+        "sha256": "6de87c31803a976fcf38305c3705249132ff9d2ef5f3e58f748e053b41b71886",
+        "version": "1",
+        "git_revision": "6a89f2f76a3a03508fb05d6ce435af98ed35ea42"
+      },
+      "authorization": {
+        "artifact": {
+          "path": "skill-studies/concise-writing/protocol.md",
+          "sha256": "16cd331c975d076a94a8956a0f24edb9167f5407c9f529586aa54932d5b3750e",
+          "version": "1",
+          "git_revision": "6a89f2f76a3a03508fb05d6ce435af98ed35ea42"
+        },
+        "selector": "Batch: claude-ordinary-iteration-01; order 28"
+      },
+      "run_id": "20261018T172222056Z-cw-suite-claude-long-handoff-candidate-fuller-6aee9779-70db-4b2c-8d79-872f0311cc49-6jelw0ve",
+      "allocation": {
+        "pool": "subject",
+        "charge": 1
+      },
+      "limitations": [
+        "Exposed development case assessed by the Codex controller; cross-model review is supplemental. No causal or reliability inference from native counts."
+      ],
+      "bundle": {
+        "path": "/Users/simon/work/personal/skill-study-private/concise-writing/baseline-suite-20261018/subjects/20261018T172222056Z-cw-suite-claude-long-handoff-candidate-fuller-6aee9779-70db-4b2c-8d79-872f0311cc49-6jelw0ve",
+        "inventory": {
+          "path": "/Users/simon/work/personal/skill-study-private/concise-writing/baseline-suite-20261018/subjects/20261018T172222056Z-cw-suite-claude-long-handoff-candidate-fuller-6aee9779-70db-4b2c-8d79-872f0311cc49-6jelw0ve.inventory.json",
+          "sha256": "8b0ca674a87c5f7c83c849d16cf44b615efe499bd1008786c1e4b054d7c164d2",
+          "version": "1"
+        },
+        "verified": true
+      },
+      "result": {
+        "result_id": "claude-ordinary-iteration-01-long-handoff-candidate-fuller-1-1-assessment",
+        "record": {
+          "path": "skill-studies/concise-writing/runs/baseline-iteration-suite-01/results/20261018T172222056Z-cw-suite-claude-long-handoff-candidate-fuller-6aee9779-70db-4b2c-8d79-872f0311cc49-6jelw0ve.json",
+          "sha256": "a5e6d9e8085d9cde69dd6904432b1ceb03e6a93200acf3c2b0568e280455b219",
+          "version": "2"
+        }
+      }
+    },
+    {
+      "attempt_id": "claude-ordinary-iteration-01-long-handoff-original-2-1",
+      "case_id": "long-handoff",
+      "condition": "original",
+      "repetition": 2,
+      "attempt_number": 1,
+      "retry_of": null,
+      "manifest": {
+        "path": "skill-studies/concise-writing/runs/baseline-iteration-suite-01/preparation/manifests/claude-long-handoff-manifest.json",
+        "sha256": "6de87c31803a976fcf38305c3705249132ff9d2ef5f3e58f748e053b41b71886",
+        "version": "1",
+        "git_revision": "6a89f2f76a3a03508fb05d6ce435af98ed35ea42"
+      },
+      "authorization": {
+        "artifact": {
+          "path": "skill-studies/concise-writing/protocol.md",
+          "sha256": "16cd331c975d076a94a8956a0f24edb9167f5407c9f529586aa54932d5b3750e",
+          "version": "1",
+          "git_revision": "6a89f2f76a3a03508fb05d6ce435af98ed35ea42"
+        },
+        "selector": "Batch: claude-ordinary-iteration-01; order 29"
+      },
+      "run_id": "20261018T172307116Z-cw-suite-claude-long-handoff-original-0f10c220-f908-4fb5-9613-cf823b4ecfd0-5ihturry",
+      "allocation": {
+        "pool": "subject",
+        "charge": 1
+      },
+      "limitations": [
+        "Exposed development case assessed by the Codex controller; cross-model review is supplemental. No causal or reliability inference from native counts."
+      ],
+      "bundle": {
+        "path": "/Users/simon/work/personal/skill-study-private/concise-writing/baseline-suite-20261018/subjects/20261018T172307116Z-cw-suite-claude-long-handoff-original-0f10c220-f908-4fb5-9613-cf823b4ecfd0-5ihturry",
+        "inventory": {
+          "path": "/Users/simon/work/personal/skill-study-private/concise-writing/baseline-suite-20261018/subjects/20261018T172307116Z-cw-suite-claude-long-handoff-original-0f10c220-f908-4fb5-9613-cf823b4ecfd0-5ihturry.inventory.json",
+          "sha256": "086b76b6f7e6116bae7f02673b3284978158f29a6b0000eabd0c53100d8c463b",
+          "version": "1"
+        },
+        "verified": true
+      },
+      "result": {
+        "result_id": "claude-ordinary-iteration-01-long-handoff-original-2-1-assessment",
+        "record": {
+          "path": "skill-studies/concise-writing/runs/baseline-iteration-suite-01/results/20261018T172307116Z-cw-suite-claude-long-handoff-original-0f10c220-f908-4fb5-9613-cf823b4ecfd0-5ihturry.json",
+          "sha256": "174bd2fcb8f81520bf913315f41fd815cb998c7936b0f1b64b7c092ad92e362c",
+          "version": "2"
+        }
+      }
+    },
+    {
+      "attempt_id": "claude-ordinary-iteration-01-long-handoff-candidate-targeted-2-1",
+      "case_id": "long-handoff",
+      "condition": "candidate-targeted",
+      "repetition": 2,
+      "attempt_number": 1,
+      "retry_of": null,
+      "manifest": {
+        "path": "skill-studies/concise-writing/runs/baseline-iteration-suite-01/preparation/manifests/claude-long-handoff-manifest.json",
+        "sha256": "6de87c31803a976fcf38305c3705249132ff9d2ef5f3e58f748e053b41b71886",
+        "version": "1",
+        "git_revision": "6a89f2f76a3a03508fb05d6ce435af98ed35ea42"
+      },
+      "authorization": {
+        "artifact": {
+          "path": "skill-studies/concise-writing/protocol.md",
+          "sha256": "16cd331c975d076a94a8956a0f24edb9167f5407c9f529586aa54932d5b3750e",
+          "version": "1",
+          "git_revision": "6a89f2f76a3a03508fb05d6ce435af98ed35ea42"
+        },
+        "selector": "Batch: claude-ordinary-iteration-01; order 30"
+      },
+      "run_id": "20261018T172431994Z-cw-suite-claude-long-handoff-candidate-targeted-d3e984ec-982a-4060-b1d1-256002e40f90-kdp_vw9v",
+      "allocation": {
+        "pool": "subject",
+        "charge": 1
+      },
+      "limitations": [
+        "Exposed development case assessed by the Codex controller; cross-model review is supplemental. No causal or reliability inference from native counts."
+      ],
+      "bundle": {
+        "path": "/Users/simon/work/personal/skill-study-private/concise-writing/baseline-suite-20261018/subjects/20261018T172431994Z-cw-suite-claude-long-handoff-candidate-targeted-d3e984ec-982a-4060-b1d1-256002e40f90-kdp_vw9v",
+        "inventory": {
+          "path": "/Users/simon/work/personal/skill-study-private/concise-writing/baseline-suite-20261018/subjects/20261018T172431994Z-cw-suite-claude-long-handoff-candidate-targeted-d3e984ec-982a-4060-b1d1-256002e40f90-kdp_vw9v.inventory.json",
+          "sha256": "ef7bf3eade8d42746b9d0089dce6e0c1b827f16293756fb05bcd28d3239c3cda",
+          "version": "1"
+        },
+        "verified": true
+      },
+      "result": {
+        "result_id": "claude-ordinary-iteration-01-long-handoff-candidate-targeted-2-1-assessment",
+        "record": {
+          "path": "skill-studies/concise-writing/runs/baseline-iteration-suite-01/results/20261018T172431994Z-cw-suite-claude-long-handoff-candidate-targeted-d3e984ec-982a-4060-b1d1-256002e40f90-kdp_vw9v.json",
+          "sha256": "bf89edcf10b90744af710b6ee625464f419c92a208550e0c7c8582ed9993108a",
+          "version": "2"
+        }
+      }
+    },
+    {
+      "attempt_id": "claude-ordinary-iteration-01-long-handoff-candidate-fuller-2-1",
+      "case_id": "long-handoff",
+      "condition": "candidate-fuller",
+      "repetition": 2,
+      "attempt_number": 1,
+      "retry_of": null,
+      "manifest": {
+        "path": "skill-studies/concise-writing/runs/baseline-iteration-suite-01/preparation/manifests/claude-long-handoff-manifest.json",
+        "sha256": "6de87c31803a976fcf38305c3705249132ff9d2ef5f3e58f748e053b41b71886",
+        "version": "1",
+        "git_revision": "6a89f2f76a3a03508fb05d6ce435af98ed35ea42"
+      },
+      "authorization": {
+        "artifact": {
+          "path": "skill-studies/concise-writing/protocol.md",
+          "sha256": "16cd331c975d076a94a8956a0f24edb9167f5407c9f529586aa54932d5b3750e",
+          "version": "1",
+          "git_revision": "6a89f2f76a3a03508fb05d6ce435af98ed35ea42"
+        },
+        "selector": "Batch: claude-ordinary-iteration-01; order 31"
+      },
+      "run_id": "20261018T172517864Z-cw-suite-claude-long-handoff-candidate-fuller-6acedaeb-8fcf-420b-9630-d077f55e57c4-hth4894y",
+      "allocation": {
+        "pool": "subject",
+        "charge": 1
+      },
+      "limitations": [
+        "Exposed development case assessed by the Codex controller; cross-model review is supplemental. No causal or reliability inference from native counts."
+      ],
+      "bundle": {
+        "path": "/Users/simon/work/personal/skill-study-private/concise-writing/baseline-suite-20261018/subjects/20261018T172517864Z-cw-suite-claude-long-handoff-candidate-fuller-6acedaeb-8fcf-420b-9630-d077f55e57c4-hth4894y",
+        "inventory": {
+          "path": "/Users/simon/work/personal/skill-study-private/concise-writing/baseline-suite-20261018/subjects/20261018T172517864Z-cw-suite-claude-long-handoff-candidate-fuller-6acedaeb-8fcf-420b-9630-d077f55e57c4-hth4894y.inventory.json",
+          "sha256": "b22d6ec6858b730cc91c58d31b30659d85e5f5cbd7387d2ca141a8f8363b626f",
+          "version": "1"
+        },
+        "verified": true
+      },
+      "result": {
+        "result_id": "claude-ordinary-iteration-01-long-handoff-candidate-fuller-2-1-assessment",
+        "record": {
+          "path": "skill-studies/concise-writing/runs/baseline-iteration-suite-01/results/20261018T172517864Z-cw-suite-claude-long-handoff-candidate-fuller-6acedaeb-8fcf-420b-9630-d077f55e57c4-hth4894y.json",
+          "sha256": "ede3d8a68f8f5dc238a26fd5efe6ca072c63a6bb3612ed5e972463648e99d61a",
+          "version": "2"
+        }
+      }
+    },
+    {
+      "attempt_id": "claude-ordinary-iteration-01-long-handoff-control-2-1",
+      "case_id": "long-handoff",
+      "condition": "control",
+      "repetition": 2,
+      "attempt_number": 1,
+      "retry_of": null,
+      "manifest": {
+        "path": "skill-studies/concise-writing/runs/baseline-iteration-suite-01/preparation/manifests/claude-long-handoff-manifest.json",
+        "sha256": "6de87c31803a976fcf38305c3705249132ff9d2ef5f3e58f748e053b41b71886",
+        "version": "1",
+        "git_revision": "6a89f2f76a3a03508fb05d6ce435af98ed35ea42"
+      },
+      "authorization": {
+        "artifact": {
+          "path": "skill-studies/concise-writing/protocol.md",
+          "sha256": "16cd331c975d076a94a8956a0f24edb9167f5407c9f529586aa54932d5b3750e",
+          "version": "1",
+          "git_revision": "6a89f2f76a3a03508fb05d6ce435af98ed35ea42"
+        },
+        "selector": "Batch: claude-ordinary-iteration-01; order 32"
+      },
+      "run_id": "20261018T172556415Z-cw-suite-claude-long-handoff-control-20b36ab1-10c4-4e1d-a01b-045cd279f26e-kqh1ov2a",
+      "allocation": {
+        "pool": "subject",
+        "charge": 1
+      },
+      "limitations": [
+        "Exposed development case assessed by the Codex controller; cross-model review is supplemental. No causal or reliability inference from native counts."
+      ],
+      "bundle": {
+        "path": "/Users/simon/work/personal/skill-study-private/concise-writing/baseline-suite-20261018/subjects/20261018T172556415Z-cw-suite-claude-long-handoff-control-20b36ab1-10c4-4e1d-a01b-045cd279f26e-kqh1ov2a",
+        "inventory": {
+          "path": "/Users/simon/work/personal/skill-study-private/concise-writing/baseline-suite-20261018/subjects/20261018T172556415Z-cw-suite-claude-long-handoff-control-20b36ab1-10c4-4e1d-a01b-045cd279f26e-kqh1ov2a.inventory.json",
+          "sha256": "cd9efbad932cf3a54b4a39c1ae1cfcb41c70cab0558d274c67b532ca3c4ff2e2",
+          "version": "1"
+        },
+        "verified": true
+      },
+      "result": {
+        "result_id": "claude-ordinary-iteration-01-long-handoff-control-2-1-assessment",
+        "record": {
+          "path": "skill-studies/concise-writing/runs/baseline-iteration-suite-01/results/20261018T172556415Z-cw-suite-claude-long-handoff-control-20b36ab1-10c4-4e1d-a01b-045cd279f26e-kqh1ov2a.json",
+          "sha256": "28b8738795afc0b1786f4137a7be0b7ed9cfe7ad10067deee81e191438adfe29",
+          "version": "2"
+        }
+      }
+    },
+    {
+      "attempt_id": "claude-ordinary-iteration-01-long-handoff-candidate-targeted-3-1",
+      "case_id": "long-handoff",
+      "condition": "candidate-targeted",
+      "repetition": 3,
+      "attempt_number": 1,
+      "retry_of": null,
+      "manifest": {
+        "path": "skill-studies/concise-writing/runs/baseline-iteration-suite-01/preparation/manifests/claude-long-handoff-manifest.json",
+        "sha256": "6de87c31803a976fcf38305c3705249132ff9d2ef5f3e58f748e053b41b71886",
+        "version": "1",
+        "git_revision": "6a89f2f76a3a03508fb05d6ce435af98ed35ea42"
+      },
+      "authorization": {
+        "artifact": {
+          "path": "skill-studies/concise-writing/protocol.md",
+          "sha256": "16cd331c975d076a94a8956a0f24edb9167f5407c9f529586aa54932d5b3750e",
+          "version": "1",
+          "git_revision": "6a89f2f76a3a03508fb05d6ce435af98ed35ea42"
+        },
+        "selector": "Batch: claude-ordinary-iteration-01; order 33"
+      },
+      "run_id": "20261018T172640911Z-cw-suite-claude-long-handoff-candidate-targeted-809b7a45-8636-4dc4-84e4-870c2285d955-q5cy6ze4",
+      "allocation": {
+        "pool": "subject",
+        "charge": 1
+      },
+      "limitations": [
+        "Exposed development case assessed by the Codex controller; cross-model review is supplemental. No causal or reliability inference from native counts."
+      ],
+      "bundle": {
+        "path": "/Users/simon/work/personal/skill-study-private/concise-writing/baseline-suite-20261018/subjects/20261018T172640911Z-cw-suite-claude-long-handoff-candidate-targeted-809b7a45-8636-4dc4-84e4-870c2285d955-q5cy6ze4",
+        "inventory": {
+          "path": "/Users/simon/work/personal/skill-study-private/concise-writing/baseline-suite-20261018/subjects/20261018T172640911Z-cw-suite-claude-long-handoff-candidate-targeted-809b7a45-8636-4dc4-84e4-870c2285d955-q5cy6ze4.inventory.json",
+          "sha256": "fe488def64b05b5987390e9327298fefa16d390b0c53969dba5e5bd72342da13",
+          "version": "1"
+        },
+        "verified": true
+      },
+      "result": {
+        "result_id": "claude-ordinary-iteration-01-long-handoff-candidate-targeted-3-1-assessment",
+        "record": {
+          "path": "skill-studies/concise-writing/runs/baseline-iteration-suite-01/results/20261018T172640911Z-cw-suite-claude-long-handoff-candidate-targeted-809b7a45-8636-4dc4-84e4-870c2285d955-q5cy6ze4.json",
+          "sha256": "f084c0368c5108401279f01e0b3b7519b823a419fb65edfc2557c2c37bffae5a",
+          "version": "2"
+        }
+      }
+    },
+    {
+      "attempt_id": "claude-ordinary-iteration-01-long-handoff-candidate-fuller-3-1",
+      "case_id": "long-handoff",
+      "condition": "candidate-fuller",
+      "repetition": 3,
+      "attempt_number": 1,
+      "retry_of": null,
+      "manifest": {
+        "path": "skill-studies/concise-writing/runs/baseline-iteration-suite-01/preparation/manifests/claude-long-handoff-manifest.json",
+        "sha256": "6de87c31803a976fcf38305c3705249132ff9d2ef5f3e58f748e053b41b71886",
+        "version": "1",
+        "git_revision": "6a89f2f76a3a03508fb05d6ce435af98ed35ea42"
+      },
+      "authorization": {
+        "artifact": {
+          "path": "skill-studies/concise-writing/protocol.md",
+          "sha256": "16cd331c975d076a94a8956a0f24edb9167f5407c9f529586aa54932d5b3750e",
+          "version": "1",
+          "git_revision": "6a89f2f76a3a03508fb05d6ce435af98ed35ea42"
+        },
+        "selector": "Batch: claude-ordinary-iteration-01; order 34"
+      },
+      "run_id": "20261018T172729963Z-cw-suite-claude-long-handoff-candidate-fuller-a4a1cef1-dd10-4f4c-aaaf-ff8d78256256-6fx1az4a",
+      "allocation": {
+        "pool": "subject",
+        "charge": 1
+      },
+      "limitations": [
+        "Exposed development case assessed by the Codex controller; cross-model review is supplemental. No causal or reliability inference from native counts."
+      ],
+      "bundle": {
+        "path": "/Users/simon/work/personal/skill-study-private/concise-writing/baseline-suite-20261018/subjects/20261018T172729963Z-cw-suite-claude-long-handoff-candidate-fuller-a4a1cef1-dd10-4f4c-aaaf-ff8d78256256-6fx1az4a",
+        "inventory": {
+          "path": "/Users/simon/work/personal/skill-study-private/concise-writing/baseline-suite-20261018/subjects/20261018T172729963Z-cw-suite-claude-long-handoff-candidate-fuller-a4a1cef1-dd10-4f4c-aaaf-ff8d78256256-6fx1az4a.inventory.json",
+          "sha256": "775c83ed2938995a676192e6572bb75338ff259ca1dc46fb6e4249d617e81c4a",
+          "version": "1"
+        },
+        "verified": true
+      },
+      "result": {
+        "result_id": "claude-ordinary-iteration-01-long-handoff-candidate-fuller-3-1-assessment",
+        "record": {
+          "path": "skill-studies/concise-writing/runs/baseline-iteration-suite-01/results/20261018T172729963Z-cw-suite-claude-long-handoff-candidate-fuller-a4a1cef1-dd10-4f4c-aaaf-ff8d78256256-6fx1az4a.json",
+          "sha256": "87b8168f877eb7c66d83a81de7b3032ab58fde0bf22ce30b7504b17e395ddb65",
+          "version": "2"
+        }
+      }
+    },
+    {
+      "attempt_id": "claude-ordinary-iteration-01-long-handoff-control-3-1",
+      "case_id": "long-handoff",
+      "condition": "control",
+      "repetition": 3,
+      "attempt_number": 1,
+      "retry_of": null,
+      "manifest": {
+        "path": "skill-studies/concise-writing/runs/baseline-iteration-suite-01/preparation/manifests/claude-long-handoff-manifest.json",
+        "sha256": "6de87c31803a976fcf38305c3705249132ff9d2ef5f3e58f748e053b41b71886",
+        "version": "1",
+        "git_revision": "6a89f2f76a3a03508fb05d6ce435af98ed35ea42"
+      },
+      "authorization": {
+        "artifact": {
+          "path": "skill-studies/concise-writing/protocol.md",
+          "sha256": "16cd331c975d076a94a8956a0f24edb9167f5407c9f529586aa54932d5b3750e",
+          "version": "1",
+          "git_revision": "6a89f2f76a3a03508fb05d6ce435af98ed35ea42"
+        },
+        "selector": "Batch: claude-ordinary-iteration-01; order 35"
+      },
+      "run_id": "20261018T172818856Z-cw-suite-claude-long-handoff-control-0cb7f6bb-a365-4f66-966e-86ee2bc0f0c9-8rqou7iq",
+      "allocation": {
+        "pool": "subject",
+        "charge": 1
+      },
+      "limitations": [
+        "Exposed development case assessed by the Codex controller; cross-model review is supplemental. No causal or reliability inference from native counts."
+      ],
+      "bundle": {
+        "path": "/Users/simon/work/personal/skill-study-private/concise-writing/baseline-suite-20261018/subjects/20261018T172818856Z-cw-suite-claude-long-handoff-control-0cb7f6bb-a365-4f66-966e-86ee2bc0f0c9-8rqou7iq",
+        "inventory": {
+          "path": "/Users/simon/work/personal/skill-study-private/concise-writing/baseline-suite-20261018/subjects/20261018T172818856Z-cw-suite-claude-long-handoff-control-0cb7f6bb-a365-4f66-966e-86ee2bc0f0c9-8rqou7iq.inventory.json",
+          "sha256": "943a42034a497b887a4244d23f081accf8871d1af3eade021fab5e0506ea80dc",
+          "version": "1"
+        },
+        "verified": true
+      },
+      "result": {
+        "result_id": "claude-ordinary-iteration-01-long-handoff-control-3-1-assessment",
+        "record": {
+          "path": "skill-studies/concise-writing/runs/baseline-iteration-suite-01/results/20261018T172818856Z-cw-suite-claude-long-handoff-control-0cb7f6bb-a365-4f66-966e-86ee2bc0f0c9-8rqou7iq.json",
+          "sha256": "8eabf96de9305714b0afc50cc6bc0f1fcdc47798a65ebd689c88a0d41b8f8736",
+          "version": "2"
+        }
+      }
+    },
+    {
+      "attempt_id": "claude-ordinary-iteration-01-long-handoff-original-3-1",
+      "case_id": "long-handoff",
+      "condition": "original",
+      "repetition": 3,
+      "attempt_number": 1,
+      "retry_of": null,
+      "manifest": {
+        "path": "skill-studies/concise-writing/runs/baseline-iteration-suite-01/preparation/manifests/claude-long-handoff-manifest.json",
+        "sha256": "6de87c31803a976fcf38305c3705249132ff9d2ef5f3e58f748e053b41b71886",
+        "version": "1",
+        "git_revision": "6a89f2f76a3a03508fb05d6ce435af98ed35ea42"
+      },
+      "authorization": {
+        "artifact": {
+          "path": "skill-studies/concise-writing/protocol.md",
+          "sha256": "16cd331c975d076a94a8956a0f24edb9167f5407c9f529586aa54932d5b3750e",
+          "version": "1",
+          "git_revision": "6a89f2f76a3a03508fb05d6ce435af98ed35ea42"
+        },
+        "selector": "Batch: claude-ordinary-iteration-01; order 36"
+      },
+      "run_id": "20261018T172904375Z-cw-suite-claude-long-handoff-original-57d31dc6-c8e8-4bad-93d8-91e38dfb632b-_l3yipf7",
+      "allocation": {
+        "pool": "subject",
+        "charge": 1
+      },
+      "limitations": [
+        "Exposed development case assessed by the Codex controller; cross-model review is supplemental. No causal or reliability inference from native counts."
+      ],
+      "bundle": {
+        "path": "/Users/simon/work/personal/skill-study-private/concise-writing/baseline-suite-20261018/subjects/20261018T172904375Z-cw-suite-claude-long-handoff-original-57d31dc6-c8e8-4bad-93d8-91e38dfb632b-_l3yipf7",
+        "inventory": {
+          "path": "/Users/simon/work/personal/skill-study-private/concise-writing/baseline-suite-20261018/subjects/20261018T172904375Z-cw-suite-claude-long-handoff-original-57d31dc6-c8e8-4bad-93d8-91e38dfb632b-_l3yipf7.inventory.json",
+          "sha256": "87527c50a061288d9c8efecf7e0a4bef248ee87c589f6b334b8c60a134002420",
+          "version": "1"
+        },
+        "verified": true
+      },
+      "result": {
+        "result_id": "claude-ordinary-iteration-01-long-handoff-original-3-1-assessment",
+        "record": {
+          "path": "skill-studies/concise-writing/runs/baseline-iteration-suite-01/results/20261018T172904375Z-cw-suite-claude-long-handoff-original-57d31dc6-c8e8-4bad-93d8-91e38dfb632b-_l3yipf7.json",
+          "sha256": "3327b40a8e4b3a9e2d1c2811a2d94271b06a709243e2c88fbbf26635c32c2757",
+          "version": "2"
+        }
+      }
     }
   ]
 }

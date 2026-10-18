@@ -1,0 +1,160 @@
+{
+  "schema_version": "2",
+  "record_kind": "execution result",
+  "result_id": "claude-ordinary-iteration-01-effective-briefing-control-2-1-assessment",
+  "assessed_at": "2026-10-18T17:30:08.558866+00:00",
+  "run_id": "20261018T171614011Z-cw-suite-claude-effective-briefing-control-512ee18c-8556-4648-929e-b238058d5265-nn6f29j4",
+  "condition": "control",
+  "assessor": {
+    "name": "Codex active session",
+    "method": "active session",
+    "model": null,
+    "session_id": null,
+    "context": "Same Codex controller authored/reviewed exposed development variants and directly judged complete outputs; no blind, held-out or independent assessor claim. Separate Opus review supplements this."
+  },
+  "manifest": {
+    "path": "skill-studies/concise-writing/runs/baseline-iteration-suite-01/preparation/manifests/claude-effective-briefing-manifest.json",
+    "sha256": "26fe25dbc396cef5f7f8015ed874ebc3200a7a981378bd0bb86d45f026e765e8",
+    "version": "1",
+    "git_revision": "6a89f2f76a3a03508fb05d6ce435af98ed35ea42"
+  },
+  "evidence": [
+    {
+      "id": "output",
+      "artifact": {
+        "path": "/Users/simon/work/personal/skill-study-private/concise-writing/baseline-suite-20261018/subjects/20261018T171614011Z-cw-suite-claude-effective-briefing-control-512ee18c-8556-4648-929e-b238058d5265-nn6f29j4/workspace/fixture/report.md",
+        "sha256": "e9cccf29e39f6ec23183d200d4835953c24bfabc6f6d6aa146a23dec87c6ea20",
+        "version": null
+      },
+      "selector": "Complete artifact"
+    },
+    {
+      "id": "trace",
+      "artifact": {
+        "path": "/Users/simon/work/personal/skill-study-private/concise-writing/baseline-suite-20261018/subjects/20261018T171614011Z-cw-suite-claude-effective-briefing-control-512ee18c-8556-4648-929e-b238058d5265-nn6f29j4/stdout.txt",
+        "sha256": "2f66aefcf6300846f11946cb0a3c018f833d9e417658e912c18ff9f66f8778c1",
+        "version": null
+      },
+      "selector": "Complete artifact"
+    },
+    {
+      "id": "mechanical",
+      "artifact": {
+        "path": "/Users/simon/work/personal/skill-study-private/concise-writing/baseline-suite-20261018/subjects/20261018T171614011Z-cw-suite-claude-effective-briefing-control-512ee18c-8556-4648-929e-b238058d5265-nn6f29j4/result.json",
+        "sha256": "a4d3547913ffdf34952122aec28faebba1a20e91112bd964f540736111f79458",
+        "version": null
+      },
+      "selector": "Complete artifact"
+    },
+    {
+      "id": "log",
+      "artifact": {
+        "path": "/Users/simon/work/personal/skill-study-private/concise-writing/baseline-suite-20261018/subjects/20261018T171614011Z-cw-suite-claude-effective-briefing-control-512ee18c-8556-4648-929e-b238058d5265-nn6f29j4/runner.log",
+        "sha256": "ecf25425b2f8028d8d70a7f475485692ee2ef86d964fba471fb9ee055679009d",
+        "version": null
+      },
+      "selector": "Complete artifact"
+    },
+    {
+      "id": "final",
+      "artifact": {
+        "path": "/Users/simon/work/personal/skill-study-private/concise-writing/baseline-suite-20261018/subjects/20261018T171614011Z-cw-suite-claude-effective-briefing-control-512ee18c-8556-4648-929e-b238058d5265-nn6f29j4/final.txt",
+        "sha256": "01cebf729c7834735b1eed7c6a2923a5128b51415e8f0f34589ceb84bd94afc4",
+        "version": null
+      },
+      "selector": "Complete artifact"
+    },
+    {
+      "id": "source-0",
+      "artifact": {
+        "path": "skill-studies/concise-writing/cases/effective-briefing/fixture/report.md",
+        "sha256": "93c23afd44aab52dfcd2bca53f3db0020a41f650d46d4c59a09595539dc72491",
+        "version": null,
+        "git_revision": "6ad549b50af54d9766d05b47ebf5cbc1ea3cddbb"
+      },
+      "selector": "Complete frozen report.md"
+    },
+    {
+      "id": "source-1",
+      "artifact": {
+        "path": "skill-studies/concise-writing/cases/effective-briefing/task.md",
+        "sha256": "fbf576b5f00e154e6ee4618285d96980b1858de992e5390a1e83cf9b03cb1796",
+        "version": null,
+        "git_revision": "6ad549b50af54d9766d05b47ebf5cbc1ea3cddbb"
+      },
+      "selector": "Complete frozen TASK.md"
+    }
+  ],
+  "setup": {
+    "status": "valid",
+    "reason": "Fixed provider/model/CLI and retained inventory verified. No CW catalog/body exposure. Protected input bytes unchanged.",
+    "evidence": [
+      "mechanical",
+      "trace",
+      "log"
+    ]
+  },
+  "criteria": [
+    {
+      "id": "F1",
+      "dimension": "functional",
+      "judgment": "met",
+      "reason": "Control B2 preserves search/timeout/support counts and uncertainty, six current/four proposed teams, >50,000untested/<20,000proposed limits, exact >5%preceding24-hour threshold and all approval/opt-in/review conditions.",
+      "consequence": "Required whole-artifact functional factor; length cannot offset failure.",
+      "evidence": [
+        "output",
+        "source-0",
+        "source-1"
+      ]
+    },
+    {
+      "id": "F2",
+      "dimension": "functional",
+      "judgment": "met",
+      "reason": "Consent/return readiness and Omar\u2019s timeout check precede Nia\u2019s invitations after Thursday approval; failure postpones for investigation before reconsideration. Seven-day review remains separate from wider/default authorization; existing participation is not revoked.",
+      "consequence": "Required whole-artifact functional factor; length cannot offset failure.",
+      "evidence": [
+        "output",
+        "source-0",
+        "source-1"
+      ]
+    },
+    {
+      "id": "F3",
+      "dimension": "functional",
+      "judgment": "met",
+      "reason": "The decision/evidence/prerequisites/follow-up sequence is clear and connected, preserving useful qualifications and action framing without imposing unnecessary reader burden.",
+      "consequence": "Required whole-artifact functional factor; length cannot offset failure.",
+      "evidence": [
+        "output",
+        "source-0",
+        "source-1"
+      ]
+    }
+  ],
+  "functional_result": "met",
+  "procedural_summary": "Fixed provider/model/CLI and retained inventory verified. No CW catalog/body exposure. Protected input bytes unchanged. O4/O5 remain unscored; native D1 is distinct from functional outcome.",
+  "observations": [
+    {
+      "dimension": "functional",
+      "description": "Complete output 229 wc-w words; supplied report.md: 279 words, TASK.md: 43 words. Counts describe length, not semantic success; comment-only counts are reported separately for N4.",
+      "consequence": "Descriptive counts only.",
+      "evidence": [
+        "output",
+        "source-0",
+        "source-1"
+      ]
+    },
+    {
+      "dimension": "functional",
+      "description": "The control retains the explicit no-evidence qualification, unlike control50.",
+      "consequence": "Qualitative comparison is separate from threshold counts.",
+      "evidence": [
+        "output",
+        "source-0",
+        "source-1"
+      ]
+    }
+  ],
+  "uncertainty": []
+}
