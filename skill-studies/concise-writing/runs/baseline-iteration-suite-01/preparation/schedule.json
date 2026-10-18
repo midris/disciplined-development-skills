@@ -1,0 +1,1447 @@
+{
+  "study_id": "concise-writing",
+  "scope": "approved remaining 144 subjects; unchanged E stratum reused separately",
+  "slots": [
+    {
+      "global_order": 1,
+      "order": 1,
+      "batch_id": "codex-ordinary-iteration-01",
+      "provider": "codex",
+      "case_id": "agent-recommendation",
+      "condition": "control",
+      "repetition": 1,
+      "config": "skill-studies/concise-writing/runs/baseline-iteration-suite-01/preparation/configs/codex-agent-recommendation-control.json"
+    },
+    {
+      "global_order": 2,
+      "order": 2,
+      "batch_id": "codex-ordinary-iteration-01",
+      "provider": "codex",
+      "case_id": "agent-recommendation",
+      "condition": "original",
+      "repetition": 1,
+      "config": "skill-studies/concise-writing/runs/baseline-iteration-suite-01/preparation/configs/codex-agent-recommendation-original.json"
+    },
+    {
+      "global_order": 3,
+      "order": 3,
+      "batch_id": "codex-ordinary-iteration-01",
+      "provider": "codex",
+      "case_id": "agent-recommendation",
+      "condition": "candidate-targeted",
+      "repetition": 1,
+      "config": "skill-studies/concise-writing/runs/baseline-iteration-suite-01/preparation/configs/codex-agent-recommendation-candidate-targeted.json"
+    },
+    {
+      "global_order": 4,
+      "order": 4,
+      "batch_id": "codex-ordinary-iteration-01",
+      "provider": "codex",
+      "case_id": "agent-recommendation",
+      "condition": "candidate-fuller",
+      "repetition": 1,
+      "config": "skill-studies/concise-writing/runs/baseline-iteration-suite-01/preparation/configs/codex-agent-recommendation-candidate-fuller.json"
+    },
+    {
+      "global_order": 5,
+      "order": 5,
+      "batch_id": "codex-ordinary-iteration-01",
+      "provider": "codex",
+      "case_id": "agent-recommendation",
+      "condition": "original",
+      "repetition": 2,
+      "config": "skill-studies/concise-writing/runs/baseline-iteration-suite-01/preparation/configs/codex-agent-recommendation-original.json"
+    },
+    {
+      "global_order": 6,
+      "order": 6,
+      "batch_id": "codex-ordinary-iteration-01",
+      "provider": "codex",
+      "case_id": "agent-recommendation",
+      "condition": "candidate-targeted",
+      "repetition": 2,
+      "config": "skill-studies/concise-writing/runs/baseline-iteration-suite-01/preparation/configs/codex-agent-recommendation-candidate-targeted.json"
+    },
+    {
+      "global_order": 7,
+      "order": 7,
+      "batch_id": "codex-ordinary-iteration-01",
+      "provider": "codex",
+      "case_id": "agent-recommendation",
+      "condition": "candidate-fuller",
+      "repetition": 2,
+      "config": "skill-studies/concise-writing/runs/baseline-iteration-suite-01/preparation/configs/codex-agent-recommendation-candidate-fuller.json"
+    },
+    {
+      "global_order": 8,
+      "order": 8,
+      "batch_id": "codex-ordinary-iteration-01",
+      "provider": "codex",
+      "case_id": "agent-recommendation",
+      "condition": "control",
+      "repetition": 2,
+      "config": "skill-studies/concise-writing/runs/baseline-iteration-suite-01/preparation/configs/codex-agent-recommendation-control.json"
+    },
+    {
+      "global_order": 9,
+      "order": 9,
+      "batch_id": "codex-ordinary-iteration-01",
+      "provider": "codex",
+      "case_id": "agent-recommendation",
+      "condition": "candidate-targeted",
+      "repetition": 3,
+      "config": "skill-studies/concise-writing/runs/baseline-iteration-suite-01/preparation/configs/codex-agent-recommendation-candidate-targeted.json"
+    },
+    {
+      "global_order": 10,
+      "order": 10,
+      "batch_id": "codex-ordinary-iteration-01",
+      "provider": "codex",
+      "case_id": "agent-recommendation",
+      "condition": "candidate-fuller",
+      "repetition": 3,
+      "config": "skill-studies/concise-writing/runs/baseline-iteration-suite-01/preparation/configs/codex-agent-recommendation-candidate-fuller.json"
+    },
+    {
+      "global_order": 11,
+      "order": 11,
+      "batch_id": "codex-ordinary-iteration-01",
+      "provider": "codex",
+      "case_id": "agent-recommendation",
+      "condition": "control",
+      "repetition": 3,
+      "config": "skill-studies/concise-writing/runs/baseline-iteration-suite-01/preparation/configs/codex-agent-recommendation-control.json"
+    },
+    {
+      "global_order": 12,
+      "order": 12,
+      "batch_id": "codex-ordinary-iteration-01",
+      "provider": "codex",
+      "case_id": "agent-recommendation",
+      "condition": "original",
+      "repetition": 3,
+      "config": "skill-studies/concise-writing/runs/baseline-iteration-suite-01/preparation/configs/codex-agent-recommendation-original.json"
+    },
+    {
+      "global_order": 13,
+      "order": 13,
+      "batch_id": "codex-ordinary-iteration-01",
+      "provider": "codex",
+      "case_id": "effective-briefing",
+      "condition": "original",
+      "repetition": 1,
+      "config": "skill-studies/concise-writing/runs/baseline-iteration-suite-01/preparation/configs/codex-effective-briefing-original.json"
+    },
+    {
+      "global_order": 14,
+      "order": 14,
+      "batch_id": "codex-ordinary-iteration-01",
+      "provider": "codex",
+      "case_id": "effective-briefing",
+      "condition": "candidate-targeted",
+      "repetition": 1,
+      "config": "skill-studies/concise-writing/runs/baseline-iteration-suite-01/preparation/configs/codex-effective-briefing-candidate-targeted.json"
+    },
+    {
+      "global_order": 15,
+      "order": 15,
+      "batch_id": "codex-ordinary-iteration-01",
+      "provider": "codex",
+      "case_id": "effective-briefing",
+      "condition": "candidate-fuller",
+      "repetition": 1,
+      "config": "skill-studies/concise-writing/runs/baseline-iteration-suite-01/preparation/configs/codex-effective-briefing-candidate-fuller.json"
+    },
+    {
+      "global_order": 16,
+      "order": 16,
+      "batch_id": "codex-ordinary-iteration-01",
+      "provider": "codex",
+      "case_id": "effective-briefing",
+      "condition": "control",
+      "repetition": 1,
+      "config": "skill-studies/concise-writing/runs/baseline-iteration-suite-01/preparation/configs/codex-effective-briefing-control.json"
+    },
+    {
+      "global_order": 17,
+      "order": 17,
+      "batch_id": "codex-ordinary-iteration-01",
+      "provider": "codex",
+      "case_id": "effective-briefing",
+      "condition": "candidate-targeted",
+      "repetition": 2,
+      "config": "skill-studies/concise-writing/runs/baseline-iteration-suite-01/preparation/configs/codex-effective-briefing-candidate-targeted.json"
+    },
+    {
+      "global_order": 18,
+      "order": 18,
+      "batch_id": "codex-ordinary-iteration-01",
+      "provider": "codex",
+      "case_id": "effective-briefing",
+      "condition": "candidate-fuller",
+      "repetition": 2,
+      "config": "skill-studies/concise-writing/runs/baseline-iteration-suite-01/preparation/configs/codex-effective-briefing-candidate-fuller.json"
+    },
+    {
+      "global_order": 19,
+      "order": 19,
+      "batch_id": "codex-ordinary-iteration-01",
+      "provider": "codex",
+      "case_id": "effective-briefing",
+      "condition": "control",
+      "repetition": 2,
+      "config": "skill-studies/concise-writing/runs/baseline-iteration-suite-01/preparation/configs/codex-effective-briefing-control.json"
+    },
+    {
+      "global_order": 20,
+      "order": 20,
+      "batch_id": "codex-ordinary-iteration-01",
+      "provider": "codex",
+      "case_id": "effective-briefing",
+      "condition": "original",
+      "repetition": 2,
+      "config": "skill-studies/concise-writing/runs/baseline-iteration-suite-01/preparation/configs/codex-effective-briefing-original.json"
+    },
+    {
+      "global_order": 21,
+      "order": 21,
+      "batch_id": "codex-ordinary-iteration-01",
+      "provider": "codex",
+      "case_id": "effective-briefing",
+      "condition": "candidate-fuller",
+      "repetition": 3,
+      "config": "skill-studies/concise-writing/runs/baseline-iteration-suite-01/preparation/configs/codex-effective-briefing-candidate-fuller.json"
+    },
+    {
+      "global_order": 22,
+      "order": 22,
+      "batch_id": "codex-ordinary-iteration-01",
+      "provider": "codex",
+      "case_id": "effective-briefing",
+      "condition": "control",
+      "repetition": 3,
+      "config": "skill-studies/concise-writing/runs/baseline-iteration-suite-01/preparation/configs/codex-effective-briefing-control.json"
+    },
+    {
+      "global_order": 23,
+      "order": 23,
+      "batch_id": "codex-ordinary-iteration-01",
+      "provider": "codex",
+      "case_id": "effective-briefing",
+      "condition": "original",
+      "repetition": 3,
+      "config": "skill-studies/concise-writing/runs/baseline-iteration-suite-01/preparation/configs/codex-effective-briefing-original.json"
+    },
+    {
+      "global_order": 24,
+      "order": 24,
+      "batch_id": "codex-ordinary-iteration-01",
+      "provider": "codex",
+      "case_id": "effective-briefing",
+      "condition": "candidate-targeted",
+      "repetition": 3,
+      "config": "skill-studies/concise-writing/runs/baseline-iteration-suite-01/preparation/configs/codex-effective-briefing-candidate-targeted.json"
+    },
+    {
+      "global_order": 25,
+      "order": 25,
+      "batch_id": "codex-ordinary-iteration-01",
+      "provider": "codex",
+      "case_id": "long-handoff",
+      "condition": "candidate-targeted",
+      "repetition": 1,
+      "config": "skill-studies/concise-writing/runs/baseline-iteration-suite-01/preparation/configs/codex-long-handoff-candidate-targeted.json"
+    },
+    {
+      "global_order": 26,
+      "order": 26,
+      "batch_id": "codex-ordinary-iteration-01",
+      "provider": "codex",
+      "case_id": "long-handoff",
+      "condition": "candidate-fuller",
+      "repetition": 1,
+      "config": "skill-studies/concise-writing/runs/baseline-iteration-suite-01/preparation/configs/codex-long-handoff-candidate-fuller.json"
+    },
+    {
+      "global_order": 27,
+      "order": 27,
+      "batch_id": "codex-ordinary-iteration-01",
+      "provider": "codex",
+      "case_id": "long-handoff",
+      "condition": "control",
+      "repetition": 1,
+      "config": "skill-studies/concise-writing/runs/baseline-iteration-suite-01/preparation/configs/codex-long-handoff-control.json"
+    },
+    {
+      "global_order": 28,
+      "order": 28,
+      "batch_id": "codex-ordinary-iteration-01",
+      "provider": "codex",
+      "case_id": "long-handoff",
+      "condition": "original",
+      "repetition": 1,
+      "config": "skill-studies/concise-writing/runs/baseline-iteration-suite-01/preparation/configs/codex-long-handoff-original.json"
+    },
+    {
+      "global_order": 29,
+      "order": 29,
+      "batch_id": "codex-ordinary-iteration-01",
+      "provider": "codex",
+      "case_id": "long-handoff",
+      "condition": "candidate-fuller",
+      "repetition": 2,
+      "config": "skill-studies/concise-writing/runs/baseline-iteration-suite-01/preparation/configs/codex-long-handoff-candidate-fuller.json"
+    },
+    {
+      "global_order": 30,
+      "order": 30,
+      "batch_id": "codex-ordinary-iteration-01",
+      "provider": "codex",
+      "case_id": "long-handoff",
+      "condition": "control",
+      "repetition": 2,
+      "config": "skill-studies/concise-writing/runs/baseline-iteration-suite-01/preparation/configs/codex-long-handoff-control.json"
+    },
+    {
+      "global_order": 31,
+      "order": 31,
+      "batch_id": "codex-ordinary-iteration-01",
+      "provider": "codex",
+      "case_id": "long-handoff",
+      "condition": "original",
+      "repetition": 2,
+      "config": "skill-studies/concise-writing/runs/baseline-iteration-suite-01/preparation/configs/codex-long-handoff-original.json"
+    },
+    {
+      "global_order": 32,
+      "order": 32,
+      "batch_id": "codex-ordinary-iteration-01",
+      "provider": "codex",
+      "case_id": "long-handoff",
+      "condition": "candidate-targeted",
+      "repetition": 2,
+      "config": "skill-studies/concise-writing/runs/baseline-iteration-suite-01/preparation/configs/codex-long-handoff-candidate-targeted.json"
+    },
+    {
+      "global_order": 33,
+      "order": 33,
+      "batch_id": "codex-ordinary-iteration-01",
+      "provider": "codex",
+      "case_id": "long-handoff",
+      "condition": "control",
+      "repetition": 3,
+      "config": "skill-studies/concise-writing/runs/baseline-iteration-suite-01/preparation/configs/codex-long-handoff-control.json"
+    },
+    {
+      "global_order": 34,
+      "order": 34,
+      "batch_id": "codex-ordinary-iteration-01",
+      "provider": "codex",
+      "case_id": "long-handoff",
+      "condition": "original",
+      "repetition": 3,
+      "config": "skill-studies/concise-writing/runs/baseline-iteration-suite-01/preparation/configs/codex-long-handoff-original.json"
+    },
+    {
+      "global_order": 35,
+      "order": 35,
+      "batch_id": "codex-ordinary-iteration-01",
+      "provider": "codex",
+      "case_id": "long-handoff",
+      "condition": "candidate-targeted",
+      "repetition": 3,
+      "config": "skill-studies/concise-writing/runs/baseline-iteration-suite-01/preparation/configs/codex-long-handoff-candidate-targeted.json"
+    },
+    {
+      "global_order": 36,
+      "order": 36,
+      "batch_id": "codex-ordinary-iteration-01",
+      "provider": "codex",
+      "case_id": "long-handoff",
+      "condition": "candidate-fuller",
+      "repetition": 3,
+      "config": "skill-studies/concise-writing/runs/baseline-iteration-suite-01/preparation/configs/codex-long-handoff-candidate-fuller.json"
+    },
+    {
+      "global_order": 37,
+      "order": 1,
+      "batch_id": "claude-ordinary-iteration-01",
+      "provider": "claude",
+      "case_id": "agent-recommendation",
+      "condition": "candidate-targeted",
+      "repetition": 1,
+      "config": "skill-studies/concise-writing/runs/baseline-iteration-suite-01/preparation/configs/claude-agent-recommendation-candidate-targeted.json"
+    },
+    {
+      "global_order": 38,
+      "order": 2,
+      "batch_id": "claude-ordinary-iteration-01",
+      "provider": "claude",
+      "case_id": "agent-recommendation",
+      "condition": "candidate-fuller",
+      "repetition": 1,
+      "config": "skill-studies/concise-writing/runs/baseline-iteration-suite-01/preparation/configs/claude-agent-recommendation-candidate-fuller.json"
+    },
+    {
+      "global_order": 39,
+      "order": 3,
+      "batch_id": "claude-ordinary-iteration-01",
+      "provider": "claude",
+      "case_id": "agent-recommendation",
+      "condition": "control",
+      "repetition": 1,
+      "config": "skill-studies/concise-writing/runs/baseline-iteration-suite-01/preparation/configs/claude-agent-recommendation-control.json"
+    },
+    {
+      "global_order": 40,
+      "order": 4,
+      "batch_id": "claude-ordinary-iteration-01",
+      "provider": "claude",
+      "case_id": "agent-recommendation",
+      "condition": "original",
+      "repetition": 1,
+      "config": "skill-studies/concise-writing/runs/baseline-iteration-suite-01/preparation/configs/claude-agent-recommendation-original.json"
+    },
+    {
+      "global_order": 41,
+      "order": 5,
+      "batch_id": "claude-ordinary-iteration-01",
+      "provider": "claude",
+      "case_id": "agent-recommendation",
+      "condition": "candidate-fuller",
+      "repetition": 2,
+      "config": "skill-studies/concise-writing/runs/baseline-iteration-suite-01/preparation/configs/claude-agent-recommendation-candidate-fuller.json"
+    },
+    {
+      "global_order": 42,
+      "order": 6,
+      "batch_id": "claude-ordinary-iteration-01",
+      "provider": "claude",
+      "case_id": "agent-recommendation",
+      "condition": "control",
+      "repetition": 2,
+      "config": "skill-studies/concise-writing/runs/baseline-iteration-suite-01/preparation/configs/claude-agent-recommendation-control.json"
+    },
+    {
+      "global_order": 43,
+      "order": 7,
+      "batch_id": "claude-ordinary-iteration-01",
+      "provider": "claude",
+      "case_id": "agent-recommendation",
+      "condition": "original",
+      "repetition": 2,
+      "config": "skill-studies/concise-writing/runs/baseline-iteration-suite-01/preparation/configs/claude-agent-recommendation-original.json"
+    },
+    {
+      "global_order": 44,
+      "order": 8,
+      "batch_id": "claude-ordinary-iteration-01",
+      "provider": "claude",
+      "case_id": "agent-recommendation",
+      "condition": "candidate-targeted",
+      "repetition": 2,
+      "config": "skill-studies/concise-writing/runs/baseline-iteration-suite-01/preparation/configs/claude-agent-recommendation-candidate-targeted.json"
+    },
+    {
+      "global_order": 45,
+      "order": 9,
+      "batch_id": "claude-ordinary-iteration-01",
+      "provider": "claude",
+      "case_id": "agent-recommendation",
+      "condition": "control",
+      "repetition": 3,
+      "config": "skill-studies/concise-writing/runs/baseline-iteration-suite-01/preparation/configs/claude-agent-recommendation-control.json"
+    },
+    {
+      "global_order": 46,
+      "order": 10,
+      "batch_id": "claude-ordinary-iteration-01",
+      "provider": "claude",
+      "case_id": "agent-recommendation",
+      "condition": "original",
+      "repetition": 3,
+      "config": "skill-studies/concise-writing/runs/baseline-iteration-suite-01/preparation/configs/claude-agent-recommendation-original.json"
+    },
+    {
+      "global_order": 47,
+      "order": 11,
+      "batch_id": "claude-ordinary-iteration-01",
+      "provider": "claude",
+      "case_id": "agent-recommendation",
+      "condition": "candidate-targeted",
+      "repetition": 3,
+      "config": "skill-studies/concise-writing/runs/baseline-iteration-suite-01/preparation/configs/claude-agent-recommendation-candidate-targeted.json"
+    },
+    {
+      "global_order": 48,
+      "order": 12,
+      "batch_id": "claude-ordinary-iteration-01",
+      "provider": "claude",
+      "case_id": "agent-recommendation",
+      "condition": "candidate-fuller",
+      "repetition": 3,
+      "config": "skill-studies/concise-writing/runs/baseline-iteration-suite-01/preparation/configs/claude-agent-recommendation-candidate-fuller.json"
+    },
+    {
+      "global_order": 49,
+      "order": 13,
+      "batch_id": "claude-ordinary-iteration-01",
+      "provider": "claude",
+      "case_id": "effective-briefing",
+      "condition": "candidate-fuller",
+      "repetition": 1,
+      "config": "skill-studies/concise-writing/runs/baseline-iteration-suite-01/preparation/configs/claude-effective-briefing-candidate-fuller.json"
+    },
+    {
+      "global_order": 50,
+      "order": 14,
+      "batch_id": "claude-ordinary-iteration-01",
+      "provider": "claude",
+      "case_id": "effective-briefing",
+      "condition": "control",
+      "repetition": 1,
+      "config": "skill-studies/concise-writing/runs/baseline-iteration-suite-01/preparation/configs/claude-effective-briefing-control.json"
+    },
+    {
+      "global_order": 51,
+      "order": 15,
+      "batch_id": "claude-ordinary-iteration-01",
+      "provider": "claude",
+      "case_id": "effective-briefing",
+      "condition": "original",
+      "repetition": 1,
+      "config": "skill-studies/concise-writing/runs/baseline-iteration-suite-01/preparation/configs/claude-effective-briefing-original.json"
+    },
+    {
+      "global_order": 52,
+      "order": 16,
+      "batch_id": "claude-ordinary-iteration-01",
+      "provider": "claude",
+      "case_id": "effective-briefing",
+      "condition": "candidate-targeted",
+      "repetition": 1,
+      "config": "skill-studies/concise-writing/runs/baseline-iteration-suite-01/preparation/configs/claude-effective-briefing-candidate-targeted.json"
+    },
+    {
+      "global_order": 53,
+      "order": 17,
+      "batch_id": "claude-ordinary-iteration-01",
+      "provider": "claude",
+      "case_id": "effective-briefing",
+      "condition": "control",
+      "repetition": 2,
+      "config": "skill-studies/concise-writing/runs/baseline-iteration-suite-01/preparation/configs/claude-effective-briefing-control.json"
+    },
+    {
+      "global_order": 54,
+      "order": 18,
+      "batch_id": "claude-ordinary-iteration-01",
+      "provider": "claude",
+      "case_id": "effective-briefing",
+      "condition": "original",
+      "repetition": 2,
+      "config": "skill-studies/concise-writing/runs/baseline-iteration-suite-01/preparation/configs/claude-effective-briefing-original.json"
+    },
+    {
+      "global_order": 55,
+      "order": 19,
+      "batch_id": "claude-ordinary-iteration-01",
+      "provider": "claude",
+      "case_id": "effective-briefing",
+      "condition": "candidate-targeted",
+      "repetition": 2,
+      "config": "skill-studies/concise-writing/runs/baseline-iteration-suite-01/preparation/configs/claude-effective-briefing-candidate-targeted.json"
+    },
+    {
+      "global_order": 56,
+      "order": 20,
+      "batch_id": "claude-ordinary-iteration-01",
+      "provider": "claude",
+      "case_id": "effective-briefing",
+      "condition": "candidate-fuller",
+      "repetition": 2,
+      "config": "skill-studies/concise-writing/runs/baseline-iteration-suite-01/preparation/configs/claude-effective-briefing-candidate-fuller.json"
+    },
+    {
+      "global_order": 57,
+      "order": 21,
+      "batch_id": "claude-ordinary-iteration-01",
+      "provider": "claude",
+      "case_id": "effective-briefing",
+      "condition": "original",
+      "repetition": 3,
+      "config": "skill-studies/concise-writing/runs/baseline-iteration-suite-01/preparation/configs/claude-effective-briefing-original.json"
+    },
+    {
+      "global_order": 58,
+      "order": 22,
+      "batch_id": "claude-ordinary-iteration-01",
+      "provider": "claude",
+      "case_id": "effective-briefing",
+      "condition": "candidate-targeted",
+      "repetition": 3,
+      "config": "skill-studies/concise-writing/runs/baseline-iteration-suite-01/preparation/configs/claude-effective-briefing-candidate-targeted.json"
+    },
+    {
+      "global_order": 59,
+      "order": 23,
+      "batch_id": "claude-ordinary-iteration-01",
+      "provider": "claude",
+      "case_id": "effective-briefing",
+      "condition": "candidate-fuller",
+      "repetition": 3,
+      "config": "skill-studies/concise-writing/runs/baseline-iteration-suite-01/preparation/configs/claude-effective-briefing-candidate-fuller.json"
+    },
+    {
+      "global_order": 60,
+      "order": 24,
+      "batch_id": "claude-ordinary-iteration-01",
+      "provider": "claude",
+      "case_id": "effective-briefing",
+      "condition": "control",
+      "repetition": 3,
+      "config": "skill-studies/concise-writing/runs/baseline-iteration-suite-01/preparation/configs/claude-effective-briefing-control.json"
+    },
+    {
+      "global_order": 61,
+      "order": 25,
+      "batch_id": "claude-ordinary-iteration-01",
+      "provider": "claude",
+      "case_id": "long-handoff",
+      "condition": "control",
+      "repetition": 1,
+      "config": "skill-studies/concise-writing/runs/baseline-iteration-suite-01/preparation/configs/claude-long-handoff-control.json"
+    },
+    {
+      "global_order": 62,
+      "order": 26,
+      "batch_id": "claude-ordinary-iteration-01",
+      "provider": "claude",
+      "case_id": "long-handoff",
+      "condition": "original",
+      "repetition": 1,
+      "config": "skill-studies/concise-writing/runs/baseline-iteration-suite-01/preparation/configs/claude-long-handoff-original.json"
+    },
+    {
+      "global_order": 63,
+      "order": 27,
+      "batch_id": "claude-ordinary-iteration-01",
+      "provider": "claude",
+      "case_id": "long-handoff",
+      "condition": "candidate-targeted",
+      "repetition": 1,
+      "config": "skill-studies/concise-writing/runs/baseline-iteration-suite-01/preparation/configs/claude-long-handoff-candidate-targeted.json"
+    },
+    {
+      "global_order": 64,
+      "order": 28,
+      "batch_id": "claude-ordinary-iteration-01",
+      "provider": "claude",
+      "case_id": "long-handoff",
+      "condition": "candidate-fuller",
+      "repetition": 1,
+      "config": "skill-studies/concise-writing/runs/baseline-iteration-suite-01/preparation/configs/claude-long-handoff-candidate-fuller.json"
+    },
+    {
+      "global_order": 65,
+      "order": 29,
+      "batch_id": "claude-ordinary-iteration-01",
+      "provider": "claude",
+      "case_id": "long-handoff",
+      "condition": "original",
+      "repetition": 2,
+      "config": "skill-studies/concise-writing/runs/baseline-iteration-suite-01/preparation/configs/claude-long-handoff-original.json"
+    },
+    {
+      "global_order": 66,
+      "order": 30,
+      "batch_id": "claude-ordinary-iteration-01",
+      "provider": "claude",
+      "case_id": "long-handoff",
+      "condition": "candidate-targeted",
+      "repetition": 2,
+      "config": "skill-studies/concise-writing/runs/baseline-iteration-suite-01/preparation/configs/claude-long-handoff-candidate-targeted.json"
+    },
+    {
+      "global_order": 67,
+      "order": 31,
+      "batch_id": "claude-ordinary-iteration-01",
+      "provider": "claude",
+      "case_id": "long-handoff",
+      "condition": "candidate-fuller",
+      "repetition": 2,
+      "config": "skill-studies/concise-writing/runs/baseline-iteration-suite-01/preparation/configs/claude-long-handoff-candidate-fuller.json"
+    },
+    {
+      "global_order": 68,
+      "order": 32,
+      "batch_id": "claude-ordinary-iteration-01",
+      "provider": "claude",
+      "case_id": "long-handoff",
+      "condition": "control",
+      "repetition": 2,
+      "config": "skill-studies/concise-writing/runs/baseline-iteration-suite-01/preparation/configs/claude-long-handoff-control.json"
+    },
+    {
+      "global_order": 69,
+      "order": 33,
+      "batch_id": "claude-ordinary-iteration-01",
+      "provider": "claude",
+      "case_id": "long-handoff",
+      "condition": "candidate-targeted",
+      "repetition": 3,
+      "config": "skill-studies/concise-writing/runs/baseline-iteration-suite-01/preparation/configs/claude-long-handoff-candidate-targeted.json"
+    },
+    {
+      "global_order": 70,
+      "order": 34,
+      "batch_id": "claude-ordinary-iteration-01",
+      "provider": "claude",
+      "case_id": "long-handoff",
+      "condition": "candidate-fuller",
+      "repetition": 3,
+      "config": "skill-studies/concise-writing/runs/baseline-iteration-suite-01/preparation/configs/claude-long-handoff-candidate-fuller.json"
+    },
+    {
+      "global_order": 71,
+      "order": 35,
+      "batch_id": "claude-ordinary-iteration-01",
+      "provider": "claude",
+      "case_id": "long-handoff",
+      "condition": "control",
+      "repetition": 3,
+      "config": "skill-studies/concise-writing/runs/baseline-iteration-suite-01/preparation/configs/claude-long-handoff-control.json"
+    },
+    {
+      "global_order": 72,
+      "order": 36,
+      "batch_id": "claude-ordinary-iteration-01",
+      "provider": "claude",
+      "case_id": "long-handoff",
+      "condition": "original",
+      "repetition": 3,
+      "config": "skill-studies/concise-writing/runs/baseline-iteration-suite-01/preparation/configs/claude-long-handoff-original.json"
+    },
+    {
+      "global_order": 73,
+      "order": 1,
+      "batch_id": "codex-native-iteration-01",
+      "provider": "codex",
+      "case_id": "invocation-tighten",
+      "condition": "original",
+      "repetition": 1,
+      "config": "skill-studies/concise-writing/runs/baseline-iteration-suite-01/preparation/configs/codex-invocation-tighten-original.json"
+    },
+    {
+      "global_order": 74,
+      "order": 2,
+      "batch_id": "codex-native-iteration-01",
+      "provider": "codex",
+      "case_id": "invocation-tighten",
+      "condition": "candidate-targeted",
+      "repetition": 1,
+      "config": "skill-studies/concise-writing/runs/baseline-iteration-suite-01/preparation/configs/codex-invocation-tighten-candidate-targeted.json"
+    },
+    {
+      "global_order": 75,
+      "order": 3,
+      "batch_id": "codex-native-iteration-01",
+      "provider": "codex",
+      "case_id": "invocation-tighten",
+      "condition": "candidate-fuller",
+      "repetition": 1,
+      "config": "skill-studies/concise-writing/runs/baseline-iteration-suite-01/preparation/configs/codex-invocation-tighten-candidate-fuller.json"
+    },
+    {
+      "global_order": 76,
+      "order": 4,
+      "batch_id": "codex-native-iteration-01",
+      "provider": "codex",
+      "case_id": "invocation-tighten",
+      "condition": "candidate-targeted",
+      "repetition": 2,
+      "config": "skill-studies/concise-writing/runs/baseline-iteration-suite-01/preparation/configs/codex-invocation-tighten-candidate-targeted.json"
+    },
+    {
+      "global_order": 77,
+      "order": 5,
+      "batch_id": "codex-native-iteration-01",
+      "provider": "codex",
+      "case_id": "invocation-tighten",
+      "condition": "candidate-fuller",
+      "repetition": 2,
+      "config": "skill-studies/concise-writing/runs/baseline-iteration-suite-01/preparation/configs/codex-invocation-tighten-candidate-fuller.json"
+    },
+    {
+      "global_order": 78,
+      "order": 6,
+      "batch_id": "codex-native-iteration-01",
+      "provider": "codex",
+      "case_id": "invocation-tighten",
+      "condition": "original",
+      "repetition": 2,
+      "config": "skill-studies/concise-writing/runs/baseline-iteration-suite-01/preparation/configs/codex-invocation-tighten-original.json"
+    },
+    {
+      "global_order": 79,
+      "order": 7,
+      "batch_id": "codex-native-iteration-01",
+      "provider": "codex",
+      "case_id": "invocation-tighten",
+      "condition": "candidate-fuller",
+      "repetition": 3,
+      "config": "skill-studies/concise-writing/runs/baseline-iteration-suite-01/preparation/configs/codex-invocation-tighten-candidate-fuller.json"
+    },
+    {
+      "global_order": 80,
+      "order": 8,
+      "batch_id": "codex-native-iteration-01",
+      "provider": "codex",
+      "case_id": "invocation-tighten",
+      "condition": "original",
+      "repetition": 3,
+      "config": "skill-studies/concise-writing/runs/baseline-iteration-suite-01/preparation/configs/codex-invocation-tighten-original.json"
+    },
+    {
+      "global_order": 81,
+      "order": 9,
+      "batch_id": "codex-native-iteration-01",
+      "provider": "codex",
+      "case_id": "invocation-tighten",
+      "condition": "candidate-targeted",
+      "repetition": 3,
+      "config": "skill-studies/concise-writing/runs/baseline-iteration-suite-01/preparation/configs/codex-invocation-tighten-candidate-targeted.json"
+    },
+    {
+      "global_order": 82,
+      "order": 10,
+      "batch_id": "codex-native-iteration-01",
+      "provider": "codex",
+      "case_id": "invocation-write",
+      "condition": "candidate-targeted",
+      "repetition": 1,
+      "config": "skill-studies/concise-writing/runs/baseline-iteration-suite-01/preparation/configs/codex-invocation-write-candidate-targeted.json"
+    },
+    {
+      "global_order": 83,
+      "order": 11,
+      "batch_id": "codex-native-iteration-01",
+      "provider": "codex",
+      "case_id": "invocation-write",
+      "condition": "candidate-fuller",
+      "repetition": 1,
+      "config": "skill-studies/concise-writing/runs/baseline-iteration-suite-01/preparation/configs/codex-invocation-write-candidate-fuller.json"
+    },
+    {
+      "global_order": 84,
+      "order": 12,
+      "batch_id": "codex-native-iteration-01",
+      "provider": "codex",
+      "case_id": "invocation-write",
+      "condition": "original",
+      "repetition": 1,
+      "config": "skill-studies/concise-writing/runs/baseline-iteration-suite-01/preparation/configs/codex-invocation-write-original.json"
+    },
+    {
+      "global_order": 85,
+      "order": 13,
+      "batch_id": "codex-native-iteration-01",
+      "provider": "codex",
+      "case_id": "invocation-write",
+      "condition": "candidate-fuller",
+      "repetition": 2,
+      "config": "skill-studies/concise-writing/runs/baseline-iteration-suite-01/preparation/configs/codex-invocation-write-candidate-fuller.json"
+    },
+    {
+      "global_order": 86,
+      "order": 14,
+      "batch_id": "codex-native-iteration-01",
+      "provider": "codex",
+      "case_id": "invocation-write",
+      "condition": "original",
+      "repetition": 2,
+      "config": "skill-studies/concise-writing/runs/baseline-iteration-suite-01/preparation/configs/codex-invocation-write-original.json"
+    },
+    {
+      "global_order": 87,
+      "order": 15,
+      "batch_id": "codex-native-iteration-01",
+      "provider": "codex",
+      "case_id": "invocation-write",
+      "condition": "candidate-targeted",
+      "repetition": 2,
+      "config": "skill-studies/concise-writing/runs/baseline-iteration-suite-01/preparation/configs/codex-invocation-write-candidate-targeted.json"
+    },
+    {
+      "global_order": 88,
+      "order": 16,
+      "batch_id": "codex-native-iteration-01",
+      "provider": "codex",
+      "case_id": "invocation-write",
+      "condition": "original",
+      "repetition": 3,
+      "config": "skill-studies/concise-writing/runs/baseline-iteration-suite-01/preparation/configs/codex-invocation-write-original.json"
+    },
+    {
+      "global_order": 89,
+      "order": 17,
+      "batch_id": "codex-native-iteration-01",
+      "provider": "codex",
+      "case_id": "invocation-write",
+      "condition": "candidate-targeted",
+      "repetition": 3,
+      "config": "skill-studies/concise-writing/runs/baseline-iteration-suite-01/preparation/configs/codex-invocation-write-candidate-targeted.json"
+    },
+    {
+      "global_order": 90,
+      "order": 18,
+      "batch_id": "codex-native-iteration-01",
+      "provider": "codex",
+      "case_id": "invocation-write",
+      "condition": "candidate-fuller",
+      "repetition": 3,
+      "config": "skill-studies/concise-writing/runs/baseline-iteration-suite-01/preparation/configs/codex-invocation-write-candidate-fuller.json"
+    },
+    {
+      "global_order": 91,
+      "order": 19,
+      "batch_id": "codex-native-iteration-01",
+      "provider": "codex",
+      "case_id": "invocation-nonprose",
+      "condition": "candidate-fuller",
+      "repetition": 1,
+      "config": "skill-studies/concise-writing/runs/baseline-iteration-suite-01/preparation/configs/codex-invocation-nonprose-candidate-fuller.json"
+    },
+    {
+      "global_order": 92,
+      "order": 20,
+      "batch_id": "codex-native-iteration-01",
+      "provider": "codex",
+      "case_id": "invocation-nonprose",
+      "condition": "original",
+      "repetition": 1,
+      "config": "skill-studies/concise-writing/runs/baseline-iteration-suite-01/preparation/configs/codex-invocation-nonprose-original.json"
+    },
+    {
+      "global_order": 93,
+      "order": 21,
+      "batch_id": "codex-native-iteration-01",
+      "provider": "codex",
+      "case_id": "invocation-nonprose",
+      "condition": "candidate-targeted",
+      "repetition": 1,
+      "config": "skill-studies/concise-writing/runs/baseline-iteration-suite-01/preparation/configs/codex-invocation-nonprose-candidate-targeted.json"
+    },
+    {
+      "global_order": 94,
+      "order": 22,
+      "batch_id": "codex-native-iteration-01",
+      "provider": "codex",
+      "case_id": "invocation-nonprose",
+      "condition": "original",
+      "repetition": 2,
+      "config": "skill-studies/concise-writing/runs/baseline-iteration-suite-01/preparation/configs/codex-invocation-nonprose-original.json"
+    },
+    {
+      "global_order": 95,
+      "order": 23,
+      "batch_id": "codex-native-iteration-01",
+      "provider": "codex",
+      "case_id": "invocation-nonprose",
+      "condition": "candidate-targeted",
+      "repetition": 2,
+      "config": "skill-studies/concise-writing/runs/baseline-iteration-suite-01/preparation/configs/codex-invocation-nonprose-candidate-targeted.json"
+    },
+    {
+      "global_order": 96,
+      "order": 24,
+      "batch_id": "codex-native-iteration-01",
+      "provider": "codex",
+      "case_id": "invocation-nonprose",
+      "condition": "candidate-fuller",
+      "repetition": 2,
+      "config": "skill-studies/concise-writing/runs/baseline-iteration-suite-01/preparation/configs/codex-invocation-nonprose-candidate-fuller.json"
+    },
+    {
+      "global_order": 97,
+      "order": 25,
+      "batch_id": "codex-native-iteration-01",
+      "provider": "codex",
+      "case_id": "invocation-nonprose",
+      "condition": "candidate-targeted",
+      "repetition": 3,
+      "config": "skill-studies/concise-writing/runs/baseline-iteration-suite-01/preparation/configs/codex-invocation-nonprose-candidate-targeted.json"
+    },
+    {
+      "global_order": 98,
+      "order": 26,
+      "batch_id": "codex-native-iteration-01",
+      "provider": "codex",
+      "case_id": "invocation-nonprose",
+      "condition": "candidate-fuller",
+      "repetition": 3,
+      "config": "skill-studies/concise-writing/runs/baseline-iteration-suite-01/preparation/configs/codex-invocation-nonprose-candidate-fuller.json"
+    },
+    {
+      "global_order": 99,
+      "order": 27,
+      "batch_id": "codex-native-iteration-01",
+      "provider": "codex",
+      "case_id": "invocation-nonprose",
+      "condition": "original",
+      "repetition": 3,
+      "config": "skill-studies/concise-writing/runs/baseline-iteration-suite-01/preparation/configs/codex-invocation-nonprose-original.json"
+    },
+    {
+      "global_order": 100,
+      "order": 28,
+      "batch_id": "codex-native-iteration-01",
+      "provider": "codex",
+      "case_id": "invocation-comments",
+      "condition": "original",
+      "repetition": 1,
+      "config": "skill-studies/concise-writing/runs/baseline-iteration-suite-01/preparation/configs/codex-invocation-comments-original.json"
+    },
+    {
+      "global_order": 101,
+      "order": 29,
+      "batch_id": "codex-native-iteration-01",
+      "provider": "codex",
+      "case_id": "invocation-comments",
+      "condition": "candidate-targeted",
+      "repetition": 1,
+      "config": "skill-studies/concise-writing/runs/baseline-iteration-suite-01/preparation/configs/codex-invocation-comments-candidate-targeted.json"
+    },
+    {
+      "global_order": 102,
+      "order": 30,
+      "batch_id": "codex-native-iteration-01",
+      "provider": "codex",
+      "case_id": "invocation-comments",
+      "condition": "candidate-fuller",
+      "repetition": 1,
+      "config": "skill-studies/concise-writing/runs/baseline-iteration-suite-01/preparation/configs/codex-invocation-comments-candidate-fuller.json"
+    },
+    {
+      "global_order": 103,
+      "order": 31,
+      "batch_id": "codex-native-iteration-01",
+      "provider": "codex",
+      "case_id": "invocation-comments",
+      "condition": "candidate-targeted",
+      "repetition": 2,
+      "config": "skill-studies/concise-writing/runs/baseline-iteration-suite-01/preparation/configs/codex-invocation-comments-candidate-targeted.json"
+    },
+    {
+      "global_order": 104,
+      "order": 32,
+      "batch_id": "codex-native-iteration-01",
+      "provider": "codex",
+      "case_id": "invocation-comments",
+      "condition": "candidate-fuller",
+      "repetition": 2,
+      "config": "skill-studies/concise-writing/runs/baseline-iteration-suite-01/preparation/configs/codex-invocation-comments-candidate-fuller.json"
+    },
+    {
+      "global_order": 105,
+      "order": 33,
+      "batch_id": "codex-native-iteration-01",
+      "provider": "codex",
+      "case_id": "invocation-comments",
+      "condition": "original",
+      "repetition": 2,
+      "config": "skill-studies/concise-writing/runs/baseline-iteration-suite-01/preparation/configs/codex-invocation-comments-original.json"
+    },
+    {
+      "global_order": 106,
+      "order": 34,
+      "batch_id": "codex-native-iteration-01",
+      "provider": "codex",
+      "case_id": "invocation-comments",
+      "condition": "candidate-fuller",
+      "repetition": 3,
+      "config": "skill-studies/concise-writing/runs/baseline-iteration-suite-01/preparation/configs/codex-invocation-comments-candidate-fuller.json"
+    },
+    {
+      "global_order": 107,
+      "order": 35,
+      "batch_id": "codex-native-iteration-01",
+      "provider": "codex",
+      "case_id": "invocation-comments",
+      "condition": "original",
+      "repetition": 3,
+      "config": "skill-studies/concise-writing/runs/baseline-iteration-suite-01/preparation/configs/codex-invocation-comments-original.json"
+    },
+    {
+      "global_order": 108,
+      "order": 36,
+      "batch_id": "codex-native-iteration-01",
+      "provider": "codex",
+      "case_id": "invocation-comments",
+      "condition": "candidate-targeted",
+      "repetition": 3,
+      "config": "skill-studies/concise-writing/runs/baseline-iteration-suite-01/preparation/configs/codex-invocation-comments-candidate-targeted.json"
+    },
+    {
+      "global_order": 109,
+      "order": 1,
+      "batch_id": "claude-native-iteration-01",
+      "provider": "claude",
+      "case_id": "invocation-tighten",
+      "condition": "candidate-fuller",
+      "repetition": 1,
+      "config": "skill-studies/concise-writing/runs/baseline-iteration-suite-01/preparation/configs/claude-invocation-tighten-candidate-fuller.json"
+    },
+    {
+      "global_order": 110,
+      "order": 2,
+      "batch_id": "claude-native-iteration-01",
+      "provider": "claude",
+      "case_id": "invocation-tighten",
+      "condition": "original",
+      "repetition": 1,
+      "config": "skill-studies/concise-writing/runs/baseline-iteration-suite-01/preparation/configs/claude-invocation-tighten-original.json"
+    },
+    {
+      "global_order": 111,
+      "order": 3,
+      "batch_id": "claude-native-iteration-01",
+      "provider": "claude",
+      "case_id": "invocation-tighten",
+      "condition": "candidate-targeted",
+      "repetition": 1,
+      "config": "skill-studies/concise-writing/runs/baseline-iteration-suite-01/preparation/configs/claude-invocation-tighten-candidate-targeted.json"
+    },
+    {
+      "global_order": 112,
+      "order": 4,
+      "batch_id": "claude-native-iteration-01",
+      "provider": "claude",
+      "case_id": "invocation-tighten",
+      "condition": "original",
+      "repetition": 2,
+      "config": "skill-studies/concise-writing/runs/baseline-iteration-suite-01/preparation/configs/claude-invocation-tighten-original.json"
+    },
+    {
+      "global_order": 113,
+      "order": 5,
+      "batch_id": "claude-native-iteration-01",
+      "provider": "claude",
+      "case_id": "invocation-tighten",
+      "condition": "candidate-targeted",
+      "repetition": 2,
+      "config": "skill-studies/concise-writing/runs/baseline-iteration-suite-01/preparation/configs/claude-invocation-tighten-candidate-targeted.json"
+    },
+    {
+      "global_order": 114,
+      "order": 6,
+      "batch_id": "claude-native-iteration-01",
+      "provider": "claude",
+      "case_id": "invocation-tighten",
+      "condition": "candidate-fuller",
+      "repetition": 2,
+      "config": "skill-studies/concise-writing/runs/baseline-iteration-suite-01/preparation/configs/claude-invocation-tighten-candidate-fuller.json"
+    },
+    {
+      "global_order": 115,
+      "order": 7,
+      "batch_id": "claude-native-iteration-01",
+      "provider": "claude",
+      "case_id": "invocation-tighten",
+      "condition": "candidate-targeted",
+      "repetition": 3,
+      "config": "skill-studies/concise-writing/runs/baseline-iteration-suite-01/preparation/configs/claude-invocation-tighten-candidate-targeted.json"
+    },
+    {
+      "global_order": 116,
+      "order": 8,
+      "batch_id": "claude-native-iteration-01",
+      "provider": "claude",
+      "case_id": "invocation-tighten",
+      "condition": "candidate-fuller",
+      "repetition": 3,
+      "config": "skill-studies/concise-writing/runs/baseline-iteration-suite-01/preparation/configs/claude-invocation-tighten-candidate-fuller.json"
+    },
+    {
+      "global_order": 117,
+      "order": 9,
+      "batch_id": "claude-native-iteration-01",
+      "provider": "claude",
+      "case_id": "invocation-tighten",
+      "condition": "original",
+      "repetition": 3,
+      "config": "skill-studies/concise-writing/runs/baseline-iteration-suite-01/preparation/configs/claude-invocation-tighten-original.json"
+    },
+    {
+      "global_order": 118,
+      "order": 10,
+      "batch_id": "claude-native-iteration-01",
+      "provider": "claude",
+      "case_id": "invocation-write",
+      "condition": "original",
+      "repetition": 1,
+      "config": "skill-studies/concise-writing/runs/baseline-iteration-suite-01/preparation/configs/claude-invocation-write-original.json"
+    },
+    {
+      "global_order": 119,
+      "order": 11,
+      "batch_id": "claude-native-iteration-01",
+      "provider": "claude",
+      "case_id": "invocation-write",
+      "condition": "candidate-targeted",
+      "repetition": 1,
+      "config": "skill-studies/concise-writing/runs/baseline-iteration-suite-01/preparation/configs/claude-invocation-write-candidate-targeted.json"
+    },
+    {
+      "global_order": 120,
+      "order": 12,
+      "batch_id": "claude-native-iteration-01",
+      "provider": "claude",
+      "case_id": "invocation-write",
+      "condition": "candidate-fuller",
+      "repetition": 1,
+      "config": "skill-studies/concise-writing/runs/baseline-iteration-suite-01/preparation/configs/claude-invocation-write-candidate-fuller.json"
+    },
+    {
+      "global_order": 121,
+      "order": 13,
+      "batch_id": "claude-native-iteration-01",
+      "provider": "claude",
+      "case_id": "invocation-write",
+      "condition": "candidate-targeted",
+      "repetition": 2,
+      "config": "skill-studies/concise-writing/runs/baseline-iteration-suite-01/preparation/configs/claude-invocation-write-candidate-targeted.json"
+    },
+    {
+      "global_order": 122,
+      "order": 14,
+      "batch_id": "claude-native-iteration-01",
+      "provider": "claude",
+      "case_id": "invocation-write",
+      "condition": "candidate-fuller",
+      "repetition": 2,
+      "config": "skill-studies/concise-writing/runs/baseline-iteration-suite-01/preparation/configs/claude-invocation-write-candidate-fuller.json"
+    },
+    {
+      "global_order": 123,
+      "order": 15,
+      "batch_id": "claude-native-iteration-01",
+      "provider": "claude",
+      "case_id": "invocation-write",
+      "condition": "original",
+      "repetition": 2,
+      "config": "skill-studies/concise-writing/runs/baseline-iteration-suite-01/preparation/configs/claude-invocation-write-original.json"
+    },
+    {
+      "global_order": 124,
+      "order": 16,
+      "batch_id": "claude-native-iteration-01",
+      "provider": "claude",
+      "case_id": "invocation-write",
+      "condition": "candidate-fuller",
+      "repetition": 3,
+      "config": "skill-studies/concise-writing/runs/baseline-iteration-suite-01/preparation/configs/claude-invocation-write-candidate-fuller.json"
+    },
+    {
+      "global_order": 125,
+      "order": 17,
+      "batch_id": "claude-native-iteration-01",
+      "provider": "claude",
+      "case_id": "invocation-write",
+      "condition": "original",
+      "repetition": 3,
+      "config": "skill-studies/concise-writing/runs/baseline-iteration-suite-01/preparation/configs/claude-invocation-write-original.json"
+    },
+    {
+      "global_order": 126,
+      "order": 18,
+      "batch_id": "claude-native-iteration-01",
+      "provider": "claude",
+      "case_id": "invocation-write",
+      "condition": "candidate-targeted",
+      "repetition": 3,
+      "config": "skill-studies/concise-writing/runs/baseline-iteration-suite-01/preparation/configs/claude-invocation-write-candidate-targeted.json"
+    },
+    {
+      "global_order": 127,
+      "order": 19,
+      "batch_id": "claude-native-iteration-01",
+      "provider": "claude",
+      "case_id": "invocation-nonprose",
+      "condition": "candidate-targeted",
+      "repetition": 1,
+      "config": "skill-studies/concise-writing/runs/baseline-iteration-suite-01/preparation/configs/claude-invocation-nonprose-candidate-targeted.json"
+    },
+    {
+      "global_order": 128,
+      "order": 20,
+      "batch_id": "claude-native-iteration-01",
+      "provider": "claude",
+      "case_id": "invocation-nonprose",
+      "condition": "candidate-fuller",
+      "repetition": 1,
+      "config": "skill-studies/concise-writing/runs/baseline-iteration-suite-01/preparation/configs/claude-invocation-nonprose-candidate-fuller.json"
+    },
+    {
+      "global_order": 129,
+      "order": 21,
+      "batch_id": "claude-native-iteration-01",
+      "provider": "claude",
+      "case_id": "invocation-nonprose",
+      "condition": "original",
+      "repetition": 1,
+      "config": "skill-studies/concise-writing/runs/baseline-iteration-suite-01/preparation/configs/claude-invocation-nonprose-original.json"
+    },
+    {
+      "global_order": 130,
+      "order": 22,
+      "batch_id": "claude-native-iteration-01",
+      "provider": "claude",
+      "case_id": "invocation-nonprose",
+      "condition": "candidate-fuller",
+      "repetition": 2,
+      "config": "skill-studies/concise-writing/runs/baseline-iteration-suite-01/preparation/configs/claude-invocation-nonprose-candidate-fuller.json"
+    },
+    {
+      "global_order": 131,
+      "order": 23,
+      "batch_id": "claude-native-iteration-01",
+      "provider": "claude",
+      "case_id": "invocation-nonprose",
+      "condition": "original",
+      "repetition": 2,
+      "config": "skill-studies/concise-writing/runs/baseline-iteration-suite-01/preparation/configs/claude-invocation-nonprose-original.json"
+    },
+    {
+      "global_order": 132,
+      "order": 24,
+      "batch_id": "claude-native-iteration-01",
+      "provider": "claude",
+      "case_id": "invocation-nonprose",
+      "condition": "candidate-targeted",
+      "repetition": 2,
+      "config": "skill-studies/concise-writing/runs/baseline-iteration-suite-01/preparation/configs/claude-invocation-nonprose-candidate-targeted.json"
+    },
+    {
+      "global_order": 133,
+      "order": 25,
+      "batch_id": "claude-native-iteration-01",
+      "provider": "claude",
+      "case_id": "invocation-nonprose",
+      "condition": "original",
+      "repetition": 3,
+      "config": "skill-studies/concise-writing/runs/baseline-iteration-suite-01/preparation/configs/claude-invocation-nonprose-original.json"
+    },
+    {
+      "global_order": 134,
+      "order": 26,
+      "batch_id": "claude-native-iteration-01",
+      "provider": "claude",
+      "case_id": "invocation-nonprose",
+      "condition": "candidate-targeted",
+      "repetition": 3,
+      "config": "skill-studies/concise-writing/runs/baseline-iteration-suite-01/preparation/configs/claude-invocation-nonprose-candidate-targeted.json"
+    },
+    {
+      "global_order": 135,
+      "order": 27,
+      "batch_id": "claude-native-iteration-01",
+      "provider": "claude",
+      "case_id": "invocation-nonprose",
+      "condition": "candidate-fuller",
+      "repetition": 3,
+      "config": "skill-studies/concise-writing/runs/baseline-iteration-suite-01/preparation/configs/claude-invocation-nonprose-candidate-fuller.json"
+    },
+    {
+      "global_order": 136,
+      "order": 28,
+      "batch_id": "claude-native-iteration-01",
+      "provider": "claude",
+      "case_id": "invocation-comments",
+      "condition": "candidate-fuller",
+      "repetition": 1,
+      "config": "skill-studies/concise-writing/runs/baseline-iteration-suite-01/preparation/configs/claude-invocation-comments-candidate-fuller.json"
+    },
+    {
+      "global_order": 137,
+      "order": 29,
+      "batch_id": "claude-native-iteration-01",
+      "provider": "claude",
+      "case_id": "invocation-comments",
+      "condition": "original",
+      "repetition": 1,
+      "config": "skill-studies/concise-writing/runs/baseline-iteration-suite-01/preparation/configs/claude-invocation-comments-original.json"
+    },
+    {
+      "global_order": 138,
+      "order": 30,
+      "batch_id": "claude-native-iteration-01",
+      "provider": "claude",
+      "case_id": "invocation-comments",
+      "condition": "candidate-targeted",
+      "repetition": 1,
+      "config": "skill-studies/concise-writing/runs/baseline-iteration-suite-01/preparation/configs/claude-invocation-comments-candidate-targeted.json"
+    },
+    {
+      "global_order": 139,
+      "order": 31,
+      "batch_id": "claude-native-iteration-01",
+      "provider": "claude",
+      "case_id": "invocation-comments",
+      "condition": "original",
+      "repetition": 2,
+      "config": "skill-studies/concise-writing/runs/baseline-iteration-suite-01/preparation/configs/claude-invocation-comments-original.json"
+    },
+    {
+      "global_order": 140,
+      "order": 32,
+      "batch_id": "claude-native-iteration-01",
+      "provider": "claude",
+      "case_id": "invocation-comments",
+      "condition": "candidate-targeted",
+      "repetition": 2,
+      "config": "skill-studies/concise-writing/runs/baseline-iteration-suite-01/preparation/configs/claude-invocation-comments-candidate-targeted.json"
+    },
+    {
+      "global_order": 141,
+      "order": 33,
+      "batch_id": "claude-native-iteration-01",
+      "provider": "claude",
+      "case_id": "invocation-comments",
+      "condition": "candidate-fuller",
+      "repetition": 2,
+      "config": "skill-studies/concise-writing/runs/baseline-iteration-suite-01/preparation/configs/claude-invocation-comments-candidate-fuller.json"
+    },
+    {
+      "global_order": 142,
+      "order": 34,
+      "batch_id": "claude-native-iteration-01",
+      "provider": "claude",
+      "case_id": "invocation-comments",
+      "condition": "candidate-targeted",
+      "repetition": 3,
+      "config": "skill-studies/concise-writing/runs/baseline-iteration-suite-01/preparation/configs/claude-invocation-comments-candidate-targeted.json"
+    },
+    {
+      "global_order": 143,
+      "order": 35,
+      "batch_id": "claude-native-iteration-01",
+      "provider": "claude",
+      "case_id": "invocation-comments",
+      "condition": "candidate-fuller",
+      "repetition": 3,
+      "config": "skill-studies/concise-writing/runs/baseline-iteration-suite-01/preparation/configs/claude-invocation-comments-candidate-fuller.json"
+    },
+    {
+      "global_order": 144,
+      "order": 36,
+      "batch_id": "claude-native-iteration-01",
+      "provider": "claude",
+      "case_id": "invocation-comments",
+      "condition": "original",
+      "repetition": 3,
+      "config": "skill-studies/concise-writing/runs/baseline-iteration-suite-01/preparation/configs/claude-invocation-comments-original.json"
+    }
+  ],
+  "automatic_retries": false
+}

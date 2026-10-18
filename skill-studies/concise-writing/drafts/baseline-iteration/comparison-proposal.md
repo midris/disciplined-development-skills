@@ -1,7 +1,7 @@
 # CW draft comparison proposal
 
-Status and dispatch authority: see the [protocol](../../protocol.md); it links the completed first E allocation and the next owner decision.
-The sequence and transition rules below retain the design executed for E; future suite forecasts are not spending authority.
+Status and dispatch authority: see the [protocol](../../protocol.md); it records the completed E diagnostic and approved remaining-suite collection.
+The sequence and transition rules below retain the design executed for E; the protocol records the subsequent remaining-suite authorization.
 The [protocol](../../protocol.md) owns spending and current action; the [design](../../../../plans/specs/2026-10-17-cw-baseline-iteration.md) owns the authoring approach.
 
 ## Sequence
@@ -97,5 +97,5 @@ The owner-selected evaluator is Opus 5.5; E qualified and used `claude-opus-5-5`
 Use the same declared settings for a future comparison, requalifying changed runtime assumptions before dispatch.
 No fallback model or retrospective effort switching is authorized.
 
-The full-suite direction is accepted; its final byte identities, reuse path and spending authorization depend on the next owner decision recorded in the protocol.
+The owner approved the remaining 144-subject/fourteen-evaluator reuse path on 2026-10-18; current authority is recorded only in the protocol. Final byte identities, schedules, runtime qualification and readiness precede dispatch.
 Do not compress instructions during this effectiveness comparison.

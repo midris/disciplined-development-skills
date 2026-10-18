@@ -37,5 +37,5 @@ The recipe encourages reader-useful organization without prescribing one templat
 The owner wants both drafts tested against the full eight-case suite.
 The [staged comparison proposal](comparison-proposal.md) recommends E first, with batch-level evaluation and any coherent revision before freezing the complete suite.
 It distinguishes the immediate 40-subject/two-evaluator diagnostic from full-suite costs, reuse of unchanged E observations and further iterations.
-The protocol owns current spending and decisions; full-suite spending remains a later decision.
+The protocol owns current spending and decisions; the owner-approved remaining-suite allocation is recorded there.
 After establishing effective behavior, freeze the selected candidate and test compression separately.

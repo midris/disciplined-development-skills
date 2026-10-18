@@ -36,7 +36,7 @@ The owner separately requested a clearer layout for the current CW/SSR studies; 
 
 ## Limits and information boundaries
 
-**Accepted outer limits: 296 subject, 14 evaluator, 4 authoring and 4 retry invocations (318 total), with a 20-hour active-work planning guideline.**
+**Accepted outer limits: 440 subject, 28 evaluator, 4 authoring and 4 retry invocations (476 total), with a 20-hour active-work planning guideline.**
 The [CW protocol](../skill-studies/concise-writing/protocol.md) records current spending, the completed first stage and the next owner decision.
 The invocation limits are ceilings, not a dispatch commitment. Owner clarification after round-10 review: “the budget is just a guideline”; this relaxes the active-time limit, not the authorized call count. The subsequent “ok, please proceed” resumes the eight remaining expansion attempts. The owner requested minimal real-model runs to establish the process before broader testing; the initial Sol-low pair and its two-call extension are complete. Pre-baseline development is now closed at four subject calls; its remaining additional-development slot stays unused. A new facet alone cannot reopen that phase. A diagnostic exception requires a named readiness defect and separate owner approval; no automatic full campaign follows.
 Track active sessions from Stage 1, including preparation, review and model-run waits; exclude recorded periods awaiting owner input.
@@ -287,7 +287,10 @@ Reserved bundles and revealing assessments stay entirely in the verified private
 - [x] Inventory/classify 525 files and 124 input signatures; publish relocated metadata in preservation commit `d6deb4fe80ff9302f6781976f06ba162f3b79f1c` while existing protocol paths remain valid.
 - [x] Group collection artifacts under runs, rebase current links/config paths, qualify unversioned historical references and repin reports to committed relocated indexes; old current locations are removed and all 124 payload signatures match.
 - [x] Verify all eighteen historical batches, thirteen reassessment records, 124 config payloads, local links, fixture checks and hooks; review the completed directory migration with one README per study and a shared entry page. See the [migration review and inventory](../reviews/2026-10-18-study-directory-layout.md).
-- [ ] Obtain the owner’s next full-suite allocation/freeze decision; the protocol owns current authority and the recommendation to retain both draft bodies unchanged for the remaining seven scenarios.
+- [x] Obtain the owner’s remaining full-suite allocation: 144 subjects plus fourteen Opus reviews, unchanged targeted/fuller drafts, three repetitions per condition/provider and reuse of the completed separate E stratum. See the protocol for authority, settings, ceilings and forecast.
+- [ ] Prepare and qualify the remaining-suite runtime, fixed schedules/configs, criterion applicability and controller; freeze committed identities and pass collection readiness before dispatch.
+- [ ] Collect and assess all 72 ordinary A/B/C subjects, then all 72 native N1–N4 subjects, retaining every attempt and charge without automatic retries or draft edits.
+- [ ] Complete six ordinary and eight native Opus-medium reviews, audit packet completeness and reconcile against active judgments before the next adoption/compression decision.
 - [ ] Establish effective behavior on the relevant fixed cases and both providers, then test instruction compression separately and present an adoption decision.
 - [ ] When SSR resumes, revisit the loaded-failure baseline decision in the [revised proposal](../skill-studies/sweeping-stale-references/rewrite-diagnosis.md#proposed-allocation-owner-decision-required). The owner explicitly deferred this decision until then; the withdrawn no-SSR-success stop rule does not authorize dispatch.
 - [ ] Resolve the parked SSR context-reading cost and matching-heading wording concerns, review the whole draft and relative call allocation, then freeze and qualify only approved scope.

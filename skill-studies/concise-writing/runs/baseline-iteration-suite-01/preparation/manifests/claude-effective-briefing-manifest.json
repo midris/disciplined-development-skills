@@ -1,0 +1,155 @@
+{
+  "format_version": "1",
+  "manifest_id": "cw-claude-effective-briefing-iteration-01",
+  "study_id": "concise-writing",
+  "case_id": "effective-briefing",
+  "status": "draft",
+  "created_at": "2026-10-18T00:00:00Z",
+  "source_revision": "",
+  "authorities": {
+    "spec": {
+      "path": "plans/specs/2026-09-11-model-driven-skill-testing-framework.md",
+      "sha256": "684d76df079a1359f998a06f64c98e6234fdb85c71af0969ba99bfa176521708",
+      "version": null
+    },
+    "protocol": {
+      "path": "skill-studies/concise-writing/protocol.md",
+      "sha256": "ae47cb6ec194a3a9c56b164e35c18222d5e3acc31cb61b057163042fb10ed899",
+      "version": "1"
+    },
+    "format_contract": {
+      "path": "skill-studies/formats/companion-formats.md",
+      "sha256": "a90ca386d0b267632b01d8cd0bce8ba4bb4010999c3481e74a318b4d17675e40",
+      "version": "1"
+    },
+    "execution_result_schema": {
+      "path": "skill-studies/formats/execution-result-v2.schema.json",
+      "sha256": "81902ed03e807804404c0d6ba7a0092a1c311c9eef45ee88c89708ce50d7c2c2",
+      "version": "2"
+    },
+    "policy": {
+      "path": "skill-studies/concise-writing/runs/suite-2026-09-27/preparation/assessment-policy.txt",
+      "sha256": "9f8125d86d72a368cc12bdbc4c64cc1d7ee188f604fc13130dcd9f8313981c33",
+      "version": "CW-expanded-1"
+    },
+    "criteria": [
+      {
+        "path": "skill-studies/concise-writing/runs/baseline-iteration-suite-01/preparation/criteria/effective-briefing.md",
+        "sha256": "c362db71d9f56a8430376630933ee5feda6a60b27fce230706e3de3aa0eb9541",
+        "version": "6"
+      }
+    ]
+  },
+  "conditions": [
+    {
+      "id": "control",
+      "configuration": {
+        "path": "skill-studies/concise-writing/runs/baseline-iteration-suite-01/preparation/configs/claude-effective-briefing-control.json",
+        "sha256": "dd7c885094366c8cc70c5b837fb68aa60796acbd06286017e535ef134b5cb111",
+        "version": "0.2"
+      },
+      "target_skill": null
+    },
+    {
+      "id": "original",
+      "configuration": {
+        "path": "skill-studies/concise-writing/runs/baseline-iteration-suite-01/preparation/configs/claude-effective-briefing-original.json",
+        "sha256": "248847377b22236d64d562bc05776ba90a61593372db1c2dda2f55fe62991199",
+        "version": "0.2"
+      },
+      "target_skill": "skill-studies/concise-writing/cases/skill-original/SKILL.md"
+    },
+    {
+      "id": "candidate-targeted",
+      "configuration": {
+        "path": "skill-studies/concise-writing/runs/baseline-iteration-suite-01/preparation/configs/claude-effective-briefing-candidate-targeted.json",
+        "sha256": "e01237c9f42b45d837f0a2efd1091f01e8666983fcf41ec4c5cd51d402e1e572",
+        "version": "0.2"
+      },
+      "target_skill": "skill-studies/concise-writing/drafts/baseline-iteration/targeted/SKILL.md"
+    },
+    {
+      "id": "candidate-fuller",
+      "configuration": {
+        "path": "skill-studies/concise-writing/runs/baseline-iteration-suite-01/preparation/configs/claude-effective-briefing-candidate-fuller.json",
+        "sha256": "9609d2beb7ecf80df3a04d6341e518ca01e595969b03229fa6880426b4a6d7fc",
+        "version": "0.2"
+      },
+      "target_skill": "skill-studies/concise-writing/drafts/baseline-iteration/fuller/SKILL.md"
+    }
+  ],
+  "subject_sources": [
+    {
+      "path": "skill-studies/concise-writing/cases/effective-briefing/fixture/report.md",
+      "sha256": "93c23afd44aab52dfcd2bca53f3db0020a41f650d46d4c59a09595539dc72491",
+      "version": null
+    },
+    {
+      "path": "skill-studies/concise-writing/cases/effective-briefing/task.md",
+      "sha256": "fbf576b5f00e154e6ee4618285d96980b1858de992e5390a1e83cf9b03cb1796",
+      "version": null
+    },
+    {
+      "path": "skill-studies/concise-writing/cases/skill-original/SKILL.md",
+      "sha256": "4d12a2eb475c6b2ef57e2300c8c07af3f59c1e07b2b82695a3b7669eee1d6d72",
+      "version": null
+    },
+    {
+      "path": "skill-studies/concise-writing/drafts/baseline-iteration/fuller/SKILL.md",
+      "sha256": "8efd6aa9f094c3cf468b932f676cf77fc57f58d72f0b17cc7bd8671815379a98",
+      "version": null
+    },
+    {
+      "path": "skill-studies/concise-writing/drafts/baseline-iteration/targeted/SKILL.md",
+      "sha256": "b39e589a606aadbeefd33b991e3350fc213d355828062b5f80ff7d274734b81f",
+      "version": null
+    },
+    {
+      "path": "skill-studies/concise-writing/prompt-control.md",
+      "sha256": "833ee4acdfe9f3e3592ed900a7d6f9212d93bc223c8ccccaee69cb53b4738eaa",
+      "version": null
+    },
+    {
+      "path": "skill-studies/concise-writing/runs/suite-2026-09-27/preparation/claude-original-prompt.md",
+      "sha256": "c72703762cfa9b2be16c09550e27b534fd378c68150004b8d039cbcc499df6bd",
+      "version": null
+    }
+  ],
+  "controller_only": [
+    {
+      "path": "skill-studies/concise-writing/runs/baseline-iteration-suite-01/preparation/schedule.json",
+      "sha256": "d865aea5b1fd4bc2f47df358180094c853cd2b0300be134a688c5096aabaa276",
+      "version": null
+    },
+    {
+      "path": "skill-studies/concise-writing/runs/baseline-iteration-suite-01/preparation/runtime_setup.py",
+      "sha256": "91c8a2a5fccaa22affc662fe8824a2502be8e373e363520f21033a25838afdb2",
+      "version": null
+    },
+    {
+      "path": "skill-studies/concise-writing/runs/baseline-iteration-suite-01/preparation/runtime-identities.json",
+      "sha256": "a6c69f420c5c03faf8385eb2b2c1cbf5523312a8ec47688dcc8bfd20e47a9c3d",
+      "version": null
+    },
+    {
+      "path": "skill-studies/concise-writing/runs/baseline-iteration-suite-01/preparation/collect_one.py",
+      "sha256": "1b1090f78a8aa7a69599b37e9b39c01f9475ceb855a04ec3e6682078dcc1cfd3",
+      "version": null
+    },
+    {
+      "path": "skill-studies/concise-writing/runs/baseline-iteration-suite-01/preparation/README.md",
+      "sha256": "d1f0870e010fc655fa2b8bd7d38fb7d69b3f39fa14c17e45c28faf8a0ead68a5",
+      "version": null
+    },
+    {
+      "path": "skill-studies/concise-writing/drafts/baseline-iteration/comparison-proposal.md",
+      "sha256": "4f01813a000a42e4601beebaae1165021156afb228afc985b0bf2ee7846d7892",
+      "version": null
+    },
+    {
+      "path": "skill-studies/concise-writing/runs/baseline-iteration-suite-01/preparation/inspect_one.py",
+      "sha256": "d55b441e3c0fcf352ee0974419300cc94d938b87a50e9c96bb6f0d648f3aa604",
+      "version": null
+    }
+  ]
+}

@@ -1,0 +1,25 @@
+{
+  "schema_version": "0.2",
+  "id": "cw-suite-claude-invocation-tighten-candidate-fuller",
+  "prompt": "../../../suite-2026-09-27/preparation/native-prompt.md",
+  "fixtures": [
+    {
+      "source": "../../../../cases/agent-recommendation/fixture/report.md",
+      "target": "report.md"
+    },
+    {
+      "source": "../../../../cases/agent-recommendation/task.md",
+      "target": "TASK.md"
+    },
+    {
+      "source": "../../../../drafts/baseline-iteration/fuller/SKILL.md",
+      "target": ".claude/skills/concise-writing/SKILL.md"
+    }
+  ],
+  "execution": {
+    "provider": "claude",
+    "model": "claude-sonnet-5",
+    "effort": "low",
+    "permissions": "workspace-write"
+  }
+}

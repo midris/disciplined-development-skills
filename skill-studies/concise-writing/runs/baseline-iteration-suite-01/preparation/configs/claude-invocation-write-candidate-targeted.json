@@ -1,0 +1,25 @@
+{
+  "schema_version": "0.2",
+  "id": "cw-suite-claude-invocation-write-candidate-targeted",
+  "prompt": "../../../suite-2026-09-27/preparation/native-prompt.md",
+  "fixtures": [
+    {
+      "source": "../../../../cases/invocation-write/fixture/notes.md",
+      "target": "notes.md"
+    },
+    {
+      "source": "../../../../cases/invocation-write/task.md",
+      "target": "TASK.md"
+    },
+    {
+      "source": "../../../../drafts/baseline-iteration/targeted/SKILL.md",
+      "target": ".claude/skills/concise-writing/SKILL.md"
+    }
+  ],
+  "execution": {
+    "provider": "claude",
+    "model": "claude-sonnet-5",
+    "effort": "low",
+    "permissions": "workspace-write"
+  }
+}

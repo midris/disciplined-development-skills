@@ -3,9 +3,12 @@
 Format version: `1`
 Study ID: `concise-writing`
 Status: baseline collection and cross-model review are complete; the owner selected the original CW as the development base and authorized preparation of effectiveness-first edits. Adoption remains deferred.
-Current action: owner decision on the remaining full-suite allocation for the unchanged targeted/fuller drafts; no new model calls are queued.
+Current action: prepare, qualify and freeze the owner-approved remaining full-suite comparison; then collect A/B/C followed by N1–N4 and complete the grouped Opus reviews. No draft edits or automatic retries.
 The approved [core/runs directory layout](../../plans/specs/2026-10-18-study-directory-layout.md) is implemented and verified for both studies; [navigation](README.md) separates core guidance from collected evidence.
-The reassessment is committed/pushed at `3ba9169ee0de0db44e4014c31fbccb3abc921a94`. Next tests are A/B/C, then N1–N4 for the unchanged new drafts; E is complete and the remaining allocation is not yet authorized.
+On 2026-10-18 the owner replied “ok, let’s do it” to the concrete remaining allocation of 144 subject calls plus fourteen evaluator calls. This accepts unchanged targeted/fuller bodies, fresh original/control comparisons, three repetitions per selected condition/provider and reuse of the separate completed E stratum while input/runtime qualification holds.
+The authorized sequence is 72 ordinary A/B/C subjects, then 72 native N1–N4 subjects, plus six ordinary and eight native Opus 5.5 medium reviews.
+Combined ceilings rise from 296 to 440 subject and fourteen to twenty-eight evaluator calls; authoring/retry ceilings remain four each. No new SSR calls, automatic retry, further wording iteration or adoption is authorized.
+The approved remaining forecast is 390–540 active minutes, including preparation, qualification, collection, direct assessment, grouped review and reconciliation. The active-time figure remains a planning guideline.
 Under owner-authorized CW-E-contact-interpretation-1, thirteen prior E failures become passes; explicit recording remains a precision observation rather than a demonstrated functional gap.
 The original result records and Fable/Opus judgments remain historical evidence; the versioned reassessment index owns the superseding E judgments.
 Both E attempt indexes identify complete committed result records; the [Codex assessment](runs/baseline-iteration-e-01/codex-e-iteration-01-assessment.md) and [Claude batch assessment](runs/baseline-iteration-e-01/claude-e-iteration-01-assessment.md) summarize them.
@@ -16,7 +19,7 @@ The combined draft/proposal review is resolved and preparation commit `c8b8c3b` 
 On 2026-10-18 the owner authorized the first-stage 40 subject and two evaluator calls: “do a consistency pass over the skills rewrites, commit and push any changes, then start the testing”.
 The subsequent external-review request was resolved before dispatch; the [combined review](../../reviews/2026-10-18-cw-draft-consistency-review.md) records dispositions and final verification.
 The active assessor is this Codex controller; the separate Opus 5.5 medium reviewer is cross-family relative to it.
-Combined ceilings are 296 subject and 14 evaluator; no automatic retry, additional revision round or full-suite call allocation follows.
+The first E allocation used ceilings of 296 subject and fourteen evaluator; it is complete. Current remaining-suite authority is recorded above.
 The [evaluation record](runs/cross-model-evaluation-01/README.md) owns method and evidence: all 136 CW outputs were reviewed through Fable 5.1 at medium effort, in twelve primary sessions plus one owner-approved correction from the retry pool.
 The incomplete original Codex E review remains retained; the correction closes its missing-input gap without new subject runs.
 SSR evaluation remains deferred until its rewrite.
@@ -551,6 +554,218 @@ Evidence goes to the existing owner-accepted single-host private store under `e-
 | 20 | document-addition | original | 5 | `skill-studies/concise-writing/drafts/baseline-iteration/testing/configs/claude-original.json` |
 
 
+### Remaining-suite comparison: codex-ordinary-iteration-01
+
+Batch: codex-ordinary-iteration-01
+Scope: 36 sequential attempts; three repetitions per condition/case.
+Authority: approved 144-subject remaining-suite allocation recorded at the protocol opening; no automatic retries or draft edits.
+Inputs and criteria: [collection preparation](runs/baseline-iteration-suite-01/preparation/README.md), with one committed case/provider manifest and applicability card per case.
+Manifests: [agent-recommendation](runs/baseline-iteration-suite-01/preparation/manifests/codex-agent-recommendation-manifest.json), [effective-briefing](runs/baseline-iteration-suite-01/preparation/manifests/codex-effective-briefing-manifest.json), [long-handoff](runs/baseline-iteration-suite-01/preparation/manifests/codex-long-handoff-manifest.json).
+Runtime: unchanged qualified CLI/model/toolchain from E, rechecked before dispatch; explicit-load and native strata remain separate.
+Include all valid-setup executions regardless of outcome; descriptive per-factor outcomes, not a population reliability threshold. No automatic retry; disclose exclusions, uncertainty and unattempted slots.
+Stop for infrastructure/capture/retention failure, unexpected guidance, drift or uncertain charge; register every attempt before the next dispatch.
+Record: [attempt index](runs/baseline-iteration-suite-01/codex-ordinary-iteration-01-run-index.json).
+Global ordering: all 72 ordinary attempts precede all 72 native attempts; the [schedule](runs/baseline-iteration-suite-01/preparation/schedule.json) fixes provider/case/condition order.
+
+| Order | Case | Condition | Repetition | CONFIG |
+| ---: | --- | --- | ---: | --- |
+| 1 | agent-recommendation | control | 1 | `skill-studies/concise-writing/runs/baseline-iteration-suite-01/preparation/configs/codex-agent-recommendation-control.json` |
+| 2 | agent-recommendation | original | 1 | `skill-studies/concise-writing/runs/baseline-iteration-suite-01/preparation/configs/codex-agent-recommendation-original.json` |
+| 3 | agent-recommendation | candidate-targeted | 1 | `skill-studies/concise-writing/runs/baseline-iteration-suite-01/preparation/configs/codex-agent-recommendation-candidate-targeted.json` |
+| 4 | agent-recommendation | candidate-fuller | 1 | `skill-studies/concise-writing/runs/baseline-iteration-suite-01/preparation/configs/codex-agent-recommendation-candidate-fuller.json` |
+| 5 | agent-recommendation | original | 2 | `skill-studies/concise-writing/runs/baseline-iteration-suite-01/preparation/configs/codex-agent-recommendation-original.json` |
+| 6 | agent-recommendation | candidate-targeted | 2 | `skill-studies/concise-writing/runs/baseline-iteration-suite-01/preparation/configs/codex-agent-recommendation-candidate-targeted.json` |
+| 7 | agent-recommendation | candidate-fuller | 2 | `skill-studies/concise-writing/runs/baseline-iteration-suite-01/preparation/configs/codex-agent-recommendation-candidate-fuller.json` |
+| 8 | agent-recommendation | control | 2 | `skill-studies/concise-writing/runs/baseline-iteration-suite-01/preparation/configs/codex-agent-recommendation-control.json` |
+| 9 | agent-recommendation | candidate-targeted | 3 | `skill-studies/concise-writing/runs/baseline-iteration-suite-01/preparation/configs/codex-agent-recommendation-candidate-targeted.json` |
+| 10 | agent-recommendation | candidate-fuller | 3 | `skill-studies/concise-writing/runs/baseline-iteration-suite-01/preparation/configs/codex-agent-recommendation-candidate-fuller.json` |
+| 11 | agent-recommendation | control | 3 | `skill-studies/concise-writing/runs/baseline-iteration-suite-01/preparation/configs/codex-agent-recommendation-control.json` |
+| 12 | agent-recommendation | original | 3 | `skill-studies/concise-writing/runs/baseline-iteration-suite-01/preparation/configs/codex-agent-recommendation-original.json` |
+| 13 | effective-briefing | original | 1 | `skill-studies/concise-writing/runs/baseline-iteration-suite-01/preparation/configs/codex-effective-briefing-original.json` |
+| 14 | effective-briefing | candidate-targeted | 1 | `skill-studies/concise-writing/runs/baseline-iteration-suite-01/preparation/configs/codex-effective-briefing-candidate-targeted.json` |
+| 15 | effective-briefing | candidate-fuller | 1 | `skill-studies/concise-writing/runs/baseline-iteration-suite-01/preparation/configs/codex-effective-briefing-candidate-fuller.json` |
+| 16 | effective-briefing | control | 1 | `skill-studies/concise-writing/runs/baseline-iteration-suite-01/preparation/configs/codex-effective-briefing-control.json` |
+| 17 | effective-briefing | candidate-targeted | 2 | `skill-studies/concise-writing/runs/baseline-iteration-suite-01/preparation/configs/codex-effective-briefing-candidate-targeted.json` |
+| 18 | effective-briefing | candidate-fuller | 2 | `skill-studies/concise-writing/runs/baseline-iteration-suite-01/preparation/configs/codex-effective-briefing-candidate-fuller.json` |
+| 19 | effective-briefing | control | 2 | `skill-studies/concise-writing/runs/baseline-iteration-suite-01/preparation/configs/codex-effective-briefing-control.json` |
+| 20 | effective-briefing | original | 2 | `skill-studies/concise-writing/runs/baseline-iteration-suite-01/preparation/configs/codex-effective-briefing-original.json` |
+| 21 | effective-briefing | candidate-fuller | 3 | `skill-studies/concise-writing/runs/baseline-iteration-suite-01/preparation/configs/codex-effective-briefing-candidate-fuller.json` |
+| 22 | effective-briefing | control | 3 | `skill-studies/concise-writing/runs/baseline-iteration-suite-01/preparation/configs/codex-effective-briefing-control.json` |
+| 23 | effective-briefing | original | 3 | `skill-studies/concise-writing/runs/baseline-iteration-suite-01/preparation/configs/codex-effective-briefing-original.json` |
+| 24 | effective-briefing | candidate-targeted | 3 | `skill-studies/concise-writing/runs/baseline-iteration-suite-01/preparation/configs/codex-effective-briefing-candidate-targeted.json` |
+| 25 | long-handoff | candidate-targeted | 1 | `skill-studies/concise-writing/runs/baseline-iteration-suite-01/preparation/configs/codex-long-handoff-candidate-targeted.json` |
+| 26 | long-handoff | candidate-fuller | 1 | `skill-studies/concise-writing/runs/baseline-iteration-suite-01/preparation/configs/codex-long-handoff-candidate-fuller.json` |
+| 27 | long-handoff | control | 1 | `skill-studies/concise-writing/runs/baseline-iteration-suite-01/preparation/configs/codex-long-handoff-control.json` |
+| 28 | long-handoff | original | 1 | `skill-studies/concise-writing/runs/baseline-iteration-suite-01/preparation/configs/codex-long-handoff-original.json` |
+| 29 | long-handoff | candidate-fuller | 2 | `skill-studies/concise-writing/runs/baseline-iteration-suite-01/preparation/configs/codex-long-handoff-candidate-fuller.json` |
+| 30 | long-handoff | control | 2 | `skill-studies/concise-writing/runs/baseline-iteration-suite-01/preparation/configs/codex-long-handoff-control.json` |
+| 31 | long-handoff | original | 2 | `skill-studies/concise-writing/runs/baseline-iteration-suite-01/preparation/configs/codex-long-handoff-original.json` |
+| 32 | long-handoff | candidate-targeted | 2 | `skill-studies/concise-writing/runs/baseline-iteration-suite-01/preparation/configs/codex-long-handoff-candidate-targeted.json` |
+| 33 | long-handoff | control | 3 | `skill-studies/concise-writing/runs/baseline-iteration-suite-01/preparation/configs/codex-long-handoff-control.json` |
+| 34 | long-handoff | original | 3 | `skill-studies/concise-writing/runs/baseline-iteration-suite-01/preparation/configs/codex-long-handoff-original.json` |
+| 35 | long-handoff | candidate-targeted | 3 | `skill-studies/concise-writing/runs/baseline-iteration-suite-01/preparation/configs/codex-long-handoff-candidate-targeted.json` |
+| 36 | long-handoff | candidate-fuller | 3 | `skill-studies/concise-writing/runs/baseline-iteration-suite-01/preparation/configs/codex-long-handoff-candidate-fuller.json` |
+
+
+### Remaining-suite comparison: claude-ordinary-iteration-01
+
+Batch: claude-ordinary-iteration-01
+Scope: 36 sequential attempts; three repetitions per condition/case.
+Authority: approved 144-subject remaining-suite allocation recorded at the protocol opening; no automatic retries or draft edits.
+Inputs and criteria: [collection preparation](runs/baseline-iteration-suite-01/preparation/README.md), with one committed case/provider manifest and applicability card per case.
+Manifests: [agent-recommendation](runs/baseline-iteration-suite-01/preparation/manifests/claude-agent-recommendation-manifest.json), [effective-briefing](runs/baseline-iteration-suite-01/preparation/manifests/claude-effective-briefing-manifest.json), [long-handoff](runs/baseline-iteration-suite-01/preparation/manifests/claude-long-handoff-manifest.json).
+Runtime: unchanged qualified CLI/model/toolchain from E, rechecked before dispatch; explicit-load and native strata remain separate.
+Include all valid-setup executions regardless of outcome; descriptive per-factor outcomes, not a population reliability threshold. No automatic retry; disclose exclusions, uncertainty and unattempted slots.
+Stop for infrastructure/capture/retention failure, unexpected guidance, drift or uncertain charge; register every attempt before the next dispatch.
+Record: [attempt index](runs/baseline-iteration-suite-01/claude-ordinary-iteration-01-run-index.json).
+Global ordering: all 72 ordinary attempts precede all 72 native attempts; the [schedule](runs/baseline-iteration-suite-01/preparation/schedule.json) fixes provider/case/condition order.
+
+| Order | Case | Condition | Repetition | CONFIG |
+| ---: | --- | --- | ---: | --- |
+| 1 | agent-recommendation | candidate-targeted | 1 | `skill-studies/concise-writing/runs/baseline-iteration-suite-01/preparation/configs/claude-agent-recommendation-candidate-targeted.json` |
+| 2 | agent-recommendation | candidate-fuller | 1 | `skill-studies/concise-writing/runs/baseline-iteration-suite-01/preparation/configs/claude-agent-recommendation-candidate-fuller.json` |
+| 3 | agent-recommendation | control | 1 | `skill-studies/concise-writing/runs/baseline-iteration-suite-01/preparation/configs/claude-agent-recommendation-control.json` |
+| 4 | agent-recommendation | original | 1 | `skill-studies/concise-writing/runs/baseline-iteration-suite-01/preparation/configs/claude-agent-recommendation-original.json` |
+| 5 | agent-recommendation | candidate-fuller | 2 | `skill-studies/concise-writing/runs/baseline-iteration-suite-01/preparation/configs/claude-agent-recommendation-candidate-fuller.json` |
+| 6 | agent-recommendation | control | 2 | `skill-studies/concise-writing/runs/baseline-iteration-suite-01/preparation/configs/claude-agent-recommendation-control.json` |
+| 7 | agent-recommendation | original | 2 | `skill-studies/concise-writing/runs/baseline-iteration-suite-01/preparation/configs/claude-agent-recommendation-original.json` |
+| 8 | agent-recommendation | candidate-targeted | 2 | `skill-studies/concise-writing/runs/baseline-iteration-suite-01/preparation/configs/claude-agent-recommendation-candidate-targeted.json` |
+| 9 | agent-recommendation | control | 3 | `skill-studies/concise-writing/runs/baseline-iteration-suite-01/preparation/configs/claude-agent-recommendation-control.json` |
+| 10 | agent-recommendation | original | 3 | `skill-studies/concise-writing/runs/baseline-iteration-suite-01/preparation/configs/claude-agent-recommendation-original.json` |
+| 11 | agent-recommendation | candidate-targeted | 3 | `skill-studies/concise-writing/runs/baseline-iteration-suite-01/preparation/configs/claude-agent-recommendation-candidate-targeted.json` |
+| 12 | agent-recommendation | candidate-fuller | 3 | `skill-studies/concise-writing/runs/baseline-iteration-suite-01/preparation/configs/claude-agent-recommendation-candidate-fuller.json` |
+| 13 | effective-briefing | candidate-fuller | 1 | `skill-studies/concise-writing/runs/baseline-iteration-suite-01/preparation/configs/claude-effective-briefing-candidate-fuller.json` |
+| 14 | effective-briefing | control | 1 | `skill-studies/concise-writing/runs/baseline-iteration-suite-01/preparation/configs/claude-effective-briefing-control.json` |
+| 15 | effective-briefing | original | 1 | `skill-studies/concise-writing/runs/baseline-iteration-suite-01/preparation/configs/claude-effective-briefing-original.json` |
+| 16 | effective-briefing | candidate-targeted | 1 | `skill-studies/concise-writing/runs/baseline-iteration-suite-01/preparation/configs/claude-effective-briefing-candidate-targeted.json` |
+| 17 | effective-briefing | control | 2 | `skill-studies/concise-writing/runs/baseline-iteration-suite-01/preparation/configs/claude-effective-briefing-control.json` |
+| 18 | effective-briefing | original | 2 | `skill-studies/concise-writing/runs/baseline-iteration-suite-01/preparation/configs/claude-effective-briefing-original.json` |
+| 19 | effective-briefing | candidate-targeted | 2 | `skill-studies/concise-writing/runs/baseline-iteration-suite-01/preparation/configs/claude-effective-briefing-candidate-targeted.json` |
+| 20 | effective-briefing | candidate-fuller | 2 | `skill-studies/concise-writing/runs/baseline-iteration-suite-01/preparation/configs/claude-effective-briefing-candidate-fuller.json` |
+| 21 | effective-briefing | original | 3 | `skill-studies/concise-writing/runs/baseline-iteration-suite-01/preparation/configs/claude-effective-briefing-original.json` |
+| 22 | effective-briefing | candidate-targeted | 3 | `skill-studies/concise-writing/runs/baseline-iteration-suite-01/preparation/configs/claude-effective-briefing-candidate-targeted.json` |
+| 23 | effective-briefing | candidate-fuller | 3 | `skill-studies/concise-writing/runs/baseline-iteration-suite-01/preparation/configs/claude-effective-briefing-candidate-fuller.json` |
+| 24 | effective-briefing | control | 3 | `skill-studies/concise-writing/runs/baseline-iteration-suite-01/preparation/configs/claude-effective-briefing-control.json` |
+| 25 | long-handoff | control | 1 | `skill-studies/concise-writing/runs/baseline-iteration-suite-01/preparation/configs/claude-long-handoff-control.json` |
+| 26 | long-handoff | original | 1 | `skill-studies/concise-writing/runs/baseline-iteration-suite-01/preparation/configs/claude-long-handoff-original.json` |
+| 27 | long-handoff | candidate-targeted | 1 | `skill-studies/concise-writing/runs/baseline-iteration-suite-01/preparation/configs/claude-long-handoff-candidate-targeted.json` |
+| 28 | long-handoff | candidate-fuller | 1 | `skill-studies/concise-writing/runs/baseline-iteration-suite-01/preparation/configs/claude-long-handoff-candidate-fuller.json` |
+| 29 | long-handoff | original | 2 | `skill-studies/concise-writing/runs/baseline-iteration-suite-01/preparation/configs/claude-long-handoff-original.json` |
+| 30 | long-handoff | candidate-targeted | 2 | `skill-studies/concise-writing/runs/baseline-iteration-suite-01/preparation/configs/claude-long-handoff-candidate-targeted.json` |
+| 31 | long-handoff | candidate-fuller | 2 | `skill-studies/concise-writing/runs/baseline-iteration-suite-01/preparation/configs/claude-long-handoff-candidate-fuller.json` |
+| 32 | long-handoff | control | 2 | `skill-studies/concise-writing/runs/baseline-iteration-suite-01/preparation/configs/claude-long-handoff-control.json` |
+| 33 | long-handoff | candidate-targeted | 3 | `skill-studies/concise-writing/runs/baseline-iteration-suite-01/preparation/configs/claude-long-handoff-candidate-targeted.json` |
+| 34 | long-handoff | candidate-fuller | 3 | `skill-studies/concise-writing/runs/baseline-iteration-suite-01/preparation/configs/claude-long-handoff-candidate-fuller.json` |
+| 35 | long-handoff | control | 3 | `skill-studies/concise-writing/runs/baseline-iteration-suite-01/preparation/configs/claude-long-handoff-control.json` |
+| 36 | long-handoff | original | 3 | `skill-studies/concise-writing/runs/baseline-iteration-suite-01/preparation/configs/claude-long-handoff-original.json` |
+
+
+### Remaining-suite comparison: codex-native-iteration-01
+
+Batch: codex-native-iteration-01
+Scope: 36 sequential attempts; three repetitions per condition/case.
+Authority: approved 144-subject remaining-suite allocation recorded at the protocol opening; no automatic retries or draft edits.
+Inputs and criteria: [collection preparation](runs/baseline-iteration-suite-01/preparation/README.md), with one committed case/provider manifest and applicability card per case.
+Manifests: [invocation-tighten](runs/baseline-iteration-suite-01/preparation/manifests/codex-invocation-tighten-manifest.json), [invocation-write](runs/baseline-iteration-suite-01/preparation/manifests/codex-invocation-write-manifest.json), [invocation-nonprose](runs/baseline-iteration-suite-01/preparation/manifests/codex-invocation-nonprose-manifest.json), [invocation-comments](runs/baseline-iteration-suite-01/preparation/manifests/codex-invocation-comments-manifest.json).
+Runtime: unchanged qualified CLI/model/toolchain from E, rechecked before dispatch; explicit-load and native strata remain separate.
+Include all valid-setup executions regardless of outcome; descriptive per-factor outcomes, not a population reliability threshold. No automatic retry; disclose exclusions, uncertainty and unattempted slots.
+Stop for infrastructure/capture/retention failure, unexpected guidance, drift or uncertain charge; register every attempt before the next dispatch.
+Record: [attempt index](runs/baseline-iteration-suite-01/codex-native-iteration-01-run-index.json).
+Global ordering: all 72 ordinary attempts precede all 72 native attempts; the [schedule](runs/baseline-iteration-suite-01/preparation/schedule.json) fixes provider/case/condition order.
+
+| Order | Case | Condition | Repetition | CONFIG |
+| ---: | --- | --- | ---: | --- |
+| 1 | invocation-tighten | original | 1 | `skill-studies/concise-writing/runs/baseline-iteration-suite-01/preparation/configs/codex-invocation-tighten-original.json` |
+| 2 | invocation-tighten | candidate-targeted | 1 | `skill-studies/concise-writing/runs/baseline-iteration-suite-01/preparation/configs/codex-invocation-tighten-candidate-targeted.json` |
+| 3 | invocation-tighten | candidate-fuller | 1 | `skill-studies/concise-writing/runs/baseline-iteration-suite-01/preparation/configs/codex-invocation-tighten-candidate-fuller.json` |
+| 4 | invocation-tighten | candidate-targeted | 2 | `skill-studies/concise-writing/runs/baseline-iteration-suite-01/preparation/configs/codex-invocation-tighten-candidate-targeted.json` |
+| 5 | invocation-tighten | candidate-fuller | 2 | `skill-studies/concise-writing/runs/baseline-iteration-suite-01/preparation/configs/codex-invocation-tighten-candidate-fuller.json` |
+| 6 | invocation-tighten | original | 2 | `skill-studies/concise-writing/runs/baseline-iteration-suite-01/preparation/configs/codex-invocation-tighten-original.json` |
+| 7 | invocation-tighten | candidate-fuller | 3 | `skill-studies/concise-writing/runs/baseline-iteration-suite-01/preparation/configs/codex-invocation-tighten-candidate-fuller.json` |
+| 8 | invocation-tighten | original | 3 | `skill-studies/concise-writing/runs/baseline-iteration-suite-01/preparation/configs/codex-invocation-tighten-original.json` |
+| 9 | invocation-tighten | candidate-targeted | 3 | `skill-studies/concise-writing/runs/baseline-iteration-suite-01/preparation/configs/codex-invocation-tighten-candidate-targeted.json` |
+| 10 | invocation-write | candidate-targeted | 1 | `skill-studies/concise-writing/runs/baseline-iteration-suite-01/preparation/configs/codex-invocation-write-candidate-targeted.json` |
+| 11 | invocation-write | candidate-fuller | 1 | `skill-studies/concise-writing/runs/baseline-iteration-suite-01/preparation/configs/codex-invocation-write-candidate-fuller.json` |
+| 12 | invocation-write | original | 1 | `skill-studies/concise-writing/runs/baseline-iteration-suite-01/preparation/configs/codex-invocation-write-original.json` |
+| 13 | invocation-write | candidate-fuller | 2 | `skill-studies/concise-writing/runs/baseline-iteration-suite-01/preparation/configs/codex-invocation-write-candidate-fuller.json` |
+| 14 | invocation-write | original | 2 | `skill-studies/concise-writing/runs/baseline-iteration-suite-01/preparation/configs/codex-invocation-write-original.json` |
+| 15 | invocation-write | candidate-targeted | 2 | `skill-studies/concise-writing/runs/baseline-iteration-suite-01/preparation/configs/codex-invocation-write-candidate-targeted.json` |
+| 16 | invocation-write | original | 3 | `skill-studies/concise-writing/runs/baseline-iteration-suite-01/preparation/configs/codex-invocation-write-original.json` |
+| 17 | invocation-write | candidate-targeted | 3 | `skill-studies/concise-writing/runs/baseline-iteration-suite-01/preparation/configs/codex-invocation-write-candidate-targeted.json` |
+| 18 | invocation-write | candidate-fuller | 3 | `skill-studies/concise-writing/runs/baseline-iteration-suite-01/preparation/configs/codex-invocation-write-candidate-fuller.json` |
+| 19 | invocation-nonprose | candidate-fuller | 1 | `skill-studies/concise-writing/runs/baseline-iteration-suite-01/preparation/configs/codex-invocation-nonprose-candidate-fuller.json` |
+| 20 | invocation-nonprose | original | 1 | `skill-studies/concise-writing/runs/baseline-iteration-suite-01/preparation/configs/codex-invocation-nonprose-original.json` |
+| 21 | invocation-nonprose | candidate-targeted | 1 | `skill-studies/concise-writing/runs/baseline-iteration-suite-01/preparation/configs/codex-invocation-nonprose-candidate-targeted.json` |
+| 22 | invocation-nonprose | original | 2 | `skill-studies/concise-writing/runs/baseline-iteration-suite-01/preparation/configs/codex-invocation-nonprose-original.json` |
+| 23 | invocation-nonprose | candidate-targeted | 2 | `skill-studies/concise-writing/runs/baseline-iteration-suite-01/preparation/configs/codex-invocation-nonprose-candidate-targeted.json` |
+| 24 | invocation-nonprose | candidate-fuller | 2 | `skill-studies/concise-writing/runs/baseline-iteration-suite-01/preparation/configs/codex-invocation-nonprose-candidate-fuller.json` |
+| 25 | invocation-nonprose | candidate-targeted | 3 | `skill-studies/concise-writing/runs/baseline-iteration-suite-01/preparation/configs/codex-invocation-nonprose-candidate-targeted.json` |
+| 26 | invocation-nonprose | candidate-fuller | 3 | `skill-studies/concise-writing/runs/baseline-iteration-suite-01/preparation/configs/codex-invocation-nonprose-candidate-fuller.json` |
+| 27 | invocation-nonprose | original | 3 | `skill-studies/concise-writing/runs/baseline-iteration-suite-01/preparation/configs/codex-invocation-nonprose-original.json` |
+| 28 | invocation-comments | original | 1 | `skill-studies/concise-writing/runs/baseline-iteration-suite-01/preparation/configs/codex-invocation-comments-original.json` |
+| 29 | invocation-comments | candidate-targeted | 1 | `skill-studies/concise-writing/runs/baseline-iteration-suite-01/preparation/configs/codex-invocation-comments-candidate-targeted.json` |
+| 30 | invocation-comments | candidate-fuller | 1 | `skill-studies/concise-writing/runs/baseline-iteration-suite-01/preparation/configs/codex-invocation-comments-candidate-fuller.json` |
+| 31 | invocation-comments | candidate-targeted | 2 | `skill-studies/concise-writing/runs/baseline-iteration-suite-01/preparation/configs/codex-invocation-comments-candidate-targeted.json` |
+| 32 | invocation-comments | candidate-fuller | 2 | `skill-studies/concise-writing/runs/baseline-iteration-suite-01/preparation/configs/codex-invocation-comments-candidate-fuller.json` |
+| 33 | invocation-comments | original | 2 | `skill-studies/concise-writing/runs/baseline-iteration-suite-01/preparation/configs/codex-invocation-comments-original.json` |
+| 34 | invocation-comments | candidate-fuller | 3 | `skill-studies/concise-writing/runs/baseline-iteration-suite-01/preparation/configs/codex-invocation-comments-candidate-fuller.json` |
+| 35 | invocation-comments | original | 3 | `skill-studies/concise-writing/runs/baseline-iteration-suite-01/preparation/configs/codex-invocation-comments-original.json` |
+| 36 | invocation-comments | candidate-targeted | 3 | `skill-studies/concise-writing/runs/baseline-iteration-suite-01/preparation/configs/codex-invocation-comments-candidate-targeted.json` |
+
+
+### Remaining-suite comparison: claude-native-iteration-01
+
+Batch: claude-native-iteration-01
+Scope: 36 sequential attempts; three repetitions per condition/case.
+Authority: approved 144-subject remaining-suite allocation recorded at the protocol opening; no automatic retries or draft edits.
+Inputs and criteria: [collection preparation](runs/baseline-iteration-suite-01/preparation/README.md), with one committed case/provider manifest and applicability card per case.
+Manifests: [invocation-tighten](runs/baseline-iteration-suite-01/preparation/manifests/claude-invocation-tighten-manifest.json), [invocation-write](runs/baseline-iteration-suite-01/preparation/manifests/claude-invocation-write-manifest.json), [invocation-nonprose](runs/baseline-iteration-suite-01/preparation/manifests/claude-invocation-nonprose-manifest.json), [invocation-comments](runs/baseline-iteration-suite-01/preparation/manifests/claude-invocation-comments-manifest.json).
+Runtime: unchanged qualified CLI/model/toolchain from E, rechecked before dispatch; explicit-load and native strata remain separate.
+Include all valid-setup executions regardless of outcome; descriptive per-factor outcomes, not a population reliability threshold. No automatic retry; disclose exclusions, uncertainty and unattempted slots.
+Stop for infrastructure/capture/retention failure, unexpected guidance, drift or uncertain charge; register every attempt before the next dispatch.
+Record: [attempt index](runs/baseline-iteration-suite-01/claude-native-iteration-01-run-index.json).
+Global ordering: all 72 ordinary attempts precede all 72 native attempts; the [schedule](runs/baseline-iteration-suite-01/preparation/schedule.json) fixes provider/case/condition order.
+
+| Order | Case | Condition | Repetition | CONFIG |
+| ---: | --- | --- | ---: | --- |
+| 1 | invocation-tighten | candidate-fuller | 1 | `skill-studies/concise-writing/runs/baseline-iteration-suite-01/preparation/configs/claude-invocation-tighten-candidate-fuller.json` |
+| 2 | invocation-tighten | original | 1 | `skill-studies/concise-writing/runs/baseline-iteration-suite-01/preparation/configs/claude-invocation-tighten-original.json` |
+| 3 | invocation-tighten | candidate-targeted | 1 | `skill-studies/concise-writing/runs/baseline-iteration-suite-01/preparation/configs/claude-invocation-tighten-candidate-targeted.json` |
+| 4 | invocation-tighten | original | 2 | `skill-studies/concise-writing/runs/baseline-iteration-suite-01/preparation/configs/claude-invocation-tighten-original.json` |
+| 5 | invocation-tighten | candidate-targeted | 2 | `skill-studies/concise-writing/runs/baseline-iteration-suite-01/preparation/configs/claude-invocation-tighten-candidate-targeted.json` |
+| 6 | invocation-tighten | candidate-fuller | 2 | `skill-studies/concise-writing/runs/baseline-iteration-suite-01/preparation/configs/claude-invocation-tighten-candidate-fuller.json` |
+| 7 | invocation-tighten | candidate-targeted | 3 | `skill-studies/concise-writing/runs/baseline-iteration-suite-01/preparation/configs/claude-invocation-tighten-candidate-targeted.json` |
+| 8 | invocation-tighten | candidate-fuller | 3 | `skill-studies/concise-writing/runs/baseline-iteration-suite-01/preparation/configs/claude-invocation-tighten-candidate-fuller.json` |
+| 9 | invocation-tighten | original | 3 | `skill-studies/concise-writing/runs/baseline-iteration-suite-01/preparation/configs/claude-invocation-tighten-original.json` |
+| 10 | invocation-write | original | 1 | `skill-studies/concise-writing/runs/baseline-iteration-suite-01/preparation/configs/claude-invocation-write-original.json` |
+| 11 | invocation-write | candidate-targeted | 1 | `skill-studies/concise-writing/runs/baseline-iteration-suite-01/preparation/configs/claude-invocation-write-candidate-targeted.json` |
+| 12 | invocation-write | candidate-fuller | 1 | `skill-studies/concise-writing/runs/baseline-iteration-suite-01/preparation/configs/claude-invocation-write-candidate-fuller.json` |
+| 13 | invocation-write | candidate-targeted | 2 | `skill-studies/concise-writing/runs/baseline-iteration-suite-01/preparation/configs/claude-invocation-write-candidate-targeted.json` |
+| 14 | invocation-write | candidate-fuller | 2 | `skill-studies/concise-writing/runs/baseline-iteration-suite-01/preparation/configs/claude-invocation-write-candidate-fuller.json` |
+| 15 | invocation-write | original | 2 | `skill-studies/concise-writing/runs/baseline-iteration-suite-01/preparation/configs/claude-invocation-write-original.json` |
+| 16 | invocation-write | candidate-fuller | 3 | `skill-studies/concise-writing/runs/baseline-iteration-suite-01/preparation/configs/claude-invocation-write-candidate-fuller.json` |
+| 17 | invocation-write | original | 3 | `skill-studies/concise-writing/runs/baseline-iteration-suite-01/preparation/configs/claude-invocation-write-original.json` |
+| 18 | invocation-write | candidate-targeted | 3 | `skill-studies/concise-writing/runs/baseline-iteration-suite-01/preparation/configs/claude-invocation-write-candidate-targeted.json` |
+| 19 | invocation-nonprose | candidate-targeted | 1 | `skill-studies/concise-writing/runs/baseline-iteration-suite-01/preparation/configs/claude-invocation-nonprose-candidate-targeted.json` |
+| 20 | invocation-nonprose | candidate-fuller | 1 | `skill-studies/concise-writing/runs/baseline-iteration-suite-01/preparation/configs/claude-invocation-nonprose-candidate-fuller.json` |
+| 21 | invocation-nonprose | original | 1 | `skill-studies/concise-writing/runs/baseline-iteration-suite-01/preparation/configs/claude-invocation-nonprose-original.json` |
+| 22 | invocation-nonprose | candidate-fuller | 2 | `skill-studies/concise-writing/runs/baseline-iteration-suite-01/preparation/configs/claude-invocation-nonprose-candidate-fuller.json` |
+| 23 | invocation-nonprose | original | 2 | `skill-studies/concise-writing/runs/baseline-iteration-suite-01/preparation/configs/claude-invocation-nonprose-original.json` |
+| 24 | invocation-nonprose | candidate-targeted | 2 | `skill-studies/concise-writing/runs/baseline-iteration-suite-01/preparation/configs/claude-invocation-nonprose-candidate-targeted.json` |
+| 25 | invocation-nonprose | original | 3 | `skill-studies/concise-writing/runs/baseline-iteration-suite-01/preparation/configs/claude-invocation-nonprose-original.json` |
+| 26 | invocation-nonprose | candidate-targeted | 3 | `skill-studies/concise-writing/runs/baseline-iteration-suite-01/preparation/configs/claude-invocation-nonprose-candidate-targeted.json` |
+| 27 | invocation-nonprose | candidate-fuller | 3 | `skill-studies/concise-writing/runs/baseline-iteration-suite-01/preparation/configs/claude-invocation-nonprose-candidate-fuller.json` |
+| 28 | invocation-comments | candidate-fuller | 1 | `skill-studies/concise-writing/runs/baseline-iteration-suite-01/preparation/configs/claude-invocation-comments-candidate-fuller.json` |
+| 29 | invocation-comments | original | 1 | `skill-studies/concise-writing/runs/baseline-iteration-suite-01/preparation/configs/claude-invocation-comments-original.json` |
+| 30 | invocation-comments | candidate-targeted | 1 | `skill-studies/concise-writing/runs/baseline-iteration-suite-01/preparation/configs/claude-invocation-comments-candidate-targeted.json` |
+| 31 | invocation-comments | original | 2 | `skill-studies/concise-writing/runs/baseline-iteration-suite-01/preparation/configs/claude-invocation-comments-original.json` |
+| 32 | invocation-comments | candidate-targeted | 2 | `skill-studies/concise-writing/runs/baseline-iteration-suite-01/preparation/configs/claude-invocation-comments-candidate-targeted.json` |
+| 33 | invocation-comments | candidate-fuller | 2 | `skill-studies/concise-writing/runs/baseline-iteration-suite-01/preparation/configs/claude-invocation-comments-candidate-fuller.json` |
+| 34 | invocation-comments | candidate-targeted | 3 | `skill-studies/concise-writing/runs/baseline-iteration-suite-01/preparation/configs/claude-invocation-comments-candidate-targeted.json` |
+| 35 | invocation-comments | candidate-fuller | 3 | `skill-studies/concise-writing/runs/baseline-iteration-suite-01/preparation/configs/claude-invocation-comments-candidate-fuller.json` |
+| 36 | invocation-comments | original | 3 | `skill-studies/concise-writing/runs/baseline-iteration-suite-01/preparation/configs/claude-invocation-comments-original.json` |
+
+
 ## Storage and accounting
 
 Supplemental evaluator accounting: [evaluator ledger](runs/cross-model-evaluation-01/evaluator-run-index.json); these calls do not add subject repetitions.
@@ -573,13 +788,13 @@ Owner-accepted recovery decision for CW: single-host retention, as used for SSR,
 
 Combined accounting sources: closed SSR [pilot 01](../sweeping-stale-references/runs/pilot-01/pilot-run-index.json), [pilot 02](../sweeping-stale-references/runs/pilot-02/pilot-02-run-index.json), [semantic delivery](../sweeping-stale-references/runs/semantic-delivery-01/semantic-delivery-01-run-index.json), [core baseline](../sweeping-stale-references/runs/core-baseline-01/core-baseline-01-run-index.json), [comparison](../sweeping-stale-references/runs/comprehensive-comparison-01/comprehensive-comparison-01-run-index.json), the SSR [completed expansion](../sweeping-stale-references/runs/coverage-baseline-01/coverage-baseline-01-run-index.json), the SSR [completed comparison](../sweeping-stale-references/runs/comprehensive-comparison-02/comprehensive-comparison-02-run-index.json), the SSR [Claude smoke](../sweeping-stale-references/runs/claude-smoke-01/claude-smoke-01-run-index.json), the SSR [Claude comparison](../sweeping-stale-references/runs/claude-comparison-01/claude-comparison-01-run-index.json), the SSR [Opus invocation comparison](../sweeping-stale-references/runs/claude-opus-invocation-01/claude-opus-invocation-01-run-index.json), and both CW indexes above. Historical pilot links contribute accounting only; they are not reclassified or reassessed.
 The new E reviews use the [fixed review package](runs/baseline-iteration-e-01/evaluation/README.md) and [supplemental Opus accounting](runs/baseline-iteration-e-01/evaluation/evaluator-run-index.json).
-Dispatched calls are **296 subject, 14 evaluator, 0 authoring, 1 retry**; remaining outer capacity is **0 / 0 / 4 / 3** against the [active plan](../../plans/2026-09-11-model-driven-skill-testing.md#limits-and-information-boundaries). Both eight-call CW batches are spent. The owner authorized ten SSR expansion calls under ceiling 56; all ten are spent, including the excluded control, with no replacement or pool transfer. Comparison runner durations total 508.067 seconds; baseline durations remain 494.936 seconds, including setup and capture.
+Dispatched calls are **296 subject, 14 evaluator, 0 authoring, 1 retry**; remaining outer capacity is **144 / 14 / 4 / 3** against the [active plan](../../plans/2026-09-11-model-driven-skill-testing.md#limits-and-information-boundaries). Both eight-call CW batches are spent. The owner authorized ten SSR expansion calls under ceiling 56; all ten are spent, including the excluded control, with no replacement or pool transfer. Comparison runner durations total 508.067 seconds; baseline durations remain 494.936 seconds, including setup and capture.
 Owner clarification after round-10 review: “the budget is just a guideline”. The 1,200-minute figure below remains the planning baseline, not a collection stop; invocation ceilings and the authorized SSR scope is unchanged. Retain elapsed effort and forecast variance to expose process cost.
 
-Current combined accounting: **2,415 active minutes booked; 1,215 minutes above the historical 1,200-minute planning guideline**.
+Current combined accounting: **2,445 active minutes booked; 1,245 minutes above the historical 1,200-minute planning guideline**.
 These are rounded effort estimates, not stopwatch measurements or a separately timed category breakdown.
 Between-turn owner wait is excluded; runner durations are included once.
-The initial 104 calls and sixteen native third repetitions are spent; combined subject accounting is 296/296, with 0 E calls remaining.
+The initial 104 calls and sixteen native third repetitions are spent; combined subject accounting is 296/440, with 144 approved remaining-suite calls available and no E calls remaining.
 The supplemental work used 40 estimated active minutes against its 40-minute forecast; model waits are included once.
 
 | Work | Estimated active minutes |
@@ -662,7 +877,8 @@ The supplemental work used 40 estimated active minutes against its 40-minute for
 | Owner-authorized E contact reassessment, scope reconciliation and verification | 20 |
 | Study-layout inventory and core/runs migration proposal | 15 |
 | Approved study-directory migration, integrity checks and review | 60 |
-| **Total** | **2,415** |
+| Remaining-suite authorization, input preparation and runtime qualification | 30 |
+| **Total** | **2,445** |
 
 SSR expansion is complete. The prior 55-minute remaining forecast closed at 50 estimated minutes, including the additional shell correction; all ten subject calls are spent.
 The combined batch/recovery effort is 135 estimated minutes (45 initial checkpoint, 40 isolation correction, 50 resumption), 45 above the original 90-minute allowance. Separate round-9 review effort remains in the combined ledger above.
@@ -691,12 +907,12 @@ Subject collection and active-session assessment are complete; the owner subsequ
 
 | Work | Estimate | Basis |
 | --- | ---: | --- |
-| Remaining work in the completed E allocation | 0 | All forty subjects and both Opus reviews are complete; owner decision precedes any new editing/collection scope. |
-| **Total** | **0** | A further diagnostic or full-suite round needs a bounded estimate and new model-call authority. |
+| Remaining-suite preparation, qualification, collection, assessment and fourteen reviews | 390–540 | Owner-approved 144-subject/fourteen-evaluator reuse path; exact packet/input freeze precedes dispatch. |
+| **Total remaining forecast** | **390–540** | Completed E subjects/reviews are reused separately and add no new charge. |
 
 The E stage used 115 estimated active minutes against the 180-minute upper forecast, 65 below it: 35 preparation, 40 subject collection/assessment and 40 evaluator preparation/reconciliation.
 The two evaluator durations total 420.696 seconds (7.01 minutes), included once in those estimates.
-The [comparison proposal](drafts/baseline-iteration/comparison-proposal.md) retains future full-suite forecasts; it is not an additional allocation.
+The [comparison proposal](drafts/baseline-iteration/comparison-proposal.md) defines the approved reuse path; current authority and remaining forecast are recorded at the opening. Exact schedules, identities and collection readiness must be frozen before dispatch.
 
 The retrospective used 50 estimated active minutes against its 90-minute forecast, including overlapping waits once.
 All thirteen evaluator runner durations sum to 3,243.481 seconds (54.06 minutes); concurrent durations are not added again to booked controller effort.
@@ -724,7 +940,7 @@ The same interpretation corrects five earlier expanded E results; all 58 E obser
 The earlier claimed draft advantage and recording-specific structural-intervention recommendation are withdrawn.
 Both Opus sessions saw the wording difference; the Claude-output session already treated it as non-blocking, while the Codex-output session used the superseded stricter interpretation.
 Neither review is rewritten or claimed to have applied the later clarification.
-No consequential E regression remains that warrants a body edit; recommend keeping both drafts unchanged for the remaining seven scenarios, subject to the owner’s next decision and collection allocation.
+No consequential E regression remains that warrants a body edit; recommend keeping both drafts unchanged for the remaining seven scenarios, under the owner-approved remaining-suite allocation; runtime qualification and frozen inputs precede collection.
 Full-suite completion is not established by E alone; the unchanged live original remains the adoption base.
 The inventory-wrapper correction changes no raw output, task, criterion or model call and excludes no result.
 These are new runtime strata, not pooled historical counts; the live skill remains unchanged.

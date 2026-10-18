@@ -14,3 +14,5 @@ A completed record or an undispatched preparation directory supplies no authoriz
 - [CW retrospective cross-model evaluation](cross-model-evaluation-01/README.md)
 - [Historical CW skill-editing preparation](skill-editing-preparation/README.md)
 - [CW expanded and native suite](suite-2026-09-27/README.md)
+
+- [Baseline-derived remaining suite](baseline-iteration-suite-01/README.md): A/B/C and N1–N4 comparison.

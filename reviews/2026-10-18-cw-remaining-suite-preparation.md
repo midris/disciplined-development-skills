@@ -1,0 +1,31 @@
+# CW remaining-suite preparation review
+
+Scope: the owner-approved 144-subject/fourteen-evaluator reuse path in the [comparison design](../skill-studies/concise-writing/drafts/baseline-iteration/comparison-proposal.md), under the fresh framework and active plan.
+This is a controller self-review, not an independent or blinded review.
+The [protocol](../skill-studies/concise-writing/protocol.md) owns current authority and accounting; the [preparation](../skill-studies/concise-writing/runs/baseline-iteration-suite-01/preparation/README.md) fixes exact boundaries.
+
+All 48 executable configurations preserve their matched case's non-skill fixture bytes, prompt and execution settings.
+Only the assigned new skill bodies differ; originals, live skills and both draft bodies remain unchanged.
+Three repetitions cover every selected condition/provider/case, with 72 ordinary calls before 72 native calls.
+Four ordinary conditions over three repetitions cannot fully balance positions; the fixed rotation and that limitation are declared.
+Seven prospective criterion cards extend applicability and setup links only; their criterion meanings are preserved.
+The completed five-repetition E stratum remains separately identified under the accepted contact interpretation.
+Exact installed CLI/Python/Git binaries match E, and twelve fresh zero-model installed-policy, isolation and Opus native-reader transport checks pass.
+Production model identity remains a per-attempt check, without fallback.
+
+The new collector extends the case key in repeat protection and requires every prior retained receipt to be inspected before advancing.
+An exclusive per-slot claim blocks accidental redispatch after interruption.
+The inventory wrapper is exercised through the actual reference consumer.
+Four focused tests passed after observing the missing collector fail; the combined document/format/focused suite passed 98 tests.
+The hooks passed 263 tests with three skips.
+Preparation readiness first rejected unsupported inclusion wording and absent direct manifest links; both were corrected without changing the validator or inclusion rule.
+Current link checking passes, and the four provider/stratum scopes must pass frozen collection readiness before dispatch.
+
+The fourteen review packets are fixed prospectively: six ordinary case/provider groups of twelve outputs, and eight native groups of nine.
+N3 quality remains unmeasured; its task-only observations do not enter CW functional totals.
+Each review must emit first-pass judgments after full required-file reads and before prior-assessment exposure.
+Read-only enforcement, exact Opus identity, protected bytes and complete output capture remain required, with no automatic retries or packet splitting.
+No skill edits, SSR spending or adoption is authorized by this collection.
+
+No unresolved blocking preparation findings.
+DD-VERDICT: PASS
