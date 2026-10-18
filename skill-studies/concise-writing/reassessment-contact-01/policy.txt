@@ -1,0 +1,18 @@
+Policy identity: CW-E-contact-interpretation-1
+Scope: E document-addition judgments across all completed CW conditions/providers, supplementing CW-expanded-1 and its unchanged F1–F3 definitions.
+Authority: the owner challenged treating “confirm a named fallback contact” as a consequential loss compared with “record a named fallback contact”, then directed “ok, reassess the findings”.
+Apply whole-document correctness, effectiveness and readability; do not fail solely because the contact gate no longer explicitly uses “record”.
+In this supplied scenario, confirming each team's named fallback contact before invitation retains the practical prerequisite and responsible person's role adequately.
+The source specifies no recording destination, format, audit trail or later consumer whose operation establishes a consequential difference between these formulations.
+Keep the narrower observation that explicit recording is more precise; do not assert that confirmation logically guarantees a durable record.
+Treat this wording difference alone as a non-blocking precision observation, not F1/F2 failure.
+This does not excuse missing the contact entirely, moving its prerequisite until after invitation, changing incident/resumption conditions, or removing any source-specified storage/access requirement.
+An actual downstream dependency on a separate recording action would require a new consequence-based assessment, not automatic application of this scenario-specific tolerance.
+F3, setup, invocation, length rules and all non-E judgments are unchanged.
+Preserve original judgments and independent reviewer outputs; write a versioned reassessment rather than changing frozen evidence, criteria or historical results.
+
+Controller-constructed interpretation checks, not new model observations:
+PASS: “Before inviting anyone, Nia will confirm that each team has a named fallback contact.” Practical contact gate, owner and timing survive.
+PASS: “Before inviting anyone, Nia must record a named fallback contact” or “confirm that each team has a named fallback contact on record.” More explicit alternatives are also valid.
+FAIL: The document omits the fallback contact entirely, or requires checking it only after sending invitations. A practical prerequisite is lost.
+FAIL: The document removes restricted incident-record retention or permits resumption before investigation/approval. This changes an explicit operational or access condition and is outside this clarification.

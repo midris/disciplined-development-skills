@@ -1,5 +1,7 @@
 # E diagnostic: Opus review and reconciliation
 
+Historical assessment/review record: the later [owner-authorized contact reassessment](../../../../reassessment-contact-01/README.md) supersedes the contact-only failure interpretation and related edit recommendation. Prior judgments and reviewer text below remain preserved.
+
 Status: both allocated reviews completed and audited; no replacement call or reassessment of canonical scores.
 Current action and authority belong to the [protocol](../../../../protocol.md).
 The [Codex](../../../../codex-e-iteration-01-assessment.md) and [Claude](../../../../claude-e-iteration-01-assessment.md) batch assessments retain the active Codex controller's judgments.

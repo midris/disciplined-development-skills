@@ -3,8 +3,9 @@
 Format version: `1`
 Study ID: `concise-writing`
 Status: baseline collection and cross-model review are complete; the owner selected the original CW as the development base and authorized preparation of effectiveness-first edits. Adoption remains deferred.
-Current action: owner decision after the completed E diagnostic: consider a bounded required-action verification intervention before freezing the full-suite candidates.
-The [Opus reconciliation](drafts/baseline-iteration/testing/evaluation/assessment.md) preserves an unresolved severity disagreement; no automatic revision, freeze or further collection follows.
+Current action: review the remaining deficiencies and full-suite coverage with the owner after the [contact-wording reassessment](reassessment-contact-01/README.md); no new calls are queued.
+Under owner-authorized CW-E-contact-interpretation-1, thirteen prior E failures become passes; explicit recording remains a precision observation rather than a demonstrated functional gap.
+The original result records and Fable/Opus judgments remain historical evidence; the versioned reassessment index owns the superseding E judgments.
 Both E attempt indexes identify complete committed result records; the [Codex assessment](codex-e-iteration-01-assessment.md) and [Claude batch assessment](claude-e-iteration-01-assessment.md) summarize them.
 The amended Claude controller applies prospectively from its second attempt, with byte-identical subject inputs and criteria.
 The collector used the wrong inventory version field; conforming wrappers are published separately, with original wrappers and every raw byte retained. No model call is repeated or excluded for this metadata correction.
@@ -116,7 +117,7 @@ Selected coverage maps to the skill’s named patterns below. These are contextu
 | Pressure and restraint | B exercises restraint; collected C adds a handoff deadline and prior line-level cleanup. Codex skill outputs preserve rationale lost by two controls; most Claude outputs preserve facts but retain unnecessary repetition. No percentage-cut requirement applies. |
 | Native invocation and new prose | Three-repetition N1/N2/N4: timely positive loads are 9/9 per version on Codex, 6/9 original and 5/9 rewrite on Claude. N3 has two Codex rewrite over-triggers in three attempts; every other negative avoids loading. Task outcomes are separate; see the combined native table below. |
 | Claude and current runtime | Collected 60 calls per provider on qualified Codex 0.157.1/Sol-low and Claude 2.1.283/Sonnet-low. Historical runtimes remain separate; all 120 setups are valid and retained. |
-| Adding to an existing document | Collected E tests complete integration against source plus new notes. Contact recording is lost in one original output per provider and all three Claude rewrite outputs; every control retains it. A/B/C revise without supplied additions; N2 creates a new document. |
+| Adding to an existing document | Collected E tests complete integration against source plus new notes. The contact-wording reassessment passes all eighteen expanded E outputs; explicit recording is more precise, but confirming the named contact before invitation is sufficient in this scenario. A/B/C revise without supplied additions; N2 creates a new document. |
 | Code-comment writing/editing | Collected N4: all twelve comment artifacts meet F1–F3 and executable-token/syntax checks. Codex loads 3/3 per version; Claude original loads 1/3 and rewrite 0/3. N3 tests the separate comments-untouched selection boundary. |
 | Response-only/detailed-response boundary | Untested. Defer a separate response-only stratum; the rewrite changes this trigger boundary, so resolve intended applicability and test it before adopting that description. |
 | Anchor changes and full orchestration | Untested. Defer SSR anchor repair and DD orchestration because they add separate skills and attribution questions; revisit before changing those relationships. |
@@ -573,7 +574,7 @@ The new E reviews use the [fixed review package](drafts/baseline-iteration/testi
 Dispatched calls are **296 subject, 14 evaluator, 0 authoring, 1 retry**; remaining outer capacity is **0 / 0 / 4 / 3** against the [active plan](../../plans/2026-09-11-model-driven-skill-testing.md#limits-and-information-boundaries). Both eight-call CW batches are spent. The owner authorized ten SSR expansion calls under ceiling 56; all ten are spent, including the excluded control, with no replacement or pool transfer. Comparison runner durations total 508.067 seconds; baseline durations remain 494.936 seconds, including setup and capture.
 Owner clarification after round-10 review: “the budget is just a guideline”. The 1,200-minute figure below remains the planning baseline, not a collection stop; invocation ceilings and the authorized SSR scope is unchanged. Retain elapsed effort and forecast variance to expose process cost.
 
-Current combined accounting: **2,320 active minutes booked; 1,120 minutes above the historical 1,200-minute planning guideline**.
+Current combined accounting: **2,340 active minutes booked; 1,140 minutes above the historical 1,200-minute planning guideline**.
 These are rounded effort estimates, not stopwatch measurements or a separately timed category breakdown.
 Between-turn owner wait is excluded; runner durations are included once.
 The initial 104 calls and sixteen native third repetitions are spent; combined subject accounting is 296/296, with 0 E calls remaining.
@@ -656,7 +657,8 @@ The supplemental work used 40 estimated active minutes against its 40-minute for
 | E runtime diagnosis, supported toolchain qualification and fixed input preparation | 35 |
 | E subject collection, direct assessment and inventory metadata recovery | 40 |
 | E Opus packet preparation, review, reconciliation and final verification | 40 |
-| **Total** | **2,320** |
+| Owner-authorized E contact reassessment, scope reconciliation and verification | 20 |
+| **Total** | **2,340** |
 
 SSR expansion is complete. The prior 55-minute remaining forecast closed at 50 estimated minutes, including the additional shell correction; all ten subject calls are spent.
 The combined batch/recovery effort is 135 estimated minutes (45 initial checkpoint, 40 isolation correction, 50 resumption), 45 above the original 90-minute allowance. Separate round-9 review effort remains in the combined ledger above.
@@ -704,18 +706,22 @@ A later diagnosis or rewrite needs its own bounded estimate and any new model-ca
 
 ### Baseline-derived E diagnostic
 
-All forty subjects and both Opus reviews are complete; [cross-model reconciliation](drafts/baseline-iteration/testing/evaluation/assessment.md) remains separate from these active-session judgments.
+All forty subjects and both Opus reviews are complete.
+The table below uses [CW-E-contact-interpretation-1 and the superseding result index](reassessment-contact-01/README.md); original active scores and [Opus judgments](drafts/baseline-iteration/testing/evaluation/assessment.md) remain historical evidence.
+No model was rerun for this owner-authorized interpretation correction.
 
 | Provider | No CW | Original | Targeted | Fuller | Evidence |
 | --- | ---: | ---: | ---: | ---: | --- |
-| Codex Sol low | 5/5 | 1/5 | 5/5 | 5/5 | [Assessment](codex-e-iteration-01-assessment.md) |
-| Claude Sonnet low | 5/5 | 3/5 | 4/5 | 4/5 | [Assessment](claude-e-iteration-01-assessment.md) |
+| Codex Sol low | 5/5 | 5/5 | 5/5 | 5/5 | [Assessment](codex-e-iteration-01-assessment.md) |
+| Claude Sonnet low | 5/5 | 5/5 | 5/5 | 5/5 | [Assessment](claude-e-iteration-01-assessment.md) |
 
-Failures omit recording the fallback contact while retaining its existence; each fails F1/F2 but remains readable under F3.
-The two Claude draft failures remain included; neither draft is declared ready or adopted from the successful Codex observations.
-Opus agrees with every Codex-output result; the Claude-output session identifies the same four recording omissions but treats them as non-blocking and passes all twenty.
-Both first-pass and final judgments remain retained; the controller keeps its source-grounded scores without claiming unanimous confirmation.
-The fixed transition rules support proposing a bounded intervention for required-action preservation and presenting the severity disagreement before any next transition; the owner decides, with full-suite collection still pending.
+Eight new-diagnostic failures were based solely on confirm-versus-record; all eight become passes after complete-output reassessment.
+The same interpretation corrects five earlier expanded E results; all 58 E observations now pass in their separate strata.
+The earlier claimed draft advantage and recording-specific structural-intervention recommendation are withdrawn.
+Both Opus sessions saw the wording difference; the Claude-output session already treated it as non-blocking, while the Codex-output session used the superseded stricter interpretation.
+Neither review is rewritten or claimed to have applied the later clarification.
+No consequential E regression remains that warrants a body edit; recommend keeping both drafts unchanged for the remaining seven scenarios, subject to the owner’s next decision and collection allocation.
+Full-suite completion is not established by E alone; the unchanged live original remains the adoption base.
 The inventory-wrapper correction changes no raw output, task, criterion or model call and excludes no result.
 These are new runtime strata, not pooled historical counts; the live skill remains unchanged.
 
@@ -726,7 +732,7 @@ The supplemental [cross-model assessment](evaluation/assessment.md) preserves di
 Ordinary and native cases now each have three repetitions per selected condition/provider.
 The native summary combines each original two-repetition batch with its separately frozen third repetition on the same qualified runtime and unchanged inputs; it does not rewrite historical batch scores.
 These later observations were not interleaved with the initial repetitions, and the models expose no immutable backend revision.
-The existing rewrite is not uniformly stronger: it passes all ordinary Codex attempts, but loses required contact recording in every Claude E attempt and misses more Claude positive native loads in these samples.
+The existing rewrite is not uniformly stronger: corrected E outcomes pass for both versions, while the comprehensive version still misses more Claude positive native loads in these samples.
 Both versions show Claude weaknesses in whole-document cleanup and unsupported new-report claims.
 The owner’s development-base and authoring-method decisions are recorded at the protocol opening; the existing assessments and coverage limitations remain unchanged.
 The [baseline iteration](drafts/baseline-iteration/README.md) separates body quality from discovery under the owner’s direction recorded above.
@@ -766,14 +772,16 @@ These small samples reveal repeated failure modes, not population reliability or
 ### Ordinary comparisons and historical evidence
 
 Expanded ordinary Claude: [assessment and evidence](claude-expanded-01-assessment.md) records 36 valid attempts.
-For A/B/C/E respectively, control passes 3/3, 2/3, 0/3 and 3/3; original passes 3/3, 3/3, 1/3 and 2/3; comprehensive passes 3/3, 3/3, 1/3 and 0/3.
-The concrete failures are one evidence overstatement, seven readability misses from detached repeated mechanics, and four lost contact-recording actions.
+With the E reassessment applied, A/B/C/E control passes are 3/3, 2/3, 0/3 and 3/3; original and comprehensive each pass 3/3, 3/3, 1/3 and 3/3.
+The remaining active failures are one control evidence overstatement and seven readability misses from detached repeated mechanics.
+The historical aggregate retains the four superseded E failures; current E result mappings and corrected counts belong to the reassessment.
 All 24 explicit-load attempts delivered the full body before editing; this is not native-invocation evidence.
 One controller index error delayed retention only and was recovered without repeating a call; the assessment links its review record.
 
 Expanded ordinary Codex: [assessment and evidence](codex-expanded-01-assessment.md) records 36 valid attempts under CW-expanded-1.
-For A/B/C/E respectively, control passes 3/3, 2/3, 1/3 and 3/3; original passes 3/3, 3/3, 3/3 and 2/3; comprehensive passes 3/3 on all four.
-Every output meets F3; the four failed executions lose a responsibility, diagnostic rationale or contact-recording action.
+With the E reassessment applied, A/B/C/E control passes are 3/3, 2/3, 1/3 and 3/3; original and comprehensive each pass 3/3 on all four.
+Every output meets F3; three remaining failed control executions lose a responsibility or diagnostic rationale.
+The historical aggregate retains one superseded original E failure; current E result mappings and corrected counts belong to the reassessment.
 These small exposed-case counts do not establish a reliable ranking; native outcomes are reported separately above.
 The collection review corrected two B outcomes using the existing whole-document policy-4 precedent; no rules or calls changed.
 

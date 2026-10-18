@@ -28,13 +28,14 @@ No experiment allocation follows from this authoring-method approval.
 
 | Evidence across the completed record | Draft response | Existing home strengthened |
 | --- | --- | --- |
-| One original E omission on each provider; three comprehensive E omissions on Claude; controls preserve recording | Check required actions, their actors and conditions against all supplied material, including added notes | Original final source/edit comparison |
+| Initial E scoring classified contact wording as an omission; the owner-authorized reassessment withdraws those failures | The drafts strengthened required-action/source comparison in response to that initial diagnosis; the current E evidence does not justify further recording-specific edits | Original final source/edit comparison |
 | Claude N2 adds unsupported scale/reliability claims in both versions; one original failure occurred without loading | Keep framing and causal connections within supplied evidence; do not turn finite observations into broader guarantees | Unrequested-elaboration pattern and final support check |
 | Claude C retains detached repetition; successful A/N1 edits and several controls reorganize effectively | Shape the whole document around reader use, then consolidate duplicate explanation; retain point-of-use safeguards | Global compression pass |
 | Comprehensive sometimes keeps clearer rationale, neutral decision framing and maintenance explanations, but can be more repetitive | Preserve useful explanation without making every source sentence separately explicit | Preservation rules and fuller draft’s reader-first method |
 | Routine A/B passes, historical controls pass, N4 quality passes even without loading | Preserve these behaviors and the code-context judgment; do not add instructions merely to force a measured advantage | Core test, keep rules and composition |
 | Claude positive loads are missed; comprehensive also over-triggers on Codex numeric tasks | Hold the original description fixed during body comparison; investigate wording separately against positive and negative native cases | Later discovery experiment |
 
+The [contact reassessment](../../skill-studies/concise-writing/reassessment-contact-01/README.md) corrects the E diagnosis without changing either draft; other observed failures remain regression targets, not proof of a new-body defect.
 The original already requires preservation, a global pass and a diff; appending another generic checklist would repeat those rules without changing their application.
 The targeted draft strengthens those existing locations.
 Writing-skills’ form table recommends a REQUIRED template slot for an omitted element in an existing template.

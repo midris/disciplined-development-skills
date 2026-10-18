@@ -20,7 +20,8 @@ Its preserved snapshot and results remain development evidence; omitting a fifth
 ### First diagnostic: document addition E
 
 E integrates new requirements into an existing briefing.
-It has a concrete baseline omission on both providers, successful no-CW outputs, and a recurring comprehensive-version omission, making it useful for testing action preservation and integration together.
+The original design selected it for then-scored baseline/comprehensive omissions and successful controls; the [contact reassessment](../../reassessment-contact-01/README.md) withdraws that failure interpretation.
+It remains a useful document-integration regression case, but is no longer RED for this wording distinction.
 Assess the whole report against the unchanged source and all new notes, including incident branches and evidence limits; do not reduce success to the contact-recording phrase.
 
 Run no-CW, unchanged original, targeted and fuller on both Codex and Claude, with five fresh contexts per condition: 4 × 2 × 5 = 40 subject calls.

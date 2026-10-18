@@ -1,5 +1,7 @@
 # CW cross-model output review
 
+Historical assessment/review record: the later [owner-authorized contact reassessment](../reassessment-contact-01/README.md) supersedes the contact-only failure interpretation and related edit recommendation. Prior judgments and reviewer text below remain preserved.
+
 Current completion and decisions belong to the [protocol](../protocol.md).
 The [method and scope](README.md), [fixed schedule](schedule.json) and [evaluator ledger](evaluator-run-index.json) preserve provenance.
 These are supplemental Fable judgments, not replacements for the frozen active-session scores.

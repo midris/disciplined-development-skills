@@ -21,11 +21,12 @@ The additional example and structure change are part of the fuller intervention,
 | Evidence source | What informs the drafts |
 | --- | --- |
 | [Historical baseline](../../contribution-baseline-01-assessment.md) and [historical comparison](../../comprehensive-comparison-01-assessment.md) | Successful controls, already effective briefings and the trade-off between explicit rationale and extra repetition; no invented continuing-permission defect or word-count target. |
-| [Codex ordinary](../../codex-expanded-01-assessment.md) and [Claude ordinary](../../claude-expanded-01-assessment.md) | Both versions’ successes, contact-recording omissions, whole-document repetition and preservation of direct-entry safeguards. |
+| [Codex ordinary](../../codex-expanded-01-assessment.md) and [Claude ordinary](../../claude-expanded-01-assessment.md) | Both versions’ successes, the subsequently corrected contact-wording findings, whole-document repetition and preservation of direct-entry safeguards. |
 | [Codex native 01](../../codex-invocation-01-assessment.md) and [02](../../codex-invocation-02-assessment.md) | Correct generation/comment behavior, code-context equivalence and the comprehensive version’s numeric-only over-trigger; preserve successful output behavior and keep selection separate. |
 | [Claude native 01](../../claude-invocation-01-assessment.md) and [02](../../claude-invocation-02-assessment.md) | Unsupported claims in new writing, positive selection misses and correct comments produced without loading; do not attribute unloaded failures or successes to a skill body. |
 | [All cross-model reviews](../../evaluation/assessment.md) and their raw-report audit pointers | Shared observations with different severity judgments, controls’ useful restructuring, original’s fidelity strengths, comprehensive’s explanatory strengths and its additional repetition. |
 
+The [E reassessment](../../reassessment-contact-01/README.md) withdraws the recording-specific failures and edit recommendation; both draft bodies remain unchanged, and the remaining seven scenarios are untested on them.
 These draft hypotheses concern better preservation and organization, not proof that any particular old sentence caused a failure.
 No new rationalization is invented from an evaluator’s defense of an output; the six retained rows preserve the original real-world lessons.
 The drafts strengthen existing homes instead of prescribing a mandatory output checklist or format; the design explicitly records the limitation of testing two prose forms rather than a structural omission guard.

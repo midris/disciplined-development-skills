@@ -1,5 +1,7 @@
 # CW draft and comparison consistency review
 
+Historical assessment/review record: the later [owner-authorized contact reassessment](../skill-studies/concise-writing/reassessment-contact-01/README.md) supersedes the contact-only failure interpretation and related edit recommendation. Prior judgments and reviewer text below remain preserved.
+
 Scope: controller self-review of the complete baseline-derived draft package against the framework, active plan, CW contract, eight-case coverage, completed subject/cross-model evidence, unchanged original/comprehensive snapshots and installed writing-skills.
 This is the Codex author's review, not an independent model evaluation or evidence that the drafts work.
 The owner requested review, remediation, commit/push and then the bounded E comparison; the later supplied Claude review adds a pre-dispatch remediation requirement.

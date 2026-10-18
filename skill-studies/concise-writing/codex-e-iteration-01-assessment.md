@@ -1,5 +1,7 @@
 # Codex E draft comparison: assessment
 
+E scores below preserve the pre-clarification assessment. The [versioned contact reassessment](reassessment-contact-01/README.md) supersedes its contact-only failures; other cases, evidence and historical pins remain unchanged.
+
 Format version: `2`
 Assessment ID: cw-codex-e-iteration-01
 Study / batch: concise-writing / codex-e-iteration-01

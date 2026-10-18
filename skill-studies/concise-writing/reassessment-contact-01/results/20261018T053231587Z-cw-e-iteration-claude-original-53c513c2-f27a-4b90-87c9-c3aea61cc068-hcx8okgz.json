@@ -1,0 +1,198 @@
+{
+  "schema_version": "2",
+  "record_kind": "execution result",
+  "result_id": "claude-e-iteration-01-original-1-1-assessment-contact-reassessment-1",
+  "assessed_at": "2026-10-18T15:11:38.719112+00:00",
+  "run_id": "20261018T053231587Z-cw-e-iteration-claude-original-53c513c2-f27a-4b90-87c9-c3aea61cc068-hcx8okgz",
+  "condition": "original",
+  "assessor": {
+    "name": "Codex active session",
+    "method": "active session",
+    "model": null,
+    "session_id": null,
+    "context": "Codex controller reassessment under owner-authorized CW-E-contact-interpretation-1; exposed development evidence. Original collection manifest, source bytes and reviewer judgments remain preserved; the policy supplement below governs this subsequent judgment."
+  },
+  "manifest": {
+    "path": "skill-studies/concise-writing/drafts/baseline-iteration/testing/claude-manifest.json",
+    "sha256": "613eea38778b3cee5576d7adb1e38bfb1d3e2b1353de473e4a7453966ba4ce31",
+    "version": "1",
+    "git_revision": "0b96bcbb2b5340aed05c7c663ff400c2cd2b49c2"
+  },
+  "evidence": [
+    {
+      "id": "output",
+      "artifact": {
+        "path": "/Users/simon/work/personal/skill-study-private/concise-writing/e-iteration-20261018/subjects/20261018T053231587Z-cw-e-iteration-claude-original-53c513c2-f27a-4b90-87c9-c3aea61cc068-hcx8okgz/workspace/fixture/report.md",
+        "sha256": "15c6e96ea364ddb625fb476631add42c004716cd04cf0a417b3a1b0a752e0f68",
+        "version": null
+      },
+      "selector": "Complete artifact"
+    },
+    {
+      "id": "trace",
+      "artifact": {
+        "path": "/Users/simon/work/personal/skill-study-private/concise-writing/e-iteration-20261018/subjects/20261018T053231587Z-cw-e-iteration-claude-original-53c513c2-f27a-4b90-87c9-c3aea61cc068-hcx8okgz/stdout.txt",
+        "sha256": "c6f8967b869f2df6994427af07f8fc10d7e44e4c9a4d48baf279f77c90929186",
+        "version": null
+      },
+      "selector": "Complete artifact"
+    },
+    {
+      "id": "mechanical",
+      "artifact": {
+        "path": "/Users/simon/work/personal/skill-study-private/concise-writing/e-iteration-20261018/subjects/20261018T053231587Z-cw-e-iteration-claude-original-53c513c2-f27a-4b90-87c9-c3aea61cc068-hcx8okgz/result.json",
+        "sha256": "1254d0582c68fc9540e2604cf9ec1d5ab23fe61a65f8fdd3b293c9b7ec92f896",
+        "version": null
+      },
+      "selector": "Complete artifact"
+    },
+    {
+      "id": "log",
+      "artifact": {
+        "path": "/Users/simon/work/personal/skill-study-private/concise-writing/e-iteration-20261018/subjects/20261018T053231587Z-cw-e-iteration-claude-original-53c513c2-f27a-4b90-87c9-c3aea61cc068-hcx8okgz/runner.log",
+        "sha256": "bf24df408f0a3d3a85917b8a110e3f31e53db98c219f98e21ad33b8ebbda570e",
+        "version": null
+      },
+      "selector": "Complete artifact"
+    },
+    {
+      "id": "final",
+      "artifact": {
+        "path": "/Users/simon/work/personal/skill-study-private/concise-writing/e-iteration-20261018/subjects/20261018T053231587Z-cw-e-iteration-claude-original-53c513c2-f27a-4b90-87c9-c3aea61cc068-hcx8okgz/final.txt",
+        "sha256": "d86ad791483e5b0056d52a7a9236489117617f4f312299e32b5ffb94f17eff16",
+        "version": null
+      },
+      "selector": "Complete artifact"
+    },
+    {
+      "id": "source-0",
+      "artifact": {
+        "path": "skill-studies/concise-writing/cases/effective-briefing/fixture/report.md",
+        "sha256": "93c23afd44aab52dfcd2bca53f3db0020a41f650d46d4c59a09595539dc72491",
+        "version": null,
+        "git_revision": "a2473348f115f15faf478cbf742e8a68a8bb1f6c"
+      },
+      "selector": "Complete frozen source"
+    },
+    {
+      "id": "source-1",
+      "artifact": {
+        "path": "skill-studies/concise-writing/cases/document-addition/task.md",
+        "sha256": "d625196b6cf438dfe556238803851c5b86ae7f2eb07acaa31ddceb5c6e9b8db0",
+        "version": null,
+        "git_revision": "a2473348f115f15faf478cbf742e8a68a8bb1f6c"
+      },
+      "selector": "Complete frozen source"
+    },
+    {
+      "id": "source-2",
+      "artifact": {
+        "path": "skill-studies/concise-writing/cases/document-addition/new-notes.md",
+        "sha256": "8ff2f1ece29e88f352aefe87506c1afcf7e3174849dd978d20ec7065e8da3b74",
+        "version": null,
+        "git_revision": "a2473348f115f15faf478cbf742e8a68a8bb1f6c"
+      },
+      "selector": "Complete frozen source"
+    },
+    {
+      "id": "reassessment-policy",
+      "artifact": {
+        "path": "skill-studies/concise-writing/reassessment-contact-01/policy.txt",
+        "sha256": "55ee0ac049aeda4ef8019dc62bb0280f48540b05674462d8d68ff905eeb15881",
+        "version": "CW-E-contact-interpretation-1"
+      },
+      "selector": "Complete scenario-specific interpretation and contrasting examples"
+    },
+    {
+      "id": "prior-assessment",
+      "artifact": {
+        "path": "skill-studies/concise-writing/results/20261018T053231587Z-cw-e-iteration-claude-original-53c513c2-f27a-4b90-87c9-c3aea61cc068-hcx8okgz.json",
+        "sha256": "7150683215a6db8c5a652b96b54cdac673579c29fa86d15d77d91626668a285c",
+        "version": "2",
+        "git_revision": "229617458a49ad764ec5abc8a6f9104788fdd578"
+      },
+      "selector": "Original frozen criterion judgments, preserved unchanged"
+    }
+  ],
+  "setup": {
+    "status": "valid",
+    "reason": "Fixed provider/model/CLI and retained inventory verified. Complete assigned body in tool output 12 before first task edit 16. Protected input bytes unchanged.",
+    "evidence": [
+      "mechanical",
+      "trace",
+      "log"
+    ]
+  },
+  "criteria": [
+    {
+      "id": "F1",
+      "dimension": "functional",
+      "judgment": "met",
+      "reason": "The complete document preserves the supplied facts, qualifications and additions. Nia still confirms each team has a named fallback contact in the pre-invitation checks. Under the owner-authorized interpretation this practical gate is sufficient: less explicit recording is a precision weakness, not a demonstrated consequential loss. The evidence limits, strict timeout threshold and incident/review/default boundaries remain intact.",
+      "consequence": "Required functional factor; correctness/effectiveness cannot be offset by readability or length.",
+      "evidence": [
+        "output",
+        "source-0",
+        "source-1",
+        "source-2",
+        "reassessment-policy",
+        "prior-assessment"
+      ]
+    },
+    {
+      "id": "F2",
+      "dimension": "functional",
+      "judgment": "met",
+      "reason": "The contact prerequisite remains under \u201cBefore inviting anyone\u201d; the incident branch under \u201cWhile a team is using the preview\u201d retains the affected-team pause, restricted query/result retention, precautionary status, other-team continuation and both resumption gates. The review includes pauses/outcomes and later expansion/default decisions remain separate. No workflow failure is established by confirm-versus-record alone.",
+      "consequence": "Required functional factor; correctness/effectiveness cannot be offset by readability or length.",
+      "evidence": [
+        "output",
+        "source-0",
+        "source-1",
+        "source-2",
+        "reassessment-policy",
+        "prior-assessment"
+      ]
+    },
+    {
+      "id": "F3",
+      "dimension": "functional",
+      "judgment": "met",
+      "reason": "The complete report remains readable and coherently organized around the invitation decision, evidence, prerequisites, incident handling and review. The contact wording difference does not create a demonstrated consumption burden; the existing met judgment is retained.",
+      "consequence": "Required functional factor; correctness/effectiveness cannot be offset by readability or length.",
+      "evidence": [
+        "output",
+        "source-0",
+        "source-1",
+        "source-2",
+        "reassessment-policy",
+        "prior-assessment"
+      ]
+    }
+  ],
+  "functional_result": "met",
+  "procedural_summary": "Fixed provider/model/CLI and retained inventory verified. Complete assigned body in tool output 12 before first task edit 16. Protected input bytes unchanged. O4/O5 process remains unscored; no hidden uncertainty is inferred.",
+  "observations": [
+    {
+      "dimension": "functional",
+      "description": "wc -w: original report 279, supplied new notes 166, complete output 360; change from report +81. Required additions can justify growth; E has no shorter-output preference or minimum reduction.",
+      "consequence": "Descriptive counts, not a score or automatic tie-break.",
+      "evidence": [
+        "output",
+        "source-0",
+        "source-2"
+      ]
+    },
+    {
+      "dimension": "functional",
+      "description": "Confirming a named fallback contact is less explicit than recording it, but the owner-authorized scenario interpretation treats that difference as non-blocking. This reclassifies the existing output; it does not assert logical identity or improve the underlying text.",
+      "consequence": "No new subject/evaluator invocation, raw edit or change to setup, invocation or length observations.",
+      "evidence": [
+        "output",
+        "reassessment-policy",
+        "prior-assessment"
+      ]
+    }
+  ],
+  "uncertainty": []
+}
