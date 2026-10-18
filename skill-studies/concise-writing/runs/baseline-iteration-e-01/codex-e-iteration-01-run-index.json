@@ -1,0 +1,988 @@
+{
+  "format_version": "1",
+  "index_id": "concise-writing-codex-e-iteration-01",
+  "study_id": "concise-writing",
+  "batch_id": "codex-e-iteration-01",
+  "attempts": [
+    {
+      "attempt_id": "codex-e-iteration-01-control-1-1",
+      "case_id": "document-addition",
+      "condition": "control",
+      "repetition": 1,
+      "attempt_number": 1,
+      "retry_of": null,
+      "manifest": {
+        "path": "skill-studies/concise-writing/drafts/baseline-iteration/testing/codex-manifest.json",
+        "sha256": "40f98155f8a890e3b719c37a53e9b1a15c3a49918bfec493af21d4be453e5029",
+        "version": "1",
+        "git_revision": "9a636d5078f0e2fc9f713364af9a0ef13e18ad33"
+      },
+      "authorization": {
+        "artifact": {
+          "path": "skill-studies/concise-writing/protocol.md",
+          "sha256": "9c8364d6e7be968912c5ae39f7126231d291591d7d4082db80f4169ba9f419af",
+          "version": "1",
+          "git_revision": "9a636d5078f0e2fc9f713364af9a0ef13e18ad33"
+        },
+        "selector": "Batch: codex-e-iteration-01; order 1"
+      },
+      "run_id": "20261018T050932439Z-cw-e-iteration-codex-control-34743e0b-016e-484c-91d2-934229d02354-rmhksawq",
+      "allocation": {
+        "pool": "subject",
+        "charge": 1
+      },
+      "limitations": [
+        "Codex active-session assessment; no blind, held-out or independent assessor claim. Inventory wrapper corrected without raw mutation or model repetition. Separate Opus review remains pending."
+      ],
+      "bundle": {
+        "path": "/Users/simon/work/personal/skill-study-private/concise-writing/e-iteration-20261018/subjects/20261018T050932439Z-cw-e-iteration-codex-control-34743e0b-016e-484c-91d2-934229d02354-rmhksawq",
+        "inventory": {
+          "path": "/Users/simon/work/personal/skill-study-private/concise-writing/e-iteration-20261018/subjects/20261018T050932439Z-cw-e-iteration-codex-control-34743e0b-016e-484c-91d2-934229d02354-rmhksawq.canonical.inventory.json",
+          "sha256": "43f42b15cf6a6376d29ea6b56b97e6b68ca6b2216024d949b13d1632a3d730f2",
+          "version": "1"
+        },
+        "verified": true
+      },
+      "result": {
+        "result_id": "codex-e-iteration-01-control-1-1-assessment",
+        "record": {
+          "path": "skill-studies/concise-writing/results/20261018T050932439Z-cw-e-iteration-codex-control-34743e0b-016e-484c-91d2-934229d02354-rmhksawq.json",
+          "sha256": "301cabc5f02fa2c87210972d11ace224b4924f2c42201f55d6a7c7695317a595",
+          "version": "2",
+          "git_revision": "a2473348f115f15faf478cbf742e8a68a8bb1f6c"
+        }
+      }
+    },
+    {
+      "attempt_id": "codex-e-iteration-01-original-1-1",
+      "case_id": "document-addition",
+      "condition": "original",
+      "repetition": 1,
+      "attempt_number": 1,
+      "retry_of": null,
+      "manifest": {
+        "path": "skill-studies/concise-writing/drafts/baseline-iteration/testing/codex-manifest.json",
+        "sha256": "40f98155f8a890e3b719c37a53e9b1a15c3a49918bfec493af21d4be453e5029",
+        "version": "1",
+        "git_revision": "9a636d5078f0e2fc9f713364af9a0ef13e18ad33"
+      },
+      "authorization": {
+        "artifact": {
+          "path": "skill-studies/concise-writing/protocol.md",
+          "sha256": "9c8364d6e7be968912c5ae39f7126231d291591d7d4082db80f4169ba9f419af",
+          "version": "1",
+          "git_revision": "9a636d5078f0e2fc9f713364af9a0ef13e18ad33"
+        },
+        "selector": "Batch: codex-e-iteration-01; order 2"
+      },
+      "run_id": "20261018T051039494Z-cw-e-iteration-codex-original-9bf84561-49ff-4a0e-91a1-7261590e310f-lypjwfnd",
+      "allocation": {
+        "pool": "subject",
+        "charge": 1
+      },
+      "limitations": [
+        "Codex active-session assessment; no blind, held-out or independent assessor claim. Inventory wrapper corrected without raw mutation or model repetition. Separate Opus review remains pending."
+      ],
+      "bundle": {
+        "path": "/Users/simon/work/personal/skill-study-private/concise-writing/e-iteration-20261018/subjects/20261018T051039494Z-cw-e-iteration-codex-original-9bf84561-49ff-4a0e-91a1-7261590e310f-lypjwfnd",
+        "inventory": {
+          "path": "/Users/simon/work/personal/skill-study-private/concise-writing/e-iteration-20261018/subjects/20261018T051039494Z-cw-e-iteration-codex-original-9bf84561-49ff-4a0e-91a1-7261590e310f-lypjwfnd.canonical.inventory.json",
+          "sha256": "49f8d99a15e3c0a3b4ee550d5a28bfb0affe5ab84a47a241f1a2a64eec717bbc",
+          "version": "1"
+        },
+        "verified": true
+      },
+      "result": {
+        "result_id": "codex-e-iteration-01-original-1-1-assessment",
+        "record": {
+          "path": "skill-studies/concise-writing/results/20261018T051039494Z-cw-e-iteration-codex-original-9bf84561-49ff-4a0e-91a1-7261590e310f-lypjwfnd.json",
+          "sha256": "4e64c1467ff8dace259c0685fd92670b21b3edb6654faba832ee9b9248e12851",
+          "version": "2",
+          "git_revision": "a2473348f115f15faf478cbf742e8a68a8bb1f6c"
+        }
+      }
+    },
+    {
+      "attempt_id": "codex-e-iteration-01-candidate-targeted-1-1",
+      "case_id": "document-addition",
+      "condition": "candidate-targeted",
+      "repetition": 1,
+      "attempt_number": 1,
+      "retry_of": null,
+      "manifest": {
+        "path": "skill-studies/concise-writing/drafts/baseline-iteration/testing/codex-manifest.json",
+        "sha256": "40f98155f8a890e3b719c37a53e9b1a15c3a49918bfec493af21d4be453e5029",
+        "version": "1",
+        "git_revision": "9a636d5078f0e2fc9f713364af9a0ef13e18ad33"
+      },
+      "authorization": {
+        "artifact": {
+          "path": "skill-studies/concise-writing/protocol.md",
+          "sha256": "9c8364d6e7be968912c5ae39f7126231d291591d7d4082db80f4169ba9f419af",
+          "version": "1",
+          "git_revision": "9a636d5078f0e2fc9f713364af9a0ef13e18ad33"
+        },
+        "selector": "Batch: codex-e-iteration-01; order 3"
+      },
+      "run_id": "20261018T051146350Z-cw-e-iteration-codex-candidate-targeted-e7e43852-c810-416b-b717-84e560f47bd0-5_36itqr",
+      "allocation": {
+        "pool": "subject",
+        "charge": 1
+      },
+      "limitations": [
+        "Codex active-session assessment; no blind, held-out or independent assessor claim. Inventory wrapper corrected without raw mutation or model repetition. Separate Opus review remains pending."
+      ],
+      "bundle": {
+        "path": "/Users/simon/work/personal/skill-study-private/concise-writing/e-iteration-20261018/subjects/20261018T051146350Z-cw-e-iteration-codex-candidate-targeted-e7e43852-c810-416b-b717-84e560f47bd0-5_36itqr",
+        "inventory": {
+          "path": "/Users/simon/work/personal/skill-study-private/concise-writing/e-iteration-20261018/subjects/20261018T051146350Z-cw-e-iteration-codex-candidate-targeted-e7e43852-c810-416b-b717-84e560f47bd0-5_36itqr.canonical.inventory.json",
+          "sha256": "aa50a551105a33d3d5a01c6e8b0339a5f6e59d240372e01181bafc6fef6f930b",
+          "version": "1"
+        },
+        "verified": true
+      },
+      "result": {
+        "result_id": "codex-e-iteration-01-candidate-targeted-1-1-assessment",
+        "record": {
+          "path": "skill-studies/concise-writing/results/20261018T051146350Z-cw-e-iteration-codex-candidate-targeted-e7e43852-c810-416b-b717-84e560f47bd0-5_36itqr.json",
+          "sha256": "456a5488cc6bac49b2f585e360ca2916188fab238da476b971a91b6b045e9c74",
+          "version": "2",
+          "git_revision": "a2473348f115f15faf478cbf742e8a68a8bb1f6c"
+        }
+      }
+    },
+    {
+      "attempt_id": "codex-e-iteration-01-candidate-fuller-1-1",
+      "case_id": "document-addition",
+      "condition": "candidate-fuller",
+      "repetition": 1,
+      "attempt_number": 1,
+      "retry_of": null,
+      "manifest": {
+        "path": "skill-studies/concise-writing/drafts/baseline-iteration/testing/codex-manifest.json",
+        "sha256": "40f98155f8a890e3b719c37a53e9b1a15c3a49918bfec493af21d4be453e5029",
+        "version": "1",
+        "git_revision": "9a636d5078f0e2fc9f713364af9a0ef13e18ad33"
+      },
+      "authorization": {
+        "artifact": {
+          "path": "skill-studies/concise-writing/protocol.md",
+          "sha256": "9c8364d6e7be968912c5ae39f7126231d291591d7d4082db80f4169ba9f419af",
+          "version": "1",
+          "git_revision": "9a636d5078f0e2fc9f713364af9a0ef13e18ad33"
+        },
+        "selector": "Batch: codex-e-iteration-01; order 4"
+      },
+      "run_id": "20261018T051228660Z-cw-e-iteration-codex-candidate-fuller-7fc1ecd9-fbb4-44c2-aeaa-dacbd61e0297-26pqgmvu",
+      "allocation": {
+        "pool": "subject",
+        "charge": 1
+      },
+      "limitations": [
+        "Codex active-session assessment; no blind, held-out or independent assessor claim. Inventory wrapper corrected without raw mutation or model repetition. Separate Opus review remains pending."
+      ],
+      "bundle": {
+        "path": "/Users/simon/work/personal/skill-study-private/concise-writing/e-iteration-20261018/subjects/20261018T051228660Z-cw-e-iteration-codex-candidate-fuller-7fc1ecd9-fbb4-44c2-aeaa-dacbd61e0297-26pqgmvu",
+        "inventory": {
+          "path": "/Users/simon/work/personal/skill-study-private/concise-writing/e-iteration-20261018/subjects/20261018T051228660Z-cw-e-iteration-codex-candidate-fuller-7fc1ecd9-fbb4-44c2-aeaa-dacbd61e0297-26pqgmvu.canonical.inventory.json",
+          "sha256": "ad3d4ab82ea8b393941a0a55489f3f46f07c1710d029e093bdd4fb13e07f126a",
+          "version": "1"
+        },
+        "verified": true
+      },
+      "result": {
+        "result_id": "codex-e-iteration-01-candidate-fuller-1-1-assessment",
+        "record": {
+          "path": "skill-studies/concise-writing/results/20261018T051228660Z-cw-e-iteration-codex-candidate-fuller-7fc1ecd9-fbb4-44c2-aeaa-dacbd61e0297-26pqgmvu.json",
+          "sha256": "dfbb9e0b7f186b58bf7e35869de80e39dde06828d15a13da5f1400705762eecd",
+          "version": "2",
+          "git_revision": "a2473348f115f15faf478cbf742e8a68a8bb1f6c"
+        }
+      }
+    },
+    {
+      "attempt_id": "codex-e-iteration-01-original-2-1",
+      "case_id": "document-addition",
+      "condition": "original",
+      "repetition": 2,
+      "attempt_number": 1,
+      "retry_of": null,
+      "manifest": {
+        "path": "skill-studies/concise-writing/drafts/baseline-iteration/testing/codex-manifest.json",
+        "sha256": "40f98155f8a890e3b719c37a53e9b1a15c3a49918bfec493af21d4be453e5029",
+        "version": "1",
+        "git_revision": "9a636d5078f0e2fc9f713364af9a0ef13e18ad33"
+      },
+      "authorization": {
+        "artifact": {
+          "path": "skill-studies/concise-writing/protocol.md",
+          "sha256": "9c8364d6e7be968912c5ae39f7126231d291591d7d4082db80f4169ba9f419af",
+          "version": "1",
+          "git_revision": "9a636d5078f0e2fc9f713364af9a0ef13e18ad33"
+        },
+        "selector": "Batch: codex-e-iteration-01; order 5"
+      },
+      "run_id": "20261018T051253670Z-cw-e-iteration-codex-original-d1647634-ca2f-43a9-b929-dac2f8346565-1lzfkszs",
+      "allocation": {
+        "pool": "subject",
+        "charge": 1
+      },
+      "limitations": [
+        "Codex active-session assessment; no blind, held-out or independent assessor claim. Inventory wrapper corrected without raw mutation or model repetition. Separate Opus review remains pending."
+      ],
+      "bundle": {
+        "path": "/Users/simon/work/personal/skill-study-private/concise-writing/e-iteration-20261018/subjects/20261018T051253670Z-cw-e-iteration-codex-original-d1647634-ca2f-43a9-b929-dac2f8346565-1lzfkszs",
+        "inventory": {
+          "path": "/Users/simon/work/personal/skill-study-private/concise-writing/e-iteration-20261018/subjects/20261018T051253670Z-cw-e-iteration-codex-original-d1647634-ca2f-43a9-b929-dac2f8346565-1lzfkszs.canonical.inventory.json",
+          "sha256": "3ccb748a7dde40dd079fa70281321861add402b39bf9d599d9af38245721c366",
+          "version": "1"
+        },
+        "verified": true
+      },
+      "result": {
+        "result_id": "codex-e-iteration-01-original-2-1-assessment",
+        "record": {
+          "path": "skill-studies/concise-writing/results/20261018T051253670Z-cw-e-iteration-codex-original-d1647634-ca2f-43a9-b929-dac2f8346565-1lzfkszs.json",
+          "sha256": "4211cbd06c339a1f7273596507f1e6a7336a00fae268f8fd64a3287dda17aa09",
+          "version": "2",
+          "git_revision": "a2473348f115f15faf478cbf742e8a68a8bb1f6c"
+        }
+      }
+    },
+    {
+      "attempt_id": "codex-e-iteration-01-candidate-targeted-2-1",
+      "case_id": "document-addition",
+      "condition": "candidate-targeted",
+      "repetition": 2,
+      "attempt_number": 1,
+      "retry_of": null,
+      "manifest": {
+        "path": "skill-studies/concise-writing/drafts/baseline-iteration/testing/codex-manifest.json",
+        "sha256": "40f98155f8a890e3b719c37a53e9b1a15c3a49918bfec493af21d4be453e5029",
+        "version": "1",
+        "git_revision": "9a636d5078f0e2fc9f713364af9a0ef13e18ad33"
+      },
+      "authorization": {
+        "artifact": {
+          "path": "skill-studies/concise-writing/protocol.md",
+          "sha256": "9c8364d6e7be968912c5ae39f7126231d291591d7d4082db80f4169ba9f419af",
+          "version": "1",
+          "git_revision": "9a636d5078f0e2fc9f713364af9a0ef13e18ad33"
+        },
+        "selector": "Batch: codex-e-iteration-01; order 6"
+      },
+      "run_id": "20261018T051321362Z-cw-e-iteration-codex-candidate-targeted-8f8330b0-e06a-4b78-81a5-ea1d8951ed9e-ux69nnwa",
+      "allocation": {
+        "pool": "subject",
+        "charge": 1
+      },
+      "limitations": [
+        "Codex active-session assessment; no blind, held-out or independent assessor claim. Inventory wrapper corrected without raw mutation or model repetition. Separate Opus review remains pending."
+      ],
+      "bundle": {
+        "path": "/Users/simon/work/personal/skill-study-private/concise-writing/e-iteration-20261018/subjects/20261018T051321362Z-cw-e-iteration-codex-candidate-targeted-8f8330b0-e06a-4b78-81a5-ea1d8951ed9e-ux69nnwa",
+        "inventory": {
+          "path": "/Users/simon/work/personal/skill-study-private/concise-writing/e-iteration-20261018/subjects/20261018T051321362Z-cw-e-iteration-codex-candidate-targeted-8f8330b0-e06a-4b78-81a5-ea1d8951ed9e-ux69nnwa.canonical.inventory.json",
+          "sha256": "3c8ae93103a8425178b256d24bff708eaf40946322d9ae4c7ca36b8865816d3d",
+          "version": "1"
+        },
+        "verified": true
+      },
+      "result": {
+        "result_id": "codex-e-iteration-01-candidate-targeted-2-1-assessment",
+        "record": {
+          "path": "skill-studies/concise-writing/results/20261018T051321362Z-cw-e-iteration-codex-candidate-targeted-8f8330b0-e06a-4b78-81a5-ea1d8951ed9e-ux69nnwa.json",
+          "sha256": "bacaf150fc3cc67c970531f9a94fceb2b12815334da0c9c2e8c9092c9365046a",
+          "version": "2",
+          "git_revision": "a2473348f115f15faf478cbf742e8a68a8bb1f6c"
+        }
+      }
+    },
+    {
+      "attempt_id": "codex-e-iteration-01-candidate-fuller-2-1",
+      "case_id": "document-addition",
+      "condition": "candidate-fuller",
+      "repetition": 2,
+      "attempt_number": 1,
+      "retry_of": null,
+      "manifest": {
+        "path": "skill-studies/concise-writing/drafts/baseline-iteration/testing/codex-manifest.json",
+        "sha256": "40f98155f8a890e3b719c37a53e9b1a15c3a49918bfec493af21d4be453e5029",
+        "version": "1",
+        "git_revision": "9a636d5078f0e2fc9f713364af9a0ef13e18ad33"
+      },
+      "authorization": {
+        "artifact": {
+          "path": "skill-studies/concise-writing/protocol.md",
+          "sha256": "9c8364d6e7be968912c5ae39f7126231d291591d7d4082db80f4169ba9f419af",
+          "version": "1",
+          "git_revision": "9a636d5078f0e2fc9f713364af9a0ef13e18ad33"
+        },
+        "selector": "Batch: codex-e-iteration-01; order 7"
+      },
+      "run_id": "20261018T051346826Z-cw-e-iteration-codex-candidate-fuller-882da7b4-40c1-4798-9bf8-505d145aa4b6-woqf6yrz",
+      "allocation": {
+        "pool": "subject",
+        "charge": 1
+      },
+      "limitations": [
+        "Codex active-session assessment; no blind, held-out or independent assessor claim. Inventory wrapper corrected without raw mutation or model repetition. Separate Opus review remains pending."
+      ],
+      "bundle": {
+        "path": "/Users/simon/work/personal/skill-study-private/concise-writing/e-iteration-20261018/subjects/20261018T051346826Z-cw-e-iteration-codex-candidate-fuller-882da7b4-40c1-4798-9bf8-505d145aa4b6-woqf6yrz",
+        "inventory": {
+          "path": "/Users/simon/work/personal/skill-study-private/concise-writing/e-iteration-20261018/subjects/20261018T051346826Z-cw-e-iteration-codex-candidate-fuller-882da7b4-40c1-4798-9bf8-505d145aa4b6-woqf6yrz.canonical.inventory.json",
+          "sha256": "9d5ef4de136945341ff4a776236b0ce42b87ae797ae0980d5a7f6aaeeff956f1",
+          "version": "1"
+        },
+        "verified": true
+      },
+      "result": {
+        "result_id": "codex-e-iteration-01-candidate-fuller-2-1-assessment",
+        "record": {
+          "path": "skill-studies/concise-writing/results/20261018T051346826Z-cw-e-iteration-codex-candidate-fuller-882da7b4-40c1-4798-9bf8-505d145aa4b6-woqf6yrz.json",
+          "sha256": "3466a7c3a3e8d86f70075a6ccd217186edaa2b02690dc99b44e6fd9f829c27f6",
+          "version": "2",
+          "git_revision": "a2473348f115f15faf478cbf742e8a68a8bb1f6c"
+        }
+      }
+    },
+    {
+      "attempt_id": "codex-e-iteration-01-control-2-1",
+      "case_id": "document-addition",
+      "condition": "control",
+      "repetition": 2,
+      "attempt_number": 1,
+      "retry_of": null,
+      "manifest": {
+        "path": "skill-studies/concise-writing/drafts/baseline-iteration/testing/codex-manifest.json",
+        "sha256": "40f98155f8a890e3b719c37a53e9b1a15c3a49918bfec493af21d4be453e5029",
+        "version": "1",
+        "git_revision": "9a636d5078f0e2fc9f713364af9a0ef13e18ad33"
+      },
+      "authorization": {
+        "artifact": {
+          "path": "skill-studies/concise-writing/protocol.md",
+          "sha256": "9c8364d6e7be968912c5ae39f7126231d291591d7d4082db80f4169ba9f419af",
+          "version": "1",
+          "git_revision": "9a636d5078f0e2fc9f713364af9a0ef13e18ad33"
+        },
+        "selector": "Batch: codex-e-iteration-01; order 8"
+      },
+      "run_id": "20261018T051411647Z-cw-e-iteration-codex-control-1fa014b7-c605-4f33-86a5-7b200f5c99f5-rgcml4ta",
+      "allocation": {
+        "pool": "subject",
+        "charge": 1
+      },
+      "limitations": [
+        "Codex active-session assessment; no blind, held-out or independent assessor claim. Inventory wrapper corrected without raw mutation or model repetition. Separate Opus review remains pending."
+      ],
+      "bundle": {
+        "path": "/Users/simon/work/personal/skill-study-private/concise-writing/e-iteration-20261018/subjects/20261018T051411647Z-cw-e-iteration-codex-control-1fa014b7-c605-4f33-86a5-7b200f5c99f5-rgcml4ta",
+        "inventory": {
+          "path": "/Users/simon/work/personal/skill-study-private/concise-writing/e-iteration-20261018/subjects/20261018T051411647Z-cw-e-iteration-codex-control-1fa014b7-c605-4f33-86a5-7b200f5c99f5-rgcml4ta.canonical.inventory.json",
+          "sha256": "94aff909813327c3892d15a3e93cfd41b5a2861847dea8390f3b407ecd2f45ec",
+          "version": "1"
+        },
+        "verified": true
+      },
+      "result": {
+        "result_id": "codex-e-iteration-01-control-2-1-assessment",
+        "record": {
+          "path": "skill-studies/concise-writing/results/20261018T051411647Z-cw-e-iteration-codex-control-1fa014b7-c605-4f33-86a5-7b200f5c99f5-rgcml4ta.json",
+          "sha256": "1da69bd36466e6f2da7513b81943be4da10f0406187f6d86c5e551a4a8aed32b",
+          "version": "2",
+          "git_revision": "a2473348f115f15faf478cbf742e8a68a8bb1f6c"
+        }
+      }
+    },
+    {
+      "attempt_id": "codex-e-iteration-01-candidate-targeted-3-1",
+      "case_id": "document-addition",
+      "condition": "candidate-targeted",
+      "repetition": 3,
+      "attempt_number": 1,
+      "retry_of": null,
+      "manifest": {
+        "path": "skill-studies/concise-writing/drafts/baseline-iteration/testing/codex-manifest.json",
+        "sha256": "40f98155f8a890e3b719c37a53e9b1a15c3a49918bfec493af21d4be453e5029",
+        "version": "1",
+        "git_revision": "9a636d5078f0e2fc9f713364af9a0ef13e18ad33"
+      },
+      "authorization": {
+        "artifact": {
+          "path": "skill-studies/concise-writing/protocol.md",
+          "sha256": "9c8364d6e7be968912c5ae39f7126231d291591d7d4082db80f4169ba9f419af",
+          "version": "1",
+          "git_revision": "9a636d5078f0e2fc9f713364af9a0ef13e18ad33"
+        },
+        "selector": "Batch: codex-e-iteration-01; order 9"
+      },
+      "run_id": "20261018T051436170Z-cw-e-iteration-codex-candidate-targeted-ba36faa6-3225-49b3-8dd4-a4a8f6357125-sc798kxj",
+      "allocation": {
+        "pool": "subject",
+        "charge": 1
+      },
+      "limitations": [
+        "Codex active-session assessment; no blind, held-out or independent assessor claim. Inventory wrapper corrected without raw mutation or model repetition. Separate Opus review remains pending."
+      ],
+      "bundle": {
+        "path": "/Users/simon/work/personal/skill-study-private/concise-writing/e-iteration-20261018/subjects/20261018T051436170Z-cw-e-iteration-codex-candidate-targeted-ba36faa6-3225-49b3-8dd4-a4a8f6357125-sc798kxj",
+        "inventory": {
+          "path": "/Users/simon/work/personal/skill-study-private/concise-writing/e-iteration-20261018/subjects/20261018T051436170Z-cw-e-iteration-codex-candidate-targeted-ba36faa6-3225-49b3-8dd4-a4a8f6357125-sc798kxj.canonical.inventory.json",
+          "sha256": "3b1de14e9df27f44fbccc49dbaf4d2030ae61dc043672d6b33f34356b4395932",
+          "version": "1"
+        },
+        "verified": true
+      },
+      "result": {
+        "result_id": "codex-e-iteration-01-candidate-targeted-3-1-assessment",
+        "record": {
+          "path": "skill-studies/concise-writing/results/20261018T051436170Z-cw-e-iteration-codex-candidate-targeted-ba36faa6-3225-49b3-8dd4-a4a8f6357125-sc798kxj.json",
+          "sha256": "bda0d4c98e58d18d0766a462ffbbbffc8e20418a71f636ed67c3da3c0e08f51f",
+          "version": "2",
+          "git_revision": "a2473348f115f15faf478cbf742e8a68a8bb1f6c"
+        }
+      }
+    },
+    {
+      "attempt_id": "codex-e-iteration-01-candidate-fuller-3-1",
+      "case_id": "document-addition",
+      "condition": "candidate-fuller",
+      "repetition": 3,
+      "attempt_number": 1,
+      "retry_of": null,
+      "manifest": {
+        "path": "skill-studies/concise-writing/drafts/baseline-iteration/testing/codex-manifest.json",
+        "sha256": "40f98155f8a890e3b719c37a53e9b1a15c3a49918bfec493af21d4be453e5029",
+        "version": "1",
+        "git_revision": "9a636d5078f0e2fc9f713364af9a0ef13e18ad33"
+      },
+      "authorization": {
+        "artifact": {
+          "path": "skill-studies/concise-writing/protocol.md",
+          "sha256": "9c8364d6e7be968912c5ae39f7126231d291591d7d4082db80f4169ba9f419af",
+          "version": "1",
+          "git_revision": "9a636d5078f0e2fc9f713364af9a0ef13e18ad33"
+        },
+        "selector": "Batch: codex-e-iteration-01; order 10"
+      },
+      "run_id": "20261018T051500106Z-cw-e-iteration-codex-candidate-fuller-6f64050e-5950-497d-aaf1-1021a30499a8-h5ekxrir",
+      "allocation": {
+        "pool": "subject",
+        "charge": 1
+      },
+      "limitations": [
+        "Codex active-session assessment; no blind, held-out or independent assessor claim. Inventory wrapper corrected without raw mutation or model repetition. Separate Opus review remains pending."
+      ],
+      "bundle": {
+        "path": "/Users/simon/work/personal/skill-study-private/concise-writing/e-iteration-20261018/subjects/20261018T051500106Z-cw-e-iteration-codex-candidate-fuller-6f64050e-5950-497d-aaf1-1021a30499a8-h5ekxrir",
+        "inventory": {
+          "path": "/Users/simon/work/personal/skill-study-private/concise-writing/e-iteration-20261018/subjects/20261018T051500106Z-cw-e-iteration-codex-candidate-fuller-6f64050e-5950-497d-aaf1-1021a30499a8-h5ekxrir.canonical.inventory.json",
+          "sha256": "eb8817654dddc554e4be57d9a38f3ca66e1b4f5f7824b4caab5ee9e53f73e679",
+          "version": "1"
+        },
+        "verified": true
+      },
+      "result": {
+        "result_id": "codex-e-iteration-01-candidate-fuller-3-1-assessment",
+        "record": {
+          "path": "skill-studies/concise-writing/results/20261018T051500106Z-cw-e-iteration-codex-candidate-fuller-6f64050e-5950-497d-aaf1-1021a30499a8-h5ekxrir.json",
+          "sha256": "577db958480750eaa006c8da488fd2694a24aa48392c36615d031f7dee3ca06f",
+          "version": "2",
+          "git_revision": "a2473348f115f15faf478cbf742e8a68a8bb1f6c"
+        }
+      }
+    },
+    {
+      "attempt_id": "codex-e-iteration-01-control-3-1",
+      "case_id": "document-addition",
+      "condition": "control",
+      "repetition": 3,
+      "attempt_number": 1,
+      "retry_of": null,
+      "manifest": {
+        "path": "skill-studies/concise-writing/drafts/baseline-iteration/testing/codex-manifest.json",
+        "sha256": "40f98155f8a890e3b719c37a53e9b1a15c3a49918bfec493af21d4be453e5029",
+        "version": "1",
+        "git_revision": "9a636d5078f0e2fc9f713364af9a0ef13e18ad33"
+      },
+      "authorization": {
+        "artifact": {
+          "path": "skill-studies/concise-writing/protocol.md",
+          "sha256": "9c8364d6e7be968912c5ae39f7126231d291591d7d4082db80f4169ba9f419af",
+          "version": "1",
+          "git_revision": "9a636d5078f0e2fc9f713364af9a0ef13e18ad33"
+        },
+        "selector": "Batch: codex-e-iteration-01; order 11"
+      },
+      "run_id": "20261018T051523062Z-cw-e-iteration-codex-control-4708fe45-848d-4162-8d14-e235fea4a0e7-ma41r23o",
+      "allocation": {
+        "pool": "subject",
+        "charge": 1
+      },
+      "limitations": [
+        "Codex active-session assessment; no blind, held-out or independent assessor claim. Inventory wrapper corrected without raw mutation or model repetition. Separate Opus review remains pending."
+      ],
+      "bundle": {
+        "path": "/Users/simon/work/personal/skill-study-private/concise-writing/e-iteration-20261018/subjects/20261018T051523062Z-cw-e-iteration-codex-control-4708fe45-848d-4162-8d14-e235fea4a0e7-ma41r23o",
+        "inventory": {
+          "path": "/Users/simon/work/personal/skill-study-private/concise-writing/e-iteration-20261018/subjects/20261018T051523062Z-cw-e-iteration-codex-control-4708fe45-848d-4162-8d14-e235fea4a0e7-ma41r23o.canonical.inventory.json",
+          "sha256": "54b6aa713e54c124144fd5b63bff2ac2aaef1662c4f512d85684a3d8b8226b14",
+          "version": "1"
+        },
+        "verified": true
+      },
+      "result": {
+        "result_id": "codex-e-iteration-01-control-3-1-assessment",
+        "record": {
+          "path": "skill-studies/concise-writing/results/20261018T051523062Z-cw-e-iteration-codex-control-4708fe45-848d-4162-8d14-e235fea4a0e7-ma41r23o.json",
+          "sha256": "16acb4faf147341229ad5ccc3e26e93970c995d21443e577b15efd63ba55fa00",
+          "version": "2",
+          "git_revision": "a2473348f115f15faf478cbf742e8a68a8bb1f6c"
+        }
+      }
+    },
+    {
+      "attempt_id": "codex-e-iteration-01-original-3-1",
+      "case_id": "document-addition",
+      "condition": "original",
+      "repetition": 3,
+      "attempt_number": 1,
+      "retry_of": null,
+      "manifest": {
+        "path": "skill-studies/concise-writing/drafts/baseline-iteration/testing/codex-manifest.json",
+        "sha256": "40f98155f8a890e3b719c37a53e9b1a15c3a49918bfec493af21d4be453e5029",
+        "version": "1",
+        "git_revision": "9a636d5078f0e2fc9f713364af9a0ef13e18ad33"
+      },
+      "authorization": {
+        "artifact": {
+          "path": "skill-studies/concise-writing/protocol.md",
+          "sha256": "9c8364d6e7be968912c5ae39f7126231d291591d7d4082db80f4169ba9f419af",
+          "version": "1",
+          "git_revision": "9a636d5078f0e2fc9f713364af9a0ef13e18ad33"
+        },
+        "selector": "Batch: codex-e-iteration-01; order 12"
+      },
+      "run_id": "20261018T051551955Z-cw-e-iteration-codex-original-5a150659-e896-4b5e-b272-8cdb68336b78-r4k0sbi4",
+      "allocation": {
+        "pool": "subject",
+        "charge": 1
+      },
+      "limitations": [
+        "Codex active-session assessment; no blind, held-out or independent assessor claim. Inventory wrapper corrected without raw mutation or model repetition. Separate Opus review remains pending."
+      ],
+      "bundle": {
+        "path": "/Users/simon/work/personal/skill-study-private/concise-writing/e-iteration-20261018/subjects/20261018T051551955Z-cw-e-iteration-codex-original-5a150659-e896-4b5e-b272-8cdb68336b78-r4k0sbi4",
+        "inventory": {
+          "path": "/Users/simon/work/personal/skill-study-private/concise-writing/e-iteration-20261018/subjects/20261018T051551955Z-cw-e-iteration-codex-original-5a150659-e896-4b5e-b272-8cdb68336b78-r4k0sbi4.canonical.inventory.json",
+          "sha256": "6bd5346e3bd2635cd3ba974bec6bea66f37d8914d98f2e0a2b110f160dd70bbb",
+          "version": "1"
+        },
+        "verified": true
+      },
+      "result": {
+        "result_id": "codex-e-iteration-01-original-3-1-assessment",
+        "record": {
+          "path": "skill-studies/concise-writing/results/20261018T051551955Z-cw-e-iteration-codex-original-5a150659-e896-4b5e-b272-8cdb68336b78-r4k0sbi4.json",
+          "sha256": "0f4917d6fc6a280173c8dcf06459a297701b7c48428425cb7ff7133fbf4c195a",
+          "version": "2",
+          "git_revision": "a2473348f115f15faf478cbf742e8a68a8bb1f6c"
+        }
+      }
+    },
+    {
+      "attempt_id": "codex-e-iteration-01-candidate-fuller-4-1",
+      "case_id": "document-addition",
+      "condition": "candidate-fuller",
+      "repetition": 4,
+      "attempt_number": 1,
+      "retry_of": null,
+      "manifest": {
+        "path": "skill-studies/concise-writing/drafts/baseline-iteration/testing/codex-manifest.json",
+        "sha256": "40f98155f8a890e3b719c37a53e9b1a15c3a49918bfec493af21d4be453e5029",
+        "version": "1",
+        "git_revision": "9a636d5078f0e2fc9f713364af9a0ef13e18ad33"
+      },
+      "authorization": {
+        "artifact": {
+          "path": "skill-studies/concise-writing/protocol.md",
+          "sha256": "9c8364d6e7be968912c5ae39f7126231d291591d7d4082db80f4169ba9f419af",
+          "version": "1",
+          "git_revision": "9a636d5078f0e2fc9f713364af9a0ef13e18ad33"
+        },
+        "selector": "Batch: codex-e-iteration-01; order 13"
+      },
+      "run_id": "20261018T051614908Z-cw-e-iteration-codex-candidate-fuller-05df1b47-da21-43ae-9383-5355fe01d91b-qa_ulmmg",
+      "allocation": {
+        "pool": "subject",
+        "charge": 1
+      },
+      "limitations": [
+        "Codex active-session assessment; no blind, held-out or independent assessor claim. Inventory wrapper corrected without raw mutation or model repetition. Separate Opus review remains pending."
+      ],
+      "bundle": {
+        "path": "/Users/simon/work/personal/skill-study-private/concise-writing/e-iteration-20261018/subjects/20261018T051614908Z-cw-e-iteration-codex-candidate-fuller-05df1b47-da21-43ae-9383-5355fe01d91b-qa_ulmmg",
+        "inventory": {
+          "path": "/Users/simon/work/personal/skill-study-private/concise-writing/e-iteration-20261018/subjects/20261018T051614908Z-cw-e-iteration-codex-candidate-fuller-05df1b47-da21-43ae-9383-5355fe01d91b-qa_ulmmg.canonical.inventory.json",
+          "sha256": "417cf7fde6c8a83b5fe3829310265488539d390afeccbe09c20798a778a29590",
+          "version": "1"
+        },
+        "verified": true
+      },
+      "result": {
+        "result_id": "codex-e-iteration-01-candidate-fuller-4-1-assessment",
+        "record": {
+          "path": "skill-studies/concise-writing/results/20261018T051614908Z-cw-e-iteration-codex-candidate-fuller-05df1b47-da21-43ae-9383-5355fe01d91b-qa_ulmmg.json",
+          "sha256": "93a31babe97ff5bae0bbfdead04017f06df0a2a15cea1b80727893ed3ccd2e36",
+          "version": "2",
+          "git_revision": "a2473348f115f15faf478cbf742e8a68a8bb1f6c"
+        }
+      }
+    },
+    {
+      "attempt_id": "codex-e-iteration-01-control-4-1",
+      "case_id": "document-addition",
+      "condition": "control",
+      "repetition": 4,
+      "attempt_number": 1,
+      "retry_of": null,
+      "manifest": {
+        "path": "skill-studies/concise-writing/drafts/baseline-iteration/testing/codex-manifest.json",
+        "sha256": "40f98155f8a890e3b719c37a53e9b1a15c3a49918bfec493af21d4be453e5029",
+        "version": "1",
+        "git_revision": "9a636d5078f0e2fc9f713364af9a0ef13e18ad33"
+      },
+      "authorization": {
+        "artifact": {
+          "path": "skill-studies/concise-writing/protocol.md",
+          "sha256": "9c8364d6e7be968912c5ae39f7126231d291591d7d4082db80f4169ba9f419af",
+          "version": "1",
+          "git_revision": "9a636d5078f0e2fc9f713364af9a0ef13e18ad33"
+        },
+        "selector": "Batch: codex-e-iteration-01; order 14"
+      },
+      "run_id": "20261018T051642502Z-cw-e-iteration-codex-control-a04f3cc0-fffc-4f91-abda-28e1726ba036-q5yas2pm",
+      "allocation": {
+        "pool": "subject",
+        "charge": 1
+      },
+      "limitations": [
+        "Codex active-session assessment; no blind, held-out or independent assessor claim. Inventory wrapper corrected without raw mutation or model repetition. Separate Opus review remains pending."
+      ],
+      "bundle": {
+        "path": "/Users/simon/work/personal/skill-study-private/concise-writing/e-iteration-20261018/subjects/20261018T051642502Z-cw-e-iteration-codex-control-a04f3cc0-fffc-4f91-abda-28e1726ba036-q5yas2pm",
+        "inventory": {
+          "path": "/Users/simon/work/personal/skill-study-private/concise-writing/e-iteration-20261018/subjects/20261018T051642502Z-cw-e-iteration-codex-control-a04f3cc0-fffc-4f91-abda-28e1726ba036-q5yas2pm.canonical.inventory.json",
+          "sha256": "fe2465ffce6afea4b26f0d92dfae34256baf3a58e810d7988cd87de83e5038dc",
+          "version": "1"
+        },
+        "verified": true
+      },
+      "result": {
+        "result_id": "codex-e-iteration-01-control-4-1-assessment",
+        "record": {
+          "path": "skill-studies/concise-writing/results/20261018T051642502Z-cw-e-iteration-codex-control-a04f3cc0-fffc-4f91-abda-28e1726ba036-q5yas2pm.json",
+          "sha256": "19a77f876166583f533d1ffbd71b21c2ff42469e7811ae70199e0c85a5545056",
+          "version": "2",
+          "git_revision": "a2473348f115f15faf478cbf742e8a68a8bb1f6c"
+        }
+      }
+    },
+    {
+      "attempt_id": "codex-e-iteration-01-original-4-1",
+      "case_id": "document-addition",
+      "condition": "original",
+      "repetition": 4,
+      "attempt_number": 1,
+      "retry_of": null,
+      "manifest": {
+        "path": "skill-studies/concise-writing/drafts/baseline-iteration/testing/codex-manifest.json",
+        "sha256": "40f98155f8a890e3b719c37a53e9b1a15c3a49918bfec493af21d4be453e5029",
+        "version": "1",
+        "git_revision": "9a636d5078f0e2fc9f713364af9a0ef13e18ad33"
+      },
+      "authorization": {
+        "artifact": {
+          "path": "skill-studies/concise-writing/protocol.md",
+          "sha256": "9c8364d6e7be968912c5ae39f7126231d291591d7d4082db80f4169ba9f419af",
+          "version": "1",
+          "git_revision": "9a636d5078f0e2fc9f713364af9a0ef13e18ad33"
+        },
+        "selector": "Batch: codex-e-iteration-01; order 15"
+      },
+      "run_id": "20261018T051706366Z-cw-e-iteration-codex-original-8b5bda96-b510-4924-ae6e-be238a3c00e7-qzeptuhu",
+      "allocation": {
+        "pool": "subject",
+        "charge": 1
+      },
+      "limitations": [
+        "Codex active-session assessment; no blind, held-out or independent assessor claim. Inventory wrapper corrected without raw mutation or model repetition. Separate Opus review remains pending."
+      ],
+      "bundle": {
+        "path": "/Users/simon/work/personal/skill-study-private/concise-writing/e-iteration-20261018/subjects/20261018T051706366Z-cw-e-iteration-codex-original-8b5bda96-b510-4924-ae6e-be238a3c00e7-qzeptuhu",
+        "inventory": {
+          "path": "/Users/simon/work/personal/skill-study-private/concise-writing/e-iteration-20261018/subjects/20261018T051706366Z-cw-e-iteration-codex-original-8b5bda96-b510-4924-ae6e-be238a3c00e7-qzeptuhu.canonical.inventory.json",
+          "sha256": "bfe496ef387c6a67fa5d45dd81aa0390967ff2d0e01b9e959b48eb6e9c90b2e9",
+          "version": "1"
+        },
+        "verified": true
+      },
+      "result": {
+        "result_id": "codex-e-iteration-01-original-4-1-assessment",
+        "record": {
+          "path": "skill-studies/concise-writing/results/20261018T051706366Z-cw-e-iteration-codex-original-8b5bda96-b510-4924-ae6e-be238a3c00e7-qzeptuhu.json",
+          "sha256": "fbf979d97e8b9fc6f121c26c1d894e41051b655be3d3655e8a0def175a9b9465",
+          "version": "2",
+          "git_revision": "a2473348f115f15faf478cbf742e8a68a8bb1f6c"
+        }
+      }
+    },
+    {
+      "attempt_id": "codex-e-iteration-01-candidate-targeted-4-1",
+      "case_id": "document-addition",
+      "condition": "candidate-targeted",
+      "repetition": 4,
+      "attempt_number": 1,
+      "retry_of": null,
+      "manifest": {
+        "path": "skill-studies/concise-writing/drafts/baseline-iteration/testing/codex-manifest.json",
+        "sha256": "40f98155f8a890e3b719c37a53e9b1a15c3a49918bfec493af21d4be453e5029",
+        "version": "1",
+        "git_revision": "9a636d5078f0e2fc9f713364af9a0ef13e18ad33"
+      },
+      "authorization": {
+        "artifact": {
+          "path": "skill-studies/concise-writing/protocol.md",
+          "sha256": "9c8364d6e7be968912c5ae39f7126231d291591d7d4082db80f4169ba9f419af",
+          "version": "1",
+          "git_revision": "9a636d5078f0e2fc9f713364af9a0ef13e18ad33"
+        },
+        "selector": "Batch: codex-e-iteration-01; order 16"
+      },
+      "run_id": "20261018T051739999Z-cw-e-iteration-codex-candidate-targeted-2e850951-41d3-42ae-8d7f-19d8162e9a97-muczclp3",
+      "allocation": {
+        "pool": "subject",
+        "charge": 1
+      },
+      "limitations": [
+        "Codex active-session assessment; no blind, held-out or independent assessor claim. Inventory wrapper corrected without raw mutation or model repetition. Separate Opus review remains pending."
+      ],
+      "bundle": {
+        "path": "/Users/simon/work/personal/skill-study-private/concise-writing/e-iteration-20261018/subjects/20261018T051739999Z-cw-e-iteration-codex-candidate-targeted-2e850951-41d3-42ae-8d7f-19d8162e9a97-muczclp3",
+        "inventory": {
+          "path": "/Users/simon/work/personal/skill-study-private/concise-writing/e-iteration-20261018/subjects/20261018T051739999Z-cw-e-iteration-codex-candidate-targeted-2e850951-41d3-42ae-8d7f-19d8162e9a97-muczclp3.canonical.inventory.json",
+          "sha256": "8f498598279b90cba139815ea56d502f39412913412f343ddbe510490d47a346",
+          "version": "1"
+        },
+        "verified": true
+      },
+      "result": {
+        "result_id": "codex-e-iteration-01-candidate-targeted-4-1-assessment",
+        "record": {
+          "path": "skill-studies/concise-writing/results/20261018T051739999Z-cw-e-iteration-codex-candidate-targeted-2e850951-41d3-42ae-8d7f-19d8162e9a97-muczclp3.json",
+          "sha256": "eb5f525e1915f6a9844b39f642a119a84aadffc5fc793f88be0ef141d1c5b64d",
+          "version": "2",
+          "git_revision": "a2473348f115f15faf478cbf742e8a68a8bb1f6c"
+        }
+      }
+    },
+    {
+      "attempt_id": "codex-e-iteration-01-control-5-1",
+      "case_id": "document-addition",
+      "condition": "control",
+      "repetition": 5,
+      "attempt_number": 1,
+      "retry_of": null,
+      "manifest": {
+        "path": "skill-studies/concise-writing/drafts/baseline-iteration/testing/codex-manifest.json",
+        "sha256": "40f98155f8a890e3b719c37a53e9b1a15c3a49918bfec493af21d4be453e5029",
+        "version": "1",
+        "git_revision": "9a636d5078f0e2fc9f713364af9a0ef13e18ad33"
+      },
+      "authorization": {
+        "artifact": {
+          "path": "skill-studies/concise-writing/protocol.md",
+          "sha256": "9c8364d6e7be968912c5ae39f7126231d291591d7d4082db80f4169ba9f419af",
+          "version": "1",
+          "git_revision": "9a636d5078f0e2fc9f713364af9a0ef13e18ad33"
+        },
+        "selector": "Batch: codex-e-iteration-01; order 17"
+      },
+      "run_id": "20261018T051816080Z-cw-e-iteration-codex-control-85286808-f286-4b31-99d7-1d8138cf5434-qcocvlnq",
+      "allocation": {
+        "pool": "subject",
+        "charge": 1
+      },
+      "limitations": [
+        "Codex active-session assessment; no blind, held-out or independent assessor claim. Inventory wrapper corrected without raw mutation or model repetition. Separate Opus review remains pending."
+      ],
+      "bundle": {
+        "path": "/Users/simon/work/personal/skill-study-private/concise-writing/e-iteration-20261018/subjects/20261018T051816080Z-cw-e-iteration-codex-control-85286808-f286-4b31-99d7-1d8138cf5434-qcocvlnq",
+        "inventory": {
+          "path": "/Users/simon/work/personal/skill-study-private/concise-writing/e-iteration-20261018/subjects/20261018T051816080Z-cw-e-iteration-codex-control-85286808-f286-4b31-99d7-1d8138cf5434-qcocvlnq.canonical.inventory.json",
+          "sha256": "0ad3cb975f348301240297e9c92e1caa914ec6966a62f66a91e039b35f335370",
+          "version": "1"
+        },
+        "verified": true
+      },
+      "result": {
+        "result_id": "codex-e-iteration-01-control-5-1-assessment",
+        "record": {
+          "path": "skill-studies/concise-writing/results/20261018T051816080Z-cw-e-iteration-codex-control-85286808-f286-4b31-99d7-1d8138cf5434-qcocvlnq.json",
+          "sha256": "28be5287c57c2d28559ddc3e624be4d86846d138ac1a7b83b9390a556a272637",
+          "version": "2",
+          "git_revision": "a2473348f115f15faf478cbf742e8a68a8bb1f6c"
+        }
+      }
+    },
+    {
+      "attempt_id": "codex-e-iteration-01-original-5-1",
+      "case_id": "document-addition",
+      "condition": "original",
+      "repetition": 5,
+      "attempt_number": 1,
+      "retry_of": null,
+      "manifest": {
+        "path": "skill-studies/concise-writing/drafts/baseline-iteration/testing/codex-manifest.json",
+        "sha256": "40f98155f8a890e3b719c37a53e9b1a15c3a49918bfec493af21d4be453e5029",
+        "version": "1",
+        "git_revision": "9a636d5078f0e2fc9f713364af9a0ef13e18ad33"
+      },
+      "authorization": {
+        "artifact": {
+          "path": "skill-studies/concise-writing/protocol.md",
+          "sha256": "9c8364d6e7be968912c5ae39f7126231d291591d7d4082db80f4169ba9f419af",
+          "version": "1",
+          "git_revision": "9a636d5078f0e2fc9f713364af9a0ef13e18ad33"
+        },
+        "selector": "Batch: codex-e-iteration-01; order 18"
+      },
+      "run_id": "20261018T051841060Z-cw-e-iteration-codex-original-b76a3ae9-51af-45d4-b6c8-79d627b08fd4-9kxwadn1",
+      "allocation": {
+        "pool": "subject",
+        "charge": 1
+      },
+      "limitations": [
+        "Codex active-session assessment; no blind, held-out or independent assessor claim. Inventory wrapper corrected without raw mutation or model repetition. Separate Opus review remains pending."
+      ],
+      "bundle": {
+        "path": "/Users/simon/work/personal/skill-study-private/concise-writing/e-iteration-20261018/subjects/20261018T051841060Z-cw-e-iteration-codex-original-b76a3ae9-51af-45d4-b6c8-79d627b08fd4-9kxwadn1",
+        "inventory": {
+          "path": "/Users/simon/work/personal/skill-study-private/concise-writing/e-iteration-20261018/subjects/20261018T051841060Z-cw-e-iteration-codex-original-b76a3ae9-51af-45d4-b6c8-79d627b08fd4-9kxwadn1.canonical.inventory.json",
+          "sha256": "3f86fe4d66cae3b1397a45c4f1b6678270948fbea9ee0c0b300fbb153ca15fe5",
+          "version": "1"
+        },
+        "verified": true
+      },
+      "result": {
+        "result_id": "codex-e-iteration-01-original-5-1-assessment",
+        "record": {
+          "path": "skill-studies/concise-writing/results/20261018T051841060Z-cw-e-iteration-codex-original-b76a3ae9-51af-45d4-b6c8-79d627b08fd4-9kxwadn1.json",
+          "sha256": "d08b4807c5e3db492534d765b1336cdea25fa81c137b0a1b3597e13f748c4b7b",
+          "version": "2",
+          "git_revision": "a2473348f115f15faf478cbf742e8a68a8bb1f6c"
+        }
+      }
+    },
+    {
+      "attempt_id": "codex-e-iteration-01-candidate-targeted-5-1",
+      "case_id": "document-addition",
+      "condition": "candidate-targeted",
+      "repetition": 5,
+      "attempt_number": 1,
+      "retry_of": null,
+      "manifest": {
+        "path": "skill-studies/concise-writing/drafts/baseline-iteration/testing/codex-manifest.json",
+        "sha256": "40f98155f8a890e3b719c37a53e9b1a15c3a49918bfec493af21d4be453e5029",
+        "version": "1",
+        "git_revision": "9a636d5078f0e2fc9f713364af9a0ef13e18ad33"
+      },
+      "authorization": {
+        "artifact": {
+          "path": "skill-studies/concise-writing/protocol.md",
+          "sha256": "9c8364d6e7be968912c5ae39f7126231d291591d7d4082db80f4169ba9f419af",
+          "version": "1",
+          "git_revision": "9a636d5078f0e2fc9f713364af9a0ef13e18ad33"
+        },
+        "selector": "Batch: codex-e-iteration-01; order 19"
+      },
+      "run_id": "20261018T051906834Z-cw-e-iteration-codex-candidate-targeted-7ccecd07-313f-452f-94e8-e06a191efc1b-1zd2e0ar",
+      "allocation": {
+        "pool": "subject",
+        "charge": 1
+      },
+      "limitations": [
+        "Codex active-session assessment; no blind, held-out or independent assessor claim. Inventory wrapper corrected without raw mutation or model repetition. Separate Opus review remains pending."
+      ],
+      "bundle": {
+        "path": "/Users/simon/work/personal/skill-study-private/concise-writing/e-iteration-20261018/subjects/20261018T051906834Z-cw-e-iteration-codex-candidate-targeted-7ccecd07-313f-452f-94e8-e06a191efc1b-1zd2e0ar",
+        "inventory": {
+          "path": "/Users/simon/work/personal/skill-study-private/concise-writing/e-iteration-20261018/subjects/20261018T051906834Z-cw-e-iteration-codex-candidate-targeted-7ccecd07-313f-452f-94e8-e06a191efc1b-1zd2e0ar.canonical.inventory.json",
+          "sha256": "5b84cf3579fd599ec8900d8fc8ee1555b564e01ddb8704fabea0c3e49ac092b5",
+          "version": "1"
+        },
+        "verified": true
+      },
+      "result": {
+        "result_id": "codex-e-iteration-01-candidate-targeted-5-1-assessment",
+        "record": {
+          "path": "skill-studies/concise-writing/results/20261018T051906834Z-cw-e-iteration-codex-candidate-targeted-7ccecd07-313f-452f-94e8-e06a191efc1b-1zd2e0ar.json",
+          "sha256": "7e6f17243ea8b6070070790f7f5ff0d29bf0a8d1bb958e892aa67afd16df580f",
+          "version": "2",
+          "git_revision": "a2473348f115f15faf478cbf742e8a68a8bb1f6c"
+        }
+      }
+    },
+    {
+      "attempt_id": "codex-e-iteration-01-candidate-fuller-5-1",
+      "case_id": "document-addition",
+      "condition": "candidate-fuller",
+      "repetition": 5,
+      "attempt_number": 1,
+      "retry_of": null,
+      "manifest": {
+        "path": "skill-studies/concise-writing/drafts/baseline-iteration/testing/codex-manifest.json",
+        "sha256": "40f98155f8a890e3b719c37a53e9b1a15c3a49918bfec493af21d4be453e5029",
+        "version": "1",
+        "git_revision": "9a636d5078f0e2fc9f713364af9a0ef13e18ad33"
+      },
+      "authorization": {
+        "artifact": {
+          "path": "skill-studies/concise-writing/protocol.md",
+          "sha256": "9c8364d6e7be968912c5ae39f7126231d291591d7d4082db80f4169ba9f419af",
+          "version": "1",
+          "git_revision": "9a636d5078f0e2fc9f713364af9a0ef13e18ad33"
+        },
+        "selector": "Batch: codex-e-iteration-01; order 20"
+      },
+      "run_id": "20261018T051930374Z-cw-e-iteration-codex-candidate-fuller-b26c8ce9-5c8a-4520-bb7e-f87f7908dd9e-qm06x6_5",
+      "allocation": {
+        "pool": "subject",
+        "charge": 1
+      },
+      "limitations": [
+        "Codex active-session assessment; no blind, held-out or independent assessor claim. Inventory wrapper corrected without raw mutation or model repetition. Separate Opus review remains pending."
+      ],
+      "bundle": {
+        "path": "/Users/simon/work/personal/skill-study-private/concise-writing/e-iteration-20261018/subjects/20261018T051930374Z-cw-e-iteration-codex-candidate-fuller-b26c8ce9-5c8a-4520-bb7e-f87f7908dd9e-qm06x6_5",
+        "inventory": {
+          "path": "/Users/simon/work/personal/skill-study-private/concise-writing/e-iteration-20261018/subjects/20261018T051930374Z-cw-e-iteration-codex-candidate-fuller-b26c8ce9-5c8a-4520-bb7e-f87f7908dd9e-qm06x6_5.canonical.inventory.json",
+          "sha256": "52a96ab2f27ee8df9b50f95736bb959893ea993781e25f6d0b30f30a535b9634",
+          "version": "1"
+        },
+        "verified": true
+      },
+      "result": {
+        "result_id": "codex-e-iteration-01-candidate-fuller-5-1-assessment",
+        "record": {
+          "path": "skill-studies/concise-writing/results/20261018T051930374Z-cw-e-iteration-codex-candidate-fuller-b26c8ce9-5c8a-4520-bb7e-f87f7908dd9e-qm06x6_5.json",
+          "sha256": "80a5cc03b1936d7955a44b046207b57e62e15441cff9ce68f6323a31b654623a",
+          "version": "2",
+          "git_revision": "a2473348f115f15faf478cbf742e8a68a8bb1f6c"
+        }
+      }
+    }
+  ]
+}

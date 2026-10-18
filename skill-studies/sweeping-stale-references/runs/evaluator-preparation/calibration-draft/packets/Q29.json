@@ -1,0 +1,66 @@
+{
+  "kind": "constructed calibration evidence, not a model run",
+  "files": {
+    ".gitignore": ".agents/\nTASK.md\n__pycache__/\n*.pyc\n",
+    "README.md": "# Notification worker\n\nThe worker sends a notification through a caller-provided transport.\nA transport returns true on success and false when that attempt fails.\n\n## Delivery limit\n\nThe worker allows up to four retries after the initial delivery attempt.\nIt stops as soon as delivery succeeds and reports failure if delivery is exhausted.\n\nFor operational handling, see [the operations guide](docs/operations.md) and\n[troubleshooting](docs/troubleshooting.md).\nThe independent [download helper](docs/download-helper.md) is a separate operation.\n\n## Local verification\n\nNo network service or third-party package is required:\n\n```sh\npython3 -m unittest discover -s tests\n```\n",
+    "docs/download-helper.md": "# Download helper\n\n`fetch` in `src/download.py` is independent of notification delivery.\nIt makes at most three attempts to obtain an artifact, stopping after success.\nThe caller receives false if all attempts fail. This helper does not call the\nnotification worker or share its retry policy.\n",
+    "docs/operations.md": "# Operating notification delivery\n\nThis guide describes the current notification worker exposed by `deliver` in\n`src/delivery.py`.\n\nAfter the first failed send, the worker has up to three additional tries available.\nSuccessful delivery ends processing immediately; no further copies are sent.\nWhen the worker returns false, record the notification for operator follow-up.\nDo not start a second delivery cycle automatically.\n",
+    "docs/troubleshooting.md": "# Notification delivery troubleshooting\n\nFor the current notification worker, the fourth consecutive failed send exhausts\nautomatic delivery attempts. A false result means the notification needs\noperator attention.\n\nA true result means delivery succeeded; do not resend that notification merely\nbecause earlier attempts failed.\n",
+    "plans/completed/delivery-policy.md": "# Completed: initial delivery policy\n\nHistorical record of the policy before the current branch's change.\nThe former notification worker allowed three attempts in total: the initial\nsend followed by up to two further tries. Success ended the cycle early.\nThis records the former design, not current operating instructions.\n",
+    "src/delivery.py": "\"\"\"Notification delivery through a caller-supplied boolean sender.\"\"\"\n\n\ndef deliver(send):\n    \"\"\"Return whether delivery succeeded; stop calling send after success.\"\"\"\n    for _ in range(4):\n        if send():\n            return True\n    return False\n",
+    "src/download.py": "\"\"\"Independent download helper; does not use the delivery worker.\"\"\"\n\n\ndef fetch(request):\n    \"\"\"Return whether the download succeeded; stop after success.\"\"\"\n    for _ in range(3):\n        if request():\n            return True\n    return False\n",
+    "tests/test_retry_behavior.py": "\"\"\"Exercise public operations through deterministic local transports.\"\"\"\nimport sys\nimport unittest\nfrom pathlib import Path\n\nsys.path.insert(0, str(Path(__file__).resolve().parents[1] / \"src\"))\nfrom delivery import deliver\nfrom download import fetch\n\n\nclass RetryBehaviorTests(unittest.TestCase):\n    def check_operation(self, operation, succeeds_on, expected_calls, expected_result):\n        calls = []\n\n        def transport():\n            calls.append(len(calls) + 1)\n            return succeeds_on is not None and len(calls) == succeeds_on\n\n        self.assertIs(operation(transport), expected_result)\n        self.assertEqual(len(calls), expected_calls)\n\n    def test_delivery_exhausts_after_four_failures(self):\n        self.check_operation(deliver, None, 4, False)\n\n    def test_delivery_stops_after_immediate_success(self):\n        self.check_operation(deliver, 1, 1, True)\n\n    def test_delivery_stops_after_second_attempt_succeeds(self):\n        self.check_operation(deliver, 2, 2, True)\n\n    def test_delivery_can_succeed_on_fourth_attempt(self):\n        self.check_operation(deliver, 4, 4, True)\n\n    def test_download_exhausts_after_three_failures(self):\n        self.check_operation(fetch, None, 3, False)\n\n    def test_download_stops_after_immediate_success(self):\n        self.check_operation(fetch, 1, 1, True)\n\n    def test_download_can_succeed_on_third_attempt(self):\n        self.check_operation(fetch, 3, 3, True)\n\n\nif __name__ == \"__main__\":\n    unittest.main()\n"
+  },
+  "runtime_observations": {
+    "status": "observed",
+    "probes": {
+      "delivery_fail": {
+        "status": "observed",
+        "calls": 4,
+        "returned": false
+      },
+      "delivery_first": {
+        "status": "observed",
+        "calls": 1,
+        "returned": true
+      },
+      "delivery_second": {
+        "status": "observed",
+        "calls": 2,
+        "returned": true
+      },
+      "delivery_fourth": {
+        "status": "observed",
+        "calls": 4,
+        "returned": true
+      },
+      "download_fail": {
+        "status": "observed",
+        "calls": 3,
+        "returned": false
+      },
+      "download_first": {
+        "status": "observed",
+        "calls": 1,
+        "returned": true
+      },
+      "download_third": {
+        "status": "observed",
+        "calls": 3,
+        "returned": true
+      }
+    }
+  },
+  "action_trace": {
+    "availability": "not supplied"
+  },
+  "git": {
+    "availability": "complete for this constructed history",
+    "baseline": "af11f49aa2208afc7964a3dfe8be691440673544",
+    "head": "58523db053640f8b4d81c727260319e29e104779",
+    "commits_after_baseline": "commit 58523db053640f8b4d81c727260319e29e104779\nRepair delivery guidance\n\n",
+    "committed_patch": "diff --git a/README.md b/README.md\nindex ce67c5d..4b6d87e 100644\n--- a/README.md\n+++ b/README.md\n@@ -5,7 +5,7 @@ A transport returns true on success and false when that attempt fails.\n \n ## Delivery limit\n \n-The worker makes at most three delivery attempts for a notification.\n+The worker allows up to four retries after the initial delivery attempt.\n It stops as soon as delivery succeeds and reports failure if delivery is exhausted.\n \n For operational handling, see [the operations guide](docs/operations.md) and\ndiff --git a/docs/operations.md b/docs/operations.md\nindex 1ae2955..0e95540 100644\n--- a/docs/operations.md\n+++ b/docs/operations.md\n@@ -3,7 +3,7 @@\n This guide describes the current notification worker exposed by `deliver` in\n `src/delivery.py`.\n \n-After the first failed send, the worker has two additional tries available.\n+After the first failed send, the worker has up to three additional tries available.\n Successful delivery ends processing immediately; no further copies are sent.\n When the worker returns false, record the notification for operator follow-up.\n Do not start a second delivery cycle automatically.\ndiff --git a/docs/troubleshooting.md b/docs/troubleshooting.md\nindex dd8fc17..de72b78 100644\n--- a/docs/troubleshooting.md\n+++ b/docs/troubleshooting.md\n@@ -1,6 +1,6 @@\n # Notification delivery troubleshooting\n \n-For the current notification worker, the third consecutive failed send exhausts\n+For the current notification worker, the fourth consecutive failed send exhausts\n automatic delivery attempts. A false result means the notification needs\n operator attention.\n \n",
+    "working_patch": "",
+    "porcelain_status": ""
+  }
+}

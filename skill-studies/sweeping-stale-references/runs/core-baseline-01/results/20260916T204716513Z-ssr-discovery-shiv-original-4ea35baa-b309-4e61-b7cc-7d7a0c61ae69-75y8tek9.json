@@ -1,0 +1,226 @@
+{
+  "schema_version": "1",
+  "record_kind": "execution result",
+  "result_id": "core-baseline-01-discovery-shiv-original-1",
+  "assessed_at": "2026-09-16T20:53:59.022616+00:00",
+  "run_id": "20260916T204716513Z-ssr-discovery-shiv-original-4ea35baa-b309-4e61-b7cc-7d7a0c61ae69-75y8tek9",
+  "condition": "original",
+  "assessor": {
+    "name": "Codex active session",
+    "method": "active session",
+    "model": null,
+    "session_id": "01a0a0df-97d9-7630-a639-012c3046e6b5",
+    "context": "Same ongoing work session with owner decisions, construction history, fixed criteria and prior assessments available. Not independent or blind validation; assessor model identity not recorded by this workflow."
+  },
+  "manifest": {
+    "path": "skill-studies/sweeping-stale-references/cases/discovery-shiv/manifest.json",
+    "sha256": "31378d2d7cbbf11051174e8f6d88303a680eaf94cd73cb213a52be5b7ed69b2e",
+    "version": "1",
+    "git_revision": "1247058074e09610ab5ff9bfdc9220147694930c"
+  },
+  "evidence": [
+    {
+      "id": "runner",
+      "artifact": {
+        "path": "/Users/simon/work/personal/skill-study-private/sweeping-stale-references/development/20260916T204716513Z-ssr-discovery-shiv-original-4ea35baa-b309-4e61-b7cc-7d7a0c61ae69-75y8tek9/result.json",
+        "sha256": "606241f7f62c5bb467444c6fcff299e37feade6ba7c21a1d02b4d76e4e85360b",
+        "version": "0.4"
+      },
+      "selector": "Execution, status, artifact identities and infrastructure error."
+    },
+    {
+      "id": "inputs",
+      "artifact": {
+        "path": "/Users/simon/work/personal/skill-study-private/sweeping-stale-references/development/20260916T204716513Z-ssr-discovery-shiv-original-4ea35baa-b309-4e61-b7cc-7d7a0c61ae69-75y8tek9/runner.log",
+        "sha256": "89dfcef6960c965d5cdd3760e2ba1bf408f9bdc9b2f07c8ac9fe8712fac5fced",
+        "version": null
+      },
+      "selector": "Private invocation arguments, pre-launch input hashes and capture/cleanup."
+    },
+    {
+      "id": "trace",
+      "artifact": {
+        "path": "/Users/simon/work/personal/skill-study-private/sweeping-stale-references/development/20260916T204716513Z-ssr-discovery-shiv-original-4ea35baa-b309-4e61-b7cc-7d7a0c61ae69-75y8tek9/stdout.txt",
+        "sha256": "3217d08ec2ded251fba8dff4db454e660a5ff4efa67d6024fa29baf273d51a40",
+        "version": null
+      },
+      "selector": "Ordered command/agent events, interpreted with complete session tool responses."
+    },
+    {
+      "id": "session",
+      "artifact": {
+        "path": "/Users/simon/work/personal/skill-study-private/sweeping-stale-references/development/20260916T204716513Z-ssr-discovery-shiv-original-4ea35baa-b309-4e61-b7cc-7d7a0c61ae69-75y8tek9/provider-session.jsonl",
+        "sha256": "b8d3bad3ed7a9df23fde1125908e24b0716c89285a494f312993b835a8253f63",
+        "version": null
+      },
+      "selector": "Line 16: full frozen skill; lines 39/46: pre-edit search and all consumer contents; line 62: Python/Click verification failure; line 71: Python 3.9.6 and unsuccessful compatible-interpreter probes; line 85: final complete commit and accounting."
+    },
+    {
+      "id": "checks",
+      "artifact": {
+        "path": "/Users/simon/work/personal/skill-study-private/sweeping-stale-references/development/20260916T204716513Z-ssr-discovery-shiv-original-4ea35baa-b309-4e61-b7cc-7d7a0c61ae69-75y8tek9.checks.json",
+        "sha256": "18c95a6cc39842f8f675667c592a6cc9844df92fd3aadfeb533ab3efa30ada23",
+        "version": null
+      },
+      "selector": "Input checks, Git history/commit messages, changed paths, preserved project bytes and independent runtime observations."
+    },
+    {
+      "id": "file-5",
+      "artifact": {
+        "path": "/Users/simon/work/personal/skill-study-private/sweeping-stale-references/development/20260916T204716513Z-ssr-discovery-shiv-original-4ea35baa-b309-4e61-b7cc-7d7a0c61ae69-75y8tek9/workspace/fixture/.github/workflows/offline-example.yml",
+        "sha256": "d4e247a8617adf393455d9f174db420cc866826523093f77894b99c1ed94a638",
+        "version": null
+      },
+      "selector": "Complete changed artifact; inspect against fixed case criteria and preserved input bytes."
+    },
+    {
+      "id": "file-6",
+      "artifact": {
+        "path": "/Users/simon/work/personal/skill-study-private/sweeping-stale-references/development/20260916T204716513Z-ssr-discovery-shiv-original-4ea35baa-b309-4e61-b7cc-7d7a0c61ae69-75y8tek9/workspace/fixture/README.md",
+        "sha256": "8c6f9c10785d0b41358215c0493d54aa11fa8923d0d54e9cb6ef1f4570d454be",
+        "version": null
+      },
+      "selector": "Complete changed artifact; inspect against fixed case criteria and preserved input bytes."
+    },
+    {
+      "id": "file-7",
+      "artifact": {
+        "path": "/Users/simon/work/personal/skill-study-private/sweeping-stale-references/development/20260916T204716513Z-ssr-discovery-shiv-original-4ea35baa-b309-4e61-b7cc-7d7a0c61ae69-75y8tek9/workspace/fixture/build-support/release/example.mk",
+        "sha256": "893b638e80397fc2115e6f62c5dc1b10116a050610c4945f3a4e5c12ff2dbc86",
+        "version": null
+      },
+      "selector": "Complete changed artifact; inspect against fixed case criteria and preserved input bytes."
+    },
+    {
+      "id": "file-8",
+      "artifact": {
+        "path": "/Users/simon/work/personal/skill-study-private/sweeping-stale-references/development/20260916T204716513Z-ssr-discovery-shiv-original-4ea35baa-b309-4e61-b7cc-7d7a0c61ae69-75y8tek9/workspace/fixture/scripts/build-example.sh",
+        "sha256": "dc10cc741f0a8717e6d1bf4c6744ea103ea934e4d1462796671fcca15387580d",
+        "version": null
+      },
+      "selector": "Complete changed artifact; inspect against fixed case criteria and preserved input bytes."
+    }
+  ],
+  "setup": {
+    "status": "invalid",
+    "reason": "Full frozen skill exposure and input integrity are verified, but the subject shell resolves python3 to Apple Python 3.9.6, incompatible with the supplied Click runtime's match syntax. This is a demonstrated task-runtime setup fault; controller replay under a compatible Python cannot repair the subject's verification environment. Capture-2 applies prospectively; its frozen protocol/runner revision is identified by this attempt’s authorization in the index. Configuration, prompt, pre-launch fixtures and neutral project baseline match fixed inputs. Session hash, invocation cwd and stdout thread identity match.",
+    "evidence": [
+      "runner",
+      "inputs",
+      "session",
+      "checks"
+    ]
+  },
+  "criteria": [
+    {
+      "id": "F1",
+      "dimension": "functional",
+      "judgment": "met",
+      "reason": "All four stale commands are correctly changed to --destination. Each builds and executes the intended greeting archive in the fixed controller replay under a compatible Python, including the script from another directory. This inspectable repair outcome does not establish valid subject-runtime attribution.",
+      "consequence": "Functional outcome satisfied.",
+      "evidence": [
+        "checks",
+        "session",
+        "file-5",
+        "file-6",
+        "file-7",
+        "file-8"
+      ]
+    },
+    {
+      "id": "F2",
+      "dimension": "functional",
+      "judgment": "met",
+      "reason": "Only the four required consumer files changed. All nonconsumer project/runtime bytes are preserved. Compatible-runtime replay confirms canonical option, short alias, independent inventory tool and greeting behavior, and rejects the retired option without an artifact. Historical and unrelated guidance retains its meaning.",
+      "consequence": "Functional outcome satisfied.",
+      "evidence": [
+        "checks",
+        "session",
+        "file-5",
+        "file-6",
+        "file-7",
+        "file-8"
+      ]
+    },
+    {
+      "id": "F3",
+      "dimension": "functional",
+      "judgment": "met",
+      "reason": "Commit 2e5d881 contains all four correct consumer repairs; no working changes remain. Subject-side runtime verification was blocked separately by the supplied environment.",
+      "consequence": "Functional outcome satisfied.",
+      "evidence": [
+        "checks",
+        "session",
+        "file-5",
+        "file-6",
+        "file-7",
+        "file-8"
+      ]
+    },
+    {
+      "id": "P1",
+      "dimension": "procedural",
+      "judgment": "met",
+      "reason": "Pre-edit search and full reads at session lines 39/46 expose every consumer including hidden CI. The subject explicitly chooses four updates and preserves the historical, independent-tool and negative-assertion references with correct reasons.",
+      "consequence": "Procedure satisfied.",
+      "evidence": [
+        "checks",
+        "session",
+        "trace"
+      ]
+    },
+    {
+      "id": "P2",
+      "dimension": "procedural",
+      "judgment": "met",
+      "reason": "Exactly one complete reconciliation commit follows the neutral fixture baseline.",
+      "consequence": "Procedure satisfied.",
+      "evidence": [
+        "checks",
+        "session",
+        "trace"
+      ]
+    },
+    {
+      "id": "P3",
+      "dimension": "procedural",
+      "judgment": "not met",
+      "reason": "The inventory claims ten matches (4 update, 4 intentionally stale, 2 false positive), but the listed entries total nine. The fixed scope has four updates, one historical reference and four false positives; the two negative assertions are mislabelled intentionally stale. Locations and preservation reasons remain useful, but counts/classification are inaccurate.",
+      "consequence": "Non-blocking procedural defect; functional outcome assessed separately.",
+      "evidence": [
+        "checks",
+        "session",
+        "trace"
+      ]
+    }
+  ],
+  "functional_result": "met",
+  "procedural_summary": "Observable P1/P2 met; P3 has a non-blocking count/classification defect. Setup invalidity excludes this execution from valid-setup aggregates regardless of inspectable repair quality.",
+  "observations": [
+    {
+      "dimension": "setup",
+      "description": "The subject's local tests fail while importing Click under Python 3.9.6, before they can verify repaired CLI behavior. Compatible interpreters were not found through the subject's PATH probes. An offline scripted CLI reproduction confirms the environment mismatch; explicit restricted PATH selects Python 3.14.",
+      "consequence": "Pause before order 6, retain the charged attempt and exclude it from valid-setup aggregates. No retry or replacement is authorized.",
+      "evidence": [
+        "session",
+        "inputs",
+        "checks"
+      ]
+    },
+    {
+      "dimension": "functional",
+      "description": "Compatible-runtime controller replay confirms complete correct consumer repairs and preservation despite the subject-runtime fault.",
+      "consequence": "Retain artifact judgments with the setup exclusion; do not turn infrastructure failure into a skill failure or a valid comparison observation.",
+      "evidence": [
+        "checks",
+        "session"
+      ]
+    }
+  ],
+  "uncertainty": [
+    "Functional outcomes are controller-replay artifact judgments under a compatible Python; they do not undo the subject runtime incompatibility or justify inclusion.",
+    "This is one execution under the declared case/model/context; aggregate conclusions belong to the batch assessment.",
+    "Session content establishes observable exposure/actions, not internal attention or exhaustive host-wide isolation.",
+    "No immutable model revision or independent/held-out validation is claimed."
+  ]
+}

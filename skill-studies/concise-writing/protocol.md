@@ -3,7 +3,8 @@
 Format version: `1`
 Study ID: `concise-writing`
 Status: baseline collection and cross-model review are complete; the owner selected the original CW as the development base and authorized preparation of effectiveness-first edits. Adoption remains deferred.
-Current action: review the remaining deficiencies and full-suite coverage with the owner after the [contact-wording reassessment](reassessment-contact-01/README.md); no new calls are queued.
+Current action: review the requested [core/runs directory layout](../../plans/specs/2026-10-18-study-directory-layout.md) before migrating files; no new model calls are queued.
+The reassessment is committed/pushed at `3ba9169ee0de0db44e4014c31fbccb3abc921a94`. Next tests are A/B/C, then N1–N4 for the unchanged new drafts; E is complete and the remaining allocation is not yet authorized.
 Under owner-authorized CW-E-contact-interpretation-1, thirteen prior E failures become passes; explicit recording remains a precision observation rather than a demonstrated functional gap.
 The original result records and Fable/Opus judgments remain historical evidence; the versioned reassessment index owns the superseding E judgments.
 Both E attempt indexes identify complete committed result records; the [Codex assessment](codex-e-iteration-01-assessment.md) and [Claude batch assessment](claude-e-iteration-01-assessment.md) summarize them.
@@ -574,7 +575,7 @@ The new E reviews use the [fixed review package](drafts/baseline-iteration/testi
 Dispatched calls are **296 subject, 14 evaluator, 0 authoring, 1 retry**; remaining outer capacity is **0 / 0 / 4 / 3** against the [active plan](../../plans/2026-09-11-model-driven-skill-testing.md#limits-and-information-boundaries). Both eight-call CW batches are spent. The owner authorized ten SSR expansion calls under ceiling 56; all ten are spent, including the excluded control, with no replacement or pool transfer. Comparison runner durations total 508.067 seconds; baseline durations remain 494.936 seconds, including setup and capture.
 Owner clarification after round-10 review: “the budget is just a guideline”. The 1,200-minute figure below remains the planning baseline, not a collection stop; invocation ceilings and the authorized SSR scope is unchanged. Retain elapsed effort and forecast variance to expose process cost.
 
-Current combined accounting: **2,340 active minutes booked; 1,140 minutes above the historical 1,200-minute planning guideline**.
+Current combined accounting: **2,355 active minutes booked; 1,155 minutes above the historical 1,200-minute planning guideline**.
 These are rounded effort estimates, not stopwatch measurements or a separately timed category breakdown.
 Between-turn owner wait is excluded; runner durations are included once.
 The initial 104 calls and sixteen native third repetitions are spent; combined subject accounting is 296/296, with 0 E calls remaining.
@@ -658,7 +659,8 @@ The supplemental work used 40 estimated active minutes against its 40-minute for
 | E subject collection, direct assessment and inventory metadata recovery | 40 |
 | E Opus packet preparation, review, reconciliation and final verification | 40 |
 | Owner-authorized E contact reassessment, scope reconciliation and verification | 20 |
-| **Total** | **2,340** |
+| Study-layout inventory and core/runs migration proposal | 15 |
+| **Total** | **2,355** |
 
 SSR expansion is complete. The prior 55-minute remaining forecast closed at 50 estimated minutes, including the additional shell correction; all ten subject calls are spent.
 The combined batch/recovery effort is 135 estimated minutes (45 initial checkpoint, 40 isolation correction, 50 resumption), 45 above the original 90-minute allowance. Separate round-9 review effort remains in the combined ledger above.

@@ -1,0 +1,215 @@
+{
+  "schema_version": "1",
+  "record_kind": "execution result",
+  "result_id": "core-baseline-01-moved-guide-original-2",
+  "assessed_at": "2026-09-16T21:27:31.065049+00:00",
+  "run_id": "20260916T212458466Z-ssr-pilot-02-original-61c309cf-8839-4a59-ae5d-598c15ebc2d8-js5_fmmw",
+  "condition": "original",
+  "assessor": {
+    "name": "Codex active session",
+    "method": "active session",
+    "model": null,
+    "session_id": "01a0a0df-97d9-7630-a639-012c3046e6b5",
+    "context": "Same ongoing work session with owner decisions, construction history, fixed criteria and prior assessments available. Not independent or blind validation; assessor model identity not recorded by this workflow."
+  },
+  "manifest": {
+    "path": "skill-studies/sweeping-stale-references/cases/moved-guide/manifest.json",
+    "sha256": "4f78793708ec8ded5e1e4fe045d4d7fef524ce58af254dac076e0625223411b0",
+    "version": "1",
+    "git_revision": "1247058074e09610ab5ff9bfdc9220147694930c"
+  },
+  "evidence": [
+    {
+      "id": "runner",
+      "artifact": {
+        "path": "/Users/simon/work/personal/skill-study-private/sweeping-stale-references/development/20260916T212458466Z-ssr-pilot-02-original-61c309cf-8839-4a59-ae5d-598c15ebc2d8-js5_fmmw/result.json",
+        "sha256": "ef0b6ffb3490d3ce2a9b73b68df7835142e5be690bacf2b083a26cde9617333d",
+        "version": "0.4"
+      },
+      "selector": "Execution, status, artifact identities and infrastructure error."
+    },
+    {
+      "id": "inputs",
+      "artifact": {
+        "path": "/Users/simon/work/personal/skill-study-private/sweeping-stale-references/development/20260916T212458466Z-ssr-pilot-02-original-61c309cf-8839-4a59-ae5d-598c15ebc2d8-js5_fmmw/runner.log",
+        "sha256": "6905e7b8e1042f672a6436c674b591e591e94d779aae466680bc707cac2785b4",
+        "version": null
+      },
+      "selector": "Private invocation arguments, pre-launch input hashes and capture/cleanup."
+    },
+    {
+      "id": "trace",
+      "artifact": {
+        "path": "/Users/simon/work/personal/skill-study-private/sweeping-stale-references/development/20260916T212458466Z-ssr-pilot-02-original-61c309cf-8839-4a59-ae5d-598c15ebc2d8-js5_fmmw/stdout.txt",
+        "sha256": "c35b58c3ed58c583857f8f2d00b61535a7623d29f96fe7aaa73276296ac1823c",
+        "version": null
+      },
+      "selector": "Ordered command/agent events, interpreted with complete session tool responses."
+    },
+    {
+      "id": "session",
+      "artifact": {
+        "path": "/Users/simon/work/personal/skill-study-private/sweeping-stale-references/development/20260916T212458466Z-ssr-pilot-02-original-61c309cf-8839-4a59-ae5d-598c15ebc2d8-js5_fmmw/provider-session.jsonl",
+        "sha256": "ac5f97e86eb8ead01251e63f96eced39863d547ec46f8ac8b9b0349f9ca40511",
+        "version": null
+      },
+      "selector": "Line 16: complete frozen skill linked to call line 13; lines 37 and 46: project content and pre-edit search; line 53: four repairs; line 60: successful export checks; line 69: complete commit and account."
+    },
+    {
+      "id": "checks",
+      "artifact": {
+        "path": "/Users/simon/work/personal/skill-study-private/sweeping-stale-references/development/20260916T212458466Z-ssr-pilot-02-original-61c309cf-8839-4a59-ae5d-598c15ebc2d8-js5_fmmw.checks.json",
+        "sha256": "df576533802bb4e69d3d39317436f8d9cf223475d09df8f966facf0679ca1d68",
+        "version": null
+      },
+      "selector": "Input checks, Git history/commit messages, changed paths, preserved project bytes and independent runtime observations."
+    },
+    {
+      "id": "file-5",
+      "artifact": {
+        "path": "/Users/simon/work/personal/skill-study-private/sweeping-stale-references/development/20260916T212458466Z-ssr-pilot-02-original-61c309cf-8839-4a59-ae5d-598c15ebc2d8-js5_fmmw/workspace/fixture/README.md",
+        "sha256": "9e97a73685d83fddaddac027c2e1f38fa225d087f5f3a32ff8da1f9937aaf2b5",
+        "version": null
+      },
+      "selector": "Complete changed artifact; inspect against fixed case criteria and preserved input bytes."
+    },
+    {
+      "id": "file-6",
+      "artifact": {
+        "path": "/Users/simon/work/personal/skill-study-private/sweeping-stale-references/development/20260916T212458466Z-ssr-pilot-02-original-61c309cf-8839-4a59-ae5d-598c15ebc2d8-js5_fmmw/workspace/fixture/docs/index.md",
+        "sha256": "96144ff7b607b53498e91dee88d5e34f254459c04a29da7afeb3bebfc71e22b6",
+        "version": null
+      },
+      "selector": "Complete changed artifact; inspect against fixed case criteria and preserved input bytes."
+    },
+    {
+      "id": "file-7",
+      "artifact": {
+        "path": "/Users/simon/work/personal/skill-study-private/sweeping-stale-references/development/20260916T212458466Z-ssr-pilot-02-original-61c309cf-8839-4a59-ae5d-598c15ebc2d8-js5_fmmw/workspace/fixture/docs/tutorials/quickstart.md",
+        "sha256": "c61c0daedb88e2462da72311fa3fc547be7632cf571a5a2e5d50d32448ff992f",
+        "version": null
+      },
+      "selector": "Complete changed artifact; inspect against fixed case criteria and preserved input bytes."
+    },
+    {
+      "id": "file-8",
+      "artifact": {
+        "path": "/Users/simon/work/personal/skill-study-private/sweeping-stale-references/development/20260916T212458466Z-ssr-pilot-02-original-61c309cf-8839-4a59-ae5d-598c15ebc2d8-js5_fmmw/workspace/fixture/scripts/export-guide.sh",
+        "sha256": "afd80dc1ebc98978102750682bac98af191e12ad272aaf1ce98dbbdb03dab7ac",
+        "version": null
+      },
+      "selector": "Complete changed artifact; inspect against fixed case criteria and preserved input bytes."
+    }
+  ],
+  "setup": {
+    "status": "valid",
+    "reason": "The full frozen skill is present in an untruncated actual response before task work. No additional guidance was read. The subject completed normally with runtime-1 and retained complete action evidence. Capture-2 and runtime-1 apply prospectively; the frozen protocol/runner revision is identified by this attempt’s authorization in the index. Configuration, prompt, pre-launch fixtures and neutral project baseline match fixed inputs. Session hash, invocation cwd and stdout thread identity match.",
+    "evidence": [
+      "runner",
+      "inputs",
+      "session",
+      "checks"
+    ]
+  },
+  "criteria": [
+    {
+      "id": "F1",
+      "dimension": "functional",
+      "judgment": "met",
+      "reason": "All three Markdown consumers resolve to the intended docs/reference/setup.md through correct file-relative paths. The repaired script exports the unchanged service guide from both the project root and another directory.",
+      "consequence": "Functional outcome satisfied.",
+      "evidence": [
+        "checks",
+        "session",
+        "file-5",
+        "file-6",
+        "file-7",
+        "file-8"
+      ]
+    },
+    {
+      "id": "F2",
+      "dimension": "functional",
+      "judgment": "met",
+      "reason": "The service guide, historical layout record and independent vendor guide/link retain their input bytes. The vendor link still reaches its own guide and the old service path remains absent.",
+      "consequence": "Functional outcome satisfied.",
+      "evidence": [
+        "checks",
+        "session",
+        "file-5",
+        "file-6",
+        "file-7",
+        "file-8"
+      ]
+    },
+    {
+      "id": "F3",
+      "dimension": "functional",
+      "judgment": "met",
+      "reason": "Commit aebcd7d contains all four required consumer repairs; the retained tracked working tree is clean.",
+      "consequence": "Functional outcome satisfied.",
+      "evidence": [
+        "checks",
+        "session",
+        "file-5",
+        "file-6",
+        "file-7",
+        "file-8"
+      ]
+    },
+    {
+      "id": "P1",
+      "dimension": "procedural",
+      "judgment": "met",
+      "reason": "Complete project reads and broad search precede editing. The trace distinguishes active consumers, the historical completed plan and the independent vendor guide, and the resulting triage preserves each correctly.",
+      "consequence": "Procedure satisfied.",
+      "evidence": [
+        "checks",
+        "session",
+        "trace"
+      ]
+    },
+    {
+      "id": "P2",
+      "dimension": "procedural",
+      "judgment": "met",
+      "reason": "One repair commit after the neutral baseline contains the complete connected reconciliation.",
+      "consequence": "Procedure satisfied.",
+      "evidence": [
+        "checks",
+        "session",
+        "trace"
+      ]
+    },
+    {
+      "id": "P3",
+      "dimension": "procedural",
+      "judgment": "not met",
+      "reason": "The account correctly locates and classifies all five required references and includes three accurate optional broad-search hits. Those extras are allowed for this case. However, it claims eight paths for eight matches when its entries span only seven distinct paths: README appears twice. This inaccurate path count makes the account defective under P3, independently of the complete repair.",
+      "consequence": "Non-blocking procedural defect; functional outcome assessed separately.",
+      "evidence": [
+        "checks",
+        "session",
+        "trace"
+      ]
+    }
+  ],
+  "functional_result": "met",
+  "procedural_summary": "P1 and P2 met. P3 has a non-blocking path-count error; the optional additional search hits are not themselves defects.",
+  "observations": [
+    {
+      "dimension": "procedural",
+      "description": "The inventory accurately explains every repair and preservation but confuses match count with distinct path count (eight versus seven).",
+      "consequence": "A small audit arithmetic defect remains visible without changing the passing functional result.",
+      "evidence": [
+        "session",
+        "checks"
+      ]
+    }
+  ],
+  "uncertainty": [
+    "This is one execution under the declared case/model/context; aggregate conclusions belong to the batch assessment.",
+    "Session content establishes observable exposure/actions, not internal attention or exhaustive host-wide isolation.",
+    "No immutable model revision or independent/held-out validation is claimed."
+  ]
+}

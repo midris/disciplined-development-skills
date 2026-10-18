@@ -1,0 +1,168 @@
+{
+  "authority": "Owner request: CW only; SSR remains parked until its rewrite.",
+  "ceiling": 12,
+  "subject_runs": 136,
+  "evaluator_model": "claude-fable-5-1",
+  "effort": "medium",
+  "no_automatic_retry": true,
+  "slots": [
+    {
+      "order": 1,
+      "configuration": "codex-long-handoff",
+      "batches": [
+        "codex-expanded-01"
+      ],
+      "cases": [
+        "long-handoff"
+      ],
+      "count": 9
+    },
+    {
+      "order": 2,
+      "configuration": "codex-agent-recommendation",
+      "batches": [
+        "codex-expanded-01"
+      ],
+      "cases": [
+        "agent-recommendation"
+      ],
+      "count": 9
+    },
+    {
+      "order": 3,
+      "configuration": "codex-effective-briefing",
+      "batches": [
+        "codex-expanded-01"
+      ],
+      "cases": [
+        "effective-briefing"
+      ],
+      "count": 9
+    },
+    {
+      "order": 4,
+      "configuration": "codex-document-addition",
+      "batches": [
+        "codex-expanded-01"
+      ],
+      "cases": [
+        "document-addition"
+      ],
+      "count": 9
+    },
+    {
+      "order": 5,
+      "configuration": "claude-agent-recommendation",
+      "batches": [
+        "claude-expanded-01"
+      ],
+      "cases": [
+        "agent-recommendation"
+      ],
+      "count": 9
+    },
+    {
+      "order": 6,
+      "configuration": "claude-effective-briefing",
+      "batches": [
+        "claude-expanded-01"
+      ],
+      "cases": [
+        "effective-briefing"
+      ],
+      "count": 9
+    },
+    {
+      "order": 7,
+      "configuration": "claude-long-handoff",
+      "batches": [
+        "claude-expanded-01"
+      ],
+      "cases": [
+        "long-handoff"
+      ],
+      "count": 9
+    },
+    {
+      "order": 8,
+      "configuration": "claude-document-addition",
+      "batches": [
+        "claude-expanded-01"
+      ],
+      "cases": [
+        "document-addition"
+      ],
+      "count": 9
+    },
+    {
+      "order": 9,
+      "configuration": "codex-native",
+      "batches": [
+        "codex-invocation-01",
+        "codex-invocation-02"
+      ],
+      "cases": [
+        "invocation-tighten",
+        "invocation-write",
+        "invocation-nonprose",
+        "invocation-comments"
+      ],
+      "count": 24
+    },
+    {
+      "order": 10,
+      "configuration": "claude-native",
+      "batches": [
+        "claude-invocation-01",
+        "claude-invocation-02"
+      ],
+      "cases": [
+        "invocation-tighten",
+        "invocation-write",
+        "invocation-nonprose",
+        "invocation-comments"
+      ],
+      "count": 24
+    },
+    {
+      "order": 11,
+      "configuration": "historical-agent-recommendation",
+      "batches": [
+        "contribution-baseline-01",
+        "comprehensive-comparison-01"
+      ],
+      "cases": [
+        "agent-recommendation"
+      ],
+      "count": 8
+    },
+    {
+      "order": 12,
+      "configuration": "historical-effective-briefing",
+      "batches": [
+        "contribution-baseline-01",
+        "comprehensive-comparison-01"
+      ],
+      "cases": [
+        "effective-briefing"
+      ],
+      "count": 8
+    }
+  ],
+  "retry_slots": [
+    {
+      "order": 13,
+      "configuration": "codex-document-addition-corrected",
+      "allocation_pool": "retry",
+      "replaces_review_order": 4,
+      "count": 9,
+      "batches": [
+        "codex-expanded-01"
+      ],
+      "cases": [
+        "document-addition"
+      ],
+      "authority": "Owner explicitly approved one corrected review on 2026-10-17; no new subject executions."
+    }
+  ]
+}

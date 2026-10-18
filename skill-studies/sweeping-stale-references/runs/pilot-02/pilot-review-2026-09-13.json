@@ -1,0 +1,218 @@
+{
+  "purpose": "Pilot-wide controller verification before committing the unrun Shiv case. No provider calls; prior assessments unchanged.",
+  "pairs": [
+    {
+      "case": "pilot-01",
+      "bundle_checks": [
+        {
+          "condition": "control",
+          "primary_and_backup_hashes_verified": true,
+          "files": 59,
+          "bytes": 49208,
+          "baseline": "2e04627b8de50a6ffa880910ad64f46070ee7ab7",
+          "repair": "285d8ec60952de8a674b3ab7d041c096e00fa10a",
+          "changed_paths": [
+            "README.md"
+          ],
+          "clean_working_tree": true,
+          "retained_diff": "diff --git a/README.md b/README.md\nindex fb81cf7..c2ebd56 100644\n--- a/README.md\n+++ b/README.md\n@@ -3,7 +3,7 @@\n Example settings:\n \n ```json\n-{\"cache_ttl\": 30}\n+{\"max_age\": 30}\n ```\n \n Run the application with `python3 src/cache.py --config config/defaults.json`.\n",
+          "replay": [
+            {
+              "argv": [
+                "python3",
+                "-m",
+                "unittest",
+                "discover",
+                "-s",
+                "tests"
+              ],
+              "exit_code": 1
+            },
+            {
+              "argv": [
+                "sh",
+                "scripts/cache-smoke.sh"
+              ],
+              "exit_code": 2
+            },
+            {
+              "argv": [
+                "make",
+                "smoke"
+              ],
+              "exit_code": 2
+            },
+            {
+              "argv": [
+                "python3",
+                "src/cache.py",
+                "--cache_ttl",
+                "30"
+              ],
+              "exit_code": 2
+            },
+            {
+              "argv": [
+                "python3",
+                "src/cache.py",
+                "--config",
+                "/private/tmp/ssr-process-pilot-20260912/assessment/control-readme.json"
+              ],
+              "exit_code": 0
+            }
+          ]
+        },
+        {
+          "condition": "original",
+          "primary_and_backup_hashes_verified": true,
+          "files": 72,
+          "bytes": 81236,
+          "baseline": "d64d70330b4901ba46659b53776a5bae1a1047e9",
+          "repair": "cb4e261a24f3dd02318c3bad6f72090b4ef718d9",
+          "changed_paths": [
+            ".github/workflows/cache.yml",
+            "Makefile",
+            "README.md",
+            "config/defaults.json",
+            "docs/configuration.md",
+            "scripts/cache-smoke.sh",
+            "tests/fixtures/cache.json"
+          ],
+          "clean_working_tree": true,
+          "retained_diff": "diff --git a/.github/workflows/cache.yml b/.github/workflows/cache.yml\nindex b130988..19e300f 100644\n--- a/.github/workflows/cache.yml\n+++ b/.github/workflows/cache.yml\n@@ -5,4 +5,4 @@ jobs:\n     runs-on: ubuntu-latest\n     steps:\n       - uses: actions/checkout@v4\n-      - run: python3 src/cache.py --cache_ttl 30\n+      - run: python3 src/cache.py --max_age 30\ndiff --git a/Makefile b/Makefile\nindex 87cf9b9..573ff56 100644\n--- a/Makefile\n+++ b/Makefile\n@@ -1,3 +1,3 @@\n .PHONY: smoke\n smoke:\n-\tpython3 src/cache.py --cache_ttl 30\n+\tpython3 src/cache.py --max_age 30\ndiff --git a/README.md b/README.md\nindex fb81cf7..c2ebd56 100644\n--- a/README.md\n+++ b/README.md\n@@ -3,7 +3,7 @@\n Example settings:\n \n ```json\n-{\"cache_ttl\": 30}\n+{\"max_age\": 30}\n ```\n \n Run the application with `python3 src/cache.py --config config/defaults.json`.\ndiff --git a/config/defaults.json b/config/defaults.json\nindex d72bd29..64e1914 100644\n--- a/config/defaults.json\n+++ b/config/defaults.json\n@@ -1 +1 @@\n-{\"cache_ttl\": 30}\n+{\"max_age\": 30}\ndiff --git a/docs/configuration.md b/docs/configuration.md\nindex 0774898..c5299c8 100644\n--- a/docs/configuration.md\n+++ b/docs/configuration.md\n@@ -1,4 +1,4 @@\n # Application configuration\n \n-Set `cache_ttl` to the maximum cache age in seconds. The default is 30.\n+Set `max_age` to the maximum cache age in seconds. The default is 30.\n The same setting can be supplied through the command line instead of a JSON file.\ndiff --git a/scripts/cache-smoke.sh b/scripts/cache-smoke.sh\nindex b578c9b..d192b15 100644\n--- a/scripts/cache-smoke.sh\n+++ b/scripts/cache-smoke.sh\n@@ -1,3 +1,3 @@\n #!/bin/sh\n set -eu\n-python3 src/cache.py --cache_ttl 30\n+python3 src/cache.py --max_age 30\ndiff --git a/tests/fixtures/cache.json b/tests/fixtures/cache.json\nindex d72bd29..64e1914 100644\n--- a/tests/fixtures/cache.json\n+++ b/tests/fixtures/cache.json\n@@ -1 +1 @@\n-{\"cache_ttl\": 30}\n+{\"max_age\": 30}\n",
+          "replay": [
+            {
+              "argv": [
+                "python3",
+                "-m",
+                "unittest",
+                "discover",
+                "-s",
+                "tests"
+              ],
+              "exit_code": 0
+            },
+            {
+              "argv": [
+                "sh",
+                "scripts/cache-smoke.sh"
+              ],
+              "exit_code": 0
+            },
+            {
+              "argv": [
+                "make",
+                "smoke"
+              ],
+              "exit_code": 0
+            },
+            {
+              "argv": [
+                "python3",
+                "src/cache.py",
+                "--max_age",
+                "30"
+              ],
+              "exit_code": 0
+            },
+            {
+              "argv": [
+                "python3",
+                "src/cache.py",
+                "--config",
+                "/private/tmp/ssr-process-pilot-20260912/assessment/original-readme.json"
+              ],
+              "exit_code": 0
+            }
+          ]
+        }
+      ],
+      "baseline_trees_identical": true
+    },
+    {
+      "case": "pilot-02",
+      "bundle_checks": [
+        {
+          "condition": "control",
+          "primary_and_backup_hashes_verified": true,
+          "files": 48,
+          "bytes": 38194,
+          "baseline": "bae8ab028bc1b433ea7cbca2d58ffb1d19ad5b87",
+          "repair": "d663a6158e23fbf4caefb360f157db251c5edd36",
+          "changed_paths": [
+            "README.md"
+          ],
+          "clean_working_tree": true,
+          "retained_diff": "diff --git a/README.md b/README.md\nindex 74a0b13..8e681e9 100644\n--- a/README.md\n+++ b/README.md\n@@ -1,6 +1,6 @@\n # Orbit service\n \n-Start with the [service setup guide](docs/setup.md).\n+Start with the [service setup guide](docs/reference/setup.md).\n \n Documentation begins at [the index](docs/index.md).\n Run `sh scripts/export-guide.sh` to print the service guide for a support handoff; it also works from outside this checkout.\n",
+          "replay": [
+            {
+              "reference_correct": [
+                true,
+                false,
+                false,
+                true
+              ],
+              "preservation": true,
+              "old_path_absent": true
+            },
+            {
+              "script_from": "project",
+              "exit_code": 1
+            },
+            {
+              "script_from": "outside",
+              "exit_code": 1
+            }
+          ]
+        },
+        {
+          "condition": "original",
+          "primary_and_backup_hashes_verified": true,
+          "files": 55,
+          "bytes": 69673,
+          "baseline": "dc9030ae70b520085576a2f7d33a89b78c536dc8",
+          "repair": "958a5e180e9d85c59becd62c245bd01a9b5ffb78",
+          "changed_paths": [
+            "README.md",
+            "docs/index.md",
+            "docs/tutorials/quickstart.md",
+            "scripts/export-guide.sh"
+          ],
+          "clean_working_tree": true,
+          "retained_diff": "diff --git a/README.md b/README.md\nindex 74a0b13..8e681e9 100644\n--- a/README.md\n+++ b/README.md\n@@ -1,6 +1,6 @@\n # Orbit service\n \n-Start with the [service setup guide](docs/setup.md).\n+Start with the [service setup guide](docs/reference/setup.md).\n \n Documentation begins at [the index](docs/index.md).\n Run `sh scripts/export-guide.sh` to print the service guide for a support handoff; it also works from outside this checkout.\ndiff --git a/docs/index.md b/docs/index.md\nindex 83d9ecd..6a07961 100644\n--- a/docs/index.md\n+++ b/docs/index.md\n@@ -1,3 +1,3 @@\n # Documentation\n \n-Read the [service setup guide](setup.md) before starting the service.\n+Read the [service setup guide](reference/setup.md) before starting the service.\ndiff --git a/docs/tutorials/quickstart.md b/docs/tutorials/quickstart.md\nindex 50f59a9..33a2b16 100644\n--- a/docs/tutorials/quickstart.md\n+++ b/docs/tutorials/quickstart.md\n@@ -1,3 +1,3 @@\n # Quickstart\n \n-Follow the [service setup instructions](../setup.md), then check the health endpoint.\n+Follow the [service setup instructions](../reference/setup.md), then check the health endpoint.\ndiff --git a/scripts/export-guide.sh b/scripts/export-guide.sh\nindex 3691df6..c667e0a 100644\n--- a/scripts/export-guide.sh\n+++ b/scripts/export-guide.sh\n@@ -1,4 +1,4 @@\n #!/bin/sh\n set -eu\n script_dir=$(CDPATH= cd -- \"$(dirname -- \"$0\")\" && pwd)\n-cat \"$script_dir/../docs/setup.md\"\n+cat \"$script_dir/../docs/reference/setup.md\"\n",
+          "replay": [
+            {
+              "reference_correct": [
+                true,
+                true,
+                true,
+                true
+              ],
+              "preservation": true,
+              "old_path_absent": true
+            },
+            {
+              "script_from": "project",
+              "exit_code": 0
+            },
+            {
+              "script_from": "outside",
+              "exit_code": 0
+            }
+          ]
+        }
+      ],
+      "baseline_trees_identical": true
+    }
+  ],
+  "all_raw_bundles_unchanged_after_review": true,
+  "policy_provenance_verified": "Both assessed policy revisions, the pilot-02 frozen policy copy, current report identities and case-criteria hashes verified against disk/Git.",
+  "runner_verification": {
+    "unit_command": ".venv/bin/python -m pytest -q -m \"not process_smoke\"",
+    "unit_result": "285 passed, 12 deselected",
+    "smoke_command": ".venv/bin/python -m pytest -q -m process_smoke",
+    "smoke_result": "12 passed, 285 deselected",
+    "cwd": "skill-validation/runner",
+    "environment_observation": "Initial combined run: 291 passed, 6 Claude process-smoke failures under the outer sandbox. A minimal sandbox-exec invocation reproduced sandbox_apply: Operation not permitted. All 12 process smokes passed outside the outer sandbox with dummy providers; no actual model calls or runner code changes."
+  }
+}

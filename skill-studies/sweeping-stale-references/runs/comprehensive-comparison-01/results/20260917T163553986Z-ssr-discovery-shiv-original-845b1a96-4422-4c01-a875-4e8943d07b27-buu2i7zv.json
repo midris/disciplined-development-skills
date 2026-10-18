@@ -1,0 +1,215 @@
+{
+  "schema_version": "1",
+  "record_kind": "execution result",
+  "result_id": "comprehensive-comparison-01-discovery-shiv-original-1",
+  "assessed_at": "2026-09-17T16:38:26.540703+00:00",
+  "run_id": "20260917T163553986Z-ssr-discovery-shiv-original-845b1a96-4422-4c01-a875-4e8943d07b27-buu2i7zv",
+  "condition": "original",
+  "assessor": {
+    "name": "Codex active session",
+    "method": "active session",
+    "model": null,
+    "session_id": "01a0a0df-97d9-7630-a639-012c3046e6b5",
+    "context": "Same ongoing work session with owner decisions, construction history, fixed criteria and prior assessments available. Not independent or blind validation; assessor model identity not recorded by this workflow."
+  },
+  "manifest": {
+    "path": "skill-studies/sweeping-stale-references/cases/discovery-shiv/comparison-manifest.json",
+    "sha256": "a531f84981ed9b98725494a369cccfc644083cce8037c3fe716eedc42d83ecf0",
+    "version": "1",
+    "git_revision": "d899a817108330c4dcba4007f3383294a87d2f9a"
+  },
+  "evidence": [
+    {
+      "id": "runner",
+      "artifact": {
+        "path": "/Users/simon/work/personal/skill-study-private/sweeping-stale-references/development/20260917T163553986Z-ssr-discovery-shiv-original-845b1a96-4422-4c01-a875-4e8943d07b27-buu2i7zv/result.json",
+        "sha256": "90ee10b8b203b9526ee7587b98a2acad3f9e8b5dd53cba7d11dbb7906bdc46a3",
+        "version": "0.4"
+      },
+      "selector": "Execution, status, artifact identities and infrastructure error."
+    },
+    {
+      "id": "inputs",
+      "artifact": {
+        "path": "/Users/simon/work/personal/skill-study-private/sweeping-stale-references/development/20260917T163553986Z-ssr-discovery-shiv-original-845b1a96-4422-4c01-a875-4e8943d07b27-buu2i7zv/runner.log",
+        "sha256": "ff9e32f0607e4f520118ccb475f04bf54bc00233b1a01750e2aba4f4ec550106",
+        "version": null
+      },
+      "selector": "Private invocation arguments, pre-launch input hashes and capture/cleanup."
+    },
+    {
+      "id": "trace",
+      "artifact": {
+        "path": "/Users/simon/work/personal/skill-study-private/sweeping-stale-references/development/20260917T163553986Z-ssr-discovery-shiv-original-845b1a96-4422-4c01-a875-4e8943d07b27-buu2i7zv/stdout.txt",
+        "sha256": "3e21c1775b4f717036267341d83302d5c759f4a5b01c430b09aac29d4559b94e",
+        "version": null
+      },
+      "selector": "Ordered command/agent events, interpreted with complete session tool responses."
+    },
+    {
+      "id": "session",
+      "artifact": {
+        "path": "/Users/simon/work/personal/skill-study-private/sweeping-stale-references/development/20260917T163553986Z-ssr-discovery-shiv-original-845b1a96-4422-4c01-a875-4e8943d07b27-buu2i7zv/provider-session.jsonl",
+        "sha256": "31cf7a223be92c5b705bc08c00f680024950036ac2d35ee14acad3125b45053b",
+        "version": null
+      },
+      "selector": "Full original read and absent local AGENTS probe 16; baseline/task 25; broad content search 34 exposes all four consumers; reproduction 43; patch 48; checks 57; accounting search 64; commit 73."
+    },
+    {
+      "id": "checks",
+      "artifact": {
+        "path": "/Users/simon/work/personal/skill-study-private/sweeping-stale-references/development/20260917T163553986Z-ssr-discovery-shiv-original-845b1a96-4422-4c01-a875-4e8943d07b27-buu2i7zv.checks.json",
+        "sha256": "b7a7ce3e428774ec3491afda12763dc697e7509a59d9bda3ec44c2fdba2d0f66",
+        "version": null
+      },
+      "selector": "Input checks, Git history/commit messages, changed paths, preserved project bytes and independent runtime observations."
+    },
+    {
+      "id": "file-5",
+      "artifact": {
+        "path": "/Users/simon/work/personal/skill-study-private/sweeping-stale-references/development/20260917T163553986Z-ssr-discovery-shiv-original-845b1a96-4422-4c01-a875-4e8943d07b27-buu2i7zv/workspace/fixture/.github/workflows/offline-example.yml",
+        "sha256": "d4e247a8617adf393455d9f174db420cc866826523093f77894b99c1ed94a638",
+        "version": null
+      },
+      "selector": "Complete changed artifact; inspect against fixed case criteria and preserved input bytes."
+    },
+    {
+      "id": "file-6",
+      "artifact": {
+        "path": "/Users/simon/work/personal/skill-study-private/sweeping-stale-references/development/20260917T163553986Z-ssr-discovery-shiv-original-845b1a96-4422-4c01-a875-4e8943d07b27-buu2i7zv/workspace/fixture/README.md",
+        "sha256": "8c6f9c10785d0b41358215c0493d54aa11fa8923d0d54e9cb6ef1f4570d454be",
+        "version": null
+      },
+      "selector": "Complete changed artifact; inspect against fixed case criteria and preserved input bytes."
+    },
+    {
+      "id": "file-7",
+      "artifact": {
+        "path": "/Users/simon/work/personal/skill-study-private/sweeping-stale-references/development/20260917T163553986Z-ssr-discovery-shiv-original-845b1a96-4422-4c01-a875-4e8943d07b27-buu2i7zv/workspace/fixture/build-support/release/example.mk",
+        "sha256": "893b638e80397fc2115e6f62c5dc1b10116a050610c4945f3a4e5c12ff2dbc86",
+        "version": null
+      },
+      "selector": "Complete changed artifact; inspect against fixed case criteria and preserved input bytes."
+    },
+    {
+      "id": "file-8",
+      "artifact": {
+        "path": "/Users/simon/work/personal/skill-study-private/sweeping-stale-references/development/20260917T163553986Z-ssr-discovery-shiv-original-845b1a96-4422-4c01-a875-4e8943d07b27-buu2i7zv/workspace/fixture/scripts/build-example.sh",
+        "sha256": "dc10cc741f0a8717e6d1bf4c6744ea103ea934e4d1462796671fcca15387580d",
+        "version": null
+      },
+      "selector": "Complete changed artifact; inspect against fixed case criteria and preserved input bytes."
+    }
+  ],
+  "setup": {
+    "status": "valid",
+    "reason": "The full frozen original is exposed, neutral baseline is exact, runtime is usable and all supplied identities match. The local AGENTS probe finds no extra guidance; no outside retrieval or explicit remembered-upstream claim appears. Capture-2 and runtime-1 apply to both versions; the frozen protocol/runner revision is identified by this attempt’s authorization in the index. Configuration, prompt, pre-launch fixtures and neutral project baseline match fixed inputs. Session hash, invocation cwd and stdout thread identity match.",
+    "evidence": [
+      "runner",
+      "inputs",
+      "session",
+      "checks"
+    ]
+  },
+  "criteria": [
+    {
+      "id": "F1",
+      "dimension": "functional",
+      "judgment": "met",
+      "reason": "README, script, nested Make target and CI build command all use --destination. Independent replay builds and executes the intended greeting from each, including script execution from another directory.",
+      "consequence": "Functional outcome satisfied.",
+      "evidence": [
+        "checks",
+        "session",
+        "file-5",
+        "file-6",
+        "file-7",
+        "file-8"
+      ]
+    },
+    {
+      "id": "F2",
+      "dimension": "functional",
+      "judgment": "met",
+      "reason": "Only the four consumers change; CLI/alias, history, independent inventory tool, tests and other project files are preserved. Canonical/alias and inventory probes pass; retired option is rejected without an artifact.",
+      "consequence": "Functional outcome satisfied.",
+      "evidence": [
+        "checks",
+        "session",
+        "file-5",
+        "file-6",
+        "file-7",
+        "file-8"
+      ]
+    },
+    {
+      "id": "F3",
+      "dimension": "functional",
+      "judgment": "met",
+      "reason": "All four required command repairs are committed at 077c02b; final working tree is clean.",
+      "consequence": "Functional outcome satisfied.",
+      "evidence": [
+        "checks",
+        "session",
+        "file-5",
+        "file-6",
+        "file-7",
+        "file-8"
+      ]
+    },
+    {
+      "id": "P1",
+      "dimension": "procedural",
+      "judgment": "met",
+      "reason": "Before editing, tool output exposes all four stale commands and the trace explicitly triages them for repair, preserving history, negative assertions and independent-tool semantics.",
+      "consequence": "Procedure satisfied.",
+      "evidence": [
+        "checks",
+        "session",
+        "trace"
+      ]
+    },
+    {
+      "id": "P2",
+      "dimension": "procedural",
+      "judgment": "met",
+      "reason": "One complete repair commit follows the neutral baseline.",
+      "consequence": "Procedure satisfied.",
+      "evidence": [
+        "checks",
+        "session",
+        "trace"
+      ]
+    },
+    {
+      "id": "P3",
+      "dimension": "procedural",
+      "judgment": "not met",
+      "reason": "The account labels two negative assertions intentionally stale instead of the fixed false-positive classification. It also expands tools/inventory.py from one scoped occurrence to three by including unchanged variables and inventories current/exploratory code and tests excluded by the nine-occurrence scope.",
+      "consequence": "Non-blocking procedural defect; functional outcome assessed separately.",
+      "evidence": [
+        "checks",
+        "session",
+        "trace"
+      ]
+    }
+  ],
+  "functional_result": "met",
+  "procedural_summary": "Search/triage and grouping satisfied. P3 fails fixed classification and inventory-scope rules; functional outcome is unaffected.",
+  "observations": [
+    {
+      "dimension": "procedural",
+      "description": "Negative assertions are correctly preserved but receive the disputed intentionally-stale label; broad exploratory matches also inflate the prescribed inventory.",
+      "consequence": "Classification conformance is not proof of a skill defect: both versions plausibly allow this label. The separate scope mismatch is visible, with no claimed arithmetic error.",
+      "evidence": [
+        "session",
+        "checks"
+      ]
+    }
+  ],
+  "uncertainty": [
+    "This is one execution under the declared case/model/context; aggregate conclusions belong to the batch assessment.",
+    "Session content establishes observable exposure/actions, not internal attention or exhaustive host-wide isolation.",
+    "No immutable model revision or independent/held-out validation is claimed."
+  ]
+}

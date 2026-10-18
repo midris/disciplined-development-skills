@@ -1,0 +1,988 @@
+{
+  "format_version": "1",
+  "index_id": "concise-writing-claude-e-iteration-01",
+  "study_id": "concise-writing",
+  "batch_id": "claude-e-iteration-01",
+  "attempts": [
+    {
+      "attempt_id": "claude-e-iteration-01-candidate-targeted-1-1",
+      "case_id": "document-addition",
+      "condition": "candidate-targeted",
+      "repetition": 1,
+      "attempt_number": 1,
+      "retry_of": null,
+      "manifest": {
+        "path": "skill-studies/concise-writing/drafts/baseline-iteration/testing/claude-manifest.json",
+        "sha256": "4dcd6636e85a19ceb11348b6280225c6b2ba0a8f5a1bfbea66f9c3b69064d1ba",
+        "version": "1",
+        "git_revision": "9a636d5078f0e2fc9f713364af9a0ef13e18ad33"
+      },
+      "authorization": {
+        "artifact": {
+          "path": "skill-studies/concise-writing/protocol.md",
+          "sha256": "9c8364d6e7be968912c5ae39f7126231d291591d7d4082db80f4169ba9f419af",
+          "version": "1",
+          "git_revision": "9a636d5078f0e2fc9f713364af9a0ef13e18ad33"
+        },
+        "selector": "Batch: claude-e-iteration-01; order 1"
+      },
+      "run_id": "20261018T052021363Z-cw-e-iteration-claude-candidate-targeted-c898f485-bbff-431c-829f-9ccf405b4c02-tiy73t38",
+      "allocation": {
+        "pool": "subject",
+        "charge": 1
+      },
+      "limitations": [
+        "Direct Codex-session assessment; no blind, held-out or independent assessor claim. Complete body before editing; separate Opus review pending. Metadata-only amendment after Claude order 1 changes no subject input or criterion."
+      ],
+      "bundle": {
+        "path": "/Users/simon/work/personal/skill-study-private/concise-writing/e-iteration-20261018/subjects/20261018T052021363Z-cw-e-iteration-claude-candidate-targeted-c898f485-bbff-431c-829f-9ccf405b4c02-tiy73t38",
+        "inventory": {
+          "path": "/Users/simon/work/personal/skill-study-private/concise-writing/e-iteration-20261018/subjects/20261018T052021363Z-cw-e-iteration-claude-candidate-targeted-c898f485-bbff-431c-829f-9ccf405b4c02-tiy73t38.canonical.inventory.json",
+          "sha256": "787067a1e55b577bd4c6e72d6038c47d0c3c874e85b3e5ba383e21e281c4d21c",
+          "version": "1"
+        },
+        "verified": true
+      },
+      "result": {
+        "result_id": "claude-e-iteration-01-candidate-targeted-1-1-assessment",
+        "record": {
+          "path": "skill-studies/concise-writing/results/20261018T052021363Z-cw-e-iteration-claude-candidate-targeted-c898f485-bbff-431c-829f-9ccf405b4c02-tiy73t38.json",
+          "sha256": "e32e75076644e349287a0d5c9f6956094884ed483566108f300d12830dd492a0",
+          "version": "2",
+          "git_revision": "6be88c36c0ec54fe9fa71f5d6174efa825cd63c9"
+        }
+      }
+    },
+    {
+      "attempt_id": "claude-e-iteration-01-candidate-fuller-1-1",
+      "case_id": "document-addition",
+      "condition": "candidate-fuller",
+      "repetition": 1,
+      "attempt_number": 1,
+      "retry_of": null,
+      "manifest": {
+        "path": "skill-studies/concise-writing/drafts/baseline-iteration/testing/claude-manifest.json",
+        "sha256": "613eea38778b3cee5576d7adb1e38bfb1d3e2b1353de473e4a7453966ba4ce31",
+        "version": "1",
+        "git_revision": "0b96bcbb2b5340aed05c7c663ff400c2cd2b49c2"
+      },
+      "authorization": {
+        "artifact": {
+          "path": "skill-studies/concise-writing/protocol.md",
+          "sha256": "f6e7e461a150acf814d9fcc268694606fafe6f459969c3487670fbf503332edb",
+          "version": "1",
+          "git_revision": "0b96bcbb2b5340aed05c7c663ff400c2cd2b49c2"
+        },
+        "selector": "Batch: claude-e-iteration-01; order 2"
+      },
+      "run_id": "20261018T053125965Z-cw-e-iteration-claude-candidate-fuller-6d0952f6-c1b6-41c6-84b6-05a0a9cb611d-4q2i2atv",
+      "allocation": {
+        "pool": "subject",
+        "charge": 1
+      },
+      "limitations": [
+        "Direct Codex-session assessment; no blind, held-out or independent assessor claim. Complete body before editing; separate Opus review pending. Metadata-only amendment after Claude order 1 changes no subject input or criterion."
+      ],
+      "bundle": {
+        "path": "/Users/simon/work/personal/skill-study-private/concise-writing/e-iteration-20261018/subjects/20261018T053125965Z-cw-e-iteration-claude-candidate-fuller-6d0952f6-c1b6-41c6-84b6-05a0a9cb611d-4q2i2atv",
+        "inventory": {
+          "path": "/Users/simon/work/personal/skill-study-private/concise-writing/e-iteration-20261018/subjects/20261018T053125965Z-cw-e-iteration-claude-candidate-fuller-6d0952f6-c1b6-41c6-84b6-05a0a9cb611d-4q2i2atv.inventory.json",
+          "sha256": "0e2621635f24eff53b5486c2c0670889982e69d0dd94dff3c8aee939afa15dfc",
+          "version": "1"
+        },
+        "verified": true
+      },
+      "result": {
+        "result_id": "claude-e-iteration-01-candidate-fuller-1-1-assessment",
+        "record": {
+          "path": "skill-studies/concise-writing/results/20261018T053125965Z-cw-e-iteration-claude-candidate-fuller-6d0952f6-c1b6-41c6-84b6-05a0a9cb611d-4q2i2atv.json",
+          "sha256": "e3da100f39408a42cfbb97ac7c3fa15eeee6b655a0725581beeb2bfb91592e49",
+          "version": "2",
+          "git_revision": "6be88c36c0ec54fe9fa71f5d6174efa825cd63c9"
+        }
+      }
+    },
+    {
+      "attempt_id": "claude-e-iteration-01-control-1-1",
+      "case_id": "document-addition",
+      "condition": "control",
+      "repetition": 1,
+      "attempt_number": 1,
+      "retry_of": null,
+      "manifest": {
+        "path": "skill-studies/concise-writing/drafts/baseline-iteration/testing/claude-manifest.json",
+        "sha256": "613eea38778b3cee5576d7adb1e38bfb1d3e2b1353de473e4a7453966ba4ce31",
+        "version": "1",
+        "git_revision": "0b96bcbb2b5340aed05c7c663ff400c2cd2b49c2"
+      },
+      "authorization": {
+        "artifact": {
+          "path": "skill-studies/concise-writing/protocol.md",
+          "sha256": "f6e7e461a150acf814d9fcc268694606fafe6f459969c3487670fbf503332edb",
+          "version": "1",
+          "git_revision": "0b96bcbb2b5340aed05c7c663ff400c2cd2b49c2"
+        },
+        "selector": "Batch: claude-e-iteration-01; order 3"
+      },
+      "run_id": "20261018T053158646Z-cw-e-iteration-claude-control-a90a4667-6042-44dd-80ae-c756bf52f279-u8yo_iw2",
+      "allocation": {
+        "pool": "subject",
+        "charge": 1
+      },
+      "limitations": [
+        "Direct Codex-session assessment; no blind, held-out or independent assessor claim. Complete body before editing; separate Opus review pending. Metadata-only amendment after Claude order 1 changes no subject input or criterion."
+      ],
+      "bundle": {
+        "path": "/Users/simon/work/personal/skill-study-private/concise-writing/e-iteration-20261018/subjects/20261018T053158646Z-cw-e-iteration-claude-control-a90a4667-6042-44dd-80ae-c756bf52f279-u8yo_iw2",
+        "inventory": {
+          "path": "/Users/simon/work/personal/skill-study-private/concise-writing/e-iteration-20261018/subjects/20261018T053158646Z-cw-e-iteration-claude-control-a90a4667-6042-44dd-80ae-c756bf52f279-u8yo_iw2.inventory.json",
+          "sha256": "cfd524a2a52cf1692e7dbe6dde84359baaac553b0f66feb3972b53681c85564e",
+          "version": "1"
+        },
+        "verified": true
+      },
+      "result": {
+        "result_id": "claude-e-iteration-01-control-1-1-assessment",
+        "record": {
+          "path": "skill-studies/concise-writing/results/20261018T053158646Z-cw-e-iteration-claude-control-a90a4667-6042-44dd-80ae-c756bf52f279-u8yo_iw2.json",
+          "sha256": "a83e7480ee96accbda28c942c2233b51b180e87a93edd5159ebd28855dacf6d4",
+          "version": "2",
+          "git_revision": "6be88c36c0ec54fe9fa71f5d6174efa825cd63c9"
+        }
+      }
+    },
+    {
+      "attempt_id": "claude-e-iteration-01-original-1-1",
+      "case_id": "document-addition",
+      "condition": "original",
+      "repetition": 1,
+      "attempt_number": 1,
+      "retry_of": null,
+      "manifest": {
+        "path": "skill-studies/concise-writing/drafts/baseline-iteration/testing/claude-manifest.json",
+        "sha256": "613eea38778b3cee5576d7adb1e38bfb1d3e2b1353de473e4a7453966ba4ce31",
+        "version": "1",
+        "git_revision": "0b96bcbb2b5340aed05c7c663ff400c2cd2b49c2"
+      },
+      "authorization": {
+        "artifact": {
+          "path": "skill-studies/concise-writing/protocol.md",
+          "sha256": "f6e7e461a150acf814d9fcc268694606fafe6f459969c3487670fbf503332edb",
+          "version": "1",
+          "git_revision": "0b96bcbb2b5340aed05c7c663ff400c2cd2b49c2"
+        },
+        "selector": "Batch: claude-e-iteration-01; order 4"
+      },
+      "run_id": "20261018T053231587Z-cw-e-iteration-claude-original-53c513c2-f27a-4b90-87c9-c3aea61cc068-hcx8okgz",
+      "allocation": {
+        "pool": "subject",
+        "charge": 1
+      },
+      "limitations": [
+        "Direct Codex-session assessment; no blind, held-out or independent assessor claim. Complete body before editing; separate Opus review pending. Metadata-only amendment after Claude order 1 changes no subject input or criterion."
+      ],
+      "bundle": {
+        "path": "/Users/simon/work/personal/skill-study-private/concise-writing/e-iteration-20261018/subjects/20261018T053231587Z-cw-e-iteration-claude-original-53c513c2-f27a-4b90-87c9-c3aea61cc068-hcx8okgz",
+        "inventory": {
+          "path": "/Users/simon/work/personal/skill-study-private/concise-writing/e-iteration-20261018/subjects/20261018T053231587Z-cw-e-iteration-claude-original-53c513c2-f27a-4b90-87c9-c3aea61cc068-hcx8okgz.inventory.json",
+          "sha256": "0c75cdc2e68b9f854828f55de5e60de90a3aa726926d2b081523c28df2718bb4",
+          "version": "1"
+        },
+        "verified": true
+      },
+      "result": {
+        "result_id": "claude-e-iteration-01-original-1-1-assessment",
+        "record": {
+          "path": "skill-studies/concise-writing/results/20261018T053231587Z-cw-e-iteration-claude-original-53c513c2-f27a-4b90-87c9-c3aea61cc068-hcx8okgz.json",
+          "sha256": "7150683215a6db8c5a652b96b54cdac673579c29fa86d15d77d91626668a285c",
+          "version": "2",
+          "git_revision": "6be88c36c0ec54fe9fa71f5d6174efa825cd63c9"
+        }
+      }
+    },
+    {
+      "attempt_id": "claude-e-iteration-01-candidate-fuller-2-1",
+      "case_id": "document-addition",
+      "condition": "candidate-fuller",
+      "repetition": 2,
+      "attempt_number": 1,
+      "retry_of": null,
+      "manifest": {
+        "path": "skill-studies/concise-writing/drafts/baseline-iteration/testing/claude-manifest.json",
+        "sha256": "613eea38778b3cee5576d7adb1e38bfb1d3e2b1353de473e4a7453966ba4ce31",
+        "version": "1",
+        "git_revision": "0b96bcbb2b5340aed05c7c663ff400c2cd2b49c2"
+      },
+      "authorization": {
+        "artifact": {
+          "path": "skill-studies/concise-writing/protocol.md",
+          "sha256": "f6e7e461a150acf814d9fcc268694606fafe6f459969c3487670fbf503332edb",
+          "version": "1",
+          "git_revision": "0b96bcbb2b5340aed05c7c663ff400c2cd2b49c2"
+        },
+        "selector": "Batch: claude-e-iteration-01; order 5"
+      },
+      "run_id": "20261018T053300184Z-cw-e-iteration-claude-candidate-fuller-d832b586-a300-4e1e-80fe-518f674a5f1f-v33k6sum",
+      "allocation": {
+        "pool": "subject",
+        "charge": 1
+      },
+      "limitations": [
+        "Direct Codex-session assessment; no blind, held-out or independent assessor claim. Complete body before editing; separate Opus review pending. Metadata-only amendment after Claude order 1 changes no subject input or criterion."
+      ],
+      "bundle": {
+        "path": "/Users/simon/work/personal/skill-study-private/concise-writing/e-iteration-20261018/subjects/20261018T053300184Z-cw-e-iteration-claude-candidate-fuller-d832b586-a300-4e1e-80fe-518f674a5f1f-v33k6sum",
+        "inventory": {
+          "path": "/Users/simon/work/personal/skill-study-private/concise-writing/e-iteration-20261018/subjects/20261018T053300184Z-cw-e-iteration-claude-candidate-fuller-d832b586-a300-4e1e-80fe-518f674a5f1f-v33k6sum.inventory.json",
+          "sha256": "0262e5452fa50c1afc5ace6ae711deb218f2243bbcb4a54adb42f91c0de4b674",
+          "version": "1"
+        },
+        "verified": true
+      },
+      "result": {
+        "result_id": "claude-e-iteration-01-candidate-fuller-2-1-assessment",
+        "record": {
+          "path": "skill-studies/concise-writing/results/20261018T053300184Z-cw-e-iteration-claude-candidate-fuller-d832b586-a300-4e1e-80fe-518f674a5f1f-v33k6sum.json",
+          "sha256": "1e503410130223c21be76c4a117527a813f43f5ab4e0e995ae9734a487b15b61",
+          "version": "2",
+          "git_revision": "6be88c36c0ec54fe9fa71f5d6174efa825cd63c9"
+        }
+      }
+    },
+    {
+      "attempt_id": "claude-e-iteration-01-control-2-1",
+      "case_id": "document-addition",
+      "condition": "control",
+      "repetition": 2,
+      "attempt_number": 1,
+      "retry_of": null,
+      "manifest": {
+        "path": "skill-studies/concise-writing/drafts/baseline-iteration/testing/claude-manifest.json",
+        "sha256": "613eea38778b3cee5576d7adb1e38bfb1d3e2b1353de473e4a7453966ba4ce31",
+        "version": "1",
+        "git_revision": "0b96bcbb2b5340aed05c7c663ff400c2cd2b49c2"
+      },
+      "authorization": {
+        "artifact": {
+          "path": "skill-studies/concise-writing/protocol.md",
+          "sha256": "f6e7e461a150acf814d9fcc268694606fafe6f459969c3487670fbf503332edb",
+          "version": "1",
+          "git_revision": "0b96bcbb2b5340aed05c7c663ff400c2cd2b49c2"
+        },
+        "selector": "Batch: claude-e-iteration-01; order 6"
+      },
+      "run_id": "20261018T053334373Z-cw-e-iteration-claude-control-a0413be4-63d0-4f7b-ae83-b56d9eda9d67-ki2ez0rs",
+      "allocation": {
+        "pool": "subject",
+        "charge": 1
+      },
+      "limitations": [
+        "Direct Codex-session assessment; no blind, held-out or independent assessor claim. Complete body before editing; separate Opus review pending. Metadata-only amendment after Claude order 1 changes no subject input or criterion."
+      ],
+      "bundle": {
+        "path": "/Users/simon/work/personal/skill-study-private/concise-writing/e-iteration-20261018/subjects/20261018T053334373Z-cw-e-iteration-claude-control-a0413be4-63d0-4f7b-ae83-b56d9eda9d67-ki2ez0rs",
+        "inventory": {
+          "path": "/Users/simon/work/personal/skill-study-private/concise-writing/e-iteration-20261018/subjects/20261018T053334373Z-cw-e-iteration-claude-control-a0413be4-63d0-4f7b-ae83-b56d9eda9d67-ki2ez0rs.inventory.json",
+          "sha256": "15b06255de7f6f91138ada66e443012f9e60bf776cb1c697b32bdc48419cfde5",
+          "version": "1"
+        },
+        "verified": true
+      },
+      "result": {
+        "result_id": "claude-e-iteration-01-control-2-1-assessment",
+        "record": {
+          "path": "skill-studies/concise-writing/results/20261018T053334373Z-cw-e-iteration-claude-control-a0413be4-63d0-4f7b-ae83-b56d9eda9d67-ki2ez0rs.json",
+          "sha256": "cc4780dd8ed83b99c0b3188ebdb3398801a17305d6862c0adfd04054fbe0dddd",
+          "version": "2",
+          "git_revision": "6be88c36c0ec54fe9fa71f5d6174efa825cd63c9"
+        }
+      }
+    },
+    {
+      "attempt_id": "claude-e-iteration-01-original-2-1",
+      "case_id": "document-addition",
+      "condition": "original",
+      "repetition": 2,
+      "attempt_number": 1,
+      "retry_of": null,
+      "manifest": {
+        "path": "skill-studies/concise-writing/drafts/baseline-iteration/testing/claude-manifest.json",
+        "sha256": "613eea38778b3cee5576d7adb1e38bfb1d3e2b1353de473e4a7453966ba4ce31",
+        "version": "1",
+        "git_revision": "0b96bcbb2b5340aed05c7c663ff400c2cd2b49c2"
+      },
+      "authorization": {
+        "artifact": {
+          "path": "skill-studies/concise-writing/protocol.md",
+          "sha256": "f6e7e461a150acf814d9fcc268694606fafe6f459969c3487670fbf503332edb",
+          "version": "1",
+          "git_revision": "0b96bcbb2b5340aed05c7c663ff400c2cd2b49c2"
+        },
+        "selector": "Batch: claude-e-iteration-01; order 7"
+      },
+      "run_id": "20261018T053410351Z-cw-e-iteration-claude-original-f584dd67-f409-4b03-b8ba-a460875d3acc-bn2w937f",
+      "allocation": {
+        "pool": "subject",
+        "charge": 1
+      },
+      "limitations": [
+        "Direct Codex-session assessment; no blind, held-out or independent assessor claim. Complete body before editing; separate Opus review pending. Metadata-only amendment after Claude order 1 changes no subject input or criterion."
+      ],
+      "bundle": {
+        "path": "/Users/simon/work/personal/skill-study-private/concise-writing/e-iteration-20261018/subjects/20261018T053410351Z-cw-e-iteration-claude-original-f584dd67-f409-4b03-b8ba-a460875d3acc-bn2w937f",
+        "inventory": {
+          "path": "/Users/simon/work/personal/skill-study-private/concise-writing/e-iteration-20261018/subjects/20261018T053410351Z-cw-e-iteration-claude-original-f584dd67-f409-4b03-b8ba-a460875d3acc-bn2w937f.inventory.json",
+          "sha256": "c9c1e99ca68f31a0516b994cd3550a59de1f14b6ac36fb16eafd07b6fbc6e67d",
+          "version": "1"
+        },
+        "verified": true
+      },
+      "result": {
+        "result_id": "claude-e-iteration-01-original-2-1-assessment",
+        "record": {
+          "path": "skill-studies/concise-writing/results/20261018T053410351Z-cw-e-iteration-claude-original-f584dd67-f409-4b03-b8ba-a460875d3acc-bn2w937f.json",
+          "sha256": "d08194e0871d5e587729c7291a0f236b5026ce2812a5785ecb9c4c12cf17e800",
+          "version": "2",
+          "git_revision": "6be88c36c0ec54fe9fa71f5d6174efa825cd63c9"
+        }
+      }
+    },
+    {
+      "attempt_id": "claude-e-iteration-01-candidate-targeted-2-1",
+      "case_id": "document-addition",
+      "condition": "candidate-targeted",
+      "repetition": 2,
+      "attempt_number": 1,
+      "retry_of": null,
+      "manifest": {
+        "path": "skill-studies/concise-writing/drafts/baseline-iteration/testing/claude-manifest.json",
+        "sha256": "613eea38778b3cee5576d7adb1e38bfb1d3e2b1353de473e4a7453966ba4ce31",
+        "version": "1",
+        "git_revision": "0b96bcbb2b5340aed05c7c663ff400c2cd2b49c2"
+      },
+      "authorization": {
+        "artifact": {
+          "path": "skill-studies/concise-writing/protocol.md",
+          "sha256": "f6e7e461a150acf814d9fcc268694606fafe6f459969c3487670fbf503332edb",
+          "version": "1",
+          "git_revision": "0b96bcbb2b5340aed05c7c663ff400c2cd2b49c2"
+        },
+        "selector": "Batch: claude-e-iteration-01; order 8"
+      },
+      "run_id": "20261018T053436349Z-cw-e-iteration-claude-candidate-targeted-7e2db0ff-873f-4459-83b7-3ca1ee01a533-jlsv_mwh",
+      "allocation": {
+        "pool": "subject",
+        "charge": 1
+      },
+      "limitations": [
+        "Direct Codex-session assessment; no blind, held-out or independent assessor claim. Complete body before editing; separate Opus review pending. Metadata-only amendment after Claude order 1 changes no subject input or criterion."
+      ],
+      "bundle": {
+        "path": "/Users/simon/work/personal/skill-study-private/concise-writing/e-iteration-20261018/subjects/20261018T053436349Z-cw-e-iteration-claude-candidate-targeted-7e2db0ff-873f-4459-83b7-3ca1ee01a533-jlsv_mwh",
+        "inventory": {
+          "path": "/Users/simon/work/personal/skill-study-private/concise-writing/e-iteration-20261018/subjects/20261018T053436349Z-cw-e-iteration-claude-candidate-targeted-7e2db0ff-873f-4459-83b7-3ca1ee01a533-jlsv_mwh.inventory.json",
+          "sha256": "8877134fdb880e0b4fe4fb4a6502674670df629d8f272f415c06d3a0725cc51b",
+          "version": "1"
+        },
+        "verified": true
+      },
+      "result": {
+        "result_id": "claude-e-iteration-01-candidate-targeted-2-1-assessment",
+        "record": {
+          "path": "skill-studies/concise-writing/results/20261018T053436349Z-cw-e-iteration-claude-candidate-targeted-7e2db0ff-873f-4459-83b7-3ca1ee01a533-jlsv_mwh.json",
+          "sha256": "01da049213dcdb23d411021f4fe48c140b2c1a9921b6164847803aa667ed7497",
+          "version": "2",
+          "git_revision": "6be88c36c0ec54fe9fa71f5d6174efa825cd63c9"
+        }
+      }
+    },
+    {
+      "attempt_id": "claude-e-iteration-01-control-3-1",
+      "case_id": "document-addition",
+      "condition": "control",
+      "repetition": 3,
+      "attempt_number": 1,
+      "retry_of": null,
+      "manifest": {
+        "path": "skill-studies/concise-writing/drafts/baseline-iteration/testing/claude-manifest.json",
+        "sha256": "613eea38778b3cee5576d7adb1e38bfb1d3e2b1353de473e4a7453966ba4ce31",
+        "version": "1",
+        "git_revision": "0b96bcbb2b5340aed05c7c663ff400c2cd2b49c2"
+      },
+      "authorization": {
+        "artifact": {
+          "path": "skill-studies/concise-writing/protocol.md",
+          "sha256": "f6e7e461a150acf814d9fcc268694606fafe6f459969c3487670fbf503332edb",
+          "version": "1",
+          "git_revision": "0b96bcbb2b5340aed05c7c663ff400c2cd2b49c2"
+        },
+        "selector": "Batch: claude-e-iteration-01; order 9"
+      },
+      "run_id": "20261018T053504497Z-cw-e-iteration-claude-control-19e7d6e9-4b99-4982-9612-295d427e637c-750m80dk",
+      "allocation": {
+        "pool": "subject",
+        "charge": 1
+      },
+      "limitations": [
+        "Direct Codex-session assessment; no blind, held-out or independent assessor claim. Complete body before editing; separate Opus review pending. Metadata-only amendment after Claude order 1 changes no subject input or criterion."
+      ],
+      "bundle": {
+        "path": "/Users/simon/work/personal/skill-study-private/concise-writing/e-iteration-20261018/subjects/20261018T053504497Z-cw-e-iteration-claude-control-19e7d6e9-4b99-4982-9612-295d427e637c-750m80dk",
+        "inventory": {
+          "path": "/Users/simon/work/personal/skill-study-private/concise-writing/e-iteration-20261018/subjects/20261018T053504497Z-cw-e-iteration-claude-control-19e7d6e9-4b99-4982-9612-295d427e637c-750m80dk.inventory.json",
+          "sha256": "b20797fd63990ff33c68138489d84ff808d777f4d02651d358f0452edd9a7344",
+          "version": "1"
+        },
+        "verified": true
+      },
+      "result": {
+        "result_id": "claude-e-iteration-01-control-3-1-assessment",
+        "record": {
+          "path": "skill-studies/concise-writing/results/20261018T053504497Z-cw-e-iteration-claude-control-19e7d6e9-4b99-4982-9612-295d427e637c-750m80dk.json",
+          "sha256": "30afa2fed5a7254d35d45708b155899e03256699f063457d08a74d67fd0fb41a",
+          "version": "2",
+          "git_revision": "6be88c36c0ec54fe9fa71f5d6174efa825cd63c9"
+        }
+      }
+    },
+    {
+      "attempt_id": "claude-e-iteration-01-original-3-1",
+      "case_id": "document-addition",
+      "condition": "original",
+      "repetition": 3,
+      "attempt_number": 1,
+      "retry_of": null,
+      "manifest": {
+        "path": "skill-studies/concise-writing/drafts/baseline-iteration/testing/claude-manifest.json",
+        "sha256": "613eea38778b3cee5576d7adb1e38bfb1d3e2b1353de473e4a7453966ba4ce31",
+        "version": "1",
+        "git_revision": "0b96bcbb2b5340aed05c7c663ff400c2cd2b49c2"
+      },
+      "authorization": {
+        "artifact": {
+          "path": "skill-studies/concise-writing/protocol.md",
+          "sha256": "f6e7e461a150acf814d9fcc268694606fafe6f459969c3487670fbf503332edb",
+          "version": "1",
+          "git_revision": "0b96bcbb2b5340aed05c7c663ff400c2cd2b49c2"
+        },
+        "selector": "Batch: claude-e-iteration-01; order 10"
+      },
+      "run_id": "20261018T053530074Z-cw-e-iteration-claude-original-7181946c-033e-4f20-bbff-3b307e315ea2-j4tig71e",
+      "allocation": {
+        "pool": "subject",
+        "charge": 1
+      },
+      "limitations": [
+        "Direct Codex-session assessment; no blind, held-out or independent assessor claim. Complete body before editing; separate Opus review pending. Metadata-only amendment after Claude order 1 changes no subject input or criterion."
+      ],
+      "bundle": {
+        "path": "/Users/simon/work/personal/skill-study-private/concise-writing/e-iteration-20261018/subjects/20261018T053530074Z-cw-e-iteration-claude-original-7181946c-033e-4f20-bbff-3b307e315ea2-j4tig71e",
+        "inventory": {
+          "path": "/Users/simon/work/personal/skill-study-private/concise-writing/e-iteration-20261018/subjects/20261018T053530074Z-cw-e-iteration-claude-original-7181946c-033e-4f20-bbff-3b307e315ea2-j4tig71e.inventory.json",
+          "sha256": "85bfe02eca2822c28928a15f85ce9b2e2c6a3eada1209c9fdfa2c2e91db7fe53",
+          "version": "1"
+        },
+        "verified": true
+      },
+      "result": {
+        "result_id": "claude-e-iteration-01-original-3-1-assessment",
+        "record": {
+          "path": "skill-studies/concise-writing/results/20261018T053530074Z-cw-e-iteration-claude-original-7181946c-033e-4f20-bbff-3b307e315ea2-j4tig71e.json",
+          "sha256": "6c3ac2f5621887dd2cba83c162281fe142e88a0d5f3b5bdc62bf8199be27ab8b",
+          "version": "2",
+          "git_revision": "6be88c36c0ec54fe9fa71f5d6174efa825cd63c9"
+        }
+      }
+    },
+    {
+      "attempt_id": "claude-e-iteration-01-candidate-targeted-3-1",
+      "case_id": "document-addition",
+      "condition": "candidate-targeted",
+      "repetition": 3,
+      "attempt_number": 1,
+      "retry_of": null,
+      "manifest": {
+        "path": "skill-studies/concise-writing/drafts/baseline-iteration/testing/claude-manifest.json",
+        "sha256": "613eea38778b3cee5576d7adb1e38bfb1d3e2b1353de473e4a7453966ba4ce31",
+        "version": "1",
+        "git_revision": "0b96bcbb2b5340aed05c7c663ff400c2cd2b49c2"
+      },
+      "authorization": {
+        "artifact": {
+          "path": "skill-studies/concise-writing/protocol.md",
+          "sha256": "f6e7e461a150acf814d9fcc268694606fafe6f459969c3487670fbf503332edb",
+          "version": "1",
+          "git_revision": "0b96bcbb2b5340aed05c7c663ff400c2cd2b49c2"
+        },
+        "selector": "Batch: claude-e-iteration-01; order 11"
+      },
+      "run_id": "20261018T053559731Z-cw-e-iteration-claude-candidate-targeted-dda5320e-1c1e-4c6e-badd-a826c556fd54-wlexd0bq",
+      "allocation": {
+        "pool": "subject",
+        "charge": 1
+      },
+      "limitations": [
+        "Direct Codex-session assessment; no blind, held-out or independent assessor claim. Complete body before editing; separate Opus review pending. Metadata-only amendment after Claude order 1 changes no subject input or criterion."
+      ],
+      "bundle": {
+        "path": "/Users/simon/work/personal/skill-study-private/concise-writing/e-iteration-20261018/subjects/20261018T053559731Z-cw-e-iteration-claude-candidate-targeted-dda5320e-1c1e-4c6e-badd-a826c556fd54-wlexd0bq",
+        "inventory": {
+          "path": "/Users/simon/work/personal/skill-study-private/concise-writing/e-iteration-20261018/subjects/20261018T053559731Z-cw-e-iteration-claude-candidate-targeted-dda5320e-1c1e-4c6e-badd-a826c556fd54-wlexd0bq.inventory.json",
+          "sha256": "5e418e6a63e4cb81d2c25d8590ab9cad1a5379930f4fef9cc35748611d21f9a0",
+          "version": "1"
+        },
+        "verified": true
+      },
+      "result": {
+        "result_id": "claude-e-iteration-01-candidate-targeted-3-1-assessment",
+        "record": {
+          "path": "skill-studies/concise-writing/results/20261018T053559731Z-cw-e-iteration-claude-candidate-targeted-dda5320e-1c1e-4c6e-badd-a826c556fd54-wlexd0bq.json",
+          "sha256": "55c4b45ed8026dafefa31f0e94e437b912719a1cffa9eb18157da0c379fa141f",
+          "version": "2",
+          "git_revision": "6be88c36c0ec54fe9fa71f5d6174efa825cd63c9"
+        }
+      }
+    },
+    {
+      "attempt_id": "claude-e-iteration-01-candidate-fuller-3-1",
+      "case_id": "document-addition",
+      "condition": "candidate-fuller",
+      "repetition": 3,
+      "attempt_number": 1,
+      "retry_of": null,
+      "manifest": {
+        "path": "skill-studies/concise-writing/drafts/baseline-iteration/testing/claude-manifest.json",
+        "sha256": "613eea38778b3cee5576d7adb1e38bfb1d3e2b1353de473e4a7453966ba4ce31",
+        "version": "1",
+        "git_revision": "0b96bcbb2b5340aed05c7c663ff400c2cd2b49c2"
+      },
+      "authorization": {
+        "artifact": {
+          "path": "skill-studies/concise-writing/protocol.md",
+          "sha256": "f6e7e461a150acf814d9fcc268694606fafe6f459969c3487670fbf503332edb",
+          "version": "1",
+          "git_revision": "0b96bcbb2b5340aed05c7c663ff400c2cd2b49c2"
+        },
+        "selector": "Batch: claude-e-iteration-01; order 12"
+      },
+      "run_id": "20261018T053627333Z-cw-e-iteration-claude-candidate-fuller-31570614-0602-454a-8306-a4b0a08808ae-w10zp51h",
+      "allocation": {
+        "pool": "subject",
+        "charge": 1
+      },
+      "limitations": [
+        "Direct Codex-session assessment; no blind, held-out or independent assessor claim. Complete body before editing; separate Opus review pending. Metadata-only amendment after Claude order 1 changes no subject input or criterion."
+      ],
+      "bundle": {
+        "path": "/Users/simon/work/personal/skill-study-private/concise-writing/e-iteration-20261018/subjects/20261018T053627333Z-cw-e-iteration-claude-candidate-fuller-31570614-0602-454a-8306-a4b0a08808ae-w10zp51h",
+        "inventory": {
+          "path": "/Users/simon/work/personal/skill-study-private/concise-writing/e-iteration-20261018/subjects/20261018T053627333Z-cw-e-iteration-claude-candidate-fuller-31570614-0602-454a-8306-a4b0a08808ae-w10zp51h.inventory.json",
+          "sha256": "15974d771dc45eecaf5ea36dcb051b5172ca0799591815aab1c061d9e05e7a56",
+          "version": "1"
+        },
+        "verified": true
+      },
+      "result": {
+        "result_id": "claude-e-iteration-01-candidate-fuller-3-1-assessment",
+        "record": {
+          "path": "skill-studies/concise-writing/results/20261018T053627333Z-cw-e-iteration-claude-candidate-fuller-31570614-0602-454a-8306-a4b0a08808ae-w10zp51h.json",
+          "sha256": "f64ebef0c1272cd922a346ff9177901d0fa00e8417b0abd3f95189a7cf9f7825",
+          "version": "2",
+          "git_revision": "6be88c36c0ec54fe9fa71f5d6174efa825cd63c9"
+        }
+      }
+    },
+    {
+      "attempt_id": "claude-e-iteration-01-original-4-1",
+      "case_id": "document-addition",
+      "condition": "original",
+      "repetition": 4,
+      "attempt_number": 1,
+      "retry_of": null,
+      "manifest": {
+        "path": "skill-studies/concise-writing/drafts/baseline-iteration/testing/claude-manifest.json",
+        "sha256": "613eea38778b3cee5576d7adb1e38bfb1d3e2b1353de473e4a7453966ba4ce31",
+        "version": "1",
+        "git_revision": "0b96bcbb2b5340aed05c7c663ff400c2cd2b49c2"
+      },
+      "authorization": {
+        "artifact": {
+          "path": "skill-studies/concise-writing/protocol.md",
+          "sha256": "f6e7e461a150acf814d9fcc268694606fafe6f459969c3487670fbf503332edb",
+          "version": "1",
+          "git_revision": "0b96bcbb2b5340aed05c7c663ff400c2cd2b49c2"
+        },
+        "selector": "Batch: claude-e-iteration-01; order 13"
+      },
+      "run_id": "20261018T053658275Z-cw-e-iteration-claude-original-fe4ab027-909d-4c91-89d4-a02a39e575f9-7q74movl",
+      "allocation": {
+        "pool": "subject",
+        "charge": 1
+      },
+      "limitations": [
+        "Direct Codex-session assessment; no blind, held-out or independent assessor claim. Complete body before editing; separate Opus review pending. Metadata-only amendment after Claude order 1 changes no subject input or criterion."
+      ],
+      "bundle": {
+        "path": "/Users/simon/work/personal/skill-study-private/concise-writing/e-iteration-20261018/subjects/20261018T053658275Z-cw-e-iteration-claude-original-fe4ab027-909d-4c91-89d4-a02a39e575f9-7q74movl",
+        "inventory": {
+          "path": "/Users/simon/work/personal/skill-study-private/concise-writing/e-iteration-20261018/subjects/20261018T053658275Z-cw-e-iteration-claude-original-fe4ab027-909d-4c91-89d4-a02a39e575f9-7q74movl.inventory.json",
+          "sha256": "a44b9341a959bbf3e275feb76af012b698411ddd305b6ac502c617b5affccad4",
+          "version": "1"
+        },
+        "verified": true
+      },
+      "result": {
+        "result_id": "claude-e-iteration-01-original-4-1-assessment",
+        "record": {
+          "path": "skill-studies/concise-writing/results/20261018T053658275Z-cw-e-iteration-claude-original-fe4ab027-909d-4c91-89d4-a02a39e575f9-7q74movl.json",
+          "sha256": "c1ba4bd772926d164489ca0f752ffd6b93db1a939d1b2f10d7501d70af06bdb3",
+          "version": "2",
+          "git_revision": "6be88c36c0ec54fe9fa71f5d6174efa825cd63c9"
+        }
+      }
+    },
+    {
+      "attempt_id": "claude-e-iteration-01-candidate-targeted-4-1",
+      "case_id": "document-addition",
+      "condition": "candidate-targeted",
+      "repetition": 4,
+      "attempt_number": 1,
+      "retry_of": null,
+      "manifest": {
+        "path": "skill-studies/concise-writing/drafts/baseline-iteration/testing/claude-manifest.json",
+        "sha256": "613eea38778b3cee5576d7adb1e38bfb1d3e2b1353de473e4a7453966ba4ce31",
+        "version": "1",
+        "git_revision": "0b96bcbb2b5340aed05c7c663ff400c2cd2b49c2"
+      },
+      "authorization": {
+        "artifact": {
+          "path": "skill-studies/concise-writing/protocol.md",
+          "sha256": "f6e7e461a150acf814d9fcc268694606fafe6f459969c3487670fbf503332edb",
+          "version": "1",
+          "git_revision": "0b96bcbb2b5340aed05c7c663ff400c2cd2b49c2"
+        },
+        "selector": "Batch: claude-e-iteration-01; order 14"
+      },
+      "run_id": "20261018T053726095Z-cw-e-iteration-claude-candidate-targeted-213eefe7-bafa-4dae-bfdb-bb3fdbb866c5-28dous0k",
+      "allocation": {
+        "pool": "subject",
+        "charge": 1
+      },
+      "limitations": [
+        "Direct Codex-session assessment; no blind, held-out or independent assessor claim. Complete body before editing; separate Opus review pending. Metadata-only amendment after Claude order 1 changes no subject input or criterion."
+      ],
+      "bundle": {
+        "path": "/Users/simon/work/personal/skill-study-private/concise-writing/e-iteration-20261018/subjects/20261018T053726095Z-cw-e-iteration-claude-candidate-targeted-213eefe7-bafa-4dae-bfdb-bb3fdbb866c5-28dous0k",
+        "inventory": {
+          "path": "/Users/simon/work/personal/skill-study-private/concise-writing/e-iteration-20261018/subjects/20261018T053726095Z-cw-e-iteration-claude-candidate-targeted-213eefe7-bafa-4dae-bfdb-bb3fdbb866c5-28dous0k.inventory.json",
+          "sha256": "770816ab612181ca583dc56682a75c94ab2393d1c648e467cd2695d973bfb417",
+          "version": "1"
+        },
+        "verified": true
+      },
+      "result": {
+        "result_id": "claude-e-iteration-01-candidate-targeted-4-1-assessment",
+        "record": {
+          "path": "skill-studies/concise-writing/results/20261018T053726095Z-cw-e-iteration-claude-candidate-targeted-213eefe7-bafa-4dae-bfdb-bb3fdbb866c5-28dous0k.json",
+          "sha256": "acc4753d493292819a95145da2a42a62fd7bdde461d1fa512d6c77330541d88f",
+          "version": "2",
+          "git_revision": "6be88c36c0ec54fe9fa71f5d6174efa825cd63c9"
+        }
+      }
+    },
+    {
+      "attempt_id": "claude-e-iteration-01-candidate-fuller-4-1",
+      "case_id": "document-addition",
+      "condition": "candidate-fuller",
+      "repetition": 4,
+      "attempt_number": 1,
+      "retry_of": null,
+      "manifest": {
+        "path": "skill-studies/concise-writing/drafts/baseline-iteration/testing/claude-manifest.json",
+        "sha256": "613eea38778b3cee5576d7adb1e38bfb1d3e2b1353de473e4a7453966ba4ce31",
+        "version": "1",
+        "git_revision": "0b96bcbb2b5340aed05c7c663ff400c2cd2b49c2"
+      },
+      "authorization": {
+        "artifact": {
+          "path": "skill-studies/concise-writing/protocol.md",
+          "sha256": "f6e7e461a150acf814d9fcc268694606fafe6f459969c3487670fbf503332edb",
+          "version": "1",
+          "git_revision": "0b96bcbb2b5340aed05c7c663ff400c2cd2b49c2"
+        },
+        "selector": "Batch: claude-e-iteration-01; order 15"
+      },
+      "run_id": "20261018T053757774Z-cw-e-iteration-claude-candidate-fuller-7ceee5f4-dd73-468e-8ee1-5d7c5ba824e4-5mnh7crc",
+      "allocation": {
+        "pool": "subject",
+        "charge": 1
+      },
+      "limitations": [
+        "Direct Codex-session assessment; no blind, held-out or independent assessor claim. Complete body before editing; separate Opus review pending. Metadata-only amendment after Claude order 1 changes no subject input or criterion."
+      ],
+      "bundle": {
+        "path": "/Users/simon/work/personal/skill-study-private/concise-writing/e-iteration-20261018/subjects/20261018T053757774Z-cw-e-iteration-claude-candidate-fuller-7ceee5f4-dd73-468e-8ee1-5d7c5ba824e4-5mnh7crc",
+        "inventory": {
+          "path": "/Users/simon/work/personal/skill-study-private/concise-writing/e-iteration-20261018/subjects/20261018T053757774Z-cw-e-iteration-claude-candidate-fuller-7ceee5f4-dd73-468e-8ee1-5d7c5ba824e4-5mnh7crc.inventory.json",
+          "sha256": "1ee7f4d530660a23bf74aed09a929ddd408706aa446c1f5acdc4dda82500cfaa",
+          "version": "1"
+        },
+        "verified": true
+      },
+      "result": {
+        "result_id": "claude-e-iteration-01-candidate-fuller-4-1-assessment",
+        "record": {
+          "path": "skill-studies/concise-writing/results/20261018T053757774Z-cw-e-iteration-claude-candidate-fuller-7ceee5f4-dd73-468e-8ee1-5d7c5ba824e4-5mnh7crc.json",
+          "sha256": "4f84bb75e997f248b4ba2d6a03c8b5023517b45995b3a7f4f3bb7560c841ddf6",
+          "version": "2",
+          "git_revision": "6be88c36c0ec54fe9fa71f5d6174efa825cd63c9"
+        }
+      }
+    },
+    {
+      "attempt_id": "claude-e-iteration-01-control-4-1",
+      "case_id": "document-addition",
+      "condition": "control",
+      "repetition": 4,
+      "attempt_number": 1,
+      "retry_of": null,
+      "manifest": {
+        "path": "skill-studies/concise-writing/drafts/baseline-iteration/testing/claude-manifest.json",
+        "sha256": "613eea38778b3cee5576d7adb1e38bfb1d3e2b1353de473e4a7453966ba4ce31",
+        "version": "1",
+        "git_revision": "0b96bcbb2b5340aed05c7c663ff400c2cd2b49c2"
+      },
+      "authorization": {
+        "artifact": {
+          "path": "skill-studies/concise-writing/protocol.md",
+          "sha256": "f6e7e461a150acf814d9fcc268694606fafe6f459969c3487670fbf503332edb",
+          "version": "1",
+          "git_revision": "0b96bcbb2b5340aed05c7c663ff400c2cd2b49c2"
+        },
+        "selector": "Batch: claude-e-iteration-01; order 16"
+      },
+      "run_id": "20261018T053831425Z-cw-e-iteration-claude-control-3326a0d8-1449-4582-8420-71674c274339-cmvj69w7",
+      "allocation": {
+        "pool": "subject",
+        "charge": 1
+      },
+      "limitations": [
+        "Direct Codex-session assessment; no blind, held-out or independent assessor claim. Complete body before editing; separate Opus review pending. Metadata-only amendment after Claude order 1 changes no subject input or criterion."
+      ],
+      "bundle": {
+        "path": "/Users/simon/work/personal/skill-study-private/concise-writing/e-iteration-20261018/subjects/20261018T053831425Z-cw-e-iteration-claude-control-3326a0d8-1449-4582-8420-71674c274339-cmvj69w7",
+        "inventory": {
+          "path": "/Users/simon/work/personal/skill-study-private/concise-writing/e-iteration-20261018/subjects/20261018T053831425Z-cw-e-iteration-claude-control-3326a0d8-1449-4582-8420-71674c274339-cmvj69w7.inventory.json",
+          "sha256": "86ddbf183b17e968ce7a6c9af0187ffba268ecc63469af0a3d5e50237b255718",
+          "version": "1"
+        },
+        "verified": true
+      },
+      "result": {
+        "result_id": "claude-e-iteration-01-control-4-1-assessment",
+        "record": {
+          "path": "skill-studies/concise-writing/results/20261018T053831425Z-cw-e-iteration-claude-control-3326a0d8-1449-4582-8420-71674c274339-cmvj69w7.json",
+          "sha256": "165fa630bc8c88d057e8e8a975c2c4c851e4cb705731b5b2fce1de94d64dc8be",
+          "version": "2",
+          "git_revision": "6be88c36c0ec54fe9fa71f5d6174efa825cd63c9"
+        }
+      }
+    },
+    {
+      "attempt_id": "claude-e-iteration-01-candidate-targeted-5-1",
+      "case_id": "document-addition",
+      "condition": "candidate-targeted",
+      "repetition": 5,
+      "attempt_number": 1,
+      "retry_of": null,
+      "manifest": {
+        "path": "skill-studies/concise-writing/drafts/baseline-iteration/testing/claude-manifest.json",
+        "sha256": "613eea38778b3cee5576d7adb1e38bfb1d3e2b1353de473e4a7453966ba4ce31",
+        "version": "1",
+        "git_revision": "0b96bcbb2b5340aed05c7c663ff400c2cd2b49c2"
+      },
+      "authorization": {
+        "artifact": {
+          "path": "skill-studies/concise-writing/protocol.md",
+          "sha256": "f6e7e461a150acf814d9fcc268694606fafe6f459969c3487670fbf503332edb",
+          "version": "1",
+          "git_revision": "0b96bcbb2b5340aed05c7c663ff400c2cd2b49c2"
+        },
+        "selector": "Batch: claude-e-iteration-01; order 17"
+      },
+      "run_id": "20261018T053903335Z-cw-e-iteration-claude-candidate-targeted-c8f7d18b-72e1-4388-a9c4-80a3bf3f5e06-cx2915k7",
+      "allocation": {
+        "pool": "subject",
+        "charge": 1
+      },
+      "limitations": [
+        "Direct Codex-session assessment; no blind, held-out or independent assessor claim. Complete body before editing; separate Opus review pending. Metadata-only amendment after Claude order 1 changes no subject input or criterion."
+      ],
+      "bundle": {
+        "path": "/Users/simon/work/personal/skill-study-private/concise-writing/e-iteration-20261018/subjects/20261018T053903335Z-cw-e-iteration-claude-candidate-targeted-c8f7d18b-72e1-4388-a9c4-80a3bf3f5e06-cx2915k7",
+        "inventory": {
+          "path": "/Users/simon/work/personal/skill-study-private/concise-writing/e-iteration-20261018/subjects/20261018T053903335Z-cw-e-iteration-claude-candidate-targeted-c8f7d18b-72e1-4388-a9c4-80a3bf3f5e06-cx2915k7.inventory.json",
+          "sha256": "4277614ef0921c04b1e7ee5a67223a8c66708b379fcee6a4ebb675ba74e7472c",
+          "version": "1"
+        },
+        "verified": true
+      },
+      "result": {
+        "result_id": "claude-e-iteration-01-candidate-targeted-5-1-assessment",
+        "record": {
+          "path": "skill-studies/concise-writing/results/20261018T053903335Z-cw-e-iteration-claude-candidate-targeted-c8f7d18b-72e1-4388-a9c4-80a3bf3f5e06-cx2915k7.json",
+          "sha256": "ff96baefb9ee0697ca08c2839e48879c30a5686e61be3c2c0af9f541170bb764",
+          "version": "2",
+          "git_revision": "6be88c36c0ec54fe9fa71f5d6174efa825cd63c9"
+        }
+      }
+    },
+    {
+      "attempt_id": "claude-e-iteration-01-candidate-fuller-5-1",
+      "case_id": "document-addition",
+      "condition": "candidate-fuller",
+      "repetition": 5,
+      "attempt_number": 1,
+      "retry_of": null,
+      "manifest": {
+        "path": "skill-studies/concise-writing/drafts/baseline-iteration/testing/claude-manifest.json",
+        "sha256": "613eea38778b3cee5576d7adb1e38bfb1d3e2b1353de473e4a7453966ba4ce31",
+        "version": "1",
+        "git_revision": "0b96bcbb2b5340aed05c7c663ff400c2cd2b49c2"
+      },
+      "authorization": {
+        "artifact": {
+          "path": "skill-studies/concise-writing/protocol.md",
+          "sha256": "f6e7e461a150acf814d9fcc268694606fafe6f459969c3487670fbf503332edb",
+          "version": "1",
+          "git_revision": "0b96bcbb2b5340aed05c7c663ff400c2cd2b49c2"
+        },
+        "selector": "Batch: claude-e-iteration-01; order 18"
+      },
+      "run_id": "20261018T053929879Z-cw-e-iteration-claude-candidate-fuller-4604c806-15cb-4541-813c-53aa692cd233-kabnj31s",
+      "allocation": {
+        "pool": "subject",
+        "charge": 1
+      },
+      "limitations": [
+        "Direct Codex-session assessment; no blind, held-out or independent assessor claim. Complete body before editing; separate Opus review pending. Metadata-only amendment after Claude order 1 changes no subject input or criterion."
+      ],
+      "bundle": {
+        "path": "/Users/simon/work/personal/skill-study-private/concise-writing/e-iteration-20261018/subjects/20261018T053929879Z-cw-e-iteration-claude-candidate-fuller-4604c806-15cb-4541-813c-53aa692cd233-kabnj31s",
+        "inventory": {
+          "path": "/Users/simon/work/personal/skill-study-private/concise-writing/e-iteration-20261018/subjects/20261018T053929879Z-cw-e-iteration-claude-candidate-fuller-4604c806-15cb-4541-813c-53aa692cd233-kabnj31s.inventory.json",
+          "sha256": "3cd37bb2ce217697bbed6a61ff4d08e9065acb6db603958a1481b2695fab5cd7",
+          "version": "1"
+        },
+        "verified": true
+      },
+      "result": {
+        "result_id": "claude-e-iteration-01-candidate-fuller-5-1-assessment",
+        "record": {
+          "path": "skill-studies/concise-writing/results/20261018T053929879Z-cw-e-iteration-claude-candidate-fuller-4604c806-15cb-4541-813c-53aa692cd233-kabnj31s.json",
+          "sha256": "640e658e3245eced035e2e71ae3894bf52570eded211580e69ff5c2ace9850a0",
+          "version": "2",
+          "git_revision": "6be88c36c0ec54fe9fa71f5d6174efa825cd63c9"
+        }
+      }
+    },
+    {
+      "attempt_id": "claude-e-iteration-01-control-5-1",
+      "case_id": "document-addition",
+      "condition": "control",
+      "repetition": 5,
+      "attempt_number": 1,
+      "retry_of": null,
+      "manifest": {
+        "path": "skill-studies/concise-writing/drafts/baseline-iteration/testing/claude-manifest.json",
+        "sha256": "613eea38778b3cee5576d7adb1e38bfb1d3e2b1353de473e4a7453966ba4ce31",
+        "version": "1",
+        "git_revision": "0b96bcbb2b5340aed05c7c663ff400c2cd2b49c2"
+      },
+      "authorization": {
+        "artifact": {
+          "path": "skill-studies/concise-writing/protocol.md",
+          "sha256": "f6e7e461a150acf814d9fcc268694606fafe6f459969c3487670fbf503332edb",
+          "version": "1",
+          "git_revision": "0b96bcbb2b5340aed05c7c663ff400c2cd2b49c2"
+        },
+        "selector": "Batch: claude-e-iteration-01; order 19"
+      },
+      "run_id": "20261018T054002467Z-cw-e-iteration-claude-control-03c35564-49b0-433e-a2c9-615e4531466f-soy_ikzm",
+      "allocation": {
+        "pool": "subject",
+        "charge": 1
+      },
+      "limitations": [
+        "Direct Codex-session assessment; no blind, held-out or independent assessor claim. Complete body before editing; separate Opus review pending. Metadata-only amendment after Claude order 1 changes no subject input or criterion."
+      ],
+      "bundle": {
+        "path": "/Users/simon/work/personal/skill-study-private/concise-writing/e-iteration-20261018/subjects/20261018T054002467Z-cw-e-iteration-claude-control-03c35564-49b0-433e-a2c9-615e4531466f-soy_ikzm",
+        "inventory": {
+          "path": "/Users/simon/work/personal/skill-study-private/concise-writing/e-iteration-20261018/subjects/20261018T054002467Z-cw-e-iteration-claude-control-03c35564-49b0-433e-a2c9-615e4531466f-soy_ikzm.inventory.json",
+          "sha256": "48773d73f9a219749287f2e08a796b8871c50510eea6326d47e4f74c89b7a7a5",
+          "version": "1"
+        },
+        "verified": true
+      },
+      "result": {
+        "result_id": "claude-e-iteration-01-control-5-1-assessment",
+        "record": {
+          "path": "skill-studies/concise-writing/results/20261018T054002467Z-cw-e-iteration-claude-control-03c35564-49b0-433e-a2c9-615e4531466f-soy_ikzm.json",
+          "sha256": "b346e27fe6550c9b8bdaeab91ee3693c577e59cfaa07823b152234a180ccf772",
+          "version": "2",
+          "git_revision": "6be88c36c0ec54fe9fa71f5d6174efa825cd63c9"
+        }
+      }
+    },
+    {
+      "attempt_id": "claude-e-iteration-01-original-5-1",
+      "case_id": "document-addition",
+      "condition": "original",
+      "repetition": 5,
+      "attempt_number": 1,
+      "retry_of": null,
+      "manifest": {
+        "path": "skill-studies/concise-writing/drafts/baseline-iteration/testing/claude-manifest.json",
+        "sha256": "613eea38778b3cee5576d7adb1e38bfb1d3e2b1353de473e4a7453966ba4ce31",
+        "version": "1",
+        "git_revision": "0b96bcbb2b5340aed05c7c663ff400c2cd2b49c2"
+      },
+      "authorization": {
+        "artifact": {
+          "path": "skill-studies/concise-writing/protocol.md",
+          "sha256": "f6e7e461a150acf814d9fcc268694606fafe6f459969c3487670fbf503332edb",
+          "version": "1",
+          "git_revision": "0b96bcbb2b5340aed05c7c663ff400c2cd2b49c2"
+        },
+        "selector": "Batch: claude-e-iteration-01; order 20"
+      },
+      "run_id": "20261018T054036686Z-cw-e-iteration-claude-original-1c981f32-d91d-4c15-a336-f9d27f8daf7e-8fp0prg3",
+      "allocation": {
+        "pool": "subject",
+        "charge": 1
+      },
+      "limitations": [
+        "Direct Codex-session assessment; no blind, held-out or independent assessor claim. Complete body before editing; separate Opus review pending. Metadata-only amendment after Claude order 1 changes no subject input or criterion."
+      ],
+      "bundle": {
+        "path": "/Users/simon/work/personal/skill-study-private/concise-writing/e-iteration-20261018/subjects/20261018T054036686Z-cw-e-iteration-claude-original-1c981f32-d91d-4c15-a336-f9d27f8daf7e-8fp0prg3",
+        "inventory": {
+          "path": "/Users/simon/work/personal/skill-study-private/concise-writing/e-iteration-20261018/subjects/20261018T054036686Z-cw-e-iteration-claude-original-1c981f32-d91d-4c15-a336-f9d27f8daf7e-8fp0prg3.inventory.json",
+          "sha256": "5c345543f43f4b7abaefac1788bfa210ab0f4419b9c986cdab09d765d8f1d436",
+          "version": "1"
+        },
+        "verified": true
+      },
+      "result": {
+        "result_id": "claude-e-iteration-01-original-5-1-assessment",
+        "record": {
+          "path": "skill-studies/concise-writing/results/20261018T054036686Z-cw-e-iteration-claude-original-1c981f32-d91d-4c15-a336-f9d27f8daf7e-8fp0prg3.json",
+          "sha256": "79dbf778ea06411d525cadbe7b1655290b97d59f21324e4e732fd041ee165385",
+          "version": "2",
+          "git_revision": "6be88c36c0ec54fe9fa71f5d6174efa825cd63c9"
+        }
+      }
+    }
+  ]
+}

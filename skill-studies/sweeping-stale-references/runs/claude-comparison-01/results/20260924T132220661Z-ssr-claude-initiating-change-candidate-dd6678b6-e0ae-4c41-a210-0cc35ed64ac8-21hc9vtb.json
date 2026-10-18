@@ -1,0 +1,142 @@
+{
+  "schema_version": "2",
+  "record_kind": "execution result",
+  "assessed_at": "2026-09-24T13:24:20.499286+00:00",
+  "run_id": "20260924T132220661Z-ssr-claude-initiating-change-candidate-dd6678b6-e0ae-4c41-a210-0cc35ed64ac8-21hc9vtb",
+  "condition": "candidate",
+  "assessor": {
+    "name": "Codex active session",
+    "method": "active session",
+    "model": null,
+    "session_id": null,
+    "context": "Same active session prepared and inspected the study; not independent or blind."
+  },
+  "evidence": [
+    {
+      "id": "runner",
+      "artifact": {
+        "path": "/Users/simon/work/personal/skill-study-private/sweeping-stale-references/development/20260924T132220661Z-ssr-claude-initiating-change-candidate-dd6678b6-e0ae-4c41-a210-0cc35ed64ac8-21hc9vtb/result.json",
+        "sha256": "e19bdbb3ac0f2d218f584bac775f59f36a4a18691ff9bc86f39ff15824c11f2b",
+        "version": null
+      },
+      "selector": "Mechanical completion, supplied identities and cleanup."
+    },
+    {
+      "id": "trace",
+      "artifact": {
+        "path": "/Users/simon/work/personal/skill-study-private/sweeping-stale-references/development/20260924T132220661Z-ssr-claude-initiating-change-candidate-dd6678b6-e0ae-4c41-a210-0cc35ed64ac8-21hc9vtb/stdout.txt",
+        "sha256": "2b63f95b64796eabd3ef6f75b91974bf8ddbacf1e01cdf736932bf6df813aa43",
+        "version": null
+      },
+      "selector": "Complete ordered model-visible context, calls and outputs."
+    },
+    {
+      "id": "final",
+      "artifact": {
+        "path": "/Users/simon/work/personal/skill-study-private/sweeping-stale-references/development/20260924T132220661Z-ssr-claude-initiating-change-candidate-dd6678b6-e0ae-4c41-a210-0cc35ed64ac8-21hc9vtb/final.txt",
+        "sha256": "2d4599f998ae899db30f88a9786cb6c5b45978efa0723aea9dcc4e52a1862e20",
+        "version": null
+      },
+      "selector": "Final delivered response."
+    },
+    {
+      "id": "checks",
+      "artifact": {
+        "path": "/Users/simon/work/personal/skill-study-private/sweeping-stale-references/development/20260924T132220661Z-ssr-claude-initiating-change-candidate-dd6678b6-e0ae-4c41-a210-0cc35ed64ac8-21hc9vtb.checks.json",
+        "sha256": "f81f6021f4ecdec6fc5cd081821aad33da3fa236279cf286789025c1fb8c3f0b",
+        "version": null
+      },
+      "selector": "Disposable-copy Git history/diff, project artifacts, ordered trace projection and independent replay."
+    }
+  ],
+  "setup": {
+    "status": "valid",
+    "reason": "Pinned Claude/Sonnet low completed with full candidate body, expected catalog, intact trace and cleanup.",
+    "evidence": [
+      "runner",
+      "trace",
+      "checks"
+    ]
+  },
+  "criteria": [
+    {
+      "id": "F1",
+      "dimension": "functional",
+      "judgment": "met",
+      "reason": "New key and session TTL terminology propagate through code, configuration, tests, script and current prose; script works from both directories.",
+      "consequence": "Functional criterion satisfied.",
+      "evidence": [
+        "trace",
+        "checks"
+      ]
+    },
+    {
+      "id": "F2",
+      "dimension": "functional",
+      "judgment": "met",
+      "reason": "Replay confirms defaults 1900/custom 820 and rejection of zero/negative duration. Partner-imposed limit and refresh trade-off preserved in code and policy; archive/vendor untouched.",
+      "consequence": "Functional criterion satisfied.",
+      "evidence": [
+        "trace",
+        "checks"
+      ]
+    },
+    {
+      "id": "F3",
+      "dimension": "functional",
+      "judgment": "met",
+      "reason": "Commit f4f4b8d contains all required changes; clean final working tree.",
+      "consequence": "Functional criterion satisfied.",
+      "evidence": [
+        "trace",
+        "checks"
+      ]
+    },
+    {
+      "id": "P1",
+      "dimension": "procedural",
+      "judgment": "met",
+      "reason": "Search and full-file inspection precede edits; current, archived and independent references correctly triaged.",
+      "consequence": "Report separately from functional outcome; affects comparison interpretation.",
+      "evidence": [
+        "trace",
+        "checks"
+      ]
+    },
+    {
+      "id": "P2",
+      "dimension": "procedural",
+      "judgment": "met",
+      "reason": "One complete task commit after neutral baseline.",
+      "consequence": "Report separately from functional outcome; affects comparison interpretation.",
+      "evidence": [
+        "trace",
+        "checks"
+      ]
+    },
+    {
+      "id": "P3",
+      "dimension": "procedural",
+      "judgment": "not met",
+      "reason": "The script counts two literal occurrences on its single matching line, but the archive counts one for its two old-fact occurrences. This mixes the accepted counting units; no consistent 14-occurrence or 12-line account results.",
+      "consequence": "Report separately from functional outcome; affects comparison interpretation.",
+      "evidence": [
+        "trace",
+        "checks"
+      ]
+    }
+  ],
+  "procedural_summary": "Complete preserved change and correct search/grouping; P3 mixes occurrence and matching-line units for script versus archive.",
+  "observations": [],
+  "uncertainty": [
+    "Small exposed development case; no general reliability estimate."
+  ],
+  "result_id": "claude-comparison-01-initiating-change-candidate-1",
+  "functional_result": "met",
+  "manifest": {
+    "path": "skill-studies/sweeping-stale-references/cases/initiating-change/claude-comparison-manifest.json",
+    "sha256": "0ea180b5e959ec7d9ade3716c1175fc1663aa5d83fb5879185d9273056535bfb",
+    "version": "1",
+    "git_revision": "d342d2f939898ef4073691fb92414e9eff55dbff"
+  }
+}

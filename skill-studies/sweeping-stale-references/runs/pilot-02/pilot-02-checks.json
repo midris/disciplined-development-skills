@@ -1,0 +1,221 @@
+{
+  "observations": [
+    {
+      "condition": "control",
+      "source_bundle": "/Users/simon/work/personal/skill-study-private/sweeping-stale-references/development/pilot-02-runs/20260913T050236805Z-ssr-pilot-02-control-6e56c3fc-6dac-4156-b761-604010d452cd-u9ioklrw",
+      "assessment_copy": "/private/tmp/ssr-pilot-02-20260913/assessment/control",
+      "purpose": "Controller replay on a disposable copy after complete raw-bundle preservation; not an additional model invocation.",
+      "observer": {
+        "references": [
+          {
+            "path": "README.md",
+            "role": "service",
+            "targets": [
+              {
+                "text": "docs/reference/setup.md",
+                "resolved": "/private/tmp/ssr-pilot-02-20260913/assessment/control/docs/reference/setup.md",
+                "exists": true,
+                "intended": true
+              }
+            ],
+            "correct_target": true,
+            "status": "observed"
+          },
+          {
+            "path": "docs/index.md",
+            "role": "service",
+            "targets": [
+              {
+                "text": "setup.md",
+                "resolved": "/private/tmp/ssr-pilot-02-20260913/assessment/control/docs/setup.md",
+                "exists": false,
+                "intended": false
+              }
+            ],
+            "correct_target": false,
+            "status": "observed"
+          },
+          {
+            "path": "docs/tutorials/quickstart.md",
+            "role": "service",
+            "targets": [
+              {
+                "text": "../setup.md",
+                "resolved": "/private/tmp/ssr-pilot-02-20260913/assessment/control/docs/setup.md",
+                "exists": false,
+                "intended": false
+              }
+            ],
+            "correct_target": false,
+            "status": "observed"
+          },
+          {
+            "path": "vendor/widget/README.md",
+            "role": "independent",
+            "targets": [
+              {
+                "text": "setup.md",
+                "resolved": "/private/tmp/ssr-pilot-02-20260913/assessment/control/vendor/widget/setup.md",
+                "exists": true,
+                "intended": true
+              }
+            ],
+            "correct_target": true,
+            "status": "observed"
+          }
+        ],
+        "preserved_bytes": {
+          "docs/reference/setup.md": true,
+          "plans/completed/docs-layout.md": true,
+          "vendor/widget/README.md": true,
+          "vendor/widget/setup.md": true
+        },
+        "old_path_present": false,
+        "limit": "Facts only. Unsupported forms, changed preservation bytes, Git history and semantic outcomes require inspection. Shell consumer must be executed separately on a disposable copy."
+      },
+      "commands": [
+        {
+          "argv": [
+            "sh",
+            "/private/tmp/ssr-pilot-02-20260913/assessment/control/scripts/export-guide.sh"
+          ],
+          "cwd": "/private/tmp/ssr-pilot-02-20260913/assessment/control",
+          "exit_code": 1,
+          "stdout": "",
+          "stderr": "cat: /private/tmp/ssr-pilot-02-20260913/assessment/control/scripts/../docs/setup.md: No such file or directory\n",
+          "matches_service_guide": false
+        },
+        {
+          "argv": [
+            "sh",
+            "/private/tmp/ssr-pilot-02-20260913/assessment/control/scripts/export-guide.sh"
+          ],
+          "cwd": "/private/tmp/ssr-pilot-02-20260913/assessment",
+          "exit_code": 1,
+          "stdout": "",
+          "stderr": "cat: /private/tmp/ssr-pilot-02-20260913/assessment/control/scripts/../docs/setup.md: No such file or directory\n",
+          "matches_service_guide": false
+        }
+      ],
+      "git": {
+        "baseline_commit": "bae8ab028bc1b433ea7cbca2d58ffb1d19ad5b87",
+        "repair_commit": "d663a6158e23fbf4caefb360f157db251c5edd36",
+        "repair_commit_count": 1,
+        "working_tree_clean": true,
+        "changed_paths": [
+          "README.md"
+        ]
+      }
+    },
+    {
+      "condition": "original",
+      "source_bundle": "/Users/simon/work/personal/skill-study-private/sweeping-stale-references/development/pilot-02-runs/20260913T050847016Z-ssr-pilot-02-original-7ee12856-0a4f-4d0a-b489-1fddc8655ee8-uafjv_4i",
+      "assessment_copy": "/private/tmp/ssr-pilot-02-20260913/assessment/original",
+      "purpose": "Controller replay on a disposable copy after complete raw-bundle preservation; not an additional model invocation.",
+      "observer": {
+        "references": [
+          {
+            "path": "README.md",
+            "role": "service",
+            "targets": [
+              {
+                "text": "docs/reference/setup.md",
+                "resolved": "/private/tmp/ssr-pilot-02-20260913/assessment/original/docs/reference/setup.md",
+                "exists": true,
+                "intended": true
+              }
+            ],
+            "correct_target": true,
+            "status": "observed"
+          },
+          {
+            "path": "docs/index.md",
+            "role": "service",
+            "targets": [
+              {
+                "text": "reference/setup.md",
+                "resolved": "/private/tmp/ssr-pilot-02-20260913/assessment/original/docs/reference/setup.md",
+                "exists": true,
+                "intended": true
+              }
+            ],
+            "correct_target": true,
+            "status": "observed"
+          },
+          {
+            "path": "docs/tutorials/quickstart.md",
+            "role": "service",
+            "targets": [
+              {
+                "text": "../reference/setup.md",
+                "resolved": "/private/tmp/ssr-pilot-02-20260913/assessment/original/docs/reference/setup.md",
+                "exists": true,
+                "intended": true
+              }
+            ],
+            "correct_target": true,
+            "status": "observed"
+          },
+          {
+            "path": "vendor/widget/README.md",
+            "role": "independent",
+            "targets": [
+              {
+                "text": "setup.md",
+                "resolved": "/private/tmp/ssr-pilot-02-20260913/assessment/original/vendor/widget/setup.md",
+                "exists": true,
+                "intended": true
+              }
+            ],
+            "correct_target": true,
+            "status": "observed"
+          }
+        ],
+        "preserved_bytes": {
+          "docs/reference/setup.md": true,
+          "plans/completed/docs-layout.md": true,
+          "vendor/widget/README.md": true,
+          "vendor/widget/setup.md": true
+        },
+        "old_path_present": false,
+        "limit": "Facts only. Unsupported forms, changed preservation bytes, Git history and semantic outcomes require inspection. Shell consumer must be executed separately on a disposable copy."
+      },
+      "commands": [
+        {
+          "argv": [
+            "sh",
+            "/private/tmp/ssr-pilot-02-20260913/assessment/original/scripts/export-guide.sh"
+          ],
+          "cwd": "/private/tmp/ssr-pilot-02-20260913/assessment/original",
+          "exit_code": 0,
+          "stdout": "# Orbit service setup\n\nSet `ORBIT_PORT=8042` and start the service with `orbit serve`.\nVerify readiness at `http://localhost:8042/health`.\n",
+          "stderr": "",
+          "matches_service_guide": true
+        },
+        {
+          "argv": [
+            "sh",
+            "/private/tmp/ssr-pilot-02-20260913/assessment/original/scripts/export-guide.sh"
+          ],
+          "cwd": "/private/tmp/ssr-pilot-02-20260913/assessment",
+          "exit_code": 0,
+          "stdout": "# Orbit service setup\n\nSet `ORBIT_PORT=8042` and start the service with `orbit serve`.\nVerify readiness at `http://localhost:8042/health`.\n",
+          "stderr": "",
+          "matches_service_guide": true
+        }
+      ],
+      "git": {
+        "baseline_commit": "dc9030ae70b520085576a2f7d33a89b78c536dc8",
+        "repair_commit": "958a5e180e9d85c59becd62c245bd01a9b5ffb78",
+        "repair_commit_count": 1,
+        "working_tree_clean": true,
+        "changed_paths": [
+          "README.md",
+          "docs/index.md",
+          "docs/tutorials/quickstart.md",
+          "scripts/export-guide.sh"
+        ]
+      }
+    }
+  ]
+}

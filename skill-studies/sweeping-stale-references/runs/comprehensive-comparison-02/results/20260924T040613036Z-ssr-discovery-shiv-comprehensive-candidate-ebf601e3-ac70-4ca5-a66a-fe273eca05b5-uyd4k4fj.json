@@ -1,0 +1,142 @@
+{
+  "schema_version": "2",
+  "record_kind": "execution result",
+  "assessed_at": "2026-09-24T04:11:29.062862+00:00",
+  "run_id": "20260924T040613036Z-ssr-discovery-shiv-comprehensive-candidate-ebf601e3-ac70-4ca5-a66a-fe273eca05b5-uyd4k4fj",
+  "condition": "candidate",
+  "assessor": {
+    "name": "Codex active session",
+    "method": "active session",
+    "model": null,
+    "session_id": null,
+    "context": "Same active session prepared and inspected the study; not independent or blind."
+  },
+  "evidence": [
+    {
+      "id": "runner",
+      "artifact": {
+        "path": "/Users/simon/work/personal/skill-study-private/sweeping-stale-references/development/20260924T040613036Z-ssr-discovery-shiv-comprehensive-candidate-ebf601e3-ac70-4ca5-a66a-fe273eca05b5-uyd4k4fj/result.json",
+        "sha256": "a06d82c7b423c2162941b0acdd837bf06948c2f334fd7e152c7955dcea93e6cb",
+        "version": null
+      },
+      "selector": "Mechanical completion, supplied identities and cleanup."
+    },
+    {
+      "id": "trace",
+      "artifact": {
+        "path": "/Users/simon/work/personal/skill-study-private/sweeping-stale-references/development/20260924T040613036Z-ssr-discovery-shiv-comprehensive-candidate-ebf601e3-ac70-4ca5-a66a-fe273eca05b5-uyd4k4fj/provider-session.jsonl",
+        "sha256": "fa0c30755841340872c1c5be1c89036e3eafb1f5c67f6cf95d27c28b5fee4418",
+        "version": null
+      },
+      "selector": "Complete ordered model-visible context, calls and outputs."
+    },
+    {
+      "id": "final",
+      "artifact": {
+        "path": "/Users/simon/work/personal/skill-study-private/sweeping-stale-references/development/20260924T040613036Z-ssr-discovery-shiv-comprehensive-candidate-ebf601e3-ac70-4ca5-a66a-fe273eca05b5-uyd4k4fj/final.txt",
+        "sha256": "979da568369706bad5423c0e88ae68b06cedfca3fa1349fe1dff6289c2a78cfc",
+        "version": null
+      },
+      "selector": "Final delivered response."
+    },
+    {
+      "id": "checks",
+      "artifact": {
+        "path": "/Users/simon/work/personal/skill-study-private/sweeping-stale-references/development/20260924T040613036Z-ssr-discovery-shiv-comprehensive-candidate-ebf601e3-ac70-4ca5-a66a-fe273eca05b5-uyd4k4fj.checks.json",
+        "sha256": "94426c7ab221ff15c5a2b864c6a0941c32805584c62f0c4e12dc925b760673dd",
+        "version": null
+      },
+      "selector": "Disposable-copy Git history/diff, project artifacts, ordered trace projection and independent replay."
+    }
+  ],
+  "setup": {
+    "status": "valid",
+    "reason": "Full candidate body delivered before edits; retained input/settings identities, isolated tool trace and successful runtime operations support valid setup. Make cache warnings did not prevent a runnable artifact.",
+    "evidence": [
+      "runner",
+      "trace",
+      "checks"
+    ]
+  },
+  "criteria": [
+    {
+      "id": "F1",
+      "dimension": "functional",
+      "judgment": "met",
+      "reason": "Four committed --destination corrections build runnable greeting archives; independent replay verifies all consumers and the script from another directory.",
+      "consequence": "Functional criterion satisfied.",
+      "evidence": [
+        "trace",
+        "checks"
+      ]
+    },
+    {
+      "id": "F2",
+      "dimension": "functional",
+      "judgment": "met",
+      "reason": "Only the four intended option strings changed; replay confirms canonical/alias behavior, rejection of the retired option, independent inventory and unchanged nonconsumer files.",
+      "consequence": "Functional criterion satisfied.",
+      "evidence": [
+        "trace",
+        "checks"
+      ]
+    },
+    {
+      "id": "F3",
+      "dimension": "functional",
+      "judgment": "met",
+      "reason": "Commit 43443b0 contains all required corrections and final Git status is clean.",
+      "consequence": "Functional criterion satisfied.",
+      "evidence": [
+        "trace",
+        "checks"
+      ]
+    },
+    {
+      "id": "P1",
+      "dimension": "procedural",
+      "judgment": "met",
+      "reason": "The full candidate read precedes broad old/new/synonym searches; current consumers and preserved historical, negative-test and independent meanings receive explicit reasons.",
+      "consequence": "Report separately from functional outcome; affects comparison interpretation.",
+      "evidence": [
+        "trace",
+        "checks"
+      ]
+    },
+    {
+      "id": "P2",
+      "dimension": "procedural",
+      "judgment": "met",
+      "reason": "One repair commit follows the fixture baseline.",
+      "consequence": "Report separately from functional outcome; affects comparison interpretation.",
+      "evidence": [
+        "trace",
+        "checks"
+      ]
+    },
+    {
+      "id": "P3",
+      "dimension": "procedural",
+      "judgment": "not met",
+      "reason": "All required paths and counts are represented, but negative assertions are labelled intentionally stale rather than the frozen false-positive classification. This is the already-disclosed category ambiguity, not an unambiguous accounting omission. Additional TASK/internal-variable entries are outside required scope and do not add effectiveness evidence.",
+      "consequence": "Report separately from functional outcome; affects comparison interpretation.",
+      "evidence": [
+        "trace",
+        "checks"
+      ]
+    }
+  ],
+  "procedural_summary": "Functional success and appropriate search/grouping; P3 differs only on the historical negative-assertion label boundary. Extra exploratory accounting is reported descriptively.",
+  "observations": [],
+  "uncertainty": [
+    "Do not treat the negative-assertion category difference alone as an established skill defect or improvement opportunity."
+  ],
+  "result_id": "comprehensive-comparison-02-discovery-shiv-candidate-2",
+  "functional_result": "met",
+  "manifest": {
+    "path": "skill-studies/sweeping-stale-references/cases/discovery-shiv/comparison-02-manifest.json",
+    "sha256": "20b9c977bf2ab7f5cc6f268c1520b1340dff36bdfb1c1093feac5b1392fd2dd9",
+    "version": "1",
+    "git_revision": "37ab0390b04630335d15f6d246b2b042f0e07f51"
+  }
+}

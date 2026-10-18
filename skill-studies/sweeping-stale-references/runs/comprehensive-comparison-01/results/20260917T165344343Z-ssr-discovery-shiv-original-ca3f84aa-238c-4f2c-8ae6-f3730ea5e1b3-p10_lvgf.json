@@ -1,0 +1,224 @@
+{
+  "schema_version": "1",
+  "record_kind": "execution result",
+  "result_id": "comprehensive-comparison-01-discovery-shiv-original-2",
+  "assessed_at": "2026-09-17T16:55:57.173098+00:00",
+  "run_id": "20260917T165344343Z-ssr-discovery-shiv-original-ca3f84aa-238c-4f2c-8ae6-f3730ea5e1b3-p10_lvgf",
+  "condition": "original",
+  "assessor": {
+    "name": "Codex active session",
+    "method": "active session",
+    "model": null,
+    "session_id": "01a0a0df-97d9-7630-a639-012c3046e6b5",
+    "context": "Same ongoing work session with owner decisions, construction history, fixed criteria and prior assessments available. Not independent or blind validation; assessor model identity not recorded by this workflow."
+  },
+  "manifest": {
+    "path": "skill-studies/sweeping-stale-references/cases/discovery-shiv/comparison-manifest.json",
+    "sha256": "a531f84981ed9b98725494a369cccfc644083cce8037c3fe716eedc42d83ecf0",
+    "version": "1",
+    "git_revision": "d899a817108330c4dcba4007f3383294a87d2f9a"
+  },
+  "evidence": [
+    {
+      "id": "runner",
+      "artifact": {
+        "path": "/Users/simon/work/personal/skill-study-private/sweeping-stale-references/development/20260917T165344343Z-ssr-discovery-shiv-original-ca3f84aa-238c-4f2c-8ae6-f3730ea5e1b3-p10_lvgf/result.json",
+        "sha256": "0b3fb71b049f5acdd343e9aa507369dfac8443d7f26beab78be5e731bba7141a",
+        "version": "0.4"
+      },
+      "selector": "Execution, status, artifact identities and infrastructure error."
+    },
+    {
+      "id": "inputs",
+      "artifact": {
+        "path": "/Users/simon/work/personal/skill-study-private/sweeping-stale-references/development/20260917T165344343Z-ssr-discovery-shiv-original-ca3f84aa-238c-4f2c-8ae6-f3730ea5e1b3-p10_lvgf/runner.log",
+        "sha256": "0d6563428aa40fdd5c948c772e118c8856f54132439510dd6e74fc0e9fd6ccb0",
+        "version": null
+      },
+      "selector": "Private invocation arguments, pre-launch input hashes and capture/cleanup."
+    },
+    {
+      "id": "trace",
+      "artifact": {
+        "path": "/Users/simon/work/personal/skill-study-private/sweeping-stale-references/development/20260917T165344343Z-ssr-discovery-shiv-original-ca3f84aa-238c-4f2c-8ae6-f3730ea5e1b3-p10_lvgf/stdout.txt",
+        "sha256": "7a01c99212990e9f86adb18583f971f56b160564880f47f40c0d2066d1a996b9",
+        "version": null
+      },
+      "selector": "Ordered command/agent events, interpreted with complete session tool responses."
+    },
+    {
+      "id": "session",
+      "artifact": {
+        "path": "/Users/simon/work/personal/skill-study-private/sweeping-stale-references/development/20260917T165344343Z-ssr-discovery-shiv-original-ca3f84aa-238c-4f2c-8ae6-f3730ea5e1b3-p10_lvgf/provider-session.jsonl",
+        "sha256": "ae6c25a8005d44371655e55703a34070084f45ca8cf6a0394ab016027bd2da73",
+        "version": null
+      },
+      "selector": "Full original and early task read 16; exact neutral baseline 25; all consumer content exposed 30; patch 37; verification 46 and 53; commit 62."
+    },
+    {
+      "id": "checks",
+      "artifact": {
+        "path": "/Users/simon/work/personal/skill-study-private/sweeping-stale-references/development/20260917T165344343Z-ssr-discovery-shiv-original-ca3f84aa-238c-4f2c-8ae6-f3730ea5e1b3-p10_lvgf.checks.json",
+        "sha256": "d9bfb3c40f4aa1602cd8844609c0bd6d7fbc203c0f17be24c4b1c2d4809d6574",
+        "version": null
+      },
+      "selector": "Input checks, Git history/commit messages, changed paths, preserved project bytes and independent runtime observations."
+    },
+    {
+      "id": "file-5",
+      "artifact": {
+        "path": "/Users/simon/work/personal/skill-study-private/sweeping-stale-references/development/20260917T165344343Z-ssr-discovery-shiv-original-ca3f84aa-238c-4f2c-8ae6-f3730ea5e1b3-p10_lvgf/workspace/fixture/.github/workflows/offline-example.yml",
+        "sha256": "d4e247a8617adf393455d9f174db420cc866826523093f77894b99c1ed94a638",
+        "version": null
+      },
+      "selector": "Complete changed artifact; inspect against fixed case criteria and preserved input bytes."
+    },
+    {
+      "id": "file-6",
+      "artifact": {
+        "path": "/Users/simon/work/personal/skill-study-private/sweeping-stale-references/development/20260917T165344343Z-ssr-discovery-shiv-original-ca3f84aa-238c-4f2c-8ae6-f3730ea5e1b3-p10_lvgf/workspace/fixture/README.md",
+        "sha256": "8c6f9c10785d0b41358215c0493d54aa11fa8923d0d54e9cb6ef1f4570d454be",
+        "version": null
+      },
+      "selector": "Complete changed artifact; inspect against fixed case criteria and preserved input bytes."
+    },
+    {
+      "id": "file-7",
+      "artifact": {
+        "path": "/Users/simon/work/personal/skill-study-private/sweeping-stale-references/development/20260917T165344343Z-ssr-discovery-shiv-original-ca3f84aa-238c-4f2c-8ae6-f3730ea5e1b3-p10_lvgf/workspace/fixture/build-support/release/example.mk",
+        "sha256": "893b638e80397fc2115e6f62c5dc1b10116a050610c4945f3a4e5c12ff2dbc86",
+        "version": null
+      },
+      "selector": "Complete changed artifact; inspect against fixed case criteria and preserved input bytes."
+    },
+    {
+      "id": "file-8",
+      "artifact": {
+        "path": "/Users/simon/work/personal/skill-study-private/sweeping-stale-references/development/20260917T165344343Z-ssr-discovery-shiv-original-ca3f84aa-238c-4f2c-8ae6-f3730ea5e1b3-p10_lvgf/workspace/fixture/scripts/build-example.sh",
+        "sha256": "dc10cc741f0a8717e6d1bf4c6744ea103ea934e4d1462796671fcca15387580d",
+        "version": null
+      },
+      "selector": "Complete changed artifact; inspect against fixed case criteria and preserved input bytes."
+    }
+  ],
+  "setup": {
+    "status": "valid",
+    "reason": "The complete original skill is exposed and the neutral baseline matches every supplied project byte. The subject reads TASK.md before creating that baseline, contrary to prompt ordering, but does not edit before the baseline; comparison inputs and baseline are intact, so this task-sequence deviation does not invalidate attribution under the fixed setup rules. Pytest is unavailable; the subject successfully uses the supplied native unittest suite. No outside retrieval is observed. Capture-2 and runtime-1 apply to both versions; the frozen protocol/runner revision is identified by this attempt’s authorization in the index. Configuration, prompt, pre-launch fixtures and neutral project baseline match fixed inputs. Session hash, invocation cwd and stdout thread identity match.",
+    "evidence": [
+      "runner",
+      "inputs",
+      "session",
+      "checks"
+    ]
+  },
+  "criteria": [
+    {
+      "id": "F1",
+      "dimension": "functional",
+      "judgment": "met",
+      "reason": "README, script, nested Make target and CI build command all use --destination. Independent replay builds and executes the intended greeting from each, including script execution from another directory.",
+      "consequence": "Functional outcome satisfied.",
+      "evidence": [
+        "checks",
+        "session",
+        "file-5",
+        "file-6",
+        "file-7",
+        "file-8"
+      ]
+    },
+    {
+      "id": "F2",
+      "dimension": "functional",
+      "judgment": "met",
+      "reason": "Only the four consumers change; CLI/alias, history, independent inventory tool, tests and other project files are preserved. Canonical/alias and inventory probes pass; retired option is rejected without an artifact.",
+      "consequence": "Functional outcome satisfied.",
+      "evidence": [
+        "checks",
+        "session",
+        "file-5",
+        "file-6",
+        "file-7",
+        "file-8"
+      ]
+    },
+    {
+      "id": "F3",
+      "dimension": "functional",
+      "judgment": "met",
+      "reason": "All four required repairs are committed at 35e4982 and the final working tree is clean.",
+      "consequence": "Functional outcome satisfied.",
+      "evidence": [
+        "checks",
+        "session",
+        "file-5",
+        "file-6",
+        "file-7",
+        "file-8"
+      ]
+    },
+    {
+      "id": "P1",
+      "dimension": "procedural",
+      "judgment": "met",
+      "reason": "The repository-wide pre-edit search exposes all four stale commands plus preserved history/test/independent-tool references. Explicit triage and the committed outcome reconcile all consumers; no broader discovery advantage is inferred.",
+      "consequence": "Procedure satisfied.",
+      "evidence": [
+        "checks",
+        "session",
+        "trace"
+      ]
+    },
+    {
+      "id": "P2",
+      "dimension": "procedural",
+      "judgment": "met",
+      "reason": "One complete repair commit follows the neutral baseline.",
+      "consequence": "Procedure satisfied.",
+      "evidence": [
+        "checks",
+        "session",
+        "trace"
+      ]
+    },
+    {
+      "id": "P3",
+      "dimension": "procedural",
+      "judgment": "not met",
+      "reason": "The account lists eight distinct paths but claims seven, an unambiguous path-total error. It also labels the two negative assertions intentionally stale instead of the frozen false-positive category; that separate category mismatch has unresolved attribution. Nine occurrence and category sums are otherwise internally consistent.",
+      "consequence": "Non-blocking procedural defect; functional outcome assessed separately.",
+      "evidence": [
+        "checks",
+        "session",
+        "trace"
+      ]
+    }
+  ],
+  "functional_result": "met",
+  "procedural_summary": "P1/P2 met; P3 not met for an incorrect distinct-path total and the separately disputed classification.",
+  "observations": [
+    {
+      "dimension": "procedural",
+      "description": "The redundant total reports seven paths for eight listed paths; negative assertions retain the disputed label.",
+      "consequence": "The path error is an established account defect. Keep it separate from the uncertain skill/criterion attribution of the category label; neither affects functional success.",
+      "evidence": [
+        "session",
+        "checks"
+      ]
+    },
+    {
+      "dimension": "procedural",
+      "description": "TASK.md was read before the neutral baseline despite the prompt ordering; no project edits occurred until after the exact supplied tree was committed.",
+      "consequence": "Recorded task-sequence deviation, with no added criterion or exclusion: fixed inputs, baseline and skill exposure remain established.",
+      "evidence": [
+        "session",
+        "checks"
+      ]
+    }
+  ],
+  "uncertainty": [
+    "This is one execution under the declared case/model/context; aggregate conclusions belong to the batch assessment.",
+    "Session content establishes observable exposure/actions, not internal attention or exhaustive host-wide isolation.",
+    "No immutable model revision or independent/held-out validation is claimed."
+  ]
+}

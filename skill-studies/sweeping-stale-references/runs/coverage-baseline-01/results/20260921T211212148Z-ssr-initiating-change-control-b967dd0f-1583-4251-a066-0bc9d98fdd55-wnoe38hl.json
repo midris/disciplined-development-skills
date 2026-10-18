@@ -1,0 +1,145 @@
+{
+  "schema_version": "1",
+  "record_kind": "execution result",
+  "result_id": "coverage-baseline-01-initiating-change-control-1",
+  "assessed_at": "2026-09-21T21:16:51.043175+00:00",
+  "run_id": "20260921T211212148Z-ssr-initiating-change-control-b967dd0f-1583-4251-a066-0bc9d98fdd55-wnoe38hl",
+  "condition": "control",
+  "assessor": {
+    "name": "Codex active session",
+    "method": "active session",
+    "model": null,
+    "session_id": null,
+    "context": "Ongoing owner-directed study session with prior reviews, fixed criteria and study history available. Not independent or blind evaluation; no immutable assessor model identity is recorded."
+  },
+  "manifest": {
+    "path": "skill-studies/sweeping-stale-references/cases/initiating-change/manifest.json",
+    "sha256": "62e7d60cd41154f5fe4f6401f2bb68ae0bf13d85a4cb734570610b15c8988493",
+    "version": "1",
+    "git_revision": "2c65cdc778b1ca9a00eb95fa09876d71515427a6"
+  },
+  "evidence": [
+    {
+      "id": "runner",
+      "artifact": {
+        "path": "/Users/simon/work/personal/skill-study-private/sweeping-stale-references/development/20260921T211212148Z-ssr-initiating-change-control-b967dd0f-1583-4251-a066-0bc9d98fdd55-wnoe38hl/result.json",
+        "sha256": "de90f455754d19e31942abe82aefe731f7155e15c25b9748ef78a36cc7b06ffb",
+        "version": "0.5"
+      },
+      "selector": "Execution status, invocation charge, cleanup and captured identities."
+    },
+    {
+      "id": "inputs",
+      "artifact": {
+        "path": "/Users/simon/work/personal/skill-study-private/sweeping-stale-references/development/20260921T211212148Z-ssr-initiating-change-control-b967dd0f-1583-4251-a066-0bc9d98fdd55-wnoe38hl/runner.log",
+        "sha256": "0fe8e4cb12b73dfde4f04b3c82b13f86852176c648fc9c48128679bf8a5db3cd",
+        "version": null
+      },
+      "selector": "Pre-launch hashes and private runtime arguments."
+    },
+    {
+      "id": "trace",
+      "artifact": {
+        "path": "/Users/simon/work/personal/skill-study-private/sweeping-stale-references/development/20260921T211212148Z-ssr-initiating-change-control-b967dd0f-1583-4251-a066-0bc9d98fdd55-wnoe38hl/stdout.txt",
+        "sha256": "416a724a4bb75da5fe4ab8683fc5a31e66b0bdae48ed6e3090a56e1e0896af4b",
+        "version": null
+      },
+      "selector": "Ordered commands, complete original skill output when applicable, search and edits."
+    },
+    {
+      "id": "session",
+      "artifact": {
+        "path": "/Users/simon/work/personal/skill-study-private/sweeping-stale-references/development/20260921T211212148Z-ssr-initiating-change-control-b967dd0f-1583-4251-a066-0bc9d98fdd55-wnoe38hl/provider-session.jsonl",
+        "sha256": "5a5e431c01ba5f7090326de9a808dda2938160847ff18a88d09d124cb6001dc3",
+        "version": null
+      },
+      "selector": "Full delivered tool responses; control contamination is response line 62, preceding command/event line 61."
+    },
+    {
+      "id": "final",
+      "artifact": {
+        "path": "/Users/simon/work/personal/skill-study-private/sweeping-stale-references/development/20260921T211212148Z-ssr-initiating-change-control-b967dd0f-1583-4251-a066-0bc9d98fdd55-wnoe38hl/final.txt",
+        "sha256": "4d725e1fe867e6d6abfaffc20f98ce63d4f48173d80d331b5afbc532a691b4b6",
+        "version": null
+      },
+      "selector": "Complete completion report."
+    },
+    {
+      "id": "checks",
+      "artifact": {
+        "path": "/Users/simon/work/personal/skill-study-private/sweeping-stale-references/development/20260921T211212148Z-ssr-initiating-change-control-b967dd0f-1583-4251-a066-0bc9d98fdd55-wnoe38hl.checks.json",
+        "sha256": "cb6e6e58c77555ae9230cb77154cc6b054087379cd9e39a7b7c9e82a47b0dbe6",
+        "version": null
+      },
+      "selector": "Exact neutral baseline comparisons; complete final source/doc/config files, Git history/diff/status, and independent runtime probes in a disposable copy."
+    }
+  ],
+  "setup": {
+    "status": "invalid",
+    "reason": "After changing directory to /tmp to run the script, the control searched that directory. Provider-session line 62 records the actual delivered response containing controller scratch matches (round5.py and a prior Claude review transcript) and the first original run\u2019s completion report. The read occurred after the task patch but before final verification/commit. This violates the declared information boundary; no claim of behavioral influence is needed to exclude this setup.",
+    "evidence": [
+      "runner",
+      "inputs",
+      "trace",
+      "session",
+      "checks"
+    ]
+  },
+  "criteria": [
+    {
+      "id": "F1",
+      "dimension": "functional",
+      "judgment": "met",
+      "reason": "All current service consumers and explanations use session_ttl_minutes/session TTL. Independent unit tests and script execution from both working directories pass; the script prints session_ttl_minutes=30; expires_at=1900.",
+      "consequence": "Functional outcome satisfied.",
+      "evidence": [
+        "checks",
+        "trace",
+        "session"
+      ]
+    },
+    {
+      "id": "F2",
+      "dimension": "functional",
+      "judgment": "met",
+      "reason": "The diff changes only the six intended current files. Partner constraint and frequent-refresh trade-off remain intact; archive/vendor bytes are unchanged. Independent default/custom/zero/negative-duration probes pass, preserving units and rejection behavior.",
+      "consequence": "Functional outcome satisfied.",
+      "evidence": [
+        "checks",
+        "trace",
+        "session"
+      ]
+    },
+    {
+      "id": "F3",
+      "dimension": "functional",
+      "judgment": "met",
+      "reason": "The complete correct repair is committed after an exact neutral fixture baseline; final working tree is clean.",
+      "consequence": "Functional outcome satisfied.",
+      "evidence": [
+        "checks",
+        "trace",
+        "session"
+      ]
+    }
+  ],
+  "functional_result": "met",
+  "procedural_summary": "Target-specific procedural criteria do not apply to control. Observable functional criteria are met, but invalid setup excludes this execution from all outcome aggregates.",
+  "observations": [
+    {
+      "dimension": "setup",
+      "description": "After changing directory to /tmp to run the script, the control searched that directory. Provider-session line 62 records the actual delivered response containing controller scratch matches (round5.py and a prior Claude review transcript) and the first original run\u2019s completion report. The read occurred after the task patch but before final verification/commit. This violates the declared information boundary; no claim of behavioral influence is needed to exclude this setup.",
+      "consequence": "Excluded from comparison aggregates; triggered collection stop. Preserve charge and artifact judgments; no retry or replacement.",
+      "evidence": [
+        "session",
+        "trace",
+        "checks"
+      ]
+    }
+  ],
+  "uncertainty": [
+    "One execution is not a reliability estimate or evidence of comparative advantage.",
+    "Observable context/action evidence does not establish internal attention or exhaustive host read isolation.",
+    "Requested model name does not identify an immutable model revision."
+  ]
+}

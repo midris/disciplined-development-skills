@@ -1,0 +1,13 @@
+{
+  "configuration": "claude-long-handoff",
+  "outputs": 9,
+  "complete_required_files": 16,
+  "first_assessment_event": 106,
+  "prior_read_event": 107,
+  "input_catalog_read_only": true,
+  "inventory_verified": true,
+  "final_sha256": "629df45f007d912d9315cd93bb07d7b166f09f2d00d04285fe55fe9547753b4b",
+  "final_path": "/Users/simon/work/personal/skill-study-private/concise-writing/evaluation-runs-20261017/20261018T024925389Z-cw-eval-claude-long-handoff-75474dd8-76b4-45c1-aa5c-3c22c948f6d4-uwklhyce/final.txt",
+  "first_pass_sha256": "68e4902d7851d240dc5a6c0d8b5623656b75ae4db70fe938917046948b394188",
+  "prior_content_tool_access_audited": true
+}

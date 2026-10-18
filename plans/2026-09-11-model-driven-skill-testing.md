@@ -31,7 +31,8 @@ On resumption, use recorded decisions and evidence to select the next incomplete
 
 Historical material stays in place with its abandonment notices.
 The [preservation record](../skill-validation/archive/local-cw-scoring-rebuild-2026-09-11/README.md) indexes a verified local snapshot of `/private/tmp/cw-scoring-rebuild-gep1e4ek/` and the eight archived CW-17/CW-18 inputs; the scratch payload stays outside Git, while the inputs and manifest are versioned.
-A broader archival reorganization is outside this study.
+Reorganizing the abandoned frameworks remains outside this study.
+The owner separately requested a clearer layout for the current CW/SSR studies; the [proposed core/runs layout](specs/2026-10-18-study-directory-layout.md) preserves historical identities and private evidence.
 
 ## Limits and information boundaries
 
@@ -280,7 +281,13 @@ Reserved bundles and revealing assessments stay entirely in the verified private
 - [x] Collect and directly assess all forty E subjects; retain all outcomes and the metadata-only inventory amendment without repeats or exclusions.
 - [x] Complete result retrieval pins and both approved Opus reviews; [reconcile](../skill-studies/concise-writing/drafts/baseline-iteration/testing/evaluation/assessment.md) the fixed transition rules and retain the severity disagreement.
 - [x] Reassess confirm-versus-record consistently under the owner’s clarification: preserve all prior results/reviews and publish thirteen corrected judgments across four E collections; see the [reassessment](../skill-studies/concise-writing/reassessment-contact-01/README.md). No new model calls.
-- [ ] Review remaining deficiencies and coverage with the owner before the next collection; the protocol owns current authority and the recommendation to retain both draft bodies unchanged for the remaining seven scenarios.
+- [x] Review remaining deficiencies and coverage with the owner after E reassessment; distinguish the disputed historical readability findings, unsupported additions and native selection from the new bodies' untested scenarios. Disciplined-research composition remains outside this comparison.
+- [x] Commit and push the owner-requested reassessment at `3ba9169ee0de0db44e4014c31fbccb3abc921a94`; prepare the requested [study-directory proposal](specs/2026-10-18-study-directory-layout.md).
+- [x] Agree the core/runs layout: the owner approved both CW and SSR, with private evidence and historical identities preserved and no model tests authorized.
+- [ ] Inventory/classify current files and input signatures; publish relocated index/manifest identities in a preservation commit while existing protocol paths remain valid.
+- [ ] Group collection artifacts under runs, rebase current links/config paths, qualify unversioned historical references and repin reports to committed relocated indexes; remove old current locations.
+- [ ] Verify all eighteen historical batches, thirteen reassessment records, all affected config payloads, local links, fixture checks and hooks; review and push the completed directory migration with one README per study and a shared entry page.
+- [ ] Obtain the owner’s next full-suite allocation/freeze decision; the protocol owns current authority and the recommendation to retain both draft bodies unchanged for the remaining seven scenarios.
 - [ ] Establish effective behavior on the relevant fixed cases and both providers, then test instruction compression separately and present an adoption decision.
 - [ ] When SSR resumes, revisit the loaded-failure baseline decision in the [revised proposal](../skill-studies/sweeping-stale-references/rewrite-diagnosis.md#proposed-allocation-owner-decision-required). The owner explicitly deferred this decision until then; the withdrawn no-SSR-success stop rule does not authorize dispatch.
 - [ ] Resolve the parked SSR context-reading cost and matching-heading wording concerns, review the whole draft and relative call allocation, then freeze and qualify only approved scope.

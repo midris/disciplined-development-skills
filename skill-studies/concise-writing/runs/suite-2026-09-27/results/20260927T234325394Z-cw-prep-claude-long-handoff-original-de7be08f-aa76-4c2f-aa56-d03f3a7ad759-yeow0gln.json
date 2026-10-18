@@ -1,0 +1,161 @@
+{
+  "schema_version": "2",
+  "record_kind": "execution result",
+  "assessed_at": "2026-09-27T23:44:36.345889+00:00",
+  "run_id": "20260927T234325394Z-cw-prep-claude-long-handoff-original-de7be08f-aa76-4c2f-aa56-d03f3a7ad759-yeow0gln",
+  "condition": "original",
+  "assessor": {
+    "name": "Codex active session",
+    "method": "active session",
+    "model": null,
+    "session_id": null,
+    "context": "Same session that prepared and reviewed these development cases. No independent, blinded or held-out claim."
+  },
+  "evidence": [
+    {
+      "id": "output",
+      "artifact": {
+        "path": "/Users/simon/work/personal/skill-study-private/concise-writing/development/20260927T234325394Z-cw-prep-claude-long-handoff-original-de7be08f-aa76-4c2f-aa56-d03f3a7ad759-yeow0gln/workspace/fixture/report.md",
+        "sha256": "5331e394a08e280bc048f85384c504f0f2b23504b1b55a8301fc5dd92c646ab1",
+        "version": null
+      },
+      "selector": "Complete artifact"
+    },
+    {
+      "id": "trace",
+      "artifact": {
+        "path": "/Users/simon/work/personal/skill-study-private/concise-writing/development/20260927T234325394Z-cw-prep-claude-long-handoff-original-de7be08f-aa76-4c2f-aa56-d03f3a7ad759-yeow0gln/stdout.txt",
+        "sha256": "fd161d02c1b6db1a22534fd4e395e714753cce5415c6484924a80645825d60fa",
+        "version": null
+      },
+      "selector": "Complete artifact"
+    },
+    {
+      "id": "mechanical",
+      "artifact": {
+        "path": "/Users/simon/work/personal/skill-study-private/concise-writing/development/20260927T234325394Z-cw-prep-claude-long-handoff-original-de7be08f-aa76-4c2f-aa56-d03f3a7ad759-yeow0gln/result.json",
+        "sha256": "dfd9ec4dabd870b29c0321d3dc61ead63014ec4f3b062e2f89463f03b7074348",
+        "version": null
+      },
+      "selector": "Complete artifact"
+    },
+    {
+      "id": "log",
+      "artifact": {
+        "path": "/Users/simon/work/personal/skill-study-private/concise-writing/development/20260927T234325394Z-cw-prep-claude-long-handoff-original-de7be08f-aa76-4c2f-aa56-d03f3a7ad759-yeow0gln/runner.log",
+        "sha256": "8cffa8ee6b009b6ecf7c52730b1f207c493c94cfe8b7972a65eabb8e23b6aa20",
+        "version": null
+      },
+      "selector": "Complete artifact"
+    },
+    {
+      "id": "final",
+      "artifact": {
+        "path": "/Users/simon/work/personal/skill-study-private/concise-writing/development/20260927T234325394Z-cw-prep-claude-long-handoff-original-de7be08f-aa76-4c2f-aa56-d03f3a7ad759-yeow0gln/final.txt",
+        "sha256": "b70264f320e9b79cd6d7a963e55747682f05d2ce292344a9333d4ffb96f810c4",
+        "version": null
+      },
+      "selector": "Complete artifact"
+    },
+    {
+      "id": "source-0",
+      "artifact": {
+        "path": "skill-studies/concise-writing/cases/long-handoff/fixture/report.md",
+        "sha256": "0eb0946286d2a4b1708f14bcff5795cd1effdfa64af612a6cb9a89d2fac84737",
+        "version": null,
+        "git_revision": "96b6e383da39ea807a6ad49d4513cfc1d6f4cd33"
+      },
+      "selector": "Complete frozen source"
+    },
+    {
+      "id": "source-1",
+      "artifact": {
+        "path": "skill-studies/concise-writing/cases/long-handoff/task.md",
+        "sha256": "8be0f67fe6b62ca0a1d5f3af9ac2ffea79eef0d0615f0979853079653b8feab8",
+        "version": null,
+        "git_revision": "96b6e383da39ea807a6ad49d4513cfc1d6f4cd33"
+      },
+      "selector": "Complete frozen source"
+    },
+    {
+      "id": "source-4",
+      "artifact": {
+        "path": "skill-studies/concise-writing/preparation/claude-original-prompt.md",
+        "sha256": "c72703762cfa9b2be16c09550e27b534fd378c68150004b8d039cbcc499df6bd",
+        "version": null,
+        "git_revision": "96b6e383da39ea807a6ad49d4513cfc1d6f4cd33"
+      },
+      "selector": "Complete frozen source"
+    }
+  ],
+  "setup": {
+    "status": "valid",
+    "reason": "Completed with retained raw trace, saved artifact and final response. Actual provider model/CLI and skill delivery were inspected against the frozen condition; requested low effort is recorded in runner settings. Protected input and inventory verification is recorded at checkpoint.",
+    "evidence": [
+      "mechanical",
+      "trace",
+      "log"
+    ]
+  },
+  "criteria": [
+    {
+      "id": "F1",
+      "dimension": "functional",
+      "judgment": "met",
+      "reason": "Preserves the full evidence and operational contract, including exact threshold cases, outstanding-state safeguards, recovery ordering, diagnostic purpose, token rule and shift acceptance.",
+      "consequence": "Required for the corresponding functional or invocation outcome; reported separately.",
+      "evidence": [
+        "output",
+        "source-0",
+        "source-1",
+        "source-4"
+      ]
+    },
+    {
+      "id": "F2",
+      "dimension": "functional",
+      "judgment": "met",
+      "reason": "Point-of-use deployment and rollback safeguards remain intact and actionable; no lost operational authority or required action.",
+      "consequence": "Required for the corresponding functional or invocation outcome; reported separately.",
+      "evidence": [
+        "output",
+        "source-0",
+        "source-1",
+        "source-4"
+      ]
+    },
+    {
+      "id": "F3",
+      "dimension": "functional",
+      "judgment": "not met",
+      "reason": "Retains the detached implementation reminder between stop conditions and Rollback, repeating Current position without an added condition or entry-point instruction. Whole-handoff readers must traverse the explanation again before recovery; direct-entry Rollback readers skip that preceding section, so it does not perform the point-of-use function claimed in the final message. Same unnecessary reading burden as controls 8 and 19.",
+      "consequence": "Required for the corresponding functional or invocation outcome; reported separately.",
+      "evidence": [
+        "output",
+        "source-0",
+        "source-1",
+        "source-4"
+      ]
+    }
+  ],
+  "procedural_summary": "Original full body at stdout 8 before Edit 17. Full final Read and Git check observed. Subject called the reminder useful reinforcement, but the saved artifact and stated entry points govern the judgment; process unscored.",
+  "observations": [
+    {
+      "dimension": "functional",
+      "description": "Source 1207 words; output 1129, change -78, shorter. Useful lease/evidence warnings are preserved appropriately; only the detached repeated mechanics create the F3 miss. Condition does not change the standard.",
+      "consequence": "Descriptive comparison; no separate score or automatic length-based preference.",
+      "evidence": [
+        "output"
+      ]
+    }
+  ],
+  "uncertainty": [],
+  "result_id": "claude-expanded-01-long-handoff-original-2",
+  "functional_result": "not met",
+  "manifest": {
+    "path": "skill-studies/concise-writing/preparation/manifests/claude-long-handoff-manifest.json",
+    "sha256": "4ab6d652b2a12b04483fb566faf056dd751195f323f6913ade9584df887c911e",
+    "version": "1",
+    "git_revision": "4dc370648a6a915546035847b2823a4bc5d57325"
+  }
+}

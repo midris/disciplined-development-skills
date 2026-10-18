@@ -1,0 +1,97 @@
+{
+  "schema_version": "2",
+  "record_kind": "execution result",
+  "assessed_at": "2026-09-24T13:53:58.693055+00:00",
+  "run_id": "20260924T135308792Z-ssr-claude-invocation-unrelated-original-dada1139-eb2b-41f4-b5a3-30a48ce4dfa1-kuy3oml6",
+  "condition": "original",
+  "assessor": {
+    "name": "Codex active session",
+    "method": "active session",
+    "model": null,
+    "session_id": null,
+    "context": "Same active session prepared and inspected the study; not independent or blind."
+  },
+  "evidence": [
+    {
+      "id": "runner",
+      "artifact": {
+        "path": "/Users/simon/work/personal/skill-study-private/sweeping-stale-references/development/20260924T135308792Z-ssr-claude-invocation-unrelated-original-dada1139-eb2b-41f4-b5a3-30a48ce4dfa1-kuy3oml6/result.json",
+        "sha256": "c5821b6bc34ce129843f3ce605879a3cd62ad23be574590c52f25668deb2cffc",
+        "version": null
+      },
+      "selector": "Mechanical completion, supplied identities and cleanup."
+    },
+    {
+      "id": "trace",
+      "artifact": {
+        "path": "/Users/simon/work/personal/skill-study-private/sweeping-stale-references/development/20260924T135308792Z-ssr-claude-invocation-unrelated-original-dada1139-eb2b-41f4-b5a3-30a48ce4dfa1-kuy3oml6/stdout.txt",
+        "sha256": "fa033c4c67a0554119ce020b67cd80d0c336fc6f6cfaed7f61f51ec19bc7fd05",
+        "version": null
+      },
+      "selector": "Complete ordered model-visible context, calls and outputs."
+    },
+    {
+      "id": "final",
+      "artifact": {
+        "path": "/Users/simon/work/personal/skill-study-private/sweeping-stale-references/development/20260924T135308792Z-ssr-claude-invocation-unrelated-original-dada1139-eb2b-41f4-b5a3-30a48ce4dfa1-kuy3oml6/final.txt",
+        "sha256": "472385cf8d8cf15b8372322f6e46cc7d92f2112a091dae111d32b040f4cef440",
+        "version": null
+      },
+      "selector": "Final delivered response."
+    },
+    {
+      "id": "checks",
+      "artifact": {
+        "path": "/Users/simon/work/personal/skill-study-private/sweeping-stale-references/development/20260924T135308792Z-ssr-claude-invocation-unrelated-original-dada1139-eb2b-41f4-b5a3-30a48ce4dfa1-kuy3oml6.checks.json",
+        "sha256": "55437685f40ec580ce0b514a9e9a7feb5771224bfa8cc8f8b21dfdcec6cb0c10",
+        "version": null
+      },
+      "selector": "Disposable-copy Git history/diff, project artifacts, ordered trace projection and independent replay."
+    }
+  ],
+  "setup": {
+    "status": "valid",
+    "reason": "Pinned native availability, catalog, model/settings, complete capture and cleanup verified. SSR not loaded, consistent with this unrelated task.",
+    "evidence": [
+      "runner",
+      "trace",
+      "checks"
+    ]
+  },
+  "criteria": [
+    {
+      "id": "D1",
+      "dimension": "procedural",
+      "judgment": "met",
+      "reason": "Complete trace shows only task/source/config reads and arithmetic explanation, without SSR selection or sweep workflow.",
+      "consequence": "Report separately from functional outcome; affects comparison interpretation.",
+      "evidence": [
+        "trace",
+        "checks"
+      ]
+    }
+  ],
+  "procedural_summary": "Appropriate non-use: no SSR selection or sweep/accounting workflow.",
+  "observations": [
+    {
+      "dimension": "functional",
+      "description": "Correctly computes 100 + 30*60 = 1900; no edits or commits observed.",
+      "consequence": "Descriptive only; excluded from SSR functional counts.",
+      "evidence": [
+        "trace",
+        "checks"
+      ]
+    }
+  ],
+  "uncertainty": [
+    "Obviously unrelated sanity check; does not measure realistic development over-triggering."
+  ],
+  "result_id": "claude-comparison-01-invocation-unrelated-original-1",
+  "functional_result": "not measured",
+  "manifest": {
+    "path": "skill-studies/sweeping-stale-references/cases/invocation-unrelated/claude-comparison-manifest.json",
+    "sha256": "b373d25a81895f8354a0efea9c08f1b6a45acc9df30705607bb487008ce7924e",
+    "version": "1",
+    "git_revision": "d342d2f939898ef4073691fb92414e9eff55dbff"
+  }
+}

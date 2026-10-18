@@ -1,0 +1,203 @@
+{
+  "schema_version": "1",
+  "record_kind": "execution result",
+  "result_id": "comprehensive-comparison-01-semantic-delivery-original-2",
+  "assessed_at": "2026-09-17T16:46:46.760544+00:00",
+  "run_id": "20260917T164456936Z-ssr-semantic-delivery-original-f0aa1146-9f9c-43a5-8f5b-8df44b0d4510-s02lrppw",
+  "condition": "original",
+  "assessor": {
+    "name": "Codex active session",
+    "method": "active session",
+    "model": null,
+    "session_id": "01a0a0df-97d9-7630-a639-012c3046e6b5",
+    "context": "Same ongoing work session with owner decisions, construction history, fixed criteria and prior assessments available. Not independent or blind validation; assessor model identity not recorded by this workflow."
+  },
+  "manifest": {
+    "path": "skill-studies/sweeping-stale-references/cases/semantic-delivery/comparison-manifest.json",
+    "sha256": "c5e74d1e30353ff4e51bce359bf365d2d4d3158d0e7b70a1418b9f6a00040afa",
+    "version": "1",
+    "git_revision": "d899a817108330c4dcba4007f3383294a87d2f9a"
+  },
+  "evidence": [
+    {
+      "id": "runner",
+      "artifact": {
+        "path": "/Users/simon/work/personal/skill-study-private/sweeping-stale-references/development/20260917T164456936Z-ssr-semantic-delivery-original-f0aa1146-9f9c-43a5-8f5b-8df44b0d4510-s02lrppw/result.json",
+        "sha256": "bea5a1f068793598099a977000c63541c1b20b944a7b3880b5c6656a2b25ad8e",
+        "version": "0.4"
+      },
+      "selector": "Execution, status, artifact identities and infrastructure error."
+    },
+    {
+      "id": "inputs",
+      "artifact": {
+        "path": "/Users/simon/work/personal/skill-study-private/sweeping-stale-references/development/20260917T164456936Z-ssr-semantic-delivery-original-f0aa1146-9f9c-43a5-8f5b-8df44b0d4510-s02lrppw/runner.log",
+        "sha256": "9a50b3bfd083f9dc23e88d62c6d36eeac281a5ee1fc7c4cd4b6153c678d026f2",
+        "version": null
+      },
+      "selector": "Private invocation arguments, pre-launch input hashes and capture/cleanup."
+    },
+    {
+      "id": "trace",
+      "artifact": {
+        "path": "/Users/simon/work/personal/skill-study-private/sweeping-stale-references/development/20260917T164456936Z-ssr-semantic-delivery-original-f0aa1146-9f9c-43a5-8f5b-8df44b0d4510-s02lrppw/stdout.txt",
+        "sha256": "62e2cd415e0b0364dd79cfc1311efc388d3a3bb307d9bde4b33bbcbad466ca1b",
+        "version": null
+      },
+      "selector": "Ordered command/agent events, interpreted with complete session tool responses."
+    },
+    {
+      "id": "session",
+      "artifact": {
+        "path": "/Users/simon/work/personal/skill-study-private/sweeping-stale-references/development/20260917T164456936Z-ssr-semantic-delivery-original-f0aa1146-9f9c-43a5-8f5b-8df44b0d4510-s02lrppw/provider-session.jsonl",
+        "sha256": "c7b4c86797c5d929f226ba203e3fb873ebc5d152db19440b88199e6e6b6fa005",
+        "version": null
+      },
+      "selector": "Full original read 16; baseline/task 25; complete documents and broad search 32; patch 41; checks 48; commit 57."
+    },
+    {
+      "id": "checks",
+      "artifact": {
+        "path": "/Users/simon/work/personal/skill-study-private/sweeping-stale-references/development/20260917T164456936Z-ssr-semantic-delivery-original-f0aa1146-9f9c-43a5-8f5b-8df44b0d4510-s02lrppw.checks.json",
+        "sha256": "0b06810f243476a4d83cc8a6d3c5cc9c933bebdc102a7c1a860eab300d958f93",
+        "version": null
+      },
+      "selector": "Input checks, Git history/commit messages, changed paths, preserved project bytes and independent runtime observations."
+    },
+    {
+      "id": "file-5",
+      "artifact": {
+        "path": "/Users/simon/work/personal/skill-study-private/sweeping-stale-references/development/20260917T164456936Z-ssr-semantic-delivery-original-f0aa1146-9f9c-43a5-8f5b-8df44b0d4510-s02lrppw/workspace/fixture/README.md",
+        "sha256": "5627a38e33e0da57f237f96c3981dd64527c7cfd41abf3e24360bfa16725df7d",
+        "version": null
+      },
+      "selector": "Complete changed artifact; inspect against fixed case criteria and preserved input bytes."
+    },
+    {
+      "id": "file-6",
+      "artifact": {
+        "path": "/Users/simon/work/personal/skill-study-private/sweeping-stale-references/development/20260917T164456936Z-ssr-semantic-delivery-original-f0aa1146-9f9c-43a5-8f5b-8df44b0d4510-s02lrppw/workspace/fixture/docs/operations.md",
+        "sha256": "aa6bff4199252757a0e207da3e7443b939606abaf5e168073a0e3d74ca3c8042",
+        "version": null
+      },
+      "selector": "Complete changed artifact; inspect against fixed case criteria and preserved input bytes."
+    },
+    {
+      "id": "file-7",
+      "artifact": {
+        "path": "/Users/simon/work/personal/skill-study-private/sweeping-stale-references/development/20260917T164456936Z-ssr-semantic-delivery-original-f0aa1146-9f9c-43a5-8f5b-8df44b0d4510-s02lrppw/workspace/fixture/docs/troubleshooting.md",
+        "sha256": "2436b0c68662c0128de007b48b5687e22cd43a86aa465029df6d71ca0c8a9dac",
+        "version": null
+      },
+      "selector": "Complete changed artifact; inspect against fixed case criteria and preserved input bytes."
+    }
+  ],
+  "setup": {
+    "status": "valid",
+    "reason": "The complete frozen original skill was exposed before task work; the retained trace shows only supplied project/guidance and no outside authority. Neutral baseline and task ordering are correct. Capture-2 and runtime-1 apply to both versions; the frozen protocol/runner revision is identified by this attempt’s authorization in the index. Configuration, prompt, pre-launch fixtures and neutral project baseline match fixed inputs. Session hash, invocation cwd and stdout thread identity match.",
+    "evidence": [
+      "runner",
+      "inputs",
+      "session",
+      "checks"
+    ]
+  },
+  "criteria": [
+    {
+      "id": "F1",
+      "dimension": "functional",
+      "judgment": "met",
+      "reason": "All three current documents now describe at most four total attempts, up to three retries, exhaustion after four failures and early stopping.",
+      "consequence": "Functional outcome satisfied.",
+      "evidence": [
+        "checks",
+        "session",
+        "file-5",
+        "file-6",
+        "file-7"
+      ]
+    },
+    {
+      "id": "F2",
+      "dimension": "functional",
+      "judgment": "met",
+      "reason": "Only the three current documents changed; helper, code, tests, historical plan and unrelated guidance are preserved. All seven independent probes match expected behavior.",
+      "consequence": "Functional outcome satisfied.",
+      "evidence": [
+        "checks",
+        "session",
+        "file-5",
+        "file-6",
+        "file-7"
+      ]
+    },
+    {
+      "id": "F3",
+      "dimension": "functional",
+      "judgment": "met",
+      "reason": "All three repairs are committed at 953cbd7 and final state is clean.",
+      "consequence": "Functional outcome satisfied.",
+      "evidence": [
+        "checks",
+        "session",
+        "file-5",
+        "file-6",
+        "file-7"
+      ]
+    },
+    {
+      "id": "P1",
+      "dimension": "procedural",
+      "judgment": "met",
+      "reason": "Search and complete relevant document reads precede the patch; explicit pre-edit triage distinguishes the three current claims from independent helper and historical policy.",
+      "consequence": "Procedure satisfied.",
+      "evidence": [
+        "checks",
+        "session",
+        "trace"
+      ]
+    },
+    {
+      "id": "P2",
+      "dimension": "procedural",
+      "judgment": "met",
+      "reason": "One repair commit follows the neutral baseline.",
+      "consequence": "Procedure satisfied.",
+      "evidence": [
+        "checks",
+        "session",
+        "trace"
+      ]
+    },
+    {
+      "id": "P3",
+      "dimension": "procedural",
+      "judgment": "not met",
+      "reason": "The historical block at lines 4–5 is counted as two matches. The six-match inventory and three preserved matches are internally consistent as line counts but disagree with the fixed semantic-block unit (five blocks including the optional helper).",
+      "consequence": "Non-blocking procedural defect; functional outcome assessed separately.",
+      "evidence": [
+        "checks",
+        "session",
+        "trace"
+      ]
+    }
+  ],
+  "functional_result": "met",
+  "procedural_summary": "Search/triage and grouping met; account fails the fixed block-count unit without an arithmetic inconsistency.",
+  "observations": [
+    {
+      "dimension": "procedural",
+      "description": "Unlike original repetition 1, repetition 2 counts historical lines rather than one block.",
+      "consequence": "P3 not met under fixed rules; this is observed within-version variation and does not change the functional pass.",
+      "evidence": [
+        "session",
+        "checks"
+      ]
+    }
+  ],
+  "uncertainty": [
+    "This is one execution under the declared case/model/context; aggregate conclusions belong to the batch assessment.",
+    "Session content establishes observable exposure/actions, not internal attention or exhaustive host-wide isolation.",
+    "No immutable model revision or independent/held-out validation is claimed."
+  ]
+}

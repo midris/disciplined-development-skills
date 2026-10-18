@@ -1,0 +1,152 @@
+{
+  "schema_version": "2",
+  "record_kind": "execution result",
+  "assessed_at": "2026-09-24T13:16:46.100291+00:00",
+  "run_id": "20260924T131442185Z-ssr-claude-semantic-delivery-original-c0b34315-e915-4a3e-a425-a266de6c2830-3xxc5mrh",
+  "condition": "original",
+  "assessor": {
+    "name": "Codex active session",
+    "method": "active session",
+    "model": null,
+    "session_id": null,
+    "context": "Same active session prepared and inspected the study; not independent or blind."
+  },
+  "evidence": [
+    {
+      "id": "runner",
+      "artifact": {
+        "path": "/Users/simon/work/personal/skill-study-private/sweeping-stale-references/development/20260924T131442185Z-ssr-claude-semantic-delivery-original-c0b34315-e915-4a3e-a425-a266de6c2830-3xxc5mrh/result.json",
+        "sha256": "370e7399401a72777de28b7f10033eb0505ccbffe0b7021d8e2adb8c6d8f400f",
+        "version": null
+      },
+      "selector": "Mechanical completion, supplied identities and cleanup."
+    },
+    {
+      "id": "trace",
+      "artifact": {
+        "path": "/Users/simon/work/personal/skill-study-private/sweeping-stale-references/development/20260924T131442185Z-ssr-claude-semantic-delivery-original-c0b34315-e915-4a3e-a425-a266de6c2830-3xxc5mrh/stdout.txt",
+        "sha256": "7e574f463ac6754f8409228ac82f7a953c1461bb71458ac5206e071c1ee50980",
+        "version": null
+      },
+      "selector": "Complete ordered model-visible context, calls and outputs."
+    },
+    {
+      "id": "final",
+      "artifact": {
+        "path": "/Users/simon/work/personal/skill-study-private/sweeping-stale-references/development/20260924T131442185Z-ssr-claude-semantic-delivery-original-c0b34315-e915-4a3e-a425-a266de6c2830-3xxc5mrh/final.txt",
+        "sha256": "806f03236013c1383e6fc45cc507556a04f2265e5b0507ea2a836ca6557b8c42",
+        "version": null
+      },
+      "selector": "Final delivered response."
+    },
+    {
+      "id": "checks",
+      "artifact": {
+        "path": "/Users/simon/work/personal/skill-study-private/sweeping-stale-references/development/20260924T131442185Z-ssr-claude-semantic-delivery-original-c0b34315-e915-4a3e-a425-a266de6c2830-3xxc5mrh.checks.json",
+        "sha256": "faf9d3f4349d0edb3c7f45148bcec9e8d4132768212496112a6f965540c86db4",
+        "version": null
+      },
+      "selector": "Disposable-copy Git history/diff, project artifacts, ordered trace projection and independent replay."
+    }
+  ],
+  "setup": {
+    "status": "valid",
+    "reason": "Pinned Claude/Sonnet low completed with full original skill read, expected catalog, intact evidence and successful cleanup.",
+    "evidence": [
+      "runner",
+      "trace",
+      "checks"
+    ]
+  },
+  "criteria": [
+    {
+      "id": "F1",
+      "dimension": "functional",
+      "judgment": "met",
+      "reason": "README states at most four sends, operations three additional tries, troubleshooting exhaustion after fourth failure; immediate stop and useful operational guidance remain.",
+      "consequence": "Functional criterion satisfied.",
+      "evidence": [
+        "trace",
+        "checks"
+      ]
+    },
+    {
+      "id": "F2",
+      "dimension": "functional",
+      "judgment": "met",
+      "reason": "Only three stale docs changed. Seven independent probes confirm four-attempt delivery with early stopping and unchanged three-attempt helper; history and unrelated guidance preserved.",
+      "consequence": "Functional criterion satisfied.",
+      "evidence": [
+        "trace",
+        "checks"
+      ]
+    },
+    {
+      "id": "F3",
+      "dimension": "functional",
+      "judgment": "met",
+      "reason": "Commit bbd965f contains the complete three-document repair with clean working tree.",
+      "consequence": "Functional criterion satisfied.",
+      "evidence": [
+        "trace",
+        "checks"
+      ]
+    },
+    {
+      "id": "P1",
+      "dimension": "procedural",
+      "judgment": "met",
+      "reason": "All relevant content read and repository searches performed before edits; current, historical and independent meanings triaged appropriately.",
+      "consequence": "Report separately from functional outcome; affects comparison interpretation.",
+      "evidence": [
+        "trace",
+        "checks"
+      ]
+    },
+    {
+      "id": "P2",
+      "dimension": "procedural",
+      "judgment": "met",
+      "reason": "One complete repair commit follows baseline.",
+      "consequence": "Report separately from functional outcome; affects comparison interpretation.",
+      "evidence": [
+        "trace",
+        "checks"
+      ]
+    },
+    {
+      "id": "P3",
+      "dimension": "procedural",
+      "judgment": "met",
+      "reason": "Each of the four required semantic reference blocks has one correctly located and classified entry. Optional extra test/code hits are excluded from this criterion.",
+      "consequence": "Report separately from functional outcome; affects comparison interpretation.",
+      "evidence": [
+        "trace",
+        "checks"
+      ]
+    }
+  ],
+  "procedural_summary": "All semantic repairs and preservation pass; search/content inspection before edits and one repair commit. Four required semantic blocks are correctly accounted for; broader summary and claimed post-edit search are inaccurate.",
+  "observations": [
+    {
+      "dimension": "procedural",
+      "description": "Broader summary totals do not reconcile with listed optional entries, and Verification claims a post-edit search not present in the trace. This is a reporting error beyond the correctly accounted four required semantic blocks.",
+      "consequence": "Record separately from fixed-scope P3 and functional outcome; passing task tests do not establish prose correctness.",
+      "evidence": [
+        "trace",
+        "checks"
+      ]
+    }
+  ],
+  "uncertainty": [
+    "Exposed small fixture and two repetitions per condition do not establish general reliability."
+  ],
+  "result_id": "claude-comparison-01-semantic-delivery-original-1",
+  "functional_result": "met",
+  "manifest": {
+    "path": "skill-studies/sweeping-stale-references/cases/semantic-delivery/claude-comparison-manifest.json",
+    "sha256": "db4bb5fe50b832a41c926ae518092d70bc5d25531edb3c31f584e33627bcda85",
+    "version": "1",
+    "git_revision": "d342d2f939898ef4073691fb92414e9eff55dbff"
+  }
+}

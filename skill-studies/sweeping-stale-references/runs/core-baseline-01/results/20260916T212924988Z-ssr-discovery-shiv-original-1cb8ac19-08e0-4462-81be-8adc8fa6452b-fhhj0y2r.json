@@ -1,0 +1,215 @@
+{
+  "schema_version": "1",
+  "record_kind": "execution result",
+  "result_id": "core-baseline-01-discovery-shiv-original-2",
+  "assessed_at": "2026-09-16T21:31:57.756613+00:00",
+  "run_id": "20260916T212924988Z-ssr-discovery-shiv-original-1cb8ac19-08e0-4462-81be-8adc8fa6452b-fhhj0y2r",
+  "condition": "original",
+  "assessor": {
+    "name": "Codex active session",
+    "method": "active session",
+    "model": null,
+    "session_id": "01a0a0df-97d9-7630-a639-012c3046e6b5",
+    "context": "Same ongoing work session with owner decisions, construction history, fixed criteria and prior assessments available. Not independent or blind validation; assessor model identity not recorded by this workflow."
+  },
+  "manifest": {
+    "path": "skill-studies/sweeping-stale-references/cases/discovery-shiv/manifest.json",
+    "sha256": "31378d2d7cbbf11051174e8f6d88303a680eaf94cd73cb213a52be5b7ed69b2e",
+    "version": "1",
+    "git_revision": "1247058074e09610ab5ff9bfdc9220147694930c"
+  },
+  "evidence": [
+    {
+      "id": "runner",
+      "artifact": {
+        "path": "/Users/simon/work/personal/skill-study-private/sweeping-stale-references/development/20260916T212924988Z-ssr-discovery-shiv-original-1cb8ac19-08e0-4462-81be-8adc8fa6452b-fhhj0y2r/result.json",
+        "sha256": "c17a794d843a272c4d50ca4955c9e80b56c7be98f16b2b76b77b7d7c3b820f9d",
+        "version": "0.4"
+      },
+      "selector": "Execution, status, artifact identities and infrastructure error."
+    },
+    {
+      "id": "inputs",
+      "artifact": {
+        "path": "/Users/simon/work/personal/skill-study-private/sweeping-stale-references/development/20260916T212924988Z-ssr-discovery-shiv-original-1cb8ac19-08e0-4462-81be-8adc8fa6452b-fhhj0y2r/runner.log",
+        "sha256": "74721748715cc22ffcc60601347c77bb4db5c7b9e32de53d9521eebb474b6148",
+        "version": null
+      },
+      "selector": "Private invocation arguments, pre-launch input hashes and capture/cleanup."
+    },
+    {
+      "id": "trace",
+      "artifact": {
+        "path": "/Users/simon/work/personal/skill-study-private/sweeping-stale-references/development/20260916T212924988Z-ssr-discovery-shiv-original-1cb8ac19-08e0-4462-81be-8adc8fa6452b-fhhj0y2r/stdout.txt",
+        "sha256": "da7d15778d8d6b110cbb299d552ff29340f7d994ce85a0c93fd3e1b03fdf3b9d",
+        "version": null
+      },
+      "selector": "Ordered command/agent events, interpreted with complete session tool responses."
+    },
+    {
+      "id": "session",
+      "artifact": {
+        "path": "/Users/simon/work/personal/skill-study-private/sweeping-stale-references/development/20260916T212924988Z-ssr-discovery-shiv-original-1cb8ac19-08e0-4462-81be-8adc8fa6452b-fhhj0y2r/provider-session.jsonl",
+        "sha256": "bdb84e98417663db7b3783a209284adf207cf15a563a540bcee4694eb58bd2e9",
+        "version": null
+      },
+      "selector": "Line 16: complete frozen skill response linked to call line 13; lines 32–39: broad pre-edit search and all stale consumer content; line 48: four repairs; line 55: successful archive/tests/builds; line 71: complete commit and account."
+    },
+    {
+      "id": "checks",
+      "artifact": {
+        "path": "/Users/simon/work/personal/skill-study-private/sweeping-stale-references/development/20260916T212924988Z-ssr-discovery-shiv-original-1cb8ac19-08e0-4462-81be-8adc8fa6452b-fhhj0y2r.checks.json",
+        "sha256": "35bb6079c04fb47538368dd07bdc1e1b4f7a37148edf3105e6b3dc62fcc04449",
+        "version": null
+      },
+      "selector": "Input checks, Git history/commit messages, changed paths, preserved project bytes and independent runtime observations."
+    },
+    {
+      "id": "file-5",
+      "artifact": {
+        "path": "/Users/simon/work/personal/skill-study-private/sweeping-stale-references/development/20260916T212924988Z-ssr-discovery-shiv-original-1cb8ac19-08e0-4462-81be-8adc8fa6452b-fhhj0y2r/workspace/fixture/.github/workflows/offline-example.yml",
+        "sha256": "d4e247a8617adf393455d9f174db420cc866826523093f77894b99c1ed94a638",
+        "version": null
+      },
+      "selector": "Complete changed artifact; inspect against fixed case criteria and preserved input bytes."
+    },
+    {
+      "id": "file-6",
+      "artifact": {
+        "path": "/Users/simon/work/personal/skill-study-private/sweeping-stale-references/development/20260916T212924988Z-ssr-discovery-shiv-original-1cb8ac19-08e0-4462-81be-8adc8fa6452b-fhhj0y2r/workspace/fixture/README.md",
+        "sha256": "8c6f9c10785d0b41358215c0493d54aa11fa8923d0d54e9cb6ef1f4570d454be",
+        "version": null
+      },
+      "selector": "Complete changed artifact; inspect against fixed case criteria and preserved input bytes."
+    },
+    {
+      "id": "file-7",
+      "artifact": {
+        "path": "/Users/simon/work/personal/skill-study-private/sweeping-stale-references/development/20260916T212924988Z-ssr-discovery-shiv-original-1cb8ac19-08e0-4462-81be-8adc8fa6452b-fhhj0y2r/workspace/fixture/build-support/release/example.mk",
+        "sha256": "893b638e80397fc2115e6f62c5dc1b10116a050610c4945f3a4e5c12ff2dbc86",
+        "version": null
+      },
+      "selector": "Complete changed artifact; inspect against fixed case criteria and preserved input bytes."
+    },
+    {
+      "id": "file-8",
+      "artifact": {
+        "path": "/Users/simon/work/personal/skill-study-private/sweeping-stale-references/development/20260916T212924988Z-ssr-discovery-shiv-original-1cb8ac19-08e0-4462-81be-8adc8fa6452b-fhhj0y2r/workspace/fixture/scripts/build-example.sh",
+        "sha256": "dc10cc741f0a8717e6d1bf4c6744ea103ea934e4d1462796671fcca15387580d",
+        "version": null
+      },
+      "selector": "Complete changed artifact; inspect against fixed case criteria and preserved input bytes."
+    }
+  ],
+  "setup": {
+    "status": "valid",
+    "reason": "The full frozen skill is present in an untruncated actual tool response before task work. No outside guidance or explicit remembered-upstream/API claim was observed. Runtime-1 is usable: the subject executes the repaired README, script, Make target and all four local tests successfully. Make emits host cache/event warnings but returns successfully; these do not prevent execution or capture. Capture-2 and runtime-1 apply prospectively; the frozen protocol/runner revision is identified by this attempt’s authorization in the index. Configuration, prompt, pre-launch fixtures and neutral project baseline match fixed inputs. Session hash, invocation cwd and stdout thread identity match.",
+    "evidence": [
+      "runner",
+      "inputs",
+      "session",
+      "checks"
+    ]
+  },
+  "criteria": [
+    {
+      "id": "F1",
+      "dimension": "functional",
+      "judgment": "met",
+      "reason": "README, script, nested Make recipe and CI build command all use the current option. Controller replay confirms every consumer builds the intended runnable greeting archive, including the script from outside the checkout.",
+      "consequence": "Functional outcome satisfied.",
+      "evidence": [
+        "checks",
+        "session",
+        "file-5",
+        "file-6",
+        "file-7",
+        "file-8"
+      ]
+    },
+    {
+      "id": "F2",
+      "dimension": "functional",
+      "judgment": "met",
+      "reason": "All nonconsumer bytes remain intact. The current long option and short alias work, the retired option fails without creating an archive, and history, independent inventory tool, greeting and unrelated project behavior remain preserved.",
+      "consequence": "Functional outcome satisfied.",
+      "evidence": [
+        "checks",
+        "session",
+        "file-5",
+        "file-6",
+        "file-7",
+        "file-8"
+      ]
+    },
+    {
+      "id": "F3",
+      "dimension": "functional",
+      "judgment": "met",
+      "reason": "Commit 7da1ca4 contains all four required consumer repairs; no tracked edits remain outside the commit.",
+      "consequence": "Functional outcome satisfied.",
+      "evidence": [
+        "checks",
+        "session",
+        "file-5",
+        "file-6",
+        "file-7",
+        "file-8"
+      ]
+    },
+    {
+      "id": "P1",
+      "dimension": "procedural",
+      "judgment": "met",
+      "reason": "Broad hidden-file search and direct reads expose all four stale consumers before editing. The subject explicitly chooses all four repairs and correctly preserves historical, independent-tool and negative-test uses. The account's category label error is recorded under P3; its preservation decision is correct.",
+      "consequence": "Procedure satisfied.",
+      "evidence": [
+        "checks",
+        "session",
+        "trace"
+      ]
+    },
+    {
+      "id": "P2",
+      "dimension": "procedural",
+      "judgment": "met",
+      "reason": "One repair commit after the neutral baseline contains the complete connected reconciliation.",
+      "consequence": "Procedure satisfied.",
+      "evidence": [
+        "checks",
+        "session",
+        "trace"
+      ]
+    },
+    {
+      "id": "P3",
+      "dimension": "procedural",
+      "judgment": "not met",
+      "reason": "The account has the required header, correct nine-occurrence/eight-path totals, useful locations and same-file grouping. It nevertheless labels the two negative assertions intentionally stale rather than false positives under the fixed rule, yielding 4 updates/3 intentionally stale/2 false positives instead of 4/1/4. The references are preserved correctly; this is a non-blocking classification defect.",
+      "consequence": "Non-blocking procedural defect; functional outcome assessed separately.",
+      "evidence": [
+        "checks",
+        "session",
+        "trace"
+      ]
+    }
+  ],
+  "functional_result": "met",
+  "procedural_summary": "P1 and P2 met. P3 has a non-blocking classification error for the negative assertions, with correct preservation and otherwise useful accounting.",
+  "observations": [
+    {
+      "dimension": "procedural",
+      "description": "The subject correctly preserves rejection tests and explains their purpose, but assigns them the historical/intentionally-stale category rather than the fixed false-positive category.",
+      "consequence": "Record the category discrepancy without turning correct preservation into a functional or triage failure.",
+      "evidence": [
+        "session",
+        "checks"
+      ]
+    }
+  ],
+  "uncertainty": [
+    "This is one execution under the declared case/model/context; aggregate conclusions belong to the batch assessment.",
+    "Session content establishes observable exposure/actions, not internal attention or exhaustive host-wide isolation.",
+    "No immutable model revision or independent/held-out validation is claimed."
+  ]
+}

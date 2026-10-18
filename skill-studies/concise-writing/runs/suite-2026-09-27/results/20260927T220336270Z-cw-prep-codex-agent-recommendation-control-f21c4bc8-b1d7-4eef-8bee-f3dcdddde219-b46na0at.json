@@ -1,0 +1,156 @@
+{
+  "schema_version": "2",
+  "record_kind": "execution result",
+  "assessed_at": "2026-09-27T22:07:45.203227+00:00",
+  "run_id": "20260927T220336270Z-cw-prep-codex-agent-recommendation-control-f21c4bc8-b1d7-4eef-8bee-f3dcdddde219-b46na0at",
+  "condition": "control",
+  "assessor": {
+    "name": "Codex active session",
+    "method": "active session",
+    "model": null,
+    "session_id": null,
+    "context": "Same session that prepared and reviewed these development cases. No independent, blinded or held-out claim."
+  },
+  "evidence": [
+    {
+      "id": "output",
+      "artifact": {
+        "path": "/Users/simon/work/personal/skill-study-private/concise-writing/development/20260927T220336270Z-cw-prep-codex-agent-recommendation-control-f21c4bc8-b1d7-4eef-8bee-f3dcdddde219-b46na0at/workspace/fixture/report.md",
+        "sha256": "d1c8e088b3f2dbec618827a2666d512f7aa6e049626b1ab1c7fed6c264eff822",
+        "version": null
+      },
+      "selector": "Complete artifact"
+    },
+    {
+      "id": "trace",
+      "artifact": {
+        "path": "/Users/simon/work/personal/skill-study-private/concise-writing/development/20260927T220336270Z-cw-prep-codex-agent-recommendation-control-f21c4bc8-b1d7-4eef-8bee-f3dcdddde219-b46na0at/provider-session.jsonl",
+        "sha256": "795622875d64631d0569330f3c8fd6b253bc5c7c72f334665777c73aa98cfe25",
+        "version": null
+      },
+      "selector": "Complete artifact"
+    },
+    {
+      "id": "mechanical",
+      "artifact": {
+        "path": "/Users/simon/work/personal/skill-study-private/concise-writing/development/20260927T220336270Z-cw-prep-codex-agent-recommendation-control-f21c4bc8-b1d7-4eef-8bee-f3dcdddde219-b46na0at/result.json",
+        "sha256": "97e033cbbc034f4a3a542ba7fbb599bbb865ceefbf13cd24ffed6dc66a9692aa",
+        "version": null
+      },
+      "selector": "Complete artifact"
+    },
+    {
+      "id": "log",
+      "artifact": {
+        "path": "/Users/simon/work/personal/skill-study-private/concise-writing/development/20260927T220336270Z-cw-prep-codex-agent-recommendation-control-f21c4bc8-b1d7-4eef-8bee-f3dcdddde219-b46na0at/runner.log",
+        "sha256": "64bffcff6aa41952519900951c4994424e26dbbc48ef7993c53c21ebd7c4fdb7",
+        "version": null
+      },
+      "selector": "Complete artifact"
+    },
+    {
+      "id": "final",
+      "artifact": {
+        "path": "/Users/simon/work/personal/skill-study-private/concise-writing/development/20260927T220336270Z-cw-prep-codex-agent-recommendation-control-f21c4bc8-b1d7-4eef-8bee-f3dcdddde219-b46na0at/final.txt",
+        "sha256": "266bd03420ffb0bcb4fd170439d8d7374243ebda3cbbf2872a034d5e14c4fb5f",
+        "version": null
+      },
+      "selector": "Complete artifact"
+    },
+    {
+      "id": "source-0",
+      "artifact": {
+        "path": "skill-studies/concise-writing/cases/agent-recommendation/fixture/report.md",
+        "sha256": "e9a992c7e4c14dfd5afc10cc637349f39c2030e98ed0311441675900bc3e93e9",
+        "version": null,
+        "git_revision": "96b6e383da39ea807a6ad49d4513cfc1d6f4cd33"
+      },
+      "selector": "Complete frozen source"
+    },
+    {
+      "id": "source-1",
+      "artifact": {
+        "path": "skill-studies/concise-writing/cases/agent-recommendation/task.md",
+        "sha256": "607cbe0562a19ea092fe76ec96f13bfbe033b2e1095baef2ca38be621c0baf82",
+        "version": null,
+        "git_revision": "96b6e383da39ea807a6ad49d4513cfc1d6f4cd33"
+      },
+      "selector": "Complete frozen source"
+    }
+  ],
+  "setup": {
+    "status": "valid",
+    "reason": "The retained log pins the frozen source and task hashes; the completed call reports gpt-5.6-sol/low and its retained turn context agrees. The initial catalog contains five built-ins but no CW; the trace shows no CW body exposure. TASK.md is unchanged and the edited report is retained.",
+    "evidence": [
+      "mechanical",
+      "trace",
+      "log"
+    ]
+  },
+  "criteria": [
+    {
+      "id": "F1",
+      "dimension": "functional",
+      "judgment": "met",
+      "reason": "The complete report preserves 50 matching staging exports, three injected failures, old/new cursor ordering, undeployed production status, untested production-sized data/cross-region behavior, the ten-account/30-minute Tuesday pilot and staff, evidence-retention safeguard and separate release decision.",
+      "consequence": "Required for the corresponding functional or invocation outcome; reported separately.",
+      "evidence": [
+        "output",
+        "source-0",
+        "source-1"
+      ]
+    },
+    {
+      "id": "F2",
+      "dimension": "functional",
+      "judgment": "met",
+      "reason": "Decision-needed and recommendation sections expose the approval request while the pilot plan keeps Maya/Leo responsibilities, mismatch stop and both-file retention with its diagnostic rationale; the matching-count branch still requires a later release decision.",
+      "consequence": "Required for the corresponding functional or invocation outcome; reported separately.",
+      "evidence": [
+        "output",
+        "source-0",
+        "source-1"
+      ]
+    },
+    {
+      "id": "F3",
+      "dimension": "functional",
+      "judgment": "met",
+      "reason": "Decision, recommendation, evidence and safeguards form a coherent reading path. Removing the generic communication digression and duplicated mechanism makes the whole report easier to consume; remaining scope reinforcement serves the approval and evidence contexts.",
+      "consequence": "Required for the corresponding functional or invocation outcome; reported separately.",
+      "evidence": [
+        "output",
+        "source-0",
+        "source-1"
+      ]
+    }
+  ],
+  "procedural_summary": "No-CW control. The trace shows a baseline commit, complete input reading, an edit and full Git diff inspection. One invalid combined delete/add patch was rejected and corrected within the same invocation; this was not a new model execution. No expressed unresolved framing uncertainty.",
+  "observations": [
+    {
+      "dimension": "functional",
+      "description": "Whole-document word counts: source 625, output 246, change -379; shorter. Length is unscored.",
+      "consequence": "Descriptive comparison; no separate score or automatic length-based preference.",
+      "evidence": [
+        "output"
+      ]
+    },
+    {
+      "dimension": "functional",
+      "description": "The decision-first reorganization improves lookup without manufacturing an additional criterion or a preferred layout.",
+      "consequence": "Descriptive comparison; no separate score or automatic length-based preference.",
+      "evidence": [
+        "output"
+      ]
+    }
+  ],
+  "uncertainty": [],
+  "result_id": "codex-expanded-01-agent-recommendation-control-1",
+  "functional_result": "met",
+  "manifest": {
+    "path": "skill-studies/concise-writing/preparation/manifests/codex-agent-recommendation-manifest.json",
+    "sha256": "2e8d8ac2924c3e916544aea3a1ed94b7da65fc2789e98b89b39cad7e0a74b930",
+    "version": "1",
+    "git_revision": "4dc370648a6a915546035847b2823a4bc5d57325"
+  }
+}

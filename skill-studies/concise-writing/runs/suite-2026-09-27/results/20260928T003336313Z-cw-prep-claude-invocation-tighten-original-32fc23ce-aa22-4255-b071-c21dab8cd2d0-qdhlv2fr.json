@@ -1,0 +1,171 @@
+{
+  "schema_version": "2",
+  "record_kind": "execution result",
+  "assessed_at": "2026-09-28T00:34:25.602377+00:00",
+  "run_id": "20260928T003336313Z-cw-prep-claude-invocation-tighten-original-32fc23ce-aa22-4255-b071-c21dab8cd2d0-qdhlv2fr",
+  "condition": "original",
+  "assessor": {
+    "name": "Codex active session",
+    "method": "active session",
+    "model": null,
+    "session_id": null,
+    "context": "Same session that prepared and reviewed these development cases. No independent, blinded or held-out claim."
+  },
+  "evidence": [
+    {
+      "id": "output",
+      "artifact": {
+        "path": "/Users/simon/work/personal/skill-study-private/concise-writing/development/20260928T003336313Z-cw-prep-claude-invocation-tighten-original-32fc23ce-aa22-4255-b071-c21dab8cd2d0-qdhlv2fr/workspace/fixture/report.md",
+        "sha256": "45751c7ed6cd9b895910e90ac7135c8799d909d7b3cff407b83ff744f94a128b",
+        "version": null
+      },
+      "selector": "Complete artifact"
+    },
+    {
+      "id": "trace",
+      "artifact": {
+        "path": "/Users/simon/work/personal/skill-study-private/concise-writing/development/20260928T003336313Z-cw-prep-claude-invocation-tighten-original-32fc23ce-aa22-4255-b071-c21dab8cd2d0-qdhlv2fr/stdout.txt",
+        "sha256": "b4ad9e477d4305e33dcc3c9a88b18439fe695f62416338981fa675c7aa76b7b1",
+        "version": null
+      },
+      "selector": "Complete artifact"
+    },
+    {
+      "id": "mechanical",
+      "artifact": {
+        "path": "/Users/simon/work/personal/skill-study-private/concise-writing/development/20260928T003336313Z-cw-prep-claude-invocation-tighten-original-32fc23ce-aa22-4255-b071-c21dab8cd2d0-qdhlv2fr/result.json",
+        "sha256": "a24eebc8e7de7ff7ed0d91e81176bdf0fb00570235730808b940a1916a73ad95",
+        "version": null
+      },
+      "selector": "Complete artifact"
+    },
+    {
+      "id": "log",
+      "artifact": {
+        "path": "/Users/simon/work/personal/skill-study-private/concise-writing/development/20260928T003336313Z-cw-prep-claude-invocation-tighten-original-32fc23ce-aa22-4255-b071-c21dab8cd2d0-qdhlv2fr/runner.log",
+        "sha256": "a7ea7a82bed034f2f30a1470a4be90e8b0c35266aaa4db39d4cb33aa7b211447",
+        "version": null
+      },
+      "selector": "Complete artifact"
+    },
+    {
+      "id": "final",
+      "artifact": {
+        "path": "/Users/simon/work/personal/skill-study-private/concise-writing/development/20260928T003336313Z-cw-prep-claude-invocation-tighten-original-32fc23ce-aa22-4255-b071-c21dab8cd2d0-qdhlv2fr/final.txt",
+        "sha256": "6fd72bc3c37b3aa0d4f49b6a38d7605423bbda071561be2983cedd89bf39a21c",
+        "version": null
+      },
+      "selector": "Complete artifact"
+    },
+    {
+      "id": "source-0",
+      "artifact": {
+        "path": "skill-studies/concise-writing/cases/agent-recommendation/fixture/report.md",
+        "sha256": "e9a992c7e4c14dfd5afc10cc637349f39c2030e98ed0311441675900bc3e93e9",
+        "version": null,
+        "git_revision": "96b6e383da39ea807a6ad49d4513cfc1d6f4cd33"
+      },
+      "selector": "Complete frozen source"
+    },
+    {
+      "id": "source-1",
+      "artifact": {
+        "path": "skill-studies/concise-writing/cases/agent-recommendation/task.md",
+        "sha256": "607cbe0562a19ea092fe76ec96f13bfbe033b2e1095baef2ca38be621c0baf82",
+        "version": null,
+        "git_revision": "96b6e383da39ea807a6ad49d4513cfc1d6f4cd33"
+      },
+      "selector": "Complete frozen source"
+    },
+    {
+      "id": "source-4",
+      "artifact": {
+        "path": "skill-studies/concise-writing/preparation/native-prompt.md",
+        "sha256": "7265a3997ee554a5f4238462b8427549e4be6b3b94283daa6d7a3c96d85105a2",
+        "version": null,
+        "git_revision": "96b6e383da39ea807a6ad49d4513cfc1d6f4cd33"
+      },
+      "selector": "Complete frozen source"
+    }
+  ],
+  "setup": {
+    "status": "valid",
+    "reason": "Completed with the expected model/CLI and frozen skill available in the native catalog. Complete raw trace and output retained. No task-level skill read request; invocation and functional outcome are assessed separately. Inventory and protected-input checks recorded at checkpoint.",
+    "evidence": [
+      "mechanical",
+      "trace",
+      "log"
+    ]
+  },
+  "criteria": [
+    {
+      "id": "D1",
+      "dimension": "procedural",
+      "judgment": "met",
+      "reason": "Skill selected naturally; full original body delivered at line 16 before Write at line 18.",
+      "consequence": "Required for the corresponding functional or invocation outcome; reported separately.",
+      "evidence": [
+        "trace"
+      ]
+    },
+    {
+      "id": "F1",
+      "dimension": "functional",
+      "judgment": "met",
+      "reason": "All staging evidence, cursor behavior, untested limits, staffing and outcome conditions retained.",
+      "consequence": "Required for the corresponding functional or invocation outcome; reported separately.",
+      "evidence": [
+        "output",
+        "source-0",
+        "source-1",
+        "source-4"
+      ]
+    },
+    {
+      "id": "F2",
+      "dimension": "functional",
+      "judgment": "met",
+      "reason": "Pilot recommendation and approval request preserve timing, owners, evidence retention and separate expansion decision.",
+      "consequence": "Required for the corresponding functional or invocation outcome; reported separately.",
+      "evidence": [
+        "output",
+        "source-0",
+        "source-1",
+        "source-4"
+      ]
+    },
+    {
+      "id": "F3",
+      "dimension": "functional",
+      "judgment": "met",
+      "reason": "Concrete sections remove filler and duplicate mechanics; recommendation and next-action reinforcement serve decision and action contexts.",
+      "consequence": "Required for the corresponding functional or invocation outcome; reported separately.",
+      "evidence": [
+        "output",
+        "source-0",
+        "source-1",
+        "source-4"
+      ]
+    }
+  ],
+  "procedural_summary": "Task and source read before Skill invocation; body delivery and final saved artifact verified.",
+  "observations": [
+    {
+      "dimension": "functional",
+      "description": "291 output words versus 625 source words; all functional factors met.",
+      "consequence": "Descriptive comparison; no separate score or automatic length-based preference.",
+      "evidence": [
+        "output"
+      ]
+    }
+  ],
+  "uncertainty": [],
+  "result_id": "claude-invocation-01-invocation-tighten-original-1",
+  "functional_result": "met",
+  "manifest": {
+    "path": "skill-studies/concise-writing/preparation/manifests/claude-invocation-tighten-manifest.json",
+    "sha256": "d94df0fba3fb5a81f92df1c893b94756e3396be64767cee3b7326376fa384fab",
+    "version": "1",
+    "git_revision": "4dc370648a6a915546035847b2823a4bc5d57325"
+  }
+}

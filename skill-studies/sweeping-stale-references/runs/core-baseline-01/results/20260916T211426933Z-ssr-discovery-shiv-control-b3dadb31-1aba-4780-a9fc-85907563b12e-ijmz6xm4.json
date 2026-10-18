@@ -1,0 +1,143 @@
+{
+  "schema_version": "1",
+  "record_kind": "execution result",
+  "result_id": "core-baseline-01-discovery-shiv-control-1",
+  "assessed_at": "2026-09-16T21:16:29.659606+00:00",
+  "run_id": "20260916T211426933Z-ssr-discovery-shiv-control-b3dadb31-1aba-4780-a9fc-85907563b12e-ijmz6xm4",
+  "condition": "control",
+  "assessor": {
+    "name": "Codex active session",
+    "method": "active session",
+    "model": null,
+    "session_id": "01a0a0df-97d9-7630-a639-012c3046e6b5",
+    "context": "Same ongoing work session with owner decisions, construction history, fixed criteria and prior assessments available. Not independent or blind validation; assessor model identity not recorded by this workflow."
+  },
+  "manifest": {
+    "path": "skill-studies/sweeping-stale-references/cases/discovery-shiv/manifest.json",
+    "sha256": "31378d2d7cbbf11051174e8f6d88303a680eaf94cd73cb213a52be5b7ed69b2e",
+    "version": "1",
+    "git_revision": "1247058074e09610ab5ff9bfdc9220147694930c"
+  },
+  "evidence": [
+    {
+      "id": "runner",
+      "artifact": {
+        "path": "/Users/simon/work/personal/skill-study-private/sweeping-stale-references/development/20260916T211426933Z-ssr-discovery-shiv-control-b3dadb31-1aba-4780-a9fc-85907563b12e-ijmz6xm4/result.json",
+        "sha256": "9f0420ab3443cf6c150ba1947e2cbb97a2ab873de517044a714fd38e09870cc3",
+        "version": "0.4"
+      },
+      "selector": "Execution, status, artifact identities and infrastructure error."
+    },
+    {
+      "id": "inputs",
+      "artifact": {
+        "path": "/Users/simon/work/personal/skill-study-private/sweeping-stale-references/development/20260916T211426933Z-ssr-discovery-shiv-control-b3dadb31-1aba-4780-a9fc-85907563b12e-ijmz6xm4/runner.log",
+        "sha256": "a8671c728e01db576d2dbacdab83f9c19f32dc33658cf6d2bd3226b0339df9b7",
+        "version": null
+      },
+      "selector": "Private invocation arguments, pre-launch input hashes and capture/cleanup."
+    },
+    {
+      "id": "trace",
+      "artifact": {
+        "path": "/Users/simon/work/personal/skill-study-private/sweeping-stale-references/development/20260916T211426933Z-ssr-discovery-shiv-control-b3dadb31-1aba-4780-a9fc-85907563b12e-ijmz6xm4/stdout.txt",
+        "sha256": "856b117e1c52597b15b3cf9d417cf3c0c95436bff3eb3256caec507fda2c0145",
+        "version": null
+      },
+      "selector": "Ordered command/agent events, interpreted with complete session tool responses."
+    },
+    {
+      "id": "session",
+      "artifact": {
+        "path": "/Users/simon/work/personal/skill-study-private/sweeping-stale-references/development/20260916T211426933Z-ssr-discovery-shiv-control-b3dadb31-1aba-4780-a9fc-85907563b12e-ijmz6xm4/provider-session.jsonl",
+        "sha256": "ba5ea5d1b2f03ee6cac4cf8051d00d359b5d28246edf4b8c21e5725a5e81e8bc",
+        "version": null
+      },
+      "selector": "Lines 16–37: guidance probes, baseline and task; line 46: pre-edit content search; line 60: successful local tests and README archive; line 75: README-only commit."
+    },
+    {
+      "id": "checks",
+      "artifact": {
+        "path": "/Users/simon/work/personal/skill-study-private/sweeping-stale-references/development/20260916T211426933Z-ssr-discovery-shiv-control-b3dadb31-1aba-4780-a9fc-85907563b12e-ijmz6xm4.checks.json",
+        "sha256": "58765c8d9aeeb573d1cfa684e04ff50f33c130def38910a6e1cf35cb6311311c",
+        "version": null
+      },
+      "selector": "Input checks, Git history/commit messages, changed paths, preserved project bytes and independent runtime observations."
+    },
+    {
+      "id": "file-5",
+      "artifact": {
+        "path": "/Users/simon/work/personal/skill-study-private/sweeping-stale-references/development/20260916T211426933Z-ssr-discovery-shiv-control-b3dadb31-1aba-4780-a9fc-85907563b12e-ijmz6xm4/workspace/fixture/README.md",
+        "sha256": "8c6f9c10785d0b41358215c0493d54aa11fa8923d0d54e9cb6ef1f4570d454be",
+        "version": null
+      },
+      "selector": "Complete changed artifact; inspect against fixed case criteria and preserved input bytes."
+    }
+  ],
+  "setup": {
+    "status": "valid",
+    "reason": "No target or outside guidance was read. Runtime-1 supplies the explicit restricted PATH; the subject's four local tests and repaired README command run successfully. A cleanup command was rejected, then the subject committed normally; that did not prevent task execution or evidence capture. Capture-2 and runtime-1 apply prospectively; the frozen protocol/runner revision is identified by this attempt’s authorization in the index. Configuration, prompt, pre-launch fixtures and neutral project baseline match fixed inputs. Session hash, invocation cwd and stdout thread identity match.",
+    "evidence": [
+      "runner",
+      "inputs",
+      "session",
+      "checks"
+    ]
+  },
+  "criteria": [
+    {
+      "id": "F1",
+      "dimension": "functional",
+      "judgment": "not met",
+      "reason": "README builds the intended greeting archive, but the unchanged script, Make recipe and CI command still use --output-file and fail. The script also fails from outside the checkout.",
+      "consequence": "Hard functional failure; any shared F1/F3 cause counts once per execution.",
+      "evidence": [
+        "checks",
+        "session",
+        "file-5"
+      ]
+    },
+    {
+      "id": "F2",
+      "dimension": "functional",
+      "judgment": "met",
+      "reason": "Only the README command changed; all nonconsumer bytes retain their inputs. Controller observations confirm the current CLI, alias, retired-option rejection, independent inventory tool and greeting behavior. Historical meaning and unrelated guidance remain intact.",
+      "consequence": "Functional outcome satisfied.",
+      "evidence": [
+        "checks",
+        "session",
+        "file-5"
+      ]
+    },
+    {
+      "id": "F3",
+      "dimension": "functional",
+      "judgment": "not met",
+      "reason": "Commit 5d87e74 contains only the README repair. Three required consumer repairs are absent, sharing F1's incomplete-repair cause.",
+      "consequence": "Hard functional failure; any shared F1/F3 cause counts once per execution.",
+      "evidence": [
+        "checks",
+        "session",
+        "file-5"
+      ]
+    }
+  ],
+  "functional_result": "not met",
+  "procedural_summary": "Target-specific procedure is not applicable to control. It searched before editing and exposed the README, script and CI stale commands, but repaired only README; the nested Make recipe was outside its search paths.",
+  "observations": [
+    {
+      "dimension": "functional",
+      "description": "Retained search output exposes the stale script and CI commands before the README-only patch; the Make consumer is not exposed in that search. All four local CLI tests pass even though those consumers remain broken.",
+      "consequence": "Record partial content exposure and incomplete repair scope; passing interface tests alone do not establish consumer reconciliation.",
+      "evidence": [
+        "session",
+        "checks"
+      ]
+    }
+  ],
+  "uncertainty": [
+    "This is one execution under the declared case/model/context; aggregate conclusions belong to the batch assessment.",
+    "Session content establishes observable exposure/actions, not internal attention or exhaustive host-wide isolation.",
+    "No immutable model revision or independent/held-out validation is claimed."
+  ]
+}

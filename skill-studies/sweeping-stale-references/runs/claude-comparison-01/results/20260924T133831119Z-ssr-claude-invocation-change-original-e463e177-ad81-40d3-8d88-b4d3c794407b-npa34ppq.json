@@ -1,0 +1,120 @@
+{
+  "schema_version": "2",
+  "record_kind": "execution result",
+  "assessed_at": "2026-09-24T13:40:47.849432+00:00",
+  "run_id": "20260924T133831119Z-ssr-claude-invocation-change-original-e463e177-ad81-40d3-8d88-b4d3c794407b-npa34ppq",
+  "condition": "original",
+  "assessor": {
+    "name": "Codex active session",
+    "method": "active session",
+    "model": null,
+    "session_id": null,
+    "context": "Same active session prepared and inspected the study; not independent or blind."
+  },
+  "evidence": [
+    {
+      "id": "runner",
+      "artifact": {
+        "path": "/Users/simon/work/personal/skill-study-private/sweeping-stale-references/development/20260924T133831119Z-ssr-claude-invocation-change-original-e463e177-ad81-40d3-8d88-b4d3c794407b-npa34ppq/result.json",
+        "sha256": "11c493f1b002bf16e8ea0dd66a0d89ab58efa85591349787a25be85a95a41164",
+        "version": null
+      },
+      "selector": "Mechanical completion, supplied identities and cleanup."
+    },
+    {
+      "id": "trace",
+      "artifact": {
+        "path": "/Users/simon/work/personal/skill-study-private/sweeping-stale-references/development/20260924T133831119Z-ssr-claude-invocation-change-original-e463e177-ad81-40d3-8d88-b4d3c794407b-npa34ppq/stdout.txt",
+        "sha256": "7f95546d5cb2d3f4a28a72a8612e8318ecd3ce887f4cd718f7986f563dc8bcd8",
+        "version": null
+      },
+      "selector": "Complete ordered model-visible context, calls and outputs."
+    },
+    {
+      "id": "final",
+      "artifact": {
+        "path": "/Users/simon/work/personal/skill-study-private/sweeping-stale-references/development/20260924T133831119Z-ssr-claude-invocation-change-original-e463e177-ad81-40d3-8d88-b4d3c794407b-npa34ppq/final.txt",
+        "sha256": "0c89e81caeb4216cfccbb6f1a32f86b0d2170d7db3ae01a14e8e29e164f6fb7a",
+        "version": null
+      },
+      "selector": "Final delivered response."
+    },
+    {
+      "id": "checks",
+      "artifact": {
+        "path": "/Users/simon/work/personal/skill-study-private/sweeping-stale-references/development/20260924T133831119Z-ssr-claude-invocation-change-original-e463e177-ad81-40d3-8d88-b4d3c794407b-npa34ppq.checks.json",
+        "sha256": "a3beb16524f0cf654b322283bd35517d68aa3f3f4133326842f00d78010bff7d",
+        "version": null
+      },
+      "selector": "Disposable-copy Git history/diff, project artifacts, ordered trace projection and independent replay."
+    }
+  ],
+  "setup": {
+    "status": "valid",
+    "reason": "Native availability established by pinned actual-CLI preflight and run init catalog containing SSR; complete action capture, expected model/settings and cleanup. Skill body not loaded is the measured discovery outcome, not invalid setup.",
+    "evidence": [
+      "runner",
+      "trace",
+      "checks"
+    ]
+  },
+  "criteria": [
+    {
+      "id": "F1",
+      "dimension": "functional",
+      "judgment": "met",
+      "reason": "New key and session TTL terminology propagate through code, configuration, tests, script and current prose; script works from both directories.",
+      "consequence": "Functional criterion satisfied.",
+      "evidence": [
+        "trace",
+        "checks"
+      ]
+    },
+    {
+      "id": "F2",
+      "dimension": "functional",
+      "judgment": "met",
+      "reason": "Replay confirms defaults 1900/custom 820 and rejection of zero/negative duration. Partner-imposed limit and refresh trade-off preserved in code and policy; archive/vendor untouched.",
+      "consequence": "Functional criterion satisfied.",
+      "evidence": [
+        "trace",
+        "checks"
+      ]
+    },
+    {
+      "id": "F3",
+      "dimension": "functional",
+      "judgment": "met",
+      "reason": "Commit 796ad46 contains all required changes; final working tree clean.",
+      "consequence": "Functional criterion satisfied.",
+      "evidence": [
+        "trace",
+        "checks"
+      ]
+    },
+    {
+      "id": "D1",
+      "dimension": "procedural",
+      "judgment": "not met",
+      "reason": "Missed invocation: complete trace contains no Skill call or read delivering SSR. First task edit occurs at stdout line 36; body never loaded despite native catalog availability.",
+      "consequence": "Report separately from functional outcome; affects comparison interpretation.",
+      "evidence": [
+        "trace",
+        "checks"
+      ]
+    }
+  ],
+  "procedural_summary": "Native discovery missed; independent task implementation nevertheless complete and preserved. P1\u2013P3 not scored in this stratum.",
+  "observations": [],
+  "uncertainty": [
+    "Small exposed development case; no general reliability estimate."
+  ],
+  "result_id": "claude-comparison-01-invocation-change-original-1",
+  "functional_result": "met",
+  "manifest": {
+    "path": "skill-studies/sweeping-stale-references/cases/invocation-change/claude-comparison-manifest.json",
+    "sha256": "69993b68fa484de179c09d8732149e07b798297c2135232e19b08e0a145c2f80",
+    "version": "1",
+    "git_revision": "d342d2f939898ef4073691fb92414e9eff55dbff"
+  }
+}

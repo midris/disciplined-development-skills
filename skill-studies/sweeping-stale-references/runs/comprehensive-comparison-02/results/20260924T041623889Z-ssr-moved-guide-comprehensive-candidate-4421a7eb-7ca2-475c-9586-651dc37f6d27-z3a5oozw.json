@@ -1,0 +1,140 @@
+{
+  "schema_version": "2",
+  "record_kind": "execution result",
+  "assessed_at": "2026-09-24T04:18:09.039654+00:00",
+  "run_id": "20260924T041623889Z-ssr-moved-guide-comprehensive-candidate-4421a7eb-7ca2-475c-9586-651dc37f6d27-z3a5oozw",
+  "condition": "candidate",
+  "assessor": {
+    "name": "Codex active session",
+    "method": "active session",
+    "model": null,
+    "session_id": null,
+    "context": "Same active session prepared and inspected the study; not independent or blind."
+  },
+  "evidence": [
+    {
+      "id": "runner",
+      "artifact": {
+        "path": "/Users/simon/work/personal/skill-study-private/sweeping-stale-references/development/20260924T041623889Z-ssr-moved-guide-comprehensive-candidate-4421a7eb-7ca2-475c-9586-651dc37f6d27-z3a5oozw/result.json",
+        "sha256": "6f58d3a983819e5294af59a9965654170d54e966fa8177ea6557751d89d9baaa",
+        "version": null
+      },
+      "selector": "Mechanical completion, supplied identities and cleanup."
+    },
+    {
+      "id": "trace",
+      "artifact": {
+        "path": "/Users/simon/work/personal/skill-study-private/sweeping-stale-references/development/20260924T041623889Z-ssr-moved-guide-comprehensive-candidate-4421a7eb-7ca2-475c-9586-651dc37f6d27-z3a5oozw/provider-session.jsonl",
+        "sha256": "352e4359898fd88b4039edead1878029ee47284c5a91fdf89a26918c2d591ac0",
+        "version": null
+      },
+      "selector": "Complete ordered model-visible context, calls and outputs."
+    },
+    {
+      "id": "final",
+      "artifact": {
+        "path": "/Users/simon/work/personal/skill-study-private/sweeping-stale-references/development/20260924T041623889Z-ssr-moved-guide-comprehensive-candidate-4421a7eb-7ca2-475c-9586-651dc37f6d27-z3a5oozw/final.txt",
+        "sha256": "136d42401fb1f00aa4716ecd583f4455272e5b3b67575ec5b32be2e0d02415d3",
+        "version": null
+      },
+      "selector": "Final delivered response."
+    },
+    {
+      "id": "checks",
+      "artifact": {
+        "path": "/Users/simon/work/personal/skill-study-private/sweeping-stale-references/development/20260924T041623889Z-ssr-moved-guide-comprehensive-candidate-4421a7eb-7ca2-475c-9586-651dc37f6d27-z3a5oozw.checks.json",
+        "sha256": "9eba333ff72fe8107d939ca0bff3df977dc628839a5c251124b37fd137721766",
+        "version": null
+      },
+      "selector": "Disposable-copy Git history/diff, project artifacts, ordered trace projection and independent replay."
+    }
+  ],
+  "setup": {
+    "status": "valid",
+    "reason": "Complete candidate body precedes task repair; supplied identities, isolated trace and usable tools support valid setup.",
+    "evidence": [
+      "runner",
+      "trace",
+      "checks"
+    ]
+  },
+  "criteria": [
+    {
+      "id": "F1",
+      "dimension": "functional",
+      "judgment": "met",
+      "reason": "All three relative links resolve to the service guide; independent script replay emits that guide from project root and another directory.",
+      "consequence": "Functional criterion satisfied.",
+      "evidence": [
+        "trace",
+        "checks"
+      ]
+    },
+    {
+      "id": "F2",
+      "dimension": "functional",
+      "judgment": "met",
+      "reason": "Only four consumer targets changed. Protected guide, history and vendor bytes are unchanged; vendor link is correct and old path absent.",
+      "consequence": "Functional criterion satisfied.",
+      "evidence": [
+        "trace",
+        "checks"
+      ]
+    },
+    {
+      "id": "F3",
+      "dimension": "functional",
+      "judgment": "met",
+      "reason": "Commit 2fd4950 includes every required repair; working tree is clean.",
+      "consequence": "Functional criterion satisfied.",
+      "evidence": [
+        "trace",
+        "checks"
+      ]
+    },
+    {
+      "id": "P1",
+      "dimension": "procedural",
+      "judgment": "met",
+      "reason": "Broad path/name search and full content inspection precede edits, with correct current, historical and independent triage.",
+      "consequence": "Report separately from functional outcome; affects comparison interpretation.",
+      "evidence": [
+        "trace",
+        "checks"
+      ]
+    },
+    {
+      "id": "P2",
+      "dimension": "procedural",
+      "judgment": "met",
+      "reason": "One final repair commit follows the baseline; a message-only amend corrected escaped newlines.",
+      "consequence": "Report separately from functional outcome; affects comparison interpretation.",
+      "evidence": [
+        "trace",
+        "checks"
+      ]
+    },
+    {
+      "id": "P3",
+      "dimension": "procedural",
+      "judgment": "met",
+      "reason": "References swept identifies all five required reference locations and correct dispositions/counts. One independent vendor entry is consistent and outside required accounting scope.",
+      "consequence": "Report separately from functional outcome; affects comparison interpretation.",
+      "evidence": [
+        "trace",
+        "checks"
+      ]
+    }
+  ],
+  "procedural_summary": "All fixed functional and procedural criteria met.",
+  "observations": [],
+  "uncertainty": [],
+  "result_id": "comprehensive-comparison-02-moved-guide-candidate-2",
+  "functional_result": "met",
+  "manifest": {
+    "path": "skill-studies/sweeping-stale-references/cases/moved-guide/comparison-02-manifest.json",
+    "sha256": "78b7acfafce4802c8454d91f078ab0f98b293780725c871e69d9518757847e6f",
+    "version": "1",
+    "git_revision": "37ab0390b04630335d15f6d246b2b042f0e07f51"
+  }
+}

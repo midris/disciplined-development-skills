@@ -1,0 +1,177 @@
+{
+  "schema_version": "1-draft",
+  "record_kind": "worked example",
+  "assessment_id": "ssr-pilot-02-original-policy-3-example-20260914",
+  "assessed_at": "2026-09-14",
+  "study_id": "sweeping-stale-references",
+  "case_id": "pilot-02",
+  "run_id": "20260913T050847016Z-ssr-pilot-02-original-7ee12856-0a4f-4d0a-b489-1fddc8655ee8-uafjv_4i",
+  "condition": "original",
+  "inputs": {
+    "skill": {
+      "path": "skill-studies/sweeping-stale-references/cases/skill-original/SKILL.md",
+      "sha256": "d6812c33cae026807bbb3ebe851d93b60b513dd87ea5efd98aea28f5c02f9157",
+      "version": null
+    },
+    "configuration": {
+      "path": "/Users/simon/work/personal/skill-study-private/sweeping-stale-references/development/pilot-02-runs/20260913T050847016Z-ssr-pilot-02-original-7ee12856-0a4f-4d0a-b489-1fddc8655ee8-uafjv_4i/config.json",
+      "sha256": "a8818589ca32a0867b79082388cbd51994b9d63225c8ffba8da8b863cd3abd49",
+      "version": "0.2"
+    },
+    "criteria": [
+      {
+        "path": "skill-studies/sweeping-stale-references/cases/pilot-02/assessment.md",
+        "sha256": "7eb2c16e72ae13d6895ad44b31bd2790c2a4b79ae32d761b490c0e9ba24305d0",
+        "version": null
+      },
+      {
+        "path": "skill-studies/sweeping-stale-references/cases/pilot-02/expected.json",
+        "sha256": "7c2539f37f33b37e68339252cea73a7020c0d0a2f030ea6f562e826682c38730",
+        "version": null
+      }
+    ],
+    "policy": {
+      "path": "skill-studies/sweeping-stale-references/assessment-policies/SSR-assessment-3.txt",
+      "sha256": "5d057d11f678ae3fa63c48957446aded13ccc5dcb8babab2856d0232d49e08bb",
+      "version": "SSR-assessment-3"
+    }
+  },
+  "assessor": {
+    "name": "Codex active agent",
+    "method": "active session",
+    "model": null,
+    "session_id": "01a0927b-cef5-7db0-8a30-c76c5b1ae838",
+    "context": "Same ongoing work session, with owner decisions, case construction history and prior assessment available. Exact runtime model identifier unavailable. Not independent validation."
+  },
+  "evidence": [
+    {
+      "id": "trace",
+      "artifact": {
+        "path": "/Users/simon/work/personal/skill-study-private/sweeping-stale-references/development/pilot-02-runs/20260913T050847016Z-ssr-pilot-02-original-7ee12856-0a4f-4d0a-b489-1fddc8655ee8-uafjv_4i/stdout.txt",
+        "sha256": "fe5529a1db0db0cc934941d29b15731fa2f4a46332fcc48a75441af8a4866a49",
+        "version": null
+      },
+      "selector": "Physical JSONL lines 5 (skill), 12\u201317 (read/search/triage/edit), 19\u201322 (diff and commit)."
+    },
+    {
+      "id": "run",
+      "artifact": {
+        "path": "/Users/simon/work/personal/skill-study-private/sweeping-stale-references/development/pilot-02-runs/20260913T050847016Z-ssr-pilot-02-original-7ee12856-0a4f-4d0a-b489-1fddc8655ee8-uafjv_4i/result.json",
+        "sha256": "c02cf9859fa63ab02021c6e4f0b9b2c5649ae2675c51cb5efde35a94a7956985",
+        "version": "0.3"
+      },
+      "selector": "execution, status, infrastructure_error, artifacts"
+    },
+    {
+      "id": "checks",
+      "artifact": {
+        "path": "skill-studies/sweeping-stale-references/pilot-02-checks.json",
+        "sha256": "5d42de9ea7bb2a9ae522f8efae5152fa0f8eb2281dcd12998f314730d88869c8",
+        "version": null
+      },
+      "selector": "observations: original condition, path/export/preservation/Git replay."
+    },
+    {
+      "id": "index",
+      "artifact": {
+        "path": "skill-studies/sweeping-stale-references/pilot-02-run-index.json",
+        "sha256": "0df65f4259cc5c3e7479559ecf488b83ad415322cf0d6f6b8df56db7480ea23c",
+        "version": null
+      },
+      "selector": "attempts[1]: inventories, baseline/repair commits, changed_paths, setup_checks."
+    }
+  ],
+  "setup": {
+    "status": "valid",
+    "reason": "Declared original inputs/settings and full frozen skill read present; no observed setup-induced stop or unintended guidance. Evidence supports this run, not exhaustive host-wide isolation.",
+    "evidence": [
+      "run",
+      "trace",
+      "index"
+    ]
+  },
+  "criteria": [
+    {
+      "id": "F1",
+      "dimension": "functional",
+      "judgment": "met",
+      "reason": "All four current consumers repaired: three links reach the moved guide; export emits that guide from the project root and another directory. Relative-path handling is the owner-clarified outcome, not an explicit technique in the original skill.",
+      "consequence": "Required outcome met.",
+      "evidence": [
+        "checks",
+        "trace"
+      ]
+    },
+    {
+      "id": "F2",
+      "dimension": "functional",
+      "judgment": "met",
+      "reason": "All four protected files unchanged; independent vendor link still works; old service path remains absent.",
+      "consequence": "Required preservation met.",
+      "evidence": [
+        "checks",
+        "index"
+      ]
+    },
+    {
+      "id": "F3",
+      "dimension": "functional",
+      "judgment": "met",
+      "reason": "Commit 958a5e180e9d85c59becd62c245bd01a9b5ffb78 after baseline dc9030ae70b520085576a2f7d33a89b78c536dc8 contains all four required edits; working tree clean.",
+      "consequence": "Required committed outcome met.",
+      "evidence": [
+        "index",
+        "trace"
+      ]
+    },
+    {
+      "id": "P1",
+      "dimension": "procedural",
+      "judgment": "met",
+      "reason": "Full project read and explicit current/history/vendor triage precede repository-wide literal/variant search at trace line 15; first edit at line 17.",
+      "consequence": "Procedure met on retained evidence; no comparative discovery advantage inferred.",
+      "evidence": [
+        "trace"
+      ]
+    },
+    {
+      "id": "P2",
+      "dimension": "procedural",
+      "judgment": "met",
+      "reason": "One repair commit contains all four required changes.",
+      "consequence": "Grouping met; grouping deviations would be non-blocking for SSR.",
+      "evidence": [
+        "index",
+        "trace"
+      ]
+    },
+    {
+      "id": "P3",
+      "dimension": "procedural",
+      "judgment": "met",
+      "reason": "Account covers the registered four current references and one historical reference with locations, outcomes and counts. Optional extra triage is useful. The erroneous overall path total is recorded separately below.",
+      "consequence": "Audit-usefulness criterion met for registered scope; a minor accuracy defect does not establish full procedural compliance.",
+      "evidence": [
+        "trace"
+      ]
+    }
+  ],
+  "functional_summary": "met",
+  "procedural_summary": "Registered criteria met; minor non-blocking accuracy defect in the overall path count. This is not a claim of flawless procedural compliance.",
+  "observations": [
+    {
+      "dimension": "procedural",
+      "description": "Trace line 22 says 7 paths, but lists 7 matches across 6 distinct paths; README contributes two entries with different outcomes. No invented reference, concealed omission or incorrect repair.",
+      "consequence": "Minor non-blocking accuracy defect; no functional failure or repeat run.",
+      "evidence": [
+        "trace"
+      ]
+    }
+  ],
+  "uncertainty": [
+    "One original observation cannot estimate reliability or establish a comparative discovery advantage.",
+    "Frozen case criteria name policy 2; this separately identified example applies policy 3, which changes workflow only. Their functional/procedural judgments remain unchanged."
+  ],
+  "supersedes": null,
+  "relationship_to_prior": "New format example from an existing run, not a new subject run or replacement assessment. Pilot-02 assessment version 1 and its original policy-2 inputs remain canonical historical records."
+}

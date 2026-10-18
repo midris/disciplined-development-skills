@@ -1,0 +1,152 @@
+{
+  "schema_version": "2",
+  "record_kind": "execution result",
+  "assessed_at": "2026-09-24T13:33:24.909032+00:00",
+  "run_id": "20260924T133207679Z-ssr-claude-local-change-original-72465f0f-4a20-4d06-8ce8-c748e0d6147b-52yizl6m",
+  "condition": "original",
+  "assessor": {
+    "name": "Codex active session",
+    "method": "active session",
+    "model": null,
+    "session_id": null,
+    "context": "Same active session prepared and inspected the study; not independent or blind."
+  },
+  "evidence": [
+    {
+      "id": "runner",
+      "artifact": {
+        "path": "/Users/simon/work/personal/skill-study-private/sweeping-stale-references/development/20260924T133207679Z-ssr-claude-local-change-original-72465f0f-4a20-4d06-8ce8-c748e0d6147b-52yizl6m/result.json",
+        "sha256": "f95218c0529413aa35d2565e1a10fe1c19872460c0291f2fe26c2e92ac747ec2",
+        "version": null
+      },
+      "selector": "Mechanical completion, supplied identities and cleanup."
+    },
+    {
+      "id": "trace",
+      "artifact": {
+        "path": "/Users/simon/work/personal/skill-study-private/sweeping-stale-references/development/20260924T133207679Z-ssr-claude-local-change-original-72465f0f-4a20-4d06-8ce8-c748e0d6147b-52yizl6m/stdout.txt",
+        "sha256": "483862cd759393ed5758e07b9a74485eba64d165aff8877221e33c7b6fe42b57",
+        "version": null
+      },
+      "selector": "Complete ordered model-visible context, calls and outputs."
+    },
+    {
+      "id": "final",
+      "artifact": {
+        "path": "/Users/simon/work/personal/skill-study-private/sweeping-stale-references/development/20260924T133207679Z-ssr-claude-local-change-original-72465f0f-4a20-4d06-8ce8-c748e0d6147b-52yizl6m/final.txt",
+        "sha256": "a987c9a2f567f96d5d906abe24c4b8e8605574bed4cead56bf72f6f63c4670f4",
+        "version": null
+      },
+      "selector": "Final delivered response."
+    },
+    {
+      "id": "checks",
+      "artifact": {
+        "path": "/Users/simon/work/personal/skill-study-private/sweeping-stale-references/development/20260924T133207679Z-ssr-claude-local-change-original-72465f0f-4a20-4d06-8ce8-c748e0d6147b-52yizl6m.checks.json",
+        "sha256": "c33f953b9a4190ebcbee97a8081799399fb59015ad19360edf94d27e72dee002",
+        "version": null
+      },
+      "selector": "Disposable-copy Git history/diff, project artifacts, ordered trace projection and independent replay."
+    }
+  ],
+  "setup": {
+    "status": "valid",
+    "reason": "Pinned Claude/Sonnet low completed with full original skill body, expected catalog, usable capture and successful cleanup.",
+    "evidence": [
+      "runner",
+      "trace",
+      "checks"
+    ]
+  },
+  "criteria": [
+    {
+      "id": "F1",
+      "dimension": "functional",
+      "judgment": "met",
+      "reason": "Glossary heading corrected to Membership and remains useful in context.",
+      "consequence": "Functional criterion satisfied.",
+      "evidence": [
+        "trace",
+        "checks"
+      ]
+    },
+    {
+      "id": "F2",
+      "dimension": "functional",
+      "judgment": "met",
+      "reason": "Only heading changed; membership, billing, shipping, archive and JSON retain original meaning/values. README links to existing files without heading anchors.",
+      "consequence": "Functional criterion satisfied.",
+      "evidence": [
+        "trace",
+        "checks"
+      ]
+    },
+    {
+      "id": "F3",
+      "dimension": "functional",
+      "judgment": "met",
+      "reason": "Commit 5d64b7a contains the sole correction; clean working tree.",
+      "consequence": "Functional criterion satisfied.",
+      "evidence": [
+        "trace",
+        "checks"
+      ]
+    },
+    {
+      "id": "P1",
+      "dimension": "procedural",
+      "judgment": "met",
+      "reason": "Full relevant file reads and variant/anchor searches precede edit and establish locality.",
+      "consequence": "Report separately from functional outcome; affects comparison interpretation.",
+      "evidence": [
+        "trace",
+        "checks"
+      ]
+    },
+    {
+      "id": "P2",
+      "dimension": "procedural",
+      "judgment": "met",
+      "reason": "One task commit after neutral baseline.",
+      "consequence": "Report separately from functional outcome; affects comparison interpretation.",
+      "evidence": [
+        "trace",
+        "checks"
+      ]
+    },
+    {
+      "id": "P3",
+      "dimension": "procedural",
+      "judgment": "met",
+      "reason": "Required References swept: n/a supplied with accurate locality rationale.",
+      "consequence": "Report separately from functional outcome; affects comparison interpretation.",
+      "evidence": [
+        "trace",
+        "checks"
+      ]
+    }
+  ],
+  "procedural_summary": "Correct one-heading repair with observed scope search, preserved unrelated meanings, one commit and required justified n/a account.",
+  "observations": [
+    {
+      "dimension": "procedural",
+      "description": "Verification claims a post-edit search absent from the trace and names a broader regex whose results would include current Membership spellings. The actual pre-edit searches and complete reads establish locality.",
+      "consequence": "Separate reporting inaccuracy; required n/a locality reason remains correct.",
+      "evidence": [
+        "trace",
+        "checks"
+      ]
+    }
+  ],
+  "uncertainty": [
+    "Small exposed fixture."
+  ],
+  "result_id": "claude-comparison-01-local-change-original-2",
+  "functional_result": "met",
+  "manifest": {
+    "path": "skill-studies/sweeping-stale-references/cases/local-change/claude-comparison-manifest.json",
+    "sha256": "146bcee0a3c2e03d5ccd93f064aa51782f9d918e998e83664e7425e76ddc264e",
+    "version": "1",
+    "git_revision": "d342d2f939898ef4073691fb92414e9eff55dbff"
+  }
+}

@@ -1,0 +1,180 @@
+{
+  "schema_version": "1",
+  "record_kind": "execution result",
+  "result_id": "coverage-baseline-01-local-change-original-2",
+  "assessed_at": "2026-09-22T02:02:51.281472+00:00",
+  "run_id": "20260922T015941616Z-ssr-local-change-original-6c538e26-5081-49d7-83bb-c006339f0b5b-82v2j_vx",
+  "condition": "original",
+  "assessor": {
+    "name": "Codex active session",
+    "method": "active session",
+    "model": null,
+    "session_id": null,
+    "context": "Ongoing owner-directed study session with prior reviews, fixed criteria and study history available. Not independent or blind evaluation; no immutable assessor model identity is recorded."
+  },
+  "manifest": {
+    "path": "skill-studies/sweeping-stale-references/cases/local-change/manifest.json",
+    "sha256": "fdbf3bdd437e1174c1f7a4bc18b0b806bf38956d8762a2a54bdb2bfef2bce98e",
+    "version": "1",
+    "git_revision": "780e8ae1e8491a4bba30b39c7ab80bafcf397d14"
+  },
+  "functional_result": "met",
+  "uncertainty": [
+    "One execution is not a reliability estimate or evidence of comparative advantage.",
+    "Observable context/action evidence does not establish internal attention or exhaustive host read isolation.",
+    "Requested model name does not identify an immutable model revision."
+  ],
+  "setup": {
+    "status": "valid",
+    "reason": "Frozen input hashes and exact neutral baseline match; full skill text appears at session line 16 before editing. Git, rg and link verification are usable under private-shell-1. A chosen Perl helper cannot load its system library; the subject recovers with rg/sed and verifies both links. Perl is not a required fixture dependency. No outside guidance is observed and targeted markers are absent; include with that tool limitation.",
+    "evidence": [
+      "runner",
+      "inputs",
+      "trace",
+      "session",
+      "checks"
+    ]
+  },
+  "criteria": [
+    {
+      "id": "F1",
+      "dimension": "functional",
+      "judgment": "met",
+      "reason": "The only content change corrects the glossary heading to Membership, preserving its context.",
+      "consequence": "Functional outcome satisfied.",
+      "evidence": [
+        "checks",
+        "trace",
+        "session"
+      ]
+    },
+    {
+      "id": "F2",
+      "dimension": "functional",
+      "judgment": "met",
+      "reason": "Every other supplied file is unchanged. Membership, billing and shipping meanings, JSON values and the README's file links remain correct.",
+      "consequence": "Functional outcome satisfied.",
+      "evidence": [
+        "checks",
+        "trace",
+        "session"
+      ]
+    },
+    {
+      "id": "F3",
+      "dimension": "functional",
+      "judgment": "met",
+      "reason": "One repair commit follows an exact neutral baseline; the retained working tree is clean and contains the complete correction.",
+      "consequence": "Functional outcome satisfied.",
+      "evidence": [
+        "checks",
+        "trace",
+        "session"
+      ]
+    },
+    {
+      "id": "P1",
+      "dimension": "procedural",
+      "judgment": "met",
+      "reason": "After correcting a shell quoting error, case-insensitive literal/variant and glossary-link searches plus complete project reads precede editing. Correct triage preserves membership/billing context, archive and the unrelated shipping phrase.",
+      "consequence": "Procedure satisfied.",
+      "evidence": [
+        "checks",
+        "trace",
+        "session"
+      ]
+    },
+    {
+      "id": "P2",
+      "dimension": "procedural",
+      "judgment": "met",
+      "reason": "A single complete reconciliation commit follows the neutral baseline.",
+      "consequence": "Procedure satisfied.",
+      "evidence": [
+        "checks",
+        "trace",
+        "session"
+      ]
+    },
+    {
+      "id": "P3",
+      "dimension": "procedural",
+      "judgment": "met",
+      "reason": "The commit includes References swept: n/a \u2014 change affects only this file. The observed search and preserved project support that locality reason.",
+      "consequence": "Procedure satisfied.",
+      "evidence": [
+        "checks",
+        "trace",
+        "session"
+      ]
+    }
+  ],
+  "procedural_summary": "Search and triage, single-commit grouping and justified negative-form account all met.",
+  "observations": [
+    {
+      "dimension": "setup",
+      "description": "Perl failed to load a system library under the qualified boundary; the optional link helper was replaced with working rg/sed and both links were checked.",
+      "consequence": "Record tool limitation; required task operations and evidence remain available. No permission expansion or replacement run.",
+      "evidence": [
+        "session",
+        "trace"
+      ]
+    }
+  ],
+  "evidence": [
+    {
+      "id": "runner",
+      "artifact": {
+        "path": "/Users/simon/work/personal/skill-study-private/sweeping-stale-references/development/20260922T015941616Z-ssr-local-change-original-6c538e26-5081-49d7-83bb-c006339f0b5b-82v2j_vx/result.json",
+        "sha256": "8069ec318138d3e4a7a46e50c0ed02c68066d4fe5b0823eb39d91aaecf2b5565",
+        "version": "0.5"
+      },
+      "selector": "Mechanical completion, cleanup, identities and captured artifact hashes."
+    },
+    {
+      "id": "inputs",
+      "artifact": {
+        "path": "/Users/simon/work/personal/skill-study-private/sweeping-stale-references/development/20260922T015941616Z-ssr-local-change-original-6c538e26-5081-49d7-83bb-c006339f0b5b-82v2j_vx/runner.log",
+        "sha256": "1063aa495be00086914fac27bd590e71255f8f2cc1280e0decfea63175212115",
+        "version": null
+      },
+      "selector": "Pre-launch hashes and actual isolated runtime arguments."
+    },
+    {
+      "id": "trace",
+      "artifact": {
+        "path": "/Users/simon/work/personal/skill-study-private/sweeping-stale-references/development/20260922T015941616Z-ssr-local-change-original-6c538e26-5081-49d7-83bb-c006339f0b5b-82v2j_vx/stdout.txt",
+        "sha256": "76520a44a2c367d3960e7db02b1b0bcb4adabe544e0448959a05c91e23d58303",
+        "version": null
+      },
+      "selector": "Complete ordered tool calls, outputs and delivered final report."
+    },
+    {
+      "id": "session",
+      "artifact": {
+        "path": "/Users/simon/work/personal/skill-study-private/sweeping-stale-references/development/20260922T015941616Z-ssr-local-change-original-6c538e26-5081-49d7-83bb-c006339f0b5b-82v2j_vx/provider-session.jsonl",
+        "sha256": "3ae6faf950343e70df37fa5043fac67f8b3b4a6dafd01ea6723f5aca503b9d7f",
+        "version": null
+      },
+      "selector": "Full retained session; inspect actual tool responses and skill read rather than relying on self-report."
+    },
+    {
+      "id": "final",
+      "artifact": {
+        "path": "/Users/simon/work/personal/skill-study-private/sweeping-stale-references/development/20260922T015941616Z-ssr-local-change-original-6c538e26-5081-49d7-83bb-c006339f0b5b-82v2j_vx/final.txt",
+        "sha256": "e2b06d0b58a09fa84c019c46a969b4e78e5c6273baf725ef190ef53112e8b55d",
+        "version": null
+      },
+      "selector": "Complete final response."
+    },
+    {
+      "id": "checks",
+      "artifact": {
+        "path": "/Users/simon/work/personal/skill-study-private/sweeping-stale-references/development/20260922T015941616Z-ssr-local-change-original-6c538e26-5081-49d7-83bb-c006339f0b5b-82v2j_vx.checks.json",
+        "sha256": "6a4483e0619de1e1c13cefe8014c9fea0d4349603fe04f6030e224903ed88c4e",
+        "version": null
+      },
+      "selector": "Controller input/baseline comparisons, complete project, Git history/diff and exposure-marker inspection; independent runtime probes where recorded."
+    }
+  ]
+}

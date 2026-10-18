@@ -1,0 +1,120 @@
+{
+  "schema_version": "2",
+  "record_kind": "execution result",
+  "assessed_at": "2026-09-24T17:53:02.074944+00:00",
+  "run_id": "20260924T175221372Z-ssr-opus-invocation-review-original-4a40e359-bc72-4ffd-a817-a8d44ec67527-2b8boa16",
+  "condition": "original",
+  "assessor": {
+    "name": "Codex active session",
+    "method": "active session",
+    "model": null,
+    "session_id": null,
+    "context": "Same active session prepared and inspected the study; not independent or blind."
+  },
+  "evidence": [
+    {
+      "id": "runner",
+      "artifact": {
+        "path": "/Users/simon/work/personal/skill-study-private/sweeping-stale-references/development/20260924T175221372Z-ssr-opus-invocation-review-original-4a40e359-bc72-4ffd-a817-a8d44ec67527-2b8boa16/result.json",
+        "sha256": "c0f0c61a30bd80b4ec66a3ee1fa7d6742f11be5ea24dd3ddbdd9ce2a7ae424cc",
+        "version": null
+      },
+      "selector": "Mechanical completion, supplied identities and cleanup."
+    },
+    {
+      "id": "trace",
+      "artifact": {
+        "path": "/Users/simon/work/personal/skill-study-private/sweeping-stale-references/development/20260924T175221372Z-ssr-opus-invocation-review-original-4a40e359-bc72-4ffd-a817-a8d44ec67527-2b8boa16/stdout.txt",
+        "sha256": "1960d25c4c7a590ea970bc272cc0de05ba45c0ef7f6c44be0100a27047e7c1f4",
+        "version": null
+      },
+      "selector": "Complete ordered model-visible context, calls and outputs."
+    },
+    {
+      "id": "final",
+      "artifact": {
+        "path": "/Users/simon/work/personal/skill-study-private/sweeping-stale-references/development/20260924T175221372Z-ssr-opus-invocation-review-original-4a40e359-bc72-4ffd-a817-a8d44ec67527-2b8boa16/final.txt",
+        "sha256": "ba6cac0de78fe34dfbc3499f04685399a6bcc92c1fd35a758b6f2465c6add31f",
+        "version": null
+      },
+      "selector": "Final delivered response."
+    },
+    {
+      "id": "checks",
+      "artifact": {
+        "path": "/Users/simon/work/personal/skill-study-private/sweeping-stale-references/development/20260924T175221372Z-ssr-opus-invocation-review-original-4a40e359-bc72-4ffd-a817-a8d44ec67527-2b8boa16.checks.json",
+        "sha256": "6c3691ee1ff859b187d1aa466af2e5fd3019513a57eb7af0a8749236a0a90c87",
+        "version": null
+      },
+      "selector": "Disposable-copy Git history/diff, project artifacts, ordered trace projection and independent replay."
+    }
+  ],
+  "setup": {
+    "status": "valid",
+    "reason": "Pinned Opus-low completed with expected SSR catalog, complete ordered capture and successful cleanup; no full SSR body load observed.",
+    "evidence": [
+      "runner",
+      "trace",
+      "checks"
+    ]
+  },
+  "criteria": [
+    {
+      "id": "F1",
+      "dimension": "functional",
+      "judgment": "met",
+      "reason": "README states four total attempts, operations allows three retries after initial failure, troubleshooting exhausts on fourth failure.",
+      "consequence": "Functional criterion satisfied.",
+      "evidence": [
+        "trace",
+        "checks"
+      ]
+    },
+    {
+      "id": "F2",
+      "dimension": "functional",
+      "judgment": "met",
+      "reason": "Only three stale documentation lines changed; seven independent probes confirm unchanged worker/helper behavior; history and unrelated guidance preserved.",
+      "consequence": "Functional criterion satisfied.",
+      "evidence": [
+        "trace",
+        "checks"
+      ]
+    },
+    {
+      "id": "F3",
+      "dimension": "functional",
+      "judgment": "met",
+      "reason": "All required repairs committed together after baseline; clean working tree.",
+      "consequence": "Functional criterion satisfied.",
+      "evidence": [
+        "trace",
+        "checks"
+      ]
+    },
+    {
+      "id": "D1",
+      "dimension": "procedural",
+      "judgment": "not met",
+      "reason": "Complete trace has no Skill call or full SSR body read before first edit at line 11 or afterwards; expected native catalog verified.",
+      "consequence": "Report separately from functional outcome; affects comparison interpretation.",
+      "evidence": [
+        "trace",
+        "checks"
+      ]
+    }
+  ],
+  "procedural_summary": "Native selection missed, but complete semantic repair succeeds independently.",
+  "observations": [],
+  "uncertainty": [
+    "Small exposed case. Correct repair without invocation does not establish SSR contribution or general discovery reliability."
+  ],
+  "result_id": "claude-opus-invocation-01-invocation-review-original-2",
+  "functional_result": "met",
+  "manifest": {
+    "path": "skill-studies/sweeping-stale-references/cases/invocation-review/opus-invocation-manifest.json",
+    "sha256": "7a92055dbaf80782608d7d379666e3e3e7453f4b8bb39f76191ba646a109db81",
+    "version": "1",
+    "git_revision": "85c3fd707e9ce8e01f8006883a8e2e1cd63b011a"
+  }
+}

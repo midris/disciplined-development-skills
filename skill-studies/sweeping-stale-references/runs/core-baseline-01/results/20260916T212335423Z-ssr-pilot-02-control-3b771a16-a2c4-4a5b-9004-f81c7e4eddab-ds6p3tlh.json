@@ -1,0 +1,143 @@
+{
+  "schema_version": "1",
+  "record_kind": "execution result",
+  "result_id": "core-baseline-01-moved-guide-control-2",
+  "assessed_at": "2026-09-16T21:24:55.163511+00:00",
+  "run_id": "20260916T212335423Z-ssr-pilot-02-control-3b771a16-a2c4-4a5b-9004-f81c7e4eddab-ds6p3tlh",
+  "condition": "control",
+  "assessor": {
+    "name": "Codex active session",
+    "method": "active session",
+    "model": null,
+    "session_id": "01a0a0df-97d9-7630-a639-012c3046e6b5",
+    "context": "Same ongoing work session with owner decisions, construction history, fixed criteria and prior assessments available. Not independent or blind validation; assessor model identity not recorded by this workflow."
+  },
+  "manifest": {
+    "path": "skill-studies/sweeping-stale-references/cases/moved-guide/manifest.json",
+    "sha256": "4f78793708ec8ded5e1e4fe045d4d7fef524ce58af254dac076e0625223411b0",
+    "version": "1",
+    "git_revision": "1247058074e09610ab5ff9bfdc9220147694930c"
+  },
+  "evidence": [
+    {
+      "id": "runner",
+      "artifact": {
+        "path": "/Users/simon/work/personal/skill-study-private/sweeping-stale-references/development/20260916T212335423Z-ssr-pilot-02-control-3b771a16-a2c4-4a5b-9004-f81c7e4eddab-ds6p3tlh/result.json",
+        "sha256": "9df172ca8d08bdc1cdd98df866c97e013bf44c5be7212210cca260b0fc6d83db",
+        "version": "0.4"
+      },
+      "selector": "Execution, status, artifact identities and infrastructure error."
+    },
+    {
+      "id": "inputs",
+      "artifact": {
+        "path": "/Users/simon/work/personal/skill-study-private/sweeping-stale-references/development/20260916T212335423Z-ssr-pilot-02-control-3b771a16-a2c4-4a5b-9004-f81c7e4eddab-ds6p3tlh/runner.log",
+        "sha256": "1bffe8f5c7dc9d3d20ff04720bee35d999f46fa25f06c01bdab69b767ce74a2a",
+        "version": null
+      },
+      "selector": "Private invocation arguments, pre-launch input hashes and capture/cleanup."
+    },
+    {
+      "id": "trace",
+      "artifact": {
+        "path": "/Users/simon/work/personal/skill-study-private/sweeping-stale-references/development/20260916T212335423Z-ssr-pilot-02-control-3b771a16-a2c4-4a5b-9004-f81c7e4eddab-ds6p3tlh/stdout.txt",
+        "sha256": "a05669a52f901bcf5d3ea5a26d5f8f157b85d5ec47cdb516b576fe60b0c9dae9",
+        "version": null
+      },
+      "selector": "Ordered command/agent events, interpreted with complete session tool responses."
+    },
+    {
+      "id": "session",
+      "artifact": {
+        "path": "/Users/simon/work/personal/skill-study-private/sweeping-stale-references/development/20260916T212335423Z-ssr-pilot-02-control-3b771a16-a2c4-4a5b-9004-f81c7e4eddab-ds6p3tlh/provider-session.jsonl",
+        "sha256": "8cb81c7d661211a9268df7cebda474b32b65ce0272153712281331d463379d93",
+        "version": null
+      },
+      "selector": "Lines 16–23: neutral baseline and task; line 32: all four stale consumers exposed; line 39: README patch; line 46: README check and commit."
+    },
+    {
+      "id": "checks",
+      "artifact": {
+        "path": "/Users/simon/work/personal/skill-study-private/sweeping-stale-references/development/20260916T212335423Z-ssr-pilot-02-control-3b771a16-a2c4-4a5b-9004-f81c7e4eddab-ds6p3tlh.checks.json",
+        "sha256": "d927f3b7bcbf6d91a0d5eec9ff29b2c22fa2579ae91d45dd541a31e87fdd237a",
+        "version": null
+      },
+      "selector": "Input checks, Git history/commit messages, changed paths, preserved project bytes and independent runtime observations."
+    },
+    {
+      "id": "file-5",
+      "artifact": {
+        "path": "/Users/simon/work/personal/skill-study-private/sweeping-stale-references/development/20260916T212335423Z-ssr-pilot-02-control-3b771a16-a2c4-4a5b-9004-f81c7e4eddab-ds6p3tlh/workspace/fixture/README.md",
+        "sha256": "9e97a73685d83fddaddac027c2e1f38fa225d087f5f3a32ff8da1f9937aaf2b5",
+        "version": null
+      },
+      "selector": "Complete changed artifact; inspect against fixed case criteria and preserved input bytes."
+    }
+  ],
+  "setup": {
+    "status": "valid",
+    "reason": "The control has no target skill, reads no outside guidance and completes normally with usable session evidence under runtime-1. Capture-2 and runtime-1 apply prospectively; the frozen protocol/runner revision is identified by this attempt’s authorization in the index. Configuration, prompt, pre-launch fixtures and neutral project baseline match fixed inputs. Session hash, invocation cwd and stdout thread identity match.",
+    "evidence": [
+      "runner",
+      "inputs",
+      "session",
+      "checks"
+    ]
+  },
+  "criteria": [
+    {
+      "id": "F1",
+      "dimension": "functional",
+      "judgment": "not met",
+      "reason": "README reaches the intended guide, but the index and quickstart still resolve to absent docs/setup.md. The unchanged export script fails from both the project root and another directory.",
+      "consequence": "Hard functional failure; any shared F1/F3 cause counts once per execution.",
+      "evidence": [
+        "checks",
+        "session",
+        "file-5"
+      ]
+    },
+    {
+      "id": "F2",
+      "dimension": "functional",
+      "judgment": "met",
+      "reason": "The service guide, historical location record and independent vendor guide/link retain their input bytes; the vendor link resolves correctly and the old service path remains absent. No protected meaning was changed.",
+      "consequence": "Functional outcome satisfied.",
+      "evidence": [
+        "checks",
+        "session",
+        "file-5"
+      ]
+    },
+    {
+      "id": "F3",
+      "dimension": "functional",
+      "judgment": "not met",
+      "reason": "Commit 98032bc contains only README. Three required consumer repairs are missing, sharing F1's incomplete-repair cause.",
+      "consequence": "Hard functional failure; any shared F1/F3 cause counts once per execution.",
+      "evidence": [
+        "checks",
+        "session",
+        "file-5"
+      ]
+    }
+  ],
+  "functional_result": "not met",
+  "procedural_summary": "Target-specific procedure is not applicable to control. The pre-edit search exposes all four stale consumers, but the subject treats the task as a narrow README repair.",
+  "observations": [
+    {
+      "dimension": "functional",
+      "description": "The pre-edit response contains the stale script, index and quickstart references as well as README. The subject nevertheless checks and commits only README.",
+      "consequence": "This repeats incomplete repair after content exposure; it does not establish an inability to discover those references.",
+      "evidence": [
+        "session",
+        "checks"
+      ]
+    }
+  ],
+  "uncertainty": [
+    "This is one execution under the declared case/model/context; aggregate conclusions belong to the batch assessment.",
+    "Session content establishes observable exposure/actions, not internal attention or exhaustive host-wide isolation.",
+    "No immutable model revision or independent/held-out validation is claimed."
+  ]
+}

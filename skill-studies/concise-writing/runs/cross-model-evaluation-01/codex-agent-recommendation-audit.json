@@ -1,0 +1,13 @@
+{
+  "configuration": "codex-agent-recommendation",
+  "outputs": 9,
+  "complete_required_files": 16,
+  "first_assessment_event": 101,
+  "prior_read_event": 102,
+  "input_catalog_read_only": true,
+  "inventory_verified": true,
+  "final_sha256": "25ec97d6c6909f77f2661dca041794d5c975e4b6ade7d15ad2cf4c8125a5cf0e",
+  "final_path": "/Users/simon/work/personal/skill-study-private/concise-writing/evaluation-runs-20261017/20261018T023256899Z-cw-eval-codex-agent-recommendation-2a34acbc-6d0d-4b74-afb8-5de7c5ca2984-f1jatimy/final.txt",
+  "first_pass_sha256": "588eaa980517272790d25792ca9b18bb60573a960b9b608c654ba231240137d1",
+  "prior_content_tool_access_audited": true
+}

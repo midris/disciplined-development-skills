@@ -1,0 +1,152 @@
+{
+  "schema_version": "2",
+  "record_kind": "execution result",
+  "assessed_at": "2026-09-24T04:05:29.031308+00:00",
+  "run_id": "20260924T040223841Z-ssr-discovery-shiv-original-185b1a92-77dd-4814-8c72-2053105d6ea9-xspme9c6",
+  "condition": "original",
+  "assessor": {
+    "name": "Codex active session",
+    "method": "active session",
+    "model": null,
+    "session_id": null,
+    "context": "Same active session prepared and inspected the study; not independent or blind."
+  },
+  "evidence": [
+    {
+      "id": "runner",
+      "artifact": {
+        "path": "/Users/simon/work/personal/skill-study-private/sweeping-stale-references/development/20260924T040223841Z-ssr-discovery-shiv-original-185b1a92-77dd-4814-8c72-2053105d6ea9-xspme9c6/result.json",
+        "sha256": "9c3e742f2b5631b331c9c7401b4c08d4db3109c0a68f1c0ede5a33dccf4398b3",
+        "version": null
+      },
+      "selector": "Mechanical completion, supplied identities and cleanup."
+    },
+    {
+      "id": "trace",
+      "artifact": {
+        "path": "/Users/simon/work/personal/skill-study-private/sweeping-stale-references/development/20260924T040223841Z-ssr-discovery-shiv-original-185b1a92-77dd-4814-8c72-2053105d6ea9-xspme9c6/provider-session.jsonl",
+        "sha256": "399aaf3129a7e307532f9f4a3185f23c3fe114f27652e4618cbd334ab1e28491",
+        "version": null
+      },
+      "selector": "Complete ordered model-visible context, calls and outputs."
+    },
+    {
+      "id": "final",
+      "artifact": {
+        "path": "/Users/simon/work/personal/skill-study-private/sweeping-stale-references/development/20260924T040223841Z-ssr-discovery-shiv-original-185b1a92-77dd-4814-8c72-2053105d6ea9-xspme9c6/final.txt",
+        "sha256": "4afe19642bfb4e43619f5d8d5898d3c8f7cee056ab7f86e11b9782a87b68394e",
+        "version": null
+      },
+      "selector": "Final delivered response."
+    },
+    {
+      "id": "checks",
+      "artifact": {
+        "path": "/Users/simon/work/personal/skill-study-private/sweeping-stale-references/development/20260924T040223841Z-ssr-discovery-shiv-original-185b1a92-77dd-4814-8c72-2053105d6ea9-xspme9c6.checks.json",
+        "sha256": "d7e0293b0293042492084743e96c037b9edb8203bc5e96741ab2861a4528b79b",
+        "version": null
+      },
+      "selector": "Disposable-copy Git history/diff, project artifacts, ordered trace projection and independent replay."
+    }
+  ],
+  "setup": {
+    "status": "valid",
+    "reason": "Complete retained execution and full supplied skill read before task edits; isolated commands completed, including four Shiv tests. Make emitted xcrun cache warnings but built and executed the archive successfully; independent replay confirms required operations.",
+    "evidence": [
+      "runner",
+      "trace",
+      "checks"
+    ]
+  },
+  "criteria": [
+    {
+      "id": "F1",
+      "dimension": "functional",
+      "judgment": "met",
+      "reason": "All four consumers use --destination and produce correct runnable greeting archives; the script also succeeds from outside the project in replay.",
+      "consequence": "Functional criterion satisfied.",
+      "evidence": [
+        "trace",
+        "checks"
+      ]
+    },
+    {
+      "id": "F2",
+      "dimension": "functional",
+      "judgment": "met",
+      "reason": "Only four consumer option strings changed. Canonical CLI and -o work, retired option fails without artifact, independent inventory works and all nonconsumer bytes are preserved.",
+      "consequence": "Functional criterion satisfied.",
+      "evidence": [
+        "trace",
+        "checks"
+      ]
+    },
+    {
+      "id": "F3",
+      "dimension": "functional",
+      "judgment": "met",
+      "reason": "Repair commit f29f957 contains all four corrections; the final working tree is clean.",
+      "consequence": "Functional criterion satisfied.",
+      "evidence": [
+        "trace",
+        "checks"
+      ]
+    },
+    {
+      "id": "P1",
+      "dimension": "procedural",
+      "judgment": "met",
+      "reason": "Full skill read precedes repository-wide old/new searches and repair; all consumers, independent uses and deliberate negative tests are inspected with appropriate repair/preservation reasons.",
+      "consequence": "Report separately from functional outcome; affects comparison interpretation.",
+      "evidence": [
+        "trace",
+        "checks"
+      ]
+    },
+    {
+      "id": "P2",
+      "dimension": "procedural",
+      "judgment": "met",
+      "reason": "One task commit follows the neutral baseline.",
+      "consequence": "Report separately from functional outcome; affects comparison interpretation.",
+      "evidence": [
+        "trace",
+        "checks"
+      ]
+    },
+    {
+      "id": "P3",
+      "dimension": "procedural",
+      "judgment": "not met",
+      "reason": "The inventory claims seven paths but lists eight. It labels the two negative assertions intentionally stale, whereas frozen expected facts label them false positives; that known category ambiguity is separate from the unambiguous path-total error.",
+      "consequence": "Report separately from functional outcome; affects comparison interpretation.",
+      "evidence": [
+        "trace",
+        "checks"
+      ]
+    }
+  ],
+  "procedural_summary": "Complete repair and grouping; non-blocking P3 path-total defect plus the previously disclosed negative-assertion category ambiguity.",
+  "observations": [
+    {
+      "dimension": "setup",
+      "description": "Make emitted denied xcrun cache warnings but returned success and produced the correct archive; this is runtime friction, not failed verification.",
+      "consequence": "Successful operations preserve valid setup; runtime friction is disclosed.",
+      "evidence": [
+        "trace",
+        "checks"
+      ]
+    }
+  ],
+  "uncertainty": [
+    "Negative-assertion category labels retain the historical rubric ambiguity; do not infer a new skill defect solely from that label difference."
+  ],
+  "result_id": "comprehensive-comparison-02-discovery-shiv-original-1",
+  "functional_result": "met",
+  "manifest": {
+    "path": "skill-studies/sweeping-stale-references/cases/discovery-shiv/comparison-02-manifest.json",
+    "sha256": "20b9c977bf2ab7f5cc6f268c1520b1340dff36bdfb1c1093feac5b1392fd2dd9",
+    "version": "1",
+    "git_revision": "37ab0390b04630335d15f6d246b2b042f0e07f51"
+  }
+}

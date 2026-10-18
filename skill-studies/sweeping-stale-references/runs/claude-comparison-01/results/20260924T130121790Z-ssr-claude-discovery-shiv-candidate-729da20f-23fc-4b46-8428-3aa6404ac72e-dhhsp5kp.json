@@ -1,0 +1,152 @@
+{
+  "schema_version": "2",
+  "record_kind": "execution result",
+  "assessed_at": "2026-09-24T13:03:13.352569+00:00",
+  "run_id": "20260924T130121790Z-ssr-claude-discovery-shiv-candidate-729da20f-23fc-4b46-8428-3aa6404ac72e-dhhsp5kp",
+  "condition": "candidate",
+  "assessor": {
+    "name": "Codex active session",
+    "method": "active session",
+    "model": null,
+    "session_id": null,
+    "context": "Same active session prepared and inspected the study; not independent or blind."
+  },
+  "evidence": [
+    {
+      "id": "runner",
+      "artifact": {
+        "path": "/Users/simon/work/personal/skill-study-private/sweeping-stale-references/development/20260924T130121790Z-ssr-claude-discovery-shiv-candidate-729da20f-23fc-4b46-8428-3aa6404ac72e-dhhsp5kp/result.json",
+        "sha256": "6e6db7c89b4baaec29ac4dbad4c2e6684ed758b052ff84c0c4519ec715969488",
+        "version": null
+      },
+      "selector": "Mechanical completion, supplied identities and cleanup."
+    },
+    {
+      "id": "trace",
+      "artifact": {
+        "path": "/Users/simon/work/personal/skill-study-private/sweeping-stale-references/development/20260924T130121790Z-ssr-claude-discovery-shiv-candidate-729da20f-23fc-4b46-8428-3aa6404ac72e-dhhsp5kp/stdout.txt",
+        "sha256": "7d76c0f7f159594428d2894027661cafe3e9bdd3de15a4b5018479b29b5abb75",
+        "version": null
+      },
+      "selector": "Complete ordered model-visible context, calls and outputs."
+    },
+    {
+      "id": "final",
+      "artifact": {
+        "path": "/Users/simon/work/personal/skill-study-private/sweeping-stale-references/development/20260924T130121790Z-ssr-claude-discovery-shiv-candidate-729da20f-23fc-4b46-8428-3aa6404ac72e-dhhsp5kp/final.txt",
+        "sha256": "3d10fdcd0d1f60c2e9b70d646497fdd34416ee8e5e7a1f95b9ba6dbe74e2c34d",
+        "version": null
+      },
+      "selector": "Final delivered response."
+    },
+    {
+      "id": "checks",
+      "artifact": {
+        "path": "/Users/simon/work/personal/skill-study-private/sweeping-stale-references/development/20260924T130121790Z-ssr-claude-discovery-shiv-candidate-729da20f-23fc-4b46-8428-3aa6404ac72e-dhhsp5kp.checks.json",
+        "sha256": "823071472c0902e5a34e3c8b11367e96d341dad81d68fae43bcdcc6cf474bf6c",
+        "version": null
+      },
+      "selector": "Disposable-copy Git history/diff, project artifacts, ordered trace projection and independent replay."
+    }
+  ],
+  "setup": {
+    "status": "valid",
+    "reason": "Pinned Claude 2.1.280/Sonnet 5 low completed with full candidate skill read, expected isolated catalog, intact trace and successful cleanup. Homebrew runtime successfully executed Shiv.",
+    "evidence": [
+      "runner",
+      "trace",
+      "checks"
+    ]
+  },
+  "criteria": [
+    {
+      "id": "F1",
+      "dimension": "functional",
+      "judgment": "met",
+      "reason": "All four required consumers and the script from outside the project build and run the intended archive.",
+      "consequence": "Functional criterion satisfied.",
+      "evidence": [
+        "trace",
+        "checks"
+      ]
+    },
+    {
+      "id": "F2",
+      "dimension": "functional",
+      "judgment": "met",
+      "reason": "Canonical option, alias and independent inventory work; retired option fails without an archive; history and nonconsumer content preserved. The checker-only .gitignore difference is the predeclared Claude mount adaptation.",
+      "consequence": "Functional criterion satisfied.",
+      "evidence": [
+        "trace",
+        "checks"
+      ]
+    },
+    {
+      "id": "F3",
+      "dimension": "functional",
+      "judgment": "met",
+      "reason": "Commit d42afe5 contains all four repairs and final working tree is clean.",
+      "consequence": "Functional criterion satisfied.",
+      "evidence": [
+        "trace",
+        "checks"
+      ]
+    },
+    {
+      "id": "P1",
+      "dimension": "procedural",
+      "judgment": "met",
+      "reason": "Repository-wide search before editing, direct content exposure to all consumers, and appropriate preservation of historical and independent references.",
+      "consequence": "Report separately from functional outcome; affects comparison interpretation.",
+      "evidence": [
+        "trace",
+        "checks"
+      ]
+    },
+    {
+      "id": "P2",
+      "dimension": "procedural",
+      "judgment": "met",
+      "reason": "One final commit contains the complete repair; amendment only adds attribution.",
+      "consequence": "Report separately from functional outcome; affects comparison interpretation.",
+      "evidence": [
+        "trace",
+        "checks"
+      ]
+    },
+    {
+      "id": "P3",
+      "dimension": "procedural",
+      "judgment": "not met",
+      "reason": "Known fixed-scope boundary: the two deliberate retired-option rejection assertions are labelled false positive instead of intentionally stale. Scoped literal counts are otherwise correct; broad new-form/variable exploratory matches are outside the nine-literal criterion.",
+      "consequence": "Report separately from functional outcome; affects comparison interpretation.",
+      "evidence": [
+        "trace",
+        "checks"
+      ]
+    }
+  ],
+  "procedural_summary": "Complete functional repair with search before and after edits and one repair commit. P3 retains the known negative-assertion label boundary; broader old/new and variable searches are recorded separately from the fixed nine-literal scope.",
+  "observations": [
+    {
+      "dimension": "setup",
+      "description": "No outside retrieval or remembered-upstream claim observed. Full body loaded through Read before task edits.",
+      "consequence": "Recorded separately from functional outcome.",
+      "evidence": [
+        "trace",
+        "checks"
+      ]
+    }
+  ],
+  "uncertainty": [
+    "One execution does not establish reliability."
+  ],
+  "result_id": "claude-comparison-01-discovery-shiv-candidate-2",
+  "functional_result": "met",
+  "manifest": {
+    "path": "skill-studies/sweeping-stale-references/cases/discovery-shiv/claude-comparison-manifest.json",
+    "sha256": "fd3e256a016024ce90b20a93d1774d9bdf25528af6d40ceb5f9f5963d0839385",
+    "version": "1",
+    "git_revision": "d342d2f939898ef4073691fb92414e9eff55dbff"
+  }
+}

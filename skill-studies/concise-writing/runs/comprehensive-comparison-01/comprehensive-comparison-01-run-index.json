@@ -1,0 +1,400 @@
+{
+  "format_version": "1",
+  "index_id": "cw-comprehensive-comparison-01",
+  "study_id": "concise-writing",
+  "batch_id": "comprehensive-comparison-01",
+  "attempts": [
+    {
+      "attempt_id": "comprehensive-comparison-01-agent-recommendation-original-1-1",
+      "case_id": "agent-recommendation",
+      "condition": "original",
+      "repetition": 1,
+      "attempt_number": 1,
+      "retry_of": null,
+      "manifest": {
+        "path": "skill-studies/concise-writing/cases/agent-recommendation/comparison-manifest.json",
+        "sha256": "a51ba1ec459a13b76f09fb26bbe65c6f63c93ada441ee93ec04977206c338495",
+        "version": "1",
+        "git_revision": "d5da87c016bcf5aa2cf21bcd3e92df80b45eeb94"
+      },
+      "authorization": {
+        "artifact": {
+          "path": "skill-studies/concise-writing/protocol.md",
+          "sha256": "dafef4a500e79b01f506c1fb9c4f8319dcfa23d7c6898d0f592d8cf3939f8531",
+          "version": "1",
+          "git_revision": "d5da87c016bcf5aa2cf21bcd3e92df80b45eeb94"
+        },
+        "selector": "Comparison: comprehensive-comparison-01; approved eight rows, exact candidate, fixed rules; this authorization Git revision is the full runner revision"
+      },
+      "run_id": "20260918T201942773Z-cw-agent-recommendation-original-824b61cf-ede6-4a1d-a43c-bbd0aa2b79cb-plql5fqx",
+      "allocation": {
+        "pool": "subject",
+        "charge": 1
+      },
+      "bundle": {
+        "path": "/Users/simon/work/personal/skill-study-private/concise-writing/development/20260918T201942773Z-cw-agent-recommendation-original-824b61cf-ede6-4a1d-a43c-bbd0aa2b79cb-plql5fqx",
+        "inventory": {
+          "path": "/Users/simon/work/personal/skill-study-private/concise-writing/development/20260918T201942773Z-cw-agent-recommendation-original-824b61cf-ede6-4a1d-a43c-bbd0aa2b79cb-plql5fqx.inventory.json",
+          "sha256": "fcb7ce910e9919ed9df440b9ee8360153d3d037986f204da206c983c9ddffa01",
+          "version": "1"
+        },
+        "verified": true
+      },
+      "result": {
+        "result_id": "comprehensive-comparison-01-agent-recommendation-original-1",
+        "record": {
+          "path": "skill-studies/concise-writing/results/20260918T201942773Z-cw-agent-recommendation-original-824b61cf-ede6-4a1d-a43c-bbd0aa2b79cb-plql5fqx.json",
+          "sha256": "ccf698b7af39b8f9aeb5e8a0c812aab4f6b065bfe8f605a088e5ff62e05b9776",
+          "version": "1",
+          "git_revision": "d9f77d229be5cf1b93d6caf70ef5675e45024160"
+        }
+      },
+      "limitations": [
+        "Active-session development evidence; no independent, blind or held-out validation."
+      ]
+    },
+    {
+      "attempt_id": "comprehensive-comparison-01-agent-recommendation-candidate-comprehensive-1-1",
+      "case_id": "agent-recommendation",
+      "condition": "candidate-comprehensive",
+      "repetition": 1,
+      "attempt_number": 1,
+      "retry_of": null,
+      "manifest": {
+        "path": "skill-studies/concise-writing/cases/agent-recommendation/comparison-manifest.json",
+        "sha256": "a51ba1ec459a13b76f09fb26bbe65c6f63c93ada441ee93ec04977206c338495",
+        "version": "1",
+        "git_revision": "d5da87c016bcf5aa2cf21bcd3e92df80b45eeb94"
+      },
+      "authorization": {
+        "artifact": {
+          "path": "skill-studies/concise-writing/protocol.md",
+          "sha256": "dafef4a500e79b01f506c1fb9c4f8319dcfa23d7c6898d0f592d8cf3939f8531",
+          "version": "1",
+          "git_revision": "d5da87c016bcf5aa2cf21bcd3e92df80b45eeb94"
+        },
+        "selector": "Comparison: comprehensive-comparison-01; approved eight rows, exact candidate, fixed rules; this authorization Git revision is the full runner revision"
+      },
+      "run_id": "20260918T202103899Z-cw-agent-recommendation-candidate-comprehensive-74e7978d-77b1-40b4-bb5a-e360ed9f2ec4-g8uwiexe",
+      "allocation": {
+        "pool": "subject",
+        "charge": 1
+      },
+      "bundle": {
+        "path": "/Users/simon/work/personal/skill-study-private/concise-writing/development/20260918T202103899Z-cw-agent-recommendation-candidate-comprehensive-74e7978d-77b1-40b4-bb5a-e360ed9f2ec4-g8uwiexe",
+        "inventory": {
+          "path": "/Users/simon/work/personal/skill-study-private/concise-writing/development/20260918T202103899Z-cw-agent-recommendation-candidate-comprehensive-74e7978d-77b1-40b4-bb5a-e360ed9f2ec4-g8uwiexe.inventory.json",
+          "sha256": "81b95cdb35b873b60eae100a76fbf94a764caadc44991b2b0df3fca349305ff8",
+          "version": "1"
+        },
+        "verified": true
+      },
+      "result": {
+        "result_id": "comprehensive-comparison-01-agent-recommendation-candidate-comprehensive-1",
+        "record": {
+          "path": "skill-studies/concise-writing/results/20260918T202103899Z-cw-agent-recommendation-candidate-comprehensive-74e7978d-77b1-40b4-bb5a-e360ed9f2ec4-g8uwiexe.json",
+          "sha256": "1c174d9fd08537cf738fcc66db016c1e9c1e94da805fc5755c1d254a67bc33b8",
+          "version": "1",
+          "git_revision": "d9f77d229be5cf1b93d6caf70ef5675e45024160"
+        }
+      },
+      "limitations": [
+        "Active-session development evidence; no independent, blind or held-out validation."
+      ]
+    },
+    {
+      "attempt_id": "comprehensive-comparison-01-effective-briefing-candidate-comprehensive-1-1",
+      "case_id": "effective-briefing",
+      "condition": "candidate-comprehensive",
+      "repetition": 1,
+      "attempt_number": 1,
+      "retry_of": null,
+      "manifest": {
+        "path": "skill-studies/concise-writing/cases/effective-briefing/comparison-manifest.json",
+        "sha256": "987ddbd4a22a4cd1cafa43929fad7cfa3a3dc70811789601b5f9074b28c99460",
+        "version": "1",
+        "git_revision": "d5da87c016bcf5aa2cf21bcd3e92df80b45eeb94"
+      },
+      "authorization": {
+        "artifact": {
+          "path": "skill-studies/concise-writing/protocol.md",
+          "sha256": "dafef4a500e79b01f506c1fb9c4f8319dcfa23d7c6898d0f592d8cf3939f8531",
+          "version": "1",
+          "git_revision": "d5da87c016bcf5aa2cf21bcd3e92df80b45eeb94"
+        },
+        "selector": "Comparison: comprehensive-comparison-01; approved eight rows, exact candidate, fixed rules; this authorization Git revision is the full runner revision"
+      },
+      "run_id": "20260918T202248957Z-cw-effective-briefing-candidate-comprehensive-b770db17-bd79-4729-9d4b-7a2f857039b2-ch2zfzfr",
+      "allocation": {
+        "pool": "subject",
+        "charge": 1
+      },
+      "bundle": {
+        "path": "/Users/simon/work/personal/skill-study-private/concise-writing/development/20260918T202248957Z-cw-effective-briefing-candidate-comprehensive-b770db17-bd79-4729-9d4b-7a2f857039b2-ch2zfzfr",
+        "inventory": {
+          "path": "/Users/simon/work/personal/skill-study-private/concise-writing/development/20260918T202248957Z-cw-effective-briefing-candidate-comprehensive-b770db17-bd79-4729-9d4b-7a2f857039b2-ch2zfzfr.inventory.json",
+          "sha256": "0f637b85bb317947678e1f65d17658a5ca98bb04148118a283e13ebb151d23e3",
+          "version": "1"
+        },
+        "verified": true
+      },
+      "result": {
+        "result_id": "comprehensive-comparison-01-effective-briefing-candidate-comprehensive-1",
+        "record": {
+          "path": "skill-studies/concise-writing/results/20260918T202248957Z-cw-effective-briefing-candidate-comprehensive-b770db17-bd79-4729-9d4b-7a2f857039b2-ch2zfzfr.json",
+          "sha256": "b98173156b98a51757ff569e94d345b098dc72f7576844fb55d4e2a9289ba844",
+          "version": "1",
+          "git_revision": "d9f77d229be5cf1b93d6caf70ef5675e45024160"
+        }
+      },
+      "limitations": [
+        "Active-session development evidence; no independent, blind or held-out validation."
+      ]
+    },
+    {
+      "attempt_id": "comprehensive-comparison-01-effective-briefing-original-1-1",
+      "case_id": "effective-briefing",
+      "condition": "original",
+      "repetition": 1,
+      "attempt_number": 1,
+      "retry_of": null,
+      "manifest": {
+        "path": "skill-studies/concise-writing/cases/effective-briefing/comparison-manifest.json",
+        "sha256": "987ddbd4a22a4cd1cafa43929fad7cfa3a3dc70811789601b5f9074b28c99460",
+        "version": "1",
+        "git_revision": "d5da87c016bcf5aa2cf21bcd3e92df80b45eeb94"
+      },
+      "authorization": {
+        "artifact": {
+          "path": "skill-studies/concise-writing/protocol.md",
+          "sha256": "dafef4a500e79b01f506c1fb9c4f8319dcfa23d7c6898d0f592d8cf3939f8531",
+          "version": "1",
+          "git_revision": "d5da87c016bcf5aa2cf21bcd3e92df80b45eeb94"
+        },
+        "selector": "Comparison: comprehensive-comparison-01; approved eight rows, exact candidate, fixed rules; this authorization Git revision is the full runner revision"
+      },
+      "run_id": "20260918T202458250Z-cw-effective-briefing-original-d8465f78-0ff5-4aab-a491-bd82ce4f613b-hn26b08a",
+      "allocation": {
+        "pool": "subject",
+        "charge": 1
+      },
+      "bundle": {
+        "path": "/Users/simon/work/personal/skill-study-private/concise-writing/development/20260918T202458250Z-cw-effective-briefing-original-d8465f78-0ff5-4aab-a491-bd82ce4f613b-hn26b08a",
+        "inventory": {
+          "path": "/Users/simon/work/personal/skill-study-private/concise-writing/development/20260918T202458250Z-cw-effective-briefing-original-d8465f78-0ff5-4aab-a491-bd82ce4f613b-hn26b08a.inventory.json",
+          "sha256": "66304eeabdca8892db9dda0147cabf55bfced2efa0be67f31a6d0077124b06f9",
+          "version": "1"
+        },
+        "verified": true
+      },
+      "result": {
+        "result_id": "comprehensive-comparison-01-effective-briefing-original-1",
+        "record": {
+          "path": "skill-studies/concise-writing/results/20260918T202458250Z-cw-effective-briefing-original-d8465f78-0ff5-4aab-a491-bd82ce4f613b-hn26b08a.json",
+          "sha256": "e7c64d60a92e4b0580dfa54682b1be1b2c2eca4fa45506dc072dc13216fa5d74",
+          "version": "1",
+          "git_revision": "d9f77d229be5cf1b93d6caf70ef5675e45024160"
+        }
+      },
+      "limitations": [
+        "Active-session development evidence; no independent, blind or held-out validation."
+      ]
+    },
+    {
+      "attempt_id": "comprehensive-comparison-01-agent-recommendation-candidate-comprehensive-2-1",
+      "case_id": "agent-recommendation",
+      "condition": "candidate-comprehensive",
+      "repetition": 2,
+      "attempt_number": 1,
+      "retry_of": null,
+      "manifest": {
+        "path": "skill-studies/concise-writing/cases/agent-recommendation/comparison-manifest.json",
+        "sha256": "a51ba1ec459a13b76f09fb26bbe65c6f63c93ada441ee93ec04977206c338495",
+        "version": "1",
+        "git_revision": "d5da87c016bcf5aa2cf21bcd3e92df80b45eeb94"
+      },
+      "authorization": {
+        "artifact": {
+          "path": "skill-studies/concise-writing/protocol.md",
+          "sha256": "dafef4a500e79b01f506c1fb9c4f8319dcfa23d7c6898d0f592d8cf3939f8531",
+          "version": "1",
+          "git_revision": "d5da87c016bcf5aa2cf21bcd3e92df80b45eeb94"
+        },
+        "selector": "Comparison: comprehensive-comparison-01; approved eight rows, exact candidate, fixed rules; this authorization Git revision is the full runner revision"
+      },
+      "run_id": "20260918T202610818Z-cw-agent-recommendation-candidate-comprehensive-7b3a0c9d-75eb-43ec-a3fb-77a6abdf5b53-ffaixt32",
+      "allocation": {
+        "pool": "subject",
+        "charge": 1
+      },
+      "bundle": {
+        "path": "/Users/simon/work/personal/skill-study-private/concise-writing/development/20260918T202610818Z-cw-agent-recommendation-candidate-comprehensive-7b3a0c9d-75eb-43ec-a3fb-77a6abdf5b53-ffaixt32",
+        "inventory": {
+          "path": "/Users/simon/work/personal/skill-study-private/concise-writing/development/20260918T202610818Z-cw-agent-recommendation-candidate-comprehensive-7b3a0c9d-75eb-43ec-a3fb-77a6abdf5b53-ffaixt32.inventory.json",
+          "sha256": "5c3629ff96519337ebcab7c8eb41dc1fc95f391b963815be9cdcdb3eb36e7130",
+          "version": "1"
+        },
+        "verified": true
+      },
+      "result": {
+        "result_id": "comprehensive-comparison-01-agent-recommendation-candidate-comprehensive-2",
+        "record": {
+          "path": "skill-studies/concise-writing/results/20260918T202610818Z-cw-agent-recommendation-candidate-comprehensive-7b3a0c9d-75eb-43ec-a3fb-77a6abdf5b53-ffaixt32.json",
+          "sha256": "1ad822c6a9fcb2a75e229624f75fa53b625ec7fb5ccae64efaca26a3007a5f3b",
+          "version": "1",
+          "git_revision": "d9f77d229be5cf1b93d6caf70ef5675e45024160"
+        }
+      },
+      "limitations": [
+        "Active-session development evidence; no independent, blind or held-out validation."
+      ]
+    },
+    {
+      "attempt_id": "comprehensive-comparison-01-agent-recommendation-original-2-1",
+      "case_id": "agent-recommendation",
+      "condition": "original",
+      "repetition": 2,
+      "attempt_number": 1,
+      "retry_of": null,
+      "manifest": {
+        "path": "skill-studies/concise-writing/cases/agent-recommendation/comparison-manifest.json",
+        "sha256": "a51ba1ec459a13b76f09fb26bbe65c6f63c93ada441ee93ec04977206c338495",
+        "version": "1",
+        "git_revision": "d5da87c016bcf5aa2cf21bcd3e92df80b45eeb94"
+      },
+      "authorization": {
+        "artifact": {
+          "path": "skill-studies/concise-writing/protocol.md",
+          "sha256": "dafef4a500e79b01f506c1fb9c4f8319dcfa23d7c6898d0f592d8cf3939f8531",
+          "version": "1",
+          "git_revision": "d5da87c016bcf5aa2cf21bcd3e92df80b45eeb94"
+        },
+        "selector": "Comparison: comprehensive-comparison-01; approved eight rows, exact candidate, fixed rules; this authorization Git revision is the full runner revision"
+      },
+      "run_id": "20260918T202739534Z-cw-agent-recommendation-original-b4b02b7f-0a5d-48ba-a611-b8f27723336b-x8_nkog_",
+      "allocation": {
+        "pool": "subject",
+        "charge": 1
+      },
+      "bundle": {
+        "path": "/Users/simon/work/personal/skill-study-private/concise-writing/development/20260918T202739534Z-cw-agent-recommendation-original-b4b02b7f-0a5d-48ba-a611-b8f27723336b-x8_nkog_",
+        "inventory": {
+          "path": "/Users/simon/work/personal/skill-study-private/concise-writing/development/20260918T202739534Z-cw-agent-recommendation-original-b4b02b7f-0a5d-48ba-a611-b8f27723336b-x8_nkog_.inventory.json",
+          "sha256": "ea7bf4da35672a8af3c82aef3a68ea0d6b15221f8da693d32a7a874a97e579bf",
+          "version": "1"
+        },
+        "verified": true
+      },
+      "result": {
+        "result_id": "comprehensive-comparison-01-agent-recommendation-original-2",
+        "record": {
+          "path": "skill-studies/concise-writing/results/20260918T202739534Z-cw-agent-recommendation-original-b4b02b7f-0a5d-48ba-a611-b8f27723336b-x8_nkog_.json",
+          "sha256": "3bdfa0c9faab515c8450115c15d57c4491c19f4018f3a8488efccfec399fcfc5",
+          "version": "1",
+          "git_revision": "d9f77d229be5cf1b93d6caf70ef5675e45024160"
+        }
+      },
+      "limitations": [
+        "Active-session development evidence; no independent, blind or held-out validation."
+      ]
+    },
+    {
+      "attempt_id": "comprehensive-comparison-01-effective-briefing-original-2-1",
+      "case_id": "effective-briefing",
+      "condition": "original",
+      "repetition": 2,
+      "attempt_number": 1,
+      "retry_of": null,
+      "manifest": {
+        "path": "skill-studies/concise-writing/cases/effective-briefing/comparison-manifest.json",
+        "sha256": "987ddbd4a22a4cd1cafa43929fad7cfa3a3dc70811789601b5f9074b28c99460",
+        "version": "1",
+        "git_revision": "d5da87c016bcf5aa2cf21bcd3e92df80b45eeb94"
+      },
+      "authorization": {
+        "artifact": {
+          "path": "skill-studies/concise-writing/protocol.md",
+          "sha256": "dafef4a500e79b01f506c1fb9c4f8319dcfa23d7c6898d0f592d8cf3939f8531",
+          "version": "1",
+          "git_revision": "d5da87c016bcf5aa2cf21bcd3e92df80b45eeb94"
+        },
+        "selector": "Comparison: comprehensive-comparison-01; approved eight rows, exact candidate, fixed rules; this authorization Git revision is the full runner revision"
+      },
+      "run_id": "20260918T202913040Z-cw-effective-briefing-original-50436db3-93e7-4766-95d3-89f095d5ad18-2xxg96ji",
+      "allocation": {
+        "pool": "subject",
+        "charge": 1
+      },
+      "bundle": {
+        "path": "/Users/simon/work/personal/skill-study-private/concise-writing/development/20260918T202913040Z-cw-effective-briefing-original-50436db3-93e7-4766-95d3-89f095d5ad18-2xxg96ji",
+        "inventory": {
+          "path": "/Users/simon/work/personal/skill-study-private/concise-writing/development/20260918T202913040Z-cw-effective-briefing-original-50436db3-93e7-4766-95d3-89f095d5ad18-2xxg96ji.inventory.json",
+          "sha256": "f6830deb67ddab695d2ab87958272ea72a1ab3fddf0454f6ba037be97d47cd48",
+          "version": "1"
+        },
+        "verified": true
+      },
+      "result": {
+        "result_id": "comprehensive-comparison-01-effective-briefing-original-2",
+        "record": {
+          "path": "skill-studies/concise-writing/results/20260918T202913040Z-cw-effective-briefing-original-50436db3-93e7-4766-95d3-89f095d5ad18-2xxg96ji.json",
+          "sha256": "f405d6018f2f65ea6488e8ef08560f74f2b2cedafeb69e09a64481417ed2960a",
+          "version": "1",
+          "git_revision": "d9f77d229be5cf1b93d6caf70ef5675e45024160"
+        }
+      },
+      "limitations": [
+        "Active-session development evidence; no independent, blind or held-out validation."
+      ]
+    },
+    {
+      "attempt_id": "comprehensive-comparison-01-effective-briefing-candidate-comprehensive-2-1",
+      "case_id": "effective-briefing",
+      "condition": "candidate-comprehensive",
+      "repetition": 2,
+      "attempt_number": 1,
+      "retry_of": null,
+      "manifest": {
+        "path": "skill-studies/concise-writing/cases/effective-briefing/comparison-manifest.json",
+        "sha256": "987ddbd4a22a4cd1cafa43929fad7cfa3a3dc70811789601b5f9074b28c99460",
+        "version": "1",
+        "git_revision": "d5da87c016bcf5aa2cf21bcd3e92df80b45eeb94"
+      },
+      "authorization": {
+        "artifact": {
+          "path": "skill-studies/concise-writing/protocol.md",
+          "sha256": "dafef4a500e79b01f506c1fb9c4f8319dcfa23d7c6898d0f592d8cf3939f8531",
+          "version": "1",
+          "git_revision": "d5da87c016bcf5aa2cf21bcd3e92df80b45eeb94"
+        },
+        "selector": "Comparison: comprehensive-comparison-01; approved eight rows, exact candidate, fixed rules; this authorization Git revision is the full runner revision"
+      },
+      "run_id": "20260918T203053069Z-cw-effective-briefing-candidate-comprehensive-c1b45a8b-8a74-41c5-b8d9-ff5a5e5781f5-atwhx6qr",
+      "allocation": {
+        "pool": "subject",
+        "charge": 1
+      },
+      "bundle": {
+        "path": "/Users/simon/work/personal/skill-study-private/concise-writing/development/20260918T203053069Z-cw-effective-briefing-candidate-comprehensive-c1b45a8b-8a74-41c5-b8d9-ff5a5e5781f5-atwhx6qr",
+        "inventory": {
+          "path": "/Users/simon/work/personal/skill-study-private/concise-writing/development/20260918T203053069Z-cw-effective-briefing-candidate-comprehensive-c1b45a8b-8a74-41c5-b8d9-ff5a5e5781f5-atwhx6qr.inventory.json",
+          "sha256": "bcc7e50288cda33d005adb1eef5cb370d4c386be1c7872ad0767840979bf9873",
+          "version": "1"
+        },
+        "verified": true
+      },
+      "result": {
+        "result_id": "comprehensive-comparison-01-effective-briefing-candidate-comprehensive-2",
+        "record": {
+          "path": "skill-studies/concise-writing/results/20260918T203053069Z-cw-effective-briefing-candidate-comprehensive-c1b45a8b-8a74-41c5-b8d9-ff5a5e5781f5-atwhx6qr.json",
+          "sha256": "1005a2dea096ae76e285d997f725b414e20e1e82d92e8de1f638a0b25df2c3d9",
+          "version": "1",
+          "git_revision": "d9f77d229be5cf1b93d6caf70ef5675e45024160"
+        }
+      },
+      "limitations": [
+        "Active-session development evidence; no independent, blind or held-out validation."
+      ]
+    }
+  ]
+}

@@ -1,0 +1,155 @@
+{
+  "format_version": "1",
+  "manifest_id": "cw-claude-e-iteration-1",
+  "study_id": "concise-writing",
+  "case_id": "document-addition",
+  "status": "frozen",
+  "created_at": "2026-10-18T05:03:08.639985+00:00",
+  "source_revision": "a2473348f115f15faf478cbf742e8a68a8bb1f6c",
+  "authorities": {
+    "spec": {
+      "path": "plans/specs/2026-09-11-model-driven-skill-testing-framework.md",
+      "sha256": "684d76df079a1359f998a06f64c98e6234fdb85c71af0969ba99bfa176521708",
+      "version": null
+    },
+    "protocol": {
+      "path": "skill-studies/concise-writing/protocol.md",
+      "sha256": "066e0b267bacaf6130f79b5592b2e057c3cc4776ce18d83ee9d21c919a1fc0c5",
+      "version": "1"
+    },
+    "format_contract": {
+      "path": "skill-studies/formats/companion-formats.md",
+      "sha256": "a90ca386d0b267632b01d8cd0bce8ba4bb4010999c3481e74a318b4d17675e40",
+      "version": "1"
+    },
+    "execution_result_schema": {
+      "path": "skill-studies/formats/execution-result-v2.schema.json",
+      "sha256": "81902ed03e807804404c0d6ba7a0092a1c311c9eef45ee88c89708ce50d7c2c2",
+      "version": "2"
+    },
+    "policy": {
+      "path": "skill-studies/concise-writing/preparation/assessment-policy.txt",
+      "sha256": "9f8125d86d72a368cc12bdbc4c64cc1d7ee188f604fc13130dcd9f8313981c33",
+      "version": "CW-expanded-1"
+    },
+    "criteria": [
+      {
+        "path": "skill-studies/concise-writing/drafts/baseline-iteration/testing/assessment.md",
+        "sha256": "3021484873d0c50da1a0024c4903c532562d8e58643cdcc6b18c0be10629ac6b",
+        "version": "2"
+      }
+    ]
+  },
+  "conditions": [
+    {
+      "id": "control",
+      "configuration": {
+        "path": "skill-studies/concise-writing/drafts/baseline-iteration/testing/configs/claude-control.json",
+        "sha256": "e9fdab244fb69f0ad3039a58def1f775b57208714f876d970f87e52584a56456",
+        "version": "0.2"
+      },
+      "target_skill": null
+    },
+    {
+      "id": "original",
+      "configuration": {
+        "path": "skill-studies/concise-writing/drafts/baseline-iteration/testing/configs/claude-original.json",
+        "sha256": "4233c4ad27e55f2a49772e0ac68e5b7a13239768c6aaab41f2d857192731b9b2",
+        "version": "0.2"
+      },
+      "target_skill": "skill-studies/concise-writing/cases/skill-original/SKILL.md"
+    },
+    {
+      "id": "candidate-targeted",
+      "configuration": {
+        "path": "skill-studies/concise-writing/drafts/baseline-iteration/testing/configs/claude-candidate-targeted.json",
+        "sha256": "99cb4c9c7f5f45a5b0cf48e94d61c92529ccaa867c5e961db94939d2d3e04a06",
+        "version": "0.2"
+      },
+      "target_skill": "skill-studies/concise-writing/drafts/baseline-iteration/targeted/SKILL.md"
+    },
+    {
+      "id": "candidate-fuller",
+      "configuration": {
+        "path": "skill-studies/concise-writing/drafts/baseline-iteration/testing/configs/claude-candidate-fuller.json",
+        "sha256": "3ff74db18e0f37549fcdb12d1604aed9acf57dcc39379b098fbd35155c815122",
+        "version": "0.2"
+      },
+      "target_skill": "skill-studies/concise-writing/drafts/baseline-iteration/fuller/SKILL.md"
+    }
+  ],
+  "subject_sources": [
+    {
+      "path": "skill-studies/concise-writing/cases/document-addition/new-notes.md",
+      "sha256": "8ff2f1ece29e88f352aefe87506c1afcf7e3174849dd978d20ec7065e8da3b74",
+      "version": null
+    },
+    {
+      "path": "skill-studies/concise-writing/cases/document-addition/task.md",
+      "sha256": "d625196b6cf438dfe556238803851c5b86ae7f2eb07acaa31ddceb5c6e9b8db0",
+      "version": null
+    },
+    {
+      "path": "skill-studies/concise-writing/cases/effective-briefing/fixture/report.md",
+      "sha256": "93c23afd44aab52dfcd2bca53f3db0020a41f650d46d4c59a09595539dc72491",
+      "version": null
+    },
+    {
+      "path": "skill-studies/concise-writing/cases/skill-original/SKILL.md",
+      "sha256": "4d12a2eb475c6b2ef57e2300c8c07af3f59c1e07b2b82695a3b7669eee1d6d72",
+      "version": null
+    },
+    {
+      "path": "skill-studies/concise-writing/drafts/baseline-iteration/fuller/SKILL.md",
+      "sha256": "8efd6aa9f094c3cf468b932f676cf77fc57f58d72f0b17cc7bd8671815379a98",
+      "version": null
+    },
+    {
+      "path": "skill-studies/concise-writing/drafts/baseline-iteration/targeted/SKILL.md",
+      "sha256": "b39e589a606aadbeefd33b991e3350fc213d355828062b5f80ff7d274734b81f",
+      "version": null
+    },
+    {
+      "path": "skill-studies/concise-writing/preparation/claude-original-prompt.md",
+      "sha256": "c72703762cfa9b2be16c09550e27b534fd378c68150004b8d039cbcc499df6bd",
+      "version": null
+    },
+    {
+      "path": "skill-studies/concise-writing/prompt-control.md",
+      "sha256": "833ee4acdfe9f3e3592ed900a7d6f9212d93bc223c8ccccaee69cb53b4738eaa",
+      "version": null
+    }
+  ],
+  "controller_only": [
+    {
+      "path": "skill-studies/concise-writing/drafts/baseline-iteration/testing/schedule.json",
+      "sha256": "2e1865b89465a491bbab29aff999c40b8c3e20c6e85449a3a8aac8204eb07a1d",
+      "version": null
+    },
+    {
+      "path": "skill-studies/concise-writing/drafts/baseline-iteration/testing/runtime_setup.py",
+      "sha256": "91c8a2a5fccaa22affc662fe8824a2502be8e373e363520f21033a25838afdb2",
+      "version": null
+    },
+    {
+      "path": "skill-studies/concise-writing/drafts/baseline-iteration/testing/runtime-qualification.md",
+      "sha256": "5a494e75841088ba9845ccda77afd74e0d4084d727d72d9298163e34fa606140",
+      "version": null
+    },
+    {
+      "path": "skill-studies/concise-writing/drafts/baseline-iteration/comparison-proposal.md",
+      "sha256": "781648af2c78350cc9d9c720c5fc7e4dceeb11d730f8611edbd24c414de49205",
+      "version": null
+    },
+    {
+      "path": "skill-studies/concise-writing/drafts/baseline-iteration/testing/runtime-identities.json",
+      "sha256": "9ca8aadfa7b1dfe734b5dfac11f037fbfd985779d665f06cbca8f5f1a40a414e",
+      "version": null
+    },
+    {
+      "path": "skill-studies/concise-writing/drafts/baseline-iteration/testing/collect_one.py",
+      "sha256": "e3eb8046cdcdf95a65866484cb86b5b7fff0f174f303bddf89355c9f545fdb2c",
+      "version": null
+    }
+  ]
+}

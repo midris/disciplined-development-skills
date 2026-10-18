@@ -1,0 +1,131 @@
+{
+  "schema_version": "2",
+  "record_kind": "execution result",
+  "assessed_at": "2026-09-24T05:54:53.257707+00:00",
+  "run_id": "20260924T055130021Z-ssr-claude-smoke-invocation-review-616e70a7-4aa3-4f58-af10-9776e72becf6-sa7ut8hv",
+  "condition": "original",
+  "assessor": {
+    "name": "Codex active session",
+    "method": "active session",
+    "model": null,
+    "session_id": null,
+    "context": "Same active session prepared runtime and assessed smoke evidence; not independent or blind."
+  },
+  "evidence": [
+    {
+      "id": "runner",
+      "artifact": {
+        "path": "/Users/simon/work/personal/skill-study-private/sweeping-stale-references/development/20260924T055130021Z-ssr-claude-smoke-invocation-review-616e70a7-4aa3-4f58-af10-9776e72becf6-sa7ut8hv/result.json",
+        "sha256": "c16c3bbfde9894ee307bb8be26423596f25b03965d3287d6709f5bbb58efbb94",
+        "version": null
+      },
+      "selector": "Mechanical completion and cleanup."
+    },
+    {
+      "id": "trace",
+      "artifact": {
+        "path": "/Users/simon/work/personal/skill-study-private/sweeping-stale-references/development/20260924T055130021Z-ssr-claude-smoke-invocation-review-616e70a7-4aa3-4f58-af10-9776e72becf6-sa7ut8hv/stdout.txt",
+        "sha256": "ba5e961115f8e7617f368ce9a9f9e1e1e051c8950efc93a40043e576feda2f3d",
+        "version": null
+      },
+      "selector": "Complete raw Claude stream: native init, tools, results, delivered body when read and final answer."
+    },
+    {
+      "id": "final",
+      "artifact": {
+        "path": "/Users/simon/work/personal/skill-study-private/sweeping-stale-references/development/20260924T055130021Z-ssr-claude-smoke-invocation-review-616e70a7-4aa3-4f58-af10-9776e72becf6-sa7ut8hv/final.txt",
+        "sha256": "788d4e81bf94949a5744bc295639e843c2c15c9f8769b6bc417066fcced934da",
+        "version": null
+      },
+      "selector": "Complete final answer."
+    },
+    {
+      "id": "checks",
+      "artifact": {
+        "path": "/Users/simon/work/personal/skill-study-private/sweeping-stale-references/development/20260924T055130021Z-ssr-claude-smoke-invocation-review-616e70a7-4aa3-4f58-af10-9776e72becf6-sa7ut8hv.checks.json",
+        "sha256": "e13457df0946803ce8d95f05c7b090b28d32990cc7fb68cf4a532b2f85527cdc",
+        "version": null
+      },
+      "selector": "Disposable-copy Git history/diff, input preservation checks and independent replay."
+    }
+  ],
+  "setup": {
+    "status": "valid",
+    "reason": "Frozen provider-adapted inputs, actual claude-sonnet-5/CLI 2.1.280, successful subscription invocation and terminal capture. Heredoc failure was recovered; it did not prevent task commits or limit file access. Native init exposes SSR alongside bundled skills; no plugin or MCP servers. Scripted qualification separately established description/body delivery.",
+    "evidence": [
+      "runner",
+      "trace",
+      "checks"
+    ]
+  },
+  "criteria": [
+    {
+      "id": "F1",
+      "dimension": "functional",
+      "judgment": "not met",
+      "reason": "Only README is corrected. docs/operations.md still allows two further tries and docs/troubleshooting.md still exhausts after the third failed send; both contradict the current four-attempt behavior.",
+      "consequence": "Functional outcome criterion.",
+      "evidence": [
+        "trace",
+        "checks"
+      ]
+    },
+    {
+      "id": "F2",
+      "dimension": "functional",
+      "judgment": "met",
+      "reason": "Only README changed. Worker/helper source, all tests, historical policy and unrelated documentation are byte-preserved; independent replay passes seven behavior tests.",
+      "consequence": "Functional outcome criterion.",
+      "evidence": [
+        "trace",
+        "checks"
+      ]
+    },
+    {
+      "id": "F3",
+      "dimension": "functional",
+      "judgment": "not met",
+      "reason": "Commit 87b4d82 contains only the README correction, leaving two required current consumers stale despite a clean working tree.",
+      "consequence": "Functional outcome criterion.",
+      "evidence": [
+        "trace",
+        "checks"
+      ]
+    },
+    {
+      "id": "D1",
+      "dimension": "procedural",
+      "judgment": "not met",
+      "reason": "The native init catalog lists sweeping-stale-references, but the complete trace contains no Skill invocation or SSR body read, before or after the README edit. The prompt never names SSR. Other current documents were read, but left unchanged.",
+      "consequence": "Reported separately from functional outcome.",
+      "evidence": [
+        "trace",
+        "checks"
+      ]
+    }
+  ],
+  "procedural_summary": "Native SSR selection/loading absent; incomplete documentation repair.",
+  "observations": [
+    {
+      "dimension": "setup",
+      "description": "Both smoke subjects encountered denied zsh heredoc scratch and recovered to complete commits. The subsequent private TMPPREFIX correction is qualified without additional model calls; these retained runs used the earlier pinned runtime.",
+      "consequence": "Bounded runtime friction, preserved in interpretation rather than discarded or retried.",
+      "evidence": [
+        "trace",
+        "checks"
+      ]
+    }
+  ],
+  "uncertainty": [
+    "One observation per task; no reliability estimate or provider comparison.",
+    "Production trace records catalog names, not the full initial request payload; exact description transport is established separately by same-CLI scripted qualification."
+  ],
+  "result_id": "claude-smoke-01-invocation-review-original-1",
+  "functional_result": "not met",
+  "manifest": {
+    "path": "skill-studies/sweeping-stale-references/cases/invocation-review/claude-smoke-manifest.json",
+    "sha256": "66f0cf5d49f34cc71a587d37508886c19d84b3c508806484144dbe5382c28db4",
+    "version": "1",
+    "git_revision": "c3ce25292ba9f4fd9e049f8b7e084fdf70d705ec"
+  }
+}

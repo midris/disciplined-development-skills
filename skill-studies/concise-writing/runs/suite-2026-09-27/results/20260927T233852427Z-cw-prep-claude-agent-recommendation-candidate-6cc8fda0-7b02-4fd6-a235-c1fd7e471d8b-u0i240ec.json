@@ -1,0 +1,161 @@
+{
+  "schema_version": "2",
+  "record_kind": "execution result",
+  "assessed_at": "2026-09-27T23:39:29.445271+00:00",
+  "run_id": "20260927T233852427Z-cw-prep-claude-agent-recommendation-candidate-6cc8fda0-7b02-4fd6-a235-c1fd7e471d8b-u0i240ec",
+  "condition": "candidate-comprehensive",
+  "assessor": {
+    "name": "Codex active session",
+    "method": "active session",
+    "model": null,
+    "session_id": null,
+    "context": "Same session that prepared and reviewed these development cases. No independent, blinded or held-out claim."
+  },
+  "evidence": [
+    {
+      "id": "output",
+      "artifact": {
+        "path": "/Users/simon/work/personal/skill-study-private/concise-writing/development/20260927T233852427Z-cw-prep-claude-agent-recommendation-candidate-6cc8fda0-7b02-4fd6-a235-c1fd7e471d8b-u0i240ec/workspace/fixture/report.md",
+        "sha256": "0495ed8c932c8f5a8611083bdc2be621fbdff75fd94cd8aa66bcca47f63d339e",
+        "version": null
+      },
+      "selector": "Complete artifact"
+    },
+    {
+      "id": "trace",
+      "artifact": {
+        "path": "/Users/simon/work/personal/skill-study-private/concise-writing/development/20260927T233852427Z-cw-prep-claude-agent-recommendation-candidate-6cc8fda0-7b02-4fd6-a235-c1fd7e471d8b-u0i240ec/stdout.txt",
+        "sha256": "9abe148a245086d6256a488e8e13129aeac15e29a85828a57a078af7d4b25455",
+        "version": null
+      },
+      "selector": "Complete artifact"
+    },
+    {
+      "id": "mechanical",
+      "artifact": {
+        "path": "/Users/simon/work/personal/skill-study-private/concise-writing/development/20260927T233852427Z-cw-prep-claude-agent-recommendation-candidate-6cc8fda0-7b02-4fd6-a235-c1fd7e471d8b-u0i240ec/result.json",
+        "sha256": "4c387002c40510e253611a9c19ae7de693b3b9918afea403c1343250ecbd933b",
+        "version": null
+      },
+      "selector": "Complete artifact"
+    },
+    {
+      "id": "log",
+      "artifact": {
+        "path": "/Users/simon/work/personal/skill-study-private/concise-writing/development/20260927T233852427Z-cw-prep-claude-agent-recommendation-candidate-6cc8fda0-7b02-4fd6-a235-c1fd7e471d8b-u0i240ec/runner.log",
+        "sha256": "8e83b93630d15b2d83dc018df333b48095894955c8a15ad2b100d0d8beff726a",
+        "version": null
+      },
+      "selector": "Complete artifact"
+    },
+    {
+      "id": "final",
+      "artifact": {
+        "path": "/Users/simon/work/personal/skill-study-private/concise-writing/development/20260927T233852427Z-cw-prep-claude-agent-recommendation-candidate-6cc8fda0-7b02-4fd6-a235-c1fd7e471d8b-u0i240ec/final.txt",
+        "sha256": "5b21ffbc09aa6f00d943b386c8d4269f55ecfe140bf511bbbdffb1c0e096eb20",
+        "version": null
+      },
+      "selector": "Complete artifact"
+    },
+    {
+      "id": "source-0",
+      "artifact": {
+        "path": "skill-studies/concise-writing/cases/agent-recommendation/fixture/report.md",
+        "sha256": "e9a992c7e4c14dfd5afc10cc637349f39c2030e98ed0311441675900bc3e93e9",
+        "version": null,
+        "git_revision": "96b6e383da39ea807a6ad49d4513cfc1d6f4cd33"
+      },
+      "selector": "Complete frozen source"
+    },
+    {
+      "id": "source-1",
+      "artifact": {
+        "path": "skill-studies/concise-writing/cases/agent-recommendation/task.md",
+        "sha256": "607cbe0562a19ea092fe76ec96f13bfbe033b2e1095baef2ca38be621c0baf82",
+        "version": null,
+        "git_revision": "96b6e383da39ea807a6ad49d4513cfc1d6f4cd33"
+      },
+      "selector": "Complete frozen source"
+    },
+    {
+      "id": "source-4",
+      "artifact": {
+        "path": "skill-studies/concise-writing/preparation/claude-original-prompt.md",
+        "sha256": "c72703762cfa9b2be16c09550e27b534fd378c68150004b8d039cbcc499df6bd",
+        "version": null,
+        "git_revision": "96b6e383da39ea807a6ad49d4513cfc1d6f4cd33"
+      },
+      "selector": "Complete frozen source"
+    }
+  ],
+  "setup": {
+    "status": "valid",
+    "reason": "Completed with retained raw trace, saved artifact and final response. Actual provider model/CLI and skill delivery were inspected against the frozen condition; requested low effort is recorded in runner settings. Protected input and inventory verification is recorded at checkpoint.",
+    "evidence": [
+      "mechanical",
+      "trace",
+      "log"
+    ]
+  },
+  "criteria": [
+    {
+      "id": "F1",
+      "dimension": "functional",
+      "judgment": "met",
+      "reason": "Preserves all measured evidence and its limits, mechanism, current status, pilot timing/roles/scope, mismatch retention rationale and separate general-release decision.",
+      "consequence": "Required for the corresponding functional or invocation outcome; reported separately.",
+      "evidence": [
+        "output",
+        "source-0",
+        "source-1",
+        "source-4"
+      ]
+    },
+    {
+      "id": "F2",
+      "dimension": "functional",
+      "judgment": "met",
+      "reason": "Approval request remains bounded and conditional; manager can distinguish evidence from untested production/outage claims and act on match/mismatch outcomes.",
+      "consequence": "Required for the corresponding functional or invocation outcome; reported separately.",
+      "evidence": [
+        "output",
+        "source-0",
+        "source-1",
+        "source-4"
+      ]
+    },
+    {
+      "id": "F3",
+      "dimension": "functional",
+      "judgment": "met",
+      "reason": "Readable sectional brief removes filler and duplicate mechanism. Evidence interpretation and closing actions provide useful framing, though more verbose than other passing variants.",
+      "consequence": "Required for the corresponding functional or invocation outcome; reported separately.",
+      "evidence": [
+        "output",
+        "source-0",
+        "source-1",
+        "source-4"
+      ]
+    }
+  ],
+  "procedural_summary": "Candidate full body delivered at stdout 12 before Write 16; complete source read. Process unscored.",
+  "observations": [
+    {
+      "dimension": "functional",
+      "description": "Source 625 words; output 342, change -283, shorter. Similar to candidate 3: retains a separate limitations section and closing recap. No automatic quality win from length.",
+      "consequence": "Descriptive comparison; no separate score or automatic length-based preference.",
+      "evidence": [
+        "output"
+      ]
+    }
+  ],
+  "uncertainty": [],
+  "result_id": "claude-expanded-01-agent-recommendation-candidate-comprehensive-2",
+  "functional_result": "met",
+  "manifest": {
+    "path": "skill-studies/concise-writing/preparation/manifests/claude-agent-recommendation-manifest.json",
+    "sha256": "bb4603685f0c9366bd1a4862e5f0255be4ba72130b01695febea5d46632898ea",
+    "version": "1",
+    "git_revision": "4dc370648a6a915546035847b2823a4bc5d57325"
+  }
+}

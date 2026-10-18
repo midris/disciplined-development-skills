@@ -1,0 +1,117 @@
+{
+  "format_version": "1",
+  "manifest_id": "cw-codex-invocation-comments-third-1",
+  "study_id": "concise-writing",
+  "case_id": "invocation-comments",
+  "status": "frozen",
+  "created_at": "2026-09-28T01:03:37.276598+00:00",
+  "source_revision": "b167a70bd26a03543407d9bae208d78b13432f2b",
+  "authorities": {
+    "spec": {
+      "path": "plans/specs/2026-09-11-model-driven-skill-testing-framework.md",
+      "sha256": "3ef6a6def5201983aec2a6345ed962c7fede6ef12474c8876269f60528403083",
+      "version": null
+    },
+    "protocol": {
+      "path": "skill-studies/concise-writing/protocol.md",
+      "sha256": "0014dc6b85138caa0b24fb88877b99ae7eec1328a4c731357e02f22dcb97634b",
+      "version": "1"
+    },
+    "format_contract": {
+      "path": "skill-studies/formats/companion-formats.md",
+      "sha256": "e9956447d56e22f4ffc8681dfee887a9093c845c54be625098d45fecacd48781",
+      "version": "1"
+    },
+    "execution_result_schema": {
+      "path": "skill-studies/formats/execution-result-v2.schema.json",
+      "sha256": "81902ed03e807804404c0d6ba7a0092a1c311c9eef45ee88c89708ce50d7c2c2",
+      "version": "2"
+    },
+    "policy": {
+      "path": "skill-studies/concise-writing/preparation/assessment-policy.txt",
+      "sha256": "9f8125d86d72a368cc12bdbc4c64cc1d7ee188f604fc13130dcd9f8313981c33",
+      "version": "CW-expanded-1"
+    },
+    "criteria": [
+      {
+        "path": "skill-studies/concise-writing/cases/invocation-comments/assessment.md",
+        "sha256": "4d29abbae9a8cd8cc7bfef605ed3d89cdb15ff161e4618feb839f975074b2bd4",
+        "version": "1"
+      }
+    ]
+  },
+  "conditions": [
+    {
+      "id": "original",
+      "configuration": {
+        "path": "skill-studies/concise-writing/preparation/configs/codex-invocation-comments-original.json",
+        "sha256": "19416c396f338efb8153f88bdcc1c4c835de57bc1c0295489263f9587edb146b",
+        "version": "0.2"
+      },
+      "target_skill": "skill-studies/concise-writing/cases/skill-original/SKILL.md"
+    },
+    {
+      "id": "candidate-comprehensive",
+      "configuration": {
+        "path": "skill-studies/concise-writing/preparation/configs/codex-invocation-comments-candidate.json",
+        "sha256": "c4a2273ec7e6ed12236f8543808d8e3c2a417ae7e1546adc84ca3ea2ab8b023a",
+        "version": "0.2"
+      },
+      "target_skill": "skill-studies/concise-writing/cases/skill-candidate-comprehensive/SKILL.md"
+    }
+  ],
+  "subject_sources": [
+    {
+      "path": "skill-studies/concise-writing/cases/invocation-comments/fixture/MAINTAINER-NOTES.md",
+      "sha256": "59175ed2990a8b65636507ce2116321e70c60b1c0a2eea288d01e075252fc847",
+      "version": null
+    },
+    {
+      "path": "skill-studies/concise-writing/cases/invocation-comments/fixture/uploader.py",
+      "sha256": "2587771c1d7fee7e2ca72dbb1ff1a2594fff69775a72fff1929f437cce8ec2f1",
+      "version": null
+    },
+    {
+      "path": "skill-studies/concise-writing/cases/invocation-comments/task.md",
+      "sha256": "6a771f7383d14f7d77b02c862155da0b10af1e83cc72333512c5a83fde9523b5",
+      "version": null
+    },
+    {
+      "path": "skill-studies/concise-writing/cases/skill-candidate-comprehensive/SKILL.md",
+      "sha256": "f763b43e88c56d6fdc2a96457bc2415cba60b75a1e7cb59cd1b0ebaa3fb199ba",
+      "version": null
+    },
+    {
+      "path": "skill-studies/concise-writing/cases/skill-original/SKILL.md",
+      "sha256": "4d12a2eb475c6b2ef57e2300c8c07af3f59c1e07b2b82695a3b7669eee1d6d72",
+      "version": null
+    },
+    {
+      "path": "skill-studies/concise-writing/preparation/native-prompt.md",
+      "sha256": "7265a3997ee554a5f4238462b8427549e4be6b3b94283daa6d7a3c96d85105a2",
+      "version": null
+    }
+  ],
+  "controller_only": [
+    {
+      "path": "skill-studies/concise-writing/preparation/boundary-checks.md",
+      "sha256": "8cb4f77f78134698748d41b6e5708dfe3e12797ab4abc6148653c244373fcc6a",
+      "version": null
+    },
+    {
+      "path": "skill-studies/concise-writing/cases/invocation-comments/check_fixture.py",
+      "sha256": "ea39af1c4a932ba9e6203393c9db6daa671e43e0bd4493a25553629c15e8d912",
+      "version": null
+    },
+    {
+      "path": "skill-studies/concise-writing/cases/invocation-comments/test_check_fixture.py",
+      "sha256": "aea81a8042f8cad3812bfe6acc6ed670be5722acf875571f5634559691ad03cc",
+      "version": null
+    },
+    {
+      "path": "skill-studies/concise-writing/preparation/native-third-schedule.json",
+      "sha256": "5bfd6c36f4f176a6d75918b474a3c5f1d52ec2a4c3c9513da0e8bd21901559d0",
+      "version": null
+    }
+  ]
+}

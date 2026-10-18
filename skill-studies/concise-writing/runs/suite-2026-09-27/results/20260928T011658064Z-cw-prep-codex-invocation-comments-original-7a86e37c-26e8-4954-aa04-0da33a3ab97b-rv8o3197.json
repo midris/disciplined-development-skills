@@ -1,0 +1,184 @@
+{
+  "schema_version": "2",
+  "record_kind": "execution result",
+  "assessed_at": "2026-09-28T01:17:50.890315+00:00",
+  "run_id": "20260928T011658064Z-cw-prep-codex-invocation-comments-original-7a86e37c-26e8-4954-aa04-0da33a3ab97b-rv8o3197",
+  "condition": "original",
+  "assessor": {
+    "name": "Codex active session",
+    "method": "active session",
+    "model": null,
+    "session_id": null,
+    "context": "Same session that prepared and reviewed these development cases. No independent, blinded or held-out claim."
+  },
+  "evidence": [
+    {
+      "id": "output",
+      "artifact": {
+        "path": "/Users/simon/work/personal/skill-study-private/concise-writing/development/20260928T011658064Z-cw-prep-codex-invocation-comments-original-7a86e37c-26e8-4954-aa04-0da33a3ab97b-rv8o3197/workspace/fixture/uploader.py",
+        "sha256": "ac3511b9ce52f42998212a6f8c236aac70d75af045cc8d7f037f3797ff8a73dc",
+        "version": null
+      },
+      "selector": "Complete artifact"
+    },
+    {
+      "id": "trace",
+      "artifact": {
+        "path": "/Users/simon/work/personal/skill-study-private/concise-writing/development/20260928T011658064Z-cw-prep-codex-invocation-comments-original-7a86e37c-26e8-4954-aa04-0da33a3ab97b-rv8o3197/provider-session.jsonl",
+        "sha256": "19bc31b4bd288733fc8344423cea5d7f7bd240e5c62ed48ecbe3d366b6d242db",
+        "version": null
+      },
+      "selector": "Complete artifact"
+    },
+    {
+      "id": "mechanical",
+      "artifact": {
+        "path": "/Users/simon/work/personal/skill-study-private/concise-writing/development/20260928T011658064Z-cw-prep-codex-invocation-comments-original-7a86e37c-26e8-4954-aa04-0da33a3ab97b-rv8o3197/result.json",
+        "sha256": "6096f6afc1648a955c78e13dc7d0aa6f52bcfcfe79f7ca08af37d3a51132ed12",
+        "version": null
+      },
+      "selector": "Complete artifact"
+    },
+    {
+      "id": "log",
+      "artifact": {
+        "path": "/Users/simon/work/personal/skill-study-private/concise-writing/development/20260928T011658064Z-cw-prep-codex-invocation-comments-original-7a86e37c-26e8-4954-aa04-0da33a3ab97b-rv8o3197/runner.log",
+        "sha256": "7b2e5fba3bb46e7bd604ad816acf785b71646aac4c584fb5a99285e034092fda",
+        "version": null
+      },
+      "selector": "Complete artifact"
+    },
+    {
+      "id": "final",
+      "artifact": {
+        "path": "/Users/simon/work/personal/skill-study-private/concise-writing/development/20260928T011658064Z-cw-prep-codex-invocation-comments-original-7a86e37c-26e8-4954-aa04-0da33a3ab97b-rv8o3197/final.txt",
+        "sha256": "72f8a6a00b7bac3b8ca9fe000df14d52eddae6fc1d83e297a1dac41c0c71e4fa",
+        "version": null
+      },
+      "selector": "Complete artifact"
+    },
+    {
+      "id": "source-0",
+      "artifact": {
+        "path": "skill-studies/concise-writing/cases/invocation-comments/fixture/MAINTAINER-NOTES.md",
+        "sha256": "59175ed2990a8b65636507ce2116321e70c60b1c0a2eea288d01e075252fc847",
+        "version": null,
+        "git_revision": "b167a70bd26a03543407d9bae208d78b13432f2b"
+      },
+      "selector": "Complete frozen source"
+    },
+    {
+      "id": "source-1",
+      "artifact": {
+        "path": "skill-studies/concise-writing/cases/invocation-comments/fixture/uploader.py",
+        "sha256": "2587771c1d7fee7e2ca72dbb1ff1a2594fff69775a72fff1929f437cce8ec2f1",
+        "version": null,
+        "git_revision": "b167a70bd26a03543407d9bae208d78b13432f2b"
+      },
+      "selector": "Complete frozen source"
+    },
+    {
+      "id": "source-2",
+      "artifact": {
+        "path": "skill-studies/concise-writing/cases/invocation-comments/task.md",
+        "sha256": "6a771f7383d14f7d77b02c862155da0b10af1e83cc72333512c5a83fde9523b5",
+        "version": null,
+        "git_revision": "b167a70bd26a03543407d9bae208d78b13432f2b"
+      },
+      "selector": "Complete frozen source"
+    },
+    {
+      "id": "source-5",
+      "artifact": {
+        "path": "skill-studies/concise-writing/preparation/native-prompt.md",
+        "sha256": "7265a3997ee554a5f4238462b8427549e4be6b3b94283daa6d7a3c96d85105a2",
+        "version": null,
+        "git_revision": "b167a70bd26a03543407d9bae208d78b13432f2b"
+      },
+      "selector": "Complete frozen source"
+    }
+  ],
+  "setup": {
+    "status": "valid",
+    "reason": "Completed with the expected model/CLI and frozen skill available in the native catalog. Complete raw trace and output retained. No task-level skill read request; invocation and functional outcome are assessed separately. Inventory and protected-input checks recorded at checkpoint.",
+    "evidence": [
+      "mechanical",
+      "trace",
+      "log"
+    ]
+  },
+  "criteria": [
+    {
+      "id": "D1",
+      "dimension": "procedural",
+      "judgment": "met",
+      "reason": "Full original delivered at trace line 24 before the comment edit at line 37.",
+      "consequence": "Required for the corresponding functional or invocation outcome; reported separately.",
+      "evidence": [
+        "trace"
+      ]
+    },
+    {
+      "id": "F1",
+      "dimension": "functional",
+      "judgment": "met",
+      "reason": "Controller parse/token check passed; comments describe four total attempts, retryable send errors and acknowledgement propagation accurately.",
+      "consequence": "Required for the corresponding functional or invocation outcome; reported separately.",
+      "evidence": [
+        "output",
+        "source-0",
+        "source-1",
+        "source-2",
+        "source-5"
+      ]
+    },
+    {
+      "id": "F2",
+      "dimension": "functional",
+      "judgment": "met",
+      "reason": "Remote acceptance explains why acknowledgement failure must not trigger another send; boundaries are available at their relevant code sites.",
+      "consequence": "Required for the corresponding functional or invocation outcome; reported separately.",
+      "evidence": [
+        "output",
+        "source-0",
+        "source-1",
+        "source-2",
+        "source-5"
+      ]
+    },
+    {
+      "id": "F3",
+      "dimension": "functional",
+      "judgment": "met",
+      "reason": "Two compact comments supply useful maintenance context without narrating obvious lines.",
+      "consequence": "Required for the corresponding functional or invocation outcome; reported separately.",
+      "evidence": [
+        "output",
+        "source-0",
+        "source-1",
+        "source-2",
+        "source-5"
+      ]
+    }
+  ],
+  "procedural_summary": "Loaded CW before editing; inspected source and notes, updated comments and checked the diff and protected files.",
+  "observations": [
+    {
+      "dimension": "functional",
+      "description": "Controller check_fixture.py --compare passed: executable tokens unchanged; source comments 20 words, output comments 40 words. Comment quality assessed separately.",
+      "consequence": "Descriptive comparison; no separate score or automatic length-based preference.",
+      "evidence": [
+        "output"
+      ]
+    }
+  ],
+  "uncertainty": [],
+  "result_id": "codex-invocation-02-invocation-comments-original-3",
+  "functional_result": "met",
+  "manifest": {
+    "path": "skill-studies/concise-writing/preparation/manifests/codex-invocation-comments-third-manifest.json",
+    "sha256": "85e9b5645e630997c9faead1c88b71412227715da8d62e022062362cda2a466a",
+    "version": "1",
+    "git_revision": "d944aa7df0c1e4fc99e3c5e887fdea64bd4a2636"
+  }
+}
