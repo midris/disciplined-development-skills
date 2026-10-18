@@ -3,8 +3,9 @@
 Format version: `1`
 Study ID: `concise-writing`
 Status: baseline collection and cross-model review are complete; the owner selected the original CW as the development base and authorized preparation of effectiveness-first edits. Adoption remains deferred.
-Current action: publish the retention-metadata correction and amended Claude controller pin, then resume its nineteen remaining subjects and complete the two Opus reviews under the [staged comparison](drafts/baseline-iteration/comparison-proposal.md).
-Dispatch is paused after twenty Codex attempts and the first Claude attempt; all twenty-one raw bundles verify.
+Current action: resume the nineteen remaining Claude E subjects after the metadata correction, then complete active assessment and the two Opus reviews under the [staged comparison](drafts/baseline-iteration/comparison-proposal.md).
+Twenty Codex attempts and the first Claude attempt are retained; all twenty-one raw bundles verify.
+The amended Claude manifest pins `a2473348f115f15faf478cbf742e8a68a8bb1f6c` prospectively for orders 2–20, with unchanged subject inputs and criteria; collection readiness passes again.
 The collector used the wrong inventory version field; conforming wrappers are published separately, with original wrappers and every raw byte retained. No model call is repeated or excluded for this metadata correction.
 Both provider scopes pass collection readiness with frozen input revision `2936749c332f083e49f603eaed15b65d92158568`; actual attempts and unattempted slots are recorded in the two E indexes.
 The combined draft/proposal review is resolved and preparation commit `c8b8c3b` is pushed; [runtime qualification](drafts/baseline-iteration/testing/runtime-qualification.md) passes twelve zero-model controls.

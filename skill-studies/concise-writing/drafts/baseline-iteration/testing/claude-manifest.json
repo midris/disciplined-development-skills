@@ -5,7 +5,7 @@
   "case_id": "document-addition",
   "status": "frozen",
   "created_at": "2026-10-18T05:03:08.639985+00:00",
-  "source_revision": "2936749c332f083e49f603eaed15b65d92158568",
+  "source_revision": "a2473348f115f15faf478cbf742e8a68a8bb1f6c",
   "authorities": {
     "spec": {
       "path": "plans/specs/2026-09-11-model-driven-skill-testing-framework.md",
@@ -14,7 +14,7 @@
     },
     "protocol": {
       "path": "skill-studies/concise-writing/protocol.md",
-      "sha256": "26b8407ea102273b7e0fbdfd8efe115af563d97a98e163ab3744ccd5662ad629",
+      "sha256": "066e0b267bacaf6130f79b5592b2e057c3cc4776ce18d83ee9d21c919a1fc0c5",
       "version": "1"
     },
     "format_contract": {
@@ -133,7 +133,7 @@
     },
     {
       "path": "skill-studies/concise-writing/drafts/baseline-iteration/testing/runtime-qualification.md",
-      "sha256": "66d092094a3e49bd07feb90d6a81e07191d4cce6d65b5bc813942c3a947580c8",
+      "sha256": "5a494e75841088ba9845ccda77afd74e0d4084d727d72d9298163e34fa606140",
       "version": null
     },
     {
@@ -148,7 +148,7 @@
     },
     {
       "path": "skill-studies/concise-writing/drafts/baseline-iteration/testing/collect_one.py",
-      "sha256": "8b1ad3d91c40634079effc3d04a031e497e2fffa410c25f18311970d820a1ebd",
+      "sha256": "e3eb8046cdcdf95a65866484cb86b5b7fff0f174f303bddf89355c9f545fdb2c",
       "version": null
     }
   ]

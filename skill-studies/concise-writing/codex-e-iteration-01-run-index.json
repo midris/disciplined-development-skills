@@ -32,7 +32,7 @@
         "charge": 1
       },
       "limitations": [
-        "Direct-session result prepared; committed result pins pending. Original inventory wrapper retained alongside the conforming canonical wrapper; raw bytes unchanged."
+        "Codex active-session assessment; no blind, held-out or independent assessor claim. Inventory wrapper corrected without raw mutation or model repetition. Separate Opus review remains pending."
       ],
       "bundle": {
         "path": "/Users/simon/work/personal/skill-study-private/concise-writing/e-iteration-20261018/subjects/20261018T050932439Z-cw-e-iteration-codex-control-34743e0b-016e-484c-91d2-934229d02354-rmhksawq",
@@ -43,7 +43,15 @@
         },
         "verified": true
       },
-      "result": null
+      "result": {
+        "result_id": "codex-e-iteration-01-control-1-1-assessment",
+        "record": {
+          "path": "skill-studies/concise-writing/results/20261018T050932439Z-cw-e-iteration-codex-control-34743e0b-016e-484c-91d2-934229d02354-rmhksawq.json",
+          "sha256": "301cabc5f02fa2c87210972d11ace224b4924f2c42201f55d6a7c7695317a595",
+          "version": "2",
+          "git_revision": "a2473348f115f15faf478cbf742e8a68a8bb1f6c"
+        }
+      }
     },
     {
       "attempt_id": "codex-e-iteration-01-original-1-1",
@@ -73,7 +81,7 @@
         "charge": 1
       },
       "limitations": [
-        "Direct-session result prepared; committed result pins pending. Original inventory wrapper retained alongside the conforming canonical wrapper; raw bytes unchanged."
+        "Codex active-session assessment; no blind, held-out or independent assessor claim. Inventory wrapper corrected without raw mutation or model repetition. Separate Opus review remains pending."
       ],
       "bundle": {
         "path": "/Users/simon/work/personal/skill-study-private/concise-writing/e-iteration-20261018/subjects/20261018T051039494Z-cw-e-iteration-codex-original-9bf84561-49ff-4a0e-91a1-7261590e310f-lypjwfnd",
@@ -84,7 +92,15 @@
         },
         "verified": true
       },
-      "result": null
+      "result": {
+        "result_id": "codex-e-iteration-01-original-1-1-assessment",
+        "record": {
+          "path": "skill-studies/concise-writing/results/20261018T051039494Z-cw-e-iteration-codex-original-9bf84561-49ff-4a0e-91a1-7261590e310f-lypjwfnd.json",
+          "sha256": "4e64c1467ff8dace259c0685fd92670b21b3edb6654faba832ee9b9248e12851",
+          "version": "2",
+          "git_revision": "a2473348f115f15faf478cbf742e8a68a8bb1f6c"
+        }
+      }
     },
     {
       "attempt_id": "codex-e-iteration-01-candidate-targeted-1-1",
@@ -114,7 +130,7 @@
         "charge": 1
       },
       "limitations": [
-        "Direct-session result prepared; committed result pins pending. Original inventory wrapper retained alongside the conforming canonical wrapper; raw bytes unchanged."
+        "Codex active-session assessment; no blind, held-out or independent assessor claim. Inventory wrapper corrected without raw mutation or model repetition. Separate Opus review remains pending."
       ],
       "bundle": {
         "path": "/Users/simon/work/personal/skill-study-private/concise-writing/e-iteration-20261018/subjects/20261018T051146350Z-cw-e-iteration-codex-candidate-targeted-e7e43852-c810-416b-b717-84e560f47bd0-5_36itqr",
@@ -125,7 +141,15 @@
         },
         "verified": true
       },
-      "result": null
+      "result": {
+        "result_id": "codex-e-iteration-01-candidate-targeted-1-1-assessment",
+        "record": {
+          "path": "skill-studies/concise-writing/results/20261018T051146350Z-cw-e-iteration-codex-candidate-targeted-e7e43852-c810-416b-b717-84e560f47bd0-5_36itqr.json",
+          "sha256": "456a5488cc6bac49b2f585e360ca2916188fab238da476b971a91b6b045e9c74",
+          "version": "2",
+          "git_revision": "a2473348f115f15faf478cbf742e8a68a8bb1f6c"
+        }
+      }
     },
     {
       "attempt_id": "codex-e-iteration-01-candidate-fuller-1-1",
@@ -155,7 +179,7 @@
         "charge": 1
       },
       "limitations": [
-        "Direct-session result prepared; committed result pins pending. Original inventory wrapper retained alongside the conforming canonical wrapper; raw bytes unchanged."
+        "Codex active-session assessment; no blind, held-out or independent assessor claim. Inventory wrapper corrected without raw mutation or model repetition. Separate Opus review remains pending."
       ],
       "bundle": {
         "path": "/Users/simon/work/personal/skill-study-private/concise-writing/e-iteration-20261018/subjects/20261018T051228660Z-cw-e-iteration-codex-candidate-fuller-7fc1ecd9-fbb4-44c2-aeaa-dacbd61e0297-26pqgmvu",
@@ -166,7 +190,15 @@
         },
         "verified": true
       },
-      "result": null
+      "result": {
+        "result_id": "codex-e-iteration-01-candidate-fuller-1-1-assessment",
+        "record": {
+          "path": "skill-studies/concise-writing/results/20261018T051228660Z-cw-e-iteration-codex-candidate-fuller-7fc1ecd9-fbb4-44c2-aeaa-dacbd61e0297-26pqgmvu.json",
+          "sha256": "dfbb9e0b7f186b58bf7e35869de80e39dde06828d15a13da5f1400705762eecd",
+          "version": "2",
+          "git_revision": "a2473348f115f15faf478cbf742e8a68a8bb1f6c"
+        }
+      }
     },
     {
       "attempt_id": "codex-e-iteration-01-original-2-1",
@@ -196,7 +228,7 @@
         "charge": 1
       },
       "limitations": [
-        "Direct-session result prepared; committed result pins pending. Original inventory wrapper retained alongside the conforming canonical wrapper; raw bytes unchanged."
+        "Codex active-session assessment; no blind, held-out or independent assessor claim. Inventory wrapper corrected without raw mutation or model repetition. Separate Opus review remains pending."
       ],
       "bundle": {
         "path": "/Users/simon/work/personal/skill-study-private/concise-writing/e-iteration-20261018/subjects/20261018T051253670Z-cw-e-iteration-codex-original-d1647634-ca2f-43a9-b929-dac2f8346565-1lzfkszs",
@@ -207,7 +239,15 @@
         },
         "verified": true
       },
-      "result": null
+      "result": {
+        "result_id": "codex-e-iteration-01-original-2-1-assessment",
+        "record": {
+          "path": "skill-studies/concise-writing/results/20261018T051253670Z-cw-e-iteration-codex-original-d1647634-ca2f-43a9-b929-dac2f8346565-1lzfkszs.json",
+          "sha256": "4211cbd06c339a1f7273596507f1e6a7336a00fae268f8fd64a3287dda17aa09",
+          "version": "2",
+          "git_revision": "a2473348f115f15faf478cbf742e8a68a8bb1f6c"
+        }
+      }
     },
     {
       "attempt_id": "codex-e-iteration-01-candidate-targeted-2-1",
@@ -237,7 +277,7 @@
         "charge": 1
       },
       "limitations": [
-        "Direct-session result prepared; committed result pins pending. Original inventory wrapper retained alongside the conforming canonical wrapper; raw bytes unchanged."
+        "Codex active-session assessment; no blind, held-out or independent assessor claim. Inventory wrapper corrected without raw mutation or model repetition. Separate Opus review remains pending."
       ],
       "bundle": {
         "path": "/Users/simon/work/personal/skill-study-private/concise-writing/e-iteration-20261018/subjects/20261018T051321362Z-cw-e-iteration-codex-candidate-targeted-8f8330b0-e06a-4b78-81a5-ea1d8951ed9e-ux69nnwa",
@@ -248,7 +288,15 @@
         },
         "verified": true
       },
-      "result": null
+      "result": {
+        "result_id": "codex-e-iteration-01-candidate-targeted-2-1-assessment",
+        "record": {
+          "path": "skill-studies/concise-writing/results/20261018T051321362Z-cw-e-iteration-codex-candidate-targeted-8f8330b0-e06a-4b78-81a5-ea1d8951ed9e-ux69nnwa.json",
+          "sha256": "bacaf150fc3cc67c970531f9a94fceb2b12815334da0c9c2e8c9092c9365046a",
+          "version": "2",
+          "git_revision": "a2473348f115f15faf478cbf742e8a68a8bb1f6c"
+        }
+      }
     },
     {
       "attempt_id": "codex-e-iteration-01-candidate-fuller-2-1",
@@ -278,7 +326,7 @@
         "charge": 1
       },
       "limitations": [
-        "Direct-session result prepared; committed result pins pending. Original inventory wrapper retained alongside the conforming canonical wrapper; raw bytes unchanged."
+        "Codex active-session assessment; no blind, held-out or independent assessor claim. Inventory wrapper corrected without raw mutation or model repetition. Separate Opus review remains pending."
       ],
       "bundle": {
         "path": "/Users/simon/work/personal/skill-study-private/concise-writing/e-iteration-20261018/subjects/20261018T051346826Z-cw-e-iteration-codex-candidate-fuller-882da7b4-40c1-4798-9bf8-505d145aa4b6-woqf6yrz",
@@ -289,7 +337,15 @@
         },
         "verified": true
       },
-      "result": null
+      "result": {
+        "result_id": "codex-e-iteration-01-candidate-fuller-2-1-assessment",
+        "record": {
+          "path": "skill-studies/concise-writing/results/20261018T051346826Z-cw-e-iteration-codex-candidate-fuller-882da7b4-40c1-4798-9bf8-505d145aa4b6-woqf6yrz.json",
+          "sha256": "3466a7c3a3e8d86f70075a6ccd217186edaa2b02690dc99b44e6fd9f829c27f6",
+          "version": "2",
+          "git_revision": "a2473348f115f15faf478cbf742e8a68a8bb1f6c"
+        }
+      }
     },
     {
       "attempt_id": "codex-e-iteration-01-control-2-1",
@@ -319,7 +375,7 @@
         "charge": 1
       },
       "limitations": [
-        "Direct-session result prepared; committed result pins pending. Original inventory wrapper retained alongside the conforming canonical wrapper; raw bytes unchanged."
+        "Codex active-session assessment; no blind, held-out or independent assessor claim. Inventory wrapper corrected without raw mutation or model repetition. Separate Opus review remains pending."
       ],
       "bundle": {
         "path": "/Users/simon/work/personal/skill-study-private/concise-writing/e-iteration-20261018/subjects/20261018T051411647Z-cw-e-iteration-codex-control-1fa014b7-c605-4f33-86a5-7b200f5c99f5-rgcml4ta",
@@ -330,7 +386,15 @@
         },
         "verified": true
       },
-      "result": null
+      "result": {
+        "result_id": "codex-e-iteration-01-control-2-1-assessment",
+        "record": {
+          "path": "skill-studies/concise-writing/results/20261018T051411647Z-cw-e-iteration-codex-control-1fa014b7-c605-4f33-86a5-7b200f5c99f5-rgcml4ta.json",
+          "sha256": "1da69bd36466e6f2da7513b81943be4da10f0406187f6d86c5e551a4a8aed32b",
+          "version": "2",
+          "git_revision": "a2473348f115f15faf478cbf742e8a68a8bb1f6c"
+        }
+      }
     },
     {
       "attempt_id": "codex-e-iteration-01-candidate-targeted-3-1",
@@ -360,7 +424,7 @@
         "charge": 1
       },
       "limitations": [
-        "Direct-session result prepared; committed result pins pending. Original inventory wrapper retained alongside the conforming canonical wrapper; raw bytes unchanged."
+        "Codex active-session assessment; no blind, held-out or independent assessor claim. Inventory wrapper corrected without raw mutation or model repetition. Separate Opus review remains pending."
       ],
       "bundle": {
         "path": "/Users/simon/work/personal/skill-study-private/concise-writing/e-iteration-20261018/subjects/20261018T051436170Z-cw-e-iteration-codex-candidate-targeted-ba36faa6-3225-49b3-8dd4-a4a8f6357125-sc798kxj",
@@ -371,7 +435,15 @@
         },
         "verified": true
       },
-      "result": null
+      "result": {
+        "result_id": "codex-e-iteration-01-candidate-targeted-3-1-assessment",
+        "record": {
+          "path": "skill-studies/concise-writing/results/20261018T051436170Z-cw-e-iteration-codex-candidate-targeted-ba36faa6-3225-49b3-8dd4-a4a8f6357125-sc798kxj.json",
+          "sha256": "bda0d4c98e58d18d0766a462ffbbbffc8e20418a71f636ed67c3da3c0e08f51f",
+          "version": "2",
+          "git_revision": "a2473348f115f15faf478cbf742e8a68a8bb1f6c"
+        }
+      }
     },
     {
       "attempt_id": "codex-e-iteration-01-candidate-fuller-3-1",
@@ -401,7 +473,7 @@
         "charge": 1
       },
       "limitations": [
-        "Direct-session result prepared; committed result pins pending. Original inventory wrapper retained alongside the conforming canonical wrapper; raw bytes unchanged."
+        "Codex active-session assessment; no blind, held-out or independent assessor claim. Inventory wrapper corrected without raw mutation or model repetition. Separate Opus review remains pending."
       ],
       "bundle": {
         "path": "/Users/simon/work/personal/skill-study-private/concise-writing/e-iteration-20261018/subjects/20261018T051500106Z-cw-e-iteration-codex-candidate-fuller-6f64050e-5950-497d-aaf1-1021a30499a8-h5ekxrir",
@@ -412,7 +484,15 @@
         },
         "verified": true
       },
-      "result": null
+      "result": {
+        "result_id": "codex-e-iteration-01-candidate-fuller-3-1-assessment",
+        "record": {
+          "path": "skill-studies/concise-writing/results/20261018T051500106Z-cw-e-iteration-codex-candidate-fuller-6f64050e-5950-497d-aaf1-1021a30499a8-h5ekxrir.json",
+          "sha256": "577db958480750eaa006c8da488fd2694a24aa48392c36615d031f7dee3ca06f",
+          "version": "2",
+          "git_revision": "a2473348f115f15faf478cbf742e8a68a8bb1f6c"
+        }
+      }
     },
     {
       "attempt_id": "codex-e-iteration-01-control-3-1",
@@ -442,7 +522,7 @@
         "charge": 1
       },
       "limitations": [
-        "Direct-session result prepared; committed result pins pending. Original inventory wrapper retained alongside the conforming canonical wrapper; raw bytes unchanged."
+        "Codex active-session assessment; no blind, held-out or independent assessor claim. Inventory wrapper corrected without raw mutation or model repetition. Separate Opus review remains pending."
       ],
       "bundle": {
         "path": "/Users/simon/work/personal/skill-study-private/concise-writing/e-iteration-20261018/subjects/20261018T051523062Z-cw-e-iteration-codex-control-4708fe45-848d-4162-8d14-e235fea4a0e7-ma41r23o",
@@ -453,7 +533,15 @@
         },
         "verified": true
       },
-      "result": null
+      "result": {
+        "result_id": "codex-e-iteration-01-control-3-1-assessment",
+        "record": {
+          "path": "skill-studies/concise-writing/results/20261018T051523062Z-cw-e-iteration-codex-control-4708fe45-848d-4162-8d14-e235fea4a0e7-ma41r23o.json",
+          "sha256": "16acb4faf147341229ad5ccc3e26e93970c995d21443e577b15efd63ba55fa00",
+          "version": "2",
+          "git_revision": "a2473348f115f15faf478cbf742e8a68a8bb1f6c"
+        }
+      }
     },
     {
       "attempt_id": "codex-e-iteration-01-original-3-1",
@@ -483,7 +571,7 @@
         "charge": 1
       },
       "limitations": [
-        "Direct-session result prepared; committed result pins pending. Original inventory wrapper retained alongside the conforming canonical wrapper; raw bytes unchanged."
+        "Codex active-session assessment; no blind, held-out or independent assessor claim. Inventory wrapper corrected without raw mutation or model repetition. Separate Opus review remains pending."
       ],
       "bundle": {
         "path": "/Users/simon/work/personal/skill-study-private/concise-writing/e-iteration-20261018/subjects/20261018T051551955Z-cw-e-iteration-codex-original-5a150659-e896-4b5e-b272-8cdb68336b78-r4k0sbi4",
@@ -494,7 +582,15 @@
         },
         "verified": true
       },
-      "result": null
+      "result": {
+        "result_id": "codex-e-iteration-01-original-3-1-assessment",
+        "record": {
+          "path": "skill-studies/concise-writing/results/20261018T051551955Z-cw-e-iteration-codex-original-5a150659-e896-4b5e-b272-8cdb68336b78-r4k0sbi4.json",
+          "sha256": "0f4917d6fc6a280173c8dcf06459a297701b7c48428425cb7ff7133fbf4c195a",
+          "version": "2",
+          "git_revision": "a2473348f115f15faf478cbf742e8a68a8bb1f6c"
+        }
+      }
     },
     {
       "attempt_id": "codex-e-iteration-01-candidate-fuller-4-1",
@@ -524,7 +620,7 @@
         "charge": 1
       },
       "limitations": [
-        "Direct-session result prepared; committed result pins pending. Original inventory wrapper retained alongside the conforming canonical wrapper; raw bytes unchanged."
+        "Codex active-session assessment; no blind, held-out or independent assessor claim. Inventory wrapper corrected without raw mutation or model repetition. Separate Opus review remains pending."
       ],
       "bundle": {
         "path": "/Users/simon/work/personal/skill-study-private/concise-writing/e-iteration-20261018/subjects/20261018T051614908Z-cw-e-iteration-codex-candidate-fuller-05df1b47-da21-43ae-9383-5355fe01d91b-qa_ulmmg",
@@ -535,7 +631,15 @@
         },
         "verified": true
       },
-      "result": null
+      "result": {
+        "result_id": "codex-e-iteration-01-candidate-fuller-4-1-assessment",
+        "record": {
+          "path": "skill-studies/concise-writing/results/20261018T051614908Z-cw-e-iteration-codex-candidate-fuller-05df1b47-da21-43ae-9383-5355fe01d91b-qa_ulmmg.json",
+          "sha256": "93a31babe97ff5bae0bbfdead04017f06df0a2a15cea1b80727893ed3ccd2e36",
+          "version": "2",
+          "git_revision": "a2473348f115f15faf478cbf742e8a68a8bb1f6c"
+        }
+      }
     },
     {
       "attempt_id": "codex-e-iteration-01-control-4-1",
@@ -565,7 +669,7 @@
         "charge": 1
       },
       "limitations": [
-        "Direct-session result prepared; committed result pins pending. Original inventory wrapper retained alongside the conforming canonical wrapper; raw bytes unchanged."
+        "Codex active-session assessment; no blind, held-out or independent assessor claim. Inventory wrapper corrected without raw mutation or model repetition. Separate Opus review remains pending."
       ],
       "bundle": {
         "path": "/Users/simon/work/personal/skill-study-private/concise-writing/e-iteration-20261018/subjects/20261018T051642502Z-cw-e-iteration-codex-control-a04f3cc0-fffc-4f91-abda-28e1726ba036-q5yas2pm",
@@ -576,7 +680,15 @@
         },
         "verified": true
       },
-      "result": null
+      "result": {
+        "result_id": "codex-e-iteration-01-control-4-1-assessment",
+        "record": {
+          "path": "skill-studies/concise-writing/results/20261018T051642502Z-cw-e-iteration-codex-control-a04f3cc0-fffc-4f91-abda-28e1726ba036-q5yas2pm.json",
+          "sha256": "19a77f876166583f533d1ffbd71b21c2ff42469e7811ae70199e0c85a5545056",
+          "version": "2",
+          "git_revision": "a2473348f115f15faf478cbf742e8a68a8bb1f6c"
+        }
+      }
     },
     {
       "attempt_id": "codex-e-iteration-01-original-4-1",
@@ -606,7 +718,7 @@
         "charge": 1
       },
       "limitations": [
-        "Direct-session result prepared; committed result pins pending. Original inventory wrapper retained alongside the conforming canonical wrapper; raw bytes unchanged."
+        "Codex active-session assessment; no blind, held-out or independent assessor claim. Inventory wrapper corrected without raw mutation or model repetition. Separate Opus review remains pending."
       ],
       "bundle": {
         "path": "/Users/simon/work/personal/skill-study-private/concise-writing/e-iteration-20261018/subjects/20261018T051706366Z-cw-e-iteration-codex-original-8b5bda96-b510-4924-ae6e-be238a3c00e7-qzeptuhu",
@@ -617,7 +729,15 @@
         },
         "verified": true
       },
-      "result": null
+      "result": {
+        "result_id": "codex-e-iteration-01-original-4-1-assessment",
+        "record": {
+          "path": "skill-studies/concise-writing/results/20261018T051706366Z-cw-e-iteration-codex-original-8b5bda96-b510-4924-ae6e-be238a3c00e7-qzeptuhu.json",
+          "sha256": "fbf979d97e8b9fc6f121c26c1d894e41051b655be3d3655e8a0def175a9b9465",
+          "version": "2",
+          "git_revision": "a2473348f115f15faf478cbf742e8a68a8bb1f6c"
+        }
+      }
     },
     {
       "attempt_id": "codex-e-iteration-01-candidate-targeted-4-1",
@@ -647,7 +767,7 @@
         "charge": 1
       },
       "limitations": [
-        "Direct-session result prepared; committed result pins pending. Original inventory wrapper retained alongside the conforming canonical wrapper; raw bytes unchanged."
+        "Codex active-session assessment; no blind, held-out or independent assessor claim. Inventory wrapper corrected without raw mutation or model repetition. Separate Opus review remains pending."
       ],
       "bundle": {
         "path": "/Users/simon/work/personal/skill-study-private/concise-writing/e-iteration-20261018/subjects/20261018T051739999Z-cw-e-iteration-codex-candidate-targeted-2e850951-41d3-42ae-8d7f-19d8162e9a97-muczclp3",
@@ -658,7 +778,15 @@
         },
         "verified": true
       },
-      "result": null
+      "result": {
+        "result_id": "codex-e-iteration-01-candidate-targeted-4-1-assessment",
+        "record": {
+          "path": "skill-studies/concise-writing/results/20261018T051739999Z-cw-e-iteration-codex-candidate-targeted-2e850951-41d3-42ae-8d7f-19d8162e9a97-muczclp3.json",
+          "sha256": "eb5f525e1915f6a9844b39f642a119a84aadffc5fc793f88be0ef141d1c5b64d",
+          "version": "2",
+          "git_revision": "a2473348f115f15faf478cbf742e8a68a8bb1f6c"
+        }
+      }
     },
     {
       "attempt_id": "codex-e-iteration-01-control-5-1",
@@ -688,7 +816,7 @@
         "charge": 1
       },
       "limitations": [
-        "Direct-session result prepared; committed result pins pending. Original inventory wrapper retained alongside the conforming canonical wrapper; raw bytes unchanged."
+        "Codex active-session assessment; no blind, held-out or independent assessor claim. Inventory wrapper corrected without raw mutation or model repetition. Separate Opus review remains pending."
       ],
       "bundle": {
         "path": "/Users/simon/work/personal/skill-study-private/concise-writing/e-iteration-20261018/subjects/20261018T051816080Z-cw-e-iteration-codex-control-85286808-f286-4b31-99d7-1d8138cf5434-qcocvlnq",
@@ -699,7 +827,15 @@
         },
         "verified": true
       },
-      "result": null
+      "result": {
+        "result_id": "codex-e-iteration-01-control-5-1-assessment",
+        "record": {
+          "path": "skill-studies/concise-writing/results/20261018T051816080Z-cw-e-iteration-codex-control-85286808-f286-4b31-99d7-1d8138cf5434-qcocvlnq.json",
+          "sha256": "28be5287c57c2d28559ddc3e624be4d86846d138ac1a7b83b9390a556a272637",
+          "version": "2",
+          "git_revision": "a2473348f115f15faf478cbf742e8a68a8bb1f6c"
+        }
+      }
     },
     {
       "attempt_id": "codex-e-iteration-01-original-5-1",
@@ -729,7 +865,7 @@
         "charge": 1
       },
       "limitations": [
-        "Direct-session result prepared; committed result pins pending. Original inventory wrapper retained alongside the conforming canonical wrapper; raw bytes unchanged."
+        "Codex active-session assessment; no blind, held-out or independent assessor claim. Inventory wrapper corrected without raw mutation or model repetition. Separate Opus review remains pending."
       ],
       "bundle": {
         "path": "/Users/simon/work/personal/skill-study-private/concise-writing/e-iteration-20261018/subjects/20261018T051841060Z-cw-e-iteration-codex-original-b76a3ae9-51af-45d4-b6c8-79d627b08fd4-9kxwadn1",
@@ -740,7 +876,15 @@
         },
         "verified": true
       },
-      "result": null
+      "result": {
+        "result_id": "codex-e-iteration-01-original-5-1-assessment",
+        "record": {
+          "path": "skill-studies/concise-writing/results/20261018T051841060Z-cw-e-iteration-codex-original-b76a3ae9-51af-45d4-b6c8-79d627b08fd4-9kxwadn1.json",
+          "sha256": "d08b4807c5e3db492534d765b1336cdea25fa81c137b0a1b3597e13f748c4b7b",
+          "version": "2",
+          "git_revision": "a2473348f115f15faf478cbf742e8a68a8bb1f6c"
+        }
+      }
     },
     {
       "attempt_id": "codex-e-iteration-01-candidate-targeted-5-1",
@@ -770,7 +914,7 @@
         "charge": 1
       },
       "limitations": [
-        "Direct-session result prepared; committed result pins pending. Original inventory wrapper retained alongside the conforming canonical wrapper; raw bytes unchanged."
+        "Codex active-session assessment; no blind, held-out or independent assessor claim. Inventory wrapper corrected without raw mutation or model repetition. Separate Opus review remains pending."
       ],
       "bundle": {
         "path": "/Users/simon/work/personal/skill-study-private/concise-writing/e-iteration-20261018/subjects/20261018T051906834Z-cw-e-iteration-codex-candidate-targeted-7ccecd07-313f-452f-94e8-e06a191efc1b-1zd2e0ar",
@@ -781,7 +925,15 @@
         },
         "verified": true
       },
-      "result": null
+      "result": {
+        "result_id": "codex-e-iteration-01-candidate-targeted-5-1-assessment",
+        "record": {
+          "path": "skill-studies/concise-writing/results/20261018T051906834Z-cw-e-iteration-codex-candidate-targeted-7ccecd07-313f-452f-94e8-e06a191efc1b-1zd2e0ar.json",
+          "sha256": "7e6f17243ea8b6070070790f7f5ff0d29bf0a8d1bb958e892aa67afd16df580f",
+          "version": "2",
+          "git_revision": "a2473348f115f15faf478cbf742e8a68a8bb1f6c"
+        }
+      }
     },
     {
       "attempt_id": "codex-e-iteration-01-candidate-fuller-5-1",
@@ -811,7 +963,7 @@
         "charge": 1
       },
       "limitations": [
-        "Direct-session result prepared; committed result pins pending. Original inventory wrapper retained alongside the conforming canonical wrapper; raw bytes unchanged."
+        "Codex active-session assessment; no blind, held-out or independent assessor claim. Inventory wrapper corrected without raw mutation or model repetition. Separate Opus review remains pending."
       ],
       "bundle": {
         "path": "/Users/simon/work/personal/skill-study-private/concise-writing/e-iteration-20261018/subjects/20261018T051930374Z-cw-e-iteration-codex-candidate-fuller-b26c8ce9-5c8a-4520-bb7e-f87f7908dd9e-qm06x6_5",
@@ -822,7 +974,15 @@
         },
         "verified": true
       },
-      "result": null
+      "result": {
+        "result_id": "codex-e-iteration-01-candidate-fuller-5-1-assessment",
+        "record": {
+          "path": "skill-studies/concise-writing/results/20261018T051930374Z-cw-e-iteration-codex-candidate-fuller-b26c8ce9-5c8a-4520-bb7e-f87f7908dd9e-qm06x6_5.json",
+          "sha256": "80a5cc03b1936d7955a44b046207b57e62e15441cff9ce68f6323a31b654623a",
+          "version": "2",
+          "git_revision": "a2473348f115f15faf478cbf742e8a68a8bb1f6c"
+        }
+      }
     }
   ]
 }
