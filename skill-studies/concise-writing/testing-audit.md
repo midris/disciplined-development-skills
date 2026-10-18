@@ -8,7 +8,7 @@ The protocol owns current allocation approval and spending; this audit records c
 ## Conclusion
 
 The expanded collection, including the owner-required third native repetitions, is assessed.
-See the [protocol results](protocol.md#results-and-decision) for current evidence and the pending coverage decision.
+See the [protocol](protocol.md) for current decisions: the owner selected the original as the development base and directed effectiveness-first drafting using the complete evidence.
 The historical audit below explains why that scope was selected; it does not supersede the completed assessments.
 
 Keep both existing cases and their results, but do not treat them as sufficient coverage for the owner's expanded use.
@@ -120,8 +120,8 @@ Do not forecast a later rewrite as zero effort; its scope depends on observed fa
 
 ## Adequacy boundary
 
-The completed suite supplies three-repetition cross-provider evidence; baseline acceptance remains the owner’s decision.
-The walkthrough accepted scenario designs; the owner must now review observed outcomes and accept or revise the remaining coverage limits before edits.
+The completed suite supplies three-repetition cross-provider evidence; the owner selected the original as the editing base after the cross-model review.
+That direction authorizes the recorded preparation, without claiming effectiveness for the remaining untested uses or silently resolving assessor disagreements.
 Tailored skill authoring/compression is outside the owner-selected scope, not a hidden gate on ordinary CW adoption.
 Response-only detailed explanations, full DD orchestration, plan/spec generation and anchor-changing SSR composition remain outside the first allocation; revisit the relevant gap before adopting a change that depends on it.
 No full lifecycle success, live-skill change or adoption is claimed by this audit.

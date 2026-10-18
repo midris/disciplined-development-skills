@@ -98,7 +98,7 @@ Accepting some C handoff outputs as readable is defensible; unsupported factual 
 The original is qualitatively preferred in Claude A and E; comprehensive outputs sometimes retain more rationale or neutral framing in other cases.
 There is no clear overall version preference or demonstrated equivalent consequential quality on this evidence.
 Do not choose an editing base by counting model votes or applying the shorter-SKILL.md tie-break to tied Fable passes alone.
-The next owner discussion can use these existing examples to settle consequential losses and the editing objective; no additional model collection is proposed here.
+These examples distinguish lost requirements from acceptable compression; the protocol owns subsequent authoring decisions and allocations.
 Native D1 results remain unchanged and must accompany a later adoption decision; output quality does not resolve selection misses or over-triggering.
 
 ## Interpretation boundary
