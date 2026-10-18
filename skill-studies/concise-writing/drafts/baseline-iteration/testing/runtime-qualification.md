@@ -45,3 +45,16 @@ Never run Git inside retained bundles; read files or use disposable copies.
 Forty subjects and two Opus reviews are allocated; retries, replacement attempts, further wording rounds and full-suite collection are not automatically funded.
 The controller must record every attempt, including pre-invocation failures charged zero and uncertain charges that stop dispatch.
 The proposal's fixed post-E rules govern the next owner decision; no between-repetition changes or automatic authoring.
+
+## Retention metadata amendment after subject 21
+
+The collector initially wrote `version` instead of the shared consumer’s `format_version` and omitted the inventory’s `bundle` identity.
+Strict document checking caught this after all twenty Codex subjects and Claude’s first subject had stopped.
+Every raw bundle still matched its exact entry inventory; new canonical wrapper files preserve the same entries and leave the original wrappers untouched.
+The inventory producer now uses the required shared contract, and `test_collection_inventory.py` exercises its output through the actual study reference checker: unsupported-version RED, then GREEN.
+All twenty-one retained bundles also pass the recorded-capture verifier; no subject is rerun or reclassified.
+Only the post-invocation metadata producer and its controller pin change before Claude order 2; task, prompt, criteria, skill, model, shell setup and permissions stay byte-identical.
+The first production traces confirm the requested models.
+Codex supplies four packaged system skills; Claude also exposes runtime-provided catalog entries alongside CW, as the surrogate-HOME CLI check already demonstrates.
+The first Claude trace loads only the assigned CW body; catalog availability is distinct from loading extra instructions.
+Complete Skill delivery may omit YAML already represented by the catalog; compare the full instruction body before the first edit.

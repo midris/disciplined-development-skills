@@ -31,6 +31,10 @@ def write(path, value):
     temporary.replace(path)
 
 
+def inventory_record(destination, entries):
+    return {'format_version':'1','bundle':str(destination),'entries':entries}
+
+
 def main():
     number = int(sys.argv[1])
     slots = json.loads((HERE/'schedule.json').read_text())['slots']
@@ -80,7 +84,7 @@ def main():
     entries = inventory(source)
     assert inventory(destination) == entries, 'retention mismatch; original is retained'
     inv = destination.with_name(destination.name+'.inventory.json')
-    write(inv, {'version':'1','entries':entries})
+    write(inv, inventory_record(destination, entries))
     mechanical = json.loads((destination/'result.json').read_text())
     charge = int(mechanical['execution']['invocation_started'])
     authority = STUDY/'protocol.md'

@@ -45,6 +45,15 @@ The sequential collector claims each slot exclusively, checks frozen identities,
 Pre-allocation failures are recorded as zero-charge attempts; an interrupted publication/retention stops dispatch for manual reconciliation rather than starting a replacement.
 No new subject/evaluator call has yet been dispatched by this preparation.
 
+## Retention correction found during collection
+
+After subject 21, strict checking rejected the custom inventory wrapper’s version field and missing bundle identity.
+Collection paused; all twenty-one stopped raw bundles verified against their original entry lists.
+Canonical wrappers were published separately and checked through the actual reference consumer and recorded-capture verifier, without changing raw bundles or repeating models.
+The producer regression test failed for the actual unsupported-version defect before the format/bundle correction, then passed.
+Before resumption, the Claude controller-only manifest is amended prospectively; subject inputs, criteria and runtime settings remain unchanged, and the exact boundary is documented in runtime qualification.
+Prepared result records receive committed retrieval pins before acceptance; their missing provisional pins are publication incompleteness, not a relaxed validator rule.
+
 ## Second pass
 
 Re-read the corrected drafts, design, proposal, protocol authority/accounting, plan and affected evidence-summary pointers after the class sweep.
