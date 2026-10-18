@@ -1,0 +1,774 @@
+{
+  "prepared_at": "2026-10-18T05:51:38.977902+00:00",
+  "scope": "two fresh read-only Opus reviews, all40newEoutputs; no retries",
+  "model": "claude-opus-5-5",
+  "effort": "medium",
+  "active_assessor": "Codex controller",
+  "prompt": {
+    "path": "skill-studies/concise-writing/drafts/baseline-iteration/testing/evaluator-prompt.md",
+    "sha256": "34e2c9ea9dfc797194347d337de9855eeb01d0dfa757d9f39c260a67288672da"
+  },
+  "preparation_inventory": {
+    "path": "/Users/simon/work/personal/skill-study-private/concise-writing/e-iteration-20261018/review-inputs.inventory.json",
+    "sha256": "81a421aa308276ef101ec5f0c1a902940dbbe7812b202610dc7609c0f7836088",
+    "version": "1"
+  },
+  "groups": [
+    {
+      "order": 1,
+      "subject_provider": "codex",
+      "configuration": "skill-studies/concise-writing/drafts/baseline-iteration/testing/evaluation/configs/codex.json",
+      "configuration_sha256": "534bb0559a495d63da22170144e1619e9c8c02fd18717491e2940a8618794104",
+      "packet": "/Users/simon/work/personal/skill-study-private/concise-writing/e-iteration-20261018/review-inputs/codex",
+      "outputs": 20,
+      "input_files": [
+        {
+          "path": "/Users/simon/work/personal/skill-study-private/concise-writing/e-iteration-20261018/review-inputs/codex/EVALUATION-INDEX.json",
+          "target": "EVALUATION-INDEX.json",
+          "sha256": "dc1006b08b17de88d32f650650ac58debf35ae1716d72bf87728b634085952ed"
+        },
+        {
+          "path": "/Users/simon/work/personal/skill-study-private/concise-writing/e-iteration-20261018/review-inputs/codex/WORD-COUNTS.json",
+          "target": "WORD-COUNTS.json",
+          "sha256": "bedeb69db08e2b774337a64a287ea1ba7498523e8fa1621c5cebdb4dcdf6d0ea"
+        },
+        {
+          "path": "/Users/simon/work/personal/skill-study-private/concise-writing/e-iteration-20261018/review-inputs/codex/criteria.md",
+          "target": "criteria.md",
+          "sha256": "3021484873d0c50da1a0024c4903c532562d8e58643cdcc6b18c0be10629ac6b"
+        },
+        {
+          "path": "/Users/simon/work/personal/skill-study-private/concise-writing/e-iteration-20261018/review-inputs/codex/new-notes.md",
+          "target": "new-notes.md",
+          "sha256": "8ff2f1ece29e88f352aefe87506c1afcf7e3174849dd978d20ec7065e8da3b74"
+        },
+        {
+          "path": "/Users/simon/work/personal/skill-study-private/concise-writing/e-iteration-20261018/review-inputs/codex/outputs/candidate-fuller-1.md",
+          "target": "outputs/candidate-fuller-1.md",
+          "sha256": "b1297f28af43f8d3dc958b819c0ed3cc2ff33849e89168026da9d7a06402e1bd"
+        },
+        {
+          "path": "/Users/simon/work/personal/skill-study-private/concise-writing/e-iteration-20261018/review-inputs/codex/outputs/candidate-fuller-2.md",
+          "target": "outputs/candidate-fuller-2.md",
+          "sha256": "12151b8826e1904d2c4bad2e753f0257536c9b4d05c57717ca30612d6d6f8f04"
+        },
+        {
+          "path": "/Users/simon/work/personal/skill-study-private/concise-writing/e-iteration-20261018/review-inputs/codex/outputs/candidate-fuller-3.md",
+          "target": "outputs/candidate-fuller-3.md",
+          "sha256": "80662f2ed03a4ba523b00b2d183938a6642d4900b67ae145061f967854fcecfc"
+        },
+        {
+          "path": "/Users/simon/work/personal/skill-study-private/concise-writing/e-iteration-20261018/review-inputs/codex/outputs/candidate-fuller-4.md",
+          "target": "outputs/candidate-fuller-4.md",
+          "sha256": "a0767e65b1aba38fca9ef097a0d81676c3df1c61905745bc85e115fc13924351"
+        },
+        {
+          "path": "/Users/simon/work/personal/skill-study-private/concise-writing/e-iteration-20261018/review-inputs/codex/outputs/candidate-fuller-5.md",
+          "target": "outputs/candidate-fuller-5.md",
+          "sha256": "7c698a0995dbc27b7c830bf491185bcf3c4c19364aebc027d049ae73a0c84434"
+        },
+        {
+          "path": "/Users/simon/work/personal/skill-study-private/concise-writing/e-iteration-20261018/review-inputs/codex/outputs/candidate-targeted-1.md",
+          "target": "outputs/candidate-targeted-1.md",
+          "sha256": "3b83ab4f27a43c572483dbc6a37d7658e7bdff32fb0b41d103d1560a334d6d45"
+        },
+        {
+          "path": "/Users/simon/work/personal/skill-study-private/concise-writing/e-iteration-20261018/review-inputs/codex/outputs/candidate-targeted-2.md",
+          "target": "outputs/candidate-targeted-2.md",
+          "sha256": "1a8a37a8ea8f818c1bbd415102decd6c248fc469af2a25a11d3df557223550a8"
+        },
+        {
+          "path": "/Users/simon/work/personal/skill-study-private/concise-writing/e-iteration-20261018/review-inputs/codex/outputs/candidate-targeted-3.md",
+          "target": "outputs/candidate-targeted-3.md",
+          "sha256": "e555dde02d09f15a79a28f2b1b38df78bdb616817fb1a745d7df60c4443727d0"
+        },
+        {
+          "path": "/Users/simon/work/personal/skill-study-private/concise-writing/e-iteration-20261018/review-inputs/codex/outputs/candidate-targeted-4.md",
+          "target": "outputs/candidate-targeted-4.md",
+          "sha256": "6fe64a251c58ac7d444442ea3b12c3e2917938ed68c5d85e32c353eac90100d7"
+        },
+        {
+          "path": "/Users/simon/work/personal/skill-study-private/concise-writing/e-iteration-20261018/review-inputs/codex/outputs/candidate-targeted-5.md",
+          "target": "outputs/candidate-targeted-5.md",
+          "sha256": "c8ef39afe6529d70afba5b724cee43f457fbd95fcbb0ca5675306643e6660d1c"
+        },
+        {
+          "path": "/Users/simon/work/personal/skill-study-private/concise-writing/e-iteration-20261018/review-inputs/codex/outputs/control-1.md",
+          "target": "outputs/control-1.md",
+          "sha256": "425982647428d900f3c837c1274ef244cae5bb0985cde1c24102881e7eb82308"
+        },
+        {
+          "path": "/Users/simon/work/personal/skill-study-private/concise-writing/e-iteration-20261018/review-inputs/codex/outputs/control-2.md",
+          "target": "outputs/control-2.md",
+          "sha256": "9aa054e774994d0a109953285ccfc24047be3897949218a5a63998e55c608aad"
+        },
+        {
+          "path": "/Users/simon/work/personal/skill-study-private/concise-writing/e-iteration-20261018/review-inputs/codex/outputs/control-3.md",
+          "target": "outputs/control-3.md",
+          "sha256": "ed6ee361203e73bda8ff45f65c3f1994ff7f8007bd0d2c23f79a9ea1cf318f3d"
+        },
+        {
+          "path": "/Users/simon/work/personal/skill-study-private/concise-writing/e-iteration-20261018/review-inputs/codex/outputs/control-4.md",
+          "target": "outputs/control-4.md",
+          "sha256": "c77fc8616456540b2dc7d24fa186e58d03f1f9db8417dce1b855874da50c5819"
+        },
+        {
+          "path": "/Users/simon/work/personal/skill-study-private/concise-writing/e-iteration-20261018/review-inputs/codex/outputs/control-5.md",
+          "target": "outputs/control-5.md",
+          "sha256": "703bebf644642633a6bb984d848f1545786bb7790531335cb99f9fe6b0b1a2c0"
+        },
+        {
+          "path": "/Users/simon/work/personal/skill-study-private/concise-writing/e-iteration-20261018/review-inputs/codex/outputs/original-1.md",
+          "target": "outputs/original-1.md",
+          "sha256": "b9489cee4e8aa9abbd80d456a5b62d6b3cf47e5fe0df2730a5c0bfb77cb43963"
+        },
+        {
+          "path": "/Users/simon/work/personal/skill-study-private/concise-writing/e-iteration-20261018/review-inputs/codex/outputs/original-2.md",
+          "target": "outputs/original-2.md",
+          "sha256": "17058b1f3040c9d820ed3e71534e1640268a9afc317c9da037b61c8833fd791a"
+        },
+        {
+          "path": "/Users/simon/work/personal/skill-study-private/concise-writing/e-iteration-20261018/review-inputs/codex/outputs/original-3.md",
+          "target": "outputs/original-3.md",
+          "sha256": "4a16bb827134b451ae66d71dffabb1f40f9162881c2208d26e355683a9e99605"
+        },
+        {
+          "path": "/Users/simon/work/personal/skill-study-private/concise-writing/e-iteration-20261018/review-inputs/codex/outputs/original-4.md",
+          "target": "outputs/original-4.md",
+          "sha256": "8271729bef49f4aed3ed23754c6eacd42f32884490a4b474ad8c2d68d3fda1c8"
+        },
+        {
+          "path": "/Users/simon/work/personal/skill-study-private/concise-writing/e-iteration-20261018/review-inputs/codex/outputs/original-5.md",
+          "target": "outputs/original-5.md",
+          "sha256": "64b45e5b9c38053b179c6f4dc4eedd3421fd5fea2799e7801eac84dc01987873"
+        },
+        {
+          "path": "/Users/simon/work/personal/skill-study-private/concise-writing/e-iteration-20261018/review-inputs/codex/policy.txt",
+          "target": "policy.txt",
+          "sha256": "9f8125d86d72a368cc12bdbc4c64cc1d7ee188f604fc13130dcd9f8313981c33"
+        },
+        {
+          "path": "/Users/simon/work/personal/skill-study-private/concise-writing/e-iteration-20261018/review-inputs/codex/prior-assessment.md",
+          "target": "prior-assessment.md",
+          "sha256": "e49a234c09094f079a2b8eaeb4201a4ab32758d3f90deb0cf5ae48ab7d14ac4f"
+        },
+        {
+          "path": "/Users/simon/work/personal/skill-study-private/concise-writing/e-iteration-20261018/review-inputs/codex/source.md",
+          "target": "source.md",
+          "sha256": "93c23afd44aab52dfcd2bca53f3db0020a41f650d46d4c59a09595539dc72491"
+        },
+        {
+          "path": "/Users/simon/work/personal/skill-study-private/concise-writing/e-iteration-20261018/review-inputs/codex/task.md",
+          "target": "task.md",
+          "sha256": "d625196b6cf438dfe556238803851c5b86ae7f2eb07acaa31ddceb5c6e9b8db0"
+        }
+      ]
+    },
+    {
+      "order": 2,
+      "subject_provider": "claude",
+      "configuration": "skill-studies/concise-writing/drafts/baseline-iteration/testing/evaluation/configs/claude.json",
+      "configuration_sha256": "3f8ea2ab783b5c314881473fe8be7dc42ccebd8388def581b69727d28cc9bc54",
+      "packet": "/Users/simon/work/personal/skill-study-private/concise-writing/e-iteration-20261018/review-inputs/claude",
+      "outputs": 20,
+      "input_files": [
+        {
+          "path": "/Users/simon/work/personal/skill-study-private/concise-writing/e-iteration-20261018/review-inputs/claude/EVALUATION-INDEX.json",
+          "target": "EVALUATION-INDEX.json",
+          "sha256": "2036bda36c9061835aaa702d0fd56e6b7ded969d558abafaad6e57cf69487f41"
+        },
+        {
+          "path": "/Users/simon/work/personal/skill-study-private/concise-writing/e-iteration-20261018/review-inputs/claude/WORD-COUNTS.json",
+          "target": "WORD-COUNTS.json",
+          "sha256": "c47e756b0d90559bd0e859508bd228457efbfddf0265b490a1538998fc03f140"
+        },
+        {
+          "path": "/Users/simon/work/personal/skill-study-private/concise-writing/e-iteration-20261018/review-inputs/claude/criteria.md",
+          "target": "criteria.md",
+          "sha256": "3021484873d0c50da1a0024c4903c532562d8e58643cdcc6b18c0be10629ac6b"
+        },
+        {
+          "path": "/Users/simon/work/personal/skill-study-private/concise-writing/e-iteration-20261018/review-inputs/claude/new-notes.md",
+          "target": "new-notes.md",
+          "sha256": "8ff2f1ece29e88f352aefe87506c1afcf7e3174849dd978d20ec7065e8da3b74"
+        },
+        {
+          "path": "/Users/simon/work/personal/skill-study-private/concise-writing/e-iteration-20261018/review-inputs/claude/outputs/candidate-fuller-1.md",
+          "target": "outputs/candidate-fuller-1.md",
+          "sha256": "f7415566718cad950f25e6497d0d72268c6f32f0be73cb479fd9f828d1bdd1bf"
+        },
+        {
+          "path": "/Users/simon/work/personal/skill-study-private/concise-writing/e-iteration-20261018/review-inputs/claude/outputs/candidate-fuller-2.md",
+          "target": "outputs/candidate-fuller-2.md",
+          "sha256": "4fbb86c2b995998d9ac4f70179547e0fb66d713679aa7287a42d723261bd7cb6"
+        },
+        {
+          "path": "/Users/simon/work/personal/skill-study-private/concise-writing/e-iteration-20261018/review-inputs/claude/outputs/candidate-fuller-3.md",
+          "target": "outputs/candidate-fuller-3.md",
+          "sha256": "8b5a43127f6600d369c9967df4c862de9e2a4fa9618f230e0fe04a59288efb6b"
+        },
+        {
+          "path": "/Users/simon/work/personal/skill-study-private/concise-writing/e-iteration-20261018/review-inputs/claude/outputs/candidate-fuller-4.md",
+          "target": "outputs/candidate-fuller-4.md",
+          "sha256": "d05b6f672c2bb7317bfd3703a3f41268dfef086a2933522783d58ff4c9ea7398"
+        },
+        {
+          "path": "/Users/simon/work/personal/skill-study-private/concise-writing/e-iteration-20261018/review-inputs/claude/outputs/candidate-fuller-5.md",
+          "target": "outputs/candidate-fuller-5.md",
+          "sha256": "a673525d589b9a8745ffe299a2edb6aa4bc75236390cb45367554620195d0e41"
+        },
+        {
+          "path": "/Users/simon/work/personal/skill-study-private/concise-writing/e-iteration-20261018/review-inputs/claude/outputs/candidate-targeted-1.md",
+          "target": "outputs/candidate-targeted-1.md",
+          "sha256": "6279e405a1c1a3c7b608e3ae7f959fe7276fc41e627c4c57ec9a24d8d9ac7f3e"
+        },
+        {
+          "path": "/Users/simon/work/personal/skill-study-private/concise-writing/e-iteration-20261018/review-inputs/claude/outputs/candidate-targeted-2.md",
+          "target": "outputs/candidate-targeted-2.md",
+          "sha256": "8e1d2592fd18874d4b99626d6966148837273a33d4b8a094034818f1b6aad7e9"
+        },
+        {
+          "path": "/Users/simon/work/personal/skill-study-private/concise-writing/e-iteration-20261018/review-inputs/claude/outputs/candidate-targeted-3.md",
+          "target": "outputs/candidate-targeted-3.md",
+          "sha256": "0007b8077b69a4868cf2f6748fcc6ed83027c60b253dd9b2ad4ea8c4f379c463"
+        },
+        {
+          "path": "/Users/simon/work/personal/skill-study-private/concise-writing/e-iteration-20261018/review-inputs/claude/outputs/candidate-targeted-4.md",
+          "target": "outputs/candidate-targeted-4.md",
+          "sha256": "91699593c9f2858b6f5cb2b43c42f0b93cba5f40b557bac06f610a2443cc2415"
+        },
+        {
+          "path": "/Users/simon/work/personal/skill-study-private/concise-writing/e-iteration-20261018/review-inputs/claude/outputs/candidate-targeted-5.md",
+          "target": "outputs/candidate-targeted-5.md",
+          "sha256": "ee2bfaa6ac41f9ded0016f301c7fd80387ce1cdd7edc91bc65a0d13e49dacc34"
+        },
+        {
+          "path": "/Users/simon/work/personal/skill-study-private/concise-writing/e-iteration-20261018/review-inputs/claude/outputs/control-1.md",
+          "target": "outputs/control-1.md",
+          "sha256": "419c8fd9a96dfbc6ce8dfcfee27276a06475d9ea08635c4f7c2b3d1379f686c8"
+        },
+        {
+          "path": "/Users/simon/work/personal/skill-study-private/concise-writing/e-iteration-20261018/review-inputs/claude/outputs/control-2.md",
+          "target": "outputs/control-2.md",
+          "sha256": "c61be7f7632b3e2a761fb2495fe677b19e1ffd4dc0ebc20ffe9d1ef75bfcfb87"
+        },
+        {
+          "path": "/Users/simon/work/personal/skill-study-private/concise-writing/e-iteration-20261018/review-inputs/claude/outputs/control-3.md",
+          "target": "outputs/control-3.md",
+          "sha256": "1bceed4a4a62734fb0b658995de48ac0df763cc20f223a020e7916ab3e6d78c7"
+        },
+        {
+          "path": "/Users/simon/work/personal/skill-study-private/concise-writing/e-iteration-20261018/review-inputs/claude/outputs/control-4.md",
+          "target": "outputs/control-4.md",
+          "sha256": "ea4781f06165a8e963e9e57fc25adadf5665e5a9f9f585de2905169e57ac4525"
+        },
+        {
+          "path": "/Users/simon/work/personal/skill-study-private/concise-writing/e-iteration-20261018/review-inputs/claude/outputs/control-5.md",
+          "target": "outputs/control-5.md",
+          "sha256": "339f75f799c053fda2a6606eadd416c68e11ec71015e2bbfec59df30f9ab5e3b"
+        },
+        {
+          "path": "/Users/simon/work/personal/skill-study-private/concise-writing/e-iteration-20261018/review-inputs/claude/outputs/original-1.md",
+          "target": "outputs/original-1.md",
+          "sha256": "15c6e96ea364ddb625fb476631add42c004716cd04cf0a417b3a1b0a752e0f68"
+        },
+        {
+          "path": "/Users/simon/work/personal/skill-study-private/concise-writing/e-iteration-20261018/review-inputs/claude/outputs/original-2.md",
+          "target": "outputs/original-2.md",
+          "sha256": "3849d6e47472ab5fdf2d8db0287932401056b5ab2bc22b2625b23596d8c29d9a"
+        },
+        {
+          "path": "/Users/simon/work/personal/skill-study-private/concise-writing/e-iteration-20261018/review-inputs/claude/outputs/original-3.md",
+          "target": "outputs/original-3.md",
+          "sha256": "012cbcdaed3c67d2a9c555de990eea01535b4d4ed367cb6f90e907394a34cd5a"
+        },
+        {
+          "path": "/Users/simon/work/personal/skill-study-private/concise-writing/e-iteration-20261018/review-inputs/claude/outputs/original-4.md",
+          "target": "outputs/original-4.md",
+          "sha256": "c3a96ed3a51dcf4b138e766a250123382a7726d7fe2376e8c0ea86768c0c7d7f"
+        },
+        {
+          "path": "/Users/simon/work/personal/skill-study-private/concise-writing/e-iteration-20261018/review-inputs/claude/outputs/original-5.md",
+          "target": "outputs/original-5.md",
+          "sha256": "52c90e327615b2773d6d7e9bad8eebe62c3ab006d12be9c9d31f1b2c8c9cb4f9"
+        },
+        {
+          "path": "/Users/simon/work/personal/skill-study-private/concise-writing/e-iteration-20261018/review-inputs/claude/policy.txt",
+          "target": "policy.txt",
+          "sha256": "9f8125d86d72a368cc12bdbc4c64cc1d7ee188f604fc13130dcd9f8313981c33"
+        },
+        {
+          "path": "/Users/simon/work/personal/skill-study-private/concise-writing/e-iteration-20261018/review-inputs/claude/prior-assessment.md",
+          "target": "prior-assessment.md",
+          "sha256": "a2beff75a49eb8ad79869ee83079b0af5a1f30707ab8a13181b90b5053cd1c60"
+        },
+        {
+          "path": "/Users/simon/work/personal/skill-study-private/concise-writing/e-iteration-20261018/review-inputs/claude/source.md",
+          "target": "source.md",
+          "sha256": "93c23afd44aab52dfcd2bca53f3db0020a41f650d46d4c59a09595539dc72491"
+        },
+        {
+          "path": "/Users/simon/work/personal/skill-study-private/concise-writing/e-iteration-20261018/review-inputs/claude/task.md",
+          "target": "task.md",
+          "sha256": "d625196b6cf438dfe556238803851c5b86ae7f2eb07acaa31ddceb5c6e9b8db0"
+        }
+      ]
+    }
+  ],
+  "declared_source_audit": [
+    {
+      "provider": "codex",
+      "run_id": "20261018T050932439Z-cw-e-iteration-codex-control-34743e0b-016e-484c-91d2-934229d02354-rmhksawq",
+      "declared_non_skill_targets": [
+        "NEW-NOTES.md",
+        "TASK.md",
+        "report.md"
+      ],
+      "all_source_hashes_match": true,
+      "output_sha256": "425982647428d900f3c837c1274ef244cae5bb0985cde1c24102881e7eb82308"
+    },
+    {
+      "provider": "codex",
+      "run_id": "20261018T051039494Z-cw-e-iteration-codex-original-9bf84561-49ff-4a0e-91a1-7261590e310f-lypjwfnd",
+      "declared_non_skill_targets": [
+        "NEW-NOTES.md",
+        "TASK.md",
+        "report.md"
+      ],
+      "all_source_hashes_match": true,
+      "output_sha256": "b9489cee4e8aa9abbd80d456a5b62d6b3cf47e5fe0df2730a5c0bfb77cb43963"
+    },
+    {
+      "provider": "codex",
+      "run_id": "20261018T051146350Z-cw-e-iteration-codex-candidate-targeted-e7e43852-c810-416b-b717-84e560f47bd0-5_36itqr",
+      "declared_non_skill_targets": [
+        "NEW-NOTES.md",
+        "TASK.md",
+        "report.md"
+      ],
+      "all_source_hashes_match": true,
+      "output_sha256": "3b83ab4f27a43c572483dbc6a37d7658e7bdff32fb0b41d103d1560a334d6d45"
+    },
+    {
+      "provider": "codex",
+      "run_id": "20261018T051228660Z-cw-e-iteration-codex-candidate-fuller-7fc1ecd9-fbb4-44c2-aeaa-dacbd61e0297-26pqgmvu",
+      "declared_non_skill_targets": [
+        "NEW-NOTES.md",
+        "TASK.md",
+        "report.md"
+      ],
+      "all_source_hashes_match": true,
+      "output_sha256": "b1297f28af43f8d3dc958b819c0ed3cc2ff33849e89168026da9d7a06402e1bd"
+    },
+    {
+      "provider": "codex",
+      "run_id": "20261018T051253670Z-cw-e-iteration-codex-original-d1647634-ca2f-43a9-b929-dac2f8346565-1lzfkszs",
+      "declared_non_skill_targets": [
+        "NEW-NOTES.md",
+        "TASK.md",
+        "report.md"
+      ],
+      "all_source_hashes_match": true,
+      "output_sha256": "17058b1f3040c9d820ed3e71534e1640268a9afc317c9da037b61c8833fd791a"
+    },
+    {
+      "provider": "codex",
+      "run_id": "20261018T051321362Z-cw-e-iteration-codex-candidate-targeted-8f8330b0-e06a-4b78-81a5-ea1d8951ed9e-ux69nnwa",
+      "declared_non_skill_targets": [
+        "NEW-NOTES.md",
+        "TASK.md",
+        "report.md"
+      ],
+      "all_source_hashes_match": true,
+      "output_sha256": "1a8a37a8ea8f818c1bbd415102decd6c248fc469af2a25a11d3df557223550a8"
+    },
+    {
+      "provider": "codex",
+      "run_id": "20261018T051346826Z-cw-e-iteration-codex-candidate-fuller-882da7b4-40c1-4798-9bf8-505d145aa4b6-woqf6yrz",
+      "declared_non_skill_targets": [
+        "NEW-NOTES.md",
+        "TASK.md",
+        "report.md"
+      ],
+      "all_source_hashes_match": true,
+      "output_sha256": "12151b8826e1904d2c4bad2e753f0257536c9b4d05c57717ca30612d6d6f8f04"
+    },
+    {
+      "provider": "codex",
+      "run_id": "20261018T051411647Z-cw-e-iteration-codex-control-1fa014b7-c605-4f33-86a5-7b200f5c99f5-rgcml4ta",
+      "declared_non_skill_targets": [
+        "NEW-NOTES.md",
+        "TASK.md",
+        "report.md"
+      ],
+      "all_source_hashes_match": true,
+      "output_sha256": "9aa054e774994d0a109953285ccfc24047be3897949218a5a63998e55c608aad"
+    },
+    {
+      "provider": "codex",
+      "run_id": "20261018T051436170Z-cw-e-iteration-codex-candidate-targeted-ba36faa6-3225-49b3-8dd4-a4a8f6357125-sc798kxj",
+      "declared_non_skill_targets": [
+        "NEW-NOTES.md",
+        "TASK.md",
+        "report.md"
+      ],
+      "all_source_hashes_match": true,
+      "output_sha256": "e555dde02d09f15a79a28f2b1b38df78bdb616817fb1a745d7df60c4443727d0"
+    },
+    {
+      "provider": "codex",
+      "run_id": "20261018T051500106Z-cw-e-iteration-codex-candidate-fuller-6f64050e-5950-497d-aaf1-1021a30499a8-h5ekxrir",
+      "declared_non_skill_targets": [
+        "NEW-NOTES.md",
+        "TASK.md",
+        "report.md"
+      ],
+      "all_source_hashes_match": true,
+      "output_sha256": "80662f2ed03a4ba523b00b2d183938a6642d4900b67ae145061f967854fcecfc"
+    },
+    {
+      "provider": "codex",
+      "run_id": "20261018T051523062Z-cw-e-iteration-codex-control-4708fe45-848d-4162-8d14-e235fea4a0e7-ma41r23o",
+      "declared_non_skill_targets": [
+        "NEW-NOTES.md",
+        "TASK.md",
+        "report.md"
+      ],
+      "all_source_hashes_match": true,
+      "output_sha256": "ed6ee361203e73bda8ff45f65c3f1994ff7f8007bd0d2c23f79a9ea1cf318f3d"
+    },
+    {
+      "provider": "codex",
+      "run_id": "20261018T051551955Z-cw-e-iteration-codex-original-5a150659-e896-4b5e-b272-8cdb68336b78-r4k0sbi4",
+      "declared_non_skill_targets": [
+        "NEW-NOTES.md",
+        "TASK.md",
+        "report.md"
+      ],
+      "all_source_hashes_match": true,
+      "output_sha256": "4a16bb827134b451ae66d71dffabb1f40f9162881c2208d26e355683a9e99605"
+    },
+    {
+      "provider": "codex",
+      "run_id": "20261018T051614908Z-cw-e-iteration-codex-candidate-fuller-05df1b47-da21-43ae-9383-5355fe01d91b-qa_ulmmg",
+      "declared_non_skill_targets": [
+        "NEW-NOTES.md",
+        "TASK.md",
+        "report.md"
+      ],
+      "all_source_hashes_match": true,
+      "output_sha256": "a0767e65b1aba38fca9ef097a0d81676c3df1c61905745bc85e115fc13924351"
+    },
+    {
+      "provider": "codex",
+      "run_id": "20261018T051642502Z-cw-e-iteration-codex-control-a04f3cc0-fffc-4f91-abda-28e1726ba036-q5yas2pm",
+      "declared_non_skill_targets": [
+        "NEW-NOTES.md",
+        "TASK.md",
+        "report.md"
+      ],
+      "all_source_hashes_match": true,
+      "output_sha256": "c77fc8616456540b2dc7d24fa186e58d03f1f9db8417dce1b855874da50c5819"
+    },
+    {
+      "provider": "codex",
+      "run_id": "20261018T051706366Z-cw-e-iteration-codex-original-8b5bda96-b510-4924-ae6e-be238a3c00e7-qzeptuhu",
+      "declared_non_skill_targets": [
+        "NEW-NOTES.md",
+        "TASK.md",
+        "report.md"
+      ],
+      "all_source_hashes_match": true,
+      "output_sha256": "8271729bef49f4aed3ed23754c6eacd42f32884490a4b474ad8c2d68d3fda1c8"
+    },
+    {
+      "provider": "codex",
+      "run_id": "20261018T051739999Z-cw-e-iteration-codex-candidate-targeted-2e850951-41d3-42ae-8d7f-19d8162e9a97-muczclp3",
+      "declared_non_skill_targets": [
+        "NEW-NOTES.md",
+        "TASK.md",
+        "report.md"
+      ],
+      "all_source_hashes_match": true,
+      "output_sha256": "6fe64a251c58ac7d444442ea3b12c3e2917938ed68c5d85e32c353eac90100d7"
+    },
+    {
+      "provider": "codex",
+      "run_id": "20261018T051816080Z-cw-e-iteration-codex-control-85286808-f286-4b31-99d7-1d8138cf5434-qcocvlnq",
+      "declared_non_skill_targets": [
+        "NEW-NOTES.md",
+        "TASK.md",
+        "report.md"
+      ],
+      "all_source_hashes_match": true,
+      "output_sha256": "703bebf644642633a6bb984d848f1545786bb7790531335cb99f9fe6b0b1a2c0"
+    },
+    {
+      "provider": "codex",
+      "run_id": "20261018T051841060Z-cw-e-iteration-codex-original-b76a3ae9-51af-45d4-b6c8-79d627b08fd4-9kxwadn1",
+      "declared_non_skill_targets": [
+        "NEW-NOTES.md",
+        "TASK.md",
+        "report.md"
+      ],
+      "all_source_hashes_match": true,
+      "output_sha256": "64b45e5b9c38053b179c6f4dc4eedd3421fd5fea2799e7801eac84dc01987873"
+    },
+    {
+      "provider": "codex",
+      "run_id": "20261018T051906834Z-cw-e-iteration-codex-candidate-targeted-7ccecd07-313f-452f-94e8-e06a191efc1b-1zd2e0ar",
+      "declared_non_skill_targets": [
+        "NEW-NOTES.md",
+        "TASK.md",
+        "report.md"
+      ],
+      "all_source_hashes_match": true,
+      "output_sha256": "c8ef39afe6529d70afba5b724cee43f457fbd95fcbb0ca5675306643e6660d1c"
+    },
+    {
+      "provider": "codex",
+      "run_id": "20261018T051930374Z-cw-e-iteration-codex-candidate-fuller-b26c8ce9-5c8a-4520-bb7e-f87f7908dd9e-qm06x6_5",
+      "declared_non_skill_targets": [
+        "NEW-NOTES.md",
+        "TASK.md",
+        "report.md"
+      ],
+      "all_source_hashes_match": true,
+      "output_sha256": "7c698a0995dbc27b7c830bf491185bcf3c4c19364aebc027d049ae73a0c84434"
+    },
+    {
+      "provider": "claude",
+      "run_id": "20261018T052021363Z-cw-e-iteration-claude-candidate-targeted-c898f485-bbff-431c-829f-9ccf405b4c02-tiy73t38",
+      "declared_non_skill_targets": [
+        "NEW-NOTES.md",
+        "TASK.md",
+        "report.md"
+      ],
+      "all_source_hashes_match": true,
+      "output_sha256": "6279e405a1c1a3c7b608e3ae7f959fe7276fc41e627c4c57ec9a24d8d9ac7f3e"
+    },
+    {
+      "provider": "claude",
+      "run_id": "20261018T053125965Z-cw-e-iteration-claude-candidate-fuller-6d0952f6-c1b6-41c6-84b6-05a0a9cb611d-4q2i2atv",
+      "declared_non_skill_targets": [
+        "NEW-NOTES.md",
+        "TASK.md",
+        "report.md"
+      ],
+      "all_source_hashes_match": true,
+      "output_sha256": "f7415566718cad950f25e6497d0d72268c6f32f0be73cb479fd9f828d1bdd1bf"
+    },
+    {
+      "provider": "claude",
+      "run_id": "20261018T053158646Z-cw-e-iteration-claude-control-a90a4667-6042-44dd-80ae-c756bf52f279-u8yo_iw2",
+      "declared_non_skill_targets": [
+        "NEW-NOTES.md",
+        "TASK.md",
+        "report.md"
+      ],
+      "all_source_hashes_match": true,
+      "output_sha256": "419c8fd9a96dfbc6ce8dfcfee27276a06475d9ea08635c4f7c2b3d1379f686c8"
+    },
+    {
+      "provider": "claude",
+      "run_id": "20261018T053231587Z-cw-e-iteration-claude-original-53c513c2-f27a-4b90-87c9-c3aea61cc068-hcx8okgz",
+      "declared_non_skill_targets": [
+        "NEW-NOTES.md",
+        "TASK.md",
+        "report.md"
+      ],
+      "all_source_hashes_match": true,
+      "output_sha256": "15c6e96ea364ddb625fb476631add42c004716cd04cf0a417b3a1b0a752e0f68"
+    },
+    {
+      "provider": "claude",
+      "run_id": "20261018T053300184Z-cw-e-iteration-claude-candidate-fuller-d832b586-a300-4e1e-80fe-518f674a5f1f-v33k6sum",
+      "declared_non_skill_targets": [
+        "NEW-NOTES.md",
+        "TASK.md",
+        "report.md"
+      ],
+      "all_source_hashes_match": true,
+      "output_sha256": "4fbb86c2b995998d9ac4f70179547e0fb66d713679aa7287a42d723261bd7cb6"
+    },
+    {
+      "provider": "claude",
+      "run_id": "20261018T053334373Z-cw-e-iteration-claude-control-a0413be4-63d0-4f7b-ae83-b56d9eda9d67-ki2ez0rs",
+      "declared_non_skill_targets": [
+        "NEW-NOTES.md",
+        "TASK.md",
+        "report.md"
+      ],
+      "all_source_hashes_match": true,
+      "output_sha256": "c61be7f7632b3e2a761fb2495fe677b19e1ffd4dc0ebc20ffe9d1ef75bfcfb87"
+    },
+    {
+      "provider": "claude",
+      "run_id": "20261018T053410351Z-cw-e-iteration-claude-original-f584dd67-f409-4b03-b8ba-a460875d3acc-bn2w937f",
+      "declared_non_skill_targets": [
+        "NEW-NOTES.md",
+        "TASK.md",
+        "report.md"
+      ],
+      "all_source_hashes_match": true,
+      "output_sha256": "3849d6e47472ab5fdf2d8db0287932401056b5ab2bc22b2625b23596d8c29d9a"
+    },
+    {
+      "provider": "claude",
+      "run_id": "20261018T053436349Z-cw-e-iteration-claude-candidate-targeted-7e2db0ff-873f-4459-83b7-3ca1ee01a533-jlsv_mwh",
+      "declared_non_skill_targets": [
+        "NEW-NOTES.md",
+        "TASK.md",
+        "report.md"
+      ],
+      "all_source_hashes_match": true,
+      "output_sha256": "8e1d2592fd18874d4b99626d6966148837273a33d4b8a094034818f1b6aad7e9"
+    },
+    {
+      "provider": "claude",
+      "run_id": "20261018T053504497Z-cw-e-iteration-claude-control-19e7d6e9-4b99-4982-9612-295d427e637c-750m80dk",
+      "declared_non_skill_targets": [
+        "NEW-NOTES.md",
+        "TASK.md",
+        "report.md"
+      ],
+      "all_source_hashes_match": true,
+      "output_sha256": "1bceed4a4a62734fb0b658995de48ac0df763cc20f223a020e7916ab3e6d78c7"
+    },
+    {
+      "provider": "claude",
+      "run_id": "20261018T053530074Z-cw-e-iteration-claude-original-7181946c-033e-4f20-bbff-3b307e315ea2-j4tig71e",
+      "declared_non_skill_targets": [
+        "NEW-NOTES.md",
+        "TASK.md",
+        "report.md"
+      ],
+      "all_source_hashes_match": true,
+      "output_sha256": "012cbcdaed3c67d2a9c555de990eea01535b4d4ed367cb6f90e907394a34cd5a"
+    },
+    {
+      "provider": "claude",
+      "run_id": "20261018T053559731Z-cw-e-iteration-claude-candidate-targeted-dda5320e-1c1e-4c6e-badd-a826c556fd54-wlexd0bq",
+      "declared_non_skill_targets": [
+        "NEW-NOTES.md",
+        "TASK.md",
+        "report.md"
+      ],
+      "all_source_hashes_match": true,
+      "output_sha256": "0007b8077b69a4868cf2f6748fcc6ed83027c60b253dd9b2ad4ea8c4f379c463"
+    },
+    {
+      "provider": "claude",
+      "run_id": "20261018T053627333Z-cw-e-iteration-claude-candidate-fuller-31570614-0602-454a-8306-a4b0a08808ae-w10zp51h",
+      "declared_non_skill_targets": [
+        "NEW-NOTES.md",
+        "TASK.md",
+        "report.md"
+      ],
+      "all_source_hashes_match": true,
+      "output_sha256": "8b5a43127f6600d369c9967df4c862de9e2a4fa9618f230e0fe04a59288efb6b"
+    },
+    {
+      "provider": "claude",
+      "run_id": "20261018T053658275Z-cw-e-iteration-claude-original-fe4ab027-909d-4c91-89d4-a02a39e575f9-7q74movl",
+      "declared_non_skill_targets": [
+        "NEW-NOTES.md",
+        "TASK.md",
+        "report.md"
+      ],
+      "all_source_hashes_match": true,
+      "output_sha256": "c3a96ed3a51dcf4b138e766a250123382a7726d7fe2376e8c0ea86768c0c7d7f"
+    },
+    {
+      "provider": "claude",
+      "run_id": "20261018T053726095Z-cw-e-iteration-claude-candidate-targeted-213eefe7-bafa-4dae-bfdb-bb3fdbb866c5-28dous0k",
+      "declared_non_skill_targets": [
+        "NEW-NOTES.md",
+        "TASK.md",
+        "report.md"
+      ],
+      "all_source_hashes_match": true,
+      "output_sha256": "91699593c9f2858b6f5cb2b43c42f0b93cba5f40b557bac06f610a2443cc2415"
+    },
+    {
+      "provider": "claude",
+      "run_id": "20261018T053757774Z-cw-e-iteration-claude-candidate-fuller-7ceee5f4-dd73-468e-8ee1-5d7c5ba824e4-5mnh7crc",
+      "declared_non_skill_targets": [
+        "NEW-NOTES.md",
+        "TASK.md",
+        "report.md"
+      ],
+      "all_source_hashes_match": true,
+      "output_sha256": "d05b6f672c2bb7317bfd3703a3f41268dfef086a2933522783d58ff4c9ea7398"
+    },
+    {
+      "provider": "claude",
+      "run_id": "20261018T053831425Z-cw-e-iteration-claude-control-3326a0d8-1449-4582-8420-71674c274339-cmvj69w7",
+      "declared_non_skill_targets": [
+        "NEW-NOTES.md",
+        "TASK.md",
+        "report.md"
+      ],
+      "all_source_hashes_match": true,
+      "output_sha256": "ea4781f06165a8e963e9e57fc25adadf5665e5a9f9f585de2905169e57ac4525"
+    },
+    {
+      "provider": "claude",
+      "run_id": "20261018T053903335Z-cw-e-iteration-claude-candidate-targeted-c8f7d18b-72e1-4388-a9c4-80a3bf3f5e06-cx2915k7",
+      "declared_non_skill_targets": [
+        "NEW-NOTES.md",
+        "TASK.md",
+        "report.md"
+      ],
+      "all_source_hashes_match": true,
+      "output_sha256": "ee2bfaa6ac41f9ded0016f301c7fd80387ce1cdd7edc91bc65a0d13e49dacc34"
+    },
+    {
+      "provider": "claude",
+      "run_id": "20261018T053929879Z-cw-e-iteration-claude-candidate-fuller-4604c806-15cb-4541-813c-53aa692cd233-kabnj31s",
+      "declared_non_skill_targets": [
+        "NEW-NOTES.md",
+        "TASK.md",
+        "report.md"
+      ],
+      "all_source_hashes_match": true,
+      "output_sha256": "a673525d589b9a8745ffe299a2edb6aa4bc75236390cb45367554620195d0e41"
+    },
+    {
+      "provider": "claude",
+      "run_id": "20261018T054002467Z-cw-e-iteration-claude-control-03c35564-49b0-433e-a2c9-615e4531466f-soy_ikzm",
+      "declared_non_skill_targets": [
+        "NEW-NOTES.md",
+        "TASK.md",
+        "report.md"
+      ],
+      "all_source_hashes_match": true,
+      "output_sha256": "339f75f799c053fda2a6606eadd416c68e11ec71015e2bbfec59df30f9ab5e3b"
+    },
+    {
+      "provider": "claude",
+      "run_id": "20261018T054036686Z-cw-e-iteration-claude-original-1c981f32-d91d-4c15-a336-f9d27f8daf7e-8fp0prg3",
+      "declared_non_skill_targets": [
+        "NEW-NOTES.md",
+        "TASK.md",
+        "report.md"
+      ],
+      "all_source_hashes_match": true,
+      "output_sha256": "52c90e327615b2773d6d7e9bad8eebe62c3ab006d12be9c9d31f1b2c8c9cb4f9"
+    }
+  ],
+  "controller_files": [
+    {
+      "path": "/Users/simon/work/personal/skill-study-private/concise-writing/e-iteration-20261018/review-controller/cw-e-clear.py",
+      "sha256": "ba2e44995b5c0e1a7d286b8099c5949064a3beb74c6137cbf995b15e03004cbe"
+    },
+    {
+      "path": "/Users/simon/work/personal/skill-study-private/concise-writing/e-iteration-20261018/review-controller/cw-e-prepare-reviews.py",
+      "sha256": "8cae2e013db11ba1d40f6089b9d962ec978222d5588fc94d77a8206ddf5a7aff"
+    },
+    {
+      "path": "/Users/simon/work/personal/skill-study-private/concise-writing/e-iteration-20261018/review-controller/cw-e-review-one.py",
+      "sha256": "bf60bc88d67b62b7e4fb60e4f0dfb6287109a7fa03f10e17e4ac3c07c008d5dc"
+    }
+  ]
+}

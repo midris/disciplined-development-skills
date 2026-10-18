@@ -4,7 +4,7 @@ Format version: `1`
 Study ID: `concise-writing`
 Status: baseline collection and cross-model review are complete; the owner selected the original CW as the development base and authorized preparation of effectiveness-first edits. Adoption remains deferred.
 Current action: complete the two approved Opus reviews and reconcile the first E comparison; all forty subjects are retained and directly assessed.
-Both E attempt indexes identify complete committed result records; the [Codex assessment](codex-e-iteration-01-assessment.md) and forthcoming Claude batch report summarize them.
+Both E attempt indexes identify complete committed result records; the [Codex assessment](codex-e-iteration-01-assessment.md) and [Claude batch assessment](claude-e-iteration-01-assessment.md) summarize them.
 The amended Claude controller applies prospectively from its second attempt, with byte-identical subject inputs and criteria.
 The collector used the wrong inventory version field; conforming wrappers are published separately, with original wrappers and every raw byte retained. No model call is repeated or excluded for this metadata correction.
 Both provider scopes pass collection readiness with frozen input revision `2936749c332f083e49f603eaed15b65d92158568`; actual attempts and unattempted slots are recorded in the two E indexes.
@@ -471,6 +471,7 @@ Inputs: [claude-invocation-tighten-third-manifest](preparation/manifests/claude-
 ### E diagnostic: codex-e-iteration-01
 
 Scope: 20 sequential attempts; document-addition × four conditions × five repetitions on codex.
+Results: [codex E assessment](codex-e-iteration-01-assessment.md).
 Attempts: [Codex E iteration index](codex-e-iteration-01-run-index.json).
 Authority: first-stage forty-subject allocation at the protocol opening; no replacement or automatic retry.
 Inputs: [codex E iteration manifest](drafts/baseline-iteration/testing/codex-manifest.json).
@@ -509,6 +510,7 @@ Evidence goes to the existing owner-accepted single-host private store under `e-
 ### E diagnostic: claude-e-iteration-01
 
 Scope: 20 sequential attempts; document-addition × four conditions × five repetitions on claude.
+Results: [claude E assessment](claude-e-iteration-01-assessment.md).
 Attempts: [Claude E iteration index](claude-e-iteration-01-run-index.json).
 Authority: first-stage forty-subject allocation at the protocol opening; no replacement or automatic retry.
 Inputs: [claude E iteration manifest](drafts/baseline-iteration/testing/claude-manifest.json).
@@ -565,6 +567,7 @@ Approved durable raw evidence directory: `/Users/simon/work/personal/skill-study
 Owner-accepted recovery decision for CW: single-host retention, as used for SSR, with one verified canonical raw bundle per attempt. The current `tmutil destinationinfo` check reports no destinations configured; `tmutil isexcluded` reports the parent private store is Included. No other working backup arrangement has been established. Machine loss or disk failure could therefore destroy CW raw evidence; Git holds case inputs and assessments but cannot recover those external bundles. Creating the directory and passing a local copy check do not establish host-loss recovery. The owner explicitly accepted this CW risk together with the eight-execution scope above.
 
 Combined accounting sources: closed SSR [pilot 01](../sweeping-stale-references/pilot-run-index.json), [pilot 02](../sweeping-stale-references/pilot-02-run-index.json), [semantic delivery](../sweeping-stale-references/semantic-delivery-01-run-index.json), [core baseline](../sweeping-stale-references/core-baseline-01-run-index.json), [comparison](../sweeping-stale-references/comprehensive-comparison-01-run-index.json), the SSR [completed expansion](../sweeping-stale-references/coverage-baseline-01-run-index.json), the SSR [completed comparison](../sweeping-stale-references/comprehensive-comparison-02-run-index.json), the SSR [Claude smoke](../sweeping-stale-references/claude-smoke-01-run-index.json), the SSR [Claude comparison](../sweeping-stale-references/claude-comparison-01-run-index.json), the SSR [Opus invocation comparison](../sweeping-stale-references/claude-opus-invocation-01-run-index.json), and both CW indexes above. Historical pilot links contribute accounting only; they are not reclassified or reassessed.
+The new E reviews use the [fixed review package](drafts/baseline-iteration/testing/evaluation/README.md) and [supplemental Opus accounting](drafts/baseline-iteration/testing/evaluation/evaluator-run-index.json).
 Dispatched calls are **296 subject, 12 evaluator, 0 authoring, 1 retry**; remaining outer capacity is **0 / 2 / 4 / 3** against the [active plan](../../plans/2026-09-11-model-driven-skill-testing.md#limits-and-information-boundaries). Both eight-call CW batches are spent. The owner authorized ten SSR expansion calls under ceiling 56; all ten are spent, including the excluded control, with no replacement or pool transfer. Comparison runner durations total 508.067 seconds; baseline durations remain 494.936 seconds, including setup and capture.
 Owner clarification after round-10 review: “the budget is just a guideline”. The 1,200-minute figure below remains the planning baseline, not a collection stop; invocation ceilings and the authorized SSR scope is unchanged. Retain elapsed effort and forecast variance to expose process cost.
 
@@ -699,7 +702,7 @@ All forty subjects are retained; the two Opus output reviews remain separate fro
 | Provider | No CW | Original | Targeted | Fuller | Evidence |
 | --- | ---: | ---: | ---: | ---: | --- |
 | Codex Sol low | 5/5 | 1/5 | 5/5 | 5/5 | [Assessment](codex-e-iteration-01-assessment.md) |
-| Claude Sonnet low | 5/5 | 3/5 | 4/5 | 4/5 | [Attempt index](claude-e-iteration-01-run-index.json); all twenty direct results pinned |
+| Claude Sonnet low | 5/5 | 3/5 | 4/5 | 4/5 | [Assessment](claude-e-iteration-01-assessment.md) |
 
 Failures omit recording the fallback contact while retaining its existence; each fails F1/F2 but remains readable under F3.
 The two Claude draft failures remain included; neither draft is declared ready or adopted from the successful Codex observations.
