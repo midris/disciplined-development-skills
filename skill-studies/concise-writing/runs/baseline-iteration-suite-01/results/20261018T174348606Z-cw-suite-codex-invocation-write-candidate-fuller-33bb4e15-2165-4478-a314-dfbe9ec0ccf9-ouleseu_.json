@@ -1,0 +1,171 @@
+{
+  "schema_version": "2",
+  "record_kind": "execution result",
+  "result_id": "codex-native-iteration-01-invocation-write-candidate-fuller-1-1-assessment",
+  "assessed_at": "2026-10-18T17:57:43.214608+00:00",
+  "run_id": "20261018T174348606Z-cw-suite-codex-invocation-write-candidate-fuller-33bb4e15-2165-4478-a314-dfbe9ec0ccf9-ouleseu_",
+  "condition": "candidate-fuller",
+  "assessor": {
+    "name": "Codex active session",
+    "method": "active session",
+    "model": null,
+    "session_id": null,
+    "context": "Same Codex controller authored/reviewed exposed development variants and directly judged complete outputs; no blind, held-out or independent assessor claim. Separate Opus review supplements this."
+  },
+  "manifest": {
+    "path": "skill-studies/concise-writing/runs/baseline-iteration-suite-01/preparation/manifests/codex-invocation-write-manifest.json",
+    "sha256": "48c337d5803f1916c60d9cf7a12e433749c3c7068d5d0a23dfa206e4bab18395",
+    "version": "1",
+    "git_revision": "c4fbdde162dc0e1d7cdbccfd9ec0cec202893659"
+  },
+  "evidence": [
+    {
+      "id": "output",
+      "artifact": {
+        "path": "/Users/simon/work/personal/skill-study-private/concise-writing/baseline-suite-20261018/subjects/20261018T174348606Z-cw-suite-codex-invocation-write-candidate-fuller-33bb4e15-2165-4478-a314-dfbe9ec0ccf9-ouleseu_/workspace/fixture/report.md",
+        "sha256": "3ce26d84aeb2038d5fa94d06979d328c0236dc5439e6e9caad6cddcf6f11b231",
+        "version": null
+      },
+      "selector": "Complete artifact"
+    },
+    {
+      "id": "trace",
+      "artifact": {
+        "path": "/Users/simon/work/personal/skill-study-private/concise-writing/baseline-suite-20261018/subjects/20261018T174348606Z-cw-suite-codex-invocation-write-candidate-fuller-33bb4e15-2165-4478-a314-dfbe9ec0ccf9-ouleseu_/provider-session.jsonl",
+        "sha256": "4069fa4da3b0040f9ab3d544616b15e6e266fc2212040c77fa74e6905de3c5da",
+        "version": null
+      },
+      "selector": "Complete artifact"
+    },
+    {
+      "id": "mechanical",
+      "artifact": {
+        "path": "/Users/simon/work/personal/skill-study-private/concise-writing/baseline-suite-20261018/subjects/20261018T174348606Z-cw-suite-codex-invocation-write-candidate-fuller-33bb4e15-2165-4478-a314-dfbe9ec0ccf9-ouleseu_/result.json",
+        "sha256": "e5209599d70898db6a63d57514188a79bc8f4f780b936c0a91d6b520ff6c7511",
+        "version": null
+      },
+      "selector": "Complete artifact"
+    },
+    {
+      "id": "log",
+      "artifact": {
+        "path": "/Users/simon/work/personal/skill-study-private/concise-writing/baseline-suite-20261018/subjects/20261018T174348606Z-cw-suite-codex-invocation-write-candidate-fuller-33bb4e15-2165-4478-a314-dfbe9ec0ccf9-ouleseu_/runner.log",
+        "sha256": "44252b458f991d445be89e389c343b35f6ba6125b09ee08ea25521c14d88cead",
+        "version": null
+      },
+      "selector": "Complete artifact"
+    },
+    {
+      "id": "final",
+      "artifact": {
+        "path": "/Users/simon/work/personal/skill-study-private/concise-writing/baseline-suite-20261018/subjects/20261018T174348606Z-cw-suite-codex-invocation-write-candidate-fuller-33bb4e15-2165-4478-a314-dfbe9ec0ccf9-ouleseu_/final.txt",
+        "sha256": "83f3b802f4dc31493b0ede54d16fa3abd3ca2e69ab1a2fe97e31f030c9e3a2ab",
+        "version": null
+      },
+      "selector": "Complete artifact"
+    },
+    {
+      "id": "source-0",
+      "artifact": {
+        "path": "skill-studies/concise-writing/cases/invocation-write/fixture/notes.md",
+        "sha256": "687328b186b130469d63398579e81d72b88866e0f7ba4e48b9dfbb4774581442",
+        "version": null,
+        "git_revision": "6ad549b50af54d9766d05b47ebf5cbc1ea3cddbb"
+      },
+      "selector": "Complete frozen notes.md"
+    },
+    {
+      "id": "source-1",
+      "artifact": {
+        "path": "skill-studies/concise-writing/cases/invocation-write/task.md",
+        "sha256": "2e0ce51601ecd5e3a12168a3f0640b9ee49151fa3810cc59da0e4abcda85220f",
+        "version": null,
+        "git_revision": "6ad549b50af54d9766d05b47ebf5cbc1ea3cddbb"
+      },
+      "selector": "Complete frozen TASK.md"
+    }
+  ],
+  "setup": {
+    "status": "valid",
+    "reason": "Fixed provider/model/CLI and retained inventory verified. Native skill available; complete assigned body before first edit: True. Protected input bytes unchanged.",
+    "evidence": [
+      "mechanical",
+      "trace",
+      "log"
+    ]
+  },
+  "criteria": [
+    {
+      "id": "F1",
+      "dimension": "functional",
+      "judgment": "met",
+      "reason": "Fuller N2r1 preserves60expected-count staging jobs, two observed resumed jobs without duplicates, checkpoint-after-page versus old-before behavior, staging/current-release status and untested production scale/concurrent permission changes. The three-workspace pilot, tomorrow/09:00\u201309:45staffing and manager-approval constraints remain bounded.",
+      "consequence": "Required whole-artifact functional factor; length cannot offset failure.",
+      "evidence": [
+        "output",
+        "source-0",
+        "source-1"
+      ]
+    },
+    {
+      "id": "F2",
+      "dimension": "functional",
+      "judgment": "met",
+      "reason": "The manager can approve only the limited pilot with both Ali and Bea available or select another staffed window. Ali runs, Bea compares, one mismatch stops and retains both exports with the diagnostic rationale, and matching counts return for a separate decision rather than automatic expansion.",
+      "consequence": "Required whole-artifact functional factor; length cannot offset failure.",
+      "evidence": [
+        "output",
+        "source-0",
+        "source-1"
+      ]
+    },
+    {
+      "id": "F3",
+      "dimension": "functional",
+      "judgment": "met",
+      "reason": "Recommendation, bounded evidence/limits and grouped ownership/controls form a clear update without repeating the checkpoint explanation from the notes.",
+      "consequence": "Required whole-artifact functional factor; length cannot offset failure.",
+      "evidence": [
+        "output",
+        "source-0",
+        "source-1"
+      ]
+    },
+    {
+      "id": "D1",
+      "dimension": "procedural",
+      "judgment": "met",
+      "reason": "The native catalog supplies CW and not its full body; complete instructions arrive at event34 before report creation. Pre-body calls only inspect or establish the permitted baseline, with no explicit task-level skill request.",
+      "consequence": "Selection is reported separately from artifact quality.",
+      "evidence": [
+        "trace",
+        "log"
+      ]
+    }
+  ],
+  "functional_result": "met",
+  "procedural_summary": "Fixed provider/model/CLI and retained inventory verified. Native skill available; complete assigned body before first edit: True. Protected input bytes unchanged. O4/O5 remain unscored; native D1 is distinct from functional outcome.",
+  "observations": [
+    {
+      "dimension": "functional",
+      "description": "Complete output 255 wc-w words; supplied notes.md: 199 words, TASK.md: 49 words. Counts describe length, not semantic success; comment-only counts are reported separately for N4.",
+      "consequence": "Descriptive counts only.",
+      "evidence": [
+        "output",
+        "source-0",
+        "source-1"
+      ]
+    },
+    {
+      "dimension": "functional",
+      "description": "Passing native report generation with timely CW selection. The proposal remains limited despite useful framing about the checkpoint feature; it does not promise validation of untested production scale or concurrent permission changes.",
+      "consequence": "Qualitative comparison is separate from threshold counts.",
+      "evidence": [
+        "output",
+        "source-0",
+        "source-1"
+      ]
+    }
+  ],
+  "uncertainty": []
+}

@@ -1,0 +1,195 @@
+{
+  "schema_version": "2",
+  "record_kind": "execution result",
+  "result_id": "codex-native-iteration-01-invocation-comments-original-2-1-assessment",
+  "assessed_at": "2026-10-18T17:57:43.214608+00:00",
+  "run_id": "20261018T175501232Z-cw-suite-codex-invocation-comments-original-8c5754ac-1209-46db-9cda-2ea7ca7debf2-a59311u3",
+  "condition": "original",
+  "assessor": {
+    "name": "Codex active session",
+    "method": "active session",
+    "model": null,
+    "session_id": null,
+    "context": "Same Codex controller authored/reviewed exposed development variants and directly judged complete outputs; no blind, held-out or independent assessor claim. Separate Opus review supplements this."
+  },
+  "manifest": {
+    "path": "skill-studies/concise-writing/runs/baseline-iteration-suite-01/preparation/manifests/codex-invocation-comments-manifest.json",
+    "sha256": "1a16649353a998e4fb4be1f91c19b003fe9fee6a844de4e2826303daf985d69f",
+    "version": "1",
+    "git_revision": "c4fbdde162dc0e1d7cdbccfd9ec0cec202893659"
+  },
+  "evidence": [
+    {
+      "id": "output",
+      "artifact": {
+        "path": "/Users/simon/work/personal/skill-study-private/concise-writing/baseline-suite-20261018/subjects/20261018T175501232Z-cw-suite-codex-invocation-comments-original-8c5754ac-1209-46db-9cda-2ea7ca7debf2-a59311u3/workspace/fixture/uploader.py",
+        "sha256": "153297c4f73619063baf17da9bb9d49d010caa8faf959faacbe50d1ac6bba448",
+        "version": null
+      },
+      "selector": "Complete artifact"
+    },
+    {
+      "id": "trace",
+      "artifact": {
+        "path": "/Users/simon/work/personal/skill-study-private/concise-writing/baseline-suite-20261018/subjects/20261018T175501232Z-cw-suite-codex-invocation-comments-original-8c5754ac-1209-46db-9cda-2ea7ca7debf2-a59311u3/provider-session.jsonl",
+        "sha256": "0f3851cfed6aa66f26f42f76f05f17be4cd495bfd4ca73225f7ea2f9fdcb06b0",
+        "version": null
+      },
+      "selector": "Complete artifact"
+    },
+    {
+      "id": "mechanical",
+      "artifact": {
+        "path": "/Users/simon/work/personal/skill-study-private/concise-writing/baseline-suite-20261018/subjects/20261018T175501232Z-cw-suite-codex-invocation-comments-original-8c5754ac-1209-46db-9cda-2ea7ca7debf2-a59311u3/result.json",
+        "sha256": "728fa1c9515d3ed470061a40ddc24d7e04a9bf44876e6aa4c48748d6cb10c4cd",
+        "version": null
+      },
+      "selector": "Complete artifact"
+    },
+    {
+      "id": "log",
+      "artifact": {
+        "path": "/Users/simon/work/personal/skill-study-private/concise-writing/baseline-suite-20261018/subjects/20261018T175501232Z-cw-suite-codex-invocation-comments-original-8c5754ac-1209-46db-9cda-2ea7ca7debf2-a59311u3/runner.log",
+        "sha256": "1215dd49d8bc2e1fdcc2008110a66690c64878b7dcc85a3d0f0c04fb19f54b85",
+        "version": null
+      },
+      "selector": "Complete artifact"
+    },
+    {
+      "id": "final",
+      "artifact": {
+        "path": "/Users/simon/work/personal/skill-study-private/concise-writing/baseline-suite-20261018/subjects/20261018T175501232Z-cw-suite-codex-invocation-comments-original-8c5754ac-1209-46db-9cda-2ea7ca7debf2-a59311u3/final.txt",
+        "sha256": "a5b7d5898c1f16ed40e39c5603c54042155165c4a102cf476bdd9ae8c5b4bf03",
+        "version": null
+      },
+      "selector": "Complete artifact"
+    },
+    {
+      "id": "source-0",
+      "artifact": {
+        "path": "skill-studies/concise-writing/cases/invocation-comments/task.md",
+        "sha256": "6a771f7383d14f7d77b02c862155da0b10af1e83cc72333512c5a83fde9523b5",
+        "version": null,
+        "git_revision": "6ad549b50af54d9766d05b47ebf5cbc1ea3cddbb"
+      },
+      "selector": "Complete frozen TASK.md"
+    },
+    {
+      "id": "source-1",
+      "artifact": {
+        "path": "skill-studies/concise-writing/cases/invocation-comments/fixture/uploader.py",
+        "sha256": "2587771c1d7fee7e2ca72dbb1ff1a2594fff69775a72fff1929f437cce8ec2f1",
+        "version": null,
+        "git_revision": "6ad549b50af54d9766d05b47ebf5cbc1ea3cddbb"
+      },
+      "selector": "Complete frozen uploader.py"
+    },
+    {
+      "id": "source-2",
+      "artifact": {
+        "path": "skill-studies/concise-writing/cases/invocation-comments/fixture/MAINTAINER-NOTES.md",
+        "sha256": "59175ed2990a8b65636507ce2116321e70c60b1c0a2eea288d01e075252fc847",
+        "version": null,
+        "git_revision": "6ad549b50af54d9766d05b47ebf5cbc1ea3cddbb"
+      },
+      "selector": "Complete frozen MAINTAINER-NOTES.md"
+    },
+    {
+      "id": "task-mechanical",
+      "artifact": {
+        "path": "/Users/simon/work/personal/skill-study-private/concise-writing/baseline-suite-20261018/mechanical/105.json",
+        "sha256": "c363e8aece58e6d5484eb9ee152950d5591444434e46f21e0212eda4d46374c0",
+        "version": null
+      },
+      "selector": "Complete saved parse/token or numeric/reply observation; no subject code execution"
+    }
+  ],
+  "setup": {
+    "status": "valid",
+    "reason": "Fixed provider/model/CLI and retained inventory verified. Native skill available; complete assigned body before first edit: True. Protected input bytes unchanged.",
+    "evidence": [
+      "mechanical",
+      "trace",
+      "log"
+    ]
+  },
+  "criteria": [
+    {
+      "id": "F1",
+      "dimension": "functional",
+      "judgment": "met",
+      "reason": "The complete comments in executable context accurately convey four total send attempts and the temporary-send error boundary. Acknowledgement recording remains outside retry handling; token/syntax comparison confirms executable code is unchanged. No unsupported behavior is asserted.",
+      "consequence": "Required whole-artifact functional factor; length cannot offset failure.",
+      "evidence": [
+        "output",
+        "source-0",
+        "source-1",
+        "source-2"
+      ]
+    },
+    {
+      "id": "F2",
+      "dimension": "functional",
+      "judgment": "met",
+      "reason": "The maintainer can identify the retry limit and understand that acknowledgement errors propagate without another send of the accepted batch. The explanation is connected to the else branch and receipt recording, preserving the maintenance trap and its rationale without requiring the separate notes.",
+      "consequence": "Required whole-artifact functional factor; length cannot offset failure.",
+      "evidence": [
+        "output",
+        "source-0",
+        "source-1",
+        "source-2"
+      ]
+    },
+    {
+      "id": "F3",
+      "dimension": "functional",
+      "judgment": "met",
+      "reason": "The comments explain the limit/error boundary and acknowledgement trap at their relevant code locations, replacing obvious narration without needless repetition. Useful maintenance explanation may legitimately increase comment length.",
+      "consequence": "Required whole-artifact functional factor; length cannot offset failure.",
+      "evidence": [
+        "output",
+        "source-0",
+        "source-1",
+        "source-2"
+      ]
+    },
+    {
+      "id": "D1",
+      "dimension": "procedural",
+      "judgment": "met",
+      "reason": "CW is catalogued but not pre-supplied. Full body delivery at event27 precedes the first comment edit; earlier calls only establish the neutral baseline or read task/source/notes. No explicit task-level loading request occurs.",
+      "consequence": "Selection is reported separately from artifact quality.",
+      "evidence": [
+        "trace",
+        "log"
+      ]
+    }
+  ],
+  "functional_result": "met",
+  "procedural_summary": "Fixed provider/model/CLI and retained inventory verified. Native skill available; complete assigned body before first edit: True. Protected input bytes unchanged. O4/O5 remain unscored; native D1 is distinct from functional outcome.",
+  "observations": [
+    {
+      "dimension": "functional",
+      "description": "Complete output 60 wc-w words; supplied TASK.md: 47 words, uploader.py: 48 words, MAINTAINER-NOTES.md: 136 words. Counts describe length, not semantic success; comment-only counts are reported separately for N4.",
+      "consequence": "Descriptive counts only.",
+      "evidence": [
+        "output",
+        "source-0",
+        "source-1",
+        "source-2"
+      ]
+    },
+    {
+      "dimension": "functional",
+      "description": "Whole-code-context assessment passes. The retained parser/token audit confirms only comments change; source comments contain20 words and the larger output adds useful rationale rather than failing a brevity quota. No subject-produced code was executed.",
+      "consequence": "Qualitative comparison is separate from threshold counts.",
+      "evidence": [
+        "output",
+        "source-0",
+        "source-1",
+        "source-2"
+      ]
+    }
+  ],
+  "uncertainty": []
+}

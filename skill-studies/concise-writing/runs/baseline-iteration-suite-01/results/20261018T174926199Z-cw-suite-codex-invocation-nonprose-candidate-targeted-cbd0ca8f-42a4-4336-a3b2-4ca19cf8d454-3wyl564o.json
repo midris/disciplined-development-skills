@@ -1,0 +1,144 @@
+{
+  "schema_version": "2",
+  "record_kind": "execution result",
+  "result_id": "codex-native-iteration-01-invocation-nonprose-candidate-targeted-1-1-assessment",
+  "assessed_at": "2026-10-18T17:57:43.214608+00:00",
+  "run_id": "20261018T174926199Z-cw-suite-codex-invocation-nonprose-candidate-targeted-cbd0ca8f-42a4-4336-a3b2-4ca19cf8d454-3wyl564o",
+  "condition": "candidate-targeted",
+  "assessor": {
+    "name": "Codex active session",
+    "method": "active session",
+    "model": null,
+    "session_id": null,
+    "context": "Same Codex controller authored/reviewed exposed development variants and directly judged complete outputs; no blind, held-out or independent assessor claim. Separate Opus review supplements this."
+  },
+  "manifest": {
+    "path": "skill-studies/concise-writing/runs/baseline-iteration-suite-01/preparation/manifests/codex-invocation-nonprose-manifest.json",
+    "sha256": "2dec6436a2cdb210c0cd921448da46355450c2ebf35c4fe7b3d4042c2512cf90",
+    "version": "1",
+    "git_revision": "c4fbdde162dc0e1d7cdbccfd9ec0cec202893659"
+  },
+  "evidence": [
+    {
+      "id": "output",
+      "artifact": {
+        "path": "/Users/simon/work/personal/skill-study-private/concise-writing/baseline-suite-20261018/subjects/20261018T174926199Z-cw-suite-codex-invocation-nonprose-candidate-targeted-cbd0ca8f-42a4-4336-a3b2-4ca19cf8d454-3wyl564o/workspace/fixture/settings.toml",
+        "sha256": "9cdef29c80346b6a4d90eb85a6612160a702925e9635c1b0b537b67afe3dd071",
+        "version": null
+      },
+      "selector": "Complete artifact"
+    },
+    {
+      "id": "trace",
+      "artifact": {
+        "path": "/Users/simon/work/personal/skill-study-private/concise-writing/baseline-suite-20261018/subjects/20261018T174926199Z-cw-suite-codex-invocation-nonprose-candidate-targeted-cbd0ca8f-42a4-4336-a3b2-4ca19cf8d454-3wyl564o/provider-session.jsonl",
+        "sha256": "6894a4ab9cc9a5dd4008832985a3de89a3bb8e027a258fca7fea58aab90e7273",
+        "version": null
+      },
+      "selector": "Complete artifact"
+    },
+    {
+      "id": "mechanical",
+      "artifact": {
+        "path": "/Users/simon/work/personal/skill-study-private/concise-writing/baseline-suite-20261018/subjects/20261018T174926199Z-cw-suite-codex-invocation-nonprose-candidate-targeted-cbd0ca8f-42a4-4336-a3b2-4ca19cf8d454-3wyl564o/result.json",
+        "sha256": "417f70bac5dd6ced93bad4e3481f84089bae85a2f9281d7f6f1916a7458be40c",
+        "version": null
+      },
+      "selector": "Complete artifact"
+    },
+    {
+      "id": "log",
+      "artifact": {
+        "path": "/Users/simon/work/personal/skill-study-private/concise-writing/baseline-suite-20261018/subjects/20261018T174926199Z-cw-suite-codex-invocation-nonprose-candidate-targeted-cbd0ca8f-42a4-4336-a3b2-4ca19cf8d454-3wyl564o/runner.log",
+        "sha256": "71141a6ce30d746240f7bbc964a151a14c2b60108a9f6b6aee7e433743fc2a62",
+        "version": null
+      },
+      "selector": "Complete artifact"
+    },
+    {
+      "id": "final",
+      "artifact": {
+        "path": "/Users/simon/work/personal/skill-study-private/concise-writing/baseline-suite-20261018/subjects/20261018T174926199Z-cw-suite-codex-invocation-nonprose-candidate-targeted-cbd0ca8f-42a4-4336-a3b2-4ca19cf8d454-3wyl564o/final.txt",
+        "sha256": "ed251864987c367e9641fbdc89c1d83e9bf0fa2e3eecef8f301c79f619bfac81",
+        "version": null
+      },
+      "selector": "Complete artifact"
+    },
+    {
+      "id": "source-0",
+      "artifact": {
+        "path": "skill-studies/concise-writing/cases/invocation-nonprose/fixture/settings.toml",
+        "sha256": "38f8a9ddd2d83dc10d2f3681c0e56663d2fa9907c16e105bcc4d7f3fb387158c",
+        "version": null,
+        "git_revision": "6ad549b50af54d9766d05b47ebf5cbc1ea3cddbb"
+      },
+      "selector": "Complete frozen settings.toml"
+    },
+    {
+      "id": "source-1",
+      "artifact": {
+        "path": "skill-studies/concise-writing/cases/invocation-nonprose/task.md",
+        "sha256": "8c960258723b03e87cfdae2fbfbd576c4ff4299206f02c87dcd50e9026c80733",
+        "version": null,
+        "git_revision": "6ad549b50af54d9766d05b47ebf5cbc1ea3cddbb"
+      },
+      "selector": "Complete frozen TASK.md"
+    },
+    {
+      "id": "task-mechanical",
+      "artifact": {
+        "path": "/Users/simon/work/personal/skill-study-private/concise-writing/baseline-suite-20261018/mechanical/093.json",
+        "sha256": "0d4d48e8daf31848c4b8afa09a536179f28ba60a8bd81a2cd2ef2d41d56d3ec3",
+        "version": null
+      },
+      "selector": "Complete saved parse/token or numeric/reply observation; no subject code execution"
+    }
+  ],
+  "setup": {
+    "status": "valid",
+    "reason": "Fixed provider/model/CLI and retained inventory verified. Native skill available; complete assigned body before first edit: True. Protected input bytes unchanged.",
+    "evidence": [
+      "mechanical",
+      "trace",
+      "log"
+    ]
+  },
+  "criteria": [
+    {
+      "id": "D1",
+      "dimension": "procedural",
+      "judgment": "not met",
+      "reason": "CW is available in the native catalog and not pre-supplied. The complete body is delivered at event34 despite the numeric-only task; this is an over-trigger.",
+      "consequence": "Selection is reported separately from artifact quality.",
+      "evidence": [
+        "trace",
+        "log"
+      ]
+    }
+  ],
+  "functional_result": "not measured",
+  "procedural_summary": "Fixed provider/model/CLI and retained inventory verified. Native skill available; complete assigned body before first edit: True. Protected input bytes unchanged. O4/O5 remain unscored; native D1 is distinct from functional outcome.",
+  "observations": [
+    {
+      "dimension": "procedural",
+      "description": "Length not applicable to numeric-only task.",
+      "consequence": "Descriptive counts only.",
+      "evidence": [
+        "output",
+        "source-0",
+        "source-1"
+      ]
+    },
+    {
+      "dimension": "procedural",
+      "description": "CW functional effectiveness is not measured. The retained mechanical audit confirms that exactly worker_count4\u21926 changes. Final text is Done., but additional user-facing status messages are separate Done-only task deviations, not CW functional results.",
+      "consequence": "Qualitative comparison is separate from threshold counts.",
+      "evidence": [
+        "output",
+        "source-0",
+        "source-1"
+      ]
+    }
+  ],
+  "uncertainty": []
+}

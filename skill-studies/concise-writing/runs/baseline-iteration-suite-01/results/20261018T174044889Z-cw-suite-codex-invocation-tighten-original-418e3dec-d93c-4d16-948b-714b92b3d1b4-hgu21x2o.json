@@ -1,0 +1,171 @@
+{
+  "schema_version": "2",
+  "record_kind": "execution result",
+  "result_id": "codex-native-iteration-01-invocation-tighten-original-2-1-assessment",
+  "assessed_at": "2026-10-18T17:57:43.214608+00:00",
+  "run_id": "20261018T174044889Z-cw-suite-codex-invocation-tighten-original-418e3dec-d93c-4d16-948b-714b92b3d1b4-hgu21x2o",
+  "condition": "original",
+  "assessor": {
+    "name": "Codex active session",
+    "method": "active session",
+    "model": null,
+    "session_id": null,
+    "context": "Same Codex controller authored/reviewed exposed development variants and directly judged complete outputs; no blind, held-out or independent assessor claim. Separate Opus review supplements this."
+  },
+  "manifest": {
+    "path": "skill-studies/concise-writing/runs/baseline-iteration-suite-01/preparation/manifests/codex-invocation-tighten-manifest.json",
+    "sha256": "7433ce2604355cb6b513a1d0804d4e16713391f83ff30e8c663ade51b78d6de8",
+    "version": "1",
+    "git_revision": "c4fbdde162dc0e1d7cdbccfd9ec0cec202893659"
+  },
+  "evidence": [
+    {
+      "id": "output",
+      "artifact": {
+        "path": "/Users/simon/work/personal/skill-study-private/concise-writing/baseline-suite-20261018/subjects/20261018T174044889Z-cw-suite-codex-invocation-tighten-original-418e3dec-d93c-4d16-948b-714b92b3d1b4-hgu21x2o/workspace/fixture/report.md",
+        "sha256": "91eef43d21913f5dba43abe41c4dfdd03a2b13fc584edb2c3c79bbd51c753b5d",
+        "version": null
+      },
+      "selector": "Complete artifact"
+    },
+    {
+      "id": "trace",
+      "artifact": {
+        "path": "/Users/simon/work/personal/skill-study-private/concise-writing/baseline-suite-20261018/subjects/20261018T174044889Z-cw-suite-codex-invocation-tighten-original-418e3dec-d93c-4d16-948b-714b92b3d1b4-hgu21x2o/provider-session.jsonl",
+        "sha256": "9d339fc1da3baf6d9b7222f9f9721a451922fdf411edeebf036bef1a15ac02b3",
+        "version": null
+      },
+      "selector": "Complete artifact"
+    },
+    {
+      "id": "mechanical",
+      "artifact": {
+        "path": "/Users/simon/work/personal/skill-study-private/concise-writing/baseline-suite-20261018/subjects/20261018T174044889Z-cw-suite-codex-invocation-tighten-original-418e3dec-d93c-4d16-948b-714b92b3d1b4-hgu21x2o/result.json",
+        "sha256": "cc53a80fd542c0a024daaec44f449f2813077797f91ffe0ffaa057eaf7607692",
+        "version": null
+      },
+      "selector": "Complete artifact"
+    },
+    {
+      "id": "log",
+      "artifact": {
+        "path": "/Users/simon/work/personal/skill-study-private/concise-writing/baseline-suite-20261018/subjects/20261018T174044889Z-cw-suite-codex-invocation-tighten-original-418e3dec-d93c-4d16-948b-714b92b3d1b4-hgu21x2o/runner.log",
+        "sha256": "4a93f943ead4b9407694f8deba3092f7480aaf049a703b1f5cf9bdb93f471ce1",
+        "version": null
+      },
+      "selector": "Complete artifact"
+    },
+    {
+      "id": "final",
+      "artifact": {
+        "path": "/Users/simon/work/personal/skill-study-private/concise-writing/baseline-suite-20261018/subjects/20261018T174044889Z-cw-suite-codex-invocation-tighten-original-418e3dec-d93c-4d16-948b-714b92b3d1b4-hgu21x2o/final.txt",
+        "sha256": "1fd0abbccbe4c41d95f1bd6ecd4e5b7604cc525228fc05056f894978b2908eac",
+        "version": null
+      },
+      "selector": "Complete artifact"
+    },
+    {
+      "id": "source-0",
+      "artifact": {
+        "path": "skill-studies/concise-writing/cases/agent-recommendation/fixture/report.md",
+        "sha256": "e9a992c7e4c14dfd5afc10cc637349f39c2030e98ed0311441675900bc3e93e9",
+        "version": null,
+        "git_revision": "6ad549b50af54d9766d05b47ebf5cbc1ea3cddbb"
+      },
+      "selector": "Complete frozen report.md"
+    },
+    {
+      "id": "source-1",
+      "artifact": {
+        "path": "skill-studies/concise-writing/cases/agent-recommendation/task.md",
+        "sha256": "607cbe0562a19ea092fe76ec96f13bfbe033b2e1095baef2ca38be621c0baf82",
+        "version": null,
+        "git_revision": "6ad549b50af54d9766d05b47ebf5cbc1ea3cddbb"
+      },
+      "selector": "Complete frozen TASK.md"
+    }
+  ],
+  "setup": {
+    "status": "valid",
+    "reason": "Fixed provider/model/CLI and retained inventory verified. Native skill available; complete assigned body before first edit: True. Protected input bytes unchanged.",
+    "evidence": [
+      "mechanical",
+      "trace",
+      "log"
+    ]
+  },
+  "criteria": [
+    {
+      "id": "F1",
+      "dimension": "functional",
+      "judgment": "met",
+      "reason": "Original N1r2 preserves all staging observations and limits, cursor semantics, current production state and exact pilot approval/scope/window/duration/roles without unsupported assurance.",
+      "consequence": "Required whole-artifact functional factor; length cannot offset failure.",
+      "evidence": [
+        "output",
+        "source-0",
+        "source-1"
+      ]
+    },
+    {
+      "id": "F2",
+      "dimension": "functional",
+      "judgment": "met",
+      "reason": "The manager can approve only the limited pilot; mismatch stop/retain-both-files includes the diagnostic rationale, and matching counts require a separate release decision.",
+      "consequence": "Required whole-artifact functional factor; length cannot offset failure.",
+      "evidence": [
+        "output",
+        "source-0",
+        "source-1"
+      ]
+    },
+    {
+      "id": "F3",
+      "dimension": "functional",
+      "judgment": "met",
+      "reason": "The clear decision/evidence/mechanism/outcome structure removes padding and detached duplication while retaining useful context and safeguards.",
+      "consequence": "Required whole-artifact functional factor; length cannot offset failure.",
+      "evidence": [
+        "output",
+        "source-0",
+        "source-1"
+      ]
+    },
+    {
+      "id": "D1",
+      "dimension": "procedural",
+      "judgment": "met",
+      "reason": "CW is in the native catalog but the complete body is not pre-supplied; full instructions arrive at event18 before task editing. Pre-body calls only read the skill or prepare the permitted neutral baseline; no explicit loading request is supplied.",
+      "consequence": "Selection is reported separately from artifact quality.",
+      "evidence": [
+        "trace",
+        "log"
+      ]
+    }
+  ],
+  "functional_result": "met",
+  "procedural_summary": "Fixed provider/model/CLI and retained inventory verified. Native skill available; complete assigned body before first edit: True. Protected input bytes unchanged. O4/O5 remain unscored; native D1 is distinct from functional outcome.",
+  "observations": [
+    {
+      "dimension": "functional",
+      "description": "Complete output 219 wc-w words; supplied report.md: 625 words, TASK.md: 51 words. Counts describe length, not semantic success; comment-only counts are reported separately for N4.",
+      "consequence": "Descriptive counts only.",
+      "evidence": [
+        "output",
+        "source-0",
+        "source-1"
+      ]
+    },
+    {
+      "dimension": "functional",
+      "description": "Passing native tightening output and timely selection. Descriptive observations are not a naturalistic invocation-rate estimate, and run paths expose case/condition labels.",
+      "consequence": "Qualitative comparison is separate from threshold counts.",
+      "evidence": [
+        "output",
+        "source-0",
+        "source-1"
+      ]
+    }
+  ],
+  "uncertainty": []
+}
