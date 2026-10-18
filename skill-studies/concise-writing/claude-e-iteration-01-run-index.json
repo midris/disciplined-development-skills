@@ -32,13 +32,792 @@
         "charge": 1
       },
       "limitations": [
-        "Retained; active-session assessment pending. No blind, held-out or independent assessor claim."
+        "Direct-session result prepared; committed result pins pending. No blind, held-out or independent assessor claim."
       ],
       "bundle": {
         "path": "/Users/simon/work/personal/skill-study-private/concise-writing/e-iteration-20261018/subjects/20261018T052021363Z-cw-e-iteration-claude-candidate-targeted-c898f485-bbff-431c-829f-9ccf405b4c02-tiy73t38",
         "inventory": {
           "path": "/Users/simon/work/personal/skill-study-private/concise-writing/e-iteration-20261018/subjects/20261018T052021363Z-cw-e-iteration-claude-candidate-targeted-c898f485-bbff-431c-829f-9ccf405b4c02-tiy73t38.canonical.inventory.json",
           "sha256": "787067a1e55b577bd4c6e72d6038c47d0c3c874e85b3e5ba383e21e281c4d21c",
+          "version": "1"
+        },
+        "verified": true
+      },
+      "result": null
+    },
+    {
+      "attempt_id": "claude-e-iteration-01-candidate-fuller-1-1",
+      "case_id": "document-addition",
+      "condition": "candidate-fuller",
+      "repetition": 1,
+      "attempt_number": 1,
+      "retry_of": null,
+      "manifest": {
+        "path": "skill-studies/concise-writing/drafts/baseline-iteration/testing/claude-manifest.json",
+        "sha256": "613eea38778b3cee5576d7adb1e38bfb1d3e2b1353de473e4a7453966ba4ce31",
+        "version": "1",
+        "git_revision": "0b96bcbb2b5340aed05c7c663ff400c2cd2b49c2"
+      },
+      "authorization": {
+        "artifact": {
+          "path": "skill-studies/concise-writing/protocol.md",
+          "sha256": "f6e7e461a150acf814d9fcc268694606fafe6f459969c3487670fbf503332edb",
+          "version": "1",
+          "git_revision": "0b96bcbb2b5340aed05c7c663ff400c2cd2b49c2"
+        },
+        "selector": "Batch: claude-e-iteration-01; order 2"
+      },
+      "run_id": "20261018T053125965Z-cw-e-iteration-claude-candidate-fuller-6d0952f6-c1b6-41c6-84b6-05a0a9cb611d-4q2i2atv",
+      "allocation": {
+        "pool": "subject",
+        "charge": 1
+      },
+      "limitations": [
+        "Direct-session result prepared; committed result pins pending. No blind, held-out or independent assessor claim."
+      ],
+      "bundle": {
+        "path": "/Users/simon/work/personal/skill-study-private/concise-writing/e-iteration-20261018/subjects/20261018T053125965Z-cw-e-iteration-claude-candidate-fuller-6d0952f6-c1b6-41c6-84b6-05a0a9cb611d-4q2i2atv",
+        "inventory": {
+          "path": "/Users/simon/work/personal/skill-study-private/concise-writing/e-iteration-20261018/subjects/20261018T053125965Z-cw-e-iteration-claude-candidate-fuller-6d0952f6-c1b6-41c6-84b6-05a0a9cb611d-4q2i2atv.inventory.json",
+          "sha256": "0e2621635f24eff53b5486c2c0670889982e69d0dd94dff3c8aee939afa15dfc",
+          "version": "1"
+        },
+        "verified": true
+      },
+      "result": null
+    },
+    {
+      "attempt_id": "claude-e-iteration-01-control-1-1",
+      "case_id": "document-addition",
+      "condition": "control",
+      "repetition": 1,
+      "attempt_number": 1,
+      "retry_of": null,
+      "manifest": {
+        "path": "skill-studies/concise-writing/drafts/baseline-iteration/testing/claude-manifest.json",
+        "sha256": "613eea38778b3cee5576d7adb1e38bfb1d3e2b1353de473e4a7453966ba4ce31",
+        "version": "1",
+        "git_revision": "0b96bcbb2b5340aed05c7c663ff400c2cd2b49c2"
+      },
+      "authorization": {
+        "artifact": {
+          "path": "skill-studies/concise-writing/protocol.md",
+          "sha256": "f6e7e461a150acf814d9fcc268694606fafe6f459969c3487670fbf503332edb",
+          "version": "1",
+          "git_revision": "0b96bcbb2b5340aed05c7c663ff400c2cd2b49c2"
+        },
+        "selector": "Batch: claude-e-iteration-01; order 3"
+      },
+      "run_id": "20261018T053158646Z-cw-e-iteration-claude-control-a90a4667-6042-44dd-80ae-c756bf52f279-u8yo_iw2",
+      "allocation": {
+        "pool": "subject",
+        "charge": 1
+      },
+      "limitations": [
+        "Direct-session result prepared; committed result pins pending. No blind, held-out or independent assessor claim."
+      ],
+      "bundle": {
+        "path": "/Users/simon/work/personal/skill-study-private/concise-writing/e-iteration-20261018/subjects/20261018T053158646Z-cw-e-iteration-claude-control-a90a4667-6042-44dd-80ae-c756bf52f279-u8yo_iw2",
+        "inventory": {
+          "path": "/Users/simon/work/personal/skill-study-private/concise-writing/e-iteration-20261018/subjects/20261018T053158646Z-cw-e-iteration-claude-control-a90a4667-6042-44dd-80ae-c756bf52f279-u8yo_iw2.inventory.json",
+          "sha256": "cfd524a2a52cf1692e7dbe6dde84359baaac553b0f66feb3972b53681c85564e",
+          "version": "1"
+        },
+        "verified": true
+      },
+      "result": null
+    },
+    {
+      "attempt_id": "claude-e-iteration-01-original-1-1",
+      "case_id": "document-addition",
+      "condition": "original",
+      "repetition": 1,
+      "attempt_number": 1,
+      "retry_of": null,
+      "manifest": {
+        "path": "skill-studies/concise-writing/drafts/baseline-iteration/testing/claude-manifest.json",
+        "sha256": "613eea38778b3cee5576d7adb1e38bfb1d3e2b1353de473e4a7453966ba4ce31",
+        "version": "1",
+        "git_revision": "0b96bcbb2b5340aed05c7c663ff400c2cd2b49c2"
+      },
+      "authorization": {
+        "artifact": {
+          "path": "skill-studies/concise-writing/protocol.md",
+          "sha256": "f6e7e461a150acf814d9fcc268694606fafe6f459969c3487670fbf503332edb",
+          "version": "1",
+          "git_revision": "0b96bcbb2b5340aed05c7c663ff400c2cd2b49c2"
+        },
+        "selector": "Batch: claude-e-iteration-01; order 4"
+      },
+      "run_id": "20261018T053231587Z-cw-e-iteration-claude-original-53c513c2-f27a-4b90-87c9-c3aea61cc068-hcx8okgz",
+      "allocation": {
+        "pool": "subject",
+        "charge": 1
+      },
+      "limitations": [
+        "Direct-session result prepared; committed result pins pending. No blind, held-out or independent assessor claim."
+      ],
+      "bundle": {
+        "path": "/Users/simon/work/personal/skill-study-private/concise-writing/e-iteration-20261018/subjects/20261018T053231587Z-cw-e-iteration-claude-original-53c513c2-f27a-4b90-87c9-c3aea61cc068-hcx8okgz",
+        "inventory": {
+          "path": "/Users/simon/work/personal/skill-study-private/concise-writing/e-iteration-20261018/subjects/20261018T053231587Z-cw-e-iteration-claude-original-53c513c2-f27a-4b90-87c9-c3aea61cc068-hcx8okgz.inventory.json",
+          "sha256": "0c75cdc2e68b9f854828f55de5e60de90a3aa726926d2b081523c28df2718bb4",
+          "version": "1"
+        },
+        "verified": true
+      },
+      "result": null
+    },
+    {
+      "attempt_id": "claude-e-iteration-01-candidate-fuller-2-1",
+      "case_id": "document-addition",
+      "condition": "candidate-fuller",
+      "repetition": 2,
+      "attempt_number": 1,
+      "retry_of": null,
+      "manifest": {
+        "path": "skill-studies/concise-writing/drafts/baseline-iteration/testing/claude-manifest.json",
+        "sha256": "613eea38778b3cee5576d7adb1e38bfb1d3e2b1353de473e4a7453966ba4ce31",
+        "version": "1",
+        "git_revision": "0b96bcbb2b5340aed05c7c663ff400c2cd2b49c2"
+      },
+      "authorization": {
+        "artifact": {
+          "path": "skill-studies/concise-writing/protocol.md",
+          "sha256": "f6e7e461a150acf814d9fcc268694606fafe6f459969c3487670fbf503332edb",
+          "version": "1",
+          "git_revision": "0b96bcbb2b5340aed05c7c663ff400c2cd2b49c2"
+        },
+        "selector": "Batch: claude-e-iteration-01; order 5"
+      },
+      "run_id": "20261018T053300184Z-cw-e-iteration-claude-candidate-fuller-d832b586-a300-4e1e-80fe-518f674a5f1f-v33k6sum",
+      "allocation": {
+        "pool": "subject",
+        "charge": 1
+      },
+      "limitations": [
+        "Direct-session result prepared; committed result pins pending. No blind, held-out or independent assessor claim."
+      ],
+      "bundle": {
+        "path": "/Users/simon/work/personal/skill-study-private/concise-writing/e-iteration-20261018/subjects/20261018T053300184Z-cw-e-iteration-claude-candidate-fuller-d832b586-a300-4e1e-80fe-518f674a5f1f-v33k6sum",
+        "inventory": {
+          "path": "/Users/simon/work/personal/skill-study-private/concise-writing/e-iteration-20261018/subjects/20261018T053300184Z-cw-e-iteration-claude-candidate-fuller-d832b586-a300-4e1e-80fe-518f674a5f1f-v33k6sum.inventory.json",
+          "sha256": "0262e5452fa50c1afc5ace6ae711deb218f2243bbcb4a54adb42f91c0de4b674",
+          "version": "1"
+        },
+        "verified": true
+      },
+      "result": null
+    },
+    {
+      "attempt_id": "claude-e-iteration-01-control-2-1",
+      "case_id": "document-addition",
+      "condition": "control",
+      "repetition": 2,
+      "attempt_number": 1,
+      "retry_of": null,
+      "manifest": {
+        "path": "skill-studies/concise-writing/drafts/baseline-iteration/testing/claude-manifest.json",
+        "sha256": "613eea38778b3cee5576d7adb1e38bfb1d3e2b1353de473e4a7453966ba4ce31",
+        "version": "1",
+        "git_revision": "0b96bcbb2b5340aed05c7c663ff400c2cd2b49c2"
+      },
+      "authorization": {
+        "artifact": {
+          "path": "skill-studies/concise-writing/protocol.md",
+          "sha256": "f6e7e461a150acf814d9fcc268694606fafe6f459969c3487670fbf503332edb",
+          "version": "1",
+          "git_revision": "0b96bcbb2b5340aed05c7c663ff400c2cd2b49c2"
+        },
+        "selector": "Batch: claude-e-iteration-01; order 6"
+      },
+      "run_id": "20261018T053334373Z-cw-e-iteration-claude-control-a0413be4-63d0-4f7b-ae83-b56d9eda9d67-ki2ez0rs",
+      "allocation": {
+        "pool": "subject",
+        "charge": 1
+      },
+      "limitations": [
+        "Direct-session result prepared; committed result pins pending. No blind, held-out or independent assessor claim."
+      ],
+      "bundle": {
+        "path": "/Users/simon/work/personal/skill-study-private/concise-writing/e-iteration-20261018/subjects/20261018T053334373Z-cw-e-iteration-claude-control-a0413be4-63d0-4f7b-ae83-b56d9eda9d67-ki2ez0rs",
+        "inventory": {
+          "path": "/Users/simon/work/personal/skill-study-private/concise-writing/e-iteration-20261018/subjects/20261018T053334373Z-cw-e-iteration-claude-control-a0413be4-63d0-4f7b-ae83-b56d9eda9d67-ki2ez0rs.inventory.json",
+          "sha256": "15b06255de7f6f91138ada66e443012f9e60bf776cb1c697b32bdc48419cfde5",
+          "version": "1"
+        },
+        "verified": true
+      },
+      "result": null
+    },
+    {
+      "attempt_id": "claude-e-iteration-01-original-2-1",
+      "case_id": "document-addition",
+      "condition": "original",
+      "repetition": 2,
+      "attempt_number": 1,
+      "retry_of": null,
+      "manifest": {
+        "path": "skill-studies/concise-writing/drafts/baseline-iteration/testing/claude-manifest.json",
+        "sha256": "613eea38778b3cee5576d7adb1e38bfb1d3e2b1353de473e4a7453966ba4ce31",
+        "version": "1",
+        "git_revision": "0b96bcbb2b5340aed05c7c663ff400c2cd2b49c2"
+      },
+      "authorization": {
+        "artifact": {
+          "path": "skill-studies/concise-writing/protocol.md",
+          "sha256": "f6e7e461a150acf814d9fcc268694606fafe6f459969c3487670fbf503332edb",
+          "version": "1",
+          "git_revision": "0b96bcbb2b5340aed05c7c663ff400c2cd2b49c2"
+        },
+        "selector": "Batch: claude-e-iteration-01; order 7"
+      },
+      "run_id": "20261018T053410351Z-cw-e-iteration-claude-original-f584dd67-f409-4b03-b8ba-a460875d3acc-bn2w937f",
+      "allocation": {
+        "pool": "subject",
+        "charge": 1
+      },
+      "limitations": [
+        "Direct-session result prepared; committed result pins pending. No blind, held-out or independent assessor claim."
+      ],
+      "bundle": {
+        "path": "/Users/simon/work/personal/skill-study-private/concise-writing/e-iteration-20261018/subjects/20261018T053410351Z-cw-e-iteration-claude-original-f584dd67-f409-4b03-b8ba-a460875d3acc-bn2w937f",
+        "inventory": {
+          "path": "/Users/simon/work/personal/skill-study-private/concise-writing/e-iteration-20261018/subjects/20261018T053410351Z-cw-e-iteration-claude-original-f584dd67-f409-4b03-b8ba-a460875d3acc-bn2w937f.inventory.json",
+          "sha256": "c9c1e99ca68f31a0516b994cd3550a59de1f14b6ac36fb16eafd07b6fbc6e67d",
+          "version": "1"
+        },
+        "verified": true
+      },
+      "result": null
+    },
+    {
+      "attempt_id": "claude-e-iteration-01-candidate-targeted-2-1",
+      "case_id": "document-addition",
+      "condition": "candidate-targeted",
+      "repetition": 2,
+      "attempt_number": 1,
+      "retry_of": null,
+      "manifest": {
+        "path": "skill-studies/concise-writing/drafts/baseline-iteration/testing/claude-manifest.json",
+        "sha256": "613eea38778b3cee5576d7adb1e38bfb1d3e2b1353de473e4a7453966ba4ce31",
+        "version": "1",
+        "git_revision": "0b96bcbb2b5340aed05c7c663ff400c2cd2b49c2"
+      },
+      "authorization": {
+        "artifact": {
+          "path": "skill-studies/concise-writing/protocol.md",
+          "sha256": "f6e7e461a150acf814d9fcc268694606fafe6f459969c3487670fbf503332edb",
+          "version": "1",
+          "git_revision": "0b96bcbb2b5340aed05c7c663ff400c2cd2b49c2"
+        },
+        "selector": "Batch: claude-e-iteration-01; order 8"
+      },
+      "run_id": "20261018T053436349Z-cw-e-iteration-claude-candidate-targeted-7e2db0ff-873f-4459-83b7-3ca1ee01a533-jlsv_mwh",
+      "allocation": {
+        "pool": "subject",
+        "charge": 1
+      },
+      "limitations": [
+        "Direct-session result prepared; committed result pins pending. No blind, held-out or independent assessor claim."
+      ],
+      "bundle": {
+        "path": "/Users/simon/work/personal/skill-study-private/concise-writing/e-iteration-20261018/subjects/20261018T053436349Z-cw-e-iteration-claude-candidate-targeted-7e2db0ff-873f-4459-83b7-3ca1ee01a533-jlsv_mwh",
+        "inventory": {
+          "path": "/Users/simon/work/personal/skill-study-private/concise-writing/e-iteration-20261018/subjects/20261018T053436349Z-cw-e-iteration-claude-candidate-targeted-7e2db0ff-873f-4459-83b7-3ca1ee01a533-jlsv_mwh.inventory.json",
+          "sha256": "8877134fdb880e0b4fe4fb4a6502674670df629d8f272f415c06d3a0725cc51b",
+          "version": "1"
+        },
+        "verified": true
+      },
+      "result": null
+    },
+    {
+      "attempt_id": "claude-e-iteration-01-control-3-1",
+      "case_id": "document-addition",
+      "condition": "control",
+      "repetition": 3,
+      "attempt_number": 1,
+      "retry_of": null,
+      "manifest": {
+        "path": "skill-studies/concise-writing/drafts/baseline-iteration/testing/claude-manifest.json",
+        "sha256": "613eea38778b3cee5576d7adb1e38bfb1d3e2b1353de473e4a7453966ba4ce31",
+        "version": "1",
+        "git_revision": "0b96bcbb2b5340aed05c7c663ff400c2cd2b49c2"
+      },
+      "authorization": {
+        "artifact": {
+          "path": "skill-studies/concise-writing/protocol.md",
+          "sha256": "f6e7e461a150acf814d9fcc268694606fafe6f459969c3487670fbf503332edb",
+          "version": "1",
+          "git_revision": "0b96bcbb2b5340aed05c7c663ff400c2cd2b49c2"
+        },
+        "selector": "Batch: claude-e-iteration-01; order 9"
+      },
+      "run_id": "20261018T053504497Z-cw-e-iteration-claude-control-19e7d6e9-4b99-4982-9612-295d427e637c-750m80dk",
+      "allocation": {
+        "pool": "subject",
+        "charge": 1
+      },
+      "limitations": [
+        "Direct-session result prepared; committed result pins pending. No blind, held-out or independent assessor claim."
+      ],
+      "bundle": {
+        "path": "/Users/simon/work/personal/skill-study-private/concise-writing/e-iteration-20261018/subjects/20261018T053504497Z-cw-e-iteration-claude-control-19e7d6e9-4b99-4982-9612-295d427e637c-750m80dk",
+        "inventory": {
+          "path": "/Users/simon/work/personal/skill-study-private/concise-writing/e-iteration-20261018/subjects/20261018T053504497Z-cw-e-iteration-claude-control-19e7d6e9-4b99-4982-9612-295d427e637c-750m80dk.inventory.json",
+          "sha256": "b20797fd63990ff33c68138489d84ff808d777f4d02651d358f0452edd9a7344",
+          "version": "1"
+        },
+        "verified": true
+      },
+      "result": null
+    },
+    {
+      "attempt_id": "claude-e-iteration-01-original-3-1",
+      "case_id": "document-addition",
+      "condition": "original",
+      "repetition": 3,
+      "attempt_number": 1,
+      "retry_of": null,
+      "manifest": {
+        "path": "skill-studies/concise-writing/drafts/baseline-iteration/testing/claude-manifest.json",
+        "sha256": "613eea38778b3cee5576d7adb1e38bfb1d3e2b1353de473e4a7453966ba4ce31",
+        "version": "1",
+        "git_revision": "0b96bcbb2b5340aed05c7c663ff400c2cd2b49c2"
+      },
+      "authorization": {
+        "artifact": {
+          "path": "skill-studies/concise-writing/protocol.md",
+          "sha256": "f6e7e461a150acf814d9fcc268694606fafe6f459969c3487670fbf503332edb",
+          "version": "1",
+          "git_revision": "0b96bcbb2b5340aed05c7c663ff400c2cd2b49c2"
+        },
+        "selector": "Batch: claude-e-iteration-01; order 10"
+      },
+      "run_id": "20261018T053530074Z-cw-e-iteration-claude-original-7181946c-033e-4f20-bbff-3b307e315ea2-j4tig71e",
+      "allocation": {
+        "pool": "subject",
+        "charge": 1
+      },
+      "limitations": [
+        "Direct-session result prepared; committed result pins pending. No blind, held-out or independent assessor claim."
+      ],
+      "bundle": {
+        "path": "/Users/simon/work/personal/skill-study-private/concise-writing/e-iteration-20261018/subjects/20261018T053530074Z-cw-e-iteration-claude-original-7181946c-033e-4f20-bbff-3b307e315ea2-j4tig71e",
+        "inventory": {
+          "path": "/Users/simon/work/personal/skill-study-private/concise-writing/e-iteration-20261018/subjects/20261018T053530074Z-cw-e-iteration-claude-original-7181946c-033e-4f20-bbff-3b307e315ea2-j4tig71e.inventory.json",
+          "sha256": "85bfe02eca2822c28928a15f85ce9b2e2c6a3eada1209c9fdfa2c2e91db7fe53",
+          "version": "1"
+        },
+        "verified": true
+      },
+      "result": null
+    },
+    {
+      "attempt_id": "claude-e-iteration-01-candidate-targeted-3-1",
+      "case_id": "document-addition",
+      "condition": "candidate-targeted",
+      "repetition": 3,
+      "attempt_number": 1,
+      "retry_of": null,
+      "manifest": {
+        "path": "skill-studies/concise-writing/drafts/baseline-iteration/testing/claude-manifest.json",
+        "sha256": "613eea38778b3cee5576d7adb1e38bfb1d3e2b1353de473e4a7453966ba4ce31",
+        "version": "1",
+        "git_revision": "0b96bcbb2b5340aed05c7c663ff400c2cd2b49c2"
+      },
+      "authorization": {
+        "artifact": {
+          "path": "skill-studies/concise-writing/protocol.md",
+          "sha256": "f6e7e461a150acf814d9fcc268694606fafe6f459969c3487670fbf503332edb",
+          "version": "1",
+          "git_revision": "0b96bcbb2b5340aed05c7c663ff400c2cd2b49c2"
+        },
+        "selector": "Batch: claude-e-iteration-01; order 11"
+      },
+      "run_id": "20261018T053559731Z-cw-e-iteration-claude-candidate-targeted-dda5320e-1c1e-4c6e-badd-a826c556fd54-wlexd0bq",
+      "allocation": {
+        "pool": "subject",
+        "charge": 1
+      },
+      "limitations": [
+        "Direct-session result prepared; committed result pins pending. No blind, held-out or independent assessor claim."
+      ],
+      "bundle": {
+        "path": "/Users/simon/work/personal/skill-study-private/concise-writing/e-iteration-20261018/subjects/20261018T053559731Z-cw-e-iteration-claude-candidate-targeted-dda5320e-1c1e-4c6e-badd-a826c556fd54-wlexd0bq",
+        "inventory": {
+          "path": "/Users/simon/work/personal/skill-study-private/concise-writing/e-iteration-20261018/subjects/20261018T053559731Z-cw-e-iteration-claude-candidate-targeted-dda5320e-1c1e-4c6e-badd-a826c556fd54-wlexd0bq.inventory.json",
+          "sha256": "5e418e6a63e4cb81d2c25d8590ab9cad1a5379930f4fef9cc35748611d21f9a0",
+          "version": "1"
+        },
+        "verified": true
+      },
+      "result": null
+    },
+    {
+      "attempt_id": "claude-e-iteration-01-candidate-fuller-3-1",
+      "case_id": "document-addition",
+      "condition": "candidate-fuller",
+      "repetition": 3,
+      "attempt_number": 1,
+      "retry_of": null,
+      "manifest": {
+        "path": "skill-studies/concise-writing/drafts/baseline-iteration/testing/claude-manifest.json",
+        "sha256": "613eea38778b3cee5576d7adb1e38bfb1d3e2b1353de473e4a7453966ba4ce31",
+        "version": "1",
+        "git_revision": "0b96bcbb2b5340aed05c7c663ff400c2cd2b49c2"
+      },
+      "authorization": {
+        "artifact": {
+          "path": "skill-studies/concise-writing/protocol.md",
+          "sha256": "f6e7e461a150acf814d9fcc268694606fafe6f459969c3487670fbf503332edb",
+          "version": "1",
+          "git_revision": "0b96bcbb2b5340aed05c7c663ff400c2cd2b49c2"
+        },
+        "selector": "Batch: claude-e-iteration-01; order 12"
+      },
+      "run_id": "20261018T053627333Z-cw-e-iteration-claude-candidate-fuller-31570614-0602-454a-8306-a4b0a08808ae-w10zp51h",
+      "allocation": {
+        "pool": "subject",
+        "charge": 1
+      },
+      "limitations": [
+        "Direct-session result prepared; committed result pins pending. No blind, held-out or independent assessor claim."
+      ],
+      "bundle": {
+        "path": "/Users/simon/work/personal/skill-study-private/concise-writing/e-iteration-20261018/subjects/20261018T053627333Z-cw-e-iteration-claude-candidate-fuller-31570614-0602-454a-8306-a4b0a08808ae-w10zp51h",
+        "inventory": {
+          "path": "/Users/simon/work/personal/skill-study-private/concise-writing/e-iteration-20261018/subjects/20261018T053627333Z-cw-e-iteration-claude-candidate-fuller-31570614-0602-454a-8306-a4b0a08808ae-w10zp51h.inventory.json",
+          "sha256": "15974d771dc45eecaf5ea36dcb051b5172ca0799591815aab1c061d9e05e7a56",
+          "version": "1"
+        },
+        "verified": true
+      },
+      "result": null
+    },
+    {
+      "attempt_id": "claude-e-iteration-01-original-4-1",
+      "case_id": "document-addition",
+      "condition": "original",
+      "repetition": 4,
+      "attempt_number": 1,
+      "retry_of": null,
+      "manifest": {
+        "path": "skill-studies/concise-writing/drafts/baseline-iteration/testing/claude-manifest.json",
+        "sha256": "613eea38778b3cee5576d7adb1e38bfb1d3e2b1353de473e4a7453966ba4ce31",
+        "version": "1",
+        "git_revision": "0b96bcbb2b5340aed05c7c663ff400c2cd2b49c2"
+      },
+      "authorization": {
+        "artifact": {
+          "path": "skill-studies/concise-writing/protocol.md",
+          "sha256": "f6e7e461a150acf814d9fcc268694606fafe6f459969c3487670fbf503332edb",
+          "version": "1",
+          "git_revision": "0b96bcbb2b5340aed05c7c663ff400c2cd2b49c2"
+        },
+        "selector": "Batch: claude-e-iteration-01; order 13"
+      },
+      "run_id": "20261018T053658275Z-cw-e-iteration-claude-original-fe4ab027-909d-4c91-89d4-a02a39e575f9-7q74movl",
+      "allocation": {
+        "pool": "subject",
+        "charge": 1
+      },
+      "limitations": [
+        "Direct-session result prepared; committed result pins pending. No blind, held-out or independent assessor claim."
+      ],
+      "bundle": {
+        "path": "/Users/simon/work/personal/skill-study-private/concise-writing/e-iteration-20261018/subjects/20261018T053658275Z-cw-e-iteration-claude-original-fe4ab027-909d-4c91-89d4-a02a39e575f9-7q74movl",
+        "inventory": {
+          "path": "/Users/simon/work/personal/skill-study-private/concise-writing/e-iteration-20261018/subjects/20261018T053658275Z-cw-e-iteration-claude-original-fe4ab027-909d-4c91-89d4-a02a39e575f9-7q74movl.inventory.json",
+          "sha256": "a44b9341a959bbf3e275feb76af012b698411ddd305b6ac502c617b5affccad4",
+          "version": "1"
+        },
+        "verified": true
+      },
+      "result": null
+    },
+    {
+      "attempt_id": "claude-e-iteration-01-candidate-targeted-4-1",
+      "case_id": "document-addition",
+      "condition": "candidate-targeted",
+      "repetition": 4,
+      "attempt_number": 1,
+      "retry_of": null,
+      "manifest": {
+        "path": "skill-studies/concise-writing/drafts/baseline-iteration/testing/claude-manifest.json",
+        "sha256": "613eea38778b3cee5576d7adb1e38bfb1d3e2b1353de473e4a7453966ba4ce31",
+        "version": "1",
+        "git_revision": "0b96bcbb2b5340aed05c7c663ff400c2cd2b49c2"
+      },
+      "authorization": {
+        "artifact": {
+          "path": "skill-studies/concise-writing/protocol.md",
+          "sha256": "f6e7e461a150acf814d9fcc268694606fafe6f459969c3487670fbf503332edb",
+          "version": "1",
+          "git_revision": "0b96bcbb2b5340aed05c7c663ff400c2cd2b49c2"
+        },
+        "selector": "Batch: claude-e-iteration-01; order 14"
+      },
+      "run_id": "20261018T053726095Z-cw-e-iteration-claude-candidate-targeted-213eefe7-bafa-4dae-bfdb-bb3fdbb866c5-28dous0k",
+      "allocation": {
+        "pool": "subject",
+        "charge": 1
+      },
+      "limitations": [
+        "Direct-session result prepared; committed result pins pending. No blind, held-out or independent assessor claim."
+      ],
+      "bundle": {
+        "path": "/Users/simon/work/personal/skill-study-private/concise-writing/e-iteration-20261018/subjects/20261018T053726095Z-cw-e-iteration-claude-candidate-targeted-213eefe7-bafa-4dae-bfdb-bb3fdbb866c5-28dous0k",
+        "inventory": {
+          "path": "/Users/simon/work/personal/skill-study-private/concise-writing/e-iteration-20261018/subjects/20261018T053726095Z-cw-e-iteration-claude-candidate-targeted-213eefe7-bafa-4dae-bfdb-bb3fdbb866c5-28dous0k.inventory.json",
+          "sha256": "770816ab612181ca583dc56682a75c94ab2393d1c648e467cd2695d973bfb417",
+          "version": "1"
+        },
+        "verified": true
+      },
+      "result": null
+    },
+    {
+      "attempt_id": "claude-e-iteration-01-candidate-fuller-4-1",
+      "case_id": "document-addition",
+      "condition": "candidate-fuller",
+      "repetition": 4,
+      "attempt_number": 1,
+      "retry_of": null,
+      "manifest": {
+        "path": "skill-studies/concise-writing/drafts/baseline-iteration/testing/claude-manifest.json",
+        "sha256": "613eea38778b3cee5576d7adb1e38bfb1d3e2b1353de473e4a7453966ba4ce31",
+        "version": "1",
+        "git_revision": "0b96bcbb2b5340aed05c7c663ff400c2cd2b49c2"
+      },
+      "authorization": {
+        "artifact": {
+          "path": "skill-studies/concise-writing/protocol.md",
+          "sha256": "f6e7e461a150acf814d9fcc268694606fafe6f459969c3487670fbf503332edb",
+          "version": "1",
+          "git_revision": "0b96bcbb2b5340aed05c7c663ff400c2cd2b49c2"
+        },
+        "selector": "Batch: claude-e-iteration-01; order 15"
+      },
+      "run_id": "20261018T053757774Z-cw-e-iteration-claude-candidate-fuller-7ceee5f4-dd73-468e-8ee1-5d7c5ba824e4-5mnh7crc",
+      "allocation": {
+        "pool": "subject",
+        "charge": 1
+      },
+      "limitations": [
+        "Direct-session result prepared; committed result pins pending. No blind, held-out or independent assessor claim."
+      ],
+      "bundle": {
+        "path": "/Users/simon/work/personal/skill-study-private/concise-writing/e-iteration-20261018/subjects/20261018T053757774Z-cw-e-iteration-claude-candidate-fuller-7ceee5f4-dd73-468e-8ee1-5d7c5ba824e4-5mnh7crc",
+        "inventory": {
+          "path": "/Users/simon/work/personal/skill-study-private/concise-writing/e-iteration-20261018/subjects/20261018T053757774Z-cw-e-iteration-claude-candidate-fuller-7ceee5f4-dd73-468e-8ee1-5d7c5ba824e4-5mnh7crc.inventory.json",
+          "sha256": "1ee7f4d530660a23bf74aed09a929ddd408706aa446c1f5acdc4dda82500cfaa",
+          "version": "1"
+        },
+        "verified": true
+      },
+      "result": null
+    },
+    {
+      "attempt_id": "claude-e-iteration-01-control-4-1",
+      "case_id": "document-addition",
+      "condition": "control",
+      "repetition": 4,
+      "attempt_number": 1,
+      "retry_of": null,
+      "manifest": {
+        "path": "skill-studies/concise-writing/drafts/baseline-iteration/testing/claude-manifest.json",
+        "sha256": "613eea38778b3cee5576d7adb1e38bfb1d3e2b1353de473e4a7453966ba4ce31",
+        "version": "1",
+        "git_revision": "0b96bcbb2b5340aed05c7c663ff400c2cd2b49c2"
+      },
+      "authorization": {
+        "artifact": {
+          "path": "skill-studies/concise-writing/protocol.md",
+          "sha256": "f6e7e461a150acf814d9fcc268694606fafe6f459969c3487670fbf503332edb",
+          "version": "1",
+          "git_revision": "0b96bcbb2b5340aed05c7c663ff400c2cd2b49c2"
+        },
+        "selector": "Batch: claude-e-iteration-01; order 16"
+      },
+      "run_id": "20261018T053831425Z-cw-e-iteration-claude-control-3326a0d8-1449-4582-8420-71674c274339-cmvj69w7",
+      "allocation": {
+        "pool": "subject",
+        "charge": 1
+      },
+      "limitations": [
+        "Direct-session result prepared; committed result pins pending. No blind, held-out or independent assessor claim."
+      ],
+      "bundle": {
+        "path": "/Users/simon/work/personal/skill-study-private/concise-writing/e-iteration-20261018/subjects/20261018T053831425Z-cw-e-iteration-claude-control-3326a0d8-1449-4582-8420-71674c274339-cmvj69w7",
+        "inventory": {
+          "path": "/Users/simon/work/personal/skill-study-private/concise-writing/e-iteration-20261018/subjects/20261018T053831425Z-cw-e-iteration-claude-control-3326a0d8-1449-4582-8420-71674c274339-cmvj69w7.inventory.json",
+          "sha256": "86ddbf183b17e968ce7a6c9af0187ffba268ecc63469af0a3d5e50237b255718",
+          "version": "1"
+        },
+        "verified": true
+      },
+      "result": null
+    },
+    {
+      "attempt_id": "claude-e-iteration-01-candidate-targeted-5-1",
+      "case_id": "document-addition",
+      "condition": "candidate-targeted",
+      "repetition": 5,
+      "attempt_number": 1,
+      "retry_of": null,
+      "manifest": {
+        "path": "skill-studies/concise-writing/drafts/baseline-iteration/testing/claude-manifest.json",
+        "sha256": "613eea38778b3cee5576d7adb1e38bfb1d3e2b1353de473e4a7453966ba4ce31",
+        "version": "1",
+        "git_revision": "0b96bcbb2b5340aed05c7c663ff400c2cd2b49c2"
+      },
+      "authorization": {
+        "artifact": {
+          "path": "skill-studies/concise-writing/protocol.md",
+          "sha256": "f6e7e461a150acf814d9fcc268694606fafe6f459969c3487670fbf503332edb",
+          "version": "1",
+          "git_revision": "0b96bcbb2b5340aed05c7c663ff400c2cd2b49c2"
+        },
+        "selector": "Batch: claude-e-iteration-01; order 17"
+      },
+      "run_id": "20261018T053903335Z-cw-e-iteration-claude-candidate-targeted-c8f7d18b-72e1-4388-a9c4-80a3bf3f5e06-cx2915k7",
+      "allocation": {
+        "pool": "subject",
+        "charge": 1
+      },
+      "limitations": [
+        "Direct-session result prepared; committed result pins pending. No blind, held-out or independent assessor claim."
+      ],
+      "bundle": {
+        "path": "/Users/simon/work/personal/skill-study-private/concise-writing/e-iteration-20261018/subjects/20261018T053903335Z-cw-e-iteration-claude-candidate-targeted-c8f7d18b-72e1-4388-a9c4-80a3bf3f5e06-cx2915k7",
+        "inventory": {
+          "path": "/Users/simon/work/personal/skill-study-private/concise-writing/e-iteration-20261018/subjects/20261018T053903335Z-cw-e-iteration-claude-candidate-targeted-c8f7d18b-72e1-4388-a9c4-80a3bf3f5e06-cx2915k7.inventory.json",
+          "sha256": "4277614ef0921c04b1e7ee5a67223a8c66708b379fcee6a4ebb675ba74e7472c",
+          "version": "1"
+        },
+        "verified": true
+      },
+      "result": null
+    },
+    {
+      "attempt_id": "claude-e-iteration-01-candidate-fuller-5-1",
+      "case_id": "document-addition",
+      "condition": "candidate-fuller",
+      "repetition": 5,
+      "attempt_number": 1,
+      "retry_of": null,
+      "manifest": {
+        "path": "skill-studies/concise-writing/drafts/baseline-iteration/testing/claude-manifest.json",
+        "sha256": "613eea38778b3cee5576d7adb1e38bfb1d3e2b1353de473e4a7453966ba4ce31",
+        "version": "1",
+        "git_revision": "0b96bcbb2b5340aed05c7c663ff400c2cd2b49c2"
+      },
+      "authorization": {
+        "artifact": {
+          "path": "skill-studies/concise-writing/protocol.md",
+          "sha256": "f6e7e461a150acf814d9fcc268694606fafe6f459969c3487670fbf503332edb",
+          "version": "1",
+          "git_revision": "0b96bcbb2b5340aed05c7c663ff400c2cd2b49c2"
+        },
+        "selector": "Batch: claude-e-iteration-01; order 18"
+      },
+      "run_id": "20261018T053929879Z-cw-e-iteration-claude-candidate-fuller-4604c806-15cb-4541-813c-53aa692cd233-kabnj31s",
+      "allocation": {
+        "pool": "subject",
+        "charge": 1
+      },
+      "limitations": [
+        "Direct-session result prepared; committed result pins pending. No blind, held-out or independent assessor claim."
+      ],
+      "bundle": {
+        "path": "/Users/simon/work/personal/skill-study-private/concise-writing/e-iteration-20261018/subjects/20261018T053929879Z-cw-e-iteration-claude-candidate-fuller-4604c806-15cb-4541-813c-53aa692cd233-kabnj31s",
+        "inventory": {
+          "path": "/Users/simon/work/personal/skill-study-private/concise-writing/e-iteration-20261018/subjects/20261018T053929879Z-cw-e-iteration-claude-candidate-fuller-4604c806-15cb-4541-813c-53aa692cd233-kabnj31s.inventory.json",
+          "sha256": "3cd37bb2ce217697bbed6a61ff4d08e9065acb6db603958a1481b2695fab5cd7",
+          "version": "1"
+        },
+        "verified": true
+      },
+      "result": null
+    },
+    {
+      "attempt_id": "claude-e-iteration-01-control-5-1",
+      "case_id": "document-addition",
+      "condition": "control",
+      "repetition": 5,
+      "attempt_number": 1,
+      "retry_of": null,
+      "manifest": {
+        "path": "skill-studies/concise-writing/drafts/baseline-iteration/testing/claude-manifest.json",
+        "sha256": "613eea38778b3cee5576d7adb1e38bfb1d3e2b1353de473e4a7453966ba4ce31",
+        "version": "1",
+        "git_revision": "0b96bcbb2b5340aed05c7c663ff400c2cd2b49c2"
+      },
+      "authorization": {
+        "artifact": {
+          "path": "skill-studies/concise-writing/protocol.md",
+          "sha256": "f6e7e461a150acf814d9fcc268694606fafe6f459969c3487670fbf503332edb",
+          "version": "1",
+          "git_revision": "0b96bcbb2b5340aed05c7c663ff400c2cd2b49c2"
+        },
+        "selector": "Batch: claude-e-iteration-01; order 19"
+      },
+      "run_id": "20261018T054002467Z-cw-e-iteration-claude-control-03c35564-49b0-433e-a2c9-615e4531466f-soy_ikzm",
+      "allocation": {
+        "pool": "subject",
+        "charge": 1
+      },
+      "limitations": [
+        "Direct-session result prepared; committed result pins pending. No blind, held-out or independent assessor claim."
+      ],
+      "bundle": {
+        "path": "/Users/simon/work/personal/skill-study-private/concise-writing/e-iteration-20261018/subjects/20261018T054002467Z-cw-e-iteration-claude-control-03c35564-49b0-433e-a2c9-615e4531466f-soy_ikzm",
+        "inventory": {
+          "path": "/Users/simon/work/personal/skill-study-private/concise-writing/e-iteration-20261018/subjects/20261018T054002467Z-cw-e-iteration-claude-control-03c35564-49b0-433e-a2c9-615e4531466f-soy_ikzm.inventory.json",
+          "sha256": "48773d73f9a219749287f2e08a796b8871c50510eea6326d47e4f74c89b7a7a5",
+          "version": "1"
+        },
+        "verified": true
+      },
+      "result": null
+    },
+    {
+      "attempt_id": "claude-e-iteration-01-original-5-1",
+      "case_id": "document-addition",
+      "condition": "original",
+      "repetition": 5,
+      "attempt_number": 1,
+      "retry_of": null,
+      "manifest": {
+        "path": "skill-studies/concise-writing/drafts/baseline-iteration/testing/claude-manifest.json",
+        "sha256": "613eea38778b3cee5576d7adb1e38bfb1d3e2b1353de473e4a7453966ba4ce31",
+        "version": "1",
+        "git_revision": "0b96bcbb2b5340aed05c7c663ff400c2cd2b49c2"
+      },
+      "authorization": {
+        "artifact": {
+          "path": "skill-studies/concise-writing/protocol.md",
+          "sha256": "f6e7e461a150acf814d9fcc268694606fafe6f459969c3487670fbf503332edb",
+          "version": "1",
+          "git_revision": "0b96bcbb2b5340aed05c7c663ff400c2cd2b49c2"
+        },
+        "selector": "Batch: claude-e-iteration-01; order 20"
+      },
+      "run_id": "20261018T054036686Z-cw-e-iteration-claude-original-1c981f32-d91d-4c15-a336-f9d27f8daf7e-8fp0prg3",
+      "allocation": {
+        "pool": "subject",
+        "charge": 1
+      },
+      "limitations": [
+        "Direct-session result prepared; committed result pins pending. No blind, held-out or independent assessor claim."
+      ],
+      "bundle": {
+        "path": "/Users/simon/work/personal/skill-study-private/concise-writing/e-iteration-20261018/subjects/20261018T054036686Z-cw-e-iteration-claude-original-1c981f32-d91d-4c15-a336-f9d27f8daf7e-8fp0prg3",
+        "inventory": {
+          "path": "/Users/simon/work/personal/skill-study-private/concise-writing/e-iteration-20261018/subjects/20261018T054036686Z-cw-e-iteration-claude-original-1c981f32-d91d-4c15-a336-f9d27f8daf7e-8fp0prg3.inventory.json",
+          "sha256": "5c345543f43f4b7abaefac1788bfa210ab0f4419b9c986cdab09d765d8f1d436",
           "version": "1"
         },
         "verified": true

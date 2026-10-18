@@ -277,7 +277,8 @@ Reserved bundles and revealing assessments stay entirely in the verified private
 - [x] Complete the combined consistency review of drafts/proposal and address findings; see the [review record](../reviews/2026-10-18-cw-draft-consistency-review.md). Commit/push the reviewed preparation before runtime qualification.
 - [x] Qualify supported Python, both subject runtimes and exact Opus 5.5 medium transport with twelve zero-model controls; Codex is active assessor and subject Claude remains Sonnet 5 low.
 - [x] Freeze the exact approved E inputs/slots and controller identities at `2936749c332f083e49f603eaed15b65d92158568`; both provider scopes pass collection readiness. Commit/push frozen manifests before dispatch.
-- [ ] Collect all forty E subjects and two Opus reviews, reconcile outcomes under the proposal’s fixed transition rules and present the owner’s next decision.
+- [x] Collect and directly assess all forty E subjects; retain all outcomes and the metadata-only inventory amendment without repeats or exclusions.
+- [ ] Complete the result retrieval pins and both approved Opus reviews, reconcile the fixed transition rules and present the owner’s next decision.
 - [ ] Establish effective behavior on the relevant fixed cases and both providers, then test instruction compression separately and present an adoption decision.
 - [ ] When SSR resumes, revisit the loaded-failure baseline decision in the [revised proposal](../skill-studies/sweeping-stale-references/rewrite-diagnosis.md#proposed-allocation-owner-decision-required). The owner explicitly deferred this decision until then; the withdrawn no-SSR-success stop rule does not authorize dispatch.
 - [ ] Resolve the parked SSR context-reading cost and matching-heading wording concerns, review the whole draft and relative call allocation, then freeze and qualify only approved scope.
