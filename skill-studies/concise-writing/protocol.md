@@ -3,7 +3,7 @@
 Format version: `1`
 Study ID: `concise-writing`
 Status: baseline collection and cross-model review are complete; the owner selected the original CW as the development base and authorized preparation of effectiveness-first edits. Adoption remains deferred.
-Current action: collect Claude’s matching ordinary A/B/C runs, then both providers’ native N1–N4 runs and the fourteen grouped Opus reviews. Codex’s 36 ordinary subjects are complete and directly assessed; Opus judgments remain pending. Four provider/stratum scopes pass collection readiness with input revision `a27782b26f8014b67e72ecf817f7e08392fd62c5`; no draft edits or automatic retries.
+Current action: collect Claude’s matching ordinary A/B/C runs, then both providers’ native N1–N4 runs and the fourteen grouped Opus reviews. Codex’s 36 ordinary subjects are complete and directly assessed; Opus judgments remain pending. Initial input revision `a27782b26f8014b67e72ecf817f7e08392fd62c5` remains pinned by completed subjects; prospective controller revision `6ad549b50af54d9766d05b47ebf5cbc1ea3cddbb` applies after Claude global slot 37, with unchanged subject inputs and runtime. No draft edits or automatic retries.
 The approved [core/runs directory layout](../../plans/specs/2026-10-18-study-directory-layout.md) is implemented and verified for both studies; [navigation](README.md) separates core guidance from collected evidence.
 On 2026-10-18 the owner replied “ok, let’s do it” to the concrete remaining allocation of 144 subject calls plus fourteen evaluator calls. This accepts unchanged targeted/fuller bodies, fresh original/control comparisons, three repetitions per selected condition/provider and reuse of the separate completed E stratum while input/runtime qualification holds.
 The authorized sequence is 72 ordinary A/B/C subjects, then 72 native N1–N4 subjects, plus six ordinary and eight native Opus 5.5 medium reviews.
@@ -555,6 +555,8 @@ Evidence goes to the existing owner-accepted single-host private store under `e-
 
 
 ### Remaining-suite comparison: codex-ordinary-iteration-01
+
+Results: [Codex ordinary assessment](runs/baseline-iteration-suite-01/codex-ordinary-iteration-01-assessment.md).
 
 
 Batch: codex-ordinary-iteration-01

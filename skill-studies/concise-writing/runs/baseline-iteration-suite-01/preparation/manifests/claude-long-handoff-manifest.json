@@ -3,9 +3,9 @@
   "manifest_id": "cw-claude-long-handoff-iteration-01",
   "study_id": "concise-writing",
   "case_id": "long-handoff",
-  "status": "draft",
+  "status": "frozen",
   "created_at": "2026-10-18T00:00:00Z",
-  "source_revision": "",
+  "source_revision": "6ad549b50af54d9766d05b47ebf5cbc1ea3cddbb",
   "authorities": {
     "spec": {
       "path": "plans/specs/2026-09-11-model-driven-skill-testing-framework.md",
