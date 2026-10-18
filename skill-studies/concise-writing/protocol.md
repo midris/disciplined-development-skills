@@ -3,7 +3,9 @@
 Format version: `1`
 Study ID: `concise-writing`
 Status: all 120 expanded CW calls are retained and assessed, with three repetitions per selected scenario/condition/provider. Coverage acceptance, editing-base selection and adoption remain owner decisions.
-Current action: CW remains the first end-to-end study, followed by SSR.
+Current action: add the owner-requested cross-model output review and reproduce the manual long-handoff evaluation through a qualified Fable-medium session.
+The [evaluation record](evaluation/README.md) owns its method and evidence; broader retrospective scope beyond CW awaits the owner’s answer.
+The owner’s adoption tie-break is shorter SKILL.md when effectiveness and consequential output quality are equivalent; tied pass counts alone do not establish equivalence.
 The owner accepted the scenario designs C, N1–N4 and revised E during the walkthrough, retained A/B, and removed tailored skill-editing/compression tests.
 The owner-requested [preparation review and remediation](../../reviews/2026-09-27-cw-suite-preparation-review.md) are complete.
 On 2026-09-27, the owner replied “approved, please continue” to the 104-call proposal: 72 ordinary calls followed by 32 native calls, raising the combined subject ceiling from 136 to 240.
@@ -472,7 +474,7 @@ Combined accounting sources: closed SSR [pilot 01](../sweeping-stale-references/
 Dispatched calls are **256 subject, 0 evaluator, 0 authoring, 0 retry**; remaining outer capacity is **0 / 12 / 4 / 4** against the [active plan](../../plans/2026-09-11-model-driven-skill-testing.md#limits-and-information-boundaries). Both eight-call CW batches are spent. The owner authorized ten SSR expansion calls under ceiling 56; all ten are spent, including the excluded control, with no replacement or pool transfer. Comparison runner durations total 508.067 seconds; baseline durations remain 494.936 seconds, including setup and capture.
 Owner clarification after round-10 review: “the budget is just a guideline”. The 1,200-minute figure below remains the planning baseline, not a collection stop; invocation ceilings and the authorized SSR scope is unchanged. Retain elapsed effort and forecast variance to expose process cost.
 
-Current combined accounting: **2,080 active minutes booked; 880 minutes above the historical 1,200-minute planning guideline**.
+Current combined accounting: **2,105 active minutes booked; 905 minutes above the historical 1,200-minute planning guideline**.
 These are rounded effort estimates, not stopwatch measurements or a separately timed category breakdown.
 Between-turn owner wait is excluded; runner durations are included once.
 The initial 104 calls and sixteen native third repetitions are spent; combined subject accounting is 256/256.
@@ -548,7 +550,8 @@ The supplemental work used 40 estimated active minutes against its 40-minute for
 | Native Codex third-repetition collection and assessment | 15 |
 | Native Claude third-repetition collection and assessment | 10 |
 | Native third-repetition final verification, review and publication | 5 |
-| **Total** | **2,080** |
+| Cross-model procedure, manual-review verification and evaluator qualification/preparation | 25 |
+| **Total** | **2,105** |
 
 SSR expansion is complete. The prior 55-minute remaining forecast closed at 50 estimated minutes, including the additional shell correction; all ten subject calls are spent.
 The combined batch/recovery effort is 135 estimated minutes (45 initial checkpoint, 40 isolation correction, 50 resumption), 45 above the original 90-minute allowance. Separate round-9 review effort remains in the combined ledger above.
@@ -573,12 +576,12 @@ Ordinary Claude collection, registration recovery and assessment used 80 estimat
 Native Codex and Claude collection/assessment each used 35 estimated minutes, including 748.348 and 394.246 seconds of runner duration respectively.
 Collection/assessment totaled 230 estimated minutes, 170 below the initial 400-minute forecast; runtime qualification/freeze and final review/publication are separately booked as 25 and 15 minutes.
 All 4,964.922 seconds of runner duration are included once, not added to those estimates.
-The authorized collection and assessment are complete; remaining effort for this scope is zero.
+Subject collection and active-session assessment are complete; the owner subsequently requested cross-model review.
 
 | Work | Estimate | Basis |
 | --- | ---: | --- |
-| Remaining authorized collection and assessment | 0 | All 120 attempts and final review are complete. |
-| **Total** | **0** | New work requires its own estimate and authority. |
+| Initial cross-model long-handoff review and comparison | 15 | One Fable-medium evaluator invocation after read-only qualification. |
+| **Total** | **15** | Broader retrospective scope is selected separately; subject collection remains complete. |
 
 The supplemental runner durations are 336.559 seconds for Codex and 171.913 seconds for Claude, included once in the 15- and 10-minute collection/assessment estimates.
 Preparation and final review/publication account for the other 15 supplemental minutes.

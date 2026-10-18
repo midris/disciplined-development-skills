@@ -39,11 +39,13 @@ Responsibilities below are not a pipeline of separately dispatched agents.
 3. Preserve and verify the evidence bundles; distinguish execution/setup errors from observed skill failures.
 4. Run applicable deterministic checks, inspect the actual outputs/files/traces, and apply the scoring rules in the active session.
 5. Record each execution’s criterion outcomes with reasons and evidence, then write the batch assessment with aggregate results, failure patterns and limitations; report it to the owner.
-6. After an authorized edit, repeat the relevant fixed scenarios and compare their aggregate assessments under the same rules, recording any changed conditions.
+6. Before recommending a development base or adoption, obtain a cross-model review of the completed outputs under the fixed criteria, as described below.
+7. After an authorized edit, repeat the relevant fixed scenarios and compare their aggregate assessments under the same rules, recording any changed conditions.
 
 No separate evaluator service, fresh scoring context, blind answer-key test or calibration campaign is a prerequisite to this loop.
 Worked examples help explain rules and settle actual ambiguities; they are not a mandatory exam for the active agent.
-Additional independent review or evaluator automation is optional when explicitly chosen for a concrete need; it must not silently become the normal workflow.
+The owner added cross-model output review at baseline/comparison decision boundaries on 2026-10-17; it supplements the active assessor rather than adding an evaluator call to every subject run.
+Further evaluator automation or calibration remains optional.
 Direct-session judgments are first-class assessments, labelled as such, not downgraded to development-only evidence because the same agent edited the skill.
 Record that shared context and bound claims accordingly; do not claim independent or blind validation.
 
@@ -250,7 +252,7 @@ Exit condition: valid observations and unusable attempts are accounted for under
 
 ### 6. Assess observations and establish the baseline
 
-The active session applies the versioned scoring contract to the retained evidence and writes the assessment. A human uses the same rules and format. Additional review is optional for a named ambiguity or consequential judgment, not a prerequisite for reporting each run.
+The active session applies the versioned scoring contract to the retained evidence and writes the assessment. A human uses the same rules and format. Cross-model review is required at the baseline/comparison decision boundary, not before reporting each run.
 Read evidence supporting passes as well as failures.
 State the task-relevant consequence and distinguish missing evidence from observed failure.
 Preserve disagreement and uncertainty until resolved with evidence or explicitly left unresolved.
@@ -276,6 +278,23 @@ Passing with the original skill establishes observed success; a comparison is re
 Cost, latency and skill size are supporting measures, not substitutes for effectiveness.
 Use whitespace-delimited word count (`wc -w`) over the complete supplied skill text, including frontmatter and Markdown, to compare skill size; exact token counts are unnecessary for this comparison.
 A smaller skill with preserved observed effectiveness is a simplification benefit; report behavioral uncertainty and regressions alongside it, without a word-count target.
+When the evidence supports equivalent effectiveness and consequential output quality, prefer the shorter complete SKILL.md.
+Equal pass counts alone do not establish equivalence; explain qualitative differences and unresolved regressions before applying that tie-break.
+
+#### Cross-model output review
+
+Use a fresh evaluator from a different model family than the active assessor to judge the complete source/task and saved outputs against the same frozen criteria.
+Include all repetitions and comparison conditions, including no-guidance controls where available; select the scope before seeing evaluator judgments.
+Group reviews by coherent scenario/provider or an explicitly declared bounded set; preserve runtime strata and keep invocation evidence separate from artifact quality.
+The reviewer must establish its own judgments before reading existing scores or conclusions.
+Provide prior assessments only for a subsequent comparison, record their actual read timing, and disclose visible condition labels or other exposure rather than claiming blinding.
+Use verified read-only execution, copied evidence, fixed prompts and bounded evaluator allocations; retain input identities, raw output, actual model/CLI, requested effort, limitations and every failed attempt.
+An evaluator's family may match a subject's family; that is a second-model assessment relative to the active assessor, not independent cross-family validation of that subject.
+Compare correctness, reader effectiveness and readability with concrete source/output evidence; shortening cannot compensate for a failed functional factor.
+Preserve the active assessment, evaluator judgment and unresolved disagreement separately.
+Do not automatically replace scores, decide by model vote, or amend criteria to force agreement; an adopted correction requires explicit rationale and consistent reassessment of affected outputs.
+The owner resolves consequential intended-behavior conflicts and adoption, with the competing evidence presented together.
+
 
 Output: a measured baseline with inspectable assessments and appropriately bounded conclusions.
 Exit condition: the owner can see what works, what fails, what remains uncertain and what evidence could justify rewriting.
@@ -311,7 +330,7 @@ The active agent can design scenarios, edit the skill, dispatch subject runs, in
 The subject is the model invocation under test and receives only its fixed task, skill and declared context.
 Scoring rules and reference facts belong to the assessing session, not the subject inputs.
 A human can replace the active agent as assessor without changing the rule or record format.
-A separately dispatched reviewer/evaluator is optional; when used, identify it and apply the relevant read-only and information-boundary requirements. Those dispatch restrictions do not prevent the active agent from recording execution results and batch assessments or making authorized edits.
+A cross-model output reviewer supplements the active assessor at the decision boundary above; identify it and apply the relevant read-only and information-boundary requirements. Those dispatch restrictions do not prevent the active agent from recording execution results and batch assessments or making authorized edits.
 
 The owner settles intended-behavior conflicts, approves experiment scope and budget, reviews consequential evaluation uncertainties and decides adoption.
 The owner does not need to perform routine scoring or repeatedly approve a settled rule.

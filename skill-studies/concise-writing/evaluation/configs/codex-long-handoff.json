@@ -1,0 +1,77 @@
+{
+  "schema_version": "0.2",
+  "id": "cw-eval-codex-long-handoff",
+  "prompt": "../prompt.md",
+  "fixtures": [
+    {
+      "source": "../../../../../skill-study-private/concise-writing/cross-model-evaluation-20261017/inputs/codex-long-handoff/EVALUATION-INDEX.json",
+      "target": "EVALUATION-INDEX.json"
+    },
+    {
+      "source": "../../../../../skill-study-private/concise-writing/cross-model-evaluation-20261017/inputs/codex-long-handoff/WORD-COUNTS.json",
+      "target": "WORD-COUNTS.json"
+    },
+    {
+      "source": "../../../../../skill-study-private/concise-writing/cross-model-evaluation-20261017/inputs/codex-long-handoff/criteria.md",
+      "target": "criteria.md"
+    },
+    {
+      "source": "../../../../../skill-study-private/concise-writing/cross-model-evaluation-20261017/inputs/codex-long-handoff/outputs/candidate-comprehensive-1.md",
+      "target": "outputs/candidate-comprehensive-1.md"
+    },
+    {
+      "source": "../../../../../skill-study-private/concise-writing/cross-model-evaluation-20261017/inputs/codex-long-handoff/outputs/candidate-comprehensive-2.md",
+      "target": "outputs/candidate-comprehensive-2.md"
+    },
+    {
+      "source": "../../../../../skill-study-private/concise-writing/cross-model-evaluation-20261017/inputs/codex-long-handoff/outputs/candidate-comprehensive-3.md",
+      "target": "outputs/candidate-comprehensive-3.md"
+    },
+    {
+      "source": "../../../../../skill-study-private/concise-writing/cross-model-evaluation-20261017/inputs/codex-long-handoff/outputs/control-1.md",
+      "target": "outputs/control-1.md"
+    },
+    {
+      "source": "../../../../../skill-study-private/concise-writing/cross-model-evaluation-20261017/inputs/codex-long-handoff/outputs/control-2.md",
+      "target": "outputs/control-2.md"
+    },
+    {
+      "source": "../../../../../skill-study-private/concise-writing/cross-model-evaluation-20261017/inputs/codex-long-handoff/outputs/control-3.md",
+      "target": "outputs/control-3.md"
+    },
+    {
+      "source": "../../../../../skill-study-private/concise-writing/cross-model-evaluation-20261017/inputs/codex-long-handoff/outputs/original-1.md",
+      "target": "outputs/original-1.md"
+    },
+    {
+      "source": "../../../../../skill-study-private/concise-writing/cross-model-evaluation-20261017/inputs/codex-long-handoff/outputs/original-2.md",
+      "target": "outputs/original-2.md"
+    },
+    {
+      "source": "../../../../../skill-study-private/concise-writing/cross-model-evaluation-20261017/inputs/codex-long-handoff/outputs/original-3.md",
+      "target": "outputs/original-3.md"
+    },
+    {
+      "source": "../../../../../skill-study-private/concise-writing/cross-model-evaluation-20261017/inputs/codex-long-handoff/policy.txt",
+      "target": "policy.txt"
+    },
+    {
+      "source": "../../../../../skill-study-private/concise-writing/cross-model-evaluation-20261017/inputs/codex-long-handoff/prior-assessment.md",
+      "target": "prior-assessment.md"
+    },
+    {
+      "source": "../../../../../skill-study-private/concise-writing/cross-model-evaluation-20261017/inputs/codex-long-handoff/source.md",
+      "target": "source.md"
+    },
+    {
+      "source": "../../../../../skill-study-private/concise-writing/cross-model-evaluation-20261017/inputs/codex-long-handoff/task.md",
+      "target": "task.md"
+    }
+  ],
+  "execution": {
+    "provider": "claude",
+    "model": "claude-fable-5-1",
+    "effort": "medium",
+    "permissions": "read-only"
+  }
+}
