@@ -3,8 +3,8 @@
 Format version: `1`
 Study ID: `concise-writing`
 Status: baseline collection and cross-model review are complete; the owner selected the original CW as the development base and authorized preparation of effectiveness-first edits. Adoption remains deferred.
-Current action: finish publishing the Claude result pins and complete the two approved Opus reviews; all forty E subjects are retained and directly assessed.
-The [Codex E assessment](codex-e-iteration-01-assessment.md) records complete committed results; Claude's twenty prepared results are being pinned for retrieval.
+Current action: complete the two approved Opus reviews and reconcile the first E comparison; all forty subjects are retained and directly assessed.
+Both E attempt indexes identify complete committed result records; the [Codex assessment](codex-e-iteration-01-assessment.md) and forthcoming Claude batch report summarize them.
 The amended Claude controller applies prospectively from its second attempt, with byte-identical subject inputs and criteria.
 The collector used the wrong inventory version field; conforming wrappers are published separately, with original wrappers and every raw byte retained. No model call is repeated or excluded for this metadata correction.
 Both provider scopes pass collection readiness with frozen input revision `2936749c332f083e49f603eaed15b65d92158568`; actual attempts and unattempted slots are recorded in the two E indexes.
@@ -699,7 +699,7 @@ All forty subjects are retained; the two Opus output reviews remain separate fro
 | Provider | No CW | Original | Targeted | Fuller | Evidence |
 | --- | ---: | ---: | ---: | ---: | --- |
 | Codex Sol low | 5/5 | 1/5 | 5/5 | 5/5 | [Assessment](codex-e-iteration-01-assessment.md) |
-| Claude Sonnet low | 5/5 | 3/5 | 4/5 | 4/5 | [Attempt index](claude-e-iteration-01-run-index.json); prepared direct results awaiting committed pins |
+| Claude Sonnet low | 5/5 | 3/5 | 4/5 | 4/5 | [Attempt index](claude-e-iteration-01-run-index.json); all twenty direct results pinned |
 
 Failures omit recording the fallback contact while retaining its existence; each fails F1/F2 but remains readable under F3.
 The two Claude draft failures remain included; neither draft is declared ready or adopted from the successful Codex observations.
