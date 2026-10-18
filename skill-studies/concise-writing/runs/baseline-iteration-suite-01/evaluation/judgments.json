@@ -1,0 +1,2053 @@
+{
+  "status": "manual transcription of first-pass Opus judgments; active scores remain in subject indexes",
+  "interpretation": "First-pass/final narrative and audits are primary evaluator evidence. No automatic scoring or majority vote. after_prior_changes records narrative changes; factor verdicts are first-pass.",
+  "reviews": [
+    {
+      "configuration": "codex-agent-recommendation",
+      "review_run_id": "20261018T181947528Z-cw-suite-opus-codex-agent-recommendation-3857e033-34f4-4976-9ebb-502603ed8e9e-hxsz__01",
+      "provider": "codex",
+      "case": "agent-recommendation",
+      "audit": "skill-studies/concise-writing/runs/baseline-iteration-suite-01/evaluation/codex-agent-recommendation-audit.json",
+      "first_pass_sha256": "9ac99eb96abb3db57c5d9d7e21217752c0dddd658d237a822afdb662028610a8",
+      "judgments": [
+        {
+          "subject_run_id": "20261018T163332960Z-cw-suite-codex-agent-recommendation-control-807003c3-fdaf-4767-8a08-6ea68eac3d2a-_glxocsg",
+          "global_order": 1,
+          "condition": "control",
+          "repetition": 1,
+          "factors": {
+            "F1": "met",
+            "F2": "met",
+            "F3": "met"
+          },
+          "functional_result": "pass",
+          "task_observations": null
+        },
+        {
+          "subject_run_id": "20261018T163426022Z-cw-suite-codex-agent-recommendation-original-80bed02a-0a5d-4547-84f4-01a5d03ad340-bwxx__5o",
+          "global_order": 2,
+          "condition": "original",
+          "repetition": 1,
+          "factors": {
+            "F1": "met",
+            "F2": "met",
+            "F3": "met"
+          },
+          "functional_result": "pass",
+          "task_observations": null
+        },
+        {
+          "subject_run_id": "20261018T163528329Z-cw-suite-codex-agent-recommendation-candidate-targeted-ca997521-057a-4962-8919-8b912614d5ea-_sga5u3y",
+          "global_order": 3,
+          "condition": "candidate-targeted",
+          "repetition": 1,
+          "factors": {
+            "F1": "met",
+            "F2": "met",
+            "F3": "met"
+          },
+          "functional_result": "pass",
+          "task_observations": null
+        },
+        {
+          "subject_run_id": "20261018T163611129Z-cw-suite-codex-agent-recommendation-candidate-fuller-95a6b0cb-78ee-43f8-9085-af2a35479733-x84oau61",
+          "global_order": 4,
+          "condition": "candidate-fuller",
+          "repetition": 1,
+          "factors": {
+            "F1": "met",
+            "F2": "met",
+            "F3": "met"
+          },
+          "functional_result": "pass",
+          "task_observations": null
+        },
+        {
+          "subject_run_id": "20261018T163648790Z-cw-suite-codex-agent-recommendation-original-78d44923-aa6c-4420-9bfd-070379ac30c2-lxfe4yux",
+          "global_order": 5,
+          "condition": "original",
+          "repetition": 2,
+          "factors": {
+            "F1": "met",
+            "F2": "met",
+            "F3": "met"
+          },
+          "functional_result": "pass",
+          "task_observations": null
+        },
+        {
+          "subject_run_id": "20261018T163728325Z-cw-suite-codex-agent-recommendation-candidate-targeted-aea01fda-4ef4-42c0-8144-dab7b82b32c2-3s54ight",
+          "global_order": 6,
+          "condition": "candidate-targeted",
+          "repetition": 2,
+          "factors": {
+            "F1": "met",
+            "F2": "met",
+            "F3": "met"
+          },
+          "functional_result": "pass",
+          "task_observations": null
+        },
+        {
+          "subject_run_id": "20261018T163807986Z-cw-suite-codex-agent-recommendation-candidate-fuller-ae0309f5-31ce-496b-bcc3-212d72e237f2-bcnhsi0m",
+          "global_order": 7,
+          "condition": "candidate-fuller",
+          "repetition": 2,
+          "factors": {
+            "F1": "met",
+            "F2": "met",
+            "F3": "met"
+          },
+          "functional_result": "pass",
+          "task_observations": null
+        },
+        {
+          "subject_run_id": "20261018T163848522Z-cw-suite-codex-agent-recommendation-control-28615740-751e-4465-a8b6-b7e2c956c85c-ibreq8xx",
+          "global_order": 8,
+          "condition": "control",
+          "repetition": 2,
+          "factors": {
+            "F1": "met",
+            "F2": "met",
+            "F3": "met"
+          },
+          "functional_result": "pass",
+          "task_observations": null
+        },
+        {
+          "subject_run_id": "20261018T163919129Z-cw-suite-codex-agent-recommendation-candidate-targeted-961233ed-dea7-467b-ba18-592fc39069ce-6o6737ty",
+          "global_order": 9,
+          "condition": "candidate-targeted",
+          "repetition": 3,
+          "factors": {
+            "F1": "met",
+            "F2": "met",
+            "F3": "met"
+          },
+          "functional_result": "pass",
+          "task_observations": null
+        },
+        {
+          "subject_run_id": "20261018T163957463Z-cw-suite-codex-agent-recommendation-candidate-fuller-23959f90-6949-436c-bd87-3baa14825200-g2yhjg56",
+          "global_order": 10,
+          "condition": "candidate-fuller",
+          "repetition": 3,
+          "factors": {
+            "F1": "met",
+            "F2": "met",
+            "F3": "met"
+          },
+          "functional_result": "pass",
+          "task_observations": null
+        },
+        {
+          "subject_run_id": "20261018T164029409Z-cw-suite-codex-agent-recommendation-control-99d110c9-6662-4760-adb2-8c64200c01bf-ml_t3ckm",
+          "global_order": 11,
+          "condition": "control",
+          "repetition": 3,
+          "factors": {
+            "F1": "met",
+            "F2": "met",
+            "F3": "met"
+          },
+          "functional_result": "pass",
+          "task_observations": null
+        },
+        {
+          "subject_run_id": "20261018T164107612Z-cw-suite-codex-agent-recommendation-original-c7ae56cd-0e70-4ecf-b907-c192552d5b68-pdo3phcc",
+          "global_order": 12,
+          "condition": "original",
+          "repetition": 3,
+          "factors": {
+            "F1": "met",
+            "F2": "met",
+            "F3": "met"
+          },
+          "functional_result": "pass",
+          "task_observations": null
+        }
+      ],
+      "after_prior_changes": []
+    },
+    {
+      "configuration": "codex-effective-briefing",
+      "review_run_id": "20261018T182308075Z-cw-suite-opus-codex-effective-briefing-1650b9c3-a25b-424f-a7d5-4c000916d3f2-0zlq4rxs",
+      "provider": "codex",
+      "case": "effective-briefing",
+      "audit": "skill-studies/concise-writing/runs/baseline-iteration-suite-01/evaluation/codex-effective-briefing-audit.json",
+      "first_pass_sha256": "fb55107ab05932c3354641274f67e67f432bb1b3211c9c0f875c0848e46a4243",
+      "judgments": [
+        {
+          "subject_run_id": "20261018T164141817Z-cw-suite-codex-effective-briefing-original-a5fb5afb-f288-47eb-af27-5f8fa0bbebfa-_e4opi7o",
+          "global_order": 13,
+          "condition": "original",
+          "repetition": 1,
+          "factors": {
+            "F1": "met",
+            "F2": "met",
+            "F3": "met"
+          },
+          "functional_result": "pass",
+          "task_observations": null
+        },
+        {
+          "subject_run_id": "20261018T164223507Z-cw-suite-codex-effective-briefing-candidate-targeted-435e7fe3-de23-4810-8406-1020e5702ce1-mk6vhky2",
+          "global_order": 14,
+          "condition": "candidate-targeted",
+          "repetition": 1,
+          "factors": {
+            "F1": "met",
+            "F2": "met",
+            "F3": "met"
+          },
+          "functional_result": "pass",
+          "task_observations": null
+        },
+        {
+          "subject_run_id": "20261018T164259687Z-cw-suite-codex-effective-briefing-candidate-fuller-f99ca748-7054-466f-a818-868e9bbf3cc7-tf_fw1ik",
+          "global_order": 15,
+          "condition": "candidate-fuller",
+          "repetition": 1,
+          "factors": {
+            "F1": "met",
+            "F2": "met",
+            "F3": "met"
+          },
+          "functional_result": "pass",
+          "task_observations": null
+        },
+        {
+          "subject_run_id": "20261018T164341373Z-cw-suite-codex-effective-briefing-control-0a8065c0-1f33-4a96-95c2-26aeb944c0ab-hm2ds_bb",
+          "global_order": 16,
+          "condition": "control",
+          "repetition": 1,
+          "factors": {
+            "F1": "met",
+            "F2": "met",
+            "F3": "met"
+          },
+          "functional_result": "pass",
+          "task_observations": null
+        },
+        {
+          "subject_run_id": "20261018T164409757Z-cw-suite-codex-effective-briefing-candidate-targeted-4107c58f-8a2d-46f4-ab48-4946e372de24-amz6fyc7",
+          "global_order": 17,
+          "condition": "candidate-targeted",
+          "repetition": 2,
+          "factors": {
+            "F1": "met",
+            "F2": "met",
+            "F3": "met"
+          },
+          "functional_result": "pass",
+          "task_observations": null
+        },
+        {
+          "subject_run_id": "20261018T164445815Z-cw-suite-codex-effective-briefing-candidate-fuller-200924ea-8f7b-47ff-bbe7-54dba2aa3dac-tyf5jkj9",
+          "global_order": 18,
+          "condition": "candidate-fuller",
+          "repetition": 2,
+          "factors": {
+            "F1": "met",
+            "F2": "met",
+            "F3": "met"
+          },
+          "functional_result": "pass",
+          "task_observations": null
+        },
+        {
+          "subject_run_id": "20261018T164520140Z-cw-suite-codex-effective-briefing-control-af9447e0-a02e-4da8-9886-11657ca1226e-immsestx",
+          "global_order": 19,
+          "condition": "control",
+          "repetition": 2,
+          "factors": {
+            "F1": "met",
+            "F2": "met",
+            "F3": "met"
+          },
+          "functional_result": "pass",
+          "task_observations": null
+        },
+        {
+          "subject_run_id": "20261018T164546675Z-cw-suite-codex-effective-briefing-original-46d60faf-28be-47e5-9a25-dfe5fde2b27a-lwohx54k",
+          "global_order": 20,
+          "condition": "original",
+          "repetition": 2,
+          "factors": {
+            "F1": "met",
+            "F2": "met",
+            "F3": "met"
+          },
+          "functional_result": "pass",
+          "task_observations": null
+        },
+        {
+          "subject_run_id": "20261018T164626570Z-cw-suite-codex-effective-briefing-candidate-fuller-bcfe0112-f7ad-4860-b92e-5e5863e53004-wkukokoe",
+          "global_order": 21,
+          "condition": "candidate-fuller",
+          "repetition": 3,
+          "factors": {
+            "F1": "met",
+            "F2": "met",
+            "F3": "met"
+          },
+          "functional_result": "pass",
+          "task_observations": null
+        },
+        {
+          "subject_run_id": "20261018T164700511Z-cw-suite-codex-effective-briefing-control-3ca3cec1-43f9-47f9-bfc4-3902c72eb965-vyv42v2w",
+          "global_order": 22,
+          "condition": "control",
+          "repetition": 3,
+          "factors": {
+            "F1": "met",
+            "F2": "met",
+            "F3": "met"
+          },
+          "functional_result": "pass",
+          "task_observations": null
+        },
+        {
+          "subject_run_id": "20261018T164735655Z-cw-suite-codex-effective-briefing-original-41bc1922-c952-4110-a399-d0d903f72f03-56qe2rci",
+          "global_order": 23,
+          "condition": "original",
+          "repetition": 3,
+          "factors": {
+            "F1": "met",
+            "F2": "met",
+            "F3": "met"
+          },
+          "functional_result": "pass",
+          "task_observations": null
+        },
+        {
+          "subject_run_id": "20261018T164806123Z-cw-suite-codex-effective-briefing-candidate-targeted-e3f481a8-0c46-4cbc-8b5b-84af4edf1fa5-t9tl0dgi",
+          "global_order": 24,
+          "condition": "candidate-targeted",
+          "repetition": 3,
+          "factors": {
+            "F1": "met",
+            "F2": "met",
+            "F3": "met"
+          },
+          "functional_result": "pass",
+          "task_observations": null
+        }
+      ],
+      "after_prior_changes": []
+    },
+    {
+      "configuration": "codex-long-handoff-replacement-1",
+      "review_run_id": "20261018T200941359Z-cw-suite-opus-codex-long-handoff-882668c2-82a4-43ad-8889-9846b0a04029-inl4y_hy",
+      "provider": "codex",
+      "case": "long-handoff",
+      "audit": "skill-studies/concise-writing/runs/baseline-iteration-suite-01/evaluation/codex-long-handoff-replacement-1-audit.json",
+      "first_pass_sha256": "d12f8691537aa20ef911d8593320e17a38e8e18e516fbe83e739ff318933ce2f",
+      "judgments": [
+        {
+          "subject_run_id": "20261018T164851066Z-cw-suite-codex-long-handoff-candidate-targeted-9788119f-d66a-49b5-b9b4-b119e2b0ff91-2bst2qua",
+          "global_order": 25,
+          "condition": "candidate-targeted",
+          "repetition": 1,
+          "factors": {
+            "F1": "met",
+            "F2": "met",
+            "F3": "met"
+          },
+          "functional_result": "pass",
+          "task_observations": null
+        },
+        {
+          "subject_run_id": "20261018T164955350Z-cw-suite-codex-long-handoff-candidate-fuller-a2d5c4f9-ad2e-420f-8826-0026195dacc2-iakgyzp9",
+          "global_order": 26,
+          "condition": "candidate-fuller",
+          "repetition": 1,
+          "factors": {
+            "F1": "met",
+            "F2": "met",
+            "F3": "met"
+          },
+          "functional_result": "pass",
+          "task_observations": null
+        },
+        {
+          "subject_run_id": "20261018T165104135Z-cw-suite-codex-long-handoff-control-67fedf4e-e66d-4140-9abd-f700f9f70cf8-ung8wj8o",
+          "global_order": 27,
+          "condition": "control",
+          "repetition": 1,
+          "factors": {
+            "F1": "met",
+            "F2": "met",
+            "F3": "met"
+          },
+          "functional_result": "pass",
+          "task_observations": null
+        },
+        {
+          "subject_run_id": "20261018T165156363Z-cw-suite-codex-long-handoff-original-159452a7-4205-4ebb-8e7e-55e62d893d45-s_ra2gs2",
+          "global_order": 28,
+          "condition": "original",
+          "repetition": 1,
+          "factors": {
+            "F1": "met",
+            "F2": "met",
+            "F3": "met"
+          },
+          "functional_result": "pass",
+          "task_observations": null
+        },
+        {
+          "subject_run_id": "20261018T165251028Z-cw-suite-codex-long-handoff-candidate-fuller-fa21522a-7b3b-44eb-89c8-d0327f4d205a-a_oxgdfq",
+          "global_order": 29,
+          "condition": "candidate-fuller",
+          "repetition": 2,
+          "factors": {
+            "F1": "met",
+            "F2": "met",
+            "F3": "met"
+          },
+          "functional_result": "pass",
+          "task_observations": null
+        },
+        {
+          "subject_run_id": "20261018T165349043Z-cw-suite-codex-long-handoff-control-925e7691-07e5-4679-9506-9df46bcad1a7-2coijqb9",
+          "global_order": 30,
+          "condition": "control",
+          "repetition": 2,
+          "factors": {
+            "F1": "met",
+            "F2": "not met",
+            "F3": "met"
+          },
+          "functional_result": "fail",
+          "task_observations": null
+        },
+        {
+          "subject_run_id": "20261018T165507834Z-cw-suite-codex-long-handoff-original-25973727-0e86-4482-8ca0-c880d97cc697-azax1cym",
+          "global_order": 31,
+          "condition": "original",
+          "repetition": 2,
+          "factors": {
+            "F1": "met",
+            "F2": "met",
+            "F3": "met"
+          },
+          "functional_result": "pass",
+          "task_observations": null
+        },
+        {
+          "subject_run_id": "20261018T165559880Z-cw-suite-codex-long-handoff-candidate-targeted-4ebfc16d-905c-41d7-998b-ccdbf8488a58-fv_q4hrh",
+          "global_order": 32,
+          "condition": "candidate-targeted",
+          "repetition": 2,
+          "factors": {
+            "F1": "met",
+            "F2": "met",
+            "F3": "met"
+          },
+          "functional_result": "pass",
+          "task_observations": null
+        },
+        {
+          "subject_run_id": "20261018T165704507Z-cw-suite-codex-long-handoff-control-34bcb591-3432-4e38-887d-1dc0982611c4-ve_9uhip",
+          "global_order": 33,
+          "condition": "control",
+          "repetition": 3,
+          "factors": {
+            "F1": "met",
+            "F2": "met",
+            "F3": "met"
+          },
+          "functional_result": "pass",
+          "task_observations": null
+        },
+        {
+          "subject_run_id": "20261018T165754401Z-cw-suite-codex-long-handoff-original-a5f316a5-20d3-4197-981a-69e7b5ca3baa-wafs66vv",
+          "global_order": 34,
+          "condition": "original",
+          "repetition": 3,
+          "factors": {
+            "F1": "met",
+            "F2": "met",
+            "F3": "met"
+          },
+          "functional_result": "pass",
+          "task_observations": null
+        },
+        {
+          "subject_run_id": "20261018T165851325Z-cw-suite-codex-long-handoff-candidate-targeted-f7e48d3b-eb6c-4830-97bf-540e0ce1ab86-p2fw66_f",
+          "global_order": 35,
+          "condition": "candidate-targeted",
+          "repetition": 3,
+          "factors": {
+            "F1": "met",
+            "F2": "met",
+            "F3": "met"
+          },
+          "functional_result": "pass",
+          "task_observations": null
+        },
+        {
+          "subject_run_id": "20261018T165958236Z-cw-suite-codex-long-handoff-candidate-fuller-ad3fb87d-2010-44ba-941b-14fb3c1850dc-70c316l7",
+          "global_order": 36,
+          "condition": "candidate-fuller",
+          "repetition": 3,
+          "factors": {
+            "F1": "met",
+            "F2": "met",
+            "F3": "met"
+          },
+          "functional_result": "pass",
+          "task_observations": null
+        }
+      ],
+      "after_prior_changes": []
+    },
+    {
+      "configuration": "claude-agent-recommendation",
+      "review_run_id": "20261018T201418033Z-cw-suite-opus-claude-agent-recommendation-a3b7b2f2-0924-4ede-9321-dbf70c79fc97-62hpau52",
+      "provider": "claude",
+      "case": "agent-recommendation",
+      "audit": "skill-studies/concise-writing/runs/baseline-iteration-suite-01/evaluation/claude-agent-recommendation-audit.json",
+      "first_pass_sha256": "651491e3b931834a1bd7e79926651f85e21cd5d7a506342c5864bc47011ff08c",
+      "judgments": [
+        {
+          "subject_run_id": "20261018T170234716Z-cw-suite-claude-agent-recommendation-candidate-targeted-b2c93c2c-1f0c-4153-aea8-6ccbafdbaa35-fz3scwk4",
+          "global_order": 37,
+          "condition": "candidate-targeted",
+          "repetition": 1,
+          "factors": {
+            "F1": "met",
+            "F2": "met",
+            "F3": "met"
+          },
+          "functional_result": "pass",
+          "task_observations": null
+        },
+        {
+          "subject_run_id": "20261018T170853473Z-cw-suite-claude-agent-recommendation-candidate-fuller-fb7d7805-0d65-443b-b53c-51a55b8ae586-n0vsuhra",
+          "global_order": 38,
+          "condition": "candidate-fuller",
+          "repetition": 1,
+          "factors": {
+            "F1": "met",
+            "F2": "met",
+            "F3": "met"
+          },
+          "functional_result": "pass",
+          "task_observations": null
+        },
+        {
+          "subject_run_id": "20261018T170922279Z-cw-suite-claude-agent-recommendation-control-78c1dbef-8db0-46f6-8ed3-00b808ba27d3-mwxcm_6h",
+          "global_order": 39,
+          "condition": "control",
+          "repetition": 1,
+          "factors": {
+            "F1": "met",
+            "F2": "met",
+            "F3": "met"
+          },
+          "functional_result": "pass",
+          "task_observations": null
+        },
+        {
+          "subject_run_id": "20261018T170950262Z-cw-suite-claude-agent-recommendation-original-d3077d2e-da39-4487-9d5f-57b790e556eb-iz0mxf7u",
+          "global_order": 40,
+          "condition": "original",
+          "repetition": 1,
+          "factors": {
+            "F1": "met",
+            "F2": "met",
+            "F3": "met"
+          },
+          "functional_result": "pass",
+          "task_observations": null
+        },
+        {
+          "subject_run_id": "20261018T171023800Z-cw-suite-claude-agent-recommendation-candidate-fuller-8f010012-73f1-4ec4-a5c8-a6adaf78730d-1mlzkko4",
+          "global_order": 41,
+          "condition": "candidate-fuller",
+          "repetition": 2,
+          "factors": {
+            "F1": "met",
+            "F2": "met",
+            "F3": "met"
+          },
+          "functional_result": "pass",
+          "task_observations": null
+        },
+        {
+          "subject_run_id": "20261018T171050827Z-cw-suite-claude-agent-recommendation-control-77572985-09a3-40cc-b7e8-541dc1c37483-14sncics",
+          "global_order": 42,
+          "condition": "control",
+          "repetition": 2,
+          "factors": {
+            "F1": "not met",
+            "F2": "met",
+            "F3": "met"
+          },
+          "functional_result": "fail",
+          "task_observations": null
+        },
+        {
+          "subject_run_id": "20261018T171123930Z-cw-suite-claude-agent-recommendation-original-c4b5d3cb-efdb-40fe-bea8-434bb96557d7-u_s1su0m",
+          "global_order": 43,
+          "condition": "original",
+          "repetition": 2,
+          "factors": {
+            "F1": "met",
+            "F2": "met",
+            "F3": "met"
+          },
+          "functional_result": "pass",
+          "task_observations": null
+        },
+        {
+          "subject_run_id": "20261018T171139503Z-cw-suite-claude-agent-recommendation-candidate-targeted-94d0de42-b178-46a2-8f79-1557fa2e55df-s8wu1e6e",
+          "global_order": 44,
+          "condition": "candidate-targeted",
+          "repetition": 2,
+          "factors": {
+            "F1": "met",
+            "F2": "met",
+            "F3": "met"
+          },
+          "functional_result": "pass",
+          "task_observations": null
+        },
+        {
+          "subject_run_id": "20261018T171208915Z-cw-suite-claude-agent-recommendation-control-1bbc97d0-fb85-434e-a283-3debf77de42e-9q55rlub",
+          "global_order": 45,
+          "condition": "control",
+          "repetition": 3,
+          "factors": {
+            "F1": "not met",
+            "F2": "met",
+            "F3": "met"
+          },
+          "functional_result": "fail",
+          "task_observations": null
+        },
+        {
+          "subject_run_id": "20261018T171234657Z-cw-suite-claude-agent-recommendation-original-dda59c49-246c-4ddd-866f-c69a95c27fca-55yqlemj",
+          "global_order": 46,
+          "condition": "original",
+          "repetition": 3,
+          "factors": {
+            "F1": "met",
+            "F2": "met",
+            "F3": "met"
+          },
+          "functional_result": "pass",
+          "task_observations": null
+        },
+        {
+          "subject_run_id": "20261018T171258899Z-cw-suite-claude-agent-recommendation-candidate-targeted-fd6164e3-99b3-48bb-aaa4-600632f73fef-du4j6iot",
+          "global_order": 47,
+          "condition": "candidate-targeted",
+          "repetition": 3,
+          "factors": {
+            "F1": "met",
+            "F2": "met",
+            "F3": "met"
+          },
+          "functional_result": "pass",
+          "task_observations": null
+        },
+        {
+          "subject_run_id": "20261018T171328373Z-cw-suite-claude-agent-recommendation-candidate-fuller-69c7c473-73c6-43f3-b4ae-dff6512d604b-csb8f3g5",
+          "global_order": 48,
+          "condition": "candidate-fuller",
+          "repetition": 3,
+          "factors": {
+            "F1": "met",
+            "F2": "met",
+            "F3": "met"
+          },
+          "functional_result": "pass",
+          "task_observations": null
+        }
+      ],
+      "after_prior_changes": []
+    },
+    {
+      "configuration": "claude-effective-briefing",
+      "review_run_id": "20261018T201827332Z-cw-suite-opus-claude-effective-briefing-fa498a5d-9d3c-4c8c-9428-efeec67d9ab5-wtd_zwl0",
+      "provider": "claude",
+      "case": "effective-briefing",
+      "audit": "skill-studies/concise-writing/runs/baseline-iteration-suite-01/evaluation/claude-effective-briefing-audit.json",
+      "first_pass_sha256": "2a6b69ab07a763f892be6c953acb77c4f360d58f95d289b927edff39c057a4a4",
+      "judgments": [
+        {
+          "subject_run_id": "20261018T171356825Z-cw-suite-claude-effective-briefing-candidate-fuller-a3b31e39-a8e7-4c55-9ba1-4d38167e7822-qvshq55r",
+          "global_order": 49,
+          "condition": "candidate-fuller",
+          "repetition": 1,
+          "factors": {
+            "F1": "met",
+            "F2": "met",
+            "F3": "met"
+          },
+          "functional_result": "pass",
+          "task_observations": null
+        },
+        {
+          "subject_run_id": "20261018T171432706Z-cw-suite-claude-effective-briefing-control-143d1b6e-b974-48a0-a460-64d8ed1edbf1-qtjxqdxe",
+          "global_order": 50,
+          "condition": "control",
+          "repetition": 1,
+          "factors": {
+            "F1": "met",
+            "F2": "met",
+            "F3": "met"
+          },
+          "functional_result": "pass",
+          "task_observations": null
+        },
+        {
+          "subject_run_id": "20261018T171459523Z-cw-suite-claude-effective-briefing-original-f8ba0612-a3b1-4389-9743-0bc9ac981f43-ssn2nujn",
+          "global_order": 51,
+          "condition": "original",
+          "repetition": 1,
+          "factors": {
+            "F1": "met",
+            "F2": "met",
+            "F3": "met"
+          },
+          "functional_result": "pass",
+          "task_observations": null
+        },
+        {
+          "subject_run_id": "20261018T171539506Z-cw-suite-claude-effective-briefing-candidate-targeted-68a103d1-0f82-4c88-9db4-d0a7f5ffa9a6-a85jy3o1",
+          "global_order": 52,
+          "condition": "candidate-targeted",
+          "repetition": 1,
+          "factors": {
+            "F1": "met",
+            "F2": "met",
+            "F3": "met"
+          },
+          "functional_result": "pass",
+          "task_observations": null
+        },
+        {
+          "subject_run_id": "20261018T171614011Z-cw-suite-claude-effective-briefing-control-512ee18c-8556-4648-929e-b238058d5265-nn6f29j4",
+          "global_order": 53,
+          "condition": "control",
+          "repetition": 2,
+          "factors": {
+            "F1": "met",
+            "F2": "met",
+            "F3": "met"
+          },
+          "functional_result": "pass",
+          "task_observations": null
+        },
+        {
+          "subject_run_id": "20261018T171629052Z-cw-suite-claude-effective-briefing-original-09f3e858-60d5-4074-afd0-e54ae9879860-7rmofbwv",
+          "global_order": 54,
+          "condition": "original",
+          "repetition": 2,
+          "factors": {
+            "F1": "met",
+            "F2": "met",
+            "F3": "met"
+          },
+          "functional_result": "pass",
+          "task_observations": null
+        },
+        {
+          "subject_run_id": "20261018T171656633Z-cw-suite-claude-effective-briefing-candidate-targeted-357cd245-3f17-4ca1-ac6a-3175c4ba2eba-g1jjexwn",
+          "global_order": 55,
+          "condition": "candidate-targeted",
+          "repetition": 2,
+          "factors": {
+            "F1": "met",
+            "F2": "met",
+            "F3": "met"
+          },
+          "functional_result": "pass",
+          "task_observations": null
+        },
+        {
+          "subject_run_id": "20261018T171732937Z-cw-suite-claude-effective-briefing-candidate-fuller-2104d2fa-ab2f-4f64-85aa-64bb20619d43-f7ez2yk0",
+          "global_order": 56,
+          "condition": "candidate-fuller",
+          "repetition": 2,
+          "factors": {
+            "F1": "met",
+            "F2": "met",
+            "F3": "met"
+          },
+          "functional_result": "pass",
+          "task_observations": null
+        },
+        {
+          "subject_run_id": "20261018T171800579Z-cw-suite-claude-effective-briefing-original-e6459b6a-316c-4345-9ba6-8477232caa1e-f3tqxken",
+          "global_order": 57,
+          "condition": "original",
+          "repetition": 3,
+          "factors": {
+            "F1": "met",
+            "F2": "met",
+            "F3": "met"
+          },
+          "functional_result": "pass",
+          "task_observations": null
+        },
+        {
+          "subject_run_id": "20261018T171840613Z-cw-suite-claude-effective-briefing-candidate-targeted-5db0b9f8-d678-4f5d-b01d-f5e44598753c-vz71rbvc",
+          "global_order": 58,
+          "condition": "candidate-targeted",
+          "repetition": 3,
+          "factors": {
+            "F1": "met",
+            "F2": "met",
+            "F3": "met"
+          },
+          "functional_result": "pass",
+          "task_observations": null
+        },
+        {
+          "subject_run_id": "20261018T171907615Z-cw-suite-claude-effective-briefing-candidate-fuller-b1f6b88d-024e-4895-9613-b59696196d23-89wmy1x5",
+          "global_order": 59,
+          "condition": "candidate-fuller",
+          "repetition": 3,
+          "factors": {
+            "F1": "met",
+            "F2": "met",
+            "F3": "met"
+          },
+          "functional_result": "pass",
+          "task_observations": null
+        },
+        {
+          "subject_run_id": "20261018T171940669Z-cw-suite-claude-effective-briefing-control-65727629-c657-4fdd-9381-0a32a14e2821-aa8g6aj4",
+          "global_order": 60,
+          "condition": "control",
+          "repetition": 3,
+          "factors": {
+            "F1": "met",
+            "F2": "met",
+            "F3": "met"
+          },
+          "functional_result": "pass",
+          "task_observations": null
+        }
+      ],
+      "after_prior_changes": []
+    },
+    {
+      "configuration": "claude-long-handoff",
+      "review_run_id": "20261018T202221257Z-cw-suite-opus-claude-long-handoff-20528a4e-77a8-4429-ac77-3e8e073a6f49-hbdhgxhx",
+      "provider": "claude",
+      "case": "long-handoff",
+      "audit": "skill-studies/concise-writing/runs/baseline-iteration-suite-01/evaluation/claude-long-handoff-audit.json",
+      "first_pass_sha256": "030f72290fb0919ee8000e66cff2e1749c61eef96c77d9e4268135ccaf6d8a76",
+      "judgments": [
+        {
+          "subject_run_id": "20261018T172012924Z-cw-suite-claude-long-handoff-control-d7fa11e7-e6a0-4c6d-90ec-6b67c1499538-hi7w0kaj",
+          "global_order": 61,
+          "condition": "control",
+          "repetition": 1,
+          "factors": {
+            "F1": "met",
+            "F2": "met",
+            "F3": "met"
+          },
+          "functional_result": "pass",
+          "task_observations": null
+        },
+        {
+          "subject_run_id": "20261018T172055104Z-cw-suite-claude-long-handoff-original-dacc68e3-f50d-400d-a456-f88090690699-9n_fsxmq",
+          "global_order": 62,
+          "condition": "original",
+          "repetition": 1,
+          "factors": {
+            "F1": "met",
+            "F2": "met",
+            "F3": "met"
+          },
+          "functional_result": "pass",
+          "task_observations": null
+        },
+        {
+          "subject_run_id": "20261018T172129417Z-cw-suite-claude-long-handoff-candidate-targeted-19a6fc94-ee00-48e0-90f4-9f6aef0ef35b-642zjke4",
+          "global_order": 63,
+          "condition": "candidate-targeted",
+          "repetition": 1,
+          "factors": {
+            "F1": "met",
+            "F2": "met",
+            "F3": "met"
+          },
+          "functional_result": "pass",
+          "task_observations": null
+        },
+        {
+          "subject_run_id": "20261018T172222056Z-cw-suite-claude-long-handoff-candidate-fuller-6aee9779-70db-4b2c-8d79-872f0311cc49-6jelw0ve",
+          "global_order": 64,
+          "condition": "candidate-fuller",
+          "repetition": 1,
+          "factors": {
+            "F1": "met",
+            "F2": "met",
+            "F3": "met"
+          },
+          "functional_result": "pass",
+          "task_observations": null
+        },
+        {
+          "subject_run_id": "20261018T172307116Z-cw-suite-claude-long-handoff-original-0f10c220-f908-4fb5-9613-cf823b4ecfd0-5ihturry",
+          "global_order": 65,
+          "condition": "original",
+          "repetition": 2,
+          "factors": {
+            "F1": "met",
+            "F2": "met",
+            "F3": "met"
+          },
+          "functional_result": "pass",
+          "task_observations": null
+        },
+        {
+          "subject_run_id": "20261018T172431994Z-cw-suite-claude-long-handoff-candidate-targeted-d3e984ec-982a-4060-b1d1-256002e40f90-kdp_vw9v",
+          "global_order": 66,
+          "condition": "candidate-targeted",
+          "repetition": 2,
+          "factors": {
+            "F1": "met",
+            "F2": "met",
+            "F3": "met"
+          },
+          "functional_result": "pass",
+          "task_observations": null
+        },
+        {
+          "subject_run_id": "20261018T172517864Z-cw-suite-claude-long-handoff-candidate-fuller-6acedaeb-8fcf-420b-9630-d077f55e57c4-hth4894y",
+          "global_order": 67,
+          "condition": "candidate-fuller",
+          "repetition": 2,
+          "factors": {
+            "F1": "met",
+            "F2": "met",
+            "F3": "met"
+          },
+          "functional_result": "pass",
+          "task_observations": null
+        },
+        {
+          "subject_run_id": "20261018T172556415Z-cw-suite-claude-long-handoff-control-20b36ab1-10c4-4e1d-a01b-045cd279f26e-kqh1ov2a",
+          "global_order": 68,
+          "condition": "control",
+          "repetition": 2,
+          "factors": {
+            "F1": "met",
+            "F2": "met",
+            "F3": "met"
+          },
+          "functional_result": "pass",
+          "task_observations": null
+        },
+        {
+          "subject_run_id": "20261018T172640911Z-cw-suite-claude-long-handoff-candidate-targeted-809b7a45-8636-4dc4-84e4-870c2285d955-q5cy6ze4",
+          "global_order": 69,
+          "condition": "candidate-targeted",
+          "repetition": 3,
+          "factors": {
+            "F1": "met",
+            "F2": "met",
+            "F3": "met"
+          },
+          "functional_result": "pass",
+          "task_observations": null
+        },
+        {
+          "subject_run_id": "20261018T172729963Z-cw-suite-claude-long-handoff-candidate-fuller-a4a1cef1-dd10-4f4c-aaaf-ff8d78256256-6fx1az4a",
+          "global_order": 70,
+          "condition": "candidate-fuller",
+          "repetition": 3,
+          "factors": {
+            "F1": "met",
+            "F2": "met",
+            "F3": "met"
+          },
+          "functional_result": "pass",
+          "task_observations": null
+        },
+        {
+          "subject_run_id": "20261018T172818856Z-cw-suite-claude-long-handoff-control-0cb7f6bb-a365-4f66-966e-86ee2bc0f0c9-8rqou7iq",
+          "global_order": 71,
+          "condition": "control",
+          "repetition": 3,
+          "factors": {
+            "F1": "met",
+            "F2": "met",
+            "F3": "met"
+          },
+          "functional_result": "pass",
+          "task_observations": null
+        },
+        {
+          "subject_run_id": "20261018T172904375Z-cw-suite-claude-long-handoff-original-57d31dc6-c8e8-4bad-93d8-91e38dfb632b-_l3yipf7",
+          "global_order": 72,
+          "condition": "original",
+          "repetition": 3,
+          "factors": {
+            "F1": "met",
+            "F2": "met",
+            "F3": "met"
+          },
+          "functional_result": "pass",
+          "task_observations": null
+        }
+      ],
+      "after_prior_changes": []
+    },
+    {
+      "configuration": "codex-invocation-tighten",
+      "review_run_id": "20261018T202825403Z-cw-suite-opus-codex-invocation-tighten-69cb01b8-ad36-41e1-b767-3bf62dad0d36-k7di3g5j",
+      "provider": "codex",
+      "case": "invocation-tighten",
+      "audit": "skill-studies/concise-writing/runs/baseline-iteration-suite-01/evaluation/codex-invocation-tighten-audit.json",
+      "first_pass_sha256": "930ac0b7bc2edeabff4b35b1a2203dac7f49072eb727eea32dc06f15f205b971",
+      "judgments": [
+        {
+          "subject_run_id": "20261018T173601788Z-cw-suite-codex-invocation-tighten-original-c28e5348-ec85-40c5-8a18-105384c07eeb-6fme7bdv",
+          "global_order": 73,
+          "condition": "original",
+          "repetition": 1,
+          "factors": {
+            "F1": "met",
+            "F2": "met",
+            "F3": "met"
+          },
+          "functional_result": "pass",
+          "task_observations": null
+        },
+        {
+          "subject_run_id": "20261018T173747677Z-cw-suite-codex-invocation-tighten-candidate-targeted-af060137-1823-4480-8ce7-18054cc2ffba-35q33g2p",
+          "global_order": 74,
+          "condition": "candidate-targeted",
+          "repetition": 1,
+          "factors": {
+            "F1": "met",
+            "F2": "met",
+            "F3": "met"
+          },
+          "functional_result": "pass",
+          "task_observations": null
+        },
+        {
+          "subject_run_id": "20261018T173833212Z-cw-suite-codex-invocation-tighten-candidate-fuller-71cfa8d4-9bdb-4a76-8c21-cbcbb4e28b1b-m9xsszar",
+          "global_order": 75,
+          "condition": "candidate-fuller",
+          "repetition": 1,
+          "factors": {
+            "F1": "met",
+            "F2": "met",
+            "F3": "met"
+          },
+          "functional_result": "pass",
+          "task_observations": null
+        },
+        {
+          "subject_run_id": "20261018T173924030Z-cw-suite-codex-invocation-tighten-candidate-targeted-6398f129-7119-49f8-b5d6-a8fa7653f59e-w2k6wkav",
+          "global_order": 76,
+          "condition": "candidate-targeted",
+          "repetition": 2,
+          "factors": {
+            "F1": "met",
+            "F2": "met",
+            "F3": "met"
+          },
+          "functional_result": "pass",
+          "task_observations": null
+        },
+        {
+          "subject_run_id": "20261018T174003161Z-cw-suite-codex-invocation-tighten-candidate-fuller-157f55a8-774f-4e34-b750-e1990687d3d4-r3jx9n5g",
+          "global_order": 77,
+          "condition": "candidate-fuller",
+          "repetition": 2,
+          "factors": {
+            "F1": "met",
+            "F2": "met",
+            "F3": "met"
+          },
+          "functional_result": "pass",
+          "task_observations": null
+        },
+        {
+          "subject_run_id": "20261018T174044889Z-cw-suite-codex-invocation-tighten-original-418e3dec-d93c-4d16-948b-714b92b3d1b4-hgu21x2o",
+          "global_order": 78,
+          "condition": "original",
+          "repetition": 2,
+          "factors": {
+            "F1": "met",
+            "F2": "met",
+            "F3": "met"
+          },
+          "functional_result": "pass",
+          "task_observations": null
+        },
+        {
+          "subject_run_id": "20261018T174126499Z-cw-suite-codex-invocation-tighten-candidate-fuller-29bb7744-01ee-4765-9027-9f41559ebba3-r5f8no_p",
+          "global_order": 79,
+          "condition": "candidate-fuller",
+          "repetition": 3,
+          "factors": {
+            "F1": "met",
+            "F2": "met",
+            "F3": "met"
+          },
+          "functional_result": "pass",
+          "task_observations": null
+        },
+        {
+          "subject_run_id": "20261018T174203757Z-cw-suite-codex-invocation-tighten-original-4bfd493d-cf94-4bb3-b28b-e52476f8ab29-mla6pnv2",
+          "global_order": 80,
+          "condition": "original",
+          "repetition": 3,
+          "factors": {
+            "F1": "met",
+            "F2": "met",
+            "F3": "met"
+          },
+          "functional_result": "pass",
+          "task_observations": null
+        },
+        {
+          "subject_run_id": "20261018T174239923Z-cw-suite-codex-invocation-tighten-candidate-targeted-0ec6d990-f780-4f32-9de2-08442d8c1405-odacpb_z",
+          "global_order": 81,
+          "condition": "candidate-targeted",
+          "repetition": 3,
+          "factors": {
+            "F1": "met",
+            "F2": "met",
+            "F3": "met"
+          },
+          "functional_result": "pass",
+          "task_observations": null
+        }
+      ],
+      "after_prior_changes": []
+    },
+    {
+      "configuration": "codex-invocation-write",
+      "review_run_id": "20261018T203148546Z-cw-suite-opus-codex-invocation-write-e634a792-ef78-40a8-97d1-73bc4b22f7e0-e8id5m_i",
+      "provider": "codex",
+      "case": "invocation-write",
+      "audit": "skill-studies/concise-writing/runs/baseline-iteration-suite-01/evaluation/codex-invocation-write-audit.json",
+      "first_pass_sha256": "b9d79f7a83589aa5dc25f8a9412394fb6c50030fc36659c56b75bc878eaf7661",
+      "judgments": [
+        {
+          "subject_run_id": "20261018T174317160Z-cw-suite-codex-invocation-write-candidate-targeted-023a78ac-bac1-42ef-bbc8-28adfbe1acfc-0m1ynhcb",
+          "global_order": 82,
+          "condition": "candidate-targeted",
+          "repetition": 1,
+          "factors": {
+            "F1": "met",
+            "F2": "met",
+            "F3": "met"
+          },
+          "functional_result": "pass",
+          "task_observations": null
+        },
+        {
+          "subject_run_id": "20261018T174348606Z-cw-suite-codex-invocation-write-candidate-fuller-33bb4e15-2165-4478-a314-dfbe9ec0ccf9-ouleseu_",
+          "global_order": 83,
+          "condition": "candidate-fuller",
+          "repetition": 1,
+          "factors": {
+            "F1": "met",
+            "F2": "met",
+            "F3": "met"
+          },
+          "functional_result": "pass",
+          "task_observations": null
+        },
+        {
+          "subject_run_id": "20261018T174423458Z-cw-suite-codex-invocation-write-original-4dac21ab-dc66-4d9e-bc2c-de4fda95fa85-01jlwrxo",
+          "global_order": 84,
+          "condition": "original",
+          "repetition": 1,
+          "factors": {
+            "F1": "met",
+            "F2": "met",
+            "F3": "met"
+          },
+          "functional_result": "pass",
+          "task_observations": null
+        },
+        {
+          "subject_run_id": "20261018T174505500Z-cw-suite-codex-invocation-write-candidate-fuller-22a65f87-4597-4038-a7ac-e3d9ff4cd41b-h5obzoj1",
+          "global_order": 85,
+          "condition": "candidate-fuller",
+          "repetition": 2,
+          "factors": {
+            "F1": "met",
+            "F2": "met",
+            "F3": "met"
+          },
+          "functional_result": "pass",
+          "task_observations": null
+        },
+        {
+          "subject_run_id": "20261018T174532434Z-cw-suite-codex-invocation-write-original-1071425b-cdb7-4953-95a6-5158464f1e90-_yopzdhc",
+          "global_order": 86,
+          "condition": "original",
+          "repetition": 2,
+          "factors": {
+            "F1": "met",
+            "F2": "met",
+            "F3": "met"
+          },
+          "functional_result": "pass",
+          "task_observations": null
+        },
+        {
+          "subject_run_id": "20261018T174608599Z-cw-suite-codex-invocation-write-candidate-targeted-8d7b7657-57c3-4476-ac24-21686ab426ae-x98dsct1",
+          "global_order": 87,
+          "condition": "candidate-targeted",
+          "repetition": 2,
+          "factors": {
+            "F1": "met",
+            "F2": "met",
+            "F3": "met"
+          },
+          "functional_result": "pass",
+          "task_observations": null
+        },
+        {
+          "subject_run_id": "20261018T174649206Z-cw-suite-codex-invocation-write-original-2f334c30-6ec9-4dea-8e55-f57ca8d7d865-ytklmoau",
+          "global_order": 88,
+          "condition": "original",
+          "repetition": 3,
+          "factors": {
+            "F1": "met",
+            "F2": "met",
+            "F3": "met"
+          },
+          "functional_result": "pass",
+          "task_observations": null
+        },
+        {
+          "subject_run_id": "20261018T174723657Z-cw-suite-codex-invocation-write-candidate-targeted-758296ed-3e51-44bc-986a-b8123c5f3270-kyj_0bhc",
+          "global_order": 89,
+          "condition": "candidate-targeted",
+          "repetition": 3,
+          "factors": {
+            "F1": "met",
+            "F2": "met",
+            "F3": "met"
+          },
+          "functional_result": "pass",
+          "task_observations": null
+        },
+        {
+          "subject_run_id": "20261018T174808802Z-cw-suite-codex-invocation-write-candidate-fuller-b74aa5e4-aee4-4eb1-a654-a2f2018a8074-r0_npw2g",
+          "global_order": 90,
+          "condition": "candidate-fuller",
+          "repetition": 3,
+          "factors": {
+            "F1": "met",
+            "F2": "met",
+            "F3": "met"
+          },
+          "functional_result": "pass",
+          "task_observations": null
+        }
+      ],
+      "after_prior_changes": []
+    },
+    {
+      "configuration": "codex-invocation-nonprose",
+      "review_run_id": "20261018T203517398Z-cw-suite-opus-codex-invocation-nonprose-6c9718bb-983d-4a12-bf0b-1bf0d0d1aad2-q5r2xus5",
+      "provider": "codex",
+      "case": "invocation-nonprose",
+      "audit": "skill-studies/concise-writing/runs/baseline-iteration-suite-01/evaluation/codex-invocation-nonprose-audit.json",
+      "first_pass_sha256": "cd498bcb3a48b2fc5db5191ce68e776c24a434cce06b35222be86110ae7cdc3c",
+      "judgments": [
+        {
+          "subject_run_id": "20261018T174840012Z-cw-suite-codex-invocation-nonprose-candidate-fuller-764bcfa9-adb8-4469-8241-4b112b2981bf-b14xbpqf",
+          "global_order": 91,
+          "condition": "candidate-fuller",
+          "repetition": 1,
+          "factors": {},
+          "functional_result": "not measured",
+          "task_observations": {
+            "only_expected_numeric_bytes_changed": true,
+            "only_literal_reply": false,
+            "final_literal_reply": true,
+            "CW_functional": "not measured"
+          }
+        },
+        {
+          "subject_run_id": "20261018T174905249Z-cw-suite-codex-invocation-nonprose-original-d21e6285-be9f-4427-b80a-2a8e4f7fc50e-y2l3km3w",
+          "global_order": 92,
+          "condition": "original",
+          "repetition": 1,
+          "factors": {},
+          "functional_result": "not measured",
+          "task_observations": {
+            "only_expected_numeric_bytes_changed": true,
+            "only_literal_reply": false,
+            "final_literal_reply": true,
+            "CW_functional": "not measured"
+          }
+        },
+        {
+          "subject_run_id": "20261018T174926199Z-cw-suite-codex-invocation-nonprose-candidate-targeted-cbd0ca8f-42a4-4336-a3b2-4ca19cf8d454-3wyl564o",
+          "global_order": 93,
+          "condition": "candidate-targeted",
+          "repetition": 1,
+          "factors": {},
+          "functional_result": "not measured",
+          "task_observations": {
+            "only_expected_numeric_bytes_changed": true,
+            "only_literal_reply": false,
+            "final_literal_reply": true,
+            "CW_functional": "not measured"
+          }
+        },
+        {
+          "subject_run_id": "20261018T174951876Z-cw-suite-codex-invocation-nonprose-original-dd105d6f-4b80-4222-a465-1e2ea94853c1-c8_aqp0z",
+          "global_order": 94,
+          "condition": "original",
+          "repetition": 2,
+          "factors": {},
+          "functional_result": "not measured",
+          "task_observations": {
+            "only_expected_numeric_bytes_changed": true,
+            "only_literal_reply": false,
+            "final_literal_reply": true,
+            "CW_functional": "not measured"
+          }
+        },
+        {
+          "subject_run_id": "20261018T175014940Z-cw-suite-codex-invocation-nonprose-candidate-targeted-e9c8d399-618b-4369-86e0-614c96252211-06xxj7x_",
+          "global_order": 95,
+          "condition": "candidate-targeted",
+          "repetition": 2,
+          "factors": {},
+          "functional_result": "not measured",
+          "task_observations": {
+            "only_expected_numeric_bytes_changed": true,
+            "only_literal_reply": false,
+            "final_literal_reply": true,
+            "CW_functional": "not measured"
+          }
+        },
+        {
+          "subject_run_id": "20261018T175034945Z-cw-suite-codex-invocation-nonprose-candidate-fuller-1591b474-84c0-469c-b1da-64fcb7816a65-f0zyoftj",
+          "global_order": 96,
+          "condition": "candidate-fuller",
+          "repetition": 2,
+          "factors": {},
+          "functional_result": "not measured",
+          "task_observations": {
+            "only_expected_numeric_bytes_changed": true,
+            "only_literal_reply": false,
+            "final_literal_reply": true,
+            "CW_functional": "not measured"
+          }
+        },
+        {
+          "subject_run_id": "20261018T175056290Z-cw-suite-codex-invocation-nonprose-candidate-targeted-507cd1fb-94d7-4a3c-a69c-ef32ece09857-kxb_qmwt",
+          "global_order": 97,
+          "condition": "candidate-targeted",
+          "repetition": 3,
+          "factors": {},
+          "functional_result": "not measured",
+          "task_observations": {
+            "only_expected_numeric_bytes_changed": true,
+            "only_literal_reply": false,
+            "final_literal_reply": true,
+            "CW_functional": "not measured"
+          }
+        },
+        {
+          "subject_run_id": "20261018T175116210Z-cw-suite-codex-invocation-nonprose-candidate-fuller-2becde48-1bcf-41c4-9261-ef1ec0b6e7f7-uvmxqs8d",
+          "global_order": 98,
+          "condition": "candidate-fuller",
+          "repetition": 3,
+          "factors": {},
+          "functional_result": "not measured",
+          "task_observations": {
+            "only_expected_numeric_bytes_changed": true,
+            "only_literal_reply": false,
+            "final_literal_reply": true,
+            "CW_functional": "not measured"
+          }
+        },
+        {
+          "subject_run_id": "20261018T175138760Z-cw-suite-codex-invocation-nonprose-original-f6a0b701-bf92-41aa-a2a2-5299f28b75f2-_z90htko",
+          "global_order": 99,
+          "condition": "original",
+          "repetition": 3,
+          "factors": {},
+          "functional_result": "not measured",
+          "task_observations": {
+            "only_expected_numeric_bytes_changed": true,
+            "only_literal_reply": false,
+            "final_literal_reply": true,
+            "CW_functional": "not measured"
+          }
+        }
+      ],
+      "after_prior_changes": [
+        "Final text corrects targeted repetition1 progress-message count from3 to2; numeric/literal-response observations and not-measured CW status unchanged."
+      ]
+    },
+    {
+      "configuration": "codex-invocation-comments",
+      "review_run_id": "20261018T203752417Z-cw-suite-opus-codex-invocation-comments-764b68f6-7191-4c75-8f97-6b52968ac2de-mhu4pqgm",
+      "provider": "codex",
+      "case": "invocation-comments",
+      "audit": "skill-studies/concise-writing/runs/baseline-iteration-suite-01/evaluation/codex-invocation-comments-audit.json",
+      "first_pass_sha256": "498b363819672ea108a82d546058a80f6a9622e975bc11de782db33cc5d186f2",
+      "judgments": [
+        {
+          "subject_run_id": "20261018T175202299Z-cw-suite-codex-invocation-comments-original-f28be32f-8587-43b7-b593-8acd08da6a6e-j91n56b6",
+          "global_order": 100,
+          "condition": "original",
+          "repetition": 1,
+          "factors": {
+            "F1": "not met",
+            "F2": "not met",
+            "F3": "met"
+          },
+          "functional_result": "fail",
+          "task_observations": null
+        },
+        {
+          "subject_run_id": "20261018T175236908Z-cw-suite-codex-invocation-comments-candidate-targeted-f1e6c2f9-1701-42d7-a9ce-8d30ffbf2602-pkkb1hm7",
+          "global_order": 101,
+          "condition": "candidate-targeted",
+          "repetition": 1,
+          "factors": {
+            "F1": "met",
+            "F2": "met",
+            "F3": "met"
+          },
+          "functional_result": "pass",
+          "task_observations": null
+        },
+        {
+          "subject_run_id": "20261018T175311096Z-cw-suite-codex-invocation-comments-candidate-fuller-24425749-6083-4eaf-b256-c9d3359a438b-p5ptt0qp",
+          "global_order": 102,
+          "condition": "candidate-fuller",
+          "repetition": 1,
+          "factors": {
+            "F1": "met",
+            "F2": "met",
+            "F3": "met"
+          },
+          "functional_result": "pass",
+          "task_observations": null
+        },
+        {
+          "subject_run_id": "20261018T175355385Z-cw-suite-codex-invocation-comments-candidate-targeted-3805230d-57d1-4757-985e-2e6e6ae88659-85z1jcku",
+          "global_order": 103,
+          "condition": "candidate-targeted",
+          "repetition": 2,
+          "factors": {
+            "F1": "met",
+            "F2": "met",
+            "F3": "met"
+          },
+          "functional_result": "pass",
+          "task_observations": null
+        },
+        {
+          "subject_run_id": "20261018T175428093Z-cw-suite-codex-invocation-comments-candidate-fuller-0a9bee52-6ed5-40e5-a1e8-6e7b2ec181cc-ds5rfl1b",
+          "global_order": 104,
+          "condition": "candidate-fuller",
+          "repetition": 2,
+          "factors": {
+            "F1": "met",
+            "F2": "met",
+            "F3": "met"
+          },
+          "functional_result": "pass",
+          "task_observations": null
+        },
+        {
+          "subject_run_id": "20261018T175501232Z-cw-suite-codex-invocation-comments-original-8c5754ac-1209-46db-9cda-2ea7ca7debf2-a59311u3",
+          "global_order": 105,
+          "condition": "original",
+          "repetition": 2,
+          "factors": {
+            "F1": "met",
+            "F2": "met",
+            "F3": "met"
+          },
+          "functional_result": "pass",
+          "task_observations": null
+        },
+        {
+          "subject_run_id": "20261018T175535656Z-cw-suite-codex-invocation-comments-candidate-fuller-3db7acc2-7c64-49db-88aa-db9223fed04f-7lvf6lko",
+          "global_order": 106,
+          "condition": "candidate-fuller",
+          "repetition": 3,
+          "factors": {
+            "F1": "met",
+            "F2": "met",
+            "F3": "met"
+          },
+          "functional_result": "pass",
+          "task_observations": null
+        },
+        {
+          "subject_run_id": "20261018T175605841Z-cw-suite-codex-invocation-comments-original-af937c24-1574-46ca-9828-3bb1dc613733-lrtvrc6c",
+          "global_order": 107,
+          "condition": "original",
+          "repetition": 3,
+          "factors": {
+            "F1": "met",
+            "F2": "met",
+            "F3": "met"
+          },
+          "functional_result": "pass",
+          "task_observations": null
+        },
+        {
+          "subject_run_id": "20261018T175651816Z-cw-suite-codex-invocation-comments-candidate-targeted-533401a9-d570-4c71-b9bf-750eb2f2014b-mogg4xcj",
+          "global_order": 108,
+          "condition": "candidate-targeted",
+          "repetition": 3,
+          "factors": {
+            "F1": "met",
+            "F2": "met",
+            "F3": "met"
+          },
+          "functional_result": "pass",
+          "task_observations": null
+        }
+      ],
+      "after_prior_changes": []
+    },
+    {
+      "configuration": "claude-invocation-tighten",
+      "review_run_id": "20261018T204133404Z-cw-suite-opus-claude-invocation-tighten-a53156f9-bf61-419e-8300-d8c7ceed5b96-qr7ajv44",
+      "provider": "claude",
+      "case": "invocation-tighten",
+      "audit": "skill-studies/concise-writing/runs/baseline-iteration-suite-01/evaluation/claude-invocation-tighten-audit.json",
+      "first_pass_sha256": "12e783e960c3a20a7ebc301c4048d928cea62f809279458aea25b3b42b272643",
+      "judgments": [
+        {
+          "subject_run_id": "20261018T175838304Z-cw-suite-claude-invocation-tighten-candidate-fuller-f4be3a68-18bb-4057-be12-d7927db1515d-dehuzd_4",
+          "global_order": 109,
+          "condition": "candidate-fuller",
+          "repetition": 1,
+          "factors": {
+            "F1": "met",
+            "F2": "met",
+            "F3": "met"
+          },
+          "functional_result": "pass",
+          "task_observations": null
+        },
+        {
+          "subject_run_id": "20261018T175925732Z-cw-suite-claude-invocation-tighten-original-449de430-8081-4958-9888-c9ae66a0029d-3kwnyfkh",
+          "global_order": 110,
+          "condition": "original",
+          "repetition": 1,
+          "factors": {
+            "F1": "met",
+            "F2": "met",
+            "F3": "met"
+          },
+          "functional_result": "pass",
+          "task_observations": null
+        },
+        {
+          "subject_run_id": "20261018T175958573Z-cw-suite-claude-invocation-tighten-candidate-targeted-104a04f6-2fe3-4692-8ba9-ccd3d31728c1-88t7ioua",
+          "global_order": 111,
+          "condition": "candidate-targeted",
+          "repetition": 1,
+          "factors": {
+            "F1": "met",
+            "F2": "met",
+            "F3": "met"
+          },
+          "functional_result": "pass",
+          "task_observations": null
+        },
+        {
+          "subject_run_id": "20261018T180039294Z-cw-suite-claude-invocation-tighten-original-8cf4949c-3b89-4bfd-9b37-8071a3328682-endzbwm1",
+          "global_order": 112,
+          "condition": "original",
+          "repetition": 2,
+          "factors": {
+            "F1": "not met",
+            "F2": "met",
+            "F3": "met"
+          },
+          "functional_result": "fail",
+          "task_observations": null
+        },
+        {
+          "subject_run_id": "20261018T180122941Z-cw-suite-claude-invocation-tighten-candidate-targeted-637a4d72-37f4-489c-a487-afc2554e2870-yic96ly2",
+          "global_order": 113,
+          "condition": "candidate-targeted",
+          "repetition": 2,
+          "factors": {
+            "F1": "met",
+            "F2": "met",
+            "F3": "met"
+          },
+          "functional_result": "pass",
+          "task_observations": null
+        },
+        {
+          "subject_run_id": "20261018T180157809Z-cw-suite-claude-invocation-tighten-candidate-fuller-3723bd66-0969-42fe-874e-3408d30347c0-5fsa7z31",
+          "global_order": 114,
+          "condition": "candidate-fuller",
+          "repetition": 2,
+          "factors": {
+            "F1": "met",
+            "F2": "met",
+            "F3": "met"
+          },
+          "functional_result": "pass",
+          "task_observations": null
+        },
+        {
+          "subject_run_id": "20261018T180232257Z-cw-suite-claude-invocation-tighten-candidate-targeted-810baf8a-b135-4f06-89a5-de8bef24dc24-k_37fu_p",
+          "global_order": 115,
+          "condition": "candidate-targeted",
+          "repetition": 3,
+          "factors": {
+            "F1": "met",
+            "F2": "met",
+            "F3": "met"
+          },
+          "functional_result": "pass",
+          "task_observations": null
+        },
+        {
+          "subject_run_id": "20261018T180310852Z-cw-suite-claude-invocation-tighten-candidate-fuller-32e452f2-fb63-4eea-85c2-0360207fd9c2-rtxztq0x",
+          "global_order": 116,
+          "condition": "candidate-fuller",
+          "repetition": 3,
+          "factors": {
+            "F1": "met",
+            "F2": "met",
+            "F3": "met"
+          },
+          "functional_result": "pass",
+          "task_observations": null
+        },
+        {
+          "subject_run_id": "20261018T180343660Z-cw-suite-claude-invocation-tighten-original-90d6d636-33ca-452c-aae1-3f69e5d8787b-iogbjip3",
+          "global_order": 117,
+          "condition": "original",
+          "repetition": 3,
+          "factors": {
+            "F1": "met",
+            "F2": "met",
+            "F3": "met"
+          },
+          "functional_result": "pass",
+          "task_observations": null
+        }
+      ],
+      "after_prior_changes": []
+    },
+    {
+      "configuration": "claude-invocation-write",
+      "review_run_id": "20261018T204452300Z-cw-suite-opus-claude-invocation-write-23ed696d-0923-4086-97ff-502c8395e8d4-6de9rm47",
+      "provider": "claude",
+      "case": "invocation-write",
+      "audit": "skill-studies/concise-writing/runs/baseline-iteration-suite-01/evaluation/claude-invocation-write-audit.json",
+      "first_pass_sha256": "1354c3319adf75711b7469b019d9e1e49c3d66dc903b8b09fd8d3bbad70c1e49",
+      "judgments": [
+        {
+          "subject_run_id": "20261018T180413272Z-cw-suite-claude-invocation-write-original-f2e82499-4ec6-4630-b26e-7a36de3736b5-igoyoash",
+          "global_order": 118,
+          "condition": "original",
+          "repetition": 1,
+          "factors": {
+            "F1": "met",
+            "F2": "met",
+            "F3": "met"
+          },
+          "functional_result": "pass",
+          "task_observations": null
+        },
+        {
+          "subject_run_id": "20261018T180444053Z-cw-suite-claude-invocation-write-candidate-targeted-0eb07154-a9c7-4dd9-9702-8fbf151ec856-dk7ys_y6",
+          "global_order": 119,
+          "condition": "candidate-targeted",
+          "repetition": 1,
+          "factors": {
+            "F1": "met",
+            "F2": "met",
+            "F3": "met"
+          },
+          "functional_result": "pass",
+          "task_observations": null
+        },
+        {
+          "subject_run_id": "20261018T180509523Z-cw-suite-claude-invocation-write-candidate-fuller-e0c43ee4-f1e9-4d12-b3bc-fb6f49ab767d-aippuhxe",
+          "global_order": 120,
+          "condition": "candidate-fuller",
+          "repetition": 1,
+          "factors": {
+            "F1": "met",
+            "F2": "met",
+            "F3": "met"
+          },
+          "functional_result": "pass",
+          "task_observations": null
+        },
+        {
+          "subject_run_id": "20261018T180545702Z-cw-suite-claude-invocation-write-candidate-targeted-3cf45b07-94b3-4d5b-b47e-72b09f040f26-q86nq4k9",
+          "global_order": 121,
+          "condition": "candidate-targeted",
+          "repetition": 2,
+          "factors": {
+            "F1": "met",
+            "F2": "met",
+            "F3": "met"
+          },
+          "functional_result": "pass",
+          "task_observations": null
+        },
+        {
+          "subject_run_id": "20261018T180619292Z-cw-suite-claude-invocation-write-candidate-fuller-dc7b9292-9467-4509-924a-eb2afe615762-jktj4w5w",
+          "global_order": 122,
+          "condition": "candidate-fuller",
+          "repetition": 2,
+          "factors": {
+            "F1": "met",
+            "F2": "met",
+            "F3": "met"
+          },
+          "functional_result": "pass",
+          "task_observations": null
+        },
+        {
+          "subject_run_id": "20261018T180647589Z-cw-suite-claude-invocation-write-original-ec50215b-1cbe-4734-b584-cda25ee64b75-4bgaksbj",
+          "global_order": 123,
+          "condition": "original",
+          "repetition": 2,
+          "factors": {
+            "F1": "met",
+            "F2": "met",
+            "F3": "met"
+          },
+          "functional_result": "pass",
+          "task_observations": null
+        },
+        {
+          "subject_run_id": "20261018T180713637Z-cw-suite-claude-invocation-write-candidate-fuller-d63478b2-1675-480d-9e2b-60768c8f7f38-iz9c305l",
+          "global_order": 124,
+          "condition": "candidate-fuller",
+          "repetition": 3,
+          "factors": {
+            "F1": "met",
+            "F2": "met",
+            "F3": "met"
+          },
+          "functional_result": "pass",
+          "task_observations": null
+        },
+        {
+          "subject_run_id": "20261018T180806617Z-cw-suite-claude-invocation-write-original-74b48a8e-aac1-4135-abb4-20d296aadfef-dnzd3075",
+          "global_order": 125,
+          "condition": "original",
+          "repetition": 3,
+          "factors": {
+            "F1": "not met",
+            "F2": "not met",
+            "F3": "met"
+          },
+          "functional_result": "fail",
+          "task_observations": null
+        },
+        {
+          "subject_run_id": "20261018T180835409Z-cw-suite-claude-invocation-write-candidate-targeted-1321045a-b019-4f6c-9be9-3baf761e3493-zfo9c8q5",
+          "global_order": 126,
+          "condition": "candidate-targeted",
+          "repetition": 3,
+          "factors": {
+            "F1": "met",
+            "F2": "met",
+            "F3": "met"
+          },
+          "functional_result": "pass",
+          "task_observations": null
+        }
+      ],
+      "after_prior_changes": []
+    },
+    {
+      "configuration": "claude-invocation-nonprose",
+      "review_run_id": "20261018T204838644Z-cw-suite-opus-claude-invocation-nonprose-b47e5cde-9d84-429c-a9a5-37eb90befde1-6vyj3swt",
+      "provider": "claude",
+      "case": "invocation-nonprose",
+      "audit": "skill-studies/concise-writing/runs/baseline-iteration-suite-01/evaluation/claude-invocation-nonprose-audit.json",
+      "first_pass_sha256": "abf9f41a86af85bd0544e3470456fa8484763475a31d9f9b48a949b41f43d38e",
+      "judgments": [
+        {
+          "subject_run_id": "20261018T180905303Z-cw-suite-claude-invocation-nonprose-candidate-targeted-2db44d6c-e981-4926-b4fa-d150e55fff77-9o9b50s4",
+          "global_order": 127,
+          "condition": "candidate-targeted",
+          "repetition": 1,
+          "factors": {},
+          "functional_result": "not measured",
+          "task_observations": {
+            "only_expected_numeric_bytes_changed": true,
+            "only_literal_reply": true,
+            "final_literal_reply": true,
+            "CW_functional": "not measured"
+          }
+        },
+        {
+          "subject_run_id": "20261018T180929549Z-cw-suite-claude-invocation-nonprose-candidate-fuller-ad6e0427-7013-42fd-a30f-42d85c910cc7-qmrbx6gi",
+          "global_order": 128,
+          "condition": "candidate-fuller",
+          "repetition": 1,
+          "factors": {},
+          "functional_result": "not measured",
+          "task_observations": {
+            "only_expected_numeric_bytes_changed": true,
+            "only_literal_reply": true,
+            "final_literal_reply": true,
+            "CW_functional": "not measured"
+          }
+        },
+        {
+          "subject_run_id": "20261018T180951105Z-cw-suite-claude-invocation-nonprose-original-de3fa503-b6ad-4b61-a357-e3e9259fc966-tl6qhous",
+          "global_order": 129,
+          "condition": "original",
+          "repetition": 1,
+          "factors": {},
+          "functional_result": "not measured",
+          "task_observations": {
+            "only_expected_numeric_bytes_changed": true,
+            "only_literal_reply": false,
+            "final_literal_reply": true,
+            "CW_functional": "not measured"
+          }
+        },
+        {
+          "subject_run_id": "20261018T181013154Z-cw-suite-claude-invocation-nonprose-candidate-fuller-dd362591-5eec-4126-8f9f-69be0bd59dfb-qn3nu5au",
+          "global_order": 130,
+          "condition": "candidate-fuller",
+          "repetition": 2,
+          "factors": {},
+          "functional_result": "not measured",
+          "task_observations": {
+            "only_expected_numeric_bytes_changed": true,
+            "only_literal_reply": false,
+            "final_literal_reply": true,
+            "CW_functional": "not measured"
+          }
+        },
+        {
+          "subject_run_id": "20261018T181024391Z-cw-suite-claude-invocation-nonprose-original-d231b95a-cc0b-4fc0-82c9-066393a9d906-l1v6m03m",
+          "global_order": 131,
+          "condition": "original",
+          "repetition": 2,
+          "factors": {},
+          "functional_result": "not measured",
+          "task_observations": {
+            "only_expected_numeric_bytes_changed": true,
+            "only_literal_reply": false,
+            "final_literal_reply": true,
+            "CW_functional": "not measured"
+          }
+        },
+        {
+          "subject_run_id": "20261018T181045311Z-cw-suite-claude-invocation-nonprose-candidate-targeted-2b817459-b149-4e8e-a57a-c5128038d03e-xa73gq6e",
+          "global_order": 132,
+          "condition": "candidate-targeted",
+          "repetition": 2,
+          "factors": {},
+          "functional_result": "not measured",
+          "task_observations": {
+            "only_expected_numeric_bytes_changed": true,
+            "only_literal_reply": true,
+            "final_literal_reply": true,
+            "CW_functional": "not measured"
+          }
+        },
+        {
+          "subject_run_id": "20261018T181107794Z-cw-suite-claude-invocation-nonprose-original-671ecabc-6b3c-4c25-bd63-3c93cdc1e1e6-_q3a0tyg",
+          "global_order": 133,
+          "condition": "original",
+          "repetition": 3,
+          "factors": {},
+          "functional_result": "not measured",
+          "task_observations": {
+            "only_expected_numeric_bytes_changed": true,
+            "only_literal_reply": true,
+            "final_literal_reply": true,
+            "CW_functional": "not measured"
+          }
+        },
+        {
+          "subject_run_id": "20261018T181130581Z-cw-suite-claude-invocation-nonprose-candidate-targeted-1cd66e10-3f00-4562-b46c-563b6dc4d717-q8se1qjq",
+          "global_order": 134,
+          "condition": "candidate-targeted",
+          "repetition": 3,
+          "factors": {},
+          "functional_result": "not measured",
+          "task_observations": {
+            "only_expected_numeric_bytes_changed": true,
+            "only_literal_reply": true,
+            "final_literal_reply": true,
+            "CW_functional": "not measured"
+          }
+        },
+        {
+          "subject_run_id": "20261018T181151926Z-cw-suite-claude-invocation-nonprose-candidate-fuller-8a3251ed-d69d-4b88-afb7-4ade8ca1bbbc-0zsijj2y",
+          "global_order": 135,
+          "condition": "candidate-fuller",
+          "repetition": 3,
+          "factors": {},
+          "functional_result": "not measured",
+          "task_observations": {
+            "only_expected_numeric_bytes_changed": true,
+            "only_literal_reply": false,
+            "final_literal_reply": true,
+            "CW_functional": "not measured"
+          }
+        }
+      ],
+      "after_prior_changes": []
+    },
+    {
+      "configuration": "claude-invocation-comments",
+      "review_run_id": "20261018T205129223Z-cw-suite-opus-claude-invocation-comments-b4740b6e-df8a-435f-b1db-72fde6ac76ad-nvj9z6rd",
+      "provider": "claude",
+      "case": "invocation-comments",
+      "audit": "skill-studies/concise-writing/runs/baseline-iteration-suite-01/evaluation/claude-invocation-comments-audit.json",
+      "first_pass_sha256": "3cf39026fa5782da28456dae78b94620515aa892f220524052cf7b69a88b120d",
+      "judgments": [
+        {
+          "subject_run_id": "20261018T181216180Z-cw-suite-claude-invocation-comments-candidate-fuller-bd66a28d-7f21-4c73-8391-60057601da00-0gw0b40a",
+          "global_order": 136,
+          "condition": "candidate-fuller",
+          "repetition": 1,
+          "factors": {
+            "F1": "met",
+            "F2": "met",
+            "F3": "met"
+          },
+          "functional_result": "pass",
+          "task_observations": null
+        },
+        {
+          "subject_run_id": "20261018T181250819Z-cw-suite-claude-invocation-comments-original-4e2bfd89-7b40-4997-95fc-8a866ba33dcb-8ndvrgc_",
+          "global_order": 137,
+          "condition": "original",
+          "repetition": 1,
+          "factors": {
+            "F1": "met",
+            "F2": "met",
+            "F3": "met"
+          },
+          "functional_result": "pass",
+          "task_observations": null
+        },
+        {
+          "subject_run_id": "20261018T181325237Z-cw-suite-claude-invocation-comments-candidate-targeted-cc92f762-73f9-406e-b11b-de46632340fb-csmi01gf",
+          "global_order": 138,
+          "condition": "candidate-targeted",
+          "repetition": 1,
+          "factors": {
+            "F1": "met",
+            "F2": "met",
+            "F3": "met"
+          },
+          "functional_result": "pass",
+          "task_observations": null
+        },
+        {
+          "subject_run_id": "20261018T181359671Z-cw-suite-claude-invocation-comments-original-9071ad6d-1a76-4362-852f-e7a283eb9216-b2raj7rp",
+          "global_order": 139,
+          "condition": "original",
+          "repetition": 2,
+          "factors": {
+            "F1": "met",
+            "F2": "met",
+            "F3": "met"
+          },
+          "functional_result": "pass",
+          "task_observations": null
+        },
+        {
+          "subject_run_id": "20261018T181423559Z-cw-suite-claude-invocation-comments-candidate-targeted-9e0b3232-f58a-406b-a8fe-ae04591cb2c7-a62ebadj",
+          "global_order": 140,
+          "condition": "candidate-targeted",
+          "repetition": 2,
+          "factors": {
+            "F1": "met",
+            "F2": "met",
+            "F3": "met"
+          },
+          "functional_result": "pass",
+          "task_observations": null
+        },
+        {
+          "subject_run_id": "20261018T181451874Z-cw-suite-claude-invocation-comments-candidate-fuller-d4b1db73-f1ae-4bf1-be62-5e0dfb92f5db-rcoll7ld",
+          "global_order": 141,
+          "condition": "candidate-fuller",
+          "repetition": 2,
+          "factors": {
+            "F1": "met",
+            "F2": "met",
+            "F3": "met"
+          },
+          "functional_result": "pass",
+          "task_observations": null
+        },
+        {
+          "subject_run_id": "20261018T181518659Z-cw-suite-claude-invocation-comments-candidate-targeted-2d01db50-6f2d-4fc6-80a3-051551d0f607-4u42kp00",
+          "global_order": 142,
+          "condition": "candidate-targeted",
+          "repetition": 3,
+          "factors": {
+            "F1": "met",
+            "F2": "met",
+            "F3": "met"
+          },
+          "functional_result": "pass",
+          "task_observations": null
+        },
+        {
+          "subject_run_id": "20261018T181548827Z-cw-suite-claude-invocation-comments-candidate-fuller-0f413acc-0b11-4c53-8234-a9d2213f99db-_4tpp6dh",
+          "global_order": 143,
+          "condition": "candidate-fuller",
+          "repetition": 3,
+          "factors": {
+            "F1": "met",
+            "F2": "met",
+            "F3": "met"
+          },
+          "functional_result": "pass",
+          "task_observations": null
+        },
+        {
+          "subject_run_id": "20261018T181624012Z-cw-suite-claude-invocation-comments-original-bdfca37e-f1cd-4764-bef0-95a764d0f1e8-mkmi9j2t",
+          "global_order": 144,
+          "condition": "original",
+          "repetition": 3,
+          "factors": {
+            "F1": "met",
+            "F2": "met",
+            "F3": "met"
+          },
+          "functional_result": "pass",
+          "task_observations": null
+        }
+      ],
+      "after_prior_changes": []
+    }
+  ],
+  "qualitative_review": "See assessment.md and each audited first-pass/final narrative; this file only transcribes judgments and task observations."
+}

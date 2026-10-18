@@ -21,7 +21,7 @@ It exclusively claims each group, requires all 144 subject records and blocks ad
 An unusable review remains charged; no automatic retry, packet split, fallback model or capacity transfer is authorized.
 
 Raw review bundles and copied packets stay in the authorized private store under baseline-suite-20261018.
-Published audit files identify retained first-pass/final text and trace ordering; the final reconciliation preserves active scores, evaluator judgments and any unresolved differences separately.
+Published audit files identify retained first-pass/final text and trace ordering; the [reconciliation](assessment.md) and [judgment transcription](judgments.json) preserve active scores, evaluator judgments and unresolved differences separately.
 
 ## Authorized authentication recovery
 

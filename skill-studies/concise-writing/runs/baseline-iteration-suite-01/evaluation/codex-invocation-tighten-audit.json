@@ -1,0 +1,16 @@
+{
+  "configuration": "codex-invocation-tighten",
+  "required_complete_files": 16,
+  "outputs": 9,
+  "first_pass_event": 66,
+  "prior_read_event": 67,
+  "first_pass_sha256": "930ac0b7bc2edeabff4b35b1a2203dac7f49072eb727eea32dc06f15f205b971",
+  "first_pass_path": "skill-studies/concise-writing/runs/baseline-iteration-suite-01/evaluation/codex-invocation-tighten-first-pass.md",
+  "final_path": "/Users/simon/work/personal/skill-study-private/concise-writing/baseline-suite-20261018/reviews/20261018T202825403Z-cw-suite-opus-codex-invocation-tighten-69cb01b8-ad36-41e1-b767-3bf62dad0d36-k7di3g5j/final.txt",
+  "final_sha256": "576d5bedd5de730366dcd203bfe0bde02f23a00bee4faf9130a6ee8cb067a621",
+  "inventory_verified": true,
+  "complete_delivery_before_first_pass": true,
+  "protected_inputs_verified": true,
+  "native_read_only_tools_verified": true,
+  "semantic_completeness": "verified: all nine output identities/factors, concrete pass evidence and condition comparisons read in first pass/final; no after-prior grade changes; stale Limits condition label noted separately"
+}

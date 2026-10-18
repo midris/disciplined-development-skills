@@ -1,0 +1,16 @@
+{
+  "configuration": "claude-agent-recommendation",
+  "required_complete_files": 19,
+  "outputs": 12,
+  "first_pass_event": 111,
+  "prior_read_event": 112,
+  "first_pass_sha256": "651491e3b931834a1bd7e79926651f85e21cd5d7a506342c5864bc47011ff08c",
+  "first_pass_path": "skill-studies/concise-writing/runs/baseline-iteration-suite-01/evaluation/claude-agent-recommendation-first-pass.md",
+  "final_path": "/Users/simon/work/personal/skill-study-private/concise-writing/baseline-suite-20261018/reviews/20261018T201418033Z-cw-suite-opus-claude-agent-recommendation-a3b7b2f2-0924-4ede-9321-dbf70c79fc97-62hpau52/final.txt",
+  "final_sha256": "18929ff32b1f88d21c317f128aee7da25126c709e3d2a93eae2dd10e2c005c3e",
+  "inventory_verified": true,
+  "complete_delivery_before_first_pass": true,
+  "protected_inputs_verified": true,
+  "native_read_only_tools_verified": true,
+  "semantic_completeness": "verified: all twelve run identities/factors, concrete evidence and condition comparison in first pass/final; first-pass grades unchanged; minor rough percentage statements are inaccurate, use exact supplied/table word counts"
+}

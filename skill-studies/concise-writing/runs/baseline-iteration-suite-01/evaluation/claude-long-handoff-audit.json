@@ -1,0 +1,16 @@
+{
+  "configuration": "claude-long-handoff",
+  "required_complete_files": 19,
+  "outputs": 12,
+  "first_pass_event": 106,
+  "prior_read_event": 107,
+  "first_pass_sha256": "030f72290fb0919ee8000e66cff2e1749c61eef96c77d9e4268135ccaf6d8a76",
+  "first_pass_path": "skill-studies/concise-writing/runs/baseline-iteration-suite-01/evaluation/claude-long-handoff-first-pass.md",
+  "final_path": "/Users/simon/work/personal/skill-study-private/concise-writing/baseline-suite-20261018/reviews/20261018T202221257Z-cw-suite-opus-claude-long-handoff-20528a4e-77a8-4429-ac77-3e8e073a6f49-hbdhgxhx/final.txt",
+  "final_sha256": "0d95b2a0a0a64232a7d8a7cd0afc3d50c22c5ea991f7a19af2fd292f636e005f",
+  "inventory_verified": true,
+  "complete_delivery_before_first_pass": true,
+  "protected_inputs_verified": true,
+  "native_read_only_tools_verified": true,
+  "semantic_completeness": "verified: all twelve output identities/factors and comparisons in first pass/final; no grade change after prior; four F3 severity disagreements retained, with rationale-content loss separated from unscored process"
+}

@@ -1,0 +1,16 @@
+{
+  "configuration": "claude-effective-briefing",
+  "required_complete_files": 19,
+  "outputs": 12,
+  "first_pass_event": 93,
+  "prior_read_event": 94,
+  "first_pass_sha256": "2a6b69ab07a763f892be6c953acb77c4f360d58f95d289b927edff39c057a4a4",
+  "first_pass_path": "skill-studies/concise-writing/runs/baseline-iteration-suite-01/evaluation/claude-effective-briefing-first-pass.md",
+  "final_path": "/Users/simon/work/personal/skill-study-private/concise-writing/baseline-suite-20261018/reviews/20261018T201827332Z-cw-suite-opus-claude-effective-briefing-fa498a5d-9d3c-4c8c-9428-efeec67d9ab5-wtd_zwl0/final.txt",
+  "final_sha256": "c72fbbf6fe027dd8b506825d467df84b1ecb743d9fa33345facad31b6f96e701",
+  "inventory_verified": true,
+  "complete_delivery_before_first_pass": true,
+  "protected_inputs_verified": true,
+  "native_read_only_tools_verified": true,
+  "semantic_completeness": "verified: all twelve output identities/factors and comparisons in first pass/final; no grade change after prior; three uncertainty-qualification disagreements retained"
+}

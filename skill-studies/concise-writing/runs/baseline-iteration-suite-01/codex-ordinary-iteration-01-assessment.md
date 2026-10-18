@@ -3,7 +3,7 @@
 Format version: `2`
 Assessment ID: cw-codex-ordinary-iteration-01
 Study / batch: concise-writing / codex-ordinary-iteration-01
-Status: complete active assessment; separate Opus review pending
+Status: complete active assessment; cross-model reconciliation is linked from the protocol
 Scope and acceptance rules: [protocol](../../protocol.md) at Git `e6011b491061395a905574c0dd4643846c625428`, codex-ordinary-iteration-01; CW-expanded-1 and prospective applicability-only case cards, with unchanged criterion meanings.
 Attempt index: [codex-ordinary-iteration-01-run-index.json](codex-ordinary-iteration-01-run-index.json) at Git `6ad549b50af54d9766d05b47ebf5cbc1ea3cddbb`, SHA-256 `2cb81bfb36f8e92cf519c41e8a1b7eee23f399b5161ef00c996cb311968fb756`.
 Assessor and relevant session context: Codex controller with exposed development/authoring history; neither blind nor independent. Separate Opus review supplements these judgments.
@@ -117,4 +117,4 @@ Other precision observations remain visible: some passing controls shorten the f
 All skill-bearing handoffs preserve exactly 02:00, strictly >90 seconds/three-consecutive/reset semantics, unresolved-state/evidence safeguards and the unexplained token-retention requirement.
 No consequential quality advantage between the two drafts and the original is established by these Codex observations. All three ordinary cases are already handled well by the original; different layouts and threshold ties alone do not establish equivalence or an adoption choice.
 The controls demonstrate useful failure opportunities, but small exposed samples do not prove population reliability or identify a causal sentence-level effect.
-The owner-approved Claude ordinary and both native comparisons remain part of the same fixed collection; Opus reviews are pending. Keep all body bytes unchanged and retain E as its separate corrected stratum.
+The other provider/native strata and the [Opus reconciliation](evaluation/assessment.md) complete the fixed comparison. E remains its separate corrected stratum, and all body bytes stay unchanged.

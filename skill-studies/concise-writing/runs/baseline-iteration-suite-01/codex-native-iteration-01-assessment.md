@@ -3,7 +3,7 @@
 Format version: `2`
 Assessment ID: cw-codex-native-iteration-01
 Study / batch: concise-writing / codex-native-iteration-01
-Status: complete active assessment; separate Opus review pending
+Status: complete active assessment; cross-model reconciliation is linked from the protocol
 Scope and acceptance rules: [protocol](../../protocol.md) at Git `c4fbdde162dc0e1d7cdbccfd9ec0cec202893659`, codex-native-iteration-01; CW-expanded-1 and prospective applicability-only case cards, with unchanged criterion meanings.
 Attempt index: [codex-native-iteration-01-run-index.json](codex-native-iteration-01-run-index.json) at Git `57d5e432ebb58238c9d6f7dd97a023d5e5f345fd`, SHA-256 `0557a43d46750c3f47d98ae56c93c54fe7792cb2a9384b71a3dffc0c61d4c815`.
 Assessor and relevant session context: Codex controller with exposed development/authoring history; neither blind nor independent. Separate Opus review supplements these judgments.
@@ -129,7 +129,7 @@ The length table above counts the whole Python file separately from these commen
 
 These unblinded development observations do not isolate description effects, establish invocation reliability or prove incremental skill contribution without native controls.
 Descriptions are byte-identical and bodies are unseen before selection, so version differences cannot be credited to description wording.
-Claude native collection and fourteen grouped Opus output reviews remain authorized and pending; draft bodies stay unchanged.
+The Claude native collection and [fourteen-packet Opus reconciliation](evaluation/assessment.md) complete this fixed comparison; draft bodies stay unchanged.
 
 ## Comment-only lengths
 

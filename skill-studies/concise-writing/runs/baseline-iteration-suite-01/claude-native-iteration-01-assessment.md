@@ -3,7 +3,7 @@
 Format version: `2`
 Assessment ID: cw-claude-native-iteration-01
 Study / batch: concise-writing / claude-native-iteration-01
-Status: complete active assessment; separate Opus review pending
+Status: complete active assessment; cross-model reconciliation is linked from the protocol
 Scope and acceptance rules: [protocol](../../protocol.md) at Git `0524ec5aa23288841bc6972516a4c14bca24678d`, claude-native-iteration-01; CW-expanded-1 and prospective applicability-only case cards, with unchanged criterion meanings.
 Attempt index: [claude-native-iteration-01-run-index.json](claude-native-iteration-01-run-index.json) at Git `0a1cc3ad5b951064b3854410d23a524d20074940`, SHA-256 `3fe9c681b2f98ab950038d65a4bf41e0a7b72fdf4af0ee70fbe015e9d617999d`.
 Assessor and relevant session context: Codex controller with exposed development/authoring history; neither blind nor independent. Separate Opus review supplements these judgments.
@@ -134,7 +134,7 @@ No subject-produced code is executed during assessment.
 Across positive N1/N2/N4 tasks, each version loads in six of nine observations.
 All three descriptions are identical and bodies are unseen before selection, so differences between cases cannot establish a description change or body-caused discovery effect.
 There are no native controls, so these artifacts cannot establish incremental contribution from CW.
-Fourteen separate Opus output reviews remain pending; no draft edit or adoption follows automatically from the active scores.
+The [fourteen-packet Opus reconciliation](evaluation/assessment.md) supplements these scores; no draft edit or adoption follows automatically.
 
 ## Comment-only lengths
 

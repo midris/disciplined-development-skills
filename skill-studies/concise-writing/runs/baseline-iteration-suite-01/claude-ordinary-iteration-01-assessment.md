@@ -3,7 +3,7 @@
 Format version: `2`
 Assessment ID: cw-claude-ordinary-iteration-01
 Study / batch: concise-writing / claude-ordinary-iteration-01
-Status: complete active assessment; separate Opus review pending
+Status: complete active assessment; cross-model reconciliation is linked from the protocol
 Scope and acceptance rules: [protocol](../../protocol.md) at Git `24c80fe8faa76cb08e837ba68d96133c80fcb865`, claude-ordinary-iteration-01; CW-expanded-1 and prospective applicability-only case cards, with unchanged criterion meanings.
 Attempt index: [claude-ordinary-iteration-01-run-index.json](claude-ordinary-iteration-01-run-index.json) at Git `5dd187e325bd37d188a819b1443d0e963c9c0129`, SHA-256 `4d4b427a8b4c17afc8ef6af0868acbcfd714834b9146cb398e5ddf4427e03040`.
 Assessor and relevant session context: Codex controller with exposed development/authoring history; neither blind nor independent. Separate Opus review supplements these judgments.
@@ -122,7 +122,7 @@ Fuller retains that qualification in its other two B outputs, while original and
 All three C controls and fuller repetition 2 retain the detached second mechanism explanation between Monitoring and Rollback and fail active F3.
 This is the global reading detour identified in the fixed case, not a penalty for necessary lease/file warnings at separate entry points.
 All original/targeted C outputs and the other fuller outputs remove that detached account while preserving operational safeguards.
-The prior Fable disagreement over the severity of residual repetition remains explicit; fresh Opus judgments have not yet been obtained.
+The [Opus reconciliation](evaluation/assessment.md) preserves the fresh judgments and the residual-repetition disagreement alongside these original active scores.
 Targeted C1 omits the explicit statement that the token-retention rationale is unexplained while retaining the requirement and inventing no why.
 Record that as a transparency difference; the case does not require an uncertainty flag or allow hidden process to be inferred.
 
@@ -135,7 +135,7 @@ The first Claude attempt retains the initial controller/manifest identity.
 After its Write-path newline stopped inspection, a zero-model replay and six regression cases qualified the prospective inspection metadata; task, prompts, skills, policy, runtime, schedule and raw evidence remain unchanged.
 All 36 are valid included attempts, with no rerun, exclusion or uncertain charge.
 
-These ordinary results establish no consequential advantage of either draft over the original; fuller has three observed regressions.
-Keep both bodies unchanged through the approved native comparison and cross-model review.
+These active ordinary results establish no consequential advantage of either draft over the original; fuller has three active failures disputed in the linked Opus reconciliation.
+Both bodies remain unchanged across the completed native comparison and cross-model review.
 Native selection, artifact quality and the separately corrected five-repetition E stratum must remain distinct.
 No adoption, compression or further model allocation follows automatically.

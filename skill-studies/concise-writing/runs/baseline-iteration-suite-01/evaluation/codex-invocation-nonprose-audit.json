@@ -1,0 +1,16 @@
+{
+  "configuration": "codex-invocation-nonprose",
+  "required_complete_files": 25,
+  "outputs": 9,
+  "first_pass_event": 63,
+  "prior_read_event": 64,
+  "first_pass_sha256": "cd498bcb3a48b2fc5db5191ce68e776c24a434cce06b35222be86110ae7cdc3c",
+  "first_pass_path": "skill-studies/concise-writing/runs/baseline-iteration-suite-01/evaluation/codex-invocation-nonprose-first-pass.md",
+  "final_path": "/Users/simon/work/personal/skill-study-private/concise-writing/baseline-suite-20261018/reviews/20261018T203517398Z-cw-suite-opus-codex-invocation-nonprose-6c9718bb-983d-4a12-bf0b-1bf0d0d1aad2-q5r2xus5/final.txt",
+  "final_sha256": "b78b049cf6d23f4faa89795934f302f6600667f33254d33975ed83ae7bdff141",
+  "inventory_verified": true,
+  "complete_delivery_before_first_pass": true,
+  "protected_inputs_verified": true,
+  "native_read_only_tools_verified": true,
+  "semantic_completeness": "verified: all nine settings/message pairs read and task-only observations compared; CW F1-F3 explicitly unmeasured; no after-prior change; literal-response scope uncertainty retained"
+}

@@ -1,0 +1,16 @@
+{
+  "configuration": "codex-long-handoff-replacement-1",
+  "required_complete_files": 19,
+  "outputs": 12,
+  "first_pass_event": 115,
+  "prior_read_event": 116,
+  "first_pass_sha256": "d12f8691537aa20ef911d8593320e17a38e8e18e516fbe83e739ff318933ce2f",
+  "first_pass_path": "skill-studies/concise-writing/runs/baseline-iteration-suite-01/evaluation/codex-long-handoff-replacement-1-first-pass.md",
+  "final_path": "/Users/simon/work/personal/skill-study-private/concise-writing/baseline-suite-20261018/reviews/20261018T200941359Z-cw-suite-opus-codex-long-handoff-882668c2-82a4-43ad-8889-9846b0a04029-inl4y_hy/final.txt",
+  "final_sha256": "2278a85174965f2c56ebd5229547b133831d6e8402da5dc924bd5dcbf71b0817",
+  "inventory_verified": true,
+  "complete_delivery_before_first_pass": true,
+  "protected_inputs_verified": true,
+  "native_read_only_tools_verified": true,
+  "semantic_completeness": "verified: all twelve output identities/factors and comparison in both first pass and final; control2 fails F2 only; optional linked examples and completion messages excluded, no required packet evidence missing"
+}

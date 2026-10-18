@@ -1,0 +1,16 @@
+{
+  "configuration": "claude-invocation-tighten",
+  "required_complete_files": 16,
+  "outputs": 9,
+  "first_pass_event": 85,
+  "prior_read_event": 86,
+  "first_pass_sha256": "12e783e960c3a20a7ebc301c4048d928cea62f809279458aea25b3b42b272643",
+  "first_pass_path": "skill-studies/concise-writing/runs/baseline-iteration-suite-01/evaluation/claude-invocation-tighten-first-pass.md",
+  "final_path": "/Users/simon/work/personal/skill-study-private/concise-writing/baseline-suite-20261018/reviews/20261018T204133404Z-cw-suite-opus-claude-invocation-tighten-a53156f9-bf61-419e-8300-d8c7ceed5b96-qr7ajv44/final.txt",
+  "final_sha256": "1fabc145878c3b9af5bffc140e7f26ce1dab10e9611d2a10fb5a6fcd88c7c3c0",
+  "inventory_verified": true,
+  "complete_delivery_before_first_pass": true,
+  "protected_inputs_verified": true,
+  "native_read_only_tools_verified": true,
+  "semantic_completeness": "verified: all nine output judgments and first-pass/final comparisons read; all active factors agree, including original2 only-window F1; no grade changes; stale label and implicit rationale notes retained"
+}

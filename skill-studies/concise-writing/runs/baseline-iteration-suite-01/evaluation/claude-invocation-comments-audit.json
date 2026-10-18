@@ -1,0 +1,16 @@
+{
+  "configuration": "claude-invocation-comments",
+  "required_complete_files": 17,
+  "outputs": 9,
+  "first_pass_event": 72,
+  "prior_read_event": 73,
+  "first_pass_sha256": "3cf39026fa5782da28456dae78b94620515aa892f220524052cf7b69a88b120d",
+  "first_pass_path": "skill-studies/concise-writing/runs/baseline-iteration-suite-01/evaluation/claude-invocation-comments-first-pass.md",
+  "final_path": "/Users/simon/work/personal/skill-study-private/concise-writing/baseline-suite-20261018/reviews/20261018T205129223Z-cw-suite-opus-claude-invocation-comments-b4740b6e-df8a-435f-b1db-72fde6ac76ad-nvj9z6rd/final.txt",
+  "final_sha256": "220ff64d8ad05c8e3063ffeeb9e1a6f00218de5db3ad2002f2ce7cc098a9c68b",
+  "inventory_verified": true,
+  "complete_delivery_before_first_pass": true,
+  "protected_inputs_verified": true,
+  "native_read_only_tools_verified": true,
+  "semantic_completeness": "verified: all nine first-pass/final output factors, code-context evidence and comparisons read; all27 active factors agree; implicit duplicate rationale differences retained; no grade change"
+}

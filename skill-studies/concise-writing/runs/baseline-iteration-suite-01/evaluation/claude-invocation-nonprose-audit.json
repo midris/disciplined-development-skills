@@ -1,0 +1,16 @@
+{
+  "configuration": "claude-invocation-nonprose",
+  "required_complete_files": 25,
+  "outputs": 9,
+  "first_pass_event": 65,
+  "prior_read_event": 66,
+  "first_pass_sha256": "abf9f41a86af85bd0544e3470456fa8484763475a31d9f9b48a949b41f43d38e",
+  "first_pass_path": "skill-studies/concise-writing/runs/baseline-iteration-suite-01/evaluation/claude-invocation-nonprose-first-pass.md",
+  "final_path": "/Users/simon/work/personal/skill-study-private/concise-writing/baseline-suite-20261018/reviews/20261018T204838644Z-cw-suite-opus-claude-invocation-nonprose-b47e5cde-9d84-429c-a9a5-37eb90befde1-6vyj3swt/final.txt",
+  "final_sha256": "fc8f96dfa1cb2479e3069bdc2a2c74c72283084488d1d3b4a8f25bd02b6e65dd",
+  "inventory_verified": true,
+  "complete_delivery_before_first_pass": true,
+  "protected_inputs_verified": true,
+  "native_read_only_tools_verified": true,
+  "semantic_completeness": "verified: all nine settings/message pairs and first-pass/final task observations read; numeric checks and four extra-status observations agree; CW F1-F3 unmeasured and invocation excluded"
+}

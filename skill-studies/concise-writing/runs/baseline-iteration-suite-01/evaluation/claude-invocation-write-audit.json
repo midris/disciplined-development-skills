@@ -1,0 +1,16 @@
+{
+  "configuration": "claude-invocation-write",
+  "required_complete_files": 16,
+  "outputs": 9,
+  "first_pass_event": 79,
+  "prior_read_event": 80,
+  "first_pass_sha256": "1354c3319adf75711b7469b019d9e1e49c3d66dc903b8b09fd8d3bbad70c1e49",
+  "first_pass_path": "skill-studies/concise-writing/runs/baseline-iteration-suite-01/evaluation/claude-invocation-write-first-pass.md",
+  "final_path": "/Users/simon/work/personal/skill-study-private/concise-writing/baseline-suite-20261018/reviews/20261018T204452300Z-cw-suite-opus-claude-invocation-write-23ed696d-0923-4086-97ff-502c8395e8d4-6de9rm47/final.txt",
+  "final_sha256": "ccc5c42f63f954b94904f3cd524573a1b8caa8d306c16a44ae423d3647325881",
+  "inventory_verified": true,
+  "complete_delivery_before_first_pass": true,
+  "protected_inputs_verified": true,
+  "native_read_only_tools_verified": true,
+  "semantic_completeness": "verified: all nine first-pass/final judgments and comparisons read; original3 staffing-condition F1/F2 failure agrees; fuller1 future-state F1 disagreement preserved; no grade change"
+}

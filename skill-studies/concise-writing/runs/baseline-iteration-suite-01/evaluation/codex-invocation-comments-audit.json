@@ -1,0 +1,16 @@
+{
+  "configuration": "codex-invocation-comments",
+  "required_complete_files": 17,
+  "outputs": 9,
+  "first_pass_event": 74,
+  "prior_read_event": 75,
+  "first_pass_sha256": "498b363819672ea108a82d546058a80f6a9622e975bc11de782db33cc5d186f2",
+  "first_pass_path": "skill-studies/concise-writing/runs/baseline-iteration-suite-01/evaluation/codex-invocation-comments-first-pass.md",
+  "final_path": "/Users/simon/work/personal/skill-study-private/concise-writing/baseline-suite-20261018/reviews/20261018T203752417Z-cw-suite-opus-codex-invocation-comments-764b68f6-7191-4c75-8f97-6b52968ac2de-mhu4pqgm/final.txt",
+  "final_sha256": "b110e1a443b015ad6b7d8a16301b0c64038ce74977c1ed0897c3c953c839b8af",
+  "inventory_verified": true,
+  "complete_delivery_before_first_pass": true,
+  "protected_inputs_verified": true,
+  "native_read_only_tools_verified": true,
+  "semantic_completeness": "verified: all nine first-pass/final factor judgments, code-context evidence and comparisons read; original1 F1/F2 rationale-sufficiency disagreement retained; no grade change"
+}

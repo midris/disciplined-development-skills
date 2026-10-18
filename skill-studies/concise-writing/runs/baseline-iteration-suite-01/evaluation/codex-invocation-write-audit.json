@@ -1,0 +1,16 @@
+{
+  "configuration": "codex-invocation-write",
+  "required_complete_files": 16,
+  "outputs": 9,
+  "first_pass_event": 63,
+  "prior_read_event": 64,
+  "first_pass_sha256": "b9d79f7a83589aa5dc25f8a9412394fb6c50030fc36659c56b75bc878eaf7661",
+  "first_pass_path": "skill-studies/concise-writing/runs/baseline-iteration-suite-01/evaluation/codex-invocation-write-first-pass.md",
+  "final_path": "/Users/simon/work/personal/skill-study-private/concise-writing/baseline-suite-20261018/reviews/20261018T203148546Z-cw-suite-opus-codex-invocation-write-e634a792-ef78-40a8-97d1-73bc4b22f7e0-e8id5m_i/final.txt",
+  "final_sha256": "eeba70ca3345d6a61c451898ee018a25afa837310b92f5bc12c0f221f934327d",
+  "inventory_verified": true,
+  "complete_delivery_before_first_pass": true,
+  "protected_inputs_verified": true,
+  "native_read_only_tools_verified": true,
+  "semantic_completeness": "verified: all nine first-pass/final output judgments and comparisons read; targeted3 F1 interpretation disagreement preserved; no after-prior change"
+}
