@@ -3,7 +3,7 @@
 Format version: `1`
 Study ID: `concise-writing`
 Status: baseline collection and cross-model review are complete; the owner selected the original CW as the development base and authorized preparation of effectiveness-first edits. Adoption remains deferred.
-Current action: prepare, qualify and freeze the owner-approved remaining full-suite comparison; then collect A/B/C followed by N1–N4 and complete the grouped Opus reviews. No draft edits or automatic retries.
+Current action: collect the owner-approved remaining full-suite comparison: A/B/C first, then N1–N4, followed by the fourteen grouped Opus reviews. Four provider/stratum scopes pass collection readiness with input revision `a27782b26f8014b67e72ecf817f7e08392fd62c5`; no draft edits or automatic retries.
 The approved [core/runs directory layout](../../plans/specs/2026-10-18-study-directory-layout.md) is implemented and verified for both studies; [navigation](README.md) separates core guidance from collected evidence.
 On 2026-10-18 the owner replied “ok, let’s do it” to the concrete remaining allocation of 144 subject calls plus fourteen evaluator calls. This accepts unchanged targeted/fuller bodies, fresh original/control comparisons, three repetitions per selected condition/provider and reuse of the separate completed E stratum while input/runtime qualification holds.
 The authorized sequence is 72 ordinary A/B/C subjects, then 72 native N1–N4 subjects, plus six ordinary and eight native Opus 5.5 medium reviews.
@@ -907,8 +907,8 @@ Subject collection and active-session assessment are complete; the owner subsequ
 
 | Work | Estimate | Basis |
 | --- | ---: | --- |
-| Remaining-suite preparation, qualification, collection, assessment and fourteen reviews | 390–540 | Owner-approved 144-subject/fourteen-evaluator reuse path; exact packet/input freeze precedes dispatch. |
-| **Total remaining forecast** | **390–540** | Completed E subjects/reviews are reused separately and add no new charge. |
+| Remaining-suite collection, assessment and fourteen reviews | 435 | Midpoint of 360–510 remaining minutes after 30 booked preparation minutes; approved total forecast remains 390–540. |
+| **Total** | **435** | Completed E subjects/reviews are reused separately and add no new charge. |
 
 The E stage used 115 estimated active minutes against the 180-minute upper forecast, 65 below it: 35 preparation, 40 subject collection/assessment and 40 evaluator preparation/reconciliation.
 The two evaluator durations total 420.696 seconds (7.01 minutes), included once in those estimates.

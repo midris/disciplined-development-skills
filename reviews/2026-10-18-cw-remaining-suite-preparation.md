@@ -19,7 +19,8 @@ The inventory wrapper is exercised through the actual reference consumer.
 Four focused tests passed after observing the missing collector fail; the combined document/format/focused suite passed 98 tests.
 The hooks passed 263 tests with three skips.
 Preparation readiness first rejected unsupported inclusion wording and absent direct manifest links; both were corrected without changing the validator or inclusion rule.
-Current link checking passes, and the four provider/stratum scopes must pass frozen collection readiness before dispatch.
+Current link checking and all four frozen collection-readiness scopes pass.
+Readiness also rejected a range and a renamed total in the integer forecast table; the table now gives the explicit 435-minute midpoint and keeps the 360–510 remaining range in its basis, with the 30 preparation minutes booked once.
 
 The fourteen review packets are fixed prospectively: six ordinary case/provider groups of twelve outputs, and eight native groups of nine.
 N3 quality remains unmeasured; its task-only observations do not enter CW functional totals.
