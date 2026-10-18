@@ -48,7 +48,8 @@
         "record": {
           "path": "skill-studies/concise-writing/runs/baseline-iteration-suite-01/results/20261018T175838304Z-cw-suite-claude-invocation-tighten-candidate-fuller-f4be3a68-18bb-4057-be12-d7927db1515d-dehuzd_4.json",
           "sha256": "1b75d615091f61fe32ac11da7349c5444d136ebabb89f5d3f2c30c06a4ff2c64",
-          "version": "2"
+          "version": "2",
+          "git_revision": "0ec93cc28d59fc796319edad5bcee1df2be44b0f"
         }
       }
     },
@@ -96,7 +97,8 @@
         "record": {
           "path": "skill-studies/concise-writing/runs/baseline-iteration-suite-01/results/20261018T175925732Z-cw-suite-claude-invocation-tighten-original-449de430-8081-4958-9888-c9ae66a0029d-3kwnyfkh.json",
           "sha256": "c48de2e41dbcdc0e885a23dca02b9775410bbbd096d660f2ff9cf7e487104709",
-          "version": "2"
+          "version": "2",
+          "git_revision": "0ec93cc28d59fc796319edad5bcee1df2be44b0f"
         }
       }
     },
@@ -144,7 +146,8 @@
         "record": {
           "path": "skill-studies/concise-writing/runs/baseline-iteration-suite-01/results/20261018T175958573Z-cw-suite-claude-invocation-tighten-candidate-targeted-104a04f6-2fe3-4692-8ba9-ccd3d31728c1-88t7ioua.json",
           "sha256": "e0ced6059606c970b3b19b3328db9eb7d4740bc6de2c6a09adbef6bdd06eea08",
-          "version": "2"
+          "version": "2",
+          "git_revision": "0ec93cc28d59fc796319edad5bcee1df2be44b0f"
         }
       }
     },
@@ -192,7 +195,8 @@
         "record": {
           "path": "skill-studies/concise-writing/runs/baseline-iteration-suite-01/results/20261018T180039294Z-cw-suite-claude-invocation-tighten-original-8cf4949c-3b89-4bfd-9b37-8071a3328682-endzbwm1.json",
           "sha256": "bef540d379fcff3d2e7daf99405288268fed3533ce902d3e70d2884000e437d7",
-          "version": "2"
+          "version": "2",
+          "git_revision": "0ec93cc28d59fc796319edad5bcee1df2be44b0f"
         }
       }
     },
@@ -240,7 +244,8 @@
         "record": {
           "path": "skill-studies/concise-writing/runs/baseline-iteration-suite-01/results/20261018T180122941Z-cw-suite-claude-invocation-tighten-candidate-targeted-637a4d72-37f4-489c-a487-afc2554e2870-yic96ly2.json",
           "sha256": "cd0246c1ef1521ddaff589053ce6bdea7f3aa03d286c38d8456977c40c1ae625",
-          "version": "2"
+          "version": "2",
+          "git_revision": "0ec93cc28d59fc796319edad5bcee1df2be44b0f"
         }
       }
     },
@@ -288,7 +293,8 @@
         "record": {
           "path": "skill-studies/concise-writing/runs/baseline-iteration-suite-01/results/20261018T180157809Z-cw-suite-claude-invocation-tighten-candidate-fuller-3723bd66-0969-42fe-874e-3408d30347c0-5fsa7z31.json",
           "sha256": "01eb97f2dff7a673de085d83a5ef00476a72333ed04b78d67169fb49c35bbfbd",
-          "version": "2"
+          "version": "2",
+          "git_revision": "0ec93cc28d59fc796319edad5bcee1df2be44b0f"
         }
       }
     },
@@ -336,7 +342,8 @@
         "record": {
           "path": "skill-studies/concise-writing/runs/baseline-iteration-suite-01/results/20261018T180232257Z-cw-suite-claude-invocation-tighten-candidate-targeted-810baf8a-b135-4f06-89a5-de8bef24dc24-k_37fu_p.json",
           "sha256": "6295caa99a0d9affc5148e15961c0c780f1e6ffca9afc8a75509ae45c0857490",
-          "version": "2"
+          "version": "2",
+          "git_revision": "0ec93cc28d59fc796319edad5bcee1df2be44b0f"
         }
       }
     },
@@ -384,7 +391,8 @@
         "record": {
           "path": "skill-studies/concise-writing/runs/baseline-iteration-suite-01/results/20261018T180310852Z-cw-suite-claude-invocation-tighten-candidate-fuller-32e452f2-fb63-4eea-85c2-0360207fd9c2-rtxztq0x.json",
           "sha256": "7441e714d96e5d636857da27fa65c5d69bebf5c7e4eb84594d1077e13ad460fc",
-          "version": "2"
+          "version": "2",
+          "git_revision": "0ec93cc28d59fc796319edad5bcee1df2be44b0f"
         }
       }
     },
@@ -432,7 +440,8 @@
         "record": {
           "path": "skill-studies/concise-writing/runs/baseline-iteration-suite-01/results/20261018T180343660Z-cw-suite-claude-invocation-tighten-original-90d6d636-33ca-452c-aae1-3f69e5d8787b-iogbjip3.json",
           "sha256": "b287497f14f1779e68fe0093c67567f8db4552083c92fc516b4931f091caf31b",
-          "version": "2"
+          "version": "2",
+          "git_revision": "0ec93cc28d59fc796319edad5bcee1df2be44b0f"
         }
       }
     },
@@ -480,7 +489,8 @@
         "record": {
           "path": "skill-studies/concise-writing/runs/baseline-iteration-suite-01/results/20261018T180413272Z-cw-suite-claude-invocation-write-original-f2e82499-4ec6-4630-b26e-7a36de3736b5-igoyoash.json",
           "sha256": "fe8ad0fd9db24e77cb4067c2773aa700b7a754417ae7c77602c6f9813df877a2",
-          "version": "2"
+          "version": "2",
+          "git_revision": "0ec93cc28d59fc796319edad5bcee1df2be44b0f"
         }
       }
     },
@@ -528,7 +538,8 @@
         "record": {
           "path": "skill-studies/concise-writing/runs/baseline-iteration-suite-01/results/20261018T180444053Z-cw-suite-claude-invocation-write-candidate-targeted-0eb07154-a9c7-4dd9-9702-8fbf151ec856-dk7ys_y6.json",
           "sha256": "354d9ee4129c41ab964ce89a51b7784525821dc24d8b6da1ce53848c159ebe4a",
-          "version": "2"
+          "version": "2",
+          "git_revision": "0ec93cc28d59fc796319edad5bcee1df2be44b0f"
         }
       }
     },
@@ -576,7 +587,8 @@
         "record": {
           "path": "skill-studies/concise-writing/runs/baseline-iteration-suite-01/results/20261018T180509523Z-cw-suite-claude-invocation-write-candidate-fuller-e0c43ee4-f1e9-4d12-b3bc-fb6f49ab767d-aippuhxe.json",
           "sha256": "d56ad6d6da454dee89509311cadf7acf7220f3bde07c05ac18167eb69c872a02",
-          "version": "2"
+          "version": "2",
+          "git_revision": "0ec93cc28d59fc796319edad5bcee1df2be44b0f"
         }
       }
     },
@@ -624,7 +636,8 @@
         "record": {
           "path": "skill-studies/concise-writing/runs/baseline-iteration-suite-01/results/20261018T180545702Z-cw-suite-claude-invocation-write-candidate-targeted-3cf45b07-94b3-4d5b-b47e-72b09f040f26-q86nq4k9.json",
           "sha256": "f731ae3e41198a778e82bf5d5cb0b7e630eb5ab7fc73246bc8f483b25c99160a",
-          "version": "2"
+          "version": "2",
+          "git_revision": "0ec93cc28d59fc796319edad5bcee1df2be44b0f"
         }
       }
     },
@@ -672,7 +685,8 @@
         "record": {
           "path": "skill-studies/concise-writing/runs/baseline-iteration-suite-01/results/20261018T180619292Z-cw-suite-claude-invocation-write-candidate-fuller-dc7b9292-9467-4509-924a-eb2afe615762-jktj4w5w.json",
           "sha256": "ec2d76f8d6c0b674198c64fe47fd40a2014b9ae6e3ddf2725738fb9d40386045",
-          "version": "2"
+          "version": "2",
+          "git_revision": "0ec93cc28d59fc796319edad5bcee1df2be44b0f"
         }
       }
     },
@@ -720,7 +734,8 @@
         "record": {
           "path": "skill-studies/concise-writing/runs/baseline-iteration-suite-01/results/20261018T180647589Z-cw-suite-claude-invocation-write-original-ec50215b-1cbe-4734-b584-cda25ee64b75-4bgaksbj.json",
           "sha256": "cc1cfd681caf81c7623bc35201fa6ebae0df2f8af9ae02841cc69bd50da9fede",
-          "version": "2"
+          "version": "2",
+          "git_revision": "0ec93cc28d59fc796319edad5bcee1df2be44b0f"
         }
       }
     },
@@ -768,7 +783,8 @@
         "record": {
           "path": "skill-studies/concise-writing/runs/baseline-iteration-suite-01/results/20261018T180713637Z-cw-suite-claude-invocation-write-candidate-fuller-d63478b2-1675-480d-9e2b-60768c8f7f38-iz9c305l.json",
           "sha256": "db8d91812b4701d72b5610d992c92726208b1344524af583a505af91635b4f21",
-          "version": "2"
+          "version": "2",
+          "git_revision": "0ec93cc28d59fc796319edad5bcee1df2be44b0f"
         }
       }
     },
@@ -816,7 +832,8 @@
         "record": {
           "path": "skill-studies/concise-writing/runs/baseline-iteration-suite-01/results/20261018T180806617Z-cw-suite-claude-invocation-write-original-74b48a8e-aac1-4135-abb4-20d296aadfef-dnzd3075.json",
           "sha256": "6237ef65b6c9ec00b9eb8d2b5f3abf05d6aa1baab695cd8e67831c50188993ff",
-          "version": "2"
+          "version": "2",
+          "git_revision": "0ec93cc28d59fc796319edad5bcee1df2be44b0f"
         }
       }
     },
@@ -864,7 +881,8 @@
         "record": {
           "path": "skill-studies/concise-writing/runs/baseline-iteration-suite-01/results/20261018T180835409Z-cw-suite-claude-invocation-write-candidate-targeted-1321045a-b019-4f6c-9be9-3baf761e3493-zfo9c8q5.json",
           "sha256": "38b7d4985e3ce54f12efd3a44f21215f2620544e241a0e80552fb939148def4a",
-          "version": "2"
+          "version": "2",
+          "git_revision": "0ec93cc28d59fc796319edad5bcee1df2be44b0f"
         }
       }
     },
@@ -912,7 +930,8 @@
         "record": {
           "path": "skill-studies/concise-writing/runs/baseline-iteration-suite-01/results/20261018T180905303Z-cw-suite-claude-invocation-nonprose-candidate-targeted-2db44d6c-e981-4926-b4fa-d150e55fff77-9o9b50s4.json",
           "sha256": "57a83f831095dcd4b535c9a8c4db72ba84456c45e4b306f64c194ec8755da9d6",
-          "version": "2"
+          "version": "2",
+          "git_revision": "0ec93cc28d59fc796319edad5bcee1df2be44b0f"
         }
       }
     },
@@ -960,7 +979,8 @@
         "record": {
           "path": "skill-studies/concise-writing/runs/baseline-iteration-suite-01/results/20261018T180929549Z-cw-suite-claude-invocation-nonprose-candidate-fuller-ad6e0427-7013-42fd-a30f-42d85c910cc7-qmrbx6gi.json",
           "sha256": "cc65b93a4571ede42102c663111c5baf4f2cdc12ced26248ca8eb020d943a32c",
-          "version": "2"
+          "version": "2",
+          "git_revision": "0ec93cc28d59fc796319edad5bcee1df2be44b0f"
         }
       }
     },
@@ -1008,7 +1028,8 @@
         "record": {
           "path": "skill-studies/concise-writing/runs/baseline-iteration-suite-01/results/20261018T180951105Z-cw-suite-claude-invocation-nonprose-original-de3fa503-b6ad-4b61-a357-e3e9259fc966-tl6qhous.json",
           "sha256": "35f160b130878257f34391f725c2b30e8921aa3114e6a14f5b288501234bde45",
-          "version": "2"
+          "version": "2",
+          "git_revision": "0ec93cc28d59fc796319edad5bcee1df2be44b0f"
         }
       }
     },
@@ -1056,7 +1077,8 @@
         "record": {
           "path": "skill-studies/concise-writing/runs/baseline-iteration-suite-01/results/20261018T181013154Z-cw-suite-claude-invocation-nonprose-candidate-fuller-dd362591-5eec-4126-8f9f-69be0bd59dfb-qn3nu5au.json",
           "sha256": "88409d9864e02af221d0710301747a6b682f0ef03cf6159f986b962a6db5b1c5",
-          "version": "2"
+          "version": "2",
+          "git_revision": "0ec93cc28d59fc796319edad5bcee1df2be44b0f"
         }
       }
     },
@@ -1104,7 +1126,8 @@
         "record": {
           "path": "skill-studies/concise-writing/runs/baseline-iteration-suite-01/results/20261018T181024391Z-cw-suite-claude-invocation-nonprose-original-d231b95a-cc0b-4fc0-82c9-066393a9d906-l1v6m03m.json",
           "sha256": "0d126e9de2e100c6c12cf0de21e79a29ba4bc50a1d5d1c2deae8e1bd1feebbec",
-          "version": "2"
+          "version": "2",
+          "git_revision": "0ec93cc28d59fc796319edad5bcee1df2be44b0f"
         }
       }
     },
@@ -1152,7 +1175,8 @@
         "record": {
           "path": "skill-studies/concise-writing/runs/baseline-iteration-suite-01/results/20261018T181045311Z-cw-suite-claude-invocation-nonprose-candidate-targeted-2b817459-b149-4e8e-a57a-c5128038d03e-xa73gq6e.json",
           "sha256": "1a316247872e52cf6d48a95f170a6e9dca8578d6f3cb380d92ebb38e7f518e4f",
-          "version": "2"
+          "version": "2",
+          "git_revision": "0ec93cc28d59fc796319edad5bcee1df2be44b0f"
         }
       }
     },
@@ -1200,7 +1224,8 @@
         "record": {
           "path": "skill-studies/concise-writing/runs/baseline-iteration-suite-01/results/20261018T181107794Z-cw-suite-claude-invocation-nonprose-original-671ecabc-6b3c-4c25-bd63-3c93cdc1e1e6-_q3a0tyg.json",
           "sha256": "fb6630f1cc7a9c6ab8da8adbb8673183f7e27a9b1727d0adb410a8cf02d6c50e",
-          "version": "2"
+          "version": "2",
+          "git_revision": "0ec93cc28d59fc796319edad5bcee1df2be44b0f"
         }
       }
     },
@@ -1248,7 +1273,8 @@
         "record": {
           "path": "skill-studies/concise-writing/runs/baseline-iteration-suite-01/results/20261018T181130581Z-cw-suite-claude-invocation-nonprose-candidate-targeted-1cd66e10-3f00-4562-b46c-563b6dc4d717-q8se1qjq.json",
           "sha256": "2085a2b31a1cfd1a415995ae0511bf2374ae5000b8ce8e24d29689bbc5272634",
-          "version": "2"
+          "version": "2",
+          "git_revision": "0ec93cc28d59fc796319edad5bcee1df2be44b0f"
         }
       }
     },
@@ -1296,7 +1322,8 @@
         "record": {
           "path": "skill-studies/concise-writing/runs/baseline-iteration-suite-01/results/20261018T181151926Z-cw-suite-claude-invocation-nonprose-candidate-fuller-8a3251ed-d69d-4b88-afb7-4ade8ca1bbbc-0zsijj2y.json",
           "sha256": "5c69fc6938b2037d4413bdc25b811392002fb34e6f23dd703081ca1bea825a2d",
-          "version": "2"
+          "version": "2",
+          "git_revision": "0ec93cc28d59fc796319edad5bcee1df2be44b0f"
         }
       }
     },
@@ -1344,7 +1371,8 @@
         "record": {
           "path": "skill-studies/concise-writing/runs/baseline-iteration-suite-01/results/20261018T181216180Z-cw-suite-claude-invocation-comments-candidate-fuller-bd66a28d-7f21-4c73-8391-60057601da00-0gw0b40a.json",
           "sha256": "45e49881a3234430fd90a62825a18398c14021b84807acfdabe5e17166146c29",
-          "version": "2"
+          "version": "2",
+          "git_revision": "0ec93cc28d59fc796319edad5bcee1df2be44b0f"
         }
       }
     },
@@ -1392,7 +1420,8 @@
         "record": {
           "path": "skill-studies/concise-writing/runs/baseline-iteration-suite-01/results/20261018T181250819Z-cw-suite-claude-invocation-comments-original-4e2bfd89-7b40-4997-95fc-8a866ba33dcb-8ndvrgc_.json",
           "sha256": "7aca187c4fe4c0e955950e6d73e2f427cc23e414c63a39dd19b6130f8f4fab8f",
-          "version": "2"
+          "version": "2",
+          "git_revision": "0ec93cc28d59fc796319edad5bcee1df2be44b0f"
         }
       }
     },
@@ -1440,7 +1469,8 @@
         "record": {
           "path": "skill-studies/concise-writing/runs/baseline-iteration-suite-01/results/20261018T181325237Z-cw-suite-claude-invocation-comments-candidate-targeted-cc92f762-73f9-406e-b11b-de46632340fb-csmi01gf.json",
           "sha256": "67cda28ff9b88a50efd60e308fc5029cbdbb3783cf5ee1716bb968bba9d3cb71",
-          "version": "2"
+          "version": "2",
+          "git_revision": "0ec93cc28d59fc796319edad5bcee1df2be44b0f"
         }
       }
     },
@@ -1488,7 +1518,8 @@
         "record": {
           "path": "skill-studies/concise-writing/runs/baseline-iteration-suite-01/results/20261018T181359671Z-cw-suite-claude-invocation-comments-original-9071ad6d-1a76-4362-852f-e7a283eb9216-b2raj7rp.json",
           "sha256": "5eff709bb30676ee22f8a561eccfa21acc416ccebcf9d9171c75b294f9c5f191",
-          "version": "2"
+          "version": "2",
+          "git_revision": "0ec93cc28d59fc796319edad5bcee1df2be44b0f"
         }
       }
     },
@@ -1536,7 +1567,8 @@
         "record": {
           "path": "skill-studies/concise-writing/runs/baseline-iteration-suite-01/results/20261018T181423559Z-cw-suite-claude-invocation-comments-candidate-targeted-9e0b3232-f58a-406b-a8fe-ae04591cb2c7-a62ebadj.json",
           "sha256": "5a7f9609be208a570712991b2ff794cb5a83e6d78d0efd0fe90ae1eecc686da4",
-          "version": "2"
+          "version": "2",
+          "git_revision": "0ec93cc28d59fc796319edad5bcee1df2be44b0f"
         }
       }
     },
@@ -1584,7 +1616,8 @@
         "record": {
           "path": "skill-studies/concise-writing/runs/baseline-iteration-suite-01/results/20261018T181451874Z-cw-suite-claude-invocation-comments-candidate-fuller-d4b1db73-f1ae-4bf1-be62-5e0dfb92f5db-rcoll7ld.json",
           "sha256": "fb8d90012faa99966c9178364386b9209b0f90b2785b41b512bde9f316c7b663",
-          "version": "2"
+          "version": "2",
+          "git_revision": "0ec93cc28d59fc796319edad5bcee1df2be44b0f"
         }
       }
     },
@@ -1632,7 +1665,8 @@
         "record": {
           "path": "skill-studies/concise-writing/runs/baseline-iteration-suite-01/results/20261018T181518659Z-cw-suite-claude-invocation-comments-candidate-targeted-2d01db50-6f2d-4fc6-80a3-051551d0f607-4u42kp00.json",
           "sha256": "0da8fb496fb644dad6834fee4d1946be2bc48b9d8ca14a5e4e41bdfc73e8eef0",
-          "version": "2"
+          "version": "2",
+          "git_revision": "0ec93cc28d59fc796319edad5bcee1df2be44b0f"
         }
       }
     },
@@ -1680,7 +1714,8 @@
         "record": {
           "path": "skill-studies/concise-writing/runs/baseline-iteration-suite-01/results/20261018T181548827Z-cw-suite-claude-invocation-comments-candidate-fuller-0f413acc-0b11-4c53-8234-a9d2213f99db-_4tpp6dh.json",
           "sha256": "8f17c43ef8ddeadedc611dbc26c846cd6170eba965d8da635a89d33f9c16492e",
-          "version": "2"
+          "version": "2",
+          "git_revision": "0ec93cc28d59fc796319edad5bcee1df2be44b0f"
         }
       }
     },
@@ -1728,7 +1763,8 @@
         "record": {
           "path": "skill-studies/concise-writing/runs/baseline-iteration-suite-01/results/20261018T181624012Z-cw-suite-claude-invocation-comments-original-bdfca37e-f1cd-4764-bef0-95a764d0f1e8-mkmi9j2t.json",
           "sha256": "953cfb3352fec172e3f8d4a7da5abec0a659ea77b5b0d834abe90512bfdcbefb",
-          "version": "2"
+          "version": "2",
+          "git_revision": "0ec93cc28d59fc796319edad5bcee1df2be44b0f"
         }
       }
     }
