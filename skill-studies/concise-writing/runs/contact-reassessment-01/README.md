@@ -46,7 +46,7 @@ The Codex-output review used the previous stricter interpretation; the Claude-ou
 Do not claim both Opus sessions independently applied the new interpretation or retroactively change either review's counts.
 E is no longer a demonstrated RED case for further authoring on this distinction; the owner's general loaded-baseline method decision does not manufacture a failure here.
 
-## Scenario completion
+## Coverage at reassessment
 
 | Scenario | Original and comprehensive, both providers | New targeted and fuller, both providers |
 | --- | --- | --- |
@@ -59,7 +59,8 @@ E is no longer a demonstrated RED case for further authoring on this distinction
 | N3: numeric-only negative selection | Complete, three repetitions per condition/provider; no functional CW score | Not run |
 | N4: native code comments | Complete, three repetitions per condition/provider | Not run |
 
-All eight scenarios have been exercised on the original and comprehensive versions, but seven remain untested on the new drafts.
+At this reassessment, all eight scenarios had been exercised on the original and comprehensive versions, but seven remained untested on the new drafts.
+Later progress and authority are recorded only in the protocol.
 Earlier whole-document cleanup, unsupported new-report claims and native-selection findings are unaffected by the contact reassessment; they are regression targets, not established failures of these new bodies.
 The new E observations use explicit loading and say nothing about native discovery.
 

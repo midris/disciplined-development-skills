@@ -1,0 +1,16 @@
+{
+  "configuration": "codex-agent-recommendation",
+  "required_complete_files": 19,
+  "outputs": 12,
+  "first_pass_event": 80,
+  "prior_read_event": 81,
+  "first_pass_sha256": "9ac99eb96abb3db57c5d9d7e21217752c0dddd658d237a822afdb662028610a8",
+  "first_pass_path": "skill-studies/concise-writing/runs/baseline-iteration-suite-01/evaluation/codex-agent-recommendation-first-pass.md",
+  "final_path": "/Users/simon/work/personal/skill-study-private/concise-writing/baseline-suite-20261018/reviews/20261018T181947528Z-cw-suite-opus-codex-agent-recommendation-3857e033-34f4-4976-9ebb-502603ed8e9e-hxsz__01/final.txt",
+  "final_sha256": "6ef3b362092a6b4ac2caf94ab93522d79e8874e863aeff0daa673f052483458e",
+  "inventory_verified": true,
+  "complete_delivery_before_first_pass": true,
+  "protected_inputs_verified": true,
+  "native_read_only_tools_verified": true,
+  "semantic_completeness": "verified: all12run identities/grades/reasons and comparison are present in the emitted first pass and final; one F1 interpretation disagreement retained"
+}

@@ -1,0 +1,35 @@
+{
+  "configuration": "codex-long-handoff",
+  "status": "unusable",
+  "cause": "Provider401authentication_failed: OAuth access token expired",
+  "status_code": "INFRA_ERROR/PROVIDER_EXIT_NONZERO",
+  "charge": 1,
+  "inventory_verified": true,
+  "protected_inputs_verified": true,
+  "model": "claude-opus-5-5",
+  "cli": "2.1.301",
+  "tools": [
+    "Read",
+    "Glob",
+    "Grep"
+  ],
+  "required_files": 19,
+  "complete_files": 13,
+  "missing_files": [
+    "outputs/candidate-fuller-1.md",
+    "outputs/candidate-fuller-2.md",
+    "outputs/candidate-fuller-3.md",
+    "outputs/candidate-targeted-1.md",
+    "outputs/candidate-targeted-2.md",
+    "outputs/candidate-targeted-3.md"
+  ],
+  "prior_read_events": [],
+  "first_pass": "not emitted",
+  "final": "absent",
+  "usable_quality_judgments": false,
+  "raw_trace": {
+    "path": "/Users/simon/work/personal/skill-study-private/concise-writing/baseline-suite-20261018/reviews/20261018T182703850Z-cw-suite-opus-codex-long-handoff-bf363d7c-4b4c-476c-8bf2-5c0001755231-4_7rwl_8/stdout.txt",
+    "sha256": "2097df29c83591933bf72d549256ed82d2a3ee0d13a5499ade03b80d5ee90047"
+  },
+  "recovery": "No automatic retry; owner sign-in refresh and explicit replacement authorization required. Eleven untouched primary groups remain funded but stopped by the shared authentication condition."
+}

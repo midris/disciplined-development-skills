@@ -1,5 +1,63 @@
 {
   "evaluator_ledger_version": "1",
   "purpose": "approved14remaining-suiteCWcross-modeloutputreviews",
-  "runs": []
+  "runs": [
+    {
+      "order": 1,
+      "run_id": "20261018T181947528Z-cw-suite-opus-codex-agent-recommendation-3857e033-34f4-4976-9ebb-502603ed8e9e-hxsz__01",
+      "configuration": "codex-agent-recommendation",
+      "role": "evaluator",
+      "allocation_pool": "evaluator",
+      "charge": 1,
+      "authority_revision": "28aec776531075bee49b6aa7296af89f5dd623cf",
+      "config_sha256": "9b0f6c16cc3de4607053ed5c86afeea1d97ec18d1b383c9e0f5382189f6757c6",
+      "bundle": "/Users/simon/work/personal/skill-study-private/concise-writing/baseline-suite-20261018/reviews/20261018T181947528Z-cw-suite-opus-codex-agent-recommendation-3857e033-34f4-4976-9ebb-502603ed8e9e-hxsz__01",
+      "inventory": {
+        "path": "/Users/simon/work/personal/skill-study-private/concise-writing/baseline-suite-20261018/reviews/20261018T181947528Z-cw-suite-opus-codex-agent-recommendation-3857e033-34f4-4976-9ebb-502603ed8e9e-hxsz__01.inventory.json",
+        "sha256": "6948d9c91d81205bf397a1965af6b760a651c76212170a5d0f84bb3261bb8e16",
+        "version": "1"
+      },
+      "status": "COMPLETED",
+      "duration_seconds": 158.328,
+      "audit_status": "verified complete reads and first-pass-before-prior; manual scope checked"
+    },
+    {
+      "order": 2,
+      "run_id": "20261018T182308075Z-cw-suite-opus-codex-effective-briefing-1650b9c3-a25b-424f-a7d5-4c000916d3f2-0zlq4rxs",
+      "configuration": "codex-effective-briefing",
+      "role": "evaluator",
+      "allocation_pool": "evaluator",
+      "charge": 1,
+      "authority_revision": "28aec776531075bee49b6aa7296af89f5dd623cf",
+      "config_sha256": "7528e299f5b727bba638c4544e672ed3a5c4458bde1a52ff1c86806e053b0c98",
+      "bundle": "/Users/simon/work/personal/skill-study-private/concise-writing/baseline-suite-20261018/reviews/20261018T182308075Z-cw-suite-opus-codex-effective-briefing-1650b9c3-a25b-424f-a7d5-4c000916d3f2-0zlq4rxs",
+      "inventory": {
+        "path": "/Users/simon/work/personal/skill-study-private/concise-writing/baseline-suite-20261018/reviews/20261018T182308075Z-cw-suite-opus-codex-effective-briefing-1650b9c3-a25b-424f-a7d5-4c000916d3f2-0zlq4rxs.inventory.json",
+        "sha256": "bac0bbb60096aadd5478dadd7dbdd1bbca464773f80bedfa941dc74307683c42",
+        "version": "1"
+      },
+      "status": "COMPLETED",
+      "duration_seconds": 199.814,
+      "audit_status": "verified complete reads and first-pass-before-prior; manual scope checked"
+    },
+    {
+      "order": 3,
+      "run_id": "20261018T182703850Z-cw-suite-opus-codex-long-handoff-bf363d7c-4b4c-476c-8bf2-5c0001755231-4_7rwl_8",
+      "configuration": "codex-long-handoff",
+      "role": "evaluator",
+      "allocation_pool": "evaluator",
+      "charge": 1,
+      "authority_revision": "28aec776531075bee49b6aa7296af89f5dd623cf",
+      "config_sha256": "b20b7c43b95f28f9c51fd62042716811daf646820de4c3588e53aa5b0beb154c",
+      "bundle": "/Users/simon/work/personal/skill-study-private/concise-writing/baseline-suite-20261018/reviews/20261018T182703850Z-cw-suite-opus-codex-long-handoff-bf363d7c-4b4c-476c-8bf2-5c0001755231-4_7rwl_8",
+      "inventory": {
+        "path": "/Users/simon/work/personal/skill-study-private/concise-writing/baseline-suite-20261018/reviews/20261018T182703850Z-cw-suite-opus-codex-long-handoff-bf363d7c-4b4c-476c-8bf2-5c0001755231-4_7rwl_8.inventory.json",
+        "sha256": "1ab394440e65c86efd392c1071cd1aa24e2b37a647528316565b0f08f0e4573f",
+        "version": "1"
+      },
+      "status": "INFRA_ERROR",
+      "duration_seconds": 60.775,
+      "audit_status": "unusable: expired OAuth token; no judgments; retained and charged, no retry"
+    }
+  ]
 }

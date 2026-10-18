@@ -1,0 +1,16 @@
+{
+  "configuration": "codex-effective-briefing",
+  "required_complete_files": 19,
+  "outputs": 12,
+  "first_pass_event": 100,
+  "prior_read_event": 101,
+  "first_pass_sha256": "fb55107ab05932c3354641274f67e67f432bb1b3211c9c0f875c0848e46a4243",
+  "first_pass_path": "skill-studies/concise-writing/runs/baseline-iteration-suite-01/evaluation/codex-effective-briefing-first-pass.md",
+  "final_path": "/Users/simon/work/personal/skill-study-private/concise-writing/baseline-suite-20261018/reviews/20261018T182308075Z-cw-suite-opus-codex-effective-briefing-1650b9c3-a25b-424f-a7d5-4c000916d3f2-0zlq4rxs/final.txt",
+  "final_sha256": "2251ccd9d0a02c0ed1f8774f9eff214ced1b9e730cabd7842a67e80337ccd9b3",
+  "inventory_verified": true,
+  "complete_delivery_before_first_pass": true,
+  "protected_inputs_verified": true,
+  "native_read_only_tools_verified": true,
+  "semantic_completeness": "verified: all12identities/grades/evidence and full first-pass/final comparison; judgments unchanged after prior, qualitative disagreements retained"
+}

@@ -15,4 +15,4 @@ A completed record or an undispatched preparation directory supplies no authoriz
 - [Historical CW skill-editing preparation](skill-editing-preparation/README.md)
 - [CW expanded and native suite](suite-2026-09-27/README.md)
 
-- [Baseline-derived remaining suite](baseline-iteration-suite-01/README.md): A/B/C and N1–N4 comparison.
+- [Baseline-derived remaining suite](baseline-iteration-suite-01/README.md): both-provider A/B/C and native N1–N4 comparisons, result records and grouped Opus reviews.
