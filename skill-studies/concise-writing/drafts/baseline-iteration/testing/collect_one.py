@@ -53,6 +53,8 @@ def main():
     identities = json.loads((HERE/'runtime-identities.json').read_text())
     for identity in identities['qualified'].values():
         assert sha(Path(identity['path'])) == identity['sha256'], identity['path']
+    actual_cli = shutil.which(slot['provider'])
+    assert actual_cli and Path(actual_cli).resolve() == Path(identities['qualified'][slot['provider']]['path']), 'CLI selection drift'
     config = ROOT/slot['config']
     runtime_setup.install()
     claims = STORE/'claims';claims.mkdir(exist_ok=True)
