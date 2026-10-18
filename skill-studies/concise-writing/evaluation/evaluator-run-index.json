@@ -85,6 +85,150 @@
       },
       "status": "COMPLETED",
       "duration_seconds": 224.123
+    },
+    {
+      "order": 6,
+      "run_id": "20261018T024922721Z-cw-eval-claude-effective-briefing-b96ba2b1-7970-4c8d-87a7-73a1b2179a2e-nqoz1bqy",
+      "configuration": "claude-effective-briefing",
+      "role": "evaluator",
+      "allocation_pool": "evaluator",
+      "charge": 1,
+      "authority_revision": "c278019c6acd0ec8e56cf5fe9acef3e04327a101",
+      "config_sha256": "a7d0db77d6382bd21776bdba0d3113a657c8a979a97af0badbd30193ec7f9331",
+      "prompt_sha256": "2ba64485329fb7f034587f96ebec939b9b3d0a103b577c0cf478166235a33002",
+      "bundle": "/Users/simon/work/personal/skill-study-private/concise-writing/evaluation-runs-20261017/20261018T024922721Z-cw-eval-claude-effective-briefing-b96ba2b1-7970-4c8d-87a7-73a1b2179a2e-nqoz1bqy",
+      "inventory": {
+        "path": "/Users/simon/work/personal/skill-study-private/concise-writing/evaluation-runs-20261017/20261018T024922721Z-cw-eval-claude-effective-briefing-b96ba2b1-7970-4c8d-87a7-73a1b2179a2e-nqoz1bqy.inventory.json",
+        "sha256": "38571f8ec8c34c789cbb4bb42a69cd67976c1193ced139b8ef3fc89495e0d480"
+      },
+      "status": "COMPLETED",
+      "duration_seconds": 315.076
+    },
+    {
+      "order": 7,
+      "run_id": "20261018T024925389Z-cw-eval-claude-long-handoff-75474dd8-76b4-45c1-aa5c-3c22c948f6d4-uwklhyce",
+      "configuration": "claude-long-handoff",
+      "role": "evaluator",
+      "allocation_pool": "evaluator",
+      "charge": 1,
+      "authority_revision": "c278019c6acd0ec8e56cf5fe9acef3e04327a101",
+      "config_sha256": "3dc4869d8403e6b57620061b6a8439cd554aa0ed030ee58e364487cb0521f31e",
+      "prompt_sha256": "2ba64485329fb7f034587f96ebec939b9b3d0a103b577c0cf478166235a33002",
+      "bundle": "/Users/simon/work/personal/skill-study-private/concise-writing/evaluation-runs-20261017/20261018T024925389Z-cw-eval-claude-long-handoff-75474dd8-76b4-45c1-aa5c-3c22c948f6d4-uwklhyce",
+      "inventory": {
+        "path": "/Users/simon/work/personal/skill-study-private/concise-writing/evaluation-runs-20261017/20261018T024925389Z-cw-eval-claude-long-handoff-75474dd8-76b4-45c1-aa5c-3c22c948f6d4-uwklhyce.inventory.json",
+        "sha256": "06381236678b33a95209c197d025e94df52b8955314620972adc225132eb294a"
+      },
+      "status": "COMPLETED",
+      "duration_seconds": 309.127
+    },
+    {
+      "order": 8,
+      "run_id": "20261018T025445742Z-cw-eval-claude-document-addition-a0d83c5d-16cc-45a9-b4a3-59900f091ead-q8js61pc",
+      "configuration": "claude-document-addition",
+      "role": "evaluator",
+      "allocation_pool": "evaluator",
+      "charge": 1,
+      "authority_revision": "c278019c6acd0ec8e56cf5fe9acef3e04327a101",
+      "config_sha256": "9bd3ed141a8185afd864d84a21254f6b9e0ec9ac69f9ea1a51d7da7da545aef3",
+      "prompt_sha256": "2ba64485329fb7f034587f96ebec939b9b3d0a103b577c0cf478166235a33002",
+      "bundle": "/Users/simon/work/personal/skill-study-private/concise-writing/evaluation-runs-20261017/20261018T025445742Z-cw-eval-claude-document-addition-a0d83c5d-16cc-45a9-b4a3-59900f091ead-q8js61pc",
+      "inventory": {
+        "path": "/Users/simon/work/personal/skill-study-private/concise-writing/evaluation-runs-20261017/20261018T025445742Z-cw-eval-claude-document-addition-a0d83c5d-16cc-45a9-b4a3-59900f091ead-q8js61pc.inventory.json",
+        "sha256": "a3b13b4b5afbd92db69f30e4781c0cfc944cdf1c7823d4d0283007144b06e53b"
+      },
+      "status": "COMPLETED",
+      "duration_seconds": 197.554
+    },
+    {
+      "order": 9,
+      "run_id": "20261018T025448056Z-cw-eval-codex-native-5c7bedf4-0a81-40d9-9090-cbc77b56787b-kodxoxxr",
+      "configuration": "codex-native",
+      "role": "evaluator",
+      "allocation_pool": "evaluator",
+      "charge": 1,
+      "authority_revision": "c278019c6acd0ec8e56cf5fe9acef3e04327a101",
+      "config_sha256": "52d541ee386f318979a3f79a358152c1609e1a88853c3bbec57c31ee9757fecd",
+      "prompt_sha256": "d4f6779964f21f7fc5711e389c7e98955b158d5852be00e22a18a3537f74dc26",
+      "bundle": "/Users/simon/work/personal/skill-study-private/concise-writing/evaluation-runs-20261017/20261018T025448056Z-cw-eval-codex-native-5c7bedf4-0a81-40d9-9090-cbc77b56787b-kodxoxxr",
+      "inventory": {
+        "path": "/Users/simon/work/personal/skill-study-private/concise-writing/evaluation-runs-20261017/20261018T025448056Z-cw-eval-codex-native-5c7bedf4-0a81-40d9-9090-cbc77b56787b-kodxoxxr.inventory.json",
+        "sha256": "26139083dff4c0ab5ee4c17dd0b043bf10974ea975d63e0352be39aaaf650c51"
+      },
+      "status": "COMPLETED",
+      "duration_seconds": 332.522
+    },
+    {
+      "order": 10,
+      "run_id": "20261018T025903143Z-cw-eval-claude-native-1b36ea72-343b-4ff9-8097-7b7d699ca51b-6syh6j8c",
+      "configuration": "claude-native",
+      "role": "evaluator",
+      "allocation_pool": "evaluator",
+      "charge": 1,
+      "authority_revision": "c278019c6acd0ec8e56cf5fe9acef3e04327a101",
+      "config_sha256": "e392c70e76afa8a0857d6de2b68f01b928e646a0888f17c7529eb4f37f4f7332",
+      "prompt_sha256": "d4f6779964f21f7fc5711e389c7e98955b158d5852be00e22a18a3537f74dc26",
+      "bundle": "/Users/simon/work/personal/skill-study-private/concise-writing/evaluation-runs-20261017/20261018T025903143Z-cw-eval-claude-native-1b36ea72-343b-4ff9-8097-7b7d699ca51b-6syh6j8c",
+      "inventory": {
+        "path": "/Users/simon/work/personal/skill-study-private/concise-writing/evaluation-runs-20261017/20261018T025903143Z-cw-eval-claude-native-1b36ea72-343b-4ff9-8097-7b7d699ca51b-6syh6j8c.inventory.json",
+        "sha256": "064de4144a3e0062d94e1ef4ea2d76a88856bcb1d3b57dee973c57d8eca36c67"
+      },
+      "status": "COMPLETED",
+      "duration_seconds": 359.081
+    },
+    {
+      "order": 11,
+      "run_id": "20261018T030055112Z-cw-eval-historical-agent-recommendation-dba5ce07-64cb-4e84-bc46-b7b0753d30f3-k8t6n4np",
+      "configuration": "historical-agent-recommendation",
+      "role": "evaluator",
+      "allocation_pool": "evaluator",
+      "charge": 1,
+      "authority_revision": "c278019c6acd0ec8e56cf5fe9acef3e04327a101",
+      "config_sha256": "3d3099e6ace0171dcc7d4edf201c45aac888009de706cfcf3ccd66a8900fee13",
+      "prompt_sha256": "bed3bed7a3307e811befda6339e41c4ae7166fecb46206bd89c6f65206514748",
+      "bundle": "/Users/simon/work/personal/skill-study-private/concise-writing/evaluation-runs-20261017/20261018T030055112Z-cw-eval-historical-agent-recommendation-dba5ce07-64cb-4e84-bc46-b7b0753d30f3-k8t6n4np",
+      "inventory": {
+        "path": "/Users/simon/work/personal/skill-study-private/concise-writing/evaluation-runs-20261017/20261018T030055112Z-cw-eval-historical-agent-recommendation-dba5ce07-64cb-4e84-bc46-b7b0753d30f3-k8t6n4np.inventory.json",
+        "sha256": "e073f22aee6489cdc7252a6893e02e894ba17314f7f174a894997ae7a344b1ef"
+      },
+      "status": "COMPLETED",
+      "duration_seconds": 186.017
+    },
+    {
+      "order": 12,
+      "run_id": "20261018T030434633Z-cw-eval-historical-effective-briefing-604fd404-e573-415f-9ea8-508464de781e-pry22_x7",
+      "configuration": "historical-effective-briefing",
+      "role": "evaluator",
+      "allocation_pool": "evaluator",
+      "charge": 1,
+      "authority_revision": "c278019c6acd0ec8e56cf5fe9acef3e04327a101",
+      "config_sha256": "d97e55bf0768212dfd0cb57d6e74d58b321564e5dbf2a5551785bccab92189f4",
+      "prompt_sha256": "bed3bed7a3307e811befda6339e41c4ae7166fecb46206bd89c6f65206514748",
+      "bundle": "/Users/simon/work/personal/skill-study-private/concise-writing/evaluation-runs-20261017/20261018T030434633Z-cw-eval-historical-effective-briefing-604fd404-e573-415f-9ea8-508464de781e-pry22_x7",
+      "inventory": {
+        "path": "/Users/simon/work/personal/skill-study-private/concise-writing/evaluation-runs-20261017/20261018T030434633Z-cw-eval-historical-effective-briefing-604fd404-e573-415f-9ea8-508464de781e-pry22_x7.inventory.json",
+        "sha256": "607e1eca353a5e8ce410869ff7d17398f291e4a889e5f55b817488e91e493ee6"
+      },
+      "status": "COMPLETED",
+      "duration_seconds": 274.417
+    },
+    {
+      "order": 13,
+      "run_id": "20261018T030535794Z-cw-eval-codex-document-addition-corrected-4528bcee-0665-44b3-a70f-9dedfd8012c3-cr8ohpjs",
+      "configuration": "codex-document-addition-corrected",
+      "role": "evaluator",
+      "allocation_pool": "retry",
+      "charge": 1,
+      "authority_revision": "c278019c6acd0ec8e56cf5fe9acef3e04327a101",
+      "config_sha256": "b2eb2ea428ba3b1e55048e1f47dabfa60e9e2ab71ec9a3ee06bcafbbe6d763f5",
+      "prompt_sha256": "2ba64485329fb7f034587f96ebec939b9b3d0a103b577c0cf478166235a33002",
+      "bundle": "/Users/simon/work/personal/skill-study-private/concise-writing/evaluation-runs-20261017/20261018T030535794Z-cw-eval-codex-document-addition-corrected-4528bcee-0665-44b3-a70f-9dedfd8012c3-cr8ohpjs",
+      "inventory": {
+        "path": "/Users/simon/work/personal/skill-study-private/concise-writing/evaluation-runs-20261017/20261018T030535794Z-cw-eval-codex-document-addition-corrected-4528bcee-0665-44b3-a70f-9dedfd8012c3-cr8ohpjs.inventory.json",
+        "sha256": "0c9974a69f16327cbdf1f9a7a400bee3e3939b705aa99a09b657d9b9f9ef760f"
+      },
+      "status": "COMPLETED",
+      "duration_seconds": 163.996
     }
   ],
   "evaluator_ledger_version": "1"

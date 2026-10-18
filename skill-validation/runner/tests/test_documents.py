@@ -1179,6 +1179,7 @@ def test_accounting_planning_guideline(document_study, capsys, booked, amount, d
     ('duplicate', 'duplicate-id'), ('version', 'unsupported-version'),
     ('shape', 'allocation-total'), ('mixed-format', 'allocation-total'),
     ('retry', None), ('wrong-pool', 'allocation-total'),
+    ('pool-shape', 'allocation-total'),
 ])
 def test_supplemental_evaluator_ledger_accounting(document_study, capsys, mutation, rule):
     # document_study seeds the two subject calls and the 2-call evaluator ceiling.
@@ -1202,6 +1203,8 @@ def test_supplemental_evaluator_ledger_accounting(document_study, capsys, mutati
     elif mutation == 'mixed-format':
         ledger['format_version'] = '1'
         ledger['attempts'] = [{'run_id': 'shadow-eval', 'allocation': {'pool': 'evaluator', 'charge': 1}}]
+    elif mutation == 'pool-shape':
+        ledger['runs'][0]['allocation_pool'] = []
     elif mutation in {'retry', 'wrong-pool'}:
         ledger['runs'][0]['allocation_pool'] = 'retry' if mutation == 'retry' else 'subject'
     write('evaluator-run-index.json', ledger)

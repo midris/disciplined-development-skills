@@ -2,23 +2,25 @@
 
 Format version: `1`
 Study ID: `concise-writing`
-Status: all 120 expanded CW calls are retained and assessed, with three repetitions per selected scenario/condition/provider. Coverage acceptance, editing-base selection and adoption remain owner decisions.
-Current action: complete the qualified Fable-medium CW output review; preserve the incomplete Codex E review and use the owner-approved retry for its corrected packet.
-The [evaluation record](evaluation/README.md) owns its method and evidence; the owner selected all 136 CW outputs for twelve evaluator sessions and deferred SSR until its rewrite.
+Status: subject collection and the owner-selected cross-model review are complete; coverage acceptance, editing-base selection and adoption remain owner decisions.
+Current action: review the [cross-model findings](evaluation/assessment.md), resolve or accept the consequential disagreements and coverage limits, then select a CW editing base and objective.
+The [evaluation record](evaluation/README.md) owns method and evidence: all 136 CW outputs were reviewed through Fable 5.1 at medium effort, in twelve primary sessions plus one owner-approved correction from the retry pool.
+The incomplete original Codex E review remains retained; the correction closes its missing-input gap without new subject runs.
+SSR evaluation remains deferred until its rewrite.
 The owner’s adoption tie-break is shorter SKILL.md when effectiveness and consequential output quality are equivalent; tied pass counts alone do not establish equivalence.
 The owner accepted the scenario designs C, N1–N4 and revised E during the walkthrough, retained A/B, and removed tailored skill-editing/compression tests.
 The owner-requested [preparation review and remediation](../../reviews/2026-09-27-cw-suite-preparation-review.md) are complete.
 On 2026-09-27, the owner replied “approved, please continue” to the 104-call proposal: 72 ordinary calls followed by 32 native calls, raising the combined subject ceiling from 136 to 240.
 This authorizes both stages, runtime qualification, committed input/schedule freeze and collection after readiness, with zero automatic retries; it does not authorize a skill edit or adoption.
 The [preparation package](preparation/README.md) and [allocation forecast](testing-audit.md#proposed-sequence-and-allocation-forecast) define the approved scope.
-Current decision: review the complete cross-provider baselines and accept or revise the stated coverage limits before selecting an editing base. Supplemental spending is 16/16; no further subject calls are authorized.
+Supplemental subject spending is 16/16; no further subject calls are authorized.
 The owner clarified that three repetitions are the minimum and authorized the sixteen missing calls: “yeah, go ahead and make those. 2 is definitely not enough. I am pretty sure 3 is what we decided as a our minimum”.
 This raises combined subject capacity from 240 to 256 and the expanded CW scope from 104 to 120 calls.
 Three repetitions now apply to every selected CW scenario/condition/provider; this is a diagnostic minimum, not a reliability threshold or a replacement for the later fresh-wording authoring requirements.
 The sixteen-attempt native indexes and assessments remain immutable batch records; the two eight-call supplements identify repetition 3 and support the combined summary below.
 The supplement used the same qualified CLI binaries, models, low effort, inputs, skills and CW-expanded-1 rules, with identity checks before dispatch.
 The third repetition reversed the second rotation's condition order; an odd number cannot fully balance two-condition order.
-No automatic retries, replacements, new skill edits or adoption are authorized.
+No automatic subject retries or replacements, skill edits or adoption are authorized.
 The initial sixteen manifests pin input revision `96b6e383da39ea807a6ad49d4513cfc1d6f4cd33`; eight supplemental manifests pin `b167a70bd26a03543407d9bae208d78b13432f2b`.
 Both runtimes passed qualification and all six expanded batches passed readiness before dispatch.
 Every attempt records the committed manifest, invocation authority and runner revision.
@@ -473,10 +475,10 @@ Approved durable raw evidence directory: `/Users/simon/work/personal/skill-study
 Owner-accepted recovery decision for CW: single-host retention, as used for SSR, with one verified canonical raw bundle per attempt. The current `tmutil destinationinfo` check reports no destinations configured; `tmutil isexcluded` reports the parent private store is Included. No other working backup arrangement has been established. Machine loss or disk failure could therefore destroy CW raw evidence; Git holds case inputs and assessments but cannot recover those external bundles. Creating the directory and passing a local copy check do not establish host-loss recovery. The owner explicitly accepted this CW risk together with the eight-execution scope above.
 
 Combined accounting sources: closed SSR [pilot 01](../sweeping-stale-references/pilot-run-index.json), [pilot 02](../sweeping-stale-references/pilot-02-run-index.json), [semantic delivery](../sweeping-stale-references/semantic-delivery-01-run-index.json), [core baseline](../sweeping-stale-references/core-baseline-01-run-index.json), [comparison](../sweeping-stale-references/comprehensive-comparison-01-run-index.json), the SSR [completed expansion](../sweeping-stale-references/coverage-baseline-01-run-index.json), the SSR [completed comparison](../sweeping-stale-references/comprehensive-comparison-02-run-index.json), the SSR [Claude smoke](../sweeping-stale-references/claude-smoke-01-run-index.json), the SSR [Claude comparison](../sweeping-stale-references/claude-comparison-01-run-index.json), the SSR [Opus invocation comparison](../sweeping-stale-references/claude-opus-invocation-01-run-index.json), and both CW indexes above. Historical pilot links contribute accounting only; they are not reclassified or reassessed.
-Dispatched calls are **256 subject, 5 evaluator, 0 authoring, 0 retry**; remaining outer capacity is **0 / 7 / 4 / 4** against the [active plan](../../plans/2026-09-11-model-driven-skill-testing.md#limits-and-information-boundaries). Both eight-call CW batches are spent. The owner authorized ten SSR expansion calls under ceiling 56; all ten are spent, including the excluded control, with no replacement or pool transfer. Comparison runner durations total 508.067 seconds; baseline durations remain 494.936 seconds, including setup and capture.
+Dispatched calls are **256 subject, 12 evaluator, 0 authoring, 1 retry**; remaining outer capacity is **0 / 0 / 4 / 3** against the [active plan](../../plans/2026-09-11-model-driven-skill-testing.md#limits-and-information-boundaries). Both eight-call CW batches are spent. The owner authorized ten SSR expansion calls under ceiling 56; all ten are spent, including the excluded control, with no replacement or pool transfer. Comparison runner durations total 508.067 seconds; baseline durations remain 494.936 seconds, including setup and capture.
 Owner clarification after round-10 review: “the budget is just a guideline”. The 1,200-minute figure below remains the planning baseline, not a collection stop; invocation ceilings and the authorized SSR scope is unchanged. Retain elapsed effort and forecast variance to expose process cost.
 
-Current combined accounting: **2,105 active minutes booked; 905 minutes above the historical 1,200-minute planning guideline**.
+Current combined accounting: **2,155 active minutes booked; 955 minutes above the historical 1,200-minute planning guideline**.
 These are rounded effort estimates, not stopwatch measurements or a separately timed category breakdown.
 Between-turn owner wait is excluded; runner durations are included once.
 The initial 104 calls and sixteen native third repetitions are spent; combined subject accounting is 256/256.
@@ -553,7 +555,8 @@ The supplemental work used 40 estimated active minutes against its 40-minute for
 | Native Claude third-repetition collection and assessment | 10 |
 | Native third-repetition final verification, review and publication | 5 |
 | Cross-model procedure, manual-review verification and evaluator qualification/preparation | 25 |
-| **Total** | **2,105** |
+| CW output evaluation collection, packet correction, comparisons and review | 50 |
+| **Total** | **2,155** |
 
 SSR expansion is complete. The prior 55-minute remaining forecast closed at 50 estimated minutes, including the additional shell correction; all ten subject calls are spent.
 The combined batch/recovery effort is 135 estimated minutes (45 initial checkpoint, 40 isolation correction, 50 resumption), 45 above the original 90-minute allowance. Separate round-9 review effort remains in the combined ledger above.
@@ -582,8 +585,12 @@ Subject collection and active-session assessment are complete; the owner subsequ
 
 | Work | Estimate | Basis |
 | --- | ---: | --- |
-| CW cross-model retrospective, comparison and review | 90 | Twelve Fable-medium sessions over 136 outputs; model waits included once, at most two concurrent after the pilot. |
-| **Total** | **90** | Includes the first handoff review; no subject calls or SSR review. |
+| CW owner review of findings, coverage and editing objective | 15 | Use the completed evidence; no additional calls selected. |
+| **Total** | **15** | Any edit or further collection needs a separately bounded proposal. |
+
+The retrospective used 50 estimated active minutes against its 90-minute forecast, including overlapping waits once.
+All thirteen evaluator runner durations sum to 3,243.481 seconds (54.06 minutes); concurrent durations are not added again to booked controller effort.
+Procedure and qualification/preparation remain separately booked above.
 
 The supplemental runner durations are 336.559 seconds for Codex and 171.913 seconds for Claude, included once in the 15- and 10-minute collection/assessment estimates.
 Preparation and final review/publication account for the other 15 supplemental minutes.
@@ -591,7 +598,8 @@ A later diagnosis or rewrite needs its own bounded estimate and any new model-ca
 
 ## Results and decision
 
-The full 120-call scope is complete, with no unattempted slots, retries, setup exclusions or unresolved judgments.
+The full 120-subject-call scope is complete, with no unattempted slots, subject retries, setup exclusions or unresolved canonical judgments.
+The supplemental [cross-model assessment](evaluation/assessment.md) preserves different judgments and qualitative comparisons; its original incomplete review and approved correction are accounted separately.
 Ordinary and native cases now each have three repetitions per selected condition/provider.
 The native summary combines each original two-repetition batch with its separately frozen third repetition on the same qualified runtime and unchanged inputs; it does not rewrite historical batch scores.
 These later observations were not interleaved with the initial repetitions, and the models expose no immutable backend revision.

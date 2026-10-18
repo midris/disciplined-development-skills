@@ -64,9 +64,9 @@ This evaluation adds a different model's judgment, not a reader study or a stati
 The twelve evaluator sessions are one diagnostic judgment per declared group, not three evaluator repetitions or an estimate of judge reliability.
 The owner’s three-repetition minimum applies to the subject observations; this review includes all those repetitions without recollecting them.
 
-## Review limitations observed so far
+## Review limitations
 
-The first three reviews agree on the underlying text observations but use a more permissive failure threshold for lost rationale or an unassigned invitation sender than the active assessor.
+The reviews generally agree on the underlying text observations but use a more permissive failure threshold for lost rationale, omitted actions, residual repetition and unsupported conclusions than the active assessor.
 Their judgments remain supplemental; the observed omissions and both criterion interpretations stay visible.
 Worked boundary examples and prior per-run result JSON were not supplied in the first-pass packets, matching the manual prompt's stated input set; reviewers can flag those unavailable references without inferring their contents.
 The existing examples do not explicitly decide whether the missing handoff diagnostic rationale alone crosses F1/F2.
@@ -79,3 +79,10 @@ Order 4 correctly returned insufficient evidence for all nine F1/F2 judgments; i
 The controller now checks every packet against all non-skill fixtures in each original subject configuration, including aliased sources.
 All seven undispatched primary packets and the authorized replacement passed this check before resuming.
 Original packets, raw review and evaluator charge remain retained; only the replacement can close E’s fidelity/effectiveness gap.
+
+## Inspecting the completed evidence
+
+The [assessment](assessment.md) compares judgments and explains the limits; the protocol owns completion and charges.
+Each audit records the retained raw report path, hashes, complete-read count and first-assessment/prior-read event positions.
+The [controller evidence](controller-evidence.json) retains final verification utilities and their inventory for inspection; actual per-call commands and inputs remain in each runner bundle.
+Codex N3 task observations are summarized collectively, with per-ID mechanical checks supplied and all six outputs read; no functional ratings are assigned.

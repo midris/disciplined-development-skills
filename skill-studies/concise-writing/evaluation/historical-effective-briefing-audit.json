@@ -1,0 +1,13 @@
+{
+  "configuration": "historical-effective-briefing",
+  "outputs": 8,
+  "complete_required_files": 15,
+  "first_assessment_event": 99,
+  "prior_read_event": 100,
+  "input_catalog_read_only": true,
+  "inventory_verified": true,
+  "final_sha256": "1815a78b1d04aeff7bb7e6a5bcbe142039d99908a024826e540935086fc9899a",
+  "final_path": "/Users/simon/work/personal/skill-study-private/concise-writing/evaluation-runs-20261017/20261018T030434633Z-cw-eval-historical-effective-briefing-604fd404-e573-415f-9ea8-508464de781e-pry22_x7/final.txt",
+  "first_pass_sha256": "e6d7cf4769411012348d7d59aaade287f33ff626d75eeaafae13a6bebc536bf7",
+  "prior_content_tool_access_audited": true
+}

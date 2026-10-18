@@ -936,7 +936,7 @@ def accounting(raw, path, ctx):
                 if (not isinstance(run, dict)
                     or not isinstance(run.get("run_id"), str) or not run["run_id"].strip()
                     or run.get("role") != "evaluator"
-                    or run.get("allocation_pool", "evaluator") not in {"evaluator", "retry"}
+                    or run.get("allocation_pool", "evaluator") not in ("evaluator", "retry")
                     or type(run.get("charge")) is not int or run["charge"] not in {0, 1}):
                     ctx.error(target, "runs", "allocation-total",
                               "Require a run ID, evaluator role, evaluator/retry pool and integer charge 0 or 1")

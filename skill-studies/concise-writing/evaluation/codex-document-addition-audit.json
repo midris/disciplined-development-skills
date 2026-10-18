@@ -1,7 +1,7 @@
 {
   "configuration": "codex-document-addition",
   "outputs": 9,
-  "complete_required_files": 11,
+  "complete_required_files": 15,
   "first_assessment_event": 100,
   "prior_read_event": 101,
   "input_catalog_read_only": true,
@@ -15,5 +15,6 @@
     "NEW-NOTES.md"
   ],
   "usable_scope": "F3 only; F1/F2 insufficient evidence",
-  "replacement": "codex-document-addition-corrected"
+  "replacement": "codex-document-addition-corrected",
+  "prior_content_tool_access_audited": true
 }

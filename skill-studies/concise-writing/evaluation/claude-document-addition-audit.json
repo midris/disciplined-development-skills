@@ -1,0 +1,13 @@
+{
+  "configuration": "claude-document-addition",
+  "outputs": 9,
+  "complete_required_files": 17,
+  "first_assessment_event": 77,
+  "prior_read_event": 78,
+  "input_catalog_read_only": true,
+  "inventory_verified": true,
+  "final_sha256": "076926f47c35139294d9a89fda8127298d2eed6e23d917defcf6ce8c75f4fb54",
+  "final_path": "/Users/simon/work/personal/skill-study-private/concise-writing/evaluation-runs-20261017/20261018T025445742Z-cw-eval-claude-document-addition-a0d83c5d-16cc-45a9-b4a3-59900f091ead-q8js61pc/final.txt",
+  "first_pass_sha256": "1b99851ea55c4cb91b79d8e62617fb4188b9f903176b076ed4ac40e2b3290824",
+  "prior_content_tool_access_audited": true
+}

@@ -1,12 +1,13 @@
 {
   "configuration": "codex-effective-briefing",
   "outputs": 9,
-  "complete_required_files": 12,
+  "complete_required_files": 16,
   "first_assessment_event": 116,
   "prior_read_event": 117,
   "input_catalog_read_only": true,
   "inventory_verified": true,
   "final_sha256": "45a2381ad97436a24237399e48141e5d64bbf9d9c21246fc64d0f759461b3ea5",
   "final_path": "/Users/simon/work/personal/skill-study-private/concise-writing/evaluation-runs-20261017/20261018T023257951Z-cw-eval-codex-effective-briefing-78c34524-2088-4480-ac72-ebb8acd30103-witgswny/final.txt",
-  "first_pass_sha256": "ecc1d3db39445a3bb16286477ec20b16a7554d88e3447a250695961c6842d198"
+  "first_pass_sha256": "ecc1d3db39445a3bb16286477ec20b16a7554d88e3447a250695961c6842d198",
+  "prior_content_tool_access_audited": true
 }
