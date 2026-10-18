@@ -1,6 +1,7 @@
 # CW draft comparison proposal
 
-Status and dispatch authority: see the [protocol](../../protocol.md); the owner approved the first E allocation, subject to review remediation, committed preparation and runtime readiness.
+Status and dispatch authority: see the [protocol](../../protocol.md); it links the completed first E allocation and the next owner decision.
+The sequence and transition rules below retain the design executed for E; future suite forecasts are not spending authority.
 The [protocol](../../protocol.md) owns spending and current action; the [design](../../../../plans/specs/2026-10-17-cw-baseline-iteration.md) owns the authoring approach.
 
 ## Sequence
@@ -83,6 +84,7 @@ Then collect the other ordinary cases (72 calls) and all native cases (72), with
 Keep E’s five-repetition strata visible instead of trimming to three or pretending these were a new interleaved batch.
 This reuse path totals 184 subject and sixteen evaluator calls including the diagnostic; estimated remaining effort is 390–540 active minutes.
 If a draft changes, the E diagnostic remains development evidence and a fresh full round covers the revised frozen versions; the diagnostic plus full-round path totals 208 subject and eighteen evaluator calls.
+That figure covers only the completed diagnostic and a fresh full suite; any required five-repetition wording diagnostic for further revised instructions is additional and must be separately estimated and authorized.
 Any additional authoring iteration needs its own bounded allocation; the totals are forecasts, not authority to continue until success.
 
 ## Settings and execution prerequisites
@@ -90,8 +92,9 @@ Any additional authoring iteration needs its own bounded allocation; the totals 
 The proposed subject settings remain Codex gpt-5.6-sol low and Claude claude-sonnet-5 low.
 Qualify and freeze the actual installed CLI/model/effort and isolation before dispatch; keep new runtime strata separate from historical results.
 Resolve the supported-Python prerequisite before shell-dependent subject work; do not widen host reads or silently fall back to Apple Python.
-The owner-selected evaluator is Opus 5.5; the controller proposes medium for both stages, with the exact model identifier and read-only transport still to be qualified.
+The owner-selected evaluator is Opus 5.5; E qualified and used `claude-opus-5-5` at medium.
+Use the same declared settings for a future comparison, requalifying changed runtime assumptions before dispatch.
 No fallback model or retrospective effort switching is authorized.
 
-The first E stage is allocated; the full-suite direction is accepted, while its final byte identities, reuse path and spending authorization remain to be fixed after that diagnostic.
+The full-suite direction is accepted; its final byte identities, reuse path and spending authorization depend on the next owner decision recorded in the protocol.
 Do not compress instructions during this effectiveness comparison.

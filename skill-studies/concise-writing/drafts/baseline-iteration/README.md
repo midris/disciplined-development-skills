@@ -1,8 +1,8 @@
-# CW baseline iteration: unvalidated drafts
+# CW baseline iteration: development drafts
 
 The [protocol](../../protocol.md) owns current action and authority; the [design](../../../../plans/specs/2026-10-17-cw-baseline-iteration.md) records the owner’s method decision and proposed comparison.
 These body drafts start from the preserved original, use the full completed evidence and retain every original rationalization row.
-Neither is adopted or installed; no new model call has been made.
+Neither is adopted or installed; the protocol links completed comparison evidence and owns the next decision.
 
 ## Drafts
 
@@ -36,5 +36,5 @@ The recipe encourages reader-useful organization without prescribing one templat
 The owner wants both drafts tested against the full eight-case suite.
 The [staged comparison proposal](comparison-proposal.md) recommends E first, with batch-level evaluation and any coherent revision before freezing the complete suite.
 It distinguishes the immediate 40-subject/two-evaluator diagnostic from full-suite costs, reuse of unchanged E observations and further iterations.
-The protocol owns the owner’s first-stage authorization and pre-dispatch gates; full-suite spending remains a later decision.
+The protocol owns current spending and decisions; full-suite spending remains a later decision.
 After establishing effective behavior, freeze the selected candidate and test compression separately.

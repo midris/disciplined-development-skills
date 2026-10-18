@@ -31,8 +31,8 @@ The two interventions still bundle several wording changes; results can compare 
 The preparation checks verify draft invariants, source identities, exact saved diffs and allocation/ledger arithmetic.
 Verification completed: 293 local links resolve; all sixteen existing CW/SSR batch assessment-readiness checks pass; `git diff --check` is clean; the hook suite reports 263 passed and three skipped.
 The draft invariant check reports 955 words targeted and 1,084 fuller versus the 860-word original.
-Behavioral effectiveness remains unvalidated until the approved comparison completes.
-Runtime qualification is a subsequent gate: supported Python shell resolution and the exact Opus model/read-only transport must pass before paid dispatch, with no fallback or widened host reads.
+These preparation checks do not establish behavioral effectiveness.
+Runtime qualification was a subsequent gate: supported Python shell resolution and the exact Opus model/read-only transport had to pass before paid dispatch, with no fallback or widened host reads.
 
 ## Collection-preparation follow-up
 
@@ -43,7 +43,7 @@ The bounded controller adapter selects existing Homebrew Python/Git through link
 Twelve final zero-model checks pass; an evidence-directory collision prevented one Opus diagnostic from starting in a combined command, and it passed separately with both records retained.
 The sequential collector claims each slot exclusively, checks frozen identities, retains/verifies each stopped bundle, registers charges/unassessed attempts and requires controller clearance before the next slot.
 Pre-allocation failures are recorded as zero-charge attempts; an interrupted publication/retention stops dispatch for manual reconciliation rather than starting a replacement.
-No new subject/evaluator call has yet been dispatched by this preparation.
+At this preparation checkpoint no subject/evaluator call had been dispatched.
 
 ## Retention correction found during collection
 
@@ -54,10 +54,37 @@ The producer regression test failed for the actual unsupported-version defect be
 Before resumption, the Claude controller-only manifest is amended prospectively; subject inputs, criteria and runtime settings remain unchanged, and the exact boundary is documented in runtime qualification.
 Prepared result records receive committed retrieval pins before acceptance; their missing provisional pins are publication incompleteness, not a relaxed validator rule.
 
-## Second pass
+## Pre-dispatch second pass
 
 Re-read the corrected drafts, design, proposal, protocol authority/accounting, plan and affected evidence-summary pointers after the class sweep.
 The eight-case coverage and frozen meaning-based criteria remain intact, and future native partition costs no longer rely on unqualified large packets.
-No unresolved blocking findings in the preparation design; runtime readiness and behavioral effectiveness remain explicitly unclaimed.
+No unresolved blocking findings in the preparation design; that review did not claim runtime readiness or behavioral effectiveness.
+
+## Collection-close review
+
+The approved forty-subject/two-evaluator stage is complete, with every subject retained and scored and both Opus reviews audited.
+The [reconciliation](../skill-studies/concise-writing/drafts/baseline-iteration/testing/evaluation/assessment.md) preserves both the same-model severity disagreement and concrete quality differences below the pass threshold.
+The controller retains the fixed source-grounded judgments without changing criteria, selecting a favorable evaluator verdict or claiming unanimous confirmation.
+Neither draft is adopted or automatically frozen: both still omit the recording action once on Claude, and the next owner decision precedes any revision or full-suite allocation.
+
+The closing consistency sweep covered the plan, design, protocol opening/results/accounting, both batch assessments and both draft-package navigation records.
+Completed collection/review state now points to the protocol; frozen manifests, indexes, private prior-assessment copies and canonical result pins remain historical records.
+The future 208-subject/eighteen-evaluator forecast is explicitly only the completed diagnostic plus a fresh full suite; any fresh five-repetition wording qualification would be additional, separately estimated and authorized.
+This closes a prospective cost ambiguity without changing the completed allocation.
+
+[Final verification](../skill-studies/concise-writing/drafts/baseline-iteration/testing/evaluation/verification.json) confirms forty subject and two evaluator inventories/captures, 110 protected subject files, all 28 protected files in each review packet, and complete delivery of 27 required files before each first-pass assessment and prior read.
+Both first-pass texts are retained separately from the unchanged raw bundles, with unique identities and hashes in the audits.
+Both providers' exact CLI/model traces and evaluator tool catalogs match the qualified settings.
+The live/original skill, both draft bodies since `c8b8c3b`, descriptions, all six rationalizations and exact Python-generated diffs remain unchanged.
+The controller's initial audit expected full IDs where a reviewer used unique abbreviations; the corrected identity mapping covers all twenty outputs in each review without another call.
+
+Fresh checks: all eighteen CW/SSR batch assessment-readiness checks pass; the actual-consumer inventory regression passes (one test); local links and whitespace are checked before commit.
+The hook suite earlier in this stage passed 263 tests with three skips; no hook or production-runner code changed afterward.
+Combined charges reconcile to 296 subject, fourteen evaluator, zero authoring and one retry; no unspent subject/evaluator capacity remains.
+The effort rows sum to 2,320 estimated minutes, with the 420.696 evaluator seconds included once.
+
+Re-read the complete affected records against the fixed post-E transition rules, read-only reviewer contract, source/action semantics and future allocation boundaries.
+No unresolved blocking findings in the review remediation or evidence recording.
+This verdict concerns the package's consistency and evidence integrity, not a pass verdict for either experimental skill.
 
 DD-VERDICT: PASS

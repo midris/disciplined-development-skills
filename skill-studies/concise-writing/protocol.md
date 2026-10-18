@@ -3,14 +3,15 @@
 Format version: `1`
 Study ID: `concise-writing`
 Status: baseline collection and cross-model review are complete; the owner selected the original CW as the development base and authorized preparation of effectiveness-first edits. Adoption remains deferred.
-Current action: complete the two approved Opus reviews and reconcile the first E comparison; all forty subjects are retained and directly assessed.
+Current action: owner decision after the completed E diagnostic: consider a bounded required-action verification intervention before freezing the full-suite candidates.
+The [Opus reconciliation](drafts/baseline-iteration/testing/evaluation/assessment.md) preserves an unresolved severity disagreement; no automatic revision, freeze or further collection follows.
 Both E attempt indexes identify complete committed result records; the [Codex assessment](codex-e-iteration-01-assessment.md) and [Claude batch assessment](claude-e-iteration-01-assessment.md) summarize them.
 The amended Claude controller applies prospectively from its second attempt, with byte-identical subject inputs and criteria.
 The collector used the wrong inventory version field; conforming wrappers are published separately, with original wrappers and every raw byte retained. No model call is repeated or excluded for this metadata correction.
-Both provider scopes pass collection readiness with frozen input revision `2936749c332f083e49f603eaed15b65d92158568`; actual attempts and unattempted slots are recorded in the two E indexes.
+Both provider scopes pass collection readiness with frozen input revision `2936749c332f083e49f603eaed15b65d92158568`; all forty completed attempts are recorded in the two E indexes.
 The combined draft/proposal review is resolved and preparation commit `c8b8c3b` is pushed; [runtime qualification](drafts/baseline-iteration/testing/runtime-qualification.md) passes twelve zero-model controls.
 On 2026-10-18 the owner authorized the first-stage 40 subject and two evaluator calls: “do a consistency pass over the skills rewrites, commit and push any changes, then start the testing”.
-The subsequent external-review request requires remediation before dispatch.
+The subsequent external-review request was resolved before dispatch; the [combined review](../../reviews/2026-10-18-cw-draft-consistency-review.md) records dispositions and final verification.
 The active assessor is this Codex controller; the separate Opus 5.5 medium reviewer is cross-family relative to it.
 Combined ceilings are 296 subject and 14 evaluator; no automatic retry, additional revision round or full-suite call allocation follows.
 The [evaluation record](evaluation/README.md) owns method and evidence: all 136 CW outputs were reviewed through Fable 5.1 at medium effort, in twelve primary sessions plus one owner-approved correction from the retry pool.
@@ -18,7 +19,8 @@ The incomplete original Codex E review remains retained; the correction closes i
 SSR evaluation remains deferred until its rewrite.
 The [baseline iteration design](../../plans/specs/2026-10-17-cw-baseline-iteration.md) records the owner’s effectiveness-before-compression direction, retention of original rationalizations and use of all completed CW evidence.
 The owner explicitly approved loaded-baseline failures as RED while keeping no-CW controls even if they pass; this CW-specific writing-skills exception does not authorize new calls.
-Future Claude output evaluation is Opus 5.5 at medium or high effort; medium is the controller’s proposed default, with exact runtime qualification pending.
+Future Claude output evaluation is Opus 5.5 at medium or high effort; this diagnostic qualified and used `claude-opus-5-5` at medium.
+Both reviews delivered every required file before first-pass judgments and prior-score exposure; actual identity, native-reader-only tools and protected bytes are verified.
 Claude subject tests remain Sonnet 5 low unless separately changed; the evaluator preference does not change the subject model.
 The owner’s adoption tie-break is shorter SKILL.md when effectiveness and consequential output quality are equivalent; tied pass counts alone do not establish equivalence.
 The owner accepted the scenario designs C, N1–N4 and revised E during the walkthrough, retained A/B, and removed tailored skill-editing/compression tests.
@@ -568,10 +570,10 @@ Owner-accepted recovery decision for CW: single-host retention, as used for SSR,
 
 Combined accounting sources: closed SSR [pilot 01](../sweeping-stale-references/pilot-run-index.json), [pilot 02](../sweeping-stale-references/pilot-02-run-index.json), [semantic delivery](../sweeping-stale-references/semantic-delivery-01-run-index.json), [core baseline](../sweeping-stale-references/core-baseline-01-run-index.json), [comparison](../sweeping-stale-references/comprehensive-comparison-01-run-index.json), the SSR [completed expansion](../sweeping-stale-references/coverage-baseline-01-run-index.json), the SSR [completed comparison](../sweeping-stale-references/comprehensive-comparison-02-run-index.json), the SSR [Claude smoke](../sweeping-stale-references/claude-smoke-01-run-index.json), the SSR [Claude comparison](../sweeping-stale-references/claude-comparison-01-run-index.json), the SSR [Opus invocation comparison](../sweeping-stale-references/claude-opus-invocation-01-run-index.json), and both CW indexes above. Historical pilot links contribute accounting only; they are not reclassified or reassessed.
 The new E reviews use the [fixed review package](drafts/baseline-iteration/testing/evaluation/README.md) and [supplemental Opus accounting](drafts/baseline-iteration/testing/evaluation/evaluator-run-index.json).
-Dispatched calls are **296 subject, 12 evaluator, 0 authoring, 1 retry**; remaining outer capacity is **0 / 2 / 4 / 3** against the [active plan](../../plans/2026-09-11-model-driven-skill-testing.md#limits-and-information-boundaries). Both eight-call CW batches are spent. The owner authorized ten SSR expansion calls under ceiling 56; all ten are spent, including the excluded control, with no replacement or pool transfer. Comparison runner durations total 508.067 seconds; baseline durations remain 494.936 seconds, including setup and capture.
+Dispatched calls are **296 subject, 14 evaluator, 0 authoring, 1 retry**; remaining outer capacity is **0 / 0 / 4 / 3** against the [active plan](../../plans/2026-09-11-model-driven-skill-testing.md#limits-and-information-boundaries). Both eight-call CW batches are spent. The owner authorized ten SSR expansion calls under ceiling 56; all ten are spent, including the excluded control, with no replacement or pool transfer. Comparison runner durations total 508.067 seconds; baseline durations remain 494.936 seconds, including setup and capture.
 Owner clarification after round-10 review: “the budget is just a guideline”. The 1,200-minute figure below remains the planning baseline, not a collection stop; invocation ceilings and the authorized SSR scope is unchanged. Retain elapsed effort and forecast variance to expose process cost.
 
-Current combined accounting: **2,280 active minutes booked; 1,080 minutes above the historical 1,200-minute planning guideline**.
+Current combined accounting: **2,320 active minutes booked; 1,120 minutes above the historical 1,200-minute planning guideline**.
 These are rounded effort estimates, not stopwatch measurements or a separately timed category breakdown.
 Between-turn owner wait is excluded; runner durations are included once.
 The initial 104 calls and sixteen native third repetitions are spent; combined subject accounting is 296/296, with 0 E calls remaining.
@@ -653,7 +655,8 @@ The supplemental work used 40 estimated active minutes against its 40-minute for
 | CW combined proposal review, decision rules and draft fidelity corrections | 30 |
 | E runtime diagnosis, supported toolchain qualification and fixed input preparation | 35 |
 | E subject collection, direct assessment and inventory metadata recovery | 40 |
-| **Total** | **2,280** |
+| E Opus packet preparation, review, reconciliation and final verification | 40 |
+| **Total** | **2,320** |
 
 SSR expansion is complete. The prior 55-minute remaining forecast closed at 50 estimated minutes, including the additional shell correction; all ten subject calls are spent.
 The combined batch/recovery effort is 135 estimated minutes (45 initial checkpoint, 40 isolation correction, 50 resumption), 45 above the original 90-minute allowance. Separate round-9 review effort remains in the combined ledger above.
@@ -682,8 +685,12 @@ Subject collection and active-session assessment are complete; the owner subsequ
 
 | Work | Estimate | Basis |
 | --- | ---: | --- |
-| Approved E comparison: remaining Opus preparation, review and reconciliation | 105 | First-stage 40 subject and two evaluator calls only; no full-suite or automatic revision allowance. |
-| **Total** | **105** | Remaining from the 180-minute first-stage upper estimate after 75 preparation/subject minutes; later collection/revision needs a separate allocation. |
+| Remaining work in the completed E allocation | 0 | All forty subjects and both Opus reviews are complete; owner decision precedes any new editing/collection scope. |
+| **Total** | **0** | A further diagnostic or full-suite round needs a bounded estimate and new model-call authority. |
+
+The E stage used 115 estimated active minutes against the 180-minute upper forecast, 65 below it: 35 preparation, 40 subject collection/assessment and 40 evaluator preparation/reconciliation.
+The two evaluator durations total 420.696 seconds (7.01 minutes), included once in those estimates.
+The [comparison proposal](drafts/baseline-iteration/comparison-proposal.md) retains future full-suite forecasts; it is not an additional allocation.
 
 The retrospective used 50 estimated active minutes against its 90-minute forecast, including overlapping waits once.
 All thirteen evaluator runner durations sum to 3,243.481 seconds (54.06 minutes); concurrent durations are not added again to booked controller effort.
@@ -697,7 +704,7 @@ A later diagnosis or rewrite needs its own bounded estimate and any new model-ca
 
 ### Baseline-derived E diagnostic
 
-All forty subjects are retained; the two Opus output reviews remain separate from these active-session judgments.
+All forty subjects and both Opus reviews are complete; [cross-model reconciliation](drafts/baseline-iteration/testing/evaluation/assessment.md) remains separate from these active-session judgments.
 
 | Provider | No CW | Original | Targeted | Fuller | Evidence |
 | --- | ---: | ---: | ---: | ---: | --- |
@@ -706,6 +713,9 @@ All forty subjects are retained; the two Opus output reviews remain separate fro
 
 Failures omit recording the fallback contact while retaining its existence; each fails F1/F2 but remains readable under F3.
 The two Claude draft failures remain included; neither draft is declared ready or adopted from the successful Codex observations.
+Opus agrees with every Codex-output result; the Claude-output session identifies the same four recording omissions but treats them as non-blocking and passes all twenty.
+Both first-pass and final judgments remain retained; the controller keeps its source-grounded scores without claiming unanimous confirmation.
+The fixed transition rules support proposing a bounded intervention for required-action preservation and presenting the severity disagreement before any next transition; the owner decides, with full-suite collection still pending.
 The inventory-wrapper correction changes no raw output, task, criterion or model call and excludes no result.
 These are new runtime strata, not pooled historical counts; the live skill remains unchanged.
 

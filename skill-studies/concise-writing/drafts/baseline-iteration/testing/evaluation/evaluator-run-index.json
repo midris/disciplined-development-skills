@@ -1,5 +1,44 @@
 {
   "evaluator_ledger_version": "1",
   "purpose": "approved first-stage CW E cross-model output review",
-  "runs": []
+  "runs": [
+    {
+      "order": 1,
+      "run_id": "20261018T055656585Z-cw-e-opus-codex-bd1d8498-b95b-4fec-8725-6f83bfcdc5d4-x43dm3uz",
+      "configuration": "codex",
+      "role": "evaluator",
+      "allocation_pool": "evaluator",
+      "charge": 1,
+      "authority_revision": "03d9701a2b1b8a4fe8a7e1893bc93a5e6913e349",
+      "config_sha256": "534bb0559a495d63da22170144e1619e9c8c02fd18717491e2940a8618794104",
+      "bundle": "/Users/simon/work/personal/skill-study-private/concise-writing/e-iteration-20261018/reviews/20261018T055656585Z-cw-e-opus-codex-bd1d8498-b95b-4fec-8725-6f83bfcdc5d4-x43dm3uz",
+      "inventory": {
+        "path": "/Users/simon/work/personal/skill-study-private/concise-writing/e-iteration-20261018/reviews/20261018T055656585Z-cw-e-opus-codex-bd1d8498-b95b-4fec-8725-6f83bfcdc5d4-x43dm3uz.inventory.json",
+        "sha256": "a1db67eb94838b548774bd7fcde5b6c558ec57278d4c1d0603845cc2e3e44768",
+        "version": "1"
+      },
+      "status": "COMPLETED",
+      "duration_seconds": 222.037,
+      "audit_status": "verified complete reads and first-pass-before-prior"
+    },
+    {
+      "order": 2,
+      "run_id": "20261018T060348340Z-cw-e-opus-claude-b9d8269b-880b-4fd7-965c-ab0832930bf6-oh9wrla5",
+      "configuration": "claude",
+      "role": "evaluator",
+      "allocation_pool": "evaluator",
+      "charge": 1,
+      "authority_revision": "03d9701a2b1b8a4fe8a7e1893bc93a5e6913e349",
+      "config_sha256": "3f8ea2ab783b5c314881473fe8be7dc42ccebd8388def581b69727d28cc9bc54",
+      "bundle": "/Users/simon/work/personal/skill-study-private/concise-writing/e-iteration-20261018/reviews/20261018T060348340Z-cw-e-opus-claude-b9d8269b-880b-4fd7-965c-ab0832930bf6-oh9wrla5",
+      "inventory": {
+        "path": "/Users/simon/work/personal/skill-study-private/concise-writing/e-iteration-20261018/reviews/20261018T060348340Z-cw-e-opus-claude-b9d8269b-880b-4fd7-965c-ab0832930bf6-oh9wrla5.inventory.json",
+        "sha256": "a0491c06370da2610fdad039d73d53cf40b31baea6ec2c7cba92391653ba49dd",
+        "version": "1"
+      },
+      "status": "COMPLETED",
+      "duration_seconds": 198.659,
+      "audit_status": "verified complete reads and first-pass-before-prior"
+    }
+  ]
 }

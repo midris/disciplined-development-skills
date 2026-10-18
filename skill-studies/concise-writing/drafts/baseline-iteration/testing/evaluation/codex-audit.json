@@ -1,0 +1,15 @@
+{
+  "configuration": "codex",
+  "outputs": 20,
+  "complete_required_files": 27,
+  "first_assessment_event": 137,
+  "prior_read_event": 138,
+  "input_catalog_read_only": true,
+  "inventory_verified": true,
+  "final_sha256": "a730231e498f6a47d5da7931749bdf0c72c79c886009ee2f92d02dc6383adced",
+  "final_path": "/Users/simon/work/personal/skill-study-private/concise-writing/e-iteration-20261018/reviews/20261018T055656585Z-cw-e-opus-codex-bd1d8498-b95b-4fec-8725-6f83bfcdc5d4-x43dm3uz/final.txt",
+  "first_pass_sha256": "7099ae9206aad90bdfa8f899d6417d9ffcbcf63e5f7ef553105a4327ccf13ece",
+  "first_pass_path": "/Users/simon/work/personal/skill-study-private/concise-writing/e-iteration-20261018/review-audits/codex-first-pass.md",
+  "first_pass_identity_mapping": "All20 unique timestamp prefixes, orders and condition/repetition pairs; initial IDs abbreviated, final report expands them.",
+  "prior_grep_exposure_before_first_pass": false
+}

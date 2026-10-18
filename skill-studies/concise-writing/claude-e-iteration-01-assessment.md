@@ -3,7 +3,7 @@
 Format version: `2`
 Assessment ID: cw-claude-e-iteration-01
 Study / batch: concise-writing / claude-e-iteration-01
-Status: complete active assessment; separate Opus review pending
+Status: complete active assessment; separate [Opus review and reconciliation](drafts/baseline-iteration/testing/evaluation/assessment.md) complete
 Scope and acceptance rules: [protocol](protocol.md) at Git `2a8c32165d689ed480994097cca1850efe229b18`, claude-e-iteration-01; CW-expanded-1 and definition-2 E applicability retain the frozen F1–F3 meanings.
 Attempt index: [claude-e-iteration-01-run-index.json](claude-e-iteration-01-run-index.json) at Git `2a8c32165d689ed480994097cca1850efe229b18`, SHA-256 `b8f1f590f3288c230506f65c7f55eda5c21712857ab3e924f2bb9a0bf904b339`.
 Assessor and relevant session context: the Codex controller that authored/reviewed the exposed drafts; neither blind nor independent.
@@ -71,5 +71,6 @@ Both drafts are larger than original; E growth is expected for authorized additi
 O4/O5 remain unscored; no hidden uncertainty or skipped internal comparison is inferred from silence.
 
 Acceptance under the declared rule: each draft has a confirmed source-fidelity failure in this provider, so recommend a bounded revision rather than automatically declaring diagnostic readiness.
-The recommendation remains subject to the two independent-context Opus reviews and the owner’s post-E decision; no automatic authoring or further model call follows.
+The Opus session identifies the same four omissions but passes them under a more permissive severity judgment; the linked reconciliation preserves that disagreement and the unchanged canonical scores.
+The recommendation is presented for the owner’s post-E decision; no automatic authoring, freeze or further model call follows.
 The full eight-case suite is still required for both eventual candidates, with a separately approved allocation.

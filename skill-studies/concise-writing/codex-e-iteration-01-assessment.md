@@ -3,7 +3,7 @@
 Format version: `2`
 Assessment ID: cw-codex-e-iteration-01
 Study / batch: concise-writing / codex-e-iteration-01
-Status: complete active assessment; separate Opus review pending
+Status: complete active assessment; separate [Opus review and reconciliation](drafts/baseline-iteration/testing/evaluation/assessment.md) complete
 Scope and acceptance rules: [protocol](protocol.md) at Git `9a636d5078f0e2fc9f713364af9a0ef13e18ad33`, codex-e-iteration-01; CW-expanded-1 and definition-2 E applicability, with unchanged F1–F3 semantics.
 Attempt index: [codex-e-iteration-01-run-index.json](codex-e-iteration-01-run-index.json) at Git `0b96bcbb2b5340aed05c7c663ff400c2cd2b49c2`, SHA-256 `ad71c3d10ee9d43182fdc18680fd2cf119fd7e7a216ae74df0d0c06c282ae1d4`.
 Assessor and relevant session context: the Codex controller that authored/reviewed the exposed drafts; direct-session judgments, neither blind nor independent.
@@ -68,6 +68,7 @@ E additions justify output growth; word counts are descriptive and cannot offset
 O4/O5 remain unscored, and silence does not reveal a latent uncertainty state.
 
 Acceptance under the declared rule: these Codex observations support retaining both drafts unchanged for the remaining diagnostic comparison, without an adoption or population-reliability claim.
-The owner’s post-E transition follows both providers and the two independent-context Opus reviews.
+The Opus review agrees with these counts and adds below-threshold precision observations in the linked reconciliation.
+The owner’s post-E transition also considers the Claude outputs and the separate severity disagreement there.
 The full eight-case suite remains required, and its future allocation is separate.
 The shorter-SKILL.md tie-break requires equivalent effectiveness and consequential quality across the selected evidence; this one case is insufficient.

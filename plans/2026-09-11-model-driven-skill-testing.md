@@ -36,7 +36,7 @@ A broader archival reorganization is outside this study.
 ## Limits and information boundaries
 
 **Accepted outer limits: 296 subject, 14 evaluator, 4 authoring and 4 retry invocations (318 total), with a 20-hour active-work planning guideline.**
-The [CW protocol](../skill-studies/concise-writing/protocol.md) records the current first-stage authorization and pre-dispatch gates.
+The [CW protocol](../skill-studies/concise-writing/protocol.md) records current spending, the completed first stage and the next owner decision.
 The invocation limits are ceilings, not a dispatch commitment. Owner clarification after round-10 review: “the budget is just a guideline”; this relaxes the active-time limit, not the authorized call count. The subsequent “ok, please proceed” resumes the eight remaining expansion attempts. The owner requested minimal real-model runs to establish the process before broader testing; the initial Sol-low pair and its two-call extension are complete. Pre-baseline development is now closed at four subject calls; its remaining additional-development slot stays unused. A new facet alone cannot reopen that phase. A diagnostic exception requires a named readiness defect and separate owner approval; no automatic full campaign follows.
 Track active sessions from Stage 1, including preparation, review and model-run waits; exclude recorded periods awaiting owner input.
 Keep model latency inside reported active effort to bound actual study time and expose tooling costs. Budget for sequential execution initially, then replace estimates with pilot timings; do not assume all available calls must be used.
@@ -278,7 +278,8 @@ Reserved bundles and revealing assessments stay entirely in the verified private
 - [x] Qualify supported Python, both subject runtimes and exact Opus 5.5 medium transport with twelve zero-model controls; Codex is active assessor and subject Claude remains Sonnet 5 low.
 - [x] Freeze the exact approved E inputs/slots and controller identities at `2936749c332f083e49f603eaed15b65d92158568`; both provider scopes pass collection readiness. Commit/push frozen manifests before dispatch.
 - [x] Collect and directly assess all forty E subjects; retain all outcomes and the metadata-only inventory amendment without repeats or exclusions.
-- [ ] Complete the result retrieval pins and both approved Opus reviews, reconcile the fixed transition rules and present the owner’s next decision.
+- [x] Complete result retrieval pins and both approved Opus reviews; [reconcile](../skill-studies/concise-writing/drafts/baseline-iteration/testing/evaluation/assessment.md) the fixed transition rules and retain the severity disagreement.
+- [ ] Obtain the owner’s next revision/freeze decision from the completed E diagnostic before editing candidates or proposing a fresh collection allocation; the protocol owns the recommendation and current limits.
 - [ ] Establish effective behavior on the relevant fixed cases and both providers, then test instruction compression separately and present an adoption decision.
 - [ ] When SSR resumes, revisit the loaded-failure baseline decision in the [revised proposal](../skill-studies/sweeping-stale-references/rewrite-diagnosis.md#proposed-allocation-owner-decision-required). The owner explicitly deferred this decision until then; the withdrawn no-SSR-success stop rule does not authorize dispatch.
 - [ ] Resolve the parked SSR context-reading cost and matching-heading wording concerns, review the whole draft and relative call allocation, then freeze and qualify only approved scope.

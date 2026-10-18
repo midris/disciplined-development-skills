@@ -1,7 +1,7 @@
 # CW iteration from the original skill
 
 Status and current dispatch authority: see the [CW protocol](../../skill-studies/concise-writing/protocol.md).
-Two baseline-derived body drafts remain unvalidated; the owner requires a consistency review and committed preparation before testing.
+The two baseline-derived body drafts are development candidates, not adopted skills; completed evidence and the next decision belong to the protocol.
 Current action and accounting belong to the [CW protocol](../../skill-studies/concise-writing/protocol.md); progress belongs to the [active plan](../2026-09-11-model-driven-skill-testing.md).
 
 ## Accepted direction
@@ -61,7 +61,7 @@ The [proposal](../../skill-studies/concise-writing/drafts/baseline-iteration/com
 Exact input bytes, ordered slots, CLI/model settings and readiness evidence must be frozen before dispatch.
 
 Future Claude output evaluation uses owner-requested Opus 5.5 at medium or high effort.
-The controller proposes medium as the default; choose any high-effort scope before seeing its verdicts.
-Resolve the exact installed model identifier and qualify the read-only transport before use; availability is not established by this document.
+The E diagnostic qualified `claude-opus-5-5` at medium through the read-only transport.
+Any high-effort scope must be chosen before seeing its verdicts; requalify changed runtime assumptions before another dispatch.
 Have Opus judge all compared arms under the same declared settings before prior-score exposure; do not compare new Opus verdicts only with old Fable verdicts.
 Dispatch authority is recorded only in the protocol; this design supplies no extra calls or automatic revision rounds.
