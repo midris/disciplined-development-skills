@@ -148,5 +148,21 @@
       ],
       "count": 8
     }
+  ],
+  "retry_slots": [
+    {
+      "order": 13,
+      "configuration": "codex-document-addition-corrected",
+      "allocation_pool": "retry",
+      "replaces_review_order": 4,
+      "count": 9,
+      "batches": [
+        "codex-expanded-01"
+      ],
+      "cases": [
+        "document-addition"
+      ],
+      "authority": "Owner explicitly approved one corrected review on 2026-10-17; no new subject executions."
+    }
   ]
 }

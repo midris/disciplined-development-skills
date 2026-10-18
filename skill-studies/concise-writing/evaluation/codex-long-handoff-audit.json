@@ -1,6 +1,7 @@
 {
   "configuration": "codex-long-handoff",
   "outputs": 9,
+  "complete_required_files": 13,
   "first_assessment_event": 112,
   "prior_read_event": 113,
   "input_catalog_read_only": true,

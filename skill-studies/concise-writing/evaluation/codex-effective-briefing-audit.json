@@ -1,6 +1,7 @@
 {
   "configuration": "codex-effective-briefing",
   "outputs": 9,
+  "complete_required_files": 12,
   "first_assessment_event": 116,
   "prior_read_event": 117,
   "input_catalog_read_only": true,

@@ -1178,6 +1178,7 @@ def test_accounting_planning_guideline(document_study, capsys, booked, amount, d
     ('wrong-role', 'allocation-total'), ('missing-id', 'allocation-total'),
     ('duplicate', 'duplicate-id'), ('version', 'unsupported-version'),
     ('shape', 'allocation-total'), ('mixed-format', 'allocation-total'),
+    ('retry', None), ('wrong-pool', 'allocation-total'),
 ])
 def test_supplemental_evaluator_ledger_accounting(document_study, capsys, mutation, rule):
     # document_study seeds the two subject calls and the 2-call evaluator ceiling.
@@ -1201,14 +1202,18 @@ def test_supplemental_evaluator_ledger_accounting(document_study, capsys, mutati
     elif mutation == 'mixed-format':
         ledger['format_version'] = '1'
         ledger['attempts'] = [{'run_id': 'shadow-eval', 'allocation': {'pool': 'evaluator', 'charge': 1}}]
+    elif mutation in {'retry', 'wrong-pool'}:
+        ledger['runs'][0]['allocation_pool'] = 'retry' if mutation == 'retry' else 'subject'
     write('evaluator-run-index.json', ledger)
     p = root/'protocol.md'
     p.write_text(p.read_text().replace('**2 subject, 0 evaluator', '**2 subject, 1 evaluator')
                  .replace('**2 / 2 / 1 / 1**', '**2 / 1 / 1 / 1**')
                  + '\n[Evaluator accounting](evaluator-run-index.json)\n')
+    if mutation == 'retry':
+        p.write_text(p.read_text().replace('**2 subject, 1 evaluator, 0 authoring, 0 retry**', '**2 subject, 0 evaluator, 0 authoring, 1 retry**').replace('**2 / 1 / 1 / 1**', '**2 / 2 / 1 / 0**'))
     result = main(['docs', 'check', str(p), '--ready-for', 'assessment', '--json'])
     report = json.loads(capsys.readouterr().out)
-    if mutation is None:
+    if mutation in {None, 'retry'}:
         assert result == 0, report
     else:
         assert result != 0

@@ -14,6 +14,9 @@ Start with the nine-output Codex long-handoff review to compare the controller-s
 Use at most two concurrent evaluator sessions after this first transport/coverage check; the active controller retains and verifies every result and stops dispatch on a fault.
 The [remaining-input manifest](retrospective-inputs.json) pins the other eleven packets before their dispatch.
 Use the existing twelve-invocation evaluator ceiling, with zero automatic retry or subject-call transfer.
+The owner explicitly approved one corrected Codex document-addition review from the retry pool after the original packet omitted required source material.
+The [correction manifest](corrected-inputs.json) pins both corrected E packets; Claude E had not been dispatched.
+The [retry slot](schedule.json) preserves the incomplete original review and adds no subject observations.
 The manual Claude review was supplied by the owner, outside controller-dispatched accounting; model/effort are owner-reported, not trace-verified.
 Do not count that review as an additional subject repetition or a controller evaluator invocation.
 
@@ -60,3 +63,19 @@ This evaluation adds a different model's judgment, not a reader study or a stati
 
 The twelve evaluator sessions are one diagnostic judgment per declared group, not three evaluator repetitions or an estimate of judge reliability.
 The owner’s three-repetition minimum applies to the subject observations; this review includes all those repetitions without recollecting them.
+
+## Review limitations observed so far
+
+The first three reviews agree on the underlying text observations but use a more permissive failure threshold for lost rationale or an unassigned invitation sender than the active assessor.
+Their judgments remain supplemental; the observed omissions and both criterion interpretations stay visible.
+Worked boundary examples and prior per-run result JSON were not supplied in the first-pass packets, matching the manual prompt's stated input set; reviewers can flag those unavailable references without inferring their contents.
+The existing examples do not explicitly decide whether the missing handoff diagnostic rationale alone crosses F1/F2.
+Do not call cross-model agreement proof of population reliability or independent reader effectiveness, and do not adopt a reviewer's causal language solely from three observations.
+
+## Input correction
+
+The directory-based packet builder omitted E’s source report and new notes, which its subject configurations declared outside the presumed fixture directory.
+Order 4 correctly returned insufficient evidence for all nine F1/F2 judgments; its transport and read-order audit does not establish complete task inputs.
+The controller now checks every packet against all non-skill fixtures in each original subject configuration, including aliased sources.
+All seven undispatched primary packets and the authorized replacement passed this check before resuming.
+Original packets, raw review and evaluator charge remain retained; only the replacement can close E’s fidelity/effectiveness gap.

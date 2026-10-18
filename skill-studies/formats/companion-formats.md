@@ -155,6 +155,8 @@ Unknown versions are unsupported. The generator/validator shares definitions, ge
 
 A supplemental evaluator ledger uses `evaluator_ledger_version: "1"` and a `runs` list, under a filename ending in `run-index.json` linked from the protocol.
 Each row requires a nonempty `run_id`, `role: "evaluator"` and integer `charge` of 0 or 1; booleans are invalid.
+Optional `allocation_pool` defaults to `evaluator`; an explicitly authorized replacement review may use `retry`, consuming that pool instead.
+No other pool is valid for this ledger, and the evaluator role remains unchanged.
 The protocol accounting check includes these charges, rejects duplicate IDs across all linked indexes, and rejects unknown ledger versions or malformed rows.
 The ledger may also record configuration, authority, copied-input identities, retained bundle/inventory and execution status.
 This is a charge projection for supplementary reviews, not a subject execution-result format or evidence that evaluator judgments are correct.

@@ -1,6 +1,7 @@
 {
   "configuration": "codex-agent-recommendation",
   "outputs": 9,
+  "complete_required_files": 12,
   "first_assessment_event": 101,
   "prior_read_event": 102,
   "input_catalog_read_only": true,

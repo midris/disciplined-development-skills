@@ -34,7 +34,8 @@ The valid-ledger and duplicate-ID cases failed before implementation; all eight 
 The mixed-format case uses a shadow subject-index charge that would otherwise reconcile silently; the parser rejects the mixed representation explicitly.
 The ledger does not claim semantic validity or replace raw capture/retention checks.
 
-The complete document test file passed 81 checks before the final mixed-format case was added; the current eight focused ledger checks pass.
+The complete document test file now passes all 82 checks, including all eight focused ledger cases.
+The main unit suite passes 332 tests, excluding 148 process-smoke checks; the full-suite failure counts remain disclosed below.
 The hook suite passes 263 tests, with three environment skips.
 A full runner-suite attempt reports 474 passed and six failures in unchanged surrogate Claude process smokes, reproduced with host permission.
 Those surrogate executables resolve Python through the missing Homebrew path and fall back to Apple Python; the failures occur during authentication-status preparation, before inference.
@@ -44,3 +45,12 @@ Preparation self-review checks authority, all selected conditions/repetitions, c
 No blocking preparation finding remains for the file-only evaluator; shell-dependent testing remains gated on the recorded Python prerequisite.
 
 DD-VERDICT: PASS
+
+## Packet correction and explicit retry
+
+A post-capture configuration-derived check found missing E source inputs in both packets.
+The old directory assumption is replaced by checking declared non-skill inputs against every original configuration; all remaining packets and the corrected retry pass.
+Order 4 remains charged and incomplete; the owner approved exactly one corrected review from the retry pool, not a thirteenth primary slot.
+The supplemental accounting projection now supports only evaluator/retry pools with the role kept evaluator.
+The new retry and invalid-pool cases failed before implementation (2 failed, 8 passed), then all 10 focused ledger cases passed.
+The earlier clean preparation verdict does not certify the omitted task inputs.

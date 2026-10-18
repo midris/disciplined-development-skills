@@ -936,16 +936,17 @@ def accounting(raw, path, ctx):
                 if (not isinstance(run, dict)
                     or not isinstance(run.get("run_id"), str) or not run["run_id"].strip()
                     or run.get("role") != "evaluator"
+                    or run.get("allocation_pool", "evaluator") not in {"evaluator", "retry"}
                     or type(run.get("charge")) is not int or run["charge"] not in {0, 1}):
                     ctx.error(target, "runs", "allocation-total",
-                              "Require a run ID, evaluator role and integer charge 0 or 1")
+                              "Require a run ID, evaluator role, evaluator/retry pool and integer charge 0 or 1")
                     continue
                 identity = run["run_id"]
                 if identity in seen:
                     ctx.error(target, "runs", "duplicate-id",
                               "Attempt counted in multiple accounting indexes")
                 seen.add(identity)
-                actual["evaluator"] += run["charge"]
+                actual[run.get("allocation_pool", "evaluator")] += run["charge"]
         elif value.get("format_version") == "1":
             for a in value["attempts"]:
                 identity = a["run_id"] or a["attempt_id"]

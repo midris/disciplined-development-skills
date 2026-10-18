@@ -483,6 +483,8 @@ The angle-bracket digest values illustrate the required shape and are not litera
 
 For owner-selected cross-model reviews, link a ledger ending in `run-index.json` from the study protocol.
 Use `evaluator_ledger_version: "1"` with `runs`; each row has a nonempty `run_id`, `role: "evaluator"` and integer `charge` 0 or 1.
+Optional `allocation_pool` defaults to `evaluator`; an explicitly authorized replacement review may use `retry`, consuming that pool instead.
+No other pool is valid for this ledger, and the evaluator role remains unchanged.
 Readiness reconciles those charges with subject indexes and remaining evaluator capacity, rejecting duplicate IDs, malformed rows and unknown ledger versions.
 This ledger records review calls without converting reviews into subject executions or overwriting existing semantic scores.
 The [field contract](../../skill-studies/formats/companion-formats.md#supplemental-evaluator-accounting) defines its accounting projection; the study retains full prompts, evidence identities and raw reviews independently.
