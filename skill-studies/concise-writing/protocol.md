@@ -4,7 +4,9 @@ Format version: `1`
 Study ID: `concise-writing`
 Status: the owner approved the first staged final-comparison screen: twelve subjects and two Opus 5.5 medium reviews.
 Current action: collect and directly assess the [twelve-subject comment screen](runs/final-comparison-01/screen-01/README.md), then complete both Opus reviews before returning the results to the owner.
-Twelve zero-model runtime probes passed; exact binaries, sign-in metadata and paired inputs are checked, with manifests frozen against `dcbb176616bd9ee540a11243c24b8bf740fdd122`.
+Twelve zero-model runtime probes passed; exact binaries, sign-in metadata and paired inputs are checked, with subject inputs frozen against `dcbb176616bd9ee540a11243c24b8bf740fdd122`.
+Claude slot 7 received the complete teaching body before editing; the [inspection amendment](runs/final-comparison-01/screen-01/preparation/explicit-inspection-amendment.md) corrects a YAML-header expectation through retained-evidence replay, without repeating the subject.
+Its original manifest and charge remain; the amended controller is frozen prospectively before slot 8.
 The owner approved “sounds good, let’s proceeed” after the concrete twelve-subject/two-review proposal; accepted ceilings rise from 590/38 to 602/40, with authoring/retry ceilings unchanged.
 This approval covers explicit comments only: both unchanged bodies with the selected description, three repetitions on Codex and Claude. It does not approve the broader prepared 120/20 proposal.
 After the screen, dropping a clearly inferior candidate or extending promising ones to five repetitions needs the evidence and a bounded continuation decision; no automatic top-up or mid-screen edit is authorized.
@@ -1037,13 +1039,13 @@ Combined accounting sources: closed SSR [pilot 01](../sweeping-stale-references/
 The new E reviews use the [fixed review package](runs/baseline-iteration-e-01/evaluation/README.md) and [supplemental Opus accounting](runs/baseline-iteration-e-01/evaluation/evaluator-run-index.json).
 The remaining-suite reviews use the [fourteen-packet package](runs/baseline-iteration-suite-01/evaluation/README.md) and [evaluator ledger](runs/baseline-iteration-suite-01/evaluation/evaluator-run-index.json); their allocation is included in the current ceiling.
 The focused output reviews use the [ten-packet package](runs/revised-body-discovery-01/evaluation/README.md) and [evaluator ledger](runs/revised-body-discovery-01/evaluation/evaluator-run-index.json); their ten calls are spent within the current evaluator accounting.
-Dispatched calls are **590 subject, 38 evaluator, 0 authoring, 2 retry**; remaining outer capacity is **12 / 2 / 4 / 2** against the [active plan](../../plans/2026-09-11-model-driven-skill-testing.md#limits-and-information-boundaries). Both eight-call CW batches are spent. The owner authorized ten SSR expansion calls under ceiling 56; all ten are spent, including the excluded control, with no replacement or pool transfer. Comparison runner durations total 508.067 seconds; baseline durations remain 494.936 seconds, including setup and capture.
+Dispatched calls are **597 subject, 38 evaluator, 0 authoring, 2 retry**; remaining outer capacity is **5 / 2 / 4 / 2** against the [active plan](../../plans/2026-09-11-model-driven-skill-testing.md#limits-and-information-boundaries). Both eight-call CW batches are spent. The owner authorized ten SSR expansion calls under ceiling 56; all ten are spent, including the excluded control, with no replacement or pool transfer. Comparison runner durations total 508.067 seconds; baseline durations remain 494.936 seconds, including setup and capture.
 Owner clarification after round-10 review: “the budget is just a guideline”. The 1,200-minute figure below remains the planning baseline, not a collection stop; invocation ceilings and the authorized SSR scope is unchanged. Retain elapsed effort and forecast variance to expose process cost.
 
 Current combined accounting: **3,190 active minutes booked; 1,990 minutes above the historical 1,200-minute planning guideline**.
 These are rounded effort estimates, not stopwatch measurements or a separately timed category breakdown.
 Between-turn owner wait is excluded; runner durations are included once.
-The initial 104 calls and sixteen native third repetitions are spent; combined subject accounting is 590/602, with 12 approved screen calls available.
+The initial 104 calls and sixteen native third repetitions are spent; combined subject accounting is 597/602, with 5 approved screen calls available and no E calls remaining.
 The supplemental work used 40 estimated active minutes against its 40-minute forecast; model waits are included once.
 
 | Work | Estimated active minutes |

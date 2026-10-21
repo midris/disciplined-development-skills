@@ -3,9 +3,9 @@
   "manifest_id": "cw-claude-final-comments-screen-01",
   "study_id": "concise-writing",
   "case_id": "comments-explicit",
-  "status": "frozen",
+  "status": "draft",
   "created_at": "2026-10-21T19:16:45.966652+00:00",
-  "source_revision": "dcbb176616bd9ee540a11243c24b8bf740fdd122",
+  "source_revision": null,
   "authorities": {
     "spec": {
       "path": "plans/specs/2026-09-11-model-driven-skill-testing-framework.md",
@@ -136,6 +136,31 @@
     {
       "path": "skill-studies/concise-writing/cases/invocation-comments/check_fixture.py",
       "sha256": "ea39af1c4a932ba9e6203393c9db6daa671e43e0bd4493a25553629c15e8d912",
+      "version": null
+    },
+    {
+      "path": "skill-studies/concise-writing/runs/final-comparison-01/screen-01/preparation/body_delivery.py",
+      "sha256": "8e084894e036286c8b7735df6a6a1d160eef4e74d609626f1bdfd1667ba1c87a",
+      "version": null
+    },
+    {
+      "path": "skill-studies/concise-writing/runs/final-comparison-01/screen-01/preparation/inspect_explicit_v2.py",
+      "sha256": "91bdeb65bd51164c40b04bd3008e793b3a96989b6d2b18352f8e55c9fbd13a88",
+      "version": null
+    },
+    {
+      "path": "skill-studies/concise-writing/runs/final-comparison-01/screen-01/preparation/inspection-tests/test_body_delivery.py",
+      "sha256": "48712f7ab2bbeeefb008cb435325155493f1aa6e3e460b340940449e8eaac4f6",
+      "version": null
+    },
+    {
+      "path": "skill-studies/concise-writing/runs/final-comparison-01/screen-01/preparation/explicit-inspection-amendment.md",
+      "sha256": "d6cbd018d309170b7bdaaf0d5035b2aab1a75bc43b034af0ab37ce607e641d7d",
+      "version": null
+    },
+    {
+      "path": "skill-studies/concise-writing/runs/final-comparison-01/screen-01/preparation/explicit-inspection-amendment.json",
+      "sha256": "bceb7821a49aa2ff4d81a4a619603bb62dd927bf639e7ed4adeb85e020d84d4d",
       "version": null
     }
   ]

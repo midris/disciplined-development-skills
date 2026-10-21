@@ -1,0 +1,21 @@
+{
+  "created_at": "2026-10-21T19:35:14.173564+00:00",
+  "scope": "Complete teaching-body delivery inspection; no subject or criterion changes",
+  "first_subject_global_order": 7,
+  "first_subject_preserved": true,
+  "new_subject_calls": 0,
+  "new_evaluator_calls": 0,
+  "retries": 0,
+  "original_replay": "rejects missing YAML header despite complete body",
+  "corrected_replay": "complete assigned teaching body at event14 before Edit16",
+  "offline_cases": 6,
+  "test_first_observation": "Two failures and four passes with original whole-file predicate; all six pass with body-only predicate",
+  "evidence": {
+    "path": "/Users/simon/work/personal/skill-study-private/concise-writing/final-comparison-20261021/screen-01/inspection-amendment",
+    "inventory": {
+      "path": "/Users/simon/work/personal/skill-study-private/concise-writing/final-comparison-20261021/screen-01/inspection-amendment.inventory.json",
+      "sha256": "6f649e52e27a6a075f0cbfd61a743f08ea74e6b288d55dc7cd95896446bf57ad",
+      "version": "1"
+    }
+  }
+}
