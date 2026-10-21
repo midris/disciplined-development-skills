@@ -3,5 +3,294 @@
   "index_id": "cw-codex-final-comments-screen-01",
   "study_id": "concise-writing",
   "batch_id": "codex-final-comments-screen-01",
-  "attempts": []
+  "attempts": [
+    {
+      "attempt_id": "codex-final-comments-screen-01-comments-explicit-original-body-1-1",
+      "case_id": "comments-explicit",
+      "condition": "original-body",
+      "repetition": 1,
+      "attempt_number": 1,
+      "retry_of": null,
+      "manifest": {
+        "path": "skill-studies/concise-writing/runs/final-comparison-01/screen-01/preparation/manifests/codex-comments-explicit-manifest.json",
+        "sha256": "157bff29b08d7616f579c87f8fabf5625a647734271b439de5143a6f007352ea",
+        "version": "1",
+        "git_revision": "94846882b3e2294e2c0e5c40a020fd107720219a"
+      },
+      "authorization": {
+        "artifact": {
+          "path": "skill-studies/concise-writing/protocol.md",
+          "sha256": "b576b37f367950c6e4880bc968f4ddb5933f278e9644462aac671669be3808b3",
+          "version": "1",
+          "git_revision": "94846882b3e2294e2c0e5c40a020fd107720219a"
+        },
+        "selector": "Batch: codex-final-comments-screen-01; order 1"
+      },
+      "run_id": "20261021T192106786Z-cw-final-codex-comments-explicit-original-body-edd19c3e-6bef-49e2-9a55-881ecec9bc5b-0xrc7pdu",
+      "allocation": {
+        "pool": "subject",
+        "charge": 1
+      },
+      "limitations": [
+        "Exposed development case assessed by the Codex controller; cross-model review is supplemental. No causal or reliability inference from native counts."
+      ],
+      "bundle": {
+        "path": "/Users/simon/work/personal/skill-study-private/concise-writing/final-comparison-20261021/screen-01/subjects/20261021T192106786Z-cw-final-codex-comments-explicit-original-body-edd19c3e-6bef-49e2-9a55-881ecec9bc5b-0xrc7pdu",
+        "inventory": {
+          "path": "/Users/simon/work/personal/skill-study-private/concise-writing/final-comparison-20261021/screen-01/subjects/20261021T192106786Z-cw-final-codex-comments-explicit-original-body-edd19c3e-6bef-49e2-9a55-881ecec9bc5b-0xrc7pdu.inventory.json",
+          "sha256": "0b83e53dc5b1b219fb1c0936b0208c8c6324873428624ad993c71b9aaa9520a1",
+          "version": "1"
+        },
+        "verified": true
+      },
+      "result": {
+        "result_id": "codex-final-comments-screen-01-comments-explicit-original-body-1-1-assessment",
+        "record": {
+          "path": "skill-studies/concise-writing/runs/final-comparison-01/screen-01/results/20261021T192106786Z-cw-final-codex-comments-explicit-original-body-edd19c3e-6bef-49e2-9a55-881ecec9bc5b-0xrc7pdu.json",
+          "sha256": "f2424769de7fceb3ee7ead45a00258c7c69eab392fa2699b73a414f9ce0bb73b",
+          "version": "2"
+        }
+      }
+    },
+    {
+      "attempt_id": "codex-final-comments-screen-01-comments-explicit-revised-body-1-1",
+      "case_id": "comments-explicit",
+      "condition": "revised-body",
+      "repetition": 1,
+      "attempt_number": 1,
+      "retry_of": null,
+      "manifest": {
+        "path": "skill-studies/concise-writing/runs/final-comparison-01/screen-01/preparation/manifests/codex-comments-explicit-manifest.json",
+        "sha256": "157bff29b08d7616f579c87f8fabf5625a647734271b439de5143a6f007352ea",
+        "version": "1",
+        "git_revision": "94846882b3e2294e2c0e5c40a020fd107720219a"
+      },
+      "authorization": {
+        "artifact": {
+          "path": "skill-studies/concise-writing/protocol.md",
+          "sha256": "b576b37f367950c6e4880bc968f4ddb5933f278e9644462aac671669be3808b3",
+          "version": "1",
+          "git_revision": "94846882b3e2294e2c0e5c40a020fd107720219a"
+        },
+        "selector": "Batch: codex-final-comments-screen-01; order 2"
+      },
+      "run_id": "20261021T192300999Z-cw-final-codex-comments-explicit-revised-body-c4b7fa18-c41e-4264-aed1-5993195a94b2-k0fuy9bj",
+      "allocation": {
+        "pool": "subject",
+        "charge": 1
+      },
+      "limitations": [
+        "Exposed development case assessed by the Codex controller; cross-model review is supplemental. No causal or reliability inference from native counts."
+      ],
+      "bundle": {
+        "path": "/Users/simon/work/personal/skill-study-private/concise-writing/final-comparison-20261021/screen-01/subjects/20261021T192300999Z-cw-final-codex-comments-explicit-revised-body-c4b7fa18-c41e-4264-aed1-5993195a94b2-k0fuy9bj",
+        "inventory": {
+          "path": "/Users/simon/work/personal/skill-study-private/concise-writing/final-comparison-20261021/screen-01/subjects/20261021T192300999Z-cw-final-codex-comments-explicit-revised-body-c4b7fa18-c41e-4264-aed1-5993195a94b2-k0fuy9bj.inventory.json",
+          "sha256": "e80ae919d67672e8896b5d2d447872efaa712b5d0c8b9a782ad4e18c910476dd",
+          "version": "1"
+        },
+        "verified": true
+      },
+      "result": {
+        "result_id": "codex-final-comments-screen-01-comments-explicit-revised-body-1-1-assessment",
+        "record": {
+          "path": "skill-studies/concise-writing/runs/final-comparison-01/screen-01/results/20261021T192300999Z-cw-final-codex-comments-explicit-revised-body-c4b7fa18-c41e-4264-aed1-5993195a94b2-k0fuy9bj.json",
+          "sha256": "87bb0b7b175008a223a895f65aa59c2de9ab360548c731ffc45d32fa2a0a2685",
+          "version": "2"
+        }
+      }
+    },
+    {
+      "attempt_id": "codex-final-comments-screen-01-comments-explicit-revised-body-2-1",
+      "case_id": "comments-explicit",
+      "condition": "revised-body",
+      "repetition": 2,
+      "attempt_number": 1,
+      "retry_of": null,
+      "manifest": {
+        "path": "skill-studies/concise-writing/runs/final-comparison-01/screen-01/preparation/manifests/codex-comments-explicit-manifest.json",
+        "sha256": "157bff29b08d7616f579c87f8fabf5625a647734271b439de5143a6f007352ea",
+        "version": "1",
+        "git_revision": "94846882b3e2294e2c0e5c40a020fd107720219a"
+      },
+      "authorization": {
+        "artifact": {
+          "path": "skill-studies/concise-writing/protocol.md",
+          "sha256": "b576b37f367950c6e4880bc968f4ddb5933f278e9644462aac671669be3808b3",
+          "version": "1",
+          "git_revision": "94846882b3e2294e2c0e5c40a020fd107720219a"
+        },
+        "selector": "Batch: codex-final-comments-screen-01; order 3"
+      },
+      "run_id": "20261021T192410997Z-cw-final-codex-comments-explicit-revised-body-e56a7e18-7ae7-4140-91f3-166dfb4bb2c5-hpdmjfq7",
+      "allocation": {
+        "pool": "subject",
+        "charge": 1
+      },
+      "limitations": [
+        "Exposed development case assessed by the Codex controller; cross-model review is supplemental. No causal or reliability inference from native counts."
+      ],
+      "bundle": {
+        "path": "/Users/simon/work/personal/skill-study-private/concise-writing/final-comparison-20261021/screen-01/subjects/20261021T192410997Z-cw-final-codex-comments-explicit-revised-body-e56a7e18-7ae7-4140-91f3-166dfb4bb2c5-hpdmjfq7",
+        "inventory": {
+          "path": "/Users/simon/work/personal/skill-study-private/concise-writing/final-comparison-20261021/screen-01/subjects/20261021T192410997Z-cw-final-codex-comments-explicit-revised-body-e56a7e18-7ae7-4140-91f3-166dfb4bb2c5-hpdmjfq7.inventory.json",
+          "sha256": "2557a74bf76fe6ed54c984816bb7985c957abe76f3a8a17385acb9ce88bf69d9",
+          "version": "1"
+        },
+        "verified": true
+      },
+      "result": {
+        "result_id": "codex-final-comments-screen-01-comments-explicit-revised-body-2-1-assessment",
+        "record": {
+          "path": "skill-studies/concise-writing/runs/final-comparison-01/screen-01/results/20261021T192410997Z-cw-final-codex-comments-explicit-revised-body-e56a7e18-7ae7-4140-91f3-166dfb4bb2c5-hpdmjfq7.json",
+          "sha256": "814dbf9a3447e1bebca7978510f7eb86e12a16620a7913698ee45749639fcd87",
+          "version": "2"
+        }
+      }
+    },
+    {
+      "attempt_id": "codex-final-comments-screen-01-comments-explicit-original-body-2-1",
+      "case_id": "comments-explicit",
+      "condition": "original-body",
+      "repetition": 2,
+      "attempt_number": 1,
+      "retry_of": null,
+      "manifest": {
+        "path": "skill-studies/concise-writing/runs/final-comparison-01/screen-01/preparation/manifests/codex-comments-explicit-manifest.json",
+        "sha256": "157bff29b08d7616f579c87f8fabf5625a647734271b439de5143a6f007352ea",
+        "version": "1",
+        "git_revision": "94846882b3e2294e2c0e5c40a020fd107720219a"
+      },
+      "authorization": {
+        "artifact": {
+          "path": "skill-studies/concise-writing/protocol.md",
+          "sha256": "b576b37f367950c6e4880bc968f4ddb5933f278e9644462aac671669be3808b3",
+          "version": "1",
+          "git_revision": "94846882b3e2294e2c0e5c40a020fd107720219a"
+        },
+        "selector": "Batch: codex-final-comments-screen-01; order 4"
+      },
+      "run_id": "20261021T192531063Z-cw-final-codex-comments-explicit-original-body-6b2c3e11-e21d-4de2-99c4-c48b66a97ea8-rv61auqg",
+      "allocation": {
+        "pool": "subject",
+        "charge": 1
+      },
+      "limitations": [
+        "Exposed development case assessed by the Codex controller; cross-model review is supplemental. No causal or reliability inference from native counts."
+      ],
+      "bundle": {
+        "path": "/Users/simon/work/personal/skill-study-private/concise-writing/final-comparison-20261021/screen-01/subjects/20261021T192531063Z-cw-final-codex-comments-explicit-original-body-6b2c3e11-e21d-4de2-99c4-c48b66a97ea8-rv61auqg",
+        "inventory": {
+          "path": "/Users/simon/work/personal/skill-study-private/concise-writing/final-comparison-20261021/screen-01/subjects/20261021T192531063Z-cw-final-codex-comments-explicit-original-body-6b2c3e11-e21d-4de2-99c4-c48b66a97ea8-rv61auqg.inventory.json",
+          "sha256": "6bb67d46458a9d957082789477eba035285c9b66a2f7b1ffbab40ed3e33c71c3",
+          "version": "1"
+        },
+        "verified": true
+      },
+      "result": {
+        "result_id": "codex-final-comments-screen-01-comments-explicit-original-body-2-1-assessment",
+        "record": {
+          "path": "skill-studies/concise-writing/runs/final-comparison-01/screen-01/results/20261021T192531063Z-cw-final-codex-comments-explicit-original-body-6b2c3e11-e21d-4de2-99c4-c48b66a97ea8-rv61auqg.json",
+          "sha256": "e19ca81238752c711665b9f8ba47b110fd788aec1f4635a56b5c9f7946b37afc",
+          "version": "2"
+        }
+      }
+    },
+    {
+      "attempt_id": "codex-final-comments-screen-01-comments-explicit-original-body-3-1",
+      "case_id": "comments-explicit",
+      "condition": "original-body",
+      "repetition": 3,
+      "attempt_number": 1,
+      "retry_of": null,
+      "manifest": {
+        "path": "skill-studies/concise-writing/runs/final-comparison-01/screen-01/preparation/manifests/codex-comments-explicit-manifest.json",
+        "sha256": "157bff29b08d7616f579c87f8fabf5625a647734271b439de5143a6f007352ea",
+        "version": "1",
+        "git_revision": "94846882b3e2294e2c0e5c40a020fd107720219a"
+      },
+      "authorization": {
+        "artifact": {
+          "path": "skill-studies/concise-writing/protocol.md",
+          "sha256": "b576b37f367950c6e4880bc968f4ddb5933f278e9644462aac671669be3808b3",
+          "version": "1",
+          "git_revision": "94846882b3e2294e2c0e5c40a020fd107720219a"
+        },
+        "selector": "Batch: codex-final-comments-screen-01; order 5"
+      },
+      "run_id": "20261021T192718747Z-cw-final-codex-comments-explicit-original-body-a2d143cb-0b10-47af-960d-3846f2e2e5b5-zuv2m2zn",
+      "allocation": {
+        "pool": "subject",
+        "charge": 1
+      },
+      "limitations": [
+        "Exposed development case assessed by the Codex controller; cross-model review is supplemental. No causal or reliability inference from native counts."
+      ],
+      "bundle": {
+        "path": "/Users/simon/work/personal/skill-study-private/concise-writing/final-comparison-20261021/screen-01/subjects/20261021T192718747Z-cw-final-codex-comments-explicit-original-body-a2d143cb-0b10-47af-960d-3846f2e2e5b5-zuv2m2zn",
+        "inventory": {
+          "path": "/Users/simon/work/personal/skill-study-private/concise-writing/final-comparison-20261021/screen-01/subjects/20261021T192718747Z-cw-final-codex-comments-explicit-original-body-a2d143cb-0b10-47af-960d-3846f2e2e5b5-zuv2m2zn.inventory.json",
+          "sha256": "dda139f3aef2c8e14a500d168040628f1d35c643d96df65a9053f3d16631929e",
+          "version": "1"
+        },
+        "verified": true
+      },
+      "result": {
+        "result_id": "codex-final-comments-screen-01-comments-explicit-original-body-3-1-assessment",
+        "record": {
+          "path": "skill-studies/concise-writing/runs/final-comparison-01/screen-01/results/20261021T192718747Z-cw-final-codex-comments-explicit-original-body-a2d143cb-0b10-47af-960d-3846f2e2e5b5-zuv2m2zn.json",
+          "sha256": "b06be895d8b0eb33963fc09f8dc20e3dbbd0616edaa66ef958934e90c20ec2d2",
+          "version": "2"
+        }
+      }
+    },
+    {
+      "attempt_id": "codex-final-comments-screen-01-comments-explicit-revised-body-3-1",
+      "case_id": "comments-explicit",
+      "condition": "revised-body",
+      "repetition": 3,
+      "attempt_number": 1,
+      "retry_of": null,
+      "manifest": {
+        "path": "skill-studies/concise-writing/runs/final-comparison-01/screen-01/preparation/manifests/codex-comments-explicit-manifest.json",
+        "sha256": "157bff29b08d7616f579c87f8fabf5625a647734271b439de5143a6f007352ea",
+        "version": "1",
+        "git_revision": "94846882b3e2294e2c0e5c40a020fd107720219a"
+      },
+      "authorization": {
+        "artifact": {
+          "path": "skill-studies/concise-writing/protocol.md",
+          "sha256": "b576b37f367950c6e4880bc968f4ddb5933f278e9644462aac671669be3808b3",
+          "version": "1",
+          "git_revision": "94846882b3e2294e2c0e5c40a020fd107720219a"
+        },
+        "selector": "Batch: codex-final-comments-screen-01; order 6"
+      },
+      "run_id": "20261021T192825872Z-cw-final-codex-comments-explicit-revised-body-338ab5d0-873f-42e4-b15a-43511c02e320-ixuuc5fr",
+      "allocation": {
+        "pool": "subject",
+        "charge": 1
+      },
+      "limitations": [
+        "Exposed development case assessed by the Codex controller; cross-model review is supplemental. No causal or reliability inference from native counts."
+      ],
+      "bundle": {
+        "path": "/Users/simon/work/personal/skill-study-private/concise-writing/final-comparison-20261021/screen-01/subjects/20261021T192825872Z-cw-final-codex-comments-explicit-revised-body-338ab5d0-873f-42e4-b15a-43511c02e320-ixuuc5fr",
+        "inventory": {
+          "path": "/Users/simon/work/personal/skill-study-private/concise-writing/final-comparison-20261021/screen-01/subjects/20261021T192825872Z-cw-final-codex-comments-explicit-revised-body-338ab5d0-873f-42e4-b15a-43511c02e320-ixuuc5fr.inventory.json",
+          "sha256": "c8113bc8717e717ca71d2dffb24061f653f8431e4a5cf4056df72fc1633f1ccf",
+          "version": "1"
+        },
+        "verified": true
+      },
+      "result": {
+        "result_id": "codex-final-comments-screen-01-comments-explicit-revised-body-3-1-assessment",
+        "record": {
+          "path": "skill-studies/concise-writing/runs/final-comparison-01/screen-01/results/20261021T192825872Z-cw-final-codex-comments-explicit-revised-body-338ab5d0-873f-42e4-b15a-43511c02e320-ixuuc5fr.json",
+          "sha256": "3281d447df42ed351f0719642a2c76c1e07225e553c5d98cab759d907130f327",
+          "version": "2"
+        }
+      }
+    }
+  ]
 }

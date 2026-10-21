@@ -1,0 +1,184 @@
+{
+  "schema_version": "2",
+  "record_kind": "execution result",
+  "result_id": "codex-final-comments-screen-01-comments-explicit-revised-body-1-1-assessment",
+  "assessed_at": "2026-10-21T19:24:08.759197+00:00",
+  "run_id": "20261021T192300999Z-cw-final-codex-comments-explicit-revised-body-c4b7fa18-c41e-4264-aed1-5993195a94b2-k0fuy9bj",
+  "condition": "revised-body",
+  "assessor": {
+    "name": "Codex active session",
+    "method": "active session",
+    "model": null,
+    "session_id": null,
+    "context": "Same Codex controller authored/reviewed exposed development variants and directly judged complete outputs; no blind, held-out or independent assessor claim. Separate Opus review supplements this."
+  },
+  "manifest": {
+    "path": "skill-studies/concise-writing/runs/final-comparison-01/screen-01/preparation/manifests/codex-comments-explicit-manifest.json",
+    "sha256": "157bff29b08d7616f579c87f8fabf5625a647734271b439de5143a6f007352ea",
+    "version": "1",
+    "git_revision": "94846882b3e2294e2c0e5c40a020fd107720219a"
+  },
+  "evidence": [
+    {
+      "id": "output",
+      "artifact": {
+        "path": "/Users/simon/work/personal/skill-study-private/concise-writing/final-comparison-20261021/screen-01/subjects/20261021T192300999Z-cw-final-codex-comments-explicit-revised-body-c4b7fa18-c41e-4264-aed1-5993195a94b2-k0fuy9bj/workspace/fixture/uploader.py",
+        "sha256": "52b57ef19f81f4adc7c5e44f3470bba493cfd1dfac76c7388746423021454f12",
+        "version": null
+      },
+      "selector": "Complete artifact"
+    },
+    {
+      "id": "trace",
+      "artifact": {
+        "path": "/Users/simon/work/personal/skill-study-private/concise-writing/final-comparison-20261021/screen-01/subjects/20261021T192300999Z-cw-final-codex-comments-explicit-revised-body-c4b7fa18-c41e-4264-aed1-5993195a94b2-k0fuy9bj/provider-session.jsonl",
+        "sha256": "6751e5048d3560d77624ed6ff155c09763d090077681922729e9a27fde5c1148",
+        "version": null
+      },
+      "selector": "Complete artifact"
+    },
+    {
+      "id": "mechanical",
+      "artifact": {
+        "path": "/Users/simon/work/personal/skill-study-private/concise-writing/final-comparison-20261021/screen-01/subjects/20261021T192300999Z-cw-final-codex-comments-explicit-revised-body-c4b7fa18-c41e-4264-aed1-5993195a94b2-k0fuy9bj/result.json",
+        "sha256": "248ba57ee4458732a1df951d303ac438193b91c40f6059f0a970632f0715ae86",
+        "version": null
+      },
+      "selector": "Complete artifact"
+    },
+    {
+      "id": "log",
+      "artifact": {
+        "path": "/Users/simon/work/personal/skill-study-private/concise-writing/final-comparison-20261021/screen-01/subjects/20261021T192300999Z-cw-final-codex-comments-explicit-revised-body-c4b7fa18-c41e-4264-aed1-5993195a94b2-k0fuy9bj/runner.log",
+        "sha256": "3fdabccb99e9c1475cea824480007a868b829bdce2187fe175428781926f12aa",
+        "version": null
+      },
+      "selector": "Complete artifact"
+    },
+    {
+      "id": "final",
+      "artifact": {
+        "path": "/Users/simon/work/personal/skill-study-private/concise-writing/final-comparison-20261021/screen-01/subjects/20261021T192300999Z-cw-final-codex-comments-explicit-revised-body-c4b7fa18-c41e-4264-aed1-5993195a94b2-k0fuy9bj/final.txt",
+        "sha256": "73866e9f56008511068df1624860c2d6dd1c2a5bf88360d07b70fbd59aadbf8c",
+        "version": null
+      },
+      "selector": "Complete artifact"
+    },
+    {
+      "id": "source-0",
+      "artifact": {
+        "path": "skill-studies/concise-writing/runs/final-comparison-01/preparation/fixtures/invocation-comments/uploader.py",
+        "sha256": "2587771c1d7fee7e2ca72dbb1ff1a2594fff69775a72fff1929f437cce8ec2f1",
+        "version": null,
+        "git_revision": "dcbb176616bd9ee540a11243c24b8bf740fdd122"
+      },
+      "selector": "Complete frozen uploader.py"
+    },
+    {
+      "id": "source-1",
+      "artifact": {
+        "path": "skill-studies/concise-writing/runs/final-comparison-01/preparation/fixtures/invocation-comments/MAINTAINER-NOTES.md",
+        "sha256": "59175ed2990a8b65636507ce2116321e70c60b1c0a2eea288d01e075252fc847",
+        "version": null,
+        "git_revision": "dcbb176616bd9ee540a11243c24b8bf740fdd122"
+      },
+      "selector": "Complete frozen MAINTAINER-NOTES.md"
+    },
+    {
+      "id": "source-2",
+      "artifact": {
+        "path": "skill-studies/concise-writing/runs/final-comparison-01/preparation/fixtures/invocation-comments/TASK.md",
+        "sha256": "6a771f7383d14f7d77b02c862155da0b10af1e83cc72333512c5a83fde9523b5",
+        "version": null,
+        "git_revision": "dcbb176616bd9ee540a11243c24b8bf740fdd122"
+      },
+      "selector": "Complete frozen TASK.md"
+    },
+    {
+      "id": "task-mechanical",
+      "artifact": {
+        "path": "/Users/simon/work/personal/skill-study-private/concise-writing/final-comparison-20261021/screen-01/mechanical/002.json",
+        "sha256": "d740cd19f44996103c109d58cc6248f7c81de81737ffdc359d241b3409a9a2a8",
+        "version": null
+      },
+      "selector": "Complete saved parse/token or numeric/reply observation; no subject code execution"
+    }
+  ],
+  "setup": {
+    "status": "valid",
+    "reason": "Fixed provider/model/CLI and retained inventory verified. Complete assigned body in tool output 16 before first task edit 29. Protected input bytes unchanged.",
+    "evidence": [
+      "mechanical",
+      "trace",
+      "log"
+    ]
+  },
+  "criteria": [
+    {
+      "id": "F1",
+      "dimension": "functional",
+      "judgment": "met",
+      "reason": "Complete code/comment artifact preserves four total sends, only send TemporaryUploadError retries, other/fourth failures propagating and acknowledgement after acceptance without resend. Parse/token comparison passes. The other-errors including fourth temporary failure wording is loose classification but the stated exhaustion boundary is clear in full context.",
+      "consequence": "Required whole-artifact functional factor; length cannot offset failure.",
+      "evidence": [
+        "output",
+        "source-0",
+        "source-1",
+        "source-2"
+      ]
+    },
+    {
+      "id": "F2",
+      "dimension": "functional",
+      "judgment": "met",
+      "reason": "Acknowledgement errors propagate without sending again because another send could upload the accepted batch twice; code places record_ack outside the handler. The maintenance trap and reason are explicit.",
+      "consequence": "Required whole-artifact functional factor; length cannot offset failure.",
+      "evidence": [
+        "output",
+        "source-0",
+        "source-1",
+        "source-2"
+      ]
+    },
+    {
+      "id": "F3",
+      "dimension": "functional",
+      "judgment": "met",
+      "reason": "Two focused comment blocks explain the retry and acknowledgement boundaries next to their code. Some code-visible success/exhaustion detail is reinforcement, without burying the warning or creating consequential reading burden.",
+      "consequence": "Required whole-artifact functional factor; length cannot offset failure.",
+      "evidence": [
+        "output",
+        "source-0",
+        "source-1",
+        "source-2"
+      ]
+    }
+  ],
+  "functional_result": "met",
+  "procedural_summary": "Fixed provider/model/CLI and retained inventory verified. Complete assigned body in tool output 16 before first task edit 29. Protected input bytes unchanged. O4/O5 remain unscored; native D1 is distinct from functional outcome.",
+  "observations": [
+    {
+      "dimension": "functional",
+      "description": "Complete output 91 wc-w words; supplied uploader.py: 48 words, MAINTAINER-NOTES.md: 136 words, TASK.md: 47 words. Counts describe length, not semantic success; comment-only counts are reported separately for N4.",
+      "consequence": "Descriptive counts only.",
+      "evidence": [
+        "output",
+        "source-0",
+        "source-1",
+        "source-2"
+      ]
+    },
+    {
+      "dimension": "functional",
+      "description": "Revised repetition1 is more explicit about duplicate uploads than original repetition1 (59 versus42commentwords); original is more compact and names the keep-outside-handler instruction directly. Both preserve the meaning; no literal wording or length score imposed.",
+      "consequence": "Qualitative comparison is separate from threshold counts.",
+      "evidence": [
+        "output",
+        "source-0",
+        "source-1",
+        "source-2"
+      ]
+    }
+  ],
+  "uncertainty": []
+}
