@@ -3,5 +3,726 @@
   "index_id": "concise-writing-codex-discovery-focused-01",
   "study_id": "concise-writing",
   "batch_id": "codex-discovery-focused-01",
-  "attempts": []
+  "attempts": [
+    {
+      "attempt_id": "codex-discovery-focused-01-invocation-nonprose-description-existing-1-1",
+      "case_id": "invocation-nonprose",
+      "condition": "description-existing",
+      "repetition": 1,
+      "attempt_number": 1,
+      "retry_of": null,
+      "manifest": {
+        "path": "skill-studies/concise-writing/runs/revised-body-discovery-01/preparation/manifests/codex-invocation-nonprose-manifest.json",
+        "sha256": "7e358c60fde3f0dbbf3a0cfa06cd636f17350cb9e7cc9ed42fda3b38a0164b61",
+        "version": "1",
+        "git_revision": "78de25fa38fbc8205b3227568199fbdf7612862d"
+      },
+      "authorization": {
+        "artifact": {
+          "path": "skill-studies/concise-writing/protocol.md",
+          "sha256": "af1fa7901a87cf9ce6c22b9b84771e5f36c838256797f6f97365cebe1bb41c9f",
+          "version": "1",
+          "git_revision": "78de25fa38fbc8205b3227568199fbdf7612862d"
+        },
+        "selector": "Batch: codex-discovery-focused-01; order 1"
+      },
+      "run_id": "20261021T153808634Z-cw-focused-codex-invocation-nonprose-description-existing-11831896-ebbe-419e-babd-e768303357e8-arfrigtc",
+      "allocation": {
+        "pool": "subject",
+        "charge": 1
+      },
+      "limitations": [
+        "Exposed development case assessed by the Codex controller; cross-model review is supplemental. No causal or reliability inference from native counts."
+      ],
+      "bundle": {
+        "path": "/Users/simon/work/personal/skill-study-private/concise-writing/revised-body-discovery-20261018/subjects/20261021T153808634Z-cw-focused-codex-invocation-nonprose-description-existing-11831896-ebbe-419e-babd-e768303357e8-arfrigtc",
+        "inventory": {
+          "path": "/Users/simon/work/personal/skill-study-private/concise-writing/revised-body-discovery-20261018/subjects/20261021T153808634Z-cw-focused-codex-invocation-nonprose-description-existing-11831896-ebbe-419e-babd-e768303357e8-arfrigtc.inventory.json",
+          "sha256": "516cecdbe2be254b405d4f293a08ab747466b95d70dc7edafd45fa66d29cb403",
+          "version": "1"
+        },
+        "verified": true
+      },
+      "result": {
+        "result_id": "codex-discovery-focused-01-invocation-nonprose-description-existing-1-1-assessment",
+        "record": {
+          "path": "skill-studies/concise-writing/runs/revised-body-discovery-01/results/20261021T153808634Z-cw-focused-codex-invocation-nonprose-description-existing-11831896-ebbe-419e-babd-e768303357e8-arfrigtc.json",
+          "sha256": "fda6bee541200a58efc14d4c75ea8a8c9ae99eaad0e5d4ae8a11c495f28efa25",
+          "version": "2"
+        }
+      }
+    },
+    {
+      "attempt_id": "codex-discovery-focused-01-invocation-nonprose-description-targeted-1-1",
+      "case_id": "invocation-nonprose",
+      "condition": "description-targeted",
+      "repetition": 1,
+      "attempt_number": 1,
+      "retry_of": null,
+      "manifest": {
+        "path": "skill-studies/concise-writing/runs/revised-body-discovery-01/preparation/manifests/codex-invocation-nonprose-manifest.json",
+        "sha256": "7e358c60fde3f0dbbf3a0cfa06cd636f17350cb9e7cc9ed42fda3b38a0164b61",
+        "version": "1",
+        "git_revision": "78de25fa38fbc8205b3227568199fbdf7612862d"
+      },
+      "authorization": {
+        "artifact": {
+          "path": "skill-studies/concise-writing/protocol.md",
+          "sha256": "af1fa7901a87cf9ce6c22b9b84771e5f36c838256797f6f97365cebe1bb41c9f",
+          "version": "1",
+          "git_revision": "78de25fa38fbc8205b3227568199fbdf7612862d"
+        },
+        "selector": "Batch: codex-discovery-focused-01; order 2"
+      },
+      "run_id": "20261021T153852682Z-cw-focused-codex-invocation-nonprose-description-targeted-0adcc752-5b71-4f52-9351-77cb75fdd3da-iqzlqt2i",
+      "allocation": {
+        "pool": "subject",
+        "charge": 1
+      },
+      "limitations": [
+        "Exposed development case assessed by the Codex controller; cross-model review is supplemental. No causal or reliability inference from native counts."
+      ],
+      "bundle": {
+        "path": "/Users/simon/work/personal/skill-study-private/concise-writing/revised-body-discovery-20261018/subjects/20261021T153852682Z-cw-focused-codex-invocation-nonprose-description-targeted-0adcc752-5b71-4f52-9351-77cb75fdd3da-iqzlqt2i",
+        "inventory": {
+          "path": "/Users/simon/work/personal/skill-study-private/concise-writing/revised-body-discovery-20261018/subjects/20261021T153852682Z-cw-focused-codex-invocation-nonprose-description-targeted-0adcc752-5b71-4f52-9351-77cb75fdd3da-iqzlqt2i.inventory.json",
+          "sha256": "b1c035a35fc8242ec9e312e34e2fda0ddb111af13f45f0b036dd7992d11ac4cd",
+          "version": "1"
+        },
+        "verified": true
+      },
+      "result": {
+        "result_id": "codex-discovery-focused-01-invocation-nonprose-description-targeted-1-1-assessment",
+        "record": {
+          "path": "skill-studies/concise-writing/runs/revised-body-discovery-01/results/20261021T153852682Z-cw-focused-codex-invocation-nonprose-description-targeted-0adcc752-5b71-4f52-9351-77cb75fdd3da-iqzlqt2i.json",
+          "sha256": "1da7ebdd01b0086f15f93b25ba56b1a59ca2b58539b8008a574953b02c94bc32",
+          "version": "2"
+        }
+      }
+    },
+    {
+      "attempt_id": "codex-discovery-focused-01-invocation-nonprose-description-rewrite-1-1",
+      "case_id": "invocation-nonprose",
+      "condition": "description-rewrite",
+      "repetition": 1,
+      "attempt_number": 1,
+      "retry_of": null,
+      "manifest": {
+        "path": "skill-studies/concise-writing/runs/revised-body-discovery-01/preparation/manifests/codex-invocation-nonprose-manifest.json",
+        "sha256": "7e358c60fde3f0dbbf3a0cfa06cd636f17350cb9e7cc9ed42fda3b38a0164b61",
+        "version": "1",
+        "git_revision": "78de25fa38fbc8205b3227568199fbdf7612862d"
+      },
+      "authorization": {
+        "artifact": {
+          "path": "skill-studies/concise-writing/protocol.md",
+          "sha256": "af1fa7901a87cf9ce6c22b9b84771e5f36c838256797f6f97365cebe1bb41c9f",
+          "version": "1",
+          "git_revision": "78de25fa38fbc8205b3227568199fbdf7612862d"
+        },
+        "selector": "Batch: codex-discovery-focused-01; order 3"
+      },
+      "run_id": "20261021T153940073Z-cw-focused-codex-invocation-nonprose-description-rewrite-aa4eb6f7-76c5-45c1-930b-10008749e164-k7agp5er",
+      "allocation": {
+        "pool": "subject",
+        "charge": 1
+      },
+      "limitations": [
+        "Exposed development case assessed by the Codex controller; cross-model review is supplemental. No causal or reliability inference from native counts."
+      ],
+      "bundle": {
+        "path": "/Users/simon/work/personal/skill-study-private/concise-writing/revised-body-discovery-20261018/subjects/20261021T153940073Z-cw-focused-codex-invocation-nonprose-description-rewrite-aa4eb6f7-76c5-45c1-930b-10008749e164-k7agp5er",
+        "inventory": {
+          "path": "/Users/simon/work/personal/skill-study-private/concise-writing/revised-body-discovery-20261018/subjects/20261021T153940073Z-cw-focused-codex-invocation-nonprose-description-rewrite-aa4eb6f7-76c5-45c1-930b-10008749e164-k7agp5er.inventory.json",
+          "sha256": "f30cad263efef29dde4d6393b4fe8bb405170f997e3efcf369d1fd9d6a5a6117",
+          "version": "1"
+        },
+        "verified": true
+      },
+      "result": {
+        "result_id": "codex-discovery-focused-01-invocation-nonprose-description-rewrite-1-1-assessment",
+        "record": {
+          "path": "skill-studies/concise-writing/runs/revised-body-discovery-01/results/20261021T153940073Z-cw-focused-codex-invocation-nonprose-description-rewrite-aa4eb6f7-76c5-45c1-930b-10008749e164-k7agp5er.json",
+          "sha256": "6e100ce902f1147d217278765f5116d33aad4c7d6d4527e98f992bab1cce771b",
+          "version": "2"
+        }
+      }
+    },
+    {
+      "attempt_id": "codex-discovery-focused-01-invocation-nonprose-description-targeted-2-1",
+      "case_id": "invocation-nonprose",
+      "condition": "description-targeted",
+      "repetition": 2,
+      "attempt_number": 1,
+      "retry_of": null,
+      "manifest": {
+        "path": "skill-studies/concise-writing/runs/revised-body-discovery-01/preparation/manifests/codex-invocation-nonprose-manifest.json",
+        "sha256": "7e358c60fde3f0dbbf3a0cfa06cd636f17350cb9e7cc9ed42fda3b38a0164b61",
+        "version": "1",
+        "git_revision": "78de25fa38fbc8205b3227568199fbdf7612862d"
+      },
+      "authorization": {
+        "artifact": {
+          "path": "skill-studies/concise-writing/protocol.md",
+          "sha256": "af1fa7901a87cf9ce6c22b9b84771e5f36c838256797f6f97365cebe1bb41c9f",
+          "version": "1",
+          "git_revision": "78de25fa38fbc8205b3227568199fbdf7612862d"
+        },
+        "selector": "Batch: codex-discovery-focused-01; order 4"
+      },
+      "run_id": "20261021T154029900Z-cw-focused-codex-invocation-nonprose-description-targeted-6b198f7d-d6a7-4827-8295-f60011bf3412-k_jyebnt",
+      "allocation": {
+        "pool": "subject",
+        "charge": 1
+      },
+      "limitations": [
+        "Exposed development case assessed by the Codex controller; cross-model review is supplemental. No causal or reliability inference from native counts."
+      ],
+      "bundle": {
+        "path": "/Users/simon/work/personal/skill-study-private/concise-writing/revised-body-discovery-20261018/subjects/20261021T154029900Z-cw-focused-codex-invocation-nonprose-description-targeted-6b198f7d-d6a7-4827-8295-f60011bf3412-k_jyebnt",
+        "inventory": {
+          "path": "/Users/simon/work/personal/skill-study-private/concise-writing/revised-body-discovery-20261018/subjects/20261021T154029900Z-cw-focused-codex-invocation-nonprose-description-targeted-6b198f7d-d6a7-4827-8295-f60011bf3412-k_jyebnt.inventory.json",
+          "sha256": "7fcb9d4a9957544dc4ab676f59e973d36ff4599c3ec36034e7abd170ab85516d",
+          "version": "1"
+        },
+        "verified": true
+      },
+      "result": {
+        "result_id": "codex-discovery-focused-01-invocation-nonprose-description-targeted-2-1-assessment",
+        "record": {
+          "path": "skill-studies/concise-writing/runs/revised-body-discovery-01/results/20261021T154029900Z-cw-focused-codex-invocation-nonprose-description-targeted-6b198f7d-d6a7-4827-8295-f60011bf3412-k_jyebnt.json",
+          "sha256": "5d1cd985ea86b67ec7287173e617bc544abda05988a31763a050a5c5f95da99c",
+          "version": "2"
+        }
+      }
+    },
+    {
+      "attempt_id": "codex-discovery-focused-01-invocation-nonprose-description-rewrite-2-1",
+      "case_id": "invocation-nonprose",
+      "condition": "description-rewrite",
+      "repetition": 2,
+      "attempt_number": 1,
+      "retry_of": null,
+      "manifest": {
+        "path": "skill-studies/concise-writing/runs/revised-body-discovery-01/preparation/manifests/codex-invocation-nonprose-manifest.json",
+        "sha256": "7e358c60fde3f0dbbf3a0cfa06cd636f17350cb9e7cc9ed42fda3b38a0164b61",
+        "version": "1",
+        "git_revision": "78de25fa38fbc8205b3227568199fbdf7612862d"
+      },
+      "authorization": {
+        "artifact": {
+          "path": "skill-studies/concise-writing/protocol.md",
+          "sha256": "af1fa7901a87cf9ce6c22b9b84771e5f36c838256797f6f97365cebe1bb41c9f",
+          "version": "1",
+          "git_revision": "78de25fa38fbc8205b3227568199fbdf7612862d"
+        },
+        "selector": "Batch: codex-discovery-focused-01; order 5"
+      },
+      "run_id": "20261021T154342818Z-cw-focused-codex-invocation-nonprose-description-rewrite-d4dd0e6a-9896-4aa8-9614-0fb3573220f8-4nh163bn",
+      "allocation": {
+        "pool": "subject",
+        "charge": 1
+      },
+      "limitations": [
+        "Exposed development case assessed by the Codex controller; cross-model review is supplemental. No causal or reliability inference from native counts."
+      ],
+      "bundle": {
+        "path": "/Users/simon/work/personal/skill-study-private/concise-writing/revised-body-discovery-20261018/subjects/20261021T154342818Z-cw-focused-codex-invocation-nonprose-description-rewrite-d4dd0e6a-9896-4aa8-9614-0fb3573220f8-4nh163bn",
+        "inventory": {
+          "path": "/Users/simon/work/personal/skill-study-private/concise-writing/revised-body-discovery-20261018/subjects/20261021T154342818Z-cw-focused-codex-invocation-nonprose-description-rewrite-d4dd0e6a-9896-4aa8-9614-0fb3573220f8-4nh163bn.inventory.json",
+          "sha256": "8317842f4488e4170479dc5374a233c31b1c3ecb6ad086fdbbe5cad5cff6de1c",
+          "version": "1"
+        },
+        "verified": true
+      },
+      "result": {
+        "result_id": "codex-discovery-focused-01-invocation-nonprose-description-rewrite-2-1-assessment",
+        "record": {
+          "path": "skill-studies/concise-writing/runs/revised-body-discovery-01/results/20261021T154342818Z-cw-focused-codex-invocation-nonprose-description-rewrite-d4dd0e6a-9896-4aa8-9614-0fb3573220f8-4nh163bn.json",
+          "sha256": "f42898d4ddb9159fc552f621f76c0dc3c47c61bd95ae1789f1f7d7153ae773ad",
+          "version": "2"
+        }
+      }
+    },
+    {
+      "attempt_id": "codex-discovery-focused-01-invocation-nonprose-description-existing-2-1",
+      "case_id": "invocation-nonprose",
+      "condition": "description-existing",
+      "repetition": 2,
+      "attempt_number": 1,
+      "retry_of": null,
+      "manifest": {
+        "path": "skill-studies/concise-writing/runs/revised-body-discovery-01/preparation/manifests/codex-invocation-nonprose-manifest.json",
+        "sha256": "7e358c60fde3f0dbbf3a0cfa06cd636f17350cb9e7cc9ed42fda3b38a0164b61",
+        "version": "1",
+        "git_revision": "78de25fa38fbc8205b3227568199fbdf7612862d"
+      },
+      "authorization": {
+        "artifact": {
+          "path": "skill-studies/concise-writing/protocol.md",
+          "sha256": "af1fa7901a87cf9ce6c22b9b84771e5f36c838256797f6f97365cebe1bb41c9f",
+          "version": "1",
+          "git_revision": "78de25fa38fbc8205b3227568199fbdf7612862d"
+        },
+        "selector": "Batch: codex-discovery-focused-01; order 6"
+      },
+      "run_id": "20261021T154420787Z-cw-focused-codex-invocation-nonprose-description-existing-c64e1890-5db3-49ff-8cda-7a5547e45f44-cklgazwy",
+      "allocation": {
+        "pool": "subject",
+        "charge": 1
+      },
+      "limitations": [
+        "Exposed development case assessed by the Codex controller; cross-model review is supplemental. No causal or reliability inference from native counts."
+      ],
+      "bundle": {
+        "path": "/Users/simon/work/personal/skill-study-private/concise-writing/revised-body-discovery-20261018/subjects/20261021T154420787Z-cw-focused-codex-invocation-nonprose-description-existing-c64e1890-5db3-49ff-8cda-7a5547e45f44-cklgazwy",
+        "inventory": {
+          "path": "/Users/simon/work/personal/skill-study-private/concise-writing/revised-body-discovery-20261018/subjects/20261021T154420787Z-cw-focused-codex-invocation-nonprose-description-existing-c64e1890-5db3-49ff-8cda-7a5547e45f44-cklgazwy.inventory.json",
+          "sha256": "8fd67e406552c689f0295f84ba251969adf8610d4957a099f7d02940392e7307",
+          "version": "1"
+        },
+        "verified": true
+      },
+      "result": {
+        "result_id": "codex-discovery-focused-01-invocation-nonprose-description-existing-2-1-assessment",
+        "record": {
+          "path": "skill-studies/concise-writing/runs/revised-body-discovery-01/results/20261021T154420787Z-cw-focused-codex-invocation-nonprose-description-existing-c64e1890-5db3-49ff-8cda-7a5547e45f44-cklgazwy.json",
+          "sha256": "dc32584760d6cb239ca40b62e222a796db01bd37c996ac2866572b05dc45e779",
+          "version": "2"
+        }
+      }
+    },
+    {
+      "attempt_id": "codex-discovery-focused-01-invocation-nonprose-description-rewrite-3-1",
+      "case_id": "invocation-nonprose",
+      "condition": "description-rewrite",
+      "repetition": 3,
+      "attempt_number": 1,
+      "retry_of": null,
+      "manifest": {
+        "path": "skill-studies/concise-writing/runs/revised-body-discovery-01/preparation/manifests/codex-invocation-nonprose-manifest.json",
+        "sha256": "7e358c60fde3f0dbbf3a0cfa06cd636f17350cb9e7cc9ed42fda3b38a0164b61",
+        "version": "1",
+        "git_revision": "78de25fa38fbc8205b3227568199fbdf7612862d"
+      },
+      "authorization": {
+        "artifact": {
+          "path": "skill-studies/concise-writing/protocol.md",
+          "sha256": "af1fa7901a87cf9ce6c22b9b84771e5f36c838256797f6f97365cebe1bb41c9f",
+          "version": "1",
+          "git_revision": "78de25fa38fbc8205b3227568199fbdf7612862d"
+        },
+        "selector": "Batch: codex-discovery-focused-01; order 7"
+      },
+      "run_id": "20261021T154501933Z-cw-focused-codex-invocation-nonprose-description-rewrite-97090985-3b2f-4a96-8f23-dd80a64bbf39-z1s1pjvu",
+      "allocation": {
+        "pool": "subject",
+        "charge": 1
+      },
+      "limitations": [
+        "Exposed development case assessed by the Codex controller; cross-model review is supplemental. No causal or reliability inference from native counts."
+      ],
+      "bundle": {
+        "path": "/Users/simon/work/personal/skill-study-private/concise-writing/revised-body-discovery-20261018/subjects/20261021T154501933Z-cw-focused-codex-invocation-nonprose-description-rewrite-97090985-3b2f-4a96-8f23-dd80a64bbf39-z1s1pjvu",
+        "inventory": {
+          "path": "/Users/simon/work/personal/skill-study-private/concise-writing/revised-body-discovery-20261018/subjects/20261021T154501933Z-cw-focused-codex-invocation-nonprose-description-rewrite-97090985-3b2f-4a96-8f23-dd80a64bbf39-z1s1pjvu.inventory.json",
+          "sha256": "d6ccc5d4bf89c8f7be4f53f2335b0ed53ad05b50fff47faec8acde3dacb84b39",
+          "version": "1"
+        },
+        "verified": true
+      },
+      "result": {
+        "result_id": "codex-discovery-focused-01-invocation-nonprose-description-rewrite-3-1-assessment",
+        "record": {
+          "path": "skill-studies/concise-writing/runs/revised-body-discovery-01/results/20261021T154501933Z-cw-focused-codex-invocation-nonprose-description-rewrite-97090985-3b2f-4a96-8f23-dd80a64bbf39-z1s1pjvu.json",
+          "sha256": "5f872a75a1c2ec74f43a6c32274fed0a3b6dc28e06ed0cf27e41206fe31d4fa7",
+          "version": "2"
+        }
+      }
+    },
+    {
+      "attempt_id": "codex-discovery-focused-01-invocation-nonprose-description-existing-3-1",
+      "case_id": "invocation-nonprose",
+      "condition": "description-existing",
+      "repetition": 3,
+      "attempt_number": 1,
+      "retry_of": null,
+      "manifest": {
+        "path": "skill-studies/concise-writing/runs/revised-body-discovery-01/preparation/manifests/codex-invocation-nonprose-manifest.json",
+        "sha256": "7e358c60fde3f0dbbf3a0cfa06cd636f17350cb9e7cc9ed42fda3b38a0164b61",
+        "version": "1",
+        "git_revision": "78de25fa38fbc8205b3227568199fbdf7612862d"
+      },
+      "authorization": {
+        "artifact": {
+          "path": "skill-studies/concise-writing/protocol.md",
+          "sha256": "af1fa7901a87cf9ce6c22b9b84771e5f36c838256797f6f97365cebe1bb41c9f",
+          "version": "1",
+          "git_revision": "78de25fa38fbc8205b3227568199fbdf7612862d"
+        },
+        "selector": "Batch: codex-discovery-focused-01; order 8"
+      },
+      "run_id": "20261021T154855784Z-cw-focused-codex-invocation-nonprose-description-existing-3e12f8db-9e40-4ded-9ba2-3f07cfc0db7b-80w2l74c",
+      "allocation": {
+        "pool": "subject",
+        "charge": 1
+      },
+      "limitations": [
+        "Exposed development case assessed by the Codex controller; cross-model review is supplemental. No causal or reliability inference from native counts."
+      ],
+      "bundle": {
+        "path": "/Users/simon/work/personal/skill-study-private/concise-writing/revised-body-discovery-20261018/subjects/20261021T154855784Z-cw-focused-codex-invocation-nonprose-description-existing-3e12f8db-9e40-4ded-9ba2-3f07cfc0db7b-80w2l74c",
+        "inventory": {
+          "path": "/Users/simon/work/personal/skill-study-private/concise-writing/revised-body-discovery-20261018/subjects/20261021T154855784Z-cw-focused-codex-invocation-nonprose-description-existing-3e12f8db-9e40-4ded-9ba2-3f07cfc0db7b-80w2l74c.inventory.json",
+          "sha256": "94bc56b6c7d4c8aefbb1da9dc9cf50d1d84ecd9ee2feecdc6d150175ff8a087e",
+          "version": "1"
+        },
+        "verified": true
+      },
+      "result": {
+        "result_id": "codex-discovery-focused-01-invocation-nonprose-description-existing-3-1-assessment",
+        "record": {
+          "path": "skill-studies/concise-writing/runs/revised-body-discovery-01/results/20261021T154855784Z-cw-focused-codex-invocation-nonprose-description-existing-3e12f8db-9e40-4ded-9ba2-3f07cfc0db7b-80w2l74c.json",
+          "sha256": "7842cd8be6e79c0b98a29a0d628b527e73fb22abdb8e6ed37377be16604f05ce",
+          "version": "2"
+        }
+      }
+    },
+    {
+      "attempt_id": "codex-discovery-focused-01-invocation-nonprose-description-targeted-3-1",
+      "case_id": "invocation-nonprose",
+      "condition": "description-targeted",
+      "repetition": 3,
+      "attempt_number": 1,
+      "retry_of": null,
+      "manifest": {
+        "path": "skill-studies/concise-writing/runs/revised-body-discovery-01/preparation/manifests/codex-invocation-nonprose-manifest.json",
+        "sha256": "7e358c60fde3f0dbbf3a0cfa06cd636f17350cb9e7cc9ed42fda3b38a0164b61",
+        "version": "1",
+        "git_revision": "78de25fa38fbc8205b3227568199fbdf7612862d"
+      },
+      "authorization": {
+        "artifact": {
+          "path": "skill-studies/concise-writing/protocol.md",
+          "sha256": "af1fa7901a87cf9ce6c22b9b84771e5f36c838256797f6f97365cebe1bb41c9f",
+          "version": "1",
+          "git_revision": "78de25fa38fbc8205b3227568199fbdf7612862d"
+        },
+        "selector": "Batch: codex-discovery-focused-01; order 9"
+      },
+      "run_id": "20261021T154937634Z-cw-focused-codex-invocation-nonprose-description-targeted-a5fd59f4-788a-4ea2-b8c8-33bacdf1d03f-ssss3htb",
+      "allocation": {
+        "pool": "subject",
+        "charge": 1
+      },
+      "limitations": [
+        "Exposed development case assessed by the Codex controller; cross-model review is supplemental. No causal or reliability inference from native counts."
+      ],
+      "bundle": {
+        "path": "/Users/simon/work/personal/skill-study-private/concise-writing/revised-body-discovery-20261018/subjects/20261021T154937634Z-cw-focused-codex-invocation-nonprose-description-targeted-a5fd59f4-788a-4ea2-b8c8-33bacdf1d03f-ssss3htb",
+        "inventory": {
+          "path": "/Users/simon/work/personal/skill-study-private/concise-writing/revised-body-discovery-20261018/subjects/20261021T154937634Z-cw-focused-codex-invocation-nonprose-description-targeted-a5fd59f4-788a-4ea2-b8c8-33bacdf1d03f-ssss3htb.inventory.json",
+          "sha256": "bcf9450e5661d5b5ccbf20cbfca3db416370a4c4ec210aa0c55eb00b8e490576",
+          "version": "1"
+        },
+        "verified": true
+      },
+      "result": {
+        "result_id": "codex-discovery-focused-01-invocation-nonprose-description-targeted-3-1-assessment",
+        "record": {
+          "path": "skill-studies/concise-writing/runs/revised-body-discovery-01/results/20261021T154937634Z-cw-focused-codex-invocation-nonprose-description-targeted-a5fd59f4-788a-4ea2-b8c8-33bacdf1d03f-ssss3htb.json",
+          "sha256": "3c1a8109c166fdcdcf33319227f1838d5658ebc3e1c40cf0387f28be9e189d40",
+          "version": "2"
+        }
+      }
+    },
+    {
+      "attempt_id": "codex-discovery-focused-01-invocation-nonprose-description-existing-4-1",
+      "case_id": "invocation-nonprose",
+      "condition": "description-existing",
+      "repetition": 4,
+      "attempt_number": 1,
+      "retry_of": null,
+      "manifest": {
+        "path": "skill-studies/concise-writing/runs/revised-body-discovery-01/preparation/manifests/codex-invocation-nonprose-manifest.json",
+        "sha256": "7e358c60fde3f0dbbf3a0cfa06cd636f17350cb9e7cc9ed42fda3b38a0164b61",
+        "version": "1",
+        "git_revision": "78de25fa38fbc8205b3227568199fbdf7612862d"
+      },
+      "authorization": {
+        "artifact": {
+          "path": "skill-studies/concise-writing/protocol.md",
+          "sha256": "af1fa7901a87cf9ce6c22b9b84771e5f36c838256797f6f97365cebe1bb41c9f",
+          "version": "1",
+          "git_revision": "78de25fa38fbc8205b3227568199fbdf7612862d"
+        },
+        "selector": "Batch: codex-discovery-focused-01; order 10"
+      },
+      "run_id": "20261021T155015992Z-cw-focused-codex-invocation-nonprose-description-existing-0fef15fa-55fb-483f-bf5a-2e26a1b21d6f-zz_puzw8",
+      "allocation": {
+        "pool": "subject",
+        "charge": 1
+      },
+      "limitations": [
+        "Exposed development case assessed by the Codex controller; cross-model review is supplemental. No causal or reliability inference from native counts."
+      ],
+      "bundle": {
+        "path": "/Users/simon/work/personal/skill-study-private/concise-writing/revised-body-discovery-20261018/subjects/20261021T155015992Z-cw-focused-codex-invocation-nonprose-description-existing-0fef15fa-55fb-483f-bf5a-2e26a1b21d6f-zz_puzw8",
+        "inventory": {
+          "path": "/Users/simon/work/personal/skill-study-private/concise-writing/revised-body-discovery-20261018/subjects/20261021T155015992Z-cw-focused-codex-invocation-nonprose-description-existing-0fef15fa-55fb-483f-bf5a-2e26a1b21d6f-zz_puzw8.inventory.json",
+          "sha256": "c465cb4b60d58b7a2cbf20b76d41f3336d448b6730bc5853ccea074369140184",
+          "version": "1"
+        },
+        "verified": true
+      },
+      "result": {
+        "result_id": "codex-discovery-focused-01-invocation-nonprose-description-existing-4-1-assessment",
+        "record": {
+          "path": "skill-studies/concise-writing/runs/revised-body-discovery-01/results/20261021T155015992Z-cw-focused-codex-invocation-nonprose-description-existing-0fef15fa-55fb-483f-bf5a-2e26a1b21d6f-zz_puzw8.json",
+          "sha256": "d8ace464060616a98ba177912710988a57ec9a8c111f1fa8eabb85e14328cae4",
+          "version": "2"
+        }
+      }
+    },
+    {
+      "attempt_id": "codex-discovery-focused-01-invocation-nonprose-description-targeted-4-1",
+      "case_id": "invocation-nonprose",
+      "condition": "description-targeted",
+      "repetition": 4,
+      "attempt_number": 1,
+      "retry_of": null,
+      "manifest": {
+        "path": "skill-studies/concise-writing/runs/revised-body-discovery-01/preparation/manifests/codex-invocation-nonprose-manifest.json",
+        "sha256": "7e358c60fde3f0dbbf3a0cfa06cd636f17350cb9e7cc9ed42fda3b38a0164b61",
+        "version": "1",
+        "git_revision": "78de25fa38fbc8205b3227568199fbdf7612862d"
+      },
+      "authorization": {
+        "artifact": {
+          "path": "skill-studies/concise-writing/protocol.md",
+          "sha256": "af1fa7901a87cf9ce6c22b9b84771e5f36c838256797f6f97365cebe1bb41c9f",
+          "version": "1",
+          "git_revision": "78de25fa38fbc8205b3227568199fbdf7612862d"
+        },
+        "selector": "Batch: codex-discovery-focused-01; order 11"
+      },
+      "run_id": "20261021T155350288Z-cw-focused-codex-invocation-nonprose-description-targeted-5ceb1491-e144-4f78-988e-672ad245e880-1d1105fs",
+      "allocation": {
+        "pool": "subject",
+        "charge": 1
+      },
+      "limitations": [
+        "Exposed development case assessed by the Codex controller; cross-model review is supplemental. No causal or reliability inference from native counts."
+      ],
+      "bundle": {
+        "path": "/Users/simon/work/personal/skill-study-private/concise-writing/revised-body-discovery-20261018/subjects/20261021T155350288Z-cw-focused-codex-invocation-nonprose-description-targeted-5ceb1491-e144-4f78-988e-672ad245e880-1d1105fs",
+        "inventory": {
+          "path": "/Users/simon/work/personal/skill-study-private/concise-writing/revised-body-discovery-20261018/subjects/20261021T155350288Z-cw-focused-codex-invocation-nonprose-description-targeted-5ceb1491-e144-4f78-988e-672ad245e880-1d1105fs.inventory.json",
+          "sha256": "9ef3289602f9db8af459fbc27bafe2e115aa5e178bea94fa50166d40fe536c33",
+          "version": "1"
+        },
+        "verified": true
+      },
+      "result": {
+        "result_id": "codex-discovery-focused-01-invocation-nonprose-description-targeted-4-1-assessment",
+        "record": {
+          "path": "skill-studies/concise-writing/runs/revised-body-discovery-01/results/20261021T155350288Z-cw-focused-codex-invocation-nonprose-description-targeted-5ceb1491-e144-4f78-988e-672ad245e880-1d1105fs.json",
+          "sha256": "806186479a968acfce168b058ce5b8f110f47aac6315876202542defde3da477",
+          "version": "2"
+        }
+      }
+    },
+    {
+      "attempt_id": "codex-discovery-focused-01-invocation-nonprose-description-rewrite-4-1",
+      "case_id": "invocation-nonprose",
+      "condition": "description-rewrite",
+      "repetition": 4,
+      "attempt_number": 1,
+      "retry_of": null,
+      "manifest": {
+        "path": "skill-studies/concise-writing/runs/revised-body-discovery-01/preparation/manifests/codex-invocation-nonprose-manifest.json",
+        "sha256": "7e358c60fde3f0dbbf3a0cfa06cd636f17350cb9e7cc9ed42fda3b38a0164b61",
+        "version": "1",
+        "git_revision": "78de25fa38fbc8205b3227568199fbdf7612862d"
+      },
+      "authorization": {
+        "artifact": {
+          "path": "skill-studies/concise-writing/protocol.md",
+          "sha256": "af1fa7901a87cf9ce6c22b9b84771e5f36c838256797f6f97365cebe1bb41c9f",
+          "version": "1",
+          "git_revision": "78de25fa38fbc8205b3227568199fbdf7612862d"
+        },
+        "selector": "Batch: codex-discovery-focused-01; order 12"
+      },
+      "run_id": "20261021T155420652Z-cw-focused-codex-invocation-nonprose-description-rewrite-9317499f-343b-4d0f-a2f7-91ae4ee1edfe-vz4v28_q",
+      "allocation": {
+        "pool": "subject",
+        "charge": 1
+      },
+      "limitations": [
+        "Exposed development case assessed by the Codex controller; cross-model review is supplemental. No causal or reliability inference from native counts."
+      ],
+      "bundle": {
+        "path": "/Users/simon/work/personal/skill-study-private/concise-writing/revised-body-discovery-20261018/subjects/20261021T155420652Z-cw-focused-codex-invocation-nonprose-description-rewrite-9317499f-343b-4d0f-a2f7-91ae4ee1edfe-vz4v28_q",
+        "inventory": {
+          "path": "/Users/simon/work/personal/skill-study-private/concise-writing/revised-body-discovery-20261018/subjects/20261021T155420652Z-cw-focused-codex-invocation-nonprose-description-rewrite-9317499f-343b-4d0f-a2f7-91ae4ee1edfe-vz4v28_q.inventory.json",
+          "sha256": "7fb290a467c87aa323be961d1b57c8eb0f60d9fd159aec9bfdb1e49a6e4c2543",
+          "version": "1"
+        },
+        "verified": true
+      },
+      "result": {
+        "result_id": "codex-discovery-focused-01-invocation-nonprose-description-rewrite-4-1-assessment",
+        "record": {
+          "path": "skill-studies/concise-writing/runs/revised-body-discovery-01/results/20261021T155420652Z-cw-focused-codex-invocation-nonprose-description-rewrite-9317499f-343b-4d0f-a2f7-91ae4ee1edfe-vz4v28_q.json",
+          "sha256": "8f85c69f713ae6da2ec7febe68600922a416c5a54335db4a8d6b1ceb6f8a3bfa",
+          "version": "2"
+        }
+      }
+    },
+    {
+      "attempt_id": "codex-discovery-focused-01-invocation-nonprose-description-targeted-5-1",
+      "case_id": "invocation-nonprose",
+      "condition": "description-targeted",
+      "repetition": 5,
+      "attempt_number": 1,
+      "retry_of": null,
+      "manifest": {
+        "path": "skill-studies/concise-writing/runs/revised-body-discovery-01/preparation/manifests/codex-invocation-nonprose-manifest.json",
+        "sha256": "7e358c60fde3f0dbbf3a0cfa06cd636f17350cb9e7cc9ed42fda3b38a0164b61",
+        "version": "1",
+        "git_revision": "78de25fa38fbc8205b3227568199fbdf7612862d"
+      },
+      "authorization": {
+        "artifact": {
+          "path": "skill-studies/concise-writing/protocol.md",
+          "sha256": "af1fa7901a87cf9ce6c22b9b84771e5f36c838256797f6f97365cebe1bb41c9f",
+          "version": "1",
+          "git_revision": "78de25fa38fbc8205b3227568199fbdf7612862d"
+        },
+        "selector": "Batch: codex-discovery-focused-01; order 13"
+      },
+      "run_id": "20261021T155449925Z-cw-focused-codex-invocation-nonprose-description-targeted-4b609a0c-6dce-4608-85fc-e598e174e7fb-ysg1ifyz",
+      "allocation": {
+        "pool": "subject",
+        "charge": 1
+      },
+      "limitations": [
+        "Exposed development case assessed by the Codex controller; cross-model review is supplemental. No causal or reliability inference from native counts."
+      ],
+      "bundle": {
+        "path": "/Users/simon/work/personal/skill-study-private/concise-writing/revised-body-discovery-20261018/subjects/20261021T155449925Z-cw-focused-codex-invocation-nonprose-description-targeted-4b609a0c-6dce-4608-85fc-e598e174e7fb-ysg1ifyz",
+        "inventory": {
+          "path": "/Users/simon/work/personal/skill-study-private/concise-writing/revised-body-discovery-20261018/subjects/20261021T155449925Z-cw-focused-codex-invocation-nonprose-description-targeted-4b609a0c-6dce-4608-85fc-e598e174e7fb-ysg1ifyz.inventory.json",
+          "sha256": "4aedb6da2e676b8087663bfc629e49972e11ce71b7b14b1a86d87629f44574e0",
+          "version": "1"
+        },
+        "verified": true
+      },
+      "result": {
+        "result_id": "codex-discovery-focused-01-invocation-nonprose-description-targeted-5-1-assessment",
+        "record": {
+          "path": "skill-studies/concise-writing/runs/revised-body-discovery-01/results/20261021T155449925Z-cw-focused-codex-invocation-nonprose-description-targeted-4b609a0c-6dce-4608-85fc-e598e174e7fb-ysg1ifyz.json",
+          "sha256": "080f845f7018229263f382baf9276e50c46664281d999d5424269927f27035b5",
+          "version": "2"
+        }
+      }
+    },
+    {
+      "attempt_id": "codex-discovery-focused-01-invocation-nonprose-description-rewrite-5-1",
+      "case_id": "invocation-nonprose",
+      "condition": "description-rewrite",
+      "repetition": 5,
+      "attempt_number": 1,
+      "retry_of": null,
+      "manifest": {
+        "path": "skill-studies/concise-writing/runs/revised-body-discovery-01/preparation/manifests/codex-invocation-nonprose-manifest.json",
+        "sha256": "7e358c60fde3f0dbbf3a0cfa06cd636f17350cb9e7cc9ed42fda3b38a0164b61",
+        "version": "1",
+        "git_revision": "78de25fa38fbc8205b3227568199fbdf7612862d"
+      },
+      "authorization": {
+        "artifact": {
+          "path": "skill-studies/concise-writing/protocol.md",
+          "sha256": "af1fa7901a87cf9ce6c22b9b84771e5f36c838256797f6f97365cebe1bb41c9f",
+          "version": "1",
+          "git_revision": "78de25fa38fbc8205b3227568199fbdf7612862d"
+        },
+        "selector": "Batch: codex-discovery-focused-01; order 14"
+      },
+      "run_id": "20261021T155853910Z-cw-focused-codex-invocation-nonprose-description-rewrite-8d8ccd28-aa16-4115-b0dd-d479c9548e27-6g5pukus",
+      "allocation": {
+        "pool": "subject",
+        "charge": 1
+      },
+      "limitations": [
+        "Exposed development case assessed by the Codex controller; cross-model review is supplemental. No causal or reliability inference from native counts."
+      ],
+      "bundle": {
+        "path": "/Users/simon/work/personal/skill-study-private/concise-writing/revised-body-discovery-20261018/subjects/20261021T155853910Z-cw-focused-codex-invocation-nonprose-description-rewrite-8d8ccd28-aa16-4115-b0dd-d479c9548e27-6g5pukus",
+        "inventory": {
+          "path": "/Users/simon/work/personal/skill-study-private/concise-writing/revised-body-discovery-20261018/subjects/20261021T155853910Z-cw-focused-codex-invocation-nonprose-description-rewrite-8d8ccd28-aa16-4115-b0dd-d479c9548e27-6g5pukus.inventory.json",
+          "sha256": "0702c3806af30908f4849f3ec1f460eeb48936fe750f3fb5623ee71609ad504b",
+          "version": "1"
+        },
+        "verified": true
+      },
+      "result": {
+        "result_id": "codex-discovery-focused-01-invocation-nonprose-description-rewrite-5-1-assessment",
+        "record": {
+          "path": "skill-studies/concise-writing/runs/revised-body-discovery-01/results/20261021T155853910Z-cw-focused-codex-invocation-nonprose-description-rewrite-8d8ccd28-aa16-4115-b0dd-d479c9548e27-6g5pukus.json",
+          "sha256": "14b13a3d15391c8c7e44d197f600a8fea3f0dc73c1c184fd24cca895e716a869",
+          "version": "2"
+        }
+      }
+    },
+    {
+      "attempt_id": "codex-discovery-focused-01-invocation-nonprose-description-existing-5-1",
+      "case_id": "invocation-nonprose",
+      "condition": "description-existing",
+      "repetition": 5,
+      "attempt_number": 1,
+      "retry_of": null,
+      "manifest": {
+        "path": "skill-studies/concise-writing/runs/revised-body-discovery-01/preparation/manifests/codex-invocation-nonprose-manifest.json",
+        "sha256": "7e358c60fde3f0dbbf3a0cfa06cd636f17350cb9e7cc9ed42fda3b38a0164b61",
+        "version": "1",
+        "git_revision": "78de25fa38fbc8205b3227568199fbdf7612862d"
+      },
+      "authorization": {
+        "artifact": {
+          "path": "skill-studies/concise-writing/protocol.md",
+          "sha256": "af1fa7901a87cf9ce6c22b9b84771e5f36c838256797f6f97365cebe1bb41c9f",
+          "version": "1",
+          "git_revision": "78de25fa38fbc8205b3227568199fbdf7612862d"
+        },
+        "selector": "Batch: codex-discovery-focused-01; order 15"
+      },
+      "run_id": "20261021T155927378Z-cw-focused-codex-invocation-nonprose-description-existing-52a5eade-80d4-41a7-ac5c-a810c375dcf6-_9vb0em6",
+      "allocation": {
+        "pool": "subject",
+        "charge": 1
+      },
+      "limitations": [
+        "Exposed development case assessed by the Codex controller; cross-model review is supplemental. No causal or reliability inference from native counts."
+      ],
+      "bundle": {
+        "path": "/Users/simon/work/personal/skill-study-private/concise-writing/revised-body-discovery-20261018/subjects/20261021T155927378Z-cw-focused-codex-invocation-nonprose-description-existing-52a5eade-80d4-41a7-ac5c-a810c375dcf6-_9vb0em6",
+        "inventory": {
+          "path": "/Users/simon/work/personal/skill-study-private/concise-writing/revised-body-discovery-20261018/subjects/20261021T155927378Z-cw-focused-codex-invocation-nonprose-description-existing-52a5eade-80d4-41a7-ac5c-a810c375dcf6-_9vb0em6.inventory.json",
+          "sha256": "e0d066fe3123b17963531924b93d3260addfbc60ba32c52be0bd47f57473da12",
+          "version": "1"
+        },
+        "verified": true
+      },
+      "result": {
+        "result_id": "codex-discovery-focused-01-invocation-nonprose-description-existing-5-1-assessment",
+        "record": {
+          "path": "skill-studies/concise-writing/runs/revised-body-discovery-01/results/20261021T155927378Z-cw-focused-codex-invocation-nonprose-description-existing-52a5eade-80d4-41a7-ac5c-a810c375dcf6-_9vb0em6.json",
+          "sha256": "7bd277300beef1779da5f190cd793f4374fcdb8745d465badd87ded3059adee5",
+          "version": "2"
+        }
+      }
+    }
+  ]
 }

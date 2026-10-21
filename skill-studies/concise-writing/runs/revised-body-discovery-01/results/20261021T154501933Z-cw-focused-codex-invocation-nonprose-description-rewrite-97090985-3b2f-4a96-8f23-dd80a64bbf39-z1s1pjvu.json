@@ -1,0 +1,144 @@
+{
+  "schema_version": "2",
+  "record_kind": "execution result",
+  "result_id": "codex-discovery-focused-01-invocation-nonprose-description-rewrite-3-1-assessment",
+  "assessed_at": "2026-10-21T15:48:55.488590+00:00",
+  "run_id": "20261021T154501933Z-cw-focused-codex-invocation-nonprose-description-rewrite-97090985-3b2f-4a96-8f23-dd80a64bbf39-z1s1pjvu",
+  "condition": "description-rewrite",
+  "assessor": {
+    "name": "Codex active session",
+    "method": "active session",
+    "model": null,
+    "session_id": null,
+    "context": "Same Codex controller authored/reviewed exposed development variants and directly judged complete outputs; no blind, held-out or independent assessor claim. Separate Opus review supplements this."
+  },
+  "manifest": {
+    "path": "skill-studies/concise-writing/runs/revised-body-discovery-01/preparation/manifests/codex-invocation-nonprose-manifest.json",
+    "sha256": "7e358c60fde3f0dbbf3a0cfa06cd636f17350cb9e7cc9ed42fda3b38a0164b61",
+    "version": "1",
+    "git_revision": "78de25fa38fbc8205b3227568199fbdf7612862d"
+  },
+  "evidence": [
+    {
+      "id": "output",
+      "artifact": {
+        "path": "/Users/simon/work/personal/skill-study-private/concise-writing/revised-body-discovery-20261018/subjects/20261021T154501933Z-cw-focused-codex-invocation-nonprose-description-rewrite-97090985-3b2f-4a96-8f23-dd80a64bbf39-z1s1pjvu/workspace/fixture/settings.toml",
+        "sha256": "9cdef29c80346b6a4d90eb85a6612160a702925e9635c1b0b537b67afe3dd071",
+        "version": null
+      },
+      "selector": "Complete artifact"
+    },
+    {
+      "id": "trace",
+      "artifact": {
+        "path": "/Users/simon/work/personal/skill-study-private/concise-writing/revised-body-discovery-20261018/subjects/20261021T154501933Z-cw-focused-codex-invocation-nonprose-description-rewrite-97090985-3b2f-4a96-8f23-dd80a64bbf39-z1s1pjvu/provider-session.jsonl",
+        "sha256": "cf058345f7fd6bf3777ed92daf8cd616c14b61d77fc94478a70b60fae2df3afa",
+        "version": null
+      },
+      "selector": "Complete artifact"
+    },
+    {
+      "id": "mechanical",
+      "artifact": {
+        "path": "/Users/simon/work/personal/skill-study-private/concise-writing/revised-body-discovery-20261018/subjects/20261021T154501933Z-cw-focused-codex-invocation-nonprose-description-rewrite-97090985-3b2f-4a96-8f23-dd80a64bbf39-z1s1pjvu/result.json",
+        "sha256": "0b4f84f22ad2d3a508210a4cf1bc156ef75e4bf5bdc8156898ad7523e9e1d652",
+        "version": null
+      },
+      "selector": "Complete artifact"
+    },
+    {
+      "id": "log",
+      "artifact": {
+        "path": "/Users/simon/work/personal/skill-study-private/concise-writing/revised-body-discovery-20261018/subjects/20261021T154501933Z-cw-focused-codex-invocation-nonprose-description-rewrite-97090985-3b2f-4a96-8f23-dd80a64bbf39-z1s1pjvu/runner.log",
+        "sha256": "3fddf4edd59617147af542b2e1c53968af38e5f0b4a78e1952b800047d6f9ecf",
+        "version": null
+      },
+      "selector": "Complete artifact"
+    },
+    {
+      "id": "final",
+      "artifact": {
+        "path": "/Users/simon/work/personal/skill-study-private/concise-writing/revised-body-discovery-20261018/subjects/20261021T154501933Z-cw-focused-codex-invocation-nonprose-description-rewrite-97090985-3b2f-4a96-8f23-dd80a64bbf39-z1s1pjvu/final.txt",
+        "sha256": "ed251864987c367e9641fbdc89c1d83e9bf0fa2e3eecef8f301c79f619bfac81",
+        "version": null
+      },
+      "selector": "Complete artifact"
+    },
+    {
+      "id": "source-0",
+      "artifact": {
+        "path": "skill-studies/concise-writing/cases/invocation-nonprose/fixture/settings.toml",
+        "sha256": "38f8a9ddd2d83dc10d2f3681c0e56663d2fa9907c16e105bcc4d7f3fb387158c",
+        "version": null,
+        "git_revision": "08ec3eee2b57037d52bc7f04edcd8e42736384cd"
+      },
+      "selector": "Complete frozen settings.toml"
+    },
+    {
+      "id": "source-1",
+      "artifact": {
+        "path": "skill-studies/concise-writing/cases/invocation-nonprose/task.md",
+        "sha256": "8c960258723b03e87cfdae2fbfbd576c4ff4299206f02c87dcd50e9026c80733",
+        "version": null,
+        "git_revision": "08ec3eee2b57037d52bc7f04edcd8e42736384cd"
+      },
+      "selector": "Complete frozen TASK.md"
+    },
+    {
+      "id": "task-mechanical",
+      "artifact": {
+        "path": "/Users/simon/work/personal/skill-study-private/concise-writing/revised-body-discovery-20261018/mechanical/097.json",
+        "sha256": "3c25aeae4380b78f12eb2243c4a30fa3b5bf7f5a4fe7f2704bbdbf5a66aeebb2",
+        "version": null
+      },
+      "selector": "Complete saved parse/token or numeric/reply observation; no subject code execution"
+    }
+  ],
+  "setup": {
+    "status": "valid",
+    "reason": "Fixed provider/model/CLI and retained inventory verified. Native skill available; complete assigned body before first edit: True. Protected input bytes unchanged.",
+    "evidence": [
+      "mechanical",
+      "trace",
+      "log"
+    ]
+  },
+  "criteria": [
+    {
+      "id": "D1",
+      "dimension": "procedural",
+      "judgment": "not met",
+      "reason": "Call 24 delivers the full rewritten-description skill before TASK.md and before the numeric edit; the complete trace confirms an unwanted CW load for N3.",
+      "consequence": "Selection is reported separately from artifact quality.",
+      "evidence": [
+        "trace",
+        "log"
+      ]
+    }
+  ],
+  "functional_result": "not measured",
+  "procedural_summary": "Fixed provider/model/CLI and retained inventory verified. Native skill available; complete assigned body before first edit: True. Protected input bytes unchanged. O4/O5 remain unscored; native D1 is distinct from functional outcome.",
+  "observations": [
+    {
+      "dimension": "procedural",
+      "description": "Length not applicable to numeric-only task.",
+      "consequence": "Descriptive counts only.",
+      "evidence": [
+        "output",
+        "source-0",
+        "source-1"
+      ]
+    },
+    {
+      "dimension": "procedural",
+      "description": "Only the required numeric bytes change. The subject anticipates text editing before seeing the task and emits two progress messages plus Done., so the literal-only reply is not met. CW functional effectiveness is not measured here.",
+      "consequence": "Qualitative comparison is separate from threshold counts.",
+      "evidence": [
+        "output",
+        "source-0",
+        "source-1"
+      ]
+    }
+  ],
+  "uncertainty": []
+}
