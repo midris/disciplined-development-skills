@@ -3,5 +3,54 @@
   "index_id": "concise-writing-claude-discovery-focused-01",
   "study_id": "concise-writing",
   "batch_id": "claude-discovery-focused-01",
-  "attempts": []
+  "attempts": [
+    {
+      "attempt_id": "claude-discovery-focused-01-invocation-nonprose-description-rewrite-1-1",
+      "case_id": "invocation-nonprose",
+      "condition": "description-rewrite",
+      "repetition": 1,
+      "attempt_number": 1,
+      "retry_of": null,
+      "manifest": {
+        "path": "skill-studies/concise-writing/runs/revised-body-discovery-01/preparation/manifests/claude-invocation-nonprose-manifest.json",
+        "sha256": "a39088b445a4eec88d2be704ca6490bdc2667f25f59f1d330604cb69f8cb6848",
+        "version": "1",
+        "git_revision": "451ef56ad2eb49a707442e70e8c88670bc7320a4"
+      },
+      "authorization": {
+        "artifact": {
+          "path": "skill-studies/concise-writing/protocol.md",
+          "sha256": "fef3eca928e3bf0a4932e059ff6b0895bd19770d7294f32becb76b76bb188710",
+          "version": "1",
+          "git_revision": "451ef56ad2eb49a707442e70e8c88670bc7320a4"
+        },
+        "selector": "Batch: claude-discovery-focused-01; order 1"
+      },
+      "run_id": "20261021T162959267Z-cw-focused-claude-invocation-nonprose-description-rewrite-7f5630d9-f630-4b57-ba5a-9200e7a7ea4e-2rd3twb7",
+      "allocation": {
+        "pool": "subject",
+        "charge": 1
+      },
+      "limitations": [
+        "Exposed development case assessed by the Codex controller; cross-model review is supplemental. No causal or reliability inference from native counts."
+      ],
+      "bundle": {
+        "path": "/Users/simon/work/personal/skill-study-private/concise-writing/revised-body-discovery-20261018/subjects/20261021T162959267Z-cw-focused-claude-invocation-nonprose-description-rewrite-7f5630d9-f630-4b57-ba5a-9200e7a7ea4e-2rd3twb7",
+        "inventory": {
+          "path": "/Users/simon/work/personal/skill-study-private/concise-writing/revised-body-discovery-20261018/subjects/20261021T162959267Z-cw-focused-claude-invocation-nonprose-description-rewrite-7f5630d9-f630-4b57-ba5a-9200e7a7ea4e-2rd3twb7.inventory.json",
+          "sha256": "61647afcb0013e26430465073683c0967ea429cf42e09ed734bbc9c472ba3954",
+          "version": "1"
+        },
+        "verified": true
+      },
+      "result": {
+        "result_id": "claude-discovery-focused-01-invocation-nonprose-description-rewrite-1-1-assessment",
+        "record": {
+          "path": "skill-studies/concise-writing/runs/revised-body-discovery-01/results/20261021T162959267Z-cw-focused-claude-invocation-nonprose-description-rewrite-7f5630d9-f630-4b57-ba5a-9200e7a7ea4e-2rd3twb7.json",
+          "sha256": "84c274d0978bda36f427557746eea7983e7bfa94b5efdc4b12860000bf99eb1e",
+          "version": "2"
+        }
+      }
+    }
+  ]
 }

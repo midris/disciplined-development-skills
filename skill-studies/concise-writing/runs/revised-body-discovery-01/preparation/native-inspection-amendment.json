@@ -1,0 +1,42 @@
+{
+  "created_at": "2026-10-21T16:45:37.555375+00:00",
+  "scope": "Claude native catalog inspection only; subject inputs and criteria unchanged",
+  "first_subject_global_order": 121,
+  "first_subject_preserved": true,
+  "new_subject_calls": 0,
+  "new_evaluator_calls": 0,
+  "retries": 0,
+  "regression": "old inspector rejects valid name-only init; amended inspector replays retained subject successfully",
+  "offline_catalog_tests": 7,
+  "exact_description_qualification_replays": 3,
+  "runner_suite": {
+    "passed": 477,
+    "failed": 6,
+    "non_process_smoke_passed": 332,
+    "process_smoke_passed": 145,
+    "process_smoke_failed": 6,
+    "limitation": "Known Apple-launcher dummy-provider cache warnings; tracked in plan; no runner source changed"
+  },
+  "evidence": {
+    "path": "/Users/simon/work/personal/skill-study-private/concise-writing/revised-body-discovery-20261018/inspection-amendment-20261021",
+    "inventory": {
+      "path": "/Users/simon/work/personal/skill-study-private/concise-writing/revised-body-discovery-20261018/inspection-amendment-20261021.inventory.json",
+      "sha256": "7538086851c580adc33cc9cd68ee1a923595880ba5e35dddfa819cba073192ed",
+      "version": "1"
+    }
+  },
+  "controller_sources": [
+    {
+      "path": "skill-studies/concise-writing/runs/revised-body-discovery-01/preparation/inspect_one.py",
+      "sha256": "28a237c3b7cb8adc5f22f65caa0b296c0ef9f9ffce53cc7ef595af7e3c7b37b3"
+    },
+    {
+      "path": "skill-studies/concise-writing/runs/revised-body-discovery-01/preparation/inspect_native_v2.py",
+      "sha256": "5aa940ed5a7397c86231caac269f1b054ab9635750b66febb6d44c43945224a1"
+    },
+    {
+      "path": "skill-studies/concise-writing/runs/revised-body-discovery-01/preparation/claude_catalog.py",
+      "sha256": "1af2b5db4f8bd99a49855e9511306d92cf6c13ed94aa1d7c4958d9d770f184fa"
+    }
+  ]
+}
