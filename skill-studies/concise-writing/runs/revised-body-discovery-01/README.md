@@ -6,7 +6,7 @@ Subject indexes and per-execution results belong to this collection; the prior t
 
 Codex manifests freeze subject/controller inputs at preparation revision `08ec3eee2b57037d52bc7f04edcd8e42736384cd`.
 The [readiness evidence](preparation/codex-readiness-20261021.json) records passing Codex body and discovery collection checks; the fixed schedule still requires completion of all ninety body slots before discovery.
-Claude manifests freeze inputs at revision `dcb8aba30fcbb28563f6db6965d8abb607fd0d97`; [Claude readiness](preparation/claude-readiness-20261021.json) records both passing scopes.
+Claude body manifests freeze inputs at revision `dcb8aba30fcbb28563f6db6965d8abb607fd0d97`; [Claude readiness](preparation/claude-readiness-20261021.json) records both passing scopes.
 The protocol owns accepted runtime strata and collection authority.
 
 [Length observations](length-observations.json) give descriptive per-output counts, signed changes and longer flags where applicable; they do not supply semantic grades.
@@ -19,3 +19,5 @@ The [Codex discovery assessment](codex-discovery-focused-01-assessment.md) links
 
 The [Claude native-inspection amendment](preparation/native-inspection-amendment.md) records the name-only init correction and evidence limits.
 For Claude discovery after the first invocation, use [inspector v2](preparation/inspect_native_v2.py); the two native manifests freeze that controller-only amendment at `835a41fab005d537ee34c8bb9f056409678fa3cc`, with identical subject inputs and criteria.
+
+The [Claude discovery assessment](claude-discovery-focused-01-assessment.md) links the final [index](claude-discovery-focused-01-run-index.json), separate selection/task outcomes and the observed description trade-off across providers.

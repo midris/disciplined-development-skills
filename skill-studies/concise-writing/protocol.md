@@ -3,7 +3,7 @@
 Format version: `1`
 Study ID: `concise-writing`
 Status: all 150 focused subjects are complete, retained and directly assessed, with five repetitions per selected case/condition/provider.
-Current action: publish the Claude discovery assessment and freeze the ten allocated Opus 5.5 medium review packets, then review all 150 outputs and reconcile the comparisons. Subject capacity is exhausted; later regression and replacement calls remain unapproved.
+Current action: freeze the ten allocated Opus 5.5 medium review packets, then review all 150 outputs and reconcile the comparisons. Subject capacity is exhausted; later regression and replacement calls remain unapproved.
 Both runtimes remain qualified, with no setup exclusions or retries.
 The first Claude discovery subject is complete and assessed after correcting a name-only-init inspection error through retained-evidence replay; it was not repeated.
 The [Codex discovery assessment](runs/revised-body-discovery-01/codex-discovery-focused-01-assessment.md) separates body delivery, comment quality and numeric-task observations.
@@ -965,7 +965,7 @@ Runtime: pinned existing CLI/model/toolchain, qualified before dispatch; body co
 Acceptance: complete fixed-stage descriptive outcomes with concrete source/output evidence; no reliability threshold, word-count gate or forced failure on a disputed paraphrase.
 Include all valid-setup executions regardless of outcome. No automatic retry; disclose exclusions, uncertainty and unattempted slots.
 Stop on infrastructure, contamination, capture/retention failure, input/runtime drift or uncertain charge; retain every valid behavioral miss.
-Record: [index](runs/revised-body-discovery-01/claude-discovery-focused-01-run-index.json).
+Record: [index](runs/revised-body-discovery-01/claude-discovery-focused-01-run-index.json), [assessment](runs/revised-body-discovery-01/claude-discovery-focused-01-assessment.md).
 Global ordering: all 90 body subjects precede all 60 discovery subjects; [schedule](runs/revised-body-discovery-01/preparation/schedule.json).
 
 | Order | Case | Condition | Repetition | CONFIG |
@@ -1196,23 +1196,32 @@ A later diagnosis or rewrite needs its own bounded estimate and any new model-ca
 
 ## Results and decision
 
-### Focused discovery: Codex provider stratum
+### Focused discovery: completed provider strata
 
-The [Codex discovery assessment](runs/revised-body-discovery-01/codex-discovery-focused-01-assessment.md) pins thirty directly assessed executions, five per description/case, without exclusions or retries.
+The [Codex](runs/revised-body-discovery-01/codex-discovery-focused-01-assessment.md) and [Claude](runs/revised-body-discovery-01/claude-discovery-focused-01-assessment.md) discovery assessments pin sixty directly assessed executions, five per description/case/provider, without exclusions or retries.
 
-| Description | N4 timely full loads | N4 functional passes | N3 body non-loads (D1 met) | N3 full body loads |
+| Provider / description | N4 timely full loads | N4 functional passes | N3 body non-loads (D1 met) | N3 full body loads |
 | --- | ---: | ---: | ---: | ---: |
-| Existing | 5/5 | 5/5 | 4/5 | 1/5 |
-| Targeted | 5/5 | 5/5 | 0/5 | 5/5 |
-| Rewritten | 5/5 | 5/5 | 0/5 | 5/5 |
+| Codex / existing | 5/5 | 5/5 | 4/5 | 1/5 |
+| Codex / targeted | 5/5 | 5/5 | 0/5 | 5/5 |
+| Codex / rewritten | 5/5 | 5/5 | 0/5 | 5/5 |
+| Claude / existing | 0/5 | 5/5 | 5/5 | 0/5 |
+| Claude / targeted | 3/5 | 5/5 | 5/5 | 0/5 |
+| Claude / rewritten | 5/5 | 5/5 | 5/5 | 0/5 |
 
-One existing-description non-load follows a denied parent search that prevents a planned CW read; it meets the fixed delivery-based criterion but is not a clean applicability decision.
-All actual body loads precede task editing; no partial or late delivery occurs.
-All fifteen comment artifacts preserve executable tokens and syntax and pass F1–F3 in complete code context.
-All fifteen numeric artifacts preserve every other byte, while every run sends progress text beyond the final Done.; numeric/reply observations are outside CW functional counts.
-Neither new description improves Codex positive selection, and both increase unwanted numeric-task body delivery.
+One Codex existing-description non-load follows a denied parent search that prevents a planned CW read; it meets the fixed delivery-based criterion but is not a clean applicability decision.
+All actual body loads precede editing; no partial or late delivery occurs.
+The seven positive-task misses are all on Claude: five existing and two targeted.
+All thirty comment artifacts preserve executable tokens and syntax and pass F1–F3 in complete code context.
+All thirty numeric artifacts preserve every other byte.
+Codex sends extra progress text in all fifteen numeric tasks; Claude literal-only replies are existing 5/5, targeted 4/5 and rewritten 1/5.
+Numeric/reply observations are outside CW functional counts.
+The first Claude invocation preserves its original manifest; the documented controller-only amendment corrects name-only-init inspection without changing subject inputs or criteria or repeating a call.
+For Claude, actual init lists the name and Skill tool; exact description/body separation relies on inventory-verified qualification with matching CLI and skill bytes, not captured paid-request payloads.
+Both new descriptions improve observed Claude comment-task loading and add no Claude numeric-task body loads.
+Both also increase unwanted Codex numeric-task delivery without improving its already complete positive selection, so neither satisfies the proposal's strict cross-provider advancement rule.
 These are exposed development observations with a fixed body and no no-CW arm; they establish neither population reliability nor incremental body contribution.
-Current provider/evaluator progress and authority remain at the opening of this protocol.
+Current evaluator progress and authority remain at the opening of this protocol.
 
 ### Focused revised body: completed provider strata
 
