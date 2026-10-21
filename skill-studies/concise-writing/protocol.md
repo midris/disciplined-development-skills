@@ -2,8 +2,13 @@
 
 Format version: `1`
 Study ID: `concise-writing`
-Status: all ninety focused body subjects and thirty Codex discovery subjects are complete and directly assessed, with five repetitions per selected condition/provider. Both runtimes remain qualified, with no setup exclusions or retries. Live skills are unchanged and adoption remains deferred.
-Current action: complete the thirty Claude discovery subjects, then ten Opus 5.5 medium reviews. All fifteen Codex comment-editing subjects loaded the full body before editing and passed F1–F3; no positive-selection advantage is observed between descriptions on Codex. Codex numeric-only body non-loads are 4/5 for the existing description and 0/5 for each new description; one existing-description non-load results from a denied parent search stopping a planned skill read, so these are delivery counts rather than four clean applicability decisions. All fifteen numeric artifacts are exact; all fifteen send extra progress text beyond the literal reply, a task-only observation outside CW functional counts. The [Codex](runs/revised-body-discovery-01/codex-body-focused-01-assessment.md) and [Claude](runs/revised-body-discovery-01/claude-body-focused-01-assessment.md) body assessments are complete, with all three cases passing five repetitions per condition/provider; concrete quality differences remain separate from those thresholds. The owner accepted the qualified Claude 2.1.305 substitution for removed 2.1.301 by directing continuation on 2026-10-21; [runtime acceptance](runs/revised-body-discovery-01/preparation/runtime-recheck-20261021.json) retains the quote, checks and unchanged models/efforts/ceilings. Later regression, automatic retries, further wording changes and adoption remain unapproved.
+Status: all ninety focused body subjects and thirty Codex discovery subjects are complete and directly assessed, with five repetitions per selected condition/provider.
+Current action: complete the thirty Claude discovery subjects, then ten Opus 5.5 medium reviews.
+Both runtimes remain qualified, with no setup exclusions or retries.
+The [Codex discovery assessment](runs/revised-body-discovery-01/codex-discovery-focused-01-assessment.md) separates body delivery, comment quality and numeric-task observations.
+The [Codex](runs/revised-body-discovery-01/codex-body-focused-01-assessment.md) and [Claude](runs/revised-body-discovery-01/claude-body-focused-01-assessment.md) body assessments record all three cases passing five repetitions per condition/provider, with concrete quality differences separate from those thresholds.
+The owner accepted the qualified Claude 2.1.305 substitution for removed 2.1.301 by directing continuation on 2026-10-21; [runtime acceptance](runs/revised-body-discovery-01/preparation/runtime-recheck-20261021.json) retains the quote, checks and unchanged models/efforts/ceilings.
+Live skills are unchanged; later regression, automatic retries, further wording changes and adoption remain unapproved.
 The approved [core/runs directory layout](../../plans/specs/2026-10-18-study-directory-layout.md) is implemented and verified for both studies; [navigation](README.md) separates core guidance from collected evidence.
 On 2026-10-18 the owner replied “ok, let’s do it” to the concrete remaining allocation of 144 subject calls plus fourteen evaluator calls. This accepts unchanged targeted/fuller bodies, fresh original/control comparisons, three repetitions per selected condition/provider and reuse of the separate completed E stratum while input/runtime qualification holds.
 The authorized sequence is 72 ordinary A/B/C subjects, then 72 native N1–N4 subjects, plus six ordinary and eight native Opus 5.5 medium reviews.
@@ -911,7 +916,7 @@ Runtime: pinned existing CLI/model/toolchain, qualified before dispatch; body co
 Acceptance: complete fixed-stage descriptive outcomes with concrete source/output evidence; no reliability threshold, word-count gate or forced failure on a disputed paraphrase.
 Include all valid-setup executions regardless of outcome. No automatic retry; disclose exclusions, uncertainty and unattempted slots.
 Stop on infrastructure, contamination, capture/retention failure, input/runtime drift or uncertain charge; retain every valid behavioral miss.
-Record: [index](runs/revised-body-discovery-01/codex-discovery-focused-01-run-index.json).
+Record: [index](runs/revised-body-discovery-01/codex-discovery-focused-01-run-index.json), [assessment](runs/revised-body-discovery-01/codex-discovery-focused-01-assessment.md).
 Global ordering: all 90 body subjects precede all 60 discovery subjects; [schedule](runs/revised-body-discovery-01/preparation/schedule.json).
 
 | Order | Case | Condition | Repetition | CONFIG |
@@ -1186,6 +1191,24 @@ Preparation and final review/publication account for the other 15 supplemental m
 A later diagnosis or rewrite needs its own bounded estimate and any new model-call authorization.
 
 ## Results and decision
+
+### Focused discovery: Codex provider stratum
+
+The [Codex discovery assessment](runs/revised-body-discovery-01/codex-discovery-focused-01-assessment.md) pins thirty directly assessed executions, five per description/case, without exclusions or retries.
+
+| Description | N4 timely full loads | N4 functional passes | N3 body non-loads (D1 met) | N3 full body loads |
+| --- | ---: | ---: | ---: | ---: |
+| Existing | 5/5 | 5/5 | 4/5 | 1/5 |
+| Targeted | 5/5 | 5/5 | 0/5 | 5/5 |
+| Rewritten | 5/5 | 5/5 | 0/5 | 5/5 |
+
+One existing-description non-load follows a denied parent search that prevents a planned CW read; it meets the fixed delivery-based criterion but is not a clean applicability decision.
+All actual body loads precede task editing; no partial or late delivery occurs.
+All fifteen comment artifacts preserve executable tokens and syntax and pass F1–F3 in complete code context.
+All fifteen numeric artifacts preserve every other byte, while every run sends progress text beyond the final Done.; numeric/reply observations are outside CW functional counts.
+Neither new description improves Codex positive selection, and both increase unwanted numeric-task body delivery.
+These are exposed development observations with a fixed body and no no-CW arm; they establish neither population reliability nor incremental body contribution.
+Current provider/evaluator progress and authority remain at the opening of this protocol.
 
 ### Focused revised body: completed provider strata
 

@@ -14,3 +14,5 @@ The protocol owns accepted runtime strata and collection authority.
 The [Codex body assessment](codex-body-focused-01-assessment.md) links the final [attempt index](codex-body-focused-01-run-index.json), frozen result citations and comparative observations.
 
 The [Claude body assessment](claude-body-focused-01-assessment.md) links its final [attempt index](claude-body-focused-01-run-index.json), frozen result citations and provider-specific quality observations.
+
+The [Codex discovery assessment](codex-discovery-focused-01-assessment.md) links its final [index](codex-discovery-focused-01-run-index.json), native load timing, comment outcomes and numeric-only task observations.
