@@ -3,9 +3,9 @@
   "manifest_id": "cw-claude-comments-explicit-focused-01",
   "study_id": "concise-writing",
   "case_id": "comments-explicit",
-  "status": "draft",
+  "status": "frozen",
   "created_at": "2026-10-18T00:00:00Z",
-  "source_revision": "",
+  "source_revision": "dcb8aba30fcbb28563f6db6965d8abb607fd0d97",
   "authorities": {
     "spec": {
       "path": "plans/specs/2026-09-11-model-driven-skill-testing-framework.md",
@@ -14,7 +14,7 @@
     },
     "protocol": {
       "path": "skill-studies/concise-writing/protocol.md",
-      "sha256": "96a410d017db8736754b0a943a8f1fdffd3733a7f700d1ce670612f79c9000e4",
+      "sha256": "887e00f1fb66aa80d639f7c3e98f5e88911b6d82872e7d02f38a0af5fe28161b",
       "version": "1"
     },
     "format_contract": {
@@ -35,7 +35,7 @@
     "criteria": [
       {
         "path": "skill-studies/concise-writing/runs/revised-body-discovery-01/preparation/criteria/comments-explicit.md",
-        "sha256": "0000000000000000000000000000000000000000000000000000000000000000",
+        "sha256": "0a027f8d7d8cd3ba30246495abc8e9ffac152567a51f1dca80c7730ce31bca63",
         "version": "3"
       }
     ]
@@ -45,7 +45,7 @@
       "id": "candidate-targeted-examples",
       "configuration": {
         "path": "skill-studies/concise-writing/runs/revised-body-discovery-01/preparation/configs/claude-comments-explicit-candidate-targeted-examples.json",
-        "sha256": "0000000000000000000000000000000000000000000000000000000000000000",
+        "sha256": "6477897e83e5ec21f878a0ee7f2b8341477a2be4381d15e9b6727484d539eff8",
         "version": "0.2"
       },
       "target_skill": "skill-studies/concise-writing/drafts/baseline-iteration/targeted-examples/SKILL.md"
@@ -54,7 +54,7 @@
       "id": "control",
       "configuration": {
         "path": "skill-studies/concise-writing/runs/revised-body-discovery-01/preparation/configs/claude-comments-explicit-control.json",
-        "sha256": "0000000000000000000000000000000000000000000000000000000000000000",
+        "sha256": "ba56391c435c4d2aed92ee837a7899e7935557b8847d5023184ce2bc01694173",
         "version": "0.2"
       },
       "target_skill": null
@@ -63,57 +63,93 @@
       "id": "original",
       "configuration": {
         "path": "skill-studies/concise-writing/runs/revised-body-discovery-01/preparation/configs/claude-comments-explicit-original.json",
-        "sha256": "0000000000000000000000000000000000000000000000000000000000000000",
+        "sha256": "cb329491825198bc11c057deef9e535b7aff2b7a156aec2865745da68c461ebf",
         "version": "0.2"
       },
       "target_skill": "skill-studies/concise-writing/cases/skill-original/SKILL.md"
     }
   ],
-  "subject_sources": [],
+  "subject_sources": [
+    {
+      "path": "skill-studies/concise-writing/cases/invocation-comments/fixture/MAINTAINER-NOTES.md",
+      "sha256": "59175ed2990a8b65636507ce2116321e70c60b1c0a2eea288d01e075252fc847",
+      "version": null
+    },
+    {
+      "path": "skill-studies/concise-writing/cases/invocation-comments/fixture/uploader.py",
+      "sha256": "2587771c1d7fee7e2ca72dbb1ff1a2594fff69775a72fff1929f437cce8ec2f1",
+      "version": null
+    },
+    {
+      "path": "skill-studies/concise-writing/cases/invocation-comments/task.md",
+      "sha256": "6a771f7383d14f7d77b02c862155da0b10af1e83cc72333512c5a83fde9523b5",
+      "version": null
+    },
+    {
+      "path": "skill-studies/concise-writing/cases/skill-original/SKILL.md",
+      "sha256": "4d12a2eb475c6b2ef57e2300c8c07af3f59c1e07b2b82695a3b7669eee1d6d72",
+      "version": null
+    },
+    {
+      "path": "skill-studies/concise-writing/drafts/baseline-iteration/targeted-examples/SKILL.md",
+      "sha256": "3dcc777e37a406c5c55a80941c3271d7306be2a0351acf03ca6622d44cce2a4e",
+      "version": null
+    },
+    {
+      "path": "skill-studies/concise-writing/prompt-control.md",
+      "sha256": "833ee4acdfe9f3e3592ed900a7d6f9212d93bc223c8ccccaee69cb53b4738eaa",
+      "version": null
+    },
+    {
+      "path": "skill-studies/concise-writing/runs/suite-2026-09-27/preparation/claude-original-prompt.md",
+      "sha256": "c72703762cfa9b2be16c09550e27b534fd378c68150004b8d039cbcc499df6bd",
+      "version": null
+    }
+  ],
   "controller_only": [
     {
       "path": "skill-studies/concise-writing/runs/revised-body-discovery-01/preparation/schedule.json",
-      "sha256": "0000000000000000000000000000000000000000000000000000000000000000",
+      "sha256": "acedbbb181cac1d7e260064f233832b617d49199d6b659c4f11911ef0c25fe55",
       "version": null
     },
     {
       "path": "skill-studies/concise-writing/runs/revised-body-discovery-01/preparation/runtime_setup.py",
-      "sha256": "0000000000000000000000000000000000000000000000000000000000000000",
+      "sha256": "91c8a2a5fccaa22affc662fe8824a2502be8e373e363520f21033a25838afdb2",
       "version": null
     },
     {
       "path": "skill-studies/concise-writing/runs/revised-body-discovery-01/preparation/runtime-identities.json",
-      "sha256": "0000000000000000000000000000000000000000000000000000000000000000",
+      "sha256": "234fa30ad06212431b4691ca18b0d977395e5d4637be1543966d0daf70a0e506",
       "version": null
     },
     {
       "path": "skill-studies/concise-writing/runs/revised-body-discovery-01/preparation/collect_one.py",
-      "sha256": "0000000000000000000000000000000000000000000000000000000000000000",
+      "sha256": "5d0f52c9936c85e95e813f6346921a0c5374e8dc1791ef4d47b0d85a36f95dfb",
       "version": null
     },
     {
       "path": "skill-studies/concise-writing/runs/revised-body-discovery-01/preparation/inspect_one.py",
-      "sha256": "0000000000000000000000000000000000000000000000000000000000000000",
+      "sha256": "28a237c3b7cb8adc5f22f65caa0b296c0ef9f9ffce53cc7ef595af7e3c7b37b3",
       "version": null
     },
     {
       "path": "skill-studies/concise-writing/runs/revised-body-discovery-01/preparation/trace_paths.py",
-      "sha256": "0000000000000000000000000000000000000000000000000000000000000000",
+      "sha256": "050a6d29ca6dd59f018651bd8d328b94a2a74b47363ea029df7b6f0978087c79",
       "version": null
     },
     {
       "path": "skill-studies/concise-writing/runs/revised-body-discovery-01/preparation/README.md",
-      "sha256": "0000000000000000000000000000000000000000000000000000000000000000",
+      "sha256": "53c6c02dc39caf5237aa505ab1896b1d6e3d33b415538eafb2d52d3fdc965c26",
       "version": null
     },
     {
       "path": "skill-studies/concise-writing/runs/revised-body-discovery-01/preparation/interpretation.md",
-      "sha256": "0000000000000000000000000000000000000000000000000000000000000000",
+      "sha256": "dfb3c05d7c5f345ecf7ea939ffbb131eb642df2dd93ee334e13e017fdd3f9df5",
       "version": null
     },
     {
       "path": "skill-studies/concise-writing/drafts/baseline-iteration/discovery/proposal.md",
-      "sha256": "0000000000000000000000000000000000000000000000000000000000000000",
+      "sha256": "08f88706f7b303cbc22ad88015b2031c63c047039dc74d35bf8be92306b2fd33",
       "version": null
     }
   ]

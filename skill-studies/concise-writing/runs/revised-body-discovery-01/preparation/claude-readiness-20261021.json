@@ -1,0 +1,51 @@
+{
+  "checked_on": "2026-10-21",
+  "source_revision": "dcb8aba30fcbb28563f6db6965d8abb607fd0d97",
+  "model_calls": 0,
+  "checks": {
+    "body": {
+      "diagnostics": [
+        {
+          "file": "/Users/simon/work/personal/disciplined-development-skills/skill-studies/sweeping-stale-references/runs/pilot-01/pilot-run-index.json",
+          "location": "attempts",
+          "rule": "historical-accounting",
+          "message": "Only distinct invocation accounting is checked for this historical pilot index",
+          "severity": "info"
+        },
+        {
+          "file": "/Users/simon/work/personal/disciplined-development-skills/skill-studies/sweeping-stale-references/runs/pilot-02/pilot-02-run-index.json",
+          "location": "attempts",
+          "rule": "historical-accounting",
+          "message": "Only distinct invocation accounting is checked for this historical pilot index",
+          "severity": "info"
+        }
+      ],
+      "kind": "protocol",
+      "structurally_valid": true,
+      "complete": true,
+      "unsupported": false
+    },
+    "discovery": {
+      "diagnostics": [
+        {
+          "file": "/Users/simon/work/personal/disciplined-development-skills/skill-studies/sweeping-stale-references/runs/pilot-01/pilot-run-index.json",
+          "location": "attempts",
+          "rule": "historical-accounting",
+          "message": "Only distinct invocation accounting is checked for this historical pilot index",
+          "severity": "info"
+        },
+        {
+          "file": "/Users/simon/work/personal/disciplined-development-skills/skill-studies/sweeping-stale-references/runs/pilot-02/pilot-02-run-index.json",
+          "location": "attempts",
+          "rule": "historical-accounting",
+          "message": "Only distinct invocation accounting is checked for this historical pilot index",
+          "severity": "info"
+        }
+      ],
+      "kind": "protocol",
+      "structurally_valid": true,
+      "complete": true,
+      "unsupported": false
+    }
+  }
+}
